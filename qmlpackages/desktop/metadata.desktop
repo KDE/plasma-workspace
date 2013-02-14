@@ -1,0 +1,31 @@
+[Desktop Entry]
+Comment=Desktop view furniture
+Comment[nl]=Meubilair voor weergave op het bureaublad
+Comment[pt]=Componentes do ecrã
+Comment[pt_BR]=Acessório de visualização da área de trabalho
+Comment[sk]=Zobrazenie plochy nábytok
+Comment[uk]=Компоненти для перегляду стільниці
+Comment[x-test]=xxDesktop view furniturexx
+Encoding=UTF-8
+Keywords=
+Name=Desktop
+Name[cs]=Pracovní plocha
+Name[de]=Arbeitsfläche
+Name[nl]=Bureaublad
+Name[pt]=Ambiente de Trabalho
+Name[pt_BR]=Área de trabalho
+Name[sk]=Plocha
+Name[uk]=Стільниця
+Name[x-test]=xxDesktopxx
+Type=Service
+
+X-KDE-ServiceTypes=Plasma/GenericPackage
+X-KDE-ParentApp=
+X-KDE-PluginInfo-Author=Marco Martin
+X-KDE-PluginInfo-Category=
+X-KDE-PluginInfo-Email=mart@kde.org
+X-KDE-PluginInfo-License=GPLv2+
+X-KDE-PluginInfo-Name=org.kde.homescreen.desktop
+X-KDE-PluginInfo-Version=
+X-KDE-PluginInfo-Website=
+X-Plasma-MainScript=ui/main.qml
