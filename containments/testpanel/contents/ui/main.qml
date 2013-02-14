@@ -21,10 +21,10 @@ import QtQuick 2.0
 import org.kde.plasma.core 0.1 as PlasmaCore
 import org.kde.plasma.components 0.1 as PlasmaComponents
 
-Item {
+Row {
     id: root
     width: 640
-    height: 480
+    height: 48
 
     property Item toolBox
 
@@ -33,7 +33,7 @@ Item {
         onAppletAdded: {
             var container = appletContainerComponent.createObject(root)
             container.visible = true
-            print("Applet added: " + applet)
+            print("Applet added in test panel: " + applet)
             applet.parent = container
             container.applet = applet
             applet.anchors.fill= applet.parent
@@ -43,59 +43,17 @@ Item {
 
     Component {
         id: appletContainerComponent
-        PlasmaCore.FrameSvgItem {
-            id: frame
-            x: 50
-            y: 50
+        Item {
+            id: container
 
-            width: large + frame.margins.left + frame.margins.right
-            height: large + frame.margins.top + frame.margins.bottom
-
-            property alias applet: appletContainer.children
-
-            property int small: 90
-            property int large: 400
-
-            property int tm: 0
-            property int lm: 0
-
-            imagePath: applet.length > 0 && applet[0].backgroundHints == 0 ? "" : "widgets/background"
-
-            onImagePathChanged: {
-                // Reposition applet so it fits into the frame
-                if (imagePath == "") {
-                    frame.x = frame.x + lm;
-                    frame.y = frame.y + tm;
-                } else {
-                    // Cache values, so we can subtract them when the background is removed
-                    frame.lm = frame.margins.left;
-                    frame.tm = frame.margins.top;
-
-                    frame.x = frame.x - frame.margins.left;
-                    frame.y = frame.y - frame.margins.top;
-                }
+            anchors {
+                top: parent.top
+                bottom: parent.bottom
             }
-            MouseArea {
-                anchors.fill: parent
-                drag.target: parent
-                onClicked: {
-                    var s = (frame.width == frame.large) ? frame.small : frame.large;
-                    frame.x = s
-                    frame.height = s
-                    frame.width = s
-                }
-            }
+            width: height
 
-            Item {
-                id: appletContainer
-                anchors {
-                    fill: parent
-                    leftMargin: frame.margins.left
-                    rightMargin: parent.margins.right
-                    topMargin: parent.margins.top
-                    bottomMargin: parent.margins.bottom
-                }
-            }
+            property Item applet
+
 
             PlasmaComponents.BusyIndicator {
                 z: 1000
@@ -107,7 +65,7 @@ Item {
     }
 
     Component.onCompleted: {
-        print("Test Containment loaded")
+        print("Test Panel loaded")
         print(plasmoid)
     }
 }

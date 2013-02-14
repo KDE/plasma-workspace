@@ -35,6 +35,11 @@ View::~View()
     
 }
 
+Plasma::Corona *View::corona() const
+{
+    return m_corona;
+}
+
 void View::init()
 {
     if (!m_corona->package().isValid()) {
@@ -67,7 +72,9 @@ void View::setContainment(Plasma::Containment *cont)
         qDebug() << "using as graphic containment" << graphicObject << m_containment.data();
 
         //graphicObject->setProperty("visible", false);
-        graphicObject->setProperty("drawWallpaper", true);
+        graphicObject->setProperty("drawWallpaper",
+                                   (cont->containmentType() == Plasma::Containment::DesktopContainment ||
+                                    cont->containmentType() == Plasma::Containment::CustomContainment));
         graphicObject->setProperty("parent", QVariant::fromValue(rootObject()));
         rootObject()->setProperty("containment", QVariant::fromValue(graphicObject));
     } else {

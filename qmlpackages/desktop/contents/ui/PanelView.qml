@@ -16,35 +16,28 @@
  *  Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#ifndef VIEW_H
-#define VIEW_H
+import QtQuick 2.0
+//import org.kde.plasma 2.0
 
-#include <QtQuick/QQuickView>
-
-
-#include "plasma/corona.h"
-#include "plasma/containment.h"
+import org.kde.plasma.core 0.1 as PlasmaCore
 
 
-class View : public QQuickView
-{
-    Q_OBJECT
+PlasmaCore.FrameSvgItem {
+    id: root
+    width: 640
+    height: 32
+    imagePath: "widgets/panel-background"
 
-public:
-    explicit View(Plasma::Corona *corona, QWindow *parent = 0);
-    virtual ~View();
+    property Item containment
 
-    Plasma::Corona *corona() const;
+    onContainmentChanged: {
+        print("New Containment: " + containment)
+        //containment.parent = root
+        containment.visible = true
+        containment.anchors.fill = root
+    }
 
-    //FIXME: not super nice, but we have to be sure qml assignment is done after window flags
-    virtual void init();
-
-    void setContainment(Plasma::Containment *cont);
-    Plasma::Containment *containment() const;
-
-private:
-    Plasma::Corona *m_corona;
-    QWeakPointer<Plasma::Containment> m_containment;
-};
-
-#endif // VIEW_H
+    Component.onCompleted: {
+        print("PanelView QML loaded")
+    }
+}

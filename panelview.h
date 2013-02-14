@@ -31,6 +31,7 @@ public:
     explicit PanelView(Plasma::Corona *corona, QWindow *parent = 0);
     virtual ~PanelView();
 
+    virtual void init();
 private:
     
 };
