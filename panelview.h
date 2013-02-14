@@ -28,7 +28,7 @@ class PanelView : public View
     Q_OBJECT
 
 public:
-    PanelView(Plasma::Corona *corona, QWindow *parent = 0);
+    explicit PanelView(Plasma::Corona *corona, QWindow *parent = 0);
     virtual ~PanelView();
 
 private:

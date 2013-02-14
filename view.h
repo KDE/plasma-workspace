@@ -31,7 +31,7 @@ class View : public QQuickView
     Q_OBJECT
 
 public:
-    View(Plasma::Corona *corona, QWindow *parent = 0);
+    explicit View(Plasma::Corona *corona, QWindow *parent = 0);
     virtual ~View();
 
     //FIXME: not super nice, but we have to be sure qml assignment is done after window flags

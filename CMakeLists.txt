@@ -50,7 +50,6 @@ target_link_libraries(testplasma2
 
 install(TARGETS testplasma2 ${INSTALL_TARGETS_DEFAULT_ARGS})
 
+add_subdirectory(applets)
+add_subdirectory(containments)
 add_subdirectory(qmlpackages)
-installPackage(testcontainment org.kde.testcontainment)
-installPackage(testapplet org.kde.testapplet)
-installPackage(testcomponentsapplet org.kde.testcomponentsapplet)
