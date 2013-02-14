@@ -115,7 +115,7 @@ void DesktopCorona::checkScreen(int screen, bool signalWhenExists)
 void DesktopCorona::checkDesktop(/*Activity *activity,*/ bool signalWhenExists, int screen, int desktop)
 {
     Plasma::Containment *c = /*activity->*/containmentForScreen(screen, desktop);
-qWarning()<<"AAAAA"<<c<<c->formFactor();
+
     //TODO: remove following when activities are restored
     if (!c) {
         c = addContainment("desktop");
