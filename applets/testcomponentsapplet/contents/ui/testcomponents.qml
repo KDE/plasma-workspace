@@ -198,6 +198,7 @@ Item {
                 void hoverEnabledChanged(bool hoverEnabled);
                 */
                 onPressed: {
+                    print("Pressed");
                     melstatus.text = "pressed";
                 }
                 onPositionChanged: {
