@@ -52,6 +52,11 @@ Item {
             height: large + frame.margins.top + frame.margins.bottom
 
             property alias applet: appletContainer.children
+            onAppletChanged: {
+                if (appletContainer.children.length == 0) {
+                    killAnim.running = true
+                }
+            }
 
             property int small: 90
             property int large: 400
@@ -101,6 +106,16 @@ Item {
                 visible: applet.length > 0 && applet[0].busy
                 running: visible
                 anchors.centerIn: parent
+            }
+            SequentialAnimation {
+                id: killAnim
+                NumberAnimation {
+                    target: frame
+                    properties: "scale"
+                    to: 0
+                    duration: 250
+                }
+                ScriptAction { script: frame.destroy()}
             }
         }
     }
