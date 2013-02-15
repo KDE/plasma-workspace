@@ -28,6 +28,11 @@ View::View(Plasma::Corona *corona, QWindow *parent)
     : QQuickView(parent),
       m_corona(corona)
 {
+    //FIXME: for some reason all windows must have alpha enable otherwise the ones that do won't paint.
+    //Probably is an architectural problem
+    QSurfaceFormat format;
+    format.setAlphaBufferSize(8);
+    setFormat(format);
 }
 
 View::~View()

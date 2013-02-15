@@ -186,6 +186,7 @@ void DesktopCorona::checkViews()
     } else if (m_views.count() < m_desktopWidget->screenCount()) {
         for (int i = m_views.count(); i < m_desktopWidget->screenCount(); ++i) {
             View *view = new View(this);
+            QSurfaceFormat format;
             view->init();
             view->show();
             
