@@ -20,6 +20,7 @@ import QtQuick 2.0
 
 import org.kde.plasma.core 0.1 as PlasmaCore
 import org.kde.plasma.components 0.1 as PlasmaComponents
+import org.kde.plasma.extras 0.1 as PlasmaExtras
 import org.kde.qtextracomponents 0.1 as QtExtras
 
 Item {
@@ -41,9 +42,9 @@ Item {
         height: _h
 
         currentTab: melPage
-        PlasmaComponents.TabButton { tab: pageOne; text: "Icons & Buttons"; iconSource: "edit-image-face-show"}
-        PlasmaComponents.TabButton { tab: pageTwo; text: "Plasmoid"; iconSource: "basket"}
-        PlasmaComponents.TabButton { tab: melPage; text: "MouseEventListener"; iconSource: "preferences-desktop-mouse"}
+        PlasmaComponents.TabButton { tab: pageOne; iconSource: "preferences-desktop-icons"}
+        PlasmaComponents.TabButton { tab: pageTwo; iconSource: "plasma"}
+        PlasmaComponents.TabButton { tab: melPage; iconSource: "preferences-desktop-mouse"}
     }
 
     PlasmaComponents.TabGroup {
@@ -66,10 +67,9 @@ Item {
                 anchors.fill: parent
                 spacing: _s
 
-                PlasmaComponents.Label {
+                PlasmaExtras.Title {
                     width: parent.width
                     text: "This is a <i>PlasmaComponent</i>"
-                    font.pointSize: 18
                 }
                 PlasmaComponents.Label {
                     width: parent.width
@@ -114,7 +114,8 @@ Item {
                     }
 
                 }
-                PlasmaComponents.Label {
+                PlasmaExtras.Heading {
+                    level: 4
                     width: parent.width
                     text: "Buttons"
                 }
@@ -143,7 +144,8 @@ Item {
             id: pageTwo
             Column {
                 anchors.centerIn: parent
-                Text {
+                PlasmaExtras.Heading {
+                    level: 2
                     text: "I'm an applet"
                 }
                 PlasmaComponents.Button {
@@ -170,12 +172,13 @@ Item {
 
         PlasmaComponents.Page {
             id: melPage
-            PlasmaComponents.Label {
+            PlasmaExtras.Title {
                 id: mellabel
                 text: "MouseEventListener"
                 anchors { left: parent.left; right: parent.right; top: parent.top }
             }
             QtExtras.MouseEventListener {
+                id: mel
                 hoverEnabled: true
                 anchors { left: parent.left; right: parent.right; top: mellabel.bottom; bottom: parent.bottom; }
                 /*
@@ -213,6 +216,21 @@ Item {
                     print("Contains mouse: " + containsMouse);
                 }
 
+                MouseArea {
+                    //target: mel
+                    anchors.fill: parent
+                    onPressed: PlasmaExtras.DisappearAnimation { targetItem: bgImage }
+                    onReleased: PlasmaExtras.AppearAnimation { targetItem: bgImage }
+                }
+                Image {
+                    id: bgImage
+                    source: "image://appbackgrounds/standard"
+                    fillMode: Image.Tile
+                    anchors.fill: parent
+                    asynchronous: true
+    //                 opacity: mel.containsMouse ? 1 : 0.2
+    //                 Behavior on opacity { PropertyAnimation {} }
+                }
                 Column {
                     //width: parent.width
                     spacing: _s
