@@ -31,6 +31,11 @@ Item {
     property int _s: 12
     property int _h: 32
 
+    PlasmaCore.DataSource {
+        id: dataSource
+
+    }
+
     PlasmaComponents.TabBar {
         id: tabBar
 
@@ -260,5 +265,6 @@ Item {
 
     Component.onCompleted: {
         print("Components Test Applet loaded")
+        dataSource.engine = "org.kde.foobar"
     }
 }
