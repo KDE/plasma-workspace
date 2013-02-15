@@ -80,7 +80,6 @@ Item {
                 drag.target: parent
                 onClicked: {
                     var s = (frame.width == frame.large) ? frame.small : frame.large;
-                    frame.x = s
                     frame.height = s
                     frame.width = s
                 }
