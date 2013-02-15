@@ -40,9 +40,10 @@ Item {
         }
         height: _h
 
-        currentTab: pageOne
+        currentTab: melPage
         PlasmaComponents.TabButton { tab: pageOne; text: "Icons & Buttons"; iconSource: "edit-image-face-show"}
         PlasmaComponents.TabButton { tab: pageTwo; text: "Plasmoid"; iconSource: "basket"}
+        PlasmaComponents.TabButton { tab: melPage; text: "MouseEventListener"; iconSource: "preferences-desktop-mouse"}
     }
 
     PlasmaComponents.TabGroup {
@@ -166,6 +167,76 @@ Item {
                 }
             }
         }
+
+        PlasmaComponents.Page {
+            id: melPage
+            PlasmaComponents.Label {
+                id: mellabel
+                text: "MouseEventListener"
+                anchors { left: parent.left; right: parent.right; top: parent.top }
+            }
+            QtExtras.MouseEventListener {
+                hoverEnabled: true
+                anchors { left: parent.left; right: parent.right; top: mellabel.bottom; bottom: parent.bottom; }
+                /*
+                void pressed(KDeclarativeMouseEvent *mouse);
+                void positionChanged(KDeclarativeMouseEvent *mouse);
+                void released(KDeclarativeMouseEvent *mouse);
+                void clicked(KDeclarativeMouseEvent *mouse);
+                void pressAndHold(KDeclarativeMouseEvent *mouse);
+                void wheelMoved(KDeclarativeWheelEvent *wheel);
+                void containsMouseChanged(bool containsMouseChanged);
+                void hoverEnabledChanged(bool hoverEnabled);
+                */
+                onPressed: {
+                    melstatus.text = "pressed";
+                }
+                onPositionChanged: {
+                    print("positionChanged: " + mouse.x + "," + mouse.y);
+                }
+                onReleased: {
+                    print("Released");
+                    melstatus.text = "Released";
+                }
+                onPressAndHold: {
+                    print("pressAndHold");
+                    melstatus.text = "pressAndHold";
+                }
+                onClicked: {
+                    print("Clicked");
+                    melstatus.text = "clicked";
+                }
+                onWheelMoved: {
+                    print("Wheel: " + wheel.delta);
+                }
+                onContainsMouseChanged: {
+                    print("Contains mouse: " + containsMouse);
+                }
+
+                Column {
+                    //width: parent.width
+                    spacing: _s
+                    anchors.fill: parent
+                    PlasmaComponents.Button {
+                        text: "Button"
+                        iconSource: "call-start"
+                    }
+                    PlasmaComponents.ToolButton {
+                        text: "ToolButton"
+                        iconSource: "call-stop"
+                    }
+                    PlasmaComponents.RadioButton {
+                        text: "RadioButton"
+                        //iconSource: "call-stop"
+                    }
+                    PlasmaComponents.Label {
+                        id: melstatus
+                    }
+                }
+
+            }
+        }
+
     }
 
     Component.onCompleted: {
