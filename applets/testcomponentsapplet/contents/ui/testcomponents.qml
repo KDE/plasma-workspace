@@ -69,6 +69,7 @@ Item {
 
                 PlasmaExtras.Title {
                     width: parent.width
+                    elide: Text.ElideRight
                     text: "This is a <i>PlasmaComponent</i>"
                 }
                 PlasmaComponents.Label {
