@@ -2,6 +2,11 @@
 Encoding=UTF-8
 Keywords=
 Name=Panel Test
+Name[de]=Kontrollleistentest
+Name[pt]=Teste de Painel
+Name[pt_BR]=Teste de painel
+Name[uk]=Тестування панелі
+Name[x-test]=xxPanel Testxx
 Type=Service
 
 X-KDE-ServiceTypes=Plasma/Applet,Plasma/Containment
