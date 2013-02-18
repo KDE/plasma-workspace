@@ -148,6 +148,10 @@ Item {
 
         PlasmaComponents.Page {
             id: pageTwo
+            anchors {
+                fill: parent
+                margins: _s
+            }
             Column {
                 anchors.centerIn: parent
                 PlasmaExtras.Heading {
@@ -178,6 +182,10 @@ Item {
 
         PlasmaComponents.Page {
             id: melPage
+            anchors {
+                fill: parent
+                margins: _s
+            }
             PlasmaExtras.Title {
                 id: mellabel
                 text: "MouseEventListener"
