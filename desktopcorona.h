@@ -56,7 +56,7 @@ public:
      */
     void checkScreen(int screen, bool signalWhenExists = false);
 
-    void checkDesktop(/*Activity *activity,*/ bool signalWhenExists, int screen, int desktop);
+    void checkDesktop(/*Activity *activity,*/ bool signalWhenExists, int screen);
 
     int numScreens() const;
     QRect screenGeometry(int id) const;

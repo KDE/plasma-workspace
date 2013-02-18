@@ -93,7 +93,7 @@ void DesktopCorona::checkScreen(int screen, bool signalWhenExists)
     //TODO: restore activities
     //Activity *currentActivity = activity(m_activityController->currentActivity());
     //ensure the desktop(s) have a containment and view
-    checkDesktop(/*currentActivity,*/ signalWhenExists, screen, -1);
+    checkDesktop(/*currentActivity,*/ signalWhenExists, screen);
 
 
     //ensure the panels get views too
@@ -112,9 +112,9 @@ void DesktopCorona::checkScreen(int screen, bool signalWhenExists)
     }
 }
 
-void DesktopCorona::checkDesktop(/*Activity *activity,*/ bool signalWhenExists, int screen, int desktop)
+void DesktopCorona::checkDesktop(/*Activity *activity,*/ bool signalWhenExists, int screen)
 {
-    Plasma::Containment *c = /*activity->*/containmentForScreen(screen, desktop);
+    Plasma::Containment *c = /*activity->*/containmentForScreen(screen);
 
     //TODO: remove following when activities are restored
     if (!c) {
@@ -125,7 +125,7 @@ void DesktopCorona::checkDesktop(/*Activity *activity,*/ bool signalWhenExists, 
         return;
     }
 
-    c->setScreen(screen, desktop);
+    c->setScreen(screen);
     if (screen >= 0 || m_views.count() >= screen + 1) {
         m_views[screen]->setContainment(c);
     } else {
