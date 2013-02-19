@@ -59,7 +59,7 @@ Item {
 
             PlasmaComponents.BusyIndicator {
                 z: 1000
-                visible: applet.length > 0 && applet[0].busy
+                visible: applet && applet.length > 0 && applet[0].busy
                 running: visible
                 anchors.centerIn: parent
             }
