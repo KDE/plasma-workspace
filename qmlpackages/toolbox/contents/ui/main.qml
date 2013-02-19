@@ -18,8 +18,6 @@
 
 import QtQuick 2.0
 
-//import org.kde.plasma.core 0.1 as PlasmaCore
-
 Rectangle {
     id: root
     color: "white"
@@ -33,7 +31,7 @@ Rectangle {
 
     Text {
         id: mainText
-        text: "esktop Toolbo"
+        text: "Desktop Toolbox"
     }
 
     Component.onCompleted: {
