@@ -105,11 +105,17 @@ PlasmaComponents.Page {
                 PlasmaComponents.RadioButton {
                     text: "RadioButton"
                     //iconSource: "call-stop"
+                    onCheckedChanged: if (checked) tfield.forceActiveFocus()
                 }
                 PlasmaComponents.TextField {
+                    id: tfield
                     text: "input here"
                 }
             }
+//             PlasmaComponents.TextArea {
+//                 height: _h*2
+//                 spacing: _s
+//             }
             PlasmaComponents.Label {
                 text: "iconSizes.small  : " + theme.iconSizes.small +
                       ", iconSizes.desktop: " + theme.iconSizes.desktop +
