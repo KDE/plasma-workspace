@@ -28,8 +28,8 @@ Item {
     width: 100
     height: 100
 
-    property int _s: 12
-    property int _h: 32
+    property int _s: theme.iconSizes.small
+    property int _h: theme.iconSizes.desktop
 
     PlasmaCore.DataSource {
         id: dataSource
@@ -46,13 +46,13 @@ Item {
         }
         height: _h
 
-        currentTab: melPage
         PlasmaComponents.TabButton { tab: iconsPage; iconSource: "preferences-desktop-icons"}
         PlasmaComponents.TabButton { tab: plasmoidPage; iconSource: "plasma"}
         PlasmaComponents.TabButton { tab: mousePage; iconSource: "preferences-desktop-mouse"}
     }
 
     PlasmaComponents.TabGroup {
+        id: tabGroup
         anchors {
             left: parent.left
             right: parent.right
@@ -66,17 +66,18 @@ Item {
             id: iconsPage
         }
 
-        PlasmoidPage { 
+        PlasmoidPage {
             id: plasmoidPage
         }
 
         MousePage {
-            id: mousPage
+            id: mousePage
         }
     }
 
     Component.onCompleted: {
-        print("Components Test Applet loaded")
+        print("Components Test Applet loaded");
         //dataSource.engine = "org.kde.foobar"
+//         tabGroup.currentTab = mousePage;
     }
 }

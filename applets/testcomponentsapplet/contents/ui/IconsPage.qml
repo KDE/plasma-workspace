@@ -38,10 +38,6 @@ PlasmaComponents.Page {
         PlasmaExtras.Title {
             width: parent.width
             elide: Text.ElideRight
-            text: "This is a <i>PlasmaComponent</i>"
-        }
-        PlasmaComponents.Label {
-            width: parent.width
             text: "Icons"
         }
         Row {
@@ -90,7 +86,7 @@ PlasmaComponents.Page {
         }
         Column {
             width: parent.width
-            spacing: _s
+            spacing: _s/2
 
             PlasmaComponents.Button {
                 text: "Button"
@@ -103,6 +99,13 @@ PlasmaComponents.Page {
             PlasmaComponents.RadioButton {
                 text: "RadioButton"
                 //iconSource: "call-stop"
+            }
+            PlasmaComponents.Label {
+                text: "iconSizes.small  : " + theme.iconSizes.small +
+                      ", iconSizes.desktop: " + theme.iconSizes.desktop +
+                      ",<br />iconSizes.toolbar: " + theme.iconSizes.toolbar +
+                      ", iconSizes.dialog : " + theme.iconSizes.dialog
+
             }
         }
 

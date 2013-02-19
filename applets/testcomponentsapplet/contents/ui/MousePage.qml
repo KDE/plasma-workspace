@@ -26,7 +26,7 @@ import org.kde.qtextracomponents 0.1 as QtExtras
 // MousePage
 
 PlasmaComponents.Page {
-    id: melPage
+    id: mousePage
     anchors {
         fill: parent
         margins: _s

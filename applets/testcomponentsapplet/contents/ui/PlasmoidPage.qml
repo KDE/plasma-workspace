@@ -26,7 +26,7 @@ import org.kde.qtextracomponents 0.1 as QtExtras
 // PlasmoidPage
 
 PlasmaComponents.Page {
-    id: pageTwo
+    id: plasmoidPage
     anchors {
         fill: parent
         margins: _s
