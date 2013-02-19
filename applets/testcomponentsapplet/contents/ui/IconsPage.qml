@@ -87,18 +87,28 @@ PlasmaComponents.Page {
         Column {
             width: parent.width
             spacing: _s/2
-
-            PlasmaComponents.Button {
-                text: "Button"
-                iconSource: "call-start"
+            Row {
+                height: _h
+                spacing: _s
+                PlasmaComponents.Button {
+                    text: "Button"
+                    iconSource: "call-start"
+                }
+                PlasmaComponents.ToolButton {
+                    text: "ToolButton"
+                    iconSource: "call-stop"
+                }
             }
-            PlasmaComponents.ToolButton {
-                text: "ToolButton"
-                iconSource: "call-stop"
-            }
-            PlasmaComponents.RadioButton {
-                text: "RadioButton"
-                //iconSource: "call-stop"
+            Row {
+                height: _h
+                spacing: _s
+                PlasmaComponents.RadioButton {
+                    text: "RadioButton"
+                    //iconSource: "call-stop"
+                }
+                PlasmaComponents.TextField {
+                    text: "input here"
+                }
             }
             PlasmaComponents.Label {
                 text: "iconSizes.small  : " + theme.iconSizes.small +
