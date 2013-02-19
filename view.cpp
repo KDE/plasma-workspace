@@ -78,8 +78,8 @@ void View::setContainment(Plasma::Containment *cont)
 
         //graphicObject->setProperty("visible", false);
         graphicObject->setProperty("drawWallpaper",
-                                   (cont->containmentType() == Plasma::Containment::DesktopContainment ||
-                                    cont->containmentType() == Plasma::Containment::CustomContainment));
+                                   (cont->containmentType() == Plasma::DesktopContainment ||
+                                    cont->containmentType() == Plasma::CustomContainment));
         graphicObject->setProperty("parent", QVariant::fromValue(rootObject()));
         rootObject()->setProperty("containment", QVariant::fromValue(graphicObject));
     } else {

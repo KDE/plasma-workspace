@@ -103,9 +103,9 @@ void DesktopCorona::checkScreen(int screen, bool signalWhenExists)
                 continue;
             }
 
-            Plasma::Containment::Type t = c->containmentType();
-            if (t == Plasma::Containment::PanelContainment ||
-                t == Plasma::Containment::CustomPanelContainment) {
+            Plasma::ContainmentType t = c->containmentType();
+            if (t == Plasma::PanelContainment ||
+                t == Plasma::CustomPanelContainment) {
                 emit containmentAdded(c);
             }
         }
