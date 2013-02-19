@@ -47,9 +47,9 @@ Item {
         height: _h
 
         currentTab: melPage
-        PlasmaComponents.TabButton { tab: pageOne; iconSource: "preferences-desktop-icons"}
-        PlasmaComponents.TabButton { tab: pageTwo; iconSource: "plasma"}
-        PlasmaComponents.TabButton { tab: melPage; iconSource: "preferences-desktop-mouse"}
+        PlasmaComponents.TabButton { tab: iconsPage; iconSource: "preferences-desktop-icons"}
+        PlasmaComponents.TabButton { tab: plasmoidPage; iconSource: "plasma"}
+        PlasmaComponents.TabButton { tab: mousePage; iconSource: "preferences-desktop-mouse"}
     }
 
     PlasmaComponents.TabGroup {
@@ -62,218 +62,21 @@ Item {
 
         //currentTab: tabBar.currentTab
 
-        PlasmaComponents.Page {
-            id: pageOne
-            anchors {
-                fill: parent
-                margins: _s
-            }
-            Column {
-                anchors.fill: parent
-                spacing: _s
-
-                PlasmaExtras.Title {
-                    width: parent.width
-                    elide: Text.ElideRight
-                    text: "This is a <i>PlasmaComponent</i>"
-                }
-                PlasmaComponents.Label {
-                    width: parent.width
-                    text: "Icons"
-                }
-                Row {
-                    height: _h
-                    spacing: _s
-
-                    PlasmaCore.IconItem {
-                        source: "configure"
-                        width: parent.height
-                        height: width
-                    }
-                    PlasmaCore.IconItem {
-                        source: "dialog-ok"
-                        width: parent.height
-                        height: width
-                    }
-
-                    PlasmaCore.IconItem {
-                        source: "maximize"
-                        width: parent.height
-                        height: width
-                    }
-
-
-                    PlasmaCore.IconItem {
-                        source: "akonadi"
-                        width: parent.height
-                        height: width
-                    }
-                    PlasmaCore.IconItem {
-                        source: "clock"
-                        width: parent.height
-                        height: width
-                    }
-                    QtExtras.QIconItem {
-                        icon: "preferences-desktop-icons"
-                        width: parent.height
-                        height: width
-                    }
-
-                }
-                PlasmaExtras.Heading {
-                    level: 4
-                    width: parent.width
-                    text: "Buttons"
-                }
-                Column {
-                    width: parent.width
-                    spacing: _s
-
-                    PlasmaComponents.Button {
-                        text: "Button"
-                        iconSource: "call-start"
-                    }
-                    PlasmaComponents.ToolButton {
-                        text: "ToolButton"
-                        iconSource: "call-stop"
-                    }
-                    PlasmaComponents.RadioButton {
-                        text: "RadioButton"
-                        //iconSource: "call-stop"
-                    }
-                }
-
-            }
+        IconsPage {
+            id: iconsPage
         }
 
-        PlasmaComponents.Page {
-            id: pageTwo
-            anchors {
-                fill: parent
-                margins: _s
-            }
-            Column {
-                anchors.centerIn: parent
-                PlasmaExtras.Heading {
-                    level: 2
-                    text: "I'm an applet"
-                }
-                PlasmaComponents.Button {
-                    text: "Background"
-                    checked: plasmoid.backgroundHints == 1
-                    onClicked: {
-                        print("Background hints: " + plasmoid.backgroundHints)
-                        if (plasmoid.backgroundHints == 0) {
-                            plasmoid.backgroundHints = 1//TODO: make work "StandardBackground"
-                        } else {
-                            plasmoid.backgroundHints = 0//TODO: make work "NoBackground"
-                        }
-                    }
-                }
-                PlasmaComponents.Button {
-                    text: "Busy"
-                    checked: plasmoid.busy
-                    onClicked: {
-                        plasmoid.busy = !plasmoid.busy
-                    }
-                }
-            }
+        PlasmoidPage { 
+            id: plasmoidPage
         }
 
-        PlasmaComponents.Page {
-            id: melPage
-            anchors {
-                fill: parent
-                margins: _s
-            }
-            PlasmaExtras.Title {
-                id: mellabel
-                text: "MouseEventListener"
-                anchors { left: parent.left; right: parent.right; top: parent.top }
-            }
-            QtExtras.MouseEventListener {
-                id: mel
-                hoverEnabled: true
-                anchors { left: parent.left; right: parent.right; top: mellabel.bottom; bottom: parent.bottom; }
-                /*
-                void pressed(KDeclarativeMouseEvent *mouse);
-                void positionChanged(KDeclarativeMouseEvent *mouse);
-                void released(KDeclarativeMouseEvent *mouse);
-                void clicked(KDeclarativeMouseEvent *mouse);
-                void pressAndHold(KDeclarativeMouseEvent *mouse);
-                void wheelMoved(KDeclarativeWheelEvent *wheel);
-                void containsMouseChanged(bool containsMouseChanged);
-                void hoverEnabledChanged(bool hoverEnabled);
-                */
-                onPressed: {
-                    print("Pressed");
-                    melstatus.text = "pressed";
-                }
-                onPositionChanged: {
-                    print("positionChanged: " + mouse.x + "," + mouse.y);
-                }
-                onReleased: {
-                    print("Released");
-                    melstatus.text = "Released";
-                }
-                onPressAndHold: {
-                    print("pressAndHold");
-                    melstatus.text = "pressAndHold";
-                }
-                onClicked: {
-                    print("Clicked");
-                    melstatus.text = "clicked";
-                }
-                onWheelMoved: {
-                    print("Wheel: " + wheel.delta);
-                }
-                onContainsMouseChanged: {
-                    print("Contains mouse: " + containsMouse);
-                }
-
-                MouseArea {
-                    //target: mel
-                    anchors.fill: parent
-                    onPressed: PlasmaExtras.DisappearAnimation { targetItem: bgImage }
-                    onReleased: PlasmaExtras.AppearAnimation { targetItem: bgImage }
-                }
-                Image {
-                    id: bgImage
-                    source: "image://appbackgrounds/standard"
-                    fillMode: Image.Tile
-                    anchors.fill: parent
-                    asynchronous: true
-    //                 opacity: mel.containsMouse ? 1 : 0.2
-    //                 Behavior on opacity { PropertyAnimation {} }
-                }
-                Column {
-                    //width: parent.width
-                    spacing: _s
-                    anchors.fill: parent
-                    PlasmaComponents.Button {
-                        text: "Button"
-                        iconSource: "call-start"
-                    }
-                    PlasmaComponents.ToolButton {
-                        text: "ToolButton"
-                        iconSource: "call-stop"
-                    }
-                    PlasmaComponents.RadioButton {
-                        text: "RadioButton"
-                        //iconSource: "call-stop"
-                    }
-                    PlasmaComponents.Label {
-                        id: melstatus
-                    }
-                }
-
-            }
+        MousePage {
+            id: mousPage
         }
-
     }
 
     Component.onCompleted: {
         print("Components Test Applet loaded")
-        dataSource.engine = "org.kde.foobar"
+        //dataSource.engine = "org.kde.foobar"
     }
 }
