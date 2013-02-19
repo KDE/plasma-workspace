@@ -21,7 +21,8 @@ import QtQuick 2.0
 import org.kde.plasma.core 0.1 as PlasmaCore
 import org.kde.plasma.components 0.1 as PlasmaComponents
 
-Row {
+
+Item {
     id: root
     width: 640
     height: 48
@@ -31,13 +32,13 @@ Row {
     Connections {
         target: plasmoid
         onAppletAdded: {
-            var container = appletContainerComponent.createObject(root)
-            container.visible = true
+            var container = appletContainerComponent.createObject(row)
             print("Applet added in test panel: " + applet)
             applet.parent = container
             container.applet = applet
-            applet.anchors.fill= applet.parent
+            applet.anchors.fill = applet.parent
             applet.visible = true
+            container.visible = true
         }
     }
 
@@ -45,12 +46,13 @@ Row {
         id: appletContainerComponent
         Item {
             id: container
+            visible: false
 
             anchors {
                 top: parent.top
                 bottom: parent.bottom
             }
-            width: height
+            width:  height
 
             property Item applet
 
@@ -61,6 +63,14 @@ Row {
                 running: visible
                 anchors.centerIn: parent
             }
+        }
+    }
+
+    Row {
+        id: row
+        anchors {
+            top: parent.top
+            bottom: parent.bottom
         }
     }
 
