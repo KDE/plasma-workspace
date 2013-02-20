@@ -43,32 +43,6 @@ PlasmaComponents.Page {
             height: _h
             spacing: _s
             PlasmaComponents.Button {
-                text: "PlasmaCore.Dialog"
-                iconSource: "dialog-ok-apply"
-                checkable: true
-                onCheckedChanged: pcDialog.visible = checked
-            }
-            PlasmaComponents.Label {
-                text: pcDialog.visible ? "shown" : "hidden"
-            }
-
-            PlasmaCore.Dialog {
-                id: pcDialog
-                windowFlags: Qt.Popup
-                mainItem: dContent2
-                DialogContent {
-                    id: dContent2
-                    onCloseMe: {
-                        pcDialog.close()
-                        //pcDialog.visible = false
-                    }
-                }
-            }
-        }
-        Row {
-            height: _h
-            spacing: _s
-            PlasmaComponents.Button {
                 id: radio
                 checkable: true
                 iconSource: "dialog-ok"
@@ -80,21 +54,6 @@ PlasmaComponents.Page {
                 width: childrenRect.width
                 height: childrenRect.height
                 color: Qt.rgba(0,0,0,0)
-//                 Column {
-//                     width: dialogsPage.width/2
-//                     PlasmaComponents.TextArea {
-//                         //anchors { left: parent.left; right: parent.right; top: parent.top; }
-//                         width: parent.width
-//                         height: _h*2
-//                     }
-//
-//                     PlasmaComponents.Button {
-//                         id: thanks
-//                         iconSource: "dialog-ok"
-//                         text: "Thanks."
-//                         onClicked: selectionDialog.visible = false;
-//                     }
-//                 }
                 DialogContent {
                     id: dContent
                     onCloseMe: {
@@ -105,6 +64,53 @@ PlasmaComponents.Page {
 
             PlasmaComponents.Label {
                 text: qWindow.visible ? "shown" : "hidden"
+            }
+        }
+        Row {
+            height: _h
+            spacing: _s
+            PlasmaComponents.Button {
+                text: "PlasmaCore.Dialog"
+                iconSource: "dialog-ok-apply"
+                checkable: true
+                //onCheckedChanged: pcDialog.visible = checked
+                onCheckedChanged: pcompDialog.visible = checked
+            }
+            PlasmaComponents.Label {
+                text: pcDialog.visible ? "shown" : "hidden"
+            }
+
+            PlasmaCore.Dialog {
+                id: pcDialog
+                windowFlags: Qt.Popup
+                mainItem: dContent2
+                DialogContent {
+                    id: dContent2
+                    onCloseMe: pcDialog.visible = false
+                }
+            }
+        }
+        Row {
+            height: _h
+            spacing: _s
+            PlasmaComponents.Button {
+                text: "PlasmaComponents.Dialog"
+                iconSource: "dialog-ok-apply"
+                checkable: true
+                onCheckedChanged: pcompDialog.visible = checked
+            }
+            PlasmaComponents.Label {
+                text: pcompDialog.visible ? "shown" : "hidden"
+            }
+
+            PlasmaCore.Dialog {
+                id: pcompDialog
+                windowFlags: Qt.Popup
+                mainItem: dContent3
+                DialogContent {
+                    id: dContent3
+                    onCloseMe: pcompDialog.visible = false
+                }
             }
         }
     }
