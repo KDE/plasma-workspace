@@ -23,69 +23,54 @@ import org.kde.plasma.components 0.1 as PlasmaComponents
 import org.kde.plasma.extras 0.1 as PlasmaExtras
 import org.kde.qtextracomponents 0.1 as QtExtras
 
-// IconTab
+// ButtonsPage
 
 PlasmaComponents.Page {
-    id: iconsPage
+    id: plasmoidPage
     anchors {
         fill: parent
         margins: _s
     }
     Column {
+        spacing: _s/2
         anchors.fill: parent
-        spacing: _s
-
-        PlasmaExtras.Title {
+        PlasmaExtras.Heading {
+            level: 1
             width: parent.width
-            elide: Text.ElideRight
-            text: "Icons"
+            text: "Buttons"
         }
         Row {
             height: _h
             spacing: _s
-
-            PlasmaCore.IconItem {
-                source: "configure"
-                width: parent.height
-                height: width
+            PlasmaComponents.Button {
+                text: "Button"
+                iconSource: "call-start"
             }
-            PlasmaCore.IconItem {
-                source: "dialog-ok"
-                width: parent.height
-                height: width
+            PlasmaComponents.ToolButton {
+                text: "ToolButton"
+                iconSource: "call-stop"
             }
-
-            PlasmaCore.IconItem {
-                source: "maximize"
-                width: parent.height
-                height: width
-            }
-
-
-            PlasmaCore.IconItem {
-                source: "akonadi"
-                width: parent.height
-                height: width
-            }
-            PlasmaCore.IconItem {
-                source: "clock"
-                width: parent.height
-                height: width
-            }
-            QtExtras.QIconItem {
-                icon: "preferences-desktop-icons"
-                width: parent.height
-                height: width
-            }
-
         }
-
-        PlasmaComponents.Label {
-            text: "iconSizes.small  : " + theme.iconSizes.small +
-                    ", iconSizes.desktop: " + theme.iconSizes.desktop +
-                    ",<br />iconSizes.toolbar: " + theme.iconSizes.toolbar +
-                    ", iconSizes.dialog : " + theme.iconSizes.dialog
-
+        Row {
+            height: _h
+            spacing: _s
+            PlasmaComponents.RadioButton {
+                id: radio
+                text: "RadioButton"
+                //iconSource: "call-stop"
+                onCheckedChanged: if (checked) tfield.forceActiveFocus()
+            }
+            PlasmaComponents.TextField {
+                id: tfield
+                enabled: radio.checked
+                text: "input here"
+                clearButtonShown: true
+            }
+        }
+        PlasmaComponents.TextArea {
+            width: parent.width
+            height: _h*2
         }
     }
 }
+
