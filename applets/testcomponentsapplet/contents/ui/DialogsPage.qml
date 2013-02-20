@@ -74,7 +74,7 @@ PlasmaComponents.Page {
                 iconSource: "dialog-ok-apply"
                 checkable: true
                 //onCheckedChanged: pcDialog.visible = checked
-                onCheckedChanged: pcompDialog.visible = checked
+                onCheckedChanged: pcDialog.visible = checked
             }
             PlasmaComponents.Label {
                 text: pcDialog.visible ? "shown" : "hidden"
@@ -84,6 +84,8 @@ PlasmaComponents.Page {
                 id: pcDialog
                 windowFlags: Qt.Popup
                 mainItem: dContent2
+                color: Qt.rgba(0,0,0,0)
+
                 DialogContent {
                     id: dContent2
                     onCloseMe: pcDialog.visible = false
@@ -103,13 +105,29 @@ PlasmaComponents.Page {
                 text: pcompDialog.visible ? "shown" : "hidden"
             }
 
-            PlasmaCore.Dialog {
+            PlasmaComponents.Dialog {
                 id: pcompDialog
-                windowFlags: Qt.Popup
-                mainItem: dContent3
+                //windowFlags: Qt.Popup
+                content: dContent3
                 DialogContent {
                     id: dContent3
                     onCloseMe: pcompDialog.visible = false
+                }
+                buttons: PlasmaComponents.ButtonRow {
+                    PlasmaComponents.Button {
+                        text: "Close";
+                        onClicked: {
+                            print("Closing...");
+                            pcompDialog.close()
+                        }
+                    }
+                    PlasmaComponents.Button {
+                        text: "Accept";
+                        onClicked: {
+                            print("Accepting...");
+                            pcompDialog.accept()
+                        }
+                    }
                 }
             }
         }
