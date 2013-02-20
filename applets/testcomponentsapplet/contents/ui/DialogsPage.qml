@@ -83,10 +83,10 @@ PlasmaComponents.Page {
             PlasmaCore.Dialog {
                 id: pcDialog
                 windowFlags: Qt.Popup
-                mainItem: dContent2
+                //mainItem: dContent2
                 color: Qt.rgba(0,0,0,0)
 
-                DialogContent {
+                mainItem: DialogContent {
                     id: dContent2
                     onCloseMe: pcDialog.visible = false
                 }

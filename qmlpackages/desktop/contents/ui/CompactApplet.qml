@@ -49,14 +49,12 @@ Item {
                 plasmoid.expanded = false
             }
         }
-        //onWidthChanged: appletParent.width = width
-        //onHeightChanged:appletParent.height = height
-        mainItem: appletParent
-        Rectangle {
+
+        mainItem: Rectangle {
             id: appletParent
-            radius: 10
-            width: 200//applet.implicitWidth
-            height: 200//applet.implicitHeight
+            radius: 5
+            width: applet && applet.implicitWidth > 0 ? applet.implicitWidth : theme.defaultFont.mSize.width * 35
+            height: applet && applet.implicitHeight > 0 ? applet.implicitHeight : theme.defaultFont.mSize.height * 25
             onWidthChanged: applet.width = width
             onHeightChanged: applet.height = height
         }
