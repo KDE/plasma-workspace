@@ -36,20 +36,25 @@ Item {
     }
 
 
-    Window {
+    PlasmaCore.Dialog {
         id: popupWindow
+        //windowFlags: Qt.Popup
+        color: Qt.rgba(0,0,0,0)
         visible: plasmoid.expanded
         onVisibleChanged: {
             if (!visible) {
                 plasmoid.expanded = false
             }
         }
-        width: 200
-        height: 200
-        Item {
+        onWidthChanged: appletParent.width = width
+        onHeightChanged:appletParent.height = height
+        mainItem: appletParent
+        Rectangle {
             id: appletParent
-            width: applet.implicitWidth
-            height: applet.implicitHeight
+            width: 200//applet.implicitWidth
+            height: 200//applet.implicitHeight
+            onWidthChanged: applet.width = width
+            onHeightChanged: applet.height = height
         }
     }
 }
