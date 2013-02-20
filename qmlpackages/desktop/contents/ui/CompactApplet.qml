@@ -29,7 +29,10 @@ Item {
     property Item compactRepresentation
 
 
-    onAppletChanged: applet.parent = appletParent
+    onAppletChanged: {
+        applet.parent = appletParent
+        applet.anchors.fill = applet.parent
+    }
     onCompactRepresentationChanged: {
         compactRepresentation.parent = root
         compactRepresentation.anchors.fill = root
@@ -46,11 +49,12 @@ Item {
                 plasmoid.expanded = false
             }
         }
-        onWidthChanged: appletParent.width = width
-        onHeightChanged:appletParent.height = height
+        //onWidthChanged: appletParent.width = width
+        //onHeightChanged:appletParent.height = height
         mainItem: appletParent
         Rectangle {
             id: appletParent
+            radius: 10
             width: 200//applet.implicitWidth
             height: 200//applet.implicitHeight
             onWidthChanged: applet.width = width
