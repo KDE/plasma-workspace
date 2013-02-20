@@ -44,12 +44,7 @@ Item {
         //windowFlags: Qt.Popup
         color: Qt.rgba(0,0,0,0)
         visible: plasmoid.expanded
-        onVisibleChanged: {
-            if (!visible) {
-                plasmoid.expanded = false
-            }
-        }
-
+        visualParent: root
         mainItem: Rectangle {
             id: appletParent
             radius: 5
@@ -57,6 +52,17 @@ Item {
             height: applet && applet.implicitHeight > 0 ? applet.implicitHeight : theme.defaultFont.mSize.height * 25
             onWidthChanged: applet.width = width
             onHeightChanged: applet.height = height
+        }
+        
+        onActiveWindowChanged: {
+            if (!activeWindow) {
+                plasmoid.expanded = false
+            }
+        }
+        onVisibleChanged: {
+            if (!visible) {
+                plasmoid.expanded = false
+            }
         }
     }
 }
