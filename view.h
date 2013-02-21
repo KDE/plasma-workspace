@@ -42,6 +42,13 @@ public:
     void setContainment(Plasma::Containment *cont);
     Plasma::Containment *containment() const;
 
+    Plasma::Location location();
+    Plasma::FormFactor formFactor();
+
+Q_SIGNALS:
+    void locationChanged(Plasma::Location location);
+    void formFactorChanged(Plasma::FormFactor formFactor);
+
 private:
     Plasma::Corona *m_corona;
     QWeakPointer<Plasma::Containment> m_containment;

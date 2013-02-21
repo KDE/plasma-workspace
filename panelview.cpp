@@ -19,6 +19,7 @@
 #include "panelview.h"
 
 #include <QDebug>
+#include <QScreen>
 
 #include <KWindowSystem>
 #include <kwindoweffects.h>
@@ -38,7 +39,12 @@ PanelView::PanelView(Plasma::Corona *corona, QWindow *parent)
 
     //TODO: how to take the shape from the framesvg?
     KWindowEffects::enableBlurBehind(winId(), true);
-    
+
+    //Screen management
+    connect(screen(), &QScreen::virtualGeometryChanged,
+            this, &PanelView::positionPanel);
+    connect(this, &View::locationChanged,
+            this, &PanelView::positionPanel);
 }
 
 PanelView::~PanelView()
@@ -56,5 +62,32 @@ void PanelView::init()
     setSource(QUrl::fromLocalFile(corona()->package().filePath("ui", "PanelView.qml")));
 }
 
+void PanelView::positionPanel()
+{
+    if (!containment()) {
+        return;
+    }
+
+    QScreen *s = screen();
+    
+    switch (containment()->location()) {
+    case Plasma::TopEdge:
+        containment()->setFormFactor(Plasma::Horizontal);
+        setPosition(s->virtualGeometry().topLeft());
+        break;
+    case Plasma::LeftEdge:
+        containment()->setFormFactor(Plasma::Vertical);
+        setPosition(s->virtualGeometry().topLeft());
+        break;
+    case Plasma::RightEdge:
+        containment()->setFormFactor(Plasma::Vertical);
+        setPosition(s->virtualGeometry().topRight() - QPoint(width(), 0));
+        break;
+    case Plasma::BottomEdge:
+    default:
+        containment()->setFormFactor(Plasma::Horizontal);
+        setPosition(s->virtualGeometry().bottomLeft() - QPoint(0, height()));
+    }
+}
 
 #include "moc_panelview.cpp"

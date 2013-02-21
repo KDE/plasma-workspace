@@ -32,6 +32,10 @@ public:
     virtual ~PanelView();
 
     virtual void init();
+
+private Q_SLOTS:
+    void positionPanel();
+
 private:
     
 };

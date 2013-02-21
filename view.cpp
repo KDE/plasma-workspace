@@ -57,6 +57,9 @@ void View::init()
 
 void View::setContainment(Plasma::Containment *cont)
 {
+    Plasma::Location oldLoc = location();
+    Plasma::FormFactor oldForm = formFactor();
+
     if (m_containment) {
         disconnect(m_containment.data(), 0, this, 0);
         QObject *oldGraphicObject = m_containment.data()->property("graphicObject").value<QObject *>();
@@ -68,7 +71,19 @@ void View::setContainment(Plasma::Containment *cont)
 
     m_containment = cont;
 
-    if (!cont) {
+    if (oldLoc != location()) {
+        emit locationChanged(location());
+    }
+    if (oldForm != formFactor()) {
+        emit formFactorChanged(formFactor());
+    }
+
+    if (cont) {
+        connect(cont, &Plasma::Containment::locationChanged,
+                this, &View::locationChanged);
+        connect(cont, &Plasma::Containment::formFactorChanged,
+                this, &View::formFactorChanged);
+    } else {
         return;
     }
 
@@ -90,6 +105,22 @@ void View::setContainment(Plasma::Containment *cont)
 Plasma::Containment *View::containment() const
 {
     return m_containment.data();
+}
+
+Plasma::Location View::location()
+{
+    if (!m_containment) {
+        return Plasma::Desktop;
+    }
+    return m_containment.data()->location();
+}
+
+Plasma::FormFactor View::formFactor()
+{
+    if (!m_containment) {
+        return Plasma::Planar;
+    }
+    return m_containment.data()->formFactor();
 }
 
 #include "moc_view.cpp"
