@@ -36,6 +36,8 @@ public:
 
     Plasma::Corona *corona() const;
 
+    virtual KConfigGroup config() const;
+
     //FIXME: not super nice, but we have to be sure qml assignment is done after window flags
     virtual void init();
 

@@ -21,6 +21,7 @@
 #include <QDebug>
 #include <QScreen>
 
+#include <KGlobal>
 #include <KWindowSystem>
 #include <kwindoweffects.h>
 
@@ -50,6 +51,15 @@ PanelView::PanelView(Plasma::Corona *corona, QWindow *parent)
 PanelView::~PanelView()
 {
     
+}
+
+KConfigGroup PanelView::config() const
+{
+    if (!containment()) {
+        return KConfigGroup();
+    }
+    KConfigGroup views(KGlobal::config(), "PlasmaViews");
+    return KConfigGroup(&views, QString("Panel %1").arg(containment()->id()));
 }
 
 void PanelView::init()

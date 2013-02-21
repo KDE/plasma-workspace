@@ -31,6 +31,8 @@ public:
     explicit PanelView(Plasma::Corona *corona, QWindow *parent = 0);
     virtual ~PanelView();
 
+    virtual KConfigGroup config() const;
+
     virtual void init();
 
 private Q_SLOTS:
