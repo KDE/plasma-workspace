@@ -20,6 +20,7 @@
 
 #include <QDebug>
 
+#include <KWindowSystem>
 #include <kwindoweffects.h>
 
 #include <Plasma/Package>
@@ -33,9 +34,11 @@ PanelView::PanelView(Plasma::Corona *corona, QWindow *parent)
     setClearBeforeRendering(true);
     setColor(QColor(Qt::transparent));
     setFlags(Qt::FramelessWindowHint);
+    KWindowSystem::setType(winId(), NET::Dock);
 
     //TODO: how to take the shape from the framesvg?
     KWindowEffects::enableBlurBehind(winId(), true);
+    
 }
 
 PanelView::~PanelView()
