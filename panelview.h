@@ -43,6 +43,7 @@ private:
     int m_offset;
     int m_maxLength;
     int m_minLength;
+    Qt::Alignment m_alignment;
 };
 
 #endif // PANELVIEW_H
