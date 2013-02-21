@@ -45,9 +45,9 @@ Item {
         color: Qt.rgba(0,0,0,0)
         visible: plasmoid.expanded
         visualParent: root
-        mainItem: Rectangle {
+        mainItem: Item {
             id: appletParent
-            radius: 5
+
             width: applet && applet.implicitWidth > 0 ? applet.implicitWidth : theme.defaultFont.mSize.width * 35
             height: applet && applet.implicitHeight > 0 ? applet.implicitHeight : theme.defaultFont.mSize.height * 25
             onWidthChanged: applet.width = width
@@ -56,7 +56,7 @@ Item {
         
         onActiveWindowChanged: {
             if (!activeWindow) {
-                plasmoid.expanded = false
+               // plasmoid.expanded = false
             }
         }
         onVisibleChanged: {
