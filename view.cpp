@@ -89,6 +89,8 @@ void View::setContainment(Plasma::Containment *cont)
         emit formFactorChanged(formFactor());
     }
 
+    emit containmentChanged();
+
     if (cont) {
         connect(cont, &Plasma::Containment::locationChanged,
                 this, &View::locationChanged);

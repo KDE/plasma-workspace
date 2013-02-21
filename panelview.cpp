@@ -28,7 +28,10 @@
 #include <Plasma/Package>
 
 PanelView::PanelView(Plasma::Corona *corona, QWindow *parent)
-    : View(corona, parent)
+    : View(corona, parent),
+       m_offset(0),
+       m_maxLength(0),
+       m_minLength(0)
 {
     QSurfaceFormat format;
     format.setAlphaBufferSize(8);
@@ -46,11 +49,19 @@ PanelView::PanelView(Plasma::Corona *corona, QWindow *parent)
             this, &PanelView::positionPanel);
     connect(this, &View::locationChanged,
             this, &PanelView::positionPanel);
+    connect(this, &View::containmentChanged,
+            this, &PanelView::restore);
 }
 
 PanelView::~PanelView()
 {
-    
+    if (containment()) {
+        config().writeEntry("offset", m_offset);
+        config().writeEntry("max", m_maxLength);
+        config().writeEntry("min", m_minLength);
+        config().writeEntry("size", size());
+        containment()->corona()->requestConfigSync();
+    }
 }
 
 KConfigGroup PanelView::config() const
@@ -59,7 +70,14 @@ KConfigGroup PanelView::config() const
         return KConfigGroup();
     }
     KConfigGroup views(KGlobal::config(), "PlasmaViews");
-    return KConfigGroup(&views, QString("Panel %1").arg(containment()->id()));
+    views = KConfigGroup(&views, QString("Panel %1").arg(containment()->id()));
+
+    if (containment()->formFactor() == Plasma::Vertical) {
+        return KConfigGroup(&views, "Vertical" + QString::number(screen()->size().height()));
+    //treat everything else as horizontal
+    } else {
+        return KConfigGroup(&views, "Horizontal" + QString::number(screen()->size().width()));
+    }
 }
 
 void PanelView::init()
@@ -83,21 +101,56 @@ void PanelView::positionPanel()
     switch (containment()->location()) {
     case Plasma::TopEdge:
         containment()->setFormFactor(Plasma::Horizontal);
-        setPosition(s->virtualGeometry().topLeft());
+        setPosition(s->virtualGeometry().topLeft() + QPoint(m_offset, 0));
         break;
     case Plasma::LeftEdge:
         containment()->setFormFactor(Plasma::Vertical);
-        setPosition(s->virtualGeometry().topLeft());
+        setPosition(s->virtualGeometry().topLeft() + QPoint(0, m_offset));
         break;
     case Plasma::RightEdge:
         containment()->setFormFactor(Plasma::Vertical);
-        setPosition(s->virtualGeometry().topRight() - QPoint(width(), 0));
+        setPosition(s->virtualGeometry().topRight() - QPoint(width(), 0) + QPoint(0, m_offset));
         break;
     case Plasma::BottomEdge:
     default:
         containment()->setFormFactor(Plasma::Horizontal);
-        setPosition(s->virtualGeometry().bottomLeft() - QPoint(0, height()));
+        setPosition(s->virtualGeometry().bottomLeft() - QPoint(0, height()) + QPoint(m_offset, 0));
     }
+}
+
+void PanelView::restore()
+{
+    if (!containment()) {
+        return;
+    }
+
+    m_offset = config().readEntry<int>("offset", 0);
+    m_maxLength = config().readEntry<int>("max", -1);
+    m_minLength = config().readEntry<int>("min", -1);
+
+    setMinimumSize(QSize(-1, -1));
+    //FIXME: an invalid size doesn't work with QWindows
+    setMaximumSize(QSize(10000, 10000));
+
+    if (containment()->formFactor() == Plasma::Vertical) {
+        if (m_minLength > 0) {
+            setMinimumHeight(m_minLength);
+        }
+        if (m_maxLength > 0) {
+            setMaximumHeight(m_maxLength);
+        }
+        resize(config().readEntry<QSize>("size", QSize(32, screen()->size().width())));
+    } else {
+        if (m_minLength > 0) {
+            setMinimumWidth(m_minLength);
+        }
+        if (m_maxLength > 0) {
+            setMaximumWidth(m_maxLength);
+        }
+        resize(config().readEntry<QSize>("size", QSize(screen()->size().height(), 32)));
+    }
+
+    positionPanel();
 }
 
 #include "moc_panelview.cpp"

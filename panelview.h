@@ -37,9 +37,12 @@ public:
 
 private Q_SLOTS:
     void positionPanel();
+    void restore();
 
 private:
-    
+    int m_offset;
+    int m_maxLength;
+    int m_minLength;
 };
 
 #endif // PANELVIEW_H

@@ -50,6 +50,7 @@ public:
 Q_SIGNALS:
     void locationChanged(Plasma::Location location);
     void formFactorChanged(Plasma::FormFactor formFactor);
+    void containmentChanged();
 
 private:
     Plasma::Corona *m_corona;
