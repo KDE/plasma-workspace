@@ -53,7 +53,7 @@ Item {
             onWidthChanged: applet.width = width
             onHeightChanged: applet.height = height
         }
-        
+
         onActiveWindowChanged: {
             if (!activeWindow) {
                // plasmoid.expanded = false

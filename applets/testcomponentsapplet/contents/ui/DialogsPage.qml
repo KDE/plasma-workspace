@@ -49,6 +49,7 @@ PlasmaComponents.Page {
                 text: "QtQuick2.Window"
             }
             Window {
+                title: radio.text
                 id: qWindow
                 visible: radio.checked
                 width: childrenRect.width
@@ -82,7 +83,8 @@ PlasmaComponents.Page {
 
             PlasmaCore.Dialog {
                 id: pcDialog
-                windowFlags: Qt.Popup
+                //windowFlags: Qt.Popup
+                visualParent: dialogsPage
                 //mainItem: dContent2
                 color: Qt.rgba(0,0,0,0)
 
@@ -99,7 +101,13 @@ PlasmaComponents.Page {
                 text: "PlasmaComponents.Dialog"
                 iconSource: "dialog-ok-apply"
                 checkable: true
-                onCheckedChanged: pcompDialog.visible = checked
+                onCheckedChanged: {
+                    if (checked) {
+                        pcompDialog.open();
+                    } else {
+                        pcompDialog.close();
+                    }
+                }
             }
             PlasmaComponents.Label {
                 text: pcompDialog.visible ? "shown" : "hidden"
@@ -108,10 +116,10 @@ PlasmaComponents.Page {
             PlasmaComponents.Dialog {
                 id: pcompDialog
                 //windowFlags: Qt.Popup
-                content: dContent3
-                DialogContent {
+                visualParent: dialogsPage
+                content: DialogContent {
                     id: dContent3
-                    onCloseMe: pcompDialog.visible = false
+                    onCloseMe: pcompDialog.close()
                 }
                 buttons: PlasmaComponents.ButtonRow {
                     PlasmaComponents.Button {
@@ -125,10 +133,41 @@ PlasmaComponents.Page {
                         text: "Accept";
                         onClicked: {
                             print("Accepting...");
-                            pcompDialog.accept()
+                            pcompDialog.accept();
+                            pcompDialog.close();
                         }
                     }
                 }
+            }
+        }
+        Row {
+            height: _h
+            spacing: _s
+            PlasmaComponents.Button {
+                text: "PlasmaComponents.QueryDialog"
+                iconSource: "dialog-ok-apply"
+                checkable: true
+                onCheckedChanged: {
+                    if (checked) {
+                        queryDialog.open();
+                    } else {
+                        queryDialog.close();
+                    }
+                }
+            }
+            PlasmaComponents.Label {
+                text: queryDialog.visible ? "shown" : "hidden"
+            }
+
+            PlasmaComponents.QueryDialog {
+                id: queryDialog
+                //windowFlags: Qt.Popup
+                visualParent: dialogsPage
+                titleText: "Fruit Inquiry"
+                message: "Would you rather have apples or oranges?"
+                acceptButtonText: i18n("Apples")
+                rejectButtonText: i18n("Oranges")
+                onButtonClicked: close()
             }
         }
     }

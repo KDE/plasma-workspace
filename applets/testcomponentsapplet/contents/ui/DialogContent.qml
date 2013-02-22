@@ -28,12 +28,13 @@ import org.kde.qtextracomponents 0.1 as QtExtras
 
 Item {
     id: dialogsPage
-    width: 400
+    width: 300
     height: 300
     signal closeMe()
     Rectangle {
         color: "green"
-        anchors.margins: 24
+        //anchors.margins: 24
+        opacity: 0.1
         anchors.fill: parent
     }
     PlasmaComponents.TextArea {
