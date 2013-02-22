@@ -28,6 +28,11 @@ Rectangle {
     width: 640
     height: 480
 
+    function addConfigPage(url) {
+        print("Loading config page: " + url)
+        main.source = url
+    }
+
     Column {
         anchors.fill: parent
         Row {
@@ -78,13 +83,10 @@ Rectangle {
                 Flickable {
                     contentWidth: width
                     contentHeight: main.height
-                    Item {
+                    Loader {
                         id: main
                         width: parent.width
                         height: childrenRect.height
-                        Text {
-                            text: "Configuration goes here"
-                        }
                     }
                 }
             }
