@@ -33,6 +33,7 @@ Rectangle {
         main.source = url
     }
 
+
     Column {
         anchors.fill: parent
         Row {
@@ -54,21 +55,39 @@ Rectangle {
                     Column {
                         id: categoriesColumn
                         width: parent.width
-                        Column {
-                            anchors {
-                                left: parent.left
-                                right: parent.right
-                            }
-                            PlasmaCore.IconItem {
-                                anchors.horizontalCenter: parent.horizontalCenter
-                                width: theme.IconSizeHuge
-                                height: width
-                                source: "preferences-desktop-keyboard"
-                            }
-                            PlasmaComponents.Label {
-                                text: "Keyboard shortcut"
-                                wrapMode: Text.Wrap
-                                horizontalAlignment: Text.alignHCenter
+                        Repeater {
+                            model: configDialog.configPages.length
+                            delegate: MouseArea {
+                                anchors {
+                                    left: parent.left
+                                    right: parent.right
+                                }
+                                width: childrenRect.width
+                                height: childrenRect.height
+                                Column {
+                                    anchors {
+                                        left: parent.left
+                                        right: parent.right
+                                    }
+                                    PlasmaCore.IconItem {
+                                        anchors.horizontalCenter: parent.horizontalCenter
+                                        width: theme.IconSizeHuge
+                                        height: width
+                                        source: configDialog.configPages[modelData].icon
+                                    }
+                                    PlasmaComponents.Label {
+                                        anchors {
+                                            left: parent.left
+                                            right: parent.right
+                                        }
+                                        text: configDialog.configPages[modelData].title
+                                        wrapMode: Text.Wrap
+                                        horizontalAlignment: Text.AlignHCenter
+                                    }
+                                }
+                                onClicked: {
+                                    main.sourceComponent = configDialog.configPages[modelData].component
+                                }
                             }
                         }
                     }
