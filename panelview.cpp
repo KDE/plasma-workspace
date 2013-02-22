@@ -108,7 +108,7 @@ void PanelView::positionPanel()
             setPosition(QPoint(s->virtualGeometry().center().x(), s->virtualGeometry().top()) + QPoint(m_offset - size().width()/2, 0));
             break;
         case Qt::AlignRight:
-            setPosition(s->virtualGeometry().topRight() + QPoint(m_offset - size().width(), 0));
+            setPosition(s->virtualGeometry().topRight() + QPoint(-m_offset - size().width(), 0));
             break;
         case Qt::AlignLeft:
         default:
@@ -123,7 +123,7 @@ void PanelView::positionPanel()
             setPosition(QPoint(s->virtualGeometry().left(), s->virtualGeometry().center().y()) + QPoint(0, m_offset));
             break;
         case Qt::AlignRight:
-            setPosition(s->virtualGeometry().bottomLeft() + QPoint(0, m_offset - size().height()));
+            setPosition(s->virtualGeometry().bottomLeft() + QPoint(0, -m_offset - size().height()));
             break;
         case Qt::AlignLeft:
         default:
@@ -138,7 +138,7 @@ void PanelView::positionPanel()
             setPosition(QPoint(s->virtualGeometry().right(), s->virtualGeometry().center().y()) - QPoint(width(), 0) + QPoint(0, m_offset - size().height()/2));
             break;
         case Qt::AlignRight:
-            setPosition(s->virtualGeometry().bottomRight() - QPoint(width(), 0) + QPoint(0, m_offset - size().height()));
+            setPosition(s->virtualGeometry().bottomRight() - QPoint(width(), 0) + QPoint(0, -m_offset - size().height()));
             break;
         case Qt::AlignLeft:
         default:
