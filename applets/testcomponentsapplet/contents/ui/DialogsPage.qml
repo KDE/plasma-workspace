@@ -46,7 +46,7 @@ PlasmaComponents.Page {
                 id: radio
                 checkable: true
                 iconSource: "dialog-ok"
-                text: "QtQuick2.Window"
+                text: "Window"
             }
             Window {
                 title: radio.text
@@ -71,7 +71,7 @@ PlasmaComponents.Page {
             height: _h
             spacing: _s
             PlasmaComponents.Button {
-                text: "PlasmaCore.Dialog"
+                text: "Core.Dialog"
                 iconSource: "dialog-ok-apply"
                 checkable: true
                 //onCheckedChanged: pcDialog.visible = checked
@@ -98,7 +98,7 @@ PlasmaComponents.Page {
             height: _h
             spacing: _s
             PlasmaComponents.Button {
-                text: "PlasmaComponents.Dialog"
+                text: "Dialog"
                 iconSource: "dialog-ok-apply"
                 checkable: true
                 onCheckedChanged: {
@@ -116,7 +116,7 @@ PlasmaComponents.Page {
             PlasmaComponents.Dialog {
                 id: pcompDialog
                 //windowFlags: Qt.Popup
-                visualParent: dialogsPage
+                visualParent: root
                 content: DialogContent {
                     id: dContent3
                     onCloseMe: pcompDialog.close()
@@ -144,7 +144,7 @@ PlasmaComponents.Page {
             height: _h
             spacing: _s
             PlasmaComponents.Button {
-                text: "PlasmaComponents.QueryDialog"
+                text: "QueryDialog"
                 iconSource: "dialog-ok-apply"
                 checkable: true
                 onCheckedChanged: {
@@ -162,7 +162,7 @@ PlasmaComponents.Page {
             PlasmaComponents.QueryDialog {
                 id: queryDialog
                 //windowFlags: Qt.Popup
-                visualParent: dialogsPage
+                visualParent: root
                 titleText: "Fruit Inquiry"
                 message: "Would you rather have apples or oranges?"
                 acceptButtonText: i18n("Apples")
