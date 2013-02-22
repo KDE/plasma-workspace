@@ -162,7 +162,7 @@ PlasmaComponents.Page {
             PlasmaComponents.QueryDialog {
                 id: queryDialog
                 //windowFlags: Qt.Popup
-                visualParent: root
+                //visualParent: root
                 titleText: "Fruit Inquiry"
                 message: "Would you rather have apples or oranges?"
                 acceptButtonText: i18n("Apples")
