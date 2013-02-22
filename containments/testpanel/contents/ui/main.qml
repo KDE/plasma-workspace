@@ -32,13 +32,24 @@ Item {
     Connections {
         target: plasmoid
         onAppletAdded: {
-            var container = appletContainerComponent.createObject(row)
+            var container = appletContainerComponent.createObject((plasmoid.formFactor == 3) ? column : row)
             print("Applet added in test panel: " + applet)
             applet.parent = container
             container.applet = applet
             applet.anchors.fill = applet.parent
             applet.visible = true
             container.visible = true
+        }
+        onFormFactorChanged: {
+            if (plasmoid.formFactor == 3) {
+                for (var container in row.children) {
+                    container.parent = column
+                }
+            } else {
+                for (var container in column.children) {
+                    container.parent = row
+                }
+            }
         }
     }
 
@@ -48,11 +59,8 @@ Item {
             id: container
             visible: false
 
-            anchors {
-                top: parent.top
-                bottom: parent.bottom
-            }
-            width:  height
+            width: Math.min(root.width, root.height)
+            height:  width
 
             property Item applet
 
@@ -71,6 +79,15 @@ Item {
         anchors {
             top: parent.top
             bottom: parent.bottom
+            left: parent.left
+        }
+    }
+    Column {
+        id: column
+        anchors {
+            top: parent.top
+            left: parent.left
+            right: parent.right
         }
     }
 
