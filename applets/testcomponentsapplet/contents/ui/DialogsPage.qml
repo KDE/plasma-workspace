@@ -170,6 +170,50 @@ PlasmaComponents.Page {
                 onButtonClicked: close()
             }
         }
+        PlasmaComponents.ButtonRow {
+            spacing: _s
+            PlasmaComponents.Button {
+                width: _h
+                text: "Top"
+                onClicked: {
+                    //locationDialog.location = PlasmaCore.Plasma.TopEdge;
+                    locationDialog.visible = true
+                }
+            }
+            PlasmaComponents.Button {
+                text: "Bottom"
+                width: _h
+                onClicked: {
+                    //locationDialog.location = PlasmaCore.Plasma.BottomEdge;
+                    locationDialog.visible = true
+                }
+            }
+            PlasmaComponents.Button {
+                text: "Left"
+                width: _h
+                onClicked: {
+                    //locationDialog.location = PlasmaCore.Plasma.LeftEdge;
+                    locationDialog.visible = true
+                }
+            }
+            PlasmaComponents.Button {
+                text: "Right"
+                width: _h
+                onClicked: {
+                    //locationDialog.location = PlasmaCore.Plasma.RightEdge;
+                    locationDialog.visible = true
+                }
+            }
+
+        }
+        PlasmaCore.Dialog {
+            id: locationDialog
+            visualParent: dialogsPage
+            mainItem: DialogContent {
+                id: dContent4
+                onCloseMe: locationDialog.visible = false
+            }
+        }
     }
 }
 
