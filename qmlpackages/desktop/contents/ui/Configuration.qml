@@ -28,11 +28,21 @@ Rectangle {
     width: 640
     height: 480
 
-    function addConfigPage(url) {
-        print("Loading config page: " + url)
-        main.source = url
+    function saveConfig() {
+        for (var key in plasmoid.configuration) {
+            if (main.item["cfg_"+key] !== undefined) {
+                plasmoid.configuration[key] = main.item["cfg_"+key]
+            }
+        }
     }
 
+    function restoreConfig() {
+        for (var key in plasmoid.configuration) {
+            if (main.item["cfg_"+key] !== undefined) {
+                main.item["cfg_"+key] = plasmoid.configuration[key]
+            }
+        }
+    }
 
     Column {
         anchors.fill: parent
@@ -87,6 +97,7 @@ Rectangle {
                                 }
                                 onClicked: {
                                     main.sourceComponent = configDialog.configPages[modelData].component
+                                    root.restoreConfig()
                                 }
                             }
                         }
@@ -120,10 +131,16 @@ Rectangle {
             PlasmaComponents.Button {
                 iconSource: "dialog-ok"
                 text: "Ok"
+                onClicked: {
+                    root.saveConfig()
+                }
             }
             PlasmaComponents.Button {
                 iconSource: "dialog-ok-apply"
                 text: "Apply"
+                onClicked: {
+                    root.saveConfig()
+                }
             }
             PlasmaComponents.Button {
                 iconSource: "dialog-cancel"

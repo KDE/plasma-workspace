@@ -25,6 +25,8 @@ Item {
     id: iconsPage
     height: childrenRect.height
 
+    property alias cfg_Test: testConfigField.text
+
     Column {
         anchors.fill: parent
         spacing: 4
