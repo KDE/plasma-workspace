@@ -47,9 +47,12 @@ Rectangle {
     Component.onCompleted: {
         main.sourceComponent = configDialog.configPages[0].component
         root.restoreConfig()
+        root.width = mainColumn.implicitWidth
+        root.height = mainColumn.implicitHeight
     }
 
     Column {
+        id: mainColumn
         anchors.fill: parent
         Row {
             anchors {
@@ -129,10 +132,15 @@ Rectangle {
                 Flickable {
                     contentWidth: width
                     contentHeight: main.height
-                    Loader {
-                        id: main
+                    Item {
                         width: parent.width
                         height: childrenRect.height
+                        Loader {
+                            id: main
+                            anchors.horizontalCenter: parent.horizontalCenter
+                            width: childrenRect.width
+                            height: childrenRect.height
+                        }
                     }
                 }
             }
