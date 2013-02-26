@@ -208,7 +208,7 @@ PlasmaComponents.Page {
         }
         PlasmaCore.Dialog {
             id: locationDialog
-            visualParent: buttonRow
+            //visualParent: buttonRow
             mainItem: DialogContent {
                 id: dContent4
                 onCloseMe: locationDialog.visible = false
