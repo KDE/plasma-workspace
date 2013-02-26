@@ -171,13 +171,14 @@ PlasmaComponents.Page {
             }
         }
         PlasmaComponents.ButtonRow {
+            id: buttonRow
             spacing: _s
             PlasmaComponents.Button {
                 width: _h
                 text: "Top"
                 onClicked: {
                     locationDialog.location = PlasmaCore.Plasma.TopEdge;
-                    locationDialog.visible = true
+                    locationDialog.visible = !locationDialog.visible
                 }
             }
             PlasmaComponents.Button {
@@ -185,7 +186,7 @@ PlasmaComponents.Page {
                 width: _h
                 onClicked: {
                     locationDialog.location = PlasmaCore.Plasma.BottomEdge;
-                    locationDialog.visible = true
+                    locationDialog.visible = !locationDialog.visible
                 }
             }
             PlasmaComponents.Button {
@@ -193,7 +194,7 @@ PlasmaComponents.Page {
                 width: _h
                 onClicked: {
                     locationDialog.location = PlasmaCore.Plasma.LeftEdge;
-                    locationDialog.visible = true
+                    locationDialog.visible = !locationDialog.visible
                 }
             }
             PlasmaComponents.Button {
@@ -201,14 +202,13 @@ PlasmaComponents.Page {
                 width: _h
                 onClicked: {
                     locationDialog.location = PlasmaCore.Plasma.RightEdge;
-                    locationDialog.visible = true
+                    locationDialog.visible = !locationDialog.visible
                 }
             }
-
         }
         PlasmaCore.Dialog {
             id: locationDialog
-            visualParent: dialogsPage
+            visualParent: buttonRow
             mainItem: DialogContent {
                 id: dContent4
                 onCloseMe: locationDialog.visible = false
