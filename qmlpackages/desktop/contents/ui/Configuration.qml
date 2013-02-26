@@ -133,18 +133,18 @@ Rectangle {
                 text: "Ok"
                 onClicked: {
                     root.saveConfig()
+                    configDialog.close()
                 }
             }
             PlasmaComponents.Button {
                 iconSource: "dialog-ok-apply"
                 text: "Apply"
-                onClicked: {
-                    root.saveConfig()
-                }
+                onClicked: root.saveConfig()
             }
             PlasmaComponents.Button {
                 iconSource: "dialog-cancel"
                 text: "Cancel"
+                onClicked: configDialog.close()
             }
         }
     }
