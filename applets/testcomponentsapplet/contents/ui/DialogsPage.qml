@@ -172,7 +172,7 @@ PlasmaComponents.Page {
         }
         PlasmaComponents.ButtonRow {
             id: buttonRow
-            spacing: _s
+            spacing: _s/2
             PlasmaComponents.Button {
                 width: _h
                 text: "Top"
@@ -205,10 +205,34 @@ PlasmaComponents.Page {
                     locationDialog.visible = !locationDialog.visible
                 }
             }
+            PlasmaComponents.Button {
+                text: "Desktop"
+                width: _h
+                onClicked: {
+                    locationDialog.location = PlasmaCore.Plasma.Desktop;
+                    locationDialog.visible = !locationDialog.visible
+                }
+            }
+            PlasmaComponents.Button {
+                text: "Floating"
+                width: _h
+                onClicked: {
+                    locationDialog.location = PlasmaCore.Plasma.Floating;
+                    locationDialog.visible = !locationDialog.visible
+                }
+            }
+            PlasmaComponents.Button {
+                text: "FullScreen"
+                width: _h
+                onClicked: {
+                    locationDialog.location = PlasmaCore.Plasma.FullScreen;
+                    locationDialog.visible = !locationDialog.visible
+                }
+            }
         }
         PlasmaCore.Dialog {
             id: locationDialog
-            //visualParent: buttonRow
+            visualParent: buttonRow
             mainItem: DialogContent {
                 id: dContent4
                 onCloseMe: locationDialog.visible = false
