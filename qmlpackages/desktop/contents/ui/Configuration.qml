@@ -44,6 +44,11 @@ Rectangle {
         }
     }
 
+    Component.onCompleted: {
+        main.sourceComponent = configDialog.configPages[0].component
+        root.restoreConfig()
+    }
+
     Column {
         anchors.fill: parent
         Row {
@@ -74,6 +79,10 @@ Rectangle {
                                 }
                                 width: childrenRect.width
                                 height: childrenRect.height
+                                Rectangle {
+                                    anchors.fill: parent
+                                    visible: (main.sourceComponent == configDialog.configPages[modelData].component)
+                                }
                                 Column {
                                     anchors {
                                         left: parent.left
@@ -96,8 +105,12 @@ Rectangle {
                                     }
                                 }
                                 onClicked: {
-                                    main.sourceComponent = configDialog.configPages[modelData].component
-                                    root.restoreConfig()
+                                    if (main.sourceComponent == configDialog.configPages[modelData].component) {
+                                        return
+                                    } else {
+                                        main.sourceComponent = configDialog.configPages[modelData].component
+                                        root.restoreConfig()
+                                    }
                                 }
                             }
                         }
