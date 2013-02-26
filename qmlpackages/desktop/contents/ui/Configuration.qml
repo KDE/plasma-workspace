@@ -104,7 +104,7 @@ Rectangle {
                                             left: parent.left
                                             right: parent.right
                                         }
-                                        text: configDialog.configPages[modelData].title
+                                        text: configDialog.configPages[modelData].name
                                         wrapMode: Text.Wrap
                                         horizontalAlignment: Text.AlignHCenter
                                     }
