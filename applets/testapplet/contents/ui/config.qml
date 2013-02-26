@@ -21,22 +21,34 @@ import QtQuick 2.0
 import org.kde.plasma.core 0.1 as PlasmaCore
 import org.kde.plasma.components 0.1 as PlasmaComponents
 
-Item {
-    id: iconsPage
-    height: childrenRect.height
+QtObject {
+    
+    property list<QtObject> modules: [
+        QtObject {
+            property string name: "General"
+            property string icon: "plasma"
+            property Component component: Component {
+                Item {
+                    id: iconsPage
+                    width: childrenRect.width
+                    height: childrenRect.height
 
-    property alias cfg_Test: testConfigField.text
+                    property alias cfg_Test: testConfigField.text
 
-    Column {
-        anchors.fill: parent
-        spacing: 4
-        Row {
-            PlasmaComponents.Label {
-                text: "Text Config value"
-            }
-            PlasmaComponents.TextField {
-                id: testConfigField
+                    Column {
+                        anchors.fill: parent
+                        spacing: 4
+                        Row {
+                            PlasmaComponents.Label {
+                                text: "Text Config value"
+                            }
+                            PlasmaComponents.TextField {
+                                id: testConfigField
+                            }
+                        }
+                    }
+                }
             }
         }
-    }
+    ]
 }
