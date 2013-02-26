@@ -56,6 +56,7 @@ Rectangle {
                 left: parent.left
                 right: parent.right
             }
+            spacing: 4
             height: parent.height - buttonsRow.height
             PlasmaExtras.ScrollArea {
                 id: categoriesScroll
@@ -81,6 +82,7 @@ Rectangle {
                                 height: childrenRect.height
                                 Rectangle {
                                     anchors.fill: parent
+                                    color: theme.highlightColor
                                     visible: (main.sourceComponent == configDialog.configPages[modelData].component)
                                 }
                                 Column {
@@ -121,8 +123,9 @@ Rectangle {
                 anchors {
                     top: parent.top
                     bottom: parent.bottom
+                    margins: 4
                 }
-                width: parent.width - categoriesScroll.width
+                width: parent.width - categoriesScroll.width - 8
                 Flickable {
                     contentWidth: width
                     contentHeight: main.height
