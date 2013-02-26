@@ -176,7 +176,7 @@ PlasmaComponents.Page {
                 width: _h
                 text: "Top"
                 onClicked: {
-                    //locationDialog.location = PlasmaCore.Plasma.TopEdge;
+                    locationDialog.location = PlasmaCore.Plasma.TopEdge;
                     locationDialog.visible = true
                 }
             }
@@ -184,7 +184,7 @@ PlasmaComponents.Page {
                 text: "Bottom"
                 width: _h
                 onClicked: {
-                    //locationDialog.location = PlasmaCore.Plasma.BottomEdge;
+                    locationDialog.location = PlasmaCore.Plasma.BottomEdge;
                     locationDialog.visible = true
                 }
             }
@@ -192,7 +192,7 @@ PlasmaComponents.Page {
                 text: "Left"
                 width: _h
                 onClicked: {
-                    //locationDialog.location = PlasmaCore.Plasma.LeftEdge;
+                    locationDialog.location = PlasmaCore.Plasma.LeftEdge;
                     locationDialog.visible = true
                 }
             }
@@ -200,7 +200,7 @@ PlasmaComponents.Page {
                 text: "Right"
                 width: _h
                 onClicked: {
-                    //locationDialog.location = PlasmaCore.Plasma.RightEdge;
+                    locationDialog.location = PlasmaCore.Plasma.RightEdge;
                     locationDialog.visible = true
                 }
             }
