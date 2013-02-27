@@ -51,6 +51,7 @@ Item {
         PlasmaComponents.TabButton { tab: iconsPage; iconSource: "preferences-desktop-icons"}
         PlasmaComponents.TabButton { tab: plasmoidPage; iconSource: "plasma"}
         PlasmaComponents.TabButton { tab: mousePage; iconSource: "preferences-desktop-mouse"}
+        PlasmaComponents.TabButton { tab: dragPage; iconSource: "preferences-desktop-mouse"}
     }
 
     PlasmaComponents.TabGroup {
@@ -82,6 +83,10 @@ Item {
 
         MousePage {
             id: mousePage
+        }
+
+        DragPage {
+            id: dragPage
         }
     }
 
