@@ -45,7 +45,11 @@ Rectangle {
     }
 
     Component.onCompleted: {
-        main.sourceComponent = configDialog.configPages[0].component
+        if (configDialog.configPages.length > 0) {
+            main.sourceComponent = configDialog.configPages[0].component
+        } else {
+            main.sourceComponent = globalConfigPages[0].component
+        }
         root.restoreConfig()
         root.width = mainColumn.implicitWidth
         root.height = mainColumn.implicitHeight
@@ -86,7 +90,8 @@ Rectangle {
                     top: parent.top
                     bottom: parent.bottom
                 }
-                width: 100
+                visible: configDialog.configPages.length > 0 && globalConfigPages.length > 0
+                width: visible ? 100 : 0
                 Flickable {
                     contentWidth: width
                     contentHeight: categoriesColumn.height
