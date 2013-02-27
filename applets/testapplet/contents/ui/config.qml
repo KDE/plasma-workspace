@@ -32,10 +32,13 @@ QtObject {
                     id: iconsPage
                     width: childrenRect.width
                     height: childrenRect.height
+                    implicitWidth: mainColumn.implicitWidth
+                    implicitHeight: pageColumn.implicitHeight
 
                     property alias cfg_Test: testConfigField.text
 
                     Column {
+                        id: pageColumn
                         anchors.fill: parent
                         spacing: 4
                         Row {

@@ -88,13 +88,20 @@ Rectangle {
     Column {
         id: mainColumn
         anchors.fill: parent
+        property int implicitWidth: Math.max(contentRow.implicitWidth, buttonsRow.implicitWidth) + 8
+        property int implicitHeight: contentRow.implicitHeight + buttonsRow.implicitHeight + 8
+
         Row {
+            id: contentRow
             anchors {
                 left: parent.left
                 right: parent.right
             }
             spacing: 4
             height: parent.height - buttonsRow.height
+            property int implicitWidth: categoriesScroll.implicitWidth + pageScroll.implicitWidth
+            property int implicitHeight: Math.max(categoriesScroll.implicitHeight, pageScroll.implicitHeight)
+
             PlasmaExtras.ScrollArea {
                 id: categoriesScroll
                 anchors {
@@ -103,6 +110,8 @@ Rectangle {
                 }
                 visible: configDialog.configPages.length > 0 && globalConfigPages.length > 0
                 width: visible ? 100 : 0
+                implicitWidth: width
+                implicitHeight: theme.defaultFont.mSize.height * 12
                 Flickable {
                     id: categoriesView
                     contentWidth: width
@@ -149,12 +158,15 @@ Rectangle {
                 }
             }
             PlasmaExtras.ScrollArea {
+                id: pageScroll
                 anchors {
                     top: parent.top
                     bottom: parent.bottom
                     margins: 4
                 }
                 width: parent.width - categoriesScroll.width - 8
+                implicitWidth: main.currentPage ? main.currentPage.implicitWidth : 0
+                implicitHeight: main.currentPage ? main.currentPage.implicitHeight : 0
                 Flickable {
                     contentWidth: width
                     contentHeight: main.height
@@ -167,6 +179,8 @@ Rectangle {
                             property Component sourceComponent
                             onSourceComponentChanged: {
                                 replace(sourceComponent)
+                                root.width = mainColumn.implicitWidth
+                                root.height = mainColumn.implicitHeight
                             }
                         }
                     }
