@@ -31,19 +31,15 @@ MouseArea {
 //BEGIN properties
     width: childrenRect.width
     height: childrenRect.height
-    property bool current: main.sourceComponent == dataSource[modelData].component
+    property bool current: main.sourceFile == model.source
 //END properties
-
-//BEGIN model
-    property list<QtObject> dataSource
-//END model
 
 //BEGIN connections
     onClicked: {
         if (delegate.current) {
             return
         } else {
-            main.sourceComponent = dataSource[modelData].component
+            main.sourceFile = model.source
             root.restoreConfig()
         }
     }
@@ -64,14 +60,14 @@ MouseArea {
             anchors.horizontalCenter: parent.horizontalCenter
             width: theme.IconSizeHuge
             height: width
-            source: dataSource[modelData].icon
+            source: model.icon
         }
         PlasmaComponents.Label {
             anchors {
                 left: parent.left
                 right: parent.right
             }
-            text: dataSource[modelData].name
+            text: model.name
             wrapMode: Text.Wrap
             horizontalAlignment: Text.AlignHCenter
         }

@@ -17,13 +17,16 @@
  */
 
 import QtQuick 2.0
+import org.kde.plasma.components 0.1 as PlasmaComponents
 
-import org.kde.plasma.configuration 0.1
 
-ConfigModel {
-    ConfigCategory {
-         name: "General"
-         icon: "plasma"
-         source: "configGeneral.qml"
+Item {
+    id: iconsPage
+    width: childrenRect.width
+    height: childrenRect.height
+
+    PlasmaComponents.Button {
+        iconSource: "settings"
+        text: "None"
     }
 }

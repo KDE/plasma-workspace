@@ -18,12 +18,30 @@
 
 import QtQuick 2.0
 
-import org.kde.plasma.configuration 0.1
+import org.kde.plasma.core 0.1 as PlasmaCore
+import org.kde.plasma.components 0.1 as PlasmaComponents
 
-ConfigModel {
-    ConfigCategory {
-         name: "General"
-         icon: "plasma"
-         source: "configGeneral.qml"
+
+Item {
+    id: iconsPage
+    width: childrenRect.width
+    height: childrenRect.height
+    implicitWidth: mainColumn.implicitWidth
+    implicitHeight: pageColumn.implicitHeight
+
+    property alias cfg_Test: testConfigField.text
+
+    Column {
+        id: pageColumn
+        anchors.fill: parent
+        spacing: 4
+        Row {
+            PlasmaComponents.Label {
+                text: "Text Config value"
+            }
+            PlasmaComponents.TextField {
+                id: testConfigField
+            }
+        }
     }
 }

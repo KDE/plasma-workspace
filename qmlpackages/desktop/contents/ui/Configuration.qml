@@ -34,24 +34,14 @@ Rectangle {
 //END properties
 
 //BEGIN model
-    property list<QtObject> globalConfigPages: [
-        QtObject {
-            property string name: "Keyboard shortcuts"
-            property string icon: "preferences-desktop-keyboard"
-            property Component component: Component {
-                Item {
-                    id: iconsPage
-                    width: childrenRect.width
-                    height: childrenRect.height
-
-                    PlasmaComponents.Button {
-                        iconSource: "settings"
-                        text: "None"
-                    }
-                }
-            }
+    property ConfigModel globalConfigModel: ConfigModel {
+        id: globalConfigModel
+        ConfigCategory {
+            name: "Keyboard shortcuts"
+            icon: "preferences-desktop-keyboard"
+            source: "ConfigurationShortcuts.qml"
         }
-    ]
+    }
 //END model
 
 //BEGIN functions
@@ -75,10 +65,10 @@ Rectangle {
 
 //BEGIN connections
     Component.onCompleted: {
-        if (configDialog.configPages.length > 0) {
-            main.sourceComponent = configDialog.configPages[0].component
+        if (configDialog.configModel.count > 0) {
+            main.sourceFile = configDialog.configModel.get(0).source
         } else {
-            main.sourceComponent = globalConfigPages[0].component
+            main.sourceFile = globalConfigModel.get(0).source
         }
         root.restoreConfig()
         root.width = mainColumn.implicitWidth
@@ -110,7 +100,7 @@ Rectangle {
                     top: parent.top
                     bottom: parent.bottom
                 }
-                visible: configDialog.configPages.length > 0 && globalConfigPages.length > 0
+                visible: configDialog.configModel.count > 0 || globalConfigModel.count > 0
                 width: visible ? 100 : 0
                 implicitWidth: width
                 implicitHeight: theme.defaultFont.mSize.height * 12
@@ -144,16 +134,12 @@ Rectangle {
                             id: categoriesColumn
                             width: parent.width
                             Repeater {
-                                model: configDialog.configPages.length
-                                delegate: ConfigCategoryDelegate {
-                                    dataSource: configDialog.configPages
-                                }
+                                model: configDialog.configModel
+                                delegate: ConfigCategoryDelegate {}
                             }
                             Repeater {
-                                model: globalConfigPages.length
-                                delegate: ConfigCategoryDelegate {
-                                    dataSource: globalConfigPages
-                                }
+                                model: globalConfigModel
+                                delegate: ConfigCategoryDelegate {}
                             }
                         }
                     }
@@ -178,9 +164,9 @@ Rectangle {
                         PlasmaComponents.PageStack {
                             id: main
                             anchors.fill: parent
-                            property Component sourceComponent
-                            onSourceComponentChanged: {
-                                replace(sourceComponent)
+                            property string sourceFile
+                            onSourceFileChanged: {
+                                replace(Qt.resolvedUrl(sourceFile))
                                 root.width = mainColumn.implicitWidth
                                 root.height = mainColumn.implicitHeight
                             }
