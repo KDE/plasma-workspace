@@ -51,6 +51,25 @@ Rectangle {
         root.height = mainColumn.implicitHeight
     }
 
+    property list<QtObject> globalConfigPages: [
+        QtObject {
+            property string name: "Keyboard shortcuts"
+            property string icon: "preferences-desktop-keyboard"
+            property Component component: Component {
+                Item {
+                    id: iconsPage
+                    width: childrenRect.width
+                    height: childrenRect.height
+
+                    PlasmaComponents.Button {
+                        iconSource: "settings"
+                        text: "None"
+                    }
+                }
+            }
+        }
+    ]
+
     Column {
         id: mainColumn
         anchors.fill: parent
@@ -76,47 +95,14 @@ Rectangle {
                         width: parent.width
                         Repeater {
                             model: configDialog.configPages.length
-                            delegate: MouseArea {
-                                anchors {
-                                    left: parent.left
-                                    right: parent.right
-                                }
-                                width: childrenRect.width
-                                height: childrenRect.height
-                                Rectangle {
-                                    anchors.fill: parent
-                                    color: theme.highlightColor
-                                    visible: (main.sourceComponent == configDialog.configPages[modelData].component)
-                                }
-                                Column {
-                                    anchors {
-                                        left: parent.left
-                                        right: parent.right
-                                    }
-                                    PlasmaCore.IconItem {
-                                        anchors.horizontalCenter: parent.horizontalCenter
-                                        width: theme.IconSizeHuge
-                                        height: width
-                                        source: configDialog.configPages[modelData].icon
-                                    }
-                                    PlasmaComponents.Label {
-                                        anchors {
-                                            left: parent.left
-                                            right: parent.right
-                                        }
-                                        text: configDialog.configPages[modelData].name
-                                        wrapMode: Text.Wrap
-                                        horizontalAlignment: Text.AlignHCenter
-                                    }
-                                }
-                                onClicked: {
-                                    if (main.sourceComponent == configDialog.configPages[modelData].component) {
-                                        return
-                                    } else {
-                                        main.sourceComponent = configDialog.configPages[modelData].component
-                                        root.restoreConfig()
-                                    }
-                                }
+                            delegate: ConfigCategoryDelegate {
+                                dataSource: configDialog.configPages
+                            }
+                        }
+                        Repeater {
+                            model: globalConfigPages.length
+                            delegate: ConfigCategoryDelegate {
+                                dataSource: globalConfigPages
                             }
                         }
                     }

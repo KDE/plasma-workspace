@@ -64,12 +64,12 @@ Rectangle {
                 plasmoid.busy = !plasmoid.busy
             }
         }
-        /*TextInput {
+        TextInput {
             width: 100
             height: 22
             text: plasmoid.configuration.Test
             onTextChanged: plasmoid.configuration.Test = text
-        }*/
+        }
     }
     Component.onCompleted: {
         print("Test Applet loaded")
