@@ -21,6 +21,7 @@ import QtQuick 2.0
 import org.kde.plasma.core 0.1 as PlasmaCore
 import org.kde.plasma.components 0.1 as PlasmaComponents
 
+
 QtObject {
     
     property list<QtObject> modules: [
@@ -36,7 +37,17 @@ QtObject {
                     implicitHeight: pageColumn.implicitHeight
 
                     property alias cfg_Test: testConfigField.text
-
+/*ListView {
+    model: ConfigModel {
+        ConfigCategory {
+            //property int title: Math.max(3, 9)
+            title: "AAAAA"
+            icon: "plasma"
+            source: "kkkk"
+        }
+    }
+    delegate: Text {text: title}
+}*/
                     Column {
                         id: pageColumn
                         anchors.fill: parent
