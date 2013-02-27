@@ -24,37 +24,14 @@ import org.kde.plasma.core 0.1 as PlasmaCore
 //TODO: all of this will be done with desktop components
 Rectangle {
     id: root
+
+//BEGIN properties
     color: "lightgray"
     width: 640
     height: 480
+//END properties
 
-    function saveConfig() {
-        for (var key in plasmoid.configuration) {
-            if (main.item["cfg_"+key] !== undefined) {
-                plasmoid.configuration[key] = main.item["cfg_"+key]
-            }
-        }
-    }
-
-    function restoreConfig() {
-        for (var key in plasmoid.configuration) {
-            if (main.item["cfg_"+key] !== undefined) {
-                main.item["cfg_"+key] = plasmoid.configuration[key]
-            }
-        }
-    }
-
-    Component.onCompleted: {
-        if (configDialog.configPages.length > 0) {
-            main.sourceComponent = configDialog.configPages[0].component
-        } else {
-            main.sourceComponent = globalConfigPages[0].component
-        }
-        root.restoreConfig()
-        root.width = mainColumn.implicitWidth
-        root.height = mainColumn.implicitHeight
-    }
-
+//BEGIN model
     property list<QtObject> globalConfigPages: [
         QtObject {
             property string name: "Keyboard shortcuts"
@@ -73,7 +50,41 @@ Rectangle {
             }
         }
     ]
+//END model
 
+//BEGIN functions
+    function saveConfig() {
+        for (var key in plasmoid.configuration) {
+            if (main.item["cfg_"+key] !== undefined) {
+                plasmoid.configuration[key] = main.item["cfg_"+key]
+            }
+        }
+    }
+
+    function restoreConfig() {
+        for (var key in plasmoid.configuration) {
+            if (main.item["cfg_"+key] !== undefined) {
+                main.item["cfg_"+key] = plasmoid.configuration[key]
+            }
+        }
+    }
+//END functions
+
+
+//BEGIN connections
+    Component.onCompleted: {
+        if (configDialog.configPages.length > 0) {
+            main.sourceComponent = configDialog.configPages[0].component
+        } else {
+            main.sourceComponent = globalConfigPages[0].component
+        }
+        root.restoreConfig()
+        root.width = mainColumn.implicitWidth
+        root.height = mainColumn.implicitHeight
+    }
+//END connections
+
+//BEGIN UI components
     Column {
         id: mainColumn
         anchors.fill: parent
@@ -163,4 +174,5 @@ Rectangle {
             }
         }
     }
+//END UI components
 }
