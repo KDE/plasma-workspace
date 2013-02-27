@@ -55,16 +55,16 @@ Rectangle {
 //BEGIN functions
     function saveConfig() {
         for (var key in plasmoid.configuration) {
-            if (main.item["cfg_"+key] !== undefined) {
-                plasmoid.configuration[key] = main.item["cfg_"+key]
+            if (main.currentPage["cfg_"+key] !== undefined) {
+                plasmoid.configuration[key] = main.currentPage["cfg_"+key]
             }
         }
     }
 
     function restoreConfig() {
         for (var key in plasmoid.configuration) {
-            if (main.item["cfg_"+key] !== undefined) {
-                main.item["cfg_"+key] = plasmoid.configuration[key]
+            if (main.currentPage["cfg_"+key] !== undefined) {
+                main.currentPage["cfg_"+key] = plasmoid.configuration[key]
             }
         }
     }
