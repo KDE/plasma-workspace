@@ -104,21 +104,45 @@ Rectangle {
                 visible: configDialog.configPages.length > 0 && globalConfigPages.length > 0
                 width: visible ? 100 : 0
                 Flickable {
+                    id: categoriesView
                     contentWidth: width
-                    contentHeight: categoriesColumn.height
-                    Column {
-                        id: categoriesColumn
+                    contentHeight: childrenRect.height
+                    anchors.fill: parent
+
+                    property Item currentItem
+
+                    Rectangle {
+                        id: categories
                         width: parent.width
-                        Repeater {
-                            model: configDialog.configPages.length
-                            delegate: ConfigCategoryDelegate {
-                                dataSource: configDialog.configPages
+                        height: Math.max(categoriesView.height, categoriesColumn.height)
+                        color: "white"
+
+                        Rectangle {
+                            color: theme.highlightColor
+                            width: parent.width
+                            height:  categoriesView.currentItem.height
+                            y: categoriesView.currentItem.y
+                            Behavior on y {
+                                NumberAnimation {
+                                    duration: 250
+                                    easing.type: "InOutQuad"
+                                }
                             }
                         }
-                        Repeater {
-                            model: globalConfigPages.length
-                            delegate: ConfigCategoryDelegate {
-                                dataSource: globalConfigPages
+                        Column {
+                            id: categoriesColumn
+                            width: parent.width
+                            Repeater {
+                                model: configDialog.configPages.length
+                                delegate: ConfigCategoryDelegate {
+                                    dataSource: configDialog.configPages
+                                }
+                            }
+                            Repeater {
+                                model: globalConfigPages.length
+                                delegate: ConfigCategoryDelegate {
+                                    dataSource: globalConfigPages
+                                }
                             }
                         }
                     }
@@ -137,11 +161,13 @@ Rectangle {
                     Item {
                         width: parent.width
                         height: childrenRect.height
-                        Loader {
+                        PlasmaComponents.PageStack {
                             id: main
-                            anchors.horizontalCenter: parent.horizontalCenter
-                            width: childrenRect.width
-                            height: childrenRect.height
+                            anchors.fill: parent
+                            property Component sourceComponent
+                            onSourceComponentChanged: {
+                                replace(sourceComponent)
+                            }
                         }
                     }
                 }
