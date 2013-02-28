@@ -18,13 +18,45 @@
 
 import QtQuick 2.0
 import org.kde.plasma.components 0.1 as PlasmaComponents
+import org.kde.plasma.configuration 0.1
 
-
-Item {
-    implicitWidth: childrenRect.width
-    implicitHeight: childrenRect.height
+Column {
 
     PlasmaComponents.Label {
-        text: "Wallpaper settings goes here"
+        text: "Plugins"
+    }
+    ListView {
+        id: categoriesView
+        anchors {
+            left: parent.left
+            right: parent.right
+        }
+        height: 100
+        orientation: ListView.Horizontal 
+        
+        model: configDialog.wallpaperConfigModel
+        delegate: ConfigCategoryDelegate {
+            anchors {
+                top: parent.top
+                bottom: parent.bottom
+                left: undefined
+                right: undefined
+            }
+            width: 64
+        }
+    }
+    PlasmaComponents.PageStack {
+        id: main
+        anchors {
+            left: parent.left
+            right: parent.right
+        }
+        height: 200
+        property string sourceFile
+        onSourceFileChanged: {
+            replace(Qt.resolvedUrl(sourceFile))
+            root.width = mainColumn.implicitWidth
+            root.height = mainColumn.implicitHeight
+        }
     }
 }

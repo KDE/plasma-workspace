@@ -10,6 +10,7 @@ Name[sv]=Skrivbordsunderlägg med bild
 Name[uk]=Зображення тла стільниці
 Name[x-test]=xxImage wallpaperxx
 Type=Service
+Icon=image-x-generic
 
 X-KDE-ParentApp=
 X-KDE-PluginInfo-Author=Marco Martin
