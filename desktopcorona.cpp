@@ -56,7 +56,7 @@ void DesktopCorona::loadDefaultLayout()
     Plasma::Containment *cont = addContainment("org.kde.testcontainment");
     cont->setScreen(0);
     qDebug() << containmentForScreen(0);
-    Plasma::Applet *appl = cont->addApplet("org.kde.testapplet");
+    Plasma::Applet *appl = cont->createApplet("org.kde.testapplet");
     qDebug() << "Containment:" << cont << cont->title();
     qDebug() << "Applet:" << appl->title() << appl;
 
