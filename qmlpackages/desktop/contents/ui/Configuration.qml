@@ -34,7 +34,7 @@ Rectangle {
 //END properties
 
 //BEGIN model
-    property ConfigModel globalConfigModel: ConfigModel {
+    ConfigModel {
         id: globalConfigModel
         ConfigCategory {
             name: "Keyboard shortcuts"
@@ -65,7 +65,7 @@ Rectangle {
 
 //BEGIN connections
     Component.onCompleted: {
-        if (configDialog.configModel.count > 0) {
+        if (configDialog.configModel && configDialog.configModel.count > 0) {
             main.sourceFile = configDialog.configModel.get(0).source
         } else {
             main.sourceFile = globalConfigModel.get(0).source
@@ -100,7 +100,7 @@ Rectangle {
                     top: parent.top
                     bottom: parent.bottom
                 }
-                visible: configDialog.configModel.count > 0 || globalConfigModel.count > 0
+                visible: (configDialog.configModel ? configDialog.configModel.count : 0) + globalConfigModel.count > 1
                 width: visible ? 100 : 0
                 implicitWidth: width
                 implicitHeight: theme.defaultFont.mSize.height * 12
