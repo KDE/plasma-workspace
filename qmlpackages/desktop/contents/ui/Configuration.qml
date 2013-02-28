@@ -34,12 +34,26 @@ Rectangle {
 //END properties
 
 //BEGIN model
+    property ConfigModel globalConfigModel: plasmoid.containmentType !== undefined ? globalContainmentConfigModel : globalAppletConfigModel
     ConfigModel {
-        id: globalConfigModel
+        id: globalAppletConfigModel
         ConfigCategory {
             name: "Keyboard shortcuts"
             icon: "preferences-desktop-keyboard"
             source: "ConfigurationShortcuts.qml"
+        }
+    }
+    ConfigModel {
+        id: globalContainmentConfigModel
+        ConfigCategory {
+            name: "Appearance"
+            icon: "preferences-desktop-wallpaper"
+            source: "ConfigurationContainmentAppearance.qml"
+        }
+        ConfigCategory {
+            name: "Mouse Actions"
+            icon: "preferences-desktop-mouse"
+            source: "ConfigurationContainmentActions.qml"
         }
     }
 //END model
