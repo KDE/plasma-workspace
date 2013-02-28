@@ -169,6 +169,15 @@ Rectangle {
                                 replace(Qt.resolvedUrl(sourceFile))
                                 root.width = mainColumn.implicitWidth
                                 root.height = mainColumn.implicitHeight
+                                /*
+                                 * This is not needed on a desktop shell that has ok/apply/cancel buttons, i'll leave it here only for future reference until we have a prototype for the active shell.
+                                 * root.pageChanged will start a timer, that in turn will call saveConfig() when triggered
+
+                                for (var prop in currentPage) {
+                                    if (prop.indexOf("cfg_") === 0) {
+                                        currentPage[prop+"Changed"].connect(root.pageChanged)
+                                    }
+                                }*/
                             }
                         }
                     }
