@@ -18,6 +18,7 @@
 
 import QtQuick 2.0
 
+
 Rectangle {
     id: root
     color: wallpaper.configuration.Color
