@@ -20,6 +20,6 @@ import QtQuick 2.0
 
 Rectangle {
     id: root
-    color: "darkblue"
-
+    color: wallpaper.configuration.Color
+Text{text:"Color:"+wallpaper.configuration.Color}
 }
