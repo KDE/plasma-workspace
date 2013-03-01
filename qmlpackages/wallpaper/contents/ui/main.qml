@@ -22,5 +22,8 @@ import QtQuick 2.0
 Rectangle {
     id: root
     color: wallpaper.configuration.Color
-Text{text:"Color:"+wallpaper.configuration.Color}
+
+    Behavior on color {
+        ColorAnimation { duration: 250 }
+    }
 }
