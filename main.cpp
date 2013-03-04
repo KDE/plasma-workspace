@@ -48,7 +48,10 @@ int main(int argc, char** argv)
 
     
     DesktopCorona *corona = new DesktopCorona();
-    corona->initializeLayout();
+    corona->loadLayout();
+    if (corona->containments().isEmpty()) {
+        corona->loadDefaultLayout();
+    }
     corona->checkScreens();
     
     return app.exec();
