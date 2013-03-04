@@ -53,7 +53,7 @@ DesktopCorona::~DesktopCorona()
 
 void DesktopCorona::loadDefaultLayout()
 {
-    Plasma::Containment *cont = addContainment("org.kde.testcontainment");
+    Plasma::Containment *cont = createContainment("org.kde.testcontainment");
     cont->setScreen(0);
     qDebug() << containmentForScreen(0);
     Plasma::Applet *appl = cont->createApplet("org.kde.testapplet");
@@ -118,7 +118,7 @@ void DesktopCorona::checkDesktop(/*Activity *activity,*/ bool signalWhenExists, 
 
     //TODO: remove following when activities are restored
     if (!c) {
-        c = addContainment("desktop");
+        c = createContainment("desktop");
     }
 
     if (!c) {
