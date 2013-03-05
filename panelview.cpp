@@ -21,7 +21,6 @@
 #include <QDebug>
 #include <QScreen>
 
-#include <KGlobal>
 #include <KWindowSystem>
 #include <kwindoweffects.h>
 
@@ -71,7 +70,7 @@ KConfigGroup PanelView::config() const
     if (!containment()) {
         return KConfigGroup();
     }
-    KConfigGroup views(KGlobal::config(), "PlasmaViews");
+    KConfigGroup views(KSharedConfig::openConfig(), "PlasmaViews");
     views = KConfigGroup(&views, QString("Panel %1").arg(containment()->id()));
 
     if (containment()->formFactor() == Plasma::Vertical) {
