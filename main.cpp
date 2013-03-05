@@ -37,13 +37,16 @@ static const char version[] = "1.0";
 int main(int argc, char** argv)
 {
 
-    KAboutData aboutData("testplasma2", QString(), ki18n("Plasma2 test app"),
-                         version, ki18n(description), KAboutData::License_GPL,
-                         ki18n("Copyright 2012, The KDE Team"));
-    aboutData.addAuthor(ki18n("Marco Martin"),
-                        ki18n("Author and maintainer"),
+    KAboutData aboutData("testplasma2", QString(), i18n("Plasma2 test app"),
+                         version, i18n(description), KAboutData::License_GPL,
+                         i18n("Copyright 2012, The KDE Team"));
+    aboutData.addAuthor(i18n("Marco Martin"),
+                        i18n("Author and maintainer"),
                         "mart@kde.org");
-    KCmdLineArgs::init(argc, argv, &aboutData);
+    KCmdLineArgs::init(argc, argv,
+                       "testplasma2", "",
+                       ki18n("Plasma2 test app"),
+                       version);
 
     QApplication app(argc, argv);
 
