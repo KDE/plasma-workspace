@@ -65,6 +65,7 @@ target_link_libraries(testplasma2
  ${KCoreAddons_LIBRARIES}
  plasma
  ${Qt5Script_LIBRARIES}
+ ${KDE4_KDEUI_LIBS}
 )
 
 install(TARGETS testplasma2 ${INSTALL_TARGETS_DEFAULT_ARGS})
