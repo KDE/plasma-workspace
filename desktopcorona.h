@@ -76,6 +76,7 @@ private:
     QDesktopWidget *m_desktopWidget;
     QList <View *> m_views;
     QHash<Plasma::Containment *, PanelView *> m_panelViews;
+    KConfigGroup m_desktopDefaultsConfig;
 };
 
 #endif

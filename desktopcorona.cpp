@@ -22,6 +22,7 @@
 #include <QApplication>
 #include <QDebug>
 #include <QDesktopWidget>
+#include <Plasma/Package>
 
 #include "panelview.h"
 #include "view.h"
@@ -33,6 +34,8 @@ DesktopCorona::DesktopCorona(QObject *parent)
     : Plasma::Corona(parent),
       m_desktopWidget(QApplication::desktop())
 {
+    m_desktopDefaultsConfig = KConfigGroup(KSharedConfig::openConfig(package().filePath("defaults")), "Desktop");
+
     connect(m_desktopWidget, SIGNAL(resized(int)),
             this, SLOT(screenResized(int)));
     connect(m_desktopWidget, SIGNAL(screenCountChanged(int)),
@@ -53,6 +56,7 @@ DesktopCorona::~DesktopCorona()
 
 void DesktopCorona::loadDefaultLayout()
 {
+    //TODO: use Javascript here
     Plasma::Containment *cont = createContainment("org.kde.testcontainment");
     cont->setScreen(0);
     qDebug() << containmentForScreen(0);
@@ -118,7 +122,7 @@ void DesktopCorona::checkDesktop(/*Activity *activity,*/ bool signalWhenExists, 
 
     //TODO: remove following when activities are restored
     if (!c) {
-        c = createContainment("desktop");
+        c = createContainment(m_desktopDefaultsConfig.readEntry("Containment", "org.kde.testcontainment"));
     }
 
     if (!c) {

@@ -40,7 +40,7 @@ void ShellPackageStructure::initPackage(Plasma::Package *package)
     package->addFileDefinition("defaults", "defaults", i18n("Default plugins for containments, containmentActions etc"));
 
     package->setMimeTypes("layout", QStringList() << "application/javascript");
-    package->setMimeTypes("layout", QStringList() << "text/plain");
+    package->setMimeTypes("defaults", QStringList() << "text/plain");
 
     package->addFileDefinition("appleterror", "components/AppletError.qml", i18n("Error message shown when an applet fails loading"));
     package->addFileDefinition("compactapplet", "components/CompactApplet.qml", i18n("QML component that shows an applet in a popup"));

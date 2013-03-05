@@ -1,0 +1,15 @@
+[Desktop]
+Containment=org.kde.desktop
+ToolBox=org.kde.toolbox
+[Desktop][ContainmentActions]
+Ctrl;LeftButton=org.kde.standardmenu
+MiddleButton=org.kde.paste
+ 
+[Panel]
+Containment=org.kde.panel
+ToolBox=org.kde.toolbox
+[Panel][ContainmentActions]
+Ctrl;LeftButton=org.kde.standardmenu
+
+[Theme]
+Theme=default
