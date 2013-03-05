@@ -24,6 +24,7 @@
 #include <QDesktopWidget>
 
 #include "panelview.h"
+#include "shellpluginloader.h"
 #include "view.h"
 
 
@@ -33,6 +34,9 @@ DesktopCorona::DesktopCorona(QObject *parent)
     : Plasma::Corona(parent),
       m_desktopWidget(QApplication::desktop())
 {
+    m_pluginLoader = new ShellPluginLoader();
+    Plasma::PluginLoader::setPluginLoader(m_pluginLoader);
+
     connect(m_desktopWidget, SIGNAL(resized(int)),
             this, SLOT(screenResized(int)));
     connect(m_desktopWidget, SIGNAL(screenCountChanged(int)),

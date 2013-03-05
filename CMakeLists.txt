@@ -36,6 +36,8 @@ add_executable(testplasma2
     main.cpp
     desktopcorona.cpp
     panelview.cpp
+    shellpluginloader.cpp
+    shellpackage.cpp
     view.cpp
 )
 

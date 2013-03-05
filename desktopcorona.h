@@ -30,6 +30,7 @@ class View;
 namespace Plasma
 {
     class Applet;
+    class PluginLoader;
 } // namespace Plasma
 
 
@@ -76,6 +77,7 @@ private:
     QDesktopWidget *m_desktopWidget;
     QList <View *> m_views;
     QHash<Plasma::Containment *, PanelView *> m_panelViews;
+    Plasma::PluginLoader *m_pluginLoader;
 };
 
 #endif
