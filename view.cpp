@@ -24,7 +24,6 @@
 #include <QTimer>
 #include "plasma/pluginloader.h"
 
-#include <KGlobal>
 
 View::View(Plasma::Corona *corona, QWindow *parent)
     : QQuickView(parent),
@@ -52,7 +51,7 @@ KConfigGroup View::config() const
     if (!containment()) {
         return KConfigGroup();
     }
-    KConfigGroup views(KGlobal::config(), "PlasmaViews");
+    KConfigGroup views(KSharedConfig::openConfig(), "PlasmaViews");
     return KConfigGroup(&views, QString::number(containment()->screen()));
 }
 
