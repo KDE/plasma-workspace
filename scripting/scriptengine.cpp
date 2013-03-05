@@ -27,12 +27,16 @@
 #include <QScriptValueIterator>
 
 #include <KDebug>
+#include <KGlobal>
 #include <kdeversion.h>
 #include <KGlobalSettings>
+#include <KLocalizedString>
 #include <KMimeTypeTrader>
 #include <KServiceTypeTrader>
 #include <KShell>
 #include <KStandardDirs>
+#include <KComponentData>
+#include <k4aboutdata.h>
 
 // KIO
 #include <kemailsettings.h> // no camelcase include
@@ -41,7 +45,7 @@
 #include <Plasma/Containment>
 #include <Plasma/Corona>
 #include <Plasma/Package>
-#include <Plasma/Wallpaper>
+#include <Plasma/PluginLoader>
 
 #include "appinterface.h"
 #include "containment.h"
@@ -97,9 +101,8 @@ QScriptValue ScriptEngine::activityForScreen(QScriptContext *context, QScriptEng
     }
 
     const uint screen = context->argument(0).toInt32();
-    const uint desktop = context->argumentCount() > 1 ? context->argument(1).toInt32() : -1;
     ScriptEngine *env = envFor(engine);
-    return env->wrap(env->m_corona->containmentForScreen(screen, desktop));
+    return env->wrap(env->m_corona->containmentForScreen(screen));
 }
 
 QScriptValue ScriptEngine::newActivity(QScriptContext *context, QScriptEngine *engine)
@@ -119,7 +122,7 @@ QScriptValue ScriptEngine::createContainment(const QString &type, const QString 
                                                     defaultPlugin;
 
     bool exists = false;
-    const KPluginInfo::List list = Plasma::Containment::listContainmentsOfType(type);
+    const KPluginInfo::List list = Plasma::PluginLoader::listContainmentsOfType(type);
     foreach (const KPluginInfo &info, list) {
         if (info.pluginName() == plugin) {
             exists = true;
@@ -133,7 +136,7 @@ QScriptValue ScriptEngine::createContainment(const QString &type, const QString 
 
 
     ScriptEngine *env = envFor(engine);
-    Plasma::Containment *c = env->m_corona->addContainment(plugin);
+    Plasma::Containment *c = env->m_corona->createContainment(plugin);
     if (c) {
         if (type == "panel") {
             // some defaults
@@ -261,7 +264,7 @@ QScriptValue ScriptEngine::loadTemplate(QScriptContext *context, QScriptEngine *
     }
 
     const QString constraint = QString("[X-Plasma-Shell] == '%1' and [X-KDE-PluginInfo-Name] == '%2'")
-                                      .arg(KGlobal::mainComponent().componentName(),layout);
+                                      .arg(KComponentData::mainComponent().componentName(),layout);
     KService::List offers = KServiceTypeTrader::self()->query("Plasma/LayoutTemplate", constraint);
 
     if (offers.isEmpty()) {
@@ -269,15 +272,16 @@ QScriptValue ScriptEngine::loadTemplate(QScriptContext *context, QScriptEngine *
         return false;
     }
 
-    Plasma::PackageStructure::Ptr structure(new LayoutTemplatePackageStructure);
+    LayoutTemplatePackageStructure structure;
+    Plasma::Package package(&structure);
     KPluginInfo info(offers.first());
-    const QString path = KStandardDirs::locate("data", structure->defaultPackageRoot() + '/' + info.pluginName() + '/');
+    const QString path = KStandardDirs::locate("data", package.defaultPackageRoot() + '/' + info.pluginName() + '/');
     if (path.isEmpty()) {
         kDebug() << "script path is empty";
         return false;
     }
+    package.setPath(path);
 
-    Plasma::Package package(path, structure);
     const QString scriptFile = package.filePath("mainscript");
     if (scriptFile.isEmpty()) {
         kDebug() << "scriptfile is empty";
@@ -511,8 +515,6 @@ QScriptValue ScriptEngine::userDataPath(QScriptContext *context, QScriptEngine *
 
     if (type.compare("desktop", Qt::CaseInsensitive) == 0) {
         return KGlobalSettings::desktopPath();
-    } else if (type.compare("autostart", Qt::CaseInsensitive) == 0) {
-        return KGlobalSettings::autostartPath();
     } else if (type.compare("documents", Qt::CaseInsensitive) == 0) {
         return KGlobalSettings::documentPath();
     } else if (type.compare("music", Qt::CaseInsensitive) == 0) {
@@ -595,8 +597,8 @@ bool ScriptEngine::isPanel(const Plasma::Containment *c)
         return false;
     }
 
-    return c->containmentType() == Plasma::Containment::PanelContainment ||
-           c->containmentType() == Plasma::Containment::CustomPanelContainment;
+    return c->containmentType() == Plasma::PanelContainment ||
+           c->containmentType() == Plasma::CustomPanelContainment;
 }
 
 QScriptValue ScriptEngine::activities(QScriptContext *context, QScriptEngine *engine)

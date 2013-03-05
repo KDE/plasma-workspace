@@ -21,18 +21,16 @@
 #define TEMPLATETEMPLATEPACKAGE_H
 
 #include <Plasma/PackageStructure>
-#include "../plasmagenericshell_export.h"
 
 namespace WorkspaceScripting
 {
 
-class PLASMAGENERICSHELL_EXPORT LayoutTemplatePackageStructure : public Plasma::PackageStructure
+class LayoutTemplatePackageStructure : public Plasma::PackageStructure
 {
     Q_OBJECT
 
 public:
-    LayoutTemplatePackageStructure(QObject *parent = 0);
-    ~LayoutTemplatePackageStructure();
+    void initPackage(Plasma::Package *package);
 };
 
 }

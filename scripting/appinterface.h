@@ -24,8 +24,6 @@
 #include <QRectF>
 #include <QStringList>
 
-#include "../plasmagenericshell_export.h"
-
 namespace Plasma
 {
     class Applet;
@@ -38,7 +36,7 @@ namespace WorkspaceScripting
 
 class ScriptEngine;
 
-class PLASMAGENERICSHELL_EXPORT AppInterface : public QObject
+class AppInterface : public QObject
 {
     Q_OBJECT
     Q_PROPERTY(bool locked READ coronaLocked WRITE lockCorona)

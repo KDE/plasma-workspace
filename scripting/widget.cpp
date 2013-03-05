@@ -66,7 +66,7 @@ uint Widget::id() const
 QString Widget::type() const
 {
     if (d->applet) {
-        return d->applet.data()->pluginName();
+        return d->applet.data()->pluginInfo().pluginName();
     }
 
     return QString();
@@ -113,7 +113,7 @@ int Widget::index() const
         return -1;
     }
 
-    QGraphicsLayout *layout = c->layout();
+    /*QGraphicsLayout *layout = c->layout();
     if (!layout) {
         return - 1;
     }
@@ -122,7 +122,7 @@ int Widget::index() const
         if (layout->itemAt(i) == applet) {
             return i;
         }
-    }
+    }*/
 
     return -1;
 }
@@ -138,41 +138,41 @@ void Widget::setIndex(int index)
     if (!c) {
         return;
     }
-
+/*
     //FIXME: this is hackish. would be nice to define this for gridlayouts too
     QGraphicsLinearLayout *layout = dynamic_cast<QGraphicsLinearLayout *>(c->layout());
     if (!layout) {
         return;
     }
 
-    layout->insertItem(index, applet);
+    layout->insertItem(index, applet);*/
 }
 
 QRectF Widget::geometry() const
 {
-    if (d->applet) {
+    /*if (d->applet) {
         return d->applet.data()->geometry();
     }
-
+*/
     return QRectF();
 }
 
 void Widget::setGeometry(const QRectF &geometry)
 {
-    if (d->applet) {
+    /*if (d->applet) {
         d->applet.data()->setGeometry(geometry);
         KConfigGroup cg = d->applet.data()->config().parent();
         if (cg.isValid()) {
             cg.writeEntry("geometry", geometry);
         }
-    }
+    }*/
 }
 
 void Widget::showConfigurationInterface()
 {
-    if (d->applet) {
+   /* if (d->applet) {
         d->applet.data()->showConfigurationInterface();
-    }
+    }*/
 }
 
 }

@@ -23,10 +23,14 @@
 #include <QTimer>
 
 #include <KGlobalSettings>
+#include <KComponentData>
+#include <k4aboutdata.h>
 
 #include <Plasma/Containment>
 #include <Plasma/Corona>
-#include <Plasma/DataEngineManager>
+#include <Plasma/DataEngine>
+#include <Plasma/DataEngineConsumer>
+#include <Plasma/PluginLoader>
 #include <Plasma/Theme>
 
 #ifdef Q_WS_X11
@@ -89,12 +93,12 @@ QList<int> AppInterface::panelIds() const
 
 QString AppInterface::applicationVersion() const
 {
-    return KGlobal::mainComponent().aboutData()->version();
+    return KComponentData::mainComponent().aboutData()->version();
 }
 
 QString AppInterface::platformVersion() const
 {
-    return KDE::versionString();
+    return 0;//KDE::versionString();
 }
 
 int AppInterface::scriptingVersion() const
@@ -155,11 +159,11 @@ void AppInterface::sleep(int ms)
 
 bool AppInterface::hasBattery() const
 {
-  Plasma::DataEngineManager *engines = Plasma::DataEngineManager::self();
-  Plasma::DataEngine *power = engines->loadEngine("powermanagement");
+  Plasma::DataEngineConsumer *consumer = new Plasma::DataEngineConsumer();
+  Plasma::DataEngine *power = consumer->dataEngine("powermanagement");
 
   const QStringList batteries = power->query("Battery")["Sources"].toStringList();
-  engines->unloadEngine("powermanagement");
+  delete consumer;
   return !batteries.isEmpty();
 }
 
@@ -167,7 +171,7 @@ QStringList AppInterface::knownWidgetTypes() const
 {
     if (m_knownWidgets.isEmpty()) {
         QStringList widgets;
-        KPluginInfo::List infoLs = Plasma::Applet::listAppletInfo();
+        KPluginInfo::List infoLs = Plasma::PluginLoader::self()->listAppletInfo(QString());
 
         foreach (const KPluginInfo &info, infoLs) {
             widgets.append(info.pluginName());
@@ -192,7 +196,7 @@ QStringList AppInterface::knownPanelTypes() const
 QStringList AppInterface::knownContainmentTypes(const QString &type) const
 {
     QStringList containments;
-    KPluginInfo::List infoLs = Plasma::Containment::listContainmentsOfType(type);
+    KPluginInfo::List infoLs = Plasma::PluginLoader::listContainmentsOfType(type);
 
     foreach (const KPluginInfo &info, infoLs) {
         containments.append(info.pluginName());

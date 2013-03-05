@@ -21,9 +21,11 @@
 
 #include <QAction>
 
+#include <klocalizedstring.h>
+#include <KActionCollection>
+
 #include <Plasma/Corona>
 #include <Plasma/Containment>
-#include <Plasma/Wallpaper>
 
 #include "scriptengine.h"
 #include "widget.h"
@@ -48,9 +50,8 @@ Containment::Containment(Plasma::Containment *containment, QObject *parent)
     d->containment = containment;
     setCurrentConfigGroup(QStringList());
     setCurrentGlobalConfigGroup(QStringList());
-    if (containment && containment->wallpaper()) {
-        d->oldWallpaperPlugin = d->wallpaperPlugin = containment->wallpaper()->pluginName();
-        d->oldWallpaperMode = d->wallpaperMode = containment->wallpaper()->renderingMode().name();
+    if (containment) {
+        d->oldWallpaperPlugin = d->wallpaperPlugin = containment->wallpaper();
     }
 }
 
@@ -60,12 +61,11 @@ Containment::~Containment()
         Plasma::Containment *containment = d->containment.data();
         if (d->oldWallpaperPlugin != d->wallpaperPlugin ||
             d->oldWallpaperMode != d->wallpaperMode) {
-            containment->setWallpaper(d->wallpaperPlugin, d->wallpaperMode);
-        } else if (wallpaperConfigDirty() && containment->wallpaper()) {
+            containment->setWallpaper(d->wallpaperPlugin);
+        } else if (wallpaperConfigDirty()) {
             KConfigGroup cg(containment->config());
             cg = KConfigGroup(&cg, "Wallpaper");
-            cg = KConfigGroup(&cg, containment->wallpaper()->pluginName());
-            containment->wallpaper()->restore(cg);
+            cg = KConfigGroup(&cg, containment->wallpaper());
         }
     }
 
@@ -108,22 +108,6 @@ QString Containment::wallpaperMode() const
 void Containment::setWallpaperMode(const QString &wallpaperMode)
 {
     d->wallpaperMode = wallpaperMode;
-}
-
-int Containment::desktop() const
-{
-    if (!d->containment) {
-        return -1;
-    }
-
-    return d->containment.data()->desktop();
-}
-
-void Containment::setDesktop(int desktop)
-{
-    if (d->containment) {
-        d->containment.data()->setScreen(d->containment.data()->screen(), desktop);
-    }
 }
 
 QString Containment::formFactor() const
@@ -208,7 +192,7 @@ QScriptValue Containment::addWidget(QScriptContext *context, QScriptEngine *engi
     QScriptValue v = context->argument(0);
     Plasma::Applet *applet = 0;
     if (v.isString()) {
-        applet = c->d->containment.data()->addApplet(v.toString());
+        applet = c->d->containment.data()->createApplet(v.toString());
         if (applet) {
             ScriptEngine *env = ScriptEngine::envFor(engine);
             return env->wrap(applet);
@@ -236,7 +220,7 @@ QScriptValue Containment::widgets(QScriptContext *context, QScriptEngine *engine
     int count = 0;
 
     foreach (Plasma::Applet *widget, c->d->containment.data()->applets()) {
-        if (widgetType.isEmpty() || widget->pluginName() == widgetType) {
+        if (widgetType.isEmpty() || widget->pluginInfo().pluginName() == widgetType) {
             widgets.setProperty(count, env->wrap(widget));
             ++count;
         }
@@ -277,20 +261,20 @@ QString Containment::type() const
         return QString();
     }
 
-    return d->containment.data()->pluginName();
+    return d->containment.data()->pluginInfo().pluginName();
 }
 
 void Containment::remove()
 {
     if (d->containment) {
-        d->containment.data()->destroy(false);
+        d->containment.data()->destroy();
     }
 }
 
 void Containment::showConfigurationInterface()
 {
     if (d->containment) {
-        QAction *configAction = d->containment.data()->action("configure");
+        QAction *configAction = d->containment.data()->actions()->action("configure");
         if (configAction && configAction->isEnabled()) {
             configAction->trigger();
         }

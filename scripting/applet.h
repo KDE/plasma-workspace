@@ -25,7 +25,6 @@
 
 #include <KConfigGroup>
 
-#include "../plasmagenericshell_export.h"
 
 namespace Plasma
 {
@@ -35,7 +34,7 @@ namespace Plasma
 namespace WorkspaceScripting
 {
 
-class PLASMAGENERICSHELL_EXPORT Applet : public QObject
+class Applet : public QObject
 {
     Q_OBJECT
 

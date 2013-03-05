@@ -19,21 +19,17 @@
 
 #include "layouttemplatepackagestructure.h"
 
+#include <KLocalizedString>
+
 namespace WorkspaceScripting
 {
 
-LayoutTemplatePackageStructure::LayoutTemplatePackageStructure(QObject *parent)
-    : Plasma::PackageStructure(parent)
+void LayoutTemplatePackageStructure::initPackage(Plasma::Package *package)
 {
-    setServicePrefix("plasma-layout-template");
-    setDefaultPackageRoot("plasma/layout-templates");
-    addFileDefinition("mainscript", "layout.js", i18n("Main Script File"));
-    setRequired("mainscript", true);
-}
-
-LayoutTemplatePackageStructure::~LayoutTemplatePackageStructure()
-{
-
+    package->setServicePrefix("plasma-layout-template");
+    package->setDefaultPackageRoot("plasma/layout-templates");
+    package->addFileDefinition("mainscript", "layout.js", i18n("Main Script File"));
+    package->setRequired("mainscript", true);
 }
 
 }

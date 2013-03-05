@@ -19,6 +19,7 @@ add_definitions (${QT_DEFINITIONS} ${KDE4_DEFINITIONS})
 find_package(Qt5Transitional REQUIRED Core)
 find_package(Qt5Qml REQUIRED)
 find_package(Qt5Quick REQUIRED)
+find_package(Qt5Script REQUIRED)
 find_package(KCoreAddons REQUIRED)
 
 
@@ -33,6 +34,17 @@ add_definitions(${Qt5Widgets_DEFINITIONS} ${Qt5Quick_DEFINITIONS} ${Qt5Qml_DEFIN
 # without -fPIE. We add that here.
 set(CMAKE_CXX_FLAGS "${Qt5Widgets_EXECUTABLE_COMPILE_FLAGS}")
 
+set(scripting_SRC
+    scripting/appinterface.cpp
+    scripting/applet.cpp
+    scripting/containment.cpp
+    scripting/i18n.cpp
+    scripting/layouttemplatepackagestructure.cpp
+    scripting/rect.cpp
+    scripting/scriptengine.cpp
+    scripting/widget.cpp
+)
+
 add_executable(testplasma2
     main.cpp
     desktopcorona.cpp
@@ -40,6 +52,7 @@ add_executable(testplasma2
     shellpluginloader.cpp
     shellpackage.cpp
     view.cpp
+    ${scripting_SRC}
 )
 
 # The Qt5Widgets_LIBRARIES variable also includes QtGui and QtCore
@@ -51,6 +64,7 @@ target_link_libraries(testplasma2
  ${KWindowSystem_LIBRARIES}
  ${KCoreAddons_LIBRARIES}
  plasma
+ ${Qt5Script_LIBRARIES}
 )
 
 install(TARGETS testplasma2 ${INSTALL_TARGETS_DEFAULT_ARGS})

@@ -216,7 +216,7 @@ QString Applet::version() const
         return QString();
     }
 
-    QString type = app->pluginName();
+    QString type = app->pluginInfo().pluginName();
     KService::List services = KServiceTypeTrader::self()->query("Plasma/Applet", "[X-KDE-PluginInfo-Name] == '" + type + "'");
     if (services.isEmpty()) {
         return QString();

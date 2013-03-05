@@ -26,8 +26,6 @@
 
 #include "applet.h"
 
-#include "../plasmagenericshell_export.h"
-
 namespace Plasma
 {
     class Containment;
@@ -36,7 +34,7 @@ namespace Plasma
 namespace WorkspaceScripting
 {
 
-class PLASMAGENERICSHELL_EXPORT Containment : public Applet
+class Containment : public Applet
 {
     Q_OBJECT
     Q_PROPERTY(QString version READ version)
@@ -53,7 +51,6 @@ class PLASMAGENERICSHELL_EXPORT Containment : public Applet
     Q_PROPERTY(QString formFactor READ formFactor)
     Q_PROPERTY(QList<int> widgetIds READ widgetIds)
     Q_PROPERTY(int screen READ screen WRITE setScreen)
-    Q_PROPERTY(int desktop READ desktop WRITE setDesktop)
     Q_PROPERTY(int id READ id)
 
 public:
@@ -67,9 +64,6 @@ public:
 
     QString name() const;
     void setName(const QString &name);
-
-    int desktop() const;
-    void setDesktop(int desktop);
 
     int screen() const;
     void setScreen(int screen);
