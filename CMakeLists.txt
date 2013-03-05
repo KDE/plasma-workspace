@@ -19,6 +19,7 @@ add_definitions (${QT_DEFINITIONS} ${KDE4_DEFINITIONS})
 find_package(Qt5Transitional REQUIRED Core)
 find_package(Qt5Qml REQUIRED)
 find_package(Qt5Quick REQUIRED)
+find_package(KCoreAddons REQUIRED)
 
 
 # The Qt5Widgets_INCLUDES also includes the include directories for
@@ -48,6 +49,7 @@ target_link_libraries(testplasma2
  ${Qt5Qml_LIBRARIES}
  ${KDE4_KDECORE_LIBS}
  ${KWindowSystem_LIBRARIES}
+ ${KCoreAddons_LIBRARIES}
  plasma
 )
 
