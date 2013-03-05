@@ -24,7 +24,7 @@ import org.kde.plasma.core 0.1 as PlasmaCore
 
 Rectangle {
     id: root
-    color: Qt.rgba(0,0,0,64); // translucent black
+    color: "black"
     width: 640
     height: 480
 

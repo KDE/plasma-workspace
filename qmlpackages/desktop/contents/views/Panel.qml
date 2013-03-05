@@ -31,7 +31,7 @@ PlasmaCore.FrameSvgItem {
     property Item containment
 
     onContainmentChanged: {
-        print("New Containment: " + containment)
+        print("New panel Containment: " + containment)
         //containment.parent = root
         containment.visible = true
         containment.anchors.fill = root

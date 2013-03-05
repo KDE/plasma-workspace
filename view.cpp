@@ -101,6 +101,7 @@ void View::setContainment(Plasma::Containment *cont)
     }
 
     QObject *graphicObject = m_containment.data()->property("graphicObject").value<QObject *>();
+
     if (graphicObject) {
         qDebug() << "using as graphic containment" << graphicObject << m_containment.data();
 
