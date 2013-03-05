@@ -89,7 +89,7 @@ void PanelView::init()
     }
 
     setResizeMode(View::SizeRootObjectToView);
-    setSource(QUrl::fromLocalFile(corona()->package().filePath("ui", "PanelView.qml")));
+    setSource(QUrl::fromLocalFile(corona()->package().filePath("views", "Panel.qml")));
 }
 
 void PanelView::positionPanel()

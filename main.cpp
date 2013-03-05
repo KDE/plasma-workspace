@@ -25,10 +25,11 @@
 #include <kcmdlineargs.h>
 #include <klocalizedstring.h>
 
-
+#include <Plasma/Containment>
 
 #include "desktopcorona.h"
-#include <plasma/containment.h>
+#include "shellpluginloader.h"
+
 
 static const char description[] = "Plasma2 library tests";
 static const char version[] = "1.0";
@@ -46,7 +47,7 @@ int main(int argc, char** argv)
 
     QApplication app(argc, argv);
 
-    
+    Plasma::PluginLoader::setPluginLoader(new ShellPluginLoader);
     DesktopCorona *corona = new DesktopCorona();
     corona->loadLayout();
     if (corona->containments().isEmpty()) {

@@ -63,7 +63,7 @@ void View::init()
     }
 
     setResizeMode(View::SizeRootObjectToView);
-    setSource(QUrl::fromLocalFile(m_corona->package().filePath("mainscript")));
+    setSource(QUrl::fromLocalFile(m_corona->package().filePath("views", "Desktop.qml")));
 }
 
 void View::setContainment(Plasma::Containment *cont)
