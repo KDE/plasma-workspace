@@ -24,7 +24,7 @@
 
 #include <KGlobalSettings>
 #include <KComponentData>
-#include <k4aboutdata.h>
+#include <KAboutData>
 
 #include <Plasma/Containment>
 #include <Plasma/Corona>
