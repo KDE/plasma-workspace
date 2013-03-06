@@ -66,7 +66,7 @@ target_link_libraries(testplasma2
  plasma
  ${Qt5Script_LIBRARIES}
  ${KDE4_KDEUI_LIBS}
- ${kde4support_LIBRARY}
+ KDE4__kde4support
 )
 message("+++ kde4support : ${kde4support_LIBRARY}")
 
