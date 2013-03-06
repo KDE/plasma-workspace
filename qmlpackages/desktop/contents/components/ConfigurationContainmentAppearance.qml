@@ -21,10 +21,29 @@ import org.kde.plasma.components 0.1 as PlasmaComponents
 import org.kde.plasma.configuration 0.1
 
 Column {
-
+    id: root
     PlasmaComponents.Label {
         text: "Plugins"
     }
+
+//BEGIN functions
+    function saveConfig() {
+        for (var key in configDialog.wallpaperConfiguration) {
+            if (main.currentPage["cfg_"+key] !== undefined) {
+                configDialog.wallpaperConfiguration[key] = main.currentPage["cfg_"+key]
+            }
+        }
+    }
+
+    function restoreConfig() {
+        for (var key in configDialog.wallpaperConfiguration) {
+            if (main.currentPage["cfg_"+key] !== undefined) {
+                main.currentPage["cfg_"+key] = configDialog.wallpaperConfiguration[key]
+            }
+        }
+    }
+//END functions
+
     ListView {
         id: categoriesView
         anchors {
@@ -36,6 +55,7 @@ Column {
         
         model: configDialog.wallpaperConfigModel
         delegate: ConfigCategoryDelegate {
+            id: delegate
             anchors {
                 top: parent.top
                 bottom: parent.bottom

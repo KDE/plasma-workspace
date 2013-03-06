@@ -209,14 +209,24 @@ Rectangle {
                 iconSource: "dialog-ok"
                 text: "Ok"
                 onClicked: {
-                    root.saveConfig()
+                    if (main.currentPage.saveConfig !== undefined) {
+                        main.currentPage.saveConfig()
+                    } else {
+                        root.saveConfig()
+                    }
                     configDialog.close()
                 }
             }
             PlasmaComponents.Button {
                 iconSource: "dialog-ok-apply"
                 text: "Apply"
-                onClicked: root.saveConfig()
+                onClicked: {
+                    if (main.currentPage.saveConfig !== undefined) {
+                        main.currentPage.saveConfig()
+                    } else {
+                        root.saveConfig()
+                    }
+                }
             }
             PlasmaComponents.Button {
                 iconSource: "dialog-cancel"
