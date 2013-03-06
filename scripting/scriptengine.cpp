@@ -36,7 +36,7 @@
 #include <KShell>
 #include <KStandardDirs>
 #include <KComponentData>
-#include <kaboutdata.h>
+#include <k4aboutdata.h>
 
 // KIO
 #include <kemailsettings.h> // no camelcase include

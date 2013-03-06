@@ -66,7 +66,10 @@ target_link_libraries(testplasma2
  plasma
  ${Qt5Script_LIBRARIES}
  ${KDE4_KDEUI_LIBS}
+ ${kde4support_LIBRARY}
 )
+message("+++ kde4support : ${kde4support_LIBRARY}")
+
 
 install(TARGETS testplasma2 ${INSTALL_TARGETS_DEFAULT_ARGS})
 
