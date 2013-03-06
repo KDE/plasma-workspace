@@ -43,6 +43,15 @@ Column {
                 right: undefined
             }
             width: 64
+            onClicked: {
+                if (delegate.current) {
+                    return
+                } else {
+                    configDialog.currentWallpaper = model.pluginName
+                    main.sourceFile = model.source
+                    root.restoreConfig()
+                }
+            }
         }
     }
     PlasmaComponents.PageStack {
