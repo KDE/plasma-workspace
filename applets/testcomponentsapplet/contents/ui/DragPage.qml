@@ -57,11 +57,17 @@ PlasmaComponents.Page {
             anchors { right: parent.right; bottom: parent.bottom; top: parent.top; }
             Rectangle { anchors.fill: parent; color: "green"; opacity: 0.2; }
 
-            onDrop: print("drop");
-            onDragEnter: print("enter");
-            onDragLeave: print("leave");
+            onDrop: slabel.text = "item dropped"
+            onDragEnter: slabel.text = "drop item here"
+            onDragLeave: slabel.text = "drop left"
         }
-
+        PlasmaExtras.Heading {
+            id: slabel
+            level: 3
+            text: "drag from left to right field."
+            onTextChanged: print("droparea changed to " + text)
+            anchors { right: parent.right; bottom: parent.bottom; }
+        }
     }
 //     QtExtras.MouseEventListener {
 //         id: mel
