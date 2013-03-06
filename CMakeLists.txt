@@ -22,7 +22,6 @@ find_package(Qt5Quick REQUIRED)
 find_package(Qt5Script REQUIRED)
 find_package(KCoreAddons REQUIRED)
 
-
 # The Qt5Widgets_INCLUDES also includes the include directories for
 # dependencies QtCore and QtGui
 include_directories(${Qt5Widgets_DEFINITIONS} ${Qt5Quick_DEFINITIONS} ${QT_INCLUDES} ${KDE4_INCLUDES})
@@ -61,6 +60,7 @@ target_link_libraries(testplasma2
  ${Qt5Quick_LIBRARIES}
  ${Qt5Qml_LIBRARIES}
  ${KDE4_KDECORE_LIBS}
+ ${KDE4_KIO_LIBS}
  ${KWindowSystem_LIBRARIES}
  ${KCoreAddons_LIBRARIES}
  plasma
