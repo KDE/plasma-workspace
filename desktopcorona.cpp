@@ -57,20 +57,12 @@ DesktopCorona::~DesktopCorona()
 
 void DesktopCorona::loadDefaultLayout()
 {
-    //TODO: use Javascript here
-    /*Plasma::Containment *cont = createContainment("org.kde.testcontainment");
-    cont->setScreen(0);
-    qDebug() << containmentForScreen(0);
-    Plasma::Applet *appl = cont->createApplet("org.kde.testapplet");
-    qDebug() << "Containment:" << cont << cont->title();
-    qDebug() << "Applet:" << appl->title() << appl;*/
-
-
     WorkspaceScripting::DesktopScriptEngine scriptEngine(this, true);
     connect(&scriptEngine, SIGNAL(printError(QString)), this, SLOT(printScriptError(QString)));
     connect(&scriptEngine, SIGNAL(print(QString)), this, SLOT(printScriptMessage(QString)));
 
     QString script = package().filePath("defaultlayout");
+
     QFile file(script);
     if (file.open(QIODevice::ReadOnly | QIODevice::Text) ) {
         QString code = file.readAll();
@@ -224,7 +216,7 @@ void DesktopCorona::checkViews()
 
 void DesktopCorona::updateScreenOwner(int wasScreen, int isScreen, Plasma::Containment *containment)
 {
-    qDebug() << "Was screen" << wasScreen << "Is screen" << isScreen <<"Containment" << containment;
+    qDebug() << "Was screen" << wasScreen << "Is screen" << isScreen <<"Containment" << containment << containment->title();
 
     if (containment->formFactor() == Plasma::Horizontal ||
         containment->formFactor() == Plasma::Vertical) {

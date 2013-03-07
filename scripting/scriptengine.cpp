@@ -107,12 +107,13 @@ QScriptValue ScriptEngine::activityForScreen(QScriptContext *context, QScriptEng
 
 QScriptValue ScriptEngine::newActivity(QScriptContext *context, QScriptEngine *engine)
 {
-    return createContainment("desktop", "desktop", context, engine);
+    //FIXME: will be org.kde.desktop
+    return createContainment("Desktop", "org.kde.testcontainment", context, engine);
 }
 
 QScriptValue ScriptEngine::newPanel(QScriptContext *context, QScriptEngine *engine)
 {
-    return createContainment("panel", "panel", context, engine);
+    return createContainment("Panel", "org.kde.panel", context, engine);
 }
 
 QScriptValue ScriptEngine::createContainment(const QString &type, const QString &defaultPlugin,
@@ -138,14 +139,14 @@ QScriptValue ScriptEngine::createContainment(const QString &type, const QString 
     ScriptEngine *env = envFor(engine);
     Plasma::Containment *c = env->m_corona->createContainment(plugin);
     if (c) {
-        if (type == "panel") {
+        if (type == "Panel") {
             // some defaults
-            c->setScreen(env->defaultPanelScreen());
+            c->setFormFactor(Plasma::Horizontal);
             c->setLocation(Plasma::TopEdge);
+            c->setScreen(env->defaultPanelScreen());
         }
         c->updateConstraints(Plasma::AllConstraints | Plasma::StartupCompletedConstraint);
         c->flushPendingConstraintsEvents();
-        emit env->createPendingPanelViews();
     }
 
     return env->wrap(c);
@@ -574,7 +575,7 @@ void ScriptEngine::setupEngine()
 
     m_scriptSelf.setProperty("QRectF", constructQRectFClass(this));
     m_scriptSelf.setProperty("Activity", newFunction(ScriptEngine::newActivity));
-    m_scriptSelf.setProperty("Panel", newFunction(ScriptEngine::newPanel));
+    m_scriptSelf.setProperty("Panel", newFunction(ScriptEngine::newPanel, newObject()));
     m_scriptSelf.setProperty("activities", newFunction(ScriptEngine::activities));
     m_scriptSelf.setProperty("activityById", newFunction(ScriptEngine::activityById));
     m_scriptSelf.setProperty("activityForScreen", newFunction(ScriptEngine::activityForScreen));

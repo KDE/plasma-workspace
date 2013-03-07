@@ -36,10 +36,10 @@ void ShellPackageStructure::initPackage(Plasma::Package *package)
     package->setMimeTypes("views", QStringList() << "text/x-qml");
 
     //Files
-    package->addFileDefinition("layout", "layout.js", i18n("Default layout file"));
+    package->addFileDefinition("defaultlayout", "layout.js", i18n("Default layout file"));
     package->addFileDefinition("defaults", "defaults", i18n("Default plugins for containments, containmentActions etc"));
 
-    package->setMimeTypes("layout", QStringList() << "application/javascript");
+    package->setMimeTypes("defaultlayout", QStringList() << "application/javascript");
     package->setMimeTypes("defaults", QStringList() << "text/plain");
 
     package->addFileDefinition("appleterror", "components/AppletError.qml", i18n("Error message shown when an applet fails loading"));

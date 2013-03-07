@@ -87,21 +87,27 @@ void Panel::setLocation(const QString &locationString)
 
     const QString lower = locationString.toLower();
     Plasma::Location loc = Plasma::Floating;
+    Plasma::FormFactor ff = Plasma::Planar;
     if (lower == "desktop") {
         loc = Plasma::Desktop;
     } else if (lower == "fullscreen") {
         loc = Plasma::FullScreen;
     } else if (lower == "top") {
         loc = Plasma::TopEdge;
+        ff = Plasma::Horizontal;
     } else if (lower == "bottom") {
         loc = Plasma::BottomEdge;
+        ff = Plasma::Horizontal;
     } else if (lower == "left") {
         loc = Plasma::LeftEdge;
+        ff = Plasma::Vertical;
     } else if (lower == "right") {
         loc = Plasma::RightEdge;
+        ff = Plasma::Vertical;
     }
 
     c->setLocation(loc);
+    c->setFormFactor(ff);
 }
 
 PanelView *Panel::panel() const
