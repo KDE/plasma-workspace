@@ -48,7 +48,7 @@ PlasmaComponents.Page {
             anchors { left: parent.left; bottom: parent.bottom; top: parent.top; }
 
             mimeData.text: "Clownfish"
-            mimeData.html: "<h2>Swimming in a sea of cheese</h2>"
+            mimeData.html: "<h2>Swimming in a Sea of Cheese</h2><pre>Primus->perform();</pre><br/>"
             mimeData.color: "orange"
             mimeData.url: "http://plasma.kde.org"
             mimeData.urls: ["http://planetkde.org", "http://fsfe.org", "http://techbase.kde.org", "http://qt-project.org"]
