@@ -26,6 +26,7 @@ Column {
         text: "Plugins"
     }
 
+
 //BEGIN functions
     function saveConfig() {
         for (var key in configDialog.wallpaperConfiguration) {
@@ -76,11 +77,9 @@ Column {
     }
     PlasmaComponents.PageStack {
         id: main
-        anchors {
-            left: parent.left
-            right: parent.right
-        }
-        height: 200
+        anchors.horizontalCenter: parent.horizontalCenter
+        width: implicitWidth
+        height: implicitHeight
         property string sourceFile
         onSourceFileChanged: {
             replace(Qt.resolvedUrl(sourceFile))
