@@ -38,6 +38,9 @@ public:
     Qt::Alignment alignment() const;
     void setAlignment(Qt::Alignment alignment);
 
+    int offset() const;
+    void setOffset(int offset);
+
 private Q_SLOTS:
     void positionPanel();
     void restore();

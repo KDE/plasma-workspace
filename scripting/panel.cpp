@@ -24,6 +24,7 @@
 
 #include <Plasma/Corona>
 #include <Plasma/Containment>
+#include <QScreen>
 
 #include "desktopcorona.h"
 #include "panelview.h"
@@ -159,32 +160,38 @@ void Panel::setAlignment(const QString &alignment)
         }
 
         if (success) {
-           // v->setOffset(0);
+            v->setOffset(0);
         }
     }
 }
 
 int Panel::offset() const
 {
-    /*PanelView *v = panel();
+    PanelView *v = panel();
     if (v) {
         return v->offset();
-    }*/
+    }
 
     return 0;
 }
 
 void Panel::setOffset(int pixels)
 {
-    /*Plasma::Containment *c = containment();
+    Plasma::Containment *c = containment();
     if (pixels < 0 || !c) {
+        return;
+    }
+
+    QQuickItem *graphicObject = qobject_cast<QQuickItem *>(c->property("graphicObject").value<QObject *>());
+
+    if (!graphicObject) {
         return;
     }
 
     PanelView *v = panel();
     if (v) {
-        QRectF screen = c->corona()->screenGeometry(v->screen());
-        QSizeF size = c->size();
+        QRectF screen = v->screen()->geometry();
+        QSizeF size(graphicObject->width(), graphicObject->height());
 
         if (c->formFactor() == Plasma::Vertical) {
             if (pixels > screen.height()) {
@@ -192,19 +199,21 @@ void Panel::setOffset(int pixels)
             }
 
             if (size.height() + pixels > screen.height()) {
-                c->resize(size.width(), screen.height() - pixels);
+                graphicObject->setWidth(size.width());
+                graphicObject->setHeight(screen.height() - pixels);
             }
         } else if (pixels > screen.width()) {
             return;
         } else if (size.width() + pixels > screen.width()) {
             size.setWidth(screen.width() - pixels);
-            c->resize(size);
-            c->setMinimumSize(size);
-            c->setMaximumSize(size);
+            graphicObject->setWidth(size.width());
+            graphicObject->setHeight(size.height());
+            v->setMinimumSize(size.toSize());
+            v->setMaximumSize(size.toSize());
         }
 
         v->setOffset(pixels);
-    }*/
+    }
 }
 
 int Panel::length() const
@@ -228,15 +237,22 @@ int Panel::length() const
 
 void Panel::setLength(int pixels)
 {
-    /*Plasma::Containment *c = containment();
+    Plasma::Containment *c = containment();
     if (pixels < 0 || !c) {
+        return;
+    }
+
+    QQuickItem *graphicObject = qobject_cast<QQuickItem *>(c->property("graphicObject").value<QObject *>());
+
+    if (!graphicObject) {
         return;
     }
 
     PanelView *v = panel();
     if (v) {
-        QRectF screen = c->corona()->screenGeometry(v->screen());
-        QSizeF s = c->size();
+        QRectF screen = v->screen()->geometry();
+        QSizeF s(graphicObject->width(), graphicObject->height());
+
         if (c->formFactor() == Plasma::Vertical) {
             if (pixels > screen.height() - v->offset()) {
                 return;
@@ -249,10 +265,11 @@ void Panel::setLength(int pixels)
             s.setWidth(pixels);
         }
 
-        c->resize(s);
-        c->setMinimumSize(s);
-        c->setMaximumSize(s);
-    }*/
+        graphicObject->setWidth(s.width());
+        graphicObject->setHeight(s.height());
+        v->setMinimumSize(s.toSize());
+        v->setMaximumSize(s.toSize());
+    }
 }
 
 int Panel::height() const
@@ -274,15 +291,21 @@ int Panel::height() const
 
 void Panel::setHeight(int height)
 {
-    /*Plasma::Containment *c = containment();
+    Plasma::Containment *c = containment();
     if (height < 16 || !c) {
+        return;
+    }
+
+    QQuickItem *graphicObject = qobject_cast<QQuickItem *>(c->property("graphicObject").value<QObject *>());
+
+    if (!graphicObject) {
         return;
     }
 
     PanelView *v = panel();
     if (v) {
-        QRect screen = c->corona()->screenGeometry(v->screen());
-        QSizeF size = c->size();
+        QRect screen = v->screen()->geometry();
+        QSizeF size(graphicObject->width(), graphicObject->height());
         const int max = (c->formFactor() == Plasma::Vertical ? screen.width() : screen.height()) / 3;
         height = qBound(16, height, max);
 
@@ -292,10 +315,11 @@ void Panel::setHeight(int height)
             size.setHeight(height);
         }
 
-        c->resize(size);
-        c->setMinimumSize(size);
-        c->setMaximumSize(size);
-    }*/
+        graphicObject->setWidth(size.width());
+        graphicObject->setHeight(size.height());
+        v->setMinimumSize(size.toSize());
+        v->setMaximumSize(size.toSize());
+    }
 }
 
 QString Panel::hiding() const

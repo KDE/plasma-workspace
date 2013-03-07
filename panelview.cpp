@@ -106,6 +106,21 @@ void PanelView::setAlignment(Qt::Alignment alignment)
     positionPanel();
 }
 
+int PanelView::offset() const
+{
+    return m_offset;
+}
+
+void PanelView::setOffset(int offset)
+{
+    if (m_offset == offset) {
+        return;
+    }
+
+    m_offset = offset;
+    positionPanel();
+}
+
 void PanelView::positionPanel()
 {
     if (!containment()) {
