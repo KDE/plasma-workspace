@@ -26,6 +26,7 @@
 
 #include "panelview.h"
 #include "view.h"
+#include "scripting/desktopscriptengine.h"
 
 
 static const QString s_panelTemplatesPath("plasma-layout-templates/panels/*");
@@ -57,18 +58,25 @@ DesktopCorona::~DesktopCorona()
 void DesktopCorona::loadDefaultLayout()
 {
     //TODO: use Javascript here
-    Plasma::Containment *cont = createContainment("org.kde.testcontainment");
+    /*Plasma::Containment *cont = createContainment("org.kde.testcontainment");
     cont->setScreen(0);
     qDebug() << containmentForScreen(0);
     Plasma::Applet *appl = cont->createApplet("org.kde.testapplet");
     qDebug() << "Containment:" << cont << cont->title();
-    qDebug() << "Applet:" << appl->title() << appl;
+    qDebug() << "Applet:" << appl->title() << appl;*/
 
-    /*
-    Plasma::Applet *cappl = cont->addApplet("org.kde.testcomponentsapplet");
-    qDebug() << "Applet:" << cappl->title() << cappl->icon();
-    */
 
+    WorkspaceScripting::DesktopScriptEngine scriptEngine(this, true);
+    connect(&scriptEngine, SIGNAL(printError(QString)), this, SLOT(printScriptError(QString)));
+    connect(&scriptEngine, SIGNAL(print(QString)), this, SLOT(printScriptMessage(QString)));
+
+    QString script = package().filePath("defaultlayout");
+    QFile file(script);
+    if (file.open(QIODevice::ReadOnly | QIODevice::Text) ) {
+        QString code = file.readAll();
+        qDebug() << "evaluating startup script:" << script;
+        scriptEngine.evaluateScript(code);
+    }
 }
 
 void DesktopCorona::checkScreens(bool signalWhenExists)
@@ -163,6 +171,10 @@ QRect DesktopCorona::availableScreenRect(int id) const
     return m_desktopWidget->availableGeometry(id);
 }
 
+PanelView *DesktopCorona::panelView(Plasma::Containment *containment) const
+{
+    return m_panelViews.value(containment);
+}
 
 
 ///// SLOTS

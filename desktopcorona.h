@@ -63,6 +63,7 @@ public:
     QRegion availableScreenRegion(int id) const;
     QRect availableScreenRect(int id) const;
 
+    PanelView *panelView(Plasma::Containment *containment) const;
 
 protected Q_SLOTS:
     void screenCountChanged(int newCount);

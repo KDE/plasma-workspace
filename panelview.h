@@ -35,6 +35,9 @@ public:
 
     virtual void init();
 
+    Qt::Alignment alignment() const;
+    void setAlignment(Qt::Alignment alignment);
+
 private Q_SLOTS:
     void positionPanel();
     void restore();

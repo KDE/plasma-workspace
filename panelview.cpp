@@ -91,6 +91,21 @@ void PanelView::init()
     setSource(QUrl::fromLocalFile(corona()->package().filePath("views", "Panel.qml")));
 }
 
+Qt::Alignment PanelView::alignment() const
+{
+    return m_alignment;
+}
+
+void PanelView::setAlignment(Qt::Alignment alignment)
+{
+    if (m_alignment == alignment) {
+        return;
+    }
+
+    m_alignment = alignment;
+    positionPanel();
+}
+
 void PanelView::positionPanel()
 {
     if (!containment()) {

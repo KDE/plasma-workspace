@@ -37,8 +37,10 @@ set(scripting_SRC
     scripting/appinterface.cpp
     scripting/applet.cpp
     scripting/containment.cpp
+    scripting/desktopscriptengine.cpp
     scripting/i18n.cpp
     scripting/layouttemplatepackagestructure.cpp
+    scripting/panel.cpp
     scripting/rect.cpp
     scripting/scriptengine.cpp
     scripting/widget.cpp
