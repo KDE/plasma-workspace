@@ -34,6 +34,7 @@ Column {
                 configDialog.wallpaperConfiguration[key] = main.currentPage["cfg_"+key]
             }
         }
+        configDialog.applyWallpaper()
     }
 
     function restoreConfig() {
@@ -65,10 +66,10 @@ Column {
             }
             width: 64
             onClicked: {
+                configDialog.currentWallpaper = model.pluginName
                 if (delegate.current) {
                     return
                 } else {
-                    configDialog.currentWallpaper = model.pluginName
                     main.sourceFile = model.source
                     root.restoreConfig()
                 }
@@ -78,9 +79,27 @@ Column {
                     categoriesView.currentIndex = index
                 }
             }
+            Component.onCompleted: {
+                if (configDialog.currentWallpaper == model.pluginName) {
+                    loadWallpaperTimer.pendingCurrent = model
+                    loadWallpaperTimer.restart()
+                }
+            }
         }
         highlight: Rectangle {
             color: theme.highlightColor
+        }
+        Timer {
+            id: loadWallpaperTimer
+            interval: 100
+            property variant pendingCurrent
+            onTriggered: {
+                if (pendingCurrent) {
+                    main.sourceFile = pendingCurrent.source
+                    root.restoreConfig()
+                    categoriesView.currentIndex = pendingCurrent.index
+                }
+            }
         }
     }
     PlasmaComponents.PageStack {
