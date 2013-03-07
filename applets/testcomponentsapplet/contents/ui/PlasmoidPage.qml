@@ -33,11 +33,14 @@ PlasmaComponents.Page {
     }
     Column {
         anchors.centerIn: parent
+        spacing: _s
         PlasmaExtras.Heading {
             level: 2
             text: "I'm an applet"
         }
+
         PlasmaComponents.Button {
+            height: theme.iconSizes.desktop
             text: "Background"
             checked: plasmoid.backgroundHints == 1
             onClicked: {
@@ -50,6 +53,7 @@ PlasmaComponents.Page {
             }
         }
         PlasmaComponents.Button {
+            height: theme.iconSizes.desktop
             text: "Busy"
             checked: plasmoid.busy
             onClicked: {
