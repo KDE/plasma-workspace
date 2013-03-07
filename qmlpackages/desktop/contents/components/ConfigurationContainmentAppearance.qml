@@ -73,6 +73,14 @@ Column {
                     root.restoreConfig()
                 }
             }
+            onCurrentChanged: {
+                if (current) {
+                    categoriesView.currentIndex = index
+                }
+            }
+        }
+        highlight: Rectangle {
+            color: theme.highlightColor
         }
     }
     PlasmaComponents.PageStack {
