@@ -43,10 +43,13 @@ Item {
 
     Component {
         id: appletContainerComponent
-        PlasmaCore.FrameSvgItem {
-            id: frame
+        Item {
+            id: frameParent
             x: 50
             y: 50
+
+            property int small: 90
+            property int large: 400
 
             width: large + frame.margins.left + frame.margins.right
             height: large + frame.margins.top + frame.margins.bottom
@@ -57,65 +60,120 @@ Item {
                     killAnim.running = true
                 }
             }
-
-            property int small: 90
-            property int large: 400
-
-            property int tm: 0
-            property int lm: 0
-
-            imagePath: applet.length > 0 && applet[0].backgroundHints == 0 ? "" : "widgets/background"
-
-            onImagePathChanged: {
-                // Reposition applet so it fits into the frame
-                if (imagePath == "") {
-                    frame.x = frame.x + lm;
-                    frame.y = frame.y + tm;
-                } else {
-                    // Cache values, so we can subtract them when the background is removed
-                    frame.lm = frame.margins.left;
-                    frame.tm = frame.margins.top;
-
-                    frame.x = frame.x - frame.margins.left;
-                    frame.y = frame.y - frame.margins.top;
-                }
-            }
-            MouseArea {
+            PlasmaCore.FrameSvgItem {
+                id: frame
                 anchors.fill: parent
-                drag.target: parent
-                onClicked: {
-                    var s = (frame.width == frame.large) ? frame.small : frame.large;
-                    frame.height = s
-                    frame.width = s
-                }
-            }
 
-            Item {
-                id: appletContainer
-                anchors {
-                    fill: parent
-                    leftMargin: frame.margins.left
-                    rightMargin: parent.margins.right
-                    topMargin: parent.margins.top
-                    bottomMargin: parent.margins.bottom
-                }
-            }
+                property int tm: 0
+                property int lm: 0
 
-            PlasmaComponents.BusyIndicator {
-                z: 1000
-                visible: applet.length > 0 && applet[0].busy
-                running: visible
-                anchors.centerIn: parent
-            }
-            SequentialAnimation {
-                id: killAnim
-                NumberAnimation {
-                    target: frame
-                    properties: "scale"
-                    to: 0
-                    duration: 250
+                imagePath: applet.length > 0 && applet[0].backgroundHints == 0 ? "" : "widgets/background"
+
+                onImagePathChanged: {
+                    // Reposition applet so it fits into the frame
+                    if (imagePath == "") {
+                        frameParent.x = frameParent.x + lm;
+                        frameParent.y = frameParent.y + tm;
+                    } else {
+                        // Cache values, so we can subtract them when the background is removed
+                        frame.lm = frame.margins.left;
+                        frame.tm = frame.margins.top;
+
+                        frameParent.x = frameParent.x - frame.margins.left;
+                        frameParent.y = frameParent.y - frame.margins.top;
+                    }
                 }
-                ScriptAction { script: frame.destroy()}
+                MouseArea {
+                    anchors.fill: parent
+                    drag.target: frameParent
+                    onClicked: {
+                        var s = (frameParent.width == frameParent.large) ? frameParent.small : frameParent.large;
+                        frameParent.height = s
+                        frameParent.width = s
+                    }
+                }
+
+                Item {
+                    id: appletContainer
+                    anchors {
+                        fill: parent
+                        leftMargin: frame.margins.left
+                        rightMargin: parent.margins.right
+                        topMargin: parent.margins.top
+                        bottomMargin: parent.margins.bottom
+                    }
+                }
+
+                PlasmaComponents.BusyIndicator {
+                    id: busyIndicator
+                    z: 1000
+                    visible: applet.length > 0 && applet[0].busy
+                    running: visible
+                    anchors.centerIn: parent
+                }
+                SequentialAnimation {
+                    id: killAnim
+                    NumberAnimation {
+                        target: frame
+                        properties: "scale"
+                        to: 0
+                        duration: 250
+                    }
+                    ScriptAction { script: frame.destroy()}
+                }
+            }
+            ShaderEffect {
+                id: wobbleShader
+                anchors.fill: frame
+                property variant source: ShaderEffectSource {
+                    id: theSource
+                    sourceItem: frame
+                }
+                opacity: 0
+                property int fadeDuration: 250
+                property real amplitude: busyIndicator.visible ? 0.04 * 0.2 : 0
+                property real frequency: 20
+                property real time: 0
+                NumberAnimation on time { loops: Animation.Infinite; from: 0; to: Math.PI * 2; duration: 600 }
+                Behavior on amplitude { NumberAnimation { duration: wobbleShader.fadeDuration } }
+                //! [fragment]
+                fragmentShader: {
+                    "uniform lowp float qt_Opacity;" +
+                    "uniform highp float amplitude;" +
+                    "uniform highp float frequency;" +
+                    "uniform highp float time;" +
+                    "uniform sampler2D source;" +
+                    "varying highp vec2 qt_TexCoord0;" +
+                    "void main() {" +
+                    "    highp vec2 p = sin(time + frequency * qt_TexCoord0);" +
+                    "    gl_FragColor = texture2D(source, qt_TexCoord0 + amplitude * vec2(p.y, -p.x)) * qt_Opacity;" +
+                    "}"
+                }
+
+                // compose the item on-screen, we want to render
+                // either the shader item or the source item,
+                // so swap their opacity as the wobbling fades in
+                // and after it fades out
+                Connections {
+                    target: busyIndicator
+                    onVisibleChanged: {
+                        if (busyIndicator.visible) {
+                            wobbleShader.opacity = 1;
+                            frame.opacity = 0;
+                        } else {
+                             hideTimer.start();
+                        }
+                    }
+                }
+                Timer {
+                    id: hideTimer
+                    interval: wobbleShader.fadeDuration
+                    onTriggered: {
+                        wobbleShader.opacity = 0;
+                        frame.opacity = 1;
+                    }
+                }
+                //! [fragment]
             }
         }
     }
