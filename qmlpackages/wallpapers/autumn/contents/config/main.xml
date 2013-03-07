@@ -6,9 +6,11 @@
   <kcfgfile name=""/>
 
   <group name="General">
-    <entry name="Color" type="Color">
-      <label>Color of the wallpaper</label>
-      <default>#0000ff</default>
+    <entry name="Speed" type="int">
+      <label>Speed of the leaves</label>
+      <default>60</default>
+      <min>20</min>
+      <max>150</max>
     </entry>
   </group>
 

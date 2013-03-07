@@ -56,7 +56,7 @@ Item {
             emitRate: 4
             lifeSpan: 14000
             size: 80
-            velocity: PointDirection { y: 60 }
+            velocity: PointDirection { y: wallpaper.configuration.Speed }
         }
         Wander {
             anchors.fill: parent
