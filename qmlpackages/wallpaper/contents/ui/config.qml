@@ -23,6 +23,9 @@ Column {
     id: root
     property alias cfg_Color: picker.color
 
+    PlasmaComponents.Label {
+        text: "Color:"
+    }
     Column {
         id: picker
 
@@ -68,7 +71,29 @@ Column {
                 picker.color = Qt.hsla(picker.hue, picker.saturation, picker.lightness, 1)
             }
         }
+        Rectangle {
+            /*anchors {
+                left: parent.left
+                right: parent.right
+            }*/
+            width: 200
+            height: 30
+            color: Qt.hsla(picker.hue, picker.saturation, picker.lightness, 1)
+            MouseArea {
+                anchors.fill: parent
+                onClicked: pickerRow.height = (pickerRow.height == 0 ? pickerRow.implicitHeight : 0)
+            }
+        }
         Row {
+            id: pickerRow
+            clip: true
+            height: 0
+            Behavior on height {
+                NumberAnimation {
+                    duration: 250
+                    easing.type: "InOutQuad"
+                }
+            }
             MouseArea {
                 width: 255
                 height: 255
@@ -155,14 +180,6 @@ Column {
                     }
                 }
             }
-        }
-        Rectangle {
-            anchors {
-                left: parent.left
-                right: parent.right
-            }
-            height: 30
-            color: Qt.hsla(picker.hue, picker.saturation, picker.lightness, 1)
         }
     }
 }
