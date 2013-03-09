@@ -46,6 +46,8 @@ Item {
             height: _h
 
             PlasmaComponents.TabButton { tab: wobbleExample; text: tab.pageName; }
+            //PlasmaComponents.TabButton { tab: colorExample; text: tab.pageName; }
+            PlasmaComponents.TabButton { tab: colorShower; text: tab.pageName; }
             PlasmaComponents.TabButton { tab: simpleExample; text: tab.pageName; }
             PlasmaComponents.TabButton { tab: vertexPage; iconSource: vertexPage.icon; }
         }
@@ -61,6 +63,12 @@ Item {
 
             WobbleExample {
                 id: wobbleExample
+            }
+            ColorExample {
+                id: colorExample
+            }
+            ColorShower {
+                id: colorShower
             }
             SimpleExample {
                 id: simpleExample
