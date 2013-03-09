@@ -126,10 +126,10 @@ Item {
                 id: wobbleShader
                 anchors.fill: frame
                 property variant source: ShaderEffectSource {
-                    id: theSource
+                    hideSource: true
                     sourceItem: frame
                 }
-                opacity: 0
+
                 property int fadeDuration: 250
                 property real amplitude: busyIndicator.visible ? 0.04 * 0.2 : 0
                 property real frequency: 20
@@ -148,30 +148,6 @@ Item {
                     "    highp vec2 p = sin(time + frequency * qt_TexCoord0);" +
                     "    gl_FragColor = texture2D(source, qt_TexCoord0 + amplitude * vec2(p.y, -p.x)) * qt_Opacity;" +
                     "}"
-                }
-
-                // compose the item on-screen, we want to render
-                // either the shader item or the source item,
-                // so swap their opacity as the wobbling fades in
-                // and after it fades out
-                Connections {
-                    target: busyIndicator
-                    onVisibleChanged: {
-                        if (busyIndicator.visible) {
-                            wobbleShader.opacity = 1;
-                            frame.opacity = 0;
-                        } else {
-                             hideTimer.start();
-                        }
-                    }
-                }
-                Timer {
-                    id: hideTimer
-                    interval: wobbleShader.fadeDuration
-                    onTriggered: {
-                        wobbleShader.opacity = 0;
-                        frame.opacity = 1;
-                    }
                 }
                 //! [fragment]
             }
