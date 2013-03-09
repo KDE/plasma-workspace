@@ -47,15 +47,11 @@ PlasmaComponents.Page {
         }
         text: pageName
     }
-    SimpleExample {
-        id: simpleShader
-        //parent: root
-        anchors.fill: examplesPage
-        parent: examplesPage.parent
-
-        opacity: 0.2
-        //source: effectSource
-    }
+//     SimpleExample {
+//         id: simpleShader
+//         //parent: root
+//         //source: effectSource
+//     }
     Image {
         id: imageItem
         width: 200
@@ -64,48 +60,48 @@ PlasmaComponents.Page {
         ///source: "http://vizzzion.org/blog/wp-content/uploads/2013/01/ktouch.png"
         source: "file:///home/sebas/Pictures/Damselfly.jpg"
     }
-    TubeExample {
-        id: tubeShader
-        anchors.fill: imageItem
-        source: ShaderEffectSource {
-            //sourceRect: Qt.rect(-50, -50, width+100, height+100)
-            //sourceRect: Qt.rect(10, 20, 50, 80)
-            sourceItem: imageItem
-            hideSource: hideSourceCheckbox.checked
-        }
-    }
-    GridView {
-        id: grid
-        anchors {
-            top: heading.bottom;
-            topMargin: _s
-            left: parent.left
-            right: parent.right
-            bottom: applyButton.top
-            bottomMargin: _s
-
-        }
-        model: VisualItemModel {
-            PlasmaComponents.Button {
-                checkable: true;
-                text: "Simple";
-                onClicked: {
-                    simpleShader.visible = checked;
-//                     fragmentPage.shaderText = simpleShader.fragmentShader;
-//                     vertexPage.shaderText = simpleShader.vertexShader;
-                }
-            }
-            PlasmaComponents.Button {
-                checkable: true;
-                text: "Tube";
-                onClicked: {
-                    tubeShader.visible = checked;
-                    mainItem.opacity = checked ? 0.1 : 0.1
-//                     fragmentPage.shaderText = tubeShader.fragmentShader;
-//                     vertexPage.shaderText = tubeShader.vertexShader;
-                }
-            }
-        }
-    }
+//     TubeExample {
+//         id: tubeShader
+//         anchors.fill: imageItem
+//         source: ShaderEffectSource {
+//             //sourceRect: Qt.rect(-50, -50, width+100, height+100)
+//             //sourceRect: Qt.rect(10, 20, 50, 80)
+//             sourceItem: imageItem
+//             hideSource: hideSourceCheckbox.checked
+//         }
+//     }
+//     GridView {
+//         id: grid
+//         anchors {
+//             top: heading.bottom;
+//             topMargin: _s
+//             left: parent.left
+//             right: parent.right
+//             bottom: applyButton.top
+//             bottomMargin: _s
+//
+//         }
+//         model: VisualItemModel {
+//             PlasmaComponents.Button {
+//                 checkable: true;
+//                 text: "Simple";
+//                 onClicked: {
+//                     simpleShader.visible = checked;
+// //                     fragmentPage.shaderText = simpleShader.fragmentShader;
+// //                     vertexPage.shaderText = simpleShader.vertexShader;
+//                 }
+//             }
+//             PlasmaComponents.Button {
+//                 checkable: true;
+//                 text: "Tube";
+//                 onClicked: {
+//                     tubeShader.visible = checked;
+//                     mainItem.opacity = checked ? 0.1 : 0.1
+// //                     fragmentPage.shaderText = tubeShader.fragmentShader;
+// //                     vertexPage.shaderText = tubeShader.vertexShader;
+//                 }
+//             }
+//         }
+//     }
 }
 

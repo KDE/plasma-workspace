@@ -25,17 +25,35 @@ import org.kde.qtextracomponents 0.1 as QtExtras
 
 // VertexPage
 
-ShaderEffect {
+PlasmaComponents.Page {
+    id: examplesPage
 
-    visible: false
-    //parent: root
-    //anchors.fill: source.sourceItem
-    property variant source: ShaderEffectSource {
-        sourceItem: mainItem
-        hideSource: true
+    //property string shader
+    property string pageName: "Shader Examples"
+    property string pageDescription: "Shader Examples"
+    property string icon: "weather-clear"
+
+    anchors {
+        fill: parent
+        margins: _s
     }
 
-    //property variant source: effectSource
-
+    PlasmaExtras.Heading {
+        id: heading
+        level: 1
+        anchors {
+            top: parent.top;
+            left: parent.left
+            right: parent.right
+        }
+        text: pageName
+    }
+    PlasmaComponents.Label {
+        anchors {
+            top: heading.bottom;
+            left: parent.left;
+            right: parent.right;
+        }
+        text: pageDescription
+    }
 }
-

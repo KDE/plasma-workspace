@@ -30,13 +30,44 @@ PlasmaComponents.Page {
 
     property string shader
     property alias shaderText: editor.text
-    property string pageName: "Shaders"
-    property string icon: "preferences-desktop-mouse"
+    property string pageName: "Editor"
+    property string icon: "accessories-text-editor"
 
     anchors {
         fill: parent
         margins: _s
     }
+    /*
+    ShaderEffectSource {
+        id: effectSource
+        sourceItem: editorPage
+        hideSource: hideSourceCheckbox.checked
+    }
+
+    ShaderEffect {
+        id: mainShader
+        anchors.fill: editorPage
+        property variant source: effectSource
+        property real f: 0
+        property real f2: 0
+        property int intensity: 1
+        smooth: true
+    }
+    PlasmaComponents.ToolButton {
+        iconSource: "dialog-close"
+        width: _h
+        height: width
+        visible: !(mainShader.fragmentShader == "" && mainShader.vertexShader == "")
+        anchors { top: parent.top; right: parent.right; }
+        onClicked: {
+            mainShader.fragmentShader = "";
+            mainShader.vertexShader = "";
+            fragmentPage.shader = ""
+            vertexPage.shader = ""
+        }
+    }
+
+    */
 
     PlasmaExtras.Heading {
         id: heading
@@ -66,7 +97,12 @@ PlasmaComponents.Page {
     PlasmaComponents.Button {
         id: applyButton
         text: "Upload Shader"
-        onClicked: shader = editor.text
+        onClicked: {
+            shader = editor.text
+            print("Uploading new vertex shader: \n" + shader);
+            mainShader.vertexShader = shader;
+        }
+
         anchors {
             right: parent.right
             bottom: parent.bottom
@@ -74,5 +110,13 @@ PlasmaComponents.Page {
         }
 
 
+
     }
+//     PlasmaComponents.CheckBox {
+//         id: hideSourceCheckbox
+//         text: "Hide Source Item"
+//         anchors { bottom: parent.bottom; left: parent.left; margins: _s; }
+//         onCheckedChanged: effectSource.hideSource = checked
+//     }
+
 }

@@ -18,21 +18,22 @@
 
 import QtQuick 2.0
 
-import org.kde.plasma.core 0.1 as PlasmaCore
-import org.kde.plasma.components 0.1 as PlasmaComponents
-import org.kde.plasma.extras 0.1 as PlasmaExtras
-import org.kde.qtextracomponents 0.1 as QtExtras
-
-// VertexPage
-
 ShaderExample {
-//     parent: root
 
-    fragmentShader: { " \
-        void main(void) { \
-                gl_FragColor = vec4(1.0, 0.0, 0.0, 0.3); \
-            } \
-        "
+    pageName: "Simple shader"
+    pageDescription: "Paints a red, translucent rectangle"
+
+    ShaderEffect {
+        anchors.fill: parent
+        anchors.topMargin: 48
+        opacity: 0.2
+
+        fragmentShader: { " \
+            void main(void) { \
+                    gl_FragColor = vec4(1.0, 0.0, 0.0, 0.3); \
+                } \
+            "
+        }
     }
 }
 

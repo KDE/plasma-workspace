@@ -31,10 +31,6 @@ Item {
     property int _s: theme.iconSizes.small
     property int _h: theme.iconSizes.desktop
 
-    PlasmaCore.DataSource {
-        id: dataSource
-
-    }
     Item {
         id: mainItem
         anchors.fill: parent
@@ -49,9 +45,9 @@ Item {
             }
             height: _h
 
-            PlasmaComponents.TabButton { tab: examplesPage; iconSource: examplesPage.icon; }
+            PlasmaComponents.TabButton { tab: wobbleExample; text: tab.pageName; }
+            PlasmaComponents.TabButton { tab: simpleExample; text: tab.pageName; }
             PlasmaComponents.TabButton { tab: vertexPage; iconSource: vertexPage.icon; }
-            PlasmaComponents.TabButton { tab: fragmentPage; iconSource: fragmentPage.icon; }
         }
 
         PlasmaComponents.TabGroup {
@@ -63,54 +59,15 @@ Item {
                 bottom: parent.bottom
             }
 
-            //currentTab: tabBar.currentTab
-
-
-            ExamplesPage {
-                id: examplesPage
+            WobbleExample {
+                id: wobbleExample
             }
-            VertexPage {
+            SimpleExample {
+                id: simpleExample
+            }
+            EditorPage {
                 id: vertexPage
             }
-            FragmentPage {
-                id: fragmentPage
-            }
-        }
-    }
-    ShaderEffectSource {
-        id: effectSource
-        sourceItem: mainItem
-        hideSource: hideSourceCheckbox.checked
-    }
-
-    ShaderEffect {
-        id: mainShader
-        anchors.fill: mainItem
-        property variant source: effectSource
-        property real f: 0
-        property real f2: 0
-        property int intensity: 1
-        smooth: true
-    }
-
-    PlasmaComponents.CheckBox {
-        id: hideSourceCheckbox
-        text: "Hide Source Item"
-        anchors { bottom: parent.bottom; left: parent.left; margins: _s; }
-        onCheckedChanged: effectSource.hideSource = checked
-    }
-
-    PlasmaComponents.ToolButton {
-        iconSource: "dialog-close"
-        width: _h
-        height: width
-        visible: !(mainShader.fragmentShader == "" && mainShader.vertexShader == "")
-        anchors { top: parent.top; right: parent.right; }
-        onClicked: {
-            mainShader.fragmentShader = "";
-            mainShader.vertexShader = "";
-            fragmentPage.shader = ""
-            vertexPage.shader = ""
         }
     }
 
