@@ -2,6 +2,11 @@
 Encoding=UTF-8
 Keywords=
 Name=Autumn
+Name[nl]=Herfst
+Name[pt]=Outono
+Name[pt_BR]=Outono
+Name[uk]=Осінь
+Name[x-test]=xxAutumnxx
 Type=Service
 Icon=java
 
