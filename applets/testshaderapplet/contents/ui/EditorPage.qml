@@ -37,10 +37,16 @@ PlasmaComponents.Page {
         fill: parent
         margins: _s
     }
-    /*
+
+    Image {
+        id: imageItem
+        anchors.fill: parent
+        //source: "../images/elarun-small.png"
+    }
+
     ShaderEffectSource {
         id: effectSource
-        sourceItem: editorPage
+        sourceItem: imageItem
         hideSource: hideSourceCheckbox.checked
     }
 
@@ -67,7 +73,6 @@ PlasmaComponents.Page {
         }
     }
 
-    */
 
     PlasmaExtras.Heading {
         id: heading
@@ -79,6 +84,20 @@ PlasmaComponents.Page {
         }
         text: pageName
     }
+    PlasmaComponents.ButtonColumn {
+        anchors {
+            right: parent.right
+            top: heading.top
+        }
+        PlasmaComponents.RadioButton {
+            id: fragmentRadio
+            text: "Fragment / Pixel Shader"
+        }
+        PlasmaComponents.RadioButton {
+            text: "Vertex Shader"
+        }
+    }
+
     PlasmaComponents.TextArea {
         id: editor
         anchors {
@@ -90,6 +109,11 @@ PlasmaComponents.Page {
             bottomMargin: _s
 
         }
+        text: { "void main(void) {\
+        gl_FragColor = vec4(1.0, 0.0, 0.0, 0.3);\
+    }"
+        }
+
 //         width: parent.width
 //         parent.height-height: _h*2
     }
@@ -99,8 +123,13 @@ PlasmaComponents.Page {
         text: "Upload Shader"
         onClicked: {
             shader = editor.text
-            print("Uploading new vertex shader: \n" + shader);
-            mainShader.vertexShader = shader;
+            if (fragmentRadio.checked) {
+                print("Uploading new fragment shader: \n" + shader);
+                mainShader.fragmentShader = shader
+            } else {
+                print("Uploading new vertex shader: \n" + shader);
+                mainShader.vertexShader = shader;
+            }
         }
 
         anchors {
