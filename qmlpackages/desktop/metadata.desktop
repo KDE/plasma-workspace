@@ -1,5 +1,6 @@
 [Desktop Entry]
 Comment=Desktop view furniture
+Comment[mr]=डेस्कटॉप दृश्य फर्निचर
 Comment[nl]=Meubilair voor weergave op het bureaublad
 Comment[pt]=Componentes do ecrã
 Comment[pt_BR]=Acessório de visualização da área de trabalho
@@ -12,6 +13,7 @@ Keywords=
 Name=Desktop
 Name[cs]=Pracovní plocha
 Name[de]=Arbeitsfläche
+Name[mr]=डेस्कटॉप
 Name[nl]=Bureaublad
 Name[pt]=Ambiente de Trabalho
 Name[pt_BR]=Área de trabalho

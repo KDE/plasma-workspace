@@ -2,6 +2,12 @@
 Encoding=UTF-8
 Keywords=
 Name=Shader Test
+Name[mr]=शेडर चाचणी
+Name[nl]=Test van schaduw
+Name[pt]=Teste de Sombras
+Name[pt_BR]=Teste de sombra
+Name[uk]=Тестування підпрограм побудови тіней
+Name[x-test]=xxShader Testxx
 Type=Service
 Icon=plasma
 
