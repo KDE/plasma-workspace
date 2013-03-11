@@ -20,7 +20,7 @@ import QtQuick 2.0
 
 ShaderExample {
 
-    pageName: "Simple shader"
+    pageName: "Simple"
     pageDescription: "Paints a red, translucent rectangle"
 
     ShaderEffect {

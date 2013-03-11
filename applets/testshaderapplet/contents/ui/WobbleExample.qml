@@ -110,7 +110,7 @@ ShaderExample {
         property variant mouse
         property variant resolution
 
-        property int fadeDuration: 2500
+        property int fadeDuration: 250
         property real amplitude: 0.04 * amplitudeSlider.value
         property real frequency: 20
         property real time: 10
