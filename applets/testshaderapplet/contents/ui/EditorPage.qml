@@ -68,7 +68,7 @@ PlasmaComponents.Page {
         onClicked: {
             mainShader.fragmentShader = "";
             mainShader.vertexShader = "";
-            fragmentPage.shader = ""
+            editorPage.shader = ""
             vertexPage.shader = ""
         }
     }
