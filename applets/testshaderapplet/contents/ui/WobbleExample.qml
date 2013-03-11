@@ -36,10 +36,10 @@ ShaderExample {
         spacing: 6
         columnSpacing: _m
         PlasmaComponents.Label {
-            text: "Amplitude (" + amplitudeSlider.value +"):";
+            text: "Amplitude:";
             width: parent.width * 0.5;
+            horizontalAlignment: Text.AlignRight
             elide: Text.ElideRight
-//             height: 24
         }
         PlasmaComponents.Slider {
             width: parent.width * 0.4
@@ -51,10 +51,10 @@ ShaderExample {
         }
 
         PlasmaComponents.Label {
-            text: "Speed (" + speedSlider.value +"):";
+            text: "Speed:";
+            horizontalAlignment: Text.AlignRight
+            width: parent.width * 0.5;
             elide: Text.ElideRight
-//             width: parent.width * 0.4;
-//             height: 24
         }
         PlasmaComponents.Slider {
             width: parent.width * 0.4

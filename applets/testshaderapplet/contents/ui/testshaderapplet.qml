@@ -45,6 +45,7 @@ Item {
             }
             height: _h
 
+            PlasmaComponents.TabButton { tab: shadowExample; text: tab.pageName; }
             PlasmaComponents.TabButton { tab: wobbleExample; text: tab.pageName; }
             //PlasmaComponents.TabButton { tab: colorExample; text: tab.pageName; }
             PlasmaComponents.TabButton { tab: colorShower; text: tab.pageName; }
@@ -61,6 +62,9 @@ Item {
                 bottom: parent.bottom
             }
 
+            Shadows {
+                id: shadowExample
+            }
             WobbleExample {
                 id: wobbleExample
             }
