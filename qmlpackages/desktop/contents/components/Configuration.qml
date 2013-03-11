@@ -117,7 +117,7 @@ Rectangle {
                 visible: (configDialog.configModel ? configDialog.configModel.count : 0) + globalConfigModel.count > 1
                 width: visible ? 100 : 0
                 implicitWidth: width
-                implicitHeight: theme.defaultFont.mSize.height * 12
+                implicitHeight: theme.mSize(theme.defaultFont).height * 12
                 Flickable {
                     id: categoriesView
                     contentWidth: width

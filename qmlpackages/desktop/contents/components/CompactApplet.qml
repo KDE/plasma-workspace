@@ -48,8 +48,8 @@ Item {
         mainItem: Item {
             id: appletParent
 
-            width: applet && applet.implicitWidth > 0 ? applet.implicitWidth : theme.defaultFont.mSize.width * 35
-            height: applet && applet.implicitHeight > 0 ? applet.implicitHeight : theme.defaultFont.mSize.height * 25
+            width: applet && applet.implicitWidth > 0 ? applet.implicitWidth : theme.mSize(theme.defaultFont).width * 35
+            height: applet && applet.implicitHeight > 0 ? applet.implicitHeight : theme.mSize(theme.defaultFont).height * 25
             onWidthChanged: applet.width = width
             onHeightChanged: applet.height = height
         }
