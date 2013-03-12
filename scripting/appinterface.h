@@ -29,6 +29,7 @@ namespace Plasma
     class Applet;
     class Containment;
     class Corona;
+    class Theme;
 } // namespace Plasma
 
 namespace WorkspaceScripting
@@ -90,6 +91,7 @@ Q_SIGNALS:
 private:
     ScriptEngine *m_env;
     QStringList m_knownWidgets;
+    Plasma::Theme *m_theme;
 };
 
 }

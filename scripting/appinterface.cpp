@@ -47,7 +47,7 @@ AppInterface::AppInterface(ScriptEngine *env)
     : QObject(env),
       m_env(env)
 {
-
+    m_theme = new Plasma::Theme(this);
 }
 
 int AppInterface::screenCount() const
@@ -108,12 +108,12 @@ int AppInterface::scriptingVersion() const
 
 QString AppInterface::theme() const
 {
-    return Plasma::Theme::defaultTheme()->themeName();
+    return m_theme->themeName();
 }
 
 void AppInterface::setTheme(const QString &name)
 {
-    Plasma::Theme::defaultTheme()->setThemeName(name);
+    m_theme->setThemeName(name);
 }
 
 bool AppInterface::multihead() const
