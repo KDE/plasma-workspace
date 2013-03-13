@@ -190,13 +190,9 @@ Item {
                     "varying highp vec2 qt_TexCoord0;" +
                     "void main() {" +
 
-                    "highp vec2 wave = vec2(qt_TexCoord0.x - dx*0.0025" +
-                    "                  * (1.0/(1.0+abs(qt_TexCoord0.x-(startX))))" +
-                    "                  * (1.0/(1.0+abs(qt_TexCoord0.y-(startY))))," +
-                    "                  qt_TexCoord0.y - dy*0.0025" +
-                    "                  * 1.0/(1.0+abs(qt_TexCoord0.x-(startX)))" +
-                    "                  * 1.0/(1.0+abs(qt_TexCoord0.y-(startY))));" +
-                    "gl_FragColor = texture2D(source, wave);" +
+                    "  highp vec2 tmp = 1.0 / (1.0 + abs(qt_TexCoord0 - vec2(startX, startY)));" +
+                    "  vec2 wave = qt_TexCoord0 - vec2(dx, dy) * 0.0025 * tmp.xx * tmp.yy;" +
+                    "   gl_FragColor = texture2D(source, wave);" +
                     "}"
                 }
                 //! [fragment]
