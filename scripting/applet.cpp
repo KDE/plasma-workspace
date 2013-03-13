@@ -20,7 +20,6 @@
 #include "applet.h"
 
 #include <QAction>
-#include <QGraphicsLinearLayout>
 
 #include <KService>
 #include <KServiceTypeTrader>

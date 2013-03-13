@@ -20,7 +20,6 @@
 #include "widget.h"
 
 #include <QAction>
-#include <QGraphicsLinearLayout>
 
 #include <Plasma/Applet>
 #include <Plasma/Containment>

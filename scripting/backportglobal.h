@@ -346,19 +346,4 @@ inline QScriptValue wrapPointer(QScriptEngine *eng, T *ptr, uint flags = 0)
 
 } // namespace QScript
 
-#ifdef QGRAPHICSITEM_H
-
-namespace QScript {
-
-template <class T>
-inline QScriptValue wrapGVPointer(QScriptEngine *eng, T *item)
-{
-    uint flags = item->parentItem() ? UserOwnership : 0;
-    return wrapPointer<T>(eng, item, flags);
-}
-
-} // namespace QScript
-
-#endif // QGRAPHICSITEM_H
-
 #endif // QTSCRIPTEXTENSIONS_GLOBAL_H
