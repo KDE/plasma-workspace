@@ -75,7 +75,7 @@ void DesktopCorona::loadDefaultLayout()
 
 void DesktopCorona::processUpdateScripts()
 {
-    foreach (const QString &script, WorkspaceScripting::ScriptEngine::pendingUpdateScripts()) {
+    foreach (const QString &script, WorkspaceScripting::ScriptEngine::pendingUpdateScripts(this)) {
         WorkspaceScripting::DesktopScriptEngine scriptEngine(this, false);
         scriptEngine.evaluateScript(script);
     }
