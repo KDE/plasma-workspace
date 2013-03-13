@@ -73,6 +73,14 @@ void DesktopCorona::loadDefaultLayout()
     }
 }
 
+void DesktopCorona::processUpdateScripts()
+{
+    foreach (const QString &script, WorkspaceScripting::ScriptEngine::pendingUpdateScripts()) {
+        WorkspaceScripting::DesktopScriptEngine scriptEngine(this, false);
+        scriptEngine.evaluateScript(script);
+    }
+}
+
 void DesktopCorona::checkScreens(bool signalWhenExists)
 {
     // quick sanity check to ensure we have containments for each screen

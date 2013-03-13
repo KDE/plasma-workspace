@@ -56,6 +56,7 @@ int main(int argc, char** argv)
     if (corona->containments().isEmpty()) {
         corona->loadDefaultLayout();
     }
+    corona->processUpdateScripts();
     corona->checkScreens();
     
     return app.exec();

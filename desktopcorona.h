@@ -47,6 +47,11 @@ public:
     void loadDefaultLayout();
 
     /**
+     * Execute any update script
+     */
+    void processUpdateScripts();
+
+    /**
      * Ensures we have the necessary containments for every screen
      */
     void checkScreens(bool signalWhenExists = false);
