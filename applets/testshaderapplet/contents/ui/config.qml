@@ -17,8 +17,8 @@
  */
 
 import QtQuick 2.0
-// import org.kde.plasma.components 0.1 as PlasmaComponents
-// import org.kde.plasma.extras 0.1 as PlasmaExtras
+// import org.kde.plasma.components 2.0 as PlasmaComponents
+// import org.kde.plasma.extras 2.0 as PlasmaExtras
 
 Column {
     id: root
