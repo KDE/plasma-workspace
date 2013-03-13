@@ -44,7 +44,6 @@ public:
     ~ScriptEngine();
 
     static QStringList pendingUpdateScripts();
-    static QStringList defaultLayoutScripts();
 
     Plasma::Corona *corona() const;
     bool evaluateScript(const QString &script, const QString &path = QString());
@@ -93,7 +92,7 @@ private:
     QScriptValue m_scriptSelf;
 };
 
-static const int PLASMA_DESKTOP_SCRIPTING_VERSION = 5;
+static const int PLASMA_DESKTOP_SCRIPTING_VERSION = 6;
 }
 
 #endif

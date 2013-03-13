@@ -684,56 +684,6 @@ QStringList ScriptEngine::pendingUpdateScripts()
     return scriptPaths;
 }
 
-QStringList ScriptEngine::defaultLayoutScripts()
-{
-    const QString appName = KGlobal::activeComponent().aboutData()->appName();
-    QStringList appNameDirs = KGlobal::dirs()->findDirs("data", appName);
-    QStringList scripts;
-    QDir appDir;
-    QFileInfoList scriptList;
-
-    foreach (const QString &appNameDir, appNameDirs) {
-        appDir.setPath(appNameDir + QLatin1String("init/"));
-        if (appDir.exists()) {
-            scriptList = appDir.entryInfoList(QStringList("*.js"),
-                                            QDir::NoFilter,
-                                            QDir::Name);
-            foreach (const QFileInfo &script, scriptList) {
-                if (script.exists()) {
-                    scripts.append(script.absoluteFilePath());
-                }
-            }
-        }
-    }
-
-    QStringList scriptPaths;
-
-    if (scripts.isEmpty()) {
-        //kDebug() << "no javascript based layouts";
-        return scriptPaths;
-    }
-
-    const QString localDir = KGlobal::dirs()->localkdedir();
-    const QString localXdgDir = KGlobal::dirs()->localxdgdatadir();
-
-    QSet<QString> scriptNames;
-    foreach (const QString &script, scripts) {
-        if (script.startsWith(localDir) || script.startsWith(localXdgDir)) {
-            kDebug() << "skipping user local script: " << script;
-            continue;
-        }
-
-        QFileInfo f(script);
-        QString filename = f.fileName();
-        if (!scriptNames.contains(filename)) {
-            scriptNames.insert(filename);
-            scriptPaths.append(script);
-        }
-    }
-
-    return scriptPaths;
-}
-
 }
 
 #include "scriptengine.moc"
