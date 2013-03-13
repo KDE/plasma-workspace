@@ -649,9 +649,9 @@ void ScriptEngine::exception(const QScriptValue &value)
     emit printError(value.toVariant().toString());
 }
 
-QStringList ScriptEngine::pendingUpdateScripts()
+QStringList ScriptEngine::pendingUpdateScripts(Plasma::Corona *corona)
 {
-    const QString appName = KGlobal::activeComponent().aboutData()->appName();
+    const QString appName = corona->package().metadata().pluginName();
     QStringList scripts = KGlobal::dirs()->findAllResources("data", appName + "/updates/*.js");
     QStringList scriptPaths;
 

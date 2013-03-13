@@ -43,7 +43,7 @@ public:
     ScriptEngine(Plasma::Corona *corona, QObject *parent = 0);
     ~ScriptEngine();
 
-    static QStringList pendingUpdateScripts();
+    static QStringList pendingUpdateScripts(Plasma::Corona *corona);
 
     Plasma::Corona *corona() const;
     bool evaluateScript(const QString &script, const QString &path = QString());
