@@ -73,6 +73,9 @@ protected Q_SLOTS:
     void checkViews();
     void updateScreenOwner(int wasScreen, int isScreen, Plasma::Containment *containment);
 
+    void printScriptError(const QString &error);
+    void printScriptMessage(const QString &message);
+
 private:
     QDesktopWidget *m_desktopWidget;
     QList <View *> m_views;

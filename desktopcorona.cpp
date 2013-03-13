@@ -58,8 +58,10 @@ DesktopCorona::~DesktopCorona()
 void DesktopCorona::loadDefaultLayout()
 {
     WorkspaceScripting::DesktopScriptEngine scriptEngine(this, true);
-    connect(&scriptEngine, SIGNAL(printError(QString)), this, SLOT(printScriptError(QString)));
-    connect(&scriptEngine, SIGNAL(print(QString)), this, SLOT(printScriptMessage(QString)));
+    connect(&scriptEngine, &WorkspaceScripting::ScriptEngine::printError,
+            this, &DesktopCorona::printScriptError);
+    connect(&scriptEngine, &WorkspaceScripting::ScriptEngine::print,
+            this, &DesktopCorona::printScriptMessage);
 
     QString script = package().filePath("defaultlayout");
 
@@ -244,6 +246,16 @@ void DesktopCorona::updateScreenOwner(int wasScreen, int isScreen, Plasma::Conta
 
         m_views[isScreen]->setContainment(containment);
     }
+}
+
+void DesktopCorona::printScriptError(const QString &error)
+{
+    qWarning() << error;
+}
+
+void DesktopCorona::printScriptMessage(const QString &message)
+{
+    qDebug() << message;
 }
 
 #include "desktopcorona.moc"
