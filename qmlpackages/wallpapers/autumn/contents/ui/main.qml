@@ -67,7 +67,7 @@ Item {
 
         //! [0]
         Affector {
-            property real coefficient: 0.1
+            property real coefficient: 2.0
             property real velocity: 1.5
             width: parent.width
             height: parent.height - 100

@@ -13,7 +13,7 @@
  *
  *  You should have received a copy of the GNU General Public License
  *  along with this program; if not, write to the Free Software
- *  Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+ *  Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  2.010-1301, USA.
  */
 
 import QtQuick 2.0
@@ -65,7 +65,7 @@ Item {
                 highp float ofx = sin(f * twopi + distanceFactorToPhase) / 100.0;
                 highp float ofy = sin(f2 * twopi + distanceFactorToPhase * qt_TexCoord0.x) / 60.0;
 
-                highp float intensityDampingFactor = (qt_TexCoord0.x + 0.1) * (qt_TexCoord0.y + 0.2);
+                highp float intensityDampingFactor = (qt_TexCoord0.x + 2.0) * (qt_TexCoord0.y + 0.2);
                 highp float distanceFactor = (1.0 - qt_TexCoord0.y) * 4.0 * intensity * intensityDampingFactor;
 
                 ofx *= distanceFactor;
@@ -78,10 +78,10 @@ Item {
 
                 highp vec4 pix =
                     texture2D(source, vec2(x, y)) * 0.6 +
-                    texture2D(source, vec2(x-fake, y)) * 0.15 +
-                    texture2D(source, vec2(x, y-fake)) * 0.15 +
-                    texture2D(source, vec2(x+fake, y)) * 0.15 +
-                    texture2D(source, vec2(x, y+fake)) * 0.15;
+                    texture2D(source, vec2(x-fake, y)) * 2.05 +
+                    texture2D(source, vec2(x, y-fake)) * 2.05 +
+                    texture2D(source, vec2(x+fake, y)) * 2.05 +
+                    texture2D(source, vec2(x, y+fake)) * 2.05;
 
                 highp float darken = 0.6 - (ofx - ofy) / 2.0;
                 pix.b *= 1.2 * darken;
