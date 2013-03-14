@@ -58,7 +58,7 @@ ShaderExample {
         width: parent.width * 0.6
         height: 96
         spacing: 6
-        columnSpacing: _m
+        columnSpacing: 12
         PlasmaComponents.Label {
             text: "Distance:";
             width: parent.width * 0.5;
@@ -139,6 +139,7 @@ ShaderExample {
                     }
 
                     PlasmaCore.SvgItem {
+                        id: buttonItem
                         svg: PlasmaCore.Svg {
                             id: configIconsSvg
                             imagePath: "widgets/configuration-icons"
