@@ -63,7 +63,7 @@ QRectF AppInterface::screenGeometry(int screen) const
 QList<int> AppInterface::activityIds() const
 {
     //FIXME: the ints could overflow since Applet::id() returns a uint,
-    //       however QScript deals with QList<uint> very, very poory
+    //       however QScript deals with QList<uint> very, very poorly
     QList<int> containments;
 
     foreach (Plasma::Containment *c, m_env->corona()->containments()) {
@@ -78,7 +78,7 @@ QList<int> AppInterface::activityIds() const
 QList<int> AppInterface::panelIds() const
 {
     //FIXME: the ints could overflow since Applet::id() returns a uint,
-    //       however QScript deals with QList<uint> very, very poory
+    //       however QScript deals with QList<uint> very, very poorly
     QList<int> panels;
 
     foreach (Plasma::Containment *c, m_env->corona()->containments()) {
