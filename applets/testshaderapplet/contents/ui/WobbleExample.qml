@@ -95,8 +95,8 @@ ShaderExample {
     PlasmaCore.IconItem {
         id: iconItem
         source: "plasma"
-        width: 400
-        height: 400
+        width: parent.width
+        height: parent.height
 //         width: parent.height
 //         height: width
         anchors.centerIn: parent
