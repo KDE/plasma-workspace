@@ -25,8 +25,8 @@ import org.kde.plasma.core 2.0 as PlasmaCore
 Rectangle {
     id: root
     color: "black"
-    width: 640
-    height: 480
+    width: 1024
+    height: 768
 
     property Item containment
 
