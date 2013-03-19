@@ -45,8 +45,8 @@ Item {
             }
             height: theme.iconSizes.toolbar * 1.5
 
-            PlasmaComponents.TabButton { tab: wobbleExample; text: tab.pageName; }
             PlasmaComponents.TabButton { tab: colorShower; text: tab.pageName; }
+            PlasmaComponents.TabButton { tab: wobbleExample; text: tab.pageName; }
             PlasmaComponents.TabButton { tab: shadowExample; text: tab.pageName; }
             PlasmaComponents.TabButton { tab: simpleExample; text: tab.pageName; }
             PlasmaComponents.TabButton { tab: vertexPage; iconSource: vertexPage.icon; }
@@ -61,14 +61,14 @@ Item {
                 bottom: parent.bottom
             }
 
+            ColorShower {
+                id: colorShower
+            }
             WobbleExample {
                 id: wobbleExample
             }
             ColorExample {
                 id: colorExample
-            }
-            ColorShower {
-                id: colorShower
             }
             Shadows {
                 id: shadowExample
