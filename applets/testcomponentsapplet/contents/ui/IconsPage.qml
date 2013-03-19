@@ -40,46 +40,6 @@ PlasmaComponents.Page {
             elide: Text.ElideRight
             text: "Icons"
         }
-        Row {
-            height: _h
-            spacing: _s
-
-            PlasmaCore.IconItem {
-                source: "configure"
-                width: parent.height
-                height: width
-            }
-            PlasmaCore.IconItem {
-                source: "dialog-ok"
-                width: parent.height
-                height: width
-            }
-
-            PlasmaCore.IconItem {
-                source: "maximize"
-                width: parent.height
-                height: width
-            }
-
-
-            PlasmaCore.IconItem {
-                source: "akonadi"
-                width: parent.height
-                height: width
-            }
-            PlasmaCore.IconItem {
-                source: "clock"
-                width: parent.height
-                height: width
-            }
-            QtExtras.QIconItem {
-                icon: "preferences-desktop-icons"
-                width: parent.height
-                height: width
-            }
-
-        }
-
         PlasmaComponents.Label {
             text: "iconSizes.small  : " + theme.iconSizes.small +
                     ", iconSizes.desktop: " + theme.iconSizes.desktop +
@@ -87,5 +47,45 @@ PlasmaComponents.Page {
                     ", iconSizes.dialog : " + theme.iconSizes.dialog
 
         }
+        Flow {
+            //height: _h
+            width: parent.width
+            spacing: _s
+
+            PlasmaCore.IconItem {
+                source: "configure"
+                width: _h
+                height: width
+            }
+            PlasmaCore.IconItem {
+                source: "dialog-ok"
+                width: _h
+                height: width
+            }
+
+            PlasmaCore.IconItem {
+                source: "maximize"
+                width: _h
+                height: width
+            }
+
+            PlasmaCore.IconItem {
+                source: "akonadi"
+                width: _h
+                height: width
+            }
+            PlasmaCore.IconItem {
+                source: "clock"
+                width: _h
+                height: width
+            }
+            QtExtras.QIconItem {
+                icon: "preferences-desktop-icons"
+                width: _h
+                height: width
+            }
+
+        }
+
     }
 }
