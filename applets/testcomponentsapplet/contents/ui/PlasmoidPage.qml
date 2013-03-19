@@ -38,19 +38,29 @@ PlasmaComponents.Page {
             text: "I'm an applet"
         }
 
-        PlasmaComponents.Button {
-            height: theme.iconSizes.desktop
-            text: "Background"
-            checked: plasmoid.backgroundHints == 1
-            onClicked: {
-                print("Background hints: " + plasmoid.backgroundHints)
-                if (plasmoid.backgroundHints == 0) {
-                    plasmoid.backgroundHints = 1//TODO: make work "StandardBackground"
-                } else {
-                    plasmoid.backgroundHints = 0//TODO: make work "NoBackground"
+        PlasmaComponents.ButtonColumn {
+            PlasmaComponents.RadioButton {
+                text: "No background"
+                onClicked: {
+                    if (checked) plasmoid.backgroundHints = 0;
                 }
             }
+            PlasmaComponents.RadioButton {
+                text: "Default background"
+                checked: true
+                onClicked: {
+                    if (checked) plasmoid.backgroundHints = 1;
+                }
+            }
+            PlasmaComponents.RadioButton {
+                text: "Translucent background"
+                onClicked: {
+                    if (checked) plasmoid.backgroundHints = 2;
+                }
+            }
+
         }
+
         PlasmaComponents.Button {
             height: theme.iconSizes.desktop
             text: "Busy"
