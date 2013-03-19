@@ -18,12 +18,15 @@
 
 #include "panelview.h"
 
+#include <QAction>
 #include <QDebug>
 #include <QScreen>
 
+#include <KActionCollection>
 #include <KWindowSystem>
 #include <kwindoweffects.h>
 
+#include <Plasma/Containment>
 #include <Plasma/Package>
 
 PanelView::PanelView(Plasma::Corona *corona, QWindow *parent)
@@ -43,6 +46,9 @@ PanelView::PanelView(Plasma::Corona *corona, QWindow *parent)
 
     //TODO: how to take the shape from the framesvg?
     KWindowEffects::enableBlurBehind(winId(), true);
+
+    connect(this, &View::containmentChanged,
+            this, &PanelView::manageNewContainment);
 
     //Screen management
     connect(screen(), &QScreen::virtualGeometryChanged,
@@ -119,6 +125,21 @@ void PanelView::setOffset(int offset)
 
     m_offset = offset;
     positionPanel();
+    emit offsetChanged();
+}
+
+void PanelView::manageNewContainment()
+{
+    connect(containment()->actions()->action("configure"), &QAction::triggered,
+            this, &PanelView::showPanelController);
+}
+
+void PanelView::showPanelController()
+{
+    if (!m_panelConfigView) {
+        m_panelConfigView = new PanelConfigView(containment(), this);
+    }
+    m_panelConfigView->show();
 }
 
 void PanelView::positionPanel()

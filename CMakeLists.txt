@@ -53,6 +53,7 @@ add_executable(testplasma2
     shellpluginloader.cpp
     shellpackage.cpp
     view.cpp
+    panelconfigview.cpp
     ${scripting_SRC}
 )
 

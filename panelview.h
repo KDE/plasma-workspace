@@ -21,11 +21,14 @@
 
 
 #include "view.h"
+#include "panelconfigview.h"
+#include <QtCore/qpointer.h>
 
 
 class PanelView : public View
 {
     Q_OBJECT
+    Q_PROPERTY(int offset READ offset WRITE setOffset NOTIFY offsetChanged)
 
 public:
     explicit PanelView(Plasma::Corona *corona, QWindow *parent = 0);
@@ -41,7 +44,12 @@ public:
     int offset() const;
     void setOffset(int offset);
 
+Q_SIGNALS:
+    void offsetChanged();
+
 private Q_SLOTS:
+    void manageNewContainment();
+    void showPanelController();
     void positionPanel();
     void restore();
 
@@ -50,6 +58,7 @@ private:
     int m_maxLength;
     int m_minLength;
     Qt::Alignment m_alignment;
+    QPointer<PanelConfigView> m_panelConfigView;
 };
 
 #endif // PANELVIEW_H

@@ -47,6 +47,8 @@ void ShellPackageStructure::initPackage(Plasma::Package *package)
     package->addFileDefinition("configurationui", "components/Configuration.qml", i18n("QML component for the configuratuion dialog"));
     package->addFileDefinition("defaultcompactrepresentation", "components/DefaultCompactRepresentation.qml", i18n("Compact representation of an applet when collapsed in a popup, for instance as an icon. applets can override this component."));
     package->addFileDefinition("widgetexplorer", "components/WidgetExplorer.qml", i18n("Widgets explorer UI"));
+    package->addFileDefinition("panelconfigurationui", "components/PanelConfiguration.qml", i18n("Panel configuration UI"));
+    
     
     //package->setRequired("mainscript", true);
 }
