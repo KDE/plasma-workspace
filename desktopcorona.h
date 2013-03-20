@@ -24,6 +24,7 @@ class  *   Free Software Foundation, Inc.,
 #include "plasma/corona.h"
 
 class QDesktopWidget;
+class QQuickView;
 class PanelView;
 class View;
 
@@ -81,9 +82,16 @@ protected Q_SLOTS:
     void printScriptError(const QString &error);
     void printScriptMessage(const QString &message);
 
+private Q_SLOTS:
+    void handleContainmentAdded(Plasma::Containment *c);
+    void showWidgetExplorer();
+    void widgetExplorerClosed(bool visible);
+    void widgetExplorerStatusChanged();
+
 private:
     QDesktopWidget *m_desktopWidget;
     QList <View *> m_views;
+    QQuickView *m_widgetExplorer;
     QHash<Plasma::Containment *, PanelView *> m_panelViews;
     KConfigGroup m_desktopDefaultsConfig;
 };

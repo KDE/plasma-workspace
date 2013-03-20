@@ -31,6 +31,7 @@ void ShellPackageStructure::initPackage(Plasma::Package *package)
     //Directories
     package->addDirectoryDefinition("components", "components", i18n("UI components"));
     package->addDirectoryDefinition("views", "views", i18n("User interface for the views that will show containments"));
+    package->addDirectoryDefinition("explorer", "explorer", i18n("Explorer UI for adding widgets"));
 
     package->setMimeTypes("components", QStringList() << "text/x-qml");
     package->setMimeTypes("views", QStringList() << "text/x-qml");
@@ -46,7 +47,7 @@ void ShellPackageStructure::initPackage(Plasma::Package *package)
     package->addFileDefinition("compactapplet", "components/CompactApplet.qml", i18n("QML component that shows an applet in a popup"));
     package->addFileDefinition("configurationui", "components/Configuration.qml", i18n("QML component for the configuratuion dialog"));
     package->addFileDefinition("defaultcompactrepresentation", "components/DefaultCompactRepresentation.qml", i18n("Compact representation of an applet when collapsed in a popup, for instance as an icon. applets can override this component."));
-    package->addFileDefinition("widgetexplorer", "components/WidgetExplorer.qml", i18n("Widgets explorer UI"));
+    package->addFileDefinition("widgetexplorer", "explorer/WidgetExplorer.qml", i18n("Widgets explorer UI"));
     package->addFileDefinition("panelconfigurationui", "components/PanelConfiguration.qml", i18n("Panel configuration UI"));
     
     

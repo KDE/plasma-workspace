@@ -22,6 +22,8 @@
 #include <QApplication>
 #include <QDebug>
 #include <QDesktopWidget>
+#include <QQuickView>
+
 #include <Plasma/Package>
 
 #include "panelview.h"
@@ -33,7 +35,8 @@ static const QString s_panelTemplatesPath("plasma-layout-templates/panels/*");
 
 DesktopCorona::DesktopCorona(QObject *parent)
     : Plasma::Corona(parent),
-      m_desktopWidget(QApplication::desktop())
+      m_desktopWidget(QApplication::desktop()),
+      m_widgetExplorer(0)
 {
     m_desktopDefaultsConfig = KConfigGroup(KSharedConfig::openConfig(package().filePath("defaults")), "Desktop");
 
@@ -43,6 +46,7 @@ DesktopCorona::DesktopCorona(QObject *parent)
             this, SLOT(screenCountChanged(int)));
     connect(m_desktopWidget, SIGNAL(workAreaResized(int)),
             this, SLOT(workAreaResized(int)));
+    connect(this, &DesktopCorona::containmentAdded, this, &DesktopCorona::handleContainmentAdded);
 
     connect(this, SIGNAL(screenOwnerChanged(int, int, Plasma::Containment *)),
             this, SLOT(updateScreenOwner(int, int, Plasma::Containment *)));
@@ -253,6 +257,39 @@ void DesktopCorona::updateScreenOwner(int wasScreen, int isScreen, Plasma::Conta
         }
 
         m_views[isScreen]->setContainment(containment);
+    }
+}
+
+void DesktopCorona::handleContainmentAdded(Plasma::Containment* c)
+{
+    connect(c, &Plasma::Containment::showAddWidgetsInterface, this, &DesktopCorona::showWidgetExplorer);
+}
+
+void DesktopCorona::showWidgetExplorer()
+{
+    if (!m_widgetExplorer) {
+        m_widgetExplorer = new QQuickView;
+        QString expqml = package().filePath("widgetexplorer");
+        qDebug() << "Script to load for WidgetExplorer: " << expqml;
+        m_widgetExplorer->setSource(QUrl::fromLocalFile(expqml));
+        connect(m_widgetExplorer, &QQuickView::statusChanged, this, &DesktopCorona::widgetExplorerStatusChanged);
+        connect(m_widgetExplorer, &QQuickView::visibleChanged, this, &DesktopCorona::widgetExplorerClosed);
+    }
+    m_widgetExplorer->show();
+}
+
+void DesktopCorona::widgetExplorerClosed(bool visible)
+{
+    if (!visible) {
+        m_widgetExplorer->deleteLater();
+        m_widgetExplorer = 0;
+    }
+}
+
+void DesktopCorona::widgetExplorerStatusChanged()
+{
+    foreach (QQmlError e, m_widgetExplorer->errors()) {
+        qWarning() << "Error in WidgetExplorer: " << e.toString();
     }
 }
 
