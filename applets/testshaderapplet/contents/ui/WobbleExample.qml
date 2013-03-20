@@ -64,8 +64,10 @@ ShaderExample {
             maximumValue: 6000
             value: 3000
             onValueChanged: {
-                timeAnimation.duration = maximumValue - value +1;
-                timeAnimation.restart();
+                if (timeAnimation != null) {
+                    timeAnimation.duration = maximumValue - value +1;
+                    timeAnimation.restart();
+                }
             }
         }
     }
@@ -95,8 +97,8 @@ ShaderExample {
     PlasmaCore.IconItem {
         id: iconItem
         source: "plasma"
-        width: parent.width
-        height: parent.height
+        width: 400
+        height: 400
 //         width: parent.height
 //         height: width
         anchors.centerIn: parent

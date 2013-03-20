@@ -30,6 +30,7 @@ Item {
 
     property int _s: theme.iconSizes.small
     property int _h: theme.iconSizes.desktop
+    property int _m: 12
 
     Item {
         id: mainItem
@@ -67,9 +68,9 @@ Item {
             WobbleExample {
                 id: wobbleExample
             }
-            ColorExample {
-                id: colorExample
-            }
+//             ColorExample {
+//                 id: colorExample
+//             }
             Shadows {
                 id: shadowExample
             }

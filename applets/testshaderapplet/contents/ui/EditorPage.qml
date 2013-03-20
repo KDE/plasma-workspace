@@ -47,7 +47,8 @@ PlasmaComponents.Page {
     ShaderEffectSource {
         id: effectSource
         sourceItem: imageItem
-        hideSource: hideSourceCheckbox.checked
+        //hideSource: hideSourceCheckbox.checked
+        hideSource: true
     }
 
     ShaderEffect {
