@@ -17,15 +17,10 @@
  */
 
 #include <QApplication>
-#include <QtQuick/QQuickView>
-#include <QtCore/QDebug>
-//#include "svg.h"
 
 #include <kaboutdata.h>
 #include <kcmdlineargs.h>
 #include <klocalizedstring.h>
-
-#include <Plasma/Containment>
 
 #include "desktopcorona.h"
 #include "shellpluginloader.h"
