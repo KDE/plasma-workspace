@@ -25,6 +25,7 @@
 #include <QQmlComponent>
 #include <QQmlEngine>
 #include <QQmlContext>
+#include <QScreen>
 
 #include <KGlobal>
 #include <KLocalizedString>
@@ -36,9 +37,11 @@
 //////////////////////////////PanelConfigView
 PanelConfigView::PanelConfigView(Plasma::Containment *containment, PanelView *panelView, QWindow *parent)
     : QQuickView(parent),
-      m_containment(containment)
+      m_containment(containment),
+      m_panelView(panelView)
 {
 
+    setFlags(Qt::FramelessWindowHint);
     //FIXME: problem on nvidia, all windows should be transparent or won't show
     setColor(Qt::transparent);
     setTitle(i18n("%1 Settings", m_containment->title()));
@@ -53,12 +56,38 @@ PanelConfigView::PanelConfigView(Plasma::Containment *containment, PanelView *pa
     engine()->rootContext()->setContextProperty("panel", panelView);
     engine()->rootContext()->setContextProperty("configDialog", this);
     setSource(QUrl::fromLocalFile(panelView->corona()->package().filePath("panelconfigurationui")));
+    syncGeometry();
 }
 
 PanelConfigView::~PanelConfigView()
 {
 }
 
+void PanelConfigView::syncGeometry()
+{
+    if (!m_containment) {
+        return;
+    }
+
+    if (m_containment->formFactor() == Plasma::Vertical) {
+        resize(128, screen()->size().height());
+
+        if (m_containment->location() == Plasma::LeftEdge) {
+            setPosition(m_panelView->width(), 0);
+        } else if (m_containment->location() == Plasma::RightEdge) {
+            setPosition(screen()->size().width() - m_panelView->width(), 0);
+        }
+
+    } else {
+        resize(screen()->size().width(), 128);
+
+        if (m_containment->location() == Plasma::TopEdge) {
+            setPosition(0, m_panelView->height());
+        } else if (m_containment->location() == Plasma::BottomEdge) {
+            setPosition(0, screen()->size().width() - m_panelView->height());
+        }
+    }
+}
 
 //To emulate Qt::WA_DeleteOnClose that QWindow doesn't have
 void PanelConfigView::hideEvent(QHideEvent *ev)

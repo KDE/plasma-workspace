@@ -44,12 +44,16 @@ public:
     PanelConfigView(Plasma::Containment *interface, PanelView *panelView, QWindow *parent = 0);
     virtual ~PanelConfigView();
 
+protected Q_SLOTS:
+    void syncGeometry();
+
 protected:
      void hideEvent(QHideEvent *ev);
      void resizeEvent(QResizeEvent *re);
 
 private:
     Plasma::Containment *m_containment;
+    PanelView *m_panelView;
 };
 
 #endif // multiple inclusion guard
