@@ -62,13 +62,11 @@ PlasmaComponents.Page {
                 width: _h
                 height: width
             }
-
             PlasmaCore.IconItem {
-                source: "maximize"
+                source: "resize-tr2bl"
                 width: _h
                 height: width
             }
-
             PlasmaCore.IconItem {
                 source: "akonadi"
                 width: _h
