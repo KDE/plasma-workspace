@@ -1,5 +1,6 @@
 /*
  *   Copyright 2008 Aaron Seigo <aseigo@kde.org>
+ *   Copyright 2013 Sebastian Kügler <sebas@kde.org>
  *
  *   This program is free software; you can redistribute it and/or modify
  *   it under the terms of the GNU Library General Public License as
@@ -293,7 +294,8 @@ void DesktopCorona::showWidgetExplorer()
         qDebug() << "Found containment.";
         m_widgetExplorer->setContainment(c);
     } else {
-        qDebug() << "containment not set";
+        // FIXME: try harder to find a suitable containment?
+        qWarning() << "containment not set, don't know where to add the applet.";
     }
     m_widgetExplorerView->show();
 }

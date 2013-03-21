@@ -23,7 +23,6 @@
 #include <QtGui/QtGui>
 #include <QtCore/QtCore>
 #include <QIcon>
-#include <KDebug>
 
 namespace KCategorizedItemsViewModels {
 

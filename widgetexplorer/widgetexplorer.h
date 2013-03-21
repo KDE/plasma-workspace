@@ -1,6 +1,7 @@
 /*
  *   Copyright (C) 2007 by Ivan Cukic <ivan.cukic+kde@gmail.com>
  *   Copyright (C) 2009 by Ana Cecília Martins <anaceciliamb@gmail.com>
+ *   Copyright 2013 by Sebastian Kügler <sebas@kde.org>
  *
  *   This program is free software; you can redistribute it and/or modify
  *   it under the terms of the GNU Library/Lesser General Public License
@@ -25,13 +26,7 @@
 #include <QAction>
 #include <QObject>
 
-//#include <KDE/KDialog>
-
-//#include <plasma/framesvg.h>
-
 #include "plasmaappletitemmodel_p.h"
-
-//#include "plasmagenericshell_export.h"
 
 namespace Plasma {
     class Corona;

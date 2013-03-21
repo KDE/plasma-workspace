@@ -21,45 +21,17 @@
 
 #include "widgetexplorer.h"
 
-#include <QDeclarativeContext>
-#include <QDeclarativeEngine>
-#include <QDeclarativeComponent>
-
 #include <KLocalizedString>
+#include <KServiceTypeTrader>
 
-#include <kaction.h>
-#include <kconfig.h>
-#include <kconfiggroup.h>
-#include <kmenu.h>
-#include <kpushbutton.h>
-#include <kservicetypetrader.h>
-#include <kstandardaction.h>
-#include <kaboutdata.h>
-#include <kaboutapplicationdialog.h>
-#include <kcomponentdata.h>
-#include <kpluginloader.h>
-#include <klineedit.h>
-#include <KStandardDirs>
-#include <KWindowSystem>
-
-#include <plasma/applet.h>
-#include <plasma/corona.h>
-#include <plasma/containment.h>
-#include <plasma/package.h>
-
+#include <Plasma/Applet>
+#include <Plasma/Corona>
+#include <Plasma/Containment>
+#include <Plasma/Package>
 #include <Plasma/PackageStructure>
-// #include <plasma/widgets/toolbutton.h>
-// #include <plasma/widgets/lineedit.h>
-// #include <Plasma/DeclarativeWidget>
 
 #include "kcategorizeditemsviewmodels_p.h"
 #include "plasmaappletitemmodel_p.h"
-//#include "openwidgetassistant_p.h"
-
-//getting the user local
-//KGlobal::dirs()->localkdedir();
-//Compare it to the entryPath of the KPluginInfo
-//and see if it can be uninstalled
 
 using namespace KCategorizedItemsViewModels;
 using namespace Plasma;
@@ -314,7 +286,7 @@ void WidgetExplorerPrivate::initRunningApplets()
     //we've tried our best to get a corona
     //we don't want just one containment, we want them all
     if (!c) {
-        kDebug() << "can't happen";
+        qDebug() << "can't happen";
         return;
     }
 
@@ -322,7 +294,7 @@ void WidgetExplorerPrivate::initRunningApplets()
     runningApplets.clear();
     QList<Containment*> containments = c->containments();
     foreach (Containment *containment, containments) {
-        QObject::connect(containment, SIGNAL(appletAdded(Plasma::Applet*,QPointF)), q, SLOT(appletAdded(Plasma::Applet*)));
+        QObject::connect(containment, SIGNAL(appletAdded(Plasma::Applet*)), q, SLOT(appletAdded(Plasma::Applet*)));
         QObject::connect(containment, SIGNAL(appletRemoved(Plasma::Applet*)), q, SLOT(appletRemoved(Plasma::Applet*)));
 
         foreach (Applet *applet, containment->applets()) {
