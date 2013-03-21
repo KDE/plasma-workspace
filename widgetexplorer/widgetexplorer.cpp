@@ -651,4 +651,4 @@ QPoint WidgetExplorer::tooltipPosition(QGraphicsObject *item, int tipWidth, int 
 }
 */
 
-//#include "widgetexplorer.moc"
+#include "moc_widgetexplorer.cpp"
