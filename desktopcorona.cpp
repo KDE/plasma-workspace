@@ -24,6 +24,7 @@
 #include <QDesktopWidget>
 #include <QQuickView>
 
+#include <KLocalizedString>
 #include <Plasma/Package>
 
 #include "panelview.h"
@@ -269,6 +270,7 @@ void DesktopCorona::showWidgetExplorer()
 {
     if (!m_widgetExplorer) {
         m_widgetExplorer = new QQuickView;
+        m_widgetExplorer->setTitle(i18n("Add Widgets"));
         QString expqml = package().filePath("widgetexplorer");
         qDebug() << "Script to load for WidgetExplorer: " << expqml;
         m_widgetExplorer->setSource(QUrl::fromLocalFile(expqml));
