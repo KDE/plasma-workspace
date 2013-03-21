@@ -67,6 +67,7 @@ using namespace Plasma;
 WidgetAction::WidgetAction(QObject *parent)
     : QAction(parent)
 {
+    qDebug() << "There we go.";
 }
 
 WidgetAction::WidgetAction(const QIcon &icon, const QString &text, QObject *parent)
@@ -172,6 +173,10 @@ void WidgetExplorerPrivate::init(Plasma::Location loc)
 
     initRunningApplets();
 
+    filterItemModel.setSortCaseSensitivity(Qt::CaseInsensitive);
+    filterItemModel.setDynamicSortFilter(true);
+    filterItemModel.setSourceModel(&itemModel);
+    filterItemModel.sort(0);
 //     Plasma::PackageStructure::Ptr structure = Plasma::PackageStructure::load("Plasma/Generic");
 //     package = new Plasma::Package(QString(), "org.kde.desktop.widgetexplorer", structure);
 //
