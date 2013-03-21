@@ -277,6 +277,7 @@ void DesktopCorona::showWidgetExplorer()
 
         m_widgetExplorerView = new QQuickView;
         m_widgetExplorerView->setTitle(i18n("Add Widgets"));
+        m_widgetExplorerView->setColor(Qt::transparent);
 
         m_widgetExplorer = new WidgetExplorer(m_widgetExplorerView);
         m_widgetExplorer->populateWidgetList();
