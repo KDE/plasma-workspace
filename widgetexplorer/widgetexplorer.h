@@ -22,23 +22,22 @@
 #ifndef WIDGETEXPLORER_H
 #define WIDGETEXPLORER_H
 
-#include <QtGui>
+#include <QAction>
+#include <QObject>
 
-#include <KDE/KDialog>
+//#include <KDE/KDialog>
 
-#include <plasma/framesvg.h>
+//#include <plasma/framesvg.h>
 
 #include "plasmaappletitemmodel_p.h"
 
-#include "plasmagenericshell_export.h"
+//#include "plasmagenericshell_export.h"
 
-namespace Plasma
-{
-
-class Corona;
-class Containment;
-class Applet;
-class WidgetExplorerPrivate;
+namespace Plasma {
+    class Corona;
+    class Containment;
+    class Applet;
+}
 class WidgetExplorerPrivate;
 
 //We need to access the separator property that is not exported by QAction
@@ -52,7 +51,7 @@ public:
     WidgetAction(const QIcon &icon, const QString &text, QObject *parent);
 };
 
-class PLASMAGENERICSHELL_EXPORT WidgetExplorer : public QGraphicsWidget
+class WidgetExplorer : public QObject
 {
 
     Q_OBJECT
@@ -105,8 +104,8 @@ public:
         RightEdge     /**< Along the right side of the screen */
     };
 
-    explicit WidgetExplorer(Plasma::Location loc, QGraphicsItem *parent = 0);
-    explicit WidgetExplorer(QGraphicsItem *parent = 0);
+    explicit WidgetExplorer(Plasma::Location loc, QObject *parent = 0);
+    explicit WidgetExplorer(QObject *parent = 0);
     ~WidgetExplorer();
 
     QString application();
@@ -130,7 +129,7 @@ public:
     /**
      * @return the current default containment to add applets to
      */
-    Containment *containment() const;
+    Plasma::Containment *containment() const;
     /**
      * @return the current corona this widget is added to
      */
@@ -152,7 +151,7 @@ public:
 
     Q_INVOKABLE void uninstall(const QString &pluginName);
 
-    Q_INVOKABLE QPoint tooltipPosition(QGraphicsObject *item, int tipWidth, int tipHeight);
+    //Q_INVOKABLE QPoint tooltipPosition(QGraphicsObject *item, int tipWidth, int tipHeight);
 
 Q_SIGNALS:
     void locationChanged(Plasma::Location loc);
@@ -187,6 +186,5 @@ private:
     friend class WidgetExplorerPrivate;
 };
 
-} // namespace Plasma
 
 #endif // WIDGETEXPLORER_H
