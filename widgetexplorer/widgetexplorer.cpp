@@ -271,6 +271,7 @@ QList<QObject *> WidgetExplorer::extraActions() const
 //     foreach (QAction *action, actions()) { // FIXME: where did actions() come from?
 //         actionList << action;
 //     }
+    qWarning() << "extraactions needs reimplementation";
     return actionList;
 }
 
@@ -296,6 +297,10 @@ void WidgetExplorerPrivate::initRunningApplets()
     foreach (Containment *containment, containments) {
         QObject::connect(containment, SIGNAL(appletAdded(Plasma::Applet*)), q, SLOT(appletAdded(Plasma::Applet*)));
         QObject::connect(containment, SIGNAL(appletRemoved(Plasma::Applet*)), q, SLOT(appletRemoved(Plasma::Applet*)));
+
+        // FIXME: this doesn't work with private slots
+        // QObject::connect(containment, &Containment::appletAdded, q, &WidgetExplorerPrivate::appletAdded);
+        // QObject::connect(containment, &Containment::appletRemoved, q, &WidgetExplorerPrivate::appletRemoved);
 
         foreach (Applet *applet, containment->applets()) {
             runningApplets[applet->pluginInfo().pluginName()]++;
