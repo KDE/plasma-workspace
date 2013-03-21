@@ -22,7 +22,9 @@
 #include <QApplication>
 #include <QDebug>
 #include <QDesktopWidget>
+#include <QQmlContext>
 #include <QQuickView>
+#include <QTimer>
 
 #include <KLocalizedString>
 #include <Plasma/Package>
@@ -30,6 +32,7 @@
 #include "panelview.h"
 #include "view.h"
 #include "scripting/desktopscriptengine.h"
+#include "widgetexplorer/widgetexplorer.h"
 
 
 static const QString s_panelTemplatesPath("plasma-layout-templates/panels/*");
@@ -37,7 +40,8 @@ static const QString s_panelTemplatesPath("plasma-layout-templates/panels/*");
 DesktopCorona::DesktopCorona(QObject *parent)
     : Plasma::Corona(parent),
       m_desktopWidget(QApplication::desktop()),
-      m_widgetExplorer(0)
+      m_widgetExplorer(0),
+      m_widgetExplorerView(0)
 {
     m_desktopDefaultsConfig = KConfigGroup(KSharedConfig::openConfig(package().filePath("defaults")), "Desktop");
 
@@ -52,6 +56,8 @@ DesktopCorona::DesktopCorona(QObject *parent)
     connect(this, SIGNAL(screenOwnerChanged(int, int, Plasma::Containment *)),
             this, SLOT(updateScreenOwner(int, int, Plasma::Containment *)));
     checkViews();
+
+    //QTimer::singleShot(1000, this, SLOT(showWidgetExplorer())); // just for easier debugging
 }
 
 DesktopCorona::~DesktopCorona()
@@ -268,29 +274,35 @@ void DesktopCorona::handleContainmentAdded(Plasma::Containment* c)
 
 void DesktopCorona::showWidgetExplorer()
 {
-    if (!m_widgetExplorer) {
-        m_widgetExplorer = new QQuickView;
-        m_widgetExplorer->setTitle(i18n("Add Widgets"));
+    if (!m_widgetExplorerView) {
+
+        m_widgetExplorerView = new QQuickView;
+        m_widgetExplorerView->setTitle(i18n("Add Widgets"));
+
+        m_widgetExplorer = new WidgetExplorer(m_widgetExplorerView);
+        m_widgetExplorer->populateWidgetList();
+        m_widgetExplorerView->rootContext()->setContextProperty("widgetExplorer", m_widgetExplorer);
+
         QString expqml = package().filePath("widgetexplorer");
         qDebug() << "Script to load for WidgetExplorer: " << expqml;
-        m_widgetExplorer->setSource(QUrl::fromLocalFile(expqml));
-        connect(m_widgetExplorer, &QQuickView::statusChanged, this, &DesktopCorona::widgetExplorerStatusChanged);
-        connect(m_widgetExplorer, &QQuickView::visibleChanged, this, &DesktopCorona::widgetExplorerClosed);
+        m_widgetExplorerView->setSource(QUrl::fromLocalFile(expqml));
+        connect(m_widgetExplorerView, &QQuickView::statusChanged, this, &DesktopCorona::widgetExplorerStatusChanged);
+        connect(m_widgetExplorerView, &QQuickView::visibleChanged, this, &DesktopCorona::widgetExplorerClosed);
     }
-    m_widgetExplorer->show();
+    m_widgetExplorerView->show();
 }
 
 void DesktopCorona::widgetExplorerClosed(bool visible)
 {
     if (!visible) {
-        m_widgetExplorer->deleteLater();
-        m_widgetExplorer = 0;
+        m_widgetExplorerView->deleteLater();
+        m_widgetExplorerView = 0;
     }
 }
 
 void DesktopCorona::widgetExplorerStatusChanged()
 {
-    foreach (QQmlError e, m_widgetExplorer->errors()) {
+    foreach (QQmlError e, m_widgetExplorerView->errors()) {
         qWarning() << "Error in WidgetExplorer: " << e.toString();
     }
 }
