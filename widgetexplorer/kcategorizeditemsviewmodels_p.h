@@ -22,7 +22,7 @@
 
 #include <QtGui/QtGui>
 #include <QtCore/QtCore>
-#include <KIcon>
+#include <QIcon>
 #include <KDebug>
 
 namespace KCategorizedItemsViewModels {
@@ -105,7 +105,7 @@ public:
      * @param caption The localized string to be displayed as a name of the filter
      * @param filter The filter structure
      */
-    void addFilter(const QString &caption, const Filter &filter, const KIcon &icon = KIcon());
+    void addFilter(const QString &caption, const Filter &filter, const QIcon &icon = QIcon());
 
     /**
      * Adds a separator to the model

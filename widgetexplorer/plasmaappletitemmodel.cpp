@@ -44,7 +44,7 @@ PlasmaAppletItem::PlasmaAppletItem(PlasmaAppletItemModel *model,
     setText(m_info.name() + " - "+ m_info.category().toLower());
 
     const QString iconName = m_info.icon().isEmpty() ? "application-x-plasma" : info.icon();
-    KIcon icon(iconName);
+    QIcon icon = QIcon::fromTheme(iconName);
     setIcon(icon);
 
     //set plugininfo parts as roles in the model, only way qml can understand it

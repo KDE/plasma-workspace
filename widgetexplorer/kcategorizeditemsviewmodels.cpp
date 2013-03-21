@@ -86,7 +86,7 @@ DefaultFilterModel::DefaultFilterModel(QObject *parent) :
             this, SIGNAL(countChanged()));
 }
 
-void DefaultFilterModel::addFilter(const QString &caption, const Filter &filter, const KIcon &icon)
+void DefaultFilterModel::addFilter(const QString &caption, const Filter &filter, const QIcon &icon)
 {
     QList<QStandardItem *> newRow;
     QStandardItem *item = new QStandardItem(caption);
