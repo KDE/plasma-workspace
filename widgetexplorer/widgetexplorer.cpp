@@ -441,7 +441,7 @@ void WidgetExplorer::addApplet(const QString &pluginName)
     qDebug() << " .. pathes: " << dirs;
 
     Plasma::Applet *applet = Plasma::Applet::loadPlasmoid(dirs.first());
-    applet->init();
+
     if (applet) {
         if (d->containment) {
             d->containment->addApplet(applet);
