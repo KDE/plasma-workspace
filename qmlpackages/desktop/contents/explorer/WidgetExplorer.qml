@@ -36,6 +36,11 @@ Rectangle {
             width: parent.width
             height: 48
             Text { text: "Applet: " + pluginName }
+
+            MouseArea {
+                anchors.fill: parent
+                onClicked: widgetExplorer.addApplet(pluginName)
+            }
         }
     }
 

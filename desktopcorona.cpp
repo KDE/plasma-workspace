@@ -57,14 +57,12 @@ DesktopCorona::DesktopCorona(QObject *parent)
             this, SLOT(updateScreenOwner(int, int, Plasma::Containment *)));
     checkViews();
 
-    //QTimer::singleShot(1000, this, SLOT(showWidgetExplorer())); // just for easier debugging
+    //QTimer::singleShot(600, this, SLOT(showWidgetExplorer())); // just for easier debugging
 }
 
 DesktopCorona::~DesktopCorona()
 {
 }
-
-
 
 void DesktopCorona::loadDefaultLayout()
 {
@@ -288,6 +286,14 @@ void DesktopCorona::showWidgetExplorer()
         m_widgetExplorerView->setSource(QUrl::fromLocalFile(expqml));
         connect(m_widgetExplorerView, &QQuickView::statusChanged, this, &DesktopCorona::widgetExplorerStatusChanged);
         connect(m_widgetExplorerView, &QQuickView::visibleChanged, this, &DesktopCorona::widgetExplorerClosed);
+    }
+    Plasma::Containment *c = 0;
+    c = dynamic_cast<Plasma::Containment*>(sender());
+    if (c) {
+        qDebug() << "Found containment.";
+        m_widgetExplorer->setContainment(c);
+    } else {
+        qDebug() << "containment not set";
     }
     m_widgetExplorerView->show();
 }

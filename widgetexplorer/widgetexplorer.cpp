@@ -456,8 +456,23 @@ Plasma::Corona *WidgetExplorer::corona() const
 
 void WidgetExplorer::addApplet(const QString &pluginName)
 {
-    qWarning() << "FIXME: add applet needs reimplementation";
-    //d->containment->addApplet(pluginName);
+    const QString p = "plasma/plasmoids/"+pluginName;
+    qWarning() << "-------->  load applet: " << pluginName << " relpath: " << p;
+
+    QStringList dirs = QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, p, QStandardPaths::LocateDirectory);
+
+    qDebug() << " .. pathes: " << dirs;
+
+    Plasma::Applet *applet = Plasma::Applet::loadPlasmoid(dirs.first());
+    if (applet) {
+        if (d->containment) {
+            d->containment->addApplet(applet);
+        } else {
+            qWarning() << "No containment set (but the applet loaded).";
+        }
+    } else {
+        qWarning() << "Failed to load applet" << pluginName << dirs;
+    }
 }
 
 void WidgetExplorer::immutabilityChanged(Plasma::ImmutabilityType type)
