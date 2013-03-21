@@ -17,8 +17,8 @@
  */
 
 import QtQuick 2.0
-import org.kde.plasma.core 2.0 as PlasmaCore
-import org.kde.plasma.components 2.0 as PlasmaComponents
+//import org.kde.plasma.core 2.0 as PlasmaCore
+//import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 
 
@@ -28,9 +28,19 @@ Rectangle {
     width: 400
     height: 800
 
-    PlasmaExtras.Title { text: "Add Widgets" }
+    ListView {
+        anchors.fill: parent
+        model: widgetExplorer.widgetsModel
+        header: PlasmaExtras.Title { text: "Add Widgets" }
+        delegate: Item {
+            width: parent.width
+            height: 48
+            Text { text: "Applet: " + pluginName }
+        }
+    }
 
     Component.onCompleted: {
-        print("WidgetExplorer QML loaded")
+        print("WidgetExplorer QML loaded");
+        print(" found " + widgetExplorer.widgetsModel.count + " widgets");
     }
 }
