@@ -46,6 +46,11 @@ set(scripting_SRC
     scripting/widget.cpp
 )
 
+set(widgetexplorer_SRC
+    widgetexplorer/kcategorizeditemsviewmodels.cpp
+    widgetexplorer/plasmaappletitemmodel.cpp
+)
+
 add_executable(testplasma2
     main.cpp
     desktopcorona.cpp
@@ -55,6 +60,7 @@ add_executable(testplasma2
     view.cpp
     panelconfigview.cpp
     ${scripting_SRC}
+    ${widgetexplorer_SRC}
 )
 
 # The Qt5Widgets_LIBRARIES variable also includes QtGui and QtCore

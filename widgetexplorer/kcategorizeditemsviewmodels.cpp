@@ -18,6 +18,7 @@
  */
 
 #include "kcategorizeditemsviewmodels_p.h"
+#include <KLocalizedString>
 #include <klocale.h>
 
 #define COLUMN_COUNT 4

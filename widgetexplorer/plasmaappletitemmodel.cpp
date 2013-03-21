@@ -19,7 +19,9 @@
 
 #include "plasmaappletitemmodel_p.h"
 
+#include <KLocalizedString>
 #include <KStandardDirs>
+#include <KServiceTypeTrader>
 #include <KSycoca>
 
 PlasmaAppletItem::PlasmaAppletItem(PlasmaAppletItemModel *model,
@@ -50,7 +52,7 @@ PlasmaAppletItem::PlasmaAppletItem(PlasmaAppletItemModel *model,
     setData(info.pluginName(), PlasmaAppletItemModel::PluginNameRole);
     setData(info.comment(), PlasmaAppletItemModel::DescriptionRole);
     setData(info.category().toLower(), PlasmaAppletItemModel::CategoryRole);
-    setData(info.fullLicense().name(KAboutData::FullName), PlasmaAppletItemModel::LicenseRole);
+    //setData(info.fullLicense().name(KAboutData::FullName), PlasmaAppletItemModel::LicenseRole); // FIXME
     setData(info.website(), PlasmaAppletItemModel::WebsiteRole);
     setData(info.version(), PlasmaAppletItemModel::VersionRole);
     setData(info.author(), PlasmaAppletItemModel::AuthorRole);
@@ -221,7 +223,10 @@ void PlasmaAppletItemModel::populateModel(const QStringList &whatChanged)
 
     //kDebug() << "number of applets is"
     //         <<  Plasma::Applet::listAppletInfo(QString(), m_application).count();
-    foreach (const KPluginInfo &info, Plasma::Applet::listAppletInfo(QString(), m_application)) {
+    KService::List services = KServiceTypeTrader::self()->query("Plasma/Applet", QString());
+
+    foreach (const KSharedPtr<KService> service, services) {
+        KPluginInfo info(service);
         //kDebug() << info.pluginName() << "NoDisplay" << info.property("NoDisplay").toBool();
         if (info.property("NoDisplay").toBool() || info.category() == i18n("Containments")) {
             // we don't want to show the hidden category
