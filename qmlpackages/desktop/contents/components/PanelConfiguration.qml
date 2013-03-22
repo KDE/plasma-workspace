@@ -129,21 +129,12 @@ Rectangle {
                             newLocation = 5; //FIXME: Plasma::LeftEdge;
                         }
                     } else if(panel.location == 4) {
-                            return;
+                       return;
                     } else {
                         newLocation = 4; //FIXME: Plasma::BottomEdge;
                     }
                 }
                 panel.location = newLocation
-                if (panel.location == 5 || panel.location == 6) {
-                    configDialog.y = panel.screenGeometry.y
-                    root.width = 100
-                    root.height = panel.screenGeometry.height
-                } else {
-                    configDialog.x = panel.screenGeometry.x
-                    root.height = 100
-                    root.width = panel.screenGeometry.width
-                } 
                 print("New Location: " + newLocation);
             }
             onReleased: panelResetAnimation.running = true
@@ -166,19 +157,19 @@ Rectangle {
                     break;
                 //RightEdge
                 case 6:
-                    return panel.screenGeometry.y + panel.screenGeometry.height - panel.height
+                    return panel.screenGeometry.x + panel.screenGeometry.width - panel.width
                     break;
                 //BottomEdge
                 case 4:
                 default:
-                    return panel.screenGeometry.x + panel.screenGeometry.width - panel.width
+                    return panel.screenGeometry.y + panel.screenGeometry.height - panel.height
                 }
             }
             duration: 150
         }
         NumberAnimation {
             target: configDialog
-            properties: "y"
+            properties: (panel.location == 5 || panel.location == 6) ? "x" : "y"
             to: {
             panel.height
                 switch (panel.location) {
@@ -192,12 +183,12 @@ Rectangle {
                     break;
                 //RightEdge
                 case 6:
-                    return panel.x - configDialog.width
+                    return panel.screenGeometry.x + panel.screenGeometry.width - panel.width - configDialog.width
                     break;
                 //BottomEdge
                 case 4:
                 default:
-                    return panel.y - configDialog.height
+                    return panel.screenGeometry.y + panel.screenGeometry.height - panel.height - configDialog.height
                 }
             }
             duration: 150

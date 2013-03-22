@@ -30,6 +30,7 @@ class PanelView : public View
     Q_OBJECT
     Q_PROPERTY(Qt::Alignment alignment READ alignment WRITE setAlignment NOTIFY alignmentChanged)
     Q_PROPERTY(int offset READ offset WRITE setOffset NOTIFY offsetChanged)
+    Q_PROPERTY(int thickness READ thickness WRITE setThickness NOTIFY thicknessChanged)
 
 public:
     explicit PanelView(Plasma::Corona *corona, QWindow *parent = 0);
@@ -45,10 +46,14 @@ public:
     int offset() const;
     void setOffset(int offset);
 
+    int thickness() const;
+    void setThickness(int thickness);
+
 Q_SIGNALS:
     void alignmentChanged();
     void offsetChanged();
     void screenGeometryChanged();
+    void thicknessChanged();
 
 private Q_SLOTS:
     void manageNewContainment();

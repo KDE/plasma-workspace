@@ -57,6 +57,8 @@ PanelConfigView::PanelConfigView(Plasma::Containment *containment, PanelView *pa
     engine()->rootContext()->setContextProperty("configDialog", this);
     setSource(QUrl::fromLocalFile(panelView->corona()->package().filePath("panelconfigurationui")));
     syncGeometry();
+    connect(containment, &Plasma::Containment::formFactorChanged,
+            this, &PanelConfigView::syncGeometry);
 }
 
 PanelConfigView::~PanelConfigView()
@@ -73,18 +75,18 @@ void PanelConfigView::syncGeometry()
         resize(128, screen()->size().height());
 
         if (m_containment->location() == Plasma::LeftEdge) {
-            setPosition(m_panelView->width(), 0);
+            setPosition(screen()->geometry().left() + m_panelView->thickness(), 0);
         } else if (m_containment->location() == Plasma::RightEdge) {
-            setPosition(screen()->size().width() - m_panelView->width(), 0);
+            setPosition(screen()->geometry().right() - 128 - m_panelView->thickness(), 0);
         }
 
     } else {
         resize(screen()->size().width(), 128);
 
         if (m_containment->location() == Plasma::TopEdge) {
-            setPosition(0, m_panelView->height());
+            setPosition(0, screen()->geometry().top() + m_panelView->thickness());
         } else if (m_containment->location() == Plasma::BottomEdge) {
-            setPosition(0, screen()->size().width() - m_panelView->height());
+            setPosition(0, screen()->geometry().bottom() - 128 - m_panelView->thickness());
         }
     }
 }

@@ -136,6 +136,27 @@ void PanelView::setOffset(int offset)
     emit offsetChanged();
 }
 
+int PanelView::thickness() const
+{
+    return config().readEntry<int>("thickness", 30);
+}
+
+void PanelView::setThickness(int value)
+{
+    if (value == thickness()) {
+        value;
+    }
+
+    if (formFactor() == Plasma::Vertical) {
+        return setWidth(value);
+    } else {
+        return setHeight(value);
+    }
+    config().writeEntry("thickness", value);
+    emit thicknessChanged();
+}
+    
+
 void PanelView::manageNewContainment()
 {
     connect(containment()->actions()->action("configure"), &QAction::triggered,
@@ -157,6 +178,7 @@ void PanelView::positionPanel()
     }
 
     QScreen *s = screen();
+    const int oldThickness = thickness();
     
     switch (containment()->location()) {
     case Plasma::TopEdge:
@@ -222,6 +244,9 @@ void PanelView::positionPanel()
         default:
             setPosition(s->virtualGeometry().bottomLeft() - QPoint(0, height()) + QPoint(m_offset, 0));
         }
+    }
+    if (thickness() != oldThickness) {
+        emit thicknessChanged();
     }
 }
 

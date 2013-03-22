@@ -127,7 +127,7 @@ Plasma::Containment *View::containment() const
 //FIXME: wrong types
 void View::setLocation(int location)
 {
-    return m_containment.data()->setLocation((Plasma::Location)location);
+    m_containment.data()->setLocation((Plasma::Location)location);
 }
 
 //FIXME: wrong types
@@ -139,7 +139,7 @@ int View::location() const
     return m_containment.data()->location();
 }
 
-Plasma::FormFactor View::formFactor()
+Plasma::FormFactor View::formFactor() const
 {
     if (!m_containment) {
         return Plasma::Planar;

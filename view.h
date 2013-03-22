@@ -50,7 +50,7 @@ public:
     int location() const;
     void setLocation(int location);
 
-    Plasma::FormFactor formFactor();
+    Plasma::FormFactor formFactor() const;
 
     QRectF screenGeometry();
 
