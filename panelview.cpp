@@ -65,7 +65,13 @@ PanelView::~PanelView()
         config().writeEntry("offset", m_offset);
         config().writeEntry("max", m_maxLength);
         config().writeEntry("min", m_minLength);
-        config().writeEntry("size", size());
+        if (formFactor() == Plasma::Vertical) {
+            config().writeEntry("length", size().height());
+            config().writeEntry("thickness", size().width());
+        } else {
+            config().writeEntry("length", size().width());
+            config().writeEntry("thickness", size().height());
+        }
         config().writeEntry("alignment", (int)m_alignment);
         containment()->corona()->requestConfigSync();
     }
@@ -95,6 +101,7 @@ void PanelView::init()
 
     setResizeMode(View::SizeRootObjectToView);
     setSource(QUrl::fromLocalFile(corona()->package().filePath("views", "Panel.qml")));
+    positionPanel();
 }
 
 Qt::Alignment PanelView::alignment() const
@@ -124,6 +131,7 @@ void PanelView::setOffset(int offset)
     }
 
     m_offset = offset;
+    config().writeEntry("offset", m_offset);
     positionPanel();
     emit offsetChanged();
 }
@@ -153,6 +161,7 @@ void PanelView::positionPanel()
     switch (containment()->location()) {
     case Plasma::TopEdge:
         containment()->setFormFactor(Plasma::Horizontal);
+        restore();
         switch (m_alignment) {
         case Qt::AlignCenter:
             setPosition(QPoint(s->virtualGeometry().center().x(), s->virtualGeometry().top()) + QPoint(m_offset - size().width()/2, 0));
@@ -168,6 +177,7 @@ void PanelView::positionPanel()
 
     case Plasma::LeftEdge:
         containment()->setFormFactor(Plasma::Vertical);
+        restore();
         switch (m_alignment) {
         case Qt::AlignCenter:
             setPosition(QPoint(s->virtualGeometry().left(), s->virtualGeometry().center().y()) + QPoint(0, m_offset));
@@ -183,6 +193,7 @@ void PanelView::positionPanel()
 
     case Plasma::RightEdge:
         containment()->setFormFactor(Plasma::Vertical);
+        restore();
         switch (m_alignment) {
         case Qt::AlignCenter:
             setPosition(QPoint(s->virtualGeometry().right(), s->virtualGeometry().center().y()) - QPoint(width(), 0) + QPoint(0, m_offset - size().height()/2));
@@ -199,6 +210,7 @@ void PanelView::positionPanel()
     case Plasma::BottomEdge:
     default:
         containment()->setFormFactor(Plasma::Horizontal);
+        restore();
         switch (m_alignment) {
         case Qt::AlignCenter:
             setPosition(QPoint(s->virtualGeometry().center().x(), s->virtualGeometry().bottom()) + QPoint(m_offset - size().width()/2, 0));
@@ -235,7 +247,10 @@ void PanelView::restore()
         if (m_maxLength > 0) {
             setMaximumHeight(m_maxLength);
         }
-        resize(config().readEntry<QSize>("size", QSize(32, screen()->size().width())));
+        resize(config().readEntry<int>("thickness", 32),
+               config().readEntry<int>("length", screen()->size().height()));
+
+    //Horizontal
     } else {
         if (m_minLength > 0) {
             setMinimumWidth(m_minLength);
@@ -243,10 +258,10 @@ void PanelView::restore()
         if (m_maxLength > 0) {
             setMaximumWidth(m_maxLength);
         }
-        resize(config().readEntry<QSize>("size", QSize(screen()->size().height(), 32)));
+        resize(config().readEntry<int>("length", screen()->size().width()),
+               config().readEntry<int>("thickness", 32));
+               
     }
-
-    positionPanel();
 }
 
 #include "moc_panelview.cpp"

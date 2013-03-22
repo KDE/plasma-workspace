@@ -28,6 +28,7 @@
 class PanelView : public View
 {
     Q_OBJECT
+    Q_PROPERTY(Qt::Alignment alignment READ alignment WRITE setAlignment NOTIFY alignmentChanged)
     Q_PROPERTY(int offset READ offset WRITE setOffset NOTIFY offsetChanged)
 
 public:
@@ -45,7 +46,9 @@ public:
     void setOffset(int offset);
 
 Q_SIGNALS:
+    void alignmentChanged();
     void offsetChanged();
+    void screenGeometryChanged();
 
 private Q_SLOTS:
     void manageNewContainment();

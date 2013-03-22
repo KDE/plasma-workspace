@@ -22,6 +22,7 @@
 #include <QQuickItem>
 #include <QQmlContext>
 #include <QTimer>
+#include <QScreen>
 #include "plasma/pluginloader.h"
 
 
@@ -34,6 +35,9 @@ View::View(Plasma::Corona *corona, QWindow *parent)
     QSurfaceFormat format;
     format.setAlphaBufferSize(8);
     setFormat(format);
+
+    connect(screen(), &QScreen::virtualGeometryChanged,
+            this, &View::screenGeometryChanged);
 }
 
 View::~View()
@@ -67,7 +71,7 @@ void View::init()
 
 void View::setContainment(Plasma::Containment *cont)
 {
-    Plasma::Location oldLoc = location();
+    Plasma::Location oldLoc = (Plasma::Location)location();
     Plasma::FormFactor oldForm = formFactor();
 
     if (m_containment) {
@@ -82,7 +86,7 @@ void View::setContainment(Plasma::Containment *cont)
     m_containment = cont;
 
     if (oldLoc != location()) {
-        emit locationChanged(location());
+        emit locationChanged((Plasma::Location)location());
     }
     if (oldForm != formFactor()) {
         emit formFactorChanged(formFactor());
@@ -120,7 +124,14 @@ Plasma::Containment *View::containment() const
     return m_containment.data();
 }
 
-Plasma::Location View::location()
+//FIXME: wrong types
+void View::setLocation(int location)
+{
+    return m_containment.data()->setLocation((Plasma::Location)location);
+}
+
+//FIXME: wrong types
+int View::location() const
 {
     if (!m_containment) {
         return Plasma::Desktop;
@@ -134,6 +145,11 @@ Plasma::FormFactor View::formFactor()
         return Plasma::Planar;
     }
     return m_containment.data()->formFactor();
+}
+
+QRectF View::screenGeometry()
+{
+    return screen()->geometry();
 }
 
 #include "moc_view.cpp"

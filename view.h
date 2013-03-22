@@ -29,6 +29,8 @@
 class View : public QQuickView
 {
     Q_OBJECT
+    Q_PROPERTY(int location READ location WRITE setLocation NOTIFY locationChanged)
+    Q_PROPERTY(QRectF screenGeometry READ screenGeometry NOTIFY screenGeometryChanged)
 
 public:
     explicit View(Plasma::Corona *corona, QWindow *parent = 0);
@@ -44,13 +46,19 @@ public:
     void setContainment(Plasma::Containment *cont);
     Plasma::Containment *containment() const;
 
-    Plasma::Location location();
+    //FIXME: Plasma::Location should be something qml can understand
+    int location() const;
+    void setLocation(int location);
+
     Plasma::FormFactor formFactor();
+
+    QRectF screenGeometry();
 
 Q_SIGNALS:
     void locationChanged(Plasma::Location location);
     void formFactorChanged(Plasma::FormFactor formFactor);
     void containmentChanged();
+    void screenGeometryChanged();
 
 private:
     Plasma::Corona *m_corona;
