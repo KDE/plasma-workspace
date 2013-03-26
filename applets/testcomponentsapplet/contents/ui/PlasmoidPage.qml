@@ -58,7 +58,6 @@ PlasmaComponents.Page {
                     if (checked) plasmoid.backgroundHints = 2;
                 }
             }
-
         }
 
         PlasmaComponents.Button {
@@ -71,6 +70,7 @@ PlasmaComponents.Page {
         }
 
         PlasmaComponents.Button {
+            id: ctxButton
             height: theme.iconSizes.desktop
             text: "Context Menu"
             Loader {
@@ -80,8 +80,9 @@ PlasmaComponents.Page {
                 if (menuLoader.source == "") {
                    menuLoader.source = "TestMenu.qml"
                 } else {
-                    menuLoader.source = ""
+                    //menuLoader.source = ""
                 }
+                menuLoader.item.open(0, height);
             }
         }
 

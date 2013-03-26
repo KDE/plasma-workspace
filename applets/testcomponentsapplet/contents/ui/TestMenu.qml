@@ -39,9 +39,14 @@ PlasmaComponents.Menu {
         onClicked: print(" Clicked on : " + text)
     }
 
+    PlasmaComponents.MenuItem {
+        text: "White Tip Reef Shark"
+        icon: "kmag"
+        onClicked: print(" Clicked on : " + text)
+    }
+
     Component.onCompleted:{
         print("TestMenu.qml served .. opening");
-        testMenu.open();
 
     }
 }
