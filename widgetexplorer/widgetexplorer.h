@@ -39,11 +39,14 @@ class WidgetExplorerPrivate;
 class WidgetAction : public QAction
 {
     Q_OBJECT
-    Q_PROPERTY(bool separator READ isSeparator WRITE setSeparator)
+    Q_PROPERTY(bool separator READ isSeparator WRITE setSeparator NOTIFY separatorChanged)
 
 public:
     WidgetAction(QObject *parent = 0);
     WidgetAction(const QIcon &icon, const QString &text, QObject *parent);
+
+Q_SIGNALS:
+    void separatorChanged();
 };
 
 class WidgetExplorer : public QObject

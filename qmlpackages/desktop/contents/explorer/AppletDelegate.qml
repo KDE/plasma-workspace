@@ -33,9 +33,16 @@ PlasmaCore.FrameSvgItem {
     property string description: model.description
     property string author: model.author
     property string email: model.email
-    property string license: model.license
+    //property string license: model.license
+    property string license: "GPL" // FIXME
     property string pluginName: model.pluginName
     property bool local: model.local
+
+    function i18n(inp) { // FIXME: HACK!
+        return inp;
+
+    }
+
 
     ListView.onRemove: SequentialAnimation {
         PropertyAction {

@@ -25,8 +25,10 @@ import org.kde.qtextracomponents 2.0
 Item {
     id: main
 
+    width: 400
+    height: 800
     //this is used to perfectly align the filter field and delegates
-    property int cellWidth: theme.defaultFont.mSize.width * 20
+    property int cellWidth: theme.defaultFont.pixelSize * 20
 
     property int minimumWidth: cellWidth + (
         widgetExplorer.orientation == Qt.Horizontal
@@ -38,6 +40,12 @@ Item {
     property Item getWidgetsButton
     property Item categoryButton
 
+
+    function i18n(inp) { // FIXME: HACK!
+        return inp;
+
+    }
+
     PlasmaComponents.ContextMenu {
         id: categoriesDialog
         visualParent: main.categoryButton
@@ -45,22 +53,22 @@ Item {
     Repeater {
         parent: categoriesDialog
         model: widgetExplorer.filterModel
-        delegate: PlasmaComponents.MenuItem {
-            text: display
-            separator: model["separator"]
-            onClicked: {
-                list.contentX = 0
-                list.contentY = 0
-                var item = widgetExplorer.filterModel.get(index)
-
-                widgetExplorer.widgetsModel.filterType = item.filterType
-                widgetExplorer.widgetsModel.filterQuery = item.filterData
-                main.categoryButton.text = item.display
-            }
-            Component.onCompleted: {
-                parent = categoriesDialog
-            }
-        }
+//         delegate: PlasmaComponents.MenuItem {
+//             text: display
+//             separator: model["separator"]
+//             onClicked: {
+//                 list.contentX = 0
+//                 list.contentY = 0
+//                 var item = widgetExplorer.filterModel.get(index)
+//
+//                 widgetExplorer.widgetsModel.filterType = item.filterType
+//                 widgetExplorer.widgetsModel.filterQuery = item.filterData
+//                 main.categoryButton.text = item.display
+//             }
+//             Component.onCompleted: {
+//                 parent = categoriesDialog
+//             }
+//         }
     }
 
     PlasmaComponents.ContextMenu {
@@ -70,15 +78,15 @@ Item {
     Repeater {
         parent: getWidgetsDialog
         model: widgetExplorer.widgetsMenuActions
-        delegate: PlasmaComponents.MenuItem {
-            icon: modelData.icon
-            text: modelData.text
-            separator: modelData.separator
-            onClicked: modelData.trigger()
-            Component.onCompleted: {
-                parent = getWidgetsDialog
-            }
-        }
+//         delegate: PlasmaComponents.MenuItem {
+//             icon: modelData.icon
+//             text: modelData.text
+//             separator: modelData.separator
+//             onClicked: modelData.trigger()
+//             Component.onCompleted: {
+//                 parent = getWidgetsDialog
+//             }
+//         }
     }
 
     PlasmaCore.Dialog {
@@ -283,7 +291,7 @@ Item {
             id: list
 
             property int delegateWidth: (widgetExplorer.orientation == Qt.Horizontal) ? (list.width / Math.floor(list.width / cellWidth)) : list.width
-            property int delegateHeight: theme.defaultFont.mSize.height * 7 - 4
+            property int delegateHeight: theme.defaultFont.pixelSize * 7 - 4
 
             anchors.fill: parent
 
@@ -313,7 +321,8 @@ Item {
         id: bottomBar
 
         sourceComponent: (widgetExplorer.orientation == Qt.Horizontal) ? undefined : verticalBottomBarComponent
-        height: item.height
+        //height: item.height
+        height: 48 // FIXME
         anchors {
             left: parent.left
             right: parent.right

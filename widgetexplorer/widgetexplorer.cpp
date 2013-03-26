@@ -358,7 +358,7 @@ WidgetExplorer::WidgetExplorer(QObject *parent)
         :QObject(parent),
         d(new WidgetExplorerPrivate(this))
 {
-    d->init(Plasma::BottomEdge);
+    d->init(Plasma::LeftEdge);
 }
 
 WidgetExplorer::~WidgetExplorer()
