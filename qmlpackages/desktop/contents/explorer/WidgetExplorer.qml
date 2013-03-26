@@ -49,22 +49,20 @@ Item {
     Repeater {
         parent: categoriesDialog
         model: widgetExplorer.filterModel
-//         delegate: PlasmaComponents.MenuItem {
-//             text: display
-//             separator: model["separator"]
-//             onClicked: {
-//                 list.contentX = 0
-//                 list.contentY = 0
-//                 var item = widgetExplorer.filterModel.get(index)
-//
-//                 widgetExplorer.widgetsModel.filterType = item.filterType
-//                 widgetExplorer.widgetsModel.filterQuery = item.filterData
-//                 main.categoryButton.text = item.display
-//             }
-//             Component.onCompleted: {
-//                 parent = categoriesDialog
-//             }
-//         }
+        delegate: PlasmaComponents.MenuItem {
+            text: display
+            separator: model["separator"]
+            onClicked: {
+                list.contentX = 0
+                list.contentY = 0
+                main.categoryButton.text = display
+                widgetExplorer.widgetsModel.filterQuery = model["filterData"]
+                widgetExplorer.widgetsModel.filterType = model["filterType"]
+            }
+            Component.onCompleted: {
+                parent = categoriesDialog
+            }
+        }
     }
 
     PlasmaComponents.ContextMenu {
@@ -185,7 +183,7 @@ Item {
                 PlasmaComponents.Button {
                     id: categoryButton
                     text: i18n("Categories")
-                    onClicked: categoriesDialog.open()
+                    onClicked: categoriesDialog.open(0, categoryButton.height)
                 }
             }
             Row {
@@ -255,7 +253,7 @@ Item {
                 }
                 id: categoryButton
                 text: i18n("Categories")
-                onClicked: categoriesDialog.open()
+                onClicked: categoriesDialog.open(0, categoryButton.height)
             }
             Component.onCompleted: {
                 main.categoryButton = categoryButton
@@ -291,7 +289,7 @@ Item {
 
             anchors.fill: parent
 
-            orientation: widgetExplorer.orientation == Qt.Horizontal ? ListView.Horizontal : ListView.vertical
+            orientation: widgetExplorer.orientation == Qt.Horizontal ? ListView.Horizontal : ListView.Vertical
             snapMode: ListView.SnapToItem
             model: widgetExplorer.widgetsModel
 
