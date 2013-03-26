@@ -114,12 +114,28 @@ void WidgetExplorerPrivate::initFilters()
     QMap<QString, catPair > categories;
     QSet<QString> existingCategories = itemModel.categories();
     //foreach (const QString &category, Plasma::Applet::listCategories(application)) {
+    QStringList cats;
+    KService::List services = KServiceTypeTrader::self()->query("Plasma/Applet", QString());
+
+    foreach (const KSharedPtr<KService> service, services) {
+        KPluginInfo info(service);
+        if (info.property("NoDisplay").toBool() || info.category() == i18n("Containments") ||
+            info.category().isEmpty()) {
+            // we don't want to show the hidden category
+            continue;
+        }
+        const QString c = info.category();
+        if (-1 == cats.indexOf(c)) {
+            cats << c;
+        }
+    }
     qWarning() << "TODO: port listCategories()";
-    foreach (const QString &category, QStringList("FIXME")) {
+    foreach (const QString &category, cats) {
         const QString lowerCaseCat = category.toLower();
         if (existingCategories.contains(lowerCaseCat)) {
             const QString trans = i18n(category.toLocal8Bit());
             categories.insert(trans.toLower(), qMakePair(trans, lowerCaseCat));
+            qDebug() << "Categories: << " << lowerCaseCat;
         }
     }
 

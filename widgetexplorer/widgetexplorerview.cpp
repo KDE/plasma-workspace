@@ -55,21 +55,21 @@ WidgetExplorerView::~WidgetExplorerView()
 
 void WidgetExplorerView::init()
 {
-    setTitle(i18n("Add Widgets"));
-    setColor(Qt::transparent);
+    qDebug() << "Loading WidgetExplorer: " << m_qmlPath;
 
     m_widgetExplorer = new WidgetExplorer(this);
     m_widgetExplorer->populateWidgetList();
-    rootContext()->setContextProperty("widgetExplorer", m_widgetExplorer);
-    connect(m_widgetExplorer, &WidgetExplorer::closeClicked, this, &QQuickView::close);
+    m_widgetExplorer->setContainment(m_containment);
 
-//     QString expqml = package().filePath("widgetexplorer");
-    qDebug() << "Script to load for WidgetExplorer: " << m_qmlPath;
+    rootContext()->setContextProperty("widgetExplorer", m_widgetExplorer);
+    setTitle(i18n("Add Widgets"));
+    setColor(Qt::transparent);
+    setResizeMode(QQuickView::SizeRootObjectToView);
     setSource(QUrl::fromLocalFile(m_qmlPath));
+
+    connect(m_widgetExplorer, &WidgetExplorer::closeClicked, this, &QQuickView::close);
     connect(this, &QQuickView::statusChanged, this, &WidgetExplorerView::widgetExplorerStatusChanged);
     connect(this, &QQuickView::visibleChanged, this, &WidgetExplorerView::widgetExplorerClosed);
-    setResizeMode(QQuickView::SizeRootObjectToView);
-    m_widgetExplorer->setContainment(m_containment);
 }
 
 
@@ -77,17 +77,6 @@ void WidgetExplorerView::setContainment(Plasma::Containment* c)
 {
     m_containment = c;
     m_widgetExplorer->setContainment(c);
-
-//     QObject *graphicObject = m_containment->property("graphicObject").value<QObject *>();
-//
-//     if (graphicObject) {
-//         qDebug() << "using as graphic containment" << graphicObject << m_containment;
-//
-//         rootObject()->setProperty("parent", QVariant::fromValue(graphicObject));
-//         //rootObject()->setProperty("containment", QVariant::fromValue(graphicObject));
-//     } else {
-//         qWarning() << "Containment graphic object not valid";
-//     }
 }
 
 
