@@ -33,7 +33,7 @@
 #include "panelview.h"
 #include "view.h"
 #include "scripting/desktopscriptengine.h"
-#include "widgetexplorer/widgetexplorer.h"
+#include "widgetexplorer/widgetexplorerview.h"
 
 
 static const QString s_panelTemplatesPath("plasma-layout-templates/panels/*");
@@ -41,7 +41,6 @@ static const QString s_panelTemplatesPath("plasma-layout-templates/panels/*");
 DesktopCorona::DesktopCorona(QObject *parent)
     : Plasma::Corona(parent),
       m_desktopWidget(QApplication::desktop()),
-      m_widgetExplorer(0),
       m_widgetExplorerView(0)
 {
     m_desktopDefaultsConfig = KConfigGroup(KSharedConfig::openConfig(package().filePath("defaults")), "Desktop");
@@ -275,46 +274,21 @@ void DesktopCorona::showWidgetExplorer()
 {
     if (!m_widgetExplorerView) {
 
-        m_widgetExplorerView = new QQuickView;
-        m_widgetExplorerView->setTitle(i18n("Add Widgets"));
-        m_widgetExplorerView->setColor(Qt::transparent);
-
-        m_widgetExplorer = new WidgetExplorer(m_widgetExplorerView);
-        m_widgetExplorer->populateWidgetList();
-        m_widgetExplorerView->rootContext()->setContextProperty("widgetExplorer", m_widgetExplorer);
-        connect(m_widgetExplorer, &WidgetExplorer::closeClicked, m_widgetExplorerView, &QQuickView::close);
-
         QString expqml = package().filePath("widgetexplorer");
         qDebug() << "Script to load for WidgetExplorer: " << expqml;
-        m_widgetExplorerView->setSource(QUrl::fromLocalFile(expqml));
-        connect(m_widgetExplorerView, &QQuickView::statusChanged, this, &DesktopCorona::widgetExplorerStatusChanged);
-        connect(m_widgetExplorerView, &QQuickView::visibleChanged, this, &DesktopCorona::widgetExplorerClosed);
+        m_widgetExplorerView = new WidgetExplorerView(expqml);
+        m_widgetExplorerView->init();
     }
     Plasma::Containment *c = 0;
     c = dynamic_cast<Plasma::Containment*>(sender());
     if (c) {
         qDebug() << "Found containment.";
-        m_widgetExplorer->setContainment(c);
+        m_widgetExplorerView->setContainment(c);
     } else {
         // FIXME: try harder to find a suitable containment?
         qWarning() << "containment not set, don't know where to add the applet.";
     }
     m_widgetExplorerView->show();
-}
-
-void DesktopCorona::widgetExplorerClosed(bool visible)
-{
-    if (!visible) {
-        m_widgetExplorerView->deleteLater();
-        m_widgetExplorerView = 0;
-    }
-}
-
-void DesktopCorona::widgetExplorerStatusChanged()
-{
-    foreach (QQmlError e, m_widgetExplorerView->errors()) {
-        qWarning() << "Error in WidgetExplorer: " << e.toString();
-    }
 }
 
 void DesktopCorona::printScriptError(const QString &error)

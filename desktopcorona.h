@@ -27,7 +27,7 @@ class QDesktopWidget;
 class QQuickView;
 class PanelView;
 class View;
-class WidgetExplorer;
+class WidgetExplorerView;
 
 namespace Plasma
 {
@@ -86,14 +86,11 @@ protected Q_SLOTS:
 private Q_SLOTS:
     void handleContainmentAdded(Plasma::Containment *c);
     void showWidgetExplorer();
-    void widgetExplorerClosed(bool visible);
-    void widgetExplorerStatusChanged();
 
 private:
     QDesktopWidget *m_desktopWidget;
     QList <View *> m_views;
-    WidgetExplorer *m_widgetExplorer;
-    QQuickView *m_widgetExplorerView;
+    WidgetExplorerView *m_widgetExplorerView;
     QHash<Plasma::Containment *, PanelView *> m_panelViews;
     KConfigGroup m_desktopDefaultsConfig;
 };

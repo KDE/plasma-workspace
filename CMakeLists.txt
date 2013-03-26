@@ -50,6 +50,7 @@ set(widgetexplorer_SRC
     widgetexplorer/kcategorizeditemsviewmodels.cpp
     widgetexplorer/plasmaappletitemmodel.cpp
     widgetexplorer/widgetexplorer.cpp
+    widgetexplorer/widgetexplorerview.cpp
 )
 
 add_executable(testplasma2
