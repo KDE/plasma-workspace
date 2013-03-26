@@ -70,10 +70,8 @@ void WidgetExplorerView::init()
     connect(this, &QQuickView::visibleChanged, this, &WidgetExplorerView::widgetExplorerClosed);
     setResizeMode(QQuickView::SizeRootObjectToView);
     m_widgetExplorer->setContainment(m_containment);
-
-
-
 }
+
 
 void WidgetExplorerView::setContainment(Plasma::Containment* c)
 {
@@ -96,7 +94,7 @@ void WidgetExplorerView::setContainment(Plasma::Containment* c)
 void WidgetExplorerView::widgetExplorerClosed(bool visible)
 {
     if (!visible) {
-        deleteLater();
+        //deleteLater();
         //m_widgetExplorerView = 0;
     }
 }

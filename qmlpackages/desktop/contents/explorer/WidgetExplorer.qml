@@ -40,6 +40,8 @@ Item {
     property Item getWidgetsButton
     property Item categoryButton
 
+    function i18n(inp) { return inp; }
+
     PlasmaComponents.ContextMenu {
         id: categoriesDialog
         visualParent: main.categoryButton
@@ -72,15 +74,15 @@ Item {
     Repeater {
         parent: getWidgetsDialog
         model: widgetExplorer.widgetsMenuActions
-//         delegate: PlasmaComponents.MenuItem {
-//             icon: modelData.icon
-//             text: modelData.text
-//             separator: modelData.separator
-//             onClicked: modelData.trigger()
-//             Component.onCompleted: {
-//                 parent = getWidgetsDialog
-//             }
-//         }
+        delegate: PlasmaComponents.MenuItem {
+            icon: modelData.icon
+            text: modelData.text
+            separator: modelData.separator
+            onClicked: modelData.trigger()
+            Component.onCompleted: {
+                parent = getWidgetsDialog
+            }
+        }
     }
 
     PlasmaCore.Dialog {
