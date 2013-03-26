@@ -114,6 +114,7 @@ void WidgetExplorerPrivate::initFilters()
     QMap<QString, catPair > categories;
     QSet<QString> existingCategories = itemModel.categories();
     //foreach (const QString &category, Plasma::Applet::listCategories(application)) {
+    qWarning() << "TODO: port listCategories()";
     foreach (const QString &category, QStringList("FIXME")) {
         const QString lowerCaseCat = category.toLower();
         if (existingCategories.contains(lowerCaseCat)) {

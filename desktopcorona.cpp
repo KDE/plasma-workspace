@@ -282,6 +282,7 @@ void DesktopCorona::showWidgetExplorer()
         m_widgetExplorer = new WidgetExplorer(m_widgetExplorerView);
         m_widgetExplorer->populateWidgetList();
         m_widgetExplorerView->rootContext()->setContextProperty("widgetExplorer", m_widgetExplorer);
+        connect(m_widgetExplorer, &WidgetExplorer::closeClicked, m_widgetExplorerView, &QQuickView::close);
 
         QString expqml = package().filePath("widgetexplorer");
         qDebug() << "Script to load for WidgetExplorer: " << expqml;
