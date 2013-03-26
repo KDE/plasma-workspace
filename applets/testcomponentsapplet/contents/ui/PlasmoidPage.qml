@@ -69,6 +69,22 @@ PlasmaComponents.Page {
                 plasmoid.busy = !plasmoid.busy
             }
         }
+
+        PlasmaComponents.Button {
+            height: theme.iconSizes.desktop
+            text: "Context Menu"
+            Loader {
+                id: menuLoader
+            }
+            onClicked: {
+                if (menuLoader.source == "") {
+                   menuLoader.source = "TestMenu.qml"
+                } else {
+                    menuLoader.source = ""
+                }
+            }
+        }
+
     }
 }
 
