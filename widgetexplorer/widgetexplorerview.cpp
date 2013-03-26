@@ -20,6 +20,7 @@
 
 #include <QQmlContext>
 #include <QQmlError>
+#include <QQuickItem>
 
 #include <KLocalizedString>
 #include <KWindowSystem>
@@ -69,12 +70,26 @@ void WidgetExplorerView::init()
     connect(this, &QQuickView::visibleChanged, this, &WidgetExplorerView::widgetExplorerClosed);
     setResizeMode(QQuickView::SizeRootObjectToView);
     m_widgetExplorer->setContainment(m_containment);
+
+
+
 }
 
 void WidgetExplorerView::setContainment(Plasma::Containment* c)
 {
     m_containment = c;
     m_widgetExplorer->setContainment(c);
+
+//     QObject *graphicObject = m_containment->property("graphicObject").value<QObject *>();
+//
+//     if (graphicObject) {
+//         qDebug() << "using as graphic containment" << graphicObject << m_containment;
+//
+//         rootObject()->setProperty("parent", QVariant::fromValue(graphicObject));
+//         //rootObject()->setProperty("containment", QVariant::fromValue(graphicObject));
+//     } else {
+//         qWarning() << "Containment graphic object not valid";
+//     }
 }
 
 

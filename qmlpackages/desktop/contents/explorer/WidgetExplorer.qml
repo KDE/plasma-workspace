@@ -25,7 +25,7 @@ import org.kde.qtextracomponents 2.0
 Item {
     id: main
 
-    width: 400
+    width: 240
     height: 800
     //this is used to perfectly align the filter field and delegates
     property int cellWidth: theme.defaultFont.pixelSize * 20
@@ -39,12 +39,6 @@ Item {
 
     property Item getWidgetsButton
     property Item categoryButton
-
-
-    function i18n(inp) { // FIXME: HACK!
-        return inp;
-
-    }
 
     PlasmaComponents.ContextMenu {
         id: categoriesDialog

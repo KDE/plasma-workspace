@@ -52,7 +52,7 @@ PlasmaAppletItem::PlasmaAppletItem(PlasmaAppletItemModel *model,
     setData(info.pluginName(), PlasmaAppletItemModel::PluginNameRole);
     setData(info.comment(), PlasmaAppletItemModel::DescriptionRole);
     setData(info.category().toLower(), PlasmaAppletItemModel::CategoryRole);
-    //setData(info.fullLicense().name(KAboutData::FullName), PlasmaAppletItemModel::LicenseRole); // FIXME
+    setData(info.license(), PlasmaAppletItemModel::LicenseRole);
     setData(info.website(), PlasmaAppletItemModel::WebsiteRole);
     setData(info.version(), PlasmaAppletItemModel::VersionRole);
     setData(info.author(), PlasmaAppletItemModel::AuthorRole);

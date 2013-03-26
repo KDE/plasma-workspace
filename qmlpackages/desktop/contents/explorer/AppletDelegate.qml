@@ -19,6 +19,7 @@
 
 import QtQuick 2.0
 import org.kde.plasma.components 2.0 as PlasmaComponents
+import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.draganddrop 2.0
 import org.kde.qtextracomponents 2.0
@@ -33,16 +34,9 @@ PlasmaCore.FrameSvgItem {
     property string description: model.description
     property string author: model.author
     property string email: model.email
-    //property string license: model.license
-    property string license: "GPL" // FIXME
+    property string license: model.license
     property string pluginName: model.pluginName
     property bool local: model.local
-
-    function i18n(inp) { // FIXME: HACK!
-        return inp;
-
-    }
-
 
     ListView.onRemove: SequentialAnimation {
         PropertyAction {
@@ -133,14 +127,15 @@ PlasmaCore.FrameSvgItem {
                 leftMargin: background.margins.left
                 rightMargin: background.margins.right
             }
-
-            PlasmaComponents.Label {
+            spacing: 4
+            PlasmaExtras.Heading {
                 id: titleText
+                level: 4
                 text: title
-                font {
-                    weight: Font.Bold
-                    pointSize: theme.smallestFont.pointSize
-                }
+//                 font {
+//                     weight: Font.Bold
+//                     pointSize: theme.smallestFont.pointSize
+//                 }
                 anchors {
                     left: parent.left
                     right: parent.right
@@ -173,7 +168,7 @@ PlasmaCore.FrameSvgItem {
                     left: parent.left
                     right: parent.right
                 }
-                elide: Text.ElideRight
+                //elide: Text.ElideRight
                 wrapMode: Text.WordWrap
                 verticalAlignment: Text.AlignTop
                 maximumLineCount: 3

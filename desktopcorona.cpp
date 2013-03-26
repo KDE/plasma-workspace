@@ -24,7 +24,6 @@
 #include <QDebug>
 #include <QDesktopWidget>
 #include <QQmlContext>
-#include <QQuickView>
 #include <QTimer>
 
 #include <KLocalizedString>
@@ -229,7 +228,7 @@ void DesktopCorona::checkViews()
 
     //check every containment is in proper view
     for (int i = 0; i < m_desktopWidget->screenCount(); ++i) {
-        
+        qDebug() << "TODO: Implement loading containments into the views";
     }
 }
 
