@@ -83,8 +83,7 @@ void WidgetExplorerView::setContainment(Plasma::Containment* c)
 void WidgetExplorerView::widgetExplorerClosed(bool visible)
 {
     if (!visible) {
-        //deleteLater();
-        //m_widgetExplorerView = 0;
+
     }
 }
 
