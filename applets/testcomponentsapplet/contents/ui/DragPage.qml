@@ -43,9 +43,36 @@ PlasmaComponents.Page {
     Item {
         anchors { left: parent.left; right: parent.right; top: dlabel.bottom; bottom: parent.bottom; }
 
+        Item {
+            anchors { left: parent.left; top: parent.top; right: dropArea.left; bottom: dragArea2.top; }
+
+            PlasmaCore.IconItem {
+                id: akonadiIcon
+                source: "akonadi"
+                width: _h
+                height: width
+                anchors.centerIn: parent
+            }
+
+            DragAndDrop.DragArea {
+                anchors { fill: parent; }
+
+                mimeData.url: "http://plasma.kde.org"
+                delegate: akonadiIcon
+
+                //delegate: Rectangle { width: 64; height: 64; color: "yellow"; opacity: 0.6; }
+
+                onDragStarted: print("akonadidrag started");
+                onDrop: print("drop: " + action);
+
+            }
+            Rectangle { color: "yellow"; opacity: 0.2; anchors.fill: parent; }
+        }
         DragAndDrop.DragArea {
+            id: dragArea2
             width: parent.width / 2
-            anchors { left: parent.left; bottom: parent.bottom; top: parent.top; }
+            height: dropArea.height / 2
+            anchors { left: parent.left; bottom: parent.bottom; }
 
             mimeData.text: "Clownfish"
             mimeData.html: "<h2>Swimming in a Sea of Cheese</h2><pre>Primus->perform();</pre><br/>"
@@ -53,7 +80,7 @@ PlasmaComponents.Page {
             mimeData.url: "http://plasma.kde.org"
             mimeData.urls: ["http://planetkde.org", "http://fsfe.org", "http://techbase.kde.org", "http://qt-project.org"]
 
-            //delegate: Rectangle { width: 64; height: 64; color: "yellow"; opacity: 0.6; }
+            Rectangle { anchors.fill: parent; color: "yellow"; opacity: 0.6; }
 
             onDragStarted: print("started");
             onDrop: print("drop: " + action);
@@ -62,10 +89,11 @@ PlasmaComponents.Page {
         }
 
         DragAndDrop.DropArea {
+            id: dropArea
             width: parent.width / 2
             //visible: false
             anchors { right: parent.right; bottom: parent.bottom; top: parent.top; }
-            Rectangle { id: clr; anchors.fill: parent; color: "green"; opacity: 1; }
+            Rectangle { id: clr; anchors.fill: parent; color: "green"; opacity: 0.4 ; }
 
             onDragEnter: {
                 slabel.text = "drop item here";
@@ -82,8 +110,8 @@ PlasmaComponents.Page {
                 var i = 0;
                 var u;
                 for (u in event.mimeData.urls) {
-                    i++;
                     txt += "<br />  Url " + i + " : " + event.mimeData.urls[i];
+                    i++;
                 }
                 clr.color = event.mimeData.color;
                 slabel.text = txt + "<br />(item dropped)";
