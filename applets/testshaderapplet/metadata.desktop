@@ -11,6 +11,11 @@ Name[sv]=Skuggningstest
 Name[uk]=Тестування підпрограм побудови тіней
 Name[x-test]=xxShader Testxx
 Comment=Futzing with Visual Effects
+Comment[pt]=Brincar com Efeitos Visuais
+Comment[pt_BR]=Brinque com efeitos visuais
+Comment[sv]=Greja med visuella effekter
+Comment[uk]=Маніпулювання візуальними ефектами
+Comment[x-test]=xxFutzing with Visual Effectsxx
 Type=Service
 Icon=plasma
 
