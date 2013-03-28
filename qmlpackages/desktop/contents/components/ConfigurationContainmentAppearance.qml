@@ -18,11 +18,12 @@
 
 import QtQuick 2.0
 import org.kde.plasma.components 2.0 as PlasmaComponents
+import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.plasma.configuration 2.0
 
 Column {
     id: root
-    PlasmaComponents.Label {
+    PlasmaExtras.Title {
         text: "Plugins"
     }
 
@@ -54,7 +55,7 @@ Column {
         }
         height: 100
         orientation: ListView.Horizontal 
-        
+
         model: configDialog.wallpaperConfigModel
         delegate: ConfigCategoryDelegate {
             id: delegate
@@ -67,14 +68,16 @@ Column {
             width: 64
             onClicked: {
                 configDialog.currentWallpaper = model.pluginName
-                if (delegate.current) {
+                if (categoriesView.currentIndex == index) {
                     return
                 } else {
+                    categoriesView.currentIndex = index;
                     main.sourceFile = model.source
                     root.restoreConfig()
                 }
             }
             onCurrentChanged: {
+                categoriesView.currentIndex = index
                 if (current) {
                     categoriesView.currentIndex = index
                 }
@@ -94,10 +97,10 @@ Column {
             interval: 100
             property variant pendingCurrent
             onTriggered: {
-                if (pendingCurrent) {
+                if (pendingCurrent && pen) {
+                    categoriesView.currentIndex = pendingCurrent.index
                     main.sourceFile = pendingCurrent.source
                     root.restoreConfig()
-                    categoriesView.currentIndex = pendingCurrent.index
                 }
             }
         }
@@ -109,9 +112,15 @@ Column {
         height: implicitHeight
         property string sourceFile
         onSourceFileChanged: {
-            replace(Qt.resolvedUrl(sourceFile))
-            root.width = mainColumn.implicitWidth
-            root.height = mainColumn.implicitHeight
+            if (sourceFile != "") {
+                main.opacity = 1;
+                replace(Qt.resolvedUrl(sourceFile))
+                root.width = mainColumn.implicitWidth
+                root.height = mainColumn.implicitHeight
+            } else {
+                main.opacity = 0
+            }
         }
+        Behavior on opacity { NumberAnimation {} }
     }
 }

@@ -31,21 +31,18 @@ MouseArea {
 //BEGIN properties
     width: childrenRect.width
     height: childrenRect.height
-    property bool current: main.sourceFile == model.source
+    property bool current: categoriesView.currentIndex == index
 //END properties
 
 //BEGIN connections
     onClicked: {
+        print("model source: " + model.source + " " + main.sourceFile);
         if (delegate.current) {
             return
         } else {
+            categoriesView.currentIndex = index;
             main.sourceFile = model.source
             root.restoreConfig()
-        }
-    }
-    onCurrentChanged: {
-        if (current) {
-            categoriesView.currentItem = delegate
         }
     }
 //END connections

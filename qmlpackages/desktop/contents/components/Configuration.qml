@@ -85,8 +85,8 @@ Rectangle {
             main.sourceFile = globalConfigModel.get(0).source
         }
         root.restoreConfig()
-        root.width = mainColumn.implicitWidth
-        root.height = mainColumn.implicitHeight
+//         root.width = mainColumn.implicitWidth
+//         root.height = mainColumn.implicitHeight
     }
 //END connections
 
@@ -183,13 +183,14 @@ Rectangle {
                                 id: pageSizeSync
                                 interval: 100
                                 onTriggered: {
-                                    root.width = mainColumn.implicitWidth
-                                    root.height = mainColumn.implicitHeight
+//                                     root.width = mainColumn.implicitWidth
+//                                     root.height = mainColumn.implicitHeight
                                 }
                             }
                             onImplicitWidthChanged: pageSizeSync.restart()
                             onImplicitHeightChanged: pageSizeSync.restart()
                             onSourceFileChanged: {
+                                print("Source file changed in flickable" + sourceFile);
                                 replace(Qt.resolvedUrl(sourceFile))
                                 /*
                                  * This is not needed on a desktop shell that has ok/apply/cancel buttons, i'll leave it here only for future reference until we have a prototype for the active shell.
