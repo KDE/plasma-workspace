@@ -27,6 +27,8 @@ import org.kde.plasma.configuration 2.0
 Rectangle {
     id: root
 
+    property int _m: theme.defaultFont.pointSize
+
 //BEGIN properties
     color: "lightgray"
     width: 640
@@ -135,8 +137,8 @@ Rectangle {
                         Rectangle {
                             color: theme.highlightColor
                             width: parent.width
-                            height:  categoriesView.currentItem.height
-                            y: categoriesView.currentItem.y
+                            height:  theme.iconSizes.IconSizeHuge
+                            y: index * height
                             Behavior on y {
                                 NumberAnimation {
                                     duration: 250
@@ -149,7 +151,10 @@ Rectangle {
                             width: parent.width
                             Repeater {
                                 model: configDialog.configModel
-                                delegate: ConfigCategoryDelegate {}
+                                delegate: ConfigCategoryDelegate {
+                                    onClicked: categoriesView.currentIndex = index
+
+                                }
                             }
                             Repeater {
                                 model: globalConfigModel
@@ -178,6 +183,7 @@ Rectangle {
                         PlasmaComponents.PageStack {
                             id: main
                             anchors.fill: parent
+                            anchors.margins: 12
                             property string sourceFile
                             Timer {
                                 id: pageSizeSync

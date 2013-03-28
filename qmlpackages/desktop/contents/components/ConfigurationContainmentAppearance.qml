@@ -23,6 +23,8 @@ import org.kde.plasma.configuration 2.0
 
 Column {
     id: root
+
+    spacing: _m
     PlasmaExtras.Title {
         text: "Plugins"
     }
@@ -59,6 +61,7 @@ Column {
         model: configDialog.wallpaperConfigModel
         delegate: ConfigCategoryDelegate {
             id: delegate
+            current: categoriesView.currentIndex == index
             anchors {
                 top: parent.top
                 bottom: parent.bottom
@@ -97,7 +100,7 @@ Column {
             interval: 100
             property variant pendingCurrent
             onTriggered: {
-                if (pendingCurrent && pen) {
+                if (pendingCurrent) {
                     categoriesView.currentIndex = pendingCurrent.index
                     main.sourceFile = pendingCurrent.source
                     root.restoreConfig()
@@ -107,7 +110,10 @@ Column {
     }
     PlasmaComponents.PageStack {
         id: main
-        anchors.horizontalCenter: parent.horizontalCenter
+        anchors {
+            left: categoriesView.left;
+            right: parent.right;
+        }
         width: implicitWidth
         height: implicitHeight
         property string sourceFile
@@ -115,8 +121,8 @@ Column {
             if (sourceFile != "") {
                 main.opacity = 1;
                 replace(Qt.resolvedUrl(sourceFile))
-                root.width = mainColumn.implicitWidth
-                root.height = mainColumn.implicitHeight
+                //main.width = mainColumn.implicitWidth
+                main.height = mainColumn.implicitHeight
             } else {
                 main.opacity = 0
             }

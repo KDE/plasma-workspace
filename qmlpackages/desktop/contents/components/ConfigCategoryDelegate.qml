@@ -31,7 +31,7 @@ MouseArea {
 //BEGIN properties
     width: childrenRect.width
     height: childrenRect.height
-    property bool current: categoriesView.currentIndex == index
+    property bool current: model.source == main.sourceFile
 //END properties
 
 //BEGIN connections
@@ -40,18 +40,27 @@ MouseArea {
         if (delegate.current) {
             return
         } else {
-            categoriesView.currentIndex = index;
+            if (typeof(categoriesView.currentIndex) != "undefined") {
+                categoriesView.currentIndex = index;
+            }
             main.sourceFile = model.source
             root.restoreConfig()
+        }
+    }
+    onCurrentChanged: {
+        if (current) {
+            categoriesView.currentIndex = index
         }
     }
 //END connections
 
 //BEGIN UI components
     Column {
+        spacing: 4
         anchors {
             left: parent.left
             right: parent.right
+            topMargin: _m
         }
         PlasmaCore.IconItem {
             anchors.horizontalCenter: parent.horizontalCenter
