@@ -84,6 +84,22 @@ PlasmaComponents.Page {
             }
 
         }
+        PlasmaExtras.Heading {
+            level: 2
+            text: "ToolTip"
+        }
+
+        PlasmaCore.IconItem {
+            source: "akonadi"
+            width: parent.width
+            height: _h*2
+            anchors.horizontalCenter: parent.horizontalCenter
+
+            PlasmaCore.ToolTip {
+                anchors.fill: parent
+            }
+        }
+
 
     }
 }

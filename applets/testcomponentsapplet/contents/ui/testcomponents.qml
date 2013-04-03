@@ -46,10 +46,10 @@ Item {
         }
         height: _h
 
+        PlasmaComponents.TabButton { tab: iconsPage; iconSource: "preferences-desktop-icons"}
         PlasmaComponents.TabButton { tab: dragPage; iconSource: "preferences-desktop-mouse"}
         PlasmaComponents.TabButton { tab: dialogsPage; iconSource: "preferences-system-windows"}
         PlasmaComponents.TabButton { tab: buttonsPage; iconSource: "preferences-desktop-theme"}
-        PlasmaComponents.TabButton { tab: iconsPage; iconSource: "preferences-desktop-icons"}
         PlasmaComponents.TabButton { tab: plasmoidPage; iconSource: "plasma"}
         PlasmaComponents.TabButton { tab: mousePage; iconSource: "preferences-desktop-mouse"}
     }
@@ -65,6 +65,9 @@ Item {
 
         //currentTab: tabBar.currentTab
 
+        IconsPage {
+            id: iconsPage
+        }
         DragPage {
             id: dragPage
         }
@@ -76,9 +79,6 @@ Item {
             id: buttonsPage
         }
 
-        IconsPage {
-            id: iconsPage
-        }
 
         PlasmoidPage {
             id: plasmoidPage
