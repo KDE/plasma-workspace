@@ -26,6 +26,8 @@
 #include <KComponentData>
 #include <k4aboutdata.h>
 
+#include <solid/device.h>
+
 #include <Plasma/Containment>
 #include <Plasma/Corona>
 #include <Plasma/DataEngine>
@@ -159,12 +161,7 @@ void AppInterface::sleep(int ms)
 
 bool AppInterface::hasBattery() const
 {
-  Plasma::DataEngineConsumer *consumer = new Plasma::DataEngineConsumer();
-  Plasma::DataEngine *power = consumer->dataEngine("powermanagement");
-
-  const QStringList batteries = power->query("Battery")["Sources"].toStringList();
-  delete consumer;
-  return !batteries.isEmpty();
+  return !Solid::Device::listFromType(Solid::DeviceInterface::Battery).isEmpty();
 }
 
 QStringList AppInterface::knownWidgetTypes() const
