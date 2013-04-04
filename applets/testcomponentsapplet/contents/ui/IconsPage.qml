@@ -89,19 +89,50 @@ PlasmaComponents.Page {
             text: "ToolTip"
         }
 
-        PlasmaCore.IconItem {
-            source: "akonadi"
-            width: parent.width
-            height: _h*2
-            anchors.horizontalCenter: parent.horizontalCenter
-
-            PlasmaCore.ToolTip {
-                anchors.fill: parent
-                mainText: "Fish sighted"
-                subText: "A mean-looking grouper swam by."
+        Row {
+            spacing: _s
+            PlasmaCore.IconItem {
+                id: akonadiIcon
+                source: "akonadi"
+                width: height
+                height: _h*2
+                //anchors.horizontalCenter: parent.horizontalCenter
+    //             Rectangle { color: "orange"; opacity: 0.3; anchors.fill: parent; }
+                PlasmaCore.ToolTip {
+                    anchors.fill: parent
+                    visualParent: akonadiIcon
+                    iconSource: "klipper"
+                    mainText: "Fish sighted in the wild, in the wild, a fish was seen."
+                    subText: "A mean-looking grouper swam by."
+                }
+            }
+            Image {
+                height: _h*2
+                width: height
+                fillMode: Image.PreserveAspectFit
+                source: "../images/surfboard.jpg"
+                PlasmaCore.ToolTip {
+                    anchors.fill: parent
+//                     visualParent: akonadiIcon
+                    image: parent.source
+                    mainText: "Surfboard"
+                    subText: "A surfboard on the beach. <br />The photo shows the Waal river's north beach, \
+                    across the water from Nijmegen, Netherlands. It was taken during the summer festivals a few years back."
+                }
+            }
+            Image {
+                height: _h*2
+                width: height
+                fillMode: Image.PreserveAspectFit
+                source: "../images/bridge.jpg"
+                PlasmaCore.ToolTip {
+                    anchors.fill: parent
+//                     visualParent: akonadiIcon
+                    image: parent.source
+                    mainText: "Bridge"
+                    subText: "Waalbrug."
+                }
             }
         }
-
-
     }
 }
