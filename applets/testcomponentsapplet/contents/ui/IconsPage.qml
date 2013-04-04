@@ -100,7 +100,7 @@ PlasmaComponents.Page {
     //             Rectangle { color: "orange"; opacity: 0.3; anchors.fill: parent; }
                 PlasmaCore.ToolTip {
                     anchors.fill: parent
-                    visualParent: akonadiIcon
+                    target: akonadiIcon
                     iconSource: "klipper"
                     mainText: "Fish sighted in the wild, in the wild, a fish was seen."
                     subText: "A mean-looking grouper swam by."
