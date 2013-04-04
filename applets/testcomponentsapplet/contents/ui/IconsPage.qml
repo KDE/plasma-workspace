@@ -98,7 +98,7 @@ PlasmaComponents.Page {
             PlasmaCore.ToolTip {
                 anchors.fill: parent
                 mainText: "Fish sighted"
-                subText: "A mean-looking grouper swam by"
+                subText: "A mean-looking grouper swam by."
             }
         }
 
