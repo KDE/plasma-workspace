@@ -21,6 +21,7 @@ find_package(Qt5Qml REQUIRED)
 find_package(Qt5Quick REQUIRED)
 find_package(Qt5Script REQUIRED)
 find_package(KCoreAddons REQUIRED)
+find_package(Solid REQUIRED)
 
 # The Qt5Widgets_INCLUDES also includes the include directories for
 # dependencies QtCore and QtGui
