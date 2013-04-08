@@ -93,11 +93,12 @@ PlasmaComponents.Page {
             spacing: _s
             PlasmaCore.IconItem {
                 id: akonadiIcon
+                objectName: "akonadiIcon"
                 source: "akonadi"
                 width: height
                 height: _h*2
                 //anchors.horizontalCenter: parent.horizontalCenter
-    //             Rectangle { color: "orange"; opacity: 0.3; anchors.fill: parent; }
+                Rectangle { color: "orange"; opacity: 0.3; anchors.fill: parent; }
                 PlasmaCore.ToolTip {
                     anchors.fill: parent
                     target: akonadiIcon
@@ -107,13 +108,13 @@ PlasmaComponents.Page {
                 }
             }
             Image {
+                objectName: "surfboardimage"
                 height: _h*2
                 width: height
                 fillMode: Image.PreserveAspectFit
                 source: "../images/surfboard.jpg"
                 PlasmaCore.ToolTip {
                     anchors.fill: parent
-//                     visualParent: akonadiIcon
                     image: parent.source
                     mainText: "Surfboard"
                     subText: "A surfboard on the beach. <br />The photo shows the Waal river's north beach, \
@@ -121,13 +122,13 @@ PlasmaComponents.Page {
                 }
             }
             Image {
+                objectName: "bridgeimage"
                 height: _h*2
                 width: height
                 fillMode: Image.PreserveAspectFit
                 source: "../images/bridge.jpg"
                 PlasmaCore.ToolTip {
                     anchors.fill: parent
-//                     visualParent: akonadiIcon
                     image: parent.source
                     mainText: "Bridge"
                     subText: "Waalbrug."
