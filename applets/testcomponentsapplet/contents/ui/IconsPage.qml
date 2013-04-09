@@ -108,20 +108,6 @@ PlasmaComponents.Page {
                 }
             }
             Image {
-                objectName: "surfboardimage"
-                height: _h*2
-                width: height
-                fillMode: Image.PreserveAspectFit
-                source: "../images/surfboard.jpg"
-                PlasmaCore.ToolTip {
-                    anchors.fill: parent
-                    image: parent.source
-                    mainText: "Surfboard"
-                    subText: "A surfboard on the beach. <br />The photo shows the Waal river's north beach, \
-                    across the water from Nijmegen, Netherlands. It was taken during the summer festivals a few years back."
-                }
-            }
-            Image {
                 objectName: "bridgeimage"
                 height: _h*2
                 width: height
@@ -132,6 +118,25 @@ PlasmaComponents.Page {
                     image: parent.source
                     mainText: "Bridge"
                     subText: "Waalbrug."
+                }
+            }
+            Image {
+                objectName: "surfboardimage"
+                height: _h*2
+                width: height
+                fillMode: Image.PreserveAspectFit
+                source: "../images/surfboard.jpg"
+                PlasmaCore.ToolTip {
+                    anchors.fill: parent
+                    image: parent.source
+                    mainComponent: Component {
+                        PlasmaComponents.Label {
+                            text: "Nijmegen North Beach"
+                            anchors.centerIn: parent
+                        }
+                    }
+                    //subText: "A surfboard on the beach. <br />The photo shows the Waal river's north beach, \
+                    //across the water from Nijmegen, Netherlands. It was taken during the summer festivals a few years back."
                 }
             }
         }
