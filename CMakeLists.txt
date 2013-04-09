@@ -1,4 +1,4 @@
-project(testplasma2)
+project(plasma-shell)
 
 
 # Tell CMake to run moc when necessary:
@@ -54,7 +54,7 @@ set(widgetexplorer_SRC
     widgetexplorer/widgetexplorerview.cpp
 )
 
-add_executable(testplasma2
+add_executable(plasma-shell
     main.cpp
     desktopcorona.cpp
     panelview.cpp
@@ -67,7 +67,7 @@ add_executable(testplasma2
 )
 
 # The Qt5Widgets_LIBRARIES variable also includes QtGui and QtCore
-target_link_libraries(testplasma2
+target_link_libraries(plasma-shell
  #${Qt5Widgets_LIBRARIES}
  ${Qt5Quick_LIBRARIES}
  ${Qt5Qml_LIBRARIES}
@@ -84,7 +84,7 @@ target_link_libraries(testplasma2
 message("+++ kde4support : ${kde4support_LIBRARY}")
 
 
-install(TARGETS testplasma2 ${INSTALL_TARGETS_DEFAULT_ARGS})
+install(TARGETS plasma-shell ${INSTALL_TARGETS_DEFAULT_ARGS})
 
 add_subdirectory(applets)
 add_subdirectory(containments)
