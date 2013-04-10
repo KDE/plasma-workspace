@@ -26,21 +26,21 @@
 #include "shellpluginloader.h"
 
 
-static const char description[] = "Plasma2 library tests";
-static const char version[] = "1.0";
+static const char description[] = "Plasma Shell";
+static const char version[] = "2.0";
 
 int main(int argc, char** argv)
 {
 
-    KAboutData aboutData("testplasma2", QByteArray(), i18n("Plasma2 test app"),
+    KAboutData aboutData("plasma-shell", QByteArray(), i18n("Plasma Shell"),
                          version, i18n(description), KAboutData::License_GPL,
-                         i18n("Copyright 2012, The KDE Team"));
+                         i18n("Copyright 2012-2013, The KDE Team"));
     aboutData.addAuthor(i18n("Marco Martin"),
                         i18n("Author and maintainer"),
                         "mart@kde.org");
     KCmdLineArgs::init(argc, argv,
-                       "testplasma2", "",
-                       ki18n("Plasma2 test app"),
+                       "plasma-shell", "",
+                       ki18n("Plasma Shell"),
                        version);
 
     QApplication app(argc, argv);
