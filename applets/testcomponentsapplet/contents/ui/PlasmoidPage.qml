@@ -85,7 +85,6 @@ PlasmaComponents.Page {
                 menuLoader.item.open(0, height);
             }
         }
-
     }
 }
 
