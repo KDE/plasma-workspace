@@ -43,9 +43,9 @@ void ShellPackageStructure::initPackage(Plasma::Package *package)
     package->setMimeTypes("defaultlayout", QStringList() << "application/javascript");
     package->setMimeTypes("defaults", QStringList() << "text/plain");
 
-    package->addFileDefinition("appleterror", "components/AppletError.qml", i18n("Error message shown when an applet fails loading"));
+    package->addFileDefinition("appleterror", "components/AppletError.qml", i18n("Error message shown when an applet fails to load"));
     package->addFileDefinition("compactapplet", "components/CompactApplet.qml", i18n("QML component that shows an applet in a popup"));
-    package->addFileDefinition("configurationui", "components/Configuration.qml", i18n("QML component for the configuratuion dialog"));
+    package->addFileDefinition("configurationui", "components/Configuration.qml", i18n("QML component for the configuration dialog"));
     package->addFileDefinition("defaultcompactrepresentation", "components/DefaultCompactRepresentation.qml", i18n("Compact representation of an applet when collapsed in a popup, for instance as an icon. applets can override this component."));
     package->addFileDefinition("widgetexplorer", "explorer/WidgetExplorer.qml", i18n("Widgets explorer UI"));
     package->addFileDefinition("panelconfigurationui", "components/PanelConfiguration.qml", i18n("Panel configuration UI"));
