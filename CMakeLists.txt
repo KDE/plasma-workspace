@@ -60,6 +60,7 @@ add_executable(plasma-shell
     panelview.cpp
     shellpluginloader.cpp
     shellpackage.cpp
+    lookandfeelpackage.cpp
     view.cpp
     panelconfigview.cpp
     ${scripting_SRC}
