@@ -55,19 +55,19 @@ void LookAndFeelPackageStructure::initPackage(Plasma::Package *package)
     package->addFileDefinition("userswitchermainscript", "userswitcher/UserSwitcher.qml", i18n("Main Script for User Switcher"));
 
     package->addDirectoryDefinition("desktopswitcher", "desktopswitcher", i18n("Virtual Desktop Switcher"));
-    package->addFileDefinition("loginmanagermainscript", "previews/LoginManager.qml", i18n("Main Script for Login Manager"));
+    package->addFileDefinition("desktopswitchermainscript", "desktopswitcher/DesktopSwitcher.qml", i18n("Main Script for Virtual Desktop Switcher"));
 
     package->addDirectoryDefinition("splash", "splash", i18n("Splash Screen"));
-    package->addFileDefinition("loginmanagermainscript", "previews/LoginManager.qml", i18n("Main Script for Login Manager"));
+    package->addFileDefinition("splashmainscript", "splash/Splash.qml", i18n("Main Script for Splash Screen"));
 
     package->addDirectoryDefinition("runcommand", "runcommand", i18n("KRunner UI"));
-    package->addFileDefinition("loginmanagermainscript", "previews/LoginManager.qml", i18n("Main Script for Login Manager"));
+    package->addFileDefinition("runcommandmainscript", "runcommand/RunCommand.qml", i18n("Main Script KRunner"));
 
     package->addDirectoryDefinition("windowdecoration", "windowdecoration", i18n("Window Decoration"));
-    package->addFileDefinition("loginmanagermainscript", "previews/LoginManager.qml", i18n("Main Script for Login Manager"));
+    package->addFileDefinition("windowdecorationmainscript", "windowdecoration/WindowDecoration.qml", i18n("Main Script for Window Decoration"));
 
     package->addDirectoryDefinition("windowswitcher", "windowswitcher", i18n("Window Switcher"));
-    package->addFileDefinition("loginmanagermainscript", "previews/LoginManager.qml", i18n("Main Script for Login Manager"));
+    package->addFileDefinition("windowswitchermainscript", "windowswitcher/WindowSwitcher.qml", i18n("Main Script for Window Switcher"));
 
 }
 
