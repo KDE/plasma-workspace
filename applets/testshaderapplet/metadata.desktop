@@ -2,6 +2,7 @@
 Encoding=UTF-8
 Keywords=
 Name=Shader Test
+Name[fr]=Test du panneau
 Name[mr]=शेडर चाचणी
 Name[nl]=Test van schaduw
 Name[pt]=Teste de Sombras
@@ -11,6 +12,7 @@ Name[sv]=Skuggningstest
 Name[uk]=Тестування підпрограм побудови тіней
 Name[x-test]=xxShader Testxx
 Comment=Futzing with Visual Effects
+Comment[fr]=Inactivité avec effets visuels
 Comment[mr]=दृश्यास्पद परिणाम बरोबर फट्झिंग
 Comment[nl]=Tijd verspillen met visuele effecten
 Comment[pt]=Brincar com Efeitos Visuais

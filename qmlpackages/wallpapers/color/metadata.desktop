@@ -2,6 +2,13 @@
 Encoding=UTF-8
 Keywords=
 Name=Color wallpaper
+Name[cs]=Barva na pozadí
+Name[nl]=Kleur van achtergrondafbeelding
+Name[pt]=Papel de parede por cores
+Name[pt_BR]=Papel de parede colorido
+Name[sv]=Färgrikt skrivbordsunderlägg
+Name[uk]=Кольорове тло стільниці
+Name[x-test]=xxColor wallpaperxx
 Type=Service
 
 X-KDE-ServiceTypes=Plasma/Shell
