@@ -56,6 +56,8 @@ set(widgetexplorer_SRC
 
 add_executable(plasma-shell
     main.cpp
+    configview.cpp
+    containmentconfigview.cpp
     desktopcorona.cpp
     panelview.cpp
     shellpluginloader.cpp
