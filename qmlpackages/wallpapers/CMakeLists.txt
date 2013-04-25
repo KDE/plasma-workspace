@@ -1,3 +1,3 @@
 
-add_subdirectory(autumn)
-add_subdirectory(color)
+installPackage(color org.kde.color plasma/wallpapers wallpaper)
+installPackage(autumn org.kde.autumn plasma/wallpapers wallpaper)

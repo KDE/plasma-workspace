@@ -1,7 +1,8 @@
 [Desktop Entry]
 Encoding=UTF-8
 Keywords=
-Name=Color wallpaper
+Icon=preferences-desktop-color
+Name=Plain Color
 Name[cs]=Barva na pozadí
 Name[nl]=Kleur van achtergrondafbeelding
 Name[pt]=Papel de parede por cores
@@ -11,7 +12,7 @@ Name[uk]=Кольорове тло стільниці
 Name[x-test]=xxColor wallpaperxx
 Type=Service
 
-X-KDE-ServiceTypes=Plasma/Shell
+X-KDE-ServiceTypes=Plasma/Wallpaper
 X-KDE-ParentApp=
 X-KDE-PluginInfo-Author=Marco Martin
 X-KDE-PluginInfo-Category=
