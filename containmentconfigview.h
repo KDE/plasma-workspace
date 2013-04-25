@@ -57,6 +57,7 @@ private:
     ConfigModel *m_wallpaperConfigModel;
     QString m_currentWallpaper;
     ConfigPropertyMap *m_currentWallpaperConfig;
+    ConfigPropertyMap *m_ownWallpaperConfig;
 };
 
 #endif // multiple inclusion guard

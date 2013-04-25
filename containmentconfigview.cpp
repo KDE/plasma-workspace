@@ -42,6 +42,14 @@ ContainmentConfigView::ContainmentConfigView(Plasma::Containment *cont, QWindow 
 {
     engine()->rootContext()->setContextProperty("configDialog", this);
     setCurrentWallpaper(cont->containment()->wallpaper());
+
+    Plasma::Package pkg = Plasma::PluginLoader::self()->loadPackage("Plasma/Generic");
+    pkg.setDefaultPackageRoot("plasma/wallpapers");
+    pkg.setPath(m_containment->wallpaper());
+    QFile file(pkg.filePath("config", "main.xml"));
+    KConfigGroup cfg = m_containment->config();
+    cfg = KConfigGroup(&cfg, "Wallpaper");
+    m_currentWallpaperConfig = m_ownWallpaperConfig = new ConfigPropertyMap(new Plasma::ConfigLoader(&cfg, &file), this);
 }
 
 ContainmentConfigView::~ContainmentConfigView()
@@ -95,15 +103,13 @@ QString ContainmentConfigView::currentWallpaper() const
 
 void ContainmentConfigView::setCurrentWallpaper(const QString &wallpaper)
 {
-    /*if (m_currentWallpaper == wallpaper) {
+    if (m_currentWallpaper == wallpaper) {
         return;
     }
 
     if (m_containment->wallpaper() == wallpaper) {
         delete m_currentWallpaperConfig;
-        if (m_containment->wallpaperInterface()) {
-            m_currentWallpaperConfig = m_containment->wallpaperInterface()->configuration();
-        }
+        m_currentWallpaperConfig = m_ownWallpaperConfig;
     } else {
         if (m_containment->wallpaper() != m_currentWallpaper) {
             delete m_currentWallpaperConfig;
@@ -117,7 +123,7 @@ void ContainmentConfigView::setCurrentWallpaper(const QString &wallpaper)
         KConfigGroup cfg = m_containment->config();
         cfg = KConfigGroup(&cfg, "Wallpaper");
         m_currentWallpaperConfig = new ConfigPropertyMap(new Plasma::ConfigLoader(&cfg, &file), this);
-    }*/
+    }
 
     m_currentWallpaper = wallpaper;
     emit currentWallpaperChanged();
@@ -128,11 +134,12 @@ void ContainmentConfigView::applyWallpaper()
 {
     m_containment->setWallpaper(m_currentWallpaper);
 
-    /*if (m_currentWallpaperConfig != m_containment->wallpaperInterface()->configuration()) {
+    if (m_currentWallpaperConfig != m_ownWallpaperConfig) {
         delete m_currentWallpaperConfig;
-        m_currentWallpaperConfig = m_containment->wallpaperInterface()->configuration();
+        m_currentWallpaperConfig = m_ownWallpaperConfig;
         emit wallpaperConfigurationChanged();
-    }*/
+    }
 }
+
 
 #include "moc_containmentconfigview.cpp"

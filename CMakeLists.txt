@@ -83,6 +83,7 @@ target_link_libraries(plasma-shell
  ${KDE4_KDEUI_LIBS}
  KDE4__kde4support
  ${Solid_LIBRARIES}
+ kdeclarative
 )
 message("+++ kde4support : ${kde4support_LIBRARY}")
 
