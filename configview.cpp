@@ -302,7 +302,7 @@ ConfigView::~ConfigView()
 
 void ConfigView::init()
 {
-    setSource(QUrl::fromLocalFile(m_applet->containment()->corona()->package().filePath("configurationui")));
+    setSource(QUrl::fromLocalFile(m_applet->containment()->corona()->package().filePath("appletconfigurationui")));
 }
 
 ConfigModel *ConfigView::configModel() const

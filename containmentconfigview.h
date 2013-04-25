@@ -41,6 +41,8 @@ public:
     ContainmentConfigView(Plasma::Containment *interface, QWindow *parent = 0);
     virtual ~ContainmentConfigView();
 
+    virtual void init();
+
     ConfigModel *wallpaperConfigModel();
     QString currentWallpaper() const;
     void setCurrentWallpaper(const QString &wallpaper);

@@ -125,7 +125,7 @@ public:
     ConfigView(Plasma::Applet *applet, QWindow *parent = 0);
     virtual ~ConfigView();
 
-    void init();
+    virtual void init();
 
     ConfigModel *configModel() const;
 

@@ -30,6 +30,7 @@
 
 #include <KLocalizedString>
 
+#include <Plasma/Corona>
 #include <Plasma/PluginLoader>
 
 
@@ -54,6 +55,11 @@ ContainmentConfigView::ContainmentConfigView(Plasma::Containment *cont, QWindow 
 
 ContainmentConfigView::~ContainmentConfigView()
 {
+}
+
+void ContainmentConfigView::init()
+{
+    setSource(QUrl::fromLocalFile(m_containment->containment()->corona()->package().filePath("containmentconfigurationui")));
 }
 
 ConfigModel *ContainmentConfigView::wallpaperConfigModel()
