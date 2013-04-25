@@ -315,16 +315,14 @@ void DesktopCorona::showConfigurationInterface(Plasma::Applet *applet)
         return;
     }
 
-    if (!m_configView) {
-        Plasma::Containment *cont = qobject_cast<Plasma::Containment *>(applet);
+    Plasma::Containment *cont = qobject_cast<Plasma::Containment *>(applet);
 
-        if (cont) {
-            m_configView = new ContainmentConfigView(cont);
-        } else {
-            m_configView = new ConfigView(applet);
-        }
-        m_configView.data()->init();
+    if (cont) {
+        m_configView = new ContainmentConfigView(cont);
+    } else {
+        m_configView = new ConfigView(applet);
     }
+    m_configView.data()->init();
 
     m_configView.data()->show();
 }

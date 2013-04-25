@@ -99,13 +99,13 @@ void ContainmentConfigView::setCurrentWallpaper(const QString &wallpaper)
         return;
     }
 
-    if (m_containment->containment()->wallpaper() == wallpaper) {
+    if (m_containment->wallpaper() == wallpaper) {
         delete m_currentWallpaperConfig;
         if (m_containment->wallpaperInterface()) {
             m_currentWallpaperConfig = m_containment->wallpaperInterface()->configuration();
         }
     } else {
-        if (m_containment->containment()->wallpaper() != m_currentWallpaper) {
+        if (m_containment->wallpaper() != m_currentWallpaper) {
             delete m_currentWallpaperConfig;
         }
 
@@ -114,7 +114,7 @@ void ContainmentConfigView::setCurrentWallpaper(const QString &wallpaper)
         pkg.setDefaultPackageRoot("plasma/wallpapers");
         pkg.setPath(wallpaper);
         QFile file(pkg.filePath("config", "main.xml"));
-        KConfigGroup cfg = m_containment->containment()->config();
+        KConfigGroup cfg = m_containment->config();
         cfg = KConfigGroup(&cfg, "Wallpaper");
         m_currentWallpaperConfig = new ConfigPropertyMap(new Plasma::ConfigLoader(&cfg, &file), this);
     }*/
@@ -126,9 +126,9 @@ void ContainmentConfigView::setCurrentWallpaper(const QString &wallpaper)
 
 void ContainmentConfigView::applyWallpaper()
 {
-    /*m_containment->containment()->setWallpaper(m_currentWallpaper);
+    m_containment->setWallpaper(m_currentWallpaper);
 
-    if (m_currentWallpaperConfig != m_containment->wallpaperInterface()->configuration()) {
+    /*if (m_currentWallpaperConfig != m_containment->wallpaperInterface()->configuration()) {
         delete m_currentWallpaperConfig;
         m_currentWallpaperConfig = m_containment->wallpaperInterface()->configuration();
         emit wallpaperConfigurationChanged();
