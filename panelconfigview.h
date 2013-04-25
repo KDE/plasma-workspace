@@ -20,6 +20,7 @@
 #ifndef PANELCONFIGVIEW_H
 #define PANELCONFIGVIEW_H
 
+#include "configview.h"
 #include <QQuickItem>
 #include <QQuickView>
 #include <QJSValue>
@@ -36,7 +37,7 @@ namespace Plasma {
 
 //TODO: this should be a subclass of ConfigView currently in the scriptengine
 //TODO: that class should be moved here
-class PanelConfigView : public QQuickView
+class PanelConfigView : public ConfigView
 {
     Q_OBJECT
 
@@ -44,12 +45,10 @@ public:
     PanelConfigView(Plasma::Containment *interface, PanelView *panelView, QWindow *parent = 0);
     virtual ~PanelConfigView();
 
+    void init();
+
 protected Q_SLOTS:
     void syncGeometry();
-
-protected:
-     void hideEvent(QHideEvent *ev);
-     void resizeEvent(QResizeEvent *re);
 
 private:
     Plasma::Containment *m_containment;

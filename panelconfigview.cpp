@@ -36,33 +36,25 @@
 
 //////////////////////////////PanelConfigView
 PanelConfigView::PanelConfigView(Plasma::Containment *containment, PanelView *panelView, QWindow *parent)
-    : QQuickView(parent),
+    : ConfigView(containment, parent),
       m_containment(containment),
       m_panelView(panelView)
 {
 
     setFlags(Qt::FramelessWindowHint);
-    //FIXME: problem on nvidia, all windows should be transparent or won't show
-    setColor(Qt::transparent);
-    setTitle(i18n("%1 Settings", m_containment->title()));
 
-
-    if (!m_containment->corona()->package().isValid()) {
-        qWarning() << "Invalid home screen package";
-    }
-
-    setResizeMode(QQuickView::SizeViewToRootObject);
-
-    engine()->rootContext()->setContextProperty("panel", panelView);
-    engine()->rootContext()->setContextProperty("configDialog", this);
-    setSource(QUrl::fromLocalFile(panelView->corona()->package().filePath("panelconfigurationui")));
-    syncGeometry();
     connect(containment, &Plasma::Containment::formFactorChanged,
             this, &PanelConfigView::syncGeometry);
 }
 
 PanelConfigView::~PanelConfigView()
 {
+}
+
+void PanelConfigView::init()
+{
+    setSource(QUrl::fromLocalFile(m_containment->corona()->package().filePath("panelconfigurationui")));
+    syncGeometry();
 }
 
 void PanelConfigView::syncGeometry()
@@ -89,23 +81,6 @@ void PanelConfigView::syncGeometry()
             setPosition(0, screen()->geometry().bottom() - 128 - m_panelView->thickness());
         }
     }
-}
-
-//To emulate Qt::WA_DeleteOnClose that QWindow doesn't have
-void PanelConfigView::hideEvent(QHideEvent *ev)
-{
-    QQuickWindow::hideEvent(ev);
-    deleteLater();
-}
-
-void PanelConfigView::resizeEvent(QResizeEvent *re)
-{
-    if (!rootObject()) {
-        return;
-    }
-    rootObject()->setWidth(re->size().width());
-    rootObject()->setHeight(re->size().height());
-    QQuickWindow::resizeEvent(re);
 }
 
 
