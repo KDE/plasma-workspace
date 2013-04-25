@@ -17,7 +17,7 @@ Name[x-test]=xxAutumnxx
 Type=Service
 Icon=java
 
-X-KDE-ServiceType=Plasma/Wallpaper
+X-KDE-ServiceTypes=Plasma/Wallpaper
 X-KDE-ParentApp=
 X-KDE-PluginInfo-Author=Sebastian Kügler
 X-KDE-PluginInfo-Category=
