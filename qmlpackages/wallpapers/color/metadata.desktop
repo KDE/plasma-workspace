@@ -3,6 +3,12 @@ Encoding=UTF-8
 Keywords=
 Icon=preferences-desktop-color
 Name=Plain Color
+Name[nl]=Vlakke kleur
+Name[pt]=Cor Simples
+Name[sk]=Obyčajná farba
+Name[sv]=Enkel färg
+Name[uk]=Звичайний колір
+Name[x-test]=xxPlain Colorxx
 Type=Service
 
 X-KDE-ServiceTypes=Plasma/Wallpaper
