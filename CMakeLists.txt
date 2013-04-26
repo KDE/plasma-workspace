@@ -56,6 +56,8 @@ set(widgetexplorer_SRC
 
 add_executable(plasma-shell
     main.cpp
+    configview.cpp
+    containmentconfigview.cpp
     desktopcorona.cpp
     panelview.cpp
     shellpluginloader.cpp
@@ -81,6 +83,7 @@ target_link_libraries(plasma-shell
  ${KDE4_KDEUI_LIBS}
  KDE4__kde4support
  ${Solid_LIBRARIES}
+ kdeclarative
 )
 message("+++ kde4support : ${kde4support_LIBRARY}")
 

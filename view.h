@@ -25,6 +25,7 @@
 #include "plasma/corona.h"
 #include "plasma/containment.h"
 
+#include "configview.h"
 
 class View : public QQuickView
 {
@@ -54,6 +55,9 @@ public:
 
     QRectF screenGeometry();
 
+protected Q_SLOTS:
+    void showConfigurationInterface(Plasma::Applet *applet);
+
 Q_SIGNALS:
     void locationChanged(Plasma::Location location);
     void formFactorChanged(Plasma::FormFactor formFactor);
@@ -63,6 +67,7 @@ Q_SIGNALS:
 private:
     Plasma::Corona *m_corona;
     QWeakPointer<Plasma::Containment> m_containment;
+    QWeakPointer<ConfigView> m_configView;
 };
 
 #endif // VIEW_H

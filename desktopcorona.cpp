@@ -29,6 +29,7 @@
 #include <KLocalizedString>
 #include <Plasma/Package>
 
+#include "containmentconfigview.h"
 #include "panelview.h"
 #include "view.h"
 #include "scripting/desktopscriptengine.h"
@@ -266,7 +267,8 @@ void DesktopCorona::updateScreenOwner(int wasScreen, int isScreen, Plasma::Conta
 
 void DesktopCorona::handleContainmentAdded(Plasma::Containment* c)
 {
-    connect(c, &Plasma::Containment::showAddWidgetsInterface, this, &DesktopCorona::showWidgetExplorer);
+    connect(c, &Plasma::Containment::showAddWidgetsInterface,
+            this, &DesktopCorona::showWidgetExplorer);
 }
 
 void DesktopCorona::showWidgetExplorer()

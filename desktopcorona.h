@@ -23,6 +23,8 @@ class  *   Free Software Foundation, Inc.,
 
 #include "plasma/corona.h"
 
+#include "configview.h"
+
 class QDesktopWidget;
 class QQuickView;
 class PanelView;

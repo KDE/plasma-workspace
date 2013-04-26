@@ -167,6 +167,7 @@ void PanelView::showPanelController()
 {
     if (!m_panelConfigView) {
         m_panelConfigView = new PanelConfigView(containment(), this);
+        m_panelConfigView->init();
     }
     m_panelConfigView->show();
 }
