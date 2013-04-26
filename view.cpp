@@ -17,6 +17,10 @@
  */
 
 #include "view.h"
+#include "containmentconfigview.h"
+#include "panelconfigview.h"
+#include "panelview.h"
+
 
 #include <QDebug>
 #include <QQuickItem>
@@ -99,6 +103,8 @@ void View::setContainment(Plasma::Containment *cont)
                 this, &View::locationChanged);
         connect(cont, &Plasma::Containment::formFactorChanged,
                 this, &View::formFactorChanged);
+        connect(cont, &Plasma::Containment::configureRequested,
+                this, &View::showConfigurationInterface);
     } else {
         return;
     }
@@ -150,6 +156,32 @@ Plasma::FormFactor View::formFactor() const
 QRectF View::screenGeometry()
 {
     return screen()->geometry();
+}
+
+void View::showConfigurationInterface(Plasma::Applet *applet)
+{
+    if (m_configView) {
+        m_configView.data()->hide();
+        m_configView.data()->deleteLater();
+    }
+
+    if (!applet || !applet->containment()) {
+        return;
+    }
+
+    Plasma::Containment *cont = qobject_cast<Plasma::Containment *>(applet);
+    PanelView *pv = qobject_cast< PanelView* >(this);
+
+    if (cont && pv) {
+        m_configView = new PanelConfigView(cont, pv);
+    } else if (cont) {
+        m_configView = new ContainmentConfigView(cont);
+    } else {
+        m_configView = new ConfigView(applet);
+    }
+    m_configView.data()->init();
+
+    m_configView.data()->show();
 }
 
 #include "moc_view.cpp"

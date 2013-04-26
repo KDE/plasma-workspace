@@ -269,8 +269,6 @@ void DesktopCorona::handleContainmentAdded(Plasma::Containment* c)
 {
     connect(c, &Plasma::Containment::showAddWidgetsInterface,
             this, &DesktopCorona::showWidgetExplorer);
-    connect(c, &Plasma::Containment::configureRequested,
-            this, &DesktopCorona::showConfigurationInterface);
 }
 
 void DesktopCorona::showWidgetExplorer()
@@ -302,29 +300,6 @@ void DesktopCorona::printScriptError(const QString &error)
 void DesktopCorona::printScriptMessage(const QString &message)
 {
     qDebug() << message;
-}
-
-void DesktopCorona::showConfigurationInterface(Plasma::Applet *applet)
-{
-    if (m_configView) {
-        m_configView.data()->hide();
-        m_configView.data()->deleteLater();
-    }
-
-    if (!applet || !applet->containment()) {
-        return;
-    }
-
-    Plasma::Containment *cont = qobject_cast<Plasma::Containment *>(applet);
-
-    if (cont) {
-        m_configView = new ContainmentConfigView(cont);
-    } else {
-        m_configView = new ConfigView(applet);
-    }
-    m_configView.data()->init();
-
-    m_configView.data()->show();
 }
 
 #include "desktopcorona.moc"

@@ -21,6 +21,7 @@
 #define PANELCONFIGVIEW_H
 
 #include "configview.h"
+
 #include <QQuickItem>
 #include <QQuickView>
 #include <QJSValue>
