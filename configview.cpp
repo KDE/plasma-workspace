@@ -260,9 +260,9 @@ void ConfigModel::categories_clear(QQmlListProperty<ConfigCategory> *prop)
 
 
 //////////////////////////////ConfigView
-ConfigView::ConfigView(Plasma::Applet *interface, QWindow *parent)
+ConfigView::ConfigView(Plasma::Applet *applet, QWindow *parent)
     : QQuickView(parent),
-      m_applet(interface)
+      m_applet(applet)
 {
     qmlRegisterType<ConfigModel>("org.kde.plasma.configuration", 2, 0, "ConfigModel");
     qmlRegisterType<ConfigCategory>("org.kde.plasma.configuration", 2, 0, "ConfigCategory");
@@ -292,7 +292,7 @@ ConfigView::ConfigView(Plasma::Applet *interface, QWindow *parent)
 
     Plasma::Containment *cont = qobject_cast<Plasma::Containment *>(m_applet);
 
-    engine()->rootContext()->setContextProperty("plasmoid", interface);
+    engine()->rootContext()->setContextProperty("plasmoid", applet->property("graphicObject").value<QObject*>());
     engine()->rootContext()->setContextProperty("configDialog", this);
 }
 
