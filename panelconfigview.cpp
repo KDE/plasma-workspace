@@ -43,6 +43,8 @@ PanelConfigView::PanelConfigView(Plasma::Containment *containment, PanelView *pa
 
     setFlags(Qt::FramelessWindowHint);
 
+    engine()->rootContext()->setContextProperty("panel", panelView);
+    engine()->rootContext()->setContextProperty("configDialog", this);
     connect(containment, &Plasma::Containment::formFactorChanged,
             this, &PanelConfigView::syncGeometry);
 }
