@@ -43,7 +43,7 @@ void LookAndFeelPackageStructure::initPackage(Plasma::Package *package)
     package->addFileDefinition("windowswitcherpreview", "previews/windowswitcher.png", i18n("Preview for Window Switcher"));
 
     package->addDirectoryDefinition("loginmanager", "loginmanager", i18n("Login Manager"));
-    package->addFileDefinition("loginmanagermainscript", "previews/LoginManager.qml", i18n("Main Script for Login Manager"));
+    package->addFileDefinition("loginmanagermainscript", "loginmanager/LoginManager.qml", i18n("Main Script for Login Manager"));
 
     package->addDirectoryDefinition("logout", "logout", i18n("Logout Dialog"));
     package->addFileDefinition("logoutmainscript", "logout/Logout.qml", i18n("Main Script for Logout Dialog"));
