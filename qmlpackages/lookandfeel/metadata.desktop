@@ -1,0 +1,17 @@
+[Desktop Entry]
+Comment=Desktop Design Language
+Encoding=UTF-8
+Keywords=Desktop, Workspace, Appearance, Look and Feel, Logout, Lock, Suspend, Shutdown, Hibernate,
+Name=Look and Feel
+Type=Service
+
+X-KDE-ServiceTypes=Plasma/LookAndFeel
+X-KDE-ParentApp=
+X-KDE-PluginInfo-Author=Sebastian Kügler
+X-KDE-PluginInfo-Category=
+X-KDE-PluginInfo-Email=sebas@kde.org
+X-KDE-PluginInfo-License=GPLv2+
+X-KDE-PluginInfo-Name=org.kde.lookandfeel
+X-KDE-PluginInfo-Version=2.0
+X-KDE-PluginInfo-Website=http://www.kde.org
+X-Plasma-MainScript=defaults
