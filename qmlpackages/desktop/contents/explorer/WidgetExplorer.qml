@@ -30,6 +30,14 @@ Item {
     //this is used to perfectly align the filter field and delegates
     property int cellWidth: theme.defaultFont.pixelSize * 20
 
+    PlasmaCore.FrameSvgItem {
+        imagePath: "dialogs/background"
+        anchors.fill: parent
+        anchors.margins: margins
+        //color: "orange"
+        //opacity: 0.3
+    }
+
     property int minimumWidth: cellWidth + (
         widgetExplorer.orientation == Qt.Horizontal
         ? 0
@@ -51,7 +59,7 @@ Item {
         model: widgetExplorer.filterModel
         delegate: PlasmaComponents.MenuItem {
             text: display
-            separator: model["separator"]
+            separator: model["separator"] != undefined ? model["separator"] : false
             onClicked: {
                 list.contentX = 0
                 list.contentY = 0
