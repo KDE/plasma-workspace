@@ -27,6 +27,7 @@ Item {
     id: root
     width: 100
     height: 100
+    clip: true
 
     property int _s: theme.iconSizes.small
     property int _h: theme.iconSizes.desktop
