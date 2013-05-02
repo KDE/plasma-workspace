@@ -29,8 +29,8 @@ void ShellPackageStructure::initPackage(Plasma::Package *package)
     package->setDefaultPackageRoot("plasma/shells/");
 
     //Directories
-    package->addDirectoryDefinition("applet", "applet", i18n("Appelts furniture"));
-    package->addDirectoryDefinition("configuration", "configuration", i18n("Appelts furniture"));
+    package->addDirectoryDefinition("applet", "applet", i18n("Applets furniture"));
+    package->addDirectoryDefinition("configuration", "configuration", i18n("Applets furniture"));
     package->addDirectoryDefinition("explorer", "explorer", i18n("Explorer UI for adding widgets"));
     package->addDirectoryDefinition("views", "views", i18n("User interface for the views that will show containments"));
 
