@@ -168,7 +168,7 @@ QVariant ConfigModel::get(int row) const
     value["name"] = m_categories.at(row)->name();
     value["icon"] = m_categories.at(row)->icon();
     if (m_appletInterface) {
-        value["source"] = QUrl::fromLocalFile(m_appletInterface.data()->package().filePath("components", m_categories.at(row)->source()));
+        value["source"] = QUrl::fromLocalFile(m_appletInterface.data()->package().filePath("ui", m_categories.at(row)->source()));
     } else {
         value["source"] = m_categories.at(row)->source();
     }
@@ -281,19 +281,20 @@ ConfigView::ConfigView(Plasma::Applet *applet, QWindow *parent)
 
     //config model local of the applet
     QQmlComponent *component = new QQmlComponent(engine(), QUrl::fromLocalFile(m_applet->package().filePath("configmodel")), this);
-    QObject *object = component->create(engine()->rootContext());
+    QObject *object = component->beginCreate(engine()->rootContext());
     m_configModel = qobject_cast<ConfigModel *>(object);
     if (m_configModel) {
         m_configModel->setApplet(m_applet);
     } else {
         delete object;
     }
-    delete component;
 
     Plasma::Containment *cont = qobject_cast<Plasma::Containment *>(m_applet);
 
     engine()->rootContext()->setContextProperty("plasmoid", applet->property("graphicObject").value<QObject*>());
     engine()->rootContext()->setContextProperty("configDialog", this);
+    component->completeCreate();
+    delete component;
 }
 
 ConfigView::~ConfigView()
