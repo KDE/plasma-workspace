@@ -17,6 +17,7 @@ Keywords[sv]=Skrivbord, Arbetsyta, Utseende, Utseende och känsla, Utloggning, L
 Keywords[uk]=стільниця;робочий;простір;вигляд;поведінка;вихід;блокування;призупинення;призупинка;присипляння;вимикання;Desktop;Workspace;Appearance;Look and Feel;Logout;Lock;Suspend;Shutdown;Hibernate;
 Keywords[x-test]=xxDesktop, Workspace, Appearance, Look and Feel, Logout, Lock, Suspend, Shutdown, Hibernate,xx
 Name=Look and Feel
+Name[de]=Erscheinungsbild
 Name[nl]=Uiterlijk en gedrag
 Name[pt]=Aparência e Comportamento
 Name[pt_BR]=Aparência e comportamento
