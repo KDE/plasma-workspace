@@ -1,5 +1,6 @@
 [Desktop Entry]
 Comment=Desktop Design Language
+Comment[fr]=Langage de conception de bureau
 Comment[nl]=Ontwerptaal van het bureaublad
 Comment[pt]=Linguagem de Desenho do Ecrã
 Comment[pt_BR]=Linguagem de desenho da área de trabalho
@@ -9,6 +10,7 @@ Comment[uk]=Мова розробки для стільниці
 Comment[x-test]=xxDesktop Design Languagexx
 Encoding=UTF-8
 Keywords=Desktop, Workspace, Appearance, Look and Feel, Logout, Lock, Suspend, Shutdown, Hibernate,
+Keywords[fr]=Bureau, environnement de travail, apparence, déconnexion, verrouillage, suspendre, déconnexion, veille
 Keywords[nl]=Bureaublad, werkruimte, uiterlijk, uiterlijk en gedrag, afmelden, vergrendelen, onderbreken, afsluiten, slapen,
 Keywords[pt]=Ecrã, Área de Trabalho, Aparência, Aparência e Comportamento, Encerrar, Bloquear, Suspender, Desligar, Hibernar,
 Keywords[pt_BR]=Área de trabalho, Espaço de trabalho, Aparência, Aparência e Comportamento, Encerrar sessão, Bloquear, Suspender, Desligar, Hibernar,
@@ -18,6 +20,7 @@ Keywords[uk]=стільниця;робочий;простір;вигляд;по�
 Keywords[x-test]=xxDesktop, Workspace, Appearance, Look and Feel, Logout, Lock, Suspend, Shutdown, Hibernate,xx
 Name=Look and Feel
 Name[de]=Erscheinungsbild
+Name[fr]=Apparence
 Name[nl]=Uiterlijk en gedrag
 Name[pt]=Aparência e Comportamento
 Name[pt_BR]=Aparência e comportamento
