@@ -39,7 +39,8 @@ ContainmentConfigView::ContainmentConfigView(Plasma::Containment *cont, QWindow 
     : ConfigView(cont, parent),
       m_containment(cont),
       m_wallpaperConfigModel(0),
-      m_currentWallpaperConfig(0)
+      m_currentWallpaperConfig(0),
+      m_ownWallpaperConfig(0)
 {
     engine()->rootContext()->setContextProperty("configDialog", this);
     setCurrentWallpaper(cont->containment()->wallpaper());
@@ -50,7 +51,8 @@ ContainmentConfigView::ContainmentConfigView(Plasma::Containment *cont, QWindow 
     QFile file(pkg.filePath("config", "main.xml"));
     KConfigGroup cfg = m_containment->config();
     cfg = KConfigGroup(&cfg, "Wallpaper");
-    m_currentWallpaperConfig = m_ownWallpaperConfig = new ConfigPropertyMap(new Plasma::ConfigLoader(&cfg, &file), this);
+
+    syncWallpaperObjects();
 }
 
 ContainmentConfigView::~ContainmentConfigView()
@@ -113,13 +115,12 @@ void ContainmentConfigView::setCurrentWallpaper(const QString &wallpaper)
         return;
     }
 
+    delete m_ownWallpaperConfig;
+    m_ownWallpaperConfig = 0;
+
     if (m_containment->wallpaper() == wallpaper) {
-        delete m_currentWallpaperConfig;
-        m_currentWallpaperConfig = m_ownWallpaperConfig;
+        syncWallpaperObjects();
     } else {
-        if (m_containment->wallpaper() != m_currentWallpaper) {
-            delete m_currentWallpaperConfig;
-        }
 
         //we have to construct an independent ConfigPropertyMap when we want to configure wallpapers that are not the current one
         Plasma::Package pkg = Plasma::PluginLoader::self()->loadPackage("Plasma/Generic");
@@ -128,7 +129,7 @@ void ContainmentConfigView::setCurrentWallpaper(const QString &wallpaper)
         QFile file(pkg.filePath("config", "main.xml"));
         KConfigGroup cfg = m_containment->config();
         cfg = KConfigGroup(&cfg, "Wallpaper");
-        m_currentWallpaperConfig = new ConfigPropertyMap(new Plasma::ConfigLoader(&cfg, &file), this);
+        m_currentWallpaperConfig = m_ownWallpaperConfig = new ConfigPropertyMap(new Plasma::ConfigLoader(&cfg, &file), this);
     }
 
     m_currentWallpaper = wallpaper;
@@ -140,12 +141,20 @@ void ContainmentConfigView::applyWallpaper()
 {
     m_containment->setWallpaper(m_currentWallpaper);
 
-    if (m_currentWallpaperConfig != m_ownWallpaperConfig) {
-        delete m_currentWallpaperConfig;
-        m_currentWallpaperConfig = m_ownWallpaperConfig;
-        emit wallpaperConfigurationChanged();
-    }
+    delete m_ownWallpaperConfig;
+    m_ownWallpaperConfig = 0;
+
+    syncWallpaperObjects();
+    emit wallpaperConfigurationChanged();
 }
 
+void ContainmentConfigView::syncWallpaperObjects()
+{
+    QObject *wallpaperGraphicsObject = m_containment->property("wallpaperGraphicsObject").value<QObject *>();
+    engine()->rootContext()->setContextProperty("wallpaper", wallpaperGraphicsObject);
+
+    //FIXME: why m_wallpaperGraphicsObject->property("configuration").value<ConfigPropertyMap *>() doesn't work?
+    m_currentWallpaperConfig = static_cast<ConfigPropertyMap *>(wallpaperGraphicsObject->property("configuration").value<QObject *>());
+}
 
 #include "moc_containmentconfigview.cpp"

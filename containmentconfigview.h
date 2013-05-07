@@ -54,6 +54,9 @@ Q_SIGNALS:
     void currentWallpaperChanged();
     void wallpaperConfigurationChanged();
 
+protected:
+    void syncWallpaperObjects();
+
 private:
     Plasma::Containment *m_containment;
     ConfigModel *m_wallpaperConfigModel;
