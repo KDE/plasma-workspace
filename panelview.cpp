@@ -144,7 +144,7 @@ int PanelView::thickness() const
 void PanelView::setThickness(int value)
 {
     if (value == thickness()) {
-        value;
+        return;
     }
 
     if (formFactor() == Plasma::Vertical) {
