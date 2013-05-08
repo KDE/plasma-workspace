@@ -34,6 +34,7 @@ Rectangle {
 //END properties
 
 //BEGIN UI components
+    // Offset
     Rectangle {
         width: 32
         height: 32
@@ -52,92 +53,189 @@ Rectangle {
             }
             Component.onCompleted: {
                 if (panel.location == 5 || panel.location == 6) {
-                    panel.offset = parent.y
+                    parent.y = panel.offset
                 } else {
-                    panel.offset = parent.x
+                    parent.x = panel.offset
                 }
             }
         }
     }
 
+    //Minimum length
     Rectangle {
-        width: 100
+        width: 32
         height: 32
+        MouseArea {
+            drag {
+                target: parent
+                axis: (panel.location == 5 || panel.location == 6) ? Drag.YAxis : Drag.XAxis
+            }
+            anchors.fill: parent
+            onPositionChanged: {
+                if (panel.location == 5 || panel.location == 6) {
+                    panel.minimumLength = parent.y
+                } else {
+                    panel.minimumLength = parent.x
+                }
+            }
+            Component.onCompleted: {
+                if (panel.location == 5 || panel.location == 6) {
+                    parent.y = panel.minimumLength
+                } else {
+                    parent.x = panel.minimumLength
+                }
+            }
+        }
+    }
+
+    //Maximum length
+    Rectangle {
+        width: 32
+        height: 32
+        MouseArea {
+            drag {
+                target: parent
+                axis: (panel.location == 5 || panel.location == 6) ? Drag.YAxis : Drag.XAxis
+            }
+            anchors.fill: parent
+            onPositionChanged: {
+                if (panel.location == 5 || panel.location == 6) {
+                    panel.maximumLength = parent.y
+                } else {
+                    panel.maximumLength = parent.x
+                }
+            }
+            Component.onCompleted: {
+                if (panel.location == 5 || panel.location == 6) {
+                    parent.y = panel.maximumLength
+                } else {
+                    parent.x = panel.maximumLength
+                }
+            }
+        }
+    }
+
+    Row {
         anchors {
             centerIn: parent
         }
-        QtExtras.MouseEventListener {
-            anchors.fill: parent
-            property int lastX
-            property int lastY
-            property int startMouseX
-            property int startMouseY
-            onPressed: {
-                lastX = mouse.screenX
-                lastY = mouse.screenY
-                startMouseX = mouse.x
-                startMouseY = mouse.y
-            }
-            onPositionChanged: {
-                switch (panel.location) {
-                //TopEdge
-                case 3:
-                    configDialog.y = mouse.screenY - mapToItem(root, 0, startMouseY).y
-                    panel.y = configDialog.y - panel.height
-                    break
-                //LeftEdge
-                case 5:
-                    configDialog.x = mouse.screenX - mapToItem(root, startMouseX, 0).x
-                    panel.x = configDialog.x - panel.width
-                    break;
-                //RightEdge
-                case 6:
-                    configDialog.x = mouse.screenX - mapToItem(root, startMouseX, 0).x
-                    panel.x = configDialog.x + configDialog.width
-                    break;
-                //BottomEdge
-                case 4:
-                default:
-                    configDialog.y = mouse.screenY - mapToItem(root, 0, startMouseY).y
-                    panel.y = configDialog.y + configDialog.height
+        Rectangle {
+            width: 100
+            height: 32
+
+            QtExtras.MouseEventListener {
+                anchors.fill: parent
+                property int lastX
+                property int lastY
+                property int startMouseX
+                property int startMouseY
+                onPressed: {
+                    lastX = mouse.screenX
+                    lastY = mouse.screenY
+                    startMouseX = mouse.x
+                    startMouseY = mouse.y
                 }
-
-                lastX = mouse.screenX
-                lastY = mouse.screenY
-
-                var screenAspect = panel.screenGeometry.height / panel.screenGeometry.width
-                var newLocation = panel.location
-
-                if (mouse.screenY < panel.screenGeometry.y+(mouse.screenX-panel.screenGeometry.x)*screenAspect) {
-                    if (mouse.screenY < panel.screenGeometry.y + panel.screenGeometry.height-(mouse.screenX-panel.screenGeometry.x)*screenAspect) {
-                        if (panel.location == 3) {
-                            return;
-                        } else {
-                            newLocation = 3; //FIXME: Plasma::TopEdge;
-                        }
-                    } else if (panel.location == 6) {
-                            return;
-                    } else {
-                        newLocation = 6; //FIXME: Plasma::RightEdge;
+                onPositionChanged: {
+                    switch (panel.location) {
+                    //TopEdge
+                    case 3:
+                        configDialog.y = mouse.screenY - mapToItem(root, 0, startMouseY).y
+                        panel.y = configDialog.y - panel.height
+                        break
+                    //LeftEdge
+                    case 5:
+                        configDialog.x = mouse.screenX - mapToItem(root, startMouseX, 0).x
+                        panel.x = configDialog.x - panel.width
+                        break;
+                    //RightEdge
+                    case 6:
+                        configDialog.x = mouse.screenX - mapToItem(root, startMouseX, 0).x
+                        panel.x = configDialog.x + configDialog.width
+                        break;
+                    //BottomEdge
+                    case 4:
+                    default:
+                        configDialog.y = mouse.screenY - mapToItem(root, 0, startMouseY).y
+                        panel.y = configDialog.y + configDialog.height
                     }
 
-                } else {
-                    if (mouse.screenY < panel.screenGeometry.y + panel.screenGeometry.height-(mouse.screenX-panel.screenGeometry.x)*screenAspect) {
-                        if (panel.location == 5) {
-                            return;
+                    lastX = mouse.screenX
+                    lastY = mouse.screenY
+
+                    var screenAspect = panel.screenGeometry.height / panel.screenGeometry.width
+                    var newLocation = panel.location
+
+                    if (mouse.screenY < panel.screenGeometry.y+(mouse.screenX-panel.screenGeometry.x)*screenAspect) {
+                        if (mouse.screenY < panel.screenGeometry.y + panel.screenGeometry.height-(mouse.screenX-panel.screenGeometry.x)*screenAspect) {
+                            if (panel.location == 3) {
+                                return;
+                            } else {
+                                newLocation = 3; //FIXME: Plasma::TopEdge;
+                            }
+                        } else if (panel.location == 6) {
+                                return;
                         } else {
-                            newLocation = 5; //FIXME: Plasma::LeftEdge;
+                            newLocation = 6; //FIXME: Plasma::RightEdge;
                         }
-                    } else if(panel.location == 4) {
-                       return;
+
                     } else {
-                        newLocation = 4; //FIXME: Plasma::BottomEdge;
+                        if (mouse.screenY < panel.screenGeometry.y + panel.screenGeometry.height-(mouse.screenX-panel.screenGeometry.x)*screenAspect) {
+                            if (panel.location == 5) {
+                                return;
+                            } else {
+                                newLocation = 5; //FIXME: Plasma::LeftEdge;
+                            }
+                        } else if(panel.location == 4) {
+                        return;
+                        } else {
+                            newLocation = 4; //FIXME: Plasma::BottomEdge;
+                        }
+                    }
+                    panel.location = newLocation
+                    print("New Location: " + newLocation);
+                }
+                onReleased: panelResetAnimation.running = true
+                PlasmaComponents.Label {
+                    text: "Position"
+                }
+            }
+        }
+        Rectangle {
+            width: 100
+            height: 32
+            QtExtras.MouseEventListener {
+                anchors.fill: parent
+                property int startMouseX
+                property int startMouseY
+                onPressed: {
+                    startMouseX = mouse.x
+                    startMouseY = mouse.y
+                }
+                onPositionChanged: {
+                    switch (panel.location) {
+                    //TopEdge
+                    case 3:
+                        configDialog.y = mouse.screenY - mapToItem(root, 0, startMouseY).y
+                        panel.thickness = configDialog.y - panel.y
+                    //LeftEdge
+                    case 5:
+                        configDialog.x = mouse.screenX - mapToItem(root, startMouseX, 0).x
+                        panel.thickness = configDialog.x - panel.x
+                    //RightEdge
+                    case 6:
+                        configDialog.x = mouse.screenX - mapToItem(root, startMouseX, 0).x
+                        panel.thickness = (panel.x + panel.width) - (configDialog.x + configDialog.width)
+                    //BottomEdge
+                    case 4:
+                    default:
+                        configDialog.y = mouse.screenY - mapToItem(root, 0, startMouseY).y
+                        panel.thickness = (panel.y + panel.height) - (configDialog.y + configDialog.height)
                     }
                 }
-                panel.location = newLocation
-                print("New Location: " + newLocation);
+                PlasmaComponents.Label {
+                    text: "Height"
+                }
             }
-            onReleased: panelResetAnimation.running = true
         }
     }
     ParallelAnimation {

@@ -47,9 +47,6 @@ PanelView::PanelView(Plasma::Corona *corona, QWindow *parent)
     //TODO: how to take the shape from the framesvg?
     KWindowEffects::enableBlurBehind(winId(), true);
 
-    connect(this, &View::containmentChanged,
-            this, &PanelView::manageNewContainment);
-
     //Screen management
     connect(screen(), &QScreen::virtualGeometryChanged,
             this, &PanelView::positionPanel);
@@ -155,21 +152,55 @@ void PanelView::setThickness(int value)
     config().writeEntry("thickness", value);
     emit thicknessChanged();
 }
-    
 
-void PanelView::manageNewContainment()
+int PanelView::maximumLength() const
 {
-    connect(containment()->actions()->action("configure"), &QAction::triggered,
-            this, &PanelView::showPanelController);
+    return m_maxLength;
 }
 
-void PanelView::showPanelController()
+void PanelView::setMaximumLength(int length)
 {
-    if (!m_panelConfigView) {
-        m_panelConfigView = new PanelConfigView(containment(), this);
-        m_panelConfigView->init();
+    if (length == m_maxLength) {
+        return;
     }
-    m_panelConfigView->show();
+
+    if (m_minLength > length) {
+        setMinimumLength(length);
+    }
+
+    if (formFactor() == Plasma::Vertical) {
+        setMaximumHeight(length);
+    } else {
+        setMaximumWidth(length);
+    }
+    config().writeEntry("maxLength", length);
+    m_maxLength = length;
+    emit maximumLengthChanged();
+}
+
+int PanelView::minimumLength() const
+{
+    return m_minLength;
+}
+
+void PanelView::setMinimumLength(int length)
+{
+    if (length == m_minLength) {
+        return;
+    }
+
+    if (m_maxLength < length) {
+        setMaximumLength(length);
+    }
+
+    if (formFactor() == Plasma::Vertical) {
+        setMinimumHeight(length);
+    } else {
+        setMinimumWidth(length);
+    }
+    config().writeEntry("minLength", length);
+    m_minLength = length;
+    emit minimumLengthChanged();
 }
 
 void PanelView::positionPanel()
@@ -286,8 +317,11 @@ void PanelView::restore()
         }
         resize(config().readEntry<int>("length", screen()->size().width()),
                config().readEntry<int>("thickness", 32));
-               
     }
+
+    emit maximumLengthChanged();
+    emit minimumLengthChanged();
+    emit offsetChanged();
 }
 
 #include "moc_panelview.cpp"

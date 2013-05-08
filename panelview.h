@@ -31,6 +31,8 @@ class PanelView : public View
     Q_PROPERTY(Qt::Alignment alignment READ alignment WRITE setAlignment NOTIFY alignmentChanged)
     Q_PROPERTY(int offset READ offset WRITE setOffset NOTIFY offsetChanged)
     Q_PROPERTY(int thickness READ thickness WRITE setThickness NOTIFY thicknessChanged)
+    Q_PROPERTY(int maximumLength READ maximumLength WRITE setMaximumLength NOTIFY maximumLengthChanged)
+    Q_PROPERTY(int minimumLength READ minimumLength WRITE setMinimumLength NOTIFY minimumLengthChanged)
 
 public:
     explicit PanelView(Plasma::Corona *corona, QWindow *parent = 0);
@@ -49,15 +51,21 @@ public:
     int thickness() const;
     void setThickness(int thickness);
 
+    int maximumLength() const;
+    void setMaximumLength(int length);
+
+    int minimumLength() const;
+    void setMinimumLength(int length);
+
 Q_SIGNALS:
     void alignmentChanged();
     void offsetChanged();
     void screenGeometryChanged();
     void thicknessChanged();
+    void maximumLengthChanged();
+    void minimumLengthChanged();
 
 private Q_SLOTS:
-    void manageNewContainment();
-    void showPanelController();
     void positionPanel();
     void restore();
 
