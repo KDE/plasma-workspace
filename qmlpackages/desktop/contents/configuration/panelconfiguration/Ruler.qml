@@ -26,29 +26,43 @@ import org.kde.qtextracomponents 2.0 as QtExtras
 
 PlasmaCore.FrameSvgItem {
     id: root
-    
+
     property alias offset: offsetHandle.value
     property alias minimumLength: minimumLengthHandle.value
     property alias maximumLength: maximumLengthHandle.value
-    
+
     imagePath: "widgets/containment-controls"
     state: "BottomEdge"
     implicitWidth: offsetButton.implicitwidth + minimumLengthHandle.implicitwidth
     implicitHeight: 32//offsetButton.implicitheight + minimumLengthHandle.implicitheight
+
+    Component.onCompleted: {
+        offsetHandle.value = panel.offset
+        minimumLengthHandle.value = panel.minimumLength
+        maximumLengthHandle.value = panel.maximumLength
+    }
+
     PlasmaCore.Svg {
         id: containmentControlsSvg
         imagePath: "widgets/containment-controls"
     }
-    OffsetHandle {
+
+    SliderHandle {
         id: offsetHandle
+        graphicElementName: "offsetslider"
+        onValueChanged: panel.offset = value
     }
-    MinimumLengthHandle {
+    SliderHandle {
         id: minimumLengthHandle
+        graphicElementName: "minslider"
+        onValueChanged: panel.minimumLength = value
     }
-    MaximumLengthHandle {
+    SliderHandle {
         id: maximumLengthHandle
+        graphicElementName: "maxslider"
+        onValueChanged: panel.maximumLength = value
     }
-    
+
     states: [
         State {
             name: "TopEdge"

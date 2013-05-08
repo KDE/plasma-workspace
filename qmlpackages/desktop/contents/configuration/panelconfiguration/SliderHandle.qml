@@ -32,11 +32,13 @@ PlasmaCore.SvgItem {
     height: naturalSize.height
 
     property int value
+    property string graphicElementName
+
     onValueChanged: {
         if (panel.location == 5 || panel.location == 6) {
-            y = panel.maximumLength + panel.offset
+            y = value
         } else {
-            x = panel.maximumLength + panel.offset
+            x = value
         }
     }
 
@@ -48,16 +50,9 @@ PlasmaCore.SvgItem {
         anchors.fill: parent
         onPositionChanged: {
             if (panel.location == 5 || panel.location == 6) {
-                panel.maximumLength = parent.y - panel.offset
+                root.value = parent.y
             } else {
-                panel.maximumLength = parent.x - panel.offset
-            }
-        }
-        Component.onCompleted: {
-            if (panel.location == 5 || panel.location == 6) {
-                parent.y = panel.maximumLength + panel.offset
-            } else {
-                parent.x = panel.maximumLength + panel.offset
+                root.value = parent.x
             }
         }
     }
@@ -67,28 +62,28 @@ PlasmaCore.SvgItem {
             name: "TopEdge"
             PropertyChanges {
                 target: root
-                elementId: "north-maxslider"
+                elementId: "north-" + graphicElementName
             }
         },
         State {
             name: "BottomEdge"
             PropertyChanges {
                 target: root
-                elementId: "south-maxslider"
+                elementId: "south-" + graphicElementName
             }
         },
         State {
             name: "LeftEdge"
             PropertyChanges {
                 target: root
-                elementId: "west-maxslider"
+                elementId: "west-" + graphicElementName
             }
         },
         State {
             name: "RightEdge"
             PropertyChanges {
                 target: root
-                elementId: "east-maxslider"
+                elementId: "east-" + graphicElementName
             }
         }
     ]
