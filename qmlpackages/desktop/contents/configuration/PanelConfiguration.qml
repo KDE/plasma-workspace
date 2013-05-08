@@ -38,98 +38,33 @@ Rectangle {
 //BEGIN Connections
     Connections {
         target: panel
-        onOffsetChanged: offsetHandle.value = panel.offset
-        onMinimumLengthChanged: minimumLengthHandle.value = panel.minimumLength
-        onMaximumLengthChanged: maximumLengthHandle.value = panel.maximumLength
+        onOffsetChanged: ruler.offset = panel.offset
+        onMinimumLengthChanged: ruler.minimumLength = panel.minimumLength
+        onMaximumLengthChanged: ruler.maximumLength = panel.maximumLength
     }
 //END Connections
 
 
 //BEGIN UI components
-    // Offset
-    OffsetButton {
-        id: offsetHandle
-    }
 
-    //Minimum length
-    Rectangle {
-        id: minimumLengthHandle
-        width: 32
-        height: 32
-
-        property int value
-        onValueChanged: {
-            if (panel.location == 5 || panel.location == 6) {
-                y = panel.minimumLength + panel.offset
-            } else {
-                x = panel.minimumLength + panel.offset
+    Ruler {
+        id: ruler
+        state: {
+            switch (panel.location) {
+            //TopEdge
+            case 3:
+                return "TopEdge"
+            //LeftEdge
+            case 5:
+                return "LeftEdge"
+            //RightEdge
+            case 6:
+                return "RightEdge"
+            //BottomEdge
+            case 4:
+            default:
+                return "BottomEdge"
             }
-        }
-
-        MouseArea {
-            drag {
-                target: parent
-                axis: (panel.location == 5 || panel.location == 6) ? Drag.YAxis : Drag.XAxis
-            }
-            anchors.fill: parent
-            onPositionChanged: {
-                if (panel.location == 5 || panel.location == 6) {
-                    panel.minimumLength = parent.y - panel.offset
-                } else {
-                    panel.minimumLength = parent.x - panel.offset
-                }
-            }
-            Component.onCompleted: {
-                if (panel.location == 5 || panel.location == 6) {
-                    parent.y = panel.minimumLength + panel.offset
-                } else {
-                    parent.x = panel.minimumLength + panel.offset
-                }
-            }
-        }
-        PlasmaComponents.Label {
-            text: "Min"
-        }
-    }
-
-    //Maximum length
-    Rectangle {
-        id: maximumLengthHandle
-        width: 32
-        height: 32
-
-        property int value
-        onValueChanged: {
-            if (panel.location == 5 || panel.location == 6) {
-                y = panel.maximumLength + panel.offset
-            } else {
-                x = panel.maximumLength + panel.offset
-            }
-        }
-
-        MouseArea {
-            drag {
-                target: parent
-                axis: (panel.location == 5 || panel.location == 6) ? Drag.YAxis : Drag.XAxis
-            }
-            anchors.fill: parent
-            onPositionChanged: {
-                if (panel.location == 5 || panel.location == 6) {
-                    panel.maximumLength = parent.y - panel.offset
-                } else {
-                    panel.maximumLength = parent.x - panel.offset
-                }
-            }
-            Component.onCompleted: {
-                if (panel.location == 5 || panel.location == 6) {
-                    parent.y = panel.maximumLength + panel.offset
-                } else {
-                    parent.x = panel.maximumLength + panel.offset
-                }
-            }
-        }
-        PlasmaComponents.Label {
-            text: "Max"
         }
     }
 

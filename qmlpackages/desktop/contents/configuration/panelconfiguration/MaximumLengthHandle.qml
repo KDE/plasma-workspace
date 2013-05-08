@@ -24,17 +24,19 @@ import org.kde.plasma.configuration 2.0
 import org.kde.qtextracomponents 2.0 as QtExtras
 
 
-Rectangle {
-    id: offsetHandle
-    width: 32
-    height: 32
+PlasmaCore.SvgItem {
+    id: root
+    svg: containmentControlsSvg
+    state: parent.state
+    width: naturalSize.width
+    height: naturalSize.height
 
     property int value
     onValueChanged: {
         if (panel.location == 5 || panel.location == 6) {
-            y = panel.offset
+            y = panel.maximumLength + panel.offset
         } else {
-            x = panel.offset
+            x = panel.maximumLength + panel.offset
         }
     }
 
@@ -46,20 +48,48 @@ Rectangle {
         anchors.fill: parent
         onPositionChanged: {
             if (panel.location == 5 || panel.location == 6) {
-                panel.offset = parent.y
+                panel.maximumLength = parent.y - panel.offset
             } else {
-                panel.offset = parent.x
+                panel.maximumLength = parent.x - panel.offset
             }
         }
         Component.onCompleted: {
             if (panel.location == 5 || panel.location == 6) {
-                parent.y = panel.offset
+                parent.y = panel.maximumLength + panel.offset
             } else {
-                parent.x = panel.offset
+                parent.x = panel.maximumLength + panel.offset
             }
         }
     }
-    PlasmaComponents.Label {
-        text: "Offset"
-    }
+
+    states: [
+        State {
+            name: "TopEdge"
+            PropertyChanges {
+                target: root
+                elementId: "north-maxslider"
+            }
+        },
+        State {
+            name: "BottomEdge"
+            PropertyChanges {
+                target: root
+                elementId: "south-maxslider"
+            }
+        },
+        State {
+            name: "LeftEdge"
+            PropertyChanges {
+                target: root
+                elementId: "west-maxslider"
+            }
+        },
+        State {
+            name: "RightEdge"
+            PropertyChanges {
+                target: root
+                elementId: "east-maxslider"
+            }
+        }
+    ]
 }
