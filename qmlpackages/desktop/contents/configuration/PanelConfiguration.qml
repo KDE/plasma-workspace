@@ -71,13 +71,15 @@ PlasmaCore.FrameSvgItem {
         state: root.state
     }
 
-    Row {
+    PlasmaComponents.ButtonRow {
+        spacing: 0
+        exclusive: false
         anchors {
             centerIn: parent
         }
-        Rectangle {
-            width: 100
-            height: 32
+        PlasmaComponents.ToolButton {
+            flat: false
+            text: "Screen edge"
 
             QtExtras.MouseEventListener {
                 anchors.fill: parent
@@ -151,14 +153,11 @@ PlasmaCore.FrameSvgItem {
                     print("New Location: " + newLocation);
                 }
                 onReleased: panelResetAnimation.running = true
-                PlasmaComponents.Label {
-                    text: "Position"
-                }
             }
         }
-        Rectangle {
-            width: 100
-            height: 32
+        PlasmaComponents.ToolButton {
+            flat: false
+            text: "Height"
             QtExtras.MouseEventListener {
                 anchors.fill: parent
                 property int startMouseX
@@ -190,9 +189,6 @@ PlasmaCore.FrameSvgItem {
                         configDialog.y = mouse.screenY - mapToItem(root, 0, startMouseY).y
                         panel.thickness = (panel.y + panel.height) - (configDialog.y + configDialog.height)
                     }
-                }
-                PlasmaComponents.Label {
-                    text: "Height"
                 }
             }
         }
