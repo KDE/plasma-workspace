@@ -22,6 +22,8 @@ import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.configuration 2.0
 import org.kde.qtextracomponents 2.0 as QtExtras
+import "panelconfiguration"
+
 
 //TODO: all of this will be done with desktop components
 Rectangle {
@@ -42,46 +44,11 @@ Rectangle {
     }
 //END Connections
 
+
 //BEGIN UI components
     // Offset
-    Rectangle {
+    OffsetButton {
         id: offsetHandle
-        width: 32
-        height: 32
-
-        property int value
-        onValueChanged: {
-            if (panel.location == 5 || panel.location == 6) {
-                y = panel.offset
-            } else {
-                x = panel.offset
-            }
-        }
-
-        MouseArea {
-            drag {
-                target: parent
-                axis: (panel.location == 5 || panel.location == 6) ? Drag.YAxis : Drag.XAxis
-            }
-            anchors.fill: parent
-            onPositionChanged: {
-                if (panel.location == 5 || panel.location == 6) {
-                    panel.offset = parent.y
-                } else {
-                    panel.offset = parent.x
-                }
-            }
-            Component.onCompleted: {
-                if (panel.location == 5 || panel.location == 6) {
-                    parent.y = panel.offset
-                } else {
-                    parent.x = panel.offset
-                }
-            }
-        }
-        PlasmaComponents.Label {
-            text: "Offset"
-        }
     }
 
     //Minimum length
