@@ -52,9 +52,9 @@ Rectangle {
         property int value
         onValueChanged: {
             if (panel.location == 5 || panel.location == 6) {
-                parent.y = panel.offset
+                y = panel.offset
             } else {
-                parent.x = panel.offset
+                x = panel.offset
             }
         }
 
@@ -79,6 +79,9 @@ Rectangle {
                 }
             }
         }
+        PlasmaComponents.Label {
+            text: "Offset"
+        }
     }
 
     //Minimum length
@@ -88,6 +91,13 @@ Rectangle {
         height: 32
 
         property int value
+        onValueChanged: {
+            if (panel.location == 5 || panel.location == 6) {
+                y = panel.minimumLength + panel.offset
+            } else {
+                x = panel.minimumLength + panel.offset
+            }
+        }
 
         MouseArea {
             drag {
@@ -97,18 +107,21 @@ Rectangle {
             anchors.fill: parent
             onPositionChanged: {
                 if (panel.location == 5 || panel.location == 6) {
-                    panel.minimumLength = parent.y
+                    panel.minimumLength = parent.y - panel.offset
                 } else {
-                    panel.minimumLength = parent.x
+                    panel.minimumLength = parent.x - panel.offset
                 }
             }
             Component.onCompleted: {
                 if (panel.location == 5 || panel.location == 6) {
-                    parent.y = panel.minimumLength
+                    parent.y = panel.minimumLength + panel.offset
                 } else {
-                    parent.x = panel.minimumLength
+                    parent.x = panel.minimumLength + panel.offset
                 }
             }
+        }
+        PlasmaComponents.Label {
+            text: "Min"
         }
     }
 
@@ -119,6 +132,13 @@ Rectangle {
         height: 32
 
         property int value
+        onValueChanged: {
+            if (panel.location == 5 || panel.location == 6) {
+                y = panel.maximumLength + panel.offset
+            } else {
+                x = panel.maximumLength + panel.offset
+            }
+        }
 
         MouseArea {
             drag {
@@ -128,18 +148,21 @@ Rectangle {
             anchors.fill: parent
             onPositionChanged: {
                 if (panel.location == 5 || panel.location == 6) {
-                    panel.maximumLength = parent.y
+                    panel.maximumLength = parent.y - panel.offset
                 } else {
-                    panel.maximumLength = parent.x
+                    panel.maximumLength = parent.x - panel.offset
                 }
             }
             Component.onCompleted: {
                 if (panel.location == 5 || panel.location == 6) {
-                    parent.y = panel.maximumLength
+                    parent.y = panel.maximumLength + panel.offset
                 } else {
-                    parent.x = panel.maximumLength
+                    parent.x = panel.maximumLength + panel.offset
                 }
             }
+        }
+        PlasmaComponents.Label {
+            text: "Max"
         }
     }
 
