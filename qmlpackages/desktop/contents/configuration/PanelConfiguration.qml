@@ -33,11 +33,31 @@ Rectangle {
     height: 64
 //END properties
 
+//BEGIN Connections
+    Connections {
+        target: panel
+        onOffsetChanged: offsetHandle.value = panel.offset
+        onMinimumLengthChanged: minimumLengthHandle.value = panel.minimumLength
+        onMaximumLengthChanged: maximumLengthHandle.value = panel.maximumLength
+    }
+//END Connections
+
 //BEGIN UI components
     // Offset
     Rectangle {
+        id: offsetHandle
         width: 32
         height: 32
+
+        property int value
+        onValueChanged: {
+            if (panel.location == 5 || panel.location == 6) {
+                parent.y = panel.offset
+            } else {
+                parent.x = panel.offset
+            }
+        }
+
         MouseArea {
             drag {
                 target: parent
@@ -63,8 +83,12 @@ Rectangle {
 
     //Minimum length
     Rectangle {
+        id: minimumLengthHandle
         width: 32
         height: 32
+
+        property int value
+
         MouseArea {
             drag {
                 target: parent
@@ -90,8 +114,12 @@ Rectangle {
 
     //Maximum length
     Rectangle {
+        id: maximumLengthHandle
         width: 32
         height: 32
+
+        property int value
+
         MouseArea {
             drag {
                 target: parent

@@ -46,6 +46,16 @@ public:
     ~DesktopCorona();
 
     /**
+     * Where to save global configuration that doesn't have anything to do with the scene (e.g. views)
+     */
+    KSharedConfig::Ptr applicationConfig();
+
+    /**
+     * Request saving applicationConfig on disk, it's event compressed, not immediate
+     */
+    void requestApplicationConfigSync();
+
+    /**
      * Loads the default (system wide) layout for this user
      **/
     void loadDefaultLayout();
@@ -88,6 +98,7 @@ protected Q_SLOTS:
 private Q_SLOTS:
     void handleContainmentAdded(Plasma::Containment *c);
     void showWidgetExplorer();
+    void syncAppConfig();
 
 private:
     QDesktopWidget *m_desktopWidget;
@@ -95,6 +106,7 @@ private:
     WidgetExplorerView *m_widgetExplorerView;
     QHash<Plasma::Containment *, PanelView *> m_panelViews;
     KConfigGroup m_desktopDefaultsConfig;
+    QTimer *m_appConfigSyncTimer;
 };
 
 #endif

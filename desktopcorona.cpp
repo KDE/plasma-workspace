@@ -45,6 +45,12 @@ DesktopCorona::DesktopCorona(QObject *parent)
 {
     m_desktopDefaultsConfig = KConfigGroup(KSharedConfig::openConfig(package().filePath("defaults")), "Desktop");
 
+    m_appConfigSyncTimer = new QTimer(this);
+    m_appConfigSyncTimer->setSingleShot(true);
+    connect(m_appConfigSyncTimer, &QTimer::timeout,
+            this, &DesktopCorona::syncAppConfig);
+
+
     connect(m_desktopWidget, SIGNAL(resized(int)),
             this, SLOT(screenResized(int)));
     connect(m_desktopWidget, SIGNAL(screenCountChanged(int)),
@@ -62,6 +68,20 @@ DesktopCorona::DesktopCorona(QObject *parent)
 
 DesktopCorona::~DesktopCorona()
 {
+}
+
+KSharedConfig::Ptr DesktopCorona::applicationConfig()
+{
+    return KSharedConfig::openConfig();
+}
+
+void DesktopCorona::requestApplicationConfigSync()
+{
+    // constant controlling how long between requesting a configuration sync
+    // and one happening should occur. currently 10 seconds
+    static const int CONFIG_SYNC_TIMEOUT = 10000;
+
+    m_appConfigSyncTimer->start(CONFIG_SYNC_TIMEOUT);
 }
 
 void DesktopCorona::loadDefaultLayout()
@@ -155,7 +175,7 @@ void DesktopCorona::checkDesktop(/*Activity *activity,*/ bool signalWhenExists, 
         qWarning() << "Invalid screen";
     }
     c->flushPendingConstraintsEvents();
-    requestConfigSync();
+    requestApplicationConfigSync();
 
     if (signalWhenExists) {
         emit containmentAdded(c);
@@ -292,6 +312,12 @@ void DesktopCorona::showWidgetExplorer()
     m_widgetExplorerView->show();
 }
 
+void DesktopCorona::syncAppConfig()
+{
+    qDebug() << "Syncing plasma-shellrc config";
+    applicationConfig()->sync();
+}
+
 void DesktopCorona::printScriptError(const QString &error)
 {
     qWarning() << error;
@@ -302,5 +328,5 @@ void DesktopCorona::printScriptMessage(const QString &message)
     qDebug() << message;
 }
 
-#include "desktopcorona.moc"
+#include "moc_desktopcorona.cpp"
 
