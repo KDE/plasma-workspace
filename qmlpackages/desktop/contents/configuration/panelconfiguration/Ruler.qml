@@ -54,11 +54,13 @@ PlasmaCore.FrameSvgItem {
     }
     SliderHandle {
         id: minimumLengthHandle
+        offset: panel.offset
         graphicElementName: "minslider"
         onValueChanged: panel.minimumLength = value
     }
     SliderHandle {
         id: maximumLengthHandle
+        offset: panel.offset
         graphicElementName: "maxslider"
         onValueChanged: panel.maximumLength = value
     }

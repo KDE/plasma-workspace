@@ -33,12 +33,21 @@ PlasmaCore.SvgItem {
 
     property int value
     property string graphicElementName
+    property int offset: 0
 
     onValueChanged: {
         if (panel.location == 5 || panel.location == 6) {
-            y = value
+            y = value + offset - root.height/2
         } else {
-            x = value
+            x = value + offset - root.width/2
+        }
+    }
+
+    onOffsetChanged: {
+        if (panel.location == 5 || panel.location == 6) {
+            y = value + offset - root.height/2
+        } else {
+            x = value + offset - root.width/2
         }
     }
 
@@ -50,9 +59,9 @@ PlasmaCore.SvgItem {
         anchors.fill: parent
         onPositionChanged: {
             if (panel.location == 5 || panel.location == 6) {
-                root.value = parent.y
+                root.value = parent.y - offset + root.height/2
             } else {
-                root.value = parent.x
+                root.value = parent.x - offset + root.width/2
             }
         }
     }
