@@ -26,6 +26,11 @@ import org.kde.qtextracomponents 2.0 as QtExtras
 
 PlasmaCore.FrameSvgItem {
     id: root
+    
+    property alias offset: offsetHandle.value
+    property alias minimumLength: minimumLengthHandle.value
+    property alias maximumLength: maximumLengthHandle.value
+    
     imagePath: "widgets/containment-controls"
     state: "BottomEdge"
     implicitWidth: offsetButton.implicitwidth + minimumLengthHandle.implicitwidth
@@ -35,7 +40,7 @@ PlasmaCore.FrameSvgItem {
         imagePath: "widgets/containment-controls"
     }
     OffsetHandle {
-        id: offsetButton
+        id: offsetHandle
     }
     MinimumLengthHandle {
         id: minimumLengthHandle

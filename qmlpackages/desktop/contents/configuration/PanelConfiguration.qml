@@ -26,11 +26,30 @@ import "panelconfiguration"
 
 
 //TODO: all of this will be done with desktop components
-Rectangle {
+PlasmaCore.FrameSvgItem {
     id: root
 
+    imagePath: "dialogs/background"
+
+    state: {
+        switch (panel.location) {
+        //TopEdge
+        case 3:
+            return "TopEdge"
+        //LeftEdge
+        case 5:
+            return "LeftEdge"
+        //RightEdge
+        case 6:
+            return "RightEdge"
+        //BottomEdge
+        case 4:
+        default:
+            return "BottomEdge"
+        }
+    }
+
 //BEGIN properties
-    color: "lightgray"
     width: 640
     height: 64
 //END properties
@@ -49,23 +68,7 @@ Rectangle {
 
     Ruler {
         id: ruler
-        state: {
-            switch (panel.location) {
-            //TopEdge
-            case 3:
-                return "TopEdge"
-            //LeftEdge
-            case 5:
-                return "LeftEdge"
-            //RightEdge
-            case 6:
-                return "RightEdge"
-            //BottomEdge
-            case 4:
-            default:
-                return "BottomEdge"
-            }
-        }
+        state: root.state
     }
 
     Row {
@@ -249,4 +252,37 @@ Rectangle {
         }
     }
 //END UI components
+
+//BEGIN States
+states: [
+        State {
+            name: "TopEdge"
+            PropertyChanges {
+                target: root
+                enabledBorders: "TopBorder|BottomBorder"
+            }
+        },
+        State {
+            name: "BottomEdge"
+            PropertyChanges {
+                target: root
+                enabledBorders: "TopBorder|BottomBorder"
+            }
+        },
+        State {
+            name: "LeftEdge"
+            PropertyChanges {
+                target: root
+                enabledBorders: "LeftBorder|RightBorder"
+            }
+        },
+        State {
+            name: "RightEdge"
+            PropertyChanges {
+                target: root
+                enabledBorders: "LeftBorder|RightBorder"
+            }
+        }
+    ]
+//END States
 }
