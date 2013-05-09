@@ -36,10 +36,15 @@ PlasmaCore.FrameSvgItem {
     implicitWidth: offsetHandle.width + minimumLengthHandle.width
     implicitHeight: offsetHandle.height + minimumLengthHandle.height
 
+    onMinimumLengthChanged: leftMinimumLengthHandle.value = minimumLength
+    onMaximumLengthChanged: leftMaximumLengthHandle.value = maximumLength
+
     Component.onCompleted: {
         offsetHandle.value = panel.offset
         minimumLengthHandle.value = panel.minimumLength
         maximumLengthHandle.value = panel.maximumLength
+        leftMinimumLengthHandle.value = panel.minimumLength
+        leftMaximumLengthHandle.value = panel.maximumLength
     }
 
     PlasmaCore.Svg {
@@ -49,22 +54,39 @@ PlasmaCore.FrameSvgItem {
 
     SliderHandle {
         id: offsetHandle
-        inverted: panel.alignment == Qt.AlignRight
         graphicElementName: "offsetslider"
         onValueChanged: panel.offset = value
     }
     SliderHandle {
         id: minimumLengthHandle
-        inverted: panel.alignment == Qt.AlignRight
+        alignment: panel.alignment | Qt.AlignLeft
+        visible: panel.alignment != Qt.AlignRight
         offset: panel.offset
         graphicElementName: "minslider"
         onValueChanged: panel.minimumLength = value
     }
     SliderHandle {
         id: maximumLengthHandle
-        inverted: panel.alignment == Qt.AlignRight
+        alignment: panel.alignment | Qt.AlignLeft
+        visible: panel.alignment != Qt.AlignRight
         offset: panel.offset
         graphicElementName: "maxslider"
+        onValueChanged: panel.maximumLength = value
+    }
+    SliderHandle {
+        id: leftMinimumLengthHandle
+        alignment: panel.alignment | Qt.AlignRight
+        visible: panel.alignment != Qt.AlignLeft
+        offset: panel.offset
+        graphicElementName: "maxslider"
+        onValueChanged: panel.minimumLength = value
+    }
+    SliderHandle {
+        id: leftMaximumLengthHandle
+        alignment: panel.alignment | Qt.AlignRight
+        visible: panel.alignment != Qt.AlignLeft
+        offset: panel.offset
+        graphicElementName: "minslider"
         onValueChanged: panel.maximumLength = value
     }
 
@@ -105,6 +127,24 @@ PlasmaCore.FrameSvgItem {
             }
             AnchorChanges {
                 target: maximumLengthHandle
+                anchors {
+                    top: undefined
+                    bottom: root.bottom
+                    left: undefined
+                    right: undefined
+                }
+            }
+            AnchorChanges {
+                target: leftMinimumLengthHandle
+                anchors {
+                    top: root.top
+                    bottom: undefined
+                    left: undefined
+                    right: undefined
+                }
+            }
+            AnchorChanges {
+                target: leftMaximumLengthHandle
                 anchors {
                     top: undefined
                     bottom: root.bottom
@@ -156,6 +196,24 @@ PlasmaCore.FrameSvgItem {
                     right: undefined
                 }
             }
+            AnchorChanges {
+                target: leftMinimumLengthHandle
+                anchors {
+                    top: undefined
+                    bottom: root.bottom
+                    left: undefined
+                    right: undefined
+                }
+            }
+            AnchorChanges {
+                target: leftMaximumLengthHandle
+                anchors {
+                    top: root.top
+                    bottom: undefined
+                    left: undefined
+                    right: undefined
+                }
+            }
         },
         State {
             name: "LeftEdge"
@@ -200,6 +258,24 @@ PlasmaCore.FrameSvgItem {
                     right: root.right
                 }
             }
+            AnchorChanges {
+                target: leftMinimumLengthHandle
+                anchors {
+                    top: undefined
+                    bottom: undefined
+                    left: root.left
+                    right: undefined
+                }
+            }
+            AnchorChanges {
+                target: leftMaximumLengthHandle
+                anchors {
+                    top: undefined
+                    bottom: undefined
+                    left: undefined
+                    right: root.right
+                }
+            }
         },
         State {
             name: "RightEdge"
@@ -237,6 +313,24 @@ PlasmaCore.FrameSvgItem {
             }
             AnchorChanges {
                 target: maximumLengthHandle
+                anchors {
+                    top: undefined
+                    bottom: undefined
+                    left: parent.left
+                    right: undefined
+                }
+            }
+            AnchorChanges {
+                target: leftMinimumLengthHandle
+                anchors {
+                    top: undefined
+                    bottom: undefined
+                    left: undefined
+                    right: parent.right
+                }
+            }
+            AnchorChanges {
+                target: leftMaximumLengthHandle
                 anchors {
                     top: undefined
                     bottom: undefined

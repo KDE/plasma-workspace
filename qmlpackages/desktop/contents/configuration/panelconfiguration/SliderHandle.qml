@@ -31,29 +31,49 @@ PlasmaCore.SvgItem {
     width: naturalSize.width
     height: naturalSize.height
 
+    //value expressed by this slider
     property int value
+    //name of the graphics to load
     property string graphicElementName
+    //where the point "0" is
     property int offset: 0
-    property bool inverted: false
+    //handle type: behave in different ways based on the alignment
+    property int alignment: panel.alignment
 
     function syncPos() {
         if (panel.location == 5 || panel.location == 6) {
-            if (inverted) {
+            if (alignment == Qt.AlignRight) {
                 y = root.parent.height - (value + offset + root.height/2)
-            } else {
+            } else if (alignment == Qt.AlignLeft) {
                 y = value + offset - root.height/2
+            } else {
+                if (root.alignment & Qt.AlignRight) {
+                    y = root.parent.height/2 - value/2 - offset + root.height/2
+                } else if (root.alignment & Qt.AlignLeft) {
+                    y = root.parent.height/2 + value/2 + offset - root.height/2
+                } else {
+                    y = root.parent.height/2 + value + offset -root.height/2
+                }
             }
         } else {
-            if (inverted) {
+            if (alignment == Qt.AlignRight) {
                 x = root.parent.width - (value + offset + root.width/2)
-            } else {
+            } else if (alignment == Qt.AlignLeft) {
                 x = value + offset - root.width/2
+            } else {
+                if (root.alignment & Qt.AlignRight) {
+                    x = root.parent.width/2 - value/2 + offset - root.width/2
+                } else if (root.alignment & Qt.AlignLeft) {
+                    x = root.parent.width/2 + value/2 + offset -root.width/2
+                } else {
+                    x = root.parent.width/2 + value + offset -root.width/2
+                }
             }
         }
     }
     onValueChanged: syncPos()
     onOffsetChanged: syncPos()
-    onInvertedChanged: syncPos()
+    onAlignmentChanged: syncPos()
     Connections {
         target: root.parent
         onWidthChanged: syncPos()
@@ -68,16 +88,25 @@ PlasmaCore.SvgItem {
         anchors.fill: parent
         onPositionChanged: {
             if (panel.location == 5 || panel.location == 6) {
-                if (root.inverted) {
+                if (root.alignment == Qt.AlignRight) {
                     root.value = root.parent.height - (parent.y + offset + root.height/2)
-                } else {
+                } else if (alignment == Qt.AlignLeft) {
                     root.value = parent.y - offset + root.height/2
                 }
             } else {
-                if (root.inverted) {
+                if (root.alignment == Qt.AlignRight) {
                     root.value = root.parent.width - (parent.x + offset + root.width/2)
-                } else {
+                } else if (alignment == Qt.AlignLeft) {
                     root.value = parent.x - offset + root.width/2
+                //Center
+                } else {
+                    if (root.alignment & Qt.AlignRight) {
+                        root.value = (root.parent.width/2 - parent.x + offset)*2  + root.width/2
+                    } else if (root.alignment & Qt.AlignLeft) {
+                        root.value = (parent.x - offset - root.parent.width/2)*2  + root.width/2
+                    } else {
+                        root.value = parent.x - root.parent.width/2 - offset + root.width/2
+                    }
                 }
             }
         }

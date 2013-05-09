@@ -327,7 +327,11 @@ void PanelView::restore()
 
     static const int MINSIZE = 10;
 
-    m_offset = qMax(0, config().readEntry<int>("offset", 0));
+    m_offset = config().readEntry<int>("offset", 0);
+    if (m_alignment != Qt::AlignCenter) {
+        m_offset = qMax(0, m_offset);
+    }
+
     m_maxLength = config().readEntry<int>("maxLength", -1);
     m_minLength = config().readEntry<int>("minLength", -1);
     m_alignment = (Qt::Alignment)config().readEntry<int>("alignment", Qt::AlignLeft);
