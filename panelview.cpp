@@ -305,25 +305,28 @@ void PanelView::restore()
     setMaximumSize(QSize(10000, 10000));
 
     if (containment()->formFactor() == Plasma::Vertical) {
+        resize(config().readEntry<int>("thickness", 32),
+               config().readEntry<int>("length", screen()->size().height()));
+
         if (m_minLength > 0) {
             setMinimumHeight(m_minLength);
         }
         if (m_maxLength > 0) {
             setMaximumHeight(m_maxLength);
         }
-        resize(config().readEntry<int>("thickness", 32),
-               config().readEntry<int>("length", screen()->size().height()));
 
     //Horizontal
     } else {
+        resize(config().readEntry<int>("length", screen()->size().width()),
+               config().readEntry<int>("thickness", 32));
+
         if (m_minLength > 0) {
             setMinimumWidth(m_minLength);
         }
+
         if (m_maxLength > 0) {
             setMaximumWidth(m_maxLength);
         }
-        resize(config().readEntry<int>("length", screen()->size().width()),
-               config().readEntry<int>("thickness", 32));
     }
 
     emit maximumLengthChanged();
