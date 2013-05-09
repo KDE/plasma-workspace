@@ -51,6 +51,15 @@ PlasmaCore.FrameSvgItem {
         id: containmentControlsSvg
         imagePath: "widgets/containment-controls"
     }
+    PlasmaCore.SvgItem {
+        id: centerMark
+        svg: containmentControlsSvg
+        elementId: dialogRoot.vertical ? "vertical-centerindicator" : "horizontal-centerindicator"
+        visible: panel.alignment == Qt.AlignCenter
+        width: dialogRoot.vertical ? parent.width : naturalSize.width
+        height: dialogRoot.vertical ? naturalSize.height : parent.height
+        anchors.centerIn: parent
+    }
 
     SliderHandle {
         id: offsetHandle
