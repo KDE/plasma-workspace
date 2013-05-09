@@ -43,23 +43,23 @@ PlasmaComponents.ToolButton {
             switch (panel.location) {
             //TopEdge
             case 3:
-                configDialog.y = mouse.screenY - mapToItem(root, 0, startMouseY).y
+                configDialog.y = mouse.screenY - mapToItem(dialogRoot, 0, startMouseY).y
                 panel.y = configDialog.y - panel.height
                 break
             //LeftEdge
             case 5:
-                configDialog.x = mouse.screenX - mapToItem(root, startMouseX, 0).x
+                configDialog.x = mouse.screenX - mapToItem(dialogRoot, startMouseX, 0).x
                 panel.x = configDialog.x - panel.width
                 break;
             //RightEdge
             case 6:
-                configDialog.x = mouse.screenX - mapToItem(root, startMouseX, 0).x
+                configDialog.x = mouse.screenX - mapToItem(dialogRoot, startMouseX, 0).x
                 panel.x = configDialog.x + configDialog.width
                 break;
             //BottomEdge
             case 4:
             default:
-                configDialog.y = mouse.screenY - mapToItem(root, 0, startMouseY).y
+                configDialog.y = mouse.screenY - mapToItem(dialogRoot, 0, startMouseY).y
                 panel.y = configDialog.y + configDialog.height
             }
 

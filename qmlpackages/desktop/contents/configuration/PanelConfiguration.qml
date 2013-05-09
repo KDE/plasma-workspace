@@ -27,8 +27,11 @@ import "panelconfiguration"
 
 //TODO: all of this will be done with desktop components
 PlasmaCore.FrameSvgItem {
-    id: root
+    id: dialogRoot
 
+//BEGIN Properties
+    width: 640
+    height: 64
     imagePath: "dialogs/background"
 
     state: {
@@ -49,9 +52,7 @@ PlasmaCore.FrameSvgItem {
         }
     }
 
-//BEGIN properties
-    width: 640
-    height: 64
+    property bool vertical: (panel.location == 5 || panel.location == 6)
 //END properties
 
 //BEGIN Connections
@@ -68,18 +69,16 @@ PlasmaCore.FrameSvgItem {
 
     Ruler {
         id: ruler
-        state: root.state
+        state: dialogRoot.state
     }
 
-    PlasmaComponents.ButtonRow {
-        spacing: 0
-        exclusive: false
-        anchors {
-            centerIn: parent
-        }
-        EdgeHandle {}
-        SizeHandle{}
+    ToolBar {
+        id: toolBar
     }
+//END UI components
+
+//BEGIN Animations
+    //when EdgeHandle is released animate to old panel position
     ParallelAnimation {
         id: panelResetAnimation
         NumberAnimation {
@@ -134,36 +133,52 @@ PlasmaCore.FrameSvgItem {
             duration: 150
         }
     }
-//END UI components
+//END Animations
 
 //BEGIN States
 states: [
         State {
             name: "TopEdge"
             PropertyChanges {
-                target: root
+                target: dialogRoot
                 enabledBorders: "TopBorder|BottomBorder"
+            }
+            PropertyChanges {
+                target: dialogRoot
+                implicitHeight: ruler.implicitHeight + toolBar.implicitHeight
             }
         },
         State {
             name: "BottomEdge"
             PropertyChanges {
-                target: root
+                target: dialogRoot
                 enabledBorders: "TopBorder|BottomBorder"
+            }
+            PropertyChanges {
+                target: dialogRoot
+                implicitHeight: ruler.implicitHeight + toolBar.implicitHeight
             }
         },
         State {
             name: "LeftEdge"
             PropertyChanges {
-                target: root
+                target: dialogRoot
                 enabledBorders: "LeftBorder|RightBorder"
+            }
+            PropertyChanges {
+                target: dialogRoot
+                implicitWidth: ruler.implicitWidth + toolBar.implicitWidth
             }
         },
         State {
             name: "RightEdge"
             PropertyChanges {
-                target: root
+                target: dialogRoot
                 enabledBorders: "LeftBorder|RightBorder"
+            }
+            PropertyChanges {
+                target: dialogRoot
+                implicitWidth: ruler.implicitWidth + toolBar.implicitWidth
             }
         }
     ]

@@ -33,8 +33,8 @@ PlasmaCore.FrameSvgItem {
 
     imagePath: "widgets/containment-controls"
     state: "BottomEdge"
-    implicitWidth: offsetButton.implicitwidth + minimumLengthHandle.implicitwidth
-    implicitHeight: 32//offsetButton.implicitheight + minimumLengthHandle.implicitheight
+    implicitWidth: offsetHandle.width + minimumLengthHandle.width
+    implicitHeight: offsetHandle.height + minimumLengthHandle.height
 
     Component.onCompleted: {
         offsetHandle.value = panel.offset
