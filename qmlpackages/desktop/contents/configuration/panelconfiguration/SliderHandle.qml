@@ -34,21 +34,30 @@ PlasmaCore.SvgItem {
     property int value
     property string graphicElementName
     property int offset: 0
+    property bool inverted: false
 
-    onValueChanged: {
+    function syncPos() {
         if (panel.location == 5 || panel.location == 6) {
-            y = value + offset - root.height/2
+            if (inverted) {
+                y = root.parent.height - (value + offset + root.height/2)
+            } else {
+                y = value + offset - root.height/2
+            }
         } else {
-            x = value + offset - root.width/2
+            if (inverted) {
+                x = root.parent.width - (value + offset + root.width/2)
+            } else {
+                x = value + offset - root.width/2
+            }
         }
     }
-
-    onOffsetChanged: {
-        if (panel.location == 5 || panel.location == 6) {
-            y = value + offset - root.height/2
-        } else {
-            x = value + offset - root.width/2
-        }
+    onValueChanged: syncPos()
+    onOffsetChanged: syncPos()
+    onInvertedChanged: syncPos()
+    Connections {
+        target: root.parent
+        onWidthChanged: syncPos()
+        onHeightChanged: syncPos()
     }
 
     MouseArea {
@@ -59,9 +68,17 @@ PlasmaCore.SvgItem {
         anchors.fill: parent
         onPositionChanged: {
             if (panel.location == 5 || panel.location == 6) {
-                root.value = parent.y - offset + root.height/2
+                if (root.inverted) {
+                    root.value = root.parent.height - (parent.y + offset + root.height/2)
+                } else {
+                    root.value = parent.y - offset + root.height/2
+                }
             } else {
-                root.value = parent.x - offset + root.width/2
+                if (root.inverted) {
+                    root.value = root.parent.width - (parent.x + offset + root.width/2)
+                } else {
+                    root.value = parent.x - offset + root.width/2
+                }
             }
         }
     }

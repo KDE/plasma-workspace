@@ -49,17 +49,20 @@ PlasmaCore.FrameSvgItem {
 
     SliderHandle {
         id: offsetHandle
+        inverted: panel.alignment == Qt.AlignRight
         graphicElementName: "offsetslider"
         onValueChanged: panel.offset = value
     }
     SliderHandle {
         id: minimumLengthHandle
+        inverted: panel.alignment == Qt.AlignRight
         offset: panel.offset
         graphicElementName: "minslider"
         onValueChanged: panel.minimumLength = value
     }
     SliderHandle {
         id: maximumLengthHandle
+        inverted: panel.alignment == Qt.AlignRight
         offset: panel.offset
         graphicElementName: "maxslider"
         onValueChanged: panel.maximumLength = value

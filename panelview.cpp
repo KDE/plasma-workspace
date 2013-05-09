@@ -117,6 +117,7 @@ void PanelView::setAlignment(Qt::Alignment alignment)
 
     m_alignment = alignment;
     config().writeEntry("alignment", (int)m_alignment);
+    emit alignmentChanged();
     positionPanel();
 }
 
@@ -324,38 +325,39 @@ void PanelView::restore()
         return;
     }
 
-    m_offset = config().readEntry<int>("offset", 0);
+    static const int MINSIZE = 10;
+
+    m_offset = qMax(0, config().readEntry<int>("offset", 0));
     m_maxLength = config().readEntry<int>("maxLength", -1);
     m_minLength = config().readEntry<int>("minLength", -1);
     m_alignment = (Qt::Alignment)config().readEntry<int>("alignment", Qt::AlignLeft);
 
     setMinimumSize(QSize(-1, -1));
     //FIXME: an invalid size doesn't work with QWindows
-    setMaximumSize(QSize(10000, 10000));
+    setMaximumSize(screen()->size());
 
     if (containment()->formFactor() == Plasma::Vertical) {
-        resize(config().readEntry<int>("thickness", 32),
-               config().readEntry<int>("length", screen()->size().height()));
+        const int maxSize = screen()->size().height() - m_offset;
+        m_maxLength = qBound<int>(MINSIZE, m_maxLength, maxSize);
+        m_minLength = qBound<int>(MINSIZE, m_minLength, maxSize);
 
-        if (m_minLength > 0) {
-            setMinimumHeight(m_minLength);
-        }
-        if (m_maxLength > 0) {
-            setMaximumHeight(m_maxLength);
-        }
+        resize(config().readEntry<int>("thickness", 32),
+               qBound<int>(MINSIZE, config().readEntry<int>("length", screen()->size().height()), maxSize));
+
+        setMinimumHeight(m_minLength);
+        setMaximumHeight(m_maxLength);
 
     //Horizontal
     } else {
-        resize(config().readEntry<int>("length", screen()->size().width()),
+        const int maxSize = screen()->size().width() - m_offset;
+        m_maxLength = qBound<int>(MINSIZE, m_maxLength, maxSize);
+        m_minLength = qBound<int>(MINSIZE, m_minLength, maxSize);
+
+        resize(qBound<int>(MINSIZE, config().readEntry<int>("length", screen()->size().height()), maxSize),
                config().readEntry<int>("thickness", 32));
 
-        if (m_minLength > 0) {
-            setMinimumWidth(m_minLength);
-        }
-
-        if (m_maxLength > 0) {
-            setMaximumWidth(m_maxLength);
-        }
+        setMinimumWidth(m_minLength);
+        setMaximumWidth(m_maxLength);
     }
 
     emit maximumLengthChanged();
