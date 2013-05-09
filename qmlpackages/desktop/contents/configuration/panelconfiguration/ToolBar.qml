@@ -64,6 +64,10 @@ Item {
     states: [
         State {
             name: "TopEdge"
+            PropertyChanges {
+                target: root
+                height: root.implicitHeight
+            }
             AnchorChanges {
                 target: root
                 anchors {
@@ -76,6 +80,10 @@ Item {
         },
         State {
             name: "BottomEdge"
+            PropertyChanges {
+                target: root
+                height: root.implicitHeight
+            }
             AnchorChanges {
                 target: root
                 anchors {
@@ -88,6 +96,10 @@ Item {
         },
         State {
             name: "LeftEdge"
+            PropertyChanges {
+                target: root
+                width: root.implicitWidth
+            }
             AnchorChanges {
                 target: root
                 anchors {
@@ -100,6 +112,10 @@ Item {
         },
         State {
             name: "RightEdge"
+            PropertyChanges {
+                target: root
+                width: root.implicitWidth
+            }
             AnchorChanges {
                 target: root
                 anchors {

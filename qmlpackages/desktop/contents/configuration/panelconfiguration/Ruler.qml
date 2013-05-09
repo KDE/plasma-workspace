@@ -71,6 +71,7 @@ PlasmaCore.FrameSvgItem {
             PropertyChanges {
                 target: root
                 prefix: "north"
+                height: root.implicitHeight
             }
             AnchorChanges {
                 target: root
@@ -114,6 +115,7 @@ PlasmaCore.FrameSvgItem {
             PropertyChanges {
                 target: root
                 prefix: "south"
+                height: root.implicitHeight
             }
             AnchorChanges {
                 target: root
@@ -157,6 +159,7 @@ PlasmaCore.FrameSvgItem {
             PropertyChanges {
                 target: root
                 prefix: "west"
+                width: root.implicitWidth
             }
             AnchorChanges {
                 target: root
@@ -200,6 +203,7 @@ PlasmaCore.FrameSvgItem {
             PropertyChanges {
                 target: root
                 prefix: "east"
+                width: root.implicitWidth
             }
             AnchorChanges {
                 target: root
