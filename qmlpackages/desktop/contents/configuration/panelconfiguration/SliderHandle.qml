@@ -41,7 +41,7 @@ PlasmaCore.SvgItem {
     property int alignment: panel.alignment
 
     function syncPos() {
-        if (panel.location == 5 || panel.location == 6) {
+        if (dialogRoot.vertical) {
             if (alignment == Qt.AlignRight) {
                 y = root.parent.height - (value + offset + root.height/2)
             } else if (alignment == Qt.AlignLeft) {
@@ -83,11 +83,11 @@ PlasmaCore.SvgItem {
     MouseArea {
         drag {
             target: parent
-            axis: (panel.location == 5 || panel.location == 6) ? Drag.YAxis : Drag.XAxis
+            axis: (dialogRoot.vertical) ? Drag.YAxis : Drag.XAxis
         }
         anchors.fill: parent
         onPositionChanged: {
-            if (panel.location == 5 || panel.location == 6) {
+            if (dialogRoot.vertical) {
                 if (root.alignment == Qt.AlignRight) {
                     root.value = root.parent.height - (parent.y + offset + root.height/2)
                 } else if (alignment == Qt.AlignLeft) {
