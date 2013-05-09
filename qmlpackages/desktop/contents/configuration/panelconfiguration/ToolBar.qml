@@ -59,6 +59,63 @@ Item {
         }
     }
 
+    PlasmaComponents.Button {
+        id: moreSettingsButton
+        property QtObject contextMenu
+        text: "More settings"
+        onClicked: {
+            if (!contextMenu) {
+                contextMenu = contextMenuComponent.createObject(moreSettingsButton)
+            }
+            contextMenu.open()
+        }
+    }
+
+    Component {
+        id: contextMenuComponent
+        PlasmaComponents.ContextMenu {
+            visualParent: moreSettingsButton
+            PlasmaComponents.MenuItem {
+                id: leftToggle
+                text: "Left"
+                checkable: true
+                checked: panel.alignment == Qt.AlignLeft
+                onClicked: panel.alignment = Qt.AlignLeft
+                onToggled: {
+                    if (checked) {
+                        centerToggle.checked = false
+                        rightToggle.checked = false
+                    }
+                }
+            }
+            PlasmaComponents.MenuItem {
+                id: centerToggle
+                text: "Center"
+                checkable: true
+                checked: panel.alignment == Qt.AlignCenter
+                onClicked: panel.alignment = Qt.AlignCenter
+                onToggled: {
+                    if (checked) {
+                        leftToggle.checked = false
+                        rightToggle.checked = false
+                    }
+                }
+            }
+            PlasmaComponents.MenuItem {
+                id: rightToggle
+                text: "Right"
+                checkable: true
+                checked: panel.alignment == Qt.AlignRight
+                onClicked: panel.alignment = Qt.AlignRight
+                onToggled: {
+                    if (checked) {
+                        centerToggle.checked = false
+                        leftToggle.checked = false
+                    }
+                }
+            }
+        }
+    }
 
 //BEGIN States
     states: [
@@ -77,6 +134,17 @@ Item {
                     right: root.parent.right
                 }
             }
+            AnchorChanges {
+                target: moreSettingsButton
+                anchors {
+                    verticalCenter: root.verticalCenter
+                    horizontalCenter: undefined
+                    top: undefined
+                    bottom: undefined
+                    left: undefined
+                    right: root.right
+                }
+            }
         },
         State {
             name: "BottomEdge"
@@ -91,6 +159,17 @@ Item {
                     bottom: undefined
                     left: root.parent.left
                     right: root.parent.right
+                }
+            }
+            AnchorChanges {
+                target: moreSettingsButton
+                anchors {
+                    verticalCenter: root.verticalCenter
+                    horizontalCenter: undefined
+                    top: undefined
+                    bottom: undefined
+                    left: undefined
+                    right: root.right
                 }
             }
         },
@@ -109,6 +188,17 @@ Item {
                     right: root.parent.right
                 }
             }
+            AnchorChanges {
+                target: moreSettingsButton
+                anchors {
+                    verticalCenter: undefined
+                    horizontalCenter: root.verticalCenter
+                    top: undefined
+                    bottom: root.bottom
+                    left: undefined
+                    right: undefined
+                }
+            }
         },
         State {
             name: "RightEdge"
@@ -122,6 +212,17 @@ Item {
                     top: root.parent.top
                     bottom: root.parent.bottom
                     left: root.parent.left
+                    right: undefined
+                }
+            }
+            AnchorChanges {
+                target: moreSettingsButton
+                anchors {
+                    verticalCenter: undefined
+                    horizontalCenter: root.verticalCenter
+                    top: undefined
+                    bottom: root.bottom
+                    left: undefined
                     right: undefined
                 }
             }

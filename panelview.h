@@ -32,6 +32,7 @@ class PanelView : public View
     Q_PROPERTY(Qt::Alignment alignment READ alignment WRITE setAlignment NOTIFY alignmentChanged)
     Q_PROPERTY(int offset READ offset WRITE setOffset NOTIFY offsetChanged)
     Q_PROPERTY(int thickness READ thickness WRITE setThickness NOTIFY thicknessChanged)
+    Q_PROPERTY(int length READ length WRITE setLength NOTIFY lengthChanged)
     Q_PROPERTY(int maximumLength READ maximumLength WRITE setMaximumLength NOTIFY maximumLengthChanged)
     Q_PROPERTY(int minimumLength READ minimumLength WRITE setMinimumLength NOTIFY minimumLengthChanged)
 
@@ -52,17 +53,24 @@ public:
     int thickness() const;
     void setThickness(int thickness);
 
+    int length() const;
+    void setLength(int value);
+
     int maximumLength() const;
     void setMaximumLength(int length);
 
     int minimumLength() const;
     void setMinimumLength(int length);
 
+protected:
+    void resizeEvent(QResizeEvent *ev);
+
 Q_SIGNALS:
     void alignmentChanged();
     void offsetChanged();
     void screenGeometryChanged();
     void thicknessChanged();
+    void lengthChanged();
     void maximumLengthChanged();
     void minimumLengthChanged();
 
