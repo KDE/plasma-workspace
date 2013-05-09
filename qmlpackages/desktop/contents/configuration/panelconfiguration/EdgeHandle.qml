@@ -69,6 +69,15 @@ PlasmaComponents.ToolButton {
             var screenAspect = panel.screenGeometry.height / panel.screenGeometry.width
             var newLocation = panel.location
 
+            //If the mouse is in an internal rectangle, do nothing
+            if ((mouse.screenX > panel.screenGeometry.x + panel.screenGeometry.width/3 &&
+                 mouse.screenX < panel.screenGeometry.x + panel.screenGeometry.width/3*2) &&
+                (mouse.screenY > panel.screenGeometry.y + panel.screenGeometry.height/3 &&
+                 mouse.screenY < panel.screenGeometry.y + panel.screenGeometry.height/3*2)) {
+                return;
+            }
+
+
             if (mouse.screenY < panel.screenGeometry.y+(mouse.screenX-panel.screenGeometry.x)*screenAspect) {
                 if (mouse.screenY < panel.screenGeometry.y + panel.screenGeometry.height-(mouse.screenX-panel.screenGeometry.x)*screenAspect) {
                     if (panel.location == 3) {
