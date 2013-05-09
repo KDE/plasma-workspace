@@ -92,6 +92,21 @@ PlasmaCore.SvgItem {
                     root.value = root.parent.height - (parent.y + offset + root.height/2)
                 } else if (alignment == Qt.AlignLeft) {
                     root.value = parent.y - offset + root.height/2
+                //Center
+                } else {
+                    if (root.alignment & Qt.AlignRight) {
+                        root.value = (root.parent.height/2 - parent.y + offset)*2  + root.height/2
+                    } else if (root.alignment & Qt.AlignLeft) {
+                        root.value = (parent.y - offset - root.parent.height/2)*2  + root.height/2
+                    } else {
+                        var value = parent.y - root.parent.height/2 - offset + root.height/2
+                        //Snap
+                        if (Math.abs(value) < 5) {
+                            root.value = 0
+                        } else {
+                            root.value = value
+                        }
+                    }
                 }
             } else {
                 if (root.alignment == Qt.AlignRight) {
@@ -105,7 +120,13 @@ PlasmaCore.SvgItem {
                     } else if (root.alignment & Qt.AlignLeft) {
                         root.value = (parent.x - offset - root.parent.width/2)*2  + root.width/2
                     } else {
-                        root.value = parent.x - root.parent.width/2 - offset + root.width/2
+                        var value = parent.x - root.parent.width/2 - offset + root.width/2
+                        //Snap
+                        if (Math.abs(value) < 5) {
+                            root.value = 0
+                        } else {
+                            root.value = value
+                        }
                     }
                 }
             }
