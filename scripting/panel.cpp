@@ -52,25 +52,25 @@ QString Panel::location() const
     }
 
     switch (c->location()) {
-        case Plasma::Floating:
+        case Plasma::Types::Floating:
             return "floating";
             break;
-        case Plasma::Desktop:
+        case Plasma::Types::Desktop:
             return "desktop";
             break;
-        case Plasma::FullScreen:
+        case Plasma::Types::FullScreen:
             return "fullscreen";
             break;
-        case Plasma::TopEdge:
+        case Plasma::Types::TopEdge:
             return "top";
             break;
-        case Plasma::BottomEdge:
+        case Plasma::Types::BottomEdge:
             return "bottom";
             break;
-        case Plasma::LeftEdge:
+        case Plasma::Types::LeftEdge:
             return "left";
             break;
-        case Plasma::RightEdge:
+        case Plasma::Types::RightEdge:
             return "right";
             break;
     }
@@ -86,24 +86,24 @@ void Panel::setLocation(const QString &locationString)
     }
 
     const QString lower = locationString.toLower();
-    Plasma::Location loc = Plasma::Floating;
-    Plasma::FormFactor ff = Plasma::Planar;
+    Plasma::Location loc = Plasma::Types::Floating;
+    Plasma::FormFactor ff = Plasma::Types::Planar;
     if (lower == "desktop") {
-        loc = Plasma::Desktop;
+        loc = Plasma::Types::Desktop;
     } else if (lower == "fullscreen") {
-        loc = Plasma::FullScreen;
+        loc = Plasma::Types::FullScreen;
     } else if (lower == "top") {
-        loc = Plasma::TopEdge;
-        ff = Plasma::Horizontal;
+        loc = Plasma::Types::TopEdge;
+        ff = Plasma::Types::Horizontal;
     } else if (lower == "bottom") {
-        loc = Plasma::BottomEdge;
-        ff = Plasma::Horizontal;
+        loc = Plasma::Types::BottomEdge;
+        ff = Plasma::Types::Horizontal;
     } else if (lower == "left") {
-        loc = Plasma::LeftEdge;
-        ff = Plasma::Vertical;
+        loc = Plasma::Types::LeftEdge;
+        ff = Plasma::Types::Vertical;
     } else if (lower == "right") {
-        loc = Plasma::RightEdge;
-        ff = Plasma::Vertical;
+        loc = Plasma::Types::RightEdge;
+        ff = Plasma::Types::Vertical;
     }
 
     c->setLocation(loc);
@@ -199,7 +199,7 @@ void Panel::setOffset(int pixels)
         QRectF screen = v->screen()->geometry();
         QSizeF size(graphicObject->width(), graphicObject->height());
 
-        if (c->formFactor() == Plasma::Vertical) {
+        if (c->formFactor() == Plasma::Types::Vertical) {
             if (pixels > screen.height()) {
                 return;
             }
@@ -234,7 +234,7 @@ int Panel::length() const
         return 0;
     }
 
-    if (c->formFactor() == Plasma::Vertical) {
+    if (c->formFactor() == Plasma::Types::Vertical) {
         return graphicObject->height();
     } else {
         return graphicObject->width();
@@ -259,7 +259,7 @@ void Panel::setLength(int pixels)
         QRectF screen = v->screen()->geometry();
         QSizeF s(graphicObject->width(), graphicObject->height());
 
-        if (c->formFactor() == Plasma::Vertical) {
+        if (c->formFactor() == Plasma::Types::Vertical) {
             if (pixels > screen.height() - v->offset()) {
                 return;
             }
@@ -291,7 +291,7 @@ int Panel::height() const
         return 0;
     }
 
-    return c->formFactor() == Plasma::Vertical ? graphicObject->width()
+    return c->formFactor() == Plasma::Types::Vertical ? graphicObject->width()
                                                : graphicObject->height();
 }
 
@@ -312,10 +312,10 @@ void Panel::setHeight(int height)
     if (v) {
         QRect screen = v->screen()->geometry();
         QSizeF size(graphicObject->width(), graphicObject->height());
-        const int max = (c->formFactor() == Plasma::Vertical ? screen.width() : screen.height()) / 3;
+        const int max = (c->formFactor() == Plasma::Types::Vertical ? screen.width() : screen.height()) / 3;
         height = qBound(16, height, max);
 
-        if (c->formFactor() == Plasma::Vertical) {
+        if (c->formFactor() == Plasma::Types::Vertical) {
             size.setWidth(height);
         } else {
             size.setHeight(height);

@@ -144,12 +144,12 @@ int AppInterface::multiheadScreen() const
 
 void AppInterface::lockCorona(bool locked)
 {
-    m_env->corona()->setImmutability(locked ? Plasma::UserImmutable : Plasma::Mutable);
+    m_env->corona()->setImmutability(locked ? Plasma::Types::UserImmutable : Plasma::Types::Mutable);
 }
 
 bool AppInterface::coronaLocked() const
 {
-    return m_env->corona()->immutability() != Plasma::Mutable;
+    return m_env->corona()->immutability() != Plasma::Types::Mutable;
 }
 
 void AppInterface::sleep(int ms)

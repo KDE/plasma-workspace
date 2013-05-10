@@ -116,8 +116,8 @@ void View::setContainment(Plasma::Containment *cont)
 
         //graphicObject->setProperty("visible", false);
         graphicObject->setProperty("drawWallpaper",
-                                   (cont->containmentType() == Plasma::DesktopContainment ||
-                                    cont->containmentType() == Plasma::CustomContainment));
+                                   (cont->containmentType() == Plasma::Types::DesktopContainment ||
+                                    cont->containmentType() == Plasma::Types::CustomContainment));
         graphicObject->setProperty("parent", QVariant::fromValue(rootObject()));
         rootObject()->setProperty("containment", QVariant::fromValue(graphicObject));
     } else {
@@ -140,7 +140,7 @@ void View::setLocation(int location)
 int View::location() const
 {
     if (!m_containment) {
-        return Plasma::Desktop;
+        return Plasma::Types::Desktop;
     }
     return m_containment.data()->location();
 }
@@ -148,7 +148,7 @@ int View::location() const
 Plasma::FormFactor View::formFactor() const
 {
     if (!m_containment) {
-        return Plasma::Planar;
+        return Plasma::Types::Planar;
     }
     return m_containment.data()->formFactor();
 }

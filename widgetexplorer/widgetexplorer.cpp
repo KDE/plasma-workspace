@@ -152,7 +152,7 @@ void WidgetExplorerPrivate::init(Plasma::Location loc)
 
     //init widgets
     location = loc;
-    orientation = ((location == Plasma::LeftEdge || location == Plasma::RightEdge)?Qt::Vertical:Qt::Horizontal);
+    orientation = ((location == Plasma::Types::LeftEdge || location == Plasma::Types::RightEdge)?Qt::Vertical:Qt::Horizontal);
 //     mainLayout = new QGraphicsLinearLayout(Qt::Vertical);
 //     mainLayout->setContentsMargins(0, 0, 0, 0);
 //     mainLayout->setSpacing(0);
@@ -214,7 +214,7 @@ void WidgetExplorerPrivate::finished()
 void WidgetExplorerPrivate::setLocation(const Plasma::Location loc)
 {
     Qt::Orientation orient;
-    if (loc == Plasma::LeftEdge || loc == Plasma::RightEdge) {
+    if (loc == Plasma::Types::LeftEdge || loc == Plasma::Types::RightEdge) {
         orient = Qt::Vertical;
     } else {
         orient = Qt::Horizontal;
@@ -375,7 +375,7 @@ WidgetExplorer::WidgetExplorer(QObject *parent)
         :QObject(parent),
         d(new WidgetExplorerPrivate(this))
 {
-    d->init(Plasma::LeftEdge);
+    d->init(Plasma::Types::LeftEdge);
 }
 
 WidgetExplorer::~WidgetExplorer()
@@ -472,7 +472,7 @@ void WidgetExplorer::addApplet(const QString &pluginName)
 
 void WidgetExplorer::immutabilityChanged(Plasma::ImmutabilityType type)
 {
-    if (type != Plasma::Mutable) {
+    if (type != Plasma::Types::Mutable) {
         emit closeClicked();
     }
 }
@@ -639,7 +639,7 @@ QPoint WidgetExplorer::tooltipPosition(QGraphicsObject *item, int tipWidth, int 
         item->boundingRect().size().toSize());
     QPoint pos;
     switch (d->location) {
-    case Plasma::LeftEdge:
+    case Plasma::Types::LeftEdge:
         pos.setX(itemRect.right());
         pos.setY(itemRect.top() + (itemRect.height() - tipHeight) / 2);
         break;
@@ -647,7 +647,7 @@ QPoint WidgetExplorer::tooltipPosition(QGraphicsObject *item, int tipWidth, int 
         pos.setX(itemRect.left() + (itemRect.width() - tipWidth) / 2);
         pos.setY(itemRect.bottom());
         break;
-    case Plasma::RightEdge:
+    case Plasma::Types::RightEdge:
         pos.setX(itemRect.left() - tipWidth);
         pos.setY(itemRect.top() + (itemRect.height() - tipHeight) / 2);
         break;

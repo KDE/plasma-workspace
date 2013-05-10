@@ -147,8 +147,8 @@ void DesktopCorona::checkScreen(int screen, bool signalWhenExists)
             }
 
             Plasma::ContainmentType t = c->containmentType();
-            if (t == Plasma::PanelContainment ||
-                t == Plasma::CustomPanelContainment) {
+            if (t == Plasma::Types::PanelContainment ||
+                t == Plasma::Types::CustomPanelContainment) {
                 emit containmentAdded(c);
             }
         }
@@ -257,8 +257,8 @@ void DesktopCorona::updateScreenOwner(int wasScreen, int isScreen, Plasma::Conta
 {
     qDebug() << "Was screen" << wasScreen << "Is screen" << isScreen <<"Containment" << containment << containment->title();
 
-    if (containment->formFactor() == Plasma::Horizontal ||
-        containment->formFactor() == Plasma::Vertical) {
+    if (containment->formFactor() == Plasma::Types::Horizontal ||
+        containment->formFactor() == Plasma::Types::Vertical) {
 
         if (isScreen >= 0) {
             m_panelViews[containment] = new PanelView(this);
