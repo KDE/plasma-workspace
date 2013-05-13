@@ -29,6 +29,7 @@
 
 #include <KGlobal>
 #include <KLocalizedString>
+#include <kwindoweffects.h>
 
 #include <Plasma/Containment>
 #include <Plasma/Corona>
@@ -42,6 +43,8 @@ PanelConfigView::PanelConfigView(Plasma::Containment *containment, PanelView *pa
 {
 
     setFlags(Qt::FramelessWindowHint);
+
+    KWindowEffects::enableBlurBehind(winId(), true);
 
     engine()->rootContext()->setContextProperty("panel", panelView);
     engine()->rootContext()->setContextProperty("configDialog", this);
