@@ -85,5 +85,10 @@ void PanelConfigView::syncGeometry()
     }
 }
 
+void PanelConfigView::focusOutEvent(QFocusEvent *ev)
+{
+    Q_UNUSED(ev)
+    close();
+}
 
 #include "moc_panelconfigview.cpp"

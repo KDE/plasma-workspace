@@ -48,6 +48,9 @@ public:
 
     void init();
 
+protected:
+    void focusOutEvent(QFocusEvent *ev);
+
 protected Q_SLOTS:
     void syncGeometry();
 
