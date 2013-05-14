@@ -167,7 +167,7 @@ public Q_SLOTS:
     void downloadWidgets(const QString &type);
 
 protected Q_SLOTS:
-    void immutabilityChanged(Plasma::ImmutabilityType);
+    void immutabilityChanged(Plasma::Types::ImmutabilityType);
 
 protected:
     void keyPressEvent(QKeyEvent *e);

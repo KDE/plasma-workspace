@@ -425,7 +425,7 @@ void WidgetExplorer::setContainment(Plasma::Containment *containment)
 
         if (d->containment) {
             connect(d->containment, SIGNAL(destroyed(QObject*)), this, SLOT(containmentDestroyed()));
-            connect(d->containment, SIGNAL(immutabilityChanged(Plasma::ImmutabilityType)), this, SLOT(immutabilityChanged(Plasma::ImmutabilityType)));
+            connect(d->containment, SIGNAL(immutabilityChanged(Plasma::Types::ImmutabilityType)), this, SLOT(immutabilityChanged(Plasma::Types::ImmutabilityType)));
 
             setLocation(containment->location());
         }
@@ -470,7 +470,7 @@ void WidgetExplorer::addApplet(const QString &pluginName)
     }
 }
 
-void WidgetExplorer::immutabilityChanged(Plasma::ImmutabilityType type)
+void WidgetExplorer::immutabilityChanged(Plasma::Types::ImmutabilityType type)
 {
     if (type != Plasma::Types::Mutable) {
         emit closeClicked();
