@@ -47,7 +47,7 @@ public:
     void setContainment(Plasma::Containment *cont);
     Plasma::Containment *containment() const;
 
-    //FIXME: Plasma::Location should be something qml can understand
+    //FIXME: Plasma::Types::Location should be something qml can understand
     int location() const;
     void setLocation(int location);
 

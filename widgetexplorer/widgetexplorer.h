@@ -102,7 +102,7 @@ public:
         RightEdge     /**< Along the right side of the screen */
     };
 
-    explicit WidgetExplorer(Plasma::Location loc, QObject *parent = 0);
+    explicit WidgetExplorer(Plasma::Types::Location loc, QObject *parent = 0);
     explicit WidgetExplorer(QObject *parent = 0);
     ~WidgetExplorer();
 
@@ -134,7 +134,7 @@ public:
     Plasma::Corona *corona() const;
 
 
-    void setLocation(const Plasma::Location loc);
+    void setLocation(const Plasma::Types::Location loc);
      //FIXME: it's asymmetric due to the problems of QML of exporting enums
     WidgetExplorer::Location location();
 
@@ -152,7 +152,7 @@ public:
     //Q_INVOKABLE QPoint tooltipPosition(QGraphicsObject *item, int tipWidth, int tipHeight);
 
 Q_SIGNALS:
-    void locationChanged(Plasma::Location loc);
+    void locationChanged(Plasma::Types::Location loc);
     void orientationChanged();
     void closeClicked();
     void widgetsMenuActionsChanged();

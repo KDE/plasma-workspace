@@ -60,10 +60,10 @@ public:
     }
 
     void initFilters();
-    void init(Plasma::Location loc);
+    void init(Plasma::Types::Location loc);
     void initRunningApplets();
     void containmentDestroyed();
-    void setLocation(Plasma::Location loc);
+    void setLocation(Plasma::Types::Location loc);
     void finished();
 
     /**
@@ -78,7 +78,7 @@ public:
 
     //this orientation is just for convenience, is the location that is important
     Qt::Orientation orientation;
-    Plasma::Location location;
+    Plasma::Types::Location location;
     WidgetExplorer *q;
     QString application;
     Plasma::Containment *containment;
@@ -146,7 +146,7 @@ void WidgetExplorerPrivate::initFilters()
 
 }
 
-void WidgetExplorerPrivate::init(Plasma::Location loc)
+void WidgetExplorerPrivate::init(Plasma::Types::Location loc)
 {
 //     q->setFocusPolicy(Qt::StrongFocus);
 
@@ -211,7 +211,7 @@ void WidgetExplorerPrivate::finished()
     declarativeWidget->rootObject()->setProperty("extraActions", QVariant::fromValue(actionList));*/
 }
 
-void WidgetExplorerPrivate::setLocation(const Plasma::Location loc)
+void WidgetExplorerPrivate::setLocation(const Plasma::Types::Location loc)
 {
     Qt::Orientation orient;
     if (loc == Plasma::Types::LeftEdge || loc == Plasma::Types::RightEdge) {
@@ -364,7 +364,7 @@ void WidgetExplorerPrivate::appletRemoved(Plasma::Applet *applet)
 
 //WidgetExplorer
 
-WidgetExplorer::WidgetExplorer(Plasma::Location loc, QObject *parent)
+WidgetExplorer::WidgetExplorer(Plasma::Types::Location loc, QObject *parent)
         :QObject(parent),
         d(new WidgetExplorerPrivate(this))
 {
@@ -383,7 +383,7 @@ WidgetExplorer::~WidgetExplorer()
      delete d;
 }
 
-void WidgetExplorer::setLocation(Plasma::Location loc)
+void WidgetExplorer::setLocation(Plasma::Types::Location loc)
 {
     d->setLocation(loc);
     emit(locationChanged(loc));
