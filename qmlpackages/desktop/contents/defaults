@@ -1,6 +1,8 @@
 [Desktop]
 Containment=org.kde.desktop
 ToolBox=org.kde.toolbox
+RuntimePlatform=
+
 [Desktop][ContainmentActions]
 Ctrl;LeftButton=org.kde.standardmenu
 MiddleButton=org.kde.paste
