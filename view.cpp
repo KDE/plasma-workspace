@@ -75,8 +75,8 @@ void View::init()
 
 void View::setContainment(Plasma::Containment *cont)
 {
-    Plasma::Location oldLoc = (Plasma::Location)location();
-    Plasma::FormFactor oldForm = formFactor();
+    Plasma::Types::Location oldLoc = (Plasma::Types::Location)location();
+    Plasma::Types::FormFactor oldForm = formFactor();
 
     if (m_containment) {
         disconnect(m_containment.data(), 0, this, 0);
@@ -90,7 +90,7 @@ void View::setContainment(Plasma::Containment *cont)
     m_containment = cont;
 
     if (oldLoc != location()) {
-        emit locationChanged((Plasma::Location)location());
+        emit locationChanged((Plasma::Types::Location)location());
     }
     if (oldForm != formFactor()) {
         emit formFactorChanged(formFactor());
@@ -133,7 +133,7 @@ Plasma::Containment *View::containment() const
 //FIXME: wrong types
 void View::setLocation(int location)
 {
-    m_containment.data()->setLocation((Plasma::Location)location);
+    m_containment.data()->setLocation((Plasma::Types::Location)location);
 }
 
 //FIXME: wrong types
@@ -145,7 +145,7 @@ int View::location() const
     return m_containment.data()->location();
 }
 
-Plasma::FormFactor View::formFactor() const
+Plasma::Types::FormFactor View::formFactor() const
 {
     if (!m_containment) {
         return Plasma::Types::Planar;

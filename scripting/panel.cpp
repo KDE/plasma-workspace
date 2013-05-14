@@ -86,8 +86,8 @@ void Panel::setLocation(const QString &locationString)
     }
 
     const QString lower = locationString.toLower();
-    Plasma::Location loc = Plasma::Types::Floating;
-    Plasma::FormFactor ff = Plasma::Types::Planar;
+    Plasma::Types::Location loc = Plasma::Types::Floating;
+    Plasma::Types::FormFactor ff = Plasma::Types::Planar;
     if (lower == "desktop") {
         loc = Plasma::Types::Desktop;
     } else if (lower == "fullscreen") {
