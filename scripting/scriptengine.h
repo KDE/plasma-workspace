@@ -79,6 +79,7 @@ private:
     static QScriptValue applicationPath(QScriptContext *context, QScriptEngine *engine);
     static QScriptValue userDataPath(QScriptContext *context, QScriptEngine *engine);
     static QScriptValue knownWallpaperPlugins(QScriptContext *context, QScriptEngine *engine);
+    static QScriptValue configFile(QScriptContext *context, QScriptEngine *engine);
 
     // helpers
     static QScriptValue createContainment(const QString &type, const QString &defautPlugin,
@@ -92,7 +93,7 @@ private:
     QScriptValue m_scriptSelf;
 };
 
-static const int PLASMA_DESKTOP_SCRIPTING_VERSION = 6;
+static const int PLASMA_DESKTOP_SCRIPTING_VERSION = 20;
 }
 
 #endif

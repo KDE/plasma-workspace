@@ -49,6 +49,7 @@
 
 #include "appinterface.h"
 #include "containment.h"
+#include "configgroup.h"
 #include "i18n.h"
 #include "layouttemplatepackagestructure.h"
 #include "widget.h"
@@ -561,6 +562,32 @@ QScriptValue ScriptEngine::knownWallpaperPlugins(QScriptContext *context, QScrip
     return rv;
 }
 
+QScriptValue ScriptEngine::configFile(QScriptContext *context, QScriptEngine *engine)
+{
+    ConfigGroup *file = 0;
+
+    if (context->argumentCount() > 0) {
+        if (context->argument(0).isString()) {
+            file = new ConfigGroup;
+            file->setFile(context->argument(0).toString());
+            if (context->argumentCount() > 1) {
+                file->setGroup(context->argument(1).toString());
+            }
+        } else if (ConfigGroup *parent= qobject_cast<ConfigGroup *>(context->argument(0).toQObject())) {
+            file = new ConfigGroup(parent);
+        }
+    } else {
+        file = new ConfigGroup;
+    }
+
+    QScriptValue v = engine->newQObject(file,
+                                        QScriptEngine::ScriptOwnership,
+                                        QScriptEngine::ExcludeSuperClassProperties |
+                                        QScriptEngine::ExcludeSuperClassMethods);
+    return v;
+
+}
+
 void ScriptEngine::setupEngine()
 {
     QScriptValue v = globalObject();
@@ -588,6 +615,7 @@ void ScriptEngine::setupEngine()
     m_scriptSelf.setProperty("userDataPath", newFunction(ScriptEngine::userDataPath));
     m_scriptSelf.setProperty("applicationPath", newFunction(ScriptEngine::applicationPath));
     m_scriptSelf.setProperty("knownWallpaperPlugins", newFunction(ScriptEngine::knownWallpaperPlugins));
+    m_scriptSelf.setProperty("ConfigFile", newFunction(ScriptEngine::configFile));
 
     setGlobalObject(m_scriptSelf);
 }
