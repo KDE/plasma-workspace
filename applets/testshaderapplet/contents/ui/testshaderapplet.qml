@@ -50,7 +50,7 @@ Item {
             PlasmaComponents.TabButton { tab: wobbleExample; text: tab.pageName; }
             PlasmaComponents.TabButton { tab: shadowExample; text: tab.pageName; }
             PlasmaComponents.TabButton { tab: simpleExample; text: tab.pageName; }
-            PlasmaComponents.TabButton { tab: vertexPage; iconSource: vertexPage.icon; }
+            //PlasmaComponents.TabButton { tab: vertexPage; iconSource: vertexPage.icon; }
         }
 
         PlasmaComponents.TabGroup {
@@ -77,9 +77,9 @@ Item {
             SimpleExample {
                 id: simpleExample
             }
-            EditorPage {
-                id: vertexPage
-            }
+//             EditorPage {
+//                 id: vertexPage
+//             }
         }
     }
 

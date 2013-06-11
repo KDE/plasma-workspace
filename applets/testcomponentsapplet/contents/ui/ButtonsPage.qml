@@ -67,10 +67,10 @@ PlasmaComponents.Page {
                 clearButtonShown: true
             }
         }
-        PlasmaComponents.TextArea {
-            width: parent.width
-            height: _h*2
-        }
+//         PlasmaComponents.TextArea {
+//             width: parent.width
+//             height: _h*2
+//         }
     }
 }
 

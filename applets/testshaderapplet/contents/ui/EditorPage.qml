@@ -99,30 +99,30 @@ PlasmaComponents.Page {
         }
     }
 
-    PlasmaComponents.TextArea {
-        id: editor
-        anchors {
-            top: heading.bottom;
-            topMargin: _s
-            left: parent.left
-            right: parent.right
-            bottom: applyButton.top
-            bottomMargin: _s
-
-        }
-//         text: { "void main(void) {\
-//         gl_FragColor = vec4(1.0, 0.0, 0.0, 0.3);\
-//     }"
+//     PlasmaComponents.TextArea {
+//         id: editor
+//         anchors {
+//             top: heading.bottom;
+//             topMargin: _s
+//             left: parent.left
+//             right: parent.right
+//             bottom: applyButton.top
+//             bottomMargin: _s
+//
 //         }
-        text:"
-        void main(void) {
-            gl_FragColor = vec4(0.2, 0.8, 0.6, 0.3);
-        }
-        "
-
-//         width: parent.width
-//         parent.height-height: _h*2
-    }
+// //         text: { "void main(void) {\
+// //         gl_FragColor = vec4(1.0, 0.0, 0.0, 0.3);\
+// //     }"
+// //         }
+//         text:"
+//         void main(void) {
+//             gl_FragColor = vec4(0.2, 0.8, 0.6, 0.3);
+//         }
+//         "
+//
+// //         width: parent.width
+// //         parent.height-height: _h*2
+//     }
 
     PlasmaComponents.Button {
         id: applyButton
