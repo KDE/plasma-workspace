@@ -60,10 +60,10 @@ public:
     }
 
     void initFilters();
-    void init(Plasma::Location loc);
+    void init(Plasma::Types::Location loc);
     void initRunningApplets();
     void containmentDestroyed();
-    void setLocation(Plasma::Location loc);
+    void setLocation(Plasma::Types::Location loc);
     void finished();
 
     /**
@@ -78,7 +78,7 @@ public:
 
     //this orientation is just for convenience, is the location that is important
     Qt::Orientation orientation;
-    Plasma::Location location;
+    Plasma::Types::Location location;
     WidgetExplorer *q;
     QString application;
     Plasma::Containment *containment;
@@ -146,13 +146,13 @@ void WidgetExplorerPrivate::initFilters()
 
 }
 
-void WidgetExplorerPrivate::init(Plasma::Location loc)
+void WidgetExplorerPrivate::init(Plasma::Types::Location loc)
 {
 //     q->setFocusPolicy(Qt::StrongFocus);
 
     //init widgets
     location = loc;
-    orientation = ((location == Plasma::LeftEdge || location == Plasma::RightEdge)?Qt::Vertical:Qt::Horizontal);
+    orientation = ((location == Plasma::Types::LeftEdge || location == Plasma::Types::RightEdge)?Qt::Vertical:Qt::Horizontal);
 //     mainLayout = new QGraphicsLinearLayout(Qt::Vertical);
 //     mainLayout->setContentsMargins(0, 0, 0, 0);
 //     mainLayout->setSpacing(0);
@@ -211,10 +211,10 @@ void WidgetExplorerPrivate::finished()
     declarativeWidget->rootObject()->setProperty("extraActions", QVariant::fromValue(actionList));*/
 }
 
-void WidgetExplorerPrivate::setLocation(const Plasma::Location loc)
+void WidgetExplorerPrivate::setLocation(const Plasma::Types::Location loc)
 {
     Qt::Orientation orient;
-    if (loc == Plasma::LeftEdge || loc == Plasma::RightEdge) {
+    if (loc == Plasma::Types::LeftEdge || loc == Plasma::Types::RightEdge) {
         orient = Qt::Vertical;
     } else {
         orient = Qt::Horizontal;
@@ -364,7 +364,7 @@ void WidgetExplorerPrivate::appletRemoved(Plasma::Applet *applet)
 
 //WidgetExplorer
 
-WidgetExplorer::WidgetExplorer(Plasma::Location loc, QObject *parent)
+WidgetExplorer::WidgetExplorer(Plasma::Types::Location loc, QObject *parent)
         :QObject(parent),
         d(new WidgetExplorerPrivate(this))
 {
@@ -375,7 +375,7 @@ WidgetExplorer::WidgetExplorer(QObject *parent)
         :QObject(parent),
         d(new WidgetExplorerPrivate(this))
 {
-    d->init(Plasma::LeftEdge);
+    d->init(Plasma::Types::LeftEdge);
 }
 
 WidgetExplorer::~WidgetExplorer()
@@ -383,7 +383,7 @@ WidgetExplorer::~WidgetExplorer()
      delete d;
 }
 
-void WidgetExplorer::setLocation(Plasma::Location loc)
+void WidgetExplorer::setLocation(Plasma::Types::Location loc)
 {
     d->setLocation(loc);
     emit(locationChanged(loc));
@@ -425,7 +425,7 @@ void WidgetExplorer::setContainment(Plasma::Containment *containment)
 
         if (d->containment) {
             connect(d->containment, SIGNAL(destroyed(QObject*)), this, SLOT(containmentDestroyed()));
-            connect(d->containment, SIGNAL(immutabilityChanged(Plasma::ImmutabilityType)), this, SLOT(immutabilityChanged(Plasma::ImmutabilityType)));
+            connect(d->containment, SIGNAL(immutabilityChanged(Plasma::Types::ImmutabilityType)), this, SLOT(immutabilityChanged(Plasma::Types::ImmutabilityType)));
 
             setLocation(containment->location());
         }
@@ -470,9 +470,9 @@ void WidgetExplorer::addApplet(const QString &pluginName)
     }
 }
 
-void WidgetExplorer::immutabilityChanged(Plasma::ImmutabilityType type)
+void WidgetExplorer::immutabilityChanged(Plasma::Types::ImmutabilityType type)
 {
-    if (type != Plasma::Mutable) {
+    if (type != Plasma::Types::Mutable) {
         emit closeClicked();
     }
 }
@@ -639,7 +639,7 @@ QPoint WidgetExplorer::tooltipPosition(QGraphicsObject *item, int tipWidth, int 
         item->boundingRect().size().toSize());
     QPoint pos;
     switch (d->location) {
-    case Plasma::LeftEdge:
+    case Plasma::Types::LeftEdge:
         pos.setX(itemRect.right());
         pos.setY(itemRect.top() + (itemRect.height() - tipHeight) / 2);
         break;
@@ -647,7 +647,7 @@ QPoint WidgetExplorer::tooltipPosition(QGraphicsObject *item, int tipWidth, int 
         pos.setX(itemRect.left() + (itemRect.width() - tipWidth) / 2);
         pos.setY(itemRect.bottom());
         break;
-    case Plasma::RightEdge:
+    case Plasma::Types::RightEdge:
         pos.setX(itemRect.left() - tipWidth);
         pos.setY(itemRect.top() + (itemRect.height() - tipHeight) / 2);
         break;

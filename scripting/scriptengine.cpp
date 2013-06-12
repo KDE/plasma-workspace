@@ -142,11 +142,11 @@ QScriptValue ScriptEngine::createContainment(const QString &type, const QString 
     if (c) {
         if (type == "Panel") {
             // some defaults
-            c->setFormFactor(Plasma::Horizontal);
-            c->setLocation(Plasma::TopEdge);
+            c->setFormFactor(Plasma::Types::Horizontal);
+            c->setLocation(Plasma::Types::TopEdge);
             c->setScreen(env->defaultPanelScreen());
         }
-        c->updateConstraints(Plasma::AllConstraints | Plasma::StartupCompletedConstraint);
+        c->updateConstraints(Plasma::Types::AllConstraints | Plasma::Types::StartupCompletedConstraint);
         c->flushPendingConstraintsEvents();
     }
 
@@ -626,8 +626,8 @@ bool ScriptEngine::isPanel(const Plasma::Containment *c)
         return false;
     }
 
-    return c->containmentType() == Plasma::PanelContainment ||
-           c->containmentType() == Plasma::CustomPanelContainment;
+    return c->containmentType() == Plasma::Types::PanelContainment ||
+           c->containmentType() == Plasma::Types::CustomPanelContainment;
 }
 
 QScriptValue ScriptEngine::activities(QScriptContext *context, QScriptEngine *engine)

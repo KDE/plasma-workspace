@@ -232,7 +232,7 @@ void Applet::setLocked(bool locked)
         return;
     }
 
-    app->setImmutability(locked ? Plasma::UserImmutable : Plasma::Mutable);
+    app->setImmutability(locked ? Plasma::Types::UserImmutable : Plasma::Types::Mutable);
     KConfigGroup cg = app->config();
     if (!app->isContainment()) {
         cg = cg.parent();
@@ -247,10 +247,10 @@ bool Applet::locked() const
 {
     Plasma::Applet *app = applet();
     if (!app) {
-        return Plasma::Mutable;
+        return Plasma::Types::Mutable;
     }
 
-    return app->immutability() != Plasma::Mutable;
+    return app->immutability() != Plasma::Types::Mutable;
 }
 
 bool Applet::wallpaperConfigDirty() const

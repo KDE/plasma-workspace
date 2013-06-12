@@ -47,11 +47,11 @@ public:
     void setContainment(Plasma::Containment *cont);
     Plasma::Containment *containment() const;
 
-    //FIXME: Plasma::Location should be something qml can understand
+    //FIXME: Plasma::Types::Location should be something qml can understand
     int location() const;
     void setLocation(int location);
 
-    Plasma::FormFactor formFactor() const;
+    Plasma::Types::FormFactor formFactor() const;
 
     QRectF screenGeometry();
 
@@ -59,8 +59,8 @@ protected Q_SLOTS:
     void showConfigurationInterface(Plasma::Applet *applet);
 
 Q_SIGNALS:
-    void locationChanged(Plasma::Location location);
-    void formFactorChanged(Plasma::FormFactor formFactor);
+    void locationChanged(Plasma::Types::Location location);
+    void formFactorChanged(Plasma::Types::FormFactor formFactor);
     void containmentChanged();
     void screenGeometryChanged();
 

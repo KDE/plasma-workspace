@@ -68,21 +68,21 @@ void PanelConfigView::syncGeometry()
         return;
     }
 
-    if (m_containment->formFactor() == Plasma::Vertical) {
+    if (m_containment->formFactor() == Plasma::Types::Vertical) {
         resize(rootObject()->implicitWidth(), screen()->size().height());
 
-        if (m_containment->location() == Plasma::LeftEdge) {
+        if (m_containment->location() == Plasma::Types::LeftEdge) {
             setPosition(screen()->geometry().left() + m_panelView->thickness(), screen()->geometry().top());
-        } else if (m_containment->location() == Plasma::RightEdge) {
+        } else if (m_containment->location() == Plasma::Types::RightEdge) {
             setPosition(screen()->geometry().right() - width() - m_panelView->thickness(), screen()->geometry().top());
         }
 
     } else {
         resize(screen()->size().width(), rootObject()->implicitHeight());
 
-        if (m_containment->location() == Plasma::TopEdge) {
+        if (m_containment->location() == Plasma::Types::TopEdge) {
             setPosition(screen()->geometry().left(), screen()->geometry().top() + m_panelView->thickness());
-        } else if (m_containment->location() == Plasma::BottomEdge) {
+        } else if (m_containment->location() == Plasma::Types::BottomEdge) {
             setPosition(screen()->geometry().left(), screen()->geometry().bottom() - height() - m_panelView->thickness());
         }
     }

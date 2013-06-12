@@ -64,7 +64,7 @@ PanelView::~PanelView()
         config().writeEntry("offset", m_offset);
         config().writeEntry("max", m_maxLength);
         config().writeEntry("min", m_minLength);
-        if (formFactor() == Plasma::Vertical) {
+        if (formFactor() == Plasma::Types::Vertical) {
             config().writeEntry("length", size().height());
             config().writeEntry("thickness", size().width());
         } else {
@@ -85,8 +85,8 @@ KConfigGroup PanelView::config() const
     KConfigGroup views(m_corona->applicationConfig(), "PlasmaViews");
     views = KConfigGroup(&views, QString("Panel %1").arg(containment()->id()));
 
-    if (containment()->formFactor() == Plasma::Vertical) {
-        return KConfigGroup(&views, "Vertical" + QString::number(screen()->size().height()));
+    if (containment()->formFactor() == Plasma::Types::Vertical) {
+        return KConfigGroup(&views, "Types::Vertical" + QString::number(screen()->size().height()));
     //treat everything else as horizontal
     } else {
         return KConfigGroup(&views, "Horizontal" + QString::number(screen()->size().width()));
@@ -150,7 +150,7 @@ void PanelView::setThickness(int value)
         return;
     }
 
-    if (formFactor() == Plasma::Vertical) {
+    if (formFactor() == Plasma::Types::Vertical) {
         setWidth(value);
     } else {
         setHeight(value);
@@ -162,7 +162,7 @@ void PanelView::setThickness(int value)
 
 int PanelView::length() const
 {
-    if (formFactor() == Plasma::Vertical) {
+    if (formFactor() == Plasma::Types::Vertical) {
         config().readEntry<int>("length", screen()->size().height());
     } else {
         config().readEntry<int>("length", screen()->size().width());
@@ -175,7 +175,7 @@ void PanelView::setLength(int value)
         return;
     }
 
-    if (formFactor() == Plasma::Vertical) {
+    if (formFactor() == Plasma::Types::Vertical) {
         setHeight(value);
     } else {
         setWidth(value);
@@ -200,7 +200,7 @@ void PanelView::setMaximumLength(int length)
         setMinimumLength(length);
     }
 
-    if (formFactor() == Plasma::Vertical) {
+    if (formFactor() == Plasma::Types::Vertical) {
         setMaximumHeight(length);
     } else {
         setMaximumWidth(length);
@@ -227,7 +227,7 @@ void PanelView::setMinimumLength(int length)
         setMaximumLength(length);
     }
 
-    if (formFactor() == Plasma::Vertical) {
+    if (formFactor() == Plasma::Types::Vertical) {
         setMinimumHeight(length);
     } else {
         setMinimumWidth(length);
@@ -249,8 +249,8 @@ void PanelView::positionPanel()
     const int oldThickness = thickness();
 
     switch (containment()->location()) {
-    case Plasma::TopEdge:
-        containment()->setFormFactor(Plasma::Horizontal);
+    case Plasma::Types::TopEdge:
+        containment()->setFormFactor(Plasma::Types::Horizontal);
         restore();
 
         switch (m_alignment) {
@@ -266,8 +266,8 @@ void PanelView::positionPanel()
         }
         break;
 
-    case Plasma::LeftEdge:
-        containment()->setFormFactor(Plasma::Vertical);
+    case Plasma::Types::LeftEdge:
+        containment()->setFormFactor(Plasma::Types::Vertical);
         restore();
         switch (m_alignment) {
         case Qt::AlignCenter:
@@ -282,8 +282,8 @@ void PanelView::positionPanel()
         }
         break;
 
-    case Plasma::RightEdge:
-        containment()->setFormFactor(Plasma::Vertical);
+    case Plasma::Types::RightEdge:
+        containment()->setFormFactor(Plasma::Types::Vertical);
         restore();
         switch (m_alignment) {
         case Qt::AlignCenter:
@@ -298,9 +298,9 @@ void PanelView::positionPanel()
         }
         break;
 
-    case Plasma::BottomEdge:
+    case Plasma::Types::BottomEdge:
     default:
-        containment()->setFormFactor(Plasma::Horizontal);
+        containment()->setFormFactor(Plasma::Types::Horizontal);
         restore();
         switch (m_alignment) {
         case Qt::AlignCenter:
@@ -340,7 +340,7 @@ void PanelView::restore()
     //FIXME: an invalid size doesn't work with QWindows
     setMaximumSize(screen()->size());
 
-    if (containment()->formFactor() == Plasma::Vertical) {
+    if (containment()->formFactor() == Plasma::Types::Vertical) {
         const int maxSize = screen()->size().height() - m_offset;
         m_maxLength = qBound<int>(MINSIZE, m_maxLength, maxSize);
         m_minLength = qBound<int>(MINSIZE, m_minLength, maxSize);
@@ -371,7 +371,7 @@ void PanelView::restore()
 
 void PanelView::resizeEvent(QResizeEvent *ev)
 {
-    if (containment()->formFactor() == Plasma::Vertical) {
+    if (containment()->formFactor() == Plasma::Types::Vertical) {
         config().writeEntry("length", ev->size().height());
         config().writeEntry("thickness", ev->size().width());
         if (ev->size().height() != ev->oldSize().height()) {
