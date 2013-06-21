@@ -115,7 +115,7 @@ private:
     QStringList m_favorites;
     KConfigGroup m_configGroup;
 
-private slots:
+private Q_SLOTS:
     void populateModel(const QStringList &whatChanged = QStringList());
 };
 
