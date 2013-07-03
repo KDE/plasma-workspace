@@ -121,7 +121,7 @@ void PlasmaAppletItem::setRunning(int count)
 bool PlasmaAppletItem::matches(const QString &pattern) const
 {
     if (m_info.service()) {
-        const QStringList keywords = m_info.service()->keywords();
+        const QStringList keywords = m_info.property("Keywords").toStringList();
         foreach (const QString &keyword, keywords) {
             if (keyword.startsWith(pattern, Qt::CaseInsensitive)) {
                 return true;
