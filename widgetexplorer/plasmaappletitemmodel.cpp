@@ -19,8 +19,10 @@
 
 #include "plasmaappletitemmodel_p.h"
 
+#include <QStandardPaths>
+#include <QFileInfo>
+
 #include <KLocalizedString>
-#include <KStandardDirs>
 #include <KServiceTypeTrader>
 #include <KSycoca>
 
@@ -36,8 +38,11 @@ PlasmaAppletItem::PlasmaAppletItem(PlasmaAppletItemModel *model,
 {
     const QString api(m_info.property("X-Plasma-API").toString());
     if (!api.isEmpty()) {
-        QDir dir(KStandardDirs::locateLocal("data", "plasma/plasmoids/" + info.pluginName() + '/', false));
-        m_local = dir.exists();
+        const QString _f = "plasma/plasmoids/" + info.pluginName() + '/';
+        QFileInfo dir(QStandardPaths::locate(QStandardPaths::QStandardPaths::GenericDataLocation,
+                                                  _f,
+                                                  QStandardPaths::LocateDirectory));
+        m_local = dir.exists() && dir.isWritable();
     }
 
     //attrs.insert("recommended", flags & Recommended ? true : false);
