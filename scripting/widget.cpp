@@ -82,7 +82,7 @@ void Widget::remove()
 void Widget::setGlobalShortcut(const QString &shortcut)
 {
     if (d->applet) {
-        d->applet.data()->setGlobalShortcut(KShortcut(shortcut));
+        d->applet.data()->setGlobalShortcut(QKeySequence(shortcut));
     }
 }
 
