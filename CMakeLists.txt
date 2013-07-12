@@ -82,11 +82,10 @@ target_link_libraries(plasma-shell
  plasma
  ${Qt5Script_LIBRARIES}
  ${KDE4_KDEUI_LIBS}
- KDE4__kde4support
+ ${KDE4Support_LIBRARIES}
  ${Solid_LIBRARIES}
  kdeclarative
 )
-message("+++ kde4support : ${kde4support_LIBRARY}")
 
 
 install(TARGETS plasma-shell ${INSTALL_TARGETS_DEFAULT_ARGS})
