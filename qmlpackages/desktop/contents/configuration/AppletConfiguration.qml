@@ -99,6 +99,7 @@ Rectangle {
 
             QtControls.ScrollView{
                 id: categoriesScroll
+                frameVisible: true
                 anchors {
                     top: parent.top
                     bottom: parent.bottom
@@ -121,7 +122,7 @@ Rectangle {
                         color: syspal.base
 
                         Rectangle {
-                            color: theme.highlightColor
+                            color: syspal.highlight
                             width: parent.width
                             height:  theme.iconSizes.IconSizeHuge
                             y: index * height
@@ -132,7 +133,7 @@ Rectangle {
                                 }
                             }
                         }
-                        ColumnLayout {
+                        Column {
                             id: categoriesColumn
                             width: parent.width
                             Repeater {
