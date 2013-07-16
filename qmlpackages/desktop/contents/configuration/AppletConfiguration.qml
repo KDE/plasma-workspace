@@ -17,6 +17,8 @@
  */
 
 import QtQuick 2.0
+import QtQuick.Controls 1.0 as QtControls
+import QtQuick.Layouts 1.0
 import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.plasma.core 2.0 as PlasmaCore
@@ -30,7 +32,7 @@ Rectangle {
     property int _m: theme.defaultFont.pointSize
 
 //BEGIN properties
-    color: "lightgray"
+    color: syspal.window
     width: 640
     height: 480
 //END properties
@@ -81,24 +83,24 @@ Rectangle {
 //END connections
 
 //BEGIN UI components
-    Column {
+    SystemPalette {id: syspal}
+
+    ColumnLayout {
         id: mainColumn
         anchors.fill: parent
         property int implicitWidth: Math.max(contentRow.implicitWidth, buttonsRow.implicitWidth) + 8
         property int implicitHeight: contentRow.implicitHeight + buttonsRow.implicitHeight + 8
 
-        Row {
+        RowLayout {
             id: contentRow
             anchors {
                 left: parent.left
                 right: parent.right
             }
-            spacing: 4
-            height: parent.height - buttonsRow.height
-            property int implicitWidth: categoriesScroll.implicitWidth + pageScroll.implicitWidth
-            property int implicitHeight: Math.max(categoriesScroll.implicitHeight, pageScroll.implicitHeight)
+            Layout.fillHeight: true
+            Layout.preferredHeight: parent.height - buttonsRow.height
 
-            PlasmaExtras.ScrollArea {
+            QtControls.ScrollView{
                 id: categoriesScroll
                 anchors {
                     top: parent.top
@@ -107,7 +109,6 @@ Rectangle {
                 visible: (configDialog.configModel ? configDialog.configModel.count : 0) + globalConfigModel.count > 1
                 width: visible ? 100 : 0
                 implicitWidth: width
-                implicitHeight: theme.mSize(theme.defaultFont).height * 12
                 Flickable {
                     id: categoriesView
                     contentWidth: width
@@ -120,7 +121,7 @@ Rectangle {
                         id: categories
                         width: parent.width
                         height: Math.max(categoriesView.height, categoriesColumn.height)
-                        color: "white"
+                        color: syspal.base
 
                         Rectangle {
                             color: theme.highlightColor
@@ -134,7 +135,7 @@ Rectangle {
                                 }
                             }
                         }
-                        Column {
+                        ColumnLayout {
                             id: categoriesColumn
                             width: parent.width
                             Repeater {
@@ -152,16 +153,13 @@ Rectangle {
                     }
                 }
             }
-            PlasmaExtras.ScrollArea {
+            QtControls.ScrollView{
                 id: pageScroll
                 anchors {
                     top: parent.top
                     bottom: parent.bottom
-                    margins: 4
                 }
-                width: parent.width - categoriesScroll.width - 8
-                implicitWidth: main.currentPage ? main.currentPage.implicitWidth : 0
-                implicitHeight: main.currentPage ? main.currentPage.implicitHeight : 0
+                Layout.fillWidth: true
                 Flickable {
                     contentWidth: width
                     contentHeight: main.height
@@ -201,14 +199,13 @@ Rectangle {
                 }
             }
         }
-        Row {
+        RowLayout {
             id: buttonsRow
-            spacing: 4
             anchors {
                 right: parent.right
                 rightMargin: spacing
             }
-            PlasmaComponents.Button {
+            QtControls.Button {
                 iconSource: "dialog-ok"
                 text: "Ok"
                 onClicked: {
@@ -220,7 +217,7 @@ Rectangle {
                     configDialog.close()
                 }
             }
-            PlasmaComponents.Button {
+            QtControls.Button {
                 iconSource: "dialog-ok-apply"
                 text: "Apply"
                 onClicked: {
@@ -231,7 +228,7 @@ Rectangle {
                     }
                 }
             }
-            PlasmaComponents.Button {
+            QtControls.Button {
                 iconSource: "dialog-cancel"
                 text: "Cancel"
                 onClicked: configDialog.close()
