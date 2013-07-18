@@ -17,8 +17,7 @@
  */
 
 import QtQuick 2.0
-import org.kde.plasma.components 2.0 as PlasmaComponents
-import org.kde.plasma.extras 2.0 as PlasmaExtras
+import QtQuick.Controls 1.0 as QtControls
 import org.kde.plasma.core 2.0 as PlasmaCore
 
 MouseArea {
@@ -68,7 +67,7 @@ MouseArea {
             height: width
             source: model.icon
         }
-        PlasmaComponents.Label {
+        QtControls.Label {
             anchors {
                 left: parent.left
                 right: parent.right
