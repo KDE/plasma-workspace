@@ -39,7 +39,7 @@
 #include <k4aboutdata.h>
 
 // KIO
-#include <kemailsettings.h> // no camelcase include
+//#include <kemailsettings.h> // no camelcase include
 
 #include <Plasma/Applet>
 #include <Plasma/Containment>
@@ -382,10 +382,11 @@ QScriptValue ScriptEngine::defaultApplication(QScriptContext *context, QScriptEn
     // specific implementation system. there is much room for improvement here. see
     // kdebase-runtime/kcontrol/componentchooser/ for all the gory details ;)
     if (application.compare("mailer", Qt::CaseInsensitive) == 0) {
-        KEMailSettings settings;
+  //      KEMailSettings settings;
 
         // in KToolInvocation, the default is kmail; but let's be friendlier :)
-        QString command = settings.getSetting(KEMailSettings::ClientProgram);
+//        QString command = settings.getSetting(KEMailSettings::ClientProgram);
+	QString command;
         if (command.isEmpty()) {
             if (KService::Ptr kontact = KService::serviceByStorageId("kontact")) {
                 return storageId ? kontact->storageId() : onlyExec(kontact->exec());
@@ -395,7 +396,8 @@ QScriptValue ScriptEngine::defaultApplication(QScriptContext *context, QScriptEn
         }
 
         if (!command.isEmpty()) {
-            if (settings.getSetting(KEMailSettings::ClientTerminal) == "true") {
+            //if (settings.getSetting(KEMailSettings::ClientTerminal) == "true") {
+	    if (false) {
                 KConfigGroup confGroup(KGlobal::config(), "General");
                 const QString preferredTerminal = confGroup.readPathEntry("TerminalApplication", QString::fromLatin1("konsole"));
                 command = preferredTerminal + QString::fromLatin1(" -e ") + command;
