@@ -180,7 +180,7 @@ PlasmaComponents.Page {
                 width: _h
                 text: "Top"
                 onClicked: {
-                    locationDialog.location = PlasmaCore.Plasma.TopEdge;
+                    locationDialog.location = PlasmaCore.Types.TopEdge;
                     locationDialog.visible = !locationDialog.visible
                 }
             }
@@ -188,7 +188,7 @@ PlasmaComponents.Page {
                 text: "Bottom"
                 width: _h
                 onClicked: {
-                    locationDialog.location = PlasmaCore.Plasma.BottomEdge;
+                    locationDialog.location = PlasmaCore.Types.BottomEdge;
                     locationDialog.visible = !locationDialog.visible
                 }
             }
@@ -196,7 +196,7 @@ PlasmaComponents.Page {
                 text: "Left"
                 width: _h
                 onClicked: {
-                    locationDialog.location = PlasmaCore.Plasma.LeftEdge;
+                    locationDialog.location = PlasmaCore.Types.LeftEdge;
                     locationDialog.visible = !locationDialog.visible
                 }
             }
@@ -204,7 +204,7 @@ PlasmaComponents.Page {
                 text: "Right"
                 width: _h
                 onClicked: {
-                    locationDialog.location = PlasmaCore.Plasma.RightEdge;
+                    locationDialog.location = PlasmaCore.Types.RightEdge;
                     locationDialog.visible = !locationDialog.visible
                 }
             }
@@ -212,7 +212,7 @@ PlasmaComponents.Page {
                 text: "Desktop"
                 width: _h
                 onClicked: {
-                    locationDialog.location = PlasmaCore.Plasma.Desktop;
+                    locationDialog.location = PlasmaCore.Types.Desktop;
                     locationDialog.visible = !locationDialog.visible
                 }
             }
@@ -220,7 +220,7 @@ PlasmaComponents.Page {
                 text: "Floating"
                 width: _h
                 onClicked: {
-                    locationDialog.location = PlasmaCore.Plasma.Floating;
+                    locationDialog.location = PlasmaCore.Types.Floating;
                     locationDialog.visible = !locationDialog.visible
                 }
             }
@@ -228,7 +228,7 @@ PlasmaComponents.Page {
                 text: "FullScreen"
                 width: _h
                 onClicked: {
-                    locationDialog.location = PlasmaCore.Plasma.FullScreen;
+                    locationDialog.location = PlasmaCore.Types.FullScreen;
                     locationDialog.visible = !locationDialog.visible
                 }
             }

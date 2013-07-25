@@ -48,11 +48,11 @@ Item {
             id: localeItem
             anchors { left: parent.left; right: parent.right; top: tx.bottom; }
         }
-//         PlasmaComponents.TextArea {
-//             anchors { left: parent.left; right: parent.right; top: localeItem.bottom; }
-//             width: parent.width
-//             height: 80
-//         }
+        PlasmaComponents.TextArea {
+            anchors { left: parent.left; right: parent.right; top: localeItem.bottom; }
+            width: parent.width
+            height: 80
+        }
         PlasmaComponents.Button {
             id: thanks
             anchors { horizontalCenter: parent.horizontalCenter; bottom: parent.bottom; bottomMargin: 24; }
