@@ -320,7 +320,11 @@ void WidgetExplorerPrivate::initRunningApplets()
         // QObject::connect(containment, &Containment::appletRemoved, q, &WidgetExplorerPrivate::appletRemoved);
 
         foreach (Applet *applet, containment->applets()) {
-            runningApplets[applet->pluginInfo().pluginName()]++;
+            if (applet->pluginInfo().isValid()) {
+                runningApplets[applet->pluginInfo().pluginName()]++;
+            } else {
+                qDebug() << "Invalid plugininfo. :(";
+            }
         }
     }
 
