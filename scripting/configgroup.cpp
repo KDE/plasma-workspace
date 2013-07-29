@@ -61,7 +61,7 @@ ConfigGroup::ConfigGroup(QObject *parent)
 ConfigGroup::~ConfigGroup()
 {
     if (d->synchTimer->isActive()) {
-        //kDebug() << "SYNC......";
+        //qDebug() << "SYNC......";
         d->synchTimer->stop();
         d->configGroup->sync();
     }
@@ -139,7 +139,7 @@ bool ConfigGroup::readConfigFile()
         return true;
     } else {
         if (d->file.isEmpty()) {
-            kWarning() << "Could not find KConfig Parent: specify a file or parent to another ConfigGroup";
+            qWarning() << "Could not find KConfig Parent: specify a file or parent to another ConfigGroup";
             return false;
         }
         d->config = KSharedConfig::openConfig(d->file);
@@ -167,7 +167,7 @@ QVariant ConfigGroup::readEntry(const QString& key)
         return QVariant();
     }
     const QVariant value = d->configGroup->readEntry(key, QVariant(""));
-    //kDebug() << " reading setting: " << key << value;
+    //qDebug() << " reading setting: " << key << value;
     return value;
 }
 
@@ -179,7 +179,7 @@ void ConfigGroup::deleteEntry(const QString& key)
 void ConfigGroup::sync()
 {
     if (d->configGroup) {
-        //kDebug() << "synching config...";
+        //qDebug() << "synching config...";
         d->configGroup->sync();
     }
 }

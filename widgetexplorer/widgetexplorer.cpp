@@ -258,7 +258,7 @@ QList <QObject *>  WidgetExplorer::widgetsMenuActions()
 
     KService::List offers = KServiceTypeTrader::self()->query("Plasma/PackageStructure");
     foreach (const KService::Ptr &service, offers) {
-        //kDebug() << service->property("X-Plasma-ProvidesWidgetBrowser");
+        //qDebug() << service->property("X-Plasma-ProvidesWidgetBrowser");
         if (service->property("X-Plasma-ProvidesWidgetBrowser").toBool()) {
             WidgetAction *action = new WidgetAction(QIcon::fromTheme("applications-internet"),
                                           i18nc("%1 is a type of widgets, as defined by "
@@ -328,7 +328,7 @@ void WidgetExplorerPrivate::initRunningApplets()
         }
     }
 
-    //kDebug() << runningApplets;
+    //qDebug() << runningApplets;
     itemModel.setRunningApplets(runningApplets);
 }
 
@@ -522,7 +522,7 @@ void WidgetExplorer::downloadWidgets(const QString &type)
         KService::List offers = KServiceTypeTrader::self()->query("Plasma/PackageStructure",
                                                                   constraint);
         if (offers.isEmpty()) {
-            //kDebug() << "could not find requested PackageStructure plugin" << type;
+            //qDebug() << "could not find requested PackageStructure plugin" << type;
         } else {
             KService::Ptr service = offers.first();
             QString error;
@@ -533,7 +533,7 @@ void WidgetExplorer::downloadWidgets(const QString &type)
 //                 connect(installer, SIGNAL(newWidgetBrowserFinished()),
 //                         installer, SLOT(deleteLater()));
             } else {
-                //kDebug() << "found, but could not load requested PackageStructure plugin" << type
+                //qDebug() << "found, but could not load requested PackageStructure plugin" << type
 //                         << "; reported error was" << error;
             }
         }
