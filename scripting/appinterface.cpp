@@ -84,7 +84,7 @@ QList<int> AppInterface::panelIds() const
     QList<int> panels;
 
     foreach (Plasma::Containment *c, m_env->corona()->containments()) {
-        //kDebug() << "checking" << (QObject*)c << isPanel(c);
+        //qDebug() << "checking" << (QObject*)c << isPanel(c);
         if (ScriptEngine::isPanel(c)) {
             panels.append(c->id());
         }

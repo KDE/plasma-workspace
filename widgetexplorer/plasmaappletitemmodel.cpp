@@ -224,22 +224,22 @@ void PlasmaAppletItemModel::populateModel(const QStringList &whatChanged)
     }
 
     clear();
-    //kDebug() << "populating model, our application is" << m_application;
+    //qDebug() << "populating model, our application is" << m_application;
 
-    //kDebug() << "number of applets is"
+    //qDebug() << "number of applets is"
     //         <<  Plasma::Applet::listAppletInfo(QString(), m_application).count();
     KService::List services = KServiceTypeTrader::self()->query("Plasma/Applet", QString());
 
     foreach (const KSharedPtr<KService> service, services) {
         KPluginInfo info(service);
-        //kDebug() << info.pluginName() << "NoDisplay" << info.property("NoDisplay").toBool();
+        //qDebug() << info.pluginName() << "NoDisplay" << info.property("NoDisplay").toBool();
         if (info.property("NoDisplay").toBool() || info.category() == i18n("Containments")) {
             // we don't want to show the hidden category
             continue;
         }
 
         qDebug() << info.pluginName() << " is the name of the plugin at" << info.entryPath();
-        //kDebug() << info.name() << info.property("X-Plasma-Thumbnail");
+        //qDebug() << info.name() << info.property("X-Plasma-Thumbnail");
 
         PlasmaAppletItem::FilterFlags flags(PlasmaAppletItem::NoFilter);
         if (m_favorites.contains(info.pluginName())) {
@@ -300,7 +300,7 @@ QSet<QString> PlasmaAppletItemModel::categories() const
 
 QMimeData *PlasmaAppletItemModel::mimeData(const QModelIndexList &indexes) const
 {
-    //kDebug() << "GETTING MIME DATA\n";
+    //qDebug() << "GETTING MIME DATA\n";
     if (indexes.count() <= 0) {
         return 0;
     }
@@ -325,7 +325,7 @@ QMimeData *PlasmaAppletItemModel::mimeData(const QModelIndexList &indexes) const
         lastRow = index.row();
         PlasmaAppletItem *selectedItem = (PlasmaAppletItem *) itemFromIndex(index);
         appletNames += '\n' + selectedItem->pluginName().toUtf8();
-        //kDebug() << selectedItem->pluginName() << index.column() << index.row();
+        //qDebug() << selectedItem->pluginName() << index.column() << index.row();
     }
 
     data->setData(format, appletNames);

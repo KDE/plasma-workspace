@@ -255,13 +255,13 @@ QScriptValue ScriptEngine::loadTemplate(QScriptContext *context, QScriptEngine *
 {
     Q_UNUSED(engine)
     if (context->argumentCount() == 0) {
-        kDebug() << "no arguments";
+        // qDebug() << "no arguments";
         return false;
     }
 
     const QString layout = context->argument(0).toString();
     if (layout.isEmpty() || layout.contains("'")) {
-        kDebug() << "layout is empty";
+        // qDebug() << "layout is empty";
         return false;
     }
 
@@ -270,7 +270,7 @@ QScriptValue ScriptEngine::loadTemplate(QScriptContext *context, QScriptEngine *
     KService::List offers = KServiceTypeTrader::self()->query("Plasma/LayoutTemplate", constraint);
 
     if (offers.isEmpty()) {
-        kDebug() << "offers fail" << constraint;
+        // qDebug() << "offers fail" << constraint;
         return false;
     }
 
@@ -279,26 +279,26 @@ QScriptValue ScriptEngine::loadTemplate(QScriptContext *context, QScriptEngine *
     KPluginInfo info(offers.first());
     const QString path = KStandardDirs::locate("data", package.defaultPackageRoot() + '/' + info.pluginName() + '/');
     if (path.isEmpty()) {
-        kDebug() << "script path is empty";
+        // qDebug() << "script path is empty";
         return false;
     }
     package.setPath(path);
 
     const QString scriptFile = package.filePath("mainscript");
     if (scriptFile.isEmpty()) {
-        kDebug() << "scriptfile is empty";
+        // qDebug() << "scriptfile is empty";
         return false;
     }
 
     QFile file(scriptFile);
     if (!file.open(QIODevice::ReadOnly | QIODevice::Text)) {
-        kWarning() << i18n("Unable to load script file: %1", path);
+        qWarning() << i18n("Unable to load script file: %1", path);
         return false;
     }
 
     QString script = file.readAll();
     if (script.isEmpty()) {
-        kDebug() << "script is empty";
+        // qDebug() << "script is empty";
         return false;
     }
 
@@ -435,12 +435,12 @@ QScriptValue ScriptEngine::defaultApplication(QScriptContext *context, QScriptEn
     } else {
         // try the files in share/apps/kcm_componentchooser/
         const QStringList services = KGlobal::dirs()->findAllResources("data","kcm_componentchooser/*.desktop", KStandardDirs::NoDuplicates);
-        //kDebug() << "ok, trying in" << services.count();
+        //qDebug() << "ok, trying in" << services.count();
         foreach (const QString &service, services) {
             KConfig config(service, KConfig::SimpleConfig);
             KConfigGroup cg = config.group(QByteArray());
             const QString type = cg.readEntry("valueName", QString());
-            //kDebug() << "    checking" << service << type << application;
+            //qDebug() << "    checking" << service << type << application;
             if (type.compare(application, Qt::CaseInsensitive) == 0) {
                 KConfig store(cg.readPathEntry("storeInFile", "null"));
                 KConfigGroup storeCg(&store, cg.readEntry("valueSection", QString()));
@@ -658,10 +658,10 @@ Plasma::Corona *ScriptEngine::corona() const
 
 bool ScriptEngine::evaluateScript(const QString &script, const QString &path)
 {
-    //kDebug() << "evaluating" << m_editor->toPlainText();
+    //qDebug() << "evaluating" << m_editor->toPlainText();
     evaluate(script, path);
     if (hasUncaughtException()) {
-        //kDebug() << "catch the exception!";
+        //qDebug() << "catch the exception!";
         QString error = i18n("Error: %1 at line %2\n\nBacktrace:\n%3",
                              uncaughtException().toString(),
                              QString::number(uncaughtExceptionLineNumber()),
@@ -675,7 +675,7 @@ bool ScriptEngine::evaluateScript(const QString &script, const QString &path)
 
 void ScriptEngine::exception(const QScriptValue &value)
 {
-    //kDebug() << "exception caught!" << value.toVariant();
+    //qDebug() << "exception caught!" << value.toVariant();
     emit printError(value.toVariant().toString());
 }
 
@@ -686,7 +686,7 @@ QStringList ScriptEngine::pendingUpdateScripts(Plasma::Corona *corona)
     QStringList scriptPaths;
 
     if (scripts.isEmpty()) {
-        //kDebug() << "no update scripts";
+        //qDebug() << "no update scripts";
         return scriptPaths;
     }
 
@@ -701,7 +701,7 @@ QStringList ScriptEngine::pendingUpdateScripts(Plasma::Corona *corona)
         }
 
         if (script.startsWith(localDir) || script.startsWith(localXdgDir)) {
-            kDebug() << "skipping user local script: " << script;
+            // qDebug() << "skipping user local script: " << script;
             continue;
         }
 

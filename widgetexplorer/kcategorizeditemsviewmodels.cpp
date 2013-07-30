@@ -176,7 +176,7 @@ bool DefaultItemFilterProxyModel::filterAcceptsRow(int sourceRow,
     QModelIndex index = sourceModel()->index(sourceRow, 0, sourceParent);
 
     AbstractItem *item = (AbstractItem *) model->itemFromIndex(index);
-    //kDebug() << "ITEM " << (item ? "IS NOT " : "IS") << " NULL\n";
+    //qDebug() << "ITEM " << (item ? "IS NOT " : "IS") << " NULL\n";
 
     return item &&
         (m_filter.first.isEmpty() || item->passesFiltering(m_filter)) &&

@@ -30,7 +30,7 @@ QScriptValue jsi18n(QScriptContext *context, QScriptEngine *engine)
     Q_UNUSED(engine)
 
     if (context->argumentCount() < 1) {
-        kDebug() << i18n("i18n() takes at least one argument");
+        // qDebug() << i18n("i18n() takes at least one argument");
         return engine->undefinedValue();
     }
 
@@ -49,7 +49,7 @@ QScriptValue jsi18nc(QScriptContext *context, QScriptEngine *engine)
     Q_UNUSED(engine)
 
     if (context->argumentCount() < 2) {
-        kDebug() << i18n("i18nc() takes at least two arguments");
+        // qDebug() << i18n("i18nc() takes at least two arguments");
         return engine->undefinedValue();
     }
 
@@ -69,7 +69,7 @@ QScriptValue jsi18np(QScriptContext *context, QScriptEngine *engine)
     Q_UNUSED(engine)
 
     if (context->argumentCount() < 2) {
-        kDebug() << i18n("i18np() takes at least two arguments");
+        // qDebug() << i18n("i18np() takes at least two arguments");
         return engine->undefinedValue();
     }
 
@@ -94,7 +94,7 @@ QScriptValue jsi18ncp(QScriptContext *context, QScriptEngine *engine)
     Q_UNUSED(engine)
 
     if (context->argumentCount() < 3) {
-        kDebug() << i18n("i18ncp() takes at least three arguments");
+        // qDebug() << i18n("i18ncp() takes at least three arguments");
         return engine->undefinedValue();
     }
 
