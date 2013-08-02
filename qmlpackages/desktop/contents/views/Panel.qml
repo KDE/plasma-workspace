@@ -37,6 +37,31 @@ PlasmaCore.FrameSvgItem {
         containment.anchors.fill = root
     }
 
+    Connections {
+        target: containment
+        onLocationChanged: {
+            var borders = PlasmaCore.FrameSvg.AllBorders;
+
+            switch (containment.location) {
+            case PlasmaCore.Types.TopEdge:
+                borders = borders & ~PlasmaCore.FrameSvg.TopBorder;
+                break;
+            case PlasmaCore.Types.LeftEdge:
+                borders = borders & ~PlasmaCore.FrameSvg.LeftBorder;
+                break;
+            case PlasmaCore.Types.RightEdge:
+                borders = borders & ~PlasmaCore.FrameSvg.RightBorder;
+                break;
+            case PlasmaCore.Types.BottomEdge:
+            default:
+                borders = borders & ~PlasmaCore.FrameSvg.BottomBorder;
+                break;
+            }
+
+            root.enabledBorders = borders;
+        }
+    }
+
     Component.onCompleted: {
         print("PanelView QML loaded")
     }
