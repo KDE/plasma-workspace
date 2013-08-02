@@ -22,6 +22,8 @@
 #include <QAction>
 #include <QDebug>
 #include <QScreen>
+#include <QQmlEngine>
+#include <QQmlContext>
 
 #include <KActionCollection>
 #include <KWindowSystem>
@@ -100,6 +102,8 @@ void PanelView::init()
     }
 
     setResizeMode(View::SizeRootObjectToView);
+    qmlRegisterType<QScreen>();
+    engine()->rootContext()->setContextProperty("panel", this);
     setSource(QUrl::fromLocalFile(m_corona->package().filePath("views", "Panel.qml")));
     positionPanel();
 }

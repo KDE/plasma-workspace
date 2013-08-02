@@ -35,6 +35,7 @@ class PanelView : public View
     Q_PROPERTY(int length READ length WRITE setLength NOTIFY lengthChanged)
     Q_PROPERTY(int maximumLength READ maximumLength WRITE setMaximumLength NOTIFY maximumLengthChanged)
     Q_PROPERTY(int minimumLength READ minimumLength WRITE setMinimumLength NOTIFY minimumLengthChanged)
+    Q_PROPERTY(QScreen *screen READ screen /*NOTIFY screenChanged*/)
 
 public:
     explicit PanelView(DesktopCorona *corona, QWindow *parent = 0);
