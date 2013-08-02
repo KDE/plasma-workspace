@@ -25,8 +25,8 @@ import org.kde.plasma.configuration 2.0
 Item {
     id: root
     state: parent.state
-    implicitWidth: childrenRect.width + 20
-    implicitHeight: childrenRect.height + 20
+    implicitWidth: column.width + 20
+    implicitHeight: row.height + 20
     PlasmaComponents.ButtonRow {
         id: row
         spacing: 0
