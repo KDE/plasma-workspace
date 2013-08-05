@@ -42,14 +42,18 @@ Item {
             container.visible = true
         }
         onFormFactorChanged: {
+            print("bbb"+plasmoid.formFactor)
             if (plasmoid.formFactor == PlasmaCore.Types.Vertical) {
                 for (var container in row.children) {
-                    container.parent = column
-                    print("AAAA"+container)
+                    var item = row.children[0];
+                    item.parent = column
+                    item.width = column.width
                 }
             } else {
                 for (var container in column.children) {
-                    container.parent = row
+                    var item = column.children[0];
+                    item.parent = row
+                    item.height = row.height
                 }
             }
         }
