@@ -371,6 +371,7 @@ void PanelView::restore()
     emit maximumLengthChanged();
     emit minimumLengthChanged();
     emit offsetChanged();
+    emit alignmentChanged();
 }
 
 void PanelView::resizeEvent(QResizeEvent *ev)
