@@ -64,11 +64,11 @@ Item {
             id: container
             visible: false
 
-            width: Math.min(root.width, root.height)
-            height:  width
+            Layout.preferredWidth: Math.min(root.width, root.height)
+            Layout.preferredHeight: Layout.preferredWidth
+
 
             property Item applet
-
 
             PlasmaComponents.BusyIndicator {
                 z: 1000

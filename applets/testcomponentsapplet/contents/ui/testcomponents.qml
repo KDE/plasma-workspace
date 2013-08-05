@@ -28,6 +28,8 @@ Item {
     width: 100
     height: 100
     clip: true
+    property int minimumWidth: units.gridUnit * 20
+    property int minimumHeight: units.gridUnit * 30
 
     property int _s: theme.iconSizes.small
     property int _h: theme.iconSizes.desktop

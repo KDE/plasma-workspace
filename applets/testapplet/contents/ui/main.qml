@@ -28,6 +28,8 @@ Rectangle {
     height: 100
     radius: 10
     smooth: true
+    property int minimumWidth: units.gridUnit * 20
+    property int minimumHeight: column.implicitHeight
 
     property Component compactRepresentation: Component {
         Rectangle {
@@ -39,6 +41,7 @@ Rectangle {
     }
 
     Column {
+        id: column
         anchors.centerIn: parent
         Text {
             text: "I'm an applet"
