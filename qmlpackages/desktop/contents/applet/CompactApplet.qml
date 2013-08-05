@@ -25,9 +25,19 @@ import org.kde.plasma.components 2.0 as PlasmaComponents
 Item {
     id: root
 
+    property int minimumWidth: compactRepresentation && compactRepresentation.minimumWidth !== undefined ? compactRepresentation.minimumWidth : -1
+    property int minimumHeight: compactRepresentation && compactRepresentation.minimumHeight !== undefined ? compactRepresentation.minimumHeight : -1
+
+    property int maximumWidth: compactRepresentation && compactRepresentation.maximumWidth !== undefined ? compactRepresentation.maximumWidth : -1
+    property int maximumHeight: compactRepresentation && compactRepresentation.maximumHeight !== undefined ? compactRepresentation.maximumHeight : -1
+
+    property int implicitWidth: compactRepresentation && compactRepresentation.implicitWidth !== undefined ? compactRepresentation.implicitWidth : -1
+    property int implicitHeight: compactRepresentation && compactRepresentation.implicitHeight !== undefined ? compactRepresentation.implicitHeight : -1
+
+
+
     property Item applet
     property Item compactRepresentation
-
 
     onAppletChanged: {
         applet.parent = appletParent
@@ -48,7 +58,7 @@ Item {
         mainItem: Item {
             id: appletParent
 
-            width: applet && applet.implicitWidth > 0 ? applet.implicitWidth : theme.mSize(theme.defaultFont).width * 35
+            width: applet && applet.implicitHeight > 0 ? applet.implicitHeight : theme.mSize(theme.defaultFont).width * 35
             height: applet && applet.implicitHeight > 0 ? applet.implicitHeight : theme.mSize(theme.defaultFont).height * 25
             onWidthChanged: applet.width = width
             onHeightChanged: applet.height = height
