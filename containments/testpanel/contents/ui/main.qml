@@ -16,7 +16,8 @@
  *  Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  2.010-1301, USA.
  */
 
-import QtQuick 2.0
+import QtQuick 2.1
+import QtQuick.Layouts 1.0
 
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
@@ -32,7 +33,7 @@ Item {
     Connections {
         target: plasmoid
         onAppletAdded: {
-            var container = appletContainerComponent.createObject((plasmoid.formFactor == 3) ? column : row)
+            var container = appletContainerComponent.createObject((plasmoid.formFactor == PlasmaCore.Types.Vertical) ? column : row)
             print("Applet added in test panel: " + applet)
             applet.parent = container
             container.applet = applet
@@ -41,9 +42,10 @@ Item {
             container.visible = true
         }
         onFormFactorChanged: {
-            if (plasmoid.formFactor == 3) {
+            if (plasmoid.formFactor == PlasmaCore.Types.Vertical) {
                 for (var container in row.children) {
                     container.parent = column
+                    print("AAAA"+container)
                 }
             } else {
                 for (var container in column.children) {
@@ -74,7 +76,7 @@ Item {
         }
     }
 
-    Row {
+    RowLayout {
         id: row
         anchors {
             top: parent.top
@@ -82,7 +84,7 @@ Item {
             left: parent.left
         }
     }
-    Column {
+    ColumnLayout {
         id: column
         anchors {
             top: parent.top
