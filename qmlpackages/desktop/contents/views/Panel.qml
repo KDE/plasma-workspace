@@ -30,11 +30,76 @@ PlasmaCore.FrameSvgItem {
 
     property Item containment
 
+    function adjustBorders() {
+        var borders = PlasmaCore.FrameSvg.AllBorders;
+
+        switch (containment.location) {
+        case PlasmaCore.Types.TopEdge:
+            borders = borders & ~PlasmaCore.FrameSvg.TopBorder;
+            break;
+        case PlasmaCore.Types.LeftEdge:
+            borders = borders & ~PlasmaCore.FrameSvg.LeftBorder;
+            break;
+        case PlasmaCore.Types.RightEdge:
+            borders = borders & ~PlasmaCore.FrameSvg.RightBorder;
+            break;
+        case PlasmaCore.Types.BottomEdge:
+        default:
+            borders = borders & ~PlasmaCore.FrameSvg.BottomBorder;
+            break;
+        }
+
+        if (panel.x <= panel.screen.geometry.x) {
+            borders = borders & ~PlasmaCore.FrameSvg.LeftBorder;
+        }
+        if (panel.x + panel.width >= panel.screen.geometry.x + panel.screen.geometry.width) {
+            borders = borders & ~PlasmaCore.FrameSvg.RightBorder;
+        }
+        if (panel.y <= panel.screen.geometry.y) {
+            borders = borders & ~PlasmaCore.FrameSvg.TopBorder;
+        }
+        if (panel.y + panel.height >= panel.screen.geometry.y + panel.screen.geometry.height) {
+            borders = borders & ~PlasmaCore.FrameSvg.BottomBorder;
+        }
+
+        root.enabledBorders = borders;
+    }
+
     onContainmentChanged: {
         print("New panel Containment: " + containment)
         //containment.parent = root
         containment.visible = true
         containment.anchors.fill = root
+    }
+
+    Connections {
+        target: containment
+        onLocationChanged: {
+            adjustBorders()
+        }
+    }
+
+    Connections {
+        target: panel
+        onXChanged: {
+            adjustBorders();
+        }
+        onYChanged: {
+            adjustBorders();
+        }
+        onWidthChanged: {
+            adjustBorders();
+        }
+        onHeightChanged: {
+            adjustBorders();
+        }
+    }
+
+    Connections {
+        target: panel.screen
+        onGeometryChanged: {
+            adjustBorders();
+        }
     }
 
     Component.onCompleted: {
