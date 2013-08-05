@@ -42,7 +42,6 @@ Item {
             container.visible = true
         }
         onFormFactorChanged: {
-            print("bbb"+plasmoid.formFactor)
             if (plasmoid.formFactor == PlasmaCore.Types.Vertical) {
                 for (var container in row.children) {
                     var item = row.children[0];
