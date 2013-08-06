@@ -50,16 +50,16 @@ Rectangle {
 //BEGIN functions
     function saveConfig() {
         for (var key in plasmoid.configuration) {
-            if (main.currentPage["cfg_"+key] !== undefined) {
-                plasmoid.configuration[key] = main.currentPage["cfg_"+key]
+            if (main.currentItem["cfg_"+key] !== undefined) {
+                plasmoid.configuration[key] = main.currentItem["cfg_"+key]
             }
         }
     }
 
     function restoreConfig() {
         for (var key in plasmoid.configuration) {
-            if (main.currentPage["cfg_"+key] !== undefined) {
-                main.currentPage["cfg_"+key] = plasmoid.configuration[key]
+            if (main.currentItem["cfg_"+key] !== undefined) {
+                main.currentItem["cfg_"+key] = plasmoid.configuration[key]
             }
         }
     }
@@ -207,8 +207,8 @@ Rectangle {
                 iconSource: "dialog-ok"
                 text: "Ok"
                 onClicked: {
-                    if (main.currentPage.saveConfig !== undefined) {
-                        main.currentPage.saveConfig()
+                    if (main.currentItem.saveConfig !== undefined) {
+                        main.currentItem.saveConfig()
                     } else {
                         root.saveConfig()
                     }
@@ -219,8 +219,8 @@ Rectangle {
                 iconSource: "dialog-ok-apply"
                 text: "Apply"
                 onClicked: {
-                    if (main.currentPage.saveConfig !== undefined) {
-                        main.currentPage.saveConfig()
+                    if (main.currentItem.saveConfig !== undefined) {
+                        main.currentItem.saveConfig()
                     } else {
                         root.saveConfig()
                     }
