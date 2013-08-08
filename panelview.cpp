@@ -58,6 +58,16 @@ PanelView::PanelView(DesktopCorona *corona, QWindow *parent)
             this, &PanelView::positionPanel);
     connect(this, &View::containmentChanged,
             this, &PanelView::restore);
+
+    if (!m_corona->package().isValid()) {
+        qWarning() << "Invalid home screen package";
+    }
+
+    setResizeMode(View::SizeRootObjectToView);
+    qmlRegisterType<QScreen>();
+    engine()->rootContext()->setContextProperty("panel", this);
+    setSource(QUrl::fromLocalFile(m_corona->package().filePath("views", "Panel.qml")));
+    positionPanel();
 }
 
 PanelView::~PanelView()
@@ -93,19 +103,6 @@ KConfigGroup PanelView::config() const
     } else {
         return KConfigGroup(&views, "Horizontal" + QString::number(screen()->size().width()));
     }
-}
-
-void PanelView::init()
-{
-    if (!m_corona->package().isValid()) {
-        qWarning() << "Invalid home screen package";
-    }
-
-    setResizeMode(View::SizeRootObjectToView);
-    qmlRegisterType<QScreen>();
-    engine()->rootContext()->setContextProperty("panel", this);
-    setSource(QUrl::fromLocalFile(m_corona->package().filePath("views", "Panel.qml")));
-    positionPanel();
 }
 
 Qt::Alignment PanelView::alignment() const

@@ -234,7 +234,6 @@ void DesktopCorona::checkViews()
         for (int i = m_views.count(); i < m_desktopWidget->screenCount(); ++i) {
             View *view = new View(this);
             QSurfaceFormat format;
-            view->init();
             view->show();
             
             m_views << view;
@@ -262,7 +261,6 @@ void DesktopCorona::updateScreenOwner(int wasScreen, int isScreen, Plasma::Conta
 
         if (isScreen >= 0) {
             m_panelViews[containment] = new PanelView(this);
-            m_panelViews[containment]->init();
             m_panelViews[containment]->setContainment(containment);
             m_panelViews[containment]->show();
         } else {

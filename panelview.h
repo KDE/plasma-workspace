@@ -43,8 +43,6 @@ public:
 
     virtual KConfigGroup config() const;
 
-    virtual void init();
-
     Qt::Alignment alignment() const;
     void setAlignment(Qt::Alignment alignment);
 
