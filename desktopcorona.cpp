@@ -50,6 +50,11 @@ DesktopCorona::DesktopCorona(QObject *parent)
     connect(m_appConfigSyncTimer, &QTimer::timeout,
             this, &DesktopCorona::syncAppConfig);
 
+    m_waitingPanelsTimer = new QTimer(this);
+    m_waitingPanelsTimer->setSingleShot(true);
+    connect(m_waitingPanelsTimer, &QTimer::timeout,
+            this, &DesktopCorona::createWaitingPanels);
+
 
     connect(m_desktopWidget, SIGNAL(resized(int)),
             this, SLOT(screenResized(int)));
@@ -252,6 +257,16 @@ void DesktopCorona::checkViews()
     }
 }
 
+void DesktopCorona::createWaitingPanels()
+{
+    foreach (Plasma::Containment *cont, m_waitingPanels) {
+        m_panelViews[cont] = new PanelView(this);
+        m_panelViews[cont]->setContainment(cont);
+        m_panelViews[cont]->show();
+    }
+    m_waitingPanels.clear();
+}
+
 void DesktopCorona::updateScreenOwner(int wasScreen, int isScreen, Plasma::Containment *containment)
 {
     qDebug() << "Was screen" << wasScreen << "Is screen" << isScreen <<"Containment" << containment << containment->title();
@@ -260,9 +275,8 @@ void DesktopCorona::updateScreenOwner(int wasScreen, int isScreen, Plasma::Conta
         containment->formFactor() == Plasma::Types::Vertical) {
 
         if (isScreen >= 0) {
-            m_panelViews[containment] = new PanelView(this);
-            m_panelViews[containment]->setContainment(containment);
-            m_panelViews[containment]->show();
+            m_waitingPanels << containment;
+            m_waitingPanelsTimer->start(250);
         } else {
             if (m_panelViews.contains(containment)) {
                 m_panelViews[containment]->setContainment(0);
@@ -274,6 +288,9 @@ void DesktopCorona::updateScreenOwner(int wasScreen, int isScreen, Plasma::Conta
     //Desktop view
     } else {
     
+        if (m_waitingPanelsTimer->isActive()) {
+            m_waitingPanelsTimer->start(250);
+        }
         if (isScreen < 0 || m_views.count() < isScreen + 1) {
             qWarning() << "Invalid screen";
             return;

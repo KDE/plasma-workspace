@@ -99,14 +99,17 @@ private Q_SLOTS:
     void handleContainmentAdded(Plasma::Containment *c);
     void showWidgetExplorer();
     void syncAppConfig();
+    void createWaitingPanels();
 
 private:
     QDesktopWidget *m_desktopWidget;
     QList <View *> m_views;
     WidgetExplorerView *m_widgetExplorerView;
+    QList<Plasma::Containment *> m_waitingPanels;
     QHash<Plasma::Containment *, PanelView *> m_panelViews;
     KConfigGroup m_desktopDefaultsConfig;
     QTimer *m_appConfigSyncTimer;
+    QTimer *m_waitingPanelsTimer;
 };
 
 #endif
