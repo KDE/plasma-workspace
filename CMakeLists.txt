@@ -75,7 +75,7 @@ target_link_libraries(plasma-shell
  #${Qt5Widgets_LIBRARIES}
  ${Qt5Quick_LIBRARIES}
  ${Qt5Qml_LIBRARIES}
- ${KDE4_KDECORE_LIBS}
+ ${KCore_LIBRARIES}
  ${KDE4_KIO_LIBS}
  ${KWindowSystem_LIBRARIES}
  ${KCoreAddons_LIBRARIES}
