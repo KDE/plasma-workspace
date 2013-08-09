@@ -22,7 +22,7 @@
 #include <QtCore/QTimer>
 #include <KConfig>
 #include <KConfigGroup>
-#include <KDebug>
+#include <QDebug>
 
 class ConfigGroupPrivate {
 

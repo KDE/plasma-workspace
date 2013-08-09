@@ -26,7 +26,7 @@
 #include <QFileInfo>
 #include <QScriptValueIterator>
 
-#include <KDebug>
+#include <QDebug>
 #include <KGlobal>
 #include <kdeversion.h>
 #include <KGlobalSettings>
