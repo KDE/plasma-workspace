@@ -46,6 +46,7 @@
 #include <Plasma/Corona>
 #include <Plasma/Package>
 #include <Plasma/PluginLoader>
+#include <qstandardpaths.h>
 
 #include "appinterface.h"
 #include "containment.h"
@@ -277,7 +278,7 @@ QScriptValue ScriptEngine::loadTemplate(QScriptContext *context, QScriptEngine *
     LayoutTemplatePackageStructure structure;
     Plasma::Package package(&structure);
     KPluginInfo info(offers.first());
-    const QString path = KStandardDirs::locate("data", package.defaultPackageRoot() + '/' + info.pluginName() + '/');
+    const QString path = QStandardPaths::locate(QStandardPaths::GenericDataLocation, package.defaultPackageRoot() + '/' + info.pluginName() + '/');
     if (path.isEmpty()) {
         // qDebug() << "script path is empty";
         return false;
@@ -477,7 +478,7 @@ QScriptValue ScriptEngine::applicationPath(QScriptContext *context, QScriptEngin
     }
 
     if (KService::Ptr service = KService::serviceByStorageId(application)) {
-        return KStandardDirs::locate("apps", service->entryPath());
+        return QStandardPaths::locate(QStandardPaths::ApplicationsLocation, service->entryPath());
     }
 
     if (application.contains("'")) {
@@ -494,7 +495,7 @@ QScriptValue ScriptEngine::applicationPath(QScriptContext *context, QScriptEngin
 
     if (!offers.isEmpty()) {
         KService::Ptr offer = offers.first();
-        return KStandardDirs::locate("apps", offer->entryPath());
+        return QStandardPaths::locate(QStandardPaths::ApplicationsLocation, offer->entryPath());
     }
 
     return QString();
@@ -692,15 +693,14 @@ QStringList ScriptEngine::pendingUpdateScripts(Plasma::Corona *corona)
 
     KConfigGroup cg(KGlobal::config(), "Updates");
     QStringList performed = cg.readEntry("performed", QStringList());
-    const QString localDir = KGlobal::dirs()->localkdedir();
-    const QString localXdgDir = KGlobal::dirs()->localxdgdatadir();
+    const QString localXdgDir = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation);
 
     foreach (const QString &script, scripts) {
         if (performed.contains(script)) {
             continue;
         }
 
-        if (script.startsWith(localDir) || script.startsWith(localXdgDir)) {
+        if (script.startsWith(localXdgDir)) {
             // qDebug() << "skipping user local script: " << script;
             continue;
         }
