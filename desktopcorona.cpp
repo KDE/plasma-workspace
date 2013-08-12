@@ -50,12 +50,6 @@ DesktopCorona::DesktopCorona(QObject *parent)
     connect(m_appConfigSyncTimer, &QTimer::timeout,
             this, &DesktopCorona::syncAppConfig);
 
-    m_waitingPanelsTimer = new QTimer(this);
-    m_waitingPanelsTimer->setSingleShot(true);
-    connect(m_waitingPanelsTimer, &QTimer::timeout,
-            this, &DesktopCorona::createWaitingPanels);
-
-
     connect(m_desktopWidget, SIGNAL(resized(int)),
             this, SLOT(screenResized(int)));
     connect(m_desktopWidget, SIGNAL(screenCountChanged(int)),
@@ -257,14 +251,23 @@ void DesktopCorona::checkViews()
     }
 }
 
-void DesktopCorona::createWaitingPanels()
+
+void DesktopCorona::checkLoadingDesktopsComplete()
 {
-    foreach (Plasma::Containment *cont, m_waitingPanels) {
-        m_panelViews[cont] = new PanelView(this);
-        m_panelViews[cont]->setContainment(cont);
-        m_panelViews[cont]->show();
+    Plasma::Containment *c = qobject_cast<Plasma::Containment *>(sender());
+    if (c) {
+        disconnect(c, &Plasma::Containment::uiReadyChanged,
+                   this, &DesktopCorona::checkLoadingDesktopsComplete);
+        m_loadingDesktops.remove(c);
     }
-    m_waitingPanels.clear();
+
+    if (m_loadingDesktops.isEmpty()) {
+        foreach (Plasma::Containment *cont, m_waitingPanels) {
+            m_panelViews[cont] = new PanelView(this);
+            m_panelViews[cont]->setContainment(cont);
+        }
+        m_waitingPanels.clear();
+    }
 }
 
 void DesktopCorona::updateScreenOwner(int wasScreen, int isScreen, Plasma::Containment *containment)
@@ -276,7 +279,6 @@ void DesktopCorona::updateScreenOwner(int wasScreen, int isScreen, Plasma::Conta
 
         if (isScreen >= 0) {
             m_waitingPanels << containment;
-            m_waitingPanelsTimer->start(250);
         } else {
             if (m_panelViews.contains(containment)) {
                 m_panelViews[containment]->setContainment(0);
@@ -284,13 +286,18 @@ void DesktopCorona::updateScreenOwner(int wasScreen, int isScreen, Plasma::Conta
                 m_panelViews.remove(containment);
             }
         }
-    
+
     //Desktop view
     } else {
-    
-        if (m_waitingPanelsTimer->isActive()) {
-            m_waitingPanelsTimer->start(250);
+
+        if (containment->isUiReady()) {
+            checkLoadingDesktopsComplete();
+        } else {
+            m_loadingDesktops.insert(containment);
+            connect(containment, &Plasma::Containment::uiReadyChanged,
+                    this, &DesktopCorona::checkLoadingDesktopsComplete);
         }
+
         if (isScreen < 0 || m_views.count() < isScreen + 1) {
             qWarning() << "Invalid screen";
             return;
