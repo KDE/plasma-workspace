@@ -25,6 +25,7 @@
 #include <QFile>
 #include <QFileInfo>
 #include <QScriptValueIterator>
+#include <QStandardPaths>
 
 #include <QDebug>
 #include <KGlobal>
@@ -329,7 +330,7 @@ QScriptValue ScriptEngine::applicationExists(QScriptContext *context, QScriptEng
     }
 
     // first, check for it in $PATH
-    if (!KStandardDirs::findExe(application).isEmpty()) {
+    if (!QStandardPaths::findExecutable(application).isEmpty()) {
         return true;
     }
 
@@ -434,9 +435,12 @@ QScriptValue ScriptEngine::defaultApplication(QScriptContext *context, QScriptEn
         return storageId ? service->storageId() : onlyExec(service->exec());
     } else {
         // try the files in share/apps/kcm_componentchooser/
-        const QStringList services = KGlobal::dirs()->findAllResources("data","kcm_componentchooser/*.desktop", KStandardDirs::NoDuplicates);
-        //qDebug() << "ok, trying in" << services.count();
+        const QStringList services = QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, "kcm_componentchooser/");
+        qDebug() << "ok, trying in" << services;
         foreach (const QString &service, services) {
+            if (!service.endsWith(".desktop")) {
+                continue;
+            }
             KConfig config(service, KConfig::SimpleConfig);
             KConfigGroup cg = config.group(QByteArray());
             const QString type = cg.readEntry("valueName", QString());
@@ -471,7 +475,7 @@ QScriptValue ScriptEngine::applicationPath(QScriptContext *context, QScriptEngin
     }
 
     // first, check for it in $PATH
-    const QString path = KStandardDirs::findExe(application);
+    const QString path = QStandardPaths::findExecutable(application);
     if (!path.isEmpty()) {
         return path;
     }
@@ -517,21 +521,21 @@ QScriptValue ScriptEngine::userDataPath(QScriptContext *context, QScriptEngine *
         return KStandardDirs::locateLocal(type.toLatin1(), filename);
     }
 
+    QStringList locations;
     if (type.compare("desktop", Qt::CaseInsensitive) == 0) {
-        return KGlobalSettings::desktopPath();
+        locations = QStandardPaths::standardLocations(QStandardPaths::DesktopLocation);
     } else if (type.compare("documents", Qt::CaseInsensitive) == 0) {
-        return KGlobalSettings::documentPath();
+        locations = QStandardPaths::standardLocations(QStandardPaths::DocumentsLocation);
     } else if (type.compare("music", Qt::CaseInsensitive) == 0) {
-        return KGlobalSettings::musicPath();
+        locations = QStandardPaths::standardLocations(QStandardPaths::MusicLocation);
     } else if (type.compare("video", Qt::CaseInsensitive) == 0) {
-        return KGlobalSettings::videosPath();
+        locations = QStandardPaths::standardLocations(QStandardPaths::MoviesLocation);
     } else if (type.compare("downloads", Qt::CaseInsensitive) == 0) {
-        return KGlobalSettings::downloadPath();
+        locations = QStandardPaths::standardLocations(QStandardPaths::DownloadLocation);
     } else if (type.compare("pictures", Qt::CaseInsensitive) == 0) {
-        return KGlobalSettings::picturesPath();
+        locations = QStandardPaths::standardLocations(QStandardPaths::PicturesLocation);
     }
-
-    return QString();
+    return locations.count() ? locations.first() : QString();
 }
 
 QScriptValue ScriptEngine::knownWallpaperPlugins(QScriptContext *context, QScriptEngine *engine)
