@@ -29,15 +29,12 @@
 
 #include <QDebug>
 #include <KGlobal>
-#include <kdeversion.h>
-#include <KGlobalSettings>
 #include <KLocalizedString>
 #include <KMimeTypeTrader>
 #include <KServiceTypeTrader>
 #include <KShell>
 #include <KStandardDirs>
 #include <KComponentData>
-#include <k4aboutdata.h>
 
 // KIO
 //#include <kemailsettings.h> // no camelcase include
