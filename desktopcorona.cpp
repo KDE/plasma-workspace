@@ -286,6 +286,7 @@ void DesktopCorona::updateScreenOwner(int wasScreen, int isScreen, Plasma::Conta
                 m_panelViews.remove(containment);
             }
         }
+        checkLoadingDesktopsComplete();
 
     //Desktop view
     } else {
