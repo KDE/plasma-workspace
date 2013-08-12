@@ -97,7 +97,7 @@ Rectangle {
             Layout.fillHeight: true
             Layout.preferredHeight: parent.height - buttonsRow.height
 
-            QtControls.ScrollView{
+            QtControls.ScrollView {
                 id: categoriesScroll
                 frameVisible: true
                 anchors {
@@ -151,7 +151,7 @@ Rectangle {
                     }
                 }
             }
-            QtControls.ScrollView{
+            QtControls.ScrollView {
                 id: pageScroll
                 anchors {
                     top: parent.top
@@ -166,7 +166,11 @@ Rectangle {
                         height: childrenRect.height
                         QtControls.StackView {
                             id: main
-                            anchors.fill: parent
+                            anchors {
+                                left: parent.left
+                                right: parent.right
+                            }
+                            height: Math.max(pageScroll.height, currentItem.implicitHeight)
                             anchors.margins: 12
                             property string sourceFile
                             Timer {
@@ -204,7 +208,7 @@ Rectangle {
                 rightMargin: spacing
             }
             QtControls.Button {
-                iconSource: "dialog-ok"
+                iconName: "dialog-ok"
                 text: "Ok"
                 onClicked: {
                     if (main.currentItem.saveConfig !== undefined) {
@@ -216,7 +220,7 @@ Rectangle {
                 }
             }
             QtControls.Button {
-                iconSource: "dialog-ok-apply"
+                iconName: "dialog-ok-apply"
                 text: "Apply"
                 onClicked: {
                     if (main.currentItem.saveConfig !== undefined) {
@@ -227,7 +231,7 @@ Rectangle {
                 }
             }
             QtControls.Button {
-                iconSource: "dialog-cancel"
+                iconName: "dialog-cancel"
                 text: "Cancel"
                 onClicked: configDialog.close()
             }

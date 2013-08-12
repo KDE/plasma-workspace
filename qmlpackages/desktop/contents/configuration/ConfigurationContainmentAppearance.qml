@@ -17,19 +17,18 @@
  */
 
 import QtQuick 2.0
-import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.plasma.configuration 2.0
 import QtQuick.Controls 1.0 as QtControls
+import QtQuick.Layouts 1.0
 
-Column {
+ColumnLayout {
     id: root
 
     spacing: _m
     PlasmaExtras.Title {
         text: "Plugins"
     }
-
 
 //BEGIN functions
     function saveConfig() {
@@ -109,25 +108,32 @@ Column {
             }
         }
     }
-    PlasmaComponents.PageStack {
+
+    Row {
+        spacing: 10
+        QtControls.Label {
+            anchors.verticalCenter: pluginCombobox.verticalCenter
+            text: "Wallpaper plugin:"
+        }
+        QtControls.ComboBox {
+            id: pluginCombobox
+            model: configDialog.wallpaperConfigModel
+            textRole: "name"
+        }
+    }
+
+    QtControls.StackView {
         id: main
+        Layout.fillHeight: true;
         anchors {
             left: categoriesView.left;
             right: parent.right;
         }
-        width: implicitWidth
-        height: implicitHeight
         property string sourceFile
         onSourceFileChanged: {
             if (sourceFile != "") {
-                main.opacity = 1;
                 replace(Qt.resolvedUrl(sourceFile))
-                //main.width = mainColumn.implicitWidth
-                main.height = mainColumn.implicitHeight
-            } else {
-                main.opacity = 0
             }
         }
-        Behavior on opacity { NumberAnimation {} }
     }
 }
