@@ -35,6 +35,10 @@
 #include <Plasma/PluginLoader>
 #include <Plasma/Theme>
 
+#ifdef Q_OS_WIN
+#include <windows.h>
+#endif
+
 #ifdef Q_WS_X11
 #include <X11/Xlib.h>
 #include <fixx11h.h>
@@ -120,7 +124,15 @@ void AppInterface::setTheme(const QString &name)
 
 bool AppInterface::multihead() const
 {
-    return KGlobalSettings::isMultiHead();
+#ifdef Q_OS_WIN
+    return GetSystemMetrics(SM_CMONITORS) > 1;
+#else
+    QByteArray multiHead = qgetenv("KDE_MULTIHEAD");
+    if (!multiHead.isEmpty()) {
+        return (multiHead.toLower() == "true");
+    }
+    return false;
+#endif
 }
 
 int AppInterface::multiheadScreen() const
@@ -128,7 +140,7 @@ int AppInterface::multiheadScreen() const
     int id = -1;
 
 #ifdef Q_WS_X11
-    if (KGlobalSettings::isMultiHead()) {
+    if (multihead()) {
         // with multihead, we "lie" and say that screen 0 is the default screen, in fact, we pretend
         // we have only one screen at all
         Display *dpy = XOpenDisplay(NULL);
