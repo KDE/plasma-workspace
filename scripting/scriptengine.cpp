@@ -109,8 +109,7 @@ QScriptValue ScriptEngine::activityForScreen(QScriptContext *context, QScriptEng
 
 QScriptValue ScriptEngine::newActivity(QScriptContext *context, QScriptEngine *engine)
 {
-    //FIXME: will be org.kde.desktop
-    return createContainment("Desktop", "org.kde.testcontainment", context, engine);
+    return createContainment("Desktop", "org.kde.desktopcontainment", context, engine);
 }
 
 QScriptValue ScriptEngine::newPanel(QScriptContext *context, QScriptEngine *engine)

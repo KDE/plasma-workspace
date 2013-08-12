@@ -160,7 +160,7 @@ void DesktopCorona::checkDesktop(/*Activity *activity,*/ bool signalWhenExists, 
 
     //TODO: remove following when activities are restored
     if (!c) {
-        c = createContainment(m_desktopDefaultsConfig.readEntry("Containment", "org.kde.testcontainment"));
+        c = createContainment(m_desktopDefaultsConfig.readEntry("Containment", "org.kde.desktopcontainment"));
     }
 
     if (!c) {
