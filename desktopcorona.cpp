@@ -50,7 +50,6 @@ DesktopCorona::DesktopCorona(QObject *parent)
     connect(m_appConfigSyncTimer, &QTimer::timeout,
             this, &DesktopCorona::syncAppConfig);
 
-
     connect(m_desktopWidget, SIGNAL(resized(int)),
             this, SLOT(screenResized(int)));
     connect(m_desktopWidget, SIGNAL(screenCountChanged(int)),
@@ -252,6 +251,25 @@ void DesktopCorona::checkViews()
     }
 }
 
+
+void DesktopCorona::checkLoadingDesktopsComplete()
+{
+    Plasma::Containment *c = qobject_cast<Plasma::Containment *>(sender());
+    if (c) {
+        disconnect(c, &Plasma::Containment::uiReadyChanged,
+                   this, &DesktopCorona::checkLoadingDesktopsComplete);
+        m_loadingDesktops.remove(c);
+    }
+
+    if (m_loadingDesktops.isEmpty()) {
+        foreach (Plasma::Containment *cont, m_waitingPanels) {
+            m_panelViews[cont] = new PanelView(this);
+            m_panelViews[cont]->setContainment(cont);
+        }
+        m_waitingPanels.clear();
+    }
+}
+
 void DesktopCorona::updateScreenOwner(int wasScreen, int isScreen, Plasma::Containment *containment)
 {
     qDebug() << "Was screen" << wasScreen << "Is screen" << isScreen <<"Containment" << containment << containment->title();
@@ -260,9 +278,7 @@ void DesktopCorona::updateScreenOwner(int wasScreen, int isScreen, Plasma::Conta
         containment->formFactor() == Plasma::Types::Vertical) {
 
         if (isScreen >= 0) {
-            m_panelViews[containment] = new PanelView(this);
-            m_panelViews[containment]->setContainment(containment);
-            m_panelViews[containment]->show();
+            m_waitingPanels << containment;
         } else {
             if (m_panelViews.contains(containment)) {
                 m_panelViews[containment]->setContainment(0);
@@ -270,10 +286,18 @@ void DesktopCorona::updateScreenOwner(int wasScreen, int isScreen, Plasma::Conta
                 m_panelViews.remove(containment);
             }
         }
-    
+
     //Desktop view
     } else {
-    
+
+        if (containment->isUiReady()) {
+            checkLoadingDesktopsComplete();
+        } else {
+            m_loadingDesktops.insert(containment);
+            connect(containment, &Plasma::Containment::uiReadyChanged,
+                    this, &DesktopCorona::checkLoadingDesktopsComplete);
+        }
+
         if (isScreen < 0 || m_views.count() < isScreen + 1) {
             qWarning() << "Invalid screen";
             return;

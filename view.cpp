@@ -73,6 +73,10 @@ KConfigGroup View::config() const
 
 void View::setContainment(Plasma::Containment *cont)
 {
+    if (m_containment.data() == cont) {
+        return;
+    }
+
     Plasma::Types::Location oldLoc = (Plasma::Types::Location)location();
     Plasma::Types::FormFactor oldForm = formFactor();
 

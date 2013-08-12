@@ -47,6 +47,7 @@ PanelView::PanelView(DesktopCorona *corona, QWindow *parent)
     setColor(QColor(Qt::transparent));
     setFlags(Qt::FramelessWindowHint);
     KWindowSystem::setType(winId(), NET::Dock);
+    setVisible(false);
 
     //TODO: how to take the shape from the framesvg?
     KWindowEffects::enableBlurBehind(winId(), true);
@@ -325,6 +326,10 @@ void PanelView::restore()
     if (!containment()) {
         return;
     }
+
+    setVisible(containment()->isUiReady());
+    connect(containment(), &Plasma::Containment::uiReadyChanged,
+            this, &PanelView::setVisible);
 
     static const int MINSIZE = 10;
 
