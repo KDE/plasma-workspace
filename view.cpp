@@ -73,6 +73,10 @@ KConfigGroup View::config() const
 
 void View::setContainment(Plasma::Containment *cont)
 {
+    if (m_containment.data() == cont) {
+        return;
+    }
+
     Plasma::Types::Location oldLoc = (Plasma::Types::Location)location();
     Plasma::Types::FormFactor oldForm = formFactor();
 
@@ -85,6 +89,8 @@ void View::setContainment(Plasma::Containment *cont)
         }
     }
 
+qDebug()<<"AAAAAA"<<cont->title()<<cont->isUiReady();
+connect(cont, &Plasma::Containment::uiReadyChanged, [=](bool uiReady){ qDebug()<<"BBBBBBB"<<cont->title()<<cont->isUiReady(); });
     m_containment = cont;
 
     if (oldLoc != location()) {
