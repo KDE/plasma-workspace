@@ -1,6 +1,6 @@
 [Desktop]
 Containment=org.kde.desktop
-ToolBox=org.kde.toolbox
+ToolBox=org.kde.desktoptoolbox
 RuntimePlatform=
 
 [Desktop][ContainmentActions]
