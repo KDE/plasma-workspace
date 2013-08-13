@@ -33,8 +33,8 @@ ColumnLayout {
 //BEGIN functions
     function saveConfig() {
         for (var key in configDialog.wallpaperConfiguration) {
-            if (main.currentPage["cfg_"+key] !== undefined) {
-                configDialog.wallpaperConfiguration[key] = main.currentPage["cfg_"+key]
+            if (main.currentItem["cfg_"+key] !== undefined) {
+                configDialog.wallpaperConfiguration[key] = main.currentItem["cfg_"+key]
             }
         }
         configDialog.applyWallpaper()
@@ -42,8 +42,8 @@ ColumnLayout {
 
     function restoreConfig() {
         for (var key in configDialog.wallpaperConfiguration) {
-            if (main.currentPage["cfg_"+key] !== undefined) {
-                main.currentPage["cfg_"+key] = configDialog.wallpaperConfiguration[key]
+            if (main.currentItem["cfg_"+key] !== undefined) {
+                main.currentItem["cfg_"+key] = configDialog.wallpaperConfiguration[key]
             }
         }
     }
