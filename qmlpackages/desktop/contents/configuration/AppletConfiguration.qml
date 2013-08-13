@@ -113,19 +113,25 @@ Rectangle {
                     contentHeight: childrenRect.height
                     anchors.fill: parent
 
-                    property Item currentItem
+                    property Item currentItem: categoriesColumn.children[1]
 
-                    Rectangle {
+                    Item {
                         id: categories
                         width: parent.width
-                        height: Math.max(categoriesView.height, categoriesColumn.height)
-                        color: syspal.base
+                        height: categoriesColumn.height
 
-                        Rectangle {
-                            color: syspal.highlight
+                        Item {
                             width: parent.width
-                            height:  theme.iconSizes.IconSizeHuge
-                            y: index * height
+                            height: categoriesView.currentItem.height
+                            y: categoriesView.currentItem.y
+                            Rectangle {
+                                color: syspal.highlight
+                                radius: 3
+                                anchors {
+                                    fill: parent
+                                    margins: 2
+                                }
+                            }
                             Behavior on y {
                                 NumberAnimation {
                                     duration: 250

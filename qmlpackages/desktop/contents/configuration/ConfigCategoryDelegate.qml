@@ -29,7 +29,7 @@ MouseArea {
     }
 //BEGIN properties
     width: childrenRect.width
-    height: childrenRect.height
+    height: childrenRect.height + 4
     property bool current: model.source == main.sourceFile
 //END properties
 
@@ -39,8 +39,8 @@ MouseArea {
         if (delegate.current) {
             return
         } else {
-            if (typeof(categoriesView.currentIndex) != "undefined") {
-                categoriesView.currentIndex = index;
+            if (typeof(categoriesView.currentItem) !== "undefined") {
+                categoriesView.currentItem = delegate;
             }
             main.sourceFile = model.source
             root.restoreConfig()
@@ -48,7 +48,7 @@ MouseArea {
     }
     onCurrentChanged: {
         if (current) {
-            categoriesView.currentIndex = index
+            categoriesView.currentItem = delegate;
         }
     }
 //END connections
@@ -57,6 +57,7 @@ MouseArea {
     Column {
         spacing: 4
         anchors {
+            verticalCenter: parent.verticalCenter
             left: parent.left
             right: parent.right
             topMargin: _m
@@ -75,6 +76,7 @@ MouseArea {
             text: model.name
             wrapMode: Text.Wrap
             horizontalAlignment: Text.AlignHCenter
+            color: current ? syspal.highlightedText : syspal.text
         }
     }
 //END UI components
