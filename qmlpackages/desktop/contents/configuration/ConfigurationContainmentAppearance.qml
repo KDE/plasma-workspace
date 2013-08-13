@@ -17,7 +17,6 @@
  */
 
 import QtQuick 2.0
-import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.plasma.configuration 2.0
 import QtQuick.Controls 1.0 as QtControls
 import QtQuick.Layouts 1.0
@@ -26,9 +25,6 @@ ColumnLayout {
     id: root
 
     spacing: _m
-    PlasmaExtras.Title {
-        text: "Plugins"
-    }
 
 //BEGIN functions
     function saveConfig() {
@@ -49,68 +45,19 @@ ColumnLayout {
     }
 //END functions
 
-    ListView {
-        id: categoriesView
-        anchors {
-            left: parent.left
-            right: parent.right
-        }
-        height: 100
-        orientation: ListView.Horizontal 
-
-        model: configDialog.wallpaperConfigModel
-        delegate: ConfigCategoryDelegate {
-            id: delegate
-            current: categoriesView.currentIndex == index
-            anchors {
-                top: parent.top
-                bottom: parent.bottom
-                left: undefined
-                right: undefined
-            }
-            width: 64
-            onClicked: {
-                configDialog.currentWallpaper = model.pluginName
-                if (categoriesView.currentIndex == index) {
-                    return
-                } else {
-                    categoriesView.currentIndex = index;
-                    main.sourceFile = model.source
-                    root.restoreConfig()
-                }
-            }
-            onCurrentChanged: {
-                categoriesView.currentIndex = index
-                if (current) {
-                    categoriesView.currentIndex = index
-                }
-            }
-            Component.onCompleted: {
-                if (configDialog.currentWallpaper == model.pluginName) {
-                    loadWallpaperTimer.pendingCurrent = model
-                    loadWallpaperTimer.restart()
-                }
-            }
-        }
-        highlight: Rectangle {
-            color: theme.highlightColor
-        }
-        Timer {
-            id: loadWallpaperTimer
-            interval: 100
-            property variant pendingCurrent
-            onTriggered: {
-                if (pendingCurrent) {
-                    categoriesView.currentIndex = pendingCurrent.index
-                    main.sourceFile = pendingCurrent.source
-                    root.restoreConfig()
-                }
+    Component.onCompleted: {
+        for (var i = 0; i < configDialog.wallpaperConfigModel.count; ++i) {
+            var data = configDialog.wallpaperConfigModel.get(i);
+            for(var j in data) print(j)
+            if (configDialog.currentWallpaper == data.pluginName) {
+                pluginCombobox.currentIndex = i
+                break;
             }
         }
     }
 
     Row {
-        spacing: 10
+        spacing: 4
         QtControls.Label {
             anchors.verticalCenter: pluginCombobox.verticalCenter
             text: "Wallpaper plugin:"
@@ -119,6 +66,11 @@ ColumnLayout {
             id: pluginCombobox
             model: configDialog.wallpaperConfigModel
             textRole: "name"
+            onCurrentIndexChanged: {
+                var model = configDialog.wallpaperConfigModel.get(currentIndex)
+                main.sourceFile = model.source
+                root.restoreConfig()
+            }
         }
     }
 
@@ -126,7 +78,7 @@ ColumnLayout {
         id: main
         Layout.fillHeight: true;
         anchors {
-            left: categoriesView.left;
+            left: parent.left;
             right: parent.right;
         }
         property string sourceFile

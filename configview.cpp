@@ -167,6 +167,7 @@ QVariant ConfigModel::get(int row) const
 
     value["name"] = m_categories.at(row)->name();
     value["icon"] = m_categories.at(row)->icon();
+    value["pluginName"] = m_categories.at(row)->pluginName();
     if (m_appletInterface) {
         value["source"] = QUrl::fromLocalFile(m_appletInterface.data()->package().filePath("ui", m_categories.at(row)->source()));
     } else {
