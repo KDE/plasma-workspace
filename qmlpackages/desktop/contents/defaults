@@ -4,14 +4,14 @@ ToolBox=org.kde.desktoptoolbox
 RuntimePlatform=
 
 [Desktop][ContainmentActions]
-Ctrl;LeftButton=org.kde.standardmenu
+RightButton=org.kde.contextmenu
 MiddleButton=org.kde.paste
  
 [Panel]
 Containment=org.kde.panel
 ToolBox=org.kde.paneltoolbox
 [Panel][ContainmentActions]
-Ctrl;LeftButton=org.kde.standardmenu
+RightButton=org.kde.contextmenu
 
 [Theme]
 Theme=default
