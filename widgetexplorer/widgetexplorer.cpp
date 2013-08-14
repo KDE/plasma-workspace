@@ -460,7 +460,10 @@ void WidgetExplorer::addApplet(const QString &pluginName)
     QStringList dirs = QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, p, QStandardPaths::LocateDirectory);
 
     qDebug() << " .. pathes: " << dirs;
-
+    if (!dirs.count()) {
+        qWarning() << "Failed to find plasmoid path for " << pluginName;
+        return;
+    }
     Plasma::Applet *applet = Plasma::Applet::loadPlasmoid(dirs.first());
 
     if (applet) {
