@@ -177,7 +177,6 @@ Rectangle {
                                 right: parent.right
                             }
                             height: Math.max(pageScroll.height, currentItem.implicitHeight)
-                            anchors.margins: 12
                             property string sourceFile
                             Timer {
                                 id: pageSizeSync
