@@ -25,6 +25,7 @@
 #include "desktopcorona.h"
 #include "shellpluginloader.h"
 
+#include <QtQml/QQmlDebuggingEnabler>
 
 static const char description[] = "Plasma Shell";
 static const char version[] = "2.0";
@@ -42,6 +43,12 @@ int main(int argc, char** argv)
                        "plasma-shell", "",
                        ki18n("Plasma Shell"),
                        version);
+
+    //enable the QML debugger only if -qmljsdebugger is passed as a command line arg
+    //this must be called before the QApplication constructor
+    if (KCmdLineArgs::parsedArgs("qt")->isSet("qmljsdebugger")) {
+        QQmlDebuggingEnabler enabler;
+    }
 
     QApplication app(argc, argv);
 
