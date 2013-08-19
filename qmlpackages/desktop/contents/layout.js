@@ -3,7 +3,7 @@ var panel = new Panel
 panel.screen = 0
 panel.location = 'top'
 panel.addWidget("org.kde.testapplet")
-panel.addWidget("org.kde.testcomponentsapplet")
+panel.addWidget("org.kde.windowlist")
 
 for (var i = 0; i < screenCount; ++i) {
     var desktop = new Activity
