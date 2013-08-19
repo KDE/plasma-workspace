@@ -91,5 +91,4 @@ target_link_libraries(plasma-shell
 install(TARGETS plasma-shell ${INSTALL_TARGETS_DEFAULT_ARGS})
 
 add_subdirectory(applets)
-add_subdirectory(containments)
 add_subdirectory(qmlpackages)
