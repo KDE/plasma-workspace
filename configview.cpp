@@ -265,6 +265,7 @@ ConfigView::ConfigView(Plasma::Applet *applet, QWindow *parent)
     : QQuickView(parent),
       m_applet(applet)
 {
+    applet->setUserConfiguring(true);
     qmlRegisterType<ConfigModel>("org.kde.plasma.configuration", 2, 0, "ConfigModel");
     qmlRegisterType<ConfigCategory>("org.kde.plasma.configuration", 2, 0, "ConfigCategory");
 
@@ -300,6 +301,7 @@ ConfigView::ConfigView(Plasma::Applet *applet, QWindow *parent)
 
 ConfigView::~ConfigView()
 {
+    m_applet->setUserConfiguring(false);
 }
 
 void ConfigView::init()
