@@ -45,7 +45,7 @@ PanelView::PanelView(DesktopCorona *corona, QWindow *parent)
     setFormat(format);
     setClearBeforeRendering(true);
     setColor(QColor(Qt::transparent));
-    setFlags(Qt::FramelessWindowHint);
+    setFlags(Qt::FramelessWindowHint|Qt::WindowDoesNotAcceptFocus);
     KWindowSystem::setType(winId(), NET::Dock);
     setVisible(false);
 
