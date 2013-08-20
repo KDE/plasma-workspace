@@ -81,10 +81,11 @@ target_link_libraries(plasma-shell
  ${KCoreAddons_LIBRARIES}
  plasma
  ${Qt5Script_LIBRARIES}
- ${KDE4_KDEUI_LIBS}
  ${KDE4Support_LIBRARIES}
  ${Solid_LIBRARIES}
  kdeclarative
+ KF5::KI18n
+ KF5::XmlGui
 )
 
 
