@@ -39,6 +39,7 @@ ContainmentConfigView::ContainmentConfigView(Plasma::Containment *cont, QWindow 
     : ConfigView(cont, parent),
       m_containment(cont),
       m_wallpaperConfigModel(0),
+      m_containmentActionConfigModel(0),
       m_currentWallpaperConfig(0),
       m_ownWallpaperConfig(0)
 {
@@ -62,6 +63,29 @@ ContainmentConfigView::~ContainmentConfigView()
 void ContainmentConfigView::init()
 {
     setSource(QUrl::fromLocalFile(m_containment->containment()->corona()->package().filePath("containmentconfigurationui")));
+}
+
+ConfigModel *ContainmentConfigView::containmentActionConfigModel()
+{
+    if (!m_containmentActionConfigModel) {
+        m_containmentActionConfigModel = new ConfigModel(this);
+
+        KPluginInfo::List actions = Plasma::PluginLoader::self()->listContainmentActionsInfo(QString());
+
+        Plasma::Package pkg = Plasma::PluginLoader::self()->loadPackage("Plasma/Generic");
+
+        foreach (const KPluginInfo &info, actions) {
+            pkg.setDefaultPackageRoot(QStandardPaths::locate(QStandardPaths::GenericDataLocation, "plasma/containmentactions", QStandardPaths::LocateDirectory));
+            ConfigCategory *cat = new ConfigCategory(m_containmentActionConfigModel);
+            cat->setName(info.name());
+            cat->setIcon(info.icon());
+            cat->setSource(pkg.filePath("ui", "config.qml"));
+            cat->setPluginName(info.pluginName());
+            m_containmentActionConfigModel->appendCategory(cat);
+        }
+
+    }
+    return m_containmentActionConfigModel;
 }
 
 ConfigModel *ContainmentConfigView::wallpaperConfigModel()

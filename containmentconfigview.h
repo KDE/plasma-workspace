@@ -33,6 +33,7 @@ class ConfigPropertyMap;
 class ContainmentConfigView : public ConfigView
 {
     Q_OBJECT
+    Q_PROPERTY(ConfigModel *containmentActionConfigModel READ containmentActionConfigModel CONSTANT)
     Q_PROPERTY(ConfigModel *wallpaperConfigModel READ wallpaperConfigModel CONSTANT)
     Q_PROPERTY(ConfigPropertyMap *wallpaperConfiguration READ wallpaperConfiguration NOTIFY wallpaperConfigurationChanged)
     Q_PROPERTY(QString currentWallpaper READ currentWallpaper WRITE setCurrentWallpaper NOTIFY currentWallpaperChanged)
@@ -43,6 +44,7 @@ public:
 
     virtual void init();
 
+    ConfigModel *containmentActionConfigModel();
     ConfigModel *wallpaperConfigModel();
     QString currentWallpaper() const;
     void setCurrentWallpaper(const QString &wallpaper);
@@ -60,6 +62,7 @@ protected:
 private:
     Plasma::Containment *m_containment;
     ConfigModel *m_wallpaperConfigModel;
+    ConfigModel *m_containmentActionConfigModel;
     QString m_currentWallpaper;
     ConfigPropertyMap *m_currentWallpaperConfig;
     ConfigPropertyMap *m_ownWallpaperConfig;

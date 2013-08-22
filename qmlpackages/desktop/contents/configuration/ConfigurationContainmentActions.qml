@@ -17,14 +17,48 @@
  */
 
 import QtQuick 2.0
-import org.kde.plasma.components 2.0 as PlasmaComponents
+import QtQuick.Controls 1.0 as QtControls
+import QtQuick.Layouts 1.0
 
 
 Item {
+    id: root
+
     implicitWidth: childrenRect.width
     implicitHeight: childrenRect.height
 
-    PlasmaComponents.Label {
-        text: "Containment actions go here"
+    Column {
+        anchors.centerIn: parent
+
+        Repeater {
+            model: 3
+            delegate: RowLayout {
+                width: root.width * 0.8
+                QtControls.Button {
+                    text: "Middle Button"
+                }
+                QtControls.ComboBox {
+                    Layout.fillWidth: true
+                    model: configDialog.containmentActionConfigModel
+                    textRole: "name"
+                }
+                QtControls.Button {
+                    iconName: "configure"
+                    width: height
+                }
+                QtControls.Button {
+                    iconName: "dialog-information"
+                    width: height
+                }
+                QtControls.Button {
+                    iconName: "list-remove"
+                    width: height
+                }
+            }
+        }
+        QtControls.Button {
+            text: "Add Action"
+        }
     }
+            
 }
