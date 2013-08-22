@@ -176,7 +176,7 @@ Rectangle {
                                 left: parent.left
                                 right: parent.right
                             }
-                            height: Math.max(pageScroll.height, currentItem.implicitHeight)
+                            height: Math.max(pageScroll.height, currentItem != null ? currentItem.implicitHeight : 0)
                             property string sourceFile
                             Timer {
                                 id: pageSizeSync
