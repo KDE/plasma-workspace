@@ -17,11 +17,9 @@
  */
 
 #include <QApplication>
+#include <qcommandlineparser.h>
 
-#include <kaboutdata.h>
-#include <kcmdlineargs.h>
 #include <klocalizedstring.h>
-
 #include "desktopcorona.h"
 #include "shellpluginloader.h"
 
@@ -33,24 +31,23 @@ static const char version[] = "2.0";
 int main(int argc, char** argv)
 {
 
-    KAboutData aboutData("plasma-shell", QByteArray(), i18n("Plasma Shell"),
-                         version, i18n(description), KAboutData::License_GPL,
-                         i18n("Copyright 2012-2013, The KDE Team"));
-    aboutData.addAuthor(i18n("Marco Martin"),
-                        i18n("Author and maintainer"),
-                        "mart@kde.org");
-    KCmdLineArgs::init(argc, argv,
-                       "plasma-shell", "",
-                       ki18n("Plasma Shell"),
-                       version);
+    QApplication app(argc, argv);
+    app.setApplicationVersion(version);
 
-    //enable the QML debugger only if -qmljsdebugger is passed as a command line arg
+    QCommandLineOption dbg = QCommandLineOption(QStringList() << QStringLiteral("d") << QStringLiteral("qmljsdebugger"),
+                                        QStringLiteral("Enable QML Javascript debugger"));
+
+    QCommandLineParser parser;
+    parser.addVersionOption();
+    parser.addHelpOption(description);
+    parser.addOption(dbg);
+    parser.process(app);
+
+    //enable the QML debugger only if --qmljsdebugger (or -d) is passed as a command line arg
     //this must be called before the QApplication constructor
-    if (KCmdLineArgs::parsedArgs("qt")->isSet("qmljsdebugger")) {
+    if (parser.isSet(dbg)) {
         QQmlDebuggingEnabler enabler;
     }
-
-    QApplication app(argc, argv);
 
     Plasma::PluginLoader::setPluginLoader(new ShellPluginLoader);
     DesktopCorona *corona = new DesktopCorona();
@@ -60,6 +57,6 @@ int main(int argc, char** argv)
     }
     corona->processUpdateScripts();
     corona->checkScreens();
-    
+
     return app.exec();
 }
