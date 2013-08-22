@@ -25,6 +25,7 @@ ColumnLayout {
     id: root
 
     property int formAlignment: pluginComboBox.x
+    property string currentWallpaper: ""
 
 //BEGIN functions
     function saveConfig() {
@@ -33,6 +34,7 @@ ColumnLayout {
                 configDialog.wallpaperConfiguration[key] = main.currentItem["cfg_"+key]
             }
         }
+        configDialog.currentWallpaper = root.currentWallpaper;
         configDialog.applyWallpaper()
     }
 
@@ -68,6 +70,7 @@ ColumnLayout {
             textRole: "name"
             onCurrentIndexChanged: {
                 var model = configDialog.wallpaperConfigModel.get(currentIndex)
+                root.currentWallpaper = model.pluginName
                 main.sourceFile = model.source
                 root.restoreConfig()
             }
