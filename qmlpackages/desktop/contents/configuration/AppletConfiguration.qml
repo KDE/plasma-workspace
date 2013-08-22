@@ -217,11 +217,11 @@ Rectangle {
                 text: "Ok"
                 onClicked: {
                     if (main.currentItem.saveConfig !== undefined) {
-                        main.currentItem.saveConfig()
+                        main.currentItem.saveConfig();
                     } else {
-                        root.saveConfig()
+                        root.saveConfig();
                     }
-                    configDialog.close()
+                    configDialog.close();
                 }
             }
             QtControls.Button {
@@ -229,9 +229,9 @@ Rectangle {
                 text: "Apply"
                 onClicked: {
                     if (main.currentItem.saveConfig !== undefined) {
-                        main.currentItem.saveConfig()
+                        main.currentItem.saveConfig();
                     } else {
-                        root.saveConfig()
+                        root.saveConfig();
                     }
                 }
             }
