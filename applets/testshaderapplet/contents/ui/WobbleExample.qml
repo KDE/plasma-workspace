@@ -84,7 +84,7 @@ ShaderExample {
 
     Item {
         id: imageItem
-        opacity: 0.0
+        opacity: 0.8
         anchors.fill: parent
         anchors.topMargin: 48
         Image {
@@ -94,20 +94,20 @@ ShaderExample {
         }
     }
 
-    PlasmaCore.IconItem {
-        id: iconItem
-        source: "plasma"
-        width: 400
-        height: 400
-//         width: parent.height
-//         height: width
-        anchors.centerIn: parent
-    }
+//     PlasmaCore.IconItem {
+//         id: iconItem
+//         source: "plasmagik"
+//         width: 400
+//         height: 400
+// //         width: parent.height
+// //         height: width
+//         anchors.centerIn: parent
+//     }
 
     ShaderEffect {
         id: wobbleShader
 
-        anchors.fill: iconItem
+        anchors.fill: imageItem
         //property real time
         property variant mouse
         property variant resolution
@@ -119,7 +119,7 @@ ShaderExample {
         property int speed: (speedSlider.maximumValue - speedSlider.value + 1)
 
         property variant source: ShaderEffectSource {
-            sourceItem: iconItem
+            sourceItem: imageItem
             hideSource: true
         }
 
