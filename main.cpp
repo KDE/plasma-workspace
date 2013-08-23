@@ -27,6 +27,7 @@
 
 static const char description[] = "Plasma Shell";
 static const char version[] = "2.0";
+static QCommandLineParser parser;
 
 int main(int argc, char** argv)
 {
@@ -37,7 +38,6 @@ int main(int argc, char** argv)
     QCommandLineOption dbg = QCommandLineOption(QStringList() << QStringLiteral("d") << QStringLiteral("qmljsdebugger"),
                                         QStringLiteral("Enable QML Javascript debugger"));
 
-    QCommandLineParser parser;
     parser.addVersionOption();
     parser.addHelpOption(description);
     parser.addOption(dbg);
