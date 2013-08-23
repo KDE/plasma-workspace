@@ -31,6 +31,7 @@
 #include <KLocalizedString>
 
 #include <Plasma/Corona>
+#include <Plasma/ContainmentActions>
 #include <Plasma/PluginLoader>
 
 
@@ -86,6 +87,20 @@ ConfigModel *ContainmentConfigView::containmentActionConfigModel()
 
     }
     return m_containmentActionConfigModel;
+}
+
+QVariantMap ContainmentConfigView::currentContainmentActions() const
+{
+    QHash<QString, Plasma::ContainmentActions*> actions = m_containment->containmentActions();
+
+    QVariantMap actionsMap;
+
+    QHash<QString, Plasma::ContainmentActions*>::const_iterator i = actions.constBegin();
+    while (i != actions.constEnd()) {
+        actionsMap[i.key()] = i.value()->pluginInfo().name();
+    }
+
+    return actionsMap;
 }
 
 ConfigModel *ContainmentConfigView::wallpaperConfigModel()
