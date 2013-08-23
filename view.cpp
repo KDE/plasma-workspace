@@ -100,16 +100,16 @@ void View::setContainment(Plasma::Containment *cont)
 
     emit containmentChanged();
 
-    if (cont) {
-        connect(cont, &Plasma::Containment::locationChanged,
-                this, &View::locationChanged);
-        connect(cont, &Plasma::Containment::formFactorChanged,
-                this, &View::formFactorChanged);
-        connect(cont, &Plasma::Containment::configureRequested,
-                this, &View::showConfigurationInterface);
-    } else {
+    if (!cont) {
         return;
     }
+
+    connect(cont, &Plasma::Containment::locationChanged,
+            this, &View::locationChanged);
+    connect(cont, &Plasma::Containment::formFactorChanged,
+            this, &View::formFactorChanged);
+    connect(cont, &Plasma::Containment::configureRequested,
+            this, &View::showConfigurationInterface);
 
     QObject *graphicObject = m_containment.data()->property("graphicObject").value<QObject *>();
 
