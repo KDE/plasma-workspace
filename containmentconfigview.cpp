@@ -26,7 +26,7 @@
 #include <QDir>
 #include <QQmlContext>
 #include <QQmlEngine>
-
+#include <QQmlComponent>
 
 #include <KLocalizedString>
 
@@ -35,16 +35,74 @@
 #include <Plasma/PluginLoader>
 
 
+
+CurrentContainmentActionsModel::CurrentContainmentActionsModel(Plasma::Containment *cotainment, QObject *parent)
+    : QStandardItemModel(parent)
+{
+    QHash<int, QByteArray> roleNames;
+    roleNames[NameRole] = "name";
+    roleNames[PluginRole] = "plugin";
+
+    setRoleNames(roleNames);
+
+    QHash<QString, Plasma::ContainmentActions*> actions = cotainment->containmentActions();
+
+    QHashIterator<QString, Plasma::ContainmentActions*> i(actions);
+    while (i.hasNext()) {
+        i.next();
+
+        QStandardItem *item = new QStandardItem();
+        item->setData(i.key(), NameRole);
+        item->setData(i.value()->pluginInfo().pluginName(), PluginRole);
+        appendRow(item);
+    }
+}
+
+CurrentContainmentActionsModel::~CurrentContainmentActionsModel()
+{
+}
+
+void CurrentContainmentActionsModel::append(const QString &action, const QString &plugin)
+{
+    QStandardItem *item = new QStandardItem();
+    item->setData(action, NameRole);
+    item->setData(plugin, PluginRole);
+    appendRow(item);
+}
+
+void CurrentContainmentActionsModel::update(int row, const QString &action, const QString &plugin)
+{
+    QModelIndex idx = index(row, 0);
+
+    if (idx.isValid()) {
+        setData(idx, action, NameRole);
+        setData(idx, plugin, PluginRole);
+    }
+}
+
+void CurrentContainmentActionsModel::remove(int row)
+{
+    removeRows(row, 1);
+}
+
+void CurrentContainmentActionsModel::save()
+{
+    
+}
+
+
+
 //////////////////////////////ContainmentConfigView
 ContainmentConfigView::ContainmentConfigView(Plasma::Containment *cont, QWindow *parent)
     : ConfigView(cont, parent),
       m_containment(cont),
       m_wallpaperConfigModel(0),
       m_containmentActionConfigModel(0),
-      m_currentContainmentActionConfigModel(0),
+      m_currentContainmentActionsModel(0),
       m_currentWallpaperConfig(0),
       m_ownWallpaperConfig(0)
 {
+    qmlRegisterType<QStandardItemModel>();
     engine()->rootContext()->setContextProperty("configDialog", this);
     setCurrentWallpaper(cont->containment()->wallpaper());
 
@@ -90,24 +148,12 @@ ConfigModel *ContainmentConfigView::containmentActionConfigModel()
     return m_containmentActionConfigModel;
 }
 
-ConfigModel *ContainmentConfigView::currentContainmentActionConfigModel()
+QStandardItemModel *ContainmentConfigView::currentContainmentActionsModel()
 {
-    if (!m_currentContainmentActionConfigModel) {
-        m_currentContainmentActionConfigModel = new ConfigModel(this);
-
-        QHash<QString, Plasma::ContainmentActions*> actions = m_containment->containmentActions();
-
-        QHashIterator<QString, Plasma::ContainmentActions*> i(actions);
-        while (i.hasNext()) {
-            i.next();
-
-            ConfigCategory *cat = new ConfigCategory(m_currentContainmentActionConfigModel);
-            cat->setName(i.key());
-            cat->setPluginName(i.value()->pluginInfo().name());
-            m_currentContainmentActionConfigModel->appendCategory(cat);
-        }
+    if (!m_currentContainmentActionsModel) {
+        m_currentContainmentActionsModel = new CurrentContainmentActionsModel(m_containment, this);
     }
-    return m_currentContainmentActionConfigModel;
+    return m_currentContainmentActionsModel;
 }
 
 ConfigModel *ContainmentConfigView::wallpaperConfigModel()

@@ -114,8 +114,6 @@ private:
 };
 
 
-//TODO: the config view for the containment should be a subclass
-//TODO: is it possible to move this in the shell?
 class ConfigView : public QQuickView
 {
     Q_OBJECT

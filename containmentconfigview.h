@@ -29,12 +29,31 @@ namespace Plasma {
 class ConfigPropertyMap;
 
 
+class CurrentContainmentActionsModel : public QStandardItemModel
+{
+    Q_OBJECT
+
+public:
+    enum Roles {
+        NameRole = Qt::UserRole+1,
+        PluginRole
+    };
+
+    CurrentContainmentActionsModel(Plasma::Containment *cotainment, QObject *parent = 0);
+    ~CurrentContainmentActionsModel();
+
+    Q_INVOKABLE void append(const QString &action, const QString &plugin);
+    Q_INVOKABLE void update(int row, const QString &action, const QString &plugin);
+    Q_INVOKABLE void remove(int row);
+    Q_INVOKABLE void save();
+};
+
 //TODO: is it possible to move this in the shell?
 class ContainmentConfigView : public ConfigView
 {
     Q_OBJECT
     Q_PROPERTY(ConfigModel *containmentActionConfigModel READ containmentActionConfigModel CONSTANT)
-    Q_PROPERTY(ConfigModel *currentContainmentActionConfigModel READ currentContainmentActionConfigModel CONSTANT)
+    Q_PROPERTY(QStandardItemModel *currentContainmentActionsModel READ currentContainmentActionsModel CONSTANT)
     Q_PROPERTY(ConfigModel *wallpaperConfigModel READ wallpaperConfigModel CONSTANT)
     Q_PROPERTY(ConfigPropertyMap *wallpaperConfiguration READ wallpaperConfiguration NOTIFY wallpaperConfigurationChanged)
     Q_PROPERTY(QString currentWallpaper READ currentWallpaper WRITE setCurrentWallpaper NOTIFY currentWallpaperChanged)
@@ -46,7 +65,7 @@ public:
     virtual void init();
 
     ConfigModel *containmentActionConfigModel();
-    ConfigModel *currentContainmentActionConfigModel();
+    QStandardItemModel *currentContainmentActionsModel();
     ConfigModel *wallpaperConfigModel();
     QString currentWallpaper() const;
     void setCurrentWallpaper(const QString &wallpaper);
@@ -65,7 +84,7 @@ private:
     Plasma::Containment *m_containment;
     ConfigModel *m_wallpaperConfigModel;
     ConfigModel *m_containmentActionConfigModel;
-    ConfigModel *m_currentContainmentActionConfigModel;
+    CurrentContainmentActionsModel *m_currentContainmentActionsModel;
     QString m_currentWallpaper;
     ConfigPropertyMap *m_currentWallpaperConfig;
     ConfigPropertyMap *m_ownWallpaperConfig;

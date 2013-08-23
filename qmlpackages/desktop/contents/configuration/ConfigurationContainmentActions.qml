@@ -28,10 +28,14 @@ Item {
     implicitHeight: childrenRect.height
 
     Column {
-        anchors.centerIn: parent
+        anchors {
+            top: parent.top
+            topMargin: 25
+            horizontalCenter: parent.horizontalCenter
+        }
 
         Repeater {
-            model: configDialog.currentContainmentActionConfigModel
+            model: configDialog.currentContainmentActionsModel
             delegate: RowLayout {
                 width: root.width * 0.8
                 QtControls.Button {
@@ -53,16 +57,16 @@ Item {
                 QtControls.Button {
                     iconName: "list-remove"
                     width: height
+                    onClicked: {
+                        configDialog.currentContainmentActionsModel.remove(index)
+                    }
                 }
             }
         }
         QtControls.Button {
             text: "Add Action"
             onClicked: {
-                for (var i in configDialog.currentContainmentActions) {
-                    print("AAA"+i+configDialog.currentContainmentActions[i])
-                }
-                print(configDialog.currentContainmentActions)
+                configDialog.currentContainmentActionsModel.append("RightButton;NoModifier", "org.kde.contextmenu");
             }
         }
     }
