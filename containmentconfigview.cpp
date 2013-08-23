@@ -41,6 +41,7 @@ ContainmentConfigView::ContainmentConfigView(Plasma::Containment *cont, QWindow 
       m_containment(cont),
       m_wallpaperConfigModel(0),
       m_containmentActionConfigModel(0),
+      m_currentContainmentActionConfigModel(0),
       m_currentWallpaperConfig(0),
       m_ownWallpaperConfig(0)
 {
@@ -89,18 +90,24 @@ ConfigModel *ContainmentConfigView::containmentActionConfigModel()
     return m_containmentActionConfigModel;
 }
 
-QVariantMap ContainmentConfigView::currentContainmentActions() const
+ConfigModel *ContainmentConfigView::currentContainmentActionConfigModel()
 {
-    QHash<QString, Plasma::ContainmentActions*> actions = m_containment->containmentActions();
+    if (!m_currentContainmentActionConfigModel) {
+        m_currentContainmentActionConfigModel = new ConfigModel(this);
 
-    QVariantMap actionsMap;
+        QHash<QString, Plasma::ContainmentActions*> actions = m_containment->containmentActions();
 
-    QHash<QString, Plasma::ContainmentActions*>::const_iterator i = actions.constBegin();
-    while (i != actions.constEnd()) {
-        actionsMap[i.key()] = i.value()->pluginInfo().name();
+        QHashIterator<QString, Plasma::ContainmentActions*> i(actions);
+        while (i.hasNext()) {
+            i.next();
+
+            ConfigCategory *cat = new ConfigCategory(m_currentContainmentActionConfigModel);
+            cat->setName(i.key());
+            cat->setPluginName(i.value()->pluginInfo().name());
+            m_currentContainmentActionConfigModel->appendCategory(cat);
+        }
     }
-
-    return actionsMap;
+    return m_currentContainmentActionConfigModel;
 }
 
 ConfigModel *ContainmentConfigView::wallpaperConfigModel()

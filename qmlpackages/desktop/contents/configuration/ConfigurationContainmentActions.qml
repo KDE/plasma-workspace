@@ -31,7 +31,7 @@ Item {
         anchors.centerIn: parent
 
         Repeater {
-            model: 3
+            model: configDialog.currentContainmentActionConfigModel
             delegate: RowLayout {
                 width: root.width * 0.8
                 QtControls.Button {
@@ -58,6 +58,12 @@ Item {
         }
         QtControls.Button {
             text: "Add Action"
+            onClicked: {
+                for (var i in configDialog.currentContainmentActions) {
+                    print("AAA"+i+configDialog.currentContainmentActions[i])
+                }
+                print(configDialog.currentContainmentActions)
+            }
         }
     }
             
