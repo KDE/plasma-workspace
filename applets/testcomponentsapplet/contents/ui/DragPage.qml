@@ -83,7 +83,7 @@ PlasmaComponents.Page {
                     print(" item dropped " + objectName);
                     ooo.text = objectName
                 }
-                Rectangle { anchors.fill: parent; color: "blue"; opacity: 0.4; }
+                //Rectangle { anchors.fill: parent; color: "blue"; opacity: 0.4; }
             }
         }
         DragItem {
@@ -105,7 +105,7 @@ PlasmaComponents.Page {
                     print(" item dropped " + objectName);
                     ooo.text = objectName
                 }
-                Rectangle { anchors.fill: parent; color: "green"; opacity: 0.4; }
+                //Rectangle { anchors.fill: parent; color: "green"; opacity: 0.4; }
             }
         }
         DragItem {
