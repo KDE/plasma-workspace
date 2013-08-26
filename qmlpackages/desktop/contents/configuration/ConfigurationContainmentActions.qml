@@ -50,16 +50,22 @@ Item {
                 QtControls.Button {
                     iconName: "configure"
                     width: height
+                    onClicked: {
+                        configDialog.currentContainmentActionsModel.showConfiguration(index);
+                    }
                 }
                 QtControls.Button {
                     iconName: "dialog-information"
                     width: height
+                    onClicked: {
+                        configDialog.currentContainmentActionsModel.showInformation(index);
+                    }
                 }
                 QtControls.Button {
                     iconName: "list-remove"
                     width: height
                     onClicked: {
-                        configDialog.currentContainmentActionsModel.remove(index)
+                        configDialog.currentContainmentActionsModel.remove(index);
                     }
                 }
             }

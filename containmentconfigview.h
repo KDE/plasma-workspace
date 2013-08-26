@@ -23,8 +23,11 @@
 
 #include "configview.h"
 
+#include <KConfigGroup>
+
 namespace Plasma {
     class Containment;
+    class ContainmentActions;
 }
 class ConfigPropertyMap;
 
@@ -47,10 +50,13 @@ public:
     Q_INVOKABLE bool append(const QString &action, const QString &plugin);
     Q_INVOKABLE void update(int row, const QString &action, const QString &plugin);
     Q_INVOKABLE void remove(int row);
+    Q_INVOKABLE void showConfiguration(int row);
     Q_INVOKABLE void save();
 
 private:
     Plasma::Containment *m_containment;
+    QHash<QString, Plasma::ContainmentActions *> m_plugins;
+    KConfigGroup m_baseCfg;
 };
 
 //TODO: is it possible to move this in the shell?
