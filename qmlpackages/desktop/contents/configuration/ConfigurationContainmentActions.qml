@@ -28,6 +28,10 @@ Item {
     implicitWidth: childrenRect.width
     implicitHeight: childrenRect.height
 
+    function saveConfig() {
+        configDialog.currentContainmentActionsModel.save();
+    }
+
     Column {
         anchors {
             top: parent.top

@@ -22,6 +22,7 @@
 
 #include <QStandardItemModel>
 
+#include <KConfig>
 #include <KConfigGroup>
 
 namespace Plasma {
@@ -55,6 +56,8 @@ private:
     Plasma::Containment *m_containment;
     QHash<QString, Plasma::ContainmentActions *> m_plugins;
     KConfigGroup m_baseCfg;
+    KConfigGroup m_tempConfig;
+    KConfig m_tempConfigParent;
 };
 
 #endif

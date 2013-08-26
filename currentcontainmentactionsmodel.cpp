@@ -21,6 +21,7 @@
 
 #include <QMouseEvent>
 
+#include <QDebug>
 #include <QDialog>
 #include <QVBoxLayout>
 #include <QDialogButtonBox>
@@ -37,7 +38,8 @@
 
 CurrentContainmentActionsModel::CurrentContainmentActionsModel(Plasma::Containment *cotainment, QObject *parent)
     : QStandardItemModel(parent),
-      m_containment(cotainment)
+      m_containment(cotainment),
+      m_tempConfigParent(QString(), KConfig::SimpleConfig)
 {
     QHash<int, QByteArray> roleNames;
     roleNames[ActionRole] = "action";
@@ -46,8 +48,10 @@ CurrentContainmentActionsModel::CurrentContainmentActionsModel(Plasma::Containme
     setRoleNames(roleNames);
 
     m_baseCfg = KConfigGroup(m_containment->corona()->config(), "ActionPlugins");
+    m_baseCfg = KConfigGroup(&m_baseCfg, QString::number(m_containment->containmentType()));
 
     QHash<QString, Plasma::ContainmentActions*> actions = cotainment->containmentActions();
+
 
     QHashIterator<QString, Plasma::ContainmentActions*> i(actions);
     while (i.hasNext()) {
@@ -101,9 +105,10 @@ bool CurrentContainmentActionsModel::append(const QString &action, const QString
     item->setData(plugin, PluginRole);
     appendRow(item);
     m_plugins[action] = Plasma::PluginLoader::self()->loadContainmentActions(m_containment, plugin);
-    KConfigGroup cfg(&m_baseCfg, action);
     m_plugins[action]->setContainment(m_containment);
-    m_plugins[action]->restore(cfg);
+    //empty config: the new one will ne in default state
+    KConfigGroup tempConfig(&m_tempConfigParent, "test");
+    m_plugins[action]->restore(tempConfig);
     return true;
 }
 
@@ -120,6 +125,10 @@ void CurrentContainmentActionsModel::update(int row, const QString &action, cons
         if (m_plugins.contains(action) && oldPlugin != plugin) {
             delete m_plugins[action];
             m_plugins[action] = Plasma::PluginLoader::self()->loadContainmentActions(m_containment, plugin);
+            m_plugins[action]->setContainment(m_containment);
+            //empty config: the new one will ne in default state
+            KConfigGroup tempConfig(&m_tempConfigParent, "test");
+            m_plugins[action]->restore(tempConfig);
         }
     }
 }
@@ -149,8 +158,9 @@ void CurrentContainmentActionsModel::showConfiguration(int row)
     configDlg->setLayout(lay);
     configDlg->setWindowModality(Qt::WindowModal);
 
+    Plasma::ContainmentActions *pluginInstance = m_plugins[action];
     //put the config in the dialog
-    QWidget *w = m_plugins[action]->createConfigurationInterface(configDlg);
+    QWidget *w = pluginInstance->createConfigurationInterface(configDlg);
     QString title;
     if (w) {
         lay->addWidget(w);
@@ -163,8 +173,16 @@ void CurrentContainmentActionsModel::showConfiguration(int row)
                                                         Qt::Horizontal, configDlg);
     lay->addWidget(buttons);
 
-    connect(buttons, SIGNAL(accepted()), this, SLOT(acceptConfig()));
-    connect(buttons, SIGNAL(rejected()), this, SLOT(rejectConfig()));
+    QObject::connect(buttons, &QDialogButtonBox::accepted,
+            [configDlg, pluginInstance] () {
+                pluginInstance->configurationAccepted();
+                configDlg->deleteLater();
+            });
+
+    QObject::connect(buttons, &QDialogButtonBox::rejected,
+            [configDlg] () {
+                configDlg->deleteLater();
+            });
 
 
     configDlg->show();
@@ -211,10 +229,12 @@ void CurrentContainmentActionsModel::save()
 
     QHashIterator<QString, Plasma::ContainmentActions*> i(m_plugins);
     while (i.hasNext()) {
-        m_containment->setContainmentActions(i.key(), i.value()->pluginInfo().pluginName());
         i.next();
+
         KConfigGroup cfg(&m_baseCfg, i.key());
         i.value()->save(cfg);
+
+        m_containment->setContainmentActions(i.key(), i.value()->pluginInfo().pluginName());
     }
 }
 

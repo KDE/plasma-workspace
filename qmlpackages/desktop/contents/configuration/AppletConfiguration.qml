@@ -49,9 +49,13 @@ Rectangle {
 
 //BEGIN functions
     function saveConfig() {
-        for (var key in plasmoid.configuration) {
-            if (main.currentItem["cfg_"+key] !== undefined) {
-                plasmoid.configuration[key] = main.currentItem["cfg_"+key]
+        if (main.currentItem.saveConfig) {
+            main.currentItem.saveConfig()
+        } else {
+            for (var key in plasmoid.configuration) {
+                if (main.currentItem["cfg_"+key] !== undefined) {
+                    plasmoid.configuration[key] = main.currentItem["cfg_"+key]
+                }
             }
         }
     }
