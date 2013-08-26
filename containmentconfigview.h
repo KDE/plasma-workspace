@@ -35,17 +35,22 @@ class CurrentContainmentActionsModel : public QStandardItemModel
 
 public:
     enum Roles {
-        NameRole = Qt::UserRole+1,
+        ActionRole = Qt::UserRole+1,
         PluginRole
     };
 
     CurrentContainmentActionsModel(Plasma::Containment *cotainment, QObject *parent = 0);
     ~CurrentContainmentActionsModel();
 
-    Q_INVOKABLE void append(const QString &action, const QString &plugin);
+    Q_INVOKABLE QString mouseEventString(int mouseButtons, int modifiers);
+    Q_INVOKABLE QString wheelEventString(const QPointF &delta, int mouseButtons, int modifiers);
+    Q_INVOKABLE bool append(const QString &action, const QString &plugin);
     Q_INVOKABLE void update(int row, const QString &action, const QString &plugin);
     Q_INVOKABLE void remove(int row);
     Q_INVOKABLE void save();
+
+private:
+    Plasma::Containment *m_containment;
 };
 
 //TODO: is it possible to move this in the shell?

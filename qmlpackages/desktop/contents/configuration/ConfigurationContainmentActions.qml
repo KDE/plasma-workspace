@@ -20,6 +20,7 @@ import QtQuick 2.0
 import QtQuick.Controls 1.0 as QtControls
 import QtQuick.Layouts 1.0
 
+import org.kde.qtextracomponents 2.0
 
 Item {
     id: root
@@ -37,9 +38,9 @@ Item {
         Repeater {
             model: configDialog.currentContainmentActionsModel
             delegate: RowLayout {
-                width: root.width * 0.8
+                width: root.width
                 QtControls.Button {
-                    text: "Middle Button"
+                    text: model.action
                 }
                 QtControls.ComboBox {
                     Layout.fillWidth: true
@@ -64,9 +65,36 @@ Item {
             }
         }
         QtControls.Button {
-            text: "Add Action"
-            onClicked: {
-                configDialog.currentContainmentActionsModel.append("RightButton;NoModifier", "org.kde.contextmenu");
+            id: mouseInputButton
+            text: i18n("Add Action")
+            checkable: true
+            onCheckedChanged: {
+                if (checked) {
+                    text = i18n("Input Here");
+                    mouseInputArea.enabled = true;
+                }
+            }
+            MouseArea {
+                id: mouseInputArea
+                anchors.fill: parent
+                acceptedButtons: Qt.AllButtons
+                enabled: false
+
+                onClicked: {
+                    if (configDialog.currentContainmentActionsModel.append(configDialog.currentContainmentActionsModel.mouseEventString(mouse.button, mouse.modifiers), "org.kde.contextmenu")) {
+                        mouseInputButton.text = i18n("Add Action");
+                        mouseInputButton.checked = false;
+                        enabled = false;
+                    }
+                }
+
+                onWheel: {
+                    if (configDialog.currentContainmentActionsModel.append(configDialog.currentContainmentActionsModel.wheelEventString(wheel.pixelDelta, wheel.buttons, wheel.modifiers), "org.kde.contextmenu")) {
+                        mouseInputButton.text = i18n("Add Action");
+                        mouseInputButton.checked = false;
+                        enabled = false;
+                    }
+                }
             }
         }
     }

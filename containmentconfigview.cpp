@@ -37,10 +37,11 @@
 
 
 CurrentContainmentActionsModel::CurrentContainmentActionsModel(Plasma::Containment *cotainment, QObject *parent)
-    : QStandardItemModel(parent)
+    : QStandardItemModel(parent),
+      m_containment(cotainment)
 {
     QHash<int, QByteArray> roleNames;
-    roleNames[NameRole] = "name";
+    roleNames[ActionRole] = "action";
     roleNames[PluginRole] = "plugin";
 
     setRoleNames(roleNames);
@@ -52,7 +53,7 @@ CurrentContainmentActionsModel::CurrentContainmentActionsModel(Plasma::Containme
         i.next();
 
         QStandardItem *item = new QStandardItem();
-        item->setData(i.key(), NameRole);
+        item->setData(i.key(), ActionRole);
         item->setData(i.value()->pluginInfo().pluginName(), PluginRole);
         appendRow(item);
     }
@@ -62,12 +63,39 @@ CurrentContainmentActionsModel::~CurrentContainmentActionsModel()
 {
 }
 
-void CurrentContainmentActionsModel::append(const QString &action, const QString &plugin)
+QString CurrentContainmentActionsModel::mouseEventString(int mouseButton, int modifiers)
 {
+    QMouseEvent *mouse = new QMouseEvent(QEvent::MouseButtonRelease, QPoint(), (Qt::MouseButton)mouseButton, (Qt::MouseButton)mouseButton, (Qt::KeyboardModifiers) modifiers);
+
+    QString string = Plasma::ContainmentActions::eventToString(mouse);
+
+    delete mouse;
+
+    return string;
+}
+
+QString CurrentContainmentActionsModel::wheelEventString(const QPointF &delta, int mouseButtons, int modifiers)
+{
+    QWheelEvent *wheel = new QWheelEvent(QPointF(), QPointF(), delta.toPoint(), QPoint(), 0, Qt::Vertical, (Qt::MouseButtons)mouseButtons, (Qt::KeyboardModifiers) modifiers);
+
+    QString string = Plasma::ContainmentActions::eventToString(wheel);
+
+    delete wheel;
+
+    return string;
+}
+
+bool CurrentContainmentActionsModel::append(const QString &action, const QString &plugin)
+{
+    if (!match(index(0,0), ActionRole, action).isEmpty()) {
+        return false;
+    }
+
     QStandardItem *item = new QStandardItem();
-    item->setData(action, NameRole);
+    item->setData(action, ActionRole);
     item->setData(plugin, PluginRole);
     appendRow(item);
+    return true;
 }
 
 void CurrentContainmentActionsModel::update(int row, const QString &action, const QString &plugin)
@@ -75,7 +103,7 @@ void CurrentContainmentActionsModel::update(int row, const QString &action, cons
     QModelIndex idx = index(row, 0);
 
     if (idx.isValid()) {
-        setData(idx, action, NameRole);
+        setData(idx, action, ActionRole);
         setData(idx, plugin, PluginRole);
     }
 }
