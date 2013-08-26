@@ -23,41 +23,13 @@
 
 #include "configview.h"
 
-#include <KConfigGroup>
 
 namespace Plasma {
     class Containment;
-    class ContainmentActions;
 }
+
 class ConfigPropertyMap;
-
-
-class CurrentContainmentActionsModel : public QStandardItemModel
-{
-    Q_OBJECT
-
-public:
-    enum Roles {
-        ActionRole = Qt::UserRole+1,
-        PluginRole
-    };
-
-    CurrentContainmentActionsModel(Plasma::Containment *cotainment, QObject *parent = 0);
-    ~CurrentContainmentActionsModel();
-
-    Q_INVOKABLE QString mouseEventString(int mouseButtons, int modifiers);
-    Q_INVOKABLE QString wheelEventString(const QPointF &delta, int mouseButtons, int modifiers);
-    Q_INVOKABLE bool append(const QString &action, const QString &plugin);
-    Q_INVOKABLE void update(int row, const QString &action, const QString &plugin);
-    Q_INVOKABLE void remove(int row);
-    Q_INVOKABLE void showConfiguration(int row);
-    Q_INVOKABLE void save();
-
-private:
-    Plasma::Containment *m_containment;
-    QHash<QString, Plasma::ContainmentActions *> m_plugins;
-    KConfigGroup m_baseCfg;
-};
+class CurrentContainmentActionsModel;
 
 //TODO: is it possible to move this in the shell?
 class ContainmentConfigView : public ConfigView
