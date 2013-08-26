@@ -157,54 +157,41 @@ Rectangle {
                     }
                 }
             }
-            QtControls.ScrollView {
-                id: pageScroll
+
+            QtControls.StackView {
+                id: main
                 anchors {
                     top: parent.top
                     bottom: parent.bottom
                 }
                 Layout.fillWidth: true
-                Flickable {
-                    contentWidth: width
-                    contentHeight: main.height
-                    Item {
-                        width: parent.width
-                        height: childrenRect.height
-                        QtControls.StackView {
-                            id: main
-                            anchors {
-                                left: parent.left
-                                right: parent.right
-                            }
-                            height: Math.max(pageScroll.height, currentItem != null ? currentItem.implicitHeight : 0)
-                            property string sourceFile
-                            Timer {
-                                id: pageSizeSync
-                                interval: 100
-                                onTriggered: {
+                height: Math.max(pageScroll.height, currentItem != null ? currentItem.implicitHeight : 0)
+                property string sourceFile
+                Timer {
+                    id: pageSizeSync
+                    interval: 100
+                    onTriggered: {
 //                                     root.width = mainColumn.implicitWidth
 //                                     root.height = mainColumn.implicitHeight
-                                }
-                            }
-                            onImplicitWidthChanged: pageSizeSync.restart()
-                            onImplicitHeightChanged: pageSizeSync.restart()
-                            onSourceFileChanged: {
-                                print("Source file changed in flickable" + sourceFile);
-                                replace(Qt.resolvedUrl(sourceFile))
-                                /*
-                                 * This is not needed on a desktop shell that has ok/apply/cancel buttons, i'll leave it here only for future reference until we have a prototype for the active shell.
-                                 * root.pageChanged will start a timer, that in turn will call saveConfig() when triggered
-
-                                for (var prop in currentPage) {
-                                    if (prop.indexOf("cfg_") === 0) {
-                                        currentPage[prop+"Changed"].connect(root.pageChanged)
-                                    }
-                                }*/
-                            }
-                        }
                     }
                 }
+                onImplicitWidthChanged: pageSizeSync.restart()
+                onImplicitHeightChanged: pageSizeSync.restart()
+                onSourceFileChanged: {
+                    print("Source file changed in flickable" + sourceFile);
+                    replace(Qt.resolvedUrl(sourceFile))
+                    /*
+                        * This is not needed on a desktop shell that has ok/apply/cancel buttons, i'll leave it here only for future reference until we have a prototype for the active shell.
+                        * root.pageChanged will start a timer, that in turn will call saveConfig() when triggered
+
+                    for (var prop in currentPage) {
+                        if (prop.indexOf("cfg_") === 0) {
+                            currentPage[prop+"Changed"].connect(root.pageChanged)
+                        }
+                    }*/
+                }
             }
+
         }
         RowLayout {
             id: buttonsRow
