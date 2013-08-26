@@ -147,6 +147,7 @@ void CurrentContainmentActionsModel::showConfiguration(int row)
     }
 
     QDialog *configDlg = new QDialog();
+    configDlg->setAttribute(Qt::WA_DeleteOnClose);
     QLayout *lay = new QVBoxLayout(configDlg);
     configDlg->setLayout(lay);
     configDlg->setWindowModality(Qt::WindowModal);
@@ -166,6 +167,7 @@ void CurrentContainmentActionsModel::showConfiguration(int row)
     lay->addWidget(buttons);
 
     connect(buttons, SIGNAL(accepted()), this, SLOT(acceptConfig()));
+    connect(buttons, SIGNAL(rejected()), this, SLOT(rejectConfig()));
 
 
     configDlg->show();
