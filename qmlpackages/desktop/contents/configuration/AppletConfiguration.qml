@@ -160,6 +160,7 @@ Rectangle {
 
             QtControls.StackView {
                 id: main
+                clip: true
                 anchors {
                     top: parent.top
                     bottom: parent.bottom
