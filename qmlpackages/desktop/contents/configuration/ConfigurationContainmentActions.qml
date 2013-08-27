@@ -47,13 +47,30 @@ Item {
                     text: model.action
                 }
                 QtControls.ComboBox {
+                    id: pluginsCombo
                     Layout.fillWidth: true
                     model: configDialog.containmentActionConfigModel
                     textRole: "name"
+                    property bool initialized: false
+                    Component.onCompleted: {
+                        for (var i = 0; i < configDialog.containmentActionConfigModel.count; ++i) {
+                            if (configDialog.containmentActionConfigModel.get(i).pluginName == pluginName) {
+                                pluginsCombo.currentIndex = i;
+                                break;
+                            }
+                        }
+                        pluginsCombo.initialized = true;
+                    }
+                    onCurrentIndexChanged: {
+                        if (initialized && configDialog.containmentActionConfigModel.get(currentIndex).pluginName != pluginName) {
+                            configDialog.currentContainmentActionsModel.update(index, action, configDialog.containmentActionConfigModel.get(currentIndex).pluginName);
+                        }
+                    }
                 }
                 QtControls.Button {
                     iconName: "configure"
                     width: height
+                    enabled: model.hasConfigurationInterface
                     onClicked: {
                         configDialog.currentContainmentActionsModel.showConfiguration(index);
                     }

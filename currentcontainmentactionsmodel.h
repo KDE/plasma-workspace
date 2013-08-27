@@ -37,7 +37,8 @@ class CurrentContainmentActionsModel : public QStandardItemModel
 public:
     enum Roles {
         ActionRole = Qt::UserRole+1,
-        PluginRole
+        PluginNameRole,
+        HasConfigurationInterfaceRole
     };
 
     CurrentContainmentActionsModel(Plasma::Containment *cotainment, QObject *parent = 0);

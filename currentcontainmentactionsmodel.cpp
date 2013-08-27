@@ -43,7 +43,8 @@ CurrentContainmentActionsModel::CurrentContainmentActionsModel(Plasma::Containme
 {
     QHash<int, QByteArray> roleNames;
     roleNames[ActionRole] = "action";
-    roleNames[PluginRole] = "plugin";
+    roleNames[PluginNameRole] = "pluginName";
+    roleNames[HasConfigurationInterfaceRole] = "hasConfigurationInterface";
 
     setRoleNames(roleNames);
 
@@ -59,12 +60,15 @@ CurrentContainmentActionsModel::CurrentContainmentActionsModel(Plasma::Containme
 
         QStandardItem *item = new QStandardItem();
         item->setData(i.key(), ActionRole);
-        item->setData(i.value()->pluginInfo().pluginName(), PluginRole);
-        appendRow(item);
+        item->setData(i.value()->pluginInfo().pluginName(), PluginNameRole);
+
         m_plugins[i.key()] = Plasma::PluginLoader::self()->loadContainmentActions(m_containment, i.value()->pluginInfo().pluginName());
         m_plugins[i.key()]->setContainment(m_containment);
         KConfigGroup cfg(&m_baseCfg, i.key());
         m_plugins[i.key()]->restore(cfg);
+        item->setData(m_plugins[i.key()]->pluginInfo().property("X-Plasma-HasConfigurationInterface").toBool(), HasConfigurationInterfaceRole);
+
+        appendRow(item);
     }
 }
 
@@ -102,33 +106,42 @@ bool CurrentContainmentActionsModel::append(const QString &action, const QString
 
     QStandardItem *item = new QStandardItem();
     item->setData(action, ActionRole);
-    item->setData(plugin, PluginRole);
-    appendRow(item);
+    item->setData(plugin, PluginNameRole);
+
     m_plugins[action] = Plasma::PluginLoader::self()->loadContainmentActions(m_containment, plugin);
     m_plugins[action]->setContainment(m_containment);
     //empty config: the new one will ne in default state
     KConfigGroup tempConfig(&m_tempConfigParent, "test");
     m_plugins[action]->restore(tempConfig);
+    item->setData(m_plugins[action]->pluginInfo().property("X-Plasma-HasConfigurationInterface").toBool(), HasConfigurationInterfaceRole);
+
+    appendRow(item);
     return true;
 }
 
 void CurrentContainmentActionsModel::update(int row, const QString &action, const QString &plugin)
 {
-    const QString oldPlugin = itemData(index(row, 0)).value(PluginRole).toString();
+    const QString oldPlugin = itemData(index(row, 0)).value(PluginNameRole).toString();
+    const QString oldTrigger = itemData(index(row, 0)).value(ActionRole).toString();
+
+    if (oldTrigger == action && oldPlugin == plugin) {
+        return;
+    }
 
     QModelIndex idx = index(row, 0);
 
     if (idx.isValid()) {
         setData(idx, action, ActionRole);
-        setData(idx, plugin, PluginRole);
+        setData(idx, plugin, PluginNameRole);
 
-        if (m_plugins.contains(action) && oldPlugin != plugin) {
+        if (!m_plugins.contains(action) || oldPlugin != plugin) {
             delete m_plugins[action];
             m_plugins[action] = Plasma::PluginLoader::self()->loadContainmentActions(m_containment, plugin);
             m_plugins[action]->setContainment(m_containment);
             //empty config: the new one will ne in default state
             KConfigGroup tempConfig(&m_tempConfigParent, "test");
             m_plugins[action]->restore(tempConfig);
+            setData(idx, m_plugins[action]->pluginInfo().property("X-Plasma-HasConfigurationInterface").toBool(), HasConfigurationInterfaceRole);
         }
     }
 }
