@@ -19,6 +19,7 @@
 import QtQuick 2.0
 import QtQuick.Controls 1.0 as QtControls
 import QtQuick.Layouts 1.0
+import org.kde.plasma.core 2.0 as PlasmaCore
 
 
 QtControls.Button {
@@ -27,6 +28,8 @@ QtControls.Button {
     text: defaultText
     checkable: true
     property string eventString
+
+    width: theme.defaultFont.mSize.width*15
 
     onCheckedChanged: {
         if (checked) {

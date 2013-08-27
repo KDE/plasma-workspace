@@ -26,6 +26,20 @@ Item {
     implicitWidth: childrenRect.width
     implicitHeight: childrenRect.height
 
+    property var prettyStrings: {
+        "LeftButton": i18n("Left-Button"),
+        "RightButton": i18n("Right-Button"),
+        "MidButton": i18n("Middle-Button"),
+
+        "wheel:Vertical": i18n("Vertical-Scroll"),
+        "wheel:Horizontal": i18n("Horizontal-Scroll"),
+
+        "ShiftModifier": i18n("Shift"),
+        "ControlModifier": i18n("Ctrl"),
+        "AltModifier": i18n("Alt"),
+        "MetaModifier": i18n("Meta")
+    }
+
     function saveConfig() {
         configDialog.currentContainmentActionsModel.save();
     }
@@ -42,12 +56,13 @@ Item {
             delegate: RowLayout {
                 width: root.width
                 MouseEventInputButton {
-                    defaultText: model.action
+                    defaultText: prettyStrings ? (prettyStrings[model.action.split(';')[1]] ? prettyStrings[model.action.split(';')[1]] + "+" : "") + prettyStrings[model.action.split(';')[0]] : ""
                     eventString: model.action
                     onEventStringChanged: {
                         configDialog.currentContainmentActionsModel.update(index, eventString, model.pluginName);
                     }
                 }
+
                 QtControls.ComboBox {
                     id: pluginsCombo
                     Layout.fillWidth: true
@@ -100,4 +115,5 @@ Item {
             }
         }
     }
+
 }
