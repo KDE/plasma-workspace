@@ -44,6 +44,7 @@ public:
     CurrentContainmentActionsModel(Plasma::Containment *cotainment, QObject *parent = 0);
     ~CurrentContainmentActionsModel();
 
+    Q_INVOKABLE bool isTriggerUsed(const QString &trigger);
     Q_INVOKABLE QString mouseEventString(int mouseButtons, int modifiers);
     Q_INVOKABLE QString wheelEventString(const QPointF &delta, int mouseButtons, int modifiers);
     Q_INVOKABLE bool append(const QString &action, const QString &plugin);
@@ -59,6 +60,7 @@ private:
     KConfigGroup m_baseCfg;
     KConfigGroup m_tempConfig;
     KConfig m_tempConfigParent;
+    QStringList m_removedTriggers;
 };
 
 #endif

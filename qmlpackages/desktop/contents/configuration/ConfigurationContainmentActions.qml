@@ -20,8 +20,6 @@ import QtQuick 2.0
 import QtQuick.Controls 1.0 as QtControls
 import QtQuick.Layouts 1.0
 
-import org.kde.qtextracomponents 2.0
-
 Item {
     id: root
 
@@ -43,8 +41,12 @@ Item {
             model: configDialog.currentContainmentActionsModel
             delegate: RowLayout {
                 width: root.width
-                QtControls.Button {
-                    text: model.action
+                MouseEventInputButton {
+                    defaultText: model.action
+                    eventString: model.action
+                    onEventStringChanged: {
+                        configDialog.currentContainmentActionsModel.update(index, eventString, model.pluginName);
+                    }
                 }
                 QtControls.ComboBox {
                     id: pluginsCombo

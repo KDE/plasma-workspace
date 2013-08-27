@@ -98,6 +98,11 @@ QString CurrentContainmentActionsModel::wheelEventString(const QPointF &delta, i
     return string;
 }
 
+bool CurrentContainmentActionsModel::isTriggerUsed(const QString &trigger)
+{
+    return m_plugins.contains(trigger);
+}
+
 bool CurrentContainmentActionsModel::append(const QString &action, const QString &plugin)
 {
     if (m_plugins.contains(action)) {
@@ -114,6 +119,7 @@ bool CurrentContainmentActionsModel::append(const QString &action, const QString
     KConfigGroup tempConfig(&m_tempConfigParent, "test");
     m_plugins[action]->restore(tempConfig);
     item->setData(m_plugins[action]->pluginInfo().property("X-Plasma-HasConfigurationInterface").toBool(), HasConfigurationInterfaceRole);
+    m_removedTriggers.removeAll(action);
 
     appendRow(item);
     return true;
@@ -133,6 +139,13 @@ void CurrentContainmentActionsModel::update(int row, const QString &action, cons
     if (idx.isValid()) {
         setData(idx, action, ActionRole);
         setData(idx, plugin, PluginNameRole);
+
+        delete m_plugins[oldTrigger];
+        m_plugins.remove(oldTrigger);
+
+        if (oldPlugin != plugin) {
+            m_removedTriggers << oldTrigger;
+        }
 
         if (!m_plugins.contains(action) || oldPlugin != plugin) {
             delete m_plugins[action];
@@ -154,6 +167,7 @@ void CurrentContainmentActionsModel::remove(int row)
     if (m_plugins.contains(action)) {
         delete m_plugins[action];
         m_plugins.remove(action);
+        m_removedTriggers << action;
     }
 }
 
@@ -229,16 +243,10 @@ void CurrentContainmentActionsModel::showAbout(int row)
 void CurrentContainmentActionsModel::save()
 {
 
-    //TODO: this configuration save is still a stub, not completely "correct" yet
-    //clean old config, just i case
-    foreach (const QString &group, m_baseCfg.groupList()) {
-        KConfigGroup cfg = KConfigGroup(&m_baseCfg, group);
-        cfg.deleteGroup();
-
-        if (m_plugins.contains(group)) {
-            m_containment->setContainmentActions(group, QString());
-        }
+    foreach (const QString &removedTrigger, m_removedTriggers) {
+        m_containment->setContainmentActions(removedTrigger, QString());
     }
+    m_removedTriggers.clear();
 
     QHashIterator<QString, Plasma::ContainmentActions*> i(m_plugins);
     while (i.hasNext()) {
