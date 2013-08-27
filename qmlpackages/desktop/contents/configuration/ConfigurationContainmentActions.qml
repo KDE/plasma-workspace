@@ -93,39 +93,11 @@ Item {
                 }
             }
         }
-        QtControls.Button {
-            id: mouseInputButton
-            text: i18n("Add Action")
-            checkable: true
-            onCheckedChanged: {
-                if (checked) {
-                    text = i18n("Input Here");
-                    mouseInputArea.enabled = true;
-                }
-            }
-            MouseArea {
-                id: mouseInputArea
-                anchors.fill: parent
-                acceptedButtons: Qt.AllButtons
-                enabled: false
-
-                onClicked: {
-                    if (configDialog.currentContainmentActionsModel.append(configDialog.currentContainmentActionsModel.mouseEventString(mouse.button, mouse.modifiers), "org.kde.contextmenu")) {
-                        mouseInputButton.text = i18n("Add Action");
-                        mouseInputButton.checked = false;
-                        enabled = false;
-                    }
-                }
-
-                onWheel: {
-                    if (configDialog.currentContainmentActionsModel.append(configDialog.currentContainmentActionsModel.wheelEventString(wheel.pixelDelta, wheel.buttons, wheel.modifiers), "org.kde.contextmenu")) {
-                        mouseInputButton.text = i18n("Add Action");
-                        mouseInputButton.checked = false;
-                        enabled = false;
-                    }
-                }
+        MouseEventInputButton {
+            defaultText: i18n("Add Action");
+            onEventStringChanged: {
+                configDialog.currentContainmentActionsModel.append(eventString, "org.kde.contextmenu");
             }
         }
     }
-            
 }
