@@ -29,7 +29,7 @@ QtControls.Button {
     checkable: true
     property string eventString
 
-    implicitWidth: theme.defaultFont.mSize.width * 15
+    implicitWidth: theme.mSize(theme.defaultFont).width * 15
     Layout.minimumWidth: implicitWidth
     Layout.maximumWidth: implicitWidth
 
