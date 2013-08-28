@@ -39,7 +39,7 @@ int main(int argc, char** argv)
                                         QStringLiteral("Enable QML Javascript debugger"));
 
     parser.addVersionOption();
-    parser.addHelpOption(description);
+    parser.setApplicationDescription(description);
     parser.addOption(dbg);
     parser.process(app);
 
