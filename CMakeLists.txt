@@ -14,7 +14,12 @@ find_path(KDE_MODULES_DIR NAMES KDE4Macros.cmake PATH_SUFFIXES share/cmake/modul
 
 
 add_definitions (${QT_DEFINITIONS} ${KDE4_DEFINITIONS})
+add_definitions(-DHAVE_X11=${X11_FOUND})
 
+if(X11_FOUND)
+    # FIXME: remove when upstream CMakeLists is fixed
+    find_package(XCB REQUIRED)
+endif()
 
 find_package(Qt5Transitional REQUIRED Core)
 find_package(Qt5Qml REQUIRED)
@@ -60,6 +65,7 @@ add_executable(plasma-shell
     configview.cpp
     containmentconfigview.cpp
     currentcontainmentactionsmodel.cpp
+    panelshadows.cpp
     desktopcorona.cpp
     panelview.cpp
     shellpluginloader.cpp
@@ -90,6 +96,10 @@ target_link_libraries(plasma-shell
  kdeqt5staging
 )
 
+if(X11_FOUND)
+  target_link_libraries(plasma-shell ${X11_LIBRARIES} ${XCB_XCB_LIBRARIES} )
+  target_link_libraries(plasma-shell Qt5::X11Extras)
+endif(X11_FOUND)
 
 install(TARGETS plasma-shell ${INSTALL_TARGETS_DEFAULT_ARGS})
 
