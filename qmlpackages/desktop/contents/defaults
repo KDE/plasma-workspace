@@ -5,7 +5,7 @@ RuntimePlatform=
 
 [Desktop][ContainmentActions]
 RightButton;NoModifier=org.kde.contextmenu
-MiddleButton;NoModifier=org.kde.paste
+MidButton;NoModifier=org.kde.paste
 wheel:Vertical;NoModifier=org.kde.switchdesktop
  
 [Panel]
@@ -13,6 +13,7 @@ Containment=org.kde.panel
 ToolBox=org.kde.paneltoolbox
 [Panel][ContainmentActions]
 RightButton;NoModifier=org.kde.contextmenu
+MidButton;NoModifier=org.kde.paste
 
 [Theme]
 Theme=default
