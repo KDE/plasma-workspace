@@ -30,8 +30,6 @@ ShellPluginLoader::~ShellPluginLoader()
 {
 }
 
-
-
 Plasma::Package ShellPluginLoader::internalLoadPackage(const QString &packageFormat, const QString &specialization)
 {
     Q_UNUSED(specialization)
@@ -42,4 +40,9 @@ Plasma::Package ShellPluginLoader::internalLoadPackage(const QString &packageFor
     } else {
         return Plasma::Package();
     }
+}
+
+void ShellPluginLoader::init()
+{
+    Plasma::PluginLoader::setPluginLoader(new ShellPluginLoader);
 }

@@ -25,9 +25,11 @@
 
 class ShellPluginLoader: public Plasma::PluginLoader
 {
-public: 
+public:
     ShellPluginLoader();
     ~ShellPluginLoader();
+
+    static void init();
 
 protected:
     Plasma::Package internalLoadPackage(const QString &packageFormat, const QString &specialization);

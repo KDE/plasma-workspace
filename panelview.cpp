@@ -17,6 +17,7 @@
  */
 
 #include "panelview.h"
+#include "shellcorona.h"
 #include "desktopcorona.h"
 #include "panelshadows_p.h"
 
@@ -33,7 +34,7 @@
 #include <Plasma/Containment>
 #include <Plasma/Package>
 
-PanelView::PanelView(DesktopCorona *corona, QWindow *parent)
+PanelView::PanelView(ShellCorona *corona, QWindow *parent)
     : View(corona, parent),
        m_offset(0),
        m_maxLength(0),
@@ -167,11 +168,11 @@ void PanelView::setThickness(int value)
 
 int PanelView::length() const
 {
-    if (formFactor() == Plasma::Types::Vertical) {
-        return config().readEntry<int>("length", screen()->size().height());
-    } else {
-        return config().readEntry<int>("length", screen()->size().width());
-    }
+    return config().readEntry<int>("length",
+            formFactor() == Plasma::Types::Vertical ?
+                screen()->size().height() :
+                screen()->size().width()
+        );
 }
 
 void PanelView::setLength(int value)

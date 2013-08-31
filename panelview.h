@@ -24,7 +24,7 @@
 #include "panelconfigview.h"
 #include <QtCore/qpointer.h>
 
-class DesktopCorona;
+class ShellCorona;
 
 class PanelView : public View
 {
@@ -38,7 +38,7 @@ class PanelView : public View
     Q_PROPERTY(QScreen *screen READ screen NOTIFY screenChanged)
 
 public:
-    explicit PanelView(DesktopCorona *corona, QWindow *parent = 0);
+    explicit PanelView(ShellCorona *corona, QWindow *parent = 0);
     virtual ~PanelView();
 
     virtual KConfigGroup config() const;
@@ -85,7 +85,7 @@ private:
     int m_minLength;
     Qt::Alignment m_alignment;
     QPointer<PanelConfigView> m_panelConfigView;
-    DesktopCorona *m_corona;
+    ShellCorona *m_corona;
 };
 
 #endif // PANELVIEW_H
