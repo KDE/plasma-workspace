@@ -29,7 +29,7 @@
 #include <KLocalizedString>
 #include <Plasma/Package>
 
-#include "containmentconfigview.h"
+#include "containmentconfigview_p.h"
 #include "panelview.h"
 #include "view.h"
 #include "scripting/desktopscriptengine.h"
@@ -234,7 +234,7 @@ void DesktopCorona::checkViews()
             View *view = new View(this);
             QSurfaceFormat format;
             view->show();
-            
+
             m_views << view;
         }
     } else {
