@@ -59,8 +59,6 @@ add_executable(plasma-shell
     main.cpp
     desktopcorona.cpp
     panelview.cpp
-    shellpluginloader.cpp
-    shellpackage.cpp
     lookandfeelpackage.cpp
     panelconfigview.cpp
     ${scripting_SRC}
