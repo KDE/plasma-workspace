@@ -230,7 +230,7 @@ void PlasmaAppletItemModel::populateModel(const QStringList &whatChanged)
     //         <<  Plasma::Applet::listAppletInfo(QString(), m_application).count();
     KService::List services = KServiceTypeTrader::self()->query("Plasma/Applet", QString());
 
-    foreach (const KSharedPtr<KService> service, services) {
+    foreach (const QExplicitlySharedDataPointer<KService> service, services) {
         KPluginInfo info(service);
         //qDebug() << info.pluginName() << "NoDisplay" << info.property("NoDisplay").toBool();
         if (info.property("NoDisplay").toBool() || info.category() == i18n("Containments")) {

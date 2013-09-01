@@ -117,7 +117,7 @@ void WidgetExplorerPrivate::initFilters()
     QStringList cats;
     KService::List services = KServiceTypeTrader::self()->query("Plasma/Applet", QString());
 
-    foreach (const KSharedPtr<KService> service, services) {
+    foreach (const QExplicitlySharedDataPointer<KService> service, services) {
         KPluginInfo info(service);
         if (info.property("NoDisplay").toBool() || info.category() == i18n("Containments") ||
             info.category().isEmpty()) {
