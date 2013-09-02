@@ -67,7 +67,7 @@ ContainmentConfigView::~ContainmentConfigView()
 
 void ContainmentConfigView::init()
 {
-    setSource(QUrl::fromLocalFile(m_containment->containment()->corona()->package().filePath("containmentconfigurationui")));
+    setSource(QUrl::fromLocalFile(m_containment->corona()->package().filePath("containmentconfigurationui")));
 }
 
 ConfigModel *ContainmentConfigView::containmentActionConfigModel()
