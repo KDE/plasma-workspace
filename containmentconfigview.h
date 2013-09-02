@@ -31,7 +31,7 @@ namespace Plasma {
 class ConfigPropertyMap;
 class CurrentContainmentActionsModel;
 
-//TODO: is it possible to move this in the shell?
+
 class ContainmentConfigView : public ConfigView
 {
     Q_OBJECT

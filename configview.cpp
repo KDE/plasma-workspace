@@ -122,7 +122,6 @@ ConfigModel::ConfigModel(QObject *parent)
     roleNames[PluginNameRole] = "pluginName";
 
     setRoleNames(roleNames);
-    qDebug() << " XXX loaded QALM";
 }
 
 ConfigModel::~ConfigModel()
