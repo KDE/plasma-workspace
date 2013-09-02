@@ -18,14 +18,17 @@
 *   Boston, MA 02110-1301, USA.                                               *
 *******************************************************************************/
 
-#include "lookandfeelpackage.h"
+#include "packages.h"
+
+#include <QDebug>
 
 #include <KLocalizedString>
+#include <kdeclarative.h>
 
 #include <Plasma/Package>
 
 
-void LookAndFeelPackageStructure::initPackage(Plasma::Package *package)
+void LookAndFeelPackage::initPackage(Plasma::Package *package)
 {
     // http://community.kde.org/Plasma/lookAndFeelPackage#
 
@@ -71,4 +74,47 @@ void LookAndFeelPackageStructure::initPackage(Plasma::Package *package)
 
 }
 
+void QmlWallpaperPackage::initPackage(Plasma::Package *package)
+{
+    package->addFileDefinition("mainscript", "ui/main.qml", i18n("Main Script File"));
+    //FIXME: why setting it required doesn't work?
+    //package->setRequired("mainscript", true);
 
+
+    QStringList platform = KDeclarative::runtimePlatform();
+    if (!platform.isEmpty()) {
+        QMutableStringListIterator it(platform);
+        while (it.hasNext()) {
+            it.next();
+            it.setValue("platformcontents/" + it.value());
+        }
+
+        platform.append("contents");
+        package->setContentsPrefixPaths(platform);
+    }
+
+    package->setDefaultPackageRoot("plasma/wallpapers/");
+
+    package->addDirectoryDefinition("images", "images", i18n("Images"));
+    package->addDirectoryDefinition("theme", "theme", i18n("Themed Images"));
+    QStringList mimetypes;
+    mimetypes << "image/svg+xml" << "image/png" << "image/jpeg";
+    package->setMimeTypes("images", mimetypes);
+    package->setMimeTypes("theme", mimetypes);
+
+    package->addDirectoryDefinition("config", "config", i18n("Configuration Definitions"));
+    mimetypes.clear();
+    mimetypes << "text/xml";
+    package->setMimeTypes("config", mimetypes);
+
+    package->addDirectoryDefinition("ui", "ui", i18n("User Interface"));
+
+    package->addDirectoryDefinition("data", "data", i18n("Data Files"));
+
+    package->addDirectoryDefinition("scripts", "code", i18n("Executable Scripts"));
+    mimetypes.clear();
+    mimetypes << "text/plain";
+    package->setMimeTypes("scripts", mimetypes);
+
+    package->addDirectoryDefinition("translations", "locale", i18n("Translations"));
+}

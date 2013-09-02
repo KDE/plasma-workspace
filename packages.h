@@ -19,19 +19,24 @@
 *   Boston, MA 02110-1301, USA.                                               *
 *******************************************************************************/
 
-#ifndef SHELLPACKAGE_H
-#define SHELLPACKAGE_H
+#ifndef SHELLPACKAGES_H
+#define SHELLPACKAGES_H
 
 #include <Plasma/PackageStructure>
 #include <Plasma/Plasma>
 
 
 
-class LookAndFeelPackageStructure : public Plasma::PackageStructure
+class LookAndFeelPackage : public Plasma::PackageStructure
 {
 public:
     void initPackage(Plasma::Package *package);
 };
 
+class QmlWallpaperPackage : public Plasma::PackageStructure
+{
+public:
+    void initPackage(Plasma::Package *package);
+};
 
 #endif // LOOKANDFEELPACKAGE_H

@@ -18,8 +18,9 @@
  */
 
 #include "shellpluginloader.h"
-#include "lookandfeelpackage.h"
+#include "packages.h"
 
+#include <QDebug>
 
 ShellPluginLoader::ShellPluginLoader()
     : Plasma::PluginLoader()
@@ -35,7 +36,10 @@ Plasma::Package ShellPluginLoader::internalLoadPackage(const QString &packageFor
     Q_UNUSED(specialization)
 
     if (packageFormat.endsWith("/LookAndFeel")) {
-        Plasma::PackageStructure *structure = new LookAndFeelPackageStructure();
+        Plasma::PackageStructure *structure = new LookAndFeelPackage();
+        return Plasma::Package(structure);
+    } else if (packageFormat.endsWith("/QmlWallpaper")) {
+        Plasma::PackageStructure *structure = new QmlWallpaperPackage();
         return Plasma::Package(structure);
     } else {
         return Plasma::Package();

@@ -49,7 +49,7 @@ int main(int argc, char** argv)
         QQmlDebuggingEnabler enabler;
     }
 
-    // Plasma::PluginLoader::setPluginLoader(new ShellPluginLoader);
+    Plasma::PluginLoader::setPluginLoader(new ShellPluginLoader);
     // DesktopCorona *corona = new DesktopCorona();
     // corona->loadLayout();
     // if (corona->containments().isEmpty()) {
