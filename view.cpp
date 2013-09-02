@@ -52,6 +52,8 @@ View::View(Plasma::Corona *corona, QWindow *parent)
     setResizeMode(View::SizeRootObjectToView);
     setSource(QUrl::fromLocalFile(m_corona->package().filePath("views", "Desktop.qml")));
 
+    connect(m_corona, &Plasma::Corona::packageChanged,
+            this, &View::coronaPackageChanged);
 }
 
 View::~View()
@@ -186,6 +188,12 @@ void View::showConfigurationInterface(Plasma::Applet *applet)
     m_configView.data()->init();
 
     m_configView.data()->show();
+}
+
+void View::coronaPackageChanged(const Plasma::Package &package)
+{
+    setContainment(0);
+    setSource(QUrl::fromLocalFile(package.filePath("views", "Desktop.qml")));
 }
 
 #include "moc_view.cpp"

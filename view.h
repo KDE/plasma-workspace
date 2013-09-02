@@ -55,6 +55,9 @@ public:
 protected Q_SLOTS:
     void showConfigurationInterface(Plasma::Applet *applet);
 
+private Q_SLOTS:
+    void coronaPackageChanged(const Plasma::Package &package);
+
 Q_SIGNALS:
     void locationChanged(Plasma::Types::Location location);
     void formFactorChanged(Plasma::Types::FormFactor formFactor);
