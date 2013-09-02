@@ -29,6 +29,7 @@
 
 #include <KLocalizedString>
 #include <Plasma/Package>
+#include <Plasma/PluginLoader>
 
 #include "containmentconfigview.h"
 #include "panelview.h"
@@ -95,8 +96,6 @@ ShellCorona::ShellCorona(QObject *parent)
     connect(d->scriptEngine, &WorkspaceScripting::ScriptEngine::print,
             this, &ShellCorona::printScriptMessage);
 
-    checkViews();
-
     //QTimer::singleShot(600, this, SLOT(showWidgetExplorer())); // just for easier debugging
 }
 
@@ -104,14 +103,17 @@ ShellCorona::~ShellCorona()
 {
 }
 
-void ShellCorona::setShell(const QString & shell)
+void ShellCorona::setShell(const QString &shell)
 {
     if (d->shell == shell) return;
 
     unload();
 
-    setPackage(shell);
     d->shell = shell;
+    KConfigGroup config(KSharedConfig::openConfig(), "General");
+    Plasma::Package package = Plasma::PluginLoader::self()->loadPackage("Plasma/Shell");
+    package.setPath(shell);
+    setPackage(package);
 
     load();
 }
@@ -125,6 +127,7 @@ void ShellCorona::load()
 {
     if (d->shell.isEmpty()) return;
 
+    checkViews();
     loadLayout(d->shell);
 
     if (containments().isEmpty()) {
@@ -174,6 +177,7 @@ void ShellCorona::processUpdateScripts()
 
 void ShellCorona::checkScreens(bool signalWhenExists)
 {
+    checkViews();
     // quick sanity check to ensure we have containments for each screen
     int num = numScreens();
     for (int i = 0; i < num; ++i) {
@@ -290,10 +294,14 @@ void ShellCorona::workAreaResized(int screen)
 
 void ShellCorona::checkViews()
 {
+    if (d->shell.isEmpty()) {
+        return;
+    }
     if (d->views.count() == d->desktopWidget->screenCount()) {
         return;
     } else if (d->views.count() < d->desktopWidget->screenCount()) {
         for (int i = d->views.count(); i < d->desktopWidget->screenCount(); ++i) {
+
             View *view = new View(this);
             QSurfaceFormat format;
             view->show();

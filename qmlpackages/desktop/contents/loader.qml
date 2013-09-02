@@ -37,28 +37,5 @@ Item {
         id: keyboards
         query: "IS Keyboard"
     }
-
-    // TODO: This is not needed - just for testing purposes
-    Window {
-        id: desktopDialog
-
-        visible: main.loaded
-
-        width: 500
-        height: 500
-
-        Rectangle {
-            anchors.fill: parent
-            color: "white"
-        }
-
-        Text {
-            anchors.fill: parent
-            font.pointSize: 32
-            text: "Desktop"
-            horizontalAlignment: Text.AlignHCenter
-            verticalAlignment:   Text.AlignVCenter
-        }
-    }
 }
 

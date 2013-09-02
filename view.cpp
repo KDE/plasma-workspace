@@ -38,7 +38,9 @@ View::View(Plasma::Corona *corona, QWindow *parent)
     //Probably is an architectural problem
     QSurfaceFormat format;
     format.setAlphaBufferSize(8);
+
     setFormat(format);
+    setColor(Qt::transparent);
 
     connect(screen(), &QScreen::virtualGeometryChanged,
             this, &View::screenGeometryChanged);
