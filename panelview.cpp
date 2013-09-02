@@ -18,7 +18,6 @@
 
 #include "panelview.h"
 #include "shellcorona.h"
-#include "desktopcorona.h"
 #include "panelshadows_p.h"
 
 #include <QAction>
