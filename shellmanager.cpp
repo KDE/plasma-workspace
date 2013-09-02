@@ -31,7 +31,6 @@
 
 #include <config-prefix.h>
 #include "shellcorona.h"
-#include "shellpluginloader.h"
 
 static const QString s_shellsDir(
         QString(CMAKE_INSTALL_PREFIX) + "/" + DATA_INSTALL_DIR + "/" + "plasma/shells/");
@@ -59,7 +58,6 @@ public:
 ShellManager::ShellManager()
     : d(new Private())
 {
-    ShellPluginLoader::init();
 
     connect(
         &d->shellUpdateDelay, &QTimer::timeout,
