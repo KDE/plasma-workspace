@@ -20,8 +20,8 @@
 #include <qcommandlineparser.h>
 
 #include <klocalizedstring.h>
-#include "desktopcorona.h"
 #include "shellpluginloader.h"
+#include "shellmanager.h"
 
 #include <QtQml/QQmlDebuggingEnabler>
 
@@ -49,14 +49,16 @@ int main(int argc, char** argv)
         QQmlDebuggingEnabler enabler;
     }
 
-    Plasma::PluginLoader::setPluginLoader(new ShellPluginLoader);
-    DesktopCorona *corona = new DesktopCorona();
-    corona->loadLayout();
-    if (corona->containments().isEmpty()) {
-        corona->loadDefaultLayout();
-    }
-    corona->processUpdateScripts();
-    corona->checkScreens();
+    // Plasma::PluginLoader::setPluginLoader(new ShellPluginLoader);
+    // DesktopCorona *corona = new DesktopCorona();
+    // corona->loadLayout();
+    // if (corona->containments().isEmpty()) {
+    //     corona->loadDefaultLayout();
+    // }
+    // corona->processUpdateScripts();
+    // corona->checkScreens();
+
+    ShellManager::instance();
 
     return app.exec();
 }

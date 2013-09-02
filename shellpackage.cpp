@@ -55,10 +55,10 @@ void ShellPackageStructure::initPackage(Plasma::Package *package)
     package->addFileDefinition("containmentconfigurationui", "configuration/ContainmentConfiguration.qml", i18n("QML component for the configuration dialog for containments"));
     package->addFileDefinition("panelconfigurationui", "configuration/PanelConfiguration.qml", i18n("Panel configuration UI"));
 
-    //WIdget explorer
+    //Widget explorer
     package->addFileDefinition("widgetexplorer", "explorer/WidgetExplorer.qml", i18n("Widgets explorer UI"));
-    
-    
+
+
     //package->setRequired("mainscript", true);
 }
 

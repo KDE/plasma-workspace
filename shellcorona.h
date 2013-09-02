@@ -14,57 +14,40 @@
  *
  *   You should have received a copy of the GNU Library General Public
  *   License along with this program; if not, write to the
-class  *   Free Software Foundation, Inc.,
+ *   Free Software Foundation, Inc.,
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#ifndef DESKTOPCORONA_H
-#define DESKTOPCORONA_H
+#ifndef SHELLCORONA_H
+#define SHELLCORONA_H
 
 #include "plasma/corona.h"
-
-#include "configview.h"
-
-class QDesktopWidget;
-class QQuickView;
-class PanelView;
-class View;
-class WidgetExplorerView;
 
 namespace Plasma
 {
     class Applet;
 } // namespace Plasma
 
+class PanelView;
+namespace WorkspaceScripting {
+    class DesktopScriptEngine;
+}
 
-class DesktopCorona : public Plasma::Corona
+class ShellCorona : public Plasma::Corona
 {
     Q_OBJECT
+    Q_PROPERTY(QString shell READ shell WRITE setShell)
 
 public:
-    explicit DesktopCorona(QObject * parent = 0);
-    ~DesktopCorona();
+    explicit ShellCorona(QObject * parent = 0);
+    ~ShellCorona();
 
     /**
      * Where to save global configuration that doesn't have anything to do with the scene (e.g. views)
      */
     KSharedConfig::Ptr applicationConfig();
 
-    /**
-     * Request saving applicationConfig on disk, it's event compressed, not immediate
-     */
-    void requestApplicationConfigSync();
-
-    /**
-     * Loads the default (system wide) layout for this user
-     **/
-    void loadDefaultLayout();
-
-    /**
-     * Execute any update script
-     */
-    void processUpdateScripts();
-
+    WorkspaceScripting::DesktopScriptEngine * scriptEngine() const;
     /**
      * Ensures we have the necessary containments for every screen
      */
@@ -84,6 +67,22 @@ public:
 
     PanelView *panelView(Plasma::Containment *containment) const;
 
+public Q_SLOTS:
+    /**
+     * Request saving applicationConfig on disk, it's event compressed, not immediate
+     */
+    void requestApplicationConfigSync();
+
+    /**
+     * Sets the shell that the corona should display
+     */
+    void setShell(const QString & shell);
+
+    /**
+     * Gets the currently shown shell
+     */
+    QString shell() const;
+
 protected Q_SLOTS:
     void screenCountChanged(int newCount);
     void screenResized(int screen);
@@ -95,23 +94,38 @@ protected Q_SLOTS:
     void printScriptError(const QString &error);
     void printScriptMessage(const QString &message);
 
+    /**
+     * Loads the layout and performs the needed checks
+     */
+    void load();
+
+    /**
+     * Unloads everything
+     */
+    void unload();
+
+    /**
+     * Loads the default (system wide) layout for this user
+     **/
+    void loadDefaultLayout();
+
+    /**
+     * Execute any update script
+     */
+    void processUpdateScripts();
+
+
 private Q_SLOTS:
+    void checkLoadingDesktopsComplete();
     void handleContainmentAdded(Plasma::Containment *c);
     void showWidgetExplorer();
     void syncAppConfig();
-    void checkLoadingDesktopsComplete();
 
 private:
-    QDesktopWidget *m_desktopWidget;
-    QList <View *> m_views;
-    WidgetExplorerView *m_widgetExplorerView;
-    QList<Plasma::Containment *> m_waitingPanels;
-    QSet<Plasma::Containment *> m_loadingDesktops;
-    QHash<Plasma::Containment *, PanelView *> m_panelViews;
-    KConfigGroup m_desktopDefaultsConfig;
-    QTimer *m_appConfigSyncTimer;
+    class Private;
+    const QScopedPointer<Private> d;
 };
 
-#endif
+#endif // SHELLCORONA_H
 
 

@@ -26,7 +26,7 @@
 #include <Plasma/Containment>
 #include <QScreen>
 
-#include "desktopcorona.h"
+#include "shellcorona.h"
 #include "panelview.h"
 #include "scriptengine.h"
 #include "widget.h"
@@ -37,7 +37,7 @@ namespace WorkspaceScripting
 Panel::Panel(Plasma::Containment *containment, QObject *parent)
     : Containment(containment, parent)
 {
-    m_corona = qobject_cast<DesktopCorona *>(containment->corona());
+    m_corona = qobject_cast<ShellCorona *>(containment->corona());
 }
 
 Panel::~Panel()

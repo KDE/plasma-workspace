@@ -27,7 +27,7 @@
 #include "containment.h"
 
 class PanelView;
-class DesktopCorona;
+class ShellCorona;
 
 namespace WorkspaceScripting
 {
@@ -88,7 +88,7 @@ public Q_SLOTS:
 
 private:
     PanelView *panel() const;
-    DesktopCorona *m_corona;
+    ShellCorona *m_corona;
 };
 
 }
