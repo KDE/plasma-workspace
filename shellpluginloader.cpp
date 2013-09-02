@@ -18,7 +18,7 @@
  */
 
 #include "shellpluginloader.h"
-#include "shellpackage.h"
+#include "lookandfeelpackage.h"
 
 
 ShellPluginLoader::ShellPluginLoader()
@@ -34,8 +34,8 @@ Plasma::Package ShellPluginLoader::internalLoadPackage(const QString &packageFor
 {
     Q_UNUSED(specialization)
 
-    if (packageFormat.endsWith("/Shell")) {
-        Plasma::PackageStructure *structure = new ShellPackageStructure();
+    if (packageFormat.endsWith("/LookAndFeel")) {
+        Plasma::PackageStructure *structure = new LookAndFeelPackageStructure();
         return Plasma::Package(structure);
     } else {
         return Plasma::Package();

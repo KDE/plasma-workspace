@@ -70,7 +70,6 @@ add_executable(plasma-shell
     panelshadows.cpp
     panelview.cpp
     shellpluginloader.cpp
-    shellpackage.cpp
     shellmanager.cpp
     lookandfeelpackage.cpp
     view.cpp
