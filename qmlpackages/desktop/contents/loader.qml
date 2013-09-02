@@ -20,15 +20,14 @@
 
 import QtQuick 2
 import org.kde.solid 1.0 as Solid
-import org.kde.plasma.platformcomponents 1.0 as Platform
 import QtQuick.Window 2.0
 
 Item {
     id: main
 
-    property string shell  : "org.kde.blank"
-    property bool willing  : keyboards.count != 1
-    property int  priority : 0
+    property string shell  : "org.kde.desktop"
+    property bool willing  : keyboards.count == 1
+    property int  priority : 1
 
     // This is not needed, but allows the
     // handler to know whether its shell is loaded
@@ -39,14 +38,9 @@ Item {
         query: "IS Keyboard"
     }
 
-    Platform.Application {
-        application: "xterm"
-        running: main.loaded
-    }
-
     // TODO: This is not needed - just for testing purposes
     Window {
-        id: blankDialog
+        id: desktopDialog
 
         visible: main.loaded
 
@@ -61,7 +55,7 @@ Item {
         Text {
             anchors.fill: parent
             font.pointSize: 32
-            text: "Blank"
+            text: "Desktop"
             horizontalAlignment: Text.AlignHCenter
             verticalAlignment:   Text.AlignVCenter
         }
