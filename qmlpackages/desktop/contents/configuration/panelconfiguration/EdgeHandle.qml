@@ -83,12 +83,12 @@ PlasmaComponents.ToolButton {
                     if (panel.location == 3) {
                         return;
                     } else {
-                        newLocation = 3; //FIXME: Plasma::TopEdge;
+                        newLocation = PlasmaCore.Types.TopEdge;
                     }
                 } else if (panel.location == 6) {
                         return;
                 } else {
-                    newLocation = 6; //FIXME: Plasma::RightEdge;
+                    newLocation = PlasmaCore.Types.RightEdge;
                 }
 
             } else {
@@ -96,12 +96,12 @@ PlasmaComponents.ToolButton {
                     if (panel.location == 5) {
                         return;
                     } else {
-                        newLocation = 5; //FIXME: Plasma::LeftEdge;
+                        newLocation = PlasmaCore.Types.LeftEdge;
                     }
                 } else if(panel.location == 4) {
                 return;
                 } else {
-                    newLocation = 4; //FIXME: Plasma::BottomEdge;
+                    newLocation = PlasmaCore.Types.BottomEdge;
                 }
             }
             panel.location = newLocation
