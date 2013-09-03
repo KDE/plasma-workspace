@@ -136,14 +136,12 @@ Plasma::Containment *View::containment() const
     return m_containment.data();
 }
 
-//FIXME: wrong types
-void View::setLocation(int location)
+void View::setLocation(Plasma::Types::Location location)
 {
-    m_containment.data()->setLocation((Plasma::Types::Location)location);
+    m_containment.data()->setLocation(location);
 }
 
-//FIXME: wrong types
-int View::location() const
+Plasma::Types::Location View::location() const
 {
     if (!m_containment) {
         return Plasma::Types::Desktop;

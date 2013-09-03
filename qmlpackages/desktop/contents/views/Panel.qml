@@ -31,6 +31,9 @@ PlasmaCore.FrameSvgItem {
     property Item containment
 
     function adjustBorders() {
+        if (!containment) {
+            return;
+        }
         var borders = PlasmaCore.FrameSvg.AllBorders;
 
         switch (containment.location) {

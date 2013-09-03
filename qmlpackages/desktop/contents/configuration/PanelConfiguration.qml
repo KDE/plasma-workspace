@@ -106,11 +106,11 @@ PlasmaCore.FrameSvgItem {
             }
             duration: 150
         }
+
         NumberAnimation {
             target: configDialog
             properties: (panel.location == 5 || panel.location == 6) ? "x" : "y"
             to: {
-            panel.height
                 switch (panel.location) {
                 //TopEdge
                 case 3:

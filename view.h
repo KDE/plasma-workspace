@@ -30,7 +30,7 @@
 class View : public QQuickView
 {
     Q_OBJECT
-    Q_PROPERTY(int location READ location WRITE setLocation NOTIFY locationChanged)
+    Q_PROPERTY(Plasma::Types::Location location READ location WRITE setLocation NOTIFY locationChanged)
     Q_PROPERTY(QRectF screenGeometry READ screenGeometry NOTIFY screenGeometryChanged)
 
 public:
@@ -44,9 +44,8 @@ public:
     void setContainment(Plasma::Containment *cont);
     Plasma::Containment *containment() const;
 
-    //FIXME: Plasma::Types::Location should be something qml can understand
-    int location() const;
-    void setLocation(int location);
+    Plasma::Types::Location location() const;
+    void setLocation(Plasma::Types::Location location);
 
     Plasma::Types::FormFactor formFactor() const;
 

@@ -36,8 +36,6 @@ namespace Plasma {
     class Containment;
 }
 
-//TODO: this should be a subclass of ConfigView currently in the scriptengine
-//TODO: that class should be moved here
 class PanelConfigView : public ConfigView
 {
     Q_OBJECT

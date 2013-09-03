@@ -107,6 +107,8 @@ PlasmaComponents.ToolButton {
             panel.location = newLocation
             print("New Location: " + newLocation);
         }
-        onReleased: panelResetAnimation.running = true
+        onReleased: {
+            panelResetAnimation.running = true
+        }
     }
 }
