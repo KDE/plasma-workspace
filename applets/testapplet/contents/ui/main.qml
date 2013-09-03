@@ -20,6 +20,7 @@ import QtQuick 2.0
 
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
+import org.kde.plasma.extras 2.0 as PlasmaExtras
 
 Rectangle {
     id: root
@@ -40,38 +41,49 @@ Rectangle {
         }
     }
 
-    Column {
-        id: column
-        anchors.centerIn: parent
-        Text {
-            text: i18n("I'm an applet")
-        }
-        PlasmaComponents.Button {  
-            text: i18n("Background")
-            checked: plasmoid.backgroundHints == 1
-            onClicked: {
-                print("Background hints: " + plasmoid.backgroundHints)
-                if (plasmoid.backgroundHints == 0) {
-                    plasmoid.backgroundHints = 1//TODO: make work "StandardBackground"
-                    root.color = "transparent"
-                } else {
-                    plasmoid.backgroundHints = 0//TODO: make work "NoBackground"
-                    root.color = "darkgreen"
+    PlasmaExtras.ConditionalLoader {
+        anchors.fill: parent
+        when: plasmoid.expanded
+        source: Component {
+            Item {
+                Column {
+                    id: column
+                    anchors.centerIn: parent
+                    Text {
+                        text: i18n("I'm an applet")
+                    }
+                    PlasmaComponents.Button {  
+                        text: i18n("Background")
+                        checked: plasmoid.backgroundHints == 1
+                        onClicked: {
+                            print("Background hints: " + plasmoid.backgroundHints)
+                            if (plasmoid.backgroundHints == 0) {
+                                plasmoid.backgroundHints = 1//TODO: make work "StandardBackground"
+                                root.color = "transparent"
+                            } else {
+                                plasmoid.backgroundHints = 0//TODO: make work "NoBackground"
+                                root.color = "darkgreen"
+                            }
+                        }
+                    }
+                    PlasmaComponents.Button {  
+                        text: i18n("Busy")
+                        checked: plasmoid.busy
+                        onClicked: {
+                            plasmoid.busy = !plasmoid.busy
+                        }
+                    }
+                    TextInput {
+                        width: 100
+                        height: 22
+                        text: plasmoid.configuration.Test
+                        onTextChanged: plasmoid.configuration.Test = text
+                    }
+                    Component.onCompleted: {
+                        print("Conditional component of test applet loaded")
+                    }
                 }
             }
-        }
-        PlasmaComponents.Button {  
-            text: i18n("Busy")
-            checked: plasmoid.busy
-            onClicked: {
-                plasmoid.busy = !plasmoid.busy
-            }
-        }
-        TextInput {
-            width: 100
-            height: 22
-            text: plasmoid.configuration.Test
-            onTextChanged: plasmoid.configuration.Test = text
         }
     }
     Component.onCompleted: {
