@@ -128,7 +128,7 @@ void ShellCorona::load()
     if (d->shell.isEmpty()) return;
 
     checkViews();
-    loadLayout(d->shell);
+    loadLayout("plasma-" + d->shell + "-appletsrc");
 
     if (containments().isEmpty()) {
         loadDefaultLayout();
