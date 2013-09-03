@@ -1,5 +1,5 @@
 [Desktop]
-Containment=org.kde.desktop
+Containment=org.kde.desktopcontainment
 ToolBox=org.kde.desktoptoolbox
 RuntimePlatform=
 
