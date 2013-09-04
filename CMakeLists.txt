@@ -14,12 +14,7 @@ find_path(KDE_MODULES_DIR NAMES KDE4Macros.cmake PATH_SUFFIXES share/cmake/modul
 
 
 add_definitions (${QT_DEFINITIONS} ${KDE4_DEFINITIONS})
-add_definitions(-DHAVE_X11=${X11_FOUND})
-
-if(X11_FOUND)
-    # FIXME: remove when upstream CMakeLists is fixed
-    find_package(XCB REQUIRED)
-endif()
+add_definitions(-DHAVE_X11=${HAVE_X11})
 
 find_package(Qt5Transitional REQUIRED Core)
 find_package(Qt5Qml REQUIRED)
@@ -98,7 +93,7 @@ target_link_libraries(plasma-shell
 )
 
 if(X11_FOUND)
-  target_link_libraries(plasma-shell ${X11_LIBRARIES} ${XCB_XCB_LIBRARIES} )
+  target_link_libraries(plasma-shell ${X11_LIBRARIES} ${XCB_XCB_LIBRARY} )
   target_link_libraries(plasma-shell Qt5::X11Extras)
 endif(X11_FOUND)
 
