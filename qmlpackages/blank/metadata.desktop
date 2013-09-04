@@ -1,8 +1,19 @@
 [Desktop Entry]
 Comment=Blank desktop view furniture
+Comment[nl]=Meubilair voor weergave op blanco bureaublad
+Comment[pt]=Disposição do ambiente de trabalho em branco
+Comment[sv]=Visa tomt skrivbordsmöbler
+Comment[uk]=Компоненти для перегляду порожньої стільниці
+Comment[x-test]=xxBlank desktop view furniturexx
 Encoding=UTF-8
 Keywords=
 Name=Blank Desktop
+Name[cs]=Prázdná pracovní plocha
+Name[nl]=Blanco bureaublad
+Name[pt]=Ambiente de Trabalho em Branco
+Name[sv]=Tomt skrivbord
+Name[uk]=Порожня стільниця
+Name[x-test]=xxBlank Desktopxx
 Type=Service
 
 X-KDE-ServiceTypes=Plasma/Shell
