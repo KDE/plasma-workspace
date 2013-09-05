@@ -2,6 +2,7 @@
 Comment=Blank desktop view furniture
 Comment[nl]=Meubilair voor weergave op blanco bureaublad
 Comment[pt]=Disposição do ambiente de trabalho em branco
+Comment[pt_BR]=Acessório de visualização da área de trabalho vazia
 Comment[sv]=Visa tomt skrivbordsmöbler
 Comment[uk]=Компоненти для перегляду порожньої стільниці
 Comment[x-test]=xxBlank desktop view furniturexx
@@ -11,6 +12,7 @@ Name=Blank Desktop
 Name[cs]=Prázdná pracovní plocha
 Name[nl]=Blanco bureaublad
 Name[pt]=Ambiente de Trabalho em Branco
+Name[pt_BR]=Área de trabalho vazia
 Name[sv]=Tomt skrivbord
 Name[uk]=Порожня стільниця
 Name[x-test]=xxBlank Desktopxx
