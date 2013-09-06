@@ -80,6 +80,37 @@ PlasmaCore.FrameSvgItem {
         onLocationChanged: {
             adjustBorders()
         }
+        onMinimumWidthChanged: {
+            if (containment.formFactor === PlasmaCore.Types.Horizontal) {
+                panel.width = Math.max(panel.width, containment.minimumWidth);
+            }
+        }
+        onMaximumWidthChanged: {
+            if (containment.formFactor === PlasmaCore.Types.Horizontal) {
+                panel.width = Math.min(panel.width, containment.maximumWidth);
+            }
+        }
+        onImplicitWidthChanged: {
+            if (containment.formFactor === PlasmaCore.Types.Horizontal) {
+                panel.width = Math.min(containment.maximumWidth, Math.max(containment.implicitWidth, containment.minimumWidth));
+            }
+        }
+
+        onMinimumHeightChanged: {
+            if (containment.formFactor === PlasmaCore.Types.Vertical) {
+                panel.width = Math.max(panel.width, containment.minimumHeight);
+            }
+        }
+        onMaximumHeightChanged: {
+            if (containment.formFactor === PlasmaCore.Types.Vertical) {
+                panel.width = Math.min(panel.width, containment.maximumHeight);
+            }
+        }
+        onImplicitHeightChanged: {
+            if (containment.formFactor === PlasmaCore.Types.Vertical) {
+                panel.width = Math.min(containment.maximumHeight, Math.max(containment.implicitHeight, containment.minimumHeight));
+            }
+        }
     }
 
     Connections {
