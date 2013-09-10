@@ -32,6 +32,7 @@
 #include <Plasma/PluginLoader>
 
 #include "containmentconfigview.h"
+
 #include "panelview.h"
 #include "view.h"
 #include "scripting/desktopscriptengine.h"
@@ -96,7 +97,6 @@ ShellCorona::ShellCorona(QObject *parent)
     connect(d->scriptEngine, &WorkspaceScripting::ScriptEngine::print,
             this, &ShellCorona::printScriptMessage);
 
-    //QTimer::singleShot(600, this, SLOT(showWidgetExplorer())); // just for easier debugging
 }
 
 ShellCorona::~ShellCorona()
@@ -177,7 +177,9 @@ void ShellCorona::processUpdateScripts()
 
 void ShellCorona::checkScreens(bool signalWhenExists)
 {
+
     checkViews();
+
     // quick sanity check to ensure we have containments for each screen
     int num = numScreens();
     for (int i = 0; i < num; ++i) {
@@ -297,6 +299,7 @@ void ShellCorona::checkViews()
     if (d->shell.isEmpty()) {
         return;
     }
+
     if (d->views.count() == d->desktopWidget->screenCount()) {
         return;
     } else if (d->views.count() < d->desktopWidget->screenCount()) {

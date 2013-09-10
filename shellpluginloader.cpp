@@ -18,7 +18,9 @@
  */
 
 #include "shellpluginloader.h"
+
 #include "packages.h"
+
 
 #include <QDebug>
 
@@ -50,3 +52,4 @@ void ShellPluginLoader::init()
 {
     Plasma::PluginLoader::setPluginLoader(new ShellPluginLoader);
 }
+

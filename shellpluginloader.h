@@ -22,8 +22,7 @@
 
 #include <Plasma/PluginLoader>
 
-
-class ShellPluginLoader: public Plasma::PluginLoader
+class ShellPluginLoader : public Plasma::PluginLoader
 {
 public:
     ShellPluginLoader();
@@ -33,7 +32,6 @@ public:
 
 protected:
     Plasma::Package internalLoadPackage(const QString &packageFormat, const QString &specialization);
-
 };
 
 #endif
