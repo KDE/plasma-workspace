@@ -31,8 +31,6 @@
 #include <Plasma/Package>
 #include <Plasma/PluginLoader>
 
-#include "containmentconfigview.h"
-
 #include "panelview.h"
 #include "view.h"
 #include "scripting/desktopscriptengine.h"

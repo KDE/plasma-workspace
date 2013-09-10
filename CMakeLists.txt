@@ -57,11 +57,13 @@ set(widgetexplorer_SRC
 
 add_executable(plasma-shell
     main.cpp
-    desktopcorona.cpp
     panelview.cpp
-    lookandfeelpackage.cpp
     panelconfigview.cpp
+    panelshadows.cpp
+    packages.cpp
+    shellcorona.cpp
     shellpluginloader.cpp
+    shellmanager.cpp
     ${scripting_SRC}
     ${widgetexplorer_SRC}
 )
