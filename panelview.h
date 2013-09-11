@@ -75,6 +75,12 @@ Q_SIGNALS:
     void minimumLengthChanged();
     void screenChanged(QScreen *screen);
 
+protected Q_SLOTS:
+    /**
+     * It will be called when the configuration is requested
+     */
+    virtual void showConfigurationInterface(Plasma::Applet *applet);
+
 private Q_SLOTS:
     void positionPanel();
     void restore();
@@ -84,7 +90,7 @@ private:
     int m_maxLength;
     int m_minLength;
     Qt::Alignment m_alignment;
-    QPointer<PanelConfigView> m_panelConfigView;
+    QPointer<ConfigView> m_panelConfigView;
     ShellCorona *m_corona;
 };
 

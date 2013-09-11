@@ -379,6 +379,28 @@ void PanelView::restore()
     emit alignmentChanged();
 }
 
+void PanelView::showConfigurationInterface(Plasma::Applet *applet)
+{
+    if (m_panelConfigView) {
+        m_panelConfigView.data()->hide();
+        m_panelConfigView.data()->deleteLater();
+    }
+
+    if (!applet || !applet->containment()) {
+        return;
+    }
+
+    Plasma::Containment *cont = qobject_cast<Plasma::Containment *>(applet);
+
+    if (cont) {
+        m_panelConfigView = new PanelConfigView(cont, this);
+    } else {
+        m_panelConfigView = new ConfigView(applet);
+    }
+    m_panelConfigView.data()->init();
+    m_panelConfigView.data()->show();
+}
+
 void PanelView::resizeEvent(QResizeEvent *ev)
 {
     if (containment()->formFactor() == Plasma::Types::Vertical) {
