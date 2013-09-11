@@ -31,8 +31,7 @@
 #include <Plasma/Package>
 #include <Plasma/PluginLoader>
 
-#include <plasmaquickview.h>
-
+#include "desktopview.h"
 #include "panelview.h"
 #include "scripting/desktopscriptengine.h"
 #include "widgetexplorer/widgetexplorerview.h"
@@ -52,7 +51,7 @@ public:
 
     QString shell;
     QDesktopWidget * desktopWidget;
-    QList <PlasmaQuickView *> views;
+    QList <DesktopView *> views;
     WidgetExplorerView * widgetExplorerView;
     QHash <Plasma::Containment *, PanelView *> panelViews;
     KConfigGroup desktopDefaultsConfig;
@@ -304,7 +303,7 @@ void ShellCorona::checkViews()
     } else if (d->views.count() < d->desktopWidget->screenCount()) {
         for (int i = d->views.count(); i < d->desktopWidget->screenCount(); ++i) {
 
-            PlasmaQuickView *view = new PlasmaQuickView(this);
+            DesktopView *view = new DesktopView(this);
             QSurfaceFormat format;
             view->show();
 
@@ -312,7 +311,7 @@ void ShellCorona::checkViews()
         }
     } else {
         for (int i = d->desktopWidget->screenCount(); i < d->views.count(); ++i) {
-            PlasmaQuickView *view = d->views.last();
+            DesktopView *view = d->views.last();
             view->deleteLater();
             d->views.pop_back();
         }
