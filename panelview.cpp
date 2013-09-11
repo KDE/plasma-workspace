@@ -34,7 +34,7 @@
 #include <Plasma/Package>
 
 PanelView::PanelView(ShellCorona *corona, QWindow *parent)
-    : View(corona, parent),
+    : PlasmaQuickView(corona, parent),
        m_offset(0),
        m_maxLength(0),
        m_minLength(0),
@@ -56,16 +56,16 @@ PanelView::PanelView(ShellCorona *corona, QWindow *parent)
     //Screen management
     connect(screen(), &QScreen::virtualGeometryChanged,
             this, &PanelView::positionPanel);
-    connect(this, &View::locationChanged,
+    connect(this, &PlasmaQuickView::locationChanged,
             this, &PanelView::positionPanel);
-    connect(this, &View::containmentChanged,
+    connect(this, &PlasmaQuickView::containmentChanged,
             this, &PanelView::restore);
 
     if (!m_corona->package().isValid()) {
         qWarning() << "Invalid home screen package";
     }
 
-    setResizeMode(View::SizeRootObjectToView);
+    setResizeMode(PlasmaQuickView::SizeRootObjectToView);
     qmlRegisterType<QScreen>();
     engine()->rootContext()->setContextProperty("panel", this);
     setSource(QUrl::fromLocalFile(m_corona->package().filePath("views", "Panel.qml")));
@@ -401,13 +401,13 @@ void PanelView::resizeEvent(QResizeEvent *ev)
         }
     }
 
-    View::resizeEvent(ev);
+    PlasmaQuickView::resizeEvent(ev);
 }
 
 void PanelView::showEvent(QShowEvent *event)
 {
     PanelShadows::self()->addWindow(this);
-    View::showEvent(event);
+    PlasmaQuickView::showEvent(event);
 }
 
 #include "moc_panelview.cpp"

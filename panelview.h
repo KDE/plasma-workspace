@@ -20,13 +20,13 @@
 #define PANELVIEW_H
 
 
-#include "view.h"
+#include <plasmaquickview.h>
 #include "panelconfigview.h"
 #include <QtCore/qpointer.h>
 
 class ShellCorona;
 
-class PanelView : public View
+class PanelView : public PlasmaQuickView
 {
     Q_OBJECT
     Q_PROPERTY(Qt::Alignment alignment READ alignment WRITE setAlignment NOTIFY alignmentChanged)
