@@ -114,6 +114,7 @@ void ShellCorona::setShell(const QString &shell)
     setPackage(package);
 
     load();
+    //TODO: panel views should be synced here: either creating views for panels without, or deleting views for panels that don't have one anymore
 }
 
 QString ShellCorona::shell() const
