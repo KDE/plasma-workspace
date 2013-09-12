@@ -341,8 +341,6 @@ void PanelView::restore()
         m_offset = qMax(0, m_offset);
     }
 
-    m_maxLength = config().readEntry<int>("maxLength", -1);
-    m_minLength = config().readEntry<int>("minLength", -1);
     m_alignment = (Qt::Alignment)config().readEntry<int>("alignment", Qt::AlignLeft);
 
     setMinimumSize(QSize(-1, -1));
@@ -350,6 +348,9 @@ void PanelView::restore()
     setMaximumSize(screen()->size());
 
     if (containment()->formFactor() == Plasma::Types::Vertical) {
+        m_maxLength = config().readEntry<int>("maxLength", screen()->size().height());
+        m_minLength = config().readEntry<int>("minLength", screen()->size().height());
+   
         const int maxSize = screen()->size().height() - m_offset;
         m_maxLength = qBound<int>(MINSIZE, m_maxLength, maxSize);
         m_minLength = qBound<int>(MINSIZE, m_minLength, maxSize);
@@ -362,11 +363,14 @@ void PanelView::restore()
 
     //Horizontal
     } else {
+        m_maxLength = config().readEntry<int>("maxLength", screen()->size().width());
+        m_minLength = config().readEntry<int>("minLength", screen()->size().width());
+
         const int maxSize = screen()->size().width() - m_offset;
         m_maxLength = qBound<int>(MINSIZE, m_maxLength, maxSize);
         m_minLength = qBound<int>(MINSIZE, m_minLength, maxSize);
 
-        resize(qBound<int>(MINSIZE, config().readEntry<int>("length", screen()->size().height()), maxSize),
+        resize(qBound<int>(MINSIZE, config().readEntry<int>("length", screen()->size().width()), maxSize),
                config().readEntry<int>("thickness", 32));
 
         setMinimumWidth(m_minLength);
