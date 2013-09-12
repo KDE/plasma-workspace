@@ -27,7 +27,7 @@ Item {
     id: main
 
     property string shell  : "org.kde.blank"
-    property bool willing  : keyboards.count != 1
+    property bool willing  : false
     property int  priority : 0
 
     // This is not needed, but allows the

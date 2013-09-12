@@ -26,7 +26,7 @@ Item {
     id: main
 
     property string shell  : "org.kde.desktop"
-    property bool willing  : keyboards.count == 1
+    property bool willing  : true
     property int  priority : 1
 
     // This is not needed, but allows the
