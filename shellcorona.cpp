@@ -364,6 +364,7 @@ void ShellCorona::updateScreenOwner(int wasScreen, int isScreen, Plasma::Contain
     } else {
 
         if (containment->isUiReady()) {
+            d->loadingDesktops.remove(containment);
             checkLoadingDesktopsComplete();
         } else {
             d->loadingDesktops.insert(containment);
@@ -384,6 +385,9 @@ void ShellCorona::handleContainmentAdded(Plasma::Containment* c)
 {
     connect(c, &Plasma::Containment::showAddWidgetsInterface,
             this, &ShellCorona::showWidgetExplorer);
+    connect(c, &QObject::destroyed, [=] (QObject *o) {
+        d->loadingDesktops.remove(static_cast<Plasma::Containment *>(o));
+    });
 }
 
 void ShellCorona::showWidgetExplorer()
