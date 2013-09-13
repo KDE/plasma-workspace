@@ -19,11 +19,12 @@
 #include "desktopview.h"
 #include "shellcorona.h"
 
+#include <Plasma/Package>
 
 DesktopView::DesktopView(ShellCorona *corona, QWindow *parent)
     : PlasmaQuickView(corona, parent)
 {
-    
+    setSource(QUrl::fromLocalFile(corona->package().filePath("views", "Desktop.qml")));
 }
 
 DesktopView::~DesktopView()
