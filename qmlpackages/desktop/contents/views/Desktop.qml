@@ -38,6 +38,8 @@ Rectangle {
     }
 
     Component.onCompleted: {
+        desktop.stayBehind = true;
+        desktop.fillScreen = true;
         print("View QML loaded")
     }
 }

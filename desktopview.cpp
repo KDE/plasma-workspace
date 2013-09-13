@@ -19,11 +19,20 @@
 #include "desktopview.h"
 #include "shellcorona.h"
 
+#include <QQmlEngine>
+#include <QQmlContext>
+#include <QScreen>
+
+#include <KWindowSystem>
+
 #include <Plasma/Package>
 
 DesktopView::DesktopView(ShellCorona *corona, QWindow *parent)
-    : PlasmaQuickView(corona, parent)
+    : PlasmaQuickView(corona, parent),
+      m_stayBehind(false),
+      m_fillScreen(false)
 {
+    engine()->rootContext()->setContextProperty("desktop", this);
     setSource(QUrl::fromLocalFile(corona->package().filePath("views", "Desktop.qml")));
 }
 
@@ -31,6 +40,46 @@ DesktopView::~DesktopView()
 {
     
 }
+
+bool DesktopView::stayBehind() const
+{
+    return m_stayBehind;
+}
+
+void DesktopView::setStayBehind(bool stayBehind)
+{
+    if (stayBehind == m_stayBehind) {
+        return;
+    }
+
+    if (stayBehind) {
+        KWindowSystem::setType(winId(), NET::Desktop);
+    } else {
+        KWindowSystem::setType(winId(), NET::Normal);
+    }
+
+    m_stayBehind = stayBehind;
+    emit stayBehindChanged();
+}
+
+bool DesktopView::fillScreen() const
+{
+    return m_fillScreen;
+}
+
+void DesktopView::setFillScreen(bool fillScreen)
+{
+    if (fillScreen == m_fillScreen) {
+        return;
+    }
+
+    resize(screen()->geometry().width(), screen()->geometry().height());
+    connect(screen(), &QScreen::geometryChanged, [=]{resize(screen()->geometry().width(), screen()->geometry().height());});
+
+    fillScreen = fillScreen;
+    emit fillScreenChanged();
+}
+
 /*
 void DesktopView::showConfigurationInterface(Plasma::Applet *applet)
 {

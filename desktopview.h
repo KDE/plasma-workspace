@@ -29,19 +29,34 @@ class ShellCorona;
 class DesktopView : public PlasmaQuickView
 {
     Q_OBJECT
+    Q_PROPERTY(bool stayBehind READ stayBehind WRITE setStayBehind NOTIFY stayBehindChanged)
+    Q_PROPERTY(bool fillScreen READ fillScreen WRITE setFillScreen NOTIFY fillScreenChanged)
 
 public:
     explicit DesktopView(ShellCorona *corona, QWindow *parent = 0);
     virtual ~DesktopView();
 
+    bool stayBehind() const;
+    void setStayBehind(bool stayBehind);
+
+    bool fillScreen() const;
+    void setFillScreen(bool fillScreen);
+
 protected Q_SLOTS:
     /**
      * It will be called when the configuration is requested
+     * FIXME: this should be moved here
      */
     //virtual void showConfigurationInterface(Plasma::Applet *applet);
 
+Q_SIGNALS:
+    void stayBehindChanged();
+    void fillScreenChanged();
+
 private:
     QPointer<ConfigView> m_configView;
+    bool m_stayBehind : 1;
+    bool m_fillScreen : 1;
 };
 
 #endif // DESKTOVIEW_H
