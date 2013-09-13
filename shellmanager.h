@@ -22,6 +22,8 @@
 
 #include <QObject>
 
+
+
 class ShellManager: public QObject {
     Q_OBJECT
 public:
@@ -29,6 +31,8 @@ public:
     ~ShellManager();
 
     void loadHandlers();
+
+    static bool s_forceWindowed;
 
 protected Q_SLOTS:
     void registerHandler(QObject * handler);

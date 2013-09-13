@@ -24,6 +24,7 @@
 #include "shellmanager.h"
 
 #include <QtQml/QQmlDebuggingEnabler>
+#include <QDebug>
 
 static const char description[] = "Plasma Shell";
 static const char version[] = "2.0";
@@ -38,9 +39,13 @@ int main(int argc, char** argv)
     QCommandLineOption dbg = QCommandLineOption(QStringList() << QStringLiteral("d") << QStringLiteral("qmljsdebugger"),
                                         QStringLiteral("Enable QML Javascript debugger"));
 
+    QCommandLineOption windowed = QCommandLineOption(QStringList() << QStringLiteral("w") << QStringLiteral("windowed"),
+                                        QStringLiteral("force a windowed view for desktop purposes"));
+
     parser.addVersionOption();
     parser.setApplicationDescription(description);
     parser.addOption(dbg);
+    parser.addOption(windowed);
     parser.process(app);
 
     //enable the QML debugger only if --qmljsdebugger (or -d) is passed as a command line arg
@@ -57,6 +62,8 @@ int main(int argc, char** argv)
     // }
     // corona->processUpdateScripts();
     // corona->checkScreens();
+
+    ShellManager::s_forceWindowed = parser.isSet(windowed);
 
     ShellManager::instance();
 

@@ -18,6 +18,7 @@
 
 #include "desktopview.h"
 #include "shellcorona.h"
+#include "shellmanager.h"
 
 #include <QQmlEngine>
 #include <QQmlContext>
@@ -48,7 +49,7 @@ bool DesktopView::stayBehind() const
 
 void DesktopView::setStayBehind(bool stayBehind)
 {
-    if (stayBehind == m_stayBehind) {
+    if (ShellManager::s_forceWindowed || stayBehind == m_stayBehind) {
         return;
     }
 
@@ -69,7 +70,7 @@ bool DesktopView::fillScreen() const
 
 void DesktopView::setFillScreen(bool fillScreen)
 {
-    if (fillScreen == m_fillScreen) {
+    if (ShellManager::s_forceWindowed || fillScreen == m_fillScreen) {
         return;
     }
 
