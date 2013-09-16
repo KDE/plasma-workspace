@@ -27,6 +27,7 @@
 #include <QQmlContext>
 #include <QTimer>
 
+#include <KActionCollection>
 #include <KLocalizedString>
 #include <Plasma/Package>
 #include <Plasma/PluginLoader>
@@ -94,6 +95,16 @@ ShellCorona::ShellCorona(QObject *parent)
             this, &ShellCorona::printScriptError);
     connect(d->scriptEngine, &WorkspaceScripting::ScriptEngine::print,
             this, &ShellCorona::printScriptMessage);
+
+    QAction *dashboardAction = actions()->add<QAction>("show dashboard");
+    QObject::connect(dashboardAction, &QAction::triggered,
+                     this, &ShellCorona::toggleDashboard);
+    dashboardAction->setText(i18n("Show Dashboard"));
+    dashboardAction->setAutoRepeat(true);
+    dashboardAction->setIcon(QIcon::fromTheme("dashboard-show"));
+    dashboardAction->setData(Plasma::Types::ControlAction);
+    dashboardAction->setShortcut(QKeySequence("ctrl+f12"));
+    dashboardAction->setShortcutContext(Qt::ApplicationShortcut);
 
 }
 
@@ -415,6 +426,11 @@ void ShellCorona::syncAppConfig()
 {
     qDebug() << "Syncing plasma-shellrc config";
     applicationConfig()->sync();
+}
+
+void ShellCorona::toggleDashboard()
+{
+    qDebug() << "TODO: Toggling dashboard view";
 }
 
 void ShellCorona::printScriptError(const QString &error)
