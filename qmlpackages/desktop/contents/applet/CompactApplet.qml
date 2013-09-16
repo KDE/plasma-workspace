@@ -42,8 +42,17 @@ Item {
     property Item compactRepresentation
 
     onAppletChanged: {
-        applet.parent = appletParent
-        applet.anchors.fill = applet.parent
+
+        //if the applet size was restored to a stored size, or if is dragged from the desktop, restore popup size
+        if (applet.width > 0) {
+            popupWindow.mainItem.width = applet.width;
+        }
+        if (applet.height > 0) {
+            popupWindow.mainItem.height = applet.height;
+        }
+
+        applet.parent = appletParent;
+        applet.anchors.fill = applet.parent;
     }
     onCompactRepresentationChanged: {
         compactRepresentation.parent = root
@@ -62,8 +71,6 @@ Item {
 
             width: applet && applet.implicitHeight > 0 ? applet.implicitHeight : theme.mSize(theme.defaultFont).width * 35
             height: applet && applet.implicitHeight > 0 ? applet.implicitHeight : theme.mSize(theme.defaultFont).height * 25
-            onWidthChanged: applet.width = width
-            onHeightChanged: applet.height = height
         }
 
         onActiveWindowChanged: {
