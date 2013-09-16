@@ -120,7 +120,7 @@ private Q_SLOTS:
     void handleContainmentAdded(Plasma::Containment *c);
     void showWidgetExplorer();
     void syncAppConfig();
-    void toggleDashboard();
+    void setDashboardShown(bool show);
 
 private:
     class Private;

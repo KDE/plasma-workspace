@@ -42,6 +42,8 @@ public:
     bool fillScreen() const;
     void setFillScreen(bool fillScreen);
 
+    void setDashboardShown(bool shown);
+
 protected Q_SLOTS:
     /**
      * It will be called when the configuration is requested

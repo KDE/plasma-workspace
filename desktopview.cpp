@@ -81,6 +81,33 @@ void DesktopView::setFillScreen(bool fillScreen)
     emit fillScreenChanged();
 }
 
+void DesktopView::setDashboardShown(bool shown)
+{
+    if (shown) {
+        if (m_stayBehind) {
+            KWindowSystem::setType(winId(), NET::Normal);
+        }
+        raise();
+        KWindowSystem::raiseWindow(winId());
+        
+        QObject *wpGraphicObject = containment()->property("wallpaperGraphicsObject").value<QObject *>();
+        if (wpGraphicObject) {
+            wpGraphicObject->setProperty("opacity", 0.3);
+        }
+    } else {
+        if (m_stayBehind) {
+            KWindowSystem::setType(winId(), NET::Desktop);
+        }
+        lower();
+        KWindowSystem::lowerWindow(winId());
+
+        QObject *wpGraphicObject = containment()->property("wallpaperGraphicsObject").value<QObject *>();
+        if (wpGraphicObject) {
+            wpGraphicObject->setProperty("opacity", 1);
+        }
+    }
+}
+
 /*
 void DesktopView::showConfigurationInterface(Plasma::Applet *applet)
 {

@@ -98,9 +98,10 @@ ShellCorona::ShellCorona(QObject *parent)
 
     QAction *dashboardAction = actions()->add<QAction>("show dashboard");
     QObject::connect(dashboardAction, &QAction::triggered,
-                     this, &ShellCorona::toggleDashboard);
+                     this, &ShellCorona::setDashboardShown);
     dashboardAction->setText(i18n("Show Dashboard"));
     dashboardAction->setAutoRepeat(true);
+    dashboardAction->setCheckable(true);
     dashboardAction->setIcon(QIcon::fromTheme("dashboard-show"));
     dashboardAction->setData(Plasma::Types::ControlAction);
     dashboardAction->setShortcut(QKeySequence("ctrl+f12"));
@@ -428,9 +429,18 @@ void ShellCorona::syncAppConfig()
     applicationConfig()->sync();
 }
 
-void ShellCorona::toggleDashboard()
+void ShellCorona::setDashboardShown(bool show)
 {
     qDebug() << "TODO: Toggling dashboard view";
+
+    QAction *dashboardAction = actions()->action("show dashboard");
+
+    if (dashboardAction) {
+        dashboardAction->setText(show ? i18n("Hide Dashboard") : i18n("Show Dashboard"));
+    }
+    foreach (DesktopView *view, d->views) {
+        view->setDashboardShown(show);
+    }
 }
 
 void ShellCorona::printScriptError(const QString &error)
