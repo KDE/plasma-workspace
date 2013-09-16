@@ -47,9 +47,8 @@ public:
 protected Q_SLOTS:
     /**
      * It will be called when the configuration is requested
-     * FIXME: this should be moved here
      */
-    //virtual void showConfigurationInterface(Plasma::Applet *applet);
+    virtual void showConfigurationInterface(Plasma::Applet *applet);
 
 Q_SIGNALS:
     void stayBehindChanged();

@@ -17,6 +17,7 @@
  */
 
 #include "desktopview.h"
+#include "containmentconfigview.h"
 #include "shellcorona.h"
 #include "shellmanager.h"
 
@@ -108,7 +109,7 @@ void DesktopView::setDashboardShown(bool shown)
     }
 }
 
-/*
+
 void DesktopView::showConfigurationInterface(Plasma::Applet *applet)
 {
     if (m_configView) {
@@ -123,13 +124,13 @@ void DesktopView::showConfigurationInterface(Plasma::Applet *applet)
     Plasma::Containment *cont = qobject_cast<Plasma::Containment *>(applet);
 
     if (cont) {
-        m_configView = new PanelConfigView(cont, this);
+        m_configView = new ContainmentConfigView(cont);
     } else {
         m_configView = new ConfigView(applet);
     }
     m_configView.data()->init();
     m_configView.data()->show();
-}*/
+}
 
 
 #include "moc_desktopview.cpp"
