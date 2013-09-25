@@ -2,8 +2,7 @@
 var panel = new Panel
 panel.screen = 0
 panel.location = 'top'
-panel.addWidget("org.kde.testapplet")
-panel.addWidget("org.kde.windowlist")
+panel.addWidget("org.kde.taskmanager")
 
 for (var i = 0; i < screenCount; ++i) {
     var desktop = new Activity
