@@ -77,7 +77,7 @@ target_link_libraries(plasma-shell
  ${Qt5Quick_LIBRARIES}
  ${Qt5Qml_LIBRARIES}
  ${KCore_LIBRARIES}
- ${KDE4_KIO_LIBS}
+ KF5::KIOCore
  ${KWindowSystem_LIBRARIES}
  ${KCoreAddons_LIBRARIES}
  plasma
@@ -85,7 +85,7 @@ target_link_libraries(plasma-shell
  ${Qt5Script_LIBRARIES}
  ${KDE4Support_LIBRARIES}
  ${Solid_LIBRARIES}
- KDeclarative
+ KF5::KDeclarative
  KF5::KI18n
  KF5::XmlGui
 )
