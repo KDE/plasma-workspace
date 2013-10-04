@@ -85,7 +85,7 @@ target_link_libraries(plasma-shell
  ${Qt5Script_LIBRARIES}
  ${KDE4Support_LIBRARIES}
  ${Solid_LIBRARIES}
- kdeclarative
+ KDeclarative
  KF5::KI18n
  KF5::XmlGui
 )
