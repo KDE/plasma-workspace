@@ -79,7 +79,7 @@ target_link_libraries(plasma-shell
  ${KCore_LIBRARIES}
  KF5::KIOCore
  ${KWindowSystem_LIBRARIES}
- ${KCoreAddons_LIBRARIES}
+ KF5::KCoreAddons
  plasma
  PlasmaQuick
  ${Qt5Script_LIBRARIES}
