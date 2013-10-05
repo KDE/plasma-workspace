@@ -29,7 +29,7 @@
 #include <QQmlEngine>
 #include <QQmlComponent>
 
-#include <KLocalizedString>
+#include <klocalizedstring.h>
 
 #include <Plasma/Corona>
 #include <Plasma/ContainmentActions>

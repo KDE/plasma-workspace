@@ -21,8 +21,8 @@
 
 #include "widgetexplorer.h"
 
-#include <KLocalizedString>
-#include <KServiceTypeTrader>
+#include <klocalizedstring.h>
+#include <kservicetypetrader.h>
 
 #include <Plasma/Applet>
 #include <Plasma/Corona>

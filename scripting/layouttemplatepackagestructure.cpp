@@ -19,7 +19,7 @@
 
 #include "layouttemplatepackagestructure.h"
 
-#include <KLocalizedString>
+#include <klocalizedstring.h>
 
 namespace WorkspaceScripting
 {

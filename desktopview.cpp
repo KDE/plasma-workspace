@@ -25,7 +25,7 @@
 #include <QQmlContext>
 #include <QScreen>
 
-#include <KWindowSystem>
+#include <kwindowsystem.h>
 
 #include <Plasma/Package>
 

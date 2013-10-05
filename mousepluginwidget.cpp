@@ -21,8 +21,8 @@
 
 #include <Plasma/Containment>
 
-#include <KAboutData>
-#include <KAboutApplicationDialog>
+#include <kaboutdata.h>
+#include <kaboutapplicationdialog.h>
 #include <KDebug>
 
 #include <QApplication>

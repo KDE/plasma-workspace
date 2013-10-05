@@ -27,8 +27,8 @@
 #include <QQmlContext>
 #include <QTimer>
 
-#include <KActionCollection>
-#include <KLocalizedString>
+#include <kactioncollection.h>
+#include <klocalizedstring.h>
 #include <Plasma/Package>
 #include <Plasma/PluginLoader>
 

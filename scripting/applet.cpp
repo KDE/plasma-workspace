@@ -21,8 +21,8 @@
 
 #include <QAction>
 
-#include <KService>
-#include <KServiceTypeTrader>
+#include <kservice.h>
+#include <kservicetypetrader.h>
 
 #include <Plasma/Applet>
 #include <Plasma/Containment>

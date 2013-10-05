@@ -23,7 +23,7 @@
 #include <QObject>
 #include <QWeakPointer>
 
-#include <KConfigGroup>
+#include <kconfiggroup.h>
 
 
 namespace Plasma

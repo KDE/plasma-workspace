@@ -20,7 +20,7 @@
 #ifndef PLASMA_PLASMAAPPLETITEMMODEL_P_H
 #define PLASMA_PLASMAAPPLETITEMMODEL_P_H
 
-#include <KPluginInfo>
+#include <kplugininfo.h>
 #include <Plasma/Applet>
 #include "kcategorizeditemsviewmodels_p.h"
 

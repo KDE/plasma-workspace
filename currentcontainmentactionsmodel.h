@@ -22,8 +22,8 @@
 
 #include <QStandardItemModel>
 
-#include <KConfig>
-#include <KConfigGroup>
+#include <kconfig.h>
+#include <kconfiggroup.h>
 
 namespace Plasma {
     class Containment;

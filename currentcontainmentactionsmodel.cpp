@@ -26,9 +26,9 @@
 #include <QVBoxLayout>
 #include <QDialogButtonBox>
 
-#include <KAboutData>
-#include <KAboutApplicationDialog>
-#include <KLocalizedString>
+#include <kaboutdata.h>
+#include <kaboutapplicationdialog.h>
+#include <klocalizedstring.h>
 
 #include <Plasma/Corona>
 #include <Plasma/Containment>

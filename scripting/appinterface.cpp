@@ -22,8 +22,7 @@
 #include <QEventLoop>
 #include <QTimer>
 
-#include <KGlobalSettings>
-#include <KComponentData>
+#include <kcomponentdata.h>
 #include <k4aboutdata.h>
 
 #include <solid/device.h>

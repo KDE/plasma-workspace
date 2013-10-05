@@ -22,8 +22,8 @@
 #include <QQmlError>
 #include <QQuickItem>
 
-#include <KLocalizedString>
-#include <KWindowSystem>
+#include <klocalizedstring.h>
+#include <kwindowsystem.h>
 #include <kwindoweffects.h>
 
 #include <Plasma/Containment>

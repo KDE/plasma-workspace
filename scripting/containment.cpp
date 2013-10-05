@@ -22,7 +22,7 @@
 #include <QAction>
 
 #include <klocalizedstring.h>
-#include <KActionCollection>
+#include <kactioncollection.h>
 
 #include <Plasma/Corona>
 #include <Plasma/Containment>

@@ -26,8 +26,8 @@
 #include <QQmlEngine>
 #include <QQmlContext>
 
-#include <KActionCollection>
-#include <KWindowSystem>
+#include <kactioncollection.h>
+#include <kwindowsystem.h>
 #include <kwindoweffects.h>
 
 #include <Plasma/Containment>

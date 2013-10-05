@@ -24,7 +24,7 @@
 #include <QLabel>
 #include <QToolButton>
 
-#include <KConfigGroup>
+#include <kconfiggroup.h>
 
 #include <plasma/containmentactions.h>
 #include "mouseinputbutton.h"

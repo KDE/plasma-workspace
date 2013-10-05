@@ -20,8 +20,9 @@
 
 #include "configgroup.h"
 #include <QtCore/QTimer>
-#include <KConfig>
-#include <KConfigGroup>
+#include <kconfig.h>
+#include <kconfiggroup.h>
+#include <ksharedconfig.h>
 #include <QDebug>
 
 class ConfigGroupPrivate {

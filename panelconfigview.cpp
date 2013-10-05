@@ -27,8 +27,8 @@
 #include <QQmlContext>
 #include <QScreen>
 
-#include <KGlobal>
-#include <KLocalizedString>
+#include <kglobal.h>
+#include <klocalizedstring.h>
 #include <kwindoweffects.h>
 
 #include <Plasma/Containment>

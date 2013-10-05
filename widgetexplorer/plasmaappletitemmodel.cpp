@@ -22,9 +22,9 @@
 #include <QStandardPaths>
 #include <QFileInfo>
 
-#include <KLocalizedString>
-#include <KServiceTypeTrader>
-#include <KSycoca>
+#include <klocalizedstring.h>
+#include <kservicetypetrader.h>
+#include <ksycoca.h>
 
 PlasmaAppletItem::PlasmaAppletItem(PlasmaAppletItemModel *model,
                                    const KPluginInfo& info,

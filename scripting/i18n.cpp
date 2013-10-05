@@ -23,7 +23,7 @@
 #include <QScriptEngine>
 
 #include <QDebug>
-#include <KLocalizedString>
+#include <klocalizedstring.h>
 
 QScriptValue jsi18n(QScriptContext *context, QScriptEngine *engine)
 {
