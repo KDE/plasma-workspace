@@ -396,7 +396,7 @@ QScriptValue ScriptEngine::defaultApplication(QScriptContext *context, QScriptEn
         if (!command.isEmpty()) {
             //if (settings.getSetting(KEMailSettings::ClientTerminal) == "true") {
 	    if (false) {
-                KConfigGroup confGroup(KGlobal::config(), "General");
+                KConfigGroup confGroup(KSharedConfig::openConfig(), "General");
                 const QString preferredTerminal = confGroup.readPathEntry("TerminalApplication", QString::fromLatin1("konsole"));
                 command = preferredTerminal + QString::fromLatin1(" -e ") + command;
             }
@@ -404,7 +404,7 @@ QScriptValue ScriptEngine::defaultApplication(QScriptContext *context, QScriptEn
             return command;
         }
     } else if (application.compare("browser", Qt::CaseInsensitive) == 0) {
-        KConfigGroup config(KGlobal::config(), "General");
+        KConfigGroup config(KSharedConfig::openConfig(), "General");
         QString browserApp = config.readPathEntry("BrowserApplication", QString());
         if (browserApp.isEmpty()) {
             const KService::Ptr htmlApp = KMimeTypeTrader::self()->preferredService(QLatin1String("text/html"));
@@ -417,7 +417,7 @@ QScriptValue ScriptEngine::defaultApplication(QScriptContext *context, QScriptEn
 
         return onlyExec(browserApp);
     } else if (application.compare("terminal", Qt::CaseInsensitive) == 0) {
-        KConfigGroup confGroup(KGlobal::config(), "General");
+        KConfigGroup confGroup(KSharedConfig::openConfig(), "General");
         return onlyExec(confGroup.readPathEntry("TerminalApplication", QString::fromLatin1("konsole")));
     } else if (application.compare("filemanager", Qt::CaseInsensitive) == 0) {
         KService::Ptr service = KMimeTypeTrader::self()->preferredService("inode/directory");
@@ -703,7 +703,7 @@ QStringList ScriptEngine::pendingUpdateScripts(Plasma::Corona *corona)
         return scriptPaths;
     }
 
-    KConfigGroup cg(KGlobal::config(), "Updates");
+    KConfigGroup cg(KSharedConfig::openConfig(), "Updates");
     QStringList performed = cg.readEntry("performed", QStringList());
     const QString localXdgDir = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation);
 
@@ -722,7 +722,7 @@ QStringList ScriptEngine::pendingUpdateScripts(Plasma::Corona *corona)
     }
 
     cg.writeEntry("performed", performed);
-    KGlobal::config()->sync();
+    KSharedConfig::openConfig()->sync();
     return scriptPaths;
 }
 

@@ -34,6 +34,7 @@
 #include <Plasma/Corona>
 #include <Plasma/ContainmentActions>
 #include <Plasma/PluginLoader>
+#include <qstandardpaths.h>
 
 //////////////////////////////ContainmentConfigView
 ContainmentConfigView::ContainmentConfigView(Plasma::Containment *cont, QWindow *parent)

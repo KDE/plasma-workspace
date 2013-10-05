@@ -29,6 +29,7 @@
 #include <Plasma/Containment>
 #include <Plasma/Package>
 #include <Plasma/PackageStructure>
+#include <qstandardpaths.h>
 
 #include "kcategorizeditemsviewmodels_p.h"
 #include "plasmaappletitemmodel_p.h"
@@ -587,7 +588,7 @@ void WidgetExplorer::uninstall(const QString &pluginName)
     Plasma::PackageStructure installer;
     qWarning() << "FIXME: uninstall needs reimplementation";
     //installer.uninstallPackage(pluginName,
-    //                           KStandardDirs::locateLocal("data", "plasma/plasmoids/"));
+    //                           QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QLatin1Char('/') + "plasma/plasmoids/");
 
     //FIXME: moreefficient way rather a linear scan?
     for (int i = 0; i < d->itemModel.rowCount(); ++i) {
