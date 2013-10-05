@@ -22,19 +22,19 @@
 #include <QApplication>
 #include <QDesktopWidget>
 #include <QDir>
+#include <QDirIterator>
 #include <QFile>
 #include <QFileInfo>
 #include <QScriptValueIterator>
 #include <QStandardPaths>
 
 #include <QDebug>
-#include <KGlobal>
-#include <KLocalizedString>
-#include <KMimeTypeTrader>
-#include <KServiceTypeTrader>
-#include <KShell>
-#include <KStandardDirs>
-#include <KComponentData>
+#include <kglobal.h>
+#include <klocalizedstring.h>
+#include <kmimetypetrader.h>
+#include <kservicetypetrader.h>
+#include <kshell.h>
+#include <kcomponentdata.h>
 
 // KIO
 //#include <kemailsettings.h> // no camelcase include
@@ -513,25 +513,29 @@ QScriptValue ScriptEngine::userDataPath(QScriptContext *context, QScriptEngine *
         return QDir::homePath();
     }
 
-    if (context->argumentCount() > 1) {
-        const QString filename = context->argument(1).toString();
-        return KStandardDirs::locateLocal(type.toLatin1(), filename);
-    }
-
-    QStringList locations;
+    QStandardPaths::StandardLocation location = QStandardPaths::GenericDataLocation;
     if (type.compare("desktop", Qt::CaseInsensitive) == 0) {
-        locations = QStandardPaths::standardLocations(QStandardPaths::DesktopLocation);
+        location = QStandardPaths::DesktopLocation;
     } else if (type.compare("documents", Qt::CaseInsensitive) == 0) {
-        locations = QStandardPaths::standardLocations(QStandardPaths::DocumentsLocation);
+        location = QStandardPaths::DocumentsLocation;
     } else if (type.compare("music", Qt::CaseInsensitive) == 0) {
-        locations = QStandardPaths::standardLocations(QStandardPaths::MusicLocation);
+        location = QStandardPaths::MusicLocation;
     } else if (type.compare("video", Qt::CaseInsensitive) == 0) {
-        locations = QStandardPaths::standardLocations(QStandardPaths::MoviesLocation);
+        location = QStandardPaths::MoviesLocation;
     } else if (type.compare("downloads", Qt::CaseInsensitive) == 0) {
-        locations = QStandardPaths::standardLocations(QStandardPaths::DownloadLocation);
+        location = QStandardPaths::DownloadLocation;
     } else if (type.compare("pictures", Qt::CaseInsensitive) == 0) {
-        locations = QStandardPaths::standardLocations(QStandardPaths::PicturesLocation);
+        location = QStandardPaths::PicturesLocation;
+    } else if (type.compare("config", Qt::CaseInsensitive) == 0) {
+        location = QStandardPaths::ConfigLocation;
     }
+    if (context->argumentCount() > 1) {
+        QString loc = QStandardPaths::writableLocation(location);
+        loc.append(QDir::separator());
+        loc.append(context->argument(1).toString());
+        return loc;
+    }
+    const QStringList &locations = QStandardPaths::standardLocations(location);
     return locations.count() ? locations.first() : QString();
 }
 
@@ -683,7 +687,15 @@ void ScriptEngine::exception(const QScriptValue &value)
 QStringList ScriptEngine::pendingUpdateScripts(Plasma::Corona *corona)
 {
     const QString appName = corona->package().metadata().pluginName();
-    QStringList scripts = KGlobal::dirs()->findAllResources("data", appName + "/updates/*.js");
+    QStringList scripts;
+
+    const QStringList dirs = QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, appName + QStringLiteral("/kpartplugins"), QStandardPaths::LocateDirectory);
+    Q_FOREACH(const QString& dir, dirs) {
+        QDirIterator it(dir, QStringList() << QStringLiteral("*.js"));
+        while (it.hasNext()) {
+            scripts.append(it.next());
+        }
+    }
     QStringList scriptPaths;
 
     if (scripts.isEmpty()) {
