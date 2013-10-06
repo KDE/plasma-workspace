@@ -31,8 +31,8 @@
 WidgetExplorerView::WidgetExplorerView(const QString &qmlPath, QWindow *parent)
     : QQuickView(parent),
        m_containment(0),
-       m_qmlPath(qmlPath),
-       m_widgetExplorer(0)
+       m_widgetExplorer(0),
+       m_qmlPath(qmlPath)
 {
     QSurfaceFormat format;
     format.setAlphaBufferSize(8);
