@@ -43,6 +43,7 @@ PanelView::PanelView(ShellCorona *corona, QWindow *parent)
        m_minLength(0),
        m_alignment(Qt::AlignLeft),
        m_corona(corona),
+       m_visibilityMode(NormalPanel),
        m_strutsTimer(new QTimer(this))
 {
     QSurfaceFormat format;
@@ -257,6 +258,36 @@ void PanelView::setMinimumLength(int length)
     m_corona->requestApplicationConfigSync();
 }
 
+void PanelView::setVisibilityMode(PanelView::VisibilityMode mode)
+{
+    m_visibilityMode = mode;
+
+    if (mode == LetWindowsCover) {
+        KWindowSystem::setState(winId(), NET::KeepBelow);
+    } else {
+        KWindowSystem::clearState(winId(), NET::KeepBelow);
+    }
+    //life is vastly simpler if we ensure we're visible now
+    show();
+
+    disconnect(containment(), SIGNAL(activate()), this, SLOT(unhide()));
+    if (!(mode == NormalPanel && mode == WindowsGoBelow)) {
+        connect(containment(), SIGNAL(activate()), this, SLOT(unhide()));
+    }
+
+    config().writeEntry("panelVisibility", (int)mode);
+
+
+    updateStruts();
+
+    KWindowSystem::setOnAllDesktops(winId(), true);
+}
+
+PanelView::VisibilityMode PanelView::visibilityMode() const
+{
+    return m_visibilityMode;
+}
+
 void PanelView::positionPanel()
 {
     if (!containment()) {
@@ -461,8 +492,7 @@ void PanelView::updateStruts()
 
     NETExtendedStrut strut;
 
-    //TODO: visibility modes
-    if (true/*m_visibilityMode == NormalPanel*/) {
+    if (m_visibilityMode == NormalPanel) {
         const QRect thisScreen = corona()->screenGeometry(containment()->screen());
         const QRect wholeScreen = screen()->availableVirtualGeometry();
 

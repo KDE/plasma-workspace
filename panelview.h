@@ -36,8 +36,18 @@ class PanelView : public PlasmaQuickView
     Q_PROPERTY(int maximumLength READ maximumLength WRITE setMaximumLength NOTIFY maximumLengthChanged)
     Q_PROPERTY(int minimumLength READ minimumLength WRITE setMinimumLength NOTIFY minimumLengthChanged)
     Q_PROPERTY(QScreen *screen READ screen NOTIFY screenChanged)
+    Q_PROPERTY(VisibilityMode visibilityMode READ visibilityMode WRITE setVisibilityMode)
 
 public:
+
+    enum VisibilityMode {
+        NormalPanel = 0,
+        AutoHide,
+        LetWindowsCover,
+        WindowsGoBelow
+    };
+    Q_ENUMS(VisibilityMode)
+
     explicit PanelView(ShellCorona *corona, QWindow *parent = 0);
     virtual ~PanelView();
 
@@ -60,6 +70,9 @@ public:
 
     int minimumLength() const;
     void setMinimumLength(int length);
+
+    VisibilityMode visibilityMode() const;
+    void setVisibilityMode(PanelView::VisibilityMode mode);
 
 protected:
     void resizeEvent(QResizeEvent *ev);
@@ -94,6 +107,7 @@ private:
     QPointer<ConfigView> m_panelConfigView;
     ShellCorona *m_corona;
     QTimer *m_strutsTimer;
+    VisibilityMode m_visibilityMode;
 
     static const int STRUTSTIMERDELAY = 200;
 };
