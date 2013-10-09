@@ -21,10 +21,13 @@
 #include "panelshadows_p.h"
 
 #include <QAction>
+#include <QApplication>
 #include <QDebug>
+#include <QDesktopWidget>
 #include <QScreen>
 #include <QQmlEngine>
 #include <QQmlContext>
+#include <QTimer>
 
 #include <kactioncollection.h>
 #include <kwindowsystem.h>
@@ -39,7 +42,8 @@ PanelView::PanelView(ShellCorona *corona, QWindow *parent)
        m_maxLength(0),
        m_minLength(0),
        m_alignment(Qt::AlignLeft),
-       m_corona(corona)
+       m_corona(corona),
+       m_strutsTimer(new QTimer(this))
 {
     QSurfaceFormat format;
     format.setAlphaBufferSize(8);
@@ -64,6 +68,12 @@ PanelView::PanelView(ShellCorona *corona, QWindow *parent)
     if (!m_corona->package().isValid()) {
         qWarning() << "Invalid home screen package";
     }
+
+    m_strutsTimer->setSingleShot(true);
+    connect(m_strutsTimer, &QTimer::timeout,
+            this, &PanelView::updateStruts);
+    connect(QApplication::desktop(), &QDesktopWidget::screenCountChanged,
+            this, &PanelView::updateStruts);
 
     setResizeMode(PlasmaQuickView::SizeRootObjectToView);
     qmlRegisterType<QScreen>();
@@ -142,6 +152,7 @@ void PanelView::setOffset(int offset)
     positionPanel();
     emit offsetChanged();
     m_corona->requestApplicationConfigSync();
+    m_strutsTimer->start(STRUTSTIMERDELAY);
 }
 
 int PanelView::thickness() const
@@ -163,6 +174,7 @@ void PanelView::setThickness(int value)
     config().writeEntry("thickness", value);
     emit thicknessChanged();
     m_corona->requestApplicationConfigSync();
+    m_strutsTimer->start(STRUTSTIMERDELAY);
 }
 
 int PanelView::length() const
@@ -188,6 +200,7 @@ void PanelView::setLength(int value)
     config().writeEntry("length", value);
     emit lengthChanged();
     m_corona->requestApplicationConfigSync();
+    m_strutsTimer->start(STRUTSTIMERDELAY);
 }
 
 int PanelView::maximumLength() const
@@ -319,6 +332,9 @@ void PanelView::positionPanel()
             setPosition(s->virtualGeometry().bottomLeft() - QPoint(0, height()) + QPoint(m_offset, 0));
         }
     }
+    m_strutsTimer->stop();
+    m_strutsTimer->start(STRUTSTIMERDELAY);
+
     if (thickness() != oldThickness) {
         emit thicknessChanged();
     }
@@ -434,6 +450,117 @@ void PanelView::showEvent(QShowEvent *event)
 {
     PanelShadows::self()->addWindow(this);
     PlasmaQuickView::showEvent(event);
+    KWindowSystem::setOnAllDesktops(winId(), true);
+}
+
+void PanelView::updateStruts()
+{
+    if (!containment() || !screen()) {
+        return;
+    }
+
+    NETExtendedStrut strut;
+
+    //TODO: visibility modes
+    if (true/*m_visibilityMode == NormalPanel*/) {
+        const QRect thisScreen = corona()->screenGeometry(containment()->screen());
+        const QRect wholeScreen = screen()->availableVirtualGeometry();
+
+        //Extended struts against a screen edge near to another screen are really harmful, so windows maximized under the panel is a lesser pain
+        //TODO: force "windows can cover" in those cases?
+        const int numScreens = corona()->numScreens();
+        for (int i = 0; i < numScreens; ++i) {
+            if (i == containment()->screen()) {
+                continue;
+            }
+
+            const QRect otherScreen = corona()->screenGeometry(i);
+
+            switch (location())
+            {
+                case Plasma::Types::TopEdge:
+                if (otherScreen.bottom() <= thisScreen.top()) {
+                    KWindowSystem::setExtendedStrut(winId(), 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+                    return;
+                }
+                break;
+            case Plasma::Types::BottomEdge:
+                if (otherScreen.top() >= thisScreen.bottom()) {
+                    KWindowSystem::setExtendedStrut(winId(), 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+                    return;
+                }
+                break;
+            case Plasma::Types::RightEdge:
+                if (otherScreen.left() >= thisScreen.right()) {
+                    KWindowSystem::setExtendedStrut(winId(), 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+                    return;
+                }
+                break;
+            case Plasma::Types::LeftEdge:
+                if (otherScreen.right() <= thisScreen.left()) {
+                    KWindowSystem::setExtendedStrut(winId(), 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+                    return;
+                }
+                break;
+            default:
+                return;
+            }
+        }
+        // extended struts are to the combined screen geoms, not the single screen
+        int leftOffset = wholeScreen.x() - thisScreen.x();
+        int rightOffset = wholeScreen.right() - thisScreen.right();
+        int bottomOffset = wholeScreen.bottom() - thisScreen.bottom();
+        int topOffset = wholeScreen.top() - thisScreen.top();
+        qDebug() << "screen l/r/b/t offsets are:" << leftOffset << rightOffset << bottomOffset << topOffset << location();
+
+        switch (location())
+        {
+            case Plasma::Types::TopEdge:
+                strut.top_width = height() + topOffset;
+                strut.top_start = x();
+                strut.top_end = x() + width() - 1;
+                break;
+
+            case Plasma::Types::BottomEdge:
+                strut.bottom_width = height() + bottomOffset;
+                strut.bottom_start = x();
+                strut.bottom_end = x() + width() - 1;
+                //qDebug() << "setting bottom edge to" << strut.bottom_width
+                //         << strut.bottom_start << strut.bottom_end;
+                break;
+
+            case Plasma::Types::RightEdge:
+                strut.right_width = width() + rightOffset;
+                strut.right_start = y();
+                strut.right_end = y() + height() - 1;
+                break;
+
+            case Plasma::Types::LeftEdge:
+                strut.left_width = width() + leftOffset;
+                strut.left_start = y();
+                strut.left_end = y() + height() - 1;
+                break;
+
+            default:
+                //qDebug() << "where are we?";
+            break;
+        }
+    }
+
+    KWindowSystem::setExtendedStrut(winId(), strut.left_width,
+                                             strut.left_start,
+                                             strut.left_end,
+                                             strut.right_width,
+                                             strut.right_start,
+                                             strut.right_end,
+                                             strut.top_width,
+                                             strut.top_start,
+                                             strut.top_end,
+                                             strut.bottom_width,
+                                             strut.bottom_start,
+                                             strut.bottom_end);
+
+    //recreateUnhideTrigger();
 }
 
 #include "moc_panelview.cpp"

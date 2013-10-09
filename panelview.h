@@ -80,6 +80,7 @@ protected Q_SLOTS:
      * It will be called when the configuration is requested
      */
     virtual void showConfigurationInterface(Plasma::Applet *applet);
+    void updateStruts();
 
 private Q_SLOTS:
     void positionPanel();
@@ -92,6 +93,9 @@ private:
     Qt::Alignment m_alignment;
     QPointer<ConfigView> m_panelConfigView;
     ShellCorona *m_corona;
+    QTimer *m_strutsTimer;
+
+    static const int STRUTSTIMERDELAY = 200;
 };
 
 #endif // PANELVIEW_H
