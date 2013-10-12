@@ -12,6 +12,8 @@ set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${ECM_MODULE_PATH})
 
 find_path(KDE_MODULES_DIR NAMES KDE4Macros.cmake PATH_SUFFIXES share/cmake/modules)
 
+
+add_definitions (${QT_DEFINITIONS} ${KDE4_DEFINITIONS})
 add_definitions(-DHAVE_X11=${HAVE_X11})
 
 find_package(Qt5Transitional REQUIRED Core)
@@ -20,6 +22,17 @@ find_package(Qt5Quick REQUIRED)
 find_package(Qt5Script REQUIRED)
 find_package(KCoreAddons REQUIRED)
 find_package(Solid REQUIRED)
+
+# The Qt5Widgets_INCLUDES also includes the include directories for
+# dependencies QtCore and QtGui
+include_directories(${Qt5Widgets_DEFINITIONS} ${Qt5Quick_DEFINITIONS} ${QT_INCLUDES} ${KDE4_INCLUDES})
+
+# We need add -DQT_WIDGETS_LIB when using QtWidgets in Qt 5.
+add_definitions(${Qt5Widgets_DEFINITIONS} ${Qt5Quick_DEFINITIONS} ${Qt5Qml_DEFINITIONS})
+
+# Executables fail to build with Qt 5 in the default configuration
+# without -fPIE. We add that here.
+set(CMAKE_CXX_FLAGS "${Qt5Widgets_EXECUTABLE_COMPILE_FLAGS}")
 
 set(scripting_SRC
     scripting/appinterface.cpp
@@ -76,7 +89,6 @@ target_link_libraries(plasma-shell
  KF5::KI18n
  KF5::XmlGui
 )
-target_include_directories(plasma-shell PRIVATE "${CMAKE_BINARY_DIR}")
 
 if(X11_FOUND)
   target_link_libraries(plasma-shell ${X11_LIBRARIES} ${XCB_XCB_LIBRARY} )
