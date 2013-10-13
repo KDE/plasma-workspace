@@ -78,7 +78,7 @@ void DesktopView::setFillScreen(bool fillScreen)
     resize(screen()->geometry().width(), screen()->geometry().height());
     connect(screen(), &QScreen::geometryChanged, [=]{resize(screen()->geometry().width(), screen()->geometry().height());});
 
-    fillScreen = fillScreen;
+    m_fillScreen = fillScreen;
     emit fillScreenChanged();
 }
 
