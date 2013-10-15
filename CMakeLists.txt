@@ -67,7 +67,7 @@ target_link_libraries(plasma-shell
  KF5::KIOCore
  ${KWindowSystem_LIBRARIES}
  KF5::KCoreAddons
- plasma
+ Plasma
  PlasmaQuick
  ${Qt5Script_LIBRARIES}
  ${KDE4Support_LIBRARIES}
