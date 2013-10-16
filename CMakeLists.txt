@@ -43,10 +43,12 @@ set(widgetexplorer_SRC
 )
 
 add_executable(plasma-shell
+    activity.cpp
     main.cpp
     containmentconfigview.cpp
     currentcontainmentactionsmodel.cpp
     desktopview.cpp
+    kidenticongenerator.cpp
     panelview.cpp
     panelconfigview.cpp
     panelshadows.cpp
@@ -75,6 +77,8 @@ target_link_libraries(plasma-shell
  KF5::KDeclarative
  KF5::KI18n
  KF5::XmlGui
+ KF5::KIconThemes
+ /opt/kde5/lib64/libkactivities.so
 )
 target_include_directories(plasma-shell PRIVATE "${CMAKE_BINARY_DIR}")
 
