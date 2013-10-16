@@ -686,6 +686,11 @@ void ScriptEngine::exception(const QScriptValue &value)
 
 QStringList ScriptEngine::pendingUpdateScripts(Plasma::Corona *corona)
 {
+    if (!corona->package().metadata().isValid()) {
+        qWarning() << "Warning: corona package invalid";
+        return QStringList();
+    }
+
     const QString appName = corona->package().metadata().pluginName();
     QStringList scripts;
 
