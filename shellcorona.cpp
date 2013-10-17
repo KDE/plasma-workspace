@@ -31,7 +31,9 @@
 #include <klocalizedstring.h>
 #include <Plasma/Package>
 #include <Plasma/PluginLoader>
+#include <kactivities/controller.h>
 
+#include "activity.h"
 #include "desktopview.h"
 #include "panelview.h"
 #include "scripting/desktopscriptengine.h"
@@ -40,9 +42,11 @@
 
 class ShellCorona::Private {
 public:
-    Private()
-        : desktopWidget(QApplication::desktop()),
-          widgetExplorerView(nullptr)
+    Private(ShellCorona *corona)
+        : q(corona),
+          desktopWidget(QApplication::desktop()),
+          widgetExplorerView(nullptr),
+          activityController(new KActivities::Controller(q))
     {
         appConfigSyncTimer.setSingleShot(true);
         // constant controlling how long between requesting a configuration sync
@@ -50,15 +54,18 @@ public:
         appConfigSyncTimer.setInterval(10000);
     }
 
+    ShellCorona *q;
     QString shell;
     QDesktopWidget * desktopWidget;
     QList <DesktopView *> views;
     WidgetExplorerView * widgetExplorerView;
+    KActivities::Controller *activityController;
     QHash <Plasma::Containment *, PanelView *> panelViews;
     KConfigGroup desktopDefaultsConfig;
     WorkspaceScripting::DesktopScriptEngine * scriptEngine;
     QList<Plasma::Containment *> waitingPanels;
     QSet<Plasma::Containment *> loadingDesktops;
+    QHash<QString, Activity*> activities;
 
     QTimer appConfigSyncTimer;
 };
@@ -70,7 +77,8 @@ WorkspaceScripting::DesktopScriptEngine * ShellCorona::scriptEngine() const
 
 
 ShellCorona::ShellCorona(QObject *parent)
-    : Plasma::Corona(parent), d(new Private())
+    : Plasma::Corona(parent),
+      d(new Private(this))
 {
     d->desktopDefaultsConfig = KConfigGroup(KSharedConfig::openConfig(package().filePath("defaults")), "Desktop");
 
@@ -107,6 +115,15 @@ ShellCorona::ShellCorona(QObject *parent)
     dashboardAction->setShortcut(QKeySequence("ctrl+f12"));
     dashboardAction->setShortcutContext(Qt::ApplicationShortcut);
 
+    //Activity stuff
+
+
+    connect(this, SIGNAL(immutabilityChanged(Plasma::ImmutabilityType)),
+            this, SLOT(updateImmutability(Plasma::ImmutabilityType)));
+
+    connect(d->activityController, SIGNAL(currentActivityChanged(QString)), this, SLOT(currentActivityChanged(QString)));
+    connect(d->activityController, SIGNAL(activityAdded(QString)), this, SLOT(activityAdded(QString)));
+    connect(d->activityController, SIGNAL(activityRemoved(QString)), this, SLOT(activityRemoved(QString)));
 }
 
 ShellCorona::~ShellCorona()
@@ -146,6 +163,7 @@ void ShellCorona::load()
     }
 
     processUpdateScripts();
+    checkActivities();
     checkScreens();
 }
 
@@ -186,6 +204,20 @@ void ShellCorona::processUpdateScripts()
     }
 }
 
+Activity* ShellCorona::activity(const QString &id)
+{
+    if (!d->activities.contains(id)) {
+        //the add signal comes late sometimes
+        activityAdded(id);
+    }
+    return d->activities.value(id);
+}
+
+KActivities::Controller *ShellCorona::activityController()
+{
+    return d->activityController;
+}
+
 void ShellCorona::checkScreens(bool signalWhenExists)
 {
 
@@ -213,9 +245,9 @@ void ShellCorona::checkScreen(int screen, bool signalWhenExists)
     //buggy (sometimes the containment thinks it's already on the screen, so no view is created)
 
     //TODO: restore activities
-    //Activity *currentActivity = activity(d->activityController->currentActivity());
+    Activity *currentActivity = activity(d->activityController->currentActivity());
     //ensure the desktop(s) have a containment and view
-    checkDesktop(/*currentActivity,*/ signalWhenExists, screen);
+    checkDesktop(currentActivity, signalWhenExists, screen);
 
 
     //ensure the panels get views too
@@ -234,9 +266,9 @@ void ShellCorona::checkScreen(int screen, bool signalWhenExists)
     }
 }
 
-void ShellCorona::checkDesktop(/*Activity *activity,*/ bool signalWhenExists, int screen)
+void ShellCorona::checkDesktop(Activity *activity, bool signalWhenExists, int screen)
 {
-    Plasma::Containment *c = /*activity->*/containmentForScreen(screen);
+    Plasma::Containment *c = activity->containmentForScreen(screen);
 
     //TODO: remove following when activities are restored
     if (!c) {
@@ -441,6 +473,131 @@ void ShellCorona::setDashboardShown(bool show)
     foreach (DesktopView *view, d->views) {
         view->setDashboardShown(show);
     }
+}
+
+void ShellCorona::checkActivities()
+{
+    qDebug() << "containments to start with" << containments().count();
+
+    KActivities::Consumer::ServiceStatus status = d->activityController->serviceStatus();
+    //qDebug() << "$%$%$#%$%$%Status:" << status;
+    if (status == KActivities::Consumer::NotRunning) {
+        //panic and give up - better than causing a mess
+        qDebug() << "No ActivityManager? Help, I've fallen and I can't get up!";
+        return;
+    }
+
+    QStringList existingActivities = d->activityController->listActivities();
+    foreach (const QString &id, existingActivities) {
+        activityAdded(id);
+    }
+
+    QStringList newActivities;
+    QString newCurrentActivity;
+    //migration checks:
+    //-containments with an invalid id are deleted.
+    //-containments that claim they were on a screen are kept together, and are preferred if we
+    //need to initialize the current activity.
+    //-containments that don't know where they were or who they were with just get made into their
+    //own activity.
+    foreach (Plasma::Containment *cont, containments()) {
+        if ((cont->containmentType() == Plasma::Types::DesktopContainment ||
+             cont->containmentType() == Plasma::Types::CustomContainment)) {
+            const QString oldId = cont->activity();
+            if (!oldId.isEmpty()) {
+                if (existingActivities.contains(oldId)) {
+                    continue; //it's already claimed
+                }
+                qDebug() << "invalid id" << oldId;
+                //byebye
+                cont->destroy();
+                continue;
+            }
+
+            if (cont->screen() > -1 && !newCurrentActivity.isEmpty()) {
+                //it belongs on the new current activity
+                cont->setActivity(newCurrentActivity);
+                continue;
+            }
+
+            /*//discourage blank names
+            if (context->currentActivity().isEmpty()) {
+                context->setCurrentActivity(i18nc("Default name for a new activity", "New Activity"));
+            }*/
+
+            //create a new activity for the containment
+            const QString id = d->activityController->addActivity(cont->activity());
+            cont->setActivity(id);
+            newActivities << id;
+            if (cont->screen() > -1) {
+                newCurrentActivity = id;
+            }
+            qDebug() << "migrated" << cont->id() << cont->activity();
+        }
+    }
+
+    qDebug() << "migrated?" << !newActivities.isEmpty() << containments().count();
+    if (!newActivities.isEmpty()) {
+        requestConfigSync();
+    }
+
+    //init the newbies
+    foreach (const QString &id, newActivities) {
+        activityAdded(id);
+    }
+
+    //ensure the current activity is initialized
+    if (d->activityController->currentActivity().isEmpty()) {
+        qDebug() << "guessing at current activity";
+        if (existingActivities.isEmpty()) {
+            if (newCurrentActivity.isEmpty()) {
+                if (newActivities.isEmpty()) {
+                    qDebug() << "no activities!?! Bad activitymanager, no cookie!";
+                    QString id = d->activityController->addActivity(i18nc("Default name for a new activity", "New Activity"));
+                    activityAdded(id);
+                    d->activityController->setCurrentActivity(id);
+                    qDebug() << "created emergency activity" << id;
+                } else {
+                    d->activityController->setCurrentActivity(newActivities.first());
+                }
+            } else {
+                d->activityController->setCurrentActivity(newCurrentActivity);
+            }
+        } else {
+            d->activityController->setCurrentActivity(existingActivities.first());
+        }
+    }
+}
+
+void ShellCorona::currentActivityChanged(const QString &newActivity)
+{
+    Activity *act = activity(newActivity);
+    qDebug() << "Activity changed:" << newActivity << act;
+
+    if (act) {
+        act->ensureActive();
+    }
+}
+
+void ShellCorona::activityAdded(const QString &id)
+{
+    //TODO more sanity checks
+    if (d->activities.contains(id)) {
+        qDebug() << "you're late." << id;
+        return;
+    }
+
+    Activity *a = new Activity(id, this);
+    if (a->isCurrent()) {
+        a->ensureActive();
+    }
+    d->activities.insert(id, a);
+}
+
+void ShellCorona::activityRemoved(const QString &id)
+{
+    Activity *a = d->activities.take(id);
+    a->deleteLater();
 }
 
 void ShellCorona::printScriptError(const QString &error)

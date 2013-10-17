@@ -28,9 +28,14 @@ namespace Plasma
     class Applet;
 } // namespace Plasma
 
+class Activity;
 class PanelView;
 namespace WorkspaceScripting {
     class DesktopScriptEngine;
+}
+
+namespace KActivities {
+    class Controller;
 }
 
 class ShellCorona : public Plasma::Corona
@@ -58,7 +63,7 @@ public:
      */
     void checkScreen(int screen, bool signalWhenExists = false);
 
-    void checkDesktop(/*Activity *activity,*/ bool signalWhenExists, int screen);
+    void checkDesktop(Activity *activity, bool signalWhenExists, int screen);
 
     int numScreens() const;
     QRect screenGeometry(int id) const;
@@ -114,6 +119,9 @@ protected Q_SLOTS:
      */
     void processUpdateScripts();
 
+    Activity* activity(const QString &id);
+
+    KActivities::Controller *activityController();
 
 private Q_SLOTS:
     void checkLoadingDesktopsComplete();
@@ -121,6 +129,10 @@ private Q_SLOTS:
     void showWidgetExplorer();
     void syncAppConfig();
     void setDashboardShown(bool show);
+    void checkActivities();
+    void currentActivityChanged(const QString &newActivity);
+    void activityAdded(const QString &id);
+    void activityRemoved(const QString &id);
 
 private:
     class Private;

@@ -42,7 +42,7 @@
 Activity::Activity(const QString &id, Plasma::Corona *parent)
     : QObject(parent),
       m_id(id),
-      m_plugin("default"),
+      m_plugin("org.kde.desktopcontainment"),
       m_info(new KActivities::Info(id, this)),
       m_activityConsumer(new KActivities::Consumer(this)),
       m_corona(parent),
@@ -62,8 +62,9 @@ Activity::Activity(const QString &id, Plasma::Corona *parent)
 
     //find your containments
     foreach (Plasma::Containment *cont, m_corona->containments()) {
-        if (cont->containmentType() == Plasma::Types::DesktopContainment ||
-             cont->containmentType() == Plasma::Types::CustomContainment) {
+        if ((cont->containmentType() == Plasma::Types::DesktopContainment ||
+             cont->containmentType() == Plasma::Types::CustomContainment) &&
+             cont->activity() == id) {
             insertContainment(cont);
         }
     }
@@ -172,7 +173,7 @@ Plasma::Containment* Activity::containmentForScreen(int screen)
 
             if (!containment || !containment->activity().isEmpty()) {
                 // possibly a plugin failure, let's go for the default
-                containment = m_corona->containmentForScreen(screen, "default");
+                containment = m_corona->containmentForScreen(screen, "org.kde.desktopcontainment");
             }
 
             //we don't want to steal contaiments from other activities
@@ -191,7 +192,7 @@ Plasma::Containment* Activity::containmentForScreen(int screen)
 
                 if (!containment) {
                     // possibly a plugin failure, let's go for the default
-                    containment = m_corona->containmentForScreen(screen, "default");
+                    containment = m_corona->containmentForScreen(screen, "org.kde.desktopcontainment");
                 }
 
                 if (containment) {
