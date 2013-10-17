@@ -20,6 +20,7 @@ find_package(Qt5Quick REQUIRED)
 find_package(Qt5Script REQUIRED)
 find_package(KCoreAddons REQUIRED)
 find_package(Solid REQUIRED)
+find_package(KActivities REQUIRED)
 
 set(scripting_SRC
     scripting/appinterface.cpp
@@ -78,7 +79,7 @@ target_link_libraries(plasma-shell
  KF5::KI18n
  KF5::XmlGui
  KF5::KIconThemes
- /opt/kde5/lib64/libkactivities.so
+ KF5::KActivities
 )
 target_include_directories(plasma-shell PRIVATE "${CMAKE_BINARY_DIR}")
 
