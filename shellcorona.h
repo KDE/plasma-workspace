@@ -72,6 +72,10 @@ public:
 
     PanelView *panelView(Plasma::Containment *containment) const;
 
+    Activity* activity(const QString &id);
+
+    KActivities::Controller *activityController();
+
 public Q_SLOTS:
     /**
      * Request saving applicationConfig on disk, it's event compressed, not immediate
@@ -119,14 +123,11 @@ protected Q_SLOTS:
      */
     void processUpdateScripts();
 
-    Activity* activity(const QString &id);
-
-    KActivities::Controller *activityController();
-
 private Q_SLOTS:
     void checkLoadingDesktopsComplete();
     void handleContainmentAdded(Plasma::Containment *c);
     void showWidgetExplorer();
+    void toggleActivityManager();
     void syncAppConfig();
     void setDashboardShown(bool show);
     void checkActivities();

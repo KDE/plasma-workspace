@@ -117,6 +117,14 @@ ShellCorona::ShellCorona(QObject *parent)
 
     //Activity stuff
 
+    QAction *activityAction = actions()->addAction("manage activities");
+    connect(activityAction, &QAction::triggered,
+            this, &ShellCorona::toggleActivityManager);
+    activityAction->setText(i18n("Activities..."));
+    activityAction->setIcon(QIcon::fromTheme("preferences-activities"));
+    activityAction->setData(Plasma::Types::ConfigureAction);
+    activityAction->setShortcut(QKeySequence("alt+d, alt+a"));
+    activityAction->setShortcutContext(Qt::ApplicationShortcut);
 
     connect(this, SIGNAL(immutabilityChanged(Plasma::ImmutabilityType)),
             this, SLOT(updateImmutability(Plasma::ImmutabilityType)));
@@ -453,6 +461,18 @@ void ShellCorona::showWidgetExplorer()
         qWarning() << "containment not set, don't know where to add the applet.";
     }
     d->widgetExplorerView->show();
+}
+
+void ShellCorona::toggleActivityManager()
+{
+    QPoint cursorPos = QCursor::pos();
+    foreach (DesktopView *view, d->views) {
+        if (view->screen()->geometry().contains(cursorPos)) {
+            //The view QML has to provide something to display the activity explorer
+            view->rootObject()->metaObject()->invokeMethod(view->rootObject(), "toggleActivityManager");
+            return;
+        }
+    }
 }
 
 void ShellCorona::syncAppConfig()

@@ -30,6 +30,11 @@ Rectangle {
 
     property Item containment
 
+    function toggleActivityManager() {
+        console.log("Activity manger toggled")
+    }
+
+
     onContainmentChanged: {
         print("New Containment: " + containment);
         print("Old Containment: " + internal.oldContainment);
