@@ -31,15 +31,82 @@ Rectangle {
     property Item containment
 
     onContainmentChanged: {
-        print("New Containment: " + containment)
-        //containment.parent = root
-        containment.visible = true
-        containment.anchors.fill = root
+        print("New Containment: " + containment);
+        print("Old Containment: " + internal.oldContainment);
+        //containment.parent = root;
+        containment.visible = true;
+        
+        internal.newContainment = containment;
+        if (internal.oldContainment && internal.oldContainment != containment) {
+            switchAnim.running = true;
+        } else {
+            internal.oldContainment = containment;
+        }
     }
 
+    //some properties that shouldn't be accessible from elsewhere
+    QtObject {
+        id: internal;
+
+        property Item oldContainment;
+        property Item newContainment;
+    }
+
+    SequentialAnimation {
+        id: switchAnim
+        ScriptAction {
+            script: {
+                containment.anchors.left = undefined;
+                containment.anchors.top = undefined;
+                containment.anchors.right = undefined;
+                containment.anchors.bottom = undefined;
+
+                internal.oldContainment.anchors.left = undefined;
+                internal.oldContainment.anchors.top = undefined;
+                internal.oldContainment.anchors.right = undefined;
+                internal.oldContainment.anchors.bottom = undefined;
+
+                internal.oldContainment.z = 0;
+                internal.oldContainment.x = 0;
+                containment.z = 1;
+                containment.x = root.width;
+            }
+        }
+        ParallelAnimation {
+            NumberAnimation {
+                target: internal.oldContainment
+                properties: "x"
+                to: -root.width
+                duration: 400
+                easing.type: Easing.InOutQuad
+            }
+            NumberAnimation {
+                target: internal.newContainment
+                properties: "x"
+                to: 0
+                duration: 250
+                easing.type: Easing.InOutQuad
+            }
+        }
+        ScriptAction {
+            script: {
+                containment.anchors.left = root.left;
+                containment.anchors.top = root.top;
+                containment.anchors.right = root.right;
+                containment.anchors.bottom = root.bottom;
+
+                internal.oldContainment.visible = false;
+                internal.oldContainment = containment;
+            }
+        }
+    }
+
+    
     Component.onCompleted: {
+        //configure the view behavior
         desktop.stayBehind = true;
         desktop.fillScreen = true;
         print("View QML loaded")
     }
+
 }
