@@ -43,6 +43,7 @@ int main(int argc, char** argv)
                                         QStringLiteral("force a windowed view for desktop purposes"));
 
     parser.addVersionOption();
+    parser.addHelpOption();
     parser.setApplicationDescription(description);
     parser.addOption(dbg);
     parser.addOption(windowed);
