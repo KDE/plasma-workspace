@@ -35,14 +35,14 @@
 #include "desktopview.h"
 #include "panelview.h"
 #include "scripting/desktopscriptengine.h"
-#include "widgetexplorer/widgetexplorerview.h"
+#include "widgetexplorer/widgetexplorer.h"
 #include "configview.h"
 
 class ShellCorona::Private {
 public:
     Private()
         : desktopWidget(QApplication::desktop()),
-          widgetExplorerView(nullptr)
+          widgetExplorer(nullptr)
     {
         appConfigSyncTimer.setSingleShot(true);
         // constant controlling how long between requesting a configuration sync
@@ -53,7 +53,7 @@ public:
     QString shell;
     QDesktopWidget * desktopWidget;
     QList <DesktopView *> views;
-    WidgetExplorerView * widgetExplorerView;
+    QPointer<WidgetExplorer> widgetExplorer;
     QHash <Plasma::Containment *, PanelView *> panelViews;
     KConfigGroup desktopDefaultsConfig;
     WorkspaceScripting::DesktopScriptEngine * scriptEngine;
@@ -404,23 +404,22 @@ void ShellCorona::handleContainmentAdded(Plasma::Containment* c)
 
 void ShellCorona::showWidgetExplorer()
 {
-    if (!d->widgetExplorerView) {
+    if (!d->widgetExplorer) {
 
         QString expqml = package().filePath("widgetexplorer");
         qDebug() << "Script to load for WidgetExplorer: " << expqml;
-        d->widgetExplorerView = new WidgetExplorerView(expqml);
-        d->widgetExplorerView->init();
+        d->widgetExplorer = new WidgetExplorer();
+        d->widgetExplorer.data()->setSource(QUrl::fromLocalFile(expqml));
     }
     Plasma::Containment *c = 0;
     c = dynamic_cast<Plasma::Containment*>(sender());
     if (c) {
         qDebug() << "Found containment.";
-        d->widgetExplorerView->setContainment(c);
+        d->widgetExplorer.data()->setContainment(c);
     } else {
         // FIXME: try harder to find a suitable containment?
         qWarning() << "containment not set, don't know where to add the applet.";
     }
-    d->widgetExplorerView->show();
 }
 
 void ShellCorona::syncAppConfig()

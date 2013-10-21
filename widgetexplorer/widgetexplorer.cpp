@@ -21,8 +21,12 @@
 
 #include "widgetexplorer.h"
 
+#include <QQmlEngine>
+#include <QQmlContext>
+
 #include <klocalizedstring.h>
 #include <kservicetypetrader.h>
+#include <kdeclarative/qmlobject.h>
 
 #include <Plasma/Applet>
 #include <Plasma/Corona>
@@ -56,7 +60,8 @@ public:
         : q(w),
           containment(0),
           itemModel(w),
-          filterModel(w)
+          filterModel(w),
+          qmlObject(new QmlObject(w))
     {
     }
 
@@ -94,9 +99,7 @@ public:
     KCategorizedItemsViewModels::DefaultFilterModel filterModel;
     DefaultItemFilterProxyModel filterItemModel;
 
-//     Plasma::DeclarativeWidget *declarativeWidget;
-
-//     QGraphicsLinearLayout *mainLayout;
+    QmlObject *qmlObject;
 };
 
 void WidgetExplorerPrivate::initFilters()
@@ -374,6 +377,7 @@ WidgetExplorer::WidgetExplorer(Plasma::Types::Location loc, QObject *parent)
         d(new WidgetExplorerPrivate(this))
 {
     d->init(loc);
+    populateWidgetList();
 }
 
 WidgetExplorer::WidgetExplorer(QObject *parent)
@@ -381,6 +385,7 @@ WidgetExplorer::WidgetExplorer(QObject *parent)
         d(new WidgetExplorerPrivate(this))
 {
     d->init(Plasma::Types::LeftEdge);
+    populateWidgetList();
 }
 
 WidgetExplorer::~WidgetExplorer()
@@ -417,6 +422,19 @@ void WidgetExplorer::populateWidgetList(const QString &app)
 QString WidgetExplorer::application()
 {
     return d->application;
+}
+
+void WidgetExplorer::setSource(const QUrl &source)
+{
+    d->qmlObject->setInitializationDelayed(true);
+    d->qmlObject->setSource(source);
+    d->qmlObject->engine()->rootContext()->setContextProperty("widgetExplorer", this);
+    d->qmlObject->completeInitialization();
+}
+
+QUrl WidgetExplorer::source() const
+{
+    return d->qmlObject->source();
 }
 
 void WidgetExplorer::setContainment(Plasma::Containment *containment)
@@ -481,7 +499,7 @@ void WidgetExplorer::addApplet(const QString &pluginName)
 void WidgetExplorer::immutabilityChanged(Plasma::Types::ImmutabilityType type)
 {
     if (type != Plasma::Types::Mutable) {
-        emit closeClicked();
+        close();
     }
 }
 
@@ -598,6 +616,12 @@ void WidgetExplorer::uninstall(const QString &pluginName)
             break;
         }
     }
+}
+
+void WidgetExplorer::close()
+{
+    //d->qmlObject->engine()->rootContext()->setContextProperty("widgetExplorer", 0);
+    deleteLater();
 }
 
 /*

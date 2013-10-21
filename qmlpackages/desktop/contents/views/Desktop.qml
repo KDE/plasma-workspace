@@ -17,7 +17,6 @@
  */
 
 import QtQuick 2.0
-//import org.kde.plasma 2.0
 
 import org.kde.plasma.core 2.0 as PlasmaCore
 

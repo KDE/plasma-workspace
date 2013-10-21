@@ -109,6 +109,18 @@ public:
     QString application();
 
     /**
+     * Sets the path of the QML file to parse and execute
+     *
+     * @param path the absolute path of a QML file
+     */
+    void setSource(const QUrl &source);
+
+    /**
+     * @return the absolute path of the current QML file
+     */
+    QUrl source() const;
+
+    /**
      * Populates the widget list for the given application. This must be called
      * before the widget explorer will be usable as the widget list will remain
      * empty up to that point.
@@ -149,6 +161,7 @@ public:
 
     Q_INVOKABLE void uninstall(const QString &pluginName);
 
+    Q_INVOKABLE void close();
     //Q_INVOKABLE QPoint tooltipPosition(QGraphicsObject *item, int tipWidth, int tipHeight);
 
 Q_SIGNALS:
