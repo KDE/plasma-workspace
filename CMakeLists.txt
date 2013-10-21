@@ -20,6 +20,7 @@ find_package(Qt5Quick REQUIRED)
 find_package(Qt5Script REQUIRED)
 find_package(KCoreAddons REQUIRED)
 find_package(Solid REQUIRED)
+find_package(KActivities REQUIRED)
 
 set(scripting_SRC
     scripting/appinterface.cpp
@@ -42,10 +43,12 @@ set(widgetexplorer_SRC
 )
 
 add_executable(plasma-shell
+    activity.cpp
     main.cpp
     containmentconfigview.cpp
     currentcontainmentactionsmodel.cpp
     desktopview.cpp
+    kidenticongenerator.cpp
     panelview.cpp
     panelconfigview.cpp
     panelshadows.cpp
@@ -74,6 +77,8 @@ target_link_libraries(plasma-shell
  KF5::KDeclarative
  KF5::KI18n
  KF5::XmlGui
+ KF5::KIconThemes
+ KF5::KActivities
 )
 target_include_directories(plasma-shell PRIVATE "${CMAKE_BINARY_DIR}")
 
