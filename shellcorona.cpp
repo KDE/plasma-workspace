@@ -34,6 +34,7 @@
 #include <kactivities/controller.h>
 #include <kactivities/consumer.h>
 
+
 #include "activity.h"
 #include "desktopview.h"
 #include "panelview.h"
@@ -54,6 +55,11 @@ public:
         // constant controlling how long between requesting a configuration sync
         // and one happening should occur. currently 10 seconds
         appConfigSyncTimer.setInterval(10000);
+
+        waitingPanelsTimer = new QTimer(q);
+        waitingPanelsTimer->setSingleShot(true);
+        waitingPanelsTimer->setInterval(250);
+        connect(waitingPanelsTimer, &QTimer::timeout, q, &ShellCorona::createWaitingPanels);
     }
 
     ShellCorona *q;
@@ -69,6 +75,7 @@ public:
     QList<Plasma::Containment *> waitingPanels;
     QSet<Plasma::Containment *> loadingDesktops;
     QHash<QString, Activity*> activities;
+    QTimer *waitingPanelsTimer;
 
     QTimer appConfigSyncTimer;
 };
@@ -389,12 +396,19 @@ void ShellCorona::checkLoadingDesktopsComplete()
     }
 
     if (d->loadingDesktops.isEmpty()) {
-        foreach (Plasma::Containment *cont, d->waitingPanels) {
-            d->panelViews[cont] = new PanelView(this);
-            d->panelViews[cont]->setContainment(cont);
-        }
-        d->waitingPanels.clear();
+        d->waitingPanelsTimer->start();
+    } else {
+        d->waitingPanelsTimer->stop();
     }
+}
+
+void ShellCorona::createWaitingPanels()
+{
+    foreach (Plasma::Containment *cont, d->waitingPanels) {
+        d->panelViews[cont] = new PanelView(this);
+        d->panelViews[cont]->setContainment(cont);
+    }
+    d->waitingPanels.clear();
 }
 
 void ShellCorona::updateScreenOwner(int wasScreen, int isScreen, Plasma::Containment *containment)
@@ -413,6 +427,7 @@ void ShellCorona::updateScreenOwner(int wasScreen, int isScreen, Plasma::Contain
                 d->panelViews[containment]->setContainment(0);
                 d->panelViews[containment]->deleteLater();
                 d->panelViews.remove(containment);
+                d->waitingPanels.removeAll(containment);
             }
         }
         checkLoadingDesktopsComplete();

@@ -125,6 +125,7 @@ protected Q_SLOTS:
 
 private Q_SLOTS:
     void checkLoadingDesktopsComplete();
+    void createWaitingPanels();
     void handleContainmentAdded(Plasma::Containment *c);
     void showWidgetExplorer();
     void toggleActivityManager();
