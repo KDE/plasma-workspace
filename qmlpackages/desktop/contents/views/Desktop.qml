@@ -19,6 +19,7 @@
 import QtQuick 2.0
 
 import org.kde.plasma.core 2.0 as PlasmaCore
+import org.kde.plasma.components 2.0 as PlasmaComponents
 
 
 Rectangle {
@@ -30,9 +31,25 @@ Rectangle {
     property Item containment
 
     function toggleActivityManager() {
-        console.log("Activity manger toggled")
+        console.log("Activity manger toggled");
+
+        if (sidePanel.visible) {
+            sidePanel.visible = false;
+        } else {
+            sidePanel.visible = true;
+            sidePanel.height = containment.availableScreenRegion(containment.screen)[0].height;
+        }
     }
 
+    PlasmaCore.Dialog {
+        id: sidePanel
+        location: PlasmaCore.Types.LeftEdge
+        mainItem: PlasmaComponents.PageStack {
+            id: sidePanelStack
+            width: 250
+            height: 500
+        }
+    }
 
     onContainmentChanged: {
         print("New Containment: " + containment);
