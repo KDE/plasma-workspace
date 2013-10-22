@@ -66,7 +66,6 @@ public:
     }
 
     void initFilters();
-    void init(Plasma::Types::Location loc);
     void initRunningApplets();
     void containmentDestroyed();
     void setLocation(Plasma::Types::Location loc);
@@ -149,47 +148,6 @@ void WidgetExplorerPrivate::initFilters()
 
 }
 
-void WidgetExplorerPrivate::init(Plasma::Types::Location loc)
-{
-//     q->setFocusPolicy(Qt::StrongFocus);
-
-    //init widgets
-    location = loc;
-    orientation = ((location == Plasma::Types::LeftEdge || location == Plasma::Types::RightEdge)?Qt::Vertical:Qt::Horizontal);
-//     mainLayout = new QGraphicsLinearLayout(Qt::Vertical);
-//     mainLayout->setContentsMargins(0, 0, 0, 0);
-//     mainLayout->setSpacing(0);
-
-    //connect
- //QObject::connect(filteringWidget, SIGNAL(closeClicked()), q, SIGNAL(closeClicked()));
-
-    initRunningApplets();
-
-    filterItemModel.setSortCaseSensitivity(Qt::CaseInsensitive);
-    filterItemModel.setDynamicSortFilter(true);
-    filterItemModel.setSourceModel(&itemModel);
-    filterItemModel.sort(0);
-//     Plasma::PackageStructure::Ptr structure = Plasma::PackageStructure::load("Plasma/Generic");
-//     package = new Plasma::Package(QString(), "org.kde.desktop.widgetexplorer", structure);
-//
-//     declarativeWidget = new Plasma::DeclarativeWidget(q);
-//     declarativeWidget->setInitializationDelayed(true);
-//     declarativeWidget->setQmlPath(package->filePath("mainscript"));
-//     mainLayout->addItem(declarativeWidget);
-//
-//     if (declarativeWidget->engine()) {
-//         QDeclarativeContext *ctxt = declarativeWidget->engine()->rootContext();
-//         if (ctxt) {
-//             filterItemModel.setSortCaseSensitivity(Qt::CaseInsensitive);
-//             filterItemModel.setDynamicSortFilter(true);
-//             filterItemModel.setSourceModel(&itemModel);
-//             filterItemModel.sort(0);
-//             ctxt->setContextProperty("widgetExplorer", q);
-//         }
-//     }
-//
-//     q->setLayout(mainLayout);
-}
 
 void WidgetExplorerPrivate::setLocation(const Plasma::Types::Location loc)
 {
@@ -344,20 +302,17 @@ void WidgetExplorerPrivate::appletRemoved(Plasma::Applet *applet)
 
 //WidgetExplorer
 
-WidgetExplorer::WidgetExplorer(Plasma::Types::Location loc, QObject *parent)
-        :QObject(parent),
-        d(new WidgetExplorerPrivate(this))
-{
-    d->init(loc);
-    populateWidgetList();
-}
-
 WidgetExplorer::WidgetExplorer(QObject *parent)
         :QObject(parent),
         d(new WidgetExplorerPrivate(this))
 {
-    d->init(Plasma::Types::LeftEdge);
+    setLocation(Plasma::Types::LeftEdge);
     populateWidgetList();
+    d->initRunningApplets();
+    d->filterItemModel.setSortCaseSensitivity(Qt::CaseInsensitive);
+    d->filterItemModel.setDynamicSortFilter(true);
+    d->filterItemModel.setSourceModel(&d->itemModel);
+    d->filterItemModel.sort(0);
 }
 
 WidgetExplorer::~WidgetExplorer()
@@ -475,27 +430,7 @@ void WidgetExplorer::immutabilityChanged(Plasma::Types::ImmutabilityType type)
     }
 }
 
-bool WidgetExplorer::event(QEvent *event)
-{
-    switch (event->type()) {
-        case QEvent::ActionAdded:
-        case QEvent::ActionChanged:
-        case QEvent::ActionRemoved:
-            //if (d->declarativeWidget->rootObject()) {
-                emit widgetsMenuActionsChanged();
-            //}
-            break;
-        default:
-            break;
-    }
 
-    return QObject::event(event);
-}
-
-void WidgetExplorer::focusInEvent(QFocusEvent* event)
-{
-    Q_UNUSED(event);
-}
 
 void WidgetExplorer::downloadWidgets(const QString &type)
 {
@@ -523,7 +458,6 @@ void WidgetExplorer::downloadWidgets(const QString &type)
         }
     }
 
-    emit closeClicked();
     if (installer) {
         //installer->createNewWidgetBrowser();
     } else {
@@ -543,11 +477,11 @@ void WidgetExplorer::downloadWidgets(const QString &type)
           knsDialog->raise();
          */
     }
+    close();
 }
 
 void WidgetExplorer::openWidgetFile()
 {
-    emit closeClicked();
 /*
     Plasma::OpenWidgetAssistant *assistant = d->openAssistant.data();
     if (!assistant) {
@@ -561,14 +495,16 @@ void WidgetExplorer::openWidgetFile()
     assistant->raise();
     assistant->setFocus();
 */
+    close();
 }
 
 void WidgetExplorer::uninstall(const QString &pluginName)
 {
-    Plasma::PackageStructure installer;
-    qWarning() << "FIXME: uninstall needs reimplementation";
-    //installer.uninstallPackage(pluginName,
-    //                           QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QLatin1Char('/') + "plasma/plasmoids/");
+    const QString packageRoot = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + "/plasma/plasmoids/";
+
+    Plasma::Package pkg;
+    pkg.setPath(packageRoot);
+    pkg.uninstall(pluginName, packageRoot);
 
     //FIXME: moreefficient way rather a linear scan?
     for (int i = 0; i < d->itemModel.rowCount(); ++i) {

@@ -102,7 +102,6 @@ public:
         RightEdge     /**< Along the right side of the screen */
     };
 
-    explicit WidgetExplorer(Plasma::Types::Location loc, QObject *parent = 0);
     explicit WidgetExplorer(QObject *parent = 0);
     ~WidgetExplorer();
 
@@ -159,6 +158,9 @@ public:
     QList <QObject *>  widgetsMenuActions();
     QList <QObject *>  extraActions() const;
 
+    /**
+     * Uninstall a plasmoid with a given plugin name. only user-installed ones are uninstallable
+     */
     Q_INVOKABLE void uninstall(const QString &pluginName);
 
     Q_INVOKABLE void close();
@@ -167,7 +169,6 @@ public:
 Q_SIGNALS:
     void locationChanged(Plasma::Types::Location loc);
     void orientationChanged();
-    void closeClicked();
     void widgetsMenuActionsChanged();
     void extraActionsChanged();
 
@@ -181,11 +182,6 @@ public Q_SLOTS:
 
 protected Q_SLOTS:
     void immutabilityChanged(Plasma::Types::ImmutabilityType);
-
-protected:
-    void keyPressEvent(QKeyEvent *e);
-    bool event(QEvent *e);
-    void focusInEvent(QFocusEvent * event);
 
 private:
     Q_PRIVATE_SLOT(d, void appletAdded(Plasma::Applet*))
