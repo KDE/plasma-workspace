@@ -20,26 +20,32 @@
 import QtQuick 2.0
 import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.plasma.core 2.0 as PlasmaCore
+import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.qtextracomponents 2.0
+import QtQuick.Window 2.1
 
 PlasmaCore.Dialog {
     id: dialog
     location: PlasmaCore.Types.LeftEdge
 
     Component.onCompleted: dialog.visible = true;
+    onVisibleChanged: {
+        if (!visible) {
+            widgetExplorer.close();
+        }
+    }
     mainItem: Item {
         id: main
 
+        Text {
+            text: Screen.height+" "+main.height
+        }
         width: 240
-        height: 800
+        height: 800//Screen.height
         //this is used to perfectly align the filter field and delegates
-        property int cellWidth: theme.defaultFont.pixelSize * 20
+        property int cellWidth: theme.mSize(defaultFont).width * 10
 
-        property int minimumWidth: cellWidth + (
-            widgetExplorer.orientation == Qt.Horizontal
-            ? 0
-            : (scrollBar.width + 4 * 2) // 4 * 2 == left and right margins
-            )
+        property int minimumWidth: theme.mSize(defaultFont).width * 12
         property int minimumHeight: 800//topBar.height + list.delegateHeight + (widgetExplorer.orientation == Qt.Horizontal ? scrollBar.height : 0) + 4
 
         property Item getWidgetsButton
@@ -273,10 +279,8 @@ PlasmaCore.Dialog {
             anchors {
                 top: topBar.bottom
                 left: parent.left
-                right: widgetExplorer.orientation == Qt.Horizontal
-                    ? parent.right
-                    : (scrollBar.visible ? scrollBar.left : parent.right)
-                bottom: widgetExplorer.orientation == Qt.Horizontal ? scrollBar.top : bottomBar.top
+                right: parent.right
+                bottom: widgetExplorer.orientation == Qt.Horizontal ? parent.bottom : bottomBar.top
                 leftMargin: 4
                 bottomMargin: 4
             }
@@ -288,35 +292,27 @@ PlasmaCore.Dialog {
                                             Math.max(0, list.contentX - delta))
                 }
             }
-            ListView {
-                id: list
-
-                property int delegateWidth: (widgetExplorer.orientation == Qt.Horizontal) ? (list.width / Math.floor(list.width / cellWidth)) : list.width
-                property int delegateHeight: theme.defaultFont.pixelSize * 7 - 4
-
+            PlasmaExtras.ScrollArea {
                 anchors.fill: parent
+                ListView {
+                    id: list
 
-                orientation: widgetExplorer.orientation == Qt.Horizontal ? ListView.Horizontal : ListView.Vertical
-                snapMode: ListView.SnapToItem
-                model: widgetExplorer.widgetsModel
+                    property int delegateWidth: (widgetExplorer.orientation == Qt.Horizontal) ? (list.width / Math.floor(list.width / cellWidth)) : list.width
+                    property int delegateHeight: theme.defaultFont.pixelSize * 7 - 4
 
-                clip: widgetExplorer.orientation == Qt.Vertical
+                    anchors.fill: parent
 
-                delegate: AppletDelegate {}
+                    orientation: widgetExplorer.orientation == Qt.Horizontal ? ListView.Horizontal : ListView.Vertical
+                    snapMode: ListView.SnapToItem
+                    model: widgetExplorer.widgetsModel
+
+                    clip: widgetExplorer.orientation == Qt.Vertical
+
+                    delegate: AppletDelegate {}
+                }
             }
 
         }
-        PlasmaComponents.ScrollBar {
-                id: scrollBar
-                orientation: widgetExplorer.orientation == Qt.Horizontal ? ListView.Horizontal : ListView.Vertical
-                anchors {
-                    top: widgetExplorer.orientation == Qt.Horizontal ? undefined : listParent.top
-                    bottom: widgetExplorer.orientation == Qt.Horizontal ? parent.bottom : bottomBar.top
-                    left: widgetExplorer.orientation == Qt.Horizontal ? parent.left : undefined
-                    right: parent.right
-                }
-                flickableItem: list
-            }
 
         Loader {
             id: bottomBar
