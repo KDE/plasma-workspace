@@ -20,7 +20,7 @@ import QtQuick 2.0
 
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
-
+import "../activityswitcher"
 
 Rectangle {
     id: root
@@ -34,8 +34,10 @@ Rectangle {
         console.log("Activity manger toggled");
 
         if (sidePanel.visible) {
+            sidePanelStack.pop();
             sidePanel.visible = false;
         } else {
+            sidePanelStack.push(Qt.resolvedUrl("../activityswitcher/ActivitySwitcher.qml"))
             sidePanel.visible = true;
             sidePanel.height = containment.availableScreenRegion(containment.screen)[0].height;
         }
