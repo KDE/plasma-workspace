@@ -405,7 +405,9 @@ void ShellCorona::updateScreenOwner(int wasScreen, int isScreen, Plasma::Contain
         containment->formFactor() == Plasma::Types::Vertical) {
 
         if (isScreen >= 0) {
-            d->waitingPanels << containment;
+            if (!d->waitingPanels.contains(containment)) {
+                d->waitingPanels << containment;
+            }
         } else {
             if (d->panelViews.contains(containment)) {
                 d->panelViews[containment]->setContainment(0);
