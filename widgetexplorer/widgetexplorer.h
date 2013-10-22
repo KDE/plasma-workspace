@@ -191,7 +191,6 @@ private:
     Q_PRIVATE_SLOT(d, void appletAdded(Plasma::Applet*))
     Q_PRIVATE_SLOT(d, void appletRemoved(Plasma::Applet*))
     Q_PRIVATE_SLOT(d, void containmentDestroyed())
-    Q_PRIVATE_SLOT(d, void finished())
 
     WidgetExplorerPrivate * const d;
     friend class WidgetExplorerPrivate;

@@ -70,7 +70,6 @@ public:
     void initRunningApplets();
     void containmentDestroyed();
     void setLocation(Plasma::Types::Location loc);
-    void finished();
 
     /**
      * Tracks a new running applet
@@ -192,29 +191,6 @@ void WidgetExplorerPrivate::init(Plasma::Types::Location loc)
 //     q->setLayout(mainLayout);
 }
 
-void WidgetExplorerPrivate::finished()
-{
-//     if (declarativeWidget->mainComponent()->isError()) {
-//         return;
-//     }
-
-    emit q->widgetsMenuActionsChanged();
-    emit q->extraActionsChanged();
-
-    return;
-//     QObject::connect(declarativeWidget->rootObject(), SIGNAL(addAppletRequested(const QString &)),
-//                      q, SLOT(addApplet(const QString &)));
-//     QObject::connect(declarativeWidget->rootObject(), SIGNAL(closeRequested()),
-//                      q, SIGNAL(closeClicked()));
-/*
-
-    QList<QObject *> actionList;
-    foreach (QAction *action, q->actions()) {
-        actionList << action;
-    }
-    declarativeWidget->rootObject()->setProperty("extraActions", QVariant::fromValue(actionList));*/
-}
-
 void WidgetExplorerPrivate::setLocation(const Plasma::Types::Location loc)
 {
     Qt::Orientation orient;
@@ -318,10 +294,6 @@ void WidgetExplorerPrivate::initRunningApplets()
     foreach (Containment *containment, containments) {
         QObject::connect(containment, SIGNAL(appletAdded(Plasma::Applet*)), q, SLOT(appletAdded(Plasma::Applet*)));
         QObject::connect(containment, SIGNAL(appletRemoved(Plasma::Applet*)), q, SLOT(appletRemoved(Plasma::Applet*)));
-
-        // FIXME: this doesn't work with private slots
-        // QObject::connect(containment, &Containment::appletAdded, q, &WidgetExplorerPrivate::appletAdded);
-        // QObject::connect(containment, &Containment::appletRemoved, q, &WidgetExplorerPrivate::appletRemoved);
 
         foreach (Applet *applet, containment->applets()) {
             if (applet->pluginInfo().isValid()) {
@@ -503,16 +475,6 @@ void WidgetExplorer::immutabilityChanged(Plasma::Types::ImmutabilityType type)
     }
 }
 
-// void WidgetExplorer::keyPressEvent(QKeyEvent *event)
-// {
-//     if (event->key() == Qt::Key_Escape) {
-//         // have to treat escape specially, as it makes text() return " "
-//         QObject::keyPressEvent(event);
-//         return;
-//     }
-//
-// }
-
 bool WidgetExplorer::event(QEvent *event)
 {
     switch (event->type()) {
@@ -624,78 +586,5 @@ void WidgetExplorer::close()
     deleteLater();
 }
 
-/*
-QPoint WidgetExplorer::tooltipPosition(QGraphicsObject *item, int tipWidth, int tipHeight)
-{
-    if (!item) {
-        return QPoint();
-    }
-
-    // Find view
-    if (!item->scene()) {
-        return QPoint();
-    }
-
-    QList<QGraphicsView*> views = item->scene()->views();
-    if (views.isEmpty()) {
-        return QPoint();
-    }
-
-    QGraphicsView *view = 0;
-    if (views.size() == 1) {
-        view = views[0];
-    } else {
-        QGraphicsView *found = 0;
-        QGraphicsView *possibleFind = 0;
-
-        foreach (QGraphicsView *v, views) {
-            if (v->sceneRect().intersects(item->sceneBoundingRect()) ||
-                v->sceneRect().contains(item->scenePos())) {
-                if (v->isActiveWindow()) {
-                    found = v;
-                } else {
-                    possibleFind = v;
-                }
-            }
-        }
-        view = found ? found : possibleFind;
-    }
-
-    if (!view) {
-        return QPoint();
-    }
-
-    // Compute tip pos
-    QRect itemRect(
-        view->mapToGlobal(view->mapFromScene(item->scenePos())),
-        item->boundingRect().size().toSize());
-    QPoint pos;
-    switch (d->location) {
-    case Plasma::Types::LeftEdge:
-        pos.setX(itemRect.right());
-        pos.setY(itemRect.top() + (itemRect.height() - tipHeight) / 2);
-        break;
-    case Plasma::TopEdge:
-        pos.setX(itemRect.left() + (itemRect.width() - tipWidth) / 2);
-        pos.setY(itemRect.bottom());
-        break;
-    case Plasma::Types::RightEdge:
-        pos.setX(itemRect.left() - tipWidth);
-        pos.setY(itemRect.top() + (itemRect.height() - tipHeight) / 2);
-        break;
-    case Plasma::BottomEdge:
-    default:
-        pos.setX(itemRect.left() + (itemRect.width() - tipWidth) / 2);
-        pos.setY(itemRect.top() - tipHeight);
-        break;
-    }
-
-    // Ensure tip stays within screen boundaries
-    const QRect avail = QApplication::desktop()->availableGeometry(view);
-    pos.setX(qBound(avail.left(), pos.x(), avail.right() - tipWidth));
-    pos.setY(qBound(avail.top(), pos.y(), avail.bottom() - tipHeight));
-    return pos;
-}
-*/
 
 #include "moc_widgetexplorer.cpp"
