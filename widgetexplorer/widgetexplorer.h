@@ -24,7 +24,7 @@
 #define WIDGETEXPLORER_H
 
 #include <QAction>
-#include <QObject>
+#include <QQuickItem>
 
 #include "plasmaappletitemmodel_p.h"
 
@@ -49,7 +49,7 @@ Q_SIGNALS:
     void separatorChanged();
 };
 
-class WidgetExplorer : public QObject
+class WidgetExplorer : public QQuickItem
 {
 
     Q_OBJECT
@@ -77,7 +77,7 @@ class WidgetExplorer : public QObject
     /**
      * Plasma location of the panel containment the controller is associated to
      */
-    Q_PROPERTY(Location location READ location NOTIFY locationChanged)
+    Q_PROPERTY(Plasma::Types::Location location READ location NOTIFY locationChanged)
     Q_ENUMS(Location)
 
     /**
@@ -86,23 +86,7 @@ class WidgetExplorer : public QObject
     Q_PROPERTY(Qt::Orientation orientation READ orientation NOTIFY orientationChanged)
 
 public:
-    /**
-    * The Location enumeration describes where on screen an element, such as an
-    * Applet or its managing container, is positioned on the screen.
-    **/
-    enum Location {
-        Floating = 0, /**< Free floating. Neither geometry or z-ordering
-                        is described precisely by this value. */
-        Desktop,      /**< On the planar desktop layer, extending across
-                        the full screen from edge to edge */
-        FullScreen,   /**< Full screen */
-        TopEdge,      /**< Along the top of the screen*/
-        BottomEdge,   /**< Along the bottom of the screen*/
-        LeftEdge,     /**< Along the left side of the screen */
-        RightEdge     /**< Along the right side of the screen */
-    };
-
-    explicit WidgetExplorer(QObject *parent = 0);
+    explicit WidgetExplorer(QQuickItem *parent = 0);
     ~WidgetExplorer();
 
     QString application();
@@ -146,8 +130,7 @@ public:
 
 
     void setLocation(const Plasma::Types::Location loc);
-     //FIXME: it's asymmetric due to the problems of QML of exporting enums
-    WidgetExplorer::Location location();
+    Plasma::Types::Location location() const;
 
     Qt::Orientation orientation() const;
 

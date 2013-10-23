@@ -302,8 +302,8 @@ void WidgetExplorerPrivate::appletRemoved(Plasma::Applet *applet)
 
 //WidgetExplorer
 
-WidgetExplorer::WidgetExplorer(QObject *parent)
-        :QObject(parent),
+WidgetExplorer::WidgetExplorer(QQuickItem *parent)
+        :QQuickItem(parent),
         d(new WidgetExplorerPrivate(this))
 {
     setLocation(Plasma::Types::LeftEdge);
@@ -326,9 +326,9 @@ void WidgetExplorer::setLocation(Plasma::Types::Location loc)
     emit(locationChanged(loc));
 }
 
-WidgetExplorer::Location WidgetExplorer::location()
+Plasma::Types::Location WidgetExplorer::location() const
 {
-    return (WidgetExplorer::Location)d->location;
+    return d->location;
 }
 
 Qt::Orientation WidgetExplorer::orientation() const
@@ -357,6 +357,8 @@ void WidgetExplorer::setSource(const QUrl &source)
     d->qmlObject->setSource(source);
     d->qmlObject->engine()->rootContext()->setContextProperty("widgetExplorer", this);
     d->qmlObject->completeInitialization();
+    QQuickItem *i = qobject_cast<QQuickItem *>(d->qmlObject->rootObject());
+    i->setParentItem(this);
 }
 
 QUrl WidgetExplorer::source() const

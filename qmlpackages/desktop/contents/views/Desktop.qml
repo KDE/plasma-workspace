@@ -30,6 +30,20 @@ Rectangle {
 
     property Item containment
 
+    function toggleWidgetExplorer(explorerObject) {
+        console.log("Widget Explorer toggled");
+
+        if (0&&sidePanel.visible) {
+            explorerObject.close()
+            sidePanel.visible = false;
+        } else {
+            explorerObject.parent = sidePanelStack
+            explorerObject.anchors.fill = parent;
+            sidePanel.visible = true;
+            sidePanel.height = containment.availableScreenRegion(containment.screen)[0].height;
+        }
+    }
+
     function toggleActivityManager() {
         console.log("Activity manger toggled");
 

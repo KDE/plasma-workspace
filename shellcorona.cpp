@@ -464,22 +464,31 @@ void ShellCorona::handleContainmentAdded(Plasma::Containment* c)
 
 void ShellCorona::showWidgetExplorer()
 {
-    if (!d->widgetExplorer) {
+    QPoint cursorPos = QCursor::pos();
+    foreach (DesktopView *view, d->views) {
+        if (view->screen()->geometry().contains(cursorPos)) {
+            if (!d->widgetExplorer) {
+                QString expqml = package().filePath("widgetexplorer");
+                qDebug() << "Script to load for WidgetExplorer: " << expqml;
+                d->widgetExplorer = new WidgetExplorer();
+                d->widgetExplorer.data()->setSource(QUrl::fromLocalFile(expqml));
+            }
+            Plasma::Containment *c = 0;
+            c = dynamic_cast<Plasma::Containment*>(sender());
+            if (c) {
+                qDebug() << "Found containment.";
+                d->widgetExplorer.data()->setContainment(c);
+            } else {
+                // FIXME: try harder to find a suitable containment?
+                qWarning() << "containment not set, don't know where to add the applet.";
+            }
+            //The view QML has to provide something to display the activity explorer
+            view->rootObject()->metaObject()->invokeMethod(view->rootObject(), "toggleWidgetExplorer", Q_ARG(QVariant, QVariant::fromValue(d->widgetExplorer.data())));
+            return;
+        }
+    }
 
-        QString expqml = package().filePath("widgetexplorer");
-        qDebug() << "Script to load for WidgetExplorer: " << expqml;
-        d->widgetExplorer = new WidgetExplorer();
-        d->widgetExplorer.data()->setSource(QUrl::fromLocalFile(expqml));
-    }
-    Plasma::Containment *c = 0;
-    c = dynamic_cast<Plasma::Containment*>(sender());
-    if (c) {
-        qDebug() << "Found containment.";
-        d->widgetExplorer.data()->setContainment(c);
-    } else {
-        // FIXME: try harder to find a suitable containment?
-        qWarning() << "containment not set, don't know where to add the applet.";
-    }
+
 }
 
 void ShellCorona::toggleActivityManager()
