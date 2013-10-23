@@ -34,10 +34,10 @@ Rectangle {
         console.log("Activity manger toggled");
 
         if (sidePanel.visible) {
-            sidePanelStack.pop();
+            sidePanelStack.source = '';
             sidePanel.visible = false;
         } else {
-            sidePanelStack.push(Qt.resolvedUrl("../activityswitcher/ActivitySwitcher.qml"))
+            sidePanelStack.source = Qt.resolvedUrl("../activityswitcher/ActivitySwitcher.qml");
             sidePanel.visible = true;
             sidePanel.height = containment.availableScreenRegion(containment.screen)[0].height;
         }
@@ -46,7 +46,7 @@ Rectangle {
     PlasmaCore.Dialog {
         id: sidePanel
         location: PlasmaCore.Types.LeftEdge
-        mainItem: PlasmaComponents.PageStack {
+        mainItem: Loader {
             id: sidePanelStack
             width: 250
             height: 500
