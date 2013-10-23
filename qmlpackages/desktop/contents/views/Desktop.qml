@@ -33,37 +33,68 @@ Rectangle {
     function toggleWidgetExplorer(explorerObject) {
         console.log("Widget Explorer toggled");
 
-        if (0&&sidePanel.visible) {
-            explorerObject.close()
-            sidePanel.visible = false;
+        sidePanelStack.pop(blankPage);
+
+        if (sidePanelStack.state == "widgetExplorer") {
+            explorerObject.close();
+            sidePanelStack.state = "closed";
         } else {
-            explorerObject.parent = sidePanelStack
-            explorerObject.anchors.fill = parent;
-            sidePanel.visible = true;
-            sidePanel.height = containment.availableScreenRegion(containment.screen)[0].height;
+            sidePanelStack.push(explorerObject);
+            explorerObject.closed.connect(function(){sidePanelStack.state = "closed";});
+            sidePanelStack.state = "widgetExplorer";
         }
     }
 
     function toggleActivityManager() {
         console.log("Activity manger toggled");
 
-        if (sidePanel.visible) {
-            sidePanelStack.source = '';
-            sidePanel.visible = false;
+        sidePanelStack.pop(blankPage);
+
+        if (sidePanelStack.state == "activitySwitcher") {
+            sidePanelStack.state = "closed";
         } else {
-            sidePanelStack.source = Qt.resolvedUrl("../activityswitcher/ActivitySwitcher.qml");
-            sidePanel.visible = true;
-            sidePanel.height = containment.availableScreenRegion(containment.screen)[0].height;
+            sidePanelStack.push(Qt.resolvedUrl("../activityswitcher/ActivitySwitcher.qml"));
+            sidePanelStack.state = "activitySwitcher";
         }
     }
 
     PlasmaCore.Dialog {
         id: sidePanel
         location: PlasmaCore.Types.LeftEdge
-        mainItem: Loader {
+        mainItem: PlasmaComponents.PageStack {
             id: sidePanelStack
+            state: "closed"
             width: 250
             height: 500
+            initialPage: Item {
+                id: blankPage
+            }
+        
+            states: [
+                State {
+                    name: "closed"
+                    PropertyChanges {
+                        target: sidePanel
+                        visible: false
+                    }
+                },
+                State {
+                    name: "widgetExplorer"
+                    PropertyChanges {
+                        target: sidePanel
+                        visible: true
+                        height: containment.availableScreenRegion(containment.screen)[0].height;
+                    }
+                },
+                State {
+                    name: "activitySwitcher"
+                    PropertyChanges {
+                        target: sidePanel
+                        visible: true
+                        height: containment.availableScreenRegion(containment.screen)[0].height;
+                    }
+                }
+            ]
         }
     }
 

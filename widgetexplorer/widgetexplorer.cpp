@@ -23,6 +23,8 @@
 
 #include <QQmlEngine>
 #include <QQmlContext>
+#include <QQmlExpression>
+#include <QQmlProperty>
 
 #include <klocalizedstring.h>
 #include <kservicetypetrader.h>
@@ -359,6 +361,10 @@ void WidgetExplorer::setSource(const QUrl &source)
     d->qmlObject->completeInitialization();
     QQuickItem *i = qobject_cast<QQuickItem *>(d->qmlObject->rootObject());
     i->setParentItem(this);
+    //set anchors
+    QQmlExpression expr(d->qmlObject->engine()->rootContext(), d->qmlObject->rootObject(), "parent");
+    QQmlProperty prop(d->qmlObject->rootObject(), "anchors.fill");
+    prop.write(expr.evaluate());
 }
 
 QUrl WidgetExplorer::source() const
@@ -520,7 +526,7 @@ void WidgetExplorer::uninstall(const QString &pluginName)
 
 void WidgetExplorer::close()
 {
-    //d->qmlObject->engine()->rootContext()->setContextProperty("widgetExplorer", 0);
+    emit closed();
     deleteLater();
 }
 

@@ -154,6 +154,7 @@ Q_SIGNALS:
     void orientationChanged();
     void widgetsMenuActionsChanged();
     void extraActionsChanged();
+    void closed();
 
 public Q_SLOTS:
     /**
