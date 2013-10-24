@@ -61,6 +61,11 @@ Rectangle {
     PlasmaCore.Dialog {
         id: sidePanel
         location: PlasmaCore.Types.LeftEdge
+        onVisibleChanged: {
+            if (!visible) {
+                sidePanelStack.pop(blankPage);
+            }
+        }
         mainItem: PlasmaComponents.PageStack {
             id: sidePanelStack
             state: "closed"
