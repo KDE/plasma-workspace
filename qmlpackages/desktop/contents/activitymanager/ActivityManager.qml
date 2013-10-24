@@ -18,7 +18,19 @@
  */
 
 import QtQuick 2.0
+import org.kde.plasma.components 2.0 as PlasmaComponents
 
 Rectangle {
+    id: root
     color: "red"
+    signal closed()
+
+    PlasmaComponents.ToolButton {
+        anchors {
+            top: parent.top
+            right: parent.right
+        }
+        iconSource: "window-close"
+        onClicked: root.closed()
+    }
 }

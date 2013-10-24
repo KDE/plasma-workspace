@@ -53,7 +53,8 @@ Rectangle {
         if (sidePanelStack.state == "activityManager") {
             sidePanelStack.state = "closed";
         } else {
-            sidePanelStack.push(Qt.resolvedUrl("../activitymanager/ActivityManager.qml"));
+            var page = sidePanelStack.push(Qt.resolvedUrl("../activitymanager/ActivityManager.qml"));
+            page.closed.connect(function(){sidePanelStack.state = "closed";});
             sidePanelStack.state = "activityManager";
         }
     }
