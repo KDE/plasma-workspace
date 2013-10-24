@@ -435,6 +435,7 @@ void PanelView::showConfigurationInterface(Plasma::Applet *applet)
     if (m_panelConfigView) {
         m_panelConfigView.data()->hide();
         m_panelConfigView.data()->deleteLater();
+        return;
     }
 
     if (!applet || !applet->containment()) {
