@@ -20,7 +20,7 @@ import QtQuick 2.0
 
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
-import "../activityswitcher"
+import "../activitymanager"
 
 Rectangle {
     id: root
@@ -50,11 +50,11 @@ Rectangle {
 
         sidePanelStack.pop(blankPage);
 
-        if (sidePanelStack.state == "activitySwitcher") {
+        if (sidePanelStack.state == "activityManager") {
             sidePanelStack.state = "closed";
         } else {
-            sidePanelStack.push(Qt.resolvedUrl("../activityswitcher/ActivitySwitcher.qml"));
-            sidePanelStack.state = "activitySwitcher";
+            sidePanelStack.push(Qt.resolvedUrl("../activitymanager/ActivityManager.qml"));
+            sidePanelStack.state = "activityManager";
         }
     }
 
@@ -92,7 +92,7 @@ Rectangle {
                     }
                 },
                 State {
-                    name: "activitySwitcher"
+                    name: "activityManager"
                     PropertyChanges {
                         target: sidePanel
                         visible: true
