@@ -450,6 +450,7 @@ void PanelView::showConfigurationInterface(Plasma::Applet *applet)
     }
     m_panelConfigView.data()->init();
     m_panelConfigView.data()->show();
+    KWindowSystem::setState(m_panelConfigView.data()->winId(), NET::SkipTaskbar | NET::SkipPager);
 }
 
 void PanelView::resizeEvent(QResizeEvent *ev)
