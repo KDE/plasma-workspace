@@ -75,7 +75,7 @@ Rectangle {
             initialPage: Item {
                 id: blankPage
             }
-        
+
             states: [
                 State {
                     name: "closed"
@@ -109,7 +109,7 @@ Rectangle {
         print("Old Containment: " + internal.oldContainment);
         //containment.parent = root;
         containment.visible = true;
-        
+
         internal.newContainment = containment;
         if (internal.oldContainment && internal.oldContainment != containment) {
             switchAnim.running = true;
@@ -175,12 +175,12 @@ Rectangle {
         }
     }
 
-    
+
     Component.onCompleted: {
         //configure the view behavior
         desktop.stayBehind = true;
         desktop.fillScreen = true;
-        print("View QML loaded")
+        print("View org.kde.desktop QML loaded")
     }
 
 }

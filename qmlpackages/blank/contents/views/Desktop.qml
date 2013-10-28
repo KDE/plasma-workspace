@@ -38,6 +38,6 @@ Rectangle {
     }
 
     Component.onCompleted: {
-        print("View QML loaded")
+        print("View org.kde.blank QML loaded")
     }
 }
