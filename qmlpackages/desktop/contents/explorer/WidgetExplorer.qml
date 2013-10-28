@@ -31,9 +31,9 @@ Item {
     width: 240
     height: 800//Screen.height
     //this is used to perfectly align the filter field and delegates
-    property int cellWidth: theme.mSize(defaultFont).width * 10
+    property int cellWidth: theme.mSize(theme.defaultFont).width * 10
 
-    property int minimumWidth: theme.mSize(defaultFont).width * 12
+    property int minimumWidth: theme.mSize(theme.defaultFont).width * 12
     property int minimumHeight: 800//topBar.height + list.delegateHeight + (widgetExplorer.orientation == Qt.Horizontal ? scrollBar.height : 0) + 4
 
     property Item getWidgetsButton
