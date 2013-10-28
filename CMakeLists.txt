@@ -72,7 +72,7 @@ target_link_libraries(plasma-shell
  Plasma
  PlasmaQuick
  ${Qt5Script_LIBRARIES}
- ${KDE4Support_LIBRARIES}
+ KF5::KDE4Support
  KF5::Solid
  KF5::KDeclarative
  KF5::KI18n
