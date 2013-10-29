@@ -23,7 +23,7 @@ import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.qtextracomponents 2.0
 import QtQuick.Window 2.1
-
+import org.kde.plasma.private.shell 2.0
 
 Item {
     id: main
@@ -39,6 +39,11 @@ Item {
     property Item getWidgetsButton
     property Item categoryButton
 
+    WidgetExplorer {
+        id:widgetExplorer
+        desktopView: desktop
+    }
+    
     PlasmaComponents.ContextMenu {
         id: categoriesDialog
         visualParent: main.categoryButton

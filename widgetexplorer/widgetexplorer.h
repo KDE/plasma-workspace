@@ -34,6 +34,7 @@ namespace Plasma {
     class Applet;
 }
 class WidgetExplorerPrivate;
+ class DesktopView;
 
 //We need to access the separator property that is not exported by QAction
 class WidgetAction : public QAction
@@ -85,6 +86,8 @@ class WidgetExplorer : public QQuickItem
      */
     Q_PROPERTY(Qt::Orientation orientation READ orientation NOTIFY orientationChanged)
 
+    Q_PROPERTY(DesktopView *desktopView READ desktopView WRITE setDesktopView NOTIFY desktopViewChanged)
+
 public:
     explicit WidgetExplorer(QQuickItem *parent = 0);
     ~WidgetExplorer();
@@ -134,6 +137,8 @@ public:
 
     Qt::Orientation orientation() const;
 
+    DesktopView *desktopView();
+    void setDesktopView(DesktopView *view);
 
     QObject *widgetsModel() const;
     QObject *filterModel() const;
@@ -155,6 +160,7 @@ Q_SIGNALS:
     void widgetsMenuActionsChanged();
     void extraActionsChanged();
     void closed();
+    void desktopViewChanged();
 
 public Q_SLOTS:
     /**

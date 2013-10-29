@@ -37,6 +37,7 @@
 #include <Plasma/PackageStructure>
 #include <qstandardpaths.h>
 
+#include "desktopview.h"
 #include "kcategorizeditemsviewmodels_p.h"
 #include "plasmaappletitemmodel_p.h"
 
@@ -63,7 +64,8 @@ public:
           containment(0),
           itemModel(w),
           filterModel(w),
-          qmlObject(new QmlObject(w))
+          qmlObject(new QmlObject(w)),
+          desktopView(0)
     {
     }
 
@@ -98,6 +100,7 @@ public:
     PlasmaAppletItemModel itemModel;
     KCategorizedItemsViewModels::DefaultFilterModel filterModel;
     DefaultItemFilterProxyModel filterItemModel;
+    DesktopView *desktopView;
 
     QmlObject *qmlObject;
 };
@@ -336,6 +339,20 @@ Plasma::Types::Location WidgetExplorer::location() const
 Qt::Orientation WidgetExplorer::orientation() const
 {
     return d->orientation;
+}
+
+DesktopView *WidgetExplorer::desktopView()
+{
+    return d->desktopView;
+}
+
+void WidgetExplorer::setDesktopView(DesktopView *view)
+{qWarning()<<"AAAAAAAAAAAAAAAAAAAAAAA"<<view;
+    d->desktopView = view;
+    if (view) {
+        setContainment(view->containment());
+    }
+    emit desktopViewChanged();
 }
 
 void WidgetExplorer::populateWidgetList(const QString &app)

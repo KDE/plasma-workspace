@@ -21,6 +21,8 @@ import QtQuick 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
 import "../activitymanager"
+import "../explorer"
+
 
 Rectangle {
     id: root
@@ -39,7 +41,7 @@ Rectangle {
             explorerObject.close();
             sidePanelStack.state = "closed";
         } else {
-            sidePanelStack.push(explorerObject);
+            sidePanelStack.push(Qt.resolvedUrl("../explorer/WidgetExplorer.qml"));
             explorerObject.closed.connect(function(){sidePanelStack.state = "closed";});
             sidePanelStack.state = "widgetExplorer";
         }
