@@ -23,6 +23,7 @@
 
 #include <QApplication>
 #include <QDebug>
+#include <QMenu>
 #include <QDesktopWidget>
 #include <QQmlContext>
 #include <QTimer>
@@ -33,6 +34,9 @@
 #include <Plasma/PluginLoader>
 #include <kactivities/controller.h>
 #include <kactivities/consumer.h>
+#include <ksycoca.h>
+#include <kcomponentdata.h>
+#include <kservicetypetrader.h>
 
 
 #include "activity.h"
@@ -48,7 +52,9 @@ public:
         : q(corona),
           desktopWidget(QApplication::desktop()),
           activityController(new KActivities::Controller(q)),
-          activityConsumer(new KActivities::Consumer(q))
+          activityConsumer(new KActivities::Consumer(q)),
+          addPanelAction(nullptr),
+          addPanelsMenu(nullptr)
     {
         appConfigSyncTimer.setSingleShot(true);
         // constant controlling how long between requesting a configuration sync
@@ -74,6 +80,8 @@ public:
     QSet<Plasma::Containment *> loadingDesktops;
     QHash<QString, Activity*> activities;
     QTimer *waitingPanelsTimer;
+    QAction *addPanelAction;
+    QMenu *addPanelsMenu;
 
     QTimer appConfigSyncTimer;
 };
@@ -126,8 +134,12 @@ ShellCorona::ShellCorona(QObject *parent)
     dashboardAction->setShortcut(QKeySequence("ctrl+f12"));
     dashboardAction->setShortcutContext(Qt::ApplicationShortcut);
 
-    //Activity stuff
 
+    checkAddPanelAction();
+    connect(KSycoca::self(), SIGNAL(databaseChanged(QStringList)), this, SLOT(checkAddPanelAction(QStringList)));
+
+
+    //Activity stuff
     QAction *activityAction = actions()->addAction("manage activities");
     connect(activityAction, &QAction::triggered,
             this, &ShellCorona::toggleActivityManager);
@@ -630,6 +642,88 @@ void ShellCorona::activityRemoved(const QString &id)
 {
     Activity *a = d->activities.take(id);
     a->deleteLater();
+}
+
+void ShellCorona::checkAddPanelAction(const QStringList &sycocaChanges)
+{
+    if (!sycocaChanges.isEmpty() && !sycocaChanges.contains("services")) {
+        return;
+    }
+
+    delete d->addPanelAction;
+    d->addPanelAction = 0;
+
+    delete d->addPanelsMenu;
+    d->addPanelsMenu = 0;
+
+    KPluginInfo::List panelContainmentPlugins = Plasma::PluginLoader::listContainmentsOfType("Panel");
+    const QString constraint = QString("[X-Plasma-Shell] == '%1' and 'panel' ~in [X-Plasma-ContainmentCategories]")
+                                      .arg(KComponentData::mainComponent().componentName());
+    KService::List templates = KServiceTypeTrader::self()->query("Plasma/LayoutTemplate", constraint);
+
+    if (panelContainmentPlugins.count() + templates.count() == 1) {
+        d->addPanelAction = new QAction(i18n("Add Panel"), this);
+        d->addPanelAction->setData(Plasma::Types::AddAction);
+        connect(d->addPanelAction, SIGNAL(triggered(bool)), this, SLOT(addPanel()));
+    } else if (!panelContainmentPlugins.isEmpty()) {
+        d->addPanelsMenu = new QMenu;
+        d->addPanelAction = d->addPanelsMenu->menuAction();
+        d->addPanelAction->setText(i18n("Add Panel"));
+        d->addPanelAction->setData(Plasma::Types::AddAction);
+        qDebug() << "populateAddPanelsMenu" << panelContainmentPlugins.count();
+        connect(d->addPanelsMenu, SIGNAL(aboutToShow()), this, SLOT(populateAddPanelsMenu()));
+        connect(d->addPanelsMenu, SIGNAL(triggered(QAction*)), this, SLOT(addPanel(QAction*)));
+    }
+
+    if (d->addPanelAction) {
+        d->addPanelAction->setIcon(QIcon::fromTheme("list-add"));
+        actions()->addAction("add panel", d->addPanelAction);
+    }
+}
+
+void ShellCorona::addPanel()
+{
+    KPluginInfo::List panelPlugins = Plasma::PluginLoader::listContainmentsOfType("Panel");
+
+    if (!panelPlugins.isEmpty()) {
+        addPanel(panelPlugins.first().pluginName());
+    }
+}
+
+void ShellCorona::addPanel(QAction *action)
+{
+    const QString plugin = action->data().toString();
+    if (plugin.startsWith("plasma-desktop-template:")) {
+        d->scriptEngine->evaluateScript(plugin.right(plugin.length() - qstrlen("plasma-desktop-template:")));
+    } else if (!plugin.isEmpty()) {
+        addPanel(plugin);
+    }
+}
+
+void ShellCorona::addPanel(const QString &plugin)
+{
+    Plasma::Containment *panel = createContainment(plugin);
+    if (!panel) {
+        return;
+    }
+
+    QList<Plasma::Types::Location> availableLocations;
+    availableLocations << Plasma::Types::LeftEdge << Plasma::Types::TopEdge << Plasma::Types::RightEdge << Plasma::Types::BottomEdge;
+
+    foreach (Plasma::Containment *cont, d->panelViews.keys()) {
+        availableLocations.removeAll(cont->location());
+    }
+    Plasma::Types::Location loc;
+    if (availableLocations.isEmpty()) {
+        loc = Plasma::Types::TopEdge;
+    } else {
+        loc = availableLocations.first();
+    }
+    panel->setLocation(loc);
+    
+
+    d->waitingPanels << panel;
+    d->waitingPanelsTimer->start();
 }
 
 void ShellCorona::printScriptError(const QString &error)
