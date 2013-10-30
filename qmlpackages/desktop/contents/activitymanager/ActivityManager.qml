@@ -162,7 +162,7 @@ Item {
                 }
                 PlasmaComponents.ToolButton {
                     iconSource: "window-close"
-                    onClicked: root.closed()
+                    onClicked: main.closed()
                 }
             }
             Component.onCompleted: {
@@ -183,7 +183,7 @@ Item {
             PlasmaComponents.ToolButton {
                 anchors.right: parent.right
                 iconSource: "window-close"
-                onClicked: root.closed()
+                onClicked: main.closed()
             }
 
             PlasmaComponents.TextField {
