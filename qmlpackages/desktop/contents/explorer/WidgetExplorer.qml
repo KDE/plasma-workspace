@@ -43,7 +43,7 @@ Item {
 
     WidgetExplorer {
         id: widgetExplorer
-        desktopView: desktop
+        view: desktop
         onShouldClose: main.closed();
     }
     

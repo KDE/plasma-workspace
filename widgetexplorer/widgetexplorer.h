@@ -34,7 +34,7 @@ namespace Plasma {
     class Applet;
 }
 class WidgetExplorerPrivate;
- class DesktopView;
+class PlasmaQuickView;
 
 //We need to access the separator property that is not exported by QAction
 class WidgetAction : public QAction
@@ -80,7 +80,10 @@ class WidgetExplorer : public QObject
      */
     Q_PROPERTY(QString application READ application WRITE setApplication NOTIFY applicationChanged)
 
-    Q_PROPERTY(DesktopView *desktopView READ desktopView WRITE setDesktopView NOTIFY desktopViewChanged)
+    /**
+     * The view in which we want to add widgets in the end
+     */
+    Q_PROPERTY(PlasmaQuickView *view READ view WRITE setView NOTIFY viewChanged)
 
 public:
     explicit WidgetExplorer(QObject *parent = 0);
@@ -114,8 +117,8 @@ public:
     Plasma::Corona *corona() const;
 
 
-    DesktopView *desktopView();
-    void setDesktopView(DesktopView *view);
+    PlasmaQuickView *view();
+    void setView(PlasmaQuickView *view);
 
     QObject *widgetsModel() const;
     QObject *filterModel() const;
@@ -132,7 +135,7 @@ Q_SIGNALS:
     void widgetsMenuActionsChanged();
     void extraActionsChanged();
     void shouldClose();
-    void desktopViewChanged();
+    void viewChanged();
     void applicationChanged();
 
 public Q_SLOTS:
