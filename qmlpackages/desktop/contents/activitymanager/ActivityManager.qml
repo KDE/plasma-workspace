@@ -65,12 +65,12 @@ Item {
             onClicked: activityTemplatesMenu.open()
         }
         PlasmaComponents.MenuItem {
-            icon: QIcon("user-desktop")
+            icon: "user-desktop"
             text: i18n("Empty Desktop")
             onClicked: activityManager.createActivity("desktop")
         }
         PlasmaComponents.MenuItem {
-            icon: QIcon("edit-copy")
+            icon: "edit-copy"
             text: i18n("Clone current activity")
             onClicked: activityManager.cloneCurrentActivity()
         }
@@ -85,7 +85,7 @@ Item {
         parent: activityTemplatesMenu
         model: activityManager.activityTypeActions
         delegate: PlasmaComponents.MenuItem {
-            icon: QIcon(modelData.icon)
+            icon: modelData.icon
             text: modelData.text
             separator: modelData.separator
             onClicked: {
