@@ -71,9 +71,7 @@ Rectangle {
         }
         type: PlasmaCore.Dialog.Dock
         windowFlags: Qt.Window|Qt.WindowStaysOnTopHint|Qt.X11BypassWindowManagerHint
-        /*Component.onCompleted: {
-            sidePanel.windowFlags = Qt.Window|Qt.WindowStaysOnTopHint|Qt.X11BypassWindowManagerHint
-        }*/
+
         mainItem: PlasmaComponents.PageStack {
             id: sidePanelStack
             state: "closed"
