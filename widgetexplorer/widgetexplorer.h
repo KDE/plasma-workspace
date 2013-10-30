@@ -24,7 +24,7 @@
 #define WIDGETEXPLORER_H
 
 #include <QAction>
-#include <QQuickItem>
+#include <QObject>
 
 #include "plasmaappletitemmodel_p.h"
 
@@ -50,7 +50,7 @@ Q_SIGNALS:
     void separatorChanged();
 };
 
-class WidgetExplorer : public QQuickItem
+class WidgetExplorer : public QObject
 {
 
     Q_OBJECT
@@ -75,36 +75,13 @@ class WidgetExplorer : public QQuickItem
      */
     Q_PROPERTY(QList<QObject *> extraActions READ extraActions NOTIFY extraActionsChanged)
 
-    /**
-     * Plasma location of the panel containment the controller is associated to
-     */
-    Q_PROPERTY(Plasma::Types::Location location READ location NOTIFY locationChanged)
-    Q_ENUMS(Location)
-
-    /**
-     * Orientation the controller will be disaplayed, depends from location
-     */
-    Q_PROPERTY(Qt::Orientation orientation READ orientation NOTIFY orientationChanged)
-
     Q_PROPERTY(DesktopView *desktopView READ desktopView WRITE setDesktopView NOTIFY desktopViewChanged)
 
 public:
-    explicit WidgetExplorer(QQuickItem *parent = 0);
+    explicit WidgetExplorer(QObject *parent = 0);
     ~WidgetExplorer();
 
     QString application();
-
-    /**
-     * Sets the path of the QML file to parse and execute
-     *
-     * @param path the absolute path of a QML file
-     */
-    void setSource(const QUrl &source);
-
-    /**
-     * @return the absolute path of the current QML file
-     */
-    QUrl source() const;
 
     /**
      * Populates the widget list for the given application. This must be called
@@ -132,11 +109,6 @@ public:
     Plasma::Corona *corona() const;
 
 
-    void setLocation(const Plasma::Types::Location loc);
-    Plasma::Types::Location location() const;
-
-    Qt::Orientation orientation() const;
-
     DesktopView *desktopView();
     void setDesktopView(DesktopView *view);
 
@@ -155,8 +127,6 @@ public:
     //Q_INVOKABLE QPoint tooltipPosition(QGraphicsObject *item, int tipWidth, int tipHeight);
 
 Q_SIGNALS:
-    void locationChanged(Plasma::Types::Location loc);
-    void orientationChanged();
     void widgetsMenuActionsChanged();
     void extraActionsChanged();
     void closed();

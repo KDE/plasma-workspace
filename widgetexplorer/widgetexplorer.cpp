@@ -28,7 +28,6 @@
 
 #include <klocalizedstring.h>
 #include <kservicetypetrader.h>
-#include <kdeclarative/qmlobject.h>
 
 #include <Plasma/Applet>
 #include <Plasma/Corona>
@@ -64,7 +63,6 @@ public:
           containment(0),
           itemModel(w),
           filterModel(w),
-          qmlObject(new QmlObject(w)),
           desktopView(0)
     {
     }
@@ -72,7 +70,6 @@ public:
     void initFilters();
     void initRunningApplets();
     void containmentDestroyed();
-    void setLocation(Plasma::Types::Location loc);
 
     /**
      * Tracks a new running applet
@@ -84,9 +81,6 @@ public:
      */
     void appletRemoved(Plasma::Applet *applet);
 
-    //this orientation is just for convenience, is the location that is important
-    Qt::Orientation orientation;
-    Plasma::Types::Location location;
     WidgetExplorer *q;
     QString application;
     Plasma::Containment *containment;
@@ -101,8 +95,6 @@ public:
     KCategorizedItemsViewModels::DefaultFilterModel filterModel;
     DefaultItemFilterProxyModel filterItemModel;
     DesktopView *desktopView;
-
-    QmlObject *qmlObject;
 };
 
 void WidgetExplorerPrivate::initFilters()
@@ -153,28 +145,6 @@ void WidgetExplorerPrivate::initFilters()
 
 }
 
-
-void WidgetExplorerPrivate::setLocation(const Plasma::Types::Location loc)
-{
-    Qt::Orientation orient;
-    if (loc == Plasma::Types::LeftEdge || loc == Plasma::Types::RightEdge) {
-        orient = Qt::Vertical;
-    } else {
-        orient = Qt::Horizontal;
-    }
-
-    if (location == loc) {
-        return;
-    }
-
-    location = loc;
-
-    if (orientation == orient) {
-        return;
-    }
-
-    emit q->orientationChanged();
-}
 
 QObject *WidgetExplorer::widgetsModel() const
 {
@@ -307,11 +277,10 @@ void WidgetExplorerPrivate::appletRemoved(Plasma::Applet *applet)
 
 //WidgetExplorer
 
-WidgetExplorer::WidgetExplorer(QQuickItem *parent)
-        :QQuickItem(parent),
-        d(new WidgetExplorerPrivate(this))
+WidgetExplorer::WidgetExplorer(QObject *parent)
+        : QObject(parent),
+          d(new WidgetExplorerPrivate(this))
 {
-    setLocation(Plasma::Types::LeftEdge);
     populateWidgetList();
     d->initRunningApplets();
     d->filterItemModel.setSortCaseSensitivity(Qt::CaseInsensitive);
@@ -325,21 +294,6 @@ WidgetExplorer::~WidgetExplorer()
      delete d;
 }
 
-void WidgetExplorer::setLocation(Plasma::Types::Location loc)
-{
-    d->setLocation(loc);
-    emit(locationChanged(loc));
-}
-
-Plasma::Types::Location WidgetExplorer::location() const
-{
-    return d->location;
-}
-
-Qt::Orientation WidgetExplorer::orientation() const
-{
-    return d->orientation;
-}
 
 DesktopView *WidgetExplorer::desktopView()
 {
@@ -370,25 +324,6 @@ QString WidgetExplorer::application()
     return d->application;
 }
 
-void WidgetExplorer::setSource(const QUrl &source)
-{
-    d->qmlObject->setInitializationDelayed(true);
-    d->qmlObject->setSource(source);
-    d->qmlObject->engine()->rootContext()->setContextProperty("widgetExplorer", this);
-    d->qmlObject->completeInitialization();
-    QQuickItem *i = qobject_cast<QQuickItem *>(d->qmlObject->rootObject());
-    i->setParentItem(this);
-    //set anchors
-    QQmlExpression expr(d->qmlObject->engine()->rootContext(), d->qmlObject->rootObject(), "parent");
-    QQmlProperty prop(d->qmlObject->rootObject(), "anchors.fill");
-    prop.write(expr.evaluate());
-}
-
-QUrl WidgetExplorer::source() const
-{
-    return d->qmlObject->source();
-}
-
 void WidgetExplorer::setContainment(Plasma::Containment *containment)
 {
     if (d->containment != containment) {
@@ -402,7 +337,6 @@ void WidgetExplorer::setContainment(Plasma::Containment *containment)
             connect(d->containment, SIGNAL(destroyed(QObject*)), this, SLOT(containmentDestroyed()));
             connect(d->containment, SIGNAL(immutabilityChanged(Plasma::Types::ImmutabilityType)), this, SLOT(immutabilityChanged(Plasma::Types::ImmutabilityType)));
 
-            setLocation(containment->location());
         }
 
         d->initRunningApplets();
