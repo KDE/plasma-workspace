@@ -87,6 +87,7 @@ Rectangle {
                     PropertyChanges {
                         target: sidePanel
                         visible: false
+                        height: containment.availableScreenRegion(containment.screen)[0].height;
                     }
                 },
                 State {
