@@ -88,7 +88,7 @@ PlasmaCore.FrameSvgItem {
                     width: theme.mediumIconSize
                     height: width
                     anchors.centerIn: iconWidget
-                    source: QIcon("media-playback-start")
+                    source: "media-playback-start"
                     visible: model["State"] != "Running"
                 }
                 Column {
