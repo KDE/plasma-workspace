@@ -313,7 +313,7 @@ void WidgetExplorer::setDesktopView(DesktopView *view)
 
 void WidgetExplorer::setApplication(const QString &app)
 {
-    if (d->application == app) {
+    if (d->application == app && !app.isEmpty()) {
         return;
     }
 
