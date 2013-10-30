@@ -297,20 +297,6 @@ WidgetExplorer::~WidgetExplorer()
 }
 
 
-PlasmaQuickView *WidgetExplorer::view()
-{
-    return d->view;
-}
-
-void WidgetExplorer::setView(PlasmaQuickView *view)
-{
-    d->view = view;
-    if (view) {
-        setContainment(view->containment());
-    }
-    emit viewChanged();
-}
-
 void WidgetExplorer::setApplication(const QString &app)
 {
     if (d->application == app && !app.isEmpty()) {
@@ -346,6 +332,7 @@ void WidgetExplorer::setContainment(Plasma::Containment *containment)
         }
 
         d->initRunningApplets();
+        emit containmentChanged();
     }
 }
 

@@ -80,10 +80,7 @@ class WidgetExplorer : public QObject
      */
     Q_PROPERTY(QString application READ application WRITE setApplication NOTIFY applicationChanged)
 
-    /**
-     * The view in which we want to add widgets in the end
-     */
-    Q_PROPERTY(PlasmaQuickView *view READ view WRITE setView NOTIFY viewChanged)
+    Q_PROPERTY(Plasma::Containment *containment READ containment WRITE setContainment NOTIFY containmentChanged)
 
 public:
     explicit WidgetExplorer(QObject *parent = 0);
@@ -116,10 +113,6 @@ public:
      */
     Plasma::Corona *corona() const;
 
-
-    PlasmaQuickView *view();
-    void setView(PlasmaQuickView *view);
-
     QObject *widgetsModel() const;
     QObject *filterModel() const;
 
@@ -137,6 +130,7 @@ Q_SIGNALS:
     void shouldClose();
     void viewChanged();
     void applicationChanged();
+    void containmentChanged();
 
 public Q_SLOTS:
     /**

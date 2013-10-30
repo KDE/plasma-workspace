@@ -91,7 +91,7 @@ ShellCorona::ShellCorona(QObject *parent)
     d->desktopDefaultsConfig = KConfigGroup(KSharedConfig::openConfig(package().filePath("defaults")), "Desktop");
 
     qmlRegisterType<WidgetExplorer>("org.kde.plasma.private.shell", 2, 0, "WidgetExplorer");
-    qmlRegisterType<DesktopView>();
+    qmlRegisterType<Plasma::Containment>();
 
     connect(&d->appConfigSyncTimer, &QTimer::timeout,
             this, &ShellCorona::syncAppConfig);
@@ -469,7 +469,7 @@ void ShellCorona::toggleWidgetExplorer()
     foreach (DesktopView *view, d->views) {
         if (view->screen()->geometry().contains(cursorPos)) {
             //The view QML has to provide something to display the activity explorer
-            view->rootObject()->metaObject()->invokeMethod(view->rootObject(), "toggleWidgetExplorer");
+            view->rootObject()->metaObject()->invokeMethod(view->rootObject(), "toggleWidgetExplorer", Q_ARG(QVariant, QVariant::fromValue(sender())));
             return;
         }
     }

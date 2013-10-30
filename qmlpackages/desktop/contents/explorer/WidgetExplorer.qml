@@ -36,6 +36,8 @@ Item {
     property int minimumWidth: theme.mSize(theme.defaultFont).width * 12
     property int minimumHeight: 800//topBar.height + list.delegateHeight + (widgetExplorer.orientation == Qt.Horizontal ? scrollBar.height : 0) + 4
 
+    property alias containment: widgetExplorer.containment
+
     property Item getWidgetsButton
     property Item categoryButton
 
@@ -43,7 +45,7 @@ Item {
 
     WidgetExplorer {
         id: widgetExplorer
-        view: desktop
+        //view: desktop
         onShouldClose: main.closed();
     }
     

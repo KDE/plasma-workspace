@@ -32,7 +32,7 @@ Rectangle {
 
     property Item containment
 
-    function toggleWidgetExplorer() {
+    function toggleWidgetExplorer(containment) {
         console.log("Widget Explorer toggled");
 
         sidePanelStack.pop(blankPage);
@@ -42,6 +42,7 @@ Rectangle {
         } else {
             var page = sidePanelStack.push(Qt.resolvedUrl("../explorer/WidgetExplorer.qml"));
             page.closed.connect(function(){sidePanelStack.state = "closed";});
+            page.containment = containment;
             sidePanelStack.state = "widgetExplorer";
         }
     }
