@@ -44,6 +44,7 @@ Item {
     WidgetExplorer {
         id: widgetExplorer
         desktopView: desktop
+        onShouldClose: main.closed();
     }
     
     PlasmaComponents.ContextMenu {

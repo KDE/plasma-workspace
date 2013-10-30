@@ -128,13 +128,10 @@ public:
      */
     Q_INVOKABLE void uninstall(const QString &pluginName);
 
-    Q_INVOKABLE void close();
-    //Q_INVOKABLE QPoint tooltipPosition(QGraphicsObject *item, int tipWidth, int tipHeight);
-
 Q_SIGNALS:
     void widgetsMenuActionsChanged();
     void extraActionsChanged();
-    void closed();
+    void shouldClose();
     void desktopViewChanged();
     void applicationChanged();
 

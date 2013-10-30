@@ -391,7 +391,7 @@ void WidgetExplorer::addApplet(const QString &pluginName)
 void WidgetExplorer::immutabilityChanged(Plasma::Types::ImmutabilityType type)
 {
     if (type != Plasma::Types::Mutable) {
-        close();
+        emit shouldClose();
     }
 }
 
@@ -442,7 +442,7 @@ void WidgetExplorer::downloadWidgets(const QString &type)
           knsDialog->raise();
          */
     }
-    close();
+    emit shouldClose();
 }
 
 void WidgetExplorer::openWidgetFile()
@@ -460,7 +460,7 @@ void WidgetExplorer::openWidgetFile()
     assistant->raise();
     assistant->setFocus();
 */
-    close();
+    emit shouldClose();
 }
 
 void WidgetExplorer::uninstall(const QString &pluginName)
@@ -479,12 +479,6 @@ void WidgetExplorer::uninstall(const QString &pluginName)
             break;
         }
     }
-}
-
-void WidgetExplorer::close()
-{
-    emit closed();
-    deleteLater();
 }
 
 
