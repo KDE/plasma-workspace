@@ -188,5 +188,4 @@ Rectangle {
         desktop.fillScreen = true;
         print("View org.kde.desktop QML loaded")
     }
-
 }
