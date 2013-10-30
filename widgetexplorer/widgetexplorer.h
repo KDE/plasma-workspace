@@ -75,6 +75,11 @@ class WidgetExplorer : public QObject
      */
     Q_PROPERTY(QList<QObject *> extraActions READ extraActions NOTIFY extraActionsChanged)
 
+    /**
+     * The application that owns the widget list. different application may show different lists
+     */
+    Q_PROPERTY(QString application READ application WRITE setApplication NOTIFY applicationChanged)
+
     Q_PROPERTY(DesktopView *desktopView READ desktopView WRITE setDesktopView NOTIFY desktopViewChanged)
 
 public:
@@ -90,7 +95,7 @@ public:
      *
      * @arg application the application which the widgets should be loaded for.
      */
-    void populateWidgetList(const QString &application = QString());
+    void setApplication(const QString &application = QString());
 
     /**
      * Changes the current default containment to add applets to
@@ -131,6 +136,7 @@ Q_SIGNALS:
     void extraActionsChanged();
     void closed();
     void desktopViewChanged();
+    void applicationChanged();
 
 public Q_SLOTS:
     /**

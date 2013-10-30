@@ -281,8 +281,10 @@ WidgetExplorer::WidgetExplorer(QObject *parent)
         : QObject(parent),
           d(new WidgetExplorerPrivate(this))
 {
-    populateWidgetList();
+    //FIXME: delay
+    setApplication();
     d->initRunningApplets();
+    
     d->filterItemModel.setSortCaseSensitivity(Qt::CaseInsensitive);
     d->filterItemModel.setDynamicSortFilter(true);
     d->filterItemModel.setSourceModel(&d->itemModel);
@@ -309,14 +311,18 @@ void WidgetExplorer::setDesktopView(DesktopView *view)
     emit desktopViewChanged();
 }
 
-void WidgetExplorer::populateWidgetList(const QString &app)
+void WidgetExplorer::setApplication(const QString &app)
 {
+    if (d->application == app) {
+        return;
+    }
+
     d->application = app;
     d->itemModel.setApplication(app);
     d->initFilters();
 
     d->itemModel.setRunningApplets(d->runningApplets);
-
+    emit applicationChanged();
 }
 
 QString WidgetExplorer::application()
