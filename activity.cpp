@@ -20,12 +20,14 @@
 #include "shellcorona.h"
 #include "kidenticongenerator.h"
 
+#include <QAction>
 #include <QDebug>
 #include <QPixmap>
 #include <QString>
 #include <QSize>
 #include <QFile>
 
+#include <kactioncollection.h>
 #include <kconfig.h>
 #include <kicon.h>
 #include <kstandarddirs.h>
@@ -209,6 +211,12 @@ Plasma::Containment* Activity::containmentForScreen(int screen)
         // ensure the containment _also_ knows which screen we think it is on;
         // can happen when swapping between activities without stopping them first
         containment->setScreen(screen);
+    }
+
+    QAction *closeAction = containment->actions()->action("remove");
+    if (closeAction) {
+        closeAction->setEnabled(false);
+        closeAction->setVisible(false);
     }
 
     return containment;
