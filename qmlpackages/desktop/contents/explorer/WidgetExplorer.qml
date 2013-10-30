@@ -95,6 +95,7 @@ Item {
     PlasmaCore.Dialog {
         id: tooltipDialog
         property Item appletDelegate
+        location: PlasmaCore.Types.LeftEdge
 
         Component.onCompleted: {
             tooltipDialog.setAttribute(Qt.WA_X11NetWmWindowTypeToolTip, true)
@@ -106,10 +107,11 @@ Item {
                 toolTipHideTimer.restart()
                 toolTipShowTimer.running = false
             } else if (tooltipDialog.visible) {
-                var point = main.tooltipPosition()
+                tooltipDialog.visualParent = appletDelegate
                 tooltipDialog.x = point.x
                 tooltipDialog.y = point.y
             } else {
+                tooltipDialog.visualParent = appletDelegate
                 toolTipShowTimer.restart()
                 toolTipHideTimer.running = false
             }
@@ -129,9 +131,6 @@ Item {
         interval: 500
         repeat: false
         onTriggered: {
-            var point = main.tooltipPosition()
-            tooltipDialog.x = point.x
-            tooltipDialog.y = point.y
             tooltipDialog.visible = true
         }
     }
@@ -140,9 +139,6 @@ Item {
         interval: 1000
         repeat: false
         onTriggered: tooltipDialog.visible = false
-    }
-    function tooltipPosition() {
-        return widgetExplorer.tooltipPosition(tooltipDialog.appletDelegate, tooltipDialog.width, tooltipDialog.height);
     }
 
     Loader {

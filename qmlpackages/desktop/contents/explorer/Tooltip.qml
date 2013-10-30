@@ -17,10 +17,11 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-import QtQuick 2.0
+import QtQuick 2.1
+import QtQuick.Layouts 1.0 as Layouts
 import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.plasma.core 2.0 as PlasmaCore
-import org.kde.qtextracomponents 2.0
+import org.kde.plasma.extras 2.0 as PlasmaExtras
 
 MouseArea {
     id: main
@@ -29,8 +30,8 @@ MouseArea {
     onEntered: toolTipHideTimer.running = false
     onExited: toolTipHideTimer.running = true
 
-    width: childrenRect.width
-    height: 200
+    width: theme.mSize(theme.defaultFont).width * 35
+    height: theme.mSize(theme.defaultFont).height * 16
 
     property variant icon
     property string title
@@ -58,27 +59,30 @@ MouseArea {
             local = tooltipDialog.appletDelegate.local
         }
     }
-    QIconItem {
+    PlasmaCore.IconItem {
         id: tooltipIconWidget
-        anchors.left: parent.left
-        anchors.top: parent.top
+        anchors {
+            left: parent.left
+            top: parent.top
+            margins: 8
+        }
         width: theme.hugeIconSize
         height: width
-        icon: main.icon
+        source: main.icon
     }
     Column {
         id: nameColumn
         spacing: 8
         anchors {
             left: tooltipIconWidget.right
-            leftMargin: 8
+            margins: 8
             top: parent.top
             right: parent.right
         }
 
-        PlasmaComponents.Label {
+        PlasmaExtras.Heading {
             text: title
-            font.bold:true
+            level: 2
             anchors.left: parent.left
             anchors.right: parent.right
             height: paintedHeight
@@ -91,16 +95,16 @@ MouseArea {
             wrapMode: Text.Wrap
         }
     }
-    Grid {
-        anchors.top: tooltipIconWidget.bottom
-        anchors.topMargin: 16
-        anchors.bottom: uninstallButton.top
-        anchors.bottomMargin: 4
-        rows: 3
+    Layouts.GridLayout {
         columns: 2
-        spacing: 4
+        anchors {
+            top: (nameColumn.height > tooltipIconWidget.height) ? nameColumn.bottom : tooltipIconWidget.bottom
+            topMargin: 16
+            horizontalCenter: parent.horizontalCenter
+        }
         PlasmaComponents.Label {
             text: i18n("License:")
+            Layouts.Layout.alignment: Qt.AlignVCenter|Qt.AlignRight
         }
         PlasmaComponents.Label {
             id: licenseText
@@ -109,6 +113,7 @@ MouseArea {
         }
         PlasmaComponents.Label {
             text: i18n("Author:")
+            Layouts.Layout.alignment: Qt.AlignVCenter|Qt.AlignRight
         }
         PlasmaComponents.Label {
             text: author
@@ -116,6 +121,7 @@ MouseArea {
         }
         PlasmaComponents.Label {
             text: i18n("Email:")
+            Layouts.Layout.alignment: Qt.AlignVCenter|Qt.AlignRight
         }
         PlasmaComponents.Label {
             text: email
