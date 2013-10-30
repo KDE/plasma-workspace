@@ -381,6 +381,9 @@ void PanelView::restore()
     connect(containment(), &Plasma::Containment::uiReadyChanged,
             this, &PanelView::setVisible);
 
+    connect(containment(), SIGNAL(destroyed(QObject *)),
+            this, SLOT(deleteLater()));
+
     static const int MINSIZE = 10;
 
     m_offset = config().readEntry<int>("offset", 0);

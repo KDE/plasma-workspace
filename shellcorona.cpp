@@ -720,6 +720,16 @@ void ShellCorona::addPanel(const QString &plugin)
         loc = availableLocations.first();
     }
     panel->setLocation(loc);
+    switch (loc) {
+    case Plasma::Types::LeftEdge:
+    case Plasma::Types::RightEdge:
+        panel->setFormFactor(Plasma::Types::Vertical);
+        break;
+    default:
+        panel->setFormFactor(Plasma::Types::Horizontal);
+        break;
+    }
+    panel->setScreen(0);
     
 
     d->waitingPanels << panel;
