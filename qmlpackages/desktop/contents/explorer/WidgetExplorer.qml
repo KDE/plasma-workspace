@@ -99,10 +99,8 @@ Item {
         property Item appletDelegate
         location: PlasmaCore.Types.LeftEdge
 
-        Component.onCompleted: {
-            tooltipDialog.setAttribute(Qt.WA_X11NetWmWindowTypeToolTip, true)
-            tooltipDialog.windowFlags = Qt.Window|Qt.WindowStaysOnTopHint|Qt.X11BypassWindowManagerHint
-        }
+        type: PlasmaCore.Dialog.Tooltip
+        windowFlags:Qt.Window|Qt.WindowStaysOnTopHint|Qt.X11BypassWindowManagerHint
 
         onAppletDelegateChanged: {
             if (!appletDelegate) {
