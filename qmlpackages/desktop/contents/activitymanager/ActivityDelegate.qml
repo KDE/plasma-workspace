@@ -71,24 +71,24 @@ PlasmaCore.FrameSvgItem {
 
                 Component.onCompleted: mainMouseArea = mouseArea
 
-                QIconItem {
+                PlasmaCore.IconItem {
                     id: iconWidget
                     anchors.verticalCenter: parent.verticalCenter
                     x: y
                     width: theme.hugeIconSize
                     height: width
-                    icon: QIcon(Icon)
+                    source: Icon
                 }
                 QPixmapItem {
                     anchors.fill: iconWidget
                     pixmap: Icon ? undefined : activityManager.pixmapForActivity(model["DataEngineSource"])
                     visible: Icon == ""
                 }
-                QIconItem {
+                PlasmaCore.IconItem {
                     width: theme.mediumIconSize
                     height: width
                     anchors.centerIn: iconWidget
-                    icon: QIcon("media-playback-start")
+                    source: QIcon("media-playback-start")
                     visible: model["State"] != "Running"
                 }
                 Column {
