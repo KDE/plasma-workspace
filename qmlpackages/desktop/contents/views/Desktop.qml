@@ -32,17 +32,16 @@ Rectangle {
 
     property Item containment
 
-    function toggleWidgetExplorer(explorerObject) {
+    function toggleWidgetExplorer() {
         console.log("Widget Explorer toggled");
 
         sidePanelStack.pop(blankPage);
 
         if (sidePanelStack.state == "widgetExplorer") {
-            explorerObject.close();
             sidePanelStack.state = "closed";
         } else {
-            sidePanelStack.push(Qt.resolvedUrl("../explorer/WidgetExplorer.qml"));
-            explorerObject.closed.connect(function(){sidePanelStack.state = "closed";});
+            var page = sidePanelStack.push(Qt.resolvedUrl("../explorer/WidgetExplorer.qml"));
+            page.closed.connect(function(){sidePanelStack.state = "closed";});
             sidePanelStack.state = "widgetExplorer";
         }
     }

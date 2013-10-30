@@ -127,7 +127,7 @@ private Q_SLOTS:
     void checkLoadingDesktopsComplete();
     void createWaitingPanels();
     void handleContainmentAdded(Plasma::Containment *c);
-    void showWidgetExplorer();
+    void toggleWidgetExplorer();
     void toggleActivityManager();
     void syncAppConfig();
     void setDashboardShown(bool show);

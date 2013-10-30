@@ -347,7 +347,7 @@ DesktopView *WidgetExplorer::desktopView()
 }
 
 void WidgetExplorer::setDesktopView(DesktopView *view)
-{qWarning()<<"AAAAAAAAAAAAAAAAAAAAAAA"<<view;
+{
     d->desktopView = view;
     if (view) {
         setContainment(view->containment());

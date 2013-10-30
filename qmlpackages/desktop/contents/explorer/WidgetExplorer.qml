@@ -39,8 +39,10 @@ Item {
     property Item getWidgetsButton
     property Item categoryButton
 
+    signal closed()
+
     WidgetExplorer {
-        id:widgetExplorer
+        id: widgetExplorer
         desktopView: desktop
     }
     
@@ -214,7 +216,7 @@ Item {
                 }
                 PlasmaComponents.ToolButton {
                     iconSource: "window-close"
-                    onClicked: widgetExplorer.close()
+                    onClicked: main.closed()
                 }
             }
             Component.onCompleted: {
@@ -236,7 +238,7 @@ Item {
             PlasmaComponents.ToolButton {
                 anchors.right: parent.right
                 iconSource: "window-close"
-                onClicked: widgetExplorer.close()
+                onClicked: main.closed()
             }
             PlasmaComponents.TextField {
                 anchors {

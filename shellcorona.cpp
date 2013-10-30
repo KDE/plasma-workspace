@@ -47,7 +47,6 @@ public:
     Private(ShellCorona *corona)
         : q(corona),
           desktopWidget(QApplication::desktop()),
-          widgetExplorer(nullptr),
           activityController(new KActivities::Controller(q)),
           activityConsumer(new KActivities::Consumer(q))
     {
@@ -66,7 +65,6 @@ public:
     QString shell;
     QDesktopWidget * desktopWidget;
     QList <DesktopView *> views;
-    QPointer<WidgetExplorer> widgetExplorer;
     KActivities::Controller *activityController;
     KActivities::Consumer *activityConsumer;
     QHash <Plasma::Containment *, PanelView *> panelViews;
@@ -459,39 +457,22 @@ void ShellCorona::updateScreenOwner(int wasScreen, int isScreen, Plasma::Contain
 void ShellCorona::handleContainmentAdded(Plasma::Containment* c)
 {
     connect(c, &Plasma::Containment::showAddWidgetsInterface,
-            this, &ShellCorona::showWidgetExplorer);
+            this, &ShellCorona::toggleWidgetExplorer);
     connect(c, &QObject::destroyed, [=] (QObject *o) {
         d->loadingDesktops.remove(static_cast<Plasma::Containment *>(o));
     });
 }
 
-void ShellCorona::showWidgetExplorer()
+void ShellCorona::toggleWidgetExplorer()
 {
     QPoint cursorPos = QCursor::pos();
     foreach (DesktopView *view, d->views) {
         if (view->screen()->geometry().contains(cursorPos)) {
-            if (!d->widgetExplorer) {
-                QString expqml = package().filePath("widgetexplorer");
-                qDebug() << "Script to load for WidgetExplorer: " << expqml;
-                d->widgetExplorer = new WidgetExplorer();
-                d->widgetExplorer.data()->setSource(QUrl::fromLocalFile(expqml));
-            }
-            Plasma::Containment *c = 0;
-            c = dynamic_cast<Plasma::Containment*>(sender());
-            if (c) {
-                qDebug() << "Found containment.";
-                d->widgetExplorer.data()->setContainment(c);
-            } else {
-                // FIXME: try harder to find a suitable containment?
-                qWarning() << "containment not set, don't know where to add the applet.";
-            }
             //The view QML has to provide something to display the activity explorer
-            view->rootObject()->metaObject()->invokeMethod(view->rootObject(), "toggleWidgetExplorer", Q_ARG(QVariant, QVariant::fromValue(d->widgetExplorer.data())));
+            view->rootObject()->metaObject()->invokeMethod(view->rootObject(), "toggleWidgetExplorer");
             return;
         }
     }
-
-
 }
 
 void ShellCorona::toggleActivityManager()
