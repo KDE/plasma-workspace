@@ -89,4 +89,3 @@ endif(X11_FOUND)
 
 install(TARGETS plasma-shell ${INSTALL_TARGETS_DEFAULT_ARGS})
 
-add_subdirectory(qmlpackages)
