@@ -14,7 +14,6 @@ find_path(KDE_MODULES_DIR NAMES KDE4Macros.cmake PATH_SUFFIXES share/cmake/modul
 
 add_definitions(-DHAVE_X11=${HAVE_X11})
 
-find_package(Qt5Transitional REQUIRED Core)
 find_package(Qt5Qml REQUIRED)
 find_package(Qt5Quick REQUIRED)
 find_package(Qt5Script REQUIRED)
