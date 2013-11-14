@@ -84,7 +84,7 @@ target_include_directories(plasma-shell PRIVATE "${CMAKE_BINARY_DIR}")
 if(X11_FOUND)
   target_link_libraries(plasma-shell ${X11_LIBRARIES} ${XCB_XCB_LIBRARY} )
   target_link_libraries(plasma-shell Qt5::X11Extras)
-endif(X11_FOUND)
+endif()
 
 install(TARGETS plasma-shell ${INSTALL_TARGETS_DEFAULT_ARGS})
 
