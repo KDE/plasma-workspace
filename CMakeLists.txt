@@ -7,10 +7,7 @@ set(CMAKE_AUTOMOC ON)
 # to always look for includes there:
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 
-set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${ECM_MODULE_PATH})
-
-
-find_path(KDE_MODULES_DIR NAMES KDE4Macros.cmake PATH_SUFFIXES share/cmake/modules)
+set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH})
 
 add_definitions(-DHAVE_X11=${HAVE_X11})
 
@@ -61,16 +58,15 @@ add_executable(plasma-shell
 
 # The Qt5Widgets_LIBRARIES variable also includes QtGui and QtCore
 target_link_libraries(plasma-shell
- #${Qt5Widgets_LIBRARIES}
- ${Qt5Quick_LIBRARIES}
- ${Qt5Qml_LIBRARIES}
- ${KCore_LIBRARIES}
+ #Qt5::Widgets
+ Qt5::Quick
+ Qt5::Qml
  KF5::KIOCore
- ${KWindowSystem_LIBRARIES}
+ KF5::KWindowSystem
  KF5::KCoreAddons
  Plasma
  PlasmaQuick
- ${Qt5Script_LIBRARIES}
+ Qt5::Script
  KF5::KDE4Support
  KF5::Solid
  KF5::KDeclarative
