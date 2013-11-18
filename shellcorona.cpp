@@ -537,7 +537,7 @@ void ShellCorona::checkActivities()
     }
 
     // Checking whether the result we got is valid. Just in case.
-    Q_ASSERT_X(existingActivities.isEmpty(), "isEmpty", "There are no activities, and the service is running");
+    Q_ASSERT_X(!existingActivities.isEmpty(), "isEmpty", "There are no activities, and the service is running");
     Q_ASSERT_X(existingActivities[0] != QStringLiteral("00000000-0000-0000-0000-000000000000"),
             "null uuid", "There is a nulluuid activity present");
 
