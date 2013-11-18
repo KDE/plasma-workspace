@@ -536,79 +536,17 @@ void ShellCorona::checkActivities()
         activityAdded(id);
     }
 
-    QStringList newActivities;
-    QString newCurrentActivity;
-    //migration checks:
-    //-containments with an invalid id are deleted.
-    //-containments that claim they were on a screen are kept together, and are preferred if we
-    //need to initialize the current activity.
-    //-containments that don't know where they were or who they were with just get made into their
-    //own activity.
-    foreach (Plasma::Containment *cont, containments()) {
+    // Checking whether the result we got is valid. Just in case.
+    Q_ASSERT_X(existingActivities.isEmpty(), "isEmpty", "There are no activities, and the service is running");
+    Q_ASSERT_X(existingActivities[0] != QStringLiteral("00000000-0000-0000-0000-000000000000"),
+            "null uuid", "There is a nulluuid activity present");
+
+    // Killing the unassigned containments
+    foreach(Plasma::Containment * cont, containments()) {
         if ((cont->containmentType() == Plasma::Types::DesktopContainment ||
-             cont->containmentType() == Plasma::Types::CustomContainment)) {
-            const QString oldId = cont->activity();
-            if (!oldId.isEmpty()) {
-                if (existingActivities.contains(oldId)) {
-                    continue; //it's already claimed
-                }
-                qDebug() << "invalid id" << oldId;
-                //byebye
-                cont->destroy();
-                continue;
-            }
-
-            if (cont->screen() > -1 && !newCurrentActivity.isEmpty()) {
-                //it belongs on the new current activity
-                cont->setActivity(newCurrentActivity);
-                continue;
-            }
-
-            /*//discourage blank names
-            if (context->currentActivity().isEmpty()) {
-                context->setCurrentActivity(i18nc("Default name for a new activity", "New Activity"));
-            }*/
-
-            //create a new activity for the containment
-            const QString id = d->activityController->addActivity(cont->activity());
-            cont->setActivity(id);
-            newActivities << id;
-            if (cont->screen() > -1) {
-                newCurrentActivity = id;
-            }
-            qDebug() << "migrated" << cont->id() << cont->activity();
-        }
-    }
-
-    qDebug() << "migrated?" << !newActivities.isEmpty() << containments().count();
-    if (!newActivities.isEmpty()) {
-        requestConfigSync();
-    }
-
-    //init the newbies
-    foreach (const QString &id, newActivities) {
-        activityAdded(id);
-    }
-
-    //ensure the current activity is initialized
-    if (d->activityController->currentActivity().isEmpty()) {
-        qDebug() << "guessing at current activity";
-        if (existingActivities.isEmpty()) {
-            if (newCurrentActivity.isEmpty()) {
-                if (newActivities.isEmpty()) {
-                    qDebug() << "no activities!?! Bad activitymanager, no cookie!";
-                    QString id = d->activityController->addActivity(i18nc("Default name for a new activity", "New Activity"));
-                    activityAdded(id);
-                    d->activityController->setCurrentActivity(id);
-                    qDebug() << "created emergency activity" << id;
-                } else {
-                    d->activityController->setCurrentActivity(newActivities.first());
-                }
-            } else {
-                d->activityController->setCurrentActivity(newCurrentActivity);
-            }
-        } else {
-            d->activityController->setCurrentActivity(existingActivities.first());
+                cont->containmentType() == Plasma::Types::CustomContainment) &&
+                !existingActivities.contains(cont->activity())) {
+            cont->destroy();
         }
     }
 }
