@@ -525,7 +525,7 @@ void ShellCorona::checkActivities()
 
     KActivities::Consumer::ServiceStatus status = d->activityController->serviceStatus();
     //qDebug() << "$%$%$#%$%$%Status:" << status;
-    if (status == KActivities::Consumer::NotRunning) {
+    if (status != KActivities::Consumer::Running) {
         //panic and give up - better than causing a mess
         qDebug() << "No ActivityManager? Help, I've fallen and I can't get up!";
         return;
@@ -730,7 +730,7 @@ void ShellCorona::addPanel(const QString &plugin)
         break;
     }
     panel->setScreen(0);
-    
+
 
     d->waitingPanels << panel;
     d->waitingPanelsTimer->start();
