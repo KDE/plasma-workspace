@@ -29,7 +29,6 @@
 
 #include <kactioncollection.h>
 #include <kconfig.h>
-#include <kicon.h>
 #include <kstandarddirs.h>
 #include <kwindowsystem.h>
 
@@ -103,7 +102,7 @@ QString Activity::name()
 QPixmap Activity::pixmap(const QSize &size)
 {
     if (m_info->isValid() && !m_info->icon().isEmpty()) {
-        return KIcon(m_info->icon()).pixmap(size);
+        return QIcon::fromTheme(m_info->icon()).pixmap(size);
     } else {
         return KIdenticonGenerator::self()->generatePixmap(size.width(), m_id);
     }
@@ -145,7 +144,7 @@ void Activity::removed()
     }
 
     const QString name = "activities/" + m_id;
-    QFile::remove(KStandardDirs::locateLocal("appdata", name));
+    QFile::remove(QStandardPaths::writableLocation(QStandardPaths::DataLocation)+QChar('/')+name);
 }
 
 Plasma::Containment* Activity::containmentForScreen(int screen)

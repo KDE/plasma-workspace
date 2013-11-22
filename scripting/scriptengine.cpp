@@ -264,7 +264,7 @@ QScriptValue ScriptEngine::loadTemplate(QScriptContext *context, QScriptEngine *
     }
 
     const QString constraint = QString("[X-Plasma-Shell] == '%1' and [X-KDE-PluginInfo-Name] == '%2'")
-                                      .arg(KComponentData::mainComponent().componentName(),layout);
+                                      .arg(qApp->applicationName(),layout);
     KService::List offers = KServiceTypeTrader::self()->query("Plasma/LayoutTemplate", constraint);
 
     if (offers.isEmpty()) {

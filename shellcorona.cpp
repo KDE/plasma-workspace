@@ -596,7 +596,7 @@ void ShellCorona::checkAddPanelAction(const QStringList &sycocaChanges)
 
     KPluginInfo::List panelContainmentPlugins = Plasma::PluginLoader::listContainmentsOfType("Panel");
     const QString constraint = QString("[X-Plasma-Shell] == '%1' and 'panel' ~in [X-Plasma-ContainmentCategories]")
-                                      .arg(KComponentData::mainComponent().componentName());
+                                      .arg(qApp->applicationName());
     KService::List templates = KServiceTypeTrader::self()->query("Plasma/LayoutTemplate", constraint);
 
     if (panelContainmentPlugins.count() + templates.count() == 1) {

@@ -98,7 +98,7 @@ QList<int> AppInterface::panelIds() const
 
 QString AppInterface::applicationVersion() const
 {
-    return KComponentData::mainComponent().aboutData()->version();
+    return qApp->applicationVersion();
 }
 
 QString AppInterface::platformVersion() const
