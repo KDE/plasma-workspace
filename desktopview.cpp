@@ -29,11 +29,12 @@
 
 #include <Plasma/Package>
 
-DesktopView::DesktopView(ShellCorona *corona, QWindow *parent)
-    : PlasmaQuickView(corona, parent),
+DesktopView::DesktopView(ShellCorona *corona, QScreen *screen)
+    : PlasmaQuickView(corona, 0),
       m_stayBehind(false),
       m_fillScreen(false)
 {
+    setScreen(screen);
     engine()->rootContext()->setContextProperty("desktop", this);
     setSource(QUrl::fromLocalFile(corona->package().filePath("views", "Desktop.qml")));
 }
@@ -75,10 +76,15 @@ void DesktopView::setFillScreen(bool fillScreen)
         return;
     }
 
-    resize(screen()->geometry().width(), screen()->geometry().height());
-    connect(screen(), &QScreen::geometryChanged, [=]{resize(screen()->geometry().width(), screen()->geometry().height());});
-
     m_fillScreen = fillScreen;
+
+    if (m_fillScreen) {
+        setGeometry(screen()->geometry());
+        connect(screen(), &QScreen::geometryChanged, this, static_cast<void (QWindow::*)(const QRect&)>(&QWindow::setGeometry));
+    } else {
+        disconnect(screen(), &QScreen::geometryChanged, this, static_cast<void (QWindow::*)(const QRect&)>(&QWindow::setGeometry));
+    }
+
     emit fillScreenChanged();
 }
 
@@ -131,6 +137,5 @@ void DesktopView::showConfigurationInterface(Plasma::Applet *applet)
     m_configView.data()->init();
     m_configView.data()->show();
 }
-
 
 #include "moc_desktopview.cpp"

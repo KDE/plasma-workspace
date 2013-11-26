@@ -30,6 +30,7 @@ namespace Plasma
 
 class Activity;
 class PanelView;
+class QScreen;
 namespace WorkspaceScripting {
     class DesktopScriptEngine;
 }
@@ -97,7 +98,8 @@ protected Q_SLOTS:
     void screenResized(int screen);
     void workAreaResized(int screen);
 
-    void checkViews();
+    void screenAdded(QScreen *screen);
+    void screenRemoved(QObject *screen);
     void updateScreenOwner(int wasScreen, int isScreen, Plasma::Containment *containment);
 
     void printScriptError(const QString &error);

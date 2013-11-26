@@ -106,8 +106,6 @@ ShellCorona::ShellCorona(QObject *parent)
 
     connect(d->desktopWidget, &QDesktopWidget::resized,
             this, &ShellCorona::screenResized );
-    connect(d->desktopWidget, &QDesktopWidget::screenCountChanged,
-            this, &ShellCorona::screenCountChanged);
     connect(d->desktopWidget, &QDesktopWidget::workAreaResized,
             this, &ShellCorona::workAreaResized);
 
@@ -159,6 +157,7 @@ ShellCorona::ShellCorona(QObject *parent)
 
 ShellCorona::~ShellCorona()
 {
+    qDeleteAll(d->views);
 }
 
 void ShellCorona::setShell(const QString &shell)
@@ -186,7 +185,6 @@ void ShellCorona::load()
 {
     if (d->shell.isEmpty()) return;
 
-    checkViews();
     loadLayout("plasma-" + d->shell + "-appletsrc");
 
     if (containments().isEmpty()) {
@@ -195,6 +193,13 @@ void ShellCorona::load()
 
     processUpdateScripts();
     checkActivities();
+
+    for (QScreen *screen : QGuiApplication::screens()) {
+        screenAdded(screen);
+    }
+    connect(qApp, &QGuiApplication::screenAdded,
+            this, &ShellCorona::screenAdded);
+
     checkScreens();
 }
 
@@ -251,9 +256,6 @@ KActivities::Controller *ShellCorona::activityController()
 
 void ShellCorona::checkScreens(bool signalWhenExists)
 {
-
-    checkViews();
-
     // quick sanity check to ensure we have containments for each screen
     int num = numScreens();
     for (int i = 0; i < num; ++i) {
@@ -271,7 +273,7 @@ void ShellCorona::checkScreen(int screen, bool signalWhenExists)
     // ShellCorona will, when signalWhenExists is true, emit a containmentAdded signal
     // even if the containment actually existed prior to this method being called.
     //
-    //note: hte signal actually triggers view creation only for panels, atm.
+    //note: the signal actually triggers view creation only for panels, atm.
     //desktop views are created in response to containment's screenChanged signal instead, which is
     //buggy (sometimes the containment thinks it's already on the screen, so no view is created)
 
@@ -355,7 +357,6 @@ PanelView *ShellCorona::panelView(Plasma::Containment *containment) const
 void ShellCorona::screenCountChanged(int newCount)
 {
     qDebug() << "New screen count" << newCount;
-    checkViews();
 }
 
 void ShellCorona::screenResized(int screen)
@@ -368,34 +369,23 @@ void ShellCorona::workAreaResized(int screen)
     qDebug() << "Work area resized" << screen;
 }
 
-void ShellCorona::checkViews()
+void ShellCorona::screenAdded(QScreen *screen)
 {
-    if (d->shell.isEmpty()) {
-        return;
-    }
+    DesktopView *view = new DesktopView(this, screen);
+    d->views << view;
+    view->show();
 
-    if (d->views.count() == d->desktopWidget->screenCount()) {
-        return;
-    } else if (d->views.count() < d->desktopWidget->screenCount()) {
-        for (int i = d->views.count(); i < d->desktopWidget->screenCount(); ++i) {
+    connect(screen, SIGNAL(destroyed(QObject*)), SLOT(screenRemoved(QObject*)));
+}
 
-            DesktopView *view = new DesktopView(this);
-            QSurfaceFormat format;
-            view->show();
-
-            d->views << view;
+void ShellCorona::screenRemoved(QObject *screen)
+{
+    for (auto i = d->views.begin(); i != d->views.end()  ; i++) {
+        if ((*i)->screen() == screen) {
+            (*i)->deleteLater();
+            d->views.erase(i);
+            break;
         }
-    } else {
-        for (int i = d->desktopWidget->screenCount(); i < d->views.count(); ++i) {
-            DesktopView *view = d->views.last();
-            view->deleteLater();
-            d->views.pop_back();
-        }
-    }
-
-    //check every containment is in proper view
-    for (int i = 0; i < d->desktopWidget->screenCount(); ++i) {
-        qDebug() << "TODO: Implement loading containments into the views";
     }
 }
 

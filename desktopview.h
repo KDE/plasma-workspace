@@ -33,7 +33,7 @@ class DesktopView : public PlasmaQuickView
     Q_PROPERTY(bool fillScreen READ fillScreen WRITE setFillScreen NOTIFY fillScreenChanged)
 
 public:
-    explicit DesktopView(ShellCorona *corona, QWindow *parent = 0);
+    explicit DesktopView(ShellCorona *corona, QScreen *screen);
     virtual ~DesktopView();
 
     bool stayBehind() const;
