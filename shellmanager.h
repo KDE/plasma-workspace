@@ -34,6 +34,8 @@ public:
 
     static bool s_forceWindowed;
 
+    static void setCrashCount(int count);
+
 protected Q_SLOTS:
     void registerHandler(QObject * handler);
     void deregisterHandler(QObject * handler);
@@ -45,11 +47,17 @@ public Q_SLOTS:
 Q_SIGNALS:
     void shellChanged(const QString & shell);
 
+private Q_SLOTS:
+    void resetCrashCount();
+
 private:
     ShellManager();
 
     class Private;
     const QScopedPointer<Private> d;
+
+    static int crashes;
+    static void crashHandler(int signal);
 };
 
 #endif /* SHELLMANAGER_H */

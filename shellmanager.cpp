@@ -26,17 +26,22 @@
 #include <QList>
 #include <QTimer>
 
+#include <qplatformdefs.h>
 #include <QQmlEngine>
 #include <QQmlComponent>
 
 #include <config-prefix.h>
 #include "shellcorona.h"
 
+#include <kcrash.h>
+
 static const QString s_shellsDir(
         QString(CMAKE_INSTALL_PREFIX) + "/" + DATA_INSTALL_DIR + "/" + "plasma/shells/");
 static const QString s_shellLoaderPath = QString("/contents/loader.qml");
 
 bool ShellManager::s_forceWindowed = false;
+
+int ShellManager::crashes = 0;
 
 //
 // ShellManager
@@ -60,6 +65,10 @@ public:
 ShellManager::ShellManager()
     : d(new Private())
 {
+    // Using setCrashHandler, we end up in an infinite loop instead of quitting,
+    // use setEmergencySaveFunction instead to avoid this.
+    KCrash::setEmergencySaveFunction(ShellManager::crashHandler);
+    QTimer::singleShot(15 * 1000, this, SLOT(resetCrashCount()));
 
     connect(
         &d->shellUpdateDelay, &QTimer::timeout,
@@ -203,3 +212,39 @@ ShellManager * ShellManager::instance()
     return &manager;
 }
 
+void ShellManager::setCrashCount(int count)
+{
+    crashes = count;
+}
+
+void ShellManager::resetCrashCount()
+{
+    crashes = 0;
+}
+
+void ShellManager::crashHandler(int signal)
+{
+    /* plasma-shell restart logic as crash recovery
+     *
+     * We restart plasma-shell after crashes. When it crashes subsequently on startup,
+     * and more than two times in a row, we give up in order to not endlessly loop.
+     * Once the shell process stays alive for at least 15 seconds, we reset the crash
+     * counter, so a later crash, at runtime rather than on startup will still be
+     * recovered from.
+     *
+     * This logic is very similar as to how kwin handles it.
+     */
+    crashes++;
+    fprintf(stderr, "Application::crashHandler() called with signal %d; recent crashes: %d\n", signal, crashes);
+    char cmd[1024];
+    sprintf(cmd, "%s --crashes %d &",
+            QFile::encodeName(QCoreApplication::applicationFilePath()).constData(), crashes);
+
+    if (crashes < 3) {
+        sleep(1);
+        system(cmd);
+    } else {
+        fprintf(stderr, "Too many crashes in short order, not restarting automatically.\n");
+    }
+
+}

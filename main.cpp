@@ -36,17 +36,25 @@ int main(int argc, char** argv)
     QApplication app(argc, argv);
     app.setApplicationVersion(version);
 
-    QCommandLineOption dbg = QCommandLineOption(QStringList() << QStringLiteral("d") << QStringLiteral("qmljsdebugger"),
-                                        QStringLiteral("Enable QML Javascript debugger"));
+    QCommandLineOption dbg = QCommandLineOption(QStringList() << QStringLiteral("d") <<
+                                                QStringLiteral("qmljsdebugger"),
+                                                QStringLiteral("Enable QML Javascript debugger"));
 
-    QCommandLineOption windowed = QCommandLineOption(QStringList() << QStringLiteral("w") << QStringLiteral("windowed"),
-                                        QStringLiteral("force a windowed view for desktop purposes"));
+    QCommandLineOption windowed = QCommandLineOption(QStringList() << QStringLiteral("w") <<
+                                                     QStringLiteral("windowed"),
+                                                     QStringLiteral("Force a windowed view for testing purposes"));
+
+    QCommandLineOption crashesOption(QStringLiteral("crashes"),
+                                     QStringLiteral("Recent number of crashes"),
+                                     QStringLiteral("n"));
 
     parser.addVersionOption();
     parser.addHelpOption();
     parser.setApplicationDescription(description);
     parser.addOption(dbg);
     parser.addOption(windowed);
+    parser.addOption(crashesOption);
+
     parser.process(app);
 
     //enable the QML debugger only if --qmljsdebugger (or -d) is passed as a command line arg
@@ -56,16 +64,9 @@ int main(int argc, char** argv)
     }
 
     Plasma::PluginLoader::setPluginLoader(new ShellPluginLoader);
-    // DesktopCorona *corona = new DesktopCorona();
-    // corona->loadLayout();
-    // if (corona->containments().isEmpty()) {
-    //     corona->loadDefaultLayout();
-    // }
-    // corona->processUpdateScripts();
-    // corona->checkScreens();
 
+    ShellManager::setCrashCount(parser.value(crashesOption).toInt());
     ShellManager::s_forceWindowed = parser.isSet(windowed);
-
     ShellManager::instance();
 
     return app.exec();

@@ -15,6 +15,7 @@ find_package(Qt5Qml REQUIRED)
 find_package(Qt5Quick REQUIRED)
 find_package(Qt5Script REQUIRED)
 find_package(KCoreAddons REQUIRED)
+find_package(KCrash REQUIRED)
 find_package(Solid REQUIRED)
 find_package(KActivities REQUIRED)
 
@@ -64,6 +65,7 @@ target_link_libraries(plasma-shell
  KF5::KIOCore
  KF5::KWindowSystem
  KF5::KCoreAddons
+ KF5::KCrash
  Plasma
  PlasmaQuick
  Qt5::Script
