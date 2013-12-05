@@ -43,8 +43,8 @@ PanelView::PanelView(ShellCorona *corona, QWindow *parent)
        m_minLength(0),
        m_alignment(Qt::AlignLeft),
        m_corona(corona),
-       m_visibilityMode(NormalPanel),
-       m_strutsTimer(new QTimer(this))
+       m_strutsTimer(new QTimer(this)),
+       m_visibilityMode(NormalPanel)
 {
     QSurfaceFormat format;
     format.setAlphaBufferSize(8);
