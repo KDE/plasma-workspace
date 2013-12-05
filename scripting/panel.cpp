@@ -149,20 +149,14 @@ void Panel::setAlignment(const QString &alignment)
         bool success = false;
 
         if (alignment.compare("left", Qt::CaseInsensitive) == 0) {
-            if (v->alignment() != Qt::AlignLeft) {
-                success = true;
-                v->setAlignment(Qt::AlignLeft);
-            }
+            success = true;
+            v->setAlignment(Qt::AlignLeft);
         } else if (alignment.compare("right", Qt::CaseInsensitive) == 0) {
-            if (v->alignment() != Qt::AlignRight) {
-                success = true;
-                v->setAlignment(Qt::AlignRight);
-            }
+            success = true;
+            v->setAlignment(Qt::AlignRight);
         } else if (alignment.compare("center", Qt::CaseInsensitive) == 0) {
-            if (v->alignment() != Qt::AlignCenter) {
-                success = true;
-                v->setAlignment(Qt::AlignCenter);
-            }
+            success = true;
+            v->setAlignment(Qt::AlignCenter);
         }
 
         if (success) {
