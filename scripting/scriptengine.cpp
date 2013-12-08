@@ -527,7 +527,7 @@ QScriptValue ScriptEngine::userDataPath(QScriptContext *context, QScriptEngine *
     } else if (type.compare("pictures", Qt::CaseInsensitive) == 0) {
         location = QStandardPaths::PicturesLocation;
     } else if (type.compare("config", Qt::CaseInsensitive) == 0) {
-        location = QStandardPaths::ConfigLocation;
+        location = QStandardPaths::GenericConfigLocation;
     }
     if (context->argumentCount() > 1) {
         QString loc = QStandardPaths::writableLocation(location);
