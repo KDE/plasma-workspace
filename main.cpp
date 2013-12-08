@@ -1,5 +1,6 @@
 /*
  *  Copyright 2012 Marco Martin <mart@kde.org>
+ *  Copyright 2013 Sebastian Kügler <sebas@kde.org>
  *
  *  This program is free software; you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -18,13 +19,13 @@
 
 #include <QApplication>
 #include <qcommandlineparser.h>
-
-#include <klocalizedstring.h>
-#include "shellpluginloader.h"
-#include "shellmanager.h"
-
 #include <QtQml/QQmlDebuggingEnabler>
 #include <QDebug>
+
+#include <klocalizedstring.h>
+
+#include "shellpluginloader.h"
+#include "shellmanager.h"
 
 static const char description[] = "Plasma Shell";
 static const char version[] = "2.0";
@@ -32,7 +33,6 @@ static QCommandLineParser parser;
 
 int main(int argc, char** argv)
 {
-
     QApplication app(argc, argv);
     app.setApplicationVersion(version);
     parser.setApplicationDescription(description);
@@ -42,8 +42,8 @@ int main(int argc, char** argv)
                            QStringLiteral("Enable QML Javascript debugger"));
 
     QCommandLineOption win(QStringList() << QStringLiteral("w") <<
-                                QStringLiteral("windowed"),
-                                QStringLiteral("Force a windowed view for testing purposes"));
+                           QStringLiteral("windowed"),
+                           QStringLiteral("Force a windowed view for testing purposes"));
 
     QCommandLineOption crash(QStringList() << QStringLiteral("n") <<
                              QStringLiteral("crashes"),
