@@ -35,25 +35,25 @@ int main(int argc, char** argv)
 
     QApplication app(argc, argv);
     app.setApplicationVersion(version);
+    parser.setApplicationDescription(description);
 
-    QCommandLineOption dbg = QCommandLineOption(QStringList() << QStringLiteral("d") <<
-                                                QStringLiteral("qmljsdebugger"),
-                                                QStringLiteral("Enable QML Javascript debugger"));
+    QCommandLineOption dbg(QStringList() << QStringLiteral("d") <<
+                           QStringLiteral("qmljsdebugger"),
+                           QStringLiteral("Enable QML Javascript debugger"));
 
-    QCommandLineOption windowed = QCommandLineOption(QStringList() << QStringLiteral("w") <<
-                                                     QStringLiteral("windowed"),
-                                                     QStringLiteral("Force a windowed view for testing purposes"));
+    QCommandLineOption win(QStringList() << QStringLiteral("w") <<
+                                QStringLiteral("windowed"),
+                                QStringLiteral("Force a windowed view for testing purposes"));
 
-    QCommandLineOption crashesOption(QStringLiteral("crashes"),
-                                     QStringLiteral("Recent number of crashes"),
-                                     QStringLiteral("n"));
+    QCommandLineOption crash(QStringList() << QStringLiteral("n") <<
+                             QStringLiteral("crashes"),
+                             QStringLiteral("Recent number of crashes"));
 
     parser.addVersionOption();
     parser.addHelpOption();
-    parser.setApplicationDescription(description);
     parser.addOption(dbg);
-    parser.addOption(windowed);
-    parser.addOption(crashesOption);
+    parser.addOption(win);
+    parser.addOption(crash);
 
     parser.process(app);
 
@@ -65,8 +65,8 @@ int main(int argc, char** argv)
 
     Plasma::PluginLoader::setPluginLoader(new ShellPluginLoader);
 
-    ShellManager::setCrashCount(parser.value(crashesOption).toInt());
-    ShellManager::s_forceWindowed = parser.isSet(windowed);
+    ShellManager::setCrashCount(parser.value(crash).toInt());
+    ShellManager::s_forceWindowed = parser.isSet(win);
     ShellManager::instance();
 
     return app.exec();
