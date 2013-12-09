@@ -59,12 +59,14 @@ PanelView::PanelView(ShellCorona *corona, QWindow *parent)
     KWindowEffects::enableBlurBehind(winId(), true);
 
     //Screen management
+    connect(this, &QWindow::screenChanged,
+            this, &PanelView::positionPanel);
     connect(screen(), &QScreen::geometryChanged,
             this, &PanelView::positionPanel);
     connect(this, &PlasmaQuickView::locationChanged,
-            this, &PanelView::restore);
+            this, &PanelView::positionPanel);
     connect(this, &PlasmaQuickView::containmentChanged,
-            this, &PanelView::restore);
+            this, &PanelView::positionPanel);
 
     if (!m_corona->package().isValid()) {
         qWarning() << "Invalid home screen package";
@@ -80,7 +82,6 @@ PanelView::PanelView(ShellCorona *corona, QWindow *parent)
     qmlRegisterType<QScreen>();
     engine()->rootContext()->setContextProperty("panel", this);
     setSource(QUrl::fromLocalFile(m_corona->package().filePath("views", "Panel.qml")));
-    positionPanel();
     PanelShadows::self()->addWindow(this);
 }
 
@@ -167,15 +168,9 @@ void PanelView::setThickness(int value)
         return;
     }
 
-    if (formFactor() == Plasma::Types::Vertical) {
-        setWidth(value);
-    } else {
-        setHeight(value);
-    }
     config().writeEntry("thickness", value);
-    emit thicknessChanged();
     m_corona->requestApplicationConfigSync();
-    m_strutsTimer->start(STRUTSTIMERDELAY);
+    positionPanel();
 }
 
 int PanelView::length() const
@@ -367,6 +362,11 @@ void PanelView::positionPanel()
     m_strutsTimer->start(STRUTSTIMERDELAY);
 
     if (thickness() != oldThickness) {
+        if (formFactor() == Plasma::Types::Vertical) {
+            setWidth(thickness());
+        } else {
+            setHeight(thickness());
+        }
         emit thicknessChanged();
     }
 }
