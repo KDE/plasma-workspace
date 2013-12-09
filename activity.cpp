@@ -29,7 +29,6 @@
 
 #include <kactioncollection.h>
 #include <kconfig.h>
-#include <kstandarddirs.h>
 #include <kwindowsystem.h>
 
 #include <Plasma/Containment>

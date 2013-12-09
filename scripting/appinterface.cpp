@@ -22,9 +22,6 @@
 #include <QEventLoop>
 #include <QTimer>
 
-#include <kcomponentdata.h>
-#include <k4aboutdata.h>
-
 #include <solid/device.h>
 
 #include <Plasma/Containment>

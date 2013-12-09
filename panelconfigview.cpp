@@ -27,7 +27,6 @@
 #include <QQmlContext>
 #include <QScreen>
 
-#include <kglobal.h>
 #include <klocalizedstring.h>
 #include <kwindoweffects.h>
 

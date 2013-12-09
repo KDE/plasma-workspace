@@ -30,7 +30,6 @@
 #endif
 
 #include <qdebug.h>
-#include <kglobal.h>
 
 class PanelShadows::Private
 {
@@ -94,7 +93,7 @@ public:
    PanelShadows self;
 };
 
-K_GLOBAL_STATIC(DialogShadowsSingleton, privateDialogShadowsSelf)
+Q_GLOBAL_STATIC(DialogShadowsSingleton, privateDialogShadowsSelf)
 
 PanelShadows::PanelShadows(QObject *parent, const QString &prefix)
     : Plasma::Svg(parent),

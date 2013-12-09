@@ -35,7 +35,6 @@
 #include <kactivities/controller.h>
 #include <kactivities/consumer.h>
 #include <ksycoca.h>
-#include <kcomponentdata.h>
 #include <kservicetypetrader.h>
 
 

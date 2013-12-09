@@ -29,12 +29,10 @@
 #include <QStandardPaths>
 
 #include <QDebug>
-#include <kglobal.h>
 #include <klocalizedstring.h>
 #include <kmimetypetrader.h>
 #include <kservicetypetrader.h>
 #include <kshell.h>
-#include <kcomponentdata.h>
 
 // KIO
 //#include <kemailsettings.h> // no camelcase include
