@@ -84,4 +84,4 @@ if(X11_FOUND)
 endif()
 
 install(TARGETS plasma-shell ${INSTALL_TARGETS_DEFAULT_ARGS})
-
+install(FILES plasma-shell.desktop DESTINATION ${AUTOSTART_INSTALL_DIR})
