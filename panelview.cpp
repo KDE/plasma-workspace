@@ -59,10 +59,10 @@ PanelView::PanelView(ShellCorona *corona, QWindow *parent)
     KWindowEffects::enableBlurBehind(winId(), true);
 
     //Screen management
-    connect(screen(), &QScreen::virtualGeometryChanged,
+    connect(screen(), &QScreen::geometryChanged,
             this, &PanelView::positionPanel);
     connect(this, &PlasmaQuickView::locationChanged,
-            this, &PanelView::positionPanel);
+            this, &PanelView::restore);
     connect(this, &PlasmaQuickView::containmentChanged,
             this, &PanelView::restore);
 
@@ -304,14 +304,14 @@ void PanelView::positionPanel()
 
         switch (m_alignment) {
         case Qt::AlignCenter:
-            setPosition(QPoint(s->virtualGeometry().center().x(), s->virtualGeometry().top()) + QPoint(m_offset - size().width()/2, 0));
+            setPosition(QPoint(s->geometry().center().x(), s->geometry().top()) + QPoint(m_offset - size().width()/2, 0));
             break;
         case Qt::AlignRight:
-            setPosition(s->virtualGeometry().topRight() - QPoint(m_offset + size().width(), 0));
+            setPosition(s->geometry().topRight() - QPoint(m_offset + size().width(), 0));
             break;
         case Qt::AlignLeft:
         default:
-            setPosition(s->virtualGeometry().topLeft() + QPoint(m_offset, 0));
+            setPosition(s->geometry().topLeft() + QPoint(m_offset, 0));
         }
         break;
 
@@ -320,14 +320,14 @@ void PanelView::positionPanel()
         restore();
         switch (m_alignment) {
         case Qt::AlignCenter:
-            setPosition(QPoint(s->virtualGeometry().left(), s->virtualGeometry().center().y()) + QPoint(0, m_offset));
+            setPosition(QPoint(s->geometry().left(), s->geometry().center().y()) + QPoint(0, m_offset));
             break;
         case Qt::AlignRight:
-            setPosition(s->virtualGeometry().bottomLeft() - QPoint(0, m_offset + size().height()));
+            setPosition(s->geometry().bottomLeft() - QPoint(0, m_offset + size().height()));
             break;
         case Qt::AlignLeft:
         default:
-            setPosition(s->virtualGeometry().topLeft() + QPoint(0, m_offset));
+            setPosition(s->geometry().topLeft() + QPoint(0, m_offset));
         }
         break;
 
@@ -336,14 +336,14 @@ void PanelView::positionPanel()
         restore();
         switch (m_alignment) {
         case Qt::AlignCenter:
-            setPosition(QPoint(s->virtualGeometry().right(), s->virtualGeometry().center().y()) - QPoint(width(), 0) + QPoint(0, m_offset - size().height()/2));
+            setPosition(QPoint(s->geometry().right(), s->geometry().center().y()) - QPoint(width(), 0) + QPoint(0, m_offset - size().height()/2));
             break;
         case Qt::AlignRight:
-            setPosition(s->virtualGeometry().bottomRight() - QPoint(width(), 0) - QPoint(0, m_offset + size().height()));
+            setPosition(s->geometry().bottomRight() - QPoint(width(), 0) - QPoint(0, m_offset + size().height()));
             break;
         case Qt::AlignLeft:
         default:
-            setPosition(s->virtualGeometry().topRight() - QPoint(width(), 0) + QPoint(0, m_offset));
+            setPosition(s->geometry().topRight() - QPoint(width(), 0) + QPoint(0, m_offset));
         }
         break;
 
@@ -353,14 +353,14 @@ void PanelView::positionPanel()
         restore();
         switch (m_alignment) {
         case Qt::AlignCenter:
-            setPosition(QPoint(s->virtualGeometry().center().x(), s->virtualGeometry().bottom()) + QPoint(m_offset - size().width()/2, 0));
+            setPosition(QPoint(s->geometry().center().x(), s->geometry().bottom()) + QPoint(m_offset - size().width()/2, 0));
             break;
         case Qt::AlignRight:
-            setPosition(s->virtualGeometry().bottomRight() - QPoint(0, height()) - QPoint(m_offset + size().width(), 0));
+            setPosition(s->geometry().bottomRight() - QPoint(0, height()) - QPoint(m_offset + size().width(), 0));
             break;
         case Qt::AlignLeft:
         default:
-            setPosition(s->virtualGeometry().bottomLeft() - QPoint(0, height()) + QPoint(m_offset, 0));
+            setPosition(s->geometry().bottomLeft() - QPoint(0, height()) + QPoint(m_offset, 0));
         }
     }
     m_strutsTimer->stop();
