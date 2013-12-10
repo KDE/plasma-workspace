@@ -382,7 +382,7 @@ QScriptValue ScriptEngine::defaultApplication(QScriptContext *context, QScriptEn
 
         // in KToolInvocation, the default is kmail; but let's be friendlier :)
 //        QString command = settings.getSetting(KEMailSettings::ClientProgram);
-	QString command;
+        QString command;
         if (command.isEmpty()) {
             if (KService::Ptr kontact = KService::serviceByStorageId("kontact")) {
                 return storageId ? kontact->storageId() : onlyExec(kontact->exec());
@@ -393,7 +393,7 @@ QScriptValue ScriptEngine::defaultApplication(QScriptContext *context, QScriptEn
 
         if (!command.isEmpty()) {
             //if (settings.getSetting(KEMailSettings::ClientTerminal) == "true") {
-	    if (false) {
+        if (false) {
                 KConfigGroup confGroup(KSharedConfig::openConfig(), "General");
                 const QString preferredTerminal = confGroup.readPathEntry("TerminalApplication", QString::fromLatin1("konsole"));
                 command = preferredTerminal + QString::fromLatin1(" -e ") + command;

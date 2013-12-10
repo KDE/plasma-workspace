@@ -212,7 +212,7 @@ void MousePluginWidget::configure()
         if (w) {
             lay->addWidget(w);
         }
-	const QString title = w->windowTitle();
+        const QString title = w->windowTitle();
 
         m_configDlg->setWindowTitle(title.isEmpty() ? i18n("Configure Plugin") :title);
         //put buttons below
