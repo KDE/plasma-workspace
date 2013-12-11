@@ -45,9 +45,9 @@ int main(int argc, char** argv)
                            QStringLiteral("windowed"),
                            QStringLiteral("Force a windowed view for testing purposes"));
 
-    QCommandLineOption crash(QStringList() << QStringLiteral("n") <<
-                             QStringLiteral("crashes"),
-                             QStringLiteral("Recent number of crashes"));
+    QCommandLineOption crash(QStringList() << QStringLiteral("c") << QStringLiteral("crashes"),
+                                     QStringLiteral("Recent number of crashes"),
+                                     QStringLiteral("n"));
 
     parser.addVersionOption();
     parser.addHelpOption();
