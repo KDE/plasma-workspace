@@ -204,7 +204,6 @@ void ShellManager::updateShell()
     d->currentHandler = handler;
     d->currentHandler->setProperty("loaded", true);
 
-    // d->corona->setShell(d->currentHandler->property("shell").toString());
     emit shellChanged(d->currentHandler->property("shell").toString());
 }
 
