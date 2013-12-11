@@ -103,6 +103,7 @@ ShellCorona::ShellCorona(QObject *parent)
     connect(&d->appConfigSyncTimer, &QTimer::timeout,
             this, &ShellCorona::syncAppConfig);
 
+    //FIXME deprecate QDesktopWidget (can probably just remove these)
     connect(d->desktopWidget, &QDesktopWidget::resized,
             this, &ShellCorona::screenResized );
     connect(d->desktopWidget, &QDesktopWidget::workAreaResized,
@@ -253,54 +254,21 @@ KActivities::Controller *ShellCorona::activityController()
     return d->activityController;
 }
 
-void ShellCorona::checkScreens(bool signalWhenExists)
+void ShellCorona::checkScreens()
 {
     // quick sanity check to ensure we have containments for each screen
     int num = numScreens();
     for (int i = 0; i < num; ++i) {
-        checkScreen(i, signalWhenExists);
+        checkScreen(i);
     }
 }
 
-void ShellCorona::checkScreen(int screen, bool signalWhenExists)
+void ShellCorona::checkScreen(int screen)
 {
-    // signalWhenExists is there to allow PlasmaApp to know when to create views
-    // it does this only on containment addition, but in the case of a screen being
-    // added and the containment already existing for that screen, no signal is emitted
-    // and so PlasmaApp does not know that it needs to create a view for it. to avoid
-    // taking care of that case in PlasmaApp (which would duplicate some of the code below,
-    // ShellCorona will, when signalWhenExists is true, emit a containmentAdded signal
-    // even if the containment actually existed prior to this method being called.
-    //
-    //note: the signal actually triggers view creation only for panels, atm.
-    //desktop views are created in response to containment's screenChanged signal instead, which is
-    //buggy (sometimes the containment thinks it's already on the screen, so no view is created)
-
     //TODO: restore activities
     Activity *currentActivity = activity(d->activityController->currentActivity());
     //ensure the desktop(s) have a containment and view
-    checkDesktop(currentActivity, signalWhenExists, screen);
-
-
-    //ensure the panels get views too
-    if (signalWhenExists) {
-        foreach (Plasma::Containment * c, containments()) {
-            if (c->screen() != screen) {
-                continue;
-            }
-
-            Plasma::Types::ContainmentType t = c->containmentType();
-            if (t == Plasma::Types::PanelContainment ||
-                t == Plasma::Types::CustomPanelContainment) {
-                emit containmentAdded(c);
-            }
-        }
-    }
-}
-
-void ShellCorona::checkDesktop(Activity *activity, bool signalWhenExists, int screen)
-{
-    Plasma::Containment *c = activity->containmentForScreen(screen);
+    Plasma::Containment *c = currentActivity->containmentForScreen(screen);
 
     //TODO: remove following when activities are restored
     if (!c) {
@@ -319,10 +287,6 @@ void ShellCorona::checkDesktop(Activity *activity, bool signalWhenExists, int sc
     }
     c->flushPendingConstraintsEvents();
     requestApplicationConfigSync();
-
-    if (signalWhenExists) {
-        emit containmentAdded(c);
-    }
 }
 
 int ShellCorona::numScreens() const

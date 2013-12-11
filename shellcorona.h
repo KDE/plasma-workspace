@@ -54,17 +54,6 @@ public:
     KSharedConfig::Ptr applicationConfig();
 
     WorkspaceScripting::DesktopScriptEngine * scriptEngine() const;
-    /**
-     * Ensures we have the necessary containments for every screen
-     */
-    void checkScreens(bool signalWhenExists = false);
-
-    /**
-     * Ensures we have the necessary containments for the given screen
-     */
-    void checkScreen(int screen, bool signalWhenExists = false);
-
-    void checkDesktop(Activity *activity, bool signalWhenExists, int screen);
 
     int numScreens() const;
     QRect screenGeometry(int id) const;
@@ -143,6 +132,16 @@ private Q_SLOTS:
     void addPanel(const QString &plugin);
 
 private:
+    /**
+     * Ensures we have the necessary containments for every screen
+     */
+    void checkScreens();
+
+    /**
+     * Ensures we have the necessary containments for the given screen
+     */
+    void checkScreen(int screen);
+
     class Private;
     const QScopedPointer<Private> d;
 };
