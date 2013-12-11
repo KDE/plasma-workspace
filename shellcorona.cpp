@@ -167,7 +167,6 @@ void ShellCorona::setShell(const QString &shell)
     unload();
 
     d->shell = shell;
-    KConfigGroup config(KSharedConfig::openConfig(), "General");
     Plasma::Package package = Plasma::PluginLoader::self()->loadPackage("Plasma/Shell");
     package.setPath(shell);
     setPackage(package);
