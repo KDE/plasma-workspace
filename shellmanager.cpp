@@ -148,8 +148,10 @@ void ShellManager::deregisterHandler(QObject * handler)
         handler->disconnect(this);
     }
 
-    if (d->currentHandler == handler)
+    if (d->currentHandler == handler) {
         d->currentHandler = nullptr;
+        updateShell();
+    }
 }
 
 void ShellManager::requestShellUpdate()
