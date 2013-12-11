@@ -14,9 +14,9 @@ add_definitions(-DHAVE_X11=${HAVE_X11})
 find_package(Qt5Qml REQUIRED)
 find_package(Qt5Quick REQUIRED)
 find_package(Qt5Script REQUIRED)
-find_package(KCoreAddons REQUIRED)
-find_package(KCrash REQUIRED)
-find_package(Solid REQUIRED)
+find_package(KF5CoreAddons REQUIRED)
+find_package(KF5Crash REQUIRED)
+find_package(KF5Solid REQUIRED)
 find_package(KActivities REQUIRED)
 
 set(scripting_SRC
@@ -63,17 +63,17 @@ target_link_libraries(plasma-shell
  Qt5::Quick
  Qt5::Qml
  KF5::KIOCore
- KF5::KWindowSystem
- KF5::KCoreAddons
- KF5::KCrash
+ KF5::WindowSystem
+ KF5::CoreAddons
+ KF5::Crash
  KF5::Plasma
  KF5::PlasmaQuick
  Qt5::Script
  KF5::Solid
- KF5::KDeclarative
- KF5::KI18n
+ KF5::Declarative
+ KF5::I18n
  KF5::XmlGui
- KF5::KIconThemes
+ KF5::IconThemes
  KF5::KActivities
 )
 target_include_directories(plasma-shell PRIVATE "${CMAKE_BINARY_DIR}")
