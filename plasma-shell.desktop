@@ -2,6 +2,13 @@
 Exec=plasma-shell
 X-DBUS-StartupType=multi
 Name=Plasma Desktop Workspace
+Name[de]=Plasma-Arbeitsflächenbereich
+Name[nl]=Plasma Bureaublad Werkplek
+Name[pt]=Área de Trabalho do Plasma
+Name[pt_BR]=Espaço de Trabalho Plasma
+Name[sv]=Plasma arbetsområde för skrivbordet
+Name[uk]=Робочий простір стільниці Плазми
+Name[x-test]=xxPlasma Desktop Workspacexx
 Type=Application
 X-KDE-StartupNotify=false
 OnlyShowIn=KDE;
