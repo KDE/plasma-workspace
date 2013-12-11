@@ -52,7 +52,7 @@ Activity::Activity(const QString &id, Plasma::Corona *parent)
     m_icon = m_info->icon();
 
     connect(m_info, SIGNAL(infoChanged()), this, SLOT(activityChanged()));
-    connect(m_info, SIGNAL(stateChanged(KActivities::Info::State)), this, SLOT(activityStateChanged(KActivities::Info::State)));
+    connect(m_info, SIGNAL(stateChanged(KActivities::Info::State)), this, SIGNAL(stateChanged()));
     connect(m_info, SIGNAL(started()), this, SLOT(opened()));
     connect(m_info, SIGNAL(stopped()), this, SLOT(closed()));
     connect(m_info, SIGNAL(removed()), this, SLOT(removed()));
@@ -80,12 +80,6 @@ void Activity::activityChanged()
 {
     setName(m_info->name());
     setIcon(m_info->icon());
-}
-
-void Activity::activityStateChanged(KActivities::Info::State state)
-{
-    Q_UNUSED(state)
-    emit stateChanged();
 }
 
 QString Activity::id()
@@ -154,15 +148,10 @@ Plasma::Containment* Activity::containmentForScreen(int screen)
         qDebug() << "adding containment for" << screen;
         // first look to see if there are any unnasigned containments that are candidates for
         // being sucked into this Activity
-        foreach (Plasma::Containment *c, m_corona->containments()) {
-            if ((c->containmentType() == Plasma::Types::DesktopContainment ||
-                c->containmentType() == Plasma::Types::CustomContainment) &&
-                c->activity().isEmpty() &&
-                m_containments.key(c, -2) == -2) {
-                containment = c;
-                containment->setScreen(screen);
-                break;
-            }
+        containment = m_corona->containmentForScreen(-1);
+
+        if (containment && m_containments.key(containment, -2) == -2 ) {
+            containment->setScreen(screen);
         }
 
         if (!containment) {
@@ -176,15 +165,14 @@ Plasma::Containment* Activity::containmentForScreen(int screen)
                 containment = m_corona->containmentForScreen(screen, "org.kde.desktopcontainment");
             }
 
-            //we don't want to steal contaiments from other activities
+            Q_ASSERT(containment);
             if (!containment) {
                 // we failed to even get the default; we're screwed.
-                Q_ASSERT(false);
                 return 0;
             }
 
-            if (!containment->activity().isEmpty() &&
-                containment->activity() != m_id) {
+            //we don't want to steal contaiments from other activities
+            if (containment->activity() != m_id) {
                 // we got a containment, but it belongs to some other activity; let's unassign it
                 // from a screen and grab a new one
                 containment->setScreen(-1);
@@ -246,19 +234,11 @@ void Activity::checkScreens()
 
 void Activity::setName(const QString &name)
 {
-    if (m_name == name) {
-        return;
-    }
-
     m_name = name;
 }
 
 void Activity::setIcon(const QString &icon)
 {
-    if (m_icon == icon) {
-        return;
-    }
-
     m_icon = icon;
 }
 
@@ -304,12 +284,7 @@ void Activity::closed()
     }
 }
 
-void Activity::replaceContainment(Plasma::Containment* containment)
-{
-    insertContainment(containment, true);
-}
-
-void Activity::insertContainment(Plasma::Containment* cont, bool force)
+void Activity::insertContainment(Plasma::Containment* cont)
 {
     int screen = cont->lastScreen();
 
@@ -320,7 +295,7 @@ void Activity::insertContainment(Plasma::Containment* cont, bool force)
         screen = 0;
     }
 
-    if (!force && m_containments.contains(screen)) {
+    if (m_containments.contains(screen)) {
         //this almost certainly means someone has been meddling where they shouldn't
         //but we should protect them from harm anyways
         qDebug() << "@!@!@!@!@!@@@@rejecting containment!!!";
@@ -345,14 +320,7 @@ void Activity::containmentDestroyed(QObject *object)
     //safe here because we are not accessing it
     Plasma::Containment *deletedCont = static_cast<Plasma::Containment *>(object);
 
-    QHash<int, Plasma::Containment*>::iterator i;
-    for (i = m_containments.begin(); i != m_containments.end(); ++i) {
-        Plasma::Containment *cont = i.value();
-        if (cont == deletedCont) {
-            m_containments.remove(i.key());
-            break;
-        }
-    }
+    m_containments.remove(m_containments.key(deletedCont));
 }
 
 void Activity::open()

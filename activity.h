@@ -136,15 +136,9 @@ public Q_SLOTS:
      */
     void open();
 
-    /**
-     * forcibly insert a containment, replacing the one on its screen/desktop
-     */
-    void replaceContainment(Plasma::Containment* containment);
-
 private Q_SLOTS:
     void containmentDestroyed(QObject *object);
     void activityChanged();
-    void activityStateChanged(KActivities::Info::State);
     void checkIfCurrent();
 
     void removed();
@@ -152,7 +146,7 @@ private Q_SLOTS:
     void closed();
 
 private:
-    void insertContainment(Plasma::Containment* cont, bool force=false);
+    void insertContainment(Plasma::Containment* cont);
     void insertContainment(Plasma::Containment* containment, int screen);
     void checkScreens();
 
