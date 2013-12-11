@@ -66,8 +66,8 @@ target_link_libraries(plasma-shell
  KF5::KWindowSystem
  KF5::KCoreAddons
  KF5::KCrash
- Plasma
- PlasmaQuick
+ KF5::Plasma
+ KF5::PlasmaQuick
  Qt5::Script
  KF5::Solid
  KF5::KDeclarative
