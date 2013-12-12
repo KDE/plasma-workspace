@@ -24,6 +24,7 @@
 #include <QHash>
 
 #include <kactivities/info.h>
+#include <kconfiggroup.h>
 
 class QSize;
 class QString;
@@ -82,22 +83,6 @@ public:
     KActivities::Info::State state();
 
     /**
-     * save (copy) the activity out to an @p external config
-     */
-    void save(KConfig &external);
-
-    /**
-     * return the containment that belongs on @p screen and @p desktop
-     * or null if none exists
-     */
-     Plasma::Containment* containmentForScreen(int screen);
-
-    /**
-     * make this activity's containments the active ones, loading them if necessary
-     */
-    void ensureActive();
-
-    /**
      * set the plugin to use when creating new containments
      */
     void setDefaultPlugin(const QString &plugin);
@@ -107,10 +92,16 @@ public:
      */
     const KActivities::Info * info() const;
 
+    KConfigGroup config() const;
+
 Q_SIGNALS:
     void infoChanged();
     void stateChanged();
     void currentStatusChanged();
+
+    void removed();
+    void opened();
+    void closed();
 
 public Q_SLOTS:
     void setName(const QString &name);
@@ -137,27 +128,17 @@ public Q_SLOTS:
     void open();
 
 private Q_SLOTS:
-    void containmentDestroyed(QObject *object);
     void activityChanged();
     void checkIfCurrent();
-
-    void removed();
-    void opened();
-    void closed();
+    void cleanupActivity();
 
 private:
-    void insertContainment(Plasma::Containment* cont);
-    void insertContainment(Plasma::Containment* containment, int screen);
-    void checkScreens();
-
     QString m_id;
     QString m_name;
     QString m_icon;
     QString m_plugin;
-    QHash<int, Plasma::Containment*> m_containments;
     KActivities::Info *m_info;
     KActivities::Consumer *m_activityConsumer;
-    Plasma::Corona *m_corona;
     bool m_current;
 };
 

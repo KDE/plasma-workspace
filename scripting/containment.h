@@ -37,6 +37,7 @@ namespace WorkspaceScripting
 class Containment : public Applet
 {
     Q_OBJECT
+    ///FIXME: add NOTIFY
     Q_PROPERTY(QString version READ version)
     Q_PROPERTY(QStringList configKeys READ configKeys)
     Q_PROPERTY(QStringList configGroups READ configGroups)
@@ -50,7 +51,7 @@ class Containment : public Applet
     Q_PROPERTY(QString type READ type)
     Q_PROPERTY(QString formFactor READ formFactor)
     Q_PROPERTY(QList<int> widgetIds READ widgetIds)
-    Q_PROPERTY(int screen READ screen WRITE setScreen)
+    Q_PROPERTY(int screen READ screen)
     Q_PROPERTY(int id READ id)
 
 public:
@@ -66,7 +67,6 @@ public:
     void setName(const QString &name);
 
     int screen() const;
-    void setScreen(int screen);
 
     Plasma::Applet *applet() const;
     Plasma::Containment *containment() const;

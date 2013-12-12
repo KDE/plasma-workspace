@@ -82,13 +82,6 @@ int Containment::screen() const
     return d->containment.data()->screen();
 }
 
-void Containment::setScreen(int screen)
-{
-    if (d->containment) {
-        d->containment.data()->setScreen(screen);
-    }
-}
-
 QString Containment::wallpaperPlugin() const
 {
     return d->wallpaperPlugin;
