@@ -72,7 +72,7 @@ public:
     QList <DesktopView *> views;
     KActivities::Controller *activityController;
     KActivities::Consumer *activityConsumer;
-    QHash <Plasma::Containment *, PanelView *> panelViews;
+    QHash <const Plasma::Containment *, PanelView *> panelViews;
     KConfigGroup desktopDefaultsConfig;
     WorkspaceScripting::DesktopScriptEngine * scriptEngine;
     QList<Plasma::Containment *> waitingPanels;
@@ -516,7 +516,7 @@ void ShellCorona::addPanel(const QString &plugin)
     QList<Plasma::Types::Location> availableLocations;
     availableLocations << Plasma::Types::LeftEdge << Plasma::Types::TopEdge << Plasma::Types::RightEdge << Plasma::Types::BottomEdge;
 
-    foreach (Plasma::Containment *cont, d->panelViews.keys()) {
+    foreach (const Plasma::Containment *cont, d->panelViews.keys()) {
         availableLocations.removeAll(cont->location());
     }
     Plasma::Types::Location loc;
@@ -552,12 +552,19 @@ void ShellCorona::printScriptMessage(const QString &message)
 
 int ShellCorona::screenForContainment(const Plasma::Containment *containment) const
 {
+    QScreen* s = nullptr;
     for (int i=0; i<d->views.size(); i++) {
         if (d->views[i]->containment() == containment) {
-            return i;
+            s = d->views[i]->screen();
         }
     }
-    return -1;
+    if(!s) {
+        PanelView *view = d->panelViews[containment];
+        if (view) {
+            s = view->screen();
+        }
+    }
+    return s? qApp->screens().indexOf(s) : -1;
 }
 
 void ShellCorona::activityOpened()
