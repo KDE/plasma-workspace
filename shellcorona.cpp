@@ -330,11 +330,8 @@ void ShellCorona::createWaitingPanels()
     foreach (Plasma::Containment *cont, d->waitingPanels) {
         d->panelViews[cont] = new PanelView(this);
 
-
         //keep screen suggestions within bounds of screens we actually have
-        int screen = cont->lastScreen();
-        screen = qMax(screen, 0);
-        screen = qMin(screen, QGuiApplication::screens().size() -1);
+        int screen = qBound(0, cont->lastScreen(), QGuiApplication::screens().size() -1);
 
         d->panelViews[cont]->setScreen(QGuiApplication::screens()[screen]);
         d->panelViews[cont]->setContainment(cont);
