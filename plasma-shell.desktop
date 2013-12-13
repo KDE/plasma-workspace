@@ -3,6 +3,7 @@ Exec=plasma-shell
 X-DBUS-StartupType=multi
 Name=Plasma Desktop Workspace
 Name[de]=Plasma-Arbeitsflächenbereich
+Name[fr]=Espace de travail du bureau Plasma
 Name[nl]=Plasma Bureaublad Werkplek
 Name[pt]=Área de Trabalho do Plasma
 Name[pt_BR]=Espaço de Trabalho Plasma
