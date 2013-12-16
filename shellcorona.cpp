@@ -204,7 +204,7 @@ void ShellCorona::load()
             if (screen < 0) {
                 screen = d->desktopContainments[containment->activity()].count();
             }
-            d->desktopContainments[containment->activity()][screen] = containment;
+            insertContainment(containment->activity(), screen, containment);
         }
     }
 
@@ -309,7 +309,7 @@ Plasma::Containment* ShellCorona::createContainmentForActivity(const QString& ac
 {
     Plasma::Containment* containment = createContainment(d->desktopDefaultsConfig.readEntry("Containment", "org.kde.desktopcontainment"));
     containment->setActivity(activity);
-    d->desktopContainments[activity][screenNum] = containment;
+    insertContainment(activity, screenNum, containment);
     return containment;
 }
 
@@ -572,7 +572,7 @@ void ShellCorona::activityOpened()
     Activity* activity = qobject_cast<Activity*>(sender());
     QList<Plasma::Containment*> cs = importLayout(activity->config());
     for(Plasma::Containment *containment : cs) {
-        d->desktopContainments[activity->name()][containment->lastScreen()] = containment;
+        insertContainment(activity->name(), containment->lastScreen(), containment);
     }
 }
 
@@ -597,6 +597,8 @@ void ShellCorona::activityRemoved()
 void ShellCorona::insertContainment(const QString &activity, int screenNum, Plasma::Containment* containment)
 {
     d->desktopContainments[activity][screenNum] = containment;
+
+    //when a containment gets deleted update our map of containments
     connect(containment, &QObject::destroyed, [=](QObject *obj) {
         auto containment = qobject_cast<Plasma::Containment*>(obj);
         d->desktopContainments[containment->activity()].remove(containment->lastScreen());
