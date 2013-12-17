@@ -54,17 +54,6 @@ public:
     KSharedConfig::Ptr applicationConfig();
 
     WorkspaceScripting::DesktopScriptEngine * scriptEngine() const;
-    /**
-     * Ensures we have the necessary containments for every screen
-     */
-    void checkScreens(bool signalWhenExists = false);
-
-    /**
-     * Ensures we have the necessary containments for the given screen
-     */
-    void checkScreen(int screen, bool signalWhenExists = false);
-
-    void checkDesktop(Activity *activity, bool signalWhenExists, int screen);
 
     int numScreens() const;
     QRect screenGeometry(int id) const;
@@ -72,8 +61,6 @@ public:
     QRect availableScreenRect(int id) const;
 
     PanelView *panelView(Plasma::Containment *containment) const;
-
-    Activity* activity(const QString &id);
 
     KActivities::Controller *activityController();
 
@@ -94,13 +81,8 @@ public Q_SLOTS:
     QString shell() const;
 
 protected Q_SLOTS:
-    void screenCountChanged(int newCount);
-    void screenResized(int screen);
-    void workAreaResized(int screen);
-
     void screenAdded(QScreen *screen);
     void screenRemoved(QObject *screen);
-    void updateScreenOwner(int wasScreen, int isScreen, Plasma::Containment *containment);
 
     void printScriptError(const QString &error);
     void printScriptMessage(const QString &message);
@@ -125,8 +107,9 @@ protected Q_SLOTS:
      */
     void processUpdateScripts();
 
+    int screenForContainment(const Plasma::Containment *containment) const;
+
 private Q_SLOTS:
-    void checkLoadingDesktopsComplete();
     void createWaitingPanels();
     void handleContainmentAdded(Plasma::Containment *c);
     void toggleWidgetExplorer();
@@ -142,7 +125,17 @@ private Q_SLOTS:
     void addPanel(QAction *action);
     void addPanel(const QString &plugin);
 
+    void activityOpened();
+    void activityClosed();
+    void activityRemoved();
+
 private:
+    /**
+     * @returns a new containment associated with the specified @p activity and @p screen.
+     */
+    Plasma::Containment* createContainmentForActivity(const QString& activity, int screenNum);
+    void insertContainment(const QString &activity, int screenNum, Plasma::Containment *containment);
+
     class Private;
     const QScopedPointer<Private> d;
 };

@@ -140,7 +140,6 @@ QScriptValue ScriptEngine::createContainment(const QString &type, const QString 
             // some defaults
             c->setFormFactor(Plasma::Types::Horizontal);
             c->setLocation(Plasma::Types::TopEdge);
-            c->setScreen(env->defaultPanelScreen());
         }
         c->updateConstraints(Plasma::Types::AllConstraints | Plasma::Types::StartupCompletedConstraint);
         c->flushPendingConstraintsEvents();

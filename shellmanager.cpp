@@ -148,8 +148,10 @@ void ShellManager::deregisterHandler(QObject * handler)
         handler->disconnect(this);
     }
 
-    if (d->currentHandler == handler)
+    if (d->currentHandler == handler) {
         d->currentHandler = nullptr;
+        updateShell();
+    }
 }
 
 void ShellManager::requestShellUpdate()
@@ -202,7 +204,6 @@ void ShellManager::updateShell()
     d->currentHandler = handler;
     d->currentHandler->setProperty("loaded", true);
 
-    // d->corona->setShell(d->currentHandler->property("shell").toString());
     emit shellChanged(d->currentHandler->property("shell").toString());
 }
 

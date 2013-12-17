@@ -22,7 +22,15 @@
 
 #include <QObject>
 
-
+/**
+ * ShellManager creates a ShellCorona instance and manages it.
+ *
+ * Shell manager loads "handlers" from QML files which suggests which shell
+ * corona should currently be active.
+ * For example switching between tablet and desktop shells on hardware changes.
+ *
+ * This class also provides crash handling.
+ */
 
 class ShellManager: public QObject {
     Q_OBJECT
