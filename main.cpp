@@ -38,6 +38,7 @@ int main(int argc, char** argv)
     app.setApplicationName("plasma_shell");
     app.setOrganizationDomain("kde.org");
     app.setApplicationVersion(version);
+    app.setQuitOnLastWindowClosed(false);
     parser.setApplicationDescription(description);
     KDBusService service(KDBusService::Unique);
 
