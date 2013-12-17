@@ -12,5 +12,6 @@ Name[uk]=Робочий простір стільниці Плазми
 Name[x-test]=xxPlasma Desktop Workspacexx
 Type=Application
 X-KDE-StartupNotify=false
+X-DBUS-ServiceName=org.kde.plasma_shell
 OnlyShowIn=KDE;
 X-KDE-autostart-phase=0

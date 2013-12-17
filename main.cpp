@@ -22,6 +22,7 @@
 #include <QtQml/QQmlDebuggingEnabler>
 #include <QDebug>
 
+#include <kdbusservice.h>
 #include <klocalizedstring.h>
 
 #include "shellpluginloader.h"
@@ -34,8 +35,11 @@ static QCommandLineParser parser;
 int main(int argc, char** argv)
 {
     QApplication app(argc, argv);
+    app.setApplicationName("plasma_shell");
+    app.setOrganizationDomain("kde.org");
     app.setApplicationVersion(version);
     parser.setApplicationDescription(description);
+    KDBusService service(KDBusService::Unique);
 
     QCommandLineOption dbg(QStringList() << QStringLiteral("d") <<
                            QStringLiteral("qmljsdebugger"),
