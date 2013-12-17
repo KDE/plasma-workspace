@@ -32,6 +32,11 @@ static const char description[] = "Plasma Shell";
 static const char version[] = "2.0";
 static QCommandLineParser parser;
 
+void noMessageOutput(QtMsgType type, const char *msg)
+{
+     Q_UNUSED(type);
+     Q_UNUSED(msg);
+}
 int main(int argc, char** argv)
 {
     QApplication app(argc, argv);
@@ -54,11 +59,15 @@ int main(int argc, char** argv)
                                      QStringLiteral("Recent number of crashes"),
                                      QStringLiteral("n"));
 
+    QCommandLineOption shutup(QStringList() << QStringLiteral("s") << QStringLiteral("shut-up"),
+                                     QStringLiteral("Shuts up the output"));
+
     parser.addVersionOption();
     parser.addHelpOption();
     parser.addOption(dbg);
     parser.addOption(win);
     parser.addOption(crash);
+    parser.addOption(shutup);
 
     parser.process(app);
 
@@ -68,6 +77,9 @@ int main(int argc, char** argv)
         QQmlDebuggingEnabler enabler;
     }
 
+    if (parser.isSet(shutup)) {
+        qInstallMsgHandler(noMessageOutput);
+    }
     Plasma::PluginLoader::setPluginLoader(new ShellPluginLoader);
 
     ShellManager::setCrashCount(parser.value(crash).toInt());
