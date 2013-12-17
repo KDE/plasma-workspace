@@ -335,8 +335,6 @@ Plasma::Containment* ShellCorona::createContainmentForActivity(const QString& ac
 
 void ShellCorona::screenRemoved(QObject *screen)
 {
-    qDebug() << "screen removed " << qobject_cast<QScreen*>(screen)->name();
-
     //desktop containments
     for (auto i = d->views.begin(); i != d->views.end()  ; i++) {
         if ((*i)->screen() == screen) {
