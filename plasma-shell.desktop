@@ -1,6 +1,6 @@
 [Desktop Entry]
 Exec=plasma-shell
-X-DBUS-StartupType=multi
+X-DBUS-StartupType=Unique
 Name=Plasma Desktop Workspace
 Name[de]=Plasma-Arbeitsflächenbereich
 Name[fr]=Espace de travail du bureau Plasma
