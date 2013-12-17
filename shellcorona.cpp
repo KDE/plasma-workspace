@@ -291,11 +291,29 @@ PanelView *ShellCorona::panelView(Plasma::Containment *containment) const
 void ShellCorona::screenAdded(QScreen *screen)
 {
     DesktopView *view = new DesktopView(this, screen);
-    d->views << view;
-    view->show();
+    const QString currentActivity = d->activityController->currentActivity();
+
+    if (!d->views.isEmpty() && screen == QGuiApplication::primaryScreen()) {
+        DesktopView* oldPrimaryView = d->views.first();
+        QScreen* oldPrimaryScreen = oldPrimaryView->screen();
+
+        //move any panels that were preivously on the old primary screen to the new primary screen
+        foreach (PanelView *panelView, d->panelViews) {
+            if (oldPrimaryScreen==panelView->screen())
+                panelView->setScreen(screen);
+        }
+
+        Plasma::Containment* primaryContainment = oldPrimaryView->containment();
+        oldPrimaryView->setContainment(0);
+        view->setContainment(primaryContainment);
+
+        d->views.prepend(view);
+        view = oldPrimaryView;
+    } else {
+        d->views.append(view);
+    }
 
     int screenNum = d->views.count()-1;
-    QString currentActivity = d->activityController->currentActivity();
     Plasma::Containment *containment = d->desktopContainments[currentActivity][screenNum];
     if(!containment) {
         containment = createContainmentForActivity(currentActivity, screenNum);
@@ -303,7 +321,9 @@ void ShellCorona::screenAdded(QScreen *screen)
     view->setContainment(containment);
 
     connect(screen, SIGNAL(destroyed(QObject*)), SLOT(screenRemoved(QObject*)));
+    view->show();
 }
+
 
 Plasma::Containment* ShellCorona::createContainmentForActivity(const QString& activity, int screenNum)
 {
@@ -315,6 +335,9 @@ Plasma::Containment* ShellCorona::createContainmentForActivity(const QString& ac
 
 void ShellCorona::screenRemoved(QObject *screen)
 {
+    qDebug() << "screen removed " << qobject_cast<QScreen*>(screen)->name();
+
+    //desktop containments
     for (auto i = d->views.begin(); i != d->views.end()  ; i++) {
         if ((*i)->screen() == screen) {
             (*i)->deleteLater();
@@ -322,6 +345,11 @@ void ShellCorona::screenRemoved(QObject *screen)
             (*i)->containment()->reactToScreenChange();
             break;
         }
+    }
+
+    //move all panels on a deleted screen to the primary screen
+    foreach (PanelView *view, d->panelViews) {
+        view->setScreen(QGuiApplication::primaryScreen());
     }
 }
 
