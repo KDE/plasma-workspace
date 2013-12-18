@@ -403,13 +403,12 @@ void PanelView::restore()
     if (containment()->formFactor() == Plasma::Types::Vertical) {
         m_maxLength = config().readEntry<int>("maxLength", screen()->size().height());
         m_minLength = config().readEntry<int>("minLength", screen()->size().height());
-   
+
         const int maxSize = screen()->size().height() - m_offset;
         m_maxLength = qBound<int>(MINSIZE, m_maxLength, maxSize);
         m_minLength = qBound<int>(MINSIZE, m_minLength, maxSize);
 
-        resize(config().readEntry<int>("thickness", 32),
-               qBound<int>(MINSIZE, config().readEntry<int>("length", screen()->size().height()), maxSize));
+        resize(thickness(), qBound<int>(MINSIZE, length(), maxSize));
 
         setMinimumHeight(m_minLength);
         setMaximumHeight(m_maxLength);
@@ -423,8 +422,7 @@ void PanelView::restore()
         m_maxLength = qBound<int>(MINSIZE, m_maxLength, maxSize);
         m_minLength = qBound<int>(MINSIZE, m_minLength, maxSize);
 
-        resize(qBound<int>(MINSIZE, config().readEntry<int>("length", screen()->size().width()), maxSize),
-               config().readEntry<int>("thickness", 32));
+        resize(qBound<int>(MINSIZE, length(), maxSize), thickness());
 
         setMinimumWidth(m_minLength);
         setMaximumWidth(m_maxLength);
