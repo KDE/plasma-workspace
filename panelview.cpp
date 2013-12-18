@@ -188,15 +188,9 @@ void PanelView::setLength(int value)
         return;
     }
 
-    if (formFactor() == Plasma::Types::Vertical) {
-        setHeight(value);
-    } else {
-        setWidth(value);
-    }
     config().writeEntry("length", value);
-    emit lengthChanged();
     m_corona->requestApplicationConfigSync();
-    m_strutsTimer->start(STRUTSTIMERDELAY);
+    positionPanel();
 }
 
 int PanelView::maximumLength() const
@@ -291,6 +285,7 @@ void PanelView::positionPanel()
 
     QScreen *s = screen();
     const int oldThickness = thickness();
+    const int oldLength = length();
 
     switch (containment()->location()) {
     case Plasma::Types::TopEdge:
@@ -368,6 +363,14 @@ void PanelView::positionPanel()
             setHeight(thickness());
         }
         emit thicknessChanged();
+    }
+    if (length() != oldLength) {
+        if (formFactor() == Plasma::Types::Vertical) {
+            setHeight(length());
+        } else {
+            setWidth(length());
+        }
+        emit length();
     }
 }
 
