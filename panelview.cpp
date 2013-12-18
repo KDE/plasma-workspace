@@ -343,14 +343,14 @@ void PanelView::positionPanel()
         restore();
         switch (m_alignment) {
         case Qt::AlignCenter:
-            setPosition(QPoint(s->geometry().center().x(), s->geometry().bottom()) + QPoint(m_offset - size().width()/2, 0));
+            setPosition(QPoint(s->geometry().center().x(), s->geometry().bottom()) + QPoint(m_offset - size().width()/2, 1));
             break;
         case Qt::AlignRight:
-            setPosition(s->geometry().bottomRight() - QPoint(0, height()) - QPoint(m_offset + size().width(), 0));
+            setPosition(s->geometry().bottomRight() - QPoint(0, height()) - QPoint(m_offset + size().width(), 1));
             break;
         case Qt::AlignLeft:
         default:
-            setPosition(s->geometry().bottomLeft() - QPoint(0, height()) + QPoint(m_offset, 0));
+            setPosition(s->geometry().bottomLeft() - QPoint(0, height()) + QPoint(m_offset, 1));
         }
     }
     m_strutsTimer->stop();
