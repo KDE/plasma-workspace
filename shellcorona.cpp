@@ -139,9 +139,6 @@ ShellCorona::ShellCorona(QObject *parent)
     activityAction->setShortcut(QKeySequence("alt+d, alt+a"));
     activityAction->setShortcutContext(Qt::ApplicationShortcut);
 
-    connect(this, SIGNAL(immutabilityChanged(Plasma::ImmutabilityType)),
-            this, SLOT(updateImmutability(Plasma::ImmutabilityType)));
-
     connect(d->activityConsumer, SIGNAL(currentActivityChanged(QString)), this, SLOT(currentActivityChanged(QString)));
     connect(d->activityConsumer, SIGNAL(activityAdded(QString)), this, SLOT(activityAdded(QString)));
     connect(d->activityConsumer, SIGNAL(activityRemoved(QString)), this, SLOT(activityRemoved(QString)));
