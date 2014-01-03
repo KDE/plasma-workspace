@@ -39,6 +39,8 @@ void noMessageOutput(QtMsgType type, const char *msg)
 }
 int main(int argc, char** argv)
 {
+    QQmlDebuggingEnabler debugEnabler;
+
     QApplication app(argc, argv);
     app.setApplicationName("plasma_shell");
     app.setOrganizationDomain("kde.org");
@@ -70,12 +72,6 @@ int main(int argc, char** argv)
     parser.addOption(shutup);
 
     parser.process(app);
-
-    //enable the QML debugger only if --qmljsdebugger (or -d) is passed as a command line arg
-    //this must be called before the QApplication constructor
-    if (parser.isSet(dbg)) {
-        QQmlDebuggingEnabler enabler;
-    }
 
     if (parser.isSet(shutup)) {
         qInstallMsgHandler(noMessageOutput);
