@@ -97,9 +97,6 @@ ShellCorona::ShellCorona(QObject *parent)
 {
     d->desktopDefaultsConfig = KConfigGroup(KSharedConfig::openConfig(package().filePath("defaults")), "Desktop");
 
-    qmlRegisterType<WidgetExplorer>("org.kde.plasma.private.shell", 2, 0, "WidgetExplorer");
-    qmlRegisterType<Plasma::Containment>();
-
     connect(&d->appConfigSyncTimer, &QTimer::timeout,
             this, &ShellCorona::syncAppConfig);
 

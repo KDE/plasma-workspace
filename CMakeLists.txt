@@ -33,12 +33,6 @@ set(scripting_SRC
     scripting/widget.cpp
 )
 
-set(widgetexplorer_SRC
-    widgetexplorer/kcategorizeditemsviewmodels.cpp
-    widgetexplorer/plasmaappletitemmodel.cpp
-    widgetexplorer/widgetexplorer.cpp
-)
-
 add_executable(plasma-shell
     activity.cpp
     main.cpp
@@ -54,7 +48,6 @@ add_executable(plasma-shell
     shellpluginloader.cpp
     shellmanager.cpp
     ${scripting_SRC}
-    ${widgetexplorer_SRC}
 )
 
 # The Qt5Widgets_LIBRARIES variable also includes QtGui and QtCore
@@ -85,3 +78,5 @@ endif()
 
 install(TARGETS plasma-shell ${INSTALL_TARGETS_DEFAULT_ARGS})
 install(FILES plasma-shell.desktop DESTINATION ${AUTOSTART_INSTALL_DIR})
+
+add_subdirectory(widgetexplorer)
