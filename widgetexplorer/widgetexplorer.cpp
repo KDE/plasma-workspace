@@ -46,7 +46,6 @@ using namespace Plasma;
 WidgetAction::WidgetAction(QObject *parent)
     : QAction(parent)
 {
-    qDebug() << "There we go.";
 }
 
 WidgetAction::WidgetAction(const QIcon &icon, const QString &text, QObject *parent)
