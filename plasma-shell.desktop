@@ -3,6 +3,7 @@ Exec=plasma-shell --shut-up
 X-DBUS-StartupType=Unique
 Name=Plasma Desktop Workspace
 Name[de]=Plasma-Arbeitsflächenbereich
+Name[fi]=Plasma-työpöytä
 Name[fr]=Espace de travail du bureau Plasma
 Name[nl]=Plasma Bureaublad Werkplek
 Name[pt]=Área de Trabalho do Plasma
