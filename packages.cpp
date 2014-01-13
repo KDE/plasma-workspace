@@ -81,7 +81,7 @@ void QmlWallpaperPackage::initPackage(Plasma::Package *package)
     //package->setRequired("mainscript", true);
 
 
-    QStringList platform = KDeclarative::runtimePlatform();
+    QStringList platform = KDeclarative::KDeclarative::runtimePlatform();
     if (!platform.isEmpty()) {
         QMutableStringListIterator it(platform);
         while (it.hasNext()) {

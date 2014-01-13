@@ -124,7 +124,7 @@ ConfigModel *ContainmentConfigView::wallpaperConfigModel()
     return m_wallpaperConfigModel;
 }
 
-ConfigPropertyMap *ContainmentConfigView::wallpaperConfiguration() const
+KDeclarative::ConfigPropertyMap *ContainmentConfigView::wallpaperConfiguration() const
 {
     return m_currentWallpaperConfig;
 }
@@ -154,7 +154,7 @@ void ContainmentConfigView::setCurrentWallpaper(const QString &wallpaper)
         QFile file(pkg.filePath("config", "main.xml"));
         KConfigGroup cfg = m_containment->config();
         cfg = KConfigGroup(&cfg, "Wallpaper");
-        m_currentWallpaperConfig = m_ownWallpaperConfig = new ConfigPropertyMap(new Plasma::ConfigLoader(&cfg, &file), this);
+        m_currentWallpaperConfig = m_ownWallpaperConfig = new KDeclarative::ConfigPropertyMap(new Plasma::ConfigLoader(&cfg, &file), this);
     }
 
     m_currentWallpaper = wallpaper;
@@ -179,7 +179,7 @@ void ContainmentConfigView::syncWallpaperObjects()
     engine()->rootContext()->setContextProperty("wallpaper", wallpaperGraphicsObject);
 
     //FIXME: why m_wallpaperGraphicsObject->property("configuration").value<ConfigPropertyMap *>() doesn't work?
-    m_currentWallpaperConfig = static_cast<ConfigPropertyMap *>(wallpaperGraphicsObject->property("configuration").value<QObject *>());
+    m_currentWallpaperConfig = static_cast<KDeclarative::ConfigPropertyMap *>(wallpaperGraphicsObject->property("configuration").value<QObject *>());
 }
 
 #include "private/moc_containmentconfigview.cpp"

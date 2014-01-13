@@ -29,8 +29,11 @@ namespace Plasma {
 }
 
 class QAbstractItemModel;
-class ConfigPropertyMap;
 class CurrentContainmentActionsModel;
+
+namespace KDeclarative {
+    class ConfigPropertyMap;
+}
 
 //TODO: out of the library?
 class ContainmentConfigView : public ConfigView
@@ -39,7 +42,7 @@ class ContainmentConfigView : public ConfigView
     Q_PROPERTY(ConfigModel *containmentActionConfigModel READ containmentActionConfigModel CONSTANT)
     Q_PROPERTY(QAbstractItemModel *currentContainmentActionsModel READ currentContainmentActionsModel CONSTANT)
     Q_PROPERTY(ConfigModel *wallpaperConfigModel READ wallpaperConfigModel CONSTANT)
-    Q_PROPERTY(ConfigPropertyMap *wallpaperConfiguration READ wallpaperConfiguration NOTIFY wallpaperConfigurationChanged)
+    Q_PROPERTY(KDeclarative::ConfigPropertyMap *wallpaperConfiguration READ wallpaperConfiguration NOTIFY wallpaperConfigurationChanged)
     Q_PROPERTY(QString currentWallpaper READ currentWallpaper WRITE setCurrentWallpaper NOTIFY currentWallpaperChanged)
 
 public:
@@ -53,7 +56,7 @@ public:
     ConfigModel *wallpaperConfigModel();
     QString currentWallpaper() const;
     void setCurrentWallpaper(const QString &wallpaper);
-    ConfigPropertyMap *wallpaperConfiguration() const;
+    KDeclarative::ConfigPropertyMap *wallpaperConfiguration() const;
 
     Q_INVOKABLE void applyWallpaper();
 
@@ -70,8 +73,8 @@ private:
     ConfigModel *m_containmentActionConfigModel;
     CurrentContainmentActionsModel *m_currentContainmentActionsModel;
     QString m_currentWallpaper;
-    ConfigPropertyMap *m_currentWallpaperConfig;
-    ConfigPropertyMap *m_ownWallpaperConfig;
+    KDeclarative::ConfigPropertyMap *m_currentWallpaperConfig;
+    KDeclarative::ConfigPropertyMap *m_ownWallpaperConfig;
 };
 
 #endif // multiple inclusion guard
