@@ -37,10 +37,10 @@ Plasma::Package ShellPluginLoader::internalLoadPackage(const QString &packageFor
 {
     Q_UNUSED(specialization)
 
-    if (packageFormat.endsWith("/LookAndFeel")) {
+    if (packageFormat == "Plasma/LookAndFeel") {
         Plasma::PackageStructure *structure = new LookAndFeelPackage();
         return Plasma::Package(structure);
-    } else if (packageFormat.endsWith("/Wallpaper")) {
+    } else if (packageFormat == "Plasma/Wallpaper") {
         Plasma::PackageStructure *structure = new QmlWallpaperPackage();
         return Plasma::Package(structure);
     } else {
