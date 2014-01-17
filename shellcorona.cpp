@@ -345,6 +345,9 @@ void ShellCorona::screenRemoved(QObject *screen)
     }
 
     //move all panels on a deleted screen to the primary screen
+    //FIXME: this will break when a second screen is added again
+    //as in plasma1, panel should be hidden, panelView deleted.
+    //possibly similar to exportLayout/importLayout of Activities
     foreach (PanelView *view, d->panelViews) {
         view->setScreen(QGuiApplication::primaryScreen());
     }
