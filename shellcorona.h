@@ -84,9 +84,6 @@ protected Q_SLOTS:
     void screenAdded(QScreen *screen);
     void screenRemoved(QObject *screen);
 
-    void printScriptError(const QString &error);
-    void printScriptMessage(const QString &message);
-
     /**
      * Loads the layout and performs the needed checks
      */
