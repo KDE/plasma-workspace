@@ -60,6 +60,9 @@ void LookAndFeelPackage::initPackage(Plasma::Package *package)
     package->addDirectoryDefinition("desktopswitcher", "desktopswitcher", i18n("Virtual Desktop Switcher"));
     package->addFileDefinition("desktopswitchermainscript", "desktopswitcher/DesktopSwitcher.qml", i18n("Main Script for Virtual Desktop Switcher"));
 
+    package->addDirectoryDefinition("osd", "osd", i18n("On-Screen Display Notifications"));
+    package->addFileDefinition("osdmainscript", "osd/Osd.qml", i18n("Main Script for On-Screen Display Notifications"));
+
     package->addDirectoryDefinition("splash", "splash", i18n("Splash Screen"));
     package->addFileDefinition("splashmainscript", "splash/Splash.qml", i18n("Main Script for Splash Screen"));
 
