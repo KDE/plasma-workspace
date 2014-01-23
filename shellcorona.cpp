@@ -44,6 +44,7 @@
 #include "scripting/desktopscriptengine.h"
 #include "widgetexplorer/widgetexplorer.h"
 #include "configview.h"
+#include "shellpluginloader.h"
 
 static const int s_configSyncDelay = 10000; // 10 seconds
 
@@ -78,6 +79,7 @@ public:
     QHash<QString, QHash<int, Plasma::Containment *> > desktopContainments;
     QAction *addPanelAction;
     QMenu *addPanelsMenu;
+    Plasma::Package lookNFeelPackage;
 
     QTimer waitingPanelsTimer;
     QTimer appConfigSyncTimer;
@@ -643,6 +645,17 @@ void ShellCorona::insertContainment(const QString &activity, int screenNum, Plas
             }
         }
     });
+}
+
+Plasma::Package ShellCorona::lookAndFeelPackage() const
+{
+    if (!d->lookNFeelPackage.isValid()) {
+        d->lookNFeelPackage = ShellPluginLoader::self()->loadPackage("Plasma/LookAndFeel");
+        //TODO: make loading from config once we have some UI for setting the package
+        d->lookNFeelPackage.setPath("org.kde.lookandfeel");
+    }
+
+    return d->lookNFeelPackage;
 }
 
 

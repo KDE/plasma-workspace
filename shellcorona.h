@@ -23,6 +23,8 @@
 
 #include "plasma/corona.h"
 
+#include <Plasma/Package>
+
 namespace Plasma
 {
     class Applet;
@@ -63,6 +65,8 @@ public:
     PanelView *panelView(Plasma::Containment *containment) const;
 
     KActivities::Controller *activityController();
+
+    Plasma::Package lookAndFeelPackage() const;
 
 public Q_SLOTS:
     /**
