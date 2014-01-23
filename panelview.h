@@ -23,6 +23,7 @@
 #include <plasmaquickview.h>
 #include "panelconfigview.h"
 #include <QtCore/qpointer.h>
+#include <Plasma/Theme>
 
 class ShellCorona;
 
@@ -108,6 +109,7 @@ private:
     ShellCorona *m_corona;
     QTimer *m_strutsTimer;
     VisibilityMode m_visibilityMode;
+    Plasma::Theme m_theme;
 
     static const int STRUTSTIMERDELAY = 200;
 };

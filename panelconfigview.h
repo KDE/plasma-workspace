@@ -27,6 +27,7 @@
 #include <QJSValue>
 #include <QQmlListProperty>
 #include <QStandardItemModel>
+#include <Plasma/Theme>
 
 class AppletInterface;
 class ConfigPropertyMap;
@@ -55,6 +56,7 @@ protected Q_SLOTS:
 private:
     Plasma::Containment *m_containment;
     PanelView *m_panelView;
+    Plasma::Theme m_theme;
 };
 
 #endif // multiple inclusion guard

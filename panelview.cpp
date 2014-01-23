@@ -57,6 +57,11 @@ PanelView::PanelView(ShellCorona *corona, QWindow *parent)
 
     //TODO: how to take the shape from the framesvg?
     KWindowEffects::enableBlurBehind(winId(), true);
+    if (qGray(m_theme.color(Plasma::Theme::BackgroundColor).rgb()) > 127) {
+        KWindowEffects::enableBackgroundContrast(winId(), true, 0.30, 1.9, 1.7);
+    } else {
+        KWindowEffects::enableBackgroundContrast(winId(), true, 0.45, 0.45, 1.7);
+    }
 
     //Screen management
     connect(this, &QWindow::screenChanged,

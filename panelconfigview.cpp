@@ -46,6 +46,11 @@ PanelConfigView::PanelConfigView(Plasma::Containment *containment, PanelView *pa
     setFlags(Qt::FramelessWindowHint);
 
     KWindowEffects::enableBlurBehind(winId(), true);
+    if (qGray(m_theme.color(Plasma::Theme::BackgroundColor).rgb()) > 127) {
+        KWindowEffects::enableBackgroundContrast(winId(), true, 0.30, 1.9, 1.7);
+    } else {
+        KWindowEffects::enableBackgroundContrast(winId(), true, 0.45, 0.45, 1.7);
+    }
 
     engine()->rootContext()->setContextProperty("panel", panelView);
     engine()->rootContext()->setContextProperty("configDialog", this);
