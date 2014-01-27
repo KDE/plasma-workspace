@@ -45,6 +45,7 @@
 #include "widgetexplorer/widgetexplorer.h"
 #include "configview.h"
 #include "shellpluginloader.h"
+#include "osd.h"
 
 static const int s_configSyncDelay = 10000; // 10 seconds
 
@@ -140,6 +141,8 @@ ShellCorona::ShellCorona(QObject *parent)
     connect(d->activityConsumer, SIGNAL(currentActivityChanged(QString)), this, SLOT(currentActivityChanged(QString)));
     connect(d->activityConsumer, SIGNAL(activityAdded(QString)), this, SLOT(activityAdded(QString)));
     connect(d->activityConsumer, SIGNAL(activityRemoved(QString)), this, SLOT(activityRemoved(QString)));
+
+    new Osd(this);
 }
 
 ShellCorona::~ShellCorona()
@@ -657,7 +660,6 @@ Plasma::Package ShellCorona::lookAndFeelPackage() const
 
     return d->lookNFeelPackage;
 }
-
 
 
 // Desktop corona handler

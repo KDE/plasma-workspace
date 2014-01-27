@@ -47,6 +47,7 @@ add_executable(plasma-shell
     shellcorona.cpp
     shellpluginloader.cpp
     shellmanager.cpp
+    osd.cpp
     ${scripting_SRC}
 )
 

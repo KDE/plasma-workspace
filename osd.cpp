@@ -1,0 +1,117 @@
+/*
+ *  Copyright 2014 (c) Martin Klapetek <mklapetek@kde.org>
+ *
+ *  This program is free software; you can redistribute it and/or modify
+ *  it under the terms of the GNU General Public License as published by
+ *  the Free Software Foundation; either version 2 of the License, or
+ *  (at your option) any later version.
+ *
+ *  This program is distributed in the hope that it will be useful,
+ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *  GNU General Public License for more details.
+ *
+ *  You should have received a copy of the GNU General Public License
+ *  along with this program; if not, write to the Free Software
+ *  Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+ */
+
+#include "osd.h"
+#include "shellpluginloader.h"
+#include "shellcorona.h"
+
+#include <QDBusConnection>
+#include <QTimer>
+#include <QWindow>
+#include <QDebug>
+#include <QUrl>
+
+#include <Plasma/Package>
+#include <KDeclarative/QmlObject>
+#include <klocalizedstring.h>
+
+
+Osd::Osd(ShellCorona *corona)
+    : QObject(corona)
+{
+    m_osdObject = new KDeclarative::QmlObject(this);
+
+    m_osdObject->setSource(QUrl::fromLocalFile(corona->lookAndFeelPackage().filePath("osdmainscript")));
+    m_timeout = m_osdObject->rootObject()->property("timeout").toInt();
+
+    QDBusConnection::sessionBus().registerObject("/org/kde/osdService", this, QDBusConnection::ExportAllSlots);
+
+    m_osdTimer = new QTimer(this);
+    m_osdTimer->setSingleShot(true);
+    connect(m_osdTimer, SIGNAL(timeout()),
+            this, SLOT(hideOsd()));
+}
+
+Osd::~Osd()
+{
+}
+
+void Osd::brightnessChanged(int percent)
+{
+    // FIXME: need brightness icon
+    showProgress(QString(), percent);
+}
+
+void Osd::volumeChanged(int percent)
+{
+    QString icon;
+    if (percent >= 75) {
+        icon = QStringLiteral("audio-volume-high");
+    } else if (percent < 75 && percent >= 25) {
+        icon = QStringLiteral("audio-volume-medium");
+    } else if (percent < 25 && percent > 0) {
+        icon = QStringLiteral("audio-volume-low");
+    } else if (percent == 0) {
+        icon = QStringLiteral("audio-volume-muted");
+        showText(icon, i18n("Audio Muted"));
+        return;
+    }
+
+    showProgress(icon, percent);
+}
+
+void Osd::kbdLayoutChanged(const QString &layoutName)
+{
+    //FIXME: need a kbd icon
+    showText(QString(), layoutName);
+}
+
+void Osd::virtualDesktopChanged(const QString &currentVirtualDesktopName)
+{
+    //FIXME: need a VD icon
+    showText(QString(), currentVirtualDesktopName);
+}
+
+void Osd::showProgress(const QString &icon, const int percent)
+{
+    m_osdObject->rootObject()->setProperty("osdValue", percent);
+    m_osdObject->rootObject()->setProperty("showingProgress", true);
+    m_osdObject->rootObject()->setProperty("icon", icon);
+
+    showOsd();
+}
+
+void Osd::showText(const QString &icon, const QString &text)
+{
+    m_osdObject->rootObject()->setProperty("osdValue", text);
+    m_osdObject->rootObject()->setProperty("showingProgress", false);
+    m_osdObject->rootObject()->setProperty("icon", icon);
+
+    showOsd();
+}
+
+void Osd::showOsd()
+{
+    m_osdObject->rootObject()->setProperty("visible", true);
+    m_osdTimer->start(m_timeout);
+}
+
+void Osd::hideOsd()
+{
+    m_osdObject->rootObject()->setProperty("visible", false);
+}
