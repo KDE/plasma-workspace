@@ -75,6 +75,11 @@ void Osd::volumeChanged(int percent)
     showProgress(icon, percent);
 }
 
+void Osd::mediaPlayerVolumeChanged(int percent, const QString &playerName, const QString &playerIconName)
+{
+    showProgress(playerIconName, percent, playerName);
+}
+
 void Osd::kbdLayoutChanged(const QString &layoutName)
 {
     //FIXME: need a kbd icon
@@ -87,9 +92,10 @@ void Osd::virtualDesktopChanged(const QString &currentVirtualDesktopName)
     showText(QString(), currentVirtualDesktopName);
 }
 
-void Osd::showProgress(const QString &icon, const int percent)
+void Osd::showProgress(const QString &icon, const int percent, const QString &additionalText)
 {
     m_osdObject->rootObject()->setProperty("osdValue", percent);
+    m_osdObject->rootObject()->setProperty("osdAdditionalText", additionalText);
     m_osdObject->rootObject()->setProperty("showingProgress", true);
     m_osdObject->rootObject()->setProperty("icon", icon);
 

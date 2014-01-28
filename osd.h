@@ -42,6 +42,7 @@ public:
 public Q_SLOTS:
     void brightnessChanged(int percent);
     void volumeChanged(int percent);
+    void mediaPlayerVolumeChanged(int percent, const QString &playerName, const QString &playerIconName);
     void kbdLayoutChanged(const QString &layoutName);
     void virtualDesktopChanged(const QString &currentVirtualDesktopName);
 
@@ -49,7 +50,7 @@ private Q_SLOTS:
     void hideOsd();
 
 private:
-    void showProgress(const QString &icon, const int percent);
+    void showProgress(const QString &icon, const int percent, const QString &additionalText = QString());
     void showText(const QString &icon, const QString &text);
     void showOsd();
 
