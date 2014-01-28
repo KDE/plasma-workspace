@@ -77,7 +77,11 @@ void Osd::volumeChanged(int percent)
 
 void Osd::mediaPlayerVolumeChanged(int percent, const QString &playerName, const QString &playerIconName)
 {
-    showProgress(playerIconName, percent, playerName);
+    if (percent == 0) {
+        showText(playerIconName, i18nc("OSD informing that some media app is muted, eg. Amarok Muted", "%1 Muted", playerName));
+    } else {
+        showProgress(playerIconName, percent, playerName);
+    }
 }
 
 void Osd::kbdLayoutChanged(const QString &layoutName)
