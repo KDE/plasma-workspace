@@ -98,6 +98,12 @@ ShellCorona::ShellCorona(QObject *parent)
 {
     d->desktopDefaultsConfig = KConfigGroup(KSharedConfig::openConfig(package().filePath("defaults")), "Desktop");
 
+    // FIXME: read from config,if emptry from package
+    Plasma::Theme *t = new Plasma::Theme(this);
+    //t->setThemeName("oxygen");
+    KConfigGroup cg(KSharedConfig::openConfig("plasmarc"), "Theme-plasma-shell");
+    t->setThemeName(cg.readEntry("name", "default"));
+
     connect(this, &ShellCorona::containmentAdded,
             this, &ShellCorona::handleContainmentAdded);
 
