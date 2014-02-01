@@ -34,6 +34,9 @@ void LookAndFeelPackage::initPackage(Plasma::Package *package)
 
     package->setDefaultPackageRoot("plasma/look-and-feel/");
 
+    //Defaults
+    package->addFileDefinition("defaults", "defaults", i18n("Default settings for theme, etc."));
+
     //Directories
     package->addDirectoryDefinition("previews", "previews", i18n("Preview Images"));
     package->addFileDefinition("loginmanagerpreview", "previews/loginmanager.png", i18n("Preview for the Login Manager"));

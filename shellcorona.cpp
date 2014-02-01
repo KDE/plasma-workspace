@@ -98,11 +98,29 @@ ShellCorona::ShellCorona(QObject *parent)
 {
     d->desktopDefaultsConfig = KConfigGroup(KSharedConfig::openConfig(package().filePath("defaults")), "Desktop");
 
-    // FIXME: read from config,if emptry from package
-    Plasma::Theme *t = new Plasma::Theme(this);
-    //t->setThemeName("oxygen");
-    KConfigGroup cg(KSharedConfig::openConfig("plasmarc"), "Theme-plasma-shell");
-    t->setThemeName(cg.readEntry("name", "default"));
+    // Look for theme config in plasmarc, if it isn't configured, take the theme from the
+    // LookAndFeel package, if either is set, change the default theme
+
+    const QString themeGroupKey = QStringLiteral("Theme");
+    const QString themeNameKey = QStringLiteral("name");
+
+    QString themeName;
+
+    KConfigGroup plasmarc(KSharedConfig::openConfig("plasmarc"), themeGroupKey);
+    themeName = plasmarc.readEntry(themeNameKey, themeName);
+
+    if (themeName.isEmpty()) {
+        const KConfigGroup lnfCfg = KConfigGroup(KSharedConfig::openConfig(
+                                                lookAndFeelPackage().filePath("defaults")),
+                                                themeGroupKey
+                                           );
+        themeName = lnfCfg.readEntry(themeNameKey, themeName);
+    }
+
+    if (!themeName.isEmpty()) {
+        Plasma::Theme *t = new Plasma::Theme(this);
+        t->setThemeName(themeName);
+    }
 
     connect(this, &ShellCorona::containmentAdded,
             this, &ShellCorona::handleContainmentAdded);
