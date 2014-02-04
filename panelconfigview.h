@@ -47,6 +47,9 @@ public:
 
     void init();
 
+public Q_SLOTS:
+    void showAddWidgetDialog();
+
 protected:
     void focusOutEvent(QFocusEvent *ev);
 
