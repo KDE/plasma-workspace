@@ -35,7 +35,6 @@
 #include <Plasma/Containment>
 #include <Plasma/Corona>
 #include <Plasma/PluginLoader>
-#include <X11/extensions/XInput2.h>
 
 //////////////////////////////PanelConfigView
 PanelConfigView::PanelConfigView(Plasma::Containment *containment, PanelView *panelView, QWindow *parent)
