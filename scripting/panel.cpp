@@ -182,7 +182,7 @@ void Panel::setOffset(int pixels)
         return;
     }
 
-    QQuickItem *graphicObject = qobject_cast<QQuickItem *>(c->property("graphicObject").value<QObject *>());
+    QQuickItem *graphicObject = qobject_cast<QQuickItem *>(c->property("_plasma_graphicObject").value<QObject *>());
 
     if (!graphicObject) {
         return;
@@ -222,7 +222,7 @@ int Panel::length() const
     if (!c) {
         return 0;
     }
-    QQuickItem *graphicObject = qobject_cast<QQuickItem *>(c->property("graphicObject").value<QObject *>());
+    QQuickItem *graphicObject = qobject_cast<QQuickItem *>(c->property("_plasma_graphicObject").value<QObject *>());
 
     if (!graphicObject) {
         return 0;
@@ -242,7 +242,7 @@ void Panel::setLength(int pixels)
         return;
     }
 
-    QQuickItem *graphicObject = qobject_cast<QQuickItem *>(c->property("graphicObject").value<QObject *>());
+    QQuickItem *graphicObject = qobject_cast<QQuickItem *>(c->property("_plasma_graphicObject").value<QObject *>());
 
     if (!graphicObject) {
         return;
@@ -279,7 +279,7 @@ int Panel::height() const
         return 0;
     }
 
-    QQuickItem *graphicObject = qobject_cast<QQuickItem *>(c->property("graphicObject").value<QObject *>());
+    QQuickItem *graphicObject = qobject_cast<QQuickItem *>(c->property("_plasma_graphicObject").value<QObject *>());
 
     if (!graphicObject) {
         return 0;
@@ -296,7 +296,7 @@ void Panel::setHeight(int height)
         return;
     }
 
-    QQuickItem *graphicObject = qobject_cast<QQuickItem *>(c->property("graphicObject").value<QObject *>());
+    QQuickItem *graphicObject = qobject_cast<QQuickItem *>(c->property("_plasma_graphicObject").value<QObject *>());
 
     if (!graphicObject) {
         return;
