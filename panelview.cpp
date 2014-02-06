@@ -602,11 +602,12 @@ void PanelView::updateStruts()
 void PanelView::themeChanged()
 {
     qDebug() << "CON themeChanged ... " << m_theme.backgroundContrastEnabled() << " : " << m_theme.backgroundContrast() << m_theme.backgroundIntensity() << m_theme.backgroundSaturation();
+    //TODO: how to take the shape from the framesvg?
+    KWindowEffects::enableBlurBehind(winId(), true);
     KWindowEffects::enableBackgroundContrast(winId(), m_theme.backgroundContrastEnabled(),
                                                       m_theme.backgroundContrast(),
                                                       m_theme.backgroundIntensity(),
                                                       m_theme.backgroundSaturation());
-    //TODO: how to take the shape from the framesvg?
 }
 
 #include "moc_panelview.cpp"
