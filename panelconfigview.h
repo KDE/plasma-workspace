@@ -56,6 +56,9 @@ protected:
 protected Q_SLOTS:
     void syncGeometry();
 
+private Q_SLOTS:
+    void updateContrast();
+
 private:
     Plasma::Containment *m_containment;
     PanelView *m_panelView;
