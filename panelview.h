@@ -97,6 +97,7 @@ protected Q_SLOTS:
     void updateStruts();
 
 private Q_SLOTS:
+    void themeChanged();
     void positionPanel();
     void restore();
 
