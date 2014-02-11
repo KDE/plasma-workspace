@@ -51,9 +51,7 @@ add_executable(plasma-shell
     ${scripting_SRC}
 )
 
-# The Qt5Widgets_LIBRARIES variable also includes QtGui and QtCore
 target_link_libraries(plasma-shell
- #Qt5::Widgets
  Qt5::Quick
  Qt5::Qml
  KF5::KIOCore
