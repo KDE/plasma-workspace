@@ -39,6 +39,7 @@ public:
 #if HAVE_X11
         ,_connection( 0x0 ),
         _gc( 0x0 )
+        , m_isX11(QX11Info::isPlatformX11())
 #endif
     {
     }
@@ -78,6 +79,9 @@ public:
 
     //! graphical context
     xcb_gcontext_t _gc;
+#if HAVE_X11
+    bool m_isX11;
+#endif
 
     QHash<Plasma::FrameSvg::EnabledBorders, QVector<unsigned long> > data;
     QHash<const QWindow *, Plasma::FrameSvg::EnabledBorders> m_windows;
@@ -171,6 +175,9 @@ Qt::HANDLE PanelShadows::Private::createPixmap(const QPixmap& source)
     */
 
     #if HAVE_X11
+    if (!m_isX11) {
+        return 0;
+    }
     
     // check connection 
     if( !_connection ) _connection = QX11Info::connection();
@@ -223,6 +230,9 @@ void PanelShadows::Private::initPixmap(const QString &element)
 QPixmap PanelShadows::Private::initEmptyPixmap(const QSize &size)
 {
 #ifdef HAVE_X11
+    if (!m_isX11) {
+        return QPixmap();
+    }
     QPixmap tempEmptyPix(size);
     if (!size.isEmpty()) {
         tempEmptyPix.fill(Qt::transparent);
@@ -259,6 +269,9 @@ void PanelShadows::Private::setupPixmaps()
 void PanelShadows::Private::setupData(Plasma::FrameSvg::EnabledBorders enabledBorders)
 {
 #ifdef HAVE_X11
+    if (!m_isX11) {
+        return;
+    }
     //shadow-top
     if (enabledBorders & Plasma::FrameSvg::TopBorder) {
         data[enabledBorders] << reinterpret_cast<unsigned long>(createPixmap(m_shadowPixmaps[0]));
@@ -389,6 +402,9 @@ void PanelShadows::Private::setupData(Plasma::FrameSvg::EnabledBorders enabledBo
 void PanelShadows::Private::freeX11Pixmaps()
 {
 #ifdef HAVE_X11
+    if (!m_isX11) {
+        return;
+    }
     foreach (const QPixmap &pixmap, m_shadowPixmaps) {
         if (!QX11Info::display()) {
             return;
@@ -442,6 +458,9 @@ void PanelShadows::Private::clearPixmaps()
 void PanelShadows::Private::updateShadow(const QWindow *window, Plasma::FrameSvg::EnabledBorders enabledBorders)
 {
 #ifdef HAVE_X11
+    if (!m_isX11) {
+        return;
+    }
     if (m_shadowPixmaps.isEmpty()) {
         setupPixmaps();
     }
@@ -462,6 +481,9 @@ void PanelShadows::Private::updateShadow(const QWindow *window, Plasma::FrameSvg
 void PanelShadows::Private::clearShadow(const QWindow *window)
 {
 #ifdef HAVE_X11
+    if (!m_isX11) {
+        return;
+    }
     Display *dpy = QX11Info::display();
     Atom atom = XInternAtom(dpy, "_KDE_NET_WM_SHADOW", False);
     XDeleteProperty(dpy, window->winId(), atom);
