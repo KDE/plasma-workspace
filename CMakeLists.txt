@@ -9,8 +9,6 @@ set(CMAKE_INCLUDE_CURRENT_DIR ON)
 
 set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH})
 
-add_definitions(-DHAVE_X11=${HAVE_X11})
-
 find_package(Qt5Qml REQUIRED)
 find_package(Qt5Quick REQUIRED)
 find_package(Qt5Script REQUIRED)
@@ -70,7 +68,7 @@ target_link_libraries(plasma-shell
 )
 target_include_directories(plasma-shell PRIVATE "${CMAKE_BINARY_DIR}")
 
-if(X11_FOUND)
+if(HAVE_X11)
   target_link_libraries(plasma-shell ${X11_LIBRARIES} ${XCB_XCB_LIBRARY} )
   target_link_libraries(plasma-shell Qt5::X11Extras)
 endif()
