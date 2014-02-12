@@ -54,6 +54,8 @@ public:
 
     virtual KConfigGroup config() const;
 
+    Q_INVOKABLE void maximize();
+
     Qt::Alignment alignment() const;
     void setAlignment(Qt::Alignment alignment);
 
