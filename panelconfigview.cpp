@@ -70,6 +70,14 @@ void PanelConfigView::init()
     syncGeometry();
 }
 
+QAction *PanelConfigView::action(const QString &name)
+{
+    if (m_containment) {
+        return m_containment->actions()->action(name);
+    }
+    return 0;
+}
+
 void PanelConfigView::showAddWidgetDialog()
 {
     QAction *addWidgetAction = m_containment->actions()->action("add widgets");
@@ -107,7 +115,7 @@ void PanelConfigView::syncGeometry()
 void PanelConfigView::focusOutEvent(QFocusEvent *ev)
 {
     Q_UNUSED(ev)
-    //close();
+    close();
 }
 
 #include "moc_panelconfigview.cpp"

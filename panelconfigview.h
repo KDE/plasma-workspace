@@ -47,6 +47,8 @@ public:
 
     void init();
 
+    Q_INVOKABLE QAction *action(const QString &name);
+
 public Q_SLOTS:
     void showAddWidgetDialog();
 

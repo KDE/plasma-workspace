@@ -265,7 +265,7 @@ void PanelView::setVisibilityMode(PanelView::VisibilityMode mode)
     show();
 
     disconnect(containment(), SIGNAL(activate()), this, SLOT(unhide()));
-    if (!(mode == NormalPanel && mode == WindowsGoBelow)) {
+    if (!(mode == NormalPanel || mode == WindowsGoBelow)) {
         connect(containment(), SIGNAL(activate()), this, SLOT(unhide()));
     }
 
