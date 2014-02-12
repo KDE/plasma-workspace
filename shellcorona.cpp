@@ -346,6 +346,12 @@ void ShellCorona::screenAdded(QScreen *screen)
     if (!containment) {
         containment = createContainmentForActivity(currentActivity, screenNum);
     }
+
+    QAction *removeAction = containment->actions()->action("remove");
+    if (removeAction) {
+        removeAction->setVisible(false);
+    }
+
     view->setContainment(containment);
 
     connect(screen, SIGNAL(destroyed(QObject*)), SLOT(screenRemoved(QObject*)));
@@ -358,6 +364,7 @@ Plasma::Containment* ShellCorona::createContainmentForActivity(const QString& ac
     Plasma::Containment* containment = createContainment(d->desktopDefaultsConfig.readEntry("Containment", "org.kde.desktopcontainment"));
     containment->setActivity(activity);
     insertContainment(activity, screenNum, containment);
+
     return containment;
 }
 
@@ -485,6 +492,10 @@ void ShellCorona::currentActivityChanged(const QString &newActivity)
         Plasma::Containment* c = d->desktopContainments[newActivity][i];
         if (!c) {
             c = createContainmentForActivity(newActivity, i);
+        }
+        QAction *removeAction = c->actions()->action("remove");
+        if (removeAction) {
+            removeAction->setVisible(false);
         }
         d->views[i]->setContainment(c);
     }
