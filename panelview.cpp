@@ -374,20 +374,13 @@ void PanelView::positionPanel()
     m_strutsTimer->stop();
     m_strutsTimer->start(STRUTSTIMERDELAY);
 
-    if (thickness() != oldThickness) {
-        if (formFactor() == Plasma::Types::Vertical) {
-            setWidth(thickness());
-        } else {
-            setHeight(thickness());
-        }
+    if (formFactor() == Plasma::Types::Vertical) {
+        resize(thickness(), length());
         emit thicknessChanged();
-    }
-    if (length() != oldLength) {
-        if (formFactor() == Plasma::Types::Vertical) {
-            setHeight(length());
-        } else {
-            setWidth(length());
-        }
+        emit length();
+    } else {
+        resize(length(), thickness());
+        emit thicknessChanged();
         emit length();
     }
 }
