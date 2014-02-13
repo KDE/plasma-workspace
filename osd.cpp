@@ -98,7 +98,8 @@ void Osd::virtualDesktopChanged(const QString &currentVirtualDesktopName)
 
 void Osd::showProgress(const QString &icon, const int percent, const QString &additionalText)
 {
-    m_osdObject->rootObject()->setProperty("osdValue", percent);
+    int value = qBound(0, percent, 100);
+    m_osdObject->rootObject()->setProperty("osdValue", value);
     m_osdObject->rootObject()->setProperty("osdAdditionalText", additionalText);
     m_osdObject->rootObject()->setProperty("showingProgress", true);
     m_osdObject->rootObject()->setProperty("icon", icon);
