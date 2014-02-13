@@ -72,6 +72,10 @@ PanelView::PanelView(ShellCorona *corona, QWindow *parent)
             this, &PanelView::positionPanel);
     connect(this, &PlasmaQuickView::containmentChanged,
             this, &PanelView::positionPanel);
+    connect(this, &PlasmaQuickView::containmentChanged,
+            this, [=] () {
+                restore();
+            });
 
     if (!m_corona->package().isValid()) {
         qWarning() << "Invalid home screen package";
@@ -205,7 +209,7 @@ void PanelView::setLength(int value)
     if (value == length()) {
         return;
     }
-
+return;
     config().writeEntry("length", value);
     m_corona->requestApplicationConfigSync();
     positionPanel();
@@ -308,7 +312,6 @@ void PanelView::positionPanel()
     switch (containment()->location()) {
     case Plasma::Types::TopEdge:
         containment()->setFormFactor(Plasma::Types::Horizontal);
-        restore();
 
         switch (m_alignment) {
         case Qt::AlignCenter:
@@ -325,7 +328,7 @@ void PanelView::positionPanel()
 
     case Plasma::Types::LeftEdge:
         containment()->setFormFactor(Plasma::Types::Vertical);
-        restore();
+
         switch (m_alignment) {
         case Qt::AlignCenter:
             setPosition(QPoint(s->geometry().left(), s->geometry().center().y()) + QPoint(0, m_offset));
@@ -341,7 +344,7 @@ void PanelView::positionPanel()
 
     case Plasma::Types::RightEdge:
         containment()->setFormFactor(Plasma::Types::Vertical);
-        restore();
+
         switch (m_alignment) {
         case Qt::AlignCenter:
             setPosition(QPoint(s->geometry().right(), s->geometry().center().y()) - QPoint(width(), 0) + QPoint(0, m_offset - size().height()/2));
@@ -358,7 +361,7 @@ void PanelView::positionPanel()
     case Plasma::Types::BottomEdge:
     default:
         containment()->setFormFactor(Plasma::Types::Horizontal);
-        restore();
+
         switch (m_alignment) {
         case Qt::AlignCenter:
             setPosition(QPoint(s->geometry().center().x(), s->geometry().bottom()) + QPoint(m_offset - size().width()/2, 1));
@@ -373,13 +376,26 @@ void PanelView::positionPanel()
     }
     m_strutsTimer->stop();
     m_strutsTimer->start(STRUTSTIMERDELAY);
+qWarning()<<"11111"<<size()<<"T"<<thickness()<< "L"<<length();
+    setMinimumSize(QSize(0, 0));
+    setMaximumSize(screen()->size());
 
     if (formFactor() == Plasma::Types::Vertical) {
         resize(thickness(), length());
+        //setMaximumSize(QSize(thickness(), length()));
+        //setMinimumSize(QSize(thickness(), length()));
+        setMinimumSize(QSize(0, m_minLength));
+        setMaximumSize(QSize(9999, m_maxLength));
+
         emit thicknessChanged();
         emit length();
     } else {
         resize(length(), thickness());
+        //setMaximumSize(QSize(length(), thickness()));
+        //setMinimumSize(QSize(length(), thickness()));
+        setMinimumSize(QSize(m_minLength, 0));
+        setMaximumSize(QSize(m_maxLength, 9999));
+
         emit thicknessChanged();
         emit length();
     }
