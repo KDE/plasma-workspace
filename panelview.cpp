@@ -209,7 +209,7 @@ void PanelView::setLength(int value)
     if (value == length()) {
         return;
     }
-return;
+
     config().writeEntry("length", value);
     m_corona->requestApplicationConfigSync();
     positionPanel();
@@ -376,25 +376,21 @@ void PanelView::positionPanel()
     }
     m_strutsTimer->stop();
     m_strutsTimer->start(STRUTSTIMERDELAY);
-qWarning()<<"11111"<<size()<<"T"<<thickness()<< "L"<<length();
+
     setMinimumSize(QSize(0, 0));
     setMaximumSize(screen()->size());
 
     if (formFactor() == Plasma::Types::Vertical) {
         resize(thickness(), length());
-        //setMaximumSize(QSize(thickness(), length()));
-        //setMinimumSize(QSize(thickness(), length()));
-        setMinimumSize(QSize(0, m_minLength));
-        setMaximumSize(QSize(9999, m_maxLength));
+        setMinimumSize(QSize(thickness(), m_minLength));
+        setMaximumSize(QSize(thickness(), m_maxLength));
 
         emit thicknessChanged();
         emit length();
     } else {
         resize(length(), thickness());
-        //setMaximumSize(QSize(length(), thickness()));
-        //setMinimumSize(QSize(length(), thickness()));
-        setMinimumSize(QSize(m_minLength, 0));
-        setMaximumSize(QSize(m_maxLength, 9999));
+        setMinimumSize(QSize(m_minLength, thickness()));
+        setMaximumSize(QSize(m_maxLength, thickness()));
 
         emit thicknessChanged();
         emit length();
@@ -487,6 +483,7 @@ void PanelView::showConfigurationInterface(Plasma::Applet *applet)
 
 void PanelView::resizeEvent(QResizeEvent *ev)
 {
+
     if (containment()->formFactor() == Plasma::Types::Vertical) {
         config().writeEntry("length", ev->size().height());
         config().writeEntry("thickness", ev->size().width());

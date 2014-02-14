@@ -45,7 +45,7 @@ PanelConfigView::PanelConfigView(Plasma::Containment *containment, PanelView *pa
     setScreen(panelView->screen());
     connect(panelView, &PanelView::screenChanged, [=](QScreen *screen){setScreen(screen); syncGeometry();});
 
-    setFlags(Qt::FramelessWindowHint);
+    setFlags(Qt::BypassWindowManagerHint);
 
     KWindowEffects::enableBlurBehind(winId(), true);
     if (qGray(m_theme.color(Plasma::Theme::BackgroundColor).rgb()) > 127) {
