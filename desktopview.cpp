@@ -93,10 +93,12 @@ void DesktopView::setDashboardShown(bool shown)
     if (shown) {
         if (m_stayBehind) {
             KWindowSystem::setType(winId(), NET::Normal);
+            KWindowSystem::clearState(winId(), NET::SkipTaskbar|NET::KeepBelow);
         }
         raise();
         KWindowSystem::raiseWindow(winId());
-        
+        KWindowSystem::forceActiveWindow(winId());
+
         QObject *wpGraphicObject = containment()->property("wallpaperGraphicsObject").value<QObject *>();
         if (wpGraphicObject) {
             wpGraphicObject->setProperty("opacity", 0.3);
@@ -104,6 +106,7 @@ void DesktopView::setDashboardShown(bool shown)
     } else {
         if (m_stayBehind) {
             KWindowSystem::setType(winId(), NET::Desktop);
+            KWindowSystem::setState(winId(), NET::SkipTaskbar|NET::SkipPager|NET::KeepBelow);
         }
         lower();
         KWindowSystem::lowerWindow(winId());

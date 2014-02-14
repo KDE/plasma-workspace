@@ -36,6 +36,7 @@
 #include <kactivities/consumer.h>
 #include <ksycoca.h>
 #include <kservicetypetrader.h>
+#include <KGlobalAccel>
 
 
 #include "activity.h"
@@ -140,12 +141,13 @@ ShellCorona::ShellCorona(QObject *parent)
     QObject::connect(dashboardAction, &QAction::triggered,
                      this, &ShellCorona::setDashboardShown);
     dashboardAction->setText(i18n("Show Dashboard"));
+
     dashboardAction->setAutoRepeat(true);
     dashboardAction->setCheckable(true);
     dashboardAction->setIcon(QIcon::fromTheme("dashboard-show"));
     dashboardAction->setData(Plasma::Types::ControlAction);
-    dashboardAction->setShortcut(QKeySequence("ctrl+f12"));
-    dashboardAction->setShortcutContext(Qt::ApplicationShortcut);
+    KGlobalAccel::self()->setDefaultShortcut(dashboardAction, QList<QKeySequence>() << QKeySequence(Qt::Key_Control + Qt::Key_F12));
+    KGlobalAccel::self()->setShortcut(dashboardAction, QList<QKeySequence>() << QKeySequence(Qt::Key_Control + Qt::Key_F12));
 
 
     checkAddPanelAction();
