@@ -86,6 +86,7 @@ QMap<QString, IonInterface::ConditionIcons> UKMETIon::setupDayIconMappings(void)
     //dayList["sunny intervals night"] = ClearNight;
     dayList["partly cloudy"] = PartlyCloudyDay;
     dayList["cloudy"] = Overcast;
+    dayList["light cloud"] = Overcast;
     dayList["white cloud"] = Overcast;
     dayList["grey cloud"] = Overcast;
     //dayList["low level cloud"] = NotAvailable;
@@ -136,6 +137,7 @@ QMap<QString, IonInterface::ConditionIcons> UKMETIon::setupNightIconMappings(voi
     nightList["clear intervals"] = PartlyCloudyNight;
     nightList["sunny intervals"] = PartlyCloudyDay; // it's not really sunny
     nightList["sunny"] = ClearDay;
+    nightList["light cloud"] = Overcast;
     nightList["cloudy"] = Overcast;
     nightList["white cloud"] = Overcast;
     nightList["grey cloud"] = Overcast;
@@ -258,7 +260,8 @@ void UKMETIon::getXMLData(const QString& source)
 void UKMETIon::findPlace(const QString& place, const QString& source)
 {
     QUrl url;
-    url = "http://news.bbc.co.uk/weather/util/search/SearchResultsNode.xhtml?&search=" + place + "&region=world&startIndex=0&count=500";
+    /* There's a page= parameter, results are limited to 10 by page */
+    url = "http://www.bbc.com/locator/default/en-GB/search.json?search="+place+"&filter=international&postcode_unit=false&postcode_district=true";
 
     m_job = KIO::get(url.url(), KIO::Reload, KIO::HideProgressInfo);
     m_job->addMetaData("cookies", "none"); // Disable displaying cookies
@@ -287,7 +290,7 @@ void UKMETIon::getFiveDayForecast(const QString& source)
     
     int splitIDPos = xmlPath.lastIndexOf('/');
     QString stationID = xmlPath.midRef(splitIDPos + 1).toString();
-    m_place[source].XMLforecastURL = "http://newsrss.bbc.co.uk/weather/forecast/" + stationID + "/Next3DaysRSS.xml" + xmlMap.query();
+    m_place[source].XMLforecastURL = "http://open.live.bbc.co.uk/weather/feeds/en/" + stationID + "/3dayforecast.rss" + xmlMap.query();
     QUrl url(m_place[source].XMLforecastURL);
 
     m_job = KIO::get(url.url(), KIO::Reload, KIO::HideProgressInfo);
@@ -309,47 +312,38 @@ void UKMETIon::readSearchHTMLData(const QString& source, const QByteArray& html)
     QStringList tokens;
     QString url;
     QString tmp;
-    int flag = 0;
     int counter = 2;
 
-    // "<p><a id="result_40" href ="/weather/forecast/4160?count=200">Vitoria, Brazil</a></p>"
-    QRegExp grabURL("/[a-z]+/[a-z]+/([0-9]+)(\\?[^\"]+)?");
-    QRegExp grabPlace(">([^<]*[a-z()])"); // FIXME: It would be better to strip away the extra '>'
+    // FIXME: use a json parser instead of regexes
+    QRegExp grabURL("\"id\":\\s*\"([0-9]+)\"");
+    QRegExp grabPlace("\"fullName\":\\s*\"([^\"]+)\"");
 
     while (!stream.atEnd()) {
        line = stream.readLine();
-       if (line.contains("<p class=\"response\">") > 0) {
-           flag = 1;
-       }
-
-       if (line.contains("There are no forecasts matching") > 0) {
+       if (line.contains("Sorry, no results found for") > 0) {
            break;
        }
 
-       if (flag) {
+       if (line.contains("\"results\"") > 0) {
 
             if (grabURL.indexIn(line.trimmed()) > 0) {
-                url = "http://newsrss.bbc.co.uk/weather/forecast/" + grabURL.cap(1) + "/ObservationsRSS.xml";
-                if (grabURL.captureCount() > 1) {
-                    url += grabURL.cap(2);
-                }
-                grabPlace.indexIn(line.trimmed());
-                tmp = QString("bbcukmet|").append(grabPlace.cap(1));
 
-                // Duplicate places can exist
-                if (m_locations.contains(tmp)) {
-                    tmp = QString("bbcukmet|").append(QString("%1 (#%2)").arg(grabPlace.cap(1)).arg(counter));
-                    counter++;
-                }
+                for (int captureIndex = 1; captureIndex <= grabURL.captureCount(); captureIndex++) {
 
-                m_place[tmp].XMLurl = url;
-                m_place[tmp].place = grabPlace.cap(1);
-                m_locations.append(tmp);
+                    url = "http://open.live.bbc.co.uk/weather/feeds/en/" + grabURL.cap(captureIndex) + "/observations.rss";
+                    grabPlace.indexIn(line.trimmed());
+                    tmp = QString("bbcukmet|").append(grabPlace.cap(captureIndex));
+
+                    // Duplicate places can exist
+                    if (m_locations.contains(tmp)) {
+                        tmp = QString("bbcukmet|").append(QString("%1 (#%2)").arg(grabPlace.cap(captureIndex)).arg(counter));
+                        counter++;
+                    }
+                    m_place[tmp].XMLurl = url;
+                    m_place[tmp].place = grabPlace.cap(captureIndex);
+                    m_locations.append(tmp);
+                }
             }
-       }
-
-       if (line.contains("<div class=\"line\">") > 0) {
-           flag = 0;
        }
     }
 
@@ -563,12 +557,13 @@ void UKMETIon::parseWeatherObservation(const QString& source, WeatherData& data,
                 QStringRef conditionData = conditionString.midRef(splitIndex + 1); // Include ':'
                 data.obsTime = conditionString.midRef(0, splitIndex).toString();
 
-                // Friday at 0200 GMT
-                m_dateFormat =  QDateTime::fromString(data.obsTime.split("at")[1].trimmed(), "hhmm 'GMT'");
+                // Saturday - 13:00 CET
+                // Saturday - 12:00 GMT
+                m_dateFormat = QDateTime::fromString(data.obsTime.split("-")[1].trimmed(), "hh:mm 'GMT'");
                 data.iconPeriodHour = m_dateFormat.toString("hh").toInt();
                 data.iconPeriodMinute = m_dateFormat.toString("mm").toInt();
 
-                data.condition = conditionData.toString().split('.')[0].trimmed();
+                data.condition = conditionData.toString().split(',')[0].trimmed();
 
             } else if (xml.name() == "link") {
                 m_place[source].forecastHTMLUrl = xml.readElementText();
@@ -582,20 +577,33 @@ void UKMETIon::parseWeatherObservation(const QString& source, WeatherData& data,
 
                 data.temperature_C = observeData[1].split(QChar(176))[0].trimmed();
 
-                // Temperature might be not available
-                if (data.temperature_C.contains("N/A")) {
+                if (data.temperature_C.contains("N/A") || data.temperature_C.contains("null")) {
                     data.temperature_C = i18n("N/A");
                 }
 
                 data.windDirection = observeData[2].split(',')[0].trimmed();
+                if (data.windDirection.contains("null")) {
+                    data.windDirection = "";
+                }
+
                 data.windSpeed_miles = observeData[3].split(',')[0].split(' ')[1].remove("mph");
+                if (data.windSpeed_miles.contains("null")) {
+                    data.windSpeed_miles = "N/A";
+                }
 
                 data.humidity = observeData[4].split(',')[0].split(' ')[1];
                 if (data.humidity.endsWith('%')) {
                     data.humidity.chop(1);
                 }
+                if (data.humidity.contains("null")) {
+                    data.humidity = "N/A";
+                }
 
                 data.pressure = observeData[5].split(',')[0].split(' ')[1].split("mb")[0];
+                if (data.pressure.contains("null")) {
+                    data.pressure = "N/A";
+                }
+
                 data.pressureTendency = observeData[5].split(',')[1].trimmed();
 
                 data.visibilityStr = observeData[6].trimmed();
@@ -606,6 +614,10 @@ void UKMETIon::parseWeatherObservation(const QString& source, WeatherData& data,
             } else if (xml.name() == "long") {
                 const QString ordinate = xml.readElementText();
                 data.longitude = ordinate.toDouble();
+            } else if (xml.name() == "georss:point") {
+                const QString ordinates = xml.readElementText();
+                data.latitude = ordinates.split(' ')[0].toDouble();
+                data.longitude = ordinates.split(' ')[1].toDouble();
             } else {
                 parseUnknownElement(xml);
             }
@@ -681,8 +693,8 @@ void UKMETIon::parseFiveDayForecast(const QString& source, QXmlStreamReader& xml
     QString line;
     QString period;
     QString summary;
-    QRegExp high("-?\\d+");
-    QRegExp low("-?\\d+");
+    QRegExp high("-?\\d+.C");
+    QRegExp low("-?\\d+.C");
     while (!xml.atEnd()) {
         xml.readNext();
         if (xml.name() == "title") {
@@ -693,8 +705,8 @@ void UKMETIon::parseFiveDayForecast(const QString& source, QXmlStreamReader& xml
 
             period = line.split(',')[0].split(':')[0];
             summary = line.split(',')[0].split(':')[1].trimmed();
-            high.indexIn(line.split(',')[1]);
-            low.indexIn(line.split(',')[2]);
+            high.indexIn(line.split(',')[1].split(':')[1]);
+            low.indexIn(line.split(',')[1].split(':')[2]);
 
             forecast->period = period;
             forecast->iconName = getWeatherIcon(dayIcons(), summary.toLower());
