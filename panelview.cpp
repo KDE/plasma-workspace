@@ -55,13 +55,8 @@ PanelView::PanelView(ShellCorona *corona, QWindow *parent)
     KWindowSystem::setType(winId(), NET::Dock);
     setVisible(false);
 
-    //TODO: how to take the shape from the framesvg?
-    KWindowEffects::enableBlurBehind(winId(), true);
-    if (qGray(m_theme.color(Plasma::Theme::BackgroundColor).rgb()) > 127) {
-        KWindowEffects::enableBackgroundContrast(winId(), true, 0.30, 1.9, 1.7);
-    } else {
-        KWindowEffects::enableBackgroundContrast(winId(), true, 0.45, 0.45, 1.7);
-    }
+    themeChanged();
+    connect(&m_theme, &Plasma::Theme::themeChanged, this, &PanelView::themeChanged);
 
     //Screen management
     connect(this, &QWindow::screenChanged,
@@ -621,6 +616,16 @@ void PanelView::updateStruts()
                                              strut.bottom_end);
 
     //recreateUnhideTrigger();
+}
+
+void PanelView::themeChanged()
+{
+    //TODO: how to take the shape from the framesvg?
+    KWindowEffects::enableBlurBehind(winId(), true);
+    KWindowEffects::enableBackgroundContrast(winId(), m_theme.backgroundContrastEnabled(),
+                                                      m_theme.backgroundContrast(),
+                                                      m_theme.backgroundIntensity(),
+                                                      m_theme.backgroundSaturation());
 }
 
 #include "moc_panelview.cpp"

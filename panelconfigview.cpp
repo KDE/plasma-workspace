@@ -48,11 +48,8 @@ PanelConfigView::PanelConfigView(Plasma::Containment *containment, PanelView *pa
     setFlags(Qt::BypassWindowManagerHint);
 
     KWindowEffects::enableBlurBehind(winId(), true);
-    if (qGray(m_theme.color(Plasma::Theme::BackgroundColor).rgb()) > 127) {
-        KWindowEffects::enableBackgroundContrast(winId(), true, 0.30, 1.9, 1.7);
-    } else {
-        KWindowEffects::enableBackgroundContrast(winId(), true, 0.45, 0.45, 1.7);
-    }
+    updateContrast();
+    connect(&m_theme, &Plasma::Theme::themeChanged, this, &PanelConfigView::updateContrast);
 
     engine()->rootContext()->setContextProperty("panel", panelView);
     engine()->rootContext()->setContextProperty("configDialog", this);
@@ -76,6 +73,14 @@ QAction *PanelConfigView::action(const QString &name)
         return m_containment->actions()->action(name);
     }
     return 0;
+}
+
+void PanelConfigView::updateContrast()
+{
+    KWindowEffects::enableBackgroundContrast(winId(), m_theme.backgroundContrastEnabled(),
+                                                      m_theme.backgroundContrast(),
+                                                      m_theme.backgroundIntensity(),
+                                                      m_theme.backgroundSaturation());
 }
 
 void PanelConfigView::showAddWidgetDialog()
