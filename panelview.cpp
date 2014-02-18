@@ -58,20 +58,32 @@ PanelView::PanelView(ShellCorona *corona, QWindow *parent)
     themeChanged();
     connect(&m_theme, &Plasma::Theme::themeChanged, this, &PanelView::themeChanged);
 
+    
+    m_positionPaneltimer.setSingleShot(true);
+    m_positionPaneltimer.setInterval(150);
+    connect(&m_positionPaneltimer, &QTimer::timeout,
+            this, [=] () {
+                restore();
+                positionPanel();
+            });
+
     //Screen management
     connect(this, &QWindow::screenChanged,
             this, &PanelView::positionPanel);
     connect(screen(), &QScreen::geometryChanged,
             this, &PanelView::positionPanel);
     connect(this, &PlasmaQuickView::locationChanged,
-            this, &PanelView::positionPanel);
+            &m_positionPaneltimer, [=] () {
+                m_positionPaneltimer.start();
+            });
     connect(this, &PlasmaQuickView::containmentChanged,
             this, &PanelView::positionPanel);
     connect(this, &PlasmaQuickView::containmentChanged,
             this, [=] () {
-                restore();
-                positionPanel();
+                m_positionPaneltimer.start();
             });
+
+
 
     if (!m_corona->package().isValid()) {
         qWarning() << "Invalid home screen package";
@@ -382,7 +394,6 @@ void PanelView::positionPanel()
     }
     m_strutsTimer->stop();
     m_strutsTimer->start(STRUTSTIMERDELAY);
-
     setMinimumSize(QSize(0, 0));
     setMaximumSize(screen()->size());
 

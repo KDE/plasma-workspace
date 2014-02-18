@@ -24,6 +24,7 @@
 #include "panelconfigview.h"
 #include <QtCore/qpointer.h>
 #include <Plasma/Theme>
+#include <QTimer>
 
 class ShellCorona;
 
@@ -113,6 +114,7 @@ private:
     QTimer *m_strutsTimer;
     VisibilityMode m_visibilityMode;
     Plasma::Theme m_theme;
+    QTimer m_positionPaneltimer;
 
     static const int STRUTSTIMERDELAY = 200;
 };
