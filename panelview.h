@@ -38,7 +38,7 @@ class PanelView : public PlasmaQuickView
     Q_PROPERTY(int maximumLength READ maximumLength WRITE setMaximumLength NOTIFY maximumLengthChanged)
     Q_PROPERTY(int minimumLength READ minimumLength WRITE setMinimumLength NOTIFY minimumLengthChanged)
     Q_PROPERTY(QScreen *screen READ screen WRITE setScreen NOTIFY screenChanged)
-    Q_PROPERTY(VisibilityMode visibilityMode READ visibilityMode WRITE setVisibilityMode)
+    Q_PROPERTY(VisibilityMode visibilityMode READ visibilityMode WRITE setVisibilityMode NOTIFY visibilityModeChanged)
 
 public:
 
@@ -91,6 +91,7 @@ Q_SIGNALS:
     void maximumLengthChanged();
     void minimumLengthChanged();
     void screenChanged(QScreen *screen);
+    void visibilityModeChanged();
 
 protected Q_SLOTS:
     /**

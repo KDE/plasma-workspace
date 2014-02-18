@@ -310,6 +310,7 @@ void PanelView::setVisibilityMode(PanelView::VisibilityMode mode)
     updateStruts();
 
     KWindowSystem::setOnAllDesktops(winId(), true);
+    emit visibilityModeChanged();
 }
 
 PanelView::VisibilityMode PanelView::visibilityMode() const
