@@ -70,6 +70,7 @@ PanelView::PanelView(ShellCorona *corona, QWindow *parent)
     connect(this, &PlasmaQuickView::containmentChanged,
             this, [=] () {
                 restore();
+                positionPanel();
             });
 
     if (!m_corona->package().isValid()) {
