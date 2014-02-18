@@ -472,6 +472,8 @@ void PanelView::restore()
         setMaximumWidth(m_maxLength);
     }
 
+    setVisibilityMode((VisibilityMode)config().readEntry<int>("panelVisibility", (int)NormalPanel));
+
     emit maximumLengthChanged();
     emit minimumLengthChanged();
     emit offsetChanged();
