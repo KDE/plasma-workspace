@@ -167,6 +167,16 @@ void PanelView::setOffset(int offset)
         return;
     }
 
+    if (formFactor() == Plasma::Types::Vertical) {
+        if (offset + m_maxLength > screen()->size().height()) {
+            setMaximumLength( -m_offset + screen()->size().height() );
+        }
+    } else {
+        if (offset + m_maxLength > screen()->size().width()) {
+            setMaximumLength( -m_offset + screen()->size().width() );
+        }
+    }
+
     m_offset = offset;
     config().writeEntry("offset", m_offset);
     positionPanel();
