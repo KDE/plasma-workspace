@@ -36,7 +36,7 @@
 #include <Plasma/PackageStructure>
 #include <qstandardpaths.h>
 
-#include "plasmaquickview.h"
+#include <view.h>
 #include "kcategorizeditemsviewmodels_p.h"
 #include "plasmaappletitemmodel_p.h"
 

@@ -30,7 +30,7 @@
 #include <Plasma/Package>
 
 DesktopView::DesktopView(ShellCorona *corona, QScreen *screen)
-    : PlasmaQuickView(corona, 0),
+    : PlasmaQuick::View(corona, 0),
       m_stayBehind(false),
       m_fillScreen(false)
 {
@@ -135,7 +135,7 @@ void DesktopView::showConfigurationInterface(Plasma::Applet *applet)
     if (cont) {
         m_configView = new ContainmentConfigView(cont);
     } else {
-        m_configView = new ConfigView(applet);
+        m_configView = new PlasmaQuick::ConfigView(applet);
     }
     m_configView.data()->init();
     m_configView.data()->show();

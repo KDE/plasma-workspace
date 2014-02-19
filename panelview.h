@@ -20,7 +20,7 @@
 #define PANELVIEW_H
 
 
-#include <plasmaquickview.h>
+#include <view.h>
 #include "panelconfigview.h"
 #include <QtCore/qpointer.h>
 #include <Plasma/Theme>
@@ -28,7 +28,7 @@
 
 class ShellCorona;
 
-class PanelView : public PlasmaQuickView
+class PanelView : public PlasmaQuick::View
 {
     Q_OBJECT
     Q_PROPERTY(Qt::Alignment alignment READ alignment WRITE setAlignment NOTIFY alignmentChanged)
@@ -110,7 +110,7 @@ private:
     int m_maxLength;
     int m_minLength;
     Qt::Alignment m_alignment;
-    QPointer<ConfigView> m_panelConfigView;
+    QPointer<PlasmaQuick::ConfigView> m_panelConfigView;
     ShellCorona *m_corona;
     QTimer *m_strutsTimer;
     VisibilityMode m_visibilityMode;

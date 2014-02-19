@@ -37,7 +37,7 @@ namespace Plasma {
     class Containment;
 }
 
-class PanelConfigView : public ConfigView
+class PanelConfigView : public PlasmaQuick::ConfigView
 {
     Q_OBJECT
 

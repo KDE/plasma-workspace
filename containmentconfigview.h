@@ -36,12 +36,12 @@ namespace KDeclarative {
 }
 
 //TODO: out of the library?
-class ContainmentConfigView : public ConfigView
+class ContainmentConfigView : public PlasmaQuick::ConfigView
 {
     Q_OBJECT
-    Q_PROPERTY(ConfigModel *containmentActionConfigModel READ containmentActionConfigModel CONSTANT)
+    Q_PROPERTY(PlasmaQuick::ConfigModel *containmentActionConfigModel READ containmentActionConfigModel CONSTANT)
     Q_PROPERTY(QAbstractItemModel *currentContainmentActionsModel READ currentContainmentActionsModel CONSTANT)
-    Q_PROPERTY(ConfigModel *wallpaperConfigModel READ wallpaperConfigModel CONSTANT)
+    Q_PROPERTY(PlasmaQuick::ConfigModel *wallpaperConfigModel READ wallpaperConfigModel CONSTANT)
     Q_PROPERTY(KDeclarative::ConfigPropertyMap *wallpaperConfiguration READ wallpaperConfiguration NOTIFY wallpaperConfigurationChanged)
     Q_PROPERTY(QString currentWallpaper READ currentWallpaper WRITE setCurrentWallpaper NOTIFY currentWallpaperChanged)
 
@@ -51,9 +51,9 @@ public:
 
     virtual void init();
 
-    ConfigModel *containmentActionConfigModel();
+    PlasmaQuick::ConfigModel *containmentActionConfigModel();
     QAbstractItemModel *currentContainmentActionsModel();
-    ConfigModel *wallpaperConfigModel();
+    PlasmaQuick::ConfigModel *wallpaperConfigModel();
     QString currentWallpaper() const;
     void setCurrentWallpaper(const QString &wallpaper);
     KDeclarative::ConfigPropertyMap *wallpaperConfiguration() const;
@@ -69,8 +69,8 @@ protected:
 
 private:
     Plasma::Containment *m_containment;
-    ConfigModel *m_wallpaperConfigModel;
-    ConfigModel *m_containmentActionConfigModel;
+    PlasmaQuick::ConfigModel *m_wallpaperConfigModel;
+    PlasmaQuick::ConfigModel *m_containmentActionConfigModel;
     CurrentContainmentActionsModel *m_currentContainmentActionsModel;
     QString m_currentWallpaper;
     KDeclarative::ConfigPropertyMap *m_currentWallpaperConfig;

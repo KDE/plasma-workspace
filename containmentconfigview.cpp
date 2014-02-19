@@ -68,10 +68,10 @@ void ContainmentConfigView::init()
     setSource(QUrl::fromLocalFile(m_containment->corona()->package().filePath("containmentconfigurationui")));
 }
 
-ConfigModel *ContainmentConfigView::containmentActionConfigModel()
+PlasmaQuick::ConfigModel *ContainmentConfigView::containmentActionConfigModel()
 {
     if (!m_containmentActionConfigModel) {
-        m_containmentActionConfigModel = new ConfigModel(this);
+        m_containmentActionConfigModel = new PlasmaQuick::ConfigModel(this);
 
         KPluginInfo::List actions = Plasma::PluginLoader::self()->listContainmentActionsInfo(QString());
 
@@ -94,10 +94,10 @@ QAbstractItemModel *ContainmentConfigView::currentContainmentActionsModel()
     return m_currentContainmentActionsModel;
 }
 
-ConfigModel *ContainmentConfigView::wallpaperConfigModel()
+PlasmaQuick::ConfigModel *ContainmentConfigView::wallpaperConfigModel()
 {
     if (!m_wallpaperConfigModel) {
-        m_wallpaperConfigModel = new ConfigModel(this);
+        m_wallpaperConfigModel = new PlasmaQuick::ConfigModel(this);
         QStringList dirs(QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, "plasma/wallpapers", QStandardPaths::LocateDirectory));
         Plasma::Package pkg = Plasma::PluginLoader::self()->loadPackage("Plasma/Generic");
         foreach (const QString &dirPath, dirs) {

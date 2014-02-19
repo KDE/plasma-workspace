@@ -20,13 +20,13 @@
 #define DESKTOVIEW_H
 
 
-#include <plasmaquickview.h>
+#include <view.h>
 #include "panelconfigview.h"
 #include <QtCore/qpointer.h>
 
 class ShellCorona;
 
-class DesktopView : public PlasmaQuickView
+class DesktopView : public PlasmaQuick::View
 {
     Q_OBJECT
     Q_PROPERTY(bool stayBehind READ stayBehind WRITE setStayBehind NOTIFY stayBehindChanged)
@@ -55,7 +55,7 @@ Q_SIGNALS:
     void fillScreenChanged();
 
 private:
-    QPointer<ConfigView> m_configView;
+    QPointer<PlasmaQuick::ConfigView> m_configView;
     bool m_stayBehind : 1;
     bool m_fillScreen : 1;
 };

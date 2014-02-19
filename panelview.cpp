@@ -37,7 +37,7 @@
 #include <Plasma/Package>
 
 PanelView::PanelView(ShellCorona *corona, QWindow *parent)
-    : PlasmaQuickView(corona, parent),
+    : PlasmaQuick::View(corona, parent),
        m_offset(0),
        m_maxLength(0),
        m_minLength(0),
@@ -72,13 +72,13 @@ PanelView::PanelView(ShellCorona *corona, QWindow *parent)
             this, &PanelView::positionPanel);
     connect(screen(), &QScreen::geometryChanged,
             this, &PanelView::positionPanel);
-    connect(this, &PlasmaQuickView::locationChanged,
+    connect(this, &PlasmaQuick::View::locationChanged,
             &m_positionPaneltimer, [=] () {
                 m_positionPaneltimer.start();
             });
-    connect(this, &PlasmaQuickView::containmentChanged,
+    connect(this, &PlasmaQuick::View::containmentChanged,
             this, &PanelView::positionPanel);
-    connect(this, &PlasmaQuickView::containmentChanged,
+    connect(this, &PlasmaQuick::View::containmentChanged,
             this, [=] () {
                 m_positionPaneltimer.start();
             });
@@ -95,7 +95,7 @@ PanelView::PanelView(ShellCorona *corona, QWindow *parent)
     connect(QApplication::desktop(), &QDesktopWidget::screenCountChanged,
             this, &PanelView::updateStruts);
 
-    setResizeMode(PlasmaQuickView::SizeRootObjectToView);
+    setResizeMode(PlasmaQuick::View::SizeRootObjectToView);
     qmlRegisterType<QScreen>();
     engine()->rootContext()->setContextProperty("panel", this);
     setSource(QUrl::fromLocalFile(m_corona->package().filePath("views", "Panel.qml")));
@@ -497,7 +497,7 @@ void PanelView::showConfigurationInterface(Plasma::Applet *applet)
     if (cont) {
         m_panelConfigView = new PanelConfigView(cont, this);
     } else {
-        m_panelConfigView = new ConfigView(applet);
+        m_panelConfigView = new PlasmaQuick::ConfigView(applet);
     }
     m_panelConfigView.data()->init();
     m_panelConfigView.data()->show();
@@ -528,13 +528,13 @@ void PanelView::resizeEvent(QResizeEvent *ev)
     }
 
     m_positionPaneltimer.start();
-    PlasmaQuickView::resizeEvent(ev);
+    PlasmaQuick::View::resizeEvent(ev);
 }
 
 void PanelView::showEvent(QShowEvent *event)
 {
     PanelShadows::self()->addWindow(this);
-    PlasmaQuickView::showEvent(event);
+    PlasmaQuick::View::showEvent(event);
     KWindowSystem::setOnAllDesktops(winId(), true);
 }
 
