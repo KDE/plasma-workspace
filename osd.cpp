@@ -34,9 +34,14 @@
 Osd::Osd(ShellCorona *corona)
     : QObject(corona)
 {
-    m_osdObject = new KDeclarative::QmlObject(this);
+    const QString osdPath = corona->lookAndFeelPackage().filePath("osdmainscript");
+    if (osdPath.isEmpty()) {
+        qWarning() << "Failed to load the OSD script file from" << osdPath;
+        return;
+    }
 
-    m_osdObject->setSource(QUrl::fromLocalFile(corona->lookAndFeelPackage().filePath("osdmainscript")));
+    m_osdObject = new KDeclarative::QmlObject(this);
+    m_osdObject->setSource(QUrl::fromLocalFile(osdPath));
     m_timeout = m_osdObject->rootObject()->property("timeout").toInt();
 
     QDBusConnection::sessionBus().registerObject("/org/kde/osdService", this, QDBusConnection::ExportAllSlots);
