@@ -527,6 +527,7 @@ void PanelView::resizeEvent(QResizeEvent *ev)
         }
     }
 
+    m_positionPaneltimer.start();
     PlasmaQuickView::resizeEvent(ev);
 }
 
