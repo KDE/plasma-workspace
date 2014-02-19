@@ -66,6 +66,7 @@ target_link_libraries(plasma-shell
  KF5::IconThemes
  KF5::Activities
  KF5::GlobalAccel
+ KF5::DBusAddons
 )
 target_include_directories(plasma-shell PRIVATE "${CMAKE_BINARY_DIR}")
 
