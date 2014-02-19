@@ -35,8 +35,9 @@
 
 #include <kcrash.h>
 
-static const QString s_shellsDir(
-        QString(CMAKE_INSTALL_PREFIX) + "/" + DATA_INSTALL_DIR + "/" + "plasma/shells/");
+static const QString s_shellsDir = QString(QStandardPaths::locate(QStandardPaths::QStandardPaths::GenericDataLocation,
+                                                  "plasma/shells/",
+                                                  QStandardPaths::LocateDirectory));
 static const QString s_shellLoaderPath = QString("/contents/loader.qml");
 
 bool ShellManager::s_forceWindowed = false;
