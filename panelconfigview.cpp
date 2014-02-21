@@ -71,14 +71,6 @@ void PanelConfigView::init()
     syncGeometry();
 }
 
-QAction *PanelConfigView::action(const QString &name)
-{
-    if (m_containment) {
-        return m_containment->actions()->action(name);
-    }
-    return 0;
-}
-
 void PanelConfigView::updateContrast()
 {
     KWindowEffects::enableBackgroundContrast(winId(), m_theme.backgroundContrastEnabled(),
