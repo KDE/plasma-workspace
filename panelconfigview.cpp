@@ -19,6 +19,7 @@
 
 #include "panelconfigview.h"
 #include "panelview.h"
+#include "panelshadows_p.h"
 
 #include <QDebug>
 #include <QDir>
@@ -55,10 +56,13 @@ PanelConfigView::PanelConfigView(Plasma::Containment *containment, PanelView *pa
     engine()->rootContext()->setContextProperty("configDialog", this);
     connect(containment, &Plasma::Containment::formFactorChanged,
             this, &PanelConfigView::syncGeometry);
+
+     PanelShadows::self()->addWindow(this);
 }
 
 PanelConfigView::~PanelConfigView()
 {
+    PanelShadows::self()->removeWindow(this);
 }
 
 void PanelConfigView::init()
