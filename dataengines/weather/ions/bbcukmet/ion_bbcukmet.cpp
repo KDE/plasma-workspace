@@ -693,8 +693,8 @@ void UKMETIon::parseFiveDayForecast(const QString& source, QXmlStreamReader& xml
     QString line;
     QString period;
     QString summary;
-    QRegExp high("-?\\d+.C");
-    QRegExp low("-?\\d+.C");
+    QRegExp high("Maximum Temperature: (-?\\d+).C", Qt::CaseInsensitive);
+    QRegExp  low("Minimum Temperature: (-?\\d+).C", Qt::CaseInsensitive);
     while (!xml.atEnd()) {
         xml.readNext();
         if (xml.name() == "title") {
@@ -705,15 +705,22 @@ void UKMETIon::parseFiveDayForecast(const QString& source, QXmlStreamReader& xml
 
             period = line.split(',')[0].split(':')[0];
             summary = line.split(',')[0].split(':')[1].trimmed();
-            high.indexIn(line.split(',')[1].split(':')[1]);
-            low.indexIn(line.split(',')[1].split(':')[2]);
+
+            // Sometimes only one of min or max are reported
+            if (high.indexIn(line.split(',')[1]) == -1)
+                forecast->tempHigh = 0;
+            else
+                forecast->tempHigh = high.cap(1).toInt();
+
+            if (low.indexIn(line.split(',')[1]) == -1)
+                forecast->tempLow = 0;
+            else
+                forecast->tempLow = low.cap(1).toInt();
 
             forecast->period = period;
             forecast->iconName = getWeatherIcon(dayIcons(), summary.toLower());
             forecast->summary = i18nc("weather forecast", summary.toUtf8());
             qDebug() << "i18n summary string: " << qPrintable(forecast->summary);
-            forecast->tempHigh = high.cap(0).toInt();
-            forecast->tempLow = low.cap(0).toInt();
             m_weatherData[source].forecasts.append(forecast);
             forecast = new WeatherData::ForecastInfo;
         }
