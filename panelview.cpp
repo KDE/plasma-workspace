@@ -41,6 +41,7 @@ PanelView::PanelView(ShellCorona *corona, QWindow *parent)
        m_offset(0),
        m_maxLength(0),
        m_minLength(0),
+       m_distance(0),
        m_alignment(Qt::AlignLeft),
        m_corona(corona),
        m_strutsTimer(new QTimer(this)),
@@ -287,6 +288,22 @@ void PanelView::setMinimumLength(int length)
     m_corona->requestApplicationConfigSync();
 }
 
+int PanelView::distance() const
+{
+    return m_distance;
+}
+
+void PanelView::setDistance(int dist)
+{
+    if (m_distance == dist) {
+        return;
+    }
+
+    m_distance = dist;
+    m_positionPaneltimer.start();
+    emit distanceChanged();
+}
+
 void PanelView::setVisibilityMode(PanelView::VisibilityMode mode)
 {
     m_visibilityMode = mode;
@@ -337,14 +354,14 @@ void PanelView::positionPanel()
 
         switch (m_alignment) {
         case Qt::AlignCenter:
-            setPosition(QPoint(s->geometry().center().x(), s->geometry().top()) + QPoint(m_offset - size().width()/2, 0));
+            setPosition(QPoint(s->geometry().center().x(), s->geometry().top()) + QPoint(m_offset - size().width()/2, m_distance));
             break;
         case Qt::AlignRight:
-            setPosition(s->geometry().topRight() - QPoint(m_offset + size().width(), 0));
+            setPosition(s->geometry().topRight() - QPoint(m_offset + size().width(), m_distance));
             break;
         case Qt::AlignLeft:
         default:
-            setPosition(s->geometry().topLeft() + QPoint(m_offset, 0));
+            setPosition(s->geometry().topLeft() + QPoint(m_offset, m_distance));
         }
         break;
 
@@ -353,14 +370,14 @@ void PanelView::positionPanel()
 
         switch (m_alignment) {
         case Qt::AlignCenter:
-            setPosition(QPoint(s->geometry().left(), s->geometry().center().y()) + QPoint(0, m_offset));
+            setPosition(QPoint(s->geometry().left(), s->geometry().center().y()) + QPoint(m_distance, m_offset));
             break;
         case Qt::AlignRight:
-            setPosition(s->geometry().bottomLeft() - QPoint(0, m_offset + size().height()));
+            setPosition(s->geometry().bottomLeft() - QPoint(m_distance, m_offset + size().height()));
             break;
         case Qt::AlignLeft:
         default:
-            setPosition(s->geometry().topLeft() + QPoint(0, m_offset));
+            setPosition(s->geometry().topLeft() + QPoint(m_distance, m_offset));
         }
         break;
 
@@ -369,14 +386,14 @@ void PanelView::positionPanel()
 
         switch (m_alignment) {
         case Qt::AlignCenter:
-            setPosition(QPoint(s->geometry().right(), s->geometry().center().y()) - QPoint(width(), 0) + QPoint(0, m_offset - size().height()/2));
+            setPosition(QPoint(s->geometry().right(), s->geometry().center().y()) - QPoint(width() + m_distance, 0) + QPoint(0, m_offset - size().height()/2));
             break;
         case Qt::AlignRight:
-            setPosition(s->geometry().bottomRight() - QPoint(width(), 0) - QPoint(0, m_offset + size().height()));
+            setPosition(s->geometry().bottomRight() - QPoint(width() + m_distance, 0) - QPoint(0, m_offset + size().height()));
             break;
         case Qt::AlignLeft:
         default:
-            setPosition(s->geometry().topRight() - QPoint(width(), 0) + QPoint(0, m_offset));
+            setPosition(s->geometry().topRight() - QPoint(width() + m_distance, 0) + QPoint(0, m_offset));
         }
         break;
 
@@ -386,14 +403,14 @@ void PanelView::positionPanel()
 
         switch (m_alignment) {
         case Qt::AlignCenter:
-            setPosition(QPoint(s->geometry().center().x(), s->geometry().bottom()) + QPoint(m_offset - size().width()/2, 1));
+            setPosition(QPoint(s->geometry().center().x(), s->geometry().bottom() - height() - m_distance) + QPoint(m_offset - size().width()/2, 1));
             break;
         case Qt::AlignRight:
-            setPosition(s->geometry().bottomRight() - QPoint(0, height()) - QPoint(m_offset + size().width(), 1));
+            setPosition(s->geometry().bottomRight() - QPoint(0, height() + m_distance) - QPoint(m_offset + size().width(), 1));
             break;
         case Qt::AlignLeft:
         default:
-            setPosition(s->geometry().bottomLeft() - QPoint(0, height()) + QPoint(m_offset, 1));
+            setPosition(s->geometry().bottomLeft() - QPoint(0, height() + m_distance) + QPoint(m_offset, 1));
         }
     }
     m_strutsTimer->stop();

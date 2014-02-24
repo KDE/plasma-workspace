@@ -37,6 +37,7 @@ class PanelView : public PlasmaQuick::View
     Q_PROPERTY(int length READ length WRITE setLength NOTIFY lengthChanged)
     Q_PROPERTY(int maximumLength READ maximumLength WRITE setMaximumLength NOTIFY maximumLengthChanged)
     Q_PROPERTY(int minimumLength READ minimumLength WRITE setMinimumLength NOTIFY minimumLengthChanged)
+    Q_PROPERTY(int distance READ distance WRITE setDistance NOTIFY distanceChanged)
     Q_PROPERTY(QScreen *screen READ screen WRITE setScreen NOTIFY screenChanged)
     Q_PROPERTY(VisibilityMode visibilityMode READ visibilityMode WRITE setVisibilityMode NOTIFY visibilityModeChanged)
 
@@ -75,6 +76,9 @@ public:
     int minimumLength() const;
     void setMinimumLength(int length);
 
+    int distance() const;
+    void setDistance(int dist);
+
     VisibilityMode visibilityMode() const;
     void setVisibilityMode(PanelView::VisibilityMode mode);
 
@@ -90,6 +94,7 @@ Q_SIGNALS:
     void lengthChanged();
     void maximumLengthChanged();
     void minimumLengthChanged();
+    void distanceChanged();
     void screenChanged(QScreen *screen);
     void visibilityModeChanged();
 
@@ -109,6 +114,7 @@ private:
     int m_offset;
     int m_maxLength;
     int m_minLength;
+    int m_distance;
     Qt::Alignment m_alignment;
     QPointer<PlasmaQuick::ConfigView> m_panelConfigView;
     ShellCorona *m_corona;

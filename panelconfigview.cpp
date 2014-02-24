@@ -97,18 +97,18 @@ void PanelConfigView::syncGeometry()
         resize(rootObject()->implicitWidth(), screen()->size().height());
 
         if (m_containment->location() == Plasma::Types::LeftEdge) {
-            setPosition(screen()->geometry().left() + m_panelView->thickness(), screen()->geometry().top());
+            setPosition(m_panelView->geometry().right(), screen()->geometry().top());
         } else if (m_containment->location() == Plasma::Types::RightEdge) {
-            setPosition(screen()->geometry().right() - width() - m_panelView->thickness(), screen()->geometry().top());
+            setPosition(m_panelView->geometry().left() - width(), screen()->geometry().top());
         }
 
     } else {
         resize(screen()->size().width(), rootObject()->implicitHeight());
 
         if (m_containment->location() == Plasma::Types::TopEdge) {
-            setPosition(screen()->geometry().left(), screen()->geometry().top() + m_panelView->thickness());
+            setPosition(screen()->geometry().left(), m_panelView->geometry().bottom());
         } else if (m_containment->location() == Plasma::Types::BottomEdge) {
-            setPosition(screen()->geometry().left(), screen()->geometry().bottom() - height() - m_panelView->thickness());
+            setPosition(screen()->geometry().left(), m_panelView->geometry().top() - height());
         }
     }
 }
