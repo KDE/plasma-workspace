@@ -310,11 +310,8 @@ void PanelView::setVisibilityMode(PanelView::VisibilityMode mode)
 
     if (mode == LetWindowsCover) {
         KWindowSystem::setState(winId(), NET::KeepBelow);
-        KWindowSystem::clearState(winId(), NET::KeepAbove|NET::StaysOnTop);
-        
     } else {
         KWindowSystem::clearState(winId(), NET::KeepBelow);
-        KWindowSystem::setState(winId(), NET::KeepAbove|NET::StaysOnTop);
     }
     //life is vastly simpler if we ensure we're visible now
     show();
