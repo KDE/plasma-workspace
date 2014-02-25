@@ -32,7 +32,8 @@
 DesktopView::DesktopView(ShellCorona *corona, QScreen *screen)
     : PlasmaQuick::View(corona, 0),
       m_stayBehind(false),
-      m_fillScreen(false)
+      m_fillScreen(false),
+      m_dashboardShown(false)
 {
     setScreen(screen);
     engine()->rootContext()->setContextProperty("desktop", this);
@@ -116,6 +117,13 @@ void DesktopView::setDashboardShown(bool shown)
             wpGraphicObject->setProperty("opacity", 1);
         }
     }
+
+    m_dashboardShown = shown;
+}
+
+bool DesktopView::isDashboardShown() const
+{
+    return m_dashboardShown;
 }
 
 

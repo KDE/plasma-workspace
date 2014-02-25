@@ -27,6 +27,7 @@
 #include <QDesktopWidget>
 #include <QQmlContext>
 #include <QTimer>
+#include <QDBusConnection>
 
 #include <kactioncollection.h>
 #include <klocalizedstring.h>
@@ -47,6 +48,8 @@
 #include "configview.h"
 #include "shellpluginloader.h"
 #include "osd.h"
+
+#include "plasmashelladaptor.h"
 
 static const int s_configSyncDelay = 10000; // 10 seconds
 
@@ -98,6 +101,14 @@ ShellCorona::ShellCorona(QObject *parent)
       d(new Private(this))
 {
     d->desktopDefaultsConfig = KConfigGroup(KSharedConfig::openConfig(package().filePath("defaults")), "Desktop");
+
+    //new PlasmaShellAdaptor(this);
+
+    new PlasmaShellAdaptor(this);
+
+    QDBusConnection dbus = QDBusConnection::sessionBus();
+    dbus.registerObject(QStringLiteral("/PlasmaShell"), this);
+
 
     // Look for theme config in plasmarc, if it isn't configured, take the theme from the
     // LookAndFeel package, if either is set, change the default theme
@@ -454,6 +465,23 @@ void ShellCorona::setDashboardShown(bool show)
     foreach (DesktopView *view, d->views) {
         view->setDashboardShown(show);
     }
+}
+
+void ShellCorona::toggleDashboard()
+{
+    foreach (DesktopView *view, d->views) {
+        view->setDashboardShown(!view->isDashboardShown());
+    }
+}
+
+void ShellCorona::showInteractiveConsole()
+{
+    
+}
+
+void ShellCorona::loadScriptInInteractiveConsole(const QString &script)
+{
+    
 }
 
 void ShellCorona::checkActivities()

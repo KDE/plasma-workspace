@@ -45,6 +45,7 @@ class ShellCorona : public Plasma::Corona
 {
     Q_OBJECT
     Q_PROPERTY(QString shell READ shell WRITE setShell)
+    Q_CLASSINFO("D-Bus Interface", "org.kde.PlasmaShell")
 
 public:
     explicit ShellCorona(QObject * parent = 0);
@@ -84,6 +85,12 @@ public Q_SLOTS:
      */
     QString shell() const;
 
+    ///DBUS methods
+    void toggleDashboard();
+    void setDashboardShown(bool show);
+    void showInteractiveConsole();
+    void loadScriptInInteractiveConsole(const QString &script);
+
 protected Q_SLOTS:
     void screenAdded(QScreen *screen);
     void screenRemoved(QObject *screen);
@@ -116,7 +123,6 @@ private Q_SLOTS:
     void toggleWidgetExplorer();
     void toggleActivityManager();
     void syncAppConfig();
-    void setDashboardShown(bool show);
     void checkActivities();
     void currentActivityChanged(const QString &newActivity);
     void activityAdded(const QString &id);

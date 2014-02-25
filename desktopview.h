@@ -43,6 +43,7 @@ public:
     void setFillScreen(bool fillScreen);
 
     void setDashboardShown(bool shown);
+    bool isDashboardShown() const;
 
 protected Q_SLOTS:
     /**
@@ -58,6 +59,7 @@ private:
     QPointer<PlasmaQuick::ConfigView> m_configView;
     bool m_stayBehind : 1;
     bool m_fillScreen : 1;
+    bool m_dashboardShown : 1;
 };
 
 #endif // DESKTOVIEW_H

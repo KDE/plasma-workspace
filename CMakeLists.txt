@@ -11,11 +11,13 @@ set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH})
 
 find_package(Qt5Qml REQUIRED)
 find_package(Qt5Quick REQUIRED)
+find_package(Qt5DBus REQUIRED)
 find_package(Qt5Script REQUIRED)
 find_package(KF5CoreAddons REQUIRED)
 find_package(KF5Crash REQUIRED)
 find_package(KF5Solid REQUIRED)
 find_package(KF5Activities REQUIRED)
+
 
 set(scripting_SRC
     scripting/appinterface.cpp
@@ -30,6 +32,9 @@ set(scripting_SRC
     scripting/scriptengine.cpp
     scripting/widget.cpp
 )
+
+set(plasmashell_dbusXML dbus/org.kde.PlasmaShell.xml)
+qt5_add_dbus_adaptor(scripting_SRC ${plasmashell_dbusXML} shellcorona.h ShellCorona plasmashelladaptor)
 
 add_executable(plasma-shell
     activity.cpp
@@ -52,6 +57,7 @@ add_executable(plasma-shell
 target_link_libraries(plasma-shell
  Qt5::Quick
  Qt5::Qml
+ Qt5::DBus
  KF5::KIOCore
  KF5::WindowSystem
  KF5::CoreAddons
@@ -77,5 +83,6 @@ endif()
 
 install(TARGETS plasma-shell ${INSTALL_TARGETS_DEFAULT_ARGS})
 install(FILES plasma-shell.desktop DESTINATION ${AUTOSTART_INSTALL_DIR})
+install( FILES dbus/org.kde.PlasmaShell.xml DESTINATION ${DBUS_INTERFACES_INSTALL_DIR} )
 
 add_subdirectory(widgetexplorer)
