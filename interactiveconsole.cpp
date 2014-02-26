@@ -30,10 +30,10 @@
 #include <QVBoxLayout>
 
 #include <QFileDialog>
-#include <KLocale>
 #include <QAction>
 #include <KShell>
 #include <KMessageBox>
+#include <klocalizedstring.h>
 #include <QMenu>
 #include <KServiceTypeTrader>
 #include <KStandardAction>
@@ -512,7 +512,7 @@ void InteractiveConsole::evaluateScript()
     }
 
     QDateTime dt = QDateTime::currentDateTime();
-    cursor.insertText(i18n("Executing script at %1", KLocale::global()->formatDateTime(dt)), format);
+    cursor.insertText(i18n("Executing script at %1", QLocale().toString(dt)));
 
     format.setFontWeight(QFont::Normal);
     format.setFontUnderline(false);
