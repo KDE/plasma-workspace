@@ -45,7 +45,6 @@
 #include <KTextEditor/Document>
 #include <KTextEditor/View>
 #include <KToolBar>
-#include <KComponentData>
 
 #include <Plasma/Corona>
 #include <Plasma/Package>
@@ -348,7 +347,7 @@ void InteractiveConsole::populateTemplatesMenu()
 
     QMap<QString, KService::Ptr> sorted;
     const QString constraint = QString("[X-Plasma-Shell] == '%1'")
-                                      .arg(KComponentData::mainComponent().componentName());
+                                      .arg(qApp->applicationName());
     KService::List templates = KServiceTypeTrader::self()->query("Plasma/LayoutTemplate", constraint);
     foreach (const KService::Ptr &service, templates) {
         sorted.insert(service->name(), service);

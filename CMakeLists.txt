@@ -17,7 +17,6 @@ find_package(KF5CoreAddons REQUIRED)
 find_package(KF5Crash REQUIRED)
 find_package(KF5Solid REQUIRED)
 find_package(KF5Activities REQUIRED)
-find_package(KF5KDE4Support REQUIRED)
 find_package(KF5TextEditor REQUIRED)
 
 
@@ -75,7 +74,6 @@ target_link_libraries(plasma-shell
  KF5::Activities
  KF5::GlobalAccel
  KF5::DBusAddons
- KF5::KDE4Support
  KF5::TextEditor
 )
 target_include_directories(plasma-shell PRIVATE "${CMAKE_BINARY_DIR}")
