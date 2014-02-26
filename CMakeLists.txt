@@ -17,6 +17,7 @@ find_package(KF5CoreAddons REQUIRED)
 find_package(KF5Crash REQUIRED)
 find_package(KF5Solid REQUIRED)
 find_package(KF5Activities REQUIRED)
+find_package(KF5TextEditor REQUIRED)
 
 
 set(scripting_SRC
@@ -26,7 +27,6 @@ set(scripting_SRC
     scripting/configgroup.cpp
     scripting/desktopscriptengine.cpp
     scripting/i18n.cpp
-    scripting/layouttemplatepackagestructure.cpp
     scripting/panel.cpp
     scripting/rect.cpp
     scripting/scriptengine.cpp
@@ -42,6 +42,7 @@ add_executable(plasma-shell
     containmentconfigview.cpp
     currentcontainmentactionsmodel.cpp
     desktopview.cpp
+    interactiveconsole.cpp
     kidenticongenerator.cpp
     panelview.cpp
     panelconfigview.cpp
@@ -73,6 +74,7 @@ target_link_libraries(plasma-shell
  KF5::Activities
  KF5::GlobalAccel
  KF5::DBusAddons
+ KF5::TextEditor
 )
 target_include_directories(plasma-shell PRIVATE "${CMAKE_BINARY_DIR}")
 
