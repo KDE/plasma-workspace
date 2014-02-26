@@ -498,7 +498,10 @@ void ShellCorona::showInteractiveConsole()
 
 void ShellCorona::loadScriptInInteractiveConsole(const QString &script)
 {
-    
+    showInteractiveConsole();
+    if (d->console) {
+        d->console.data()->loadScript(script);
+    }
 }
 
 void ShellCorona::checkActivities()
