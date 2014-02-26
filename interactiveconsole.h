@@ -1,5 +1,6 @@
 /*
  *   Copyright 2009 Aaron Seigo <aseigo@kde.org>
+ *   Copyright 2014 Marco Martin <mart@kde.org>
  *
  *   This program is free software; you can redistribute it and/or modify
  *   it under the terms of the GNU Library General Public License as
