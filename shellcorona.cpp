@@ -38,6 +38,8 @@
 #include <ksycoca.h>
 #include <kservicetypetrader.h>
 #include <KGlobalAccel>
+#include <KAuthorized>
+#include <KWindowSystem>
 
 
 #include "activity.h"
@@ -48,6 +50,7 @@
 #include "configview.h"
 #include "shellpluginloader.h"
 #include "osd.h"
+#include "interactiveconsole.h"
 
 #include "plasmashelladaptor.h"
 
@@ -85,6 +88,7 @@ public:
     QAction *addPanelAction;
     QMenu *addPanelsMenu;
     Plasma::Package lookNFeelPackage;
+    QWeakPointer<InteractiveConsole> console;
 
     QTimer waitingPanelsTimer;
     QTimer appConfigSyncTimer;
@@ -476,7 +480,20 @@ void ShellCorona::toggleDashboard()
 
 void ShellCorona::showInteractiveConsole()
 {
-    
+    if (KSharedConfig::openConfig()->isImmutable() || !KAuthorized::authorize("plasma-desktop/scripting_console")) {
+        return;
+    }
+
+    InteractiveConsole *console = d->console.data();
+    if (!console) {
+        d->console = console = new InteractiveConsole(this);
+    }
+    d->console.data()->setMode(InteractiveConsole::PlasmaConsole);
+
+    KWindowSystem::setOnDesktop(console->winId(), KWindowSystem::currentDesktop());
+    console->show();
+    console->raise();
+    KWindowSystem::forceActiveWindow(console->winId());
 }
 
 void ShellCorona::loadScriptInInteractiveConsole(const QString &script)
