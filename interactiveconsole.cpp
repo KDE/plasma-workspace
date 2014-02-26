@@ -29,6 +29,7 @@
 #include <QToolButton>
 #include <QVBoxLayout>
 #include <QStandardPaths>
+#include <QIcon>
 
 #include <QFileDialog>
 #include <QAction>
@@ -44,7 +45,6 @@
 #include <KTextEditor/Document>
 #include <KTextEditor/View>
 #include <KToolBar>
-#include <KIcon>
 #include <KComponentData>
 
 #include <Plasma/Corona>
@@ -69,9 +69,9 @@ InteractiveConsole::InteractiveConsole(Plasma::Corona *corona, QWidget *parent)
       m_loadAction(KStandardAction::open(this, SLOT(openScriptFile()), this)),
       m_saveAction(KStandardAction::saveAs(this, SLOT(saveScript()), this)),
       m_clearAction(KStandardAction::clear(this, SLOT(clearEditor()), this)),
-      m_executeAction(new QAction(KIcon("system-run"), i18n("&Execute"), this)),
-      m_plasmaAction(new QAction(KIcon("plasma"), i18nc("Toolbar Button to switch to Plasma Scripting Mode", "Plasma"), this)),
-      m_kwinAction(new QAction(KIcon("kwin"), i18nc("Toolbar Button to switch to KWin Scripting Mode", "KWin"), this)),
+      m_executeAction(new QAction(QIcon::fromTheme("system-run"), i18n("&Execute"), this)),
+      m_plasmaAction(new QAction(QIcon::fromTheme("plasma"), i18nc("Toolbar Button to switch to Plasma Scripting Mode", "Plasma"), this)),
+      m_kwinAction(new QAction(QIcon::fromTheme("kwin"), i18nc("Toolbar Button to switch to KWin Scripting Mode", "KWin"), this)),
       m_snippetsMenu(new QMenu(i18n("Templates"), this)),
       m_fileDialog(0),
       m_mode(PlasmaConsole)
