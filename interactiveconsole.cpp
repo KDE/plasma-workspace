@@ -38,7 +38,7 @@
 #include <QMenu>
 #include <KServiceTypeTrader>
 #include <KStandardAction>
-#include <KTextBrowser>
+#include <QTextBrowser>
 #include <KTextEdit>
 #include <KTextEditor/ConfigInterface>
 #include <KTextEditor/Document>
@@ -173,7 +173,7 @@ InteractiveConsole::InteractiveConsole(Plasma::Corona *corona, QWidget *parent)
     outputToolBar->addAction(clearOutputAction);
     outputLayout->addWidget(outputToolBar);
 
-    m_output = new KTextBrowser(widget);
+    m_output = new QTextBrowser(widget);
     outputLayout->addWidget(m_output);
     m_splitter->addWidget(widget);
 
