@@ -102,8 +102,6 @@ ShellCorona::ShellCorona(QObject *parent)
 {
     d->desktopDefaultsConfig = KConfigGroup(KSharedConfig::openConfig(package().filePath("defaults")), "Desktop");
 
-    //new PlasmaShellAdaptor(this);
-
     new PlasmaShellAdaptor(this);
 
     QDBusConnection dbus = QDBusConnection::sessionBus();
