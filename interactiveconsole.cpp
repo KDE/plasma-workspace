@@ -55,7 +55,6 @@
 #include "shellpluginloader.h"
 
 //TODO:
-// use text editor KPart for syntax highlighting?
 // interative help?
 static const QString s_autosaveFileName("interactiveconsoleautosave.js");
 static const QString s_kwinService = "org.kde.kwin.Scripting";
@@ -66,6 +65,7 @@ InteractiveConsole::InteractiveConsole(Plasma::Corona *corona, QWidget *parent)
       m_splitter(new QSplitter(Qt::Vertical, this)),
       m_editorPart(0),
       m_editor(0),
+      m_output(0),
       m_loadAction(KStandardAction::open(this, SLOT(openScriptFile()), this)),
       m_saveAction(KStandardAction::saveAs(this, SLOT(saveScript()), this)),
       m_clearAction(KStandardAction::clear(this, SLOT(clearEditor()), this)),
@@ -74,6 +74,7 @@ InteractiveConsole::InteractiveConsole(Plasma::Corona *corona, QWidget *parent)
       m_kwinAction(new QAction(QIcon::fromTheme("kwin"), i18nc("Toolbar Button to switch to KWin Scripting Mode", "KWin"), this)),
       m_snippetsMenu(new QMenu(i18n("Templates"), this)),
       m_fileDialog(0),
+      m_closeWhenCompleted(false),
       m_mode(PlasmaConsole)
 {
     addAction(KStandardAction::close(this, SLOT(close()), this));
@@ -202,7 +203,6 @@ InteractiveConsole::~InteractiveConsole()
     KConfigGroup cg(KSharedConfig::openConfig(), "InteractiveConsole");
     cg.writeEntry("Geometry", saveGeometry());
     cg.writeEntry("SplitterState", m_splitter->saveState());
-    qDebug();
 }
 
 void InteractiveConsole::setMode(ConsoleMode mode)
