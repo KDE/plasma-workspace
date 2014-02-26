@@ -30,7 +30,7 @@
 class QSplitter;
 
 class QAction;
-class KFileDialog;
+class QFileDialog;
 class QMenu;
 class KTextEdit;
 class KTextBrowser;
@@ -105,7 +105,7 @@ private:
     QAction *m_kwinAction;
     QMenu *m_snippetsMenu;
 
-    KFileDialog *m_fileDialog;
+    QFileDialog *m_fileDialog;
     QWeakPointer<KIO::Job> m_job;
     bool m_closeWhenCompleted;
     ConsoleMode m_mode;

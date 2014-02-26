@@ -29,7 +29,7 @@
 #include <QToolButton>
 #include <QVBoxLayout>
 
-#include <KFileDialog>
+#include <QFileDialog>
 #include <KLocale>
 #include <QAction>
 #include <KShell>
@@ -293,13 +293,13 @@ void InteractiveConsole::openScriptFile()
 {
     delete m_fileDialog;
 
-    m_fileDialog = new KFileDialog(QUrl(), QString(), 0);
-    m_fileDialog->setOperationMode(KFileDialog::Opening);
+    m_fileDialog = new QFileDialog();
+    m_fileDialog->setAcceptMode(QFileDialog::AcceptOpen);
     m_fileDialog->setWindowTitle(i18n("Open Script File"));
 
     QStringList mimetypes;
     mimetypes << "application/javascript";
-    m_fileDialog->setMimeFilter(mimetypes);
+    m_fileDialog->setMimeTypeFilters(mimetypes);
 
     connect(m_fileDialog, SIGNAL(finished(int)), this, SLOT(openScriptUrlSelected(int)));
     m_fileDialog->show();
@@ -312,7 +312,7 @@ void InteractiveConsole::openScriptUrlSelected(int result)
     }
 
     if (result == QDialog::Accepted) {
-        const QUrl url = m_fileDialog->selectedUrl();
+        const QUrl url = m_fileDialog->selectedUrls().first();
         if (!url.isEmpty()) {
             loadScriptFromUrl(url);
         }
@@ -424,13 +424,13 @@ void InteractiveConsole::saveScript()
 
     delete m_fileDialog;
 
-    m_fileDialog = new KFileDialog(QUrl(), QString(), 0);
-    m_fileDialog->setOperationMode(KFileDialog::Saving);
+    m_fileDialog = new QFileDialog();
+    m_fileDialog->setAcceptMode(QFileDialog::AcceptSave);
     m_fileDialog->setWindowTitle(i18n("Save Script File"));
 
     QStringList mimetypes;
     mimetypes << "application/javascript";
-    m_fileDialog->setMimeFilter(mimetypes);
+    m_fileDialog->setMimeTypeFilters(mimetypes);
 
     connect(m_fileDialog, SIGNAL(finished(int)), this, SLOT(saveScriptUrlSelected(int)));
     m_fileDialog->show();
@@ -443,7 +443,7 @@ void InteractiveConsole::saveScriptUrlSelected(int result)
     }
 
     if (result == QDialog::Accepted) {
-        const QUrl url = m_fileDialog->selectedUrl();
+        const QUrl url = m_fileDialog->selectedUrls().first();
         if (!url.isEmpty()) {
             saveScript(url);
         }
