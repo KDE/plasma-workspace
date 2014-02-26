@@ -61,7 +61,7 @@ static const QString s_autosaveFileName("interactiveconsoleautosave.js");
 static const QString s_kwinService = "org.kde.kwin.Scripting";
 
 InteractiveConsole::InteractiveConsole(Plasma::Corona *corona, QWidget *parent)
-    : KDialog(parent),
+    : QDialog(parent),
       m_corona(corona),
       m_splitter(new QSplitter(Qt::Vertical, this)),
       m_editorPart(0),
@@ -80,9 +80,9 @@ InteractiveConsole::InteractiveConsole(Plasma::Corona *corona, QWidget *parent)
     addAction(m_saveAction);
     addAction(m_clearAction);
 
-    setWindowTitle(KDialog::makeStandardCaption(i18n("Desktop Shell Scripting Console")));
+    setWindowTitle(i18n("Desktop Shell Scripting Console"));
     setAttribute(Qt::WA_DeleteOnClose);
-    setButtons(KDialog::None);
+    //setButtons(QDialog::None);
 
     QWidget *widget = new QWidget(m_splitter);
     QVBoxLayout *editorLayout = new QVBoxLayout(widget);
@@ -177,11 +177,11 @@ InteractiveConsole::InteractiveConsole(Plasma::Corona *corona, QWidget *parent)
     outputLayout->addWidget(m_output);
     m_splitter->addWidget(widget);
 
-    setMainWidget(m_splitter);
+    QVBoxLayout *l = new QVBoxLayout(this);
+    l->addWidget(m_splitter);
 
-    setInitialSize(QSize(700, 500));
     KConfigGroup cg(KSharedConfig::openConfig(), "InteractiveConsole");
-    restoreDialogSize(cg);
+    restoreGeometry(cg.readEntry<QByteArray>("Geometry", QByteArray()));
 
     m_splitter->setStretchFactor(0, 10);
     m_splitter->restoreState(cg.readEntry("SplitterState", QByteArray()));
@@ -200,7 +200,7 @@ InteractiveConsole::InteractiveConsole(Plasma::Corona *corona, QWidget *parent)
 InteractiveConsole::~InteractiveConsole()
 {
     KConfigGroup cg(KSharedConfig::openConfig(), "InteractiveConsole");
-    saveDialogSize(cg);
+    cg.writeEntry("Geometry", saveGeometry());
     cg.writeEntry("SplitterState", m_splitter->saveState());
     qDebug();
 }
@@ -259,13 +259,13 @@ void InteractiveConsole::showEvent(QShowEvent *)
 void InteractiveConsole::closeEvent(QCloseEvent *event)
 {
     onClose();
-    KDialog::closeEvent(event);
+    QDialog::closeEvent(event);
 }
 
 void InteractiveConsole::reject()
 {
     onClose();
-    KDialog::reject();
+    QDialog::reject();
 }
 
 void InteractiveConsole::onClose()

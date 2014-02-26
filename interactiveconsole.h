@@ -23,7 +23,7 @@
 #include <QWeakPointer>
 #include <QScriptValue>
 
-#include <KDialog>
+#include <QDialog>
 
 #include <KIO/Job>
 
@@ -47,7 +47,7 @@ namespace Plasma
 
 class ScriptEngine;
 
-class InteractiveConsole : public KDialog
+class InteractiveConsole : public QDialog
 {
     Q_OBJECT
 
