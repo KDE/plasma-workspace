@@ -28,6 +28,7 @@
 #include <QSplitter>
 #include <QToolButton>
 #include <QVBoxLayout>
+#include <QStandardPaths>
 
 #include <QFileDialog>
 #include <QAction>
@@ -37,7 +38,6 @@
 #include <QMenu>
 #include <KServiceTypeTrader>
 #include <KStandardAction>
-#include <KStandardDirs>
 #include <KTextBrowser>
 #include <KTextEdit>
 #include <KTextEditor/ConfigInterface>
@@ -191,7 +191,7 @@ InteractiveConsole::InteractiveConsole(Plasma::Corona *corona, QWidget *parent)
     connect(m_executeAction, SIGNAL(triggered()), this, SLOT(evaluateScript()));
     m_executeAction->setShortcut(Qt::CTRL + Qt::Key_E);
 
-    const QString autosave = KStandardDirs::locateLocal("appdata", s_autosaveFileName);
+    const QString autosave = QStandardPaths::writableLocation(QStandardPaths::DataLocation) + "/" + s_autosaveFileName;
     if (QFile::exists(autosave)) {
         loadScript(autosave);
     }
@@ -271,7 +271,7 @@ void InteractiveConsole::reject()
 void InteractiveConsole::onClose()
 {
     // need to save first!
-    const QString path = KStandardDirs::locateLocal("appdata", s_autosaveFileName);
+    const QString path = QStandardPaths::writableLocation(QStandardPaths::DataLocation) + "/" + s_autosaveFileName;
     m_closeWhenCompleted = true;
     saveScript(QUrl::fromLocalFile(path));
 }
@@ -361,7 +361,8 @@ void InteractiveConsole::populateTemplatesMenu()
     while (it.hasNext()) {
         it.next();
         KPluginInfo info(it.value());
-        const QString path = KStandardDirs::locate("data", package.defaultPackageRoot() + '/' + info.pluginName() + '/');
+        const QString path = QStandardPaths::locate(QStandardPaths::GenericDataLocation
+, package.defaultPackageRoot() + '/' + info.pluginName() + '/');
         if (!path.isEmpty()) {
             package.setPath(info.pluginName());
             const QString scriptFile = package.filePath("mainscript");
@@ -378,7 +379,8 @@ void InteractiveConsole::loadTemplate(QAction *action)
     Plasma::Package package = ShellPluginLoader::self()->loadPackage("Plasma/LayoutTemplate");
 
     const QString pluginName = action->data().toString();
-    const QString path = KStandardDirs::locate("data", package.defaultPackageRoot() + '/' + pluginName + '/');
+    const QString path = QStandardPaths::locate(QStandardPaths::GenericDataLocation
+, package.defaultPackageRoot() + '/' + pluginName + '/');
     if (!path.isEmpty()) {
         package.setPath(pluginName);
         const QString scriptFile = package.filePath("mainscript");
@@ -496,7 +498,7 @@ void InteractiveConsole::reenableEditor(KJob* job)
 void InteractiveConsole::evaluateScript()
 {
     //qDebug() << "evaluating" << m_editor->toPlainText();
-    const QString path = KStandardDirs::locateLocal("appdata", s_autosaveFileName);
+    const QString path = QStandardPaths::writableLocation(QStandardPaths::DataLocation) + "/" + s_autosaveFileName;
     saveScript(QUrl::fromLocalFile(path));
 
     m_output->moveCursor(QTextCursor::End);
