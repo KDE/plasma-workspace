@@ -28,7 +28,7 @@ set(scripting_SRC
     scripting/configgroup.cpp
     scripting/desktopscriptengine.cpp
     scripting/i18n.cpp
-    scripting/layouttemplatepackagestructure.cpp
+    #scripting/layouttemplatepackagestructure.cpp
     scripting/panel.cpp
     scripting/rect.cpp
     scripting/scriptengine.cpp

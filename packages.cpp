@@ -124,3 +124,11 @@ void QmlWallpaperPackage::initPackage(Plasma::Package *package)
 
     package->addDirectoryDefinition("translations", "locale", i18n("Translations"));
 }
+
+void LayoutTemplatePackage::initPackage(Plasma::Package *package)
+{
+    package->setServicePrefix("plasma-layout-template");
+    package->setDefaultPackageRoot("plasma/layout-templates");
+    package->addFileDefinition("mainscript", "layout.js", i18n("Main Script File"));
+    package->setRequired("mainscript", true);
+}

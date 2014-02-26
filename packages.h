@@ -39,4 +39,11 @@ public:
     void initPackage(Plasma::Package *package);
 };
 
+class LayoutTemplatePackage : public Plasma::PackageStructure
+{
+public:
+    void initPackage(Plasma::Package *package);
+};
+
+
 #endif // LOOKANDFEELPACKAGE_H

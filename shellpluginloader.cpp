@@ -43,6 +43,9 @@ Plasma::Package ShellPluginLoader::internalLoadPackage(const QString &packageFor
     } else if (packageFormat == "Plasma/Wallpaper") {
         Plasma::PackageStructure *structure = new QmlWallpaperPackage();
         return Plasma::Package(structure);
+    } else if (packageFormat == "Plasma/LayoutTemplate") {
+        Plasma::PackageStructure *structure = new LayoutTemplatePackage();
+        return Plasma::Package(structure);
     } else {
         return Plasma::Package();
     }

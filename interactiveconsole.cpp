@@ -51,7 +51,8 @@
 #include <Plasma/Package>
 
 #include "scripting/desktopscriptengine.h"
-#include "scripting/layouttemplatepackagestructure.h"
+#include "packages.h"
+#include "shellpluginloader.h"
 
 //TODO:
 // use text editor KPart for syntax highlighting?
@@ -353,35 +354,38 @@ void InteractiveConsole::populateTemplatesMenu()
         sorted.insert(service->name(), service);
     }
 
-    /*QMapIterator<QString, KService::Ptr> it(sorted);
-    Plasma::PackageStructure::Ptr templateStructure(new WorkspaceScripting::LayoutTemplatePackageStructure);
+    QMapIterator<QString, KService::Ptr> it(sorted);
+    
+    Plasma::Package package = ShellPluginLoader::self()->loadPackage("Plasma/LayoutTemplate");
+    
     while (it.hasNext()) {
         it.next();
         KPluginInfo info(it.value());
-        const QString path = KStandardDirs::locate("data", templateStructure->defaultPackageRoot() + '/' + info.pluginName() + '/');
+        const QString path = KStandardDirs::locate("data", package.defaultPackageRoot() + '/' + info.pluginName() + '/');
         if (!path.isEmpty()) {
-            Plasma::Package package(path, templateStructure);
+            package.setPath(info.pluginName());
             const QString scriptFile = package.filePath("mainscript");
             if (!scriptFile.isEmpty()) {
                 QAction *action = m_snippetsMenu->addAction(info.name());
                 action->setData(info.pluginName());
             }
         }
-    }*/
+    }
 }
 
 void InteractiveConsole::loadTemplate(QAction *action)
 {
-    /*Plasma::PackageStructure::Ptr templateStructure(new WorkspaceScripting::LayoutTemplatePackageStructure);
+    Plasma::Package package = ShellPluginLoader::self()->loadPackage("Plasma/LayoutTemplate");
+
     const QString pluginName = action->data().toString();
-    const QString path = KStandardDirs::locate("data", templateStructure->defaultPackageRoot() + '/' + pluginName + '/');
+    const QString path = KStandardDirs::locate("data", package.defaultPackageRoot() + '/' + pluginName + '/');
     if (!path.isEmpty()) {
-        Plasma::Package package(path, templateStructure);
+        package.setPath(pluginName);
         const QString scriptFile = package.filePath("mainscript");
         if (!scriptFile.isEmpty()) {
             loadScriptFromUrl(QUrl::fromLocalFile(scriptFile));
         }
-    }*/
+    }
 }
 
 void InteractiveConsole::useTemplate(QAction *action)
