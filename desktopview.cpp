@@ -26,6 +26,7 @@
 #include <QScreen>
 
 #include <kwindowsystem.h>
+#include <klocalizedstring.h>
 
 #include <Plasma/Package>
 
@@ -35,6 +36,8 @@ DesktopView::DesktopView(ShellCorona *corona, QScreen *screen)
       m_fillScreen(false),
       m_dashboardShown(false)
 {
+    setTitle(i18n("Desktop"));
+    setIcon(QIcon::fromTheme("user-desktop"));
     setScreen(screen);
     engine()->rootContext()->setContextProperty("desktop", this);
     setSource(QUrl::fromLocalFile(corona->package().filePath("views", "Desktop.qml")));
