@@ -85,6 +85,7 @@ public:
 protected:
     void resizeEvent(QResizeEvent *ev);
     void showEvent(QShowEvent *event);
+    bool event(QEvent *e);
 
 Q_SIGNALS:
     void alignmentChanged();
@@ -109,6 +110,8 @@ private Q_SLOTS:
     void themeChanged();
     void positionPanel();
     void restore();
+    void updateUnhideTrigger();
+    
 
 private:
     int m_offset;
@@ -122,6 +125,7 @@ private:
     VisibilityMode m_visibilityMode;
     Plasma::Theme m_theme;
     QTimer m_positionPaneltimer;
+    QTimer m_unhideTimer;
 
     static const int STRUTSTIMERDELAY = 200;
 };

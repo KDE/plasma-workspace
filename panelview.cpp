@@ -36,6 +36,11 @@
 #include <Plasma/Containment>
 #include <Plasma/Package>
 
+#if HAVE_X11
+#include <xcb/xcb.h>
+#include <QX11Info>
+#endif
+
 PanelView::PanelView(ShellCorona *corona, QWindow *parent)
     : PlasmaQuick::View(corona, parent),
        m_offset(0),
@@ -67,6 +72,11 @@ PanelView::PanelView(ShellCorona *corona, QWindow *parent)
                 restore();
                 positionPanel();
             });
+
+    m_unhideTimer.setSingleShot(true);
+    m_unhideTimer.setInterval(500);
+    connect(&m_unhideTimer, &QTimer::timeout,
+            this, &PanelView::updateUnhideTrigger);
 
     //Screen management
     connect(this, &QWindow::screenChanged,
@@ -328,6 +338,7 @@ void PanelView::setVisibilityMode(PanelView::VisibilityMode mode)
 
     KWindowSystem::setOnAllDesktops(winId(), true);
     emit visibilityModeChanged();
+    updateUnhideTrigger();
 }
 
 PanelView::VisibilityMode PanelView::visibilityMode() const
@@ -430,6 +441,8 @@ void PanelView::positionPanel()
         emit thicknessChanged();
         emit length();
     }
+
+    updateUnhideTrigger();
 }
 
 void PanelView::restore()
@@ -518,6 +531,59 @@ void PanelView::showConfigurationInterface(Plasma::Applet *applet)
     KWindowSystem::setState(m_panelConfigView.data()->winId(), NET::SkipTaskbar | NET::SkipPager);
 }
 
+void PanelView::updateUnhideTrigger()
+{
+#if HAVE_X11
+    xcb_connection_t *c = QX11Info::connection();
+    if (!c) {
+        return;
+    }
+
+    const QByteArray effectName = QByteArrayLiteral("_KDE_NET_WM_SCREEN_EDGE_SHOW");
+    xcb_intern_atom_cookie_t atomCookie = xcb_intern_atom_unchecked(c, false, effectName.length(), effectName.constData());
+
+    QScopedPointer<xcb_intern_atom_reply_t, QScopedPointerPodDeleter> atom(xcb_intern_atom_reply(c, atomCookie, NULL));
+
+    if (!atom) {
+        return;
+    }
+
+    if (m_visibilityMode != AutoHide) {
+        xcb_delete_property(c, winId(), atom->atom);
+        return;
+    }
+
+    KWindowEffects::SlideFromLocation slideLocation = KWindowEffects::NoEdge;
+    uint32_t value = 0;
+
+    switch (location()) {
+    case Plasma::Types::TopEdge:
+        value = 0;
+        slideLocation = KWindowEffects::TopEdge;
+        break;
+    case Plasma::Types::RightEdge:
+        value = 1;
+        slideLocation = KWindowEffects::RightEdge;
+        break;
+    case Plasma::Types::BottomEdge:
+        value = 2;
+        slideLocation = KWindowEffects::BottomEdge;
+        break;
+    case Plasma::Types::LeftEdge:
+        value = 3;
+        slideLocation = KWindowEffects::LeftEdge;
+        break;
+    case Plasma::Types::Floating:
+    default:
+        value = 4;
+        break;
+    }
+
+    KWindowEffects::slideWindow(winId(), slideLocation, -1);
+    xcb_change_property(c, XCB_PROP_MODE_REPLACE, winId(), atom->atom, XCB_ATOM_CARDINAL, 32, 1, &value);
+#endif
+}
+
 void PanelView::resizeEvent(QResizeEvent *ev)
 {
 
@@ -550,6 +616,16 @@ void PanelView::showEvent(QShowEvent *event)
     PanelShadows::self()->addWindow(this);
     PlasmaQuick::View::showEvent(event);
     KWindowSystem::setOnAllDesktops(winId(), true);
+}
+
+bool PanelView::event(QEvent *e)
+{
+    if (e->type() == QEvent::Enter) {
+        m_unhideTimer.stop();
+    } else if (e->type() == QEvent::Leave) {
+        m_unhideTimer.start();
+    }
+    return View::event(e);
 }
 
 void PanelView::updateStruts()
