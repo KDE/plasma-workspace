@@ -19,7 +19,6 @@
 #ifndef PANELVIEW_H
 #define PANELVIEW_H
 
-
 #include <view.h>
 #include "panelconfigview.h"
 #include <QtCore/qpointer.h>

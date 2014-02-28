@@ -78,9 +78,6 @@ target_link_libraries(plasma-shell
 )
 target_include_directories(plasma-shell PRIVATE "${CMAKE_BINARY_DIR}")
 
-#FIXME: this shouldn't be necessary?
-add_definitions(-DHAVE_X11=${HAVE_X11})
-
 if(HAVE_X11)
   target_link_libraries(plasma-shell ${X11_LIBRARIES} ${XCB_XCB_LIBRARY} )
   target_link_libraries(plasma-shell Qt5::X11Extras)
