@@ -41,6 +41,8 @@
 #include <KAuthorized>
 #include <KWindowSystem>
 
+#include "config-ktexteditor.h" // HAVE_KTEXTEDITOR
+
 
 #include "activity.h"
 #include "desktopview.h"
@@ -50,7 +52,9 @@
 #include "configview.h"
 #include "shellpluginloader.h"
 #include "osd.h"
+#if HAVE_KTEXTEDITOR
 #include "interactiveconsole.h"
+#endif
 
 #include "plasmashelladaptor.h"
 
@@ -88,7 +92,9 @@ public:
     QAction *addPanelAction;
     QMenu *addPanelsMenu;
     Plasma::Package lookNFeelPackage;
+#if HAVE_KTEXTEDITOR
     QWeakPointer<InteractiveConsole> console;
+#endif
 
     QTimer waitingPanelsTimer;
     QTimer appConfigSyncTimer;
@@ -482,6 +488,7 @@ void ShellCorona::showInteractiveConsole()
         return;
     }
 
+#if HAVE_KTEXTEDITOR
     InteractiveConsole *console = d->console.data();
     if (!console) {
         d->console = console = new InteractiveConsole(this);
@@ -492,14 +499,17 @@ void ShellCorona::showInteractiveConsole()
     console->show();
     console->raise();
     KWindowSystem::forceActiveWindow(console->winId());
+#endif
 }
 
 void ShellCorona::loadScriptInInteractiveConsole(const QString &script)
 {
+#if HAVE_KTEXTEDITOR
     showInteractiveConsole();
     if (d->console) {
         d->console.data()->loadScript(script);
     }
+#endif
 }
 
 void ShellCorona::checkActivities()

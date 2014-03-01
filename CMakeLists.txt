@@ -17,7 +17,11 @@ find_package(KF5CoreAddons REQUIRED)
 find_package(KF5Crash REQUIRED)
 find_package(KF5Solid REQUIRED)
 find_package(KF5Activities REQUIRED)
-find_package(KF5TextEditor REQUIRED)
+find_package(KF5TextEditor) # not part of KF5.0
+
+set(HAVE_KTEXTEDITOR ${KF5TextEditor_FOUND})
+
+configure_file(config-ktexteditor.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-ktexteditor.h )
 
 
 set(scripting_SRC
@@ -36,13 +40,12 @@ set(scripting_SRC
 set(plasmashell_dbusXML dbus/org.kde.PlasmaShell.xml)
 qt5_add_dbus_adaptor(scripting_SRC ${plasmashell_dbusXML} shellcorona.h ShellCorona plasmashelladaptor)
 
-add_executable(plasma-shell
+set (plasma_shell_SRCS
     activity.cpp
     main.cpp
     containmentconfigview.cpp
     currentcontainmentactionsmodel.cpp
     desktopview.cpp
-    interactiveconsole.cpp
     kidenticongenerator.cpp
     panelview.cpp
     panelconfigview.cpp
@@ -53,6 +56,14 @@ add_executable(plasma-shell
     shellmanager.cpp
     osd.cpp
     ${scripting_SRC}
+)
+if (KF5TextEditor_FOUND)
+   set (plasma_shell_SRCS ${plasma_shell_SRCS}
+       interactiveconsole.cpp
+   )
+endif()
+add_executable(plasma-shell
+    ${plasma_shell_SRCS}
 )
 
 target_link_libraries(plasma-shell
@@ -74,8 +85,10 @@ target_link_libraries(plasma-shell
  KF5::Activities
  KF5::GlobalAccel
  KF5::DBusAddons
- KF5::TextEditor
 )
+if (TARGET KF5::TextEditor)
+ target_link_libraries(plasma-shell KF5::TextEditor)
+endif()
 target_include_directories(plasma-shell PRIVATE "${CMAKE_BINARY_DIR}")
 
 if(HAVE_X11)
