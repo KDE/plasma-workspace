@@ -355,6 +355,7 @@ void PanelView::positionPanel()
     }
 
     QScreen *s = screen();
+    QPoint position;
 
     switch (containment()->location()) {
     case Plasma::Types::TopEdge:
@@ -362,14 +363,14 @@ void PanelView::positionPanel()
 
         switch (m_alignment) {
         case Qt::AlignCenter:
-            setPosition(QPoint(s->geometry().center().x(), s->geometry().top()) + QPoint(m_offset - size().width()/2, m_distance));
+            position = QPoint(QPoint(s->geometry().center().x(), s->geometry().top()) + QPoint(m_offset - size().width()/2, m_distance));
             break;
         case Qt::AlignRight:
-            setPosition(s->geometry().topRight() - QPoint(m_offset + size().width(), m_distance));
+            position = QPoint(s->geometry().topRight() - QPoint(m_offset + size().width(), m_distance));
             break;
         case Qt::AlignLeft:
         default:
-            setPosition(s->geometry().topLeft() + QPoint(m_offset, m_distance));
+            position = QPoint(s->geometry().topLeft() + QPoint(m_offset, m_distance));
         }
         break;
 
@@ -378,14 +379,14 @@ void PanelView::positionPanel()
 
         switch (m_alignment) {
         case Qt::AlignCenter:
-            setPosition(QPoint(s->geometry().left(), s->geometry().center().y()) + QPoint(m_distance, m_offset));
+            position = QPoint(QPoint(s->geometry().left(), s->geometry().center().y()) + QPoint(m_distance, m_offset));
             break;
         case Qt::AlignRight:
-            setPosition(s->geometry().bottomLeft() - QPoint(m_distance, m_offset + size().height()));
+            position = QPoint(s->geometry().bottomLeft() - QPoint(m_distance, m_offset + size().height()));
             break;
         case Qt::AlignLeft:
         default:
-            setPosition(s->geometry().topLeft() + QPoint(m_distance, m_offset));
+            position = QPoint(s->geometry().topLeft() + QPoint(m_distance, m_offset));
         }
         break;
 
@@ -394,14 +395,14 @@ void PanelView::positionPanel()
 
         switch (m_alignment) {
         case Qt::AlignCenter:
-            setPosition(QPoint(s->geometry().right(), s->geometry().center().y()) - QPoint(width() + m_distance, 0) + QPoint(0, m_offset - size().height()/2));
+            position = QPoint(QPoint(s->geometry().right(), s->geometry().center().y()) - QPoint(width() + m_distance, 0) + QPoint(0, m_offset - size().height()/2));
             break;
         case Qt::AlignRight:
-            setPosition(s->geometry().bottomRight() - QPoint(width() + m_distance, 0) - QPoint(0, m_offset + size().height()));
+            position = QPoint(s->geometry().bottomRight() - QPoint(width() + m_distance, 0) - QPoint(0, m_offset + size().height()));
             break;
         case Qt::AlignLeft:
         default:
-            setPosition(s->geometry().topRight() - QPoint(width() + m_distance, 0) + QPoint(0, m_offset));
+            position = QPoint(s->geometry().topRight() - QPoint(width() + m_distance, 0) + QPoint(0, m_offset));
         }
         break;
 
@@ -411,14 +412,14 @@ void PanelView::positionPanel()
 
         switch (m_alignment) {
         case Qt::AlignCenter:
-            setPosition(QPoint(s->geometry().center().x(), s->geometry().bottom() - height() - m_distance) + QPoint(m_offset - size().width()/2, 1));
+            position = QPoint(QPoint(s->geometry().center().x(), s->geometry().bottom() - height() - m_distance) + QPoint(m_offset - size().width()/2, 1));
             break;
         case Qt::AlignRight:
-            setPosition(s->geometry().bottomRight() - QPoint(0, height() + m_distance) - QPoint(m_offset + size().width(), 1));
+            position = QPoint(s->geometry().bottomRight() - QPoint(0, height() + m_distance) - QPoint(m_offset + size().width(), 1));
             break;
         case Qt::AlignLeft:
         default:
-            setPosition(s->geometry().bottomLeft() - QPoint(0, height() + m_distance) + QPoint(m_offset, 1));
+            position = QPoint(s->geometry().bottomLeft() - QPoint(0, height() + m_distance) + QPoint(m_offset, 1));
         }
     }
     m_strutsTimer->stop();
@@ -427,14 +428,14 @@ void PanelView::positionPanel()
     setMaximumSize(screen()->size());
 
     if (formFactor() == Plasma::Types::Vertical) {
-        resize(thickness(), length());
+        setGeometry(QRect(position, QSize(thickness(), length())));
         setMinimumSize(QSize(thickness(), m_minLength));
         setMaximumSize(QSize(thickness(), m_maxLength));
 
         emit thicknessChanged();
         emit length();
     } else {
-        resize(length(), thickness());
+        setGeometry(QRect(position, QSize(length(), thickness())));
         setMinimumSize(QSize(m_minLength, thickness()));
         setMaximumSize(QSize(m_maxLength, thickness()));
 
