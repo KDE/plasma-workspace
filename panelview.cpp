@@ -312,8 +312,8 @@ void PanelView::setDistance(int dist)
     }
 
     m_distance = dist;
-    m_positionPaneltimer.start();
     emit distanceChanged();
+    positionPanel();
 }
 
 void PanelView::setVisibilityMode(PanelView::VisibilityMode mode)
