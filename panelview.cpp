@@ -691,34 +691,36 @@ void PanelView::updateStruts()
         int rightOffset = wholeScreen.right() - thisScreen.right();
         int bottomOffset = wholeScreen.bottom() - thisScreen.bottom();
         int topOffset = wholeScreen.top() - thisScreen.top();
-        qDebug() << "screen l/r/b/t offsets are:" << leftOffset << rightOffset << bottomOffset << topOffset << location();
+//         qDebug() << "screen l/r/b/t offsets are:" << leftOffset << rightOffset << bottomOffset << topOffset << location();
 
         switch (location())
         {
             case Plasma::Types::TopEdge:
-                strut.top_width = height() + topOffset;
+                strut.top_width = thickness() + topOffset;
                 strut.top_start = x();
                 strut.top_end = x() + width() - 1;
+//                 qDebug() << "setting top edge to" << strut.top_width << strut.top_start << strut.top_end;
                 break;
 
             case Plasma::Types::BottomEdge:
-                strut.bottom_width = height() + bottomOffset;
+                strut.bottom_width = thickness() + bottomOffset;
                 strut.bottom_start = x();
                 strut.bottom_end = x() + width() - 1;
-                //qDebug() << "setting bottom edge to" << strut.bottom_width
-                //         << strut.bottom_start << strut.bottom_end;
+//                 qDebug() << "setting bottom edge to" << strut.bottom_width << strut.bottom_start << strut.bottom_end;
                 break;
 
             case Plasma::Types::RightEdge:
-                strut.right_width = width() + rightOffset;
+                strut.right_width = thickness() + rightOffset;
                 strut.right_start = y();
                 strut.right_end = y() + height() - 1;
+//                 qDebug() << "setting right edge to" << strut.right_width << strut.right_start << strut.right_end;
                 break;
 
             case Plasma::Types::LeftEdge:
-                strut.left_width = width() + leftOffset;
+                strut.left_width = thickness() + leftOffset;
                 strut.left_start = y();
                 strut.left_end = y() + height() - 1;
+//                 qDebug() << "setting left edge to" << strut.left_width << strut.left_start << strut.left_end;
                 break;
 
             default:
