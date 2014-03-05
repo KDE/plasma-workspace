@@ -328,9 +328,9 @@ void PanelView::setVisibilityMode(PanelView::VisibilityMode mode)
     //life is vastly simpler if we ensure we're visible now
     show();
 
-    disconnect(containment(), SIGNAL(activate()), this, SLOT(unhide()));
+    disconnect(containment(), &Plasma::Applet::activated, this, &PanelView::unhide);
     if (!(mode == NormalPanel || mode == WindowsGoBelow)) {
-        connect(containment(), SIGNAL(activate()), this, SLOT(unhide()));
+        connect(containment(), &Plasma::Applet::activated, this, &PanelView::unhide);
     }
 
     config().writeEntry("panelVisibility", (int)mode);
@@ -628,6 +628,11 @@ bool PanelView::event(QEvent *e)
         m_unhideTimer.start();
     }
     return View::event(e);
+}
+
+void PanelView::unhide()
+{
+    m_unhideTimer.start();
 }
 
 void PanelView::updateStruts()

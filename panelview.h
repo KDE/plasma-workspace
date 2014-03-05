@@ -110,6 +110,7 @@ private Q_SLOTS:
     void positionPanel();
     void restore();
     void updateUnhideTrigger();
+    void unhide();
     
 
 private:
