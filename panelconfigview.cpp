@@ -44,7 +44,7 @@ PanelConfigView::PanelConfigView(Plasma::Containment *containment, PanelView *pa
       m_panelView(panelView)
 {
     setScreen(panelView->screen());
-    connect(panelView, &PanelView::screenChanged, [=](QScreen *screen){setScreen(screen); syncGeometry();});
+    connect(panelView, &QWindow::screenChanged, [=](QScreen *screen){setScreen(screen); syncGeometry();});
 
     setFlags(Qt::BypassWindowManagerHint);
 
