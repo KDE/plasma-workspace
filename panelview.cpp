@@ -355,8 +355,6 @@ void PanelView::positionPanel()
     }
 
     QScreen *s = screen();
-    const int oldThickness = thickness();
-    const int oldLength = length();
 
     switch (containment()->location()) {
     case Plasma::Types::TopEdge:
