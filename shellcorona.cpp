@@ -165,8 +165,8 @@ ShellCorona::ShellCorona(QObject *parent)
     dashboardAction->setCheckable(true);
     dashboardAction->setIcon(QIcon::fromTheme("dashboard-show"));
     dashboardAction->setData(Plasma::Types::ControlAction);
-    KGlobalAccel::self()->setDefaultShortcut(dashboardAction, QList<QKeySequence>() << QKeySequence(Qt::Key_Control + Qt::Key_F12));
-    KGlobalAccel::self()->setShortcut(dashboardAction, QList<QKeySequence>() << QKeySequence(Qt::Key_Control + Qt::Key_F12));
+    KGlobalAccel::self()->setDefaultShortcut(dashboardAction, QList<QKeySequence>() << QKeySequence(Qt::CTRL + Qt::Key_F12));
+    KGlobalAccel::self()->setShortcut(dashboardAction, QList<QKeySequence>() << QKeySequence(Qt::CTRL + Qt::Key_F12));
 
 
     checkAddPanelAction();
