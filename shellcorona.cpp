@@ -370,7 +370,7 @@ void ShellCorona::screenAdded(QScreen *screen)
 
     QAction *removeAction = containment->actions()->action("remove");
     if (removeAction) {
-        removeAction->setVisible(false);
+        removeAction->deleteLater();
     }
 
     view->setContainment(containment);
@@ -553,7 +553,7 @@ void ShellCorona::currentActivityChanged(const QString &newActivity)
         }
         QAction *removeAction = c->actions()->action("remove");
         if (removeAction) {
-            removeAction->setVisible(false);
+            removeAction->deleteLater();
         }
         d->views[i]->setContainment(c);
     }
