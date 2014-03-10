@@ -256,9 +256,7 @@ void WidgetExplorerPrivate::appletAdded(Plasma::Applet *applet)
 
 void WidgetExplorerPrivate::appletRemoved(Plasma::Applet *applet)
 {
-    Plasma::Applet *a = (Plasma::Applet *)applet; //don't care if it's valid, just need the address
-
-    QString name = appletNames.take(a);
+    QString name = appletNames.take(applet);
 
     int count = 0;
     if (runningApplets.contains(name)) {
