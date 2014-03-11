@@ -377,6 +377,9 @@ void ShellCorona::screenAdded(QScreen *screen)
 
     connect(screen, SIGNAL(destroyed(QObject*)), SLOT(screenRemoved(QObject*)));
     view->show();
+
+    emit availableScreenRectChanged();
+    emit availableScreenRegionChanged();
 }
 
 
@@ -408,6 +411,10 @@ void ShellCorona::screenRemoved(QObject *screen)
     foreach (PanelView *view, d->panelViews) {
         view->setScreen(QGuiApplication::primaryScreen());
     }
+
+    emit availableScreenRectChanged();
+    emit availableScreenRegionChanged();
+
 }
 
 void ShellCorona::createWaitingPanels()
