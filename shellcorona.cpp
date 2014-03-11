@@ -326,7 +326,10 @@ QRegion ShellCorona::availableScreenRegion(int id) const
 
 QRect ShellCorona::availableScreenRect(int id) const
 {
-    return QApplication::desktop()->availableGeometry(id);
+    //return QApplication::desktop()->availableGeometry(id);
+    //FIXME: revert back to this^ after https://codereview.qt-project.org/#change,80606 has been merged
+    //       and released (and we depend on it)
+    return KWindowSystem::workArea(id).intersect(QApplication::desktop()->availableGeometry(id));
 }
 
 PanelView *ShellCorona::panelView(Plasma::Containment *containment) const
