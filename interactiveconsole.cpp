@@ -51,7 +51,6 @@
 #include <Plasma/Package>
 
 #include "scripting/desktopscriptengine.h"
-#include "packages.h"
 #include "shellpluginloader.h"
 
 //TODO:

@@ -50,9 +50,7 @@ set (plasma_shell_SRCS
     panelview.cpp
     panelconfigview.cpp
     panelshadows.cpp
-    packages.cpp
     shellcorona.cpp
-    shellpluginloader.cpp
     shellmanager.cpp
     osd.cpp
     ${scripting_SRC}

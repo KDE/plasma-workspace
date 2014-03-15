@@ -48,7 +48,7 @@
 #include "containment.h"
 #include "configgroup.h"
 #include "i18n.h"
-#include "packages.h"
+//#include "packages.h"
 #include "widget.h"
 
 QScriptValue constructQRectFClass(QScriptEngine *engine);
@@ -269,8 +269,7 @@ QScriptValue ScriptEngine::loadTemplate(QScriptContext *context, QScriptEngine *
         return false;
     }
 
-    LayoutTemplatePackage structure;
-    Plasma::Package package(&structure);
+    Plasma::Package package = Plasma::PluginLoader::self()->loadPackage("Plasma/LayoutTemplate");
     KPluginInfo info(offers.first());
     const QString path = QStandardPaths::locate(QStandardPaths::GenericDataLocation, package.defaultPackageRoot() + '/' + info.pluginName() + '/');
     if (path.isEmpty()) {
