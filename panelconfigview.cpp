@@ -89,7 +89,7 @@ void PanelConfigView::showAddWidgetDialog()
 
 void PanelConfigView::syncGeometry()
 {
-    if (!m_containment) {
+    if (!m_containment || !rootObject()) {
         return;
     }
 
