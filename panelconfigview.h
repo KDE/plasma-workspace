@@ -49,6 +49,7 @@ public:
 
 public Q_SLOTS:
     void showAddWidgetDialog();
+    void addPanelSpacer();
 
 protected:
     void focusOutEvent(QFocusEvent *ev);

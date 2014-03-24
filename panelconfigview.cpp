@@ -87,6 +87,11 @@ void PanelConfigView::showAddWidgetDialog()
     }
 }
 
+void PanelConfigView::addPanelSpacer()
+{
+    m_containment->createApplet("org.kde.plasma.panelspacer");
+}
+
 void PanelConfigView::syncGeometry()
 {
     if (!m_containment || !rootObject()) {
