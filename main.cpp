@@ -57,6 +57,10 @@ int main(int argc, char** argv)
                            QStringLiteral("windowed"),
                            QStringLiteral("Force a windowed view for testing purposes"));
 
+    QCommandLineOption respawn(QStringList() << QStringLiteral("n") <<
+                           QStringLiteral("no-respawn"),
+                           QStringLiteral("Do not restart plasma-shell automatically after a crash"));
+
     QCommandLineOption crash(QStringList() << QStringLiteral("c") << QStringLiteral("crashes"),
                                      QStringLiteral("Recent number of crashes"),
                                      QStringLiteral("n"));
@@ -68,6 +72,7 @@ int main(int argc, char** argv)
     parser.addHelpOption();
     parser.addOption(dbg);
     parser.addOption(win);
+    parser.addOption(respawn);
     parser.addOption(crash);
     parser.addOption(shutup);
 
@@ -80,6 +85,7 @@ int main(int argc, char** argv)
 
     ShellManager::setCrashCount(parser.value(crash).toInt());
     ShellManager::s_forceWindowed = parser.isSet(win);
+    ShellManager::s_noRespawn = parser.isSet(respawn);
     ShellManager::instance();
 
     return app.exec();

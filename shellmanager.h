@@ -41,6 +41,7 @@ public:
     void loadHandlers();
 
     static bool s_forceWindowed;
+    static bool s_noRespawn;
 
     static void setCrashCount(int count);
 

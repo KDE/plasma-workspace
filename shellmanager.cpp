@@ -41,6 +41,7 @@ static const QString s_shellsDir = QString(QStandardPaths::locate(QStandardPaths
 static const QString s_shellLoaderPath = QString("/contents/loader.qml");
 
 bool ShellManager::s_forceWindowed = false;
+bool ShellManager::s_noRespawn = false;
 
 int ShellManager::crashes = 0;
 
@@ -242,11 +243,11 @@ void ShellManager::crashHandler(int signal)
     sprintf(cmd, "%s --crashes %d &",
             QFile::encodeName(QCoreApplication::applicationFilePath()).constData(), crashes);
 
-    if (crashes < 3) {
+    if (crashes < 3 && !s_noRespawn) {
         sleep(1);
         system(cmd);
     } else {
-        fprintf(stderr, "Too many crashes in short order, not restarting automatically.\n");
+        fprintf(stderr, "Too many crashes in short order or respawning disabled, not restarting automatically.\n");
     }
 
 }
