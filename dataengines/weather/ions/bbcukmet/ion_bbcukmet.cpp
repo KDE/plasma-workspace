@@ -28,6 +28,11 @@
 #include <QTextStream>
 #include <QDebug>
 
+WeatherData::WeatherData()
+        : obsTime("N/A"), iconPeriodHour(12), iconPeriodMinute(0),
+          longitude(0.), latitude(0.), condition("N/A")
+{
+}
 
 // ctor, dtor
 UKMETIon::UKMETIon(QObject *parent, const QVariantList &args)
@@ -554,16 +559,35 @@ void UKMETIon::parseWeatherObservation(const QString& source, WeatherData& data,
 
                 // Get the observation time and condition
                 int splitIndex = conditionString.lastIndexOf(':');
-                QStringRef conditionData = conditionString.midRef(splitIndex + 1); // Include ':'
-                data.obsTime = conditionString.midRef(0, splitIndex).toString();
+                if (splitIndex >= 0) {
+                    QString conditionData = conditionString.mid(splitIndex + 1); // Skip ':'
+                    data.obsTime = conditionString.left(splitIndex);
 
-                // Saturday - 13:00 CET
-                // Saturday - 12:00 GMT
-                m_dateFormat = QDateTime::fromString(data.obsTime.split("-")[1].trimmed(), "hh:mm 'GMT'");
-                data.iconPeriodHour = m_dateFormat.toString("hh").toInt();
-                data.iconPeriodMinute = m_dateFormat.toString("mm").toInt();
+//TODO: timezone parsing is not yet supported by QDateTime
+#if 0
+                    if (data.obsTime.contains('-')) {
+                        // Saturday - 13:00 CET
+                        // Saturday - 12:00 GMT
+                        m_dateFormat = QDateTime::fromString(data.obsTime.section('-', 1, 1).trimmed(), "hh:mm ZZZ");
+                        if (m_dateFormat.isValid()) {
+                            data.iconPeriodHour = m_dateFormat.toString("hh").toInt();
+                            data.iconPeriodMinute = m_dateFormat.toString("mm").toInt();
+                        }
+                    } else {
+#endif
+                        m_dateFormat = QDateTime();
+#if 0
+                    }
+#endif
 
-                data.condition = conditionData.toString().split(',')[0].trimmed();
+                    if (conditionData.contains(',')) {
+                        data.condition = conditionData.section(',', 0, 0).trimmed();
+
+                        if (data.condition == "null") {
+                            data.condition = "N/A";
+                        }
+                    }
+                }
 
             } else if (xml.name() == "link") {
                 m_place[source].forecastHTMLUrl = xml.readElementText();
@@ -708,12 +732,12 @@ void UKMETIon::parseFiveDayForecast(const QString& source, QXmlStreamReader& xml
 
             // Sometimes only one of min or max are reported
             if (high.indexIn(line.split(',')[1]) == -1)
-                forecast->tempHigh = 0;
+                forecast->tempHigh = UNKNOWN_TEMPERATURE;
             else
                 forecast->tempHigh = high.cap(1).toInt();
 
             if (low.indexIn(line.split(',')[1]) == -1)
-                forecast->tempLow = 0;
+                forecast->tempLow = UNKNOWN_TEMPERATURE;
             else
                 forecast->tempLow = low.cap(1).toInt();
 
@@ -780,20 +804,24 @@ void UKMETIon::updateWeather(const QString& source)
 
     const double lati = periodLatitude(source);
     const double longi = periodLongitude(source);
-//TODO: Port to Plasma5
+//TODO: Port to Plasma5, needs also fix of m_dateFormat estimation
 #if 0
-    const Plasma::DataEngine::Data timeData = m_timeEngine->query(
-            QString("Local|Solar|Latitude=%1|Longitude=%2|DateTime=%3")
-                .arg(lati).arg(longi).arg(m_dateFormat.toString(Qt::ISODate)));
+    if (m_dateFormat.isValid()) {
+        const Plasma::DataEngine::Data timeData = m_timeEngine->query(
+                QString("Local|Solar|Latitude=%1|Longitude=%2|DateTime=%3")
+                    .arg(lati).arg(longi).arg(m_dateFormat.toString(Qt::ISODate)));
 
-    // Tell applet which icon to use for conditions and provide mapping for condition type to the icons to display
-    if (timeData["Corrected Elevation"].toDouble() >= 0.0) {
-        //qDebug() << "Using daytime icons\n";
+        // Tell applet which icon to use for conditions and provide mapping for condition type to the icons to display
+        if (timeData["Corrected Elevation"].toDouble() >= 0.0) {
+            //qDebug() << "Using daytime icons\n";
+            data.insert("Condition Icon", getWeatherIcon(dayIcons(), condition(source)));
+        } else {
+            data.insert("Condition Icon", getWeatherIcon(nightIcons(), condition(source)));
+        }
+    } else {
 #endif
         data.insert("Condition Icon", getWeatherIcon(dayIcons(), condition(source)));
 #if 0
-    } else {
-        data.insert("Condition Icon", getWeatherIcon(nightIcons(), condition(source)));
     }
 #endif
 
@@ -977,12 +1005,22 @@ QVector<QString> UKMETIon::forecasts(const QString& source)
             m_weatherData[source].forecasts[i]->period.replace("Friday", i18nc("Short for Friday", "Fri"));
         }
 
+        int tempHigh = m_weatherData[source].forecasts[i]->tempHigh;
+        QString tempHighStr = (tempHigh == UNKNOWN_TEMPERATURE)
+                              ? QString::fromLatin1("N/A")
+                              : QString::number(tempHigh);
+
+        int tempLow = m_weatherData[source].forecasts[i]->tempLow;
+        QString tempLowStr = (tempLow == UNKNOWN_TEMPERATURE)
+                             ? QString::fromLatin1("N/A")
+                             : QString::number(tempLow);
+
         forecastData.append(QString("%1|%2|%3|%4|%5|%6") \
                             .arg(m_weatherData[source].forecasts[i]->period) \
                             .arg(m_weatherData[source].forecasts[i]->iconName) \
                             .arg(m_weatherData[source].forecasts[i]->summary) \
-                            .arg(m_weatherData[source].forecasts[i]->tempHigh) \
-                            .arg(m_weatherData[source].forecasts[i]->tempLow) \
+                            .arg(tempHighStr) \
+                            .arg(tempLowStr) \
                             .arg("N/U"));
         //.arg(m_weatherData[source].forecasts[i]->windSpeed)
         //arg(m_weatherData[source].forecasts[i]->windDirection));

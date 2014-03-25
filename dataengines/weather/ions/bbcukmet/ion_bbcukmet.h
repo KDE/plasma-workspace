@@ -28,6 +28,8 @@
 
 #include "../ion.h"
 
+#include <climits>
+
 class KJob;
 namespace KIO
 {
@@ -37,8 +39,9 @@ namespace KIO
 
 class WeatherData
 {
-
 public:
+    WeatherData();
+
     QString place;
     QString stationName;
     // Current observation information.
@@ -171,6 +174,8 @@ private:
 
     QDateTime m_dateFormat;
     QStringList m_sourcesToReset;
+
+    static const int UNKNOWN_TEMPERATURE = INT_MIN;
 };
 
 #endif
