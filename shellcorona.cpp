@@ -430,6 +430,10 @@ void ShellCorona::createWaitingPanels()
 
         d->panelViews[cont]->setScreen(QGuiApplication::screens()[screen]);
         d->panelViews[cont]->setContainment(cont);
+        connect(cont, &PanelView::destroyed,
+                [=](QObject *obj) {
+                    d->panelViews.remove(cont);
+                });
     }
     d->waitingPanels.clear();
 }
