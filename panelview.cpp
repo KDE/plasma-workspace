@@ -61,12 +61,11 @@ PanelView::PanelView(ShellCorona *corona, QWindow *parent)
     setColor(QColor(Qt::transparent));
     setFlags(Qt::FramelessWindowHint|Qt::WindowDoesNotAcceptFocus);
     KWindowSystem::setType(winId(), NET::Dock);
-    setVisible(false);
+    setVisible(true);
 
     themeChanged();
     connect(&m_theme, &Plasma::Theme::themeChanged, this, &PanelView::themeChanged);
 
-    
     m_positionPaneltimer.setSingleShot(true);
     m_positionPaneltimer.setInterval(150);
     connect(&m_positionPaneltimer, &QTimer::timeout,
@@ -452,9 +451,6 @@ void PanelView::restore()
         return;
     }
 
-    setVisible(containment()->isUiReady());
-    connect(containment(), &Plasma::Containment::uiReadyChanged,
-            this, &PanelView::setVisible);
 
     connect(containment(), SIGNAL(destroyed(QObject *)),
             this, SLOT(deleteLater()));
