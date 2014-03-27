@@ -21,6 +21,7 @@
 #include "panelview.h"
 #include "shellcorona.h"
 #include "panelshadows_p.h"
+#include "panelconfigview.h"
 
 #include <QAction>
 #include <QApplication>

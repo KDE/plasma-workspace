@@ -21,6 +21,7 @@
 #define PANELCONFIGVIEW_H
 
 #include "configview.h"
+#include "panelview.h"
 
 #include <QQuickItem>
 #include <QQuickView>
@@ -40,12 +41,16 @@ namespace Plasma {
 class PanelConfigView : public PlasmaQuick::ConfigView
 {
     Q_OBJECT
+    Q_PROPERTY(PanelView::VisibilityMode visibilityMode READ visibilityMode WRITE setVisibilityMode NOTIFY visibilityModeChanged)
 
 public:
     PanelConfigView(Plasma::Containment *interface, PanelView *panelView, QWindow *parent = 0);
     virtual ~PanelConfigView();
 
     void init();
+
+    PanelView::VisibilityMode visibilityMode() const;
+    void setVisibilityMode(PanelView::VisibilityMode mode);
 
 public Q_SLOTS:
     void showAddWidgetDialog();
@@ -60,9 +65,13 @@ protected Q_SLOTS:
 private Q_SLOTS:
     void updateContrast();
 
+Q_SIGNALS:
+    void visibilityModeChanged();
+
 private:
     Plasma::Containment *m_containment;
     PanelView *m_panelView;
+    PanelView::VisibilityMode m_visibilityMode;
     Plasma::Theme m_theme;
 };
 
