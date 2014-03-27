@@ -161,6 +161,11 @@ void Activity::setDefaultPlugin(const QString &plugin)
     //FIXME save&restore this setting
 }
 
+QString Activity::defaultPlugin() const
+{
+    return m_plugin;
+}
+
 const KActivities::Info * Activity::info() const
 {
     return m_info;

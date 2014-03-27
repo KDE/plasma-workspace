@@ -31,7 +31,7 @@
 namespace WorkspaceScripting
 {
 
-DesktopScriptEngine::DesktopScriptEngine(Plasma::Corona *corona, bool startup, QObject *parent)
+DesktopScriptEngine::DesktopScriptEngine(ShellCorona *corona, bool startup, QObject *parent)
     : ScriptEngine(corona, parent),
       m_startup(startup)
 {

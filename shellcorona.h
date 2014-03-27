@@ -1,5 +1,7 @@
 /*
  *   Copyright 2008 Aaron Seigo <aseigo@kde.org>
+ *   Copyright 2013 Sebastian Kügler <sebas@kde.org>
+ *   Copyright 2013 Ivan Cukic <ivan.cukic@kde.org>
  *   Copyright 2013 Marco Martin <mart@kde.org>
  *
  *   This program is free software; you can redistribute it and/or modify
@@ -24,6 +26,7 @@
 #include "plasma/corona.h"
 
 #include <Plasma/Package>
+
 
 namespace Plasma
 {
@@ -68,6 +71,9 @@ public:
     KActivities::Controller *activityController();
 
     Plasma::Package lookAndFeelPackage() const;
+
+    Activity *activity(const QString &id);
+    void insertActivity(const QString &id, Activity *activity);
 
 public Q_SLOTS:
     /**

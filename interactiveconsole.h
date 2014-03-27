@@ -36,6 +36,8 @@ class QMenu;
 class KTextEdit;
 class QTextBrowser;
 
+class ShellCorona;
+
 namespace KTextEditor
 {
     class Document;
@@ -53,7 +55,7 @@ class InteractiveConsole : public QDialog
     Q_OBJECT
 
 public:
-    InteractiveConsole(Plasma::Corona *corona, QWidget *parent = 0);
+    InteractiveConsole(ShellCorona *corona, QWidget *parent = 0);
     ~InteractiveConsole();
 
     void loadScript(const QString &path);
@@ -93,7 +95,7 @@ private:
     void onClose();
     void saveScript(const QUrl &url);
 
-    Plasma::Corona *m_corona;
+    ShellCorona *m_corona;
     QSplitter *m_splitter;
     KTextEditor::Document *m_editorPart;
     KTextEdit *m_editor;

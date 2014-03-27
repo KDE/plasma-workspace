@@ -2,6 +2,7 @@
  *   Copyright 2008 Aaron Seigo <aseigo@kde.org>
  *   Copyright 2013 Sebastian Kügler <sebas@kde.org>
  *   Copyright 2013 Ivan Cukic <ivan.cukic@kde.org>
+ *   Copyright 2013 Marco Martin <mart@kde.org>
  *
  *   This program is free software; you can redistribute it and/or modify
  *   it under the terms of the GNU Library General Public License as
@@ -58,6 +59,8 @@
 
 #include "plasmashelladaptor.h"
 
+
+
 static const int s_configSyncDelay = 10000; // 10 seconds
 
 class ShellCorona::Private {
@@ -99,6 +102,7 @@ public:
     QTimer waitingPanelsTimer;
     QTimer appConfigSyncTimer;
 };
+
 
 WorkspaceScripting::DesktopScriptEngine * ShellCorona::scriptEngine() const
 {
@@ -388,7 +392,18 @@ void ShellCorona::screenAdded(QScreen *screen)
 
 Plasma::Containment* ShellCorona::createContainmentForActivity(const QString& activity, int screenNum)
 {
-    Plasma::Containment* containment = createContainment(d->desktopDefaultsConfig.readEntry("Containment", "org.kde.desktopcontainment"));
+    if (d->desktopContainments.contains(activity) &&
+        d->desktopContainments[activity].contains(screenNum) &&
+        d->desktopContainments.value(activity).value(screenNum)) {
+        return d->desktopContainments[activity][screenNum];
+    }
+
+    QString plugin = "org.kde.desktopcontainment";
+    if (d->activities.contains(activity)) {
+      //  plugin = d->activities.value(activity)->defaultPlugin();
+    }
+
+    Plasma::Containment* containment = createContainment(d->desktopDefaultsConfig.readEntry("Containment", plugin));
     containment->setActivity(activity);
     insertContainment(activity, screenNum, containment);
 
@@ -583,12 +598,24 @@ void ShellCorona::activityAdded(const QString &id)
 
     Activity *a = new Activity(id, this);
     d->activities.insert(id, a);
+    createContainmentForActivity(id, -1);
 }
 
 void ShellCorona::activityRemoved(const QString &id)
 {
     Activity *a = d->activities.take(id);
     a->deleteLater();
+}
+
+Activity *ShellCorona::activity(const QString &id)
+{
+    return d->activities.value(id);
+}
+
+void ShellCorona::insertActivity(const QString &id, Activity *activity)
+{
+    d->activities.insert(id, activity);
+    createContainmentForActivity(id, -1);
 }
 
 void ShellCorona::checkAddPanelAction(const QStringList &sycocaChanges)

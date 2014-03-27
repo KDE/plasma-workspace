@@ -88,6 +88,11 @@ public:
     void setDefaultPlugin(const QString &plugin);
 
     /**
+     * The plugin to use when creating new containments
+     */
+    QString defaultPlugin() const;
+
+    /**
      * @returns the info object for this activity
      */
     const KActivities::Info * info() const;

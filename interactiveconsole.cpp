@@ -47,18 +47,18 @@
 #include <KTextEditor/View>
 #include <KToolBar>
 
-#include <Plasma/Corona>
 #include <Plasma/Package>
 
 #include "scripting/desktopscriptengine.h"
 #include "shellpluginloader.h"
+#include "shellcorona.h"
 
 //TODO:
 // interative help?
 static const QString s_autosaveFileName("interactiveconsoleautosave.js");
 static const QString s_kwinService = "org.kde.kwin.Scripting";
 
-InteractiveConsole::InteractiveConsole(Plasma::Corona *corona, QWidget *parent)
+InteractiveConsole::InteractiveConsole(ShellCorona *corona, QWidget *parent)
     : QDialog(parent),
       m_corona(corona),
       m_splitter(new QSplitter(Qt::Vertical, this)),

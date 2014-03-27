@@ -27,6 +27,7 @@
 #include <QFileInfo>
 #include <QScriptValueIterator>
 #include <QStandardPaths>
+#include <QFutureWatcher>
 
 #include <QDebug>
 #include <klocalizedstring.h>
@@ -39,7 +40,6 @@
 
 #include <Plasma/Applet>
 #include <Plasma/Containment>
-#include <Plasma/Corona>
 #include <Plasma/Package>
 #include <Plasma/PluginLoader>
 #include <qstandardpaths.h>
@@ -50,13 +50,15 @@
 #include "i18n.h"
 //#include "packages.h"
 #include "widget.h"
+#include "../activity.h"
+#include "../shellcorona.h"
 
 QScriptValue constructQRectFClass(QScriptEngine *engine);
 
 namespace WorkspaceScripting
 {
 
-ScriptEngine::ScriptEngine(Plasma::Corona *corona, QObject *parent)
+ScriptEngine::ScriptEngine(ShellCorona *corona, QObject *parent)
     : QScriptEngine(parent),
       m_corona(corona)
 {
@@ -75,7 +77,7 @@ ScriptEngine::~ScriptEngine()
 {
 }
 
-QScriptValue ScriptEngine::activityById(QScriptContext *context, QScriptEngine *engine)
+QScriptValue ScriptEngine::desktopById(QScriptContext *context, QScriptEngine *engine)
 {
     if (context->argumentCount() == 0) {
         return context->throwError(i18n("activityById requires an id"));
@@ -92,7 +94,29 @@ QScriptValue ScriptEngine::activityById(QScriptContext *context, QScriptEngine *
     return engine->undefinedValue();
 }
 
-QScriptValue ScriptEngine::activityForScreen(QScriptContext *context, QScriptEngine *engine)
+QScriptValue ScriptEngine::desktopsForActivity(QScriptContext *context, QScriptEngine *engine)
+{
+    if (context->argumentCount() == 0) {
+        return context->throwError(i18n("containmentsByActivity requires an id"));
+    }
+
+    QScriptValue containments = engine->newArray();
+    int count = 0;
+
+    const QString id = context->argument(0).toString();
+    ScriptEngine *env = envFor(engine);
+    foreach (Plasma::Containment *c, env->m_corona->containments()) {
+        if (c->activity() == id && !isPanel(c)) {
+            containments.setProperty(count, env->wrap(c));
+            ++count;
+        }
+    }
+
+    containments.setProperty("length", count);
+    return containments;
+}
+
+QScriptValue ScriptEngine::desktopForScreen(QScriptContext *context, QScriptEngine *engine)
 {
     if (context->argumentCount() == 0) {
         return context->throwError(i18n("activityForScreen requires a screen id"));
@@ -103,9 +127,37 @@ QScriptValue ScriptEngine::activityForScreen(QScriptContext *context, QScriptEng
     return env->wrap(env->m_corona->containmentForScreen(screen));
 }
 
-QScriptValue ScriptEngine::newActivity(QScriptContext *context, QScriptEngine *engine)
+QScriptValue ScriptEngine::createActivity(QScriptContext *context, QScriptEngine *engine)
 {
-    return createContainment("Desktop", "org.kde.desktopcontainment", context, engine);
+    //return createContainment("Desktop", "org.kde.desktopcontainment", context, engine);
+
+    if (context->argumentCount() < 0) {
+        return context->throwError(i18n("createActivity required the activity name"));
+    }
+
+    const QString name = context->argument(0).toString();
+    const QString plugin = context->argument(1).toString();
+
+    KActivities::Controller controller;
+
+    QFuture<QString> id = controller.addActivity(name);
+    QEventLoop loop;
+    
+    QFutureWatcher<QString> *watcher = new QFutureWatcher<QString>();
+    connect(watcher, &QFutureWatcherBase::finished, &loop, &QEventLoop::quit);
+
+    watcher->setFuture(id);
+    
+    loop.exec();
+
+    ScriptEngine *env = envFor(engine);
+    Activity *a = new Activity(id, env->m_corona);
+    if (!plugin.isEmpty()) {
+        a->setDefaultPlugin(plugin);
+    }
+    env->m_corona->insertActivity(id, a);
+
+    return QScriptValue(id.result());
 }
 
 QScriptValue ScriptEngine::newPanel(QScriptContext *context, QScriptEngine *engine)
@@ -197,7 +249,7 @@ ScriptEngine *ScriptEngine::envFor(QScriptEngine *engine)
 QScriptValue ScriptEngine::panelById(QScriptContext *context, QScriptEngine *engine)
 {
     if (context->argumentCount() == 0) {
-        return context->throwError(i18n("activityById requires an id"));
+        return context->throwError(i18n("panelById requires an id"));
     }
 
     const uint id = context->argument(0).toInt32();
@@ -604,11 +656,12 @@ void ScriptEngine::setupEngine()
     }
 
     m_scriptSelf.setProperty("QRectF", constructQRectFClass(this));
-    m_scriptSelf.setProperty("Activity", newFunction(ScriptEngine::newActivity));
+    m_scriptSelf.setProperty("createActivity", newFunction(ScriptEngine::createActivity));
     m_scriptSelf.setProperty("Panel", newFunction(ScriptEngine::newPanel, newObject()));
-    m_scriptSelf.setProperty("activities", newFunction(ScriptEngine::activities));
-    m_scriptSelf.setProperty("activityById", newFunction(ScriptEngine::activityById));
-    m_scriptSelf.setProperty("activityForScreen", newFunction(ScriptEngine::activityForScreen));
+    m_scriptSelf.setProperty("desktopsForActivity", newFunction(ScriptEngine::desktopsForActivity));
+    m_scriptSelf.setProperty("desktops", newFunction(ScriptEngine::desktops));
+    m_scriptSelf.setProperty("desktopById", newFunction(ScriptEngine::desktopById));
+    m_scriptSelf.setProperty("desktopForScreen", newFunction(ScriptEngine::desktopForScreen));
     m_scriptSelf.setProperty("panelById", newFunction(ScriptEngine::panelById));
     m_scriptSelf.setProperty("panels", newFunction(ScriptEngine::panels));
     m_scriptSelf.setProperty("fileExists", newFunction(ScriptEngine::fileExists));
@@ -633,7 +686,7 @@ bool ScriptEngine::isPanel(const Plasma::Containment *c)
            c->containmentType() == Plasma::Types::CustomPanelContainment;
 }
 
-QScriptValue ScriptEngine::activities(QScriptContext *context, QScriptEngine *engine)
+QScriptValue ScriptEngine::desktops(QScriptContext *context, QScriptEngine *engine)
 {
     Q_UNUSED(context)
 
@@ -652,7 +705,7 @@ QScriptValue ScriptEngine::activities(QScriptContext *context, QScriptEngine *en
     return containments;
 }
 
-Plasma::Corona *ScriptEngine::corona() const
+ShellCorona *ScriptEngine::corona() const
 {
     return m_corona;
 }
@@ -680,7 +733,7 @@ void ScriptEngine::exception(const QScriptValue &value)
     emit printError(value.toVariant().toString());
 }
 
-QStringList ScriptEngine::pendingUpdateScripts(Plasma::Corona *corona)
+QStringList ScriptEngine::pendingUpdateScripts(ShellCorona *corona)
 {
     if (!corona->package().metadata().isValid()) {
         qWarning() << "Warning: corona package invalid";

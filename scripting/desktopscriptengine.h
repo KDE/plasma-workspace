@@ -22,6 +22,8 @@
 
 #include "scriptengine.h"
 
+class ShellCorona;
+
 namespace WorkspaceScripting
 {
 
@@ -30,7 +32,7 @@ class DesktopScriptEngine : public ScriptEngine
     Q_OBJECT
 
 public:
-    DesktopScriptEngine(Plasma::Corona *corona, bool isStartup = true, QObject *parent = 0);
+    DesktopScriptEngine(ShellCorona *corona, bool isStartup = true, QObject *parent = 0);
     QScriptValue wrap(Plasma::Containment *c);
     QScriptValue wrap(Containment *c);
     int defaultPanelScreen() const;
