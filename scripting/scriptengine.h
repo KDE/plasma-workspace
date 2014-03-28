@@ -70,6 +70,7 @@ private:
     // containment accessors
     static QStringList availableContainments(const QString &type);
     static QScriptValue createActivity(QScriptContext *context, QScriptEngine *engine);
+    static QScriptValue setCurrentActivity(QScriptContext *context, QScriptEngine *engine);
     static QScriptValue newPanel(QScriptContext *context, QScriptEngine *engine);
     static QScriptValue desktopsForActivity(QScriptContext *context, QScriptEngine *engine);
     static QScriptValue desktops(QScriptContext *context, QScriptEngine *engine);

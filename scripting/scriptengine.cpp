@@ -129,8 +129,6 @@ QScriptValue ScriptEngine::desktopForScreen(QScriptContext *context, QScriptEngi
 
 QScriptValue ScriptEngine::createActivity(QScriptContext *context, QScriptEngine *engine)
 {
-    //return createContainment("Desktop", "org.kde.desktopcontainment", context, engine);
-
     if (context->argumentCount() < 0) {
         return context->throwError(i18n("createActivity required the activity name"));
     }
@@ -158,6 +156,29 @@ QScriptValue ScriptEngine::createActivity(QScriptContext *context, QScriptEngine
     env->m_corona->insertActivity(id, a);
 
     return QScriptValue(id.result());
+}
+
+QScriptValue ScriptEngine::setCurrentActivity(QScriptContext *context, QScriptEngine *engine)
+{
+    if (context->argumentCount() < 0) {
+        return context->throwError(i18n("setCurrentActivity required the activity id"));
+    }
+
+    const QString id = context->argument(0).toString();
+
+    KActivities::Controller controller;
+
+    QFuture<bool> task = controller.setCurrentActivity(id);
+    QEventLoop loop;
+    
+    QFutureWatcher<bool> *watcher = new QFutureWatcher<bool>();
+    connect(watcher, &QFutureWatcherBase::finished, &loop, &QEventLoop::quit);
+
+    watcher->setFuture(task);
+    
+    loop.exec();
+
+    return QScriptValue(task.result());
 }
 
 QScriptValue ScriptEngine::newPanel(QScriptContext *context, QScriptEngine *engine)
@@ -657,6 +678,7 @@ void ScriptEngine::setupEngine()
 
     m_scriptSelf.setProperty("QRectF", constructQRectFClass(this));
     m_scriptSelf.setProperty("createActivity", newFunction(ScriptEngine::createActivity));
+    m_scriptSelf.setProperty("setCurrentActivity", newFunction(ScriptEngine::setCurrentActivity));
     m_scriptSelf.setProperty("Panel", newFunction(ScriptEngine::newPanel, newObject()));
     m_scriptSelf.setProperty("desktopsForActivity", newFunction(ScriptEngine::desktopsForActivity));
     m_scriptSelf.setProperty("desktops", newFunction(ScriptEngine::desktops));
