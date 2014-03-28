@@ -181,6 +181,13 @@ QScriptValue ScriptEngine::setCurrentActivity(QScriptContext *context, QScriptEn
     return QScriptValue(task.result());
 }
 
+QScriptValue ScriptEngine::activities(QScriptContext *context, QScriptEngine *engine)
+{
+    KActivities::Consumer consumer;
+
+    return qScriptValueFromSequence(engine, consumer.activities());
+}
+
 QScriptValue ScriptEngine::newPanel(QScriptContext *context, QScriptEngine *engine)
 {
     return createContainment("Panel", "org.kde.panel", context, engine);
@@ -679,6 +686,7 @@ void ScriptEngine::setupEngine()
     m_scriptSelf.setProperty("QRectF", constructQRectFClass(this));
     m_scriptSelf.setProperty("createActivity", newFunction(ScriptEngine::createActivity));
     m_scriptSelf.setProperty("setCurrentActivity", newFunction(ScriptEngine::setCurrentActivity));
+    m_scriptSelf.setProperty("activities", newFunction(ScriptEngine::activities));
     m_scriptSelf.setProperty("Panel", newFunction(ScriptEngine::newPanel, newObject()));
     m_scriptSelf.setProperty("desktopsForActivity", newFunction(ScriptEngine::desktopsForActivity));
     m_scriptSelf.setProperty("desktops", newFunction(ScriptEngine::desktops));
