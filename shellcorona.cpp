@@ -598,7 +598,6 @@ void ShellCorona::activityAdded(const QString &id)
 
     Activity *a = new Activity(id, this);
     d->activities.insert(id, a);
-    createContainmentForActivity(id, -1);
 }
 
 void ShellCorona::activityRemoved(const QString &id)
@@ -615,7 +614,8 @@ Activity *ShellCorona::activity(const QString &id)
 void ShellCorona::insertActivity(const QString &id, Activity *activity)
 {
     d->activities.insert(id, activity);
-    createContainmentForActivity(id, -1);
+    Plasma::Containment *c = createContainmentForActivity(id, -1);
+    c->config().writeEntry("lastScreen", 0);
 }
 
 void ShellCorona::checkAddPanelAction(const QStringList &sycocaChanges)
