@@ -1,0 +1,28 @@
+<chapter id="introduction">
+<title>Overview</title>
+
+<para>&policykit-kde; is a implementation of PolicyKit tool to the look and feel
+of KDE.</para>
+
+<para>PolicyKit allows easy and secure password management, it can be used by
+applications to ask their users for a password. Each application defines a set
+of actions that can be executed by their program.
+The application will call PolicyKit to see if the user can perform a given
+action, if not, the application can issue the auth dialog where the user
+can enter his/her password, root password, the password of a given group
+of users or even swipe the finger.</para>
+
+<para>&policykit-kde; consists of two applications:
+The Authorization agent that receives requests for authentication, and shows
+a dialog asking for a password.
+The Authorization manager that is used to manage the authorizations, it is
+mainly used by system administrators that may want to change the default behavior
+of a program policies.</para>
+
+<para>For Qt/KDE developers there is Qt library to allow easy integration with
+you application and PolicyKit.</para>
+
+<para>For more information of how PolicyKit works, it's design and API visit
+<ulink url="http://hal.freedesktop.org/docs/PolicyKit/">PolicyKit Library Reference Manual</ulink></para>
+
+</chapter>

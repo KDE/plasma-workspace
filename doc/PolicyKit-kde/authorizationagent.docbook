@@ -1,0 +1,120 @@
+<chapter id="authorizationagent">
+<title>Authorization Agent</title>
+
+<sect1 id="authorizationagent-overview">
+<title>Manual</title>
+
+<para>
+The Authorization Agent is the application that is called whenever an user
+wants to obtain a given authorization. It's a &DBus; activated daemon which
+uses <quote>libpolkit-grant</quote> that in turn uses PAM for authentication
+services (however, other authentication back-ends can be plugged in as required).
+</para>
+</sect1>
+
+<sect1 id="authorizationagent-dialog">
+<title>Authorization Agent dialog</title>
+
+<para>
+The appearance of the authentication dialog depends on the result from PolicyKit
+and also whether administrator authentication is defined as <quote>authenticate as
+the root user</quote> or <quote>authenticate as one of the users from UNIX group
+wheel</quote> or however the PolicyKit library is configured (see the
+PolicyKit.conf(5) manual page for details). Note that some of the screenshots below
+were made on a system set up to use the
+<ulink url="http://thinkfinger.sourceforge.net/">ThinkFinger</ulink>
+PAM module. The text shown in the authentication dialogs stems from the PolicyKit
+.policy XML files residing in /usr/share/PolicyKit/policy and is read by the
+authentication daemon when an applications asks to obtain an authorization.
+Thus, what the user sees is not under application control
+(e.g. it's not passed from the application) which rules out a class of attacks
+where applications are trying to fool the user into gaining a privilege.
+</para>
+
+<para>The authentication dialog where the user is asked to authenticate as root
+using the password or swiping the finger.
+The details shows the application that's requesting the action, the action
+itself and the action vendor. If clicking in the action link it will open the
+authorization manager pointing to the given action, and the vendor might also
+provide a link for the given action that will be fired when clicking on the
+<quote>Vendor</quote> link:</para>
+<para>
+<screenshot>
+<mediaobject>
+<imageobject><imagedata fileref="authdialog_1.png" format="PNG"/></imageobject>
+<textobject><phrase>
+The authentication dialog asking for root, swipe finger and showing descriptions
+</phrase></textobject>
+</mediaobject>
+</screenshot>
+</para>
+
+<para>Authentication dialog where the user is asked to authenticate as an administrative
+user and PolicyKit is configured to use the root password for this:</para>
+<para>
+<screenshot>
+<mediaobject>
+<imageobject><imagedata fileref="authdialog_2.png" format="PNG"/></imageobject>
+<textobject><phrase>
+The authentication dialog asking for root
+</phrase></textobject>
+</mediaobject>
+</screenshot>
+</para>
+
+<para>Authentication dialog where the user is asked to authenticate as an administrative
+user and PolicyKit is configured to use a group for this:</para>
+<para>
+<screenshot>
+<mediaobject>
+<imageobject><imagedata fileref="authdialog_3.png" format="PNG"/></imageobject>
+<textobject><phrase>
+The authentication dialog asking for a user of the administrative group
+</phrase></textobject>
+</mediaobject>
+</screenshot>
+</para>
+
+<para>Same authentication dialog, showing drop down box where the user can be selected:</para>
+<para>
+<screenshot>
+<mediaobject>
+<imageobject><imagedata fileref="authdialog_4.png" format="PNG"/></imageobject>
+<textobject><phrase>
+Same authentication dialog, showing drop down box where the user can be selected
+</phrase></textobject>
+</mediaobject>
+</screenshot>
+</para>
+
+
+<para>Authentication dialog showing an Action where the privilege can be retained indefinitely:</para>
+<para>
+<screenshot>
+<mediaobject>
+<imageobject><imagedata fileref="authdialog_5.png" format="PNG"/></imageobject>
+<textobject><phrase>
+Authentication dialog showing an Action where the privilege can be retained indefinitely
+</phrase></textobject>
+</mediaobject>
+</screenshot>
+</para>
+
+
+<para>Authentication dialog showing an Action where the privilege can be retained only
+for the remainder of the desktop session:</para>
+<para>
+<screenshot>
+<mediaobject>
+<imageobject><imagedata fileref="authdialog_6.png" format="PNG"/></imageobject>
+<textobject><phrase>
+Authentication dialog showing an Action where the privilege can be retained only
+for the remainder of the desktop session
+</phrase></textobject>
+</mediaobject>
+</screenshot>
+</para>
+
+</sect1>
+
+</chapter>

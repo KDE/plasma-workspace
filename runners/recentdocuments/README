@@ -1,0 +1,7 @@
+Kate Session Runner
+========================
+This Runner loads a list of recent documents and matches
+KRunner's queries against it.
+
+--
+sebas@kde.org

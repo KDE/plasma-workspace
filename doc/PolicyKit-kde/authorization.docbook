@@ -1,0 +1,112 @@
+<chapter id="authorization">
+<title>Authorization manager</title>
+
+<sect1 id="authorization-manual">
+<title>Manual</title>
+
+<para>
+The Authorization manager is the application that system administrators can
+use to easily change the default behavior of any actions. This page does not
+aim to explain how to create new actions or define new <quote>.policy</quote>
+files.</para>
+
+<para>
+The Authorization screen is divided in two parts, at the left we have all the
+actions that PolicyKit knows, you are able to search the actions using the search
+bar at the top, and at the right we have the selected action.
+This screenshot shows the main Authorization screen:
+</para>
+
+<para>
+<screenshot>
+<mediaobject>
+<imageobject><imagedata fileref="authorization_1.png" format="PNG"/></imageobject>
+<textobject><phrase>Main window with source device</phrase></textobject>
+</mediaobject>
+</screenshot>
+</para>
+
+<para>
+When you select an action it's details will be shown at the right side,
+the action might have an icon, a description and the vendor name. Next
+in the view we have the <quote>Implicit Authorizations</quote> and
+<quote>Explicit Authorizations</quote>.
+</para>
+
+<para>
+The <quote>Implicit Authorizations</quote> are authorizations automatically
+given to users based on certain criteria such as if they are on the local
+console. These authorizations are read from the <quote>.policy</quote> files
+that the given application defined, they are the defaults settings of the action.
+These are the valid values
+</para>
+
+<itemizedlist>
+<listitem><para>no</para></listitem>
+<listitem><para>auth_self_one_shot</para></listitem>
+<listitem><para>auth_self</para></listitem>
+<listitem><para>auth_self_keep_session</para></listitem>
+<listitem><para>auth_self_keep_always</para></listitem>
+<listitem><para>auth_admin_one_shot</para></listitem>
+<listitem><para>auth_admin</para></listitem>
+<listitem><para>auth_admin_keep_session</para></listitem>
+<listitem><para>auth_admin_keep_always</para></listitem>
+<listitem><para>yes</para></listitem>
+</itemizedlist>
+
+<para>
+You can change these defaults values simply by changing it on the combo box,
+the not bold value is the default one so if you want to change one value back
+you can select it, to make you selection take effect you have to click on the
+<quote>Modify</quote> button. The <quote>Revert to defaults</quote> can be used
+to change all <quote>Implicit Authorizations</quote> to it's defaults values.
+Note that both <quote>Modify</quote> and <quote>Revert to defaults</quote>
+requires you to issue the PolicyKit <quote>org.freedesktop.policykit.modify-defaults</quote>
+action which might ask a password.
+</para>
+
+<para>
+The <quote>Explicit Authorizations</quote> are authorizations that are either
+obtained through authentication process or specifically given to the action
+in question. The default behavior is to only show the current user explicit
+authorizations; if you want to see others users explicit authorizations
+click on the <quote>Show authorizations from all users</quote>, note that this
+requires you to issue the PolicyKit <quote>org.freedesktop.policykit.read</quote>
+action which might ask a password.
+Blocked authorizations are marked with a <quote>STOP</quote> sign.
+</para>
+
+<para>
+The <quote>Revoke</quote> button is used to revoke an explicit authorization.
+Note that this requires you to issue the PolicyKit
+<quote>org.freedesktop.policykit.revoke</quote> action which might ask a password.
+</para>
+
+<para>
+If you want to specifically grant or block a given user of performing a given action
+you can click on the <quote>Grant</quote> or <quote>Block</quote>.
+The following screenshot you see the Grant/Block dialog:
+</para>
+
+<para>
+<screenshot>
+<mediaobject>
+<imageobject><imagedata fileref="authorization_2.png" format="PNG"/></imageobject>
+<textobject><phrase>Grant/Block explicit authorizations dialog</phrase></textobject>
+</mediaobject>
+</screenshot>
+</para>
+
+<para>
+To grant/block explicit authorizations you have to select the user that will
+receive the authorization. You can also select the <quote>Constraints</quote>
+to limit the authorization such that it only applies under certain circumstances.
+<warning><para>Be aware that explicit blocking and authorization might self lock you
+of performing the given action so be sure of what you are doing</para></warning>
+Note that this requires you to issue the PolicyKit
+<quote>org.freedesktop.policykit.grant</quote> action which might ask a password.
+</para>
+
+</sect1>
+
+</chapter>

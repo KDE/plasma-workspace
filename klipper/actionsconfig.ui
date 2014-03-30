@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ActionsWidget</class>
+ <widget class="QWidget" name="ActionsWidget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>458</width>
+    <height>360</height>
+   </rect>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QCheckBox" name="kcfg_ReplayActionInHistory">
+     <property name="text">
+      <string>Replay actions on an item selected from history</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QCheckBox" name="kcfg_StripWhiteSpace">
+     <property name="text">
+      <string>Remove whitespace when executing actions</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QCheckBox" name="kcfg_EnableMagicMimeActions">
+     <property name="text">
+      <string>Enable MIME-based actions</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="label">
+     <property name="text">
+      <string>Action list:</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="ActionsTreeWidget" name="kcfg_ActionList">
+     <property name="contextMenuPolicy">
+      <enum>Qt::CustomContextMenu</enum>
+     </property>
+     <column>
+      <property name="text">
+       <string>Regular Expression</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Description</string>
+      </property>
+     </column>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QPushButton" name="pbAddAction">
+       <property name="text">
+        <string>Add Action...</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pbEditAction">
+       <property name="text">
+        <string>Edit Action...</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pbDelAction">
+       <property name="text">
+        <string>Delete Action</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pbAdvanced">
+       <property name="text">
+        <string>Advanced...</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QLabel" name="label_2">
+     <property name="text">
+      <string>Click on a highlighted item's column to change it. &quot;%s&quot; in a command will be replaced with the clipboard contents.&lt;br&gt;For more information about regular expressions, you could have a look at the &lt;a href=&quot;http://en.wikipedia.org/wiki/Regular_expression&quot;&gt;Wikipedia entry about this topic&lt;/a&gt;.</string>
+     </property>
+     <property name="textFormat">
+      <enum>Qt::RichText</enum>
+     </property>
+     <property name="wordWrap">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>ActionsTreeWidget</class>
+   <extends>QTreeWidget</extends>
+   <header>actionstreewidget.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

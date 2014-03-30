@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kcfg xmlns="http://www.kde.org/standards/kcfg/1.0"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.kde.org/standards/kcfg/1.0
+      http://www.kde.org/standards/kcfg/1.0/kcfg.xsd" >
+  <kcfgfile name=""/>
+
+  <group name="General">
+    <entry name="taskPreferences" type="StringList">
+      <default></default>
+    </entry>
+    <entry name="itemSize" type="int">
+      <default>22</default>
+    </entry>
+    <entry name="debug" type="bool">
+      <default>false</default>
+    </entry>
+    <entry name="extraItems" type="StringList">
+      <default></default>
+    </entry>
+    <entry name="hiddenItems" type="StringList">
+      <default></default>
+    </entry>
+    <entry name="shownItems" type="StringList">
+      <default></default>
+    </entry>
+  </group>
+
+</kcfg>
+

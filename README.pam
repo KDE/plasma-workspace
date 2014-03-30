@@ -1,0 +1,72 @@
+KDE can be configured to support the PAM ("Pluggable Authentication 
+Modules") system for password checking by the display manager kdm and 
+by the screen saver kscreensaver (for unlocking the display).
+
+PAM is a flexible application-transparent configurable user-authentication 
+system found on FreeBSD, Solaris, and Linux (and maybe other unixes).
+
+Information about PAM may be found on its homepage
+      http://www.kernel.org/pub/linux/libs/pam/
+(Despite the location, this information is NOT Linux-specific.)
+
+
+Known Solaris Issues:
+--------------------
+
+For compiling PAM support on Solaris, PAM_MESSAGE_CONST must NOT
+be defined. This should now be handled automatically by the
+configure script.
+
+
+Using PAM
+---------
+
+By default, PAM is automatically used, if it is found. Use
+./configure --without-pam  to disable it.
+
+If PAM is found, KDE usually uses the PAM service "kde". You may
+override it for all KDE programs by using --with-pam=<service> and/or
+individually by using --with-<prog>-pam=<service>, where <prog> is
+one of kdm, kcp and kss (for kdm, kcheckpass and kscreensaver).
+
+"make install" will attempt to create suitable service definitions; either
+by putting files into /etc/pam.d/ or by adding text to /etc/pam.conf. The
+services are just copies of the "login" service. 
+You may want to edit these definitions to meet your needs.
+There are also two example service definitions in this directory -
+kde.pamd and kscreensaver.pamd - but don't just copy them!
+If the services are misconfigured, you will NOT be able to login via KDM
+and/or unlock a locked screen!
+
+If there is ever any doubt about which PAM service a program was
+compiled with, it can be determined by examining the PAM-generated 
+entries in the system log associated with kdm logins or kscreensaver
+authentication failures.
+
+
+PAM configuration files have four types of entries for each service:
+
+type		used by kdm		used by kscreensaver
+----		-----------		--------------------
+auth		    x				x
+account		    x				
+password	    x				
+session		    x
+
+There may be more than one entry of each type. Check existing PAM
+configuration files and PAM documentation on your system for guidance as
+to what entries to make.  If you call a PAM service that is not
+configured, the default action of PAM is likely to be denial of service.
+
+Note: kdm implements PAM "session" support, which is not implemented in
+certain PAM-aware xdm's that it may be replacing (e.g., the Red Hat 
+Linux 5.x xdm did not implement it).  This may be configured to carry out 
+actions when a user opens or closes an kdm session, if a suitable PAM 
+module is available (e.g., mount and unmount user-specific filesystems).
+
+Note 2: Screensavers typically only authenticate a user to allow her to
+continue working. They may also renew tokens etc., where supported.
+See the Linux PAM Administrators guide, which is part of the PAM
+distribution, for more details. 
+
+

@@ -1,0 +1,10 @@
+Id=4.9-locksession-shortcut
+File=kglobalshortcutsrc
+Group=krunner,kscreenlocker
+Key=Lock Session
+
+# If this update script is run from within an existing KDE session
+# (if the user updates the kde-workspace package while KDE is running)
+# then we need to make sure the shortcut we just stole from krunner
+# isn't written back to the file at logout
+Script=force_krunner_lock_shortcut_unreg

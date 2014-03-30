@@ -1,0 +1,21 @@
+/** @mainpage Task management library
+
+This directory contains the classes making up libtaskmanager, which
+provides task management facilities such as might be useful for a
+taskbar implementation.
+
+@authors
+Matthias Elter \<elter@kde.org\>
+Richard Moore \<rich@kde.org\>
+John Firebaugh \<jfirebaugh@kde.org\>
+
+@maintainers
+Aaron Seigo \<aseigo@kde.org\>
+
+@licenses
+@lgpl
+
+*/
+
+// DOXYGEN_SET_PROJECT_NAME = libtaskmanager
+// vim:ts=4:sw=4:expandtab:filetype=doxygen

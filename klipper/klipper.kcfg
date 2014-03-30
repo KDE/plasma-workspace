@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kcfg xmlns="http://www.kde.org/standards/kcfg/1.0"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.kde.org/standards/kcfg/1.0
+      http://www.kde.org/standards/kcfg/1.0/kcfg.xsd" >
+  <kcfgfile name="klipperrc"/>
+  <group name="General">
+    <entry name="Version" type="String">
+      <label>Klipper version</label>
+    </entry>
+    <entry name="KeepClipboardContents" type="Bool">
+      <label>Keep clipboard contents</label>
+      <default>true</default>
+    </entry>
+    <entry name="PreventEmptyClipboard" type="Bool">
+      <label>Prevent empty clipboard</label>
+      <default>true</default>
+      <whatsthis>Selecting this option has the effect, that the clipboard can never be emptied. E.g. when an application exits, the clipboard would usually be emptied.</whatsthis>
+    </entry>
+    <entry name="IgnoreImages" type="Bool">
+      <label>Ignore images</label>
+      <default>true</default>
+    </entry>
+    <entry name="IgnoreSelection" type="Bool">
+      <label>Ignore Selection</label>
+      <default>false</default>
+      <whatsthis><qt>When an area of the screen is selected with mouse or keyboard, this is called "the selection".&lt;br/&gt;If this option is set, the selection is not entered into the clipboard history, though it is still available for pasting using the middle mouse button.</qt></whatsthis>
+    </entry>
+    <entry name="Synchronize" type="Int">
+      <label comment="KDE::DoNotExtract">Backwards compatibility, don't touch.</label>
+      <default>3</default>
+    </entry>
+    <entry name="SyncClipboards" type="Bool">
+      <label>Synchronize clipboard and selection</label>
+      <default>false</default>
+      <whatsthis><qt>When an area of the screen is selected with mouse or keyboard, this is called "the selection".&lt;br/&gt;If this option is selected, the selection and the clipboard is kept the same, so that anything in the selection is immediately available for pasting elsewhere using any method, including the traditional middle mouse button. Otherwise, the selection is recorded in the clipboard history, but the selection can only be pasted using the middle mouse button. Also see the 'Ignore Selection' option.</qt></whatsthis>
+    </entry>
+    <entry name="SelectionTextOnly" type="Bool">
+      <label>Selection text only</label>
+      <default>true</default>
+      <whatsthis><qt>When an area of the screen is selected with mouse or keyboard, this is called "the selection".&lt;br/&gt;If this option is selected, only text selections are stored in the history, while images and other selections are not.</qt></whatsthis>
+    </entry>
+    <entry name="UseGUIRegExpEditor" type="Bool">
+      <label>Use graphical regexp editor</label>
+      <default>true</default>
+    </entry>
+    <entry name="URLGrabberEnabled" type="Bool">
+        <label>URL grabber enabled</label>
+        <default>false</default>
+    </entry>
+    <entry name="NoActionsForWM_CLASS" type="StringList">
+        <default>Navigator,navigator:browser,konqueror,keditbookmarks,mozilla-bin,Mozilla,Opera main window,opera,gnumeric,Gnumeric,Galeon,kcontrol,ksirc,MozillaFirebird-bin,firefox-bin,Firefox-bin,klipper,Gecko,gecko</default>
+        <label>No actions for WM_CLASS</label>
+    </entry>
+    <entry name="TimeoutForActionPopups" type="Int">
+        <label>Timeout for action popups (seconds)</label>
+        <default>8</default>
+        <min>0</min>
+        <max>200</max>
+        <tooltip>A value of 0 disables the timeout</tooltip>
+    </entry>
+    <entry name="MaxClipItems" type="Int">
+        <label>Clipboard history size</label>
+        <default>7</default>
+        <min>1</min>
+        <max>2048</max>
+    </entry>
+    <entry key="ActionListChanged" name="ActionList" type="Int">
+        <label>Dummy entry for indicating changes in an action's tree widget</label>
+        <default>-1</default>
+    </entry>
+  </group>
+  <group name="Actions">
+    <entry name="StripWhiteSpace" type="Bool">
+      <label>Strip whitespace when executing an action</label>
+      <default>true</default>
+      <whatsthis>Sometimes, the selected text has some whitespace at the end, which, if loaded as URL in a browser would cause an error. Enabling this option removes any whitespace at the beginning or end of the selected string (the original clipboard contents will not be modified).</whatsthis>
+    </entry>
+    <entry name="ReplayActionInHistory" type="Bool">
+      <label>Replay action in history</label>
+      <default>false</default>
+    </entry>
+    <entry name="EnableMagicMimeActions" type="Bool">
+      <label>Enable MIME-based actions</label>
+      <default>true</default>
+    </entry>
+  </group>
+</kcfg>

@@ -1,0 +1,361 @@
+weather condition|N/A
+weather condition|Blowing Snow
+weather condition|Clear
+weather condition|Cloudy
+weather condition|Decreasing Cloud
+weather condition|Distant Precipitation
+weather condition|Drifting Snow
+weather condition|Drizzle
+weather condition|Dust
+weather condition|Dust Devils
+weather condition|Fog
+weather condition|Fog Bank Near Station
+weather condition|Fog Depositing Ice
+weather condition|Fog Patches
+weather condition|Freezing drizzle
+weather condition|Freezing rain
+weather condition|Funnel Cloud
+weather condition|Hail
+weather condition|Haze
+weather condition|Heavy Blowing Snow
+weather condition|Heavy Drifting Snow
+weather condition|Heavy Drizzle
+weather condition|Heavy Hail
+weather condition|Heavy Mixed Rain and Drizzle
+weather condition|Heavy Mixed Rain and Snow Shower
+weather condition|Heavy Rain
+weather condition|Heavy Rain and Snow
+weather condition|Heavy Rainshower
+weather condition|Heavy Snow
+weather condition|Heavy Snow Pellets
+weather condition|Heavy Snowshower
+weather condition|Heavy Thunderstorm with Hail
+weather condition|Heavy Thunderstorm with Rain
+weather condition|Ice Crystals
+weather condition|Ice Pellets
+weather condition|Increasing Cloud
+weather condition|Light Drizzle
+weather condition|Light Freezing Drizzle
+weather condition|Light Freezing Rain
+weather condition|Light Rain
+weather condition|Light Rainshower
+weather condition|Light Snow
+weather condition|Light Snow Pellets
+weather condition|Light Snowshower
+weather condition|Lightning Visible
+weather condition|Mainly Clear
+weather condition|Mainly Sunny
+weather condition|Mist
+weather condition|Mixed Rain and Drizzle
+weather condition|Mixed Rain and Snow Shower
+weather condition|Mostly Cloudy
+weather condition|Not Reported
+weather condition|Partly Cloudy
+weather condition|Rain
+weather condition|Rain and Snow
+weather condition|Rainshower
+weather condition|Recent Drizzle
+weather condition|Recent Dust or Sand Storm
+weather condition|Recent Fog
+weather condition|Recent Freezing Precipitation
+weather condition|Recent Hail
+weather condition|Recent Rain
+weather condition|Recent Rain and Snow
+weather condition|Recent Rainshower
+weather condition|Recent Snow
+weather condition|Recent Snowshower
+weather condition|Recent Thunderstorm
+weather condition|Recent Thunderstorm with Hail
+weather condition|Recent Thunderstorm with Heavy Hail
+weather condition|Recent Thunderstorm with Heavy Rain
+weather condition|Recent Thunderstorm with Rain
+weather condition|Sand or Dust Storm
+weather condition|Severe Sand or Dust Storm
+weather condition|Shallow Fog
+weather condition|Smoke
+weather condition|Snow
+weather condition|Snow Crystals
+weather condition|Snow Grains
+weather condition|Squalls
+weather condition|Sunny
+weather condition|Mainly Sunny
+weather condition|Partly Cloudy
+weather condition|Thunderstorm with Hail
+weather condition|Thunderstorm with Rain
+weather condition|Thunderstorm with Sand or Dust Storm
+weather condition|Thunderstorm without Precipitation
+weather condition|Tornado
+weather forecast|A few clouds
+weather forecast|A few flurries
+weather forecast|A few flurries mixed with ice pellets
+weather forecast|A few flurries or rain showers
+weather forecast|A few flurries or thundershowers
+weather forecast|A few rain showers or flurries
+weather forecast|A few rain showers or wet flurries
+weather forecast|A few showers
+weather forecast|A few showers or drizzle
+weather forecast|A few showers or thundershowers
+weather forecast|A few showers or thunderstorms
+weather forecast|A few thundershowers
+weather forecast|A few thunderstorms
+weather forecast|A few wet flurries
+weather forecast|A few wet flurries or rain showers
+weather forecast|A mix of sun and cloud
+weather forecast|Blizzard
+weather forecast|Chance of drizzle
+weather forecast|Chance of drizzle mixed with freezing drizzle
+weather forecast|Chance of drizzle mixed with rain
+weather forecast|Chance of drizzle or rain
+weather forecast|Chance of flurries
+weather forecast|Chance of flurries at times heavy
+weather forecast|Chance of flurries mixed with ice pellets
+weather forecast|Chance of flurries or ice pellets
+weather forecast|Chance of flurries or rain showers
+weather forecast|Chance of flurries or thundershowers
+weather forecast|Chance of freezing drizzle
+weather forecast|Chance of freezing rain
+weather forecast|Chance of freezing rain mixed with snow
+weather forecast|Chance of freezing rain or rain
+weather forecast|Chance of freezing rain or snow
+weather forecast|Chance of light snow
+weather forecast|Chance of light snow and blowing snow
+weather forecast|Chance of light snow mixed with freezing drizzle
+weather forecast|Chance of light snow mixed with ice pellets
+weather forecast|Chance of light snow mixed with rain
+weather forecast|Chance of light snow or freezing rain
+weather forecast|Chance of light snow or ice pellets
+weather forecast|Chance of light snow or rain
+weather forecast|Chance of light wet snow
+weather forecast|Chance of rain
+weather forecast|Chance of rain at times heavy
+weather forecast|Chance of rain mixed with snow
+weather forecast|Chance of rain or drizzle
+weather forecast|Chance of rain or freezing rain
+weather forecast|Chance of rain or snow
+weather forecast|Chance of rain showers or flurries
+weather forecast|Chance of rain showers or wet flurries
+weather forecast|Chance of severe thunderstorms
+weather forecast|Chance of showers
+weather forecast|Chance of showers at times heavy
+weather forecast|Chance of showers at times heavy or thundershowers
+weather forecast|Chance of showers at times heavy or thunderstorms
+weather forecast|Chance of showers or drizzle
+weather forecast|Chance of showers or thundershowers
+weather forecast|Chance of showers or thunderstorms
+weather forecast|Chance of snow
+weather forecast|Chance of snow and blizzard
+weather forecast|Chance of snow mixed with freezing drizzle
+weather forecast|Chance of snow mixed with freezing rain
+weather forecast|Chance of snow mixed with rain
+weather forecast|Chance of snow or rain
+weather forecast|Chance of snow squalls
+weather forecast|Chance of thundershowers
+weather forecast|Chance of thunderstorms
+weather forecast|Chance of thunderstorms and possible hail
+weather forecast|Chance of wet flurries
+weather forecast|Chance of wet flurries at times heavy
+weather forecast|Chance of wet flurries or rain showers
+weather forecast|Chance of wet snow
+weather forecast|Chance of wet snow mixed with rain
+weather forecast|Chance of wet snow or rain
+weather forecast|Clear
+weather forecast|Clearing
+weather forecast|Cloudy
+weather forecast|Cloudy periods
+weather forecast|Cloudy with sunny periods
+weather forecast|Drizzle
+weather forecast|Drizzle mixed with freezing drizzle
+weather forecast|Drizzle mixed with rain
+weather forecast|Drizzle or freezing drizzle
+weather forecast|Drizzle or rain
+weather forecast|Flurries
+weather forecast|Flurries at times heavy
+weather forecast|Flurries at times heavy or rain showers
+weather forecast|Flurries mixed with ice pellets
+weather forecast|Flurries or ice pellets
+weather forecast|Flurries or rain showers
+weather forecast|Flurries or thundershowers
+weather forecast|Fog
+weather forecast|Fog developing
+weather forecast|Fog dissipating
+weather forecast|Fog patches
+weather forecast|Freezing drizzle
+weather forecast|Freezing rain
+weather forecast|Freezing rain mixed with ice pellets
+weather forecast|Freezing rain mixed with rain
+weather forecast|Freezing rain mixed with snow
+weather forecast|Freezing rain or ice pellets
+weather forecast|Freezing rain or rain
+weather forecast|Freezing rain or snow
+weather forecast|Ice fog
+weather forecast|Ice fog developing
+weather forecast|Ice fog dissipating
+weather forecast|Ice pellet
+weather forecast|Ice pellet mixed with freezing rain
+weather forecast|Ice pellet mixed with snow
+weather forecast|Ice pellet or freezing rain
+weather forecast|Ice pellet or snow
+weather forecast|Increasing cloudiness
+weather forecast|Increasing clouds
+weather forecast|Light snow
+weather forecast|Light snow and blizzard
+weather forecast|Light snow and blizzard and blowing snow
+weather forecast|Light snow and blowing snow
+weather forecast|Light snow mixed with freezing drizzle
+weather forecast|Light snow mixed with freezing rain
+weather forecast|Light snow mixed with ice pellets
+weather forecast|Light snow mixed with rain
+weather forecast|Light snow or freezing drizzle
+weather forecast|Light snow or freezing rain
+weather forecast|Light snow or ice pellets
+weather forecast|Light snow or rain
+weather forecast|Light wet snow
+weather forecast|Light wet snow or rain
+weather forecast|Local snow squalls
+weather forecast|Near blizzard
+weather forecast|Overcast
+weather forecast|Periods of drizzle
+weather forecast|Periods of drizzle mixed with freezing drizzle
+weather forecast|Periods of drizzle mixed with rain
+weather forecast|Periods of drizzle or freezing drizzle
+weather forecast|Periods of drizzle or rain
+weather forecast|Periods of freezing drizzle
+weather forecast|Periods of freezing drizzle or drizzle
+weather forecast|Periods of freezing drizzle or rain
+weather forecast|Periods of freezing rain
+weather forecast|Periods of freezing rain mixed with ice pellets
+weather forecast|Periods of freezing rain mixed with rain
+weather forecast|Periods of freezing rain mixed with snow
+weather forecast|Periods of freezing rain or ice pellets
+weather forecast|Periods of freezing rain or rain
+weather forecast|Periods of freezing rain or snow
+weather forecast|Periods of ice pellet
+weather forecast|Periods of ice pellet mixed with freezing rain
+weather forecast|Periods of ice pellet mixed with snow
+weather forecast|Periods of ice pellet or freezing rain
+weather forecast|Periods of ice pellet or snow
+weather forecast|Periods of light snow
+weather forecast|Periods of light snow and blizzard
+weather forecast|Periods of light snow and blizzard and blowing snow
+weather forecast|Periods of light snow and blowing snow
+weather forecast|Periods of light snow mixed with freezing drizzle
+weather forecast|Periods of light snow mixed with freezing rain
+weather forecast|Periods of light snow mixed with ice pellets
+weather forecast|Periods of light snow mixed with rain
+weather forecast|Periods of light snow or freezing drizzle
+weather forecast|Periods of light snow or freezing rain
+weather forecast|Periods of light snow or ice pellets
+weather forecast|Periods of light snow or rain
+weather forecast|Periods of light wet snow
+weather forecast|Periods of light wet snow mixed with rain
+weather forecast|Periods of light wet snow or rain
+weather forecast|Periods of rain
+weather forecast|Periods of rain mixed with freezing rain
+weather forecast|Periods of rain mixed with snow
+weather forecast|Periods of rain or drizzle
+weather forecast|Periods of rain or freezing rain
+weather forecast|Periods of rain or snow
+weather forecast|Periods of rain or thundershowers
+weather forecast|Periods of rain or thunderstorms
+weather forecast|Periods of snow
+weather forecast|Periods of snow and blizzard
+weather forecast|Periods of snow and blizzard and blowing snow
+weather forecast|Periods of snow and blowing snow
+weather forecast|Periods of snow mixed with freezing drizzle
+weather forecast|Periods of snow mixed with freezing rain
+weather forecast|Periods of snow mixed with ice pellets
+weather forecast|Periods of snow mixed with rain
+weather forecast|Periods of snow or freezing drizzle
+weather forecast|Periods of snow or freezing rain
+weather forecast|Periods of snow or ice pellets
+weather forecast|Periods of snow or rain
+weather forecast|Periods of wet snow
+weather forecast|Periods of wet snow mixed with rain
+weather forecast|Periods of wet snow or rain
+weather forecast|Rain
+weather forecast|Rain at times heavy
+weather forecast|Rain at times heavy mixed with freezing rain
+weather forecast|Rain at times heavy mixed with snow
+weather forecast|Rain at times heavy or drizzle
+weather forecast|Rain at times heavy or freezing rain
+weather forecast|Rain at times heavy or snow
+weather forecast|Rain at times heavy or thundershowers
+weather forecast|Rain at times heavy or thunderstorms
+weather forecast|Rain mixed with freezing rain
+weather forecast|Rain mixed with snow
+weather forecast|Rain or drizzle
+weather forecast|Rain or freezing rain
+weather forecast|Rain or snow
+weather forecast|Rain or thundershowers
+weather forecast|Rain or thunderstorms
+weather forecast|Rain showers or flurries
+weather forecast|Rain showers or wet flurries
+weather forecast|Showers
+weather forecast|Showers at times heavy
+weather forecast|Showers at times heavy or thundershowers
+weather forecast|Showers at times heavy or thunderstorms
+weather forecast|Showers or drizzle
+weather forecast|Showers or thundershowers
+weather forecast|Showers or thunderstorms
+weather forecast|Smoke
+weather forecast|Snow
+weather forecast|Snow and blizzard
+weather forecast|Snow and blizzard and blowing snow
+weather forecast|Snow and blowing snow
+weather forecast|Snow at times heavy
+weather forecast|Snow at times heavy and blizzard
+weather forecast|Snow at times heavy and blowing snow
+weather forecast|Snow at times heavy mixed with freezing drizzle
+weather forecast|Snow at times heavy mixed with freezing rain
+weather forecast|Snow at times heavy mixed with ice pellets
+weather forecast|Snow at times heavy mixed with rain
+weather forecast|Snow at times heavy or freezing rain
+weather forecast|Snow at times heavy or ice pellets
+weather forecast|Snow at times heavy or rain
+weather forecast|Snow mixed with freezing drizzle
+weather forecast|Snow mixed with freezing rain
+weather forecast|Snow mixed with ice pellets
+weather forecast|Snow mixed with rain
+weather forecast|Snow or freezing drizzle
+weather forecast|Snow or freezing rain
+weather forecast|Snow or ice pellets
+weather forecast|Snow or rain
+weather forecast|Snow squalls
+weather forecast|Sunny
+weather forecast|Mainly Sunny
+weather forecast|Sunny with cloudy periods
+weather forecast|Thunderstorms
+weather forecast|Thunderstorms and possible hail
+weather forecast|Wet flurries
+weather forecast|Wet flurries at times heavy
+weather forecast|Wet flurries at times heavy or rain showers
+weather forecast|Wet flurries or rain showers
+weather forecast|Wet snow
+weather forecast|Wet snow at times heavy
+weather forecast|Wet snow at times heavy mixed with rain
+weather forecast|Wet snow mixed with rain
+weather forecast|Wet snow or rain
+weather forecast|Windy
+wind direction|N
+wind direction|NNE
+wind direction|NE
+wind direction|ENE
+wind direction|E
+wind direction|SSE
+wind direction|SE
+wind direction|ESE
+wind direction|S
+wind direction|NNW
+wind direction|NW
+wind direction|WNW
+wind direction|W
+wind direction|SSW
+wind direction|SW
+wind direction|WSW
+wind direction|VR
+wind speed|Calm
+wind speed|N/A
+pressure tendency|rising
+pressure tendency|falling
+pressure tendency|steady
+Trace

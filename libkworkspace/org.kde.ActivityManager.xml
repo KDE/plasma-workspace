@@ -1,0 +1,127 @@
+<!DOCTYPE node PUBLIC "-//freedesktop//DTD D-BUS Object Introspection 1.0//EN" "http://www.freedesktop.org/standards/dbus/1.0/introspect.dtd">
+<node>
+  <interface name="org.kde.ActivityManager">
+    <signal name="CurrentActivityChanged">
+      <arg name="id" type="s" direction="out"/>
+    </signal>
+    <signal name="ActivityAdded">
+      <arg name="id" type="s" direction="out"/>
+    </signal>
+    <signal name="ActivityStarted">
+      <arg name="id" type="s" direction="out"/>
+    </signal>
+    <signal name="ActivityStopped">
+      <arg name="id" type="s" direction="out"/>
+    </signal>
+    <signal name="ActivityRemoved">
+      <arg name="id" type="s" direction="out"/>
+    </signal>
+    <signal name="ActivityChanged">
+      <arg name="id" type="s" direction="out"/>
+    </signal>
+    <signal name="ActivityStateChanged">
+      <arg name="id" type="s" direction="out"/>
+      <arg name="state" type="i" direction="out"/>
+    </signal>
+    <signal name="ResourceAccessed">
+      <arg name="application" type="s" direction="out"/>
+      <arg name="uri" type="s" direction="out"/>
+    </signal>
+    <signal name="ResourceOpened">
+      <arg name="application" type="s" direction="out"/>
+      <arg name="windowId" type="u" direction="out"/>
+      <arg name="uri" type="s" direction="out"/>
+    </signal>
+    <signal name="ResourceModified">
+      <arg name="windowId" type="u" direction="out"/>
+      <arg name="uri" type="s" direction="out"/>
+    </signal>
+    <signal name="ResourceClosed">
+      <arg name="windowId" type="u" direction="out"/>
+      <arg name="uri" type="s" direction="out"/>
+    </signal>
+    <method name="Start">
+    </method>
+    <method name="Stop">
+    </method>
+    <method name="CurrentActivity">
+      <arg type="s" direction="out"/>
+    </method>
+    <method name="SetCurrentActivity">
+      <arg type="b" direction="out"/>
+      <arg name="id" type="s" direction="in"/>
+    </method>
+    <method name="AddActivity">
+      <arg type="s" direction="out"/>
+      <arg name="name" type="s" direction="in"/>
+    </method>
+    <method name="StartActivity">
+      <arg name="id" type="s" direction="in"/>
+    </method>
+    <method name="StopActivity">
+      <arg name="id" type="s" direction="in"/>
+    </method>
+    <method name="ActivityState">
+      <arg type="i" direction="out"/>
+      <arg name="id" type="s" direction="in"/>
+    </method>
+    <method name="RemoveActivity">
+      <arg name="id" type="s" direction="in"/>
+    </method>
+    <method name="ListActivities">
+      <arg type="as" direction="out"/>
+    </method>
+    <method name="ListActivities">
+      <arg type="as" direction="out"/>
+      <arg name="state" type="i" direction="in"/>
+    </method>
+    <method name="ActivityName">
+      <arg type="s" direction="out"/>
+      <arg name="id" type="s" direction="in"/>
+    </method>
+    <method name="SetActivityName">
+      <arg name="id" type="s" direction="in"/>
+      <arg name="name" type="s" direction="in"/>
+    </method>
+    <method name="ActivityDescription">
+      <arg type="s" direction="out"/>
+      <arg name="id" type="s" direction="in"/>
+    </method>
+    <method name="SetActivityDescription">
+      <arg name="id" type="s" direction="in"/>
+      <arg name="description" type="s" direction="in"/>
+    </method>
+    <method name="ActivityIcon">
+      <arg type="s" direction="out"/>
+      <arg name="id" type="s" direction="in"/>
+    </method>
+    <method name="SetActivityIcon">
+      <arg name="id" type="s" direction="in"/>
+      <arg name="icon" type="s" direction="in"/>
+    </method>
+    <method name="IsBackstoreAvailable">
+      <arg type="b" direction="out"/>
+    </method>
+    <method name="NotifyResourceAccessed">
+      <arg name="application" type="s" direction="in"/>
+      <arg name="uri" type="s" direction="in"/>
+    </method>
+    <method name="NotifyResourceOpened">
+      <arg name="application" type="s" direction="in"/>
+      <arg name="windowId" type="u" direction="in"/>
+      <arg name="uri" type="s" direction="in"/>
+    </method>
+    <method name="NotifyResourceModified">
+      <arg name="windowId" type="u" direction="in"/>
+      <arg name="uri" type="s" direction="in"/>
+    </method>
+    <method name="NotifyResourceClosed">
+      <arg name="windowId" type="u" direction="in"/>
+      <arg name="uri" type="s" direction="in"/>
+    </method>
+    <method name="ActivitiesForResource">
+      <arg type="as" direction="out"/>
+      <arg name="uri" type="s" direction="in"/>
+    </method>
+  </interface>
+</node>

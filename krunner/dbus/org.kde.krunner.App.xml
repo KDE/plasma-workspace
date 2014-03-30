@@ -1,0 +1,23 @@
+<!DOCTYPE node PUBLIC "-//freedesktop//DTD D-BUS Object Introspection 1.0//EN" "http://www.freedesktop.org/standards/dbus/1.0/introspect.dtd">
+<node>
+  <interface name="org.kde.krunner.App">
+    <method name="display">
+    </method>
+    <method name="displaySingleRunner">
+      <arg name="runnerName" type="s" direction="in"/>
+    </method>
+    <method name="displayWithClipboardContents">
+    </method>
+    <method name="query">
+      <arg name="term" type="s" direction="in"/>
+    </method>
+    <method name="querySingleRunner">
+      <arg name="runnerName" type="s" direction="in"/>
+      <arg name="term" type="s" direction="in"/>
+    </method>
+    <method name="switchUser">
+    </method>
+    <method name="initializeStartupNotification">
+    </method>
+  </interface>
+</node>

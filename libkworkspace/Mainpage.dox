@@ -1,0 +1,21 @@
+/** @mainpage Workspace library
+
+libkworkspace provides functions to allow you to interact with the
+%KDE session manager.
+
+@authors
+Matthias Kalle Dalheimer \<kalle@kde.org\><br>
+Oswald Buddenhagen \<ossi@kde.org\><br>
+Matthias Elter \<elter@kde.org\><br>
+Matthias Ettrich \<ettrich@kde.org\>
+
+@maintainers
+[Unknown/None]
+
+@licenses
+@lgpl
+
+*/
+
+// DOXYGEN_SET_PROJECT_NAME = libkworkspace
+// vim:ts=4:sw=4:expandtab:filetype=doxygen

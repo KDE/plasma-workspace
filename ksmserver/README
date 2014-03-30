@@ -1,0 +1,162 @@
+KDE session manager  (ksmserver)
+--------------------------------
+
+Matthias Ettrich <ettrich@kde.org>
+Lubos Lunak <l.lunak@kde.org>
+
+ksmserver is KDE's session management server. It talks the
+standard X11R6 session management protocol (XSMP).  Thus, in theory,
+it should be compatible with all session managment compliant X11R6
+applications. Unfortunately, there aren't that many of them. To be
+precise, I have never seen a single commercial application that
+supports it and even within the official X11R6 distribution, 'xclock'
+is the only exception. Nevertheless we've chosen to support XSMP
+despites the complexity of the protocol in order to provide KDE users
+more interoperability with applications that were not explicitely
+written with KDE in mind. XSMP, as an official X standard, promised to
+be more likely to be supported by third parties than even a superior
+KDE-specific protocol. Let's see whether we were right and more
+applications will actually talk XSMP. At least all KDE applications do
+now.
+
+Here's a short overview on how session management works.
+
+Contents
+--------
+
+Starting the server
+KDE startup sequence
+Establishing the connection
+Authorization
+Requesting a shutdown
+
+
+Starting the server
+-------------------
+
+The server is usually started from the 'startkde' script. It supports the following options:
+
+  -r, --restore             Restores the previous session if available
+  -w, --windowmanager <wm>  Starts 'wm' in case no other window manager is
+                            participating in the session. Default is 'kwin'
+
+The default 'startkde' launches 'ksmserver --restore'.  The
+'windowmanager' option is useful for users that prefer a window
+manager other than kwin. Since the window manager has to participate
+in the session (it has to remember window positions and states), it is
+usually restarted when the session is restored. To be *really* sure
+that this happens, even if the wm might have crashed during the
+previous session, ksmserver ensures that. The option specifies, which
+windowmanager shall be launched for sure. But again: if the stored
+session contains a window manager, the restored one will be used, not
+the specified one. As a special feature, ksmserver always starts the
+specified window manager first, which results in a much nicer startup
+sequence (less flashy).
+
+KDE startup sequence
+--------------------
+
+Ksmserver controls the second part of the KDE startup sequence,
+after it gets control from the startkde script, which controls
+the first part of the startup sequence. All code related to startup
+should be in startup.cpp and going down in that source file should
+follow the startup order (but note that this is just a documentation
+which may get outdated, so in case of doubts the source wins ;) ).
+
+The startkde scripts already launches kdeinit, which in turns launches
+KDE daemons like dbus daemon, klauncher and kded. Kded loads autoloaded
+kded modules, i.e. those that have X-KDE-Kded-autoload=true in .desktop
+files. The exact way autoloading works is controlled by X-KDE-Kded-phase=,
+which may be 0, 1 or 2 (the default). Kded phase 0 means the module is
+always loaded by kded, even outside of KDE session. It should used only
+by kded modules which must be always running. Kded phase 1 modules are
+loaded right after kded startup, but only during KDE startup, i.e. it is
+for modules that are always needed by the KDE session. Phase 2 modules
+will be loaded later. [More information about kded modules could be
+found in kdelibs/kded/HOWTO]
+
+Startkde also launches kcminit, which performs initialization done by kcontrol
+modules. There are three kcminit phases, 0, 1 and 2, controlled
+by X-KDE-Init-Phase= in the .desktop file, which defaults to 1. Phase 0 kcminit
+modules should be only those that really need to be run early in the startup
+process (and those should probably actually use kstartupconfig in startkde
+to be done even before kdeinit and daemons). After executing phase 0
+modules kcminit returns and waits.
+
+When ksmserver is launched, the first thing it does is launching
+the window manager, as the WM is necessary before any windows are possibly
+shown. When the WM is ready, ksmserver tells klauncher to perform autostart
+phase 0 ($KDEHOME/share/autostart). There are 3 autostart phases, 0, 1 and 2,
+defined by X-KDE-autostart-phase, defaulting to 2. Phase 0 is reserved only
+for the actual visible base components of KDE, i.e. Plasma, in order to make
+the startup appear visually faster. Plasma uses D-Bus calls suspendStartup()
+and resumeStartup() to make ksmserver stay waiting for autostart phase 0
+until Plasma is ready (note: suspendStartup() needs to be called before
+the application registers with ksmserver, i.e. before KApplication ctor is called).
+
+Next step is telling the waiting kcminit to perform phase 1 - all kcminit
+modules that should be executed before KDE startup is considered done.
+After that ksmserver tells klauncher to perform autostart phase 1,
+i.e. launching normal components of KDE that should be available right
+after KDE startup, and after this session restore is performed,
+i.e. launching all applications that were running during last session
+saving (usually logout).
+
+By this time KDE session is considered to be more or less ready and
+ksmserver does the knotify startkde event (i.e. plays the login sound).
+It also tells klauncher to perform autostart phase 2, kded to load all
+remaining autoload (i.e. kded phase 2) modules, kcminit to execute
+kcminit phase 2 (kcontrol modules that do initialization that can wait,
+like launching daemons) and it itself executes the user Autostart folder.
+
+Technical note: There's a reason why kded modules and items in autostart
+default to the latest phase. Before you explicitly use a different phase,
+read and understand what's above. You should also consider whether something
+really needs to be launched during KDE startup and can't be loaded on-demand
+when really needed. Abusing the phases will result in public spanking
+for making KDE startup slower.
+
+
+Establishing the connection
+---------------------------
+
+As required by the XSMP specification, the session management server
+propagates its network address in the SESSION_MANAGER environment
+variable. Probably not the best way to do it, but it's the way it
+is. All KDE (and plain Qt) applications simply read this variable and
+try to establish a connection to an XSMP server at this address. If
+the variable is undefined, nothing happens.
+
+This means, if you want to start a program that should not participate
+in the session, simply undefine SESSION_MANAGER in your terminal
+window and launch the application. If you want to see an application
+desparately trying to connect to something, try setting it to some
+bogus value.
+
+In addition, ksmserver propagates both its network address and its
+process id in ~/.kde/socket-$HOSTNAME/KSMserver-$DISPLAY. A
+utility function KWorkSpace::propagateSessionManager() reads this
+setting and sets SESSION_MANAGER accordingly, so that child processes
+can pick it up.  The function is called by clients that are started
+outside the session (i.e. before ksmserver is started), but want to
+launch other processes that should participate in the session.
+
+Authorization
+-------------
+
+XSMP is built on top of the Inter Client Exchange (ICE) protocol,
+which comes standard as a part of X11R6 and later.
+Authorization is done using 'iceauth', with MIT-MAGIC-COOKIE as used
+by X. In order to be able to access the session management server, you
+need to be able to read ~/.ICEauthority. For security reasons, we do
+not provide any host-based authorization.
+
+
+Requesting a shutdown
+---------------------
+
+If an application wants to request a shutdown (i.e. a logout), it does
+this via an SmcRequestSaveYourself message to the server. In KDE, a
+utility function KWorkSpace::requestShutDown() does exactly
+this. It's for example called by KDE's panel or by the context menu of
+the desktop.

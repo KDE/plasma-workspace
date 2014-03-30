@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE kcfg SYSTEM
+    "http://www.kde.org/standards/kcfg/1.0/kcfg.xsd">
+<kcfg>
+    <group name="uninstallApplication">
+        <entry name="Url" type="String">
+            <label>The url of the desktop file of the application to remove</label>
+        </entry>
+    </group>
+</kcfg>

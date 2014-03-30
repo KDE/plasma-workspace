@@ -1,0 +1,14 @@
+# Move the logout shortcuts from krunner to ksmserver
+Id=kde4.10
+File=kglobalshortcutsrc
+Group=krunner,ksmserver
+Key=Halt Without Confirmation
+Key=Log Out
+Key=Log Out Without Confirmation
+Key=Reboot Without Confirmation
+Options=overwrite
+
+# remove the kscreenlocker group
+Id=kde4.10-remove-group-kscreenlocker
+File=kglobalshortcutsrc
+RemoveGroup=kscreenlocker

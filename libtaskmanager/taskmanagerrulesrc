@@ -1,0 +1,16 @@
+[Mapping]
+Gimp-2.6=GIMP
+Google-chrome=Google Chrome
+Systemsettings=System Settings
+libreoffice-base=LibreOffice Base
+libreoffice-calc=LibreOffice Calc
+libreoffice-draw=LibreOffice Draw
+libreoffice-writer=LibreOffice Writer
+libreoffice-math=LibreOffice Math
+libreoffice-impress=LibreOffice Impress
+libreoffice-startcenter=LibreOffice
+oracle-ide-boot-Launcher=Oracle SQL Developer
+Dragon=dragonplayer
+[Settings]
+ManualOnly=Wine
+MatchCommandLineFirst=VirtualBox

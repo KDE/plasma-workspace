@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE kcfg SYSTEM
+    "http://www.kde.org/standards/kcfg/1.0/kcfg.xsd">
+<kcfg>
+    <group name="add">
+        <entry name="Name" type="String">
+            <label>The name to give the new activity.</label>
+        </entry>
+    </group>
+    <group name="setCurrent">
+    </group>
+    <group name="stop">
+    </group>
+    <group name="start">
+    </group>
+    <group name="setName">
+        <entry name="Name" type="String">
+            <label>The name to give the activity.</label>
+        </entry>
+    </group>
+    <group name="setIcon">
+        <entry name="Icon" type="String">
+            <label>The name of the icon to give the activity.</label>
+        </entry>
+    </group>
+    <group name="remove">
+        <entry name="Id" type="String">
+            <label>UID of the activity to remove. (optional)</label>
+        </entry>
+    </group>
+    <group name="setEncrypted">
+        <entry name="Encrypted" type="Bool">
+            <label>True to encrypt the activity, false to decrypt</label>
+        </entry>
+    </group>
+    <group name="toggleActivityManager">
+    </group>
+</kcfg>

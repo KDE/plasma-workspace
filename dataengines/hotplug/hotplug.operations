@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE kcfg SYSTEM
+    "http://www.kde.org/standards/kcfg/1.0/kcfg.xsd">
+<kcfg>
+    <group name="invokeAction">
+        <entry name="predicate" type="String">
+            <label>The name of the action to be invoked.</label>
+        </entry>
+    </group>
+</kcfg>

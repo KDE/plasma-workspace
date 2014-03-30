@@ -1,0 +1,10 @@
+/**
+* @mainpage Engines
+*
+* Plasma engines power widgets.
+*
+*/
+
+// DOXYGEN_SET_PROJECT_NAME = Engines
+// DOXYGEN_SET_RECURSIVE = YES
+// vim:ts=4:sw=4:expandtab:filetype=doxygen

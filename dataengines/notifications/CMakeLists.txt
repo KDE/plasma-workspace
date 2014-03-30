@@ -1,0 +1,26 @@
+set(notifications_engine_SRCS
+    notificationsengine.cpp
+    notificationservice.cpp
+    notificationaction.cpp
+)
+
+qt5_add_dbus_adaptor( notifications_engine_SRCS org.freedesktop.Notifications.xml notificationsengine.h  NotificationsEngine )
+
+add_library(plasma_engine_notifications MODULE ${notifications_engine_SRCS})
+
+target_link_libraries(plasma_engine_notifications
+    Qt5::DBus
+    KF5::I18n
+    KF5::IconThemes
+    KF5::KIOCore
+    KF5::Notifications
+    KF5::Plasma
+    KF5::Service
+    KF5::NotifyConfig
+)
+
+kservice_desktop_to_json(plasma_engine_notifications plasma-dataengine-notifications.desktop)
+
+install(TARGETS plasma_engine_notifications DESTINATION ${PLUGIN_INSTALL_DIR}/plasma/dataengine)
+install(FILES plasma-dataengine-notifications.desktop DESTINATION ${SERVICES_INSTALL_DIR} )
+install(FILES notifications.operations DESTINATION ${DATA_INSTALL_DIR}/plasma/services)

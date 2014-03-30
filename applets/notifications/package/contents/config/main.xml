@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kcfg xmlns="http://www.kde.org/standards/kcfg/1.0"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.kde.org/standards/kcfg/1.0
+      http://www.kde.org/standards/kcfg/1.0/kcfg.xsd" >
+  <kcfgfile name=""/>
+
+  <group name="General">
+    <entry name="CustomPosition" type="Point">
+      <label>where the notification popup will be</label>
+      <default>-1,-1</default>
+    </entry>
+    <entry name="ShowNotifications" type="Bool">
+      <label>Show the notifications</label>
+      <default>true</default>
+    </entry>
+    <entry name="ShowJobs" type="Bool">
+      <label>Show the jobs progress</label>
+      <default>true</default>
+    </entry>
+  </group>
+
+</kcfg>

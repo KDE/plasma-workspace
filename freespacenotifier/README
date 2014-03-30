@@ -1,0 +1,3 @@
+This is a small KDED module that monitors free disk space on the home dir
+partition and shows a warning dialog when it runs too low,
+with a configurable limit and the possibility to postpone.

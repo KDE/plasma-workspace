@@ -1,0 +1,20 @@
+{
+   "checksum": "191d94e91bec51787ab07c82e94c396f",
+   "roots": {
+      "bookmark_bar": {
+         "children": [ ],
+         "date_added": "12987182274941985",
+         "date_modified": "12987182320843562",
+         "id": "1",
+         "name": "Bookmarks Bar",
+         "type": "folder"
+      },
+      "other": {
+         "children": [{
+               "date_added": "12987182366305763",
+               "id": "7",
+               "name": "bookmark in secondProfile",
+               "type": "url",
+               "url": "http://secondprofile.com/"
+            } ] } }
+}

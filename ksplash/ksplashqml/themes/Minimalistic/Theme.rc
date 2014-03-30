@@ -1,0 +1,9 @@
+[KSplash Theme: Minimalistic]
+Name = Minimalistic splash screen
+Description = Animated KDE logo on a black background
+Version = 1.0
+Author = Ivan Cukic <ivan.cukic at kde.org>
+Homepage = http://www.kde.org
+
+# Theme behaviour settings.
+Engine = KSplashQML

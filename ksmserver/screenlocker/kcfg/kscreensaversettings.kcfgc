@@ -1,0 +1,4 @@
+File=kscreensaversettings.kcfg
+ClassName=KScreenSaverSettings
+Singleton=true
+Mutators=true

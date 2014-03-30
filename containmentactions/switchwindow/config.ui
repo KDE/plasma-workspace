@@ -1,0 +1,38 @@
+<ui version="4.0" >
+ <class>Config</class>
+ <widget class="QWidget" name="Config" >
+  <property name="geometry" >
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>388</width>
+    <height>108</height>
+   </rect>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout" >
+   <item>
+    <widget class="QRadioButton" name="flatButton" >
+     <property name="text" >
+      <string>Display all windows in one list</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QRadioButton" name="subButton" >
+     <property name="text" >
+      <string>Display a submenu for each desktop</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QRadioButton" name="curButton" >
+     <property name="text" >
+      <string>Display only the current desktop's windows</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

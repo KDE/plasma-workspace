@@ -1,0 +1,25 @@
+
+The screenlocker is statically built into ksmserver, it gets instantiated by the main class KSldApp.
+It provides 3 main things:
+* Shows a fullscreen window (LockWindow class), that spawns into all screens, eats the input events and is black to hide everything.
+* Provides the usual org.freedesktop.ScreenSaver interface
+* starts the process that will actually show the unlock screen
+
+Security considerations.
+* greeter windows are marked with the _KDE_SCREEN_LOCKER atom, no windows of other processes can go over them
+
+* the screen locker is managed by ksmserver: in case of crash of a greeter or an X screen saver, the global lock window that spawns between all monitors will still be there. In case of crash of ksmserver, being the session manager, the whole session will be brought down.
+
+KSldApp may launch one of two possible unlock screen binaries, decided by the PlasmaEnable bool key in kscreensaverrc:
+
+1) Simple
+The one in the greeter subdirectory, built in the kscreenlocker_greet binary.
+It uses a series of QML files organized in a Plasma Package to display the actual unlocker ui, one for each screen in case of multimonitor.
+This greeter can optionally support legacy X screensavers, for doing so creates another fullscreen window per screen on top of the greeter one, and xembends a screensaver window.
+The X screensaver goes away after mouse move and gets back after a minute (or user pressing esc) 
+
+2) Plasma based
+The source lives in kde-workspace/plasma/screensaver/shell/ and the binary is plasma-overlay.
+It instances a Plasma scene, a View and a Containment for each screen in case of multimonitor.
+Uses the same QML package to display the unlocker as kscreenlocker_greet.
+Does not support X screensavers.

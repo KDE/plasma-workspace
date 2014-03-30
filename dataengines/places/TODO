@@ -1,0 +1,2 @@
+* periodic refresh? KFilePlacesModel doesn't broadcast
+  device setups etc. between programs

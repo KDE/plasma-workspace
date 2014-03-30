@@ -1,0 +1,42 @@
+<!DOCTYPE node PUBLIC "-//freedesktop//DTD D-BUS Object Introspection 1.0//EN" "http://www.freedesktop.org/standards/dbus/1.0/introspect.dtd">
+<node>
+  <interface name="org.kde.KSMServerInterface">
+    <method name="logout">
+      <arg type="i" direction="in"/>
+      <arg type="i" direction="in"/>
+      <arg type="i" direction="in"/>
+    </method>
+    <method name="canShutdown">
+      <arg type="b" direction="out"/>
+    </method>
+    <method name="sessionList">
+      <arg type="as" direction="out"/>
+    </method>
+    <method name="currentSession">
+      <arg type="s" direction="out"/>
+    </method>
+    <method name="saveCurrentSession">
+    </method>
+    <method name="saveCurrentSessionAs">
+      <arg type="s" direction="in"/>
+    </method>
+    <method name="suspendStartup">
+      <arg type="s" direction="in"/>
+    </method>
+    <method name="resumeStartup">
+      <arg type="s" direction="in"/>
+    </method>
+    <method name="wmChanged"/>
+    <method name="saveSubSession">
+      <arg type="s" direction="in"/>
+      <arg type="as" direction="in"/>
+      <arg type="as" direction="in"/>
+    </method>
+    <method name="restoreSubSession">
+      <arg type="s" direction="in"/>
+    </method>
+    <signal name="subSessionClosed"/>
+    <signal name="subSessionCloseCanceled"/>
+    <signal name="subSessionOpened"/>
+  </interface>
+</node>

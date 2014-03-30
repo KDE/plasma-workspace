@@ -1,0 +1,26 @@
+plasma_install_package(activitybar org.kde.plasma.activitybar)
+add_subdirectory(icon)
+#    add_subdirectory(lock_logout)
+#    add_subdirectory(panelspacer)
+#
+plasma_install_package(analog-clock org.kde.plasma.analogclock)
+plasma_install_package(mediacontroller org.kde.plasma.mediacontroller)
+plasma_install_package(panelspacer org.kde.plasma.panelspacer)
+
+add_subdirectory(batterymonitor)
+add_subdirectory(devicenotifier)
+plasma_install_package(digital-clock org.kde.plasma.digitalclock)
+plasma_install_package(calendar org.kde.plasma.calendar)
+# add_subdirectory(quicklaunch)
+#
+# if(QT_QTWEBKIT_FOUND)
+#    add_subdirectory(webbrowser)
+# endif()
+#
+if(NOT WIN32)
+#    add_subdirectory(system-monitor)
+#    #notifications
+#    #should compile also on windows? (even if doesn't really make sense)
+    add_subdirectory(notifications)
+    add_subdirectory(systemtray)
+endif()

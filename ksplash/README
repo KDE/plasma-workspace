@@ -1,0 +1,62 @@
+KDE Splash:
+===========
+
+The 'kcm' directory contains the control module for configuring the splashscreen.
+Other directories contain various splash implementations:
+
+- 'none' is no splashscreen
+- 'simple' is a very simple and fast splashscreen showing a plain progressbar
+- 'ksplashx' is a more capable implementation. See its README.
+
+(the KDE3 implementation 'ksplashml' has been removed to /tags/unmaintained)
+
+
+Theme format:
+=============
+
+This is a description of what is shared between the implementations (as needed
+by the configuration module and startkde code deciding which implementation to use).
+Implementations may have their own additions.
+
+Themes are stored in $KDEDIRS/share/apps/ksplash/Themes/ in a directory specifying
+the name of the theme. The directory must contain file 'Theme.rc' describing
+the theme and should contain file 'Preview.png' with a preview image. Other contents
+are implementation-dependent.
+
+
+Theme.rc format:
+================
+
+The format is the usual ini-style format, e.g.:
+
+[KSplash Theme: Simple]
+Name = Simple Splash Screen
+Description = Very Simple Optimized Splash Screen
+Version = 1.0
+Author = Lubos Lunak <l.lunak@kde.org>
+Engine = Simple
+
+The group name is [KSplash Theme: <theme name>]. Name, Description, Version and Author
+are shown in the configuration module. Engine selects which splash implementation
+the theme is for (currently 'None', 'Simple' and 'KSplashX' ). There may be futher
+implementation-dependent data in Theme.rc .
+
+
+Startup states:
+===============
+
+These are ksplash states:
+- initial - at the beginning
+- kded - after kded is running (dbus is ready, etc.)
+- confupdate - after kconf_update (settings updated after upgrade, etc.)
+- kcminit - after configuration setup
+- ksmserver - session manager is started
+- wm - window manager is running
+- desktop - desktop (plasma) is running
+- ready - session is ready (not fully actually, still e.g. restoring applications, but splash goes away)
+
+Note however that these states should not be relied on too much:
+- they do not represent very accurately what is actually going on
+- states may be removed (they'll take 0 time and directly go to another state)
+- states may be added
+- states may be reordered (waiting for a later state and then a sooner state means the sooner state will take 0 time)

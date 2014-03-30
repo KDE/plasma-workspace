@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kcfg xmlns="http://www.kde.org/standards/kcfg/1.0"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.kde.org/standards/kcfg/1.0
+      http://www.kde.org/standards/kcfg/1.0/kcfg.xsd" >
+  <kcfgfile name=""/>
+
+  <group name="General">
+    <entry name="Color" type="Color">
+      <label>Color of the wallpaper</label>
+      <default>#000000</default>
+    </entry>
+    <entry name="Image" type="String">
+      <label>Wallpaper image path or wallpaper name</label>
+      <default></default>
+    </entry>
+    <entry name="FillMode" type="int">
+      <label>Sizing, cropping and positioning of the wallpaper image</label>
+      <default>0</default>
+    </entry>
+    <entry name="width" type="int">
+      <label>Width of the wallpaper on screen</label>
+      <default>0</default>
+    </entry>
+    <entry name="height" type="int">
+      <label>Height of the wallpaper on screen</label>
+      <default>0</default>
+    </entry>
+    <entry name="SlidePaths" type="StringList">
+      <label>Paths used for the slideshow</label>
+      <default></default>
+    </entry>
+    <entry name="SlideInterval" type="int">
+      <label>Interval between slides</label>
+      <default>10</default>
+    </entry>
+  </group>
+
+</kcfg>

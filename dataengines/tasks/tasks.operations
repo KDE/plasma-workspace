@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE kcfg SYSTEM "http://www.kde.org/standards/kcfg/1.0/kcfg.xsd">
+<kcfg>
+    <group name="setMaximized">
+	<entry name="Id" type="Int" />
+        <entry name="maximized" type="bool" />
+    </group>
+    <group name="setMinimized">
+	<entry name="Id" type="Int" />
+        <entry name="minimized" type="bool" />
+    </group>
+    <group name="setShaded">
+	<entry name="Id" type="Int" />
+        <entry name="shaded" type="bool" />
+    </group>
+    <group name="setFullScreen">
+	<entry name="Id" type="Int" />
+        <entry name="fullScreen" type="bool" />
+    </group>
+    <group name="setAlwaysOnTop">
+	<entry name="Id" type="Int" />
+        <entry name="alwaysOnTop" type="bool" />
+    </group>
+    <group name="setKeptBelowOthers">
+	<entry name="Id" type="Int" />
+        <entry name="keptBelowOthers" type="bool" />
+    </group>
+    <group name="toggleMaximized">
+	<entry name="Id" type="Int" />
+    </group>
+    <group name="toggleMinimized">
+	  <entry name="Id" type="Int" />
+    </group>
+    <group name="toggleShaded">
+	<entry name="Id" type="Int" />
+    </group>
+    <group name="toggleFullScreen">
+	<entry name="Id" type="Int" />
+    </group>
+    <group name="toggleAlwaysOnTop">
+	<entry name="Id" type="Int" />
+    </group>
+    <group name="toggleKeptBelowOthers">
+	<entry name="Id" type="Int" />
+    </group>
+    <group name="restore">
+	<entry name="Id" type="Int" />
+    </group>
+    <group name="resize">
+	<entry name="Id" type="Int" />
+    </group>
+    <group name="move">
+	<entry name="Id" type="Int" />
+    </group>
+    <group name="raise">
+	<entry name="Id" type="Int" />
+    </group>
+    <group name="lower">
+	<entry name="Id" type="Int" />
+    </group>
+    <group name="activate">
+	<entry name="Id" type="Int" />
+    </group>
+    <group name="activateRaiseOrIconify">
+	<entry name="Id" type="Int" />
+    </group>
+    <group name="close">
+	<entry name="Id" type="Int" />
+    </group>
+    <group name="toDesktop">
+	<entry name="Id" type="Int" />
+        <entry name="desktop" type="int" />
+    </group>
+    <group name="toCurrentDesktop">
+	<entry name="Id" type="Int" />
+    </group>
+    <group name="publishIconGeometry">
+	<entry name="Id" type="Int" />
+        <entry name="geometry" type="QRect" />
+    </group>
+</kcfg>

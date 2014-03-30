@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE kcfg SYSTEM
+    "http://www.kde.org/standards/kcfg/1.0/kcfg.xsd">
+<kcfg>
+
+    <group name="createEvent">
+        <entry name="startDate" type="KDateTime">
+            <label>Start Date of the Event.  Optional, one only.</label>
+        </entry>
+        <entry name="endDate" type="KDateTime">
+            <label>End Date of the Event.  Optional, one only.</label>
+        </entry>
+        <entry name="transparent" type="Bool">
+            <label>Set if Event is transparent in Free/Busy time.  Optional, one only.</label>
+        </entry>
+
+        <entry name="summary" type="String">
+            <label>Summary of the Incidence.  Optional, one only.</label>
+        </entry>
+        <entry name="description" type="String">
+            <label>Description of the Incidence.  Optional, one only.</label>
+        </entry>
+        <entry name="comments" type="StringList">
+            <label>Comments for the Incidence.  Optional.</label>
+        </entry>
+        <entry name="categories" type="StringList">
+            <label>Categories for the Incidence.  Optional.</label>
+        </entry>
+        <entry name="priority" type="Int">
+            <label>Priority of the Incidence.  Optional, one only, value 0..9.</label>
+        </entry>
+        <entry name="durationSeconds" type="Int">
+            <label>Duration of the Incidence in seconds.  Optional, one only, exclusive with durationDays and endDate.</label>
+        </entry>
+        <entry name="durationDays" type="Int">
+            <label>Duration of the Incidence in days.  Optional, one only, exclusive with durationSeconds and endDate.</label>
+        </entry>
+    </group>
+
+    <group name="createTodo">
+        <entry name="startDate" type="KDateTime">
+            <label>Start Date of the ToDo.  Optional, one only.</label>
+        </entry>
+        <entry name="dueDate" type="KDateTime">
+            <label>Due Date of the ToDo.  Optional, one only, exclusive with durationDays and durationSeconds.</label>
+        </entry>
+        <entry name="percentComplete" type="Int">
+            <label>Percent Complete of the ToDo.  Optional, one only.</label>
+        </entry>
+
+        <entry name="summary" type="String">
+            <label>Summary of the Incidence.  Optional, one only.</label>
+        </entry>
+        <entry name="description" type="String">
+            <label>Description of the Incidence.  Optional, one only.</label>
+        </entry>
+        <entry name="comments" type="StringList">
+            <label>Comments for the Incidence.  Optional.</label>
+        </entry>
+        <entry name="categories" type="StringList">
+            <label>Categories for the Incidence.  Optional.</label>
+        </entry>
+        <entry name="priority" type="Int">
+            <label>Priority of the Incidence.  Optional, one only, value 0..9.</label>
+        </entry>
+        <entry name="durationSeconds" type="Int">
+            <label>Duration of the Incidence in seconds.  Optional, one only, exclusive with durationDays and dueDate.</label>
+        </entry>
+        <entry name="durationDays" type="Int">
+            <label>Duration of the Incidence in days.  Optional, one only, exclusive with durationSeconds and dueDate.</label>
+        </entry>
+    </group>
+
+    <group name="createJournal">
+        <entry name="date" type="KDateTime">
+            <label>Date of the Journal.  Optional, one only.</label>
+        </entry>
+
+        <entry name="summary" type="String">
+            <label>Summary of the Incidence.  Optional, one only.</label>
+        </entry>
+        <entry name="description" type="String">
+            <label>Description of the Incidence.  Optional, one only.</label>
+        </entry>
+        <entry name="comments" type="StringList">
+            <label>Comments for the Incidence.  Optional.</label>
+        </entry>
+        <entry name="categories" type="StringList">
+            <label>Categories for the Incidence.  Optional.</label>
+        </entry>
+    </group>
+
+</kcfg>

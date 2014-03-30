@@ -1,0 +1,7 @@
+# Convert old keys to not have spaces in their names
+Id=KlipperNoSpacesInKeyNames
+File=klipperrc
+Group=General
+Key=No Actions for WM_CLASS,NoActionsForWM_CLASS
+Key=Strip Whitespace before exec,StripWhiteSpace
+Key=Timeout for Action popups (seconds),TimeoutForActionPopups

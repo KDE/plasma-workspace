@@ -1,0 +1,11 @@
+<!DOCTYPE node PUBLIC "-//freedesktop//DTD D-BUS Object Introspection 1.0//EN" "http://www.freedesktop.org/standards/dbus/1.0/introspect.dtd">
+<node>
+  <interface name="org.kde.screensaver">
+    <!-- start in plasma setup mode -->
+    <method name="setupPlasma" />
+    <!-- Re-read configuration -->
+    <method name="configure" />
+    <!-- Private API. Don't use. -->
+    <method name="saverLockReady" />
+  </interface>
+</node>

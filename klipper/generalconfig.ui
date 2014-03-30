@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>GeneralWidget</class>
+ <widget class="QWidget" name="GeneralWidget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>463</width>
+    <height>417</height>
+   </rect>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_2">
+   <item>
+    <widget class="QCheckBox" name="kcfg_KeepClipboardContents">
+     <property name="text">
+      <string>Save clipboard contents on exit</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QCheckBox" name="kcfg_PreventEmptyClipboard">
+     <property name="text">
+      <string>Prevent empty clipboard</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QCheckBox" name="kcfg_IgnoreImages">
+     <property name="text">
+      <string>Ignore images</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="selection_group">
+     <property name="title">
+      <string>Selection and Clipboard</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <widget class="QCheckBox" name="kcfg_IgnoreSelection">
+        <property name="text">
+         <string>Ignore selection</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QCheckBox" name="kcfg_SelectionTextOnly">
+        <property name="text">
+         <string>Text selection only</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QCheckBox" name="kcfg_SyncClipboards">
+        <property name="text">
+         <string>Synchronize contents of the clipboard and the selection</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="timeout_label">
+     <property name="text">
+      <string>Timeout for action popups:</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="KIntSpinBox" name="kcfg_TimeoutForActionPopups">
+     <property name="alignment">
+      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="history_size_label">
+     <property name="text">
+      <string>Clipboard history size:</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="KIntSpinBox" name="kcfg_MaxClipItems">
+     <property name="alignment">
+      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <spacer name="verticalSpacer">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>40</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>KIntSpinBox</class>
+   <extends>QSpinBox</extends>
+   <header>knuminput.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>kcfg_IgnoreSelection</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>kcfg_SelectionTextOnly</receiver>
+   <slot>setDisabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>78</x>
+     <y>213</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>80</x>
+     <y>231</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>kcfg_IgnoreSelection</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>kcfg_SyncClipboards</receiver>
+   <slot>setDisabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>209</x>
+     <y>214</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>207</x>
+     <y>265</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>kcfg_SyncClipboards</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>kcfg_IgnoreSelection</receiver>
+   <slot>setDisabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>300</x>
+     <y>261</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>301</x>
+     <y>210</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

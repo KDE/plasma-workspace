@@ -1,0 +1,88 @@
+<?xml version="1.0" ?>
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+  <!ENTITY policykit-kde "<application>PolicyKit-kde</application>">
+  <!ENTITY policykit     "<application>PolicyKit</application>">
+  <!ENTITY kappname "&policykit-kde;">
+  <!ENTITY policykit-kde-introduction SYSTEM "introduction.docbook">
+  <!ENTITY policykit-kde-howitworks SYSTEM "howitworks.docbook">
+  <!ENTITY policykit-kde-authorization SYSTEM "authorization.docbook">
+  <!ENTITY policykit-kde-authorizationagent SYSTEM "authorizationagent.docbook">
+  <!ENTITY % English "INCLUDE" > <!-- change language only here -->
+  <!ENTITY % addindex "IGNORE">
+]>
+
+<book id="PolicyKit-kde" lang="&language;">
+
+<bookinfo>
+<title>The &policykit-kde; manual</title>
+
+<authorgroup>
+<author>
+<firstname>Daniel</firstname>
+<surname>Nicoletti</surname>
+</author>
+<!-- TRANS:ROLES_OF_TRANSLATORS -->
+</authorgroup>
+
+<copyright>
+<year>2008-2009</year>
+<holder>Daniel Nicoletti</holder>
+</copyright>
+
+<legalnotice>&FDLNotice;</legalnotice>
+
+<date>2009-01-25</date>
+<releaseinfo>0.9.0</releaseinfo>
+
+<abstract>
+<para>&policykit-kde; is a &kde; front end to the PolicyKit
+system that is used to manages authentication.</para>
+<para>&policykit; is a toolkit designed to allow unprivileged processes
+to speak to privileged processes. It does that by centralizing information of
+actions and authorized applications.</para>
+</abstract>
+
+<keywordset>
+<keyword>KDE</keyword>
+<keyword>System</keyword>
+<keyword>Password</keyword>
+<keyword>Admin</keyword>
+<keyword>Authentication</keyword>
+<keyword>polkit</keyword>
+<keyword>policykit</keyword>
+<keyword>policy</keyword>
+<keyword>policies</keyword>
+</keywordset>
+
+</bookinfo>
+
+&policykit-kde-introduction;
+&policykit-kde-howitworks;
+&policykit-kde-authorization;
+&policykit-kde-authorizationagent;
+
+<chapter id="credits">
+<title>Credits and License</title>
+
+<para>
+&policykit-kde;
+</para>
+<para>
+Program copyright 2008-2009 Daniel Nicoletti
+</para>
+<para>
+Documentation copyright 2008-2009 Daniel Nicoletti
+</para>
+
+<!-- TRANS:CREDIT_FOR_TRANSLATORS -->
+&underFDL;               <!-- FDL: do not remove -->
+
+</chapter>
+
+&documentation.index; 
+
+</book>
+
+<!--
+vim:tabstop=2:shiftwidth=2:expandtab 
+-->

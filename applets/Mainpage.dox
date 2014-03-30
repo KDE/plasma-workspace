@@ -1,0 +1,10 @@
+/**
+* @mainpage Applets
+*
+* Plasma Applets
+*
+*/
+
+// DOXYGEN_SET_PROJECT_NAME = Applets
+// DOXYGEN_SET_RECURSIVE = YES
+// vim:ts=4:sw=4:expandtab:filetype=doxygen

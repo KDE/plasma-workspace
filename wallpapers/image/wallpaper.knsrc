@@ -1,0 +1,6 @@
+[KNewStuff3]
+ProvidersUrl=http://download.kde.org/ocs/providers.xml
+Categories=KDE Wallpaper 800x600,KDE Wallpaper 1024x768,KDE Wallpaper 1280x1024,KDE Wallpaper 1440x900,KDE Wallpaper 1600x1200,KDE Wallpaper 1680x1050,KDE Wallpaper 1920x1200,KDE Wallpaper 2560x1600,KDE Wallpaper (other),KDE Wallpaper (SVG)
+StandardResource=wallpaper
+Uncompress=archive
+

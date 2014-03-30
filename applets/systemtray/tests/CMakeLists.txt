@@ -1,0 +1,2 @@
+plasma_install_package(systrayplasmoidtest org.kde.systrayplasmoidtest)
+add_subdirectory(statusnotifier)
