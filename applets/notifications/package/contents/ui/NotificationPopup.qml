@@ -97,7 +97,7 @@ PlasmaCore.Dialog {
 
         PlasmaExtras.Heading {
             id: titleLabel
-            level: 3
+            level: 4
             height: theme.mSize(theme.defaultFont).height
             elide: Text.ElideRight
             anchors {
