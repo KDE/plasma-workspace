@@ -104,7 +104,7 @@ PlasmaCore.Dialog {
                 left: appIconItem.right
                 //right: closeButton.left
                 top: parent.top
-                right: actionsRepeater.count < 3 ? parent.right : actionsColumn.left
+                right: actionsRepeater.count < 3 ? closeButton.left : actionsColumn.left
                 rightMargin: units.largeSpacing / 2 //settingsButton.visible ? settingsButton.width + closeButton.width : closeButton.width
                 leftMargin: units.largeSpacing / 2
                 topMargin: units.largeSpacing / 2
