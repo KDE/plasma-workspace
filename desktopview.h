@@ -45,6 +45,9 @@ public:
     void setDashboardShown(bool shown);
     bool isDashboardShown() const;
 
+protected:
+    bool event(QEvent *e);
+
 protected Q_SLOTS:
     /**
      * It will be called when the configuration is requested

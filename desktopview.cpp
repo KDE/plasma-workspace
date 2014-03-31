@@ -42,6 +42,16 @@ DesktopView::DesktopView(ShellCorona *corona, QScreen *screen)
     engine()->rootContext()->setContextProperty("desktop", this);
     setSource(QUrl::fromLocalFile(corona->package().filePath("views", "Desktop.qml")));
 
+    connect(this, &QWindow::xChanged, [=]() {
+        if (m_fillScreen) {
+            setGeometry(this->screen()->geometry());
+        }
+    });
+    connect(this, &QWindow::yChanged, [=]() {
+        if (m_fillScreen) {
+            setGeometry(this->screen()->geometry());
+        }
+    });
 }
 
 DesktopView::~DesktopView()
@@ -84,6 +94,8 @@ void DesktopView::setFillScreen(bool fillScreen)
 
     if (m_fillScreen) {
         setGeometry(screen()->geometry());
+        setMinimumSize(screen()->geometry().size());
+        setMaximumSize(screen()->geometry().size());
         connect(screen(), &QScreen::geometryChanged, this, static_cast<void (QWindow::*)(const QRect&)>(&QWindow::setGeometry));
     } else {
         disconnect(screen(), &QScreen::geometryChanged, this, static_cast<void (QWindow::*)(const QRect&)>(&QWindow::setGeometry));
@@ -99,7 +111,8 @@ void DesktopView::setDashboardShown(bool shown)
             KWindowSystem::setType(winId(), NET::Normal);
             KWindowSystem::clearState(winId(), NET::SkipTaskbar|NET::KeepBelow);
         }
-        setFlags(Qt::CustomizeWindowHint | Qt::WindowTitleHint);
+        setFlags(Qt::FramelessWindowHint | Qt::CustomizeWindowHint);
+
         raise();
         KWindowSystem::raiseWindow(winId());
         KWindowSystem::forceActiveWindow(winId());
@@ -123,6 +136,17 @@ void DesktopView::setDashboardShown(bool shown)
     }
 
     m_dashboardShown = shown;
+}
+
+bool DesktopView::event(QEvent *e)
+{
+    if (e->type() == QEvent::Close) {
+        //prevent ALT+F4 from killing the shell
+        e->ignore();
+        return true;
+    }
+
+    return PlasmaQuick::View::event(e);
 }
 
 bool DesktopView::isDashboardShown() const
