@@ -137,11 +137,6 @@ MouseEventListener {
                     }
                 }
 
-                Connections {
-                    target: jobsLoader.item
-                    onMessage: console.log(msg)
-                }
-
                 Loader {
                     id: notificationsLoader
                     anchors {
