@@ -45,6 +45,7 @@ PlasmaCore.Dialog {
         bodyLabel.text = notification.body
         appIconItem.icon = notification.appIcon
         actionsRepeater.model = notification.actions
+        imageItem.image = notification.image
     }
 
     Behavior on y {
@@ -85,6 +86,13 @@ PlasmaCore.Dialog {
                 rightMargin: units.largeSpacing / 2
                 bottomMargin: units.largeSpacing / 2
             }
+        }
+
+        QImageItem {
+            id: imageItem
+            anchors.fill: appIconItem
+            smooth: true
+            visible: nativeWidth > 0
         }
 
         PlasmaExtras.Heading {
