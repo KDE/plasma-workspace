@@ -39,7 +39,7 @@ class PanelView : public PlasmaQuick::View
     Q_PROPERTY(int maximumLength READ maximumLength WRITE setMaximumLength NOTIFY maximumLengthChanged)
     Q_PROPERTY(int minimumLength READ minimumLength WRITE setMinimumLength NOTIFY minimumLengthChanged)
     Q_PROPERTY(int distance READ distance WRITE setDistance NOTIFY distanceChanged)
-    Q_PROPERTY(QScreen *screen READ screen WRITE setScreen NOTIFY screenChanged)
+    Q_PROPERTY(QScreen *screen READ screen WRITE setScreen NOTIFY screenChangedProxy)
     Q_PROPERTY(VisibilityMode visibilityMode READ visibilityMode WRITE setVisibilityMode NOTIFY visibilityModeChanged)
 
 public:
@@ -97,7 +97,9 @@ Q_SIGNALS:
     void maximumLengthChanged();
     void minimumLengthChanged();
     void distanceChanged();
-    void screenChanged(QScreen *screen);
+
+    //QWindow does not have a property for screen. Adding this property requires re-implementing the signal
+    void screenChangedProxy(QScreen *screen);
     void visibilityModeChanged();
 
 protected Q_SLOTS:

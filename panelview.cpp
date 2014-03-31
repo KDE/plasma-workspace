@@ -82,6 +82,8 @@ PanelView::PanelView(ShellCorona *corona, QWindow *parent)
 
     //Screen management
     connect(this, &QWindow::screenChanged,
+            this, &PanelView::screenChangedProxy);
+    connect(this, &QWindow::screenChanged,
             this, &PanelView::positionPanel);
     connect(screen(), &QScreen::geometryChanged,
             this, &PanelView::positionPanel);
