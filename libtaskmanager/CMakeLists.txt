@@ -93,7 +93,8 @@ ecm_configure_package_config_file(LibTaskManagerConfig.cmake.in
     "${CMAKE_CURRENT_BINARY_DIR}/LibTaskManagerConfig.cmake"
     INSTALL_DESTINATION ${CMAKECONFIG_INSTALL_DIR})
 
-install(FILES ${CMAKE_CURRENT_BINARY_DIR}/LibTaskManagerConfigVersion.cmake
+install(FILES ${CMAKE_CURRENT_BINARY_DIR}/LibTaskManagerConfig.cmake
+              ${CMAKE_CURRENT_BINARY_DIR}/LibTaskManagerConfigVersion.cmake
         DESTINATION ${CMAKECONFIG_INSTALL_DIR})
 
 install(EXPORT libtaskmanagerLibraryTargets

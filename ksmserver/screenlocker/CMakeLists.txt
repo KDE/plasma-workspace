@@ -42,6 +42,9 @@ ecm_configure_package_config_file(ScreenSaverDBusInterfaceConfig.cmake.in
     ${CMAKE_CURRENT_BINARY_DIR}/ScreenSaverDBusInterfaceConfig.cmake
     INSTALL_DESTINATION ${CMAKECONFIG_INSTALL_DIR})
 
+install(FILES
+        ${CMAKE_CURRENT_BINARY_DIR}/ScreenSaverDBusInterfaceConfig.cmake
+        DESTINATION ${CMAKECONFIG_INSTALL_DIR})
 install(FILES kscreenlocker.notifyrc  DESTINATION ${DATA_INSTALL_DIR}/ksmserver/ RENAME ksmserver.notifyrc)
 install(FILES ${screensaver_dbusXML}
         DESTINATION ${DBUS_INTERFACES_INSTALL_DIR}
