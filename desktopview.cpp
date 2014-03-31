@@ -41,11 +41,11 @@ DesktopView::DesktopView(ShellCorona *corona, QScreen *screen)
     setScreen(screen);
     engine()->rootContext()->setContextProperty("desktop", this);
     setSource(QUrl::fromLocalFile(corona->package().filePath("views", "Desktop.qml")));
+
 }
 
 DesktopView::~DesktopView()
 {
-    
 }
 
 bool DesktopView::stayBehind() const
@@ -99,6 +99,7 @@ void DesktopView::setDashboardShown(bool shown)
             KWindowSystem::setType(winId(), NET::Normal);
             KWindowSystem::clearState(winId(), NET::SkipTaskbar|NET::KeepBelow);
         }
+        setFlags(Qt::CustomizeWindowHint | Qt::WindowTitleHint);
         raise();
         KWindowSystem::raiseWindow(winId());
         KWindowSystem::forceActiveWindow(winId());
