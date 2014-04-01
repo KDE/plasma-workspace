@@ -195,8 +195,8 @@ Item {
 
 
     Plasmoid.fullRepresentation: MouseArea {
-        Layout.minimumWidth: units.gridUnit * 8
-        Layout.minimumHeight: units.gridUnit * 10
+        Layout.minimumWidth: units.gridUnit * 18
+        Layout.minimumHeight: units.gridUnit * 22
 
         hoverEnabled: true
 
