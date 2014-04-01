@@ -39,6 +39,7 @@ MouseArea {
     property bool constrained: formFactor == PlasmaCore.Types.Vertical || formFactor == PlasmaCore.Types.Horizontal
     hoverEnabled: true
     onClicked: Qt.openUrlExternally(plasmoid.configuration.url);
+    Plasmoid.preferredRepresentation: Plasmoid.fullRepresentation
 
     Component.onCompleted: {
         plasmoid.backgroundHints = 2;
