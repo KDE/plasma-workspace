@@ -12,12 +12,8 @@ find_package(KF5 CONFIG REQUIRED COMPONENTS
                     Plasma DocTools Runner JsEmbed NotifyConfig Su NewStuff
                     IdleTime ThreadWeaver Declarative PlasmaQuick KDE4Support)
 
-if(${CMAKE_SOURCE_DIR} STREQUAL ${CMAKE_CURRENT_SOURCE_DIR}) #TODO: remove after splitting
-    find_package(KF5 CONFIG REQUIRED COMPONENTS SysGuard)
-    find_package(KWinDBusInterface CONFIG REQUIRED)
-else()
-    set(KWIN_INTERFACE  ${CMAKE_SOURCE_DIR}/kwin/org.kde.KWin.xml)
-endif()
+find_package(KF5 CONFIG REQUIRED COMPONENTS SysGuard)
+find_package(KWinDBusInterface CONFIG REQUIRED)
 
 include(KDEInstallDirs)
 include(KDECMakeSettings)
@@ -129,6 +125,4 @@ add_subdirectory(applets)
 add_subdirectory(dataengines)
 add_subdirectory(wallpapers)
 
-if(${CMAKE_SOURCE_DIR} STREQUAL ${CMAKE_CURRENT_SOURCE_DIR})
-    feature_summary(WHAT ALL INCLUDE_QUIET_PACKAGES FATAL_ON_MISSING_REQUIRED_PACKAGES)
-endif()
+feature_summary(WHAT ALL INCLUDE_QUIET_PACKAGES FATAL_ON_MISSING_REQUIRED_PACKAGES)
