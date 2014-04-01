@@ -20,6 +20,7 @@
  */
 
 import QtQuick 2.0
+import org.kde.plasma.plasmoid 2.0
 import QtQuick.Layouts 1.1
 
 import org.kde.plasma.core 2.0 as PlasmaCore
@@ -27,8 +28,8 @@ import "plasmapackage:/code/logic.js" as Logic
 
 Item {
     id: analogclock
-    Layout.minimumWidth: 20
-    Layout.minimumHeight: 20
+    Layout.minimumWidth: plasmoid.formFactor != PlasmaCore.Types.Vertical ? analogclock.height : units.gridUnit
+    Layout.minimumHeight: plasmoid.formFactor == PlasmaCore.Types.Vertical ? analogclock.width : units.gridUnit
 
     property int hours
     property int minutes
@@ -36,6 +37,8 @@ Item {
     property bool showSecondsHand: plasmoid.configuration.showSecondHand
     property bool showTimezone: plasmoid.configuration.showTimezoneString
 
+    Plasmoid.backgroundHints: "NoBackground";
+    Plasmoid.preferredRepresentation: Plasmoid.fullRepresentation
 
     PlasmaCore.DataSource {
         id: dataSource
@@ -174,10 +177,5 @@ Item {
 //             }
 //             calendar.visible = !calendar.visible;
 //         }
-    }
-
-    Component.onCompleted: {
-        plasmoid.backgroundHints = "NoBackground";
-
     }
 }
