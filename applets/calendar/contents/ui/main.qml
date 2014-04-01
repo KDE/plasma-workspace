@@ -16,6 +16,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 import QtQuick 2.0
+import QtQuick.Layouts 1.1
 import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
@@ -23,11 +24,9 @@ import org.kde.plasma.calendar 2.0
 
 Item {
     id: main
-    //     Layout.minimumWidth: units.gridUnit * 90
-    //     Layout.minimumHeight: units.gridUnit * 30
 
-//     Layout.minimumWidth: 500
-//     Layout.minimumHeight: 500
+    Layout.minimumWidth: units.gridUnit * 20
+    Layout.minimumHeight: units.gridUnit * 20
     property int formFactor: plasmoid.formFactor
 
 //     PlasmaCore.DataSource {
