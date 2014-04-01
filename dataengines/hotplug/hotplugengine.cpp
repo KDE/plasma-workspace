@@ -69,7 +69,6 @@ void HotplugEngine::init()
     p |= Solid::Predicate(Solid::DeviceInterface::StorageVolume);
     p |= Solid::Predicate(Solid::DeviceInterface::OpticalDrive);
     p |= Solid::Predicate(Solid::DeviceInterface::PortableMediaPlayer);
-    p |= Solid::Predicate(Solid::DeviceInterface::SmartCardReader);
     p |= Solid::Predicate(Solid::DeviceInterface::Camera);
     QList<Solid::Device> devices = Solid::Device::listFromQuery(p);
     foreach (const Solid::Device &dev, devices) {
