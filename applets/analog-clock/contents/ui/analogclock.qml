@@ -21,6 +21,7 @@
 
 import QtQuick 2.0
 import org.kde.plasma.plasmoid 2.0
+import org.kde.plasma.calendar 2.0 as PlasmaCalendar
 import QtQuick.Layouts 1.1
 
 import org.kde.plasma.core 2.0 as PlasmaCore
@@ -38,144 +39,130 @@ Item {
     property bool showTimezone: plasmoid.configuration.showTimezoneString
 
     Plasmoid.backgroundHints: "NoBackground";
-    Plasmoid.preferredRepresentation: Plasmoid.fullRepresentation
+    Plasmoid.preferredRepresentation: Plasmoid.compactRepresentation
 
-    PlasmaCore.DataSource {
-        id: dataSource
-        engine: "time"
-        connectedSources: "Local"
-        interval: 1000
-        onDataChanged: {
-            var date = new Date(data["Local"]["Time"]);
-            hours = date.getHours();
-            minutes = date.getMinutes();
-            seconds = date.getSeconds();
-            timezoneText.text = data["Local"]["Timezone"];
+    Plasmoid.compactRepresentation: Item {
+        MouseArea {
+            anchors.fill: parent
+            onClicked: plasmoid.expanded = !plasmoid.expanded
         }
-    }
+        PlasmaCore.DataSource {
+            id: dataSource
+            engine: "time"
+            connectedSources: "Local"
+            interval: 1000
+            onDataChanged: {
+                var date = new Date(data["Local"]["Time"]);
+                hours = date.getHours();
+                minutes = date.getMinutes();
+                seconds = date.getSeconds();
+                timezoneText.text = data["Local"]["Timezone"];
+            }
+        }
 
-    PlasmaCore.Svg {
-        id: clockSvg
-        imagePath: "widgets/clock"
-    }
 
-    Item {
-        id: clock
-        width: parent.width
-        anchors {
-            top: parent.top
-            bottom: showTimezone ? timezoneBg.top : parent.bottom
+        PlasmaCore.Svg {
+            id: clockSvg
+            imagePath: "widgets/clock"
+        }
+
+        Item {
+            id: clock
+            width: parent.width
+            anchors {
+                top: parent.top
+                bottom: showTimezone ? timezoneBg.top : parent.bottom
+            }
+
+            PlasmaCore.SvgItem {
+                id: face
+                anchors.centerIn: parent
+                width: Math.min(parent.width, parent.height)
+                height: Math.min(parent.width, parent.height)
+                svg: clockSvg
+                elementId: "ClockFace"
+            }
+
+            PlasmaCore.SvgItem {
+                anchors.fill: face
+                svg: clockSvg
+                elementId: "Glass"
+                width: naturalSize.width * face.width / face.naturalSize.width
+                height: naturalSize.height * face.width / face.naturalSize.width
+            }
+        }
+
+        Hand {
+            anchors.topMargin: 3
+            elementId: "HourHandShdow"
+            rotation: 180 + hours * 30 + (minutes/2)
+            svgScale: face.width / face.naturalSize.width
+
+        }
+        Hand {
+            elementId: "HourHand"
+            rotation: 180 + hours * 30 + (minutes/2)
+            svgScale: face.width / face.naturalSize.width
+        }
+
+        Hand {
+            anchors.topMargin: 3
+            elementId: "MinuteHandShadow"
+            rotation: 180 + minutes * 6
+            svgScale: face.width / face.naturalSize.width
+        }
+        Hand {
+            elementId: "MinuteHand"
+            rotation: 180 + minutes * 6
+            svgScale: face.width / face.naturalSize.width
+        }
+
+        Hand {
+            anchors.topMargin: 3
+            elementId: "SecondHandShadow"
+            rotation: 180 + seconds * 6
+            visible: showSecondsHand
+            svgScale: face.width / face.naturalSize.width
+        }
+        Hand {
+            elementId: "SecondHand"
+            rotation: 180 + seconds * 6
+            visible: showSecondsHand
+            svgScale: face.width / face.naturalSize.width
         }
 
         PlasmaCore.SvgItem {
-            id: face
-            anchors.centerIn: parent
-            width: Math.min(parent.width, parent.height)
-            height: Math.min(parent.width, parent.height)
-            svg: clockSvg
-            elementId: "ClockFace"
-        }
-
-        PlasmaCore.SvgItem {
-            anchors.fill: face
-            svg: clockSvg
-            elementId: "Glass"
+            id: center
             width: naturalSize.width * face.width / face.naturalSize.width
             height: naturalSize.height * face.width / face.naturalSize.width
+            anchors.centerIn: clock
+            svg: clockSvg
+            elementId: "HandCenterScrew"
+            z: 1000
+        }
+
+        PlasmaCore.FrameSvgItem {
+            id: timezoneBg
+            anchors {
+                horizontalCenter: parent.horizontalCenter
+                bottom: parent.bottom
+                bottomMargin: 10
+            }
+            imagePath: "widgets/background"
+            width: childrenRect.width + margins.right + margins.left
+            height: childrenRect.height + margins.top + margins.bottom
+            anchors.centerIn: timezoneText
+            visible: showTimezone
+            Text {
+                id: timezoneText
+                x: timezoneBg.margins.left
+                y: timezoneBg.margins.top
+            }
         }
     }
-
-    Hand {
-        anchors.topMargin: 3
-        elementId: "HourHandShdow"
-        rotation: 180 + hours * 30 + (minutes/2)
-        svgScale: face.width / face.naturalSize.width
-
-    }
-    Hand {
-        elementId: "HourHand"
-        rotation: 180 + hours * 30 + (minutes/2)
-        svgScale: face.width / face.naturalSize.width
+    Plasmoid.fullRepresentation: PlasmaCalendar.MonthView {
+        Layout.minimumWidth: units.gridUnit * 20
+        Layout.minimumHeight: units.gridUnit * 20
     }
 
-    Hand {
-        anchors.topMargin: 3
-        elementId: "MinuteHandShadow"
-        rotation: 180 + minutes * 6
-        svgScale: face.width / face.naturalSize.width
-    }
-    Hand {
-        elementId: "MinuteHand"
-        rotation: 180 + minutes * 6
-        svgScale: face.width / face.naturalSize.width
-    }
-
-    Hand {
-        anchors.topMargin: 3
-        elementId: "SecondHandShadow"
-        rotation: 180 + seconds * 6
-        visible: showSecondsHand
-        svgScale: face.width / face.naturalSize.width
-    }
-    Hand {
-        elementId: "SecondHand"
-        rotation: 180 + seconds * 6
-        visible: showSecondsHand
-        svgScale: face.width / face.naturalSize.width
-    }
-
-    PlasmaCore.SvgItem {
-        id: center
-        width: naturalSize.width * face.width / face.naturalSize.width
-        height: naturalSize.height * face.width / face.naturalSize.width
-        anchors.centerIn: clock
-        svg: clockSvg
-        elementId: "HandCenterScrew"
-        z: 1000
-    }
-
-    PlasmaCore.FrameSvgItem {
-        id: timezoneBg
-        anchors {
-            horizontalCenter: parent.horizontalCenter
-            bottom: parent.bottom
-            bottomMargin: 10
-        }
-        imagePath: "widgets/background"
-        width: childrenRect.width + margins.right + margins.left
-        height: childrenRect.height + margins.top + margins.bottom
-        anchors.centerIn: timezoneText
-        visible: showTimezone
-        Text {
-            id: timezoneText
-            x: timezoneBg.margins.left
-            y: timezoneBg.margins.top
-        }
-    }
-        
-
-    PlasmaCore.Dialog {
-        id: calendar
-        flags: Qt.Popup
-        //FIXME Temporarily disabled until Calendar becomes available
-//         mainItem: Calendar {
-//             firstDayOfMonth: 4
-//             today: "2011-12-07"
-//             year: Logic.getYear(today)
-//             month: Logic.getMonth(today)
-//             day: Logic.getDate(today)
-//         }
-    }
-
-    MouseArea {
-        anchors.fill: parent
-//         onClicked: {
-//             if (!calendar.visible) {
-//                 var pos = calendar.popupPosition(analogclock, Qt.AlignCenter);
-//                 calendar.x = pos.x;
-//                 calendar.y = pos.y;
-//             }
-//             calendar.visible = !calendar.visible;
-//         }
-    }
 }
