@@ -82,7 +82,7 @@ Item {
     Greeter {
         id: unlockUI
 
-//         switchUserEnabled: userSessionsUI.switchUserSupported
+        switchUserEnabled: userSessionsUI.switchUserSupported
 
         Connections {
             onAccepted: lockScreen.unlockRequested()
@@ -96,14 +96,14 @@ Item {
     }
 
     // TODO: loader
-//     SessionSwitching {
-//         id: userSessionsUI
-//         visible: false
-//
-//         Connections {
-//             onCancel: returnToLogin()
-//             onActivateSession: returnToLogin()
-//             onStartNewSession: returnToLogin()
-//         }
-//     }
+    SessionSwitching {
+        id: userSessionsUI
+        visible: false
+
+        Connections {
+            onCancel: returnToLogin()
+            onActivateSession: returnToLogin()
+            onStartNewSession: returnToLogin()
+        }
+    }
 }
