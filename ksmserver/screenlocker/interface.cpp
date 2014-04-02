@@ -48,6 +48,7 @@ Interface::Interface(KSldApp *parent)
     (void) new KScreenSaverAdaptor( this );
     QDBusConnection::sessionBus().registerService(QLatin1String("org.kde.screensaver"));
     QDBusConnection::sessionBus().registerObject(QLatin1String("/ScreenSaver"), this);
+    QDBusConnection::sessionBus().registerObject(QLatin1String("/org/freedesktop/ScreenSaver"), this);
     connect(m_daemon, SIGNAL(locked()), SLOT(slotLocked()));
     connect(m_daemon, SIGNAL(unlocked()), SLOT(slotUnlocked()));
 
