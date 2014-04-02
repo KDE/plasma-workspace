@@ -320,20 +320,87 @@ int ShellCorona::numScreens() const
 
 QRect ShellCorona::screenGeometry(int id) const
 {
-    return QApplication::desktop()->screenGeometry(id);
+    DesktopView *view = 0;
+    foreach (DesktopView *v, d->views) {
+        if (v->containment() && v->containment()->screen() == id) {
+            view = v;
+            break;
+        }
+    }
+
+    if (view) {
+        return view->geometry();
+    } else {
+        return QApplication::desktop()->screenGeometry(id);
+    }
 }
 
 QRegion ShellCorona::availableScreenRegion(int id) const
 {
-    return QApplication::desktop()->availableGeometry(id);
+    DesktopView *view = 0;
+    foreach (DesktopView *v, d->views) {
+        if (v->containment() && v->containment()->screen() == id) {
+            view = v;
+            break;
+        }
+    }
+
+    if (view) {
+        QRegion r = view->geometry();
+        foreach (PanelView *v, d->panelViews.values()) {
+            if (v->containment()->screen() == id && v->visibilityMode() != PanelView::AutoHide) {
+                r -= v->geometry();
+            }
+        }
+        return r;
+    } else {
+        return QApplication::desktop()->availableGeometry(id);
+    }
 }
 
 QRect ShellCorona::availableScreenRect(int id) const
 {
-    //return QApplication::desktop()->availableGeometry(id);
-    //FIXME: revert back to this^ after https://codereview.qt-project.org/#change,80606 has been merged
-    //       and released (and we depend on it)
-    return KWindowSystem::workArea(id).intersect(QApplication::desktop()->availableGeometry(id));
+    if (id < 0) {
+        id = 0;
+    }
+
+    QRect r(screenGeometry(id));
+
+    foreach (PanelView *view, d->panelViews.values()) {
+        if (view->containment()->screen() == id && view->visibilityMode() != PanelView::AutoHide) {
+            QRect v = view->geometry();
+            switch (view->location()) {
+                case Plasma::Types::TopEdge:
+                    if (v.bottom() > r.top()) {
+                        r.setTop(v.bottom());
+                    }
+                    break;
+
+                case Plasma::Types::BottomEdge:
+                    if (v.top() < r.bottom()) {
+                        r.setBottom(v.top());
+                    }
+                    break;
+
+                case Plasma::Types::LeftEdge:
+                    if (v.right() > r.left()) {
+                        r.setLeft(v.right());
+                    }
+                    break;
+
+                case Plasma::Types::RightEdge:
+                    if (v.left() < r.right()) {
+                        r.setRight(v.left());
+                    }
+                    break;
+
+                default:
+                    break;
+            }
+        }
+    }
+
+    return r;
 }
 
 PanelView *ShellCorona::panelView(Plasma::Containment *containment) const
@@ -448,9 +515,13 @@ void ShellCorona::createWaitingPanels()
         connect(cont, &PanelView::destroyed,
                 [=](QObject *obj) {
                     d->panelViews.remove(cont);
+                    emit availableScreenRectChanged();
+                    emit availableScreenRegionChanged();
                 });
     }
     d->waitingPanels.clear();
+    emit availableScreenRectChanged();
+    emit availableScreenRegionChanged();
 }
 
 void ShellCorona::handleContainmentAdded(Plasma::Containment* c)
