@@ -47,7 +47,7 @@ SwitchWindow::~SwitchWindow()
 {
 }
 
-void SwitchWindow::init(const KConfigGroup &config)
+void SwitchWindow::restore(const KConfigGroup &config)
 {
     m_mode = (MenuMode)config.readEntry("mode", (int)AllFlat);
 }
@@ -124,7 +124,9 @@ void SwitchWindow::makeMenu()
     if (m_mode == CurrentDesktop) {
         int currentDesktop = KWindowSystem::currentDesktop();
 
-        m_actions << new QAction(i18n("Windows"), this);
+        QAction *a = new QAction(i18n("Windows"), this);
+        a->setSeparator(true);
+        m_actions << a;
         m_actions << desktops.values(currentDesktop);
         m_actions << desktops.values(-1);
 

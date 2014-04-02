@@ -44,7 +44,7 @@ class SwitchWindow : public Plasma::ContainmentActions
         SwitchWindow(QObject* parent, const QVariantList& args);
         ~SwitchWindow();
 
-        void init(const KConfigGroup &config);
+        void restore(const KConfigGroup &config);
         QWidget* createConfigurationInterface(QWidget* parent);
         void configurationAccepted();
         void save(KConfigGroup &config);
