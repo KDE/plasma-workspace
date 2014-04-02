@@ -104,7 +104,10 @@ Item {
 
         level: 1
         opacity: root.expandedTask != null ? 0 : 0.8
-        Behavior on opacity { NumberAnimation {} }
+        Behavior on opacity {
+            NumberAnimation {}
+            enabled: expandedItemContainer.animate
+        }
 
         anchors {
             top: parent.top
@@ -121,7 +124,10 @@ Item {
 
         level: 1
         opacity: root.expandedTask != null ? 0.8 : 0
-        Behavior on opacity { NumberAnimation {} }
+        Behavior on opacity {
+            NumberAnimation {}
+            enabled: expandedItemContainer.animate
+        }
 
         anchors {
             top: parent.top
