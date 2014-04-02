@@ -22,8 +22,10 @@
 
 #include <plasma/containmentactions.h>
 
+#include <kactivities/consumer.h>
+#include <kactivities/controller.h>
+
 class QAction;
-class KMenu;
 
 class SwitchActivity : public Plasma::ContainmentActions
 {
@@ -32,9 +34,6 @@ class SwitchActivity : public Plasma::ContainmentActions
         SwitchActivity(QObject* parent, const QVariantList& args);
         ~SwitchActivity();
 
-        void contextEvent(QEvent *event);
-        void contextEvent(QGraphicsSceneMouseEvent *event);
-        void wheelEvent(QGraphicsSceneWheelEvent *event);
         QList<QAction*> contextualActions();
 
     private Q_SLOTS:
@@ -42,11 +41,9 @@ class SwitchActivity : public Plasma::ContainmentActions
         void makeMenu();
 
     private:
-        KMenu *m_menu;
-        QAction *m_action;
-        bool m_useNepomuk;
+        QList<QAction *>m_actions;
+        KActivities::Consumer m_consumer;
+        KActivities::Controller m_controller;
 };
-
-K_EXPORT_PLASMA_CONTAINMENTACTIONS(switchactivity, SwitchActivity)
 
 #endif

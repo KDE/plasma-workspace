@@ -1,6 +1,6 @@
 add_subdirectory(contextmenu)
 add_subdirectory(switchdesktop)
-# add_subdirectory(switchactivity)
+add_subdirectory(switchactivity)
 add_subdirectory(paste)
 add_subdirectory(switchwindow)
 add_subdirectory(applauncher)
