@@ -60,6 +60,7 @@ Plasma::Service* PackagekitEngine::serviceForSource(const QString& source)
     return Plasma::DataEngine::serviceForSource(source);
 }
 
-K_EXPORT_PLASMA_DATAENGINE(packagekit, PackagekitEngine)
+K_EXPORT_PLASMA_DATAENGINE_WITH_JSON(packagekit, PackagekitEngine, "plasma-dataengine-packagekit.json")
+
 
 #include "packagekitengine.moc"
