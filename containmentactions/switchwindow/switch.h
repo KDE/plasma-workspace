@@ -23,9 +23,19 @@
 #include "ui_config.h"
 #include <plasma/containmentactions.h>
 
+// libtaskmanager
+#include <taskmanager.h>
+#include <tasksmodel.h>
+#include <groupmanager.h>
+
 class QAction;
 class QTimer;
-class KMenu;
+
+namespace TaskManager
+{
+    class Startup;
+    class Task;
+} // namespace TaskManager
 
 class SwitchWindow : public Plasma::ContainmentActions
 {
@@ -39,9 +49,9 @@ class SwitchWindow : public Plasma::ContainmentActions
         void configurationAccepted();
         void save(KConfigGroup &config);
 
-        void contextEvent(QEvent *event);
-        void contextEvent(QGraphicsSceneMouseEvent *event);
-        void wheelEvent(QGraphicsSceneWheelEvent *event);
+        void performNextAction();
+        void performPreviousAction();
+        void doSwitch(bool up);
         QList<QAction*> contextualActions();
 
     private:
@@ -58,14 +68,13 @@ class SwitchWindow : public Plasma::ContainmentActions
             CurrentDesktop
         };
 
-        KMenu *m_menu;
-        QAction *m_action;
+        QList <QAction *> m_actions;
+        TaskManager::GroupManager *m_groupManager;
+        TaskManager::TasksModel *m_tasksModel;
         Ui::Config m_ui;
         MenuMode m_mode;
         QTimer *m_clearOrderTimer;
         QList<WId> m_windowsOrder;
 };
-
-K_EXPORT_PLASMA_CONTAINMENTACTIONS(switchwindow, SwitchWindow)
 
 #endif

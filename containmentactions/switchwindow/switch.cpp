@@ -24,28 +24,27 @@
 #include <QTimer>
 
 #include <QDebug>
-#include <KMenu>
+#include <QMenu>
 #include <KWindowSystem>
+
+#include <taskgroup.h>
 
 #include <Plasma/DataEngine>
 #include <Plasma/Service>
 
 SwitchWindow::SwitchWindow(QObject *parent, const QVariantList &args)
     : Plasma::ContainmentActions(parent, args),
-      m_menu(new KMenu()),
-      m_action(new QAction(this)),
       m_mode(AllFlat),
-      m_clearOrderTimer(0)
+      m_clearOrderTimer(0),
+      m_groupManager(new TaskManager::GroupManager(this)),
+      m_tasksModel(new TaskManager::TasksModel(m_groupManager, this))
 {
-    m_menu->setTitle(i18n("Windows"));
-    connect(m_menu, SIGNAL(triggered(QAction*)), this, SLOT(switchTo(QAction*)));
-
-    m_action->setMenu(m_menu);
+    m_groupManager->setGroupingStrategy(static_cast<TaskManager::GroupManager::TaskGroupingStrategy>(0));
+    m_groupManager->reconnect();
 }
 
 SwitchWindow::~SwitchWindow()
 {
-    delete m_menu;
 }
 
 void SwitchWindow::init(const KConfigGroup &config)
@@ -88,59 +87,47 @@ void SwitchWindow::save(KConfigGroup &config)
     config.writeEntry("mode", (int)m_mode);
 }
 
-void SwitchWindow::contextEvent(QEvent *event)
-{
-    switch (event->type()) {
-        case QEvent::GraphicsSceneMousePress:
-            contextEvent(static_cast<QGraphicsSceneMouseEvent*>(event));
-            break;
-        case QEvent::GraphicsSceneWheel:
-            wheelEvent(static_cast<QGraphicsSceneWheelEvent*>(event));
-            break;
-        default:
-            break;
-    }
-}
-
 void SwitchWindow::makeMenu()
 {
-    m_menu->clear();
-    Plasma::DataEngine *tasks = dataEngine("tasks");
-    if (!tasks->isValid()) {
+    qDeleteAll(m_actions);
+    m_actions.clear();
+
+    if (m_tasksModel->rowCount() == 0) {
         return;
     }
 
     QMultiHash<int, QAction*> desktops;
 
     //make all the window actions
-    foreach (const QString &source, tasks->sources()) {
-        Plasma::DataEngine::Data window = tasks->query(source);
-        if (window.value("startup").toBool()) {
-            //qDebug() << "skipped fake task" << source;
-            continue;
-        }
-        if (!window.value("onCurrentActivity").toBool()) {
+    for (int i = 0; i < m_tasksModel->rowCount(); ++i) {
+        if (m_tasksModel->data(m_tasksModel->index(i, 0), TaskManager::TasksModel::IsStartup).toBool()) {
+            qDebug() << "skipped fake task";
             continue;
         }
 
-        QString name = window.value("visibleNameWithState").toString();
+        QString name = m_tasksModel->data(m_tasksModel->index(i, 0), Qt::DisplayRole).toString();
+
         if (name.isEmpty()) {
-            qDebug() << "failed source" << source;
             continue;
         }
 
-        QAction *action = new QAction(name, m_menu);
-        action->setIcon(window.value("icon").value<QIcon>());
-        action->setData(source);
-        desktops.insert(window.value("desktop").toInt(), action);
+        QAction *action = new QAction(name, this);
+        action->setIcon(m_tasksModel->data(m_tasksModel->index(i, 0), Qt::DecorationRole).value<QIcon>());
+        action->setData(m_tasksModel->data(m_tasksModel->index(i, 0), TaskManager::TasksModel::Id).toString());
+        desktops.insert(m_tasksModel->data(m_tasksModel->index(i, 0), TaskManager::TasksModel::Desktop).toInt(), action);
+        connect(action, &QAction::triggered, [=]() {
+            switchTo(action);
+        });
     }
 
     //sort into menu
     if (m_mode == CurrentDesktop) {
         int currentDesktop = KWindowSystem::currentDesktop();
-        m_menu->addTitle(i18n("Windows"));
-        m_menu->addActions(desktops.values(currentDesktop));
-        m_menu->addActions(desktops.values(-1));
+
+        m_actions << new QAction(i18n("Windows"), this);
+        m_actions << desktops.values(currentDesktop);
+        m_actions << desktops.values(-1);
+
     } else {
         int numDesktops = KWindowSystem::numberOfDesktops();
         if (m_mode == AllFlat) {
@@ -148,59 +135,60 @@ void SwitchWindow::makeMenu()
                 if (desktops.contains(i)) {
                     QString name = KWindowSystem::desktopName(i);
                     name = QString("%1: %2").arg(i).arg(name);
-                    m_menu->addTitle(name);
-                    m_menu->addActions(desktops.values(i));
+                    QAction *a = new QAction(name, this);
+                    a->setSeparator(true);
+                    m_actions << a;
+                    m_actions << desktops.values(i);
                 }
             }
             if (desktops.contains(-1)) {
-                m_menu->addTitle(i18n("All Desktops"));
-                m_menu->addActions(desktops.values(-1));
+                QAction *a = new QAction(i18n("All Desktops"), this);
+                a->setSeparator(true);
+                m_actions << a;
+                m_actions << desktops.values(-1);
             }
+
         } else { //submenus
             for (int i = 1; i <= numDesktops; ++i) {
                 if (desktops.contains(i)) {
-                        QString name = KWindowSystem::desktopName(i);
-                        name = QString("%1: %2").arg(i).arg(name);
-                        KMenu *subMenu = new KMenu(name, m_menu);
-                        subMenu->addActions(desktops.values(i));
-                        m_menu->addMenu(subMenu);
+                    QString name = KWindowSystem::desktopName(i);
+                    name = QString("%1: %2").arg(i).arg(name);
+                    QMenu *subMenu = new QMenu(name);
+                    subMenu->addActions(desktops.values(i));
+
+                    QAction *a = new QAction(name, this);
+                    a->setMenu(subMenu);
+                    m_actions << a;
                 }
             }
             if (desktops.contains(-1)) {
-                KMenu *subMenu = new KMenu(i18n("All Desktops"), m_menu);
+                QMenu *subMenu = new QMenu(i18n("All Desktops"));
                 subMenu->addActions(desktops.values(-1));
-                m_menu->addMenu(subMenu);
+                QAction *a = new QAction(i18n("All Desktops"), this);
+                a->setMenu(subMenu);
+                m_actions << a;
             }
         }
-    }
-
-    m_menu->adjustSize();
-}
-
-void SwitchWindow::contextEvent(QGraphicsSceneMouseEvent *event)
-{
-    makeMenu();
-    if (!m_menu->isEmpty()) {
-        m_menu->exec(popupPosition(m_menu->size(), event));
     }
 }
 
 QList<QAction*> SwitchWindow::contextualActions()
 {
     makeMenu();
-    QList<QAction*> list;
-    list << m_action;
-    return list;
+    return m_actions;
 }
 
 void SwitchWindow::switchTo(QAction *action)
 {
-    QString source = action->data().toString();
-    qDebug() << source;
-    Plasma::Service *service = dataEngine("tasks")->serviceForSource(source);
-    if (service) {
-        service->startOperationCall(service->operationDescription("activateRaiseOrIconify"));
+    int id = action->data().toInt();
+    qDebug() << id;
+    TaskManager::AbstractGroupableItem* item = m_groupManager->rootGroup()->getMemberById(id);
+
+    if (!item) {
+        return;
     }
+    TaskManager::TaskItem* taskItem = static_cast<TaskManager::TaskItem*>(item);
+    taskItem->task()->activateRaiseOrIconify();
 }
 
 void SwitchWindow::clearWindowsOrder()
@@ -209,7 +197,17 @@ void SwitchWindow::clearWindowsOrder()
     m_windowsOrder.clear();
 }
 
-void SwitchWindow::wheelEvent(QGraphicsSceneWheelEvent *event)
+void SwitchWindow::performNextAction()
+{
+    doSwitch(true);
+}
+
+void SwitchWindow::performPreviousAction()
+{
+    doSwitch(false);
+}
+
+void SwitchWindow::doSwitch(bool up)
 {
     //TODO somehow find the "next" or "previous" window
     //without changing hte window order (don't want to always go between two windows)
@@ -227,7 +225,6 @@ void SwitchWindow::wheelEvent(QGraphicsSceneWheelEvent *event)
     }
 
     const WId activeWindow = KWindowSystem::activeWindow();
-    const bool up = event->delta() > 0;
     bool next = false;
     WId first = 0;
     WId last = 0;
@@ -260,5 +257,6 @@ void SwitchWindow::wheelEvent(QGraphicsSceneWheelEvent *event)
     KWindowSystem::forceActiveWindow(up ? first : last);
 }
 
+K_EXPORT_PLASMA_CONTAINMENTACTIONS_WITH_JSON(switchwindow, SwitchWindow, "plasma-containmentactions-switchwindow.json")
 
 #include "switch.moc"
