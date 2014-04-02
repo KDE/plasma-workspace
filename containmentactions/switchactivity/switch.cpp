@@ -84,6 +84,21 @@ void SwitchActivity::switchTo(QAction *action)
     m_controller.setCurrentActivity(action->data().toString());
 }
 
+void SwitchActivity::performNextAction()
+{
+    int i = m_consumer.activities().indexOf(m_consumer.currentActivity());
+
+    i = (i + 1) % m_consumer.activities().size();
+    m_controller.setCurrentActivity(m_consumer.activities().value(i));
+}
+
+void SwitchActivity::performPreviousAction()
+{
+    int i = m_consumer.activities().indexOf(m_consumer.currentActivity());
+
+    i = (i + m_consumer.activities().size() -1) % m_consumer.activities().size();
+    m_controller.setCurrentActivity(m_consumer.activities().value(i));
+}
 
 K_EXPORT_PLASMA_CONTAINMENTACTIONS_WITH_JSON(switchactivity, SwitchActivity, "plasma-containmentactions-switchactivity.json")
 

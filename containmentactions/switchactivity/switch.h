@@ -36,6 +36,9 @@ class SwitchActivity : public Plasma::ContainmentActions
 
         QList<QAction*> contextualActions();
 
+        void performNextAction();
+        void performPreviousAction();
+
     private Q_SLOTS:
         void switchTo(QAction *action);
         void makeMenu();
