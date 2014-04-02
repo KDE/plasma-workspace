@@ -23,6 +23,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include "ksldapp.h"
 #include "interface.h"
 #include "lockwindow.h"
+#include "logind.h"
 #include "kscreensaversettings.h"
 // workspace
 #include <kdisplaymanager.h>
@@ -103,6 +104,8 @@ void KSldApp::cleanUp()
     XSetScreenSaver(QX11Info::display(), s_XTimeout, s_XInterval, s_XBlanking, s_XExposures);
 }
 
+static bool s_logindExit = false;
+
 void KSldApp::initialize()
 {
     KCrash::setFlags(KCrash::AutoRestart);
@@ -140,6 +143,19 @@ void KSldApp::initialize()
     connect(m_graceTimer, SIGNAL(timeout()), SLOT(endGraceTime()));
     // create our D-Bus interface
     new Interface(this);
+
+    // connect to logind
+    LogindIntegration *logind = new LogindIntegration(this);
+    auto lockSlot = static_cast<void (KSldApp::*)()>(&KSldApp::lock);
+    connect(logind, &LogindIntegration::requestLock, this, lockSlot);
+    connect(logind, &LogindIntegration::requestUnlock, this,
+        [this]() {
+            if (lockState() == Locked) {
+                s_logindExit = true;
+                m_lockProcess->kill();
+            }
+        }
+    );
 
     configure();
 }
@@ -270,9 +286,10 @@ static bool s_graceTimeKill = false;
 
 void KSldApp::lockProcessFinished(int exitCode, QProcess::ExitStatus exitStatus)
 {
-    if ((!exitCode && exitStatus == QProcess::NormalExit) || s_graceTimeKill) {
+    if ((!exitCode && exitStatus == QProcess::NormalExit) || s_graceTimeKill || s_logindExit) {
         // unlock process finished successfully - we can remove the lock grab
         s_graceTimeKill = false;
+        s_logindExit = false;
         doUnlock();
         return;
     }

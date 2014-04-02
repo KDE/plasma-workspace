@@ -12,7 +12,9 @@ set(ksld_SRCS
    ksldapp.cpp
    autologout.cpp
    interface.cpp
-   lockwindow.cpp)
+   lockwindow.cpp
+   logind.cpp
+)
 qt5_add_dbus_adaptor(ksld_SRCS ${screensaver_dbusXML} interface.h ScreenLocker::Interface)
 qt5_add_dbus_adaptor(ksld_SRCS ${kscreensaver_dbusXML} interface.h ScreenLocker::Interface kscreensaveradaptor KScreenSaverAdaptor)
 kconfig_add_kcfg_files(ksld_SRCS kcfg/kscreensaversettings.kcfgc)
@@ -49,3 +51,5 @@ install(FILES kscreenlocker.notifyrc  DESTINATION ${DATA_INSTALL_DIR}/ksmserver/
 install(FILES ${screensaver_dbusXML}
         DESTINATION ${DBUS_INTERFACES_INSTALL_DIR}
         RENAME kf5_org.freedesktop.ScreenSaver.xml)
+
+add_subdirectory(autotests)
