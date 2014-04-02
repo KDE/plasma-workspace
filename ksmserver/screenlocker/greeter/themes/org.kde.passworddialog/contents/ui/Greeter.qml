@@ -18,13 +18,13 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 *********************************************************************/
 import QtQuick 2.0
+import QtQuick.Layouts 1.0
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.kscreenlocker 1.0
 
 Item {
     id: root
-    signal accepted()
     signal switchUserClicked()
     signal canceled()
     property alias notification: message.text
@@ -36,10 +36,6 @@ Item {
     anchors {
         fill: parent
         margins: 6
-    }
-
-    function resetFocus() {
-        focusTimer.running = true;
     }
 
     Column {
@@ -81,35 +77,21 @@ Item {
             anchors.horizontalCenter: parent.horizontalCenter
         }
 
-//         Item {
-//             width: greeter.width
-//             height: greeter.height
-//             anchors.horizontalCenter: parent.horizontalCenter
-//             GreeterItem {
-//                 id: greeter
-//                 objectName: "greeter"
-//
-//                 Keys.onEnterPressed: verify()
-//                 Keys.onReturnPressed: verify()
-//                 Keys.onEscapePressed: clear()
-//             }
-//             KeyboardItem {
-//                 anchors {
-//                     left: greeter.right
-//                     bottom: greeter.bottom
-//                     bottomMargin: -2
-//                 }
-//             }
-//             Timer {
-//                 id: focusTimer
-//                 interval: 10
-//                 running: true
-//                 onTriggered: {
-//                     greeter.forceActiveFocus()
-//                     greeter.focus = true
-//                 }
-//             }
-//         }
+        RowLayout {
+            anchors.horizontalCenter: parent.horizontalCenter
+            PlasmaComponents.Label {
+                text: i18n("Password:")
+            }
+            PlasmaComponents.TextField {
+                id: password
+                enabled: !authenticator.graceLocked
+                echoMode: TextInput.Password
+                focus: true
+                Keys.onEnterPressed: authenticator.tryUnlock(password.text)
+                Keys.onReturnPressed: authenticator.tryUnlock(password.text)
+                Keys.onEscapePressed: password.text = ""
+            }
+        }
 
         PlasmaComponents.ButtonRow {
             id: buttonRow
@@ -130,7 +112,8 @@ Item {
                 id: unlock
                 label: i18n("Un&lock")
                 iconSource: "object-unlocked"
-                onClicked: root.accepted() // greeter.verify()
+                enabled: !authenticator.graceLocked
+                onClicked: authenticator.tryUnlock(password.text)
             }
         }
     }
@@ -161,21 +144,23 @@ Item {
         buttonRow.showAccel = (event.modifiers & Qt.AltModifier)
     }
 
-//     Connections {
-//         target: greeter
-//         onGreeterFailed: {
-//             message.text = i18n("Unlocking failed");
-//             greeter.enabled = false;
-//             switchUser.enabled = false;
-//             unlock.enabled = false;
-//         }
-//         onGreeterReady: {
-//             message.text = "";
-//             greeter.enabled = true;
-//             switchUser.enabled = true;
-//             unlock.enabled = true;
-//         }
-//         onGreeterMessage: message.text = text
-//         onGreeterAccepted: accepted()
-//     }
+    Connections {
+        target: authenticator
+        onFailed: {
+            root.notification = i18n("Unlocking failed");
+        }
+        onGraceLockedChanged: {
+            if (!authenticator.graceLocked) {
+                root.notification = "";
+                password.selectAll();
+                password.focus = true;
+            }
+        }
+        onMessage: function(text) {
+            root.notification = text;
+        }
+        onError: function(text) {
+            root.notification = text;
+        }
+    }
 }

@@ -2,3 +2,9 @@
 #cmakedefine HAVE__ICETRANSNOLISTEN 1
 
 #cmakedefine COMPILE_SCREEN_LOCKER 1
+
+#ifndef KSMSERVER_UNIT_TEST
+#define KCHECKPASS_BIN "${CMAKE_INSTALL_PREFIX}/${LIBEXEC_INSTALL_DIR}/kcheckpass"
+#else
+#define KCHECKPASS_BIN "${CMAKE_CURRENT_BINARY_DIR}/screenlocker/greeter/autotests/fakekcheckpass"
+#endif

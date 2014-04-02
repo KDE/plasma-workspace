@@ -1,9 +1,12 @@
 include_directories(
     ${CMAKE_CURRENT_BINARY_DIR}
     ${KCheckPass_SOURCE_DIR}/kcheckpass
+    ../kcheckpass
+    ${CMAKE_CURRENT_BINARY_DIR}/../../
 )
 
 set(kscreenlocker_greet_SRCS
+   authenticator.cpp
    sessions.cpp
    greeterapp.cpp
    screensaverwindow.cpp
@@ -30,3 +33,5 @@ target_link_libraries(kscreenlocker_greet
 install(TARGETS kscreenlocker_greet DESTINATION ${LIBEXEC_INSTALL_DIR})
 
 install(DIRECTORY themes/org.kde.passworddialog DESTINATION ${DATA_INSTALL_DIR}/ksmserver/screenlocker)
+
+add_subdirectory(autotests)

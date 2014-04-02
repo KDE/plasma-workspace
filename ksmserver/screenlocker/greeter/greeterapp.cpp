@@ -22,6 +22,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include "kscreensaversettings.h"
 #include "sessions.h"
 #include "screensaverwindow.h"
+#include "authenticator.h"
 
 // workspace
 #include <kworkspace.h>
@@ -75,7 +76,9 @@ UnlockApp::UnlockApp()
     , m_showScreenSaver(false)
     , m_immediateLock(false)
     , m_runtimeInitialized(false)
+    , m_authenticator(new Authenticator(this))
 {
+    connect(m_authenticator, &Authenticator::succeeded, this, &QCoreApplication::quit);
     initialize();
     connect(desktop(), SIGNAL(resized(int)), SLOT(desktopResized()));
     connect(desktop(), SIGNAL(screenCountChanged(int)), SLOT(desktopResized()));
@@ -174,11 +177,10 @@ void UnlockApp::desktopResized()
         const QString fullName = user.property(KUser::FullName).toString();
 
         context->setContextProperty(QStringLiteral("kscreenlocker_userName"), fullName.isEmpty() ? user.loginName() : fullName);
+        context->setContextProperty(QStringLiteral("authenticator"), m_authenticator);
 
         view->setSource(QUrl::fromLocalFile(m_mainQmlPath));
         view->setResizeMode(QQuickView::SizeRootObjectToView);
-
-        connect(view->rootObject(), SIGNAL(unlockRequested()), SLOT(quit()));
 
         QQmlProperty lockProperty(view->rootObject(), QStringLiteral("locked"));
         if (m_immediateLock) {

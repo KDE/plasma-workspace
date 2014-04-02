@@ -29,6 +29,8 @@ namespace Plasma {
     class Package;
 };
 
+class Authenticator;
+
 namespace ScreenLocker
 {
 class Unlocker;
@@ -76,6 +78,7 @@ private:
     bool m_showScreenSaver;
     bool m_immediateLock;
     bool m_runtimeInitialized;
+    Authenticator *m_authenticator;
 };
 } // namespace
 
