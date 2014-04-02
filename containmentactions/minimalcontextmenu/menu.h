@@ -30,14 +30,11 @@ public:
     ContextMenu(QObject* parent, const QVariantList& args);
     ~ContextMenu();
 
-    void contextEvent(QEvent *event);
     QList<QAction*> contextualActions();
 
 private:
     QAction *m_separator;
 
 };
-
-K_EXPORT_PLASMA_CONTAINMENTACTIONS(minimalcontextmenu, ContextMenu)
 
 #endif

@@ -24,11 +24,11 @@
 #include <QGraphicsSceneWheelEvent>
 
 #include <QDebug>
-#include <KMenu>
+#include <QMenu>
 
+#include <KActionCollection>
 #include <Plasma/Containment>
 #include <Plasma/Corona>
-#include <Plasma/Wallpaper>
 
 ContextMenu::ContextMenu(QObject *parent, const QVariantList &args)
     : Plasma::ContainmentActions(parent, args)
@@ -41,31 +41,23 @@ ContextMenu::~ContextMenu()
 {
 }
 
-void ContextMenu::contextEvent(QEvent *event)
-{
-    QList<QAction*> actions = contextualActions();
-    if (actions.isEmpty()) {
-        return;
-    }
-
-    KMenu desktopMenu;
-    desktopMenu.addActions(actions);
-    desktopMenu.adjustSize();
-    desktopMenu.exec(popupPosition(desktopMenu.size(), event));
-}
-
 QList<QAction*> ContextMenu::contextualActions()
 {
     Plasma::Containment *c = containment();
     Q_ASSERT(c);
     QList<QAction*> actions;
     actions << c->contextualActions();
-    if (c->wallpaper() &&
-            !c->wallpaper()->contextualActions().isEmpty()) {
-        actions << m_separator;
-        actions << c->wallpaper()->contextualActions();
+    actions << c->actions()->action("configure");
+
+    if (!c->wallpaper().isEmpty()) {
+        QObject *wallpaperGraphicsObject = c->property("wallpaperGraphicsObject").value<QObject *>();
+        if (wallpaperGraphicsObject) {
+            actions << wallpaperGraphicsObject->property("contextualActions").value<QList<QAction *> >();
+        }
     }
     return actions;
 }
+
+K_EXPORT_PLASMA_CONTAINMENTACTIONS_WITH_JSON(minimalcontextmenu, ContextMenu, "plasma-containmentactions-minimalcontextmenu.json")
 
 #include "menu.moc"
