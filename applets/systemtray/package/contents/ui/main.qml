@@ -82,7 +82,28 @@ Item {
         visible: root.debug;
         opacity: 0.2;
     }
-    
+
+    Connections {
+        target: plasmoid.configuration
+        onApplicationStatusShownChanged: host.setCategoryShown(SystemTray.Task.ApplicationStatus, plasmoid.configuration.applicationStatusShown);
+
+        onCommunicationsShownChanged: host.setCategoryShown(SystemTray.Task.Communications, plasmoid.configuration.communicationsShown);
+
+        onSystemServicesShownChanged: host.setCategoryShown(SystemTray.Task.SystemServices, plasmoid.configuration.systemServicesShown);
+
+        onHardwareControlShownChanged: host.setCategoryShown(SystemTray.Task.Hardware, plasmoid.configuration.hardwareControlShown);
+    }
+
+    Component.onCompleted: {
+        host.setCategoryShown(SystemTray.Task.ApplicationStatus, plasmoid.configuration.applicationStatusShown);
+
+        host.setCategoryShown(SystemTray.Task.Communications, plasmoid.configuration.communicationsShown);
+
+        host.setCategoryShown(SystemTray.Task.SystemServices, plasmoid.configuration.systemServicesShown);
+
+        host.setCategoryShown(SystemTray.Task.Hardware, plasmoid.configuration.hardwareControlShown);
+    }
+
     SystemTray.Host {
         id: host
         rootItem: plasmoid

@@ -28,6 +28,8 @@
 #include <QObject>
 #include <qtextcodec.h>
 
+#include "task.h"
+
 class QQuickItem;
 
 namespace SystemTray {
@@ -65,6 +67,8 @@ public:
 
 public Q_SLOTS:
     void init();
+    bool isCategoryShown(int cat) const;
+    void setCategoryShown(int cat, bool shown);
     QQmlListProperty<SystemTray::Task> hiddenTasks();
     QQmlListProperty<SystemTray::Task> shownTasks();
     QStringList categories() const;
@@ -74,6 +78,7 @@ Q_SIGNALS:
     void tasksChanged();
     void categoriesChanged();
     void rootItemChanged();
+    void shownCategoriesChanged();
 
 private Q_SLOTS:
     void addTask(SystemTray::Task *task);

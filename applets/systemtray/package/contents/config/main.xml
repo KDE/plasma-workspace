@@ -9,12 +9,22 @@
     <entry name="taskPreferences" type="StringList">
       <default></default>
     </entry>
-    <entry name="itemSize" type="int">
-      <default>22</default>
-    </entry>
     <entry name="debug" type="bool">
       <default>false</default>
     </entry>
+    <entry name="applicationStatusShown" type="bool">
+      <default>true</default>
+    </entry>
+    <entry name="communicationsShown" type="bool">
+      <default>true</default>
+    </entry>
+    <entry name="systemServicesShown" type="bool">
+      <default>true</default>
+    </entry>
+    <entry name="hardwareControlShown" type="bool">
+      <default>true</default>
+    </entry>
+
     <entry name="extraItems" type="StringList">
       <default></default>
     </entry>

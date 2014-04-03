@@ -33,56 +33,11 @@ Item {
     implicitHeight: pageColumn.implicitHeight
 
     property int cfg_itemSize: plasmoid.configuration.itemSize
-    property alias cfg_debug: debugCheck.checked
-//     property alias cfg_BoolTest: testBoolConfigField.checked
-
-    function indexToSize(ix) {
-        var s = 22;
-        if (ix < 1) {
-            s = 16;
-        } else if (ix == 1) {
-            s = 22;
-        } else if (ix == 2) {
-            s = 32;
-        } else if (ix == 3) {
-            s = 48;
-        } else if (ix == 4) {
-            s = 64;
-        } else if (ix == 5) {
-            s = 96;
-        } else if (ix == 6) {
-            s = 128;
-        } else if (ix == 7) {
-            s = 192;
-        } else if (ix == 8) {
-            s = 256;
-        }
-        return s;
-    }
-
-    function sizeToIndex(s) {
-        var ix = 0;
-        if (s < 16) {
-            ix = 0;
-        } else if (s <=22) {
-            ix = 1;
-        } else if (s <=32) {
-            ix = 2;
-        } else if (s <= 48) {
-            ix = 3;
-        } else if (s <= 64) {
-            ix = 4;
-        } else if (s <= 96) {
-            ix = 5;
-        } else if (s <= 128) {
-            ix = 6;
-        } else if (s <=192) {
-            ix = 7;
-        } else if (s <= 256) {
-            ix = 8;
-        }
-        return ix;
-    }
+    property var cfg_shownCategories: Array()
+    property alias cfg_applicationStatusShown: applicationStatus.checked
+    property alias cfg_communicationsShown: communications.checked
+    property alias cfg_systemServicesShown: systemServices.checked
+    property alias cfg_hardwareControlShown: hardwareControl.checked
 
     SystemTray.Host {
         id: host
@@ -90,60 +45,28 @@ Item {
 
     Column {
         id: pageColumn
-        anchors.fill: parent
         spacing: itemSizeLabel.height / 2
         PlasmaExtras.Title {
             text: i18n("SystemTray Settings")
         }
-        QtControls.CheckBox {
-            id: debugCheck
-            text: "Visual Debugging"
-        }
 
-        Row {
-            width: parent.width
-            height: itemSizeSlider.height
-            QtControls.Label {
-                id: itemSizeLabel
-                text: i18n("Icon size:")
-                width: parent.width / 4
+        Column {
+            QtControls.CheckBox {
+                id: applicationStatus
+                text: i18n("Application Status")
             }
-            QtControls.Slider {
-                id: itemSizeSlider
-                width: parent.width / 2
-
-                value: sizeToIndex(cfg_itemSize)
-                minimumValue: 0
-                maximumValue: 8
-                stepSize: 1
-                tickmarksEnabled: true
-                updateValueWhileDragging: true
-                onValueChanged: cfg_itemSize = indexToSize(value);
-
+            QtControls.CheckBox {
+                id: communications
+                text: i18n("Communications")
             }
-            PlasmaCore.IconItem {
-                source: "nepomuk"
-                width: cfg_itemSize
-                height: width
-//                 anchors {
-//                     left: itemSizeSlider.right
-//                     verticalCenter: itemSizeSlider.verticalCenter
-//                 }
+            QtControls.CheckBox {
+                id: systemServices
+                text: i18n("System Services")
             }
-        }
-        ListView {
-            model: host.categories
-            width: parent.width
-            height: itemSizeLabel.height * 10
-            delegate: Row {
-                height: implicitHeight
-                width: parent.width
-                QtControls.CheckBox {
-                    id: categoryCheck
-                    text: modelData
-                }
+            QtControls.CheckBox {
+                id: hardwareControl
+                text: i18n("Hardware Control")
             }
-
         }
         ListView {
             model: host.tasks

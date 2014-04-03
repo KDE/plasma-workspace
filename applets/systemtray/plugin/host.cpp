@@ -96,6 +96,11 @@ public:
     //QList<SystemTray::Task*> tasks;
     QList<SystemTray::Task*> shownTasks;
     QList<SystemTray::Task*> hiddenTasks;
+    //all tasks that are in hidden categories
+    QList<SystemTray::Task*> discardedTasks;
+
+    QSet<Task::Category> shownCategories;
+
     QQmlListProperty<SystemTray::Task> shownTasksDeclarative;
     QQmlListProperty<SystemTray::Task> hiddenTasksDeclarative;
     //QQmlListProperty<SystemTray::Task> tasksDeclarative;
@@ -179,6 +184,35 @@ void Host::setRootItem(QQuickItem* item)
     emit rootItemChanged();
 }
 
+bool Host::isCategoryShown(int cat) const
+{
+    return d->shownCategories.contains((Task::Category)cat);
+}
+
+void Host::setCategoryShown(int cat, bool shown)
+{
+    if (shown) {
+        if (!d->shownCategories.contains((Task::Category)cat)) {
+            d->shownCategories.insert((Task::Category)cat);
+            foreach (Task *task, d->discardedTasks) {
+                if (d->shownCategories.contains(task->category())) {
+                    addTask(task);
+                }
+            }
+        }
+    } else {
+        if (d->shownCategories.contains((Task::Category)cat)) {
+            d->shownCategories.remove((Task::Category)cat);
+            foreach (Task *task, d->tasks) {
+                if (!d->shownCategories.contains(task->category())) {
+                    removeTask(task);
+                    d->discardedTasks.append(task);
+                }
+            }
+        }
+    }
+}
+
 QList<Task*> Host::tasks() const
 {
     return d->tasks;
@@ -186,6 +220,13 @@ QList<Task*> Host::tasks() const
 
 void Host::addTask(Task *task)
 {
+    if (!d->shownCategories.contains(task->category())) {
+        d->discardedTasks.append(task);
+        return;
+    } else {
+        d->discardedTasks.removeAll(task);
+    }
+
     connect(task, SIGNAL(destroyed(SystemTray::Task*)), this, SLOT(removeTask(SystemTray::Task*)));
     connect(task, SIGNAL(changedStatus()), this, SLOT(slotTaskStatusChanged()));
 
