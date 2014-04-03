@@ -38,6 +38,7 @@ Item {
     property alias cfg_communicationsShown: communications.checked
     property alias cfg_systemServicesShown: systemServices.checked
     property alias cfg_hardwareControlShown: hardwareControl.checked
+    property alias cfg_miscellaneousShown: miscellaneous.checked
 
     SystemTray.Host {
         id: host
@@ -66,6 +67,10 @@ Item {
             QtControls.CheckBox {
                 id: hardwareControl
                 text: i18n("Hardware Control")
+            }
+            QtControls.CheckBox {
+                id: miscellaneous
+                text: i18n("Miscellaneous")
             }
         }
         ListView {

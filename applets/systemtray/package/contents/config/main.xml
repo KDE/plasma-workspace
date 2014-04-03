@@ -24,6 +24,9 @@
     <entry name="hardwareControlShown" type="bool">
       <default>true</default>
     </entry>
+    <entry name="miscellaneousShown" type="bool">
+      <default>true</default>
+    </entry>
 
     <entry name="extraItems" type="StringList">
       <default></default>

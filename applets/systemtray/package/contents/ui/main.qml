@@ -92,6 +92,8 @@ Item {
         onSystemServicesShownChanged: host.setCategoryShown(SystemTray.Task.SystemServices, plasmoid.configuration.systemServicesShown);
 
         onHardwareControlShownChanged: host.setCategoryShown(SystemTray.Task.Hardware, plasmoid.configuration.hardwareControlShown);
+
+        onMiscellaneousShownChanged: host.setCategoryShown(SystemTray.Task.Unknown, plasmoid.configuration.miscellaneousShown);
     }
 
     Component.onCompleted: {
@@ -102,6 +104,8 @@ Item {
         host.setCategoryShown(SystemTray.Task.SystemServices, plasmoid.configuration.systemServicesShown);
 
         host.setCategoryShown(SystemTray.Task.Hardware, plasmoid.configuration.hardwareControlShown);
+
+        host.setCategoryShown(SystemTray.Task.Unknown, plasmoid.configuration.miscellaneousShown);
     }
 
     SystemTray.Host {
