@@ -31,7 +31,7 @@ Item {
     id: compactRepresentation
 
     Layout.minimumWidth: !root.vertical ? computeDimension() : computeDimensionHeight()
-    Layout.minimumHeight: root.vertical ? computeDimension() : computeDimensionHeight()
+    Layout.minimumHeight: !root.vertical ? computeDimension() : computeDimensionHeight()
     Layout.maximumWidth: Layout.minimumWidth
     Layout.maximumHeight: Layout.minimumHeight
     Layout.preferredWidth: Layout.minimumWidth
@@ -99,25 +99,27 @@ Item {
         id: taskDelegateComponent
         TaskDelegate {
             id: taskDelegate
-            //task: ListView.view.model
+            width: gridView.cellWidth
+            height: gridView.cellHeight
         }
     }
 
     GridView {
         id: gridView
         objectName: "gridView"
-        flow: !root.vertical ? GridView.LeftToRight : GridView.TopToBottom
+        flow: root.vertical ? GridView.LeftToRight : GridView.TopToBottom
 
         anchors {
             top: parent.top
-            bottom: parent.bottom
+            bottom: !root.vertical ? parent.bottom : tooltip.top
            // topMargin: !root.vertical ? ((parent.height - root.itemSize) / 2) - units.smallSpacing : units.smallSpacing
             left: parent.left
             //leftMargin: root.vertical ? 0 : units.smallSpacing
-            right: tooltip.left
+            right: !root.vertical ? tooltip.left : parent.right
         }
-        cellWidth: !root.vertical ? root.itemSize + units.smallSpacing * 4 : root.itemSize
-        cellHeight: root.vertical ? root.itemSize + units.smallSpacing * 4 : root.itemSize
+        cellWidth: root.vertical ? gridView.width / Math.floor(gridView.width / root.itemSize) : root.itemSize + units.smallSpacing * 4
+        cellHeight: !root.vertical ? gridView.height / Math.floor(gridView.height / root.itemSize) : root.itemSize + units.smallSpacing * 4
+
         interactive: false
 
         model: systrayhost.shownTasks
