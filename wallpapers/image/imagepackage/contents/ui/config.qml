@@ -224,7 +224,7 @@ ColumnLayout {
                 currentIndex: -1
 
                 cellWidth: wallpapersGrid.width / 3
-                cellHeight: cellWidth / units.displayAspectRatio
+                cellHeight: cellWidth / (imageWallpaper.width / imageWallpaper.height)
 
                 anchors.margins: 4
                 boundsBehavior: Flickable.StopAtBounds
