@@ -81,9 +81,9 @@ View::View(QWindow *parent)
     m_qmlObj = new KDeclarative::QmlObject(this);
     m_qmlObj->setInitializationDelayed(true);
     m_qmlObj->setSource(QUrl::fromLocalFile(pkg.filePath("runcommandmainscript")));
-    setMainItem(qobject_cast<QQuickItem *>(m_qmlObj->rootObject()));
     m_qmlObj->engine()->rootContext()->setContextProperty("runnerWindow", this);
     m_qmlObj->completeInitialization();
+    setMainItem(qobject_cast<QQuickItem *>(m_qmlObj->rootObject()));
 
     connect(QApplication::desktop(), SIGNAL(resized(int)), this, SLOT(screenGeometryChanged(int)));
     connect(QApplication::desktop(), SIGNAL(screenCountChanged(int)), this, SLOT(screenGeometryChanged(int)));
