@@ -16,7 +16,6 @@
  *  Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#include <config-plasma.h>
 
 #include "panelview.h"
 #include "shellcorona.h"

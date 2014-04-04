@@ -21,7 +21,6 @@
 #include <QWindow>
 #include <QPainter>
 
-#include <config-plasma.h>
 #if HAVE_X11
 #include <QX11Info>
 #include <X11/Xatom.h>

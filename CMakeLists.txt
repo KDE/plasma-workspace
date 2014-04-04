@@ -55,6 +55,12 @@ set_package_properties(X11 PROPERTIES DESCRIPTION "X11 libraries"
                         URL "http://www.x.org"
                         TYPE OPTIONAL
                         PURPOSE "Required for building the X11 based workspace")
+if(X11_FOUND AND XCB_XCB_FOUND)
+  set(HAVE_X11 1)
+  find_package(Qt5 REQUIRED NO_MODULE COMPONENTS X11Extras)
+  #X11_Xrender discovery is done by FindX11
+  #add_feature_info("X Rendering Extension (libXrender)" X11_Xrender_FOUND "Support for compositing, rendering operations, and alpha-blending. STRONGLY RECOMMENDED")
+endif()
 
 find_package(KdepimLibs 4.70.10 QUIET CONFIG)
 set_package_properties(KdepimLibs PROPERTIES DESCRIPTION "The KDEPIM libraries"
@@ -113,6 +119,7 @@ if(dbusmenu-qt5_FOUND)
   add_subdirectory(appmenu)
 endif()
 
+add_subdirectory(shell)
 add_subdirectory(freespacenotifier)
 add_subdirectory(klipper)
 add_subdirectory(krunner)

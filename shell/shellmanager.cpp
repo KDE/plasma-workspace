@@ -30,7 +30,7 @@
 #include <QQmlEngine>
 #include <QQmlComponent>
 
-#include <config-prefix.h>
+//#include <config-prefix.h>
 #include "shellcorona.h"
 
 #include <kcrash.h>
