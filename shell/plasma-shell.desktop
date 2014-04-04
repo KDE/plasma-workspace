@@ -1,0 +1,22 @@
+[Desktop Entry]
+Exec=plasma-shell --shut-up
+X-DBUS-StartupType=Unique
+Name=Plasma Desktop Workspace
+Name[cs]=Pracovní plocha Plasma
+Name[de]=Plasma-Arbeitsflächenbereich
+Name[fi]=Plasma-työpöytä
+Name[fr]=Espace de travail du bureau Plasma
+Name[hu]=Plazma asztali munkaterület
+Name[nl]=Plasma Bureaublad Werkplek
+Name[pl]=Przestrzeń robocza pulpitu Plazmy
+Name[pt]=Área de Trabalho do Plasma
+Name[pt_BR]=Espaço de Trabalho Plasma
+Name[sk]=Pracovná plocha Plasma
+Name[sv]=Plasma arbetsområde för skrivbordet
+Name[uk]=Робочий простір стільниці Плазми
+Name[x-test]=xxPlasma Desktop Workspacexx
+Type=Application
+X-KDE-StartupNotify=false
+X-DBUS-ServiceName=org.kde.plasma_shell
+OnlyShowIn=KDE;
+X-KDE-autostart-phase=0

@@ -1,0 +1,15 @@
+<!DOCTYPE node PUBLIC "-//freedesktop//DTD D-BUS Object Introspection 1.0//EN" "http://www.freedesktop.org/standards/dbus/1.0/introspect.dtd">
+<node>
+  <interface name="org.kde.PlasmaShell">
+    <method name="toggleDashboard">
+    </method>
+    <method name="setDashboardShown">
+      <arg name="show" type="b" direction="in"/>
+    </method>
+    <method name="showInteractiveConsole">
+    </method>
+    <method name="loadScriptInInteractiveConsole">
+      <arg name="script" type="s" direction="in"/>
+    </method>
+  </interface>
+</node>
