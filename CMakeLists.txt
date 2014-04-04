@@ -55,17 +55,6 @@ set_package_properties(X11 PROPERTIES DESCRIPTION "X11 libraries"
                         URL "http://www.x.org"
                         TYPE OPTIONAL
                         PURPOSE "Required for building the X11 based workspace")
-find_package(XCB MODULE COMPONENTS XCB COMPOSITE DAMAGE SHAPE XFIXES RENDER)
-set_package_properties(XCB PROPERTIES DESCRIPTION "X protocol C-language Binding"
-                       URL "http://xcb.freedesktop.org"
-                       TYPE OPTIONAL
-                      )
-if(X11_FOUND AND XCB_XCB_FOUND)
-  set(HAVE_X11 1)
-  find_package(Qt5 REQUIRED NO_MODULE COMPONENTS X11Extras)
-  #X11_Xrender discovery is done by FindX11
-  #add_feature_info("X Rendering Extension (libXrender)" X11_Xrender_FOUND "Support for compositing, rendering operations, and alpha-blending. STRONGLY RECOMMENDED")
-endif()
 
 find_package(KdepimLibs 4.70.10 QUIET CONFIG)
 set_package_properties(KdepimLibs PROPERTIES DESCRIPTION "The KDEPIM libraries"
@@ -95,6 +84,13 @@ if(X11_FOUND)
   add_feature_info("XCB-ICCCM" XCB_ICCCM_FOUND "Required for building test applications for KWin")
 
   find_package(Qt5 ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS X11Extras)
+endif()
+
+if(X11_FOUND AND XCB_XCB_FOUND)
+  set(HAVE_X11 1)
+  find_package(Qt5 REQUIRED NO_MODULE COMPONENTS X11Extras)
+  #X11_Xrender discovery is done by FindX11
+  #add_feature_info("X Rendering Extension (libXrender)" X11_Xrender_FOUND "Support for compositing, rendering operations, and alpha-blending. STRONGLY RECOMMENDED")
 endif()
 
 include(ConfigureChecks.cmake)
