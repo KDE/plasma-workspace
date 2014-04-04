@@ -109,7 +109,10 @@ add_subdirectory(doc)
 add_subdirectory(libkworkspace)
 add_subdirectory(libtaskmanager)
 
-add_subdirectory(appmenu)
+if(dbusmenu-qt5_FOUND)
+  add_subdirectory(appmenu)
+endif()
+
 add_subdirectory(freespacenotifier)
 add_subdirectory(klipper)
 add_subdirectory(krunner)
