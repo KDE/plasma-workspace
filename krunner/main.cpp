@@ -40,7 +40,7 @@ static QCommandLineParser parser;
 int main(int argc, char **argv)
 {
     QApplication app(argc, argv);
-    app.setApplicationName("krunner_shell");
+    app.setApplicationName("krunner");
     app.setOrganizationDomain("kde.org");
     app.setApplicationVersion(version);
     app.setQuitOnLastWindowClosed(false);
