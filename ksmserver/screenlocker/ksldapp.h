@@ -130,7 +130,6 @@ private:
     QTimer *m_graceTimer;
     int m_inhibitCounter;
     uint m_autoLogoutTimeout;
-    bool m_plasmaEnabled;
 };
 } // namespace
 

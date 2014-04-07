@@ -77,7 +77,6 @@ KSldApp::KSldApp(QObject * parent)
     , m_inGraceTime(false)
     , m_graceTimer(new QTimer(this))
     , m_inhibitCounter(0)
-    , m_plasmaEnabled(false)
 {
     initialize();
 }
@@ -180,7 +179,6 @@ void KSldApp::configure()
         m_lockGrace = -1;
     }
     m_autoLogoutTimeout = KScreenSaverSettings::autoLogout() ? KScreenSaverSettings::autoLogoutTimeout() * 1000 : 0;
-    m_plasmaEnabled = KScreenSaverSettings::plasmaEnabled();
 }
 
 void KSldApp::lock()
@@ -306,16 +304,11 @@ void KSldApp::lockProcessReady()
 
 bool KSldApp::startLockProcess(bool immediateLock)
 {
-    if (m_plasmaEnabled) {
-        m_lockProcess->start(KStandardDirs::findExe(QLatin1String("plasma-overlay")),
-                             QStringList() << QLatin1String("--nofork"));
-    } else {
-        QStringList args;
-        if (immediateLock) {
-            args << "--immediateLock";
-        }
-        m_lockProcess->start(KStandardDirs::findExe(QLatin1String("kscreenlocker_greet")), args);
+    QStringList args;
+    if (immediateLock) {
+        args << "--immediateLock";
     }
+    m_lockProcess->start(KStandardDirs::findExe(QLatin1String("kscreenlocker_greet")), args);
     // we wait one minute
     if (!m_lockProcess->waitForStarted(60000)) {
         m_lockProcess->kill();

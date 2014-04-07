@@ -88,11 +88,6 @@
       <label></label>
       <whatsthis></whatsthis>
     </entry>
-    <entry key="PlasmaEnabled" type="Bool">
-      <default>false</default>
-      <label></label>
-      <whatsthis></whatsthis>
-    </entry>
     <entry key="GreeterQML" type="String">
       <default>org.kde.passworddialog</default>
       <label></label>
