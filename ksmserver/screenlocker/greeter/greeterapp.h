@@ -34,7 +34,6 @@ class Authenticator;
 namespace ScreenLocker
 {
 class Unlocker;
-class ScreenSaverWindow;
 
 class UnlockApp : public KApplication
 {
@@ -68,14 +67,12 @@ private:
 
     QString m_mainQmlPath;
     QList<QQuickView*> m_views;
-    QList<ScreenSaverWindow*> m_screensaverWindows;
     QTimer *m_resetRequestIgnoreTimer;
     QTimer *m_delayedLockTimer;
     Plasma::Package m_package;
     bool m_testing;
     bool m_capsLocked;
     bool m_ignoreRequests;
-    bool m_showScreenSaver;
     bool m_immediateLock;
     bool m_runtimeInitialized;
     Authenticator *m_authenticator;

@@ -21,7 +21,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include "greeterapp.h"
 #include "kscreensaversettings.h"
 #include "sessions.h"
-#include "screensaverwindow.h"
 #include "authenticator.h"
 
 // workspace
@@ -73,7 +72,6 @@ UnlockApp::UnlockApp()
     , m_testing(false)
     , m_capsLocked(false)
     , m_ignoreRequests(false)
-    , m_showScreenSaver(false)
     , m_immediateLock(false)
     , m_runtimeInitialized(false)
     , m_authenticator(new Authenticator(this))
@@ -87,7 +85,6 @@ UnlockApp::UnlockApp()
 UnlockApp::~UnlockApp()
 {
     qDeleteAll(m_views);
-    qDeleteAll(m_screensaverWindows);
 }
 
 void UnlockApp::initialize()
@@ -109,11 +106,6 @@ void UnlockApp::initialize()
     KCrash::setDrKonqiEnabled(false);
 
     KScreenSaverSettings::self()->readConfig();
-#if TEST_SCREENSAVER
-    m_showScreenSaver = true;
-#else
-    m_showScreenSaver = KScreenSaverSettings::legacySaverEnabled();
-#endif
 
     m_package.setPath(QStandardPaths::locate(QStandardPaths::GenericDataLocation, QStringLiteral("ksmserver/screenlocker/") + KScreenSaverSettings::greeterQML(), QStandardPaths::LocateDirectory));
 
@@ -148,11 +140,6 @@ void UnlockApp::desktopResized()
     while (m_views.count() > nScreens) {
         m_views.takeLast()->deleteLater();
     }
-    while (m_screensaverWindows.count() > nScreens) {
-        m_screensaverWindows.takeLast()->deleteLater();
-    }
-
-    Q_ASSERT((!m_showScreenSaver || m_views.count() == m_screensaverWindows.count()));
 
     // extend views and savers to current demand
     const bool canLogout = KAuthorized::authorizeKAction(QStringLiteral("logout")) && KAuthorized::authorize(QStringLiteral("logout"));
@@ -227,12 +214,6 @@ void UnlockApp::desktopResized()
         }
 
         m_views << view;
-
-        if (m_showScreenSaver) {
-            ScreenSaverWindow *screensaverWindow = new ScreenSaverWindow;
-            screensaverWindow->setWindowFlags(Qt::X11BypassWindowManagerHint);
-            m_screensaverWindows << screensaverWindow;
-        }
     }
 
     m_runtimeInitialized = true;
@@ -244,21 +225,6 @@ void UnlockApp::desktopResized()
         view->setGeometry(desktop()->screenGeometry(i));
         view->show();
         view->raise();
-
-        if (m_showScreenSaver) {
-            ScreenSaverWindow *screensaverWindow = m_screensaverWindows.at(i);
-            screensaverWindow->setGeometry(view->geometry());
-
-#if TEST_SCREENSAVER
-            screensaverWindow->setAutoFillBackground(true);
-#else
-            const QPixmap backgroundPix = QPixmap::fromImage(view->grabWindow());
-            screensaverWindow->setBackground(backgroundPix);
-#endif
-            screensaverWindow->show();
-            screensaverWindow->activateWindow();
-            connect(screensaverWindow, SIGNAL(hidden()), this, SLOT(getFocus()));
-        }
     }
     // random state update, actually rather required on init only
     QMetaObject::invokeMethod(this, "getFocus", Qt::QueuedConnection);
@@ -266,7 +232,7 @@ void UnlockApp::desktopResized()
     // if there's no screensaver, hiding it won't happen and thus not trigger getFocus either
     // so we call it again in a few miliseconds - the value is nearly random but "must cross some event cycles"
     // while 150ms worked for me, 250ms gets us a bit more padding without being notable to a human user
-    if (nScreens > 1 && m_screensaverWindows.isEmpty()) {
+    if (nScreens > 1) {
         QTimer::singleShot(250, this, SLOT(getFocus()));
     }
     capsLocked();
@@ -409,26 +375,9 @@ bool UnlockApp::eventFilter(QObject *obj, QEvent *event)
         return false;
     }
 
-    static bool ignoreNextEscape = false;
     if (event->type() == QEvent::KeyPress) { // react if saver is visible
-        bool saverVisible = !m_screensaverWindows.isEmpty();
-        foreach (ScreenSaverWindow *screensaverWindow, m_screensaverWindows) {
-            if (!screensaverWindow->isVisible()) {
-                saverVisible = false;
-                break;
-            }
-        }
-        if (!saverVisible) {
-            shareEvent(event, qobject_cast<QQuickView*>(obj));
-            return false; // we don't care
-        }
-        ignoreNextEscape = bool(static_cast<QKeyEvent *>(event)->key() == Qt::Key_Escape);
-        capsLocked();
-        foreach (ScreenSaverWindow *screensaverWindow, m_screensaverWindows) {
-            screensaverWindow->hide();
-        }
-        getFocus();
-        return true; // do not pass the key
+        shareEvent(event, qobject_cast<QQuickView*>(obj));
+        return false; // we don't care
     } else if (event->type() == QEvent::KeyRelease) { // conditionally reshow the saver
         QKeyEvent *ke = static_cast<QKeyEvent *>(event);
         if (ke->key() == Qt::Key_CapsLock) {
@@ -438,23 +387,6 @@ bool UnlockApp::eventFilter(QObject *obj, QEvent *event)
         if (ke->key() != Qt::Key_Escape) {
             shareEvent(event, qobject_cast<QQuickView*>(obj));
             return false; // irrelevant
-        }
-        if (ignoreNextEscape) {
-            ignoreNextEscape = false;
-            return true; // it's Qt::Key_Escape;
-        }
-        bool saverVisible = true;
-        foreach (ScreenSaverWindow *screensaverWindow, m_screensaverWindows) {
-            if (!screensaverWindow->isVisible()) {
-                saverVisible = false;
-                break;
-            }
-        }
-        if (saverVisible) {
-            return false; // we don't care
-        }
-        foreach (ScreenSaverWindow *screensaverWindow, m_screensaverWindows) {
-            screensaverWindow->show();
         }
         return true; // don't pass
     } else if (event->type() == QEvent::GraphicsSceneMousePress) {

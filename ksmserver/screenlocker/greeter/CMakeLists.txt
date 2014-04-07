@@ -9,7 +9,6 @@ set(kscreenlocker_greet_SRCS
    authenticator.cpp
    sessions.cpp
    greeterapp.cpp
-   screensaverwindow.cpp
    main.cpp )
 
 kconfig_add_kcfg_files(kscreenlocker_greet_SRCS ${CMAKE_CURRENT_SOURCE_DIR}/../kcfg/kscreensaversettings.kcfgc)

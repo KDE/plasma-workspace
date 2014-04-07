@@ -11,11 +11,6 @@
       <label>Enable screen saver</label>
       <whatsthis>Enables the screen saver.</whatsthis>
     </entry>
-    <entry name="LegacySaverEnabled" key="LegacySaverEnabled" type="Bool">
-      <default>false</default>
-      <label>Enable legacy X screen saver</label>
-      <whatsthis>Uses an X screensaver with the screen locker.</whatsthis>
-    </entry>
     <entry key="Timeout" type="Int">
       <default>300</default>
       <label>Screen saver timeout</label>
