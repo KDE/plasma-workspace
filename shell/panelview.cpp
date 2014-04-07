@@ -358,6 +358,7 @@ void PanelView::positionPanel()
 
     QScreen *s = screen();
     QPoint position;
+    containment()->reactToScreenChange();
 
     switch (containment()->location()) {
     case Plasma::Types::TopEdge:

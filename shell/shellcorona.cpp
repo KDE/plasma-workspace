@@ -432,6 +432,9 @@ void ShellCorona::screenAdded(QScreen *screen)
         foreach (PanelView *panelView, d->panelViews) {
             if (oldPrimaryScreen==panelView->screen())
                 panelView->setScreen(screen);
+                if (view->containment()) {
+                    view->containment()->reactToScreenChange();
+                }
         }
 
         Plasma::Containment* primaryContainment = oldPrimaryView->containment();
@@ -493,6 +496,9 @@ void ShellCorona::screenRemoved(QObject *screen)
     //possibly similar to exportLayout/importLayout of Activities
     foreach (PanelView *view, d->panelViews) {
         view->setScreen(QGuiApplication::primaryScreen());
+        if (view->containment()) {
+            view->containment()->reactToScreenChange();
+        }
     }
 
     emit availableScreenRectChanged();
@@ -510,6 +516,7 @@ void ShellCorona::createWaitingPanels()
 
         d->panelViews[cont]->setScreen(QGuiApplication::screens()[screen]);
         d->panelViews[cont]->setContainment(cont);
+        cont->reactToScreenChange();
         connect(cont, &PanelView::destroyed,
                 [=](QObject *obj) {
                     d->panelViews.remove(cont);
