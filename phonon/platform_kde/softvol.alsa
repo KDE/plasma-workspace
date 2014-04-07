@@ -1,0 +1,38 @@
+pcm.phonon_softvol {
+	@args [ CARD SLAVE NAME ]
+	@args.CARD {
+		type string
+		default {
+			@func getenv
+			vars [
+				PHONON_ALSA_CARD
+			]
+			default {
+				@func refer
+				name defaults.pcm.card
+			}
+		}
+	}
+	@args.SLAVE {
+		type string
+		default {
+			@func getenv
+			vars [
+				PHONON_ALSA_DEVICE
+			]
+			default "default"
+		}
+	}
+	@args.NAME {
+		type string
+	}
+	type softvol
+	slave.pcm $SLAVE
+	control {
+		name $NAME
+		card $CARD
+	}
+	min_dB -51.0
+	max_dB 0.0
+	resolution 100
+}

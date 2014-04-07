@@ -1,0 +1,15 @@
+[Protocol]
+exec=kio_applications
+protocol=programs
+input=none
+output=filesystem
+listing=Name,Type,Size,Date,Access,Owner,Group,Link,
+reading=true
+writing=false
+makedir=false
+deleting=false
+linking=false
+moving=false
+Icon=start-here-kde
+maxInstances=2
+Class=:local

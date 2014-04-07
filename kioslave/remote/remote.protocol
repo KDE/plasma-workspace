@@ -1,0 +1,17 @@
+[Protocol]
+exec=kio_remote
+protocol=remote
+input=none
+output=filesystem
+listing=Name,Type,Size,Date,AccessDate,Access,Owner,Group,Link
+reading=true
+writing=false
+makedir=false
+deleting=true
+linking=true
+moving=true
+Icon=folder-remote
+maxInstances=4
+#TODO DocPath=kioslave/file.html
+Class=:local
+deleteRecursive=true

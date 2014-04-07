@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE kcfg SYSTEM 
+    "http://www.kde.org/standards/kcfg/1.0/kcfg.dtd">
+<kcfg>
+    <kcfgfile name="kuiserverrc"/>
+    <group name="Configuration">
+        <entry key="radioMove" type="Bool">
+            <label>Move them to a different list.</label>
+            <default>false</default>
+        </entry>
+        <entry key="radioRemove" type="Bool">
+            <label>Remove them.</label>
+            <default>true</default>
+        </entry>
+        <entry key="radioList" type="Bool">
+            <label>Show all jobs in a list.</label>
+            <default>true</default>
+        </entry>
+        <entry key="radioTree" type="Bool">
+            <label>Show all jobs in a tree.</label>
+            <default>false</default>
+        </entry>
+        <entry key="checkShowSeparateWindows" type="Bool">
+            <label>Show separate windows.</label>
+            <default>false</default>
+        </entry>
+    </group>
+</kcfg>

@@ -1,0 +1,1 @@
+- List all available audio devices and keep the list updated when devices are (un)plugged. Make that list available over dbus.

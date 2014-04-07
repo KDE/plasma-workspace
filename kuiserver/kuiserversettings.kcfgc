@@ -1,0 +1,4 @@
+File=kuiserversettings.kcfg
+ClassName=Configuration
+Singleton=true
+Mutators=true
