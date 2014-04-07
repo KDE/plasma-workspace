@@ -31,7 +31,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include <KUser>
 #include <KWindowSystem>
 #include <Solid/PowerManagement>
-#include <kdeclarative/kdeclarative.h>
 //Plasma
 #include <Plasma/Package>
 #include <Plasma/PackageStructure>
@@ -44,6 +43,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include <QQuickView>
 #include <QQuickItem>
 #include <QQmlContext>
+#include <QQmlEngine>
 #include <QQmlProperty>
 
 #include <QX11Info>
@@ -155,10 +155,6 @@ void UnlockApp::desktopResized()
         }
 
         // engine stuff
-        KDeclarative::KDeclarative kdeclarative;
-        kdeclarative.setDeclarativeEngine(view->engine());
-        kdeclarative.initialize();
-        kdeclarative.setupBindings();
         QQmlContext* context = view->engine()->rootContext();
         const KUser user;
         const QString fullName = user.property(KUser::FullName).toString();
