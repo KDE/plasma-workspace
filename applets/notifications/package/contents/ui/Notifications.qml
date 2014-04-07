@@ -78,10 +78,6 @@ Column {
             notificationsModel.inserting = false;
         }
 
-        if (plasmoid.popupShowing) {
-            return
-        }
-
         var popup = notificationPopupComponent.createObject();
         popup.populatePopup(notification);
         notificationPositioner.positionPopup(popup);
