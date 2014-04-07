@@ -2,11 +2,13 @@
 Exec=plasma-shell --shut-up
 X-DBUS-StartupType=Unique
 Name=Plasma Desktop Workspace
+Name[ca]=Espai de treball de l'escriptori Plasma
 Name[de]=Plasma-Arbeitsflächenbereich
 Name[es]=Espacio de trabajo del escritorio Plasma
 Name[ko]=Plasma 데스크톱 작업 공간
 Name[nl]=Plasma Bureaublad Werkplek
 Name[pl]=Przestrzeń Robocza Pulpitu Plazmy
+Name[pt]=Área de Trabalho do Plasma
 Name[pt_BR]=Espaço de Trabalho Plasma
 Name[sk]=Pracovná plocha Plasma
 Name[sv]=Plasma arbetsområde för skrivbordet
