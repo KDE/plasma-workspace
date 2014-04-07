@@ -37,7 +37,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include <KProcess>
 #include <KGlobalAccel>
 #include <KCrash>
-#include <KDebug>
 // Qt
 #include <QAction>
 #include <QTimer>
@@ -121,7 +120,7 @@ void KSldApp::initialize()
     m_actionCollection = new KActionCollection(this);
 
     if (KAuthorized::authorize(QLatin1String("lock_screen"))) {
-        kDebug() << "Configuring Lock Action";
+        qDebug() << "Configuring Lock Action";
         QAction *a = m_actionCollection->addAction(QLatin1String("Lock Session"));
         a->setText(i18n("Lock Session"));
         KGlobalAccel::self()->setShortcut(a, QList<QKeySequence>() << Qt::ALT+Qt::CTRL+Qt::Key_L);
@@ -195,9 +194,9 @@ void KSldApp::lock(bool immediateLock)
         return;
     }
 
-    kDebug() << "lock called";
+    qDebug() << "lock called";
     if (!establishGrab()) {
-        kError() << "Could not establish screen lock";
+        qCritical() << "Could not establish screen lock";
         return;
     }
 
@@ -212,7 +211,7 @@ void KSldApp::lock(bool immediateLock)
     // start unlock screen process
     if (!startLockProcess(immediateLock)) {
         doUnlock();
-        kError() << "Greeter Process not available";
+        qCritical() << "Greeter Process not available";
     }
 }
 
@@ -265,7 +264,7 @@ bool KSldApp::grabMouse()
 
 void KSldApp::doUnlock()
 {
-    kDebug() << "Grab Released";
+    qDebug() << "Grab Released";
     XUngrabKeyboard(QX11Info::display(), CurrentTime);
     XUngrabPointer(QX11Info::display(), CurrentTime);
     hideLockWindow();
