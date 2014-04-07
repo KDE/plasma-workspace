@@ -20,7 +20,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #ifndef SCREENLOCKER_GREETERAPP_H
 #define SCREENLOCKER_GREETERAPP_H
 
-#include <KApplication>
+#include <QApplication>
 
 #include <Plasma/PackageStructure>
 #include <QQuickView>
@@ -35,11 +35,11 @@ namespace ScreenLocker
 {
 class Unlocker;
 
-class UnlockApp : public KApplication
+class UnlockApp : public QApplication
 {
     Q_OBJECT
 public:
-    UnlockApp();
+    explicit UnlockApp(int &argc, char **argv);
     virtual ~UnlockApp();
 
     void setTesting(bool enable);

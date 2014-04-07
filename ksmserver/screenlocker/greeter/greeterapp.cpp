@@ -64,8 +64,8 @@ namespace ScreenLocker
 static const char *DEFAULT_MAIN_PACKAGE = "org.kde.passworddialog";
 
 // App
-UnlockApp::UnlockApp()
-    : KApplication()
+UnlockApp::UnlockApp(int &argc, char **argv)
+    : QApplication(argc, argv)
     , m_resetRequestIgnoreTimer(new QTimer(this))
     , m_delayedLockTimer(0)
     , m_package(Plasma::PluginLoader::self()->loadPackage("Plasma/Applet"))

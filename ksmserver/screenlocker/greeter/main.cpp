@@ -16,63 +16,42 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 *********************************************************************/
-#include <KCmdLineArgs>
-#include <KLocale>
-
-#include <k4aboutdata.h>
-
 #include <KLocalizedString>
 
-#include <KGlobal>
 #include <QDateTime>
+#include <QCommandLineParser>
 
 #include <iostream>
 
 #include "greeterapp.h"
 
-static const char description[] = I18N_NOOP( "Greeter for the KDE Plasma Workspaces Screen locker" );
-static const char version[] = "0.1";
-
 int main(int argc, char* argv[])
 {
-    K4AboutData aboutData( "kscreenlocker_greet", 0, ki18n( "KScreenLocker Greeter" ),
-                          version, ki18n(description), K4AboutData::License_GPL,
-                          ki18n("(c) 2011, Martin Gräßlin") );
-    aboutData.addAuthor( ki18n("Martin Gräßlin"),
-                         ki18n( "Author and maintainer" ),
-                         "mgraesslin@kde.org");
-    aboutData.addAuthor( ki18n("Chani Armitage"),
-                         ki18n("Author"),
-                         "chanika@gmail.com");
-    aboutData.addAuthor( ki18n("Oswald Buddenhagen"),
-                         ki18n("Author"),
-                         "ossi@kde.org");
-    aboutData.addAuthor( ki18n("Chris Howells"),
-                         ki18n("Author"),
-                         "howells@kde.org");
-    aboutData.addAuthor( ki18n("Luboš Luňák"),
-                         ki18n("Author"),
-                         "l.lunak@kde.org");
-    aboutData.addAuthor( ki18n("Martin R. Jones"),
-                         ki18n("Author"),
-                         "mjones@kde.org");
+    ScreenLocker::UnlockApp app(argc, argv);
+    QCoreApplication::setApplicationName(QStringLiteral("kscreenlocker_greet"));
+    QCoreApplication::setApplicationVersion(QStringLiteral("0.1"));
+    QCoreApplication::setOrganizationDomain(QStringLiteral("kde.org"));
 
-    KCmdLineArgs::init(argc, argv, &aboutData);
-    KCmdLineOptions options;
-    options.add("testing", ki18n("Starts the greeter in testing mode"));
-    options.add("immediateLock", ki18n("Lock immediately, ignoring any grace time etc."));
-    KCmdLineArgs::addCmdLineOptions(options);
+    QCommandLineParser parser;
+    parser.setApplicationDescription(i18n("Greeter for the KDE Plasma Workspaces Screen locker"));
+    parser.addHelpOption();
+    parser.addVersionOption();
 
-    ScreenLocker::UnlockApp app;
-    app.disableSessionManagement(); // manually-started
-    KCmdLineArgs *args = KCmdLineArgs::parsedArgs();
-    if (args->isSet("testing")) {
+    QCommandLineOption testingOption(QStringLiteral("testing"),
+                                     i18n("Starts the greeter in testing mode"));
+    QCommandLineOption immediateLockOption(QStringLiteral("immediateLock"),
+                                           i18n("Lock immediately, ignoring any grace time etc."));
+
+    parser.addOption(testingOption);
+    parser.addOption(immediateLockOption);
+    parser.process(app);
+
+    if (parser.isSet(testingOption)) {
         app.setTesting(true);
         app.setImmediateLock(true);
     } else {
-        app.setImmediateLock(args->isSet("immediateLock"));
+        app.setImmediateLock(parser.isSet(immediateLockOption));
     }
-    args->clear();
     app.desktopResized();
 
     // This allow ksmserver to know when the applicaion has actually finished setting itself up.
