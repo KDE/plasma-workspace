@@ -39,7 +39,6 @@ PlasmaCore.Dialog {
     function populatePopup(notification)
     {
         notificationProperties = notification
-        print("Populating things");
         notificationTimer.interval = notification.expireTimeout
         titleLabel.text = notification.summary
         bodyLabel.text = notification.body

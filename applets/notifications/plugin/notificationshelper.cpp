@@ -82,13 +82,11 @@ void NotificationsHelper::closePopup(const QString &sourceName)
 void NotificationsHelper::popupClosed(bool visible)
 {
     if (!visible) {
-        qDebug() << "Window hidden, having" << m_popups.size() << "windows";
         QQuickWindow *popup = qobject_cast<QQuickWindow*>(sender());
         if (popup) {
             m_popups.removeOne(popup);
             m_sourceMap.remove(sender()->property("sourceName").toString());
         }
-        qDebug() << "Repositioning" << m_popups.size() << "left windows";
         repositionPopups();
     }
 
