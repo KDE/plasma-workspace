@@ -10,7 +10,6 @@
 #include <kconfig.h>
 #include <kmessagebox.h>
 #include <KLocalizedString>
-#include <kdialog.h>
 #include <KIconLoader>
 #include <ksmserver_interface.h>
 
@@ -43,8 +42,6 @@ AutoLogout::AutoLogout(ScreenLocker::LockWindow *parent) : QDialog(NULL, Qt::X11
     mProgressRemaining->setTextVisible(false);
 
     frameLayout = new QGridLayout(this);
-    frameLayout->setSpacing(KDialog::spacingHint());
-    frameLayout->setMargin(KDialog::marginHint() * 2);
     frameLayout->addWidget(pixLabel, 0, 0, 3, 1, Qt::AlignCenter | Qt::AlignTop);
     frameLayout->addWidget(greetLabel, 0, 1);
     frameLayout->addWidget(mStatusLabel, 1, 1);
