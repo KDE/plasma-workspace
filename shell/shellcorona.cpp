@@ -791,7 +791,7 @@ int ShellCorona::screenForContainment(const Plasma::Containment *containment) co
     }
 
     if (!screen) {
-        PanelView *view = d->panelViews[containment];
+        PanelView *view = d->panelViews.value(containment);
         if (view) {
             screen = view->screen();
         }
