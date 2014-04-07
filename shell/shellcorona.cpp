@@ -414,6 +414,14 @@ PanelView *ShellCorona::panelView(Plasma::Containment *containment) const
 void ShellCorona::screenAdded(QScreen *screen)
 {
     DesktopView *view = new DesktopView(this, screen);
+
+    connect(screen, &QObject::destroyed, [=](){
+        d->views.removeAll(view);
+        view->containment()->reactToScreenChange();
+        view->deleteLater();
+    });
+
+
     const QString currentActivity = d->activityController->currentActivity();
 
     if (!d->views.isEmpty() && screen == QGuiApplication::primaryScreen()) {
@@ -479,16 +487,6 @@ Plasma::Containment* ShellCorona::createContainmentForActivity(const QString& ac
 
 void ShellCorona::screenRemoved(QObject *screen)
 {
-    //desktop containments
-    for (auto i = d->views.begin(); i != d->views.end(); i++) {
-        if ((*i)->screen() == screen) {
-            d->views.erase(i);
-            (*i)->containment()->reactToScreenChange();
-            (*i)->deleteLater();
-            break;
-        }
-    }
-
     //move all panels on a deleted screen to the primary screen
     //FIXME: this will break when a second screen is added again
     //as in plasma1, panel should be hidden, panelView deleted.
