@@ -25,6 +25,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include "lockwindow.h"
 #include "logind.h"
 #include "kscreensaversettings.h"
+#include <config-ksmserver.h>
 // workspace
 #include <kdisplaymanager.h>
 // KDE
@@ -34,7 +35,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include <KLocalizedString>
 // #include <KNotification>
 #include <KProcess>
-#include <KStandardDirs>
 #include <KGlobalAccel>
 #include <KCrash>
 #include <KDebug>
@@ -308,7 +308,7 @@ bool KSldApp::startLockProcess(bool immediateLock)
     if (immediateLock) {
         args << "--immediateLock";
     }
-    m_lockProcess->start(KStandardDirs::findExe(QLatin1String("kscreenlocker_greet")), args);
+    m_lockProcess->start(QStringLiteral(KSCREENLOCKER_GREET_BIN), args);
     // we wait one minute
     if (!m_lockProcess->waitForStarted(60000)) {
         m_lockProcess->kill();
