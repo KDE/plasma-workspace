@@ -24,9 +24,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include "lockwindow.h"
 #include "autologout.h"
 #include "ksldapp.h"
-// KDE
-#include <KApplication>
 // Qt
+#include <QApplication>
 #include <QDebug>
 #include <QTimer>
 #include <QPointer>
