@@ -28,8 +28,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 // KDE
 #include <KAuthorized>
 #include <KCrash>
-#include <KDebug>
-#include <KStandardDirs>
 #include <KUser>
 #include <KWindowSystem>
 #include <Solid/PowerManagement>
@@ -112,7 +110,8 @@ void UnlockApp::initialize()
     m_mainQmlPath = m_package.filePath("mainscript");
 
     if (m_mainQmlPath.isEmpty()) {
-        m_package.setPath(KStandardDirs::locate("data", QStringLiteral("ksmserver/screenlocker/") + QString::fromLatin1(DEFAULT_MAIN_PACKAGE)));
+        m_package.setPath(QStandardPaths::locate(QStandardPaths::GenericDataLocation,
+                                                 QStringLiteral("ksmserver/screenlocker/") + QString::fromLatin1(DEFAULT_MAIN_PACKAGE)));
         m_mainQmlPath = m_package.filePath("mainscript");
     }
 
@@ -125,7 +124,8 @@ void UnlockApp::viewStatusChanged(const QQuickView::Status &status)
     if (status == QQuickView::Error &&
         m_package.metadata().pluginName() != QLatin1String(DEFAULT_MAIN_PACKAGE)) {
         if (QQuickView *view = qobject_cast<QQuickView *>(sender())) {
-            m_package.setPath(KStandardDirs::locate("data", QStringLiteral("ksmserver/screenlocker/") + QString::fromLatin1(DEFAULT_MAIN_PACKAGE)));
+            m_package.setPath(QStandardPaths::locate(QStandardPaths::GenericDataLocation,
+                                                     QStringLiteral("ksmserver/screenlocker/") + QString::fromLatin1(DEFAULT_MAIN_PACKAGE)));
 
             m_mainQmlPath = m_package.filePath("mainscript");
             view->setSource(QUrl::fromLocalFile(m_mainQmlPath));
