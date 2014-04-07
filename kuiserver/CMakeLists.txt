@@ -1,8 +1,5 @@
 add_subdirectory( tests )
 
-# for dbus_add_activation_service
-include(MacroDBusAddActivationService)
-
 set(kuiserver_KDEINIT_SRCS
     main.cpp
     uiserver.cpp
@@ -42,7 +39,7 @@ qt5_wrap_ui(kuiserver_KDEINIT_SRCS configdialog.ui)
 qt5_add_dbus_adaptor(kuiserver_KDEINIT_SRCS org.kde.kuiserver.xml progresslistmodel.h ProgressListModel kuiserveradaptor )
 
 
-dbus_add_activation_service(org.kde.kuiserver.service.in)
+ecm_dbus_add_activation_service(org.kde.kuiserver.service.in)
 
 #</DBus Stuff>
 
