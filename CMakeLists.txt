@@ -3,14 +3,14 @@ project(plasma-workspace)
 cmake_minimum_required(VERSION 2.8.12 FATAL_ERROR)
 
 set(QT_MIN_VERSION "5.2.0")
-find_package(Qt5 ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS Widgets Quick Test)
+find_package(Qt5 ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS Widgets Quick Concurrent Test)
 
 find_package(ECM 0.0.11 REQUIRED NO_MODULE)
 set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH} ${ECM_KDE_MODULE_DIR})
 
 find_package(KF5 CONFIG REQUIRED COMPONENTS
-                    Plasma DocTools Runner JsEmbed NotifyConfig Su NewStuff
-                    IdleTime ThreadWeaver Declarative PlasmaQuick KDE4Support)
+                    Plasma DocTools Runner JsEmbed NotifyConfig Su NewStuff Wallet KCMUtils
+                    IdleTime ThreadWeaver Declarative PlasmaQuick WebKit KDE4Support)
 
 find_package(KF5 CONFIG REQUIRED COMPONENTS SysGuard)
 find_package(KWinDBusInterface CONFIG REQUIRED)
@@ -85,6 +85,11 @@ if(X11_FOUND)
   if(NOT X11_SM_FOUND)
     message(FATAL_ERROR "\nThe X11 Session Management (SM) development package could not be found.\nPlease install libSM.\n")
   endif(NOT X11_SM_FOUND)
+  if(XCB_FOUND)
+    # If we are building with XCB, we want to have all required components
+    # installed
+    find_package(XCB MODULE REQUIRED COMPONENTS KEYSYMS)
+  endif()
 
   find_package(Qt5 ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS X11Extras)
 endif()
@@ -145,5 +150,7 @@ add_subdirectory(kuiserver)
 add_subdirectory(menu)
 add_subdirectory(phonon)
 add_subdirectory(solidautoeject)
+add_subdirectory(drkonqi)
+add_subdirectory(kglobalaccel)
 
 feature_summary(WHAT ALL INCLUDE_QUIET_PACKAGES FATAL_ON_MISSING_REQUIRED_PACKAGES)

@@ -11,13 +11,6 @@ if (NOT DEBUG_PACKAGE_INSTALLER_NAME)
     set (DEBUG_PACKAGE_INSTALLER_NAME "installdbgsymbols.sh")
 endif ()
 
-# find_package(KdepimLibs)
-set_package_properties(KdepimLibs PROPERTIES DESCRIPTION "The KDE PIM Libraries"
-                       URL "http://www.kde.org"
-                       TYPE REQUIRED
-                       PURPOSE "Required to build Drkonqi"
-                      )
-
 configure_file (config-drkonqi.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-drkonqi.h )
 
 include_directories(${KDEPIMLIBS_INCLUDE_DIRS})
