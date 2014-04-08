@@ -795,7 +795,16 @@ void ShellCorona::addPanel(const QString &plugin)
     }
 
     d->waitingPanels << panel;
-    d->waitingPanelsTimer.start();
+    createWaitingPanels();
+    if (d->panelViews.contains(panel)) {
+        const QPoint cursorPos(QCursor::pos());
+        foreach (QScreen *screen, QGuiApplication::screens()) {
+            if (screen->geometry().contains(cursorPos)) {
+                d->panelViews[panel]->setScreen(screen);
+                break;
+            }
+        }
+    }
 }
 
 int ShellCorona::screenForContainment(const Plasma::Containment *containment) const
