@@ -24,8 +24,6 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 ******************************************************************/
 
 #include "shutdowndlg.h"
-#include "plasma/framesvg.h"
-#include "plasma/theme.h"
 
 #include <QApplication>
 #include <QDesktopWidget>

@@ -4,7 +4,7 @@
 #include <kapplication.h>
 #include <kiconloader.h>
 #include <kworkspace.h>
-#include <Plasma/Theme>
+//#include <Plasma/Theme>
 int
 main(int argc, char *argv[])
 {
