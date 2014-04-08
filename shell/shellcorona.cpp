@@ -413,8 +413,17 @@ PanelView *ShellCorona::panelView(Plasma::Containment *containment) const
 
 void ShellCorona::screenAdded(QScreen *screen)
 {
-    DesktopView *view = new DesktopView(this, screen);
+    //FIXME: QScreen doesn't have any idea of "this qscreen is clone of this other one
+    //so this ultra inefficient heuristic has to stay until we have a slightly better api
+    foreach (QScreen *s, QGuiApplication::screens()) {
+        if (s->geometry().contains(screen->geometry(), false) &&
+            s->geometry().width() > screen->geometry().width() &&
+            s->geometry().height() > screen->geometry().height()) {
+            return;
+        }
+    }
 
+    DesktopView *view = new DesktopView(this, screen);
     connect(screen, &QObject::destroyed, [=](){
         d->views.removeAll(view);
         view->containment()->reactToScreenChange();
