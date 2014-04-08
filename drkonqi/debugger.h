@@ -80,7 +80,7 @@ public:
                              const QString & tempFile = QString());
 
 private:
-    static QList<Debugger> availableDebuggers(const char *regexp, const QString & backend);
+    static QList<Debugger> availableDebuggers(const QString &path, const QString & backend);
     KSharedConfig::Ptr m_config;
     QString m_backend;
 };

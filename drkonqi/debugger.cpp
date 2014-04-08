@@ -20,6 +20,7 @@
 #include <KConfigGroup>
 #include <KMacroExpander>
 #include <QDebug>
+#include <QDir>
 
 #include "crashedapplication.h"
 #include "drkonqi.h"
@@ -27,13 +28,13 @@
 //static
 QList<Debugger> Debugger::availableInternalDebuggers(const QString & backend)
 {
-    return availableDebuggers("debuggers/internal/*", backend);
+    return availableDebuggers("debuggers/internal", backend);
 }
 
 //static
 QList<Debugger> Debugger::availableExternalDebuggers(const QString & backend)
 {
-    return availableDebuggers("debuggers/external/*", backend);
+    return availableDebuggers("debuggers/external", backend);
 }
 
 bool Debugger::isValid() const
@@ -126,14 +127,15 @@ void Debugger::expandString(QString & str, ExpandStringUsage usage, const QStrin
 }
 
 //static
-QList<Debugger> Debugger::availableDebuggers(const char *regexp, const QString & backend)
+QList<Debugger> Debugger::availableDebuggers(const QString & path, const QString & backend)
 {
-    QStringList debuggers = QStandardPaths::locateAll(QStandardPaths::DataLocation, QLatin1String(regexp));
+    QString debuggerDir = QStandardPaths::locate(QStandardPaths::DataLocation, path, QStandardPaths::LocateDirectory);
+    QStringList debuggers = QDir(debuggerDir).entryList(QDir::Files);
 
     QList<Debugger> result;
     foreach (const QString & debuggerFile, debuggers) {
         Debugger debugger;
-        debugger.m_config = KSharedConfig::openConfig(debuggerFile);
+        debugger.m_config = KSharedConfig::openConfig(debuggerDir +'/'+ debuggerFile);
         if (debugger.supportedBackends().contains(backend)) {
             debugger.setUsedBackend(backend);
             result.append(debugger);
