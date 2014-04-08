@@ -44,7 +44,7 @@ CrashedApplication::~CrashedApplication()
 
 QString CrashedApplication::name() const
 {
-    return m_name;
+    return m_name.isEmpty() ? fakeExecutableBaseName() : m_name;
 }
 
 QFileInfo CrashedApplication::executable() const
