@@ -221,6 +221,7 @@ void DrKonqiDialog::buildDialogButtons()
     KGuiItem::assign(m_restartButton, restartItem);
     m_restartButton->setEnabled(!crashedApp->hasBeenRestarted() &&
                                  crashedApp->fakeExecutableBaseName() != QLatin1String("drkonqi"));
+    m_buttonBox->addButton(m_restartButton, QDialogButtonBox::ActionRole);
     connect(m_restartButton, SIGNAL(clicked(bool)), crashedApp, SLOT(restart()));
     connect(crashedApp, SIGNAL(restarted(bool)), this, SLOT(applicationRestarted(bool)));
 
