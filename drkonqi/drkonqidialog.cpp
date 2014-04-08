@@ -237,7 +237,7 @@ void DrKonqiDialog::addDebugger(AbstractDebuggerLauncher *launcher)
 {
     QAction *action = new QAction(QIcon::fromTheme("applications-development"),
                                   i18nc("@action:inmenu 1 is the debugger name",
-                                         "Debug in <application>%1</application>",
+                                         "Debug in %1",
                                          launcher->name()), m_debugMenu);
     m_debugMenu->addAction(action);
     connect(action, SIGNAL(triggered()), launcher, SLOT(start()));
