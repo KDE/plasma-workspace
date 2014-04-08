@@ -22,7 +22,7 @@
 #include <kprotocolmanager.h>
 #include <kio/filejob.h>
 #include <kio/job.h>
-#include <klocale.h>
+#include <KLocalizedString>
 
 #include "debug.h"
 
