@@ -131,6 +131,7 @@ int main(int argc, char* argv[])
     qa.setQuitOnLastWindowClosed(false);
 
     DrKonqiDialog *w = new DrKonqiDialog();
+    QObject::connect(w, SIGNAL(rejected()), &qa, SLOT(quit()));
     w->show();
     int ret = qa.exec();
 
