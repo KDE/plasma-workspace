@@ -469,8 +469,13 @@ void ShellCorona::screenAdded(QScreen *screen)
 
     view->setContainment(containment);
 
-    connect(screen, SIGNAL(destroyed(QObject*)), SLOT(screenRemoved(QObject*)));
+   // connect(screen, SIGNAL(destroyed(QObject*)), SLOT(screenRemoved(QObject*)));
     view->show();
+
+    //were there any panels for this screen before it popped up?
+    if (!d->waitingPanels.isEmpty()) {
+        d->waitingPanelsTimer.start();
+    }
 
     emit availableScreenRectChanged();
     emit availableScreenRegionChanged();
@@ -497,27 +502,17 @@ Plasma::Containment* ShellCorona::createContainmentForActivity(const QString& ac
     return containment;
 }
 
-void ShellCorona::screenRemoved(QObject *screen)
-{
-    //move all panels on a deleted screen to the primary screen
-    //FIXME: this will break when a second screen is added again
-    //as in plasma1, panel should be hidden, panelView deleted.
-    //possibly similar to exportLayout/importLayout of Activities
-    foreach (PanelView *view, d->panelViews) {
-        view->setScreen(QGuiApplication::primaryScreen());
-        if (view->containment()) {
-            view->containment()->reactToScreenChange();
-        }
-    }
-
-    emit availableScreenRectChanged();
-    emit availableScreenRegionChanged();
-
-}
-
 void ShellCorona::createWaitingPanels()
 {
+    QList<Plasma::Containment *> stillWaitingPanels;
+
     foreach (Plasma::Containment *cont, d->waitingPanels) {
+        //ignore non existing (yet?) screens
+        if (cont->lastScreen() > (QGuiApplication::screens().size() - 1)) {
+            stillWaitingPanels << cont;
+            continue;
+        }
+
         d->panelViews[cont] = new PanelView(this);
 
         //keep screen suggestions within bounds of screens we actually have
@@ -526,14 +521,22 @@ void ShellCorona::createWaitingPanels()
         d->panelViews[cont]->setScreen(QGuiApplication::screens()[screen]);
         d->panelViews[cont]->setContainment(cont);
         cont->reactToScreenChange();
-        connect(cont, &PanelView::destroyed,
+        connect(cont, &QObject::destroyed,
                 [=](QObject *obj) {
                     d->panelViews.remove(cont);
                     emit availableScreenRectChanged();
                     emit availableScreenRegionChanged();
                 });
+
+        connect(QGuiApplication::screens()[screen], &QObject::destroyed,
+                [=](QObject *obj) {
+                    d->panelViews[cont]->deleteLater();
+                    d->waitingPanels << cont;
+                    d->panelViews.remove(cont);
+                });
     }
     d->waitingPanels.clear();
+    d->waitingPanels << stillWaitingPanels;
     emit availableScreenRectChanged();
     emit availableScreenRegionChanged();
 }

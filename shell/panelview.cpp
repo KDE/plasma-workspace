@@ -83,20 +83,15 @@ PanelView::PanelView(ShellCorona *corona, QWindow *parent)
     //Screen management
     connect(this, &QWindow::screenChanged,
             this, &PanelView::screenChangedProxy);
-    connect(this, &QWindow::screenChanged,
-            this, &PanelView::positionPanel);
-    connect(screen(), &QScreen::geometryChanged,
-            this, &PanelView::positionPanel);
-    connect(this, &PlasmaQuick::View::locationChanged,
-            &m_positionPaneltimer, [=] () {
-                m_positionPaneltimer.start();
-            });
-    connect(this, &PlasmaQuick::View::containmentChanged,
-            this, &PanelView::positionPanel);
-    connect(this, &PlasmaQuick::View::containmentChanged,
-            this, [=] () {
-                m_positionPaneltimer.start();
-            });
+    //cannot use the new syntax as start() is overloaded
+    connect(this, SIGNAL(screenChanged(QScreen *)),
+            &m_positionPaneltimer, SLOT(start()));
+    connect(screen(), SIGNAL(geometryChanged(QRect &)),
+            &m_positionPaneltimer, SLOT(start()));
+    connect(this, SIGNAL(locationChanged(Plasma::Types::Location)),
+            &m_positionPaneltimer, SLOT(start()));
+    connect(this, SIGNAL(containmentChanged()),
+            &m_positionPaneltimer, SLOT(start));
 
 
 

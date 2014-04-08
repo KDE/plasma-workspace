@@ -100,7 +100,6 @@ public Q_SLOTS:
 
 protected Q_SLOTS:
     void screenAdded(QScreen *screen);
-    void screenRemoved(QObject *screen);
 
     /**
      * Loads the layout and performs the needed checks
