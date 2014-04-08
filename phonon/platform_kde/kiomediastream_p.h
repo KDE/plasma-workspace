@@ -21,57 +21,54 @@
 #define KIOMEDIASTREAM_P_H
 
 #include "kiomediastream.h"
-#include <kurl.h>
 #include <kio/jobclasses.h>
 
-namespace Phonon
-{
+namespace Phonon {
 
 class KioMediaStreamPrivate
 {
     Q_DECLARE_PUBLIC(KioMediaStream)
-    protected:
-        KioMediaStream *q_ptr;
+protected:
+    KioMediaStream *q_ptr;
 
-        KioMediaStreamPrivate(const KUrl &u)
-            : url(u),
-            endOfDataSent(false),
-            seeking(false),
-            reading(false),
-            open(false),
-            seekPosition(0),
-            kiojob(0)
-        {
+    KioMediaStreamPrivate(const QUrl &u)
+        : url(u),
+          endOfDataSent(false),
+          seeking(false),
+          reading(false),
+          open(false),
+          seekPosition(0),
+          kiojob(0)
+    {
+    }
+
+    ~KioMediaStreamPrivate()
+    {
+        if (kiojob) {
+            kiojob->kill();
+            kiojob = 0;
         }
+    }
 
-        ~KioMediaStreamPrivate()
-        {
-            if (kiojob) {
-                kiojob->kill();
-                kiojob = 0;
-            }
-        }
+    void _k_bytestreamNeedData();
+    void _k_bytestreamEnoughData();
+    void _k_bytestreamData(KIO::Job *, const QByteArray &);
+    void _k_bytestreamResult(KJob *);
+    void _k_bytestreamTotalSize(KJob *, qulonglong);
+    void _k_bytestreamSeekStream(qint64);
+    void _k_bytestreamFileJobOpen(KIO::Job *);
+    void _k_bytestreamSeekDone(KIO::Job *, KIO::filesize_t);
+    void _k_read();
 
-        void _k_bytestreamNeedData();
-        void _k_bytestreamEnoughData();
-        void _k_bytestreamData(KIO::Job *, const QByteArray &);
-        void _k_bytestreamResult(KJob *);
-        void _k_bytestreamTotalSize(KJob *, qulonglong);
-        void _k_bytestreamSeekStream(qint64);
-        void _k_bytestreamFileJobOpen(KIO::Job *);
-        void _k_bytestreamSeekDone(KIO::Job *, KIO::filesize_t);
-        void _k_read();
-
-        KUrl url;
-        bool endOfDataSent;
-        bool seeking;
-        bool reading;
-        bool open;
-        qint64 seekPosition;
-        KIO::SimpleJob *kiojob;
+    QUrl url;
+    bool endOfDataSent;
+    bool seeking;
+    bool reading;
+    bool open;
+    qint64 seekPosition;
+    KIO::SimpleJob *kiojob;
 };
 
 } // namespace Phonon
 
 #endif // KIOMEDIASTREAM_P_H
-// vim: sw=4 sts=4 et tw=100

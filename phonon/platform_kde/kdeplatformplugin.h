@@ -25,50 +25,37 @@
 #include <QtCore/QObject>
 #include <kservice.h>
 
-namespace Phonon
-{
+namespace Phonon {
 
 class DeviceListing;
 
 class KdePlatformPlugin : public QObject, public PlatformPlugin
 {
-	Q_PLUGIN_METADATA(IID "3PlatformPlugin.phonon.kde.org" FILE "phononbackend.json")
+    Q_PLUGIN_METADATA(IID "3PlatformPlugin.phonon.kde.org" FILE "phononbackend.json")
     Q_INTERFACES(Phonon::PlatformPlugin)
     Q_OBJECT
-    public:
-        KdePlatformPlugin();
-        ~KdePlatformPlugin();
+public:
+    KdePlatformPlugin();
+    ~KdePlatformPlugin();
 
-        AbstractMediaStream *createMediaStream(const QUrl &url, QObject *parent);
+    AbstractMediaStream *createMediaStream(const QUrl &url, QObject *parent);
 
-        QIcon icon(const QString &name) const;
-        void notification(const char *notificationName, const QString &text,
-                const QStringList &actions, QObject *receiver,
-                const char *actionSlot) const;
-        QString applicationName() const;
-        QObject *createBackend();
-        QObject *createBackend(const QString &library, const QString &version);
-        bool isMimeTypeAvailable(const QString &mimeType) const;
-        void saveVolume(const QString &outputName, qreal volume);
-        qreal loadVolume(const QString &outputName) const;
+    QIcon icon(const QString &name) const;
+    void notification(const char *notificationName, const QString &text,
+                      const QStringList &actions, QObject *receiver,
+                      const char *actionSlot) const;
+    QString applicationName() const;
+    QObject *createBackend();
+    QObject *createBackend(const QString &library, const QString &version);
+    bool isMimeTypeAvailable(const QString &mimeType) const;
+    void saveVolume(const QString &outputName, qreal volume);
+    qreal loadVolume(const QString &outputName) const;
 
-        virtual QList<int> objectDescriptionIndexes(ObjectDescriptionType type) const;
-        virtual QHash<QByteArray, QVariant> objectDescriptionProperties(ObjectDescriptionType type, int index) const;
+    virtual QList<int> objectDescriptionIndexes(ObjectDescriptionType type) const;
+    virtual QHash<QByteArray, QVariant> objectDescriptionProperties(ObjectDescriptionType type, int index) const;
 
-        virtual DeviceAccessList deviceAccessListFor(const AudioOutputDevice &) const;
-        virtual DeviceAccessList deviceAccessListFor(const AudioCaptureDevice &) const;
-        virtual DeviceAccessList deviceAccessListFor(const VideoCaptureDevice &) const;
-
-    signals:
-        void objectDescriptionChanged(ObjectDescriptionType);
-
-    private:
-        QObject *createBackend(KService::Ptr newService);
-        void ensureDeviceListingObject() const;
-
-        DeviceAccessList deviceAccessListFor(const QVariant&, const QVariant&, const QVariant&) const;
-
-        mutable DeviceListing *m_devList;
+signals:
+    void objectDescriptionChanged(ObjectDescriptionType);
 };
 
 } // namespace Phonon
