@@ -147,7 +147,7 @@ void DrKonqiDialog::buildIntroWidget()
 
     ui.detailsLabel->setText(xi18nc("@info Note the time information is divided into date and time parts",
                                             "<para>Executable: <application>%1"
-                                            "</application> PID: <numid>%2</numid> Signal: %3 (%4) "
+                                            "</application> PID: %2 Signal: %3 (%4) "
                                             "Time: %5 %6</para>",
                                              crashedApp->fakeExecutableBaseName(),
                                              crashedApp->pid(),
