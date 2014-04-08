@@ -91,7 +91,7 @@ PanelView::PanelView(ShellCorona *corona, QWindow *parent)
     connect(this, SIGNAL(locationChanged(Plasma::Types::Location)),
             &m_positionPaneltimer, SLOT(start()));
     connect(this, SIGNAL(containmentChanged()),
-            &m_positionPaneltimer, SLOT(start));
+            &m_positionPaneltimer, SLOT(start()));
 
 
 
