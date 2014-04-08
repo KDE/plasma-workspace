@@ -1,0 +1,26 @@
+[Current thread is 0 (process 12545)]
+
+Thread 1 (Thread 0x7fddaac76740 (LWP 12545)):
+#0  0x00007fdda985f5b5 in waitpid () from /lib/libpthread.so.0
+#1  0x00007fddaa7e660d in KCrash::startDirectly (argv=0x7fffb2db2800) at /home/gkiagia/kde/src/KDE/kdelibs/kdeui/util/kcrash.cpp:436
+#2  0x00007fddaa7e7581 in KCrash::defaultCrashHandler (sig=11) at /home/gkiagia/kde/src/KDE/kdelibs/kdeui/util/kcrash.cpp:340
+#3  <signal handler called>
+#5  0x00007f57c1a6e4b5 in *__GI_raise (sig=<value optimized out>) at ../nptl/sysdeps/unix/sysv/linux/raise.c:64
+#6  0x00007f57c1a71f50 in *__GI_abort () at abort.c:92
+#7  0x00007f57c3de6e0d in qt_message_output (msgType=QtFatalMsg, buf=0x22c9138 "ASSERT: \"!(*watched)\" in file /home/w00t/kdesvn/qt-copy/src/gui/widgets/qmenu.cpp, line 997") at /home/w00t/kdesvn/qt-copy/src/corelib/global/qglobal.cpp:2248
+#8  0x00007f57c3de700f in qt_message (msgType=QtFatalMsg, msg=0x7f57c3fa9f90 "ASSERT: \"%s\" in file %s, line %d", ap=0x7fff621502b0) at
+/home/w00t/kdesvn/qt-copy/src/corelib/global/qglobal.cpp:2294
+#9  0x00007f57c3de787c in qFatal (msg=0x7f57c3fa9f90 "ASSERT: \"%s\" in file %s, line %d") at /home/w00t/kdesvn/qt-copy/src/corelib/global/qglobal.cpp:2477
+#10 0x00007f57c3de699f in qt_assert (assertion=0x7f57c3653b74 "!(*watched)", file=0x7f57c3653b40 "/home/w00t/kdesvn/qt-copy/src/gui/widgets/qmenu.cpp", line=997) at /home/w00t/kdesvn/qt-copy/src/corelib/global/qglobal.cpp:2011
+#11 0x00007f57c32fb473 in ExceptionGuard (this=0x7fff62150420, w=0x202e2c1) at /home/w00t/kdesvn/qt-copy/src/gui/widgets/qmenu.cpp:997
+#12 0x00007f57c32f07fa in QMenuPrivate::activateCausedStack (this=0x202e0b0, causedStack=..., action=0x202ec60, action_e=QAction::Hover, self=true) at /home/w00t/kdesvn/qt-copy/src/gui/widgets/qmenu.cpp:1006
+#13 0x00007f57c32f0d23 in QMenuPrivate::activateAction (this=0x202e0b0, action=0x202ec60, action_e=QAction::Hover, self=true) at /home/w00t/kdesvn/qt-copy/src/gui/widgets/qmenu.cpp:1103
+#14 0x00007f57c32eea8c in QMenuPrivate::setCurrentAction (this=0x202e0b0, action=0x202ec60, popup=96, reason=QMenuPrivate::SelectedFromElsewhere, activateFirst=false) at /home/w00t/kdesvn/qt-copy/src/gui/widgets/qmenu.cpp:571
+#15 0x00007f57c32f7c18 in QMenu::mouseMoveEvent (this=0x202e070, e=0x7fff62151190) at /home/w00t/kdesvn/qt-copy/src/gui/widgets/qmenu.cpp:2824
+#16 0x00007f57c2dc4c19 in QWidget::event (this=0x202e070, event=0x7fff62151190) at /home/w00t/kdesvn/qt-copy/src/gui/kernel/qwidget.cpp:7999
+#17 0x00007f57c32f5c12 in QMenu::event (this=0x202e070, e=0x7fff62151190) at /home/w00t/kdesvn/qt-copy/src/gui/widgets/qmenu.cpp:2428
+#18 0x00007f57bc81d605 in Oxygen::MenuBarDataV1::eventFilter (this=0x20ccc00, object=0x202e070, event=0x7fff62151190)     at /home/w00t/kdesvn/kdebase/runtime/kstyles/oxygen/animations/oxygenmenubardata.cpp:83
+#19 0x00007f57c3f1f5db in QCoreApplicationPrivate::sendThroughObjectEventFilters (this=0x1c95380, receiver=0x202e070, event=0x7fff62151190)     at /home/w00t/kdesvn/qt-copy/src/corelib/kernel/qcoreapplication.cpp:819
+#20 0x00007f57c2d51785 in QApplicationPrivate::notify_helper (this=0x1c95380, receiver=0x202e070, e=0x7fff62151190) at /home/w00t/kdesvn/qt-copy/src/gui/kernel/qapplication.cpp:4296
+#21 0x00007f57c2d4f656 in QApplication::notify (this=0x7fff62157f70, receiver=0x202e070, e=0x7fff62151190) at /home/w00t/kdesvn/qt-copy/src/gui/kernel/qapplication.cpp:3865
+#22 0x00007f57c580e9f6 in KApplication::notify (this=0x7fff62157f70, receiver=0x202e070, event=0x7fff62151190) at /home/w00t/kdesvn/kdelibs/kdeui/kernel/kapplication.cpp:302

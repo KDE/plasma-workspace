@@ -1,0 +1,12 @@
+[Current thread is 0 (process 12545)]
+
+Thread 1 (Thread 0x7fddaac76740 (LWP 12545)):
+#0  0x00007fdda985f5b5 in waitpid () from /lib/libpthread.so.0
+#1  0x00007fddaa7e660d in KCrash::startDirectly (argv=0x7fffb2db2800) at /home/gkiagia/kde/src/KDE/kdelibs/kdeui/util/kcrash.cpp:436
+#2  0x00007fddaa7e7581 in KCrash::defaultCrashHandler (sig=11) at /home/gkiagia/kde/src/KDE/kdelibs/kdeui/util/kcrash.cpp:340
+#3  <signal handler called>
+#4  0x00007f44eff82065 in *__GI_raise (sig=<value optimized out>) at ../nptl/sysdeps/unix/sysv/linux/raise.c:64
+#5  0x00007f44eff85153 in *__GI_abort () at abort.c:88
+#6  0x00007f44f1b6d775 in qt_message_output (msgType=QtFatalMsg, buf=<value optimized out>) at global/qglobal.cpp:2017
+#7  0x00007f44f1b6d8bb in qFatal (msg=<value optimized out>) at global/qglobal.cpp:2216
+#8  0x0000000000402815 in main ()

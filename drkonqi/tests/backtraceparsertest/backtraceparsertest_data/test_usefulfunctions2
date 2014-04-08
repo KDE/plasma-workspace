@@ -1,0 +1,23 @@
+[Current thread is 0 (process 12545)]
+
+Thread 1 (Thread 0x7fddaac76740 (LWP 12545)):
+#0  0x00007fdda985f5b5 in waitpid () from /lib/libpthread.so.0
+#1  0x00007fddaa7e660d in KCrash::startDirectly (argv=0x7fffb2db2800) at /home/gkiagia/kde/src/KDE/kdelibs/kdeui/util/kcrash.cpp:436
+#2  0x00007fddaa7e7581 in KCrash::defaultCrashHandler (sig=11) at /home/gkiagia/kde/src/KDE/kdelibs/kdeui/util/kcrash.cpp:340
+#3  <signal handler called>
+#6  0x00000000 in ?? ()
+#6  0x0824add1 in QMap<void const*, void*>::node_create (this=0xbd74808,key=0x0) at /usr/include/qt4/QtCore/qmap.h:420
+#7  QMap<void const*, void*>::detach_helper (this=0xbd74808, key=0x0) at /usr/include/qt4/QtCore/qmap.h:708
+#8  QMap<void const*, void*>::detach (this=0xbd74808, key=0x0) at /usr/include/qt4/QtCore/qmap.h:172
+#9  QMap<void const*, void*>::remove (this=0xbd74808, key=0x0) at /usr/include/qt4/QtCore/qmap.h:609
+#10 Digikam::Album::removeExtraData (this=0xbd74808, key=0x0) at /build/buildd/digikam-1.0.0/digikam/album.cpp:215
+#11 0x0833cfb6 in ~TreeAlbumItem (this=0xc098ea0, __in_chrg=<value optimized out>) at /build/buildd/digikam-1.0.0/digikam/treefolderitem.cpp:160
+#12 0x0833cff8 in ~TreeAlbumCheckListItem (this=0xc098ea0, __in_chrg=<value optimized out>) at /build/buildd/digikam-1.0.0/digikam/treefolderitem.cpp:191
+#13 0x02ecff6c in ~QTreeWidgetItem (this=0xc098cd8, __in_chrg=<value optimized out>) at itemviews/qtreewidget.cpp:1514
+#14 0x0833cff8 in ~TreeAlbumCheckListItem (this=0xc098cd8, __in_chrg=<valuenoptimized out>) at /build/buildd/digikam-1.0.0/digikam/treefolderitem.cpp:191
+#15 0x02ecff6c in ~QTreeWidgetItem (this=0xc098758, __in_chrg=<value optimized out>) at itemviews/qtreewidget.cpp:1514
+#16 0x0833cff8 in ~TreeAlbumCheckListItem (this=0xc098758, __in_chrg=<value optimized out>) at /build/buildd/digikam-1.0.0/digikam/treefolderitem.cpp:191
+#17 0x02ecff6c in ~QTreeWidgetItem (this=0xc0966e8, __in_chrg=<value optimized out>) at itemviews/qtreewidget.cpp:1514
+#18 0x0833cff8 in ~TreeAlbumCheckListItem (this=0xc0966e8, __in_chrg=<value optimized out>) at /build/buildd/digikam-1.0.0/digikam/treefolderitem.cpp:191
+#19 0x02ecff6c in ~QTreeWidgetItem (this=0xc08ec10, __in_chrg=<value optimized out>) at itemviews/qtreewidget.cpp:1514
+#95 0x083bcb2b in main (argc=5, argv=0xbfede9b4) at /build/buildd/digikam-1.0.0/digikam/main.cpp:195

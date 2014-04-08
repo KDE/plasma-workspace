@@ -1,0 +1,78 @@
+[Current thread is 0 (process 12545)]
+
+Thread 1 (Thread 0x7fddaac76740 (LWP 12545)):
+#0  0x00007fdda985f5b5 in waitpid () from /lib/libpthread.so.0
+#1  0x00007fddaa7e660d in KCrash::startDirectly (argv=0x7fffb2db2800) at /home/gkiagia/kde/src/KDE/kdelibs/kdeui/util/kcrash.cpp:436
+#2  0x00007fddaa7e7581 in KCrash::defaultCrashHandler (sig=11) at /home/gkiagia/kde/src/KDE/kdelibs/kdeui/util/kcrash.cpp:340
+#3  <signal handler called>
+#6  0x00000000 in ?? ()
+#7  0xb74b192b in QGLWidget::glDraw (this=0xad928a8) at /local/src/qt-x11-opensource-src-4.5.1/src/opengl/qgl.cpp:3458
+#8  0xb74b041e in QGLWidget::paintEvent (this=0xad928a8) at /local/src/qt-x11-opensource-src-4.5.1/src/opengl/qgl.cpp:3261
+#9  0xb5b8d942 in QWidget::event (this=0xad928a8, event=0xbffe9924) at /local/src/qt-x11-opensource-src-4.5.1/src/gui/kernel/qwidget.cpp:7659
+#10 0xb74b36bc in QGLWidget::event (this=0xad928a8, e=0xbffe9924) at /local/src/qt-x11-opensource-src-4.5.1/src/opengl/qgl.cpp:3244
+#11 0xb5b3827c in QApplicationPrivate::notify_helper (this=0x8088b68, receiver=0xad928a8, e=0xbffe9924) at /local/src/qt-x11-opensource-src-4.5.1/src/gui/kernel/qapplication.cpp:4057
+#12 0xb5b3fa54 in QApplication::notify (this=0xbffec4bc, receiver=0xad928a8, e=0xbffe9924) at /local/src/qt-x11-opensource-src-4.5.1/src/gui/kernel/qapplication.cpp:4022
+#13 0xb69ee93b in KApplication::notify (this=0xbffec4bc, receiver=0xad928a8, event=0xbffe9924) at /local/svn/kde/trunk/KDE/kdelibs/kdeui/kernel/kapplication.cpp:307
+#14 0xb7fcddcb in QCoreApplication::notifyInternal (this=0xbffec4bc, receiver=0xad928a8, event=0xbffe9924) at /local/src/qt-x11-opensource-src-4.5.1/src/corelib/kernel/qcoreapplication.cpp:610
+#15 0xb5b96205 in QCoreApplication::sendSpontaneousEvent (event=<value optimized out>, receiver=<value optimized out>)
+    at ../../include/QtCore/../../../../src/qt-x11-opensource-src-4.5.1/src/corelib/kernel/qcoreapplication.h:216
+#16 QWidgetPrivate::drawWidget (event=<value optimized out>, receiver=<value optimized out>) at /local/src/qt-x11-opensource-src-4.5.1/src/gui/kernel/qwidget.cpp:5052
+#17 0xb5d5133d in QWidgetPrivate::repaint_sys (this=0xad928f0, rgn=...) at /local/src/qt-x11-opensource-src-4.5.1/src/gui/painting/qbackingstore.cpp:1536
+#18 0xb5b86d5e in QWidgetPrivate::syncBackingStore (this=0xad928f0) at /local/src/qt-x11-opensource-src-4.5.1/src/gui/kernel/qwidget.cpp:1599
+#19 0xb5b8e123 in QWidget::event (this=0xad928a8, event=0x874e6b0) at /local/src/qt-x11-opensource-src-4.5.1/src/gui/kernel/qwidget.cpp:7799
+#20 0xb74b36bc in QGLWidget::event (this=0xad928a8, e=0x874e6b0) at /local/src/qt-x11-opensource-src-4.5.1/src/opengl/qgl.cpp:3244
+#21 0xb5b3827c in QApplicationPrivate::notify_helper (this=0x8088b68, receiver=0xad928a8, e=0x874e6b0) at /local/src/qt-x11-opensource-src-4.5.1/src/gui/kernel/qapplication.cpp:4057
+#22 0xb5b3fa54 in QApplication::notify (this=0xbffec4bc, receiver=0xad928a8, e=0x874e6b0) at /local/src/qt-x11-opensource-src-4.5.1/src/gui/kernel/qapplication.cpp:4022
+#23 0xb69ee93b in KApplication::notify (this=0xbffec4bc, receiver=0xad928a8, event=0x874e6b0) at /local/svn/kde/trunk/KDE/kdelibs/kdeui/kernel/kapplication.cpp:307
+#24 0xb7fcddcb in QCoreApplication::notifyInternal (this=0xbffec4bc, receiver=0xad928a8, event=0x874e6b0) at /local/src/qt-x11-opensource-src-4.5.1/src/corelib/kernel/qcoreapplication.cpp:610
+#25 0xb7fce898 in QCoreApplication::sendEvent (event=<value optimized out>, receiver=<value optimized out>)
+    at ../../include/QtCore/../../../../src/qt-x11-opensource-src-4.5.1/src/corelib/kernel/qcoreapplication.h:213
+#26 QCoreApplicationPrivate::sendPostedEvents (event=<value optimized out>, receiver=<value optimized out>) at /local/src/qt-x11-opensource-src-4.5.1/src/corelib/kernel/qcoreapplication.cpp:1247
+#27 0xb7fcea6d in QCoreApplication::sendPostedEvents (receiver=0x0, event_type=0) at /local/src/qt-x11-opensource-src-4.5.1/src/corelib/kernel/qcoreapplication.cpp:1140
+#28 0xb7ff952f in QCoreApplication::sendPostedEvents () at ../../include/QtCore/../../../../src/qt-x11-opensource-src-4.5.1/src/corelib/kernel/qcoreapplication.h:218
+#29 postEventSourceDispatch () at /local/src/qt-x11-opensource-src-4.5.1/src/corelib/kernel/qeventdispatcher_glib.cpp:209
+#30 0xb56839c8 in g_main_context_dispatch () from /usr/lib/libglib-2.0.so.0
+#31 0xb5687083 in ?? () from /usr/lib/libglib-2.0.so.0
+#32 0xb5687241 in g_main_context_iteration () from /usr/lib/libglib-2.0.so.0
+#33 0xb7ff915c in QEventDispatcherGlib::processEvents (this=0x80506a8, flags=...) at /local/src/qt-x11-opensource-src-4.5.1/src/corelib/kernel/qeventdispatcher_glib.cpp:324
+#34 0xb5bd7845 in QGuiEventDispatcherGlib::processEvents (this=0x80506a8, flags=...) at /local/src/qt-x11-opensource-src-4.5.1/src/gui/kernel/qguieventdispatcher_glib.cpp:202
+#35 0xb7fcc359 in QEventLoop::processEvents (this=0xbffea210, flags=...) at /local/src/qt-x11-opensource-src-4.5.1/src/corelib/kernel/qeventloop.cpp:149
+#36 0xb7fcc7a2 in QEventLoop::exec (this=0xbffea210, flags=...) at /local/src/qt-x11-opensource-src-4.5.1/src/corelib/kernel/qeventloop.cpp:200
+#37 0xb6057bb3 in QDialog::exec (this=0xbffea250) at /local/src/qt-x11-opensource-src-4.5.1/src/gui/dialogs/qdialog.cpp:498
+#38 0xad36ef3c in Glsl::slotActivate (this=0xa47fc40) at /local/svn/kde/trunk/koffice/krita/plugins/extensions/glsl/glsl.cc:71
+#39 0xad36efb5 in Glsl::qt_metacall (this=0xa47fc40, _c=QMetaObject::InvokeMetaMethod, _id=4, _a=0xbffea3e8) at /local/build/koffice/krita/plugins/extensions/glsl/glsl.moc:68
+#40 0xb7fe3ef8 in QMetaObject::activate (sender=0xa4825d8, from_signal_index=5, to_signal_index=6, argv=0xbffea3e8) at /local/src/qt-x11-opensource-src-4.5.1/src/corelib/kernel/qobject.cpp:3111
+#41 0xb7fe4388 in QMetaObject::activate (sender=0xa4825d8, m=0xb63cc108, from_local_signal_index=1, to_local_signal_index=2, argv=0xbffea3e8)
+    at /local/src/qt-x11-opensource-src-4.5.1/src/corelib/kernel/qobject.cpp:3205
+#42 0xb5b31b91 in QAction::triggered (this=0xa4825d8, _t1=false) at .moc/release-shared/moc_qaction.cpp:236
+#43 0xb5b33112 in QAction::activate (this=0xa4825d8, event=QAction::Trigger) at /local/src/qt-x11-opensource-src-4.5.1/src/gui/kernel/qaction.cpp:1160
+#44 0xb5fb25cc in QMenuPrivate::activateCausedStack (this=0xa5b6370, causedStack=..., action=0xa4825d8, action_e=QAction::Trigger, self=true)
+    at /local/src/qt-x11-opensource-src-4.5.1/src/gui/widgets/qmenu.cpp:967
+#45 0xb5fb8ceb in QMenuPrivate::activateAction (this=0xa5b6370, action=0xa4825d8, action_e=QAction::Trigger, self=<value optimized out>)
+    at /local/src/qt-x11-opensource-src-4.5.1/src/gui/widgets/qmenu.cpp:1060
+#46 0xb5fb98b7 in QMenu::mouseReleaseEvent (this=0xa5ae708, e=0xbffeac44) at /local/src/qt-x11-opensource-src-4.5.1/src/gui/widgets/qmenu.cpp:2254
+#47 0xb6ac8fc2 in KMenu::mouseReleaseEvent (this=0xa5ae708, e=0xbffeac44) at /local/svn/kde/trunk/KDE/kdelibs/kdeui/widgets/kmenu.cpp:456
+#48 0xb5b8db77 in QWidget::event (this=0xa5ae708, event=0xbffeac44) at /local/src/qt-x11-opensource-src-4.5.1/src/gui/kernel/qwidget.cpp:7521
+#49 0xb5fbbbbc in QMenu::event (this=0xa5ae708, e=0xbffeac44) at /local/src/qt-x11-opensource-src-4.5.1/src/gui/widgets/qmenu.cpp:2353
+#50 0xb5b3827c in QApplicationPrivate::notify_helper (this=0x8088b68, receiver=0xa5ae708, e=0xbffeac44) at /local/src/qt-x11-opensource-src-4.5.1/src/gui/kernel/qapplication.cpp:4057
+#51 0xb5b4032b in QApplication::notify (this=0xbffec4bc, receiver=0xa5ae708, e=0xbffeac44) at /local/src/qt-x11-opensource-src-4.5.1/src/gui/kernel/qapplication.cpp:3759
+#52 0xb69ee93b in KApplication::notify (this=0xbffec4bc, receiver=0xa5ae708, event=0xbffeac44) at /local/svn/kde/trunk/KDE/kdelibs/kdeui/kernel/kapplication.cpp:307
+#53 0xb7fcddcb in QCoreApplication::notifyInternal (this=0xbffec4bc,receiver=0xa5ae708, event=0xbffeac44) at /local/src/qt-x11-opensource-src-4.5.1/src/corelib/kernel/qcoreapplication.cpp:610
+#54 0xb5b3f3ae in QCoreApplication::sendSpontaneousEvent (event=<valueoptimized out>, receiver=<value optimized out>)
+    at ../../include/QtCore/../../../../src/qt-x11-opensource-src-4.5.1/src/corelib/kernel/qcoreapplication.h:216
+#55 QApplicationPrivate::sendMouseEvent (event=<value optimized out>,receiver=<value optimized out>) at /local/src/qt-x11-opensource-src-4.5.1/src/gui/kernel/qapplication.cpp:2925
+#56 0xb5bae8c0 in QETWidget::translateMouseEvent (this=0xa5ae708, event=0xbffec1a0) at /local/src/qt-x11-opensource-src-4.5.1/src/gui/kernel/qapplication_x11.cpp:4382
+#57 0xb5bad8cc in QApplication::x11ProcessEvent (this=0xbffec4bc,event=0xbffec1a0) at /local/src/qt-x11-opensource-src-4.5.1/src/gui/kernel/qapplication_x11.cpp:3444
+#58 0xb5bd8112 in x11EventSourceDispatch (s=0x808ba38, callback=0,user_data=0x0) at /local/src/qt-x11-opensource-src-4.5.1/src/gui/kernel/qguieventdispatcher_glib.cpp:146
+#59 0xb56839c8 in g_main_context_dispatch () from /usr/lib/libglib-2.0.so.0
+#60 0xb5687083 in ?? () from /usr/lib/libglib-2.0.so.0
+#61 0xb5687241 in g_main_context_iteration () from /usr/lib/libglib-2.0.so.0
+#62 0xb7ff915c in QEventDispatcherGlib::processEvents (this=0x80506a8,flags=...) at /local/src/qt-x11-opensource-src-4.5.1/src/corelib/kernel/qeventdispatcher_glib.cpp:324
+#63 0xb5bd7845 in QGuiEventDispatcherGlib::processEvents (this=0x80506a8,flags=...) at /local/src/qt-x11-opensource-src-4.5.1/src/gui/kernel/qguieventdispatcher_glib.cpp:202
+#64 0xb7fcc359 in QEventLoop::processEvents (this=0xbffec444, flags=...) at /local/src/qt-x11-opensource-src-4.5.1/src/corelib/kernel/qeventloop.cpp:149
+#65 0xb7fcc7a2 in QEventLoop::exec (this=0xbffec444, flags=...) at /local/src/qt-x11-opensource-src-4.5.1/src/corelib/kernel/qeventloop.cpp:200
+#66 0xb7fceb2f in QCoreApplication::exec () at /local/src/qt-x11-opensource-src-4.5.1/src/corelib/kernel/qcoreapplication.cpp:888
+#67 0xb5b380f7 in QApplication::exec () at /local/src/qt-x11-opensource-src-4.5.1/src/gui/kernel/qapplication.cpp:3526
+#68 0xb80c5591 in kdemain (argc=1, argv=0xbffec5b4) at /local/svn/kde/trunk/koffice/krita/main.cc:44
+#69 0x0804887b in main (argc=1, argv=0xbffec5b4) at /local/build/koffice/krita/krita_dummy.cpp:3
+

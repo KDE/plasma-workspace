@@ -1,0 +1,17 @@
+[Current thread is 0 (process 12545)]
+
+Thread 1 (Thread 0x7fddaac76740 (LWP 12545)):
+#0  0x00007fdda985f5b5 in waitpid () from /lib/libpthread.so.0
+#1  0x00007fddaa7e660d in KCrash::startDirectly (argv=0x7fffb2db2800) at /home/gkiagia/kde/src/KDE/kdelibs/kdeui/util/kcrash.cpp:436
+#2  0x00007fddaa7e7581 in KCrash::defaultCrashHandler (sig=11) at /home/gkiagia/kde/src/KDE/kdelibs/kdeui/util/kcrash.cpp:340
+#3  <signal handler called>
+#6  0x00471f42 in qt_meta_stringdata_QAnimationGroup () from /usr/lib/libQtCore.so.4
+#7  0x0087f7fc in __dynamic_cast () from /usr/lib/libstdc++.so.6
+#8  0x0521ae26 in KarbonPart::addShape(KoShape*) () from /usr/lib/libkarbonui.so.6
+#9  0x0437c9b0 in KoShapeDeleteCommand::undo() () from /usr/lib/libflake.so.6 
+#10 0x089e4a78 in QUndoCommand::undo (this=0xa70abb0) at util/qundostack.cpp:226
+#11 0x0437c562 in KoShapeCreateCommand::undo() () from /usr/lib/libflake.so.6
+#12 0x089e6147 in QUndoStack::undo (this=0x9e107d8) at util/qundostack.cpp:659
+#13 0x08a0d703 in QUndoStack::qt_metacall (this=0x9e107d8, _c=QMetaObject::InvokeMetaMethod, _id=8, _a=0xbfba6d28) at .moc/release-shared/moc_qundostack.cpp:105
+#14 0x011b5482 in KUndoStack::qt_metacall (this=0x9e107d8, _c=QMetaObject::InvokeMetaMethod, _id=12, _a=0xbfba6d28) at ./kundostack.moc:64
+#15 0x07398a52 in KoUndoStack::qt_metacall(QMetaObject::Call, int, void**) () from /usr/lib/libkotext.so.6

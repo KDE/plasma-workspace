@@ -1,0 +1,21 @@
+Thread 1 (Thread 0xb4eda700 (LWP 9067)):
+#0  0xa985f5b5 in waitpid () from /lib/libpthread.so.0
+#1  0xaa7e660d in KCrash::startDirectly (argv=0x7fffb2db2800) at /home/gkiagia/kde/src/KDE/kdelibs/kdeui/util/kcrash.cpp:436
+#2  0xaa7e7581 in KCrash::defaultCrashHandler (sig=11) at /home/gkiagia/kde/src/KDE/kdelibs/kdeui/util/kcrash.cpp:340
+#3  <signal handler called>
+#6  0xffffe430 in __kernel_vsyscall ()
+#7  0xb5f05990 in raise () from /lib/libc.so.6
+#8  0xb5f072c8 in abort () from /lib/libc.so.6
+#9  0xb5f47683 in ?? () from /lib/libc.so.6
+#10 0xb5f48edb in free () from /lib/libc.so.6
+#11 0xb6128ec1 in operator delete(void*) () from /usr/lib/libstdc++.so.6
+#12 0x08054227 in ?? ()
+#13 0xb7c6466a in K3StaticDeleterPrivate::deleteStaticDeleters () at
+    /usr/src/debug/kdelibs-4.2.0/kde3support/kdecore/k3staticdeleter.cpp:56
+#14 0xb6ce9efb in qt_call_post_routines() () from /usr/lib/libQtCore.so.4
+#15 0xb6289c18 in QApplication::~QApplication() () from /usr/lib/libQtGui.so.4
+#16 0xb7eb019e in ~KApplication (this=0xbfbdb0a0) at
+    /usr/src/debug/kdelibs-4.2.0/kdeui/kernel/kapplication.cpp:928
+#17 0xb7eb7318 in ~KUniqueApplication (this=0xbfbdb0a0) at
+    /usr/src/debug/kdelibs-4.2.0/kdeui/kernel/kuniqueapplication.cpp:372
+#18 0x0805116a in _start ()

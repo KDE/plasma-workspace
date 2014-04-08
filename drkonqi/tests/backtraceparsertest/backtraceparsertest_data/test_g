@@ -1,0 +1,76 @@
+[Thread debugging using libthread_db enabled]
+[New Thread 0x7fd180c72740 (LWP 24313)]
+[New Thread 0x42f84950 (LWP 24317)]
+[New Thread 0x42783950 (LWP 24316)]
+[New Thread 0x41f82950 (LWP 24315)]
+0x00007fd17fb15bf2 in QString::operator== (this=0x687e90,
+    other=<value optimized out>) at tools/qstring.cpp:1928
+        in tools/qstring.cpp
+[Current thread is 0 (LWP 24313)]
+
+Thread 4 (Thread 0x41f82950 (LWP 24315)):
+#0  map_function (s=@0x687e88) at /home/gkiagia/kde/src/drkonqi/tests/crashtest/crashtest.cpp:71
+#1  0x0000000000402dbb in QtConcurrent::MapKernel<QList<QString>::iterator, QtConcurrent::FunctionWrapper1<void, QString const&> >::runIteration (this=<value optimized out>, it=<value optimized out>)
+    at /usr/include/qt4/QtCore/qtconcurrentmapkernel.h:73
+#2  0x0000000000402e3a in QtConcurrent::MapKernel<QList<QString>::iterator, QtConcurrent::FunctionWrapper1<void, QString const&> >::runIterations (this=0x67f220,
+    sequenceBeginIterator=<value optimized out>, beginIndex=<value optimized out>, endIndex=1) at /usr/include/qt4/QtCore/qtconcurrentmapkernel.h:82
+#3  0x0000000000403882 in QtConcurrent::IterateKernel<QList<QString>::iterator, void>::forThreadFunction (this=0x67f220) at /usr/include/qt4/QtCore/qtconcurrentiteratekernel.h:247
+#4  0x00007fd17fac8f79 in QtConcurrent::ThreadEngineBase::run (this=0x67f260) at concurrent/qtconcurrentthreadengine.cpp:184
+#5  0x00007fd17facc251 in QThreadPoolThread::run (this=0x685b20) at concurrent/qthreadpool.cpp:106
+#6  0x00007fd17fad5802 in QThreadPrivate::start (arg=0x685b20) at thread/qthread_unix.cpp:189
+#7  0x00007fd17f853fc7 in start_thread () from /lib/libpthread.so.0
+#8  0x00007fd17df8e5ad in clone () from /lib/libc.so.6
+#9  0x0000000000000000 in ?? ()
+
+Thread 3 (Thread 0x42783950 (LWP 24316)):
+#0  0x00007fd17f85b5ef in waitpid () from /lib/libpthread.so.0
+#1  0x00007fd1807e260d in KCrash::startDirectly (argv=0x42782890) at /home/gkiagia/kde/src/KDE/kdelibs/kdeui/util/kcrash.cpp:436
+#2  0x00007fd1807e3581 in KCrash::defaultCrashHandler (sig=11) at /home/gkiagia/kde/src/KDE/kdelibs/kdeui/util/kcrash.cpp:340
+#3  <signal handler called>
+#4  KCmdLineArgs::arg (this=0x0, n=0) at /home/gkiagia/kde/src/KDE/kdelibs/kdecore/kernel/kcmdlineargs.cpp:1516
+#5  0x000000000040233f in do_crash () at /home/gkiagia/kde/src/drkonqi/tests/crashtest/crashtest.cpp:42
+#6  0x0000000000402dbb in QtConcurrent::MapKernel<QList<QString>::iterator, QtConcurrent::FunctionWrapper1<void, QString const&> >::runIteration (this=<value optimized out>, it=<value optimized out>)
+    at /usr/include/qt4/QtCore/qtconcurrentmapkernel.h:73
+#7  0x0000000000402e3a in QtConcurrent::MapKernel<QList<QString>::iterator, QtConcurrent::FunctionWrapper1<void, QString const&> >::runIterations (this=0x67f220,
+    sequenceBeginIterator=<value optimized out>, beginIndex=<value optimized out>, endIndex=4) at /usr/include/qt4/QtCore/qtconcurrentmapkernel.h:82
+#8  0x0000000000403882 in QtConcurrent::IterateKernel<QList<QString>::iterator, void>::forThreadFunction (this=0x67f220) at /usr/include/qt4/QtCore/qtconcurrentiteratekernel.h:247
+#9  0x00007fd17fac8f79 in QtConcurrent::ThreadEngineBase::run (this=0x67f260) at concurrent/qtconcurrentthreadengine.cpp:184
+#10 0x00007fd17facc251 in QThreadPoolThread::run (this=0x67ec30) at concurrent/qthreadpool.cpp:106
+#11 0x00007fd17fad5802 in QThreadPrivate::start (arg=0x67ec30) at thread/qthread_unix.cpp:189
+#12 0x00007fd17f853fc7 in start_thread () from /lib/libpthread.so.0
+#13 0x00007fd17df8e5ad in clone () from /lib/libc.so.6
+#14 0x0000000000000000 in ?? ()
+
+Thread 2 (Thread 0x42f84950 (LWP 24317)):
+#0  0x0000000000403b3b in qStringComparisonHelper (s1=@0x687e98, s2=<value optimized out>) at /usr/include/qt4/QtCore/qstring.h:905
+#1  0x0000000000403b69 in QString::operator!= (this=0x687e98, s=0x68816a "") at /usr/include/qt4/QtCore/qstring.h:910
+#2  0x00000000004027e5 in map_function (s=@0x687e98) at /home/gkiagia/kde/src/drkonqi/tests/crashtest/crashtest.cpp:71
+#3  0x0000000000402dbb in QtConcurrent::MapKernel<QList<QString>::iterator, QtConcurrent::FunctionWrapper1<void, QString const&> >::runIteration (this=<value optimized out>, it=<value optimized out>)
+    at /usr/include/qt4/QtCore/qtconcurrentmapkernel.h:73
+#4  0x0000000000402e3a in QtConcurrent::MapKernel<QList<QString>::iterator, QtConcurrent::FunctionWrapper1<void, QString const&> >::runIterations (this=0x67f220,
+    sequenceBeginIterator=<value optimized out>, beginIndex=<value optimized out>, endIndex=3) at /usr/include/qt4/QtCore/qtconcurrentmapkernel.h:82
+#5  0x0000000000403882 in QtConcurrent::IterateKernel<QList<QString>::iterator, void>::forThreadFunction (this=0x67f220) at /usr/include/qt4/QtCore/qtconcurrentiteratekernel.h:247
+#6  0x00007fd17fac8f79 in QtConcurrent::ThreadEngineBase::run (this=0x67f260) at concurrent/qtconcurrentthreadengine.cpp:184
+#7  0x00007fd17facc251 in QThreadPoolThread::run (this=0x654a30) at concurrent/qthreadpool.cpp:106
+#8  0x00007fd17fad5802 in QThreadPrivate::start (arg=0x654a30) at thread/qthread_unix.cpp:189
+#9  0x00007fd17f853fc7 in start_thread () from /lib/libpthread.so.0
+#10 0x00007fd17df8e5ad in clone () from /lib/libc.so.6
+#11 0x0000000000000000 in ?? ()
+
+Thread 1 (Thread 0x7fd180c72740 (LWP 24313)):
+#0  0x00007fd17fb15bf2 in QString::operator== (this=0x687e90, other=<value optimized out>) at tools/qstring.cpp:1928
+#1  0x0000000000403b3b in qStringComparisonHelper (s1=@0x687e90, s2=<value optimized out>) at /usr/include/qt4/QtCore/qstring.h:905
+#2  0x0000000000403b69 in QString::operator!= (this=0x687e90, s=0x6880ba "") at /usr/include/qt4/QtCore/qstring.h:910
+#3  0x00000000004027e5 in map_function (s=@0x687e90) at /home/gkiagia/kde/src/drkonqi/tests/crashtest/crashtest.cpp:71
+#4  0x0000000000402dbb in QtConcurrent::MapKernel<QList<QString>::iterator, QtConcurrent::FunctionWrapper1<void, QString const&> >::runIteration (this=<value optimized out>, it=<value optimized out>)
+    at /usr/include/qt4/QtCore/qtconcurrentmapkernel.h:73
+#5  0x0000000000402e3a in QtConcurrent::MapKernel<QList<QString>::iterator, QtConcurrent::FunctionWrapper1<void, QString const&> >::runIterations (this=0x67f220,
+    sequenceBeginIterator=<value optimized out>, beginIndex=<value optimized out>, endIndex=2) at /usr/include/qt4/QtCore/qtconcurrentmapkernel.h:82
+#6  0x0000000000403882 in QtConcurrent::IterateKernel<QList<QString>::iterator, void>::forThreadFunction (this=0x67f220) at /usr/include/qt4/QtCore/qtconcurrentiteratekernel.h:247
+#7  0x00007fd17fac9261 in QtConcurrent::ThreadEngineBase::startBlocking (this=0x67f260) at concurrent/qtconcurrentthreadengine.cpp:76
+#8  0x0000000000403a30 in QtConcurrent::ThreadEngine<void>::startBlocking (this=0x67f220) at /usr/include/qt4/QtCore/qtconcurrentthreadengine.h:185
+#9  0x0000000000403a4c in QtConcurrent::ThreadEngineStarter<void>::startBlocking (this=0x7fff88daed20) at /usr/include/qt4/QtCore/qtconcurrentthreadengine.h:286
+#10 0x0000000000403acb in QtConcurrent::blockingMap<QStringList, void, QString const&> (sequence=@0x7fff88daedd0, map=<value optimized out>) at /usr/include/qt4/QtCore/qtconcurrentmap.h:386
+#11 0x0000000000402283 in do_threads () at /home/gkiagia/kde/src/drkonqi/tests/crashtest/crashtest.cpp:79
+#12 0x0000000000402785 in main (argc=2, argv=0x7fff88daf0e8) at /home/gkiagia/kde/src/drkonqi/tests/crashtest/crashtest.cpp:141
+0x00007fd17fb15bf2      1928    in tools/qstring.cpp

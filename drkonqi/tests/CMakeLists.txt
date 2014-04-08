@@ -1,0 +1,5 @@
+add_subdirectory(crashtest)
+add_subdirectory(backtraceparsertest)
+if(KF5XmlRpcClient_FOUND)
+    add_subdirectory(bugzillalibtest)
+endif()

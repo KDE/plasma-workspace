@@ -1,0 +1,268 @@
+#---
+#Binary name -> Bugzilla product|component mapping
+#---
+
+[Mappings]
+
+#KDE Platform (kdelibs)
+kdebugdialog=kdelibs|general
+kdeinit4=kdelibs|general
+kdepasswd=kdelibs|kpasswdserver
+kdialog=kdelibs|general
+keditfiletype=kdelibs|general
+kfmclient=kdelibs|general
+kglobalaccel=kdelibs|general
+kiconfinder=kdelibs|general
+kuiserver=kdelibs|general
+kded4=kdelibs|kded
+kcmshell4=systemsettings|general
+kwalletd=kdelibs|kwallet
+kwrited=konsole|kwrited
+kbuildsycoca4=kdelibs|ksycoca
+knotify4=kdelibs|knotify
+kcminit=kde|general
+
+#KDE Platform (KIO)
+kioclient=kio|general
+ktrash=kio|trash
+
+#KDE Platform (Solid)
+solid-action-desktop-gen=solid|general
+bluedevil-audio=solid|bluetooth
+bluedevil-helper=solid|bluetooth
+bluedevil-input=solid|bluetooth
+bluedevil-monolithic=solid|bluetooth
+bluedevil-network-dun=solid|bluetooth
+bluedevil-network-panu=solid|bluetooth
+bluedevil-sendfile=solid|bluetooth
+bluedevil-wizard=solid|bluetooth
+
+#KDE Plasma Desktop (Plasma & KRunner)
+plasma-desktop=plasma|general
+plasma-mid=plasma|general
+plasma-overlay=plasma|general
+plasma2jolie=plasma|general
+plasmagik=plasma|general
+plasmapkg=plasma|general
+knotificationareaitemtest=plasma|widget-systemtray
+knotificationicontest=plasma|widget-systemtray
+lancelot=plasma|widget-lancelot
+plasma-netbook=plasma|plasma-netbook
+kactivitymanagerd=kactivities|general
+plasma-windowed=plasma|general
+plasma-device=Active|General
+
+#KDE Plasma SDK (Plasmate)
+plasmaengineexplorer=plasmate|general
+plasmawallpaperviewer=plasmate|general
+plasmoidviewer=plasmate|general
+
+#KDE Plasma Desktop (KWin)
+kwin_gles=kwin|general
+kwinactive=kwin|general
+kwinactive_gles=kwin|general
+
+#KDE Kontact (Akonadi)
+akonadi_archivemail_agent=Akonadi|Archive Mail Agent
+akonadi_benchmarker=Akonadi|general
+akonadi_birthdays_resource=Akonadi|general
+akonadi_contacts_resource=Akonadi|Contacts resource
+akonadi_control=Akonadi|general
+akonadi_davgroupware_resource=Akonadi|DAV Resource
+akonadi_distlist_resource=Akonadi|general
+akonadi_facebook_resource=Akonadi|Facebook Resource
+akonadi_gcal_resource=Akonadi|Google Resource
+akonadi_googledata_resource=Akonadi|GoogleData Resource
+akonadi_googlecalendar_resource=Akonadi|Google Resource
+akonadi_googlecontacts_resource=Akonadi|Google Resource
+akonadi_ical_resource=Akonadi|ICal file resource
+akonadi_imap_resource=Akonadi|IMAP resource
+akonadi_kabc_resource=Akonadi|KResource compat Bridges
+akonadi_kcal_resource=Akonadi|KResource compat Bridges
+akonadi_knut_resource=Akonadi|Knut resource
+akonadi_kolabproxy_resource=Akonadi|Kolab resource
+akonadi_localbookmarks_resource=Akonadi|Local Bookmark Resource
+akonadi_maildir_resource=Akonadi|Maildir Resource
+akonadi_maildispatcher_agent=Akonadi|Mail Dispatcher Agent
+akonadi_mailfilter_agent=Akonadi|Mail Filter Agent
+akonadi_mailthreader_agent=Akonadi|general
+akonadi_mixedmaildir_resource=Akonadi|Mixed Maildir resource
+akonadi_nntp_resource=Akonadi|general
+akonadi_pop3_resource=Akonadi|POP3 Resource
+akonadi_strigi_feeder=Akonadi|general
+akonadi_sendlater_agent=Akonadi|SendLaterAgent
+akonadi_vcard_resource=Akonadi|VCard file resource
+akonadi_vcarddir_resource=Akonadi|VCard dir resource
+akonadiconsole=Akonadi|akonadiconsole
+akonadictl=Akonadi|general
+akonadiserver=Akonadi|server
+akonaditest=Akonadi|general
+akonaditray=Akonadi|general
+accountwizard=Akonadi|Account Wizard
+kres-migrator=Akonadi|Migration
+akonadi_openxchange_resource=Akonadi|OpenXchange Resource
+akonadi_newmailnotifier_agent=Akonadi|New Mail Notifier
+
+#KDE Kontact (PIM)
+importwizard=kdepim|importwizard
+kalarmautostart=kalarm|general
+kpilotDaemon=kpilot|kpilotDaemon
+korgac=korgac|general
+kmail=kmail2|general
+kmail-migrator=kmail2|general
+kaddressbook-mobile=KDE PIM Mobile|general
+backupmail=kdepim|backupmail
+
+
+#KDE Konqueror
+kjscmd=konqueror|kjs
+nspluginscan=konqueror|nsplugins
+nspluginviewer=konqueror|nspluginviewer
+
+# KDE Telepathy
+ktp-contactlist=telepathy|contactlist
+ktp-send-file=telepathy|send-file
+ktp-text-ui=telepathy|text-ui
+ktp-call-ui=telepathy|call-ui
+ktp-filetransfer-handler=telepathy|filetransfer-handler
+ktp-auth-handler=telepathy|auth-handler
+ktp-log-viewer=telepathy|log-viewer
+
+# KDE Calligra Suite
+braindump=braindump|application
+kritagemini=krita|general
+kritasketch=krita|krita sketch
+
+
+# KDE Kipi-plugins
+dngconverter=kipiplugins|DngConverter
+expoblending=kipiplugins|ExpoBlending
+panoramagui=kipiplugins|Panorama
+photolayoutseditor=kipiplugins|PhotoLayoutsEditor
+scangui=kipiplugins|AcquireImages
+
+
+# Gluon
+gluoncreator=gluon|gluoncreator
+gluon_kdeplayer=gluon|gluonplayer
+gluon_kdeextplayer=gluon|gluonplayer
+
+#Other KDE Applications and Technologies
+kmixctrl=kmix|general
+kwrite=kate|kwrite
+dragon=dragonplayer|general
+kaccess=systemsettings|kcm_accessibility
+kfontinst=systemsettings|kcm_fontinst
+kfontview=systemsettings|kcm_fontinst
+polkit-kde-manager=policykit-kde|manager
+polkit-kde-authentication-agent-1=policykit-kde|polkit-kde-authentication-agent-1
+kepastray=kepas|general
+apper-sentinel=apper|general
+muon=muon|muon
+muon-discover=muon|discover
+muon-installer=muon|installer
+muon-updater=muon|updater
+printer-applet-kde=printer-applet|general
+kde-add-printer=print-manager|general
+kde-print-queue=print-manager|general
+partitionmanager-bin=partitionmanager|general
+krandrtray=krandr|krandrtray
+kmymoney=kmymoney4|general
+kdevdesigner=kdevelop|Qt Designer Integration
+kdevelop.bin=kdevelop|general
+kscreenlocker=kscreensaver|locker
+gwenview_importer=gwenview|importer
+kdmgreet=kdm|general
+kaffeine-xbu=kaffeine|general
+networkmanagement_configshell=Network Management|general
+krcdnotifieritem=kremotecontrol|tray
+khipu=khipu|core
+mangonel=Mangonel|mangonel
+kde-nm-connection-editor=plasma-nm|editor
+pairseditor=pairs|editor
+
+kwatchgnupg=kleopatra|general
+homerunviewer=homerun|general
+
+ksecretsync=ksecretservice|ksecretsync
+cvsservice=cervisia|general
+
+
+# applicaitons not using bugs.kde.org
+aku=unknown|general
+compiz=unknown|general
+firefox=unknown|general
+firefox-bin=unknown|general
+iqfile=unknown|general
+kanyremote=unknown|general
+kde4-window-decorator=unknown|general
+kdesudo=unknown|general
+kdialogd4=unknown|general
+kguitar=unknown|general
+klog=unknown|general
+klog-bin=unknown|general
+kmozillahelper=unknown|general
+konstructor=unknown|general
+kraft=unknown|general
+kuroo=unknown|general
+kvirc=unknown|general
+loopy=unknown|general
+leechcraft=unknown|general
+nateon=unknown|general
+opera=unknown|general
+pcSoftwareManager=unknown|general
+qutim=unknown|general
+semantik=unknown|general
+squeeze=unknown|general
+subtitlecomposer=unknown|general
+synaptiks=unknown|general
+shaman=unknown|general
+tribe=unknown|general
+xulrunner-stub=unknown|general
+
+#---
+#This section relates a product groupt to a product
+#---
+
+[ProductGroup]
+kontact=kdepim-base|kdepim-apps
+korganizer=kdepim-base
+kaddressbook=kdepim-base
+akregator=kdepim-base
+kmail=kdepim-base
+KMail 2=kdepim-base
+Akonadi=kdepim-base
+kword=koffice
+koshell=koffice
+kdevelop=kdevelop
+kdevdesigner=kdevelop
+plasma=kdebindings
+amarok=multimedia
+digikam=imaging
+gwenview=imaging
+kaffeine=multimedia
+juk=multimedia
+knetworkmanager=networkmanager
+Skanlite=scanner
+konqueror=filemanagement
+kcells=koffice
+kplato=calligraplan
+kpresenter=calligrastage
+kspread=calligratables
+
+#---
+#This section describes several bugzilla products groups.
+#---
+
+[BZGroups]
+kdeplatform=kde|kdelibs|kio|kfile|Oxygen|solid|Phonon|Akonadi
+kdepim-base=kontact|kdepimlibs|kdepim|kresources|konqueror
+kdepim-apps=kontact|korganizer|kaddressbook|akregator|kmail
+koffice=koffice|koshell|kspread|kword|krita|karbon|kchart|kplato|kpresenter
+kdevelop=kdevelop|kdevplatform
+kdebindings=bindings
+multimedia=kdemultimedia|taglib
+imaging=digikam|digikamimageplugins|kipiplugins
+networkmanager=knetworkmanager|Network Management|solid
+scanner=libksane
+filemanagement=konqueror|dolphin

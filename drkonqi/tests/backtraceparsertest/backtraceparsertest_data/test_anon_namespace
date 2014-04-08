@@ -1,0 +1,53 @@
+Thread 1 (Thread 0x7fe4756407f0 (LWP 9487)):
+#0  0x00007fdda985f5b5 in waitpid () from /lib/libpthread.so.0
+#1  0x00007fddaa7e660d in KCrash::startDirectly (argv=0x7fffb2db2800) at /home/gkiagia/kde/src/KDE/kdelibs/kdeui/util/kcrash.cpp:436
+#2  0x00007fddaa7e7581 in KCrash::defaultCrashHandler (sig=11) at /home/gkiagia/kde/src/KDE/kdelibs/kdeui/util/kcrash.cpp:340
+#3  <signal handler called>
+#6  0x00007fe46fd0ac57 in formatICalInvitationHelper(QString, KCal::Calendar*, KCal::InvitationFormatterHelper*, bool, KDateTime::Spec) () from /usr/lib64/libkcal.so.4
+#7  0x00007fe46fd0d130 in KCal::IncidenceFormatter::formatICalInvitationNoHtml(QString, KCal::Calendar*, KCal::InvitationFormatterHelper*) () from /usr/lib64/libkcal.so.4
+#8  0x00007fe451a3d7d0 in (anonymous namespace)::Formatter::format(KMail::Interface::BodyPart*, KMail::HtmlWriter*) const () from /usr/lib64/kde4/kmail_bodypartformatter_text_calendar.so
+#9  0x00007fe45d93a319 in KMail::ObjectTreeParser::parseObjectTree(partNode*) () from /usr/lib64/libkmailprivate.so.4
+#10 0x00007fe45d93ad55 in KMail::ObjectTreeParser::stdChildHandling(partNode*) () from /usr/lib64/libkmailprivate.so.4
+#11 0x00007fe45d93b006 in KMail::ObjectTreeParser::processMultiPartAlternativeSubtype(partNode*, KMail::ProcessResult&) () from /usr/lib64/libkmailprivate.so.4
+#12 0x00007fe45d93aa31 in KMail::ObjectTreeParser::parseObjectTree(partNode*) () from /usr/lib64/libkmailprivate.so.4
+#13 0x00007fe45d93ad55 in KMail::ObjectTreeParser::stdChildHandling(partNode*) () from /usr/lib64/libkmailprivate.so.4
+#14 0x00007fe45d93b094 in KMail::ObjectTreeParser::processMultiPartMixedSubtype(partNode*, KMail::ProcessResult&) () from /usr/lib64/libkmailprivate.so.4
+#15 0x00007fe45d93aa31 in KMail::ObjectTreeParser::parseObjectTree(partNode*) () from /usr/lib64/libkmailprivate.so.4
+#16 0x00007fe45d7bf3e6 in KMReaderWin::parseMsg(KMMessage*) () from /usr/lib64/libkmailprivate.so.4
+#17 0x00007fe45d7b45e1 in KMReaderWin::displayMessage() () from /usr/lib64/libkmailprivate.so.4
+#18 0x00007fe45d7b47ce in KMReaderWin::updateReaderWin() () from /usr/lib64/libkmailprivate.so.4
+#19 0x00007fe45d7b50d5 in KMReaderWin::update(KMail::Interface::Observable*) () from /usr/lib64/libkmailprivate.so.4
+#20 0x00007fe45d9da719 in KMail::ISubject::notify() () from /usr/lib64/libkmailprivate.so.4
+#21 0x00007fe45d6d980c in KMMessage::updateBodyPart(QString, QByteArray const&) () from /usr/lib64/libkmailprivate.so.4
+#22 0x00007fe45d9b0f59 in KMail::ImapJob::slotGetMessageResult(KJob*) () from /usr/lib64/libkmailprivate.so.4
+#23 0x00007fe45d9b2b1b in KMail::ImapJob::qt_metacall(QMetaObject::Call, int, void**) () from /usr/lib64/libkmailprivate.so.4
+#24 0x00007fe473b8a19a in QMetaObject::activate(QObject*, QMetaObject const*, int, void**) () from /usr/lib64/libQtCore.so.4
+#25 0x00007fe473f7b382 in KJob::result(KJob*) () from /usr/lib64/libkdecore.so.5
+#26 0x00007fe473f7b60f in KJob::emitResult() () from /usr/lib64/libkdecore.so.5
+#27 0x00007fe4713c1733 in KIO::SimpleJob::slotFinished() () from /usr/lib64/libkio.so.5
+#28 0x00007fe4713c1bf3 in KIO::TransferJob::slotFinished() () from /usr/lib64/libkio.so.5
+#29 0x00007fe4713bfbb1 in KIO::TransferJob::qt_metacall(QMetaObject::Call, int, void**) () from /usr/lib64/libkio.so.5
+#30 0x00007fe473b8a19a in QMetaObject::activate(QObject*, QMetaObject const*, int, void**) () from /usr/lib64/libQtCore.so.4
+#31 0x00007fe471480301 in KIO::SlaveInterface::dispatch(int, QByteArray const&) () from /usr/lib64/libkio.so.5
+#32 0x00007fe47147d693 in KIO::SlaveInterface::dispatch() () from /usr/lib64/libkio.so.5
+#33 0x00007fe47147158d in KIO::Slave::gotInput() () from /usr/lib64/libkio.so.5
+#34 0x00007fe471471bcc in KIO::Slave::qt_metacall(QMetaObject::Call, int, void**) () from /usr/lib64/libkio.so.5
+#35 0x00007fe473b8a19a in QMetaObject::activate(QObject*, QMetaObject const*, int, void**) () from /usr/lib64/libQtCore.so.4
+#36 0x00007fe4713914d7 in KIO::ConnectionPrivate::dequeue() () from /usr/lib64/libkio.so.5
+#37 0x00007fe4713915fd in KIO::Connection::qt_metacall(QMetaObject::Call, int, void**) () from /usr/lib64/libkio.so.5
+#38 0x00007fe473b86d89 in QObject::event(QEvent*) () from /usr/lib64/libQtCore.so.4
+#39 0x00007fe472f8a4bc in QApplicationPrivate::notify_helper(QObject*, QEvent*) () from /usr/lib64/libQtGui.so.4
+#40 0x00007fe472f90914 in QApplication::notify(QObject*, QEvent*) () from /usr/lib64/libQtGui.so.4
+#41 0x00007fe47452da86 in KApplication::notify(QObject*, QEvent*) () from /usr/lib64/libkdeui.so.5
+#42 0x00007fe473b7718c in QCoreApplication::notifyInternal(QObject*, QEvent*) () from /usr/lib64/libQtCore.so.4
+#43 0x00007fe473b79907 in QCoreApplicationPrivate::sendPostedEvents(QObject*, int, QThreadData*) () from /usr/lib64/libQtCore.so.4
+#44 0x00007fe473ba0a03 in postEventSourceDispatch(_GSource*, int (*)(void*), void*) () from /usr/lib64/libQtCore.so.4
+#45 0x00007fe46b430e6e in g_main_context_dispatch () from /usr/lib64/libglib-2.0.so.0
+#46 0x00007fe46b434838 in ?? () from /usr/lib64/libglib-2.0.so.0
+#47 0x00007fe46b434960 in g_main_context_iteration () from /usr/lib64/libglib-2.0.so.0
+#48 0x00007fe473ba0543 in QEventDispatcherGlib::processEvents(QFlags<QEventLoop::ProcessEventsFlag>) () from /usr/lib64/libQtCore.so.4
+#49 0x00007fe47302711e in QGuiEventDispatcherGlib::processEvents(QFlags<QEventLoop::ProcessEventsFlag>) () from /usr/lib64/libQtGui.so.4
+#50 0x00007fe473b75ab2 in QEventLoop::processEvents(QFlags<QEventLoop::ProcessEventsFlag>) () from /usr/lib64/libQtCore.so.4
+#51 0x00007fe473b75e8c in QEventLoop::exec(QFlags<QEventLoop::ProcessEventsFlag>) () from /usr/lib64/libQtCore.so.4
+#52 0x00007fe473b79bcb in QCoreApplication::exec() () from /usr/lib64/libQtCore.so.4
+#53 0x00000000004041f7 in main ()

@@ -1,0 +1,25 @@
+This is a unit test for the BacktraceInfo class, which is used in drkonqi
+to rate the usefulness of a backtrace.
+
+This test dynamically loads test data from the "backtraceinfotest_data" directory.
+To add new data, simply create a file starting with the "test_" prefix and paste
+a backtrace in it. Then, in the "usefulness_map" file, add a line with the following format:
+
+    test_file: UsefulnessValue
+
+where "test_file" is the exact filename of the file containing the backtrace and
+UsefulnessValue is the usefulness value that you expect the backtrace to get.
+Whitespaces do not matter, they are ignored. Valid usefulness values can be seen
+in backtraceinfotest.h, in the enum BacktraceInfoTest::Usefulness.
+
+The UsefulnessValue has to be the enum's text representation of the
+value and not an integer. For example, having the enum like this:
+
+    enum Usefulness { ReallyUseful = 0, MayBeUseful=1, ProbablyUseless=2, Useless = 3 };
+
+"ReallyUseful" is a valid value, but "0" isn't.
+
+
+All files in the "backtraceinfotest_data" directory that do not start with the
+"test_" prefix are ignored (except the "usefulness_map" file, which has a special
+purpose, as described above)

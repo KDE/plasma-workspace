@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>AssistantPageBugzillaInformation</class>
+ <widget class="QWidget" name="AssistantPageBugzillaInformation">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>513</width>
+    <height>345</height>
+   </rect>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QLabel" name="m_explanationLabel">
+     <property name="text">
+      <string comment="@info/rich">&lt;strong&gt;Please provide the following information in English.&lt;/strong&gt;</string>
+     </property>
+     <property name="wordWrap">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="m_titleLabel">
+     <property name="text">
+      <string comment="@label:textbox">&lt;strong&gt;Title of the bug report:&lt;/strong&gt; (&lt;a href=&quot;#&quot;&gt;examples&lt;/a&gt;)</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="KLineEdit" name="m_titleEdit"/>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_2">
+     <item>
+      <widget class="QLabel" name="m_detailsLabel">
+       <property name="text">
+        <string comment="@label:textbox">&lt;strong&gt;Information about the crash:&lt;/strong&gt; (&lt;a href=&quot;#&quot;&gt;help and examples&lt;/a&gt;)</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QTextEdit" name="m_detailsEdit">
+     <property name="acceptRichText">
+      <bool>false</bool>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="m_distributionGroupBox">
+     <property name="title">
+      <string comment="@title:group">Distribution method:</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_2">
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout">
+        <item>
+         <widget class="KComboBox" name="m_distroChooserCombo"/>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="m_compiledSourcesCheckBox">
+          <property name="text">
+           <string comment="@option:check">KDE Platform is compiled from sources</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <spacer name="verticalSpacer">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeType">
+      <enum>QSizePolicy::Fixed</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>10</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item>
+    <widget class="QLabel" name="m_crashInfoLabel">
+     <property name="text">
+      <string comment="@info/rich">&lt;note&gt;The crash and system information will be automatically added to the bug report.&lt;/note&gt;</string>
+     </property>
+     <property name="wordWrap">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>KComboBox</class>
+   <extends>QComboBox</extends>
+   <header>kcombobox.h</header>
+  </customwidget>
+  <customwidget>
+   <class>KLineEdit</class>
+   <extends>QLineEdit</extends>
+   <header>klineedit.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

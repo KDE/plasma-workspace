@@ -1,0 +1,5 @@
+# the [drkonqi] section has been renamed to "[DrKonqi]"
+Id=kde-4.11
+File=drkonqirc
+Group=drkonqi, DrKonqi
+AllKeys

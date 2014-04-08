@@ -1,0 +1,70 @@
+[Current thread is 0 (LWP 2636)]
+
+Thread 4 (Thread 0xa9226b90 (LWP 2637)):
+#0  0xb8076424 in __kernel_vsyscall ()
+#1  0xb6982c55 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib/libpthread.so.0
+#2  0xb69fa6a2 in QWaitCondition::wait () from /usr/lib/libQtCore.so.4
+#3  0xb7af1a0a in ?? () from /usr/lib/libQtNetwork.so.4
+#4  0x0923ebb0 in ?? ()
+#5  0x0923ebac in ?? ()
+#6  0xffffffff in ?? ()
+#7  0xb6b72000 in ?? ()
+#8  0xa92262f0 in ?? ()
+#9  0xb808541b in _dl_fixup () from /lib/ld-linux.so.2
+#10 0xb69f9910 in ?? () from /usr/lib/libQtCore.so.4
+#11 0x0923eba0 in ?? ()
+#12 0x00000000 in ?? ()
+
+Thread 3 (Thread 0xa892ab90 (LWP 2648)):
+#0  0xb8076424 in __kernel_vsyscall ()
+#1  0xb6982c55 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib/libpthread.so.0
+#2  0xb69fa6a2 in QWaitCondition::wait () from /usr/lib/libQtCore.so.4
+#3  0xa949380a in RenderThread::run () from
+    /usr/lib/kde4/plasma_wallpaper_image.so
+#4  0xb69f9910 in ?? () from /usr/lib/libQtCore.so.4
+#5  0x08f7ee5c in ?? ()
+#6  0x00000000 in ?? ()
+
+Thread 2 (Thread 0xa714fb90 (LWP 2703)):
+#0  0xb8076424 in __kernel_vsyscall ()
+#1  0xb67d7ab1 in select () from /lib/libc.so.6
+#2  0xb6ab7bf7 in ?? () from /usr/lib/libQtCore.so.4
+#3  0x00000008 in ?? ()
+#4  0xa714f278 in ?? ()
+#5  0x00000000 in ?? ()
+
+Thread 1 (Thread 0xb4909730 (LWP 2636)):
+#0  0xa985f5b5 in waitpid () from /lib/libpthread.so.0
+#1  0xaa7e660d in KCrash::startDirectly (argv=0x7fffb2db2800) at /home/gkiagia/kde/src/KDE/kdelibs/kdeui/util/kcrash.cpp:436
+#2  0xaa7e7581 in KCrash::defaultCrashHandler (sig=11) at /home/gkiagia/kde/src/KDE/kdelibs/kdeui/util/kcrash.cpp:340
+#3  <signal handler called>
+#6  0xb721455d in QGraphicsLinearLayout::removeItem () from
+    /usr/lib/libQtGui.so.4
+#7  0xb804c3f0 in PanelAppletOverlay::mousePressEvent () from
+    /usr/lib/libkdeinit4_plasma.so
+#8  0xb6d2fd1a in QWidget::event () from /usr/lib/libQtGui.so.4
+#9  0xb6cddaec in QApplicationPrivate::notify_helper () from
+    /usr/lib/libQtGui.so.4
+#10 0xb6ce4863 in QApplication::notify () from /usr/lib/libQtGui.so.4
+#11 0xb78a7f2d in KApplication::notify () from /usr/lib/libkdeui.so.5
+#12 0xb6ad3f31 in QCoreApplication::notifyInternal () from
+    /usr/lib/libQtCore.so.4
+#13 0xb6ce5be3 in QApplicationPrivate::sendMouseEvent () from
+    /usr/lib/libQtGui.so.4
+#14 0xb6d42715 in ?? () from /usr/lib/libQtGui.so.4
+#15 0x09b3eb08 in ?? ()
+#16 0xbfb933dc in ?? ()
+#17 0x09b3eb08 in ?? ()
+#18 0x092de818 in ?? ()
+#19 0xb7310bd0 in ?? () from /usr/lib/libQtGui.so.4
+#20 0xb7310bd4 in ?? () from /usr/lib/libQtGui.so.4
+#21 0xbfb9345c in ?? ()
+#22 0x00000028 in ?? ()
+#23 0x09a53f60 in ?? ()
+#24 0x09a53000 in ?? ()
+#25 0xb6779bae in mem2chunk_check () from /lib/libc.so.6
+#26 0xb6d41bcd in QApplication::x11ProcessEvent () from /usr/lib/libQtGui.so.4
+#27 0xb6d67172 in ?? () from /usr/lib/libQtGui.so.4
+#28 0x08dbb988 in ?? ()
+#29 0xbfb938bc in ?? ()
+#30 0x00000000 in ?? ()

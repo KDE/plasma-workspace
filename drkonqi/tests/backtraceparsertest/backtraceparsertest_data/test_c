@@ -1,0 +1,35 @@
+0x00007fd2f44f4001 in nanosleep () from /lib/libc.so.6
+[Current thread is 0 (LWP 4414)]
+
+Thread 3 (Thread 0x7fd2c7276950 (LWP 4425)):
+#0  0x00007fd2f451bc66 in poll () from /lib/libc.so.6
+#1  0x00007fd2f6bbbc61 in net::DownloadThread::waitForSocketReady () from /usr/lib/libbtcore.so.7
+#2  0x00007fd2f6bbbccc in net::DownloadThread::update () from /usr/lib/libbtcore.so.7
+#3  0x00007fd2f6bbc6d9 in net::NetworkThread::run () from /usr/lib/libbtcore.so.7
+#4  0x00007fd2fba5ad79 in ?? () from /usr/lib/libQtCore.so.4
+#5  0x00007fd2fb7e9fc7 in start_thread () from /lib/libpthread.so.0
+#6  0x00007fd2f45245dd in clone () from /lib/libc.so.6
+#7  0x0000000000000000 in ?? ()
+
+Thread 2 (Thread 0x7fd2c6a75950 (LWP 4426)):
+#0  0x00007fd2fb7edd69 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib/libpthread.so.0
+#1  0x00007fd2fba5bb09 in QWaitCondition::wait () from /usr/lib/libQtCore.so.4
+#2  0x00007fd2f6bbb7a4 in net::UploadThread::update () from /usr/lib/libbtcore.so.7
+#3  0x00007fd2f6bbc6d9 in net::NetworkThread::run () from /usr/lib/libbtcore.so.7
+#4  0x00007fd2fba5ad79 in ?? () from /usr/lib/libQtCore.so.4
+#5  0x00007fd2fb7e9fc7 in start_thread () from /lib/libpthread.so.0
+#6  0x00007fd2f45245dd in clone () from /lib/libc.so.6
+#7  0x0000000000000000 in ?? ()
+
+Thread 1 (Thread 0x7fd2fc35f750 (LWP 4414)):
+#0  0x00007fdda985f5b5 in waitpid () from /lib/libpthread.so.0
+#1  0x00007fddaa7e660d in KCrash::startDirectly (argv=0x7fffb2db2800) at /home/gkiagia/kde/src/KDE/kdelibs/kdeui/util/kcrash.cpp:436
+#2  0x00007fddaa7e7581 in KCrash::defaultCrashHandler (sig=11) at /home/gkiagia/kde/src/KDE/kdelibs/kdeui/util/kcrash.cpp:340
+#3  <signal handler called>
+#5  0x00007fd2f44d272b in memcpy () from /lib/libc.so.6
+#6  0x00007fd2f6bd4add in bt::WebSeed::handleData () from /usr/lib/libbtcore.so.7
+#7  0x00007fd2f6bd5703 in bt::WebSeed::update () from /usr/lib/libbtcore.so.7
+#8  0x00007fd2f6bdc120 in bt::Downloader::update () from /usr/lib/libbtcore.so.7
+#9  0x00007fd2f6bfee5b in bt::TorrentControl::update () from /usr/lib/libbtcore.so.7
+#10 0x000000000042996a in _start ()
+

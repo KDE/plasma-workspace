@@ -1,0 +1,53 @@
+(no debugging symbols found)
+[Thread debugging using libthread_db enabled]
+[New Thread 0x7f085740d780 (LWP 11923)]
+[New Thread 0x4275c950 (LWP 11931)]
+0x00007fdda985f5b5 in waitpid () from /lib/libpthread.so.0
+[Current thread is 0 (process 12545)]
+
+Thread 1 (Thread 0x7fddaac76740 (LWP 12545)):
+#0  0x00007fdda985f5b5 in waitpid () from /lib/libpthread.so.0
+#1  0x00007fddaa7e660d in KCrash::startDirectly (argv=0x7fffb2db2800) at /home/gkiagia/kde/src/KDE/kdelibs/kdeui/util/kcrash.cpp:436
+#2  0x00007fddaa7e7581 in KCrash::defaultCrashHandler (sig=11) at /home/gkiagia/kde/src/KDE/kdelibs/kdeui/util/kcrash.cpp:340
+#3  <signal handler called>
+#5  0x00007f0856662a3c in Kopete::MetaContact::metaContactId ()
+    from /usr/lib/libkopete.so.4
+#6  0x00007f0842c975cc in ?? () from /usr/lib/kde4/kopete_statistics.so
+#7  0x00007f0842c97944 in ?? () from /usr/lib/kde4/kopete_statistics.so
+#8  0x00007f0842c88a61 in ?? () from /usr/lib/kde4/kopete_statistics.so
+#9  0x00007f085389842d in QObject::event (this=0xc220a0, e=0x98d950)
+    at kernel/qobject.cpp:1124
+#10 0x00007f08544cae5d in QApplicationPrivate::notify_helper (this=0x69a640, 
+    receiver=0xc220a0, e=0x2ad1350) at kernel/qapplication.cpp:3772
+#11 0x00007f08544d2b2a in QApplication::notify (this=0x7fff5f54d0f0, 
+    receiver=0xc220a0, e=0x2ad1350) at kernel/qapplication.cpp:3739
+#12 0x00007f08554b9b7b in KApplication::notify (this=0x7fff5f54d0f0, 
+    receiver=0xc220a0, event=0x2ad1350)
+    at /build/buildd/kde4libs-4.0.98+svn833207/kdeui/kernel/kapplication.cpp:311
+#13 0x00007f0853889411 in QCoreApplication::notifyInternal (
+    this=0x7fff5f54d0f0, receiver=0xc220a0, event=0x2ad1350)
+    at kernel/qcoreapplication.cpp:587
+#14 0x00007f085388a0ba in QCoreApplicationPrivate::sendPostedEvents (
+    receiver=0x0, event_type=0, data=0x675580)
+    at ../../include/QtCore/../../src/corelib/kernel/qcoreapplication.h:215
+#15 0x00007f08538b1bb3 in postEventSourceDispatch (s=<value optimized out>)
+    at ../../include/QtCore/../../src/corelib/kernel/qcoreapplication.h:220
+#16 0x00007f084f4840f2 in g_main_context_dispatch ()
+   from /usr/lib/libglib-2.0.so.0
+#17 0x00007f084f487396 in ?? () from /usr/lib/libglib-2.0.so.0
+#18 0x00007f084f48782f in g_main_context_iteration ()
+   from /usr/lib/libglib-2.0.so.0
+#19 0x00007f08538b183f in QEventDispatcherGlib::processEvents (this=0x688fb0, 
+    flags=<value optimized out>) at kernel/qeventdispatcher_glib.cpp:325
+#20 0x00007f085455c16f in QGuiEventDispatcherGlib::processEvents (
+    this=0x7fff5f54c5a0, flags=<value optimized out>)
+    at kernel/qguieventdispatcher_glib.cpp:204
+#21 0x00007f0853887d22 in QEventLoop::processEvents (
+    this=<value optimized out>, flags={i = 1599393824})
+    at kernel/qeventloop.cpp:149
+#22 0x00007f0853887ead in QEventLoop::exec (this=0x7fff5f54d060, flags=
+      {i = 1599393904}) at kernel/qeventloop.cpp:200
+#23 0x00007f085388a37d in QCoreApplication::exec ()
+    at kernel/qcoreapplication.cpp:845
+#24 0x0000000000448c6c in _start ()
+#0  0x00007f0853178241 in nanosleep () from /lib/libc.so.6

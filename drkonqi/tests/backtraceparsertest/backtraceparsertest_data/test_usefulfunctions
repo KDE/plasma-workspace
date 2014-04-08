@@ -1,0 +1,22 @@
+[Current thread is 0 (process 12545)]
+
+Thread 1 (Thread 0x7fddaac76740 (LWP 12545)):
+#0  0x00007fdda985f5b5 in waitpid () from /lib/libpthread.so.0
+#1  0x00007fddaa7e660d in KCrash::startDirectly (argv=0x7fffb2db2800) at /home/gkiagia/kde/src/KDE/kdelibs/kdeui/util/kcrash.cpp:436
+#2  0x00007fddaa7e7581 in KCrash::defaultCrashHandler (sig=11) at /home/gkiagia/kde/src/KDE/kdelibs/kdeui/util/kcrash.cpp:340
+#3  <signal handler called>
+#6  0x00000000 in ?? ()
+#6  QBasicAtomicInt::operator!= (this=0xa6bf968, result=...) at /usr/include/qt4/QtCore/qbasicatomic.h:69
+#7  QList<KSharedPtr<Meta::MetaBase> >::detach (this=0xa6bf968, result=...) at /usr/include/qt4/QtCore/qlist.h:119
+#8  QList<KSharedPtr<Meta::MetaBase> >::append (this=0xa6bf968, result=...) at /usr/include/qt4/QtCore/qlist.h:424
+#9  QList<KSharedPtr<Meta::MetaBase> >::operator<< (this=0xa6bf968, result=...) at /usr/include/qt4/QtCore/qlist.h:304
+#10 SqlQueryMaker::handleTracks (this=0xa6bf968, result=...) at /build/buildd/amarok-2.2.0/src/collection/sqlcollection/SqlQueryMaker.cpp:975
+#11 0xb443a084 in SqlQueryMaker::handleResult (this=0xa6bf968, result=...) at /build/buildd/amarok-2.2.0/src/collection/sqlcollection/SqlQueryMaker.cpp:671
+#12 0xb443c32b in SqlWorkerThread::run() () from /usr/lib/kde4/amarok_collection-mysqlecollection.so
+#13 0x02b2137d in ThreadWeaver::JobRunHelper::runTheJob (this=0xb299a26c, th=0x9aeb9b8, job=0xa6c0e20) at ../../../threadweaver/Weaver/Job.cpp:106
+#14 0x02b216e1 in ThreadWeaver::Job::execute (this=0xa6c0e20, th=0x9aeb9b8) at ../../../threadweaver/Weaver/Job.cpp:135
+#15 0x02b2038a in ThreadWeaver::ThreadRunHelper::run (this=0xb299a2f4, parent=0x992bf40, th=0x9aeb9b8) at ../../../threadweaver/Weaver/Thread.cpp:95
+#16 0x02b209db in ThreadWeaver::Thread::run (this=0x9aeb9b8) at ../../../threadweaver/Weaver/Thread.cpp:142
+#17 0x089bfe32 in QThreadPrivate::start (arg=0x9aeb9b8) at thread/qthread_unix.cpp:188
+#18 0x06e2d80e in start_thread () from /lib/tls/i686/cmov/libpthread.so.0
+#19 0x086be8de in clone () from /lib/tls/i686/cmov/libc.so.6

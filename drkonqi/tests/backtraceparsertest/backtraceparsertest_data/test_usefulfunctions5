@@ -1,0 +1,25 @@
+[Current thread is 0 (process 12545)]
+
+Thread 1 (Thread 0x7fddaac76740 (LWP 12545)):
+#0  0x00007fdda985f5b5 in waitpid () from /lib/libpthread.so.0
+#1  0x00007fddaa7e660d in KCrash::startDirectly (argv=0x7fffb2db2800) at /home/gkiagia/kde/src/KDE/kdelibs/kdeui/util/kcrash.cpp:436
+#2  0x00007fddaa7e7581 in KCrash::defaultCrashHandler (sig=11) at /home/gkiagia/kde/src/KDE/kdelibs/kdeui/util/kcrash.cpp:340
+#3  <signal handler called>
+#6  0xffffe424 in __kernel_vsyscall ()
+#7  0xb57400cf in raise (sig=6) at ../nptl/sysdeps/unix/sysv/linux/raise.c:64
+#8  0xb57419e7 in abort () at abort.c:88
+#9  0xb660f7f4 in qt_message_output (msgType=QtFatalMsg, buf=0x6 <Address 0x6 out of bounds>) at global/qglobal.cpp:2248
+#10 0xb660fa13 in qt_message (msgType=QtFatalMsg, msg=0xb678c85c "ASSERT: \"%s\" in file %s, line %d", ap=0xbfb81204 "\203\234\f\b\354\233\f\bw\001") at global/qglobal.cpp:2294
+#11 0xb660fb38 in qFatal (msg=0xb678c85c "ASSERT: \"%s\" in file %s, line %d") at global/qglobal.cpp:2477
+#12 0xb660fbb5 in qt_assert (assertion=0x80c9c83 "rowCount >= usedRowCnt", file=0x80c9bec  "/local/svn/kde/trunk/KDE/kdebase/apps/dolphin/src/panels/information/kmetadatawidget.cpp", line=375)     at global/qglobal.cpp:2011
+#13 0x08083a65 in KMetaDataWidget::Private::slotLoadingFinished (this=0x82f7a90) at /local/svn/kde/trunk/KDE/kdebase/apps/dolphin/src/panels/information/kmetadatawidget.cpp:375
+#14 0x08085757 in KMetaDataWidget::qt_metacall (this=0x8124650, _c=InvokeMetaMethod, _id=1, _a=0x839a290) at /local/build/KDE/kdebase/apps/dolphin/src/kmetadatawidget.moc:89
+#15 0xb6726efd in QMetaObject::metacall (object=0x8124650, cl=8929, idx=28, argv=0x839a290) at kernel/qmetaobject.cpp:237
+#16 0xb6731855 in QMetaCallEvent::placeMetaCall (this=0x8247550, object=0x8124650) at kernel/qobject.cpp:561
+#17 0xb67329ff in QObject::event (this=0x8124650, e=0x8247550) at kernel/qobject.cpp:1240
+#18 0xb5cb6330 in QWidget::event (this=0x8124650, event=0x8247550) at kernel/qwidget.cpp:8471
+#19 0x0808564e in KMetaDataWidget::event (this=0x8124650, event=0x8247550) at /local/svn/kde/trunk/KDE/kdebase/apps/dolphin/src/panels/information/kmetadatawidget.cpp:700
+#20 0xb5c5615c in QApplicationPrivate::notify_helper (this=0x811ab60, receiver=0x8124650, e=0x8247550) at kernel/qapplication.cpp:4300
+#21 0xb5c5d038 in QApplication::notify (this=0x8124650, receiver=0x8124650, e=0x8247550) at kernel/qapplication.cpp:4265
+#22 0xb6da6dd4 in KApplication::notify (this=0xbfb81d04, receiver=0x8124650, event=0x8247550) at /local/svn/kde/trunk/KDE/kdelibs/kdeui/kernel/kapplication.cpp:302
+#23 0xb6721b8e in QCoreApplication::notifyInternal (this=0xbfb81d04, receiver=0x8124650, event=0x8247550) at kernel/qcoreapplication.cpp:704

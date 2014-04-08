@@ -1,0 +1,86 @@
+This version of DrKonqi supports automatic installation of debug symbols packages
+when it finds that debug symbols are missing. This document is to explain what is
+needed from packagers to do in order to enable this functionality for their distribution.
+
+If your distribution does not ship packages with debug symbols you can safely ignore
+the rest of this document. In this case, DrKonqi will not offer the ability to install
+debug symbol packages.
+
+If your distribution does ship packages with debug symbols, then in order for DrKonqi
+to offer the ability to install them automatically, you need to provide a script that
+will do the work. This is because the packaging systems vary a lot among different
+distributions and DrKonqi cannot implement distro-specific functionality in its main
+code for all distributions.
+
+Please note that I chose to use the word "script" here having in mind a shell script,
+but you may as well provide a python script, a perl script, or whatever else, even a
+compiled binary written in any language you want. DrKonqi will use KProcess for
+launching it, so as long as it is executable, it will work.
+
+
+Name of the script
+==================
+By default DrKonqi looks for a shell script called "installdbgsymbols.sh". It expects
+it to be in PATH, or somewhere that it is possible to be located by KStandardDirs::findExe().
+For example, the path where DrKonqi itself is installed (`kde4-config --path libexec`),
+is a valid path to install this script, although it is not in PATH.
+
+If you wish to provide a script with a different name, you can change the name by setting
+the cmake variable DEBUG_PACKAGE_INSTALLER_NAME to the name that you want. For example,
+configuring kdebase-runtime with:
+
+    cmake -DDEBUG_PACKAGE_INSTALLER_NAME="installdbgsymbols.py" <other arguments>
+
+will use "installdbgsymbols.py" as the script for installing debug packages.
+
+
+Interface of the script
+=======================
+
+1. Arguments
+------------
+The script is called with arguments all the filenames of the binaries that are clearly
+missing symbols. The first argument (argv[1]) is always supplied and is the path to
+the executable that crashed itself. The rest of the arguments are optional and are filenames
+of libraries that are missing symbols (for example, "/usr/lib/libkio.so.5"). All the
+paths are absolute, but they will probably point to symlinks (at least for libraries).
+The paths are taken from gdb. For each stack frame that is missing details, if gdb can
+tell where is this symbol from, the path to the library that gdb specifies is passed
+as is to the script. Note that for applications that were launched via kdeinit, argv[1]
+is the path to kdeinit4, not the path to the executable that would be launched if there
+was no kdeinit involved.
+
+2. Return values
+----------------
+0 - Debug packages installed successfully
+1 - Some kind of error was encountered
+2 - Debug symbols not found
+3 - User canceled the operation
+
+
+Testing
+=======
+In order to test your script you can try the following:
+1) Find a kde application and remove its debug symbols package. I will use konqueror
+   in this example.
+2) Run the application and then kill it with a signal that drkonqi can catch.
+   For example, "killall -6 konqueror".
+3) In drkonqi's main dialog, switch to the "Backtrace" tab and wait for it to
+   generate a backtrace.
+4) After the backtrace has been generated, if drkonqi can find your script, a button
+   saying "Install debug symbols" will appear in the bottom left side of the backtrace tab.
+5) Click on it and your script will be launched.
+
+
+Examples
+========
+I have written example scripts for Debian, OpenSuSE and Fedora, which are available
+in the examples/ subdirectory of the drkonqi source code directory. These were
+developed as a proof of concept, to test that this script model and interface will
+work for most distributions. You may use them as is, or you may use them as references
+to write your own scripts. Just note that I am not going to maintain those scripts
+or fix bugs in them.
+
+--
+George Kiagiadakis <kiagiadakis.george@gmail.com>
+Last updated: 25 Semptember 2009

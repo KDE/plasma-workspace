@@ -1,0 +1,140 @@
+[?1034h(no debugging symbols found)
+(no debugging symbols found)
+(no debugging symbols found)
+(no debugging symbols found)
+(no debugging symbols found)
+(no debugging symbols found)
+(no debugging symbols found)
+(no debugging symbols found)
+[Thread debugging using libthread_db enabled]
+(no debugging symbols found)
+(no debugging symbols found)
+(no debugging symbols found)
+(no debugging symbols found)
+(no debugging symbols found)
+(no debugging symbols found)
+(no debugging symbols found)
+(no debugging symbols found)
+(no debugging symbols found)
+(no debugging symbols found)
+(no debugging symbols found)
+(no debugging symbols found)
+(no debugging symbols found)
+(no debugging symbols found)
+(no debugging symbols found)
+(no debugging symbols found)
+(no debugging symbols found)
+(no debugging symbols found)
+(no debugging symbols found)
+(no debugging symbols found)
+(no debugging symbols found)
+(no debugging symbols found)
+(no debugging symbols found)
+(no debugging symbols found)
+(no debugging symbols found)
+(no debugging symbols found)
+(no debugging symbols found)
+(no debugging symbols found)
+(no debugging symbols found)
+(no debugging symbols found)
+(no debugging symbols found)
+(no debugging symbols found)
+(no debugging symbols found)
+(no debugging symbols found)
+(no debugging symbols found)
+(no debugging symbols found)
+(no debugging symbols found)
+(no debugging symbols found)
+(no debugging symbols found)
+(no debugging symbols found)
+(no debugging symbols found)
+(no debugging symbols found)
+(no debugging symbols found)
+(no debugging symbols found)
+(no debugging symbols found)
+(no debugging symbols found)
+(no debugging symbols found)
+(no debugging symbols found)
+(no debugging symbols found)
+(no debugging symbols found)
+(no debugging symbols found)
+(no debugging symbols found)
+(no debugging symbols found)
+(no debugging symbols found)
+(no debugging symbols found)
+(no debugging symbols found)
+(no debugging symbols found)
+(no debugging symbols found)
+(no debugging symbols found)
+(no debugging symbols found)
+(no debugging symbols found)
+(no debugging symbols found)
+(no debugging symbols found)
+(no debugging symbols found)
+(no debugging symbols found)
+(no debugging symbols found)
+(no debugging symbols found)
+(no debugging symbols found)
+(no debugging symbols found)
+(no debugging symbols found)
+(no debugging symbols found)
+(no debugging symbols found)
+(no debugging symbols found)
+(no debugging symbols found)
+(no debugging symbols found)
+(no debugging symbols found)
+(no debugging symbols found)
+(no debugging symbols found)
+0x00007fdda985f5b5 in waitpid () from /lib/libpthread.so.0
+[Current thread is 0 (process 12545)]
+
+Thread 1 (Thread 0x7fddaac76740 (LWP 12545)):
+#0  0x00007fdda985f5b5 in waitpid () from /lib/libpthread.so.0
+#1  0x00007fddaa7e660d in KCrash::startDirectly (argv=0x7fffb2db2800) at /home/gkiagia/kde/src/KDE/kdelibs/kdeui/util/kcrash.cpp:436
+#2  0x00007fddaa7e7581 in KCrash::defaultCrashHandler (sig=11) at /home/gkiagia/kde/src/KDE/kdelibs/kdeui/util/kcrash.cpp:340
+#3  <signal handler called>
+#5 0x00007f8c3562e645 in raise () from /lib64/libc.so.6
+#6 0x00007f8c3562fc33 in abort () from /lib64/libc.so.6
+#7 0x00007f8c37500df9 in ?? () from /usr/X11R6/lib64/libGL.so.1
+#8 0x00007f8c333f1abe in ?? () from /usr/X11R6/lib64/libGLcore.so.1
+#9 0x00007f8c333f2423 in ?? () from /usr/X11R6/lib64/libGLcore.so.1
+#10 0x00007f8c331493c4 in ?? () from /usr/X11R6/lib64/libGLcore.so.1
+#11 0x00007f8c32de6aa6 in ?? () from /usr/X11R6/lib64/libGLcore.so.1
+#12 0x00007f8c3b6e1c23 in ?? () from /usr/lib64/libkdeinit4_kwin.so
+#13 0x00007f8c3b6e23bc in ?? () from /usr/lib64/libkdeinit4_kwin.so
+#14 0x00007f8c3b6d2316 in ?? () from /usr/lib64/libkdeinit4_kwin.so
+#15 0x00007f8c3b67c2ca in ?? () from /usr/lib64/libkdeinit4_kwin.so
+#16 0x00007f8c3a8ca454 in QMetaObject::activate(QObject*, int, int, void**) ()
+    from /usr/lib64/libQtCore.so.4
+#17 0x00007f8c3a8c4da3 in QObject::event(QEvent*) ()
+    from /usr/lib64/libQtCore.so.4
+#18 0x00007f8c37e871bd in QApplicationPrivate::notify_helper(QObject*, QEvent*)
+    () from /usr/lib64/libQtGui.so.4
+#19 0x00007f8c37e8ef8a in QApplication::notify(QObject*, QEvent*) ()
+    from /usr/lib64/libQtGui.so.4
+#20 0x00007f8c362c2bab in KApplication::notify(QObject*, QEvent*) ()
+    from /usr/lib64/libkdeui.so.5
+#21 0x00007f8c3a8b6091 in QCoreApplication::notifyInternal(QObject*, QEvent*)
+    () from /usr/lib64/libQtCore.so.4
+#22 0x00007f8c3a8e21c0 in ?? () from /usr/lib64/libQtCore.so.4
+#23 0x00007f8c3a8de58d in ?? () from /usr/lib64/libQtCore.so.4
+#24 0x00007f8c344760db in g_main_context_dispatch ()
+    from /usr/lib64/libglib-2.0.so.0
+#25 0x00007f8c344798ad in ?? () from /usr/lib64/libglib-2.0.so.0
+#26 0x00007f8c34479a6b in g_main_context_iteration ()
+    from /usr/lib64/libglib-2.0.so.0
+#27 0x00007f8c3a8de4ef in
+    QEventDispatcherGlib::processEvents(QFlags<QEventLoop::ProcessEventsFlag>) ()
+    from /usr/lib64/libQtCore.so.4
+#28 0x00007f8c37f179bf in ?? () from /usr/lib64/libQtGui.so.4
+#29 0x00007f8c3a8b49a2 in
+    QEventLoop::processEvents(QFlags<QEventLoop::ProcessEventsFlag>) () from
+    /usr/lib64/libQtCore.so.4
+#30 0x00007f8c3a8b4b2d in
+    QEventLoop::exec(QFlags<QEventLoop::ProcessEventsFlag>) () from
+    /usr/lib64/libQtCore.so.4
+#31 0x00007f8c3a8b6ffd in QCoreApplication::exec() ()
+    from /usr/lib64/libQtCore.so.4
+#32 0x00007f8c3b691c21 in kdemain () from /usr/lib64/libkdeinit4_kwin.so
+#33 0x00007f8c3561a586 in __libc_start_main () from /lib64/libc.so.6
+#34 0x0000000000400889 in _start ()

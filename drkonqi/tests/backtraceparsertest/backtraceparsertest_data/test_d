@@ -1,0 +1,104 @@
+0x00007fdda985f5b5 in waitpid () from /lib/libpthread.so.0
+[Current thread is 0 (process 12545)]
+
+Thread 1 (Thread 0xb59786c0 (LWP 6637)):
+#0  0xa985f5b5 in waitpid () from /lib/libpthread.so.0
+#1  0xaa7e660d in KCrash::startDirectly (argv=0x7fffb2db2800) at /home/gkiagia/kde/src/KDE/kdelibs/kdeui/util/kcrash.cpp:436
+#2  0xaa7e7581 in KCrash::defaultCrashHandler (sig=11) at /home/gkiagia/kde/src/KDE/kdelibs/kdeui/util/kcrash.cpp:340
+#3  <signal handler called>
+#6  0xb3fe1ac0 in QBasicAtomicInt::ref (this=0xc) at
+    /home/tz/develop/kde/svn/qt-copy/include/QtCore/../../src/corelib/arch/qatomic_i386.h:116
+#7  0xb40010e6 in QHash (this=0xbfb999fc, other=@0x84afe24) at
+    /home/tz/develop/kde/svn/qt-copy/include/QtCore/../../src/corelib/tools/qhash.h:264
+#8  0xb400111c in QSet (this=0xbfb999fc, other=@0x84afe24) at
+    /home/tz/develop/kde/svn/qt-copy/include/QtCore/../../src/corelib/tools/qset.h:56
+#9  0xb4001136 in QForeachContainer (this=0xbfb999fc, t=@0x84afe24) at
+    /home/tz/develop/kde/svn/qt-copy/include/QtCore/../../src/corelib/global/qglobal.h:1964
+#10 0xb3ffa778 in KoShape::notifyChanged (this=0x84a4538) at
+   /home/tz/develop/kde/svn/koffice/libs/flake/KoShape.cpp:458
+#11 0xb3ffb773 in KoShape::setParent (this=0x84a4538, parent=0x0) at
+    /home/tz/develop/kde/svn/koffice/libs/flake/KoShape.cpp:375
+#12 0xb40032de in ~Private (this=0x84a0ca0) at
+    /home/tz/develop/kde/svn/koffice/libs/flake/KoShapeContainer.cpp:36
+#13 0xb4002aa8 in ~KoShapeContainer (this=0x84b4bf8) at
+    /home/tz/develop/kde/svn/koffice/libs/flake/KoShapeContainer.cpp:56
+#14 0xb4240152 in ~MagicCurtain (this=0x84b4bf8) at
+    /home/tz/develop/kde/svn/koffice/kword/part/KWDocument.cpp:80
+#15 0xb423ab9e in ~KWDocument (this=0x81a34e0) at
+    /home/tz/develop/kde/svn/koffice/kword/part/KWDocument.cpp:154
+#16 0xb77b7849 in KoMainWindow::setRootDocument (this=0x8200b38, doc=0x0) at
+    /home/tz/develop/kde/svn/koffice/libs/main/KoMainWindow.cpp:501
+#17 0xb77ba45b in KoMainWindow::slotFileClose (this=0x8200b38) at
+    /home/tz/develop/kde/svn/koffice/libs/main/KoMainWindow.cpp:1283
+#18 0xb77ba922 in KoMainWindow::qt_metacall (this=0x8200b38,
+    _c=QMetaObject::InvokeMetaMethod, _id=13, _a=0xbfb99c7c) at
+    /home/ko2/koffice-build/libs/main/KoMainWindow.moc:135
+#19 0xb6c8a635 in QMetaObject::activate (sender=0x8207500, from_signal_index=5,
+    to_signal_index=6, argv=0xbfb99c7c) at kernel/qobject.cpp:3028
+#20 0xb6c8a83e in QMetaObject::activate (sender=0x8207500, m=0xb7730af8,
+    from_local_signal_index=1, to_local_signal_index=2, argv=0xbfb99c7c) at
+    kernel/qobject.cpp:3121
+#21 0xb702cb16 in QAction::triggered (this=0x8207500, _t1=false) at
+    .moc/debug-shared/moc_qaction.cpp:216
+#22 0xb702e6b8 in QAction::activate (this=0x8207500, event=QAction::Trigger) at
+    kernel/qaction.cpp:1125
+#23 0xb702e857 in QAction::event (this=0x8207500, e=0xbfb9a0d4) at
+    kernel/qaction.cpp:1044
+#24 0xb709d70a in QWidgetAction::event (this=0x8207500, event=0xbfb9a0d4) at
+    kernel/qwidgetaction.cpp:230
+#25 0xb70348c5 in QApplicationPrivate::notify_helper (this=0x805afa0,
+    receiver=0x8207500, e=0xbfb9a0d4) at kernel/qapplication.cpp:3803
+#26 0xb7034bab in QApplication::notify (this=0xbfb9ae7c, receiver=0x8207500,
+    e=0xbfb9a0d4) at kernel/qapplication.cpp:3393
+#27 0xb79f6ebb in KApplication::notify (this=0xbfb9ae7c, receiver=0x8207500,
+    event=0xbfb9a0d4) at
+    /home/tz/develop/kde/svn/kdelibs/kdeui/kernel/kapplication.cpp:311
+#28 0xb6c7570a in QCoreApplication::notifyInternal (this=0xbfb9ae7c,
+    receiver=0x8207500, event=0xbfb9a0d4) at kernel/qcoreapplication.cpp:583
+#29 0xb703153d in QCoreApplication::sendEvent (receiver=0x8207500,
+    event=0xbfb9a0d4) at
+    ../../include/QtCore/../../src/corelib/kernel/qcoreapplication.h:209
+#30 0xb7074325 in QShortcutMap::dispatchEvent (this=0x805b03c, e=0xbfb9a4f4) at
+    kernel/qshortcutmap.cpp:771
+#31 0xb7075364 in QShortcutMap::tryShortcutEvent (this=0x805b03c, w=0x893ac60,
+    e=0xbfb9a4f4) at kernel/qshortcutmap.cpp:362
+#32 0xb7034dc6 in QApplication::notify (this=0xbfb9ae7c, receiver=0x893ac60,
+    e=0xbfb9a4f4) at kernel/qapplication.cpp:3430
+#33 0xb79f6ebb in KApplication::notify (this=0xbfb9ae7c, receiver=0x893ac60,
+    event=0xbfb9a4f4) at
+    /home/tz/develop/kde/svn/kdelibs/kdeui/kernel/kapplication.cpp:311
+#34 0xb6c7570a in QCoreApplication::notifyInternal (this=0xbfb9ae7c,
+    receiver=0x893ac60, event=0xbfb9a4f4) at kernel/qcoreapplication.cpp:583
+#35 0xb704079f in QCoreApplication::sendSpontaneousEvent (receiver=0x893ac60,
+    event=0xbfb9a4f4) at
+    ../../include/QtCore/../../src/corelib/kernel/qcoreapplication.h:212
+#36 0xb70a00ce in qt_sendSpontaneousEvent (receiver=0x893ac60,
+    event=0xbfb9a4f4) at kernel/qapplication_x11.cpp:4588
+#37 0xb70da5b4 in QKeyMapper::sendKeyEvent (keyWidget=0x893ac60, grab=false,
+    type=QEvent::KeyPress, code=87, modifiers=@0xbfb9a658, text=@0xbfb9a68c,
+    autorepeat=false, count=1, nativeScanCode=25,
+    nativeVirtualKey=119, nativeModifiers=4) at kernel/qkeymapper_x11.cpp:1652
+#38 0xb70db921 in QKeyMapperPrivate::translateKeyEvent (this=0x807ef50,
+    keyWidget=0x893ac60, event=0xbfb9abdc, grab=false) at
+    kernel/qkeymapper_x11.cpp:1623
+#39 0xb70b15af in QApplication::x11ProcessEvent (this=0xbfb9ae7c,
+    event=0xbfb9abdc) at kernel/qapplication_x11.cpp:3053
+#40 0xb70dde71 in x11EventSourceDispatch (s=0x805df20, callback=0,
+    user_data=0x0) at kernel/qguieventdispatcher_glib.cpp:142
+#41 0xb670ecc6 in g_main_context_dispatch () from /usr/lib/libglib-2.0.so.0
+#42 0xb6712083 in ?? () from /usr/lib/libglib-2.0.so.0
+#43 0xb671263e in g_main_context_iteration () from /usr/lib/libglib-2.0.so.0
+#44 0xb6ca4b8c in QEventDispatcherGlib::processEvents (this=0x805b0d8,
+    flags=@0xbfb9ad74) at kernel/qeventdispatcher_glib.cpp:319
+#45 0xb70dd68c in QGuiEventDispatcherGlib::processEvents (this=0x805b0d8,
+    flags=@0xbfb9ada4) at kernel/qguieventdispatcher_glib.cpp:198
+#46 0xb6c725ca in QEventLoop::processEvents (this=0xbfb9ae20,
+    flags=@0xbfb9ade4) at kernel/qeventloop.cpp:143
+#47 0xb6c72809 in QEventLoop::exec (this=0xbfb9ae20, flags=@0xbfb9ae28) at
+    kernel/qeventloop.cpp:190
+#48 0xb6c75ef3 in QCoreApplication::exec () at kernel/qcoreapplication.cpp:845
+#49 0xb70345de in QApplication::exec () at kernel/qapplication.cpp:3331
+#50 0xb7f3be82 in kdemain (argc=1, argv=0xbfb9af74) at
+    /home/tz/develop/kde/svn/koffice/kword/part/main.cpp:38
+#51 0x08048736 in main (argc=139070860, argv=0x0) at
+    /home/ko2/koffice-build/kword/part/kword_dummy.cpp:3

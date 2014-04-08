@@ -1,0 +1,20 @@
+Thread 1 (Thread 0x7fe4756407f0 (LWP 9487)):
+#0  0x00007fdda985f5b5 in waitpid () from /lib/libpthread.so.0
+#1  0x00007fddaa7e660d in KCrash::startDirectly (argv=0x7fffb2db2800) at /home/gkiagia/kde/src/KDE/kdelibs/kdeui/util/kcrash.cpp:436
+#2  0x00007fddaa7e7581 in KCrash::defaultCrashHandler (sig=11) at /home/gkiagia/kde/src/KDE/kdelibs/kdeui/util/kcrash.cpp:340
+#3  <signal handler called>
+#6  0xffffe430 in __kernel_vsyscall ()
+#7  0xb617b990 in *__GI_raise (sig=6) at ../nptl/sysdeps/unix/sysv/linux/raise.c:64
+#8  0xb617d2c8 in *__GI_abort () at abort.c:88
+#9  0xb617478e in *__GI___assert_fail (assertion=0xb3391928 "!s_refcnt", file=0xb3391720 "/local/svn/kde/trunk/KDE/kdelibs/khtml/khtml_global.cpp", line=258,
+    function=0xb3391ac0 "static void KHTMLGlobal::finalCheck()") at assert.c:78
+#10 0xb2f947d3 in KHTMLGlobal::finalCheck () at /local/svn/kde/trunk/KDE/kdelibs/khtml/khtml_global.cpp:258
+#11 0xb418554d in ~KHTMLFactory (this=0x825fcd0, __in_chrg=<value optimized out>) at /local/svn/kde/trunk/KDE/kdelibs/khtml/khtml_factory.cpp:35
+#12 0xb70e8e86 in QObjectCleanupHandler::clear (this=0x825d9e0) at /local/git/Qt/qt/src/corelib/kernel/qobjectcleanuphandler.cpp:140
+#13 0xb70e8ed0 in ~QObjectCleanupHandler (this=0x825d9e0, __in_chrg=<value optimized out>) at /local/git/Qt/qt/src/corelib/kernel/qobjectcleanuphandler.cpp:86
+#14 0xb741fc21 in destroy () at /local/svn/kde/trunk/KDE/kdelibs/kdecore/util/kpluginfactory.cpp:29
+#15 0xb72e154b in ~KCleanUpGlobalStatic (this=0xb74d15d4, __in_chrg=<value optimized out>) at /local/svn/kde/trunk/KDE/kdelibs/kdecore/kernel/kglobal.h:62
+#16 0xb617e9b1 in *__GI_exit (status=0) at exit.c:75
+#17 0xb616770d in __libc_start_main (main=0x804877e <main>, argc=1, ubp_av=0xbf97df04, init=0x80487b0 <__libc_csu_init>, fini=0x80487a0 <__libc_csu_fini>, rtld_fini=0xb7f70220 <_dl_fini>,
+    stack_end=0xbf97defc) at libc-start.c:252
+#18 0x080486d1 in _start () at ../sysdeps/i386/elf/start.S:119

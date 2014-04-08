@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>AssistantPageBugAwareness</class>
+ <widget class="QWidget" name="AssistantPageBugAwareness">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>508</width>
+    <height>319</height>
+   </rect>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_2">
+   <item>
+    <widget class="QLabel" name="m_rememberLabel">
+     <property name="text">
+      <string comment="@label question">&lt;strong&gt;Do you remember what you were doing prior to the crash?&lt;/strong&gt;</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_2">
+     <item>
+      <spacer name="horizontalSpacer_3">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeType">
+        <enum>QSizePolicy::Fixed</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>20</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <layout class="QVBoxLayout" name="verticalLayout_4">
+       <item>
+        <widget class="QRadioButton" name="m_rememberCrashSituationYes">
+         <property name="text">
+          <string comment="@option:radio &quot;yes&quot; to the question &quot;do you remember what were you doing prior to the crash?&quot;">Yes</string>
+         </property>
+         <attribute name="buttonGroup">
+          <string>m_rememberGroup</string>
+         </attribute>
+        </widget>
+       </item>
+       <item>
+        <widget class="QRadioButton" name="m_rememberCrashSituationNo">
+         <property name="text">
+          <string comment="@option:radio &quot;No&quot; to the question &quot;do you remember what were you doing prior to the crash?&quot;">No</string>
+         </property>
+         <property name="checked">
+          <bool>true</bool>
+         </property>
+         <attribute name="buttonGroup">
+          <string>m_rememberGroup</string>
+         </attribute>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <spacer name="verticalSpacer">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeType">
+      <enum>QSizePolicy::Fixed</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>10</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item>
+    <widget class="QLabel" name="m_reproducibleLabel">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="text">
+      <string comment="@label question">&lt;strong&gt;Does the application crash again if you repeat the same situation?&lt;/strong&gt;</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_3">
+     <item>
+      <spacer name="horizontalSpacer_4">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeType">
+        <enum>QSizePolicy::Fixed</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>20</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="KComboBox" name="m_reproducibleBox">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <property name="toolTip">
+        <string comment="@info:tooltip">If you tried to repeat the situation, select how often the application crashes</string>
+       </property>
+       <property name="whatsThis">
+        <string comment="@info:whatsthis">If you tried to repeat the situation, select how often the application crashes</string>
+       </property>
+       <item>
+        <property name="text">
+         <string comment="@item:inlistbox  user didn't tried to repeat the crash situation">I did not try again</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string comment="@item:inlistbox the crash cannot be reproduce. reproduciblity-&gt;never">Never</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string comment="@item:inlistbox the bug can be reproduced sometimes">Sometimes</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string comment="@item:inlistbox the bug can be reproduced every time">Every time</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <spacer name="verticalSpacer_3">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeType">
+      <enum>QSizePolicy::Fixed</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>10</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item>
+    <widget class="QLabel" name="m_informationLabel">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="text">
+      <string comment="@label question">&lt;strong&gt;Please select which additional information you can provide:&lt;/strong&gt;</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <spacer name="horizontalSpacer_2">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeType">
+        <enum>QSizePolicy::Fixed</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>20</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <item>
+        <widget class="QCheckBox" name="m_actionsInsideApp">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="toolTip">
+          <string comment="@info:tooltip">Check this option if you can describe what were you doing inside the application before it crashed</string>
+         </property>
+         <property name="whatsThis">
+          <string comment="@info:whatsthis">Check this option if you can describe what were you doing inside the application before it crashed</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="m_unusualSituation">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="toolTip">
+          <string comment="@info:tooltip">Check this option if you can describe any unusual behavior or appearance in the application or the whole desktop</string>
+         </property>
+         <property name="whatsThis">
+          <string comment="@info:whatsthis">Check this option if you can describe any unusual behavior or appearance in the application or the whole desktop</string>
+         </property>
+         <property name="text">
+          <string comment="@option:check kind of information the user can provide about the crash">Unusual desktop behavior I noticed</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_5">
+         <property name="spacing">
+          <number>0</number>
+         </property>
+         <item>
+          <widget class="QCheckBox" name="m_appSpecificDetails">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="toolTip">
+            <string comment="@info:tooltip">Check this option if you can provide application specific details or settings that may be related to the crash. You can check the examples (if available.)</string>
+           </property>
+           <property name="whatsThis">
+            <string comment="@info:whatsthis">Check this option if you can provide application specific details or settings that may be related to the crash. You can check the examples (if available.)</string>
+           </property>
+           <property name="text">
+            <string comment="@option:check kind of information the user can provide about the crash">Custom settings of the application that may be related</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="horizontalSpacer_6">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeType">
+            <enum>QSizePolicy::Fixed</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>10</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QLabel" name="m_appSpecificDetailsExamples">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="text">
+            <string comment="@label clicking/hovering this, the user will get examples about application specific details s/he can provide">&lt;a href=&quot;#&quot;&gt;Examples&lt;/a&gt;</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="horizontalSpacer_5">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <spacer name="verticalSpacer_2">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>40</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>KComboBox</class>
+   <extends>QComboBox</extends>
+   <header>kcombobox.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+ <buttongroups>
+  <buttongroup name="m_rememberGroup"/>
+ </buttongroups>
+</ui>

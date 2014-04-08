@@ -1,0 +1,16 @@
+[Current thread is 0 (process 12545)]
+
+Thread 1 (Thread 0x7fddaac76740 (LWP 12545)):
+#0  0x00007fdda985f5b5 in waitpid () from /lib/libpthread.so.0
+#1  0x00007fddaa7e660d in KCrash::startDirectly (argv=0x7fffb2db2800) at /home/gkiagia/kde/src/KDE/kdelibs/kdeui/util/kcrash.cpp:436
+#2  0x00007fddaa7e7581 in KCrash::defaultCrashHandler (sig=11) at /home/gkiagia/kde/src/KDE/kdelibs/kdeui/util/kcrash.cpp:340
+#3  <signal handler called>
+#5  0x00007f50e99f776f in QWidget::testAttribute_helper (this=0x6e6440,
+    attribute=Qt::WA_WState_Created) at kernel/qwidget.cpp:9081
+#6  0x00007f50e9a37d51 in QWidget::mapFromGlobal (this=0x6e6440,
+    pos=@0x7ffff350ff90)
+    at ../../include/QtGui/../../src/gui/kernel/qwidget.h:991
+#7  0x00007f50e9a37e79 in QWidget::mapFromGlobal (this=0x6e6450,
+    pos=@0x7ffff350ff90) at kernel/qwidget_x11.cpp:1069
+#8  0x000000000041fb6c in _start ()
+#0  0x00007f50e75ff241 in nanosleep () from /lib/libc.so.6

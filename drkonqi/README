@@ -1,0 +1,6 @@
+How to activate the debug button for DrKonqi:
+
+$KDEHOME/share/config/drkonqirc:
+
+[Drkonqi]
+ShowDebugButton=true

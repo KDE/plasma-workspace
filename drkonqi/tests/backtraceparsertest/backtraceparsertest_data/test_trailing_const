@@ -1,0 +1,22 @@
+Thread 4 (Thread 0x7feabc3ea710 (LWP 23321)):
+#0  0x00007fdda985f5b5 in waitpid () from /lib/libpthread.so.0
+#1  0x00007fddaa7e660d in KCrash::startDirectly (argv=0x7fffb2db2800) at /home/gkiagia/kde/src/KDE/kdelibs/kdeui/util/kcrash.cpp:436
+#2  0x00007fddaa7e7581 in KCrash::defaultCrashHandler (sig=11) at /home/gkiagia/kde/src/KDE/kdelibs/kdeui/util/kcrash.cpp:340
+#3  <signal handler called>
+#4  0x00007feac3c101ed in QString::operator==(QLatin1String const&) const () from /usr/lib/libQtCore.so.4
+#5  0x0000000000402e7b in qStringComparisonHelper (s1=..., s2=0x404957 "thread 4") at /usr/include/QtCore/qstring.h:908
+#6  0x0000000000402ea9 in QString::operator!= (this=0x21ef798, s=0x404957 "thread 4") at /usr/include/QtCore/qstring.h:913
+#7  0x00000000004023d0 in map_function (s=...) at /home/milian/projects/kde4/drkonqi/tests/crashtest/crashtest.cpp:78
+#8  0x00000000004040c4 in QtConcurrent::FunctionWrapper1<void, QString const&>::operator() (this=0x21ef6d8, u=...) at /usr/include/QtCore/qtconcurrentfunctionwrappers.h:86
+#9  0x0000000000403e0c in QtConcurrent::MapKernel<QList<QString>::iterator, QtConcurrent::FunctionWrapper1<void, QString const&> >::runIteration (this=0x21ef6a0, it=...)
+    at /usr/include/QtCore/qtconcurrentmapkernel.h:73
+#10 0x0000000000403e97 in QtConcurrent::MapKernel<QList<QString>::iterator, QtConcurrent::FunctionWrapper1<void, QString const&> >::runIterations (this=0x21ef6a0, sequenceBeginIterator=...,
+    beginIndex=2, endIndex=3) at /usr/include/QtCore/qtconcurrentmapkernel.h:82
+#11 0x000000000040433e in QtConcurrent::IterateKernel<QList<QString>::iterator, void>::forThreadFunction (this=0x21ef6a0) at /usr/include/QtCore/qtconcurrentiteratekernel.h:266
+#12 0x0000000000404010 in QtConcurrent::IterateKernel<QList<QString>::iterator, void>::threadFunction (this=0x21ef6a0) at /usr/include/QtCore/qtconcurrentiteratekernel.h:228
+#13 0x00007feac3bc2dc5 in QtConcurrent::ThreadEngineBase::run() () from /usr/lib/libQtCore.so.4
+#14 0x00007feac3bc4b05 in ?? () from /usr/lib/libQtCore.so.4
+#15 0x00007feac3bce485 in ?? () from /usr/lib/libQtCore.so.4
+#16 0x00007feac3946cb0 in start_thread () from /lib/libpthread.so.0
+#17 0x00007feac205e7ad in clone () from /lib/libc.so.6
+#18 0x0000000000000000 in ?? ()
