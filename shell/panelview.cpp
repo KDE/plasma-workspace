@@ -638,7 +638,7 @@ void PanelView::updateStruts()
     NETExtendedStrut strut;
 
     if (m_visibilityMode == NormalPanel) {
-        const QRect thisScreen = corona()->screenGeometry(containment()->screen());
+        const QRect thisScreen = screen()->geometry();
         const QRect wholeScreen = screen()->virtualGeometry();
 
         //Extended struts against a screen edge near to another screen are really harmful, so windows maximized under the panel is a lesser pain
