@@ -60,7 +60,6 @@ SplashWindow::SplashWindow(bool testing, bool window)
                                                QStringLiteral("ksplash/Themes/") + QApplication::arguments().at(1),
                                                QStandardPaths::LocateDirectory);
 
-    rootContext()->setContextProperty(QStringLiteral("screenSize"), size());
     setSource(QUrl(themePath + QStringLiteral("/main.qml")));
     //be sure it will be eventually closed
     //FIXME: should never be stuck
@@ -72,12 +71,6 @@ void SplashWindow::setStage(int stage)
     m_stage = stage;
 
     rootObject()->setProperty("stage", stage);
-}
-
-void SplashWindow::resizeEvent(QResizeEvent *event)
-{
-    Q_UNUSED(event)
-    rootContext()->setContextProperty(QStringLiteral("screenSize"), size());
 }
 
 void SplashWindow::keyPressEvent(QKeyEvent *event)

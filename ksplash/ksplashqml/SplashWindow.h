@@ -34,7 +34,6 @@ public:
     void setStage(int stage);
 
 protected:
-    virtual void resizeEvent (QResizeEvent *event);
     virtual void keyPressEvent(QKeyEvent *event);
     virtual void mousePressEvent(QMouseEvent *event);
 
