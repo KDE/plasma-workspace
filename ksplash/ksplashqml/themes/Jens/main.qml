@@ -2,8 +2,6 @@ import QtQuick 2.1
 
 Item {
     id: root
-    width: screenSize.width
-    height: screenSize.height
 
     Text {
         id: debug

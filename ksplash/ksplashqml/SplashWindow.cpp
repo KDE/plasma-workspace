@@ -41,8 +41,8 @@ SplashWindow::SplashWindow(bool testing, bool window)
 
     setColor(Qt::transparent);
     setDefaultAlphaBuffer(true);
-
     setClearBeforeRendering(true);
+    setResizeMode(QQuickView::SizeRootObjectToView);
 
     if (!m_window) {
         setFlags(Qt::FramelessWindowHint | Qt::WindowStaysOnTopHint);
