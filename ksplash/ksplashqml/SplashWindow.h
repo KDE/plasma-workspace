@@ -32,6 +32,7 @@ public:
     SplashWindow(bool testing, bool window);
 
     void setStage(int stage);
+    virtual void setGeometry(const QRect &rect);
 
 protected:
     virtual void keyPressEvent(QKeyEvent *event);

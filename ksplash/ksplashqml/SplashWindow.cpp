@@ -56,11 +56,6 @@ SplashWindow::SplashWindow(bool testing, bool window)
         setWindowState(Qt::WindowFullScreen);
     }
 
-    QString themePath = QStandardPaths::locate(QStandardPaths::GenericDataLocation,
-                                               QStringLiteral("ksplash/Themes/") + QApplication::arguments().at(1),
-                                               QStandardPaths::LocateDirectory);
-
-    setSource(QUrl(themePath + QStringLiteral("/main.qml")));
     //be sure it will be eventually closed
     //FIXME: should never be stuck
     QTimer::singleShot(30000, this, SLOT(close()));
@@ -86,5 +81,19 @@ void SplashWindow::mousePressEvent(QMouseEvent *event)
     QQuickView::mousePressEvent(event);
     if (m_testing && !event->isAccepted()) {
         close();
+    }
+}
+
+void SplashWindow::setGeometry(const QRect& rect)
+{
+    bool oldGeometryEmpty = geometry().isNull();
+    QQuickView::setGeometry(rect);
+
+    if (oldGeometryEmpty) {
+        QString themePath = QStandardPaths::locate(QStandardPaths::GenericDataLocation,
+                                                   QStringLiteral("ksplash/Themes/") + QApplication::arguments().at(1),
+                                                   QStandardPaths::LocateDirectory);
+
+        setSource(QUrl(themePath + QStringLiteral("/main.qml")));
     }
 }
