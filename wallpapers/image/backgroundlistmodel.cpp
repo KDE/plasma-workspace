@@ -34,6 +34,7 @@
 #include <KLocalizedString>
 #include <KProgressDialog>
 #include <KStandardDirs>
+#include <kimagecache.h>
 
 #include <Plasma/Package>
 #include <Plasma/PackageStructure>
@@ -62,8 +63,6 @@ BackgroundListModel::BackgroundListModel(Image *listener, QObject *parent)
       m_structureParent(listener)
 {
     connect(&m_dirwatch, SIGNAL(deleted(QString)), this, SLOT(removeBackground(QString)));
-    m_previewUnavailablePix.fill(Qt::transparent);
-    //m_previewUnavailablePix = KIcon("unknown").pixmap(m_previewUnavailablePix.size());
 
     QHash<int, QByteArray>roleNames;
     roleNames[Qt::DisplayRole] = "display";
@@ -73,6 +72,8 @@ BackgroundListModel::BackgroundListModel(Image *listener, QObject *parent)
     roleNames[ResolutionRole] = "resolution";
     roleNames[PathRole] = "path";
     setRoleNames(roleNames);
+
+    m_imageCache = new KImageCache("plasma_wallpaper_preview", 10485760);
 }
 
 BackgroundListModel::~BackgroundListModel()
@@ -281,12 +282,14 @@ QVariant BackgroundListModel::data(const QModelIndex &index, int role) const
     break;
 
     case ScreenshotRole: {
-        if (m_previews.contains(b.filePath("preferred"))) {
-            return m_previews.value(b.filePath("preferred"));
+        QPixmap preview = QPixmap(QSize(SCREENSHOT_SIZE*1.6,
+                                                    SCREENSHOT_SIZE));
+        if (m_imageCache->findPixmap(b.filePath("preferred"), &preview)) {
+            return preview;
         }
 //         qDebug() << "WP preferred: " << b.filePath("preferred");
 //         qDebug() << "WP screenshot: " << b.filePath("screenshot");
-        QUrl file(QString("file://") + b.filePath("preferred"));
+        QUrl file = QUrl::fromLocalFile(b.filePath("preferred"));
         if (!m_previewJobs.contains(file) && file.isValid()) {
 
             KFileItemList list;
@@ -302,8 +305,8 @@ QVariant BackgroundListModel::data(const QModelIndex &index, int role) const
             const_cast<BackgroundListModel *>(this)->m_previewJobs.insert(file, QPersistentModelIndex(index));
         }
 
-        const_cast<BackgroundListModel *>(this)->m_previews.insert(b.filePath("preferred"), m_previewUnavailablePix);
-        return m_previewUnavailablePix;
+        preview.fill(Qt::transparent);
+        return preview;
     }
     break;
 
@@ -355,7 +358,7 @@ void BackgroundListModel::showPreview(const KFileItem &item, const QPixmap &prev
         return;
     }
 
-    m_previews.insert(b.filePath("preferred"), preview);
+    m_imageCache->insertPixmap(b.filePath("preferred"), preview);
     //qDebug() << "WP preview size:" << preview.size();
     emit dataChanged(index, index);
 }

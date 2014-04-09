@@ -21,6 +21,7 @@ target_link_libraries(plasma_wallpaper_imageplugin
     KF5::KIOCore
     KF5::KIOWidgets # KFileDialog
 	 KF5::NewStuff
+	 KF5::GuiAddons
          KF5::KDE4Support
          )
 

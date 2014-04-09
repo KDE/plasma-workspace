@@ -30,6 +30,8 @@
 #include <KDirWatch>
 #include <KFileItem>
 
+#include <kimagecache.h>
+
 #include <Plasma/PackageStructure>
 
 class QEventLoop;
@@ -98,12 +100,11 @@ private:
     QWeakPointer<Image> m_structureParent;
     QList<Plasma::Package> m_packages;
     QHash<QString, QSize> m_sizeCache;
-    QHash<QString, QPixmap> m_previews;
     QHash<QUrl, QPersistentModelIndex> m_previewJobs;
     KDirWatch m_dirwatch;
+    KImageCache* m_imageCache;
 
     QString m_findToken;
-    QPixmap m_previewUnavailablePix;
 };
 
 class BackgroundFinder : public QThread
