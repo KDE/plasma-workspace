@@ -26,6 +26,7 @@
 #include <QMouseEvent>
 #include <QTimer>
 #include <QStandardPaths>
+#include <QSurfaceFormat>
 
 SplashWindow::SplashWindow(bool testing, bool window)
     : QQuickView(),
@@ -33,6 +34,16 @@ SplashWindow::SplashWindow(bool testing, bool window)
       m_testing(testing),
       m_window(window)
 {
+    QSurfaceFormat format;
+    format.setAlphaBufferSize(8);
+    format.setRenderableType(QSurfaceFormat::OpenGL);
+    qDebug() << format.hasAlpha();
+    setFormat(format);
+
+    setColor(Qt::transparent);
+    setDefaultAlphaBuffer(true);
+
+    setClearBeforeRendering(true);
 
     if (!m_window) {
         setFlags(Qt::FramelessWindowHint | Qt::WindowStaysOnTopHint);
