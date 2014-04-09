@@ -732,7 +732,7 @@ Plasma::Containment *ShellCorona::setContainmentTypeForScreen(int screen, const 
     }
 
     //create a new containment
-    Plasma::Containment *newContainment = createContainment(plugin);
+    Plasma::Containment *newContainment = createContainmentDelayed(plugin);
 
     //if creation failed or invalid plugin, give up
     if (!newContainment) {
@@ -742,11 +742,35 @@ Plasma::Containment *ShellCorona::setContainmentTypeForScreen(int screen, const 
         return oldContainment;
     }
 
+    newContainment->setWallpaper(oldContainment->wallpaper());
+
     //At this point we have a valid new containment from plugin and a view
+    //copy all configuration groups (excluded applets)
+    KConfigGroup oldCg = oldContainment->config();
+    //newCg *HAS* to be from a KSharedConfig, because some KConfigSkeleton will need to be synced
+    KConfigGroup newCg(KSharedConfig::openConfig(oldCg.config()->name()), "Containments");
+    newCg = KConfigGroup(&newCg, QString::number(newContainment->id()));
+
+    foreach (const QString &group, oldCg.groupList()) {
+        if (group != "Applets") {
+            KConfigGroup subGroup(&oldCg, group);
+            KConfigGroup newSubGroup(&newCg, group);
+            subGroup.copyTo(&newSubGroup);
+        }
+    }
+
+    newContainment->init();
+    newContainment->restore(newCg);
+    newContainment->updateConstraints(Plasma::Types::StartupCompletedConstraint);
+    newContainment->save(newCg);
+    requestConfigSync();
+    newContainment->flushPendingConstraintsEvents();
+    emit containmentAdded(newContainment);
+
+    //Move the applets
     foreach (Plasma::Applet *applet, oldContainment->applets()) {
         newContainment->addApplet(applet);
     }
-    //TODO: copy all configuration groups
 
     //remove the "remove" action
     QAction *removeAction = newContainment->actions()->action("remove");
