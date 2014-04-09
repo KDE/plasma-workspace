@@ -61,14 +61,7 @@ ColumnLayout {
             Keys.onEscapePressed: {
                 runnerWindow.visible = false
             }
-            Keys.onTabPressed: results.incrementCurrentIndex()
-            Keys.onBacktabPressed: results.decrementCurrentIndex()
-            Keys.onReturnPressed: {
-                if (!results.currentIndex) {
-                    results.runAutomatically = true
-                }
-                results.runCurrentIndex();
-            }
+            Keys.forwardTo: results
         }
         PlasmaComponents.ToolButton {
             iconSource: "window-close"
