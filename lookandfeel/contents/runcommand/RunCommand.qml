@@ -73,10 +73,14 @@ ColumnLayout {
         visible: results.count > 0
         Layout.fillWidth: true
         Layout.minimumHeight: units.gridUnit * 25//results.count > 0 ? units.gridUnit * 25 : 0
-        //TODO: ResultsView in a component?
+
         Milou.ResultsView {
             id: results
             queryString: root.query
+
+            onActivated: {
+                runnerWindow.visible = false
+            }
         }
     }
 }
