@@ -20,6 +20,7 @@
 #include "component.h"
 #include "globalshortcut.h"
 #include "globalshortcutcontext.h"
+#include <config-kglobalaccel.h>
 
 #include <QDebug>
 #include <KLocalizedString>
@@ -27,10 +28,8 @@
 #include <QKeySequence>
 #include <QDBusConnection>
 
-#ifdef Q_WS_X11
+#if HAVE_X11
 #include "kglobalaccel_x11.h"
-#include <QX11Info>
-#include <QApplication>
 #elif defined(Q_WS_MACX)
 #include "kglobalaccel_mac.h"
 #elif defined(Q_WS_WIN)
@@ -211,12 +210,13 @@ bool GlobalShortcutsRegistry::keyPressed(int keyQt)
     data.append(shortcut->uniqueName());
     data.append(shortcut->context()->component()->friendlyName());
     data.append(shortcut->friendlyName());
-#ifdef Q_WS_X11
+
+#if HAVE_X11
     // Make sure kglobalacceld has ungrabbed the keyboard after receiving the
     // keypress, otherwise actions in application that try to grab the
     // keyboard (e.g. in kwin) may fail to do so. There is still a small race
     // condition with this being out-of-process.
-    qApp->syncX();
+    KGlobalAccelImpl::syncX();
 #endif
 
     // 1st Invoke the action

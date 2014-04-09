@@ -281,4 +281,11 @@ void KGlobalAccelImpl::setEnabled( bool enable )
     }
 }
 
+void KGlobalAccelImpl::syncX()
+{
+    xcb_connection_t *c = QX11Info::connection();
+    auto *value = xcb_get_input_focus_reply(c, xcb_get_input_focus_unchecked(c), nullptr);
+    free(value);
+}
+
 #include "kglobalaccel_x11.moc"

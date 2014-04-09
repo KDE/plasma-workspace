@@ -60,6 +60,8 @@ public:
 
         virtual bool nativeEventFilter(const QByteArray &eventType, void *message, long *) Q_DECL_OVERRIDE;
 
+        static void syncX();
+
 private:
 	/**
 	 * Filters X11 events ev for key bindings in the accelerator dictionary.

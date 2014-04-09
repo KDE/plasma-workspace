@@ -21,6 +21,7 @@
 #include "globalshortcut.h"
 #include "globalshortcutcontext.h"
 #include "globalshortcutsregistry.h"
+#include <config-kglobalaccel.h>
 
 #include <KRun>
 
@@ -28,8 +29,8 @@
 #include <QtCore/QStringList>
 #include <QKeySequence>
 
-#ifdef Q_WS_X11
-#include <QApplication>
+#if HAVE_X11
+#include "kglobalaccel_x11.h"
 #include <QX11Info>
 #endif
 
@@ -235,14 +236,14 @@ void Component::deactivateShortcuts(bool temporarily)
 
 void Component::emitGlobalShortcutPressed( const GlobalShortcut &shortcut )
     {
-#ifdef Q_WS_X11
+#if HAVE_X11
     // pass X11 timestamp
     long timestamp = QX11Info::appTime();
     // Make sure kglobalacceld has ungrabbed the keyboard after receiving the
     // keypress, otherwise actions in application that try to grab the
     // keyboard (e.g. in kwin) may fail to do so. There is still a small race
     // condition with this being out-of-process.
-    qApp->syncX();
+    KGlobalAccelImpl::syncX();
 #else
     long timestamp = 0;
 #endif

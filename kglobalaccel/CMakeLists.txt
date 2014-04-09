@@ -11,9 +11,11 @@ set(kglobalaccel_SRCS
     globalshortcutsregistry.cpp
     globalshortcutcontext.cpp)
 
+set(HAVE_X11 0)
 if (${XCB_XCB_FOUND} AND ${XCB_KEYSYMS_FOUND})
   include_directories(${XCB_INCLUDE_DIRS})
   set( kglobalaccel_SRCS ${kglobalaccel_SRCS} kglobalaccel_x11.cpp )
+  set(HAVE_X11 1)
 endif()
 if ( Q_WS_MAC )
   set( kglobalaccel_SRCS ${kglobalaccel_SRCS} kglobalaccel_mac.cpp )
@@ -24,6 +26,8 @@ endif ()
 if ( Q_WS_QWS )
   set( kglobalaccel_SRCS ${kglobalaccel_SRCS} kglobalaccel_qws.cpp )
 endif ()
+
+configure_file(config-kglobalaccel.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-kglobalaccel.h )
 
 # kf5_add_kdeinit_executable( kglobalaccel NOGUI ${kglobalaccel_SRCS} )
 kf5_add_kdeinit_executable( kglobalaccel5 ${kglobalaccel_SRCS} )
