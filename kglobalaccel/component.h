@@ -153,9 +153,6 @@ public Q_SLOTS:
     //! Returns the shortcut contexts available for the component.
     Q_SCRIPTABLE QStringList getShortcutContexts() const;
 
-    //! Start the global shortcuts kcm and show this component.
-    Q_SCRIPTABLE bool showKCM();
-
     void emitGlobalShortcutPressed(const GlobalShortcut &shortcut);
 
     Q_SCRIPTABLE void invokeShortcut(const QString &shortcutName, const QString &context = "default");
