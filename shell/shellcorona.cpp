@@ -706,6 +706,48 @@ void ShellCorona::insertActivity(const QString &id, Activity *activity)
     c->config().writeEntry("lastScreen", 0);
 }
 
+void ShellCorona::setContainmentTypeForScreen(int screen, const QString &plugin)
+{
+    Plasma::Containment *oldContainment = containmentForScreen(screen);
+
+    //no valid containment in given screen, giving up
+    if (!oldContainment) {
+        return;
+    }
+
+    DesktopView *view = 0;
+    foreach (DesktopView *v, d->views) {
+        if (v->containment() == oldContainment) {
+            view = v;
+            break;
+        }
+    }
+    //no view? give up
+    if (!view) {
+        return;
+    }
+
+    //create a new containment
+    Plasma::Containment *newContainment = createContainment(plugin);
+
+    //if creation failed or invalid plugin, give up
+    if (!newContainment) {
+        return;
+    } else if (!newContainment->pluginInfo().isValid()) {
+        newContainment->deleteLater();
+        return;
+    }
+
+    //At this point we have a valid new containment from plugin and a view
+    foreach (Plasma::Applet *applet, oldContainment->applets()) {
+        newContainment->addApplet(applet);
+    }
+    view->setContainment(newContainment);
+    newContainment->setActivity(oldContainment->activity());
+    insertContainment(oldContainment->activity(), screen, newContainment);
+    oldContainment->deleteLater();
+}
+
 void ShellCorona::checkAddPanelAction(const QStringList &sycocaChanges)
 {
     if (!sycocaChanges.isEmpty() && !sycocaChanges.contains("services")) {

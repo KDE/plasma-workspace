@@ -107,7 +107,6 @@ Q_SIGNALS:
     void changedTooltipText();
     void changedTooltipIconName();
     void changedShortcut();
-    void showContextMenu(int x, int y, QVariant menu);
 
 private:
     void syncToolTip(const QString &title, const QString &subTitle, const QIcon &toolTipIcon);

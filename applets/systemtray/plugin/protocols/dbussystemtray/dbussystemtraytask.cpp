@@ -208,7 +208,7 @@ void DBusSystemTrayTask::_onContextMenu(KJob *job)
     if (menu) {
         int x = sjob->parameters()["x"].toInt();
         int y = sjob->parameters()["y"].toInt();
-        emit showContextMenu(x, y, QVariant::fromValue<QObject*>(menu));
+        menu->popup(QPoint(x, y));
     }
 }
 
