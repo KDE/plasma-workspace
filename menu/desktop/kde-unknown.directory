@@ -2,4 +2,12 @@
 Encoding=UTF-8
 Type=Directory
 Name=Lost & Found
+Name[cs]=Ztráty a nálezy
+Name[fi]=Sekalaiset
+Name[ia]=Trovate & Perdite
+Name[nl]=Overig
+Name[pt]=Perdidos e Achados
+Name[sv]=Hittegods
+Name[uk]=Загублено та знайдено
+Name[x-test]=xxLost & Foundxx
 Icon=applications-other

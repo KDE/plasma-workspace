@@ -2,5 +2,13 @@
 Encoding=UTF-8
 Type=Directory
 Name=Games for Kids
+Name[cs]=Hry pro děti
+Name[fi]=Lastenpelit
+Name[ia]=Joco pro pusillos
+Name[nl]=spelletjes voor kinderen
+Name[pt]=Jogos para Crianças
+Name[sv]=Spel för barn
+Name[uk]=Ігри для дітей
+Name[x-test]=xxGames for Kidsxx
 Icon=applications-games-children
 X-KDE-SuppressGenericNames=Game,Game for Children

@@ -2,4 +2,12 @@
 Encoding=UTF-8
 Type=Directory
 Name=Editors
+Name[cs]=Editory
+Name[fi]=Editorit
+Name[ia]=Editores
+Name[nl]=Editors
+Name[pt]=Editores
+Name[sv]=Editorer
+Name[uk]=Редактори
+Name[x-test]=xxEditorsxx
 Icon=accessories-text-editor

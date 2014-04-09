@@ -2,5 +2,13 @@
 Encoding=UTF-8
 Type=Directory
 Name=Card Games
+Name[cs]=Karetní hry
+Name[fi]=Korttipelit
+Name[ia]=Jocos de Cartas
+Name[nl]=Kaartspellen
+Name[pt]=Jogos de Cartas
+Name[sv]=Kortspel
+Name[uk]=Карткові ігри
+Name[x-test]=xxCard Gamesxx
 Icon=applications-games-card
 X-KDE-SuppressGenericNames=Game,Card Game

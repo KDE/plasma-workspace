@@ -2,5 +2,13 @@
 Encoding=UTF-8
 Type=Directory
 Name=Education
+Name[cs]=Výuka
+Name[fi]=Opetus
+Name[ia]=Instruction
+Name[nl]=Onderwijs
+Name[pt]=Educação
+Name[sv]=Utbildning
+Name[uk]=Освіта
+Name[x-test]=xxEducationxx
 Icon=applications-education
 

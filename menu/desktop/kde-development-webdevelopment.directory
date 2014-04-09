@@ -2,11 +2,27 @@
 Encoding=UTF-8
 Type=Directory
 Name=Web Development
+Name[cs]=Webový vývoj
+Name[fi]=Web-kehitys
+Name[ia]=Developpamento Web
+Name[nl]=Webontwikkeling
+Name[pt]=Desenvolvimento Web
+Name[sv]=Webbutveckling
+Name[uk]=Розробка вебсторінок
+Name[x-test]=xxWeb Developmentxx
 Icon=applications-development-web
 
 [Desktop Entry]
 Encoding=UTF-8
 Type=Directory
 Name=Web Development
+Name[cs]=Webový vývoj
+Name[fi]=Web-kehitys
+Name[ia]=Developpamento Web
+Name[nl]=Webontwikkeling
+Name[pt]=Desenvolvimento Web
+Name[sv]=Webbutveckling
+Name[uk]=Розробка вебсторінок
+Name[x-test]=xxWeb Developmentxx
 Icon=applications-development-web
 

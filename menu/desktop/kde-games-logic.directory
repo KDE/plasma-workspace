@@ -2,5 +2,13 @@
 Encoding=UTF-8
 Type=Directory
 Name=Logic Games
+Name[cs]=Logické hry
+Name[fi]=Logiikkapelit
+Name[ia]=Jocos logic
+Name[nl]=Logische spellen
+Name[pt]=Jogos de Lógica
+Name[sv]=Logiska spel
+Name[uk]=Логічні ігри
+Name[x-test]=xxLogic Gamesxx
 Icon=applications-games-logic
 X-KDE-SuppressGenericNames=Game,Logic Game

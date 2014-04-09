@@ -2,4 +2,12 @@
 Encoding=UTF-8
 Type=Directory
 Name=Toys
+Name[cs]=Hračky
+Name[fi]=Lelut
+Name[ia]=Joculos
+Name[nl]=Speelgoed
+Name[pt]=Diversão
+Name[sv]=Leksaker
+Name[uk]=Іграшки
+Name[x-test]=xxToysxx
 Icon=applications-toys

@@ -2,11 +2,27 @@
 Encoding=UTF-8
 Type=Directory
 Name=Translation
+Name[cs]=Překlad
+Name[fi]=Kielenkäännös
+Name[ia]=Traduction
+Name[nl]=Vertaling
+Name[pt]=Tradução
+Name[sv]=Översättning
+Name[uk]=Переклад
+Name[x-test]=xxTranslationxx
 Icon=applications-development-translation
 
 [Desktop Entry]
 Encoding=UTF-8
 Type=Directory
 Name=Translation
+Name[cs]=Překlad
+Name[fi]=Kielenkäännös
+Name[ia]=Traduction
+Name[nl]=Vertaling
+Name[pt]=Tradução
+Name[sv]=Översättning
+Name[uk]=Переклад
+Name[x-test]=xxTranslationxx
 Icon=applications-development-translation
 

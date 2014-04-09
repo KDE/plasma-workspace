@@ -2,4 +2,12 @@
 Encoding=UTF-8
 Type=Directory
 Name=Internal Services
+Name[cs]=Interní služby
+Name[fi]=Sisäiset palvelut
+Name[ia]=Servicios Interne
+Name[nl]=Interne diensten
+Name[pt]=Serviços da Internet
+Name[sv]=Interna tjänster
+Name[uk]=Внутрішні служби
+Name[x-test]=xxInternal Servicesxx
 NoDisplay=true

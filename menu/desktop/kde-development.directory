@@ -2,4 +2,12 @@
 Encoding=UTF-8
 Type=Directory
 Name=Development
+Name[cs]=Vývoj
+Name[fi]=Kehitystyökalut
+Name[ia]=Developpamento
+Name[nl]=Ontwikkeling
+Name[pt]=Desenvolvimento
+Name[sv]=Utveckling
+Name[uk]=Розробка
+Name[x-test]=xxDevelopmentxx
 Icon=applications-development

@@ -2,3 +2,11 @@
 Encoding=UTF-8
 Type=Directory
 Name=Rogue-like Games
+Name[cs]=Hry podobné Rogue
+Name[fi]=Rogue-tyyliset pelit
+Name[ia]=Jocos como Rogue
+Name[nl]=Rogue-achtige spellen
+Name[pt]=Jogos tipo Rogue
+Name[sv]=Spel som liknar Rogue
+Name[uk]=Ігри на кшталт Rogue
+Name[x-test]=xxRogue-like Gamesxx

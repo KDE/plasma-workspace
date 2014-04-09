@@ -1,8 +1,24 @@
 [Desktop Entry]
 Type=Service
 Name=kuiserver
+Name[cs]=kuiserver
+Name[fi]=kuiserver
+Name[ia]=kuiserver
+Name[nl]=kuiserver
+Name[pt]=kuiserver
+Name[sv]=Gränssnittsserver
+Name[uk]=kuiserver
+Name[x-test]=xxkuiserverxx
 Exec=kuiserver
 Comment=KDE's Progress Info UI server
+Comment[cs]=Server informací uživatelského prostředí
+Comment[fi]=KDE:n edistymistietojen käyttöliittymäpalvelin
+Comment[ia]=Servitor de UI de info de progresso de KDE
+Comment[nl]=KDE's UI-server voor voortgangsinformatie
+Comment[pt]=Servidor da Interface de Progresso do KDE
+Comment[sv]=KDE:s gränssnittsserver för förloppsinformation
+Comment[uk]=Сервер графічного інтерфейсу інформації про поступ KDE
+Comment[x-test]=xxKDE's Progress Info UI serverxx
 X-KDE-ServiceTypes=
 # It is a server
 X-DBUS-StartupType=Unique

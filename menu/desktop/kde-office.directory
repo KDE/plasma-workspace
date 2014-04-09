@@ -2,5 +2,13 @@
 Encoding=UTF-8
 Type=Directory
 Name=Office
+Name[cs]=Kancelář
+Name[fi]=Toimisto-ohjelmat
+Name[ia]=Officio
+Name[nl]=Kantoor
+Name[pt]=Escritório
+Name[sv]=Kontor
+Name[uk]=Офіс
+Name[x-test]=xxOfficexx
 Icon=applications-office
 SortOrder=koshell.desktop,kword.desktop,kspread.desktop,kpresenter.desktop

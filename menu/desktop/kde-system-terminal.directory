@@ -2,5 +2,13 @@
 Encoding=UTF-8
 Type=Directory
 Name=Terminal Applications
+Name[cs]=Terminálové aplikace
+Name[fi]=Päätesovellukset
+Name[ia]=Applicationes de Terminal
+Name[nl]=Terminal-toepassingen
+Name[pt]=Aplicações de Terminal
+Name[sv]=Terminalprogram
+Name[uk]=Термінальні програми
+Name[x-test]=xxTerminal Applicationsxx
 Icon=utilities-terminal
 Version=1.0

@@ -2,5 +2,13 @@
 Encoding=UTF-8
 Type=Directory
 Name=Arcade
+Name[cs]=Arkády
+Name[fi]=Pelihallipelit
+Name[ia]=Arcade
+Name[nl]=Arcade
+Name[pt]=Arcada
+Name[sv]=Arkadspel
+Name[uk]=Аркади
+Name[x-test]=xxArcadexx
 Icon=applications-games-arcade
 X-KDE-SuppressGenericNames=Game,Arcade Game

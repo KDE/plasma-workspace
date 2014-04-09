@@ -2,5 +2,13 @@
 Encoding=UTF-8
 Type=Directory
 Name=Multimedia
+Name[cs]=Multimédia
+Name[fi]=Multimedia
+Name[ia]=Multimedia
+Name[nl]=Multimedia
+Name[pt]=Multimédia
+Name[sv]=Multimedia
+Name[uk]=Мультимедіа
+Name[x-test]=xxMultimediaxx
 Icon=applications-multimedia
 

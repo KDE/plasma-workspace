@@ -2,4 +2,12 @@
 Encoding=UTF-8
 Type=Directory
 Name=Settings
+Name[cs]=Nastavení
+Name[fi]=Asetukset
+Name[ia]=Preferentias
+Name[nl]=Instellingen
+Name[pt]=Configuração
+Name[sv]=Inställningar
+Name[uk]=Параметри
+Name[x-test]=xxSettingsxx
 Icon=preferences-system

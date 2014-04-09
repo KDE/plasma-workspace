@@ -1,13 +1,45 @@
 [Global]
 IconName=preferences-desktop-sound
 Comment=Multimedia System
+Comment[cs]=Multimediální systém
+Comment[fi]=Multimediajärjestelmä
+Comment[ia]=Systema de Multimedia
+Comment[nl]=Multimedia-systeem
+Comment[pt]=Sistema Multimédia
+Comment[sv]=Multimediasystem
+Comment[uk]=Мультимедійна система
+Comment[x-test]=xxMultimedia Systemxx
 
 [Context/Application]
 Name=Application
+Name[cs]=Aplikace
+Name[fi]=Sovellus
+Name[ia]=Application
+Name[nl]=Toepassing
+Name[pt]=Aplicação
+Name[sv]=Program
+Name[uk]=Програма
+Name[x-test]=xxApplicationxx
 #Comment=The name of the group of the contact
 
 [Event/AudioDeviceFallback]
 Name=Audio Output Device Changed
+Name[cs]=Zvukové výstupní zařízení změněno
+Name[fi]=Äänen ulostulolaite vaihtui
+Name[ia]=Dispositivo de egresso de sono modificate
+Name[nl]=Geluiduitvoerapparaat gewijzigd
+Name[pt]=O Dispositivo de Saída de Áudio Mudou
+Name[sv]=Ljudutenhet ändrades
+Name[uk]=Змінено пристрій відтворення звуку
+Name[x-test]=xxAudio Output Device Changedxx
 Comment=Notification when audio output device has automatically changed
+Comment[cs]=Upozornění při automatické změně výstupního audio zařízení
+Comment[fi]=Ilmoitus äänen ulostulolaitteen automaattisesta vaihtumisesta
+Comment[ia]=Notification quando un dispositivo de egresso de sono ha modificate automaticamente
+Comment[nl]=Melding als geluiduitvoerapparaat automatisch is gewijzigd
+Comment[pt]=Notificação quando o dispositivo de saída do áudio mudou automaticamente
+Comment[sv]=Underrättelse när ljudutenhet har ändrats automatiskt
+Comment[uk]=Сповіщення у відповідь на автоматичну зміну пристрою відтворення звуку
+Comment[x-test]=xxNotification when audio output device has automatically changedxx
 Contexts=Application
 Action=Popup

@@ -1,7 +1,23 @@
 [Desktop Entry]
 Type=Service
 Name=Remote URL Change Notifier
+Name[cs]=Démon upozorňování na vzdálená URL
+Name[fi]=Etäverkko-osoitteiden muutosten ilmoitin
+Name[ia]=Notificator remote de cambio de URL
+Name[nl]=Notificatie van wijziging in URL-adres op afstand
+Name[pt]=Notificador da Alteração de URLs Remotos
+Name[sv]=Underrättelse om ändring av fjärrwebbadresser
+Name[uk]=Сповіщення про зміну віддаленої адреси (URL)
+Name[x-test]=xxRemote URL Change Notifierxx
 Comment=Provides change notification for network folders
+Comment[cs]=Poskytuje oznamování o změnách síťových složek
+Comment[fi]=Tarjoaa ilmoituksia verkkokansioiden muutoksista
+Comment[ia]=Il forni notification de cambio pro dossieres de rete
+Comment[nl]=Levert notificatie voor wijzigingen in netwerkmappen
+Comment[pt]=Fornece notificações de alterações para as pastas de rede
+Comment[sv]=Tillhandahåller ändringsunderrättelser för nätverkskataloger
+Comment[uk]=Сповіщення про зміну стану мережевих тек
+Comment[x-test]=xxProvides change notification for network foldersxx
 X-KDE-ServiceTypes=KDEDModule
 X-KDE-Library=remotedirnotify
 X-KDE-DBus-ModuleName=remotedirnotify

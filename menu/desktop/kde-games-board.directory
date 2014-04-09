@@ -2,5 +2,13 @@
 Encoding=UTF-8
 Type=Directory
 Name=Board Games
+Name[cs]=Deskové hry
+Name[fi]=Lautapelit
+Name[ia]=Jocos de Tabula
+Name[nl]=Bordspellen
+Name[pt]=Jogos de Tabuleiro
+Name[sv]=Brädspel
+Name[uk]=Ігри на дошці
+Name[x-test]=xxBoard Gamesxx
 Icon=applications-games-board
 X-KDE-SuppressGenericNames=Game,Board Game

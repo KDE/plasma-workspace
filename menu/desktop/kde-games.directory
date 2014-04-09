@@ -2,4 +2,12 @@
 Encoding=UTF-8
 Type=Directory
 Name=Games
+Name[cs]=Hry
+Name[fi]=Pelit
+Name[ia]=Jocos
+Name[nl]=Spellen
+Name[pt]=Jogos
+Name[sv]=Spel
+Name[uk]=Ігри
+Name[x-test]=xxGamesxx
 Icon=applications-games
