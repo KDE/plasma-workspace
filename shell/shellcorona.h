@@ -77,7 +77,7 @@ public:
     void insertActivity(const QString &id, Activity *activity);
 
 
-    void setContainmentTypeForScreen(int screen, const QString &plugin);
+    Plasma::Containment *setContainmentTypeForScreen(int screen, const QString &plugin);
 
 public Q_SLOTS:
     /**

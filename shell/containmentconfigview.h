@@ -42,8 +42,10 @@ class ContainmentConfigView : public PlasmaQuick::ConfigView
     Q_PROPERTY(PlasmaQuick::ConfigModel *containmentActionConfigModel READ containmentActionConfigModel CONSTANT)
     Q_PROPERTY(QAbstractItemModel *currentContainmentActionsModel READ currentContainmentActionsModel CONSTANT)
     Q_PROPERTY(PlasmaQuick::ConfigModel *wallpaperConfigModel READ wallpaperConfigModel CONSTANT)
+    Q_PROPERTY(PlasmaQuick::ConfigModel *containmentPluginsConfigModel READ containmentPluginsConfigModel CONSTANT)
     Q_PROPERTY(KDeclarative::ConfigPropertyMap *wallpaperConfiguration READ wallpaperConfiguration NOTIFY wallpaperConfigurationChanged)
     Q_PROPERTY(QString currentWallpaper READ currentWallpaper WRITE setCurrentWallpaper NOTIFY currentWallpaperChanged)
+    Q_PROPERTY(QString containmentPlugin READ containmentPlugin WRITE setContainmentPlugin NOTIFY containmentPluginChanged)
 
 public:
     ContainmentConfigView(Plasma::Containment *interface, QWindow *parent = 0);
@@ -54,15 +56,19 @@ public:
     PlasmaQuick::ConfigModel *containmentActionConfigModel();
     QAbstractItemModel *currentContainmentActionsModel();
     PlasmaQuick::ConfigModel *wallpaperConfigModel();
+    PlasmaQuick::ConfigModel *containmentPluginsConfigModel();
     QString currentWallpaper() const;
     void setCurrentWallpaper(const QString &wallpaper);
     KDeclarative::ConfigPropertyMap *wallpaperConfiguration() const;
+    QString containmentPlugin() const;
+    void setContainmentPlugin(const QString &plugin);
 
     Q_INVOKABLE void applyWallpaper();
 
 Q_SIGNALS:
     void currentWallpaperChanged();
     void wallpaperConfigurationChanged();
+    void containmentPluginChanged();
 
 protected:
     void syncWallpaperObjects();
@@ -71,6 +77,7 @@ private:
     Plasma::Containment *m_containment;
     PlasmaQuick::ConfigModel *m_wallpaperConfigModel;
     PlasmaQuick::ConfigModel *m_containmentActionConfigModel;
+    PlasmaQuick::ConfigModel *m_containmentPluginsConfigModel;
     CurrentContainmentActionsModel *m_currentContainmentActionsModel;
     QString m_currentWallpaper;
     KDeclarative::ConfigPropertyMap *m_currentWallpaperConfig;

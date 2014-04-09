@@ -706,13 +706,16 @@ void ShellCorona::insertActivity(const QString &id, Activity *activity)
     c->config().writeEntry("lastScreen", 0);
 }
 
-void ShellCorona::setContainmentTypeForScreen(int screen, const QString &plugin)
+Plasma::Containment *ShellCorona::setContainmentTypeForScreen(int screen, const QString &plugin)
 {
     Plasma::Containment *oldContainment = containmentForScreen(screen);
 
     //no valid containment in given screen, giving up
     if (!oldContainment) {
-        return;
+        return 0;
+    }
+    if (plugin.isEmpty()) {
+        return oldContainment;
     }
 
     DesktopView *view = 0;
@@ -722,9 +725,10 @@ void ShellCorona::setContainmentTypeForScreen(int screen, const QString &plugin)
             break;
         }
     }
+
     //no view? give up
     if (!view) {
-        return;
+        return oldContainment;
     }
 
     //create a new containment
@@ -732,20 +736,29 @@ void ShellCorona::setContainmentTypeForScreen(int screen, const QString &plugin)
 
     //if creation failed or invalid plugin, give up
     if (!newContainment) {
-        return;
+        return oldContainment;
     } else if (!newContainment->pluginInfo().isValid()) {
         newContainment->deleteLater();
-        return;
+        return oldContainment;
     }
 
     //At this point we have a valid new containment from plugin and a view
     foreach (Plasma::Applet *applet, oldContainment->applets()) {
         newContainment->addApplet(applet);
     }
+    //TODO: copy all configuration groups
+
+    //remove the "remove" action
+    QAction *removeAction = newContainment->actions()->action("remove");
+    if (removeAction) {
+        removeAction->deleteLater();
+    }
     view->setContainment(newContainment);
     newContainment->setActivity(oldContainment->activity());
     insertContainment(oldContainment->activity(), screen, newContainment);
-    oldContainment->deleteLater();
+    oldContainment->destroy();
+
+    return newContainment;
 }
 
 void ShellCorona::checkAddPanelAction(const QStringList &sycocaChanges)

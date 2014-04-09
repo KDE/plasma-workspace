@@ -20,6 +20,7 @@
 #include "currentcontainmentactionsmodel.h"
 #include "containmentconfigview.h"
 #include "configmodel.h"
+#include "shellcorona.h"
 
 #include <kdeclarative/configpropertymap.h>
 
@@ -43,6 +44,7 @@ ContainmentConfigView::ContainmentConfigView(Plasma::Containment *cont, QWindow 
       m_wallpaperConfigModel(0),
       m_containmentActionConfigModel(0),
       m_currentContainmentActionsModel(0),
+      m_containmentPluginsConfigModel(0),
       m_currentWallpaperConfig(0),
       m_ownWallpaperConfig(0)
 {
@@ -94,6 +96,21 @@ QAbstractItemModel *ContainmentConfigView::currentContainmentActionsModel()
     return m_currentContainmentActionsModel;
 }
 
+QString ContainmentConfigView::containmentPlugin() const
+{
+    return m_containment->pluginInfo().pluginName();
+}
+
+void ContainmentConfigView::setContainmentPlugin(const QString &plugin)
+{
+    if (plugin.isEmpty() || containmentPlugin() == plugin) {
+        return;
+    }
+
+    m_containment = static_cast<ShellCorona *>(m_containment->corona())->setContainmentTypeForScreen(m_containment->screen(), plugin);
+    emit containmentPluginChanged();
+}
+
 PlasmaQuick::ConfigModel *ContainmentConfigView::wallpaperConfigModel()
 {
     if (!m_wallpaperConfigModel) {
@@ -122,6 +139,21 @@ PlasmaQuick::ConfigModel *ContainmentConfigView::wallpaperConfigModel()
         }
     }
     return m_wallpaperConfigModel;
+}
+
+PlasmaQuick::ConfigModel *ContainmentConfigView::containmentPluginsConfigModel()
+{
+    if (!m_containmentPluginsConfigModel) {
+        m_containmentPluginsConfigModel = new PlasmaQuick::ConfigModel(this);
+
+        KPluginInfo::List actions = Plasma::PluginLoader::self()->listContainments(QString());
+
+        foreach (const KPluginInfo &info, actions) {
+            m_containmentPluginsConfigModel->appendCategory(info.icon(), info.name(), QString(), info.pluginName());
+        }
+
+    }
+    return m_containmentPluginsConfigModel;
 }
 
 KDeclarative::ConfigPropertyMap *ContainmentConfigView::wallpaperConfiguration() const
@@ -176,6 +208,10 @@ void ContainmentConfigView::applyWallpaper()
 void ContainmentConfigView::syncWallpaperObjects()
 {
     QObject *wallpaperGraphicsObject = m_containment->property("wallpaperGraphicsObject").value<QObject *>();
+
+    if (!wallpaperGraphicsObject) {
+        return;
+    }
     engine()->rootContext()->setContextProperty("wallpaper", wallpaperGraphicsObject);
 
     //FIXME: why m_wallpaperGraphicsObject->property("configuration").value<ConfigPropertyMap *>() doesn't work?
