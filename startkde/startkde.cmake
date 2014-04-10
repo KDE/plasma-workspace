@@ -191,7 +191,7 @@ fi
 # For anything else (that doesn't set env vars, or that needs a window manager),
 # better use the Autostart folder.
 
-libpath=`kde4-config --path lib | tr : '\n'`
+libpath=`kf5-config --path lib | tr : '\n'`
 
 for prefix in `echo "$libpath" | sed -n -e 's,/lib[^/]*/,/env/,p'`; do
   for file in "$prefix"*.sh; do
