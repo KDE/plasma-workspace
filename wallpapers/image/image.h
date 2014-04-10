@@ -107,6 +107,7 @@ class Image : public QObject
 
     public Q_SLOTS:
         void nextSlide();
+        void removeWallpaper(QString name);
 
     Q_SIGNALS:
         void settingsChanged(bool);
@@ -120,7 +121,6 @@ class Image : public QObject
         void customWallpaperPicked();
 
     protected Q_SLOTS:
-        void removeWallpaper(QString name);
         void showAddSlidePathsDialog();
         void wallpaperBrowseCompleted();
         /**

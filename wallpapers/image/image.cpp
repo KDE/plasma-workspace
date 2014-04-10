@@ -647,11 +647,19 @@ void Image::pathDeleted(const QString &path)
 //FIXME: we have to save the configuration also when the dialog cancel button is clicked.
 void Image::removeWallpaper(QString name)
 {
+    QUrl nameUrl(name);
     // save it
     KConfigGroup cfg = KConfigGroup(KSharedConfig::openConfig(QStringLiteral("plasmarc")),
                                                               QStringLiteral("Wallpapers"));
     m_usersWallpapers = cfg.readEntry("usersWallpapers", m_usersWallpapers);
-    int wallpaperIndex = m_usersWallpapers.indexOf(name);
+
+    int wallpaperIndex = -1;
+    //passed as a path or as a file:// url?
+    if (nameUrl.isValid()) {
+        wallpaperIndex = m_usersWallpapers.indexOf(nameUrl.path());
+    } else {
+        wallpaperIndex = m_usersWallpapers.indexOf(name);
+    }
     if (wallpaperIndex >= 0){
         m_usersWallpapers.removeAt(wallpaperIndex);
         m_model->reload(m_usersWallpapers);

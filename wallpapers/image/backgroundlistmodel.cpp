@@ -71,6 +71,7 @@ BackgroundListModel::BackgroundListModel(Image *listener, QObject *parent)
     roleNames[ScreenshotRole] = "screenshot";
     roleNames[ResolutionRole] = "resolution";
     roleNames[PathRole] = "path";
+    roleNames[RemovableRole] = "removable";
     setRoleNames(roleNames);
 
     m_imageCache = new KImageCache("plasma_wallpaper_preview", 10485760);
@@ -119,6 +120,7 @@ void BackgroundListModel::reload(const QStringList &selected)
     connect(finder, SIGNAL(backgroundsFound(QStringList,QString)), this, SLOT(backgroundsFound(QStringList,QString)));
     m_findToken = finder->token();
     finder->start();
+    m_removableWallpapers = QSet<QString>::fromList(selected);
 }
 
 void BackgroundListModel::backgroundsFound(const QStringList &paths, const QString &token)
@@ -172,6 +174,7 @@ void BackgroundListModel::addBackground(const QString& path)
         //Plasma::Package pkg = Plasma::PluginLoader::self()->loadPackage(QString::fromLatin1("Plasma/Wallpaper"));
         Plasma::Package pkg = Plasma::Package(new WallpaperPackage(0, 0));
 
+        m_removableWallpapers.insert(path);
         pkg.setPath(path);
         qDebug() << "WP Bckground added " << path << pkg.isValid();
         m_packages.prepend(pkg);
@@ -331,6 +334,10 @@ QVariant BackgroundListModel::data(const QModelIndex &index, int role) const
 
     case PathRole: 
         return QUrl::fromLocalFile(b.filePath("preferred"));
+    break;
+
+    case RemovableRole:
+        return m_removableWallpapers.contains(b.filePath("preferred"));
     break;
 
     default:

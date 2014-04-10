@@ -26,6 +26,7 @@
 #include <QPixmap>
 #include <QRunnable>
 #include <QThread>
+#include <QSet>
 
 #include <KDirWatch>
 #include <KFileItem>
@@ -67,7 +68,8 @@ public:
         AuthorRole = Qt::UserRole,
         ScreenshotRole,
         ResolutionRole,
-        PathRole
+        PathRole,
+        RemovableRole
     };
     static const int SCREENSHOT_SIZE = 96;
     static const int BLUR_INCREMENT = 9;
@@ -99,6 +101,7 @@ private:
 
     QWeakPointer<Image> m_structureParent;
     QList<Plasma::Package> m_packages;
+    QSet<QString> m_removableWallpapers;
     QHash<QString, QSize> m_sizeCache;
     QHash<QUrl, QPersistentModelIndex> m_previewJobs;
     KDirWatch m_dirwatch;

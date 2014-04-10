@@ -19,6 +19,7 @@
 
 import QtQuick 2.0
 import org.kde.kquickcontrolsaddons 2.0
+import org.kde.plasma.components 2.0 as PlasmaComponents
 
 MouseArea {
     id: wallpaperDelegate
@@ -80,6 +81,17 @@ MouseArea {
                         easing.type: Easing.OutQuad
                     }
                 }
+            }
+            PlasmaComponents.ToolButton {
+                anchors {
+                    top: parent.top
+                    right: parent.right
+                    margins: units.smallSpacing
+                }
+                iconSource: "list-remove"
+                flat: false
+                visible: model.removable
+                onClicked: imageWallpaper.removeWallpaper(model.path)
             }
         }
     }
