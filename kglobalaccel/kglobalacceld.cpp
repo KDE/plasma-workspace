@@ -34,7 +34,6 @@
 
 #include <KLocalizedString>
 #include "kglobalaccel.h"
-#include "knotification.h"
 #include <QDebug>
 
 
@@ -61,10 +60,6 @@ struct KGlobalAccelDPrivate
     KdeDGlobalAccel::Component *component(const QStringList &actionId) const;
 
 
-    //! Use KNotification to inform the user new global shortcuts were
-    //! registered
-    void _k_newGlobalShortcutNotification();
-
     void splitComponent(QString &component, QString &context) const
         {
         context = "default";
@@ -76,17 +71,6 @@ struct KGlobalAccelDPrivate
             context= tmp.at(1);
             }
         }
-
-    enum ChangeType
-        {
-        NewShortcut
-        };
-
-    // List if changed components for _k_globalShortcutNotification
-    QMap<QString, ChangeType> changedComponents;
-
-    //! Timer for delayed popup on new shortcut registration
-    QTimer popupTimer;
 
     //! Timer for delayed writing to kglobalshortcutsrc
     QTimer writeoutTimer;
@@ -202,55 +186,12 @@ GlobalShortcut *KGlobalAccelDPrivate::addAction(const QStringList &actionId)
     }
 
     Q_ASSERT(!component->getShortcutByName(componentUnique, contextUnique));
-    changedComponents.insert(actionId.at(KGlobalAccel::ComponentUnique), NewShortcut);
-
-    if (!popupTimer.isActive()) popupTimer.start(500);
 
     return new GlobalShortcut(
             actionId.at(KGlobalAccel::ActionUnique),
             actionId.at(KGlobalAccel::ActionFriendly),
             component->shortcutContext(contextUnique));
 }
-
-
-void KGlobalAccelDPrivate::_k_newGlobalShortcutNotification()
-{
-    Q_FOREACH(const QString &uniqueName, changedComponents.keys())
-        {
-        qDebug() << "Showing Notification for component" << uniqueName;
-
-        KdeDGlobalAccel::Component *component = GlobalShortcutsRegistry::self()->getComponent(uniqueName);
-        if (!component)
-            {
-            // Can happen if a component is removed immediately after
-            // registering it. kdelibs/kdeui/tests/kglobalshortcuttests does
-            // it for example.
-            continue;
-            }
-
-        KNotification *notification = new KNotification(
-                "newshortcutregistered",
-                KNotification::CloseOnTimeout,
-                q->parent());
-
-        notification->setText(
-                i18n("The application %1 has registered a new global shortcut",
-                        component->friendlyName()));
-
-        notification->setActions( QStringList( i18n( "Open Global Shortcuts Editor" ) ) );
-
-        notification->addContext( "application", component->friendlyName() );
-
-        QObject::connect(notification, SIGNAL(action1Activated()),
-                component, SLOT(showKCM()));
-
-        notification->sendEvent();
-        }
-
-    changedComponents.clear();
-}
-
-
 
 
 Q_DECLARE_METATYPE(QStringList)
@@ -276,10 +217,6 @@ bool KGlobalAccelD::init()
     d->writeoutTimer.setSingleShot(true);
     connect(&d->writeoutTimer, SIGNAL(timeout()),
             reg, SLOT(writeSettings()));
-
-    d->popupTimer.setSingleShot(true);
-    connect(&d->popupTimer, SIGNAL(timeout()),
-            this, SLOT(_k_newGlobalShortcutNotification()));
 
     if (!QDBusConnection::sessionBus().registerService(QLatin1String("org.kde.kglobalaccel"))) {
         qWarning() << "Failed to register service org.kde.kglobalaccel";

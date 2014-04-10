@@ -144,8 +144,6 @@ Q_SIGNALS:
 
 private:
 
-    Q_PRIVATE_SLOT(d, void _k_newGlobalShortcutNotification() )
-
     void scheduleWriteSettings() const;
 
     KGlobalAccelDPrivate *const d;

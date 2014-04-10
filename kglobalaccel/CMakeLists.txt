@@ -27,7 +27,7 @@ endif ()
 
 # kf5_add_kdeinit_executable( kglobalaccel NOGUI ${kglobalaccel_SRCS} )
 kf5_add_kdeinit_executable( kglobalaccel5 ${kglobalaccel_SRCS} )
-target_link_libraries(kdeinit_kglobalaccel5 Qt5::DBus KF5::GlobalAccel KF5::KCMUtils KF5::I18n KF5::XmlGui KF5::WindowSystem KF5::DBusAddons KF5::Notifications KF5::KIOWidgets KF5::Crash)
+target_link_libraries(kdeinit_kglobalaccel5 Qt5::DBus KF5::GlobalAccel KF5::KCMUtils KF5::I18n KF5::XmlGui KF5::WindowSystem KF5::DBusAddons KF5::KIOWidgets KF5::Crash)
 
 if (${XCB_XCB_FOUND} AND ${XCB_KEYSYMS_FOUND})
     target_link_libraries(kdeinit_kglobalaccel5 Qt5::X11Extras ${XCB_XCB_LIBRARY} ${XCB_KEYSYMS_LIBRARY})
@@ -43,8 +43,6 @@ install( TARGETS kdeinit_kglobalaccel5 ${INSTALL_TARGETS_DEFAULT_ARGS} )
 install( TARGETS kglobalaccel5 ${INSTALL_TARGETS_DEFAULT_ARGS} )
 # install( FILES kglobalaccel.desktop DESTINATION ${AUTOSTART_INSTALL_DIR})
 install( FILES kglobalaccel.desktop  DESTINATION ${SERVICES_INSTALL_DIR} RENAME kglobalaccel5.desktop)
-# KNotify configuration
-install( FILES kglobalaccel.notifyrc DESTINATION ${DATA_INSTALL_DIR}/kglobalaccel RENAME kglobalaccel5.notifyrc )
 
 # Install some update file (not yet working)
 #install( FILES kconf/kdedglobalaccel_kde42.upd DESTINATION ${DATA_INSTALL_DIR}/kconf_update)

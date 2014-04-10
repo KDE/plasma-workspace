@@ -23,7 +23,6 @@
 
 #include <QDebug>
 #include <KLocalizedString>
-#include "knotification.h"
 
 #include <QKeySequence>
 #include <QDBusConnection>
@@ -222,18 +221,6 @@ bool GlobalShortcutsRegistry::keyPressed(int keyQt)
 
     // 1st Invoke the action
     shortcut->context()->component()->emitGlobalShortcutPressed( *shortcut );
-
-    // Then do anything else
-    KNotification *notification = new KNotification(
-            "globalshortcutpressed",
-            KNotification::CloseOnTimeout);
-
-    notification->setText(
-            i18n("The global shortcut for %1 was issued.", shortcut->friendlyName()));
-
-    notification->addContext( "application", shortcut->context()->component()->friendlyName() );
-
-    notification->sendEvent();
 
     return true;
 }
