@@ -115,6 +115,7 @@ View::~View()
 void View::showEvent(QShowEvent *event)
 {
     KWindowSystem::setOnAllDesktops(winId(), true);
+    KWindowSystem::setState(winId(), NET::KeepAbove);
     Dialog::showEvent(event);
     positionOnScreen();
 }
