@@ -53,15 +53,13 @@ public Q_SLOTS:
     void initializeStartupNotification();
 
 protected Q_SLOTS:
-    void screenResized(int screen);
-    void screenGeometryChanged(int screenCount);
+    void screenGeometryChanged();
     void resetScreenPos();
     void displayOrHide();
 
 private:
     QPoint m_customPos;
     KDeclarative::QmlObject *m_qmlObj;
-    int m_shownOnScreen;
     qreal m_offset;
     bool m_floating : 1;
 };

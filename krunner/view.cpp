@@ -44,7 +44,6 @@
 
 View::View(QWindow *parent)
     : PlasmaQuick::Dialog(),
-      m_shownOnScreen(-1),
       m_offset(.5),
       m_floating(false)
 {
@@ -85,8 +84,14 @@ View::View(QWindow *parent)
     m_qmlObj->completeInitialization();
     setMainItem(qobject_cast<QQuickItem *>(m_qmlObj->rootObject()));
 
-    connect(QApplication::desktop(), SIGNAL(resized(int)), this, SLOT(screenGeometryChanged(int)));
-    connect(QApplication::desktop(), SIGNAL(screenCountChanged(int)), this, SLOT(screenGeometryChanged(int)));
+    auto controlScreen = [=](QScreen* screen) {
+        connect(screen, SIGNAL(geometryChanged(QRect)), SLOT(screenGeometryChanged()));
+        connect(screen, SIGNAL(destroyed(QObject*)), SLOT(screenGeometryChanged()));
+        screenGeometryChanged();
+    };
+    foreach(QScreen* s, QGuiApplication::screens())
+        controlScreen(s);
+    connect(qApp, &QGuiApplication::screenAdded, this, controlScreen);
 
     connect(KWindowSystem::self(), SIGNAL(workAreaChanged()), this, SLOT(resetScreenPos()));
 
@@ -114,17 +119,8 @@ void View::showEvent(QShowEvent *event)
     positionOnScreen();
 }
 
-void View::screenResized(int screen)
+void View::screenGeometryChanged()
 {
-    if (isVisible() && screen == m_shownOnScreen) {
-        positionOnScreen();
-    }
-}
-
-void View::screenGeometryChanged(int screenCount)
-{
-    Q_UNUSED(screenCount)
-
     if (isVisible()) {
         positionOnScreen();
     }
@@ -139,15 +135,19 @@ void View::resetScreenPos()
 
 void View::positionOnScreen()
 {
-    if (QApplication::desktop()->screenCount() < 2) {
-        m_shownOnScreen = QApplication::desktop()->primaryScreen();
-    } else if (isVisible()) {
-        m_shownOnScreen = QApplication::desktop()->screenNumber(geometry().center());
+    QScreen* shownOnScreen = 0;
+    if (QGuiApplication::screens().count() <= 1) {
+        shownOnScreen = QGuiApplication::screens().first();
     } else {
-        m_shownOnScreen = QApplication::desktop()->screenNumber(QCursor::pos());
+        Q_FOREACH (QScreen* screen, QGuiApplication::screens()) {
+            if (screen->geometry().contains(QCursor::pos()))
+                shownOnScreen = screen;
+        }
     }
+    Q_ASSERT(shownOnScreen);
 
-    const QRect r = QApplication::desktop()->screenGeometry(m_shownOnScreen);
+    setScreen(shownOnScreen);
+    const QRect r = shownOnScreen->availableGeometry();
 
     if (m_floating && !m_customPos.isNull()) {
         int x = qBound(r.left(), m_customPos.x(), r.right() - width());
