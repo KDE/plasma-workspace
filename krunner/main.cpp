@@ -33,18 +33,19 @@
 #include "view.h"
 #include "shellpluginloader.h"
 
-static const char description[] = "Run Command interface";
 static const char version[] = "0.1";
 static QCommandLineParser parser;
 
 int main(int argc, char **argv)
 {
     QApplication app(argc, argv);
+//     TODO: Make it a QGuiApplication once we don't depend on KDELibs4Support
+//     QGuiApplication app(argc, argv);
     app.setApplicationName("krunner");
     app.setOrganizationDomain("kde.org");
     app.setApplicationVersion(version);
     app.setQuitOnLastWindowClosed(false);
-    parser.setApplicationDescription(description);
+    parser.setApplicationDescription(i18n("Run Command interface"));
     KDBusService service(KDBusService::Unique);
 
 
