@@ -92,7 +92,6 @@ Rectangle {
         if (wallpaper.pluginName == "org.kde.slideshow") {
             wallpaper.setAction("next", i18n("Next Wallpaper Image"),"user-desktop");
         }
-        wallpaper.setAction("open", i18n("Open Wallpaper Image"),"document-open");
         fadeWallpaper()
     }
 
