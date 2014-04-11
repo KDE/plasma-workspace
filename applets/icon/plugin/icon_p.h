@@ -43,6 +43,8 @@ public:
     QString genericName() const;
     void setUrl(QUrl& url);
 
+    Q_INVOKABLE void open();
+
 Q_SIGNALS:
 
     void urlChanged(QUrl newUrl);

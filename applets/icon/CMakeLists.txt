@@ -14,6 +14,7 @@ target_link_libraries(iconplugin
   Qt5::Qml
   Qt5::Quick
   KF5::KIOCore # KFileItem
+  KF5::KIOWidgets # KRun
 )
 
 install(TARGETS iconplugin DESTINATION ${QML_INSTALL_DIR}/org/kde/plasma/private/icon)

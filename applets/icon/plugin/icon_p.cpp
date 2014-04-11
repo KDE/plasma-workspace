@@ -24,6 +24,7 @@
 
 #include <KFileItem>
 #include <KDesktopFile>
+#include <KRun>
 #include <QMimeType>
 #include <QMimeDatabase>
 
@@ -95,6 +96,11 @@ QString IconPrivate::icon() const
 QString IconPrivate::genericName() const
 {
     return m_genericName;
+}
+
+void IconPrivate::open()
+{
+    new KRun(m_url, 0);
 }
 
 #include "icon_p.moc"

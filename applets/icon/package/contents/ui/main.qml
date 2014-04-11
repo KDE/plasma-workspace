@@ -38,7 +38,7 @@ MouseArea {
     property int formFactor: plasmoid.formFactor
     property bool constrained: formFactor == PlasmaCore.Types.Vertical || formFactor == PlasmaCore.Types.Horizontal
     hoverEnabled: true
-    onClicked: Qt.openUrlExternally(plasmoid.configuration.url);
+    onClicked: logic.open();
     Plasmoid.preferredRepresentation: Plasmoid.fullRepresentation
 
     Component.onCompleted: {
@@ -81,6 +81,7 @@ MouseArea {
 
     Logic {
         id: logic
+        url: plasmoid.configuration.url
     }
 
     Connections {
