@@ -32,6 +32,7 @@
 #include <klocalizedstring.h>
 #include <kwindoweffects.h>
 #include <KActionCollection>
+#include <KWindowSystem>
 
 #include <Plasma/Containment>
 #include <Plasma/Corona>
@@ -46,9 +47,15 @@ PanelConfigView::PanelConfigView(Plasma::Containment *containment, PanelView *pa
     m_visibilityMode = panelView->visibilityMode();
     panelView->setVisibilityMode(PanelView::WindowsGoBelow);
     setScreen(panelView->screen());
-    connect(panelView, &QWindow::screenChanged, [=](QScreen *screen){setScreen(screen); syncGeometry();});
+    connect(panelView, &QWindow::screenChanged,
+            [=](QScreen *screen) {
+                setScreen(screen);
+                syncGeometry();
+            });
 
-    setFlags(Qt::BypassWindowManagerHint);
+    KWindowSystem::setType(winId(), NET::Dock);
+    setFlags(Qt::WindowFlags((flags() | Qt::FramelessWindowHint) & (~Qt::WindowDoesNotAcceptFocus)));
+    KWindowSystem::forceActiveWindow(winId());
 
     KWindowEffects::enableBlurBehind(winId(), true);
     updateContrast();
