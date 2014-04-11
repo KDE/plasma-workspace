@@ -39,7 +39,7 @@ Item {
             var location;
 
             if (plasmoid.parent.objectName == "taskListDelegate") {
-                location = plasmoid.parent.location;
+                location = PlasmaCore.Types.LeftEdge;
             } else {
                 location = plasmoid.location;
             }
