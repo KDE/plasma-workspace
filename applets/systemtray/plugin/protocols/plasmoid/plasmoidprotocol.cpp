@@ -48,7 +48,8 @@ namespace SystemTray
 PlasmoidProtocol::PlasmoidProtocol(QObject *parent)
     : Protocol(parent),
       m_tasks(),
-      m_containment(0)
+      m_containment(0),
+      m_systrayApplet(0)
 {
 }
 
