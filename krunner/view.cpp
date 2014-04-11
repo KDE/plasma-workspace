@@ -206,7 +206,7 @@ void View::displayWithClipboardContents()
     setVisible(true);
 
     m_qmlObj->rootObject()->setProperty("runner", QString());
-    m_qmlObj->rootObject()->setProperty("query", QApplication::clipboard()->text(QClipboard::Selection));
+    m_qmlObj->rootObject()->setProperty("query", QGuiApplication::clipboard()->text(QClipboard::Selection));
 }
 
 void View::query(const QString &term)
