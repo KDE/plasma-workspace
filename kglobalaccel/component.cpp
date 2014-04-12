@@ -23,8 +23,7 @@
 #include "globalshortcutsregistry.h"
 #include <config-kglobalaccel.h>
 
-#include <KRun>
-
+#include <QProcess>
 #include <QDebug>
 #include <QtCore/QStringList>
 #include <QKeySequence>
@@ -425,7 +424,7 @@ QStringList Component::shortcutNames( const QString &contextName) const
 
 bool Component::showKCM()
     {
-    return KRun::runCommand("kcmshell5 keys", NULL);
+    return QProcess::startDetached("kcmshell5", QStringList() << "keys");
     }
 
 

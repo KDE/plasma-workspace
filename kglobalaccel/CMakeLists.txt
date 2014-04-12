@@ -31,7 +31,15 @@ configure_file(config-kglobalaccel.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-kg
 
 # kf5_add_kdeinit_executable( kglobalaccel NOGUI ${kglobalaccel_SRCS} )
 kf5_add_kdeinit_executable( kglobalaccel5 ${kglobalaccel_SRCS} )
-target_link_libraries(kdeinit_kglobalaccel5 Qt5::DBus KF5::GlobalAccel KF5::KCMUtils KF5::I18n KF5::XmlGui KF5::WindowSystem KF5::DBusAddons KF5::KIOWidgets KF5::Crash)
+target_link_libraries(kdeinit_kglobalaccel5
+   Qt5::DBus
+   KF5::GlobalAccel
+   KF5::I18n
+   KF5::WindowSystem # KKeyServer
+   KF5::DBusAddons   # KDBusService
+   KF5::CoreAddons   # KAboutData
+   KF5::ConfigCore
+   KF5::Crash)
 
 if (${XCB_XCB_FOUND} AND ${XCB_KEYSYMS_FOUND})
     target_link_libraries(kdeinit_kglobalaccel5 Qt5::X11Extras ${XCB_XCB_LIBRARY} ${XCB_KEYSYMS_LIBRARY})
