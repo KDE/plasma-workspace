@@ -168,7 +168,7 @@ void DesktopView::showConfigurationInterface(Plasma::Applet *applet)
 
     Plasma::Containment *cont = qobject_cast<Plasma::Containment *>(applet);
 
-    if (cont) {
+    if (cont && cont->isContainment()) {
         m_configView = new ContainmentConfigView(cont);
     } else {
         m_configView = new PlasmaQuick::ConfigView(applet);
