@@ -173,15 +173,15 @@ bool PowermanagementEngine::sourceRequestEvent(const QString &name)
     } else if (name == "AC Adapter") {
         bool isPlugged = false;
 
-        const QList<Solid::Device> list_ac = Solid::Device::listFromType(Solid::DeviceInterface::AcAdapter);
-        foreach (const Solid::Device & device_ac, list_ac) {
-            const Solid::AcAdapter* acadapter = device_ac.as<Solid::AcAdapter>();
-            isPlugged |= acadapter->isPlugged();
-            connect(acadapter, SIGNAL(plugStateChanged(bool,QString)), this,
-                    SLOT(updateAcPlugState(bool)), Qt::UniqueConnection);
-        }
-
-        updateAcPlugState(isPlugged);
+//         const QList<Solid::Device> list_ac = Solid::Device::listFromType(Solid::DeviceInterface::AcAdapter);
+//         foreach (const Solid::Device & device_ac, list_ac) {
+//             const Solid::AcAdapter* acadapter = device_ac.as<Solid::AcAdapter>();
+//             isPlugged |= acadapter->isPlugged();
+//             connect(acadapter, SIGNAL(plugStateChanged(bool,QString)), this,
+//                     SLOT(updateAcPlugState(bool)), Qt::UniqueConnection);
+//         }
+//
+//         updateAcPlugState(isPlugged);
     } else if (name == "Sleep States") {
         const QSet<Solid::PowerManagement::SleepState> sleepstates =
                                 Solid::PowerManagement::supportedSleepStates();

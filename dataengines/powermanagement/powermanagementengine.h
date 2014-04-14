@@ -24,7 +24,6 @@
 #include <Plasma/DataEngine>
 
 #include <solid/battery.h>
-#include <solid/acadapter.h>
 
 #include <QtDBus/QDBusConnection>
 #include <QHash>
