@@ -21,11 +21,11 @@
 #include <QTimer>
 
 #include <Plasma/DataEngine>
-#include <Solid/Networking>
 
 #include "geolocationprovider.h"
 
 class GeolocationProvider;
+class QNetworkConfigurationManager;
 
 class Geolocation : public Plasma::DataEngine
 {
@@ -43,7 +43,7 @@ class Geolocation : public Plasma::DataEngine
         bool updatePlugins(GeolocationProvider::UpdateTriggers triggers);
 
     protected Q_SLOTS:
-        void networkStatusChanged();
+        void networkStatusChanged(bool isOnline);
         void pluginAvailabilityChanged(GeolocationProvider *provider);
         void pluginUpdated();
         void actuallySetData();
@@ -51,6 +51,7 @@ class Geolocation : public Plasma::DataEngine
     private:
         Data m_data;
         EntryAccuracy m_accuracy;
+        QNetworkConfigurationManager *m_networkManager;
         QList<GeolocationProvider *> m_plugins;
         QTimer m_updateTimer;
 };

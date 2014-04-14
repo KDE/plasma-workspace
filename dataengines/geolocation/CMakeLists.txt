@@ -7,6 +7,7 @@ add_library(plasma-geolocation-interface SHARED ${plasma_geolocation_interface_S
 target_link_libraries(plasma-geolocation-interface
     PUBLIC
         Qt5::Core
+        Qt5::Network
         KF5::Plasma
     PRIVATE
         KF5::KIOCore

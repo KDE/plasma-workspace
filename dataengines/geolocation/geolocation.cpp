@@ -20,16 +20,18 @@
 #include <limits.h>
 
 #include <QDebug>
+#include <QNetworkConfigurationManager>
 #include <KServiceTypeTrader>
 
 static const char SOURCE[] = "location";
 
 Geolocation::Geolocation(QObject* parent, const QVariantList& args)
     : Plasma::DataEngine(parent, args)
+    , m_networkManager(new QNetworkConfigurationManager(this))
 {
     Q_UNUSED(args)
     setMinimumPollingInterval(500);
-    connect(Solid::Networking::notifier(), SIGNAL(statusChanged(Solid::Networking::Status)),
+    connect(m_networkManager, SIGNAL(onlineStateChanged(bool)),
             this, SLOT(networkStatusChanged()));
     m_updateTimer.setInterval(100);
     m_updateTimer.setSingleShot(true);
@@ -105,11 +107,10 @@ bool Geolocation::sourceRequestEvent(const QString &name)
     return false;
 }
 
-void Geolocation::networkStatusChanged()
+void Geolocation::networkStatusChanged(bool isOnline)
 {
     qDebug() << "network status changed";
-    const Solid::Networking::Status netStatus = Solid::Networking::status();
-    if ((netStatus == Solid::Networking::Connected) || (netStatus == Solid::Networking::Unknown)) {
+    if (isOnline) {
         updatePlugins(GeolocationProvider::NetworkConnected);
     }
 }
