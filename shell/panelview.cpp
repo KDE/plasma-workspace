@@ -52,7 +52,6 @@ PanelView::PanelView(ShellCorona *corona, QWindow *parent)
        m_distance(0),
        m_alignment(Qt::AlignLeft),
        m_corona(corona),
-       m_strutsTimer(new QTimer(this)),
        m_visibilityMode(NormalPanel)
 {
     QSurfaceFormat format;
@@ -86,7 +85,7 @@ PanelView::PanelView(ShellCorona *corona, QWindow *parent)
     //cannot use the new syntax as start() is overloaded
     connect(this, SIGNAL(screenChanged(QScreen *)),
             &m_positionPaneltimer, SLOT(start()));
-    connect(screen(), SIGNAL(geometryChanged(QRect &)),
+    connect(screen(), SIGNAL(geometryChanged(QRect)),
             &m_positionPaneltimer, SLOT(start()));
     connect(this, SIGNAL(locationChanged(Plasma::Types::Location)),
             &m_positionPaneltimer, SLOT(start()));
@@ -99,8 +98,8 @@ PanelView::PanelView(ShellCorona *corona, QWindow *parent)
         qWarning() << "Invalid home screen package";
     }
 
-    m_strutsTimer->setSingleShot(true);
-    connect(m_strutsTimer, &QTimer::timeout,
+    m_strutsTimer.setSingleShot(true);
+    connect(&m_strutsTimer, &QTimer::timeout,
             this, &PanelView::updateStruts);
     connect(QApplication::desktop(), &QDesktopWidget::screenCountChanged,
             this, &PanelView::updateStruts);
@@ -204,7 +203,7 @@ void PanelView::setOffset(int offset)
     positionPanel();
     emit offsetChanged();
     m_corona->requestApplicationConfigSync();
-    m_strutsTimer->start(STRUTSTIMERDELAY);
+    m_strutsTimer.start(STRUTSTIMERDELAY);
 }
 
 int PanelView::thickness() const
@@ -420,8 +419,8 @@ void PanelView::positionPanel()
             position = QPoint(s->geometry().bottomLeft() - QPoint(0, height() + m_distance) + QPoint(m_offset, 1));
         }
     }
-    m_strutsTimer->stop();
-    m_strutsTimer->start(STRUTSTIMERDELAY);
+    m_strutsTimer.stop();
+    m_strutsTimer.start(STRUTSTIMERDELAY);
     setMinimumSize(QSize(0, 0));
     setMaximumSize(screen()->size());
 
@@ -737,7 +736,6 @@ void PanelView::updateStruts()
                                              strut.bottom_start,
                                              strut.bottom_end);
 
-    //recreateUnhideTrigger();
 }
 
 void PanelView::themeChanged()

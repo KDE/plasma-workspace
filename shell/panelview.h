@@ -125,7 +125,7 @@ private:
     Qt::Alignment m_alignment;
     QPointer<PlasmaQuick::ConfigView> m_panelConfigView;
     ShellCorona *m_corona;
-    QTimer *m_strutsTimer;
+    QTimer m_strutsTimer;
     VisibilityMode m_visibilityMode;
     Plasma::Theme m_theme;
     QTimer m_positionPaneltimer;
