@@ -31,13 +31,9 @@ class DeviceSignalMapManager : public QObject
         DeviceSignalMapManager(QObject *parent=0);
         ~DeviceSignalMapManager();
 
-        void mapDevice(Solid::AcAdapter *ac, const QString &udi);
-        void mapDevice(Solid::Button *button, const QString &udi);
         void mapDevice(Solid::Battery *battery, const QString &udi);
         void mapDevice(Solid::StorageAccess *storageaccess, const QString &udi);
-        
-        void unmapDevice(Solid::AcAdapter *ac);
-        void unmapDevice(Solid::Button *button);
+
         void unmapDevice(Solid::Battery *battery);
         void unmapDevice(Solid::StorageAccess *storageaccess);
         

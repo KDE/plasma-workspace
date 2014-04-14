@@ -36,13 +36,7 @@
 #include <solid/opticaldisc.h>
 #include <solid/camera.h>
 #include <solid/portablemediaplayer.h>
-#include <solid/networkinterface.h>
-#include <solid/acadapter.h>
 #include <solid/battery.h>
-#include <solid/button.h>
-#include <solid/audiointerface.h>
-#include <solid/dvbinterface.h>
-#include <solid/video.h>
 
 class DeviceSignalMapper : public QSignalMapper
 {
@@ -59,30 +53,6 @@ class DeviceSignalMapper : public QSignalMapper
         
     protected:
         QMap<QObject*, QString> signalmap;
-};
-
-class AcAdapterSignalMapper : public DeviceSignalMapper
-{
-    Q_OBJECT
-
-    public:
-        AcAdapterSignalMapper(QObject *parent=0);
-        ~AcAdapterSignalMapper();
-
-    public Q_SLOTS:
-        void plugStateChanged(bool newState);
-};
-
-class ButtonSignalMapper : public DeviceSignalMapper
-{
-    Q_OBJECT
-
-    public:
-        ButtonSignalMapper(QObject *parent=0);
-        ~ButtonSignalMapper();
-
-    public Q_SLOTS:
-        void pressed(Solid::Button::ButtonType type);
 };
 
 class BatterySignalMapper : public DeviceSignalMapper

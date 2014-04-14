@@ -398,30 +398,6 @@ bool SolidDeviceEngine::populateDeviceData(const QString &name)
         setData(name, I18N_NOOP("Hotpluggable"), true);
 
     }
-    if (device.is<Solid::NetworkInterface>()) {
-        Solid::NetworkInterface *networkinterface = device.as<Solid::NetworkInterface>();
-        if (!networkinterface) {
-            return false;
-        }
-
-        devicetypes << I18N_NOOP("Network Interface");
-
-        setData(name, I18N_NOOP("Interface Name"), networkinterface->ifaceName());
-        setData(name, I18N_NOOP("Wireless"), networkinterface->isWireless());
-        setData(name, I18N_NOOP("Hardware Address"), networkinterface->hwAddress());
-        setData(name, I18N_NOOP("MAC Address"), networkinterface->macAddress());
-    }
-    if (device.is<Solid::AcAdapter>()) {
-        Solid::AcAdapter *ac = device.as<Solid::AcAdapter>();
-        if (!ac) {
-            return false;
-        }
-
-        devicetypes << I18N_NOOP("AC Adapter");
-
-        setData(name, I18N_NOOP("Plugged In"), ac->isPlugged());
-        m_signalmanager->mapDevice(ac, device.udi());
-    }
     if (device.is<Solid::Battery>()) {
         Solid::Battery *battery = device.as<Solid::Battery>();
         if (!battery) {
@@ -445,100 +421,6 @@ bool SolidDeviceEngine::populateDeviceData(const QString &name)
         setData(name, I18N_NOOP("Charge State"), chargestate.at((int)battery->chargeState()));
 
         m_signalmanager->mapDevice(battery, device.udi());
-    }
-    if (device.is<Solid::Button>()) {
-        Solid::Button *button = device.as<Solid::Button>();
-        if (!button) {
-            return false;
-        }
-
-        devicetypes << I18N_NOOP("Button");
-
-        QStringList buttontype;
-        buttontype << I18N_NOOP("Lid Button") << I18N_NOOP("Power Button") << I18N_NOOP("Sleep Button")
-                << I18N_NOOP("Unknown Button Type");
-
-        setData(name, I18N_NOOP("Type"), buttontype.at((int)button->type()));
-        setData(name, I18N_NOOP("Has State"), button->hasState());
-        setData(name, I18N_NOOP("State Value"), button->stateValue());
-        setData(name, I18N_NOOP("Pressed"), false);  //this is an extra value that is tracked by the button signals
-
-        m_signalmanager->mapDevice(button, device.udi());
-    }
-    if (device.is<Solid::AudioInterface>()) {
-        Solid::AudioInterface *audiointerface = device.as<Solid::AudioInterface>();
-        if (!audiointerface) {
-            return false;
-        }
-
-        devicetypes << I18N_NOOP("Audio Interface");
-
-        QStringList audiodriver;
-        audiodriver << I18N_NOOP("ALSA") << I18N_NOOP("Open Sound System") << I18N_NOOP("Unknown Audio Driver");
-
-        setData(name, I18N_NOOP("Driver"), audiodriver.at((int)audiointerface->driver()));
-        setData(name, I18N_NOOP("Driver Handle"), audiointerface->driverHandle());
-        setData(name, I18N_NOOP("Name"), audiointerface->name());
-
-        //get AudioInterfaceTypes
-        QStringList audiointerfacetypes;
-        Solid::AudioInterface::AudioInterfaceTypes devicetypes = audiointerface->deviceType();
-        if (devicetypes & Solid::AudioInterface::UnknownAudioInterfaceType) {
-            audiointerfacetypes << I18N_NOOP("Unknown Audio Interface Type");
-        }
-        if (devicetypes & Solid::AudioInterface::AudioControl) {
-            audiointerfacetypes << I18N_NOOP("Audio Control");
-        }
-        if (devicetypes & Solid::AudioInterface::AudioInput) {
-            audiointerfacetypes << I18N_NOOP("Audio Input");
-        }
-        if (devicetypes & Solid::AudioInterface::AudioOutput) {
-            audiointerfacetypes << I18N_NOOP("Audio Output");
-        }
-        setData(name, I18N_NOOP("Audio Device Type"), audiointerfacetypes);
-
-        //get SoundCardTypes
-        QStringList soundcardtype;
-        soundcardtype << I18N_NOOP("Internal Soundcard") << I18N_NOOP("USB Soundcard") << I18N_NOOP("Firewire Soundcard")
-                << I18N_NOOP("Headset") << I18N_NOOP("Modem");
-        setData(name, I18N_NOOP("Soundcard Type"), soundcardtype.at((int)audiointerface->soundcardType()));
-    }
-    if (device.is<Solid::DvbInterface>()) {
-        Solid::DvbInterface *dvbinterface = device.as<Solid::DvbInterface>();
-        if (!dvbinterface) {
-            return false;
-        }
-
-        devicetypes << I18N_NOOP("DVB Interface");
-
-        setData(name, I18N_NOOP("Device"), dvbinterface->device());
-        setData(name, I18N_NOOP("Device Adapter"), dvbinterface->deviceAdapter());
-
-        //get devicetypes
-        QStringList dvbdevicetypes;
-        dvbdevicetypes << I18N_NOOP("DVB Unknown") << I18N_NOOP("DVB Audio") << I18N_NOOP("DVB Ca")
-                << I18N_NOOP("DVB Demux") << I18N_NOOP("DVB DVR") << I18N_NOOP("DVB Frontend")
-                << I18N_NOOP("DVB Net") << I18N_NOOP("DVB OSD") << I18N_NOOP("DVB Sec") << I18N_NOOP("DVB Video");
-
-        setData(name, I18N_NOOP("DVB Device Type"), dvbdevicetypes.at((int)dvbinterface->deviceType()));
-        setData(name, I18N_NOOP("Device Index"), dvbinterface->deviceIndex());
-    }
-    if (device.is<Solid::Video>()) {
-        Solid::Video *video = device.as<Solid::Video>();
-        if (!video) {
-            return false;
-        }
-
-        devicetypes << I18N_NOOP("Video");
-
-        setData(name, I18N_NOOP("Supported Protocols"), video->supportedProtocols());
-        setData(name, I18N_NOOP("Supported Drivers"), video->supportedDrivers());
-
-        QStringList handles;
-        foreach (const QString &driver, video->supportedDrivers()) {
-            handles << video->driverHandle(driver).toString();
-        }
-        setData(name, I18N_NOOP("Driver Handles"), handles);
     }
 
     int index = Solid::DeviceInterface::staticMetaObject.indexOfEnumerator("Type");

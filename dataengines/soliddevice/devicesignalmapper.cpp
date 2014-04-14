@@ -31,34 +31,6 @@ void DeviceSignalMapper::setMapping(QObject* device, const QString &udi)
     signalmap[device] = udi;
 }
 
-AcAdapterSignalMapper::AcAdapterSignalMapper(QObject *parent) : DeviceSignalMapper(parent)
-{
-}
-
-AcAdapterSignalMapper::~AcAdapterSignalMapper()
-{
-}
-
-void AcAdapterSignalMapper::plugStateChanged(bool newState)
-{
-    emit(deviceChanged(signalmap[sender()], "Plugged In", newState));
-}
-
-
-ButtonSignalMapper::ButtonSignalMapper(QObject *parent) : DeviceSignalMapper(parent)
-{
-}
-
-ButtonSignalMapper::~ButtonSignalMapper()
-{
-}
-
-void ButtonSignalMapper::pressed(Solid::Button::ButtonType type)
-{
-    Q_UNUSED(type)
-    emit(deviceChanged(signalmap[sender()], "Pressed", true));
-}
-
 BatterySignalMapper::BatterySignalMapper(QObject *parent) : DeviceSignalMapper(parent)
 {
 }
