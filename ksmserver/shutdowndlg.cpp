@@ -177,8 +177,8 @@ void KSMShutdownDlg::resizeEvent(QResizeEvent *e)
 //        setMask(m_view->mask());
     }
 
-    setPosition(screen()->virtualGeometry().center().x() - width() / 2,
-                screen()->virtualGeometry().center().y() - height() / 2);
+    setPosition(screen()->geometry().center().x() - width() / 2,
+                screen()->geometry().center().y() - height() / 2);
 }
 
 void KSMShutdownDlg::slotLogout()
