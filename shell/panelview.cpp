@@ -77,7 +77,7 @@ PanelView::PanelView(ShellCorona *corona, QWindow *parent)
     m_unhideTimer.setSingleShot(true);
     m_unhideTimer.setInterval(500);
     connect(&m_unhideTimer, &QTimer::timeout,
-            this, &PanelView::updateUnhideTrigger);
+            this, &PanelView::restoreAutoHide);
 
     //Screen management
     connect(this, &QWindow::screenChanged,
@@ -91,8 +91,8 @@ PanelView::PanelView(ShellCorona *corona, QWindow *parent)
             &m_positionPaneltimer, SLOT(start()));
     connect(this, SIGNAL(containmentChanged()),
             &m_positionPaneltimer, SLOT(start()));
-
-
+    connect(this, SIGNAL(containmentChanged()),
+            this, SLOT(containmentChanged()));
 
     if (!m_corona->package().isValid()) {
         qWarning() << "Invalid home screen package";
@@ -139,7 +139,7 @@ KConfigGroup PanelView::config() const
     KConfigGroup views(m_corona->applicationConfig(), "PlasmaViews");
     views = KConfigGroup(&views, QString("Panel %1").arg(containment()->id()));
 
-    if (containment()->formFactor() == Plasma::Types::Vertical) {
+    if (formFactor() == Plasma::Types::Vertical) {
         return KConfigGroup(&views, "Types::Vertical" + QString::number(screen()->size().height()));
     //treat everything else as horizontal
     } else {
@@ -324,19 +324,18 @@ void PanelView::setVisibilityMode(PanelView::VisibilityMode mode)
     //life is vastly simpler if we ensure we're visible now
     show();
 
-    disconnect(containment(), &Plasma::Applet::activated, this, &PanelView::unhide);
-    if (!(mode == NormalPanel || mode == WindowsGoBelow)) {
-        connect(containment(), &Plasma::Applet::activated, this, &PanelView::unhide);
+    disconnect(containment(), &Plasma::Applet::activated, this, &PanelView::showTemporarily);
+    if (!(mode == NormalPanel || mode == WindowsGoBelow || mode == AutoHide)) {
+        connect(containment(), &Plasma::Applet::activated, this, &PanelView::showTemporarily);
     }
 
     config().writeEntry("panelVisibility", (int)mode);
-
 
     updateStruts();
 
     KWindowSystem::setOnAllDesktops(winId(), true);
     emit visibilityModeChanged();
-    updateUnhideTrigger();
+    restoreAutoHide();
 }
 
 PanelView::VisibilityMode PanelView::visibilityMode() const
@@ -439,8 +438,6 @@ void PanelView::positionPanel()
         emit thicknessChanged();
         emit length();
     }
-
-    updateUnhideTrigger();
 }
 
 void PanelView::restore()
@@ -526,7 +523,12 @@ void PanelView::showConfigurationInterface(Plasma::Applet *applet)
     KWindowSystem::setState(m_panelConfigView.data()->winId(), NET::SkipTaskbar | NET::SkipPager);
 }
 
-void PanelView::updateUnhideTrigger()
+void PanelView::restoreAutoHide()
+{
+    setAutoHideEnabled(m_visibilityMode == AutoHide && containment() && containment()->status() != Plasma::Types::AcceptingInputStatus);
+}
+
+void PanelView::setAutoHideEnabled(bool enabled)
 {
 #if HAVE_X11
     xcb_connection_t *c = QX11Info::connection();
@@ -543,7 +545,7 @@ void PanelView::updateUnhideTrigger()
         return;
     }
 
-    if (m_visibilityMode != AutoHide) {
+    if (!enabled) {
         xcb_delete_property(c, winId(), atom->atom);
         return;
     }
@@ -574,8 +576,8 @@ void PanelView::updateUnhideTrigger()
         break;
     }
 
-    KWindowEffects::slideWindow(winId(), slideLocation, -1);
     xcb_change_property(c, XCB_PROP_MODE_REPLACE, winId(), atom->atom, XCB_ATOM_CARDINAL, 32, 1, &value);
+    KWindowEffects::slideWindow(winId(), slideLocation, -1);
 #endif
 }
 
@@ -621,11 +623,6 @@ bool PanelView::event(QEvent *e)
         m_unhideTimer.start();
     }
     return View::event(e);
-}
-
-void PanelView::unhide()
-{
-    m_unhideTimer.start();
 }
 
 void PanelView::updateStruts()
@@ -746,6 +743,32 @@ void PanelView::themeChanged()
                                                       m_theme.backgroundContrast(),
                                                       m_theme.backgroundIntensity(),
                                                       m_theme.backgroundSaturation());
+}
+
+void PanelView::containmentChanged()
+{
+    connect(containment(), SIGNAL(statusChanged(Plasma::Types::ItemStatus)), SLOT(statusChanged(Plasma::Types::ItemStatus)));
+}
+
+void PanelView::statusChanged(Plasma::Types::ItemStatus status)
+{
+    if (status == Plasma::Types::NeedsAttentionStatus) {
+        showTemporarily();
+    } else {
+        restoreAutoHide();
+    }
+}
+
+void PanelView::showTemporarily()
+{
+    setAutoHideEnabled(false);
+
+    QTimer * t = new QTimer(this);
+    t->setSingleShot(true);
+    t->setInterval(3000);
+    connect(t, SIGNAL(timeout()), SLOT(restoreAutoHide()));
+    connect(t, SIGNAL(timeout()), t, SLOT(deleteLater()));
+    t->start();
 }
 
 #include "moc_panelview.cpp"

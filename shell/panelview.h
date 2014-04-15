@@ -113,9 +113,11 @@ private Q_SLOTS:
     void themeChanged();
     void positionPanel();
     void restore();
-    void updateUnhideTrigger();
-    void unhide();
-    
+    void setAutoHideEnabled(bool autoHideEnabled);
+    void showTemporarily();
+    void containmentChanged();
+    void statusChanged(Plasma::Types::ItemStatus);
+    void restoreAutoHide();
 
 private:
     int m_offset;
