@@ -3,6 +3,7 @@ project(plasmawidgetexplorerplugin)
 set(widgetexplorer_SRC
     kcategorizeditemsviewmodels.cpp
     plasmaappletitemmodel.cpp
+    openwidgetassistant.cpp
     widgetexplorer.cpp
     widgetexplorerplugin.cpp
 )
@@ -21,6 +22,8 @@ target_link_libraries(plasmawidgetexplorerplugin
         KF5::I18n
         KF5::Service
         KF5::NewStuff
+        KF5::KIOFileWidgets
+        KF5::WindowSystem
 )
 
 install(TARGETS plasmawidgetexplorerplugin DESTINATION ${QML_INSTALL_DIR}/org/kde/plasma/private/shell)

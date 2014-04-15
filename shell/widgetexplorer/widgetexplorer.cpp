@@ -29,6 +29,7 @@
 #include <klocalizedstring.h>
 #include <kservicetypetrader.h>
 #include <KNewStuff3/KNS3/DownloadDialog>
+#include <KWindowSystem>
 
 #include <Plasma/Applet>
 #include <Plasma/Corona>
@@ -40,6 +41,7 @@
 #include <view.h>
 #include "kcategorizeditemsviewmodels_p.h"
 #include "plasmaappletitemmodel_p.h"
+#include "openwidgetassistant_p.h"
 
 using namespace KCategorizedItemsViewModels;
 using namespace Plasma;
@@ -88,7 +90,7 @@ public:
     QHash<QString, int> runningApplets; // applet name => count
     //extra hash so we can look up the names of deleted applets
     QHash<Plasma::Applet *,QString> appletNames;
-    //QWeakPointer<Plasma::OpenWidgetAssistant> openAssistant;
+    QWeakPointer<Plasma::OpenWidgetAssistant> openAssistant;
     Plasma::Package *package;
 
     PlasmaAppletItemModel itemModel;
@@ -396,7 +398,7 @@ void WidgetExplorer::downloadWidgets(const QString &type)
 
 void WidgetExplorer::openWidgetFile()
 {
-/*
+
     Plasma::OpenWidgetAssistant *assistant = d->openAssistant.data();
     if (!assistant) {
         assistant = new Plasma::OpenWidgetAssistant(0);
@@ -408,7 +410,7 @@ void WidgetExplorer::openWidgetFile()
     assistant->show();
     assistant->raise();
     assistant->setFocus();
-*/
+
     emit shouldClose();
 }
 
