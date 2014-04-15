@@ -20,8 +20,10 @@ target_link_libraries(plasmawidgetexplorerplugin
         KF5::PlasmaQuick
         KF5::I18n
         KF5::Service
+        KF5::NewStuff
 )
 
 install(TARGETS plasmawidgetexplorerplugin DESTINATION ${QML_INSTALL_DIR}/org/kde/plasma/private/shell)
+install(FILES plasmoids.knsrc DESTINATION ${CONFIG_INSTALL_DIR})
 
 install(FILES qmldir DESTINATION ${QML_INSTALL_DIR}/org/kde/plasma/private/shell)

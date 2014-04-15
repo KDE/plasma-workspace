@@ -28,6 +28,7 @@
 
 #include <klocalizedstring.h>
 #include <kservicetypetrader.h>
+#include <KNewStuff3/KNS3/DownloadDialog>
 
 #include <Plasma/Applet>
 #include <Plasma/Corona>
@@ -94,6 +95,7 @@ public:
     KCategorizedItemsViewModels::DefaultFilterModel filterModel;
     DefaultItemFilterProxyModel filterItemModel;
     PlasmaQuickView *view;
+    QWeakPointer<KNS3::DownloadDialog> newStuffDialog;
 };
 
 void WidgetExplorerPrivate::initFilters()
@@ -383,49 +385,12 @@ void WidgetExplorer::immutabilityChanged(Plasma::Types::ImmutabilityType type)
 
 void WidgetExplorer::downloadWidgets(const QString &type)
 {
-    Plasma::PackageStructure *installer = 0;
-
-    if (!type.isEmpty()) {
-        QString constraint = QString("'%1' == [X-KDE-PluginInfo-Name]").arg(type);
-        KService::List offers = KServiceTypeTrader::self()->query("Plasma/PackageStructure",
-                                                                  constraint);
-        if (offers.isEmpty()) {
-            //qDebug() << "could not find requested PackageStructure plugin" << type;
-        } else {
-            KService::Ptr service = offers.first();
-            QString error;
-            // FIXME: port install to plasma2
-//             installer = service->createInstance<Plasma::PackageStructure>(topLevelWidget(),
-//                                                                           QVariantList(), &error);
-            if (installer) {
-//                 connect(installer, SIGNAL(newWidgetBrowserFinished()),
-//                         installer, SLOT(deleteLater()));
-            } else {
-                //qDebug() << "found, but could not load requested PackageStructure plugin" << type
-//                         << "; reported error was" << error;
-            }
-        }
+    if (!d->newStuffDialog) {
+        d->newStuffDialog = new KNS3::DownloadDialog( QString::fromLatin1("plasmoids.knsrc") );
+        connect(d->newStuffDialog.data(), SIGNAL(accepted()), SLOT(newStuffFinished()));
     }
+    d->newStuffDialog.data()->show();
 
-    if (installer) {
-        //installer->createNewWidgetBrowser();
-    } else {
-        // we don't need to delete the default Applet::packageStructure as that
-        // belongs to the applet
-//       Plasma::Applet::packageStructure()->createNewWidgetBrowser();
-        /**
-          for reference in a libplasma2 world, the above line equates to this:
-
-          KNS3::DownloadDialog *knsDialog = m_knsDialog.data();
-          if (!knsDialog) {
-          m_knsDialog = knsDialog = new KNS3::DownloadDialog("plasmoids.knsrc", parent);
-          connect(knsDialog, SIGNAL(accepted()), this, SIGNAL(newWidgetBrowserFinished()));
-          }
-
-          knsDialog->show();
-          knsDialog->raise();
-         */
-    }
     emit shouldClose();
 }
 
