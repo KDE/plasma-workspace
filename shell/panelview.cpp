@@ -50,10 +50,12 @@ PanelView::PanelView(ShellCorona *corona, QWindow *parent)
        m_maxLength(0),
        m_minLength(0),
        m_distance(0),
+       m_thickness(30),
        m_alignment(Qt::AlignLeft),
        m_corona(corona),
        m_visibilityMode(NormalPanel)
 {
+    setResizeMode(QQuickView::SizeRootObjectToView);
     QSurfaceFormat format;
     format.setAlphaBufferSize(8);
     setFormat(format);
@@ -104,7 +106,6 @@ PanelView::PanelView(ShellCorona *corona, QWindow *parent)
     connect(QApplication::desktop(), &QDesktopWidget::screenCountChanged,
             this, &PanelView::updateStruts);
 
-    setResizeMode(PlasmaQuick::View::SizeRootObjectToView);
     qmlRegisterType<QScreen>();
     engine()->rootContext()->setContextProperty("panel", this);
     setSource(QUrl::fromLocalFile(m_corona->package().filePath("views", "Panel.qml")));
@@ -208,7 +209,7 @@ void PanelView::setOffset(int offset)
 
 int PanelView::thickness() const
 {
-    return config().readEntry<int>("thickness", 30);
+    return m_thickness;
 }
 
 void PanelView::setThickness(int value)
@@ -217,6 +218,14 @@ void PanelView::setThickness(int value)
         return;
     }
 
+    m_thickness = value;
+    if (formFactor() == Plasma::Types::Vertical) {
+        setMinimumWidth(value);
+        setMaximumWidth(value);
+    } else {
+        setMinimumHeight(value);
+        setMaximumHeight(value);
+    }
     config().writeEntry("thickness", value);
     m_corona->requestApplicationConfigSync();
     positionPanel();
@@ -457,6 +466,8 @@ void PanelView::restore()
         m_offset = qMax(0, m_offset);
     }
 
+    setThickness(config().readEntry<int>("thickness", 30));
+
     m_alignment = (Qt::Alignment)config().readEntry<int>("alignment", Qt::AlignLeft);
 
     setMinimumSize(QSize(-1, -1));
@@ -583,10 +594,8 @@ void PanelView::setAutoHideEnabled(bool enabled)
 
 void PanelView::resizeEvent(QResizeEvent *ev)
 {
-
     if (containment()->formFactor() == Plasma::Types::Vertical) {
         config().writeEntry("length", ev->size().height());
-        config().writeEntry("thickness", ev->size().width());
         if (ev->size().height() != ev->oldSize().height()) {
             emit lengthChanged();
         }
@@ -595,7 +604,6 @@ void PanelView::resizeEvent(QResizeEvent *ev)
         }
     } else {
         config().writeEntry("length", ev->size().width());
-        config().writeEntry("thickness", ev->size().height());
         if (ev->size().width() != ev->oldSize().width()) {
             emit lengthChanged();
         }

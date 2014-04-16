@@ -124,6 +124,7 @@ private:
     int m_maxLength;
     int m_minLength;
     int m_distance;
+    int m_thickness;
     Qt::Alignment m_alignment;
     QPointer<PlasmaQuick::ConfigView> m_panelConfigView;
     ShellCorona *m_corona;
