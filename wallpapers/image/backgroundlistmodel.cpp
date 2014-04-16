@@ -157,7 +157,7 @@ void BackgroundListModel::processPaths(const QStringList &paths)
 
     if (!newPackages.isEmpty()) {
         const int start = rowCount();
-        beginInsertRows(QModelIndex(), start, start + newPackages.size());
+        beginInsertRows(QModelIndex(), start, start + newPackages.size() - 1);
         m_packages.append(newPackages);
         endInsertRows();
     }
