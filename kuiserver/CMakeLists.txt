@@ -38,8 +38,10 @@ qt5_wrap_ui(kuiserver_KDEINIT_SRCS configdialog.ui)
 
 qt5_add_dbus_adaptor(kuiserver_KDEINIT_SRCS org.kde.kuiserver.xml progresslistmodel.h ProgressListModel kuiserveradaptor )
 
-
-ecm_dbus_add_activation_service(org.kde.kuiserver.service.in)
+configure_file(org.kde.kuiserver.service.in
+               ${CMAKE_CURRENT_BINARY_DIR}/org.kde.kuiserver.service)
+install(FILES ${CMAKE_CURRENT_BINARY_DIR}/org.kde.kuiserver.service
+        DESTINATION ${DBUS_SERVICES_INSTALL_DIR})
 
 #</DBus Stuff>
 

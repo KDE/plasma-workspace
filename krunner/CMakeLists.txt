@@ -43,22 +43,12 @@ find_package(KF5Declarative ${KF5_VERSION} REQUIRED)
 find_package(KF5Plasma ${KF5_VERSION} REQUIRED)
 find_package(KF5PlasmaQuick REQUIRED NO_MODULE)
 
-
-macro(dbus_add_activation_service _sources)
-    #PKGCONFIG_GETVAR(dbus-1 session_bus_services_dir _install_dir)
-    foreach (_i ${_sources})
-        get_filename_component(_service_file ${_i} ABSOLUTE)
-        string(REGEX REPLACE "\\.service.*$" ".service" _output_file ${_i})
-        set(_target ${CMAKE_CURRENT_BINARY_DIR}/${_output_file})
-        configure_file(${_service_file} ${_target})
-        install(FILES ${_target} DESTINATION ${DBUS_SERVICES_INSTALL_DIR} )
-        #install(FILES ${_target} DESTINATION ${_install_dir})
-    endforeach (_i ${ARGN})
-endmacro(dbus_add_activation_service _sources)
-
 set(krunner_dbusAppXML dbus/org.kde.krunner.App.xml)
 qt5_add_dbus_adaptor(krunner_SRCS ${krunner_dbusAppXML} view.h View)
-dbus_add_activation_service(dbus/org.kde.krunner.service.in)
+configure_file(dbus/org.kde.krunner.service.in
+               ${CMAKE_CURRENT_BINARY_DIR}/org.kde.krunner.service)
+install(FILES ${CMAKE_CURRENT_BINARY_DIR}/org.kde.krunner.service
+        DESTINATION ${DBUS_SERVICES_INSTALL_DIR})
 
 
 add_executable(krunner ${krunner_SRCS})

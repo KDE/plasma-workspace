@@ -82,7 +82,10 @@ if(KDEBASE_KGLOBALACCEL_REMOVE_OBSOLETE_KDED_PLUGIN)
     install(CODE "file(REMOVE ${KDEBASE_KGLOBALACCEL_REMOVE_OBSOLETE_KDED_PLUGIN})")
 endif()
 
-dbus_add_activation_service(org.kde.kglobalaccel.service.in)
+configure_file(org.kde.kglobalaccel.service.in
+               ${CMAKE_CURRENT_BINARY_DIR}/org.kde.kglobalaccel.service)
+install(FILES ${CMAKE_CURRENT_BINARY_DIR}/org.kde.kglobalaccel.service
+        DESTINATION ${DBUS_SERVICES_INSTALL_DIR})
 ###
 ### KDE 4.2 > 4.3 Migration End
 ###
