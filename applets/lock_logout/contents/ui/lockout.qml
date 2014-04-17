@@ -19,6 +19,7 @@
 
 import QtQuick 2.0
 import QtQuick.Layouts 1.0
+import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0
 import org.kde.kquickcontrolsaddons 2.0
@@ -26,16 +27,17 @@ import "data.js" as Data
 
 Flow {
     id: lockout
-    //Layout.minimumWidth
-    //Layout.minimumHeight
+    Layout.minimumWidth: plasmoid.formFactor == PlasmaCore.Types.Vertical ? 0 : height * visibleButtons
+    Layout.minimumHeight: plasmoid.formFactor == PlasmaCore.Types.Vertical ? width * visibleButtons : 0
 
     property int minButtonSize: 16
 
+    Plasmoid.preferredRepresentation: Plasmoid.fullRepresentation
     property int visibleButtons: plasmoid.configuration.show_lockScreen + plasmoid.configuration.show_switchUser + plasmoid.configuration.show_requestShutDown + plasmoid.configuration.show_suspendToRam + plasmoid.configuration.show_suspendToDisk;
 
     property int orientation: Qt.Vertical
 
-    flow: orientation==Qt.Vertical ? Flow.TopToBottom : Flow.LeftToRight
+    flow: orientation == Qt.Vertical ? Flow.TopToBottom : Flow.LeftToRight
 
     onWidthChanged: checkLayout();
     onHeightChanged: checkLayout();
@@ -48,26 +50,26 @@ Flow {
 
     function checkLayout() {
         switch(plasmoid.formFactor) {
-        case Vertical:
+        case PlasmaCore.Types.Vertical:
             if (width >= minButtonSize*visibleButtons) {
                 orientation = Qt.Horizontal;
-                minimumHeight = width/visibleButtons - 1;
+                lockout.Layout.minimumHeight = width/visibleButtons - 1;
                 plasmoid.setPreferredSize(width, width/visibleButtons);
             } else {
                 orientation = Qt.Vertical;
-                minimumHeight = width*visibleButtons;
+                lockout.Layout.minimumHeight = width*visibleButtons;
                 plasmoid.setPreferredSize(width, width*visibleButtons);
             }
             break;
 
-        case Horizontal:
+        case PlasmaCore.Types.Horizontal:
             if (height < minButtonSize*visibleButtons) {
                 orientation = Qt.Horizontal;
-                minimumWidth = height*visibleButtons;
+                lockout.Layout.minimumWidth = height*visibleButtons;
                 plasmoid.setPreferredSize(height*visibleButtons, height);
             } else {
                 orientation = Qt.Vertical;
-                minimumWidth = height/visibleButtons - 1;
+                lockout.Layout.minimumWidth = height/visibleButtons - 1;
                 plasmoid.setPreferredSize(height/visibleButtons, height);
             }
             break;
@@ -75,12 +77,12 @@ Flow {
         default:
             if (width > height) {
                 orientation = Qt.Horizontal;
-                minimumWidth = minButtonSize*visibleButtons;
-                minimumHeight = minButtonSize;
+                lockout.Layout.minimumWidth = minButtonSize*visibleButtons;
+                lockout.Layout.minimumHeight = minButtonSize;
             } else {
                 orientation = Qt.Vertical;
-                minimumWidth = minButtonSize;
-                minimumHeight = minButtonSize*visibleButtons;
+                lockout.Layout.minimumWidth = minButtonSize;
+                lockout.Layout.minimumHeight = minButtonSize*visibleButtons;
             }
             break;
         }
@@ -101,27 +103,14 @@ Flow {
             width: items.itemWidth
             height: items.itemHeight
 
-            QIconItem {
+            PlasmaCore.IconItem {
                 id: iconButton
                 width: items.iconSize
                 height: items.iconSize
                 anchors.centerIn: parent
-                icon: modelData.icon
+                source: modelData.icon
                 scale: mouseArea.pressed ? 0.9 : 1
-
-                QIconItem {
-                    id: activeIcon
-                    opacity: mouseArea.containsMouse ? 1 : 0
-                    anchors.fill: iconButton
-                    icon: modelData.icon
-                    state: QIconItem.ActiveState
-                    Behavior on opacity {
-                        NumberAnimation {
-                            duration: units.longDuration
-                            easing.type: Easing.InOutQuad
-                        }
-                    }
-                }
+                active: mouseArea.containsMouse
 
                 MouseArea {
                     id: mouseArea
@@ -133,7 +122,7 @@ Flow {
                         anchors.fill: parent
                         mainText: modelData.tooltip_mainText
                         subText: modelData.tooltip_subText
-                        image: modelData.icon
+                        icon: modelData.icon
                     }
                 }
             } 
