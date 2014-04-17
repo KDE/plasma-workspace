@@ -17,26 +17,21 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-import QtQuick 1.1
-import QtQuick.Layouts 1.1
-import org.kde.plasma.core 0.1 as PlasmaCore
-import org.kde.plasma.components 0.1
-import org.kde.kquickcontrolsaddons 0.1
+import QtQuick 2.0
+import QtQuick.Layouts 1.0
+import org.kde.plasma.core 2.0 as PlasmaCore
+import org.kde.plasma.components 2.0
+import org.kde.kquickcontrolsaddons 2.0
 import "data.js" as Data
 
 Flow {
     id: lockout
-    Layout.minimumWidth
-    Layout.minimumHeight
+    //Layout.minimumWidth
+    //Layout.minimumHeight
 
     property int minButtonSize: 16
 
-    property bool show_lock: Plasmoid.configuration.show_lock
-    property bool show_switchUser: Plasmoid.show_switchUser
-    property bool show_leave: Plasmoid.configuration.show_leave
-    property bool show_suspend: Plasmoid.configuration.show_suspend
-    property bool show_hibernate: Plasmoid.configuration.show_hibernate
-    property int visibleButtons: show_lock+show_switchUser+show_leave+show_suspend+show_hibernate;
+    property int visibleButtons: plasmoid.configuration.show_lockScreen + plasmoid.configuration.show_switchUser + plasmoid.configuration.show_requestShutDown + plasmoid.configuration.show_suspendToRam + plasmoid.configuration.show_suspendToDisk;
 
     property int orientation: Qt.Vertical
 
@@ -91,17 +86,6 @@ Flow {
         }
     }
 
-    // model for setting whether an icon is shown
-    // this cannot be put in data.js because the the variables need to be
-    // notifiable for delegates to instantly respond to config changes
-    ListModel {
-        id: showModel
-        ListElement { show: lockout.show_lock }
-        ListElement { show: lockout.show_switchUser}
-        ListElement { show: lockout.show_leave }
-        ListElement { show: lockout.show_suspend}
-        ListElement { show: lockout.show_hibernate}
-    }
 
     Repeater {
         id: items
@@ -113,24 +97,23 @@ Flow {
 
         delegate: Item {
             id: iconDelegate
-            visible: showModel.get(index).show
+            visible: plasmoid.configuration["show_"+modelData.operation]
             width: items.itemWidth
             height: items.itemHeight
 
-            
             QIconItem {
                 id: iconButton
                 width: items.iconSize
                 height: items.iconSize
                 anchors.centerIn: parent
-                icon: QIcon(modelData.icon)
+                icon: modelData.icon
                 scale: mouseArea.pressed ? 0.9 : 1
-                
+
                 QIconItem {
                     id: activeIcon
                     opacity: mouseArea.containsMouse ? 1 : 0
                     anchors.fill: iconButton
-                    icon: QIcon(modelData.icon)
+                    icon: modelData.icon
                     state: QIconItem.ActiveState
                     Behavior on opacity {
                         NumberAnimation {

@@ -208,7 +208,7 @@ X-Plasma-MainScript=ui/lockout.qml
 
 X-KDE-PluginInfo-Author=Viranch Mehta
 X-KDE-PluginInfo-Email=viranch.mehta@gmail.com
-X-KDE-PluginInfo-Name=lockout
+X-KDE-PluginInfo-Name=org.kde.plasma.lock_logout
 X-KDE-PluginInfo-Version=1.0
 X-KDE-PluginInfo-Website=http://plasma.kde.org/
 X-KDE-PluginInfo-Category=System Information
