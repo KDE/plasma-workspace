@@ -52,7 +52,7 @@ public:
     };
     Q_ENUMS(VisibilityMode)
 
-    explicit PanelView(ShellCorona *corona, QWindow *parent = 0);
+    explicit PanelView(Plasma::Containment *cont, QWindow *parent = 0);
     virtual ~PanelView();
 
     virtual KConfigGroup config() const;

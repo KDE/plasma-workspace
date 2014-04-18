@@ -513,13 +513,12 @@ void ShellCorona::createWaitingPanels()
             continue;
         }
 
-        d->panelViews[cont] = new PanelView(this);
+        d->panelViews[cont] = new PanelView(cont);
 
         //keep screen suggestions within bounds of screens we actually have
         int screen = qBound(0, cont->lastScreen(), QGuiApplication::screens().size() -1);
 
         d->panelViews[cont]->setScreen(QGuiApplication::screens()[screen]);
-        d->panelViews[cont]->setContainment(cont);
         cont->reactToScreenChange();
         connect(cont, &QObject::destroyed,
                 [=](QObject *obj) {

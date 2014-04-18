@@ -44,17 +44,35 @@
 #include <QX11Info>
 #endif
 
-PanelView::PanelView(ShellCorona *corona, QWindow *parent)
-    : PlasmaQuick::View(corona, parent),
+PanelView::PanelView(Plasma::Containment *cont, QWindow *parent)
+    : PlasmaQuick::View(cont->corona(), parent),
        m_offset(0),
        m_maxLength(0),
        m_minLength(0),
        m_distance(0),
        m_thickness(30),
        m_alignment(Qt::AlignLeft),
-       m_corona(corona),
+       m_corona(static_cast<ShellCorona *>(cont->corona())),
        m_visibilityMode(NormalPanel)
 {
+    //This is kindof an hack: however it avoids several unnecessary resizes
+    //speeds up startup and avoids rare cases when the panel starts at the wrong size
+    {
+        KConfigGroup views(m_corona->applicationConfig(), "PlasmaViews");
+        views = KConfigGroup(&views, QString("Panel %1").arg(cont->id()));
+
+        if (cont->formFactor() == Plasma::Types::Vertical) {
+            KConfigGroup cg(&views, "Types::Vertical" + QString::number(screen()->size().height()));
+            resize(cg.readEntry<int>("thickness", 30),
+                cg.readEntry<int>("length", screen()->size().height()));
+        //treat everything else as horizontal
+        } else {
+            KConfigGroup cg(&views, "Horizontal" + QString::number(screen()->size().width()));
+            resize(cg.readEntry<int>("length", screen()->size().width()),
+                cg.readEntry<int>("thickness", 30));
+        }
+    }
+
     setResizeMode(QQuickView::SizeRootObjectToView);
     QSurfaceFormat format;
     format.setAlphaBufferSize(8);
@@ -110,6 +128,7 @@ PanelView::PanelView(ShellCorona *corona, QWindow *parent)
     engine()->rootContext()->setContextProperty("panel", this);
     setSource(QUrl::fromLocalFile(m_corona->package().filePath("views", "Panel.qml")));
     PanelShadows::self()->addWindow(this);
+    setContainment(cont);
 }
 
 PanelView::~PanelView()
@@ -594,25 +613,27 @@ void PanelView::setAutoHideEnabled(bool enabled)
 
 void PanelView::resizeEvent(QResizeEvent *ev)
 {
-    if (containment()->formFactor() == Plasma::Types::Vertical) {
-        config().writeEntry("length", ev->size().height());
-        if (ev->size().height() != ev->oldSize().height()) {
-            emit lengthChanged();
+    if (containment()) {
+        if (containment()->formFactor() == Plasma::Types::Vertical) {
+            config().writeEntry("length", ev->size().height());
+            if (ev->size().height() != ev->oldSize().height()) {
+                emit lengthChanged();
+            }
+            if (ev->size().width() != ev->oldSize().width()) {
+                emit thicknessChanged();
+            }
+        } else {
+            config().writeEntry("length", ev->size().width());
+            if (ev->size().width() != ev->oldSize().width()) {
+                emit lengthChanged();
+            }
+            if (ev->size().height() != ev->oldSize().height()) {
+                emit thicknessChanged();
+            }
         }
-        if (ev->size().width() != ev->oldSize().width()) {
-            emit thicknessChanged();
-        }
-    } else {
-        config().writeEntry("length", ev->size().width());
-        if (ev->size().width() != ev->oldSize().width()) {
-            emit lengthChanged();
-        }
-        if (ev->size().height() != ev->oldSize().height()) {
-            emit thicknessChanged();
-        }
-    }
 
-    m_positionPaneltimer.start();
+        m_positionPaneltimer.start();
+    }
     PlasmaQuick::View::resizeEvent(ev);
 }
 
