@@ -26,7 +26,7 @@ target_link_libraries(kscreenlocker_greet
                         Qt5::Qml
                         Qt5::X11Extras
                         ${X11_LIBRARIES}
-                        KF5::KDE4Support
+                        KF5::KDELibs4Support
                         )
 
 install(TARGETS kscreenlocker_greet DESTINATION ${LIBEXEC_INSTALL_DIR})

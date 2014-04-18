@@ -30,7 +30,7 @@ target_link_libraries(kded_appmenu
     KF5::KIOCore
     KF5::KIOWidgets
     KF5::WindowSystem
-    KF5::KDE4Support
+    KF5::KDELibs4Support
     ${X11_LIBRARIES}
     dbusmenu-qt5
 )

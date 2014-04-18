@@ -8,7 +8,7 @@ set(testremote_SRCS testremote.cpp ${libkioremote_SRCS} )
 add_executable(testremote ${testremote_SRCS})
 ecm_mark_as_test(testremote)
 
-target_link_libraries(testremote KF5::KDE4Support KF5::KIOCore )
+target_link_libraries(testremote KF5::KDELibs4Support KF5::KIOCore )
 
 
 

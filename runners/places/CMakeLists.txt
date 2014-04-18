@@ -9,7 +9,7 @@ target_link_libraries(krunner_placesrunner
     KF5::KIOCore
     KF5::I18n
     KF5::Runner
-    KF5::KDE4Support
+    KF5::KDELibs4Support
 )
 
 # target_link_libraries(

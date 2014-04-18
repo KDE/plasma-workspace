@@ -11,7 +11,7 @@ target_link_libraries(krunner_shell
     KF5::Plasma
     KF5::Runner
     KF5::Su
-    KF5::KDE4Support
+    KF5::KDELibs4Support
 )
 
 install(TARGETS krunner_shell DESTINATION ${PLUGIN_INSTALL_DIR})

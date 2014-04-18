@@ -65,7 +65,7 @@ ecm_configure_package_config_file(KSMServerDBusInterfaceConfig.cmake.in
 target_link_libraries(kdeinit_ksmserver
     ${SCREEN_LOCKER}
     PW::KWorkspace
-    KF5::KDE4Support
+    KF5::KDELibs4Support
     KF5::XmlGui
     KF5::GlobalAccel
     KF5::KIOCore

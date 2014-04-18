@@ -9,7 +9,7 @@ set(EXTERNAL_LIBS
     KF5::KIOCore
     KF5::I18n
     KF5::Runner
-    KF5::KDE4Support
+    KF5::KDELibs4Support
 )
 
 set(krunner_bookmarksrunner_SRCS

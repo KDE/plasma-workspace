@@ -22,7 +22,7 @@ target_link_libraries(plasma_wallpaper_imageplugin
     KF5::KIOWidgets # KFileDialog
 	 KF5::NewStuff
 	 KF5::GuiAddons
-         KF5::KDE4Support
+         KF5::KDELibs4Support
          )
 
 install(TARGETS plasma_wallpaper_imageplugin DESTINATION ${QML_INSTALL_DIR}/org/kde/plasma/wallpapers/image)
