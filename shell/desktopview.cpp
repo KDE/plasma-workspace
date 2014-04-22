@@ -144,6 +144,11 @@ bool DesktopView::event(QEvent *e)
         //prevent ALT+F4 from killing the shell
         e->ignore();
         return true;
+    } else if (e->type() == QEvent::FocusOut) {
+        QObject *graphicObject = containment()->property("_plasma_graphicObject").value<QObject *>();
+        if (graphicObject) {
+            graphicObject->setProperty("focus", false);
+        }
     }
 
     return PlasmaQuick::View::event(e);
