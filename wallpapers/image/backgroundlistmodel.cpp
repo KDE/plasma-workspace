@@ -137,7 +137,36 @@ void BackgroundListModel::processPaths(const QStringList &paths)
     }
 
     QList<Plasma::Package> newPackages;
-    Q_FOREACH (const QString &file, paths) {
+    Q_FOREACH (QString file, paths) {
+        // check if the path is a symlink and if it is,
+        // work with the target rather than the symlink
+        QFileInfo info(file);
+        if (info.isSymLink()) {
+            file = info.symLinkTarget();
+        }
+        // now check if the path contains "contents" part
+        // which could indicate that the file is part of some other
+        // package (could have been symlinked) and we should work
+        // with the package (which can already be present) rather
+        // than just one file from it
+        int contentsIndex = file.indexOf(QStringLiteral("contents"));
+
+        // FIXME: additionally check for metadata.desktop being present
+        //        which would confirm a package but might be slowing things
+        if (contentsIndex != -1) {
+            file.truncate(contentsIndex);
+        }
+
+        // so now we have a path to a package, check if we're not
+        // processing the same path twice (this is different from
+        // the "!contains(file)" call lower down, that one checks paths
+        // already in the model and does not include the paths
+        // that are being checked in here); we want to check for duplicates
+        // if and only if we actually changed the path (so the conditions from above
+        // are reused here as that means we did change the path)
+        if ((info.isSymLink() || contentsIndex != -1) && paths.contains(file)) {
+            continue;
+        }
         if (!contains(file) && QFile::exists(file)) {
             Plasma::Package package = Plasma::Package(new WallpaperPackage(m_structureParent.data(), m_structureParent.data()));
             package.setPath(file);
