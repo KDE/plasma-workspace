@@ -236,7 +236,7 @@ void KSMServer::autoStart0Done()
 #ifdef KSMSERVER_STARTUP_DEBUG1
     kDebug() << t.elapsed();
 #endif
-    upAndRunning( QStringLiteral( "desktop" ) );
+
     state = KcmInitPhase1;
     kcminitSignals = new QDBusInterface( QStringLiteral( "org.kde.kcminit"),
                                          QStringLiteral( "/kcminit" ),

@@ -121,6 +121,15 @@ ShellCorona::ShellCorona(QObject *parent)
     QDBusConnection dbus = QDBusConnection::sessionBus();
     dbus.registerObject(QStringLiteral("/PlasmaShell"), this);
 
+    connect(this, &Plasma::Corona::startupCompleted,
+            [=]() {
+                QDBusMessage ksplashProgressMessage = QDBusMessage::createMethodCall(QStringLiteral("org.kde.KSplash"),
+                                               QStringLiteral("/KSplash"),
+                                               QStringLiteral("org.kde.KSplash"),
+                                               QStringLiteral("setStage"));
+                ksplashProgressMessage.setArguments(QList<QVariant>() << QStringLiteral("desktop"));
+                QDBusConnection::sessionBus().asyncCall(ksplashProgressMessage);
+            });
 
     // Look for theme config in plasmarc, if it isn't configured, take the theme from the
     // LookAndFeel package, if either is set, change the default theme
