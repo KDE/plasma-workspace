@@ -23,7 +23,7 @@
 
 #include <KDialog>
 
-#include "../../libksysguard/processui/ksysguardprocesslist.h"
+#include "processui/ksysguardprocesslist.h"
 
 /** This creates a simple dialog box with a KSysguardProcessList
  *
