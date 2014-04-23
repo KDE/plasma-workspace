@@ -1,8 +1,8 @@
 # the Ion shared library
 set (ionlib_SRCS ion.cpp)
 add_library (weather_ion SHARED ${ionlib_SRCS})
-target_link_libraries (weather_ion KIOCore KF5::Plasma)
-target_link_libraries (weather_ion LINK_INTERFACE_LIBRARIES ${KDE4_KDEUI_LIBS} KIOCore KF5::Plasma)
+target_link_libraries (weather_ion KF5::KIOCore KF5::Plasma KF5::I18n KF5::KDELibs4Support)
+target_link_libraries (weather_ion LINK_INTERFACE_LIBRARIES KF5::KIOCore KF5::Plasma)
 
 set_target_properties(weather_ion PROPERTIES
    VERSION 6.0.0

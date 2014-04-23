@@ -21,6 +21,7 @@
 #include "ion.moc"
 
 #include <QDebug>
+#include <KLocalizedString>
 
 class IonInterface::Private
 {
