@@ -22,7 +22,7 @@
 #ifndef ION_NOAA_H
 #define ION_NOAA_H
 
-#include <QtXml/QXmlStreamReader>
+#include <QXmlStreamReader>
 #include <QStringList>
 #include <QDateTime>
 
@@ -34,8 +34,8 @@ namespace KIO
 #include <kdemacros.h>
 
 #include <Plasma/DataEngine>
+#include <Plasma/DataEngineConsumer>
 
-#include "../dataengineconsumer.h"
 #include "../ion.h"
 
 class WeatherData
@@ -179,7 +179,5 @@ private:
     bool emitWhenSetup;
     QStringList m_sourcesToReset;
 };
-
-K_EXPORT_PLASMA_DATAENGINE(noaa, NOAAIon)
 
 #endif

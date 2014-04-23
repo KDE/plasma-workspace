@@ -21,9 +21,10 @@
 
 #include "ion_noaa.h"
 
+#include <KUrl>
 #include <KIO/Job>
 #include <KLocalizedDate>
-
+#include <QDebug>
 #include <KUnitConversion/Converter>
 
 QMap<QString, IonInterface::WindDirections> NOAAIon::setupWindIconMappings(void) const
@@ -463,6 +464,8 @@ void NOAAIon::updateWeather(const QString& source)
     data.insert("Current Conditions", conditionI18n(source));
     qDebug() << "i18n condition string: " << qPrintable(conditionI18n(source));
 
+//TODO: Port to Plasma2
+#if 0
     // Determine the weather icon based on the current time and computed sunrise/sunset time.
     const Plasma::DataEngine::Data timeData = m_timeEngine->query(
             QString("Local|Solar|Latitude=%1|Longitude=%2")
@@ -474,11 +477,13 @@ void NOAAIon::updateWeather(const QString& source)
 
     // Provide mapping for the condition-type to the icons to display
     if (currentTime > sunriseTime && currentTime < sunsetTime) {
+#endif
         // Day
         QString weather = condition(source).toLower();
         ConditionIcons condition = getConditionIcon(weather, true);
         data.insert("Condition Icon", getWeatherIcon(condition));
         qDebug() << "Using daytime icons\n";
+#if 0
     } else {
         // Night
         QString weather = condition(source).toLower();
@@ -486,6 +491,7 @@ void NOAAIon::updateWeather(const QString& source)
         data.insert("Condition Icon", getWeatherIcon(condition));
         qDebug() << "Using nighttime icons\n";
     }
+#endif
 
     dataFields = temperature(source);
     data.insert("Temperature", dataFields["temperature"]);
