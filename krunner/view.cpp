@@ -173,10 +173,12 @@ void View::positionOnScreen()
 
     if (m_floating) {
         KWindowSystem::setOnDesktop(winId(), KWindowSystem::currentDesktop());
+        KWindowSystem::setType(winId(), NET::Normal);
         //Turn the sliding effect off
         KWindowEffects::slideWindow(winId(), KWindowEffects::NoEdge, 0);
     } else {
         KWindowSystem::setOnAllDesktops(winId(), true);
+        KWindowSystem::setType(winId(), NET::Dock);
         KWindowEffects::slideWindow(winId(), KWindowEffects::TopEdge, 0);
     }
 
