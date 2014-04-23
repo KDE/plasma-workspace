@@ -21,7 +21,7 @@ add_subdirectory(powermanagement)
 add_subdirectory(soliddevice)
 
 add_subdirectory(time)
-#add_subdirectory(weather)
+add_subdirectory(weather)
 if (TARGET dbusmenu-qt5)
   add_subdirectory(statusnotifieritem)
 endif ()

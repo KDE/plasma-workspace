@@ -19,9 +19,9 @@ install (FILES includes/Ion
          DESTINATION ${INCLUDE_INSTALL_DIR}/KDE/Plasma/Weather COMPONENT Devel)
 
 # the individual ion plugins
-add_subdirectory(bbcukmet)
-add_subdirectory(envcan)
+#add_subdirectory(bbcukmet)
+#add_subdirectory(envcan)
 add_subdirectory(noaa)
-add_subdirectory(wetter.com)
-add_subdirectory(debianweather)
+#add_subdirectory(wetter.com)
+#add_subdirectory(debianweather)
 
