@@ -555,7 +555,7 @@ void PanelView::showConfigurationInterface(Plasma::Applet *applet)
 
 void PanelView::restoreAutoHide()
 {
-    setAutoHideEnabled(m_visibilityMode == AutoHide && (!containment() || containment()->status() != Plasma::Types::AcceptingInputStatus));
+    setAutoHideEnabled(m_visibilityMode == AutoHide && (!containment() || containment()->status() < Plasma::Types::RequiresAttentionStatus));
 }
 
 void PanelView::setAutoHideEnabled(bool enabled)
