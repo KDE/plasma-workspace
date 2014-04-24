@@ -970,4 +970,6 @@ void NOAAIon::readForecast(const QString& source, QXmlStreamReader& xml)
     }
 }
 
+K_EXPORT_PLASMA_DATAENGINE_WITH_JSON(noaa, NOAAIon, "ion-noaa.json")
+
 #include "ion_noaa.moc"
