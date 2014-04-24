@@ -18,7 +18,7 @@
  ***************************************************************************/
 
 function url() {
-    return "http://paste.kde.org/index.php";
+    return "http://paste.kde.org/api/xml/create";
 }
 
 function method() {
@@ -26,13 +26,11 @@ function method() {
 }
 
 function contentKey() {
-    return "paste_data";
+    return "data";
 }
 
 function setup() {
-    provider.addQueryItem("api_submit", "true");
-    provider.addQueryItem("mode", "xml");
-    provider.addQueryItem("paste_lang", "text");
+    provider.addQueryItem("language", "text");
 }
 
 function handleResultData(data) {
