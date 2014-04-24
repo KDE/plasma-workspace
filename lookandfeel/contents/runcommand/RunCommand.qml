@@ -56,7 +56,8 @@ ColumnLayout {
             clearButtonShown: true
             Layout.minimumWidth: units.gridUnit * 25
             onTextChanged: {
-                queryTimer.restart()
+                if (!queryTimer.running)
+                    queryTimer.start()
             }
             Keys.onEscapePressed: {
                 runnerWindow.visible = false
