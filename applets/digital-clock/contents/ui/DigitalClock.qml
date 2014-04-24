@@ -95,15 +95,15 @@ Item {
             leftMargin: units.smallSpacing
             rightMargin: units.smallSpacing
         }
+    }
 
-        MouseArea {
-            id: mouseArea
-            anchors.fill: parent
-            hoverEnabled: true
-            onClicked: {
-                plasmoid.expanded = !plasmoid.expanded;
-                calTimer.start();
-            }
+    MouseArea {
+        id: mouseArea
+        anchors.fill: parent
+        hoverEnabled: true
+        onClicked: {
+            plasmoid.expanded = !plasmoid.expanded;
+            calTimer.start();
         }
     }
 
