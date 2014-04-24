@@ -29,6 +29,8 @@ Flow {
     id: lockout
     Layout.minimumWidth: plasmoid.formFactor == PlasmaCore.Types.Vertical ? 0 : height * visibleButtons
     Layout.minimumHeight: plasmoid.formFactor == PlasmaCore.Types.Vertical ? width * visibleButtons : 0
+    Layout.preferredWidth: Layout.minimumWidth
+    Layout.preferredHeight: Layout.minimumHeight
 
     property int minButtonSize: 16
 
@@ -54,11 +56,9 @@ Flow {
             if (width >= minButtonSize*visibleButtons) {
                 orientation = Qt.Horizontal;
                 lockout.Layout.minimumHeight = width/visibleButtons - 1;
-                plasmoid.setPreferredSize(width, width/visibleButtons);
             } else {
                 orientation = Qt.Vertical;
                 lockout.Layout.minimumHeight = width*visibleButtons;
-                plasmoid.setPreferredSize(width, width*visibleButtons);
             }
             break;
 
@@ -66,11 +66,9 @@ Flow {
             if (height < minButtonSize*visibleButtons) {
                 orientation = Qt.Horizontal;
                 lockout.Layout.minimumWidth = height*visibleButtons;
-                plasmoid.setPreferredSize(height*visibleButtons, height);
             } else {
                 orientation = Qt.Vertical;
                 lockout.Layout.minimumWidth = height/visibleButtons - 1;
-                plasmoid.setPreferredSize(height/visibleButtons, height);
             }
             break;
 
