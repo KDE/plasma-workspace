@@ -23,7 +23,19 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #include <iostream>
 
+#include <signal.h>
+
 #include "greeterapp.h"
+
+static void signalHandler(int signum)
+{
+    ScreenLocker::UnlockApp *instance = static_cast<ScreenLocker::UnlockApp *>(qApp);
+
+    if (!instance)
+        return;
+
+    instance->lockImmediately();
+}
 
 int main(int argc, char* argv[])
 {
@@ -57,5 +69,11 @@ int main(int argc, char* argv[])
     // This allow ksmserver to know when the applicaion has actually finished setting itself up.
     // Crucial for blocking until it is ready, ensuring locking happens before sleep, e.g.
     std::cout << "Locked at " << QDateTime::currentDateTime().toTime_t() << std::endl;
+
+    struct sigaction sa;
+    sa.sa_handler = signalHandler;
+    sigemptyset(&sa.sa_mask);
+    sa.sa_flags = 0;
+    sigaction(SIGUSR1, &sa, nullptr);
     return app.exec();
 }

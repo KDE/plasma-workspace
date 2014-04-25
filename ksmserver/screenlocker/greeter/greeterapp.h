@@ -44,6 +44,7 @@ public:
 
     void setTesting(bool enable);
     void setImmediateLock(bool immediateLock);
+    void lockImmediately();
 
 public Q_SLOTS:
     void desktopResized();

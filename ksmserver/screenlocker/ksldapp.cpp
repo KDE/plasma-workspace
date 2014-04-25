@@ -49,6 +49,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include <X11/Xlib.h>
 // other
 #include <unistd.h>
+#include <signal.h>
 
 namespace ScreenLocker
 {
@@ -191,6 +192,10 @@ void KSldApp::lock(bool immediateLock)
         // already locked or acquiring lock, no need to lock again
         // but make sure it's really locked
         endGraceTime();
+        if (immediateLock) {
+            // signal the greeter to switch to immediateLock mode
+            kill(m_lockProcess->pid(), SIGUSR1);
+        }
         return;
     }
 
