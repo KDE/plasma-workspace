@@ -1,7 +1,5 @@
 project(ksmserver)
 
-add_subdirectory( kcm )
-
 add_subdirectory( tests )
 #
 if(NOT WIN32)
