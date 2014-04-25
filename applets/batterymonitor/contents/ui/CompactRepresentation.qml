@@ -48,10 +48,6 @@ ListView {
         return (plasmoid.formFactor == PlasmaCore.Types.Vertical || plasmoid.formFactor == PlasmaCore.Types.Horizontal)
     }
 
-//     Component.onCompleted: {
-//         print("JOOOOOO" + batteries);
-//     }
-
     delegate: Item {
         id: batteryContainer
 
