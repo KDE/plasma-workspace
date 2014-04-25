@@ -34,7 +34,18 @@ static void signalHandler(int signum)
     if (!instance)
         return;
 
-    instance->lockImmediately();
+    switch(signum)
+    {
+      case SIGTERM:
+        // exit gracefully to not leave behind screensaver processes (bug#224200)
+        // return exit code 1 to indicate that a valid password was not entered,
+        // to prevent circumventing the password input by sending a SIGTERM
+        instance->exit(1);
+        break;
+      case SIGUSR1:
+        instance->lockImmediately();
+        break;
+    }
 }
 
 int main(int argc, char* argv[])
@@ -74,6 +85,7 @@ int main(int argc, char* argv[])
     sa.sa_handler = signalHandler;
     sigemptyset(&sa.sa_mask);
     sa.sa_flags = 0;
+    sigaction(SIGTERM, &sa, nullptr);
     sigaction(SIGUSR1, &sa, nullptr);
     return app.exec();
 }
