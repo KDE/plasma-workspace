@@ -45,9 +45,7 @@ ListView {
     interactive: false
 
     function isConstrained() {
-        // FIXME
-        return false;
-        //return (plasmoid.formFactor == PlasmaCore.Types.Vertical || plasmoid.formFactor == PlasmaCore.Types.Horizontal);
+        return (plasmoid.formFactor == PlasmaCore.Types.Vertical || plasmoid.formFactor == PlasmaCore.Types.Horizontal)
     }
 
 //     Component.onCompleted: {
