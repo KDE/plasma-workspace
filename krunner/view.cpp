@@ -118,6 +118,7 @@ void View::showEvent(QShowEvent *event)
     KWindowSystem::setState(winId(), NET::KeepAbove);
     Dialog::showEvent(event);
     positionOnScreen();
+    requestActivate();
 }
 
 void View::screenGeometryChanged()
