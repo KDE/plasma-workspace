@@ -25,6 +25,7 @@
 #include <klocalizedstring.h>
 #include <kservicetypetrader.h>
 #include <ksycoca.h>
+#include <kconfig.h>
 
 PlasmaAppletItem::PlasmaAppletItem(PlasmaAppletItemModel *model,
                                    const KPluginInfo& info,

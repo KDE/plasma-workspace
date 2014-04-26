@@ -23,6 +23,7 @@
 #include "shellcorona.h"
 
 #include <kdeclarative/configpropertymap.h>
+#include <kconfigloader.h>
 
 #include <QDebug>
 #include <QDir>
@@ -186,7 +187,7 @@ void ContainmentConfigView::setCurrentWallpaper(const QString &wallpaper)
         QFile file(pkg.filePath("config", "main.xml"));
         KConfigGroup cfg = m_containment->config();
         cfg = KConfigGroup(&cfg, "Wallpaper");
-        m_currentWallpaperConfig = m_ownWallpaperConfig = new KDeclarative::ConfigPropertyMap(new Plasma::ConfigLoader(&cfg, &file), this);
+        m_currentWallpaperConfig = m_ownWallpaperConfig = new KDeclarative::ConfigPropertyMap(new KConfigLoader(cfg, &file), this);
     }
 
     m_currentWallpaper = wallpaper;
