@@ -542,7 +542,7 @@ static QUrl getServiceLauncherUrl(int pid, const QString &type, const QStringLis
 
     QString path = services[0]->entryPath();
     if (!QDir::isAbsolutePath(path)) {
-        QString absolutePath = QStandardPaths::locate(QStandardPaths::GenericDataLocation, "kde5/services/"+path);
+        QString absolutePath = QStandardPaths::locate(QStandardPaths::GenericDataLocation, "kservices5/"+path);
         if (!absolutePath.isEmpty())
             path = absolutePath;
     }
