@@ -152,5 +152,5 @@ add_subdirectory(phonon)
 add_subdirectory(solidautoeject)
 add_subdirectory(drkonqi)
 add_subdirectory(kglobalaccel)
-
+add_subdirectory(soliduiserver)
 feature_summary(WHAT ALL INCLUDE_QUIET_PACKAGES FATAL_ON_MISSING_REQUIRED_PACKAGES)
