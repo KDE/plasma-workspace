@@ -8,11 +8,11 @@ find_package(Qt5 ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS Widgets Quick Conc
 find_package(ECM 0.0.11 REQUIRED NO_MODULE)
 set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH} ${ECM_KDE_MODULE_DIR})
 
-find_package(KF5 CONFIG REQUIRED COMPONENTS
+find_package(KF5 REQUIRED COMPONENTS
                     Plasma DocTools Runner JsEmbed NotifyConfig Su NewStuff Wallet KCMUtils
                     IdleTime ThreadWeaver Declarative PlasmaQuick WebKit KDELibs4Support)
 
-find_package(KF5 CONFIG REQUIRED COMPONENTS SysGuard)
+find_package(KF5 REQUIRED COMPONENTS SysGuard)
 find_package(KWinDBusInterface CONFIG REQUIRED)
 
 include(KDEInstallDirs)
