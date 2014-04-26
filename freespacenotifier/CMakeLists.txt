@@ -23,5 +23,5 @@ install(TARGETS kded_freespacenotifier  DESTINATION ${PLUGIN_INSTALL_DIR} )
 ########### install files ###############
 
 install( FILES freespacenotifier.desktop  DESTINATION  ${SERVICES_INSTALL_DIR}/kded )
-install( FILES freespacenotifier.notifyrc  DESTINATION  ${DATA_INSTALL_DIR}/freespacenotifier )
+install( FILES freespacenotifier.notifyrc  DESTINATION  ${KNOTIFYRC_INSTALL_DIR} )
 install( FILES freespacenotifier.kcfg  DESTINATION  ${KCFG_INSTALL_DIR} )
