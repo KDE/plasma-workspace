@@ -26,6 +26,7 @@ Name[uk]=KSysguard
 Name[x-test]=xxKSysguardxx
 Comment=Launches KSysguard on Ctrl + Escape
 Comment[ca]=Llança el KSysguard amb Ctrl + Esc
+Comment[de]=Startet KSysguard mit Strg+Esc
 Comment[fi]=Käynnistää KSysGuardin painamalla Ctrl+Esc
 Comment[nl]=Start KSysguard bij Ctrl + Escape
 Comment[pl]=Uruchamia KSysguard na Ctrl + Escape
