@@ -33,7 +33,6 @@
 #include <QQuickItem>
 #include <QTimer>
 #include <QVariant>
-#include <zlib.h>
 
 #include "protocols/plasmoid/plasmoidprotocol.h"
 #include "protocols/dbussystemtray/dbussystemtrayprotocol.h"
