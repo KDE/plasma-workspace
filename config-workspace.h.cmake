@@ -157,3 +157,6 @@
 #define kde_socklen_t socklen_t
 
 #define WORKSPACE_VERSION_STRING "${KDE4WORKSPACE_VERSION}"
+
+/** place where plasma-frameworks things are installed */
+#define PLASMA_RELATIVE_DATA_INSTALL_DIR "@PLASMA_RELATIVE_DATA_INSTALL_DIR@"

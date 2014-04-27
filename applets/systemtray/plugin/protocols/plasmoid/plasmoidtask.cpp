@@ -33,6 +33,7 @@
 #include <Plasma/PluginLoader>
 
 #include "appletquickitem.h"
+#include "config-workspace.h"
 
 namespace SystemTray
 {
@@ -54,7 +55,7 @@ PlasmoidTask::PlasmoidTask(const QString &packageName, int appletId, Plasma::Con
 
     if (m_taskGraphicsObject) {
         Plasma::Package package = Plasma::PluginLoader::self()->loadPackage("Plasma/Shell");
-        package.setDefaultPackageRoot("plasma/plasmoids/");
+        package.setDefaultPackageRoot(PLASMA_RELATIVE_DATA_INSTALL_DIR "/plasmoids/");
         package.setPath("org.kde.plasma.systemtray");
 
         m_taskGraphicsObject->setCoronaPackage(package);

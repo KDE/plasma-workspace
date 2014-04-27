@@ -21,6 +21,7 @@
 #include "containmentconfigview.h"
 #include "configmodel.h"
 #include "shellcorona.h"
+#include "config-workspace.h"
 
 #include <kdeclarative/configpropertymap.h>
 #include <kconfigloader.h>
@@ -81,7 +82,7 @@ PlasmaQuick::ConfigModel *ContainmentConfigView::containmentActionConfigModel()
         Plasma::Package pkg = Plasma::PluginLoader::self()->loadPackage("Plasma/Generic");
 
         foreach (const KPluginInfo &info, actions) {
-            pkg.setDefaultPackageRoot(QStandardPaths::locate(QStandardPaths::GenericDataLocation, "plasma/containmentactions", QStandardPaths::LocateDirectory));
+            pkg.setDefaultPackageRoot(QStandardPaths::locate(QStandardPaths::GenericDataLocation, PLASMA_RELATIVE_DATA_INSTALL_DIR "/containmentactions", QStandardPaths::LocateDirectory));
             m_containmentActionConfigModel->appendCategory(info.icon(), info.name(), pkg.filePath("ui", "config.qml"), info.pluginName());
         }
 
@@ -116,7 +117,7 @@ PlasmaQuick::ConfigModel *ContainmentConfigView::wallpaperConfigModel()
 {
     if (!m_wallpaperConfigModel) {
         m_wallpaperConfigModel = new PlasmaQuick::ConfigModel(this);
-        QStringList dirs(QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, "plasma/wallpapers", QStandardPaths::LocateDirectory));
+        QStringList dirs(QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, PLASMA_RELATIVE_DATA_INSTALL_DIR "/wallpapers", QStandardPaths::LocateDirectory));
         Plasma::Package pkg = Plasma::PluginLoader::self()->loadPackage("Plasma/Generic");
         foreach (const QString &dirPath, dirs) {
             QDir dir(dirPath);
@@ -182,7 +183,7 @@ void ContainmentConfigView::setCurrentWallpaper(const QString &wallpaper)
 
         //we have to construct an independent ConfigPropertyMap when we want to configure wallpapers that are not the current one
         Plasma::Package pkg = Plasma::PluginLoader::self()->loadPackage("Plasma/Generic");
-        pkg.setDefaultPackageRoot("plasma/wallpapers");
+        pkg.setDefaultPackageRoot(PLASMA_RELATIVE_DATA_INSTALL_DIR "/wallpapers");
         pkg.setPath(wallpaper);
         QFile file(pkg.filePath("config", "main.xml"));
         KConfigGroup cfg = m_containment->config();

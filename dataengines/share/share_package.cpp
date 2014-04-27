@@ -22,6 +22,7 @@
 #include <Plasma/Package>
 
 #include "share_package.h"
+#include "config-workspace.h"
 
 SharePackage::SharePackage(QObject *parent, QVariantList args)
 {
@@ -36,7 +37,7 @@ void SharePackage::initPackage(Plasma::Package* package)
     package->setMimeTypes( "scripts", mimetypes );
 
     package->addFileDefinition("mainscript", "code/main.js", i18n("Main Script File"));
-    package->setDefaultPackageRoot("plasma/shareprovider/");
+    package->setDefaultPackageRoot(PLASMA_RELATIVE_DATA_INSTALL_DIR "shareprovider/");
     package->setServicePrefix("plasma-share-");
 }
 

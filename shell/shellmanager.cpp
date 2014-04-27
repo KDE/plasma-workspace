@@ -32,11 +32,12 @@
 
 //#include <config-prefix.h>
 #include "shellcorona.h"
+#include "config-workspace.h"
 
 #include <kcrash.h>
 
 static const QString s_shellsDir = QString(QStandardPaths::locate(QStandardPaths::QStandardPaths::GenericDataLocation,
-                                                  "plasma/shells/",
+                                                  PLASMA_RELATIVE_DATA_INSTALL_DIR "/shells/",
                                                   QStandardPaths::LocateDirectory));
 static const QString s_shellLoaderPath = QString("/contents/loader.qml");
 

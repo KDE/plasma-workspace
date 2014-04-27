@@ -26,6 +26,7 @@
 #include <kservicetypetrader.h>
 #include <ksycoca.h>
 #include <kconfig.h>
+#include "config-workspace.h"
 
 PlasmaAppletItem::PlasmaAppletItem(PlasmaAppletItemModel *model,
                                    const KPluginInfo& info,
@@ -39,7 +40,7 @@ PlasmaAppletItem::PlasmaAppletItem(PlasmaAppletItemModel *model,
 {
     const QString api(m_info.property("X-Plasma-API").toString());
     if (!api.isEmpty()) {
-        const QString _f = "plasma/plasmoids/" + info.pluginName() + '/';
+        const QString _f = PLASMA_RELATIVE_DATA_INSTALL_DIR "/plasmoids/" + info.pluginName() + '/';
         QFileInfo dir(QStandardPaths::locate(QStandardPaths::QStandardPaths::GenericDataLocation,
                                                   _f,
                                                   QStandardPaths::LocateDirectory));

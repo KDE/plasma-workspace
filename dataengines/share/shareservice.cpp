@@ -28,7 +28,7 @@
 
 #include "shareservice.h"
 #include "shareprovider.h"
-
+#include "config-workspace.h"
 
 ShareService::ShareService(ShareEngine *engine)
     : Plasma::Service(engine)
@@ -68,7 +68,7 @@ void ShareJob::start()
         service->property("X-KDE-PluginInfo-Name", QVariant::String).toString();
 
     const QString path =
-        KStandardDirs::locate("data", "plasma/shareprovider/" + pluginName + '/' );
+        KStandardDirs::locate("data", PLASMA_RELATIVE_DATA_INSTALL_DIR "/shareprovider/" + pluginName + '/' );
 
     if (path.isEmpty()) {
         showError(i18n("Invalid path for the requested provider"));

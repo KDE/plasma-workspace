@@ -42,6 +42,7 @@
 #include "kcategorizeditemsviewmodels_p.h"
 #include "plasmaappletitemmodel_p.h"
 #include "openwidgetassistant_p.h"
+#include "config-workspace.h"
 
 using namespace KCategorizedItemsViewModels;
 using namespace Plasma;
@@ -353,7 +354,7 @@ Plasma::Corona *WidgetExplorer::corona() const
 
 void WidgetExplorer::addApplet(const QString &pluginName)
 {
-    const QString p = "plasma/plasmoids/"+pluginName;
+    const QString p = PLASMA_RELATIVE_DATA_INSTALL_DIR "/plasmoids/"+pluginName;
     qWarning() << "-------->  load applet: " << pluginName << " relpath: " << p;
 
     QStringList dirs = QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, p, QStandardPaths::LocateDirectory);
@@ -416,7 +417,7 @@ void WidgetExplorer::openWidgetFile()
 
 void WidgetExplorer::uninstall(const QString &pluginName)
 {
-    const QString packageRoot = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + "/plasma/plasmoids/";
+    const QString packageRoot = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + PLASMA_RELATIVE_DATA_INSTALL_DIR "/plasmoids/";
 
     Plasma::Package pkg;
     pkg.setPath(packageRoot);
