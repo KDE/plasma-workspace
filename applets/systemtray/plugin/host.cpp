@@ -43,6 +43,7 @@
 namespace SystemTray
 {
 
+static QHash<Task::Category, int> s_taskWeights;
 
 bool taskLessThan(const Task *lhs, const Task *rhs)
 {
@@ -63,14 +64,15 @@ bool taskLessThan(const Task *lhs, const Task *rhs)
     }
 
     if (lhs->category() != rhs->category()) {
-        QMap<Task::Category, int> weights;
-        weights.insert(Task::Communications, 0);
-        weights.insert(Task::SystemServices, 1);
-        weights.insert(Task::Hardware, 2);
-        weights.insert(Task::ApplicationStatus, 3);
-        weights.insert(Task::UnknownCategory, 4);
 
-        return weights.value(lhs->category()) < weights.value(rhs->category());
+        if (s_taskWeights.isEmpty()) {
+            s_taskWeights.insert(Task::Communications, 0);
+            s_taskWeights.insert(Task::SystemServices, 1);
+            s_taskWeights.insert(Task::Hardware, 2);
+            s_taskWeights.insert(Task::ApplicationStatus, 3);
+            s_taskWeights.insert(Task::UnknownCategory, 4);
+        }
+        return s_taskWeights.value(lhs->category()) < s_taskWeights.value(rhs->category());
     }
 
     return lhs->name() < rhs->name();
