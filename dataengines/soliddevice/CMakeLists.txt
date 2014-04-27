@@ -22,5 +22,5 @@ kservice_desktop_to_json(plasma_engine_soliddevice plasma-dataengine-soliddevice
 
 install(TARGETS plasma_engine_soliddevice DESTINATION ${PLUGIN_INSTALL_DIR}/plasma/dataengine)
 install(FILES plasma-dataengine-soliddevice.desktop DESTINATION ${SERVICES_INSTALL_DIR} )
-install(FILES soliddevice.operations DESTINATION ${DATA_INSTALL_DIR}/plasma/services )
+install(FILES soliddevice.operations DESTINATION ${PLASMA_DATA_INSTALL_DIR}/services )
 

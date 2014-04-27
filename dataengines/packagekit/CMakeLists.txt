@@ -19,5 +19,5 @@ install(FILES plasma-dataengine-packagekit.desktop
     DESTINATION ${SERVICES_INSTALL_DIR} )
 
 install(FILES packagekit.operations
-    DESTINATION ${DATA_INSTALL_DIR}/plasma/services)
+    DESTINATION ${PLASMA_DATA_INSTALL_DIR}/services)
 

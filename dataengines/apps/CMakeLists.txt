@@ -18,4 +18,4 @@ kservice_desktop_to_json(plasma_engine_apps plasma-dataengine-apps.desktop)
 
 install(TARGETS plasma_engine_apps DESTINATION ${PLUGIN_INSTALL_DIR}/plasma/dataengine)
 install(FILES plasma-dataengine-apps.desktop DESTINATION ${SERVICES_INSTALL_DIR})
-install(FILES apps.operations DESTINATION ${DATA_INSTALL_DIR}/plasma/services)
+install(FILES apps.operations DESTINATION ${PLASMA_DATA_INSTALL_DIR}/services)

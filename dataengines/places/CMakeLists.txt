@@ -24,5 +24,5 @@ install(TARGETS plasma_engine_places
 install(FILES plasma-dataengine-places.desktop
         DESTINATION ${SERVICES_INSTALL_DIR} )
 install(FILES org.kde.places.operations
-        DESTINATION ${DATA_INSTALL_DIR}/plasma/services )
+        DESTINATION ${PLASMA_DATA_INSTALL_DIR}/services )
 

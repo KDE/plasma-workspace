@@ -25,7 +25,7 @@ install(FILES data/plasma_shareprovider.desktop
         DESTINATION ${SERVICETYPES_INSTALL_DIR})
 
 install(FILES share.operations
-        DESTINATION ${DATA_INSTALL_DIR}/plasma/services)
+        DESTINATION ${PLASMA_DATA_INSTALL_DIR}/services)
 
 set(sharepackage_SRCS
         share_package.cpp

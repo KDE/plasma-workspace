@@ -30,4 +30,4 @@ install(FILES plasma-engine-activities.desktop
         DESTINATION ${SERVICES_INSTALL_DIR})
 
 install(FILES activities.operations
-        DESTINATION ${DATA_INSTALL_DIR}/plasma/services)
+        DESTINATION ${PLASMA_DATA_INSTALL_DIR}/services)

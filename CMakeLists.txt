@@ -117,7 +117,7 @@ configure_file(config-workspace.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-works
 configure_file(config-unix.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-unix.h )
 configure_file(config-X11.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-X11.h)
 
-plasma_install_package(lookandfeel org.kde.lookandfeel plasma/look-and-feel lookandfeel)
+plasma_install_package(lookandfeel org.kde.lookandfeel look-and-feel lookandfeel)
 
 add_subdirectory(doc)
 add_subdirectory(libkworkspace)
