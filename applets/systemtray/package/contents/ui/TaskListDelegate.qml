@@ -57,7 +57,7 @@ TaskDelegate {
         opacity: taskListDelegate.snExpanded ? 1 : 0
         Behavior on opacity { NumberAnimation { duration: units.longDuration } }
 
-        text: name
+        text: modelData.name
         elide: Text.ElideRight
     }
 }

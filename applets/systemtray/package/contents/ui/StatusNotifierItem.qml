@@ -35,19 +35,22 @@ Item {
     property variant task: null // task that provides information for item
 
     //property bool     __has_task: task ? true : false
+
+
+    //FIXME ask sebas what this is trying to do, other than waste my CPU cycles
     property bool     __has_task: true
-    property string   __icon_name:         __has_task ? iconName : ""
-    property string   __att_icon_name:     __has_task ? attIconName : ""
-    property variant  __icon:              __has_task ? icon : "default"
-    property variant  __att_icon:          __has_task ? attIcon : __getDefaultIcon()
-    property string   __overlay_icon_name: __has_task ? overlayIconName : ""
-    property string   __movie_path:        __has_task ? moviePath : ""
-    property int      __status:            __has_task ? status : SystemTray.Task.UnknownStatus
+    property string   __icon_name:         __has_task ? modelData.iconName : ""
+    property string   __att_icon_name:     __has_task ? modelData.attIconName : ""
+    property variant  __icon:              __has_task ? modelData.icon : "default"
+    property variant  __att_icon:          __has_task ? modelData.attIcon : __getDefaultIcon()
+    property string   __overlay_icon_name: __has_task ? modelData.overlayIconName : ""
+    property string   __movie_path:        __has_task ? modelData.moviePath : ""
+    property int      __status:            __has_task ? modelData.status : SystemTray.Task.UnknownStatus
 
 
-    property variant icon:    __has_task ? tooltipIcon : ""
-    property string toolTipMainText: __has_task ? tooltipTitle : ""
-    property string toolTipSubText:  __has_task ? tooltipText : ""
+    property variant icon:    __has_task ? modelData.tooltipIcon : ""
+    property string toolTipMainText: __has_task ? modelData.tooltipTitle : ""
+    property string toolTipSubText:  __has_task ? modelData.tooltipText : ""
 
     // Public functions ================================================================================================
     function click(buttons) {
@@ -107,7 +110,7 @@ Item {
             left: parent.left
             verticalCenter: parent.verticalCenter
         }
-        source: iconName != "" ? iconName : (typeof(icon) != "undefined" ? icon : "")
+        source: __icon_name != "" ? __icon_name : (typeof(icon) != "undefined" ? icon : "")
     }
 
     // TODO: remove wheel area in QtQuick 2.0
@@ -140,7 +143,7 @@ Item {
 
                 visible: false
                 active: mouse_area.containsMouse
-                source: iconName != "" ? iconName : (typeof(icon) != "undefined" ? icon : "")
+                source: __icon_name != "" ? __icon_name : (typeof(icon) != "undefined" ? icon : "")
 
                 // Overlay icon
                 Image {
@@ -197,17 +200,17 @@ Item {
 
     function __processClick(buttons, item) {
         print("__processClick");
-        var pos = popupPosition(taskItemContainer, 0, 0);
+        var pos = modelData.popupPosition(taskItemContainer, 0, 0);
         switch (buttons) {
         case Qt.LeftButton:
             root.expandedTask = null;
-            activate1(pos.x, pos.y);
+            modelData.activate1(pos.x, pos.y);
             break;
         case Qt.RightButton:
-            activateContextMenu(pos.x, pos.y);
+            modelData.activateContextMenu(pos.x, pos.y);
             break;
         case Qt.MiddleButton:
-            activate2(pos.x, pos.y);
+            modelData.activate2(pos.x, pos.y);
             break;
         }
         plasmoid.expanded = false;
