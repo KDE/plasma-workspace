@@ -27,8 +27,6 @@ Item {
     id: appearancePage
     width: childrenRect.width
     height: childrenRect.height
-    implicitWidth: mainColumn.implicitWidth
-    implicitHeight: pageColumn.implicitHeight
 
     property alias cfg_boldText: boldCheckBox.checked
     property string cfg_timeFormat: ""
