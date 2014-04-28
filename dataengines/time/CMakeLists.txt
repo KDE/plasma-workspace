@@ -18,5 +18,5 @@ target_link_libraries(plasma_engine_time
 
 kservice_desktop_to_json(plasma_engine_time plasma-dataengine-time.desktop)
 
-install(TARGETS plasma_engine_time DESTINATION ${PLUGIN_INSTALL_DIR}/plasma/dataengine)
+install(TARGETS plasma_engine_time DESTINATION ${PLASMA_DATA_INSTALL_DIR}/dataengine)
 install(FILES plasma-dataengine-time.desktop DESTINATION ${SERVICES_INSTALL_DIR} )

@@ -17,6 +17,6 @@ target_link_libraries(plasma_engine_hotplug
 
 kservice_desktop_to_json(plasma_engine_hotplug plasma-dataengine-hotplug.desktop)
 
-install(TARGETS plasma_engine_hotplug DESTINATION ${PLUGIN_INSTALL_DIR}/plasma/dataengine)
+install(TARGETS plasma_engine_hotplug DESTINATION ${PLASMA_DATA_INSTALL_DIR}/dataengine)
 install(FILES plasma-dataengine-hotplug.desktop DESTINATION ${SERVICES_INSTALL_DIR} )
 install(FILES hotplug.operations DESTINATION ${PLASMA_DATA_INSTALL_DIR}/services )

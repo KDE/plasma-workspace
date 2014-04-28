@@ -16,7 +16,7 @@ target_link_libraries(plasma_engine_share
 kservice_desktop_to_json(plasma_engine_share plasma-dataengine-share.desktop)
 
 install(TARGETS plasma_engine_share
-        DESTINATION ${PLUGIN_INSTALL_DIR}/plasma/dataengine)
+        DESTINATION ${PLASMA_DATA_INSTALL_DIR}/dataengine)
 
 install(FILES plasma-dataengine-share.desktop
         DESTINATION ${SERVICES_INSTALL_DIR})
@@ -41,6 +41,6 @@ target_link_libraries(plasma_packagestructure_share
         KF5::Service)
 
 install(TARGETS plasma_packagestructure_share
-                 DESTINATION ${PLUGIN_INSTALL_DIR}/plasma/packagestructure)
+                 DESTINATION ${PLASMA_DATA_INSTALL_DIR}/packagestructure)
 install(FILES data/plasma-packagestructure-share.desktop
                DESTINATION ${SERVICES_INSTALL_DIR})

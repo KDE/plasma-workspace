@@ -15,5 +15,5 @@ target_link_libraries(plasma_engine_systemmonitor
 
 kservice_desktop_to_json(plasma_engine_systemmonitor plasma-dataengine-systemmonitor.desktop)
 
-install(TARGETS plasma_engine_systemmonitor DESTINATION ${PLUGIN_INSTALL_DIR}/plasma/dataengine)
+install(TARGETS plasma_engine_systemmonitor DESTINATION ${PLASMA_DATA_INSTALL_DIR}/dataengine)
 install(FILES plasma-dataengine-systemmonitor.desktop DESTINATION ${SERVICES_INSTALL_DIR} )

@@ -16,6 +16,6 @@ target_link_libraries(plasma_engine_apps
 
 kservice_desktop_to_json(plasma_engine_apps plasma-dataengine-apps.desktop)
 
-install(TARGETS plasma_engine_apps DESTINATION ${PLUGIN_INSTALL_DIR}/plasma/dataengine)
+install(TARGETS plasma_engine_apps DESTINATION ${PLASMA_DATA_INSTALL_DIR}/dataengine)
 install(FILES plasma-dataengine-apps.desktop DESTINATION ${SERVICES_INSTALL_DIR})
 install(FILES apps.operations DESTINATION ${PLASMA_DATA_INSTALL_DIR}/services)

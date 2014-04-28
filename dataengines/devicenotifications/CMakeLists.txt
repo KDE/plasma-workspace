@@ -15,5 +15,5 @@ target_link_libraries(plasma_engine_devicenotifications
 
 kservice_desktop_to_json(plasma_engine_devicenotifications plasma-dataengine-devicenotifications.desktop)
 
-install(TARGETS plasma_engine_devicenotifications DESTINATION ${PLUGIN_INSTALL_DIR}/plasma/dataengine)
+install(TARGETS plasma_engine_devicenotifications DESTINATION ${PLASMA_DATA_INSTALL_DIR}/dataengine)
 install(FILES plasma-dataengine-devicenotifications.desktop DESTINATION ${SERVICES_INSTALL_DIR} )

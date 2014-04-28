@@ -24,6 +24,6 @@ target_link_libraries(
     microblog
 )
 
-install(TARGETS plasma_engine_akonadi DESTINATION ${PLUGIN_INSTALL_DIR}/plasma/dataengine)
+install(TARGETS plasma_engine_akonadi DESTINATION ${PLASMA_DATA_INSTALL_DIR}/dataengine)
 install(FILES plasma-engine-akonadi.desktop DESTINATION ${SERVICES_INSTALL_DIR})
 

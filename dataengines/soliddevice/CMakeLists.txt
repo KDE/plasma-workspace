@@ -20,7 +20,7 @@ target_link_libraries(plasma_engine_soliddevice
 
 kservice_desktop_to_json(plasma_engine_soliddevice plasma-dataengine-soliddevice.desktop)
 
-install(TARGETS plasma_engine_soliddevice DESTINATION ${PLUGIN_INSTALL_DIR}/plasma/dataengine)
+install(TARGETS plasma_engine_soliddevice DESTINATION ${PLASMA_DATA_INSTALL_DIR}/dataengine)
 install(FILES plasma-dataengine-soliddevice.desktop DESTINATION ${SERVICES_INSTALL_DIR} )
 install(FILES soliddevice.operations DESTINATION ${PLASMA_DATA_INSTALL_DIR}/services )
 

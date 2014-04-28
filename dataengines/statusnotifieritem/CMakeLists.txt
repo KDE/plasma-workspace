@@ -37,7 +37,7 @@ target_link_libraries(plasma_engine_statusnotifieritem
 
 kservice_desktop_to_json(plasma_engine_statusnotifieritem plasma-engine-statusnotifieritem.desktop)
 
-install(TARGETS plasma_engine_statusnotifieritem DESTINATION ${PLUGIN_INSTALL_DIR}/plasma/dataengine)
+install(TARGETS plasma_engine_statusnotifieritem DESTINATION ${PLASMA_DATA_INSTALL_DIR}/dataengine)
 install(FILES plasma-engine-statusnotifieritem.desktop DESTINATION ${SERVICES_INSTALL_DIR})
 install(FILES statusnotifieritem.operations DESTINATION ${PLASMA_DATA_INSTALL_DIR}/services)
 

@@ -15,7 +15,7 @@ target_link_libraries(plasma_engine_keystate
 
 kservice_desktop_to_json(plasma_engine_keystate plasma-dataengine-keystate.desktop)
 
-install(TARGETS plasma_engine_keystate DESTINATION ${PLUGIN_INSTALL_DIR}/plasma/dataengine)
+install(TARGETS plasma_engine_keystate DESTINATION ${PLASMA_DATA_INSTALL_DIR}/dataengine)
 install(FILES plasma-dataengine-keystate.desktop DESTINATION ${SERVICES_INSTALL_DIR} )
 install(FILES modifierkeystate.operations DESTINATION ${PLASMA_DATA_INSTALL_DIR}/services)
 
