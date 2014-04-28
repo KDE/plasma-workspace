@@ -12,6 +12,6 @@ target_link_libraries(plasma_engine_filebrowser
 
 kservice_desktop_to_json(plasma_engine_filebrowser plasma-dataengine-filebrowser.desktop)
 
-install(TARGETS plasma_engine_filebrowser DESTINATION ${PLASMA_DATA_INSTALL_DIR}/dataengine)
+install(TARGETS plasma_engine_filebrowser DESTINATION ${PLUGIN_INSTALL_DIR}/plasma/dataengine)
 install(FILES plasma-dataengine-filebrowser.desktop DESTINATION ${SERVICES_INSTALL_DIR} )
 

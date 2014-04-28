@@ -13,7 +13,7 @@ kservice_desktop_to_json(plasma_engine_packagekit plasma-dataengine-packagekit.d
 target_link_libraries(plasma_engine_packagekit KF5::Plasma KF5::CoreAddons Qt5::DBus )
 
 install(TARGETS plasma_engine_packagekit
-    DESTINATION ${PLASMA_DATA_INSTALL_DIR}/dataengine)
+    DESTINATION ${PLUGIN_INSTALL_DIR}/plasma/dataengine)
 
 install(FILES plasma-dataengine-packagekit.desktop
     DESTINATION ${SERVICES_INSTALL_DIR} )

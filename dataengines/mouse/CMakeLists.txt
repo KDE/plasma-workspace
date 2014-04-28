@@ -14,6 +14,6 @@ if (X11_Xfixes_FOUND)
 	target_link_libraries(plasma_engine_mouse ${X11_Xfixes_LIB})
 endif ()
 
-install(TARGETS plasma_engine_mouse DESTINATION ${PLASMA_DATA_INSTALL_DIR}/dataengine)
+install(TARGETS plasma_engine_mouse DESTINATION ${PLUGIN_INSTALL_DIR}/plasma/dataengine)
 install(FILES plasma-dataengine-mouse.desktop DESTINATION ${SERVICES_INSTALL_DIR} )
 

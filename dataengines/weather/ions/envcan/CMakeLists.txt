@@ -4,5 +4,5 @@ target_link_libraries (ion_envcan KF5::Solid weather_ion)
 
 install (FILES ion-envcan.desktop DESTINATION ${SERVICES_INSTALL_DIR})
 
-install (TARGETS ion_envcan DESTINATION ${PLASMA_DATA_INSTALL_DIR}/dataengine)
+install (TARGETS ion_envcan DESTINATION ${PLUGIN_INSTALL_DIR}/plasma/dataengine)
 
