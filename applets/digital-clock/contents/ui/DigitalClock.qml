@@ -103,7 +103,6 @@ Item {
         hoverEnabled: true
         onClicked: {
             plasmoid.expanded = !plasmoid.expanded;
-            calTimer.start();
         }
     }
 
