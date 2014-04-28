@@ -22,6 +22,7 @@
 
 #include "globalshortcutsregistry.h"
 #include "kkeyserver.h"
+#include <netwm.h>
 
 #include <QDebug>
 
@@ -269,6 +270,9 @@ bool KGlobalAccelImpl::x11KeyPress(xcb_key_press_event_t *pEvent)
 	int keyQt = keyCodeQt | keyModQt;
 
 	// All that work for this hey... argh...
+    if (NET::timestampCompare(pEvent->time, QX11Info::appTime()) > 0) {
+        QX11Info::setAppTime(pEvent->time);
+    }
 	return m_owner->keyPressed(keyQt);
 }
 
