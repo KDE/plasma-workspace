@@ -21,6 +21,7 @@
 
 #include <algorithm>
 
+#include <QCoreApplication>
 #include <QDebug>
 #include <QDir>
 #include <QList>
@@ -45,6 +46,7 @@ bool ShellManager::s_forceWindowed = false;
 bool ShellManager::s_noRespawn = false;
 
 int ShellManager::crashes = 0;
+QString ShellManager::s_fixedShell = QString();
 
 //
 // ShellManager
@@ -114,6 +116,7 @@ void ShellManager::loadHandlers()
         }
 
         if (handler) {
+            handler->setProperty("pluginName", dir);
             registerHandler(handler);
         }
     }
@@ -171,10 +174,22 @@ void ShellManager::updateShell()
         return;
     }
 
-    // Finding the handler that has the priority closest to zero.
-    // We will return a handler even if there are no willing ones.
+    QObject *handler = 0;
 
-    auto handler =* std::min_element(d->handlers.cbegin(), d->handlers.cend(),
+    if (!s_fixedShell.isEmpty()) {
+        QList<QObject *>::const_iterator it = std::find_if (d->handlers.cbegin(), d->handlers.cend(), [=] (QObject *handler) {
+            return handler->property("pluginName").toString() == s_fixedShell;
+        });
+        if (it != d->handlers.cend()) {
+            handler = *it;
+        } else {
+            qCritical("Unable to find the shell plugin '%s'", qPrintable(s_fixedShell));
+            QCoreApplication::exit();
+        }
+    } else {
+        // Finding the handler that has the priority closest to zero.
+        // We will return a handler even if there are no willing ones.
+        handler =* std::min_element(d->handlers.cbegin(), d->handlers.cend(),
             [] (QObject * left, QObject * right)
             {
                 auto willing = [] (QObject * handler)
@@ -196,6 +211,7 @@ void ShellManager::updateShell()
                     priority(left) < priority(right);
             }
          );
+    }
 
     if (handler == d->currentHandler) return;
 

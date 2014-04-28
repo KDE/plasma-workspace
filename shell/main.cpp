@@ -68,6 +68,10 @@ int main(int argc, char** argv)
     QCommandLineOption shutup(QStringList() << QStringLiteral("s") << QStringLiteral("shut-up"),
                                      QStringLiteral("Shuts up the output"));
 
+    QCommandLineOption shellPlugin(QStringList() << QStringLiteral("p") << QStringLiteral("shell-plugin"),
+                                     QStringLiteral("Force loading the given shell plugin"),
+                                     QStringLiteral("plugin"));
+
     parser.addVersionOption();
     parser.addHelpOption();
     parser.addOption(dbg);
@@ -75,6 +79,7 @@ int main(int argc, char** argv)
     parser.addOption(respawn);
     parser.addOption(crash);
     parser.addOption(shutup);
+    parser.addOption(shellPlugin);
 
     parser.process(app);
 
@@ -86,6 +91,7 @@ int main(int argc, char** argv)
     ShellManager::setCrashCount(parser.value(crash).toInt());
     ShellManager::s_forceWindowed = parser.isSet(win);
     ShellManager::s_noRespawn = parser.isSet(respawn);
+    ShellManager::s_fixedShell = parser.value(shellPlugin);
     ShellManager::instance();
 
     return app.exec();

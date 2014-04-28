@@ -42,6 +42,7 @@ public:
 
     static bool s_forceWindowed;
     static bool s_noRespawn;
+    static QString s_fixedShell;
 
     static void setCrashCount(int count);
 
