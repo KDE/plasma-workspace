@@ -25,6 +25,7 @@
 #include <QApplication>
 #include <QDebug>
 #include <QMenu>
+#include <QDesktopWidget>
 #include <QQmlContext>
 #include <QTimer>
 #include <QDBusConnection>

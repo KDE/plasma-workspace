@@ -26,6 +26,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 // Qt
 #include <QApplication>
+#include <QDesktopWidget>
 #include <QTimer>
 #include <QUuid>
 

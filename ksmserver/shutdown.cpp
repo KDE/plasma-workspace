@@ -77,6 +77,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #include <kdebug.h>
 #include <klocalizedstring.h>
 
+#include <QDesktopWidget>
 #include <QX11Info>
 #include <X11/Xutil.h>
 #include <X11/Xatom.h>

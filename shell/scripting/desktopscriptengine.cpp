@@ -21,6 +21,7 @@
 
 #include <QApplication>
 #include <QCursor>
+#include <QDesktopWidget>
 
 #include "containment.h"
 #include "appinterface.h"

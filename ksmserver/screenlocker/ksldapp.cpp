@@ -41,6 +41,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include <QAction>
 #include <QTimer>
 #include <QApplication>
+#include <QDesktopWidget>
 #include <QProcess>
 #include <QX11Info>
 // X11

@@ -20,6 +20,7 @@
 
 #include <QApplication>
 #include <QDebug>
+#include <QDesktopWidget>
 #include <QQuickItem>
 #include <QQmlContext>
 #include <QScreen>

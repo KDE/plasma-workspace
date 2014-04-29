@@ -26,6 +26,7 @@
 #include "menuwidget.h"
 
 #include <QMenu>
+#include <QDesktopWidget>
 #include <QGraphicsView>
 #include <QGraphicsLinearLayout>
 
