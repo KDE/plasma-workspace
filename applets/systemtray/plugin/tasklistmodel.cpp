@@ -102,8 +102,6 @@ void SystemTray::TaskListModel::addTask(Task *task)
         beginInsertRows(QModelIndex(), index, index);
         m_tasks.insert(it, task);
         endInsertRows();
-
-        emit rowCountChanged();
     }
 }
 
@@ -114,8 +112,6 @@ void SystemTray::TaskListModel::removeTask(Task *task)
         beginRemoveRows(QModelIndex(), index, index);
         m_tasks.removeAt(index);
         endRemoveRows();
-
-        emit rowCountChanged();
     }
 }
 
