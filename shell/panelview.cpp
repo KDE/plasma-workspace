@@ -543,7 +543,7 @@ void PanelView::showConfigurationInterface(Plasma::Applet *applet)
 
     Plasma::Containment *cont = qobject_cast<Plasma::Containment *>(applet);
 
-    if (cont) {
+    if (cont && cont->isContainment()) {
         m_panelConfigView = new PanelConfigView(cont, this);
     } else {
         m_panelConfigView = new PlasmaQuick::ConfigView(applet);
