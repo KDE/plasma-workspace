@@ -26,7 +26,6 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #include "shutdowndlg.h"
 
 #include <QApplication>
-#include <QDesktopWidget>
 #include <QQuickItem>
 #include <QTimer>
 #include <QFile>

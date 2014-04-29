@@ -24,7 +24,6 @@
 #include "statusnotifieritemservice.h"
 
 #include <QApplication>
-#include <QDesktopWidget>
 #include <QIcon>
 #include <QDebug>
 #include <KIcon>

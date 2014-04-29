@@ -20,7 +20,6 @@
 #include "scriptengine.h"
 
 #include <QApplication>
-#include <QDesktopWidget>
 #include <QDir>
 #include <QDirIterator>
 #include <QFile>

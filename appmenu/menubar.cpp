@@ -29,7 +29,6 @@
 #include <QGraphicsLinearLayout>
 #include <QPainter>
 #include <QMenu>
-#include <QDesktopWidget>
 #include <QGraphicsDropShadowEffect>
 
 #include <KWindowSystem>

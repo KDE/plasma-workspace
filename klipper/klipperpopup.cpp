@@ -21,7 +21,6 @@
 #include "klipperpopup.h"
 
 #include <QApplication>
-#include <QDesktopWidget>
 #include <QKeyEvent>
 #include <QWidgetAction>
 

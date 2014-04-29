@@ -183,7 +183,7 @@ KCMInit::KCMInit( KCmdLineArgs* args )
   KConfigGroup config(&_config, "X11");
 #ifdef Q_WS_X11
   bool multihead = !config.readEntry( "disableMultihead", false) &&
-                    (QDesktopWidget().screenCount() > 1);
+                    (QGuiApplication::screens().count() > 1);
 #else
   bool multihead = false;
 #endif
