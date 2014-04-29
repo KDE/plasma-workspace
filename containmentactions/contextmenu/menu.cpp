@@ -70,7 +70,7 @@ void ContextMenu::restore(const KConfigGroup &config)
 
     if (c->containmentType() == Plasma::Types::PanelContainment ||
         c->containmentType() == Plasma::Types::CustomPanelContainment) {
-        m_actionOrder << "add widgets" << "_add panel" << "lock widgets" << "_context" << "remove";
+        m_actionOrder << "add widgets" << "_add panel" << "lock widgets" << "_context" << "configure" << "remove";
     } else {
         actions.insert("configure shortcuts", false);
         m_actionOrder << "_context" << "_run_command" << "add widgets" << "_add panel"
@@ -91,10 +91,7 @@ void ContextMenu::restore(const KConfigGroup &config)
     }
 
     // everything below should only happen once, so check for it
-    if (c->containmentType() == Plasma::Types::PanelContainment ||
-        c->containmentType() == Plasma::Types::CustomPanelContainment) {
-        //FIXME: panel does its own config action atm...
-    } else if (!m_runCommandAction) {
+    if (!m_runCommandAction) {
         m_runCommandAction = new QAction(i18n("Run Command..."), this);
         m_runCommandAction->setIcon(QIcon::fromTheme("system-run"));
         connect(m_runCommandAction, SIGNAL(triggered(bool)), this, SLOT(runCommand()));
