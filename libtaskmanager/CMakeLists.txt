@@ -66,7 +66,10 @@ if (X11_FOUND)
     endif ()
 endif()
 
-set_target_properties(taskmanager PROPERTIES VERSION ${GENERIC_LIB_VERSION} SOVERSION ${GENERIC_LIB_SOVERSION} EXPORT_NAME LibTaskManager)
+set_target_properties(taskmanager PROPERTIES 
+                      VERSION 4.95.0
+                      SOVERSION 5
+                      EXPORT_NAME LibTaskManager)
 install(TARGETS taskmanager EXPORT libtaskmanagerLibraryTargets ${INSTALL_TARGETS_DEFAULT_ARGS} )
 
 install(FILES
