@@ -25,7 +25,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include "powerdevilpolicyagent.h"
 // KDE
 #include <KIdleTime>
-#include <KProcess>
 #include <KRandom>
 // Qt
 #include <QtDBus/QDBusConnection>
@@ -200,18 +199,6 @@ void Interface::slotUnlocked()
 void Interface::configure()
 {
     m_daemon->configure();
-}
-
-void Interface::setupPlasma()
-{
-    KProcess *plasmaProc = new KProcess;
-    plasmaProc->setProgram(QLatin1String( "plasma-overlay" ));
-    *plasmaProc << QLatin1String( "--setup" );
-
-    //make sure it goes away when it's done (and not before)
-    connect(plasmaProc, SIGNAL(finished(int,QProcess::ExitStatus)), plasmaProc, SLOT(deleteLater()));
-
-    plasmaProc->start();
 }
 
 void Interface::saverLockReady()

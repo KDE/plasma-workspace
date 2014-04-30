@@ -102,7 +102,6 @@ public Q_SLOTS:
     void UnThrottle(uint cookie);
 
     // org.kde.screensvar
-    void setupPlasma();
     void configure();
     void saverLockReady();
 
