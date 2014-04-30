@@ -19,3 +19,10 @@ add_executable(authenticatorTest ${authenticatorTest_SRCS})
 target_link_libraries(authenticatorTest Qt5::Test)
 add_test(ksmserver-authenticatorTest authenticatorTest)
 ecm_mark_as_test(authenticatorTest)
+
+#######################################
+# KillTest
+#######################################
+add_executable(killTest killtest.cpp)
+ecm_mark_as_test(killTest)
+target_link_libraries(killTest Qt5::Test)
