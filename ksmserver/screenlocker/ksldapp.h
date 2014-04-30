@@ -83,7 +83,6 @@ public:
 public Q_SLOTS:
     Q_SCRIPTABLE void lock();
     void lock(bool immediateLock);
-    void lockProcessFinished(int exitCode, QProcess::ExitStatus exitStatus);
     void lockProcessReady();
 
 Q_SIGNALS:

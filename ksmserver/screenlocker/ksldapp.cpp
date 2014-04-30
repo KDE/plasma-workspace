@@ -99,6 +99,7 @@ void KSldApp::cleanUp()
     XSetScreenSaver(QX11Info::display(), s_XTimeout, s_XInterval, s_XBlanking, s_XExposures);
 }
 
+static bool s_graceTimeKill = false;
 static bool s_logindExit = false;
 
 void KSldApp::initialize()
@@ -131,7 +132,20 @@ void KSldApp::initialize()
 
     m_lockProcess = new QProcess();
     m_lockProcess->setReadChannel(QProcess::StandardOutput);
-    connect(m_lockProcess, SIGNAL(finished(int,QProcess::ExitStatus)), SLOT(lockProcessFinished(int,QProcess::ExitStatus)));
+    auto finishedSignal = static_cast<void (QProcess::*)(int, QProcess::ExitStatus)>(&QProcess::finished);
+    connect(m_lockProcess, finishedSignal, this,
+        [this](int exitCode, QProcess::ExitStatus exitStatus) {
+            if ((!exitCode && exitStatus == QProcess::NormalExit) || s_graceTimeKill || s_logindExit) {
+                // unlock process finished successfully - we can remove the lock grab
+                s_graceTimeKill = false;
+                s_logindExit = false;
+                doUnlock();
+                return;
+            }
+            // failure, restart lock process
+            startLockProcess(true);
+        }
+    );
     connect(m_lockProcess, SIGNAL(readyReadStandardOutput()), SLOT(lockProcessReady()));
     m_lockedTimer.invalidate();
     m_graceTimer->setSingleShot(true);
@@ -285,21 +299,6 @@ void KSldApp::doUnlock()
     KDisplayManager().setLock(false);
     emit unlocked();
 //     KNotification::event( QLatin1String("unlocked"));
-}
-
-static bool s_graceTimeKill = false;
-
-void KSldApp::lockProcessFinished(int exitCode, QProcess::ExitStatus exitStatus)
-{
-    if ((!exitCode && exitStatus == QProcess::NormalExit) || s_graceTimeKill || s_logindExit) {
-        // unlock process finished successfully - we can remove the lock grab
-        s_graceTimeKill = false;
-        s_logindExit = false;
-        doUnlock();
-        return;
-    }
-    // failure, restart lock process
-    startLockProcess(true);
 }
 
 void KSldApp::lockProcessReady()
