@@ -126,12 +126,12 @@ void Task::setExpanded(bool expanded)
 {
 }
 
-QQuickItem* Task::taskItem() const
+QQuickItem* Task::taskItem()
 {
     return 0;
 }
 
-QQuickItem* Task::taskItemExpanded() const
+QQuickItem* Task::taskItemExpanded() 
 {
     return 0;
 }

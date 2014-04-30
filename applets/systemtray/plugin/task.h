@@ -120,8 +120,8 @@ public:
      **/
     virtual QString taskId() const = 0;
 
-    virtual QQuickItem* taskItem() const;
-    virtual QQuickItem* taskItemExpanded() const;
+    virtual QQuickItem* taskItem();
+    virtual QQuickItem* taskItemExpanded();
 
     /**
      * Returns an icon that can be associated with this task
