@@ -81,7 +81,6 @@ public:
     }
 
 public Q_SLOTS:
-    Q_SCRIPTABLE void lock();
     void lock(bool immediateLock);
 
 Q_SIGNALS:

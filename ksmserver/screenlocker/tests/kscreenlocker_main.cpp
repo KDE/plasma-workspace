@@ -42,7 +42,7 @@ int main(int argc, char **argv)
 
     ScreenLocker::KSldApp locker(&app);
     QObject::connect(&locker, &ScreenLocker::KSldApp::unlocked, &app, &QApplication::quit);
-    locker.lock();
+    locker.lock(true);
 
     return app.exec();
 }

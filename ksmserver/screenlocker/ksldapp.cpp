@@ -123,7 +123,11 @@ void KSldApp::initialize()
         a->setText(i18n("Lock Session"));
         KGlobalAccel::self()->setShortcut(a, QList<QKeySequence>() << Qt::ALT+Qt::CTRL+Qt::Key_L);
         KGlobalAccel::self()->setDefaultShortcut(a, QList<QKeySequence>() << Qt::ALT+Qt::CTRL+Qt::Key_L);
-        connect(a, SIGNAL(triggered(bool)), this, SLOT(lock()));
+        connect(a, &QAction::triggered, this,
+            [this]() {
+                lock(true);
+            }
+        );
     }
     m_actionCollection->readSettings();
 
@@ -184,8 +188,11 @@ void KSldApp::initialize()
 
     // connect to logind
     LogindIntegration *logind = new LogindIntegration(this);
-    auto lockSlot = static_cast<void (KSldApp::*)()>(&KSldApp::lock);
-    connect(logind, &LogindIntegration::requestLock, this, lockSlot);
+    connect(logind, &LogindIntegration::requestLock, this,
+        [this]() {
+            lock(true);
+        }
+    );
     connect(logind, &LogindIntegration::requestUnlock, this,
         [this]() {
             if (lockState() == Locked) {
@@ -218,11 +225,6 @@ void KSldApp::configure()
         m_lockGrace = -1;
     }
     m_autoLogoutTimeout = KScreenSaverSettings::autoLogout() ? KScreenSaverSettings::autoLogoutTimeout() * 1000 : 0;
-}
-
-void KSldApp::lock()
-{
-    lock(true);
 }
 
 void KSldApp::lock(bool immediateLock)

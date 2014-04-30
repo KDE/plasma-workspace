@@ -616,7 +616,7 @@ KSMServer::KSMServer( const QString& windowManager, bool _only_local, bool locks
 
     ScreenLocker::KSldApp::self();
     if (lockscreen) {
-        ScreenLocker::KSldApp::self()->lock();
+        ScreenLocker::KSldApp::self()->lock(true);
     }
 #else
     Q_UNUSED(lockscreen)
