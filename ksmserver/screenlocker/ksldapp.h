@@ -90,7 +90,6 @@ Q_SIGNALS:
 
 private Q_SLOTS:
     void cleanUp();
-    void idleTimeout(int identifier);
     void endGraceTime();
 
 private:

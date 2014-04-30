@@ -128,7 +128,30 @@ void KSldApp::initialize()
     m_actionCollection->readSettings();
 
     // idle support
-    connect(KIdleTime::instance(), SIGNAL(timeoutReached(int)), SLOT(idleTimeout(int)));
+    auto idleTimeSignal = static_cast<void (KIdleTime:: *)(int)>(&KIdleTime::timeoutReached);
+    connect(KIdleTime::instance(), idleTimeSignal, this,
+        [this](int identifier) {
+            if (identifier != m_idleId) {
+                // not our identifier
+                return;
+            }
+            if (lockState() != Unlocked) {
+                return;
+            }
+            if (m_inhibitCounter) {
+                // there is at least one process blocking the auto lock of screen locker
+                return;
+            }
+            if (m_lockGrace) {  // short-circuit if grace time is zero
+                m_inGraceTime = true;
+                m_graceTimer->start(m_lockGrace);
+            } else if (m_lockGrace == -1) {
+                m_inGraceTime = true;  // if no timeout configured, grace time lasts forever
+            }
+
+            lock(false);
+        }
+    );
 
     m_lockProcess = new QProcess();
     m_lockProcess->setReadChannel(QProcess::StandardOutput);
@@ -346,29 +369,6 @@ uint KSldApp::activeTime() const
         return m_lockedTimer.elapsed();
     }
     return 0;
-}
-
-void KSldApp::idleTimeout(int identifier)
-{
-    if (identifier != m_idleId) {
-        // not our identifier
-        return;
-    }
-    if (lockState() != Unlocked) {
-        return;
-    }
-    if (m_inhibitCounter) {
-        // there is at least one process blocking the auto lock of screen locker
-        return;
-    }
-    if (m_lockGrace) {  // short-circuit if grace time is zero
-        m_inGraceTime = true;
-        m_graceTimer->start(m_lockGrace);
-    } else if (m_lockGrace == -1) {
-        m_inGraceTime = true;  // if no timeout configured, grace time lasts forever
-    }
-
-    lock(false);
 }
 
 bool KSldApp::isGraceTime() const
