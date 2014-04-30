@@ -33,6 +33,11 @@ class QTimer;
 namespace ScreenLocker
 {
 
+enum class EstablishLock {
+    Immediate,
+    Delayed
+};
+
 class LockWindow;
 
 class KSldApp : public QObject
@@ -80,8 +85,7 @@ public:
         return m_autoLogoutTimeout;
     }
 
-public Q_SLOTS:
-    void lock(bool immediateLock);
+    void lock(EstablishLock establishLock);
 
 Q_SIGNALS:
     void locked();
@@ -94,7 +98,7 @@ private Q_SLOTS:
 private:
     void initialize();
     bool establishGrab();
-    bool startLockProcess(bool immediateLock);
+    bool startLockProcess(EstablishLock establishLock);
     void showLockWindow();
     void hideLockWindow();
     void doUnlock();

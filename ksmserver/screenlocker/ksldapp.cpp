@@ -125,7 +125,7 @@ void KSldApp::initialize()
         KGlobalAccel::self()->setDefaultShortcut(a, QList<QKeySequence>() << Qt::ALT+Qt::CTRL+Qt::Key_L);
         connect(a, &QAction::triggered, this,
             [this]() {
-                lock(true);
+                lock(EstablishLock::Immediate);
             }
         );
     }
@@ -153,7 +153,7 @@ void KSldApp::initialize()
                 m_inGraceTime = true;  // if no timeout configured, grace time lasts forever
             }
 
-            lock(false);
+            lock(EstablishLock::Delayed);
         }
     );
 
@@ -170,7 +170,7 @@ void KSldApp::initialize()
                 return;
             }
             // failure, restart lock process
-            startLockProcess(true);
+            startLockProcess(EstablishLock::Immediate);
         }
     );
     connect(m_lockProcess, &QProcess::readyReadStandardOutput, this,
@@ -182,7 +182,7 @@ void KSldApp::initialize()
     );
     m_lockedTimer.invalidate();
     m_graceTimer->setSingleShot(true);
-    connect(m_graceTimer, SIGNAL(timeout()), SLOT(endGraceTime()));
+    connect(m_graceTimer, &QTimer::timeout, this, &KSldApp::endGraceTime);
     // create our D-Bus interface
     new Interface(this);
 
@@ -190,7 +190,7 @@ void KSldApp::initialize()
     LogindIntegration *logind = new LogindIntegration(this);
     connect(logind, &LogindIntegration::requestLock, this,
         [this]() {
-            lock(true);
+            lock(EstablishLock::Immediate);
         }
     );
     connect(logind, &LogindIntegration::requestUnlock, this,
@@ -227,13 +227,13 @@ void KSldApp::configure()
     m_autoLogoutTimeout = KScreenSaverSettings::autoLogout() ? KScreenSaverSettings::autoLogoutTimeout() * 1000 : 0;
 }
 
-void KSldApp::lock(bool immediateLock)
+void KSldApp::lock(EstablishLock establishLock)
 {
     if (lockState() != Unlocked) {
         // already locked or acquiring lock, no need to lock again
         // but make sure it's really locked
         endGraceTime();
-        if (immediateLock) {
+        if (establishLock == EstablishLock::Immediate) {
             // signal the greeter to switch to immediateLock mode
             kill(m_lockProcess->pid(), SIGUSR1);
         }
@@ -255,7 +255,7 @@ void KSldApp::lock(bool immediateLock)
     m_lockState = AcquiringLock;
 
     // start unlock screen process
-    if (!startLockProcess(immediateLock)) {
+    if (!startLockProcess(establishLock)) {
         doUnlock();
         qCritical() << "Greeter Process not available";
     }
@@ -332,10 +332,10 @@ void KSldApp::doUnlock()
 //     KNotification::event( QLatin1String("unlocked"));
 }
 
-bool KSldApp::startLockProcess(bool immediateLock)
+bool KSldApp::startLockProcess(EstablishLock establishLock)
 {
     QStringList args;
-    if (immediateLock) {
+    if (establishLock == EstablishLock::Immediate) {
         args << "--immediateLock";
     }
     m_lockProcess->start(QStringLiteral(KSCREENLOCKER_GREET_BIN), args);
