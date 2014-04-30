@@ -146,7 +146,13 @@ void KSldApp::initialize()
             startLockProcess(true);
         }
     );
-    connect(m_lockProcess, SIGNAL(readyReadStandardOutput()), SLOT(lockProcessReady()));
+    connect(m_lockProcess, &QProcess::readyReadStandardOutput, this,
+        [this]() {
+            m_lockState = Locked;
+            m_lockedTimer.restart();
+            emit locked();
+        }
+    );
     m_lockedTimer.invalidate();
     m_graceTimer->setSingleShot(true);
     connect(m_graceTimer, SIGNAL(timeout()), SLOT(endGraceTime()));
@@ -299,13 +305,6 @@ void KSldApp::doUnlock()
     KDisplayManager().setLock(false);
     emit unlocked();
 //     KNotification::event( QLatin1String("unlocked"));
-}
-
-void KSldApp::lockProcessReady()
-{
-    m_lockState = Locked;
-    m_lockedTimer.restart();
-    emit locked();
 }
 
 bool KSldApp::startLockProcess(bool immediateLock)
