@@ -3,7 +3,5 @@
   <interface name="org.kde.screensaver">
     <!-- Re-read configuration -->
     <method name="configure" />
-    <!-- Private API. Don't use. -->
-    <method name="saverLockReady" />
   </interface>
 </node>

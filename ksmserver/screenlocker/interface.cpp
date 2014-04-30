@@ -201,11 +201,6 @@ void Interface::configure()
     m_daemon->configure();
 }
 
-void Interface::saverLockReady()
-{
-    // unused
-}
-
 void Interface::sendLockReplies()
 {
     foreach (const QDBusMessage &reply, m_lockReplies) {

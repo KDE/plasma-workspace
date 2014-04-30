@@ -103,7 +103,6 @@ public Q_SLOTS:
 
     // org.kde.screensvar
     void configure();
-    void saverLockReady();
 
 Q_SIGNALS:
     // DBus signals
