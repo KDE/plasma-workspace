@@ -49,6 +49,8 @@
     </entry>
     <entry key="LockGrace" type="Int">
       <default>5000</default>
+      <min>0</min>
+      <max>300000</max>
       <label></label>
       <whatsthis></whatsthis>
     </entry>
