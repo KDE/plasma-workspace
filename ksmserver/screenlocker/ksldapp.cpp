@@ -221,6 +221,13 @@ KActionCollection *KSldApp::actionCollection()
     return m_actionCollection;
 }
 
+/*
+ * Forward declarations:
+ * Only called from KSldApp::establishGrab(). Using from somewhere else is incorrect usage!
+ **/
+static bool grabKeyboard();
+static bool grabMouse();
+
 bool KSldApp::establishGrab()
 {
     XSync(QX11Info::display(), False);
@@ -243,7 +250,7 @@ bool KSldApp::establishGrab()
     return true;
 }
 
-bool KSldApp::grabKeyboard()
+static bool grabKeyboard()
 {
     int rv = XGrabKeyboard( QX11Info::display(), QX11Info::appRootWindow(),
         True, GrabModeAsync, GrabModeAsync, CurrentTime );
@@ -251,7 +258,7 @@ bool KSldApp::grabKeyboard()
     return (rv == GrabSuccess);
 }
 
-bool KSldApp::grabMouse()
+static bool grabMouse()
 {
 #define GRABEVENTS ButtonPressMask | ButtonReleaseMask | PointerMotionMask | \
                    EnterWindowMask | LeaveWindowMask

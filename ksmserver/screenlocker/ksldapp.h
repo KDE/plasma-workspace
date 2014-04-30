@@ -98,8 +98,6 @@ private Q_SLOTS:
 private:
     void initialize();
     bool establishGrab();
-    bool grabKeyboard();
-    bool grabMouse();
     bool startLockProcess(bool immediateLock);
     void showLockWindow();
     void hideLockWindow();
