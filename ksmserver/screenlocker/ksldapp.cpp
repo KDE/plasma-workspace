@@ -34,18 +34,14 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include <KIdleTime>
 #include <KLocalizedString>
 // #include <KNotification>
-#include <KProcess>
 #include <KGlobalAccel>
 #include <KCrash>
 // Qt
 #include <QAction>
 #include <QTimer>
-#include <QApplication>
-#include <QDesktopWidget>
 #include <QProcess>
 #include <QX11Info>
 // X11
-#include <X11/Xcursor/Xcursor.h>
 #include <X11/Xlib.h>
 // other
 #include <unistd.h>
@@ -249,7 +245,7 @@ bool KSldApp::establishGrab()
 
 bool KSldApp::grabKeyboard()
 {
-    int rv = XGrabKeyboard( QX11Info::display(), QApplication::desktop()->winId(),
+    int rv = XGrabKeyboard( QX11Info::display(), QX11Info::appRootWindow(),
         True, GrabModeAsync, GrabModeAsync, CurrentTime );
 
     return (rv == GrabSuccess);
@@ -259,7 +255,7 @@ bool KSldApp::grabMouse()
 {
 #define GRABEVENTS ButtonPressMask | ButtonReleaseMask | PointerMotionMask | \
                    EnterWindowMask | LeaveWindowMask
-    int rv = XGrabPointer( QX11Info::display(), QApplication::desktop()->winId(),
+    int rv = XGrabPointer( QX11Info::display(), QX11Info::appRootWindow(),
             True, GRABEVENTS, GrabModeAsync, GrabModeAsync, None,
             None, CurrentTime );
 #undef GRABEVENTS
