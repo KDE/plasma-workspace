@@ -42,16 +42,8 @@ DesktopView::DesktopView(ShellCorona *corona, QScreen *screen)
     engine()->rootContext()->setContextProperty("desktop", this);
     setSource(QUrl::fromLocalFile(corona->package().filePath("views", "Desktop.qml")));
 
-    connect(this, &QWindow::xChanged, [=]() {
-        if (m_fillScreen) {
-            setGeometry(this->screen()->geometry());
-        }
-    });
-    connect(this, &QWindow::yChanged, [=]() {
-        if (m_fillScreen) {
-            setGeometry(this->screen()->geometry());
-        }
-    });
+    //For some reason, if I connect the method directly it doesn't get called, I think it's for the lack of argument
+    connect(this, &QWindow::screenChanged, this, [=](QScreen*) { adaptToScreen(); });
 }
 
 DesktopView::~DesktopView()
@@ -91,17 +83,28 @@ void DesktopView::setFillScreen(bool fillScreen)
     }
 
     m_fillScreen = fillScreen;
+    adaptToScreen();
+    emit fillScreenChanged();
+}
 
+void DesktopView::moveEvent(QMoveEvent* ev)
+{
+    adaptToScreen();
+    QWindow::moveEvent(ev);
+}
+
+void DesktopView::adaptToScreen()
+{
+    qDebug() << "adapting to screen" << screen()->name() << this;
     if (m_fillScreen) {
         setGeometry(screen()->geometry());
         setMinimumSize(screen()->geometry().size());
         setMaximumSize(screen()->geometry().size());
-        connect(screen(), &QScreen::geometryChanged, this, static_cast<void (QWindow::*)(const QRect&)>(&QWindow::setGeometry));
+        connect(screen(), &QScreen::geometryChanged, this, static_cast<void (QWindow::*)(const QRect&)>(&QWindow::setGeometry), Qt::UniqueConnection);
     } else {
         disconnect(screen(), &QScreen::geometryChanged, this, static_cast<void (QWindow::*)(const QRect&)>(&QWindow::setGeometry));
     }
-
-    emit fillScreenChanged();
+    qDebug() << "adapted" << geometry() << (containment () ? containment()->wallpaper() : "xx");
 }
 
 void DesktopView::setDashboardShown(bool shown)
