@@ -27,6 +27,9 @@
 
 #include <Plasma/Package>
 
+namespace KScreen {
+class Output;
+}
 
 namespace Plasma
 {
@@ -34,6 +37,7 @@ namespace Plasma
 } // namespace Plasma
 
 class Activity;
+class DesktopView;
 class PanelView;
 class QScreen;
 namespace WorkspaceScripting {
@@ -102,8 +106,6 @@ public Q_SLOTS:
     void loadScriptInInteractiveConsole(const QString &script);
 
 protected Q_SLOTS:
-    void screenAdded(QScreen *screen);
-
     /**
      * Loads the layout and performs the needed checks
      */
@@ -141,11 +143,18 @@ private Q_SLOTS:
     void addPanel(QAction *action);
     void addPanel(const QString &plugin);
 
+    void removePanel(Plasma::Containment* cont);
+    void removeDesktop(DesktopView* screen);
+    void outputAdded(KScreen::Output* output);
+    void primaryOutputChanged();
+
     void activityOpened();
     void activityClosed();
     void activityRemoved();
 
 private:
+    void screenInvariants();
+
     /**
      * @returns a new containment associated with the specified @p activity and @p screen.
      */

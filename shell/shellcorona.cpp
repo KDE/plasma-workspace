@@ -42,6 +42,9 @@
 #include <KAuthorized>
 #include <KWindowSystem>
 
+#include <KScreen/Config>
+#include <kscreen/configmonitor.h>
+
 #include "config-ktexteditor.h" // HAVE_KTEXTEDITOR
 
 
@@ -59,8 +62,6 @@
 
 #include "plasmashelladaptor.h"
 
-
-
 static const int s_configSyncDelay = 10000; // 10 seconds
 
 class ShellCorona::Private {
@@ -70,7 +71,8 @@ public:
           activityController(new KActivities::Controller(q)),
           activityConsumer(new KActivities::Consumer(q)),
           addPanelAction(nullptr),
-          addPanelsMenu(nullptr)
+          addPanelsMenu(nullptr),
+          screenConfiguration(nullptr)
     {
         appConfigSyncTimer.setSingleShot(true);
         appConfigSyncTimer.setInterval(s_configSyncDelay);
@@ -99,10 +101,20 @@ public:
     QWeakPointer<InteractiveConsole> console;
 #endif
 
+    KScreen::Config* screenConfiguration;
     QTimer waitingPanelsTimer;
     QTimer appConfigSyncTimer;
 };
 
+static QScreen* outputToScreen(KScreen::Output* output)
+{
+    foreach(QScreen* screen, QGuiApplication::screens()) {
+        if(screen->name() == output->name()) {
+            return screen;
+        }
+    }
+    return 0;
+}
 
 WorkspaceScripting::DesktopScriptEngine * ShellCorona::scriptEngine() const
 {
@@ -233,6 +245,20 @@ QString ShellCorona::shell() const
     return d->shell;
 }
 
+static QList<KScreen::Output*> sortOutputs(const QHash<int, KScreen::Output*> &outputs)
+{
+    QList<KScreen::Output*> ret;
+    foreach(KScreen::Output* output, outputs) {
+        if(!output->isEnabled())
+            ;
+        else if(output->isPrimary())
+            ret.prepend(output);
+        else
+            ret.append(output);
+    }
+    return ret;
+}
+
 void ShellCorona::load()
 {
     if (d->shell.isEmpty() ||
@@ -269,16 +295,72 @@ void ShellCorona::load()
         }
     }
 
-    for (QScreen *screen : QGuiApplication::screens()) {
-        screenAdded(screen);
+    d->screenConfiguration = KScreen::Config::current();
+    KScreen::ConfigMonitor::instance()->addConfig(d->screenConfiguration);
+    for (KScreen::Output *output : sortOutputs(d->screenConfiguration->connectedOutputs())) {
+        outputAdded(output);
     }
-    connect(qApp, &QGuiApplication::screenAdded,
-            this, &ShellCorona::screenAdded);
+    connect(d->screenConfiguration, &KScreen::Config::outputAdded,
+            this, &ShellCorona::outputAdded);
+    connect(d->screenConfiguration, &KScreen::Config::primaryOutputChanged,
+            this, &ShellCorona::primaryOutputChanged);
 
     if (!d->waitingPanels.isEmpty()) {
         d->waitingPanelsTimer.start();
     }
 }
+
+void ShellCorona::primaryOutputChanged()
+{
+    KScreen::Config* current = d->screenConfiguration;
+    QScreen* newPrimary = outputToScreen(current->primaryOutput());
+    int i=0;
+    foreach(DesktopView* view, d->views) {
+        if(view->screen() == newPrimary)
+            break;
+        i++;
+    }
+    QScreen* oldPrimary = d->views.first()->screen();
+    qDebug() << "primary changed!" << oldPrimary->name() << newPrimary->name() << i;
+//
+//     //if it was not found, it means that outputAdded hasn't been called yet
+    if (i>=d->views.count() || i==0)
+        return;
+//
+    Q_ASSERT(oldPrimary != newPrimary);
+    Q_ASSERT(d->views[0]->screen() != d->views[i]->screen());
+    Q_ASSERT(d->views[0]->screen() == oldPrimary);
+    Q_ASSERT(d->views[0]->screen() != newPrimary);
+    Q_ASSERT(d->views[0]->geometry() == oldPrimary->geometry());
+    qDebug() << "adapting" << newPrimary->geometry() << d->views[0]->containment()->wallpaper()
+                           << oldPrimary->geometry() << d->views[i]->containment()->wallpaper() << i;
+
+    d->views[0]->setScreen(newPrimary);
+    d->views[i]->setScreen(oldPrimary);
+    screenInvariants();
+
+    QList<Plasma::Containment*> panels;
+    foreach(PanelView* panel, d->panelViews) {
+        if(panel->screen() == oldPrimary)
+            panel->setScreen(newPrimary);
+        else if(panel->screen() == newPrimary)
+            panel->setScreen(oldPrimary);
+    }
+}
+
+void ShellCorona::screenInvariants()
+{
+    QScreen* s = outputToScreen(d->screenConfiguration->primaryOutput());
+    Q_ASSERT(d->views[0]->screen()->name() == s->name());
+    Q_ASSERT(d->views[0]->geometry() == s->geometry());
+
+    QSet<QScreen*> screens;
+    foreach(DesktopView* view, d->views) {
+        Q_ASSERT(!screens.contains(view->screen()));
+        screens.insert(view->screen());
+    }
+}
+
 
 void ShellCorona::unload()
 {
@@ -356,7 +438,7 @@ QRegion ShellCorona::availableScreenRegion(int id) const
 
     if (view) {
         QRegion r = view->geometry();
-        foreach (PanelView *v, d->panelViews.values()) {
+        foreach (PanelView *v, d->panelViews) {
             if (v->containment()->screen() == id && v->visibilityMode() != PanelView::AutoHide) {
                 r -= v->geometry();
             }
@@ -375,7 +457,7 @@ QRect ShellCorona::availableScreenRect(int id) const
 
     QRect r(screenGeometry(id));
 
-    foreach (PanelView *view, d->panelViews.values()) {
+    foreach (PanelView *view, d->panelViews) {
         if (view->containment()->screen() == id && view->visibilityMode() != PanelView::AutoHide) {
             QRect v = view->geometry();
             switch (view->location()) {
@@ -417,11 +499,13 @@ PanelView *ShellCorona::panelView(Plasma::Containment *containment) const
     return d->panelViews.value(containment);
 }
 
-
 ///// SLOTS
 
-void ShellCorona::screenAdded(QScreen *screen)
+void ShellCorona::outputAdded(KScreen::Output* output)
 {
+    QScreen* screen = outputToScreen(output);
+    Q_ASSERT(screen);
+
     //FIXME: QScreen doesn't have any idea of "this qscreen is clone of this other one
     //so this ultra inefficient heuristic has to stay until we have a slightly better api
     foreach (QScreen *s, QGuiApplication::screens()) {
@@ -433,16 +517,14 @@ void ShellCorona::screenAdded(QScreen *screen)
     }
 
     DesktopView *view = new DesktopView(this, screen);
-    connect(screen, &QObject::destroyed, [=](){
-        d->views.removeAll(view);
-        view->containment()->reactToScreenChange();
-        view->deleteLater();
-    });
 
+    //We have to do it in a lambda,
+    connect(screen, &QObject::destroyed, this, [=]() { removeDesktop(view); });
 
     const QString currentActivity = d->activityController->currentActivity();
 
-    if (!d->views.isEmpty() && screen == QGuiApplication::primaryScreen()) {
+    qDebug() << "adding screen" << output->name() << output->isPrimary();
+    if (!d->views.isEmpty() && output->isPrimary()) {
         DesktopView* oldPrimaryView = d->views.first();
         QScreen* oldPrimaryScreen = oldPrimaryView->screen();
 
@@ -462,6 +544,7 @@ void ShellCorona::screenAdded(QScreen *screen)
         d->views.prepend(view);
         view = oldPrimaryView;
     } else {
+        Q_ASSERT(d->views.isEmpty() || !output->isPrimary());
         d->views.append(view);
     }
 
@@ -488,8 +571,30 @@ void ShellCorona::screenAdded(QScreen *screen)
 
     emit availableScreenRectChanged();
     emit availableScreenRegionChanged();
+
+    screenInvariants();
 }
 
+void ShellCorona::removeDesktop(DesktopView* view)
+{
+    int idx = d->views.indexOf(view);
+    DesktopView* lastView = d->views.takeAt(d->views.count()-1);
+    lastView->containment()->reactToScreenChange();
+    lastView->deleteLater();
+
+    for(int i = idx; i<d->views.count()-1; ++i) {
+        d->views[i]->setScreen(d->views[i+1]->screen());
+    }
+
+    screenInvariants();
+}
+
+void ShellCorona::removePanel(Plasma::Containment* cont)
+{
+    d->panelViews[cont]->deleteLater();
+    d->waitingPanels << cont;
+    d->panelViews.remove(cont);
+}
 
 Plasma::Containment* ShellCorona::createContainmentForActivity(const QString& activity, int screenNum)
 {
@@ -517,30 +622,32 @@ void ShellCorona::createWaitingPanels()
 
     foreach (Plasma::Containment *cont, d->waitingPanels) {
         //ignore non existing (yet?) screens
-        if (cont->lastScreen() > (QGuiApplication::screens().size() - 1)) {
+        int requestedScreen = cont->lastScreen();
+        if (requestedScreen < 0)
+            ++requestedScreen;
+
+        if (requestedScreen > (d->views.size() - 1)) {
             stillWaitingPanels << cont;
             continue;
         }
 
         d->panelViews[cont] = new PanelView(cont);
 
-        //keep screen suggestions within bounds of screens we actually have
-        int screen = qBound(0, cont->lastScreen(), QGuiApplication::screens().size() -1);
+        Q_ASSERT(qBound(0, requestedScreen, d->views.size() -1) == requestedScreen);
+        QScreen* screen = d->views[requestedScreen]->screen();
 
-        d->panelViews[cont]->setScreen(QGuiApplication::screens()[screen]);
+        d->panelViews[cont]->setScreen(screen);
         cont->reactToScreenChange();
         connect(cont, &QObject::destroyed,
-                [=](QObject *obj) {
+                [=](QObject* ) {
                     d->panelViews.remove(cont);
                     emit availableScreenRectChanged();
                     emit availableScreenRegionChanged();
                 });
 
-        connect(QGuiApplication::screens()[screen], &QObject::destroyed,
-                [=](QObject *obj) {
-                    d->panelViews[cont]->deleteLater();
-                    d->waitingPanels << cont;
-                    d->panelViews.remove(cont);
+        connect(screen, &QObject::destroyed,
+                [=](QObject*) {
+                    removePanel(cont);
                 });
     }
     d->waitingPanels.clear();
@@ -548,6 +655,8 @@ void ShellCorona::createWaitingPanels()
     emit availableScreenRectChanged();
     emit availableScreenRegionChanged();
 }
+
+
 
 void ShellCorona::handleContainmentAdded(Plasma::Containment* c)
 {
@@ -883,34 +992,34 @@ void ShellCorona::addPanel(const QString &plugin)
 
     d->waitingPanels << panel;
     createWaitingPanels();
-    if (d->panelViews.contains(panel)) {
-        const QPoint cursorPos(QCursor::pos());
-        foreach (QScreen *screen, QGuiApplication::screens()) {
-            if (screen->geometry().contains(cursorPos)) {
-                d->panelViews[panel]->setScreen(screen);
-                break;
-            }
+    Q_ASSERT(d->panelViews.contains(panel));
+    const QPoint cursorPos(QCursor::pos());
+    foreach (QScreen *screen, QGuiApplication::screens()) {
+        if (screen->geometry().contains(cursorPos)) {
+            d->panelViews[panel]->setScreen(screen);
+            break;
         }
     }
 }
 
 int ShellCorona::screenForContainment(const Plasma::Containment *containment) const
 {
-    QScreen *screen = nullptr;
     for (int i = 0; i < d->views.size(); i++) {
         if (d->views[i]->containment() == containment) {
-            screen = d->views[i]->screen();
+            return i;
         }
     }
 
-    if (!screen) {
-        PanelView *view = d->panelViews.value(containment);
-        if (view) {
-            screen = view->screen();
+    PanelView *view = d->panelViews.value(containment);
+    if (view) {
+        QScreen *screen = view->screen();
+        for (int i = 0; i < d->views.size(); i++) {
+            if (d->views[i]->screen() == screen) {
+                return i;
+            }
         }
     }
-
-    return screen ? qApp->screens().indexOf(screen) : -1;
+    return -1;
 }
 
 void ShellCorona::activityOpened()

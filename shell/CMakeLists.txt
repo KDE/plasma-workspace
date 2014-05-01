@@ -87,6 +87,7 @@ target_link_libraries(plasma-shell
  KF5::Activities
  KF5::GlobalAccel
  KF5::DBusAddons
+ KF5::Screen
 )
 if (TARGET KF5::TextEditor)
  target_link_libraries(plasma-shell KF5::TextEditor)
