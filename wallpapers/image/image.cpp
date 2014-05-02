@@ -55,7 +55,9 @@ Image::Image(QObject *parent)
       m_mode(SingleImage),
       m_currentSlide(-1),
       m_model(0),
-      m_dialog(0)
+      m_dialog(0),
+      m_width(0),
+      m_height(0)
 {
     m_wallpaperPackage = Plasma::Package(new WallpaperPackage(this, this));
 
