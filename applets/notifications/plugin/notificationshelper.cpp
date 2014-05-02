@@ -21,9 +21,23 @@
 
 #include <QScreen>
 #include <QGuiApplication>
+#include <qfontmetrics.h>
+#include <QTimer>
+#include <QQuickWindow>
+#include <QQmlEngine>
 #include <QDebug>
 
-#include <QQuickWindow>
+NotificationsHelper::NotificationsHelper(QObject *parent)
+    : QObject(parent)
+{
+    m_offset = QFontMetrics(QGuiApplication::font()).boundingRect("M").height() * 2;
+}
+
+NotificationsHelper::~NotificationsHelper()
+{
+    qDeleteAll(m_availablePopups);
+    qDeleteAll(m_popupsOnScreen);
+}
 
 QRect NotificationsHelper::workAreaForScreen(int screenId)
 {
@@ -37,19 +51,41 @@ void NotificationsHelper::setPlasmoidScreen(int screenId)
     m_plasmoidScreen = screenId;
 }
 
-void NotificationsHelper::positionPopup(QObject *win)
+void NotificationsHelper::addNotificationPopup(QObject *win)
 {
     QQuickWindow *popup = qobject_cast<QQuickWindow*>(win);
-    bool queued = false;
+    m_availablePopups.append(popup);
 
-    if (m_popups.size() == 3) {
-        m_queuedPopups << popup;
-        queued = true;
-    } else {
-        m_popups << popup;
+    // Don't let QML ever delete this component
+    QQmlEngine::setObjectOwnership(win, QQmlEngine::CppOwnership);
+
+    connect(popup, SIGNAL(visibleChanged(bool)),
+            this, SLOT(popupClosed(bool)));
+}
+
+void NotificationsHelper::displayQueuedNotification()
+{
+    if (!m_queue.isEmpty() && !m_availablePopups.isEmpty()) {
+        displayNotification(m_queue.takeFirst());
+    }
+}
+
+void NotificationsHelper::displayNotification(const QVariantMap &notificationData)
+{
+    if (notificationData.isEmpty()) {
+        return;
     }
 
-    QString sourceName = win->property("notificationProperties").toMap().value("source").toString();
+    // All our popups are full, so put it into queue and bail out
+    if (m_availablePopups.isEmpty()) {
+        m_queue.append(notificationData);
+        return;
+    }
+
+    QQuickWindow *popup = m_availablePopups.takeFirst();
+    m_popupsOnScreen << popup;
+
+    QString sourceName = notificationData.value("source").toString();
 
     m_sourceMap.insert(sourceName, popup);
 
@@ -57,17 +93,15 @@ void NotificationsHelper::positionPopup(QObject *win)
     // to avoid looking up the notificationProperties map as above
     popup->setProperty("sourceName", sourceName);
 
-    connect(popup, SIGNAL(visibleChanged(bool)),
-            this, SLOT(popupClosed(bool)));
-
     QRect screenArea = workAreaForScreen(m_plasmoidScreen);
 
-    popup->setX(screenArea.x() + screenArea.width() - popup->width() - 20);
-    popup->setY(screenArea.height() - (m_popups.size() * (popup->height() + 30)));
+    popup->setX(screenArea.x() + screenArea.width() - popup->width() - m_offset);
+    popup->setY(screenArea.height() - (m_popupsOnScreen.size() * (popup->height() + m_offset)));
 
-    if (!queued) {
-        popup->setVisible(true);
-    }
+    // Populate the popup with data, this is the component's own QML method
+    QMetaObject::invokeMethod(popup, "populatePopup", Q_ARG(QVariant, notificationData));
+
+    popup->show();
 }
 
 void NotificationsHelper::closePopup(const QString &sourceName)
@@ -75,7 +109,7 @@ void NotificationsHelper::closePopup(const QString &sourceName)
     QQuickWindow *popup = m_sourceMap.value(sourceName);
 
     if (popup) {
-        popup->close();
+        popup->hide();
     }
 }
 
@@ -84,8 +118,10 @@ void NotificationsHelper::popupClosed(bool visible)
     if (!visible) {
         QQuickWindow *popup = qobject_cast<QQuickWindow*>(sender());
         if (popup) {
-            m_popups.removeOne(popup);
+            // Remove the popup from the active list and return it into the available list
+            m_popupsOnScreen.removeOne(popup);
             m_sourceMap.remove(sender()->property("sourceName").toString());
+            m_availablePopups.append(popup);
         }
         repositionPopups();
     }
@@ -94,17 +130,15 @@ void NotificationsHelper::popupClosed(bool visible)
 
 void NotificationsHelper::repositionPopups()
 {
-    if (m_popups.isEmpty()) {
-        return;
+    for (int i = 0; i < m_popupsOnScreen.size(); i++) {
+        m_popupsOnScreen[i]->setProperty("y", workAreaForScreen(m_plasmoidScreen).height() - ((i + 1) * (m_popupsOnScreen[i]->height() + m_offset)));
     }
 
-    for (int i = 0; i < m_popups.size(); i++) {
-        m_popups[i]->setProperty("y", workAreaForScreen(m_plasmoidScreen).height() - ((i + 1) * (m_popups[i]->height() + 30)));
+    if (!m_queue.isEmpty()) {
+        // Delay this a bit so the animations above^ have time to finish; looks a lot better
+        QTimer::singleShot(300, this, SLOT(displayQueuedNotification()));
     }
 
-    if (!m_queuedPopups.isEmpty()) {
-        positionPopup(m_queuedPopups.takeFirst());
-    }
 }
 
 #include "notificationshelper.moc"

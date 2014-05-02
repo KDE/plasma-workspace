@@ -44,7 +44,10 @@ PlasmaCore.Dialog {
         bodyLabel.text = notification.body
         appIconItem.icon = notification.appIcon
         actionsRepeater.model = notification.actions
-        imageItem.image = notification.image
+
+        if (notification.image != undefined) {
+            imageItem.image = notification.image
+        }
     }
 
     Behavior on y {
@@ -166,7 +169,7 @@ PlasmaCore.Dialog {
                 }
                 onClicked: {
                     closeNotification(notificationProperties.source)
-                    notificationPopup.close()
+                    notificationPopup.hide()
                 }
             }
 
@@ -189,7 +192,7 @@ PlasmaCore.Dialog {
                         onClicked: {
                             executeAction(notificationProperties.source, modelData.id)
                             actionsColumn.visible = false
-                            notificationPopup.close()
+                            notificationPopup.hide()
                         }
                     }
                 }
@@ -203,7 +206,7 @@ PlasmaCore.Dialog {
                 if (!notificationProperties.isPersistent) {
                     closeNotification(notificationProperties.source)
                 }
-                notificationPopup.close()
+                notificationPopup.hide()
             }
         }
 

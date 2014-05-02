@@ -22,6 +22,7 @@
 #include <QObject>
 #include <QRect>
 #include <QHash>
+#include <QVariantMap>
 
 class QQuickWindow;
 
@@ -31,22 +32,34 @@ class NotificationsHelper : public QObject
     Q_PROPERTY(int plasmoidScreen WRITE setPlasmoidScreen)
 
 public:
+    NotificationsHelper(QObject *parent = 0);
+    ~NotificationsHelper();
+    Q_INVOKABLE void addNotificationPopup(QObject *win);
     Q_INVOKABLE QRect workAreaForScreen(int screenId);
-    Q_INVOKABLE void positionPopup(QObject *win);
     Q_INVOKABLE void closePopup(const QString &sourceName);
+    /**
+     * Fills the popup with data from notificationData
+     * and puts the popup on proper place on screen.
+     * If there's no space on screen for the notification,
+     * it's queued and displayed as soon as there's space for it
+     */
+    Q_INVOKABLE void displayNotification(const QVariantMap &notificationData);
 
     void setPlasmoidScreen(int screenId);
 
 private Q_SLOTS:
     void popupClosed(bool visible);
+    void displayQueuedNotification();
 
 private:
     void repositionPopups();
 
-    QList<QQuickWindow*> m_popups;
-    QList<QQuickWindow*> m_queuedPopups;
+    QList<QQuickWindow*> m_popupsOnScreen;
+    QList<QQuickWindow*> m_availablePopups;
     QHash<QString, QQuickWindow*> m_sourceMap;
+    QList<QVariantMap> m_queue;
     int m_plasmoidScreen;
+    int m_offset;
 };
 
 #endif // NOTIFICATIONSHELPER_H
