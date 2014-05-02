@@ -83,7 +83,7 @@ PlasmaCore.Dialog {
                 bottom: parent.bottom
                 left: parent.left
                 right: parent.right
-                margins: units.largeSpacing / 2
+                margins: Math.floor(units.largeSpacing / 2)
             }
 
             visible: root.showingProgress
@@ -97,7 +97,7 @@ PlasmaCore.Dialog {
                 bottom: parent.bottom
                 left: parent.left
                 right: parent.right
-                margins: units.largeSpacing / 2
+                margins: Math.floor(units.largeSpacing / 2)
             }
 
             visible: !root.showingProgress
