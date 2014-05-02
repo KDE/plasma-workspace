@@ -26,6 +26,7 @@
 #include <QMouseEvent>
 #include <QTimer>
 #include <QStandardPaths>
+#include <QSurfaceFormat>
 
 SplashWindow::SplashWindow(bool testing, bool window)
     : QQuickView(),
@@ -33,6 +34,15 @@ SplashWindow::SplashWindow(bool testing, bool window)
       m_testing(testing),
       m_window(window)
 {
+    QSurfaceFormat format;
+    format.setAlphaBufferSize(8);
+    format.setRenderableType(QSurfaceFormat::OpenGL);
+    setFormat(format);
+
+    setColor(Qt::transparent);
+    setDefaultAlphaBuffer(true);
+    setClearBeforeRendering(true);
+    setResizeMode(QQuickView::SizeRootObjectToView);
 
     if (!m_window) {
         setFlags(Qt::FramelessWindowHint | Qt::WindowStaysOnTopHint);
@@ -46,12 +56,6 @@ SplashWindow::SplashWindow(bool testing, bool window)
         setWindowState(Qt::WindowFullScreen);
     }
 
-    QString themePath = QStandardPaths::locate(QStandardPaths::GenericDataLocation,
-                                               QStringLiteral("ksplash/Themes/") + QApplication::arguments().at(1),
-                                               QStandardPaths::LocateDirectory);
-
-    rootContext()->setContextProperty(QStringLiteral("screenSize"), size());
-    setSource(QUrl(themePath + QStringLiteral("/main.qml")));
     //be sure it will be eventually closed
     //FIXME: should never be stuck
     QTimer::singleShot(30000, this, SLOT(close()));
@@ -62,12 +66,6 @@ void SplashWindow::setStage(int stage)
     m_stage = stage;
 
     rootObject()->setProperty("stage", stage);
-}
-
-void SplashWindow::resizeEvent(QResizeEvent *event)
-{
-    Q_UNUSED(event)
-    rootContext()->setContextProperty(QStringLiteral("screenSize"), size());
 }
 
 void SplashWindow::keyPressEvent(QKeyEvent *event)
@@ -83,5 +81,19 @@ void SplashWindow::mousePressEvent(QMouseEvent *event)
     QQuickView::mousePressEvent(event);
     if (m_testing && !event->isAccepted()) {
         close();
+    }
+}
+
+void SplashWindow::setGeometry(const QRect& rect)
+{
+    bool oldGeometryEmpty = geometry().isNull();
+    QQuickView::setGeometry(rect);
+
+    if (oldGeometryEmpty) {
+        QString themePath = QStandardPaths::locate(QStandardPaths::GenericDataLocation,
+                                                   QStringLiteral("ksplash/Themes/") + QApplication::arguments().at(1),
+                                                   QStandardPaths::LocateDirectory);
+
+        setSource(QUrl(themePath + QStringLiteral("/main.qml")));
     }
 }

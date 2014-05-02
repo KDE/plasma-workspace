@@ -68,7 +68,7 @@ mkdir -p $configDir
 cat >$configDir/startupconfigkeys <<EOF
 kcminputrc Mouse cursorTheme 'breeze'
 kcminputrc Mouse cursorSize ''
-ksplashrc KSplash Theme Classic
+ksplashrc KSplash Theme Breeze
 ksplashrc KSplash Engine KSplashQML
 kcmfonts General forceFontDPI 0
 kdeglobals Locale Language '' # trigger requesting languages from KLocale

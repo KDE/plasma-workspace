@@ -32,9 +32,9 @@ public:
     SplashWindow(bool testing, bool window);
 
     void setStage(int stage);
+    virtual void setGeometry(const QRect &rect);
 
 protected:
-    virtual void resizeEvent (QResizeEvent *event);
     virtual void keyPressEvent(QKeyEvent *event);
     virtual void mousePressEvent(QMouseEvent *event);
 
