@@ -145,7 +145,7 @@ Item {
             left: parent.left
             leftMargin: root.baseSize * 3 + units.largeSpacing
             top: root.expandedTask != null ? snHeadingExpanded.bottom : snHeading.bottom
-            topMargin: units.largeSpacing / 2
+            topMargin: Math.round(units.largeSpacing / 2)
             bottom: parent.bottom
             right: parent.right
         }
