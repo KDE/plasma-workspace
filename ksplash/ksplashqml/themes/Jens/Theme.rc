@@ -1,9 +1,0 @@
-[KSplash Theme: Jens]
-Name = Jen's splash screen
-Description = Swoosh
-Version = 1.0
-Author = David Edmundson <david edmundson at kde.org>
-Homepage = http://www.kde.org
-
-# Theme behaviour settings.
-Engine = KSplashQML
