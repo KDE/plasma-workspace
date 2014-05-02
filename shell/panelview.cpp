@@ -457,14 +457,14 @@ void PanelView::positionPanel()
         setMaximumSize(QSize(thickness(), m_maxLength));
 
         emit thicknessChanged();
-        emit length();
+        emit lengthChanged();
     } else {
         setGeometry(QRect(position, QSize(length(), thickness())));
         setMinimumSize(QSize(m_minLength, thickness()));
         setMaximumSize(QSize(m_maxLength, thickness()));
 
         emit thicknessChanged();
-        emit length();
+        emit lengthChanged();
     }
 }
 
