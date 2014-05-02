@@ -1,8 +1,10 @@
 [Desktop Entry]
 Name=Command Line
+Name[nl]=Commandoregel
 Name[uk]=Командний рядок
 Name[x-test]=xxCommand Linexx
 Comment=Executes shell commands
+Comment[nl]=Voert shellcommando's uit
 Comment[uk]=Виконує команди оболонки
 Comment[x-test]=xxExecutes shell commandsxx
 X-KDE-ServiceTypes=Plasma/Runner

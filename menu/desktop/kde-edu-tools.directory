@@ -3,5 +3,6 @@ Encoding=UTF-8
 Icon=applications-other
 Type=Directory
 Name=Teaching Tools
+Name[nl]=Lesprogramma's
 Name[uk]=Навчальні засоби
 Name[x-test]=xxTeaching Toolsxx

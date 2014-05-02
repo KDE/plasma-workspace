@@ -1,8 +1,10 @@
 [Desktop Entry]
 Name=img.susepaste.org
+Name[nl]=img.susepaste.org
 Name[uk]=img.susepaste.org
 Name[x-test]=xximg.susepaste.orgxx
 Comment=Allows images to be shared using the susepaste.org service
+Comment[nl]=Staat het delen van afbeeldingen toe met gebruik van de service susepaste.org
 Comment[uk]=Уможливлює оприлюднення зображень за допомогою служби susepaste.org
 Comment[x-test]=xxAllows images to be shared using the susepaste.org servicexx
 Type=Service

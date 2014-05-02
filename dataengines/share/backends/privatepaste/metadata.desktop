@@ -1,8 +1,10 @@
 [Desktop Entry]
 Name=privatepaste.com
+Name[nl]=privatepaste.com
 Name[uk]=privatepaste.com
 Name[x-test]=xxprivatepaste.comxx
 Comment=Paste text with the PrivatePaste.com service
+Comment[nl]=Plak tekst met de service PrivatePaste.com
 Comment[uk]=Вставка фрагментів тексту за допомогою служби PrivatePaste.com
 Comment[x-test]=xxPaste text with the PrivatePaste.com servicexx
 Type=Service

@@ -1,8 +1,10 @@
 [Misc]
 Name=HighColor Classic
+Name[nl]=Hoge kleur klassiek
 Name[uk]=Класичний (64K кольорів)
 Name[x-test]=xxHighColor Classicxx
 Comment=Highcolor version of the classic style
+Comment[nl]=Hoge-kleur-versie van de klassieke stijl
 Comment[uk]=Версія класичного стилю для 64000 кольорів та більше
 Comment[x-test]=xxHighcolor version of the classic stylexx
 [KDE]

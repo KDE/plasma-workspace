@@ -1,8 +1,10 @@
 [Desktop Entry]
 Name=Analog Clock
+Name[nl]=Analoge klok
 Name[uk]=Аналоговий годинник
 Name[x-test]=xxAnalog Clockxx
 Comment=A clock with hands
+Comment[nl]=Een klok met wijzers
 Comment[uk]=Годинник зі стрілками
 Comment[x-test]=xxA clock with handsxx
 

@@ -2,6 +2,7 @@
 Encoding=UTF-8
 Type=Directory
 Name=Board Games
+Name[nl]=Bordspellen
 Name[uk]=Ігри на дошці
 Name[x-test]=xxBoard Gamesxx
 Icon=applications-games-board

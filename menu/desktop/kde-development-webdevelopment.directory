@@ -2,6 +2,7 @@
 Encoding=UTF-8
 Type=Directory
 Name=Web Development
+Name[nl]=Webontwikkeling
 Name[uk]=Розробка вебсторінок
 Name[x-test]=xxWeb Developmentxx
 Icon=applications-development-web
@@ -10,6 +11,7 @@ Icon=applications-development-web
 Encoding=UTF-8
 Type=Directory
 Name=Web Development
+Name[nl]=Webontwikkeling
 Name[uk]=Розробка вебсторінок
 Name[x-test]=xxWeb Developmentxx
 Icon=applications-development-web

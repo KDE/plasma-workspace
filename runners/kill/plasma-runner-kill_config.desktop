@@ -7,5 +7,6 @@ X-KDE-ParentComponents=Kill Runner
 X-KDE-PluginKeyword=kcm_krunner_kill
 
 Name=Kill Applications
+Name[nl]=Programma's afbreken
 Name[uk]=Припинення роботи програм
 Name[x-test]=xxKill Applicationsxx

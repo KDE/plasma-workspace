@@ -1,8 +1,10 @@
 [Desktop Entry]
 Name=Weather
+Name[nl]=Het weer
 Name[uk]=Погода
 Name[x-test]=xxWeatherxx
 Comment=Weather data from multiple online sources
+Comment[nl]=Weergegevens voor meervoudige online bronnen
 Comment[uk]=Дані щодо погоди з декількох мережевих джерел
 Comment[x-test]=xxWeather data from multiple online sourcesxx
 X-KDE-ServiceTypes=Plasma/DataEngine

@@ -1,10 +1,12 @@
 [Desktop Entry]
 Encoding=UTF-8
 Name=Hard Disk I/O Monitor
+Name[nl]=Volgt de activiteit van de harde schijf
 Name[uk]=Монітор роботи жорсткого диска
 Name[x-test]=xxHard Disk I/O Monitorxx
 
 Comment=An applet that monitors hard disk throughput and input/output
+Comment[nl]=Een applet die de activiteit van de harde schijf volgt
 Comment[uk]=Аплет, який стежить за даними, які записуються на жорсткий диск та читаються з жорсткого диска
 Comment[x-test]=xxAn applet that monitors hard disk throughput and input/outputxx
 

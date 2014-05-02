@@ -2,6 +2,7 @@
 Encoding=UTF-8
 Type=Directory
 Name=Settings
+Name[nl]=Instellingen
 Name[uk]=Параметри
 Name[x-test]=xxSettingsxx
 Icon=preferences-system

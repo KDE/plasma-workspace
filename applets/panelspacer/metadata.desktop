@@ -1,8 +1,10 @@
 [Desktop Entry]
 Name=Panel Spacer
+Name[nl]=Paneelscheider
 Name[uk]=Розпірка панелі
 Name[x-test]=xxPanel Spacerxx
 Comment=Reserve empty spaces within the panel.
+Comment[nl]=Reserveer lege ruimte in het paneel.
 Comment[uk]=Створює прогалини на панелі.
 Comment[x-test]=xxReserve empty spaces within the panel.xx
 

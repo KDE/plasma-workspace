@@ -2,6 +2,7 @@
 Encoding=UTF-8
 Type=Directory
 Name=Terminal Applications
+Name[nl]=Terminal-toepassingen
 Name[uk]=Термінальні програми
 Name[x-test]=xxTerminal Applicationsxx
 Icon=utilities-terminal

@@ -1,8 +1,10 @@
 [Misc]
 Name=GTK+ Style
+Name[nl]=GTK+ Stijl
 Name[uk]=Стиль GTK+
 Name[x-test]=xxGTK+ Stylexx
 Comment=Style that uses the GTK+ theming engine
+Comment[nl]=Stijl die de GTK+ thema-engine gebruikt
 Comment[uk]=Стиль, що використовує рушій тем GTK+
 Comment[x-test]=xxStyle that uses the GTK+ theming enginexx
 [KDE]

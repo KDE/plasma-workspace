@@ -1,8 +1,10 @@
 [Desktop Entry]
 Name=Activity Bar
+Name[nl]=Activiteitsbalk
 Name[uk]=Панель дій
 Name[x-test]=xxActivity Barxx
 Comment=Tab bar to switch activities
+Comment[nl]=Tabbalk om van activiteit te wisselen
 Comment[uk]=Панель з вкладками для перемикання дій
 Comment[x-test]=xxTab bar to switch activitiesxx
 Type=Service

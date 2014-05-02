@@ -1,9 +1,11 @@
 [Desktop Entry]
 Encoding=UTF-8
 Name=Default
+Name[nl]=Standaard
 Name[uk]=Типова
 Name[x-test]=xxDefaultxx
 Comment=Default Plasma Desktop theme
+Comment[nl]=Standaard thema van het Plasma bureaublad
 Comment[uk]=Типова тема стільниці Плазми
 Comment[x-test]=xxDefault Plasma Desktop themexx
 Type=Service

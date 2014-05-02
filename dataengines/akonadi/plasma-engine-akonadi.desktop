@@ -1,8 +1,10 @@
 [Desktop Entry]
 Name=Akonadi
+Name[nl]=Akonadi
 Name[uk]=Akonadi
 Name[x-test]=xxAkonadixx
 Comment=Akonadi PIM data engine
+Comment[nl]=Akonadi PIM gegevensengine
 Comment[uk]=Рушій даних Akonadi PIM
 Comment[x-test]=xxAkonadi PIM data enginexx
 X-KDE-ServiceTypes=Plasma/DataEngine

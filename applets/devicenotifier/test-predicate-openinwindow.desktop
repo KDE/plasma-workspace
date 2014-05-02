@@ -5,6 +5,7 @@ Actions=open;
 
 [Desktop Action open]
 Name=Open with File Manager
+Name[nl]=Openen met bestandsbeheerder
 Name[uk]=Відкрити за допомогою менеджера файлів
 Name[x-test]=xxOpen with File Managerxx
 Exec=kioclient exec %f

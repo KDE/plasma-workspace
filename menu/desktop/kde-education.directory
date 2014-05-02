@@ -2,6 +2,7 @@
 Encoding=UTF-8
 Type=Directory
 Name=Education
+Name[nl]=Onderwijs
 Name[uk]=Освіта
 Name[x-test]=xxEducationxx
 Icon=applications-education

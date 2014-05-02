@@ -2,6 +2,7 @@
 Encoding=UTF-8
 Type=Directory
 Name=Toys
+Name[nl]=Speelgoed
 Name[uk]=Іграшки
 Name[x-test]=xxToysxx
 Icon=applications-toys

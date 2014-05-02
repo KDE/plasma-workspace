@@ -1,8 +1,10 @@
 [Desktop Entry]
 Name=Hotplug Events
+Name[nl]=Hotplug-gebeurtenissen
 Name[uk]=Події гарячого підключення
 Name[x-test]=xxHotplug Eventsxx
 Comment=Tracks hot-pluggable devices as they appear and disappear.
+Comment[nl]=Volgt inplugbare apparaten als deze verschijnen en verdwijnen.
 Comment[uk]=Стежить за з’єднанням і від’єднанням портативних пристроїв.
 Comment[x-test]=xxTracks hot-pluggable devices as they appear and disappear.xx
 X-KDE-ServiceTypes=Plasma/DataEngine

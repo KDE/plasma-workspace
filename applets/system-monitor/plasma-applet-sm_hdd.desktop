@@ -1,9 +1,11 @@
 [Desktop Entry]
 Encoding=UTF-8
 Name=Hard Disk Space Usage
+Name[nl]=Ruimtegebruik van de harde schijf
 Name[uk]=Використання місця на диску
 Name[x-test]=xxHard Disk Space Usagexx
 Comment=An applet that monitors hard disk space usage and percentage
+Comment[nl]=Een applet die het ruimtegebruik van de harde schijf volgt
 Comment[uk]=Аплет, який стежить за використанням місця на диску
 Comment[x-test]=xxAn applet that monitors hard disk space usage and percentagexx
 Type=Service

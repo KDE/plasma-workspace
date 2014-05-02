@@ -1,8 +1,10 @@
 [Desktop Entry]
 Name=Activities Engine
+Name[nl]=Activiteiten-engine
 Name[uk]=Рушій просторів дій
 Name[x-test]=xxActivities Enginexx
 Comment=Information on Plasma Activities
+Comment[nl]=Informatie over Plasma activiteiten
 Comment[uk]=Інформація про простори дій Плазми
 Comment[x-test]=xxInformation on Plasma Activitiesxx
 Type=Service

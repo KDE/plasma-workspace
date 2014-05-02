@@ -1,10 +1,12 @@
 [Desktop Entry]
 Name=Windowed widgets
+Name[nl]=Widgets weergegeven in vensters
 Name[uk]=Віджети-вікна
 Name[x-test]=xxWindowed widgetsxx
 
 
 Comment=Find Plasma widgets that can be run as standalone windows
+Comment[nl]=Zoek Plasma widgets die als zelfstandige vensters kunnen draaien
 Comment[uk]=Пошук віджетів Плазми, які можна запускати у окремих вікнах
 Comment[x-test]=xxFind Plasma widgets that can be run as standalone windowsxx
 

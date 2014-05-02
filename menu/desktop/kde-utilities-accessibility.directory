@@ -2,9 +2,11 @@
 Encoding=UTF-8
 Type=Directory
 Name=Accessibility
+Name[nl]=Toegankelijkheid
 Name[uk]=Доступність
 Name[x-test]=xxAccessibilityxx
 Icon=preferences-desktop-accessibility
 Comment=Accessibility
+Comment[nl]=Toegankelijkheid
 Comment[uk]=Доступність
 Comment[x-test]=xxAccessibilityxx

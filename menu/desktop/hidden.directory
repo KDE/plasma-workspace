@@ -2,6 +2,7 @@
 Encoding=UTF-8
 Type=Directory
 Name=Internal Services
+Name[nl]=Interne diensten
 Name[uk]=Внутрішні служби
 Name[x-test]=xxInternal Servicesxx
 NoDisplay=true

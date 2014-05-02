@@ -1,9 +1,11 @@
 [Desktop Entry]
 Encoding=UTF-8
 Name=Web Browser
+Name[nl]=Webbrowser
 Name[uk]=Переглядач інтернету
 Name[x-test]=xxWeb Browserxx
 Comment=A simple web browser
+Comment[nl]=Eenvoudige webbrowser
 Comment[uk]=Простий переглядач інтернету
 Comment[x-test]=xxA simple web browserxx
 Type=Service

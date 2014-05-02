@@ -1,8 +1,10 @@
 [Desktop Entry]
 Name=Desktop Sessions
+Name[nl]=Desktopsessies
 Name[uk]=Стільничні сеанси
 Name[x-test]=xxDesktop Sessionsxx
 Comment=Fast user switching
+Comment[nl]=Snel van gebruiker wisselen
 Comment[uk]=Швидке перемикання користувачів
 Comment[x-test]=xxFast user switchingxx
 X-KDE-ServiceTypes=Plasma/Runner

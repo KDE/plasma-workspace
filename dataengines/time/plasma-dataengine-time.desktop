@@ -1,8 +1,10 @@
 [Desktop Entry]
 Name=Date and Time
+Name[nl]=Datum en tijd
 Name[uk]=Дата і час
 Name[x-test]=xxDate and Timexx
 Comment=Date and time by timezone
+Comment[nl]=Datum en tijd per tijdzone
 Comment[uk]=Дата і час за часовими поясами
 Comment[x-test]=xxDate and time by timezonexx
 Type=Service

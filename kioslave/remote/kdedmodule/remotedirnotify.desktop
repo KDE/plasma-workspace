@@ -1,9 +1,11 @@
 [Desktop Entry]
 Type=Service
 Name=Remote URL Change Notifier
+Name[nl]=Notificatie van wijziging in URL-adres op afstand
 Name[uk]=Сповіщення про зміну віддаленої адреси (URL)
 Name[x-test]=xxRemote URL Change Notifierxx
 Comment=Provides change notification for network folders
+Comment[nl]=Levert notificatie voor wijzigingen in netwerkmappen
 Comment[uk]=Сповіщення про зміну стану мережевих тек
 Comment[x-test]=xxProvides change notification for network foldersxx
 X-KDE-ServiceTypes=KDEDModule

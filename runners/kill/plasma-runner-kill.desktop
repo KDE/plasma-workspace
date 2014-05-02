@@ -1,8 +1,10 @@
 [Desktop Entry]
 Name=Terminate Applications
+Name[nl]=Toepassingen afsluiten
 Name[uk]=Переривання програм
 Name[x-test]=xxTerminate Applicationsxx
 Comment=Stop applications that are currently running
+Comment[nl]=Beëindig toepassingen die momenteel draaien
 Comment[uk]=Завершує роботу запущених програм
 Comment[x-test]=xxStop applications that are currently runningxx
 Icon=application-exit

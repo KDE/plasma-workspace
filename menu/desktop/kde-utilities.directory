@@ -2,9 +2,11 @@
 Encoding=UTF-8
 Type=Directory
 Name=Utilities
+Name[nl]=Hulpmiddelen
 Name[uk]=Утиліти
 Name[x-test]=xxUtilitiesxx
 Icon=applications-utilities
 Comment=Utilities
+Comment[nl]=Hulpmiddelen
 Comment[uk]=Утиліти
 Comment[x-test]=xxUtilitiesxx

@@ -1,8 +1,10 @@
 [Desktop Entry]
 Name=Locations
+Name[nl]=Locaties
 Name[uk]=Адреси
 Name[x-test]=xxLocationsxx
 Comment=File and URL opener
+Comment[nl]=Openen van bestanden en URL-adressen
 Comment[uk]=Відкривання файлів і адрес URL
 Comment[x-test]=xxFile and URL openerxx
 X-KDE-ServiceTypes=Plasma/Runner

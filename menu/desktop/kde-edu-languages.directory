@@ -3,5 +3,6 @@ Encoding=UTF-8
 Icon=applications-education-language
 Type=Directory
 Name=Languages
+Name[nl]=Talen
 Name[uk]=Мови
 Name[x-test]=xxLanguagesxx

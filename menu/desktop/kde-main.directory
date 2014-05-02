@@ -3,5 +3,6 @@ Encoding=UTF-8
 Type=Directory
 Icon=applications-other
 Name=KDE Menu
+Name[nl]=KDE-menu
 Name[uk]=Меню KDE
 Name[x-test]=xxKDE Menuxx

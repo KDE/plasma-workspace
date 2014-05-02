@@ -1,9 +1,11 @@
 [Desktop Entry]
 Encoding=UTF-8
 Name=Hardware Info
+Name[nl]=Hardware-informatie
 Name[uk]=Відомості про обладнання
 Name[x-test]=xxHardware Infoxx
 Comment=Show hardware info
+Comment[nl]=Geeft informatie over uw hardware
 Comment[uk]=Показати інформацію про обладнання
 Comment[x-test]=xxShow hardware infoxx
 Type=Service

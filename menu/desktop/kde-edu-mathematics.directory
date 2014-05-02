@@ -3,5 +3,6 @@ Encoding=UTF-8
 Type=Directory
 Icon=applications-education-mathematics
 Name=Mathematics
+Name[nl]=Wiskunde
 Name[uk]=Математика
 Name[x-test]=xxMathematicsxx

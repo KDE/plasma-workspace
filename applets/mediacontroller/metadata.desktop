@@ -1,8 +1,10 @@
 [Desktop Entry]
 Name=Media Player
+Name[nl]=Mediaspeler
 Name[uk]=Програвач
 Name[x-test]=xxMedia Playerxx
 Comment=Media Player Controls
+Comment[nl]=Besturing van mediaspeler
 Comment[uk]=Керування мультимедійним програвачем
 Comment[x-test]=xxMedia Player Controlsxx
 Encoding=UTF-8

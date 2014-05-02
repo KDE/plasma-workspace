@@ -1,8 +1,10 @@
 [Desktop Entry]
 Name=wetter.com
+Name[nl]=wetter.com
 Name[uk]=wetter.com
 Name[x-test]=xxwetter.comxx
 Comment=Weather forecast by wetter.com
+Comment[nl]=Weersvoorspelling door wetter.com
 Comment[uk]=Прогноз погоди з wetter.com
 Comment[x-test]=xxWeather forecast by wetter.comxx
 X-KDE-ServiceTypes=Plasma/DataEngine

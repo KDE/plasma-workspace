@@ -1,9 +1,11 @@
 [Desktop Entry]
 # ctxt: plasma data engine
 Name=Power Management
+Name[nl]=Energiebeheer
 Name[uk]=Керування живленням
 Name[x-test]=xxPower Managementxx
 Comment=Battery, AC, sleep and PowerDevil information.
+Comment[nl]=Accu-, stroomvoorziening-, slaapstand- en PowerDevil-informatie.
 Comment[uk]=Акумулятор, мережеве живлення, відомості щодо присипляння і PowerDevil.
 Comment[x-test]=xxBattery, AC, sleep and PowerDevil information.xx
 X-KDE-ServiceTypes=Plasma/DataEngine

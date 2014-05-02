@@ -1,9 +1,11 @@
 [Desktop Entry]
 Encoding=UTF-8
 Name=Contour
+Name[nl]=Contour
 Name[uk]=Контур
 Name[x-test]=xxContourxx
 Comment=Plasma Active theme
+Comment[nl]=Thema Plasma Active
 Comment[uk]=Тема портативної Плазми
 Comment[x-test]=xxPlasma Active themexx
 Type=Service

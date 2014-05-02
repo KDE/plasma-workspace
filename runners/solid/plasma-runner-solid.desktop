@@ -1,9 +1,11 @@
 [Desktop Entry]
 # ctxt: plasma runner
 Name=Devices
+Name[nl]=Apparaten
 Name[uk]=Пристрої
 Name[x-test]=xxDevicesxx
 Comment=Manage removable devices
+Comment[nl]=Verwijderbare apparaten beheren
 Comment[uk]=Керування портативними пристроями
 Comment[x-test]=xxManage removable devicesxx
 X-KDE-ServiceTypes=Plasma/Runner

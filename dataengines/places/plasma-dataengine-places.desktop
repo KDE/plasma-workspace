@@ -1,8 +1,10 @@
 [Desktop Entry]
 Name=Places
+Name[nl]=Locaties
 Name[uk]=Місця
 Name[x-test]=xxPlacesxx
 Comment=Places, as seen in the file manager and in file dialogs.
+Comment[nl]=Plaatsen, zoals deze gezien worden in de bestandsbeheerder en in bestandsdialogen.
 Comment[uk]=Місця, так, як їх показано у менеджері файлів і діалогових вікнах.
 Comment[x-test]=xxPlaces, as seen in the file manager and in file dialogs.xx
 Type=Service

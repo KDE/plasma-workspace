@@ -1,9 +1,11 @@
 [Desktop Entry]
 Type=Service
 Name=Status Notifier Manager
+Name[nl]=Statusmeldingenbeheerder
 Name[uk]=Керування сповіщенням про стан
 Name[x-test]=xxStatus Notifier Managerxx
 Comment=Manages services that provide status notifier user interfaces
+Comment[nl]=Beheert services die statusmeldingen leveren aan gebruikersinterfaces
 Comment[uk]=Керує службами інтерфейсів користувача для сповіщення про стан
 Comment[x-test]=xxManages services that provide status notifier user interfacesxx
 

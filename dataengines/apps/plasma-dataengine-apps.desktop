@@ -1,8 +1,10 @@
 [Desktop Entry]
 Name=Application Information
+Name[nl]=Programmainformatie
 Name[uk]=Відомості щодо програм
 Name[x-test]=xxApplication Informationxx
 Comment=Information and launching of all applications in the app menu.
+Comment[nl]=Informatie en starten van alle programma's in het progmenu.
 Comment[uk]=Відомості і запуск всіх програма з меню програм.
 Comment[x-test]=xxInformation and launching of all applications in the app menu.xx
 Type=Service

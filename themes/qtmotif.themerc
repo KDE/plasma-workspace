@@ -1,8 +1,10 @@
 [Misc]
 Name=Motif
+Name[nl]=Motif
 Name[uk]=Motif
 Name[x-test]=xxMotifxx
 Comment=Built-in unthemed Motif style
+Comment[nl]=Ingebouwde themaloze Motif-stijl
 Comment[uk]=Вбудований стиль Motif без теми
 Comment[x-test]=xxBuilt-in unthemed Motif stylexx
 [KDE]

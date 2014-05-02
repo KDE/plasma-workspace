@@ -1,5 +1,6 @@
 [General]
 Name=dbx
+Name[nl]=dbx
 Name[uk]=dbx
 Name[x-test]=xxdbxxx
 TryExec=dbx

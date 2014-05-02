@@ -1,9 +1,11 @@
 [Desktop Entry]
 Encoding=UTF-8
 Name=Networking
+Name[nl]=Netwerken
 Name[uk]=Робота у мережі
 Name[x-test]=xxNetworkingxx
 Comment=Network interface information
+Comment[nl]=Netwerkinterface-informatie
 Comment[uk]=Інформація щодо інтерфейсів мережі
 Comment[x-test]=xxNetwork interface informationxx
 ServiceTypes=Plasma/DataEngine

@@ -2,6 +2,7 @@
 Encoding=UTF-8
 Type=Directory
 Name=Tactics & Strategy
+Name[nl]=Tactiek en Strategie
 Name[uk]=Тактика та стратегія
 Name[x-test]=xxTactics & Strategyxx
 Icon=applications-games-strategy

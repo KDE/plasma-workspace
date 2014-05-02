@@ -1,9 +1,11 @@
 [Desktop Entry]
 Encoding=UTF-8
 Name=Geolocation
+Name[nl]=Geolocatie
 Name[uk]=Геопозиціювання
 Name[x-test]=xxGeolocationxx
 Comment=Geolocation Data Engine
+Comment[nl]=Geolocatie gegevensengine
 Comment[uk]=Рушій даних геопозиціювання
 Comment[x-test]=xxGeolocation Data Enginexx
 ServiceTypes=Plasma/DataEngine

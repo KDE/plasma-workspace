@@ -1,5 +1,6 @@
 [General]
 Name=kdbgwin
+Name[nl]=kdbgwin
 Name[uk]=kdbgwin
 Name[x-test]=xxkdbgwinxx
 TryExec=kdbgwin

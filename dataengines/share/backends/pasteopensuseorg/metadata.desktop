@@ -1,8 +1,10 @@
 [Desktop Entry]
 Name=paste.opensuse.org
+Name[nl]=paste.opensuse.org
 Name[uk]=paste.opensuse.org
 Name[x-test]=xxpaste.opensuse.orgxx
 Comment=Paste text with openSUSE
+Comment[nl]=Plak tekst met openSUSE
 Comment[uk]=Вставити фрагмент тексту з openSUSE
 Comment[x-test]=xxPaste text with openSUSExx
 Type=Service

@@ -1,8 +1,10 @@
 [Desktop Entry]
 Name=Standard Menu
+Name[nl]=Standaardmenu
 Name[uk]=Стандартне меню
 Name[x-test]=xxStandard Menuxx
 Comment=The menu that normally shows on right-click
+Comment[nl]=Het menu dat normaal verschijnt bij rechtsklikken
 Comment[uk]=Меню, яке буде показано у відповідь на клацання правою кнопкою миші
 Comment[x-test]=xxThe menu that normally shows on right-clickxx
 Type=Service

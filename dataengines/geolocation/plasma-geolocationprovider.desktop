@@ -2,6 +2,7 @@
 Type=ServiceType
 X-KDE-ServiceType=Plasma/GeolocationProvider
 Comment=Plasma Geolocation Provider
+Comment[nl]=Plasma Geolocatieleverancier
 Comment[uk]=Інструмент геопозиціювання Плазми
 Comment[x-test]=xxPlasma Geolocation Providerxx
 

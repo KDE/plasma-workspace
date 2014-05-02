@@ -1,8 +1,10 @@
 [Desktop Entry]
 Name=Debian Weather Service
+Name[nl]=Weerdienst van Debian
 Name[uk]=Служба погоди Debian
 Name[x-test]=xxDebian Weather Servicexx
 Comment=XML Data from edos.debian.net
+Comment[nl]=XML-gegevens van edos.debian.net
 Comment[uk]=Дані XML з edos.debian.net
 Comment[x-test]=xxXML Data from edos.debian.netxx
 X-KDE-ServiceTypes=Plasma/DataEngine

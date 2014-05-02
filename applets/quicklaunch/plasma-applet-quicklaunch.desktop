@@ -1,8 +1,10 @@
 [Desktop Entry]
 Name=Quicklaunch
+Name[nl]=Snel starten
 Name[uk]=Швидкий запуск
 Name[x-test]=xxQuicklaunchxx
 Comment=Launch your favourite Applications
+Comment[nl]=Uw favoriete programma's starten
 Comment[uk]=Запуск ваших улюблених програм
 Comment[x-test]=xxLaunch your favourite Applicationsxx
 

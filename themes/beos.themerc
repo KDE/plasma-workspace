@@ -1,8 +1,10 @@
 [Misc]
 Name=BeOS
+Name[nl]=BeOS
 Name[uk]=BeOS
 Name[x-test]=xxBeOSxx
 Comment=Unthemed BeOS-like style
+Comment[nl]=Themaloze BeOS-achtige stijl
 Comment[uk]=Стиль схожий на BeOS без встановленої теми
 Comment[x-test]=xxUnthemed BeOS-like stylexx
 [KDE]

@@ -3,5 +3,6 @@ Encoding=UTF-8
 Type=Directory
 Icon=applications-other
 Name=More Applications
+Name[nl]=Meer programma's
 Name[uk]=Інші програми
 Name[x-test]=xxMore Applicationsxx

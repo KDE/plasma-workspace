@@ -1,8 +1,10 @@
 [Desktop Entry]
 Name=Files and Directories
+Name[nl]=Bestanden en mappen
 Name[uk]=Файли і каталоги
 Name[x-test]=xxFiles and Directoriesxx
 Comment=Information about files and directories.
+Comment[nl]=Informatie over bestanden en mappen.
 Comment[uk]=Інформація про файли і каталоги.
 Comment[x-test]=xxInformation about files and directories.xx
 X-KDE-ServiceTypes=Plasma/DataEngine

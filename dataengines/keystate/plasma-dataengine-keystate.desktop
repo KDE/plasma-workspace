@@ -1,8 +1,10 @@
 [Desktop Entry]
 Name=Keyboard and Mouse State
+Name[nl]=Toetsenbord en muisstatus
 Name[uk]=Стан клавіатури і миші
 Name[x-test]=xxKeyboard and Mouse Statexx
 Comment=Keyboard modifier and mouse buttons states
+Comment[nl]=Wijzigt toetsenbord en muisknoptoestanden
 Comment[uk]=Стан модифікаторів клавіатури і кнопок миші
 Comment[x-test]=xxKeyboard modifier and mouse buttons statesxx
 Type=Service

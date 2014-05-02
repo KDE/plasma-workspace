@@ -3,5 +3,6 @@ Encoding=UTF-8
 Icon=applications-education-miscellaneous
 Type=Directory
 Name=Miscellaneous
+Name[nl]=Diversen
 Name[uk]=Різне
 Name[x-test]=xxMiscellaneousxx

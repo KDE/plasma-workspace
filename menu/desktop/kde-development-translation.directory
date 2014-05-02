@@ -2,6 +2,7 @@
 Encoding=UTF-8
 Type=Directory
 Name=Translation
+Name[nl]=Vertaling
 Name[uk]=Переклад
 Name[x-test]=xxTranslationxx
 Icon=applications-development-translation
@@ -10,6 +11,7 @@ Icon=applications-development-translation
 Encoding=UTF-8
 Type=Directory
 Name=Translation
+Name[nl]=Vertaling
 Name[uk]=Переклад
 Name[x-test]=xxTranslationxx
 Icon=applications-development-translation

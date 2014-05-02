@@ -1,8 +1,10 @@
 [Desktop Entry]
 Name=Geolocation GPS
+Name[nl]=Geolocatie GPS
 Name[uk]=Геопозиціювання за GPS
 Name[x-test]=xxGeolocation GPSxx
 Comment=Geolocation from GPS address.
+Comment[nl]=Geolocatie uit GPS-adres.
 Comment[uk]=Геопозиціювання за GPS-адресою
 Comment[x-test]=xxGeolocation from GPS address.xx
 X-KDE-ServiceTypes=Plasma/GeolocationProvider

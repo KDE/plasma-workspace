@@ -1,9 +1,11 @@
 [Desktop Entry]
 Encoding=UTF-8
 Name=CPU Monitor
+Name[nl]=Monitor voor CPU-gebruik
 Name[uk]=Використання процесора
 Name[x-test]=xxCPU Monitorxx
 Comment=A CPU usage monitor
+Comment[nl]=Volgt het CPU-gebruik
 Comment[uk]=Монітор використання процесора
 Comment[x-test]=xxA CPU usage monitorxx
 Type=Service

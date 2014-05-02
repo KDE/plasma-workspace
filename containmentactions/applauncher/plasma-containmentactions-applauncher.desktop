@@ -1,10 +1,12 @@
 [Desktop Entry]
 Name=Application Launcher
+Name[nl]=Programmastarter
 Name[uk]=Інструмент запуску програм
 Name[x-test]=xxApplication Launcherxx
 Type=Service
 Icon=preferences-desktop-launch-feedback
 Comment=Simple application launcher
+Comment[nl]=Eenvoudige programmastarter
 Comment[uk]=Простий інструмент запуску програм
 Comment[x-test]=xxSimple application launcherxx
 

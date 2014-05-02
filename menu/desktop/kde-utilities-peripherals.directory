@@ -2,9 +2,11 @@
 Encoding=UTF-8
 Type=Directory
 Name=Peripherals
+Name[nl]=Randapparaten
 Name[uk]=Периферійні пристрої
 Name[x-test]=xxPeripheralsxx
 Icon=preferences-desktop-peripherals
 Comment=Peripherals
+Comment[nl]=Randapparaten
 Comment[uk]=Периферійні
 Comment[x-test]=xxPeripheralsxx

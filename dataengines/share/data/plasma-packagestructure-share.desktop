@@ -1,8 +1,10 @@
 [Desktop Entry]
 Name=ShareProvider
+Name[nl]=ShareProvider
 Name[uk]=Служба оприлюднення
 Name[x-test]=xxShareProviderxx
 Comment=Share Package Structure
+Comment[nl]=Structuur van delen van pakketten
 Comment[uk]=Структура спільних пакунків
 Comment[x-test]=xxShare Package Structurexx
 Type=Service

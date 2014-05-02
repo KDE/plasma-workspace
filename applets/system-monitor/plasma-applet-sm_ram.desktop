@@ -1,9 +1,11 @@
 [Desktop Entry]
 Encoding=UTF-8
 Name=Memory Status
+Name[nl]=Geheugen-status
 Name[uk]=Стан пам’яті
 Name[x-test]=xxMemory Statusxx
 Comment=A RAM usage monitor
+Comment[nl]=Volgt het RAM-gebruik
 Comment[uk]=Монітор використання пам’яті
 Comment[x-test]=xxA RAM usage monitorxx
 Type=Service

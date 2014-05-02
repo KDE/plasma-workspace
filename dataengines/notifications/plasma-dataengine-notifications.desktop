@@ -1,8 +1,10 @@
 [Desktop Entry]
 Name=Application Notifications
+Name[nl]=Programmameldingen
 Name[uk]=Сповіщення програм
 Name[x-test]=xxApplication Notificationsxx
 Comment=Passive visual notifications for the user.
+Comment[nl]=Passieve visuele meldingen voor de gebruiker.
 Comment[uk]=Пасивні візуальні сповіщення для користувача.
 Comment[x-test]=xxPassive visual notifications for the user.xx
 X-KDE-ServiceTypes=Plasma/DataEngine

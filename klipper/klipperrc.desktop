@@ -12,6 +12,7 @@ Number of Actions=7
 
 [Action_0]
 Description=Jpeg-Image
+Description[nl]=Jpeg-afbeelding
 Description[uk]=Зображення Jpeg
 Description[x-test]=xxJpeg-Imagexx
 Number of commands=1
@@ -20,12 +21,14 @@ Regexp=^\\/.+\\.jpg$
 [Action_0/Command_0]
 Commandline=gwenview %s
 Description=Launch &Gwenview
+Description[nl]=&Gwenview opstarten
 Description[uk]=Запустити &Gwenview
 Description[x-test]=xxLaunch &Gwenviewxx
 Enabled=true
 
 [Action_1]
 Description=Web-URL
+Description[nl]=Web-URL-adres
 Description[uk]=Інтернет-адреса
 Description[x-test]=xxWeb-URLxx
 Number of commands=6
@@ -34,6 +37,7 @@ Regexp=^https?://.
 [Action_1/Command_0]
 Commandline=kfmclient exec %s
 Description=Open with &default Browser
+Description[nl]=Openen met stan&daardbrowser
 Description[uk]=Відкрити в &типовому навігаторі
 Description[x-test]=xxOpen with &default Browserxx
 Enabled=true
@@ -41,6 +45,7 @@ Enabled=true
 [Action_1/Command_1]
 Commandline=konqueror %s
 Description=Open with &Konqueror
+Description[nl]=Openen met &Konqueror
 Description[uk]=Відкрити у &Konqueror
 Description[x-test]=xxOpen with &Konquerorxx
 Enabled=true
@@ -49,6 +54,7 @@ Enabled=true
 Commandline=ps x |grep -q '[m]ozilla' && "mozilla -remote openURL(%s, new-window)" || mozilla %s
 Icon=mozilla
 Description=Open with &Mozilla
+Description[nl]=Openen met &Mozilla
 Description[uk]=Відкрити у &Mozilla
 Description[x-test]=xxOpen with &Mozillaxx
 Enabled=true
@@ -56,6 +62,7 @@ Enabled=true
 [Action_1/Command_3]
 Commandline=kmail --body  %s
 Description=Send &URL
+Description[nl]=&URL-adres verzenden
 Description[uk]=Надіслати &URL
 Description[x-test]=xxSend &URLxx
 Enabled=true
@@ -64,6 +71,7 @@ Enabled=true
 Commandline=ps x |grep -q '[f]irefox' && "firefox -remote openURL(%s, new-window)" || firefox "%s"
 Icon=firefox
 Description=Open with &Firefox
+Description[nl]=Openen met &Firefox
 Description[uk]=Відкрити у &Firefox
 Description[x-test]=xxOpen with &Firefoxxx
 Enabled=true
@@ -71,12 +79,14 @@ Enabled=true
 [Action_1/Command_5]
 Commandline=kmail  --attach %s
 Description=Send &Page
+Description[nl]=&Pagina verzenden
 Description[uk]=Надіслати &сторінку
 Description[x-test]=xxSend &Pagexx
 Enabled=true
 
 [Action_2]
 Description=Mail-URL
+Description[nl]=URL-adres e-mailen
 Description[uk]=Поштова адреса
 Description[x-test]=xxMail-URLxx
 Number of commands=2
@@ -85,6 +95,7 @@ Regexp=^mailto:.
 [Action_2/Command_0]
 Commandline=kmail --composer `echo %s | sed 's/mailto://g'`
 Description=Launch &Kmail
+Description[nl]=&Kmail opstarten
 Description[uk]=Запустити &Kmail
 Description[x-test]=xxLaunch &Kmailxx
 Enabled=true
@@ -92,12 +103,14 @@ Enabled=true
 [Action_2/Command_1]
 Commandline=konsole -e mutt `echo %s | sed 's/mailto://g'`
 Description=Launch &mutt
+Description[nl]=&Mutt opstarten
 Description[uk]=Запустити &mutt
 Description[x-test]=xxLaunch &muttxx
 Enabled=true
 
 [Action_3]
 Description=Text File
+Description[nl]=Tekstbestand
 Description[uk]=Текстовий файл
 Description[x-test]=xxText Filexx
 Number of commands=1
@@ -106,12 +119,14 @@ Regexp=^\\/.+\\.txt$
 [Action_3/Command_0]
 Commandline=kwrite %s
 Description=Launch K&Write
+Description[nl]=K&Write opstarten
 Description[uk]=Запустити K&Write
 Description[x-test]=xxLaunch K&Writexx
 Enabled=true
 
 [Action_4]
 Description=Local file URL
+Description[nl]=Lokaal bestands-URL-adres
 Description[uk]=URL локального файла
 Description[x-test]=xxLocal file URLxx
 Number of commands=2
@@ -120,6 +135,7 @@ Regexp=^file:.
 [Action_4/Command_0]
 Commandline=kmail --body  %s
 Description=Send &URL
+Description[nl]=&URL-adres verzenden
 Description[uk]=Надіслати &URL
 Description[x-test]=xxSend &URLxx
 Enabled=true
@@ -127,12 +143,14 @@ Enabled=true
 [Action_4/Command_1]
 Commandline=kmail  --attach %s
 Description=Send &File
+Description[nl]=&Bestand verzenden
 Description[uk]=Надіслати &файл
 Description[x-test]=xxSend &Filexx
 Enabled=true
 
 [Action_5]
 Description=Gopher URL
+Description[nl]=Gopher URL-adres
 Description[uk]=Адреса Gopher
 Description[x-test]=xxGopher URLxx
 Number of commands=2
@@ -141,6 +159,7 @@ Regexp=^gopher:.
 [Action_5/Command_0]
 Commandline=kmail --body %s
 Description=Send &URL
+Description[nl]=&URL-adres verzenden
 Description[uk]=Надіслати &URL
 Description[x-test]=xxSend &URLxx
 Enabled=true
@@ -148,12 +167,14 @@ Enabled=true
 [Action_5/Command_1]
 Commandline=kmail  --attach %s
 Description=Send &File
+Description[nl]=&Bestand verzenden
 Description[uk]=Надіслати &файл
 Description[x-test]=xxSend &Filexx
 Enabled=true
 
 [Action_6]
 Description=ftp URL
+Description[nl]=FTP URL-adres
 Description[uk]=Адреса ftp
 Description[x-test]=xxftp URLxx
 Number of commands=5
@@ -162,6 +183,7 @@ Regexp=^ftp://.
 [Action_6/Command_0]
 Commandline=kfmclient exec %s
 Description=Open with &default Browser
+Description[nl]=Openen met stan&daardbrowser
 Description[uk]=Відкрити в &типовому навігаторі
 Description[x-test]=xxOpen with &default Browserxx
 Enabled=true
@@ -169,6 +191,7 @@ Enabled=true
 [Action_6/Command_1]
 Commandline=konqueror %s
 Description=Open with &Konqueror
+Description[nl]=Openen met &Konqueror
 Description[uk]=Відкрити у &Konqueror
 Description[x-test]=xxOpen with &Konquerorxx
 Enabled=true
@@ -176,6 +199,7 @@ Enabled=true
 [Action_6/Command_2]
 Commandline=mozilla -remote openURL(%s, new-window)
 Description=Open with &Mozilla
+Description[nl]=Openen met &Mozilla
 Description[uk]=Відкрити у &Mozilla
 Description[x-test]=xxOpen with &Mozillaxx
 Enabled=true
@@ -183,6 +207,7 @@ Enabled=true
 [Action_6/Command_3]
 Commandline=kmail --body  %s
 Description=Send &URL
+Description[nl]=&URL-adres verzenden
 Description[uk]=Надіслати &URL
 Description[x-test]=xxSend &URLxx
 Enabled=true
@@ -190,6 +215,7 @@ Enabled=true
 [Action_6/Command_4]
 Commandline=kmail  --attach %s
 Description=Send &File
+Description[nl]=&Bestand verzenden
 Description[uk]=Надіслати &файл
 Description[x-test]=xxSend &Filexx
 Enabled=true

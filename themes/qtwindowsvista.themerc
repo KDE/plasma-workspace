@@ -1,8 +1,10 @@
 [Misc]
 Name=MS Windows Vista
+Name[nl]=MS Windows Vista
 Name[uk]=MS Windows Vista
 Name[x-test]=xxMS Windows Vistaxx
 Comment=Style that uses the Windows Vista style engine
+Comment[nl]=Stijl die de Windows Vista stijl-engine gebruikt
 Comment[uk]=Стиль, що використовує рушій стилів Windows Vista
 Comment[x-test]=xxStyle that uses the Windows Vista style enginexx
 [KDE]

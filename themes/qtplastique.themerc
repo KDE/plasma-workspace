@@ -1,8 +1,10 @@
 [Misc]
 Name=Plastique
+Name[nl]=Plastik
 Name[uk]=Plastique
 Name[x-test]=xxPlastiquexx
 Comment=Built-in unthemed style similar to Plastik from KDE3
+Comment[nl]=Ingebouwde stijl zonder thema gelijkend op Plastik uit KDE3
 Comment[uk]=Вбудований стиль без тем, подібний до Plastik у KDE3
 Comment[x-test]=xxBuilt-in unthemed style similar to Plastik from KDE3xx
 [KDE]

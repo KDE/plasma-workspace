@@ -1,8 +1,10 @@
 [Desktop Entry]
 Name=Device Notifier
+Name[nl]=Apparaatmelder
 Name[uk]=Сповіщення про пристрої
 Name[x-test]=xxDevice Notifierxx
 Comment=Notifications and access for new devices
+Comment[nl]=Maakt melding van nieuwe apparaten en biedt toegang tot deze apparaten
 Comment[uk]=Сповіщення і доступ до нових пристроїв
 Comment[x-test]=xxNotifications and access for new devicesxx
 

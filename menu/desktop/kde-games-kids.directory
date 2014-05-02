@@ -2,6 +2,7 @@
 Encoding=UTF-8
 Type=Directory
 Name=Games for Kids
+Name[nl]=spelletjes voor kinderen
 Name[uk]=Ігри для дітей
 Name[x-test]=xxGames for Kidsxx
 Icon=applications-games-children

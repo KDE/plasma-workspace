@@ -1,8 +1,10 @@
 [Desktop Entry]
 Name=paste.kde.org
+Name[nl]=paste.kde.org
 Name[uk]=paste.kde.org
 Name[x-test]=xxpaste.kde.orgxx
 Comment=Allows text to be shared using the kde.org service
+Comment[nl]=Staat het delen van tekst toe met gebruik van de service kde.org
 Comment[uk]=Уможливлює оприлюднення фрагментів тексту за допомогою служби kde.org
 Comment[x-test]=xxAllows text to be shared using the kde.org servicexx
 Type=Service

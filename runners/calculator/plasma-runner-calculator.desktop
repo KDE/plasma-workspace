@@ -1,8 +1,10 @@
 [Desktop Entry]
 Name=Calculator
+Name[nl]=Rekenmachine
 Name[uk]=Калькулятор
 Name[x-test]=xxCalculatorxx
 Comment=Calculate expressions
+Comment[nl]=Expressies berekenen
 Comment[uk]=Обчислення виразів
 Comment[x-test]=xxCalculate expressionsxx
 X-KDE-ServiceTypes=Plasma/Runner

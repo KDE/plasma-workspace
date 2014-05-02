@@ -1,10 +1,12 @@
 [Desktop Entry]
 Name=Switch Desktop
+Name[nl]=Bureaublad omschakelen
 Name[uk]=Перемкнути стільницю
 Name[x-test]=xxSwitch Desktopxx
 Type=Service
 Icon=user-desktop
 Comment=Switch to another virtual desktop
+Comment[nl]=Schakel naar een andere virtueel bureaublad
 Comment[uk]=Перемкнутися на іншу віртуальну стільницю
 Comment[x-test]=xxSwitch to another virtual desktopxx
 

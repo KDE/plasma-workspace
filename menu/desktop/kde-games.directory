@@ -2,6 +2,7 @@
 Encoding=UTF-8
 Type=Directory
 Name=Games
+Name[nl]=Spellen
 Name[uk]=Ігри
 Name[x-test]=xxGamesxx
 Icon=applications-games

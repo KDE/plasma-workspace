@@ -1,8 +1,10 @@
 [Misc]
 Name=B3/KDE
+Name[nl]=B3/KDE
 Name[uk]=B3/KDE
 Name[x-test]=xxB3/KDExx
 Comment=B3/Modification of B2
+Comment[nl]=B3/wijziging van B2
 Comment[uk]=B3/модифікація B2
 Comment[x-test]=xxB3/Modification of B2xx
 [KDE]

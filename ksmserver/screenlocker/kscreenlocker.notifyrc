@@ -1,50 +1,61 @@
 [Global]
 IconName=system-lock-screen
 Comment=Screen Saver
+Comment[nl]=Schermbeveiliging
 Comment[uk]=Зберігач екрана
 Comment[x-test]=xxScreen Saverxx
 
 [Event/savingstarted]
 Name=Screen saver started
+Name[nl]=Schermbeveiliging gestart
 Name[uk]=Запущено зберігач екрана
 Name[x-test]=xxScreen saver startedxx
 Comment=The screen saver has been started
+Comment[nl]=De schermbeveiliging is gestart
 Comment[uk]=Запущено зберігач екрана
 Comment[x-test]=xxThe screen saver has been startedxx
 Action=None
 
 [Event/locked]
 Name=Screen locked
+Name[nl]=Scherm vergrendeld
 Name[uk]=Екран заблоковано
 Name[x-test]=xxScreen lockedxx
 Comment=The screen has been locked
+Comment[nl]=Het scherm is vergrendeld
 Comment[uk]=Екран було заблоковано
 Comment[x-test]=xxThe screen has been lockedxx
 Action=None
 
 [Event/savingstopped]
 Name=Screen saver exited
+Name[nl]=Schermbeveiliger is geëindigd
 Name[uk]=Завершено роботу зберігача екрана
 Name[x-test]=xxScreen saver exitedxx
 Comment=The screen saver has finished
+Comment[nl]=De schermbeveiliging is beëindigd
 Comment[uk]=Роботу зберігача екрана завершено
 Comment[x-test]=xxThe screen saver has finishedxx
 Action=None
 
 [Event/unlocked]
 Name=Screen unlocked
+Name[nl]=Scherm ontgrendeld
 Name[uk]=Екран розблоковано
 Name[x-test]=xxScreen unlockedxx
 Comment=The screen has been unlocked
+Comment[nl]=Het scherm is ontgrendeld
 Comment[uk]=Екран було розблоковано
 Comment[x-test]=xxThe screen has been unlockedxx
 Action=None
 
 [Event/unlockfailed]
 Name=Screen unlock failed
+Name[nl]=Ontgrendelen van scherm is mislukt
 Name[uk]=Невдала спроба розблокування екрана
 Name[x-test]=xxScreen unlock failedxx
 Comment=Failed attempt to unlock the screen
+Comment[nl]=Een mislukte poging om het scherm te ontgrendelen
 Comment[uk]=Спроба розблокування екрана завершилася невдало
 Comment[x-test]=xxFailed attempt to unlock the screenxx
 Action=None

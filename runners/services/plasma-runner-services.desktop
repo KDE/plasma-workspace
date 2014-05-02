@@ -1,8 +1,10 @@
 [Desktop Entry]
 Name=Applications
+Name[nl]=Programma's
 Name[uk]=Програми
 Name[x-test]=xxApplicationsxx
 Comment=Find applications, control panels and services
+Comment[nl]=Zoek naar programma's, configuratiemodules en diensten
 Comment[uk]=Знайти програми, панелі керування та служби
 Comment[x-test]=xxFind applications, control panels and servicesxx
 X-KDE-ServiceTypes=Plasma/Runner

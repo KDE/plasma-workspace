@@ -1,8 +1,10 @@
 [Desktop Entry]
 Name=Icon
+Name[nl]=Pictogram
 Name[uk]=Піктограма
 Name[x-test]=xxIconxx
 Comment=A generic icon
+Comment[nl]=Een generiek pictogram
 Comment[uk]=Загальна піктограма
 Comment[x-test]=xxA generic iconxx
 

@@ -1,8 +1,10 @@
 [Desktop Entry]
 Name=MPRIS2
+Name[nl]=MPRIS2
 Name[uk]=MPRIS2
 Name[x-test]=xxMPRIS2xx
 Comment=Provides information from and control over media players via MPRIS2
+Comment[nl]=Levert informatie uit en besturing aan mediaspelers via MPRIS2
 Comment[uk]=Надає дані з мультимедійних програвачів та керує ними за допомогою MPRIS2
 Comment[x-test]=xxProvides information from and control over media players via MPRIS2xx
 

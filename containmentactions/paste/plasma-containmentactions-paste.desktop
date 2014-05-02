@@ -1,10 +1,12 @@
 [Desktop Entry]
 Name=Paste
+Name[nl]=Plakken
 Name[uk]=Вставка
 Name[x-test]=xxPastexx
 Type=Service
 Icon=edit-paste
 Comment=Creates a widget from the contents of the clipboard
+Comment[nl]=Maakt een widget aan uit de inhoud van het klembord
 Comment[uk]=Створює віджет з вмістом буфера обміну даними
 Comment[x-test]=xxCreates a widget from the contents of the clipboardxx
 

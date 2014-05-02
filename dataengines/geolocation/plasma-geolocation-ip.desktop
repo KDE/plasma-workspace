@@ -1,8 +1,10 @@
 [Desktop Entry]
 Name=Geolocation IP
+Name[nl]=Geolocatie-IP
 Name[uk]=Геопозиціювання за IP
 Name[x-test]=xxGeolocation IPxx
 Comment=Geolocation from IP address.
+Comment[nl]=Geolocatie uit IP-adres.
 Comment[uk]=Геопозиціювання за IP-адресою
 Comment[x-test]=xxGeolocation from IP address.xx
 X-KDE-ServiceTypes=Plasma/GeolocationProvider

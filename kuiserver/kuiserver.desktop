@@ -1,10 +1,12 @@
 [Desktop Entry]
 Type=Service
 Name=kuiserver
+Name[nl]=kuiserver
 Name[uk]=kuiserver
 Name[x-test]=xxkuiserverxx
 Exec=kuiserver
 Comment=KDE's Progress Info UI server
+Comment[nl]=KDE's UI-server voor voortgangsinformatie
 Comment[uk]=Сервер графічного інтерфейсу інформації про поступ KDE
 Comment[x-test]=xxKDE's Progress Info UI serverxx
 X-KDE-ServiceTypes=

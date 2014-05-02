@@ -1,8 +1,10 @@
 [Desktop Entry]
 Name=Dictionary
+Name[nl]=Woordenboek
 Name[uk]=Словник
 Name[x-test]=xxDictionaryxx
 Comment=Look up word meanings
+Comment[nl]=Zoek de betekenis van woorden op
 Comment[uk]=Пошук значень слів
 Comment[x-test]=xxLook up word meaningsxx
 X-KDE-ServiceTypes=Plasma/DataEngine

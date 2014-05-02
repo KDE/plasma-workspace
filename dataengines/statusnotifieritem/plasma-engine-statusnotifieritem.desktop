@@ -1,8 +1,10 @@
 [Desktop Entry]
 Name=Status Notifier Information
+Name[nl]=Melding van statusinformatie
 Name[uk]=Відомості сповіщення про стан
 Name[x-test]=xxStatus Notifier Informationxx
 Comment=Engine for applications' status information, based on the Status Notifier protocol.
+Comment[nl]=Engine voor statusinformatie van toepassingen gebaseerde op het statusnotificatieprotocol.
 Comment[uk]=Рушій даних щодо стану програм, заснований на протоколі сповіщення про стан.
 Comment[x-test]=xxEngine for applications' status information, based on the Status Notifier protocol.xx
 Icon=preferences-desktop-notification

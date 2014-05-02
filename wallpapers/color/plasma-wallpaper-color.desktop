@@ -1,8 +1,10 @@
 [Desktop Entry]
 Name=Color
+Name[nl]=Kleur
 Name[uk]=Колір
 Name[x-test]=xxColorxx
 Comment=A plain color or gradient
+Comment[nl]=Een vlakke kleur of verloop
 Comment[uk]=Простий колір або градієнт
 Comment[x-test]=xxA plain color or gradientxx
 Type=Service

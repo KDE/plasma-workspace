@@ -2,6 +2,7 @@
 Exec=plasma-shell --shut-up
 X-DBUS-StartupType=Unique
 Name=Plasma Desktop Workspace
+Name[nl]=Plasma Bureaublad Werkplek
 Name[uk]=Робочий простір Плазми для комп’ютерів
 Name[x-test]=xxPlasma Desktop Workspacexx
 Type=Application

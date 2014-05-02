@@ -1,9 +1,11 @@
 [Misc]
 Name=Keramik
+Name[nl]=Keramik
 Name[uk]=Керамік
 Name[x-test]=xxKeramikxx
 ConfigPage=kstyle_keramik_config
 Comment=A style using alphablending
+Comment[nl]=Een stijl die gebruik maakt van alfablending
 Comment[uk]=Стиль з використанням альфа-змішування
 Comment[x-test]=xxA style using alphablendingxx
 

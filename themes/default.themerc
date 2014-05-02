@@ -1,8 +1,10 @@
 [Misc]
 Name=KDE Classic
+Name[nl]=KDE Klassiek
 Name[uk]=Класичний KDE
 Name[x-test]=xxKDE Classicxx
 Comment=Classic KDE style
+Comment[nl]=Klassieke KDE-stijl
 Comment[uk]=Класичний стиль KDE
 Comment[x-test]=xxClassic KDE stylexx
 Highcolor=hcstyle.la

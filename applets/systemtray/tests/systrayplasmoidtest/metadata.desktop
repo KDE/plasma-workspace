@@ -1,8 +1,10 @@
 [Desktop Entry]
 Name=System Tray Plasmoid Test
+Name[nl]=Plasmoid test in systeemvak
 Name[uk]=Перевірка плазмоїду системного лотка
 Name[x-test]=xxSystem Tray Plasmoid Testxx
 Comment=Test the system tray
+Comment[nl]=Test het systeemvak
 Comment[uk]=Перевірка системного лотка
 Comment[x-test]=xxTest the system trayxx
 Icon=preferences-desktop-notification

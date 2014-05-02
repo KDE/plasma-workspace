@@ -3,6 +3,7 @@ Encoding=UTF-8
 Keywords=
 Icon=preferences-desktop-color
 Name=Plain Color
+Name[nl]=Vlakke kleur
 Name[uk]=Звичайні кольорові
 Name[x-test]=xxPlain Colorxx
 Type=Service

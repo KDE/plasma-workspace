@@ -1,8 +1,10 @@
 [Desktop Entry]
 Name=wstaw.org
+Name[nl]=wstaw.org
 Name[uk]=wstaw.org
 Name[x-test]=xxwstaw.orgxx
 Comment=Allows images to be shared using the wstaw.org service
+Comment[nl]=Staat het delen van afbeeldingen toe met gebruik van de service wstaw.org
 Comment[uk]=Уможливлює оприлюднення зображень за допомогою служби wstaw.org
 Comment[x-test]=xxAllows images to be shared using the wstaw.org servicexx
 Type=Service

@@ -3,5 +3,6 @@ Encoding=UTF-8
 Icon=applications-science
 Type=Directory
 Name=Science
+Name[nl]=Wetenschappelijk
 Name[uk]=Наука
 Name[x-test]=xxSciencexx

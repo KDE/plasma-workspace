@@ -1,8 +1,10 @@
 [Desktop Entry]
 Name=im9.eu
+Name[nl]=im9.eu
 Name[uk]=im9.eu
 Name[x-test]=xxim9.euxx
 Comment=Allows images to be shared using the im9.eu service
+Comment[nl]=Staat het delen van afbeeldingen toe met gebruik van de service im9.eu
 Comment[uk]=Уможливлює оприлюднення зображень за допомогою служби im9.eu
 Comment[x-test]=xxAllows images to be shared using the im9.eu servicexx
 Type=Service

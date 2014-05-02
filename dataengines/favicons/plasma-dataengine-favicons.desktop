@@ -1,9 +1,11 @@
 [Desktop Entry]
 Encoding=UTF-8
 Name=Favicons
+Name[nl]=Favicons
 Name[uk]=Піктограми «Вибраного»
 Name[x-test]=xxFaviconsxx
 Comment=Data Engine for getting favicons of web sites
+Comment[nl]=Gegevensengine voor het ophalen van favicons van websites
 Comment[uk]=Рушій даних для отримання піктограм для вебсайтів
 Comment[x-test]=xxData Engine for getting favicons of web sitesxx
 X-KDE-ServiceTypes=Plasma/DataEngine

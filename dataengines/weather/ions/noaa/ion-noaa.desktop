@@ -1,8 +1,10 @@
 [Desktop Entry]
 Name=NOAA's National Weather Service
+Name[nl]=NOAA's nationale weerdienst
 Name[uk]=Національна служба погоди NOAA
 Name[x-test]=xxNOAA's National Weather Servicexx
 Comment=XML Data from NOAA's National Weather Service
+Comment[nl]=XML-gegevens van NOAA's nationale weerdienst
 Comment[uk]=Дані XML з національної служби погоди NOAA
 Comment[x-test]=xxXML Data from NOAA's National Weather Servicexx
 X-KDE-ServiceTypes=Plasma/DataEngine

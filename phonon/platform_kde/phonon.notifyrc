@@ -1,20 +1,24 @@
 [Global]
 IconName=preferences-desktop-sound
 Comment=Multimedia System
+Comment[nl]=Multimedia-systeem
 Comment[uk]=Мультимедійна система
 Comment[x-test]=xxMultimedia Systemxx
 
 [Context/Application]
 Name=Application
+Name[nl]=Toepassing
 Name[uk]=Програма
 Name[x-test]=xxApplicationxx
 #Comment=The name of the group of the contact
 
 [Event/AudioDeviceFallback]
 Name=Audio Output Device Changed
+Name[nl]=Geluiduitvoerapparaat gewijzigd
 Name[uk]=Змінено пристрій відтворення звуку
 Name[x-test]=xxAudio Output Device Changedxx
 Comment=Notification when audio output device has automatically changed
+Comment[nl]=Melding als geluiduitvoerapparaat automatisch is gewijzigd
 Comment[uk]=Сповіщення у відповідь на автоматичну зміну пристрою відтворення звуку
 Comment[x-test]=xxNotification when audio output device has automatically changedxx
 Contexts=Application

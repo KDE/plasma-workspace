@@ -3,5 +3,6 @@ Encoding=UTF-8
 Type=Directory
 Icon=applications-science
 Name=Science & Math
+Name[nl]=Wetenschap en wiskunde
 Name[uk]=Наука і математика
 Name[x-test]=xxScience & Mathxx

@@ -2,6 +2,7 @@
 Encoding=UTF-8
 Type=Directory
 Name=Internet
+Name[nl]=Internet
 Name[uk]=Інтернет
 Name[x-test]=xxInternetxx
 Icon=applications-internet

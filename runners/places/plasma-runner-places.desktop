@@ -1,11 +1,13 @@
 [Desktop Entry]
 Name=Places
+Name[nl]=Locaties
 Name[uk]=Місця
 Name[x-test]=xxPlacesxx
 X-KDE-ServiceTypes=Plasma/Runner
 Type=Service
 Icon=user-home
 Comment=Open devices and folder bookmarks
+Comment[nl]=Apparaten- en mappenbladwijzers openen
 Comment[uk]=Відкриття пристроїв та закладок на теки
 Comment[x-test]=xxOpen devices and folder bookmarksxx
 X-KDE-Library=krunner_placesrunner

@@ -2,9 +2,11 @@
 Encoding=UTF-8
 Type=Directory
 Name=File
+Name[nl]=Bestand
 Name[uk]=Файл
 Name[x-test]=xxFilexx
 Icon=system-file-manager
 Comment=File
+Comment[nl]=Bestand
 Comment[uk]=Файл
 Comment[x-test]=xxFilexx

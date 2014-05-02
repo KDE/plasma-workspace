@@ -1,8 +1,10 @@
 [Misc]
 Name=MS Windows 9x
+Name[nl]=MS Windows 9x
 Name[uk]=MS Windows 9x
 Name[x-test]=xxMS Windows 9xxx
 Comment=Built-in unthemed Windows 9x style
+Comment[nl]=Ingebouwde themaloze Windows 9x-stijl
 Comment[uk]=Вбудований стиль Windows 9x без теми
 Comment[x-test]=xxBuilt-in unthemed Windows 9x stylexx
 [KDE]

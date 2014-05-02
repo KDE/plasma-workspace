@@ -1,8 +1,10 @@
 [Desktop Entry]
 Name=Free Space Notifier
+Name[nl]=Vrije ruimte-melder
 Name[uk]=Сповіщення про вільне місце
 Name[x-test]=xxFree Space Notifierxx
 Comment=Warns when running out of space on your home folder
+Comment[nl]=Geeft een waarschuwing bij een lage stand van de vrije ruimte voor uw persoonlijke map
 Comment[uk]=Попереджає, якщо у домашній теці залишається мало місця
 Comment[x-test]=xxWarns when running out of space on your home folderxx
 Type=Service

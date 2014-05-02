@@ -1,9 +1,11 @@
 [Desktop Entry]
 # ctxt: plasma runner
 Name=Windows
+Name[nl]=Vensters
 Name[uk]=Вікна
 Name[x-test]=xxWindowsxx
 Comment=List windows and desktops and switch them
+Comment[nl]=Toon vensters en bureaubladen en schakel ze om
 Comment[uk]=Показує список вікон і стільниць і перемикає їх
 Comment[x-test]=xxList windows and desktops and switch themxx
 X-KDE-ServiceTypes=Plasma/Runner

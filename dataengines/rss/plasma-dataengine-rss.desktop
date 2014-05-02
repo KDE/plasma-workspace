@@ -1,9 +1,11 @@
 [Desktop Entry]
 Encoding=UTF-8
 Name=RSS
+Name[nl]=RSS
 Name[uk]=RSS
 Name[x-test]=xxRSSxx
 Comment=RSS News Data Engine
+Comment[nl]=RSS-nieuws (gegevensengine)
 Comment[uk]=Рушій даних новин RSS
 Comment[x-test]=xxRSS News Data Enginexx
 ServiceTypes=Plasma/DataEngine

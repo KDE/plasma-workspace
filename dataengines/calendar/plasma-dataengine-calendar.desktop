@@ -1,8 +1,10 @@
 [Desktop Entry]
 Name=Calendar
+Name[nl]=Kalender
 Name[uk]=Календар
 Name[x-test]=xxCalendarxx
 Comment=Calendar data engine
+Comment[nl]=Agendagegevensengine
 Comment[uk]=Рушій даних календаря
 Comment[x-test]=xxCalendar data enginexx
 X-KDE-ServiceTypes=Plasma/DataEngine

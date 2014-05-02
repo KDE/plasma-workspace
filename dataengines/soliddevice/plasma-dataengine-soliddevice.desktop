@@ -1,8 +1,10 @@
 [Desktop Entry]
 Name=Device Information
+Name[nl]=Apparaatinformatie
 Name[uk]=Інформація про пристрої
 Name[x-test]=xxDevice Informationxx
 Comment=Device data via Solid
+Comment[nl]=Apparaatgegevens via Solid
 Comment[uk]=Дані щодо пристроїв з Solid
 Comment[x-test]=xxDevice data via Solidxx
 X-KDE-ServiceTypes=Plasma/DataEngine

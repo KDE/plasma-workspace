@@ -1,9 +1,11 @@
 [Desktop Entry]
 Encoding=UTF-8
 Name=Hardware Temperature
+Name[nl]=Hardware temperatuur
 Name[uk]=Температура обладнання
 Name[x-test]=xxHardware Temperaturexx
 Comment=A system temperature monitor
+Comment[nl]=Volgt de systeemtemperatuur
 Comment[uk]=Монітор системної температури
 Comment[x-test]=xxA system temperature monitorxx
 Type=Service

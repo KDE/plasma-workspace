@@ -1,9 +1,11 @@
 [Desktop Entry]
 Encoding=UTF-8
 Name=Run Commands
+Name[nl]=Commando's uitvoeren
 Name[uk]=Виконання команд
 Name[x-test]=xxRun Commandsxx
 Comment=Run Executable Data Engine
+Comment[nl]=Uitvoerbare gegevensengine starten
 Comment[uk]=Виконати програму рушія даних
 Comment[x-test]=xxRun Executable Data Enginexx
 ServiceTypes=Plasma/DataEngine

@@ -1,9 +1,11 @@
 [Desktop Entry]
 Encoding=UTF-8
 Name=Network Monitor
+Name[nl]=Netwerkmonitor
 Name[uk]=Монітор мережі
 Name[x-test]=xxNetwork Monitorxx
 Comment=A network usage monitor
+Comment[nl]=Toont het netwerkgebruik
 Comment[uk]=Монітор використання мережі
 Comment[x-test]=xxA network usage monitorxx
 Type=Service

@@ -1,8 +1,10 @@
 [Desktop Entry]
 Name=System Monitor
+Name[nl]=Systeemmonitor
 Name[uk]=Монітор системи
 Name[x-test]=xxSystem Monitorxx
 Comment=System monitoring applet
+Comment[nl]=Systeemmonitorapplet
 Comment[uk]=Аплет моніторингу системи
 Comment[x-test]=xxSystem monitoring appletxx
 Type=Service

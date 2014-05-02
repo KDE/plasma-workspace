@@ -1,8 +1,10 @@
 [Misc]
 Name=Mac OS X
+Name[nl]=Mac OS X
 Name[uk]=Mac OS X
 Name[x-test]=xxMac OS Xxx
 Comment=Style that uses the Apple Appearance Manager
+Comment[nl]=Stijl die de Apple Appearance Manager gebruikt
 Comment[uk]=Стиль, що використовує Apple Appearance Manager
 Comment[x-test]=xxStyle that uses the Apple Appearance Managerxx
 [KDE]

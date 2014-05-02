@@ -1,8 +1,10 @@
 [Desktop Entry]
 Name=Pointer Position
+Name[nl]=Muisaanwijzerpositie
 Name[uk]=Позиція вказівника
 Name[x-test]=xxPointer Positionxx
 Comment=Mouse position and cursor
+Comment[nl]=Muispositie en cursor
 Comment[uk]=Позиція вказівника миші і курсора
 Comment[x-test]=xxMouse position and cursorxx
 Type=Service

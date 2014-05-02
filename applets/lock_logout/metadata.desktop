@@ -1,12 +1,15 @@
 [Desktop Entry]
 Name=Lock/Logout
+Name[nl]=Vergrendelen/Afmelden
 Name[uk]=Блокування/Вихід
 Name[x-test]=xxLock/Logoutxx
 Comment=Lock the screen or log out
+Comment[nl]=Vergrendel het scherm of meldt u af
 Comment[uk]=Заблокуйте екран або вийдіть
 Comment[x-test]=xxLock the screen or log outxx
 Encoding=UTF-8
 Keywords=Lock;Logout;Sleep;Hibernate;Switch User;
+Keywords[nl]=Vergrendelen;Afmelden;Slapen;Slaapstand naar schijf;Gebruiker wisselen
 Keywords[uk]=Lock;Logout;Sleep;Hibernate;Switch User;блокування;вихід;присипляння;сон;перемикання;користувач
 Keywords[x-test]=xxLock;Logout;Sleep;Hibernate;Switch User;xx
 

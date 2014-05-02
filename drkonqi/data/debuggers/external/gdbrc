@@ -1,5 +1,6 @@
 [General]
 Name=gdb
+Name[nl]=gdb
 Name[uk]=gdb
 Name[x-test]=xxgdbxx
 TryExec=gdb

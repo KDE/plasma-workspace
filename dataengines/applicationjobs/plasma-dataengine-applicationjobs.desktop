@@ -1,8 +1,10 @@
 [Desktop Entry]
 Name=Application Job Information
+Name[nl]=Programmataakmeldingen
 Name[uk]=Відомості про завдання програми
 Name[x-test]=xxApplication Job Informationxx
 Comment=Application job updates (via kuiserver)
+Comment[nl]=Applicatiejob bijwerken (via kuiserver)
 Comment[uk]=Оновлення завдань програми (через kuiserver)
 Comment[x-test]=xxApplication job updates (via kuiserver)xx
 Type=Service

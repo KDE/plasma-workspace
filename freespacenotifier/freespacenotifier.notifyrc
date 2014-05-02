@@ -1,25 +1,31 @@
 [Global]
 IconName=drive-harddisk
 Comment=KDE Free Space Notifier Daemon
+Comment[nl]=KDE-daemon voor het melden van vrije ruimte
 Comment[uk]=Фонова служба сповіщення про переповнення диска KDE
 Comment[x-test]=xxKDE Free Space Notifier Daemonxx
 Name=Low Disk Space
+Name[nl]=Schijf bijna vol
 Name[uk]=Замало місця на диску
 Name[x-test]=xxLow Disk Spacexx
 
 [Context/warningnot]
 Name=Warning
+Name[nl]=Waarschuwing
 Name[uk]=Попередження
 Name[x-test]=xxWarningxx
 Comment=Used for warning notifications
+Comment[nl]=Wordt gebruikt voor waarschuwingsmeldingen
 Comment[uk]=Використовується для попереджень
 Comment[x-test]=xxUsed for warning notificationsxx
 
 [Event/freespacenotif]
 Name=Running low on disk space
+Name[nl]=Bijna geen vrije schijfruimte meer
 Name[uk]=Замало місця на диску
 Name[x-test]=xxRunning low on disk spacexx
 Comment=You are running low on disk space
+Comment[nl]=U hebt bijna geen vrije schijfruimte meer
 Comment[uk]=На вашому диску залишилося замало місця
 Comment[x-test]=xxYou are running low on disk spacexx
 Contexts=warningnot

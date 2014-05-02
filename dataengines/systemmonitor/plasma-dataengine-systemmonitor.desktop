@@ -1,9 +1,11 @@
 [Desktop Entry]
 Encoding=UTF-8
 Name=System Monitor
+Name[nl]=Systeemmonitor
 Name[uk]=Монітор системи
 Name[x-test]=xxSystem Monitorxx
 Comment=System status information
+Comment[nl]=Informatie over systeemstatus
 Comment[uk]=Інформація про стан системи
 Comment[x-test]=xxSystem status informationxx
 ServiceTypes=Plasma/DataEngine

@@ -9,8 +9,10 @@ X-KDE-Kded-load-on-demand=false
 X-KDE-Kded-phase=1
 
 Name=KSysguard
+Name[nl]=KSysguard
 Name[uk]=KSysguard
 Name[x-test]=xxKSysguardxx
 Comment=Launches KSysguard on Ctrl + Escape
+Comment[nl]=Start KSysguard bij Ctrl + Escape
 Comment[uk]=Запускає KSysguard у відповідь на натискання Ctrl + Esc
 Comment[x-test]=xxLaunches KSysguard on Ctrl + Escapexx

@@ -1,9 +1,11 @@
 [Desktop Entry]
 # ctxt: plasma runner
 Name=Bookmarks
+Name[nl]=Bladwijzers
 Name[uk]=Закладки
 Name[x-test]=xxBookmarksxx
 Comment=Find and open bookmarks
+Comment[nl]=Bladwijzers vinden en openen
 Comment[uk]=Знайти і відкрити закладки
 Comment[x-test]=xxFind and open bookmarksxx
 X-KDE-ServiceTypes=Plasma/Runner

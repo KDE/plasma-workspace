@@ -2,6 +2,7 @@
 Encoding=UTF-8
 Type=Directory
 Name=Lost & Found
+Name[nl]=Overig
 Name[uk]=Загублено та знайдено
 Name[x-test]=xxLost & Foundxx
 Icon=applications-other

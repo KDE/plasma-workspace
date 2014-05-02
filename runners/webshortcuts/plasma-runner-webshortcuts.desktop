@@ -1,9 +1,11 @@
 [Desktop Entry]
 # ctxt: plasma runner
 Name=Web Shortcuts
+Name[nl]=Webkoppelingen
 Name[uk]=Вебскорочення
 Name[x-test]=xxWeb Shortcutsxx
 Comment=Allows user to use Konqueror's web shortcuts
+Comment[nl]=Maakt het mogelijk om webkoppelingen van Konqueror te gebruiken
 Comment[uk]=Надає змогу використовувати вебскорочення Konqueror
 Comment[x-test]=xxAllows user to use Konqueror's web shortcutsxx
 X-KDE-ServiceTypes=Plasma/Runner

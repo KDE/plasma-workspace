@@ -1,8 +1,10 @@
 [Misc]
 Name=CDE
+Name[nl]=CDE
 Name[uk]=CDE
 Name[x-test]=xxCDExx
 Comment=Built-in unthemed CDE style
+Comment[nl]=Ingebouwde themaloze CDE-stijl
 Comment[uk]=Вбудований стиль CDE без теми
 Comment[x-test]=xxBuilt-in unthemed CDE stylexx
 [KDE]

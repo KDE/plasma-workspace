@@ -1,8 +1,10 @@
 [Desktop Entry]
 Name=Share Services
+Name[nl]=Services voor delen
 Name[uk]=Служби оприлюднення
 Name[x-test]=xxShare Servicesxx
 Comment=Engine to share content using different services
+Comment[nl]=Engine om inhoud te delen met gebruik van verschillende services
 Comment[uk]=Рушій спільного використання даних різними службами
 Comment[x-test]=xxEngine to share content using different servicesxx
 Type=Service

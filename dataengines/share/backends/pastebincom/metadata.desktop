@@ -1,8 +1,10 @@
 [Desktop Entry]
 Name=pastebin.com
+Name[nl]=pastebin.com
 Name[uk]=pastebin.com
 Name[x-test]=xxpastebin.comxx
 Comment=Allows text to be shared using the pastebin.com service
+Comment[nl]=Staat het delen van tekst toe met gebruik van de service pastebin.com
 Comment[uk]=Уможливлює оприлюднення фрагментів тексту за допомогою служби pastebin.com
 Comment[x-test]=xxAllows text to be shared using the pastebin.com servicexx
 Type=Service

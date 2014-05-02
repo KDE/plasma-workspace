@@ -1,10 +1,12 @@
 [Desktop Entry]
 Name=Switch Window
+Name[nl]=Venster omschakelen
 Name[uk]=Перемкнути вікно
 Name[x-test]=xxSwitch Windowxx
 Type=Service
 Icon=preferences-system-windows
 Comment=Show a list of windows to switch to
+Comment[nl]=Toon een lijst met vensters waarnaar om te schakelen
 Comment[uk]=Показує список вікон для перемикання
 Comment[x-test]=xxShow a list of windows to switch toxx
 

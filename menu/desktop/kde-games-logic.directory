@@ -2,6 +2,7 @@
 Encoding=UTF-8
 Type=Directory
 Name=Logic Games
+Name[nl]=Logische spellen
 Name[uk]=Логічні ігри
 Name[x-test]=xxLogic Gamesxx
 Icon=applications-games-logic

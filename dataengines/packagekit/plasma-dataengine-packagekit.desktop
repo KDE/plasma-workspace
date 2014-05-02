@@ -1,9 +1,11 @@
 [Desktop Entry]
 Encoding=UTF-8
 Name=PackageKit
+Name[nl]=PackageKit
 Name[uk]=PackageKit
 Name[x-test]=xxPackageKitxx
 Comment=PackageKit Data Engine
+Comment[nl]=Pakketkit Gegevensengine
 Comment[uk]=Рушій даних PackageKit
 Comment[x-test]=xxPackageKit Data Enginexx
 

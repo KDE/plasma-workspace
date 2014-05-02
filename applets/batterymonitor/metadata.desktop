@@ -1,12 +1,15 @@
 [Desktop Entry]
 Name=Battery & Brightness
+Name[nl]=Batterij & helderheid
 Name[uk]=Акумулятор і яскравість дисплея
 Name[x-test]=xxBattery & Brightnessxx
 Comment=See the power status of your battery
+Comment[nl]=Zie de capaciteitsstatus van uw accu
 Comment[uk]=Перегляньте стан заряду акумулятора
 Comment[x-test]=xxSee the power status of your batteryxx
 Encoding=UTF-8
 Keywords=Power Management;Battery;System;Energy;
+Keywords[nl]=Energiebeheer;Batterij;Accu;Systeem;Energie;
 Keywords[uk]=Power Management;Battery;System;Energy;керування живленням;акумулятор;система;енергія;батарея;батарейка;живлення;
 Keywords[x-test]=xxPower Management;Battery;System;Energy;xx
 

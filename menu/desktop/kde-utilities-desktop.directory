@@ -2,9 +2,11 @@
 Encoding=UTF-8
 Type=Directory
 Name=Desktop
+Name[nl]=Bureaublad
 Name[uk]=Стільниця
 Name[x-test]=xxDesktopxx
 Icon=user-desktop
 Comment=Desktop
+Comment[nl]=Bureaublad
 Comment[uk]=Стільниця
 Comment[x-test]=xxDesktopxx

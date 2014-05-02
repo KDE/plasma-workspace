@@ -1,8 +1,10 @@
 [Desktop Entry]
 Name=Password dialog
+Name[nl]=Wachtwoordvenster
 Name[uk]=Вікно для вводу пароля
 Name[x-test]=xxPassword dialogxx
 Comment=Screen locker that provides a password dialog and an interface to switch the current user
+Comment[nl]=Schermvergrendeling die een wachtwoordvenster en een interface om naar de huidige gebruiker om te schakelen biedt
 Comment[uk]=Блокувальник екрана з вікном пароля і інтерфейсом для перемикання поточного користувача
 Comment[x-test]=xxScreen locker that provides a password dialog and an interface to switch the current userxx
 Icon=system-lock-screen

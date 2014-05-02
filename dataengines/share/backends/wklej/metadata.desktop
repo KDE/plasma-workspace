@@ -1,8 +1,10 @@
 [Desktop Entry]
 Name=wklej.org
+Name[nl]=wklej.org
 Name[uk]=wklej.org
 Name[x-test]=xxwklej.orgxx
 Comment=Allows text to be shared using the wklej.org service
+Comment[nl]=Staat het delen van tekst toe met gebruik van de service wklej.org
 Comment[uk]=Уможливлює оприлюднення фрагментів тексту за допомогою служби wklej.org
 Comment[x-test]=xxAllows text to be shared using the wklej.org servicexx
 Type=Service

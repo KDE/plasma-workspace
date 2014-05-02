@@ -1,8 +1,10 @@
 [Desktop Entry]
 Name=Window Information
+Name[nl]=Vensterinformatie
 Name[uk]=Інформація про вікна
 Name[x-test]=xxWindow Informationxx
 Comment=Information and management services for all available windows.
+Comment[nl]=Informatie- en beheerservices voor alle beschikbare vensters.
 Comment[uk]=Відомості щодо служб і керування ними для всіх доступних вікон.
 Comment[x-test]=xxInformation and management services for all available windows.xx
 Type=Service

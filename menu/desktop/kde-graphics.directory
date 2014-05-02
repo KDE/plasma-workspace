@@ -2,6 +2,7 @@
 Encoding=UTF-8
 Type=Directory
 Name=Graphics
+Name[nl]=Grafisch
 Name[uk]=Графіка
 Name[x-test]=xxGraphicsxx
 Icon=applications-graphics

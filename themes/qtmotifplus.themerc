@@ -1,8 +1,10 @@
 [Misc]
 Name=Motif Plus
+Name[nl]=Motif Plus
 Name[uk]=Motif Plus
 Name[x-test]=xxMotif Plusxx
 Comment=Built-in enhanced Motif style
+Comment[nl]=Ingebouwde verbeterde Motif-stijl
 Comment[uk]=Вбудований покращений стиль Motif
 Comment[x-test]=xxBuilt-in enhanced Motif stylexx
 [KDE]

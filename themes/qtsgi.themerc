@@ -1,8 +1,10 @@
 [Misc]
 Name=SGI
+Name[nl]=SGI
 Name[uk]=SGI
 Name[x-test]=xxSGIxx
 Comment=Built-in SGI style
+Comment[nl]=Ingebouwde SGI-stijl
 Comment[uk]=Вбудований стиль SGI
 Comment[x-test]=xxBuilt-in SGI stylexx
 [KDE]

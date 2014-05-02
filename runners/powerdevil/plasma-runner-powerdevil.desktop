@@ -1,9 +1,11 @@
 [Desktop Entry]
 Comment=Basic Power Management Operations
+Comment[nl]=Basis energiebeheeroperaties
 Comment[uk]=Керування базовими операціями з керування живленням
 Comment[x-test]=xxBasic Power Management Operationsxx
 Icon=preferences-system-power-management
 Name=PowerDevil
+Name[nl]=PowerDevil
 Name[uk]=PowerDevil
 Name[x-test]=xxPowerDevilxx
 Type=Service

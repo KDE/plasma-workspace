@@ -2,6 +2,7 @@
 Type=ServiceType
 X-KDE-ServiceType=PhononBackend
 Name=KDE Multimedia Backend
+Name[nl]=KDE multimedia-backend
 Name[uk]=Сервер мультимедіа KDE
 Name[x-test]=xxKDE Multimedia Backendxx
 

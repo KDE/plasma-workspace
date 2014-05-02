@@ -1,8 +1,10 @@
 [Desktop Entry]
 Name=BBC Weather from UK MET Office
+Name[nl]=BBC Weather van UK MET Office
 Name[uk]=Погода BBC з метеорологічного офісу UK
 Name[x-test]=xxBBC Weather from UK MET Officexx
 Comment=XML Data from the UK MET Office
+Comment[nl]=XML-gegevens van UK MET Office
 Comment[uk]=Дані XML з метеорологічного офісу UK
 Comment[x-test]=xxXML Data from the UK MET Officexx
 X-KDE-ServiceTypes=Plasma/DataEngine

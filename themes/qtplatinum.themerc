@@ -1,8 +1,10 @@
 [Misc]
 Name=Platinum
+Name[nl]=Platinum
 Name[uk]=Platinum
 Name[x-test]=xxPlatinumxx
 Comment=Built-in unthemed Platinum style
+Comment[nl]=Ingebouwde themaloze Platinum-stijl
 Comment[uk]=Вбудований стиль Platinum без теми
 Comment[x-test]=xxBuilt-in unthemed Platinum stylexx
 [KDE]

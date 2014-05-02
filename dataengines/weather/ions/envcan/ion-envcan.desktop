@@ -1,8 +1,10 @@
 [Desktop Entry]
 Name=Environment Canada
+Name[nl]=Environment Canada
 Name[uk]=Погода в Канаді
 Name[x-test]=xxEnvironment Canadaxx
 Comment=XML Data from Environment Canada
+Comment[nl]=XML-gegevens van Environment Canada
 Comment[uk]=Дані XML з метеорологічного відділу Канади
 Comment[x-test]=xxXML Data from Environment Canadaxx
 X-KDE-ServiceTypes=Plasma/DataEngine

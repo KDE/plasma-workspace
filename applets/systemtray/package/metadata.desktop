@@ -1,8 +1,10 @@
 [Desktop Entry]
 Name=System Tray
+Name[nl]=Systeemvak
 Name[uk]=Системний лоток
 Name[x-test]=xxSystem Trayxx
 Comment=Access hidden applications minimized in the system tray
+Comment[nl]=Biedt toegang tot programma's die in het systeemvak draaien
 Comment[uk]=Доступ до прихованих програм, мінімізованих до системного лотка
 Comment[x-test]=xxAccess hidden applications minimized in the system trayxx
 Icon=preferences-desktop-notification
