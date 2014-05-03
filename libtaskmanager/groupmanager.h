@@ -75,8 +75,8 @@ public:
     */
     enum TaskGroupingStrategy {
         NoGrouping = 0,
-        ManualGrouping = 1, //Allow manual grouping
-        ProgramGrouping = 2
+        ProgramGrouping = 1,
+        ManualGrouping = 2
     };
 
     TaskGroupingStrategy groupingStrategy() const;
