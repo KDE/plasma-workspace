@@ -29,6 +29,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 // forward declarations
 class KActionCollection;
 class QTimer;
+class KSldTest;
 
 namespace ScreenLocker
 {
@@ -123,6 +124,9 @@ private:
      **/
     QTimer *m_graceTimer;
     int m_inhibitCounter;
+
+    // for auto tests
+    friend KSldTest;
 };
 } // namespace
 

@@ -43,6 +43,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include <QX11Info>
 // X11
 #include <X11/Xlib.h>
+#include <xcb/xcb.h>
 // other
 #include <unistd.h>
 #include <signal.h>
@@ -317,8 +318,10 @@ static bool grabMouse()
 void KSldApp::doUnlock()
 {
     qDebug() << "Grab Released";
-    XUngrabKeyboard(QX11Info::display(), CurrentTime);
-    XUngrabPointer(QX11Info::display(), CurrentTime);
+    xcb_connection_t *c = QX11Info::connection();
+    xcb_ungrab_keyboard(c, XCB_CURRENT_TIME);
+    xcb_ungrab_pointer(c, XCB_CURRENT_TIME);
+    xcb_flush(c);
     hideLockWindow();
     // delete the window again, to get rid of event filter
     delete m_lockWindow;
