@@ -43,7 +43,7 @@ DesktopView::DesktopView(ShellCorona *corona, QScreen *screen)
     setSource(QUrl::fromLocalFile(corona->package().filePath("views", "Desktop.qml")));
 
     //For some reason, if I connect the method directly it doesn't get called, I think it's for the lack of argument
-    connect(this, &QWindow::screenChanged, this, [=](QScreen*) { adaptToScreen(); });
+    connect(this, &QWindow::screenChanged, this, [=](QScreen*) { adaptToScreen(); ensureStayBehind(); });
 }
 
 DesktopView::~DesktopView()
@@ -61,13 +61,9 @@ void DesktopView::setStayBehind(bool stayBehind)
         return;
     }
 
-    if (stayBehind) {
-        KWindowSystem::setType(winId(), NET::Desktop);
-    } else {
-        KWindowSystem::setType(winId(), NET::Normal);
-    }
-
     m_stayBehind = stayBehind;
+    ensureStayBehind();
+
     emit stayBehindChanged();
 }
 
@@ -105,6 +101,15 @@ void DesktopView::adaptToScreen()
         disconnect(screen(), &QScreen::geometryChanged, this, static_cast<void (QWindow::*)(const QRect&)>(&QWindow::setGeometry));
     }
     qDebug() << "adapted" << geometry() << (containment () ? containment()->wallpaper() : "xx");
+}
+
+void DesktopView::ensureStayBehind()
+{
+    if (m_stayBehind) {
+        KWindowSystem::setType(winId(), NET::Desktop);
+    } else {
+        KWindowSystem::setType(winId(), NET::Normal);
+    }
 }
 
 void DesktopView::setDashboardShown(bool shown)

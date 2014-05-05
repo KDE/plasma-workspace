@@ -61,6 +61,7 @@ Q_SIGNALS:
     void fillScreenChanged();
 
 private:
+    void ensureStayBehind();
     virtual void moveEvent(QMoveEvent* ev);
 
     QPointer<PlasmaQuick::ConfigView> m_configView;
