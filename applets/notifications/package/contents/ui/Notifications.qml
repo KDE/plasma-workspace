@@ -33,10 +33,13 @@ Column {
 
     property QtObject notificationPopup
     property alias count: notificationsRepeater.count
-    property var notificationStack
 
     Component.onCompleted: {
-        notificationStack = new Array()
+        // Create the popup components and pass them to the C++ plugin
+        for (var i = 0; i < 3; i++) {
+            var popup = notificationPopupComponent.createObject();
+            notificationPositioner.addNotificationPopup(popup);
+        }
     }
 
     function addNotification(source, appIcon, image, appName, summary, body, isPersistent, expireTimeout, urgency, appRealName, configurable, actions) {
@@ -78,9 +81,7 @@ Column {
             notificationsModel.inserting = false;
         }
 
-        var popup = notificationPopupComponent.createObject();
-        popup.populatePopup(notification);
-        notificationPositioner.positionPopup(popup);
+        notificationPositioner.displayNotification(notification);
     }
 
     function executeAction(source, id) {

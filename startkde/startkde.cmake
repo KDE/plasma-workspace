@@ -64,11 +64,11 @@ fi
 
 mkdir -p $configDir
 
-#This is basically setting defaults so we can use them with kstartupconfig4
+#This is basically setting defaults so we can use them with kstartupconfig5
 cat >$configDir/startupconfigkeys <<EOF
-kcminputrc Mouse cursorTheme 'Oxygen_White'
+kcminputrc Mouse cursorTheme 'breeze'
 kcminputrc Mouse cursorSize ''
-ksplashrc KSplash Theme Classic
+ksplashrc KSplash Theme Breeze
 ksplashrc KSplash Engine KSplashQML
 kcmfonts General forceFontDPI 0
 kdeglobals Locale Language '' # trigger requesting languages from KLocale
