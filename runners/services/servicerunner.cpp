@@ -168,6 +168,7 @@ void ServiceRunner::match(Plasma::RunnerContext &context)
 
         //qDebug() << service->name() << "is this relevant:" << relevance;
         match.setRelevance(relevance);
+        match.setMatchCategory(i18n("System Settings"));
         matches << match;
     }
 
