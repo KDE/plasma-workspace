@@ -249,9 +249,7 @@ static QList<KScreen::Output*> sortOutputs(const QHash<int, KScreen::Output*> &o
 {
     QList<KScreen::Output*> ret;
     foreach(KScreen::Output* output, outputs) {
-        if(!output->isEnabled())
-            ;
-        else if(output->isPrimary())
+        if(output->isPrimary())
             ret.prepend(output);
         else
             ret.append(output);
@@ -298,10 +296,9 @@ void ShellCorona::load()
     d->screenConfiguration = KScreen::Config::current();
     KScreen::ConfigMonitor::instance()->addConfig(d->screenConfiguration);
     for (KScreen::Output *output : sortOutputs(d->screenConfiguration->connectedOutputs())) {
-        outputAdded(output);
+        addOutput(output);
     }
-    connect(d->screenConfiguration, &KScreen::Config::outputAdded,
-            this, &ShellCorona::outputAdded);
+    connect(d->screenConfiguration, &KScreen::Config::outputAdded, this, &ShellCorona::addOutput);
     connect(d->screenConfiguration, &KScreen::Config::primaryOutputChanged,
             this, &ShellCorona::primaryOutputChanged);
 
@@ -313,6 +310,8 @@ void ShellCorona::load()
 void ShellCorona::primaryOutputChanged()
 {
     KScreen::Config* current = d->screenConfiguration;
+    if(!current->primaryOutput())
+        return;
     QScreen* newPrimary = outputToScreen(current->primaryOutput());
     int i=0;
     foreach(DesktopView* view, d->views) {
@@ -323,7 +322,7 @@ void ShellCorona::primaryOutputChanged()
     QScreen* oldPrimary = d->views.first()->screen();
     qDebug() << "primary changed!" << oldPrimary->name() << newPrimary->name() << i;
 //
-//     //if it was not found, it means that outputAdded hasn't been called yet
+//     //if it was not found, it means that addOutput hasn't been called yet
     if (i>=d->views.count() || i==0)
         return;
 //
@@ -350,7 +349,13 @@ void ShellCorona::primaryOutputChanged()
 
 void ShellCorona::screenInvariants()
 {
-    QScreen* s = outputToScreen(d->screenConfiguration->primaryOutput());
+    Q_ASSERT(d->views.count() <= QGuiApplication::screens().count());
+    QScreen* s = d->screenConfiguration->primaryOutput() ? outputToScreen(d->screenConfiguration->primaryOutput()) : d->views[0]->screen();
+    if (!s) {
+        qWarning() << "error: couldn't find primary output" << d->screenConfiguration->primaryOutput();
+        return;
+    }
+
     Q_ASSERT(d->views[0]->screen()->name() == s->name());
     Q_ASSERT(d->views[0]->geometry() == s->geometry());
 
@@ -501,8 +506,11 @@ PanelView *ShellCorona::panelView(Plasma::Containment *containment) const
 
 ///// SLOTS
 
-void ShellCorona::outputAdded(KScreen::Output* output)
+void ShellCorona::addOutput(KScreen::Output* output)
 {
+    connect(output, &KScreen::Output::isEnabledChanged, this, [this, output]() { this->addOutput(output); }, Qt::UniqueConnection);
+    if(!output->isEnabled())
+        return;
     QScreen* screen = outputToScreen(output);
     Q_ASSERT(screen);
 
@@ -516,6 +524,15 @@ void ShellCorona::outputAdded(KScreen::Output* output)
         }
     }
 
+    //let's make sure the output hasn't been added already, I think libkscreen is emitting some
+    //signals twice
+    foreach (DesktopView* view, d->views) {
+        if (screen == view->screen()) {
+            qWarning() << "trying to add output twice" << output;
+            return;
+        }
+    }
+
     DesktopView *view = new DesktopView(this, screen);
 
     //We have to do it in a lambda,
@@ -523,7 +540,7 @@ void ShellCorona::outputAdded(KScreen::Output* output)
 
     const QString currentActivity = d->activityController->currentActivity();
 
-    qDebug() << "adding screen" << output->name() << output->isPrimary();
+    qDebug() << "added screen" << output;
     if (!d->views.isEmpty() && output->isPrimary()) {
         DesktopView* oldPrimaryView = d->views.first();
         QScreen* oldPrimaryScreen = oldPrimaryView->screen();
@@ -584,6 +601,7 @@ void ShellCorona::removeDesktop(DesktopView* view)
 
     for(int i = idx; i<d->views.count()-1; ++i) {
         d->views[i]->setScreen(d->views[i+1]->screen());
+        d->views[i]->adaptToScreen();
     }
 
     screenInvariants();

@@ -145,7 +145,7 @@ private Q_SLOTS:
 
     void removePanel(Plasma::Containment* cont);
     void removeDesktop(DesktopView* screen);
-    void outputAdded(KScreen::Output* output);
+    void addOutput(KScreen::Output* output);
     void primaryOutputChanged();
 
     void activityOpened();
