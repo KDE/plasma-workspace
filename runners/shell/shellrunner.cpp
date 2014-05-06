@@ -27,7 +27,6 @@
 #ifdef Q_OS_UNIX
 #include <SuProcess>
 #endif
-#include <KGlobal>
 #include <KLocale>
 #include <KRun>
 #include <KShell>
@@ -95,7 +94,7 @@ void ShellRunner::run(const Plasma::RunnerContext &context, const Plasma::QueryM
             QString args;
             if (m_inTerminal) {
                 // we have to reimplement this from KToolInvocation because we need to use KDESu
-                KConfigGroup confGroup( KGlobal::config(), "General" );
+                KConfigGroup confGroup = KSharedConfig::openConfig()->group("General");
                 exec = confGroup.readPathEntry("TerminalApplication", "konsole");
                 if (!exec.isEmpty()) {
                     if (exec == "konsole") {
