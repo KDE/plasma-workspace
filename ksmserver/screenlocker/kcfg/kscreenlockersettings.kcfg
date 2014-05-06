@@ -3,8 +3,8 @@
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:schemaLocation="http://www.kde.org/standards/kcfg/1.0
                            http://www.kde.org/standards/kcfg/1.0/kcfg.xsd" >
-  <kcfgfile name="kscreensaverrc" />
-  <group name="ScreenSaver">
+  <kcfgfile name="kscreenlockerrc" />
+  <group name="Daemon">
     <entry key="Timeout" type="Int">
       <default>300</default>
       <min>0</min>
@@ -33,6 +33,8 @@
       <label></label>
       <whatsthis></whatsthis>
     </entry>
+  </group>
+  <group name="Greeter">
     <entry key="GreeterQML" type="String">
       <default>org.kde.passworddialog</default>
       <label></label>
