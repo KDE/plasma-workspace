@@ -20,7 +20,7 @@
 
 #include <QMimeData>
 
-#include <KIcon>
+#include <QIcon>
 #include <QDebug>
 #include <KLocale>
 #include <KRun>
@@ -235,7 +235,7 @@ void ServiceRunner::setupMatch(const KService::Ptr &service, Plasma::QueryMatch 
     }
 
     if (!service->icon().isEmpty()) {
-        match.setIcon(KIcon(service->icon()));
+        match.setIcon(QIcon::fromTheme(service->icon()));
     }
 }
 
