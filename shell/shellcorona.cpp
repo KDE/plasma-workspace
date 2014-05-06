@@ -133,8 +133,8 @@ ShellCorona::ShellCorona(QObject *parent)
     QDBusConnection dbus = QDBusConnection::sessionBus();
     dbus.registerObject(QStringLiteral("/PlasmaShell"), this);
 
-    connect(this, &Plasma::Corona::startupCompleted,
-            [=]() {
+    connect(this, &Plasma::Corona::startupCompleted, this,
+            []() {
                 QDBusMessage ksplashProgressMessage = QDBusMessage::createMethodCall(QStringLiteral("org.kde.KSplash"),
                                                QStringLiteral("/KSplash"),
                                                QStringLiteral("org.kde.KSplash"),
@@ -172,12 +172,12 @@ ShellCorona::ShellCorona(QObject *parent)
 
     d->scriptEngine = new WorkspaceScripting::DesktopScriptEngine(this, true);
 
-    connect(d->scriptEngine, &WorkspaceScripting::ScriptEngine::printError,
-            [=](const QString &msg) {
+    connect(d->scriptEngine, &WorkspaceScripting::ScriptEngine::printError, this,
+            [](const QString &msg) {
                 qWarning() << msg;
             });
-    connect(d->scriptEngine, &WorkspaceScripting::ScriptEngine::print,
-            [=](const QString &msg) {
+    connect(d->scriptEngine, &WorkspaceScripting::ScriptEngine::print, this,
+            [](const QString &msg) {
                 qDebug() << msg;
             });
 
@@ -218,6 +218,8 @@ ShellCorona::ShellCorona(QObject *parent)
 ShellCorona::~ShellCorona()
 {
     qDeleteAll(d->views);
+    qDeleteAll(d->panelViews);
+    delete d;
 }
 
 void ShellCorona::setShell(const QString &shell)
@@ -350,7 +352,7 @@ void ShellCorona::primaryOutputChanged()
 void ShellCorona::screenInvariants()
 {
     Q_ASSERT(d->views.count() <= QGuiApplication::screens().count());
-    QScreen* s = d->screenConfiguration->primaryOutput() ? outputToScreen(d->screenConfiguration->primaryOutput()) : d->views[0]->screen();
+    QScreen* s = d->screenConfiguration->primaryOutput() ? outputToScreen(d->screenConfiguration->primaryOutput()) : d->views.isEmpty() ? nullptr : d->views[0]->screen();
     if (!s) {
         qWarning() << "error: couldn't find primary output" << d->screenConfiguration->primaryOutput();
         return;
@@ -434,12 +436,8 @@ QRect ShellCorona::screenGeometry(int id) const
 QRegion ShellCorona::availableScreenRegion(int id) const
 {
     DesktopView *view = 0;
-    foreach (DesktopView *v, d->views) {
-        if (v->containment() && v->containment()->screen() == id) {
-            view = v;
-            break;
-        }
-    }
+    if (id >= 0 && id < d->views.count())
+        view = d->views[id];
 
     if (view) {
         QRegion r = view->geometry();
@@ -450,7 +448,10 @@ QRegion ShellCorona::availableScreenRegion(int id) const
         }
         return r;
     } else {
-        return QApplication::desktop()->availableGeometry(id);
+        //each screen should have a view
+        qWarning() << "requesting unexisting screen" << id;
+        QScreen* s = outputToScreen(d->screenConfiguration->primaryOutput());
+        return s ? s->availableGeometry() : QRegion();
     }
 }
 
@@ -607,8 +608,10 @@ void ShellCorona::removeDesktop(DesktopView* view)
     screenInvariants();
 }
 
-void ShellCorona::removePanel(Plasma::Containment* cont)
+void ShellCorona::removePanel(QObject* c)
 {
+    Plasma::Containment* cont = qobject_cast<Plasma::Containment*>(c);
+
     d->panelViews[cont]->deleteLater();
     d->waitingPanels << cont;
     d->panelViews.remove(cont);
@@ -656,17 +659,9 @@ void ShellCorona::createWaitingPanels()
 
         d->panelViews[cont]->setScreen(screen);
         cont->reactToScreenChange();
-        connect(cont, &QObject::destroyed,
-                [=](QObject* ) {
-                    d->panelViews.remove(cont);
-                    emit availableScreenRectChanged();
-                    emit availableScreenRegionChanged();
-                });
+        connect(cont, SIGNAL(destroyed(QObject*)), this, SLOT(containmentDeleted(QObject*)));
 
-        connect(screen, &QObject::destroyed,
-                [=](QObject*) {
-                    removePanel(cont);
-                });
+        connect(screen, SIGNAL(destroyed(QObject*)), this, SLOT(removePanel(QObject*)));
     }
     d->waitingPanels.clear();
     d->waitingPanels << stillWaitingPanels;
@@ -674,7 +669,12 @@ void ShellCorona::createWaitingPanels()
     emit availableScreenRegionChanged();
 }
 
-
+void ShellCorona::containmentDeleted(QObject* cont)
+{
+    d->panelViews.remove(static_cast<Plasma::Containment*>(cont));
+    emit availableScreenRectChanged();
+    emit availableScreenRegionChanged();
+}
 
 void ShellCorona::handleContainmentAdded(Plasma::Containment* c)
 {
@@ -1077,22 +1077,25 @@ void ShellCorona::insertContainment(const QString &activity, int screenNum, Plas
     d->desktopContainments[activity][screenNum] = containment;
 
     //when a containment gets deleted update our map of containments
-    connect(containment, &QObject::destroyed, [=](QObject *obj) {
-        // when QObject::destroyed arrives, ~Plasma::Containment has run,
-        // members of Containment are not accessible anymore,
-        // so keep ugly bookeeping by hand
-        auto containment = static_cast<Plasma::Containment*>(obj);
-        for (auto a : d->desktopContainments) {
-            QMutableHashIterator<int, Plasma::Containment *> it(a);
-            while (it.hasNext()) {
-                it.next();
-                if (it.value() == containment) {
-                    it.remove();
-                    return;
-                }
+    connect(containment, SIGNAL(destroyed(QObject*)), this, SLOT(desktopContainmentDestroyed(QObject*)));
+}
+
+void ShellCorona::desktopContainmentDestroyed(QObject *obj)
+{
+    // when QObject::destroyed arrives, ~Plasma::Containment has run,
+    // members of Containment are not accessible anymore,
+    // so keep ugly bookeeping by hand
+    auto containment = static_cast<Plasma::Containment*>(obj);
+    for (auto a : d->desktopContainments) {
+        QMutableHashIterator<int, Plasma::Containment *> it(a);
+        while (it.hasNext()) {
+            it.next();
+            if (it.value() == containment) {
+                it.remove();
+                return;
             }
         }
-    });
+    }
 }
 
 Plasma::Package ShellCorona::lookAndFeelPackage() const

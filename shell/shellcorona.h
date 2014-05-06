@@ -142,8 +142,9 @@ private Q_SLOTS:
     void addPanel();
     void addPanel(QAction *action);
     void addPanel(const QString &plugin);
+    void containmentDeleted(QObject* cont);
 
-    void removePanel(Plasma::Containment* cont);
+    void removePanel(QObject* cont);
     void removeDesktop(DesktopView* screen);
     void addOutput(KScreen::Output* output);
     void primaryOutputChanged();
@@ -151,6 +152,7 @@ private Q_SLOTS:
     void activityOpened();
     void activityClosed();
     void activityRemoved();
+    void desktopContainmentDestroyed(QObject*);
 
 private:
     void screenInvariants();
@@ -162,7 +164,7 @@ private:
     void insertContainment(const QString &activity, int screenNum, Plasma::Containment *containment);
 
     class Private;
-    const QScopedPointer<Private> d;
+    Private * d;
 };
 
 #endif // SHELLCORONA_H
