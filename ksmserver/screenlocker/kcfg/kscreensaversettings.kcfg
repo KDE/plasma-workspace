@@ -5,13 +5,9 @@
                            http://www.kde.org/standards/kcfg/1.0/kcfg.xsd" >
   <kcfgfile name="kscreensaverrc" />
   <group name="ScreenSaver">
-    <entry name="ScreenSaverEnabled" key="Enabled" type="Bool">
-      <default>false</default>
-      <label>Enable screen saver</label>
-      <whatsthis>Enables the screen saver.</whatsthis>
-    </entry>
     <entry key="Timeout" type="Int">
       <default>300</default>
+      <min>0</min>
       <label>Screen saver timeout</label>
       <whatsthis>Sets the seconds after which the screen saver is started.</whatsthis>
     </entry>

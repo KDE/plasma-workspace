@@ -215,7 +215,7 @@ void KSldApp::configure()
     }
     const int timeout = KScreenSaverSettings::timeout();
     // screen saver enabled means there is an auto lock timer
-    if (KScreenSaverSettings::screenSaverEnabled() && timeout > 0) {
+    if (timeout > 0) {
         // timeout stored in seconds
         m_idleId = KIdleTime::instance()->addIdleTimeout(timeout*1000);
     }
