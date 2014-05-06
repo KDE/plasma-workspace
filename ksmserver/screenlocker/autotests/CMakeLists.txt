@@ -35,3 +35,11 @@ ecm_mark_as_test(keyboardGrabber)
 add_executable(pointerGrabber pointergrabber.cpp)
 target_link_libraries(pointerGrabber Qt5::Core XCB::XCB)
 ecm_mark_as_test(pointerGrabber)
+
+#######################################
+# LockWindowTest
+#######################################
+add_executable(lockWindowTest lockwindowtest.cpp)
+target_link_libraries(lockWindowTest Qt5::Test screenlocker_static)
+add_test(ksmserver-lockWindowTest lockWindowTest)
+ecm_mark_as_test(lockWindowTest)
