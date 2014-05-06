@@ -19,6 +19,7 @@
 #include "locationrunner.h"
 
 #include <QMimeData>
+#include <QIcon>
 
 #include <QDebug>
 #include <KRun>
@@ -26,7 +27,6 @@
 #include <KMimeType>
 #include <KShell>
 #include <KUrl>
-#include <KIcon>
 #include <KProtocolInfo>
 #include <KUriFilter>
 
@@ -61,9 +61,9 @@ void LocationsRunner::match(Plasma::RunnerContext &context)
         match.setText(i18n("Open %1", term));
 
         if (type == Plasma::RunnerContext::File) {
-            match.setIcon(KIcon(KMimeType::iconNameForUrl(KUrl(term))));
+            match.setIcon(QIcon::fromTheme(KMimeType::iconNameForUrl(KUrl(term))));
         } else {
-            match.setIcon(KIcon("system-file-manager"));
+            match.setIcon(QIcon::fromTheme("system-file-manager"));
         }
 
         match.setRelevance(1);
@@ -81,7 +81,7 @@ void LocationsRunner::match(Plasma::RunnerContext &context)
         Plasma::QueryMatch match(this);
         match.setType(Plasma::QueryMatch::ExactMatch);
         match.setText(i18n("Open %1", term));
-        match.setIcon(KIcon("system-help"));
+        match.setIcon(QIcon::fromTheme("system-help"));
         match.setRelevance(1);
         match.setType(Plasma::QueryMatch::ExactMatch);
         match.setId("help");
@@ -101,7 +101,7 @@ void LocationsRunner::match(Plasma::RunnerContext &context)
 
         Plasma::QueryMatch match(this);
         match.setText(i18n("Go to %1", url.prettyUrl()));
-        match.setIcon(KIcon(KProtocolInfo::icon(url.protocol())));
+        match.setIcon(QIcon::fromTheme(KProtocolInfo::icon(url.protocol())));
         match.setData(url.url());
 
         if (KProtocolInfo::isHelperProtocol(url.protocol())) {
