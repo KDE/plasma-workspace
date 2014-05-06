@@ -22,11 +22,11 @@
 
 #include <QIcon>
 #include <QDebug>
-#include <KLocale>
+#include <QUrl>
+#include <KLocalizedString>
 #include <KRun>
 #include <KService>
 #include <KServiceTypeTrader>
-#include <KUrl>
 
 ServiceRunner::ServiceRunner(QObject *parent, const QVariantList &args)
     : Plasma::AbstractRunner(parent, args)
@@ -217,7 +217,7 @@ void ServiceRunner::run(const Plasma::RunnerContext &context, const Plasma::Quer
     Q_UNUSED(context);
     KService::Ptr service = KService::serviceByStorageId(match.data().toString());
     if (service) {
-        KRun::run(*service, KUrl::List(), 0);
+        KRun::run(*service, QList<QUrl>(), 0);
     }
 }
 
@@ -245,7 +245,7 @@ QMimeData * ServiceRunner::mimeDataForMatch(const Plasma::QueryMatch *match)
     if (service) {
         QMimeData * result = new QMimeData();
         QList<QUrl> urls;
-        urls << KUrl(service->entryPath());
+        urls << QUrl::fromLocalFile(service->entryPath());
         qDebug() << urls;
         result->setUrls(urls);
         return result;
