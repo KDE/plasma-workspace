@@ -30,7 +30,7 @@
 #include <KLocale>
 #include <KRun>
 #include <KShell>
-#include <KStandardDirs>
+#include <QStandardPaths>
 #include <KToolInvocation>
 
 #include <Plasma/Theme>
@@ -115,7 +115,7 @@ void ShellRunner::run(const Plasma::RunnerContext &context, const Plasma::QueryM
             }
 
             if (!exec.isEmpty()) {
-                exec = KStandardDirs::findExe(exec);
+                exec = QStandardPaths::findExecutable(exec);
                 exec.append(args);
                 if (!exec.isEmpty()) {
                     KDESu::SuProcess client(m_username.toLocal8Bit(), exec.toLocal8Bit());
