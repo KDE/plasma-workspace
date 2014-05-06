@@ -24,9 +24,9 @@
 #include <QTimer>
 
 #include <QDebug>
-#include <KIcon>
+#include <QIcon>
+#include <QUrl>
 #include <KRun>
-#include <KUrl>
 #include <KLocalizedString>
 
 K_EXPORT_PLASMA_RUNNER(placesrunner, PlacesRunner)
@@ -108,11 +108,11 @@ void PlacesRunnerHelper::match(Plasma::RunnerContext *c)
             Plasma::QueryMatch match(static_cast<PlacesRunner *>(parent()));
             match.setType(type);
             match.setRelevance(relevance);
-            match.setIcon(KIcon(m_places.icon(current_index)));
+            match.setIcon(m_places.icon(current_index));
             match.setText(text);
 
             //if we have to mount it set the device udi instead of the URL, as we can't open it directly
-            KUrl url;
+            QUrl url;
             if (m_places.isDevice(current_index) && m_places.setupNeeded(current_index)) {
                 url = m_places.deviceForIndex(current_index).udi();
             } else {
@@ -120,7 +120,7 @@ void PlacesRunnerHelper::match(Plasma::RunnerContext *c)
             }
 
             match.setData(url);
-            match.setId(url.prettyUrl());
+            match.setId(url.toDisplayString());
             matches << match;
         }
     }
@@ -133,8 +133,8 @@ void PlacesRunner::run(const Plasma::RunnerContext &context, const Plasma::Query
 {
     Q_UNUSED(context);
     //I don't just pass the model index because the list could change before the user clicks on it, which would make everything go wrong. Ideally we don't want things to go wrong.
-    if (action.data().canConvert<KUrl>()) {
-        new KRun(action.data().value<KUrl>().url(), 0);
+    if (action.data().type() == QVariant::Url) {
+        new KRun(action.data().toUrl(), 0);
     } else if (action.data().canConvert<QString>()) {
         //search our list for the device with the same udi, then set it up (mount it).
         QString deviceUdi = action.data().toString();
