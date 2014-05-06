@@ -3,13 +3,11 @@ set(krunner_locations_SRCS
 )
 
 add_library(krunner_locations MODULE ${krunner_locations_SRCS})
-#target_link_libraries(krunner_locations KIOCore KF5::Plasma)
 target_link_libraries(krunner_locations
     KF5::KIOCore
+    KF5::KIOWidgets
     KF5::I18n
-    #KF5::Plasma
     KF5::Runner
-    KF5::KDELibs4Support
 )
 
 install(TARGETS krunner_locations DESTINATION ${PLUGIN_INSTALL_DIR} )
