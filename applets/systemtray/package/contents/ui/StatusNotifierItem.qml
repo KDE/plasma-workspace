@@ -34,23 +34,18 @@ Item {
     property int blink_interval: 1000 // interval of blinking (if status of task is NeedsAttention)
     property variant task: null // task that provides information for item
 
-    //property bool     __has_task: task ? true : false
+    property string   __icon_name:         modelData.iconName
+    property string   __att_icon_name:     modelData.attIconName
+    property variant  __icon:              modelData.icon
+    property variant  __att_icon:          modelData.attIcon
+    property string   __overlay_icon_name: modelData.overlayIconName
+    property string   __movie_path:        modelData.moviePath
+    property int      __status:            modelData.status
 
 
-    //FIXME ask sebas what this is trying to do, other than waste my CPU cycles
-    property bool     __has_task: true
-    property string   __icon_name:         __has_task ? modelData.iconName : ""
-    property string   __att_icon_name:     __has_task ? modelData.attIconName : ""
-    property variant  __icon:              __has_task ? modelData.icon : "default"
-    property variant  __att_icon:          __has_task ? modelData.attIcon : __getDefaultIcon()
-    property string   __overlay_icon_name: __has_task ? modelData.overlayIconName : ""
-    property string   __movie_path:        __has_task ? modelData.moviePath : ""
-    property int      __status:            __has_task ? modelData.status : SystemTray.Task.UnknownStatus
-
-
-    property variant icon:    __has_task ? modelData.tooltipIcon : ""
-    property string toolTipMainText: __has_task ? modelData.tooltipTitle : ""
-    property string toolTipSubText:  __has_task ? modelData.tooltipText : ""
+    property variant icon: modelData.tooltipIcon
+    property string toolTipMainText: modelData.tooltipTitle
+    property string toolTipSubText: modelData.tooltipText
 
     // Public functions ================================================================================================
     function click(buttons) {
@@ -117,8 +112,8 @@ Item {
     KQuickControlsAddonsComponents.MouseEventListener {
         id: wheel_area
         anchors.fill: parent
-        enabled: __has_task
-        visible: __has_task
+        enabled: true
+        visible: true
         z: -2
 
         // Mouse events handlers ===========================================================================================
@@ -128,8 +123,8 @@ Item {
             hoverEnabled: true
             // if no task passed we don't accept any buttons, if icon_widget is visible we pass left button to it
             acceptedButtons: Qt.LeftButton | Qt.RightButton | Qt.MiddleButton
-            enabled: __has_task
-            visible: __has_task
+            enabled: true
+            visible: true
 
             onClicked: __processClick(mouse.button, mouse_area)
 
