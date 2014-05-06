@@ -37,7 +37,7 @@ KQuickControlsAddonsComponents.MouseEventListener {
     property variant task: null
     property bool isCurrentTask: (root.expandedTask == modelData)
 
-    property bool isHiddenItem: false //FIXME THIS LOOKS UNUSED?
+    property bool isHiddenItem: false
     property int location: plasmoid.location
 
 
