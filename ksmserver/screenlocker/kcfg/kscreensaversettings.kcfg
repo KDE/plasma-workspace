@@ -38,16 +38,6 @@
       <label></label>
       <whatsthis></whatsthis>
     </entry>
-    <entry key="PluginsUnlock" type="StringList">
-      <default></default>
-      <label></label>
-      <whatsthis></whatsthis>
-    </entry>
-    <entry key="PluginOptions" type="StringList">
-      <default></default>
-      <label></label>
-      <whatsthis></whatsthis>
-    </entry>
     <entry key="GreeterQML" type="String">
       <default>org.kde.passworddialog</default>
       <label></label>
