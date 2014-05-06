@@ -25,9 +25,9 @@
 #include <KAuthorized>
 #include <QDebug>
 #ifdef Q_OS_UNIX
-#include <SuProcess>
+#include <KDESu/SuProcess>
 #endif
-#include <KLocale>
+#include <KLocalizedString>
 #include <KRun>
 #include <KShell>
 #include <QStandardPaths>
