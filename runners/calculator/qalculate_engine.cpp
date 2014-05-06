@@ -27,10 +27,10 @@
 #include <libqalculate/Function.h>
 
 #include <QFile>
-#include <QHttp>
 #include <QApplication>
 #include <QClipboard>
 
+#include <KUrl>
 #include <KProtocolManager>
 #include <QDebug>
 #include <KLocale>
