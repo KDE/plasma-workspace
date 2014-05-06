@@ -79,11 +79,15 @@ Rectangle {
         fadeAnim.running = true
     }
 
-    function updateTargetSize() {
-        wallpaper.configuration.width = root.width
-        wallpaper.configuration.height = root.height
-        print("WPS Target size updated in config to " + wallpaper.configuration.width + "x" + wallpaper.configuration.height)
-
+    Binding {
+        target: wallpaper.configuration
+        property: "width"
+        value: root.width
+    }
+    Binding {
+        target: wallpaper.configuration
+        property: "height"
+        value: root.height
     }
 
     Component.onCompleted: {
@@ -121,8 +125,6 @@ Rectangle {
         fadeWallpaper()
     }
 
-    onWidthChanged: updateTargetSize();
-    onHeightChanged: updateTargetSize();
 
     SequentialAnimation {
         id: fadeAnim
