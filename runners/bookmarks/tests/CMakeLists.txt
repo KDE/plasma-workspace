@@ -19,7 +19,7 @@ target_link_libraries( testChromeBookmarks
     Qt5::Sql
     KF5::Runner
     KF5::KIOCore
-    KF5::KDELibs4Support)
+)
 
 add_test(plasma-runner-bookmarks-TestChromeBookmarks testChromeBookmarks)
 ecm_mark_as_test(testChromeBookmarks)

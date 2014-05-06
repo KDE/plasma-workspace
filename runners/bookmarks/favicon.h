@@ -23,7 +23,7 @@
 #define FAVICON_H
 
 #include <QObject>
-#include <KIcon>
+#include <QIcon>
 
 class Favicon : public QObject
 {
@@ -33,9 +33,9 @@ public:
     virtual QIcon iconFor(const QString &url) = 0;
 
 protected:
-    inline KIcon defaultIcon() const { return m_default_icon; }
+    inline QIcon defaultIcon() const { return m_default_icon; }
 private:
-    KIcon const m_default_icon;
+    QIcon const m_default_icon;
 
 public Q_SLOTS:
     virtual void prepare() {}

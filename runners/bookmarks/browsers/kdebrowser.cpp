@@ -19,17 +19,19 @@
  */
 
 #include "kdebrowser.h"
-#include <KBookmarkManager>
+#include "bookmarkmatch.h"
+#include "favicon.h"
+
 #include <QStack>
 #include <QIcon>
-#include "bookmarkmatch.h"
-#include <KUrl>
-#include <KMimeType>
-#include "favicon.h"
+#include <QUrl>
+
+#include <KIO/Global>
+#include <KBookmarkManager>
 
 
 QIcon KDEFavicon::iconFor(const QString &url)  {
-    const QString iconFile = KMimeType::favIconForUrl(KUrl(url));
+    const QString iconFile = KIO::favIconForUrl(QUrl(url));
     if (iconFile.isEmpty()) {
         return defaultIcon();
     }
