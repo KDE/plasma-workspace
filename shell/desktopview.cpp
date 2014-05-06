@@ -91,6 +91,9 @@ void DesktopView::moveEvent(QMoveEvent* ev)
 
 void DesktopView::adaptToScreen()
 {
+    //This happens sometimes, when shutting down the process
+    if (!screen())
+        return;
     qDebug() << "adapting to screen" << screen()->name() << this;
     if (m_fillScreen) {
         setGeometry(screen()->geometry());
@@ -105,6 +108,9 @@ void DesktopView::adaptToScreen()
 
 void DesktopView::ensureStayBehind()
 {
+    //This happens sometimes, when shutting down the process
+    if (!screen())
+        return;
     if (m_stayBehind) {
         KWindowSystem::setType(winId(), NET::Desktop);
     } else {

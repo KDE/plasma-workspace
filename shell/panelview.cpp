@@ -103,6 +103,8 @@ PanelView::PanelView(Plasma::Containment *cont, QWindow *parent)
     //When the screen is set, the screen is recreated internally, so we need to
     //set anything that depends on the winId()
     connect(this, &QWindow::screenChanged, this, [=]() {
+            if (!screen())
+                return;
             KWindowSystem::setType(winId(), NET::Dock);
             setVisibilityMode(m_visibilityMode);
             showTemporarily();
