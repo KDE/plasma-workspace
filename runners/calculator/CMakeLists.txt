@@ -27,17 +27,15 @@ if ( QALCULATE_FOUND )
     target_link_libraries(krunner_calculatorrunner
                           ${QALCULATE_LIBRARIES}
                           ${CLN_LIBRARIES}
-                          KF5::Plasma
+                          KF5::KIOCore
                           KF5::Runner
                           KF5::I18n
-                          KF5::KDELibs4Support
                           Qt5::Script
                           Qt5::Network
     )
 else ()
     add_library(krunner_calculatorrunner MODULE ${krunner_calculatorrunner_SRCS})
     target_link_libraries(krunner_calculatorrunner
-                          KF5::Plasma
                           KF5::Runner
                           KF5::I18n
                           Qt5::Script
