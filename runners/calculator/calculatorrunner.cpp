@@ -311,7 +311,7 @@ QString CalculatorRunner::calculate(const QString& term)
     #endif
 }
 
-QMimeData * CalculatorRunner::mimeDataForMatch(const Plasma::QueryMatch *match)
+QMimeData * CalculatorRunner::mimeDataForMatch(const Plasma::QueryMatch &match)
 {
     //qDebug();
     QMimeData *result = new QMimeData();

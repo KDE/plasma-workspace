@@ -42,7 +42,7 @@ class CalculatorRunner : public Plasma::AbstractRunner
         void match(Plasma::RunnerContext &context);
 
     protected Q_SLOTS:
-        QMimeData * mimeDataForMatch(const Plasma::QueryMatch *match);
+        QMimeData * mimeDataForMatch(const Plasma::QueryMatch &match);
 
     private:
         QString calculate(const QString& term);

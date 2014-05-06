@@ -147,9 +147,9 @@ void LocationsRunner::run(const Plasma::RunnerContext &context, const Plasma::Qu
     new KRun(urlToRun, 0);
 }
 
-QMimeData * LocationsRunner::mimeDataForMatch(const Plasma::QueryMatch *match)
+QMimeData * LocationsRunner::mimeDataForMatch(const Plasma::QueryMatch &match)
 {
-    const QString data = match->data().toString();
+    const QString data = match.data().toString();
     if (!data.isEmpty()) {
         QUrl url(data);
         QList<QUrl> list;

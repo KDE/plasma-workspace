@@ -241,9 +241,9 @@ void ServiceRunner::setupMatch(const KService::Ptr &service, Plasma::QueryMatch 
     }
 }
 
-QMimeData * ServiceRunner::mimeDataForMatch(const Plasma::QueryMatch *match)
+QMimeData * ServiceRunner::mimeDataForMatch(const Plasma::QueryMatch &match)
 {
-    KService::Ptr service = KService::serviceByStorageId(match->data().toString());
+    KService::Ptr service = KService::serviceByStorageId(match.data().toString());
     if (service) {
         QMimeData * result = new QMimeData();
         QList<QUrl> urls;
