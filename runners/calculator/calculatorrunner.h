@@ -26,7 +26,7 @@
 class QalculateEngine;
 #endif
 
-#include <Plasma/AbstractRunner>
+#include <krunner/abstractrunner.h>
 
 /**
  * This class evaluates the basic expressions given in the interface.
@@ -54,7 +54,5 @@ class CalculatorRunner : public Plasma::AbstractRunner
         QalculateEngine* m_engine;
         #endif
 };
-
-K_EXPORT_PLASMA_RUNNER(calculatorrunner, CalculatorRunner)
 
 #endif

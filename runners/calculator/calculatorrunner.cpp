@@ -29,8 +29,11 @@
 
 #include <KIcon>
 #include <QDebug>
+#include <KGlobal>
 
-#include <QueryMatch>
+#include <krunner/querymatch.h>
+
+K_EXPORT_PLASMA_RUNNER(calculatorrunner, CalculatorRunner)
 
 CalculatorRunner::CalculatorRunner( QObject* parent, const QVariantList &args )
     : Plasma::AbstractRunner(parent, args)
@@ -216,7 +219,7 @@ void CalculatorRunner::match(Plasma::RunnerContext &context)
         match.setText("42");
         match.setData("42");
         match.setId(term);
-        context.addMatch(term, match);
+        context.addMatch(match);
         return;
     }
 
@@ -265,7 +268,7 @@ void CalculatorRunner::match(Plasma::RunnerContext &context)
         match.setText(result);
         match.setData(result);
         match.setId(term);
-        context.addMatch(term, match);
+        context.addMatch(match);
     }
 }
 
@@ -315,7 +318,7 @@ QMimeData * CalculatorRunner::mimeDataForMatch(const Plasma::QueryMatch &match)
 {
     //qDebug();
     QMimeData *result = new QMimeData();
-    result->setText(match->text());
+    result->setText(match.text());
     return result;
 }
 
