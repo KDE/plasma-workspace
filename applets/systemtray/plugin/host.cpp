@@ -161,10 +161,6 @@ void Host::addTask(Task *task)
     d->tasks << task;
 
     if (d->shownCategories.contains(task->category())) {
-
-        qCDebug(SYSTEMTRAY) << "Adding";
-
-
         if (d->showTask(task)) {
             d->shownTasksModel->addTask(task);
         } else {
