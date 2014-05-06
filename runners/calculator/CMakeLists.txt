@@ -30,7 +30,6 @@ set(krunner_calculatorrunner_SRCS
                           KF5::Plasma
                           KF5::Runner
                           KF5::I18n
-                          KF5::KDELibs4Support
                           Qt5::Script
     )
 #endif ()

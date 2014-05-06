@@ -27,10 +27,10 @@
 #include <QScriptEngine>
 #endif
 
-#include <KIcon>
+#include <QIcon>
 #include <QDebug>
-#include <KGlobal>
 
+#include <KLocalizedString>
 #include <krunner/querymatch.h>
 
 K_EXPORT_PLASMA_RUNNER(calculatorrunner, CalculatorRunner)
@@ -83,7 +83,7 @@ void CalculatorRunner::powSubstitutions(QString& cmd)
         int postIndex = where + 1;
         int count = 0;
 
-        QChar decimalSymbol = KGlobal::locale()->decimalSymbol().at(0);
+        QChar decimalSymbol = QLocale().decimalPoint();
         //avoid out of range on weird commands
         preIndex = qMax(0, preIndex);
         postIndex = qMin(postIndex, cmd.length()-1);
@@ -178,8 +178,8 @@ void CalculatorRunner::hexSubstitutions(QString& cmd)
 
 void CalculatorRunner::userFriendlySubstitutions(QString& cmd)
 {
-    if (cmd.contains(KGlobal::locale()->decimalSymbol(), Qt::CaseInsensitive)) {
-         cmd=cmd.replace(KGlobal::locale()->decimalSymbol(), QChar('.'), Qt::CaseInsensitive);
+    if (cmd.contains(QLocale().decimalPoint(), Qt::CaseInsensitive)) {
+         cmd=cmd.replace(QLocale().decimalPoint(), QChar('.'), Qt::CaseInsensitive);
     }
 
     // the following substitutions are not needed with libqalculate
@@ -215,7 +215,7 @@ void CalculatorRunner::match(Plasma::RunnerContext &context)
     if (cmd.toLower() == "universe" || cmd.toLower() == "life") {
         Plasma::QueryMatch match(this);
         match.setType(Plasma::QueryMatch::InformationalMatch);
-        match.setIcon(KIcon("accessories-calculator"));
+        match.setIcon(QIcon::fromTheme("accessories-calculator"));
         match.setText("42");
         match.setData("42");
         match.setId(term);
@@ -264,7 +264,7 @@ void CalculatorRunner::match(Plasma::RunnerContext &context)
 
         Plasma::QueryMatch match(this);
         match.setType(Plasma::QueryMatch::InformationalMatch);
-        match.setIcon(KIcon("accessories-calculator"));
+        match.setIcon(QIcon::fromTheme("accessories-calculator"));
         match.setText(result);
         match.setData(result);
         match.setId(term);
@@ -283,7 +283,7 @@ QString CalculatorRunner::calculate(const QString& term)
         qDebug() << "qalculate error: " << e.what();
     }
 
-    return result.replace('.', KGlobal::locale()->decimalSymbol(), Qt::CaseInsensitive);
+    return result.replace('.', QLocale().decimalPoint(), Qt::CaseInsensitive);
     #else
     //qDebug() << "calculating" << term;
     QScriptEngine eng;
@@ -308,7 +308,7 @@ QString CalculatorRunner::calculate(const QString& term)
                                                 var order=Math.pow(10,exponent);\
                                                 (order > 0? Math.round(result*order)/order : 0)").toString();
 
-    roundedResultString.replace('.', KGlobal::locale()->decimalSymbol(), Qt::CaseInsensitive);
+    roundedResultString.replace('.', QLocale().decimalPoint(), Qt::CaseInsensitive);
 
     return roundedResultString;
     #endif
