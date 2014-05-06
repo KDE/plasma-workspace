@@ -391,18 +391,6 @@ bool UnlockApp::eventFilter(QObject *obj, QEvent *event)
             return false; // irrelevant
         }
         return true; // don't pass
-    } else if (event->type() == QEvent::GraphicsSceneMousePress) {
-
-        //FIXME FIXME
-//         QGraphicsSceneMouseEvent *me = static_cast<QGraphicsSceneMouseEvent *>(event);
-//
-//         foreach (QQuickView *view, m_views) {
-//             if (view->geometry().contains(me->screenPos())) {
-//                 view->activateWindow();
-//                 view->grabKeyboard();
-//                 break;
-//             }
-//         }
     }
 
     return false;
