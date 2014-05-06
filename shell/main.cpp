@@ -92,7 +92,7 @@ int main(int argc, char** argv)
     ShellManager::s_forceWindowed = parser.isSet(win);
     ShellManager::s_noRespawn = parser.isSet(respawn);
     ShellManager::s_fixedShell = parser.value(shellPlugin);
-    ShellManager::instance();
+    QObject::connect(QCoreApplication::instance(), SIGNAL(aboutToQuit()), ShellManager::instance(), SLOT(deleteLater()));
 
     return app.exec();
 }
