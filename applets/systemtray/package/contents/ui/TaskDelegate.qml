@@ -66,9 +66,9 @@ KQuickControlsAddonsComponents.MouseEventListener {
     Behavior on opacity { NumberAnimation { duration: units.shortDuration * 3 } }
 
 
-    property int taskStatus: status
-    property int taskType: type
-    property Item expandedItem: taskItemExpanded
+    property int taskStatus: modelData.status
+    property int taskType: modelData.type
+    property Item expandedItem: modelData.taskItemExpanded
     property Item expandedStatusItem: null
     property bool snExpanded: false
 
@@ -81,10 +81,10 @@ KQuickControlsAddonsComponents.MouseEventListener {
         opacity: 0.8;
     }
 
-    property bool isExpanded: expanded
+    property bool isExpanded: modelData.expanded
 
     onIsExpandedChanged: {
-        if (expanded) {
+        if (modelData.expanded) {
             var task;
             if (root.expandedTask) {
                 task = root.expandedTask;
@@ -101,29 +101,29 @@ KQuickControlsAddonsComponents.MouseEventListener {
 
     PulseAnimation {
         targetItem: taskItemContainer
-        running: status == SystemTray.Task.NeedsAttention
+        running: modelData.status == SystemTray.Task.NeedsAttention
     }
 
     onWidthChanged: updatePlasmoidGeometry()
     onHeightChanged: updatePlasmoidGeometry()
 
     function updatePlasmoidGeometry() {
-        if (taskItem != undefined) {
+        if (modelData.taskItem != undefined) {
             var _size = Math.min(taskItemContainer.width, taskItemContainer.height);
             var _m = (taskItemContainer.height - _size) / 2
-            taskItem.anchors.verticalCenter = taskItemContainer.verticalCenter;
-            taskItem.x = 0;
-            taskItem.height = _size;
-            taskItem.width = isHiddenItem ? _size * 1.5 : _size;
+            modelData.taskItem.anchors.verticalCenter = taskItemContainer.verticalCenter;
+            modelData.taskItem.x = 0;
+            modelData.taskItem.height = _size;
+            modelData.taskItem.width = isHiddenItem ? _size * 1.5 : _size;
         }
     }
 
     PlasmaCore.ToolTipArea {
         anchors.fill: parent
-        icon: taskItem ? taskItem.icon : sniLoader.item.icon
-        mainText: taskItem ? taskItem.toolTipMainText : sniLoader.item.toolTipMainText
-        subText: taskItem ? taskItem.toolTipSubText : sniLoader.item.toolTipSubText
-        location: taskItem ? taskItemContainer.location : sniLoader.item.location
+        icon: modelData.taskItem ? modelData.taskItem.icon : sniLoader.item.icon
+        mainText: modelData.taskItem ? modelData.taskItem.toolTipMainText : sniLoader.item.toolTipMainText
+        subText: modelData.taskItem ? modelData.taskItem.toolTipSubText : sniLoader.item.toolTipSubText
+        location: modelData.taskItem ? taskItemContainer.location : sniLoader.item.location
         Loader {
             id: sniLoader
             anchors.fill: parent
@@ -133,12 +133,13 @@ KQuickControlsAddonsComponents.MouseEventListener {
     Component.onCompleted: {
         if (taskType == SystemTray.Task.TypeStatusItem) {
             sniLoader.source = "StatusNotifierItem.qml";
-
-        } else if (taskItem != undefined) {
+        } else if (modelData.taskItem != undefined) {
             sniLoader.source = "PlasmoidItem.qml";
-            taskItem.parent = taskItemContainer;
-            taskItem.z = 999;
+            modelData.taskItem.parent = taskItemContainer;
+            modelData.taskItem.z = 999;
             updatePlasmoidGeometry();
+        } else {
+            console.warning("Trying to add item to system tray of an unknown type. Ignoring");
         }
     }
 }

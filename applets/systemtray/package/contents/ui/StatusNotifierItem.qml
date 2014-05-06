@@ -34,20 +34,18 @@ Item {
     property int blink_interval: 1000 // interval of blinking (if status of task is NeedsAttention)
     property variant task: null // task that provides information for item
 
-    //property bool     __has_task: task ? true : false
-    property bool     __has_task: true
-    property string   __icon_name:         __has_task ? iconName : ""
-    property string   __att_icon_name:     __has_task ? attIconName : ""
-    property variant  __icon:              __has_task ? icon : "default"
-    property variant  __att_icon:          __has_task ? attIcon : __getDefaultIcon()
-    property string   __overlay_icon_name: __has_task ? overlayIconName : ""
-    property string   __movie_path:        __has_task ? moviePath : ""
-    property int      __status:            __has_task ? status : SystemTray.Task.UnknownStatus
+    property string   __icon_name:         modelData.iconName
+    property string   __att_icon_name:     modelData.attIconName
+    property variant  __icon:              modelData.icon
+    property variant  __att_icon:          modelData.attIcon
+    property string   __overlay_icon_name: modelData.overlayIconName
+    property string   __movie_path:        modelData.moviePath
+    property int      __status:            modelData.status
 
 
-    property variant icon:    __has_task ? tooltipIcon : ""
-    property string toolTipMainText: __has_task ? tooltipTitle : ""
-    property string toolTipSubText:  __has_task ? tooltipText : ""
+    property variant icon: modelData.tooltipIcon
+    property string toolTipMainText: modelData.tooltipTitle
+    property string toolTipSubText: modelData.tooltipText
 
     // Public functions ================================================================================================
     function click(buttons) {
@@ -107,15 +105,15 @@ Item {
             left: parent.left
             verticalCenter: parent.verticalCenter
         }
-        source: iconName != "" ? iconName : (typeof(icon) != "undefined" ? icon : "")
+        source: __icon_name != "" ? __icon_name : (typeof(icon) != "undefined" ? icon : "")
     }
 
     // TODO: remove wheel area in QtQuick 2.0
     KQuickControlsAddonsComponents.MouseEventListener {
         id: wheel_area
         anchors.fill: parent
-        enabled: __has_task
-        visible: __has_task
+        enabled: true
+        visible: true
         z: -2
 
         // Mouse events handlers ===========================================================================================
@@ -125,8 +123,8 @@ Item {
             hoverEnabled: true
             // if no task passed we don't accept any buttons, if icon_widget is visible we pass left button to it
             acceptedButtons: Qt.LeftButton | Qt.RightButton | Qt.MiddleButton
-            enabled: __has_task
-            visible: __has_task
+            enabled: true
+            visible: true
 
             onClicked: __processClick(mouse.button, mouse_area)
 
@@ -140,7 +138,7 @@ Item {
 
                 visible: false
                 active: mouse_area.containsMouse
-                source: iconName != "" ? iconName : (typeof(icon) != "undefined" ? icon : "")
+                source: __icon_name != "" ? __icon_name : (typeof(icon) != "undefined" ? icon : "")
 
                 // Overlay icon
                 Image {
@@ -197,17 +195,17 @@ Item {
 
     function __processClick(buttons, item) {
         print("__processClick");
-        var pos = popupPosition(taskItemContainer, 0, 0);
+        var pos = modelData.popupPosition(taskItemContainer, 0, 0);
         switch (buttons) {
         case Qt.LeftButton:
             root.expandedTask = null;
-            activate1(pos.x, pos.y);
+            modelData.activate1(pos.x, pos.y);
             break;
         case Qt.RightButton:
-            activateContextMenu(pos.x, pos.y);
+            modelData.activateContextMenu(pos.x, pos.y);
             break;
         case Qt.MiddleButton:
-            activate2(pos.x, pos.y);
+            modelData.activate2(pos.x, pos.y);
             break;
         }
         plasmoid.expanded = false;

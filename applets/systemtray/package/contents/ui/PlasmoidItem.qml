@@ -25,7 +25,7 @@ Item {
     Connections {
         target: plasmoid
         onLocationChanged: {
-            if (taskType == SystemTray.Task.TypePlasmoid) {
+            if (modelData.taskType == SystemTray.Task.TypePlasmoid) {
                 setLocation(plasmoid.location);
             }
         }
@@ -35,6 +35,6 @@ Item {
         anchors {
             fill: parent
         }
-        onClicked: expanded = true;
+        onClicked: modelData.expanded = true;
     }
 }
