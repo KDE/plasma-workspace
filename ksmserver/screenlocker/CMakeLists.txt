@@ -56,3 +56,4 @@ install(FILES ${screensaver_dbusXML}
         RENAME kf5_org.freedesktop.ScreenSaver.xml)
 
 add_subdirectory(autotests)
+add_subdirectory(tests)

@@ -4,6 +4,7 @@ set(systemtrayplugin_SRCS
    # manager.cpp
     protocol.cpp
     task.cpp
+    tasklistmodel.cpp
 
     protocols/dbussystemtray/dbussystemtraytask.cpp
     protocols/dbussystemtray/dbussystemtrayprotocol.cpp

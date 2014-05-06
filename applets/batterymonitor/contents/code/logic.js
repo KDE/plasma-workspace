@@ -178,7 +178,9 @@ function updateTooltip() {
             var b = [];
             b["Type"] = "Battery";
             b["Percent"] = batteries.cumulativePercent;
-            image = iconForBattery(b, pmSource.data["AC Adapter"]["Plugged in"] ? true : false);
+            if (pmSource.data["AC Adapter"] !== undefined) {
+                image = iconForBattery(b, pmSource.data["AC Adapter"]["Plugged in"] ? true : false);
+            }
         } else {
             var b = lowestBattery();
             image = iconForBattery(b, false);

@@ -24,7 +24,7 @@
 
 #include <kdeclarative/qmlobject.h>
 
-#include <QQmlListProperty>
+#include <QAbstractItemModel>
 #include <QObject>
 #include <qtextcodec.h>
 
@@ -45,8 +45,8 @@ class Host : public QObject
 {
     Q_OBJECT
 
-    Q_PROPERTY(QQmlListProperty<SystemTray::Task> hiddenTasks READ hiddenTasks NOTIFY tasksChanged)
-    Q_PROPERTY(QQmlListProperty<SystemTray::Task> shownTasks READ shownTasks NOTIFY tasksChanged)
+    Q_PROPERTY(QAbstractItemModel* hiddenTasks READ hiddenTasks CONSTANT)
+    Q_PROPERTY(QAbstractItemModel* shownTasks READ shownTasks CONSTANT)
 
     Q_PROPERTY(QStringList categories READ categories NOTIFY categoriesChanged)
 
@@ -69,13 +69,12 @@ public Q_SLOTS:
     void init();
     bool isCategoryShown(int cat) const;
     void setCategoryShown(int cat, bool shown);
-    QQmlListProperty<SystemTray::Task> hiddenTasks();
-    QQmlListProperty<SystemTray::Task> shownTasks();
+    QAbstractItemModel* hiddenTasks();
+    QAbstractItemModel* shownTasks();
     QStringList categories() const;
 
 
 Q_SIGNALS:
-    void tasksChanged();
     void categoriesChanged();
     void rootItemChanged();
     void shownCategoriesChanged();
@@ -85,7 +84,6 @@ private Q_SLOTS:
     void removeTask(SystemTray::Task *task);
     void slotTaskStatusChanged();
     void taskStatusChanged(SystemTray::Task *task);
-    void compressionTimeout();
 
 private:
     void initTasks();
