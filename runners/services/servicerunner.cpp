@@ -168,7 +168,9 @@ void ServiceRunner::match(Plasma::RunnerContext &context)
 
         //qDebug() << service->name() << "is this relevant:" << relevance;
         match.setRelevance(relevance);
-        match.setMatchCategory(i18n("System Settings"));
+        if (service->serviceTypes().contains("KCModule")) {
+            match.setMatchCategory(i18n("System Settings"));
+        }
         matches << match;
     }
 
