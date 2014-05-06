@@ -32,7 +32,6 @@ Rectangle {
 
     //public API, the C++ part will look for those
     function setUrl(url) {
-        print("Url dropped: " + url)
         wallpaper.configuration.Image = url
         imageWallpaper.addUsersWallpaper(url);
     }
@@ -91,7 +90,6 @@ Rectangle {
     }
 
     Component.onCompleted: {
-        print("WP : configuredImage:  " + configuredImage);
         imageWallpaper.addUrl(configuredImage)
         if (wallpaper.pluginName == "org.kde.slideshow") {
             wallpaper.setAction("next", i18n("Next Wallpaper Image"),"user-desktop");
@@ -121,8 +119,7 @@ Rectangle {
         imageWallpaper.addUrl(configuredImage)
     }
     onModelImageChanged: {
-        print("WP onModelImageChanged: " + modelImage);
-        fadeWallpaper()
+        fadeWallpaper();
     }
 
 

@@ -475,7 +475,7 @@ void PanelShadows::Private::updateShadow(const QWindow *window, Plasma::FrameSvg
     Display *dpy = QX11Info::display();
     Atom atom = XInternAtom(dpy, "_KDE_NET_WM_SHADOW", False);
 
-    qDebug() << "going to set the shadow of" << window->winId() << "to" << data;
+//     qDebug() << "going to set the shadow of" << window->winId() << "to" << data;
     XChangeProperty(dpy, window->winId(), atom, XA_CARDINAL, 32, PropModeReplace,
                     reinterpret_cast<const unsigned char *>(data[enabledBorders].constData()), data[enabledBorders].size());
 #else

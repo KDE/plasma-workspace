@@ -501,7 +501,6 @@ static KService::List getServicesViaPid(int pid)
     if (services.empty() && !QStandardPaths::findExecutable(cmdline).isEmpty()) {
         // cmdline now exists without arguments if there were any
         services << QExplicitlySharedDataPointer<KService>(new KService(proc->name, cmdline, QString()));
-        qDebug() << "adding for" << proc->name << cmdline;
     }
     return services;
 }

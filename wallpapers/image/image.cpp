@@ -355,7 +355,6 @@ void Image::setSingleImage()
             setSingleImage();
         }
     }
-    qDebug()<<"Found wallpaper" << m_wallpaperPath;
 }
 
 void Image::addUrls(const QList<QUrl> &urls)
