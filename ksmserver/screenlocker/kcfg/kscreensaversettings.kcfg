@@ -33,11 +33,6 @@
       <label></label>
       <whatsthis></whatsthis>
     </entry>
-    <entry key="Priority" type="Int">
-      <default>19</default>
-      <label></label>
-      <whatsthis></whatsthis>
-    </entry>
     <entry key="Saver" type="String">
       <default></default>
       <label></label>
