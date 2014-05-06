@@ -105,7 +105,7 @@ Item {
             left: parent.left
             verticalCenter: parent.verticalCenter
         }
-        source: __icon_name != "" ? __icon_name : (typeof(icon) != "undefined" ? icon : "")
+        source: __icon_name != "" ? __icon_name : (typeof(__icon) != "undefined" ? __icon : "")
     }
 
     // TODO: remove wheel area in QtQuick 2.0
