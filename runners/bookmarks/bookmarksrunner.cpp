@@ -24,15 +24,14 @@
 #include <QList>
 #include <QStack>
 #include <QDir>
+#include <QUrl>
+#include <QDebug>
 
 #include <KLocalizedString>
-#include <KMimeType>
 #include <KMimeTypeTrader>
 #include <KToolInvocation>
-#include <KUrl>
-#include <KStandardDirs>
 #include <KSharedConfig>
-#include <QDebug>
+
 #include "bookmarkmatch.h"
 #include "browserfactory.h"
 #include "bookmarksrunner_defs.h"
@@ -108,10 +107,10 @@ void BookmarksRunner::run(const Plasma::RunnerContext &context, const Plasma::Qu
 {
     Q_UNUSED(context);
     const QString term = action.data().toString();
-    KUrl url = KUrl(term);
+    QUrl url = QUrl(term);
 
     //support urls like "kde.org" by transforming them to http://kde.org
-    if (url.protocol().isEmpty()) {
+    if (url.scheme().isEmpty()) {
         const int idx = term.indexOf('/');
 
         url.clear();
@@ -127,20 +126,20 @@ void BookmarksRunner::run(const Plasma::RunnerContext &context, const Plasma::Qu
 
             url.setPath(term.mid(idx, pathLength));
         }
-        url.setProtocol("http");
+        url.setScheme("http");
     }
 
     KToolInvocation::invokeBrowser(url.url());
 }
 
-QMimeData * BookmarksRunner::mimeDataForMatch(const Plasma::QueryMatch * match)
+QMimeData * BookmarksRunner::mimeDataForMatch(const Plasma::QueryMatch &match)
 {
     QMimeData * result = new QMimeData();
     QList<QUrl> urls;
-    urls << QUrl(match->data().toString());
+    urls << QUrl(match.data().toString());
     result->setUrls(urls);
 
-    result->setText(match->data().toString());
+    result->setText(match.data().toString());
 
     return result;
 }

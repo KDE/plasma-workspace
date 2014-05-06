@@ -53,7 +53,7 @@ class BookmarksRunner : public Plasma::AbstractRunner
         Browser *m_browser;
         BrowserFactory * const m_browserFactory;
     protected Q_SLOTS:
-        QMimeData * mimeDataForMatch(const Plasma::QueryMatch *match);
+        QMimeData * mimeDataForMatch(const Plasma::QueryMatch &match);
 
     private Q_SLOTS:
         void prep();

@@ -25,13 +25,12 @@
 #include <KAuthorized>
 #include <QDebug>
 #ifdef Q_OS_UNIX
-#include <SuProcess>
+#include <KDESu/SuProcess>
 #endif
-#include <KGlobal>
-#include <KLocale>
+#include <KLocalizedString>
 #include <KRun>
 #include <KShell>
-#include <KStandardDirs>
+#include <QStandardPaths>
 #include <KToolInvocation>
 
 #include <Plasma/Theme>
@@ -95,7 +94,7 @@ void ShellRunner::run(const Plasma::RunnerContext &context, const Plasma::QueryM
             QString args;
             if (m_inTerminal) {
                 // we have to reimplement this from KToolInvocation because we need to use KDESu
-                KConfigGroup confGroup( KGlobal::config(), "General" );
+                KConfigGroup confGroup = KSharedConfig::openConfig()->group("General");
                 exec = confGroup.readPathEntry("TerminalApplication", "konsole");
                 if (!exec.isEmpty()) {
                     if (exec == "konsole") {
@@ -116,7 +115,7 @@ void ShellRunner::run(const Plasma::RunnerContext &context, const Plasma::QueryM
             }
 
             if (!exec.isEmpty()) {
-                exec = KStandardDirs::findExe(exec);
+                exec = QStandardPaths::findExecutable(exec);
                 exec.append(args);
                 if (!exec.isEmpty()) {
                     KDESu::SuProcess client(m_username.toLocal8Bit(), exec.toLocal8Bit());

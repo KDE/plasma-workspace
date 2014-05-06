@@ -45,7 +45,7 @@ public:
     void run(const Plasma::RunnerContext &context, const Plasma::QueryMatch &action);
 
 protected Q_SLOTS:
-    QMimeData * mimeDataForMatch(const Plasma::QueryMatch *match);
+    QMimeData * mimeDataForMatch(const Plasma::QueryMatch &match);
 
 
 protected:

@@ -1,7 +1,7 @@
 
 ########### next target ###############
 
-macro_optional_find_package(Qalculate)
+find_package(Qalculate)
 set_package_properties(Qalculate PROPERTIES DESCRIPTION "Qalculate Library"
                        URL "http://qalculate.sourceforge.net"
                        TYPE OPTIONAL
@@ -14,7 +14,8 @@ if ( QALCULATE_FOUND )
     qalculate_engine.cpp
     )
 
-    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${KDE4_ENABLE_EXCEPTIONS} -Wno-deprecated")
+    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wno-deprecated")
+    kde_enable_exceptions()
 endif()
 
 set(krunner_calculatorrunner_SRCS
@@ -23,10 +24,22 @@ set(krunner_calculatorrunner_SRCS
 
 if ( QALCULATE_FOUND )
     add_library(krunner_calculatorrunner MODULE ${qalculate_engine_SRCS} ${krunner_calculatorrunner_SRCS})
-    target_link_libraries(krunner_calculatorrunner ${QALCULATE_LIBRARIES} ${CLN_LIBRARIES} KF5::Solid KIOCore ${KDE4_KDEUI_LIBS} KF5::Plasma )
+    target_link_libraries(krunner_calculatorrunner
+                          ${QALCULATE_LIBRARIES}
+                          ${CLN_LIBRARIES}
+                          KF5::KIOCore
+                          KF5::Runner
+                          KF5::I18n
+                          Qt5::Script
+                          Qt5::Network
+    )
 else ()
     add_library(krunner_calculatorrunner MODULE ${krunner_calculatorrunner_SRCS})
-    target_link_libraries(krunner_calculatorrunner ${KDE4_KDEUI_LIBS} ${QT_QTSCRIPT_LIBRARY} KF5::Plasma)	
+    target_link_libraries(krunner_calculatorrunner
+                          KF5::Runner
+                          KF5::I18n
+                          Qt5::Script
+    )
 endif ()
 
 install(TARGETS krunner_calculatorrunner DESTINATION ${PLUGIN_INSTALL_DIR} )

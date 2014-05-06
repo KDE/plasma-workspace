@@ -228,8 +228,11 @@ void ShellManager::updateShell()
 
 ShellManager * ShellManager::instance()
 {
-    static ShellManager manager;
-    return &manager;
+    static ShellManager* manager = nullptr;
+    if (!manager) {
+         manager = new ShellManager;
+    }
+    return manager;
 }
 
 void ShellManager::setCrashCount(int count)

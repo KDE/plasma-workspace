@@ -114,7 +114,7 @@ void WindowedWidgetsRunner::setupMatch(const KService::Ptr &service, Plasma::Que
     }
 }
 
-QMimeData * WindowedWidgetsRunner::mimeDataForMatch(const Plasma::QueryMatch *match)
+QMimeData * WindowedWidgetsRunner::mimeDataForMatch(const Plasma::QueryMatch &match)
 {
     KService::Ptr service = KService::serviceByStorageId(match->data().toString());
     if (service) {

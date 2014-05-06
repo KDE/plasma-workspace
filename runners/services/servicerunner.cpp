@@ -20,13 +20,13 @@
 
 #include <QMimeData>
 
-#include <KIcon>
+#include <QIcon>
 #include <QDebug>
-#include <KLocale>
+#include <QUrl>
+#include <KLocalizedString>
 #include <KRun>
 #include <KService>
 #include <KServiceTypeTrader>
-#include <KUrl>
 
 ServiceRunner::ServiceRunner(QObject *parent, const QVariantList &args)
     : Plasma::AbstractRunner(parent, args)
@@ -168,7 +168,9 @@ void ServiceRunner::match(Plasma::RunnerContext &context)
 
         //qDebug() << service->name() << "is this relevant:" << relevance;
         match.setRelevance(relevance);
-        match.setMatchCategory(i18n("System Settings"));
+        if (service->serviceTypes().contains("KCModule")) {
+            match.setMatchCategory(i18n("System Settings"));
+        }
         matches << match;
     }
 
@@ -195,7 +197,7 @@ void ServiceRunner::match(Plasma::RunnerContext &context)
 
             qreal relevance = 0.6;
             if (service->categories().contains("X-KDE-More") ||
-                    !service->showInKDE()) {
+                    !service->showInCurrentDesktop()) {
                 relevance = 0.5;
             }
 
@@ -217,7 +219,7 @@ void ServiceRunner::run(const Plasma::RunnerContext &context, const Plasma::Quer
     Q_UNUSED(context);
     KService::Ptr service = KService::serviceByStorageId(match.data().toString());
     if (service) {
-        KRun::run(*service, KUrl::List(), 0);
+        KRun::run(*service, QList<QUrl>(), 0);
     }
 }
 
@@ -235,17 +237,17 @@ void ServiceRunner::setupMatch(const KService::Ptr &service, Plasma::QueryMatch 
     }
 
     if (!service->icon().isEmpty()) {
-        match.setIcon(KIcon(service->icon()));
+        match.setIcon(QIcon::fromTheme(service->icon()));
     }
 }
 
-QMimeData * ServiceRunner::mimeDataForMatch(const Plasma::QueryMatch *match)
+QMimeData * ServiceRunner::mimeDataForMatch(const Plasma::QueryMatch &match)
 {
-    KService::Ptr service = KService::serviceByStorageId(match->data().toString());
+    KService::Ptr service = KService::serviceByStorageId(match.data().toString());
     if (service) {
         QMimeData * result = new QMimeData();
         QList<QUrl> urls;
-        urls << KUrl(service->entryPath());
+        urls << QUrl::fromLocalFile(service->entryPath());
         qDebug() << urls;
         result->setUrls(urls);
         return result;

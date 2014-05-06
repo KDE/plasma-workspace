@@ -27,15 +27,13 @@
 #include <libqalculate/Function.h>
 
 #include <QFile>
-#include <QHttp>
 #include <QApplication>
 #include <QClipboard>
-
-#include <KProtocolManager>
 #include <QDebug>
-#include <KLocale>
+
+#include <KLocalizedString>
+#include <KProtocolManager>
 #include <KIO/Job>
-#include <KIO/NetAccess>
 
 QAtomicInt QalculateEngine::s_counter;
 
@@ -64,8 +62,8 @@ QalculateEngine::~QalculateEngine()
 
 void QalculateEngine::updateExchangeRates()
 {
-    KUrl source = KUrl("http://www.ecb.int/stats/eurofxref/eurofxref-daily.xml");
-    KUrl dest = KUrl(CALCULATOR->getExchangeRatesFileName().c_str());
+    QUrl source = QUrl("http://www.ecb.int/stats/eurofxref/eurofxref-daily.xml");
+    QUrl dest = QUrl::fromLocalFile(QFile::decodeName(CALCULATOR->getExchangeRatesFileName().c_str()));
 
     KIO::Job* getJob = KIO::file_copy(source, dest, -1, KIO::Overwrite | KIO::HideProgressInfo);
     connect( getJob, SIGNAL(result(KJob*)), this, SLOT(updateResult(KJob*)) );
