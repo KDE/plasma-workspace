@@ -23,8 +23,10 @@
 #include "debug.h"
 
 #include <QtCore/QMetaEnum>
+#include <QAction>
 #include <kdeclarative/qmlobject.h>
 
+#include <KActionCollection>
 #include <KPluginInfo>
 
 #include <QLoggingCategory>
@@ -134,6 +136,15 @@ void PlasmoidTask::setShortcut(QString text) {
         m_shortcut = text;
         emit changedShortcut();
     }
+}
+
+void PlasmoidTask::configure()
+{
+    if (!m_applet) {
+        return;
+    }
+
+    m_applet->actions()->action("configure")->trigger();
 }
 
 void PlasmoidTask::setLocation(Plasma::Types::Location loc)

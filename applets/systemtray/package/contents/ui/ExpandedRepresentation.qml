@@ -136,6 +136,26 @@ Item {
             right: parent.right
         }
         text: root.expandedTask ? root.expandedTask.name : ""
+        MouseArea {
+            anchors {
+                right: parent.right
+                verticalCenter: parent.verticalCenter
+            }
+            width: units.iconSizes.small
+            height: width
+
+            PlasmaCore.IconItem {
+                anchors.centerIn: parent
+                source: "configure"
+                width: units.iconSizes.small / 2
+                height: width
+                active: parent.containsMouse
+            }
+
+            onClicked: {
+                root.expandedTask.configure();
+            }
+        }
     }
 
     PlasmaComponents.PageStack {

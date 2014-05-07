@@ -28,6 +28,7 @@ target_link_libraries(systemtrayplugin
     KF5::IconThemes
     KF5::KIOCore
     KF5::KIOWidgets
+    KF5::XmlGui
     )
 
 set(plugin_install_path ${QML_INSTALL_DIR}/org/kde/private/systemtray)

@@ -81,6 +81,8 @@ public:
 
     Q_INVOKABLE void setLocation(Plasma::Types::Location loc);
 
+    Q_INVOKABLE void configure();
+
 Q_SIGNALS:
     void changedShortcut();
     void taskItemChanged();
