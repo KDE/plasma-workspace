@@ -144,7 +144,7 @@ PlasmaCore.Dialog {
                 onLinkActivated: Qt.openUrlExternally(link)
                 anchors {
                     left: appIconItem.right
-                    right: notificationProperties.actions.length == 0 ? parent.right : actionsColumn.left
+                    right: (!notificationProperties || notificationProperties.actions.length == 0) ? parent.right : actionsColumn.left
                     top: titleLabel.bottom
                     bottom: parent.bottom
                     topMargin: units.largeSpacing / 2

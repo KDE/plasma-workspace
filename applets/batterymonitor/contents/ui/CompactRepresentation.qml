@@ -29,7 +29,7 @@ ListView {
     id: view
 
     Layout.minimumWidth: isConstrained() ? units.iconSizes.medium : 24 // NOTE: Keep in sync with systray
-    Layout.minimumHeight: isConstrained() ? minimumHeight * view.count : 24
+    Layout.minimumHeight: isConstrained() ? units.iconSizes.medium * view.count : 24
 
     property bool hasBattery: pmSource.data["Battery"]["Has Battery"]
 
@@ -65,7 +65,6 @@ ListView {
 
             BatteryIcon {
                 id: batteryIcon
-                anchors.centerIn: isConstrained() ? parent : undefined
                 anchors.horizontalCenter: isConstrained() ? undefined : parent.horizontalCenter
                 hasBattery: batteryContainer.hasBattery
                 percent: batteryContainer.percent

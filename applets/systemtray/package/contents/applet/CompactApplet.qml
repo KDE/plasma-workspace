@@ -65,8 +65,8 @@ Item {
         opacity: plasmoid.expanded ? 1 : 0
         Behavior on opacity {
             NumberAnimation {
-                duration: theme.shortDuration
-                easing: Easing.InOutQuad
+                duration: units.shortDuration
+                easing.type: Easing.InOutQuad
             }
         }
     }
