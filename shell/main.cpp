@@ -41,6 +41,11 @@ int main(int argc, char** argv)
 {
     QQmlDebuggingEnabler debugEnabler;
 
+    const QByteArray loopName = qgetenv("QSG_RENDER_LOOP");
+    if (loopName.isEmpty()) {
+        setenv("QSG_RENDER_LOOP", "basic", 1);
+    }
+    
     QApplication app(argc, argv);
     app.setApplicationName("plasma_shell");
     app.setOrganizationDomain("kde.org");
