@@ -150,8 +150,8 @@ public:
     void reconnect();
 
     /** Adds a Launcher for the executable/.desktop-file at url and returns a reference to the launcher*/
-    bool addLauncher(const QUrl &url, const QIcon &icon = QIcon(), const QString &name = QString(),
-                     const QString &genericName = QString(), const QString &wmClass = QString(), int insertPos = -1);
+    Q_INVOKABLE bool addLauncher(const QUrl &url, const QIcon &icon = QIcon(), const QString &name = QString(),
+        const QString &genericName = QString(), const QString &wmClass = QString(), int insertPos = -1);
 
     /** Removes the given launcher*/
     void removeLauncher(const QUrl &url);
@@ -163,7 +163,7 @@ public:
     void setLauncherList(const QList<QUrl> launchers);
 
     /** @return true if there is a matching launcher */
-    bool launcherExists(const QUrl &url) const;
+    Q_INVOKABLE bool launcherExists(const QUrl &url) const;
     bool launcherExistsForUrl(const QUrl &url) const;
 
     /** @return position of launcher */
