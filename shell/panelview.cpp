@@ -720,11 +720,11 @@ void PanelView::updateStruts()
             }
         }
         // extended struts are to the combined screen geoms, not the single screen
-        int leftOffset = wholeScreen.x() - thisScreen.x();
+        int leftOffset = thisScreen.x();
         int rightOffset = wholeScreen.right() - thisScreen.right();
         int bottomOffset = wholeScreen.bottom() - thisScreen.bottom();
-        int topOffset = wholeScreen.top() - thisScreen.top();
 //         qDebug() << "screen l/r/b/t offsets are:" << leftOffset << rightOffset << bottomOffset << topOffset << location();
+        int topOffset = thisScreen.top();
 
         switch (location())
         {
