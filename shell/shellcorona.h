@@ -27,6 +27,9 @@
 
 #include <Plasma/Package>
 
+namespace KScreen {
+class Output;
+}
 
 namespace Plasma
 {
@@ -34,6 +37,7 @@ namespace Plasma
 } // namespace Plasma
 
 class Activity;
+class DesktopView;
 class PanelView;
 class QScreen;
 namespace WorkspaceScripting {
@@ -102,8 +106,6 @@ public Q_SLOTS:
     void loadScriptInInteractiveConsole(const QString &script);
 
 protected Q_SLOTS:
-    void screenAdded(QScreen *screen);
-
     /**
      * Loads the layout and performs the needed checks
      */
@@ -140,12 +142,21 @@ private Q_SLOTS:
     void addPanel();
     void addPanel(QAction *action);
     void addPanel(const QString &plugin);
+    void containmentDeleted(QObject* cont);
+
+    void removePanel(QObject* cont);
+    void removeDesktop(DesktopView* screen);
+    void addOutput(KScreen::Output* output);
+    void primaryOutputChanged();
 
     void activityOpened();
     void activityClosed();
     void activityRemoved();
+    void desktopContainmentDestroyed(QObject*);
 
 private:
+    void screenInvariants();
+
     /**
      * @returns a new containment associated with the specified @p activity and @p screen.
      */
@@ -153,7 +164,7 @@ private:
     void insertContainment(const QString &activity, int screenNum, Plasma::Containment *containment);
 
     class Private;
-    const QScopedPointer<Private> d;
+    Private * d;
 };
 
 #endif // SHELLCORONA_H

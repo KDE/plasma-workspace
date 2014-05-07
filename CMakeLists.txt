@@ -13,6 +13,7 @@ find_package(KF5 REQUIRED COMPONENTS
                     IdleTime ThreadWeaver Declarative PlasmaQuick WebKit KDELibs4Support)
 
 find_package(KF5 REQUIRED COMPONENTS SysGuard)
+find_package(KF5 REQUIRED COMPONENTS Screen)
 find_package(KWinDBusInterface CONFIG REQUIRED)
 
 include(KDEInstallDirs)

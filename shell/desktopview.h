@@ -45,6 +45,8 @@ public:
     void setDashboardShown(bool shown);
     bool isDashboardShown() const;
 
+    void adaptToScreen();
+
 protected:
     bool event(QEvent *e);
 
@@ -59,6 +61,9 @@ Q_SIGNALS:
     void fillScreenChanged();
 
 private:
+    void ensureStayBehind();
+    virtual void moveEvent(QMoveEvent* ev);
+
     QPointer<PlasmaQuick::ConfigView> m_configView;
     bool m_stayBehind : 1;
     bool m_fillScreen : 1;

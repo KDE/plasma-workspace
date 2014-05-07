@@ -100,6 +100,16 @@ PanelView::PanelView(Plasma::Containment *cont, QWindow *parent)
             this, &PanelView::restoreAutoHide);
 
     //Screen management
+    //When the screen is set, the screen is recreated internally, so we need to
+    //set anything that depends on the winId()
+    connect(this, &QWindow::screenChanged, this, [=]() {
+            if (!screen())
+                return;
+            KWindowSystem::setType(winId(), NET::Dock);
+            setVisibilityMode(m_visibilityMode);
+            showTemporarily();
+        }
+    );
     connect(this, &QWindow::screenChanged,
             this, &PanelView::screenChangedProxy);
     //cannot use the new syntax as start() is overloaded
