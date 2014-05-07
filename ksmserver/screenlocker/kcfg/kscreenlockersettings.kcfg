@@ -6,20 +6,20 @@
   <kcfgfile name="kscreenlockerrc" />
   <group name="Daemon">
     <entry key="Timeout" type="Int">
-      <default>300</default>
+      <default>5</default>
       <min>0</min>
       <label>Screen saver timeout</label>
-      <whatsthis>Sets the seconds after which the screen saver is started.</whatsthis>
+      <whatsthis>Sets the minutes after which the screen saver is started.</whatsthis>
     </entry>
     <entry key="Lock" type="Bool">
-      <default>false</default>
+      <default>true</default>
       <label></label>
       <whatsthis></whatsthis>
     </entry>
     <entry key="LockGrace" type="Int">
-      <default>5000</default>
+      <default>5</default>
       <min>0</min>
-      <max>300000</max>
+      <max>300</max>
       <label></label>
       <whatsthis></whatsthis>
     </entry>

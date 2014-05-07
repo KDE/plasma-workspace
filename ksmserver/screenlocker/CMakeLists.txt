@@ -1,6 +1,7 @@
 add_definitions(-DKDE_DEFAULT_DEBUG_AREA=1223)
 add_subdirectory(kcheckpass)
 add_subdirectory(greeter)
+add_subdirectory(kcm)
 include_directories(${CMAKE_CURRENT_BINARY_DIR}/../)
 
 set(screensaver_dbusXML dbus/org.freedesktop.ScreenSaver.xml)

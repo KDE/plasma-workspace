@@ -1,0 +1,13 @@
+[Desktop Entry]
+Type=Service
+X-KDE-ServiceTypes=KCModule
+Icon=preferences-system
+Exec=kcmshell5 screenlocker
+X-KDE-Library=screenlocker_kcm
+X-KDE-ParentApp=kcontrol
+
+X-KDE-System-Settings-Parent-Category=workspace-behavior
+X-KDE-Weight=60
+
+Name=Screen Locking
+Comment=Screen Locking Timeouts
