@@ -106,8 +106,8 @@ Rectangle {
         //the oneliner of difference between image and slideshow wallpapers
         renderingMode: (wallpaper.pluginName == "org.kde.image") ? Wallpaper.Image.SingleImage : Wallpaper.Image.SlideShow
 //         targetSize: "1920x1080"
-        width: parent.width
-        height: parent.height
+        width: root.width
+        height: root.height
         slidePaths: wallpaper.configuration.SlidePaths
         slideTimer: wallpaper.configuration.SlideInterval
     }
