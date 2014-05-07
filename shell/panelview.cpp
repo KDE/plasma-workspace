@@ -224,6 +224,7 @@ void PanelView::setOffset(int offset)
     emit offsetChanged();
     m_corona->requestApplicationConfigSync();
     m_strutsTimer.start(STRUTSTIMERDELAY);
+    emit m_corona->availableScreenRegionChanged();
 }
 
 int PanelView::thickness() const
@@ -248,6 +249,8 @@ void PanelView::setThickness(int value)
     config().writeEntry("thickness", value);
     m_corona->requestApplicationConfigSync();
     positionPanel();
+    emit m_corona->availableScreenRectChanged();
+    emit m_corona->availableScreenRegionChanged();
 }
 
 int PanelView::length() const
