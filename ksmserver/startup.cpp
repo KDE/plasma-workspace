@@ -440,7 +440,7 @@ void KSMServer::runUserAutostart()
                 //KRun is synchronous so if we use it here it will produce a deadlock.
                 //So isntead we use kioclient for now.
                 //(void) new KRun( url, 0, true );
-                QProcess::startDetached(QStringLiteral("kioclient"),
+                QProcess::startDetached(QStringLiteral("kioclient5"),
                     QStringList()
                     << QStringLiteral("exec")
                     << url.path()
