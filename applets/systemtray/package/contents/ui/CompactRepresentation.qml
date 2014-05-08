@@ -75,6 +75,13 @@ Item {
         }
     }
 
+    function setItemPreferredSize() {
+        var dim = (root.vertical ? compactRepresentation.width : compactRepresentation.height) - units.smallSpacing;
+        if (root.preferredItemSize != dim) {
+            root.preferredItemSize = dim;
+        }
+    }
+
     Rectangle {
         anchors.fill: parent;
         border.width: 1;
@@ -160,17 +167,6 @@ Item {
         }
     }
 
-    onHeightChanged: ttt.running = true
-    onWidthChanged: ttt.running = true
-
-    Timer {
-        id: ttt
-        interval: 50
-        running: false
-        repeat: false
-        onTriggered: {
-            var dim = root.vertical ? compactRepresentation.width : compactRepresentation.height;
-            root.preferredItemSize = dim - units.smallSpacing;
-        }
-    }
+    onHeightChanged: setItemPreferredSize();
+    onWidthChanged: setItemPreferredSize();
 }
