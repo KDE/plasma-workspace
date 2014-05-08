@@ -23,16 +23,6 @@
       <label></label>
       <whatsthis></whatsthis>
     </entry>
-    <entry key="AutoLogout" type="Bool">
-      <default>false</default>
-      <label></label>
-      <whatsthis></whatsthis>
-    </entry>
-    <entry key="AutoLogoutTimeout" type="Int">
-      <default>600</default>
-      <label></label>
-      <whatsthis></whatsthis>
-    </entry>
   </group>
   <group name="Greeter">
     <entry key="GreeterQML" type="String">

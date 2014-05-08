@@ -224,7 +224,6 @@ void KSldApp::configure()
     } else {
         m_lockGrace = -1;
     }
-    m_autoLogoutTimeout = KScreenSaverSettings::autoLogout() ? KScreenSaverSettings::autoLogoutTimeout() * 1000 : 0;
 }
 
 void KSldApp::lock(EstablishLock establishLock)

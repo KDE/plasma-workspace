@@ -11,7 +11,6 @@ set(powerdevilpolicyagent_xml ${KDE4_DBUS_INTERFACES_DIR}/kf5_org.kde.Solid.Powe
 
 set(ksld_SRCS
    ksldapp.cpp
-   autologout.cpp
    interface.cpp
    lockwindow.cpp
    logind.cpp

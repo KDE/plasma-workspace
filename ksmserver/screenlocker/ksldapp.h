@@ -81,10 +81,6 @@ public:
     void inhibit();
     void uninhibit();
 
-    uint autoLogoutTimeout() const {
-        return m_autoLogoutTimeout;
-    }
-
     void lock(EstablishLock establishLock);
 
 Q_SIGNALS:
@@ -127,7 +123,6 @@ private:
      **/
     QTimer *m_graceTimer;
     int m_inhibitCounter;
-    uint m_autoLogoutTimeout;
 };
 } // namespace
 

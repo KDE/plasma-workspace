@@ -22,7 +22,6 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 *********************************************************************/
 #include "lockwindow.h"
-#include "autologout.h"
 #include "ksldapp.h"
 // Qt
 #include <QApplication>
@@ -65,7 +64,6 @@ namespace ScreenLocker
 LockWindow::LockWindow()
     : QWidget(nullptr, Qt::X11BypassWindowManagerHint)
     , QAbstractNativeEventFilter()
-    , m_autoLogoutTimer(new QTimer(this))
 {
     initialize();
 }
@@ -111,8 +109,6 @@ void LockWindow::initialize()
         }
         XFree( real );
     }
-    m_autoLogoutTimer->setSingleShot(true);
-    connect(m_autoLogoutTimer, SIGNAL(timeout()), SLOT(autoLogoutTimeout()));
     connect(QApplication::desktop(), SIGNAL(resized(int)), SLOT(updateGeo()));
     connect(QApplication::desktop(), SIGNAL(screenCountChanged(int)), SLOT(updateGeo()));
 }
@@ -143,9 +139,6 @@ void LockWindow::showLockWindow()
     XSync(QX11Info::display(), False);
 
     setVRoot( winId(), winId() );
-    if (KSldApp::self()->autoLogoutTimeout()) {
-        m_autoLogoutTimer->start(KSldApp::self()->autoLogoutTimeout());
-    }
 }
 
 //---------------------------------------------------------------------------
@@ -154,9 +147,6 @@ void LockWindow::showLockWindow()
 //
 void LockWindow::hideLockWindow()
 {
-  if (m_autoLogoutTimer->isActive()) {
-      m_autoLogoutTimer->stop();
-  }
   emit userActivity();
   hide();
   lower();
@@ -315,9 +305,6 @@ bool LockWindow::nativeEventFilter(const QByteArray &eventType, void *message, l
             if (KSldApp::self()->isGraceTime()) {
                 KSldApp::self()->unlock();
                 return true;
-            }
-            if (m_autoLogoutTimer->isActive()) {
-                m_autoLogoutTimer->start(KSldApp::self()->autoLogoutTimeout());
             }
             emit userActivity();
             if (!m_lockWindows.isEmpty()) {
@@ -535,35 +522,6 @@ bool LockWindow::isLockWindow(Window id)
         XFree(data);
     }
     return lockWindow;
-}
-
-void LockWindow::autoLogoutTimeout()
-{
-    QDesktopWidget *desktop = QApplication::desktop();
-    QRect screenRect;
-    if (desktop->screenCount() > 1) {
-        screenRect = desktop->screenGeometry(desktop->screenNumber(QCursor::pos()));
-    } else {
-        screenRect = desktop->screenGeometry();
-    }
-
-    QPointer<AutoLogout> dlg = new AutoLogout(this);
-    dlg->adjustSize();
-
-    QRect rect = dlg->geometry();
-    rect.moveCenter(screenRect.center());
-    dlg->move(rect.topLeft());
-
-    Atom tag = XInternAtom(QX11Info::display(), "_KDE_SCREEN_LOCKER", False);
-    XChangeProperty(QX11Info::display(), dlg->winId(), tag, tag, 32, PropModeReplace, 0, 0);
-
-    dlg->exec();
-    delete dlg;
-
-    // start the timer again - only if the window is still shown
-    if (isVisible()) {
-        m_autoLogoutTimer->start(KSldApp::self()->autoLogoutTimeout());
-    }
 }
 
 void LockWindow::updateGeo()

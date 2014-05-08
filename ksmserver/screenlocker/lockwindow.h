@@ -50,7 +50,6 @@ protected:
     virtual void paintEvent(QPaintEvent *);
 
 private Q_SLOTS:
-    void autoLogoutTimeout();
     void updateGeo();
 
 private:
@@ -68,7 +67,6 @@ private:
     };
     QList<WindowInfo> m_windowInfo;
     QList<WId> m_lockWindows;
-    QTimer *m_autoLogoutTimer;
 };
 }
 
