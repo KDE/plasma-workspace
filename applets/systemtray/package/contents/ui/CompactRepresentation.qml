@@ -49,19 +49,6 @@ Item {
         }
     }
 
-    Timer {
-        id: hidePopupTimer
-        interval: 10
-        running: false
-        repeat: false
-        onTriggered: {
-            //print("hidetimer triggered, collapsing " + (root.expandedTask == null) )
-            if (root.expandedTask == null) {
-                plasmoid.expanded = false
-            }
-        }
-    }
-
     function computeDimension() {
         var dim = root.vertical ? compactRepresentation.width : compactRepresentation.height
         var rows = Math.floor(dim / root.itemSize);
@@ -82,7 +69,9 @@ Item {
         if (!plasmoid.expanded) {
             plasmoid.expanded = true
         } else {
-            hidePopupTimer.start();
+            if (root.expandedTask == null) {
+                plasmoid.expanded = false
+            }
         }
     }
 
