@@ -59,9 +59,10 @@ Item {
 
     function computeDimensionHeight() {
         var dim = root.vertical ? compactRepresentation.width : compactRepresentation.height
-        var rows = Math.floor(dim / root.itemSize);
-        var rr = rows * (root.itemSize + units.smallSpacing);
-        return rr;
+        var cols = Math.floor(dim / root.itemSize);
+        var rows = Math.ceil(gridView.count / cols);
+        var res = rows * (root.itemSize + units.smallSpacing*4) + units.smallSpacing + tooltip.height;
+        return res;
     }
 
     function togglePopup() {
