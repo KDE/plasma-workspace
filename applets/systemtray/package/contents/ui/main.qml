@@ -110,6 +110,7 @@ Item {
 
     SystemTray.Host {
         id: host
+        plasmoidsAllowed: plasmoid.configuration.extraItems
         rootItem: plasmoid
     }
 

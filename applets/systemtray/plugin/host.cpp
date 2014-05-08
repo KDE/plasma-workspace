@@ -25,6 +25,7 @@
 #include "protocol.h"
 
 #include <klocalizedstring.h>
+#include <KServiceTypeTrader>
 
 #include <Plasma/Package>
 #include <Plasma/PluginLoader>
@@ -33,6 +34,7 @@
 #include <QQuickItem>
 #include <QTimer>
 #include <QVariant>
+#include <QStandardItemModel>
 
 #include "protocols/plasmoid/plasmoidprotocol.h"
 #include "protocols/dbussystemtray/dbussystemtrayprotocol.h"
@@ -43,6 +45,18 @@
 namespace SystemTray
 {
 
+class PlasmoidModel: public QStandardItemModel
+{
+public:
+    PlasmoidModel(QObject *parent = 0)
+        : QStandardItemModel(parent)
+    {
+        QHash<int, QByteArray> roles = roleNames();
+        roles[Qt::UserRole+1] = "plugin";
+        setRoleNames(roles);
+    }
+};
+
 class HostPrivate {
 public:
     HostPrivate(Host *host)
@@ -50,7 +64,9 @@ public:
           rootItem(0),
           shownTasksModel(new TaskListModel(host)),
           hiddenTasksModel(new TaskListModel(host)),
-          allTasksModel(new TaskListModel(host))
+          allTasksModel(new TaskListModel(host)),
+          availablePlasmoidsModel(0),
+          plasmoidProtocol(new SystemTray::PlasmoidProtocol(host))
     {
     }
     void setupProtocol(Protocol *protocol);
@@ -66,6 +82,10 @@ public:
     TaskListModel *shownTasksModel;
     TaskListModel *hiddenTasksModel;
     TaskListModel *allTasksModel;
+
+    PlasmoidModel *availablePlasmoidsModel;
+
+    SystemTray::PlasmoidProtocol *plasmoidProtocol;
 
     QStringList categories;
 };
@@ -85,7 +105,7 @@ Host::~Host()
 void Host::init()
 {
     d->setupProtocol(new SystemTray::DBusSystemTrayProtocol(this));
-    d->setupProtocol(new SystemTray::PlasmoidProtocol(this));
+    d->setupProtocol(d->plasmoidProtocol);
 
     initTasks();
 
@@ -103,6 +123,23 @@ void Host::initTasks()
 QQuickItem* Host::rootItem()
 {
     return d->rootItem;
+}
+
+QStringList Host::plasmoidsAllowed() const
+{
+    if (d->plasmoidProtocol) {
+        return d->plasmoidProtocol->allowedPlugins();
+    } else {
+        return QStringList();
+    }
+}
+
+void Host::setPlasmoidsAllowed(const QStringList &plasmoids)
+{
+    if (d->plasmoidProtocol) {
+        d->plasmoidProtocol->setAllowedPlugins(plasmoids);
+        emit plasmoidsAllowedChanged();
+    }
 }
 
 void Host::setRootItem(QQuickItem* item)
@@ -210,6 +247,33 @@ QAbstractItemModel* Host::allTasks()
     return d->allTasksModel;
 
 }
+
+QAbstractItemModel* Host::availablePlasmoids()
+{
+    if (!d->availablePlasmoidsModel) {
+        d->availablePlasmoidsModel = new PlasmoidModel(this);
+
+        //X-Plasma-NotificationArea
+        const QString constraint = QString("[X-Plasma-NotificationArea] == true");
+
+        KPluginInfo::List applets = KPluginInfo::fromServices(KServiceTypeTrader::self()->query("Plasma/Applet", constraint));
+
+        foreach (const KPluginInfo &info, applets) {
+            QString name = info.name();
+            KService::Ptr service = info.service();
+            const QString dbusactivation = service->property("X-Plasma-DBusActivationService",
+                                                         QVariant::String).toString();
+            if (!dbusactivation.isEmpty()) {
+                name += i18n(" (Automatic load)");
+            }
+            QStandardItem *item = new QStandardItem(QIcon::fromTheme(info.icon()), name);
+            item->setData(info.pluginName());
+            d->availablePlasmoidsModel->appendRow(item);
+        }
+    }
+    return d->availablePlasmoidsModel;
+}
+
 
 bool HostPrivate::showTask(Task *task) const {
     return task->shown() && task->status() != SystemTray::Task::Passive;

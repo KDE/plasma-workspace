@@ -49,6 +49,9 @@ class Host : public QObject
     Q_PROPERTY(QAbstractItemModel* shownTasks READ shownTasks CONSTANT)
     Q_PROPERTY(QAbstractItemModel* allTasks READ allTasks CONSTANT)
 
+    Q_PROPERTY(QAbstractItemModel* availablePlasmoids READ availablePlasmoids CONSTANT)
+    Q_PROPERTY(QStringList plasmoidsAllowed READ plasmoidsAllowed WRITE setPlasmoidsAllowed NOTIFY plasmoidsAllowedChanged)
+
     Q_PROPERTY(QStringList categories READ categories NOTIFY categoriesChanged)
 
     Q_PROPERTY(QQuickItem* rootItem READ rootItem WRITE setRootItem NOTIFY rootItemChanged)
@@ -65,6 +68,9 @@ public:
     void setRootItem(QQuickItem* rootItem);
     QQuickItem* rootItem();
 
+    QStringList plasmoidsAllowed() const;
+    void setPlasmoidsAllowed(const QStringList &plasmoids);
+
 public Q_SLOTS:
     void init();
     bool isCategoryShown(int cat) const;
@@ -72,6 +78,7 @@ public Q_SLOTS:
     QAbstractItemModel* hiddenTasks();
     QAbstractItemModel* shownTasks();
     QAbstractItemModel* allTasks();
+    QAbstractItemModel* availablePlasmoids();
     QStringList categories() const;
 
 
@@ -79,6 +86,7 @@ Q_SIGNALS:
     void categoriesChanged();
     void rootItemChanged();
     void shownCategoriesChanged();
+    void plasmoidsAllowedChanged();
 
 private Q_SLOTS:
     void addTask(SystemTray::Task *task);

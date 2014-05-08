@@ -22,6 +22,7 @@ import QtQuick.Controls 1.0 as QtControls
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.plasma.extras 2.0 as PlasmaExtras
+import org.kde.kquickcontrolsaddons 2.0
 
 import org.kde.private.systemtray 2.0 as SystemTray
 
@@ -39,15 +40,25 @@ Item {
     property alias cfg_systemServicesShown: systemServices.checked
     property alias cfg_hardwareControlShown: hardwareControl.checked
     property alias cfg_miscellaneousShown: miscellaneous.checked
+    property var cfg_extraItems: Array()
 
     SystemTray.Host {
         id: host
+    }
+
+    SystemPalette {
+        id: palette
     }
 
     Column {
         id: pageColumn
         spacing: itemSizeLabel.height / 2
 
+        PlasmaExtras.Heading {
+            level: 2
+            text: i18n("Categories")
+            color: palette.text
+        }
         Column {
             QtControls.CheckBox {
                 id: applicationStatus
@@ -68,6 +79,48 @@ Item {
             QtControls.CheckBox {
                 id: miscellaneous
                 text: i18n("Miscellaneous")
+            }
+        }
+
+        Item {
+            width: height
+            height: units.gridUnit
+        }
+        PlasmaExtras.Heading {
+            level: 2
+            text: i18n("Extra Items")
+            color: palette.text
+        }
+        Column {
+            Repeater {
+                model: host.availablePlasmoids
+                delegate: QtControls.CheckBox {
+                    width: childrenRect.width
+                    checked: cfg_extraItems.indexOf(plugin) != -1
+                    onCheckedChanged: {
+                        var index = cfg_extraItems.indexOf(plugin);
+                        if (checked) {
+                            if (index == -1) {
+                                cfg_extraItems.push(plugin);
+                            }
+                        } else {
+                            if (index > -1) {
+                                cfg_extraItems.splice(index, 1);
+                            }
+                        }
+                    }
+                    Row {
+                        x: height + 5
+                        QIconItem {
+                            icon: decoration
+                            width: units.iconSizes.small
+                            height: width
+                        }
+                        QtControls.Label {
+                            text: display
+                        }
+                    }
+                }
             }
         }
         ListView {

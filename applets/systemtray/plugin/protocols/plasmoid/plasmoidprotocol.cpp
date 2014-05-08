@@ -92,6 +92,23 @@ void PlasmoidProtocol::init()
         m_containment->setLocation(m_systrayApplet->location());
     });
 
+    restorePlasmoids();
+}
+
+void PlasmoidProtocol::restorePlasmoids()
+{
+    //First: remove all that are not allowed anymore
+    QStringList tasksToDelete;
+    foreach (const QString &task, m_tasks.keys()) {
+        if (!m_allowedPlugins.contains(task)) {
+            tasksToDelete << task;
+        }
+    }
+    foreach (const QString &task, tasksToDelete) {
+        cleanupTask(task);
+    }
+
+    KConfigGroup cg = m_systrayApplet->config();
     cg = m_containment->config();
     cg = KConfigGroup(&cg, "Applets");
     foreach (const QString &group, cg.groupList()) {
@@ -110,13 +127,6 @@ void PlasmoidProtocol::init()
 
     QStringList ownApplets;
 
-    QStringList blacklist;
-    blacklist << "notifier";
-    //blacklist << "org.kde.plasma.devicenotifier";
-    //blacklist << "org.kde.plasma.notifications";
-    //blacklist << "org.kde.networkmanagement";
-    blacklist << "org.kde.systrayplasmoidtest";
-
     QMap<QString, KPluginInfo> sortedApplets;
     foreach (const KPluginInfo &info, applets) {
         KService::Ptr service = info.service();
@@ -128,8 +138,8 @@ void PlasmoidProtocol::init()
             continue;
         }
 
-        //FIXME: should consider config
-        if (!blacklist.contains(info.pluginName()) &&
+        if (m_allowedPlugins.contains(info.pluginName()) &&
+            !m_tasks.contains(info.pluginName()) &&
             dbusactivation.isEmpty()) {
             // if we already have a plugin with this exact name in it, then check if it is the
             // same plugin and skip it if it is indeed already listed
@@ -159,7 +169,7 @@ void PlasmoidProtocol::init()
     foreach (const KPluginInfo &info, sortedApplets) {
         //qCDebug(SYSTEMTRAY) << " Adding applet: " << info.name();
         qCDebug(SYSTEMTRAY) << "\n\n ==========================================================================================";
-        if (!blacklist.contains(info.pluginName())) {
+        if (m_allowedPlugins.contains(info.pluginName())) {
             newTask(info.pluginName());
         }
     }
@@ -167,6 +177,19 @@ void PlasmoidProtocol::init()
     initDBusActivatables();
 }
 
+QStringList PlasmoidProtocol::allowedPlugins() const
+{
+    return m_allowedPlugins;
+}
+
+void PlasmoidProtocol::setAllowedPlugins(const QStringList &allowed)
+{
+    m_allowedPlugins = allowed;
+
+    if (m_containment) {
+        restorePlasmoids();
+    }
+}
 
 void PlasmoidProtocol::newTask(const QString &service)
 {
@@ -175,8 +198,6 @@ void PlasmoidProtocol::newTask(const QString &service)
     if (m_tasks.contains(service)) {
         return;
     }
-
-    Host* m = qobject_cast<Host*>(parent());
 
     PlasmoidTask *task = new PlasmoidTask(service, m_knownPlugins.value(service), m_containment, this);
 

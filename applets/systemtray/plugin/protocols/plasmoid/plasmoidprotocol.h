@@ -47,6 +47,10 @@ public:
     ~PlasmoidProtocol();
 
     void init();
+    void restorePlasmoids();
+
+    QStringList allowedPlugins() const;
+    void setAllowedPlugins(const QStringList &allowed);
 
 protected Q_SLOTS:
     void newTask(const QString &service);
@@ -65,6 +69,7 @@ private:
     QHash<QString, QString> m_dbusActivatableTasks;
     Plasma::Containment *m_containment;
     Plasma::Applet *m_systrayApplet;
+    QStringList m_allowedPlugins;
 };
 
 }
