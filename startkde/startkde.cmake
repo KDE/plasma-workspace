@@ -74,6 +74,16 @@ kcmfonts General forceFontDPI 0
 kdeglobals Locale Language '' # trigger requesting languages from KLocale
 EOF
 
+# export LC_* variables set by kcmshell5 formats into environment
+# so it can be picked up by QLocale and friends.
+exportformatssettings=$configDir/export-formats-settings.sh
+echo $exportformatssettings >> /tmp/formats.log
+test -f $exportformatssettings && {
+    echo "$exportformatssettings is there" >> /tmp/formats.log
+    . $exportformatssettings
+    env >> /tmp/env2.log
+}
+
 # Write a default kdeglobals file to set up the font
 kdeglobalsfile=$configDir/kdeglobals
 test -f $kdeglobalsfile || {
