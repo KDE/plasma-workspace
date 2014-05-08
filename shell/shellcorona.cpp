@@ -652,15 +652,15 @@ void ShellCorona::createWaitingPanels()
             continue;
         }
 
-        d->panelViews[cont] = new PanelView(cont);
+        d->panelViews[cont] = new PanelView(this);
 
         Q_ASSERT(qBound(0, requestedScreen, d->views.size() -1) == requestedScreen);
         QScreen *screen = d->views[requestedScreen]->screen();
 
         d->panelViews[cont]->setScreen(screen);
-        cont->reactToScreenChange();
-        connect(cont, SIGNAL(destroyed(QObject*)), this, SLOT(containmentDeleted(QObject*)));
+        d->panelViews[cont]->setContainment(cont);
 
+        connect(cont, SIGNAL(destroyed(QObject*)), this, SLOT(containmentDeleted(QObject*)));
         connect(screen, SIGNAL(destroyed(QObject*)), this, SLOT(removePanel(QObject*)));
     }
     d->waitingPanels.clear();
@@ -1037,6 +1037,7 @@ int ShellCorona::screenForContainment(const Plasma::Containment *containment) co
             }
         }
     }
+    Q_ASSERT(false);
     return -1;
 }
 

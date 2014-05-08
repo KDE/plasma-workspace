@@ -44,35 +44,17 @@
 #include <QX11Info>
 #endif
 
-PanelView::PanelView(Plasma::Containment *cont, QWindow *parent)
-    : PlasmaQuick::View(cont->corona(), parent),
+PanelView::PanelView(ShellCorona *corona, QWindow *parent)
+    : PlasmaQuick::View(corona, parent),
        m_offset(0),
        m_maxLength(0),
        m_minLength(0),
        m_distance(0),
        m_thickness(30),
        m_alignment(Qt::AlignLeft),
-       m_corona(static_cast<ShellCorona *>(cont->corona())),
+       m_corona(corona),
        m_visibilityMode(NormalPanel)
 {
-    //This is kindof an hack: however it avoids several unnecessary resizes
-    //speeds up startup and avoids rare cases when the panel starts at the wrong size
-    {
-        KConfigGroup views(m_corona->applicationConfig(), "PlasmaViews");
-        views = KConfigGroup(&views, QString("Panel %1").arg(cont->id()));
-
-        if (cont->formFactor() == Plasma::Types::Vertical) {
-            KConfigGroup cg(&views, "Types::Vertical" + QString::number(screen()->size().height()));
-            resize(cg.readEntry<int>("thickness", 30),
-                cg.readEntry<int>("length", screen()->size().height()));
-        //treat everything else as horizontal
-        } else {
-            KConfigGroup cg(&views, "Horizontal" + QString::number(screen()->size().width()));
-            resize(cg.readEntry<int>("length", screen()->size().width()),
-                cg.readEntry<int>("thickness", 30));
-        }
-    }
-
     setResizeMode(QQuickView::SizeRootObjectToView);
     QSurfaceFormat format;
     format.setAlphaBufferSize(8);
@@ -138,7 +120,6 @@ PanelView::PanelView(Plasma::Containment *cont, QWindow *parent)
     engine()->rootContext()->setContextProperty("panel", this);
     setSource(QUrl::fromLocalFile(m_corona->package().filePath("views", "Panel.qml")));
     PanelShadows::self()->addWindow(this);
-    setContainment(cont);
 }
 
 PanelView::~PanelView()
