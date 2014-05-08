@@ -154,10 +154,6 @@ Item {
             expandedDevice = udi
         }
 
-        // reset the property that lets us remember if an item was clicked
-        // (versus only hovered) for autohide purposes
-        notifierDialog.itemClicked = false;
-
         devicenotifier.popupIcon = "preferences-desktop-notification";
         plasmoid.expanded = true;
         popupIconTimer.restart()
@@ -308,7 +304,7 @@ Item {
                     var used = size-freeSpace;
                     return used*100/size;
                 }
-                freeSpaceText: sdSource.data[udi]["Free Space Text"]
+                freeSpaceText: sdSource.data[udi] ? sdSource.data[udi]["Free Space Text"] : ""
 
                 leftActionIcon: {
                     if (mounted) {
