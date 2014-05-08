@@ -47,11 +47,11 @@ class Host : public QObject
 
     Q_PROPERTY(QAbstractItemModel* hiddenTasks READ hiddenTasks CONSTANT)
     Q_PROPERTY(QAbstractItemModel* shownTasks READ shownTasks CONSTANT)
+    Q_PROPERTY(QAbstractItemModel* allTasks READ allTasks CONSTANT)
 
     Q_PROPERTY(QStringList categories READ categories NOTIFY categoriesChanged)
 
     Q_PROPERTY(QQuickItem* rootItem READ rootItem WRITE setRootItem NOTIFY rootItemChanged)
-    //Q_PROPERTY(QQuickItem* rootItem WRITE setRootItem)
 
 public:
     Host(QObject* parent = 0);
@@ -71,6 +71,7 @@ public Q_SLOTS:
     void setCategoryShown(int cat, bool shown);
     QAbstractItemModel* hiddenTasks();
     QAbstractItemModel* shownTasks();
+    QAbstractItemModel* allTasks();
     QStringList categories() const;
 
 

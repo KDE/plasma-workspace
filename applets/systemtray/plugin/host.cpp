@@ -49,7 +49,8 @@ public:
         : q(host),
           rootItem(0),
           shownTasksModel(new TaskListModel(host)),
-          hiddenTasksModel(new TaskListModel(host))
+          hiddenTasksModel(new TaskListModel(host)),
+          allTasksModel(new TaskListModel(host))
     {
     }
     void setupProtocol(Protocol *protocol);
@@ -64,6 +65,7 @@ public:
 
     TaskListModel *shownTasksModel;
     TaskListModel *hiddenTasksModel;
+    TaskListModel *allTasksModel;
 
     QStringList categories;
 };
@@ -167,6 +169,8 @@ void Host::addTask(Task *task)
             d->hiddenTasksModel->addTask(task);
         }
     }
+
+    d->allTasksModel->addTask(task);
 }
 
 void Host::removeTask(Task *task)
@@ -175,6 +179,7 @@ void Host::removeTask(Task *task)
     disconnect(task, 0, this, 0);
     d->shownTasksModel->removeTask(task);
     d->hiddenTasksModel->removeTask(task);
+    d->allTasksModel->removeTask(task);
 }
 
 void Host::slotTaskStatusChanged()
@@ -197,6 +202,12 @@ QAbstractItemModel* Host::hiddenTasks()
 QAbstractItemModel* Host::shownTasks()
 {
     return d->shownTasksModel;
+
+}
+
+QAbstractItemModel* Host::allTasks()
+{
+    return d->allTasksModel;
 
 }
 

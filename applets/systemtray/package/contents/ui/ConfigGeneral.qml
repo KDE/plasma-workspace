@@ -71,8 +71,9 @@ Item {
             }
         }
         ListView {
-            model: host.tasks
-            width: parent.width
+            //TODO: use when supported
+            //model: host.allTasks
+            width: units.gridUnit * 25
             height: 400
 
             spacing: parent.spacing
@@ -81,12 +82,12 @@ Item {
                 height: implicitHeight
                 width: parent.width
                 QtControls.Label {
-                    text: name
+                    text: modelData.name
                     elide: Text.ElideRight
-                    width: parent.width / 3
+                    width: (parent.width / 4) * 3
                 }
                 QtControls.ComboBox {
-                    width: 200
+                    width: parent.width / 4
                     currentIndex: 0
                     model: ListModel {
                         id: cbItems
