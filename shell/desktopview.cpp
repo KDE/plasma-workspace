@@ -94,7 +94,7 @@ void DesktopView::adaptToScreen()
     //This happens sometimes, when shutting down the process
     if (!screen())
         return;
-    qDebug() << "adapting to screen" << screen()->name() << this;
+//     qDebug() << "adapting to screen" << screen()->name() << this;
     if (m_fillScreen) {
         setGeometry(screen()->geometry());
         setMinimumSize(screen()->geometry().size());
@@ -103,7 +103,7 @@ void DesktopView::adaptToScreen()
     } else {
         disconnect(screen(), &QScreen::geometryChanged, this, static_cast<void (QWindow::*)(const QRect&)>(&QWindow::setGeometry));
     }
-    qDebug() << "adapted" << geometry() << (containment () ? containment()->wallpaper() : "xx");
+//     qDebug() << "adapted" << geometry() << (containment () ? containment()->wallpaper() : "xx");
 }
 
 void DesktopView::ensureStayBehind()
