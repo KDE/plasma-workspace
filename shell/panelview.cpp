@@ -351,7 +351,8 @@ void PanelView::setVisibilityMode(PanelView::VisibilityMode mode)
         connect(containment(), &Plasma::Applet::activated, this, &PanelView::showTemporarily);
     }
 
-    config().writeEntry("panelVisibility", (int)mode);
+    if (config().isValid())
+        config().writeEntry("panelVisibility", (int)mode);
 
     updateStruts();
 
