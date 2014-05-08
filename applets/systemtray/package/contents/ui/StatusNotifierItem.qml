@@ -53,11 +53,11 @@ Item {
     }
 
     function scrollHorz(delta) {
-        activateHorzScroll(delta)
+        modelData.activateHorzScroll(delta)
     }
 
     function scrollVert(delta) {
-        activateVertScroll(delta)
+        modelData.activateVertScroll(delta)
     }
 
     function getMouseArea() {
@@ -178,9 +178,9 @@ Item {
         onWheelMoved: {
             //print("wheel moved by " + wheel.delta);
             if (wheel.orientation === Qt.Horizontal)
-                activateHorzScroll(wheel.delta)
+                modelData.activateHorzScroll(wheel.delta)
             else
-                activateVertScroll(wheel.delta)
+                modelData.activateVertScroll(wheel.delta)
         }
     }
 
