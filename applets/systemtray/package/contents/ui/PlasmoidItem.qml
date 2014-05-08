@@ -31,6 +31,14 @@ Item {
         }
     }
 
+    Connections {
+        target: modelData
+        onExpandedChanged: {
+            if (modelData.expanded) {
+                plasmoid.expanded = true;
+            }
+        }
+    }
     MouseArea {
         anchors {
             fill: parent
