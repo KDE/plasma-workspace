@@ -21,6 +21,8 @@ import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.plasma.calendar 2.0
+import org.kde.plasma.extras 2.0 as PlasmaExtras
+
 
 Item {
     id: main
@@ -30,9 +32,56 @@ Item {
 
     property int formFactor: plasmoid.formFactor
 
-    Plasmoid.fullRepresentation: MonthView {
-        id: calendar
+    Plasmoid.fullRepresentation: Item {
+
         Layout.minimumWidth: units.gridUnit * 20
         Layout.minimumHeight: units.gridUnit * 20
+
+        PlasmaExtras.Heading {
+            id: monthHeading
+
+            anchors {
+                top: parent.top
+                left: parent.left
+                right: parent.right
+            }
+
+            level: 1
+            text: isCurrentYear(calendar.startDate) ?  calendar.selectedMonth :  calendar.selectedMonth + ", " + calendar.selectedYear
+            elide: Text.ElideRight
+
+            function isCurrentYear(date) {
+                var d = new Date();
+                if (d.getFullYear() == date.getFullYear()) {
+                    return true;
+                }
+                return false;
+            }
+
+            MonthMenu {
+                id: monthMenu
+            }
+
+            MouseArea {
+                id: monthMouse
+                anchors {
+                    fill: parent
+                }
+                onClicked: {
+                    monthMenu.open(0, height)
+                }
+            }
+        }
+
+        MonthView {
+            id: calendar
+
+            anchors {
+                top: monthHeading.bottom
+                left: parent.left
+                right: parent.right
+                bottom: parent.bottom
+            }
+        }
     }
 }
