@@ -75,6 +75,11 @@ PlasmaCore.Dialog {
             }
         }
 
+        onClicked: {
+            closeNotification(notificationProperties.source)
+            notificationPopup.hide()
+        }
+
         QIconItem {
             id: appIconItem
             height: units.iconSizes.large
