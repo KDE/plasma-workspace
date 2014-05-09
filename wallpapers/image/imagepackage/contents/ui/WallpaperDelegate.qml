@@ -95,7 +95,13 @@ MouseArea {
             }
         }
     }
-
+    Rectangle {
+        width: 100
+        height: 100
+PlasmaComponents.Label {
+    text: model.screenshot != null
+}
+    }
     onClicked: {
         wallpapersGrid.currentIndex = index
         cfg_Image = model.path
