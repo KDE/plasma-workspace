@@ -29,7 +29,7 @@
 #include "shellmanager.h"
 
 static const char description[] = "Plasma Shell";
-static const char version[] = "2.0";
+static const char version[] = "4.96.0";
 static QCommandLineParser parser;
 
 void noMessageOutput(QtMsgType type, const char *msg)
