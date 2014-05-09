@@ -41,23 +41,23 @@ qt5_add_dbus_adaptor(kuiserver_KDEINIT_SRCS org.kde.kuiserver.xml progresslistmo
 configure_file(org.kde.kuiserver.service.in
                ${CMAKE_CURRENT_BINARY_DIR}/org.kde.kuiserver.service)
 install(FILES ${CMAKE_CURRENT_BINARY_DIR}/org.kde.kuiserver.service
-        DESTINATION ${DBUS_SERVICES_INSTALL_DIR})
+        DESTINATION ${DBUS_SERVICES_INSTALL_DIR} RENAME kf5_org.kde.kuiserver.service)
 
 #</DBus Stuff>
 
 
 kconfig_add_kcfg_files(kuiserver_KDEINIT_SRCS kuiserversettings.kcfgc)
 
-kf5_add_kdeinit_executable( kuiserver ${kuiserver_KDEINIT_SRCS})
+kf5_add_kdeinit_executable( kuiserver5 ${kuiserver_KDEINIT_SRCS})
 
 if (Q_WS_MAC)
-    set_target_properties(kuiserver PROPERTIES MACOSX_BUNDLE_INFO_PLIST ${CMAKE_SOURCE_DIR}/Info.plist.template)
-    set_target_properties(kuiserver PROPERTIES MACOSX_BUNDLE_GUI_IDENTIFIER "org.kde.kuiserver")
-    set_target_properties(kuiserver PROPERTIES MACOSX_BUNDLE_BUNDLE_NAME "KDE UI Server")
+    set_target_properties(kuiserver5 PROPERTIES MACOSX_BUNDLE_INFO_PLIST ${CMAKE_SOURCE_DIR}/Info.plist.template)
+    set_target_properties(kuiserver5 PROPERTIES MACOSX_BUNDLE_GUI_IDENTIFIER "org.kde.kuiserver")
+    set_target_properties(kuiserver5 PROPERTIES MACOSX_BUNDLE_BUNDLE_NAME "KDE UI Server")
 endif ()
 
 
-target_link_libraries(kdeinit_kuiserver
+target_link_libraries(kdeinit_kuiserver5
     Qt5::DBus
     KF5::ConfigWidgets
     KF5::DBusAddons
@@ -68,9 +68,9 @@ target_link_libraries(kdeinit_kuiserver
     KF5::KDELibs4Support
 
 )
-install(TARGETS kdeinit_kuiserver ${INSTALL_TARGETS_DEFAULT_ARGS})
+install(TARGETS kdeinit_kuiserver5 ${INSTALL_TARGETS_DEFAULT_ARGS})
 
-target_link_libraries( kuiserver kdeinit_kuiserver )
-install(TARGETS kuiserver ${INSTALL_TARGETS_DEFAULT_ARGS} )
+target_link_libraries( kuiserver5 kdeinit_kuiserver5 )
+install(TARGETS kuiserver5 ${INSTALL_TARGETS_DEFAULT_ARGS} )
 
 install( FILES kuiserver.desktop  DESTINATION  ${SERVICES_INSTALL_DIR} )
