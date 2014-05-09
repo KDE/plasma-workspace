@@ -73,7 +73,7 @@ ColumnLayout {
     PlasmaExtras.ScrollArea {
         visible: results.count > 0
         Layout.fillWidth: true
-        Layout.minimumHeight: units.gridUnit * 25//results.count > 0 ? units.gridUnit * 25 : 0
+        Layout.preferredHeight: Math.min(units.gridUnit * 25, results.contentHeight)
 
         Milou.ResultsView {
             id: results
