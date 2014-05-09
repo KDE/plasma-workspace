@@ -47,7 +47,7 @@ PanelConfigView::PanelConfigView(Plasma::Containment *containment, PanelView *pa
     m_visibilityMode = panelView->visibilityMode();
     panelView->setVisibilityMode(PanelView::WindowsGoBelow);
     setScreen(panelView->screen());
-    connect(panelView, &QWindow::screenChanged,
+    connect(panelView, &QWindow::screenChanged, this,
             [=](QScreen *screen) {
                 setScreen(screen);
                 syncGeometry();
