@@ -33,6 +33,9 @@ Item {
 
     property bool vertical: (plasmoid.formFactor == PlasmaCore.Types.Vertical)
 
+    //This way the configuration pages can access it
+    property QtObject systrayHost: host
+
     Plasmoid.toolTipMainText: ""
     Plasmoid.toolTipSubText: ""
 
@@ -112,6 +115,8 @@ Item {
         id: host
         plasmoidsAllowed: plasmoid.configuration.extraItems
         rootItem: plasmoid
+        forcedShownItems: plasmoid.configuration.shownItems
+        forcedHiddenItems: plasmoid.configuration.hiddenItems
     }
 
 }

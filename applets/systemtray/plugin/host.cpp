@@ -83,6 +83,9 @@ public:
     TaskListModel *hiddenTasksModel;
     TaskListModel *allTasksModel;
 
+    QStringList forcedShownItems;
+    QStringList forcedHiddenItems;
+
     PlasmoidModel *availablePlasmoidsModel;
 
     SystemTray::PlasmoidProtocol *plasmoidProtocol;
@@ -142,6 +145,61 @@ void Host::setPlasmoidsAllowed(const QStringList &plasmoids)
     }
 }
 
+QStringList Host::forcedShownItems() const
+{
+    return d->forcedShownItems;
+}
+
+void Host::setForcedShownItems(const QStringList &items)
+{
+    if (items == d->forcedShownItems) {
+        return;
+    }
+
+    d->forcedShownItems = items;
+
+    foreach (Task *task, d->tasks) {
+        if (d->shownCategories.contains(task->category())) {
+            if (!d->forcedHiddenItems.contains(task->taskId()) &&
+                (d->forcedShownItems.contains(task->taskId()) || d->showTask(task))) {
+                d->hiddenTasksModel->removeTask(task);
+                d->shownTasksModel->addTask(task);
+            } else {
+                d->shownTasksModel->removeTask(task);
+                d->hiddenTasksModel->addTask(task);
+            }
+        }
+    }
+}
+
+
+QStringList Host::forcedHiddenItems() const
+{
+    return d->forcedHiddenItems;
+}
+
+void Host::setForcedHiddenItems(const QStringList &items)
+{
+    if (items == d->forcedHiddenItems) {
+        return;
+    }
+
+    d->forcedHiddenItems = items;
+
+    foreach (Task *task, d->tasks) {
+        if (d->shownCategories.contains(task->category())) {
+            if (!d->forcedHiddenItems.contains(task->taskId()) &&
+                (d->forcedShownItems.contains(task->taskId()) || d->showTask(task))) {
+                d->hiddenTasksModel->removeTask(task);
+                d->shownTasksModel->addTask(task);
+            } else {
+                d->shownTasksModel->removeTask(task);
+                d->hiddenTasksModel->addTask(task);
+            }
+        }
+    }
+}
+
 void Host::setRootItem(QQuickItem* item)
 {
     if (d->rootItem == item) {
@@ -164,7 +222,8 @@ void Host::setCategoryShown(int cat, bool shown)
             d->shownCategories.insert((Task::Category)cat);
             foreach (Task *task, d->tasks) {
                 if (task->category() == cat) {
-                    if (d->showTask(task)) {
+                    if (!d->forcedHiddenItems.contains(task->taskId()) &&
+                        (d->forcedShownItems.contains(task->taskId()) || d->showTask(task))) {
                         d->shownTasksModel->addTask(task);
                     } else {
                         d->hiddenTasksModel->addTask(task);
@@ -200,7 +259,8 @@ void Host::addTask(Task *task)
     d->tasks << task;
 
     if (d->shownCategories.contains(task->category())) {
-        if (d->showTask(task)) {
+        if (!d->forcedHiddenItems.contains(task->taskId()) &&
+            (d->forcedShownItems.contains(task->taskId()) || d->showTask(task))) {
             d->shownTasksModel->addTask(task);
         } else {
             d->hiddenTasksModel->addTask(task);
@@ -287,8 +347,13 @@ void HostPrivate::setupProtocol(Protocol *protocol)
 
 void Host::taskStatusChanged(SystemTray::Task *task)
 {
+    if (!d->shownCategories.contains(task->category())) {
+        return;
+    }
+
     if (task) {
-        if (d->showTask(task)) {
+        if (!d->forcedHiddenItems.contains(task->taskId()) &&
+            (d->forcedShownItems.contains(task->taskId()) || d->showTask(task))) {
             d->hiddenTasksModel->removeTask(task);
             d->shownTasksModel->addTask(task);
         } else {

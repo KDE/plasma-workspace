@@ -1,5 +1,6 @@
 /*
  *  Copyright 2013 Sebastian Kügler <sebas@kde.org>
+ *  Copyright 2014 Marco Martin <mart@kde.org>
  *
  *  This program is free software; you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -119,44 +120,6 @@ Item {
                         QtControls.Label {
                             text: display
                         }
-                    }
-                }
-            }
-        }
-        ListView {
-            //TODO: use when supported
-            //model: host.allTasks
-            width: units.gridUnit * 25
-            height: 400
-
-            spacing: parent.spacing
-
-            delegate: Row {
-                height: implicitHeight
-                width: parent.width
-                QtControls.Label {
-                    text: modelData.name
-                    elide: Text.ElideRight
-                    width: (parent.width / 4) * 3
-                }
-                QtControls.ComboBox {
-                    width: parent.width / 4
-                    currentIndex: 0
-                    model: ListModel {
-                        id: cbItems
-                        ListElement { text: "Auto"; val: 1 }
-                        ListElement { text: "Shown"; val: 2 }
-                        ListElement { text: "Hidden"; val: 0 }
-                    }
-                    onCurrentIndexChanged: {
-                        if (index == 0) {
-                            print(name + "Now Hidden")
-                        } else if (index == 1) {
-                            print(name + "Now Auto")
-                        } else {
-                            print(name + "Now Shown")
-                        }
-                        console.debug(cbItems.get(currentIndex).text + ", " + cbItems.get(currentIndex).val)
                     }
                 }
             }

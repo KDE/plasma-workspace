@@ -23,8 +23,13 @@ import org.kde.plasma.configuration 2.0
 
 ConfigModel {
     ConfigCategory {
-         name: "General"
+         name: i18n("General")
          icon: "preferences-system-windows"
          source: "ConfigGeneral.qml"
+    }
+    ConfigCategory {
+         name: i18n("Entries")
+         icon: "configure-toolbars"
+         source: "ConfigEntries.qml"
     }
 }
