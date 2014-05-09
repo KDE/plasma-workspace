@@ -49,7 +49,3 @@ install(TARGETS klipper         ${INSTALL_TARGETS_DEFAULT_ARGS})
 
 install(PROGRAMS klipper.desktop DESTINATION ${XDG_APPS_INSTALL_DIR})
 install(PROGRAMS klipper.desktop DESTINATION ${AUTOSTART_INSTALL_DIR})
-
-if(NOT WIN32)
-  install( FILES klipper-kconfigxt.upd DESTINATION  ${KCONF_UPDATE_INSTALL_DIR} )
-endif()

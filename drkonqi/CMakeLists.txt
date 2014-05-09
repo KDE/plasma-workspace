@@ -104,5 +104,3 @@ if(KF5XmlRpcClient_FOUND)
 endif()
 
 install(TARGETS drkonqi DESTINATION ${LIBEXEC_INSTALL_DIR})
-
-install(FILES drkonqi-rename-config-section.upd DESTINATION ${KCONF_UPDATE_INSTALL_DIR})
