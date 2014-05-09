@@ -45,7 +45,7 @@ PlasmaCore.Dialog {
         appIconItem.icon = notification.appIcon
         actionsRepeater.model = notification.actions
 
-        if (notification.image != undefined) {
+        if (notification.image != undefined && notification.image != 0) {
             imageItem.image = notification.image
         }
     }
