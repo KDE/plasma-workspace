@@ -337,8 +337,7 @@ QVariant BackgroundListModel::data(const QModelIndex &index, int role) const
             const_cast<BackgroundListModel *>(this)->m_previewJobs.insert(file, QPersistentModelIndex(index));
         }
 
-        preview.fill(Qt::transparent);
-        return preview;
+        return QVariant();
     }
     break;
 

@@ -44,6 +44,7 @@ MouseArea {
             anchors.horizontalCenter: parent.horizontalCenter
             height: wallpaperDelegate.height + 1
             width: wallpaperDelegate.width + 1
+            visible: model.screenshot != null
             smooth: true
             pixmap: model.screenshot
             fillMode: {
@@ -95,13 +96,7 @@ MouseArea {
             }
         }
     }
-    Rectangle {
-        width: 100
-        height: 100
-PlasmaComponents.Label {
-    text: model.screenshot != null
-}
-    }
+
     onClicked: {
         wallpapersGrid.currentIndex = index
         cfg_Image = model.path
