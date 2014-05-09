@@ -25,49 +25,14 @@ import org.kde.plasma.calendar 2.0
 Item {
     id: main
 
-    Layout.minimumWidth: units.gridUnit * 20
-    Layout.minimumHeight: units.gridUnit * 20
+    Plasmoid.switchWidth: units.gridUnit * 12
+    Plasmoid.switchHeight: units.gridUnit * 12
+
     property int formFactor: plasmoid.formFactor
 
-//     PlasmaCore.DataSource {
-//         id: dataSource
-//         engine: "time"
-//         connectedSources: ["Local"]
-//         interval: 300000
-//     }
-//
-//     Component.onCompleted: {
-//         var toolTipData = new Object;
-//         toolTipData["image"] = "preferences-system-time";
-//         toolTipData["mainText"] ="Current Time"
-//         toolTipData["subText"] = Qt.formatDate( dataSource.data["Local"]["Date"],"dddd dd MMM yyyy" )+"\n"+Qt.formatTime( dataSource.data["Local"]["Time"], "HH:MM")
-//         plasmoid.popupIconToolTip = toolTipData;
-//     }
-
-    MonthView {
+    Plasmoid.fullRepresentation: MonthView {
         id: calendar
+        Layout.minimumWidth: units.gridUnit * 20
+        Layout.minimumHeight: units.gridUnit * 20
     }
-
-//     Plasmoid.compactRepresentation: Item {
-//         width: main.minimumWidth
-//         height: main.minimumHeight
-//         Image {
-//             anchors.fill: parent
-//             source: "plasmapackage:/images/mini-calendar.svgz"
-//         }
-//         PlasmaCore.SvgItem {
-//             anchors.fill: parent
-//             elementId: "mini-calendar"
-//             svg: PlasmaCore.Svg {
-//                 imagePath: "plasmapackage:/images/mini-calendar.svgz"
-//
-//             }
-//
-//             PlasmaComponents.Label {
-//                 text: "14"
-//                 font: theme.smallestFont
-//                 anchors.centerIn: parent
-//             }
-//         }
-//     }
 }
