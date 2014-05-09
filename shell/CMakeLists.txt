@@ -1,4 +1,4 @@
-project(plasma-shell)
+project(plasmashell)
 
 
 # Tell CMake to run moc when necessary:
@@ -64,11 +64,11 @@ if (KF5TextEditor_FOUND)
        interactiveconsole.cpp
    )
 endif()
-add_executable(plasma-shell
+add_executable(plasmashell
     ${plasma_shell_SRCS}
 )
 
-target_link_libraries(plasma-shell
+target_link_libraries(plasmashell
  Qt5::Quick
  Qt5::Qml
  Qt5::DBus
@@ -90,17 +90,17 @@ target_link_libraries(plasma-shell
  KF5::Screen
 )
 if (TARGET KF5::TextEditor)
- target_link_libraries(plasma-shell KF5::TextEditor)
+ target_link_libraries(plasmashell KF5::TextEditor)
 endif()
-target_include_directories(plasma-shell PRIVATE "${CMAKE_BINARY_DIR}")
+target_include_directories(plasmashell PRIVATE "${CMAKE_BINARY_DIR}")
 
 if(HAVE_X11)
-  target_link_libraries(plasma-shell ${X11_LIBRARIES} ${XCB_XCB_LIBRARY} )
-  target_link_libraries(plasma-shell Qt5::X11Extras)
+  target_link_libraries(plasmashell ${X11_LIBRARIES} ${XCB_XCB_LIBRARY} )
+  target_link_libraries(plasmashell Qt5::X11Extras)
 endif()
 
-install(TARGETS plasma-shell ${INSTALL_TARGETS_DEFAULT_ARGS})
-install(FILES plasma-shell.desktop DESTINATION ${AUTOSTART_INSTALL_DIR})
+install(TARGETS plasmashell ${INSTALL_TARGETS_DEFAULT_ARGS})
+install(FILES plasmashell.desktop DESTINATION ${AUTOSTART_INSTALL_DIR})
 install( FILES dbus/org.kde.PlasmaShell.xml DESTINATION ${DBUS_INTERFACES_INSTALL_DIR} )
 
 add_subdirectory(widgetexplorer)

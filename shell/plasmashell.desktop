@@ -1,5 +1,5 @@
 [Desktop Entry]
-Exec=plasma-shell --shut-up
+Exec=plasmashell --shut-up
 X-DBUS-StartupType=Unique
 Name=Plasma Desktop Workspace
 Name[ca]=Espai de treball de l'escriptori Plasma
@@ -31,6 +31,6 @@ Name[x-test]=xxPlasma Desktop Workspacexx
 Name[zh_TW]=Plasma 桌面工作空間
 Type=Application
 X-KDE-StartupNotify=false
-X-DBUS-ServiceName=org.kde.plasma_shell
+X-DBUS-ServiceName=org.kde.plasmashell
 OnlyShowIn=KDE;
 X-KDE-autostart-phase=0
