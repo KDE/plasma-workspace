@@ -197,7 +197,7 @@ void DrKonqi::saveReport(const QString & reportText, QWidget *parent)
                 return;
             }
 
-            KIO::FileCopyJob* job = KIO::file_copy(tf.fileName(), fileUrl);
+            KIO::FileCopyJob* job = KIO::file_copy(QUrl::fromLocalFile(tf.fileName()), fileUrl);
             KJobWidgets::setWindow(job, parent);
             if (!job->exec()) {
                 KMessageBox::sorry(parent, job->errorText());
