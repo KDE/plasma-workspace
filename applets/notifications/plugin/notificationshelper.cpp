@@ -95,8 +95,8 @@ void NotificationsHelper::displayNotification(const QVariantMap &notificationDat
 
     QRect screenArea = workAreaForScreen(m_plasmoidScreen);
 
-    popup->setX(screenArea.x() + screenArea.width() - popup->width() - m_offset);
-    popup->setY(screenArea.height() - (m_popupsOnScreen.size() * (popup->height() + m_offset)));
+    popup->setX(screenArea.right() - popup->width() - m_offset);
+    popup->setY(screenArea.bottom() - (m_popupsOnScreen.size() * (popup->height() + m_offset)));
 
     // Populate the popup with data, this is the component's own QML method
     QMetaObject::invokeMethod(popup, "populatePopup", Q_ARG(QVariant, notificationData));
@@ -131,7 +131,7 @@ void NotificationsHelper::popupClosed(bool visible)
 void NotificationsHelper::repositionPopups()
 {
     for (int i = 0; i < m_popupsOnScreen.size(); i++) {
-        m_popupsOnScreen[i]->setProperty("y", workAreaForScreen(m_plasmoidScreen).height() - ((i + 1) * (m_popupsOnScreen[i]->height() + m_offset)));
+        m_popupsOnScreen[i]->setProperty("y", workAreaForScreen(m_plasmoidScreen).bottom() - ((i + 1) * (m_popupsOnScreen[i]->height() + m_offset)));
     }
 
     if (!m_queue.isEmpty()) {
