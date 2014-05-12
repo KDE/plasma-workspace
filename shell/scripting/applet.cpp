@@ -23,6 +23,8 @@
 
 #include <kservice.h>
 #include <kservicetypetrader.h>
+#include <kdeclarative/configpropertymap.h>
+#include <kconfigloader.h>
 
 #include <Plasma/Applet>
 #include <Plasma/Containment>
@@ -117,6 +119,13 @@ void Applet::writeConfig(const QString &key, const QVariant &value)
     if (d->configGroup.isValid()) {
         if (d->inWallpaperConfig) {
             d->wallpaperConfigDirty = true;
+            //hacky, but only way to make the wallpaper react immediately
+            QObject *wallpaperGraphicsObject = applet()->property("wallpaperGraphicsObject").value<QObject *>();
+
+            if (wallpaperGraphicsObject) {
+                KDeclarative::ConfigPropertyMap *config = static_cast<KDeclarative::ConfigPropertyMap *>(wallpaperGraphicsObject->property("configuration").value<QObject *>());
+                config->setProperty(key.toLatin1(), value);
+            }
         }
 
         d->configGroup.writeEntry(key, value);
@@ -204,6 +213,10 @@ void Applet::reloadConfig()
             app->containment()->corona()->requestConfigSync();
         }
 
+        //Kinda hacky but is the only way to make the configScheme notice
+        app->config().sync();
+        app->configScheme()->readConfig();
+        emit app->configScheme()->configChanged();
         d->configDirty = false;
     }
 }

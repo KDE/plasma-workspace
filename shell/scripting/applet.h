@@ -37,6 +37,7 @@ namespace WorkspaceScripting
 class Applet : public QObject
 {
     Q_OBJECT
+    Q_PROPERTY(QStringList currentConfigGroup WRITE setCurrentConfigGroup READ currentConfigGroup)
 
 public:
     Applet(QObject *parent = 0);

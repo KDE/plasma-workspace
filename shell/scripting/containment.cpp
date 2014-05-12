@@ -23,6 +23,7 @@
 
 #include <klocalizedstring.h>
 #include <kactioncollection.h>
+#include <kdeclarative/configpropertymap.h>
 
 #include <Plasma/Corona>
 #include <Plasma/Containment>
