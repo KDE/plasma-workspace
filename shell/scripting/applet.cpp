@@ -126,6 +126,19 @@ void Applet::writeConfig(const QString &key, const QVariant &value)
                 KDeclarative::ConfigPropertyMap *config = static_cast<KDeclarative::ConfigPropertyMap *>(wallpaperGraphicsObject->property("configuration").value<QObject *>());
                 config->setProperty(key.toLatin1(), value);
             }
+        //check if it can be written in the applets' configScheme
+        } else if (applet()->configScheme()) {
+            KConfigSkeletonItem *item = applet()->configScheme()->findItemByName(key);
+            if (item) {
+                item->setProperty(value);
+                applet()->configScheme()->blockSignals(true);
+                applet()->configScheme()->save();
+                //why read? read will update KConfigSkeletonItem::mLoadedValue,
+                //allowing a write operation to be performed next time
+                applet()->configScheme()->read();
+                applet()->configScheme()->blockSignals(false);
+                emit applet()->configScheme()->configChanged();
+            }
         }
 
         d->configGroup.writeEntry(key, value);
@@ -213,10 +226,6 @@ void Applet::reloadConfig()
             app->containment()->corona()->requestConfigSync();
         }
 
-        //Kinda hacky but is the only way to make the configScheme notice
-        app->config().sync();
-        app->configScheme()->readConfig();
-        emit app->configScheme()->configChanged();
         d->configDirty = false;
     }
 }
