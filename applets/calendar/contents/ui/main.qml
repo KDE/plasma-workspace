@@ -60,6 +60,7 @@ Item {
 
             MonthMenu {
                 id: monthMenu
+                property QtObject monthCalendar: calendar.calendar
             }
 
             MouseArea {
