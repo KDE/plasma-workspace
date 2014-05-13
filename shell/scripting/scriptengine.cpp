@@ -138,9 +138,10 @@ QScriptValue ScriptEngine::createActivity(QScriptContext *context, QScriptEngine
 
     KActivities::Controller controller;
 
+    //TODO: if there are activities without containment, recycle
     QFuture<QString> id = controller.addActivity(name);
     QEventLoop loop;
-    
+
     QFutureWatcher<QString> *watcher = new QFutureWatcher<QString>();
     connect(watcher, &QFutureWatcherBase::finished, &loop, &QEventLoop::quit);
 
