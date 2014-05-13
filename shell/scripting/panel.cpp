@@ -313,7 +313,7 @@ void Panel::setHeight(int height)
 
 QString Panel::hiding() const
 {
-    /*PanelView *v = panel();
+    PanelView *v = panel();
     if (v) {
         switch (v->visibilityMode()) {
             case PanelView::NormalPanel:
@@ -329,14 +329,14 @@ QString Panel::hiding() const
                 return "windowsbelow";
                 break;
         }
-    }*/
+    }
 
     return "none";
 }
 
 void Panel::setHiding(const QString &mode)
 {
-    /*PanelView *v = panel();
+    PanelView *v = panel();
     if (v) {
         if (mode.compare("autohide", Qt::CaseInsensitive) == 0) {
             v->setVisibilityMode(PanelView::AutoHide);
@@ -347,7 +347,7 @@ void Panel::setHiding(const QString &mode)
         } else {
             v->setVisibilityMode(PanelView::NormalPanel);
         }
-    }*/
+    }
 }
 
 }
