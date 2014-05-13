@@ -264,11 +264,9 @@ void Panel::setLength(int pixels)
         } else {
             s.setWidth(pixels);
         }
-
-        graphicObject->setWidth(s.width());
-        graphicObject->setHeight(s.height());
-        v->setMinimumSize(s.toSize());
-        v->setMaximumSize(s.toSize());
+        v->setMinimumLength(pixels);
+        v->setMaximumLength(pixels);
+        v->setLength(pixels);
     }
 }
 
@@ -309,16 +307,7 @@ void Panel::setHeight(int height)
         const int max = (c->formFactor() == Plasma::Types::Vertical ? screen.width() : screen.height()) / 3;
         height = qBound(16, height, max);
 
-        if (c->formFactor() == Plasma::Types::Vertical) {
-            size.setWidth(height);
-        } else {
-            size.setHeight(height);
-        }
-
-        graphicObject->setWidth(size.width());
-        graphicObject->setHeight(size.height());
-        v->setMinimumSize(size.toSize());
-        v->setMaximumSize(size.toSize());
+        v->setThickness(height);
     }
 }
 
