@@ -116,6 +116,16 @@ static QScreen *outputToScreen(KScreen::Output *output)
     return 0;
 }
 
+static KScreen::Output *screenToOutput(QScreen* screen, KScreen::Config* config)
+{
+    foreach(KScreen::Output* output, config->connectedOutputs()) {
+        if (screen->name() == output->name()) {
+            return output;
+        }
+    }
+    return 0;
+}
+
 WorkspaceScripting::DesktopScriptEngine* ShellCorona::scriptEngine() const
 {
     return d->scriptEngine;
@@ -247,15 +257,15 @@ QString ShellCorona::shell() const
     return d->shell;
 }
 
+bool outputLess(KScreen::Output *a, KScreen::Output *b)
+{
+    return a->isPrimary() && !b->isPrimary() && (a->pos().x() < b->pos().x() || (a->pos().x() == b->pos().x() && a->pos().y() < b->pos().y()));
+}
+
 static QList<KScreen::Output*> sortOutputs(const QHash<int, KScreen::Output*> &outputs)
 {
-    QList<KScreen::Output*> ret;
-    foreach(KScreen::Output *output, outputs) {
-        if (output->isPrimary())
-            ret.prepend(output);
-        else
-            ret.append(output);
-    }
+    QList<KScreen::Output*> ret = outputs.values();
+    std::sort(ret.begin(), ret.end(), outputLess);
     return ret;
 }
 
@@ -507,6 +517,14 @@ PanelView *ShellCorona::panelView(Plasma::Containment *containment) const
 
 ///// SLOTS
 
+void ShellCorona::shiftViews(int idx, int delta, int until)
+{
+    for (int i = idx; i<until; ++i) {
+        d->views[i]->setScreen(d->views[i-delta]->screen());
+        d->views[i]->adaptToScreen();
+    }
+}
+
 void ShellCorona::addOutput(KScreen::Output *output)
 {
     connect(output, &KScreen::Output::isEnabledChanged, this, [this, output]() { this->addOutput(output); }, Qt::UniqueConnection);
@@ -525,13 +543,13 @@ void ShellCorona::addOutput(KScreen::Output *output)
         }
     }
 
-    //let's make sure the output hasn't been added already, I think libkscreen is emitting some
-    //signals twice
+    int insertPosition = 0;
     foreach (DesktopView *view, d->views) {
-        if (screen == view->screen()) {
-            qWarning() << "trying to add output twice" << output;
-            return;
-        }
+        KScreen::Output *out = screenToOutput(view->screen(), d->screenConfiguration);
+        if(outputLess(output, out))
+            break;
+
+        insertPosition++;
     }
 
     DesktopView *view = new DesktopView(this, screen);
@@ -539,33 +557,11 @@ void ShellCorona::addOutput(KScreen::Output *output)
     //We have to do it in a lambda,
     connect(screen, &QObject::destroyed, this, [=]() { removeDesktop(view); });
 
+    d->views.append(0);
+    shiftViews(insertPosition, 1, d->views.count()-1);
+    d->views[insertPosition] = view;
+
     const QString currentActivity = d->activityController->currentActivity();
-
-    qDebug() << "added screen" << output;
-    if (!d->views.isEmpty() && output->isPrimary()) {
-        DesktopView *oldPrimaryView = d->views.first();
-        QScreen *oldPrimaryScreen = oldPrimaryView->screen();
-
-        //move any panels that were preivously on the old primary screen to the new primary screen
-        foreach (PanelView *panelView, d->panelViews) {
-            if (oldPrimaryScreen==panelView->screen())
-                panelView->setScreen(screen);
-                if (view->containment()) {
-                    view->containment()->reactToScreenChange();
-                }
-        }
-
-        Plasma::Containment *primaryContainment = oldPrimaryView->containment();
-        oldPrimaryView->setContainment(0);
-        view->setContainment(primaryContainment);
-
-        d->views.prepend(view);
-        view = oldPrimaryView;
-    } else {
-        Q_ASSERT(d->views.isEmpty() || !output->isPrimary());
-        d->views.append(view);
-    }
-
     int screenNum = d->views.count()-1;
     Plasma::Containment *containment = d->desktopContainments[currentActivity][screenNum];
     if (!containment) {
@@ -597,13 +593,9 @@ void ShellCorona::removeDesktop(DesktopView *view)
 {
     int idx = d->views.indexOf(view);
     DesktopView *lastView = d->views.takeAt(d->views.count()-1);
-    lastView->containment()->reactToScreenChange();
     lastView->deleteLater();
 
-    for (int i = idx; i<d->views.count()-1; ++i) {
-        d->views[i]->setScreen(d->views[i+1]->screen());
-        d->views[i]->adaptToScreen();
-    }
+    shiftViews(idx, -1, d->views.count()-1);
 
     screenInvariants();
 }

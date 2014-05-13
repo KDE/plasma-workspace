@@ -155,6 +155,7 @@ private Q_SLOTS:
     void desktopContainmentDestroyed(QObject*);
 
 private:
+    void shiftViews(int idx, int delta, int until);
     void screenInvariants() const;
 
     /**
