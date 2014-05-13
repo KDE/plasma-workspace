@@ -40,9 +40,6 @@ class Activity;
 class DesktopView;
 class PanelView;
 class QScreen;
-namespace WorkspaceScripting {
-    class DesktopScriptEngine;
-}
 
 namespace KActivities {
     class Controller;
@@ -62,8 +59,6 @@ public:
      * Where to save global configuration that doesn't have anything to do with the scene (e.g. views)
      */
     KSharedConfig::Ptr applicationConfig();
-
-    WorkspaceScripting::DesktopScriptEngine * scriptEngine() const;
 
     int numScreens() const;
     QRect screenGeometry(int id) const;

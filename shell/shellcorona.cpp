@@ -90,7 +90,6 @@ public:
     KActivities::Consumer *activityConsumer;
     QHash<const Plasma::Containment *, PanelView *> panelViews;
     KConfigGroup desktopDefaultsConfig;
-    WorkspaceScripting::DesktopScriptEngine *scriptEngine;
     QList<Plasma::Containment *> waitingPanels;
     QHash<QString, Activity *> activities;
     QHash<QString, QHash<int, Plasma::Containment *> > desktopContainments;
@@ -125,12 +124,6 @@ static KScreen::Output *screenToOutput(QScreen* screen, KScreen::Config* config)
     }
     return 0;
 }
-
-WorkspaceScripting::DesktopScriptEngine* ShellCorona::scriptEngine() const
-{
-    return d->scriptEngine;
-}
-
 
 ShellCorona::ShellCorona(QObject *parent)
     : Plasma::Corona(parent),
@@ -179,17 +172,6 @@ ShellCorona::ShellCorona(QObject *parent)
 
     connect(this, &ShellCorona::containmentAdded,
             this, &ShellCorona::handleContainmentAdded);
-
-    d->scriptEngine = new WorkspaceScripting::DesktopScriptEngine(this, true);
-
-    connect(d->scriptEngine, &WorkspaceScripting::ScriptEngine::printError, this,
-            [](const QString &msg) {
-                qWarning() << msg;
-            });
-    connect(d->scriptEngine, &WorkspaceScripting::ScriptEngine::print, this,
-            [](const QString &msg) {
-                qDebug() << msg;
-            });
 
     QAction *dashboardAction = actions()->add<QAction>("show dashboard");
     QObject::connect(dashboardAction, &QAction::triggered,
@@ -405,14 +387,35 @@ void ShellCorona::loadDefaultLayout()
     if (file.open(QIODevice::ReadOnly | QIODevice::Text) ) {
         QString code = file.readAll();
         qDebug() << "evaluating startup script:" << script;
-        d->scriptEngine->evaluateScript(code);
+
+        WorkspaceScripting::DesktopScriptEngine scriptEngine(this, true);
+
+        connect(&scriptEngine, &WorkspaceScripting::ScriptEngine::printError, this,
+                [](const QString &msg) {
+                    qWarning() << msg;
+                });
+        connect(&scriptEngine, &WorkspaceScripting::ScriptEngine::print, this,
+                [](const QString &msg) {
+                    qDebug() << msg;
+                });
+        scriptEngine.evaluateScript(code);
     }
 }
 
 void ShellCorona::processUpdateScripts()
 {
+    WorkspaceScripting::DesktopScriptEngine scriptEngine(this, true);
+
+    connect(&scriptEngine, &WorkspaceScripting::ScriptEngine::printError, this,
+            [](const QString &msg) {
+                qWarning() << msg;
+            });
+    connect(&scriptEngine, &WorkspaceScripting::ScriptEngine::print, this,
+            [](const QString &msg) {
+                qDebug() << msg;
+            });
     foreach (const QString &script, WorkspaceScripting::ScriptEngine::pendingUpdateScripts(this)) {
-        d->scriptEngine->evaluateScript(script);
+        scriptEngine.evaluateScript(script);
     }
 }
 
@@ -965,7 +968,17 @@ void ShellCorona::addPanel(QAction *action)
 {
     const QString plugin = action->data().toString();
     if (plugin.startsWith("plasma-desktop-template:")) {
-        d->scriptEngine->evaluateScript(plugin.right(plugin.length() - qstrlen("plasma-desktop-template:")));
+        WorkspaceScripting::DesktopScriptEngine scriptEngine(this, true);
+
+        connect(&scriptEngine, &WorkspaceScripting::ScriptEngine::printError, this,
+                [](const QString &msg) {
+                    qWarning() << msg;
+                });
+        connect(&scriptEngine, &WorkspaceScripting::ScriptEngine::print, this,
+                [](const QString &msg) {
+                    qDebug() << msg;
+                });
+        scriptEngine.evaluateScript(plugin.right(plugin.length() - qstrlen("plasma-desktop-template:")));
     } else if (!plugin.isEmpty()) {
         addPanel(plugin);
     }
