@@ -349,7 +349,7 @@ void ShellCorona::primaryOutputChanged()
     }
 }
 
-void ShellCorona::screenInvariants()
+void ShellCorona::screenInvariants() const
 {
     Q_ASSERT(d->views.count() <= QGuiApplication::screens().count());
     QScreen *s = d->screenConfiguration->primaryOutput() ? outputToScreen(d->screenConfiguration->primaryOutput()) : d->views.isEmpty() ? nullptr : d->views[0]->screen();

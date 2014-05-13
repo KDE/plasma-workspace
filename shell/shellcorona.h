@@ -155,7 +155,7 @@ private Q_SLOTS:
     void desktopContainmentDestroyed(QObject*);
 
 private:
-    void screenInvariants();
+    void screenInvariants() const;
 
     /**
      * @returns a new containment associated with the specified @p activity and @p screen.
