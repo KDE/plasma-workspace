@@ -20,7 +20,7 @@
 import QtQuick 2.0
 
 Item {
-
+    id: plasmoidItem
     // Notify the plasmoids inside containers of location changes
     Connections {
         target: plasmoid
@@ -43,6 +43,16 @@ Item {
         anchors {
             fill: parent
         }
-        onClicked: modelData.expanded = true;
+        onClicked: {
+            if (modelData.expanded) {
+                if (plasmoidItem.parent.parent.parent.objectName == "taskListDelegate") {
+                    modelData.expanded = false;
+                } else {
+                    plasmoid.expanded = false;
+                }
+            } else {
+                modelData.expanded = true;
+            }
+        }
     }
 }
