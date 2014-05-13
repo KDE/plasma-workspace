@@ -438,9 +438,12 @@ QRect ShellCorona::screenGeometry(int id) const
 
     if (view) {
         return view->geometry();
-    } else {
-        return QApplication::desktop()->screenGeometry(id);
     }
+
+    //each screen should have a view
+    qWarning() << "requesting unexisting screen" << id;
+    QScreen *s = outputToScreen(d->screenConfiguration->primaryOutput());
+    return s ? s->geometry() : QRect();
 }
 
 QRegion ShellCorona::availableScreenRegion(int id) const
