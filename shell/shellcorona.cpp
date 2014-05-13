@@ -1029,7 +1029,6 @@ int ShellCorona::screenForContainment(const Plasma::Containment *containment) co
             }
         }
     }
-    Q_ASSERT(false);
     return -1;
 }
 
