@@ -61,7 +61,7 @@ PlasmoidTask::PlasmoidTask(const QString &packageName, int appletId, Plasma::Con
         package.setPath("org.kde.plasma.systemtray");
 
         m_taskGraphicsObject->setCoronaPackage(package);
-        QMetaObject::invokeMethod(m_taskGraphicsObject, "init", Qt::DirectConnection);
+        QMetaObject::invokeMethod(m_taskGraphicsObject, "init", Qt::QueuedConnection);
         qWarning()<<m_taskGraphicsObject->property("compactRepresentationItem");
         qWarning()<<m_taskGraphicsObject->property("fullRepresentationItem");
 
