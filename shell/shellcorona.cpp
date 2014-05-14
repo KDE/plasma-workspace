@@ -108,6 +108,8 @@ public:
 
 static QScreen *outputToScreen(KScreen::Output *output)
 {
+    if (!output)
+        return 0;
     foreach(QScreen *screen, QGuiApplication::screens()) {
         if (screen->name() == output->name()) {
             return screen;
