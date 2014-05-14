@@ -849,7 +849,7 @@ void ShellCorona::insertActivity(const QString &id, Activity *activity)
 Plasma::Containment *ShellCorona::setContainmentTypeForScreen(int screen, const QString &plugin)
 {
     Plasma::Containment *oldContainment = containmentForScreen(screen);
-qWarning()<<"AAAAA"<<oldContainment<<oldContainment->title();
+
     //no valid containment in given screen, giving up
     if (!oldContainment) {
         return 0;
@@ -1031,10 +1031,11 @@ Plasma::Containment *ShellCorona::addPanel(const QString &plugin)
 
     d->waitingPanels << panel;
     createWaitingPanels();
-    Q_ASSERT(d->panelViews.contains(panel));
+
     const QPoint cursorPos(QCursor::pos());
     foreach (QScreen *screen, QGuiApplication::screens()) {
-        if (screen->geometry().contains(cursorPos)) {
+        //d->panelViews.contains(panel) == false iff addPanel is executed in a startup script
+        if (screen->geometry().contains(cursorPos) && d->panelViews.contains(panel)) {
             d->panelViews[panel]->setScreen(screen);
             break;
         }
