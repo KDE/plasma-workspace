@@ -24,6 +24,7 @@
 #include <QAction>
 #include <QUrl>
 #include <QDebug>
+#include <QQuickWindow>
 
 #include <KAuthorized>
 #include <kdbusservice.h>
@@ -38,6 +39,7 @@ static QCommandLineParser parser;
 
 int main(int argc, char **argv)
 {
+    QQuickWindow::setDefaultAlphaBuffer(true);
     QApplication app(argc, argv);
 //     TODO: Make it a QGuiApplication once we don't depend on KDELibs4Support
 //     QGuiApplication app(argc, argv);

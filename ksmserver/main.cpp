@@ -47,6 +47,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #include <QX11Info>
 
 #include <QApplication>
+#include <QQuickWindow>
 #include <X11/extensions/Xrender.h>
 
 static const char version[] = "0.4";
@@ -237,6 +238,7 @@ extern "C" Q_DECL_EXPORT int kdemain( int argc, char* argv[] )
     putenv((char*)"SESSION_MANAGER=");
     checkComposite();
 
+    QQuickWindow::setDefaultAlphaBuffer(true);
     QApplication *a = new QApplication(argc, argv);
 
     QApplication::setApplicationName( QStringLiteral( "ksmserver") );

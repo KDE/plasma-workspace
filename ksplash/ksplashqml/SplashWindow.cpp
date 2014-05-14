@@ -34,11 +34,6 @@ SplashWindow::SplashWindow(bool testing, bool window)
       m_testing(testing),
       m_window(window)
 {
-    QSurfaceFormat format;
-    format.setAlphaBufferSize(8);
-    format.setRenderableType(QSurfaceFormat::OpenGL);
-    setFormat(format);
-
     setColor(Qt::transparent);
     setDefaultAlphaBuffer(true);
     setClearBeforeRendering(true);

@@ -47,9 +47,6 @@ View::View(QWindow *parent)
       m_offset(.5),
       m_floating(false)
 {
-    QSurfaceFormat format;
-    format.setAlphaBufferSize(8);
-    setFormat(format);
     setClearBeforeRendering(true);
     setColor(QColor(Qt::transparent));
     setFlags(Qt::FramelessWindowHint);

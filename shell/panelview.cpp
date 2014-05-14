@@ -56,9 +56,6 @@ PanelView::PanelView(ShellCorona *corona, QWindow *parent)
        m_visibilityMode(NormalPanel)
 {
     setResizeMode(QQuickView::SizeRootObjectToView);
-    QSurfaceFormat format;
-    format.setAlphaBufferSize(8);
-    setFormat(format);
     setClearBeforeRendering(true);
     setColor(QColor(Qt::transparent));
     setFlags(Qt::FramelessWindowHint|Qt::WindowDoesNotAcceptFocus);

@@ -19,6 +19,7 @@
 
 
 #include "SplashApp.h"
+#include <QQuickWindow>
 
 #include <iostream>
 #include <unistd.h>
@@ -61,6 +62,7 @@ int main(int argc, char **argv)
         close(2);
     }
 
+    QQuickWindow::setDefaultAlphaBuffer(true);
     SplashApp app(argc, argv);
 
     return app.exec();

@@ -79,9 +79,6 @@ KSMShutdownDlg::KSMShutdownDlg( QWindow* parent,
     // having a popup here has severe side effects.
 {
     // window stuff
-    QSurfaceFormat format;
-    format.setAlphaBufferSize(8);
-    setFormat(format);
     setClearBeforeRendering(true);
     setColor(QColor(Qt::transparent));
     setFlags(Qt::FramelessWindowHint);
