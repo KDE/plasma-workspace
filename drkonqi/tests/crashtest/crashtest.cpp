@@ -122,10 +122,10 @@ void level1(int t)
 int main(int argc, char *argv[])
 {
   QApplication app(argc, argv);
-  KAboutData aboutData("crashtext", 0, i18n("Crash Test for DrKonqi"),
+  KAboutData aboutData("crashtext", i18n("Crash Test for DrKonqi"),
                        "1.1",
                        i18n("Crash Test for DrKonqi"),
-                       KAboutData::License_GPL,
+                       KAboutLicense::GPL,
                        i18n("(c) 2000-2002 David Faure, Waldo Bastian"));
 
   QCommandLineParser parser;

@@ -226,7 +226,6 @@ void CurrentContainmentActionsModel::showAbout(int row)
     KPluginInfo info = m_plugins[action]->pluginInfo();
 
     KAboutData aboutData(info.name().toUtf8(),
-            info.name().toUtf8(),
             ki18n(info.name().toUtf8()).toString(),
             info.version().toUtf8(), ki18n(info.comment().toUtf8()).toString(),
             KAboutLicense::byKeyword(info.license()).key(), ki18n(QByteArray()).toString(), ki18n(QByteArray()).toString(), info.website().toLatin1(),

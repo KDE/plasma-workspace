@@ -58,9 +58,9 @@ int main(int argc, char* argv[])
     // Session management is not needed, do not even connect in order to survive longer than ksmserver.
     unsetenv("SESSION_MANAGER");
 
-    KAboutData aboutData("drkonqi", "drkonqi", i18n("The KDE Crash Handler"),
+    KAboutData aboutData("drkonqi", i18n("The KDE Crash Handler"),
                          version, i18n(description),
-                         KAboutData::License_GPL,
+                         KAboutLicense::GPL,
                          i18n("(C) 2000-2009, The DrKonqi Authors"));
     aboutData.addAuthor(i18nc("@info:credit","Hans Petter Bieker"), QString(),
                          "bieker@kde.org");

@@ -28,7 +28,7 @@
 int main(int argc, char **argv)
 {
     QCoreApplication app(argc, argv);
-    KAboutData aboutData("backtraceparsertest_manual", QString(), i18n("backtraceparsertest_manual"), "1.0");
+    KAboutData aboutData("backtraceparsertest_manual", i18n("backtraceparsertest_manual"), "1.0");
     KAboutData::setApplicationData(aboutData);
 
     QCommandLineParser parser;
