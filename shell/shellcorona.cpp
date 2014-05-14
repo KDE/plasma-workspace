@@ -348,7 +348,8 @@ void ShellCorona::primaryOutputChanged()
 void ShellCorona::screenInvariants() const
 {
     Q_ASSERT(d->views.count() <= QGuiApplication::screens().count());
-    QScreen *s = d->screenConfiguration->primaryOutput() ? outputToScreen(d->screenConfiguration->primaryOutput()) : d->views.isEmpty() ? nullptr : d->views[0]->screen();
+    Q_ASSERT(!d->screenConfiguration->primaryOutput() || !d->views.isEmpty() || outputToScreen(d->screenConfiguration->primaryOutput()) == d->views.first()->screen());
+    QScreen *s = d->views.isEmpty() ? nullptr : d->views[0]->screen();
     if (!s) {
         qWarning() << "error: couldn't find primary output" << d->screenConfiguration->primaryOutput();
         return;
@@ -670,8 +671,7 @@ void ShellCorona::createWaitingPanels()
         connect(cont, SIGNAL(destroyed(QObject*)), this, SLOT(containmentDeleted(QObject*)));
         connect(screen, SIGNAL(destroyed(QObject*)), this, SLOT(removePanel(QObject*)));
     }
-    d->waitingPanels.clear();
-    d->waitingPanels << stillWaitingPanels;
+    d->waitingPanels = stillWaitingPanels;
     emit availableScreenRectChanged();
     emit availableScreenRegionChanged();
 }
