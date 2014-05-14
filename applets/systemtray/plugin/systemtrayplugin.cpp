@@ -36,7 +36,7 @@ namespace SystemTray {
 void SystemTrayPlugin::registerTypes(const char *uri)
 {
     Q_ASSERT(uri == QStringLiteral("org.kde.private.systemtray"));
-    QLoggingCategory::setFilterRules(QStringLiteral("systemtray.debug = true"));
+    QLoggingCategory::setFilterRules(QStringLiteral("systemtray.debug = false"));
 
     qmlRegisterType<SystemTray::Host>(uri, 2, 0,"Host");
     qmlRegisterUncreatableType<SystemTray::Task>(uri, 2, 0, "Task", "You cannot create Task objects.");
