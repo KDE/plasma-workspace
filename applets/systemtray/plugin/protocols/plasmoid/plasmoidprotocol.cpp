@@ -92,6 +92,8 @@ void PlasmoidProtocol::init()
         m_containment->setLocation(m_systrayApplet->location());
     });
 
+    m_systrayApplet->setProperty("containment", QVariant::fromValue(m_containment));
+
     restorePlasmoids();
 }
 

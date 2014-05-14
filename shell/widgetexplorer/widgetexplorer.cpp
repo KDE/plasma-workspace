@@ -74,6 +74,8 @@ public:
     void initRunningApplets();
     void containmentDestroyed();
 
+    void addContainment(Containment *containment);
+
     /**
      * Tracks a new running applet
      */
@@ -229,20 +231,29 @@ void WidgetExplorerPrivate::initRunningApplets()
     runningApplets.clear();
     QList<Containment*> containments = c->containments();
     foreach (Containment *containment, containments) {
-        QObject::connect(containment, SIGNAL(appletAdded(Plasma::Applet*)), q, SLOT(appletAdded(Plasma::Applet*)));
-        QObject::connect(containment, SIGNAL(appletRemoved(Plasma::Applet*)), q, SLOT(appletRemoved(Plasma::Applet*)));
-
-        foreach (Applet *applet, containment->applets()) {
-            if (applet->pluginInfo().isValid()) {
-                runningApplets[applet->pluginInfo().pluginName()]++;
-            } else {
-                qDebug() << "Invalid plugininfo. :(";
-            }
-        }
+        addContainment(containment);
     }
 
     //qDebug() << runningApplets;
     itemModel.setRunningApplets(runningApplets);
+}
+
+void WidgetExplorerPrivate::addContainment(Containment *containment)
+{
+    QObject::connect(containment, &Containment::appletAdded, q, &WidgetExplorerPrivate::appletAdded);
+    QObject::connect(containment, &Containment::appletRemoved, q, &WidgetExplorerPrivate::appletRemoved);
+
+    foreach (Applet *applet, containment->applets()) {
+        if (applet->pluginInfo().isValid()) {
+            Containment *childContainment = applet->property("containment").value<Containment*>();
+            if (childContainment) {
+                addContainment(childContainment);
+            }
+            runningApplets[applet->pluginInfo().pluginName()]++;
+        } else {
+            qDebug() << "Invalid plugininfo. :(";
+        }
+    }
 }
 
 void WidgetExplorerPrivate::containmentDestroyed()
