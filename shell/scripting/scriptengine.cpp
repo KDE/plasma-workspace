@@ -136,27 +136,45 @@ QScriptValue ScriptEngine::createActivity(QScriptContext *context, QScriptEngine
     const QString name = context->argument(0).toString();
     const QString plugin = context->argument(1).toString();
 
+    ScriptEngine *env = envFor(engine);
+
     KActivities::Controller controller;
 
-    //TODO: if there are activities without containment, recycle
-    QFuture<QString> id = controller.addActivity(name);
-    QEventLoop loop;
+    QString id;
 
-    QFutureWatcher<QString> *watcher = new QFutureWatcher<QString>();
-    connect(watcher, &QFutureWatcherBase::finished, &loop, &QEventLoop::quit);
+    KActivities::Consumer consumer;
 
-    watcher->setFuture(id);
-    
-    loop.exec();
+    QSet <QString> knownActivities;
+    foreach (Plasma::Containment *cont, env->m_corona->containments()) {
+        knownActivities.insert(cont->activity());
+    }
+    foreach (const QString &act, consumer.activities()) {
+        if (!knownActivities.contains(act)) {
+            id = act;
+        }
+    }
 
-    ScriptEngine *env = envFor(engine);
+    if (id.isEmpty()) {
+        //TODO: if there are activities without containment, recycle
+        QFuture<QString> futureId = controller.addActivity(name);
+        QEventLoop loop;
+
+        QFutureWatcher<QString> *watcher = new QFutureWatcher<QString>();
+        connect(watcher, &QFutureWatcherBase::finished, &loop, &QEventLoop::quit);
+
+        watcher->setFuture(futureId);
+        
+        loop.exec();
+        id = futureId.result();
+    }
+
     Activity *a = new Activity(id, env->m_corona);
     if (!plugin.isEmpty()) {
         a->setDefaultPlugin(plugin);
     }
     env->m_corona->insertActivity(id, a);
 
-    return QScriptValue(id.result());
+    return QScriptValue(id);
 }
 
 QScriptValue ScriptEngine::setCurrentActivity(QScriptContext *context, QScriptEngine *engine)
