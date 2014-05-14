@@ -468,7 +468,7 @@ void PanelView::restore()
 
 
     connect(containment(), SIGNAL(destroyed(QObject *)),
-            this, SLOT(deleteLater()));
+            this, SLOT(deleteLater()), Qt::QueuedConnection);
 
     static const int MINSIZE = 10;
 
