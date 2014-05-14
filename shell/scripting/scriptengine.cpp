@@ -215,7 +215,13 @@ QScriptValue ScriptEngine::createContainment(const QString &type, const QString 
 
 
     ScriptEngine *env = envFor(engine);
-    Plasma::Containment *c = env->m_corona->createContainment(plugin);
+    Plasma::Containment *c;
+    if (type == "Panel") {
+        c = env->m_corona->addPanel(plugin);
+    } else {
+        c = env->m_corona->createContainment(plugin);
+    }
+
     if (c) {
         if (type == "Panel") {
             // some defaults

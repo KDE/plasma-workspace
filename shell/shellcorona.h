@@ -100,6 +100,8 @@ public Q_SLOTS:
     void showInteractiveConsole();
     void loadScriptInInteractiveConsole(const QString &script);
 
+    Plasma::Containment *addPanel(const QString &plugin);
+
 protected Q_SLOTS:
     /**
      * Loads the layout and performs the needed checks
@@ -136,7 +138,6 @@ private Q_SLOTS:
     void checkAddPanelAction(const QStringList &sycocaChanges = QStringList());
     void addPanel();
     void addPanel(QAction *action);
-    void addPanel(const QString &plugin);
     void containmentDeleted(QObject* cont);
 
     void removePanel(QObject* cont);

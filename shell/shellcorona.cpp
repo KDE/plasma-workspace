@@ -922,7 +922,7 @@ qWarning()<<"AAAAA"<<oldContainment<<oldContainment->title();
     //fixes a crash
     //delayout the destruction of the old containment fixes another crash
     view->rootObject()->setFocus(true, Qt::MouseFocusReason);
-    QTimer::singleShot(250, oldContainment, SLOT(destroy()));
+    QTimer::singleShot(2500, oldContainment, SLOT(destroy()));
 
     return newContainment;
 }
@@ -993,11 +993,11 @@ void ShellCorona::addPanel(QAction *action)
     }
 }
 
-void ShellCorona::addPanel(const QString &plugin)
+Plasma::Containment *ShellCorona::addPanel(const QString &plugin)
 {
     Plasma::Containment *panel = createContainment(plugin);
     if (!panel) {
-        return;
+        return 0;
     }
 
     QList<Plasma::Types::Location> availableLocations;
@@ -1035,6 +1035,7 @@ void ShellCorona::addPanel(const QString &plugin)
             break;
         }
     }
+    return panel;
 }
 
 int ShellCorona::screenForContainment(const Plasma::Containment *containment) const
