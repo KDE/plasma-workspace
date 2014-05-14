@@ -55,6 +55,7 @@
 #include "widgetexplorer/widgetexplorer.h"
 #include "configview.h"
 #include "shellpluginloader.h"
+#include "shellmanager.h"
 #include "osd.h"
 #if HAVE_KTEXTEDITOR
 #include "interactiveconsole.h"
@@ -351,7 +352,9 @@ void ShellCorona::screenInvariants() const
     }
 
     Q_ASSERT(d->views[0]->screen()->name() == s->name());
-    Q_ASSERT(d->views[0]->geometry() == s->geometry());
+    if (!ShellManager::s_forceWindowed) {
+        Q_ASSERT(d->views[0]->geometry() == s->geometry());
+    }
 
     QSet<QScreen*> screens;
     foreach(DesktopView *view, d->views) {
