@@ -30,8 +30,8 @@ import org.kde.private.systemtray 2.0 as SystemTray
 Item {
     id: compactRepresentation
 
-    Layout.minimumWidth: !root.vertical ? computeDimension() : computeDimensionHeight()
-    Layout.minimumHeight: !root.vertical ? computeDimension() : computeDimensionHeight()
+    Layout.minimumWidth: !root.vertical ? computeDimension() : 0
+    Layout.minimumHeight: !root.vertical ? 0 : computeDimensionHeight()
     Layout.maximumWidth: Layout.minimumWidth
     Layout.maximumHeight: Layout.minimumHeight
     Layout.preferredWidth: Layout.minimumWidth
