@@ -716,7 +716,6 @@ void ShellCorona::toggleActivityManager()
 
 void ShellCorona::syncAppConfig()
 {
-    qDebug() << "Syncing plasma-shellrc config";
     applicationConfig()->sync();
 }
 
