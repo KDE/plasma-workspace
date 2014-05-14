@@ -127,8 +127,8 @@ class BugzillaLibTest : public QObject
 int main (int argc, char ** argv)
 {
     QApplication app(argc, argv);
-    KAboutData aboutData( "bzlibtest", "bzlibtest", i18n("BugzillaLib Test (DrKonqi2)"),
-        "1.0", i18n("Test application for bugtracker manager lib"), KAboutData::License_GPL,
+    KAboutData aboutData( "bzlibtest", i18n("BugzillaLib Test (DrKonqi2)"),
+        "1.0", i18n("Test application for bugtracker manager lib"), KAboutLicense::GPL,
         i18n("(c) 2009, DrKonqi2 Developers"));
 
     QCommandLineParser parser;
