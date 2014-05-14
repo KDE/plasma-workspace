@@ -20,6 +20,7 @@
 #include <QApplication>
 #include <qcommandlineparser.h>
 #include <QtQml/QQmlDebuggingEnabler>
+#include <QQuickWindow>
 #include <QDebug>
 
 #include <kdbusservice.h>
@@ -40,6 +41,7 @@ void noMessageOutput(QtMsgType type, const char *msg)
 int main(int argc, char** argv)
 {
     QQmlDebuggingEnabler debugEnabler;
+    QQuickWindow::setDefaultAlphaBuffer(true);
 
     const QByteArray loopName = qgetenv("QSG_RENDER_LOOP");
     if (loopName.isEmpty()) {
