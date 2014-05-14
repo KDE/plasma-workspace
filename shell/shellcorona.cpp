@@ -208,6 +208,7 @@ ShellCorona::ShellCorona(QObject *parent)
     connect(d->activityConsumer, SIGNAL(activityRemoved(QString)), this, SLOT(activityRemoved(QString)));
 
     new Osd(this);
+    d->screenConfiguration = KScreen::Config::current();
 }
 
 ShellCorona::~ShellCorona()
@@ -291,7 +292,6 @@ void ShellCorona::load()
         }
     }
 
-    d->screenConfiguration = KScreen::Config::current();
     KScreen::ConfigMonitor::instance()->addConfig(d->screenConfiguration);
     for (KScreen::Output *output : sortOutputs(d->screenConfiguration->connectedOutputs())) {
         addOutput(output);
