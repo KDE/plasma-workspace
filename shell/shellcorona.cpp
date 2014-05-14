@@ -845,7 +845,7 @@ void ShellCorona::insertActivity(const QString &id, Activity *activity)
 Plasma::Containment *ShellCorona::setContainmentTypeForScreen(int screen, const QString &plugin)
 {
     Plasma::Containment *oldContainment = containmentForScreen(screen);
-
+qWarning()<<"AAAAA"<<oldContainment<<oldContainment->title();
     //no valid containment in given screen, giving up
     if (!oldContainment) {
         return 0;
@@ -915,8 +915,14 @@ Plasma::Containment *ShellCorona::setContainmentTypeForScreen(int screen, const 
     }
     view->setContainment(newContainment);
     newContainment->setActivity(oldContainment->activity());
+    d->desktopContainments.remove(oldContainment->activity());
     insertContainment(oldContainment->activity(), screen, newContainment);
-    oldContainment->destroy();
+
+    //removing the focus from the item that is going to be destroyed
+    //fixes a crash
+    //delayout the destruction of the old containment fixes another crash
+    view->rootObject()->setFocus(true, Qt::MouseFocusReason);
+    QTimer::singleShot(250, oldContainment, SLOT(destroy()));
 
     return newContainment;
 }
