@@ -562,7 +562,7 @@ void ShellCorona::addOutput(KScreen::Output *output)
     int insertPosition = 0;
     foreach (DesktopView *view, d->views) {
         KScreen::Output *out = screenToOutput(view->screen(), d->screenConfiguration);
-        if(outputLess(output, out))
+        if (outputLess(output, out))
             break;
 
         insertPosition++;
@@ -573,15 +573,13 @@ void ShellCorona::addOutput(KScreen::Output *output)
     //We have to do it in a lambda,
     connect(screen, &QObject::destroyed, this, [=]() { removeDesktop(view); });
 
-    d->views.append(0);
-    shiftViews(insertPosition, 1, d->views.count()-1);
-    d->views[insertPosition] = view;
+    d->views.insert(insertPosition, view);
+    shiftViews(insertPosition+1, 1, d->views.count()-1);
 
     const QString currentActivity = d->activityController->currentActivity();
-    int screenNum = d->views.count()-1;
-    Plasma::Containment *containment = d->desktopContainments[currentActivity][screenNum];
+    Plasma::Containment *containment = d->desktopContainments[currentActivity][insertPosition];
     if (!containment) {
-        containment = createContainmentForActivity(currentActivity, screenNum);
+        containment = createContainmentForActivity(currentActivity, insertPosition);
     }
 
     QAction *removeAction = containment->actions()->action("remove");
