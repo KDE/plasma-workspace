@@ -44,12 +44,6 @@ Item {
     function updateLogic() {
         Logic.updateCumulative();
         plasmoid.status = Logic.plasmoidStatus();
-
-        // this helps updating the status throughout the applet
-        // without this, the applet doesn't switch from passive
-        // to active. -- FIXME.
-        print(plasmoid.status);
-
         Logic.updateTooltip();
     }
 
