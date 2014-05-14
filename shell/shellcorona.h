@@ -140,6 +140,7 @@ private Q_SLOTS:
     void addPanel(QAction *action);
     void containmentDeleted(QObject* cont);
 
+    void outputEnabledChanged();
     void removePanel(QObject* cont);
     void removeDesktop(DesktopView* screen);
     void addOutput(KScreen::Output* output);

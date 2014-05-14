@@ -536,9 +536,14 @@ void ShellCorona::shiftViews(int idx, int delta, int until)
     }
 }
 
+void ShellCorona::outputEnabledChanged()
+{
+    addOutput(qobject_cast<KScreen::Output*>(sender()));
+}
+
 void ShellCorona::addOutput(KScreen::Output *output)
 {
-    connect(output, &KScreen::Output::isEnabledChanged, this, [this, output]() { this->addOutput(output); }, Qt::UniqueConnection);
+    connect(output, &KScreen::Output::isEnabledChanged, this, &ShellCorona::outputEnabledChanged, Qt::UniqueConnection);
     if (!output->isEnabled())
         return;
     QScreen *screen = outputToScreen(output);
