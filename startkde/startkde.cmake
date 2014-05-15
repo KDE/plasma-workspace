@@ -77,11 +77,8 @@ EOF
 # export LC_* variables set by kcmshell5 formats into environment
 # so it can be picked up by QLocale and friends.
 exportformatssettings=$configDir/plasma-locale-settings.sh
-echo $exportformatssettings >> /tmp/formats.log
 test -f $exportformatssettings && {
-    echo "$exportformatssettings is there" >> /tmp/formats.log
     . $exportformatssettings
-    env >> /tmp/env2.log
 }
 
 # Write a default kdeglobals file to set up the font
