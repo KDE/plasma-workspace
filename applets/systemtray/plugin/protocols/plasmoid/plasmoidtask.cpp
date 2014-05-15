@@ -62,8 +62,6 @@ PlasmoidTask::PlasmoidTask(const QString &packageName, int appletId, Plasma::Con
 
         m_taskGraphicsObject->setCoronaPackage(package);
         QMetaObject::invokeMethod(m_taskGraphicsObject, "init", Qt::QueuedConnection);
-        qWarning()<<m_taskGraphicsObject->property("compactRepresentationItem");
-        qWarning()<<m_taskGraphicsObject->property("fullRepresentationItem");
 
         //old syntax, because we are connecting blindly
         connect(m_taskGraphicsObject, SIGNAL(expandedChanged(bool)),
