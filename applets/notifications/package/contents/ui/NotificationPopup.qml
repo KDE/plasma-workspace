@@ -84,7 +84,7 @@ PlasmaCore.Dialog {
             id: appIconItem
             height: units.iconSizes.large
             width: height
-            visible: true// !imageItem.visible
+            visible: !imageItem.visible
             anchors {
                 left: parent.left
                 top: parent.top
