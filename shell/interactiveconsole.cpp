@@ -456,6 +456,11 @@ void InteractiveConsole::saveScriptUrlSelected(int result)
 
 void InteractiveConsole::saveScript(const QUrl &url)
 {
+    //create the folder to save if doesn't exists
+    QFileInfo info(url.path());
+    QDir dir;
+    dir.mkpath(info.absoluteDir().absolutePath());
+
     if (m_editorPart) {
         m_editorPart->saveAs(url);
     } else {
