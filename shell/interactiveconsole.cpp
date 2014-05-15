@@ -56,7 +56,7 @@
 //TODO:
 // interative help?
 static const QString s_autosaveFileName("interactiveconsoleautosave.js");
-static const QString s_kwinService = "org.kde.kwin.Scripting";
+static const QString s_kwinService = QStringLiteral("org.kde.KWin");
 
 InteractiveConsole::InteractiveConsole(ShellCorona *corona, QWidget *parent)
     : QDialog(parent),
