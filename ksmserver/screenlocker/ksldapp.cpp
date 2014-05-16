@@ -354,6 +354,14 @@ void KSldApp::showLockWindow()
 {
     if (!m_lockWindow) {
         m_lockWindow = new LockWindow();
+        connect(m_lockWindow, &LockWindow::userActivity, this,
+            [this]() {
+                if (isGraceTime()) {
+                    unlock();
+                }
+            },
+            Qt::QueuedConnection
+        );
     }
     m_lockWindow->showLockWindow();
     XSync(QX11Info::display(), False);

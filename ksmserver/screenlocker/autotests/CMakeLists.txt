@@ -39,7 +39,15 @@ ecm_mark_as_test(pointerGrabber)
 #######################################
 # LockWindowTest
 #######################################
-add_executable(lockWindowTest lockwindowtest.cpp)
-target_link_libraries(lockWindowTest Qt5::Test screenlocker_static)
+set(lockWindowTest_SRCS lockwindowtest.cpp ../lockwindow.cpp)
+add_executable(lockWindowTest ${lockWindowTest_SRCS})
+target_link_libraries(lockWindowTest
+    KF5::WindowSystem
+    Qt5::Test
+    Qt5::X11Extras
+    Qt5::Widgets
+    ${X11_LIBRARIES}
+    XCB::XCB
+)
 add_test(ksmserver-lockWindowTest lockWindowTest)
 ecm_mark_as_test(lockWindowTest)

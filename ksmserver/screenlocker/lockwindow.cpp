@@ -22,7 +22,6 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 *********************************************************************/
 #include "lockwindow.h"
-#include "ksldapp.h"
 // Qt
 #include <QApplication>
 #include <QDebug>
@@ -302,10 +301,6 @@ bool LockWindow::nativeEventFilter(const QByteArray &eventType, void *message, l
         case XCB_KEY_PRESS:
         case XCB_KEY_RELEASE:
         case XCB_MOTION_NOTIFY:
-            if (KSldApp::self()->isGraceTime()) {
-                KSldApp::self()->unlock();
-                return true;
-            }
             emit userActivity();
             if (!m_lockWindows.isEmpty()) {
                 int x = 0;
