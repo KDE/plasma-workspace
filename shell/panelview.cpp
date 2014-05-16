@@ -245,11 +245,9 @@ void PanelView::setThickness(int value)
 
 int PanelView::length() const
 {
-    return config().readEntry<int>("length",
-            formFactor() == Plasma::Types::Vertical ?
-                screen()->size().height() :
-                screen()->size().width()
-        );
+    auto defaultLength = [=]() { return formFactor() == Plasma::Types::Vertical ?
+        screen()->size().height() : screen()->size().width(); };
+    return config().isValid() ? config().readEntry<int>("length", defaultLength()) : defaultLength();
 }
 
 void PanelView::setLength(int value)
