@@ -154,7 +154,12 @@ void DesktopView::setDashboardShown(bool shown)
 
 bool DesktopView::event(QEvent *e)
 {
-    if (e->type() == QEvent::Close) {
+    if (e->type() == QEvent::KeyRelease) {
+        QKeyEvent *ke = static_cast<QKeyEvent *>(e);
+        if (m_dashboardShown && ke->key() == Qt::Key_Escape) {
+            setDashboardShown(false);
+        }
+    } else if (e->type() == QEvent::Close) {
         //prevent ALT+F4 from killing the shell
         e->ignore();
         return true;
