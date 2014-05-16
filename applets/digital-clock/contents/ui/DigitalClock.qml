@@ -69,7 +69,7 @@ Item {
             if (main.vertical) {
                 sizehelper.font.pixelSize = Math.max(theme.mSize(theme.smallestFont).height, Math.min(main.width/5, theme.mSize(theme.defaultFont).height * 2));
             } else if (plasmoid.formFactor == PlasmaCore.Types.Horizontal) {
-                sizehelper.font.pixelSize = main.height;
+                sizehelper.font.pixelSize = Math.round(main.height * 0.8);
             } else {
                 sizehelper.font.pixelSize = Math.min(main.width/5, main.height);
             }
@@ -84,6 +84,7 @@ Item {
             pixelSize: sizehelper.font.pixelSize
         }
         width: Math.max(paintedWidth, timeLabel.paintedWidth)
+        height: paintedHeight
         text: Qt.formatTime(dataSource.data["Local"]["Time"], main.timeFormat);
         wrapMode: plasmoid.formFactor != PlasmaCore.Types.Horizontal ? Text.WordWrap : Text.NoWrap
         horizontalAlignment: Text.AlignHCenter
