@@ -25,7 +25,6 @@
 #include <QApplication>
 #include <QDebug>
 #include <QMenu>
-#include <QDesktopWidget>
 #include <QQmlContext>
 #include <QTimer>
 #include <QDBusConnection>
@@ -433,7 +432,7 @@ KActivities::Controller *ShellCorona::activityController()
 
 int ShellCorona::numScreens() const
 {
-    return QApplication::desktop()->screenCount();
+    return QGuiApplication::screens().count();
 }
 
 QRect ShellCorona::screenGeometry(int id) const
@@ -1133,6 +1132,10 @@ Plasma::Package ShellCorona::lookAndFeelPackage() const
     return d->lookNFeelPackage;
 }
 
+KScreen::Config* ShellCorona::screensConfiguration() const
+{
+    return d->screenConfiguration;
+}
 
 // Desktop corona handler
 

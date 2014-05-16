@@ -38,6 +38,7 @@
 
 #include <Plasma/Containment>
 #include <Plasma/Package>
+#include <KScreen/Config>
 
 #if HAVE_X11
 #include <xcb/xcb.h>
@@ -110,7 +111,9 @@ PanelView::PanelView(ShellCorona *corona, QWindow *parent)
     m_strutsTimer.setSingleShot(true);
     connect(&m_strutsTimer, &QTimer::timeout,
             this, &PanelView::updateStruts);
-    connect(QApplication::desktop(), &QDesktopWidget::screenCountChanged,
+    connect(m_corona->screensConfiguration(), &KScreen::Config::outputAdded,
+            this, &PanelView::updateStruts);
+    connect(m_corona->screensConfiguration(), &KScreen::Config::outputRemoved,
             this, &PanelView::updateStruts);
 
     qmlRegisterType<QScreen>();

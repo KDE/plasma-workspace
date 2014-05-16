@@ -29,6 +29,7 @@
 
 namespace KScreen {
 class Output;
+class Config;
 }
 
 namespace Plasma
@@ -75,8 +76,9 @@ public:
     Activity *activity(const QString &id);
     void insertActivity(const QString &id, Activity *activity);
 
-
     Plasma::Containment *setContainmentTypeForScreen(int screen, const QString &plugin);
+
+    KScreen::Config* screensConfiguration() const;
 
 public Q_SLOTS:
     /**
