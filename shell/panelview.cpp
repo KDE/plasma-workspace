@@ -60,8 +60,6 @@ PanelView::PanelView(ShellCorona *corona, QWindow *parent)
     setClearBeforeRendering(true);
     setColor(QColor(Qt::transparent));
     setFlags(Qt::FramelessWindowHint|Qt::WindowDoesNotAcceptFocus);
-    KWindowSystem::setType(winId(), NET::Dock);
-    setVisible(true);
 
     themeChanged();
     connect(&m_theme, &Plasma::Theme::themeChanged, this, &PanelView::themeChanged);
@@ -85,6 +83,7 @@ PanelView::PanelView(ShellCorona *corona, QWindow *parent)
     connect(this, &QWindow::screenChanged, this, [=]() {
             if (!screen())
                 return;
+            KWindowSystem::setOnAllDesktops(winId(), true);
             KWindowSystem::setType(winId(), NET::Dock);
             setVisibilityMode(m_visibilityMode);
             showTemporarily();
@@ -356,7 +355,6 @@ void PanelView::setVisibilityMode(PanelView::VisibilityMode mode)
 
     updateStruts();
 
-    KWindowSystem::setOnAllDesktops(winId(), true);
     emit visibilityModeChanged();
     restoreAutoHide();
 }
@@ -468,10 +466,6 @@ void PanelView::restore()
     if (!containment()) {
         return;
     }
-
-
-    connect(containment(), SIGNAL(destroyed(QObject *)),
-            this, SLOT(deleteLater()), Qt::QueuedConnection);
 
     static const int MINSIZE = 10;
 
@@ -637,6 +631,7 @@ void PanelView::showEvent(QShowEvent *event)
     PanelShadows::self()->addWindow(this);
     PlasmaQuick::View::showEvent(event);
     KWindowSystem::setOnAllDesktops(winId(), true);
+    KWindowSystem::setType(winId(), NET::Dock);
 }
 
 bool PanelView::event(QEvent *e)
@@ -772,6 +767,7 @@ void PanelView::themeChanged()
 void PanelView::containmentChanged()
 {
     connect(containment(), SIGNAL(statusChanged(Plasma::Types::ItemStatus)), SLOT(statusChanged(Plasma::Types::ItemStatus)));
+    connect(containment(), SIGNAL(destroyed(QObject *)), this, SLOT(deleteLater()), Qt::QueuedConnection);
 }
 
 void PanelView::statusChanged(Plasma::Types::ItemStatus status)
