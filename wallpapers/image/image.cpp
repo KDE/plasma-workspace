@@ -387,7 +387,7 @@ void Image::addUrl(const QUrl &url, bool setAsCurrent)
         QString wallpaperPath = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QLatin1String("wallpapers/") + url.path();
 
         if (!wallpaperPath.isEmpty()) {
-            KIO::FileCopyJob *job = KIO::file_copy(url, QUrl(wallpaperPath), KIO::HideProgressInfo);
+            KIO::FileCopyJob *job = KIO::file_copy(url, QUrl(wallpaperPath), -1, KIO::HideProgressInfo);
             if (setAsCurrent) {
                 connect(job, SIGNAL(result(KJob*)), this, SLOT(setWallpaperRetrieved(KJob*)));
             } else {
