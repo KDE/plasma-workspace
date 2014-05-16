@@ -102,6 +102,10 @@ PanelView::PanelView(ShellCorona *corona, QWindow *parent)
             &m_positionPaneltimer, SLOT(start()));
     connect(this, SIGNAL(containmentChanged()),
             this, SLOT(containmentChanged()));
+    connect(this, &View::locationChanged, [=] () {
+                emit m_corona->availableScreenRectChanged();
+                emit m_corona->availableScreenRegionChanged();
+            });
 
     if (!m_corona->package().isValid()) {
         qWarning() << "Invalid home screen package";

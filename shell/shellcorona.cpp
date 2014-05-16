@@ -457,15 +457,41 @@ QRect ShellCorona::screenGeometry(int id) const
 
 QRegion ShellCorona::availableScreenRegion(int id) const
 {
+    const QRect screenGeo(screenGeometry(id));
+
     DesktopView *view = 0;
-    if (id >= 0 && id < d->views.count())
+    if (id >= 0 && id < d->views.count()) {
         view = d->views[id];
+    }
 
     if (view) {
         QRegion r = view->geometry();
+        QRect panelRect;
         foreach (PanelView *v, d->panelViews) {
+            panelRect = v->geometry();
             if (v->containment()->screen() == id && v->visibilityMode() != PanelView::AutoHide) {
-                r -= v->geometry();
+                //don't use panel positions, because sometimes the panel can be moved around
+                switch (view->location()) {
+                case Plasma::Types::TopEdge:
+                    panelRect.moveTop(qMin(panelRect.top(), screenGeo.top()));
+                    break;
+
+                case Plasma::Types::BottomEdge:
+                    panelRect.moveBottom(qMax(panelRect.bottom(), screenGeo.bottom()));
+                    break;
+
+                case Plasma::Types::LeftEdge:
+                    panelRect.moveLeft(qMin(panelRect.left(), screenGeo.left()));
+                    break;
+
+                case Plasma::Types::RightEdge:
+                    panelRect.moveRight(qMax(panelRect.right(), screenGeo.right()));
+                    break;
+
+                default:
+                    break;
+                }
+                r -= panelRect;
             }
         }
         return r;
@@ -483,6 +509,7 @@ QRect ShellCorona::availableScreenRect(int id) const
         id = 0;
     }
 
+    const QRect screenGeo(screenGeometry(id));
     QRect r(screenGeometry(id));
 
     foreach (PanelView *view, d->panelViews) {
@@ -490,24 +517,29 @@ QRect ShellCorona::availableScreenRect(int id) const
             QRect v = view->geometry();
             switch (view->location()) {
                 case Plasma::Types::TopEdge:
+                    //neutralize eventual panel positioning due to drag handle
+                    v.moveTop(qMin(v.top(), screenGeo.top()));
                     if (v.bottom() > r.top()) {
                         r.setTop(v.bottom());
                     }
                     break;
 
                 case Plasma::Types::BottomEdge:
+                    v.moveBottom(qMax(v.bottom(), screenGeo.bottom()));
                     if (v.top() < r.bottom()) {
                         r.setBottom(v.top());
                     }
                     break;
 
                 case Plasma::Types::LeftEdge:
+                    v.moveLeft(qMin(v.left(), screenGeo.left()));
                     if (v.right() > r.left()) {
                         r.setLeft(v.right());
                     }
                     break;
 
                 case Plasma::Types::RightEdge:
+                    v.moveRight(qMax(v.right(), screenGeo.right()));
                     if (v.left() < r.right()) {
                         r.setRight(v.left());
                     }
