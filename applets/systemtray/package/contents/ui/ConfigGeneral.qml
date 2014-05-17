@@ -60,7 +60,12 @@ Item {
             text: i18n("Categories")
             color: palette.text
         }
+        Item {
+            width: height
+            height: units.gridUnit / 2
+        }
         Column {
+            spacing: units.smallSpacing * 2
             QtControls.CheckBox {
                 id: applicationStatus
                 text: i18n("Application Status")
@@ -92,7 +97,12 @@ Item {
             text: i18n("Extra Items")
             color: palette.text
         }
+        Item {
+            width: height
+            height: units.gridUnit / 2
+        }
         Column {
+            spacing: units.smallSpacing * 2
             Repeater {
                 model: host.availablePlasmoids
                 delegate: QtControls.CheckBox {
