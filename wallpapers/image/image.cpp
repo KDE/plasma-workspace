@@ -505,8 +505,19 @@ void Image::showFileDialog()
         connect(m_dialog, SIGNAL(okClicked()), this, SLOT(wallpaperBrowseCompleted()));
         connect(m_dialog, SIGNAL(destroyed(QObject*)), this, SLOT(fileDialogFinished()));
         */
+
+        QString path;
+        const QStringList &locations = QStandardPaths::standardLocations(QStandardPaths::PicturesLocation);
+
+        if (!locations.isEmpty()) {
+            path = locations.at(0);
+        } else {
+            // HomeLocation is guaranteed not to be empty.
+            path = QStandardPaths::standardLocations(QStandardPaths::HomeLocation).at(0);
+        }
+
         m_dialog = new QFileDialog(0, i18n("Open Image"),
-                                      QDir::homePath()+QStringLiteral("/Pictures"),
+                                      path,
                                       i18n("Image Files (*.png *.jpg *.jpeg *.bmp *.svg *.svgz *.xcf)"));
         m_dialog->setFileMode(QFileDialog::ExistingFile);
         connect(m_dialog, &QDialog::accepted, this, &Image::wallpaperBrowseCompleted);
