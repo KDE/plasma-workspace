@@ -269,6 +269,9 @@ void PlasmoidProtocol::serviceNameFetchFinished(QDBusPendingCallWatcher* watcher
 void PlasmoidProtocol::serviceRegistered(const QString &service)
 {
     foreach (const QString &plugin, m_dbusActivatableTasks.keys()) {
+        if (!m_allowedPlugins.contains(plugin)) {
+            continue;
+        }
         const QString& pattern = m_dbusActivatableTasks.value(plugin);
         QRegExp rx(pattern);
         rx.setPatternSyntax(QRegExp::Wildcard);
