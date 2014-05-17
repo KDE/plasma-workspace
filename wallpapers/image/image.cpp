@@ -76,6 +76,7 @@ Image::Image(QObject *parent)
 
 Image::~Image()
 {
+    delete m_dialog;
 }
 
 QString Image::wallpaperPath() const
