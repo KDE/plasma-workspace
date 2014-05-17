@@ -76,7 +76,7 @@ MouseArea {
         anchors.fill: parent
         mainText : plasmoid.configuration.applicationName
         subText : plasmoid.configuration.genericName
-        image : plasmoid.configuration.iconName
+        icon : plasmoid.configuration.iconName
     }
 
     Logic {
