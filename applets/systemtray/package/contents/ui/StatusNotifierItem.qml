@@ -194,7 +194,6 @@ Item {
     }
 
     function __processClick(buttons, item) {
-        print("__processClick");
         var pos = modelData.popupPosition(taskItemContainer, 0, 0);
         switch (buttons) {
         case Qt.LeftButton:
