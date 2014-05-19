@@ -15,6 +15,7 @@ add_executable( testChromeBookmarks ${testChromeBookmarks_SRCS} )
 #kde4_add_unit_test( testChromeBookmarks TESTNAME plasma-runner-bookmarks-TestChromeBookmarks ${testChromeBookmarks_SRCS} )
 #add_test( testChromeBookmarks TESTNAME plasma-runner-bookmarks-TestChromeBookmarks ${testChromeBookmarks_SRCS} )
 target_link_libraries( testChromeBookmarks
+    Qt5::Gui
     Qt5::Test
     Qt5::Sql
     KF5::Runner
