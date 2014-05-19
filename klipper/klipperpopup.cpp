@@ -263,6 +263,7 @@ void KlipperPopup::keyPressEvent( QKeyEvent* e ) {
 #endif
         setActiveAction(actions().at(actions().indexOf(m_filterWidgetAction)));
         QString lastString = m_filterWidget->text();
+        m_filterWidgetAction->setVisible(true);
         QApplication::sendEvent(m_filterWidget, e);
 
         if (m_filterWidget->text().isEmpty()) {
