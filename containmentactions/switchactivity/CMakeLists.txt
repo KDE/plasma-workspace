@@ -9,6 +9,7 @@ add_library(plasma_containmentactions_switchactivity MODULE ${switchactivity_SRC
 kservice_desktop_to_json(plasma_containmentactions_switchactivity plasma-containmentactions-switchactivity.desktop)
 
 target_link_libraries(plasma_containmentactions_switchactivity
+                      Qt5::Widgets
                       KF5::Plasma
                       KF5::KIOCore
                       KF5::Activities

@@ -36,9 +36,11 @@ add_subdirectory(backends)
 
 add_library(plasma_packagestructure_share MODULE ${sharepackage_SRCS})
 target_link_libraries(plasma_packagestructure_share
-        KF5::Plasma
-        KF5::I18n
-        KF5::Service)
+                      KF5::Plasma
+                      KF5::I18n
+                      KF5::Service
+                      Qt5::Gui
+)
 
 install(TARGETS plasma_packagestructure_share
                  DESTINATION ${PLUGIN_INSTALL_DIR}/plasma/packagestructure)

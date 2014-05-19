@@ -30,14 +30,15 @@ if ( QALCULATE_FOUND )
                           KF5::KIOCore
                           KF5::Runner
                           KF5::I18n
-                          Qt5::Script
                           Qt5::Network
+                          Qt5::Script
     )
 else ()
     add_library(krunner_calculatorrunner MODULE ${krunner_calculatorrunner_SRCS})
     target_link_libraries(krunner_calculatorrunner
                           KF5::Runner
                           KF5::I18n
+                          Qt5::Gui
                           Qt5::Script
     )
 endif ()

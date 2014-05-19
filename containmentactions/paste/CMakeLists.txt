@@ -5,10 +5,12 @@ set(paste_SRCS
 )
 
 add_library(plasma_containmentactions_paste MODULE ${paste_SRCS})
-target_link_libraries(plasma_containmentactions_paste 
-	KF5::Plasma 
-	KF5::KIOCore
-	)
+target_link_libraries(plasma_containmentactions_paste
+    Qt5::Gui
+    Qt5::Widgets
+    KF5::Plasma
+    KF5::KIOCore
+    )
 
 kservice_desktop_to_json(plasma_containmentactions_paste plasma-containmentactions-paste.desktop)
 
