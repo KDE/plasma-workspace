@@ -237,37 +237,87 @@ int Panel::length() const
 
 void Panel::setLength(int pixels)
 {
-    Plasma::Containment *c = containment();
-    if (pixels < 0 || !c) {
-        return;
-    }
-
-    QQuickItem *graphicObject = qobject_cast<QQuickItem *>(c->property("_plasma_graphicObject").value<QObject *>());
-
-    if (!graphicObject) {
-        return;
-    }
-
     PanelView *v = panel();
-    if (v) {
-        QRectF screen = v->screen()->geometry();
-        QSizeF s(graphicObject->width(), graphicObject->height());
+    Plasma::Containment *c = containment();
 
-        if (c->formFactor() == Plasma::Types::Vertical) {
-            if (pixels > screen.height() - v->offset()) {
-                return;
-            }
-
-            s.setHeight(pixels);
-        } else if (pixels > screen.width() - v->offset()) {
-            return;
-        } else {
-            s.setWidth(pixels);
-        }
-        v->setMinimumLength(pixels);
-        v->setMaximumLength(pixels);
-        v->setLength(pixels);
+    if (!v || !c || pixels < 0 || pixels > v->maximumLength() || pixels < v->minimumLength()) {
+        return;
     }
+
+    QRectF screen = v->screen()->geometry();
+
+    if (c->formFactor() == Plasma::Types::Vertical
+        && pixels > screen.height() - v->offset()) {
+        return;
+    } else if (pixels > screen.width() - v->offset()) {
+        return;
+    }
+
+    v->setLength(pixels);
+}
+
+int Panel::minimumLength() const
+{
+    PanelView *v = panel();
+
+    if (v) {
+        return v->minimumLength();
+    }
+
+    return 0;
+}
+
+void Panel::setMinimumLength(int pixels)
+{
+    PanelView *v = panel();
+    Plasma::Containment *c = containment();
+
+    if (!v || !c || pixels < 0 || pixels > v->maximumLength()) {
+        return;
+    }
+
+    QRectF screen = v->screen()->geometry();
+
+    if (c->formFactor() == Plasma::Types::Vertical
+        && pixels > screen.height() - v->offset()) {
+        return;
+    } else if (pixels > screen.width() - v->offset()) {
+        return;
+    }
+
+    v->setMinimumLength(pixels);
+}
+
+int Panel::maximumLength() const
+{
+    PanelView *v = panel();
+
+    if (v) {
+        return v->maximumLength();
+    }
+
+    return 0;
+}
+
+void Panel::setMaximumLength(int pixels)
+{
+    PanelView *v = panel();
+    Plasma::Containment *c = containment();
+
+    if (!v || !c || pixels < 0 || pixels < v->minimumLength()) {
+        return;
+    }
+
+    QRectF screen = v->screen()->geometry();
+
+    if (c->formFactor() == Plasma::Types::Vertical
+        && pixels > screen.height() - v->offset()) {
+        return;
+    } else if (pixels > screen.width() - v->offset()) {
+        return;
+    }
+
+    v->setMinimumLength(pixels);
 }
 
 int Panel::height() const

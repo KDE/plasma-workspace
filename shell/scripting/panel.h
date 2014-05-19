@@ -52,6 +52,8 @@ class Panel : public Containment
     Q_PROPERTY(QString alignment READ alignment WRITE setAlignment)
     Q_PROPERTY(int offset READ offset WRITE setOffset)
     Q_PROPERTY(int length READ length WRITE setLength)
+    Q_PROPERTY(int minimumLength READ minimumLength WRITE setMinimumLength)
+    Q_PROPERTY(int maximumLength READ maximumLength WRITE setMaximumLength)
     Q_PROPERTY(int height READ height WRITE setHeight)
     Q_PROPERTY(QString hiding READ hiding WRITE setHiding)
 
@@ -70,6 +72,12 @@ public:
 
     int length() const;
     void setLength(int pixels);
+
+    int minimumLength() const;
+    void setMinimumLength(int pixels);
+
+    int maximumLength() const;
+    void setMaximumLength(int pixels);
 
     int height() const;
     void setHeight(int height);
