@@ -240,8 +240,8 @@ void WidgetExplorerPrivate::initRunningApplets()
 
 void WidgetExplorerPrivate::addContainment(Containment *containment)
 {
-    QObject::connect(containment, &Containment::appletAdded, q, &WidgetExplorerPrivate::appletAdded);
-    QObject::connect(containment, &Containment::appletRemoved, q, &WidgetExplorerPrivate::appletRemoved);
+    QObject::connect(containment, SIGNAL(appletAdded(Plasma::Applet*)), q, SLOT(appletAdded(Plasma::Applet*)));
+    QObject::connect(containment, SIGNAL(appletRemoved(Plasma::Applet*)), q, SLOT(appletRemoved(Plasma::Applet*)));
 
     foreach (Applet *applet, containment->applets()) {
         if (applet->pluginInfo().isValid()) {
