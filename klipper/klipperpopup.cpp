@@ -98,6 +98,7 @@ KlipperPopup::KlipperPopup( History* history )
       m_filterWidgetAction( 0 ),
       m_nHistoryItems( 0 )
 {
+    ensurePolished();
     KWindowInfo windowInfo( winId(), NET::WMGeometry );
     QRect geometry = windowInfo.geometry();
     QRect screen = qApp->desktop()->screenGeometry(geometry.center());
