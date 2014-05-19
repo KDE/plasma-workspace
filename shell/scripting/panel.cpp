@@ -272,7 +272,7 @@ void Panel::setMinimumLength(int pixels)
     PanelView *v = panel();
     Plasma::Containment *c = containment();
 
-    if (!v || !c || pixels < 0 || pixels > v->maximumLength()) {
+    if (!v || !c || pixels < 0) {
         return;
     }
 
@@ -286,6 +286,10 @@ void Panel::setMinimumLength(int pixels)
     }
 
     v->setMinimumLength(pixels);
+
+    if (v->maximumLength() < pixels) {
+        v->setMaximumLength(pixels);
+    }
 }
 
 int Panel::maximumLength() const
@@ -304,7 +308,7 @@ void Panel::setMaximumLength(int pixels)
     PanelView *v = panel();
     Plasma::Containment *c = containment();
 
-    if (!v || !c || pixels < 0 || pixels < v->minimumLength()) {
+    if (!v || !c || pixels < 0) {
         return;
     }
 
@@ -317,7 +321,11 @@ void Panel::setMaximumLength(int pixels)
         return;
     }
 
-    v->setMinimumLength(pixels);
+    v->setMaximumLength(pixels);
+
+    if (v->minimumLength() > pixels) {
+        v->setMinimumLength(pixels);
+    }
 }
 
 int Panel::height() const
