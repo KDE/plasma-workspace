@@ -32,6 +32,7 @@ if ( QALCULATE_FOUND )
                           KF5::I18n
                           Qt5::Network
                           Qt5::Script
+                          Qt5::Widgets
     )
 else ()
     add_library(krunner_calculatorrunner MODULE ${krunner_calculatorrunner_SRCS})
