@@ -67,7 +67,7 @@ bool isBlack()
 
     for (int i = 0; i < image.width(); i++) {
         for (int j = 0; j < image.height(); j++) {
-            if (image.pixel(i, j) != qRgb(0, 0, 0)) {
+            if (QColor(image.pixel(i, j)).rgb() != qRgb(0, 0, 0)) {
                 return false;
             }
         }
