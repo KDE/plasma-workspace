@@ -99,6 +99,7 @@ PlasmaCore.Dialog {
             id: imageItem
             anchors.fill: appIconItem
             smooth: true
+            fillMode: Image.PreserveAspectFit
             visible: nativeWidth > 0
         }
 
