@@ -919,15 +919,23 @@ Plasma::Containment *ShellCorona::setContainmentTypeForScreen(int screen, const 
     //At this point we have a valid new containment from plugin and a view
     //copy all configuration groups (excluded applets)
     KConfigGroup oldCg = oldContainment->config();
+
     //newCg *HAS* to be from a KSharedConfig, because some KConfigSkeleton will need to be synced
+    //this makes the configscheme work
     KConfigGroup newCg(KSharedConfig::openConfig(oldCg.config()->name()), "Containments");
     newCg = KConfigGroup(&newCg, QString::number(newContainment->id()));
+
+    //this makes containment->config() work, is a separate thing from its configscheme
+    KConfigGroup newCg2 = newContainment->config();
 
     foreach (const QString &group, oldCg.groupList()) {
         if (group != "Applets") {
             KConfigGroup subGroup(&oldCg, group);
             KConfigGroup newSubGroup(&newCg, group);
             subGroup.copyTo(&newSubGroup);
+
+            KConfigGroup newSubGroup2(&newCg2, group);
+            subGroup.copyTo(&newSubGroup2);
         }
     }
 
