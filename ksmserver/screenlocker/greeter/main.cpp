@@ -64,9 +64,17 @@ int main(int argc, char* argv[])
                                      i18n("Starts the greeter in testing mode"));
     QCommandLineOption immediateLockOption(QStringLiteral("immediateLock"),
                                            i18n("Lock immediately, ignoring any grace time etc."));
+    QCommandLineOption graceTimeOption(QStringLiteral("graceTime"),
+                                       i18n("Delay till the lock user interface gets shown in milliseconds."),
+                                       QStringLiteral("milliseconds"),
+                                       QStringLiteral("0"));
+    QCommandLineOption nolockOption(QStringLiteral("nolock"),
+                                              i18n("Don't show any lock user interface."));
 
     parser.addOption(testingOption);
     parser.addOption(immediateLockOption);
+    parser.addOption(graceTimeOption);
+    parser.addOption(nolockOption);
     parser.process(app);
 
     if (parser.isSet(testingOption)) {
@@ -74,6 +82,12 @@ int main(int argc, char* argv[])
         app.setImmediateLock(true);
     } else {
         app.setImmediateLock(parser.isSet(immediateLockOption));
+    }
+    app.setNoLock(parser.isSet(nolockOption));
+    bool ok = false;
+    int graceTime = parser.value(graceTimeOption).toInt(&ok);
+    if (ok) {
+        app.setGraceTime(graceTime);
     }
     app.desktopResized();
 

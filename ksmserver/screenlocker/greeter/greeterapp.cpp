@@ -71,8 +71,9 @@ UnlockApp::UnlockApp(int &argc, char **argv)
     , m_capsLocked(false)
     , m_ignoreRequests(false)
     , m_immediateLock(false)
-    , m_runtimeInitialized(false)
     , m_authenticator(new Authenticator(this))
+    , m_graceTime(0)
+    , m_noLock(false)
 {
     connect(m_authenticator, &Authenticator::succeeded, this, &QCoreApplication::quit);
     initialize();
@@ -166,27 +167,7 @@ void UnlockApp::desktopResized()
         view->setResizeMode(QQuickView::SizeRootObjectToView);
 
         QQmlProperty lockProperty(view->rootObject(), QStringLiteral("locked"));
-        if (m_immediateLock) {
-            lockProperty.write(true);
-        } else if (KScreenSaverSettings::lock()) {
-            if (KScreenSaverSettings::lockGrace() < 1) {
-                lockProperty.write(true);
-            } else if (m_runtimeInitialized) {
-                // if we have new views and we are waiting on the
-                // delayed lock timer still, we don't want to show
-                // the lock UI just yet
-                lockProperty.write(!m_delayedLockTimer);
-            } else {
-                if (!m_delayedLockTimer) {
-                    m_delayedLockTimer = new QTimer(this);
-                    m_delayedLockTimer->setSingleShot(true);
-                    connect(m_delayedLockTimer, SIGNAL(timeout()), this, SLOT(setLockedPropertyOnViews()));
-                }
-                m_delayedLockTimer->start(KScreenSaverSettings::lockGrace());
-            }
-        } else {
-            lockProperty.write(false);
-        }
+        lockProperty.write(m_immediateLock || (!m_noLock && !m_delayedLockTimer));
 
         QQmlProperty sleepProperty(view->rootObject(), QStringLiteral("suspendToRamSupported"));
         sleepProperty.write(spdMethods.contains(Solid::PowerManagement::SuspendState));
@@ -211,8 +192,6 @@ void UnlockApp::desktopResized()
 
         m_views << view;
     }
-
-    m_runtimeInitialized = true;
 
     // update geometry of all views and savers
     for (int i = 0; i < nScreens; ++i) {
@@ -437,6 +416,23 @@ void UnlockApp::shareEvent(QEvent *e, QQuickView *from)
         }
         installEventFilter(this);
     }
+}
+
+void UnlockApp::setGraceTime(int milliseconds)
+{
+    m_graceTime = milliseconds;
+    if (milliseconds < 0 || m_delayedLockTimer || m_noLock || m_immediateLock) {
+        return;
+    }
+    m_delayedLockTimer = new QTimer(this);
+    m_delayedLockTimer->setSingleShot(true);
+    connect(m_delayedLockTimer, &QTimer::timeout, this, &UnlockApp::setLockedPropertyOnViews);
+    m_delayedLockTimer->start(m_graceTime);
+}
+
+void UnlockApp::setNoLock(bool noLock)
+{
+    m_noLock = noLock;
 }
 
 } // namespace

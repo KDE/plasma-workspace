@@ -45,6 +45,8 @@ public:
     void setTesting(bool enable);
     void setImmediateLock(bool immediateLock);
     void lockImmediately();
+    void setGraceTime(int milliseconds);
+    void setNoLock(bool noLock);
 
 public Q_SLOTS:
     void desktopResized();
@@ -77,6 +79,8 @@ private:
     bool m_immediateLock;
     bool m_runtimeInitialized;
     Authenticator *m_authenticator;
+    int m_graceTime;
+    bool m_noLock;
 };
 } // namespace
 

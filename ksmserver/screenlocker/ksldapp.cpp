@@ -340,6 +340,13 @@ bool KSldApp::startLockProcess(EstablishLock establishLock)
     if (establishLock == EstablishLock::Immediate) {
         args << "--immediateLock";
     }
+    if (m_graceTimer->isActive()) {
+        args << "--graceTime";
+        args << QString::number(m_graceTimer->remainingTime());
+    }
+    if (m_lockGrace == -1) {
+        args << "--nolock";
+    }
     m_lockProcess->start(QStringLiteral(KSCREENLOCKER_GREET_BIN), args);
     // we wait one minute
     if (!m_lockProcess->waitForStarted(60000)) {
