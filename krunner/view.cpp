@@ -59,8 +59,8 @@ View::View(QWindow *parent)
         QObject::connect(a, SIGNAL(triggered(bool)), SLOT(displayOrHide()));
         a->setText(i18n("Run Command"));
         a->setObjectName("run command");
-        KGlobalAccel::self()->setDefaultShortcut(a, QList<QKeySequence>() << QKeySequence(Qt::ALT+Qt::Key_F2));
-        KGlobalAccel::self()->setShortcut(a, QList<QKeySequence>() << QKeySequence(Qt::ALT+Qt::Key_F2));
+        KGlobalAccel::self()->setDefaultShortcut(a, QList<QKeySequence>() << QKeySequence(Qt::ALT + Qt::Key_Space), KGlobalAccel::NoAutoloading);
+        KGlobalAccel::self()->setShortcut(a, QList<QKeySequence>() << QKeySequence(Qt::ALT + Qt::Key_Space) << QKeySequence(Qt::ALT + Qt::Key_F2));
 
         a = new QAction(0);
         QObject::connect(a, SIGNAL(triggered(bool)), SLOT(displayWithClipboardContents()));
