@@ -153,6 +153,10 @@ ColumnLayout {
                     anchors.verticalCenter: parent.verticalCenter
                     text: i18n("Hours")
                 }
+                Item {
+                    width: units.gridUnit
+                    height: units.gridUnit
+                }
                 QtControls.SpinBox {
                     id: minutesInterval
                     anchors.verticalCenter: parent.verticalCenter
@@ -165,6 +169,10 @@ ColumnLayout {
                 QtControls.Label {
                     anchors.verticalCenter: parent.verticalCenter
                     text: i18n("Minutes")
+                }
+                Item {
+                    width: units.gridUnit
+                    height: units.gridUnit
                 }
                 QtControls.SpinBox {
                     id: secondsInterval
