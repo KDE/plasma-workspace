@@ -45,6 +45,8 @@
 #include <QX11Info>
 #endif
 
+static const int MINSIZE = 10;
+
 PanelView::PanelView(ShellCorona *corona, QWindow *parent)
     : PlasmaQuick::View(corona, parent),
        m_offset(0),
@@ -263,6 +265,15 @@ void PanelView::setLength(int value)
     config().writeEntry("length", value);
     m_corona->requestApplicationConfigSync();
     positionPanel();
+
+
+    const int maxSize = screen()->size().width() - m_offset;
+    if (containment()->formFactor() == Plasma::Types::Vertical) {
+        resize(thickness(), qBound<int>(MINSIZE, value, maxSize));
+    //Horizontal
+    } else {
+        resize(qBound<int>(MINSIZE, value, maxSize), thickness());
+    }
 }
 
 int PanelView::maximumLength() const
@@ -468,8 +479,6 @@ void PanelView::restore()
     if (!containment()) {
         return;
     }
-
-    static const int MINSIZE = 10;
 
     m_offset = config().readEntry<int>("offset", 0);
     if (m_alignment != Qt::AlignCenter) {
