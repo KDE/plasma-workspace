@@ -23,6 +23,7 @@
 #include <QFile>
 #include <QLabel>
 #include <QSpinBox>
+#include <QMenu>
 #include <QDebug>
 
 #include <QtDBus/QtDBus>
@@ -31,6 +32,8 @@
 #include <KRun>
 #include <KConfigDialog>
 #include <KDiskFreeSpaceInfo>
+#include <KStatusNotifierItem>
+#include <KNotification>
 
 #include "settings.h"
 #include "ui_freespacenotifier_prefs_base.h"
@@ -40,63 +43,112 @@ FreeSpaceNotifier::FreeSpaceNotifier( QObject* parent )
     , lastAvailTimer( NULL )
     , notification( NULL )
     , lastAvail( -1 )
+    , sni(NULL)
 {
     // If we are running, notifications are enabled
     FreeSpaceNotifierSettings::setEnableNotification( true );
 
     connect( &timer, SIGNAL(timeout()), SLOT(checkFreeDiskSpace()) );
     timer.start( 1000 * 60 /* 1 minute */ );
+
+    QTimer::singleShot(0, this, SLOT(checkFreeDiskSpace()));
 }
 
 FreeSpaceNotifier::~FreeSpaceNotifier()
 {
     // The notification is automatically destroyed when it goes away, so we only need to do this if
     // it is still being shown
-    if ( notification ) notification->deref();
+    if (notification) {
+        notification->close();
+    }
+
+    if (sni) {
+        sni->deleteLater();
+    }
 }
 
 void FreeSpaceNotifier::checkFreeDiskSpace()
 {
-    if ( notification || !FreeSpaceNotifierSettings::enableNotification() )
+    if (!FreeSpaceNotifierSettings::enableNotification()) {
+        // do nothing if notifying is disabled;
+        // also stop the timer that probably got us here in the first place
+        timer.stop();
+
         return;
-    KDiskFreeSpaceInfo fsInfo = KDiskFreeSpaceInfo::freeSpaceInfo( QDir::homePath() );
-    if ( fsInfo.isValid() )
-    {
+    }
+
+    KDiskFreeSpaceInfo fsInfo = KDiskFreeSpaceInfo::freeSpaceInfo(QDir::homePath());
+    if (fsInfo.isValid()) {
         int limit = FreeSpaceNotifierSettings::minimumSpace(); // MiB
-        int availpct = int( 100 * fsInfo.available() / fsInfo.size() );
         qint64 avail = fsInfo.available() / ( 1024 * 1024 ); // to MiB
         bool warn = false;
-        if( avail < limit ) // avail disk space dropped under a limit
-        {
-            if( lastAvail < 0 ) // always warn the first time
-            {
+
+        if (avail < limit) {
+            // avail disk space dropped under a limit
+            if (lastAvail < 0 || avail < lastAvail / 2) { // always warn the first time or when available dropped to a half of previous one, warn again
                 lastAvail = avail;
                 warn = true;
-            }
-            else if( avail > lastAvail ) // the user freed some space
-                lastAvail = avail;       // so warn if it goes low again
-            else if( avail < lastAvail / 2 ) // available dropped to a half of previous one, warn again
-            {
-                warn = true;
-                lastAvail = avail;
+            } else if (avail > lastAvail) {     // the user freed some space
+                lastAvail = avail;              // so warn if it goes low again
             }
             // do not change lastAvail otherwise, to handle free space slowly going down
+
+            if (warn) {
+                int availpct = int(100 * fsInfo.available() / fsInfo.size());
+                if (!sni) {
+                    sni = new KStatusNotifierItem(QStringLiteral("freespacenotifier"));
+                    sni->setIconByName(QStringLiteral("drive-harddisk"));
+                    sni->setOverlayIconByName(QStringLiteral("dialog-warning"));
+                    sni->setTitle(i18n("Low Disk Space"));
+                    sni->setCategory(KStatusNotifierItem::Hardware);
+
+                    QMenu *sniMenu = new QMenu();
+                    QAction *action = new QAction(i18nc("Opens a file manager like dolphin", "Open File Manager..."), 0);
+                    connect(action, &QAction::triggered, this, &FreeSpaceNotifier::openFileManager);
+                    sniMenu->addAction(action);
+
+                    action = new QAction(i18nc("Allows the user to configure the warning notification being shown", "Configure Warning..."), 0);
+                    connect(action, &QAction::triggered, this, &FreeSpaceNotifier::showConfiguration);
+                    sniMenu->addAction(action);
+
+                    action = new QAction(i18nc("Allows the user to hide this notifier item", "Hide"), 0);
+                    connect(action, &QAction::triggered, this, &FreeSpaceNotifier::hideSni);
+                    sniMenu->addAction(action);
+
+                    sni->setContextMenu(sniMenu);
+                    sni->setStandardActionsEnabled(false);
+                }
+
+                sni->setStatus(KStatusNotifierItem::NeedsAttention);
+                sni->setToolTip(QStringLiteral("drive-harddisk"), i18n("Low Disk Space"), i18n("Remaining space in your Home folder: %1 MiB", QLocale::system().toString(avail)));
+
+                notification = new KNotification(QStringLiteral("freespacenotif"));
+
+                notification->setText(i18nc("Warns the user that the system is running low on space on his home folder, indicating the percentage and absolute MiB size remaining",
+                                            "Your Home folder is running out of disk space, you have %1 MiB remaining (%2%)", QLocale::system().toString(avail), availpct));
+
+                connect( notification, SIGNAL(closed()),           SLOT(cleanupNotification()) );
+
+                notification->setComponentName( QStringLiteral( "freespacenotifier" ) );
+                notification->sendEvent();
+            }
         }
-        if ( warn )
-        {
-            notification = new KNotification( QStringLiteral("freespacenotif"), 0, KNotification::Persistent );
+    } else {
+        // free space is above limit again, remove the SNI
+        if (sni) {
+            sni->deleteLater();
+            sni = NULL;
+        }
+    }
+}
 
-            notification->setText( i18nc( "Warns the user that the system is running low on space on his home folder, indicating the percentage and absolute MiB size remaining, and asks if the user wants to do something about it", "You are running low on disk space on your home folder (currently %2%, %1 MiB free).\nWould you like to run a file manager to free some disk space?", avail, availpct ) );
-            notification->setActions( QStringList() << i18nc( "Opens a file manager like dolphin", "Open File Manager" ) << i18nc( "Closes the notification", "Do Nothing" ) << i18nc( "Allows the user to configure the warning notification being shown", "Configure Warning" ) );
-            //notification->setPixmap( ... ); // TODO: Maybe add a picture here?
-
-            connect( notification, SIGNAL(action1Activated()), SLOT(openFileManager()) );
-            connect( notification, SIGNAL(action2Activated()), SLOT(cleanupNotification()) );
-            connect( notification, SIGNAL(action3Activated()), SLOT(showConfiguration()) );
-            connect( notification, SIGNAL(closed()),           SLOT(cleanupNotification()) );
-
-            notification->setComponentName( QStringLiteral( "freespacenotifier" ) );
-            notification->sendEvent();
+void FreeSpaceNotifier::hideSni()
+{
+    if (sni) {
+        sni->setStatus(KStatusNotifierItem::Passive);
+        QAction *action = qobject_cast<QAction*>(sender());
+        if (action) {
+            action->setDisabled(true);
         }
     }
 }
@@ -105,6 +157,10 @@ void FreeSpaceNotifier::openFileManager()
 {
     cleanupNotification();
     new KRun( QUrl::fromLocalFile( QDir::homePath() ), 0 );
+
+    if (sni) {
+        sni->setStatus(KStatusNotifierItem::Active);
+    }
 }
 
 void FreeSpaceNotifier::showConfiguration()
@@ -126,10 +182,17 @@ void FreeSpaceNotifier::showConfiguration()
     connect( dialog, SIGNAL(finished()), this, SLOT(configDialogClosed()) );
     dialog->setAttribute( Qt::WA_DeleteOnClose );
     dialog->show();
+
+    if (sni) {
+        sni->setStatus(KStatusNotifierItem::Active);
+    }
 }
 
 void FreeSpaceNotifier::cleanupNotification()
 {
+    if (notification) {
+        notification->close();
+    }
     notification = NULL;
 
     // warn again if constantly below limit for too long
@@ -150,8 +213,9 @@ void FreeSpaceNotifier::resetLastAvailable()
 
 void FreeSpaceNotifier::configDialogClosed()
 {
-    if ( !FreeSpaceNotifierSettings::enableNotification() )
+    if (!FreeSpaceNotifierSettings::enableNotification()) {
         disableFSNotifier();
+    }
 }
 
 /* The idea here is to disable ourselves by telling kded to stop autostarting us, and

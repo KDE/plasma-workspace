@@ -23,10 +23,10 @@
 #include <QtCore/QTimer>
 #include <QtDBus/QDBusInterface>
 
-#include <KNotification>
+class KNotification;
+class KStatusNotifierItem;
 
-class FreeSpaceNotifier
-: public QObject
+class FreeSpaceNotifier : public QObject
 {
     Q_OBJECT
     public:
@@ -39,10 +39,12 @@ class FreeSpaceNotifier
         void showConfiguration();
         void cleanupNotification();
         void configDialogClosed();
+        void hideSni();
     private:
         QTimer timer;
         QTimer* lastAvailTimer;
         KNotification *notification;
+        KStatusNotifierItem *sni;
         qint64 lastAvail; // used to suppress repeated warnings when available space hasn't changed
 
         void disableFSNotifier();
