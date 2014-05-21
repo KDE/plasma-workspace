@@ -21,6 +21,7 @@ import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.plasma.extras 2.0 as PlasmaExtras
+import org.kde.plasma.private.digitalclock 1.0
 //import org.kde.plasma.calendar 2.0
 
 Item {
@@ -50,5 +51,17 @@ Item {
         var format = Qt.locale().dateFormat(Locale.LongFormat);
         format = format.replace(/(^dddd.?\s)|(,?\sdddd$)/, "");
         main.dateFormatString = format;
+    }
+
+    ProcessRunner {
+        id: processRunner
+    }
+
+    function action_formatskcm() {
+        processRunner.runFormatsKCM();
+    }
+
+    Component.onCompleted: {
+        plasmoid.setAction("formatskcm", i18n("Set Time Format..."));
     }
 }

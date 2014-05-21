@@ -9,7 +9,7 @@ plasma_install_package(lock_logout org.kde.plasma.lock_logout)
 
 add_subdirectory(batterymonitor)
 add_subdirectory(devicenotifier)
-plasma_install_package(digital-clock org.kde.plasma.digitalclock)
+add_subdirectory(digital-clock)
 plasma_install_package(calendar org.kde.plasma.calendar)
 # add_subdirectory(quicklaunch)
 #
