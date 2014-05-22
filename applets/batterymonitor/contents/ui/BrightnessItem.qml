@@ -51,7 +51,7 @@ FocusScope {
         anchors {
             top: parent.top
             left: brightnessIcon.right
-            leftMargin: units.gridUnit / 2
+            leftMargin: units.gridUnit
         }
         height: paintedHeight
     }
@@ -60,9 +60,8 @@ FocusScope {
         id: brightnessSlider
         anchors {
             top: brightnessLabel.bottom
-            left: brightnessIcon.right
+            left: brightnessLabel.left
             right: parent.right
-            leftMargin: units.gridUnit / 2
             rightMargin: units.gridUnit * 2.5
         }
         minimumValue: 0

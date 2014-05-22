@@ -46,7 +46,7 @@ FocusScope {
         anchors {
             verticalCenter: pmCheckBox.verticalCenter
             left: pmCheckBox.right
-            leftMargin: units.gridUnit / 2
+            leftMargin: units.gridUnit
         }
         height: paintedHeight
         text: i18n("Enable Power Management")

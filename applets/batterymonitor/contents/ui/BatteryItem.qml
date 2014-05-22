@@ -107,7 +107,7 @@ Item {
                 verticalCenter: isPresent ? undefined : batteryIcon.verticalCenter
                 top: isPresent ? parent.top : undefined
                 left: batteryIcon.right
-                leftMargin: units.gridUnit / 2
+                leftMargin: units.gridUnit
             }
             height: implicitHeight
             elide: Text.ElideRight
@@ -119,7 +119,7 @@ Item {
             anchors {
                 top: batteryNameLabel.top
                 left: batteryNameLabel.right
-                leftMargin: 3
+                leftMargin: units.gridUnit / 3
             }
             text: Logic.stringForBatteryState(model)
             height: implicitHeight
@@ -131,8 +131,7 @@ Item {
             id: batteryPercentBar
             anchors {
                 bottom: parent.bottom
-                left: batteryIcon.right
-                leftMargin: units.gridUnit / 2
+                left: batteryNameLabel.left
                 right: parent.right
                 rightMargin: units.gridUnit * 2.5
             }
