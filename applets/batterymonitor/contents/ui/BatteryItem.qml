@@ -157,10 +157,10 @@ Item {
     Column {
         id: actionRow
         opacity: expanded ? 1 : 0
-        width: parent.width
         anchors {
           top: batteryInfos.bottom
           left: parent.left
+          leftMargin: batteryNameLabel.x
           right: parent.right
           margins: units.gridUnit / 2
         }
