@@ -29,8 +29,7 @@ Item {
     id: batteryItem
     clip: true
     width: batteryColumn.width
-    height: expanded ? batteryInfos.height + padding.margins.top + padding.margins.bottom * 2 + actionRow.height
-                     : batteryInfos.height + padding.margins.top + padding.margins.bottom
+    height: expanded ? batteryInfos.height + units.gridUnit + actionRow.height : batteryInfos.height
 
     Behavior on height { PropertyAnimation { duration: units.shortDuration * 2 } }
 
@@ -39,50 +38,20 @@ Item {
     // NOTE: According to the UPower spec this property is only valid for primary batteries, however
     // UPower seems to set the Present property false when a device is added but not probed yet
     property bool isPresent: model["Plugged in"]
-
+    property bool charging: model["State"] == "Charging" && model["Is Power Supply"]
     property int remainingTime
-
-    function updateSelection() {
-        var hasFocus = batteryList.activeFocus && batteryList.activeIndex == index;
-        var containsMouse = mouseArea.containsMouse;
-
-        if (expanded && (hasFocus || containsMouse)) {
-            padding.opacity = 1;
-        } else if (expanded) {
-            padding.opacity = 0.8;
-        } else if (hasFocus || containsMouse) {
-            padding.opacity = 0.65;
-        } else {
-            padding.opacity = 0;
-        }
-    }
 
     KCoreAddons.Formats {
         id: formats
     }
 
-    PlasmaCore.FrameSvgItem {
-        id: padding
-        imagePath: "widgets/viewitem"
-        prefix: "hover"
-        opacity: 0
-        Behavior on opacity { PropertyAnimation {} }
-        anchors.fill: parent
-    }
-
-    onExpandedChanged: updateSelection()
-
     MouseArea {
         id: mouseArea
         anchors.fill: parent
-        hoverEnabled: true
-        onEntered: updateSelection()
-        onExited: updateSelection()
         onClicked: {
             var oldIndex = batteryList.activeIndex
             batteryList.forceActiveFocus()
             batteryList.activeIndex = index
-            batteryList.updateSelection(oldIndex,index)
             expanded = !expanded
         }
     }
@@ -93,11 +62,8 @@ Item {
 
         anchors {
             top: parent.top
-            topMargin: padding.margins.top
             left: parent.left
-            leftMargin: padding.margins.left
-              right: parent.right
-            rightMargin: padding.margins.right
+            right: parent.right
         }
 
         KQuickControlsAddons.QIconItem {
@@ -108,7 +74,7 @@ Item {
                 verticalCenter: parent.verticalCenter
                 left: parent.left
             }
-            icon: Logic.iconForBattery(model,pluggedIn)
+            icon: Logic.iconForBattery(model, charging)
         }
 
         SequentialAnimation {
@@ -141,7 +107,7 @@ Item {
                 verticalCenter: isPresent ? undefined : batteryIcon.verticalCenter
                 top: isPresent ? parent.top : undefined
                 left: batteryIcon.right
-                leftMargin: 6
+                leftMargin: units.gridUnit / 2
             }
             height: implicitHeight
             elide: Text.ElideRight
@@ -166,9 +132,9 @@ Item {
             anchors {
                 bottom: parent.bottom
                 left: batteryIcon.right
-                leftMargin: 6
-                right: batteryPercent.left
-                rightMargin: 6
+                leftMargin: units.gridUnit / 2
+                right: parent.right
+                rightMargin: units.gridUnit * 2.5
             }
             minimumValue: 0
             maximumValue: 100
@@ -181,6 +147,7 @@ Item {
             anchors {
                 verticalCenter: batteryPercentBar.verticalCenter
                 right: parent.right
+                rightMargin: units.gridUnit / 2
             }
             visible: isPresent
             text: i18nc("Placeholder is battery percentage", "%1%", model["Percent"])
@@ -193,37 +160,23 @@ Item {
         width: parent.width
         anchors {
           top: batteryInfos.bottom
-          topMargin: padding.margins.bottom
           left: parent.left
-          leftMargin: padding.margins.left
           right: parent.right
-          rightMargin: padding.margins.right
-          bottomMargin: padding.margins.bottom
+          margins: units.gridUnit / 2
         }
-        spacing: 4
+        spacing: units.gridUnit / 2
         Behavior on opacity { PropertyAnimation {} }
-
-        PlasmaCore.SvgItem {
-            svg: PlasmaCore.Svg {
-                id: lineSvg
-                imagePath: "widgets/line"
-            }
-            elementId: "horizontal-line"
-            height: lineSvg.elementSize("horizontal-line").height
-            width: parent.width
-        }
 
         Row {
             id: detailsRow
             width: parent.width
-            spacing: 4
+            spacing: units.gridUnit / 4
 
             Column {
                 id: labelsColumn
 
                 DetailsLabel {
-                    // FIXME Bound to AC adapter plugged in, not battery charging, see below
-                    text: pluggedIn ? i18n("Time To Full:") : i18n("Time To Empty:")
+                    text: charging ? i18n("Time To Full:") : i18n("Time To Empty:")
                     horizontalAlignment: Text.AlignRight
                     visible: remainingTimeLabel.visible
                 }
@@ -246,6 +199,7 @@ Item {
 
             Column {
                 width: parent.width - labelsColumn.width - parent.spacing * 2
+
                 DetailsLabel {
                     id: remainingTimeLabel
                     // FIXME Uses overall remaining time, not bound to individual battery

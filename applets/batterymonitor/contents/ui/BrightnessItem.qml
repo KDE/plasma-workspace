@@ -27,7 +27,7 @@ FocusScope {
     id: brightnessItem
     clip: true
     width: parent.width
-    height: Math.max(brightnessIcon.height, brightnessLabel.height + brightnessSlider.height) + padding.margins.top + padding.margins.bottom
+    height: Math.max(brightnessIcon.height, brightnessLabel.height + brightnessSlider.height) + units.gridUnit
 
     property alias icon: brightnessIcon.icon
     property alias label: brightnessLabel.text
@@ -41,11 +41,8 @@ FocusScope {
         width: units.iconSizes.medium
         height: width
         anchors {
-            verticalCenter: parent.verticalCenter
-            topMargin: padding.margins.top
-            bottomMargin: padding.margins.bottom
+            top: parent.top
             left: parent.left
-            leftMargin: padding.margins.left
         }
     }
 
@@ -53,9 +50,8 @@ FocusScope {
         id: brightnessLabel
         anchors {
             top: parent.top
-            topMargin: padding.margins.top
             left: brightnessIcon.right
-            leftMargin: 6
+            leftMargin: units.gridUnit / 2
         }
         height: paintedHeight
     }
@@ -63,12 +59,11 @@ FocusScope {
     Components.Slider {
         id: brightnessSlider
         anchors {
-            bottom: parent.bottom
-            bottomMargin: padding.margins.bottom
+            top: brightnessLabel.bottom
             left: brightnessIcon.right
-            right: brightnessPercent.left
-            leftMargin: 6
-            rightMargin: 6
+            right: parent.right
+            leftMargin: units.gridUnit / 2
+            rightMargin: units.gridUnit * 2.5
         }
         minimumValue: 0
         maximumValue: 100
@@ -81,7 +76,7 @@ FocusScope {
         id: brightnessPercent
         anchors {
             right: parent.right
-            rightMargin: padding.margins.right
+            rightMargin: units.gridUnit / 2
             verticalCenter: brightnessSlider.verticalCenter
         }
         height: paintedHeight

@@ -26,7 +26,7 @@ import "plasmapackage:/code/logic.js" as Logic
 
 FocusScope {
     id: dialog
-    property int implicitHeight: batteryColumn.implicitHeight + settingsColumn.height + separator.height + 10 // 10 = separator margins
+    property int implicitHeight: batteryColumn.implicitHeight + settingsColumn.height + units.gridUnit
     focus: true
 
     property alias model: batteryList.model
@@ -46,13 +46,6 @@ FocusScope {
     signal brightnessChanged(int screenBrightness)
 //    signal keyboardBrightnessChanged(int keyboardBrightness)
     signal powermanagementChanged(bool checked)
-
-    PlasmaCore.FrameSvgItem {
-        id: padding
-        imagePath: "widgets/viewitem"
-        prefix: "hover"
-        opacity: 0
-    }
 
     Column {
         id: batteryColumn
@@ -76,6 +69,7 @@ FocusScope {
             KeyNavigation.backtab: pmSwitch
 
             function updateSelection(old,active) {
+                return;
                 itemAt(old).updateSelection();
                 itemAt(active).updateSelection();
             }
@@ -159,28 +153,6 @@ FocusScope {
             bottom: plasmoid.location == PlasmaCore.Types.BottomEdge ? settingsColumn.top : undefined
             left: parent.left
             right: parent.right
-            leftMargin: padding.margins.left
-            rightMargin: padding.margins.right
-            topMargin: 5
-            bottomMargin: 5
-        }
-    }
-
-    PlasmaCore.SvgItem {
-        id: separator
-        svg: PlasmaCore.Svg {
-            id: lineSvg
-            imagePath: "widgets/line"
-        }
-        elementId: "horizontal-line"
-        height: lineSvg.elementSize("horizontal-line").height
-        width: parent.width
-        visible: model.count
-        anchors {
-            top: plasmoid.location == PlasmaCore.Types.BottomEdge ? undefined : noControlsLabel.bottom
-            bottom: plasmoid.location == PlasmaCore.Types.BottomEdge ? noControlsLabel.top : undefined
-            leftMargin: padding.margins.left
-            rightMargin: padding.margins.right
             topMargin: 5
             bottomMargin: 5
         }

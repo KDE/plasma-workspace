@@ -19,7 +19,6 @@
  */
 
 import QtQuick 2.0
-import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as Components
 import org.kde.kquickcontrolsaddons 2.0
 
@@ -27,18 +26,16 @@ FocusScope {
     id: brightnessItem
     clip: true
     width: parent.width
-    height: Math.max(pmCheckBox.height, pmLabel.height) + padding.margins.top + padding.margins.bottom
+    height: Math.max(pmCheckBox.height, pmLabel.height) + dialog.anchors.topMargin + dialog.anchors.bottomMargin + units.gridUnit
 
     property bool enabled: pmCheckBox.checked
 
     Components.CheckBox {
         id: pmCheckBox
         anchors {
-            verticalCenter: parent.verticalCenter
+            top: parent.top
             left: parent.left
-            leftMargin: padding.margins.left + (units.iconSizes.medium - width)
-            topMargin: padding.margins.top
-            bottomMargin: padding.margins.bottom
+            leftMargin: units.iconSizes.medium - pmCheckBox.width
         }
         focus: true
         checked: true
@@ -49,7 +46,7 @@ FocusScope {
         anchors {
             verticalCenter: pmCheckBox.verticalCenter
             left: pmCheckBox.right
-            leftMargin: 6
+            leftMargin: units.gridUnit / 2
         }
         height: paintedHeight
         text: i18n("Enable Power Management")
