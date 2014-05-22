@@ -65,28 +65,6 @@ kdbgstream& operator<<( kdbgstream& stream, const QKeyEvent& e ) {
 }
 #endif
 
-/**
- * Exactly the same as KLineEdit, except that ALL key events are swallowed.
- *
- * We need this to avoid infinite loop when sending events to the search widget
- */
-class KLineEditBlackKey : public KLineEdit {
-public:
-    KLineEditBlackKey( QWidget* parent )
-        : KLineEdit( parent )
-        {}
-
-    ~KLineEditBlackKey() {
-    }
-protected:
-    virtual void keyPressEvent( QKeyEvent* e ) {
-        KLineEdit::keyPressEvent( e );
-        e->accept();
-
-    }
-
-};
-
 KlipperPopup::KlipperPopup( History* history )
     : m_dirty( true ),
       m_textForEmptyHistory( i18n( "<empty clipboard>" ) ),
@@ -119,8 +97,6 @@ void KlipperPopup::slotAboutToShow() {
         if ( !m_filterWidget->text().isEmpty() ) {
             m_dirty = true;
             m_filterWidget->clear();
-            m_filterWidget->setVisible(false);
-            m_filterWidgetAction->setVisible(false);
         }
     }
     ensureClean();
@@ -139,11 +115,11 @@ void KlipperPopup::ensureClean() {
 void KlipperPopup::buildFromScratch() {
     addTitle(QIcon::fromTheme("klipper"), i18n("Klipper - Clipboard Tool"));
 
-    m_filterWidget = new KLineEditBlackKey(this);
+    m_filterWidget = new KLineEdit(this);
     m_filterWidget->setFocusPolicy( Qt::NoFocus );
+    m_filterWidget->setClickMessage(i18n("Search..."));
     m_filterWidgetAction = new QWidgetAction(this);
     m_filterWidgetAction->setDefaultWidget(m_filterWidget);
-    m_filterWidgetAction->setVisible(false);
     addAction(m_filterWidgetAction);
 
     addSeparator();
@@ -263,16 +239,7 @@ void KlipperPopup::keyPressEvent( QKeyEvent* e ) {
 #endif
         setActiveAction(actions().at(actions().indexOf(m_filterWidgetAction)));
         QString lastString = m_filterWidget->text();
-        m_filterWidgetAction->setVisible(true);
         QApplication::sendEvent(m_filterWidget, e);
-
-        if (m_filterWidget->text().isEmpty()) {
-            if (m_filterWidgetAction->isVisible())
-                m_filterWidget->setVisible(false);
-                m_filterWidgetAction->setVisible(false);
-        }
-        else if (!m_filterWidgetAction->isVisible() )
-            m_filterWidgetAction->setVisible(true);
 
         if (m_filterWidget->text() != lastString) {
             m_dirty = true;
