@@ -228,6 +228,7 @@ void ShellCorona::setShell(const QString &shell)
     d->shell = shell;
     Plasma::Package package = Plasma::PluginLoader::self()->loadPackage("Plasma/Shell");
     package.setPath(shell);
+    package.setAllowExternalPaths(true);
     setPackage(package);
 
     if (d->activityConsumer->serviceStatus() == KActivities::Consumer::Unknown) {
