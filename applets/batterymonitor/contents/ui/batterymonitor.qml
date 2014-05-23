@@ -112,7 +112,7 @@ Item {
         showRemainingTime: Plasmoid.configuration.showRemainingTime
         remainingTime: Number(pmSource.data["Battery"]["Remaining msec"])
 
-        pluggedIn: pmSource.data["AC Adapter"]["Plugged in"]
+        pluggedIn: pmSource.data["AC Adapter"] != undefined && pmSource.data["AC Adapter"]["Plugged in"]
 
         Component.onCompleted: {
             dialogItem.forceActiveFocus();

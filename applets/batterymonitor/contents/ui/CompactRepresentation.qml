@@ -27,8 +27,8 @@ import "plasmapackage:/code/logic.js" as Logic
 
 Item {
     id: root
-    Layout.minimumWidth: view.isConstrained() ? units.iconSizes.medium : 24 // NOTE: Keep in sync with systray
-    Layout.minimumHeight: view.isConstrained() ? units.iconSizes.medium * view.count : 24
+    Layout.minimumWidth: isConstrained() ? units.iconSizes.medium : 24 // NOTE: Keep in sync with systray
+    Layout.minimumHeight: isConstrained() ? units.iconSizes.medium * view.count : 24
 
     function isConstrained() {
         return (plasmoid.formFactor == PlasmaCore.Types.Vertical || plasmoid.formFactor == PlasmaCore.Types.Horizontal)
@@ -60,7 +60,7 @@ Item {
 
             property bool hasBattery: view.singleBattery ? batteries.count : model["Plugged in"]
             property int percent: view.singleBattery ? batteries.cumulativePercent : model["Percent"]
-            property bool pluggedIn: view.singleBattery ? pmSource.data["AC Adapter"]["Plugged in"] : pmSource.data["AC Adapter"]["Plugged in"] && model["Is Power Supply"]
+            property bool pluggedIn: view.singleBattery ? (pmSource.data["AC Adapter"] != undefined && pmSource.data["AC Adapter"]["Plugged in"]) : (pmSource.data["AC Adapter"] != undefined && pmSource.data["AC Adapter"]["Plugged in"] && model["Is Power Supply"])
 
             width: Math.min(root.height, root.width/view.count)
             height: width
