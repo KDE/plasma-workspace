@@ -53,46 +53,22 @@ Item {
         timeFormatCorrection(Qt.locale().timeFormat(Locale.ShortFormat))
     }
 
-    onWidthChanged: geotimer.start()
-    onHeightChanged: geotimer.start()
-
-    Connections {
-        target: plasmoid.configuration
-        onBoldTextChanged: geotimer.start()
-        onItalicTextChanged: geotimer.start()
-    }
-
-    Timer {
-        id: geotimer
-        interval: 4 // just to compress resize events of width and height; below 60fps
-        onTriggered: {
-            if (main.vertical) {
-                sizehelper.font.pixelSize = Math.max(theme.mSize(theme.smallestFont).height, Math.min(main.width/5, theme.mSize(theme.defaultFont).height * 2));
-            } else if (plasmoid.formFactor == PlasmaCore.Types.Horizontal) {
-                sizehelper.font.pixelSize = Math.round(main.height * 0.8);
-            } else {
-                sizehelper.font.pixelSize = Math.min(main.width/5, main.height);
-            }
-        }
-    }
-
     Components.Label  {
         id: timeLabel
         font {
             weight: plasmoid.configuration.boldText ? Font.Bold : Font.Normal
             italic: plasmoid.configuration.italicText
             pixelSize: sizehelper.font.pixelSize
+            pointSize: undefined // we need to unset pointSize otherwise it breaks the Text.Fit size mode
         }
-        width: Math.max(paintedWidth, timeLabel.paintedWidth)
-        height: paintedHeight
+        minimumPixelSize: theme.mSize(theme.smallestFont).height
+        fontSizeMode: Text.Fit
         text: Qt.formatTime(dataSource.data["Local"]["Time"], main.timeFormat);
         wrapMode: plasmoid.formFactor != PlasmaCore.Types.Horizontal ? Text.WordWrap : Text.NoWrap
-        horizontalAlignment: Text.AlignHCenter
+        horizontalAlignment: vertical ? Text.AlignHCenter : Text.AlignLeft // we want left align when horizontal to avoid re-aligning when seconds are visible
         verticalAlignment: Text.AlignVCenter
         anchors {
-            verticalCenter: parent.verticalCenter
-            left: parent.left
-            right: parent.right
+            fill: parent
             leftMargin: units.smallSpacing
             rightMargin: units.smallSpacing
         }
@@ -107,16 +83,23 @@ Item {
         }
     }
 
-    Components.Label {
+    Text {
         id: sizehelper
         font.weight: timeLabel.font.weight
         font.italic: timeLabel.font.italic
+        font.pixelSize: vertical ? theme.mSize(theme.defaultFont).height * 2 : 1024 // random "big enough" size - this is used as a max pixelSize by the fontSizeMode
+        minimumPixelSize: theme.mSize(theme.smallestFont).height
+
+        // with this property we want to get the font to fit into applet's height when in horizontal panel
+        // or applet's width when vertical - we scale the font to fit the height and then see how much
+        // is the paintedWidth and set that in the Layout properties. Same with vertical panels but width
+        // and paintedHeight instead
+        fontSizeMode: vertical ? Text.HorizontalFit : Text.VerticalFit
+
         wrapMode: plasmoid.formFactor != PlasmaCore.Types.Horizontal ? Text.WordWrap : Text.NoWrap
         visible: false
         anchors {
-            verticalCenter: parent.verticalCenter
-            left: parent.left
-            right: parent.right
+            fill: parent
             leftMargin: units.smallSpacing
             rightMargin: units.smallSpacing
         }
@@ -143,7 +126,7 @@ Item {
             timeFormatString = timeFormatString.replace(/.ss?/i, "");
         }
 
-        var st = Qt.formatTime(new Date(2000, 0, 1, 10, 0, 0), timeFormatString);
+        var st = Qt.formatTime(new Date(2000, 0, 1, 20, 0, 0), timeFormatString);
         if (main.showTimezone) {
             st += Qt.formatTime(dataSource.data["Local"]["Time"], " t");
         }
