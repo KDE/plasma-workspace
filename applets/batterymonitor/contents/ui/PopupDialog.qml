@@ -49,14 +49,13 @@ FocusScope {
 
     Column {
         id: batteryColumn
-        spacing: 4
+        spacing: Math.round(units.gridUnit / 4)
         width: parent.width
         anchors {
             left: parent.left
             right: parent.right
             top: plasmoid.location == PlasmaCore.Types.BottomEdge ? parent.top : undefined
             bottom: plasmoid.location == PlasmaCore.Types.BottomEdge ? undefined : parent.bottom
-            //bottomMargin: parent.height - childrenRect.height
         }
 
         Repeater {
@@ -69,7 +68,6 @@ FocusScope {
             KeyNavigation.backtab: pmSwitch
 
             function updateSelection(old,active) {
-                return;
                 itemAt(old).updateSelection();
                 itemAt(active).updateSelection();
             }
@@ -153,8 +151,8 @@ FocusScope {
             bottom: plasmoid.location == PlasmaCore.Types.BottomEdge ? settingsColumn.top : undefined
             left: parent.left
             right: parent.right
-            topMargin: 5
-            bottomMargin: 5
+            topMargin: Math.round(units.gridUnit / 4)
+            bottomMargin: anchors.topMargin
         }
     }
 }

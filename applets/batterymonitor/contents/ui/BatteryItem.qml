@@ -41,6 +41,11 @@ Item {
     property bool charging: model["State"] == "Charging" && model["Is Power Supply"]
     property int remainingTime
 
+    function updateSelection(oldIndex, newIndex) {
+        // no-op, since batteryItem doesn't use the focus
+        return;
+    }
+
     KCoreAddons.Formats {
         id: formats
     }
