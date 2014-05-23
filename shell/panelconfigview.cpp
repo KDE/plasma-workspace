@@ -46,9 +46,7 @@ PanelConfigView::PanelConfigView(Plasma::Containment *containment, PanelView *pa
 {
     m_deleteTimer.setSingleShot(true);
     m_deleteTimer.setInterval(2*60*1000);
-    connect(&m_deleteTimer, &QTimer::timeout, [=] () {
-        deleteLater();
-    });
+    connect(&m_deleteTimer, &QTimer::timeout, this, &PanelConfigView::deleteLater);
 
     m_visibilityMode = panelView->visibilityMode();
     panelView->setVisibilityMode(PanelView::WindowsGoBelow);
