@@ -52,6 +52,10 @@ public:
     PanelView::VisibilityMode visibilityMode() const;
     void setVisibilityMode(PanelView::VisibilityMode mode);
 
+protected:
+    void showEvent(QShowEvent *ev);
+    void hideEvent(QHideEvent *ev);
+
 public Q_SLOTS:
     void showAddWidgetDialog();
     void addPanelSpacer();
@@ -73,6 +77,7 @@ private:
     PanelView *m_panelView;
     PanelView::VisibilityMode m_visibilityMode;
     Plasma::Theme m_theme;
+    QTimer m_deleteTimer;
 };
 
 #endif // multiple inclusion guard

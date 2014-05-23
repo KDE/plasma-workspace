@@ -44,6 +44,12 @@ PanelConfigView::PanelConfigView(Plasma::Containment *containment, PanelView *pa
       m_containment(containment),
       m_panelView(panelView)
 {
+    m_deleteTimer.setSingleShot(true);
+    m_deleteTimer.setInterval(2*60*1000);
+    connect(&m_deleteTimer, &QTimer::timeout, [=] () {
+        deleteLater();
+    });
+
     m_visibilityMode = panelView->visibilityMode();
     panelView->setVisibilityMode(PanelView::WindowsGoBelow);
     setScreen(panelView->screen());
@@ -66,7 +72,7 @@ PanelConfigView::PanelConfigView(Plasma::Containment *containment, PanelView *pa
     connect(containment, &Plasma::Containment::formFactorChanged,
             this, &PanelConfigView::syncGeometry);
 
-     PanelShadows::self()->addWindow(this);
+    PanelShadows::self()->addWindow(this);
 }
 
 PanelConfigView::~PanelConfigView()
@@ -125,6 +131,36 @@ void PanelConfigView::syncGeometry()
         } else if (m_containment->location() == Plasma::Types::BottomEdge) {
             setPosition(screen()->geometry().left(), m_panelView->geometry().top() - height());
         }
+    }
+}
+
+void PanelConfigView::showEvent(QShowEvent *ev)
+{
+    QQuickWindow::showEvent(ev);
+
+    KWindowSystem::setType(winId(), NET::Dock);
+    setFlags(Qt::WindowFlags((flags() | Qt::FramelessWindowHint) & (~Qt::WindowDoesNotAcceptFocus)));
+    KWindowSystem::forceActiveWindow(winId());
+    KWindowEffects::enableBlurBehind(winId(), true);
+    updateContrast();
+
+    if (m_containment) {
+        m_containment->setUserConfiguring(true);
+    }
+
+    m_deleteTimer.stop();
+    m_panelView->setVisibilityMode(PanelView::WindowsGoBelow);
+    PanelShadows::self()->addWindow(this);
+}
+
+void PanelConfigView::hideEvent(QHideEvent *ev)
+{
+    QQuickWindow::hideEvent(ev);
+    m_deleteTimer.start();
+    m_panelView->setVisibilityMode(m_visibilityMode);
+
+    if (m_containment) {
+        m_containment->setUserConfiguring(false);
     }
 }
 

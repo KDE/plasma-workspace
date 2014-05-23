@@ -531,17 +531,21 @@ void PanelView::restore()
 
 void PanelView::showConfigurationInterface(Plasma::Applet *applet)
 {
-    if (m_panelConfigView) {
-        m_panelConfigView.data()->hide();
-        m_panelConfigView.data()->deleteLater();
-        return;
-    }
-
     if (!applet || !applet->containment()) {
         return;
     }
 
     Plasma::Containment *cont = qobject_cast<Plasma::Containment *>(applet);
+
+    if (m_panelConfigView && cont && cont->isContainment()) {
+        if (m_panelConfigView.data()->isVisible()) {
+            m_panelConfigView.data()->hide();
+        } else {
+            m_panelConfigView.data()->show();
+            KWindowSystem::setState(m_panelConfigView.data()->winId(), NET::SkipTaskbar | NET::SkipPager);
+        }
+        return;
+    }
 
     if (cont && cont->isContainment()) {
         m_panelConfigView = new PanelConfigView(cont, this);
