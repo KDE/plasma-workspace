@@ -124,7 +124,7 @@ Item {
             anchors {
                 top: batteryNameLabel.top
                 left: batteryNameLabel.right
-                leftMargin: units.gridUnit / 3
+                leftMargin: Math.round(units.gridUnit / 3)
             }
             text: Logic.stringForBatteryState(model)
             height: implicitHeight
@@ -138,7 +138,7 @@ Item {
                 bottom: parent.bottom
                 left: batteryNameLabel.left
                 right: parent.right
-                rightMargin: units.gridUnit * 2.5
+                rightMargin: Math.round(units.gridUnit * 2.5)
             }
             minimumValue: 0
             maximumValue: 100
@@ -174,7 +174,7 @@ Item {
         Row {
             id: detailsRow
             width: parent.width
-            spacing: units.gridUnit / 4
+            spacing: Math.round(units.gridUnit / 4)
 
             Column {
                 id: labelsColumn

@@ -62,7 +62,7 @@ FocusScope {
             top: brightnessLabel.bottom
             left: brightnessLabel.left
             right: parent.right
-            rightMargin: units.gridUnit * 2.5
+            rightMargin: Math.round(units.gridUnit * 2.5)
         }
         minimumValue: 0
         maximumValue: 100
