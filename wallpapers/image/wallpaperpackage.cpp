@@ -115,7 +115,7 @@ QSize WallpaperPackage::resSize(const QString &str) const
 void WallpaperPackage::findBestPaper(Plasma::Package *package)
 {
     //FIXME
-    qWarning()<<"Why this affects entryList?"<<package->isValid();
+    //qWarning()<<"Why this affects entryList?"<<package->isValid();
     QStringList images = package->entryList("images");
     if (images.empty()) {
         return;

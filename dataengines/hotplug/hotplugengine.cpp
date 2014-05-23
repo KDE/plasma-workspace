@@ -117,7 +117,7 @@ void HotplugEngine::findPredicates()
             files.prepend(it.next());
         }
     }
-    qDebug() << files;
+    //qDebug() << files;
     foreach (const QString &path, files) {
         KDesktopFile cfg(path);
         const QString string_predicate = cfg.desktopGroup().readEntry("X-KDE-Solid-Predicate");
@@ -237,7 +237,7 @@ void HotplugEngine::onDeviceAdded(Solid::Device &device, bool added)
         QVariantList actions;
         foreach(const QString& desktop, interestingDesktopFiles) {
             const QString actionUrl = QStandardPaths::locate(QStandardPaths::GenericDataLocation, "solid/actions/" + desktop);
-	    qDebug() << actionUrl;
+	    //qDebug() << actionUrl;
             QList<KServiceAction> services = KDesktopFileActions::userDefinedServices(actionUrl, true);
             if (!services.isEmpty()) {
                 Plasma::DataEngine::Data action;

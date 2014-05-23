@@ -84,7 +84,7 @@ void StatusNotifierItemEngine::serviceChange(const QString& name, const QString&
 
 void StatusNotifierItemEngine::registerWatcher(const QString& service)
 {
-    qDebug()<<"service appeared"<<service;
+    //qDebug()<<"service appeared"<<service;
     if (service == s_watcherServiceName) {
         delete m_statusNotifierWatcher;
 
