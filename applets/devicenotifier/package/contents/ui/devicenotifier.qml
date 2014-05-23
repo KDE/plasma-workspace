@@ -132,14 +132,11 @@ Item {
 
             if (all == true) {
                 devicesType = "all";
-                print("ST2P all");
                 return "";
             } else if (removable == true) {
-                print("ST2P rem true");
                 devicesType = "removable";
                 return "true";
             } else {
-                print("ST2P nonRemovable");
                 devicesType = "nonRemovable";
                 return "false";
             }
