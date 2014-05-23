@@ -284,7 +284,7 @@ void Host::slotTaskStatusChanged()
     Task* task = qobject_cast<Task*>(sender());
 
     if (task) {
-        qCDebug(SYSTEMTRAY) << "ST2 emit taskStatusChanged(task);";
+        //qCDebug(SYSTEMTRAY) << "ST2 emit taskStatusChanged(task);";
         taskStatusChanged(task);
     } else {
         qCDebug(SYSTEMTRAY) << "ST2 changed, but invalid cast";
@@ -299,13 +299,11 @@ QAbstractItemModel* Host::hiddenTasks()
 QAbstractItemModel* Host::shownTasks()
 {
     return d->shownTasksModel;
-
 }
 
 QAbstractItemModel* Host::allTasks()
 {
     return d->allTasksModel;
-
 }
 
 QAbstractItemModel* Host::availablePlasmoids()
