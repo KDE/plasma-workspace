@@ -50,8 +50,6 @@ FreeSpaceNotifier::FreeSpaceNotifier( QObject* parent )
 
     connect( &timer, SIGNAL(timeout()), SLOT(checkFreeDiskSpace()) );
     timer.start( 1000 * 60 /* 1 minute */ );
-
-    QTimer::singleShot(0, this, SLOT(checkFreeDiskSpace()));
 }
 
 FreeSpaceNotifier::~FreeSpaceNotifier()
