@@ -26,6 +26,7 @@ Item {
 
     Layout.minimumWidth: tabBar.implicitWidth
     Layout.minimumHeight: tabBar.implicitHeight
+    Plasmoid.preferredRepresentation: Plasmoid.fullRepresentation
 
     PlasmaCore.DataSource {
         id: activitySource
