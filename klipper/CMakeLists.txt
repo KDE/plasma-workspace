@@ -1,3 +1,5 @@
+set(KLIPPER_VERSION_STRING ${PLASMAWORKSPACE_VERSION_STRING})
+
 set(libklipper_common_SRCS
     klipper.cpp
     urlgrabber.cpp

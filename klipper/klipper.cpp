@@ -46,7 +46,6 @@
 #include "configdialog.h"
 #include "klippersettings.h"
 #include "urlgrabber.h"
-#include "version.h"
 #include "history.h"
 #include "historyitem.h"
 #include "historystringitem.h"
@@ -344,7 +343,7 @@ void Klipper::loadSettings()
 void Klipper::saveSettings() const
 {
     m_myURLGrabber->saveSettings();
-    KlipperSettings::self()->setVersion(klipper_version);
+    KlipperSettings::self()->setVersion(QStringLiteral(KLIPPER_VERSION_STRING));
     KlipperSettings::self()->writeConfig();
 
     // other settings should be saved automatically by KConfigDialog
@@ -441,7 +440,7 @@ void Klipper::saveHistory(bool empty) {
     }
     QByteArray data;
     QDataStream history_stream( &data, QIODevice::WriteOnly );
-    history_stream << klipper_version; // const char*
+    history_stream << KLIPPER_VERSION_STRING; // const char*
 
     if (!empty) {
         const HistoryItem *item = history()->first();
@@ -850,7 +849,7 @@ static const char * const description =
 void Klipper::createAboutData()
 {
   m_about_data = new K4AboutData("klipper", 0, ki18n("Klipper"),
-    klipper_version, ki18n(description), K4AboutData::License_GPL,
+    KLIPPER_VERSION_STRING, ki18n(description), K4AboutData::License_GPL,
 		       ki18n("(c) 1998, Andrew Stanley-Jones\n"
 		       "1998-2002, Carsten Pfeiffer\n"
 		       "2001, Patrick Dubroy"));
