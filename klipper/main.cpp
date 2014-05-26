@@ -21,28 +21,36 @@
 #include <stdlib.h>
 
 #include <kdemacros.h>
-#include <KLocale>
+#include <KLocalizedString>
 #include <KCmdLineArgs>
 #include <k4aboutdata.h>
-#include <KUniqueApplication>
 #include <KConfigDialogManager>
+#include <KDBusService>
+
+#include <QApplication>
+#include <QSessionManager>
 
 #include "tray.h"
 #include "klipper.h"
 
 extern "C" int Q_DECL_EXPORT kdemain(int argc, char *argv[])
 {
+  QCoreApplication::setApplicationName(i18n("Klipper"));
+  QCoreApplication::setApplicationVersion(QStringLiteral(KLIPPER_VERSION_STRING));
+  QCoreApplication::setOrganizationDomain(QStringLiteral("kde.org"));
+  QApplication::setApplicationDisplayName(i18n("KDE cut & paste history utility"));
   Klipper::createAboutData();
   KCmdLineArgs::init( argc, argv, Klipper::aboutData());
-  KUniqueApplication::addCmdLineOptions();
 
-  if (!KUniqueApplication::start()) {
-       fprintf(stderr, "Klipper is already running! Check it in the system tray in the panel.\n");
-       exit(0);
-  }
-  KUniqueApplication app;
-  app.disableSessionManagement();
+  QApplication app(KCmdLineArgs::qtArgc(), KCmdLineArgs::qtArgv());
+  auto disableSessionManagement = [](QSessionManager &sm) {
+      sm.setRestartHint(QSessionManager::RestartNever);
+  };
+  QObject::connect(&app, &QGuiApplication::commitDataRequest, disableSessionManagement);
+  QObject::connect(&app, &QGuiApplication::saveStateRequest, disableSessionManagement);
   app.setQuitOnLastWindowClosed( false );
+
+  KDBusService service(KDBusService::Unique);
 
   // make KConfigDialog "know" when our actions page is changed
   KConfigDialogManager::changedMap()->insert("ActionsTreeWidget", SIGNAL(changed()));
