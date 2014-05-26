@@ -17,15 +17,15 @@ set(libklipper_common_SRCS
     clipcommandprocess.cpp
 )
 
-# find_package(Prison QUIET CONFIG)
-# set_package_properties(Prison PROPERTIES DESCRIPTION "Prison library"
-#                        URL "http://projects.kde.org/prison"
-#                        TYPE OPTIONAL
-#                        PURPOSE "Needed to create mobile barcodes from clipboard data"
-#                       )
-# if (PRISON_FOUND)
-#     include_directories(${PRISON_INCLUDE_DIR})
-# endif ()
+find_package(Prison "1.2.0" QUIET CONFIG)
+set_package_properties(Prison PROPERTIES DESCRIPTION "Prison library"
+                       URL "http://projects.kde.org/prison"
+                       TYPE OPTIONAL
+                       PURPOSE "Needed to create mobile barcodes from clipboard data"
+                      )
+if (PRISON_FOUND)
+    include_directories(${PRISON_INCLUDE_DIR})
+endif ()
 
 set(HAVE_PRISON ${PRISON_FOUND})
 configure_file(config-klipper.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-klipper.h )
@@ -53,9 +53,9 @@ target_link_libraries(kdeinit_klipper
 if (X11_Xfixes_FOUND)
   target_link_libraries(kdeinit_klipper ${X11_Xfixes_LIB})
 endif ()
-# if (PRISON_FOUND)
-#   target_link_libraries(kdeinit_klipper ${PRISON_LIBRARIES})
-# endif ()
+if (PRISON_FOUND)
+  target_link_libraries(kdeinit_klipper ${PRISON_LIBRARIES})
+endif ()
 
 install(TARGETS kdeinit_klipper ${INSTALL_TARGETS_DEFAULT_ARGS})
 install(TARGETS klipper         ${INSTALL_TARGETS_DEFAULT_ARGS})
