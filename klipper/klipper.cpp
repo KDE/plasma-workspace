@@ -872,8 +872,12 @@ void Klipper::createAboutData()
                       "l.lunak@kde.org");
 
   m_about_data->addAuthor( ki18n("Esben Mose Hansen"),
-                      ki18n("Maintainer"),
+                      ki18n("Previous Maintainer"),
                       "kde@mosehansen.dk");
+
+  m_about_data->addAuthor( ki18n("Martin Gräßlin"),
+                      ki18n("Maintainer"),
+                      "mgraesslin@kde.org");
 }
 
 void Klipper::destroyAboutData()
