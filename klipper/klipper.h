@@ -21,6 +21,8 @@
 #ifndef KLIPPER_H
 #define KLIPPER_H
 
+#include "config-klipper.h"
+
 #include <QTime>
 #include <QTimer>
 #include <QClipboard>

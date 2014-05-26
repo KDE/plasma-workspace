@@ -21,10 +21,11 @@ set(libklipper_common_SRCS
 #                        PURPOSE "Needed to create mobile barcodes from clipboard data"
 #                       )
 # if (PRISON_FOUND)
-#     add_definitions(-DHAVE_PRISON)
 #     include_directories(${PRISON_INCLUDE_DIR})
 # endif ()
 
+set(HAVE_PRISON ${PRISON_FOUND})
+configure_file(config-klipper.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-klipper.h )
 
 kde4_add_app_icon(libklipper_common_SRCS "${KDE4_ICON_INSTALL_DIR}/oxygen/*/apps/klipper.png")
 kde4_add_ui_files(libklipper_common_SRCS generalconfig.ui actionsconfig.ui editactiondialog.ui)
