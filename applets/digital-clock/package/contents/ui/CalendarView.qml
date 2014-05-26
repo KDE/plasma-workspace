@@ -207,39 +207,6 @@ Item {
             return false;
         }
 
-        PlasmaExtras.Heading {
-            id: monthHeading
-
-            anchors {
-                top: parent.top
-                left: monthView.left
-                right: monthView.right
-            }
-
-            level: 1
-            text: cal.isCurrentYear(monthView.startDate) ?  monthView.selectedMonth :  monthView.selectedMonth + ", " + monthView.selectedYear
-            elide: Text.ElideRight
-            Loader {
-                id: menuLoader
-                property QtObject monthCalendar: monthView.calendar
-            }
-            MouseArea {
-                id: monthMouse
-                width: monthHeading.paintedWidth
-                anchors {
-                    left: parent.left
-                    top: parent.top
-                    bottom: parent.bottom
-                }
-                onClicked: {
-                    if (menuLoader.source == "") {
-                        menuLoader.source = "MonthMenu.qml"
-                    }
-                    menuLoader.item.open(0, height);
-                }
-            }
-        }
-
         PlasmaCalendar.MonthView {
             id: monthView
             borderOpacity: 0.25

@@ -37,43 +37,6 @@ Item {
         Layout.minimumWidth: units.gridUnit * 20
         Layout.minimumHeight: units.gridUnit * 20
 
-        PlasmaExtras.Heading {
-            id: monthHeading
-
-            anchors {
-                top: parent.top
-                left: parent.left
-                right: parent.right
-            }
-
-            level: 1
-            text: isCurrentYear(calendar.startDate) ?  calendar.selectedMonth :  calendar.selectedMonth + ", " + calendar.selectedYear
-            elide: Text.ElideRight
-
-            function isCurrentYear(date) {
-                var d = new Date();
-                if (d.getFullYear() == date.getFullYear()) {
-                    return true;
-                }
-                return false;
-            }
-
-            MonthMenu {
-                id: monthMenu
-                property QtObject monthCalendar: calendar.calendar
-            }
-
-            MouseArea {
-                id: monthMouse
-                anchors {
-                    fill: parent
-                }
-                onClicked: {
-                    monthMenu.open(0, height)
-                }
-            }
-        }
-
         MonthView {
             id: calendar
 
