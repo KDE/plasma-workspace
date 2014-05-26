@@ -43,6 +43,16 @@ Item {
 
     property bool debug: false
 
+    property bool isExpanded: plasmoid.expanded
+
+    onIsExpandedChanged: {
+        if (!isExpanded) {
+            // clear all the selections when the plasmoid is hiding
+            monthView.date = null;
+            agenda.day = null;
+        }
+    }
+
     Item {
         id: agenda
         property QtObject day
@@ -233,6 +243,7 @@ Item {
         PlasmaCalendar.MonthView {
             id: monthView
             borderOpacity: 0.25
+            today: dataSource.data["Local"]["Date"]
             anchors {
                 top: monthHeading.bottom
                 left: parent.left
