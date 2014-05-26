@@ -108,7 +108,7 @@ KQuickControlsAddonsComponents.MouseEventListener {
     onHeightChanged: updatePlasmoidGeometry()
 
     function updatePlasmoidGeometry() {
-        if (modelData.taskItem != undefined) {
+        if (modelData && modelData.taskItem != undefined) {
             var _size = Math.min(taskItemContainer.width, taskItemContainer.height);
             var _m = (taskItemContainer.height - _size) / 2
             modelData.taskItem.anchors.verticalCenter = taskItemContainer.verticalCenter;
@@ -133,7 +133,7 @@ KQuickControlsAddonsComponents.MouseEventListener {
     Component.onCompleted: {
         if (taskType == SystemTray.Task.TypeStatusItem) {
             sniLoader.source = "StatusNotifierItem.qml";
-        } else if (modelData.taskItem != undefined) {
+        } else if (modelData && modelData.taskItem != undefined) {
             sniLoader.source = "PlasmoidItem.qml";
             modelData.taskItem.parent = taskItemContainer;
             modelData.taskItem.z = -1;
