@@ -61,6 +61,7 @@ Q_SIGNALS:
     void fillScreenChanged();
 
 private:
+    void coronaPackageChanged(const Plasma::Package &package);
     void ensureStayBehind();
     virtual void moveEvent(QMoveEvent* ev);
 

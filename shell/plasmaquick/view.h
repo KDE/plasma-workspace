@@ -103,9 +103,6 @@ protected Q_SLOTS:
      */
     virtual void showConfigurationInterface(Plasma::Applet *applet);
 
-private Q_SLOTS:
-    void coronaPackageChanged(const Plasma::Package &package);
-
 Q_SIGNALS:
     /**
      * emitted when the location is changed

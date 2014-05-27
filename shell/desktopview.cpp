@@ -44,6 +44,9 @@ DesktopView::DesktopView(ShellCorona *corona, QScreen *screen)
 
     //For some reason, if I connect the method directly it doesn't get called, I think it's for the lack of argument
     connect(this, &QWindow::screenChanged, this, [=](QScreen*) { adaptToScreen(); ensureStayBehind(); });
+
+    QObject::connect(corona, &Plasma::Corona::packageChanged,
+                     this, &DesktopView::coronaPackageChanged);
 }
 
 DesktopView::~DesktopView()
@@ -199,6 +202,12 @@ void DesktopView::showConfigurationInterface(Plasma::Applet *applet)
     }
     m_configView.data()->init();
     m_configView.data()->show();
+}
+
+void DesktopView::coronaPackageChanged(const Plasma::Package &package)
+{
+    setContainment(0);
+    setSource(QUrl::fromLocalFile(package.filePath("views", "Desktop.qml")));
 }
 
 #include "moc_desktopview.cpp"
