@@ -38,75 +38,90 @@ MouseArea {
         imagePath: "widgets/line"
     }
 
-    PlasmaComponents.Label {
-        id: header
-        text: filterModel.count>0 ? i18n("Available Devices") : i18n("No Devices Available")
-        anchors { top: parent.top; topMargin: 3; left: parent.left; right: parent.right }
-    }
+    ColumnLayout {
+        anchors.fill: parent
 
-    PlasmaExtras.ScrollArea {
-        anchors {
-            top : header.bottom
-            topMargin: 10
-            bottom: statusBarSeparator.top
-            left: parent.left
-            right: parent.right
+        PlasmaComponents.Label {
+            id: header
+            text: filterModel.count>0 ? i18n("Available Devices") : i18n("No Devices Available")
+            Layout.fillWidth: true
         }
 
-        ListView {
-            id: notifierDialog
-            focus: true
-            boundsBehavior: Flickable.StopAtBounds
+        PlasmaExtras.ScrollArea {
+            Layout.fillWidth: true
+            Layout.fillHeight: true
 
-            model: filterModel
+            ListView {
+                id: notifierDialog
+                focus: true
+                boundsBehavior: Flickable.StopAtBounds
 
-            property int currentExpanded: -1
-            property bool itemClicked: true
-            delegate: deviceItem
-            highlight: PlasmaComponents.Highlight{
+                model: filterModel
 
-            }
+                property int currentExpanded: -1
+                property bool itemClicked: true
+                delegate: deviceItem
+                highlight: PlasmaComponents.Highlight{
 
-            //this is needed to make SectionScroller actually work
-            //acceptable since one doesn't have a billion of devices
-            cacheBuffer: 1000
-
-            onCountChanged: {
-                if (count == 0) {
-                    passiveTimer.restart()
-                } else {
-                    passiveTimer.stop()
-                    plasmoid.status = PlasmaCore.Types.ActiveStatus
                 }
-            }
 
-            section {
-                property: "Type Description"
-                delegate: Item {
-                    height: childrenRect.height
-                    width: notifierDialog.width
-                    PlasmaCore.SvgItem {
-                        visible: parent.y > 0
-                        svg: lineSvg
-                        elementId: "horizontal-line"
-                        anchors {
-                            left: parent.left
-                            right: parent.right
+                //this is needed to make SectionScroller actually work
+                //acceptable since one doesn't have a billion of devices
+                cacheBuffer: 1000
+
+                onCountChanged: {
+                    if (count == 0) {
+                        passiveTimer.restart()
+                    } else {
+                        passiveTimer.stop()
+                        plasmoid.status = PlasmaCore.Types.ActiveStatus
+                    }
+                }
+
+                section {
+                    property: "Type Description"
+                    delegate: Item {
+                        height: childrenRect.height
+                        width: notifierDialog.width
+                        PlasmaCore.SvgItem {
+                            visible: parent.y > 0
+                            svg: lineSvg
+                            elementId: "horizontal-line"
+                            anchors {
+                                left: parent.left
+                                right: parent.right
+                            }
+                            height: lineSvg.elementSize("horizontal-line").height
                         }
-                        height: lineSvg.elementSize("horizontal-line").height
-                    }
-                    PlasmaComponents.Label {
-                        x: 8
-                        y: 8
-                        enabled: false
-                        text: section
-                        color: theme.textColor
+                        PlasmaComponents.Label {
+                            x: 8
+                            y: 8
+                            enabled: false
+                            text: section
+                            color: theme.textColor
+                        }
                     }
                 }
             }
         }
 
+        PlasmaCore.SvgItem {
+            id: statusBarSeparator
+            Layout.fillWidth: true
+            svg: lineSvg
+            elementId: "horizontal-line"
+            height: lineSvg.elementSize("horizontal-line").height
+
+            visible: statusBar.height>0
+        }
+
+        StatusBar {
+            id: statusBar
+            Layout.fillWidth: true
+        }
     }
+
+
 
     Component {
         id: deviceItem
@@ -161,32 +176,6 @@ MouseArea {
                 }
             }
             Behavior on height { NumberAnimation { duration: units.shortDuration * 3 } }
-        }
-    }
-
-    PlasmaCore.SvgItem {
-        id: statusBarSeparator
-        svg: lineSvg
-        elementId: "horizontal-line"
-        height: lineSvg.elementSize("horizontal-line").height
-        anchors {
-            bottom: statusBar.top
-            bottomMargin: statusBar.visible ? 3:0
-            left: parent.left
-            right: parent.right
-        }
-        visible: statusBar.height>0
-    }
-
-    StatusBar {
-        id: statusBar
-        anchors {
-            left: parent.left
-            leftMargin: 5
-            right: parent.right
-            rightMargin: 5
-            bottom: parent.bottom
-            bottomMargin: 5
         }
     }
 } // MouseArea
