@@ -228,9 +228,10 @@ void View::querySingleRunner(const QString &runnerName, const QString &term)
 
 void View::switchUser()
 {
-    //vHanda will fix this or he will pay beers at Akademy to at least all the plasma team
-    //And will invite afiestas for dinner in the japanese place.
-    return;
+    setVisible(true);
+
+    m_qmlObj->rootObject()->setProperty("runner", "desktopsessions");
+    m_qmlObj->rootObject()->setProperty("query", "SESSIONS");
 }
 
 void View::initializeStartupNotification()
