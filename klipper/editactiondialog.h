@@ -21,7 +21,7 @@
 #ifndef EDIT_ACTION_DIALOG_H
 #define EDIT_ACTION_DIALOG_H
 
-#include <KDialog>
+#include <QDialog>
 
 namespace Ui
 {
@@ -31,7 +31,7 @@ namespace Ui
 class ClipAction;
 class ActionDetailModel;
 
-class EditActionDialog : public KDialog
+class EditActionDialog : public QDialog
 {
     Q_OBJECT
 public:
@@ -47,6 +47,7 @@ private Q_SLOTS:
     void onAddCommand();
     void onRemoveCommand();
     void onSelectionChanged();
+    void slotAccepted();
 //    void onItemChanged( QTreeWidgetItem*, int );
 
 private:
@@ -61,8 +62,6 @@ private:
      * Saves a values from widgets to action
      */
     void saveAction();
-
-    virtual void slotButtonClicked( int button );
 
 private:
     Ui::EditActionDialog* m_ui;

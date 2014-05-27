@@ -260,17 +260,22 @@ void ActionsWidget::onDeleteAction()
 
 void ActionsWidget::onAdvanced()
 {
-    KDialog dlg(this);
+    QDialog dlg(this);
     dlg.setModal(true);
-    dlg.setCaption( i18n("Advanced Settings") );
-    dlg.setButtons( KDialog::Ok | KDialog::Cancel );
+    dlg.setWindowTitle( i18n("Advanced Settings") );
+    QDialogButtonBox *buttons = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, &dlg);
+    buttons->button(QDialogButtonBox::Ok)->setShortcut(Qt::CTRL | Qt::Key_Return);
+    connect(buttons, &QDialogButtonBox::accepted, &dlg, &QDialog::accept);
+    connect(buttons, &QDialogButtonBox::rejected, &dlg, &QDialog::reject);
 
     AdvancedWidget *widget = new AdvancedWidget(&dlg);
     widget->setWMClasses( m_exclWMClasses );
 
-    dlg.setMainWidget(widget);
+    QVBoxLayout *layout = new QVBoxLayout(&dlg);
+    layout->addWidget(widget);
+    layout->addWidget(buttons);
 
-    if ( dlg.exec() == KDialog::Accepted ) {
+    if ( dlg.exec() == QDialog::Accepted ) {
         m_exclWMClasses = widget->wmClasses();
     }
 }

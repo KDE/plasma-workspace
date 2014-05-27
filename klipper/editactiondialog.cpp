@@ -22,9 +22,12 @@
 
 #include <QItemDelegate>
 #include <QComboBox>
+#include <QDialogButtonBox>
 
 #include <KDebug>
 #include <KIconLoader>
+#include <kwindowconfig.h>
+#include <KWindowConfig>
 
 #include "urlgrabber.h"
 #include "ui_editactiondialog.h"
@@ -259,10 +262,13 @@ void ActionDetailModel::removeCommand(const QModelIndex& index) {
 }
 
 EditActionDialog::EditActionDialog(QWidget* parent)
-    : KDialog(parent)
+    : QDialog(parent)
 {
-    setCaption(i18n("Action Properties"));
-    setButtons(KDialog::Ok | KDialog::Cancel);
+    setWindowTitle(i18n("Action Properties"));
+    QDialogButtonBox *buttons = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
+    buttons->button(QDialogButtonBox::Ok)->setShortcut(Qt::CTRL | Qt::Key_Return);
+    connect(buttons, &QDialogButtonBox::accepted, this, &EditActionDialog::slotAccepted);
+    connect(buttons, &QDialogButtonBox::rejected, this, &QDialog::reject);
 
     QWidget* dlgWidget = new QWidget(this);
     m_ui = new Ui::EditActionDialog;
@@ -278,13 +284,16 @@ EditActionDialog::EditActionDialog(QWidget* parent)
     // which is the font height+struts.
     m_ui->twCommandList->verticalHeader()->setDefaultSectionSize(m_ui->twCommandList->verticalHeader()->minimumSectionSize());
     m_ui->twCommandList->horizontalHeader()->setDefaultAlignment(Qt::AlignLeft);
-    setMainWidget(dlgWidget);
+
+    QVBoxLayout *layout = new QVBoxLayout(this);
+    layout->addWidget(dlgWidget);
+    layout->addWidget(buttons);
 
     connect(m_ui->pbAddCommand, SIGNAL(clicked()), SLOT(onAddCommand()) );
     connect(m_ui->pbRemoveCommand, SIGNAL(clicked()), SLOT(onRemoveCommand()) );
 
     const KConfigGroup grp = KSharedConfig::openConfig()->group("EditActionDialog");
-    restoreDialogSize(grp);
+    KWindowConfig::restoreWindowSize(windowHandle(), grp);
     QByteArray hdrState = grp.readEntry("ColumnState", QByteArray());
     if (!hdrState.isEmpty()) {
         kDebug() << "Restoring column state";
@@ -347,19 +356,16 @@ void EditActionDialog::saveAction()
     }
 }
 
-void EditActionDialog::slotButtonClicked( int button )
+void EditActionDialog::slotAccepted()
 {
-    if ( button == KDialog::Ok ) {
-        saveAction();
+    saveAction();
 
-        kDebug() << "Saving dialogue state";
-        KConfigGroup grp = KSharedConfig::openConfig()->group("EditActionDialog");
-        saveDialogSize(grp);
-        grp.writeEntry("ColumnState",
-                       m_ui->twCommandList->horizontalHeader()->saveState().toBase64());
-    }
-
-    KDialog::slotButtonClicked( button );
+    kDebug() << "Saving dialogue state";
+    KConfigGroup grp = KSharedConfig::openConfig()->group("EditActionDialog");
+    KWindowConfig::saveWindowSize(windowHandle(), grp);
+    grp.writeEntry("ColumnState",
+                    m_ui->twCommandList->horizontalHeader()->saveState().toBase64());
+    accept();
 }
 
 void EditActionDialog::onAddCommand()

@@ -27,7 +27,6 @@
 #include <QX11Info>
 #include <QMenu>
 
-#include <KDialog>
 #include <KLocalizedString>
 #include <KService>
 #include <KDebug>

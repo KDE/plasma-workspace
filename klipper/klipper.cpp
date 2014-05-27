@@ -25,6 +25,7 @@
 
 #include <zlib.h>
 
+#include <QDialog>
 #include <QMenu>
 #include <QDBusConnection>
 #include <QSaveFile>
@@ -35,7 +36,6 @@
 #include <KSessionManager>
 #include <KStandardDirs>
 #include <KDebug>
-#include <KDialog>
 #include <KGlobalSettings>
 #include <KActionCollection>
 #include <KToggleAction>
@@ -849,10 +849,13 @@ void Klipper::slotEditData()
 {
     const HistoryStringItem* item = dynamic_cast<const HistoryStringItem*>(m_history->first());
 
-    KDialog dlg;
+    QDialog dlg;
     dlg.setModal( true );
-    dlg.setCaption( i18n("Edit Contents") );
-    dlg.setButtons( KDialog::Ok | KDialog::Cancel );
+    dlg.setWindowTitle( i18n("Edit Contents") );
+    QDialogButtonBox *buttons = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, &dlg);
+    buttons->button(QDialogButtonBox::Ok)->setShortcut(Qt::CTRL | Qt::Key_Return);
+    connect(buttons, &QDialogButtonBox::accepted, &dlg, &QDialog::accept);
+    connect(buttons, &QDialogButtonBox::rejected, &dlg, &QDialog::reject);
 
     KTextEdit *edit = new KTextEdit( &dlg );
     if (item) {
@@ -860,10 +863,12 @@ void Klipper::slotEditData()
     }
     edit->setFocus();
     edit->setMinimumSize( 300, 40 );
-    dlg.setMainWidget( edit );
+    QVBoxLayout *layout = new QVBoxLayout(&dlg);
+    layout->addWidget(edit);
+    layout->addWidget(buttons);
     dlg.adjustSize();
 
-    if ( dlg.exec() == KDialog::Accepted ) {
+    if ( dlg.exec() == QDialog::Accepted ) {
         QString text = edit->toPlainText();
         if (item) {
             m_history->remove( item );
