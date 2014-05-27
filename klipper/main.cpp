@@ -22,12 +22,12 @@
 
 #include <kdemacros.h>
 #include <KLocalizedString>
-#include <KCmdLineArgs>
 #include <k4aboutdata.h>
 #include <KConfigDialogManager>
 #include <KDBusService>
 
 #include <QApplication>
+#include <QCommandLineParser>
 #include <QSessionManager>
 
 #include "tray.h"
@@ -40,15 +40,20 @@ extern "C" int Q_DECL_EXPORT kdemain(int argc, char *argv[])
   QCoreApplication::setOrganizationDomain(QStringLiteral("kde.org"));
   QApplication::setApplicationDisplayName(i18n("KDE cut & paste history utility"));
   Klipper::createAboutData();
-  KCmdLineArgs::init( argc, argv, Klipper::aboutData());
 
-  QApplication app(KCmdLineArgs::qtArgc(), KCmdLineArgs::qtArgv());
+  QApplication app(argc, argv);
   auto disableSessionManagement = [](QSessionManager &sm) {
       sm.setRestartHint(QSessionManager::RestartNever);
   };
   QObject::connect(&app, &QGuiApplication::commitDataRequest, disableSessionManagement);
   QObject::connect(&app, &QGuiApplication::saveStateRequest, disableSessionManagement);
   app.setQuitOnLastWindowClosed( false );
+
+  QCommandLineParser parser;
+  parser.addHelpOption();
+  parser.addVersionOption();
+  parser.setApplicationDescription(QApplication::applicationDisplayName());
+  parser.process(app);
 
   KDBusService service(KDBusService::Unique);
 
