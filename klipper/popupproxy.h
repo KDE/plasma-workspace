@@ -24,7 +24,7 @@
 
 #include "history.h"
 
-class KMenu;
+class QMenu;
 
 class HistoryItem;
 class KlipperPopup;
@@ -79,7 +79,7 @@ private:
     void deleteMoreMenus();
 
 private:
-    KMenu* m_proxy_for_menu;
+    QMenu* m_proxy_for_menu;
     QByteArray m_spill_uuid;
     QRegExp m_filter;
     int m_menu_height;

@@ -30,7 +30,6 @@ class HistoryItem;
 class QTimer;
 
 class KConfig;
-class KMenu;
 class QMenu;
 class QAction;
 
@@ -85,7 +84,7 @@ private:
 
   // holds mappings of menu action IDs to action commands (action+cmd index in it)
   QHash<QString, QPair<ClipAction*, int> > m_myCommandMapper;
-  KMenu* m_myMenu;
+  QMenu* m_myMenu;
   QTimer* m_myPopupKillTimer;
   int m_myPopupKillTimeout;
   bool m_stripWhiteSpace;

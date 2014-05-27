@@ -24,7 +24,6 @@
 #include <QImage>
 #include <QStyleOption>
 
-#include <KMenu>
 #include <KLocalizedString>
 #include <KDebug>
 
@@ -53,13 +52,13 @@ void PopupProxy::slotHistoryChanged() {
 }
 
 void PopupProxy::deleteMoreMenus() {
-    const KMenu* myParent = parent();
+    const QMenu* myParent = parent();
     if ( myParent != m_proxy_for_menu ) {
-        KMenu* delme = m_proxy_for_menu;
-        m_proxy_for_menu = static_cast<KMenu*>( m_proxy_for_menu->parent() );
+        QMenu* delme = m_proxy_for_menu;
+        m_proxy_for_menu = static_cast<QMenu*>( m_proxy_for_menu->parent() );
         while ( m_proxy_for_menu != myParent ) {
             delme = m_proxy_for_menu;
-            m_proxy_for_menu = static_cast<KMenu*>( m_proxy_for_menu->parent() );
+            m_proxy_for_menu = static_cast<QMenu*>( m_proxy_for_menu->parent() );
         }
         // We are called probably from within the menus event-handler (triggered=>slotMoveToTop=>changed=>slotHistoryChanged=>deleteMoreMenus)
         // what can result in a crash if we just delete the menu here (#155196 and #165154) So, delay the delete.
@@ -168,7 +167,7 @@ int PopupProxy::insertFromSpill( int index ) {
     // If there is more items in the history, insert a new "More..." menu and
     // make *this a proxy for that menu ('s content).
     if (history->first() && m_spill_uuid != history->first()->uuid()) {
-        KMenu* moreMenu = new KMenu(i18n("&More"), m_proxy_for_menu);
+        QMenu* moreMenu = new QMenu(i18n("&More"), m_proxy_for_menu);
         connect(moreMenu, SIGNAL(aboutToShow()), SLOT(slotAboutToShow()));
         QAction *before = index < m_proxy_for_menu->actions().count() ? m_proxy_for_menu->actions().at(index) : 0;
         m_proxy_for_menu->insertMenu(before, moreMenu);

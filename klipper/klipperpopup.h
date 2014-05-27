@@ -21,7 +21,7 @@
 
 #include <QList>
 
-#include <KMenu>
+#include <QMenu>
 
 class QAction;
 class QWidgetAction;
@@ -37,7 +37,7 @@ class History;
  * Default view of clipboard history.
  *
  */
-class KlipperPopup : public KMenu
+class KlipperPopup : public QMenu
 {
     Q_OBJECT
 

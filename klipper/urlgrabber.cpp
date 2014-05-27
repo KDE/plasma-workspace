@@ -25,10 +25,10 @@
 #include <QUuid>
 #include <QFile>
 #include <QX11Info>
+#include <QMenu>
 
 #include <KDialog>
 #include <KLocalizedString>
-#include <KMenu>
 #include <KService>
 #include <KDebug>
 #include <KIconLoader>
@@ -220,13 +220,13 @@ void URLGrabber::actionMenu( const HistoryItem* item, bool automatically_invoked
 
         m_myPopupKillTimer->stop();
 
-        m_myMenu = new KMenu;
+        m_myMenu = new QMenu;
 
         connect(m_myMenu, SIGNAL(triggered(QAction*)), SLOT(slotItemSelected(QAction*)));
 
         foreach (ClipAction* clipAct, matchingActionsList) {
-            m_myMenu->addTitle(QIcon::fromTheme( "klipper" ),
-                               i18n("%1 - Actions For: %2", clipAct->description(), KStringHandler::csqueeze(text, 45)));
+            m_myMenu->addSection(QIcon::fromTheme( "klipper" ),
+                                 i18n("%1 - Actions For: %2", clipAct->description(), KStringHandler::csqueeze(text, 45)));
             QList<ClipCommand> cmdList = clipAct->commands();
             int listSize = cmdList.count();
             for (int i=0; i<listSize;++i) {

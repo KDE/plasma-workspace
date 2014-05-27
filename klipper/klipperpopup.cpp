@@ -113,7 +113,7 @@ void KlipperPopup::ensureClean() {
 }
 
 void KlipperPopup::buildFromScratch() {
-    addTitle(QIcon::fromTheme("klipper"), i18n("Klipper - Clipboard Tool"));
+    addSection(QIcon::fromTheme("klipper"), i18n("Klipper - Clipboard Tool"));
 
     m_filterWidget = new KLineEdit(this);
     m_filterWidget->setFocusPolicy( Qt::NoFocus );
@@ -190,7 +190,7 @@ void KlipperPopup::keyPressEvent( QKeyEvent* e ) {
                       e->text(),
                       e->isAutoRepeat(),
                       e->count() );
-        KMenu::keyPressEvent( &ke );
+        QMenu::keyPressEvent( &ke );
 #ifdef DEBUG_EVENTS__
         kDebug() << "Passing this event to ancestor (KMenu): " << e << "->" << ke;
 #endif
@@ -217,14 +217,14 @@ void KlipperPopup::keyPressEvent( QKeyEvent* e ) {
 #ifdef DEBUG_EVENTS__
         kDebug() << "Passing this event to ancestor (KMenu): " << e;
 #endif
-        KMenu::keyPressEvent(e);
+        QMenu::keyPressEvent(e);
 
         break;
     }
     case Qt::Key_Return:
     case Qt::Key_Enter:
     {
-        KMenu::keyPressEvent(e);
+        QMenu::keyPressEvent(e);
         this->hide();
 
         if (activeAction() ==  m_filterWidgetAction)
