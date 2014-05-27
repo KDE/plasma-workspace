@@ -151,7 +151,6 @@ Item {
             imagePath: "widgets/background"
             width: childrenRect.width + margins.right + margins.left
             height: childrenRect.height + margins.top + margins.bottom
-            anchors.centerIn: timezoneText
             visible: showTimezone
             Text {
                 id: timezoneText
