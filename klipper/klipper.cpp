@@ -28,7 +28,6 @@
 #include <QMenu>
 #include <QDBusConnection>
 
-#include <k4aboutdata.h>
 #include <KGlobalAccel>
 #include <KLocale>
 #include <KMessageBox>
@@ -841,55 +840,6 @@ bool Klipper::ignoreClipboardChanges() const
 void Klipper::updateTimestamp()
 {
     QX11Info::setAppTime(QX11Info::getTimestamp());
-}
-
-static const char * const description =
-      I18N_NOOP("KDE cut & paste history utility");
-
-void Klipper::createAboutData()
-{
-  m_about_data = new K4AboutData("klipper", 0, ki18n("Klipper"),
-    KLIPPER_VERSION_STRING, ki18n(description), K4AboutData::License_GPL,
-		       ki18n("(c) 1998, Andrew Stanley-Jones\n"
-		       "1998-2002, Carsten Pfeiffer\n"
-		       "2001, Patrick Dubroy"));
-
-  m_about_data->addAuthor(ki18n("Carsten Pfeiffer"),
-                      ki18n("Author"),
-                      "pfeiffer@kde.org");
-
-  m_about_data->addAuthor(ki18n("Andrew Stanley-Jones"),
-                      ki18n( "Original Author" ),
-                      "asj@cban.com");
-
-  m_about_data->addAuthor(ki18n("Patrick Dubroy"),
-                      ki18n("Contributor"),
-                      "patrickdu@corel.com");
-
-  m_about_data->addAuthor( ki18n("Luboš Luňák"),
-                      ki18n("Bugfixes and optimizations"),
-                      "l.lunak@kde.org");
-
-  m_about_data->addAuthor( ki18n("Esben Mose Hansen"),
-                      ki18n("Previous Maintainer"),
-                      "kde@mosehansen.dk");
-
-  m_about_data->addAuthor( ki18n("Martin Gräßlin"),
-                      ki18n("Maintainer"),
-                      "mgraesslin@kde.org");
-}
-
-void Klipper::destroyAboutData()
-{
-  delete m_about_data;
-  m_about_data = NULL;
-}
-
-K4AboutData* Klipper::m_about_data;
-
-K4AboutData* Klipper::aboutData()
-{
-  return m_about_data;
 }
 
 void Klipper::slotEditData()

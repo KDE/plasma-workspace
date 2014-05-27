@@ -22,7 +22,7 @@
 
 #include <kdemacros.h>
 #include <KLocalizedString>
-#include <k4aboutdata.h>
+#include <KAboutData>
 #include <KConfigDialogManager>
 #include <KDBusService>
 
@@ -35,13 +35,41 @@
 
 extern "C" int Q_DECL_EXPORT kdemain(int argc, char *argv[])
 {
-  QCoreApplication::setApplicationName(i18n("Klipper"));
-  QCoreApplication::setApplicationVersion(QStringLiteral(KLIPPER_VERSION_STRING));
-  QCoreApplication::setOrganizationDomain(QStringLiteral("kde.org"));
-  QApplication::setApplicationDisplayName(i18n("KDE cut & paste history utility"));
-  Klipper::createAboutData();
-
   QApplication app(argc, argv);
+
+  KAboutData aboutData(QStringLiteral("klipper"),
+                       i18n("Klipper"),
+                       QStringLiteral(KLIPPER_VERSION_STRING),
+                       i18n("KDE cut & paste history utility"),
+                       KAboutLicense::GPL,
+                       i18n("(c) 1998, Andrew Stanley-Jones\n"
+                            "1998-2002, Carsten Pfeiffer\n"
+                            "2001, Patrick Dubroy"));
+  aboutData.addAuthor(i18n("Carsten Pfeiffer"),
+                      i18n("Author"),
+                      "pfeiffer@kde.org");
+
+  aboutData.addAuthor(i18n("Andrew Stanley-Jones"),
+                      i18n( "Original Author" ),
+                      "asj@cban.com");
+
+  aboutData.addAuthor(i18n("Patrick Dubroy"),
+                      i18n("Contributor"),
+                      "patrickdu@corel.com");
+
+  aboutData.addAuthor(i18n("Luboš Luňák"),
+                      i18n("Bugfixes and optimizations"),
+                      "l.lunak@kde.org");
+
+  aboutData.addAuthor(i18n("Esben Mose Hansen"),
+                      i18n("Previous Maintainer"),
+                      "kde@mosehansen.dk");
+
+  aboutData.addAuthor(i18n("Martin Gräßlin"),
+                      i18n("Maintainer"),
+                      "mgraesslin@kde.org");
+  KAboutData::setApplicationData(aboutData);
+
   auto disableSessionManagement = [](QSessionManager &sm) {
       sm.setRestartHint(QSessionManager::RestartNever);
   };
@@ -52,8 +80,9 @@ extern "C" int Q_DECL_EXPORT kdemain(int argc, char *argv[])
   QCommandLineParser parser;
   parser.addHelpOption();
   parser.addVersionOption();
-  parser.setApplicationDescription(QApplication::applicationDisplayName());
+  aboutData.setupCommandLine(&parser);
   parser.process(app);
+  aboutData.processCommandLine(&parser);
 
   KDBusService service(KDBusService::Unique);
 
@@ -61,7 +90,5 @@ extern "C" int Q_DECL_EXPORT kdemain(int argc, char *argv[])
   KConfigDialogManager::changedMap()->insert("ActionsTreeWidget", SIGNAL(changed()));
 
   KlipperTray klipper;
-  int ret = app.exec();
-  Klipper::destroyAboutData();
-  return ret;
+  return app.exec();
 }

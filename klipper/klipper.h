@@ -32,7 +32,6 @@
 #include "urlgrabber.h"
 
 class KToggleAction;
-class K4AboutData;
 class KActionCollection;
 class URLGrabber;
 class QTime;
@@ -69,10 +68,6 @@ public:
     History* history() { return m_history; }
 
     URLGrabber* urlGrabber() const { return m_myURLGrabber; }
-
-    static void createAboutData();
-    static void destroyAboutData();
-    static K4AboutData* aboutData();
 
     void saveSettings() const;
 
@@ -196,7 +191,6 @@ private:
     QTimer m_overflowClearTimer;
     QTimer m_pendingCheckTimer;
     bool m_pendingContentsCheck;
-    static K4AboutData* m_about_data;
 
     bool blockFetchingNewData();
     QString cycleText() const;
