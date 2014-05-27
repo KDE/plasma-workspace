@@ -46,6 +46,7 @@ target_link_libraries(kdeinit_klipper
     KF5::GlobalAccel
     KF5::WindowSystem
     KF5::ConfigGui
+    KF5::TextWidgets
     KF5::KDELibs4Support
     ${X11_LIBRARIES}
     ${ZLIB_LIBRARY}

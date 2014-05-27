@@ -70,7 +70,7 @@
     </widget>
    </item>
    <item>
-    <widget class="KIntSpinBox" name="kcfg_TimeoutForActionPopups">
+    <widget class="KPluralHandlingSpinBox" name="kcfg_TimeoutForActionPopups">
      <property name="alignment">
       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
      </property>
@@ -84,7 +84,7 @@
     </widget>
    </item>
    <item>
-    <widget class="KIntSpinBox" name="kcfg_MaxClipItems">
+    <widget class="KPluralHandlingSpinBox" name="kcfg_MaxClipItems">
      <property name="alignment">
       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
      </property>
@@ -107,9 +107,9 @@
  </widget>
  <customwidgets>
   <customwidget>
-   <class>KIntSpinBox</class>
+   <class>KPluralHandlingSpinBox</class>
    <extends>QSpinBox</extends>
-   <header>knuminput.h</header>
+   <header>kpluralhandlingspinbox.h</header>
   </customwidget>
  </customwidgets>
  <resources/>
