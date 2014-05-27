@@ -182,6 +182,9 @@ Item {
         }
 
         function idleStatus() {
+            if (!hpSource.data[udi]) {
+                return;
+            }
             var actions = hpSource.data[udi]["actions"];
             if (actions.length > 1) {
                 return i18np("1 action for this device", "%1 actions for this device", actions.length);
@@ -268,7 +271,7 @@ Item {
                 right: leftActionArea.left
             }
             interactive: false
-            model: hpSource.data[udi]["actions"]
+            model: hpSource.data[udi] ? hpSource.data[udi]["actions"] : null
             property int actionVerticalMargins: 5
             property int actionIconHeight: units.iconSizes.medium*0.8
             height: expanded ? ((actionIconHeight+(2*actionVerticalMargins))*model.length)+anchors.topMargin : 0

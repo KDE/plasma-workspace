@@ -126,7 +126,7 @@ MouseArea {
                 var used = size-freeSpace;
                 return used*100/size;
             }
-            freeSpaceText: sdSource.data[udi] ? sdSource.data[udi]["Free Space Text"] : ""
+            freeSpaceText: sdSource.data[udi] && sdSource.data[udi]["Free Space Text"] ? sdSource.data[udi]["Free Space Text"] : ""
 
             leftActionIcon: {
                 if (mounted) {
