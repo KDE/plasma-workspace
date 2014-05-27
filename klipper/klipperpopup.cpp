@@ -117,7 +117,7 @@ void KlipperPopup::buildFromScratch() {
 
     m_filterWidget = new KLineEdit(this);
     m_filterWidget->setFocusPolicy( Qt::NoFocus );
-    m_filterWidget->setClickMessage(i18n("Search..."));
+    m_filterWidget->setPlaceholderText(i18n("Search..."));
     m_filterWidgetAction = new QWidgetAction(this);
     m_filterWidgetAction->setDefaultWidget(m_filterWidget);
     addAction(m_filterWidgetAction);
