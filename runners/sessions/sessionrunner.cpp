@@ -21,12 +21,14 @@
 
 #include <KAuthorized>
 #include <QDebug>
-#include <KLocale>
-#include <KMessageBox>
+#include <KLocalizedString>
+#include <QMessageBox>
 
 #include "kworkspace.h"
 
 #include "screensaver_interface.h"
+
+K_EXPORT_PLASMA_RUNNER(calculatorrunner, SessionRunner)
 
 SessionRunner::SessionRunner(QObject *parent, const QVariantList &args)
     : Plasma::AbstractRunner(parent, args)
@@ -84,7 +86,7 @@ void SessionRunner::matchCommands(QList<Plasma::QueryMatch> &matches, const QStr
             term.compare(i18n("log out"), Qt::CaseInsensitive) == 0) {
         Plasma::QueryMatch match(this);
         match.setText(i18nc("log out command","Logout"));
-        match.setIcon(KIcon("system-log-out"));
+        match.setIcon(QIcon::fromTheme("system-log-out"));
         match.setData(LogoutAction);
         match.setType(Plasma::QueryMatch::ExactMatch);
         match.setRelevance(0.9);
@@ -93,7 +95,7 @@ void SessionRunner::matchCommands(QList<Plasma::QueryMatch> &matches, const QStr
             term.compare(i18nc("restart computer command", "reboot"), Qt::CaseInsensitive) == 0) {
         Plasma::QueryMatch match(this);
         match.setText(i18n("Restart the computer"));
-        match.setIcon(KIcon("system-reboot"));
+        match.setIcon(QIcon::fromTheme("system-reboot"));
         match.setData(RestartAction);
         match.setType(Plasma::QueryMatch::ExactMatch);
         match.setRelevance(0.9);
@@ -101,7 +103,7 @@ void SessionRunner::matchCommands(QList<Plasma::QueryMatch> &matches, const QStr
     } else if (term.compare(i18nc("shutdown computer command","shutdown"), Qt::CaseInsensitive) == 0) {
         Plasma::QueryMatch match(this);
         match.setText(i18n("Shutdown the computer"));
-        match.setIcon(KIcon("system-shutdown"));
+        match.setIcon(QIcon::fromTheme("system-shutdown"));
         match.setData(ShutdownAction);
         match.setType(Plasma::QueryMatch::ExactMatch);
         match.setRelevance(0.9);
@@ -110,7 +112,7 @@ void SessionRunner::matchCommands(QList<Plasma::QueryMatch> &matches, const QStr
         if (KAuthorized::authorizeKAction("lock_screen")) {
             Plasma::QueryMatch match(this);
             match.setText(i18n("Lock the screen"));
-            match.setIcon(KIcon("system-lock-screen"));
+            match.setIcon(QIcon::fromTheme("system-lock-screen"));
             match.setData(LockAction);
             match.setType(Plasma::QueryMatch::ExactMatch);
             match.setRelevance(0.9);
@@ -150,7 +152,7 @@ void SessionRunner::match(Plasma::RunnerContext &context)
         }
     }
 
-    //qDebug() << "session switching to" << (listAll ? "all sessions" : term);
+    qDebug() << "session switching to" << (listAll ? "all sessions" : term);
     bool switchUser = listAll ||
                       term.compare(i18n("switch user"), Qt::CaseInsensitive) == 0 ||
                       term.compare(i18n("new session"), Qt::CaseInsensitive) == 0;
@@ -161,7 +163,7 @@ void SessionRunner::match(Plasma::RunnerContext &context)
         dm.numReserve() >= 0) {
         Plasma::QueryMatch match(this);
         match.setType(Plasma::QueryMatch::ExactMatch);
-        match.setIcon(KIcon("system-switch-user"));
+        match.setIcon(QIcon::fromTheme("system-switch-user"));
         match.setText(i18n("New Session"));
         matches << match;
     }
@@ -198,7 +200,7 @@ void SessionRunner::match(Plasma::RunnerContext &context)
                 Plasma::QueryMatch match(this);
                 match.setType(type);
                 match.setRelevance(relevance);
-                match.setIcon(KIcon("user-identity"));
+                match.setIcon(QIcon::fromTheme("user-identity"));
                 match.setText(name);
                 match.setData(QString::number(session.vt));
                 matches << match;
@@ -206,7 +208,7 @@ void SessionRunner::match(Plasma::RunnerContext &context)
         }
     }
 
-    context.addMatches(term, matches);
+    context.addMatches(matches);
 }
 
 void SessionRunner::run(const Plasma::RunnerContext &context, const Plasma::QueryMatch &match)
@@ -244,8 +246,9 @@ void SessionRunner::run(const Plasma::RunnerContext &context, const Plasma::Quer
     }
 
     //TODO: this message is too verbose and too technical.
-    int result = KMessageBox::warningContinueCancel(
+    int result = QMessageBox::warning(
             0,
+            i18n("Warning - New Session"),
             i18n("<p>You have chosen to open another desktop session.<br />"
                 "The current session will be hidden "
                 "and a new login screen will be displayed.<br />"
@@ -256,14 +259,9 @@ void SessionRunner::run(const Plasma::RunnerContext &context, const Plasma::Quer
                 "Ctrl, Alt and the appropriate F-key at the same time. "
                 "Additionally, the KDE Panel and Desktop menus have "
                 "actions for switching between sessions.</p>",
-                7, 8),
-            i18n("Warning - New Session"),
-            KGuiItem(i18n("&Start New Session"), "fork"),
-            KStandardGuiItem::cancel(),
-            ":confirmNewSession",
-            KMessageBox::PlainCaption | KMessageBox::Notify);
+                7, 8));
 
-    if (result == KMessageBox::Cancel) {
+    if (result == QMessageBox::Cancel) {
         return;
     }
 

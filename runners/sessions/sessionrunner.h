@@ -20,7 +20,7 @@
 #define SESSIONRUNNER_H
 
 #include <kdisplaymanager.h>
-#include <Plasma/AbstractRunner>
+#include <krunner/abstractrunner.h>
 
 
 /**
@@ -48,8 +48,6 @@ class SessionRunner : public Plasma::AbstractRunner
         KDisplayManager dm;
         bool m_canLogout;
 };
-
-K_EXPORT_PLASMA_RUNNER(sessions, SessionRunner)
 
 #endif
 

@@ -10,10 +10,10 @@ add_subdirectory(shell)
 # add_subdirectory(webshortcuts)
 # add_subdirectory(windowedwidgets)
 #
-# if(NOT WIN32)
+if(NOT WIN32)
 # add_subdirectory(powerdevil)
-# add_subdirectory(sessions)
+ add_subdirectory(sessions)
 # add_subdirectory(windows)
 # add_subdirectory(kill)
-# endif()
+endif()
 #
