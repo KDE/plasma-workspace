@@ -211,12 +211,7 @@ Item {
             id: monthView
             borderOpacity: 0.25
             today: dataSource.data["Local"]["Date"]
-            anchors {
-                top: monthHeading.bottom
-                left: parent.left
-                right: parent.right
-                bottom: parent.bottom
-            }
+            anchors.fill: parent
         }
 
     }
