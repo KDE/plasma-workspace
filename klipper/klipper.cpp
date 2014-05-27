@@ -27,11 +27,11 @@
 
 #include <QMenu>
 #include <QDBusConnection>
+#include <QSaveFile>
 
 #include <KGlobalAccel>
 #include <KLocale>
 #include <KMessageBox>
-#include <KSaveFile>
 #include <KSessionManager>
 #include <KStandardDirs>
 #include <KDebug>
@@ -432,8 +432,8 @@ void Klipper::saveHistory(bool empty) {
         kWarning() << failed_save_warning ;
         return;
     }
-    KSaveFile history_file( history_file_name );
-    if ( !history_file.open() ) {
+    QSaveFile history_file( history_file_name );
+    if (!history_file.open(QIODevice::WriteOnly)) {
         kWarning() << failed_save_warning ;
         return;
     }
@@ -454,6 +454,9 @@ void Klipper::saveHistory(bool empty) {
     quint32 crc = crc32( 0, reinterpret_cast<unsigned char *>( data.data() ), data.size() );
     QDataStream ds ( &history_file );
     ds << crc << data;
+    if (!history_file.commit()) {
+        qWarning() << failed_save_warning ;
+    }
 }
 
 // save session on shutdown. Don't simply use the c'tor, as that may not be called.
