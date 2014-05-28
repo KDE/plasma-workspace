@@ -84,15 +84,9 @@ Item {
         Connections {
             target: monthView
             onDateChanged: {
-                print("Day change caught!");
-                var d = monthView.date;
-                for (var i = 0; i < d.length; i++) {
-                    print(" DD " + d[i]);
+                if (monthView.date != null) {
+                    agenda.day = monthView.date;
                 }
-                print(" date.day   " + d.dayNumber);
-                print(" date.month " + d.monthNumber);
-                print(" date.year  " + d.yearNumber);
-                agenda.day = d;
             }
         }
 
