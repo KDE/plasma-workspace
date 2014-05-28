@@ -18,6 +18,7 @@
  ***************************************************************************/
 
 import QtQuick 2.0
+import org.kde.private.systemtray 2.0 as SystemTray
 
 Item {
     id: plasmoidItem

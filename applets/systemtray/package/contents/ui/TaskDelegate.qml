@@ -66,9 +66,9 @@ KQuickControlsAddonsComponents.MouseEventListener {
     Behavior on opacity { NumberAnimation { duration: units.shortDuration * 3 } }
 
 
-    property int taskStatus: modelData.status
-    property int taskType: modelData.type
-    property Item expandedItem: modelData.taskItemExpanded
+    property int taskStatus: modelData && modelData.status
+    property int taskType: modelData && modelData.type
+    property Item expandedItem: modelData && modelData.taskItemExpanded
     property Item expandedStatusItem: null
     property bool snExpanded: false
 
@@ -81,7 +81,7 @@ KQuickControlsAddonsComponents.MouseEventListener {
         opacity: 0.8;
     }
 
-    property bool isExpanded: modelData.expanded
+    property bool isExpanded: modelData && modelData.expanded
 
     onIsExpandedChanged: {
         if (modelData.expanded) {
@@ -101,7 +101,7 @@ KQuickControlsAddonsComponents.MouseEventListener {
 
     PulseAnimation {
         targetItem: taskItemContainer
-        running: modelData.status == SystemTray.Task.NeedsAttention
+        running: modelData && modelData.status == SystemTray.Task.NeedsAttention
     }
 
     onWidthChanged: updatePlasmoidGeometry()
