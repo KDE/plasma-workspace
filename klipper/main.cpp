@@ -35,6 +35,7 @@
 
 extern "C" int Q_DECL_EXPORT kdemain(int argc, char *argv[])
 {
+  KLocalizedString::setApplicationDomain("klipper");
   QApplication app(argc, argv);
 
   KAboutData aboutData(QStringLiteral("klipper"),
