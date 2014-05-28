@@ -38,30 +38,30 @@
 #include "settings.h"
 #include "ui_freespacenotifier_prefs_base.h"
 
-FreeSpaceNotifier::FreeSpaceNotifier( QObject* parent )
-    : QObject( parent )
-    , lastAvailTimer( NULL )
-    , notification( NULL )
-    , lastAvail( -1 )
-    , sni(NULL)
+FreeSpaceNotifier::FreeSpaceNotifier(QObject *parent)
+    : QObject(parent)
+    , m_lastAvailTimer(NULL)
+    , m_notification(NULL)
+    , m_lastAvail(-1)
+    , m_sni(NULL)
 {
     // If we are running, notifications are enabled
-    FreeSpaceNotifierSettings::setEnableNotification( true );
+    FreeSpaceNotifierSettings::setEnableNotification(true);
 
-    connect( &timer, SIGNAL(timeout()), SLOT(checkFreeDiskSpace()) );
-    timer.start( 1000 * 60 /* 1 minute */ );
+    connect(&timer, SIGNAL(timeout()), SLOT(checkFreeDiskSpace()));
+    timer.start(1000 * 60 /* 1 minute */);
 }
 
 FreeSpaceNotifier::~FreeSpaceNotifier()
 {
     // The notification is automatically destroyed when it goes away, so we only need to do this if
     // it is still being shown
-    if (notification) {
-        notification->close();
+    if (m_notification) {
+        m_notification->close();
     }
 
-    if (sni) {
-        sni->deleteLater();
+    if (m_sni) {
+        m_sni->deleteLater();
     }
 }
 
@@ -78,27 +78,27 @@ void FreeSpaceNotifier::checkFreeDiskSpace()
     KDiskFreeSpaceInfo fsInfo = KDiskFreeSpaceInfo::freeSpaceInfo(QDir::homePath());
     if (fsInfo.isValid()) {
         int limit = FreeSpaceNotifierSettings::minimumSpace(); // MiB
-        qint64 avail = fsInfo.available() / ( 1024 * 1024 ); // to MiB
+        qint64 avail = fsInfo.available() / (1024 * 1024); // to MiB
         bool warn = false;
 
         if (avail < limit) {
             // avail disk space dropped under a limit
-            if (lastAvail < 0 || avail < lastAvail / 2) { // always warn the first time or when available dropped to a half of previous one, warn again
-                lastAvail = avail;
+            if (m_lastAvail < 0 || avail < m_lastAvail / 2) { // always warn the first time or when available dropped to a half of previous one, warn again
+                m_lastAvail = avail;
                 warn = true;
-            } else if (avail > lastAvail) {     // the user freed some space
-                lastAvail = avail;              // so warn if it goes low again
+            } else if (avail > m_lastAvail) {     // the user freed some space
+                m_lastAvail = avail;              // so warn if it goes low again
             }
             // do not change lastAvail otherwise, to handle free space slowly going down
 
             if (warn) {
                 int availpct = int(100 * fsInfo.available() / fsInfo.size());
-                if (!sni) {
-                    sni = new KStatusNotifierItem(QStringLiteral("freespacenotifier"));
-                    sni->setIconByName(QStringLiteral("drive-harddisk"));
-                    sni->setOverlayIconByName(QStringLiteral("dialog-warning"));
-                    sni->setTitle(i18n("Low Disk Space"));
-                    sni->setCategory(KStatusNotifierItem::Hardware);
+                if (!m_sni) {
+                    m_sni = new KStatusNotifierItem(QStringLiteral("freespacenotifier"));
+                    m_sni->setIconByName(QStringLiteral("drive-harddisk"));
+                    m_sni->setOverlayIconByName(QStringLiteral("dialog-warning"));
+                    m_sni->setTitle(i18n("Low Disk Space"));
+                    m_sni->setCategory(KStatusNotifierItem::Hardware);
 
                     QMenu *sniMenu = new QMenu();
                     QAction *action = new QAction(i18nc("Opens a file manager like dolphin", "Open File Manager..."), 0);
@@ -113,37 +113,37 @@ void FreeSpaceNotifier::checkFreeDiskSpace()
                     connect(action, &QAction::triggered, this, &FreeSpaceNotifier::hideSni);
                     sniMenu->addAction(action);
 
-                    sni->setContextMenu(sniMenu);
-                    sni->setStandardActionsEnabled(false);
+                    m_sni->setContextMenu(sniMenu);
+                    m_sni->setStandardActionsEnabled(false);
                 }
 
-                sni->setStatus(KStatusNotifierItem::NeedsAttention);
-                sni->setToolTip(QStringLiteral("drive-harddisk"), i18n("Low Disk Space"), i18n("Remaining space in your Home folder: %1 MiB", QLocale::system().toString(avail)));
+                m_sni->setStatus(KStatusNotifierItem::NeedsAttention);
+                m_sni->setToolTip(QStringLiteral("drive-harddisk"), i18n("Low Disk Space"), i18n("Remaining space in your Home folder: %1 MiB", QLocale::system().toString(avail)));
 
-                notification = new KNotification(QStringLiteral("freespacenotif"));
+                m_notification = new KNotification(QStringLiteral("freespacenotif"));
 
-                notification->setText(i18nc("Warns the user that the system is running low on space on his home folder, indicating the percentage and absolute MiB size remaining",
+                m_notification->setText(i18nc("Warns the user that the system is running low on space on his home folder, indicating the percentage and absolute MiB size remaining",
                                             "Your Home folder is running out of disk space, you have %1 MiB remaining (%2%)", QLocale::system().toString(avail), availpct));
 
-                connect( notification, SIGNAL(closed()),           SLOT(cleanupNotification()) );
+                connect(m_notification, &KNotification::closed, this, &FreeSpaceNotifier::cleanupNotification);
 
-                notification->setComponentName( QStringLiteral( "freespacenotifier" ) );
-                notification->sendEvent();
+                m_notification->setComponentName(QStringLiteral("freespacenotifier"));
+                m_notification->sendEvent();
             }
         }
     } else {
         // free space is above limit again, remove the SNI
-        if (sni) {
-            sni->deleteLater();
-            sni = NULL;
+        if (m_sni) {
+            m_sni->deleteLater();
+            m_sni = NULL;
         }
     }
 }
 
 void FreeSpaceNotifier::hideSni()
 {
-    if (sni) {
-        sni->setStatus(KStatusNotifierItem::Passive);
+    if (m_sni) {
+        m_sni->setStatus(KStatusNotifierItem::Passive);
         QAction *action = qobject_cast<QAction*>(sender());
         if (action) {
             action->setDisabled(true);
@@ -154,10 +154,10 @@ void FreeSpaceNotifier::hideSni()
 void FreeSpaceNotifier::openFileManager()
 {
     cleanupNotification();
-    new KRun( QUrl::fromLocalFile( QDir::homePath() ), 0 );
+    new KRun(QUrl::fromLocalFile(QDir::homePath()), 0);
 
-    if (sni) {
-        sni->setStatus(KStatusNotifierItem::Active);
+    if (m_sni) {
+        m_sni->setStatus(KStatusNotifierItem::Active);
     }
 }
 
@@ -165,48 +165,49 @@ void FreeSpaceNotifier::showConfiguration()
 {
     cleanupNotification();
 
-    if ( KConfigDialog::showDialog( QStringLiteral("settings") ) )  {
+    if (KConfigDialog::showDialog(QStringLiteral("settings"))) {
         return;
     }
 
-    KConfigDialog *dialog = new KConfigDialog( 0, QStringLiteral("settings"), FreeSpaceNotifierSettings::self() );
+    KConfigDialog *dialog = new KConfigDialog(0, QStringLiteral("settings"), FreeSpaceNotifierSettings::self());
     QWidget *generalSettingsDlg = new QWidget();
 
     Ui::freespacenotifier_prefs_base preferences;
-    preferences.setupUi( generalSettingsDlg );
+    preferences.setupUi(generalSettingsDlg);
 
-    dialog->addPage( generalSettingsDlg, i18nc( "The settings dialog main page name, as in 'general settings'", "General" ),
-                     QStringLiteral("system-run") );
-    connect( dialog, SIGNAL(finished()), this, SLOT(configDialogClosed()) );
-    dialog->setAttribute( Qt::WA_DeleteOnClose );
+    dialog->addPage(generalSettingsDlg,
+                    i18nc("The settings dialog main page name, as in 'general settings'", "General"),
+                    QStringLiteral("system-run"));
+
+    connect(dialog, SIGNAL(finished()), this, SLOT(configDialogClosed()));
+    dialog->setAttribute(Qt::WA_DeleteOnClose);
     dialog->show();
 
-    if (sni) {
-        sni->setStatus(KStatusNotifierItem::Active);
+    if (m_sni) {
+        m_sni->setStatus(KStatusNotifierItem::Active);
     }
 }
 
 void FreeSpaceNotifier::cleanupNotification()
 {
-    if (notification) {
-        notification->close();
+    if (m_notification) {
+        m_notification->close();
     }
-    notification = NULL;
+    m_notification = NULL;
 
     // warn again if constantly below limit for too long
-    if( lastAvailTimer == NULL )
-    {
-        lastAvailTimer = new QTimer( this );
-        connect( lastAvailTimer, SIGNAL(timeout()), SLOT(resetLastAvailable()) );
+    if (m_lastAvailTimer == NULL) {
+        m_lastAvailTimer = new QTimer(this);
+        connect(m_lastAvailTimer, SIGNAL(timeout()), SLOT(resetLastAvailable()));
     }
-    lastAvailTimer->start( 1000 * 60 * 60 /* 1 hour*/ );
+    m_lastAvailTimer->start(1000 * 60 * 60 /* 1 hour*/);
 }
 
 void FreeSpaceNotifier::resetLastAvailable()
 {
-    lastAvail = -1;
-    lastAvailTimer->deleteLater();
-    lastAvailTimer = NULL;
+    m_lastAvail = -1;
+    m_lastAvailTimer->deleteLater();
+    m_lastAvailTimer = NULL;
 }
 
 void FreeSpaceNotifier::configDialogClosed()
@@ -221,25 +222,30 @@ void FreeSpaceNotifier::configDialogClosed()
  */
 void FreeSpaceNotifier::disableFSNotifier()
 {
-    QDBusInterface iface( QStringLiteral("org.kde.kded5"),
-                          QStringLiteral("/kded"),
-                          QStringLiteral("org.kde.kded5") );
-    if ( dbusError( iface ) ) return;
+    QDBusInterface iface(QStringLiteral("org.kde.kded5"),
+                         QStringLiteral("/kded"),
+                         QStringLiteral("org.kde.kded5") );
+    if (dbusError(iface)) {
+        return;
+    }
 
     // Disable current module autoload
-    iface.call( QStringLiteral("setModuleAutoloading"), QStringLiteral("freespacenotifier"), false );
-    if ( dbusError( iface ) ) return;
+    iface.call(QStringLiteral("setModuleAutoloading"), QStringLiteral("freespacenotifier"), false);
+    if (dbusError(iface)) {
+        return;
+    }
 
     // Unload current module
-    iface.call( QStringLiteral("unloadModule"), QStringLiteral("freespacenotifier") );
-    if ( dbusError( iface ) ) return;
+    iface.call(QStringLiteral("unloadModule"), QStringLiteral("freespacenotifier"));
+    if (dbusError(iface)) {
+        return;
+    }
 }
 
-bool FreeSpaceNotifier::dbusError( QDBusInterface &iface )
+bool FreeSpaceNotifier::dbusError(QDBusInterface &iface)
 {
     QDBusError err = iface.lastError();
-    if ( err.isValid() )
-    {
+    if (err.isValid()) {
         qCritical() << "Failed to perform operation on kded [" << err.name() << "]:" << err.message();
         return true;
     }

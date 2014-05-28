@@ -29,26 +29,29 @@ class KStatusNotifierItem;
 class FreeSpaceNotifier : public QObject
 {
     Q_OBJECT
-    public:
-        FreeSpaceNotifier( QObject* parent = NULL );
-        virtual ~FreeSpaceNotifier();
-    private Q_SLOTS:
-        void checkFreeDiskSpace();
-        void resetLastAvailable();
-        void openFileManager();
-        void showConfiguration();
-        void cleanupNotification();
-        void configDialogClosed();
-        void hideSni();
-    private:
-        QTimer timer;
-        QTimer* lastAvailTimer;
-        KNotification *notification;
-        KStatusNotifierItem *sni;
-        qint64 lastAvail; // used to suppress repeated warnings when available space hasn't changed
 
-        void disableFSNotifier();
-        bool dbusError( QDBusInterface &iface );
+public:
+    FreeSpaceNotifier(QObject *parent = NULL);
+    virtual ~FreeSpaceNotifier();
+
+private Q_SLOTS:
+    void checkFreeDiskSpace();
+    void resetLastAvailable();
+    void openFileManager();
+    void showConfiguration();
+    void cleanupNotification();
+    void configDialogClosed();
+    void hideSni();
+
+private:
+    QTimer timer;
+    QTimer *m_lastAvailTimer;
+    KNotification *m_notification;
+    KStatusNotifierItem *m_sni;
+    qint64 m_lastAvail; // used to suppress repeated warnings when available space hasn't changed
+
+    void disableFSNotifier();
+    bool dbusError(QDBusInterface &iface);
 };
 
 #endif
