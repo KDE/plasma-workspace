@@ -130,12 +130,15 @@ MouseArea {
             id: wrapper
             width: notifierDialog.width
             udi: DataEngineSource
-            icon: sdSource.data[udi]["Icon"]
-            deviceName: sdSource.data[udi]["Description"]
+            icon: sdSource.data[udi] ? sdSource.data[udi]["Icon"] : ""
+            deviceName: sdSource.data[udi] ? sdSource.data[udi]["Description"] : ""
             emblemIcon: Emblems[0]
             state: model["State"]
 
             percentUsage: {
+                if (!sdSource.data[udi]) {
+                    return 0
+                }
                 var freeSpace = new Number(sdSource.data[udi]["Free Space"]);
                 var size = new Number(model["Size"]);
                 var used = size-freeSpace;
