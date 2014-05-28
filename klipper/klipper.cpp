@@ -887,10 +887,12 @@ void Klipper::slotShowBarcode()
     using namespace prison;
     const HistoryStringItem* item = dynamic_cast<const HistoryStringItem*>(m_history->first());
 
-    KDialog dlg;
+    QDialog dlg;
     dlg.setModal( true );
-    dlg.setCaption( i18n("Mobile Barcode") );
-    dlg.setButtons( KDialog::Ok );
+    dlg.setWindowTitle( i18n("Mobile Barcode") );
+    QDialogButtonBox *buttons = new QDialogButtonBox(QDialogButtonBox::Ok, &dlg);
+    buttons->button(QDialogButtonBox::Ok)->setShortcut(Qt::CTRL | Qt::Key_Return);
+    connect(buttons, &QDialogButtonBox::accepted, &dlg, &QDialog::accept);
 
     QWidget* mw = new QWidget(&dlg);
     QHBoxLayout* layout = new QHBoxLayout(mw);
@@ -907,7 +909,9 @@ void Klipper::slotShowBarcode()
     layout->addWidget(datamatrix);
 
     mw->setFocus();
-    dlg.setMainWidget( mw );
+    QVBoxLayout *vBox = new QVBoxLayout(&dlg);
+    vBox->addWidget(mw);
+    vBox->addWidget(buttons);
     dlg.adjustSize();
 
     dlg.exec();
