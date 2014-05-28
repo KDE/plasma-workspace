@@ -28,13 +28,14 @@ Item {
     width: childrenRect.width
     height: childrenRect.height
     implicitWidth: mainColumn.implicitWidth
-    implicitHeight: pageColumn.implicitHeight
+    implicitHeight: mainColumn.implicitHeight
 
     property alias cfg_removableDevices: removableOnly.checked
     property alias cfg_nonRemovableDevices: nonRemovableOnly.checked
     property alias cfg_allDevices: allDevices.checked
 
     Layouts.ColumnLayout {
+        id: mainColumn
         Controls.ExclusiveGroup{
             id: deviceFilter
         }
