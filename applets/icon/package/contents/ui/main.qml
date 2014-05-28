@@ -87,17 +87,11 @@ MouseArea {
     Connections {
         target: plasmoid
         onExternalData: {
-            print("************************************************************************************************");
-            print(data);
             plasmoid.configuration.url = data;
             logic.url = data;
             plasmoid.configuration.applicationName = logic.name
             plasmoid.configuration.iconName = logic.icon
             plasmoid.configuration.genericName = logic.genericName
-            print(plasmoid.configuration.iconName);
-            print(plasmoid.configuration.genericName);
-            print(plasmoid.configuration.applicationName);
-            print("************************************************************************************************");
         }
     }
 }
