@@ -101,6 +101,7 @@ public Q_SLOTS:
     void setDashboardShown(bool show);
     void showInteractiveConsole();
     void loadScriptInInteractiveConsole(const QString &script);
+    void toggleActivityManager();
 
     Plasma::Containment *addPanel(const QString &plugin);
 
@@ -131,7 +132,6 @@ private Q_SLOTS:
     void createWaitingPanels();
     void handleContainmentAdded(Plasma::Containment *c);
     void toggleWidgetExplorer();
-    void toggleActivityManager();
     void syncAppConfig();
     void checkActivities();
     void currentActivityChanged(const QString &newActivity);

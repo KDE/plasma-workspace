@@ -87,9 +87,9 @@ void ActivityJob::start()
         return;
     }
     if (operation == "toggleActivityManager") {
-        QDBusMessage message = QDBusMessage::createMethodCall("org.kde.plasma-desktop",
-                                                          "/App",
-                                                          QString(),
+        QDBusMessage message = QDBusMessage::createMethodCall("org.kde.plasmashell",
+                                                          "/PlasmaShell",
+                                                          "org.kde.PlasmaShell",
                                                           "toggleActivityManager");
         QDBusConnection::sessionBus().call(message, QDBus::NoBlock);
         setResult(true);

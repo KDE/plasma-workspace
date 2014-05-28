@@ -3,6 +3,8 @@
   <interface name="org.kde.PlasmaShell">
     <method name="toggleDashboard">
     </method>
+    <method name="toggleActivityManager">
+    </method>
     <method name="setDashboardShown">
       <arg name="show" type="b" direction="in"/>
     </method>
