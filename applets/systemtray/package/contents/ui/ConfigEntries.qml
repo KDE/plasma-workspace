@@ -34,14 +34,9 @@ Item {
     implicitWidth: pageColumn.implicitWidth
     implicitHeight: pageColumn.implicitHeight
 
-    property var cfg_extraItems: Array()
     property var cfg_shownItems: Array()
     property var cfg_hiddenItems: Array()
 
-    SystemTray.Host {
-        id: host
-        plasmoidsAllowed: cfg_extraItems
-    }
 
     SystemPalette {
         id: palette
@@ -51,12 +46,6 @@ Item {
         id: pageColumn
         spacing: itemSizeLabel.height / 2
         width: units.gridUnit * 25
-
-        PlasmaExtras.Heading {
-            level: 2
-            text: i18n("Entries")
-            color: palette.text
-        }
 
         Repeater {
             model: plasmoid.rootItem.systrayHost.allTasks
