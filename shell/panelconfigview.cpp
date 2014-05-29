@@ -49,7 +49,7 @@ PanelConfigView::PanelConfigView(Plasma::Containment *containment, PanelView *pa
     connect(&m_deleteTimer, &QTimer::timeout, this, &PanelConfigView::deleteLater);
 
     m_visibilityMode = panelView->visibilityMode();
-    panelView->setVisibilityMode(PanelView::WindowsGoBelow);
+
     setScreen(panelView->screen());
     connect(panelView, &QWindow::screenChanged, this,
             [=](QScreen *screen) {
@@ -147,7 +147,10 @@ void PanelConfigView::showEvent(QShowEvent *ev)
     }
 
     m_deleteTimer.stop();
-    m_panelView->setVisibilityMode(PanelView::WindowsGoBelow);
+
+    if (m_visibilityMode != PanelView::NormalPanel) {
+        m_panelView->setVisibilityMode(PanelView::WindowsGoBelow);
+    }
     PanelShadows::self()->addWindow(this);
 }
 
