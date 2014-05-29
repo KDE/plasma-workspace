@@ -199,6 +199,7 @@ Item {
         case Qt.LeftButton:
             root.expandedTask = null;
             modelData.activate1(pos.x, pos.y);
+            plasmoid.expanded = false;
             break;
         case Qt.RightButton:
             modelData.activateContextMenu(pos.x, pos.y);
@@ -207,7 +208,6 @@ Item {
             modelData.activate2(pos.x, pos.y);
             break;
         }
-        plasmoid.expanded = false;
     }
 
     // States =====================================================================================
