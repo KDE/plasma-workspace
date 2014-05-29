@@ -137,6 +137,7 @@ Item {
             PlasmaCore.ToolTipArea {
                 id: freeSpaceToolip
                 height:freeSpaceBar.height
+                active: mounted
 
                 subText: i18nc("@info:status Free disk space", "%1 free", deviceItem.freeSpaceText)
                 anchors {
