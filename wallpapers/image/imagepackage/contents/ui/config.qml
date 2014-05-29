@@ -233,7 +233,7 @@ ColumnLayout {
                 model: imageWallpaper.wallpaperModel
                 currentIndex: -1
 
-                cellWidth: Math.floor(wallpapersGrid.width / Math.floor(wallpapersGrid.width / (units.gridUnit*12)))
+                cellWidth: Math.floor(wallpapersGrid.width / Math.max(Math.floor(wallpapersGrid.width / (units.gridUnit*12)), 3))
                 cellHeight: cellWidth / (imageWallpaper.width / imageWallpaper.height)
 
                 anchors.margins: 4
