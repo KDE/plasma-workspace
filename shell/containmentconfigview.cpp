@@ -70,6 +70,12 @@ ContainmentConfigView::~ContainmentConfigView()
 void ContainmentConfigView::init()
 {
     setSource(QUrl::fromLocalFile(m_containment->corona()->package().filePath("containmentconfigurationui")));
+
+    if (m_containment) {
+        KConfigGroup cg = m_containment->config();
+        cg = KConfigGroup(&cg, "ConfigDialog");
+        resize(cg.readEntry("DialogWidth", width()), cg.readEntry("DialogHeight", height()));
+    }
 }
 
 PlasmaQuick::ConfigModel *ContainmentConfigView::containmentActionConfigModel()
