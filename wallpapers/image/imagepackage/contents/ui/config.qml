@@ -19,6 +19,8 @@
 import QtQuick 2.0
 import QtQuick.Controls 1.0 as QtControls
 import QtQuick.Layouts 1.0
+//We need units from it
+import org.kde.plasma.core 2.0 as Plasmacore
 import org.kde.plasma.wallpapers.image 2.0 as Wallpaper
 import org.kde.kquickcontrolsaddons 2.0
 
@@ -231,7 +233,7 @@ ColumnLayout {
                 model: imageWallpaper.wallpaperModel
                 currentIndex: -1
 
-                cellWidth: wallpapersGrid.width / 3
+                cellWidth: Math.floor(wallpapersGrid.width / Math.floor(wallpapersGrid.width / (units.gridUnit*12)))
                 cellHeight: cellWidth / (imageWallpaper.width / imageWallpaper.height)
 
                 anchors.margins: 4

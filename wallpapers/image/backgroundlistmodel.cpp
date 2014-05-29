@@ -27,6 +27,9 @@
 #include <QStandardPaths>
 #include <QThreadPool>
 #include <QUuid>
+#include <QGuiApplication>
+#include <QFontMetrics>
+
 
 #include <QDebug>
 #include <KGlobal>
@@ -73,6 +76,10 @@ BackgroundListModel::BackgroundListModel(Image *listener, QObject *parent)
     roleNames[PathRole] = "path";
     roleNames[RemovableRole] = "removable";
     setRoleNames(roleNames);
+
+    //TODO: on Qt 4.4 use the ui scale factor
+    QFontMetrics fm(QGuiApplication::font());
+    m_screenshotSize = fm.width('M') * 15;
 
     m_imageCache = new KImageCache("plasma_wallpaper_preview", 10485760);
 }
@@ -314,8 +321,8 @@ QVariant BackgroundListModel::data(const QModelIndex &index, int role) const
     break;
 
     case ScreenshotRole: {
-        QPixmap preview = QPixmap(QSize(SCREENSHOT_SIZE*1.6,
-                                                    SCREENSHOT_SIZE));
+        QPixmap preview = QPixmap(QSize(m_screenshotSize*1.6,
+                                                    m_screenshotSize));
         if (m_imageCache->findPixmap(b.filePath("preferred"), &preview)) {
             return preview;
         }
@@ -327,8 +334,8 @@ QVariant BackgroundListModel::data(const QModelIndex &index, int role) const
             KFileItemList list;
             list.append(KFileItem(file, QString(), 0));
             KIO::PreviewJob* job = KIO::filePreview(list,
-                                                    QSize(SCREENSHOT_SIZE*1.6,
-                                                    SCREENSHOT_SIZE));
+                                                    QSize(m_screenshotSize*1.6,
+                                                    m_screenshotSize));
             job->setIgnoreMaximumSize(true);
             connect(job, SIGNAL(gotPreview(KFileItem,QPixmap)),
                     this, SLOT(showPreview(KFileItem,QPixmap)));

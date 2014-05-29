@@ -71,7 +71,7 @@ public:
         PathRole,
         RemovableRole
     };
-    static const int SCREENSHOT_SIZE = 96;
+
     static const int BLUR_INCREMENT = 9;
     static const int MARGIN = 6;
 
@@ -108,6 +108,7 @@ private:
     KImageCache* m_imageCache;
 
     QString m_findToken;
+    int m_screenshotSize;
 };
 
 class BackgroundFinder : public QThread
