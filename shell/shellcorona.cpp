@@ -40,6 +40,7 @@
 #include <KGlobalAccel>
 #include <KAuthorized>
 #include <KWindowSystem>
+#include <kdeclarative/kdeclarative.h>
 
 #include <KScreen/Config>
 #include <kscreen/configmonitor.h>
@@ -132,6 +133,13 @@ ShellCorona::ShellCorona(QObject *parent)
       d(new Private(this))
 {
     d->desktopDefaultsConfig = KConfigGroup(KSharedConfig::openConfig(package().filePath("defaults")), "Desktop");
+
+    //FIXME: this should be done in setShell, to support shell change
+    // but a different way to load platform specific components is needed beforehand
+    // because if we import and use two different components plugin, the second time
+    // the import is called it will fail
+    KConfigGroup cg(KSharedConfig::openConfig(package().filePath("defaults")), "General");
+    KDeclarative::KDeclarative::setRuntimePlatform(cg.readEntry("DefaultRuntimePlatform", QStringList()));
 
     new PlasmaShellAdaptor(this);
 
