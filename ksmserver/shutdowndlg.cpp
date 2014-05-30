@@ -105,11 +105,11 @@ KSMShutdownDlg::KSMShutdownDlg( QWindow* parent,
     context->setContextProperty(QStringLiteral("sdtype"), sdtype);
 
     QQmlPropertyMap *mapShutdownType = new QQmlPropertyMap(this);
-    mapShutdownType->insert(QStringLiteral("ShutdownTypeDefault"), QVariant::fromValue((int)KWorkSpace::ShutdownTypeDefault));
-    mapShutdownType->insert(QStringLiteral("ShutdownTypeNone"), QVariant::fromValue((int)KWorkSpace::ShutdownTypeNone));
-    mapShutdownType->insert(QStringLiteral("ShutdownTypeReboot"), QVariant::fromValue((int)KWorkSpace::ShutdownTypeReboot));
-    mapShutdownType->insert(QStringLiteral("ShutdownTypeHalt"), QVariant::fromValue((int)KWorkSpace::ShutdownTypeHalt));
-    mapShutdownType->insert(QStringLiteral("ShutdownTypeLogout"), QVariant::fromValue((int)KWorkSpace::ShutdownTypeLogout));
+    mapShutdownType->insert(QStringLiteral("ShutdownTypeDefault"), QVariant::fromValue<int>(KWorkSpace::ShutdownTypeDefault));
+    mapShutdownType->insert(QStringLiteral("ShutdownTypeNone"), QVariant::fromValue<int>(KWorkSpace::ShutdownTypeNone));
+    mapShutdownType->insert(QStringLiteral("ShutdownTypeReboot"), QVariant::fromValue<int>(KWorkSpace::ShutdownTypeReboot));
+    mapShutdownType->insert(QStringLiteral("ShutdownTypeHalt"), QVariant::fromValue<int>(KWorkSpace::ShutdownTypeHalt));
+    mapShutdownType->insert(QStringLiteral("ShutdownTypeLogout"), QVariant::fromValue<int>(KWorkSpace::ShutdownTypeLogout));
     context->setContextProperty(QStringLiteral("ShutdownType"), mapShutdownType);
 
     QQmlPropertyMap *mapSpdMethods = new QQmlPropertyMap(this);
