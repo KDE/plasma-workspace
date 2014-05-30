@@ -73,7 +73,7 @@ Q_DECLARE_METATYPE(Solid::PowerManagement::SleepState)
 KSMShutdownDlg::KSMShutdownDlg( QWindow* parent,
                                 bool maysd, bool choose, KWorkSpace::ShutdownType sdtype,
                                 const QString& theme)
-  : QQuickView(parent), //krazy:exclude=qclasses
+  : QQuickView(parent),
     m_result(false)
     // this is a WType_Popup on purpose. Do not change that! Not
     // having a popup here has severe side effects.
@@ -92,8 +92,6 @@ KSMShutdownDlg::KSMShutdownDlg( QWindow* parent,
     setPosition(screen()->virtualGeometry().center().x() - width() / 2,
                 screen()->virtualGeometry().center().y() - height() / 2);
 
-     setMinimumSize(QSize(300, 200));
-    //kDebug() << "Creating QML view";
     //QQuickView *windowContainer = QQuickView::createWindowContainer(m_view, this);
     //windowContainer->setSizePolicy(QSizePolicy::Preferred, QSizePolicy::Preferred);
     QQmlContext *context = rootContext();
@@ -146,6 +144,13 @@ KSMShutdownDlg::KSMShutdownDlg( QWindow* parent,
     if (QFile::exists(fileName)) {
         //kDebug() << "Using QML theme" << fileName;
         setSource(QUrl::fromLocalFile(fileName));
+    } else {
+        qWarning() << "Couldn't find a theme for the Shutdown dialog" << fileName;
+        return;
+    }
+
+    if(!errors().isEmpty()) {
+        qWarning() << errors();
     }
 
     connect(rootObject(), SIGNAL(logoutRequested()), SLOT(slotLogout()));

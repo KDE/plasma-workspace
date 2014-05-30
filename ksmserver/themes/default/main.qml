@@ -29,13 +29,11 @@ import "helper.js" as Helper
 import "."
 PlasmaCore.FrameSvgItem {
     id: shutdownUi
-    property int realMarginTop: margins.top
-    property int realMarginBottom: margins.bottom
-    property int realMarginLeft: margins.left
-    property int realMarginRight: margins.right
 
-    width: realMarginLeft + 2 * buttonsLayout.width + realMarginRight
-    height: realMarginTop + 4 + automaticallyDoLabel.height + 4 + buttonsLayout.height + realMarginBottom
+//     width: realMarginLeft + 2 * buttonsLayout.width + realMarginRight
+//     height: realMarginTop + units.smallSpacing + automaticallyDoLabel.height + units.smallSpacing + buttonsLayout.height + realMarginBottom
+    width: Math.max(leftPicture.width * 2, shutdownButton.implicitWidth*2)
+    height: Math.max(leftPicture.height, buttonsLayout.height)
 
     imagePath: "dialogs/shutdowndialog"
 
@@ -47,8 +45,8 @@ PlasmaCore.FrameSvgItem {
     signal cancelRequested()
     signal lockScreenRequested()
 
-    property variant focusedButton: 0
-    property variant lastButton: 0
+    property variant focusedButton: null
+    property variant lastButton: null
     property int automaticallyDoSeconds: 30
     onLastButtonChanged: automaticallyDoSeconds = 30
     onAutomaticallyDoSecondsChanged: {
@@ -85,57 +83,24 @@ PlasmaCore.FrameSvgItem {
     }*/
 
     Component.onCompleted: {
-        // Hacky but works :-)
-        logoutButton.width = buttonsLayout.width
-        shutdownButton.width = buttonsLayout.width
-        rebootButton.width = buttonsLayout.width
-
-        if (margins.left == 0) {
-            realMarginTop = 9
-            realMarginBottom = 7
-            realMarginLeft = 12
-            realMarginRight = 12
+        switch (sdtype) {
+            case ShutdownType.ShutdownTypeNone:
+                focusedButton = logoutButton
+                break;
+            case ShutdownType.ShutdownTypeHalt:
+                if (maysd)
+                    focusedButton = shutdownButton;
+                break;
+            case ShutdownType.ShutdownTypeReboot:
+                if (maysd)
+                    focusedButton = rebootButton
+                break;
         }
-
-        if (leftPicture.naturalSize.width < 1) {
-            // [1]
-            //background.elementId = "background"
-            shutdownUi.width = buttonsLayout.width + realMarginLeft + realMarginRight
-            shutdownUi.height += realMarginTop + realMarginBottom
-            automaticallyDoLabel.anchors.topMargin = 2*realMarginTop
-            automaticallyDoLabel.anchors.rightMargin = 2*realMarginRight
-            leftPicture.anchors.leftMargin = 2*realMarginLeft
-            buttonsLayout.anchors.rightMargin = 2*realMarginRight
-        } else {
-            var pictureWidth = buttonsLayout.height * leftPicture.naturalSize.width / leftPicture.naturalSize.height
-
-            if (pictureWidth < leftPicture.naturalSize.width) {
-                leftPicture.width = pictureWidth;
-                leftPicture.height = pictureWidth * leftPicture.naturalSize.height / leftPicture.naturalSize.width
-            }
-
-            shutdownUi.width = realMarginLeft + leftPicture.width + buttonsLayout.width + realMarginRight
-        }
-
-        if (sdtype == ShutdownType.ShutdownTypeNone) {
-            focusedButton = logoutButton
-        }
-
-        if (maysd) {
-            if (sdtype == ShutdownType.ShutdownTypeHalt) {
-                focusedButton = shutdownButton
-            }
-
-            if (sdtype == ShutdownType.ShutdownTypeReboot) {
-                focusedButton = rebootButton
-            }
-        }
-
-//         focusedButton.forceActiveFocus()
 
         // implement label accelerators in the buttons (the '&' in button's text).
+        //TODO: dont' add shutdownButton and rebootButton if not "maysd"
         var buttons = [ logoutButton, shutdownButton, rebootButton, cancelButton ]
-        for (var b = 0; b < buttons.length; ++b ) {
+        for (var b in buttons ) {
             if (buttons[b].accelKey > -1) {
                 Helper.buttonForAccel[String.fromCharCode(buttons[b].accelKey)] = buttons[b];
             }
@@ -162,6 +127,12 @@ PlasmaCore.FrameSvgItem {
 
     PlasmaComponents.Label {
         id: automaticallyDoLabel
+        anchors {
+            top: parent.top
+            right: parent.right
+            left: parent.left
+            margins: units.smallSpacing
+        }
 
         wrapMode: Text.WordWrap
         horizontalAlignment: Text.AlignRight
@@ -174,14 +145,6 @@ PlasmaCore.FrameSvgItem {
             } else {
                 ""
             }
-        anchors {
-            top: parent.top
-            topMargin: realMarginTop
-            right: parent.right
-            rightMargin: realMarginRight
-            left: parent.left
-            leftMargin: realMarginLeft
-        }
     }
 
     PlasmaCore.SvgItem {
@@ -192,7 +155,7 @@ PlasmaCore.FrameSvgItem {
         anchors {
             verticalCenter: parent.verticalCenter
             left: parent.left
-            leftMargin: realMarginLeft
+            margins: units.largeSpacing
         }
 
         svg: PlasmaCore.Svg {
@@ -202,60 +165,50 @@ PlasmaCore.FrameSvgItem {
     }
 
     FocusScope {
-        id: scope
-        width: buttonsLayout.width
-        height: buttonsLayout.height
+        anchors.margins: units.largeSpacing
 
         anchors {
             top: automaticallyDoLabel.bottom
-            topMargin: 4
             right: parent.right
-            rightMargin: realMarginRight
             bottom: parent.bottom
-            bottomMargin: realMarginBottom
+            left: leftPicture.right
+            margins: units.largeSpacing
         }
 
         Column {
             id: buttonsLayout
-            anchors.bottom: parent.bottom
-            spacing: 9
+            spacing: units.smallSpacing
+            width: parent.width
 
-            Column {
-                spacing: 4
+            PlasmaComponents.Button {
+                id: logoutButton
+                text: i18n("Logout")
+                iconSource: "system-log-out"
+                width: parent.width
+                visible: (choose || sdtype == ShutdownType.ShutdownTypeNone)
 
-                PlasmaComponents.Button {
-                    id: logoutButton
-                    text: i18n("Logout")
-                    iconSource: "system-log-out"
-                    anchors.right: parent.right
-                    visible: (choose || sdtype == ShutdownType.ShutdownTypeNone)
-//                     tabStopNext: shutdownButton
-//                     tabStopBack: cancelButton
-
-                    onClicked: {
-                        //console.log("main.qml: logoutRequested")
-                        logoutRequested()
-                    }
-
-                    onActiveFocusChanged: if (activeFocus) {
-                        shutdownUi.focusedButton = logoutButton
-                    }
+                onClicked: {
+                    //console.log("main.qml: logoutRequested")
+                    logoutRequested()
                 }
 
-                PlasmaComponents.Button {
-                    id: shutdownButton
-                    text: i18n("Turn Off Computer")
-                    iconSource: "system-shutdown"
-                    anchors.right: parent.right
-                    visible: (choose || sdtype == ShutdownType.ShutdownTypeHalt)
-//                     menu: spdMethods.StandbyState | spdMethods.SuspendState | spdMethods.HibernateState
-//                     tabStopNext: rebootButton
-//                     tabStopBack: logoutButton
+                onActiveFocusChanged: if (activeFocus) {
+                    shutdownUi.focusedButton = logoutButton
+                }
+            }
 
-                    onClicked: {
-                        //console.log("main.qml: haltRequested")
-                        haltRequested()
-                    }
+            PlasmaComponents.Button {
+                id: shutdownButton
+                text: i18n("Turn Off Computer")
+                iconSource: "system-shutdown"
+                width: parent.width
+                visible: (choose || sdtype == ShutdownType.ShutdownTypeHalt)
+//                     menu: spdMethods.StandbyState | spdMethods.SuspendState | spdMethods.HibernateState
+
+                onClicked: {
+                    //console.log("main.qml: haltRequested")
+                    haltRequested()
+                }
 
 //                     onPressAndHold: {
 //                         if (!menu) {
@@ -280,32 +233,30 @@ PlasmaCore.FrameSvgItem {
 //                         contextMenu.open()
 //                     }
 
-                    onActiveFocusChanged: if (activeFocus) {
-                        shutdownUi.focusedButton = shutdownButton
-                    }
+                onActiveFocusChanged: if (activeFocus) {
+                    shutdownUi.focusedButton = shutdownButton
                 }
+            }
 
-                Component {
-                    id: shutdownOptionsComponent
-                    ContextMenu {
-                        visualParent: shutdownButton
-                    }
+            Component {
+                id: shutdownOptionsComponent
+                ContextMenu {
+                    visualParent: shutdownButton
                 }
+            }
 
-                PlasmaComponents.Button {
-                    id: rebootButton
-                    text: i18n("Restart Computer")
-                    iconSource: "system-reboot"
-                    anchors.right: parent.right
-                    visible: (choose || sdtype == ShutdownType.ShutdownTypeReboot)
+            PlasmaComponents.Button {
+                id: rebootButton
+                text: i18n("Restart Computer")
+                iconSource: "system-reboot"
+                width: parent.width
+                visible: (choose || sdtype == ShutdownType.ShutdownTypeReboot)
 //                     menu: rebootOptions["options"].length > 0
-//                     tabStopNext: cancelButton
-//                     tabStopBack: shutdownButton
 
-                    onClicked: {
-                        //console.log("main.qml: rebootRequested")
-                        rebootRequested()
-                    }
+                onClicked: {
+                    //console.log("main.qml: rebootRequested")
+                    rebootRequested()
+                }
 
                     // recursive, let's hope the user does not have too many menu entries.
                     function findAndCreateMenu(index, options, menus, menuId)
@@ -398,31 +349,24 @@ PlasmaCore.FrameSvgItem {
 //                                 }
 //                                 contextMenu.clicked.connect(shutdownUi.rebootRequested2)
 //                             }
+//
 //                         }
 //                         contextMenu.open()
 //                     }
 
-                    onActiveFocusChanged: if (activeFocus) {
-                        shutdownUi.focusedButton = rebootButton
-                    }
-                }
-
-                Component {
-                    id: rebootOptionsComponent
-                    ContextMenu {
-                        visualParent: rebootButton
-                    }
+                onActiveFocusChanged: if (activeFocus) {
+                    shutdownUi.focusedButton = rebootButton
                 }
             }
 
+            Item { width: 1; height: 1 } //add double spacing for the cancel button
+
             PlasmaComponents.Button {
                 id: cancelButton
-                anchors.right: parent.right
+
                 text: i18n("Cancel")
                 iconSource: "dialog-cancel"
-//                 smallButton: true
-//                 tabStopNext: logoutButton
-//                 tabStopBack: rebootButton
+                width: parent.width
 
                 onClicked: {
                     cancelRequested()
@@ -430,6 +374,13 @@ PlasmaCore.FrameSvgItem {
 
                 onActiveFocusChanged: if (activeFocus) {
                     shutdownUi.focusedButton = cancelButton
+                }
+            }
+
+            Component {
+                id: rebootOptionsComponent
+                ContextMenu {
+                    visualParent: rebootButton
                 }
             }
         }
