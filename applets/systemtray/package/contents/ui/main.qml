@@ -59,7 +59,7 @@ Item {
     property QtObject expandedTask: null;
 
     function togglePopup() {
-        print("toggle popup => " + !plasmoid.expanded);
+//         print("toggle popup => " + !plasmoid.expanded);
         if (!plasmoid.expanded) {
             plasmoid.expanded = true
         } else {
