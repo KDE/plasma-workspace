@@ -50,6 +50,12 @@ PlasmaCore.FrameSvgItem {
     property variant focusedButton: 0
     property variant lastButton: 0
     property int automaticallyDoSeconds: 30
+    onLastButtonChanged: automaticallyDoSeconds = 30
+    onAutomaticallyDoSecondsChanged: {
+        if (focusedButton && automaticallyDoSeconds == 0) {
+            focusedButton.clicked()
+        }
+    }
 
 //     PlasmaCore.Theme {
 //         id: theme
@@ -146,22 +152,11 @@ PlasmaCore.FrameSvgItem {
 
     Timer {
         repeat: true
-        running: true
+        running: focusedButton!=null
         interval: 1000
 
         onTriggered: {
-            if (focusedButton != lastButton) {
-                lastButton = focusedButton
-                automaticallyDoSeconds = 30
-            }
-            if (focusedButton != 0) {
-                if (automaticallyDoSeconds <= 0) { // timeout is at 0, do selected action
-                    focusedButton.clicked()
-                // following code is required to provide a clean way to translate strings
-                }
-
-                --automaticallyDoSeconds;
-            }
+            --automaticallyDoSeconds
         }
     }
 
