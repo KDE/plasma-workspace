@@ -55,10 +55,6 @@ PlasmaCore.FrameSvgItem {
         }
     }
 
-//     PlasmaCore.Theme {
-//         id: theme
-//     }
-
     /* This is not necessary for themes that follow the specification.
        Uncomment this and [1] below if the dialog appears without borders or background.
        You should not use broken themes though.
