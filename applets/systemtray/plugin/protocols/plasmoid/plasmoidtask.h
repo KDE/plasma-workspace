@@ -79,6 +79,8 @@ public:
     QString shortcut() const { return m_shortcut; }
     void    setShortcut(QString text);
 
+    Q_INVOKABLE void showMenu(int x, int y);
+
     Q_INVOKABLE void setLocation(Plasma::Types::Location loc);
 
     Q_INVOKABLE void configure();

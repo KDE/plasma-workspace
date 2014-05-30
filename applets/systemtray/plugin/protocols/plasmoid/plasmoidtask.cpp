@@ -24,12 +24,15 @@
 
 #include <QtCore/QMetaEnum>
 #include <QAction>
+#include <QQuickWindow>
 #include <kdeclarative/qmlobject.h>
 
 #include <KActionCollection>
 #include <KPluginInfo>
+#include <KLocalizedString>
 
 #include <QLoggingCategory>
+#include <QMenu>
 
 #include <Plasma/Applet>
 #include <Plasma/PluginLoader>
@@ -212,6 +215,75 @@ void PlasmoidTask::setExpanded(bool expanded)
     }
 }
 
+void PlasmoidTask::showMenu(int x, int y)
+{
+    QPoint pos(x, y);
+
+    QQuickWindow *w = 0;
+    if (taskItem()) {
+        w = taskItem()->window();
+    }
+    if (w) {
+        pos = taskItem()->mapToScene(pos).toPoint() + w->position();
+    }
+
+    QMenu desktopMenu;
+    foreach (QAction *action, m_applet->contextualActions()) {
+        if (action) {
+            desktopMenu.addAction(action);
+        }
+    }
+    if (m_applet->actions()->action("configure")) {
+        desktopMenu.addAction(m_applet->actions()->action("configure"));
+    }
+
+
+    if (parent() && parent()->parent()) {
+        Host* h = qobject_cast<Host*>(parent()->parent());
+        if (h) {
+            QQuickItem* rootItem = h->rootItem();
+            if (rootItem) {
+                Plasma::Applet *systrayApplet = rootItem->property("_plasma_applet").value<Plasma::Applet*>();
+
+                if (systrayApplet) {
+                    QMenu *systrayMenu = new QMenu(i18n("Systemtray Options"), &desktopMenu);
+
+                    foreach (QAction *action, systrayApplet->contextualActions()) {
+                        if (action) {
+                            systrayMenu->addAction(action);
+                        }
+                    }
+                    if (systrayApplet->actions()->action("configure")) {
+                        systrayMenu->addAction(systrayApplet->actions()->action("configure"));
+                    }
+                    if (systrayApplet->actions()->action("remove")) {
+                        systrayMenu->addAction(systrayApplet->actions()->action("remove"));
+                    }
+                    desktopMenu.addMenu(systrayMenu);
+
+                    if (systrayApplet->containment() && status() >= Active) {
+                        QMenu *containmentMenu = new QMenu(i18nc("%1 is the name of the containment", "%1 Options", systrayApplet->containment()->title()), &desktopMenu);
+
+                        foreach (QAction *action, systrayApplet->containment()->contextualActions()) {
+                            if (action) {
+                                containmentMenu->addAction(action);
+                            }
+                        }
+                        foreach (QAction *action, systrayApplet->containment()->actions()->actions()) {
+                            if (action) {
+                                containmentMenu->addAction(action);
+                            }
+                        }
+                        desktopMenu.addMenu(containmentMenu);
+                    }
+                }
+            }
+        }
+    }
+
+
+    desktopMenu.exec(pos);
+}
 
 }
 

@@ -44,15 +44,21 @@ Item {
         anchors {
             fill: parent
         }
+        acceptedButtons: Qt.LeftButton | Qt.RightButton
         onClicked: {
-            if (modelData.expanded) {
-                if (plasmoidItem.parent.parent.parent.objectName == "taskListDelegate") {
-                    modelData.expanded = false;
+            if (mouse.button == Qt.LeftButton) {
+                if (modelData.expanded) {
+                    if (plasmoidItem.parent.parent.parent.objectName == "taskListDelegate") {
+                        modelData.expanded = false;
+                    } else {
+                        plasmoid.expanded = false;
+                    }
                 } else {
-                    plasmoid.expanded = false;
+                    modelData.expanded = true;
                 }
-            } else {
-                modelData.expanded = true;
+
+            } else if (mouse.button == Qt.RightButton) {
+                modelData.showMenu(mouse.x, mouse.y);
             }
         }
     }
