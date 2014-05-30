@@ -127,7 +127,7 @@ Klipper::Klipper(QObject* parent, const KSharedConfigPtr& config)
     QDBusConnection::sessionBus().registerObject("/klipper", this, QDBusConnection::ExportScriptableSlots);
 
     updateTimestamp(); // read initial X user time
-    m_clip = kapp->clipboard();
+    m_clip = qApp->clipboard();
 
     connect( m_clip, SIGNAL(changed(QClipboard::Mode)),
              this, SLOT(newClipData(QClipboard::Mode)) );
@@ -512,7 +512,7 @@ void Klipper::slotQuit()
         return;
     config.sync();
 
-    kapp->quit();
+    qApp->quit();
 
 }
 
