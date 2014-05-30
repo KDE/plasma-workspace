@@ -25,10 +25,10 @@
 import QtQuick 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
-import "helper.js" as Helper
-import "."
+
 PlasmaCore.FrameSvgItem {
     id: shutdownUi
+    property var buttonForAccel: Array()
 
 //     width: realMarginLeft + 2 * buttonsLayout.width + realMarginRight
 //     height: realMarginTop + units.smallSpacing + automaticallyDoLabel.height + units.smallSpacing + buttonsLayout.height + realMarginBottom
@@ -102,7 +102,7 @@ PlasmaCore.FrameSvgItem {
         var buttons = [ logoutButton, shutdownButton, rebootButton, cancelButton ]
         for (var b in buttons ) {
             if (buttons[b].accelKey > -1) {
-                Helper.buttonForAccel[String.fromCharCode(buttons[b].accelKey)] = buttons[b];
+                shutdownUi.buttonForAccel[String.fromCharCode(buttons[b].accelKey)] = buttons[b];
             }
         }
     }
@@ -110,8 +110,8 @@ PlasmaCore.FrameSvgItem {
     // trigger action on Alt+'accelerator' key press. For example: if KSMButton.text == &Cancel,
     // pressing Alt+'C' or Alt+'c' will trigger KSMButton.clicked().
     Keys.onPressed: {
-        if ((event.modifiers & Qt.AltModifier) && Helper.buttonForAccel[String.fromCharCode(event.key)] != undefined) {
-            Helper.buttonForAccel[String.fromCharCode(event.key)].clicked()
+        if ((event.modifiers & Qt.AltModifier) && shutdownUi.buttonForAccel[String.fromCharCode(event.key)] != undefined) {
+            shutdownUi.buttonForAccel[String.fromCharCode(event.key)].clicked()
         }
     }
 
