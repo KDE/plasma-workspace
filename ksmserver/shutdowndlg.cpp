@@ -83,9 +83,6 @@ KSMShutdownDlg::KSMShutdownDlg( QWindow* parent,
     setColor(QColor(Qt::transparent));
     setFlags(Qt::FramelessWindowHint);
 
-    winId(); // workaround for Qt4.3 setWindowRole() assert
-//    setWindowRole( QStringLiteral("logoutdialog") );
-
     // Qt doesn't set this on unmanaged windows
     //FIXME: or does it?
     XChangeProperty( QX11Info::display(), winId(),
