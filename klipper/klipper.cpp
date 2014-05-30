@@ -32,15 +32,12 @@
 #include <QSaveFile>
 
 #include <KGlobalAccel>
-#include <KLocale>
 #include <KMessageBox>
 #include <KSessionManager>
 #include <KStandardDirs>
-#include <KGlobalSettings>
 #include <KActionCollection>
 #include <KToggleAction>
 #include <KTextEdit>
-#include <KApplication>
 
 #include "configdialog.h"
 #include "klippersettings.h"

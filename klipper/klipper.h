@@ -27,8 +27,6 @@
 #include <QTimer>
 #include <QClipboard>
 
-#include <KGlobal>
-
 #include "urlgrabber.h"
 
 class KToggleAction;

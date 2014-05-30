@@ -22,7 +22,6 @@
 
 #include "tray.h"
 
-#include <KGlobal>
 #include <KLocalizedString>
 #include <KNotification>
 
