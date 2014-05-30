@@ -230,6 +230,7 @@ void ShellCorona::setShell(const QString &shell)
     package.setPath(shell);
     package.setAllowExternalPaths(true);
     setPackage(package);
+    d->desktopDefaultsConfig = KConfigGroup(KSharedConfig::openConfig(package.filePath("defaults")), "Desktop");
 
     if (d->activityConsumer->serviceStatus() == KActivities::Consumer::Unknown) {
         connect(d->activityConsumer, SIGNAL(serviceStatusChanged(Consumer::ServiceStatus)), SLOT(load()), Qt::UniqueConnection);
