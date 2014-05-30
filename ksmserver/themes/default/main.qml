@@ -111,23 +111,17 @@ PlasmaCore.FrameSvgItem {
             shutdownUi.width = realMarginLeft + leftPicture.width + buttonsLayout.width + realMarginRight
         }
 
-        if (choose || sdtype == ShutdownType.ShutdownTypeNone) {
-            if (sdtype == ShutdownType.ShutdownTypeNone) {
-                focusedButton = logoutButton
-            }
+        if (sdtype == ShutdownType.ShutdownTypeNone) {
+            focusedButton = logoutButton
         }
 
         if (maysd) {
-            if(choose || sdtype == ShutdownType.ShutdownTypeHalt) {
-                if (sdtype == ShutdownType.ShutdownTypeHalt) {
-                    focusedButton = shutdownButton
-                }
+            if (sdtype == ShutdownType.ShutdownTypeHalt) {
+                focusedButton = shutdownButton
             }
 
-            if (choose || sdtype == ShutdownType.ShutdownTypeReboot) {
-                if (sdtype == ShutdownType.ShutdownTypeReboot) {
-                    focusedButton = rebootButton
-                }
+            if (sdtype == ShutdownType.ShutdownTypeReboot) {
+                focusedButton = rebootButton
             }
         }
 
