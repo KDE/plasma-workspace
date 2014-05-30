@@ -25,7 +25,6 @@
 #include <QStyleOption>
 
 #include <KLocalizedString>
-#include <KDebug>
 
 #include "historyitem.h"
 #include "history.h"

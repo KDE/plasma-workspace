@@ -18,10 +18,10 @@
 */
 #include "historyitem.h"
 
+#include <QDebug>
 #include <QMap>
 #include <QPixmap>
 
-#include <KDebug>
 #include <kurlmimedata.h>
 
 #include "historystringitem.h"
@@ -41,7 +41,7 @@ HistoryItem* HistoryItem::create( const QMimeData* data )
 #if 0
     int i=0;
     foreach ( QString format, data->formats() ) {
-        kDebug() << "format(" << i++ <<"): " << format;
+        qDebug() << "format(" << i++ <<"): " << format;
     }
 #endif
     if (data->hasUrls())
@@ -90,7 +90,7 @@ HistoryItem* HistoryItem::create( QDataStream& dataStream ) {
         dataStream >> image;
         return new HistoryImageItem( image );
     }
-    kWarning() << "Failed to restore history item: Unknown type \"" << type << "\"" ;
+    qWarning() << "Failed to restore history item: Unknown type \"" << type << "\"" ;
     return 0;
 }
 

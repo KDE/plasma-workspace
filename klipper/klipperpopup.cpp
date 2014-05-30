@@ -21,6 +21,7 @@
 #include "klipperpopup.h"
 
 #include <QApplication>
+#include <QDebug>
 #include <QDesktopWidget>
 #include <QKeyEvent>
 #include <QWidgetAction>
@@ -29,7 +30,6 @@
 #include <KLineEdit>
 #include <KLocalizedString>
 #include <KWindowSystem>
-#include <KDebug>
 
 #include "history.h"
 #include "klipper.h"
@@ -192,7 +192,7 @@ void KlipperPopup::keyPressEvent( QKeyEvent* e ) {
                       e->count() );
         QMenu::keyPressEvent( &ke );
 #ifdef DEBUG_EVENTS__
-        kDebug() << "Passing this event to ancestor (KMenu): " << e << "->" << ke;
+        qDebug() << "Passing this event to ancestor (KMenu): " << e << "->" << ke;
 #endif
         if (ke.isAccepted()) {
             e->accept();
@@ -215,7 +215,7 @@ void KlipperPopup::keyPressEvent( QKeyEvent* e ) {
     case Qt::Key_Escape:
     {
 #ifdef DEBUG_EVENTS__
-        kDebug() << "Passing this event to ancestor (KMenu): " << e;
+        qDebug() << "Passing this event to ancestor (KMenu): " << e;
 #endif
         QMenu::keyPressEvent(e);
 
@@ -235,7 +235,7 @@ void KlipperPopup::keyPressEvent( QKeyEvent* e ) {
     default:
     {
 #ifdef DEBUG_EVENTS__
-        kDebug() << "Passing this event down to child (KLineEdit): " << e;
+        qDebug() << "Passing this event down to child (KLineEdit): " << e;
 #endif
         setActiveAction(actions().at(actions().indexOf(m_filterWidgetAction)));
         QString lastString = m_filterWidget->text();

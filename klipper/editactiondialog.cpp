@@ -22,9 +22,9 @@
 
 #include <QItemDelegate>
 #include <QComboBox>
+#include <QDebug>
 #include <QDialogButtonBox>
 
-#include <KDebug>
 #include <KIconLoader>
 #include <kwindowconfig.h>
 #include <KWindowConfig>
@@ -296,7 +296,7 @@ EditActionDialog::EditActionDialog(QWidget* parent)
     KWindowConfig::restoreWindowSize(windowHandle(), grp);
     QByteArray hdrState = grp.readEntry("ColumnState", QByteArray());
     if (!hdrState.isEmpty()) {
-        kDebug() << "Restoring column state";
+        qDebug() << "Restoring column state";
         m_ui->twCommandList->horizontalHeader()->restoreState(QByteArray::fromBase64(hdrState));
     }
 							// do this after restoreState()
@@ -322,7 +322,7 @@ void EditActionDialog::setAction(ClipAction* act, int commandIdxToSelect)
 void EditActionDialog::updateWidgets(int commandIdxToSelect)
 {
     if (!m_action) {
-        kDebug() << "no action to edit was set";
+        qDebug() << "no action to edit was set";
         return;
     }
 
@@ -341,7 +341,7 @@ void EditActionDialog::updateWidgets(int commandIdxToSelect)
 void EditActionDialog::saveAction()
 {
     if (!m_action) {
-        kDebug() << "no action to edit was set";
+        qDebug() << "no action to edit was set";
         return;
     }
 
@@ -360,7 +360,7 @@ void EditActionDialog::slotAccepted()
 {
     saveAction();
 
-    kDebug() << "Saving dialogue state";
+    qDebug() << "Saving dialogue state";
     KConfigGroup grp = KSharedConfig::openConfig()->group("EditActionDialog");
     KWindowConfig::saveWindowSize(windowHandle(), grp);
     grp.writeEntry("ColumnState",

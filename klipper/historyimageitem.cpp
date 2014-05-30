@@ -21,8 +21,6 @@
 #include <QMimeData>
 #include <QCryptographicHash>
 
-#include <KDebug>
-
 namespace {
     QByteArray compute_uuid(const QPixmap& data) {
         QByteArray buffer;

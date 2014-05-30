@@ -24,9 +24,10 @@
 #include <KLocale>
 #include <KMenu>
 #include <KShortcutsEditor>
-#include <KDebug>
 #include <KEditListWidget>
 #include <kwindowconfig.h>
+
+#include <QDebug>
 
 #include "klipper.h"
 #include "editactiondialog.h"
@@ -65,7 +66,7 @@ ActionsWidget::ActionsWidget(QWidget* parent)
     QByteArray hdrState = grp.readEntry("ColumnState", QByteArray());
     if (!hdrState.isEmpty())
     {
-        kDebug() << "Restoring column state";
+        qDebug() << "Restoring column state";
         m_ui.kcfg_ActionList->header()->restoreState(QByteArray::fromBase64(hdrState));
     }
     else
@@ -100,7 +101,7 @@ void ActionsWidget::setActionList(const ActionList& list)
 
     foreach (ClipAction* action, list) {
         if (!action) {
-            kDebug() << "action is null!";
+            qDebug() << "action is null!";
             continue;
         }
 
@@ -117,7 +118,7 @@ void ActionsWidget::updateActionListView()
 
     foreach (ClipAction* action, m_actionList) {
         if (!action) {
-            kDebug() << "action is null!";
+            qDebug() << "action is null!";
             continue;
         }
 
@@ -136,7 +137,7 @@ void ActionsWidget::updateActionListView()
 void ActionsWidget::updateActionItem( QTreeWidgetItem* item, ClipAction* action )
 {
     if ( !item || !action ) {
-        kDebug() << "null pointer passed to function, nothing done";
+        qDebug() << "null pointer passed to function, nothing done";
         return;
     }
 
@@ -169,7 +170,7 @@ ActionList ActionsWidget::actionList() const
     ActionList list;
     foreach( ClipAction* action, m_actionList ) {
         if ( !action ) {
-            kDebug() << "action is null";
+            qDebug() << "action is null";
             continue;
         }
         list.append( new ClipAction( *action ) );
@@ -182,7 +183,7 @@ void ActionsWidget::resetModifiedState()
 {
     m_ui.kcfg_ActionList->resetModifiedState();
 
-    kDebug() << "Saving column state";
+    qDebug() << "Saving column state";
     KConfigGroup grp = KSharedConfig::openConfig()->group("ActionsWidget");
     grp.writeEntry("ColumnState",
                    m_ui.kcfg_ActionList->header()->saveState().toBase64());
@@ -230,7 +231,7 @@ void ActionsWidget::onEditAction()
         ClipAction* action = m_actionList.at( idx );
 
         if ( !action ) {
-            kDebug() << "action is null";
+            qDebug() << "action is null";
             return;
         }
 
@@ -308,7 +309,7 @@ void ConfigDialog::updateSettings()
     // user clicked Ok or Apply
 
     if (!m_klipper) {
-        kDebug() << "Klipper object is null";
+        qDebug() << "Klipper object is null";
         return;
     }
 
@@ -332,7 +333,7 @@ void ConfigDialog::updateWidgets()
         m_actionsPage->setActionList(m_klipper->urlGrabber()->actionList());
         m_actionsPage->setExcludedWMClasses(m_klipper->urlGrabber()->excludedWMClasses());
     } else {
-        kDebug() << "Klipper or grabber object is null";
+        qDebug() << "Klipper or grabber object is null";
         return;
     }
     m_generalPage->updateWidgets();

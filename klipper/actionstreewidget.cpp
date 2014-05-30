@@ -18,7 +18,6 @@
    Boston, MA 02110-1301, USA.
 */
 #include "actionstreewidget.h"
-#include <KDebug>
 
 ActionsTreeWidget::ActionsTreeWidget(QWidget* parent)
     : QTreeWidget(parent), m_actionsChanged(-1), m_modified(false)

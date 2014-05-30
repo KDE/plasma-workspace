@@ -22,8 +22,6 @@
 
 #include <QAction>
 
-#include <KDebug>
-
 #include "historystringitem.h"
 #include "klipperpopup.h"
 
