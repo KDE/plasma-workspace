@@ -18,6 +18,7 @@
  */
 
 import QtQuick 2.0
+import QtQuick.Controls.Private 1.0
 import org.kde.kquickcontrolsaddons 2.0
 import org.kde.plasma.components 2.0 as PlasmaComponents
 
@@ -32,6 +33,8 @@ MouseArea {
     onSelectedChanged: {
         cfg_Image = model.path
     }
+
+    hoverEnabled: true
 
     Column {
         anchors {
@@ -97,10 +100,23 @@ MouseArea {
         }
     }
 
+    Timer {
+        interval: 1000 // FIXME TODO: Use platform value for tooltip activation delay.
+
+        running: wallpaperDelegate.containsMouse && !pressed && model.display && model.author
+
+        onTriggered: {
+            Tooltip.showText(wallpaperDelegate, Qt.point(wallpaperDelegate.mouseX, wallpaperDelegate.mouseY),
+                i18n("%1 by %2", model.display, model.author));
+        }
+    }
+
     onClicked: {
         wallpapersGrid.currentIndex = index
         cfg_Image = model.path
     }
+
+    onExited: Tooltip.hideText()
 
     Component.onCompleted: {
         if (cfg_Image == model.path) {
