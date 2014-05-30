@@ -237,7 +237,7 @@ PlasmaCore.FrameSvgItem {
                         logoutRequested()
                     }
 
-                    onActiveFocusChanged: {
+                    onActiveFocusChanged: if (activeFocus) {
                         shutdownUi.focusedButton = logoutButton
                     }
                 }
@@ -280,7 +280,7 @@ PlasmaCore.FrameSvgItem {
 //                         contextMenu.open()
 //                     }
 
-                    onActiveFocusChanged: {
+                    onActiveFocusChanged: if (activeFocus) {
                         shutdownUi.focusedButton = shutdownButton
                     }
                 }
@@ -402,7 +402,7 @@ PlasmaCore.FrameSvgItem {
 //                         contextMenu.open()
 //                     }
 
-                    onActiveFocusChanged: {
+                    onActiveFocusChanged: if (activeFocus) {
                         shutdownUi.focusedButton = rebootButton
                     }
                 }
@@ -428,7 +428,7 @@ PlasmaCore.FrameSvgItem {
                     cancelRequested()
                 }
 
-                onActiveFocusChanged: {
+                onActiveFocusChanged: if (activeFocus) {
                     shutdownUi.focusedButton = cancelButton
                 }
             }
