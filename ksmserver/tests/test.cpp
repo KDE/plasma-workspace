@@ -15,6 +15,7 @@ main(int argc, char *argv[])
     options.add("t");
     options.add("type <name>", ki18n("The type of shutdown to emulate: Default, None, Reboot, Halt or Logout"), "None");
     options.add("theme <name>", ki18n("Theme name. List with 'plasmoidviewer --list-themes'"));
+    options.add("choose", ki18n("Sets the mode where the user can choose between the different options. Use with --type."));
     KCmdLineArgs::addCmdLineOptions(options);
 
     KCmdLineArgs *args = KCmdLineArgs::parsedArgs();
@@ -39,6 +40,6 @@ main(int argc, char *argv[])
     }
 
     QString bopt;
-    (void)KSMShutdownDlg::confirmShutdown( true, true, sdtype, bopt, QStringLiteral("default") );
+    (void)KSMShutdownDlg::confirmShutdown( true, args->isSet("choose"), sdtype, bopt, QStringLiteral("default") );
 /*   (void)KSMShutdownDlg::confirmShutdown( false, false, sdtype, bopt ); */
 }
