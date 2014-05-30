@@ -34,7 +34,6 @@
 #include <KGlobalAccel>
 #include <KMessageBox>
 #include <KSessionManager>
-#include <KStandardDirs>
 #include <KActionCollection>
 #include <KToggleAction>
 #include <KTextEdit>
@@ -364,8 +363,8 @@ bool Klipper::loadHistory() {
     static const char* const failed_load_warning =
         "Failed to load history resource. Clipboard history cannot be read.";
     // don't use "appdata", klipper is also a kicker applet
-    QString history_file_name = KStandardDirs::locateLocal( "data", "klipper/history2.lst" );
-    QFile history_file( history_file_name );
+    QFile history_file(QStandardPaths::locate(QStandardPaths::GenericDataLocation,
+                                              QStringLiteral("klipper/history2.lst")));
     if ( !history_file.exists() ) {
         qWarning() << failed_load_warning << ": " << "History file does not exist" ;
         return false;
@@ -424,7 +423,8 @@ void Klipper::saveHistory(bool empty) {
     static const char* const failed_save_warning =
         "Failed to save history. Clipboard history cannot be saved.";
     // don't use "appdata", klipper is also a kicker applet
-    QString history_file_name( KStandardDirs::locateLocal( "data", "klipper/history2.lst" ) );
+    QString history_file_name(QStandardPaths::locate(QStandardPaths::GenericDataLocation,
+                                                     QStringLiteral("klipper/history2.lst")));
     if ( history_file_name.isNull() || history_file_name.isEmpty() ) {
         qWarning() << failed_save_warning ;
         return;
