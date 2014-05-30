@@ -165,10 +165,9 @@ PlasmaCore.FrameSvgItem {
         }
     }
 
-    Text {
+    PlasmaComponents.Label {
         id: automaticallyDoLabel
-//         font.pointSize: theme.desktopFont.pointSize >= 10 ? theme.desktopFont.pointSize*0.9 : theme.desktopFont.pointSize
-        color: theme.textColor
+
         wrapMode: Text.WordWrap
         horizontalAlignment: Text.AlignRight
         text: if (focusedButton.text == logoutButton.text) {
