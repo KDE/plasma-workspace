@@ -132,7 +132,6 @@ PlasmaCore.FrameSvgItem {
         }
 
 //         focusedButton.forceActiveFocus()
-        timer.running = true;
 
         // implement label accelerators in the buttons (the '&' in button's text).
         var buttons = [ logoutButton, shutdownButton, rebootButton, cancelButton ]
@@ -152,9 +151,8 @@ PlasmaCore.FrameSvgItem {
     }
 
     Timer {
-        id: timer
         repeat: true
-        running: false
+        running: true
         interval: 1000
 
         onTriggered: {
@@ -166,17 +164,6 @@ PlasmaCore.FrameSvgItem {
                 if (automaticallyDoSeconds <= 0) { // timeout is at 0, do selected action
                     focusedButton.clicked()
                 // following code is required to provide a clean way to translate strings
-                } else if (focusedButton.text == logoutButton.text) {
-                    automaticallyDoLabel.text = i18np("Logging out in 1 second.",
-                                                      "Logging out in %1 seconds.", automaticallyDoSeconds)
-                } else if (focusedButton.text == shutdownButton.text) {
-                    automaticallyDoLabel.text = i18np("Turning off computer in 1 second.",
-                                                      "Turning off computer in %1 seconds.", automaticallyDoSeconds)
-                } else if (focusedButton.text == rebootButton.text) {
-                    automaticallyDoLabel.text = i18np("Restarting computer in 1 second.",
-                                                      "Restarting computer in %1 seconds.", automaticallyDoSeconds)
-                } else {
-                    automaticallyDoLabel.text = ""
                 }
 
                 --automaticallyDoSeconds;
@@ -190,6 +177,15 @@ PlasmaCore.FrameSvgItem {
         color: theme.textColor
         wrapMode: Text.WordWrap
         horizontalAlignment: Text.AlignRight
+        text: if (focusedButton.text == logoutButton.text) {
+                i18np("Logging out in 1 second.", "Logging out in %1 seconds.", automaticallyDoSeconds)
+            } else if (focusedButton.text == shutdownButton.text) {
+                i18np("Turning off computer in 1 second.", "Turning off computer in %1 seconds.", automaticallyDoSeconds)
+            } else if (focusedButton.text == rebootButton.text) {
+                i18np("Restarting computer in 1 second.", "Restarting computer in %1 seconds.", automaticallyDoSeconds)
+            } else {
+                ""
+            }
         anchors {
             top: parent.top
             topMargin: realMarginTop
