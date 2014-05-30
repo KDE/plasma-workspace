@@ -21,6 +21,7 @@
 #include <netwm.h>
 
 #include <QDebug>
+#include <QMimeDatabase>
 #include <QHash>
 #include <QTimer>
 #include <QUuid>
@@ -34,7 +35,6 @@
 #include <KStringHandler>
 #include <KGlobal>
 #include <KMimeTypeTrader>
-#include <KMimeType>
 #include <KCharMacroExpander>
 
 #include "klippersettings.h"
@@ -135,9 +135,8 @@ void URLGrabber::matchingMimeActions(const QString& clipData)
     }
 
     // try to figure out if clipData contains a filename
-    KMimeType::Ptr mimetype = KMimeType::findByUrl( url, 0,
-                                                    false,
-                                                    true /*fast mode*/ );
+    QMimeDatabase db;
+    QMimeType mimetype = db.mimeTypeForUrl(url);
 
     // let's see if we found some reasonable mimetype.
     // If we do we'll populate menu with actions for apps
@@ -148,15 +147,14 @@ void URLGrabber::matchingMimeActions(const QString& clipData)
     // still treat that as html page, because determining a mimetype using kio
     // might take a long time, and i want this function to be quick!
     if ( ( clipData.startsWith( QLatin1String("http://") ) || clipData.startsWith( QLatin1String("https://") ) )
-         && mimetype->name() != "text/html" )
+         && mimetype.name() != QLatin1String("text/html") )
     {
-        // use a fake path to create a mimetype that corresponds to "text/html"
-        mimetype = KMimeType::findByPath( "/tmp/klipper.html", 0, true /*fast mode*/ );
+        mimetype = db.mimeTypeForName(QStringLiteral("text/html"));
     }
 
-    if ( !mimetype->isDefault() ) {
-        ClipAction* action = new ClipAction( QString(), mimetype->comment() );
-        KService::List lst = KMimeTypeTrader::self()->query( mimetype->name(), "Application" );
+    if ( !mimetype.isDefault() ) {
+        ClipAction* action = new ClipAction( QString(), mimetype.comment() );
+        KService::List lst = KMimeTypeTrader::self()->query( mimetype.name(), "Application" );
         foreach( const KService::Ptr &service, lst ) {
             QHash<QChar,QString> map;
             map.insert( 'i', "--icon " + service->icon() );
