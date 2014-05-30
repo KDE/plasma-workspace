@@ -38,7 +38,6 @@ class QAction;
 class QMenu;
 class QMimeData;
 class HistoryItem;
-class KlipperSessionManager;
 
 class Klipper : public QObject
 {
@@ -192,7 +191,6 @@ private:
 
     bool blockFetchingNewData();
     QString cycleText() const;
-    KlipperSessionManager* m_sessionManager;
     KActionCollection* m_collection;
 };
 

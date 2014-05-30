@@ -33,7 +33,6 @@
 
 #include <KGlobalAccel>
 #include <KMessageBox>
-#include <KSessionManager>
 #include <KActionCollection>
 #include <KToggleAction>
 #include <KTextEdit>
@@ -85,31 +84,6 @@ namespace {
     };
 }
 
-/**
- * Helper class to save history upon session exit.
- */
-class KlipperSessionManager : public KSessionManager
-{
-public:
-    KlipperSessionManager( Klipper* k )
-        : klipper( k )
-        {}
-
-    virtual ~KlipperSessionManager() {}
-
-    /**
-     * Save state upon session exit.
-     *
-     * Saving history on session save
-     */
-    virtual bool commitData( QSessionManager& ) {
-        klipper->saveSession();
-        return true;
-    }
-private:
-    Klipper* klipper;
-};
-
 // config == KGlobal::config for process, otherwise applet
 Klipper::Klipper(QObject* parent, const KSharedConfigPtr& config)
     : QObject( parent )
@@ -117,7 +91,6 @@ Klipper::Klipper(QObject* parent, const KSharedConfigPtr& config)
     , m_locklevel( 0 )
     , m_config( config )
     , m_pendingContentsCheck( false )
-    , m_sessionManager( new KlipperSessionManager( this ))
 {
     setenv("KSNI_NO_DBUSMENU", "1", 1);
     QDBusConnection::sessionBus().registerObject("/klipper", this, QDBusConnection::ExportScriptableSlots);
@@ -230,11 +203,13 @@ Klipper::Klipper(QObject* parent, const KSharedConfigPtr& config)
     popup->plugAction( m_showBarcodeAction );
 #endif
     popup->plugAction( m_quitAction );
+
+    // session manager interaction
+    connect(qApp, &QGuiApplication::commitDataRequest, this, &Klipper::saveSession);
 }
 
 Klipper::~Klipper()
 {
-    delete m_sessionManager;
     delete m_myURLGrabber;
 }
 
