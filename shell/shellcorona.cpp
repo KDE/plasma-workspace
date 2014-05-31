@@ -624,6 +624,9 @@ void ShellCorona::addOutput(KScreen::Output *output)
     if (!containment) {
         containment = createContainmentForActivity(currentActivity, insertPosition);
     }
+    if (!containment) {
+        return;
+    }
 
     QAction *removeAction = containment->actions()->action("remove");
     if (removeAction) {
@@ -680,8 +683,11 @@ Plasma::Containment *ShellCorona::createContainmentForActivity(const QString& ac
     }
 
     Plasma::Containment *containment = createContainment(d->desktopDefaultsConfig.readEntry("Containment", plugin));
-    containment->setActivity(activity);
-    insertContainment(activity, screenNum, containment);
+
+    if (containment) {
+        containment->setActivity(activity);
+        insertContainment(activity, screenNum, containment);
+    }
 
     return containment;
 }
