@@ -127,7 +127,7 @@ PlasmaCore.FrameSvgItem {
             top: parent.top
             right: parent.right
             left: parent.left
-            margins: units.smallSpacing
+            margins: units.largeSpacing
         }
 
         wrapMode: Text.WordWrap
