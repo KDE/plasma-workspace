@@ -65,14 +65,6 @@ Item {
         anchors.fill: parent
         anchors.margins: spacing
 
-        function isCurrentYear(date) {
-            var d = new Date();
-            if (d.getFullYear() == date.getFullYear()) {
-                return true;
-            }
-            return false;
-        }
-
         PlasmaCalendar.MonthView {
             id: monthView
             borderOpacity: 0.25
