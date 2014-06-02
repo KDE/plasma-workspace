@@ -1,34 +1,32 @@
 #include "shutdowndlg.h"
-#include <kcmdlineargs.h>
-#include <k4aboutdata.h>
-#include <kapplication.h>
 #include <kiconloader.h>
+#include <kaboutdata.h>
+#include <klocalizedstring.h>
 #include <qdir.h>
 #include <qtextstream.h>
-#include <qdebug.h>
-#include <kworkspace.h>
-//#include <Plasma/Theme>
-int
-main(int argc, char *argv[])
+#include <qcommandlineparser.h>
+#include <qstandardpaths.h>
+#include <qapplication.h>
+
+int main(int argc, char *argv[])
 {
-    K4AboutData about("kapptest", 0, ki18n("kapptest"), "version");
-    KCmdLineArgs::init(argc, argv, &about);
+    QApplication app(argc, argv);
 
-    KCmdLineOptions options;
-    options.add("t");
-    options.add("type <name>", ki18n("The type of shutdown to emulate: Default, None, Reboot, Halt or Logout"), "None");
-    options.add("theme <name>", ki18n("Shutdown dialog theme."));
-    options.add("list-themes", ki18n("Lists available shutdown dialog themes"));
-    options.add("choose", ki18n("Sets the mode where the user can choose between the different options. Use with --type."));
-    KCmdLineArgs::addCmdLineOptions(options);
+    KAboutData about("kapptest", i18n("kapptest"), "version");
+    KAboutData::setApplicationData(about);
+    QCommandLineParser options;
+    options.addOption(QCommandLineOption(QStringList("t") << "type", i18n("The type of shutdown to emulate: Default, None, Reboot, Halt or Logout"), "name", "None"));
+    options.addOption(QCommandLineOption("theme", i18n("Shutdown dialog theme."), "name"));
+    options.addOption(QCommandLineOption("list-themes", i18n("Lists available shutdown dialog themes")));
+    options.addOption(QCommandLineOption("choose", i18n("Sets the mode where the user can choose between the different options. Use with --type.")));
 
-    KCmdLineArgs *args = KCmdLineArgs::parsedArgs();
+    about.setupCommandLine(&options);
+    options.process(app);
+    about.processCommandLine(&options);
 
-    KApplication a;
     KIconLoader::global()->addAppDir(QStringLiteral("ksmserver"));
 
-
-    if (args->isSet("list-themes")) {
+    if (options.isSet("list-themes")) {
         QDir dir = QStandardPaths::locate(QStandardPaths::GenericDataLocation, QStringLiteral("ksmserver/themes"), QStandardPaths::LocateDirectory);
         QStringList entries = dir.entryList(QDir::Dirs|QDir::NoDotAndDotDot);
         if (entries.isEmpty()) {
@@ -39,7 +37,7 @@ main(int argc, char *argv[])
         return 0;
     }
 
-    QString sdtypeOption = args->getOption("type").toLower();
+    QString sdtypeOption = options.value("type").toLower();
     KWorkSpace::ShutdownType sdtype = KWorkSpace::ShutdownTypeDefault;
     if (sdtypeOption == QStringLiteral("reboot")) {
         sdtype = KWorkSpace::ShutdownTypeReboot;
@@ -50,6 +48,6 @@ main(int argc, char *argv[])
     }
 
     QString bopt;
-    (void)KSMShutdownDlg::confirmShutdown( true, args->isSet("choose"), sdtype, bopt, QStringLiteral("default") );
+    (void)KSMShutdownDlg::confirmShutdown( true, options.isSet("choose"), sdtype, bopt, QStringLiteral("default") );
 /*   (void)KSMShutdownDlg::confirmShutdown( false, false, sdtype, bopt ); */
 }

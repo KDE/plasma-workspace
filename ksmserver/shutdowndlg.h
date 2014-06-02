@@ -25,8 +25,6 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #ifndef SHUTDOWNDLG_H
 #define SHUTDOWNDLG_H
 
-#include <fixx11h.h>
-
 #include <QQuickView>
 #include <QPushButton>
 #include <kworkspace.h>
