@@ -3,6 +3,9 @@
 #include <k4aboutdata.h>
 #include <kapplication.h>
 #include <kiconloader.h>
+#include <qdir.h>
+#include <qtextstream.h>
+#include <qdebug.h>
 #include <kworkspace.h>
 //#include <Plasma/Theme>
 int
@@ -14,7 +17,8 @@ main(int argc, char *argv[])
     KCmdLineOptions options;
     options.add("t");
     options.add("type <name>", ki18n("The type of shutdown to emulate: Default, None, Reboot, Halt or Logout"), "None");
-    options.add("theme <name>", ki18n("Theme name. List with 'plasmoidviewer --list-themes'"));
+    options.add("theme <name>", ki18n("Shutdown dialog theme."));
+    options.add("list-themes", ki18n("Lists available shutdown dialog themes"));
     options.add("choose", ki18n("Sets the mode where the user can choose between the different options. Use with --type."));
     KCmdLineArgs::addCmdLineOptions(options);
 
@@ -23,13 +27,19 @@ main(int argc, char *argv[])
     KApplication a;
     KIconLoader::global()->addAppDir(QStringLiteral("ksmserver"));
 
+
+    if (args->isSet("list-themes")) {
+        QDir dir = QStandardPaths::locate(QStandardPaths::GenericDataLocation, QStringLiteral("ksmserver/themes"), QStandardPaths::LocateDirectory);
+        QStringList entries = dir.entryList(QDir::Dirs|QDir::NoDotAndDotDot);
+        if (entries.isEmpty()) {
+            QTextStream(stdout) << i18n("No themes found");
+        } else {
+            QTextStream(stdout) << i18n("Found themes: ") << entries.join(", ") << '\n';
+        }
+        return 0;
+    }
+
     QString sdtypeOption = args->getOption("type").toLower();
-
-//     if (args->isSet("theme")) {
-//         Plasma::Theme::defaultTheme()->setUseGlobalSettings(false); //don't change every plasma theme!
-//         Plasma::Theme::defaultTheme()->setThemeName(args->getOption("theme"));
-//     }
-
     KWorkSpace::ShutdownType sdtype = KWorkSpace::ShutdownTypeDefault;
     if (sdtypeOption == QStringLiteral("reboot")) {
         sdtype = KWorkSpace::ShutdownTypeReboot;
