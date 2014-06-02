@@ -95,7 +95,7 @@ MouseArea {
                 iconSource: "list-remove"
                 flat: false
                 visible: model.removable
-                onClicked: imageWallpaper.removeWallpaper(model.path)
+                onClicked: imageWallpaper.removeWallpaper(model.packageName)
             }
         }
     }

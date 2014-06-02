@@ -74,6 +74,7 @@ BackgroundListModel::BackgroundListModel(Image *listener, QObject *parent)
     roleNames[ScreenshotRole] = "screenshot";
     roleNames[ResolutionRole] = "resolution";
     roleNames[PathRole] = "path";
+    roleNames[PackageNameRole] = "packageName";
     roleNames[RemovableRole] = "removable";
     setRoleNames(roleNames);
 
@@ -177,7 +178,6 @@ void BackgroundListModel::processPaths(const QStringList &paths)
         if (!contains(file) && QFile::exists(file)) {
             Plasma::Package package = Plasma::Package(new WallpaperPackage(m_structureParent.data(), m_structureParent.data()));
             package.setPath(file);
-
             if (package.isValid()) {
                 newPackages << package;
             }
@@ -367,12 +367,19 @@ QVariant BackgroundListModel::data(const QModelIndex &index, int role) const
     }
     break;
 
-    case PathRole: 
+    case PathRole:
         return QUrl::fromLocalFile(b.filePath("preferred"));
     break;
 
-    case RemovableRole:
-        return m_removableWallpapers.contains(b.filePath("preferred"));
+    case PackageNameRole:
+        return b.metadata().pluginName().isEmpty() ? b.filePath("preferred") : b.metadata().pluginName();
+    break;
+
+    case RemovableRole: {
+        QString localWallpapers = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + "/wallpapers/";
+        QString path = b.filePath("preferred");
+        return path.startsWith(localWallpapers) || m_removableWallpapers.contains(path);
+    }
     break;
 
     default:

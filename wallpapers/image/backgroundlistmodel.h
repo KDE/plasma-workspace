@@ -69,6 +69,7 @@ public:
         ScreenshotRole,
         ResolutionRole,
         PathRole,
+        PackageNameRole,
         RemovableRole
     };
 

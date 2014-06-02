@@ -660,26 +660,44 @@ void Image::pathDeleted(const QString &path)
 //FIXME: we have to save the configuration also when the dialog cancel button is clicked.
 void Image::removeWallpaper(QString name)
 {
+    QString localWallpapers = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + "/wallpapers/";
     QUrl nameUrl(name);
-    // save it
-    KConfigGroup cfg = KConfigGroup(KSharedConfig::openConfig(QStringLiteral("plasmarc")),
-                                                              QStringLiteral("Wallpapers"));
-    m_usersWallpapers = cfg.readEntry("usersWallpapers", m_usersWallpapers);
 
-    int wallpaperIndex = -1;
-    //passed as a path or as a file:// url?
-    if (nameUrl.isValid()) {
-        wallpaperIndex = m_usersWallpapers.indexOf(nameUrl.path());
-    } else {
-        wallpaperIndex = m_usersWallpapers.indexOf(name);
-    }
-    if (wallpaperIndex >= 0){
-        m_usersWallpapers.removeAt(wallpaperIndex);
+    //Package plugin name
+    if (!name.contains('/')) {
+        Plasma::Package p = Plasma::Package(new WallpaperPackage(this, this));
+        KJob *j = p.uninstall(name, localWallpapers);
+        connect(j, &KJob::finished, [=] () {
+            m_model->reload(m_usersWallpapers);
+        });
+    //absolute path in the home
+    } else if (nameUrl.path().startsWith(localWallpapers)) {
+        QFile f(nameUrl.path());
+        if (f.exists()) {
+            f.remove();
+        }
         m_model->reload(m_usersWallpapers);
-        cfg.writeEntry("usersWallpapers", m_usersWallpapers);
-        cfg.sync();
-        emit usersWallpapersChanged();
-        Q_EMIT settingsChanged(true);
+    } else {
+        // save it
+        KConfigGroup cfg = KConfigGroup(KSharedConfig::openConfig(QStringLiteral("plasmarc")),
+                                                                QStringLiteral("Wallpapers"));
+        m_usersWallpapers = cfg.readEntry("usersWallpapers", m_usersWallpapers);
+
+        int wallpaperIndex = -1;
+        //passed as a path or as a file:// url?
+        if (nameUrl.isValid()) {
+            wallpaperIndex = m_usersWallpapers.indexOf(nameUrl.path());
+        } else {
+            wallpaperIndex = m_usersWallpapers.indexOf(name);
+        }
+        if (wallpaperIndex >= 0){
+            m_usersWallpapers.removeAt(wallpaperIndex);
+            m_model->reload(m_usersWallpapers);
+            cfg.writeEntry("usersWallpapers", m_usersWallpapers);
+            cfg.sync();
+            emit usersWallpapersChanged();
+            Q_EMIT settingsChanged(true);
+        }
     }
 }
 
