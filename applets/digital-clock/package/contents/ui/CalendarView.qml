@@ -22,6 +22,13 @@ import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 
 Item {
+    /******************************************************************
+     *
+     * TODO: Revert commit bfd62154d8e892d4fdc87d27d25d07cb7841c1e6
+     *       to bring back the original agenda part
+     *
+     ******************************************************************/
+
     id: calendar
 
     Layout.minimumWidth: _minimumWidth
