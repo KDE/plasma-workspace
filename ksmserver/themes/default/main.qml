@@ -33,8 +33,8 @@ PlasmaCore.FrameSvgItem {
 
 //     width: realMarginLeft + 2 * buttonsLayout.width + realMarginRight
 //     height: realMarginTop + units.smallSpacing + automaticallyDoLabel.height + units.smallSpacing + buttonsLayout.height + realMarginBottom
-    width: Math.max(leftPicture.width * 2, shutdownButton.implicitWidth*2)
-    height: Math.max(leftPicture.height, buttonsLayout.height)
+    width: leftPicture.width + (units.gridUnit * 12)
+    height: Math.max(leftPicture.height + units.largeSpacing * 2, (buttonsLayout.height + (units.largeSpacing * 4) + automaticallyDoLabel.height))
 
     imagePath: "dialogs/shutdowndialog"
 
@@ -127,7 +127,7 @@ PlasmaCore.FrameSvgItem {
         anchors {
             top: parent.top
             right: parent.right
-            left: parent.left
+            left: leftPicture.right
             margins: units.largeSpacing
         }
 
@@ -362,7 +362,7 @@ PlasmaCore.FrameSvgItem {
                 }
             }
 
-            Item { width: 1; height: 1 } //add double spacing for the cancel button
+            Item { width: cancelButton.width; height: units.smallSpacing } //add double spacing for the cancel button
 
             PlasmaComponents.Button {
                 id: cancelButton
