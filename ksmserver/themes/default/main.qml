@@ -23,6 +23,7 @@
  instead of a custom ContextMenu component.
  */
 import QtQuick 2.0
+import QtQuick.Controls 1.1 as QtControls
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
 
@@ -158,6 +159,12 @@ PlasmaCore.FrameSvgItem {
             imagePath: "dialogs/shutdowndialog"
         }
         elementId: "picture"
+    }
+
+    QtControls.Action {
+        id: cancelAction
+        onTriggered: cancelRequested()
+        shortcut: "Escape"
     }
 
     FocusScope {
