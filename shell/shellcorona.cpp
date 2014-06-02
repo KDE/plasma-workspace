@@ -134,13 +134,6 @@ ShellCorona::ShellCorona(QObject *parent)
 {
     d->desktopDefaultsConfig = KConfigGroup(KSharedConfig::openConfig(package().filePath("defaults")), "Desktop");
 
-    //FIXME: this should be done in setShell, to support shell change
-    // but a different way to load platform specific components is needed beforehand
-    // because if we import and use two different components plugin, the second time
-    // the import is called it will fail
-    KConfigGroup cg(KSharedConfig::openConfig(package().filePath("defaults")), "General");
-    KDeclarative::KDeclarative::setRuntimePlatform(cg.readEntry("DefaultRuntimePlatform", QStringList()));
-
     new PlasmaShellAdaptor(this);
 
     QDBusConnection dbus = QDBusConnection::sessionBus();
@@ -231,14 +224,21 @@ void ShellCorona::setShell(const QString &shell)
         return;
     }
 
-    unload();
-
     d->shell = shell;
     Plasma::Package package = Plasma::PluginLoader::self()->loadPackage("Plasma/Shell");
     package.setPath(shell);
     package.setAllowExternalPaths(true);
     setPackage(package);
     d->desktopDefaultsConfig = KConfigGroup(KSharedConfig::openConfig(package.filePath("defaults")), "Desktop");
+
+    //FIXME: this would change the runtime platform to a fixed one if available
+    // but a different way to load platform specific components is needed beforehand
+    // because if we import and use two different components plugin, the second time
+    // the import is called it will fail
+   /* KConfigGroup cg(KSharedConfig::openConfig(package.filePath("defaults")), "General");
+    KDeclarative::KDeclarative::setRuntimePlatform(cg.readEntry("DefaultRuntimePlatform", QStringList()));*/
+
+    unload();
 
     if (d->activityConsumer->serviceStatus() == KActivities::Consumer::Unknown) {
         connect(d->activityConsumer, SIGNAL(serviceStatusChanged(Consumer::ServiceStatus)), SLOT(load()), Qt::UniqueConnection);
