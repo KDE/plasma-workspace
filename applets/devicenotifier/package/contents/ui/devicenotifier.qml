@@ -39,10 +39,9 @@ Item {
 
     Plasmoid.switchWidth: units.gridUnit * 10
     Plasmoid.switchHeight: units.gridUnit * 15
-    Plasmoid.icon: !sdSource.last ? "device-notifier" : sdSource.data[sdSource.last]["Icon"]
-    Plasmoid.toolTipMainText: !sdSource.last ? i18n("No devices available") : i18n("Most recent device")
-    Plasmoid.toolTipSubText: !sdSource.last ? "" : sdSource.data[sdSource.last]["Description"]
+    Plasmoid.toolTipMainText: i18n("No devices available")
     Plasmoid.status : (filterModel.count >  0) ? PlasmaCore.Types.ActiveStatus : PlasmaCore.Types.PassiveStatus
+
 
     PlasmaCore.DataSource {
         id: hpSource
@@ -70,7 +69,7 @@ Item {
         property string last
         onSourceAdded: {
             last = source;
-            processLastDevice(true)
+            processLastDevice(true);
         }
 
         onSourceRemoved: {
@@ -81,7 +80,7 @@ Item {
         }
 
         onDataChanged: {
-            processLastDevice(true)
+            processLastDevice(true);
         }
 
         onNewData: {
@@ -143,6 +142,18 @@ Item {
         }
         sortRole: "Timestamp"
         sortOrder: Qt.DescendingOrder
+        onCountChanged: {
+            var data = filterModel.get(0);
+            if (data) {
+                plasmoid.icon = data["Icon"];
+                plasmoid.toolTipMainText = i18n("Most recent device");
+                plasmoid.toolTipSubText = data["Description"];
+            } else {
+                plasmoid.icon = "device-notifier";
+                plasmoid.toolTipMainText = i18n("No devices available");
+                plasmoid.toolTipSubText = "";
+            }
+        }
     }
     Component.onCompleted: {
         if (sdSource.connectedSources.count == 0) {
