@@ -50,7 +50,6 @@ int main(int argc, char **argv)
     parser.setApplicationDescription(i18n("Run Command interface"));
     KDBusService service(KDBusService::Unique);
 
-
     parser.addVersionOption();
     parser.addHelpOption();
     parser.addVersionOption();
@@ -58,6 +57,9 @@ int main(int argc, char **argv)
 
     View view;
     view.setVisible(false);
+
+    QObject::connect(&service, SIGNAL(activateRequested(QStringList,QString)),
+                     &view, SLOT(display()));
 
     return app.exec();
 }
