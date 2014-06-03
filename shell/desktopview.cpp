@@ -126,7 +126,8 @@ void DesktopView::setDashboardShown(bool shown)
     if (shown) {
         if (m_stayBehind) {
             KWindowSystem::setType(winId(), NET::Normal);
-            KWindowSystem::clearState(winId(), NET::SkipTaskbar|NET::KeepBelow);
+            KWindowSystem::clearState(winId(), NET::KeepBelow);
+            KWindowSystem::setState(winId(), NET::SkipTaskbar|NET::SkipPager);
         }
         setFlags(Qt::FramelessWindowHint | Qt::CustomizeWindowHint);
 
@@ -160,7 +161,7 @@ bool DesktopView::event(QEvent *e)
     if (e->type() == QEvent::KeyRelease) {
         QKeyEvent *ke = static_cast<QKeyEvent *>(e);
         if (m_dashboardShown && ke->key() == Qt::Key_Escape) {
-            setDashboardShown(false);
+            static_cast<ShellCorona *>(corona())->setDashboardShown(false);
         }
     } else if (e->type() == QEvent::Close) {
         //prevent ALT+F4 from killing the shell

@@ -1,6 +1,6 @@
 [KNewStuff3]
 ProvidersUrl=http://download.kde.org/ocs/providers.xml
-Categories=Plasmoid Script
+Categories=Plasmoid Plasma5
 StandardResource=tmp
 InstallationCommand=plasmapkg2 -i %f
 UninstallCommand=plasmapkg2 -r %f
