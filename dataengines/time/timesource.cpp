@@ -135,6 +135,8 @@ void TimeSource::updateTime()
         setData(I18N_NOOP("Time"), dt.time());
         setData(I18N_NOOP("Date"), dt.date());
         setData(I18N_NOOP("DateTime"), dt);
+
+        forceImmediateUpdate();
     }
 }
 
