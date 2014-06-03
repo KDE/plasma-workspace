@@ -141,10 +141,15 @@ KSMShutdownDlg::KSMShutdownDlg( QWindow* parent,
     kdeclarative.setupBindings();
 //    windowContainer->installEventFilter(this);
 
-    Plasma::PluginLoader::setPluginLoader(new ShellPluginLoader);
-    Plasma::Package pkg = Plasma::PluginLoader::self()->loadPackage("Plasma/LookAndFeel");
-    pkg.setPath("org.kde.lookandfeel");
-    QString fileName = pkg.filePath("logoutmainscript", QString());
+    QString fileName;
+    if(theme.isEmpty()) {
+        Plasma::PluginLoader::setPluginLoader(new ShellPluginLoader);
+        Plasma::Package pkg = Plasma::PluginLoader::self()->loadPackage("Plasma/LookAndFeel");
+        pkg.setPath("org.kde.lookandfeel");
+        fileName = pkg.filePath("logoutmainscript", QString());
+    } else
+        fileName = theme;
+
     if (QFile::exists(fileName)) {
         //kDebug() << "Using QML theme" << fileName;
         setSource(QUrl::fromLocalFile(fileName));
