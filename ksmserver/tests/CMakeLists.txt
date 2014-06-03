@@ -26,4 +26,6 @@ target_link_libraries(testsh
     Qt5::Quick
     KF5::Declarative
     KF5::DBusAddons
+    KF5::Plasma
+    KF5::PlasmaQuick
 )

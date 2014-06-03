@@ -24,6 +24,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 ******************************************************************/
 
 #include "shutdowndlg.h"
+#include <shellpluginloader.h>
 
 #include <QApplication>
 #include <QDesktopWidget>
@@ -42,7 +43,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #include <QtX11Extras/qx11info_x11.h>
 #include <QScreen>
 
-#include <kdialog.h>
+#include <Plasma/PluginLoader>
 #include <kiconloader.h>
 #include <klocale.h>
 #include <kuser.h>
@@ -140,7 +141,10 @@ KSMShutdownDlg::KSMShutdownDlg( QWindow* parent,
     kdeclarative.setupBindings();
 //    windowContainer->installEventFilter(this);
 
-    QString fileName = QStandardPaths::locate(QStandardPaths::GenericDataLocation, QStringLiteral("ksmserver/themes/%1/main.qml").arg(theme));
+    Plasma::PluginLoader::setPluginLoader(new ShellPluginLoader);
+    Plasma::Package pkg = Plasma::PluginLoader::self()->loadPackage("Plasma/LookAndFeel");
+    pkg.setPath("org.kde.lookandfeel");
+    QString fileName = pkg.filePath("logoutmainscript", QString());
     if (QFile::exists(fileName)) {
         //kDebug() << "Using QML theme" << fileName;
         setSource(QUrl::fromLocalFile(fileName));

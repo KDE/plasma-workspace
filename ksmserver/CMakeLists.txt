@@ -75,6 +75,8 @@ target_link_libraries(kdeinit_ksmserver
     Qt5::Quick
     KF5::Declarative
     KF5::DBusAddons
+    KF5::Plasma
+    KF5::PlasmaQuick
 )
 
 install(TARGETS kdeinit_ksmserver ${INSTALL_TARGETS_DEFAULT_ARGS})
