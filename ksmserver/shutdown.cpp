@@ -154,8 +154,7 @@ void KSMServer::shutdown( KWorkSpace::ShutdownConfirm confirm,
     QString bopt;
     if ( !logoutConfirmed ) {
         KApplication::kApplication()->updateUserTimestamp();
-        QString theme = cg.readEntry( "theme", "default" );
-        logoutConfirmed = KSMShutdownDlg::confirmShutdown( maysd, choose, sdtype, bopt, theme);
+        logoutConfirmed = KSMShutdownDlg::confirmShutdown( maysd, choose, sdtype, bopt, QString());
     }
 
     if ( logoutConfirmed ) {
