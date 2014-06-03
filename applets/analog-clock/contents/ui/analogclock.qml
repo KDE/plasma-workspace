@@ -41,23 +41,23 @@ Item {
     Plasmoid.backgroundHints: "NoBackground";
     Plasmoid.preferredRepresentation: Plasmoid.compactRepresentation
 
+    PlasmaCore.DataSource {
+        id: dataSource
+        engine: "time"
+        connectedSources: "Local"
+        interval: 1000
+        onDataChanged: {
+            var date = new Date(data["Local"]["Time"]);
+            hours = date.getHours();
+            minutes = date.getMinutes();
+            seconds = date.getSeconds();
+        }
+    }
+
     Plasmoid.compactRepresentation: Item {
         MouseArea {
             anchors.fill: parent
             onClicked: plasmoid.expanded = !plasmoid.expanded
-        }
-        PlasmaCore.DataSource {
-            id: dataSource
-            engine: "time"
-            connectedSources: "Local"
-            interval: 1000
-            onDataChanged: {
-                var date = new Date(data["Local"]["Time"]);
-                hours = date.getHours();
-                minutes = date.getMinutes();
-                seconds = date.getSeconds();
-                timezoneText.text = data["Local"]["Timezone"];
-            }
         }
 
 
@@ -156,12 +156,15 @@ Item {
                 id: timezoneText
                 x: timezoneBg.margins.left
                 y: timezoneBg.margins.top
+                text: dataSource.data["Local"]["Timezone"]
             }
         }
     }
     Plasmoid.fullRepresentation: PlasmaCalendar.MonthView {
         Layout.minimumWidth: units.gridUnit * 20
         Layout.minimumHeight: units.gridUnit * 20
+
+        today: dataSource.data["Local"]["Date"]
     }
 
 }
