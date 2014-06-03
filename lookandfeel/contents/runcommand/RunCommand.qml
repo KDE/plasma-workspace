@@ -56,6 +56,10 @@ ColumnLayout {
             clearButtonShown: true
             Layout.minimumWidth: units.gridUnit * 25
             onTextChanged: {
+                if (queryField.text == "") {
+                    root.query = ""
+                    return;
+                }
                 if (!queryTimer.running)
                     queryTimer.start()
             }
