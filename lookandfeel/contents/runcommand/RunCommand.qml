@@ -82,6 +82,7 @@ ColumnLayout {
         Milou.ResultsView {
             id: results
             queryString: root.query
+            runner: root.runner
 
             onActivated: {
                 runnerWindow.visible = false
