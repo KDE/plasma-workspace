@@ -82,7 +82,7 @@ QStringList TimeEngine::sources() const
 {
     QStringList sources;
     Q_FOREACH(const QByteArray &tz, QTimeZone::availableTimeZoneIds()) {
-	sources << QString(tz.constData());
+        sources << QString(tz.constData());
     }
     sources << "Local";
     return sources;
