@@ -37,8 +37,16 @@ Item {
         Layout.minimumWidth: units.gridUnit * 20
         Layout.minimumHeight: units.gridUnit * 20
 
+        PlasmaCore.DataSource {
+            id: dataSource
+            engine: "time"
+            connectedSources: ["Local"]
+            interval: 30000
+        }
+
         MonthView {
             id: calendar
+            today: dataSource.data["Local"]["Date"]
 
             anchors {
                 top: monthHeading.bottom
