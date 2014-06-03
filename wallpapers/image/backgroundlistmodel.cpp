@@ -96,6 +96,7 @@ void BackgroundListModel::removeBackground(const QString &path)
         beginRemoveRows(QModelIndex(), index.row(), index.row());
         m_packages.removeAt(index.row());
         endRemoveRows();
+        emit countChanged();
     }
 }
 
@@ -110,6 +111,7 @@ void BackgroundListModel::reload(const QStringList &selected)
         beginRemoveRows(QModelIndex(), 0, m_packages.count() - 1);
         m_packages.clear();
         endRemoveRows();
+        emit countChanged();
     }
 
     if (!m_structureParent) {
@@ -196,6 +198,7 @@ void BackgroundListModel::processPaths(const QStringList &paths)
         beginInsertRows(QModelIndex(), start, start + newPackages.size() - 1);
         m_packages.append(newPackages);
         endInsertRows();
+        emit countChanged();
     }
     //qDebug() << t.elapsed();
 }
@@ -215,6 +218,7 @@ void BackgroundListModel::addBackground(const QString& path)
         qDebug() << "WP Bckground added " << path << pkg.isValid();
         m_packages.prepend(pkg);
         endInsertRows();
+        emit countChanged();
     }
 }
 

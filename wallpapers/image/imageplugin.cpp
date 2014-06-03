@@ -19,7 +19,6 @@
 
 #include "imageplugin.h"
 #include "image.h"
-
 #include <QQmlContext>
 #include <QtQml>
 

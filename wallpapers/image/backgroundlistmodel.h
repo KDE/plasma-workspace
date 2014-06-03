@@ -62,6 +62,7 @@ class ImageSizeFinder : public QObject, public QRunnable
 class BackgroundListModel : public QAbstractListModel
 {
     Q_OBJECT
+        Q_PROPERTY(int count READ count NOTIFY countChanged);
 
 public:
     enum {
@@ -88,6 +89,11 @@ public:
     void addBackground(const QString &path);
     QModelIndex indexOf(const QString &path) const;
     virtual bool contains(const QString &bg) const;
+
+    int count() const {return m_packages.size();};
+
+Q_SIGNALS:
+    void countChanged();
 
 protected Q_SLOTS:
     void removeBackground(const QString &path);
