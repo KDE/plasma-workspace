@@ -240,6 +240,10 @@ void PlasmoidProtocol::initDBusActivatables()
     connect(callWatcher, &QDBusPendingCallWatcher::finished,
             this,        &PlasmoidProtocol::serviceNameFetchFinished);
 
+    QDBusPendingCall systemAsync = QDBusConnection::systemBus().interface()->asyncCall("ListNames");
+    QDBusPendingCallWatcher *systemCallWatcher = new QDBusPendingCallWatcher(systemAsync, this);
+    connect(systemCallWatcher, &QDBusPendingCallWatcher::finished,
+            this,        &PlasmoidProtocol::serviceNameFetchFinished);
 }
 
 void PlasmoidProtocol::serviceNameFetchFinished(QDBusPendingCallWatcher* watcher)
