@@ -51,6 +51,7 @@ ColumnLayout {
     }
 
     RowLayout {
+        Layout.alignment: Qt.AlignTop
         PlasmaComponents.TextField {
             id: queryField
             clearButtonShown: true
@@ -75,6 +76,7 @@ ColumnLayout {
     }
 
     PlasmaExtras.ScrollArea {
+        Layout.alignment: Qt.AlignTop
         visible: results.count > 0
         Layout.fillWidth: true
         Layout.preferredHeight: Math.min(units.gridUnit * 25, results.contentHeight)
