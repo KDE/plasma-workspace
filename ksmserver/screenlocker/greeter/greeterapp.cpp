@@ -22,6 +22,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include "kscreensaversettings.h"
 #include "sessions.h"
 #include "authenticator.h"
+#include <../../shellpluginloader.h>
 
 // workspace
 #include <kworkspace.h>
@@ -66,7 +67,6 @@ UnlockApp::UnlockApp(int &argc, char **argv)
     : QApplication(argc, argv)
     , m_resetRequestIgnoreTimer(new QTimer(this))
     , m_delayedLockTimer(0)
-    , m_package(Plasma::PluginLoader::self()->loadPackage("Plasma/Applet"))
     , m_testing(false)
     , m_capsLocked(false)
     , m_ignoreRequests(false)
@@ -105,10 +105,11 @@ void UnlockApp::initialize()
     KCrash::setDrKonqiEnabled(false);
 
     KScreenSaverSettings::self()->readConfig();
+    ShellPluginLoader::init();
+    m_package = Plasma::PluginLoader::self()->loadPackage("Plasma/LookAndFeel");
+    m_package.setPath("org.kde.lookandfeel");
 
-    m_package.setPath(QStandardPaths::locate(QStandardPaths::GenericDataLocation, QStringLiteral("ksmserver/screenlocker/") + KScreenSaverSettings::greeterQML(), QStandardPaths::LocateDirectory));
-
-    m_mainQmlPath = m_package.filePath("mainscript");
+    m_mainQmlPath = m_package.filePath("lockscreenmainscript");
 
     if (m_mainQmlPath.isEmpty()) {
         m_package.setPath(QStandardPaths::locate(QStandardPaths::GenericDataLocation,

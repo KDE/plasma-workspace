@@ -19,6 +19,7 @@ target_link_libraries(kscreenlocker_greet
                         PW::KWorkspace
                         KF5::Solid
                         KF5::Plasma
+                        KF5::PlasmaQuick
                         KF5::Service
                         KF5::Crash
                         KF5::I18n
