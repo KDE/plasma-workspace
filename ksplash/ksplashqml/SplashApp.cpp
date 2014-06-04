@@ -28,6 +28,17 @@
 
 #define TEST_STEP_INTERVAL 2000
 
+/**
+ * There are 7 stages in ksplash
+ *  - initial
+ *  - kded
+ *  - confupdate
+ *  - ksmserver
+ *  - wm
+ *  - ready
+ *  - desktop
+ */
+
 SplashApp::SplashApp(int &argc, char ** argv)
     : QApplication(argc, argv),
       m_stage(0),
@@ -84,7 +95,7 @@ void SplashApp::setStage(const QString &stage)
 
 void SplashApp::setStage(int stage)
 {
-    if (m_stage == 6) {
+    if (m_stage == 7) {
         QApplication::exit(EXIT_SUCCESS);
     }
 
