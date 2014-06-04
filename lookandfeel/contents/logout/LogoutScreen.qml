@@ -23,16 +23,18 @@ import QtQuick.Controls 1.1 as Controls
 
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
+import org.kde.plasma.extras 2.0 as PlasmaExtras
 
 BreezeBlock {
     id: root
     property string mode: "shutdown"
     property var currentAction
-    property real remainingTime: 30
+    property real timeout: 30
+    property real remainingTime: root.timeout
     property bool canReboot
     property bool canLogout
     property bool canShutdown
-    onModeChanged: remainingTime = 30
+    onModeChanged: remainingTime = root.timeout
 
     signal cancel()
     signal shutdownRequested()
@@ -55,23 +57,31 @@ BreezeBlock {
     }
 
     mainItem: ColumnLayout {
-        PlasmaComponents.Label {
+        spacing: 0
+        PlasmaExtras.Heading {
             id: actionLabel
+            level: 4
             Layout.alignment: Qt.AlignHCenter
         }
 
-        PlasmaComponents.ToolButton {
+        Item { height: units.largeSpacing }
+
+        Image {
             id: actionIcon
             Layout.alignment: Qt.AlignHCenter
             Layout.fillHeight: true
-            onClicked: root.currentAction()
+            fillMode: Image.PreserveAspectFit
         }
 
         PlasmaComponents.ProgressBar {
             id: progressBar
             Layout.alignment: Qt.AlignHCenter
+            anchors.horizontalCenter: parent.horizontalCenter
+
+            //wanted to use actionIcon.paintedWidth but it doesn't work well when the image changes
+            width: units.largeSpacing*7
             minimumValue: 0
-            maximumValue: 30
+            maximumValue: root.timeout
             value: root.remainingTime
         }
 
@@ -86,19 +96,19 @@ BreezeBlock {
                 name: "shutdown"
                 PropertyChanges { target: root; currentAction: shutdownRequested }
                 PropertyChanges { target: actionLabel; text: ("Shutting down") }
-                PropertyChanges { target: actionIcon; iconSource: "system-shutdown" }
+                PropertyChanges { target: actionIcon; source: "icons/shutdown_primary.svgz" }
             },
             State {
                 name: "logout"
-                PropertyChanges { target: root; currentAction: shutdownRequested }
+                PropertyChanges { target: root; currentAction: logoutRequested }
                 PropertyChanges { target: actionLabel; text: ("Logging out") }
-                PropertyChanges { target: actionIcon; iconSource: "system-log-out" }
+                PropertyChanges { target: actionIcon; source: "icons/logout_primary.svgz" }
             },
             State {
                 name: "reboot"
                 PropertyChanges { target: root; currentAction: rebootRequested }
                 PropertyChanges { target: actionLabel; text: ("Rebooting") }
-                PropertyChanges { target: actionIcon; iconSource: "system-reboot" }
+                PropertyChanges { target: actionIcon; source: "icons/restart_primary.svgz" }
             }
         ]
     }
