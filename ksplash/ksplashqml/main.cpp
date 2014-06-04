@@ -56,7 +56,7 @@ int main(int argc, char **argv)
     bool printPid = false;
 
     for (int i = 1; i < argc; i++) {
-        if (strcmp("--test", argv[i]) == 0)
+        if (strcmp("--test", argv[i]) == 0 || strcmp("--help", argv[i]) == 0)
             test = true;
         else if (strcmp("--pid", argv[i]) == 0)
             printPid = true;

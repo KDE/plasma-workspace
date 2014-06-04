@@ -28,6 +28,7 @@
 #include <QDateTime>
 #include <QDate>
 #include <QDebug>
+#include <QCommandLineParser>
 
 #define TEST_STEP_INTERVAL 2000
 
@@ -46,10 +47,18 @@ SplashApp::SplashApp(int &argc, char ** argv)
     : QApplication(argc, argv),
       m_stage(0),
       m_testing(false),
+      m_window(false),
       m_startTime(QDateTime::currentDateTime())
 {
-    m_testing = arguments().contains(QStringLiteral("--test"));
-    m_window = arguments().contains(QStringLiteral("--window"));
+    QCommandLineParser parser;
+    parser.addOption(QCommandLineOption("test", "Run in test mode"));
+    parser.addOption(QCommandLineOption("window", "Run in windowed mode"));
+    parser.addOption(QCommandLineOption("nofork", "Don't fork"));
+    parser.addHelpOption();
+
+    parser.process(*this);
+    m_testing = parser.isSet("test");
+    m_window = parser.isSet("window");
 
     m_desktop = QApplication::desktop();
     screenGeometryChanged(m_desktop->screenCount());
@@ -57,7 +66,7 @@ SplashApp::SplashApp(int &argc, char ** argv)
     setStage("initial");
 
     QPixmap cursor(32, 32);
-    cursor.fill(QColor(0, 0, 0, 0));
+    cursor.fill(Qt::transparent);
     setOverrideCursor(QCursor(cursor));
 
     if (m_testing) {
