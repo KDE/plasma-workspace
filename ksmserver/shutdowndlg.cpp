@@ -144,7 +144,7 @@ KSMShutdownDlg::KSMShutdownDlg( QWindow* parent,
 
     QString fileName;
     if(theme.isEmpty()) {
-        Plasma::PluginLoader::setPluginLoader(new ShellPluginLoader);
+        ShellPluginLoader::init();
         Plasma::Package pkg = Plasma::PluginLoader::self()->loadPackage("Plasma/LookAndFeel");
         pkg.setPath("org.kde.lookandfeel");
         fileName = pkg.filePath("logoutmainscript", QString());

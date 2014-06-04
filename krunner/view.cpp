@@ -70,7 +70,7 @@ View::View(QWindow *parent)
         KGlobalAccel::self()->setShortcut(a, QList<QKeySequence>() << QKeySequence(Qt::ALT+Qt::SHIFT+Qt::Key_F2));
     }
 
-    Plasma::PluginLoader::setPluginLoader(new ShellPluginLoader);
+    ShellPluginLoader::init();
     Plasma::Package pkg = Plasma::PluginLoader::self()->loadPackage("Plasma/LookAndFeel");
     pkg.setPath("org.kde.lookandfeel");
 
