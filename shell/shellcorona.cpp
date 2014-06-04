@@ -1155,6 +1155,8 @@ void ShellCorona::insertContainment(const QString &activity, int screenNum, Plas
 {
     if (d->desktopContainments.contains(activity) &&
         d->desktopContainments[activity].contains(screenNum)) {
+        disconnect(d->desktopContainments[activity][screenNum], SIGNAL(destroyed(QObject*)),
+                   this, SLOT(desktopContainmentDestroyed(QObject*)));
         d->desktopContainments[activity][screenNum]->destroy();
     }
     d->desktopContainments[activity][screenNum] = containment;
