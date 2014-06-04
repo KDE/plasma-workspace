@@ -246,7 +246,7 @@ void PlasmoidTask::showMenu(int x, int y)
                 Plasma::Applet *systrayApplet = rootItem->property("_plasma_applet").value<Plasma::Applet*>();
 
                 if (systrayApplet) {
-                    QMenu *systrayMenu = new QMenu(i18n("Systemtray Options"), &desktopMenu);
+                    QMenu *systrayMenu = new QMenu(i18n("System Tray Options"), &desktopMenu);
 
                     foreach (QAction *action, systrayApplet->contextualActions()) {
                         if (action) {
