@@ -15,6 +15,7 @@ target_link_libraries(ksplashqml
     Qt5::Quick
     Qt5::Widgets
     Qt5::DBus
+    KF5::PlasmaQuick
    )
 
 install(TARGETS ksplashqml ${INSTALL_TARGETS_DEFAULT_ARGS})

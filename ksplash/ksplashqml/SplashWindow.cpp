@@ -27,6 +27,7 @@
 #include <QTimer>
 #include <QStandardPaths>
 #include <QSurfaceFormat>
+#include <shellpluginloader.h>
 
 SplashWindow::SplashWindow(bool testing, bool window)
     : QQuickView(),
@@ -85,10 +86,10 @@ void SplashWindow::setGeometry(const QRect& rect)
     QQuickView::setGeometry(rect);
 
     if (oldGeometryEmpty) {
-        QString themePath = QStandardPaths::locate(QStandardPaths::GenericDataLocation,
-                                                   QStringLiteral("ksplash/Themes/") + QApplication::arguments().at(1),
-                                                   QStandardPaths::LocateDirectory);
+        ShellPluginLoader::init();
+        Plasma::Package pkg = Plasma::PluginLoader::self()->loadPackage("Plasma/LookAndFeel");
+        pkg.setPath("org.kde.lookandfeel");
 
-        setSource(QUrl(themePath + QStringLiteral("/main.qml")));
+        setSource(QUrl::fromLocalFile(pkg.filePath("splashmainscript")));
     }
 }
