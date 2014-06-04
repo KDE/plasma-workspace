@@ -131,6 +131,7 @@ KSMShutdownDlg::KSMShutdownDlg( QWindow* parent,
     rebootOptionsMap->insert(QStringLiteral("options"), QVariant::fromValue(rebootOptions));
     rebootOptionsMap->insert(QStringLiteral("default"), QVariant::fromValue(def));
     context->setContextProperty(QStringLiteral("rebootOptions"), rebootOptionsMap);
+    context->setContextProperty(QStringLiteral("screenGeometry"), screen()->geometry());
 
     setModality(Qt::ApplicationModal);
 

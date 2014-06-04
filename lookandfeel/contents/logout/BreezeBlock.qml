@@ -1,4 +1,5 @@
 /***************************************************************************
+ *   Copyright (C) 2014 by David Edmundson <davidedmundson@kde.org>        *
  *   Copyright (C) 2014 by Aleix Pol Gonzalez <aleixpol@blue-systems.com>  *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -18,51 +19,60 @@
  ***************************************************************************/
 
 import QtQuick 2.1
+import QtQuick.Layouts 1.1
+import QtQuick.Controls 1.1
+
+import org.kde.plasma.core 2.0 as PlasmaCore
+import org.kde.plasma.components 2.0 as PlasmaComponents
+
 
 Item {
-    id: root
-    height: units.largeSpacing*14
-    width: screenGeometry.width
+    property alias mainItem: view.sourceComponent
+    property alias controls: controlsLayout.sourceComponent
 
-    signal logoutRequested()
-    signal haltRequested()
-    signal suspendRequested(int spdMethod)
-    signal rebootRequested()
-    signal rebootRequested2(int opt)
-    signal cancelRequested()
-    signal lockScreenRequested()
+    property bool canShutdown: false
+    property bool canReboot: false
 
-    LogoutScreen {
+    Rectangle {
+        color: theme.viewBackgroundColor
+        opacity: 0.8
         anchors {
-            verticalCenter: parent.verticalCenter
+            fill: parent
+        }
+    }
+
+    Loader {
+        id: view
+        anchors {
+            margins: units.largeSpacing
+
             left: parent.left
             right: parent.right
+            top: parent.top
+            bottom: separator.top
         }
-        height: parent.height
-        mode: switch (sdtype) {
-            case ShutdownType.ShutdownTypeNone:
-                    return "logout"
-                break;
-            case ShutdownType.ShutdownTypeHalt:
-                if (maysd)
-                    return "shutdown"
-                break;
-            case ShutdownType.ShutdownTypeReboot:
-                if (maysd)
-                    return "reboot"
-        }
+    }
 
-        onShutdownRequested: {
-            root.haltRequested()
-        }
+    Rectangle {
+        id: separator
+        height: 1
+        color: theme.textColor
+        width: parent.width
+        opacity: 0.7
+        anchors {
+            margins: units.largeSpacing
 
-        onRebootRequested: {
-            root.rebootRequested()
+            bottom: controlsLayout.top
         }
-        canShutdown: maysd && choose
-        canReboot: maysd && choose
-        canLogout: true
+    }
+    Loader {
+        id: controlsLayout
+        anchors {
+            margins: units.largeSpacing
 
-        onCancel: root.cancelRequested()
+            left: parent.left
+            right: parent.right
+            bottom: parent.bottom
+        }
     }
 }
