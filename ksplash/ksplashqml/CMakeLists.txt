@@ -11,9 +11,7 @@ set(ksplashqml_SRCS
 add_executable(ksplashqml ${ksplashqml_SRCS})
 
 target_link_libraries(ksplashqml
-    Qt5::Core
     Qt5::Quick
-    Qt5::Widgets
     Qt5::DBus
     KF5::PlasmaQuick
    )

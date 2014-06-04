@@ -21,9 +21,9 @@
 #include "SplashWindow.h"
 #include "SplashApp.h"
 
-#include <QDesktopWidget>
 #include <QPixmap>
 #include <QCursor>
+#include <qscreen.h>
 #include <QDBusConnection>
 #include <QDateTime>
 #include <QDate>
@@ -44,7 +44,7 @@
  */
 
 SplashApp::SplashApp(int &argc, char ** argv)
-    : QApplication(argc, argv),
+    : QGuiApplication(argc, argv),
       m_stage(0),
       m_testing(false),
       m_window(false),
@@ -60,8 +60,8 @@ SplashApp::SplashApp(int &argc, char ** argv)
     m_testing = parser.isSet("test");
     m_window = parser.isSet("window");
 
-    m_desktop = QApplication::desktop();
-    screenGeometryChanged(m_desktop->screenCount());
+    foreach(QScreen* screen, screens())
+        adoptScreen(screen);
 
     setStage("initial");
 
@@ -73,8 +73,7 @@ SplashApp::SplashApp(int &argc, char ** argv)
         m_timer.start(TEST_STEP_INTERVAL, this);
     }
 
-    connect(m_desktop, SIGNAL(screenCountChanged(int)), this, SLOT(screenGeometryChanged(int)));
-    connect(m_desktop, SIGNAL(workAreaResized(int)), this, SLOT(screenGeometryChanged(int)));
+    connect(this, SIGNAL(screenAdded(QScreen*)), this, SLOT(adoptScreen(QScreen*)));
 
     QDBusConnection dbus = QDBusConnection::sessionBus();
     dbus.registerObject(QStringLiteral("/KSplash"), this, QDBusConnection::ExportScriptableSlots);
@@ -112,7 +111,7 @@ void SplashApp::setStage(const QString &stage)
 void SplashApp::setStage(int stage)
 {
     if (m_stage == 7) {
-        QApplication::exit(EXIT_SUCCESS);
+        QGuiApplication::exit(EXIT_SUCCESS);
     }
 
     m_stage = stage;
@@ -121,24 +120,19 @@ void SplashApp::setStage(int stage)
     }
 }
 
-void SplashApp::screenGeometryChanged(int)
+void SplashApp::adoptScreen(QScreen* screen)
 {
-    int i;
-    // first iterate over all the new and old ones to set sizes appropriately
-    for (i = 0; i < m_desktop->screenCount(); i++) {
-        if (i < m_windows.count()) {
-            m_windows[i]->setGeometry(m_desktop->availableGeometry(i));
-        }
-        else {
-            SplashWindow *w = new SplashWindow(m_testing, m_window);
-            w->setGeometry(m_desktop->availableGeometry(i));
-            w->setStage(m_stage);
-            w->show();
-            m_windows << w;
-        }
-    }
-    // then delete the rest, if there is any
-    m_windows.erase(m_windows.begin() + i, m_windows.end());
+    SplashWindow *w = new SplashWindow(m_testing, m_window);
+    w->setGeometry(screen->availableGeometry());
+    w->setStage(m_stage);
+    w->show();
+    m_windows << w;
+
+    connect(screen, &QScreen::geometryChanged, w, &SplashWindow::setGeometry);
+    connect(screen, &QObject::destroyed, w, [this, w](){
+        m_windows.removeAll(w);
+        w->deleteLater();
+    });
 }
 
 #include "SplashApp.moc"

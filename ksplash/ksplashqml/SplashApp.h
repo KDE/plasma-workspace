@@ -22,13 +22,13 @@
 #define SPLASH_APP_H_
 
 #include <QObject>
-#include <QApplication>
+#include <QGuiApplication>
 #include <QBasicTimer>
 #include <QDateTime>
 
 class SplashWindow;
 
-class SplashApp: public QApplication
+class SplashApp: public QGuiApplication
 {
     Q_OBJECT
     Q_CLASSINFO("D-Bus Interface", "org.kde.KSplash")
@@ -51,11 +51,10 @@ private:
     bool m_window;
     QStringList m_stages;
     QBasicTimer m_timer;
-    QDesktopWidget *m_desktop;
     QDateTime m_startTime;
 
 private Q_SLOTS:
-    void screenGeometryChanged(int newCount);
+    void adoptScreen(QScreen*);
 };
 
 #endif // SPLASH_APP_H_

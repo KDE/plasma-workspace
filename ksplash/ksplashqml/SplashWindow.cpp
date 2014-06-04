@@ -19,7 +19,6 @@
 
 #include "SplashWindow.h"
 
-#include <QApplication>
 #include <QQmlContext>
 #include <QQuickItem>
 #include <QKeyEvent>
