@@ -25,6 +25,9 @@
 #include <QPixmap>
 #include <QCursor>
 #include <QDBusConnection>
+#include <QDateTime>
+#include <QDate>
+#include <QDebug>
 
 #define TEST_STEP_INTERVAL 2000
 
@@ -42,7 +45,8 @@
 SplashApp::SplashApp(int &argc, char ** argv)
     : QApplication(argc, argv),
       m_stage(0),
-      m_testing(false)
+      m_testing(false),
+      m_startTime(QDateTime::currentDateTime())
 {
     m_testing = arguments().contains(QStringLiteral("--test"));
     m_window = arguments().contains(QStringLiteral("--window"));
@@ -66,6 +70,7 @@ SplashApp::SplashApp(int &argc, char ** argv)
     QDBusConnection dbus = QDBusConnection::sessionBus();
     dbus.registerObject(QStringLiteral("/KSplash"), this, QDBusConnection::ExportScriptableSlots);
     dbus.registerService(QStringLiteral("org.kde.KSplash"));
+
 }
 
 SplashApp::~SplashApp()
@@ -86,6 +91,8 @@ void SplashApp::timerEvent(QTimerEvent * event)
 
 void SplashApp::setStage(const QString &stage)
 {
+    qDebug() << "Loading stage " << stage << m_startTime.msecsTo(QDateTime::currentDateTime());
+
     if (m_stages.contains(stage)) {
         return;
     }

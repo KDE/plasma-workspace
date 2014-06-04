@@ -21,8 +21,33 @@
 #include "SplashApp.h"
 #include <QQuickWindow>
 
+#include <QTextStream>
+
 #include <iostream>
 #include <unistd.h>
+
+void logMessageHandler(QtMsgType type, const char *msg)
+{
+    QString txt;
+    switch (type) {
+    case QtDebugMsg:
+        txt = QString("Debug: %1").arg(msg);
+        break;
+    case QtWarningMsg:
+        txt = QString("Warning: %1").arg(msg);
+    break;
+    case QtCriticalMsg:
+        txt = QString("Critical: %1").arg(msg);
+    break;
+    case QtFatalMsg:
+        txt = QString("Fatal: %1").arg(msg);
+    break;
+    }
+    QFile outFile("/tmp/ksplash");
+    outFile.open(QIODevice::WriteOnly | QIODevice::Append);
+    QTextStream ts(&outFile);
+    ts << txt << '\n';
+}
 
 int main(int argc, char **argv)
 {
@@ -62,6 +87,9 @@ int main(int argc, char **argv)
         close(2);
     }
 
+    //enable to send log output to /tmp/ksplash
+    //which is useful for debugging
+//     qInstallMsgHandler(myMessageHandler);
     QQuickWindow::setDefaultAlphaBuffer(true);
     SplashApp app(argc, argv);
 

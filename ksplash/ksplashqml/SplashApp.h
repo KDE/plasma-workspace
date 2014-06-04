@@ -24,6 +24,7 @@
 #include <QObject>
 #include <QApplication>
 #include <QBasicTimer>
+#include <QDateTime>
 
 class SplashWindow;
 
@@ -51,6 +52,7 @@ private:
     QStringList m_stages;
     QBasicTimer m_timer;
     QDesktopWidget *m_desktop;
+    QDateTime m_startTime;
 
 private Q_SLOTS:
     void screenGeometryChanged(int newCount);
