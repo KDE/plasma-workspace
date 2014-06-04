@@ -92,7 +92,7 @@ BreezeBlock {
                 name: "logout"
                 PropertyChanges { target: root; currentAction: shutdownRequested }
                 PropertyChanges { target: actionLabel; text: ("Logging out") }
-                PropertyChanges { target: actionIcon; iconSource: "system-logout" }
+                PropertyChanges { target: actionIcon; iconSource: "system-log-out" }
             },
             State {
                 name: "reboot"
@@ -152,7 +152,7 @@ BreezeBlock {
             id: logoutButton
             anchors.right: shutdownButton.left
             anchors.rightMargin: 5
-            iconSource: "system-logout"
+            iconSource: "system-log-out"
             enabled: root.mode != "logout"
             visible: root.canLogout
 
