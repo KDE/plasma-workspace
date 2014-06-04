@@ -41,6 +41,7 @@ public:
     void positionOnScreen();
 
 protected:
+    virtual bool event(QEvent* event);
     virtual void showEvent(QShowEvent *event);
 
 public Q_SLOTS:

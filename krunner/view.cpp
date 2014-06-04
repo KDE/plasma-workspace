@@ -109,6 +109,18 @@ View::~View()
 {
 }
 
+bool View::event(QEvent *event)
+{
+    // QXcbWindow overwrites the state in its show event. There are plans
+    // to fix this in 5.4, but till then we must explicitly overwrite it
+    // each time.
+    const bool retval = Dialog::event(event);
+    if (event->type() != QEvent::DeferredDelete) {
+        KWindowSystem::setState(winId(), NET::SkipTaskbar | NET::SkipPager | NET::KeepAbove | NET::StaysOnTop);
+    }
+    return retval;
+}
+
 void View::showEvent(QShowEvent *event)
 {
     KWindowSystem::setOnAllDesktops(winId(), true);
