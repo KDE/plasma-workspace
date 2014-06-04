@@ -1153,6 +1153,10 @@ void ShellCorona::activityRemoved()
 
 void ShellCorona::insertContainment(const QString &activity, int screenNum, Plasma::Containment *containment)
 {
+    if (d->desktopContainments.contains(activity) &&
+        d->desktopContainments[activity].contains(screenNum)) {
+        d->desktopContainments[activity][screenNum]->destroy();
+    }
     d->desktopContainments[activity][screenNum] = containment;
 
     //when a containment gets deleted update our map of containments
