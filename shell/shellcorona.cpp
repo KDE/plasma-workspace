@@ -620,7 +620,7 @@ void ShellCorona::addOutput(KScreen::Output *output)
     shiftViews(insertPosition+1, 1, d->views.count()-1);
 
     const QString currentActivity = d->activityController->currentActivity();
-    Plasma::Containment *containment = d->desktopContainments[currentActivity][insertPosition];
+    Plasma::Containment *containment = d->desktopContainments[currentActivity].value(insertPosition);
     if (!containment) {
         containment = createContainmentForActivity(currentActivity, insertPosition);
     }
@@ -852,7 +852,7 @@ void ShellCorona::currentActivityChanged(const QString &newActivity)
     qDebug() << "Activity changed:" << newActivity;
 
     for (int i = 0; i < d->views.count(); ++i) {
-        Plasma::Containment *c = d->desktopContainments[newActivity][i];
+        Plasma::Containment *c = d->desktopContainments[newActivity].value(i);
         if (!c) {
             c = createContainmentForActivity(newActivity, i);
         }
@@ -1155,9 +1155,16 @@ void ShellCorona::insertContainment(const QString &activity, int screenNum, Plas
 {
     if (d->desktopContainments.contains(activity) &&
         d->desktopContainments[activity].contains(screenNum)) {
-        disconnect(d->desktopContainments[activity][screenNum], SIGNAL(destroyed(QObject*)),
+        Plasma::Containment *containment = d->desktopContainments[activity][screenNum];
+
+        //containment should always be valid, it's been known to get in a mess
+        //so guard anyway
+        Q_ASSERT(containment);
+        if (containment) {
+            disconnect(containment, SIGNAL(destroyed(QObject*)),
                    this, SLOT(desktopContainmentDestroyed(QObject*)));
-        d->desktopContainments[activity][screenNum]->destroy();
+            containment->destroy();
+        }
     }
     d->desktopContainments[activity][screenNum] = containment;
 
