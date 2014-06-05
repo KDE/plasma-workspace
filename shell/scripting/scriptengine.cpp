@@ -20,7 +20,6 @@
 #include "scriptengine.h"
 
 #include <QApplication>
-#include <QDesktopWidget>
 #include <QDir>
 #include <QDirIterator>
 #include <QFile>
@@ -282,7 +281,7 @@ QScriptValue ScriptEngine::wrap(Containment *c)
 
 int ScriptEngine::defaultPanelScreen() const
 {
-    return qApp ? qApp->desktop()->primaryScreen() : 0;
+    return 0;
 }
 
 ScriptEngine *ScriptEngine::envFor(QScriptEngine *engine)

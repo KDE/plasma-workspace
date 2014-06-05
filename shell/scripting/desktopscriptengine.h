@@ -35,7 +35,6 @@ public:
     DesktopScriptEngine(ShellCorona *corona, bool isStartup = true, QObject *parent = 0);
     QScriptValue wrap(Plasma::Containment *c);
     QScriptValue wrap(Containment *c);
-    int defaultPanelScreen() const;
 
 private:
     bool m_startup;

@@ -21,7 +21,6 @@
 
 #include <QApplication>
 #include <QCursor>
-#include <QDesktopWidget>
 
 #include "containment.h"
 #include "appinterface.h"
@@ -46,15 +45,6 @@ QScriptValue DesktopScriptEngine::wrap(Plasma::Containment *c)
 QScriptValue DesktopScriptEngine::wrap(Containment *c)
 {
     return ScriptEngine::wrap(c);
-}
-
-int DesktopScriptEngine::defaultPanelScreen() const
-{
-    if (m_startup) {
-        return ScriptEngine::defaultPanelScreen();
-    } else {
-        return qApp->desktop()->screenNumber(QCursor::pos());
-    }
 }
 
 }
