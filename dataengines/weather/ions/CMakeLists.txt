@@ -5,8 +5,8 @@ target_link_libraries (weather_ion KF5::KIOCore KF5::Plasma KF5::I18n KF5::KDELi
 target_link_libraries (weather_ion LINK_INTERFACE_LIBRARIES KF5::KIOCore KF5::Plasma)
 
 set_target_properties(weather_ion PROPERTIES
-   VERSION 6.0.0
-   SOVERSION 6
+   VERSION 7.0.0
+   SOVERSION 7
 )
 
 install (TARGETS weather_ion EXPORT kdeworkspaceLibraryTargets ${INSTALL_TARGETS_DEFAULT_ARGS})

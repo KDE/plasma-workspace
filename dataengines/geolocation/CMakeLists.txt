@@ -13,8 +13,8 @@ target_link_libraries(plasma-geolocation-interface
         KF5::KIOCore
 )
 set_target_properties(plasma-geolocation-interface PROPERTIES
-   VERSION ${GENERIC_LIB_VERSION}
-   SOVERSION ${GENERIC_LIB_SOVERSION}
+   VERSION 4.97.0
+   SOVERSION 5
 )
 install(TARGETS plasma-geolocation-interface ${INSTALL_TARGETS_DEFAULT_ARGS})
 
