@@ -19,7 +19,7 @@ qt5_add_dbus_interface( kworkspace_LIB_SRCS ${KWIN_INTERFACE} kwin_interface )
 add_library(kworkspace ${kworkspace_LIB_SRCS})
 add_library(PW::KWorkspace ALIAS kworkspace)
 set_target_properties(kworkspace PROPERTIES
-                             VERSION 4.96.0
+                             VERSION 4.97.0
                              SOVERSION 5
                              EXPORT_NAME KWorkspace
                       )
