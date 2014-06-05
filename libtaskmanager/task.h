@@ -234,14 +234,14 @@ public:
 
 
     /**
-    * Returns true if the window is on the specified screen of a multihead configuration
+    * @returns true if the window is on the specified screen of a multihead configuration
     */
-    bool isOnScreen(int screen) const;
+    bool isOnScreen(const QRect& screen) const;
 
     /**
-     * Returns the screen the largest part of this window is on (or -1 if not on any)
+     * @returns the screen the largest part of this window is on (or -1 if not on any)
      */
-    int screen() const;
+    QRect screen() const;
 
     /**
      * Returns true if the task should be shown in taskbar-like apps

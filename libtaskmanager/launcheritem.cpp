@@ -152,7 +152,7 @@ bool LauncherItem::shouldShow(const GroupManager *manager) const
             continue;
         }
 
-        if ((!screen || item->task()->isOnScreen(manager->screen())) &&
+        if ((!screen || item->task()->isOnScreen(manager->screenGeometry())) &&
             (!desk || item->isOnCurrentDesktop()) &&
             (!activity || item->task()->isOnCurrentActivity())) {
             return false;

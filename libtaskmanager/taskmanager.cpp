@@ -26,9 +26,9 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 // Qt
 #include <QApplication>
-#include <QDesktopWidget>
 #include <QTimer>
 #include <QUuid>
+#include <QScreen>
 
 // KDE
 #include <KConfig>
@@ -485,10 +485,10 @@ bool TaskManager::isOnTop(const Task *task) const
     QListIterator<WId> it(list);
     it.toBack();
 
-    const bool multiscreen = qApp->desktop()->screenCount() > 1;
+    const bool multiscreen = QGuiApplication::screens().count() > 1;
     // we only use taskScreen when there are multiple screens, so we
     // only fetch the value in that case; still, do it outside the loop
-    const int taskScreen = multiscreen ? task->screen() : 0;
+    const QRect taskScreen = multiscreen ? task->screen() : QRect();
 
     while (it.hasPrevious()) {
         const WId top = it.previous();
@@ -549,9 +549,9 @@ bool TaskManager::trackGeometry() const
     return !d->trackGeometryTokens.isEmpty();
 }
 
-bool TaskManager::isOnScreen(int screen, const WId wid)
+bool TaskManager::isOnScreen(const QRect& screen, const WId wid)
 {
-    if (screen == -1) {
+    if (!screen.isValid()) {
         return true;
     }
 
@@ -561,7 +561,7 @@ bool TaskManager::isOnScreen(int screen, const WId wid)
     // edge of the screen, we just contract a bit.
     const QRect window = wi.frameGeometry();
 
-    QRect desktop = qApp->desktop()->screenGeometry(screen);
+    QRect desktop = screen;
     desktop.adjust(5, 5, -5, -5);
 
     return window.intersects(desktop);

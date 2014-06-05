@@ -35,6 +35,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #include <KService>
 #include <KSycoca>
 #include <KDesktopFile>
+#include <QScreen>
 
 #include "abstractsortingstrategy.h"
 #include "startup.h"
@@ -64,7 +65,6 @@ public:
           lastGroupingStrategy(GroupManager::NoGrouping),
           abstractGroupingStrategy(0),
           abstractSortingStrategy(0),
-          currentScreen(-1),
           groupIsFullLimit(0),
           showOnlyCurrentDesktop(false),
           showOnlyCurrentActivity(false),
@@ -113,7 +113,7 @@ public:
     GroupManager::TaskGroupingStrategy lastGroupingStrategy;
     AbstractGroupingStrategy *abstractGroupingStrategy;
     AbstractSortingStrategy *abstractSortingStrategy;
-    int currentScreen;
+    QRect currentScreenGeometry;
     QTimer screenTimer;
     QTimer reloadTimer;
     QTimer checkIfFullTimer;
@@ -258,7 +258,7 @@ bool GroupManagerPrivate::addTask(::TaskManager::Task *task)
         skip = true;
     }
 
-    if (showOnlyCurrentScreen && !task->isOnScreen(currentScreen)) {
+    if (showOnlyCurrentScreen && !task->isOnScreen(currentScreenGeometry)) {
         //kDebug() << "Not on this screen and showOnlyCurrentScreen";
         skip = true;
     }
@@ -578,7 +578,7 @@ void GroupManagerPrivate::taskChanged(::TaskManager::Task *task, ::TaskManager::
         return;
     }
 
-    show = show && (!showOnlyCurrentScreen || task->isOnScreen(currentScreen));
+    show = show && (!showOnlyCurrentScreen || task->isOnScreen(currentScreenGeometry));
 
     if (show) {
         //kDebug() << "add(task);";
@@ -589,18 +589,18 @@ void GroupManagerPrivate::taskChanged(::TaskManager::Task *task, ::TaskManager::
     }
 }
 
-void GroupManager::setScreen(int screen)
+QRect GroupManager::screenGeometry() const
 {
-    if (screen != d->currentScreen) {
-        d->currentScreen = screen;
-        d->reloadTasks();
-        emit screenChanged(screen);
-    }
+    return d->currentScreenGeometry;
 }
 
-int GroupManager::screen() const
+void GroupManager::setScreenGeometry(const QRect& geometry)
 {
-    return d->currentScreen;
+    if (geometry != d->currentScreenGeometry) {
+        d->currentScreenGeometry = geometry;
+        d->reloadTasks();
+        emit screenGeometryChanged(geometry);
+    }
 }
 
 void GroupManagerPrivate::checkScreenChange()
@@ -608,7 +608,7 @@ void GroupManagerPrivate::checkScreenChange()
     //kDebug();
     if (showOnlyCurrentScreen) {
         foreach (Task *task, geometryTasks) {
-            if (task->isOnScreen(currentScreen)) {
+            if (task->isOnScreen(currentScreenGeometry)) {
                 addTask(task);
             } else {
                 removeTask(task);

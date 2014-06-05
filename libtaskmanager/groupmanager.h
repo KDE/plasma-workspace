@@ -49,7 +49,7 @@ class TASKMANAGER_EXPORT GroupManager: public QObject
 
     Q_OBJECT
 
-    Q_PROPERTY(int screen READ screen WRITE setScreen NOTIFY screenChanged)
+    Q_PROPERTY(QRect screenGeometry READ screenGeometry WRITE setScreenGeometry NOTIFY screenGeometryChanged)
     Q_PROPERTY(TaskGroupingStrategy groupingStrategy READ groupingStrategy WRITE setGroupingStrategy NOTIFY groupingStrategyChanged)
     Q_PROPERTY(bool onlyGroupWhenFull READ onlyGroupWhenFull WRITE setOnlyGroupWhenFull NOTIFY onlyGroupWhenFullChanged)
     Q_PROPERTY(int fullLimit READ fullLimit WRITE setFullLimit NOTIFY fullLimitChanged)
@@ -135,14 +135,14 @@ public:
     bool manualSortingRequest(AbstractGroupableItem* taskItem, int newIndex);
 
     /**
-     * The Visualization is responsible to update the screen number the visualization is currently on.
+     * @returns the geometry of the currently set screen
      */
-    void setScreen(int screen);
+    QRect screenGeometry() const;
 
     /**
-     * @return the currently set screen; -1 if none
+     * Sets the current screen @p geometry
      */
-    int screen() const;
+    void setScreenGeometry(const QRect& geometry);
 
     /**
      * Reconnect all neccessary signals to the taskmanger, and clear the per desktop stored rootGroups
@@ -212,7 +212,7 @@ Q_SIGNALS:
     /** Signal that the launcher list has changed */
     void launcherListChanged();
 
-    void screenChanged(int);
+    void screenGeometryChanged(const QRect& geometry);
     void groupingStrategyChanged(TaskGroupingStrategy);
     void onlyGroupWhenFullChanged(bool);
     void fullLimitChanged(int);

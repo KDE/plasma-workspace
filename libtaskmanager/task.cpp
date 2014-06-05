@@ -30,7 +30,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #include <QMimeData>
 #include <QTimer>
 #include <QApplication>
-#include <QDesktopWidget>
+#include <QScreen>
 
 // KDE
 #include <KIconLoader>
@@ -275,27 +275,25 @@ bool Task::demandsAttention() const
            !d->transientsDemandingAttention.isEmpty();
 }
 
-bool Task::isOnScreen(int screen) const
+bool Task::isOnScreen(const QRect& geometry) const
 {
-    return TaskManager::isOnScreen(screen, d->win);
+    return TaskManager::isOnScreen(geometry, d->win);
 }
 
-int Task::screen() const
+QRect Task::screen() const
 {
-    int rv = -1;
+    QRect rv;
     if (!d->info.valid(true)) {
         return rv;
     }
 
-    QDesktopWidget *desktop = qApp->desktop();
     int area = 0;
-
-    for (int i = 0; i < desktop->screenCount(); ++i) {
-        const QRect desktopGeometry = desktop->screenGeometry(i);
+    foreach (QScreen* screen, QGuiApplication::screens()) {
+        const QRect desktopGeometry = screen->geometry();
         const QRect onScreen = desktopGeometry.intersected(d->info.geometry());
         if (onScreen.height() * onScreen.width() > area) {
             area = onScreen.height() * onScreen.width();
-            rv = i;
+            rv = screen->geometry();
         }
     }
 
