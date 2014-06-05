@@ -411,7 +411,7 @@ void UnlockApp::shareEvent(QEvent *e, QQuickView *from)
         const bool accepted = e->isAccepted(); // store state
         foreach (QQuickView *view, m_views) {
             if (view != from) {
-                QApplication::sendEvent(view, e);
+                QCoreApplication::sendEvent(view, e);
                 e->setAccepted(accepted);
             }
         }
