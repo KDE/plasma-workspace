@@ -26,7 +26,6 @@
 #include <QAction>
 #include <QApplication>
 #include <QDebug>
-#include <QDesktopWidget>
 #include <QScreen>
 #include <QQmlEngine>
 #include <QQmlContext>

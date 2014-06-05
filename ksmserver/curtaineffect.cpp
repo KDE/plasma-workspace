@@ -23,7 +23,6 @@
 #include "curtaineffect.moc"
 
 #include <QApplication>
-#include <QDesktopWidget>
 #include <QWidget>
 #include <QImage>
 #include <QPixmap>
