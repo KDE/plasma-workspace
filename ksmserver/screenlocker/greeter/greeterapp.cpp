@@ -162,6 +162,7 @@ void UnlockApp::desktopResized()
         const QString fullName = user.property(KUser::FullName).toString();
 
         context->setContextProperty(QStringLiteral("kscreenlocker_userName"), fullName.isEmpty() ? user.loginName() : fullName);
+        context->setContextProperty(QStringLiteral("kscreenlocker_userImage"), user.faceIconPath());
         context->setContextProperty(QStringLiteral("authenticator"), m_authenticator);
 
         view->setSource(m_mainQmlPath);
