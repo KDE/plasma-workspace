@@ -29,7 +29,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 static void signalHandler(int signum)
 {
-    ScreenLocker::UnlockApp *instance = static_cast<ScreenLocker::UnlockApp *>(qApp);
+    ScreenLocker::UnlockApp *instance = qobject_cast<ScreenLocker::UnlockApp *>(QCoreApplication::instance());
 
     if (!instance)
         return;

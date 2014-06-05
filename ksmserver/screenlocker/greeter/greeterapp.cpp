@@ -39,7 +39,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 // Qt
 #include <QtCore/QTimer>
 #include <QtGui/QKeyEvent>
-#include <QDesktopWidget>
+#include <qscreen.h>
 
 #include <QQuickView>
 #include <QQuickItem>
@@ -64,7 +64,7 @@ static const char *DEFAULT_MAIN_PACKAGE = "org.kde.passworddialog";
 
 // App
 UnlockApp::UnlockApp(int &argc, char **argv)
-    : QApplication(argc, argv)
+    : QGuiApplication(argc, argv)
     , m_resetRequestIgnoreTimer(new QTimer(this))
     , m_delayedLockTimer(0)
     , m_testing(false)
@@ -77,8 +77,7 @@ UnlockApp::UnlockApp(int &argc, char **argv)
 {
     connect(m_authenticator, &Authenticator::succeeded, this, &QCoreApplication::quit);
     initialize();
-    connect(desktop(), SIGNAL(resized(int)), SLOT(desktopResized()));
-    connect(desktop(), SIGNAL(screenCountChanged(int)), SLOT(desktopResized()));
+    connect(this, SIGNAL(screenAdded(QScreen*)), SLOT(desktopResized()));
 }
 
 UnlockApp::~UnlockApp()
@@ -137,7 +136,7 @@ void UnlockApp::viewStatusChanged(const QQuickView::Status &status)
 
 void UnlockApp::desktopResized()
 {
-    const int nScreens = desktop()->screenCount();
+    const int nScreens = screens().count();
     // remove useless views and savers
     while (m_views.count() > nScreens) {
         m_views.takeLast()->deleteLater();
@@ -147,6 +146,7 @@ void UnlockApp::desktopResized()
     const bool canLogout = KAuthorized::authorizeKAction(QStringLiteral("logout")) && KAuthorized::authorize(QStringLiteral("logout"));
     const QSet<Solid::PowerManagement::SleepState> spdMethods = Solid::PowerManagement::supportedSleepStates();
     for (int i = m_views.count(); i < nScreens; ++i) {
+        connect(QGuiApplication::screens()[i], SIGNAL(destroyed(QObject*)), SLOT(desktopResized()));
         // create the view
         QQuickView *view = new QQuickView();
         connect(view, SIGNAL(statusChanged(QQuickView::Status)),
@@ -198,7 +198,7 @@ void UnlockApp::desktopResized()
     for (int i = 0; i < nScreens; ++i) {
         QQuickView *view = m_views.at(i);
 
-        view->setGeometry(desktop()->screenGeometry(i));
+        view->setGeometry(QGuiApplication::screens()[i]->geometry());
         view->show();
         view->raise();
     }

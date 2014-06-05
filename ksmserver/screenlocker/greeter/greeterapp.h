@@ -35,7 +35,7 @@ namespace ScreenLocker
 {
 class Unlocker;
 
-class UnlockApp : public QApplication
+class UnlockApp : public QGuiApplication
 {
     Q_OBJECT
 public:
