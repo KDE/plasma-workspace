@@ -23,6 +23,9 @@ target_link_libraries(kscreenlocker_greet
                         KF5::Service
                         KF5::Crash
                         KF5::I18n
+                        KF5::ConfigGui
+                        KF5::WindowSystem
+                        KF5::Solid
                         Qt5::Quick
                         Qt5::Qml
                         Qt5::X11Extras

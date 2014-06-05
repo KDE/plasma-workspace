@@ -20,7 +20,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #ifndef SCREENLOCKER_GREETERAPP_H
 #define SCREENLOCKER_GREETERAPP_H
 
-#include <QApplication>
+#include <QGuiApplication>
 
 #include <Plasma/PackageStructure>
 #include <QQuickView>
