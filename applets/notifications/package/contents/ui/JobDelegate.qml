@@ -65,10 +65,6 @@ Item {
         anchors.fill: parent
     }
 
-    KCoreAddons.Formats {
-        id: formats
-    }
-
     Item {
         id: jobGrid
         anchors {
@@ -235,8 +231,8 @@ Item {
                     //if bytes localise the unit
                     if (jobsSource.data[modelData]["processedUnit"+id] == "bytes") {
                         return i18nc("How much many bytes (or whether unit in the locale has been copied over total", "%1 of %2",
-                                formats.formatByteSize(jobsSource.data[modelData]["processedAmount"+id]),
-                                formats.formatByteSize(jobsSource.data[modelData]["totalAmount"+id]))
+                                KCoreAddons.Format.formatByteSize(jobsSource.data[modelData]["processedAmount"+id]),
+                                KCoreAddons.Format.formatByteSize(jobsSource.data[modelData]["totalAmount"+id]))
                     //else print something only if is interesting data (ie more than one file/directory etc to copy
                     } else if (jobsSource.data[modelData]["totalAmount"+id] > 1) {
                         return i18n( "%1 of %2 %3",
