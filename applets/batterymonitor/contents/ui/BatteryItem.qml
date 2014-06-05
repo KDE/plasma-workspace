@@ -46,10 +46,6 @@ Item {
         return;
     }
 
-    KCoreAddons.Formats {
-        id: formats
-    }
-
     MouseArea {
         id: mouseArea
         anchors.fill: parent
@@ -207,7 +203,7 @@ Item {
                 DetailsLabel {
                     id: remainingTimeLabel
                     // FIXME Uses overall remaining time, not bound to individual battery
-                    text: formats.formatSpelloutDuration (dialogItem.remainingTime)
+                    text: KCoreAddons.Format.formatSpelloutDuration (dialogItem.remainingTime)
                     visible: model["Is Power Supply"] && model["State"] != "NoCharge" && text != ""
                     //visible: showRemainingTime && model["Is Power Supply"] && model["State"] != "NoCharge" && text != "" && dialogItem.remainingTime > 0
                 }
