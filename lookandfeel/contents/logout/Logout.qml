@@ -34,23 +34,17 @@ Item {
     signal lockScreenRequested()
 
     LogoutScreen {
-        anchors {
-            verticalCenter: parent.verticalCenter
-            left: parent.left
-            right: parent.right
-        }
-        height: parent.height
+        anchors.fill: parent
+
         mode: switch (sdtype) {
             case ShutdownType.ShutdownTypeNone:
-                    return "logout"
-                break;
+                return "logout";
             case ShutdownType.ShutdownTypeHalt:
-                if (maysd)
-                    return "shutdown"
-                break;
+                return maysd ? "shutdown" : "logout";
             case ShutdownType.ShutdownTypeReboot:
-                if (maysd)
-                    return "reboot"
+                return maysd ? "reboot" : "logout";
+            default:
+                return "logout";
         }
 
         onShutdownRequested: {
