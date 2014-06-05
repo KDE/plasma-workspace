@@ -68,7 +68,7 @@ private:
     void capsLocked();
     void shareEvent(QEvent *e, QQuickView *from);
 
-    QString m_mainQmlPath;
+    QUrl m_mainQmlPath;
     QList<QQuickView*> m_views;
     QTimer *m_resetRequestIgnoreTimer;
     QTimer *m_delayedLockTimer;

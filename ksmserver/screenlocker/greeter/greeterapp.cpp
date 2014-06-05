@@ -108,12 +108,12 @@ void UnlockApp::initialize()
     m_package = Plasma::PluginLoader::self()->loadPackage("Plasma/LookAndFeel");
     m_package.setPath("org.kde.lookandfeel");
 
-    m_mainQmlPath = m_package.filePath("lockscreenmainscript");
+    m_mainQmlPath = QUrl::fromLocalFile(m_package.filePath("lockscreenmainscript"));
 
     if (m_mainQmlPath.isEmpty()) {
         m_package.setPath(QStandardPaths::locate(QStandardPaths::GenericDataLocation,
                                                  QStringLiteral("ksmserver/screenlocker/") + QString::fromLatin1(DEFAULT_MAIN_PACKAGE)));
-        m_mainQmlPath = m_package.filePath("mainscript");
+        m_mainQmlPath = QUrl::fromLocalFile(m_package.filePath("mainscript"));
     }
 
     installEventFilter(this);
@@ -128,8 +128,8 @@ void UnlockApp::viewStatusChanged(const QQuickView::Status &status)
             m_package.setPath(QStandardPaths::locate(QStandardPaths::GenericDataLocation,
                                                      QStringLiteral("ksmserver/screenlocker/") + QString::fromLatin1(DEFAULT_MAIN_PACKAGE)));
 
-            m_mainQmlPath = m_package.filePath("mainscript");
-            view->setSource(QUrl::fromLocalFile(m_mainQmlPath));
+            m_mainQmlPath = QUrl("qrc:/fallbacktheme/LockScreen.qml");
+            view->setSource(m_mainQmlPath);
         }
     }
 }
@@ -164,7 +164,7 @@ void UnlockApp::desktopResized()
         context->setContextProperty(QStringLiteral("kscreenlocker_userName"), fullName.isEmpty() ? user.loginName() : fullName);
         context->setContextProperty(QStringLiteral("authenticator"), m_authenticator);
 
-        view->setSource(QUrl::fromLocalFile(m_mainQmlPath));
+        view->setSource(m_mainQmlPath);
         view->setResizeMode(QQuickView::SizeRootObjectToView);
 
         QQmlProperty lockProperty(view->rootObject(), QStringLiteral("locked"));
