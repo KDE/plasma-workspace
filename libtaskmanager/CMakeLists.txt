@@ -1,4 +1,5 @@
 add_definitions(-DKDE_DEFAULT_DEBUG_AREA=1204)
+add_definitions(-DTRANSLATION_DOMAIN=\"libtaskmanager\")
 remove_definitions(-DQT_NO_CAST_FROM_ASCII -DQT_NO_CAST_FROM_BYTEARRAY)
 
 ########### next target ###############
@@ -26,7 +27,7 @@ set(taskmanager_LIB_SRCS
    launcherproperties.cpp
    )
 
-qt5_wrap_ui(taskmanager_LIB_SRCS launcherconfig.ui launcherproperties.ui)
+ki18n_wrap_ui(taskmanager_LIB_SRCS launcherconfig.ui launcherproperties.ui)
 
 if(WIN32)
     set(taskmanager_LIB_SRCS ${taskmanager_LIB_SRCS} task_win.cpp)
