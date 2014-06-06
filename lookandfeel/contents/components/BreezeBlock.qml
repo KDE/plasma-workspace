@@ -25,8 +25,10 @@ import QtQuick.Controls 1.1
 import org.kde.plasma.core 2.0 as PlasmaCore
 
 Item {
-    property alias mainItem: view.sourceComponent
+    property alias main: view.sourceComponent
     property alias controls: controlsLayout.sourceComponent
+    readonly property alias mainItem: view.item
+    readonly property alias controlsItem: controlsLayout.item
 
     property bool canShutdown: false
     property bool canReboot: false

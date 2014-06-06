@@ -56,7 +56,7 @@ BreezeBlock {
         onTriggered: remainingTime--
     }
 
-    mainItem: ColumnLayout {
+    main: ColumnLayout {
         spacing: 0
         BreezeHeading {
             id: actionLabel

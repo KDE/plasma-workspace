@@ -62,7 +62,7 @@ Image {
         }
 
         initialItem: BreezeBlock {
-            mainItem: UserSelect {
+            main: UserSelect {
                 id: usersSelection
                 model: ListModel {
                     id: users
