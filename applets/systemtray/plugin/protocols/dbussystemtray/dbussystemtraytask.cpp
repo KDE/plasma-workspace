@@ -32,6 +32,7 @@
 
 #include <KJob>
 #include <KIconLoader>
+#include <KIconEngine>
 
 #include <Plasma/ServiceJob>
 #include <Plasma/Applet>
@@ -158,11 +159,7 @@ QVariant DBusSystemTrayTask::customIcon(QVariant variant) const
         if (hasm_svgIcon(variant))
             return variant;
 
-        // Otherwise return a QIcon from our custom icon loader.
-        if (!QIcon::themeSearchPaths().contains(m_iconThemePath)) {
-            QIcon::setThemeSearchPaths(QStringList(m_iconThemePath) << QIcon::themeSearchPaths());
-        }
-        return QVariant(QIcon::fromTheme(variant.toString()));
+        return QVariant(QIcon(new KIconEngine(variant.toString(), m_customIconLoader)));
     } else {
         // Most importantly QIcons. Nothing to do for those.
         return variant;
@@ -328,15 +325,21 @@ void DBusSystemTrayTask::syncIcons(const Plasma::DataEngine::Data &properties)
             QStringList tokens = path.split('/', QString::SkipEmptyParts);
             if (tokens.length() >= 3 && tokens.takeLast() == QLatin1String("icons")) {
                 QString appName = tokens.takeLast();
-                QString prefix = QChar('/') + tokens.join("/");
-                if (!QIcon::themeSearchPaths().contains(prefix)) {
-                    QIcon::setThemeSearchPaths(QStringList(prefix) << QIcon::themeSearchPaths());
-                }
+
                 // We use a separate instance of KIconLoader to avoid
                 // adding all application dirs to KIconLoader::global(), to
                 // avoid potential icon name clashes between application
                 // icons
-                m_customIconLoader = new KIconLoader(appName, QStringList() /* dirs */, this);
+                m_customIconLoader = new KIconLoader(appName, QStringList(), this);
+                m_customIconLoader->addAppDir(appName, path);
+                m_icon = QIcon(new KIconEngine(icon_name, m_customIconLoader));
+                // Given we're using custom icon loader to load the icon and IconItem
+                // would not use this icon loader, we first check if Plasma themed SVG
+                // exists for this icon and if not, force IconItem to use the QIcon we provide
+                // instead of trying to lookup the icon by name (and fail)
+                if (!hasm_svgIcon(icon_name)) {
+                    m_iconName = QString();
+                }
             } else {
                 qWarning() << "Wrong IconThemePath" << path << ": too short or does not end with 'icons'";
             }

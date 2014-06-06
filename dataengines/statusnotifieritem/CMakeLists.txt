@@ -31,7 +31,6 @@ target_link_libraries(plasma_engine_statusnotifieritem
     KF5::Service
     KF5::Plasma
     KF5::IconThemes
-    KF5::KDELibs4Support
     dbusmenu-qt5
 )
 

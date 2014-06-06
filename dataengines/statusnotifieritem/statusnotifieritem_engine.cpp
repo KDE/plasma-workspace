@@ -23,7 +23,6 @@
 #include "statusnotifieritemsource.h"
 
 #include <QDebug>
-#include <KIcon>
 #include <iostream>
 
 static const QString s_watcherServiceName("org.kde.StatusNotifierWatcher");

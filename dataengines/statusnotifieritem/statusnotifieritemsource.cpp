@@ -26,10 +26,8 @@
 #include <QApplication>
 #include <QIcon>
 #include <QDebug>
-#include <KIcon>
+#include <KIconEngine>
 #include <KIconLoader>
-#include <KStandardDirs>
-#include <KGlobal>
 #include <QPainter>
 #include <QDBusMessage>
 #include <QDBusPendingCall>
@@ -59,7 +57,7 @@ public:
 protected:
     virtual QIcon iconForName(const QString &name)
     {
-        return KIcon(name, m_iconLoader);
+        return QIcon(new KIconEngine(name, m_iconLoader));
     }
 
 private:
@@ -211,28 +209,20 @@ void StatusNotifierItemSource::refreshCallback(QDBusPendingCallWatcher *call)
         //IconThemePath (handle this one first, because it has an impact on
         //others)
         QVariantMap properties = reply.argumentAt<0>();
-        if (!m_customIconLoader) {
-            QString path = properties["IconThemePath"].toString();
-            if (!path.isEmpty()) {
-                // FIXME: If last part of path is not "icons", this won't work!
-                QStringList tokens = path.split('/', QString::SkipEmptyParts);
-                if (tokens.length() >= 3 && tokens.takeLast() == "icons") {
-                    QString appName = tokens.takeLast();
-                    QString prefix = '/' + tokens.join("/");
-                    // FIXME: Fix KIconLoader and KIconTheme so that we can use
-                    // our own instance of KStandardDirs
-                    KGlobal::dirs()->addResourceDir("data", prefix);
-                    // We use a separate instance of KIconLoader to avoid
-                    // adding all application dirs to KIconLoader::global(), to
-                    // avoid potential icon name clashes between application
-                    // icons
-                    m_customIconLoader = new KIconLoader(appName, QStringList() /* dirs */, this);
-                } else {
-                    qWarning() << "Wrong IconThemePath" << path << ": too short or does not end with 'icons'";
-                }
+        QString path = properties["IconThemePath"].toString();
+        if (!path.isEmpty()) {
+            // FIXME: If last part of path is not "icons", this won't work!
+            QStringList tokens = path.split('/', QString::SkipEmptyParts);
+            if (tokens.length() >= 3 && tokens.takeLast() == "icons") {
+                QString appName = tokens.takeLast();
+
+                m_customIconLoader = new KIconLoader(appName, QStringList(), this);
+                m_customIconLoader->addAppDir(appName, path);
+            } else {
+                qWarning() << "Wrong IconThemePath" << path << ": too short or does not end with 'icons'";
             }
         }
-        setData("IconThemePath", properties["IconThemePath"]);
+        setData("IconThemePath", path);
 
         setData("Category", properties["Category"]);
         setData("Status", properties["Status"]);
@@ -259,7 +249,7 @@ void StatusNotifierItemSource::refreshCallback(QDBusPendingCallWatcher *call)
                 setData("OverlayIconName", iconName);
                 if (!iconName.isEmpty()) {
                     overlayNames << iconName;
-                    overlay = KIcon(iconName, iconLoader());
+                    overlay = QIcon(new KIconEngine(iconName, iconLoader()));
                 }
             } else {
                 overlay = imageVectorToPixmap(image);
@@ -269,7 +259,7 @@ void StatusNotifierItemSource::refreshCallback(QDBusPendingCallWatcher *call)
             if (image.isEmpty()) {
                 iconName = properties["IconName"].toString();
                 if (!iconName.isEmpty()) {
-                    icon = KIcon(iconName, iconLoader(), overlayNames);
+                    icon = QIcon(new KIconEngine(iconName, iconLoader()));
 
                     if (overlayNames.isEmpty() && !overlay.isNull()) {
                         overlayIcon(&icon, &overlay);
@@ -295,7 +285,7 @@ void StatusNotifierItemSource::refreshCallback(QDBusPendingCallWatcher *call)
                 QString iconName = properties["AttentionIconName"].toString();
                 setData("AttentionIconName", iconName);
                 if (!iconName.isEmpty()) {
-                    attentionIcon = KIcon(iconName, iconLoader(), overlayNames);
+                    attentionIcon = QIcon(new KIconEngine(iconName, iconLoader()));
 
                     if (overlayNames.isEmpty() && !overlay.isNull()) {
                         overlayIcon(&attentionIcon, &overlay);
@@ -321,7 +311,7 @@ void StatusNotifierItemSource::refreshCallback(QDBusPendingCallWatcher *call)
             } else {
                 QIcon toolTipIcon;
                 if (toolTip.image.size() == 0) {
-                    toolTipIcon = KIcon(toolTip.icon, iconLoader());
+                    toolTipIcon = QIcon(new KIconEngine(toolTip.icon, iconLoader()));
                 } else {
                     toolTipIcon = imageVectorToPixmap(toolTip.image);
                 }
