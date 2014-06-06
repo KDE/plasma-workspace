@@ -67,6 +67,7 @@ Item {
     }
     Loader {
         id: controlsLayout
+        focus: true
         anchors {
             margins: units.largeSpacing
 
