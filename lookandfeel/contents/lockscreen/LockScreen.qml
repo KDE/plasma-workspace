@@ -99,23 +99,30 @@ Image {
                     }
                 }
 
-                PlasmaComponents.ToolButton {
+                LogoutOptions {
+                    id: logoutOptions
                     anchors.right: parent.right
                     anchors.rightMargin: 5
-                    iconSource: "system-shutdown"
-
-                    onClicked: {
-                        stackView.push(logoutScreenComponent, {"mode": "shutdown"})
+                    canReboot: false
+                    canLogout: false
+                    canShutdown: root.shutdownSupported
+                    mode: ""
+                    exclusive: false
+                    onModeChanged: {
+                        if(mode != "")
+                            stackView.push(logoutScreenComponent, {"mode": logoutOptions.mode })
                     }
-
+                    onVisibleChanged: if(visible) {
+                        mode = ""
+                    }
                 }
 
                 Component {
                     id: logoutScreenComponent
                     LogoutScreen {
-                        canReboot: false
-                        canLogout: false
-                        canShutdown: root.shutdownSupported
+                        canReboot: logoutOptions.canReboot
+                        canLogout: logoutOptions.canLogout
+                        canShutdown: logoutOptions.canShutdown
                         onCancel: stackView.pop()
 
                         onShutdownRequested: {
