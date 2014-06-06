@@ -84,14 +84,21 @@ KSMShutdownDlg::KSMShutdownDlg( QWindow* parent,
     setColor(QColor(Qt::transparent));
     setFlags(Qt::FramelessWindowHint);
 
+    QPoint globalPosition(QCursor::pos());
+    foreach (QScreen *s, QGuiApplication::screens()) {
+        if (s->geometry().contains(globalPosition)) {
+            setScreen(s);
+            break;
+        }
+    }
+
+
     // Qt doesn't set this on unmanaged windows
     //FIXME: or does it?
     XChangeProperty( QX11Info::display(), winId(),
         XInternAtom( QX11Info::display(), "WM_WINDOW_ROLE", False ), XA_STRING, 8, PropModeReplace,
         (unsigned char *)"logoutdialog", strlen( "logoutdialog" ));
 
-    setPosition(screen()->virtualGeometry().center().x() - width() / 2,
-                screen()->virtualGeometry().center().y() - height() / 2);
 
     //QQuickView *windowContainer = QQuickView::createWindowContainer(m_view, this);
     //windowContainer->setSizePolicy(QSizePolicy::Preferred, QSizePolicy::Preferred);
@@ -158,6 +165,9 @@ KSMShutdownDlg::KSMShutdownDlg( QWindow* parent,
         qWarning() << "Couldn't find a theme for the Shutdown dialog" << fileName;
         return;
     }
+
+    setPosition(screen()->virtualGeometry().center().x() - width() / 2,
+                screen()->virtualGeometry().center().y() - height() / 2);
 
     if(!errors().isEmpty()) {
         qWarning() << errors();
