@@ -128,6 +128,7 @@ BreezeBlock {
             PlasmaComponents.Button {
                 id: commitButton
                 onClicked: root.currentAction()
+                focus: true
             }
         }
 
