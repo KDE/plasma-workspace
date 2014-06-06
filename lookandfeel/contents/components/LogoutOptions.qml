@@ -34,6 +34,9 @@ PlasmaComponents.ButtonRow {
     property bool canLogout
     property string mode: "shutdown"
 
+    //Don't show the buttons if there's nothing to click
+    visible: !exclusive || (canReboot+canShutdown+canLogout)>1
+
     PlasmaComponents.ToolButton {
         id: restartButton
         flat: false

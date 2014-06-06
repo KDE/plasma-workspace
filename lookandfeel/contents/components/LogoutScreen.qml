@@ -139,7 +139,9 @@ BreezeBlock {
             canReboot: root.canReboot
             canLogout: root.canLogout
             canShutdown: root.canShutdown
-            onModeChanged: root.mode = mode;
+            onModeChanged: root.mode = mode
+
+            exclusive: true
             Component.onCompleted: mode = root.mode;
         }
 
