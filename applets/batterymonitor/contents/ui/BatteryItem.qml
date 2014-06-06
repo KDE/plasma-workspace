@@ -67,7 +67,7 @@ Item {
             right: parent.right
         }
 
-        KQuickControlsAddons.QIconItem {
+        PlasmaCore.IconItem {
             id: batteryIcon
             width: units.iconSizes.medium
             height: width
@@ -102,7 +102,7 @@ Item {
           }
         }
 
-        Components.Label {
+        BreezeLabel {
             id: batteryNameLabel
             anchors {
                 verticalCenter: isPresent ? undefined : batteryIcon.verticalCenter
@@ -115,7 +115,7 @@ Item {
             text: model["Pretty Name"]
         }
 
-        Components.Label {
+        BreezeLabel {
             id: batteryStatusLabel
             anchors {
                 top: batteryNameLabel.top
@@ -142,7 +142,7 @@ Item {
             value: parseInt(model["Percent"])
         }
 
-        Components.Label {
+        BreezeLabel {
             id: batteryPercent
             anchors {
                 verticalCenter: batteryPercentBar.verticalCenter

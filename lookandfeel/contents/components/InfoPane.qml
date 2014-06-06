@@ -5,7 +5,7 @@ import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 
 ColumnLayout {
-   PlasmaComponents.Label { //should be a heading but we want it _loads_ bigger
+   BreezeLabel { //should be a heading but we want it _loads_ bigger
         text: Qt.formatTime(timeSource.data["Local"]["Time"], Locale.ShortFormat)
         //we fill the width then align the text so that we can make the text shrink to fit
         Layout.fillWidth: true
@@ -16,7 +16,7 @@ ColumnLayout {
         font.pointSize: 36
     }
 
-    PlasmaComponents.Label {
+    BreezeLabel {
         text: Qt.formatDate(timeSource.data["Local"]["Date"], Locale.LongFormat);
         Layout.alignment: Qt.AlignRight
     }
@@ -34,7 +34,7 @@ ColumnLayout {
             width: 20
         }
 
-        PlasmaComponents.Label {
+        BreezeLabel {
             text: i18n("%1\% battery remaining", pmSource.data["Battery0"]["Percent"])
             Layout.alignment: Qt.AlignRight
             wrapMode: Text.Wrap

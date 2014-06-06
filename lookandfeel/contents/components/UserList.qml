@@ -88,7 +88,7 @@ ListView {
                 }
             }
 
-            PlasmaComponents.Label {
+            BreezeLabel {
                 id: loginText
                 anchors.top: imageWrapper.bottom
                 anchors.topMargin: -10
