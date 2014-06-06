@@ -188,7 +188,6 @@ void View::positionOnScreen()
         KWindowEffects::slideWindow(winId(), KWindowEffects::NoEdge, 0);
     } else {
         KWindowSystem::setOnAllDesktops(winId(), true);
-        KWindowSystem::setType(winId(), NET::Dock);
         KWindowEffects::slideWindow(winId(), KWindowEffects::TopEdge, 0);
     }
 
