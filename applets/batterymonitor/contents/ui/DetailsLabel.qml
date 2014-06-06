@@ -20,8 +20,9 @@
 
 import QtQuick 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
+import org.kde.plasma.components 2.0 as PlasmaComponents
 
-BreezeLabel {
+PlasmaComponents.Label {
     onContentWidthChanged: {
         if (horizontalAlignment == Text.AlignRight && contentWidth > parent.width) { parent.width = contentWidth; }
     }

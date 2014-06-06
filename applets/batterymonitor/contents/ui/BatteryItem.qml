@@ -75,7 +75,7 @@ Item {
                 verticalCenter: parent.verticalCenter
                 left: parent.left
             }
-            icon: Logic.iconForBattery(model, charging)
+            source: Logic.iconForBattery(model, charging)
         }
 
         SequentialAnimation {
@@ -102,7 +102,7 @@ Item {
           }
         }
 
-        BreezeLabel {
+        Components.Label {
             id: batteryNameLabel
             anchors {
                 verticalCenter: isPresent ? undefined : batteryIcon.verticalCenter
@@ -115,7 +115,7 @@ Item {
             text: model["Pretty Name"]
         }
 
-        BreezeLabel {
+        Components.Label {
             id: batteryStatusLabel
             anchors {
                 top: batteryNameLabel.top
@@ -142,7 +142,7 @@ Item {
             value: parseInt(model["Percent"])
         }
 
-        BreezeLabel {
+        Components.Label {
             id: batteryPercent
             anchors {
                 verticalCenter: batteryPercentBar.verticalCenter
