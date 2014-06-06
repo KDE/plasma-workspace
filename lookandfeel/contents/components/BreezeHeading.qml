@@ -1,6 +1,6 @@
 /***************************************************************************
- *   Copyright (C) 2014 by David Edmundson <davidedmundson@kde.org>        *
  *   Copyright (C) 2014 by Aleix Pol Gonzalez <aleixpol@blue-systems.com>  *
+ *   Copyright (C) 2014 by Marco Martin <mart@kde.org>                     *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *
@@ -19,58 +19,10 @@
  ***************************************************************************/
 
 import QtQuick 2.1
-import QtQuick.Layouts 1.1
-import QtQuick.Controls 1.1
+import org.kde.plasma.components 2.0 as PlasmaComponents
+import org.kde.plasma.extras 2.0 as PlasmaExtras
 
-import org.kde.plasma.core 2.0 as PlasmaCore
-
-Item {
-    property alias mainItem: view.sourceComponent
-    property alias controls: controlsLayout.sourceComponent
-
-    property bool canShutdown: false
-    property bool canReboot: false
-
-    Rectangle {
-        color: theme.textColor
-        opacity: 0.8
-        anchors {
-            fill: parent
-        }
-    }
-
-    Loader {
-        id: view
-        anchors {
-            margins: units.largeSpacing
-
-            left: parent.left
-            right: parent.right
-            top: parent.top
-            bottom: separator.top
-        }
-    }
-
-    Rectangle {
-        id: separator
-        height: 1
-        color: theme.backgroundColor
-        width: parent.width
-        opacity: 0.4
-        anchors {
-            margins: units.largeSpacing
-
-            bottom: controlsLayout.top
-        }
-    }
-    Loader {
-        id: controlsLayout
-        anchors {
-            margins: units.largeSpacing
-
-            left: parent.left
-            right: parent.right
-            bottom: parent.bottom
-        }
-    }
+PlasmaExtras.Heading {
+    level: 4
+    color: theme.backgroundColor
 }

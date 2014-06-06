@@ -1,6 +1,6 @@
 /***************************************************************************
- *   Copyright (C) 2014 by David Edmundson <davidedmundson@kde.org>        *
  *   Copyright (C) 2014 by Aleix Pol Gonzalez <aleixpol@blue-systems.com>  *
+ *   Copyright (C) 2014 by Marco Martin <mart@kde.org>                     *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *
@@ -20,57 +20,53 @@
 
 import QtQuick 2.1
 import QtQuick.Layouts 1.1
-import QtQuick.Controls 1.1
 
 import org.kde.plasma.core 2.0 as PlasmaCore
+import org.kde.plasma.components 2.0 as PlasmaComponents
 
-Item {
-    property alias mainItem: view.sourceComponent
-    property alias controls: controlsLayout.sourceComponent
 
-    property bool canShutdown: false
-    property bool canReboot: false
+PlasmaComponents.ButtonRow {
+    id: root
+    spacing: 0
 
-    Rectangle {
-        color: theme.textColor
-        opacity: 0.8
-        anchors {
-            fill: parent
+    property bool canReboot
+    property bool canShutdown
+    property bool canLogout
+    property string mode: "shutdown"
+
+    PlasmaComponents.ToolButton {
+        id: restartButton
+        flat: false
+        iconSource: "system-reboot"
+        visible: root.canReboot
+
+        onClicked: {
+            root.mode = "reboot"
         }
     }
 
-    Loader {
-        id: view
-        anchors {
-            margins: units.largeSpacing
+    PlasmaComponents.ToolButton {
+        id: shutdownButton
+        flat: false
+        iconSource: "system-shutdown"
+        visible: root.canShutdown
 
-            left: parent.left
-            right: parent.right
-            top: parent.top
-            bottom: separator.top
+        onClicked: {
+            root.mode = "shutdown"
         }
+
     }
 
-    Rectangle {
-        id: separator
-        height: 1
-        color: theme.backgroundColor
-        width: parent.width
-        opacity: 0.4
-        anchors {
-            margins: units.largeSpacing
+    PlasmaComponents.ToolButton {
+        id: logoutButton
+        flat: false
+        iconSource: "system-log-out"
+        visible: root.canLogout
 
-            bottom: controlsLayout.top
+        onClicked: {
+            root.mode = "logout"
         }
-    }
-    Loader {
-        id: controlsLayout
-        anchors {
-            margins: units.largeSpacing
 
-            left: parent.left
-            right: parent.right
-            bottom: parent.bottom
-        }
     }
 }
+

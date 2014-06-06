@@ -172,6 +172,7 @@ KSMShutdownDlg::KSMShutdownDlg( QWindow* parent,
     connect(rootObject(), SIGNAL(lockScreenRequested()), SLOT(slotLockScreen()));
 
     show();
+    requestActivate();
 
     KWindowSystem::setState(winId(), NET::SkipTaskbar|NET::SkipPager);
 //    adjustSize();

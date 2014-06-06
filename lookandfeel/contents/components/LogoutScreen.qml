@@ -58,9 +58,8 @@ BreezeBlock {
 
     mainItem: ColumnLayout {
         spacing: 0
-        PlasmaExtras.Heading {
+        BreezeHeading {
             id: actionLabel
-            level: 4
             Layout.alignment: Qt.AlignHCenter
         }
 
@@ -85,7 +84,7 @@ BreezeBlock {
             value: root.remainingTime
         }
 
-        PlasmaComponents.Label {
+        BreezeLabel {
             anchors.right: progressBar.right
             text: i18n("In %1 seconds", root.remainingTime);
         }
@@ -132,44 +131,15 @@ BreezeBlock {
             }
         }
 
-        PlasmaComponents.ToolButton {
-            id: restartButton
+        LogoutOptions {
+            id: logoutOptions
             anchors.right: parent.right
-            iconSource: "system-reboot"
-            enabled: root.mode != "reboot"
-            visible: root.canReboot
-
-            onClicked: {
-                root.mode = "reboot"
-            }
-        }
-
-        PlasmaComponents.ToolButton {
-            id: shutdownButton
-            anchors.right: restartButton.left
             anchors.rightMargin: 5
-            iconSource: "system-shutdown"
-            enabled: root.mode != "shutdown"
-            visible: root.canShutdown
-
-            onClicked: {
-                root.mode = "shutdown"
-            }
-
-        }
-
-        PlasmaComponents.ToolButton {
-            id: logoutButton
-            anchors.right: shutdownButton.left
-            anchors.rightMargin: 5
-            iconSource: "system-log-out"
-            enabled: root.mode != "logout"
-            visible: root.canLogout
-
-            onClicked: {
-                root.mode = "logout"
-            }
-
+            canReboot: root.canReboot
+            canLogout: root.canLogout
+            canShutdown: root.canShutdown
+            onModeChanged: root.mode = mode;
+            Component.onCompleted: mode = root.mode;
         }
 
         state: mode
