@@ -10,6 +10,7 @@ X-KDE-System-Settings-Parent-Category=workspace-behavior
 X-KDE-Weight=60
 
 Name=Screen Locking
+Name[ca]=Bloqueig de la pantalla
 Name[nl]=Scherm vergrendelen
 Name[pl]=Blokowanie ekranu
 Name[pt]=Bloqueio do Ecrã
@@ -19,6 +20,7 @@ Name[sv]=Skärmlåsning
 Name[uk]=Блокування екрана
 Name[x-test]=xxScreen Lockingxx
 Comment=Screen Locking Timeouts
+Comment[ca]=Temps d'espera pel bloqueig de la pantalla
 Comment[nl]=Tijdslimieten van scherm vergrendelen
 Comment[pl]=Czasy do zablokowania ekranu
 Comment[pt]=Tempos-Limite de Bloqueio do Ecrã
