@@ -8,5 +8,5 @@ set(bugzillalibtest_SRCS
 add_executable(bugzillalibtest ${bugzillalibtest_SRCS})
 ecm_mark_as_test(bugzillalibtest)
 
-target_link_libraries(bugzillalibtest KF5::KIOWidgets KF5::XmlRpcClient Qt5::Xml)
+target_link_libraries(bugzillalibtest KF5::KIOWidgets KF5::XmlRpcClient Qt5::Xml KF5::I18n)
 
