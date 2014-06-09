@@ -41,13 +41,6 @@ KQuickControlsAddonsComponents.MouseEventListener {
     property int location: plasmoid.location
 
 
-
-    onClicked: {
-        if (taskType == SystemTray.Task.TypePlasmoid) {
-            togglePopup();
-        }
-    }
-
     Timer {
         id: hidePopupTimer
         interval: 10
