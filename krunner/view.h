@@ -40,6 +40,9 @@ public:
 
     void positionOnScreen();
 
+    bool freeFloating() const;
+    void setFreeFloating(bool floating);
+
 protected:
     virtual bool event(QEvent* event);
     virtual void showEvent(QShowEvent *event);
@@ -57,10 +60,12 @@ protected Q_SLOTS:
     void screenGeometryChanged();
     void resetScreenPos();
     void displayOrHide();
+    void reloadConfig();
 
 private:
     QPoint m_customPos;
     KDeclarative::QmlObject *m_qmlObj;
+    KConfigGroup m_config;
     qreal m_offset;
     bool m_floating : 1;
 };

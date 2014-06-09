@@ -42,6 +42,7 @@ set(krunner_SRCS
 find_package(KF5Declarative ${KF5_VERSION} REQUIRED)
 find_package(KF5Plasma ${KF5_VERSION} REQUIRED)
 find_package(KF5PlasmaQuick REQUIRED NO_MODULE)
+find_package(KF5Config REQUIRED NO_MODULE)
 
 set(krunner_dbusAppXML dbus/org.kde.krunner.App.xml)
 qt5_add_dbus_adaptor(krunner_SRCS ${krunner_dbusAppXML} view.h View)
@@ -63,6 +64,7 @@ target_link_libraries(krunner
     KF5::GlobalAccel
     KF5::DBusAddons
     KF5::WindowSystem
+    KF5::ConfigWidgets
 )
 
 if(X11_FOUND)

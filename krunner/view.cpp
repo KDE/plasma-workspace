@@ -33,6 +33,7 @@
 #include <KGlobalAccel>
 #include <QAction>
 #include <KLocalizedString>
+#include <KDirWatch>
 
 #include <kdeclarative/qmlobject.h>
 
@@ -50,6 +51,10 @@ View::View(QWindow *parent)
     setClearBeforeRendering(true);
     setColor(QColor(Qt::transparent));
     setFlags(Qt::FramelessWindowHint);
+
+    m_config = KConfigGroup(KSharedConfig::openConfig("krunnerrc"), "General");
+
+    setFreeFloating(m_config.readEntry("FreeFloating", false));
 
     new AppAdaptor(this);
     QDBusConnection::sessionBus().registerObject(QLatin1String("/App"), this);
@@ -94,6 +99,12 @@ View::View(QWindow *parent)
 
     connect(this, SIGNAL(visibleChanged(bool)), this, SLOT(resetScreenPos()));
 
+    KDirWatch::self()->addFile(m_config.name());
+
+    // Catch both, direct changes to the config file ...
+    connect(KDirWatch::self(), &KDirWatch::dirty, this, &View::reloadConfig);
+    connect(KDirWatch::self(), &KDirWatch::created, this, &View::reloadConfig);
+
     if (m_qmlObj->rootObject()) {
         connect(m_qmlObj->rootObject(), SIGNAL(widthChanged()), this, SLOT(resetScreenPos()));
     }
@@ -107,6 +118,33 @@ View::View(QWindow *parent)
 
 View::~View()
 {
+}
+
+bool View::freeFloating() const
+{
+    return m_floating;
+}
+
+void View::setFreeFloating(bool floating)
+{
+    if (m_floating == floating) {
+        return;
+    }
+
+    m_floating = floating;
+    if (m_floating) {
+        setLocation(Plasma::Types::Floating);
+    } else {
+        setLocation(Plasma::Types::TopEdge);
+    }
+
+    positionOnScreen();
+}
+
+void View::reloadConfig()
+{
+    m_config.config()->reparseConfiguration();
+    setFreeFloating(m_config.readEntry("FreeFloating", false));
 }
 
 bool View::event(QEvent *event)
