@@ -20,9 +20,7 @@
 #ifndef CONFIGVIEW_H
 #define CONFIGVIEW_H
 
-
 #include <QQuickView>
-
 
 //
 //  W A R N I N G
@@ -35,8 +33,9 @@
 // We mean it.
 //
 
-namespace Plasma {
-    class Applet;
+namespace Plasma
+{
+class Applet;
 }
 
 namespace PlasmaQuick
@@ -62,6 +61,8 @@ public:
 
     virtual void init();
 
+    Plasma::Applet *applet();
+
     QString appletGlobalShortcut() const;
     void setAppletGlobalShortcut(const QString &shortcut);
 
@@ -74,11 +75,16 @@ Q_SIGNALS:
     void appletGlobalShortcutChanged();
 
 protected:
-     void hideEvent(QHideEvent *ev);
-     void resizeEvent(QResizeEvent *re);
+    void hideEvent(QHideEvent *ev);
+    void resizeEvent(QResizeEvent *re);
 
 private:
     ConfigViewPrivate *const d;
+
+    Q_PRIVATE_SLOT(d, void updateMinimumWidth())
+    Q_PRIVATE_SLOT(d, void updateMinimumHeight())
+    Q_PRIVATE_SLOT(d, void updateMaximumWidth())
+    Q_PRIVATE_SLOT(d, void updateMaximumHeight())
 };
 
 }

@@ -543,6 +543,14 @@ void PanelView::showConfigurationInterface(Plasma::Applet *applet)
             KWindowSystem::setState(m_panelConfigView.data()->winId(), NET::SkipTaskbar | NET::SkipPager);
         }
         return;
+    } else if (m_panelConfigView) {
+        if (m_panelConfigView->applet() == applet) {
+            m_panelConfigView->show();
+            return;
+        } else {
+            m_panelConfigView->hide();
+            m_panelConfigView->deleteLater();
+        }
     }
 
     if (cont && cont->isContainment()) {
@@ -550,6 +558,7 @@ void PanelView::showConfigurationInterface(Plasma::Applet *applet)
     } else {
         m_panelConfigView = new PlasmaQuick::ConfigView(applet);
     }
+
     m_panelConfigView.data()->init();
     m_panelConfigView.data()->show();
     KWindowSystem::setState(m_panelConfigView.data()->winId(), NET::SkipTaskbar | NET::SkipPager);
