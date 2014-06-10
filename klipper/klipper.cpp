@@ -51,11 +51,10 @@
 #include <prison/QRCodeBarcode>
 #endif
 
+#include <config-X11.h>
 #if HAVE_X11
 #include <QX11Info>
-#include <X11/Xlib.h>
-#include <X11/Xatom.h>
-#include <fixx11h.h>
+#include <xcb/xcb.h>
 #endif
 
 //#define NOISY_KLIPPER
@@ -586,13 +585,17 @@ bool Klipper::blockFetchingNewData()
 //   selected when Klipper asked first.
 // Use XQueryPointer rather than QApplication::mouseButtons()/keyboardModifiers(), because
 //   Klipper needs the very current state.
-    Window root, child;
-    int root_x, root_y, win_x, win_y;
-    uint state;
-    XQueryPointer( QX11Info::display(), QX11Info::appRootWindow(), &root, &child,
-                   &root_x, &root_y, &win_x, &win_y, &state );
-    if( ( state & ( ShiftMask | Button1Mask )) == ShiftMask // #85198
-        || ( state & Button1Mask ) == Button1Mask ) { // #80302
+    if (!QX11Info::isPlatformX11()) {
+        return false;
+    }
+    xcb_connection_t *c = QX11Info::connection();
+    const xcb_query_pointer_cookie_t cookie = xcb_query_pointer_unchecked(c, QX11Info::appRootWindow());
+    QScopedPointer<xcb_query_pointer_reply_t, QScopedPointerPodDeleter> queryPointer(xcb_query_pointer_reply(c, cookie, nullptr));
+    if (queryPointer.isNull()) {
+        return false;
+    }
+    if (((queryPointer->mask & (XCB_KEY_BUT_MASK_SHIFT | XCB_KEY_BUT_MASK_BUTTON_1)) == XCB_KEY_BUT_MASK_SHIFT) // BUG: 85198
+            || ((queryPointer->mask & XCB_KEY_BUT_MASK_BUTTON_1) == XCB_KEY_BUT_MASK_BUTTON_1)) { // BUG: 80302
         m_pendingContentsCheck = true;
         m_pendingCheckTimer.start( 100 );
         return true;

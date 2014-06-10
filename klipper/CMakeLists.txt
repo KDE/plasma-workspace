@@ -39,9 +39,7 @@ set(klipper_KDEINIT_SRCS ${libklipper_common_SRCS} main.cpp tray.cpp)
 
 kf5_add_kdeinit_executable(klipper ${klipper_KDEINIT_SRCS})
 
-set_target_properties(kdeinit_klipper PROPERTIES COMPILE_FLAGS -DHAVE_X11=1)
 target_link_libraries(kdeinit_klipper
-    Qt5::X11Extras
     KF5::Completion # klineedit - port away?
     KF5::ConfigGui
     KF5::CoreAddons
@@ -54,12 +52,11 @@ target_link_libraries(kdeinit_klipper
     KF5::WindowSystem
     KF5::WidgetsAddons
     KF5::XmlGui
-    ${X11_LIBRARIES}
     ${ZLIB_LIBRARY}
 )
-if (X11_Xfixes_FOUND)
-  target_link_libraries(kdeinit_klipper ${X11_Xfixes_LIB})
-endif ()
+if (X11_FOUND)
+  target_link_libraries(kdeinit_klipper XCB::XCB Qt5::X11Extras)
+endif()
 if (PRISON_FOUND)
   target_link_libraries(kdeinit_klipper ${PRISON_LIBRARIES})
 endif ()
