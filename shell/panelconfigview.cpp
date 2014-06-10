@@ -169,7 +169,7 @@ void PanelConfigView::focusOutEvent(QFocusEvent *ev)
 {
     const QWindow *focusWindow = QGuiApplication::focusWindow();
 
-    if (focusWindow && (focusWindow->flags() & Qt::Popup || focusWindow->objectName() == QLatin1String("QMenuClassWindow"))) {
+    if (focusWindow && ((focusWindow->flags().testFlag(Qt::Popup)) || focusWindow->objectName() == QLatin1String("QMenuClassWindow"))) {
         return;
     }
     Q_UNUSED(ev)
