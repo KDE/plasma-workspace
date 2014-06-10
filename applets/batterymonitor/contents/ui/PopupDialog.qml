@@ -114,7 +114,7 @@ FocusScope {
 
         BrightnessItem {
             id: brightnessSlider
-            icon: "video-display"
+            icon: "DisplayBrightness"
             label: i18n("Display Brightness")
             visible: isBrightnessAvailable
             onChanged: brightnessChanged(value)
@@ -125,7 +125,7 @@ FocusScope {
 
         BrightnessItem {
             id: keyboardBrightnessSlider
-            icon: "input-keyboard"
+            icon: "KeyboardBrightness"
             label: i18n("Keyboard Brightness")
             visible: isKeyboardBrightnessAvailable
             onChanged: keyboardBrightnessChanged(value)

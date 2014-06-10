@@ -25,6 +25,7 @@ Item {
     property bool hasBattery
     property int percent
     property bool pluggedIn
+    property string batteryType
 
     PlasmaCore.Svg {
         id: svg
@@ -36,6 +37,7 @@ Item {
         anchors.fill: parent
         svg: svg
         elementId: "Battery"
+        visible: elementForType(batteryType) == ""
     }
 
     PlasmaCore.SvgItem {
@@ -43,7 +45,7 @@ Item {
         anchors.fill: parent
         svg: svg
         elementId: hasBattery ? fillElement(percent) : "Unavailable"
-        visible: elementId != ""
+        visible: elementId != "" && elementForType(batteryType) == ""
     }
 
     function fillElement(p) {
@@ -95,6 +97,32 @@ Item {
         anchors.fill: parent
         svg: svg
         elementId: "AcAdapter"
-        visible: pluggedIn
+        visible: pluggedIn && elementForType(batteryType) == ""
+    }
+
+    PlasmaCore.SvgItem {
+        id: otherBatteriesSvg
+        anchors.fill: parent
+        svg: svg
+        elementId: elementForType(batteryType)
+        visible: elementId != ""
+
+    }
+
+    function elementForType(t) {
+        switch(t) {
+            case "Mouse":
+                return "MouseCharge";
+            case "Keyboard":
+                return "KeyboardCharge";
+            case "Pda":
+                return "PhoneCharge";
+            case "Phone":
+                return "PhoneCharge";
+            case "UPS":
+                return "UPSCharge";
+            default:
+                return "";
+        }
     }
 }

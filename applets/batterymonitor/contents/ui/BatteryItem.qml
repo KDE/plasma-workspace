@@ -67,15 +67,18 @@ Item {
             right: parent.right
         }
 
-        PlasmaCore.IconItem {
+        BatteryIcon {
             id: batteryIcon
-            width: units.iconSizes.medium
+            width: units.iconSizes.large
             height: width
             anchors {
                 verticalCenter: parent.verticalCenter
                 left: parent.left
             }
-            source: Logic.iconForBattery(model, charging)
+            batteryType: model["Type"]
+            percent: model["Percent"]
+            hasBattery: model["Plugged in"]
+            pluggedIn: model["State"] == "Charging" && model["Is Power Supply"]
         }
 
         SequentialAnimation {
@@ -106,7 +109,7 @@ Item {
             id: batteryNameLabel
             anchors {
                 verticalCenter: isPresent ? undefined : batteryIcon.verticalCenter
-                top: isPresent ? parent.top : undefined
+                bottom: isPresent ? batteryIcon.verticalCenter : undefined
                 left: batteryIcon.right
                 leftMargin: units.gridUnit
             }
@@ -119,19 +122,18 @@ Item {
             id: batteryStatusLabel
             anchors {
                 top: batteryNameLabel.top
-                left: batteryNameLabel.right
-                leftMargin: Math.round(units.gridUnit / 3)
+                right: batteryPercentBar.right
             }
             text: Logic.stringForBatteryState(model)
             height: implicitHeight
             visible: model["Is Power Supply"]
-            color: "#77"+(theme.textColor.toString().substr(1))
+            color: "#AA"+(theme.textColor.toString().substr(1))
         }
 
         Components.ProgressBar {
             id: batteryPercentBar
             anchors {
-                bottom: parent.bottom
+                top: batteryIcon.verticalCenter
                 left: batteryNameLabel.left
                 right: parent.right
                 rightMargin: Math.round(units.gridUnit * 2.5)

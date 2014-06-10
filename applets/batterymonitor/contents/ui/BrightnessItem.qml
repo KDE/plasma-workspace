@@ -29,27 +29,31 @@ FocusScope {
     width: parent.width
     height: Math.max(brightnessIcon.height, brightnessLabel.height + brightnessSlider.height) + units.gridUnit
 
-    property alias icon: brightnessIcon.icon
+    property alias icon: brightnessIcon.elementId
     property alias label: brightnessLabel.text
     property alias value: brightnessSlider.value
     property int percentage: 0
 
     signal changed(int screenBrightness)
 
-    KQuickControlsAddons.QIconItem {
+    PlasmaCore.SvgItem {
         id: brightnessIcon
-        width: units.iconSizes.medium
+        width: units.iconSizes.large
         height: width
         anchors {
             top: parent.top
             left: parent.left
+        }
+        svg: PlasmaCore.Svg {
+            id: svg
+            imagePath: "icons/battery"
         }
     }
 
     Components.Label {
         id: brightnessLabel
         anchors {
-            top: parent.top
+            bottom: brightnessIcon.verticalCenter
             left: brightnessIcon.right
             leftMargin: units.gridUnit
         }
@@ -59,7 +63,7 @@ FocusScope {
     Components.Slider {
         id: brightnessSlider
         anchors {
-            top: brightnessLabel.bottom
+            top: brightnessIcon.verticalCenter
             left: brightnessLabel.left
             right: parent.right
             rightMargin: Math.round(units.gridUnit * 2.5)
