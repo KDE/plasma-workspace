@@ -814,7 +814,11 @@ bool Klipper::ignoreClipboardChanges() const
 
 void Klipper::updateTimestamp()
 {
-    QX11Info::setAppTime(QX11Info::getTimestamp());
+#if HAVE_X11
+    if (QX11Info::isPlatformX11()) {
+        QX11Info::setAppTime(QX11Info::getTimestamp());
+    }
+#endif
 }
 
 void Klipper::slotEditData()
