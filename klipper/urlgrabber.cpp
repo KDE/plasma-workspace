@@ -26,7 +26,6 @@
 #include <QTimer>
 #include <QUuid>
 #include <QFile>
-#include <QX11Info>
 #include <QMenu>
 
 #include <KLocalizedString>
@@ -35,6 +34,7 @@
 #include <KStringHandler>
 #include <KMimeTypeTrader>
 #include <KMacroExpander>
+#include <KWindowSystem>
 
 #include "klippersettings.h"
 #include "clipcommandprocess.h"
@@ -42,12 +42,6 @@
 // TODO: script-interface?
 #include "history.h"
 #include "historystringitem.h"
-
-#if HAVE_X11
-#include <X11/Xlib.h>
-#include <X11/Xatom.h>
-#include <fixx11h.h>
-#endif
 
 URLGrabber::URLGrabber(History* history):
     m_myCurrentAction(0L),
@@ -350,51 +344,14 @@ void URLGrabber::saveSettings() const
 }
 
 // find out whether the active window's WM_CLASS is in our avoid-list
-// digged a little bit in netwm.cpp
 bool URLGrabber::isAvoidedWindow() const
 {
-#if HAVE_X11
-    Display *d = QX11Info::display();
-    static Atom wm_class = XInternAtom( d, "WM_CLASS", true );
-    static Atom active_window = XInternAtom( d, "_NET_ACTIVE_WINDOW", true );
-    Atom type_ret;
-    int format_ret;
-    unsigned long nitems_ret, unused;
-    unsigned char *data_ret;
-    long BUFSIZE = 2048;
-    bool ret = false;
-    Window active = 0L;
-    QString wmClass;
-
-    // get the active window
-    if (XGetWindowProperty(d, DefaultRootWindow( d ), active_window, 0l, 1l,
-                           False, XA_WINDOW, &type_ret, &format_ret,
-                           &nitems_ret, &unused, &data_ret)
-        == Success) {
-        if (type_ret == XA_WINDOW && format_ret == 32 && nitems_ret == 1) {
-            active = *((Window *) data_ret);
-        }
-        XFree(data_ret);
-    }
-    if ( !active )
+    const WId active = KWindowSystem::activeWindow();
+    if (!active) {
         return false;
-
-    // get the class of the active window
-    if ( XGetWindowProperty(d, active, wm_class, 0L, BUFSIZE, False, XA_STRING,
-                            &type_ret, &format_ret, &nitems_ret,
-                            &unused, &data_ret ) == Success) {
-        if ( type_ret == XA_STRING && format_ret == 8 && nitems_ret > 0 ) {
-            wmClass = QString::fromUtf8( (const char *) data_ret );
-            ret = (m_myAvoidWindows.indexOf( wmClass ) != -1);
-        }
-
-        XFree( data_ret );
     }
-
-    return ret;
-#else
-    return false;
-#endif
+    KWindowInfo info(active, NET::Properties(), NET::WM2WindowClass);
+    return m_myAvoidWindows.contains(info.windowClassName());
 }
 
 
