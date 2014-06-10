@@ -42,12 +42,18 @@ kf5_add_kdeinit_executable(klipper ${klipper_KDEINIT_SRCS})
 set_target_properties(kdeinit_klipper PROPERTIES COMPILE_FLAGS -DHAVE_X11=1)
 target_link_libraries(kdeinit_klipper
     Qt5::X11Extras
+    KF5::Completion # klineedit - port away?
+    KF5::ConfigGui
+    KF5::CoreAddons
     KF5::DBusAddons
     KF5::GlobalAccel
-    KF5::WindowSystem
-    KF5::ConfigGui
+    KF5::IconThemes
+    KF5::Notifications
+    KF5::Service
     KF5::TextWidgets
-    KF5::KDELibs4Support
+    KF5::WindowSystem
+    KF5::WidgetsAddons
+    KF5::XmlGui
     ${X11_LIBRARIES}
     ${ZLIB_LIBRARY}
 )

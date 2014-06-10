@@ -33,9 +33,8 @@
 #include <KService>
 #include <KIconLoader>
 #include <KStringHandler>
-#include <KGlobal>
 #include <KMimeTypeTrader>
-#include <KCharMacroExpander>
+#include <KMacroExpander>
 
 #include "klippersettings.h"
 #include "clipcommandprocess.h"

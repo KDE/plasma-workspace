@@ -19,7 +19,7 @@
 
 #include "clipcommandprocess.h"
 
-#include <KCharMacroExpander>
+#include <KMacroExpander>
 
 #include "history.h"
 #include "historystringitem.h"
