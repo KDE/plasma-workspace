@@ -24,6 +24,8 @@ if (PAM_FOUND)
     define_pam_service(kscreensaver)
 endif (PAM_FOUND)
 
+set(KWIN_BIN "kwin_x11" CACHE STRING "Name of the KWin binary")
+
 find_program(some_x_program NAMES iceauth xrdb xterm)
 if (NOT some_x_program)
     set(some_x_program /usr/bin/xrdb)

@@ -34,6 +34,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #include <krun.h>
 #include <config-workspace.h>
 #include <config-unix.h> // HAVE_LIMITS_H
+#include <config-ksmserver.h>
 
 #include <pwd.h>
 #include <sys/types.h>
@@ -200,11 +201,11 @@ void KSMServer::wmProcessChange()
     if( wmProcess->state() == QProcess::NotRunning )
     { // wm failed to launch for some reason, go with kwin instead
         kWarning( 1218 ) << "Window manager" << wm << "failed to launch";
-        if( wm == QStringLiteral( "kwin" ) )
+        if( wm == QStringLiteral( KWIN_BIN ) )
             return; // uhoh, kwin itself failed
         kDebug( 1218 ) << "Launching KWin";
-        wm = QStringLiteral( "kwin" );
-        wmCommands = ( QStringList() << QStringLiteral( "kwin" ) );
+        wm = QStringLiteral( KWIN_BIN );
+        wmCommands = ( QStringList() << QStringLiteral( KWIN_BIN ) );
         // launch it
         launchWM( QList< QStringList >() << wmCommands );
         return;

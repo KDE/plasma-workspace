@@ -1002,8 +1002,8 @@ bool KSMServer::defaultSession() const
 // - if that fails, just use KWin
 void KSMServer::selectWm( const QString& kdewm )
 {
-    wm = QStringLiteral( "kwin" ); // defaults
-    wmCommands = ( QStringList() << QStringLiteral( "kwin" ) );
+    wm = QStringLiteral( KWIN_BIN ); // defaults
+    wmCommands = ( QStringList() << QStringLiteral( KWIN_BIN ) );
     if( qstrcmp( getenv( "KDE_FAILSAFE" ), "1" ) == 0 )
         return; // failsafe, force kwin
     if( !kdewm.isEmpty())

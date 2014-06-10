@@ -10,3 +10,5 @@
 #endif
 
 #define KSCREENLOCKER_GREET_BIN "${CMAKE_INSTALL_PREFIX}/${LIBEXEC_INSTALL_DIR}/kscreenlocker_greet"
+
+#define KWIN_BIN "${KWIN_BIN}"
