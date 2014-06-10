@@ -45,7 +45,7 @@ Item {
         id: dataSource
         engine: "time"
         connectedSources: "Local"
-        interval: 1000
+        interval: plasmoid.configuration.showSecondHand ? 1000 : 30000
         onDataChanged: {
             var date = new Date(data["Local"]["Time"]);
             hours = date.getHours();
