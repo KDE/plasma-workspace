@@ -78,26 +78,17 @@ set_package_properties(Boost PROPERTIES DESCRIPTION "Boost C++ Libraries"
                       )
 
 if(X11_FOUND)
-  find_package(XCB REQUIRED COMPONENTS XCB XFIXES DAMAGE COMPOSITE SHAPE SYNC RENDER RANDR KEYSYMS IMAGE SHM XTEST)
+  find_package(XCB MODULE REQUIRED COMPONENTS XCB KEYSYMS)
   set_package_properties(XCB PROPERTIES TYPE REQUIRED)
-  find_package(XCB COMPONENTS ICCCM)
   if(NOT X11_SM_FOUND)
     message(FATAL_ERROR "\nThe X11 Session Management (SM) development package could not be found.\nPlease install libSM.\n")
   endif(NOT X11_SM_FOUND)
-  if(XCB_FOUND)
-    # If we are building with XCB, we want to have all required components
-    # installed
-    find_package(XCB MODULE REQUIRED COMPONENTS KEYSYMS)
-  endif()
 
   find_package(Qt5 ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS X11Extras)
 endif()
 
 if(X11_FOUND AND XCB_XCB_FOUND)
   set(HAVE_X11 1)
-  find_package(Qt5 REQUIRED NO_MODULE COMPONENTS X11Extras)
-  #X11_Xrender discovery is done by FindX11
-  #add_feature_info("X Rendering Extension (libXrender)" X11_Xrender_FOUND "Support for compositing, rendering operations, and alpha-blending. STRONGLY RECOMMENDED")
 endif()
 
 include(ConfigureChecks.cmake)

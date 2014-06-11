@@ -13,7 +13,6 @@ set(kglobalaccel_SRCS
 
 set(HAVE_X11 0)
 if (${XCB_XCB_FOUND} AND ${XCB_KEYSYMS_FOUND})
-  include_directories(${XCB_INCLUDE_DIRS})
   set( kglobalaccel_SRCS ${kglobalaccel_SRCS} kglobalaccel_x11.cpp )
   set(HAVE_X11 1)
 endif()
@@ -42,7 +41,7 @@ target_link_libraries(kdeinit_kglobalaccel5
    KF5::Crash)
 
 if (${XCB_XCB_FOUND} AND ${XCB_KEYSYMS_FOUND})
-    target_link_libraries(kdeinit_kglobalaccel5 Qt5::X11Extras ${XCB_XCB_LIBRARY} ${XCB_KEYSYMS_LIBRARY})
+    target_link_libraries(kdeinit_kglobalaccel5 Qt5::X11Extras XCB::XCB XCB::KEYSYMS)
 endif()
 
 if(Q_WS_MAC)

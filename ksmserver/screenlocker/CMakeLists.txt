@@ -35,7 +35,7 @@ target_link_libraries(screenlocker_static
    KF5::WindowSystem
    ${X11_LIBRARIES}
    ${X11_Xcursor_LIB}
-   ${XCB_XCB_LIBRARY}
+   XCB::XCB
 )
 
 # Needed to compile on Arm target.
