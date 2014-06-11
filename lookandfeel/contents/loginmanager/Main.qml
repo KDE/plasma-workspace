@@ -87,25 +87,20 @@ Image {
                     }
                 }
 
-                PlasmaComponents.ToolButton {
-                    id: restartButton
-                    anchors.right: parent.right
-                    iconSource: "system-reboot"
+                LogoutOptions {
+                    mode: ""
+                    canShutdown: true
+                    canReboot: true
+                    canLogout: false
+                    exclusive: false
 
-                    onClicked: {
-                        stackView.push(logoutScreenComponent, {"mode": "reboot"})
-                    }
-                }
-
-                PlasmaComponents.ToolButton {
-                    anchors.right: restartButton.left
-                    anchors.rightMargin: 5
-                    iconSource: "system-shutdown"
-
-                    onClicked: {
-                        stackView.push(logoutScreenComponent, {"mode": "shutdown"})
+                    anchors {
+                        right: parent.right
                     }
 
+                    onModeChanged: {
+                        stackView.push(logoutScreenComponent, {"mode": mode})
+                    }
                 }
             }
 
