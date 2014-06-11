@@ -43,6 +43,15 @@ ServiceRunner::~ServiceRunner()
 {
 }
 
+QStringList ServiceRunner::categories() const
+{
+    QStringList cat;
+    cat << QStringLiteral("Applications") << QStringLiteral("System Settings");
+
+    return cat;
+}
+
+
 void ServiceRunner::match(Plasma::RunnerContext &context)
 {
     const QString term = context.query();
