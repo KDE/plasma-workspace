@@ -36,7 +36,7 @@ ListView {
 
     highlightRangeMode: ListView.StrictlyEnforceRange
 
-    readonly property string selectedUser: currentItem.userName //FIXME read only
+    readonly property string selectedUser: currentItem.userName
 
     Component {
         id: userDelegate
