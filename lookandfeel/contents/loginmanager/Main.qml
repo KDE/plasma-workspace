@@ -81,6 +81,7 @@ Image {
                     }
 
                     PlasmaComponents.Button {
+                        //this keeps the buttons the same width and thus line up evenly around the centre
                         Layout.minimumWidth: passwordInput.width
                         text: i18n("Login")
                         onClicked: startLogin();
