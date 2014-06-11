@@ -25,10 +25,10 @@ import QtQuick.Controls 1.1
 import org.kde.plasma.core 2.0 as PlasmaCore
 
 Item {
-    property alias main: view.sourceComponent
-    property alias controls: controlsLayout.sourceComponent
-    readonly property alias mainItem: view.item
-    readonly property alias controlsItem: controlsLayout.item
+    property alias main: mainView.sourceComponent
+    property alias controls: controlsView.sourceComponent
+    readonly property alias mainItem: mainView.item
+    readonly property alias controlsItem: controlsView.item
 
     property bool canShutdown: false
     property bool canReboot: false
@@ -42,7 +42,7 @@ Item {
     }
 
     Loader {
-        id: view
+        id: mainView
         anchors {
             margins: units.largeSpacing
 
@@ -62,11 +62,11 @@ Item {
         anchors {
             margins: units.largeSpacing
 
-            bottom: controlsLayout.top
+            bottom: controlsView.top
         }
     }
     Loader {
-        id: controlsLayout
+        id: controlsView
         focus: true
         anchors {
             margins: units.largeSpacing
