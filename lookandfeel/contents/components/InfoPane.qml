@@ -6,7 +6,7 @@ import org.kde.plasma.extras 2.0 as PlasmaExtras
 
 ColumnLayout {
    BreezeLabel { //should be a heading but we want it _loads_ bigger
-        text: Qt.formatTime(timeSource.data["Local"]["Time"], Locale.ShortFormat)
+        text: Qt.formatTime(timeSource.data["Local"]["DateTime"], Locale.ShortFormat)
         //we fill the width then align the text so that we can make the text shrink to fit
         Layout.fillWidth: true
         horizontalAlignment: Text.AlignRight
