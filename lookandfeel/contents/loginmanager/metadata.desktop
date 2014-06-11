@@ -1,0 +1,16 @@
+[SddmGreeterTheme]
+Name=Breeze
+Description=Breeze Theme
+Author=David Edmundson
+Copyright=(c) 2014, David Edmundson
+License=CC-BY-SA
+Type=sddm-theme
+Version=0.1
+Website=https://github.com/sddm/sddm
+Screenshot=breeze.jpg
+MainScript=Main.qml
+ConfigFile=theme.conf
+TranslationsDirectory=translations
+Email=davidedmundson@kde.org
+Theme-Id=breeze
+Theme-API=2.0
