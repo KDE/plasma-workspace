@@ -51,6 +51,7 @@ Image {
         anchors.centerIn: parent
 
         initialItem: BreezeBlock {
+            id: loginPrompt
             main: UserSelect {
                 id: usersSelection
                 model: userModel
@@ -58,6 +59,9 @@ Image {
 
             controls: Item {
                 height: childrenRect.height
+
+                property alias password: passwordInput.text
+                property alias sessionIndex: sessionCombo.currentIndex
 
                 PlasmaComponents.ComboBox {
                     id: sessionCombo
@@ -76,7 +80,7 @@ Image {
                         id: passwordInput
                         placeholderText: i18n("Password")
                         echoMode: TextInput.Password
-                        onAccepted: startLogin()
+                        onAccepted: loginPrompt.startLogin()
                         focus: true
                     }
 
@@ -84,7 +88,7 @@ Image {
                         //this keeps the buttons the same width and thus line up evenly around the centre
                         Layout.minimumWidth: passwordInput.width
                         text: i18n("Login")
-                        onClicked: startLogin();
+                        onClicked: loginPrompt.startLogin();
                     }
                 }
 
@@ -103,6 +107,11 @@ Image {
                         stackView.push(logoutScreenComponent, {"mode": mode})
                     }
                 }
+
+            }
+
+            function startLogin () {
+                sddm.login(mainItem.selectedUser, controlsItem.password, controlsItem.sessionIndex)
             }
 
             Component {
@@ -120,9 +129,6 @@ Image {
                 }
             }
         }
-    }
-    
-    function startLogin () {
-        sddm.login(usersSelection.selectedUser, passwordInput.text, sessionCombo.currentIndex)
+
     }
 }
