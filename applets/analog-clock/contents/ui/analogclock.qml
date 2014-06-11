@@ -47,7 +47,7 @@ Item {
         connectedSources: "Local"
         interval: plasmoid.configuration.showSecondHand ? 1000 : 30000
         onDataChanged: {
-            var date = new Date(data["Local"]["Time"]);
+            var date = new Date(data["Local"]["DateTime"]);
             hours = date.getHours();
             minutes = date.getMinutes();
             seconds = date.getSeconds();
@@ -164,7 +164,7 @@ Item {
         Layout.minimumWidth: units.gridUnit * 20
         Layout.minimumHeight: units.gridUnit * 20
 
-        today: dataSource.data["Local"]["Date"]
+        today: dataSource.data["Local"]["DateTime"]
     }
 
 }

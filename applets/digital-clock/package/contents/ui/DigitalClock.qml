@@ -63,7 +63,7 @@ Item {
         }
         minimumPixelSize: theme.mSize(theme.smallestFont).height
         fontSizeMode: Text.Fit
-        text: Qt.formatTime(dataSource.data["Local"]["Time"], main.timeFormat);
+        text: Qt.formatTime(dataSource.data["Local"]["DateTime"], main.timeFormat);
         wrapMode: plasmoid.formFactor != PlasmaCore.Types.Horizontal ? Text.WordWrap : Text.NoWrap
         horizontalAlignment: vertical ? Text.AlignHCenter : Text.AlignLeft // we want left align when horizontal to avoid re-aligning when seconds are visible
         verticalAlignment: Text.AlignVCenter
@@ -130,7 +130,7 @@ Item {
 
         var st = Qt.formatTime(new Date(2000, 0, 1, 20, 0, 0), timeFormatString);
         if (main.showTimezone) {
-            st += Qt.formatTime(dataSource.data["Local"]["Time"], " t");
+            st += Qt.formatTime(dataSource.data["Local"]["DateTime"], " t");
         }
 
 
