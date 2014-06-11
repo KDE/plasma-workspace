@@ -58,7 +58,7 @@ Item {
         font {
             weight: plasmoid.configuration.boldText ? Font.Bold : Font.Normal
             italic: plasmoid.configuration.italicText
-            pixelSize: sizehelper.font.pixelSize
+            pixelSize: 1024
             pointSize: undefined // we need to unset pointSize otherwise it breaks the Text.Fit size mode
         }
         minimumPixelSize: theme.mSize(theme.smallestFont).height
@@ -67,6 +67,8 @@ Item {
         wrapMode: plasmoid.formFactor != PlasmaCore.Types.Horizontal ? Text.WordWrap : Text.NoWrap
         horizontalAlignment: vertical ? Text.AlignHCenter : Text.AlignLeft // we want left align when horizontal to avoid re-aligning when seconds are visible
         verticalAlignment: Text.AlignVCenter
+        height: 0
+        width: 0
         anchors {
             fill: parent
             leftMargin: units.smallSpacing
