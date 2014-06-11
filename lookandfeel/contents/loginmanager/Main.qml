@@ -63,11 +63,11 @@ Image {
                     id: sessionCombo
                     model: sessionModel
                     currentIndex: sessionModel.lastIndex
-                    anchors.left: parent.left
 
                     width: 200
-
                     textRole: "name"
+
+                    anchors.left: parent.left
                 }
 
                 RowLayout {
