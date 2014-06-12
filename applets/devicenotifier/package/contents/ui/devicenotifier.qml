@@ -93,7 +93,7 @@ Item {
                 if (devicesType == "all" ||
                     (devicesType == "removable" && data[last] && data[last]["Removable"] == true) ||
                     (devicesType == "nonRemovable" && data[last] && data[last]["Removable"] == false)) {
-                    if (expand) {
+                    if (expand && hpSource.data[last]["added"]) {
                         expandDevice(last)
                     }
                     last = "";
