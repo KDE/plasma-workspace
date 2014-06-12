@@ -3,6 +3,7 @@ project(plasma-workspace)
 cmake_minimum_required(VERSION 2.8.12 FATAL_ERROR)
 
 set(QT_MIN_VERSION "5.3.0")
+set(INSTALL_SDDM_THEME TRUE)
 find_package(Qt5 ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS Widgets Quick Concurrent Test Script Network)
 
 find_package(ECM 0.0.11 REQUIRED NO_MODULE)
@@ -109,6 +110,14 @@ configure_file(config-unix.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-unix.h )
 configure_file(config-X11.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-X11.h)
 
 plasma_install_package(lookandfeel org.kde.lookandfeel look-and-feel lookandfeel)
+
+if (INSTALL_SDDM_THEME)
+# Install the login theme into the SDDM directory
+# Longer term we need to look at making SDDM load from look and feel somehow.. and allow copying at runtime
+    #NOTE this trailing slash is important to rename the directory
+    install(DIRECTORY lookandfeel/contents/loginmanager/ DESTINATION ${CMAKE_INSTALL_PREFIX}/share/apps/sddm/themes/breeze)
+    install(DIRECTORY lookandfeel/contents/components DESTINATION ${CMAKE_INSTALL_PREFIX}/share/apps/sddm/themes/breeze)
+endif()
 
 add_subdirectory(doc)
 add_subdirectory(libkworkspace)
