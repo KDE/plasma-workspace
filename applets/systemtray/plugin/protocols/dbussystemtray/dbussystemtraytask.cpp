@@ -350,7 +350,6 @@ void DBusSystemTrayTask::syncIcons(const Plasma::DataEngine::Data &properties)
     // exists for this icon and if not, force IconItem to use the QIcon we provide
     // instead of trying to lookup the icon by name (and fail)
     if (!m_iconThemePath.isEmpty()) {
-        m_icon = QIcon(new KIconEngine(icon_name, m_customIconLoader));
         if (!hasm_svgIcon(icon_name)) {
             m_iconName = QString();
         }
