@@ -54,6 +54,7 @@ SplashApp::SplashApp(int &argc, char ** argv)
     parser.addOption(QCommandLineOption("test", "Run in test mode"));
     parser.addOption(QCommandLineOption("window", "Run in windowed mode"));
     parser.addOption(QCommandLineOption("nofork", "Don't fork"));
+    parser.addOption(QCommandLineOption("pid", "Print the pid of the child process"));
     parser.addHelpOption();
 
     parser.process(*this);
