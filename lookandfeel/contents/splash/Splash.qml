@@ -72,7 +72,7 @@ Image {
                     bottom: parent.bottom
                     margins: 2
                 }
-                width: ((parent.width - 4) / 5) * (stage - 1)
+                width: ((parent.width - 4) / 6) * (stage - 1)
                 Behavior on width { 
                     PropertyAnimation {
                         duration: 250
