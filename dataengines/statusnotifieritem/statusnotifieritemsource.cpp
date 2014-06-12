@@ -210,13 +210,15 @@ void StatusNotifierItemSource::refreshCallback(QDBusPendingCallWatcher *call)
         //others)
         QVariantMap properties = reply.argumentAt<0>();
         QString path = properties["IconThemePath"].toString();
-        if (!path.isEmpty()) {
+        if (!path.isEmpty() && path != data()["IconThemePath"].toString()) {
             // FIXME: If last part of path is not "icons", this won't work!
             QStringList tokens = path.split('/', QString::SkipEmptyParts);
             if (tokens.length() >= 3 && tokens.takeLast() == "icons") {
                 QString appName = tokens.takeLast();
 
-                m_customIconLoader = new KIconLoader(appName, QStringList(), this);
+                if (!m_customIconLoader) {
+                    m_customIconLoader = new KIconLoader(appName, QStringList(), this);
+                }
                 m_customIconLoader->addAppDir(appName, path);
             } else {
                 qWarning() << "Wrong IconThemePath" << path << ": too short or does not end with 'icons'";
