@@ -283,6 +283,7 @@ void DBusSystemTrayTask::syncIcons(const Plasma::DataEngine::Data &properties)
     QString movie_path           = properties["AttentionMovieName"].toString();
     QString overlay_icon_name    = properties["OverlayIconName"].value<QString>();
     QString icon_theme_path      = properties["IconThemePath"].value<QString>();
+    bool is_icon_changed                = false;
     bool is_icon_name_changed           = false;
     bool is_att_icon_name_changed       = false;
     bool is_movie_path_changed          = false;
@@ -332,14 +333,7 @@ void DBusSystemTrayTask::syncIcons(const Plasma::DataEngine::Data &properties)
                 // icons
                 m_customIconLoader = new KIconLoader(appName, QStringList(), this);
                 m_customIconLoader->addAppDir(appName, path);
-                m_icon = QIcon(new KIconEngine(icon_name, m_customIconLoader));
-                // Given we're using custom icon loader to load the icon and IconItem
-                // would not use this icon loader, we first check if Plasma themed SVG
-                // exists for this icon and if not, force IconItem to use the QIcon we provide
-                // instead of trying to lookup the icon by name (and fail)
-                if (!hasm_svgIcon(icon_name)) {
-                    m_iconName = QString();
-                }
+                is_icon_changed = true;
             } else {
                 qWarning() << "Wrong IconThemePath" << path << ": too short or does not end with 'icons'";
             }
@@ -349,6 +343,22 @@ void DBusSystemTrayTask::syncIcons(const Plasma::DataEngine::Data &properties)
         is_icon_name_changed = true;
         is_att_icon_name_changed = true;
         is_overlay_icon_name_changed = true;
+    }
+
+    // If we have custom theme path set, it means we're using icons loaded with custom
+    // icon loader, which would not be used by IconItem. So we first check if Plasma themed SVG
+    // exists for this icon and if not, force IconItem to use the QIcon we provide
+    // instead of trying to lookup the icon by name (and fail)
+    if (!m_iconThemePath.isEmpty()) {
+        m_icon = QIcon(new KIconEngine(icon_name, m_customIconLoader));
+        if (!hasm_svgIcon(icon_name)) {
+            m_iconName = QString();
+        }
+
+        is_icon_changed = true;
+    }
+
+    if (is_icon_changed) {
         emit changedIcons();
     }
 
