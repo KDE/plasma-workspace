@@ -146,10 +146,10 @@ void ServiceRunner::match(Plasma::RunnerContext &context)
                 relevance += 0.1;
             }
         } else if (service->genericName().contains(term, Qt::CaseInsensitive)) {
-            relevance = 0.7;
+            relevance = 0.65;
 
             if (service->genericName().startsWith(term, Qt::CaseInsensitive)) {
-                relevance += 0.1;
+                relevance += 0.05;
             }
         }
 
@@ -171,7 +171,7 @@ void ServiceRunner::match(Plasma::RunnerContext &context)
 
                 match.setSubtext(subtext);
             } else {
-                relevance += .1;
+                relevance += .09;
             }
         }
 
@@ -211,7 +211,7 @@ void ServiceRunner::match(Plasma::RunnerContext &context)
             }
 
             if (service->isApplication()) {
-                relevance += .4;
+                relevance += .04;
             }
 
             match.setRelevance(relevance);
