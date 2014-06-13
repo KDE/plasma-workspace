@@ -24,6 +24,7 @@
 #include <QHash>
 
 class QDBusPendingCallWatcher;
+class QDBusConnection;
 class QQuickItem;
 class QmlObject;
 
@@ -57,7 +58,7 @@ protected Q_SLOTS:
     void cleanupTask(const QString &taskId);
 
 private Q_SLOTS:
-    void serviceNameFetchFinished(QDBusPendingCallWatcher* watcher);
+    void serviceNameFetchFinished(QDBusPendingCallWatcher* watcher, const QDBusConnection &connection);
     void serviceRegistered(const QString &service);
     void serviceUnregistered(const QString &service);
 

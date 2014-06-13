@@ -238,15 +238,19 @@ void PlasmoidProtocol::initDBusActivatables()
     QDBusPendingCall async = QDBusConnection::sessionBus().interface()->asyncCall("ListNames");
     QDBusPendingCallWatcher *callWatcher = new QDBusPendingCallWatcher(async, this);
     connect(callWatcher, &QDBusPendingCallWatcher::finished,
-            this,        &PlasmoidProtocol::serviceNameFetchFinished);
+            [=](QDBusPendingCallWatcher *callWatcher){
+                PlasmoidProtocol::serviceNameFetchFinished(callWatcher, QDBusConnection::sessionBus());
+            });
 
     QDBusPendingCall systemAsync = QDBusConnection::systemBus().interface()->asyncCall("ListNames");
     QDBusPendingCallWatcher *systemCallWatcher = new QDBusPendingCallWatcher(systemAsync, this);
     connect(systemCallWatcher, &QDBusPendingCallWatcher::finished,
-            this,        &PlasmoidProtocol::serviceNameFetchFinished);
+            [=](QDBusPendingCallWatcher *callWatcher){
+                PlasmoidProtocol::serviceNameFetchFinished(callWatcher, QDBusConnection::systemBus());
+            });
 }
 
-void PlasmoidProtocol::serviceNameFetchFinished(QDBusPendingCallWatcher* watcher)
+void PlasmoidProtocol::serviceNameFetchFinished(QDBusPendingCallWatcher* watcher, const QDBusConnection &connection)
 {
     QDBusPendingReply<QStringList> propsReply = *watcher;
     watcher->deleteLater();
@@ -265,12 +269,14 @@ void PlasmoidProtocol::serviceNameFetchFinished(QDBusPendingCallWatcher* watcher
     // This makes mpris work, since it wants to match org.mpris.MediaPlayer2.dragonplayer
     // against org.mpris.MediaPlayer2
     QDBusServiceWatcher *serviceWatcher = new QDBusServiceWatcher(QString(),
-                                                QDBusConnection::sessionBus(),
+                                                connection,
                                                 QDBusServiceWatcher::WatchForOwnerChange,
                                                 this);
     connect(serviceWatcher, &QDBusServiceWatcher::serviceRegistered, this, &PlasmoidProtocol::serviceRegistered);
     connect(serviceWatcher, &QDBusServiceWatcher::serviceUnregistered, this, &PlasmoidProtocol::serviceUnregistered);
 }
+
+
 
 void PlasmoidProtocol::serviceRegistered(const QString &service)
 {
