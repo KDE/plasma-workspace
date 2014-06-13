@@ -342,6 +342,16 @@ if test -n "PAM_KWALLET_LOGIN" ; then
     env | socat STDIN UNIX-CONNECT:$PAM_KWALLET_LOGIN
 fi
 
+# At this point all environment variables are set, let's send it to the DBus session server to update the activation environment
+@CMAKE_INSTALL_PREFIX@/@KF5_LIBEXEC_INSTALL_DIR@/ksyncdbusenv
+if test $? -ne 0; then
+  # Startup error
+  echo 'startkde: Could not sync environment to dbus.'  1>&2
+  test -n "$ksplash_pid" && kill "$ksplash_pid" 2>/dev/null
+  xmessage -geometry 500x100 "Could not sync environment to dbus."
+  exit 1
+fi
+
 # We set LD_BIND_NOW to increase the efficiency of kdeinit.
 # kdeinit unsets this variable before loading applications.
 LD_BIND_NOW=true @CMAKE_INSTALL_PREFIX@/@KF5_LIBEXEC_INSTALL_DIR@/start_kdeinit_wrapper --kded +kcminit_startup
