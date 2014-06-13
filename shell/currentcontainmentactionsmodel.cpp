@@ -227,13 +227,16 @@ void CurrentContainmentActionsModel::showAbout(int row)
 
     KAboutData aboutData(info.name().toUtf8(),
             ki18n(info.name().toUtf8()).toString(),
-            info.version().toUtf8(), ki18n(info.comment().toUtf8()).toString(),
-            KAboutLicense::byKeyword(info.license()).key(), ki18n(QByteArray()).toString(), ki18n(QByteArray()).toString(), info.website().toLatin1(),
+            info.version().toUtf8(),
+            ki18n(info.comment().toUtf8()).toString(),
+            KAboutLicense::byKeyword(info.license()).key(),
+            QByteArray(),
+            QByteArray(), info.website().toLatin1(),
             info.email().toLatin1());
 
     aboutData.setProgramIconName(info.icon());
 
-    aboutData.addAuthor(ki18n(info.author().toUtf8()).toString(), ki18n(QByteArray()).toString(), info.email().toLatin1());
+    aboutData.addAuthor(ki18n(info.author().toUtf8()).toString(), QByteArray(), info.email().toLatin1());
 
     KAboutApplicationDialog *aboutDialog = new KAboutApplicationDialog(aboutData, qobject_cast<QWidget*>(parent()));
     aboutDialog->show();

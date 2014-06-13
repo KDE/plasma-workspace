@@ -92,15 +92,15 @@ void ContextMenu::restore(const KConfigGroup &config)
 
     // everything below should only happen once, so check for it
     if (!m_runCommandAction) {
-        m_runCommandAction = new QAction(i18n("Run Command..."), this);
+        m_runCommandAction = new QAction(i18nc("plasma_containmentactions_contextmenu", "Run Command..."), this);
         m_runCommandAction->setIcon(QIcon::fromTheme("system-run"));
         connect(m_runCommandAction, SIGNAL(triggered(bool)), this, SLOT(runCommand()));
 
-        m_lockScreenAction = new QAction(i18n("Lock Screen"), this);
+        m_lockScreenAction = new QAction(i18nc("plasma_containmentactions_contextmenu", "Lock Screen"), this);
         m_lockScreenAction->setIcon(QIcon::fromTheme("system-lock-screen"));
         connect(m_lockScreenAction, SIGNAL(triggered(bool)), this, SLOT(lockScreen()));
 
-        m_logoutAction = new QAction(i18n("Leave..."), this);
+        m_logoutAction = new QAction(i18nc("plasma_containmentactions_contextmenu", "Leave..."), this);
         m_logoutAction->setIcon(QIcon::fromTheme("system-shutdown"));
         connect(m_logoutAction, SIGNAL(triggered(bool)), this, SLOT(startLogout()));
 
@@ -240,7 +240,7 @@ QWidget* ContextMenu::createConfigurationInterface(QWidget* parent)
     QWidget *widget = new QWidget(parent);
     QVBoxLayout *lay = new QVBoxLayout();
     widget->setLayout(lay);
-    widget->setWindowTitle(i18n("Configure Contextual Menu Plugin"));
+    widget->setWindowTitle(i18nc("plasma_containmentactions_contextmenu", "Configure Contextual Menu Plugin"));
     m_buttons = new QButtonGroup(widget);
     m_buttons->setExclusive(false);
 
@@ -250,14 +250,14 @@ QWidget* ContextMenu::createConfigurationInterface(QWidget* parent)
         if (name == "_context") {
             item = new QCheckBox(widget);
             //FIXME better text
-            item->setText(i18n("[Other Actions]"));
+            item->setText(i18nc("plasma_containmentactions_contextmenu", "[Other Actions]"));
         } else if (name == "_wallpaper") {
             item = new QCheckBox(widget);
-            item->setText(i18n("Wallpaper Actions"));
+            item->setText(i18nc("plasma_containmentactions_contextmenu", "Wallpaper Actions"));
             item->setIcon(QIcon::fromTheme("user-desktop"));
         } else if (name == "_sep1" || name =="_sep2" || name == "_sep3") {
             item = new QCheckBox(widget);
-            item->setText(i18n("[Separator]"));
+            item->setText(i18nc("plasma_containmentactions_contextmenu", "[Separator]"));
         } else {
             QAction *a = action(name);
             if (a) {

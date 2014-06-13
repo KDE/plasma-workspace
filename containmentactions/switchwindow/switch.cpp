@@ -56,7 +56,7 @@ QWidget* SwitchWindow::createConfigurationInterface(QWidget* parent)
 {
     QWidget *widget = new QWidget(parent);
     m_ui.setupUi(widget);
-    widget->setWindowTitle(i18n("Configure Switch Window Plugin"));
+    widget->setWindowTitle(i18nc("plasma_containmentactions_switchwindow", "Configure Switch Window Plugin"));
     switch (m_mode) {
         case AllFlat:
             m_ui.flatButton->setChecked(true);
@@ -124,7 +124,7 @@ void SwitchWindow::makeMenu()
     if (m_mode == CurrentDesktop) {
         int currentDesktop = KWindowSystem::currentDesktop();
 
-        QAction *a = new QAction(i18n("Windows"), this);
+        QAction *a = new QAction(i18nc("plasma_containmentactions_switchwindow", "Windows"), this);
         a->setSeparator(true);
         m_actions << a;
         m_actions << desktops.values(currentDesktop);
@@ -144,7 +144,7 @@ void SwitchWindow::makeMenu()
                 }
             }
             if (desktops.contains(-1)) {
-                QAction *a = new QAction(i18n("All Desktops"), this);
+                QAction *a = new QAction(i18nc("plasma_containmentactions_switchwindow", "All Desktops"), this);
                 a->setSeparator(true);
                 m_actions << a;
                 m_actions << desktops.values(-1);
@@ -164,9 +164,9 @@ void SwitchWindow::makeMenu()
                 }
             }
             if (desktops.contains(-1)) {
-                QMenu *subMenu = new QMenu(i18n("All Desktops"));
+                QMenu *subMenu = new QMenu(i18nc("plasma_containmentactions_switchwindow", "All Desktops"));
                 subMenu->addActions(desktops.values(-1));
-                QAction *a = new QAction(i18n("All Desktops"), this);
+                QAction *a = new QAction(i18nc("plasma_containmentactions_switchwindow", "All Desktops"), this);
                 a->setMenu(subMenu);
                 m_actions << a;
             }
