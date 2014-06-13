@@ -172,6 +172,7 @@ Keywords[fr]=Verrouillage, Déconnexion, Hibernation, Changement d'utilisateur,
 Keywords[gl]=Trancar;saír;durmir;hibernar;trocar de usuario;
 Keywords[hu]=Zárolás;Kijelentkezés;Alvó állapot;Hibernálás;Felhasználóváltás;
 Keywords[ia]=Bloca;Claude session;Dormi; Hiberna;Cambia Usator;
+Keywords[id]=Kunci;Keluar;Tidur;Hibernasi;Ganti Pengguna;
 Keywords[it]=Blocca;Esci;Sospendi;Iberna;Cambia utente;
 Keywords[kk]=Lock;Logout;Sleep;Hibernate;Switch User;
 Keywords[ko]=Lock;Logout;Sleep;Hibernate;Switch User;잠금;로그아웃;대기;대기 모드;최대 절전;최대 절전 모드;사용자 전환

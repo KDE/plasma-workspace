@@ -1,6 +1,20 @@
 [SddmGreeterTheme]
 Name=Breeze
+Name[id]=Angin
+Name[nl]=Breeze
+Name[pl]=Bryza
+Name[sk]=Vánok
+Name[sv]=Breeze
+Name[uk]=Breeze
+Name[x-test]=xxBreezexx
 Description=Breeze Theme
+Description[id]=Tema Angin
+Description[nl]=Thema Breeze
+Description[pl]=Wystrój bryzy
+Description[sk]=Téma Vánok
+Description[sv]=Breeze-tema
+Description[uk]=Тема «Breeze»
+Description[x-test]=xxBreeze Themexx
 Author=David Edmundson
 Copyright=(c) 2014, David Edmundson
 License=CC-BY-SA
