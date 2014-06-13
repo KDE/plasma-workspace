@@ -50,11 +50,12 @@ ColumnLayout {
             percent: pmSource.data["Battery0"]["Percent"]
             pluggedIn: pmSource.data["AC Adapter"]["Plugged in"]
 
-            height: 20 //FIXME
-            width: 20
+            height: batteryLabel.height
+            width: batteryLabel.height
         }
 
         BreezeLabel {
+            id: batteryLabel
             text: i18n("%1\% battery remaining", pmSource.data["Battery0"]["Percent"])
             Layout.alignment: Qt.AlignRight
             wrapMode: Text.Wrap
