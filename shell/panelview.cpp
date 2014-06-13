@@ -55,7 +55,8 @@ PanelView::PanelView(ShellCorona *corona, QWindow *parent)
        m_thickness(30),
        m_alignment(Qt::AlignLeft),
        m_corona(corona),
-       m_visibilityMode(NormalPanel)
+       m_visibilityMode(NormalPanel),
+       m_background(0)
 {
     setResizeMode(QQuickView::SizeRootObjectToView);
     setClearBeforeRendering(true);
@@ -645,7 +646,16 @@ void PanelView::resizeEvent(QResizeEvent *ev)
 
         m_positionPaneltimer.start();
     }
+
+    updateMask();
+
     PlasmaQuick::View::resizeEvent(ev);
+}
+
+void PanelView::moveEvent(QMoveEvent *ev)
+{
+    updateMask();
+    PlasmaQuick::View::moveEvent(ev);
 }
 
 void PanelView::showEvent(QShowEvent *event)
@@ -664,6 +674,53 @@ bool PanelView::event(QEvent *e)
         m_unhideTimer.start();
     }
     return View::event(e);
+}
+
+void PanelView::updateMask()
+{
+    if (KWindowSystem::compositingActive()) {
+        setMask(QRegion());
+    } else {
+        if (!m_background) {
+            m_background = new Plasma::FrameSvg(this);
+            m_background->setImagePath("widgets/panel-background");
+        }
+
+        Plasma::FrameSvg::EnabledBorders borders = Plasma::FrameSvg::AllBorders;
+        switch (location()) {
+        case Plasma::Types::TopEdge:
+            borders &= ~Plasma::FrameSvg::TopBorder;
+            break;
+        case Plasma::Types::LeftEdge:
+            borders &= ~Plasma::FrameSvg::LeftBorder;
+            break;
+        case Plasma::Types::RightEdge:
+            borders &= ~Plasma::FrameSvg::RightBorder;
+            break;
+        case Plasma::Types::BottomEdge:
+            borders &= ~Plasma::FrameSvg::BottomBorder;
+            break;
+        default:
+            break;
+        }
+
+        if (x() <= screen()->geometry().x()) {
+            borders &= ~Plasma::FrameSvg::LeftBorder;
+        }
+        if (x() + width() >= screen()->geometry().x() + screen()->geometry().width()) {
+            borders &= ~Plasma::FrameSvg::RightBorder;
+        }
+        if (y() <= screen()->geometry().y()) {
+            borders &= ~Plasma::FrameSvg::TopBorder;
+        }
+        if (y() + height() >= screen()->geometry().y() + screen()->geometry().height()) {
+            borders &= ~Plasma::FrameSvg::BottomBorder;
+        }
+        m_background->setEnabledBorders(borders);
+
+        m_background->resizeFrame(size());
+        setMask(m_background->mask());
+    }
 }
 
 void PanelView::updateStruts()
@@ -778,12 +835,13 @@ void PanelView::updateStruts()
 
 void PanelView::themeChanged()
 {
-    //TODO: how to take the shape from the framesvg?
     KWindowEffects::enableBlurBehind(winId(), true);
     KWindowEffects::enableBackgroundContrast(winId(), m_theme.backgroundContrastEnabled(),
                                                       m_theme.backgroundContrast(),
                                                       m_theme.backgroundIntensity(),
                                                       m_theme.backgroundSaturation());
+
+    updateMask();
 }
 
 void PanelView::containmentChanged()

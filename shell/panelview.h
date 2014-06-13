@@ -86,7 +86,9 @@ public:
 protected:
     void resizeEvent(QResizeEvent *ev);
     void showEvent(QShowEvent *event);
+    void moveEvent(QMoveEvent *ev);
     bool event(QEvent *e);
+    void updateMask();
 
 Q_SIGNALS:
     void alignmentChanged();
@@ -133,6 +135,8 @@ private:
     Plasma::Theme m_theme;
     QTimer m_positionPaneltimer;
     QTimer m_unhideTimer;
+    //only for the mask, not to actually paint
+    Plasma::FrameSvg *m_background;
 
     static const int STRUTSTIMERDELAY = 200;
 };
