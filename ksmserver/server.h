@@ -127,6 +127,8 @@ private Q_SLOTS:
     void kcmPhase1Timeout();
     void kcmPhase2Timeout();
     void pendingShutdownTimeout();
+    void logoutSoundTimeout();
+    void logoutSoundFinished();
 
     void autoStart0();
     void autoStart1();
