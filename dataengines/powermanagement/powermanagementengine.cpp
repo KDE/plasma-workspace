@@ -139,13 +139,13 @@ bool PowermanagementEngine::sourceRequestEvent(const QString &name)
                     SLOT(updateBatteryChargeState(int,QString)));
             connect(battery, SIGNAL(chargePercentChanged(int,QString)), this,
                     SLOT(updateBatteryChargePercent(int,QString)));
-            connect(battery, SIGNAL(plugStateChanged(bool,QString)), this,
-                    SLOT(updateBatteryPlugState(bool,QString)));
+            connect(battery, SIGNAL(presentStateChanged(bool,QString)), this,
+                    SLOT(updateBatteryPresentState(bool,QString)));
 
             // Set initial values
             updateBatteryChargeState(battery->chargeState(), deviceBattery.udi());
             updateBatteryChargePercent(battery->chargePercent(), deviceBattery.udi());
-            updateBatteryPlugState(battery->isPlugged(), deviceBattery.udi());
+            updateBatteryPresentState(battery->isPresent(), deviceBattery.udi());
             updateBatteryPowerSupplyState(battery->isPowerSupply(), deviceBattery.udi());
 
             setData(source, "Vendor", deviceBattery.vendor());
@@ -296,10 +296,10 @@ void PowermanagementEngine::updateBatteryChargeState(int newState, const QString
     setData(source, "State", state);
 }
 
-void PowermanagementEngine::updateBatteryPlugState(bool newState, const QString& udi)
+void PowermanagementEngine::updateBatteryPresentState(bool newState, const QString& udi)
 {
     const QString source = m_batterySources[udi];
-    setData(source, "Plugged in", newState);
+    setData(source, "Plugged in", newState); // FIXME This needs to be renamed and Battery Monitor adjusted
 }
 
 void PowermanagementEngine::updateBatteryChargePercent(int newValue, const QString& udi)
@@ -390,15 +390,15 @@ void PowermanagementEngine::deviceAdded(const QString& udi)
                     SLOT(updateBatteryChargeState(int,QString)));
             connect(battery, SIGNAL(chargePercentChanged(int,QString)), this,
                     SLOT(updateBatteryChargePercent(int,QString)));
-            connect(battery, SIGNAL(plugStateChanged(bool,QString)), this,
-                    SLOT(updateBatteryPlugState(bool,QString)));
+            connect(battery, SIGNAL(presentStateChanged(bool,QString)), this,
+                    SLOT(updateBatteryPresentState(bool,QString)));
             connect(battery, SIGNAL(powerSupplyStateChanged(bool,QString)), this,
                     SLOT(updateBatteryPowerSupplyState(bool,QString)));
 
             // Set initial values
             updateBatteryChargeState(battery->chargeState(), device.udi());
             updateBatteryChargePercent(battery->chargePercent(), device.udi());
-            updateBatteryPlugState(battery->isPlugged(), device.udi());
+            updateBatteryPresentState(battery->isPresent(), device.udi());
             updateBatteryPowerSupplyState(battery->isPowerSupply(), device.udi());
 
             setData(source, "Vendor", device.vendor());

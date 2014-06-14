@@ -414,7 +414,7 @@ bool SolidDeviceEngine::populateDeviceData(const QString &name)
         QStringList chargestate;
         chargestate << I18N_NOOP("Fully Charged") << I18N_NOOP("Charging") << I18N_NOOP("Discharging");
 
-        setData(name, I18N_NOOP("Plugged In"), battery->isPlugged());
+        setData(name, I18N_NOOP("Plugged In"), battery->isPresent()); // FIXME Rename when interested parties are adjusted
         setData(name, I18N_NOOP("Type"), batterytype.at((int)battery->type()));
         setData(name, I18N_NOOP("Charge Percent"), battery->chargePercent());
         setData(name, I18N_NOOP("Rechargeable"), battery->isRechargeable());
