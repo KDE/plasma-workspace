@@ -290,6 +290,8 @@ void PowermanagementEngine::updateBatteryChargeState(int newState, const QString
         state = "Charging";
     } else if (newState == Solid::Battery::Discharging) {
         state = "Discharging";
+    } else if (newState == Solid::Battery::FullyCharged) {
+        state = "FullyCharged";
     }
 
     const QString source = m_batterySources[udi];
