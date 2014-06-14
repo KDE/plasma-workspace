@@ -1,16 +1,20 @@
 [SddmGreeterTheme]
 Name=Breeze
+Name[ca]=Brisa
 Name[id]=Angin
 Name[nl]=Breeze
 Name[pl]=Bryza
+Name[pt_BR]=Breeze
 Name[sk]=Vánok
 Name[sv]=Breeze
 Name[uk]=Breeze
 Name[x-test]=xxBreezexx
 Description=Breeze Theme
+Description[ca]=Tema Brisa
 Description[id]=Tema Angin
 Description[nl]=Thema Breeze
 Description[pl]=Wystrój bryzy
+Description[pt_BR]=Tema Breeze
 Description[sk]=Téma Vánok
 Description[sv]=Breeze-tema
 Description[uk]=Тема «Breeze»
