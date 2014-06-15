@@ -1,41 +1,106 @@
 [Global]
 IconName=kde
 Comment=Plasma Workspace
+Comment[nl]=Plasma-werkgebied
+Comment[sk]=KDE pracovná plocha Plasma
+Comment[sv]=Plasma arbetsområde
+Comment[uk]=Робочий простір Плазми
+Comment[x-test]=xxPlasma Workspacexx
 
 [Event/Trash: emptied]
 Name=Trash: Emptied
+Name[nl]=Prullenbak: geleegd
+Name[sk]=Kôš: vyprázdnený
+Name[sv]=Papperskorg: tömd
+Name[uk]=Смітник: випорожнено
+Name[x-test]=xxTrash: Emptiedxx
 Comment=The trash has been emptied
+Comment[nl]=De prullenbak is geleegd
+Comment[sk]=Kôš bol vyprázdnený
+Comment[sv]=Papperskorgen har tömts
+Comment[uk]=Смітник спорожнено
+Comment[x-test]=xxThe trash has been emptiedxx
 Action=Sound
 Sound=KDE-Sys-Trash-Emptied.ogg
 
 [Event/Textcompletion: rotation]
 Name=Textcompletion: Rotation
+Name[nl]=Tekstaanvulling: rotatie
+Name[sk]=Doplnenie textu: rotácia
+Name[sv]=Textkomplettering: rotation
+Name[uk]=Завершення тексту: обертання
+Name[x-test]=xxTextcompletion: Rotationxx
 Comment=The end of the list of matches has been reached
+Comment[nl]=Het einde van de lijst met overeenkomsten is bereikt
+Comment[sk]=Bol dosiahnutý koniec zoznamu zhôd
+Comment[sv]=Slutet av listan med träffar har nåtts
+Comment[uk]=Дійшли до кінця списку збігів
+Comment[x-test]=xxThe end of the list of matches has been reachedxx
 Action=
 Sound=KDE-Sys-List-End.ogg
 
 [Event/Textcompletion: no match]
 Name=Textcompletion: No Match
+Name[nl]=Tekstaanvulling: geen overeenkomst
+Name[sk]=Doplnenie textu: žiadna zhoda
+Name[sv]=Textkomplettering: ingen träff
+Name[uk]=Завершення тексту: немає збігів
+Name[x-test]=xxTextcompletion: No Matchxx
 Comment=No matching completion was found
+Comment[nl]=Geen overeenkomende aanvulling gevonden
+Comment[sk]=Nebola nájdená žiadna zhoda
+Comment[sv]=Ingen matchande komplettering hittades
+Comment[uk]=Не знайдено завершення, яке б збігалося
+Comment[x-test]=xxNo matching completion was foundxx
 Action=
 Sound=KDE-Sys-List-Match-No.ogg
 
 [Event/Textcompletion: partial match]
 Name=Textcompletion: Partial Match
+Name[nl]=Tekstaanvulling: gedeeltelijke overeenkomst
+Name[sk]=Doplnenie textu: čiastočná zhoda
+Name[sv]=Textkomplettering: delvis träff
+Name[uk]=Завершення тексту: частковий збіг
+Name[x-test]=xxTextcompletion: Partial Matchxx
 Comment=There is more than one possible match
+Comment[nl]=Er is meer dan één mogelijke overeenkomst
+Comment[sk]=Existuje viac ako jedna zhoda
+Comment[sv]=Det finns mer än en möjlig träff
+Comment[uk]=Є більше, ніж один збіг
+Comment[x-test]=xxThere is more than one possible matchxx
 Action=
 Sound=KDE-Sys-List-Match-Multiple.ogg
 
 [Event/fatalerror]
 Name=Fatal Error
+Name[nl]=Fatale fout
+Name[sk]=Fatálna chyba
+Name[sv]=Allvarligt fel
+Name[uk]=Критична помилка
+Name[x-test]=xxFatal Errorxx
 Comment=There was a serious error causing the program to exit
+Comment[nl]=Er deed zich een serieuze fout voor die het programma deed afsluiten
+Comment[sk]=Vyskytla sa vážna chyba, ktorá spôsobila ukončenie programu
+Comment[sv]=Ett allvarligt fel uppstod vilket fick programmet att avslutas
+Comment[uk]=Трапилась серйозна помилка, що призвела до закриття програми
+Comment[x-test]=xxThere was a serious error causing the program to exitxx
 Action=Popup|Sound
 Sound=KDE-Sys-App-Error-Serious.ogg
 
 
 [Event/notification]
 Name=Notification
+Name[nl]=Melding
+Name[sk]=Oznámenie
+Name[sv]=Underrättelse
+Name[uk]=Сповіщення
+Name[x-test]=xxNotificationxx
 Comment=Something special happened in the program
+Comment[nl]=Er gebeurde iets bijzonders in het programma
+Comment[sk]=V programe sa stalo niečo zvláštne
+Comment[sv]=Någonting speciellt inträffade i programmet
+Comment[uk]=Щось особливе сталось в програмі
+Comment[x-test]=xxSomething special happened in the programxx
 Action=Sound|Popup
 Sound=KDE-Sys-Special.ogg
 
@@ -127,66 +192,171 @@ Name[x-test]=xxWarningxx
 Name[zh_CN]=警告
 Name[zh_TW]=警告
 Comment=There was an error in the program which may cause problems
+Comment[nl]=Er deed zich een fout voor in het programma dat problemen kan veroorzaken
+Comment[sk]=V programe sa vyskytla chyba, ktorá môže spôsobiť problémy
+Comment[sv]=Det uppstod ett fel i programmet vilket kan orsaka problem
+Comment[uk]=В програмі трапилась помилка, яка може спричинити проблеми
+Comment[x-test]=xxThere was an error in the program which may cause problemsxx
 Action=Popup|Sound
 Sound=KDE-Sys-App-Error.ogg
 
 [Event/catastrophe]
 Name=Catastrophe
+Name[nl]=Catastrofe
+Name[sk]=Katastrofa
+Name[sv]=Katastrof
+Name[uk]=Катастрофа
+Name[x-test]=xxCatastrophexx
 Comment=A very serious error occurred, at least causing the program to exit
+Comment[nl]=Er deed zich een serieuze fout voor dat er op zijn minst voor zorgde dat het programma werd afgesloten
+Comment[sk]=Nastala veľmi vážna chyba, ktorá zapríčinila minimálne ukončenie programu
+Comment[sv]=Ett mycket allvarligt fel uppstod, som åtminstone fick programmet att avslutas
+Comment[uk]=трапилась дуже серйозна помилка, яка призвела до закриття програми
+Comment[x-test]=xxA very serious error occurred, at least causing the program to exitxx
 Action=Popup|Sound
 Sound=KDE-Sys-App-Error-Serious.ogg
 
 
 [Event/startkde]
 Name=Login
+Name[nl]=Aanmelden
+Name[sk]=Prihlásenie
+Name[sv]=Logga in
+Name[uk]=Вхід
+Name[x-test]=xxLoginxx
 Comment=A new session is starting
+Comment[nl]=Een nieuwe sessie is bezig te starten
+Comment[sk]=Spúšťa sa nové sedenie
+Comment[sv]=En ny session startas
+Comment[uk]=Розпочинаємо новий сеанс
+Comment[x-test]=xxA new session is startingxx
 Action=
 Sound=KDE-Sys-Log-In-Short.ogg
 
 [Event/exitkde]
 Name=Logout
+Name[nl]=Afmelden
+Name[sk]=Odhlásenie
+Name[sv]=Logga ut
+Name[uk]=Вихід
+Name[x-test]=xxLogoutxx
 Comment=Session is exiting
+Comment[nl]=Sessie is bezig zich af te sluiten
+Comment[sk]=Sedenie sa ukončuje
+Comment[sv]=Sessionen avslutas
+Comment[uk]=Завершуємо роботу сеансу
+Comment[x-test]=xxSession is exitingxx
 Action=
 Sound=KDE-Sys-Log-Out.ogg
 
 [Event/cancellogout]
 Name=Logout Canceled
+Name[nl]=Afmelden geannuleerd
+Name[sk]=Odhlásenie prerušené
+Name[sv]=Utloggning avbruten
+Name[uk]=Вихід скасовано
+Name[x-test]=xxLogout Canceledxx
 Comment=Plasma logout was canceled
+Comment[nl]=Afmelden bij plasma is geannuleerd
+Comment[sk]=Odhlásenie Plasma bolo zrušené
+Comment[sv]=Utloggning från Plasma avbröts
+Comment[uk]=Вихід з Плазми скасовано
+Comment[x-test]=xxPlasma logout was canceledxx
 Action=Popup
 
 [Event/printerror]
 Name=Print Error
+Name[nl]=Afdrukfout
+Name[sk]=Chyba tlače
+Name[sv]=Skrivarfel
+Name[uk]=Помилка друку
+Name[x-test]=xxPrint Errorxx
 Comment=A print error has occurred
+Comment[nl]=Er deed zich een printerfout voor
+Comment[sk]=Nastala chyba tlače
+Comment[sv]=Utskriftsfel har inträffat
+Comment[uk]=Трапилась помилка друку
+Comment[x-test]=xxA print error has occurredxx
 Action=Popup|Sound
 Sound=KDE-Sys-Error-Printing.ogg
 
 [Event/messageInformation]
 Name=Information Message
+Name[nl]=Informatiebericht
+Name[sk]=Informačná správa
+Name[sv]=Informationsmeddelande
+Name[uk]=Інформаційне повідомлення
+Name[x-test]=xxInformation Messagexx
 Comment=An information message is being shown
+Comment[nl]=Er wordt een informatiebericht getoond
+Comment[sk]=Zobrazuje sa informačná správa
+Comment[sv]=Ett informationsmeddelande visas
+Comment[uk]=Показане інформаційне повідомлення
+Comment[x-test]=xxAn information message is being shownxx
 Sound=KDE-Sys-App-Message.ogg
 Action=Sound|Taskbar
 
 [Event/messageWarning]
 Name=Warning Message
+Name[nl]=Waarschuwingsbericht
+Name[sk]=Varovná správa
+Name[sv]=Varningsmeddelande
+Name[uk]=Повідомлення попередження
+Name[x-test]=xxWarning Messagexx
 Comment=A warning message is being shown
+Comment[nl]=Er wordt een waarschuwingsbericht getoond
+Comment[sk]=Zobrazuje sa varovná správa
+Comment[sv]=Ett varningsmeddelande visas
+Comment[uk]=Показане попередження
+Comment[x-test]=xxA warning message is being shownxx
 Sound=KDE-Sys-Warning.ogg
 Action=Sound|Taskbar
 
 [Event/messageCritical]
 Name=Critical Message
+Name[nl]=Kritiek bericht
+Name[sk]=Kritická správa
+Name[sv]=Kritiskt meddelande
+Name[uk]=Критичне повідомлення
+Name[x-test]=xxCritical Messagexx
 Comment=A critical message is being shown
+Comment[nl]=Er wordt een kritiek bericht getoond
+Comment[sk]=Zobrazuje sa kritická správa
+Comment[sv]=Ett kritiskt meddelande visas
+Comment[uk]=Показано критичне повідомлення
+Comment[x-test]=xxA critical message is being shownxx
 Sound=KDE-Sys-App-Error-Critical.ogg
 Action=Sound|Taskbar
 
 [Event/messageboxQuestion]
 Name=Question
+Name[nl]=Vraag
+Name[sk]=Otázka
+Name[sv]=Fråga
+Name[uk]=Питання
+Name[x-test]=xxQuestionxx
 Comment=A question is being asked
+Comment[nl]=Er wordt een vraag gesteld
+Comment[sk]=Kladie sa otázka
+Comment[sv]=En fråga ställs
+Comment[uk]=Задане питання
+Comment[x-test]=xxA question is being askedxx
 Sound=KDE-Sys-Question.ogg
 Action=Sound|Taskbar
 
 
 [Event/beep]
 Name=Beep
+Name[nl]=Geluidssignaal
+Name[sk]=Pípnutie
+Name[sv]=Ljudsignal
+Name[uk]=Гудок
+Name[x-test]=xxBeepxx
 Comment=Sound bell
+Comment[nl]=Geluidssignaal
+Comment[sk]=Zvuk zvončeka
+Comment[sv]=Ge ljudsignal
+Comment[uk]=Дати гудок
+Comment[x-test]=xxSound bellxx
 Action=Sound
 Sound=KDE-Sys-App-Message.ogg
