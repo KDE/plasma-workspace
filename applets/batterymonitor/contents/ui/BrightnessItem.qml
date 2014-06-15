@@ -27,7 +27,7 @@ FocusScope {
     id: brightnessItem
     clip: true
     width: parent.width
-    height: Math.max(brightnessIcon.height, brightnessLabel.height + brightnessSlider.height) + units.gridUnit
+    height: Math.max(brightnessIcon.height, brightnessLabel.height + brightnessSlider.height) + Math.round(units.gridUnit / 2)
 
     property alias icon: brightnessIcon.elementId
     property alias label: brightnessLabel.text
@@ -38,11 +38,12 @@ FocusScope {
 
     PlasmaCore.SvgItem {
         id: brightnessIcon
-        width: units.iconSizes.large
+        width: units.iconSizes.medium
         height: width
         anchors {
             top: parent.top
             left: parent.left
+            leftMargin: Math.round(units.gridUnit / 2)
         }
         svg: PlasmaCore.Svg {
             id: svg
@@ -79,7 +80,7 @@ FocusScope {
         id: brightnessPercent
         anchors {
             right: parent.right
-            rightMargin: units.gridUnit / 2
+            rightMargin: Math.round(units.gridUnit / 2)
             verticalCenter: brightnessSlider.verticalCenter
         }
         height: paintedHeight

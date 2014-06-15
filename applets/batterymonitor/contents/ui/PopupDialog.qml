@@ -1,6 +1,6 @@
 /*
  *   Copyright 2011 Viranch Mehta <viranch.mehta@gmail.com>
- *   Copyright 2013 Kai Uwe Broulik <kde@privat.broulik.de>
+ *   Copyright 2013, 2014 Kai Uwe Broulik <kde@privat.broulik.de>
  *
  *   This program is free software; you can redistribute it and/or modify
  *   it under the terms of the GNU Library General Public License as
@@ -21,12 +21,12 @@
 import QtQuick 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as Components
+import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.kquickcontrolsaddons 2.0
 import "plasmapackage:/code/logic.js" as Logic
 
 FocusScope {
     id: dialog
-    property int implicitHeight: batteryColumn.implicitHeight + settingsColumn.height + units.gridUnit
     focus: true
 
     property alias model: batteryList.model
@@ -47,56 +47,25 @@ FocusScope {
 //    signal keyboardBrightnessChanged(int keyboardBrightness)
     signal powermanagementChanged(bool checked)
 
-    Column {
-        id: batteryColumn
-        spacing: Math.round(units.gridUnit / 4)
-        width: parent.width
+    PlasmaExtras.ScrollArea {
+        id: batteryScrollArea
         anchors {
             left: parent.left
             right: parent.right
-            top: plasmoid.location == PlasmaCore.Types.BottomEdge ? parent.top : undefined
-            bottom: plasmoid.location == PlasmaCore.Types.BottomEdge ? undefined : parent.bottom
+            top: plasmoid.location == PlasmaCore.Types.BottomEdge ? parent.top : settingsColumn.bottom
+            bottom: plasmoid.location == PlasmaCore.Types.BottomEdge ? settingsColumn.top : parent.bottom
         }
 
-        Repeater {
+        ListView {
             id: batteryList
 
-            property int activeIndex
+            boundsBehavior: Flickable.StopAtBounds
+            spacing: Math.round(units.gridUnit / 2)
 
-            delegate: BatteryItem { }
             KeyNavigation.tab: brightnessSlider
             KeyNavigation.backtab: pmSwitch
 
-            function updateSelection(old,active) {
-                itemAt(old).updateSelection();
-                itemAt(active).updateSelection();
-            }
-
-            onFocusChanged: {
-                var oldIndex = activeIndex;
-                activeIndex = 0;
-                updateSelection(oldIndex,activeIndex);
-            }
-            Keys.onDownPressed: {
-                var oldIndex = activeIndex;
-                activeIndex++;
-                if (activeIndex >= model.count) {
-                    activeIndex = 0;
-                }
-                updateSelection(oldIndex,activeIndex);
-            }
-            Keys.onUpPressed: {
-                var oldIndex = activeIndex;
-                activeIndex--;
-                if (activeIndex < 0) {
-                    activeIndex = model.count-1;
-                }
-                updateSelection(oldIndex,activeIndex);
-            }
-            Keys.onReturnPressed: itemAt(activeIndex).expanded = !itemAt(activeIndex).expanded
-            Keys.onSpacePressed: itemAt(activeIndex).expanded = !itemAt(activeIndex).expanded
-            Keys.onLeftPressed: itemAt(activeIndex).expanded = false
-            Keys.onRightPressed: itemAt(activeIndex).expanded = true
+            delegate: BatteryItem {}
         }
     }
 

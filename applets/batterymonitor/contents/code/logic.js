@@ -1,6 +1,7 @@
 /*
  *   Copyright 2011 Sebastian Kügler <sebas@kde.org>
  *   Copyright 2012 Viranch Mehta <viranch.mehta@gmail.com>
+ *   Copyright 2014 Kai Uwe Broulik <kde@privat.broulik.de>
  *
  *   This program is free software; you can redistribute it and/or modify
  *   it under the terms of the GNU Library General Public License as
@@ -192,6 +193,46 @@ function updateTooltip() {
     }
     batteries.tooltipText = text;
     batteries.tooltipImage = image;
+}
+
+function batteryItemToolTip(batteryData, remainingTime) {
+    var text = "";
+
+    if (remainingTime > 0 && batteryData["Is Power Supply"] && (batteryData["State"] == "Discharging" || batteryData["State"] == "Charging")) {
+        text += "<tr>"
+        text += "<td align='right'>" + (batteryData["State"] == "Charging" ? i18n("Time To Full:") : i18n("Time To Empty:")) + "</td>"
+        text += "<td><b>" + KCoreAddons.Format.formatSpelloutDuration(remainingTime) + "</b></td>"
+        text += "</tr>"
+    }
+
+    if (batteryData["Is Power Supply"] &&  batteryData["Capacity"] != "" && typeof batteryData["Capacity"] == "number") {
+        text += "<tr>";
+        text += "<td align='right'>" + i18n("Capacity:") + " </td>";
+        text += "<td><b>" + i18nc("Placeholder is battery capacity", "%1%", batteryData["Capacity"]) + "</b></td>"
+        text += "</tr>";
+    }
+
+    // Non-powersupply batteries have a name consisting of the vendor and model already
+    if (batteryData["Is Power Supply"]) {
+        if (batteryData["Vendor"] != "" && typeof batteryData["Vendor"] == "string") {
+            text += "<tr>";
+            text += "<td align='right'>" + i18n("Vendor:") + " </td>";
+            text += "<td><b>" + batteryData["Vendor"] + "</b></td>";
+            text += "</tr>";
+        }
+
+        if (batteryData["Product"] != "" && typeof batteryData["Product"] == "string") {
+            text += "<tr>";
+            text += "<td align='right'>" + i18n("Model:") + " </td>";
+            text += "<td><b>" + batteryData["Product"] + "</b></td>";
+            text += "</tr>";
+        }
+    }
+
+    if (text != "") {
+        return "<table>" + text + "</table>";
+    }
+    return "";
 }
 
 function updateBrightness(dialogItem, source) {

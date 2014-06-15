@@ -1,7 +1,7 @@
 /*
  *   Copyright 2011 Sebastian Kügler <sebas@kde.org>
  *   Copyright 2011 Viranch Mehta <viranch.mehta@gmail.com>
- *   Copyright 2013 Kai Uwe Broulik <kde@privat.broulik.de>
+ *   Copyright 2013, 2014 Kai Uwe Broulik <kde@privat.broulik.de>
  *
  *   This program is free software; you can redistribute it and/or modify
  *   it under the terms of the GNU Library General Public License as
@@ -90,8 +90,8 @@ Item {
     Plasmoid.fullRepresentation: PopupDialog {
         id: dialogItem
         Layout.minimumWidth: units.iconSizes.medium * 9
-        Layout.minimumHeight: dialogItem.implicitHeight
-        Layout.maximumHeight: dialogItem.implicitHeight
+        Layout.minimumHeight: units.gridUnit * 13
+        // TODO Probably needs a sensible preferredHeight too
 
         model: batteries
         anchors.fill: parent
