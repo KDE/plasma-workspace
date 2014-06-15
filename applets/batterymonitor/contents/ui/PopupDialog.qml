@@ -102,6 +102,20 @@ FocusScope {
             KeyNavigation.backtab: brightnessSlider
         }
 
+        Components.Label {
+            anchors {
+                left: parent.left
+                leftMargin: units.gridUnit * 1.5 + units.iconSizes.medium
+                right: parent.right
+                rightMargin: units.gridUnit
+            }
+            height: pmSwitch.height
+            verticalAlignment: Text.AlignVCenter
+            visible: !isKeyboardBrightnessAvailable && !isBrightnessAvailable
+            text: i18n("No screen or keyboard brightness controls available")
+            wrapMode: Text.Wrap
+        }
+
         PowerManagementItem {
             id: pmSwitch
             onEnabledChanged: powermanagementChanged(enabled)
@@ -110,18 +124,4 @@ FocusScope {
         }
     }
 
-    Components.Label {
-        id: noControlsLabel
-        visible: !isKeyboardBrightnessAvailable && !isBrightnessAvailable
-        text: i18n("No screen or keyboard brightness controls available")
-        wrapMode: Text.Wrap
-        anchors {
-            top: plasmoid.location == PlasmaCore.Types.BottomEdge ? undefined : settingsColumn.bottom
-            bottom: plasmoid.location == PlasmaCore.Types.BottomEdge ? settingsColumn.top : undefined
-            left: parent.left
-            right: parent.right
-            topMargin: Math.round(units.gridUnit / 4)
-            bottomMargin: anchors.topMargin
-        }
-    }
 }
