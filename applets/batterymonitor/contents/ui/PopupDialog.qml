@@ -33,7 +33,6 @@ FocusScope {
     property bool pluggedIn
 
     property int remainingTime
-    property bool showRemainingTime
 
     property bool isBrightnessAvailable
     property alias screenBrightness: brightnessSlider.value

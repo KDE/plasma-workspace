@@ -102,7 +102,6 @@ Item {
         isBrightnessAvailable: pmSource.data["PowerDevil"]["Screen Brightness Available"] ? true : false
         isKeyboardBrightnessAvailable: pmSource.data["PowerDevil"]["Keyboard Brightness Available"] ? true : false
 
-        showRemainingTime: Plasmoid.configuration.showRemainingTime
         remainingTime: Number(pmSource.data["Battery"]["Remaining msec"])
 
         pluggedIn: pmSource.data["AC Adapter"] != undefined && pmSource.data["AC Adapter"]["Plugged in"]
