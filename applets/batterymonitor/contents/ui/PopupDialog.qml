@@ -47,14 +47,31 @@ FocusScope {
 //    signal keyboardBrightnessChanged(int keyboardBrightness)
     signal powermanagementChanged(bool checked)
 
+    state: plasmoid.location == PlasmaCore.Types.BottomEdge ? "Bottom" : ""
+
+    states: [
+        State {
+            name: "Bottom"
+            AnchorChanges {
+                target: batteryScrollArea
+                anchors.top: dialog.top
+                anchors.bottom: settingsColumn.top
+            }
+            AnchorChanges {
+                target: settingsColumn
+                anchors.top: undefined
+                anchors.bottom: parent.bottom
+            }
+        }
+    ]
+
     PlasmaExtras.ScrollArea {
         id: batteryScrollArea
         anchors {
-            left: parent.left
-            right: parent.right
-            top: plasmoid.location == PlasmaCore.Types.BottomEdge ? parent.top : settingsColumn.bottom
-            bottom: plasmoid.location == PlasmaCore.Types.BottomEdge ? settingsColumn.top : parent.bottom
+            top: settingsColumn.bottom
+            bottom: dialog.bottom
         }
+        width: parent.width
 
         ListView {
             id: batteryList
@@ -71,15 +88,14 @@ FocusScope {
 
     Column {
         id: settingsColumn
-        spacing: 0
-        width: parent.width
-
         anchors {
-            left: parent.left
-            right: parent.right
-            top: plasmoid.location == PlasmaCore.Types.BottomEdge ? undefined : parent.top
-            bottom: plasmoid.location == PlasmaCore.Types.BottomEdge ? parent.bottom : undefined
+            top: dialog.top
+            bottom: undefined
         }
+        width: parent.width
+        height: childrenRect.height
+
+        spacing: 0
 
         BrightnessItem {
             id: brightnessSlider
