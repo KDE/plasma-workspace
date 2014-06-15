@@ -35,7 +35,7 @@ FocusScope {
         anchors {
             top: parent.top
             left: parent.left
-            leftMargin: units.iconSizes.medium - pmCheckBox.width
+            leftMargin: units.iconSizes.medium + Math.round(units.gridUnit / 2) - pmCheckBox.width
         }
         focus: true
         checked: true
