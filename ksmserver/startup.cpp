@@ -428,7 +428,7 @@ void KSMServer::runUserAutostart()
     // now let's execute all the stuff in the autostart folder.
     // the stuff will actually be really executed when the event loop is
     // entered, since KRun internally uses a QTimer
-    QDir dir(QStandardPaths::locate( QStandardPaths::GenericConfigLocation, QStringLiteral("autostart"), QStandardPaths::LocateDirectory));
+    QDir dir(QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation) + QDir::separator() + QStringLiteral("autostart"));
     if (dir.exists()) {
         const QStringList entries = dir.entryList( QDir::Files );
         foreach (const QString& file, entries) {
