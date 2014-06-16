@@ -63,7 +63,7 @@ class SessionSwitching : public QObject
     Q_OBJECT
     Q_PROPERTY(bool switchUserSupported READ isSwitchUserSupported CONSTANT)
     Q_PROPERTY(bool startNewSessionSupported READ isStartNewSessionSupported CONSTANT)
-    Q_PROPERTY(QAbstractItemModel* model READ sessionModel)
+    Q_PROPERTY(QAbstractItemModel* model READ sessionModel CONSTANT)
 public:
     SessionSwitching(QObject *parent = NULL);
     virtual ~SessionSwitching();
