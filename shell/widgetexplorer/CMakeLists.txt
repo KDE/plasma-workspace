@@ -1,5 +1,7 @@
 project(plasmawidgetexplorerplugin)
 
+add_definitions(-DTRANSLATION_DOMAIN=\"widgetexplorer\")
+
 set(widgetexplorer_SRC
     kcategorizeditemsviewmodels.cpp
     plasmaappletitemmodel.cpp

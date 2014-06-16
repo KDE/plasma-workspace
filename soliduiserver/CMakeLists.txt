@@ -8,7 +8,7 @@ set(kded_soliduiserver_SRCS
    deviceserviceaction.cpp
 )
 
-qt5_wrap_ui(kded_soliduiserver_SRCS deviceactionsdialogview.ui)
+ki18n_wrap_ui(kded_soliduiserver_SRCS deviceactionsdialogview.ui)
 
 add_library(kded_soliduiserver MODULE ${kded_soliduiserver_SRCS})
 

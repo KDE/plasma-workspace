@@ -2,7 +2,7 @@ project (freespacenotifier)
 
 set(kded_freespacenotifier_SRCS freespacenotifier.cpp module.cpp)
 
-qt5_wrap_ui(kded_freespacenotifier_SRCS freespacenotifier_prefs_base.ui)
+ki18n_wrap_ui(kded_freespacenotifier_SRCS freespacenotifier_prefs_base.ui)
 
 kconfig_add_kcfg_files(kded_freespacenotifier_SRCS settings.kcfgc)
 

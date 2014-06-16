@@ -1,3 +1,5 @@
+add_definitions(-DTRANSLATION_DOMAIN=\"systemmonitor\")
+
 set (KDED_KSYSGUARD_SRCS
      kdedksysguard.cpp
 )

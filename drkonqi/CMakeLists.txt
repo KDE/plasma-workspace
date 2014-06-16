@@ -59,7 +59,7 @@ if(KF5XmlRpcClient_FOUND)
         bugzillaintegration/parsebugbacktraces.cpp # Requires kxmlrpcclient
         bugzillaintegration/duplicatefinderjob.cpp
     )
-    qt5_wrap_ui(drkonqi_SRCS
+    ki18n_wrap_ui(drkonqi_SRCS
         bugzillaintegration/ui/assistantpage_introduction.ui
         bugzillaintegration/ui/assistantpage_bugawareness.ui
         bugzillaintegration/ui/assistantpage_conclusions.ui
@@ -74,7 +74,7 @@ if(KF5XmlRpcClient_FOUND)
     )
 endif()
 
-qt5_wrap_ui(drkonqi_SRCS
+ki18n_wrap_ui(drkonqi_SRCS
     ui/maindialog.ui
     ui/backtracewidget.ui
 )

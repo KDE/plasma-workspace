@@ -14,7 +14,7 @@ progresslistdelegate_p.h
 uiserver_p.h
 )
 
-qt5_wrap_ui(kuiserver_KDEINIT_SRCS configdialog.ui)
+ki18n_wrap_ui(kuiserver_KDEINIT_SRCS configdialog.ui)
 
 
 #<DBus Stuff>

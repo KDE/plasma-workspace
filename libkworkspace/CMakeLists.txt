@@ -3,6 +3,7 @@ set(kworkspace_LIB_SRCS kdisplaymanager.cpp
                         kworkspace.cpp
    )
 
+add_definitions(-DTRANSLATION_DOMAIN=\"libkworkspace\")
 remove_definitions(-DQT_NO_CAST_FROM_ASCII)
 remove_definitions(-DQT_NO_CAST_FROM_BYTEARRAY)
 remove_definitions(-DQT_NO_CAST_TO_ASCII)

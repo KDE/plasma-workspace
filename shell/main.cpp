@@ -45,7 +45,9 @@ int main(int argc, char** argv)
     if (loopName.isEmpty()) {
         setenv("QSG_RENDER_LOOP", "basic", 1);
     }
-    
+
+    KLocalizedString::setApplicationDomain("plasmashell");
+
     QApplication app(argc, argv);
     app.setApplicationName("plasmashell");
     app.setOrganizationDomain("kde.org");
@@ -56,25 +58,25 @@ int main(int argc, char** argv)
 
     QCommandLineOption dbg(QStringList() << QStringLiteral("d") <<
                            QStringLiteral("qmljsdebugger"),
-                           QStringLiteral("Enable QML Javascript debugger"));
+                           i18n("Enable QML Javascript debugger"));
 
     QCommandLineOption win(QStringList() << QStringLiteral("w") <<
                            QStringLiteral("windowed"),
-                           QStringLiteral("Force a windowed view for testing purposes"));
+                           i18n("Force a windowed view for testing purposes"));
 
     QCommandLineOption respawn(QStringList() << QStringLiteral("n") <<
                            QStringLiteral("no-respawn"),
-                           QStringLiteral("Do not restart plasma-shell automatically after a crash"));
+                           i18n("Do not restart plasma-shell automatically after a crash"));
 
     QCommandLineOption crash(QStringList() << QStringLiteral("c") << QStringLiteral("crashes"),
-                                     QStringLiteral("Recent number of crashes"),
+                                     i18n("Recent number of crashes"),
                                      QStringLiteral("n"));
 
     QCommandLineOption shutup(QStringList() << QStringLiteral("s") << QStringLiteral("shut-up"),
-                                     QStringLiteral("Shuts up the output"));
+                                     i18n("Shuts up the output"));
 
     QCommandLineOption shellPlugin(QStringList() << QStringLiteral("p") << QStringLiteral("shell-plugin"),
-                                     QStringLiteral("Force loading the given shell plugin"),
+                                     i18n("Force loading the given shell plugin"),
                                      QStringLiteral("plugin"));
 
     parser.addVersionOption();

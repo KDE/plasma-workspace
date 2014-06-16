@@ -6,7 +6,7 @@ set(statusnotifiertest_SRCS
     pumpjob.cpp
 )
 
-qt5_wrap_ui(statusnotifiertest_SRCS statusnotifiertest.ui)
+ki18n_wrap_ui(statusnotifiertest_SRCS statusnotifiertest.ui)
 
 add_executable(statusnotifiertest ${statusnotifiertest_SRCS})
 

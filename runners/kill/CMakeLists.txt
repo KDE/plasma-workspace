@@ -6,7 +6,7 @@ set(kcm_krunner_kill_SRCS
     killrunner_config.cpp
 )
 
-qt5_wrap_ui(kcm_krunner_kill_SRCS killrunner_config.ui)
+ki18n_wrap_ui(kcm_krunner_kill_SRCS killrunner_config.ui)
 add_library(kcm_krunner_kill MODULE ${kcm_krunner_kill_SRCS})
 target_link_libraries(kcm_krunner_kill
     
