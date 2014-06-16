@@ -144,7 +144,7 @@ Item {
         sortOrder: Qt.DescendingOrder
         onCountChanged: {
             var data = filterModel.get(0);
-            if (data) {
+            if (data && (data["Icon"] != undefined)) {
                 plasmoid.icon = data["Icon"];
                 plasmoid.toolTipMainText = i18n("Most recent device");
                 plasmoid.toolTipSubText = data["Description"];
