@@ -1,3 +1,5 @@
+add_definitions(-DTRANSLATION_DOMAIN=\"plasma_applet_org.kde.plasma.systemtray\")
+
 set(systemtrayplugin_SRCS
     systemtrayplugin.cpp
     host.cpp
@@ -35,4 +37,3 @@ set(plugin_install_path ${QML_INSTALL_DIR}/org/kde/private/systemtray)
 
 install(TARGETS systemtrayplugin DESTINATION ${plugin_install_path})
 install(FILES qmldir DESTINATION ${plugin_install_path})
-
