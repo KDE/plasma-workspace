@@ -401,6 +401,7 @@ void WidgetExplorer::downloadWidgets(const QString &type)
 {
     if (!d->newStuffDialog) {
         d->newStuffDialog = new KNS3::DownloadDialog( QString::fromLatin1("plasmoids.knsrc") );
+        d->newStuffDialog.data()->setWindowTitle(i18n("Download New Plasma Widgets"));
         connect(d->newStuffDialog.data(), SIGNAL(accepted()), SLOT(newStuffFinished()));
     }
     d->newStuffDialog.data()->show();
