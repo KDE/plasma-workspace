@@ -1,5 +1,7 @@
 project(plasma-containmentactions-contextmenu)
 
+add_definitions(-DTRANSLATION_DOMAIN=\"plasma_containmentactions_contextmenu\")
+
 include_directories(${plasma-workspace_SOURCE_DIR}/libkworkspace)
 
 set(contextmenu_SRCS

@@ -1,3 +1,5 @@
+add_definitions(-DTRANSLATION_DOMAIN=\"plasma_runner_sessions\")
+
 set(krunner_sessions_SRCS
     sessionrunner.cpp
 )

@@ -22,12 +22,9 @@
 #include <QDBusConnection>
 #include <QDBusServiceWatcher>
 
-#include <kglobal.h>
-#include <kaboutdata.h>
 #include <kdebug.h>
-
 #include <kpluginfactory.h>
-#include <kpluginloader.h>
+
 #include "statusnotifierwatcheradaptor.h"
 #include "statusnotifieritem_interface.h"
 

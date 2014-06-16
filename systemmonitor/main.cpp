@@ -19,11 +19,14 @@
 
 #include <QApplication>
 #include <QDBusConnection>
+#include <KLocalizedString>
 
 #include "ksystemactivitydialog.h"
 
 int main(int argc, char** argv)
 {
+    KLocalizedString::setApplicationDomain("systemmonitor");
+
     QApplication app(argc, argv);
 
     QDBusConnection con = QDBusConnection::sessionBus();

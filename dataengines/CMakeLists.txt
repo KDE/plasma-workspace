@@ -40,4 +40,3 @@ if(NOT WIN32)
   add_subdirectory(systemmonitor)
   add_subdirectory(tasks)
 endif()
-

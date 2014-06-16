@@ -20,13 +20,14 @@
 #include "module.h"
 
 #include <KPluginFactory>
-#include <KPluginLoader>
 
-K_PLUGIN_FACTORY(FreeSpaceNotifierModuleFactory,
-                 registerPlugin<FreeSpaceNotifierModule>();
-    )
-K_EXPORT_PLUGIN(FreeSpaceNotifierModuleFactory("freespacenotifier"))
+#define TRANSLATION_DOMAIN "freespacenotifier"
+#include <KLocalizedString>
 
+K_PLUGIN_FACTORY_WITH_JSON(FreeSpaceNotifierModuleFactory,
+                           "freespacenotifier.json",
+                           registerPlugin<FreeSpaceNotifierModule>();
+                          )
 
 FreeSpaceNotifierModule::FreeSpaceNotifierModule(QObject* parent, const QList<QVariant>&)
     : KDEDModule(parent)

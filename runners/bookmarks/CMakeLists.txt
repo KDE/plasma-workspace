@@ -1,6 +1,8 @@
 ########### next target ###############
 #set(EXTERNAL_LIBS KIOCore ${QT_QTSCRIPT_LIBRARY} KF5::Plasma Qt5::Sql)
 
+add_definitions(-DTRANSLATION_DOMAIN=\"plasma_runner_bookmarksrunner\")
+
 find_package(Qt5 CONFIG REQUIRED COMPONENTS Sql)
 
 

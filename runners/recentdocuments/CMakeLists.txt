@@ -1,3 +1,5 @@
+add_definitions(-DTRANSLATION_DOMAIN=\"plasma_runner_recentdocuments\")
+
 set(krunner_recentdocuments_SRCS
     recentdocuments.cpp
 )
@@ -14,4 +16,3 @@ target_link_libraries(krunner_recentdocuments
 install(TARGETS krunner_recentdocuments DESTINATION ${PLUGIN_INSTALL_DIR} )
 
 install(FILES recentdocuments.desktop DESTINATION ${SERVICES_INSTALL_DIR})
-

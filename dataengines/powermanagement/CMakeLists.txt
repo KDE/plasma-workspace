@@ -1,3 +1,5 @@
+add_definitions(-DTRANSLATION_DOMAIN=\"plasma_engine_powermanagement\")
+
 set(powermanagement_engine_SRCS
     powermanagementengine.cpp
     powermanagementjob.cpp
@@ -26,4 +28,3 @@ kservice_desktop_to_json(plasma_engine_powermanagement plasma-dataengine-powerma
 install(TARGETS plasma_engine_powermanagement DESTINATION ${PLUGIN_INSTALL_DIR}/plasma/dataengine)
 install(FILES plasma-dataengine-powermanagement.desktop DESTINATION ${SERVICES_INSTALL_DIR} )
 install(FILES powermanagementservice.operations DESTINATION ${PLASMA_DATA_INSTALL_DIR}/services)
-

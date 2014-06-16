@@ -1,5 +1,7 @@
 project(plasma-containmentactions-switchwindow)
 
+add_definitions(-DTRANSLATION_DOMAIN=\"plasma_containmentactions_switchwindow\")
+
 set(switchwindow_SRCS
     switch.cpp
 )

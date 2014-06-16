@@ -7,6 +7,7 @@ ki18n_wrap_ui(kded_freespacenotifier_SRCS freespacenotifier_prefs_base.ui)
 kconfig_add_kcfg_files(kded_freespacenotifier_SRCS settings.kcfgc)
 
 add_library(kded_freespacenotifier MODULE ${kded_freespacenotifier_SRCS})
+kservice_desktop_to_json(kded_freespacenotifier freespacenotifier.desktop)
 
 target_link_libraries(kded_freespacenotifier
     KF5::ConfigWidgets

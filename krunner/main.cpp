@@ -39,6 +39,8 @@ static QCommandLineParser parser;
 
 int main(int argc, char **argv)
 {
+    KLocalizedString::setApplicationDomain("krunner");
+
     QQuickWindow::setDefaultAlphaBuffer(true);
     QApplication app(argc, argv);
 //     TODO: Make it a QGuiApplication once we don't depend on KDELibs4Support
@@ -63,4 +65,3 @@ int main(int argc, char **argv)
 
     return app.exec();
 }
-

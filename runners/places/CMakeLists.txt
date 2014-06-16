@@ -1,3 +1,4 @@
+add_definitions(-DTRANSLATION_DOMAIN=\"plasma_runner_placesrunner\")
 
 set(krunner_placesrunner_SRCS
     placesrunner.cpp

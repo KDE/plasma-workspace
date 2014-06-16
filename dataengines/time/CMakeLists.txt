@@ -1,3 +1,4 @@
+add_definitions(-DTRANSLATION_DOMAIN=\"plasma_engine_time\")
 
 set(time_engine_SRCS
     timeengine.cpp

@@ -1,3 +1,5 @@
+add_definitions(-DTRANSLATION_DOMAIN=\"plasma_runner_services\")
+
 set(krunner_services_SRCS
     servicerunner.cpp
 )

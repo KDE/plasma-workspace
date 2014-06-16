@@ -1,5 +1,7 @@
 project(shareengine)
 
+add_definitions(-DTRANSLATION_DOMAIN=\"plasma_engine_share\")
+
 set(share_engine_SRCS
         shareprovider.cpp
         shareengine.cpp

@@ -1,3 +1,5 @@
+add_definitions(-DTRANSLATION_DOMAIN=\"plasma_runner_shell\")
+
 set(krunner_shell_SRCS
     shellrunner.cpp
     shell_config.cpp
