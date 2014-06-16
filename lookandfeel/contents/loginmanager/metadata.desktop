@@ -1,6 +1,7 @@
 [SddmGreeterTheme]
 Name=Breeze
 Name[ca]=Brisa
+Name[es]=Brisa
 Name[id]=Angin
 Name[nl]=Breeze
 Name[pl]=Bryza
@@ -11,6 +12,7 @@ Name[uk]=Breeze
 Name[x-test]=xxBreezexx
 Description=Breeze Theme
 Description[ca]=Tema Brisa
+Description[es]=Tema Brisa
 Description[id]=Tema Angin
 Description[nl]=Thema Breeze
 Description[pl]=Wystrój bryzy
