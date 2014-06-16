@@ -38,5 +38,10 @@ ListView {
         height: view.userItemHeight
         faceSize: view.userFaceSize
         padding: view.padding
+
+        onClicked: {
+            view.currentIndex = index;
+            view.forceActiveFocus();
+        }
     }
 }

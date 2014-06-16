@@ -21,6 +21,7 @@ import QtQuick 2.0
 import QtQuick.Layouts 1.1
 import QtQuick.Controls 1.1
 import org.kde.plasma.components 2.0 as PlasmaComponents
+import org.kde.kscreenlocker 1.0
 import "../components"
 
 Image {
@@ -52,6 +53,9 @@ Image {
             root.notification = text;
         }
     }
+    Sessions {
+        id: sessions
+    }
 
     StackView {
         id: stackView
@@ -66,6 +70,7 @@ Image {
             id: block
             main: UserSelect {
                 id: usersSelection
+
                 model: ListModel {
                     id: users
 
@@ -73,7 +78,27 @@ Image {
                         //TODO: user switching is not yet supported
                         users.append({  "name": kscreenlocker_userName,
                                         "realName": kscreenlocker_userName,
-                                        "icon": kscreenlocker_userImage})
+                                        "icon": kscreenlocker_userImage,
+                                        "showPassword": true,
+                                        "ButtonLabel": i18n("Unlock"),
+                                        "ButtonAction": "unlock"
+                        })
+                        if(sessions.startNewSessionSupported) {
+                            users.append({  "realName": i18n("New Session"),
+                                            "icon": "system-log-out", //TODO Need an icon for new session
+                                            "showPassword": false,
+                                            "ButtonLabel": i18n("Create Session"),
+                                            "ButtonAction": "newSession"
+                            })
+                        }
+                        if(sessions.switchUserSupported) {
+                            users.append({  "realName": i18n("Change Session"),
+                                            "icon": "system-switch-user",
+                                            "showPassword": false,
+                                            "ButtonLabel": i18n("Change Session..."),
+                                            "ButtonAction": "changeSession"
+                            })
+                        }
                     }
                 }
             }
@@ -81,23 +106,38 @@ Image {
             controls: Item {
                 height: childrenRect.height
                 Layout.fillWidth: true
+                function unlockFunction() {
+                    authenticator.tryUnlock(passwordInput.text);
+                }
 
                 RowLayout {
+
                     anchors.horizontalCenter: parent.horizontalCenter
                     PlasmaComponents.TextField {
                         id: passwordInput
                         placeholderText: i18n("Password")
                         echoMode: TextInput.Password
                         enabled: !authenticator.graceLocked
-                        onAccepted: authenticator.tryUnlock(passwordInput.text)
+                        onAccepted: unlockFunction()
                         focus: true
+                        visible: block.mainItem.model.get(block.mainItem.selectedIndex)["showPassword"]
                     }
 
                     PlasmaComponents.Button {
                         Layout.minimumWidth: passwordInput.width
-                        text: i18n("Unlock")
+                        text: block.mainItem.model.get(block.mainItem.selectedIndex)["ButtonLabel"]
                         enabled: !authenticator.graceLocked
-                        onClicked: authenticator.tryUnlock(passwordInput.text)
+                        onClicked: switch(block.mainItem.model.get(block.mainItem.selectedIndex)["ButtonAction"]) {
+                            case "unlock":
+                                unlockFunction();
+                                break;
+                            case "newSession":
+                                sessions.createNewSession();
+                                break;
+                            case "changeSession":
+                                stackView.push(changeSessionComponent)
+                                break;
+                        }
                     }
 
                     Connections {
@@ -137,6 +177,47 @@ Image {
 
                         onShutdownRequested: {
                             root.shutdown()
+                        }
+                    }
+                }
+
+                Component {
+                    id: changeSessionComponent
+                    BreezeBlock {
+                        id: selectSessionBlock
+                        main: UserSelect {
+                            id: sessionSelect
+
+                            model: sessions.model
+                            delegate: UserDelegate {
+                                name: i18n("%1 (%2)", model.session, model.location)
+                                userName: model.session
+                                iconSource: "user-identity"
+                                width: ListView.view.userItemWidth
+                                height: ListView.view.userItemHeight
+                                faceSize: ListView.view.userFaceSize
+                                padding: ListView.view.padding
+
+                                onClicked: {
+                                    ListView.view.currentIndex = index;
+                                    ListView.view.forceActiveFocus();
+                                }
+                            }
+                        }
+
+                        controls: Item {
+                            height: childrenRect.height
+                            RowLayout {
+                                anchors.centerIn: parent
+                                PlasmaComponents.Button {
+                                    text: i18n("Cancel")
+                                    onClicked: stackView.pop()
+                                }
+                                PlasmaComponents.Button {
+                                    text: i18n("Change Session")
+                                    onClicked: sessions.activateSession(selectSessionBlock.mainItem.selectedIndex)
+                                }
+                            }
                         }
                     }
                 }

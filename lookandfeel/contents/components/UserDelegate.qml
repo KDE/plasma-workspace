@@ -34,6 +34,8 @@ Item {
     property alias faceSize: face.width
     property int padding: 4
 
+    signal clicked()
+
     width: userItemWidth
     height: userItemHeight
 
@@ -104,12 +106,9 @@ Item {
     }
 
     MouseArea {
-        id: mouseArea
         anchors.fill: parent
         hoverEnabled: true
-        onClicked: {
-            wrapper.ListView.view.currentIndex = index;
-            wrapper.ListView.view.forceActiveFocus();
-        }
+
+        onClicked: wrapper.clicked();
     }
 }

@@ -28,6 +28,8 @@ Item {
     
     property alias model: usersList.model
     property alias selectedUser: usersList.selectedUser
+    property alias selectedIndex: usersList.currentIndex
+    property alias delegate: usersList.delegate
     
     InfoPane {
         id: infoPane
