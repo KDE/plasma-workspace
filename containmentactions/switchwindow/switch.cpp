@@ -34,10 +34,10 @@
 
 SwitchWindow::SwitchWindow(QObject *parent, const QVariantList &args)
     : Plasma::ContainmentActions(parent, args),
-      m_mode(AllFlat),
-      m_clearOrderTimer(0),
       m_groupManager(new TaskManager::GroupManager(this)),
-      m_tasksModel(new TaskManager::TasksModel(m_groupManager, this))
+      m_tasksModel(new TaskManager::TasksModel(m_groupManager, this)),
+      m_mode(AllFlat),
+      m_clearOrderTimer(0)
 {
     m_groupManager->setGroupingStrategy(static_cast<TaskManager::GroupManager::TaskGroupingStrategy>(0));
     m_groupManager->reconnect();
