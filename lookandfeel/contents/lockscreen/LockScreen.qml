@@ -71,7 +71,7 @@ Image {
 
                     Component.onCompleted: {
                         //TODO: user switching is not yet supported
-                        users.append({  "userName": kscreenlocker_userName,
+                        users.append({  "name": kscreenlocker_userName,
                                         "realName": kscreenlocker_userName,
                                         "icon": kscreenlocker_userImage})
                     }
