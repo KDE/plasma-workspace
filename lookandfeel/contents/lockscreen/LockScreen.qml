@@ -27,7 +27,9 @@ Image {
     id: root
     property bool debug: false
     property bool shutdownSupported: true
+    property string notification //TODO: need to figure out where this goes
     signal shutdown()
+    signal clearPassword()
 
     source: "../components/artwork/background.png"
 
@@ -35,13 +37,12 @@ Image {
         target: authenticator
         onFailed: {
             root.notification = i18n("Unlocking failed");
-            passwordInput.text = ""
+            root.clearPassword()
         }
         onGraceLockedChanged: {
             if (!authenticator.graceLocked) {
                 root.notification = "";
-                password.selectAll();
-                password.focus = true;
+                root.clearPassword();
             }
         }
         onMessage: function(text) {
@@ -62,6 +63,7 @@ Image {
         }
 
         initialItem: BreezeBlock {
+            id: block
             main: UserSelect {
                 id: usersSelection
                 model: ListModel {
@@ -96,6 +98,14 @@ Image {
                         text: i18n("Unlock")
                         enabled: !authenticator.graceLocked
                         onClicked: authenticator.tryUnlock(passwordInput.text)
+                    }
+
+                    Connections {
+                        target: root
+                        onClearPassword: {
+                            passwordInput.selectAll();
+                            passwordInput.focus = true;
+                        }
                     }
                 }
 
