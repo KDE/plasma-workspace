@@ -25,7 +25,6 @@
 #include <solid/opticaldrive.h>
 
 K_PLUGIN_FACTORY(SolidAutoEjectFactory, registerPlugin<SolidAutoEject>();)
-K_EXPORT_PLUGIN(SolidAutoEjectFactory("solidautoeject"))
 
 SolidAutoEject::SolidAutoEject(QObject* parent, const QList<QVariant>&)
     : KDEDModule(parent)
@@ -56,7 +55,7 @@ void SolidAutoEject::onEjectPressed(const QString &udi)
 
 void SolidAutoEject::connectDevice(const Solid::Device &device)
 {
-    if ( device.as<Solid::OpticalDrive>() ) {
+    if (device.is<Solid::OpticalDrive>()) {
         connect(device.as<Solid::OpticalDrive>(), SIGNAL(ejectPressed(QString)),
                 this, SLOT(onEjectPressed(QString)));
     }
