@@ -26,6 +26,7 @@
 #include "progresslistmodel.h"
 
 #include <kdbusservice.h>
+#include <KLocalizedString>
 
 #include <QCommandLineParser>
 
@@ -33,6 +34,8 @@ Q_LOGGING_CATEGORY(KUISERVER, "kuiserver")
 
 extern "C" Q_DECL_EXPORT int kdemain(int argc, char **argv)
 {
+    KLocalizedString::setApplicationDomain("kuiserver5");
+
     QLoggingCategory::setFilterRules(QStringLiteral("kuiserver.debug = true"));
 
     QCoreApplication app(argc, argv);
