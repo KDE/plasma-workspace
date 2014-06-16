@@ -29,9 +29,9 @@ import "plasmapackage:/code/logic.js" as Logic
 
 Item {
     id: analogclock
-    Layout.minimumWidth: plasmoid.formFactor != PlasmaCore.Types.Vertical ? analogclock.height : units.gridUnit
-    Layout.minimumHeight: plasmoid.formFactor == PlasmaCore.Types.Vertical ? analogclock.width : units.gridUnit
 
+    width: units.gridUnit * 15
+    height: units.gridUnit * 15
     property int hours
     property int minutes
     property int seconds
@@ -55,6 +55,10 @@ Item {
     }
 
     Plasmoid.compactRepresentation: Item {
+        id: representation
+        Layout.minimumWidth: plasmoid.formFactor != PlasmaCore.Types.Vertical ? representation.height : units.gridUnit
+        Layout.minimumHeight: plasmoid.formFactor == PlasmaCore.Types.Vertical ? representation.width : units.gridUnit
+
         MouseArea {
             anchors.fill: parent
             onClicked: plasmoid.expanded = !plasmoid.expanded

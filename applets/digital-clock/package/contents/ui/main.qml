@@ -27,6 +27,8 @@ import org.kde.plasma.private.digitalclock 1.0
 Item {
     id: main
 
+    width: units.gridUnit * 10
+    height: units.gridUnit * 4
     property string dateFormatString: setDateFormatString()
 
     Plasmoid.preferredRepresentation: Plasmoid.compactRepresentation
