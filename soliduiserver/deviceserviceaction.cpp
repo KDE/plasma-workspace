@@ -19,11 +19,11 @@
 
 #include "deviceserviceaction.h"
 
-#include <kdesktopfile.h>
-#include <klocale.h>
+#include <QDebug>
+
+#include <KLocalizedString>
 #include <kmacroexpander.h>
 #include <krun.h>
-#include <kdebug.h>
 #include <solid/storageaccess.h>
 #include <solid/block.h>
 
@@ -111,8 +111,8 @@ int MacroExpander::expandEscapedMacro(const QString &str, int pos, QStringList &
         if (m_device.is<Solid::StorageAccess>()) {
             ret << m_device.as<Solid::StorageAccess>()->filePath();
         } else {
-            kWarning() << "DeviceServiceAction::execute: " << m_device.udi()
-                       << " is not a StorageAccess device" << endl;
+            qWarning() << "DeviceServiceAction::execute: " << m_device.udi()
+                       << " is not a StorageAccess device";
         }
         break;
     case 'd': // Device node
@@ -120,8 +120,8 @@ int MacroExpander::expandEscapedMacro(const QString &str, int pos, QStringList &
         if (m_device.is<Solid::Block>()) {
             ret << m_device.as<Solid::Block>()->device();
         } else {
-            kWarning() << "DeviceServiceAction::execute: " << m_device.udi()
-                       << " is not a Block device" << endl;
+            qWarning() << "DeviceServiceAction::execute: " << m_device.udi()
+                       << " is not a Block device";
         }
         break;
     case 'i': // UDI
@@ -141,7 +141,7 @@ DelayedExecutor::DelayedExecutor(const KServiceAction &service, Solid::Device &d
     : m_service(service)
 {
     if (device.is<Solid::StorageAccess>()
-     && !device.as<Solid::StorageAccess>()->isAccessible()) {
+            && !device.as<Solid::StorageAccess>()->isAccessible()) {
         Solid::StorageAccess *access = device.as<Solid::StorageAccess>();
 
         connect(access, SIGNAL(setupDone(Solid::ErrorType, QVariant, const QString &)),
@@ -162,7 +162,7 @@ void DelayedExecutor::delayedExecute(const QString &udi)
     MacroExpander mx(device);
 
     if (!mx.expandMacrosShellQuote(exec)) {
-        kWarning() << ", Syntax error:" << m_service.exec();
+        qWarning() << ", Syntax error:" << m_service.exec();
         return;
     }
 

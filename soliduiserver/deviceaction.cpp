@@ -19,11 +19,6 @@
 
 #include "deviceaction.h"
 
-#include <kglobal.h>
-#include <kiconloader.h>
-#include <kicontheme.h>
-#include <kcomponentdata.h>
-
 DeviceAction::DeviceAction()
 {
 }

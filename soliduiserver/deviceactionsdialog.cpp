@@ -20,10 +20,6 @@
 #include "deviceactionsdialog.h"
 #include <QLayout>
 
-#include <krun.h>
-#include <klocale.h>
-
-#include <kio/global.h>
 #include <klistwidget.h>
 #include <kicon.h>
 #include <QCheckBox>

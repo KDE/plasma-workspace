@@ -2,7 +2,7 @@
    Copyright (c) 2005 Jean-Remy Falleri <jr.falleri@laposte.net>
    Copyright (c) 2005-2007 Kevin Ottens <ervin@kde.org>
    Copyright (c) 2007 Alexis Ménard <darktears31@gmail.com>
-   Copyright (c) 2011 Lukas Tinkl <ltinkl@redhat.com>
+   Copyright (c) 2011, 2014 Lukas Tinkl <ltinkl@redhat.com>
 
    This library is free software; you can redistribute it and/or
    modify it under the terms of the GNU Library General Public
@@ -22,18 +22,14 @@
 #include "soliduiserver.h"
 
 #include <QFile>
-#include <QtDBus/QDBusInterface>
-#include <QtDBus/QDBusReply>
-#include <QtDBus/QDBusError>
-#include <kjobuidelegate.h>
+#include <QStandardPaths>
+#include <QDBusInterface>
+#include <QDBusReply>
+#include <QDBusError>
 
-#include <kapplication.h>
-#include <kdebug.h>
-#include <klocale.h>
-#include <kprocess.h>
-#include <krun.h>
-#include <kmessagebox.h>
-#include <kstandardguiitem.h>
+#include <KPluginFactory>
+#include <KLocalizedString>
+#include <KUserTimestamp>
 
 #include <kdesktopfileactions.h>
 #include <kwindowsystem.h>
@@ -47,16 +43,11 @@
 #include "deviceserviceaction.h"
 #include "devicenothingaction.h"
 
-
-#include <kpluginfactory.h>
-#include <kpluginloader.h>
-#include <QStandardPaths>
-
-K_PLUGIN_FACTORY(SolidUiServerFactory,
-                 registerPlugin<SolidUiServer>();
-    )
-K_EXPORT_PLUGIN(SolidUiServerFactory("soliduiserver"))
-
+#define TRANSLATION_DOMAIN "soliduiserver"
+K_PLUGIN_FACTORY_WITH_JSON(SolidUiServerFactory,
+                           "soliduiserver.json",
+                           registerPlugin<SolidUiServer>();
+                          )
 
 SolidUiServer::SolidUiServer(QObject* parent, const QList<QVariant>&)
     : KDEDModule(parent)
@@ -116,7 +107,7 @@ void SolidUiServer::showActionsDialog(const QString &udi,
     // in the background due to focus stealing prevention. Entering a new media can
     // be seen as a kind of user activity after all. It'd be better to update the timestamp
     // as soon as the media is entered, but it apparently takes some time to get here.
-    kapp->updateUserTimestamp();
+    KUserTimestamp::updateUserTimestamp();
 
     dialog->show();
 }
@@ -205,7 +196,7 @@ void SolidUiServer::onPassphraseDialogCompleted(const QString &pass, bool keep)
         m_idToPassphraseDialog.remove(returnService+':'+udi);
 
         if (!reply.isValid()) {
-            kWarning() << "Impossible to send the passphrase to the application, D-Bus said: "
+            qWarning() << "Impossible to send the passphrase to the application, D-Bus said: "
                        << reply.error().name() << ", " << reply.error().message() << endl;
             return;  // don't save into wallet if an error occurs
         }
@@ -248,7 +239,7 @@ void SolidUiServer::reparentDialog(QWidget *dialog, WId wId, const QString &appI
 
     // allow dialog activation even if it interrupts, better than trying hacks
     // with keeping the dialog on top or on all desktops
-    kapp->updateUserTimestamp();
+    KUserTimestamp::updateUserTimestamp();
 }
 
 #include "soliduiserver.moc"
