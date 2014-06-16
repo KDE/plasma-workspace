@@ -51,6 +51,17 @@ QStringList ServiceRunner::categories() const
     return cat;
 }
 
+QIcon ServiceRunner::categoryIcon(const QString& category) const
+{
+    if (category == QStringLiteral("Applications")) {
+        return QIcon::fromTheme("applications-other");
+    } else if (category == QStringLiteral("System Settings")) {
+        return QIcon::fromTheme("preferences-system");
+    }
+
+    return Plasma::AbstractRunner::categoryIcon(category);
+}
+
 
 void ServiceRunner::match(Plasma::RunnerContext &context)
 {
