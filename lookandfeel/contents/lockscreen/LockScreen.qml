@@ -26,7 +26,7 @@ import "../components"
 
 Image {
     id: root
-    property bool debug: true
+    property bool debug: false
     property bool shutdownSupported: true
     property string notification
     signal shutdown()
