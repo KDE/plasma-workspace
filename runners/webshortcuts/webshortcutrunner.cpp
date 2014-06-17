@@ -19,14 +19,14 @@
 #include "webshortcutrunner.h"
 
 #include <QDebug>
-#include <KLocale>
-#include <KMimeType>
+#include <QMimeType>
+#include <QMimeDatabase>
 #include <KServiceTypeTrader>
-#include <KStandardDirs>
 #include <KSycoca>
 #include <KToolInvocation>
-#include <KUrl>
-#include <KUriFilter>
+#include <QUrl>
+#include <KIOWidgets/KUriFilter>
+#include <KLocalizedString>
 
 #include <QtDBus/QtDBus>
 
@@ -38,7 +38,7 @@ WebshortcutRunner::WebshortcutRunner(QObject *parent, const QVariantList& args)
     setObjectName( QLatin1String("Web Shortcut" ));
     setIgnoredTypes(Plasma::RunnerContext::Directory | Plasma::RunnerContext::File | Plasma::RunnerContext::Executable);
 
-    m_icon = KIcon("internet-web-browser");
+    m_icon = QIcon::fromTheme("internet-web-browser");
 
     m_match.setType(Plasma::QueryMatch::ExactMatch);
     m_match.setRelevance(0.9);
@@ -122,7 +122,7 @@ void WebshortcutRunner::match(Plasma::RunnerContext &context)
     if (m_lastKey == key) {
         m_filterBeforeRun = true;
         m_match.setText(i18n("Search %1 for %2", m_lastProvider, term.mid(delimIndex + 1)));
-        context.addMatch(term, m_match);
+        context.addMatch(m_match);
         return;
     }
 
@@ -139,9 +139,9 @@ void WebshortcutRunner::match(Plasma::RunnerContext &context)
     m_match.setData(filterData.uri().url());
     m_match.setId("WebShortcut:" + key);
 
-    m_match.setIcon(KIcon(filterData.iconName()));
+    m_match.setIcon(QIcon::fromTheme(filterData.iconName()));
     m_match.setText(i18n("Search %1 for %2", m_lastProvider, filterData.searchTerm()));
-    context.addMatch(term, m_match);
+    context.addMatch(m_match);
 }
 
 void WebshortcutRunner::run(const Plasma::RunnerContext &context, const Plasma::QueryMatch &match)
@@ -164,5 +164,7 @@ void WebshortcutRunner::run(const Plasma::RunnerContext &context, const Plasma::
         KToolInvocation::invokeBrowser(location);
     }
 }
+
+K_EXPORT_PLASMA_RUNNER(webshortcuts, WebshortcutRunner)
 
 #include "webshortcutrunner.moc"

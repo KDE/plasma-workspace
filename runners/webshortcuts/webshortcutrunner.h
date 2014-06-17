@@ -19,9 +19,9 @@
 #ifndef WEBSHORTCUTRUNNER_H
 #define WEBSHORTCUTRUNNER_H
 
-#include <KIcon>
+#include <QIcon>
 
-#include <Plasma/AbstractRunner>
+#include <KRunner/AbstractRunner>
 
 class WebshortcutRunner : public Plasma::AbstractRunner {
     Q_OBJECT
@@ -41,7 +41,7 @@ class WebshortcutRunner : public Plasma::AbstractRunner {
         void resetState();
 
     private:
-        KIcon m_icon;
+        QIcon m_icon;
         Plasma::QueryMatch m_match;
         bool m_filterBeforeRun;
 
@@ -50,7 +50,5 @@ class WebshortcutRunner : public Plasma::AbstractRunner {
         QString m_lastKey;
         QString m_lastProvider;
 };
-
-K_EXPORT_PLASMA_RUNNER(webshortcuts, WebshortcutRunner)
 
 #endif

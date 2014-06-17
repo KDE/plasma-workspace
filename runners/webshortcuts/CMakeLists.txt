@@ -5,7 +5,11 @@ set(krunner_webshortcuts_SRCS
 )
 
 add_library(krunner_webshortcuts MODULE ${krunner_webshortcuts_SRCS})
-target_link_libraries(krunner_webshortcuts KIOCore KF5::Plasma)
+target_link_libraries(krunner_webshortcuts
+  Qt5::DBus
+  KF5::Runner
+  KF5::KIOWidgets
+  KF5::I18n)
 
 install(TARGETS krunner_webshortcuts DESTINATION ${PLUGIN_INSTALL_DIR} )
 
