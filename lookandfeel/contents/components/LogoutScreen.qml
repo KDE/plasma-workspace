@@ -94,19 +94,19 @@ BreezeBlock {
             State {
                 name: "shutdown"
                 PropertyChanges { target: root; currentAction: shutdownRequested }
-                PropertyChanges { target: actionLabel; text: i18n("Shutting down") }
+                PropertyChanges { target: actionLabel; text: i18nd("plasma_lookandfeel_org.kde.lookandfeel","Shutting down") }
                 PropertyChanges { target: actionIcon; source: "artwork/shutdown_primary.svgz" }
             },
             State {
                 name: "logout"
                 PropertyChanges { target: root; currentAction: logoutRequested }
-                PropertyChanges { target: actionLabel; text: i18n("Logging out") }
+                PropertyChanges { target: actionLabel; text: i18nd("plasma_lookandfeel_org.kde.lookandfeel","Logging out") }
                 PropertyChanges { target: actionIcon; source: "artwork/logout_primary.svgz" }
             },
             State {
                 name: "reboot"
                 PropertyChanges { target: root; currentAction: rebootRequested }
-                PropertyChanges { target: actionLabel; text: i18n("Rebooting") }
+                PropertyChanges { target: actionLabel; text: i18nd("plasma_lookandfeel_org.kde.lookandfeel","Rebooting") }
                 PropertyChanges { target: actionIcon; source: "artwork/restart_primary.svgz" }
             }
         ]
@@ -121,7 +121,7 @@ BreezeBlock {
             anchors.centerIn: parent
 
             PlasmaComponents.Button {
-                text: i18n("Cancel")
+                text: i18nd("plasma_lookandfeel_org.kde.lookandfeel","Cancel")
                 onClicked: root.cancel()
             }
 
@@ -149,15 +149,15 @@ BreezeBlock {
         states: [
             State {
                 name: "shutdown"
-                PropertyChanges { target: commitButton; text: i18n("Shut down") }
+                PropertyChanges { target: commitButton; text: i18nd("plasma_lookandfeel_org.kde.lookandfeel","Shut down") }
             },
             State {
                 name: "logout"
-                PropertyChanges { target: commitButton; text: i18n("Log out") }
+                PropertyChanges { target: commitButton; text: i18nd("plasma_lookandfeel_org.kde.lookandfeel","Log out") }
             },
             State {
                 name: "reboot"
-                PropertyChanges { target: commitButton; text: i18n("Reboot") }
+                PropertyChanges { target: commitButton; text: i18nd("plasma_lookandfeel_org.kde.lookandfeel","Reboot") }
             }
         ]
     }
