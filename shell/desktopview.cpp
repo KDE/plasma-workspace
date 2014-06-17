@@ -86,12 +86,6 @@ void DesktopView::setFillScreen(bool fillScreen)
     emit fillScreenChanged();
 }
 
-void DesktopView::moveEvent(QMoveEvent* ev)
-{
-    adaptToScreen();
-    QWindow::moveEvent(ev);
-}
-
 void DesktopView::adaptToScreen()
 {
     //This happens sometimes, when shutting down the process
@@ -102,11 +96,16 @@ void DesktopView::adaptToScreen()
         setGeometry(screen()->geometry());
         setMinimumSize(screen()->geometry().size());
         setMaximumSize(screen()->geometry().size());
+
+        disconnect(m_oldScreen.data(), &QScreen::geometryChanged, this, static_cast<void (QWindow::*)(const QRect&)>(&QWindow::setGeometry));
         connect(screen(), &QScreen::geometryChanged, this, static_cast<void (QWindow::*)(const QRect&)>(&QWindow::setGeometry), Qt::UniqueConnection);
+
     } else {
         disconnect(screen(), &QScreen::geometryChanged, this, static_cast<void (QWindow::*)(const QRect&)>(&QWindow::setGeometry));
     }
-//     qDebug() << "adapted" << geometry() << (containment () ? containment()->wallpaper() : "xx");
+
+    m_oldScreen = screen();
+     qDebug() << "adapted" << geometry() << (containment () ? containment()->wallpaper() : "xx");
 }
 
 void DesktopView::ensureStayBehind()

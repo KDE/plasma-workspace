@@ -63,9 +63,9 @@ Q_SIGNALS:
 private:
     void coronaPackageChanged(const Plasma::Package &package);
     void ensureStayBehind();
-    virtual void moveEvent(QMoveEvent* ev);
 
     QPointer<PlasmaQuick::ConfigView> m_configView;
+    QPointer<QScreen> m_oldScreen;
     bool m_stayBehind : 1;
     bool m_fillScreen : 1;
     bool m_dashboardShown : 1;
