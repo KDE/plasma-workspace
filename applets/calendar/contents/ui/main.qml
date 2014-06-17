@@ -46,7 +46,7 @@ Item {
 
         MonthView {
             id: calendar
-            today: dataSource.data["Local"]["Date"]
+            today: dataSource.data["Local"]["DateTime"]
 
             anchors.fill: parent
         }

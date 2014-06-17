@@ -111,7 +111,7 @@ void TimeSource::updateTime()
     }
 
     if (m_solarPosition || m_moonPosition) {
-        const QDate prev = data()["Date"].toDate();
+        const QDate prev = data()["DateTime"].toDate();
         const bool updateDailies = prev != dt.date();
 
         if (m_solarPosition) {
@@ -132,8 +132,6 @@ void TimeSource::updateTime()
     }
 
     if (!m_userDateTime) {
-        setData(I18N_NOOP("Time"), dt.time());
-        setData(I18N_NOOP("Date"), dt.date());
         setData(I18N_NOOP("DateTime"), dt);
 
         forceImmediateUpdate();
@@ -175,8 +173,6 @@ QString TimeSource::parseName(const QString &name)
                 QDateTime dt = QDateTime::fromString(value, Qt::ISODate);
                 if (dt.isValid()) {
                     setData(I18N_NOOP("DateTime"), dt);
-                    setData(I18N_NOOP("Date"), dt.date());
-                    setData(I18N_NOOP("Time"), dt.time());
                     m_userDateTime = true;
                 }
             }

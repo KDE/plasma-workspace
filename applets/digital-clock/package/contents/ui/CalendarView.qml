@@ -69,7 +69,7 @@ Item {
         PlasmaCalendar.MonthView {
             id: monthView
             borderOpacity: 0.25
-            today: dataSource.data["Local"]["Date"]
+            today: dataSource.data["Local"]["DateTime"]
             anchors.fill: parent
         }
 
