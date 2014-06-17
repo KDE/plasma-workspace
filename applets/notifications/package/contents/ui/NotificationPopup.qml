@@ -88,7 +88,7 @@ PlasmaCore.Dialog {
             anchors {
                 left: parent.left
                 top: parent.top
-                margins: Math.round(units.largeSpacing / 2)
+                margins: units.smallSpacing * 2
             }
         }
 
@@ -103,18 +103,17 @@ PlasmaCore.Dialog {
         PlasmaExtras.Heading {
             id: titleLabel
             level: 4
-            height: theme.mSize(theme.defaultFont).height
+            height: paintedHeight
             elide: Text.ElideRight
             anchors {
                 left: appIconItem.right
                 //right: closeButton.left
                 top: parent.top
                 right: actionsRepeater.count < 3 ? closeButton.left : actionsColumn.left
-                margins: Math.round(units.largeSpacing / 2)
+                margins: units.smallSpacing * 2
             }
             onLinkActivated: Qt.openUrlExternally(link)
         }
-
 
         /*
          * this extra item is for clip the overflowed body text
@@ -147,7 +146,7 @@ PlasmaCore.Dialog {
                     right: (!notificationProperties || notificationProperties.actions.length == 0) ? parent.right : actionsColumn.left
                     top: titleLabel.bottom
                     bottom: parent.bottom
-                    margins: Math.round(units.largeSpacing / 2)
+                    margins: units.smallSpacing * 2
                 }
             }
 //         }
