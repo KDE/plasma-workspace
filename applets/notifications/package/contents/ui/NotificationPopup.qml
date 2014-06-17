@@ -162,8 +162,8 @@ PlasmaCore.Dialog {
                 anchors {
                     right: parent.right
                     top: parent.top
-                    topMargin: Math.round(units.largeSpacing / 4)
-                    rightMargin: Math.round(units.largeSpacing / 4)
+                    topMargin: units.smallSpacing
+                    rightMargin: units.smallSpacing
                 }
                 onClicked: {
                     closeNotification(notificationProperties.source)
@@ -177,8 +177,8 @@ PlasmaCore.Dialog {
                 anchors {
                     bottom: parent.bottom
                     right: actionsRepeater.count < 3 ? parent.right : closeButton.left
-                    rightMargin: Math.round(units.largeSpacing / 4)
-                    bottomMargin: Math.round(units.largeSpacing / 4)
+                    rightMargin: units.smallSpacing
+                    bottomMargin: units.smallSpacing
                 }
                 Repeater {
                     id: actionsRepeater
