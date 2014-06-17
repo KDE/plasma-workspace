@@ -59,8 +59,8 @@ PlasmaCore.Dialog {
 
     mainItem: MouseEventListener {
         id: mainItem
-        height: 5 * units.gridUnit
-        width: 21 * units.gridUnit
+        height: Math.round(5 * units.gridUnit)
+        width: Math.round(21 * units.gridUnit)
 
         state: "controlsHidden"
         hoverEnabled: true
@@ -88,10 +88,7 @@ PlasmaCore.Dialog {
             anchors {
                 left: parent.left
                 top: parent.top
-                leftMargin: units.largeSpacing / 2
-                topMargin: units.largeSpacing / 2
-                rightMargin: units.largeSpacing / 2
-                bottomMargin: units.largeSpacing / 2
+                margins: Math.round(units.largeSpacing / 2)
             }
         }
 
@@ -113,10 +110,7 @@ PlasmaCore.Dialog {
                 //right: closeButton.left
                 top: parent.top
                 right: actionsRepeater.count < 3 ? closeButton.left : actionsColumn.left
-                rightMargin: units.largeSpacing / 2 //settingsButton.visible ? settingsButton.width + closeButton.width : closeButton.width
-                leftMargin: units.largeSpacing / 2
-                topMargin: units.largeSpacing / 2
-                bottomMargin: units.largeSpacing / 2
+                margins: Math.round(units.largeSpacing / 2)
             }
             onLinkActivated: Qt.openUrlExternally(link)
         }
@@ -153,9 +147,7 @@ PlasmaCore.Dialog {
                     right: (!notificationProperties || notificationProperties.actions.length == 0) ? parent.right : actionsColumn.left
                     top: titleLabel.bottom
                     bottom: parent.bottom
-                    topMargin: units.largeSpacing / 2
-                    rightMargin: units.largeSpacing / 2
-                    leftMargin: units.largeSpacing / 2
+                    margins: Math.round(units.largeSpacing / 2)
                 }
             }
 //         }
@@ -170,8 +162,8 @@ PlasmaCore.Dialog {
                 anchors {
                     right: parent.right
                     top: parent.top
-                    topMargin: units.largeSpacing / 4
-                    rightMargin: units.largeSpacing / 4
+                    topMargin: Math.round(units.largeSpacing / 4)
+                    rightMargin: Math.round(units.largeSpacing / 4)
                 }
                 onClicked: {
                     closeNotification(notificationProperties.source)
@@ -185,8 +177,8 @@ PlasmaCore.Dialog {
                 anchors {
                     bottom: parent.bottom
                     right: actionsRepeater.count < 3 ? parent.right : closeButton.left
-                    rightMargin: units.largeSpacing / 4
-                    bottomMargin: units.largeSpacing / 4
+                    rightMargin: Math.round(units.largeSpacing / 4)
+                    bottomMargin: Math.round(units.largeSpacing / 4)
                 }
                 Repeater {
                     id: actionsRepeater
