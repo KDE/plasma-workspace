@@ -55,6 +55,16 @@ Image {
             main: UserSelect {
                 id: usersSelection
                 model: userModel
+
+                Connections {
+                    target: sddm
+                    onLoginFailed: {
+                        usersSelection.notification = i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Login Failed")
+                        loginPrompt.controls.passwordInput.selectAll()
+                        loginPrompt.controls.passwordInput.forceAcitveFocus()
+                    }
+                }
+
             }
 
             controls: Item {
