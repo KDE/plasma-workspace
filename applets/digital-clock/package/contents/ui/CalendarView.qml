@@ -98,7 +98,7 @@ Item {
         PlasmaCore.IconItem {
             anchors.centerIn: parent
             source: pin.checked ? "window-unpin" : "window-pin"
-            width: units.iconSizes.small / 2
+            width: units.iconSizes.tiny
             height: width
             active: pin.containsMouse
         }
