@@ -1101,6 +1101,15 @@ Plasma::Containment *ShellCorona::addPanel(const QString &plugin)
 
 int ShellCorona::screenForContainment(const Plasma::Containment *containment) const
 {
+    //case in which this containment is child of an applet, hello systray :)
+    if (Plasma::Applet *parentApplet = qobject_cast<Plasma::Applet *>(containment->parent())) {
+        if (Plasma::Containment* cont = parentApplet->containment()) {
+            return screenForContainment(cont);
+        } else {
+            return -1;
+        }
+    }
+
     for (int i = 0; i < d->views.size(); i++) {
         if (d->views[i]->containment() == containment) {
             return i;
