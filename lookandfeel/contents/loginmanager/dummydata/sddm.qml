@@ -24,6 +24,8 @@ QtObject
 
     function login(user, password, sessionIndex) {
         console.log("SDDM - logging in as ", user, password)
+        //pretend login failed
+        loginFailed()
     }
 
     property bool canPowerOff: true
