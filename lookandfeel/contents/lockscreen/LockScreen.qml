@@ -71,6 +71,11 @@ Image {
             main: UserSelect {
                 id: usersSelection
 
+                onVisibleChanged: {
+                    if(visible)
+                        currentIndex = 0;
+                }
+
                 model: ListModel {
                     id: users
 
@@ -185,6 +190,12 @@ Image {
                     id: changeSessionComponent
                     BreezeBlock {
                         id: selectSessionBlock
+
+                        Action {
+                            onTriggered: stackView.pop()
+                            shortcut: "Escape"
+                        }
+
                         main: UserSelect {
                             id: sessionSelect
 
