@@ -50,6 +50,8 @@ static void signalHandler(int signum)
 
 int main(int argc, char* argv[])
 {
+    KLocalizedString::setApplicationDomain("kscreenlocker_greet");
+
     ScreenLocker::UnlockApp app(argc, argv);
     QCoreApplication::setApplicationName(QStringLiteral("kscreenlocker_greet"));
     QCoreApplication::setApplicationVersion(QStringLiteral("0.1"));
@@ -69,7 +71,7 @@ int main(int argc, char* argv[])
                                        QStringLiteral("milliseconds"),
                                        QStringLiteral("0"));
     QCommandLineOption nolockOption(QStringLiteral("nolock"),
-                                              i18n("Don't show any lock user interface."));
+                                    i18n("Don't show any lock user interface."));
 
     parser.addOption(testingOption);
     parser.addOption(immediateLockOption);

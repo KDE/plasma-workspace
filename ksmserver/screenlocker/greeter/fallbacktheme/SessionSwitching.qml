@@ -52,7 +52,7 @@ Item {
 
             delegate: PlasmaComponents.ListItem {
                 content: PlasmaComponents.Label {
-                    text: i18nc("thesession name and the location where the session is running (what vt)", "%1 (%2)", session, location)
+                    text: i18ndc("kscreenlocker_greet", "thesession name and the location where the session is running (what vt)", "%1 (%2)", session, location)
                 }
             }
             highlight: PlasmaComponents.Highlight {
@@ -73,7 +73,7 @@ Item {
 
     PlasmaComponents.Label {
         id: explainText
-        text: i18n("The current session will be hidden " +
+        text: i18nd("kscreenlocker_greet", "The current session will be hidden " +
                     "and a new login screen or an existing session will be displayed.\n" +
                     "An F-key is assigned to each session; " +
                     "F%1 is usually assigned to the first session, " +
@@ -98,7 +98,7 @@ Item {
 
         AccelButton {
             id: activateSession
-            label: i18n("Activate")
+            label: i18nd("kscreenlocker_greet", "Activate")
             iconSource: "fork"
             onClicked: {
                 sessions.activateSession(userSessionsView.currentIndex);
@@ -107,7 +107,7 @@ Item {
         }
         AccelButton {
             id: newSession
-            label: i18n("Start New Session")
+            label: i18nd("kscreenlocker_greet", "Start New Session")
             iconSource: "fork"
             visible: sessions.startNewSessionSupported
             onClicked: {
@@ -117,7 +117,7 @@ Item {
         }
         AccelButton {
             id: cancelSession
-            label: i18n("Cancel")
+            label: i18nd("kscreenlocker_greet", "Cancel")
             iconSource: "dialog-cancel"
             onClicked: cancel()
         }

@@ -102,7 +102,7 @@ Item {
 
             AccelButton {
                 id: switchUser
-                label: i18n("&Switch Users")
+                label: i18nd("kscreenlocker_greet", "&Switch Users")
                 iconSource: "fork"
                 visible: switchUserEnabled
                 onClicked: switchUserClicked()
@@ -110,7 +110,7 @@ Item {
 
             AccelButton {
                 id: unlock
-                label: i18n("Un&lock")
+                label: i18nd("kscreenlocker_greet", "Un&lock")
                 iconSource: "object-unlocked"
                 enabled: !authenticator.graceLocked
                 onClicked: authenticator.tryUnlock(password.text)
@@ -147,7 +147,7 @@ Item {
     Connections {
         target: authenticator
         onFailed: {
-            root.notification = i18n("Unlocking failed");
+            root.notification = i18nd("kscreenlocker_greet", "Unlocking failed");
         }
         onGraceLockedChanged: {
             if (!authenticator.graceLocked) {

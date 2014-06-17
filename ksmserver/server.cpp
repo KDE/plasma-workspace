@@ -73,7 +73,6 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #include <kactioncollection.h>
 #include <kauthorized.h>
 #include <klocale.h>
-#include <kglobal.h>
 #include <kconfig.h>
 #include <kdesktopfile.h>
 #include <kapplication.h>
@@ -612,8 +611,6 @@ KSMServer::KSMServer( const QString& windowManager, bool _only_local, bool locks
   , logoutEffectWidget( NULL )
 {
 #ifdef COMPILE_SCREEN_LOCKER
-    KGlobal::locale()->insertCatalog(QLatin1String( "libkworkspace" ));
-
     ScreenLocker::KSldApp::self();
     if (lockscreen) {
         ScreenLocker::KSldApp::self()->lock(ScreenLocker::EstablishLock::Immediate);

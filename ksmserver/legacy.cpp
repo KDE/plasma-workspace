@@ -44,7 +44,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 #include <kconfig.h>
 #include <kconfiggroup.h>
-#include <kglobal.h>
+#include <KSharedConfig>
 #include <kshell.h>
 #include <kdebug.h>
 #include <kwindowsystem.h>

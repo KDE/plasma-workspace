@@ -33,14 +33,12 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #include <KMessageBox>
 #include <QtDBus/QtDBus>
 
-#include <k4aboutdata.h>
-#include <kcmdlineargs.h>
 #include <kconfiggroup.h>
 #include <kdbusservice.h>
 #include <kdebug.h>
-#include <klocale.h>
-#include <kglobal.h>
+#include <KLocalizedString>
 #include <kconfig.h>
+#include <KSharedConfig>
 #include <kmanagerselection.h>
 #include <kwindowsystem.h>
 #include "server.h"
@@ -135,47 +133,47 @@ void checkComposite()
 void sanity_check( int argc, char* argv[] )
 {
     QString msg;
-    QByteArray path = getenv("HOME");
-    QByteArray readOnly = getenv("KDE_HOME_READONLY");
+    QByteArray path = qgetenv("HOME");
+    const QByteArray readOnly = qgetenv("KDE_HOME_READONLY");
     if (path.isEmpty())
     {
-        msg = QLatin1String("$HOME not set!");
+        msg = i18n("$HOME not set!");
     }
     if (msg.isEmpty() && access(path.data(), W_OK))
     {
         if (errno == ENOENT)
-            msg = QStringLiteral("$HOME directory (%1) does not exist.");
+            msg = i18n("$HOME directory (%1) does not exist.");
         else if (readOnly.isEmpty())
-            msg = QStringLiteral("No write access to $HOME directory (%1).");
+            msg = i18n("No write access to $HOME directory (%1).");
     }
     if (msg.isEmpty() && access(path.data(), R_OK))
     {
         if (errno == ENOENT)
-            msg = QStringLiteral("$HOME directory (%1) does not exist.");
+            msg = i18n("$HOME directory (%1) does not exist.");
         else
-            msg = QStringLiteral("No read access to $HOME directory (%1).");
+            msg = i18n("No read access to $HOME directory (%1).");
     }
     if (msg.isEmpty() && readOnly.isEmpty() && !writeTest(path))
     {
         if (errno == ENOSPC)
-            msg = QStringLiteral("$HOME directory (%1) is out of disk space.");
+            msg = i18n("$HOME directory (%1) is out of disk space.");
         else
-            msg = QStringLiteral("Writing to the $HOME directory (%1) failed with\n    "
-                "the error '")+QString::fromLocal8Bit(strerror(errno))+QStringLiteral("'");
+            msg = i18n("Writing to the $HOME directory (%2) failed with "
+                       "the error '%1'", QString::fromLocal8Bit(strerror(errno)));
     }
     if (msg.isEmpty())
     {
         path = getenv("ICEAUTHORITY");
         if (path.isEmpty())
         {
-            path = getenv("HOME");
+            path = qgetenv("HOME");
             path += "/.ICEauthority";
         }
     
         if (access(path.data(), W_OK) && (errno != ENOENT))
-            msg = QStringLiteral("No write access to '%1'.");
+            msg = i18n("No write access to '%1'.");
         else if (access(path.data(), R_OK) && (errno != ENOENT))
-            msg = QStringLiteral("No read access to '%1'.");
+            msg = i18n("No read access to '%1'.");
     }
     if (msg.isEmpty())
     {
@@ -185,10 +183,10 @@ void sanity_check( int argc, char* argv[] )
         if (!writeTest(path))
         {
             if (errno == ENOSPC)
-            msg = QStringLiteral("Temp directory (%1) is out of disk space.");
+                msg = i18n("Temp directory (%1) is out of disk space.");
             else
-            msg = QStringLiteral("Writing to the temp directory (%1) failed with\n    "
-                    "the error '")+QString::fromLocal8Bit(strerror(errno))+QStringLiteral("'");
+                msg = i18n("Writing to the temp directory (%2) failed with\n    "
+                           "the error '%1'", QString::fromLocal8Bit(strerror(errno)));
         }
     }
     if (msg.isEmpty() && (path != "/tmp"))
@@ -197,36 +195,35 @@ void sanity_check( int argc, char* argv[] )
         if (!writeTest(path))
         {
             if (errno == ENOSPC)
-            msg = QStringLiteral("Temp directory (%1) is out of disk space.");
+                msg = i18n("Temp directory (%1) is out of disk space.");
             else
-            msg = QStringLiteral("Writing to the temp directory (%1) failed with\n    "
-                    "the error '")+QString::fromLocal8Bit(strerror(errno))+QStringLiteral("'");
+                msg = i18n("Writing to the temp directory (%2) failed with\n    "
+                           "the error '%1'", QString::fromLocal8Bit(strerror(errno)));
         }
     }
     if (msg.isEmpty())
     {
         path += "/.ICE-unix";
         if (access(path.data(), W_OK) && (errno != ENOENT))
-            msg = QStringLiteral("No write access to '%1'.");
+            msg = i18n("No write access to '%1'.");
         else if (access(path.data(), R_OK) && (errno != ENOENT))
-            msg = QStringLiteral("No read access to '%1'.");
+            msg = i18n("No read access to '%1'.");
     }
     if (!msg.isEmpty())
     {
-        const char *msg_pre =
-                "The following installation problem was detected\n"
-                "while trying to start KDE:"
+        msg = msg.arg(QFile::decodeName(path));
+        const QString msg_pre =
+                i18n("The following installation problem was detected\n"
+                     "while trying to start KDE:") +
                 "\n\n    ";
-        const char *msg_post = "\n\nKDE is unable to start.\n";
-        fputs(msg_pre, stderr);
-        fprintf(stderr, "%s", qPrintable(msg.arg(QFile::decodeName(path))));
-        fputs(msg_post, stderr);
+        const QString msg_post = i18n("\n\nKDE is unable to start.\n");
+        fputs(msg_pre.toUtf8().constData(), stderr);
+        fprintf(stderr, "%s", msg.toUtf8().constData());
+        fputs(msg_post.toUtf8().constData(), stderr);
 
         QApplication a(argc, argv);
-        QString qmsg = QString::fromLatin1(msg_pre) +
-                       msg.arg(QFile::decodeName(path)) +
-                       QString::fromLatin1(msg_post);
-        KMessageBox::error(0, qmsg, QStringLiteral("KDE Workspace installation problem!"));
+        const QString qmsg = msg_pre + msg + msg_post;
+        KMessageBox::error(0, qmsg, i18n("Plasma Workspace installation problem!"));
         exit(255);
     }
 }
@@ -250,7 +247,7 @@ extern "C" Q_DECL_EXPORT int kdemain( int argc, char* argv[] )
     a->setQuitOnLastWindowClosed(false); // #169486
 
     QCommandLineParser parser;
-    parser.setApplicationDescription(QString::fromLatin1(description));
+    parser.setApplicationDescription(i18n(description));
     parser.addHelpOption();
     parser.addVersionOption();
 

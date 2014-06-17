@@ -70,8 +70,8 @@ PlasmaCore.FrameSvgItem {
                 running = false
                 sleepButton.clicked(null)
             }
-            automaticallyDoLabel.text = i18np("Sleeping in 1 second",
-                                              "Sleeping in %1 seconds", automaticallyDoSeconds)
+            automaticallyDoLabel.text = i18ndp("ksmserver", "Sleeping in 1 second",
+                                               "Sleeping in %1 seconds", automaticallyDoSeconds)
             --automaticallyDoSeconds;
         }
     }
@@ -103,7 +103,7 @@ PlasmaCore.FrameSvgItem {
                 id: lockScreenButton
                 iconSource: "system-lock-screen"
                 iconSize: shutdownUi.iconSize
-                text: i18n("Lock")
+                text: i18nd("ksmserver", "Lock")
                 font.pixelSize: 1.5*automaticallyDoLabel.font.pixelSize
 
                 onClicked: {
@@ -117,7 +117,7 @@ PlasmaCore.FrameSvgItem {
                 id: sleepButton
                 iconSource: "system-suspend"
                 iconSize: shutdownUi.iconSize
-                text: i18n("Sleep")
+                text: i18n("ksmserver", "Sleep")
                 font.pixelSize: 1.5*automaticallyDoLabel.font.pixelSize
 
                 onClicked: {
@@ -137,7 +137,7 @@ PlasmaCore.FrameSvgItem {
                 id: shutdownButton
                 iconSource: "system-shutdown"
                 iconSize: shutdownUi.iconSize
-                text: i18n("Turn off")
+                text: i18nd("ksmserver", "Turn off")
                 font.pixelSize: 1.5*automaticallyDoLabel.font.pixelSize
 
                 onClicked: {

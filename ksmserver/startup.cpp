@@ -29,7 +29,6 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 ******************************************************************/
 
-#include <kglobalsettings.h>
 #include <QDir>
 #include <krun.h>
 #include <config-workspace.h>
@@ -58,17 +57,13 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #include <limits.h>
 #endif
 
-#include <QPushButton>
 #include <QTimer>
 #include <QtDBus/QtDBus>
 
-#include <klocale.h>
-#include <kglobal.h>
 #include <kconfig.h>
-#include <kapplication.h>
-#include <ktemporaryfile.h>
 #include <knotification.h>
 #include <kconfiggroup.h>
+#include <KSharedConfig>
 #include <kprocess.h>
 
 #include "global.h"

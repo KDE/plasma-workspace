@@ -28,7 +28,6 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 // needed to avoid clash with INT8 defined in X11/Xmd.h on solaris
 #define QT_CLEAN_NAMESPACE 1
 
-#include <kapplication.h>
 #include <kworkspace.h>
 
 #include "server.h"

@@ -44,9 +44,9 @@ extern "C" {
 #include <QStringList>
 #include <QObject>
 
-#include <kapplication.h>
 #include <kworkspace.h>
 #include <kmessagebox.h>
+#include <KConfigGroup>
 #include <QTimer>
 #include <QTime>
 #include <QMap>

@@ -1,5 +1,7 @@
 project(ksmserver)
 
+add_definitions(-DTRANSLATION_DOMAIN=\"ksmserver\")
+
 add_subdirectory( tests )
 #
 if(NOT WIN32)

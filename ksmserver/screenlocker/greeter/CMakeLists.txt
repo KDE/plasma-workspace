@@ -1,3 +1,6 @@
+remove_definitions(-DTRANSLATION_DOMAIN=\"kscreenlocker\")
+add_definitions(-DTRANSLATION_DOMAIN=\"kscreenlocker_greet\")
+
 include_directories(
     ${CMAKE_CURRENT_BINARY_DIR}
     ${KCheckPass_SOURCE_DIR}/kcheckpass

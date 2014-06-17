@@ -1,3 +1,6 @@
+remove_definitions(-DTRANSLATION_DOMAIN=\"ksmserver\")
+add_definitions(-DTRANSLATION_DOMAIN=\"kscreenlocker\")
+
 add_definitions(-DKDE_DEFAULT_DEBUG_AREA=1223)
 add_subdirectory(kcheckpass)
 add_subdirectory(greeter)
