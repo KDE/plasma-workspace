@@ -78,7 +78,7 @@ Image {
                     anchors.horizontalCenter: parent.horizontalCenter
                     PlasmaComponents.TextField {
                         id: passwordInput
-                        placeholderText: i18n("Password")
+                        placeholderText: i18nd("plasma_lookandfeel_org.kde.lookandfeel","Password")
                         echoMode: TextInput.Password
                         onAccepted: loginPrompt.startLogin()
                         focus: true
@@ -87,7 +87,7 @@ Image {
                     PlasmaComponents.Button {
                         //this keeps the buttons the same width and thus line up evenly around the centre
                         Layout.minimumWidth: passwordInput.width
-                        text: i18n("Login")
+                        text: i18nd("plasma_lookandfeel_org.kde.lookandfeel","Login")
                         onClicked: loginPrompt.startLogin();
                     }
                 }

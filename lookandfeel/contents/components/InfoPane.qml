@@ -56,7 +56,7 @@ ColumnLayout {
 
         BreezeLabel {
             id: batteryLabel
-            text: i18n("%1\% battery remaining", pmSource.data["Battery0"]["Percent"])
+            text: i18nd("plasma_lookandfeel_org.kde.lookandfeel","%1\% battery remaining", pmSource.data["Battery0"]["Percent"])
             Layout.alignment: Qt.AlignRight
             wrapMode: Text.Wrap
         }

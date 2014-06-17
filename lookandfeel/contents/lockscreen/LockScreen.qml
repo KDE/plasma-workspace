@@ -37,7 +37,7 @@ Image {
     Connections {
         target: authenticator
         onFailed: {
-            root.notification = i18n("Unlocking failed");
+            root.notification = i18nd("plasma_lookandfeel_org.kde.lookandfeel","Unlocking failed");
             root.clearPassword()
         }
         onGraceLockedChanged: {
@@ -85,14 +85,14 @@ Image {
                                         "realName": kscreenlocker_userName,
                                         "icon": kscreenlocker_userImage,
                                         "showPassword": true,
-                                        "ButtonLabel": i18n("Unlock"),
+                                        "ButtonLabel": i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Unlock"),
                                         "ButtonAction": "unlock"
                         })
                         if(sessions.startNewSessionSupported) {
                             users.append({  "realName": i18n("New Session"),
                                             "icon": "system-log-out", //TODO Need an icon for new session
                                             "showPassword": false,
-                                            "ButtonLabel": i18n("Create Session"),
+                                            "ButtonLabel": i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Create Session"),
                                             "ButtonAction": "newSession"
                             })
                         }
@@ -100,7 +100,7 @@ Image {
                             users.append({  "realName": i18n("Change Session"),
                                             "icon": "system-switch-user",
                                             "showPassword": false,
-                                            "ButtonLabel": i18n("Change Session..."),
+                                            "ButtonLabel": i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Change Session..."),
                                             "ButtonAction": "changeSession"
                             })
                         }
@@ -120,7 +120,7 @@ Image {
                     anchors.horizontalCenter: parent.horizontalCenter
                     PlasmaComponents.TextField {
                         id: passwordInput
-                        placeholderText: i18n("Password")
+                        placeholderText: i18nd("plasma_lookandfeel_org.kde.lookandfeel","Password")
                         echoMode: TextInput.Password
                         enabled: !authenticator.graceLocked
                         onAccepted: unlockFunction()
