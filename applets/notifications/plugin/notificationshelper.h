@@ -29,13 +29,13 @@ class QQuickWindow;
 class NotificationsHelper : public QObject
 {
     Q_OBJECT
-    Q_PROPERTY(int plasmoidScreen WRITE setPlasmoidScreen)
+    Q_PROPERTY(QRect plasmoidScreen MEMBER m_plasmoidScreen)
 
 public:
     NotificationsHelper(QObject *parent = 0);
     ~NotificationsHelper();
     Q_INVOKABLE void addNotificationPopup(QObject *win);
-    Q_INVOKABLE QRect workAreaForScreen(int screenId);
+    Q_INVOKABLE QRect workAreaForScreen(const QRect& screen);
     Q_INVOKABLE void closePopup(const QString &sourceName);
     /**
      * Fills the popup with data from notificationData
@@ -44,8 +44,6 @@ public:
      * it's queued and displayed as soon as there's space for it
      */
     Q_INVOKABLE void displayNotification(const QVariantMap &notificationData);
-
-    void setPlasmoidScreen(int screenId);
 
 private Q_SLOTS:
     void popupClosed(bool visible);
@@ -58,7 +56,7 @@ private:
     QList<QQuickWindow*> m_availablePopups;
     QHash<QString, QQuickWindow*> m_sourceMap;
     QList<QVariantMap> m_queue;
-    int m_plasmoidScreen;
+    QRect m_plasmoidScreen;
     int m_offset;
 };
 

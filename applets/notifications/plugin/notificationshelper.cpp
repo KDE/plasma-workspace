@@ -39,16 +39,16 @@ NotificationsHelper::~NotificationsHelper()
     qDeleteAll(m_popupsOnScreen);
 }
 
-QRect NotificationsHelper::workAreaForScreen(int screenId)
+QRect NotificationsHelper::workAreaForScreen(const QRect& screen)
 {
     QRect workArea = KWindowSystem::workArea();
+    foreach (QScreen* screen, qApp->screens()) {
+        QRect geo = screen->geometry();
+        if (geo.contains(geo.center()))
+            return geo.intersected(workArea);
+    }
 
-    return qApp->screens().at(screenId)->availableGeometry().intersected(workArea);
-}
-
-void NotificationsHelper::setPlasmoidScreen(int screenId)
-{
-    m_plasmoidScreen = screenId;
+    return workArea;
 }
 
 void NotificationsHelper::addNotificationPopup(QObject *win)

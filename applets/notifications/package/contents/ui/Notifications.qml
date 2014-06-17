@@ -184,7 +184,7 @@ Column {
 
     NotificationsHelper {
         id: notificationPositioner
-        plasmoidScreen: plasmoid.screen
+        plasmoidScreen: plasmoid.screenGeometry
     }
 
     Repeater {
