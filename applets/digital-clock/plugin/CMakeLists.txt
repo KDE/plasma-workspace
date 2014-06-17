@@ -1,5 +1,7 @@
 project(processrunnerplugin)
 
+add_definitions(-DTRANSLATION_DOMAIN=\"plasma_applet_org.kde.plasma.digitalclock\")
+
 set(processrunnerplugin_SRCS
     processrunner.cpp
     processrunnerplugin.cpp

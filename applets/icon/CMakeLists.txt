@@ -1,5 +1,7 @@
 plasma_install_package(package org.kde.plasma.icon)
 
+add_definitions(-DTRANSLATION_DOMAIN=\"plasma_applet_org.kde.plasma.icon\")
+
 set(iconplugin_SRCS
   plugin/icon_p.cpp
   plugin/iconplugin.cpp

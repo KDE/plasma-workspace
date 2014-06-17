@@ -1,4 +1,5 @@
 ########### next target ###############
+add_definitions(-DTRANSLATION_DOMAIN=\"solidautoeject\")
 
 set(kded_solidautoeject_SRCS
    solidautoeject.cpp
@@ -14,4 +15,3 @@ install(TARGETS kded_solidautoeject DESTINATION ${PLUGIN_INSTALL_DIR})
 ########### install files ###############
 
 install(FILES solidautoeject.desktop DESTINATION ${SERVICES_INSTALL_DIR}/kded)
-

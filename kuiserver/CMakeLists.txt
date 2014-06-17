@@ -1,3 +1,5 @@
+add_definitions(-DTRANSLATION_DOMAIN=\"kuiserver5\")
+
 add_subdirectory( tests )
 
 set(kuiserver_KDEINIT_SRCS

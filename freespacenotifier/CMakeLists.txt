@@ -1,5 +1,7 @@
 project (freespacenotifier)
 
+add_definitions(-DTRANSLATION_DOMAIN=\"freespacenotifier\")
+
 set(kded_freespacenotifier_SRCS freespacenotifier.cpp module.cpp)
 
 ki18n_wrap_ui(kded_freespacenotifier_SRCS freespacenotifier_prefs_base.ui)

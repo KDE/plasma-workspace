@@ -1,5 +1,7 @@
 project(plasma-quicklaunch)
 
+add_definitions(-DTRANSLATION_DOMAIN=\"plasma_applet_quicklaunch\")
+
 set(quicklaunch_SRCS
   icongridlayout.cpp
   launcher.cpp

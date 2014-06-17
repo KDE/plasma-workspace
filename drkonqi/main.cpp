@@ -49,6 +49,8 @@ int main(int argc, char* argv[])
     }
 #endif
 
+    KLocalizedString::setApplicationDomain("drkonqi");
+
     QApplication qa(argc, argv);
     QCoreApplication::setApplicationName(QStringLiteral("drkonqi"));
     QCoreApplication::setApplicationVersion(version);

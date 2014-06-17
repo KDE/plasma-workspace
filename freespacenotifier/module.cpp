@@ -21,9 +21,6 @@
 
 #include <KPluginFactory>
 
-#define TRANSLATION_DOMAIN "freespacenotifier"
-#include <KLocalizedString>
-
 K_PLUGIN_FACTORY_WITH_JSON(FreeSpaceNotifierModuleFactory,
                            "freespacenotifier.json",
                            registerPlugin<FreeSpaceNotifierModule>();
