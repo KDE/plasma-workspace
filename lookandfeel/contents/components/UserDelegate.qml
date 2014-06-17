@@ -33,6 +33,7 @@ Item {
     property alias iconSource: face.source
     property alias faceSize: face.width
     property int padding: 4
+    property alias notification: notificationText.text
 
     signal clicked()
 
@@ -63,7 +64,7 @@ Item {
         anchors.left: parent.left
         anchors.right: parent.right
 
-        height: frame.height
+        height: parent.height*2/3
 
         Behavior on scale {
             NumberAnimation {
@@ -78,31 +79,48 @@ Item {
 
         PlasmaCore.FrameSvgItem {
             id: frame
-            width: face.width + padding * 6
-            height: face.height + padding * 6
             imagePath: "widgets/background"
 
-            anchors.horizontalCenter: parent.horizontalCenter
+            anchors {
+                fill: face
+                margins: -padding*3
+            }
         }
 
         PlasmaCore.IconItem {
             id: face
-            anchors.centerIn: frame
+            anchors {
+                horizontalCenter: parent.horizontalCenter
+                top: parent.top
+            }
             height: width
         }
     }
 
     BreezeLabel {
         id: loginText
-        anchors.top: imageWrapper.bottom
-        anchors.topMargin: -10
-        anchors.left: parent.left
-        anchors.right: parent.right
+        anchors {
+            top: imageWrapper.bottom
+            left: parent.left
+            right: parent.right
+        }
         text: wrapper.name
         elide: Text.ElideRight
         horizontalAlignment: Text.AlignHCenter
         maximumLineCount: 2
         wrapMode: Text.Wrap
+    }
+
+    BreezeLabel {
+        id: notificationText
+        anchors.top: loginText.bottom
+        anchors.left: parent.left
+        anchors.right: parent.right
+        elide: Text.ElideRight
+        horizontalAlignment: Text.AlignHCenter
+        maximumLineCount: 2
+        wrapMode: Text.Wrap
+        font.weight: Font.Bold
     }
 
     MouseArea {

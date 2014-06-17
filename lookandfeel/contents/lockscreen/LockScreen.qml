@@ -26,9 +26,9 @@ import "../components"
 
 Image {
     id: root
-    property bool debug: false
+    property bool debug: true
     property bool shutdownSupported: true
-    property string notification //TODO: need to figure out where this goes
+    property string notification
     signal shutdown()
     signal clearPassword()
 
@@ -75,6 +75,7 @@ Image {
                     if(visible)
                         currentIndex = 0;
                 }
+                notification: root.notification
 
                 model: ListModel {
                     id: users

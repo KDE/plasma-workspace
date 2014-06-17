@@ -30,6 +30,11 @@ Item {
     property alias selectedUser: usersList.selectedUser
     property alias selectedIndex: usersList.currentIndex
     property alias delegate: usersList.delegate
+    property string notification: ""
+
+    onNotificationChanged: {
+        usersList.currentItem.notification = notification
+    }
     
     InfoPane {
         id: infoPane
