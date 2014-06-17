@@ -35,7 +35,7 @@ public:
     NotificationsHelper(QObject *parent = 0);
     ~NotificationsHelper();
     Q_INVOKABLE void addNotificationPopup(QObject *win);
-    Q_INVOKABLE QRect workAreaForScreen(const QRect& screen);
+    Q_INVOKABLE QRect workAreaForScreen(const QRect &screen);
     Q_INVOKABLE void closePopup(const QString &sourceName);
     /**
      * Fills the popup with data from notificationData

@@ -39,13 +39,14 @@ NotificationsHelper::~NotificationsHelper()
     qDeleteAll(m_popupsOnScreen);
 }
 
-QRect NotificationsHelper::workAreaForScreen(const QRect& screen)
+QRect NotificationsHelper::workAreaForScreen(const QRect &screen)
 {
     QRect workArea = KWindowSystem::workArea();
-    foreach (QScreen* screen, qApp->screens()) {
+    Q_FOREACH (QScreen *screen, qApp->screens()) {
         QRect geo = screen->geometry();
-        if (geo.contains(geo.center()))
+        if (geo.contains(geo.center())) {
             return geo.intersected(workArea);
+        }
     }
 
     return workArea;
