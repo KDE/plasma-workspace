@@ -56,6 +56,7 @@ Item {
         if (!isExpanded) {
             // clear all the selections when the plasmoid is hiding
             monthView.date = null;
+            monthView.resetToToday();
         }
     }
 
