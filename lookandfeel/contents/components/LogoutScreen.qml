@@ -94,19 +94,19 @@ BreezeBlock {
             State {
                 name: "shutdown"
                 PropertyChanges { target: root; currentAction: shutdownRequested }
-                PropertyChanges { target: actionLabel; text: ("Shutting down") }
+                PropertyChanges { target: actionLabel; text: i18n("Shutting down") }
                 PropertyChanges { target: actionIcon; source: "artwork/shutdown_primary.svgz" }
             },
             State {
                 name: "logout"
                 PropertyChanges { target: root; currentAction: logoutRequested }
-                PropertyChanges { target: actionLabel; text: ("Logging out") }
+                PropertyChanges { target: actionLabel; text: i18n("Logging out") }
                 PropertyChanges { target: actionIcon; source: "artwork/logout_primary.svgz" }
             },
             State {
                 name: "reboot"
                 PropertyChanges { target: root; currentAction: rebootRequested }
-                PropertyChanges { target: actionLabel; text: ("Rebooting") }
+                PropertyChanges { target: actionLabel; text: i18n("Rebooting") }
                 PropertyChanges { target: actionIcon; source: "artwork/restart_primary.svgz" }
             }
         ]

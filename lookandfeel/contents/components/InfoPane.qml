@@ -87,5 +87,4 @@ ColumnLayout {
         interval: 1000
     }
 
-    
-} 
+}
