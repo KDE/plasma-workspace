@@ -1,3 +1,5 @@
+add_definitions(-DTRANSLATION_DOMAIN=\"plasma_runner_powerdevil\")
+
 include_directories(
     ${CMAKE_CURRENT_BINARY_DIR}
 )

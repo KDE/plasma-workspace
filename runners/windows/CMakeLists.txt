@@ -1,3 +1,5 @@
+add_definitions(-DTRANSLATION_DOMAIN=\"plasma_runner_windows\")
+
 set(krunner_windows_SRCS
     windowsrunner.cpp
 )

@@ -1,3 +1,5 @@
+add_definitions(-DTRANSLATION_DOMAIN=\"plasma_runner_activities\")
+
 set(krunner_activities_SRCS
     activityrunner.cpp
 )
@@ -7,4 +9,3 @@ target_link_libraries(krunner_activities KF5::Plasma KF5::Activities)
 
 install(TARGETS krunner_activities DESTINATION ${PLUGIN_INSTALL_DIR})
 install(FILES plasma-runner-activityrunner.desktop DESTINATION ${SERVICES_INSTALL_DIR})
-

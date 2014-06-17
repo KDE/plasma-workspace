@@ -1,3 +1,5 @@
+add_definitions(-DTRANSLATION_DOMAIN=\"plasma_runner_solid\")
+
 set(krunner_solid_SRCS
     solidrunner.cpp
     devicewrapper.cpp

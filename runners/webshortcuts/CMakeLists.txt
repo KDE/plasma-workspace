@@ -1,3 +1,5 @@
+add_definitions(-DTRANSLATION_DOMAIN=\"plasma_runner_webshortcuts\")
+
 set(krunner_webshortcuts_SRCS
     webshortcutrunner.cpp
 )
@@ -8,4 +10,3 @@ target_link_libraries(krunner_webshortcuts KIOCore KF5::Plasma)
 install(TARGETS krunner_webshortcuts DESTINATION ${PLUGIN_INSTALL_DIR} )
 
 install(FILES plasma-runner-webshortcuts.desktop DESTINATION ${SERVICES_INSTALL_DIR})
-
