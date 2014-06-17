@@ -78,6 +78,7 @@ private:
     PanelView::VisibilityMode m_visibilityMode;
     Plasma::Theme m_theme;
     QTimer m_deleteTimer;
+    QTimer m_screenSyncTimer;
 };
 
 #endif // multiple inclusion guard

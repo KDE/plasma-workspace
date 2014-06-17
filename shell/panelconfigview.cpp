@@ -51,9 +51,13 @@ PanelConfigView::PanelConfigView(Plasma::Containment *containment, PanelView *pa
     m_visibilityMode = panelView->visibilityMode();
 
     setScreen(panelView->screen());
-    connect(panelView, &QWindow::screenChanged, this,
-            [=](QScreen *screen) {
-                setScreen(screen);
+
+    connect(panelView, SIGNAL(screenChanged(QScreen *)), &m_screenSyncTimer, SLOT(start()));
+    m_screenSyncTimer.setSingleShot(true);
+    m_screenSyncTimer.setInterval(150);
+    connect(&m_screenSyncTimer, &QTimer::timeout,
+            [=]() {
+                setScreen(panelView->screen());
                 syncGeometry();
             });
 
@@ -135,6 +139,7 @@ void PanelConfigView::syncGeometry()
 void PanelConfigView::showEvent(QShowEvent *ev)
 {
     QQuickWindow::showEvent(ev);
+    syncGeometry();
 
     KWindowSystem::setType(winId(), NET::Dock);
     setFlags(Qt::WindowFlags((flags() | Qt::FramelessWindowHint) & (~Qt::WindowDoesNotAcceptFocus)));
