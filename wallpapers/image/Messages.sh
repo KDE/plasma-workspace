@@ -1,4 +1,4 @@
 #! /usr/bin/env bash
 $EXTRACTRC *.ui >> rc.cpp
-$XGETTEXT *.cpp -o $podir/plasma_wallpaper_org.kde.image.pot
+$XGETTEXT *.cpp -o $podir/plasma_applet_org.kde.image.pot
 rm -f rc.cpp
