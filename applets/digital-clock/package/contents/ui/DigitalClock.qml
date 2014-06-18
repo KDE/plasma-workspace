@@ -59,7 +59,7 @@ Item {
             weight: plasmoid.configuration.boldText ? Font.Bold : Font.Normal
             italic: plasmoid.configuration.italicText
             pixelSize: 1024
-            pointSize: undefined // we need to unset pointSize otherwise it breaks the Text.Fit size mode
+            pointSize: 0 // we need to unset pointSize otherwise it breaks the Text.Fit size mode
         }
         minimumPixelSize: theme.mSize(theme.smallestFont).height
         fontSizeMode: Text.Fit
