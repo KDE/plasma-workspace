@@ -38,7 +38,7 @@ ColumnLayout {
     }
 
     BreezeLabel {
-        text: Qt.formatDate(timeSource.data["Local"]["Date"], Locale.LongFormat);
+        text: Qt.formatDate(timeSource.data["Local"]["DateTime"], Locale.LongFormat);
         Layout.alignment: Qt.AlignRight
     }
 
