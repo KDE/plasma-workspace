@@ -23,6 +23,7 @@ import QtQuick.Layouts 1.1
 import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.extras 2.0 as PlasmaExtras
+import org.kde.plasma.workspace.components 2.0 as PW
 
 ColumnLayout {
    BreezeLabel { //should be a heading but we want it _loads_ bigger
@@ -45,7 +46,7 @@ ColumnLayout {
         Layout.alignment: Qt.AlignRight
         visible: pmSource.connectedSources != ""
        
-        BatteryIcon {
+        PW.BatteryIcon {
             hasBattery: true
             percent: pmSource.data["Battery0"]["Percent"]
             pluggedIn: pmSource.data["AC Adapter"]["Plugged in"]

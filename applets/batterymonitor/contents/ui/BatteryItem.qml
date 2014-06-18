@@ -24,6 +24,7 @@ import QtQuick.Layouts 1.1
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.plasma.extras 2.0 as PlasmaExtras
+import org.kde.plasma.workspace.components 2.0
 import org.kde.kcoreaddons 1.0 as KCoreAddons
 import "plasmapackage:/code/logic.js" as Logic
 

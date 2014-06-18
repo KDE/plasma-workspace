@@ -1,0 +1,4 @@
+module org.kde.plasma.workspace.components
+
+BatteryIcon 2.0 BatteryIcon.qml
+
