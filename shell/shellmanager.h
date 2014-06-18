@@ -38,8 +38,6 @@ public:
     static ShellManager * instance();
     ~ShellManager();
 
-    void loadHandlers();
-
     static bool s_forceWindowed;
     static bool s_noRespawn;
     static QString s_fixedShell;
@@ -58,6 +56,7 @@ Q_SIGNALS:
     void shellChanged(const QString & shell);
 
 private Q_SLOTS:
+    void loadHandlers();
     void resetCrashCount();
 
 private:

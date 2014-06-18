@@ -80,14 +80,8 @@ ShellManager::ShellManager()
         this, &ShellManager::updateShell
     );
 
-    d->corona = new ShellCorona(this);
-
-    connect(
-        this,      &ShellManager::shellChanged,
-        d->corona, &ShellCorona::setShell
-    );
-
-    loadHandlers();
+    //we have to ensure this is executed after QCoreApplication::exec()
+    QMetaObject::invokeMethod(this, "loadHandlers", Qt::QueuedConnection);
 }
 
 ShellManager::~ShellManager()
@@ -98,6 +92,16 @@ ShellManager::~ShellManager()
 
 void ShellManager::loadHandlers()
 {
+    //this should be executed one single time in the app life cycle
+    Q_ASSERT(!d->corona);
+
+    d->corona = new ShellCorona(this);
+
+    connect(
+        this,      &ShellManager::shellChanged,
+        d->corona, &ShellCorona::setShell
+    );
+
     // TODO: Use corona's qml engine when it switches from QScriptEngine
     static QQmlEngine * engine = new QQmlEngine(this);
 
