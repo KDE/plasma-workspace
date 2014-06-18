@@ -57,7 +57,15 @@ ColumnLayout {
 
         BreezeLabel {
             id: batteryLabel
-            text: i18nd("plasma_lookandfeel_org.kde.lookandfeel","%1\% battery remaining", pmSource.data["Battery0"]["Percent"])
+            text: switch(pmSource.data["Battery0"]["State"]) {
+                case "NoCharge": //follow through
+                case "Discharging":
+                    return i18nd("plasma_lookandfeel_org.kde.lookandfeel","%1\% battery remaining", battery.percent)
+                case "FullyCharged":
+                    return i18nd("plasma_lookandfeel_org.kde.lookandfeel","Fully charged")
+                default:
+                    return i18nd("plasma_lookandfeel_org.kde.lookandfeel","%1\%. Charging", battery.percent)
+            }
             Layout.alignment: Qt.AlignRight
             wrapMode: Text.Wrap
         }
