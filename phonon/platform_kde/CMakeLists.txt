@@ -18,6 +18,6 @@ if(NOT WIN32)
    )
 endif()
 
-install(TARGETS kde DESTINATION ${PLUGIN_INSTALL_DIR}/plugins/phonon_platform)
+install(TARGETS kde DESTINATION ${PLUGIN_INSTALL_DIR}/phonon_platform)
 install(FILES phonon.notifyrc DESTINATION ${KNOTIFYRC_INSTALL_DIR})
 install(FILES phononbackend.desktop DESTINATION ${SERVICETYPES_INSTALL_DIR})
