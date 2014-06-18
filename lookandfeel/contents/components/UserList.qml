@@ -25,7 +25,6 @@ ListView {
     property int userItemWidth: 140
     property int userItemHeight: 140
     property int userFaceSize: 88
-    property int padding: 4
 
     orientation: ListView.Horizontal
     highlightRangeMode: ListView.StrictlyEnforceRange
@@ -37,7 +36,6 @@ ListView {
         width: view.userItemWidth
         height: view.userItemHeight
         faceSize: view.userFaceSize
-        padding: view.padding
 
         onClicked: {
             view.currentIndex = index;

@@ -207,7 +207,6 @@ Image {
                                 width: ListView.view.userItemWidth
                                 height: ListView.view.userItemHeight
                                 faceSize: ListView.view.userFaceSize
-                                padding: ListView.view.padding
 
                                 onClicked: {
                                     ListView.view.currentIndex = index;
