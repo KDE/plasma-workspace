@@ -60,8 +60,6 @@ Image {
                     target: sddm
                     onLoginFailed: {
                         usersSelection.notification = i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Login Failed")
-                        loginPrompt.controls.passwordInput.selectAll()
-                        loginPrompt.controls.passwordInput.forceAcitveFocus()
                     }
                 }
 
@@ -83,6 +81,8 @@ Image {
 
                     anchors.left: parent.left
                 }
+
+
 
                 RowLayout {
                     anchors.horizontalCenter: parent.horizontalCenter
@@ -115,6 +115,14 @@ Image {
 
                     onModeChanged: {
                         stackView.push(logoutScreenComponent, {"mode": mode})
+                    }
+                }
+
+                Connections {
+                    target: sddm
+                    onLoginFailed: {
+                        passwordInput.selectAll()
+                        passwordInput.forceActiveFocus()
                     }
                 }
 
