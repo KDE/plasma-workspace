@@ -22,5 +22,5 @@ import QtQuick 2.1
 import org.kde.plasma.components 2.0 as PlasmaComponents
 
 PlasmaComponents.Label {
-    color: theme.backgroundColor
+    color: theme.complementaryTextColor
 }

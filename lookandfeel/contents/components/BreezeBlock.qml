@@ -34,7 +34,7 @@ Item {
     property bool canReboot: false
 
     Rectangle {
-        color: theme.textColor
+        color: theme.complementaryBackgroundColor
         opacity: 0.8
         anchors {
             fill: parent
@@ -56,7 +56,7 @@ Item {
     Rectangle {
         id: separator
         height: 1
-        color: theme.backgroundColor
+        color: theme.complementaryTextColor
         width: parent.width
         opacity: 0.4
         anchors {
