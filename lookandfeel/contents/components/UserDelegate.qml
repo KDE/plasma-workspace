@@ -31,25 +31,13 @@ Item {
     property string name
     property string userName
     property alias iconSource: face.source
-    property alias faceSize: face.width
-    property alias notification: notificationText.text
-    readonly property int padding: 3 //face.fixedMargins.top
+    property alias faceSize: frame.width
 
     signal clicked()
 
-    width: userItemWidth
-    height: userItemHeight
+    height: faceSize + loginText.implicitHeight
 
     opacity: isCurrent ? 1.0 : 0.618
-
-    Rectangle {//debug
-        visible: debug
-        border.color: "blue"
-        border.width: 1
-        anchors.fill: parent
-        color: "#00000000"
-        z:-1000
-    }
 
     Behavior on opacity {
         NumberAnimation { duration: 250 }
@@ -62,7 +50,6 @@ Item {
             top: parent.top
             left: parent.left
             right: parent.right
-            topMargin: padding*3
         }
 
         height: parent.height*2/3
@@ -82,26 +69,32 @@ Item {
             id: frame
             imagePath: "widgets/background"
 
+            //width is set in alias at top
+            height: width
+
             anchors {
-                fill: face
-                margins: -padding*3
+                horizontalCenter: parent.horizontalCenter
+                top: parent.top
             }
         }
 
         PlasmaCore.IconItem {
             id: face
             anchors {
-                horizontalCenter: parent.horizontalCenter
-                top: parent.top
+                fill: frame
+                //negative to make frame around the image
+                topMargin: frame.margins.top
+                leftMargin: frame.margins.left
+                rightMargin: frame.margins.right
+                bottomMargin: frame.margins.bottom
             }
-            height: width
         }
     }
 
     BreezeLabel {
         id: loginText
         anchors {
-            bottom: notificationText.top
+            bottom: parent.bottom
             left: parent.left
             right: parent.right
         }
@@ -111,39 +104,6 @@ Item {
         maximumLineCount: 2
         wrapMode: Text.Wrap
         height: Math.round(Math.max(paintedHeight, theme.mSize(theme.defaultFont).height*1.2))
-        Rectangle {//debug
-            visible: debug
-            border.color: "red"
-            border.width: 1
-            anchors.fill: parent
-            color: "#00000000"
-            z:-1000
-        }
-    }
-
-    BreezeLabel {
-        id: notificationText
-        anchors {
-            bottom: parent.bottom
-            left: parent.left
-            right: parent.right
-            bottomMargin: padding
-        }
-        elide: Text.ElideRight
-        horizontalAlignment: Text.AlignHCenter
-        maximumLineCount: 2
-        wrapMode: Text.Wrap
-        font.weight: Font.Bold
-        height: Math.round(Math.max(paintedHeight, theme.mSize(theme.defaultFont).height*1.2))
-
-        Rectangle {//debug
-            visible: debug
-            border.color: "yellow"
-            border.width: 1
-            anchors.fill: parent
-            color: "#00000000"
-            z:-1000
-        }
     }
 
     MouseArea {

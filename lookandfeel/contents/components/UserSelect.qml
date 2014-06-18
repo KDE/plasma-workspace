@@ -24,18 +24,12 @@ import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
 
 Item {
-    height: usersList.height
-    
     property alias model: usersList.model
     property alias selectedUser: usersList.selectedUser
     property alias selectedIndex: usersList.currentIndex
     property alias delegate: usersList.delegate
-    property string notification: ""
+    property alias notification: notificationLabel.text
 
-    onNotificationChanged: {
-        usersList.currentItem.notification = notification
-    }
-    
     InfoPane {
         id: infoPane
         anchors {
@@ -94,5 +88,22 @@ Item {
         Component.onCompleted: {
             currentIndex = 0;
         }
+    }
+
+    BreezeLabel {
+        id: notificationLabel
+        anchors {
+            bottom: parent.bottom
+            horizontalCenter: parent.horizontalCenter
+        }
+
+        width: usersList.userItemWidth * 3 //don't pass the infoPane
+        horizontalAlignment: Text.AlignHCenter
+        maximumLineCount: 1
+        wrapMode: Text.Wrap
+
+        font.weight: Font.Bold
+        height: Math.round(Math.max(paintedHeight, theme.mSize(theme.defaultFont).height*1.2))
+
     }
 }

@@ -34,7 +34,6 @@ ListView {
         userName: model.name
         iconSource: model.icon ? model.icon : "user-identity"
         width: view.userItemWidth
-        height: view.userItemHeight
         faceSize: view.userFaceSize
 
         onClicked: {
