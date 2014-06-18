@@ -625,30 +625,7 @@ void PanelView::setAutoHideEnabled(bool enabled)
 
 void PanelView::resizeEvent(QResizeEvent *ev)
 {
-    if (containment()) {
-        if (containment()->formFactor() == Plasma::Types::Vertical) {
-            config().writeEntry("length", ev->size().height());
-            if (ev->size().height() != ev->oldSize().height()) {
-                emit lengthChanged();
-            }
-            if (ev->size().width() != ev->oldSize().width()) {
-                emit thicknessChanged();
-            }
-        } else {
-            config().writeEntry("length", ev->size().width());
-            if (ev->size().width() != ev->oldSize().width()) {
-                emit lengthChanged();
-            }
-            if (ev->size().height() != ev->oldSize().height()) {
-                emit thicknessChanged();
-            }
-        }
-
-        m_positionPaneltimer.start();
-    }
-
     updateMask();
-
     PlasmaQuick::View::resizeEvent(ev);
 }
 
