@@ -22,9 +22,9 @@ import QtQuick 2.0
 ListView {
     id: view
     readonly property string selectedUser: currentItem.userName
-    property int userItemWidth: 140
-    property int userItemHeight: 140
-    property int userFaceSize: 88
+    readonly property int userItemWidth: units.largeSpacing * 8
+    readonly property int userItemHeight: units.largeSpacing * 8
+    readonly property int userFaceSize: units.largeSpacing * 6
 
     orientation: ListView.Horizontal
     highlightRangeMode: ListView.StrictlyEnforceRange
