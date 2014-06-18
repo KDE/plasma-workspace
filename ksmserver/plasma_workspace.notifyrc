@@ -49,7 +49,7 @@ Comment[sv]=Papperskorgen har tömts
 Comment[uk]=Смітник спорожнено
 Comment[x-test]=xxThe trash has been emptiedxx
 Action=Sound
-Sound=KDE-Sys-Trash-Emptied.ogg
+Sound=Oxygen-Sys-Trash-Emptied.ogg
 
 [Event/Textcompletion: rotation]
 Name=Textcompletion: Rotation
@@ -84,7 +84,7 @@ Comment[sv]=Slutet av listan med träffar har nåtts
 Comment[uk]=Дійшли до кінця списку збігів
 Comment[x-test]=xxThe end of the list of matches has been reachedxx
 Action=
-Sound=KDE-Sys-List-End.ogg
+Sound=Oxygen-Sys-List-End.ogg
 
 [Event/Textcompletion: no match]
 Name=Textcompletion: No Match
@@ -119,7 +119,7 @@ Comment[sv]=Ingen matchande komplettering hittades
 Comment[uk]=Не знайдено завершення, яке б збігалося
 Comment[x-test]=xxNo matching completion was foundxx
 Action=
-Sound=KDE-Sys-List-Match-No.ogg
+Sound=Oxygen-Sys-List-Match-No.ogg
 
 [Event/Textcompletion: partial match]
 Name=Textcompletion: Partial Match
@@ -154,7 +154,7 @@ Comment[sv]=Det finns mer än en möjlig träff
 Comment[uk]=Є більше, ніж один збіг
 Comment[x-test]=xxThere is more than one possible matchxx
 Action=
-Sound=KDE-Sys-List-Match-Multiple.ogg
+Sound=Oxygen-Sys-List-Match-Multiple.ogg
 
 [Event/fatalerror]
 Name=Fatal Error
@@ -189,7 +189,7 @@ Comment[sv]=Ett allvarligt fel uppstod vilket fick programmet att avslutas
 Comment[uk]=Трапилась серйозна помилка, що призвела до закриття програми
 Comment[x-test]=xxThere was a serious error causing the program to exitxx
 Action=Popup|Sound
-Sound=KDE-Sys-App-Error-Serious.ogg
+Sound=Oxygen-Sys-App-Error-Serious.ogg
 
 
 [Event/notification]
@@ -226,7 +226,7 @@ Comment[sv]=Någonting speciellt inträffade i programmet
 Comment[uk]=Щось особливе сталось в програмі
 Comment[x-test]=xxSomething special happened in the programxx
 Action=Sound|Popup
-Sound=KDE-Sys-Special.ogg
+Sound=Oxygen-Sys-Special.ogg
 
 [Event/warning]
 Name=Warning
@@ -332,7 +332,7 @@ Comment[sv]=Det uppstod ett fel i programmet vilket kan orsaka problem
 Comment[uk]=В програмі трапилась помилка, яка може спричинити проблеми
 Comment[x-test]=xxThere was an error in the program which may cause problemsxx
 Action=Popup|Sound
-Sound=KDE-Sys-App-Error.ogg
+Sound=Oxygen-Sys-App-Error.ogg
 
 [Event/catastrophe]
 Name=Catastrophe
@@ -367,7 +367,7 @@ Comment[sv]=Ett mycket allvarligt fel uppstod, som åtminstone fick programmet a
 Comment[uk]=трапилась дуже серйозна помилка, яка призвела до закриття програми
 Comment[x-test]=xxA very serious error occurred, at least causing the program to exitxx
 Action=Popup|Sound
-Sound=KDE-Sys-App-Error-Serious.ogg
+Sound=Oxygen-Sys-App-Error-Serious.ogg
 
 
 [Event/startkde]
@@ -403,7 +403,7 @@ Comment[sv]=En ny session startas
 Comment[uk]=Розпочинаємо новий сеанс
 Comment[x-test]=xxA new session is startingxx
 Action=
-Sound=KDE-Sys-Log-In-Short.ogg
+Sound=Oxygen-Sys-Log-In-Short.ogg
 
 [Event/exitkde]
 Name=Logout
@@ -438,7 +438,7 @@ Comment[sv]=Sessionen avslutas
 Comment[uk]=Завершуємо роботу сеансу
 Comment[x-test]=xxSession is exitingxx
 Action=
-Sound=KDE-Sys-Log-Out.ogg
+Sound=Oxygen-Sys-Log-Out.ogg
 
 [Event/cancellogout]
 Name=Logout Canceled
@@ -507,7 +507,7 @@ Comment[sv]=Utskriftsfel har inträffat
 Comment[uk]=Трапилась помилка друку
 Comment[x-test]=xxA print error has occurredxx
 Action=Popup|Sound
-Sound=KDE-Sys-Error-Printing.ogg
+Sound=Oxygen-Sys-Error-Printing.ogg
 
 [Event/messageInformation]
 Name=Information Message
@@ -542,7 +542,7 @@ Comment[sk]=Zobrazuje sa informačná správa
 Comment[sv]=Ett informationsmeddelande visas
 Comment[uk]=Показане інформаційне повідомлення
 Comment[x-test]=xxAn information message is being shownxx
-Sound=KDE-Sys-App-Message.ogg
+Sound=Oxygen-Sys-App-Message.ogg
 Action=Sound|Taskbar
 
 [Event/messageWarning]
@@ -578,7 +578,7 @@ Comment[sk]=Zobrazuje sa varovná správa
 Comment[sv]=Ett varningsmeddelande visas
 Comment[uk]=Показане попередження
 Comment[x-test]=xxA warning message is being shownxx
-Sound=KDE-Sys-Warning.ogg
+Sound=Oxygen-Sys-Warning.ogg
 Action=Sound|Taskbar
 
 [Event/messageCritical]
@@ -612,7 +612,7 @@ Comment[sk]=Zobrazuje sa kritická správa
 Comment[sv]=Ett kritiskt meddelande visas
 Comment[uk]=Показано критичне повідомлення
 Comment[x-test]=xxA critical message is being shownxx
-Sound=KDE-Sys-App-Error-Critical.ogg
+Sound=Oxygen-Sys-App-Error-Critical.ogg
 Action=Sound|Taskbar
 
 [Event/messageboxQuestion]
@@ -648,7 +648,7 @@ Comment[sk]=Kladie sa otázka
 Comment[sv]=En fråga ställs
 Comment[uk]=Задане питання
 Comment[x-test]=xxA question is being askedxx
-Sound=KDE-Sys-Question.ogg
+Sound=Oxygen-Sys-Question.ogg
 Action=Sound|Taskbar
 
 
@@ -685,4 +685,4 @@ Comment[sv]=Ge ljudsignal
 Comment[uk]=Дати гудок
 Comment[x-test]=xxSound bellxx
 Action=Sound
-Sound=KDE-Sys-App-Message.ogg
+Sound=Oxygen-Sys-App-Message.ogg
