@@ -1,6 +1,18 @@
 [Desktop Entry]
 Name=Desktop Search
+Name[nl]=Bureaubladzoeken
+Name[pt_BR]=Pesquisa no Desktop
+Name[sk]=Hľadanie na ploche
+Name[sv]=Skrivbordssökning
+Name[uk]=Стільничний пошук
+Name[x-test]=xxDesktop Searchxx
 Comment=Runner which searches through files, emails and contacts
+Comment[nl]=Programma dat bestanden, e-mailberichten en contactpersonen doorzoekt
+Comment[pt_BR]=Programa que pesquisa nos arquivos, e-mails e contatos
+Comment[sk]=Bežec, ktorý prehľadáva súbory, e-maily a kontakty
+Comment[sv]=Körprogram som söker igenom filer, e-post och kontakter
+Comment[uk]=Засіб пошуку у файлах, повідомленнях електронної пошти та записах контактів
+Comment[x-test]=xxRunner which searches through files, emails and contactsxx
 X-KDE-ServiceTypes=Plasma/Runner
 Type=Service
 Icon=baloo

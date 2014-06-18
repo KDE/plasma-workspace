@@ -2,6 +2,7 @@
 Name=Breeze
 Name[ca]=Brisa
 Name[es]=Brisa
+Name[fi]=Breeze
 Name[id]=Angin
 Name[nds]=Breeze
 Name[nl]=Breeze
@@ -15,6 +16,7 @@ Name[x-test]=xxBreezexx
 Description=Breeze Theme
 Description[ca]=Tema Brisa
 Description[es]=Tema Brisa
+Description[fi]=Breeze-teema
 Description[id]=Tema Angin
 Description[nds]=Breeze-Muster
 Description[nl]=Thema Breeze
