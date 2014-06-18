@@ -33,6 +33,21 @@ PlasmaComponents.ButtonRow {
     property bool canShutdown
     property bool canLogout
     property string mode: "shutdown"
+    onModeChanged: {
+        switch (mode) {
+        case "reboot":
+            restartButton.checked = true;
+            break;
+        case "shutdown":
+            shutdownButton.checked = true;
+            break;
+        case "logout":
+            logoutButton.checked = true;
+            break;
+        default:
+            break;
+        }
+    }
 
     //Don't show the buttons if there's nothing to click
     visible: !exclusive || (canReboot+canShutdown+canLogout)>1
@@ -42,6 +57,7 @@ PlasmaComponents.ButtonRow {
         flat: false
         iconSource: "system-reboot"
         visible: root.canReboot
+        checkable: true
 
         onClicked: {
             root.mode = "reboot"
@@ -53,6 +69,7 @@ PlasmaComponents.ButtonRow {
         flat: false
         iconSource: "system-shutdown"
         visible: root.canShutdown
+        checkable: true
 
         onClicked: {
             root.mode = "shutdown"
@@ -65,6 +82,7 @@ PlasmaComponents.ButtonRow {
         flat: false
         iconSource: "system-log-out"
         visible: root.canLogout
+        checkable: true
 
         onClicked: {
             root.mode = "logout"
