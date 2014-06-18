@@ -714,6 +714,7 @@ void ShellCorona::createWaitingPanels()
 
         d->panelViews[cont]->setScreen(screen);
         d->panelViews[cont]->setContainment(cont);
+        d->panelViews[cont]->show();
 
         connect(cont, SIGNAL(destroyed(QObject*)), this, SLOT(containmentDeleted(QObject*)));
         connect(screen, SIGNAL(destroyed(QObject*)), this, SLOT(removePanel(QObject*)));

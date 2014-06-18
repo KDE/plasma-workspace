@@ -122,6 +122,8 @@ private Q_SLOTS:
     void restoreAutoHide();
 
 private:
+    void integrateScreen();
+
     int m_offset;
     int m_maxLength;
     int m_minLength;
