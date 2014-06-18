@@ -55,7 +55,8 @@ QString ShellManager::s_fixedShell = QString();
 class ShellManager::Private {
 public:
     Private()
-        : currentHandler(nullptr)
+        : currentHandler(nullptr),
+          corona(0)
     {
         shellUpdateDelay.setInterval(100);
         shellUpdateDelay.setSingleShot(true);
