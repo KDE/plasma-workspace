@@ -60,7 +60,7 @@ Row {
 
             property bool hasBattery: view.singleBattery ? batteries.count : model["Plugged in"]
             property int percent: view.singleBattery ? batteries.cumulativePercent : model["Percent"]
-            property bool pluggedIn: view.singleBattery ? (pmSource.data["AC Adapter"] != undefined && pmSource.data["AC Adapter"]["Plugged in"]) : (pmSource.data["AC Adapter"] != undefined && pmSource.data["AC Adapter"]["Plugged in"] && model["Is Power Supply"])
+            property bool pluggedIn: pmSource.data["AC Adapter"] != undefined && pmSource.data["AC Adapter"]["Plugged in"] && (view.singleBattery || model["Is Power Supply"])
 
             height: root.itemSize
             width: root.width/view.count
