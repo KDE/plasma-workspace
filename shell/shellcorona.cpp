@@ -254,8 +254,8 @@ QString ShellCorona::shell() const
 
 bool outputLess(KScreen::Output *a, KScreen::Output *b)
 {
-    return (a->isPrimary() && !b->isPrimary())
-            || ((a->isPrimary() == b->isPrimary()) && (a->pos().x() < b->pos().x()) || (a->pos().x() == b->pos().x() && a->pos().y() < b->pos().y()));
+    return (a->isPrimary() == b->isPrimary() || (a->isPrimary() && !b->isPrimary()))
+        && (a->pos().x() < b->pos().x() || (a->pos().x() == b->pos().x() && a->pos().y() < b->pos().y()));
 }
 
 static QList<KScreen::Output*> sortOutputs(const QHash<int, KScreen::Output*> &outputs)
