@@ -152,6 +152,7 @@ private Q_SLOTS:
     void activityClosed();
     void activityRemoved();
     void desktopContainmentDestroyed(QObject*);
+    void showOpenGLNotCompatibleWarning();
 
 private:
     void shiftViews(int idx, int delta, int until);

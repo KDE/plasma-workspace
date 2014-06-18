@@ -41,6 +41,7 @@
 #include <KAuthorized>
 #include <KWindowSystem>
 #include <kdeclarative/kdeclarative.h>
+#include <KMessageBox>
 
 #include <KScreen/Config>
 #include <kscreen/configmonitor.h>
@@ -544,6 +545,16 @@ void ShellCorona::addOutput(KScreen::Output *output)
     }
 
     DesktopView *view = new DesktopView(this, screen);
+
+    connect(view, &DesktopView::sceneGraphInitialized, this,
+        [view, this]() {
+            // check whether the GL Context supports OpenGL
+            // Note: hasOpenGLShaderPrograms is broken, see QTBUG--39730
+            if (!QOpenGLShaderProgram::hasOpenGLShaderPrograms(view->openglContext())) {
+                qWarning() << "GLSL not available, Plasma won't be functional";
+                QMetaObject::invokeMethod(this, "showOpenGLNotCompatibleWarning", Qt::QueuedConnection);
+            }
+    }, Qt::DirectConnection);
 
     //We have to do it in a lambda,
     connect(screen, &QObject::destroyed, this, [=]() { removeDesktop(view); });
@@ -1146,6 +1157,21 @@ Plasma::Package ShellCorona::lookAndFeelPackage() const
 KScreen::Config* ShellCorona::screensConfiguration() const
 {
     return d->screenConfiguration;
+}
+
+void ShellCorona::showOpenGLNotCompatibleWarning()
+{
+    static bool s_multipleInvokations = false;
+    if (s_multipleInvokations) {
+        return;
+    }
+    s_multipleInvokations = true;
+    KMessageBox::error(nullptr,
+                       i18n("Your graphics hardware does not support OpenGL (ES) 2. Plasma will abort now."),
+                       i18n("Incompatible OpenGL version detected")
+                      );
+    // this doesn't work and I have no idea why.
+    QCoreApplication::exit(1);
 }
 
 // Desktop corona handler
