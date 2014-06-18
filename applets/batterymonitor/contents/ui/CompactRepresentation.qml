@@ -26,21 +26,25 @@ import org.kde.plasma.components 2.0 as Components
 import org.kde.plasma.workspace.components 2.0
 import "plasmapackage:/code/logic.js" as Logic
 
-Item {
+//Should we consider turning this into a Flow item?
+Row {
     id: root
     Layout.minimumWidth: isConstrained() ? units.iconSizes.medium : 24 // NOTE: Keep in sync with systray
     Layout.minimumHeight: isConstrained() ? units.iconSizes.medium * view.count : 24
+    property real itemSize: Math.min(root.height, root.width/view.count)
 
     function isConstrained() {
         return (plasmoid.formFactor == PlasmaCore.Types.Vertical || plasmoid.formFactor == PlasmaCore.Types.Horizontal)
     }
 
-    ListView {
-        id: view
+    MouseArea {
+        anchors.fill: parent
+        onClicked: plasmoid.expanded = !plasmoid.expanded
+    }
 
-        anchors.centerIn: parent
-        width: Math.min(parent.width, contentWidth)
-        height: Math.min(parent.height, width)
+    Repeater {
+        id: view
+        anchors.fill: parent
 
         property bool hasBattery: pmSource.data["Battery"]["Has Battery"]
 
@@ -51,11 +55,6 @@ Item {
 
         model: singleBattery ? 1 : batteries
 
-        orientation: ListView.Horizontal
-        interactive: false
-
-        cacheBuffer: 1000
-
         delegate: Item {
             id: batteryContainer
 
@@ -63,13 +62,13 @@ Item {
             property int percent: view.singleBattery ? batteries.cumulativePercent : model["Percent"]
             property bool pluggedIn: view.singleBattery ? (pmSource.data["AC Adapter"] != undefined && pmSource.data["AC Adapter"]["Plugged in"]) : (pmSource.data["AC Adapter"] != undefined && pmSource.data["AC Adapter"]["Plugged in"] && model["Is Power Supply"])
 
-            width: Math.min(root.height, root.width/view.count)
-            height: width
+            height: root.itemSize
+            width: root.width/view.count
 
             property real iconSize: Math.min(width, height)
 
             Column {
-                anchors.fill: parent
+                anchors.centerIn: parent
 
                 BatteryIcon {
                     id: batteryIcon
@@ -91,13 +90,6 @@ Item {
                     visible: false//!isConstrained()
                 }
             }
-        }
-
-        MouseArea {
-            id: mouseArea
-            anchors.fill: parent
-            hoverEnabled: true
-            onClicked: plasmoid.expanded = !plasmoid.expanded
         }
     }
 }
