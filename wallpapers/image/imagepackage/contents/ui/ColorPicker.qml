@@ -62,8 +62,11 @@ Column {
             hsMarker.y = Math.round(hsCanvas.width*(1-picker.saturation) - 2)
             vMarker.y = Math.round(hsCanvas.height*(1-picker.lightness) - 2)
 
+            var color = Qt.hsla(picker.hue, picker.saturation, picker.lightness, 1);
             //this to work assumes the above rgb->hsl conversion is correct
-            picker.color = Qt.hsla(picker.hue, picker.saturation, picker.lightness, 1)
+            if (picker.color.r != color.r || picker.color.g != color.g || picker.color.b != color.b) {
+                picker.color = color;
+            }
         }
     }
 
