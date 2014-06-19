@@ -19,9 +19,10 @@
  */
 
 import QtQuick 2.0
+import QtQuick.Controls 1.1 as Controls
+
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as Components
-import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.kquickcontrolsaddons 2.0
 import "plasmapackage:/code/logic.js" as Logic
 
@@ -64,7 +65,7 @@ FocusScope {
         }
     ]
 
-    PlasmaExtras.ScrollArea {
+    Controls.ScrollView {
         id: batteryScrollArea
         anchors {
             top: settingsColumn.bottom
