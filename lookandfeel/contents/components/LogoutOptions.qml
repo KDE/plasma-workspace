@@ -45,6 +45,9 @@ PlasmaComponents.ButtonRow {
             logoutButton.checked = true;
             break;
         default:
+            restartButton.checked = false;
+            shutdownButton.checked = false;
+            logoutButton.checked = false;
             break;
         }
     }
