@@ -413,10 +413,9 @@ void KSMServer::autoStart2()
     }
     if( !defaultSession())
         restoreLegacySession(KSharedConfig::openConfig().data());
-
-    KNotification::event(QStringLiteral("startkde"),
-                         QString(), QPixmap(), 0l,
-                         KNotification::DefaultEvent); // this is the time KDE is up, more or less
+//     KNotification::event( QStringLiteral( "startkde" ),
+//                           QString(), QPixmap(), 0l,
+//                           KNotification::DefaultEvent ); // this is the time KDE is up, more or less
 }
 
 void KSMServer::runUserAutostart()
