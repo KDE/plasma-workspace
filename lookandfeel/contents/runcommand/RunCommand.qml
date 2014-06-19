@@ -17,6 +17,7 @@
 
 import QtQuick 2.0
 import QtQuick.Layouts 1.1
+import QtQuick.Window 2.1
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.plasma.extras 2.0 as PlasmaExtras
@@ -79,7 +80,7 @@ ColumnLayout {
         Layout.alignment: Qt.AlignTop
         visible: results.count > 0
         Layout.fillWidth: true
-        Layout.preferredHeight: Math.min(units.gridUnit * 25, results.contentHeight)
+        Layout.preferredHeight: Math.min(Screen.height, results.contentHeight)
 
         Milou.ResultsView {
             id: results
