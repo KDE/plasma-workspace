@@ -236,11 +236,13 @@ function batteryItemToolTip(batteryData, remainingTime) {
 }
 
 function updateBrightness(dialogItem, source) {
-    // we don't want passive brightness change send setBrightness call
     if (!source.data["PowerDevil"]) {
         return;
     }
+
+    // we don't want passive brightness change send setBrightness call
     dialogItem.disableBrightnessUpdate = true;
+
     if (typeof source.data["PowerDevil"]["Screen Brightness"] === 'number') {
         dialogItem.screenBrightness = source.data["PowerDevil"]["Screen Brightness"];
         dialogItem.screenBrightnessPercentage = source.data["PowerDevil"]["Screen Brightness"];
