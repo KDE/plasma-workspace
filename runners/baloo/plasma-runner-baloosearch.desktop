@@ -1,5 +1,6 @@
 [Desktop Entry]
 Name=Desktop Search
+Name[es]=Búsqueda de escritorio
 Name[nl]=Bureaubladzoeken
 Name[pt_BR]=Pesquisa no Desktop
 Name[sk]=Hľadanie na ploche
@@ -7,6 +8,7 @@ Name[sv]=Skrivbordssökning
 Name[uk]=Стільничний пошук
 Name[x-test]=xxDesktop Searchxx
 Comment=Runner which searches through files, emails and contacts
+Comment[es]=Lanzador que busca en archivos, correo electrónico y contactos
 Comment[nl]=Programma dat bestanden, e-mailberichten en contactpersonen doorzoekt
 Comment[pt_BR]=Programa que pesquisa nos arquivos, e-mails e contatos
 Comment[sk]=Bežec, ktorý prehľadáva súbory, e-maily a kontakty
