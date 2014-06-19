@@ -371,10 +371,12 @@ void PanelView::positionPanel()
     QScreen *s = screen();
     QPoint position;
     containment()->reactToScreenChange();
+    KWindowEffects::SlideFromLocation slideLocation = KWindowEffects::NoEdge;
 
     switch (containment()->location()) {
     case Plasma::Types::TopEdge:
         containment()->setFormFactor(Plasma::Types::Horizontal);
+        slideLocation = KWindowEffects::TopEdge;
 
         switch (m_alignment) {
         case Qt::AlignCenter:
@@ -391,6 +393,7 @@ void PanelView::positionPanel()
 
     case Plasma::Types::LeftEdge:
         containment()->setFormFactor(Plasma::Types::Vertical);
+        slideLocation = KWindowEffects::LeftEdge;
 
         switch (m_alignment) {
         case Qt::AlignCenter:
@@ -407,6 +410,7 @@ void PanelView::positionPanel()
 
     case Plasma::Types::RightEdge:
         containment()->setFormFactor(Plasma::Types::Vertical);
+        slideLocation = KWindowEffects::RightEdge;
 
         switch (m_alignment) {
         case Qt::AlignCenter:
@@ -424,6 +428,7 @@ void PanelView::positionPanel()
     case Plasma::Types::BottomEdge:
     default:
         containment()->setFormFactor(Plasma::Types::Horizontal);
+        slideLocation = KWindowEffects::BottomEdge;
 
         switch (m_alignment) {
         case Qt::AlignCenter:
@@ -457,6 +462,8 @@ void PanelView::positionPanel()
         emit thicknessChanged();
         emit lengthChanged();
     }
+    
+    KWindowEffects::slideWindow(winId(), slideLocation, -1);
 }
 
 void PanelView::restore()
