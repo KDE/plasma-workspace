@@ -96,6 +96,13 @@ MouseArea {
                 flat: false
                 visible: model.removable
                 onClicked: imageWallpaper.removeWallpaper(model.packageName)
+                opacity: wallpaperDelegate.containsMouse ? 1 : 0
+                Behavior on opacity {
+                    PropertyAnimation {
+                        duration: units.longDuration
+                        easing.type: Easing.OutQuad
+                    }
+                }
             }
         }
     }
