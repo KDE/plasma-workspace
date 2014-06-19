@@ -113,6 +113,8 @@ KQuickControlsAddonsComponents.MouseEventListener {
 
     PlasmaCore.ToolTipArea {
         anchors.fill: parent
+
+        active: !isExpanded
         icon: modelData && modelData.taskItem ? modelData.taskItem.icon : sniLoader.item.icon
         mainText: modelData && modelData.taskItem ? modelData.taskItem.toolTipMainText : sniLoader.item.toolTipMainText
         subText: modelData && modelData.taskItem ? modelData.taskItem.toolTipSubText : sniLoader.item.toolTipSubText
