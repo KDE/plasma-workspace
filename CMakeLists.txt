@@ -11,7 +11,7 @@ set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH} ${ECM_KDE_MODULE_DIR})
 
 find_package(KF5 REQUIRED COMPONENTS
                     Plasma DocTools Runner JsEmbed NotifyConfig Su NewStuff Wallet KCMUtils Baloo
-                    IdleTime ThreadWeaver Declarative PlasmaQuick WebKit TextWidgets KDELibs4Support)
+                    IdleTime ThreadWeaver Declarative PlasmaQuick WebKit TextWidgets KDELibs4Support Crash)
 
 find_package(KF5 REQUIRED COMPONENTS SysGuard)
 find_package(KF5 REQUIRED COMPONENTS Screen)

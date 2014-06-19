@@ -30,6 +30,7 @@ target_link_libraries(krunner
     KF5::DBusAddons
     KF5::WindowSystem
     KF5::ConfigWidgets
+    KF5::Crash
 )
 
 install(TARGETS krunner ${INSTALL_TARGETS_DEFAULT_ARGS})

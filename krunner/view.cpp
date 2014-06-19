@@ -34,6 +34,7 @@
 #include <QAction>
 #include <KLocalizedString>
 #include <KDirWatch>
+#include <KCrash/KCrash>
 
 #include <kdeclarative/qmlobject.h>
 
@@ -51,6 +52,8 @@ View::View(QWindow *parent)
     setClearBeforeRendering(true);
     setColor(QColor(Qt::transparent));
     setFlags(Qt::FramelessWindowHint);
+
+    KCrash::setFlags(KCrash::AutoRestart);
 
     m_config = KConfigGroup(KSharedConfig::openConfig("krunnerrc"), "General");
 
