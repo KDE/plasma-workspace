@@ -107,6 +107,7 @@ Item {
         pluggedIn: pmSource.data["AC Adapter"] != undefined && pmSource.data["AC Adapter"]["Plugged in"]
 
         Component.onCompleted: {
+            Logic.updateBrightness(dialogItem, pmSource);
             dialogItem.forceActiveFocus();
         }
 
