@@ -53,6 +53,7 @@ int main(int argc, char** argv)
     app.setOrganizationDomain("kde.org");
     app.setApplicationVersion(version);
     app.setQuitOnLastWindowClosed(false);
+    app.setWindowIcon(QIcon::fromTheme("plasma"));
     parser.setApplicationDescription(description);
     KDBusService service(KDBusService::Unique);
 
