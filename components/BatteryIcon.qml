@@ -30,6 +30,7 @@ Item {
     PlasmaCore.Svg {
         id: svg
         imagePath: "icons/battery"
+        colorGroup: PlasmaCore.ColorScope.colorGroup
     }
 
     PlasmaCore.SvgItem {

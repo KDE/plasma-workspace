@@ -24,7 +24,8 @@ import QtQuick.Controls 1.1
 
 import org.kde.plasma.core 2.0 as PlasmaCore
 
-Item {
+PlasmaCore.ColorScope {
+    colorGroup: PlasmaCore.Theme.ComplementaryColorGroup
     property alias main: mainView.sourceComponent
     property alias controls: controlsView.sourceComponent
     readonly property alias mainItem: mainView.item
@@ -34,7 +35,7 @@ Item {
     property bool canReboot: false
 
     Rectangle {
-        color: theme.complementaryBackgroundColor
+        color: PlasmaCore.ColorScope.backgroundColor
         opacity: 0.8
         anchors {
             fill: parent
@@ -56,7 +57,7 @@ Item {
     Rectangle {
         id: separator
         height: 1
-        color: theme.complementaryTextColor
+        color: PlasmaCore.ColorScope.textColor
         width: parent.width
         opacity: 0.4
         anchors {
