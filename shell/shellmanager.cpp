@@ -37,10 +37,10 @@
 
 #include <kcrash.h>
 
-static const QString s_shellsDir = QString(QStandardPaths::locate(QStandardPaths::QStandardPaths::GenericDataLocation,
+static const QString s_shellsDir(QStandardPaths::locate(QStandardPaths::QStandardPaths::GenericDataLocation,
                                                   PLASMA_RELATIVE_DATA_INSTALL_DIR "/shells/",
                                                   QStandardPaths::LocateDirectory));
-static const QString s_shellLoaderPath = QString("/contents/loader.qml");
+static const QString s_shellLoaderPath = QStringLiteral("/contents/loader.qml");
 
 bool ShellManager::s_forceWindowed = false;
 bool ShellManager::s_noRespawn = false;
