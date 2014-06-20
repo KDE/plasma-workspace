@@ -31,6 +31,8 @@ class DesktopView : public PlasmaQuick::View
     Q_OBJECT
     Q_PROPERTY(bool stayBehind READ stayBehind WRITE setStayBehind NOTIFY stayBehindChanged)
     Q_PROPERTY(bool fillScreen READ fillScreen WRITE setFillScreen NOTIFY fillScreenChanged)
+    //the qml part doesn't need to be able to write it, hide for now
+    Q_PROPERTY(bool dashboardShown READ isDashboardShown NOTIFY dashboardShownChanged)
 
 public:
     explicit DesktopView(ShellCorona *corona, QScreen *screen);
@@ -59,6 +61,7 @@ protected Q_SLOTS:
 Q_SIGNALS:
     void stayBehindChanged();
     void fillScreenChanged();
+    void dashboardShownChanged();
 
 private:
     void coronaPackageChanged(const Plasma::Package &package);

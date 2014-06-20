@@ -134,10 +134,6 @@ void DesktopView::setDashboardShown(bool shown)
         KWindowSystem::raiseWindow(winId());
         KWindowSystem::forceActiveWindow(winId());
 
-        QObject *wpGraphicObject = containment()->property("wallpaperGraphicsObject").value<QObject *>();
-        if (wpGraphicObject) {
-            wpGraphicObject->setProperty("opacity", 0.3);
-        }
     } else {
         if (m_stayBehind) {
             KWindowSystem::setType(winId(), NET::Desktop);
@@ -146,13 +142,10 @@ void DesktopView::setDashboardShown(bool shown)
         lower();
         KWindowSystem::lowerWindow(winId());
 
-        QObject *wpGraphicObject = containment()->property("wallpaperGraphicsObject").value<QObject *>();
-        if (wpGraphicObject) {
-            wpGraphicObject->setProperty("opacity", 1);
-        }
     }
 
     m_dashboardShown = shown;
+    emit dashboardShownChanged();
 }
 
 bool DesktopView::event(QEvent *e)
