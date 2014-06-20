@@ -286,11 +286,4 @@ void View::switchUser()
     m_qmlObj->rootObject()->setProperty("query", "SESSIONS");
 }
 
-void View::initializeStartupNotification()
-{
-    //vHanda will pay me another dinner if he does not implement this one
-    return;
-}
-
-
 #include "moc_view.cpp"
