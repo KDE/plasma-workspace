@@ -58,8 +58,7 @@ Osd::~Osd()
 
 void Osd::brightnessChanged(int percent)
 {
-    // FIXME: need brightness icon
-    showProgress(QString(), percent);
+    showProgress(QStringLiteral("battery-DisplayBrightness"), percent);
 }
 
 void Osd::volumeChanged(int percent)
