@@ -32,9 +32,10 @@
 #include <QImage>
 
 #include <kiconloader.h>
+#include <KConfig>
 
 NotificationsEngine::NotificationsEngine( QObject* parent, const QVariantList& args )
-    : Plasma::DataEngine( parent, args ), m_nextId( 1 )
+    : Plasma::DataEngine( parent, args ), m_nextId( 1 ), m_alwaysReplaceAppsList({QStringLiteral("Clementine"), QStringLiteral("Spotify")})
 {
     new NotificationsAdaptor(this);
 
@@ -42,6 +43,11 @@ NotificationsEngine::NotificationsEngine( QObject* parent, const QVariantList& a
     bool so = dbus.registerService( "org.freedesktop.Notifications" );
     bool ro = dbus.registerObject( "/org/freedesktop/Notifications", this );
     qDebug() << "Are we the only client? (Both have to be true) " << so << ro;
+
+    // Read additional single-notification-popup-only from a config file
+    KConfig singlePopupConfig("plasma_single_popup_notificationrc");
+    KConfigGroup singlePopupConfigGroup(&singlePopupConfig, "General");
+    m_alwaysReplaceAppsList += QSet<QString>::fromList(singlePopupConfigGroup.readEntry("applications", QStringList()));
 }
 
 NotificationsEngine::~NotificationsEngine()
@@ -172,8 +178,18 @@ uint NotificationsEngine::Notify(const QString &app_name, uint replaces_id,
         }
     }
 
-    uint id = 0;
-    id = replaces_id ? replaces_id : m_nextId++;
+    uint id = replaces_id ? replaces_id : m_nextId++;
+
+    // If the current app is in the "blacklist"...
+    if (m_alwaysReplaceAppsList.contains(app_name)) {
+        // ...check if we already have a notification from that particular
+        // app and if yes, use its id to replace it
+        if (m_notificationsFromReplaceableApp.contains(app_name)) {
+            id = m_notificationsFromReplaceableApp.value(app_name);
+        } else {
+            m_notificationsFromReplaceableApp.insert(app_name, id);
+        }
+    }
 
     QString appname_str = app_name;
     if (appname_str.isEmpty()) {

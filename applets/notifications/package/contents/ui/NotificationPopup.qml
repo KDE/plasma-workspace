@@ -40,6 +40,7 @@ PlasmaCore.Dialog {
     {
         notificationProperties = notification
         notificationTimer.interval = notification.expireTimeout
+        notificationTimer.restart()
         titleLabel.text = notification.summary
         bodyLabel.text = notification.body
         appIconItem.icon = notification.appIcon

@@ -22,6 +22,7 @@
 #define NOTIFICATIONSENGINE_H
 
 #include <Plasma/DataEngine>
+#include <QSet>
 
 class QTimer;
 
@@ -72,6 +73,19 @@ private:
     uint m_nextId;
 
     QHash<QString, QString> m_activeNotifications;
+
+    /**
+     * A "blacklist" of apps for which always the previous notification from this app
+     * is replaced by the newer one. This is the case for eg. media players
+     * as we simply want to update the notification, not get spammed by tens
+     * of notifications for quickly changing songs in playlist
+     */
+    QSet<QString> m_alwaysReplaceAppsList;
+    /**
+     * This holds the notifications sent from apps from the list above
+     * for fast lookup
+     */
+    QHash<QString, uint> m_notificationsFromReplaceableApp;
 
     friend class NotificationAction;
 };

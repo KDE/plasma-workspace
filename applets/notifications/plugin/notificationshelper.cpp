@@ -77,22 +77,36 @@ void NotificationsHelper::displayNotification(const QVariantMap &notificationDat
         return;
     }
 
+    QString sourceName = notificationData.value("source").toString();
+
     // All our popups are full, so put it into queue and bail out
     if (m_availablePopups.isEmpty()) {
+        // ...but first check if we don't already have data for the same source
+        // which would mean that the notification was just updated
+        // so remove the old one and append the newest data only
+        Q_FOREACH (const QVariantMap &data, m_queue) {
+            if (data.value("source").toString() == sourceName) {
+                m_queue.removeOne(data);
+            }
+        }
         m_queue.append(notificationData);
         return;
     }
 
-    QQuickWindow *popup = m_availablePopups.takeFirst();
-    m_popupsOnScreen << popup;
+    // Try getting existing popup for the given source
+    // (case of notification being just updated)
+    QQuickWindow *popup = m_sourceMap.value(sourceName);
 
-    QString sourceName = notificationData.value("source").toString();
-
-    m_sourceMap.insert(sourceName, popup);
-
-    // Set the source name directly on the popup object too
-    // to avoid looking up the notificationProperties map as above
-    popup->setProperty("sourceName", sourceName);
+    if (!popup) {
+        // No existing notification for the given source,
+        // take one from the available popups
+        popup = m_availablePopups.takeFirst();
+        m_popupsOnScreen << popup;
+        m_sourceMap.insert(sourceName, popup);
+        // Set the source name directly on the popup object too
+        // to avoid looking up the notificationProperties map as above
+        popup->setProperty("sourceName", sourceName);
+    }
 
     QRect screenArea = workAreaForScreen(m_plasmoidScreen);
 
