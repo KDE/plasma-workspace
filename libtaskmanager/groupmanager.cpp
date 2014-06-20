@@ -71,6 +71,7 @@ public:
           showOnlyCurrentScreen(false),
           showOnlyMinimized(false),
           onlyGroupWhenFull(false),
+          cachedOnlyGroupWhenFull(false),
           changingGroupingStrategy(false),
           readingLauncherConfig(false),
           separateLaunchers(true),
@@ -131,6 +132,7 @@ public:
     bool showOnlyCurrentScreen : 1;
     bool showOnlyMinimized : 1;
     bool onlyGroupWhenFull : 1;
+    bool cachedOnlyGroupWhenFull : 1;
     bool changingGroupingStrategy : 1;
     bool readingLauncherConfig : 1;
     bool separateLaunchers : 1;
@@ -1239,11 +1241,12 @@ AbstractGroupingStrategy* GroupManager::taskGrouper() const
 
 void GroupManager::setGroupingStrategy(TaskGroupingStrategy strategy)
 {
-    if (d->changingGroupingStrategy || d->groupingStrategy == strategy) {
+    if (d->changingGroupingStrategy || (d->cachedOnlyGroupWhenFull == d->onlyGroupWhenFull && d->groupingStrategy == strategy)) {
         return;
     }
 
     d->changingGroupingStrategy = true;
+    d->cachedOnlyGroupWhenFull = d->onlyGroupWhenFull;
 
     //kDebug() << strategy << kBacktrace();
     if (d->onlyGroupWhenFull) {
