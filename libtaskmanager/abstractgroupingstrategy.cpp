@@ -34,13 +34,15 @@ class AbstractGroupingStrategy::Private
 {
 public:
     Private()
-        : type(GroupManager::NoGrouping) {
+        : type(GroupManager::NoGrouping)
+        , destroyGroupsOnDestruction(true) {
     }
 
     GroupManager *groupManager;
     QStringList usedNames;
     QList<TaskGroup*> createdGroups;
     GroupManager::TaskGroupingStrategy type;
+    bool destroyGroupsOnDestruction : 1;
 };
 
 AbstractGroupingStrategy::AbstractGroupingStrategy(GroupManager *groupManager)
@@ -52,17 +54,26 @@ AbstractGroupingStrategy::AbstractGroupingStrategy(GroupManager *groupManager)
 
 AbstractGroupingStrategy::~AbstractGroupingStrategy()
 {
-    destroy();
-    qDeleteAll(d->createdGroups);
+    if (d->destroyGroupsOnDestruction) {
+        destroyGroups();
+        qDeleteAll(d->createdGroups);
+    }
+
     delete d;
 }
 
-void AbstractGroupingStrategy::destroy()
+bool AbstractGroupingStrategy::destroyGroupsOnDestruction() const
 {
-    if (!d->groupManager) {
-        return;
-    }
+    return d->destroyGroupsOnDestruction;
+}
 
+void AbstractGroupingStrategy::setDestroyGroupsOnDestruction(bool destroy)
+{
+    d->destroyGroupsOnDestruction = destroy;
+}
+
+void AbstractGroupingStrategy::destroyGroups()
+{
     // cleanup all created groups
     foreach (TaskGroup * group, d->createdGroups) {
         disconnect(group, 0, this, 0);
@@ -84,9 +95,6 @@ void AbstractGroupingStrategy::destroy()
     foreach (TaskGroup * group, d->createdGroups) {
         emit groupRemoved(group);
     }
-
-    d->groupManager = 0;
-    deleteLater();
 }
 
 GroupManager::TaskGroupingStrategy AbstractGroupingStrategy::type() const

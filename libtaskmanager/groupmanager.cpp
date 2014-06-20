@@ -172,8 +172,12 @@ GroupManager::GroupManager(QObject *parent)
 GroupManager::~GroupManager()
 {
     TaskManager::self()->setTrackGeometry(false, d->configToken);
+
     delete d->abstractSortingStrategy;
+
+    d->abstractGroupingStrategy->setDestroyGroupsOnDestruction(false);
     delete d->abstractGroupingStrategy;
+
     delete d;
 }
 
@@ -1256,7 +1260,7 @@ void GroupManager::setGroupingStrategy(TaskGroupingStrategy strategy)
 
     if (d->abstractGroupingStrategy) {
         disconnect(d->abstractGroupingStrategy, 0, this, 0);
-        d->abstractGroupingStrategy->destroy();
+        delete d->abstractGroupingStrategy;
         d->abstractGroupingStrategy = 0;
     }
 

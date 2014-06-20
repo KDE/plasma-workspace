@@ -47,7 +47,23 @@ public:
     AbstractGroupingStrategy(GroupManager *groupManager);
     virtual ~AbstractGroupingStrategy();
 
-    void destroy();
+    /**
+     * Whether the grouping strategy will undo the current group topology
+     * when it is destroyed.
+     *
+     * See also destroyGroups().
+     */
+    bool destroyGroupsOnDestruction() const;
+
+    /**
+     * Setting this to false prevents the grouping strategy from undoing
+     * the current group toplogy when it is destroyed. This is mostly
+     * useful to avoid unnecessary work during shutdown.
+     *
+     * See also destroyGroups().
+     */
+    void setDestroyGroupsOnDestruction(bool destroy);
+
 
     /** Handles a new item */
     virtual void handleItem(AbstractGroupableItem *) = 0;
@@ -106,6 +122,9 @@ Q_SIGNALS:
     void groupRemoved(TaskGroup*);
 
 protected Q_SLOTS:
+    /** Uncollapse all groups into the root group. */
+    void destroyGroups();
+
     /** Adds all group members to the parentgroup of group and removes the group */
     virtual void closeGroup(TaskGroup *group);
 
