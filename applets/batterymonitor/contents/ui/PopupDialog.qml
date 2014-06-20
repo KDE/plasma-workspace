@@ -98,7 +98,7 @@ FocusScope {
 
         BrightnessItem {
             id: brightnessSlider
-            icon: "DisplayBrightness"
+            icon: "battery-DisplayBrightness"
             label: i18n("Display Brightness")
             visible: isBrightnessAvailable
             onChanged: brightnessChanged(value)
@@ -109,7 +109,7 @@ FocusScope {
 
         BrightnessItem {
             id: keyboardBrightnessSlider
-            icon: "KeyboardBrightness"
+            icon: "battery-KeyboardBrightness"
             label: i18n("Keyboard Brightness")
             visible: isKeyboardBrightnessAvailable
             onChanged: keyboardBrightnessChanged(value)
