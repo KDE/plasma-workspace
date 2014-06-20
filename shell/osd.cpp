@@ -58,7 +58,7 @@ Osd::~Osd()
 
 void Osd::brightnessChanged(int percent)
 {
-    showProgress(QStringLiteral("battery-DisplayBrightness"), percent);
+    showProgress(QStringLiteral("video-display-brightness"), percent);
 }
 
 void Osd::volumeChanged(int percent)
