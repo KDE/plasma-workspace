@@ -1,17 +1,23 @@
 [Desktop Entry]
 Name=Desktop Search
 Name[es]=Búsqueda de escritorio
+Name[nds]=Schriefdischsöök
 Name[nl]=Bureaubladzoeken
+Name[pt]=Pesquisa no Ambiente de Trabalho
 Name[pt_BR]=Pesquisa no Desktop
 Name[sk]=Hľadanie na ploche
+Name[sl]=Namizno iskanje
 Name[sv]=Skrivbordssökning
 Name[uk]=Стільничний пошук
 Name[x-test]=xxDesktop Searchxx
 Comment=Runner which searches through files, emails and contacts
 Comment[es]=Lanzador que busca en archivos, correo electrónico y contactos
+Comment[nds]=Moduul för't Söken binnen Dateien, Nettpost un Kontakten
 Comment[nl]=Programma dat bestanden, e-mailberichten en contactpersonen doorzoekt
+Comment[pt]=Um módulo de execução que pesquisa nos ficheiros, e-mails e contactos
 Comment[pt_BR]=Programa que pesquisa nos arquivos, e-mails e contatos
 Comment[sk]=Bežec, ktorý prehľadáva súbory, e-maily a kontakty
+Comment[sl]=Zaganjalnik, ki preišče datoteke, e-pošto in stike
 Comment[sv]=Körprogram som söker igenom filer, e-post och kontakter
 Comment[uk]=Засіб пошуку у файлах, повідомленнях електронної пошти та записах контактів
 Comment[x-test]=xxRunner which searches through files, emails and contactsxx
