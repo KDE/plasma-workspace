@@ -107,16 +107,16 @@ function stringForBatteryState(batteryData) {
 
 function iconForBattery(batteryData,pluggedIn) {
     switch(batteryData["Type"]) {
-        case "Monitor":
-            return "video-display";
         case "Mouse":
-            return "input-mouse";
+            return "input-mouse-battery";
         case "Keyboard":
-            return "input-keyboard";
+            return "input-keyboard-battery";
         case "Pda":
-            return "pda";
+            return "phone-battery";
         case "Phone":
-            return "phone";
+            return "phone-battery";
+        case "UPS":
+            return "battery-ups";
         default: // Primary and UPS
             var p = batteryData["Percent"];
 
