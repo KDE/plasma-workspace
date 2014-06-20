@@ -83,6 +83,11 @@ public:
     VisibilityMode visibilityMode() const;
     void setVisibilityMode(PanelView::VisibilityMode mode);
 
+    /**
+     * @returns the geometry of the panel given a distance
+     */
+    QRect geometryByDistance(int distance) const;
+
 protected:
     void resizeEvent(QResizeEvent *ev);
     void showEvent(QShowEvent *event);

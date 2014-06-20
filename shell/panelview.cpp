@@ -368,8 +368,6 @@ void PanelView::positionPanel()
         return;
     }
 
-    QScreen *s = screen();
-    QPoint position;
     containment()->reactToScreenChange();
     KWindowEffects::SlideFromLocation slideLocation = KWindowEffects::NoEdge;
 
@@ -377,85 +375,37 @@ void PanelView::positionPanel()
     case Plasma::Types::TopEdge:
         containment()->setFormFactor(Plasma::Types::Horizontal);
         slideLocation = KWindowEffects::TopEdge;
-
-        switch (m_alignment) {
-        case Qt::AlignCenter:
-            position = QPoint(QPoint(s->geometry().center().x(), s->geometry().top()) + QPoint(m_offset - size().width()/2, m_distance));
-            break;
-        case Qt::AlignRight:
-            position = QPoint(s->geometry().topRight() - QPoint(m_offset + size().width(), m_distance));
-            break;
-        case Qt::AlignLeft:
-        default:
-            position = QPoint(s->geometry().topLeft() + QPoint(m_offset, m_distance));
-        }
         break;
 
     case Plasma::Types::LeftEdge:
         containment()->setFormFactor(Plasma::Types::Vertical);
         slideLocation = KWindowEffects::LeftEdge;
-
-        switch (m_alignment) {
-        case Qt::AlignCenter:
-            position = QPoint(QPoint(s->geometry().left(), s->geometry().center().y()) + QPoint(m_distance, m_offset));
-            break;
-        case Qt::AlignRight:
-            position = QPoint(s->geometry().bottomLeft() - QPoint(m_distance, m_offset + size().height()));
-            break;
-        case Qt::AlignLeft:
-        default:
-            position = QPoint(s->geometry().topLeft() + QPoint(m_distance, m_offset));
-        }
         break;
 
     case Plasma::Types::RightEdge:
         containment()->setFormFactor(Plasma::Types::Vertical);
         slideLocation = KWindowEffects::RightEdge;
-
-        switch (m_alignment) {
-        case Qt::AlignCenter:
-            position = QPoint(QPoint(s->geometry().right(), s->geometry().center().y()) - QPoint(width() + m_distance, 0) + QPoint(0, m_offset - size().height()/2));
-            break;
-        case Qt::AlignRight:
-            position = QPoint(s->geometry().bottomRight() - QPoint(width() + m_distance, 0) - QPoint(0, m_offset + size().height()));
-            break;
-        case Qt::AlignLeft:
-        default:
-            position = QPoint(s->geometry().topRight() - QPoint(width() + m_distance, 0) + QPoint(0, m_offset));
-        }
         break;
 
     case Plasma::Types::BottomEdge:
     default:
         containment()->setFormFactor(Plasma::Types::Horizontal);
         slideLocation = KWindowEffects::BottomEdge;
-
-        switch (m_alignment) {
-        case Qt::AlignCenter:
-            position = QPoint(QPoint(s->geometry().center().x(), s->geometry().bottom() - height() - m_distance) + QPoint(m_offset - size().width()/2, 1));
-            break;
-        case Qt::AlignRight:
-            position = QPoint(s->geometry().bottomRight() - QPoint(0, height() + m_distance) - QPoint(m_offset + size().width(), 1));
-            break;
-        case Qt::AlignLeft:
-        default:
-            position = QPoint(s->geometry().bottomLeft() - QPoint(0, height() + m_distance) + QPoint(m_offset, 1));
-        }
+        break;
     }
     m_strutsTimer.stop();
     m_strutsTimer.start(STRUTSTIMERDELAY);
     setMinimumSize(QSize(0, 0));
     setMaximumSize(screen()->size());
 
+    setGeometry(geometryByDistance(m_distance));
     if (formFactor() == Plasma::Types::Vertical) {
-        setGeometry(QRect(position, QSize(thickness(), length())));
         setMinimumSize(QSize(thickness(), m_minLength));
         setMaximumSize(QSize(thickness(), m_maxLength));
 
         emit thicknessChanged();
         emit lengthChanged();
     } else {
-        setGeometry(QRect(position, QSize(length(), thickness())));
         setMinimumSize(QSize(m_minLength, thickness()));
         setMaximumSize(QSize(m_maxLength, thickness()));
 
@@ -464,6 +414,70 @@ void PanelView::positionPanel()
     }
     
     KWindowEffects::slideWindow(winId(), slideLocation, -1);
+}
+
+QRect PanelView::geometryByDistance(int distance) const
+{
+    QScreen *s = screen();
+    QPoint position;
+    switch (containment()->location()) {
+    case Plasma::Types::TopEdge:
+        switch (m_alignment) {
+        case Qt::AlignCenter:
+            position = QPoint(QPoint(s->geometry().center().x(), s->geometry().top()) + QPoint(m_offset - size().width()/2, distance));
+            break;
+        case Qt::AlignRight:
+            position = QPoint(s->geometry().topRight() - QPoint(m_offset + size().width(), distance));
+            break;
+        case Qt::AlignLeft:
+        default:
+            position = QPoint(s->geometry().topLeft() + QPoint(m_offset, distance));
+        }
+        break;
+
+    case Plasma::Types::LeftEdge:
+        switch (m_alignment) {
+        case Qt::AlignCenter:
+            position = QPoint(QPoint(s->geometry().left(), s->geometry().center().y()) + QPoint(distance, m_offset));
+            break;
+        case Qt::AlignRight:
+            position = QPoint(s->geometry().bottomLeft() - QPoint(distance, m_offset + size().height()));
+            break;
+        case Qt::AlignLeft:
+        default:
+            position = QPoint(s->geometry().topLeft() + QPoint(distance, m_offset));
+        }
+        break;
+
+    case Plasma::Types::RightEdge:
+        switch (m_alignment) {
+        case Qt::AlignCenter:
+            position = QPoint(QPoint(s->geometry().right(), s->geometry().center().y()) - QPoint(width() + distance, 0) + QPoint(0, m_offset - size().height()/2));
+            break;
+        case Qt::AlignRight:
+            position = QPoint(s->geometry().bottomRight() - QPoint(width() + distance, 0) - QPoint(0, m_offset + size().height()));
+            break;
+        case Qt::AlignLeft:
+        default:
+            position = QPoint(s->geometry().topRight() - QPoint(width() + distance, 0) + QPoint(0, m_offset));
+        }
+        break;
+
+    case Plasma::Types::BottomEdge:
+    default:
+        switch (m_alignment) {
+        case Qt::AlignCenter:
+            position = QPoint(QPoint(s->geometry().center().x(), s->geometry().bottom() - height() - distance) + QPoint(m_offset - size().width()/2, 1));
+            break;
+        case Qt::AlignRight:
+            position = QPoint(s->geometry().bottomRight() - QPoint(0, height() + distance) - QPoint(m_offset + size().width(), 1));
+            break;
+        case Qt::AlignLeft:
+        default:
+            position = QPoint(s->geometry().bottomLeft() - QPoint(0, height() + distance) + QPoint(m_offset, 1));
+        }
+    }
+    return formFactor() == Plasma::Types::Vertical ? QRect(position, QSize(thickness(), length())) : QRect(position, QSize(length(), thickness()));
 }
 
 void PanelView::restore()

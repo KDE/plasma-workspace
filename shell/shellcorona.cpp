@@ -473,32 +473,10 @@ QRegion ShellCorona::availableScreenRegion(int id) const
     const QRect screenGeo(view->geometry());
 
     QRegion r = view->geometry();
-    QRect panelRect;
     foreach (PanelView *v, d->panelViews) {
-        panelRect = v->geometry();
         if (v->screen() == v->screen() && v->visibilityMode() != PanelView::AutoHide) {
-            //don't use panel positions, because sometimes the panel can be moved around
-            switch (view->location()) {
-            case Plasma::Types::TopEdge:
-                panelRect.moveTop(qMin(panelRect.top(), screenGeo.top()));
-                break;
-
-            case Plasma::Types::BottomEdge:
-                panelRect.moveBottom(qMax(panelRect.bottom(), screenGeo.bottom()));
-                break;
-
-            case Plasma::Types::LeftEdge:
-                panelRect.moveLeft(qMin(panelRect.left(), screenGeo.left()));
-                break;
-
-            case Plasma::Types::RightEdge:
-                panelRect.moveRight(qMax(panelRect.right(), screenGeo.right()));
-                break;
-
-            default:
-                break;
-            }
-            r -= panelRect;
+            //if the panel is being moved around, we still want to calculate it from the edge
+            r -= v->geometryByDistance(0);
         }
     }
     return r;
