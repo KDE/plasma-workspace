@@ -74,7 +74,7 @@ Q_SIGNALS:
 
 private:
     Plasma::Containment *m_containment;
-    PanelView *m_panelView;
+    QPointer<PanelView> m_panelView;
     PanelView::VisibilityMode m_visibilityMode;
     Plasma::Theme m_theme;
     QTimer m_deleteTimer;
