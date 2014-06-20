@@ -370,9 +370,15 @@ void ShellCorona::screenInvariants() const
     }
 
     QSet<QScreen*> screens;
+    int i = 0;
     foreach(DesktopView *view, d->views) {
         Q_ASSERT(!screens.contains(view->screen()));
+        Q_ASSERT(view->isVisible());
+        Q_ASSERT(view->fillScreen());
         screens.insert(view->screen());
+
+        Q_ASSERT(view->containment()->screen() == i);
+        ++i;
     }
 }
 
@@ -447,13 +453,7 @@ int ShellCorona::numScreens() const
 
 QRect ShellCorona::screenGeometry(int id) const
 {
-    DesktopView *view = 0;
-    foreach (DesktopView *v, d->views) {
-        if (v->containment() && v->containment()->screen() == id) {
-            view = v;
-            break;
-        }
-    }
+    DesktopView *view = d->views[id];
 
     if (view) {
         return view->geometry();
