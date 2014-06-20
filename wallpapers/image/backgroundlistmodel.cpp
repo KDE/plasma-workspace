@@ -87,6 +87,7 @@ BackgroundListModel::BackgroundListModel(Image *listener, QObject *parent)
 
 BackgroundListModel::~BackgroundListModel()
 {
+    delete m_imageCache;
 }
 
 void BackgroundListModel::removeBackground(const QString &path)
