@@ -93,6 +93,7 @@ MouseArea {
                     margins: units.smallSpacing
                 }
                 iconSource: "list-remove"
+                tooltip: i18nd("plasma_applet_org.kde.image", "Remove wallpaper")
                 flat: false
                 visible: model.removable
                 onClicked: imageWallpaper.removeWallpaper(model.packageName)
