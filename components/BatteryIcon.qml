@@ -101,27 +101,25 @@ Item {
         visible: pluggedIn && elementForType(batteryType) == ""
     }
 
-    PlasmaCore.SvgItem {
+    PlasmaCore.IconItem {
         id: otherBatteriesSvg
         anchors.fill: parent
-        svg: svg
-        elementId: elementForType(batteryType)
+        source: elementForType(batteryType)
         visible: elementId != ""
-
     }
 
     function elementForType(t) {
         switch(t) {
             case "Mouse":
-                return "MouseCharge";
+                return "input-mouse-battery";
             case "Keyboard":
-                return "KeyboardCharge";
+                return "input-keyboard-battery";
             case "Pda":
-                return "PhoneCharge";
+                return "phone-battery";
             case "Phone":
-                return "PhoneCharge";
+                return "phone-battery";
             case "UPS":
-                return "UPSCharge";
+                return "battery-ups";
             default:
                 return "";
         }
