@@ -453,115 +453,69 @@ int ShellCorona::numScreens() const
 
 QRect ShellCorona::screenGeometry(int id) const
 {
-    DesktopView *view = d->views[id];
-
-    if (view) {
-        return view->geometry();
+    if (id>=d->views.count() || id<0) {
+        qWarning() << "requesting unexisting screen" << id;
+        QScreen *s = outputToScreen(d->screenConfiguration->primaryOutput());
+        return s ? s->geometry() : QRect();
     }
-
-    //each screen should have a view
-    qWarning() << "requesting unexisting screen" << id;
-    QScreen *s = outputToScreen(d->screenConfiguration->primaryOutput());
-    return s ? s->geometry() : QRect();
+    return d->views[id]->geometry();
 }
 
 QRegion ShellCorona::availableScreenRegion(int id) const
 {
-    const QRect screenGeo(screenGeometry(id));
-
-    DesktopView *view = 0;
-    if (id >= 0 && id < d->views.count()) {
-        view = d->views[id];
-    }
-
-    if (view) {
-        QRegion r = view->geometry();
-        QRect panelRect;
-        foreach (PanelView *v, d->panelViews) {
-            panelRect = v->geometry();
-            if (v->containment()->screen() == id && v->visibilityMode() != PanelView::AutoHide) {
-                //don't use panel positions, because sometimes the panel can be moved around
-                switch (view->location()) {
-                case Plasma::Types::TopEdge:
-                    panelRect.moveTop(qMin(panelRect.top(), screenGeo.top()));
-                    break;
-
-                case Plasma::Types::BottomEdge:
-                    panelRect.moveBottom(qMax(panelRect.bottom(), screenGeo.bottom()));
-                    break;
-
-                case Plasma::Types::LeftEdge:
-                    panelRect.moveLeft(qMin(panelRect.left(), screenGeo.left()));
-                    break;
-
-                case Plasma::Types::RightEdge:
-                    panelRect.moveRight(qMax(panelRect.right(), screenGeo.right()));
-                    break;
-
-                default:
-                    break;
-                }
-                r -= panelRect;
-            }
-        }
-        return r;
-    } else {
+    if (id>=d->views.count() || id<0) {
         //each screen should have a view
         qWarning() << "requesting unexisting screen" << id;
         QScreen *s = outputToScreen(d->screenConfiguration->primaryOutput());
         return s ? s->availableGeometry() : QRegion();
     }
+    DesktopView *view = d->views[id];
+    const QRect screenGeo(view->geometry());
+
+    QRegion r = view->geometry();
+    QRect panelRect;
+    foreach (PanelView *v, d->panelViews) {
+        panelRect = v->geometry();
+        if (v->screen() == v->screen() && v->visibilityMode() != PanelView::AutoHide) {
+            //don't use panel positions, because sometimes the panel can be moved around
+            switch (view->location()) {
+            case Plasma::Types::TopEdge:
+                panelRect.moveTop(qMin(panelRect.top(), screenGeo.top()));
+                break;
+
+            case Plasma::Types::BottomEdge:
+                panelRect.moveBottom(qMax(panelRect.bottom(), screenGeo.bottom()));
+                break;
+
+            case Plasma::Types::LeftEdge:
+                panelRect.moveLeft(qMin(panelRect.left(), screenGeo.left()));
+                break;
+
+            case Plasma::Types::RightEdge:
+                panelRect.moveRight(qMax(panelRect.right(), screenGeo.right()));
+                break;
+
+            default:
+                break;
+            }
+            r -= panelRect;
+        }
+    }
+    return r;
 }
+
+int rectArea(const QRect& r) { return r.width()*r.height(); }
 
 QRect ShellCorona::availableScreenRect(int id) const
 {
-    if (id < 0) {
-        id = 0;
+    QRegion region = availableScreenRegion(id);
+    QRect ret;
+    foreach(const QRect& rect, region.rects()) {
+        if(rectArea(rect) > rectArea(ret))
+            ret = rect;
     }
 
-    const QRect screenGeo(screenGeometry(id));
-    QRect r(screenGeometry(id));
-
-    foreach (PanelView *view, d->panelViews) {
-        if (view->containment()->screen() == id && view->visibilityMode() != PanelView::AutoHide) {
-            QRect v = view->geometry();
-            switch (view->location()) {
-                case Plasma::Types::TopEdge:
-                    //neutralize eventual panel positioning due to drag handle
-                    v.moveTop(qMin(v.top(), screenGeo.top()));
-                    if (v.bottom() > r.top()) {
-                        r.setTop(v.bottom());
-                    }
-                    break;
-
-                case Plasma::Types::BottomEdge:
-                    v.moveBottom(qMax(v.bottom(), screenGeo.bottom()));
-                    if (v.top() < r.bottom()) {
-                        r.setBottom(v.top());
-                    }
-                    break;
-
-                case Plasma::Types::LeftEdge:
-                    v.moveLeft(qMin(v.left(), screenGeo.left()));
-                    if (v.right() > r.left()) {
-                        r.setLeft(v.right());
-                    }
-                    break;
-
-                case Plasma::Types::RightEdge:
-                    v.moveRight(qMax(v.right(), screenGeo.right()));
-                    if (v.left() < r.right()) {
-                        r.setRight(v.left());
-                    }
-                    break;
-
-                default:
-                    break;
-            }
-        }
-    }
-
-    return r;
+    return ret;
 }
 
 PanelView *ShellCorona::panelView(Plasma::Containment *containment) const
