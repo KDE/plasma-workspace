@@ -70,6 +70,13 @@ BreezeBlock {
             Layout.alignment: Qt.AlignHCenter
             Layout.fillHeight: true
             fillMode: Image.PreserveAspectFit
+            opacity: actionIconMouse.containsMouse ? 1 : 0.7
+            MouseArea {
+                id: actionIconMouse
+                hoverEnabled: true
+                anchors.fill: parent
+                onClicked: root.currentAction();
+            }
         }
 
         PlasmaComponents.ProgressBar {
