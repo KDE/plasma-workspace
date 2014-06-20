@@ -46,7 +46,7 @@ bool ShellManager::s_forceWindowed = false;
 bool ShellManager::s_noRespawn = false;
 
 int ShellManager::crashes = 0;
-QString ShellManager::s_fixedShell = QString();
+QString ShellManager::s_fixedShell;
 
 //
 // ShellManager
