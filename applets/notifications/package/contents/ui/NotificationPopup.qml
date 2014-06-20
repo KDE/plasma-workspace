@@ -44,10 +44,7 @@ PlasmaCore.Dialog {
         bodyLabel.text = notification.body
         appIconItem.icon = notification.appIcon
         actionsRepeater.model = notification.actions
-
-        if (notification.image != undefined && notification.image != 0) {
-            imageItem.image = notification.image
-        }
+        imageItem.image = notification.image
     }
 
     Behavior on y {
