@@ -91,6 +91,10 @@ Item {
         font.italic: timeLabel.font.italic
         font.pixelSize: vertical ? theme.mSize(theme.defaultFont).height * 2 : 1024 // random "big enough" size - this is used as a max pixelSize by the fontSizeMode
         minimumPixelSize: theme.mSize(theme.smallestFont).height
+        // when seconds are visible, align to left to avoid text jumping with non-proportional font
+        // when seconds are disabled, align to right to avoid big gap on the right side when the hours are just one number (like "9:00")
+        horizontalAlignment: vertical ? Text.AlignHCenter : (main.showSeconds ? Text.AlignLeft : Text.AlignRight)
+        verticalAlignment: Text.AlignVCenter
 
         // with this property we want to get the font to fit into applet's height when in horizontal panel
         // or applet's width when vertical - we scale the font to fit the height and then see how much
