@@ -26,6 +26,15 @@ import org.kde.private.systemtray 2.0 as SystemTray
 
 Item {
 
+    Component.onCompleted: {
+        if (root.expandedTask) {
+            root.expandedTask.taskItemExpanded.parent = expandedItemContainer;
+            root.expandedTask.taskItemExpanded.anchors.fill = expandedItemContainer;
+            expandedItemContainer.replace(root.expandedTask.taskItemExpanded);
+        } else {
+            expandedItemContainer.clear();
+        }
+    }
     Connections {
         target: root
         onExpandedTaskChanged: {
