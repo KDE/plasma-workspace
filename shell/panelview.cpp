@@ -477,9 +477,8 @@ void PanelView::restore()
         m_offset = qMax(0, m_offset);
     }
 
+    setAlignment((Qt::Alignment)config().readEntry<int>("alignment", Qt::AlignLeft));
     setThickness(config().readEntry<int>("thickness", 30));
-
-    m_alignment = (Qt::Alignment)config().readEntry<int>("alignment", Qt::AlignLeft);
 
     setMinimumSize(QSize(-1, -1));
     //FIXME: an invalid size doesn't work with QWindows
