@@ -109,6 +109,12 @@ configure_file(config-workspace.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-works
 configure_file(config-unix.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-unix.h )
 configure_file(config-X11.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-X11.h)
 
+configure_file(plasma.desktop.cmake ${CMAKE_CURRENT_BINARY_DIR}/plasma.desktop)
+install(FILES
+        ${CMAKE_CURRENT_BINARY_DIR}/plasma.desktop
+        DESTINATION ${DATA_INSTALL_DIR}/xsessions
+)
+
 plasma_install_package(lookandfeel org.kde.lookandfeel look-and-feel lookandfeel)
 
 if (INSTALL_SDDM_THEME)
