@@ -1076,7 +1076,7 @@ int GroupManager::fullLimit() const
 void GroupManager::setFullLimit(int limit)
 {
     //kDebug() << limit;
-    if (!d->groupIsFullLimit != limit) {
+    if (d->groupIsFullLimit != limit) {
         d->groupIsFullLimit = limit;
 
         if (d->onlyGroupWhenFull) {
