@@ -31,17 +31,17 @@ Image {
             introAnimation.running = true
         }
     }
-
     Rectangle {
         id: topRect
         width: parent.width
-        height: (root.height / 3) - bottomRect.height - 2
+        height: (root.height / 3) - bottomRect.height - 1
         y: root.height
-        color: "black"
-        opacity: 0.3
+        color: "#4C000000"
         Image {
             source: "images/kde.svgz"
             anchors.centerIn: parent
+            sourceSize.height: 128
+            sourceSize.width: 128
         }
     }
 
@@ -50,29 +50,23 @@ Image {
         width: parent.width
         y: -height
         height: 50
-        color: "black"
-        opacity: 0.3
+        color: "#4C000000"
 
         Rectangle {
-            radius: 5
-            border.color: "white"
-            color: "transparent"
-            anchors {
-                horizontalCenter: parent.horizontalCenter
-                top: parent.top
-                bottom: parent.bottom
-                margins: 12
-            }
-            width: height * 10
+            radius: 3
+            color: "#31363b"
+            anchors.centerIn: parent
+            height: 8
+            width: height*32
             Rectangle {
                 radius: 3
                 anchors {
                     left: parent.left
                     top: parent.top
                     bottom: parent.bottom
-                    margins: 2
                 }
-                width: ((parent.width - 4) / 6) * (stage - 1)
+                width: (parent.width / 6) * (stage - 1)
+                color: "#3daee9"
                 Behavior on width { 
                     PropertyAnimation {
                         duration: 250
