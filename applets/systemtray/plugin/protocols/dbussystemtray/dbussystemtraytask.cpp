@@ -20,6 +20,7 @@
 
 #include "dbussystemtraytask.h"
 #include "debug.h"
+#include "host.h"
 
 #include "dbussystemtrayprotocol.h"
 
@@ -29,6 +30,7 @@
 #include <QtWidgets/QMenu>
 #include <QtGui/QIcon>
 #include <QLoggingCategory>
+#include <QQuickWindow>
 
 #include <KJob>
 #include <KIconLoader>
@@ -205,6 +207,41 @@ void DBusSystemTrayTask::_onContextMenu(KJob *job)
     if (menu) {
         int x = sjob->parameters()["x"].toInt();
         int y = sjob->parameters()["y"].toInt();
+
+        //try tofind the icon screen coordinates, and adjust the position as a poor
+        //man's popupPosition
+        if (parent()) {
+            Host* h = qobject_cast<Host*>(parent()->parent());
+            if (h && h->rootItem()) {
+                QRect screenItemRect(h->rootItem()->mapToScene(QPointF(0, 0)).toPoint(), QSize(h->rootItem()->width(), h->rootItem()->height()));
+
+                if (h->rootItem()->window()) {
+                    screenItemRect.moveTopLeft(h->rootItem()->window()->mapToGlobal(screenItemRect.topLeft()));
+                }
+
+                switch (h->rootItem()->property("location").toInt()) {
+                case Plasma::Types::LeftEdge:
+                    x = screenItemRect.right();
+                    break;
+                case Plasma::Types::RightEdge:
+                    x = screenItemRect.left() - menu->width();
+                    break;
+                case Plasma::Types::TopEdge:
+                    y = screenItemRect.bottom();
+                    break;
+                case Plasma::Types::BottomEdge:
+                    y = screenItemRect.top() - menu->height();
+                    break;
+                default:
+                    if (screenItemRect.top() - menu->height() >= h->rootItem()->window()->screen()->geometry().top()) {
+                        y = screenItemRect.top() - menu->height();
+                    } else {
+                        y = screenItemRect.bottom();
+                    }
+                }
+            }
+        }
+
         menu->popup(QPoint(x, y));
     }
 }
