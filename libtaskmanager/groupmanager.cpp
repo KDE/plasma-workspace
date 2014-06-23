@@ -175,8 +175,10 @@ GroupManager::~GroupManager()
 
     delete d->abstractSortingStrategy;
 
-    d->abstractGroupingStrategy->setDestroyGroupsOnDestruction(false);
-    delete d->abstractGroupingStrategy;
+    if (d->abstractGroupingStrategy) {
+        d->abstractGroupingStrategy->setDestroyGroupsOnDestruction(false);
+        delete d->abstractGroupingStrategy;
+    }
 
     delete d;
 }
