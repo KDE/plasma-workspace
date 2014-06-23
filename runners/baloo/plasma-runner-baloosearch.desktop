@@ -13,6 +13,7 @@ Name[sv]=Skrivbordssökning
 Name[uk]=Стільничний пошук
 Name[x-test]=xxDesktop Searchxx
 Comment=Runner which searches through files, emails and contacts
+Comment[ca]=Executor que cerca per fitxers, correus electrònics i contactes
 Comment[es]=Lanzador que busca en archivos, correo electrónico y contactos
 Comment[fi]=Suoritusohjelma, joka etsii tiedostoista, sähköposteista ja yhteystiedoista
 Comment[nds]=Moduul för't Söken binnen Dateien, Nettpost un Kontakten
