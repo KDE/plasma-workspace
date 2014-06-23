@@ -92,6 +92,10 @@ void History::trim() {
     if (m_items.size()<=1) {
         m_nextCycle = 0L;
     }
+    if (m_items.isEmpty()) {
+        // force top to nullptr
+        m_top = nullptr;
+    }
     emit changed();
 }
 
