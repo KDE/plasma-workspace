@@ -11,7 +11,7 @@ set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH} ${ECM_KDE_MODULE_DIR})
 
 find_package(KF5 REQUIRED COMPONENTS
                     Plasma DocTools Runner JsEmbed NotifyConfig Su NewStuff Wallet KCMUtils Baloo
-                    IdleTime ThreadWeaver Declarative PlasmaQuick WebKit TextWidgets KDELibs4Support Crash)
+                    IdleTime Declarative PlasmaQuick WebKit TextWidgets KDELibs4Support Crash)
 
 find_package(KF5 REQUIRED COMPONENTS SysGuard)
 find_package(KF5 REQUIRED COMPONENTS Screen)
@@ -45,38 +45,11 @@ set_package_properties(dbusmenu-qt5 PROPERTIES DESCRIPTION "Support for notifica
                        TYPE OPTIONAL
                       )
 
-find_package(QImageBlitz QUIET)
-set_package_properties(QImageBlitz PROPERTIES DESCRIPTION "An image effects library"
-                       URL "http://sourceforge.net/projects/qimageblitz"
-                       TYPE OPTIONAL
-                      )
-
 find_package(X11)
 set_package_properties(X11 PROPERTIES DESCRIPTION "X11 libraries"
                         URL "http://www.x.org"
                         TYPE OPTIONAL
                         PURPOSE "Required for building the X11 based workspace")
-
-find_package(KdepimLibs 4.70.10 QUIET CONFIG)
-set_package_properties(KdepimLibs PROPERTIES DESCRIPTION "The KDEPIM libraries"
-                       URL "http://pim.kde.org"
-                       TYPE OPTIONAL
-                       PURPOSE "Required to build certain Plasma DataEngines (Akonadi, Calendar)"
-                      )
-
-find_package(Akonadi QUIET CONFIG)
-set_package_properties(Akonadi PROPERTIES DESCRIPTION "An extensible cross-desktop storage service for PIM data"
-                       URL "http://pim.kde.org/akonadi"
-                       TYPE OPTIONAL
-                       PURPOSE "Required to build certain Plasma DataEngines (Akonadi, Calendar)"
-                      )
-
-find_package(Boost 1.34.0 MODULE)
-set_package_properties(Boost PROPERTIES DESCRIPTION "Boost C++ Libraries"
-                       URL "http://www.boost.org"
-                       TYPE OPTIONAL
-                       PURPOSE "Required to build certain Plasma DataEngines (Akonadi, RSS, Calendar)"
-                      )
 
 if(X11_FOUND)
   find_package(XCB MODULE REQUIRED COMPONENTS XCB KEYSYMS)

@@ -18,7 +18,6 @@ target_link_libraries(plasma_wallpaper_imageplugin
 	 KF5::Plasma
          KF5::KIOCore
 	 KF5::KIOWidgets
-	 KF5::ThreadWeaver
          KF5::I18n
     KF5::KIOCore
     KF5::KIOWidgets # KFileDialog
