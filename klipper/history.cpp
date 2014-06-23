@@ -126,6 +126,7 @@ void History::slotClear() {
     qDeleteAll(m_items);
     m_items.clear();
     m_top = 0L;
+    m_topIsUserSelected = false;
     emit changed();
 }
 
