@@ -603,13 +603,16 @@ void ShellCorona::removeDesktop(DesktopView *view)
     screenInvariants();
 }
 
-void ShellCorona::removePanel(QObject *c)
+void ShellCorona::removePanel(QObject *screen)
 {
-    Plasma::Containment *cont = qobject_cast<Plasma::Containment*>(c);
-
-    d->panelViews[cont]->deleteLater();
-    d->waitingPanels << cont;
-    d->panelViews.remove(cont);
+    foreach(PanelView* v, d->panelViews) {
+        if (v->screen() == screen) {
+            Plasma::Containment* cont = v->containment();
+            d->waitingPanels << cont;
+            d->panelViews.remove(cont);
+            v->deleteLater();
+        }
+    }
 }
 
 Plasma::Containment *ShellCorona::createContainmentForActivity(const QString& activity, int screenNum)
@@ -1029,6 +1032,7 @@ Plasma::Containment *ShellCorona::addPanel(const QString &plugin)
         break;
     }
 
+    Q_ASSERT(panel);
     d->waitingPanels << panel;
     createWaitingPanels();
 
