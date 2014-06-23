@@ -25,9 +25,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 // Own
 #include "taskitem.h"
 
-#if 0
-#include <kactivities/info.h>
-#endif
+#include <KActivities/Info>
 #include <KConfig>
 #include <KConfigGroup>
 #include <KDesktopFile>
@@ -231,14 +229,12 @@ QStringList TaskItem::activityNames(bool includeCurrent) const
         activities.removeOne(TaskManager::self()->currentActivity());
     }
 
-#if 0
     Q_FOREACH(QString activity, activities) {
         KActivities::Info info(activity);
         if (info.state() != KActivities::Info::Invalid) {
             names << info.name();
         }
     }
-#endif
 
     return names;
 }

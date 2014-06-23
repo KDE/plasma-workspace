@@ -1,3 +1,5 @@
+find_package(KF5Activities REQUIRED)
+
 add_definitions(-DKDE_DEFAULT_DEBUG_AREA=1204)
 add_definitions(-DTRANSLATION_DOMAIN=\"libtaskmanager\")
 remove_definitions(-DQT_NO_CAST_FROM_ASCII -DQT_NO_CAST_FROM_BYTEARRAY)
@@ -45,6 +47,7 @@ target_link_libraries(taskmanager
         Qt5::Gui
         KF5::WindowSystem # KStartupInfo
     PRIVATE
+        KF5::Activities
         KF5::ProcessCore
         KF5::ConfigCore
         KF5::ConfigWidgets
