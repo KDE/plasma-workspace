@@ -238,6 +238,7 @@ void Image::setSlidePaths(const QStringList &slidePaths)
     }
 
     m_slidePaths = slidePaths;
+    m_slidePaths.removeAll(QString());
 
     if (m_slidePaths.isEmpty()) {
         m_slidePaths << KStandardDirs::installPath("wallpaper");
@@ -274,7 +275,7 @@ void Image::addSlidePath(const QString &path)
 
 void Image::removeSlidePath(const QString &path)
 {
-    if (!path.isEmpty() && m_slidePaths.contains(path)) {
+    if (m_slidePaths.contains(path)) {
         m_slidePaths.removeAll(path);
         if (m_mode == SlideShow) {
             updateDirWatch(m_slidePaths);
