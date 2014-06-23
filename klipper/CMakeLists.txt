@@ -66,3 +66,5 @@ install(TARGETS klipper         ${INSTALL_TARGETS_DEFAULT_ARGS})
 
 install(PROGRAMS org.kde.klipper.desktop DESTINATION ${XDG_APPS_INSTALL_DIR})
 install(PROGRAMS org.kde.klipper.desktop DESTINATION ${AUTOSTART_INSTALL_DIR})
+
+add_subdirectory(autotests)

@@ -1,0 +1,21 @@
+add_definitions(-DKLIPPER_UNIT_TEST)
+include(ECMMarkAsTest)
+########################################################
+# Test History
+########################################################
+set(testHistory_SRCS
+    historytest.cpp
+    ../history.cpp
+    ../historyimageitem.cpp
+    ../historyitem.cpp
+    ../historystringitem.cpp
+    ../historyurlitem.cpp
+)
+add_executable(testHistory ${testHistory_SRCS})
+target_link_libraries(testHistory
+    Qt5::Test
+    Qt5::Widgets # QAction
+    KF5::CoreAddons # KUrlMimeData
+)
+add_test(klipper-testHistory testHistory)
+ecm_mark_as_test(testHistory)
