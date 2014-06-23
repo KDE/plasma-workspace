@@ -27,6 +27,7 @@
 
 #include "klipper.h"
 #include "history.h"
+#include "historyitem.h"
 #include "klipperpopup.h"
 
 KlipperTray::KlipperTray()

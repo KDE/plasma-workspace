@@ -24,8 +24,7 @@
 #include <QHash>
 #include <QByteArray>
 
-#include "historyitem.h"
-
+class HistoryItem;
 class QAction;
 
 class History : public QObject

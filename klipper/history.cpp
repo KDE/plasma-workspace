@@ -22,6 +22,7 @@
 
 #include <QAction>
 
+#include "historyitem.h"
 #include "historystringitem.h"
 
 History::History( QObject* parent )
