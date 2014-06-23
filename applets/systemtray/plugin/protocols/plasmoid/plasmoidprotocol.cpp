@@ -84,6 +84,7 @@ void PlasmoidProtocol::init()
     }
 
     m_containment = new Plasma::Containment(m_systrayApplet, "null", containmentId);
+    m_containment->setImmutability(Plasma::Types::Mutable);
     m_containment->setFormFactor(Plasma::Types::Horizontal);
     m_containment->setLocation(m_systrayApplet->location());
     m_containment->init();

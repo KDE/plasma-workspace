@@ -52,7 +52,9 @@ PlasmoidTask::PlasmoidTask(const QString &packageName, int appletId, Plasma::Con
     qCDebug(SYSTEMTRAY) << "Loading applet: " << packageName << appletId;
 
     m_applet = Plasma::PluginLoader::self()->loadApplet(packageName, appletId);
+    cont->setImmutability(Plasma::Types::Mutable);
     cont->addApplet(m_applet);
+    m_applet->setParent(cont);
     //FIXME? This is *maybe* not necessary
     m_applet->init();
 
