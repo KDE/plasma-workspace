@@ -108,79 +108,72 @@ Item {
         source: __icon_name != "" ? __icon_name : (typeof(__icon) != "undefined" ? __icon : "")
     }
 
-    // TODO: remove wheel area in QtQuick 2.0
-    KQuickControlsAddonsComponents.MouseEventListener {
-        id: wheel_area
+    // Mouse events handlers ===========================================================================================
+    MouseArea {
+        id: mouse_area
         anchors.fill: parent
+        hoverEnabled: true
+        // if no task passed we don't accept any buttons, if icon_widget is visible we pass left button to it
+        acceptedButtons: Qt.LeftButton | Qt.RightButton | Qt.MiddleButton
         enabled: true
         visible: true
-        z: -2
 
-        // Mouse events handlers ===========================================================================================
-        MouseArea {
-            id: mouse_area
-            anchors.fill: parent
-            hoverEnabled: true
-            // if no task passed we don't accept any buttons, if icon_widget is visible we pass left button to it
-            acceptedButtons: Qt.LeftButton | Qt.RightButton | Qt.MiddleButton
-            enabled: true
-            visible: true
-
-            onClicked: __processClick(mouse.button, mouse_area)
-
-            // Widget for icon if no animation is requested
-            PlasmaCore.IconItem {
-                id: icon_widget
-
-                anchors.fill: parent
-
-                property QtObject action: null; //FIXME: __has_task ? plasmoid.createShortcutAction(objectName + "-" + plasmoid.id) : null
-
-                visible: false
-                active: mouse_area.containsMouse
-                source: __icon_name != "" ? __icon_name : (typeof(icon) != "undefined" ? icon : "")
-
-                // Overlay icon
-                Image {
-                    width: 10  // we fix size of an overlay icon
-                    height: width
-                    anchors { right: parent.right; bottom: parent.bottom }
-
-                    sourceSize.width: width
-                    sourceSize.height: width
-                    fillMode: Image.PreserveAspectFit
-                    smooth: true
-                    source: "image://icon/" + __overlay_icon_name
-                    visible: __overlay_icon_name
-                }
-
-                Component.onDestruction: {
-                    var act = icon_widget.action
-                    if (act != null) {
-                        icon_widget.action = null
-                        plasmoid.destroyShortcutAction(act)
-                    }
-                }
+        onClicked: __processClick(mouse.button, mouse_area)
+        onWheel: {
+            //don't send activateVertScroll with a delta of 0, some clients seem to break (kmix)
+            if (wheel.angleDelta.y !== 0) {
+                modelData.activateVertScroll(wheel.angleDelta.y)
             }
-
-            // Animation (Movie icon)
-            AnimatedImage {
-                id: animation
-
-                anchors.fill: parent
-
-                playing: false
-                visible: false
-                smooth: true
-                source: __movie_path
+            if (wheel.angleDelta.x !== 0) {
+                modelData.activateHorzScroll(wheel.angleDelta.x)
             }
         }
-        onWheelMoved: {
-            //print("wheel moved by " + wheel.delta);
-            if (wheel.orientation === Qt.Horizontal)
-                modelData.activateHorzScroll(wheel.delta)
-            else
-                modelData.activateVertScroll(wheel.delta)
+
+        // Widget for icon if no animation is requested
+        PlasmaCore.IconItem {
+            id: icon_widget
+
+            anchors.fill: parent
+
+            property QtObject action: null; //FIXME: __has_task ? plasmoid.createShortcutAction(objectName + "-" + plasmoid.id) : null
+
+            visible: false
+            active: mouse_area.containsMouse
+            source: __icon_name != "" ? __icon_name : (typeof(icon) != "undefined" ? icon : "")
+
+            // Overlay icon
+            Image {
+                width: 10  // we fix size of an overlay icon
+                height: width
+                anchors { right: parent.right; bottom: parent.bottom }
+
+                sourceSize.width: width
+                sourceSize.height: width
+                fillMode: Image.PreserveAspectFit
+                smooth: true
+                source: "image://icon/" + __overlay_icon_name
+                visible: __overlay_icon_name
+            }
+
+            Component.onDestruction: {
+                var act = icon_widget.action
+                if (act != null) {
+                    icon_widget.action = null
+                    plasmoid.destroyShortcutAction(act)
+                }
+            }
+        }
+
+        // Animation (Movie icon)
+        AnimatedImage {
+            id: animation
+
+            anchors.fill: parent
+
+            playing: false
+            visible: false
+            smooth: true
+            source: __movie_path
         }
     }
 
