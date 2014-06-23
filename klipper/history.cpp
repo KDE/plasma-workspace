@@ -29,6 +29,7 @@ History::History( QObject* parent )
     : QObject( parent ),
       m_top(0L),
       m_popup( new KlipperPopup( this ) ),
+      m_maxSize(0),
       m_topIsUserSelected( false ),
       m_nextCycle(0L)
 {
