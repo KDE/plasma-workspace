@@ -110,6 +110,10 @@ void History::remove( const HistoryItem* newItem ) {
 
     if (*it == m_top) {
         m_top = m_items[m_top->next_uuid()];
+        if (m_top == *it) {
+            // last element in chain
+            m_top = nullptr;
+        }
     }
     m_items[(*it)->previous_uuid()]->chain(m_items[(*it)->next_uuid()]);
     m_items.erase(it);
