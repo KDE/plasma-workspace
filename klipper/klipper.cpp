@@ -108,6 +108,8 @@ Klipper::Klipper(QObject* parent, const KSharedConfigPtr& config)
 
 
     m_history = new History( this );
+    m_popup = new KlipperPopup(m_history);
+    connect(m_history, &History::changed, m_popup, &KlipperPopup::slotHistoryChanged);
 
     // we need that collection, otherwise KToggleAction is not happy :}
     m_collection = new KActionCollection( this );
@@ -190,19 +192,18 @@ Klipper::Klipper(QObject* parent, const KSharedConfigPtr& config)
     KGlobalAccel::self()->setShortcut(m_showOnMousePos, QList<QKeySequence>());
     connect(m_showOnMousePos, SIGNAL(triggered(bool)), this, SLOT(slotPopupMenu()));
 
-    KlipperPopup* popup = history()->popup();
     connect ( history(), SIGNAL(topChanged()), SLOT(slotHistoryTopChanged()) );
-    connect( popup, SIGNAL(aboutToShow()), SLOT(slotStartShowTimer()) );
+    connect( m_popup, SIGNAL(aboutToShow()), SLOT(slotStartShowTimer()) );
 
-    popup->plugAction( m_toggleURLGrabAction );
-    popup->plugAction( m_clearHistoryAction );
-    popup->plugAction( m_configureAction );
-    popup->plugAction( m_repeatAction );
-    popup->plugAction( m_editAction );
+    m_popup->plugAction( m_toggleURLGrabAction );
+    m_popup->plugAction( m_clearHistoryAction );
+    m_popup->plugAction( m_configureAction );
+    m_popup->plugAction( m_repeatAction );
+    m_popup->plugAction( m_editAction );
 #ifdef HAVE_PRISON
-    popup->plugAction( m_showBarcodeAction );
+    m_popup->plugAction( m_showBarcodeAction );
 #endif
-    popup->plugAction( m_quitAction );
+    m_popup->plugAction( m_quitAction );
 
     // session manager interaction
     connect(qApp, &QGuiApplication::commitDataRequest, this, &Klipper::saveSession);
@@ -498,10 +499,9 @@ void Klipper::slotQuit()
 }
 
 void Klipper::slotPopupMenu() {
-    KlipperPopup* popup = history()->popup();
-    popup->ensureClean();
-    popup->slotSetTopActive();
-    showPopupMenu( popup );
+    m_popup->ensureClean();
+    m_popup->slotSetTopActive();
+    showPopupMenu( m_popup );
 }
 
 
@@ -950,7 +950,7 @@ QString Klipper::cycleText() const
     const HistoryItem* item = m_history->first();
     const HistoryItem* itemnext = m_history->nextInCycle();
 
-    QFontMetrics font_metrics(m_history->popup()->fontMetrics());
+    QFontMetrics font_metrics(m_popup->fontMetrics());
     QString result("<table>");
 
     if (itemprev) {

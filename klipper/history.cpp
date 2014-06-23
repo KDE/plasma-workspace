@@ -23,18 +23,14 @@
 #include <QAction>
 
 #include "historystringitem.h"
-#include "klipperpopup.h"
 
 History::History( QObject* parent )
     : QObject( parent ),
       m_top(0L),
-      m_popup( new KlipperPopup( this ) ),
       m_maxSize(0),
       m_topIsUserSelected( false ),
       m_nextCycle(0L)
 {
-    connect( this, SIGNAL(changed()), m_popup, SLOT(slotHistoryChanged()) );
-
 }
 
 
@@ -161,10 +157,6 @@ void History::slotMoveToTop(const QByteArray& uuid) {
 void History::setMaxSize( unsigned max_size ) {
     m_maxSize = max_size;
     trim();
-}
-
-KlipperPopup* History::popup() {
-    return m_popup;
 }
 
 void History::cycleNext() {

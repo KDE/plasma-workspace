@@ -27,7 +27,6 @@
 #include "historyitem.h"
 
 class QAction;
-class KlipperPopup;
 
 class History : public QObject
 {
@@ -35,11 +34,6 @@ class History : public QObject
 public:
     History( QObject* parent );
     ~History();
-
-    /**
-     * Return (toplevel) popup menu (or default view, of you like)
-     */
-    KlipperPopup* popup();
 
     /**
      * Inserts item into clipboard history top
@@ -156,11 +150,6 @@ private:
      * First item
      */
     HistoryItem* m_top;
-
-    /**
-     * "Default view" --- a popupmenu containing the clipboard history.
-     */
-    KlipperPopup* m_popup;
 
 
     /**

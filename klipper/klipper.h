@@ -31,6 +31,7 @@
 
 class KToggleAction;
 class KActionCollection;
+class KlipperPopup;
 class URLGrabber;
 class QTime;
 class History;
@@ -67,6 +68,10 @@ public:
     URLGrabber* urlGrabber() const { return m_myURLGrabber; }
 
     void saveSettings() const;
+
+    KlipperPopup *popup() {
+        return m_popup;
+    }
 
 public Q_SLOTS:
     void saveSession();
@@ -148,6 +153,7 @@ private:
     QTime m_showTimer;
 
     History* m_history;
+    KlipperPopup *m_popup;
     int m_overflowCounter;
 
     KToggleAction* m_toggleURLGrabAction;

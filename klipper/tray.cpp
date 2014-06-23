@@ -40,8 +40,8 @@ KlipperTray::KlipperTray()
     setStandardActionsEnabled( false );
 
     m_klipper = new Klipper( this, KSharedConfig::openConfig());
-    setContextMenu( m_klipper->history()->popup() );
-    setAssociatedWidget( m_klipper->history()->popup() );
+    setContextMenu( m_klipper->popup() );
+    setAssociatedWidget( m_klipper->popup() );
     connect( m_klipper->history(), SIGNAL(changed()), SLOT(slotSetToolTipFromHistory()));
     slotSetToolTipFromHistory();
     connect( m_klipper, SIGNAL(passivePopup(QString,QString)), SLOT(slotPassivePopup(QString,QString)));
