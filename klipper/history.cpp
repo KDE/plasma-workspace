@@ -46,7 +46,6 @@ void History::insert( HistoryItem* item ) {
     if ( !item )
         return;
 
-    m_topIsUserSelected = false;
     const HistoryItem* existingItem = this->find(item->uuid());
     if ( existingItem ) {
         if ( existingItem == m_top) {
@@ -56,6 +55,7 @@ void History::insert( HistoryItem* item ) {
     } else {
         forceInsert( item );
     }
+    m_topIsUserSelected = false;
 
     emit topChanged();
 
@@ -114,6 +114,7 @@ void History::remove( const HistoryItem* newItem ) {
             // last element in chain
             m_top = nullptr;
         }
+        m_topIsUserSelected = false;
     }
     m_items[(*it)->previous_uuid()]->chain(m_items[(*it)->next_uuid()]);
     m_items.erase(it);
