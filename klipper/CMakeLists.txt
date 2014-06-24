@@ -7,6 +7,7 @@ set(libklipper_common_SRCS
     configdialog.cpp
     history.cpp
     historyitem.cpp
+    historymodel.cpp
     historystringitem.cpp
     klipperpopup.cpp
     popupproxy.cpp

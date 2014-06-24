@@ -19,3 +19,24 @@ target_link_libraries(testHistory
 )
 add_test(klipper-testHistory testHistory)
 ecm_mark_as_test(testHistory)
+
+########################################################
+# Test History Model
+########################################################
+set(testHistoryModel_SRCS
+    historymodeltest.cpp
+    modeltest.cpp
+    ../historymodel.cpp
+    ../historyimageitem.cpp
+    ../historyitem.cpp
+    ../historystringitem.cpp
+    ../historyurlitem.cpp
+)
+add_executable(testHistoryModel ${testHistoryModel_SRCS})
+target_link_libraries(testHistoryModel
+    Qt5::Test
+    Qt5::Widgets # QAction
+    KF5::CoreAddons # KUrlMimeData
+)
+add_test(klipper-testHistoryModel testHistoryModel)
+ecm_mark_as_test(testHistoryModel)
