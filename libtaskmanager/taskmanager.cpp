@@ -567,7 +567,6 @@ int TaskManager::currentDesktop() const
 QString TaskManager::currentActivity() const
 {
     return d->activityConsumer.currentActivity();
-    return QString();
 }
 
 } // TaskManager namespace
