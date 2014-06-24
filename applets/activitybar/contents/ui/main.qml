@@ -21,6 +21,7 @@ import QtQuick.Layouts 1.1
 import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
+import org.kde.activities 0.1 as Activities
 
 Item {
 
@@ -28,57 +29,33 @@ Item {
     Layout.minimumHeight: tabBar.implicitHeight
     Plasmoid.preferredRepresentation: Plasmoid.fullRepresentation
 
-    PlasmaCore.DataSource {
-        id: activitySource
-        engine: "org.kde.activities"
-        onSourceAdded: connectSource(source)
-    }
-
     PlasmaComponents.TabBar {
         id: tabBar
         anchors.fill: parent
-        rotation: {
-            //TODO:  Remove this ugly hack.
-            if (plasmoid.formFactor == PlasmaCore.Types.Vertical) {
-                return (plasmoid.location == PlasmaCore.Types.LeftEdge) ? 270 : 90;
-            } else {
-                return 0;
-            }
-        }
 
         Repeater {
-            model: PlasmaCore.SortFilterModel {
-                sourceModel: PlasmaCore.DataModel {
-                    dataSource: activitySource
-                }
-                filterRole: "State"
-                filterRegExp: "Running"
+            model: Activities.ActivityModel {
+                id: activityModel
+                shownStates: "Running"
             }
             delegate: PlasmaComponents.TabButton {
                 id: tab
-                text: model["Name"]
+                checked: model.current
+                text: model.name
                 onClicked: {
-                    var service = activitySource.serviceForSource(model["DataEngineSource"]);
-                    var operation = service.operationDescription("setCurrent");
-                    service.startOperationCall(operation);
+                    activityModel.setCurrentActivity(model.id, function() {});
                 }
                 Component.onCompleted: {
-                    if (model["Current"]) {
-                        tabBar.currentTab=tab;
+                    if(model.current) {
+                        tabBar.currentTab = tab;
+                    }
+                }
+                onCheckedChanged: {
+                    if(model.current) {
+                        tabBar.currentTab = tab;
                     }
                 }
             }
         }
     }
-
-    function setup() {
-        for (var i = 0; i < activitySource.sources.length; i++) {
-            if (activitySource.sources[i] != "Status") {
-                activitySource.connectSource(activitySource.sources[i]);
-            }
-        }
-    }
-
-    Component.onCompleted: setup()
-
 }
