@@ -502,16 +502,16 @@ QRect ShellCorona::availableScreenRect(int id) const
         if (v->screen() == v->screen() && v->visibilityMode() != PanelView::AutoHide) {
             switch (v->location()) {
             case Plasma::Types::LeftEdge:
-                r.setLeft(r.left() + v->width());
+                r.setLeft(r.left() + v->thickness());
                 break;
             case Plasma::Types::RightEdge:
-                r.setRight(r.right() - v->width());
+                r.setRight(r.right() - v->thickness());
                 break;
             case Plasma::Types::TopEdge:
-                r.setTop(r.top() + v->height());
+                r.setTop(r.top() + v->thickness());
                 break;
             case Plasma::Types::BottomEdge:
-                r.setBottom(r.bottom() - v->height());
+                r.setBottom(r.bottom() - v->thickness());
             default:
                 break;
             }
