@@ -487,14 +487,37 @@ int rectArea(const QRect& r) { return r.width()*r.height(); }
 
 QRect ShellCorona::availableScreenRect(int id) const
 {
-    QRegion region = availableScreenRegion(id);
-    QRect ret;
-    foreach(const QRect& rect, region.rects()) {
-        if(rectArea(rect) > rectArea(ret))
-            ret = rect;
+    if (id >= d->views.count() || id < 0) {
+        //each screen should have a view
+        qWarning() << "requesting unexisting screen" << id;
+        QScreen *s = outputToScreen(d->screenConfiguration->primaryOutput());
+        return s ? s->availableGeometry() : QRect();
     }
 
-    return ret;
+    DesktopView *view = d->views[id];
+    const QRect screenGeo(view->geometry());
+
+    QRect r = view->geometry();
+    foreach (PanelView *v, d->panelViews) {
+        if (v->screen() == v->screen() && v->visibilityMode() != PanelView::AutoHide) {
+            switch (v->location()) {
+            case Plasma::Types::LeftEdge:
+                r.setLeft(r.left() + v->width());
+                break;
+            case Plasma::Types::RightEdge:
+                r.setRight(r.right() - v->width());
+                break;
+            case Plasma::Types::TopEdge:
+                r.setTop(r.top() + v->height());
+                break;
+            case Plasma::Types::BottomEdge:
+                r.setBottom(r.bottom() - v->height());
+            default:
+                break;
+            }
+        }
+    }
+    return r;
 }
 
 PanelView *ShellCorona::panelView(Plasma::Containment *containment) const
