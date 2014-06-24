@@ -56,7 +56,7 @@ class TASKMANAGER_EXPORT GroupManager: public QObject
     Q_PROPERTY(TaskSortingStrategy sortingStrategy READ sortingStrategy WRITE setSortingStrategy NOTIFY sortingStrategyChanged)
     Q_PROPERTY(bool showOnlyCurrentScreen READ showOnlyCurrentScreen WRITE setShowOnlyCurrentScreen NOTIFY showOnlyCurrentScreenChanged)
     Q_PROPERTY(bool showOnlyCurrentDesktop READ showOnlyCurrentDesktop WRITE setShowOnlyCurrentDesktop NOTIFY showOnlyCurrentDesktopChanged)
-    Q_PROPERTY(bool showOnlyCurrentActvity READ showOnlyCurrentActivity WRITE setShowOnlyCurrentActivity NOTIFY showOnlyCurrentActivityChanged)
+    Q_PROPERTY(bool showOnlyCurrentActivity READ showOnlyCurrentActivity WRITE setShowOnlyCurrentActivity NOTIFY showOnlyCurrentActivityChanged)
     Q_PROPERTY(bool showOnlyMinimized READ showOnlyMinimized WRITE setShowOnlyMinimized NOTIFY showOnlyMinimizedChanged)
     Q_PROPERTY(QList<QUrl> launcherList READ launcherList WRITE setLauncherList NOTIFY launcherListChanged)
 

@@ -67,7 +67,7 @@ public:
           abstractSortingStrategy(0),
           groupIsFullLimit(0),
           showOnlyCurrentDesktop(false),
-          showOnlyCurrentActivity(false),
+          showOnlyCurrentActivity(true),
           showOnlyCurrentScreen(false),
           showOnlyMinimized(false),
           onlyGroupWhenFull(false),
