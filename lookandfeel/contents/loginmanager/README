@@ -1,0 +1,8 @@
+This is a display manager for SDDM
+
+It installs into ${INSTALL_PREFIX}/apps/sddm/themes
+A copy of components is installed into the same path
+
+components is deliberately imported as "components" and not "../components" for this reason
+
+For testing, I recommend symlinking ../components into components
