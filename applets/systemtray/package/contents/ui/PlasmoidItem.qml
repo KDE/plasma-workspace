@@ -30,6 +30,11 @@ Item {
                 setLocation(plasmoid.location);
             }
         }
+        onExpandedChanged: {
+            if (!plasmoid.expanded) {
+                modelData.expanded = false;
+            }
+        }
     }
 
     Connections {
