@@ -103,6 +103,8 @@ Item {
         horizontalAlignment: Text.AlignHCenter
         maximumLineCount: 2
         wrapMode: Text.Wrap
+        //make an indication that this has active focus, this only happens when reached with text navigation
+        font.underline: wrapper.activeFocus
         height: Math.round(Math.max(paintedHeight, theme.mSize(theme.defaultFont).height*1.2))
     }
 
