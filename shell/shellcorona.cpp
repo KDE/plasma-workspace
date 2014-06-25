@@ -451,7 +451,7 @@ KActivities::Controller *ShellCorona::activityController()
 
 int ShellCorona::numScreens() const
 {
-    return QGuiApplication::screens().count();
+    return d->views.count();
 }
 
 QRect ShellCorona::screenGeometry(int id) const
