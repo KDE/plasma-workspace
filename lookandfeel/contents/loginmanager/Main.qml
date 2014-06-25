@@ -82,6 +82,11 @@ Image {
                         echoMode: TextInput.Password
                         onAccepted: loginPrompt.startLogin()
                         focus: true
+
+                        Keys.onEscapePressed: {
+                            //nextItemInFocusChain(false) is previous Item 
+                            nextItemInFocusChain(false).forceActiveFocus();
+                        }
                     }
 
                     PlasmaComponents.Button {
