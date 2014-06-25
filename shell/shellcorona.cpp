@@ -520,6 +520,12 @@ QRect ShellCorona::availableScreenRect(int id) const
     return r;
 }
 
+QScreen* ShellCorona::screenForId(int screenId) const
+{
+    DesktopView* v = d->views.value(screenId);
+    return v ? v->screen() : Q_NULLPTR;
+}
+
 PanelView *ShellCorona::panelView(Plasma::Containment *containment) const
 {
     return d->panelViews.value(containment);
@@ -626,16 +632,15 @@ void ShellCorona::removeDesktop(DesktopView *view)
     screenInvariants();
 }
 
-void ShellCorona::removePanel(QObject *screen)
+void ShellCorona::removePanel(PanelView* panelView)
 {
-    foreach(PanelView* v, d->panelViews) {
-        if (v->screen() == screen) {
-            Plasma::Containment* cont = v->containment();
-            d->waitingPanels << cont;
-            d->panelViews.remove(cont);
-            v->deleteLater();
-        }
-    }
+    Plasma::Containment* cont = panelView->containment();
+    d->waitingPanels << cont;
+    d->panelViews.remove(cont);
+    panelView->deleteLater();
+
+    emit availableScreenRectChanged();
+    emit availableScreenRegionChanged();
 }
 
 Plasma::Containment *ShellCorona::createContainmentForActivity(const QString& activity, int screenNum)
@@ -686,7 +691,6 @@ void ShellCorona::createWaitingPanels()
         d->panelViews[cont]->show();
 
         connect(cont, SIGNAL(destroyed(QObject*)), this, SLOT(containmentDeleted(QObject*)));
-        connect(screen, SIGNAL(destroyed(QObject*)), this, SLOT(removePanel(QObject*)));
     }
     d->waitingPanels = stillWaitingPanels;
     emit availableScreenRectChanged();

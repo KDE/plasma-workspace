@@ -871,4 +871,18 @@ void PanelView::showTemporarily()
     t->start();
 }
 
+void PanelView::screenDestroyed(QObject* screen)
+{
+//     NOTE: this is overriding the screen destroyed slot, we need to do this because
+//     otherwise Qt goes mental and starts moving our panels. See:
+//     https://codereview.qt-project.org/#/c/88351/
+    QScreen* newScreen = m_corona->screenForId(containment()->lastScreen());
+
+    if (newScreen)
+        setScreen(newScreen);
+    else
+        m_corona->removePanel(this);
+}
+
+
 #include "moc_panelview.cpp"

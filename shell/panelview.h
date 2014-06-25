@@ -125,6 +125,7 @@ private Q_SLOTS:
     void containmentChanged();
     void statusChanged(Plasma::Types::ItemStatus);
     void restoreAutoHide();
+    void screenDestroyed(QObject* screen);
 
 private:
     void integrateScreen();

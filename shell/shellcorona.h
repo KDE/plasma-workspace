@@ -80,6 +80,9 @@ public:
 
     KScreen::Config* screensConfiguration() const;
 
+    void removePanel(PanelView* panelView);
+    QScreen* screenForId(int screenId) const;
+
 public Q_SLOTS:
     /**
      * Request saving applicationConfig on disk, it's event compressed, not immediate
@@ -143,7 +146,6 @@ private Q_SLOTS:
     void containmentDeleted(QObject* cont);
 
     void outputEnabledChanged();
-    void removePanel(QObject* cont);
     void removeDesktop(DesktopView* screen);
     void addOutput(KScreen::Output* output);
     void primaryOutputChanged();
