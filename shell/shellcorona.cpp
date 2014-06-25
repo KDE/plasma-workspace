@@ -606,8 +606,6 @@ void ShellCorona::addOutput(KScreen::Output *output)
     }
 
     view->setContainment(containment);
-
-   // connect(screen, SIGNAL(destroyed(QObject*)), SLOT(screenRemoved(QObject*)));
     view->show();
 
     //were there any panels for this screen before it popped up?
@@ -681,14 +679,15 @@ void ShellCorona::createWaitingPanels()
             continue;
         }
 
-        d->panelViews[cont] = new PanelView(this);
+        PanelView* panel = new PanelView(this);
+        d->panelViews[cont] = panel;
 
         Q_ASSERT(qBound(0, requestedScreen, d->views.size() -1) == requestedScreen);
         QScreen *screen = d->views[requestedScreen]->screen();
 
-        d->panelViews[cont]->setScreen(screen);
-        d->panelViews[cont]->setContainment(cont);
-        d->panelViews[cont]->show();
+        panel->setScreen(screen);
+        panel->setContainment(cont);
+        panel->show();
 
         connect(cont, SIGNAL(destroyed(QObject*)), this, SLOT(containmentDeleted(QObject*)));
     }
