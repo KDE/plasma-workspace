@@ -55,6 +55,7 @@ Image {
             main: UserSelect {
                 id: usersSelection
                 model: userModel
+                selectedIndex: userModel.lastIndex
 
                 Connections {
                     target: sddm

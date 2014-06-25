@@ -62,7 +62,6 @@ Item {
         }
         clip: true
         height: userItemHeight
-        //           / currentIndex: indexForUserName(greeter.lastLoggedInUser)
         cacheBuffer: 1000
 
         //highlight the item in the middle. The actual list view starts -1.5 userItemWidths so this moves the highlighted item to the centre
