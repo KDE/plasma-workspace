@@ -149,7 +149,7 @@ Image {
                         target: root
                         onClearPassword: {
                             passwordInput.selectAll();
-                            passwordInput.forceAcitveFocus();
+                            passwordInput.forceActiveFocus();
                         }
                     }
                 }
