@@ -1,0 +1,9 @@
+[Desktop Entry]
+Exec=krunner
+Name=KRunner
+OnlyShowIn=KDE;
+Type=Application
+X-DBUS-StartupType=Unique
+X-DBUS-ServiceName=org.kde.krunner
+X-KDE-StartupNotify=false
+X-KDE-autostart-phase=0

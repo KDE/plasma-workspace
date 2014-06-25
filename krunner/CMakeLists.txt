@@ -35,6 +35,7 @@ target_link_libraries(krunner
 
 install(TARGETS krunner ${INSTALL_TARGETS_DEFAULT_ARGS})
 install(FILES ${krunner_dbusAppXML} DESTINATION ${DBUS_INTERFACES_INSTALL_DIR} )
+install(FILES krunner.desktop DESTINATION ${AUTOSTART_INSTALL_DIR})
 
 set(CMAKECONFIG_INSTALL_DIR "${CMAKECONFIG_INSTALL_PREFIX}/KRunnerAppDBusInterface")
 ecm_configure_package_config_file(KRunnerAppDBusInterfaceConfig.cmake.in
