@@ -68,4 +68,33 @@ install(TARGETS klipper         ${INSTALL_TARGETS_DEFAULT_ARGS})
 install(PROGRAMS org.kde.klipper.desktop DESTINATION ${XDG_APPS_INSTALL_DIR})
 install(PROGRAMS org.kde.klipper.desktop DESTINATION ${AUTOSTART_INSTALL_DIR})
 
+# Plasma Data Engine
+set(plasma_engine_clipboard_SRCS ${libklipper_common_SRCS} clipboardengine.cpp)
+add_library(plasma_engine_clipboard MODULE ${plasma_engine_clipboard_SRCS})
+kservice_desktop_to_json(plasma_engine_clipboard plasma-dataengine-clipboard.desktop)
+target_link_libraries(plasma_engine_clipboard
+    Qt5::DBus
+    Qt5::Widgets       # QAction
+    KF5::ConfigGui
+    KF5::Completion    # klineedit - port away?
+    KF5::CoreAddons    # KUrlMimeData
+    KF5::GlobalAccel
+    KF5::IconThemes
+    KF5::Plasma
+    KF5::Service
+    KF5::TextWidgets   # KTextEdit
+    KF5::WidgetsAddons # KMessageBox
+    KF5::WindowSystem
+    KF5::XmlGui        # KActionCollection
+    ${ZLIB_LIBRARY}
+)
+if (X11_FOUND)
+  target_link_libraries(plasma_engine_clipboard XCB::XCB Qt5::X11Extras)
+endif()
+if (PRISON_FOUND)
+  target_link_libraries(plasma_engine_clipboard ${PRISON_LIBRARIES})
+endif ()
+install(TARGETS plasma_engine_clipboard DESTINATION ${PLUGIN_INSTALL_DIR}/plasma/dataengine)
+install(FILES plasma-dataengine-clipboard.desktop DESTINATION ${SERVICES_INSTALL_DIR})
+
 add_subdirectory(autotests)

@@ -108,6 +108,10 @@ public:
      */
     void cyclePrev();
 
+    HistoryModel *model() {
+        return m_model;
+    }
+
 public Q_SLOTS:
     /**
      * move the history in position pos to top
