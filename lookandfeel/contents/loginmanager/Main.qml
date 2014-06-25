@@ -84,9 +84,23 @@ Image {
                         focus: true
 
                         Keys.onEscapePressed: {
-                            //nextItemInFocusChain(false) is previous Item 
+                            //nextItemInFocusChain(false) is previous Item
                             nextItemInFocusChain(false).forceActiveFocus();
                         }
+
+                        //if empty and left or right is pressed change selection in user switch
+                        //this cannot be in keys.onLeftPressed as then it doesn't reach the password box
+                        Keys.onPressed: {
+                            if (event.key == Qt.Key_Left && !text) {
+                                loginPrompt.mainItem.decrementCurrentIndex();
+                                event.accepted = true
+                            }
+                            if (event.key == Qt.Key_Right && !text) {
+                                loginPrompt.mainItem.incrementCurrentIndex();
+                                event.accepted = true
+                            }
+                        }
+
                     }
 
                     PlasmaComponents.Button {

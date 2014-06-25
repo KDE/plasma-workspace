@@ -33,6 +33,14 @@ FocusScope {
 
     activeFocusOnTab: true
 
+    function incrementCurrentIndex() {
+        usersList.incrementCurrentIndex();
+    }
+
+    function decrementCurrentIndex() {
+        usersList.decrementCurrentIndex()
+    }
+
     InfoPane {
         id: infoPane
         anchors {
