@@ -51,6 +51,7 @@ public:
 
 protected:
     bool event(QEvent *e);
+    void keyPressEvent(QKeyEvent *e);
 
 protected Q_SLOTS:
     /**

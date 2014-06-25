@@ -20,6 +20,7 @@
 #include "containmentconfigview.h"
 #include "shellcorona.h"
 #include "shellmanager.h"
+#include "krunner_interface.h"
 
 #include <QQmlEngine>
 #include <QQmlContext>
@@ -167,6 +168,22 @@ bool DesktopView::event(QEvent *e)
     }
 
     return PlasmaQuick::View::event(e);
+}
+
+void DesktopView::keyPressEvent(QKeyEvent *e)
+{
+    // When a key is pressed on desktop when nothing else is active forward the key to krunner
+    if (activeFocusItem() == contentItem()) {
+        const QString text = e->text().trimmed();
+        if (!text.isEmpty() && text[0].isPrint()) {
+            const QString interface("org.kde.krunner");
+            org::kde::krunner::App krunner(interface, "/App", QDBusConnection::sessionBus());
+            krunner.query(text);
+            e->accept();
+        }
+    }
+
+    QQuickView::keyPressEvent(e);
 }
 
 bool DesktopView::isDashboardShown() const

@@ -60,6 +60,10 @@ set (plasma_shell_SRCS
     osd.cpp
     ${scripting_SRC}
 )
+
+set(krunner_xml ${plasma-workspace_SOURCE_DIR}/krunner/dbus/org.kde.krunner.App.xml)
+qt5_add_dbus_interface(plasma_shell_SRCS ${krunner_xml} krunner_interface)
+
 if (KF5TextEditor_FOUND)
    set (plasma_shell_SRCS ${plasma_shell_SRCS}
        interactiveconsole.cpp
