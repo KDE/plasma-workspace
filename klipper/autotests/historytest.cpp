@@ -47,12 +47,8 @@ void HistoryTest::testSetMaxSize()
     // insert an item - should still be empty
     history->insert(new HistoryStringItem(QStringLiteral("foo")));
     QVERIFY(history->empty());
-    QEXPECT_FAIL("", "Item is first inserted, then removed, changed signal gets emitted, although not changed", Continue);
     QVERIFY(changedSpy.isEmpty());
-    changedSpy.clear();
-    QEXPECT_FAIL("", "Item is first inserted, then removed, changed signal gets emitted, although not changed", Continue);
     QVERIFY(topSpy.isEmpty());
-    topSpy.clear();
 
     // now it should insert again
     history->setMaxSize(1);
@@ -70,6 +66,7 @@ void HistoryTest::testSetMaxSize()
     history->insert(new HistoryStringItem(QStringLiteral("bar")));
     QCOMPARE(history->first()->text(), QLatin1String("bar"));
     QCOMPARE(history->first()->next_uuid(), history->first()->uuid());
+    QEXPECT_FAIL("", "Item is first inserted, then removed, changed signal gets emitted, although not changed", Continue);
     QCOMPARE(topSpy.size(), 1);
     topSpy.clear();
     QVERIFY(topSpy.isEmpty());
@@ -83,7 +80,6 @@ void HistoryTest::testSetMaxSize()
     QCOMPARE(history->maxSize(), 0u);
     QVERIFY(history->empty());
     QCOMPARE(changedSpy.size(), 1);
-    QEXPECT_FAIL("", "Clearing history doesn't emit top changed", Continue);
     QCOMPARE(topSpy.size(), 1);
 }
 
@@ -146,7 +142,6 @@ void HistoryTest::testInsertRemove()
     QCOMPARE(history->find(fooUuid)->previous_uuid(), foobarUuid);
     QCOMPARE(history->find(foobarUuid)->next_uuid(), fooUuid);
     QCOMPARE(history->find(foobarUuid)->previous_uuid(), barUuid);
-    QEXPECT_FAIL("", "TopChanged is emitted twice when inserting an existing item", Continue);
     QCOMPARE(topSpy.size(), 1);
     topSpy.clear();
     QVERIFY(topSpy.isEmpty());
@@ -154,7 +149,7 @@ void HistoryTest::testInsertRemove()
     // move one to top using the slot
     // already on top, shouldn't change anything
     history->slotMoveToTop(barUuid);
-    QVERIFY(!history->topIsUserSelected());
+    QVERIFY(history->topIsUserSelected());
     QCOMPARE(history->first()->text(), barText);
     QCOMPARE(history->first()->next_uuid(), foobarUuid);
     QCOMPARE(history->first()->previous_uuid(), fooUuid);
@@ -162,8 +157,6 @@ void HistoryTest::testInsertRemove()
     QCOMPARE(history->find(fooUuid)->previous_uuid(), foobarUuid);
     QCOMPARE(history->find(foobarUuid)->next_uuid(), fooUuid);
     QCOMPARE(history->find(foobarUuid)->previous_uuid(), barUuid);
-    QCOMPARE(topSpy.size(), 1);
-    topSpy.clear();
     QVERIFY(topSpy.isEmpty());
 
     // another one should change, though
@@ -188,7 +181,6 @@ void HistoryTest::testInsertRemove()
     QCOMPARE(history->first()->previous_uuid(), fooUuid);
     QCOMPARE(history->find(fooUuid)->next_uuid(), barUuid);
     QCOMPARE(history->find(fooUuid)->previous_uuid(), barUuid);
-    QEXPECT_FAIL("", "topChanged not emitted when removing top item", Continue);
     QCOMPARE(topSpy.size(), 1);
     topSpy.clear();
     QVERIFY(topSpy.isEmpty());
@@ -198,7 +190,6 @@ void HistoryTest::testInsertRemove()
     QCOMPARE(history->first()->text(), fooText);
     QCOMPARE(history->first()->next_uuid(), history->first()->uuid());
     QCOMPARE(history->first()->previous_uuid(), history->first()->uuid());
-    QEXPECT_FAIL("", "topChanged not emitted when removing top item", Continue);
     QCOMPARE(topSpy.size(), 1);
     topSpy.clear();
     QVERIFY(topSpy.isEmpty());
@@ -207,7 +198,6 @@ void HistoryTest::testInsertRemove()
     QVERIFY(!history->topIsUserSelected());
     QVERIFY(!history->first());
     QVERIFY(history->empty());
-    QEXPECT_FAIL("", "topChanged not emitted when removing top item", Continue);
     QCOMPARE(topSpy.size(), 1);
 }
 
@@ -237,7 +227,6 @@ void HistoryTest::testClear()
     QVERIFY(history->empty());
     QVERIFY(!history->first());
     QVERIFY(!history->topIsUserSelected());
-    QEXPECT_FAIL("", "topChanged not emitted on clearing", Continue);
     QVERIFY(!topSpy.isEmpty());
 }
 

@@ -25,6 +25,7 @@
 #include <QByteArray>
 
 class HistoryItem;
+class HistoryModel;
 class QAction;
 
 class History : public QObject
@@ -78,7 +79,7 @@ public:
     /**
      * True if no history items
      */
-    bool empty() const { return m_items.isEmpty(); }
+    bool empty() const;
 
     /**
      * Set maximum history size
@@ -88,7 +89,7 @@ public:
     /**
      * Get the maximum history size
      */
-    unsigned maxSize() const { return m_maxSize; }
+    unsigned maxSize() const;
 
     /**
      * returns true if the user has selected the top item
@@ -131,43 +132,16 @@ Q_SIGNALS:
      */
     void topChanged();
 
-private:
-    /**
-     * ensure that the number of items does not exceed max_size()
-     * Deletes items from the end as necessary.
-     */
-    void trim();
 
 private:
-    typedef QHash<QByteArray, HistoryItem*> items_t;
-    /**
-     * The history
-     */
-    items_t m_items;
-
-    /**
-     * First item
-     */
-    HistoryItem* m_top;
-
-
-    /**
-     * The number of clipboard items stored.
-     */
-    unsigned m_maxSize;
-
     /**
      * True if the top is selected by the user
      */
     bool m_topIsUserSelected;
 
-    /**
-     * The "next" when cycling through the
-     * history. May be 0, if history is empty
-     */
-    HistoryItem* m_nextCycle;
-};
+    HistoryModel *m_model;
 
-inline const HistoryItem* History::first() const { return m_top; }
+    QByteArray m_cycleStartUuid;
+};
 
 #endif

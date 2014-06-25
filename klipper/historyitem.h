@@ -21,6 +21,7 @@
 
 #include <QPixmap>
 
+class HistoryModel;
 class QString;
 class QMimeData;
 class QDataStream;
@@ -84,32 +85,21 @@ public:
     static HistoryItem* create( QDataStream& dataStream );
 
     /**
-     * Inserts this item between prev and next
-     */
-    void insertBetweeen(HistoryItem* prev, HistoryItem* next);
-
-    /**
-     * Chain this with next
-     */
-    void chain(HistoryItem* next);
-
-    /**
      * previous item's uuid
+     * TODO: drop, only used in unit test now
      */
-    const QByteArray& previous_uuid() const {
-        return m_previous_uuid;
-    }
+    QByteArray previous_uuid() const;
 
     /**
      * next item's uuid
+     * TODO: drop, only used in unit test now
      */
-    const QByteArray& next_uuid() const {
-        return m_next_uuid;
-    }
+    QByteArray next_uuid() const;
+
+    void setModel(HistoryModel *model);
 private:
-    QByteArray m_previous_uuid;
     QByteArray m_uuid;
-    QByteArray m_next_uuid;
+    HistoryModel *m_model;
 };
 
 inline
@@ -126,5 +116,7 @@ QDataStream& operator<<( QDataStream& lhs, HistoryItem const * const rhs ) {
     return lhs;
 
 }
+
+Q_DECLARE_METATYPE(HistoryItem*)
 
 #endif

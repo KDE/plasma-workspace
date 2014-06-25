@@ -10,6 +10,7 @@ set(testHistory_SRCS
     ../historyitem.cpp
     ../historystringitem.cpp
     ../historyurlitem.cpp
+    ../historymodel.cpp
 )
 add_executable(testHistory ${testHistory_SRCS})
 target_link_libraries(testHistory

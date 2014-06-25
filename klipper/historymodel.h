@@ -39,6 +39,8 @@ public:
 
     void clear();
     void moveToTop(const QByteArray &uuid);
+    void moveTopToBack();
+    void moveBackToTop();
 
     QModelIndex indexOf(const QByteArray &uuid) const;
     QModelIndex indexOf(const HistoryItem *item) const;

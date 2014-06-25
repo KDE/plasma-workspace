@@ -21,7 +21,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include "../historystringitem.h"
 
 #include <QtTest>
-Q_DECLARE_METATYPE(HistoryItem*)
 
 class HistoryModelTest : public QObject
 {
@@ -87,69 +86,86 @@ void HistoryModelTest::testInsertRemove()
 
     // let's insert a few items
     history->insert(QSharedPointer<HistoryItem>(new HistoryStringItem(fooText)));
-    QCOMPARE(history->data(history->index(0, 0)).toString(), fooText);
-//     QCOMPARE(history->first()->next_uuid(), history->first()->uuid());
-//     QCOMPARE(history->first()->previous_uuid(), history->first()->uuid());
+    QModelIndex index = history->index(0, 0);
+    QCOMPARE(index.data().toString(), fooText);
+    QCOMPARE(index.data(Qt::UserRole).value<HistoryItem*>()->next_uuid(), index.data(Qt::UserRole+1).toByteArray());
+    QCOMPARE(index.data(Qt::UserRole).value<HistoryItem*>()->previous_uuid(), index.data(Qt::UserRole+1).toByteArray());
 
     history->insert(QSharedPointer<HistoryItem>(new HistoryStringItem(barText)));
-    QCOMPARE(history->data(history->index(0, 0)).toString(), barText);
-//     QCOMPARE(history->first()->next_uuid(), fooUuid);
-//     QCOMPARE(history->first()->previous_uuid(), fooUuid);
-//     QCOMPARE(history->find(fooUuid)->next_uuid(), barUuid);
-//     QCOMPARE(history->find(fooUuid)->previous_uuid(), barUuid);
+    QCOMPARE(index.data().toString(), barText);
+    QCOMPARE(index.data(Qt::UserRole).value<HistoryItem*>()->next_uuid(), fooUuid);
+    QCOMPARE(index.data(Qt::UserRole).value<HistoryItem*>()->previous_uuid(), fooUuid);
+    index = history->indexOf(fooUuid);
+    QCOMPARE(index.data(Qt::UserRole).value<HistoryItem*>()->next_uuid(), barUuid);
+    QCOMPARE(index.data(Qt::UserRole).value<HistoryItem*>()->previous_uuid(), barUuid);
 
     history->insert(QSharedPointer<HistoryItem>(new HistoryStringItem(fooBarText)));
     QCOMPARE(history->data(history->index(0, 0)).toString(), fooBarText);
-//     QCOMPARE(history->first()->next_uuid(), barUuid);
-//     QCOMPARE(history->first()->previous_uuid(), fooUuid);
-//     QCOMPARE(history->find(fooUuid)->next_uuid(), foobarUuid);
-//     QCOMPARE(history->find(fooUuid)->previous_uuid(), barUuid);
-//     QCOMPARE(history->find(barUuid)->next_uuid(), fooUuid);
-//     QCOMPARE(history->find(barUuid)->previous_uuid(), foobarUuid);
+    index = history->index(0, 0);
+    QCOMPARE(index.data(Qt::UserRole).value<HistoryItem*>()->next_uuid(), barUuid);
+    QCOMPARE(index.data(Qt::UserRole).value<HistoryItem*>()->previous_uuid(), fooUuid);
+    index = history->indexOf(fooUuid);
+    QCOMPARE(index.data(Qt::UserRole).value<HistoryItem*>()->next_uuid(), foobarUuid);
+    QCOMPARE(index.data(Qt::UserRole).value<HistoryItem*>()->previous_uuid(), barUuid);
+    index = history->indexOf(barUuid);
+    QCOMPARE(index.data(Qt::UserRole).value<HistoryItem*>()->next_uuid(), fooUuid);
+    QCOMPARE(index.data(Qt::UserRole).value<HistoryItem*>()->previous_uuid(), foobarUuid);
 
     // insert one again - it should be moved to top
     history->insert(QSharedPointer<HistoryItem>(new HistoryStringItem(barText)));
     QCOMPARE(history->data(history->index(0, 0)).toString(), barText);
-//     QCOMPARE(history->first()->next_uuid(), foobarUuid);
-//     QCOMPARE(history->first()->previous_uuid(), fooUuid);
-//     QCOMPARE(history->find(fooUuid)->next_uuid(), barUuid);
-//     QCOMPARE(history->find(fooUuid)->previous_uuid(), foobarUuid);
-//     QCOMPARE(history->find(foobarUuid)->next_uuid(), fooUuid);
-//     QCOMPARE(history->find(foobarUuid)->previous_uuid(), barUuid);
+    index = history->index(0, 0);
+    QCOMPARE(index.data(Qt::UserRole).value<HistoryItem*>()->next_uuid(), foobarUuid);
+    QCOMPARE(index.data(Qt::UserRole).value<HistoryItem*>()->previous_uuid(), fooUuid);
+    index = history->indexOf(fooUuid);
+    QCOMPARE(index.data(Qt::UserRole).value<HistoryItem*>()->next_uuid(), barUuid);
+    QCOMPARE(index.data(Qt::UserRole).value<HistoryItem*>()->previous_uuid(), foobarUuid);
+    index = history->indexOf(foobarUuid);
+    QCOMPARE(index.data(Qt::UserRole).value<HistoryItem*>()->next_uuid(), fooUuid);
+    QCOMPARE(index.data(Qt::UserRole).value<HistoryItem*>()->previous_uuid(), barUuid);
 
     // move one to top using the slot
     // already on top, shouldn't change anything
     history->moveToTop(barUuid);
     QCOMPARE(history->data(history->index(0, 0)).toString(), barText);
-//     QCOMPARE(history->first()->next_uuid(), foobarUuid);
-//     QCOMPARE(history->first()->previous_uuid(), fooUuid);
-//     QCOMPARE(history->find(fooUuid)->next_uuid(), barUuid);
-//     QCOMPARE(history->find(fooUuid)->previous_uuid(), foobarUuid);
-//     QCOMPARE(history->find(foobarUuid)->next_uuid(), fooUuid);
-//     QCOMPARE(history->find(foobarUuid)->previous_uuid(), barUuid);
+    index = history->index(0, 0);
+    QCOMPARE(index.data(Qt::UserRole).value<HistoryItem*>()->next_uuid(), foobarUuid);
+    QCOMPARE(index.data(Qt::UserRole).value<HistoryItem*>()->previous_uuid(), fooUuid);
+    index = history->indexOf(fooUuid);
+    QCOMPARE(index.data(Qt::UserRole).value<HistoryItem*>()->next_uuid(), barUuid);
+    QCOMPARE(index.data(Qt::UserRole).value<HistoryItem*>()->previous_uuid(), foobarUuid);
+    index = history->indexOf(foobarUuid);
+    QCOMPARE(index.data(Qt::UserRole).value<HistoryItem*>()->next_uuid(), fooUuid);
+    QCOMPARE(index.data(Qt::UserRole).value<HistoryItem*>()->previous_uuid(), barUuid);
 
     // another one should change, though
     history->moveToTop(foobarUuid);
     QCOMPARE(history->data(history->index(0, 0)).toString(), fooBarText);
-//     QCOMPARE(history->first()->next_uuid(), barUuid);
-//     QCOMPARE(history->first()->previous_uuid(), fooUuid);
-//     QCOMPARE(history->find(fooUuid)->next_uuid(), foobarUuid);
-//     QCOMPARE(history->find(fooUuid)->previous_uuid(), barUuid);
-//     QCOMPARE(history->find(barUuid)->next_uuid(), fooUuid);
-//     QCOMPARE(history->find(barUuid)->previous_uuid(), foobarUuid);
+    index = history->index(0, 0);
+    QCOMPARE(index.data(Qt::UserRole).value<HistoryItem*>()->next_uuid(), barUuid);
+    QCOMPARE(index.data(Qt::UserRole).value<HistoryItem*>()->previous_uuid(), fooUuid);
+    index = history->indexOf(fooUuid);
+    QCOMPARE(index.data(Qt::UserRole).value<HistoryItem*>()->next_uuid(), foobarUuid);
+    QCOMPARE(index.data(Qt::UserRole).value<HistoryItem*>()->previous_uuid(), barUuid);
+    index = history->indexOf(barUuid);
+    QCOMPARE(index.data(Qt::UserRole).value<HistoryItem*>()->next_uuid(), fooUuid);
+    QCOMPARE(index.data(Qt::UserRole).value<HistoryItem*>()->previous_uuid(), foobarUuid);
 
     // remove them again
     QVERIFY(history->remove(foobarUuid));
     QCOMPARE(history->data(history->index(0, 0)).toString(), barText);
-//     QCOMPARE(history->first()->next_uuid(), fooUuid);
-//     QCOMPARE(history->first()->previous_uuid(), fooUuid);
-//     QCOMPARE(history->find(fooUuid)->next_uuid(), barUuid);
-//     QCOMPARE(history->find(fooUuid)->previous_uuid(), barUuid);
+    index = history->index(0, 0);
+    QCOMPARE(index.data(Qt::UserRole).value<HistoryItem*>()->next_uuid(), fooUuid);
+    QCOMPARE(index.data(Qt::UserRole).value<HistoryItem*>()->previous_uuid(), fooUuid);
+    index = history->indexOf(fooUuid);
+    QCOMPARE(index.data(Qt::UserRole).value<HistoryItem*>()->next_uuid(), barUuid);
+    QCOMPARE(index.data(Qt::UserRole).value<HistoryItem*>()->previous_uuid(), barUuid);
 
     QVERIFY(history->remove(barUuid));
     QCOMPARE(history->data(history->index(0, 0)).toString(), fooText);
-//     QCOMPARE(history->first()->next_uuid(), history->first()->uuid());
-//     QCOMPARE(history->first()->previous_uuid(), history->first()->uuid());
+    index = history->index(0, 0);
+    QCOMPARE(index.data(Qt::UserRole).value<HistoryItem*>()->next_uuid(), index.data(Qt::UserRole+1).toByteArray());
+    QCOMPARE(index.data(Qt::UserRole).value<HistoryItem*>()->previous_uuid(), index.data(Qt::UserRole+1).toByteArray());
 
     QVERIFY(history->remove(fooUuid));
     QCOMPARE(history->rowCount(), 0);

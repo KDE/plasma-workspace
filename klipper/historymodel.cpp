@@ -21,8 +21,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #include <QDebug>
 
-Q_DECLARE_METATYPE(HistoryItem*)
-
 HistoryModel::HistoryModel(QObject *parent)
     : QAbstractListModel(parent)
     , m_maxSize(0)
@@ -145,6 +143,7 @@ void HistoryModel::insert(QSharedPointer<HistoryItem> item)
     }
 
     beginInsertRows(QModelIndex(), 0, 0);
+    item->setModel(this);
     m_items.prepend(item);
     endInsertRows();
 }
@@ -166,4 +165,20 @@ void HistoryModel::moveToTop(int row)
     beginMoveRows(QModelIndex(), row, row, QModelIndex(), 0);
     m_items.move(row, 0);
     endMoveRows();
+}
+
+void HistoryModel::moveTopToBack()
+{
+    if (m_items.count() < 2) {
+        return;
+    }
+    beginMoveRows(QModelIndex(), 0, 0, QModelIndex(), m_items.count());
+    auto item = m_items.takeFirst();
+    m_items.append(item);
+    endMoveRows();
+}
+
+void HistoryModel::moveBackToTop()
+{
+    moveToTop(m_items.count() - 1);
 }
