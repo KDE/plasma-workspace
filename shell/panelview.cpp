@@ -666,10 +666,12 @@ void PanelView::showEvent(QShowEvent *event)
 
 bool PanelView::event(QEvent *e)
 {
-    if (e->type() == QEvent::Enter) {
-        m_unhideTimer.stop();
-    } else if (e->type() == QEvent::Leave) {
-        m_unhideTimer.start();
+    if (m_visibilityMode == AutoHide) {
+        if (e->type() == QEvent::Enter) {
+            m_unhideTimer.stop();
+        } else if (e->type() == QEvent::Leave) {
+            m_unhideTimer.start();
+        }
     }
     return View::event(e);
 }
