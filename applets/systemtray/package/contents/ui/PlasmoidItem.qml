@@ -46,6 +46,7 @@ Item {
         }
         acceptedButtons: Qt.LeftButton | Qt.RightButton
         onClicked: {
+            taskItemContainer.hideToolTip();
             if (mouse.button == Qt.LeftButton) {
                 if (modelData.expanded) {
                     if (plasmoidItem.parent.parent.parent.objectName == "taskListDelegate") {

@@ -187,6 +187,7 @@ Item {
     }
 
     function __processClick(buttons, item) {
+        taskItemContainer.hideToolTip();
         var pos = modelData.popupPosition(taskItemContainer, 0, 0);
         switch (buttons) {
         case Qt.LeftButton:

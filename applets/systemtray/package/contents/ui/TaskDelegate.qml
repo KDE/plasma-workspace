@@ -40,6 +40,9 @@ KQuickControlsAddonsComponents.MouseEventListener {
     property bool isHiddenItem: false
     property int location: plasmoid.location
 
+    function hideToolTip() {
+        toolTip.hideToolTip()
+    }
 
     Timer {
         id: hidePopupTimer
@@ -112,6 +115,7 @@ KQuickControlsAddonsComponents.MouseEventListener {
     }
 
     PlasmaCore.ToolTipArea {
+        id: toolTip
         anchors.fill: parent
 
         active: !isExpanded
