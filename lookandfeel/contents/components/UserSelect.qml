@@ -23,12 +23,15 @@ import QtQuick.Layouts 1.1
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
 
-Item {
+FocusScope {
+    id: root
     property alias model: usersList.model
     property alias selectedUser: usersList.selectedUser
     property alias selectedIndex: usersList.currentIndex
     property alias delegate: usersList.delegate
     property alias notification: notificationLabel.text
+
+    activeFocusOnTab: true
 
     InfoPane {
         id: infoPane
@@ -42,7 +45,7 @@ Item {
     UserList {
         id: usersList
 
-        activeFocusOnTab: true
+        focus: true
 
         Rectangle {//debug
             visible: debug
@@ -68,26 +71,12 @@ Item {
         preferredHighlightBegin: userItemWidth * 1
         preferredHighlightEnd: userItemWidth * 2
 
-        //if the user presses down or enter, focus password
-        //if user presses any normal key
-        //copy that character pressed to the pasword box and force focus
-
-        //can't use forwardTo as I want to switch focus. Also it doesn't work.
-        Keys.onPressed: {
-            if (event.key == Qt.Key_Down ||
-                    event.key == Qt.Key_Enter ||
-                    event.key == Qt.Key_Return) {
-                passwordInput.forceActiveFocus();
-            } else if (event.key & Qt.Key_Escape) {
-                //if special key, do nothing. Qt.Escape is 0x10000000 which happens to be a mask used for all special keys in Qt.
-            } else {
-                passwordInput.text += event.text;
-                passwordInput.forceActiveFocus();
-            }
-        }
-
         Component.onCompleted: {
             currentIndex = 0;
+        }
+
+        onUserClicked: {
+            nextItemInFocusChain().forceActiveFocus();
         }
     }
 

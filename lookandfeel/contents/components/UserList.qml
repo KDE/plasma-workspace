@@ -26,6 +26,12 @@ ListView {
     readonly property int userItemHeight: units.largeSpacing * 8
     readonly property int userFaceSize: units.largeSpacing * 6
 
+    /*
+     * Signals that a user was explicitly clicked.
+     * This is not the same as the seclected user changing
+     */
+    signal userClicked;
+
     orientation: ListView.Horizontal
     highlightRangeMode: ListView.StrictlyEnforceRange
 
@@ -39,6 +45,7 @@ ListView {
         onClicked: {
             view.currentIndex = index;
             view.forceActiveFocus();
+            view.userClicked();
         }
     }
 }
