@@ -72,19 +72,8 @@ Image {
                 property alias password: passwordInput.text
                 property alias sessionIndex: sessionCombo.currentIndex
 
-                PlasmaComponents.ComboBox {
-                    id: sessionCombo
-                    model: sessionModel
-                    currentIndex: sessionModel.lastIndex
-
-                    width: 200
-                    textRole: "name"
-
-                    anchors.left: parent.left
-                }
-
-
-
+                //NOTE password is deliberately the first child so it gets focus
+                //be careful when re-ordering
                 RowLayout {
                     anchors.horizontalCenter: parent.horizontalCenter
                     PlasmaComponents.TextField {
@@ -101,6 +90,17 @@ Image {
                         text: i18nd("plasma_lookandfeel_org.kde.lookandfeel","Login")
                         onClicked: loginPrompt.startLogin();
                     }
+                }
+
+                PlasmaComponents.ComboBox {
+                    id: sessionCombo
+                    model: sessionModel
+                    currentIndex: sessionModel.lastIndex
+
+                    width: 200
+                    textRole: "name"
+
+                    anchors.left: parent.left
                 }
 
                 LogoutOptions {
