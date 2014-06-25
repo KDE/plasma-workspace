@@ -42,6 +42,8 @@ Item {
     UserList {
         id: usersList
 
+        activeFocusOnTab: true
+
         Rectangle {//debug
             visible: debug
             border.color: "red"
