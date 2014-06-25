@@ -877,11 +877,11 @@ void PanelView::screenDestroyed(QObject* screen)
 //     otherwise Qt goes mental and starts moving our panels. See:
 //     https://codereview.qt-project.org/#/c/88351/
     QScreen* newScreen = m_corona->screenForId(containment()->lastScreen());
+    setScreen(newScreen);
 
-    if (newScreen)
-        setScreen(newScreen);
-    else
+    if (!newScreen) {
         m_corona->removePanel(this);
+    }
 }
 
 
