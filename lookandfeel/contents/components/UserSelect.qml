@@ -75,7 +75,7 @@ FocusScope {
             currentIndex = 0;
         }
 
-        onUserClicked: {
+        onUserSelected: {
             nextItemInFocusChain().forceActiveFocus();
         }
     }

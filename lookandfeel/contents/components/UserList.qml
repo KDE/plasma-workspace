@@ -27,10 +27,9 @@ ListView {
     readonly property int userFaceSize: units.largeSpacing * 6
 
     /*
-     * Signals that a user was explicitly clicked.
-     * This is not the same as the seclected user changing
+     * Signals that a user was explicitly selected
      */
-    signal userClicked;
+    signal userSelected;
 
     orientation: ListView.Horizontal
     highlightRangeMode: ListView.StrictlyEnforceRange
@@ -44,8 +43,11 @@ ListView {
 
         onClicked: {
             view.currentIndex = index;
-            view.forceActiveFocus();
-            view.userClicked();
+            view.userSelected();
         }
     }
+
+    Keys.onEscapePressed: view.userSelected()
+    Keys.onEnterPressed: view.userSelected()
+    Keys.onReturnPressed: view.userSelected()
 }
