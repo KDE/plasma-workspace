@@ -204,6 +204,8 @@ void DBusSystemTrayTask::_onContextMenu(KJob *job)
     }
 
     QMenu *menu = qobject_cast<QMenu *>(sjob->result().value<QObject *>());
+    menu->adjustSize();
+
     if (menu) {
         int x = sjob->parameters()["x"].toInt();
         int y = sjob->parameters()["y"].toInt();
