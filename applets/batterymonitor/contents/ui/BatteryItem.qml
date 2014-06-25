@@ -156,8 +156,8 @@ Item {
         anchors {
             top: batteryIcon.verticalCenter
             left: batteryNameLabel.left
-            right: parent.right
-            rightMargin: Math.round(units.gridUnit * 2.5)
+            right: batteryPercent.left
+            rightMargin: Math.round(units.gridUnit / 2)
         }
         minimumValue: 0
         maximumValue: 100
@@ -170,8 +170,11 @@ Item {
         anchors {
             verticalCenter: batteryPercentBar.verticalCenter
             right: parent.right
-            rightMargin: units.gridUnit / 2
+            rightMargin: Math.round(units.gridUnit / 2)
         }
+        width: percentageMeasurementLabel.width
+        height: paintedHeight
+        horizontalAlignment: Text.AlignRight
         visible: isPresent
         text: i18nc("Placeholder is battery percentage", "%1%", model["Percent"])
     }

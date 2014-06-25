@@ -96,6 +96,13 @@ FocusScope {
 
         spacing: 0
 
+        Components.Label {
+            // this is just for metrics
+            id: percentageMeasurementLabel
+            text: "100%"
+            visible: false
+        }
+
         BrightnessItem {
             id: brightnessSlider
             icon: "video-display-brightness"

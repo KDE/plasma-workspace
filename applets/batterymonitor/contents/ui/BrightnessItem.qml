@@ -62,8 +62,8 @@ FocusScope {
         anchors {
             top: brightnessIcon.verticalCenter
             left: brightnessLabel.left
-            right: parent.right
-            rightMargin: Math.round(units.gridUnit * 2.5)
+            right: brightnessPercent.left
+            rightMargin: Math.round(units.gridUnit / 2)
         }
         minimumValue: 0
         maximumValue: 100
@@ -79,7 +79,9 @@ FocusScope {
             rightMargin: Math.round(units.gridUnit / 2)
             verticalCenter: brightnessSlider.verticalCenter
         }
+        width: percentageMeasurementLabel.width
         height: paintedHeight
+        horizontalAlignment: Text.AlignRight
         text: i18nc("Placeholder is brightness percentage", "%1%", percentage)
     }
 }
