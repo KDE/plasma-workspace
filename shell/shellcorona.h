@@ -158,11 +158,12 @@ private Q_SLOTS:
 
 private:
     QScreen* insertScreen(QScreen* screen, int idx);
-    void shiftViews(int idx, int delta, int until);
+    void removeView(int idx);
     void screenInvariants() const;
     bool isOutputRedundant(KScreen::Output* output) const;
     void reconsiderOutput(KScreen::Output* output);
     void reconsiderOutputs();
+    QList<PanelView*> panelsForScreen(QScreen* screen);
 
     /**
      * @returns a new containment associated with the specified @p activity and @p screen.

@@ -237,7 +237,9 @@ void DesktopView::screenDestroyed(QObject* screen)
 //     NOTE: this is overriding the screen destroyed slot, we need to do this because
 //     otherwise Qt goes mental and starts moving our panels. See:
 //     https://codereview.qt-project.org/#/c/88351/
-    m_corona->removeDesktop(this);
+    if (screen == this->screen()) {
+        m_corona->removeDesktop(this);
+    }
 }
 
 #include "moc_desktopview.cpp"

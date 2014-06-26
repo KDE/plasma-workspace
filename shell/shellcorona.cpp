@@ -533,11 +533,35 @@ PanelView *ShellCorona::panelView(Plasma::Containment *containment) const
 
 ///// SLOTS
 
-void ShellCorona::shiftViews(int idx, int delta, int until)
+QList<PanelView*> ShellCorona::panelsForScreen(QScreen* screen)
 {
-    for (int i = idx; i<until; ++i) {
-        d->views[i]->setScreen(d->views[i-delta]->screen());
-        d->views[i]->adaptToScreen();
+    QList<PanelView*> ret;
+    foreach(PanelView* v, d->panelViews) {
+        if(v->screen() == screen)
+            ret += v;
+    }
+    return ret;
+}
+
+void ShellCorona::removeView(int idx)
+{
+    if (idx == d->views.count()-1) {
+        QScreen* screen = d->views[idx]->screen();
+        QList<PanelView*> panels = panelsForScreen(screen);
+
+        foreach(PanelView* p, panels) {
+            delete d->panelViews.take(p->containment());
+        }
+        delete d->views.takeLast();
+    } else if (idx < d->views.count()-1) {
+        QScreen* screen = d->views[idx+1]->screen();
+        QList<PanelView*> panels = panelsForScreen(screen);
+
+        d->views[idx]->setScreen(screen);
+        foreach(PanelView* p, panels) {
+            p->setScreen(screen);
+        }
+        removeView(idx+1);
     }
 }
 
@@ -668,11 +692,8 @@ void ShellCorona::removeDesktop(DesktopView *view)
     }
 
     int idx = d->views.indexOf(view);
-    DesktopView *lastView = d->views.takeLast();
-    lastView->setScreen(0);
-    lastView->deleteLater();
 
-    shiftViews(idx, -1, d->views.count()-1);
+    removeView(idx);
 
     screenInvariants();
 }
