@@ -238,7 +238,7 @@ void DesktopView::screenDestroyed(QObject* screen)
 //     otherwise Qt goes mental and starts moving our panels. See:
 //     https://codereview.qt-project.org/#/c/88351/
     if (screen == this->screen()) {
-        m_corona->removeDesktop(this);
+        m_corona->removeScreen(this);
     }
 }
 

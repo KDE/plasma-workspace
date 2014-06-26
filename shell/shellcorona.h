@@ -107,7 +107,7 @@ public Q_SLOTS:
     void toggleActivityManager();
 
     Plasma::Containment *addPanel(const QString &plugin);
-    void removeDesktop(DesktopView* screen);
+    void removeScreen(DesktopView* screen);
 
 protected Q_SLOTS:
     /**

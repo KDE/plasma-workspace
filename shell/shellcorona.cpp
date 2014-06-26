@@ -604,7 +604,7 @@ void ShellCorona::reconsiderOutput(KScreen::Output* output)
     foreach(DesktopView* view, d->views) {
         if (view->screen() == screen) {
             if (isOutputRedundant(output)) { //if redundant, then remove the screen
-                removeDesktop(view);
+                removeScreen(view);
             }
             return; //if it's already in, let's not add it again
         }
@@ -684,7 +684,7 @@ QScreen* ShellCorona::insertScreen(QScreen* screen, int idx)
     return insertScreen(oldScreen, idx+1);
 }
 
-void ShellCorona::removeDesktop(DesktopView *view)
+void ShellCorona::removeScreen(DesktopView *view)
 {
     foreach(PanelView* panel, d->panelViews) {
         if (panel->screen() == view->screen())
@@ -703,7 +703,7 @@ void ShellCorona::removePanel(PanelView* panelView)
     Plasma::Containment* cont = panelView->containment();
     d->waitingPanels << cont;
     d->panelViews.remove(cont);
-    panelView->deleteLater();
+    delete panelView;
 
     emit availableScreenRectChanged();
     emit availableScreenRegionChanged();
