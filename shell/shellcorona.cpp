@@ -577,15 +577,6 @@ void ShellCorona::addOutput(KScreen::Output *output)
 
     DesktopView *view = new DesktopView(this, screen);
 
-    connect(view, &DesktopView::sceneGraphInitialized, this,
-        [view, this]() {
-            // check whether the GL Context supports OpenGL
-            // Note: hasOpenGLShaderPrograms is broken, see QTBUG--39730
-            if (!QOpenGLShaderProgram::hasOpenGLShaderPrograms(view->openglContext())) {
-                qWarning() << "GLSL not available, Plasma won't be functional";
-                QMetaObject::invokeMethod(this, "showOpenGLNotCompatibleWarning", Qt::QueuedConnection);
-            }
-    }, Qt::DirectConnection);
 
     //We have to do it in a lambda,
     connect(screen, &QObject::destroyed, this, [=]() { removeDesktop(view); });
