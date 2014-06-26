@@ -157,8 +157,12 @@ private Q_SLOTS:
     void showOpenGLNotCompatibleWarning();
 
 private:
+    QScreen* insertScreen(QScreen* screen, int idx);
     void shiftViews(int idx, int delta, int until);
     void screenInvariants() const;
+    bool isOutputRedundant(KScreen::Output* output) const;
+    void reconsiderOutput(KScreen::Output* output);
+    void reconsiderOutputs();
 
     /**
      * @returns a new containment associated with the specified @p activity and @p screen.
