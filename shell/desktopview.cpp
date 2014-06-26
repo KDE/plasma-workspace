@@ -34,10 +34,10 @@
 
 DesktopView::DesktopView(ShellCorona *corona, QScreen *screen)
     : PlasmaQuick::View(corona, 0),
+      m_corona(corona),
       m_stayBehind(false),
       m_fillScreen(false),
-      m_dashboardShown(false),
-      m_corona(corona)
+      m_dashboardShown(false)
 {
     setTitle(i18n("Desktop"));
     setIcon(QIcon::fromTheme("user-desktop"));
