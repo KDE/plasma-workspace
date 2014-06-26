@@ -118,17 +118,6 @@ PanelView::PanelView(ShellCorona *corona, QWindow *parent)
 PanelView::~PanelView()
 {
     if (containment()) {
-        config().writeEntry("offset", m_offset);
-        config().writeEntry("max", m_maxLength);
-        config().writeEntry("min", m_minLength);
-        if (formFactor() == Plasma::Types::Vertical) {
-            config().writeEntry("length", size().height());
-            config().writeEntry("thickness", size().width());
-        } else {
-            config().writeEntry("length", size().width());
-            config().writeEntry("thickness", size().height());
-        }
-        config().writeEntry("alignment", (int)m_alignment);
         m_corona->requestApplicationConfigSync();
     }
     PanelShadows::self()->removeWindow(this);
