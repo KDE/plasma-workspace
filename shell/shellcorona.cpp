@@ -330,11 +330,11 @@ void ShellCorona::primaryOutputChanged()
         i++;
     }
     QScreen *oldPrimary = d->views.first()->screen();
-    qDebug() << "primary changed!" << oldPrimary->name() << newPrimary->name() << i;
 
     //if it was not found, it means that addOutput hasn't been called yet
     if (i>=d->views.count() || i==0)
         return;
+    qDebug() << "primary changed!" << oldPrimary->name() << newPrimary->name() << i;
 
     Q_ASSERT(oldPrimary != newPrimary);
     Q_ASSERT(d->views[0]->screen() != d->views[i]->screen());
@@ -360,7 +360,7 @@ void ShellCorona::primaryOutputChanged()
 void ShellCorona::screenInvariants() const
 {
     Q_ASSERT(d->views.count() <= QGuiApplication::screens().count());
-    Q_ASSERT(!d->screenConfiguration->primaryOutput() || !d->views.isEmpty() || outputToScreen(d->screenConfiguration->primaryOutput()) == d->views.first()->screen());
+    Q_ASSERT(!d->screenConfiguration->primaryOutput() || d->views.isEmpty() || outputToScreen(d->screenConfiguration->primaryOutput()) == d->views.first()->screen());
     QScreen *s = d->views.isEmpty() ? nullptr : d->views[0]->screen();
     if (!s) {
         qWarning() << "error: couldn't find primary output" << d->screenConfiguration->primaryOutput();
@@ -553,9 +553,10 @@ bool ShellCorona::isOutputRedundant(KScreen::Output* screen) const
     //FIXME: QScreen doesn't have any idea of "this qscreen is clone of this other one
     //so this ultra inefficient heuristic has to stay until we have a slightly better api
     foreach (KScreen::Output *s, d->screenConfiguration->connectedOutputs()) {
+        if (!s->isEnabled())
+            continue;
         QRect sGeometry = s->geometry();
-        if (s->isEnabled() &&
-            sGeometry.contains(geometry, false) &&
+        if (sGeometry.contains(geometry, false) &&
             sGeometry.width() > geometry.width() &&
             sGeometry.height() > geometry.height()) {
             return true;
@@ -667,7 +668,8 @@ void ShellCorona::removeDesktop(DesktopView *view)
     }
 
     int idx = d->views.indexOf(view);
-    DesktopView *lastView = d->views.takeAt(d->views.count()-1);
+    DesktopView *lastView = d->views.takeLast();
+    lastView->setScreen(0);
     lastView->deleteLater();
 
     shiftViews(idx, -1, d->views.count()-1);
