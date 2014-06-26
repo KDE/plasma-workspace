@@ -329,11 +329,11 @@ void ShellCorona::primaryOutputChanged()
     }
     QScreen *oldPrimary = d->views.first()->screen();
     qDebug() << "primary changed!" << oldPrimary->name() << newPrimary->name() << i;
-//
-//     //if it was not found, it means that addOutput hasn't been called yet
+
+    //if it was not found, it means that addOutput hasn't been called yet
     if (i>=d->views.count() || i==0)
         return;
-//
+
     Q_ASSERT(oldPrimary != newPrimary);
     Q_ASSERT(d->views[0]->screen() != d->views[i]->screen());
     Q_ASSERT(d->views[0]->screen() == oldPrimary);
@@ -366,21 +366,17 @@ void ShellCorona::screenInvariants() const
     }
 
     Q_ASSERT(d->views[0]->screen()->name() == s->name());
-    if (!ShellManager::s_forceWindowed) {
-        Q_ASSERT(d->views[0]->geometry() == s->geometry());
-    }
+    Q_ASSERT(d->views[0]->geometry() == s->geometry() || ShellManager::s_forceWindowed);
 
     QSet<QScreen*> screens;
     int i = 0;
     foreach(DesktopView *view, d->views) {
         Q_ASSERT(!screens.contains(view->screen()));
         Q_ASSERT(view->isVisible());
-        if (!ShellManager::s_forceWindowed) {
-            Q_ASSERT(view->fillScreen());
-        }
-        screens.insert(view->screen());
-
+        Q_ASSERT(view->fillScreen() || ShellManager::s_forceWindowed);
         Q_ASSERT(view->containment()->screen() == i);
+
+        screens.insert(view->screen());
         ++i;
     }
 }
