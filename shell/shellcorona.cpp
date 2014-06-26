@@ -375,7 +375,9 @@ void ShellCorona::screenInvariants() const
     foreach(DesktopView *view, d->views) {
         Q_ASSERT(!screens.contains(view->screen()));
         Q_ASSERT(view->isVisible());
-        Q_ASSERT(view->fillScreen());
+        if (!ShellManager::s_forceWindowed) {
+            Q_ASSERT(view->fillScreen());
+        }
         screens.insert(view->screen());
 
         Q_ASSERT(view->containment()->screen() == i);
