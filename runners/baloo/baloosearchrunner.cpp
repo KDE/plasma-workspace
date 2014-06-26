@@ -27,8 +27,8 @@
 #include <KRunner/QueryMatch>
 #include <KLocalizedString>
 
-#include "query.h"
-#include "result.h"
+#include <Baloo/Query>
+#include <Baloo/Result>
 
 SearchRunner::SearchRunner(QObject* parent, const QVariantList& args)
     : Plasma::AbstractRunner(parent, args)
