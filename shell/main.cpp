@@ -50,6 +50,7 @@ int main(int argc, char** argv)
 
     QApplication app(argc, argv);
     app.setApplicationName("plasmashell");
+    app.setApplicationDisplayName(i18n("Plasma"));
     app.setOrganizationDomain("kde.org");
     app.setApplicationVersion(version);
     app.setQuitOnLastWindowClosed(false);
