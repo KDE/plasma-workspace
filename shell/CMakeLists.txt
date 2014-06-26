@@ -75,11 +75,9 @@ add_executable(plasmashell
 
 target_link_libraries(plasmashell
  Qt5::Quick
- Qt5::Qml
  Qt5::DBus
  KF5::KIOCore
  KF5::WindowSystem
- KF5::CoreAddons
  KF5::Crash
  KF5::Plasma
  KF5::PlasmaQuick
@@ -87,7 +85,6 @@ target_link_libraries(plasmashell
  KF5::Solid
  KF5::Declarative
  KF5::I18n
- KF5::XmlGui
  KF5::IconThemes
  KF5::Activities
  KF5::GlobalAccel
