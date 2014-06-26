@@ -58,6 +58,7 @@ protected Q_SLOTS:
      * It will be called when the configuration is requested
      */
     virtual void showConfigurationInterface(Plasma::Applet *applet);
+    void screenDestroyed(QObject* screen);
 
 Q_SIGNALS:
     void stayBehindChanged();
@@ -70,6 +71,7 @@ private:
 
     QPointer<PlasmaQuick::ConfigView> m_configView;
     QPointer<QScreen> m_oldScreen;
+    ShellCorona *m_corona;
     bool m_stayBehind : 1;
     bool m_fillScreen : 1;
     bool m_dashboardShown : 1;

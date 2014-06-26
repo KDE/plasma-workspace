@@ -578,8 +578,6 @@ void ShellCorona::addOutput(KScreen::Output *output)
     DesktopView *view = new DesktopView(this, screen);
 
 
-    //We have to do it in a lambda,
-    connect(screen, &QObject::destroyed, this, [=]() { removeDesktop(view); });
 
     d->views.insert(insertPosition, view);
     shiftViews(insertPosition+1, 1, d->views.count()-1);
@@ -614,6 +612,11 @@ void ShellCorona::addOutput(KScreen::Output *output)
 
 void ShellCorona::removeDesktop(DesktopView *view)
 {
+    foreach(PanelView* panel, d->panelViews) {
+        if (panel->screen() == view->screen())
+            removePanel(panel);
+    }
+
     int idx = d->views.indexOf(view);
     DesktopView *lastView = d->views.takeAt(d->views.count()-1);
     lastView->deleteLater();

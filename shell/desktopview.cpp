@@ -25,6 +25,7 @@
 #include <QQmlEngine>
 #include <QQmlContext>
 #include <QScreen>
+#include <qopenglshaderprogram.h>
 
 #include <kwindowsystem.h>
 #include <klocalizedstring.h>
@@ -35,7 +36,8 @@ DesktopView::DesktopView(ShellCorona *corona, QScreen *screen)
     : PlasmaQuick::View(corona, 0),
       m_stayBehind(false),
       m_fillScreen(false),
-      m_dashboardShown(false)
+      m_dashboardShown(false),
+      m_corona(corona)
 {
     setTitle(i18n("Desktop"));
     setIcon(QIcon::fromTheme("user-desktop"));
@@ -228,6 +230,14 @@ void DesktopView::coronaPackageChanged(const Plasma::Package &package)
 {
     setContainment(0);
     setSource(QUrl::fromLocalFile(package.filePath("views", "Desktop.qml")));
+}
+
+void DesktopView::screenDestroyed(QObject* screen)
+{
+//     NOTE: this is overriding the screen destroyed slot, we need to do this because
+//     otherwise Qt goes mental and starts moving our panels. See:
+//     https://codereview.qt-project.org/#/c/88351/
+    m_corona->removeDesktop(this);
 }
 
 #include "moc_desktopview.cpp"
