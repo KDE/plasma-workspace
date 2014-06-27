@@ -61,6 +61,11 @@ void Osd::brightnessChanged(int percent)
     showProgress(QStringLiteral("video-display-brightness"), percent);
 }
 
+void Osd::keyboardBrightnessChanged(int percent)
+{
+    showProgress(QStringLiteral("input-keyboard-brightness"), percent);
+}
+
 void Osd::volumeChanged(int percent)
 {
     QString icon;

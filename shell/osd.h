@@ -41,6 +41,7 @@ public:
 
 public Q_SLOTS:
     void brightnessChanged(int percent);
+    void keyboardBrightnessChanged(int percent);
     void volumeChanged(int percent);
     void mediaPlayerVolumeChanged(int percent, const QString &playerName, const QString &playerIconName);
     void kbdLayoutChanged(const QString &layoutName);
