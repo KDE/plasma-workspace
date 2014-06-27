@@ -223,6 +223,8 @@ PlasmaComponents.ListItem {
 
                         text: body
                         color: theme.textColor
+                        selectedTextColor: theme.viewBackgroundColor
+                        selectionColor: theme.viewFocusColor
                         font.capitalization: theme.defaultFont.capitalization
                         font.family: theme.defaultFont.family
                         font.italic: theme.defaultFont.italic
