@@ -20,6 +20,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #include <QDateTime>
 #include <QCommandLineParser>
+#include <QSessionManager>
 
 #include <iostream>
 
@@ -56,6 +57,13 @@ int main(int argc, char* argv[])
     QCoreApplication::setApplicationName(QStringLiteral("kscreenlocker_greet"));
     QCoreApplication::setApplicationVersion(QStringLiteral("0.1"));
     QCoreApplication::setOrganizationDomain(QStringLiteral("kde.org"));
+
+    // disable session management for the greeter
+    auto disableSessionManagement = [](QSessionManager &sm) {
+        sm.setRestartHint(QSessionManager::RestartNever);
+    };
+    QObject::connect(&app, &QGuiApplication::commitDataRequest, disableSessionManagement);
+    QObject::connect(&app, &QGuiApplication::saveStateRequest, disableSessionManagement);
 
     QCommandLineParser parser;
     parser.setApplicationDescription(i18n("Greeter for the KDE Plasma Workspaces Screen locker"));
