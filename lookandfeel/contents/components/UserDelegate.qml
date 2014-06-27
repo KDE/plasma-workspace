@@ -31,7 +31,7 @@ Item {
     property string name
     property string userName
     property alias iconSource: face.source
-    property alias faceSize: frame.width
+    property int faceSize: frame.width
 
     signal clicked()
 
@@ -45,7 +45,6 @@ Item {
 
     Item {
         id: imageWrapper
-        scale: isCurrent ? 1.0 : 0.8
         anchors {
             top: parent.top
             left: parent.left
@@ -53,12 +52,6 @@ Item {
         }
 
         height: parent.height*2/3
-
-        Behavior on scale {
-            NumberAnimation {
-                duration: 100
-            }
-        }
 
         //TODO there code was to show a blue border on mouseover
         //which shows that something is interactable.
@@ -70,11 +63,16 @@ Item {
             imagePath: "widgets/background"
 
             //width is set in alias at top
+            width: Math.round(faceSize * (isCurrent ? 1.0 : 0.8))
             height: width
 
+            Behavior on width {
+                NumberAnimation {
+                    duration: 100
+                }
+            }
             anchors {
-                horizontalCenter: parent.horizontalCenter
-                top: parent.top
+                centerIn: parent
             }
         }
 
