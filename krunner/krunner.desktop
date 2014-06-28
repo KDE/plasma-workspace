@@ -1,6 +1,14 @@
 [Desktop Entry]
 Exec=krunner
 Name=KRunner
+Name[ca]=KRunner
+Name[es]=KRunner
+Name[fi]=KRunner
+Name[nl]=KRunner
+Name[pt]=KRunner
+Name[sk]=KRunner
+Name[sv]=Kör program
+Name[x-test]=xxKRunnerxx
 OnlyShowIn=KDE;
 Type=Application
 X-DBUS-StartupType=Unique
