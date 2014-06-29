@@ -93,7 +93,7 @@ void WallpaperPackage::pathChanged(Plasma::Package *package)
     } else {
         // dirty trick to support having a file passed in instead of a directory
         package->addFileDefinition("preferred", info.fileName(), i18n("Recommended wallpaper file"));
-        package->addFileDefinition("sceenshot", info.fileName(), i18n("Preview"));
+        package->addFileDefinition("screenshot", info.fileName(), i18n("Preview"));
         package->setContentsPrefixPaths(QStringList());
         package->setPath(info.path());
     }
