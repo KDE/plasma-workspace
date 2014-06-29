@@ -11,6 +11,8 @@ X-KDE-Weight=60
 
 Name=Screen Locking
 Name[ca]=Bloqueig de la pantalla
+Name[de]=Bildschirmsperre
+Name[en_GB]=Screen Locking
 Name[es]=Bloqueo de la pantalla
 Name[fi]=Näytön lukitseminen
 Name[id]=Mengunci Layar
@@ -30,6 +32,8 @@ Name[uk]=Блокування екрана
 Name[x-test]=xxScreen Lockingxx
 Comment=Screen Locking Timeouts
 Comment[ca]=Temps d'espera pel bloqueig de la pantalla
+Comment[de]=Zeitüberschreitungen für Bildschirmsperre
+Comment[en_GB]=Screen Locking Timeouts
 Comment[es]=Tiempo de espera del bloqueo de la pantalla
 Comment[fi]=Näyttö lukitsemisen viipeet
 Comment[id]=Waktu Mengunci Layar
