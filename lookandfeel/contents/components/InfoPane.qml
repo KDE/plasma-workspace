@@ -50,7 +50,7 @@ ColumnLayout {
             id: battery
             hasBattery: true
             percent: pmSource.data["Battery0"]["Percent"]
-            pluggedIn: pmSource.data["AC Adapter"]["Plugged in"]
+            pluggedIn: pmSource.data["Battery0"]["State"] != "Discharging"
 
             height: batteryLabel.height
             width: batteryLabel.height

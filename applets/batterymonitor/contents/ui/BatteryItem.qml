@@ -36,7 +36,6 @@ Item {
     // NOTE: According to the UPower spec this property is only valid for primary batteries, however
     // UPower seems to set the Present property false when a device is added but not probed yet
     property bool isPresent: model["Plugged in"]
-    property bool charging: model["State"] == "Charging" && model["Is Power Supply"]
     property int remainingTime
 
     PlasmaCore.ToolTipArea {
@@ -99,12 +98,12 @@ Item {
         batteryType: model["Type"]
         percent: model["Percent"]
         hasBattery: model["Plugged in"]
-        pluggedIn: model["State"] == "Charging" && model["Is Power Supply"]
+        pluggedIn: model["State"] != "Discharging" && model["Is Power Supply"]
     }
 
     SequentialAnimation {
       id: chargeAnimation
-      running: units.longDuration > 0 && model["State"] == "Charging" && model["Is Power Supply"]
+      running: units.longDuration > 0 && batteryIcon.pluggedIn
       alwaysRunToEnd: true
       loops: Animation.Infinite
 
