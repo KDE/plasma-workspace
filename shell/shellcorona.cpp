@@ -306,7 +306,8 @@ void ShellCorona::load()
     }
 
     KScreen::ConfigMonitor::instance()->addConfig(d->screenConfiguration);
-    for (KScreen::Output *output : sortOutputs(d->screenConfiguration->connectedOutputs())) {
+    //we're not going through the connectedOutputs because we need to connect to all outputs
+    for (KScreen::Output *output : sortOutputs(d->screenConfiguration->outputs())) {
         addOutput(output);
     }
     connect(d->screenConfiguration, &KScreen::Config::outputAdded, this, &ShellCorona::addOutput);
