@@ -96,7 +96,7 @@ X-KDE-PluginInfo-Version=1.0
 X-KDE-PluginInfo-Website=plasma.kde.org
 X-KDE-ServiceTypes=Plasma/Applet
 X-Plasma-API=declarativeappletscript
+X-KDE-PluginInfo-Category=Date and Time
 
 X-Plasma-MainScript=ui/main.qml
 X-Plasma-RemoteLocation=
-X-KDE-PluginInfo-Category=
