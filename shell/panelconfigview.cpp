@@ -64,7 +64,7 @@ PanelConfigView::PanelConfigView(Plasma::Containment *containment, PanelView *pa
             });
 
     KWindowSystem::setType(winId(), NET::Dock);
-    setFlags(Qt::WindowFlags((flags() | Qt::FramelessWindowHint) & (~Qt::WindowDoesNotAcceptFocus)));
+    setFlags(Qt::WindowFlags((flags() | Qt::FramelessWindowHint | Qt::BypassWindowManagerHint) & (~Qt::WindowDoesNotAcceptFocus)));
     KWindowSystem::forceActiveWindow(winId());
 
     KWindowEffects::enableBlurBehind(winId(), true);
