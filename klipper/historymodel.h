@@ -23,6 +23,13 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 class HistoryItem;
 
+enum class HistoryItemType
+{
+    Text,
+    Image,
+    Url
+};
+
 class HistoryModel : public QAbstractListModel
 {
     Q_OBJECT
@@ -57,5 +64,7 @@ inline int HistoryModel::maxSize() const
 {
     return m_maxSize;
 }
+
+Q_DECLARE_METATYPE(HistoryItemType)
 
 #endif

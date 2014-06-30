@@ -17,7 +17,9 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 *********************************************************************/
 #include "historymodel.h"
-#include "historyitem.h"
+#include "historyimageitem.h"
+#include "historystringitem.h"
+#include "historyurlitem.h"
 
 #include <QDebug>
 
@@ -72,6 +74,17 @@ QVariant HistoryModel::data(const QModelIndex &index, int role) const
         return qVariantFromValue<HistoryItem*>(item.data());
     case Qt::UserRole+1:
         return item->uuid();
+    case Qt::UserRole+2: {
+        if (dynamic_cast<HistoryStringItem*>(item.data())) {
+            return qVariantFromValue<HistoryItemType>(HistoryItemType::Text);
+        } else if (dynamic_cast<HistoryImageItem*>(item.data())) {
+            return qVariantFromValue<HistoryItemType>(HistoryItemType::Image);
+        } else if (dynamic_cast<HistoryURLItem*>(item.data())) {
+            return qVariantFromValue<HistoryItemType>(HistoryItemType::Url);
+        } else {
+            return qVariantFromValue<HistoryItemType>(HistoryItemType::Text);
+        }
+    }
     }
     return QVariant();
 }

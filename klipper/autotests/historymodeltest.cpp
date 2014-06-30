@@ -18,7 +18,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 *********************************************************************/
 #include "modeltest.h"
 #include "../historymodel.h"
+#include "../historyimageitem.h"
 #include "../historystringitem.h"
+#include "../historyurlitem.h"
 
 #include <QtTest>
 
@@ -30,6 +32,8 @@ private Q_SLOTS:
     void testInsertRemove();
     void testClear();
     void testIndexOf();
+    void testType_data();
+    void testType();
 };
 
 void HistoryModelTest::testSetMaxSize()
@@ -212,6 +216,32 @@ void HistoryModelTest::testIndexOf()
 
     history->clear();
     QVERIFY(!history->indexOf(fooUuid).isValid());
+}
+
+void HistoryModelTest::testType_data()
+{
+    QTest::addColumn<HistoryItem*>("item");
+    QTest::addColumn<HistoryItemType>("expectedType");
+
+    HistoryItem *item = new HistoryStringItem(QStringLiteral("foo"));
+    QTest::newRow("text") << item << HistoryItemType::Text;
+    item = new HistoryImageItem(QPixmap());
+    QTest::newRow("image") << item << HistoryItemType::Image;
+    item = new HistoryURLItem(QList<QUrl>(), KUrlMimeData::MetaDataMap(), false);
+    QTest::newRow("url") << item << HistoryItemType::Url;
+}
+
+void HistoryModelTest::testType()
+{
+    QScopedPointer<HistoryModel> history(new HistoryModel(nullptr));
+    QScopedPointer<ModelTest> modelTest(new ModelTest(history.data()));
+    history->setMaxSize(10);
+    QCOMPARE(history->rowCount(), 0);
+
+    QFETCH(HistoryItem*, item);
+    QFETCH(HistoryItemType, expectedType);
+    history->insert(QSharedPointer<HistoryItem>(item));
+    QCOMPARE(history->index(0).data(Qt::UserRole+2).value<HistoryItemType>(), expectedType);
 }
 
 QTEST_MAIN(HistoryModelTest)
