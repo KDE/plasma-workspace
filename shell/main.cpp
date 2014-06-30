@@ -41,11 +41,6 @@ int main(int argc, char** argv)
 {
     QQuickWindow::setDefaultAlphaBuffer(true);
 
-    const QByteArray loopName = qgetenv("QSG_RENDER_LOOP");
-    if (loopName.isEmpty()) {
-        setenv("QSG_RENDER_LOOP", "basic", 1);
-    }
-
     KLocalizedString::setApplicationDomain("plasmashell");
 
     QApplication app(argc, argv);
