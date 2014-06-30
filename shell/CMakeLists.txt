@@ -22,6 +22,7 @@ find_package(KF5Activities REQUIRED)
 find_package(KF5TextEditor) # not part of KF5.0
 find_package(KF5DBusAddons ${KF5_VERSION} REQUIRED)
 find_package(KF5Declarative ${KF5_VERSION} REQUIRED)
+find_package(KF5XmlGui REQUIRED)
 
 set(HAVE_KTEXTEDITOR ${KF5TextEditor_FOUND})
 
@@ -91,6 +92,7 @@ target_link_libraries(plasmashell
  KF5::DBusAddons
  KF5::Screen
  KF5::Declarative
+ KF5::XmlGui
 )
 if (TARGET KF5::TextEditor)
  target_link_libraries(plasmashell KF5::TextEditor)
