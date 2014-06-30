@@ -223,7 +223,7 @@ void WidgetExplorerPrivate::initRunningApplets()
     //we've tried our best to get a corona
     //we don't want just one containment, we want them all
     if (!c) {
-        qDebug() << "can't happen";
+        qWarning() << "WidgetExplorer failed to find corona";
         return;
     }
 
