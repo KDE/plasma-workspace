@@ -256,7 +256,8 @@ QString ShellCorona::shell() const
 
 bool outputLess(KScreen::Output *a, KScreen::Output *b)
 {
-    return ((a->isPrimary() && !b->isPrimary())
+    return ((a->isEnabled() && !b->isEnabled())
+         || (a->isEnabled() == b->isEnabled() && (a->isPrimary() && !b->isPrimary()))
          || (a->isPrimary() == b->isPrimary() && (a->pos().x() < b->pos().x()
          || (a->pos().x() == b->pos().x() && a->pos().y() < b->pos().y()))));
 }
@@ -320,7 +321,7 @@ void ShellCorona::load()
 void ShellCorona::primaryOutputChanged()
 {
     KScreen::Config *current = d->screenConfiguration;
-    if (!current->primaryOutput())
+    if (!current->primaryOutput() || !current->primaryOutput()->isEnabled())
         return;
     QScreen *newPrimary = outputToScreen(current->primaryOutput());
     int i=0;
@@ -360,7 +361,7 @@ void ShellCorona::primaryOutputChanged()
 void ShellCorona::screenInvariants() const
 {
     Q_ASSERT(d->views.count() <= QGuiApplication::screens().count());
-    Q_ASSERT(!d->screenConfiguration->primaryOutput() || d->views.isEmpty() || outputToScreen(d->screenConfiguration->primaryOutput()) == d->views.first()->screen());
+    Q_ASSERT(!d->screenConfiguration->primaryOutput() || d->views.isEmpty() || outputToScreen(d->screenConfiguration->primaryOutput()) == d->views.first()->screen() || !d->screenConfiguration->primaryOutput()->isEnabled());
     QScreen *s = d->views.isEmpty() ? nullptr : d->views[0]->screen();
     if (!s) {
         qWarning() << "error: couldn't find primary output" << d->screenConfiguration->primaryOutput();
