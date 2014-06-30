@@ -140,7 +140,6 @@ void WidgetExplorerPrivate::initFilters()
         if (existingCategories.contains(lowerCaseCat)) {
             const QString trans = i18n(category.toLocal8Bit());
             categories.insert(trans.toLower(), qMakePair(trans, lowerCaseCat));
-            qDebug() << "Categories: << " << lowerCaseCat;
         }
     }
 
