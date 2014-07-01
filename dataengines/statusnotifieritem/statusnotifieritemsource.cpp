@@ -217,9 +217,9 @@ void StatusNotifierItemSource::refreshCallback(QDBusPendingCallWatcher *call)
                 QString appName = tokens.takeLast();
 
                 if (!m_customIconLoader) {
-                    m_customIconLoader = new KIconLoader(appName, QStringList(), this);
+                    m_customIconLoader = new KIconLoader(appName, QStringList() << path, this);
                 }
-                m_customIconLoader->addAppDir(appName, path);
+                m_customIconLoader->addAppDir(appName);
             } else {
                 qWarning() << "Wrong IconThemePath" << path << ": too short or does not end with 'icons'";
             }

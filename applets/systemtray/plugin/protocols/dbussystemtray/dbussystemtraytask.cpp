@@ -370,8 +370,8 @@ void DBusSystemTrayTask::syncIcons(const Plasma::DataEngine::Data &properties)
                 // adding all application dirs to KIconLoader::global(), to
                 // avoid potential icon name clashes between application
                 // icons
-                m_customIconLoader = new KIconLoader(appName, QStringList(), this);
-                m_customIconLoader->addAppDir(appName, path);
+                m_customIconLoader = new KIconLoader(appName, QStringList() << path, this);
+                m_customIconLoader->addAppDir(appName);
                 is_icon_changed = true;
             } else {
                 qWarning() << "Wrong IconThemePath" << path << ": too short or does not end with 'icons'";
