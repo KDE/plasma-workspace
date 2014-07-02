@@ -195,3 +195,10 @@ void HistoryModel::moveBackToTop()
 {
     moveToTop(m_items.count() - 1);
 }
+
+QHash< int, QByteArray > HistoryModel::roleNames() const
+{
+    QHash<int, QByteArray> hash;
+    hash.insert(Qt::DisplayRole, QByteArrayLiteral("DisplayRole"));
+    return hash;
+}

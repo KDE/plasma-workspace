@@ -39,6 +39,7 @@ public:
     QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
     int rowCount(const QModelIndex &parent = QModelIndex()) const override;
     bool removeRows(int row, int count, const QModelIndex &parent = QModelIndex()) override;
+    QHash< int, QByteArray > roleNames() const override;
     bool remove(const QByteArray &uuid);
 
     int maxSize() const;
