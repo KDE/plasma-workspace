@@ -338,7 +338,7 @@ XDG_CURRENT_DESKTOP=KDE
 export XDG_CURRENT_DESKTOP
 
 # At this point all the environment is ready, let's send it to kwalletd if running
-if test -n "PAM_KWALLET_LOGIN" ; then
+if test -n "$PAM_KWALLET_LOGIN" ; then
     env | socat STDIN UNIX-CONNECT:$PAM_KWALLET_LOGIN
 fi
 
