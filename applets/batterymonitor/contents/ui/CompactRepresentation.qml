@@ -26,68 +26,66 @@ import org.kde.plasma.components 2.0 as Components
 import org.kde.plasma.workspace.components 2.0
 import "plasmapackage:/code/logic.js" as Logic
 
-//Should we consider turning this into a Flow item?
-Row {
+MouseArea {
     id: root
     Layout.minimumWidth: isConstrained() ? units.iconSizes.medium : 24 // NOTE: Keep in sync with systray
     Layout.minimumHeight: isConstrained() ? units.iconSizes.medium * view.count : 24
     property real itemSize: Math.min(root.height, root.width/view.count)
 
+    onClicked: plasmoid.expanded = !plasmoid.expanded
+
     function isConstrained() {
         return (plasmoid.formFactor == PlasmaCore.Types.Vertical || plasmoid.formFactor == PlasmaCore.Types.Horizontal)
     }
 
-    MouseArea {
-        anchors.fill: parent
-        onClicked: plasmoid.expanded = !plasmoid.expanded
-    }
+    //Should we consider turning this into a Flow item?
+    Row {
+        Repeater {
+            id: view
 
-    Repeater {
-        id: view
-        anchors.fill: parent
+            property bool hasBattery: pmSource.data["Battery"]["Has Battery"]
 
-        property bool hasBattery: pmSource.data["Battery"]["Has Battery"]
+            /*property QtObject pmSource: batterymonitor.pmSource
+            property QtObject batteries: batterymonitor.batteries*/
 
-        /*property QtObject pmSource: batterymonitor.pmSource
-        property QtObject batteries: batterymonitor.batteries*/
+            property bool singleBattery: isConstrained() || !hasBattery
 
-        property bool singleBattery: isConstrained() || !hasBattery
+            model: singleBattery ? 1 : batteries
 
-        model: singleBattery ? 1 : batteries
+            Item {
+                id: batteryContainer
 
-        delegate: Item {
-            id: batteryContainer
+                property bool hasBattery: view.singleBattery ? batteries.count : model["Plugged in"]
+                property int percent: view.singleBattery ? batteries.cumulativePercent : model["Percent"]
+                property bool pluggedIn: view.singleBattery ? batteries.charging : (model["Is Power Supply"] && model["State"] != "Discharging")
 
-            property bool hasBattery: view.singleBattery ? batteries.count : model["Plugged in"]
-            property int percent: view.singleBattery ? batteries.cumulativePercent : model["Percent"]
-            property bool pluggedIn: pmSource.data["AC Adapter"] != undefined && pmSource.data["AC Adapter"]["Plugged in"] && (view.singleBattery || model["Is Power Supply"])
+                height: root.itemSize
+                width: root.width/view.count
 
-            height: root.itemSize
-            width: root.width/view.count
+                property real iconSize: Math.min(width, height)
 
-            property real iconSize: Math.min(width, height)
+                Column {
+                    anchors.centerIn: parent
 
-            Column {
-                anchors.centerIn: parent
+                    BatteryIcon {
+                        id: batteryIcon
+                        anchors.horizontalCenter: isConstrained() ? undefined : parent.horizontalCenter
+                        hasBattery: batteryContainer.hasBattery
+                        percent: batteryContainer.percent
+                        pluggedIn: batteryContainer.pluggedIn
+                        height: isConstrained() ? batteryContainer.iconSize : batteryContainer.iconSize - batteryLabel.height
+                        width: height
+                    }
 
-                BatteryIcon {
-                    id: batteryIcon
-                    anchors.horizontalCenter: isConstrained() ? undefined : parent.horizontalCenter
-                    hasBattery: batteryContainer.hasBattery
-                    percent: batteryContainer.percent
-                    pluggedIn: batteryContainer.pluggedIn
-                    height: isConstrained() ? batteryContainer.iconSize : batteryContainer.iconSize - batteryLabel.height
-                    width: height
-                }
-
-                Components.Label {
-                    id: batteryLabel
-                    width: parent.width
-                    height: visible ? paintedHeight : 0
-                    horizontalAlignment: Text.AlignHCenter
-                    text: i18nc("battery percentage below battery icon", "%1%", percent)
-                    font.pixelSize: Math.max(batteryContainer.iconSize/8, theme.mSize(theme.smallestFont).height)
-                    visible: false//!isConstrained()
+                    Components.Label {
+                        id: batteryLabel
+                        width: parent.width
+                        height: visible ? paintedHeight : 0
+                        horizontalAlignment: Text.AlignHCenter
+                        text: i18nc("battery percentage below battery icon", "%1%", percent)
+                        font.pixelSize: Math.max(batteryContainer.iconSize/8, theme.mSize(theme.smallestFont).height)
+                        visible: false//!isConstrained()
+                    }
                 }
             }
         }
