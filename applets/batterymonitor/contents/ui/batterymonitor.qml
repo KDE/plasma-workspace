@@ -83,6 +83,7 @@ Item {
         // true  --> all batteries charged
         // false --> one of the batteries charging/discharging
         property bool allCharged
+        property bool charging
         property string tooltipText
         property string tooltipImage
     }
