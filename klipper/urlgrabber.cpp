@@ -86,7 +86,7 @@ URLGrabber::~URLGrabber()
 // Called from Klipper::slotRepeatAction, i.e. by pressing Ctrl-Alt-R
 // shortcut. I.e. never from clipboard monitoring
 //
-void URLGrabber::invokeAction( const HistoryItem* item )
+void URLGrabber::invokeAction( HistoryItemConstPtr item )
 {
     m_myClipItem = item;
     actionMenu( item, false );
@@ -181,14 +181,14 @@ const ActionList& URLGrabber::matchingActions( const QString& clipData, bool aut
 }
 
 
-void URLGrabber::checkNewData( const HistoryItem* item )
+void URLGrabber::checkNewData( HistoryItemConstPtr item )
 {
     // qDebug() << "** checking new data: " << clipData;
     actionMenu( item, true ); // also creates m_myMatches
 }
 
 
-void URLGrabber::actionMenu( const HistoryItem* item, bool automatically_invoked )
+void URLGrabber::actionMenu( HistoryItemConstPtr item, bool automatically_invoked )
 {
     if (!item) {
       qWarning("Attempt to invoke URLGrabber without an item");

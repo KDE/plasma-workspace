@@ -39,7 +39,7 @@ HistoryItem::~HistoryItem() {
 
 }
 
-HistoryItem* HistoryItem::create( const QMimeData* data )
+HistoryItemPtr HistoryItem::create( const QMimeData* data )
 {
 #if 0
     int i=0;
@@ -53,24 +53,24 @@ HistoryItem* HistoryItem::create( const QMimeData* data )
         QList<QUrl> urls = KUrlMimeData::urlsFromMimeData(data, KUrlMimeData::PreferKdeUrls, &metaData);
         QByteArray bytes = data->data("application/x-kde-cutselection");
         bool cut = !bytes.isEmpty() && (bytes.at(0) == '1'); // true if 1
-        return new HistoryURLItem(urls, metaData, cut);
+        return HistoryItemPtr(new HistoryURLItem(urls, metaData, cut));
     }
     if (data->hasText())
     {
-        return new HistoryStringItem(data->text());
+        return HistoryItemPtr(new HistoryStringItem(data->text()));
     }
     if (data->hasImage())
     {
         QImage image = qvariant_cast<QImage>(data->imageData());
-        return new HistoryImageItem(QPixmap::fromImage(image));
+        return HistoryItemPtr(new HistoryImageItem(QPixmap::fromImage(image)));
     }
 
-    return 0; // Failed.
+    return HistoryItemPtr(); // Failed.
 }
 
-HistoryItem* HistoryItem::create( QDataStream& dataStream ) {
+HistoryItemPtr HistoryItem::create( QDataStream& dataStream ) {
     if ( dataStream.atEnd() ) {
-        return 0;
+        return HistoryItemPtr();
     }
     QString type;
     dataStream >> type;
@@ -81,20 +81,20 @@ HistoryItem* HistoryItem::create( QDataStream& dataStream ) {
         dataStream >> urls;
         dataStream >> metaData;
         dataStream >> cut;
-        return new HistoryURLItem( urls, metaData, cut );
+        return HistoryItemPtr(new HistoryURLItem( urls, metaData, cut ));
     }
     if ( type == "string" ) {
         QString text;
         dataStream >> text;
-        return new HistoryStringItem( text );
+        return HistoryItemPtr(new HistoryStringItem( text ));
     }
     if ( type == "image" ) {
         QPixmap image;
         dataStream >> image;
-        return new HistoryImageItem( image );
+        return HistoryItemPtr(new HistoryImageItem( image ));
     }
     qWarning() << "Failed to restore history item: Unknown type \"" << type << "\"" ;
-    return 0;
+    return HistoryItemPtr();
 }
 
 QByteArray HistoryItem::next_uuid() const

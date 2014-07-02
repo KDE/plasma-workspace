@@ -54,7 +54,7 @@ void KlipperTray::slotSetToolTipFromHistory()
     if (m_klipper->history()->empty()) {
         setToolTipSubTitle( i18n("Clipboard is empty"));
     } else {
-        const HistoryItem* top = m_klipper->history()->first();
+        HistoryItemConstPtr top = m_klipper->history()->first();
         if (top->text().length() <= TOOLTIP_LENGTH_LIMIT) {
             setToolTipSubTitle(top->text());
         } else {

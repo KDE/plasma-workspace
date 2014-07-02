@@ -113,7 +113,7 @@ protected:
     /**
      * Enter clipboard data in the history.
      */
-    HistoryItem* applyClipChanges( const QMimeData* data );
+    QSharedPointer<HistoryItem> applyClipChanges( const QMimeData* data );
 
     void setClipboard( const HistoryItem& item, int mode );
     bool ignoreClipboardChanges() const;

@@ -104,22 +104,22 @@ History::History( QObject* parent )
 History::~History() {
 }
 
-void History::insert( HistoryItem* item ) {
+void History::insert(HistoryItemPtr item) {
     if ( !item )
         return;
 
-    m_model->insert(QSharedPointer<HistoryItem>(item));
+    m_model->insert(item);
 
 }
 
-void History::forceInsert( HistoryItem* item ) {
+void History::forceInsert(HistoryItemPtr item) {
     if ( !item )
         return;
     // TODO: do we need a force insert in HistoryModel
-    m_model->insert(QSharedPointer<HistoryItem>(item));
+    m_model->insert(item);
 }
 
-void History::remove( const HistoryItem* newItem ) {
+void History::remove( const HistoryItemConstPtr &newItem ) {
     if ( !newItem )
         return;
 
@@ -175,36 +175,36 @@ void History::cyclePrev() {
 }
 
 
-const HistoryItem* History::nextInCycle() const
+HistoryItemConstPtr History::nextInCycle() const
 {
     if (m_model->hasIndex(1, 0)) {
         if (!m_cycleStartUuid.isEmpty()) {
             // check whether we are not at the end
             if (m_cycleStartUuid == m_model->index(1).data(Qt::UserRole+1).toByteArray()) {
-                return nullptr;
+                return HistoryItemConstPtr();
             }
         }
-        return m_model->index(1).data(Qt::UserRole).value<HistoryItem*>();
+        return m_model->index(1).data(Qt::UserRole).value<HistoryItemConstPtr>();
     }
-    return nullptr;
+    return HistoryItemConstPtr();
 
 }
 
-const HistoryItem* History::prevInCycle() const
+HistoryItemConstPtr History::prevInCycle() const
 {
     if (m_cycleStartUuid.isEmpty()) {
-        return nullptr;
+        return HistoryItemConstPtr();
     }
-    return m_model->index(m_model->rowCount() - 1).data(Qt::UserRole).value<HistoryItem*>();
+    return m_model->index(m_model->rowCount() - 1).data(Qt::UserRole).value<HistoryItemConstPtr>();
 }
 
-const HistoryItem* History::find(const QByteArray& uuid) const
+HistoryItemConstPtr History::find(const QByteArray& uuid) const
 {
     const QModelIndex index = m_model->indexOf(uuid);
     if (!index.isValid()) {
-        return nullptr;
+        return HistoryItemConstPtr();
     }
-    return index.data(Qt::UserRole).value<HistoryItem*>();
+    return index.data(Qt::UserRole).value<HistoryItemConstPtr>();
 }
 
 bool History::empty() const
@@ -217,13 +217,13 @@ unsigned int History::maxSize() const
     return m_model->maxSize();
 }
 
-const HistoryItem *History::first() const
+HistoryItemConstPtr History::first() const
 {
     const QModelIndex index = m_model->index(0);
     if (!index.isValid()) {
-        return nullptr;
+        return HistoryItemConstPtr();
     }
-    return index.data(Qt::UserRole).value<HistoryItem*>();
+    return index.data(Qt::UserRole).value<HistoryItemConstPtr>();
 }
 
 #include "history.moc"

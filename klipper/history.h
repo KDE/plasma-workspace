@@ -41,7 +41,7 @@ public:
      * The duplicate concept is "deep", so that two text string
      * are considerd duplicate if identical.
      */
-    void insert( HistoryItem* item );
+    void insert(QSharedPointer<HistoryItem> item);
 
     /**
      * Inserts item into clipboard without any checks
@@ -49,32 +49,32 @@ public:
      * Don't use this unless you're reasonable certain
      * that no duplicates are introduced
      */
-    void forceInsert( HistoryItem* item );
+    void forceInsert(QSharedPointer<HistoryItem> item);
 
     /**
      * Remove (first) history item equal to item from history
      */
-    void remove( const HistoryItem* item  );
+    void remove( const QSharedPointer<const HistoryItem> &item  );
 
     /**
      * Traversal: Get first item
      */
-    const HistoryItem* first() const;
+    QSharedPointer<const HistoryItem> first() const;
 
     /**
      * Get item identified by uuid
      */
-    const HistoryItem* find(const QByteArray& uuid) const;
+    QSharedPointer<const HistoryItem> find(const QByteArray& uuid) const;
 
     /**
      * @return next item in cycle, or null if at end
      */
-    const HistoryItem* nextInCycle() const;
+    QSharedPointer<const HistoryItem> nextInCycle() const;
 
     /**
      * @return previous item in cycle, or null if at top
      */
-    const HistoryItem* prevInCycle() const;
+    QSharedPointer<const HistoryItem> prevInCycle() const;
 
     /**
      * True if no history items

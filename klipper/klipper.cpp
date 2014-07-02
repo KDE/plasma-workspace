@@ -235,7 +235,7 @@ void Klipper::setClipboardContents(QString s)
         return;
     Ignore lock( m_locklevel );
     updateTimestamp();
-    HistoryStringItem* item = new HistoryStringItem( s );
+    HistoryItemPtr item(HistoryItemPtr(new HistoryStringItem(s)));
     setClipboard( *item, Clipboard | Selection);
     history()->insert( item );
 }
@@ -371,9 +371,9 @@ bool Klipper::loadHistory() {
     // youngest-first to keep the most important clipboard
     // items at the top, but the history is created oldest
     // first.
-    QList<HistoryItem*> reverseList;
-    for ( HistoryItem* item = HistoryItem::create( history_stream );
-          item;
+    QList<HistoryItemPtr> reverseList;
+    for ( HistoryItemPtr item = HistoryItem::create( history_stream );
+          !item.isNull();
           item = HistoryItem::create( history_stream ) )
     {
         reverseList.prepend( item );
@@ -381,11 +381,11 @@ bool Klipper::loadHistory() {
 
     history()->slotClear();
 
-    for ( QList<HistoryItem*>::const_iterator it = reverseList.constBegin();
+    for ( auto it = reverseList.constBegin();
           it != reverseList.constEnd();
           ++it )
     {
-        history()->forceInsert( *it );
+        history()->forceInsert(*it);
     }
 
     if ( !history()->empty() ) {
@@ -424,11 +424,11 @@ void Klipper::saveHistory(bool empty) {
     history_stream << KLIPPER_VERSION_STRING; // const char*
 
     if (!empty) {
-        const HistoryItem *item = history()->first();
+        HistoryItemConstPtr item = history()->first();
         if (item) {
             do {
-                history_stream << item;
-                item = history()->find(item->next_uuid());
+                history_stream << item.data();
+                item = HistoryItemConstPtr(history()->find(item->next_uuid()));
             } while (item != history()->first());
         }
     }
@@ -507,7 +507,7 @@ void Klipper::slotPopupMenu() {
 
 void Klipper::slotRepeatAction()
 {
-    const HistoryStringItem* top = dynamic_cast<const HistoryStringItem*>( history()->first() );
+    auto top = qSharedPointerCast<const HistoryStringItem>( history()->first() );
     if ( top ) {
         m_myURLGrabber->invokeAction( top );
     }
@@ -533,7 +533,7 @@ void Klipper::slotHistoryTopChanged() {
         return;
     }
 
-    const HistoryItem* topitem = history()->first();
+    auto topitem = history()->first();
     if ( topitem ) {
         setClipboard( *topitem, Clipboard | Selection );
     }
@@ -550,13 +550,13 @@ void Klipper::slotClearClipboard()
     m_clip->clear(QClipboard::Clipboard);
 }
 
-HistoryItem* Klipper::applyClipChanges( const QMimeData* clipData )
+HistoryItemPtr Klipper::applyClipChanges( const QMimeData* clipData )
 {
     if ( m_locklevel ) {
-        return 0L;
+        return HistoryItemPtr();
     }
     Ignore lock( m_locklevel );
-    HistoryItem* item = HistoryItem::create( clipData );
+    HistoryItemPtr item = HistoryItem::create( clipData );
     history()->insert( item );
     return item;
 
@@ -636,7 +636,7 @@ void Klipper::checkClipData( bool selectionMode )
         // This won't quite work, but it's close enough for now.
         // The trouble is that the top selection =! top clipboard
         // but we don't track that yet. We will....
-        const HistoryItem* top = history()->first();
+        auto top = history()->first();
         if ( top ) {
             setClipboard( *top, selectionMode ? Selection : Clipboard);
         }
@@ -681,7 +681,7 @@ void Klipper::checkClipData( bool selectionMode )
     }
 
     if ( changed && clipEmpty && m_bNoNullClipboard ) {
-        const HistoryItem* top = history()->first();
+        auto top = history()->first();
         if ( top ) {
             // keep old clipboard after someone set it to null
 #ifdef NOISY_KLIPPER
@@ -713,7 +713,7 @@ void Klipper::checkClipData( bool selectionMode )
     else // unknown, ignore
         return;
 
-    HistoryItem* item = applyClipChanges( data );
+    HistoryItemPtr item = applyClipChanges( data );
     if (changed) {
 #ifdef NOISY_KLIPPER
         qDebug() << "Synchronize?" << m_bSynchronize;
@@ -726,7 +726,7 @@ void Klipper::checkClipData( bool selectionMode )
         ? m_lastURLGrabberTextSelection : m_lastURLGrabberTextClipboard;
     if( m_bURLGrabber && item && data->hasText())
     {
-        m_myURLGrabber->checkNewData( item );
+        m_myURLGrabber->checkNewData( qSharedPointerConstCast<const HistoryItem>(item) );
 
         // Make sure URLGrabber doesn't repeat all the time if klipper reads the same
         // text all the time (e.g. because XFixes is not available and the application
@@ -777,7 +777,7 @@ void Klipper::slotClearOverflow()
 QStringList Klipper::getClipboardHistoryMenu()
 {
     QStringList menu;
-    const HistoryItem* item = history()->first();
+    auto item = history()->first();
     if (item) {
         do {
             menu << item->text();
@@ -790,7 +790,7 @@ QStringList Klipper::getClipboardHistoryMenu()
 
 QString Klipper::getClipboardHistoryItem(int i)
 {
-    const HistoryItem* item = history()->first();
+    auto item = history()->first();
     if (item) {
         do {
             if (i-- == 0) {
@@ -836,7 +836,7 @@ void Klipper::updateTimestamp()
 
 void Klipper::slotEditData()
 {
-    const HistoryStringItem* item = dynamic_cast<const HistoryStringItem*>(m_history->first());
+    auto item = qSharedPointerCast<const HistoryStringItem>(m_history->first());
 
     QDialog dlg;
     dlg.setModal( true );
@@ -862,9 +862,9 @@ void Klipper::slotEditData()
         if (item) {
             m_history->remove( item );
         }
-        m_history->insert( new HistoryStringItem(text) );
+        m_history->insert(HistoryItemPtr(new HistoryStringItem(text)));
         if (m_myURLGrabber) {
-            m_myURLGrabber->checkNewData( m_history->first() );
+            m_myURLGrabber->checkNewData(HistoryItemConstPtr(m_history->first()));
         }
     }
 
@@ -874,7 +874,7 @@ void Klipper::slotEditData()
 void Klipper::slotShowBarcode()
 {
     using namespace prison;
-    const HistoryStringItem* item = dynamic_cast<const HistoryStringItem*>(m_history->first());
+    auto item = qSharedPointerCast<const HistoryStringItem>(m_history->first());
 
     QDialog dlg;
     dlg.setModal( true );
@@ -946,9 +946,9 @@ QString Klipper::cycleText() const
 {
     const int WIDTH_IN_PIXEL = 400;
 
-    const HistoryItem* itemprev = m_history->prevInCycle();
-    const HistoryItem* item = m_history->first();
-    const HistoryItem* itemnext = m_history->nextInCycle();
+    auto itemprev = m_history->prevInCycle();
+    auto item = m_history->first();
+    auto itemnext = m_history->nextInCycle();
 
     QFontMetrics font_metrics(m_popup->fontMetrics());
     QString result("<table>");

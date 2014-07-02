@@ -45,7 +45,7 @@ void HistoryTest::testSetMaxSize()
     QVERIFY(topSpy.isEmpty());
 
     // insert an item - should still be empty
-    history->insert(new HistoryStringItem(QStringLiteral("foo")));
+    history->insert(HistoryItemPtr(new HistoryStringItem(QStringLiteral("foo"))));
     QVERIFY(history->empty());
     QVERIFY(changedSpy.isEmpty());
     QVERIFY(topSpy.isEmpty());
@@ -53,7 +53,7 @@ void HistoryTest::testSetMaxSize()
     // now it should insert again
     history->setMaxSize(1);
     QCOMPARE(history->maxSize(), 1u);
-    history->insert(new HistoryStringItem(QStringLiteral("foo")));
+    history->insert(HistoryItemPtr(new HistoryStringItem(QStringLiteral("foo"))));
     QVERIFY(!history->empty());
     QCOMPARE(changedSpy.size(), 1);
     changedSpy.clear();
@@ -63,7 +63,7 @@ void HistoryTest::testSetMaxSize()
     QVERIFY(topSpy.isEmpty());
 
     // insert another item, foo should get removed
-    history->insert(new HistoryStringItem(QStringLiteral("bar")));
+    history->insert(HistoryItemPtr(new HistoryStringItem(QStringLiteral("bar"))));
     QCOMPARE(history->first()->text(), QLatin1String("bar"));
     QCOMPARE(history->first()->next_uuid(), history->first()->uuid());
     QEXPECT_FAIL("", "Item is first inserted, then removed, changed signal gets emitted, although not changed", Continue);
@@ -99,7 +99,7 @@ void HistoryTest::testInsertRemove()
     const QByteArray foobarUuid = QCryptographicHash::hash(fooBarText.toUtf8(), QCryptographicHash::Sha1);
 
     // let's insert a few items
-    history->insert(new HistoryStringItem(fooText));
+    history->insert(HistoryItemPtr(new HistoryStringItem(fooText)));
     QVERIFY(!history->topIsUserSelected());
     QCOMPARE(history->first()->text(), fooText);
     QCOMPARE(history->first()->next_uuid(), history->first()->uuid());
@@ -108,7 +108,7 @@ void HistoryTest::testInsertRemove()
     topSpy.clear();
     QVERIFY(topSpy.isEmpty());
 
-    history->insert(new HistoryStringItem(barText));
+    history->insert(HistoryItemPtr(new HistoryStringItem(barText)));
     QVERIFY(!history->topIsUserSelected());
     QCOMPARE(history->first()->text(), barText);
     QCOMPARE(history->first()->next_uuid(), fooUuid);
@@ -119,7 +119,7 @@ void HistoryTest::testInsertRemove()
     topSpy.clear();
     QVERIFY(topSpy.isEmpty());
 
-    history->insert(new HistoryStringItem(fooBarText));
+    history->insert(HistoryItemPtr(new HistoryStringItem(fooBarText)));
     QVERIFY(!history->topIsUserSelected());
     QCOMPARE(history->first()->text(), fooBarText);
     QCOMPARE(history->first()->next_uuid(), barUuid);
@@ -133,7 +133,7 @@ void HistoryTest::testInsertRemove()
     QVERIFY(topSpy.isEmpty());
 
     // insert one again - it should be moved to top
-    history->insert(new HistoryStringItem(barText));
+    history->insert(HistoryItemPtr(new HistoryStringItem(barText)));
     QVERIFY(!history->topIsUserSelected());
     QCOMPARE(history->first()->text(), barText);
     QCOMPARE(history->first()->next_uuid(), foobarUuid);
@@ -212,9 +212,9 @@ void HistoryTest::testClear()
     QVERIFY(history->empty());
 
     // insert some items
-    history->insert(new HistoryStringItem(QStringLiteral("foo")));
-    history->insert(new HistoryStringItem(QStringLiteral("bar")));
-    history->insert(new HistoryStringItem(QStringLiteral("foobar")));
+    history->insert(HistoryItemPtr(new HistoryStringItem(QStringLiteral("foo"))));
+    history->insert(HistoryItemPtr(new HistoryStringItem(QStringLiteral("bar"))));
+    history->insert(HistoryItemPtr(new HistoryStringItem(QStringLiteral("foobar"))));
     history->slotMoveToTop(QCryptographicHash::hash(QByteArrayLiteral("bar"), QCryptographicHash::Sha1));
     QVERIFY(!history->empty());
     QVERIFY(history->topIsUserSelected());
@@ -239,7 +239,7 @@ void HistoryTest::testFind()
     QVERIFY(!history->find(QByteArray()));
 
     // insert some items
-    history->insert(new HistoryStringItem(QStringLiteral("foo")));
+    history->insert(HistoryItemPtr(new HistoryStringItem(QStringLiteral("foo"))));
     QVERIFY(!history->find(QByteArrayLiteral("whatever")));
     QVERIFY(!history->find(QByteArray()));
     const QByteArray fooUuid = QCryptographicHash::hash(QByteArrayLiteral("foo"), QCryptographicHash::Sha1);
@@ -264,7 +264,7 @@ void HistoryTest::testCycle()
     const QByteArray barUuid = QCryptographicHash::hash(barText.toUtf8(), QCryptographicHash::Sha1);
     const QByteArray foobarUuid = QCryptographicHash::hash(fooBarText.toUtf8(), QCryptographicHash::Sha1);
 
-    history->insert(new HistoryStringItem(fooText));
+    history->insert(HistoryItemPtr(new HistoryStringItem(fooText)));
     QCOMPARE(topSpy.size(), 1);
     topSpy.clear();
     QVERIFY(!history->nextInCycle());
@@ -281,7 +281,7 @@ void HistoryTest::testCycle()
     QVERIFY(!history->prevInCycle());
 
     // insert more items
-    history->insert(new HistoryStringItem(barText));
+    history->insert(HistoryItemPtr(new HistoryStringItem(barText)));
     QCOMPARE(topSpy.size(), 1);
     topSpy.clear();
     QCOMPARE(history->nextInCycle(), history->find(fooUuid));
@@ -308,7 +308,7 @@ void HistoryTest::testCycle()
     QVERIFY(topSpy.isEmpty());
 
     // insert a third item
-    history->insert(new HistoryStringItem(fooBarText));
+    history->insert(HistoryItemPtr(new HistoryStringItem(fooBarText)));
     QCOMPARE(topSpy.size(), 1);
     topSpy.clear();
     QCOMPARE(history->nextInCycle(), history->find(barUuid));

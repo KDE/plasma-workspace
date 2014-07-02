@@ -71,7 +71,7 @@ QVariant HistoryModel::data(const QModelIndex &index, int role) const
     case Qt::DisplayRole:
         return item->text();
     case Qt::UserRole:
-        return qVariantFromValue<HistoryItem*>(item.data());
+        return qVariantFromValue<HistoryItemConstPtr>(qSharedPointerConstCast<const HistoryItem>(item));
     case Qt::UserRole+1:
         return item->uuid();
     case Qt::UserRole+2: {

@@ -26,6 +26,9 @@ class QString;
 class QMimeData;
 class QDataStream;
 
+class HistoryItem;
+typedef QSharedPointer<HistoryItem> HistoryItemPtr;
+typedef QSharedPointer<const HistoryItem> HistoryItemConstPtr;
 /**
  * An entry in the clipboard history.
  */
@@ -75,14 +78,14 @@ public:
      * Create an HistoryItem from MimeSources (i.e., clipboard data)
      * returns null if create fails (e.g, unsupported mimetype)
      */
-    static HistoryItem* create( const QMimeData* data );
+    static HistoryItemPtr create( const QMimeData* data );
 
     /**
      * Create an HistoryItem from data stream (i.e., disk file)
      * returns null if creation fails. In this case, the datastream
      * is left in an undefined state.
      */
-    static HistoryItem* create( QDataStream& dataStream );
+    static HistoryItemPtr create( QDataStream& dataStream );
 
     /**
      * previous item's uuid
@@ -118,5 +121,7 @@ QDataStream& operator<<( QDataStream& lhs, HistoryItem const * const rhs ) {
 }
 
 Q_DECLARE_METATYPE(HistoryItem*)
+Q_DECLARE_METATYPE(HistoryItemPtr)
+Q_DECLARE_METATYPE(HistoryItemConstPtr)
 
 #endif
