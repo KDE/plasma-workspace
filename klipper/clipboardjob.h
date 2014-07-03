@@ -16,21 +16,21 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 *********************************************************************/
-#ifndef KLIPPER_CLIPBOARDENGINE_H
-#define KLIPPER_CLIPBOARDENGINE_H
+#ifndef KLIPPER_CLIPBOARDJOB_H
+#define KLIPPER_CLIPBOARDJOB_H
 
-#include <Plasma/DataEngine>
+#include <Plasma/ServiceJob>
 
 class Klipper;
 
-class ClipboardEngine : public Plasma::DataEngine
+class ClipboardJob : public Plasma::ServiceJob
 {
     Q_OBJECT
 public:
-    ClipboardEngine(QObject *parent, const QVariantList &args);
-    ~ClipboardEngine();
+    ClipboardJob(Klipper *klipper, const QString &destination, const QString &operation, const QVariantMap &parameters, QObject *parent=0);
+    ~ClipboardJob() = default;
 
-    Plasma::Service *serviceForSource (const QString &source) override;
+    void start() override;
 
 private:
     Klipper *m_klipper;

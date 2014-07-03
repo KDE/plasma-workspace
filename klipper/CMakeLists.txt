@@ -69,7 +69,7 @@ install(PROGRAMS org.kde.klipper.desktop DESTINATION ${XDG_APPS_INSTALL_DIR})
 install(PROGRAMS org.kde.klipper.desktop DESTINATION ${AUTOSTART_INSTALL_DIR})
 
 # Plasma Data Engine
-set(plasma_engine_clipboard_SRCS ${libklipper_common_SRCS} clipboardengine.cpp)
+set(plasma_engine_clipboard_SRCS ${libklipper_common_SRCS} clipboardengine.cpp clipboardservice.cpp clipboardjob.cpp)
 add_library(plasma_engine_clipboard MODULE ${plasma_engine_clipboard_SRCS})
 kservice_desktop_to_json(plasma_engine_clipboard plasma-dataengine-clipboard.desktop)
 target_link_libraries(plasma_engine_clipboard
@@ -96,5 +96,6 @@ if (PRISON_FOUND)
 endif ()
 install(TARGETS plasma_engine_clipboard DESTINATION ${PLUGIN_INSTALL_DIR}/plasma/dataengine)
 install(FILES plasma-dataengine-clipboard.desktop DESTINATION ${SERVICES_INSTALL_DIR})
+install(FILES org.kde.plasma.clipboard.operations DESTINATION ${PLASMA_DATA_INSTALL_DIR}/services)
 
 add_subdirectory(autotests)

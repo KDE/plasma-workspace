@@ -16,24 +16,18 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 *********************************************************************/
-#ifndef KLIPPER_CLIPBOARDENGINE_H
-#define KLIPPER_CLIPBOARDENGINE_H
+#include "clipboardservice.h"
+#include "clipboardjob.h"
 
-#include <Plasma/DataEngine>
-
-class Klipper;
-
-class ClipboardEngine : public Plasma::DataEngine
+ClipboardService::ClipboardService(Klipper *klipper, const QString &uuid)
+    : Plasma::Service()
+    , m_klipper(klipper)
+    , m_uuid(uuid)
 {
-    Q_OBJECT
-public:
-    ClipboardEngine(QObject *parent, const QVariantList &args);
-    ~ClipboardEngine();
+    setName(QStringLiteral("org.kde.plasma.clipboard"));
+}
 
-    Plasma::Service *serviceForSource (const QString &source) override;
-
-private:
-    Klipper *m_klipper;
-};
-
-#endif
+Plasma::ServiceJob *ClipboardService::createJob(const QString &operation, QVariantMap &parameters)
+{
+    return new ClipboardJob(m_klipper, m_uuid, operation, parameters, this);
+}

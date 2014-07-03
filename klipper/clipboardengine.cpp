@@ -17,20 +17,36 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 *********************************************************************/
 #include "clipboardengine.h"
+#include "clipboardservice.h"
 #include "history.h"
 #include "historymodel.h"
 #include "klipper.h"
 
+static const QString s_clipboardSourceName = QStringLiteral("clipboard");
+static const QString s_barcodeKey = QStringLiteral("supportsBarcodes");
+
 ClipboardEngine::ClipboardEngine(QObject *parent, const QVariantList &args)
     : Plasma::DataEngine(parent, args)
+    , m_klipper(new Klipper(this, KSharedConfig::openConfig("klipperrc")))
 {
-    Klipper *klipper = new Klipper(this, KSharedConfig::openConfig("klipperrc"));
     // TODO: use a filterproxymodel
-    setModel(QStringLiteral("clipboard"), klipper->history()->model());
+    setModel(s_clipboardSourceName, m_klipper->history()->model());
+#ifdef HAVE_PRISON
+    setData(s_clipboardSourceName, s_barcodeKey, true);
+#else
+    setData(s_clipboardSourceName, s_barcodeKey, false);
+#endif
 }
 
 ClipboardEngine::~ClipboardEngine()
 {
+}
+
+Plasma::Service *ClipboardEngine::serviceForSource(const QString &source)
+{
+    Plasma::Service *service = new ClipboardService(m_klipper, source);
+    service->setParent(this);
+    return service;
 }
 
 K_EXPORT_PLASMA_DATAENGINE_WITH_JSON(org.kde.plasma.clipboard, ClipboardEngine, "plasma-dataengine-clipboard.json")
