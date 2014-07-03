@@ -154,6 +154,11 @@ ShellCorona::ShellCorona(QObject *parent)
     // Look for theme config in plasmarc, if it isn't configured, take the theme from the
     // LookAndFeel package, if either is set, change the default theme
 
+    connect(qApp, &QCoreApplication::aboutToQuit, [=]() {
+        //saveLayout is a slot but arguments not compatible
+        saveLayout();
+    });
+
     const QString themeGroupKey = QStringLiteral("Theme");
     const QString themeNameKey = QStringLiteral("name");
 
