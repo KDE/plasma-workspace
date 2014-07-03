@@ -11,6 +11,7 @@ add_subdirectory(batterymonitor)
 add_subdirectory(devicenotifier)
 add_subdirectory(digital-clock)
 plasma_install_package(calendar org.kde.plasma.calendar)
+plasma_install_package(clipboard org.kde.plasma.clipboard)
 # add_subdirectory(quicklaunch)
 #
 # if(QT_QTWEBKIT_FOUND)
