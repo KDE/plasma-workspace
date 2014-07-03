@@ -25,6 +25,7 @@
 #include <QUrl>
 #include <QDebug>
 #include <QQuickWindow>
+#include <QSessionManager>
 
 #include <KAuthorized>
 #include <kdbusservice.h>
@@ -56,6 +57,12 @@ int main(int argc, char **argv)
     parser.addHelpOption();
     parser.addVersionOption();
     parser.process(app);
+
+    auto disableSessionManagement = [](QSessionManager &sm) {
+        sm.setRestartHint(QSessionManager::RestartNever);
+    };
+    QObject::connect(&app, &QGuiApplication::commitDataRequest, disableSessionManagement);
+    QObject::connect(&app, &QGuiApplication::saveStateRequest, disableSessionManagement);
 
     View view;
     view.setVisible(false);
