@@ -40,6 +40,7 @@ ClipboardEngine::ClipboardEngine(QObject *parent, const QVariantList &args)
 
 ClipboardEngine::~ClipboardEngine()
 {
+    m_klipper->saveClipboardHistory();
 }
 
 Plasma::Service *ClipboardEngine::serviceForSource(const QString &source)
