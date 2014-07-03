@@ -850,26 +850,26 @@ void Klipper::updateTimestamp()
 
 void Klipper::editData(const QSharedPointer< const HistoryItem > &item)
 {
-    QDialog dlg;
-    dlg.setModal( true );
-    dlg.setWindowTitle( i18n("Edit Contents") );
-    QDialogButtonBox *buttons = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, &dlg);
+    QPointer<QDialog> dlg(new QDialog());
+    dlg->setWindowTitle( i18n("Edit Contents") );
+    QDialogButtonBox *buttons = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, dlg);
     buttons->button(QDialogButtonBox::Ok)->setShortcut(Qt::CTRL | Qt::Key_Return);
-    connect(buttons, &QDialogButtonBox::accepted, &dlg, &QDialog::accept);
-    connect(buttons, &QDialogButtonBox::rejected, &dlg, &QDialog::reject);
+    connect(buttons, &QDialogButtonBox::accepted, dlg, &QDialog::accept);
+    connect(buttons, &QDialogButtonBox::rejected, dlg, &QDialog::reject);
+    connect(dlg, &QDialog::finished, dlg, &QDialog::deleteLater);
 
-    KTextEdit *edit = new KTextEdit( &dlg );
+    KTextEdit *edit = new KTextEdit( dlg );
     if (item) {
         edit->setText( item->text() );
     }
     edit->setFocus();
     edit->setMinimumSize( 300, 40 );
-    QVBoxLayout *layout = new QVBoxLayout(&dlg);
+    QVBoxLayout *layout = new QVBoxLayout(dlg);
     layout->addWidget(edit);
     layout->addWidget(buttons);
-    dlg.adjustSize();
+    dlg->adjustSize();
 
-    if ( dlg.exec() == QDialog::Accepted ) {
+    connect(dlg, &QDialog::accepted, this, [this, edit, item]() {
         QString text = edit->toPlainText();
         if (item) {
             m_history->remove( item );
@@ -878,6 +878,13 @@ void Klipper::editData(const QSharedPointer< const HistoryItem > &item)
         if (m_myURLGrabber) {
             m_myURLGrabber->checkNewData(HistoryItemConstPtr(m_history->first()));
         }
+    });
+
+    if (m_mode == KlipperMode::Standalone) {
+        dlg->setModal(true);
+        dlg->exec();
+    } else if (m_mode == KlipperMode::DataEngine) {
+        dlg->open();
     }
 }
 
