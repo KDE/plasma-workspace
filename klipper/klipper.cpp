@@ -85,15 +85,18 @@ namespace {
 }
 
 // config == KGlobal::config for process, otherwise applet
-Klipper::Klipper(QObject* parent, const KSharedConfigPtr& config)
+Klipper::Klipper(QObject* parent, const KSharedConfigPtr& config, KlipperMode mode)
     : QObject( parent )
     , m_overflowCounter( 0 )
     , m_locklevel( 0 )
     , m_config( config )
     , m_pendingContentsCheck( false )
+    , m_mode(mode)
 {
-    setenv("KSNI_NO_DBUSMENU", "1", 1);
-    QDBusConnection::sessionBus().registerObject("/klipper", this, QDBusConnection::ExportScriptableSlots);
+    if (m_mode == KlipperMode::Standalone) {
+        setenv("KSNI_NO_DBUSMENU", "1", 1);
+        QDBusConnection::sessionBus().registerObject("/klipper", this, QDBusConnection::ExportScriptableSlots);
+    }
 
     updateTimestamp(); // read initial X user time
     m_clip = qApp->clipboard();
@@ -214,7 +217,9 @@ Klipper::Klipper(QObject* parent, const KSharedConfigPtr& config)
     m_popup->plugAction( m_quitAction );
 
     // session manager interaction
-    connect(qApp, &QGuiApplication::commitDataRequest, this, &Klipper::saveSession);
+    if (m_mode == KlipperMode::Standalone) {
+        connect(qApp, &QGuiApplication::commitDataRequest, this, &Klipper::saveSession);
+    }
 }
 
 Klipper::~Klipper()

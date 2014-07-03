@@ -40,6 +40,11 @@ class QMenu;
 class QMimeData;
 class HistoryItem;
 
+enum class KlipperMode {
+    Standalone,
+    DataEngine
+};
+
 class Klipper : public QObject
 {
   Q_OBJECT
@@ -57,7 +62,7 @@ public Q_SLOTS:
   Q_SCRIPTABLE void showKlipperManuallyInvokeActionMenu();
 
 public:
-    Klipper(QObject* parent, const KSharedConfigPtr& config);
+    Klipper(QObject* parent, const KSharedConfigPtr& config, KlipperMode mode = KlipperMode::Standalone);
     ~Klipper();
 
     /**
@@ -199,6 +204,7 @@ private:
     bool blockFetchingNewData();
     QString cycleText() const;
     KActionCollection* m_collection;
+    KlipperMode m_mode;
 };
 
 #endif
