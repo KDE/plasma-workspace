@@ -20,6 +20,7 @@
 #include <QApplication>
 #include <qcommandlineparser.h>
 #include <QQuickWindow>
+#include <QSessionManager>
 #include <QDebug>
 
 #include <kdbusservice.h>
@@ -90,6 +91,13 @@ int main(int argc, char** argv)
     if (parser.isSet(shutup)) {
         qInstallMsgHandler(noMessageOutput);
     }
+
+    auto disableSessionManagement = [](QSessionManager &sm) {
+        sm.setRestartHint(QSessionManager::RestartNever);
+    };
+    QObject::connect(&app, &QGuiApplication::commitDataRequest, disableSessionManagement);
+    QObject::connect(&app, &QGuiApplication::saveStateRequest, disableSessionManagement);
+
     Plasma::PluginLoader::setPluginLoader(new ShellPluginLoader);
 
     ShellManager::setCrashCount(parser.value(crash).toInt());
