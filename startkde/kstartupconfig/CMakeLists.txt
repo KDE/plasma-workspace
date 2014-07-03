@@ -14,7 +14,6 @@ add_executable(kdostartupconfig5 ${kdostartupconfig_SRCS})
 
 target_link_libraries(kdostartupconfig5
                       Qt5::Core
-                      KF5::KDELibs4Support
                       KF5::ConfigCore
                       KF5::CoreAddons
                       ${LIBBSD_LIBRARIES})

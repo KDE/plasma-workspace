@@ -33,9 +33,6 @@ DEALINGS IN THE SOFTWARE.
 #include <KConfigGroup>
 #include <KShell>
 
-#include <klocale.h>
-#include <KGlobal>
-
 static QString get_entry( QString* ll )
     {
     QString& l = *ll;
@@ -148,8 +145,5 @@ int main( int argc, char **argv )
         startupconfigfiles << "*\n";
         }
 
-        // Get languages by priority from KLocale.
-        const QStringList langs = KGlobal::locale()->languageList();
-        startupconfig << "klocale_languages=" << langs.join( ":" ) << "\n";
     return 0;
     }
