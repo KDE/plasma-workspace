@@ -399,7 +399,9 @@ void KSMServer::autoStart2()
     kDebug() << "kded" << t.elapsed();
 #endif
 
-    runUserAutostart();
+    // Create dir so that users can find it :-)
+    QDir().mkpath(QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation)
+                  + QDir::separator() + QStringLiteral("autostart"));
 
     if (kcminitSignals) {
         connect( kcminitSignals, SIGNAL(phase2Done()), SLOT(kcmPhase2Done()));
@@ -416,38 +418,6 @@ void KSMServer::autoStart2()
 //     KNotification::event( QStringLiteral( "startkde" ),
 //                           QString(), QPixmap(), 0l,
 //                           KNotification::DefaultEvent ); // this is the time KDE is up, more or less
-}
-
-void KSMServer::runUserAutostart()
-{
-    // now let's execute all the stuff in the autostart folder.
-    // the stuff will actually be really executed when the event loop is
-    // entered, since KRun internally uses a QTimer
-    QDir dir(QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation) + QDir::separator() + QStringLiteral("autostart"));
-    if (dir.exists()) {
-        const QStringList entries = dir.entryList( QDir::Files );
-        foreach (const QString& file, entries) {
-            // Don't execute backup files
-            if ( !file.endsWith( QLatin1Char( '~' ) ) && !file.endsWith( QStringLiteral( ".bak" ) ) &&
-                 ( file[0] != QLatin1Char( '%' ) || !file.endsWith( QLatin1Char( '%' ) ) ) &&
-                 ( file[0] != QLatin1Char( '#' ) || !file.endsWith( QLatin1Char( '#' ) ) ) )
-            {
-                QUrl url = QUrl::fromLocalFile( dir.absolutePath() + QLatin1Char( '/' ) + file );
-                //KRun is synchronous so if we use it here it will produce a deadlock.
-                //So isntead we use kioclient for now.
-                //(void) new KRun( url, 0, true );
-                QProcess::startDetached(QStringLiteral("kioclient5"),
-                    QStringList()
-                    << QStringLiteral("exec")
-                    << url.path()
-                );
-            }
-        }
-    } else {
-        // Create dir so that users can find it :-)
-        dir.mkpath(QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation)
-                   + QDir::separator() + QStringLiteral("autostart"));
-    }
 }
 
 void KSMServer::autoStart2Done()

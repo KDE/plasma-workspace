@@ -160,8 +160,6 @@ private:
     void killingCompleted();
     void createLogoutEffectWidget();
 
-    void runUserAutostart();
-
     void discardSession();
     void storeSession();
 
