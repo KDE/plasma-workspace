@@ -84,6 +84,8 @@ QVariant HistoryModel::data(const QModelIndex &index, int role) const
         } else {
             return qVariantFromValue<HistoryItemType>(HistoryItemType::Text);
         }
+    case Qt::UserRole+3:
+        return item->uuid().toBase64();
     }
     }
     return QVariant();
@@ -200,5 +202,6 @@ QHash< int, QByteArray > HistoryModel::roleNames() const
 {
     QHash<int, QByteArray> hash;
     hash.insert(Qt::DisplayRole, QByteArrayLiteral("DisplayRole"));
+    hash.insert(Qt::UserRole+3, QByteArrayLiteral("UuidRole"));
     return hash;
 }
