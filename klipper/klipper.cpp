@@ -29,6 +29,7 @@
 #include <QDir>
 #include <QDialog>
 #include <QMenu>
+#include <QPointer>
 #include <QDBusConnection>
 #include <QSaveFile>
 
@@ -884,14 +885,14 @@ void Klipper::editData(const QSharedPointer< const HistoryItem > &item)
 void Klipper::showBarcode(const QSharedPointer< const HistoryItem > &item)
 {
     using namespace prison;
-    QDialog dlg;
-    dlg.setModal( true );
-    dlg.setWindowTitle( i18n("Mobile Barcode") );
-    QDialogButtonBox *buttons = new QDialogButtonBox(QDialogButtonBox::Ok, &dlg);
+    QPointer<QDialog> dlg(new QDialog());
+    dlg->setWindowTitle( i18n("Mobile Barcode") );
+    QDialogButtonBox *buttons = new QDialogButtonBox(QDialogButtonBox::Ok, dlg);
     buttons->button(QDialogButtonBox::Ok)->setShortcut(Qt::CTRL | Qt::Key_Return);
-    connect(buttons, &QDialogButtonBox::accepted, &dlg, &QDialog::accept);
+    connect(buttons, &QDialogButtonBox::accepted, dlg, &QDialog::accept);
+    connect(dlg, &QDialog::finished, dlg, &QDialog::deleteLater);
 
-    QWidget* mw = new QWidget(&dlg);
+    QWidget* mw = new QWidget(dlg);
     QHBoxLayout* layout = new QHBoxLayout(mw);
 
     BarcodeWidget* qrcode = new BarcodeWidget(new QRCodeBarcode());
@@ -906,12 +907,17 @@ void Klipper::showBarcode(const QSharedPointer< const HistoryItem > &item)
     layout->addWidget(datamatrix);
 
     mw->setFocus();
-    QVBoxLayout *vBox = new QVBoxLayout(&dlg);
+    QVBoxLayout *vBox = new QVBoxLayout(dlg);
     vBox->addWidget(mw);
     vBox->addWidget(buttons);
-    dlg.adjustSize();
+    dlg->adjustSize();
 
-    dlg.exec();
+    if (m_mode == KlipperMode::Standalone) {
+        dlg->setModal(true);
+        dlg->exec();
+    } else if (m_mode == KlipperMode::DataEngine) {
+        dlg->open();
+    }
 }
 #endif //HAVE_PRISON
 
