@@ -73,11 +73,12 @@ public:
         return m_popup;
     }
 
+    void editData(const QSharedPointer<const HistoryItem> &item);
+
 public Q_SLOTS:
     void saveSession();
     void slotHistoryTopChanged();
     void slotConfigure();
-    void slotEditData();
 #ifdef HAVE_PRISON
     void slotShowBarcode();
 #endif

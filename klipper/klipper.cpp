@@ -166,7 +166,11 @@ Klipper::Klipper(QObject* parent, const KSharedConfigPtr& config)
     m_editAction->setIcon(QIcon::fromTheme("document-properties"));
     m_editAction->setText(i18n("&Edit Contents..."));
     KGlobalAccel::self()->setShortcut(m_editAction, QList<QKeySequence>());
-    connect(m_editAction, SIGNAL(triggered()), SLOT(slotEditData()));
+    connect(m_editAction, &QAction::triggered, this,
+        [this]() {
+            editData(m_history->first());
+        }
+    );
 
 #ifdef HAVE_PRISON
     // add barcode for mobile phones
@@ -834,10 +838,8 @@ void Klipper::updateTimestamp()
 #endif
 }
 
-void Klipper::slotEditData()
+void Klipper::editData(const QSharedPointer< const HistoryItem > &item)
 {
-    auto item = qSharedPointerCast<const HistoryStringItem>(m_history->first());
-
     QDialog dlg;
     dlg.setModal( true );
     dlg.setWindowTitle( i18n("Edit Contents") );
@@ -867,7 +869,6 @@ void Klipper::slotEditData()
             m_myURLGrabber->checkNewData(HistoryItemConstPtr(m_history->first()));
         }
     }
-
 }
 
 #ifdef HAVE_PRISON
