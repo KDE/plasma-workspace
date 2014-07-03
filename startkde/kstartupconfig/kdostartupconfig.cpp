@@ -25,25 +25,16 @@ DEALINGS IN THE SOFTWARE.
 #undef QT_NO_CAST_ASCII
 
 // See description in kstartupconfig.cpp .
-#include <QtCore/QFile>
-#include <QtCore/QTextStream>
-#include <kcomponentdata.h>
-#include <kstandarddirs.h>
-#include <kconfig.h>
-#include <kconfiggroup.h>
-#include <kdebug.h>
-#include <kaboutdata.h>
-#include <kcmdlineargs.h>
+#include <QFile>
+#include <QTextStream>
+#include <QStandardPaths>
+
+#include <KConfig>
+#include <KConfigGroup>
+#include <KShell>
+
 #include <klocale.h>
-#include <kshell.h>
 #include <KGlobal>
-
-
-#if defined _WIN32 || defined _WIN64
-#define KPATH_SEPARATOR ';'
-#else
-#define KPATH_SEPARATOR ':'
-#endif
 
 static QString get_entry( QString* ll )
     {
@@ -75,14 +66,14 @@ static QString get_entry( QString* ll )
 int main( int argc, char **argv )
     {
 
-    QString keysname = KStandardDirs::locateLocal( "config", "startupconfigkeys" );
+    QString keysname = QStandardPaths::locate(QStandardPaths::GenericConfigLocation, "startupconfigkeys");
     QFile keys( keysname );
     if( !keys.open( QIODevice::ReadOnly ))
         return 3;
-    QFile f1( KStandardDirs::locateLocal( "config", "startupconfig" ));
+    QFile f1(QStandardPaths::locate(QStandardPaths::GenericConfigLocation, "startupconfig"));
     if( !f1.open( QIODevice::WriteOnly ))
         return 4;
-    QFile f2( KStandardDirs::locateLocal( "config", "startupconfigfiles" ));
+    QFile f2(QStandardPaths::locate(QStandardPaths::GenericConfigLocation, "startupconfigfiles"));
     if( !f2.open( QIODevice::WriteOnly ))
         return 5;
     QTextStream startupconfig( &f1 );
@@ -143,13 +134,13 @@ int main( int argc, char **argv )
             }
         startupconfigfiles << line << endl;
         // use even currently non-existing paths in $KDEDIRS
-        const QStringList dirs = KGlobal::dirs()->kfsstnd_prefixes().split( KPATH_SEPARATOR, QString::SkipEmptyParts);
+        const QStringList dirs = QStandardPaths::standardLocations(QStandardPaths::GenericDataLocation);
         for( QStringList::ConstIterator it = dirs.constBegin();
              it != dirs.constEnd();
              ++it )
             {
             QString cfg = *it + "share/config/" + file;
-            if( KStandardDirs::exists( cfg ))
+            if (QFile::exists(cfg))
                 startupconfigfiles << cfg << "\n";
             else
                 startupconfigfiles << "!" << cfg << "\n";
