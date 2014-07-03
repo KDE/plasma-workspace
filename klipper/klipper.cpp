@@ -26,6 +26,7 @@
 #include <zlib.h>
 
 #include <QDebug>
+#include <QDir>
 #include <QDialog>
 #include <QMenu>
 #include <QDBusConnection>
@@ -399,6 +400,15 @@ void Klipper::saveHistory(bool empty) {
     // don't use "appdata", klipper is also a kicker applet
     QString history_file_name(QStandardPaths::locate(QStandardPaths::GenericDataLocation,
                                                      QStringLiteral("klipper/history2.lst")));
+    if ( history_file_name.isNull() || history_file_name.isEmpty() ) {
+        // try creating the file
+        QDir dir(QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation));
+        if (!dir.mkpath(QStringLiteral("klipper"))) {
+            qWarning() << failed_save_warning ;
+            return;
+        }
+        history_file_name = dir.absoluteFilePath(QStringLiteral("klipper/history2.lst"));
+    }
     if ( history_file_name.isNull() || history_file_name.isEmpty() ) {
         qWarning() << failed_save_warning ;
         return;
