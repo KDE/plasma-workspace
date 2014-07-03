@@ -177,7 +177,11 @@ Klipper::Klipper(QObject* parent, const KSharedConfigPtr& config)
     m_showBarcodeAction = m_collection->addAction("show-barcode");
     m_showBarcodeAction->setText(i18n("&Show Barcode..."));
     KGlobalAccel::self()->setShortcut(m_showBarcodeAction, QList<QKeySequence>());
-    connect(m_showBarcodeAction, SIGNAL(triggered()), SLOT(slotShowBarcode()));
+    connect(m_showBarcodeAction, &QAction::triggered, this,
+        [this]() {
+            showBarcode(m_history->first());
+        }
+    );
 #endif
 
     // Cycle through history
@@ -872,11 +876,9 @@ void Klipper::editData(const QSharedPointer< const HistoryItem > &item)
 }
 
 #ifdef HAVE_PRISON
-void Klipper::slotShowBarcode()
+void Klipper::showBarcode(const QSharedPointer< const HistoryItem > &item)
 {
     using namespace prison;
-    auto item = qSharedPointerCast<const HistoryStringItem>(m_history->first());
-
     QDialog dlg;
     dlg.setModal( true );
     dlg.setWindowTitle( i18n("Mobile Barcode") );

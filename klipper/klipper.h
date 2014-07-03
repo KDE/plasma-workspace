@@ -74,14 +74,14 @@ public:
     }
 
     void editData(const QSharedPointer<const HistoryItem> &item);
+#ifdef HAVE_PRISON
+    void showBarcode(const QSharedPointer<const HistoryItem> &item);
+#endif
 
 public Q_SLOTS:
     void saveSession();
     void slotHistoryTopChanged();
     void slotConfigure();
-#ifdef HAVE_PRISON
-    void slotShowBarcode();
-#endif
     void slotCycleNext();
     void slotCyclePrev();
 
