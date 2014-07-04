@@ -579,7 +579,10 @@ void ShellCorona::removeView(int idx)
         QScreen* screen = d->views[idx+1]->screen();
         QList<PanelView*> panels = panelsForScreen(screen);
 
+        bool wasVisible = d->views[idx]->isVisible();
         d->views[idx]->setScreen(screen);
+        if (wasVisible)
+            d->views[idx]->show(); //when destroying the screen, QScreen might have hidden the window
         foreach(PanelView* p, panels) {
             p->setScreen(screen);
         }

@@ -48,6 +48,7 @@ public:
     bool isDashboardShown() const;
 
     void adaptToScreen();
+    virtual void showEvent(QShowEvent*);
 
 protected:
     bool event(QEvent *e);

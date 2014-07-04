@@ -98,10 +98,16 @@ void DesktopView::setFillScreen(bool fillScreen)
     emit fillScreenChanged();
 }
 
+void DesktopView::showEvent(QShowEvent* e)
+{
+    adaptToScreen();
+    QQuickWindow::showEvent(e);
+}
+
 void DesktopView::adaptToScreen()
 {
     //This happens sometimes, when shutting down the process
-    if (!screen())
+    if (!screen() || m_oldScreen==screen())
         return;
 //     qDebug() << "adapting to screen" << screen()->name() << this;
     if (m_fillScreen) {
