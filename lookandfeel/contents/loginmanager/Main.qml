@@ -134,7 +134,12 @@ Image {
                     }
 
                     onModeChanged: {
-                        stackView.push(logoutScreenComponent, {"mode": mode})
+                        if (mode) {
+                            stackView.push(logoutScreenComponent, {"mode": mode})
+                        }
+                    }
+                    onVisibleChanged: if(visible) {
+                        mode = ""
                     }
                 }
 
@@ -155,7 +160,9 @@ Image {
             Component {
                 id: logoutScreenComponent
                 LogoutScreen {
-                    onCancel: stackView.pop()
+                    onCancel: {
+                        stackView.pop()
+                    }
 
                     onShutdownRequested: {
                         sddm.powerOff()
