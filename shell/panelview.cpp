@@ -860,7 +860,7 @@ void PanelView::showTemporarily()
     t->start();
 }
 
-void PanelView::screenDestroyed(QObject* screen)
+void PanelView::screenDestroyed(QObject* )
 {
 //     NOTE: this is overriding the screen destroyed slot, we need to do this because
 //     otherwise Qt goes mental and starts moving our panels. See:
