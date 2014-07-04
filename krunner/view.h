@@ -54,6 +54,7 @@ public Q_SLOTS:
     void query(const QString &term);
     void querySingleRunner(const QString &runnerName, const QString &term);
     void switchUser();
+    void displayConfiguration();
 
 protected Q_SLOTS:
     void screenGeometryChanged();

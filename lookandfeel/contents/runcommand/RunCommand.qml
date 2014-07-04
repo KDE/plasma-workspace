@@ -53,6 +53,13 @@ ColumnLayout {
 
     RowLayout {
         Layout.alignment: Qt.AlignTop
+        PlasmaComponents.ToolButton {
+            iconSource: "configure"
+            onClicked: {
+                runnerWindow.visible = false
+                runnerWindow.displayConfiguration()
+            }
+        }
         PlasmaComponents.TextField {
             id: queryField
             clearButtonShown: true

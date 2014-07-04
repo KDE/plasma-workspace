@@ -44,7 +44,7 @@
 
 #include "shellpluginloader.h"
 
-View::View(QWindow *parent)
+View::View(QWindow *)
     : PlasmaQuick::Dialog(),
       m_offset(.5),
       m_floating(false)
@@ -284,6 +284,11 @@ void View::switchUser()
 
     m_qmlObj->rootObject()->setProperty("runner", "desktopsessions");
     m_qmlObj->rootObject()->setProperty("query", "SESSIONS");
+}
+
+void View::displayConfiguration()
+{
+    QProcess::startDetached(QStringLiteral("kcmshell5"), QStringList() << QStringLiteral("plasmasearch"));
 }
 
 #include "moc_view.cpp"
