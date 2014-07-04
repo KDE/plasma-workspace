@@ -55,7 +55,7 @@ Item {
             property Item trackingItem
             onTrackingItemChanged: {
                 if (trackingItem) {
-                    y = trackingItem.mapToItem(main, 0, 0).y
+                    y = trackingItem.mapToItem(dialogItem, 0, 0).y
                 }
             }
 
