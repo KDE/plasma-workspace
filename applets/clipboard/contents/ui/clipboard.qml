@@ -28,9 +28,9 @@ Item {
     anchors.fill: parent
     Plasmoid.switchWidth: units.gridUnit * 10
     Plasmoid.switchHeight: units.gridUnit * 10
-    Plasmoid.status: (clipboardSource.models.clipboard.count > 0) ? PlasmaCore.Types.ActiveStatus : PlasmaCore.Types.PassiveStatus
+    Plasmoid.status: clipboardSource.data["clipboard"]["empty"] ? PlasmaCore.Types.PassiveStatus : PlasmaCore.Types.ActiveStatus
     Plasmoid.toolTipMainText: i18n("Clipboard Contents")
-    Plasmoid.toolTipSubText: clipboardSource.data["clipboard"]["current"]
+    Plasmoid.toolTipSubText: clipboardSource.data["clipboard"]["empty"] ? i18n("Clipboard is empty") : clipboardSource.data["clipboard"]["current"]
     Plasmoid.icon: "klipper"
 
     PlasmaCore.DataSource {

@@ -23,8 +23,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include "historymodel.h"
 #include "klipper.h"
 
-#include <KLocalizedString>
-
 static const QString s_clipboardSourceName = QStringLiteral("clipboard");
 static const QString s_barcodeKey = QStringLiteral("supportsBarcodes");
 
@@ -42,10 +40,15 @@ ClipboardEngine::ClipboardEngine(QObject *parent, const QVariantList &args)
     auto updateCurrent = [this]() {
         setData(s_clipboardSourceName,
                 QStringLiteral("current"),
-                m_klipper->history()->empty() ? i18n("Clipboard is empty") : m_klipper->history()->first()->text());
+                m_klipper->history()->empty() ? QString() : m_klipper->history()->first()->text());
     };
     connect(m_klipper->history(), &History::topChanged, this, updateCurrent);
     updateCurrent();
+    auto updateEmpty = [this]() {
+        setData(s_clipboardSourceName, QStringLiteral("empty"), m_klipper->history()->empty());
+    };
+    connect(m_klipper->history(), &History::changed, this, updateEmpty);
+    updateEmpty();
 }
 
 ClipboardEngine::~ClipboardEngine()
