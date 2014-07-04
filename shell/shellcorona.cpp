@@ -380,18 +380,28 @@ void ShellCorona::screenInvariants() const
     }
 
     Q_ASSERT(d->views[0]->screen()->name() == s->name());
-    Q_ASSERT(d->views[0]->geometry() == s->geometry() || ShellManager::s_forceWindowed);
 
     QSet<QScreen*> screens;
     int i = 0;
     foreach(DesktopView *view, d->views) {
-        Q_ASSERT(!screens.contains(view->screen()));
+        QScreen* screen = view->screen();
+        Q_ASSERT(!screens.contains(screen));
+        Q_ASSERT(!d->redundantOutputs.contains(screenToOutput(screen, d->screenConfiguration)));
         Q_ASSERT(view->isVisible());
         Q_ASSERT(view->fillScreen() || ShellManager::s_forceWindowed);
+        Q_ASSERT(!view->fillScreen() || view->geometry() == screen->geometry());
         Q_ASSERT(view->containment()->screen() == i);
 
-        screens.insert(view->screen());
+        screens.insert(screen);
         ++i;
+    }
+
+    foreach(KScreen::Output* out, d->redundantOutputs) {
+        Q_ASSERT(isOutputRedundant(out));
+    }
+
+    if(d->views.isEmpty()) {
+        qWarning() << "no screens!!";
     }
 }
 
@@ -716,6 +726,10 @@ void ShellCorona::removeScreen(DesktopView *view)
     removeView(idx);
 
     screenInvariants();
+
+    if(d->views.isEmpty()) {
+        qWarning() << "no screens!!";
+    }
 }
 
 void ShellCorona::removePanel(PanelView* panelView)
