@@ -67,26 +67,30 @@ QVariant HistoryModel::data(const QModelIndex &index, int role) const
     }
 
     QSharedPointer<HistoryItem> item = m_items.at(index.row());
+    HistoryItemType type = HistoryItemType::Text;
+    if (dynamic_cast<HistoryStringItem*>(item.data())) {
+        type = HistoryItemType::Text;
+    } else if (dynamic_cast<HistoryImageItem*>(item.data())) {
+        type = HistoryItemType::Image;
+    } else if (dynamic_cast<HistoryURLItem*>(item.data())) {
+        type = HistoryItemType::Url;
+    }
+
     switch (role) {
     case Qt::DisplayRole:
         return item->text();
+    case Qt::DecorationRole:
+        return item->image();
     case Qt::UserRole:
         return qVariantFromValue<HistoryItemConstPtr>(qSharedPointerConstCast<const HistoryItem>(item));
     case Qt::UserRole+1:
         return item->uuid();
-    case Qt::UserRole+2: {
-        if (dynamic_cast<HistoryStringItem*>(item.data())) {
-            return qVariantFromValue<HistoryItemType>(HistoryItemType::Text);
-        } else if (dynamic_cast<HistoryImageItem*>(item.data())) {
-            return qVariantFromValue<HistoryItemType>(HistoryItemType::Image);
-        } else if (dynamic_cast<HistoryURLItem*>(item.data())) {
-            return qVariantFromValue<HistoryItemType>(HistoryItemType::Url);
-        } else {
-            return qVariantFromValue<HistoryItemType>(HistoryItemType::Text);
-        }
-    }
+    case Qt::UserRole+2:
+        return qVariantFromValue<HistoryItemType>(type);
     case Qt::UserRole+3:
         return item->uuid().toBase64();
+    case Qt::UserRole+4:
+        return int(type);
     }
     return QVariant();
 }
@@ -202,6 +206,8 @@ QHash< int, QByteArray > HistoryModel::roleNames() const
 {
     QHash<int, QByteArray> hash;
     hash.insert(Qt::DisplayRole, QByteArrayLiteral("DisplayRole"));
+    hash.insert(Qt::DecorationRole, QByteArrayLiteral("DecorationRole"));
     hash.insert(Qt::UserRole+3, QByteArrayLiteral("UuidRole"));
+    hash.insert(Qt::UserRole+4, QByteArrayLiteral("TypeRole"));
     return hash;
 }

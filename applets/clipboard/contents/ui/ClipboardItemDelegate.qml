@@ -19,6 +19,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 import QtQuick 2.0
 import QtQuick.Layouts 1.1
 import org.kde.plasma.components 2.0 as PlasmaComponents
+import org.kde.kquickcontrolsaddons 2.0 as KQuickControlsAddons
 
 PlasmaComponents.ListItem {
     id: menuItem
@@ -46,17 +47,28 @@ PlasmaComponents.ListItem {
         }
     }
 
-    PlasmaComponents.Label {
+    Item {
         id: label
-        height: implicitHeight
-        text: DisplayRole
-
+        height: childrenRect.height
         anchors {
             left: parent.left
             leftMargin: highlightItem.marginHints.left
             right: parent.right
             rightMargin: highlightItem.marginHints.right
             verticalCenter: parent.verticalCenter
+        }
+        PlasmaComponents.Label {
+            height: implicitHeight
+            width: parent.width
+            text: DisplayRole
+            visible: TypeRole != 1 // TypeRole: 0: Text, 1: Image, 2: Url
+        }
+        KQuickControlsAddons.QPixmapItem {
+            width: parent.width
+            height: width * (nativeHeight/nativeWidth)
+            pixmap: DecorationRole
+            visible: TypeRole == 1
+            fillMode: KQuickControlsAddons.QPixmapItem.PreserveAspectFit
         }
     }
 
