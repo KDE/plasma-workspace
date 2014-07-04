@@ -50,6 +50,7 @@ class ShellCorona : public Plasma::Corona
 {
     Q_OBJECT
     Q_PROPERTY(QString shell READ shell WRITE setShell)
+    Q_PROPERTY(int numScreens READ numScreens)
     Q_CLASSINFO("D-Bus Interface", "org.kde.PlasmaShell")
 
 public:
@@ -62,9 +63,9 @@ public:
     KSharedConfig::Ptr applicationConfig();
 
     int numScreens() const;
-    QRect screenGeometry(int id) const;
-    QRegion availableScreenRegion(int id) const;
-    QRect availableScreenRect(int id) const;
+    Q_INVOKABLE QRect screenGeometry(int id) const;
+    Q_INVOKABLE QRegion availableScreenRegion(int id) const;
+    Q_INVOKABLE QRect availableScreenRect(int id) const;
 
     PanelView *panelView(Plasma::Containment *containment) const;
 
@@ -82,6 +83,8 @@ public:
 
     void removePanel(PanelView* panelView);
     QScreen* screenForId(int screenId) const;
+    
+    Q_INVOKABLE void screenInvariants() const;
 
 public Q_SLOTS:
     /**
@@ -159,7 +162,6 @@ private Q_SLOTS:
 private:
     QScreen* insertScreen(QScreen* screen, int idx);
     void removeView(int idx);
-    void screenInvariants() const;
     bool isOutputRedundant(KScreen::Output* output) const;
     void reconsiderOutputs();
     QList<PanelView*> panelsForScreen(QScreen* screen);
