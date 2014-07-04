@@ -83,6 +83,10 @@ public:
         waitingPanelsTimer.setSingleShot(true);
         waitingPanelsTimer.setInterval(250);
         connect(&waitingPanelsTimer, &QTimer::timeout, q, &ShellCorona::createWaitingPanels);
+
+        reconsiderOutputsTimer.setSingleShot(true);
+        reconsiderOutputsTimer.setInterval(250);
+        connect(&reconsiderOutputsTimer, &QTimer::timeout, q, &ShellCorona::reconsiderOutputs);
     }
 
     ShellCorona *q;
@@ -106,6 +110,7 @@ public:
     KScreen::Config *screenConfiguration;
     QTimer waitingPanelsTimer;
     QTimer appConfigSyncTimer;
+    QTimer reconsiderOutputsTimer;
 };
 
 static QScreen *outputToScreen(KScreen::Output *output)
@@ -596,36 +601,44 @@ bool ShellCorona::isOutputRedundant(KScreen::Output* screen) const
     return false;
 }
 
-void ShellCorona::reconsiderOutputs()
+DesktopView* ShellCorona::viewForScreen(QScreen* screen)
 {
-    KScreen::Output* output = qobject_cast<KScreen::Output*>(sender());
-    reconsiderOutput(output);
-    foreach(KScreen::Output* out, d->redundantOutputs) {
-        reconsiderOutput(out);
-    }
+    foreach(DesktopView* view, d->views)
+        if(view->screen()==screen)
+            return view;
+
+    return Q_NULLPTR;
 }
 
-void ShellCorona::reconsiderOutput(KScreen::Output* output)
+void ShellCorona::reconsiderOutputs()
 {
-    QScreen *screen = outputToScreen(output);
-    foreach(DesktopView* view, d->views) {
-        if (view->screen() == screen) {
-            if (isOutputRedundant(output)) { //if redundant, then remove the screen
-                removeScreen(view);
+    foreach (KScreen::Output* out, d->screenConfiguration->connectedOutputs()) {
+        if (!out->isEnabled()) {
+            continue;
+        }
+
+        if (d->redundantOutputs.contains(out)) {
+            if (!isOutputRedundant(out)) {
+                addOutput(out);
             }
-            return; //if it's already in, let's not add it again
+        } else {
+            if (isOutputRedundant(out)) {
+                removeScreen(viewForScreen(outputToScreen(out)));
+                d->redundantOutputs.insert(out);
+            }
         }
     }
-    addOutput(output);
+    screenInvariants();
 }
 
 void ShellCorona::addOutput(KScreen::Output *output)
 {
     connect(output, &KScreen::Output::isEnabledChanged, this, &ShellCorona::outputEnabledChanged, Qt::UniqueConnection);
-    connect(output, &KScreen::Output::posChanged, this, &ShellCorona::reconsiderOutputs, Qt::UniqueConnection);
-    connect(output, &KScreen::Output::currentModeIdChanged, this, &ShellCorona::reconsiderOutputs, Qt::UniqueConnection);
+    connect(output, &KScreen::Output::posChanged, &d->reconsiderOutputsTimer, static_cast<void (QTimer::*)()>(&QTimer::start), Qt::UniqueConnection);
+    connect(output, &KScreen::Output::currentModeIdChanged, &d->reconsiderOutputsTimer, static_cast<void (QTimer::*)()>(&QTimer::start), Qt::UniqueConnection);
     if (!output->isEnabled()) {
         d->redundantOutputs.remove(output);
+        reconsiderOutputs();
         return;
     }
     QScreen *screen = outputToScreen(output);
