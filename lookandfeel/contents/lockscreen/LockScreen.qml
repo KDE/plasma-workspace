@@ -89,7 +89,7 @@ Image {
                                         "ButtonAction": "unlock"
                         })
                         if(sessions.startNewSessionSupported) {
-                            users.append({  "realName": i18n("New Session"),
+                            users.append({  "realName": i18nd("plasma_lookandfeel_org.kde.lookandfeel", "New Session"),
                                             "icon": "system-log-out", //TODO Need an icon for new session
                                             "showPassword": false,
                                             "ButtonLabel": i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Create Session"),
@@ -97,7 +97,7 @@ Image {
                             })
                         }
                         if(sessions.switchUserSupported) {
-                            users.append({  "realName": i18n("Change Session"),
+                            users.append({  "realName": i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Change Session"),
                                             "icon": "system-switch-user",
                                             "showPassword": false,
                                             "ButtonLabel": i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Change Session..."),
