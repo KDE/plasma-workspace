@@ -35,7 +35,7 @@ class DesktopView : public PlasmaQuick::View
     Q_PROPERTY(bool dashboardShown READ isDashboardShown NOTIFY dashboardShownChanged)
 
 public:
-    explicit DesktopView(ShellCorona *corona, QScreen *screen);
+    explicit DesktopView(ShellCorona *corona);
     virtual ~DesktopView();
 
     bool stayBehind() const;

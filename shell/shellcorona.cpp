@@ -648,7 +648,7 @@ void ShellCorona::addOutput(KScreen::Output *output)
 
     QScreen* newScreen = insertScreen(screen, insertPosition);
 
-    DesktopView *view = new DesktopView(this, newScreen);
+    DesktopView *view = new DesktopView(this);
     d->views.append(view);
 
     Plasma::Containment *containment = createContainmentForActivity(d->activityController->currentActivity(), d->views.count()-1);
@@ -660,6 +660,7 @@ void ShellCorona::addOutput(KScreen::Output *output)
     }
 
     view->setContainment(containment);
+    view->setScreen(newScreen);
     view->show();
 
     //were there any panels for this screen before it popped up?
@@ -681,7 +682,6 @@ QScreen* ShellCorona::insertScreen(QScreen* screen, int idx)
     DesktopView* v = d->views[idx];
     QScreen *oldScreen = v->screen();
     v->setScreen(screen);
-    v->adaptToScreen();
     foreach(PanelView* panel, d->panelViews) {
         if(panel->screen() == screen) {
             panel->setScreen(screen);

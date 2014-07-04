@@ -32,7 +32,7 @@
 
 #include <Plasma/Package>
 
-DesktopView::DesktopView(ShellCorona *corona, QScreen *screen)
+DesktopView::DesktopView(ShellCorona *corona)
     : PlasmaQuick::View(corona, 0),
       m_corona(corona),
       m_stayBehind(false),
@@ -41,7 +41,6 @@ DesktopView::DesktopView(ShellCorona *corona, QScreen *screen)
 {
     setTitle(i18n("Desktop"));
     setIcon(QIcon::fromTheme("user-desktop"));
-    setScreen(screen);
     engine()->rootContext()->setContextProperty("desktop", this);
     setSource(QUrl::fromLocalFile(corona->package().filePath("views", "Desktop.qml")));
 
@@ -118,7 +117,6 @@ void DesktopView::adaptToScreen()
     }
 
     m_oldScreen = screen();
-     qDebug() << "adapted" << geometry() << (containment () ? containment()->wallpaper() : "xx");
 }
 
 void DesktopView::ensureStayBehind()
