@@ -62,6 +62,7 @@ PlasmaComponents.ListItem {
             width: parent.width
             text: DisplayRole
             visible: TypeRole != 1 // TypeRole: 0: Text, 1: Image, 2: Url
+            textFormat: Text.PlainText
         }
         KQuickControlsAddons.QPixmapItem {
             width: parent.width
