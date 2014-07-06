@@ -9,6 +9,7 @@ X-KDE-Kded-load-on-demand=false
 X-KDE-Kded-phase=1
 
 Name=KSysguard
+Name[ar]=مرقاب نظام.ك
 Name[ca]=KSysguard
 Name[de]=KSysguard
 Name[en_GB]=KSysguard
@@ -35,6 +36,7 @@ Name[sv]=KDE:s systemövervakare
 Name[uk]=KSysguard
 Name[x-test]=xxKSysguardxx
 Comment=Launches KSysguard on Ctrl + Escape
+Comment[ar]=يُطلِق مرقاب نظام.ك عند الضغط على Ctrl+Escape
 Comment[ca]=Llança el KSysguard amb Ctrl + Esc
 Comment[de]=Startet KSysguard mit Strg+Esc
 Comment[en_GB]=Launches KSysguard on Ctrl + Escape

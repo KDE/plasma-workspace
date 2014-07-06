@@ -2,7 +2,7 @@
 Encoding=UTF-8
 Name=Web Browser
 Name[af]=Web Blaaier
-Name[ar]=متصفح الوِب
+Name[ar]=متصفّح وِب
 Name[ast]=Restolador Web
 Name[be]=Вандроўнік па Сеціве
 Name[be@latin]=Hartač sieciva
@@ -92,7 +92,7 @@ Name[x-test]=xxWeb Browserxx
 Name[zh_CN]=网络浏览器
 Name[zh_TW]=網頁瀏覽器
 Comment=A simple web browser
-Comment[ar]=متصفح وِب بسيط
+Comment[ar]=متصفّح وِب بسيط
 Comment[ast]=Restolador cenciellu
 Comment[be@latin]=Prosty hartač sieciva
 Comment[bg]=Обикновен уеб браузър

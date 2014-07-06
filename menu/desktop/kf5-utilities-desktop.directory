@@ -2,6 +2,7 @@
 Encoding=UTF-8
 Type=Directory
 Name=Desktop
+Name[ar]=سطح المكتب
 Name[ca]=Escriptori
 Name[cs]=Pracovní plocha
 Name[de]=Arbeitsfläche
@@ -35,6 +36,7 @@ Name[x-test]=xxDesktopxx
 Name[zh_TW]=桌面
 Icon=user-desktop
 Comment=Desktop
+Comment[ar]=سطح المكتب
 Comment[ca]=Escriptori
 Comment[cs]=Pracovní plocha
 Comment[de]=Arbeitsfläche

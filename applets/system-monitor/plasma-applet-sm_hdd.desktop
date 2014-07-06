@@ -1,6 +1,7 @@
 [Desktop Entry]
 Encoding=UTF-8
 Name=Hard Disk Space Usage
+Name[ar]=استخدام مساحة القرص الصلب
 Name[bs]=Iskorisenost Hard diska
 Name[ca]=Ús d'espai de disc dur
 Name[ca@valencia]=Ús d'espai de disc dur
@@ -48,6 +49,7 @@ Name[x-test]=xxHard Disk Space Usagexx
 Name[zh_CN]=硬盘空间使用
 Name[zh_TW]=硬碟空間使用量
 Comment=An applet that monitors hard disk space usage and percentage
+Comment[ar]=بُريْمج يراقب استخدام مساحة القرص الصلب ونسبته المئوية
 Comment[bs]=Aplet koji prati hard korištenje prostora na disku i postotak
 Comment[ca]=Una miniaplicació que controla l'ús d'espai del disc dur i el tant per cent
 Comment[ca@valencia]=Una miniaplicació que controla l'ús d'espai del disc dur i el tant per cent

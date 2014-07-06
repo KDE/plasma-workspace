@@ -2,6 +2,7 @@
 Encoding=UTF-8
 Type=Directory
 Name=File
+Name[ar]=ملف
 Name[as]=নথিপত্ৰ
 Name[ca]=Fitxer
 Name[cs]=Soubor
@@ -35,6 +36,7 @@ Name[x-test]=xxFilexx
 Name[zh_TW]=檔案
 Icon=system-file-manager
 Comment=File
+Comment[ar]=ملف
 Comment[as]=নথিপত্ৰ
 Comment[ca]=Fitxer
 Comment[cs]=Soubor

@@ -1,6 +1,7 @@
 [Desktop Entry]
 Encoding=UTF-8
 Name=PackageKit
+Name[ar]=عُدّة الحزم
 Name[bs]=Paket opreme
 Name[ca]=PackageKit
 Name[ca@valencia]=PackageKit
@@ -41,6 +42,7 @@ Name[x-test]=xxPackageKitxx
 Name[zh_CN]=PackageKit
 Name[zh_TW]=PackageKit
 Comment=PackageKit Data Engine
+Comment[ar]=محرّك بيانات عُدّة الحزم
 Comment[bs]=Pogon podataka za package kit
 Comment[ca]=Motor de dades del PackageKit
 Comment[ca@valencia]=Motor de dades del PackageKit

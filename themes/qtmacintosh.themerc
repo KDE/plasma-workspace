@@ -1,6 +1,6 @@
 [Misc]
 Name=Mac OS X
-Name[ar]=Mac OS X
+Name[ar]=ماك أوإس إكس
 Name[ast]=Mac OS X
 Name[bg]=Mac OS X
 Name[bs]=MekOS X
@@ -72,7 +72,6 @@ Name[x-test]=xxMac OS Xxx
 Name[zh_CN]=Mac OS X
 Name[zh_TW]=Mac OS X
 Comment=Style that uses the Apple Appearance Manager
-Comment[ar]=نمط يستخدم مدير مظهر آبل
 Comment[ast]=Estilu qu'usa'l Xestor d'Apariencia d'Apple
 Comment[bg]=Стил, използващ Apple Appearance Manager
 Comment[bs]=Stil koji koristi Eplov Menadžer izgleda

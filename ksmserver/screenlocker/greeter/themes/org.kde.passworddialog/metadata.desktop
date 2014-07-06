@@ -1,5 +1,6 @@
 [Desktop Entry]
 Name=Password dialog
+Name[ar]=حواري كلمة المرور
 Name[bs]=Dijalog za lozinku
 Name[ca]=Diàleg de contrasenya
 Name[ca@valencia]=Diàleg de contrasenya
@@ -46,6 +47,7 @@ Name[x-test]=xxPassword dialogxx
 Name[zh_CN]=密码对话框
 Name[zh_TW]=密碼對話框
 Comment=Screen locker that provides a password dialog and an interface to switch the current user
+Comment[ar]=قافِل شاشة يوفّر حواري كلمة المرور وواجهة لتبديل المستخدِم الحالي
 Comment[bs]=Zaključavanje ekrana koje pruža dijaloški prozor za lozinku i interfejs za promjenutrenutnog korisnika
 Comment[ca]=Bloqueig de pantalla que proporciona una diàleg de contrasenya i una interfície per commutar l'usuari actual
 Comment[ca@valencia]=Bloqueig de pantalla que proporciona una diàleg de contrasenya i una interfície per commutar l'usuari actual

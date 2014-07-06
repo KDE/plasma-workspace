@@ -1,6 +1,5 @@
 [Desktop Entry]
 Name=pastebin.com
-Name[ar]=pastebin.com
 Name[ast]=pastebin.com
 Name[bg]=pastebin.com
 Name[bs]=pastebin.com
@@ -60,7 +59,7 @@ Name[x-test]=xxpastebin.comxx
 Name[zh_CN]=pastebin.com
 Name[zh_TW]=pastebin.com
 Comment=Allows text to be shared using the pastebin.com service
-Comment[ar]=يسمح للنصوص أن تُشارك بإستخدام خدمة pastebin.com
+Comment[ar]=يسمح بمشاركة النصوص عبر خدمة pastebin.com
 Comment[bg]=Позволява споделянето на текст чрез pastebin.com
 Comment[bs]=Omogućava dijeljenje teksta preko servisa pastebin.com
 Comment[ca]=Permet la compartició de text utilitzant el servei pastebin.com

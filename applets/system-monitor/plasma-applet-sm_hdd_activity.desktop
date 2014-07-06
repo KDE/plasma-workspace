@@ -1,6 +1,7 @@
 [Desktop Entry]
 Encoding=UTF-8
 Name=Hard Disk I/O Monitor
+Name[ar]=مراقب د/خ القرص الصلب
 Name[bs]=Hard Disk I/O Monitor
 Name[ca]=Controlador d'E/S de disc dur
 Name[ca@valencia]=Controlador d'E/S de disc dur
@@ -50,6 +51,7 @@ Name[zh_CN]=硬盘 I/O 监视器
 Name[zh_TW]=硬碟使用量 I/O 監視器
 
 Comment=An applet that monitors hard disk throughput and input/output
+Comment[ar]=بُريْمج يراقب استخدام إنتاجيّة القرص الصلب ودَخْله/خَرْجه
 Comment[bs]=Aplet koji prati hard disk protok ulaz / izlaz
 Comment[ca]=Una miniaplicació que controla la velocitat de transferència de dades del disc dur i l'entrada/sortida
 Comment[ca@valencia]=Una miniaplicació que controla la velocitat de transferència de dades del disc dur i l'entrada/eixida

@@ -1,7 +1,7 @@
 [Desktop Entry]
 Encoding=UTF-8
 Name=Run Commands
-Name[ar]=شغّل أوامراً
+Name[ar]=شغّل أوامر
 Name[ast]=Executar órdenes
 Name[be@latin]=Vykonvaj zahady
 Name[bg]=Изпълнение на команди
@@ -76,7 +76,6 @@ Name[x-test]=xxRun Commandsxx
 Name[zh_CN]=运行命令
 Name[zh_TW]=執行指令
 Comment=Run Executable Data Engine
-Comment[ar]=شغل محرك البيانات التنفيذية
 Comment[ast]=Executar motor de datos executables
 Comment[be@latin]=Uklučaj systemu dostupu da źviestak
 Comment[bg]=Изпълнение на програми

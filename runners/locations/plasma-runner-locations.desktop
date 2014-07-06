@@ -1,6 +1,6 @@
 [Desktop Entry]
 Name=Locations
-Name[ar]=مواقع
+Name[ar]=المواقع
 Name[ast]=Llugares
 Name[be@latin]=Miescy
 Name[bg]=Местоположения
@@ -77,7 +77,7 @@ Name[x-test]=xxLocationsxx
 Name[zh_CN]=位置
 Name[zh_TW]=位置
 Comment=File and URL opener
-Comment[ar]=فاتح الملفات و العناوين
+Comment[ar]=فاتح ملفات ووصلات
 Comment[ast]=Visor de ficheros y URL
 Comment[be@latin]=Adčynieńnie fajłaŭ i adrasoŭ
 Comment[bg]=Отваряне на файлове и адреси

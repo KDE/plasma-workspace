@@ -1,6 +1,6 @@
 [Desktop Entry]
 Name=Free Space Notifier
-Name[ar]=منبه المساحة الحرة
+Name[ar]=مُخطِر المساحة الحرّة
 Name[ast]=Notificador d'espaciu llibre
 Name[bg]=Уведомяване за свободно пространство
 Name[bs]=Izvještač o slobodnom prostoru
@@ -63,7 +63,7 @@ Name[x-test]=xxFree Space Notifierxx
 Name[zh_CN]=空闲空间通知器
 Name[zh_TW]=剩餘空間通知
 Comment=Warns when running out of space on your home folder
-Comment[ar]=يحذر عندما توشك مساحة مجلد المنزل على النفاد
+Comment[ar]=يحذّرك عندما تنفذ مساحة مجلد المنزل
 Comment[ast]=Avisa cuando te quedes ensin espaciu na carpeta personal
 Comment[bg]=Предупреждение при твърде малко пространство в домашната директория
 Comment[bn]=ব্যক্তিগত ফোল্ডারে জায়গা কমে গেলে সতর্ক করে

@@ -1,5 +1,6 @@
 [Desktop Entry]
 Name=Debian Weather Service
+Name[ar]=خدمة دبيان للطقس
 Name[bg]=Метеорологична услуга на Debian
 Name[bs]=NOAA‑ova nacionalna meteorološka služba
 Name[ca]=Servei meteorològic de Debian
@@ -54,6 +55,7 @@ Name[x-test]=xxDebian Weather Servicexx
 Name[zh_CN]=Debian 天气服务
 Name[zh_TW]=Debian 天氣服務
 Comment=XML Data from edos.debian.net
+Comment[ar]=بيانات XML من edos.debian.net
 Comment[bg]=XML данни от edos.debian.net
 Comment[bs]=XML podaci sa edos.debian.net
 Comment[ca]=Dades XML d'edos.debian.net

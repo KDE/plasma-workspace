@@ -1,7 +1,7 @@
 [Global]
 IconName=drive-harddisk
 Comment=KDE Free Space Notifier Daemon
-Comment[ar]=مراقب كدي لمنبه المساحة الحرّة
+Comment[ar]=عفريت مُخطِر كدي للمساحة الحرة
 Comment[ast]=Degorriu de notificaciones d'espaciu llibre de KDE
 Comment[bg]=Демон на KDE за свободно пространство
 Comment[bn]=কে.ডি.ই. ফ্রী স্পেস বিজ্ঞপ্তি ডিমন
@@ -133,7 +133,7 @@ Name[zh_TW]=磁碟空間過低
 [Context/warningnot]
 Name=Warning
 Name[af]=Waarskuwing
-Name[ar]=إنذار
+Name[ar]=تحذير
 Name[as]=সতৰ্কবাণী
 Name[ast]=Avisu
 Name[be]=Папярэджанне
@@ -218,7 +218,7 @@ Name[x-test]=xxWarningxx
 Name[zh_CN]=警告
 Name[zh_TW]=警告
 Comment=Used for warning notifications
-Comment[ar]=يُستخدم للتنبيهات التحذيرية
+Comment[ar]=يُستخدَم لإخطارات التحذير
 Comment[ast]=Usáu pa notificaciones d'avisu
 Comment[be@latin]=Dla aścierahalnych paviedamleńniaŭ
 Comment[bg]=Използва се за предупреждения
@@ -293,7 +293,7 @@ Comment[zh_TW]=用於警告通知
 
 [Event/freespacenotif]
 Name=Running low on disk space
-Name[ar]=قارب القرص على الامتلاء
+Name[ar]=مساحة القرص منخفضة
 Name[ast]=Queda poco espaciu en discu
 Name[bg]=Дисковото пространство е твърде малко
 Name[bn]=ডিস্ক-এ বেশী জায়গা বাকি নেই
@@ -356,7 +356,7 @@ Name[x-test]=xxRunning low on disk spacexx
 Name[zh_CN]=磁盘空间过低
 Name[zh_TW]=磁碟空間快用完了
 Comment=You are running low on disk space
-Comment[ar]=إن مساحة التخزين المتوفرة على القرص توشك على النفاذ
+Comment[ar]=أنت تعمل على مساحة قرص منخفضة
 Comment[ast]=Tas quedando ensin espaciu en discu
 Comment[bg]=Дисковото Ви пространство е твърде малко
 Comment[bn]=আপনার ডিস্ক-এ বেশী জায়গা বাকি নেই

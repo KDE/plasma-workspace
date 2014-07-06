@@ -1,6 +1,6 @@
 [Desktop Entry]
 Name=Simplest Image Hosting
-Name[ar]=أبسط إستضافة للصور
+Name[ar]=أسهل استضافة للصور
 Name[ast]=Simplest Image Hosting
 Name[bg]=Simplest Image Hosting
 Name[bs]=Simplest Image Hosting
@@ -56,6 +56,7 @@ Name[x-test]=xxSimplest Image Hostingxx
 Name[zh_CN]=Simplest Image Hosting
 Name[zh_TW]=Simplest Image Hosting
 Comment=Allows images to be shared using the Simplest Image Hosting service
+Comment[ar]=يسمح بمشاركة الصور عبر خدمة أسهل استضافة للصور
 Comment[bg]=Позволява споделяне на изображения чрез услугата Simplest Image Hosting
 Comment[bs]=Dijeljenje slika preko servisa Simplest image hosting
 Comment[ca]=Permet la compartició d'imatges utilitzant el servei «Simplest Image Hosting»

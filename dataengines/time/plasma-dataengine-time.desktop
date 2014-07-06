@@ -1,6 +1,6 @@
 [Desktop Entry]
 Name=Date and Time
-Name[ar]=التاريخ و الوقت
+Name[ar]=التاريخ والوقت
 Name[as]=তাৰিখ আৰু সময়
 Name[ast]=Data y hora
 Name[be@latin]=Data j čas
@@ -79,7 +79,7 @@ Name[x-test]=xxDate and Timexx
 Name[zh_CN]=日期和时间
 Name[zh_TW]=日期與時間
 Comment=Date and time by timezone
-Comment[ar]=التاريخ و الوقت بواسطة المنطقة الزمنية
+Comment[ar]=التاريخ والوقت بالمنطقة الزمنية
 Comment[ast]=Data y hora por estaya horaria
 Comment[bg]=Настройки на датата и часа
 Comment[bn]=টাইম-জোন অনুসারে তারিখ এবং সময়

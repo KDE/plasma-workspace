@@ -1,6 +1,7 @@
 [Desktop Entry]
 Exec=krunner
 Name=KRunner
+Name[ar]=مشغّل.ك
 Name[ca]=KRunner
 Name[de]=KRunner
 Name[en_GB]=KRunner
@@ -15,6 +16,10 @@ Name[pt_BR]=KRunner
 Name[ru]=KRunner
 Name[sk]=KRunner
 Name[sl]=KRunner
+Name[sr]=К‑извођач
+Name[sr@ijekavian]=К‑извођач
+Name[sr@ijekavianlatin]=K‑izvođač
+Name[sr@latin]=K‑izvođač
 Name[sv]=Kör program
 Name[uk]=KRunner
 Name[x-test]=xxKRunnerxx

@@ -1,6 +1,5 @@
 [Desktop Entry]
 Name=wklej.org
-Name[ar]=wklej.org
 Name[ast]=wklej.org
 Name[bg]=wklej.org
 Name[bs]=wklej.org
@@ -60,7 +59,7 @@ Name[x-test]=xxwklej.orgxx
 Name[zh_CN]=wklej.org
 Name[zh_TW]=wklej.org
 Comment=Allows text to be shared using the wklej.org service
-Comment[ar]=يسمح للنصوص أن تُشارك بإستخدام خدمة wklej.org
+Comment[ar]=يسمح بمشاركة النصوص عبر خدمة wklej.org
 Comment[bg]=Позволява споделянето на текст чрез wklej.org
 Comment[bs]=Dopušta dijeljenje teksta preko servisa wklej.org
 Comment[ca]=Permet la compartició de text utilitzant el servei wklej.org

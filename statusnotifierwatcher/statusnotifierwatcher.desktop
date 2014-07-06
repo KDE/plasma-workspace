@@ -1,7 +1,7 @@
 [Desktop Entry]
 Type=Service
 Name=Status Notifier Manager
-Name[ar]=مدير تنبيهات الحالة
+Name[ar]=مدير مُخطِر الحالة
 Name[ast]=Xestor del notificador del estáu
 Name[bn]=স্ট্যাটাস বিজ্ঞপ্তি ম্যানেজার
 Name[bs]=Menadžer izveštavača o stanju
@@ -61,7 +61,7 @@ Name[x-test]=xxStatus Notifier Managerxx
 Name[zh_CN]=状态通知管理器
 Name[zh_TW]=狀態通知管理員
 Comment=Manages services that provide status notifier user interfaces
-Comment[ar]=أدر الخدمات التي توفر واجهات المستخدم لمنبّهات الحالة
+Comment[ar]=أدِر الخدمات التي توفّر واجهات مستخدِم لمُخطِر الحالة
 Comment[ast]=Xestiona servicios qu'ufren interfaces d'usuariu pal notificador d'estáu
 Comment[bs]=Upravljanje servisima koji pružaju sučelje izveštavača o stanju
 Comment[ca]=Gestiona serveis que proporcionen notificacions d'estat a les interfícies d'usuari

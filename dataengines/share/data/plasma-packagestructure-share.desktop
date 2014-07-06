@@ -55,6 +55,7 @@ Name[x-test]=xxShareProviderxx
 Name[zh_CN]=共享提供
 Name[zh_TW]=分享服務提供者
 Comment=Share Package Structure
+Comment[ar]=شارك بناء الحزمة
 Comment[ast]=Estructura Paquete Compartir
 Comment[bs]=Struktura paketa dijeljenja
 Comment[ca]=Estructura de paquet de compartició

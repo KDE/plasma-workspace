@@ -1,7 +1,7 @@
 [Global]
 IconName=system-lock-screen
 Comment=Screen Saver
-Comment[ar]=حافظة الشاشة
+Comment[ar]=حافظ الشاشة
 Comment[ast]=Curiapantalles
 Comment[bg]=Екранен предпазител
 Comment[bs]=Čuvar ekrana
@@ -66,7 +66,7 @@ Comment[zh_TW]=螢幕保護程式
 
 [Event/savingstarted]
 Name=Screen saver started
-Name[ar]=بدأت حافظة الشاشة
+Name[ar]=بدأ حافظ الشاشة
 Name[ast]=Curiapantalles aniciáu
 Name[bg]=Зареден е екранен предпазител
 Name[bs]=Čuvar ekrana pokrenut
@@ -134,7 +134,7 @@ Name[x-test]=xxScreen saver startedxx
 Name[zh_CN]=屏幕保护程序已启动
 Name[zh_TW]=螢幕保護程式已啟動
 Comment=The screen saver has been started
-Comment[ar]=بدأت حافظة الشاشة
+Comment[ar]=لقد بدأ حافظ الشاشة
 Comment[ast]=Entamóse'l curiapantalles
 Comment[bg]=Зареден е екранен предпазител
 Comment[bs]=Pokrenut je čuvar ekrana
@@ -204,7 +204,7 @@ Action=None
 
 [Event/locked]
 Name=Screen locked
-Name[ar]=قُقلت الشاشة
+Name[ar]=قُفلت الشاشة
 Name[ast]=Pantalla bloquiada
 Name[bg]=Екранът е заключен
 Name[bs]=Ekran zaključan
@@ -272,7 +272,7 @@ Name[x-test]=xxScreen lockedxx
 Name[zh_CN]=屏幕已锁定
 Name[zh_TW]=螢幕已鎖定
 Comment=The screen has been locked
-Comment[ar]=تمّ قفل الشاشة
+Comment[ar]=لقد قُفلت الشاشة
 Comment[ast]=Bloquióse la pantalla
 Comment[bg]=Екранът е заключен
 Comment[bs]=Ekran je upravo zaključan
@@ -343,7 +343,7 @@ Action=None
 
 [Event/savingstopped]
 Name=Screen saver exited
-Name[ar]=خرجت حافظة الشاشة
+Name[ar]=انتهى حافظ الشاشة
 Name[ast]=Finó'l curiapantalles
 Name[bg]=Екранният предпазител е спрян
 Name[bs]=Čuvar ekrana napušten
@@ -410,7 +410,7 @@ Name[x-test]=xxScreen saver exitedxx
 Name[zh_CN]=屏幕保护程序已退出
 Name[zh_TW]=螢幕保護程式已離開
 Comment=The screen saver has finished
-Comment[ar]=حافظة الشاشة انتهت
+Comment[ar]=لقد انتهى حافظ الشاشة
 Comment[ast]=Finó'l curiapantalles
 Comment[bg]=Екранният предпазител е спрян
 Comment[bs]=Čuvar ekrana se upravo okončao
@@ -480,7 +480,7 @@ Action=None
 
 [Event/unlocked]
 Name=Screen unlocked
-Name[ar]=فُكًَ قفل الشاشة
+Name[ar]=أُزيل قفل الشاشة
 Name[ast]=Pantalla desbloquiada
 Name[bg]=Екранът е отключен
 Name[bs]=Ekran otključan
@@ -548,7 +548,7 @@ Name[x-test]=xxScreen unlockedxx
 Name[zh_CN]=屏幕已解锁
 Name[zh_TW]=螢幕已解除鎖定
 Comment=The screen has been unlocked
-Comment[ar]=تم قفل الشاشة
+Comment[ar]=لقد أُزيل قفل الشاشة
 Comment[ast]=Desbloquióse la pantalla
 Comment[bg]=Екранът е отключен
 Comment[bs]=Ekran je upravo otključan
@@ -617,7 +617,7 @@ Action=None
 
 [Event/unlockfailed]
 Name=Screen unlock failed
-Name[ar]=فشل فك قفل الشاشة
+Name[ar]=فشلت إزالة قفل الشاشة
 Name[ast]=Nun pudo desbloquiase la pantalla
 Name[bg]=Грешка при отключване на екрана
 Name[bs]=Otključavanje ekrana neuspelo
@@ -685,7 +685,7 @@ Name[x-test]=xxScreen unlock failedxx
 Name[zh_CN]=屏幕解锁失败 
 Name[zh_TW]=螢幕解除鎖定失敗
 Comment=Failed attempt to unlock the screen
-Comment[ar]=محاولة فاشلة لفك قفل الشاشة
+Comment[ar]=محاولة إزالة قفل الشاشة فشلت
 Comment[ast]=Fallu al intentar desbloquiar la pantalla
 Comment[bg]=Грешка при опит за отключване на екрана
 Comment[bs]=Pokušaj otključavanja ekrana nije uspeo

@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=Klipper
 Name[af]=Klipper
-Name[ar]=Klipper
+Name[ar]=مقصّ.ك
 Name[ast]=Klipper
 Name[be]=Klipper
 Name[be@latin]=Klipper
@@ -91,7 +91,7 @@ Name[zh_CN]=Klipper
 Name[zh_TW]=剪貼薄(Klipper)
 GenericName=Clipboard Tool
 GenericName[af]=Klipbord Program
-GenericName[ar]=أداة الحافظة
+GenericName[ar]=أداة حافظة
 GenericName[ast]=Cartafueyu
 GenericName[be]=Буфер абмену
 GenericName[be@latin]=Pryłada, jakaja absłuhoŭvaje abmienny bufer
@@ -192,7 +192,7 @@ OnlyShowIn=KDE;
 Categories=Qt;KDE;Utility;X-KDE-Utilities-Desktop;
 Comment=A cut & paste history utility
 Comment[af]='n Knip & plak geskiedenis program
-Comment[ar]=أداة تاريخ القص واللصق
+Comment[ar]=أداة تأريخ القصّ واللصق
 Comment[ast]=Una utilidá de cortar y apegar historial
 Comment[be]=Службовая праграма працы з гісторыяй выразання/устаўкі
 Comment[be@latin]=Pryłada dla prahladu historyi aperacyjaŭ vycinańnia dy ŭklejvańnia

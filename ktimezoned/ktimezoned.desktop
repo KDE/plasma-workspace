@@ -8,7 +8,7 @@ X-KDE-Kded-autoload=true
 X-KDE-Kded-load-on-demand=true
 
 Name=Time Zone
-Name[ar]= المنطقة الزمنية
+Name[ar]=المنطقة الزمنية
 Name[ast]=Estaya horaria
 Name[bg]=Часови пояс
 Name[bn]=টাইম জোন
@@ -75,7 +75,7 @@ Name[x-test]=xxTime Zonexx
 Name[zh_CN]=时区
 Name[zh_TW]=時區
 Comment=Provides the system's time zone to applications
-Comment[ar]=يوفر المنطقة الزمنية المستخدمة في النظام للبرامج
+Comment[ar]=يوفّر منطقة النظام الزمنية للتطبيقات
 Comment[ast]=Ufre la estaya horaria del sistema a les aplicaciones
 Comment[bg]=Предоставяне на системния часови пояс за програмите
 Comment[bn]=সিস্টেম-এর টাইমজোন বিভিন্ন অ্যাপলিকেশন-কে জানায়

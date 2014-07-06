@@ -2,7 +2,7 @@
 Type=ServiceType
 X-KDE-ServiceType=PhononBackend
 Name=KDE Multimedia Backend
-Name[ar]=المنتهى الخلفي للوسائط المتعددة في كدي
+Name[ar]=سَنَد وسائط كدي المتعدّدة
 Name[ast]=Motor multimedia de KDE
 Name[be@latin]=Multymedyjnaja systema dla „KDE”
 Name[bg]=Мултимедийно ядро на KDE

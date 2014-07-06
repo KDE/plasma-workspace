@@ -1,7 +1,6 @@
 [Misc]
 Name=CDE
 Name[af]=CDE
-Name[ar]=CDE
 Name[as]=CDE
 Name[ast]=CDE
 Name[be]=CDE
@@ -91,7 +90,6 @@ Name[x-test]=xxCDExx
 Name[zh_CN]=CDE
 Name[zh_TW]=CDE
 Comment=Built-in unthemed CDE style
-Comment[ar]=نمط مضمّن نمط CDE من دون سمة
 Comment[ast]=Estilu CDE
 Comment[be]=Убудаваны стыль CDE
 Comment[be@latin]=Styl asiarodździa „CDE”

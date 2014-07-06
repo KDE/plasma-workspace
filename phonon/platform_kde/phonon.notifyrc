@@ -1,7 +1,7 @@
 [Global]
 IconName=preferences-desktop-sound
 Comment=Multimedia System
-Comment[ar]=نظام الوسائط المتعددة
+Comment[ar]=نظام الوسائط المتعدّدة
 Comment[ast]=Sistema multimedia
 Comment[bg]=Мултимедийна система
 Comment[bn]=মাল্টিমিডিয়া সিস্টেম
@@ -102,6 +102,7 @@ Name[zh_TW]=應用程式
 
 [Event/AudioDeviceFallback]
 Name=Audio Output Device Changed
+Name[ar]=تغيّر جهاز خَرْج الصوت
 Name[ast]=Cambeos en preseos de salida d'audiu
 Name[bg]=Изходното звуково устройство беше променено
 Name[bn]=অডিও আউটপুট ডিভাইস পরিবর্তিত
@@ -164,6 +165,7 @@ Name[x-test]=xxAudio Output Device Changedxx
 Name[zh_CN]=音频输出设备已更改
 Name[zh_TW]=音效輸出裝置已變更
 Comment=Notification when audio output device has automatically changed
+Comment[ar]=إخطار عندما يتغيّر جهاز خَرْج الصوت آليًا
 Comment[ast]=Notificación de cambeos automáticos nos preseos de salida d'audio
 Comment[bg]=Уведомяване при автоматична промяна на изходното звуково устройство
 Comment[bs]=Obavještenje o automatskoj promijeni uređaja za audio izlaz

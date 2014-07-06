@@ -3,6 +3,7 @@ Encoding=UTF-8
 Type=Directory
 Icon=applications-other
 Name=More Applications
+Name[ar]=تطبيقات أكثر
 Name[ca]=Més aplicacions
 Name[cs]=Více aplikací
 Name[de]=Weitere Programme

@@ -1,7 +1,6 @@
 [Desktop Entry]
 Encoding=UTF-8
 Name=RSS
-Name[ar]=آر إس إس
 Name[ast]=RSS
 Name[be@latin]=RSS
 Name[bg]=RSS
@@ -78,7 +77,7 @@ Name[x-test]=xxRSSxx
 Name[zh_CN]=RSS
 Name[zh_TW]=RSS
 Comment=RSS News Data Engine
-Comment[ar]=محرك بيانات الخلاصات
+Comment[ar]=محرّك بيانات أخبار RSS
 Comment[ast]=Motor de RSS
 Comment[be@latin]=Systema navinaŭ z žarołaŭ „RSS”
 Comment[bg]=Зареждане на RSS емисии

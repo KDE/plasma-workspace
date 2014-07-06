@@ -1,6 +1,6 @@
 [Desktop Entry]
 Name=Status Notifier Information
-Name[ar]=معلومات حالة النظام
+Name[ar]=معلومات مُخطِر الحالة
 Name[ast]=Información de notificación d'estáu
 Name[bs]=Podaci izveštavača o stanju
 Name[ca]=Informació del notificador d'estats
@@ -58,7 +58,7 @@ Name[x-test]=xxStatus Notifier Informationxx
 Name[zh_CN]=状态通知信息
 Name[zh_TW]=狀態通知器資訊
 Comment=Engine for applications' status information, based on the Status Notifier protocol.
-Comment[ar]=محرك للمعلومات عن حالة البرامج, مبني على بروتوكول Status Notifier
+Comment[ar]=محرّك لمعلومات حالة التطبيقات، بناءً على ميفاق مُخطِر الحالة.
 Comment[ast]=Motor pa informar del estáu d'aplicaciones, basáu nel protocolu Status Notifier.
 Comment[bs]=Motor za podatke o stanju programa, na osnovu protokola izveštavača o stanju.
 Comment[ca]=Motor d'informació d'estat de les aplicacions, basat en el protocol notificador d'estat.

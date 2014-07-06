@@ -10,6 +10,7 @@ X-KDE-System-Settings-Parent-Category=workspace-behavior
 X-KDE-Weight=60
 
 Name=Screen Locking
+Name[ar]=يقفل الشاشة
 Name[ca]=Bloqueig de la pantalla
 Name[de]=Bildschirmsperre
 Name[en_GB]=Screen Locking

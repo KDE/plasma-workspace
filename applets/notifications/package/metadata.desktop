@@ -1,7 +1,7 @@
 [Desktop Entry]
 Encoding=UTF-8
 Name=Notifications
-Name[ar]=تنبيهات
+Name[ar]=إخطارات
 Name[ast]=Notificaciones
 Name[be]=Абвяшчэнні
 Name[be@latin]=Infarmavańnie
@@ -86,7 +86,7 @@ Name[x-test]=xxNotificationsxx
 Name[zh_CN]=通知
 Name[zh_TW]=通知
 Comment=Display notifications and jobs
-Comment[ar]=أظهر التنبيهات والمهام
+Comment[ar]=اعرض الإخطارات والمهام
 Comment[ast]=Amosar notificaciones y xeres
 Comment[bg]=Показване на уведомления и задачи
 Comment[bs]=Prikazuje obavještenja i poslove

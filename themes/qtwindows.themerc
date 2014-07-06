@@ -1,7 +1,7 @@
 [Misc]
 Name=MS Windows 9x
 Name[af]=MS Windows 9x
-Name[ar]=مايكروسوفت وندوز 9x
+Name[ar]=مايكروسوفت ويندوز 9x
 Name[as]=MS Windows 9x
 Name[ast]=MS Windows 9x
 Name[be]=MS Windows 9x
@@ -85,7 +85,6 @@ Name[x-test]=xxMS Windows 9xxx
 Name[zh_CN]=MS Windows 9x
 Name[zh_TW]=MS Windows 9x
 Comment=Built-in unthemed Windows 9x style
-Comment[ar]=نمط وندوز 9x المضمّن ومن دون سمة
 Comment[ast]=Estilu de Windows 9x ensin tema
 Comment[be]=Убудаваны стыль Windows 9x
 Comment[be@latin]=Styl systemy „Windows 9x”

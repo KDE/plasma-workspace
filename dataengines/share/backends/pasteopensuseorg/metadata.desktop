@@ -1,6 +1,5 @@
 [Desktop Entry]
 Name=paste.opensuse.org
-Name[ar]=paste.opensuse.org
 Name[ast]=paste.opensuse.org
 Name[bg]=paste.opensuse.org
 Name[bs]=paste.opensuse.org
@@ -60,6 +59,7 @@ Name[x-test]=xxpaste.opensuse.orgxx
 Name[zh_CN]=paste.opensuse.org
 Name[zh_TW]=paste.opensuse.org
 Comment=Paste text with openSUSE
+Comment[ar]=الصق نصًّا بـأوبن سوزي
 Comment[ast]=Apegar testu con openSUSE
 Comment[bg]=Поставяне на текст през openSUSE
 Comment[bs]=Opensuseov servis za naljepljivanje teksta

@@ -2,7 +2,7 @@
 Encoding=UTF-8
 Name=Default
 Name[af]=Standaard
-Name[ar]=المبدئي
+Name[ar]=الافتراضية
 Name[as]=অবিকল্পিত
 Name[ast]=Predetermináu
 Name[be]=Прадвызначаны
@@ -91,6 +91,7 @@ Name[x-test]=xxDefaultxx
 Name[zh_CN]=默认
 Name[zh_TW]=預設
 Comment=Default Plasma Desktop theme
+Comment[ar]=سمة سطح مكتب بلازما الافتراضية
 Comment[bs]=Podrazumijevana Plasma desktopa tema
 Comment[ca]=Tema l'escriptori Plasma per defecte
 Comment[ca@valencia]=Tema l'escriptori Plasma per defecte

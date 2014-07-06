@@ -1,6 +1,6 @@
 [Desktop Entry]
 Name=Quicklaunch
-Name[ar]=الإطلاق السريع
+Name[ar]=إطلاق سريع
 Name[ast]=Llanzamientu rápidu
 Name[be@latin]=Aplet chutkaha ŭklučeńnia
 Name[bg]=Бързо стартиране
@@ -72,7 +72,7 @@ Name[x-test]=xxQuicklaunchxx
 Name[zh_CN]=快速启动
 Name[zh_TW]=快速啟動
 Comment=Launch your favourite Applications
-Comment[ar]=أطلق تطبيقاتك المفضلة
+Comment[ar]=أطلِق تطبيقاتك المفضّلة
 Comment[ast]=Llanza aplicaciones favorites
 Comment[be@latin]=Uklučaj svaje ŭlubionyja aplikacyi
 Comment[bg]=Стартиране на любимите програми

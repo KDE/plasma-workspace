@@ -1,6 +1,5 @@
 [Desktop Entry]
 Name=Geolocation GPS
-Name[ar]=الموقع الجغرافي جي بي اس
 Name[ast]=Xeollocalización per aciu de GPS
 Name[bg]=Геолокация (GPS)
 Name[bs]=geolokacija GPS
@@ -68,7 +67,6 @@ Name[x-test]=xxGeolocation GPSxx
 Name[zh_CN]=GPS 位置
 Name[zh_TW]=Geolocation GPS
 Comment=Geolocation from GPS address.
-Comment[ar]=الموقع الجغرافي من عنوان جي بي اس
 Comment[ast]=Xeollocalización dende una direición GPS.
 Comment[bg]=Геолокация от GPS адрес.
 Comment[bs]=Geolociranje kroz GPS adresu.

@@ -1,6 +1,6 @@
 [Desktop Entry]
 Name=Activities Engine
-Name[ar]=محرك الأنشطة
+Name[ar]=محرّك الأنشطة
 Name[bg]=Ядро за дейности
 Name[bs]=motor aktivnosti
 Name[ca]=Motor d'activitats
@@ -58,7 +58,7 @@ Name[x-test]=xxActivities Enginexx
 Name[zh_CN]=活动引擎
 Name[zh_TW]=活動引擎
 Comment=Information on Plasma Activities
-Comment[ar]=معلومات عن أنشطة بلازما
+Comment[ar]=معلومات أنشطة بلازما
 Comment[bg]=Данни за дейности в Plasma
 Comment[bs]=Podaci o plazma aktivnostima
 Comment[ca]=Informació quant a activitats del Plasma

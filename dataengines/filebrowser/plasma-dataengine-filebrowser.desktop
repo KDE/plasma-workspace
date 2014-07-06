@@ -1,6 +1,6 @@
 [Desktop Entry]
 Name=Files and Directories
-Name[ar]=الملفات والمجلدات
+Name[ar]=ملفات وأدلة
 Name[ast]=Ficheros y direutorios
 Name[be@latin]=Fajły j katalohi
 Name[bg]=Файлове и папки
@@ -76,7 +76,7 @@ Name[x-test]=xxFiles and Directoriesxx
 Name[zh_CN]=文件和目录
 Name[zh_TW]=檔案與目錄
 Comment=Information about files and directories.
-Comment[ar]=معلومات عن الملفات والمجلدات.
+Comment[ar]=معلومات حول الملفات والأدلة.
 Comment[ast]=Información sobre los ficheros y direutorios.
 Comment[bg]=Данни за файлове и папки.
 Comment[bn]=ফাইল এবং ডিরেক্টরি সংক্রান্ত তথ্য।

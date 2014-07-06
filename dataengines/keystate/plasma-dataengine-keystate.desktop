@@ -1,6 +1,6 @@
 [Desktop Entry]
 Name=Keyboard and Mouse State
-Name[ar]=حالة لوحة المفاتيح والفأرة
+Name[ar]=حالة الفارة ولوحة المفاتيح
 Name[ast]=Estáu del tecláu y del mur
 Name[bg]=Състояние на клавиатура и мишка
 Name[bn]=কীবোর্ড ও মাউস অবস্থা
@@ -70,7 +70,7 @@ Name[x-test]=xxKeyboard and Mouse Statexx
 Name[zh_CN]=键盘和鼠标状态
 Name[zh_TW]=鍵盤與滑鼠狀態
 Comment=Keyboard modifier and mouse buttons states
-Comment[ar]=حالة أزرار الفأرة و مغيرات لوحة المفاتيح
+Comment[ar]=حالات مُعدِّل لوحة المفاتيح وأزرار الفأرة
 Comment[ast]=Estáu del modificador de tecláu y botones del mur 
 Comment[bg]=Състояние на клавиатурни модификатори и бутони на мишката
 Comment[bs]=Stanja modifikatora na tastaturi i dugmadi miša

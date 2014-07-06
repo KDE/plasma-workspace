@@ -1,6 +1,6 @@
 [Desktop Entry]
 Name=Windowed widgets
-Name[ar]=ودجات مُنوفذة
+Name[ar]=الودجات ذات النوافذ
 Name[ast]=Componentes en ventana
 Name[bg]=Джаджи като прозорци
 Name[bs]=Grafičke kontrole s prozorom
@@ -62,7 +62,7 @@ Name[zh_TW]=視窗元件
 
 
 Comment=Find Plasma widgets that can be run as standalone windows
-Comment[ar]=ابحث عن ودجات بلازما التي يمكن تشغيلها كنوافذ مستقلة
+Comment[ar]=اعثر على ودجات بلازما التي يمكن أن تعمل كنوافذ مستقلّة
 Comment[ast]=Gueta componentes Plasma que puen executase como ventanes independientes
 Comment[bg]=Търсене на джаджи, които могат да се използват като самостоятелни прозорци
 Comment[bs]=Nađite plazma grafičke kontrole koje mogu da rade kao samostalni prozori

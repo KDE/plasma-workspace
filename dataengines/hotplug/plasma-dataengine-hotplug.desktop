@@ -1,6 +1,5 @@
 [Desktop Entry]
 Name=Hotplug Events
-Name[ar]=أحداث التوصيل
 Name[ast]=Eventos en caliente
 Name[be@latin]=Źjaŭleńnie novych pryładaŭ
 Name[bn]=হট-প্লাগ ঘটনাবলী
@@ -71,7 +70,6 @@ Name[x-test]=xxHotplug Eventsxx
 Name[zh_CN]=热插拔事件
 Name[zh_TW]=熱插拔事件
 Comment=Tracks hot-pluggable devices as they appear and disappear.
-Comment[ar]=تتابع الأجهزة المركبة عندما تظهر أو تختفي
 Comment[ast]=Rexistra los preseos estrayibles cuando apaecen y desapaecen.
 Comment[bs]=Prati pojavljivanja i nestanke vruće uklonjivih uređaja.
 Comment[ca]=Segueix els dispositius de connexió en calent quan apareixen i desapareixen.

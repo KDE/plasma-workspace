@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=Application Launcher
 Name[af]=Programlanseerder
-Name[ar]=مطلق التطبيقات
+Name[ar]=مُطلِق التطبيقات
 Name[ast]=Llanzador d'aplicaciones
 Name[be]=Запуск праграмаў
 Name[be@latin]=Uklučeńnie aplikacyi
@@ -88,7 +88,7 @@ Name[zh_TW]=應用程式啟動器
 Type=Service
 Icon=preferences-desktop-launch-feedback
 Comment=Simple application launcher
-Comment[ar]=مطلق التطبيقات البسيط
+Comment[ar]=مُطلِق تطبيقات بسيط
 Comment[ast]=Llanzador d'aplicaciones simple
 Comment[bg]=Стартиране на програми
 Comment[bs]=Jednostavan pokretač programa

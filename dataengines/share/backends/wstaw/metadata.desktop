@@ -1,6 +1,5 @@
 [Desktop Entry]
 Name=wstaw.org
-Name[ar]=wstaw.org
 Name[ast]=wstaw.org
 Name[bg]=wstaw.org
 Name[bs]=wstaw.org
@@ -61,6 +60,7 @@ Name[x-test]=xxwstaw.orgxx
 Name[zh_CN]=wstaw.org
 Name[zh_TW]=wstaw.org
 Comment=Allows images to be shared using the wstaw.org service
+Comment[ar]=يسمح بمشاركة الصور عبر خدمة wstaw.org
 Comment[bg]=Позволява споделянето на изображения чрез wstaw.org
 Comment[bs]=Dopušta dijeljenje slika preko servisa wstaw.org
 Comment[ca]=Permet la compartició d'imatges utilitzant el servei wstaw.org

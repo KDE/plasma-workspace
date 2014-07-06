@@ -1,7 +1,6 @@
 [Misc]
 Name=SGI
 Name[af]=SGI
-Name[ar]=SGI
 Name[as]=SGI
 Name[ast]=SGI
 Name[be]=SGI
@@ -85,7 +84,7 @@ Name[x-test]=xxSGIxx
 Name[zh_CN]=SGI
 Name[zh_TW]=SGI
 Comment=Built-in SGI style
-Comment[ar]=نمط SGI المضمّن
+Comment[ar]=نمط SGI مضمّن
 Comment[ast]=Estilu SGI
 Comment[be]=Убудаваны стыль SGI
 Comment[be@latin]=Styl systemy „SGI”

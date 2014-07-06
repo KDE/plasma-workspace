@@ -1,7 +1,6 @@
 [Misc]
 Name=Motif Plus
 Name[af]=Motif Plus
-Name[ar]=Motif Plus
 Name[ast]=Motif Plus
 Name[be]=Motif Plus
 Name[be@latin]=Motif Plus
@@ -82,7 +81,6 @@ Name[x-test]=xxMotif Plusxx
 Name[zh_CN]=Motif Plus
 Name[zh_TW]=Motif Plus
 Comment=Built-in enhanced Motif style
-Comment[ar]=نمط Motif المضمّن والمحسّن
 Comment[ast]=Estilu Motif ameyoráu
 Comment[be]=Убудаваны палепшаны стыль Motif
 Comment[be@latin]=Lepšaja admiena styla widžetaŭ „Motif”

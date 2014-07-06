@@ -1,6 +1,5 @@
 [Desktop Entry]
 Name=Geolocation IP
-Name[ar]=المواقع الجغرافي عنوان الانترنت
 Name[ast]=Xeollocalización per aciu d'IP
 Name[bg]=Геолокация (IP)
 Name[bs]=geolokacija IP
@@ -68,7 +67,6 @@ Name[x-test]=xxGeolocation IPxx
 Name[zh_CN]=IP 位置
 Name[zh_TW]=Geolocation IP
 Comment=Geolocation from IP address.
-Comment[ar]=الموقع الجغرافي من عنوان الإنترنت
 Comment[ast]=Xeollocalización dende una direición IP.
 Comment[bg]=Геолокация по IP-адрес.
 Comment[bs]=Geolociranje kroz IP adresu.

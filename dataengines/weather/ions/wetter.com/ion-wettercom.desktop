@@ -1,6 +1,5 @@
 [Desktop Entry]
 Name=wetter.com
-Name[ar]=wetter.com
 Name[ast]=wetter.com
 Name[bg]=wetter.com
 Name[bn]=wetter.com
@@ -69,7 +68,7 @@ Name[x-test]=xxwetter.comxx
 Name[zh_CN]=wetter.com
 Name[zh_TW]=wetter.com
 Comment=Weather forecast by wetter.com
-Comment[ar]=نشرة الأحوال الجوية من wetter.com
+Comment[ar]=نشرة الطقس الجوية من wetter.com
 Comment[ast]=Previsión meteorolóxica de wetter.com
 Comment[bg]=Прогноза за времето от wetter.com
 Comment[bs]=Prognoza vremena sa wetter.com
