@@ -31,8 +31,8 @@ import "plasmapackage:/ui/uiproperties.js" as UiProperties
 
 MouseEventListener {
     id: notificationsApplet
-    width: 32
-    height: 32
+    //width: units.gridUnit.width * 10
+    //height: units.gridUnit.width * 15
 
     //Layout.minimumWidth: mainScrollArea.implicitWidth
     //Layout.minimumHeight: mainScrollArea.implicitHeight
@@ -53,6 +53,9 @@ MouseEventListener {
     property int totalCount: (notifications ? notifications.count : 0) + (jobs ? jobs.count : 0)
 
     property Item notificationIcon
+
+    Plasmoid.switchWidth: units.gridUnit * 20
+    Plasmoid.switchHeight: units.gridUnit * 30
 
     Plasmoid.compactRepresentation: Component {
         NotificationIcon {
