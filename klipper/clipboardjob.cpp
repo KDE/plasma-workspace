@@ -34,10 +34,12 @@ void ClipboardJob::start()
     if (operation == QLatin1String("clearHistory")) {
         m_klipper->slotAskClearHistory();
         setResult(true);
+        emitResult();
         return;
     } else if (operation == QLatin1String("configureKlipper")) {
         m_klipper->slotConfigure();
         setResult(true);
+        emitResult();
         return;
     }
 
@@ -45,6 +47,7 @@ void ClipboardJob::start()
     HistoryItemConstPtr item = m_klipper->history()->find(QByteArray::fromBase64(destination().toUtf8()));
     if (item.isNull()) {
         setResult(false);
+        emitResult();
         return;
     }
     if (operation == QLatin1String("select")) {
@@ -69,4 +72,5 @@ void ClipboardJob::start()
     } else {
         setResult(false);
     }
+    emitResult();
 }
