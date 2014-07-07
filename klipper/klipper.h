@@ -128,6 +128,7 @@ protected:
 
 Q_SIGNALS:
     void passivePopup(const QString& caption, const QString& text);
+    void editFinished(QSharedPointer< const HistoryItem > item, int result);
 
 public Q_SLOTS:
     void slotPopupMenu();

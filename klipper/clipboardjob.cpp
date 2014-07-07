@@ -57,8 +57,18 @@ void ClipboardJob::start()
         m_klipper->history()->remove(item);
         setResult(true);
     } else if (operation == QLatin1String("edit")) {
+        connect(m_klipper, &Klipper::editFinished, this,
+            [this, item](HistoryItemConstPtr editedItem, int result) {
+                if (item != editedItem) {
+                    // not our item
+                    return;
+                }
+                setResult(result);
+                emitResult();
+            }
+        );
         m_klipper->editData(item);
-        setResult(true);
+        return;
     } else if (operation == QLatin1String("barcode")) {
 #ifdef HAVE_PRISON
         m_klipper->showBarcode(item);

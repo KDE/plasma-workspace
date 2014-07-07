@@ -856,7 +856,12 @@ void Klipper::editData(const QSharedPointer< const HistoryItem > &item)
     buttons->button(QDialogButtonBox::Ok)->setShortcut(Qt::CTRL | Qt::Key_Return);
     connect(buttons, &QDialogButtonBox::accepted, dlg.data(), &QDialog::accept);
     connect(buttons, &QDialogButtonBox::rejected, dlg.data(), &QDialog::reject);
-    connect(dlg, &QDialog::finished, dlg.data(), &QDialog::deleteLater);
+    connect(dlg.data(), &QDialog::finished, dlg.data(),
+        [this, dlg, item](int result) {
+            emit editFinished(item, result);
+            dlg->deleteLater();
+        }
+    );
 
     KTextEdit *edit = new KTextEdit( dlg );
     if (item) {
