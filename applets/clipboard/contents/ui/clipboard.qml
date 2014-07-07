@@ -35,12 +35,20 @@ Item {
 
     PlasmaCore.DataSource {
         id: clipboardSource
+        property bool editing: false;
         engine: "org.kde.plasma.clipboard"
         connectedSources: "clipboard"
         function service(uuid, op) {
             var service = clipboardSource.serviceForSource(uuid);
             var operation = service.operationDescription(op);
-            service.startOperationCall(operation);
+            return service.startOperationCall(operation);
+        }
+        function edit(uuid) {
+            clipboardSource.editing = true;
+            var job = clipboardSource.service(uuid, "edit");
+            job.finished.connect(function() {
+                clipboardSource.editing = false;
+            });
         }
     }
 
@@ -119,7 +127,7 @@ Item {
                 Layout.fillHeight: true
                 onItemSelected: clipboardSource.service(uuid, "select")
                 onRemove: clipboardSource.service(uuid, "remove")
-                onEdit: clipboardSource.service(uuid, "edit")
+                onEdit: clipboardSource.edit(uuid)
                 onBarcode: clipboardSource.service(uuid, "barcode")
                 onAction: clipboardSource.service(uuid, "action")
             }

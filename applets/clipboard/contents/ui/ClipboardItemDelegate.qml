@@ -93,6 +93,7 @@ PlasmaComponents.ListItem {
         }
         PlasmaComponents.ToolButton {
             iconSource: "document-edit"
+            enabled: !clipboardSource.editing
             tooltip: i18n("Edit contents")
             onClicked: menuItem.edit(UuidRole)
         }
