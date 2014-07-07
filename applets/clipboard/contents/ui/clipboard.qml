@@ -72,7 +72,7 @@ Item {
             x: 0
             y: 0
             height: trackingItem.height
-            visible: true
+            visible: clipboardMenu.model.count > 0
 
             Behavior on opacity {
                 NumberAnimation {
