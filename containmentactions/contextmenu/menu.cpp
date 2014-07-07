@@ -101,7 +101,7 @@ void ContextMenu::restore(const KConfigGroup &config)
         connect(m_lockScreenAction, SIGNAL(triggered(bool)), this, SLOT(lockScreen()));
 
         m_logoutAction = new QAction(i18nc("plasma_containmentactions_contextmenu", "Leave..."), this);
-        m_logoutAction->setIcon(QIcon::fromTheme("system-shutdown"));
+        m_logoutAction->setIcon(QIcon::fromTheme("system-log-out"));
         connect(m_logoutAction, SIGNAL(triggered(bool)), this, SLOT(startLogout()));
 
         m_separator1 = new QAction(this);
