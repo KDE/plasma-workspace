@@ -792,8 +792,8 @@ void ShellCorona::createWaitingPanels()
         Q_ASSERT(qBound(0, requestedScreen, d->views.size() -1) == requestedScreen);
         QScreen *screen = d->views[requestedScreen]->screen();
 
-        panel->setScreen(screen);
         panel->setContainment(cont);
+        panel->setScreen(screen);
         panel->show();
 
         connect(cont, SIGNAL(destroyed(QObject*)), this, SLOT(containmentDeleted(QObject*)));
