@@ -854,9 +854,9 @@ void Klipper::editData(const QSharedPointer< const HistoryItem > &item)
     dlg->setWindowTitle( i18n("Edit Contents") );
     QDialogButtonBox *buttons = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, dlg);
     buttons->button(QDialogButtonBox::Ok)->setShortcut(Qt::CTRL | Qt::Key_Return);
-    connect(buttons, &QDialogButtonBox::accepted, dlg, &QDialog::accept);
-    connect(buttons, &QDialogButtonBox::rejected, dlg, &QDialog::reject);
-    connect(dlg, &QDialog::finished, dlg, &QDialog::deleteLater);
+    connect(buttons, &QDialogButtonBox::accepted, dlg.data(), &QDialog::accept);
+    connect(buttons, &QDialogButtonBox::rejected, dlg.data(), &QDialog::reject);
+    connect(dlg, &QDialog::finished, dlg.data(), &QDialog::deleteLater);
 
     KTextEdit *edit = new KTextEdit( dlg );
     if (item) {
@@ -896,8 +896,8 @@ void Klipper::showBarcode(const QSharedPointer< const HistoryItem > &item)
     dlg->setWindowTitle( i18n("Mobile Barcode") );
     QDialogButtonBox *buttons = new QDialogButtonBox(QDialogButtonBox::Ok, dlg);
     buttons->button(QDialogButtonBox::Ok)->setShortcut(Qt::CTRL | Qt::Key_Return);
-    connect(buttons, &QDialogButtonBox::accepted, dlg, &QDialog::accept);
-    connect(dlg, &QDialog::finished, dlg, &QDialog::deleteLater);
+    connect(buttons, &QDialogButtonBox::accepted, dlg.data(), &QDialog::accept);
+    connect(dlg.data(), &QDialog::finished, dlg.data(), &QDialog::deleteLater);
 
     QWidget* mw = new QWidget(dlg);
     QHBoxLayout* layout = new QHBoxLayout(mw);
