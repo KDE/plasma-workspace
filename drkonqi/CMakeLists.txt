@@ -45,35 +45,6 @@ set(drkonqi_SRCS
     gdbhighlighter.cpp
 )
 
-if(KF5XmlRpcClient_FOUND)
-    set(drkonqi_SRCS
-        ${drkonqi_SRCS}
-        bugzillaintegration/bugzillalib.cpp
-        bugzillaintegration/reportassistantdialog.cpp
-        bugzillaintegration/reportassistantpage.cpp
-        bugzillaintegration/reportassistantpages_base.cpp
-        bugzillaintegration/reportassistantpages_bugzilla.cpp
-        bugzillaintegration/reportassistantpages_bugzilla_duplicates.cpp
-        bugzillaintegration/reportinterface.cpp
-        bugzillaintegration/productmapping.cpp
-        bugzillaintegration/parsebugbacktraces.cpp # Requires kxmlrpcclient
-        bugzillaintegration/duplicatefinderjob.cpp
-    )
-    ki18n_wrap_ui(drkonqi_SRCS
-        bugzillaintegration/ui/assistantpage_introduction.ui
-        bugzillaintegration/ui/assistantpage_bugawareness.ui
-        bugzillaintegration/ui/assistantpage_conclusions.ui
-        bugzillaintegration/ui/assistantpage_conclusions_dialog.ui
-        bugzillaintegration/ui/assistantpage_bugzilla_login.ui
-        bugzillaintegration/ui/assistantpage_bugzilla_duplicates.ui
-        bugzillaintegration/ui/assistantpage_bugzilla_duplicates_dialog.ui
-        bugzillaintegration/ui/assistantpage_bugzilla_duplicates_dialog_confirmation.ui
-        bugzillaintegration/ui/assistantpage_bugzilla_information.ui
-        bugzillaintegration/ui/assistantpage_bugzilla_preview.ui
-        bugzillaintegration/ui/assistantpage_bugzilla_send.ui
-    )
-endif()
-
 ki18n_wrap_ui(drkonqi_SRCS
     ui/maindialog.ui
     ui/backtracewidget.ui
@@ -84,7 +55,48 @@ ki18n_wrap_ui(drkonqi_SRCS
 # Comment this out for release.
 #add_definitions(-DBACKTRACE_PARSER_DEBUG)
 
+
+set(drkonqi_SRCS
+    ${drkonqi_SRCS}
+    bugzillaintegration/bugzillalib.cpp
+    bugzillaintegration/reportassistantdialog.cpp
+    bugzillaintegration/reportassistantpage.cpp
+    bugzillaintegration/reportassistantpages_base.cpp
+    bugzillaintegration/reportassistantpages_bugzilla.cpp
+    bugzillaintegration/reportassistantpages_bugzilla_duplicates.cpp
+    bugzillaintegration/reportinterface.cpp
+    bugzillaintegration/productmapping.cpp
+    bugzillaintegration/parsebugbacktraces.cpp # Requires kxmlrpcclient
+    bugzillaintegration/duplicatefinderjob.cpp
+)
+ki18n_wrap_ui(drkonqi_SRCS
+    bugzillaintegration/ui/assistantpage_introduction.ui
+    bugzillaintegration/ui/assistantpage_bugawareness.ui
+    bugzillaintegration/ui/assistantpage_conclusions.ui
+    bugzillaintegration/ui/assistantpage_conclusions_dialog.ui
+    bugzillaintegration/ui/assistantpage_bugzilla_login.ui
+    bugzillaintegration/ui/assistantpage_bugzilla_duplicates.ui
+    bugzillaintegration/ui/assistantpage_bugzilla_duplicates_dialog.ui
+    bugzillaintegration/ui/assistantpage_bugzilla_duplicates_dialog_confirmation.ui
+    bugzillaintegration/ui/assistantpage_bugzilla_information.ui
+    bugzillaintegration/ui/assistantpage_bugzilla_preview.ui
+    bugzillaintegration/ui/assistantpage_bugzilla_send.ui
+)
+
 add_executable(drkonqi ${drkonqi_SRCS})
+
+## TODO Remove internal copy when kxmlrpcclient is released
+
+if(NOT KF5XmlRpcClient_FOUND)
+    add_subdirectory ( internalkxmlrpcclient )
+    include_directories ( ${CMAKE_CURRENT_BINARY_DIR}/internalkxmlrpcclient/src )
+    target_link_libraries ( drkonqi KF5XmlRpcClientPrivate
+    KF5::WebKit
+    KF5::WidgetsAddons
+    KF5::Completion
+    KF5::Wallet
+)
+endif()
 
 target_link_libraries(drkonqi
     KF5::I18n
@@ -98,9 +110,5 @@ target_link_libraries(drkonqi
     Qt5::DBus
     drkonqi_backtrace_parser
 )
-
-if(KF5XmlRpcClient_FOUND)
-    target_link_libraries(drkonqi KF5::XmlRpcClient KF5::Wallet KF5::WebKit KF5::WidgetsAddons KF5::Completion KF5::Wallet)
-endif()
 
 install(TARGETS drkonqi DESTINATION ${LIBEXEC_INSTALL_DIR})

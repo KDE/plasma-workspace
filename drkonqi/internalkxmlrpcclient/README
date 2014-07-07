@@ -1,0 +1,46 @@
+This is a internal copy of kxmlrpcclient for drkonqi till the KF5
+version of kxmlrpccclient is split out from kdepimlibs and released.
+
+In this file:
+
+* About kxmlrpcclient
+* Licensing
+
+
+About kxmlrpcclient
+----------------
+This library contains simple XML-RPC Client support. It is used mainly
+by the egroupware module of kdepim, but is a complete client and is
+quite easy to use. Only one interface is exposed to the world, 
+kxmlrpcclient/client.h and of that interface, you only need to 
+use 3 methods: setUrl, setUserAgent and call. 
+
+A small note on authentication. If you will be accessing an XML-RPC server
+which uses HTTP-AUTH, simply set the user and pass in the KURL. To use 
+Digest authentication, call setDigestAuthEnabled( true ).
+
+Licensing
+---------
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions
+are met:
+
+1. Redistributions of source code must retain the above copyright
+   notice, this list of conditions and the following disclaimer.
+2. Redistributions in binary form must reproduce the above copyright
+   notice, this list of conditions and the following disclaimer in the
+   documentation and/or other materials provided with the distribution.
+
+THIS SOFTWARE IS PROVIDED BY THE AUTHOR ``AS IS'' AND ANY EXPRESS OR
+IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
+OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
+IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY DIRECT, INDIRECT,
+INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT
+NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
+THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+
+
