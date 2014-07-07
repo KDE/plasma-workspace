@@ -85,7 +85,7 @@ public:
         connect(&waitingPanelsTimer, &QTimer::timeout, q, &ShellCorona::createWaitingPanels);
 
         reconsiderOutputsTimer.setSingleShot(true);
-        reconsiderOutputsTimer.setInterval(250);
+        reconsiderOutputsTimer.setInterval(1000);
         connect(&reconsiderOutputsTimer, &QTimer::timeout, q, &ShellCorona::reconsiderOutputs);
     }
 
@@ -387,10 +387,11 @@ void ShellCorona::screenInvariants() const
         QScreen* screen = view->screen();
         Q_ASSERT(!screens.contains(screen));
         Q_ASSERT(!d->redundantOutputs.contains(screenToOutput(screen, d->screenConfiguration)));
-        Q_ASSERT(view->isVisible());
         Q_ASSERT(view->fillScreen() || ShellManager::s_forceWindowed);
         Q_ASSERT(!view->fillScreen() || view->geometry() == screen->geometry());
+        Q_ASSERT(view->containment());
         Q_ASSERT(view->containment()->screen() == i);
+        Q_ASSERT(view->isVisible());
 
         screens.insert(screen);
         ++i;
@@ -602,7 +603,7 @@ bool ShellCorona::isOutputRedundant(KScreen::Output* screen) const
     //FIXME: QScreen doesn't have any idea of "this qscreen is clone of this other one
     //so this ultra inefficient heuristic has to stay until we have a slightly better api
     foreach (KScreen::Output *s, d->screenConfiguration->connectedOutputs()) {
-        if (!s->isEnabled())
+        if (screen == s || !s->isEnabled() || !s->currentMode())
             continue;
         QRect sGeometry = s->geometry();
         if (sGeometry.contains(geometry, false) &&
@@ -651,7 +652,7 @@ void ShellCorona::addOutput(KScreen::Output *output)
     connect(output, &KScreen::Output::currentModeIdChanged, &d->reconsiderOutputsTimer, static_cast<void (QTimer::*)()>(&QTimer::start), Qt::UniqueConnection);
     if (!output->isEnabled()) {
         d->redundantOutputs.remove(output);
-        reconsiderOutputs();
+        d->reconsiderOutputsTimer.start();
         return;
     }
     QScreen *screen = outputToScreen(output);
@@ -675,7 +676,6 @@ void ShellCorona::addOutput(KScreen::Output *output)
     QScreen* newScreen = insertScreen(screen, insertPosition);
 
     DesktopView *view = new DesktopView(this);
-    d->views.append(view);
 
     Plasma::Containment *containment = createContainmentForActivity(d->activityController->currentActivity(), d->views.count()-1);
     Q_ASSERT(containment);
@@ -688,6 +688,8 @@ void ShellCorona::addOutput(KScreen::Output *output)
     view->setContainment(containment);
     view->setScreen(newScreen);
     view->show();
+    d->views.append(view);
+
 
     //were there any panels for this screen before it popped up?
     if (!d->waitingPanels.isEmpty()) {
