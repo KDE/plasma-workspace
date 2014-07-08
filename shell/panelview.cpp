@@ -79,11 +79,6 @@ PanelView::PanelView(ShellCorona *corona, QWindow *parent)
     connect(&m_unhideTimer, &QTimer::timeout,
             this, &PanelView::restoreAutoHide);
 
-    connect(this, &QWindow::screenChanged,
-            this, &PanelView::screenChangedProxy);
-    //cannot use the new syntax as start() is overloaded
-    connect(this, SIGNAL(screenChanged(QScreen *)),
-            &m_positionPaneltimer, SLOT(start()));
     connect(screen(), SIGNAL(geometryChanged(QRect)),
             &m_positionPaneltimer, SLOT(start()));
     connect(this, SIGNAL(locationChanged(Plasma::Types::Location)),
@@ -357,7 +352,6 @@ void PanelView::positionPanel()
         return;
     }
 
-    containment()->reactToScreenChange();
     KWindowEffects::SlideFromLocation slideLocation = KWindowEffects::NoEdge;
 
     switch (containment()->location()) {
@@ -635,6 +629,8 @@ void PanelView::integrateScreen()
     KWindowSystem::setOnAllDesktops(winId(), true);
     KWindowSystem::setType(winId(), NET::Dock);
     setVisibilityMode(m_visibilityMode);
+
+    containment()->reactToScreenChange();
 }
 
 void PanelView::showEvent(QShowEvent *event)
@@ -645,11 +641,14 @@ void PanelView::showEvent(QShowEvent *event)
 
     //When the screen is set, the screen is recreated internally, so we need to
     //set anything that depends on the winId()
-    connect(this, &QWindow::screenChanged, this, [=]() {
-        if (!screen())
+    connect(this, &QWindow::screenChanged, this, [=](QScreen* screen) {
+        emit screenChangedProxy(screen);
+
+        if (!screen)
             return;
         integrateScreen();
         showTemporarily();
+        m_positionPaneltimer.start();
     });
 }
 
