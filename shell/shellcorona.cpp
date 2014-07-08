@@ -1248,7 +1248,7 @@ void ShellCorona::activityRemoved()
 
 void ShellCorona::insertContainment(const QString &activity, int screenNum, Plasma::Containment *containment)
 {
-    if (Plasma::Containment *cont = d->desktopContainments.value(activity)(screenNum)) {
+    if (Plasma::Containment *cont = d->desktopContainments.value(activity).value(screenNum)) {
         //containment should always be valid, it's been known to get in a mess
         //so guard anyway
         Q_ASSERT(cont);
