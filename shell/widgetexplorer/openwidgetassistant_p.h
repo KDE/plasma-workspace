@@ -35,23 +35,16 @@ class OpenWidgetAssistant : public KAssistantDialog
     Q_OBJECT
 
 public:
-    enum {
-        PackageStructureRole = Qt::UserRole + 1
-    };
-
     OpenWidgetAssistant(QWidget *parent);
 
 protected Q_SLOTS:
-    void prepPage(KPageWidgetItem *current, KPageWidgetItem *before);
     void finished();
     void slotHelpClicked();
 
 private:
-    KPageWidgetItem *m_typePage;
     KPageWidgetItem *m_filePage;
-    KFileWidget *m_fileDialog;
+    KFileWidget *m_fileWidget;
     QWidget *m_filePageWidget;
-    QListWidget *m_widgetTypeList;
 };
 
 } // Plasma namespace
