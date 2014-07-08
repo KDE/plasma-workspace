@@ -149,7 +149,7 @@ void OpenWidgetAssistant::finished()
         return;
     }
 
-    Plasma::Package installer = Plasma::PluginLoader::self()->loadPackage("Plasma/Plasmoid");
+    Plasma::Package installer = Plasma::PluginLoader::self()->loadPackage("Plasma/Applet");
 
     if (!installer.install(packageFilePath)) {
         KMessageBox::error(this, i18n("Installing the package %1 failed.", packageFilePath),
