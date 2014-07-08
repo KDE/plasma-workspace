@@ -750,10 +750,10 @@ void ShellCorona::removePanel(PanelView* panelView)
 
 Plasma::Containment *ShellCorona::createContainmentForActivity(const QString& activity, int screenNum)
 {
-    if (d->desktopContainments.contains(activity) &&
-        d->desktopContainments[activity].contains(screenNum) &&
-        d->desktopContainments.value(activity).value(screenNum)) {
-        return d->desktopContainments[activity][screenNum];
+    QHash<int, Plasma::Containment*> act = d->desktopContainments.value(activity);
+    QHash<int, Plasma::Containment*>::const_iterator it = act.constFind(screenNum);
+    if (it != act.constEnd()) {
+        return *it;
     }
 
     QString plugin = "org.kde.desktopcontainment";
