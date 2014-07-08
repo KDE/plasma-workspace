@@ -711,7 +711,7 @@ QScreen* ShellCorona::insertScreen(QScreen* screen, int idx)
     QScreen *oldScreen = v->screen();
     v->setScreen(screen);
     foreach(PanelView* panel, d->panelViews) {
-        if(panel->screen() == screen) {
+        if (panel->screen() == oldScreen) {
             panel->setScreen(screen);
         }
     }
