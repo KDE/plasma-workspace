@@ -828,7 +828,7 @@ void ShellCorona::toggleWidgetExplorer()
     const QPoint cursorPos = QCursor::pos();
     foreach (DesktopView *view, d->views) {
         if (view->screen()->geometry().contains(cursorPos)) {
-            //The view QML has to provide something to display the activity explorer
+            //The view QML has to provide something to display the widget explorer
             view->rootObject()->metaObject()->invokeMethod(view->rootObject(), "toggleWidgetExplorer", Q_ARG(QVariant, QVariant::fromValue(sender())));
             return;
         }
@@ -854,8 +854,6 @@ void ShellCorona::syncAppConfig()
 
 void ShellCorona::setDashboardShown(bool show)
 {
-    qDebug() << "TODO: Toggling dashboard view";
-
     QAction *dashboardAction = actions()->action("show dashboard");
 
     if (dashboardAction) {
