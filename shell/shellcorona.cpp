@@ -925,13 +925,11 @@ void ShellCorona::checkActivities()
 
 void ShellCorona::currentActivityChanged(const QString &newActivity)
 {
-    qDebug() << "Activity changed:" << newActivity;
+//     qDebug() << "Activity changed:" << newActivity;
 
     for (int i = 0; i < d->views.count(); ++i) {
-        Plasma::Containment *c = d->desktopContainments[newActivity].value(i);
-        if (!c) {
-            c = createContainmentForActivity(newActivity, i);
-        }
+        Plasma::Containment *c = createContainmentForActivity(newActivity, i);
+
         QAction *removeAction = c->actions()->action("remove");
         if (removeAction) {
             removeAction->deleteLater();
@@ -944,7 +942,7 @@ void ShellCorona::activityAdded(const QString &id)
 {
     //TODO more sanity checks
     if (d->activities.contains(id)) {
-        qDebug() << "you're late." << id;
+        qWarning() << "Activity added twice" << id;
         return;
     }
 
