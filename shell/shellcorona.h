@@ -164,8 +164,8 @@ private:
     void removeView(int idx);
     bool isOutputRedundant(KScreen::Output* output) const;
     void reconsiderOutputs();
-    QList<PanelView*> panelsForScreen(QScreen* screen);
-    DesktopView* viewForScreen(QScreen* screen);
+    QList<PanelView*> panelsForScreen(QScreen* screen) const;
+    DesktopView* viewForScreen(QScreen* screen) const;
 
     /**
      * @returns a new containment associated with the specified @p activity and @p screen.

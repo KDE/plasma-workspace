@@ -391,7 +391,14 @@ void ShellCorona::screenInvariants() const
         Q_ASSERT(!view->fillScreen() || view->geometry() == screen->geometry());
         Q_ASSERT(view->containment());
         Q_ASSERT(view->containment()->screen() == i);
+        Q_ASSERT(view->containment()->lastScreen() == i);
         Q_ASSERT(view->isVisible());
+
+        foreach(PanelView* panel, panelsForScreen(screen)) {
+            Q_ASSERT(panel->containment());
+            Q_ASSERT(panel->containment()->screen() == i);
+            Q_ASSERT(panel->isVisible());
+        }
 
         screens.insert(screen);
         ++i;
@@ -556,7 +563,7 @@ PanelView *ShellCorona::panelView(Plasma::Containment *containment) const
 
 ///// SLOTS
 
-QList<PanelView*> ShellCorona::panelsForScreen(QScreen* screen)
+QList<PanelView*> ShellCorona::panelsForScreen(QScreen* screen) const
 {
     QList<PanelView*> ret;
     foreach(PanelView* v, d->panelViews) {
@@ -615,7 +622,7 @@ bool ShellCorona::isOutputRedundant(KScreen::Output* screen) const
     return false;
 }
 
-DesktopView* ShellCorona::viewForScreen(QScreen* screen)
+DesktopView* ShellCorona::viewForScreen(QScreen* screen) const
 {
     foreach(DesktopView* view, d->views)
         if(view->screen()==screen)
@@ -783,7 +790,6 @@ void ShellCorona::createWaitingPanels()
         }
 
         PanelView* panel = new PanelView(this);
-        d->panelViews[cont] = panel;
 
         Q_ASSERT(qBound(0, requestedScreen, d->views.size() -1) == requestedScreen);
         QScreen *screen = d->views[requestedScreen]->screen();
@@ -791,6 +797,8 @@ void ShellCorona::createWaitingPanels()
         panel->setContainment(cont);
         panel->setScreen(screen);
         panel->show();
+        d->panelViews[cont] = panel;
+        cont->reactToScreenChange();
 
         connect(cont, SIGNAL(destroyed(QObject*)), this, SLOT(containmentDeleted(QObject*)));
     }
