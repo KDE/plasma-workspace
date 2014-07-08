@@ -83,6 +83,17 @@ Image {
                         onAccepted: loginPrompt.startLogin()
                         focus: true
 
+                        //focus works in qmlscene
+                        //but this seems to be needed when loaded from SDDM
+                        //I don't understand why, but we have seen this before in the old lock screen
+                        Timer {
+                            interval: 200
+                            running: true
+                            repeat: false
+                            onTriggered: passwordInput.forceActiveFocus()
+                        }
+                        //end hack
+
                         Keys.onEscapePressed: {
                             //nextItemInFocusChain(false) is previous Item
                             nextItemInFocusChain(false).forceActiveFocus();
