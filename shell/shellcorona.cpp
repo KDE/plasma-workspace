@@ -683,9 +683,8 @@ void ShellCorona::addOutput(KScreen::Output *output)
     QScreen* newScreen = insertScreen(screen, insertPosition);
 
     DesktopView *view = new DesktopView(this);
-    d->views.append(view);
 
-    Plasma::Containment *containment = createContainmentForActivity(d->activityController->currentActivity(), d->views.count()-1);
+    Plasma::Containment *containment = createContainmentForActivity(d->activityController->currentActivity(), d->views.count());
     Q_ASSERT(containment);
 
     QAction *removeAction = containment->actions()->action("remove");
@@ -696,6 +695,10 @@ void ShellCorona::addOutput(KScreen::Output *output)
     view->setContainment(containment);
     view->setScreen(newScreen);
     view->show();
+    d->views.append(view);
+
+    //need to specifically call the reactToScreenChange, since when the screen is shown it's not yet
+    //in the list. We still don't want to have an invisible view added.
     containment->reactToScreenChange();
 
     //were there any panels for this screen before it popped up?
