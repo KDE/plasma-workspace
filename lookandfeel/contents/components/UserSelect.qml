@@ -79,10 +79,6 @@ FocusScope {
         preferredHighlightBegin: userItemWidth * 1
         preferredHighlightEnd: userItemWidth * 2
 
-        Component.onCompleted: {
-            currentIndex = 0;
-        }
-
         onUserSelected: {
             nextItemInFocusChain().forceActiveFocus();
         }
