@@ -1252,6 +1252,9 @@ void ShellCorona::insertContainment(const QString &activity, int screenNum, Plas
         d->desktopContainments[activity].contains(screenNum)) {
         Plasma::Containment *containment = d->desktopContainments[activity][screenNum];
 
+//         FIXME: We might end up leaking the containment in the argument in this
+//         code path.
+
         //containment should always be valid, it's been known to get in a mess
         //so guard anyway
         Q_ASSERT(containment);
