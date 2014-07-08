@@ -1248,20 +1248,14 @@ void ShellCorona::activityRemoved()
 
 void ShellCorona::insertContainment(const QString &activity, int screenNum, Plasma::Containment *containment)
 {
-    if (d->desktopContainments.contains(activity) &&
-        d->desktopContainments[activity].contains(screenNum)) {
-        Plasma::Containment *containment = d->desktopContainments[activity][screenNum];
-
-//         FIXME: We might end up leaking the containment in the argument in this
-//         code path.
-
+    if (Plasma::Containment *cont = d->desktopContainments.value(activity)(screenNum)) {
         //containment should always be valid, it's been known to get in a mess
         //so guard anyway
-        Q_ASSERT(containment);
-        if (containment) {
-            disconnect(containment, SIGNAL(destroyed(QObject*)),
+        Q_ASSERT(cont);
+        if (cont) {
+            disconnect(cont, SIGNAL(destroyed(QObject*)),
                    this, SLOT(desktopContainmentDestroyed(QObject*)));
-            containment->destroy();
+            cont->destroy();
         }
     }
     d->desktopContainments[activity][screenNum] = containment;
