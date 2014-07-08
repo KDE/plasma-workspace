@@ -28,6 +28,7 @@ DEALINGS IN THE SOFTWARE.
 #include <QFile>
 #include <QTextStream>
 #include <QStandardPaths>
+#include <QDir>
 
 #include <KConfig>
 #include <KConfigGroup>
@@ -62,15 +63,19 @@ static QString get_entry( QString* ll )
 
 int main( int argc, char **argv )
     {
+    Q_UNUSED(argc);
+    Q_UNUSED(argv);
+    QString path = QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation);
+    QDir().mkdir(path);
 
     QString keysname = QStandardPaths::locate(QStandardPaths::GenericConfigLocation, "startupconfigkeys");
     QFile keys( keysname );
     if( !keys.open( QIODevice::ReadOnly ))
         return 3;
-    QFile f1(QStandardPaths::locate(QStandardPaths::GenericConfigLocation, "startupconfig"));
+    QFile f1(QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation) + QStringLiteral("/startupconfig"));
     if( !f1.open( QIODevice::WriteOnly ))
         return 4;
-    QFile f2(QStandardPaths::locate(QStandardPaths::GenericConfigLocation, "startupconfigfiles"));
+    QFile f2(QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation) + QStringLiteral("/startupconfigfiles"));
     if( !f2.open( QIODevice::WriteOnly ))
         return 5;
     QTextStream startupconfig( &f1 );
