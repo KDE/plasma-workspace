@@ -240,7 +240,7 @@ void PlasmaAppletItemModel::populateModel(const QStringList &whatChanged)
             continue;
         }
 
-        qDebug() << info.pluginName() << " is the name of the plugin at" << info.entryPath();
+        //qDebug() << info.pluginName() << " is the name of the plugin at" << info.entryPath();
         //qDebug() << info.name() << info.property("X-Plasma-Thumbnail");
 
         PlasmaAppletItem::FilterFlags flags(PlasmaAppletItem::NoFilter);
