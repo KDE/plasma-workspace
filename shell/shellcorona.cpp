@@ -689,7 +689,7 @@ void ShellCorona::addOutput(KScreen::Output *output)
     view->setScreen(newScreen);
     view->show();
     d->views.append(view);
-
+    containment->reactToScreenChange();
 
     //were there any panels for this screen before it popped up?
     if (!d->waitingPanels.isEmpty()) {
