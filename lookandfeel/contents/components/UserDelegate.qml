@@ -30,7 +30,7 @@ Item {
 
     property string name
     property string userName
-    property alias iconSource: face.source
+    property string iconSource
     property int faceSize: frame.width
 
     signal clicked()
@@ -76,8 +76,12 @@ Item {
             }
         }
 
-        PlasmaCore.IconItem {
+        //we sometimes have a path to an image sometimes an icon
+        //IconItem in it's infinite wisdom tries to load a full path as an icon which is rubbish
+        //we try loading it as a normal image, if that fails we fall back to IconItem
+        Image {
             id: face
+            source: wrapper.iconSource
             anchors {
                 fill: frame
                 //negative to make frame around the image
@@ -86,6 +90,13 @@ Item {
                 rightMargin: frame.margins.right
                 bottomMargin: frame.margins.bottom
             }
+        }
+
+        PlasmaCore.IconItem {
+            id: faceIcon
+            source: wrapper.iconSource
+            visible: face.status == Image.Error
+            anchors.fill: face
         }
     }
 
