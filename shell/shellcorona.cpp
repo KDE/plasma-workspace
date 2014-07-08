@@ -731,10 +731,6 @@ void ShellCorona::removeScreen(DesktopView *view)
     removeView(idx);
 
     screenInvariants();
-
-    if(d->views.isEmpty()) {
-        qWarning() << "no screens!!";
-    }
 }
 
 void ShellCorona::removePanel(PanelView* panelView)
