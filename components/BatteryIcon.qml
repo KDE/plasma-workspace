@@ -101,12 +101,6 @@ Item {
         visible: pluggedIn && elementForType(batteryType) == ""
     }
 
-    PlasmaCore.IconItem {
-        id: otherBatteriesSvg
-        anchors.fill: parent
-        source: elementForType(batteryType)
-        visible: elementId != ""
-    }
 
     function elementForType(t) {
         switch(t) {
