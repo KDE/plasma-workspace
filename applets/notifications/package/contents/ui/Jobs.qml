@@ -91,7 +91,7 @@ Column {
         }
     }
 
-    Title {
+    PlasmaExtras.Heading {
         visible: jobsRepeater.count > 0 && notifications && notifications.count > 0
         text: i18n("Transfers")
     }
