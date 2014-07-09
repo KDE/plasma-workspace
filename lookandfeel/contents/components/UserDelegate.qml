@@ -51,7 +51,7 @@ Item {
             right: parent.right
         }
 
-        height: parent.height*2/3
+        height: parent.height - loginText.height
 
         //TODO there code was to show a blue border on mouseover
         //which shows that something is interactable.
