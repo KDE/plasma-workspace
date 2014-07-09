@@ -49,8 +49,8 @@ ColumnLayout {
         PW.BatteryIcon {
             id: battery
             hasBattery: true
-            percent: pmSource.data["Battery0"]["Percent"]
-            pluggedIn: pmSource.data["Battery0"]["State"] != "Discharging"
+            percent: pmSource.data["Battery0"] ? pmSource.data["Battery0"]["Percent"] : 0
+            pluggedIn: pmSource.data["Battery0"] ? pmSource.data["Battery0"]["State"] != "Discharging" : false
 
             height: batteryLabel.height
             width: batteryLabel.height
@@ -58,7 +58,9 @@ ColumnLayout {
 
         BreezeLabel {
             id: batteryLabel
-            text: switch(pmSource.data["Battery0"]["State"]) {
+            text: {
+                var state = pmSource.data["Battery0"] ? pmSource.data["Battery0"]["State"] : "";
+                switch(state) {
                 case "NoCharge": //follow through
                 case "Discharging":
                     return i18nd("plasma_lookandfeel_org.kde.lookandfeel","%1\% battery remaining", battery.percent)
@@ -66,6 +68,7 @@ ColumnLayout {
                     return i18nd("plasma_lookandfeel_org.kde.lookandfeel","Fully charged")
                 default:
                     return i18nd("plasma_lookandfeel_org.kde.lookandfeel","%1\%. Charging", battery.percent)
+                }
             }
             Layout.alignment: Qt.AlignRight
             wrapMode: Text.Wrap
