@@ -36,10 +36,6 @@ Rectangle {
         imageWallpaper.addUsersWallpaper(url);
     }
 
-    function action_open() {
-        Qt.openUrlExternally(imageWallpaper.wallpaperPath);
-    }
-
     function action_next() {
         imageWallpaper.nextSlide();
     }
