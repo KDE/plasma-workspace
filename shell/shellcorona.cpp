@@ -388,7 +388,9 @@ void ShellCorona::screenInvariants() const
         Q_ASSERT(!screens.contains(screen));
         Q_ASSERT(!d->redundantOutputs.contains(screenToOutput(screen, d->screenConfiguration)));
         Q_ASSERT(view->fillScreen() || ShellManager::s_forceWindowed);
-        Q_ASSERT(!view->fillScreen() || view->geometry() == screen->geometry());
+//         commented out because a different part of the code-base is responsible for this
+//         and sometimes is not yet called here.
+//         Q_ASSERT(!view->fillScreen() || view->geometry() == screen->geometry());
         Q_ASSERT(view->containment());
         Q_ASSERT(view->containment()->screen() == i);
         Q_ASSERT(view->containment()->lastScreen() == i);
