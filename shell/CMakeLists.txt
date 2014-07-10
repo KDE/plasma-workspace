@@ -20,8 +20,8 @@ find_package(KF5Crash REQUIRED)
 find_package(KF5Solid REQUIRED)
 find_package(KF5Activities REQUIRED)
 find_package(KF5TextEditor) # not part of KF5.0
-find_package(KF5DBusAddons ${KF5_VERSION} REQUIRED)
-find_package(KF5Declarative ${KF5_VERSION} REQUIRED)
+find_package(KF5DBusAddons ${KF5_MIN_VERSION} REQUIRED)
+find_package(KF5Declarative ${KF5_MIN_VERSION} REQUIRED)
 find_package(KF5XmlGui REQUIRED)
 
 set(HAVE_KTEXTEDITOR ${KF5TextEditor_FOUND})

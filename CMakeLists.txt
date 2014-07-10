@@ -3,14 +3,14 @@ project(plasma-workspace)
 cmake_minimum_required(VERSION 2.8.12 FATAL_ERROR)
 
 set(QT_MIN_VERSION "5.3.0")
-set(KF5_VERSION "5.0.0")
+set(KF5_MIN_VERSION "5.0.0")
 set(INSTALL_SDDM_THEME TRUE)
 find_package(Qt5 ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS Widgets Quick Concurrent Test Script Network)
 
 find_package(ECM 0.0.11 REQUIRED NO_MODULE)
 set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH} ${ECM_KDE_MODULE_DIR})
 
-find_package(KF5 ${KF5_VERSION} REQUIRED COMPONENTS
+find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS
                     Plasma DocTools Runner JsEmbed NotifyConfig Su NewStuff Wallet KCMUtils Baloo
                     IdleTime Declarative WebKit TextWidgets KDELibs4Support Crash)
 
@@ -30,7 +30,7 @@ include(WriteBasicConfigVersionFile)
 include(CheckIncludeFiles)
 include(FeatureSummary)
 
-find_package(KF5Activities ${KF5_VERSION})
+find_package(KF5Activities ${KF5_MIN_VERSION})
 set_package_properties(KF5Activities PROPERTIES DESCRIPTION "management of Plasma activities"
                        TYPE OPTIONAL
                        PURPOSE "Needed by activity related plasmoids."

@@ -4,8 +4,8 @@ set(krunner_SRCS
     view.cpp
 )
 
-find_package(KF5Declarative ${KF5_VERSION} REQUIRED)
-find_package(KF5Plasma ${KF5_VERSION} REQUIRED)
+find_package(KF5Declarative ${KF5_MIN_VERSION} REQUIRED)
+find_package(KF5Plasma ${KF5_MIN_VERSION} REQUIRED)
 find_package(KF5PlasmaQuick REQUIRED NO_MODULE)
 find_package(KF5Config REQUIRED NO_MODULE)
 
