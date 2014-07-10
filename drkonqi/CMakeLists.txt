@@ -87,7 +87,15 @@ add_executable(drkonqi ${drkonqi_SRCS})
 
 ## TODO Remove internal copy when kxmlrpcclient is released
 
-if(NOT KF5XmlRpcClient_FOUND)
+if(KF5XmlRpcClient_FOUND)
+    target_link_libraries (drkonqi
+    KF5::XmlRpcClient
+    KF5::WebKit
+    KF5::WidgetsAddons
+    KF5::Completion
+    KF5::Wallet
+)
+else()
     add_subdirectory ( internalkxmlrpcclient )
     include_directories ( ${CMAKE_CURRENT_BINARY_DIR}/internalkxmlrpcclient/src )
     target_link_libraries ( drkonqi KF5XmlRpcClientPrivate
