@@ -33,6 +33,15 @@ Item {
     Plasmoid.toolTipSubText: clipboardSource.data["clipboard"]["empty"] ? i18n("Clipboard is empty") : clipboardSource.data["clipboard"]["current"]
     Plasmoid.icon: "klipper"
 
+    function action_configure() {
+        clipboardSource.service("", "configureKlipper");
+    }
+
+    Component.onCompleted: {
+        plasmoid.removeAction("configure");
+        plasmoid.setAction("configure", i18n("Configure"), "configure", "alt+d, s");
+    }
+
     PlasmaCore.DataSource {
         id: clipboardSource
         property bool editing: false;
@@ -108,11 +117,6 @@ Item {
                     iconSource: "edit-clear-history"
                     tooltip: i18n("Clear history")
                     onClicked: clipboardSource.service("", "clearHistory")
-                }
-                PlasmaComponents.ToolButton {
-                    iconSource: "configure"
-                    tooltip: i18n("Configure")
-                    onClicked: clipboardSource.service("", "configureKlipper")
                 }
             }
             Menu {
