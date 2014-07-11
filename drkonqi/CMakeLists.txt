@@ -2,8 +2,6 @@ project(drkonqi)
 
 include (CheckFunctionExists)
 
-find_package(KF5XmlRpcClient CONFIG)
-
 check_function_exists("strsignal" HAVE_STRSIGNAL)
 check_function_exists("uname" HAVE_UNAME)
 
@@ -86,7 +84,7 @@ ki18n_wrap_ui(drkonqi_SRCS
 add_executable(drkonqi ${drkonqi_SRCS})
 
 ## TODO Remove internal copy when kxmlrpcclient is released
-
+set (KF5XmlRpcClient_FOUND FALSE)
 if(NOT KF5XmlRpcClient_FOUND)
     add_subdirectory ( internalkxmlrpcclient )
     include_directories ( ${CMAKE_CURRENT_BINARY_DIR}/internalkxmlrpcclient/src )
