@@ -882,7 +882,7 @@ void Klipper::editData(const QSharedPointer< const HistoryItem > &item)
     layout->addWidget(buttons);
     dlg->adjustSize();
 
-    connect(dlg, &QDialog::accepted, this, [this, edit, item]() {
+    connect(dlg.data(), &QDialog::accepted, this, [this, edit, item]() {
         QString text = edit->toPlainText();
         if (item) {
             m_history->remove( item );
