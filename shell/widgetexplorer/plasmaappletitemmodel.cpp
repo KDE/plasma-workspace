@@ -230,7 +230,18 @@ void PlasmaAppletItemModel::populateModel(const QStringList &whatChanged)
 
     //qDebug() << "number of applets is"
     //         <<  Plasma::Applet::listAppletInfo(QString(), m_application).count();
-    KService::List services = KServiceTypeTrader::self()->query("Plasma/Applet", QString());
+
+    QString constraint;
+    bool first = true;
+    foreach (const QString prov, m_provides) {
+        if (!first) {
+            constraint += " or ";
+            first = false;
+        }
+        constraint += "'" + prov + "' in [X-Plasma-Provides]";
+    }
+
+    KService::List services = KServiceTypeTrader::self()->query("Plasma/Applet", constraint);
 
     foreach (const QExplicitlySharedDataPointer<KService> service, services) {
         KPluginInfo info(service);
@@ -346,6 +357,21 @@ void PlasmaAppletItemModel::setFavorite(const QString &plugin, bool favorite)
 
     m_configGroup.writeEntry("favorites", m_favorites.join(","));
     m_configGroup.sync();
+}
+
+QStringList PlasmaAppletItemModel::provides() const
+{
+    return m_provides;
+}
+
+void PlasmaAppletItemModel::setProvides(const QStringList &provides)
+{
+    if (m_provides == provides) {
+        return;
+    }
+
+    m_provides = provides;
+    populateModel();
 }
 
 void PlasmaAppletItemModel::setApplication(const QString &app)

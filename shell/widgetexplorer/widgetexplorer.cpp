@@ -328,6 +328,22 @@ QString WidgetExplorer::application()
     return d->application;
 }
 
+QStringList WidgetExplorer::provides() const
+{
+    return d->itemModel.provides();
+}
+
+void WidgetExplorer::setProvides(const QStringList &provides)
+{
+    if (d->itemModel.provides() == provides) {
+        return;
+    }
+
+    d->itemModel.setProvides(provides);
+    emit providesChanged();
+}
+
+
 void WidgetExplorer::setContainment(Plasma::Containment *containment)
 {
     if (d->containment != containment) {

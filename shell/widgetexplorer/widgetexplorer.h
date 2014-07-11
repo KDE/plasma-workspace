@@ -80,6 +80,12 @@ class WidgetExplorer : public QObject
      */
     Q_PROPERTY(QString application READ application WRITE setApplication NOTIFY applicationChanged)
 
+    /**
+     * Set the features the listed applets must provide: needed for listing alternatives
+     * to a particular applet
+     */
+    Q_PROPERTY(QStringList provides READ provides WRITE setProvides NOTIFY providesChanged)
+
     Q_PROPERTY(Plasma::Containment *containment READ containment WRITE setContainment NOTIFY containmentChanged)
 
 public:
@@ -96,6 +102,9 @@ public:
      * @arg application the application which the widgets should be loaded for.
      */
     void setApplication(const QString &application = QString());
+
+    QStringList provides() const;
+    void setProvides(const QStringList &provides);
 
     /**
      * Changes the current default containment to add applets to
@@ -131,6 +140,7 @@ Q_SIGNALS:
     void viewChanged();
     void applicationChanged();
     void containmentChanged();
+    void providesChanged();
 
 public Q_SLOTS:
     /**
