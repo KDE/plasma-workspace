@@ -208,7 +208,13 @@ QScriptValue ScriptEngine::activities(QScriptContext *context, QScriptEngine *en
 
 QScriptValue ScriptEngine::newPanel(QScriptContext *context, QScriptEngine *engine)
 {
-    return createContainment("Panel", "org.kde.panel", context, engine);
+    QString plugin("org.kde.panel");
+
+    if (context->argumentCount() > 0) {
+        plugin = context->argument(0).toString();
+    }
+
+    return createContainment("Panel", plugin, context, engine);
 }
 
 QScriptValue ScriptEngine::createContainment(const QString &type, const QString &defaultPlugin,
