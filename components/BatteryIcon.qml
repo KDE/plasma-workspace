@@ -38,7 +38,7 @@ Item {
         anchors.fill: parent
         svg: svg
         elementId: "Battery"
-        visible: elementForType(batteryType) == ""
+        visible: !otherBatteriesSvg.visible
     }
 
     PlasmaCore.SvgItem {
@@ -46,7 +46,7 @@ Item {
         anchors.fill: parent
         svg: svg
         elementId: hasBattery ? fillElement(percent) : "Unavailable"
-        visible: elementId != "" && elementForType(batteryType) == ""
+        visible: elementId != "" && !otherBatteriesSvg.visible
     }
 
     function fillElement(p) {
@@ -98,9 +98,15 @@ Item {
         anchors.fill: parent
         svg: svg
         elementId: "AcAdapter"
-        visible: pluggedIn && elementForType(batteryType) == ""
+        visible: pluggedIn && !otherBatteriesSvg.visible
     }
 
+    PlasmaCore.IconItem {
+        id: otherBatteriesSvg
+        anchors.fill: parent
+        source: elementForType(batteryType)
+        visible: source !== ""
+    }
 
     function elementForType(t) {
         switch(t) {
