@@ -122,7 +122,8 @@ Item {
                         }
                     }
                     QtLayouts.RowLayout {
-                        x: height + 5
+                        anchors.verticalCenter: parent.verticalCenter
+                        x: height + units.iconSizes.small
                         QIconItem {
                             icon: decoration
                             width: units.iconSizes.small
