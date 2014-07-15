@@ -73,14 +73,15 @@ Item {
 
         PlasmaComponents.Label {
             id: lockMessage
-            text: kscreenlocker_userName.length == 0 ? i18n("The session is locked") : i18n("The session has been locked by %1", kscreenlocker_userName)
+            text: kscreenlocker_userName.length == 0 ? i18nd("kscreenlocker_greet", "The session is locked") :
+                                                       i18nd("kscreenlocker_greet", "The session has been locked by %1", kscreenlocker_userName)
             anchors.horizontalCenter: parent.horizontalCenter
         }
 
         RowLayout {
             anchors.horizontalCenter: parent.horizontalCenter
             PlasmaComponents.Label {
-                text: i18n("Password:")
+                text: i18nd("kscreenlocker_greet", "Password:")
             }
             PlasmaComponents.TextField {
                 id: password
