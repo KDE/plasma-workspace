@@ -71,8 +71,16 @@ kcminputrc Mouse cursorSize ''
 ksplashrc KSplash Theme Breeze
 ksplashrc KSplash Engine KSplashQML
 kcmfonts General forceFontDPI 0
-kdeglobals Locale Language '' # trigger requesting languages from KLocale
 EOF
+
+# preload the user's locale on first start
+plasmalocalerc=$configDir/plasma-localerc
+test -f $plasmalocalerc || {
+cat >$plasmalocalerc <<EOF
+[Formats]
+LANG=$LANG
+EOF
+}
 
 # export LC_* variables set by kcmshell5 formats into environment
 # so it can be picked up by QLocale and friends.
