@@ -179,8 +179,8 @@ void UnlockApp::desktopResized()
         }
 
         QQmlProperty hibernateProperty(view->rootObject(), QStringLiteral("suspendToDiskSupported"));
-        hibernateProperty.write(spdMethods.contains(Solid::PowerManagement::SuspendState));
-        if (spdMethods.contains(Solid::PowerManagement::SuspendState) &&
+        hibernateProperty.write(spdMethods.contains(Solid::PowerManagement::HibernateState));
+        if (spdMethods.contains(Solid::PowerManagement::HibernateState) &&
             view->rootObject()->metaObject()->indexOfSignal(QMetaObject::normalizedSignature("suspendToDisk()").constData()) != -1) {
             connect(view->rootObject(), SIGNAL(suspendToDisk()), SLOT(suspendToDisk()));
         }
