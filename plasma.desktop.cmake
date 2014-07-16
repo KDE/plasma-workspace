@@ -7,6 +7,7 @@ DesktopNames=KDE
 Name=Plasma
 Name[ar]=بلازما
 Name[ca]=Plasma
+Name[cs]=Plasma
 Name[de]=Plasma
 Name[en_GB]=Plasma
 Name[es]=Plasma
