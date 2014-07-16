@@ -757,13 +757,13 @@ void BugzillaReportInformationDialog::bugFetchFinished(BugReport report, QObject
             }
 
             //Generate notes
-            QString notes = i18n("<p><note>The bug report's title is often written by its reporter "
+            QString notes = xi18n("<p><note>The bug report's title is often written by its reporter "
                                  "and may not reflect the bug's nature, root cause or other visible "
                                  "symptoms you could use to compare to your crash. Please read the "
                                  "complete report and all the comments below.</note></p>");
 
             if (m_duplicatesCount >= 10) { //Consider a possible mass duplicate crash
-                notes += i18np("<p><note>This bug report has %1 duplicate report. That means this "
+                notes += xi18np("<p><note>This bug report has %1 duplicate report. That means this "
                                "is probably a <strong>common crash</strong>. <i>Please consider only "
                                "adding a comment or a note if you can provide new valuable "
                                "information which was not already mentioned.</i></note></p>",
@@ -780,7 +780,7 @@ void BugzillaReportInformationDialog::bugFetchFinished(BugReport report, QObject
                 && report.bugSeverity() != QLatin1String("grave")
                 && report.bugSeverity() != QLatin1String("critical"))
             {
-                notes += i18n("<p><note>This bug report is not about a crash or about any other "
+                notes += xi18n("<p><note>This bug report is not about a crash or about any other "
                               "critical bug.</note></p>");
             }
 
@@ -903,7 +903,7 @@ BugzillaReportConfirmationDialog::BugzillaReportConfirmationDialog(int bugNumber
     connect(this, SIGNAL(cancelClicked()) , this, SLOT(hide()));
 
     //Set introduction text
-    ui.introLabel->setText(i18n("You are going to mark your crash as related to bug <numid>%1</numid>",
+    ui.introLabel->setText(xi18n("You are going to mark your crash as related to bug <numid>%1</numid>",
                              m_bugNumber));
 
     if (commonCrash) { //Common ("massive") crash

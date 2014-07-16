@@ -14,7 +14,7 @@
    <item>
     <widget class="QLabel" name="m_explanationLabel">
      <property name="text">
-      <string comment="@info/rich">&lt;strong&gt;Please provide the following information in English.&lt;/strong&gt;</string>
+      <string comment="@info">&lt;strong&gt;Please provide the following information in English.&lt;/strong&gt;</string>
      </property>
      <property name="wordWrap">
       <bool>true</bool>
@@ -91,7 +91,7 @@
    <item>
     <widget class="QLabel" name="m_crashInfoLabel">
      <property name="text">
-      <string comment="@info/rich">&lt;note&gt;The crash and system information will be automatically added to the bug report.&lt;/note&gt;</string>
+      <string comment="@info">&lt;note&gt;The crash and system information will be automatically added to the bug report.&lt;/note&gt;</string>
      </property>
      <property name="wordWrap">
       <bool>true</bool>

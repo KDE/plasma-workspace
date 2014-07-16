@@ -14,7 +14,7 @@
    <item>
     <widget class="QLabel" name="m_explanationLabel">
      <property name="text">
-      <string comment="@info/rich">See if your bug has already been reported. Double click a report in the list and compare it to yours. You can suggest that your crash is a duplicate of that report or directly attach your information to it.</string>
+      <string comment="@info">See if your bug has already been reported. Double click a report in the list and compare it to yours. You can suggest that your crash is a duplicate of that report or directly attach your information to it.</string>
      </property>
      <property name="wordWrap">
       <bool>true</bool>

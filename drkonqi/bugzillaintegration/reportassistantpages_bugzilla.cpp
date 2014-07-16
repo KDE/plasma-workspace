@@ -605,7 +605,7 @@ void BugzillaInformationPage::aboutToHide()
 
 void BugzillaInformationPage::showTitleExamples()
 {
-    QString titleExamples = i18nc("@info:tooltip examples of good bug report titles",
+    QString titleExamples = xi18nc("@info:tooltip examples of good bug report titles",
           "<strong>Examples of good titles:</strong><nl />\"Plasma crashed after adding the Notes "
           "widget and writing on it\"<nl />\"Konqueror crashed when accessing the Facebook "
           "application 'X'\"<nl />\"Kopete suddenly closed after resuming the computer and "
