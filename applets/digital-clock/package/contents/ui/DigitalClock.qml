@@ -80,10 +80,7 @@ Item {
         id: mouseArea
         anchors.fill: parent
         hoverEnabled: true
-        property bool wasExpanded: false
-
-        onPressed: wasExpanded = plasmoid.expanded
-        onClicked: plasmoid.expanded = !wasExpanded
+        onClicked: plasmoid.expanded = !plasmoid.expanded
     }
 
     Text {
