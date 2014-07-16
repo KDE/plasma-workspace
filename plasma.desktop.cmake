@@ -51,3 +51,4 @@ Comment[sr@latin]=Plasma od KDE‑a
 Comment[sv]=Plasma av KDE
 Comment[uk]=Плазма KDE
 Comment[x-test]=xxPlasma by KDExx
+X-KDE-PluginInfo-Version=${PLASMAWORKSPACE_VERSION_STRING}
