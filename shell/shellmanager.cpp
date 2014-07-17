@@ -163,6 +163,7 @@ void ShellManager::deregisterHandler(QObject * handler)
         d->currentHandler = nullptr;
         updateShell();
     }
+    handler->deleteLater();
 }
 
 void ShellManager::requestShellUpdate()
