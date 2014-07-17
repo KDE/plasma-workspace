@@ -32,7 +32,7 @@ Geolocation::Geolocation(QObject* parent, const QVariantList& args)
     Q_UNUSED(args)
     setMinimumPollingInterval(500);
     connect(m_networkManager, SIGNAL(onlineStateChanged(bool)),
-            this, SLOT(networkStatusChanged()));
+            this, SLOT(networkStatusChanged(bool)));
     m_updateTimer.setInterval(100);
     m_updateTimer.setSingleShot(true);
     connect(&m_updateTimer, SIGNAL(timeout()), this, SLOT(actuallySetData()));
