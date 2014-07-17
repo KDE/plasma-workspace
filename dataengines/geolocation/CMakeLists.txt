@@ -49,7 +49,7 @@ set(plasma_geolocation_ip_SRCS location_ip.cpp)
 add_library(plasma-geolocation-ip MODULE ${plasma_geolocation_ip_SRCS})
 target_link_libraries(plasma-geolocation-ip plasma-geolocation-interface KF5::KIOCore)
 install(FILES plasma-geolocation-ip.desktop DESTINATION ${SERVICES_INSTALL_DIR})
-install(TARGETS plasma-geolocation-ip DESTINATION ${PLUGIN_INSTALL_DIR}/plasma/geolocationprovider)
+install(TARGETS plasma-geolocation-ip DESTINATION ${PLUGIN_INSTALL_DIR})
 
 # -------------------------------------------------------------------------------------------------
 
@@ -65,7 +65,7 @@ if(LIBGPS_FOUND)
     add_library(plasma-geolocation-gps MODULE ${plasma_geolocation_gps_SRCS})
     target_link_libraries(plasma-geolocation-gps plasma-geolocation-interface ${LIBGPS_LIBRARIES})
     install(FILES plasma-geolocation-gps.desktop DESTINATION ${SERVICES_INSTALL_DIR})
-    install(TARGETS plasma-geolocation-gps DESTINATION ${PLUGIN_INSTALL_DIR}/plasma/geolocationprovider)
+    install(TARGETS plasma-geolocation-gps DESTINATION ${PLUGIN_INSTALL_DIR})
 endif()
 
 # -------------------------------------------------------------------------------------------------
