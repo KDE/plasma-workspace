@@ -531,7 +531,7 @@ QRect ShellCorona::availableScreenRect(int id) const
 
     QRect r = view->geometry();
     foreach (PanelView *v, d->panelViews) {
-        if (v->screen() == v->screen() && v->visibilityMode() != PanelView::AutoHide) {
+        if (v->screen() == view->screen() && v->visibilityMode() != PanelView::AutoHide) {
             switch (v->location()) {
             case Plasma::Types::LeftEdge:
                 r.setLeft(r.left() + v->thickness());
