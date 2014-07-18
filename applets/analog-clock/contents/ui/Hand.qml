@@ -37,7 +37,7 @@ PlasmaCore.SvgItem {
         horizontalCenter: clock.horizontalCenter
     }
     svg: clockSvg
-    smooth: true
+    smooth: !anim.running
     transform: Rotation {
         id: rotation
         angle: 0
@@ -46,7 +46,13 @@ PlasmaCore.SvgItem {
             y: width/2
         }
         Behavior on angle {
-            SpringAnimation { spring: 2; damping: 0.2; modulus: 360 }
+            RotationAnimation {
+                id: anim
+                duration: 200
+                direction: RotationAnimation.Clockwise
+                easing.type: Easing.OutElastic
+                easing.overshoot: 0.5
+            }
         }
     }
 }
