@@ -75,7 +75,7 @@ ColumnLayout {
             width: theme.mSize(theme.defaultFont).width * textLength
             model: [
                         {
-                            'label': i18n("Scaled & Cropped"),
+                            'label': i18n("Scaled && Cropped"),
                             'fillMode': Image.PreserveAspectCrop
                         },
                         {
