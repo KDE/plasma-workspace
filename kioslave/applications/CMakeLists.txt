@@ -1,3 +1,5 @@
+add_definitions(-DTRANSLATION_DOMAIN=\"kio_applications\") 
+
 add_library(kio_applications MODULE kio_applications.cpp)
 
 target_link_libraries(kio_applications KF5::KDELibs4Support KF5::KIOCore)

@@ -105,9 +105,9 @@ Item {
                     }
                     model: ListModel {
                         id: cbItems
-                        ListElement { text: "Auto"; val: 1 }
-                        ListElement { text: "Shown"; val: 2 }
-                        ListElement { text: "Hidden"; val: 0 }
+                        ListElement { text: i18n("Auto"); val: 1 }
+                        ListElement { text: i18n("Shown"); val: 2 }
+                        ListElement { text: i18n("Hidden"); val: 0 }
                     }
                 }
             }

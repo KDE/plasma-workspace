@@ -47,7 +47,7 @@ Item {
         id: pageColumn
         spacing: itemSizeLabel.height / 2
         PlasmaExtras.Title {
-            text: i18n("SystemTray Settings")
+            text: i18n("Lock/Logout Settings")
         }
 
         Column {

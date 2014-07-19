@@ -41,17 +41,17 @@ Item {
         }
         Controls.RadioButton {
             id: removableOnly
-            text: "Removable devices only"
+            text: i18n("Removable devices only")
             exclusiveGroup: deviceFilter
         }
         Controls.RadioButton {
             id: nonRemovableOnly
-            text: "Non-removable devices only"
+            text: i18n("Non-removable devices only")
             exclusiveGroup: deviceFilter
         }
         Controls.RadioButton {
             id: allDevices
-            text: "All devices"
+            text: i18n("All devices")
             exclusiveGroup: deviceFilter
         }
     }

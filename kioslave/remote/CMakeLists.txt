@@ -1,3 +1,5 @@
+add_definitions(-DTRANSLATION_DOMAIN=\"kio_remote\") 
+
 add_subdirectory( kdedmodule ) 
 add_subdirectory( tests ) 
 
