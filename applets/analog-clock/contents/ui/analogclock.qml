@@ -52,6 +52,9 @@ Item {
             minutes = date.getMinutes();
             seconds = date.getSeconds();
         }
+        Component.onCompleted: {
+            onDataChanged();
+        }
     }
 
     Plasmoid.compactRepresentation: Item {
