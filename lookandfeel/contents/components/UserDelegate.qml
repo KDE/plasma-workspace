@@ -123,4 +123,8 @@ Item {
 
         onClicked: wrapper.clicked();
     }
+
+    Accessible.name: name
+    Accessible.role: Accessible.Button
+    function accessiblePressAction() { wrapper.clicked() }
 }
