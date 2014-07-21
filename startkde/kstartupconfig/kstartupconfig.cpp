@@ -99,7 +99,10 @@ int main()
     filename = kdehome + "/share/config/startupconfigkeys";
     keys = fopen(filename.c_str(), "r");
     if( keys == NULL )
+    {
+        fclose(config);
         return 2;
+    }
     for(;;)
         {
         char* nl;
