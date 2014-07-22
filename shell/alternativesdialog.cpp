@@ -26,6 +26,7 @@
 #include <kdeclarative/qmlobject.h>
 #include <Plasma/Package>
 #include <Plasma/Containment>
+#include <Plasma/Corona>
 #include <Plasma/PluginLoader>
 
 AlternativesDialog::AlternativesDialog(Plasma::Applet *applet, QQuickItem *parent)
@@ -37,7 +38,10 @@ AlternativesDialog::AlternativesDialog(Plasma::Applet *applet, QQuickItem *paren
     setLocation(applet->location());
     setFlags(flags()|Qt::WindowStaysOnTopHint);
     //We already have the proper shellpluginloader
-    Plasma::Package pkg = Plasma::PluginLoader::self()->loadPackage("Plasma/Shell");
+    Plasma::Package pkg;
+    if (applet && applet->containment() && applet->containment()->corona()) {
+        pkg = applet->containment()->corona()->package();
+    }
     //TODO: use the proper package: we must be in the corona
     pkg.setPath("org.kde.plasma.desktop");
 
