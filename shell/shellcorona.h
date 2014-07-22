@@ -86,6 +86,8 @@ public:
     
     Q_INVOKABLE void screenInvariants() const;
 
+    Q_INVOKABLE void showAlternativesForApplet(Plasma::Applet *applet);
+
 public Q_SLOTS:
     /**
      * Request saving applicationConfig on disk, it's event compressed, not immediate
