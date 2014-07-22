@@ -33,13 +33,13 @@ ColumnLayout {
 
     property int controlSize: Math.min(height, width) / 4
 
-    property int position: mpris2Source.data[mpris2Source.last].Position
+    property int position: mpris2Source.data[mpris2Source.current].Position
 
     property bool isExpanded: plasmoid.expanded
 
     onIsExpandedChanged: {
         if (isExpanded) {
-            var service = mpris2Source.serviceForSource(mpris2Source.last);
+            var service = mpris2Source.serviceForSource(mpris2Source.current);
             var operation = service.operationDescription("GetPosition");
             service.startOperationCall(operation);
         }
@@ -65,10 +65,10 @@ ColumnLayout {
             right: parent.right
         }
         Image {
-            source: mpris2Source.data[mpris2Source.last].Metadata["mpris:artUrl"]
+            source: mpris2Source.data[mpris2Source.current].Metadata["mpris:artUrl"]
             Layout.preferredHeight: Math.min(expandedRepresentation.height/2, sourceSize.height)
             Layout.preferredWidth: Layout.preferredHeight
-            visible: status == Image.Ready && root.state != "off" && !root.noPlayer && mpris2Source.data[mpris2Source.last].Metadata["mpris:artUrl"] != undefined
+            visible: status == Image.Ready && root.state != "off" && !root.noPlayer && mpris2Source.data[mpris2Source.current].Metadata["mpris:artUrl"] != undefined
         }
         Column {
             Layout.fillWidth: true
@@ -105,17 +105,17 @@ ColumnLayout {
     PlasmaComponents.Slider {
         id: seekSlider
         z: 999
-        maximumValue: mpris2Source.data[mpris2Source.last].Metadata["mpris:length"]
+        maximumValue: mpris2Source.data[mpris2Source.current].Metadata["mpris:length"]
         value: 0
         // if there's no "mpris:length" in teh metadata, we cannot seek, so hide it in that case
-        visible: root.state != "off" && !root.noPlayer && mpris2Source.data[mpris2Source.last].Metadata["mpris:length"] != undefined
+        visible: root.state != "off" && !root.noPlayer && mpris2Source.data[mpris2Source.current].Metadata["mpris:length"] != undefined
         anchors {
             left: parent.left
             right: parent.right
         }
         onValueChanged: {
             if (pressed) {
-                var service = mpris2Source.serviceForSource(mpris2Source.last);
+                var service = mpris2Source.serviceForSource(mpris2Source.current);
                 var operation = service.operationDescription("SetPosition");
                 operation.microseconds = value
                 service.startOperationCall(operation);

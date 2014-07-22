@@ -46,11 +46,7 @@ Item {
         engine: "mpris2"
         connectedSources: sources
 
-        property string last
-        onSourceAdded: {
-            //print("XXX source added: " + source);
-            last = source;
-        }
+        property string current: "@multiplex"
 
         onSourcesChanged: {
             updateData();
@@ -61,8 +57,7 @@ Item {
         }
 
         function updateData() {
-            //print("XXX Showing data: " + last);
-            var d = data[last];
+            var d = data[current];
 
             var isActive = mpris2Source.sources.length > 1;
             root.noPlayer = !isActive;
@@ -97,19 +92,19 @@ Item {
     }
 
     function play() {
-        serviceOp(mpris2Source.last, "Play");
+        serviceOp(mpris2Source.current, "Play");
     }
 
     function pause() {
-        serviceOp(mpris2Source.last, "Pause");
+        serviceOp(mpris2Source.current, "Pause");
     }
 
     function previous() {
-        serviceOp(mpris2Source.last, "Previous");
+        serviceOp(mpris2Source.current, "Previous");
     }
 
     function next() {
-        serviceOp(mpris2Source.last, "Next");
+        serviceOp(mpris2Source.current, "Next");
     }
 
     function serviceOp(src, op) {
