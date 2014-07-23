@@ -291,6 +291,7 @@ void PlasmoidProtocol::serviceRegistered(const QString &service)
         if (rx.exactMatch(service)) {
             qDebug() << "ST : DBus service " << m_dbusActivatableTasks[plugin] << "appeared. Loading " << plugin;
             newTask(plugin);
+            m_dbusServiceCounts[plugin]++;
         }
     }
 }
@@ -302,8 +303,12 @@ void PlasmoidProtocol::serviceUnregistered(const QString &service)
         QRegExp rx(pattern);
         rx.setPatternSyntax(QRegExp::Wildcard);
         if (rx.exactMatch(service)) {
-            qDebug() << "ST : DBus service " << m_dbusActivatableTasks[plugin] << " disappeared. Unloading " << plugin;
-            cleanupTask(plugin);
+            m_dbusServiceCounts[plugin]--;
+            Q_ASSERT(m_dbusServiceCounts[plugin] >= 0);
+            if (m_dbusServiceCounts[plugin] == 0) {
+                qDebug() << "ST : DBus service " << m_dbusActivatableTasks[plugin] << " disappeared. Unloading " << plugin;
+                cleanupTask(plugin);
+            }
         }
     }
 }

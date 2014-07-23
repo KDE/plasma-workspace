@@ -68,6 +68,7 @@ private:
     QHash<QString, PlasmoidTask*> m_tasks;
     QHash<QString, int> m_knownPlugins;
     QHash<QString, QString> m_dbusActivatableTasks;
+    QHash<QString, int> m_dbusServiceCounts;
     Plasma::Containment *m_containment;
     Plasma::Applet *m_systrayApplet;
     QStringList m_allowedPlugins;
