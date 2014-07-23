@@ -86,17 +86,17 @@ int main()
     } else {
         kdehome = "~/.config";
     }
-    filename = kdehome + "/share/config/startupconfig";
+    filename = kdehome + "/startupconfig";
     if (access(filename.c_str(), R_OK) != 0)
         goto doit;
-    filename = kdehome + "/share/config/startupconfigfiles";
+    filename = kdehome + "/startupconfigfiles";
     if (stat(filename.c_str(), &st) != 0)
         goto doit;
     config_time = st.st_mtime;
     config = fopen(filename.c_str(), "r");
     if( config == NULL )
         goto doit;
-    filename = kdehome + "/share/config/startupconfigkeys";
+    filename = kdehome + "/startupconfigkeys";
     keys = fopen(filename.c_str(), "r");
     if( keys == NULL )
         return 2;
