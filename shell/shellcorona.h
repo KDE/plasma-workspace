@@ -135,6 +135,8 @@ protected Q_SLOTS:
 
     int screenForContainment(const Plasma::Containment *containment) const;
 
+    void showAlternativesForApplet(Plasma::Applet *applet);
+
 private Q_SLOTS:
     void createWaitingPanels();
     void handleContainmentAdded(Plasma::Containment *c);

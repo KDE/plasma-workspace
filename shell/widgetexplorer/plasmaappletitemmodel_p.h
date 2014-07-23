@@ -107,12 +107,16 @@ public:
 
     QString &Application();
 
+    QStringList provides() const;
+    void setProvides(const QStringList &provides);
+
 Q_SIGNALS:
     void modelPopulated();
 
 private:
     QString m_application;
     QStringList m_favorites;
+    QStringList m_provides;
     KConfigGroup m_configGroup;
 
 private Q_SLOTS:

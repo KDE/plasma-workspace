@@ -48,7 +48,7 @@
 
 #include "config-ktexteditor.h" // HAVE_KTEXTEDITOR
 
-
+#include "alternativesdialog.h"
 #include "activity.h"
 #include "desktopview.h"
 #include "panelview.h"
@@ -107,6 +107,7 @@ public:
     QWeakPointer<InteractiveConsole> console;
 #endif
 
+    QPointer <AlternativesDialog> alternativesDialog;
     KScreen::Config *screenConfiguration;
     QTimer waitingPanelsTimer;
     QTimer appConfigSyncTimer;
@@ -413,6 +414,15 @@ void ShellCorona::screenInvariants() const
     if(d->views.isEmpty()) {
         qWarning() << "no screens!!";
     }
+}
+
+void ShellCorona::showAlternativesForApplet(Plasma::Applet *applet)
+{
+    if (!d->alternativesDialog) {
+        d->alternativesDialog = new AlternativesDialog(applet);
+    }
+
+    d->alternativesDialog->show();
 }
 
 
@@ -823,6 +833,8 @@ void ShellCorona::handleContainmentAdded(Plasma::Containment *c)
 {
     connect(c, &Plasma::Containment::showAddWidgetsInterface,
             this, &ShellCorona::toggleWidgetExplorer);
+    connect(c, &Plasma::Containment::appletAlternativesRequested,
+            this, &ShellCorona::showAlternativesForApplet);
 }
 
 void ShellCorona::toggleWidgetExplorer()
