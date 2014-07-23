@@ -27,76 +27,30 @@ import org.kde.plasma.extras 2.0 as PlasmaExtras
 Item {
     id: root
 
-    property string track: ""
-    property string artist: ""
+    property string track: mpris2Source.data[mpris2Source.current].Metadata["xesam:title"] || ""
+    property string artist: mpris2Source.data[mpris2Source.current].Metadata["xesam:artist"] || ""
     property string playerIcon: ""
 
-    property bool noPlayer: true
+    property bool noPlayer: mpris2Source.sources.length <= 1
 
     Plasmoid.switchWidth: units.gridUnit * 10
     Plasmoid.switchHeight: units.gridUnit * 8
-    //Plasmoid.icon: root.state == "playing" ? "media-playback-pause" : "media-playback-start"
     Plasmoid.icon: "media-playback-start"
     Plasmoid.fullRepresentation: ExpandedRepresentation {}
+    Plasmoid.status: PlasmaCore.Types.PassiveStatus
 
-    state: "playing"
+    state: "off"
 
     PlasmaCore.DataSource {
         id: mpris2Source
         engine: "mpris2"
-        connectedSources: sources
+        connectedSources: current
 
         property string current: "@multiplex"
-
-        onSourcesChanged: {
-            updateData();
-        }
-
-        onDataChanged: {
-            updateData();
-        }
-
-        function updateData() {
-            var d = data[current];
-
-            var isActive = mpris2Source.sources.length > 1;
-            root.noPlayer = !isActive;
-            if (d == undefined) {
-                plasmoid.status = PlasmaCore.Types.PassiveStatus;
-                return;
-            }
-
-            var _state = d["PlaybackStatus"];
-            if (_state == "Paused") {
-                root.state = "paused";
-            } else if (_state == "Playing") {
-                root.state = "playing";
-            } else {
-                root.state = "off";
-            }
-            plasmoid.status = root.state != "off" && isActive ? PlasmaCore.Types.ActiveStatus : PlasmaCore.Types.PassiveStatus
-            var metadata = d["Metadata"]
-
-            var track = metadata["xesam:title"];
-            var artist = metadata["xesam:artist"];
-
-            root.track = track ? track : "";
-            root.artist = artist ? artist : "";
-
-            // other metadata
-            var k;
-            for (k in metadata) {
-                //print(" -- " + k + " " + metadata[k]);
-            }
-        }
     }
 
-    function play() {
-        serviceOp(mpris2Source.current, "Play");
-    }
-
-    function pause() {
-        serviceOp(mpris2Source.current, "Pause");
+    function playPause() {
+        serviceOp(mpris2Source.current, "PlayPause");
     }
 
     function previous() {
@@ -120,9 +74,15 @@ Item {
         },
         State {
             name: "playing"
+            when: !root.noPlayer && mpris2Source.data[mpris2Source.current].PlaybackStatus == "Playing"
+
+            PropertyChanges { target: plasmoid; status: PlasmaCore.Types.ActiveStatus }
         },
         State {
             name: "paused"
+            when: !root.noPlayer && mpris2Source.data[mpris2Source.current].PlaybackStatus == "Paused"
+
+            PropertyChanges { target: plasmoid; status: PlasmaCore.Types.ActiveStatus; icon: "media-playback-pause" }
         }
     ]
 }

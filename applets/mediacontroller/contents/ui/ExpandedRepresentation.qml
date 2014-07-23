@@ -162,11 +162,7 @@ ColumnLayout {
                 source: root.state == "playing" ? "media-playback-pause" : "media-playback-start"
                 onTriggered: {
                     print("Clicked" + source + " " + root.state);
-                    if (root.state == "playing") {
-                        root.pause();
-                    } else {
-                        root.play();
-                    }
+                    root.playPause();
                 }
             }
 
