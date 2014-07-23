@@ -833,6 +833,8 @@ void ShellCorona::handleContainmentAdded(Plasma::Containment *c)
 {
     connect(c, &Plasma::Containment::showAddWidgetsInterface,
             this, &ShellCorona::toggleWidgetExplorer);
+    connect(c, &Plasma::Containment::appletAlternativesRequested,
+            this, &ShellCorona::showAlternativesForApplet);
 }
 
 void ShellCorona::toggleWidgetExplorer()
