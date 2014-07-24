@@ -23,6 +23,7 @@ set_target_properties(kworkspace PROPERTIES
                              VERSION 5.0.0
                              SOVERSION 5
                              EXPORT_NAME KWorkspace
+                             OUTPUT_NAME kworkspace5
                       )
 
 generate_export_header(kworkspace)
@@ -37,7 +38,7 @@ target_link_libraries(kworkspace
         Xau
 )
 target_include_directories(kworkspace PUBLIC "$<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}>"
-                                      INTERFACE "$<INSTALL_INTERFACE:${INCLUDE_INSTALL_DIR}/kworkspace>" )
+                                      INTERFACE "$<INSTALL_INTERFACE:${INCLUDE_INSTALL_DIR}/kworkspace5>" )
 
 configure_file(config-libkworkspace.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-libkworkspace.h)
 
@@ -54,7 +55,7 @@ install( FILES kdisplaymanager.h
                kworkspace.h
                ${CMAKE_CURRENT_BINARY_DIR}/config-libkworkspace.h
                ${CMAKE_CURRENT_BINARY_DIR}/kworkspace_export.h
-         DESTINATION ${INCLUDE_INSTALL_DIR}/kworkspace COMPONENT Devel )
+         DESTINATION ${INCLUDE_INSTALL_DIR}/kworkspace5 COMPONENT Devel )
 
 set(CMAKECONFIG_INSTALL_DIR ${LIB_INSTALL_DIR}/cmake/LibKWorkspace)
 ecm_configure_package_config_file(LibKWorkspaceConfig.cmake.in
