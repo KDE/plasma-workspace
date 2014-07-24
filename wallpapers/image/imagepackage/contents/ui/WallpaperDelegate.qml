@@ -69,7 +69,6 @@ MouseArea {
             right: parent.right
             verticalCenter: parent.verticalCenter
         }
-        anchors.horizontalCenter: parent.horizontalCenter
         height: wallpaperDelegate.height + 1
         width: wallpaperDelegate.width + 1
         visible: model.screenshot != null
