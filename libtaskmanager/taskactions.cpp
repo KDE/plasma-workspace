@@ -293,7 +293,7 @@ ToNewDesktopActionImpl::ToNewDesktopActionImpl(QObject *parent, AbstractGroupabl
     : AbstractGroupableItemAction(parent, item)
 {
     connect(this, SIGNAL(triggered()), this, SLOT(slotToNewDesktop()));
-    setText("&New Desktop");
+    setText(i18n("&New Desktop"));
 
     m_newDesktop = TaskManager::self()->numberOfDesktops() + 1;
     if (m_newDesktop > 20) {
