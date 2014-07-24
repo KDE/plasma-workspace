@@ -201,7 +201,7 @@ Image {
 
                             model: sessions.model
                             delegate: UserDelegate {
-                                name: i18n("%1 (%2)", model.session, model.location)
+                                name: i18nd("plasma_lookandfeel_org.kde.lookandfeel","%1 (%2)", model.session, model.location)
                                 userName: model.session
                                 iconSource: "user-identity"
                                 width: ListView.view.userItemWidth
@@ -220,11 +220,11 @@ Image {
                             RowLayout {
                                 anchors.centerIn: parent
                                 PlasmaComponents.Button {
-                                    text: i18n("Cancel")
+                                    text: i18nd("plasma_lookandfeel_org.kde.lookandfeel","Cancel")
                                     onClicked: stackView.pop()
                                 }
                                 PlasmaComponents.Button {
-                                    text: i18n("Change Session")
+                                    text: i18nd("plasma_lookandfeel_org.kde.lookandfeel","Change Session")
                                     onClicked: sessions.activateSession(selectSessionBlock.mainItem.selectedIndex)
                                 }
                             }
