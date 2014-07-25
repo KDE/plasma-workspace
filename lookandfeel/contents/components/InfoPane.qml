@@ -63,11 +63,11 @@ ColumnLayout {
                 switch(state) {
                 case "NoCharge": //follow through
                 case "Discharging":
-                    return i18nd("plasma_lookandfeel_org.kde.lookandfeel","%1\% battery remaining", battery.percent)
+                    return i18nd("plasma_lookandfeel_org.kde.lookandfeel","%1% battery remaining", battery.percent)
                 case "FullyCharged":
                     return i18nd("plasma_lookandfeel_org.kde.lookandfeel","Fully charged")
                 default:
-                    return i18nd("plasma_lookandfeel_org.kde.lookandfeel","%1\%. Charging", battery.percent)
+                    return i18nd("plasma_lookandfeel_org.kde.lookandfeel","%1%. Charging", battery.percent)
                 }
             }
             Layout.alignment: Qt.AlignRight
