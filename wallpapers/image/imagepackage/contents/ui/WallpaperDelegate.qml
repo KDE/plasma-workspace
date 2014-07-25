@@ -139,7 +139,7 @@ MouseArea {
 
         onTriggered: {
             Tooltip.showText(wallpaperDelegate, Qt.point(wallpaperDelegate.mouseX, wallpaperDelegate.mouseY),
-                i18n("%1 by %2", model.display, model.author));
+                i18nd("plasma_applet_org.kde.image", "%1 by %2", model.display, model.author));
         }
     }
 

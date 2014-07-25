@@ -88,7 +88,7 @@ Rectangle {
     Component.onCompleted: {
         imageWallpaper.addUrl(configuredImage)
         if (wallpaper.pluginName == "org.kde.slideshow") {
-            wallpaper.setAction("next", i18n("Next Wallpaper Image"),"user-desktop");
+            wallpaper.setAction("next", i18nd("plasma_applet_org.kde.image","Next Wallpaper Image"),"user-desktop");
         }
         fadeWallpaper()
     }
