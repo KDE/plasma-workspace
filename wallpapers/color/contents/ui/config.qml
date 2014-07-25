@@ -24,7 +24,7 @@ Column {
     property alias cfg_Color: picker.color
 
     PlasmaComponents.Label {
-        text: "Color:"
+        text: i18nd("plasma_applet_org.kde.color", "Color:")
     }
     Column {
         id: picker

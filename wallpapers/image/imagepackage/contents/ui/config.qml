@@ -66,7 +66,7 @@ ColumnLayout {
             anchors {
                 verticalCenter: resizeComboBox.verticalCenter
             }
-            text: i18nc("Label for positioning combo", "Positioning:")
+            text: i18nd("plasma_applet_org.kde.image", "Positioning:")
             horizontalAlignment: Text.AlignRight
         }
         QtControls.ComboBox {
@@ -75,23 +75,23 @@ ColumnLayout {
             width: theme.mSize(theme.defaultFont).width * textLength
             model: [
                         {
-                            'label': i18n("Scaled && Cropped"),
+                            'label': i18nd("plasma_applet_org.kde.image", "Scaled && Cropped"),
                             'fillMode': Image.PreserveAspectCrop
                         },
                         {
-                            'label': i18n("Scaled"),
+                            'label': i18nd("plasma_applet_org.kde.image","Scaled"),
                             'fillMode': Image.Stretch
                         },
                         {
-                            'label': i18n("Scaled, Keep Proportions"),
+                            'label': i18nd("plasma_applet_org.kde.image","Scaled, Keep Proportions"),
                             'fillMode': Image.PreserveAspectFit
                         },
                         {
-                            'label': i18n("Centered"),
+                            'label': i18nd("plasma_applet_org.kde.image", "Centered"),
                             'fillMode': Image.Pad
                         },
                         {
-                            'label': i18n("Tiled"),
+                            'label': i18nd("plasma_applet_org.kde.image","Tiled"),
                             'fillMode': Image.Tile
                         }
                     ]
@@ -140,7 +140,7 @@ ColumnLayout {
                     width: formAlignment - units.largeSpacing
                     anchors.verticalCenter: parent.verticalCenter
                     horizontalAlignment: Text.AlignRight
-                    text: i18n("Change every:")
+                    text: i18nd("plasma_applet_org.kde.image","Change every:")
                 }
                 QtControls.SpinBox {
                     id: hoursInterval
@@ -153,7 +153,7 @@ ColumnLayout {
                 }
                 QtControls.Label {
                     anchors.verticalCenter: parent.verticalCenter
-                    text: i18n("Hours")
+                    text: i18nd("plasma_applet_org.kde.image","Hours")
                 }
                 Item {
                     width: units.gridUnit
@@ -170,7 +170,7 @@ ColumnLayout {
                 }
                 QtControls.Label {
                     anchors.verticalCenter: parent.verticalCenter
-                    text: i18n("Minutes")
+                    text: i18nd("plasma_applet_org.kde.image","Minutes")
                 }
                 Item {
                     width: units.gridUnit
@@ -187,7 +187,7 @@ ColumnLayout {
                 }
                 QtControls.Label {
                     anchors.verticalCenter: parent.verticalCenter
-                    text: i18n("Seconds")
+                    text: i18nd("plasma_applet_org.kde.image","Seconds")
                 }
             }
             QtControls.ScrollView {
@@ -293,18 +293,18 @@ ColumnLayout {
         QtControls.Button {
             visible: (configDialog.currentWallpaper == "org.kde.slideshow")
             iconName: "list-add"
-            text: i18n("Add Folder")
+            text: i18nd("plasma_applet_org.kde.image","Add Folder")
             onClicked: imageWallpaper.showAddSlidePathsDialog()
         }
         QtControls.Button {
             visible: (configDialog.currentWallpaper == "org.kde.image")
             iconName: "document-open-folder"
-            text: i18n("Open...")
+            text: i18nd("plasma_applet_org.kde.image","Open...")
             onClicked: imageWallpaper.showFileDialog();
         }
         QtControls.Button {
             iconName: "bookmarks"
-            text: i18n("Download Wallpapers")
+            text: i18nd("plasma_applet_org.kde.image","Download Wallpapers")
             onClicked: imageWallpaper.getNewWallpaper();
         }
     }
