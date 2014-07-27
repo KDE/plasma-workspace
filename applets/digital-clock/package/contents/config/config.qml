@@ -24,12 +24,12 @@ import org.kde.plasma.configuration 2.0
 
 ConfigModel {
 //     ConfigCategory {
-//          name: "General"
+//          name: i18n("General")
 //          icon: "preferences-system-time"
 //          source: "configGeneral.qml"
 //     }
     ConfigCategory {
-         name: "Appearance"
+         name: i18n("Appearance")
          icon: "preferences-desktop-color"
          source: "configAppearance.qml"
     }
