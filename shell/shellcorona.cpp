@@ -491,7 +491,7 @@ KActivities::Controller *ShellCorona::activityController()
 
 int ShellCorona::numScreens() const
 {
-    return d->views.count();
+    return QGuiApplication::screens().count();
 }
 
 QRect ShellCorona::screenGeometry(int id) const
@@ -779,7 +779,7 @@ Plasma::Containment *ShellCorona::createContainmentForActivity(const QString& ac
       //  plugin = d->activities.value(activity)->defaultPlugin();
     }
 
-    Plasma::Containment *containment = createContainment(d->desktopDefaultsConfig.readEntry("Containment", plugin));
+    Plasma::Containment *containment = containmentForScreen(screenNum, d->desktopDefaultsConfig.readEntry("Containment", plugin), QVariantList());
 
     if (containment) {
         containment->setActivity(activity);
