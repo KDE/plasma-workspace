@@ -159,6 +159,7 @@ X-KDE-PluginInfo-Version=0.1
 X-KDE-PluginInfo-Website=http://plasma.kde.org/
 X-KDE-ServiceTypes=Plasma/Applet
 X-Plasma-API=declarativeappletscript
+X-Plasma-Provides=org.kde.plasma.notifications
 
 X-Plasma-MainScript=ui/main.qml
 X-Plasma-RequiredExtensions=LaunchApp

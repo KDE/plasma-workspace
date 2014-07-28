@@ -145,6 +145,7 @@ Icon=tab-new
 X-Plasma-API=declarativeappletscript
 X-Plasma-MainScript=ui/main.qml
 X-KDE-ServiceTypes=Plasma/Applet
+X-Plasma-Provides=org.kde.plasma.activities
 
 X-KDE-PluginInfo-Author=Bhushan Shah
 X-KDE-PluginInfo-Email=bhush94@gmail.com

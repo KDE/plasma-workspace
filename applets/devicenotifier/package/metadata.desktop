@@ -160,6 +160,7 @@ X-Plasma-MainScript=ui/devicenotifier.qml
 
 X-Plasma-NotificationArea=true
 X-Plasma-ConfigPlugins=solid-actions,device_automounter_kcm
+X-Plasma-Provides=org.kde.plasma.removabledevices
 
 X-KDE-PluginInfo-Author=Viranch Mehta, Jacopo De Simoi
 X-KDE-PluginInfo-Email=wilderkde@gmail.com

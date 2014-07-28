@@ -155,6 +155,7 @@ X-KDE-ServiceTypes=Plasma/Applet
 
 X-Plasma-API=declarativeappletscript
 X-Plasma-MainScript=ui/analogclock.qml
+X-Plasma-Provides=org.kde.plasma.time,org.kde.plasma.date
 
 
 X-KDE-PluginInfo-Author=Marco Martin
