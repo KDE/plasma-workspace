@@ -23,6 +23,7 @@
 #include "shellpluginloader.h"
 
 #include <QDebug>
+#include <QDir>
 #include <KDirWatch>
 #include <KSharedConfig>
 
@@ -141,5 +142,26 @@ KPluginInfo LookAndFeelAccess::metadata() const
     }
 }
 
+QList<Plasma::Package> LookAndFeelAccess::availablePackages(const QString &component)
+{
+    QList<Plasma::Package> packages;
+    QStringList paths;
+    QStringList dataPaths = QStandardPaths::standardLocations(QStandardPaths::GenericDataLocation);
+
+    for (const QString &path : dataPaths) {
+        QDir dir(path + "/plasma/look-and-feel");
+        paths << dir.entryList(QDir::AllDirs | QDir::NoDotAndDotDot);
+    }
+
+    for (const QString &path : paths) {
+        Plasma::Package pkg = Plasma::PluginLoader::self()->loadPackage("Plasma/LookAndFeel");
+        pkg.setPath(path);
+        if (!component.isEmpty() && !pkg.filePath(component.toUtf8()).isEmpty()) {
+            packages << pkg;
+        }
+    }
+
+    return packages;
+}
 
 #include "moc_lookandfeelaccess.cpp"

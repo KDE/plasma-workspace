@@ -23,6 +23,7 @@
 #include <QtCore/QObject>
 
 #include <KPluginInfo>
+#include <Plasma/Package>
 
 class LookAndFeelAccessPrivate;
 
@@ -61,9 +62,18 @@ public:
     QString filePath(const char *key, const QString &filename = QString()) const;
 
     /**
-      * @return the package metadata object.
-      */
+     * @return the package metadata object.
+     */
     KPluginInfo metadata() const;
+
+    /**
+     * Lists all available Look And Feel packages, if provided, will list only packages
+     * that do provide a certain component, like the splashscreen, or the lockscreen etc.
+     *
+     * @param component the file we want packages to have
+     * @return A list of the matching Plasma::Package instances
+     */
+    static QList<Plasma::Package> availablePackages(const QString &component = QString());
 
 Q_SIGNALS:
     void themeChanged(const QString &theme);
