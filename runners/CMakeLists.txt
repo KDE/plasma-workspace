@@ -1,4 +1,4 @@
-# add_subdirectory(activities)
+add_subdirectory(activities)
 add_subdirectory(baloo)
 add_subdirectory(bookmarks)
 add_subdirectory(calculator)

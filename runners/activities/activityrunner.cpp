@@ -19,12 +19,15 @@
 #include "activityrunner.h"
 
 #include <QDebug>
-#include <KIcon>
-#include <KLocale>
+#include <QIcon>
+#include <klocalizedstring.h>
+
+K_EXPORT_PLASMA_RUNNER(activities, ActivityRunner)
 
 ActivityRunner::ActivityRunner(QObject *parent, const QVariantList &args)
     : Plasma::AbstractRunner(parent, args),
       m_activities(0),
+      m_consumer(0),
       m_keywordi18n(i18nc("KRunner keyword", "activity")),
       m_keyword("activity"),
       m_enabled(false)
@@ -36,14 +39,15 @@ ActivityRunner::ActivityRunner(QObject *parent, const QVariantList &args)
     connect(this, SIGNAL(prepare()), this, SLOT(prep()));
     connect(this, SIGNAL(teardown()), this, SLOT(down()));
 
-    serviceStatusChanged(KActivities::Consumer::FullFunctionality);
+    serviceStatusChanged(KActivities::Consumer::Running);
 }
 
 void ActivityRunner::prep()
 {
     if (!m_activities) {
         m_activities = new KActivities::Controller(this);
-        connect(m_activities, SIGNAL(serviceStatusChanged(KActivities::Consumer::ServiceStatus)),
+        m_consumer = new KActivities::Consumer(this);
+        connect(m_consumer, SIGNAL(serviceStatusChanged(KActivities::Consumer::ServiceStatus)),
                 this, SLOT(serviceStatusChanged(KActivities::Consumer::ServiceStatus)));
         serviceStatusChanged(m_activities->serviceStatus());
     }
@@ -105,7 +109,7 @@ void ActivityRunner::match(Plasma::RunnerContext &context)
     }
 
     QList<Plasma::QueryMatch> matches;
-    QStringList activities = m_activities->listActivities();
+    QStringList activities = m_consumer->activities();
     qSort(activities);
 
     const QString current = m_activities->currentActivity();
@@ -144,7 +148,7 @@ void ActivityRunner::match(Plasma::RunnerContext &context)
         }
     }
 
-    context.addMatches(context.query(), matches);
+    context.addMatches(matches);
 }
 
 void ActivityRunner::addMatch(const KActivities::Info &activity, QList<Plasma::QueryMatch> &matches)
@@ -152,7 +156,7 @@ void ActivityRunner::addMatch(const KActivities::Info &activity, QList<Plasma::Q
     Plasma::QueryMatch match(this);
     match.setData(activity.id());
     match.setType(Plasma::QueryMatch::ExactMatch);
-    match.setIcon(activity.icon().isEmpty() ? KIcon("preferences-activities") : KIcon(activity.icon()));
+    match.setIcon(activity.icon().isEmpty() ? QIcon::fromTheme("preferences-activities") : QIcon::fromTheme(activity.icon()));
     match.setText(i18n("Switch to \"%1\"", activity.name()));
     match.setRelevance(0.7 + ((activity.state() == KActivities::Info::Running ||
                                activity.state() == KActivities::Info::Starting) ? 0.1 : 0));
