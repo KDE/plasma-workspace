@@ -122,6 +122,7 @@ add_subdirectory(startkde)
 add_subdirectory(themes)
 
 add_subdirectory(containmentactions)
+add_subdirectory(kcms)
 add_subdirectory(runners)
 add_subdirectory(applets)
 add_subdirectory(dataengines)
