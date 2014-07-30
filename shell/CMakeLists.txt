@@ -41,6 +41,7 @@ set(scripting_SRC
     scripting/rect.cpp
     scripting/scriptengine.cpp
     scripting/widget.cpp
+    ../lookandfeelaccess/lookandfeelaccess.cpp
 )
 
 set(plasmashell_dbusXML dbus/org.kde.PlasmaShell.xml)
