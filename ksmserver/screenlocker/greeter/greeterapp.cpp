@@ -109,12 +109,6 @@ void UnlockApp::initialize()
     access.setTheme(KScreenSaverSettings::theme());
     m_mainQmlPath = QUrl::fromLocalFile(access.filePath("lockscreenmainscript"));
 
-    if (m_mainQmlPath.isEmpty()) {
-        m_package.setPath(QStandardPaths::locate(QStandardPaths::GenericDataLocation,
-                                                 QStringLiteral("ksmserver/screenlocker/") + QString::fromLatin1(DEFAULT_MAIN_PACKAGE)));
-        m_mainQmlPath = QUrl::fromLocalFile(m_package.filePath("mainscript"));
-    }
-
     installEventFilter(this);
 }
 
