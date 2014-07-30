@@ -12,7 +12,9 @@ set(kscreenlocker_greet_SRCS
    authenticator.cpp
    sessions.cpp
    greeterapp.cpp
-   main.cpp )
+   main.cpp 
+   ../../../lookandfeelaccess/lookandfeelaccess.cpp
+)
 
 qt5_add_resources(kscreenlocker_greet_SRCS fallbacktheme.qrc)
 kconfig_add_kcfg_files(kscreenlocker_greet_SRCS ${CMAKE_CURRENT_SOURCE_DIR}/../kcfg/kscreensaversettings.kcfgc)

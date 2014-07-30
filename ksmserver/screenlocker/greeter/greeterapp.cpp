@@ -23,6 +23,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include "sessions.h"
 #include "authenticator.h"
 #include <../../shellpluginloader.h>
+#include "../../../lookandfeelaccess/lookandfeelaccess.h"
 
 // workspace
 #include <kworkspace.h>
@@ -104,11 +105,9 @@ void UnlockApp::initialize()
     KCrash::setDrKonqiEnabled(false);
 
     KScreenSaverSettings::self()->readConfig();
-    ShellPluginLoader::init();
-    m_package = Plasma::PluginLoader::self()->loadPackage("Plasma/LookAndFeel");
-    m_package.setPath("org.kde.lookandfeel");
-
-    m_mainQmlPath = QUrl::fromLocalFile(m_package.filePath("lockscreenmainscript"));
+    LookAndFeelAccess access;
+    access.setTheme(KScreenSaverSettings::theme());
+    m_mainQmlPath = QUrl::fromLocalFile(access.filePath("lockscreenmainscript"));
 
     if (m_mainQmlPath.isEmpty()) {
         m_package.setPath(QStandardPaths::locate(QStandardPaths::GenericDataLocation,
