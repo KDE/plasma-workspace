@@ -40,6 +40,8 @@ public:
     LookAndFeelAccess *q;
     Plasma::Package package;
     Plasma::Package defaultPackage;
+    Plasma::Package themePackage;
+    QString theme;
     KSharedConfig::Ptr config;
 };
 
@@ -95,10 +97,33 @@ LookAndFeelAccess::~LookAndFeelAccess()
 {
 }
 
+void LookAndFeelAccess::setTheme(const QString &theme)
+{
+    if (theme == d->theme) {
+        return;
+    }
+
+    d->theme = theme;
+    d->themePackage = Plasma::PluginLoader::self()->loadPackage("Plasma/LookAndFeel");
+    d->themePackage.setPath(theme);
+
+    emit themeChanged(theme);
+}
+
+QString LookAndFeelAccess::theme()
+{
+    return d->theme;
+}
 
 QString LookAndFeelAccess::filePath(const char *key, const QString &filename) const
 {
-    const QString path = d->package.filePath(key, filename);
+    QString path = d->themePackage.filePath(key, filename);
+
+    if (!path.isEmpty()) {
+        return path;
+    }
+
+    path = d->package.filePath(key, filename);
 
     if (!path.isEmpty()) {
         return path;

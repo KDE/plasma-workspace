@@ -35,6 +35,18 @@ public:
     ~LookAndFeelAccess();
 
     /**
+     * Set a custom look and feel package that overrides the global one
+     *
+     * @param custom package name
+     */
+    void setTheme(const QString &theme);
+
+    /**
+     * @return custom look and feel package that overrides the global one
+     */
+    QString theme();
+
+    /**
      * Get the path to a given file based on the key and an optional filename.
      * Example: finding the main script in a scripting package:
      *      filePath("mainscript")
@@ -54,6 +66,7 @@ public:
     KPluginInfo metadata() const;
 
 Q_SIGNALS:
+    void themeChanged(const QString &theme);
     void packageChanged();
 
 private:
