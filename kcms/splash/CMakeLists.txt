@@ -1,5 +1,5 @@
 # KI18N Translation Domain for this library
-add_definitions(-DTRANSLATION_DOMAIN=\"kcm_search\")
+add_definitions(-DTRANSLATION_DOMAIN=\"kcm_splashscreen\")
 
 set(kcm_splashscreen_SRCS
   kcm.cpp
