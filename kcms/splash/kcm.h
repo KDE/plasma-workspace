@@ -27,6 +27,8 @@
 
 #include "../../lookandfeelaccess/lookandfeelaccess.h"
 
+class QPushButton;
+
 class KCMSplashScreen : public KCModule
 {
     Q_OBJECT
@@ -39,8 +41,12 @@ public Q_SLOTS:
     void save();
     void defaults();
 
+protected Q_SLOTS:
+    void test();
+
 private:
-    QListWidget* m_listWidget;
+    QListWidget *m_listWidget;
+    QPushButton *m_btnTest;
     LookAndFeelAccess m_access;
 
     KConfig m_config;

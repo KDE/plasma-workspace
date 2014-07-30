@@ -25,9 +25,13 @@
 #include <KSharedConfig>
 #include <QDebug>
 #include <QStandardPaths>
-#include <KLocalizedString>
+#include <QProcess>
 
 #include <QVBoxLayout>
+#include <QPushButton>
+#include <QMessageBox>
+
+#include <KLocalizedString>
 #include <Plasma/Package>
 
 K_PLUGIN_FACTORY(KCMSplashScreenFactory, registerPlugin<KCMSplashScreen>();)
@@ -50,7 +54,14 @@ KCMSplashScreen::KCMSplashScreen(QWidget* parent, const QVariantList& args)
     connect(m_listWidget, SIGNAL(currentItemChanged(QListWidgetItem*, QListWidgetItem*)),
             this, SLOT(changed()));
 
+    m_btnTest = new QPushButton( QIcon::fromTheme("document-preview"), i18n("Test Theme"), this );
+    m_btnTest->setToolTip(i18n("Test the selected theme"));
+    m_btnTest->setWhatsThis(i18n("This will test the selected theme."));
+    //m_btnTest->setEnabled( false );
+    connect(m_btnTest, SIGNAL(clicked()), SLOT(test()));
+
     layout->addWidget(m_listWidget);
+    layout->addWidget(m_btnTest);
 }
 
 
@@ -113,6 +124,24 @@ void KCMSplashScreen::defaults()
             m_listWidget->setCurrentItem(item);
             break;
         }
+    }
+}
+
+void KCMSplashScreen::test()
+{
+    QListWidgetItem* item = m_listWidget->currentItem();
+
+    if (!item) {
+        return;
+    }
+
+    const QString plugin = item->data(Qt::UserRole + 1).toString();
+
+    QProcess proc;
+    QStringList arguments;
+    arguments << plugin << "--test";
+    if (proc.execute("ksplashqml", arguments)) {
+        QMessageBox::critical(this, i18n("Error"), i18n("Failed to successfully test the splash screen."));
     }
 }
 
