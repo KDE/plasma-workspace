@@ -19,6 +19,7 @@
 import QtQuick 2.1
 import QtQuick.Layouts 1.1
 import QtQuick.Controls 1.1 as QtControls
+import org.kde.kquickcontrolsaddons 2.0
 //We need units from it
 import org.kde.plasma.core 2.0 as Plasmacore
 
@@ -51,6 +52,22 @@ Rectangle {
                     if (kcm.selectedPlugin == model.pluginName) {
                         makeCurrentTimer.pendingIndex = index
                     }
+                }
+                QIconItem {
+                    id: icon
+                    anchors.centerIn: parent
+                    width: units.iconSizes.large
+                    height: width
+                    icon: "view-preview"
+                }
+                QtControls.Label {
+                    anchors {
+                        horizontalCenter: parent.horizontalCenter
+                        top: icon.bottom
+                        topMargin: units.gridUnit
+                    }
+                    color: "gray"
+                    text: model.display
                 }
                 Image {
                     anchors.fill: parent
