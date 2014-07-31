@@ -77,7 +77,7 @@ Column {
         spacing: units.largeSpacing / 2 + 2
         QtControls.Label {
             anchors.verticalCenter: colorRect.verticalCenter
-            text: "Background Color:"
+            text: i18nd("plasma_applet_org.kde.image", "Background Color:")
         }
         Rectangle {
             id: colorRect
