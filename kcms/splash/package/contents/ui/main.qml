@@ -18,10 +18,12 @@
 
 import QtQuick 2.1
 import QtQuick.Layouts 1.1
-import QtQuick.Controls 1.1 as QtControls
+import QtQuick.Controls 1.0 as QtControls
 import org.kde.kquickcontrolsaddons 2.0
+import QtQuick.Controls.Private 1.0
 //We need units from it
-import org.kde.plasma.core 2.0 as Plasmacore
+import org.kde.plasma.core 2.0 as PlasmaCore
+import org.kde.plasma.components 2.0 as PlasmaComponents
 
 Rectangle {
     width: 400
@@ -88,9 +90,38 @@ Rectangle {
                 }
                 MouseArea {
                     anchors.fill: parent
+                    hoverEnabled: true
                     onClicked: {
                         grid.currentIndex = index
                         kcm.selectedPlugin = model.pluginName
+                    }
+                    Timer {
+                        interval: 1000 // FIXME TODO: Use platform value for tooltip activation delay.
+
+                        running: parent.containsMouse && !parent.pressedButtons
+
+                        onTriggered: {
+                            Tooltip.showText(parent, Qt.point(parent.mouseX, parent.mouseY), model.display);
+                        }
+                    }
+                    PlasmaComponents.ToolButton {
+                        anchors {
+                            top: parent.top
+                            right: parent.right
+                            margins: units.smallSpacing
+                        }
+                        visible: model.pluginName != "none"
+                        iconSource: "media-playback-start"
+                        tooltip: i18n("Test Splashscreen")
+                        flat: false
+                        onClicked: kcm.test(model.pluginName)
+                        opacity: parent.containsMouse ? 1 : 0
+                        Behavior on opacity {
+                            PropertyAnimation {
+                                duration: units.longDuration
+                                easing.type: Easing.OutQuad
+                            }
+                        }
                     }
                 }
             }
