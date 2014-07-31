@@ -299,10 +299,13 @@ void PlasmoidProtocol::serviceRegistered(const QString &service)
 void PlasmoidProtocol::serviceUnregistered(const QString &service)
 {
     foreach (const QString &plugin, m_dbusActivatableTasks.keys()) {
+        if (!m_allowedPlugins.contains(plugin)) {
+            continue;
+        }
         const QString& pattern = m_dbusActivatableTasks.value(plugin);
         QRegExp rx(pattern);
         rx.setPatternSyntax(QRegExp::Wildcard);
-        if (rx.exactMatch(service) && m_dbusServiceCounts.contains(plugin)) {
+        if (rx.exactMatch(service)) {
             m_dbusServiceCounts[plugin]--;
             Q_ASSERT(m_dbusServiceCounts[plugin] >= 0);
             if (m_dbusServiceCounts[plugin] == 0) {
