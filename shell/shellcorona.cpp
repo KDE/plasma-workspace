@@ -780,6 +780,7 @@ Plasma::Containment *ShellCorona::createContainmentForActivity(const QString& ac
     }
 
     Plasma::Containment *containment = containmentForScreen(screenNum, d->desktopDefaultsConfig.readEntry("Containment", plugin), QVariantList());
+    Q_ASSERT(containment);
 
     if (containment) {
         containment->setActivity(activity);
@@ -987,7 +988,7 @@ Activity *ShellCorona::activity(const QString &id)
 void ShellCorona::insertActivity(const QString &id, Activity *activity)
 {
     d->activities.insert(id, activity);
-    Plasma::Containment *c = createContainmentForActivity(id, -1);
+    Plasma::Containment *c = createContainmentForActivity(id, d->views.count());
     c->config().writeEntry("lastScreen", 0);
 }
 
