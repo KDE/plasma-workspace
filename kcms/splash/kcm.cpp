@@ -64,6 +64,7 @@ KCMSplashScreen::KCMSplashScreen(QWidget* parent, const QVariantList& args)
     package.setPath("kcm_splashscreen");
     m_quickWidget->rootContext()->setContextProperty("kcm", this);
     m_quickWidget->setSource(QUrl::fromLocalFile(package.filePath("mainscript")));
+    setMinimumHeight(m_quickWidget->initialSize().height());
 
     layout->addWidget(m_quickWidget);
 }
