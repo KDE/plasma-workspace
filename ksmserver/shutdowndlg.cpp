@@ -67,6 +67,8 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #include <kjob.h>
 #include <qstandardpaths.h>
 
+#include "../../lookandfeelaccess/lookandfeelaccess.h"
+
 #define FONTCOLOR "#bfbfbf"
 
 Q_DECLARE_METATYPE(Solid::PowerManagement::SleepState)
@@ -152,9 +154,9 @@ KSMShutdownDlg::KSMShutdownDlg( QWindow* parent,
     QString fileName;
     if(theme.isEmpty()) {
         ShellPluginLoader::init();
-        Plasma::Package pkg = Plasma::PluginLoader::self()->loadPackage("Plasma/LookAndFeel");
-        pkg.setPath("org.kde.lookandfeel");
-        fileName = pkg.filePath("logoutmainscript", QString());
+        
+        LookAndFeelAccess access;
+        fileName = access.filePath("logoutmainscript");
     } else
         fileName = theme;
 
