@@ -302,7 +302,7 @@ void PlasmoidProtocol::serviceUnregistered(const QString &service)
         const QString& pattern = m_dbusActivatableTasks.value(plugin);
         QRegExp rx(pattern);
         rx.setPatternSyntax(QRegExp::Wildcard);
-        if (rx.exactMatch(service)) {
+        if (rx.exactMatch(service) && m_dbusServiceCounts.contains(plugin)) {
             m_dbusServiceCounts[plugin]--;
             Q_ASSERT(m_dbusServiceCounts[plugin] >= 0);
             if (m_dbusServiceCounts[plugin] == 0) {
