@@ -18,6 +18,7 @@
 */
 
 #include "kcm.h"
+#include "splashmodel.h"
 
 #include <KPluginFactory>
 #include <KPluginLoader>
@@ -26,13 +27,18 @@
 #include <QDebug>
 #include <QStandardPaths>
 #include <QProcess>
+#include <QQuickWidget>
 
 #include <QVBoxLayout>
 #include <QPushButton>
 #include <QMessageBox>
+#include <QtQml>
+#include <QQmlEngine>
+#include <QQmlContext>
 
 #include <KLocalizedString>
 #include <Plasma/Package>
+#include <Plasma/PluginLoader>
 
 K_PLUGIN_FACTORY(KCMSplashScreenFactory, registerPlugin<KCMSplashScreen>();)
 
@@ -41,29 +47,47 @@ KCMSplashScreen::KCMSplashScreen(QWidget* parent, const QVariantList& args)
     , m_config("ksplashrc")
     , m_configGroup(m_config.group("KSplash"))
 {
+    qmlRegisterType<SplashModel>();
     KAboutData* about = new KAboutData("kcm_splashscreen", i18n("Configure Splash screen details"),
                                        "0.1", QString(), KAboutLicense::LGPL);
     about->addAuthor(i18n("Marco Martin"), QString(), "mart@kde.org");
     setAboutData(about);
     setButtons(Help | Apply | Default);
 
+    m_model = new SplashModel(this);
     QVBoxLayout* layout = new QVBoxLayout(this);
 
-    m_listWidget = new QListWidget(this);
-    m_listWidget->setSortingEnabled(true);
-    connect(m_listWidget, SIGNAL(currentItemChanged(QListWidgetItem*, QListWidgetItem*)),
-            this, SLOT(changed()));
+    m_quickWidget = new QQuickWidget(this);
+    m_quickWidget->setResizeMode(QQuickWidget::SizeRootObjectToView);
+    Plasma::Package package = Plasma::PluginLoader::self()->loadPackage("Plasma/Generic");
+    package.setDefaultPackageRoot("plasma/kcms");
+    package.setPath("kcm_splashscreen");
+    m_quickWidget->rootContext()->setContextProperty("kcm", this);
+    m_quickWidget->setSource(QUrl::fromLocalFile(package.filePath("mainscript")));
 
-    m_btnTest = new QPushButton( QIcon::fromTheme("document-preview"), i18n("Test Theme"), this );
-    m_btnTest->setToolTip(i18n("Test the selected theme"));
-    m_btnTest->setWhatsThis(i18n("This will test the selected theme."));
-    //m_btnTest->setEnabled( false );
-    connect(m_btnTest, SIGNAL(clicked()), SLOT(test()));
-
-    layout->addWidget(m_listWidget);
-    layout->addWidget(m_btnTest);
+    layout->addWidget(m_quickWidget);
 }
 
+SplashModel *KCMSplashScreen::splashModel()
+{
+    return m_model;
+}
+
+QString KCMSplashScreen::selectedPlugin() const
+{
+    return m_selectedPlugin;
+}
+
+void KCMSplashScreen::setSelectedPlugin(const QString &plugin)
+{
+    if (m_selectedPlugin == plugin) {
+        return;
+    }
+
+    m_selectedPlugin = plugin;
+    emit selectedPluginChanged();
+    changed();
+}
 
 void KCMSplashScreen::load()
 {
@@ -71,42 +95,33 @@ void KCMSplashScreen::load()
     if (currentPlugin.isEmpty()) {
         currentPlugin = m_access.metadata().pluginName();
     }
+    setSelectedPlugin(currentPlugin);
 
-    m_listWidget->clear();
-    QListWidgetItem* item = new QListWidgetItem(i18n("None"));
-    m_listWidget->addItem(item);
-    item->setData(Qt::UserRole + 1, "none");
+    m_model->clear();
+
+    QStandardItem* row = new QStandardItem(i18n("None"));
+    row->setData("none", SplashModel::PluginNameRole);
+    m_model->appendRow(row);
 
     const QList<Plasma::Package> pkgs = LookAndFeelAccess::availablePackages("splashmainscript");
     for (const Plasma::Package &pkg : pkgs) {
-        QListWidgetItem* item = new QListWidgetItem(pkg.metadata().name());
-        item->setData(Qt::UserRole + 1, pkg.metadata().pluginName());
-        m_listWidget->addItem(item);
-
-        if (pkg.metadata().pluginName() == currentPlugin) {
-            m_listWidget->setCurrentItem(item);
-        }
+        QStandardItem* row = new QStandardItem(pkg.metadata().name());
+        row->setData(pkg.metadata().pluginName(), SplashModel::PluginNameRole);
+        row->setData(pkg.filePath("splash", "screenshot.png"), SplashModel::ScreenhotRole);
+        m_model->appendRow(row);
     }
 }
 
 
 void KCMSplashScreen::save()
 {
-    QListWidgetItem* item = m_listWidget->currentItem();
-
-    if (!item) {
+    if (m_selectedPlugin.isEmpty()) {
         return;
-    }
-
-    const QString plugin = item->data(Qt::UserRole + 1).toString();
-
-    if (plugin.isEmpty()) {
-        return;
-    } else if (plugin == "none") {
-        m_configGroup.writeEntry("Theme", plugin);
+    } else if (m_selectedPlugin == "none") {
+        m_configGroup.writeEntry("Theme", m_selectedPlugin);
         m_configGroup.writeEntry("Engine", "none");
     } else {
-        m_configGroup.writeEntry("Theme", plugin);
+        m_configGroup.writeEntry("Theme", m_selectedPlugin);
         m_configGroup.writeEntry("Engine", "ksplashqml");
     }
 
@@ -115,27 +130,14 @@ void KCMSplashScreen::save()
 
 void KCMSplashScreen::defaults()
 {
-    QListWidgetItem *item;
-    for (int i = 0; i < m_listWidget->count(); ++i) {
-        item = m_listWidget->item(i);
-        const QString plugin = item->data(Qt::UserRole + 1).toString();
-
-        if (!plugin.isEmpty() && plugin == m_access.metadata().pluginName()) {
-            m_listWidget->setCurrentItem(item);
-            break;
-        }
-    }
+    setSelectedPlugin(m_access.metadata().pluginName());
 }
 
-void KCMSplashScreen::test()
+void KCMSplashScreen::test(const QString &plugin)
 {
-    QListWidgetItem* item = m_listWidget->currentItem();
-
-    if (!item) {
+    if (plugin.isEmpty() || plugin == "none") {
         return;
     }
-
-    const QString plugin = item->data(Qt::UserRole + 1).toString();
 
     QProcess proc;
     QStringList arguments;

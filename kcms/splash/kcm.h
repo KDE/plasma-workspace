@@ -27,27 +27,37 @@
 
 #include "../../lookandfeelaccess/lookandfeelaccess.h"
 
-class QPushButton;
+class QQuickWidget;
+class SplashModel;
 
 class KCMSplashScreen : public KCModule
 {
     Q_OBJECT
+    Q_PROPERTY(SplashModel *splashModel READ splashModel CONSTANT)
+    Q_PROPERTY(QString selectedPlugin READ selectedPlugin WRITE setSelectedPlugin NOTIFY selectedPluginChanged)
 
 public:
     KCMSplashScreen(QWidget* parent, const QVariantList& args);
+
+    SplashModel *splashModel();
+
+    QString selectedPlugin() const;
+    void setSelectedPlugin(const QString &plugin);
 
 public Q_SLOTS:
     void load();
     void save();
     void defaults();
+    void test(const QString &plugin);
 
-protected Q_SLOTS:
-    void test();
+Q_SIGNALS:
+    void selectedPluginChanged();
 
 private:
-    QListWidget *m_listWidget;
-    QPushButton *m_btnTest;
+    QQuickWidget *m_quickWidget;
+    SplashModel *m_model;
     LookAndFeelAccess m_access;
+    QString m_selectedPlugin;
 
     KConfig m_config;
     KConfigGroup m_configGroup;
