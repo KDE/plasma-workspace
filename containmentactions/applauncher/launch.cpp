@@ -54,7 +54,7 @@ void AppLauncher::makeMenu(QMenu *menu, const KServiceGroup::Ptr group)
 {
     foreach (KSycocaEntry::Ptr p, group->entries(true, false, true)) {
         if (p->isType(KST_KService)) {
-            const KService::Ptr service = p;
+            const KService::Ptr service(static_cast<KService*>(p.data()));
             QAction *action = new QAction(QIcon::fromTheme(service->icon()), service->genericName().isEmpty() ? service->name() : service->genericName(), this);
             connect(action, &QAction::triggered, [action](){
                 KService::Ptr service = KService::serviceByStorageId(action->data().toString());
@@ -67,7 +67,7 @@ void AppLauncher::makeMenu(QMenu *menu, const KServiceGroup::Ptr group)
                 m_actions << action;
             }
         } else if (p->isType(KST_KServiceGroup)) {
-            const KServiceGroup::Ptr service = p;
+            const KServiceGroup::Ptr service(static_cast<KServiceGroup*>(p.data()));
             if (service->childCount() == 0) {
                 continue;
             }
