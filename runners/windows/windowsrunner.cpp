@@ -18,16 +18,21 @@
  ***************************************************************************/
 #include "windowsrunner.h"
 
+#include "config-windowsrunner.h"
+
 #include <QTimer>
 
 #include <QDebug>
-#include <KIcon>
+#include <QIcon>
 #include <KWindowSystem>
+#include <KLocalizedString>
 
-#ifdef Q_WS_X11
+#if HAVE_X11
 #include <QX11Info>
 #include <netwm.h>
 #endif
+
+K_EXPORT_PLASMA_RUNNER(windows, WindowsRunner)
 
 WindowsRunner::WindowsRunner(QObject* parent, const QVariantList& args)
     : AbstractRunner(parent, args),
@@ -231,7 +236,7 @@ void WindowsRunner::match(Plasma::RunnerContext& context)
 
         if (!matches.isEmpty()) {
             // the window keyword found matches - do not process other syntax possibilities
-            context.addMatches(context.query(), matches);
+            context.addMatches(matches);
             return;
         }
     }
@@ -304,7 +309,7 @@ void WindowsRunner::match(Plasma::RunnerContext& context)
     }
 
     if (!matches.isEmpty()) {
-        context.addMatches(context.query(), matches);
+        context.addMatches(matches);
     }
 }
 
@@ -320,14 +325,16 @@ void WindowsRunner::run(const Plasma::RunnerContext& context, const Plasma::Quer
     const QStringList parts = match.data().toString().split("_");
     WindowAction action = WindowAction(parts[0].toInt());
     WId w = WId(parts[1].toULong());
-    KWindowInfo info = m_windows[w];
+    //this is needed since KWindowInfo() doesn't exist, m_windows[w] doesn't work
+    QHash<WId, KWindowInfo>::iterator i = m_windows.find(w);
+    KWindowInfo info = i.value();
     switch (action) {
     case ActivateAction:
         KWindowSystem::forceActiveWindow(w);
         break;
     case CloseAction:
         {
-        NETRootInfo ri(QX11Info::display(), NET::CloseWindow);
+        NETRootInfo ri(QX11Info::connection(), NET::CloseWindow);
         ri.closeWindowRequest(w);
         break;
         }
@@ -382,7 +389,7 @@ Plasma::QueryMatch WindowsRunner::desktopMatch(int desktop, qreal relevance)
     match.setType(Plasma::QueryMatch::ExactMatch);
     match.setData(desktop);
     match.setId("desktop-" + QString::number(desktop));
-    match.setIcon(KIcon("user-desktop"));
+    match.setIcon(QIcon::fromTheme("user-desktop"));
     QString desktopName;
     if (desktop <= m_desktopNames.size()) {
         desktopName = m_desktopNames[desktop - 1];

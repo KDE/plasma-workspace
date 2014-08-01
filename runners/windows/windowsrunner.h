@@ -19,7 +19,7 @@
 #ifndef WINDOWSRUNNER_H
 #define WINDOWSRUNNER_H
 
-#include <Plasma/AbstractRunner>
+#include <KRunner/AbstractRunner>
 
 class KWindowInfo;
 
@@ -62,7 +62,5 @@ class WindowsRunner : public Plasma::AbstractRunner
         bool m_inSession : 1;
         bool m_ready : 1;
 };
-
-K_EXPORT_PLASMA_RUNNER(windows, WindowsRunner)
 
 #endif // WINDOWSRUNNER_H
