@@ -46,16 +46,16 @@ ServiceRunner::~ServiceRunner()
 QStringList ServiceRunner::categories() const
 {
     QStringList cat;
-    cat << QStringLiteral("Applications") << QStringLiteral("System Settings");
+    cat << i18n("Applications") << i18n("System Settings");
 
     return cat;
 }
 
 QIcon ServiceRunner::categoryIcon(const QString& category) const
 {
-    if (category == QStringLiteral("Applications")) {
+    if (category == i18n("Applications")) {
         return QIcon::fromTheme("applications-other");
-    } else if (category == QStringLiteral("System Settings")) {
+    } else if (category == i18n("System Settings")) {
         return QIcon::fromTheme("preferences-system");
     }
 

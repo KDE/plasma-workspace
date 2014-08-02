@@ -53,29 +53,29 @@ SearchRunner::~SearchRunner()
 QStringList SearchRunner::categories() const
 {
     QStringList list;
-    list << QLatin1String("Audio")
-         << QLatin1String("Image")
-         << QLatin1String("Document")
-         << QLatin1String("Video")
-         << QLatin1String("Folder")
-         << QLatin1String("Email");
+    list << i18n("Audio")
+         << i18n("Image")
+         << i18n("Document")
+         << i18n("Video")
+         << i18n("Folder")
+         << i18n("Email");
 
     return list;
 }
 
 QIcon SearchRunner::categoryIcon(const QString& category) const
 {
-    if (category == QStringLiteral("Audio")) {
+    if (category == i18n("Audio")) {
         return QIcon::fromTheme("audio");
-    } else if (category == QStringLiteral("Image")) {
+    } else if (category == i18n("Image")) {
         return QIcon::fromTheme("image");
-    } else if (category == QStringLiteral("Document")) {
+    } else if (category == i18n("Document")) {
         return QIcon::fromTheme("application-pdf");
-    } else if (category == QStringLiteral("Video")) {
+    } else if (category == i18n("Video")) {
         return QIcon::fromTheme("video");
-    } else if (category == QStringLiteral("Folder")) {
+    } else if (category == i18n("Folder")) {
         return QIcon::fromTheme("folder");
-    } else if (category == QStringLiteral("Email")) {
+    } else if (category == i18n("Email")) {
         return QIcon::fromTheme("mail-message");
     }
 
@@ -120,12 +120,12 @@ void SearchRunner::match(Plasma::RunnerContext& context, const QString& type,
 
 void SearchRunner::match(Plasma::RunnerContext& context)
 {
-    match(context, QLatin1String("File/Audio"), QLatin1String("Audio"));
-    match(context, QLatin1String("File/Image"), QLatin1String("Image"));
-    match(context, QLatin1String("File/Document"), QLatin1String("Document"));
-    match(context, QLatin1String("File/Video"), QLatin1String("Video"));
-    match(context, QLatin1String("File/Folder"), QLatin1String("Folder"));
-    match(context, QLatin1String("Email"), QLatin1String("Email"));
+    match(context, QLatin1String("File/Audio"), i18n("Audio"));
+    match(context, QLatin1String("File/Image"), i18n("Image"));
+    match(context, QLatin1String("File/Document"), i18n("Document"));
+    match(context, QLatin1String("File/Video"), i18n("Video"));
+    match(context, QLatin1String("File/Folder"), i18n("Folder"));
+    match(context, QLatin1String("Email"), i18n("Email"));
 }
 
 void SearchRunner::run(const Plasma::RunnerContext&, const Plasma::QueryMatch& match)
