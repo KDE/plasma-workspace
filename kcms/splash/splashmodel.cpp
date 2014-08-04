@@ -20,10 +20,18 @@
 SplashModel::SplashModel(QObject *parent)
     : QStandardItemModel(parent)
 {
-    
 }
 
 SplashModel::~SplashModel()
 {}
+
+QHash<int, QByteArray>  SplashModel::roleNames() const
+{
+    QHash<int, QByteArray> roles = QStandardItemModel::roleNames();
+    roles[PluginNameRole] = "pluginName";
+    roles[ScreenhotRole] = "screenshot";
+
+    return roles;
+}
 
 #include "moc_splashmodel.cpp"

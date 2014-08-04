@@ -34,6 +34,8 @@ public:
     };
     SplashModel(QObject *parent = 0);
     ~SplashModel();
+
+    virtual QHash<int, QByteArray>  roleNames() const;
 };
 
 #endif
