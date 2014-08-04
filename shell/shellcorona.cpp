@@ -74,7 +74,8 @@ public:
           activityConsumer(new KActivities::Consumer(q)),
           addPanelAction(nullptr),
           addPanelsMenu(nullptr),
-          screenConfiguration(nullptr)
+          screenConfiguration(nullptr),
+          loading(false)
     {
         appConfigSyncTimer.setSingleShot(true);
         appConfigSyncTimer.setInterval(s_configSyncDelay);
@@ -112,6 +113,7 @@ public:
     QTimer waitingPanelsTimer;
     QTimer appConfigSyncTimer;
     QTimer reconsiderOutputsTimer;
+    bool loading;
 };
 
 static QScreen *outputToScreen(KScreen::Output *output)
@@ -645,6 +647,10 @@ DesktopView* ShellCorona::viewForScreen(QScreen* screen) const
 
 void ShellCorona::reconsiderOutputs()
 {
+    if (d->loading) {
+        d->reconsiderOutputsTimer.start();
+        return;
+    }
     foreach (KScreen::Output* out, d->screenConfiguration->connectedOutputs()) {
         if (!out->isEnabled()) {
             continue;
@@ -704,10 +710,12 @@ void ShellCorona::addOutput(KScreen::Output *output)
         removeAction->deleteLater();
     }
 
+    d->views.append(view);
+    d->loading = true;
     view->setContainment(containment);
+    d->loading = false;
     view->setScreen(newScreen);
     view->show();
-    d->views.append(view);
 
     //need to specifically call the reactToScreenChange, since when the screen is shown it's not yet
     //in the list. We still don't want to have an invisible view added.
@@ -792,6 +800,11 @@ Plasma::Containment *ShellCorona::createContainmentForActivity(const QString& ac
 
 void ShellCorona::createWaitingPanels()
 {
+    if (d->loading) {
+        d->waitingPanelsTimer.start();
+        return;
+    }
+
     QList<Plasma::Containment *> stillWaitingPanels;
 
     foreach (Plasma::Containment *cont, d->waitingPanels) {
@@ -810,10 +823,12 @@ void ShellCorona::createWaitingPanels()
         Q_ASSERT(qBound(0, requestedScreen, d->views.size() -1) == requestedScreen);
         QScreen *screen = d->views[requestedScreen]->screen();
 
+        d->panelViews[cont] = panel;
+        d->loading = true;
         panel->setContainment(cont);
+        d->loading = false;
         panel->setScreen(screen);
         panel->show();
-        d->panelViews[cont] = panel;
         cont->reactToScreenChange();
 
         connect(cont, SIGNAL(destroyed(QObject*)), this, SLOT(containmentDeleted(QObject*)));
