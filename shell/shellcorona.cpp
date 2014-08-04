@@ -375,14 +375,13 @@ void ShellCorona::primaryOutputChanged()
 void ShellCorona::screenInvariants() const
 {
     Q_ASSERT(d->views.count() <= QGuiApplication::screens().count());
-    Q_ASSERT(!outputToScreen(d->screenConfiguration->primaryOutput()) || d->views.isEmpty() || outputToScreen(d->screenConfiguration->primaryOutput()) == d->views.first()->screen() || !d->screenConfiguration->primaryOutput()->isEnabled());
     QScreen *s = d->views.isEmpty() ? nullptr : d->views[0]->screen();
     if (!s) {
         qWarning() << "error: couldn't find primary output" << d->screenConfiguration->primaryOutput();
         return;
     }
-
-    Q_ASSERT(d->views[0]->screen()->name() == s->name());
+    QScreen* ks = outputToScreen(d->screenConfiguration->primaryOutput());
+    Q_ASSERT(!ks || ks == s || !d->screenConfiguration->primaryOutput()->isEnabled());
 
     QSet<QScreen*> screens;
     int i = 0;
