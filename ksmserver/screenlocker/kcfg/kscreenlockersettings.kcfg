@@ -25,8 +25,8 @@
     </entry>
   </group>
   <group name="Greeter">
-    <entry key="GreeterQML" type="String">
-      <default>org.kde.passworddialog</default>
+    <entry key="Theme" type="String">
+      <default></default>
       <label></label>
       <whatsthis></whatsthis>
     </entry>

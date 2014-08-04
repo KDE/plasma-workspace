@@ -18,7 +18,9 @@
  */
 
 #include "SplashWindow.h"
+#include "../../lookandfeelaccess/lookandfeelaccess.h"
 
+#include <QGuiApplication>
 #include <QQmlContext>
 #include <QQuickItem>
 #include <QKeyEvent>
@@ -26,7 +28,10 @@
 #include <QTimer>
 #include <QStandardPaths>
 #include <QSurfaceFormat>
-#include <shellpluginloader.h>
+#include <KSharedConfig>
+
+#include <Plasma/Package>
+#include <Plasma/PluginLoader>
 
 SplashWindow::SplashWindow(bool testing, bool window)
     : QQuickView(),
@@ -85,10 +90,13 @@ void SplashWindow::setGeometry(const QRect& rect)
     QQuickView::setGeometry(rect);
 
     if (oldGeometryEmpty) {
-        ShellPluginLoader::init();
-        Plasma::Package pkg = Plasma::PluginLoader::self()->loadPackage("Plasma/LookAndFeel");
-        pkg.setPath("org.kde.lookandfeel");
 
-        setSource(QUrl::fromLocalFile(pkg.filePath("splashmainscript")));
+        LookAndFeelAccess access;
+        const QString theme = QGuiApplication::arguments().at(1);
+        if (!theme.startsWith("--")) {
+            access.setTheme(theme);
+        }
+
+        setSource(QUrl::fromLocalFile(access.filePath("splashmainscript")));
     }
 }

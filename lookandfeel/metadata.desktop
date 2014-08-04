@@ -1,5 +1,5 @@
 [Desktop Entry]
-Comment=Desktop Design Language
+Comment=Breeze Desktop Design Language by the KDE VDG
 Comment[ar]=لغة تصميم سطح المكتب
 Comment[ca]=Llenguatge de disseny d'escriptori
 Comment[ca@valencia]=Llenguatge de disseny d'escriptori
@@ -73,7 +73,7 @@ Keywords[tr]=Masaüstü, Çalışma Alanı, Görünüm, Bak ve Hisset, Çık, Ki
 Keywords[uk]=стільниця;робочий;простір;вигляд;поведінка;вихід;блокування;призупинення;призупинка;присипляння;вимикання;Desktop;Workspace;Appearance;Look and Feel;Logout;Lock;Suspend;Shutdown;Hibernate;
 Keywords[x-test]=xxDesktop, Workspace, Appearance, Look and Feel, Logout, Lock, Suspend, Shutdown, Hibernate,xx
 Keywords[zh_TW]=Desktop, Workspace, Appearance, Look and Feel, Logout, Lock, Suspend, Shutdown, Hibernate,
-Name=Look and Feel
+Name=Breeze
 Name[ar]=المظهر و الأحساس
 Name[ca]=Aspecte i comportament
 Name[ca@valencia]=Aspecte i comportament
@@ -117,9 +117,9 @@ Type=Service
 
 X-KDE-ServiceTypes=Plasma/LookAndFeel
 X-KDE-ParentApp=
-X-KDE-PluginInfo-Author=Sebastian Kügler
+X-KDE-PluginInfo-Author=KDE Visual Design Group
 X-KDE-PluginInfo-Category=
-X-KDE-PluginInfo-Email=sebas@kde.org
+X-KDE-PluginInfo-Email=plasma-devel@kde.org
 X-KDE-PluginInfo-License=GPLv2+
 X-KDE-PluginInfo-Name=org.kde.lookandfeel
 X-KDE-PluginInfo-Version=2.0

@@ -30,11 +30,13 @@
 #include <KDeclarative/QmlObject>
 #include <klocalizedstring.h>
 
+#include "../lookandfeelaccess/lookandfeelaccess.h"
 
 Osd::Osd(ShellCorona *corona)
     : QObject(corona)
 {
-    const QString osdPath = corona->lookAndFeelPackage().filePath("osdmainscript");
+    LookAndFeelAccess access;
+    const QString osdPath = access.filePath("osdmainscript");
     if (osdPath.isEmpty()) {
         qWarning() << "Failed to load the OSD script file from" << osdPath;
         return;

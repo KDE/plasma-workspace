@@ -1,2 +1,10 @@
+[KDE]
+widgetStyle=qtcurve
+SingleClick=true
+ColorScheme=Breeze
+
+[Icons]
+Theme=breeze
+
 [Theme]
 name=default

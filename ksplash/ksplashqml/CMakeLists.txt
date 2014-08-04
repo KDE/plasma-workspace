@@ -6,6 +6,7 @@ set(ksplashqml_SRCS
     main.cpp
     SplashApp.cpp
     SplashWindow.cpp
+    ../../lookandfeelaccess/lookandfeelaccess.cpp
    )
 
 add_executable(ksplashqml ${ksplashqml_SRCS})
