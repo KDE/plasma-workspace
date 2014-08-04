@@ -1004,7 +1004,8 @@ void ShellCorona::insertActivity(const QString &id, Activity *activity)
 {
     d->activities.insert(id, activity);
     Plasma::Containment *c = createContainmentForActivity(id, d->views.count());
-    c->config().writeEntry("lastScreen", 0);
+    if (c)
+        c->config().writeEntry("lastScreen", 0);
 }
 
 Plasma::Containment *ShellCorona::setContainmentTypeForScreen(int screen, const QString &plugin)
