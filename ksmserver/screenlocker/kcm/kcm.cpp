@@ -77,6 +77,12 @@ ScreenLockerKcm::ScreenLockerKcm(QWidget *parent, const QVariantList &args)
 
 void ScreenLockerKcm::load()
 {
+    QString currentPlugin = KScreenSaverSettings::theme();
+    if (currentPlugin.isEmpty()) {
+        currentPlugin = m_access.metadata().pluginName();
+    }
+    setSelectedPlugin(currentPlugin);
+
     const QList<Plasma::Package> pkgs = LookAndFeelAccess::availablePackages("lockscreenmainscript");
     for (const Plasma::Package &pkg : pkgs) {
         QStandardItem* row = new QStandardItem(pkg.metadata().name());
@@ -124,6 +130,8 @@ void ScreenLockerKcm::test(const QString &plugin)
 void ScreenLockerKcm::save()
 {
     KCModule::save();
+
+    KScreenSaverSettings::setTheme(m_selectedPlugin);
 
     // reconfigure through DBus
     OrgKdeScreensaverInterface interface(QStringLiteral("org.kde.screensaver"),
