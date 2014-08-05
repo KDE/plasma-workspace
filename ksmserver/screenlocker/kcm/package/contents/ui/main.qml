@@ -125,6 +125,11 @@ Rectangle {
                     }
                 }
             }
+            /*list.setCurrentIndex doesn't work while the model is getting loaded,
+             * so list.currentIndex = index in a component.onCompleted of the delegate,
+             * doesn't work, restarting a timer when a delegate gets created,
+             * seems the only place where we can approximate "set the property when
+             * the view really is done loading"*/
             Timer {
                 id: makeCurrentTimer
                 interval: 100
