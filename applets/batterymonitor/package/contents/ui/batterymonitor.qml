@@ -23,6 +23,7 @@ import QtQuick 2.0
 import QtQuick.Layouts 1.1
 import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
+import org.kde.plasma.private.battery 1.0
 import "plasmapackage:/code/logic.js" as Logic
 
 Item {
@@ -37,8 +38,18 @@ Item {
     Plasmoid.toolTipSubText: batteries.tooltipText
     Plasmoid.icon: batteries.tooltipImage
 
+    ProcessRunner {
+        id: processRunner
+    }
+
+    function action_powerdevilkcm() {
+        processRunner.runPowerdevilKCM();
+    }
+
     Component.onCompleted: {
         updateLogic();
+        plasmoid.removeAction("configure");
+        plasmoid.setAction("powerdevilkcm", i18n("&Configure power saving..."), "preferences-system-power-management");
     }
 
     function updateLogic() {

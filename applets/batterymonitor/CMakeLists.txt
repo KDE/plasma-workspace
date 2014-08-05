@@ -1,2 +1,3 @@
-plasma_install_package(. org.kde.plasma.battery)
+add_subdirectory(plugin)
 
+plasma_install_package(package org.kde.plasma.battery)
