@@ -1,7 +1,13 @@
 # KI18N Translation Domain for this library
 add_definitions(-DTRANSLATION_DOMAIN=\"screenlocker_kcm\")
 
-set(screenlocker_kcm_SRCS kcm.cpp)
+set(screenlocker_kcm_SRCS
+    kcm.cpp
+    lockermodel.cpp
+    ../../../lookandfeelaccess/lookandfeelaccess.cpp
+)
+include_directories(${CMAKE_CURRENT_BINARY_DIR}/../../)
+
 ki18n_wrap_ui(screenlocker_kcm_SRCS kcm.ui)
 kconfig_add_kcfg_files(screenlocker_kcm_SRCS ../kcfg/kscreensaversettings.kcfgc)
 qt5_add_dbus_interface(screenlocker_kcm_SRCS ../dbus/org.kde.screensaver.xml screenlocker_interface)
@@ -13,6 +19,9 @@ target_link_libraries(screenlocker_kcm
     KF5::ConfigWidgets
     KF5::I18n
     KF5::Service
+    KF5::Plasma
+    KF5::PlasmaQuick
+    Qt5::QuickWidgets
 )
 
 kservice_desktop_to_json(screenlocker_kcm screenlocker.desktop)
@@ -30,3 +39,5 @@ install(
     DESTINATION
         ${SERVICES_INSTALL_DIR}
 )
+
+plasma_install_package(package screenlocker_kcm kcms screenlocker_kcm)

@@ -17,12 +17,23 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 *********************************************************************/
+#include "kcm.h"
+#include "lockermodel.h"
 #include "kscreensaversettings.h"
 #include "ui_kcm.h"
 #include "screenlocker_interface.h"
+#include <config-ksmserver.h>
 #include <KCModule>
 #include <KPluginFactory>
 #include <QVBoxLayout>
+#include <QQuickWidget>
+#include <QtQml>
+#include <QQmlEngine>
+#include <QQmlContext>
+#include <QMessageBox>
+
+#include <Plasma/Package>
+#include <Plasma/PluginLoader>
 
 class ScreenLockerKcmForm : public QWidget, public Ui::ScreenLockerKcmForm
 {
@@ -38,25 +49,76 @@ ScreenLockerKcmForm::ScreenLockerKcmForm(QWidget *parent)
 }
 
 
-class ScreenLockerKcm : public KCModule
-{
-    Q_OBJECT
-public:
-    explicit ScreenLockerKcm(QWidget *parent = nullptr, const QVariantList& args = QVariantList());
-
-public Q_SLOTS:
-    void save() override;
-};
 
 ScreenLockerKcm::ScreenLockerKcm(QWidget *parent, const QVariantList &args)
     : KCModule(parent, args)
 {
+    qmlRegisterType<LockerModel>();
     ScreenLockerKcmForm *ui = new ScreenLockerKcmForm(this);
 
     QVBoxLayout* layout = new QVBoxLayout(this);
     layout->addWidget(ui);
 
     addConfig(KScreenSaverSettings::self(), ui);
+
+    m_model = new LockerModel(this);
+
+    m_quickWidget = new QQuickWidget(this);
+    m_quickWidget->setResizeMode(QQuickWidget::SizeRootObjectToView);
+    Plasma::Package package = Plasma::PluginLoader::self()->loadPackage("Plasma/Generic");
+    package.setDefaultPackageRoot("plasma/kcms");
+    package.setPath("screenlocker_kcm");
+    m_quickWidget->rootContext()->setContextProperty("kcm", this);
+    m_quickWidget->setSource(QUrl::fromLocalFile(package.filePath("mainscript")));
+    setMinimumHeight(m_quickWidget->initialSize().height());
+
+    layout->addWidget(m_quickWidget);
+}
+
+void ScreenLockerKcm::load()
+{
+    const QList<Plasma::Package> pkgs = LookAndFeelAccess::availablePackages("lockscreenmainscript");
+    for (const Plasma::Package &pkg : pkgs) {
+        QStandardItem* row = new QStandardItem(pkg.metadata().name());
+        row->setData(pkg.metadata().pluginName(), LockerModel::PluginNameRole);
+        row->setData(pkg.filePath("lockscreen", "screenshot.png"), LockerModel::ScreenhotRole);
+        m_model->appendRow(row);
+    }
+}
+
+LockerModel *ScreenLockerKcm::lockerModel()
+{
+    return m_model;
+}
+
+QString ScreenLockerKcm::selectedPlugin() const
+{
+    return m_selectedPlugin;
+}
+
+void ScreenLockerKcm::setSelectedPlugin(const QString &plugin)
+{
+    if (m_selectedPlugin == plugin) {
+        return;
+    }
+
+    m_selectedPlugin = plugin;
+    emit selectedPluginChanged();
+    changed();
+}
+
+void ScreenLockerKcm::test(const QString &plugin)
+{
+    if (plugin.isEmpty() || plugin == "none") {
+        return;
+    }
+
+    QProcess proc;
+    QStringList arguments;
+    arguments << plugin << "--testing";
+    if (proc.execute(KSCREENLOCKER_GREET_BIN, arguments)) {
+        QMessageBox::critical(this, i18n("Error"), i18n("Failed to successfully test the screen locker."));
+    }
 }
 
 void ScreenLockerKcm::save()
