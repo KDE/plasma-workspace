@@ -30,13 +30,9 @@
 #include <QGuiApplication>
 #include <QFontMetrics>
 
-
 #include <QDebug>
-#include <KGlobal>
 #include <KIO/PreviewJob>
 #include <KLocalizedString>
-#include <KProgressDialog>
-#include <KStandardDirs>
 #include <kimagecache.h>
 
 #include <Plasma/Package>

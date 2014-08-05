@@ -33,16 +33,13 @@
 #include <QTimer>
 
 #include <QDebug>
-#include <KDirSelectDialog>
 #include <KDirWatch>
 #include <QFileDialog>
 #include <KRandom>
-#include <KStandardDirs>
 #include <KIO/Job>
 #include <krun.h>
 #include <KNewStuff3/KNS3/DownloadDialog>
 #include <klocalizedstring.h>
-#include <KGlobal>
 
 #include <Plasma/Theme>
 #include <qstandardpaths.h>
@@ -109,7 +106,7 @@ void Image::setRenderingMode(RenderingMode mode)
 
     if (m_mode == SlideShow) {
         if (m_slidePaths.isEmpty()) {
-            m_slidePaths << KStandardDirs::installPath("wallpaper");
+            m_slidePaths << QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, "share/wallpapers", QStandardPaths::LocateDirectory);
         }
 
         QTimer::singleShot(200, this, SLOT(startSlideshow()));
@@ -241,7 +238,7 @@ void Image::setSlidePaths(const QStringList &slidePaths)
     m_slidePaths.removeAll(QString());
 
     if (m_slidePaths.isEmpty()) {
-        m_slidePaths << KStandardDirs::installPath("wallpaper");
+        m_slidePaths << QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, "share/wallpapers", QStandardPaths::LocateDirectory);
     }
 
     if (m_mode == SlideShow) {
@@ -254,8 +251,9 @@ void Image::setSlidePaths(const QStringList &slidePaths)
 
 void Image::showAddSlidePathsDialog()
 {
-    QUrl empty;
-    KDirSelectDialog *dialog = new KDirSelectDialog(empty, true);
+    QFileDialog *dialog = new QFileDialog(0, i18n("Directory with the wallpaper to show slides from"), "");
+    dialog->setOptions(QFileDialog::ShowDirsOnly);
+    dialog->setAcceptMode(QFileDialog::AcceptOpen);
     connect(dialog, SIGNAL(accepted()), this, SLOT(addDirFromSelectionDialog()));
     dialog->show();
 }
@@ -310,9 +308,9 @@ void Image::updateDirWatch(const QStringList &newDirs)
 
 void Image::addDirFromSelectionDialog()
 {
-    KDirSelectDialog *dialog = qobject_cast<KDirSelectDialog *>(sender());
+    QFileDialog *dialog = qobject_cast<QFileDialog *>(sender());
     if (dialog) {
-        addSlidePath(dialog->url().path());
+        addSlidePath(dialog->directoryUrl().toLocalFile());
     }
 }
 
