@@ -19,7 +19,7 @@
 
 #include "processrunner.h"
 
-#include <KProcess>
+#include <QProcess>
 
 ProcessRunner::ProcessRunner(QObject *parent) : QObject(parent)
 {
@@ -31,5 +31,5 @@ ProcessRunner::~ProcessRunner()
 
 void ProcessRunner::runPowerdevilKCM()
 {
-    KProcess::execute("kcmshell5", QStringList() << "powerdevilglobalconfig" << "powerdevilprofilesconfig" << "powerdevilactivitiesconfig");
+    QProcess::startDetached("kcmshell5", QStringList() << "powerdevilglobalconfig" << "powerdevilprofilesconfig" << "powerdevilactivitiesconfig");
 }
