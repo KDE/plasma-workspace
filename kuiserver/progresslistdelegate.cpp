@@ -29,10 +29,7 @@
 #include <QFontMetrics>
 #include <QListView>
 #include <QProgressBar>
-
-#include <kicon.h>
-#include <klocale.h>
-#include <kpushbutton.h>
+#include <KLocalizedString>
 
 #define MIN_CONTENT_PIXELS 50
 
@@ -104,7 +101,7 @@ void ProgressListDelegate::paint(QPainter *painter, const QStyleOptionViewItem &
 
     int coordY = d->separatorPixels + option.rect.top();
 
-    KIcon iconToShow(d->getIcon(index));
+    QIcon iconToShow = QIcon::fromTheme(d->getIcon(index));
 
     QColor unselectedTextColor = option.palette.text().color();
     QColor selectedTextColor = option.palette.highlightedText().color();
@@ -234,13 +231,13 @@ QList<QWidget*> ProgressListDelegate::createItemWidgets(const QModelIndex &index
     Q_UNUSED( index )
     QList<QWidget*> widgetList;
 
-    KPushButton *pauseResumeButton = new KPushButton();
-    pauseResumeButton->setIcon(KIcon("media-playback-pause"));
+    QPushButton *pauseResumeButton = new QPushButton();
+    pauseResumeButton->setIcon(QIcon::fromTheme("media-playback-pause"));
 
-    KPushButton *cancelButton = new KPushButton();
-    cancelButton->setIcon(KIcon("media-playback-stop"));
+    QPushButton *cancelButton = new QPushButton();
+    cancelButton->setIcon(QIcon::fromTheme("media-playback-stop"));
 
-    KPushButton *clearButton = new KPushButton(KIcon("edit-clear"), i18n("Clear"));
+    QPushButton *clearButton = new QPushButton(QIcon::fromTheme("edit-clear"), i18n("Clear"));
     QProgressBar *progressBar = new QProgressBar();
 
     connect(pauseResumeButton, SIGNAL(clicked(bool)), this, SLOT(slotPauseResumeClicked()));
@@ -265,13 +262,13 @@ void ProgressListDelegate::updateItemWidgets(const QList<QWidget*> widgets,
         return;
     }
 
-    KPushButton *pauseResumeButton = static_cast<KPushButton*>(widgets[0]);
+    QPushButton *pauseResumeButton = static_cast<QPushButton*>(widgets[0]);
 
-    KPushButton *cancelButton = static_cast<KPushButton*>(widgets[1]);
+    QPushButton *cancelButton = static_cast<QPushButton*>(widgets[1]);
     cancelButton->setToolTip(i18n("Cancel"));
 
     QProgressBar *progressBar = static_cast<QProgressBar*>(widgets[2]);
-    KPushButton *clearButton = static_cast<KPushButton*>(widgets[3]);
+    QPushButton *clearButton = static_cast<QPushButton*>(widgets[3]);
 
     int percent = d->getPercent(index);
 
@@ -288,11 +285,11 @@ void ProgressListDelegate::updateItemWidgets(const QList<QWidget*> widgets,
     switch (state) {
     case JobView::Running:
         pauseResumeButton->setToolTip(i18n("Pause"));
-        pauseResumeButton->setIcon(KIcon("media-playback-pause"));
+        pauseResumeButton->setIcon(QIcon::fromTheme("media-playback-pause"));
         break;
     case JobView::Suspended:
         pauseResumeButton->setToolTip(i18n("Resume"));
-        pauseResumeButton->setIcon(KIcon("media-playback-start"));
+        pauseResumeButton->setIcon(QIcon::fromTheme("media-playback-start"));
         break;
     default:
         Q_ASSERT(0);

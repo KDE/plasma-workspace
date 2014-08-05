@@ -32,13 +32,9 @@
 #include <QBoxLayout>
 #include <QCloseEvent>
 #include <QToolBar>
+#include <qsystemtrayicon.h>
 
 #include <kconfigdialog.h>
-#include <klocale.h>
-#include <kicon.h>
-#include <kdialog.h>
-#include <ksystemtrayicon.h>
-#include <kpushbutton.h>
 
 UiServer::UiServer(ProgressListModel* model)
         : KXmlGuiWindow(0), m_systemTray(0)
@@ -54,7 +50,7 @@ UiServer::UiServer(ProgressListModel* model)
     toolBar->setToolButtonStyle(Qt::ToolButtonTextBesideIcon);
 
     QAction *configureAction = toolBar->addAction(configure);
-    configureAction->setIcon(KIcon("configure"));
+    configureAction->setIcon(QIcon::fromTheme("configure"));
     configureAction->setIconText(configure);
 
     connect(configureAction, SIGNAL(triggered(bool)), this,
@@ -81,8 +77,8 @@ UiServer::UiServer(ProgressListModel* model)
     listProgress->setItemDelegate(progressListDelegate);
 
 
-    m_systemTray = new KSystemTrayIcon(this);
-    m_systemTray->setIcon(KSystemTrayIcon::loadIcon("view-process-system"));
+    m_systemTray = new QSystemTrayIcon(this);
+    m_systemTray->setIcon(QIcon::fromTheme("view-process-system"));
     m_systemTray->setToolTip(i18n("List of running file transfers/jobs (kuiserver)"));
     m_systemTray->show();
     resize(450, 450);

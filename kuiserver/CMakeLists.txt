@@ -67,8 +67,8 @@ target_link_libraries(kdeinit_kuiserver5
     KF5::Notifications
     KF5::KIOCore
     KF5::KIOWidgets
-    KF5::KDELibs4Support
-
+    KF5::XmlGui
+    KF5::I18n
 )
 install(TARGETS kdeinit_kuiserver5 ${INSTALL_TARGETS_DEFAULT_ARGS})
 

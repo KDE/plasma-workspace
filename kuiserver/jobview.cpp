@@ -24,9 +24,8 @@
 #include "jobview_interface.h"
 #include "requestviewcallwatcher.h"
 
-#include <klocale.h>
-#include <KGlobal>
-
+#include <KLocalizedString>
+#include <KFormat>
 #include <QtDBus/QDBusPendingReply>
 #include <qdbusabstractinterface.h>
 
@@ -118,7 +117,7 @@ void JobView::setTotalAmount(qulonglong amount, const QString &unit)
     m_totalUnit = unit;
 
     if (unit == "bytes") {
-        m_sizeTotal = amount ? KGlobal::locale()->formatByteSize(amount) : QString();
+        m_sizeTotal = amount ? KFormat().formatByteSize(amount) : QString();
 
     } else if (unit == "files") {
         m_sizeTotal = amount ? i18np("%1 file", "%1 files", amount) : QString();
@@ -146,7 +145,7 @@ void JobView::setProcessedAmount(qulonglong amount, const QString &unit)
     m_processUnit = unit;
 
     if (unit == "bytes") {
-        m_sizeProcessed = amount ? KGlobal::locale()->formatByteSize(amount) : QString();
+        m_sizeProcessed = amount ? KFormat().formatByteSize(amount) : QString();
 
     } else if (unit == "files") {
         m_sizeProcessed = amount ? i18np("%1 file", "%1 files", amount) : QString();
@@ -185,7 +184,7 @@ void JobView::setSpeed(qulonglong bytesPerSecond)
         pair.second->asyncCall(QLatin1String("setSpeed"), bytesPerSecond);
     }
 
-    m_speed = bytesPerSecond ? KGlobal::locale()->formatByteSize(bytesPerSecond) : QString();
+    m_speed = bytesPerSecond ? KFormat().formatByteSize(bytesPerSecond) : QString();
     emit changed(m_jobId);
 }
 
