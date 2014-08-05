@@ -299,22 +299,23 @@ void ShellCorona::load()
         foreach(Plasma::Containment *containment, containments()) {
             containment->setActivity(d->activityConsumer->currentActivity());
         }
-    }
-
-    processUpdateScripts();
-    foreach(Plasma::Containment *containment, containments()) {
-        if (containment->formFactor() == Plasma::Types::Horizontal ||
-            containment->formFactor() == Plasma::Types::Vertical) {
-            if (!d->waitingPanels.contains(containment)) {
-                d->waitingPanels << containment;
+    } else {
+        processUpdateScripts();
+        foreach(Plasma::Containment *containment, containments()) {
+            if (containment->formFactor() == Plasma::Types::Horizontal ||
+                containment->formFactor() == Plasma::Types::Vertical) {
+                if (!d->waitingPanels.contains(containment)) {
+                    d->waitingPanels << containment;
+                }
+            } else {
+                //FIXME ideally fix this, or at least document the crap out of it
+                int screen = containment->lastScreen();
+                if (screen < 0) {
+                    screen = d->desktopContainments[containment->activity()].count();
+                }
+                qDebug() << "inserting...";
+                insertContainment(containment->activity(), screen, containment);
             }
-        } else {
-            //FIXME ideally fix this, or at least document the crap out of it
-            int screen = containment->lastScreen();
-            if (screen < 0) {
-                screen = d->desktopContainments[containment->activity()].count();
-            }
-            insertContainment(containment->activity(), screen, containment);
         }
     }
 
@@ -1276,7 +1277,12 @@ void ShellCorona::activityRemoved()
 
 void ShellCorona::insertContainment(const QString &activity, int screenNum, Plasma::Containment *containment)
 {
-    if (Plasma::Containment *cont = d->desktopContainments.value(activity).value(screenNum)) {
+    Plasma::Containment *cont = d->desktopContainments.value(activity).value(screenNum);
+    if (containment == cont)
+        return;
+    Q_ASSERT(!d->desktopContainments[activity].values().contains(containment));
+
+    if (cont) {
         //containment should always be valid, it's been known to get in a mess
         //so guard anyway
         Q_ASSERT(cont);
