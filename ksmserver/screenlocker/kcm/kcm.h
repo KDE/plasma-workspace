@@ -24,18 +24,22 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include "../../../lookandfeelaccess/lookandfeelaccess.h"
 
 class QQuickWidget;
-class LockerModel;
+class QStandardItemModel;
 
 class ScreenLockerKcm : public KCModule
 {
     Q_OBJECT
-    Q_PROPERTY(LockerModel *lockerModel READ lockerModel CONSTANT)
+    Q_PROPERTY(QStandardItemModel *lockerModel READ lockerModel CONSTANT)
     Q_PROPERTY(QString selectedPlugin READ selectedPlugin WRITE setSelectedPlugin NOTIFY selectedPluginChanged)
 
 public:
+    enum Roles {
+        PluginNameRole = Qt::UserRole +1,
+        ScreenhotRole
+    };
     explicit ScreenLockerKcm(QWidget *parent = nullptr, const QVariantList& args = QVariantList());
 
-    LockerModel *lockerModel();
+    QStandardItemModel *lockerModel();
 
     QString selectedPlugin() const;
     void setSelectedPlugin(const QString &plugin);
@@ -49,7 +53,7 @@ Q_SIGNALS:
     void selectedPluginChanged();
 
 private:
-    LockerModel *m_model;
+    QStandardItemModel *m_model;
     QString m_selectedPlugin;
     QQuickWidget *m_quickWidget;
     LookAndFeelAccess m_access;

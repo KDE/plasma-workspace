@@ -18,7 +18,6 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 *********************************************************************/
 #include "kcm.h"
-#include "lockermodel.h"
 #include "kscreensaversettings.h"
 #include "ui_kcm.h"
 #include "screenlocker_interface.h"
@@ -31,6 +30,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include <QQmlEngine>
 #include <QQmlContext>
 #include <QMessageBox>
+#include <QStandardItemModel>
 
 #include <Plasma/Package>
 #include <Plasma/PluginLoader>
@@ -53,7 +53,7 @@ ScreenLockerKcmForm::ScreenLockerKcmForm(QWidget *parent)
 ScreenLockerKcm::ScreenLockerKcm(QWidget *parent, const QVariantList &args)
     : KCModule(parent, args)
 {
-    qmlRegisterType<LockerModel>();
+    qmlRegisterType<QStandardItemModel>();
     ScreenLockerKcmForm *ui = new ScreenLockerKcmForm(this);
 
     QVBoxLayout* layout = new QVBoxLayout(this);
@@ -61,7 +61,11 @@ ScreenLockerKcm::ScreenLockerKcm(QWidget *parent, const QVariantList &args)
 
     addConfig(KScreenSaverSettings::self(), ui);
 
-    m_model = new LockerModel(this);
+    m_model = new QStandardItemModel(this);
+    QHash<int, QByteArray> roles = m_model->roleNames();
+    roles[PluginNameRole] = "pluginName";
+    roles[ScreenhotRole] = "screenshot";
+    m_model->setItemRoleNames(roles);
 
     m_quickWidget = new QQuickWidget(this);
     m_quickWidget->setResizeMode(QQuickWidget::SizeRootObjectToView);
@@ -86,13 +90,13 @@ void ScreenLockerKcm::load()
     const QList<Plasma::Package> pkgs = LookAndFeelAccess::availablePackages("lockscreenmainscript");
     for (const Plasma::Package &pkg : pkgs) {
         QStandardItem* row = new QStandardItem(pkg.metadata().name());
-        row->setData(pkg.metadata().pluginName(), LockerModel::PluginNameRole);
-        row->setData(pkg.filePath("lockscreen", "screenshot.png"), LockerModel::ScreenhotRole);
+        row->setData(pkg.metadata().pluginName(), PluginNameRole);
+        row->setData(pkg.filePath("lockscreen", "screenshot.png"), ScreenhotRole);
         m_model->appendRow(row);
     }
 }
 
-LockerModel *ScreenLockerKcm::lockerModel()
+QStandardItemModel *ScreenLockerKcm::lockerModel()
 {
     return m_model;
 }
