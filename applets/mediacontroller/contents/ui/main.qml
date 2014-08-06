@@ -27,7 +27,8 @@ import org.kde.plasma.extras 2.0 as PlasmaExtras
 Item {
     id: root
 
-    property string track: mpris2Source.data[mpris2Source.current].Metadata["xesam:title"] || ""
+    property string track: mpris2Source.data[mpris2Source.current].Metadata["xesam:title"]
+                           || String(mpris2Source.data[mpris2Source.current].Metadata["xesam:url"]).substring(String(mpris2Source.data[mpris2Source.current].Metadata["xesam:url"]).lastIndexOf("/") + 1)
     property string artist: mpris2Source.data[mpris2Source.current].Metadata["xesam:artist"] || ""
     property string playerIcon: ""
 
@@ -71,12 +72,14 @@ Item {
     states: [
         State {
             name: "off"
+            when: root.noPlayer
+            PropertyChanges { target: plasmoid; status: PlasmaCore.Types.PassiveStatus; }
         },
         State {
             name: "playing"
             when: !root.noPlayer && mpris2Source.data[mpris2Source.current].PlaybackStatus == "Playing"
 
-            PropertyChanges { target: plasmoid; status: PlasmaCore.Types.ActiveStatus }
+            PropertyChanges { target: plasmoid; status: PlasmaCore.Types.ActiveStatus; icon: "media-playback-start" }
         },
         State {
             name: "paused"
