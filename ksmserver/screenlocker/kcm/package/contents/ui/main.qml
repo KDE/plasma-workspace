@@ -112,7 +112,7 @@ Rectangle {
                         }
                         visible: model.pluginName != "none"
                         iconSource: "media-playback-start"
-                        tooltip: i18n("Test Screen Locker")
+                        tooltip: i18nd("screenlocker_kcm", "Test Screen Locker")
                         flat: false
                         onClicked: kcm.test(model.pluginName)
                         opacity: parent.containsMouse ? 1 : 0
