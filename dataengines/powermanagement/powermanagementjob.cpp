@@ -58,13 +58,16 @@ void PowerManagementJob::start()
         setResult(false);
         return;
     } else if (operation == "suspend" || operation == "suspendToRam") {
-        setResult(suspend(Ram));
+        Solid::PowerManagement::requestSleep(Solid::PowerManagement::SuspendState, 0, 0);
+        setResult(Solid::PowerManagement::supportedSleepStates().contains(Solid::PowerManagement::SuspendState));
         return;
     } else if (operation == "suspendToDisk") {
-        setResult(suspend(Disk));
+        Solid::PowerManagement::requestSleep(Solid::PowerManagement::HibernateState, 0, 0);
+        setResult(Solid::PowerManagement::supportedSleepStates().contains(Solid::PowerManagement::HibernateState));
         return;
     } else if (operation == "suspendHybrid") {
-        setResult(suspend(Hybrid));
+        Solid::PowerManagement::requestSleep(Solid::PowerManagement::HybridSuspendState, 0, 0);
+        setResult(Solid::PowerManagement::supportedSleepStates().contains(Solid::PowerManagement::HybridSuspendState));
         return;
     } else if (operation == "requestShutDown") {
         requestShutDown();
@@ -102,33 +105,6 @@ void PowerManagementJob::start()
     setResult(false);
 }
 
-bool PowerManagementJob::suspend(const SuspendType &type)
-{
-    QDBusMessage msg = QDBusMessage::createMethodCall("org.kde.Solid.PowerManagement",
-                                                      "/org/kde/Solid/PowerManagement/Actions/SuspendSession",
-                                                      "org.kde.Solid.PowerManagement.Actions.SuspendSession",
-                                                      callForType(type));
-    QDBusConnection::sessionBus().asyncCall(msg);
-    return true;
-}
-
-QString PowerManagementJob::callForType(const SuspendType &type)
-{
-    switch (type) {
-        case Disk:
-            return "suspendToDisk";
-        break;
-
-        case Hybrid:
-            return "suspendHybrid";
-        break;
-
-        default:
-            return "suspendToRam";
-        break;
-    }
-}
-
 void PowerManagementJob::setScreenBrightness(int value)
 {
     QDBusMessage msg = QDBusMessage::createMethodCall("org.kde.Solid.PowerManagement",
@@ -151,7 +127,6 @@ void PowerManagementJob::setKeyboardBrightness(int value)
 
 void PowerManagementJob::requestShutDown()
 {
-#warning Enable KWorkSpace::requestShutDown(); once libkworkspace is ported
     KWorkSpace::requestShutDown();
 }
 
