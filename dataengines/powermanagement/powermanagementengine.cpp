@@ -212,35 +212,35 @@ bool PowermanagementEngine::sourceRequestEvent(const QString &name)
     return true;
 }
 
-QString PowermanagementEngine::batteryType(const Solid::Battery* battery)
+QString PowermanagementEngine::batteryType(const Solid::Battery* battery) const
 {
   switch(battery->type()) {
       case Solid::Battery::PrimaryBattery:
-          return QLatin1String("Battery");
+          return QStringLiteral("Battery");
           break;
       case Solid::Battery::UpsBattery:
-          return QLatin1String("Ups");
+          return QStringLiteral("Ups");
           break;
       case Solid::Battery::MonitorBattery:
-          return QLatin1String("Monitor");
+          return QStringLiteral("Monitor");
           break;
       case Solid::Battery::MouseBattery:
-          return QLatin1String("Mouse");
+          return QStringLiteral("Mouse");
           break;
       case Solid::Battery::KeyboardBattery:
-          return QLatin1String("Keyboad");
+          return QStringLiteral("Keyboad");
           break;
       case Solid::Battery::PdaBattery:
-          return QLatin1String("Pda");
+          return QStringLiteral("Pda");
           break;
       case Solid::Battery::PhoneBattery:
-          return QLatin1String("Phone");
+          return QStringLiteral("Phone");
           break;
       default:
-          return QLatin1String("Unknown");
+          return QStringLiteral("Unknown");
   }
 
-  return QLatin1String("Unknown");
+  return QStringLiteral("Unknown");
 }
 
 bool PowermanagementEngine::updateSourceEvent(const QString &source)
@@ -360,11 +360,11 @@ void PowermanagementEngine::deviceAdded(const QString& udi)
         if (battery) {
             int index = 0;
             QStringList sourceNames(m_batterySources.values());
-            while (sourceNames.contains(QString("Battery%1").arg(index))) {
+            while (sourceNames.contains(QStringLiteral("Battery%1").arg(index))) {
                 index++;
             }
 
-            const QString source = QString("Battery%1").arg(index);
+            const QString source = QStringLiteral("Battery%1").arg(index);
             sourceNames << source;
             m_batterySources[device.udi()] = source;
 
