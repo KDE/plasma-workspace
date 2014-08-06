@@ -155,7 +155,7 @@ void ApplicationsProtocol::listDir(const QUrl& url)
 
     foreach (const KSycocaEntry::Ptr &e, grp->entries(true, true)) {
         if (e->isType(KST_KServiceGroup)) {
-            KServiceGroup::Ptr g(e);
+            KServiceGroup::Ptr g(static_cast<KServiceGroup*>(e.data()));
             QString groupCaption = g->caption();
 
             kDebug() << "ADDING SERVICE GROUP WITH PATH " << g->relPath();
@@ -177,7 +177,7 @@ void ApplicationsProtocol::listDir(const QUrl& url)
             createDirEntry(entry, groupCaption, dirUrl.url(), "inode/directory", g->icon());
 
         } else {
-            KService::Ptr service(e);
+            KService::Ptr service(static_cast<KService*>(e.data()));
 
             kDebug() << "the entry name is" << service->desktopEntryName()
                      << "with path" << service->entryPath();
