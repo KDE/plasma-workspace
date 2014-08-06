@@ -171,35 +171,15 @@ bool PowermanagementEngine::sourceRequestEvent(const QString &name)
 
         m_sources = basicSourceNames() + batterySources;
     } else if (name == "AC Adapter") {
-        bool isPlugged = false;
-
-//         const QList<Solid::Device> list_ac = Solid::Device::listFromType(Solid::DeviceInterface::AcAdapter);
-//         foreach (const Solid::Device & device_ac, list_ac) {
-//             const Solid::AcAdapter* acadapter = device_ac.as<Solid::AcAdapter>();
-//             isPlugged |= acadapter->isPlugged();
-//             connect(acadapter, SIGNAL(plugStateChanged(bool,QString)), this,
-//                     SLOT(updateAcPlugState(bool)), Qt::UniqueConnection);
-//         }
-//
-//         updateAcPlugState(isPlugged);
+        connect(Solid::PowerManagement::notifier(), SIGNAL(appShouldConserveResourcesChanged(bool)),
+                this, SLOT(updateAcPlugState(bool)));
+        updateAcPlugState(Solid::PowerManagement::appShouldConserveResources());
     } else if (name == "Sleep States") {
-        const QSet<Solid::PowerManagement::SleepState> sleepstates =
-                                Solid::PowerManagement::supportedSleepStates();
-        // We first set all possible sleepstates to false, then enable the ones that are available
-        setData("Sleep States", "Standby", false);
-        setData("Sleep States", "Suspend", false);
-        setData("Sleep States", "Hibernate", false);
-
-        foreach (const Solid::PowerManagement::SleepState &sleepstate, sleepstates) {
-            if (sleepstate == Solid::PowerManagement::StandbyState) {
-                setData("Sleep States", "Standby", true);
-            } else if (sleepstate == Solid::PowerManagement::SuspendState) {
-                setData("Sleep States", "Suspend", true);
-            } else if (sleepstate == Solid::PowerManagement::HibernateState) {
-                setData("Sleep States", "Hibernate", true);
-            }
-            //qDebug() << "Sleepstate \"" << sleepstate << "\" supported.";
-        }
+        const QSet<Solid::PowerManagement::SleepState> sleepstates = Solid::PowerManagement::supportedSleepStates();
+        setData("Sleep States", "Standby", sleepstates.contains(Solid::PowerManagement::StandbyState));
+        setData("Sleep States", "Suspend", sleepstates.contains(Solid::PowerManagement::SuspendState));
+        setData("Sleep States", "Hibernate", sleepstates.contains(Solid::PowerManagement::HibernateState));
+        setData("Sleep States", "HybridSuspend", sleepstates.contains(Solid::PowerManagement::HybridSuspendState));
     } else if (name == "PowerDevil") {
         if (m_brightnessControlsAvailable) {
           QDBusMessage screenMsg = QDBusMessage::createMethodCall("org.kde.Solid.PowerManagement",
@@ -209,7 +189,7 @@ bool PowermanagementEngine::sourceRequestEvent(const QString &name)
           QDBusPendingReply<int> screenReply = QDBusConnection::sessionBus().asyncCall(screenMsg);
           QDBusPendingCallWatcher *screenWatcher = new QDBusPendingCallWatcher(screenReply, this);
           QObject::connect(screenWatcher, SIGNAL(finished(QDBusPendingCallWatcher*)),
-                              this, SLOT(screenBrightnessReply(QDBusPendingCallWatcher*)));
+                           this, SLOT(screenBrightnessReply(QDBusPendingCallWatcher*)));
         }
 
         if (m_keyboardBrightnessControlsAvailable) {
@@ -220,7 +200,7 @@ bool PowermanagementEngine::sourceRequestEvent(const QString &name)
           QDBusPendingReply<int> keyboardReply = QDBusConnection::sessionBus().asyncCall(keyboardMsg);
           QDBusPendingCallWatcher *keyboardWatcher = new QDBusPendingCallWatcher(keyboardReply, this);
           QObject::connect(keyboardWatcher, SIGNAL(finished(QDBusPendingCallWatcher*)),
-                              this, SLOT(keyboardBrightnessReply(QDBusPendingCallWatcher*)));
+                           this, SLOT(keyboardBrightnessReply(QDBusPendingCallWatcher*)));
         }
     //any info concerning lock screen/screensaver goes here
     } else if (name == "UserActivity") {
@@ -347,9 +327,9 @@ void PowermanagementEngine::updateBatteryNames()
     }
 }
 
-void PowermanagementEngine::updateAcPlugState(bool newState)
+void PowermanagementEngine::updateAcPlugState(bool onBattery)
 {
-    setData("AC Adapter", "Plugged in", newState);
+    setData("AC Adapter", "Plugged in", !onBattery);
 }
 
 void PowermanagementEngine::deviceRemoved(const QString& udi)
