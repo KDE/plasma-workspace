@@ -228,7 +228,7 @@ QString PowermanagementEngine::batteryType(const Solid::Battery* battery) const
           return QStringLiteral("Mouse");
           break;
       case Solid::Battery::KeyboardBattery:
-          return QStringLiteral("Keyboad");
+          return QStringLiteral("Keyboard");
           break;
       case Solid::Battery::PdaBattery:
           return QStringLiteral("Pda");
