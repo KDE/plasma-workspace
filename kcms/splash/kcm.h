@@ -28,18 +28,22 @@
 #include "../../lookandfeelaccess/lookandfeelaccess.h"
 
 class QQuickWidget;
-class SplashModel;
+class QStandardItemModel;
 
 class KCMSplashScreen : public KCModule
 {
     Q_OBJECT
-    Q_PROPERTY(SplashModel *splashModel READ splashModel CONSTANT)
+    Q_PROPERTY(QStandardItemModel *splashModel READ splashModel CONSTANT)
     Q_PROPERTY(QString selectedPlugin READ selectedPlugin WRITE setSelectedPlugin NOTIFY selectedPluginChanged)
 
 public:
+    enum Roles {
+        PluginNameRole = Qt::UserRole +1,
+        ScreenhotRole
+    };
     KCMSplashScreen(QWidget* parent, const QVariantList& args);
 
-    SplashModel *splashModel();
+    QStandardItemModel *splashModel();
 
     QString selectedPlugin() const;
     void setSelectedPlugin(const QString &plugin);
@@ -55,7 +59,7 @@ Q_SIGNALS:
 
 private:
     QQuickWidget *m_quickWidget;
-    SplashModel *m_model;
+    QStandardItemModel *m_model;
     LookAndFeelAccess m_access;
     QString m_selectedPlugin;
 

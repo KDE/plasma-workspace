@@ -3,7 +3,6 @@ add_definitions(-DTRANSLATION_DOMAIN=\"kcm_splashscreen\")
 
 set(kcm_splashscreen_SRCS
   kcm.cpp
-  splashmodel.cpp
   ../../lookandfeelaccess/lookandfeelaccess.cpp
 )
 

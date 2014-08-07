@@ -18,7 +18,6 @@
 */
 
 #include "kcm.h"
-#include "splashmodel.h"
 
 #include <KPluginFactory>
 #include <KPluginLoader>
@@ -35,6 +34,7 @@
 #include <QtQml>
 #include <QQmlEngine>
 #include <QQmlContext>
+#include <QStandardItemModel>
 
 #include <KLocalizedString>
 #include <Plasma/Package>
@@ -47,14 +47,18 @@ KCMSplashScreen::KCMSplashScreen(QWidget* parent, const QVariantList& args)
     , m_config("ksplashrc")
     , m_configGroup(m_config.group("KSplash"))
 {
-    qmlRegisterType<SplashModel>();
+    qmlRegisterType<QStandardItemModel>();
     KAboutData* about = new KAboutData("kcm_splashscreen", i18n("Configure Splash screen details"),
                                        "0.1", QString(), KAboutLicense::LGPL);
     about->addAuthor(i18n("Marco Martin"), QString(), "mart@kde.org");
     setAboutData(about);
     setButtons(Help | Apply | Default);
 
-    m_model = new SplashModel(this);
+    m_model = new QStandardItemModel(this);
+    QHash<int, QByteArray> roles = m_model->roleNames();
+    roles[PluginNameRole] = "pluginName";
+    roles[ScreenhotRole] = "screenshot";
+    m_model->setItemRoleNames(roles);
     QVBoxLayout* layout = new QVBoxLayout(this);
 
     m_quickWidget = new QQuickWidget(this);
@@ -69,7 +73,7 @@ KCMSplashScreen::KCMSplashScreen(QWidget* parent, const QVariantList& args)
     layout->addWidget(m_quickWidget);
 }
 
-SplashModel *KCMSplashScreen::splashModel()
+QStandardItemModel *KCMSplashScreen::splashModel()
 {
     return m_model;
 }
@@ -101,14 +105,14 @@ void KCMSplashScreen::load()
     m_model->clear();
 
     QStandardItem* row = new QStandardItem(i18n("None"));
-    row->setData("none", SplashModel::PluginNameRole);
+    row->setData("none", PluginNameRole);
     m_model->appendRow(row);
 
     const QList<Plasma::Package> pkgs = LookAndFeelAccess::availablePackages("splashmainscript");
     for (const Plasma::Package &pkg : pkgs) {
         QStandardItem* row = new QStandardItem(pkg.metadata().name());
-        row->setData(pkg.metadata().pluginName(), SplashModel::PluginNameRole);
-        row->setData(pkg.filePath("splash", "screenshot.png"), SplashModel::ScreenhotRole);
+        row->setData(pkg.metadata().pluginName(), PluginNameRole);
+        row->setData(pkg.filePath("splash", "screenshot.png"), ScreenhotRole);
         m_model->appendRow(row);
     }
 }
