@@ -103,7 +103,7 @@ Item {
 
     SequentialAnimation {
       id: chargeAnimation
-      running: units.longDuration > 0 && batteryIcon.pluggedIn
+      running: units.longDuration > 0 && batteryIcon.pluggedIn && batteryIcon.visible
       alwaysRunToEnd: true
       loops: Animation.Infinite
 
