@@ -71,7 +71,7 @@ if (X11_FOUND)
 endif()
 
 set_target_properties(taskmanager PROPERTIES 
-                      VERSION 5.0.0
+                      VERSION 5.0.1
                       SOVERSION 5
                       EXPORT_NAME LibTaskManager)
 install(TARGETS taskmanager EXPORT libtaskmanagerLibraryTargets ${INSTALL_TARGETS_DEFAULT_ARGS} )
