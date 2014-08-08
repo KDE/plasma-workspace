@@ -105,7 +105,7 @@ void KCMSplashScreen::load()
     m_model->clear();
 
     QStandardItem* row = new QStandardItem(i18n("None"));
-    row->setData("none", PluginNameRole);
+    row->setData("None", PluginNameRole);
     m_model->appendRow(row);
 
     const QList<Plasma::Package> pkgs = LookAndFeelAccess::availablePackages("splashmainscript");
