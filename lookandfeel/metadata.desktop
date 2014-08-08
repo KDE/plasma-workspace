@@ -1,10 +1,14 @@
 [Desktop Entry]
 Comment=Desktop Design Language
+Comment[es]=Lenguaje de diseño del escritorio
 Comment[nb]=Språk for skrivebordsdesign
 Comment[sr]=Језик дизајна површи
 Comment[sr@ijekavian]=Језик дизајна површи
 Comment[sr@ijekavianlatin]=Jezik dizajna površi
 Comment[sr@latin]=Jezik dizajna površi
+Comment[sv]=Konstruktionsspråk för skrivbord
+Comment[uk]=Мова компонування стільниці
+Comment[x-test]=xxDesktop Design Languagexx
 Encoding=UTF-8
 Keywords=Desktop, Workspace, Appearance, Look and Feel, Logout, Lock, Suspend, Shutdown, Hibernate,
 Keywords[ca]=Escriptori, Espai de treball, Aparença, Aparença i comportament, Sortida, Bloqueig, Suspensió, Aturada, Hibernació,
@@ -78,6 +82,7 @@ Name[sr@latin]=Izgled i osećaj
 Name[sv]=Utseende och känsla
 Name[tr]=Bakın ve Hissedin
 Name[uk]=Вигляд і поведінка
+Name[x-test]=xxLook and Feelxx
 Name[zh_CN]=观感
 Name[zh_TW]=外觀與感覺
 Type=Service
