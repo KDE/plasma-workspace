@@ -135,20 +135,28 @@ int main( int argc, char **argv )
                 << "=" << KShell::quoteArg( value ) << "\n";
             }
         startupconfigfiles << line << endl;
-        // use even currently non-existing paths in $KDEDIRS
-        const QStringList dirs = QStandardPaths::standardLocations(QStandardPaths::GenericDataLocation);
-        for( QStringList::ConstIterator it = dirs.constBegin();
-             it != dirs.constEnd();
-             ++it )
-            {
-            QString cfg = *it + "share/config/" + file;
+
+        //we want a list of ~/.config + /usr/share/config (on a normal setup).
+        //These files may not exist yet as the latter is used by kconf_update
+        QStringList configDirs = QStandardPaths::standardLocations(QStandardPaths::GenericConfigLocation);
+        foreach (const QString &location, QStandardPaths::standardLocations(QStandardPaths::GenericDataLocation)) {
+            //some people accidentally have empty prefixes in their XDG_DATA_DIRS, strip those out
+            if (location.isEmpty()) {
+                continue;
+            }
+            configDirs << (location + "/config");
+        }
+
+        foreach (const QString &configDir, configDirs) {
+            const QString cfg = configDir + '/' + file;
             if (QFile::exists(cfg))
                 startupconfigfiles << cfg << "\n";
             else
                 startupconfigfiles << "!" << cfg << "\n";
-            }
-        startupconfigfiles << "*\n";
         }
 
-    return 0;
+        startupconfigfiles << "*\n";
     }
+
+    return 0;
+}
