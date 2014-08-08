@@ -89,9 +89,9 @@ LookAndFeelAccess::LookAndFeelAccess(QObject *parent)
     KDirWatch::self()->addFile(configFile);
 
     // Catch both, direct changes to the config file ...
-    connect(KDirWatch::self(), SIGNAL(dirty()), this, SLOT(settingsFileChanged()));
+    connect(KDirWatch::self(), SIGNAL(dirty(QString)), this, SLOT(settingsFileChanged()));
     // ... but also remove/recreate cycles, like KConfig does it
-    connect(KDirWatch::self(), SIGNAL(created()), this, SLOT(settingsFileChanged()));
+    connect(KDirWatch::self(), SIGNAL(created(QString)), this, SLOT(settingsFileChanged()));
 }
 
 LookAndFeelAccess::~LookAndFeelAccess()
