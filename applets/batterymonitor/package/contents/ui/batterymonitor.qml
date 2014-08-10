@@ -49,7 +49,7 @@ Item {
     Component.onCompleted: {
         updateLogic();
         plasmoid.removeAction("configure");
-        plasmoid.setAction("powerdevilkcm", i18n("&Configure power saving..."), "preferences-system-power-management");
+        plasmoid.setAction("powerdevilkcm", i18n("&Configure Power Saving..."), "preferences-system-power-management");
     }
 
     function updateLogic() {
