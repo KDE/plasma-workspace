@@ -85,7 +85,16 @@ Item {
         Logic.updateTooltip();
     }
 
-    Plasmoid.compactRepresentation: CompactRepresentation { }
+    Plasmoid.compactRepresentation: CompactRepresentation {
+        onWheel: {
+            var delta = wheel.angleDelta.y || wheel.angleDelta.x
+            if (delta > 0) {
+                batterymonitor.screenBrightness += 10
+            } else if (delta < 0) {
+                batterymonitor.screenBrightness -= 10
+            }
+        }
+    }
 
     property QtObject pmSource: PlasmaCore.DataSource {
         id: pmSource
