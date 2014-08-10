@@ -152,52 +152,25 @@ function iconForBattery(batteryData,pluggedIn) {
 }
 
 function updateTooltip() {
-    var image = "";
-    var text = "";
-    if (batteries.count == 0) {
-        image = "battery-missing";
-        if (!powermanagementDisabled) {
-            text = i18n("No batteries available");
-        }
-    } else {
-        var hasPowerSupply = false;
-
-        text = "<table style='white-space: nowrap'>";
-        for(var i=0; i<batteries.count; i++) {
-            var b = batteries.get(i);
-            text += "<tr>";
-            text += "<td align='right'>" + i18nc("Placeholder is battery name", "%1:", b["Pretty Name"]) + " </td>";
-            text += "<td><b>";
-            if (b["Plugged in"]) {
-                text += i18nc("Placeholder is battery percentage", "%1%", b["Percent"]);
-            } else {
-                text += i18n("N/A")
-            }
-            text += "</b></td>";
-            text += "</tr>";
-
-            if (b["Is Power Supply"]) { hasPowerSupply = true; }
-        }
-        text += "</table>";
-
-        if (hasPowerSupply) {
-            var b = [];
-            b["Type"] = "Battery";
-            b["Percent"] = batteries.cumulativePercent;
-            if (pmSource.data["AC Adapter"] !== undefined) {
-                image = iconForBattery(b, pmSource.data["AC Adapter"]["Plugged in"] ? true : false);
-            }
-        } else {
-            var b = lowestBattery();
-            image = iconForBattery(b, false);
-        }
-    }
-
     if (powermanagementDisabled) {
-        text += i18n("Power management is disabled");
+        batteries.tooltipSubText = i18n("Power management is disabled");
+    } else {
+        batteries.tooltipSubText = "";
     }
-    batteries.tooltipText = text;
-    batteries.tooltipImage = image;
+
+    if (batteries.count == 0) {
+        batteries.tooltipImage = "battery-missing";
+        batteries.tooltipMainText = i18n("No Batteries Available");
+    } else if (batteries.allCharged) {
+        batteries.tooltipImage = "battery-100";
+        batteries.tooltipMainText = i18n("Fully Charged");
+    } else if (batteries.charging) {
+        batteries.tooltipImage = "battery-charging"
+        batteries.tooltipMainText = i18n("%1%. Charging", batteries.cumulativePercent);
+    } else {
+        batteries.tooltipImage = "battery-060"
+        batteries.tooltipMainText = i18n("%1% Battery Remaining", batteries.cumulativePercent);
+    }
 }
 
 function batteryItemToolTip(batteryData, remainingTime) {

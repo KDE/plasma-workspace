@@ -34,8 +34,8 @@ Item {
     LayoutMirroring.enabled: Qt.application.layoutDirection == Qt.RightToLeft
     LayoutMirroring.childrenInherit: true
 
-    Plasmoid.toolTipMainText: ""
-    Plasmoid.toolTipSubText: batteries.tooltipText
+    Plasmoid.toolTipMainText: batteries.tooltipMainText
+    Plasmoid.toolTipSubText: batteries.tooltipSubText
     Plasmoid.icon: batteries.tooltipImage
 
     ProcessRunner {
@@ -95,7 +95,8 @@ Item {
         // false --> one of the batteries charging/discharging
         property bool allCharged
         property bool charging
-        property string tooltipText
+        property string tooltipMainText
+        property string tooltipSubText
         property string tooltipImage
     }
 
