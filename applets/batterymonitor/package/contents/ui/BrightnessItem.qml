@@ -34,8 +34,6 @@ FocusScope {
     property alias value: brightnessSlider.value
     property int percentage: 0
 
-    signal changed(int screenBrightness)
-
     PlasmaCore.IconItem {
         id: brightnessIcon
         width: units.iconSizes.medium
@@ -69,7 +67,6 @@ FocusScope {
         maximumValue: 100
         stepSize: 10
         focus: true
-        onValueChanged: changed(value)
     }
 
     Components.Label {

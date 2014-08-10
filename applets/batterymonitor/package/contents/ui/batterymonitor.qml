@@ -38,6 +38,32 @@ Item {
     Plasmoid.toolTipSubText: batteries.tooltipSubText
     Plasmoid.icon: batteries.tooltipImage
 
+    property bool disableBrightnessUpdate: false
+
+    property int screenBrightness
+    property int screenBrightnessPercentage
+    property int keyboardBrightness
+    property int keyboardBrightnessPercentage
+
+    onScreenBrightnessChanged: {
+        if (disableBrightnessUpdate) {
+            return;
+        }
+        var service = pmSource.serviceForSource("PowerDevil");
+        var operation = service.operationDescription("setBrightness");
+        operation.brightness = screenBrightness;
+        service.startOperationCall(operation);
+    }
+    onKeyboardBrightnessChanged: {
+        if (disableBrightnessUpdate) {
+            return;
+        }
+        var service = pmSource.serviceForSource("PowerDevil");
+        var operation = service.operationDescription("setKeyboardBrightness");
+        operation.brightness = keyboardBrightness;
+        service.startOperationCall(operation);
+    }
+
     ProcessRunner {
         id: processRunner
     }
@@ -48,6 +74,7 @@ Item {
 
     Component.onCompleted: {
         updateLogic();
+        Logic.updateBrightness(batterymonitor, pmSource);
         plasmoid.removeAction("configure");
         plasmoid.setAction("powerdevilkcm", i18n("&Configure Power Saving..."), "preferences-system-power-management");
     }
@@ -71,6 +98,7 @@ Item {
         onSourceRemoved: {
             disconnectSource(source);
         }
+        onDataChanged: Logic.updateBrightness(batterymonitor, pmSource)
     }
 
     property QtObject batteries: PlasmaCore.SortFilterModel {
@@ -85,7 +113,7 @@ Item {
                 dataSource: pmSource
                 sourceFilter: "Battery[0-9]+"
 
-                onDataChanged: updateLogic(false)
+                onDataChanged: updateLogic()
             }
         }
 
@@ -110,8 +138,6 @@ Item {
         anchors.fill: parent
         focus: true
 
-        property bool disableBrightnessUpdate: false
-
         isBrightnessAvailable: pmSource.data["PowerDevil"]["Screen Brightness Available"] ? true : false
         isKeyboardBrightnessAvailable: pmSource.data["PowerDevil"]["Keyboard Brightness Available"] ? true : false
 
@@ -119,36 +145,6 @@ Item {
 
         pluggedIn: pmSource.data["AC Adapter"] != undefined && pmSource.data["AC Adapter"]["Plugged in"]
 
-        Component.onCompleted: {
-            Logic.updateBrightness(dialogItem, pmSource);
-            dialogItem.forceActiveFocus();
-        }
-
-        Connections {
-            target: pmSource
-            onDataChanged : {
-                Logic.updateBrightness(dialogItem, pmSource);
-            }
-        }
-
-        onBrightnessChanged: {
-            if (disableBrightnessUpdate) {
-                return;
-            }
-            var service = pmSource.serviceForSource("PowerDevil");
-            var operation = service.operationDescription("setBrightness");
-            operation.brightness = screenBrightness;
-            service.startOperationCall(operation);
-        }
-        onKeyboardBrightnessChanged: {
-            if (disableBrightnessUpdate) {
-                return;
-            }
-            var service = pmSource.serviceForSource("PowerDevil");
-            var operation = service.operationDescription("setKeyboardBrightness");
-            operation.brightness = keyboardBrightness;
-            service.startOperationCall(operation);
-        }
         property int cookie1: -1
         property int cookie2: -1
         onPowermanagementChanged: {

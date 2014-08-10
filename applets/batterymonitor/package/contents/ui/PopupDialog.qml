@@ -35,15 +35,8 @@ FocusScope {
     property int remainingTime
 
     property bool isBrightnessAvailable
-    property alias screenBrightness: brightnessSlider.value
-    property alias screenBrightnessPercentage: brightnessSlider.percentage
-
     property bool isKeyboardBrightnessAvailable
-    property alias keyboardBrightness: keyboardBrightnessSlider.value
-    property alias keyboardBrightnessPercentage: keyboardBrightnessSlider.percentage
 
-    signal brightnessChanged(int screenBrightness)
-//    signal keyboardBrightnessChanged(int keyboardBrightness)
     signal powermanagementChanged(bool checked)
 
     state: plasmoid.location == PlasmaCore.Types.BottomEdge ? "Bottom" : ""
@@ -108,7 +101,9 @@ FocusScope {
             icon: "video-display-brightness"
             label: i18n("Display Brightness")
             visible: isBrightnessAvailable
-            onChanged: brightnessChanged(value)
+            value: batterymonitor.screenBrightness
+            percentage: batterymonitor.screenBrightnessPercentage
+            onValueChanged: batterymonitor.screenBrightness = value
             KeyNavigation.tab: keyboardBrightnessSlider
             KeyNavigation.backtab: batteryList
             focus: true
@@ -118,8 +113,10 @@ FocusScope {
             id: keyboardBrightnessSlider
             icon: "input-keyboard-brightness"
             label: i18n("Keyboard Brightness")
+            value: batterymonitor.keyboardBrightness
+            percentage: batterymonitor.keyboardBrightnessPercentage
             visible: isKeyboardBrightnessAvailable
-            onChanged: keyboardBrightnessChanged(value)
+            onValueChanged: batterymonitor.keyboardBrightness = value
             KeyNavigation.tab: pmSwitch
             KeyNavigation.backtab: brightnessSlider
         }
