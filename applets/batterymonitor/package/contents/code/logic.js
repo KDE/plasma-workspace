@@ -100,7 +100,7 @@ function lowestBattery() {
 function stringForBatteryState(batteryData) {
     if (batteryData["Plugged in"]) {
         switch(batteryData["State"]) {
-            case "NoCharge": return "" // FIXME string freeze return i18n("Not Charging");
+            case "NoCharge": return i18n("Not Charging");
             case "Discharging": return i18n("Discharging");
             case "FullyCharged": return i18n("Fully Charged");
             default: return i18n("Charging");
