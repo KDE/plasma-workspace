@@ -135,6 +135,9 @@ void KCMLookandFeel::load()
             row->setData(!cg.readEntry("widgetStyle", QString()).isEmpty(), HasWidgetStyleRole);
             cg = KConfigGroup(conf, "Icons");
             row->setData(!cg.readEntry("Theme", QString()).isEmpty(), HasIconsRole);
+
+            cg = KConfigGroup(conf, "PlasmaTheme");
+            row->setData(!cg.readEntry("name", QString()).isEmpty(), HasPlasmaThemeRole);
         }
 
         m_model->appendRow(row);
