@@ -75,7 +75,7 @@ void ContextMenu::restore(const KConfigGroup &config)
         actions.insert("configure shortcuts", false);
         m_actionOrder << "_context" << "_run_command" << "add widgets" << "_add panel"
                       << "manage activities" << "remove" << "lock widgets" << "_sep1"
-                      <<"_lock_screen" << "_logout" << "_sep2" << "configure"
+                      <<"_lock_screen" << "_logout" << "_sep2" << "run associated application" << "configure"
                       << "configure shortcuts" << "_sep3" << "_wallpaper";
         disabled.insert("configure shortcuts");
     }
