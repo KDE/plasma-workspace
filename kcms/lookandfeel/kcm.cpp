@@ -157,7 +157,11 @@ void KCMLookandFeel::save()
         QString colorsFile = package.filePath("colors");
         QString colorScheme = cg.readEntry("ColorScheme", QString());
         if (!colorsFile.isEmpty()) {
-            setColors(colorsFile);
+            if (!colorScheme.isEmpty()) {
+                setColors(colorScheme, colorsFile);
+            } else {
+                setColors(package.metadata().name(), colorsFile);
+            }
         } else if (!colorScheme.isEmpty()) {
             colorScheme.remove('\''); // So Foo's does not become FooS
             QRegExp fixer("[\\W,.-]+(.?)");
@@ -166,7 +170,7 @@ void KCMLookandFeel::save()
                 colorScheme.replace(offset, fixer.matchedLength(), fixer.cap(1).toUpper());
             colorScheme.replace(0, 1, colorScheme.at(0).toUpper());
             QString src = QStandardPaths::locate(QStandardPaths::GenericDataLocation, "color-schemes/" +  colorScheme + ".colors");
-            setColors(src);
+            setColors(colorScheme, src);
         }
 
         cg = KConfigGroup(conf, "Icons");
@@ -183,17 +187,25 @@ void KCMLookandFeel::defaults()
 
 void KCMLookandFeel::setWidgetStyle(const QString &style)
 {
-    //TODO
+    m_configGroup.writeEntry("widgetStyle", style);
 }
 
-void KCMLookandFeel::setColors(const QString &colorFile)
+void KCMLookandFeel::setColors(const QString &scheme, const QString &colorFile)
 {
-    //TODO
+    m_configGroup.writeEntry("ColorScheme", scheme);
+
+    KSharedConfigPtr conf = KSharedConfig::openConfig(colorFile);
+    foreach (const QString &grp, conf->groupList()) {
+      KConfigGroup cg(conf, grp);
+      KConfigGroup cg2(&m_config, grp);
+      cg.copyTo(&cg2);
+  }
 }
 
 void KCMLookandFeel::setIcons(const QString &theme)
 {
-    //TODO
+    KConfigGroup cg(&m_config, "Icons");
+    cg.writeEntry("Theme", theme);
 }
 
 #include "kcm.moc"

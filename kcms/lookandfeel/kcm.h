@@ -57,7 +57,7 @@ public:
 
     //Setters of the various theme pieces
     void setWidgetStyle(const QString &style);
-    void setColors(const QString &colorFile);
+    void setColors(const QString &scheme, const QString &colorFile);
     void setIcons(const QString &theme);
 
 public Q_SLOTS:
