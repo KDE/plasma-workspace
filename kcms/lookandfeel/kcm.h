@@ -55,6 +55,11 @@ public:
     QString selectedPlugin() const;
     void setSelectedPlugin(const QString &plugin);
 
+    //Setters of the various theme pieces
+    void setWidgetStyle(const QString &style);
+    void setColors(const QString &colorFile);
+    void setIcons(const QString &theme);
+
 public Q_SLOTS:
     void load();
     void save();

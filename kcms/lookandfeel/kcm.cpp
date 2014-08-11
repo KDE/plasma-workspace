@@ -140,13 +140,60 @@ void KCMLookandFeel::load()
 
 void KCMLookandFeel::save()
 {
+    Plasma::Package package = Plasma::PluginLoader::self()->loadPackage("Plasma/LookAndFeel");
+    package.setPath(m_selectedPlugin);
+
+    if (!package.isValid()) {
+        return;
+    }
+
     m_configGroup.writeEntry("LookAndFeelPackage", m_selectedPlugin);
+
+    if (!package.filePath("defaults").isEmpty()) {
+        KSharedConfigPtr conf = KSharedConfig::openConfig(package.filePath("defaults"));
+        KConfigGroup cg(conf, "KDE");
+        setWidgetStyle(cg.readEntry("widgetStyle", QString()));
+
+        QString colorsFile = package.filePath("colors");
+        QString colorScheme = cg.readEntry("ColorScheme", QString());
+        if (!colorsFile.isEmpty()) {
+            setColors(colorsFile);
+        } else if (!colorScheme.isEmpty()) {
+            colorScheme.remove('\''); // So Foo's does not become FooS
+            QRegExp fixer("[\\W,.-]+(.?)");
+            int offset;
+            while ((offset = fixer.indexIn(colorScheme)) >= 0)
+                colorScheme.replace(offset, fixer.matchedLength(), fixer.cap(1).toUpper());
+            colorScheme.replace(0, 1, colorScheme.at(0).toUpper());
+            QString src = QStandardPaths::locate(QStandardPaths::GenericDataLocation, "color-schemes/" +  colorScheme + ".colors");
+            setColors(src);
+        }
+
+        cg = KConfigGroup(conf, "Icons");
+        setIcons(cg.readEntry("Theme", QString()));
+    }
+
     m_configGroup.sync();
 }
 
 void KCMLookandFeel::defaults()
 {
     setSelectedPlugin(m_access.metadata().pluginName());
+}
+
+void KCMLookandFeel::setWidgetStyle(const QString &style)
+{
+    //TODO
+}
+
+void KCMLookandFeel::setColors(const QString &colorFile)
+{
+    //TODO
+}
+
+void KCMLookandFeel::setIcons(const QString &theme)
+{
+    //TODO
 }
 
 #include "kcm.moc"
