@@ -58,6 +58,14 @@ KCMLookandFeel::KCMLookandFeel(QWidget* parent, const QVariantList& args)
     QHash<int, QByteArray> roles = m_model->roleNames();
     roles[PluginNameRole] = "pluginName";
     roles[ScreenhotRole] = "screenshot";
+    roles[HasSplashRole] = "hasSplash";
+    roles[HasLockScreenRole] = "hasLockScreen";
+    roles[HasRunCommandRole] = "hasRunCommand";
+    roles[HasLogoutRole] = "hasLogout";
+
+    roles[HasColorsRole] = "hasColors";
+    roles[HasWidgetStyle] = "hasWidgetStyle";
+    roles[HasIconsRole] = "hasIcons";
     m_model->setItemRoleNames(roles);
     QVBoxLayout* layout = new QVBoxLayout(this);
 
@@ -101,10 +109,17 @@ void KCMLookandFeel::load()
     m_model->clear();
 
     const QList<Plasma::Package> pkgs = LookAndFeelAccess::availablePackages();
-    for (const Plasma::Package &pkg : pkgs) {qWarning()<<"EEEE";
+    for (const Plasma::Package &pkg : pkgs) {
         QStandardItem* row = new QStandardItem(pkg.metadata().name());
         row->setData(pkg.metadata().pluginName(), PluginNameRole);
         row->setData(pkg.filePath("screenshot"), ScreenhotRole);
+
+        //What the package provides
+        row->setData(pkg.filePath("splashmainscript"), HasSplashRole);
+        row->setData(pkg.filePath("lockscreenmainscript"), HasLockScreenRole);
+        row->setData(pkg.filePath("runcommandmainscript"), HasRunCommandRole);
+        row->setData(pkg.filePath("runcommandmainscript"), HasLogoutRole);
+
         m_model->appendRow(row);
     }
 }

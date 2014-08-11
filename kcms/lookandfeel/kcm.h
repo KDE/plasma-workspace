@@ -39,7 +39,14 @@ class KCMLookandFeel : public KCModule
 public:
     enum Roles {
         PluginNameRole = Qt::UserRole +1,
-        ScreenhotRole
+        ScreenhotRole,
+        HasSplashRole,
+        HasLockScreenRole,
+        HasRunCommandRole,
+        HasLogoutRole,
+        HasColorsRole,
+        HasWidgetStyle,
+        HasIconsRole
     };
     KCMLookandFeel(QWidget* parent, const QVariantList& args);
 
