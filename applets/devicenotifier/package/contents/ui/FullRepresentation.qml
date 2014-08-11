@@ -43,7 +43,8 @@ MouseArea {
 
         PlasmaComponents.Label {
             id: header
-            text: filterModel.count>0 ? i18n("Available Devices") : i18n("No Devices Available")
+            text: i18n("No Devices Available")
+            visible: filterModel.count == 0
             Layout.fillWidth: true
         }
 
@@ -93,12 +94,10 @@ MouseArea {
                             }
                             height: lineSvg.elementSize("horizontal-line").height
                         }
-                        PlasmaComponents.Label {
-                            x: 8
-                            y: 8
-                            enabled: false
+                        PlasmaExtras.Heading {
+                            level: 3
+                            opacity: 0.6
                             text: section
-                            color: theme.textColor
                         }
                     }
                 }
