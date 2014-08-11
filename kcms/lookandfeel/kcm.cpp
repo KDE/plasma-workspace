@@ -64,7 +64,7 @@ KCMLookandFeel::KCMLookandFeel(QWidget* parent, const QVariantList& args)
     roles[HasLogoutRole] = "hasLogout";
 
     roles[HasColorsRole] = "hasColors";
-    roles[HasWidgetStyle] = "hasWidgetStyle";
+    roles[HasWidgetStyleRole] = "hasWidgetStyle";
     roles[HasIconsRole] = "hasIcons";
     m_model->setItemRoleNames(roles);
     QVBoxLayout* layout = new QVBoxLayout(this);
@@ -115,10 +115,23 @@ void KCMLookandFeel::load()
         row->setData(pkg.filePath("screenshot"), ScreenhotRole);
 
         //What the package provides
-        row->setData(pkg.filePath("splashmainscript"), HasSplashRole);
-        row->setData(pkg.filePath("lockscreenmainscript"), HasLockScreenRole);
-        row->setData(pkg.filePath("runcommandmainscript"), HasRunCommandRole);
-        row->setData(pkg.filePath("runcommandmainscript"), HasLogoutRole);
+        row->setData(!pkg.filePath("splashmainscript").isEmpty(), HasSplashRole);
+        row->setData(!pkg.filePath("lockscreenmainscript").isEmpty(), HasLockScreenRole);
+        row->setData(!pkg.filePath("runcommandmainscript").isEmpty(), HasRunCommandRole);
+        row->setData(!pkg.filePath("logoutmainscript").isEmpty(), HasLogoutRole);
+
+        if (!pkg.filePath("defaults").isEmpty()) {
+            KSharedConfigPtr conf = KSharedConfig::openConfig(pkg.filePath("defaults"));
+            KConfigGroup cg(conf, "KDE");
+            bool hasColors = !cg.readEntry("ColorScheme", QString()).isEmpty();
+            row->setData(hasColors, HasColorsRole);
+            if (!hasColors) {
+                hasColors = !pkg.filePath("colors").isEmpty();
+            }
+            row->setData(!cg.readEntry("widgetStyle", QString()).isEmpty(), HasWidgetStyleRole);
+            cg = KConfigGroup(conf, "Icons");
+            row->setData(!cg.readEntry("Theme", QString()).isEmpty(), HasIconsRole);
+        }
 
         m_model->appendRow(row);
     }

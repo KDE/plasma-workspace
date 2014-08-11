@@ -45,7 +45,7 @@ public:
         HasRunCommandRole,
         HasLogoutRole,
         HasColorsRole,
-        HasWidgetStyle,
+        HasWidgetStyleRole,
         HasIconsRole
     };
     KCMLookandFeel(QWidget* parent, const QVariantList& args);
