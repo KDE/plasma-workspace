@@ -138,8 +138,16 @@ Item {
         subText: plasmoid.expanded ? i18n("Hide icons") : i18n("Show hidden icons")
 
         MouseArea {
+            id: arrowMouseArea
             anchors.fill: parent
             onClicked: plasmoid.expanded = !plasmoid.expanded
+
+            readonly property int arrowAnimationDuration: units.shortDuration * 3
+
+            PlasmaCore.Svg {
+                id: arrowSvg
+                imagePath: "widgets/arrows"
+            }
 
             PlasmaCore.SvgItem {
                 id: arrow
@@ -148,21 +156,62 @@ Item {
                 width: Math.min(parent.width, parent.height)
                 height: width
 
-                svg: PlasmaCore.Svg { imagePath: "widgets/arrows" }
-                elementId: {
-
-                    var exp = plasmoid.expanded; // flip for bottom edge and right edge
-
-                    if (plasmoid.location == PlasmaCore.Types.BottomEdge) {
-                        return (exp) ? "down-arrow" : "up-arrow"
-                    } else if (plasmoid.location == PlasmaCore.Types.TopEdge) {
-                        return (exp) ? "up-arrow" : "down-arrow"
-                    } else if (plasmoid.location == PlasmaCore.Types.LeftEdge) {
-                        return (exp) ? "left-arrow" : "right-arrow"
-                    } else {
-                        return (exp) ? "right-arrow" : "left-arrow"
+                rotation: plasmoid.expanded ? 180 : 0
+                Behavior on rotation {
+                    RotationAnimation {
+                        duration: arrowMouseArea.arrowAnimationDuration
                     }
+                }
+                opacity: plasmoid.expanded ? 0 : 1
+                Behavior on opacity {
+                    NumberAnimation {
+                        duration: arrowMouseArea.arrowAnimationDuration
+                    }
+                }
 
+                svg: arrowSvg
+                elementId: {
+                    if (plasmoid.location == PlasmaCore.Types.BottomEdge) {
+                        return "up-arrow"
+                    } else if (plasmoid.location == PlasmaCore.Types.TopEdge) {
+                        return "down-arrow"
+                    } else if (plasmoid.location == PlasmaCore.Types.LeftEdge) {
+                        return "right-arrow"
+                    } else {
+                        return "left-arrow"
+                    }
+                }
+            }
+
+            PlasmaCore.SvgItem {
+                anchors.centerIn: parent
+                width: arrow.width
+                height: arrow.height
+
+                rotation: plasmoid.expanded ? 0 : -180
+                Behavior on rotation {
+                    RotationAnimation {
+                        duration: arrowMouseArea.arrowAnimationDuration
+                    }
+                }
+                opacity: plasmoid.expanded ? 1 : 0
+                Behavior on opacity {
+                    NumberAnimation {
+                        duration: arrowMouseArea.arrowAnimationDuration
+                    }
+                }
+
+                svg: arrowSvg
+                elementId: {
+                    if (plasmoid.location == PlasmaCore.Types.BottomEdge) {
+                        return "down-arrow"
+                    } else if (plasmoid.location == PlasmaCore.Types.TopEdge) {
+                        return "up-arrow"
+                    } else if (plasmoid.location == PlasmaCore.Types.LeftEdge) {
+                        return "left-arrow"
+                    } else {
+                        return "right-arrow"
+                    }
                 }
             }
         }
