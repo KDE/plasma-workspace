@@ -36,6 +36,11 @@ class KCMLookandFeel : public KCModule
     Q_PROPERTY(QStandardItemModel *lookAndFeelModel READ lookAndFeelModel CONSTANT)
     Q_PROPERTY(QString selectedPlugin READ selectedPlugin WRITE setSelectedPlugin NOTIFY selectedPluginChanged)
 
+    Q_PROPERTY(bool applyColors READ applyColors WRITE setApplyColors NOTIFY applyColorsChanged)
+    Q_PROPERTY(bool applyWidgetStyle READ applyWidgetStyle WRITE setApplyWidgetStyle NOTIFY applyWidgetStyleChanged)
+    Q_PROPERTY(bool applyIcons READ applyIcons WRITE setApplyIcons NOTIFY applyIconsChanged)
+    Q_PROPERTY(bool applyPlasmaTheme READ applyPlasmaTheme WRITE setApplyPlasmaTheme NOTIFY applyPlasmaThemeChanged)
+
 public:
     enum Roles {
         PluginNameRole = Qt::UserRole +1,
@@ -59,6 +64,16 @@ public:
     void setWidgetStyle(const QString &style);
     void setColors(const QString &scheme, const QString &colorFile);
     void setIcons(const QString &theme);
+    void setPlasmaTheme(const QString &theme);
+
+    void setApplyColors(bool apply);
+    bool applyColors() const;
+    void setApplyWidgetStyle(bool apply);
+    bool applyWidgetStyle() const;
+    void setApplyIcons(bool apply);
+    bool applyIcons() const;
+    void setApplyPlasmaTheme(bool apply);
+    bool applyPlasmaTheme() const;
 
 public Q_SLOTS:
     void load();
@@ -68,6 +83,11 @@ public Q_SLOTS:
 Q_SIGNALS:
     void selectedPluginChanged();
 
+    void applyColorsChanged();
+    void applyWidgetStyleChanged();
+    void applyIconsChanged();
+    void applyPlasmaThemeChanged();
+
 private:
     QQuickWidget *m_quickWidget;
     QStandardItemModel *m_model;
@@ -76,6 +96,11 @@ private:
 
     KConfig m_config;
     KConfigGroup m_configGroup;
+
+    bool m_applyColors : 1;
+    bool m_applyWidgetStyle : 1;
+    bool m_applyIcons : 1;
+    bool m_applyPlasmaTheme : 1;
 };
 
 #endif

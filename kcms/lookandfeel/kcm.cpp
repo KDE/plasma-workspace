@@ -46,6 +46,10 @@ KCMLookandFeel::KCMLookandFeel(QWidget* parent, const QVariantList& args)
     : KCModule(parent, args)
     , m_config("kdeglobals")
     , m_configGroup(m_config.group("KDE"))
+    , m_applyColors(false)
+    , m_applyWidgetStyle(false)
+    , m_applyIcons(false)
+    , m_applyPlasmaTheme(false)
 {
     qmlRegisterType<QStandardItemModel>();
     KAboutData* about = new KAboutData("kcm_lookandfeel", i18n("Configure Splash screen details"),
@@ -152,29 +156,40 @@ void KCMLookandFeel::save()
     if (!package.filePath("defaults").isEmpty()) {
         KSharedConfigPtr conf = KSharedConfig::openConfig(package.filePath("defaults"));
         KConfigGroup cg(conf, "KDE");
-        setWidgetStyle(cg.readEntry("widgetStyle", QString()));
-
-        QString colorsFile = package.filePath("colors");
-        QString colorScheme = cg.readEntry("ColorScheme", QString());
-        if (!colorsFile.isEmpty()) {
-            if (!colorScheme.isEmpty()) {
-                setColors(colorScheme, colorsFile);
-            } else {
-                setColors(package.metadata().name(), colorsFile);
-            }
-        } else if (!colorScheme.isEmpty()) {
-            colorScheme.remove('\''); // So Foo's does not become FooS
-            QRegExp fixer("[\\W,.-]+(.?)");
-            int offset;
-            while ((offset = fixer.indexIn(colorScheme)) >= 0)
-                colorScheme.replace(offset, fixer.matchedLength(), fixer.cap(1).toUpper());
-            colorScheme.replace(0, 1, colorScheme.at(0).toUpper());
-            QString src = QStandardPaths::locate(QStandardPaths::GenericDataLocation, "color-schemes/" +  colorScheme + ".colors");
-            setColors(colorScheme, src);
+        if (m_applyWidgetStyle) {
+            setWidgetStyle(cg.readEntry("widgetStyle", QString()));
         }
 
-        cg = KConfigGroup(conf, "Icons");
-        setIcons(cg.readEntry("Theme", QString()));
+        if (m_applyColors) {
+            QString colorsFile = package.filePath("colors");
+            QString colorScheme = cg.readEntry("ColorScheme", QString());
+            if (!colorsFile.isEmpty()) {
+                if (!colorScheme.isEmpty()) {
+                    setColors(colorScheme, colorsFile);
+                } else {
+                    setColors(package.metadata().name(), colorsFile);
+                }
+            } else if (!colorScheme.isEmpty()) {
+                colorScheme.remove('\''); // So Foo's does not become FooS
+                QRegExp fixer("[\\W,.-]+(.?)");
+                int offset;
+                while ((offset = fixer.indexIn(colorScheme)) >= 0)
+                    colorScheme.replace(offset, fixer.matchedLength(), fixer.cap(1).toUpper());
+                colorScheme.replace(0, 1, colorScheme.at(0).toUpper());
+                QString src = QStandardPaths::locate(QStandardPaths::GenericDataLocation, "color-schemes/" +  colorScheme + ".colors");
+                setColors(colorScheme, src);
+            }
+        }
+
+        if (m_applyIcons) {
+            cg = KConfigGroup(conf, "Icons");
+            setIcons(cg.readEntry("Theme", QString()));
+        }
+
+        if (m_applyPlasmaTheme) {
+            cg = KConfigGroup(conf, "PlasmaTheme");
+            setPlasmaTheme(cg.readEntry("name", QString()));
+        }
     }
 
     m_configGroup.sync();
@@ -187,11 +202,19 @@ void KCMLookandFeel::defaults()
 
 void KCMLookandFeel::setWidgetStyle(const QString &style)
 {
+    if (style.isEmpty()) {
+        return;
+    }
+
     m_configGroup.writeEntry("widgetStyle", style);
 }
 
 void KCMLookandFeel::setColors(const QString &scheme, const QString &colorFile)
 {
+    if (scheme.isEmpty() || colorFile.isEmpty()) {
+        return;
+    }
+
     m_configGroup.writeEntry("ColorScheme", scheme);
 
     KSharedConfigPtr conf = KSharedConfig::openConfig(colorFile);
@@ -204,8 +227,83 @@ void KCMLookandFeel::setColors(const QString &scheme, const QString &colorFile)
 
 void KCMLookandFeel::setIcons(const QString &theme)
 {
+    if (theme.isEmpty()) {
+        return;
+    }
+
     KConfigGroup cg(&m_config, "Icons");
     cg.writeEntry("Theme", theme);
+}
+
+void KCMLookandFeel::setPlasmaTheme(const QString &theme)
+{
+    if (theme.isEmpty()) {
+        return;
+    }
+
+    KConfig config("plasmarc");
+    KConfigGroup cg(&config, "Theme");
+    cg.writeEntry("name", theme);
+}
+
+void KCMLookandFeel::setApplyColors(bool apply)
+{
+    if (m_applyColors == apply) {
+        return;
+    }
+
+    m_applyColors = apply;
+    emit applyColorsChanged();
+}
+
+bool KCMLookandFeel::applyColors() const
+{
+    return m_applyColors;
+}
+
+void KCMLookandFeel::setApplyWidgetStyle(bool apply)
+{
+    if (m_applyWidgetStyle == apply) {
+        return;
+    }
+
+    m_applyWidgetStyle = apply;
+    emit applyWidgetStyleChanged();
+}
+
+bool KCMLookandFeel::applyWidgetStyle() const
+{
+    return m_applyWidgetStyle;
+}
+
+void KCMLookandFeel::setApplyIcons(bool apply)
+{
+    if (m_applyIcons == apply) {
+        return;
+    }
+
+    m_applyIcons = apply;
+    emit applyIconsChanged();
+}
+
+bool KCMLookandFeel::applyIcons() const
+{
+    return m_applyIcons;
+}
+
+void KCMLookandFeel::setApplyPlasmaTheme(bool apply)
+{
+    if (m_applyPlasmaTheme == apply) {
+        return;
+    }
+
+    m_applyPlasmaTheme = apply;
+    emit applyPlasmaThemeChanged();
+}
+
+bool KCMLookandFeel::applyPlasmaTheme() const
+{
+    return m_applyPlasmaTheme;
 }
 
 #include "kcm.moc"
