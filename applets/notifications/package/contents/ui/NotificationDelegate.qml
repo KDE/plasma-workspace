@@ -25,7 +25,7 @@ PlasmaComponents.ListItem {
     id: notificationItem
     width: popupFlickable.width
 
-    property int layoutSpacing: 4
+    property int layoutSpacing: units.smallSpacing
     property int toolIconSize: units.iconSizes.smallMedium
 
     opacity: 1-Math.abs(x)/width
@@ -145,7 +145,7 @@ PlasmaComponents.ListItem {
                     anchors {
                         top: parent.top
                         right: closeButton.left
-                        rightMargin: 5
+                        rightMargin: units.smallSpacing
                     }
                     width: notificationItem.toolIconSize
                     height: width
@@ -207,8 +207,8 @@ PlasmaComponents.ListItem {
                         left: appIconItem.right
                         right: actionsColumn.left
                         verticalCenter: parent.verticalCenter
-                        leftMargin: 6
-                        rightMargin: 6
+                        leftMargin: units.smallSpacing * 2
+                        rightMargin: units.smallSpacing * 2
                     }
                     height: bodyText.paintedHeight
 
@@ -248,7 +248,7 @@ PlasmaComponents.ListItem {
                     id: actionsColumn
                     anchors {
                         right: parent.right
-                        rightMargin: 6
+                        rightMargin: units.smallSpacing
                         verticalCenter: parent.verticalCenter
                     }
 
