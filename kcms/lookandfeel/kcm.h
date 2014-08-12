@@ -66,6 +66,7 @@ public:
     void setColors(const QString &scheme, const QString &colorFile);
     void setIcons(const QString &theme);
     void setPlasmaTheme(const QString &theme);
+    void setCursorTheme(const QString theme);
 
     void setApplyColors(bool apply);
     bool applyColors() const;
@@ -102,6 +103,7 @@ private:
     bool m_applyWidgetStyle : 1;
     bool m_applyIcons : 1;
     bool m_applyPlasmaTheme : 1;
+    bool m_applyCursors : 1;
 };
 
 #endif

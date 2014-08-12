@@ -50,6 +50,7 @@ KCMLookandFeel::KCMLookandFeel(QWidget* parent, const QVariantList& args)
     , m_applyWidgetStyle(true)
     , m_applyIcons(true)
     , m_applyPlasmaTheme(true)
+    , m_applyCursors(true)
 {
     qmlRegisterType<QStandardItemModel>();
     KAboutData* about = new KAboutData("kcm_lookandfeel", i18n("Configure Splash screen details"),
@@ -199,6 +200,12 @@ void KCMLookandFeel::save()
             cg = KConfigGroup(&cg, "Theme");
             setPlasmaTheme(cg.readEntry("name", QString()));
         }
+
+        if (m_applyCursors) {
+            cg = KConfigGroup(conf, "kcminputrc");
+            cg = KConfigGroup(&cg, "Mouse");
+            setPlasmaTheme(cg.readEntry("cursorTheme", QString()));
+        }
     }
 
     m_configGroup.sync();
@@ -254,6 +261,19 @@ void KCMLookandFeel::setPlasmaTheme(const QString &theme)
     KConfig config("plasmarc");
     KConfigGroup cg(&config, "Theme");
     cg.writeEntry("name", theme);
+    cg.sync();
+}
+
+void KCMLookandFeel::setCursorTheme(const QString theme)
+{
+    //TODO: use pieces of cursor kcm when moved to plasma-desktop
+    if (theme.isEmpty()) {
+        return;
+    }
+
+    KConfig config("kcminputrc");
+    KConfigGroup cg(&config, "Mouse");
+    cg.writeEntry("cursorTheme", theme);
     cg.sync();
 }
 

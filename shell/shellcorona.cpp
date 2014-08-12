@@ -176,7 +176,7 @@ ShellCorona::ShellCorona(QObject *parent)
     themeName = plasmarc.readEntry(themeNameKey, themeName);
 
     if (themeName.isEmpty()) {
-        const KConfigGroup lnfCfg = KConfigGroup(KSharedConfig::openConfig(
+        KConfigGroup lnfCfg = KConfigGroup(KSharedConfig::openConfig(
                                                 lookAndFeelPackage().filePath("defaults")),
                                                 "plasmarc"
                                            );
