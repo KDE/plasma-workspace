@@ -71,6 +71,8 @@ KCMLookandFeel::KCMLookandFeel(QWidget* parent, const QVariantList& args)
     roles[HasColorsRole] = "hasColors";
     roles[HasWidgetStyleRole] = "hasWidgetStyle";
     roles[HasIconsRole] = "hasIcons";
+    roles[HasPlasmaThemeRole] = "hasPlasmaTheme";
+    roles[HasCursorsRole] = "hasCursors";
     m_model->setItemRoleNames(roles);
     QVBoxLayout* layout = new QVBoxLayout(this);
 
@@ -142,6 +144,10 @@ void KCMLookandFeel::load()
             cg = KConfigGroup(conf, "kdeglobals");
             cg = KConfigGroup(&cg, "Theme");
             row->setData(!cg.readEntry("name", QString()).isEmpty(), HasPlasmaThemeRole);
+
+            cg = KConfigGroup(conf, "kcminputrc");
+            cg = KConfigGroup(&cg, "Mouse");
+            row->setData(!cg.readEntry("cursorTheme", QString()).isEmpty(), HasCursorsRole);
         }
 
         m_model->appendRow(row);

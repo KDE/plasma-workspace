@@ -52,7 +52,8 @@ public:
         HasColorsRole,
         HasWidgetStyleRole,
         HasIconsRole,
-        HasPlasmaThemeRole
+        HasPlasmaThemeRole,
+        HasCursorsRole
     };
     KCMLookandFeel(QWidget* parent, const QVariantList& args);
 
