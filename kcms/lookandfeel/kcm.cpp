@@ -116,7 +116,7 @@ void KCMLookandFeel::load()
     for (const Plasma::Package &pkg : pkgs) {
         QStandardItem* row = new QStandardItem(pkg.metadata().name());
         row->setData(pkg.metadata().pluginName(), PluginNameRole);
-        row->setData(pkg.filePath("screenshot"), ScreenhotRole);
+        row->setData(pkg.filePath("previews", "preview.png"), ScreenhotRole);
 
         //What the package provides
         row->setData(!pkg.filePath("splashmainscript").isEmpty(), HasSplashRole);

@@ -91,7 +91,7 @@ void ScreenLockerKcm::load()
     for (const Plasma::Package &pkg : pkgs) {
         QStandardItem* row = new QStandardItem(pkg.metadata().name());
         row->setData(pkg.metadata().pluginName(), PluginNameRole);
-        row->setData(pkg.filePath("lockscreen", "screenshot.png"), ScreenhotRole);
+        row->setData(pkg.filePath("previews", "lockscreen.png"), ScreenhotRole);
         m_model->appendRow(row);
     }
 }
