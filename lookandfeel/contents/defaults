@@ -1,10 +1,12 @@
-[KDE]
+[kdeglobals][KDE]
 widgetStyle=qtcurve
-SingleClick=true
 ColorScheme=Breeze
 
-[Icons]
+[kdeglobals][Icons]
 Theme=breeze
 
-[Theme]
+[plasmarc][Theme]
 name=default
+
+[kcminputrc][Mouse]
+cursorTheme=breeze

@@ -126,17 +126,20 @@ void KCMLookandFeel::load()
 
         if (!pkg.filePath("defaults").isEmpty()) {
             KSharedConfigPtr conf = KSharedConfig::openConfig(pkg.filePath("defaults"));
-            KConfigGroup cg(conf, "KDE");
+            KConfigGroup cg(conf, "kdeglobals");
+            cg = KConfigGroup(&cg, "KDE");
             bool hasColors = !cg.readEntry("ColorScheme", QString()).isEmpty();
             row->setData(hasColors, HasColorsRole);
             if (!hasColors) {
                 hasColors = !pkg.filePath("colors").isEmpty();
             }
             row->setData(!cg.readEntry("widgetStyle", QString()).isEmpty(), HasWidgetStyleRole);
-            cg = KConfigGroup(conf, "Icons");
+            cg = KConfigGroup(conf, "kdeglobals");
+            cg = KConfigGroup(&cg, "Icons");
             row->setData(!cg.readEntry("Theme", QString()).isEmpty(), HasIconsRole);
 
-            cg = KConfigGroup(conf, "PlasmaTheme");
+            cg = KConfigGroup(conf, "kdeglobals");
+            cg = KConfigGroup(&cg, "Theme");
             row->setData(!cg.readEntry("name", QString()).isEmpty(), HasPlasmaThemeRole);
         }
 
@@ -158,7 +161,8 @@ void KCMLookandFeel::save()
 
     if (!package.filePath("defaults").isEmpty()) {
         KSharedConfigPtr conf = KSharedConfig::openConfig(package.filePath("defaults"));
-        KConfigGroup cg(conf, "KDE");
+        KConfigGroup cg(conf, "kdeglobals");
+        cg = KConfigGroup(&cg, "KDE");
         if (m_applyWidgetStyle) {
             setWidgetStyle(cg.readEntry("widgetStyle", QString()));
         }
@@ -185,12 +189,14 @@ void KCMLookandFeel::save()
         }
 
         if (m_applyIcons) {
-            cg = KConfigGroup(conf, "Icons");
+            cg = KConfigGroup(conf, "kdeglobals");
+            cg = KConfigGroup(&cg, "Icons");
             setIcons(cg.readEntry("Theme", QString()));
         }
 
         if (m_applyPlasmaTheme) {
-            cg = KConfigGroup(conf, "Theme");
+            cg = KConfigGroup(conf, "plasmarc");
+            cg = KConfigGroup(&cg, "Theme");
             setPlasmaTheme(cg.readEntry("name", QString()));
         }
     }
