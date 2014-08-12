@@ -107,6 +107,7 @@ QString QalculateEngine::evaluate(const QString& expression)
     po.use_denominator_prefix = true;
     po.negative_exponents = false;
     po.lower_case_e = true;
+    po.base_display = BASE_DISPLAY_NORMAL;
 
     result.format(po);
 
