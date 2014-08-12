@@ -46,10 +46,10 @@ KCMLookandFeel::KCMLookandFeel(QWidget* parent, const QVariantList& args)
     : KCModule(parent, args)
     , m_config("kdeglobals")
     , m_configGroup(m_config.group("KDE"))
-    , m_applyColors(false)
-    , m_applyWidgetStyle(false)
-    , m_applyIcons(false)
-    , m_applyPlasmaTheme(false)
+    , m_applyColors(true)
+    , m_applyWidgetStyle(true)
+    , m_applyIcons(true)
+    , m_applyPlasmaTheme(true)
 {
     qmlRegisterType<QStandardItemModel>();
     KAboutData* about = new KAboutData("kcm_lookandfeel", i18n("Configure Splash screen details"),
@@ -210,6 +210,7 @@ void KCMLookandFeel::setWidgetStyle(const QString &style)
     }
 
     m_configGroup.writeEntry("widgetStyle", style);
+    m_configGroup.sync();
 }
 
 void KCMLookandFeel::setColors(const QString &scheme, const QString &colorFile)
