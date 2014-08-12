@@ -108,7 +108,7 @@ Rectangle {
             }
             Timer {
                 id: makeCurrentTimer
-                interval: 0
+                interval: 100
                 repeat: false
                 property int pendingIndex
                 onPendingIndexChanged: makeCurrentTimer.restart()
