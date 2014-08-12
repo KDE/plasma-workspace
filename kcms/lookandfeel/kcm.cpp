@@ -190,7 +190,7 @@ void KCMLookandFeel::save()
         }
 
         if (m_applyPlasmaTheme) {
-            cg = KConfigGroup(conf, "PlasmaTheme");
+            cg = KConfigGroup(conf, "Theme");
             setPlasmaTheme(cg.readEntry("name", QString()));
         }
     }
@@ -248,6 +248,7 @@ void KCMLookandFeel::setPlasmaTheme(const QString &theme)
     KConfig config("plasmarc");
     KConfigGroup cg(&config, "Theme");
     cg.writeEntry("name", theme);
+    cg.sync();
 }
 
 void KCMLookandFeel::setApplyColors(bool apply)
