@@ -29,7 +29,7 @@
     </entry>
 
     <entry name="extraItems" type="StringList">
-      <default>org.kde.plasma.devicenotifier,org.kde.plasma.notifications,org.kde.plasma.battery,org.kde.plasma.mediacontroller,org.kde.plasma.networkmanagement</default>
+      <default>org.kde.plasma.devicenotifier,org.kde.plasma.notifications,org.kde.plasma.battery,org.kde.plasma.mediacontroller,org.kde.plasma.networkmanagement,org.kde.plasma.clipboard</default>
     </entry>
     <entry name="hiddenItems" type="StringList">
       <default></default>
