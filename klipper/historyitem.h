@@ -21,10 +21,14 @@
 
 #include <QPixmap>
 
+class HistoryModel;
 class QString;
 class QMimeData;
 class QDataStream;
 
+class HistoryItem;
+typedef QSharedPointer<HistoryItem> HistoryItemPtr;
+typedef QSharedPointer<const HistoryItem> HistoryItemConstPtr;
 /**
  * An entry in the clipboard history.
  */
@@ -74,42 +78,31 @@ public:
      * Create an HistoryItem from MimeSources (i.e., clipboard data)
      * returns null if create fails (e.g, unsupported mimetype)
      */
-    static HistoryItem* create( const QMimeData* data );
+    static HistoryItemPtr create( const QMimeData* data );
 
     /**
      * Create an HistoryItem from data stream (i.e., disk file)
      * returns null if creation fails. In this case, the datastream
      * is left in an undefined state.
      */
-    static HistoryItem* create( QDataStream& dataStream );
-
-    /**
-     * Inserts this item between prev and next
-     */
-    void insertBetweeen(HistoryItem* prev, HistoryItem* next);
-
-    /**
-     * Chain this with next
-     */
-    void chain(HistoryItem* next);
+    static HistoryItemPtr create( QDataStream& dataStream );
 
     /**
      * previous item's uuid
+     * TODO: drop, only used in unit test now
      */
-    const QByteArray& previous_uuid() const {
-        return m_previous_uuid;
-    }
+    QByteArray previous_uuid() const;
 
     /**
      * next item's uuid
+     * TODO: drop, only used in unit test now
      */
-    const QByteArray& next_uuid() const {
-        return m_next_uuid;
-    }
+    QByteArray next_uuid() const;
+
+    void setModel(HistoryModel *model);
 private:
-    QByteArray m_previous_uuid;
     QByteArray m_uuid;
-    QByteArray m_next_uuid;
+    HistoryModel *m_model;
 };
 
 inline
@@ -126,5 +119,9 @@ QDataStream& operator<<( QDataStream& lhs, HistoryItem const * const rhs ) {
     return lhs;
 
 }
+
+Q_DECLARE_METATYPE(HistoryItem*)
+Q_DECLARE_METATYPE(HistoryItemPtr)
+Q_DECLARE_METATYPE(HistoryItemConstPtr)
 
 #endif

@@ -25,7 +25,7 @@
 #include "historystringitem.h"
 #include "urlgrabber.h"
 
-ClipCommandProcess::ClipCommandProcess(const ClipAction& action, const ClipCommand& command, const QString& clip, History* history, const HistoryItem* original_item) :
+ClipCommandProcess::ClipCommandProcess(const ClipAction& action, const ClipCommand& command, const QString& clip, History* history, HistoryItemConstPtr original_item) :
     KProcess(),
     m_history(history),
     m_historyItem(original_item),
@@ -55,7 +55,7 @@ ClipCommandProcess::ClipCommandProcess(const ClipAction& action, const ClipComma
         connect(this, SIGNAL(readyRead()), SLOT(slotStdOutputAvailable()));
     }
     if (command.output != ClipCommand::REPLACE) {
-        m_historyItem = 0L; // Don't replace
+        m_historyItem.clear();
     }
 
 }
@@ -68,7 +68,7 @@ void ClipCommandProcess::slotFinished(int /*exitCode*/, QProcess::ExitStatus /*n
             m_history->remove(m_historyItem);
         }
         if (!m_newhistoryItem.isEmpty()) {
-            m_history->insert(new HistoryStringItem(m_newhistoryItem));
+            m_history->insert(HistoryItemPtr(new HistoryStringItem(m_newhistoryItem)));
         }
     }
     deleteLater();

@@ -31,6 +31,7 @@
 
 class KToggleAction;
 class KActionCollection;
+class KlipperPopup;
 class URLGrabber;
 class QTime;
 class History;
@@ -38,6 +39,11 @@ class QAction;
 class QMenu;
 class QMimeData;
 class HistoryItem;
+
+enum class KlipperMode {
+    Standalone,
+    DataEngine
+};
 
 class Klipper : public QObject
 {
@@ -56,7 +62,7 @@ public Q_SLOTS:
   Q_SCRIPTABLE void showKlipperManuallyInvokeActionMenu();
 
 public:
-    Klipper(QObject* parent, const KSharedConfigPtr& config);
+    Klipper(QObject* parent, const KSharedConfigPtr& config, KlipperMode mode = KlipperMode::Standalone);
     ~Klipper();
 
     /**
@@ -68,14 +74,19 @@ public:
 
     void saveSettings() const;
 
+    KlipperPopup *popup() {
+        return m_popup;
+    }
+
+    void editData(const QSharedPointer<const HistoryItem> &item);
+#ifdef HAVE_PRISON
+    void showBarcode(const QSharedPointer<const HistoryItem> &item);
+#endif
+
 public Q_SLOTS:
     void saveSession();
     void slotHistoryTopChanged();
     void slotConfigure();
-    void slotEditData();
-#ifdef HAVE_PRISON
-    void slotShowBarcode();
-#endif
     void slotCycleNext();
     void slotCyclePrev();
 
@@ -108,7 +119,7 @@ protected:
     /**
      * Enter clipboard data in the history.
      */
-    HistoryItem* applyClipChanges( const QMimeData* data );
+    QSharedPointer<HistoryItem> applyClipChanges( const QMimeData* data );
 
     void setClipboard( const HistoryItem& item, int mode );
     bool ignoreClipboardChanges() const;
@@ -117,6 +128,7 @@ protected:
 
 Q_SIGNALS:
     void passivePopup(const QString& caption, const QString& text);
+    void editFinished(QSharedPointer< const HistoryItem > item, int result);
 
 public Q_SLOTS:
     void slotPopupMenu();
@@ -148,6 +160,7 @@ private:
     QTime m_showTimer;
 
     History* m_history;
+    KlipperPopup *m_popup;
     int m_overflowCounter;
 
     KToggleAction* m_toggleURLGrabAction;
@@ -192,6 +205,7 @@ private:
     bool blockFetchingNewData();
     QString cycleText() const;
     KActionCollection* m_collection;
+    KlipperMode m_mode;
 };
 
 #endif

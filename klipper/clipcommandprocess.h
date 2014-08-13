@@ -21,6 +21,7 @@
 #define CLIPCOMMANDPROCESS_H
 
 #include <KProcess>
+#include <QSharedPointer>
 
 class ClipAction;
 class History;
@@ -31,13 +32,13 @@ class ClipCommandProcess : public KProcess
 {
     Q_OBJECT
 public:
-    ClipCommandProcess(const ClipAction& action, const ClipCommand& command, const QString& clip, History* history = 0L, const HistoryItem* original_item = 0L);
+    ClipCommandProcess(const ClipAction& action, const ClipCommand& command, const QString& clip, History* history = 0L, QSharedPointer<const HistoryItem> original_item = QSharedPointer<const HistoryItem>());
 public Q_SLOTS:
     void slotStdOutputAvailable();
     void slotFinished(int exitCode, QProcess::ExitStatus newState);
 private:
     History* m_history;
-    const HistoryItem* m_historyItem;
+    QSharedPointer<const HistoryItem> m_historyItem;
     QString m_newhistoryItem;
 };
 

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE kcfg SYSTEM
+    "http://www.kde.org/standards/kcfg/1.0/kcfg.xsd">
+<kcfg>
+    <group name="select">
+    </group>
+    <group name="remove">
+    </group>
+    <group name="edit">
+    </group>
+    <group name="barcode">
+    </group>
+    <group name="action">
+    </group>
+    <group name="configureKlipper">
+    </group>
+    <group name="clearHistory">
+    </group>
+</kcfg>

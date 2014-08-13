@@ -27,6 +27,7 @@
 
 #include "klipper.h"
 #include "history.h"
+#include "historyitem.h"
 #include "klipperpopup.h"
 
 KlipperTray::KlipperTray()
@@ -40,8 +41,8 @@ KlipperTray::KlipperTray()
     setStandardActionsEnabled( false );
 
     m_klipper = new Klipper( this, KSharedConfig::openConfig());
-    setContextMenu( m_klipper->history()->popup() );
-    setAssociatedWidget( m_klipper->history()->popup() );
+    setContextMenu( m_klipper->popup() );
+    setAssociatedWidget( m_klipper->popup() );
     connect( m_klipper->history(), SIGNAL(changed()), SLOT(slotSetToolTipFromHistory()));
     slotSetToolTipFromHistory();
     connect( m_klipper, SIGNAL(passivePopup(QString,QString)), SLOT(slotPassivePopup(QString,QString)));
@@ -53,7 +54,7 @@ void KlipperTray::slotSetToolTipFromHistory()
     if (m_klipper->history()->empty()) {
         setToolTipSubTitle( i18n("Clipboard is empty"));
     } else {
-        const HistoryItem* top = m_klipper->history()->first();
+        HistoryItemConstPtr top = m_klipper->history()->first();
         if (top->text().length() <= TOOLTIP_LENGTH_LIMIT) {
             setToolTipSubTitle(top->text());
         } else {

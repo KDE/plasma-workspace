@@ -150,13 +150,13 @@ int PopupProxy::insertFromSpill( int index ) {
     // stop when the total number of items equal m_itemsPerMenu;
     int count = 0;
     int remainingHeight = m_menu_height - m_proxy_for_menu->sizeHint().height();
-    const HistoryItem* item = history->find(m_spill_uuid);
+    auto item = history->find(m_spill_uuid);
     if (!item) {
         return count;
     }
     do {
         if ( m_filter.indexIn( item->text() ) != -1) {
-            tryInsertItem( item, remainingHeight, index++ );
+            tryInsertItem( item.data(), remainingHeight, index++ );
             count++;
         }
         item = history->find(item->next_uuid());

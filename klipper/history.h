@@ -24,10 +24,9 @@
 #include <QHash>
 #include <QByteArray>
 
-#include "historyitem.h"
-
+class HistoryItem;
+class HistoryModel;
 class QAction;
-class KlipperPopup;
 
 class History : public QObject
 {
@@ -37,17 +36,12 @@ public:
     ~History();
 
     /**
-     * Return (toplevel) popup menu (or default view, of you like)
-     */
-    KlipperPopup* popup();
-
-    /**
      * Inserts item into clipboard history top
      * if duplicate entry exist, the older duplicate is deleted.
      * The duplicate concept is "deep", so that two text string
      * are considerd duplicate if identical.
      */
-    void insert( HistoryItem* item );
+    void insert(QSharedPointer<HistoryItem> item);
 
     /**
      * Inserts item into clipboard without any checks
@@ -55,37 +49,37 @@ public:
      * Don't use this unless you're reasonable certain
      * that no duplicates are introduced
      */
-    void forceInsert( HistoryItem* item );
+    void forceInsert(QSharedPointer<HistoryItem> item);
 
     /**
      * Remove (first) history item equal to item from history
      */
-    void remove( const HistoryItem* item  );
+    void remove( const QSharedPointer<const HistoryItem> &item  );
 
     /**
      * Traversal: Get first item
      */
-    const HistoryItem* first() const;
+    QSharedPointer<const HistoryItem> first() const;
 
     /**
      * Get item identified by uuid
      */
-    const HistoryItem* find(const QByteArray& uuid) const;
+    QSharedPointer<const HistoryItem> find(const QByteArray& uuid) const;
 
     /**
      * @return next item in cycle, or null if at end
      */
-    const HistoryItem* nextInCycle() const;
+    QSharedPointer<const HistoryItem> nextInCycle() const;
 
     /**
      * @return previous item in cycle, or null if at top
      */
-    const HistoryItem* prevInCycle() const;
+    QSharedPointer<const HistoryItem> prevInCycle() const;
 
     /**
      * True if no history items
      */
-    bool empty() const { return m_items.isEmpty(); }
+    bool empty() const;
 
     /**
      * Set maximum history size
@@ -95,7 +89,7 @@ public:
     /**
      * Get the maximum history size
      */
-    unsigned maxSize() const { return m_maxSize; }
+    unsigned maxSize() const;
 
     /**
      * returns true if the user has selected the top item
@@ -113,6 +107,10 @@ public:
      * Cycle to prev item
      */
     void cyclePrev();
+
+    HistoryModel *model() {
+        return m_model;
+    }
 
 public Q_SLOTS:
     /**
@@ -138,48 +136,16 @@ Q_SIGNALS:
      */
     void topChanged();
 
-private:
-    /**
-     * ensure that the number of items does not exceed max_size()
-     * Deletes items from the end as necessary.
-     */
-    void trim();
 
 private:
-    typedef QHash<QByteArray, HistoryItem*> items_t;
-    /**
-     * The history
-     */
-    items_t m_items;
-
-    /**
-     * First item
-     */
-    HistoryItem* m_top;
-
-    /**
-     * "Default view" --- a popupmenu containing the clipboard history.
-     */
-    KlipperPopup* m_popup;
-
-
-    /**
-     * The number of clipboard items stored.
-     */
-    unsigned m_maxSize;
-
     /**
      * True if the top is selected by the user
      */
     bool m_topIsUserSelected;
 
-    /**
-     * The "next" when cycling through the
-     * history. May be 0, if history is empty
-     */
-    HistoryItem* m_nextCycle;
-};
+    HistoryModel *m_model;
 
-inline const HistoryItem* History::first() const { return m_top; }
+    QByteArray m_cycleStartUuid;
+};
 
 #endif

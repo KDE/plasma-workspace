@@ -1,0 +1,18 @@
+[Desktop Entry]
+Name=Clipboard
+Comment=Clipboard Tool.
+Type=Service
+Icon=klipper
+
+X-KDE-ServiceTypes=Plasma/DataEngine
+X-KDE-Library=plasma_engine_clipboard
+
+X-KDE-PluginInfo-Author=Martin Gräßlin
+X-KDE-PluginInfo-Email=mgraesslin@kde.org
+X-KDE-PluginInfo-Name=org.kde.plasma.clipboard
+X-KDE-PluginInfo-Version=0.1
+X-KDE-PluginInfo-Website=http://plasma.kde.org/
+X-KDE-PluginInfo-Category=Clipboard
+X-KDE-PluginInfo-Depends=
+X-KDE-PluginInfo-License=GPL
+X-KDE-PluginInfo-EnabledByDefault=true

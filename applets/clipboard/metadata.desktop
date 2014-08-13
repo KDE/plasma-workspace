@@ -1,0 +1,21 @@
+[Desktop Entry]
+Name=Clipboard
+Comment=Provides access to the clipboard history.
+
+Icon=klipper
+Type=Service
+X-KDE-ServiceTypes=Plasma/Applet,Plasma/PopupApplet
+
+X-Plasma-API=declarativeappletscript
+X-Plasma-MainScript=ui/clipboard.qml
+X-Plasma-NotificationArea=true
+
+X-KDE-PluginInfo-Author=Martin Gräßlin
+X-KDE-PluginInfo-Email=mgraesslin@kde.org
+X-KDE-PluginInfo-Name=org.kde.plasma.clipboard
+X-KDE-PluginInfo-Version=1.0
+X-KDE-PluginInfo-Category=Clipboard
+X-KDE-PluginInfo-Depends=
+X-KDE-PluginInfo-License=GPL
+X-KDE-PluginInfo-EnabledByDefault=true
+

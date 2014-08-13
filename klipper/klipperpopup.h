@@ -55,6 +55,10 @@ public:
 
     History* history() { return m_history; }
     const History* history() const { return m_history; }
+
+    void setShowHelp(bool show) {
+        m_showHelp = show;
+    }
 public Q_SLOTS:
     void slotHistoryChanged() { m_dirty = true; }
     void slotAboutToShow();
@@ -118,6 +122,8 @@ private:
      * The current number of history items in the clipboard
      */
     int m_nHistoryItems;
+
+    bool m_showHelp;
 
 };
 

@@ -22,6 +22,7 @@
 #include <QHash>
 #include <QRegExp>
 #include <QStringList>
+#include <QSharedPointer>
 
 #include <KSharedConfig>
 
@@ -51,8 +52,8 @@ public:
    * @returns false if the string should be put into the popupmenu or not,
    * otherwise true.
    */
-  void checkNewData( const HistoryItem* item );
-  void invokeAction( const HistoryItem* item );
+  void checkNewData( QSharedPointer<const HistoryItem> item );
+  void invokeAction( QSharedPointer<const HistoryItem> item );
 
   ActionList actionList() const { return m_myActions; }
   void setActionList( const ActionList& );
@@ -73,13 +74,13 @@ private:
   const ActionList& matchingActions( const QString&, bool automatically_invoked );
   void execute( const ClipAction *action, int commandIdx ) const;
   bool isAvoidedWindow() const;
-  void actionMenu( const HistoryItem* item, bool automatically_invoked );
+  void actionMenu( QSharedPointer<const HistoryItem> item, bool automatically_invoked );
   void matchingMimeActions(const QString& clipData);
 
   ActionList m_myActions;
   ActionList m_myMatches;
   QStringList m_myAvoidWindows;
-  const HistoryItem* m_myClipItem;
+  QSharedPointer<const HistoryItem> m_myClipItem;
   ClipAction* m_myCurrentAction;
 
   // holds mappings of menu action IDs to action commands (action+cmd index in it)

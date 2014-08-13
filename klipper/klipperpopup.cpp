@@ -74,7 +74,8 @@ KlipperPopup::KlipperPopup( History* history )
       m_popupProxy( 0 ),
       m_filterWidget( 0 ),
       m_filterWidgetAction( 0 ),
-      m_nHistoryItems( 0 )
+      m_nHistoryItems( 0 ),
+      m_showHelp(true)
 {
     ensurePolished();
     KWindowInfo windowInfo( winId(), NET::WMGeometry );
@@ -125,7 +126,7 @@ void KlipperPopup::buildFromScratch() {
     addSeparator();
     for (int i = 0; i < m_actions.count(); i++) {
 
-        if (i + 1 == m_actions.count()) {
+        if (i + 1 == m_actions.count() && m_showHelp) {
             addMenu(m_helpMenu->menu())->setIcon(QIcon::fromTheme("help-contents"));
             addSeparator();
         }

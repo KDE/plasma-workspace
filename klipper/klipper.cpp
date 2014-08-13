@@ -29,6 +29,7 @@
 #include <QDir>
 #include <QDialog>
 #include <QMenu>
+#include <QPointer>
 #include <QDBusConnection>
 #include <QSaveFile>
 
@@ -85,15 +86,18 @@ namespace {
 }
 
 // config == KGlobal::config for process, otherwise applet
-Klipper::Klipper(QObject* parent, const KSharedConfigPtr& config)
+Klipper::Klipper(QObject* parent, const KSharedConfigPtr& config, KlipperMode mode)
     : QObject( parent )
     , m_overflowCounter( 0 )
     , m_locklevel( 0 )
     , m_config( config )
     , m_pendingContentsCheck( false )
+    , m_mode(mode)
 {
-    setenv("KSNI_NO_DBUSMENU", "1", 1);
-    QDBusConnection::sessionBus().registerObject("/klipper", this, QDBusConnection::ExportScriptableSlots);
+    if (m_mode == KlipperMode::Standalone) {
+        setenv("KSNI_NO_DBUSMENU", "1", 1);
+        QDBusConnection::sessionBus().registerObject("/klipper", this, QDBusConnection::ExportScriptableSlots);
+    }
 
     updateTimestamp(); // read initial X user time
     m_clip = qApp->clipboard();
@@ -108,6 +112,9 @@ Klipper::Klipper(QObject* parent, const KSharedConfigPtr& config)
 
 
     m_history = new History( this );
+    m_popup = new KlipperPopup(m_history);
+    m_popup->setShowHelp(m_mode == KlipperMode::Standalone);
+    connect(m_history, &History::changed, m_popup, &KlipperPopup::slotHistoryChanged);
 
     // we need that collection, otherwise KToggleAction is not happy :}
     m_collection = new KActionCollection( this );
@@ -115,6 +122,7 @@ Klipper::Klipper(QObject* parent, const KSharedConfigPtr& config)
     m_toggleURLGrabAction = new KToggleAction( this );
     m_collection->addAction( "clipboard_action", m_toggleURLGrabAction );
     m_toggleURLGrabAction->setText(i18n("Enable Clipboard Actions"));
+    m_toggleURLGrabAction->setVisible(m_mode == KlipperMode::Standalone);
     KGlobalAccel::setGlobalShortcut(m_toggleURLGrabAction, QKeySequence(Qt::ALT+Qt::CTRL+Qt::Key_X));
     connect( m_toggleURLGrabAction, SIGNAL(toggled(bool)),
              this, SLOT(setURLGrabberEnabled(bool)));
@@ -141,21 +149,25 @@ Klipper::Klipper(QObject* parent, const KSharedConfigPtr& config)
     m_clearHistoryAction = m_collection->addAction( "clear-history" );
     m_clearHistoryAction->setIcon( QIcon::fromTheme("edit-clear-history") );
     m_clearHistoryAction->setText( i18n("C&lear Clipboard History") );
+    m_clearHistoryAction->setVisible(m_mode == KlipperMode::Standalone);
     KGlobalAccel::setGlobalShortcut(m_clearHistoryAction, QKeySequence());
     connect(m_clearHistoryAction, SIGNAL(triggered()), SLOT(slotAskClearHistory()));
 
     m_configureAction = m_collection->addAction( "configure" );
     m_configureAction->setIcon( QIcon::fromTheme("configure") );
     m_configureAction->setText( i18n("&Configure Klipper...") );
+    m_configureAction->setVisible(m_mode == KlipperMode::Standalone);
     connect(m_configureAction, SIGNAL(triggered(bool)), SLOT(slotConfigure()));
 
     m_quitAction = m_collection->addAction( "quit" );
     m_quitAction->setIcon( QIcon::fromTheme("application-exit") );
     m_quitAction->setText( i18nc("@item:inmenu Quit Klipper", "&Quit") );
+    m_quitAction->setVisible(m_mode == KlipperMode::Standalone);
     connect(m_quitAction, SIGNAL(triggered(bool)), SLOT(slotQuit()));
 
     m_repeatAction = m_collection->addAction("repeat_action");
     m_repeatAction->setText(i18n("Manually Invoke Action on Current Clipboard"));
+    m_repeatAction->setVisible(m_mode == KlipperMode::Standalone);
     KGlobalAccel::setGlobalShortcut(m_repeatAction, QKeySequence(Qt::ALT+Qt::CTRL+Qt::Key_R));
     connect(m_repeatAction, SIGNAL(triggered()), SLOT(slotRepeatAction()));
 
@@ -163,15 +175,25 @@ Klipper::Klipper(QObject* parent, const KSharedConfigPtr& config)
     m_editAction = m_collection->addAction("edit_clipboard");
     m_editAction->setIcon(QIcon::fromTheme("document-properties"));
     m_editAction->setText(i18n("&Edit Contents..."));
+    m_editAction->setVisible(m_mode == KlipperMode::Standalone);
     KGlobalAccel::setGlobalShortcut(m_editAction, QKeySequence());
-    connect(m_editAction, SIGNAL(triggered()), SLOT(slotEditData()));
+    connect(m_editAction, &QAction::triggered, this,
+        [this]() {
+            editData(m_history->first());
+        }
+    );
 
 #ifdef HAVE_PRISON
     // add barcode for mobile phones
     m_showBarcodeAction = m_collection->addAction("show-barcode");
     m_showBarcodeAction->setText(i18n("&Show Barcode..."));
+    m_showBarcodeAction->setVisible(m_mode == KlipperMode::Standalone);
     KGlobalAccel::setGlobalShortcut(m_showBarcodeAction, QKeySequence());
-    connect(m_showBarcodeAction, SIGNAL(triggered()), SLOT(slotShowBarcode()));
+    connect(m_showBarcodeAction, &QAction::triggered, this,
+        [this]() {
+            showBarcode(m_history->first());
+        }
+    );
 #endif
 
     // Cycle through history
@@ -190,22 +212,23 @@ Klipper::Klipper(QObject* parent, const KSharedConfigPtr& config)
     KGlobalAccel::setGlobalShortcut(m_showOnMousePos, QKeySequence());
     connect(m_showOnMousePos, SIGNAL(triggered(bool)), this, SLOT(slotPopupMenu()));
 
-    KlipperPopup* popup = history()->popup();
     connect ( history(), SIGNAL(topChanged()), SLOT(slotHistoryTopChanged()) );
-    connect( popup, SIGNAL(aboutToShow()), SLOT(slotStartShowTimer()) );
+    connect( m_popup, SIGNAL(aboutToShow()), SLOT(slotStartShowTimer()) );
 
-    popup->plugAction( m_toggleURLGrabAction );
-    popup->plugAction( m_clearHistoryAction );
-    popup->plugAction( m_configureAction );
-    popup->plugAction( m_repeatAction );
-    popup->plugAction( m_editAction );
+    m_popup->plugAction( m_toggleURLGrabAction );
+    m_popup->plugAction( m_clearHistoryAction );
+    m_popup->plugAction( m_configureAction );
+    m_popup->plugAction( m_repeatAction );
+    m_popup->plugAction( m_editAction );
 #ifdef HAVE_PRISON
-    popup->plugAction( m_showBarcodeAction );
+    m_popup->plugAction( m_showBarcodeAction );
 #endif
-    popup->plugAction( m_quitAction );
+    m_popup->plugAction( m_quitAction );
 
     // session manager interaction
-    connect(qApp, &QGuiApplication::commitDataRequest, this, &Klipper::saveSession);
+    if (m_mode == KlipperMode::Standalone) {
+        connect(qApp, &QGuiApplication::commitDataRequest, this, &Klipper::saveSession);
+    }
 }
 
 Klipper::~Klipper()
@@ -234,7 +257,7 @@ void Klipper::setClipboardContents(QString s)
         return;
     Ignore lock( m_locklevel );
     updateTimestamp();
-    HistoryStringItem* item = new HistoryStringItem( s );
+    HistoryItemPtr item(HistoryItemPtr(new HistoryStringItem(s)));
     setClipboard( *item, Clipboard | Selection);
     history()->insert( item );
 }
@@ -370,9 +393,9 @@ bool Klipper::loadHistory() {
     // youngest-first to keep the most important clipboard
     // items at the top, but the history is created oldest
     // first.
-    QList<HistoryItem*> reverseList;
-    for ( HistoryItem* item = HistoryItem::create( history_stream );
-          item;
+    QList<HistoryItemPtr> reverseList;
+    for ( HistoryItemPtr item = HistoryItem::create( history_stream );
+          !item.isNull();
           item = HistoryItem::create( history_stream ) )
     {
         reverseList.prepend( item );
@@ -380,11 +403,11 @@ bool Klipper::loadHistory() {
 
     history()->slotClear();
 
-    for ( QList<HistoryItem*>::const_iterator it = reverseList.constBegin();
+    for ( auto it = reverseList.constBegin();
           it != reverseList.constEnd();
           ++it )
     {
-        history()->forceInsert( *it );
+        history()->forceInsert(*it);
     }
 
     if ( !history()->empty() ) {
@@ -423,11 +446,11 @@ void Klipper::saveHistory(bool empty) {
     history_stream << KLIPPER_VERSION_STRING; // const char*
 
     if (!empty) {
-        const HistoryItem *item = history()->first();
+        HistoryItemConstPtr item = history()->first();
         if (item) {
             do {
-                history_stream << item;
-                item = history()->find(item->next_uuid());
+                history_stream << item.data();
+                item = HistoryItemConstPtr(history()->find(item->next_uuid()));
             } while (item != history()->first());
         }
     }
@@ -498,16 +521,15 @@ void Klipper::slotQuit()
 }
 
 void Klipper::slotPopupMenu() {
-    KlipperPopup* popup = history()->popup();
-    popup->ensureClean();
-    popup->slotSetTopActive();
-    showPopupMenu( popup );
+    m_popup->ensureClean();
+    m_popup->slotSetTopActive();
+    showPopupMenu( m_popup );
 }
 
 
 void Klipper::slotRepeatAction()
 {
-    const HistoryStringItem* top = dynamic_cast<const HistoryStringItem*>( history()->first() );
+    auto top = qSharedPointerCast<const HistoryStringItem>( history()->first() );
     if ( top ) {
         m_myURLGrabber->invokeAction( top );
     }
@@ -533,7 +555,7 @@ void Klipper::slotHistoryTopChanged() {
         return;
     }
 
-    const HistoryItem* topitem = history()->first();
+    auto topitem = history()->first();
     if ( topitem ) {
         setClipboard( *topitem, Clipboard | Selection );
     }
@@ -550,13 +572,13 @@ void Klipper::slotClearClipboard()
     m_clip->clear(QClipboard::Clipboard);
 }
 
-HistoryItem* Klipper::applyClipChanges( const QMimeData* clipData )
+HistoryItemPtr Klipper::applyClipChanges( const QMimeData* clipData )
 {
     if ( m_locklevel ) {
-        return 0L;
+        return HistoryItemPtr();
     }
     Ignore lock( m_locklevel );
-    HistoryItem* item = HistoryItem::create( clipData );
+    HistoryItemPtr item = HistoryItem::create( clipData );
     history()->insert( item );
     return item;
 
@@ -636,7 +658,7 @@ void Klipper::checkClipData( bool selectionMode )
         // This won't quite work, but it's close enough for now.
         // The trouble is that the top selection =! top clipboard
         // but we don't track that yet. We will....
-        const HistoryItem* top = history()->first();
+        auto top = history()->first();
         if ( top ) {
             setClipboard( *top, selectionMode ? Selection : Clipboard);
         }
@@ -681,7 +703,7 @@ void Klipper::checkClipData( bool selectionMode )
     }
 
     if ( changed && clipEmpty && m_bNoNullClipboard ) {
-        const HistoryItem* top = history()->first();
+        auto top = history()->first();
         if ( top ) {
             // keep old clipboard after someone set it to null
 #ifdef NOISY_KLIPPER
@@ -713,7 +735,7 @@ void Klipper::checkClipData( bool selectionMode )
     else // unknown, ignore
         return;
 
-    HistoryItem* item = applyClipChanges( data );
+    HistoryItemPtr item = applyClipChanges( data );
     if (changed) {
 #ifdef NOISY_KLIPPER
         qDebug() << "Synchronize?" << m_bSynchronize;
@@ -726,7 +748,7 @@ void Klipper::checkClipData( bool selectionMode )
         ? m_lastURLGrabberTextSelection : m_lastURLGrabberTextClipboard;
     if( m_bURLGrabber && item && data->hasText())
     {
-        m_myURLGrabber->checkNewData( item );
+        m_myURLGrabber->checkNewData( qSharedPointerConstCast<const HistoryItem>(item) );
 
         // Make sure URLGrabber doesn't repeat all the time if klipper reads the same
         // text all the time (e.g. because XFixes is not available and the application
@@ -777,7 +799,7 @@ void Klipper::slotClearOverflow()
 QStringList Klipper::getClipboardHistoryMenu()
 {
     QStringList menu;
-    const HistoryItem* item = history()->first();
+    auto item = history()->first();
     if (item) {
         do {
             menu << item->text();
@@ -790,7 +812,7 @@ QStringList Klipper::getClipboardHistoryMenu()
 
 QString Klipper::getClipboardHistoryItem(int i)
 {
-    const HistoryItem* item = history()->first();
+    auto item = history()->first();
     if (item) {
         do {
             if (i-- == 0) {
@@ -834,56 +856,63 @@ void Klipper::updateTimestamp()
 #endif
 }
 
-void Klipper::slotEditData()
+void Klipper::editData(const QSharedPointer< const HistoryItem > &item)
 {
-    const HistoryStringItem* item = dynamic_cast<const HistoryStringItem*>(m_history->first());
-
-    QDialog dlg;
-    dlg.setModal( true );
-    dlg.setWindowTitle( i18n("Edit Contents") );
-    QDialogButtonBox *buttons = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, &dlg);
+    QPointer<QDialog> dlg(new QDialog());
+    dlg->setWindowTitle( i18n("Edit Contents") );
+    QDialogButtonBox *buttons = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, dlg);
     buttons->button(QDialogButtonBox::Ok)->setShortcut(Qt::CTRL | Qt::Key_Return);
-    connect(buttons, &QDialogButtonBox::accepted, &dlg, &QDialog::accept);
-    connect(buttons, &QDialogButtonBox::rejected, &dlg, &QDialog::reject);
+    connect(buttons, &QDialogButtonBox::accepted, dlg.data(), &QDialog::accept);
+    connect(buttons, &QDialogButtonBox::rejected, dlg.data(), &QDialog::reject);
+    connect(dlg.data(), &QDialog::finished, dlg.data(),
+        [this, dlg, item](int result) {
+            emit editFinished(item, result);
+            dlg->deleteLater();
+        }
+    );
 
-    KTextEdit *edit = new KTextEdit( &dlg );
+    KTextEdit *edit = new KTextEdit( dlg );
     if (item) {
         edit->setText( item->text() );
     }
     edit->setFocus();
     edit->setMinimumSize( 300, 40 );
-    QVBoxLayout *layout = new QVBoxLayout(&dlg);
+    QVBoxLayout *layout = new QVBoxLayout(dlg);
     layout->addWidget(edit);
     layout->addWidget(buttons);
-    dlg.adjustSize();
+    dlg->adjustSize();
 
-    if ( dlg.exec() == QDialog::Accepted ) {
+    connect(dlg.data(), &QDialog::accepted, this, [this, edit, item]() {
         QString text = edit->toPlainText();
         if (item) {
             m_history->remove( item );
         }
-        m_history->insert( new HistoryStringItem(text) );
+        m_history->insert(HistoryItemPtr(new HistoryStringItem(text)));
         if (m_myURLGrabber) {
-            m_myURLGrabber->checkNewData( m_history->first() );
+            m_myURLGrabber->checkNewData(HistoryItemConstPtr(m_history->first()));
         }
-    }
+    });
 
+    if (m_mode == KlipperMode::Standalone) {
+        dlg->setModal(true);
+        dlg->exec();
+    } else if (m_mode == KlipperMode::DataEngine) {
+        dlg->open();
+    }
 }
 
 #ifdef HAVE_PRISON
-void Klipper::slotShowBarcode()
+void Klipper::showBarcode(const QSharedPointer< const HistoryItem > &item)
 {
     using namespace prison;
-    const HistoryStringItem* item = dynamic_cast<const HistoryStringItem*>(m_history->first());
-
-    QDialog dlg;
-    dlg.setModal( true );
-    dlg.setWindowTitle( i18n("Mobile Barcode") );
-    QDialogButtonBox *buttons = new QDialogButtonBox(QDialogButtonBox::Ok, &dlg);
+    QPointer<QDialog> dlg(new QDialog());
+    dlg->setWindowTitle( i18n("Mobile Barcode") );
+    QDialogButtonBox *buttons = new QDialogButtonBox(QDialogButtonBox::Ok, dlg);
     buttons->button(QDialogButtonBox::Ok)->setShortcut(Qt::CTRL | Qt::Key_Return);
-    connect(buttons, &QDialogButtonBox::accepted, &dlg, &QDialog::accept);
+    connect(buttons, &QDialogButtonBox::accepted, dlg.data(), &QDialog::accept);
+    connect(dlg.data(), &QDialog::finished, dlg.data(), &QDialog::deleteLater);
 
-    QWidget* mw = new QWidget(&dlg);
+    QWidget* mw = new QWidget(dlg);
     QHBoxLayout* layout = new QHBoxLayout(mw);
 
     BarcodeWidget* qrcode = new BarcodeWidget(new QRCodeBarcode());
@@ -898,12 +927,17 @@ void Klipper::slotShowBarcode()
     layout->addWidget(datamatrix);
 
     mw->setFocus();
-    QVBoxLayout *vBox = new QVBoxLayout(&dlg);
+    QVBoxLayout *vBox = new QVBoxLayout(dlg);
     vBox->addWidget(mw);
     vBox->addWidget(buttons);
-    dlg.adjustSize();
+    dlg->adjustSize();
 
-    dlg.exec();
+    if (m_mode == KlipperMode::Standalone) {
+        dlg->setModal(true);
+        dlg->exec();
+    } else if (m_mode == KlipperMode::DataEngine) {
+        dlg->open();
+    }
 }
 #endif //HAVE_PRISON
 
@@ -946,11 +980,11 @@ QString Klipper::cycleText() const
 {
     const int WIDTH_IN_PIXEL = 400;
 
-    const HistoryItem* itemprev = m_history->prevInCycle();
-    const HistoryItem* item = m_history->first();
-    const HistoryItem* itemnext = m_history->nextInCycle();
+    auto itemprev = m_history->prevInCycle();
+    auto item = m_history->first();
+    auto itemnext = m_history->nextInCycle();
 
-    QFontMetrics font_metrics(m_history->popup()->fontMetrics());
+    QFontMetrics font_metrics(m_popup->fontMetrics());
     QString result("<table>");
 
     if (itemprev) {
