@@ -85,6 +85,9 @@ Name[wa]=Ôrlodje didjitåle
 Name[x-test]=xxDigital Clockxx
 Name[zh_CN]=数字钟
 Name[zh_TW]=數位時鐘
+
+Comment=Time displayed in a digital format
+
 Icon=preferences-system-time
 Type=Service
 X-KDE-ParentApp=
