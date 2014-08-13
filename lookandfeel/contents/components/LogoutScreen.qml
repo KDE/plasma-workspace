@@ -45,6 +45,11 @@ BreezeBlock {
         shortcut: "Escape"
     }
 
+    Controls.Action {
+        onTriggered: root.currentAction()
+        shortcut: "Return"
+    }
+
     onRemainingTimeChanged: {
         if(remainingTime<0)
             root.currentAction()
