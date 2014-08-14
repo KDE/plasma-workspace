@@ -12,15 +12,21 @@
     <entry name="showSeconds" type="Bool">
       <default>false</default>
     </entry>
-      <entry name="boldText" type="Bool">
-          <default>false</default>
-      </entry>
-      <entry name="italicText" type="Bool">
-          <default>false</default>
-      </entry>
-      <entry name="timeFormat" type="string">
-          <default>default</default>
-      </entry>
+    <entry name="showDate" type="Bool">
+      <default>false</default>
+    </entry>
+    <entry name="dateFormat" type="string">
+      <default>shortDate</default>
+    </entry>
+    <entry name="boldText" type="Bool">
+      <default>false</default>
+    </entry>
+    <entry name="italicText" type="Bool">
+      <default>false</default>
+    </entry>
+    <entry name="timeFormat" type="string">
+      <default>default</default>
+    </entry>
   </group>
 
 </kcfg>

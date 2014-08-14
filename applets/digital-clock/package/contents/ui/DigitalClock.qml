@@ -44,6 +44,11 @@ Item {
 
     property bool showSeconds: plasmoid.configuration.showSeconds
     property bool showTimezone: plasmoid.configuration.showTimezone
+    property bool showDate: plasmoid.configuration.showDate
+    property int dateFormat: plasmoid.configuration.dateFormat == "longDate" ? Locale.LongFormat :
+                             plasmoid.configuration.dateFormat == "shortDate" ? Locale.ShortFormat :
+                             Locale.NarrowFormat
+    property string lastDate: ""
     property string timeFormat
 
     onShowSecondsChanged: {
@@ -63,7 +68,8 @@ Item {
         }
         minimumPixelSize: theme.mSize(theme.smallestFont).height
         fontSizeMode: Text.Fit
-        text: Qt.formatTime(dataSource.data["Local"]["DateTime"], main.timeFormat);
+        text: Qt.formatTime(dataSource.data["Local"]["DateTime"], main.timeFormat)
+              + (showDate ? "<br/>" + Qt.formatDate(dataSource.data["Local"]["DateTime"], main.dateFormat) : "" )
         wrapMode: plasmoid.formFactor != PlasmaCore.Types.Horizontal ? Text.WordWrap : Text.NoWrap
         horizontalAlignment: vertical ? Text.AlignHCenter : Text.AlignLeft // we want left align when horizontal to avoid re-aligning when seconds are visible
         verticalAlignment: Text.AlignVCenter
@@ -135,6 +141,9 @@ Item {
             st += Qt.formatTime(dataSource.data["Local"]["DateTime"], " t");
         }
 
+        if (main.showDate) {
+            st += "<br/>" + Qt.formatDate(dataSource.data["Local"]["DateTime"], main.dateFormat);
+        }
 
         if (sizehelper.text != st) {
             sizehelper.text = st;
@@ -151,7 +160,23 @@ Item {
         main.timeFormat = timeFormatString;
     }
 
+    function dateTimeChanged()
+    {
+        if (!main.showDate) {
+            return;
+        }
+
+        // If the date has changed, force size recalculation, because the day name
+        // or the month name can now be longer/shorter, so we need to adjust applet size
+        var currentDate = Qt.formatDateTime(dataSource.data["Local"]["DateTime"], "yyyy-mm-dd");
+        if (main.lastDate != currentDate) {
+            timeFormatCorrection(main.timeFormat);
+            main.lastDate = currentDate
+        }
+    }
+
     Component.onCompleted: {
         timeFormatCorrection(Qt.locale().timeFormat(Locale.ShortFormat))
+        dataSource.onDataChanged.connect(dateTimeChanged);
     }
 }

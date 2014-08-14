@@ -35,6 +35,10 @@ Item {
     property alias cfg_showTimezone: showTimezone.checked
     property alias cfg_showSeconds: showSeconds.checked
 
+    property alias cfg_showDate: showDate.checked
+    property string cfg_dateFormat: "shortDate"
+
+
     QtLayouts.ColumnLayout {
         QtControls.GroupBox {
             title: i18n("Appearance")
@@ -66,6 +70,46 @@ Item {
                 QtControls.CheckBox {
                     id: showTimezone
                     text: i18n("Show time zone")
+                }
+
+                QtControls.CheckBox {
+                    id: showDate
+                    text: i18n("Show date")
+                }
+
+                QtLayouts.RowLayout {
+                    QtControls.Label {
+                        text: i18n("Date format")
+                    }
+
+                    QtControls.ComboBox {
+                        id: dateFormat
+                        enabled: showDate.checked
+                        textRole: "label"
+                        model: [
+                            {
+                                'label': i18n("Long date"),
+                                'name': "longDate"
+                            },
+                            {
+                                'label': i18n("Short date"),
+                                'name': "shortDate"
+                            },
+                            {
+                                'label': i18n("Narrow date"),
+                                'name': "narrowDate"
+                            }
+                        ]
+                        onCurrentIndexChanged: cfg_dateFormat = model[currentIndex]["name"]
+
+                        Component.onCompleted: {
+                            for (var i = 0; i < model.length; i++) {
+                                if (model[i]["name"] == plasmoid.configuration.dateFormat) {
+                                    dateFormat.currentIndex = i;
+                                }
+                            }
+                        }
+                    }
                 }
             }
         }
