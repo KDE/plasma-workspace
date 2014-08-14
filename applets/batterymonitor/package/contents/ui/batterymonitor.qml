@@ -89,9 +89,9 @@ Item {
         onWheel: {
             var delta = wheel.angleDelta.y || wheel.angleDelta.x
             if (delta > 0) {
-                batterymonitor.screenBrightness += 10
+                batterymonitor.screenBrightness = Math.min(100, batterymonitor.screenBrightness + 10)
             } else if (delta < 0) {
-                batterymonitor.screenBrightness -= 10
+                batterymonitor.screenBrightness = Math.max(0, batterymonitor.screenBrightness - 10)
             }
         }
     }
