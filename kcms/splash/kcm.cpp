@@ -127,7 +127,7 @@ void KCMSplashScreen::save()
         m_configGroup.writeEntry("Engine", "none");
     } else {
         m_configGroup.writeEntry("Theme", m_selectedPlugin);
-        m_configGroup.writeEntry("Engine", "ksplashqml");
+        m_configGroup.writeEntry("Engine", "KSplashQML");
     }
 
     m_configGroup.sync();
