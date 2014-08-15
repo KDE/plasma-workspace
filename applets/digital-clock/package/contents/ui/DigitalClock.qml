@@ -69,7 +69,7 @@ Item {
         minimumPixelSize: theme.mSize(theme.smallestFont).height
         fontSizeMode: Text.Fit
         text: Qt.formatTime(dataSource.data["Local"]["DateTime"], main.timeFormat)
-              + (showDate ? "<br/>" + Qt.formatDate(dataSource.data["Local"]["DateTime"], main.dateFormat) : "" )
+              + (showDate ? "<br/>" + Qt.formatDate(dataSource.data["Local"]["DateTime"], Qt.locale().dateFormat(main.dateFormat)) : "" )
         wrapMode: plasmoid.formFactor != PlasmaCore.Types.Horizontal ? Text.WordWrap : Text.NoWrap
         horizontalAlignment: vertical ? Text.AlignHCenter : Text.AlignLeft // we want left align when horizontal to avoid re-aligning when seconds are visible
         verticalAlignment: Text.AlignVCenter
@@ -142,7 +142,7 @@ Item {
         }
 
         if (main.showDate) {
-            st += "<br/>" + Qt.formatDate(dataSource.data["Local"]["DateTime"], main.dateFormat);
+            st += "<br/>" + Qt.formatDate(dataSource.data["Local"]["DateTime"], Qt.locale().dateFormat(main.dateFormat));
         }
 
         if (sizehelper.text != st) {
