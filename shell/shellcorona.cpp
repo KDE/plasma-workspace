@@ -64,6 +64,8 @@
 
 #include "plasmashelladaptor.h"
 
+#include "../lookandfeelaccess/lookandfeelaccess.h"
+
 static const int s_configSyncDelay = 10000; // 10 seconds
 
 class ShellCorona::Private {
@@ -176,8 +178,9 @@ ShellCorona::ShellCorona(QObject *parent)
     themeName = plasmarc.readEntry(themeNameKey, themeName);
 
     if (themeName.isEmpty()) {
+        LookAndFeelAccess access;
         KConfigGroup lnfCfg = KConfigGroup(KSharedConfig::openConfig(
-                                                lookAndFeelPackage().filePath("defaults")),
+                                                access.filePath("defaults")),
                                                 "plasmarc"
                                            );
         lnfCfg = KConfigGroup(&lnfCfg, themeGroupKey);
@@ -1315,17 +1318,6 @@ void ShellCorona::desktopContainmentDestroyed(QObject *obj)
             }
         }
     }
-}
-
-Plasma::Package ShellCorona::lookAndFeelPackage() const
-{
-    if (!d->lookNFeelPackage.isValid()) {
-        d->lookNFeelPackage = ShellPluginLoader::self()->loadPackage("Plasma/LookAndFeel");
-        //TODO: make loading from config once we have some UI for setting the package
-        d->lookNFeelPackage.setPath("org.kde.lookandfeel");
-    }
-
-    return d->lookNFeelPackage;
 }
 
 KScreen::Config* ShellCorona::screensConfiguration() const

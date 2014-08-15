@@ -71,8 +71,6 @@ public:
 
     KActivities::Controller *activityController();
 
-    Plasma::Package lookAndFeelPackage() const;
-
     //Those two are a bit of an hack but are just for desktop scripting
     Activity *activity(const QString &id);
     void insertActivity(const QString &id, Activity *activity);
