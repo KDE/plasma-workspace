@@ -87,6 +87,13 @@ Name[zh_CN]=数字钟
 Name[zh_TW]=數位時鐘
 
 Comment=Time displayed in a digital format
+Comment[ca]=Mostra l'hora en un format digital
+Comment[nl]=Tijd weergegeven in een digitale opmaak
+Comment[pt_BR]=Hora exibida em formato digital
+Comment[sk]=Čas zobrazený v digitálnom formáte
+Comment[sv]=Tid visad med digitalformat
+Comment[uk]=Час, показаний у цифровому форматі
+Comment[x-test]=xxTime displayed in a digital formatxx
 
 Icon=preferences-system-time
 Type=Service
