@@ -1,7 +1,11 @@
 [Desktop Entry]
 Name=Clipboard
 Name[ca]=Porta-retalls
+Name[cs]=Schránka
+Name[es]=Portapapeles
+Name[nds]=Twischenaflaag
 Name[nl]=Klembord
+Name[pl]=Schowek
 Name[pt_BR]=Área de transferência
 Name[sk]=Schránka
 Name[sv]=Klippbord
@@ -9,7 +13,10 @@ Name[uk]=Буфер обміну
 Name[x-test]=xxClipboardxx
 Comment=Provides access to the clipboard history.
 Comment[ca]=Proporciona accés a l'historial del porta-retalls.
+Comment[es]=Proporciona acceso al historial del portapapeles.
+Comment[nds]=Gifft Togriep op de Twischenaflaag-Vörgeschicht
 Comment[nl]=Biedt toegang tot de geschiedenis van klembord.
+Comment[pl]=Zapewnia dostęp do historii schowka.
 Comment[pt_BR]=Fornece acesso ao histórico da área de transferência.
 Comment[sk]=Poskytuje prístup k histórii schránky.
 Comment[sv]=Ger tillgång till klippbordshistoriken.

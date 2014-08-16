@@ -1,7 +1,11 @@
 [Desktop Entry]
 Name=Clipboard
 Name[ca]=Porta-retalls
+Name[cs]=Schránka
+Name[es]=Portapapeles
+Name[nds]=Twischenaflaag
 Name[nl]=Klembord
+Name[pl]=Schowek
 Name[pt_BR]=Área de transferência
 Name[sk]=Schránka
 Name[sv]=Klippbord
@@ -9,7 +13,11 @@ Name[uk]=Буфер обміну
 Name[x-test]=xxClipboardxx
 Comment=Clipboard Tool.
 Comment[ca]=Eina de porta-retalls.
+Comment[cs]=Program pro práci se schránkou.
+Comment[es]=Herramienta del portapapeles.
+Comment[nds]=Twischenaflaag-Warktüüch
 Comment[nl]=Klembordbeheer.
+Comment[pl]=Narzędzie schowka.
 Comment[pt_BR]=Ferramenta da área de transferência.
 Comment[sk]=Nástroj pre schránku.
 Comment[sv]=Klippbordsverktyg.
