@@ -67,6 +67,12 @@ static QVariant::Type expPropType(const QString& propName)
     // change the UI of the widget
     else if (propName == QLatin1String("CanControl"))
         return QVariant::Bool;
+    else if (propName == QLatin1String("CanSeek"))
+        return QVariant::Bool;
+    else if (propName == QLatin1String("CanGoNext"))
+        return QVariant::Bool;
+    else if (propName == QLatin1String("CanGoPrevious"))
+        return QVariant::Bool;
     return QVariant::Invalid;
 }
 
