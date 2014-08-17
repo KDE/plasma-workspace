@@ -105,10 +105,10 @@ ColumnLayout {
     PlasmaComponents.Slider {
         id: seekSlider
         z: 999
-        maximumValue: mpris2Source.data[mpris2Source.current].Metadata["mpris:length"]
+        maximumValue: currentMetadata ? currentMetadata["mpris:length"] || 0 : 0
         value: 0
         // if there's no "mpris:length" in teh metadata, we cannot seek, so hide it in that case
-        visible: root.state != "" && !root.noPlayer && mpris2Source.data[mpris2Source.current].Metadata["mpris:length"] != undefined
+        visible: root.state != "" && !root.noPlayer && currentMetadata && currentMetadata["mpris:length"]
         anchors {
             left: parent.left
             right: parent.right
