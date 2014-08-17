@@ -66,6 +66,7 @@ ColumnLayout {
             //rightMargin: units.largeSpacing // that doesn't work?!
         }
         Image {
+            id: albumArt
             source: currentMetadata ? currentMetadata["mpris:artUrl"] || "" : ""
             fillMode: Image.PreserveAspectCrop
             Layout.preferredHeight: Math.min(expandedRepresentation.height/2, sourceSize.height)
@@ -75,7 +76,7 @@ ColumnLayout {
         Column {
             Layout.fillWidth: true
             anchors.top: parent.top
-            spacing: units.largeSpacing
+            spacing: albumArt.visible ? units.largeSpacing : units.smallSpacing
             PlasmaExtras.Heading {
                 id: song
                 anchors {
