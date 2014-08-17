@@ -63,6 +63,7 @@ ColumnLayout {
             left: parent.left
             top: parent.top
             right: parent.right
+            //rightMargin: units.largeSpacing // that doesn't work?!
         }
         Image {
             source: mpris2Source.data[mpris2Source.current].Metadata["mpris:artUrl"]
@@ -112,6 +113,7 @@ ColumnLayout {
         anchors {
             left: parent.left
             right: parent.right
+            rightMargin: units.largeSpacing
         }
         onValueChanged: {
             if (pressed) {
@@ -139,8 +141,8 @@ ColumnLayout {
         anchors {
             left: parent.left
             right: parent.right
+            rightMargin: units.largeSpacing
         }
-
 
         Row {
             id: playerControls
