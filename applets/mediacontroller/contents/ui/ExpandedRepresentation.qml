@@ -105,16 +105,21 @@ ColumnLayout {
 
     PlasmaComponents.Slider {
         id: seekSlider
-        z: 999
-        maximumValue: currentMetadata ? currentMetadata["mpris:length"] || 0 : 0
-        value: 0
-        // if there's no "mpris:length" in teh metadata, we cannot seek, so hide it in that case
-        visible: playerControls.enabled && currentMetadata && currentMetadata["mpris:length"] && mpris2Source.data[mpris2Source.current].CanSeek
         anchors {
             left: parent.left
             right: parent.right
             rightMargin: units.largeSpacing
         }
+        z: 999
+        maximumValue: currentMetadata ? currentMetadata["mpris:length"] || 0 : 0
+        value: 0
+        // if there's no "mpris:length" in teh metadata, we cannot seek, so hide it in that case
+        enabled: playerControls.enabled && currentMetadata && currentMetadata["mpris:length"] && mpris2Source.data[mpris2Source.current].CanSeek
+        opacity: enabled ? 1 : 0
+        Behavior on opacity {
+            NumberAnimation { duration: units.longDuration }
+        }
+
         onValueChanged: {
             if (pressed) {
                 var service = mpris2Source.serviceForSource(mpris2Source.current);
