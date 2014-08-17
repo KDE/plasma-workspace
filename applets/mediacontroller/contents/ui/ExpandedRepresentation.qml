@@ -109,7 +109,7 @@ ColumnLayout {
         maximumValue: currentMetadata ? currentMetadata["mpris:length"] || 0 : 0
         value: 0
         // if there's no "mpris:length" in teh metadata, we cannot seek, so hide it in that case
-        visible: root.state != "" && !root.noPlayer && currentMetadata && currentMetadata["mpris:length"]
+        visible: playerControls.enabled && currentMetadata && currentMetadata["mpris:length"] && mpris2Source.data[mpris2Source.current].CanSeek
         anchors {
             left: parent.left
             right: parent.right
@@ -146,32 +146,31 @@ ColumnLayout {
 
         Row {
             id: playerControls
+            property bool enabled: !root.noPlayer && root.track && mpris2Source.data[mpris2Source.current].CanControl
             property int controlsSize: theme.mSize(theme.defaultFont).height * 3
-
-            //Rectangle { color: "orange"; anchors.fill: parent }
 
             anchors.centerIn: parent
             spacing: units.largeSpacing
 
             MediaControl {
                 anchors.verticalCenter: parent.verticalCenter
+                enabled: playerControls.enabled && mpris2Source.data[mpris2Source.current].CanGoPrevious
                 source: "media-skip-backward"
-                onTriggered: root.previous();
+                onTriggered: root.previous()
             }
 
             MediaControl {
                 width: expandedRepresentation.controlSize * 1.5
+                enabled: playerControls.enabled
                 source: root.state == "playing" ? "media-playback-pause" : "media-playback-start"
-                onTriggered: {
-                    print("Clicked" + source + " " + root.state);
-                    root.playPause();
-                }
+                onTriggered: root.playPause()
             }
 
             MediaControl {
                 anchors.verticalCenter: parent.verticalCenter
+                enabled: playerControls.enabled && mpris2Source.data[mpris2Source.current].CanGoNext
                 source: "media-skip-forward"
-                onTriggered: root.next();
+                onTriggered: root.next()
             }
         }
     }
