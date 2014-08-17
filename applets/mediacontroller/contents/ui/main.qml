@@ -27,7 +27,7 @@ import org.kde.plasma.extras 2.0 as PlasmaExtras
 Item {
     id: root
 
-    property var currentMetadata: mpris2Source.data[mpris2Source.current].Metadata
+    property var currentMetadata: mpris2Source.data[mpris2Source.current] ? mpris2Source.data[mpris2Source.current].Metadata : undefined
     property string track: {
         if (!currentMetadata) {
             return ""
