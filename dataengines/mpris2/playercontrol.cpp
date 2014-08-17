@@ -77,7 +77,11 @@ QDBusObjectPath PlayerControl::trackId() const
     if (mprisTrackId.canConvert<QDBusObjectPath>()) {
         return mprisTrackId.value<QDBusObjectPath>();
     }
-    return QDBusObjectPath(mprisTrackId.toString());
+    QString mprisTrackIdString = mprisTrackId.toString();
+    if (!mprisTrackIdString.isEmpty()) {
+        return QDBusObjectPath(mprisTrackIdString);
+    }
+    return QDBusObjectPath();
 }
 
 void PlayerControl::containerDestroyed()
