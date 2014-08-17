@@ -73,8 +73,11 @@ void PlayerControl::updateEnabledOperations()
 
 QDBusObjectPath PlayerControl::trackId() const
 {
-    QDBusObjectPath objectpath(m_container->data().value("Metadata").toMap().value("mpris:trackid").toString());
-    return objectpath;
+    QVariant mprisTrackId = m_container->data().value("Metadata").toMap().value("mpris:trackid");
+    if (mprisTrackId.canConvert<QDBusObjectPath>()) {
+        return mprisTrackId.value<QDBusObjectPath>();
+    }
+    return QDBusObjectPath(mprisTrackId.toString());
 }
 
 void PlayerControl::containerDestroyed()
