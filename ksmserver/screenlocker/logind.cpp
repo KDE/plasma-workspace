@@ -19,6 +19,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 *********************************************************************/
 #include "logind.h"
 
+#include <KLocalizedString>
+
 #include <QCoreApplication>
 #include <QDebug>
 #include <QDBusConnection>
@@ -39,6 +41,7 @@ LogindIntegration::LogindIntegration(const QDBusConnection &connection, QObject 
                                                      QDBusServiceWatcher::WatchForUnregistration | QDBusServiceWatcher::WatchForRegistration,
                                                      this))
     , m_connected(false)
+    , m_inhibitFileDescriptor()
 {
     connect(m_logindServiceWatcher, &QDBusServiceWatcher::serviceRegistered, this, &LogindIntegration::logindServiceRegistered);
     connect(m_logindServiceWatcher, &QDBusServiceWatcher::serviceUnregistered, this,
@@ -118,4 +121,48 @@ void LogindIntegration::logindServiceRegistered()
             emit connectedChanged();
         }
     );
+
+    // connect to manager object's signals we need
+    m_bus.connect(s_login1Service,
+                  s_login1Path,
+                  s_login1ManagerInterface,
+                  QStringLiteral("PrepareForSleep"),
+                  this,
+                  SIGNAL(prepareForSleep(bool)));
+}
+
+void LogindIntegration::inhibit()
+{
+    if (m_inhibitFileDescriptor.isValid()) {
+        return;
+    }
+    QDBusMessage message = QDBusMessage::createMethodCall(s_login1Service,
+                                                          s_login1Path,
+                                                          s_login1ManagerInterface,
+                                                          QStringLiteral("Inhibit"));
+    message.setArguments(QVariantList({QStringLiteral("sleep"),
+                                       i18n("Screen Locker"),
+                                       i18n("Ensuring that the screen gets locked before going to sleep"),
+                                       QStringLiteral("delay")}));
+    QDBusPendingReply<QDBusUnixFileDescriptor> reply = m_bus.asyncCall(message);
+    QDBusPendingCallWatcher *watcher = new QDBusPendingCallWatcher(reply, this);
+    connect(watcher, &QDBusPendingCallWatcher::finished, this,
+        [this](QDBusPendingCallWatcher *self) {
+            QDBusPendingReply<QDBusUnixFileDescriptor> reply = *self;
+            self->deleteLater();
+            if (!reply.isValid()) {
+                return;
+            }
+            reply.value().swap(m_inhibitFileDescriptor);
+            emit inhibited();
+        }
+    );
+}
+
+void LogindIntegration::uninhibit()
+{
+    if (!m_inhibitFileDescriptor.isValid()) {
+        return;
+    }
+    m_inhibitFileDescriptor = QDBusUnixFileDescriptor();
 }

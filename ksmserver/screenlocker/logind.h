@@ -21,6 +21,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define LOGIND_H
 
 #include <QDBusConnection>
+#include <QDBusUnixFileDescriptor>
 #include <QObject>
 
 class QDBusServiceWatcher;
@@ -36,10 +37,15 @@ public:
         return m_connected;
     }
 
+    void inhibit();
+    void uninhibit();
+
 Q_SIGNALS:
     void requestLock();
     void requestUnlock();
     void connectedChanged();
+    void prepareForSleep(bool);
+    void inhibited();
 
 private:
     friend class LogindTest;
@@ -54,6 +60,7 @@ private:
     QDBusConnection m_bus;
     QDBusServiceWatcher *m_logindServiceWatcher;
     bool m_connected;
+    QDBusUnixFileDescriptor m_inhibitFileDescriptor;
 };
 
 #endif

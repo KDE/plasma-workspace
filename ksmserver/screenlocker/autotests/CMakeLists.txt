@@ -10,7 +10,7 @@ set(logindTest_SRCS
     ../logind.cpp
 )
 add_executable(logindTest ${logindTest_SRCS})
-target_link_libraries(logindTest Qt5::DBus Qt5::Test)
+target_link_libraries(logindTest Qt5::DBus Qt5::Test KF5::I18n)
 add_test(ksmserver-logindTest logindTest)
 ecm_mark_as_test(logindTest)
 

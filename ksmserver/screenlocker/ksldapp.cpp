@@ -212,6 +212,41 @@ void KSldApp::initialize()
             }
         }
     );
+    connect(logind, &LogindIntegration::prepareForSleep, this,
+        [this](bool goingToSleep) {
+            if (!goingToSleep) {
+                // not interested in doing anything on wakeup
+                return;
+            }
+            // TODO: depend on config option
+            lock(EstablishLock::Immediate);
+        }
+    );
+    connect(logind, &LogindIntegration::inhibited, this,
+        [this, logind]() {
+            // if we are already locked, we immediatelly remove the inhibition lock
+            if (m_lockState == KSldApp::Locked) {
+                logind->uninhibit();
+            }
+        }
+    );
+    connect(logind, &LogindIntegration::connectedChanged, this,
+        [this, logind]() {
+            if (logind->isConnected() && m_lockState == ScreenLocker::KSldApp::Unlocked) {
+                logind->inhibit();
+            }
+        }
+    );
+    connect(this, &KSldApp::locked, this,
+        [logind]() {
+            logind->uninhibit();
+        }
+    );
+    connect(this, &KSldApp::unlocked, this,
+        [logind]() {
+            logind->inhibit();
+        }
+    );
 
     configure();
 }

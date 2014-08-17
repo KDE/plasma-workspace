@@ -41,6 +41,7 @@ target_link_libraries(screenlocker_static
    KF5::I18n
    KF5::IconThemes
    KF5::IdleTime
+   KF5::I18n
    KF5::GlobalAccel
    KF5::XmlGui
    KF5::Crash
