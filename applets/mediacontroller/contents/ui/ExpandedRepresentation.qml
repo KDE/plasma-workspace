@@ -67,6 +67,7 @@ ColumnLayout {
         }
         Image {
             source: currentMetadata ? currentMetadata["mpris:artUrl"] || "" : ""
+            fillMode: Image.PreserveAspectCrop
             Layout.preferredHeight: Math.min(expandedRepresentation.height/2, sourceSize.height)
             Layout.preferredWidth: Layout.preferredHeight
             visible: status == Image.Ready && root.state != "" && !root.noPlayer && !!source
