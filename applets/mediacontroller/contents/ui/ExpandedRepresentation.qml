@@ -66,10 +66,10 @@ ColumnLayout {
             //rightMargin: units.largeSpacing // that doesn't work?!
         }
         Image {
-            source: mpris2Source.data[mpris2Source.current].Metadata["mpris:artUrl"]
+            source: currentMetadata ? currentMetadata["mpris:artUrl"] || "" : ""
             Layout.preferredHeight: Math.min(expandedRepresentation.height/2, sourceSize.height)
             Layout.preferredWidth: Layout.preferredHeight
-            visible: status == Image.Ready && root.state != "" && !root.noPlayer && mpris2Source.data[mpris2Source.current].Metadata["mpris:artUrl"] != undefined
+            visible: status == Image.Ready && root.state != "" && !root.noPlayer && !!source
         }
         Column {
             Layout.fillWidth: true
