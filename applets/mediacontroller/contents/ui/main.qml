@@ -56,9 +56,25 @@ Item {
     Plasmoid.switchWidth: units.gridUnit * 10
     Plasmoid.switchHeight: units.gridUnit * 8
     Plasmoid.icon: "media-playback-start"
-    Plasmoid.fullRepresentation: ExpandedRepresentation {}
     Plasmoid.status: PlasmaCore.Types.PassiveStatus
     Plasmoid.toolTipMainText: i18n("No media playing")
+
+    Plasmoid.fullRepresentation: ExpandedRepresentation {}
+
+    Plasmoid.compactRepresentation: PlasmaCore.IconItem {
+        source: Plasmoid.icon
+        MouseArea {
+            anchors.fill: parent
+            acceptedButtons: Qt.LeftButton | Qt.MiddleButton
+            onClicked: {
+                if (mouse.button == Qt.MiddleButton) {
+                    root.playPause()
+                } else {
+                    plasmoid.expanded = !plasmoid.expanded
+                }
+            }
+        }
+    }
 
     PlasmaCore.DataSource {
         id: mpris2Source
