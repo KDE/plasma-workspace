@@ -182,6 +182,15 @@ void KSldApp::initialize()
             emit locked();
         }
     );
+    connect(m_lockProcess, static_cast<void (QProcess::*)(QProcess::ProcessError)>(&QProcess::error), this,
+        [this](QProcess::ProcessError error) {
+            if (error == QProcess::FailedToStart) {
+                doUnlock();
+                m_waylandServer->stop();
+                qCritical() << "Greeter Process not available";
+            }
+        }
+    );
     m_lockedTimer.invalidate();
     m_graceTimer->setSingleShot(true);
     connect(m_graceTimer, &QTimer::timeout, this, &KSldApp::endGraceTime);
@@ -257,10 +266,7 @@ void KSldApp::lock(EstablishLock establishLock)
     m_lockState = AcquiringLock;
 
     // start unlock screen process
-    if (!startLockProcess(establishLock)) {
-        doUnlock();
-        qCritical() << "Greeter Process not available";
-    }
+    startLockProcess(establishLock);
 }
 
 KActionCollection *KSldApp::actionCollection()
@@ -337,7 +343,7 @@ void KSldApp::doUnlock()
 //     KNotification::event( QLatin1String("unlocked"));
 }
 
-bool KSldApp::startLockProcess(EstablishLock establishLock)
+void KSldApp::startLockProcess(EstablishLock establishLock)
 {
     QStringList args;
     if (establishLock == EstablishLock::Immediate) {
@@ -354,23 +360,15 @@ bool KSldApp::startLockProcess(EstablishLock establishLock)
     // start the Wayland server
     int fd = m_waylandServer->start();
     if (fd == -1) {
-        return false;
+        emit m_lockProcess->error(QProcess::FailedToStart);
+        return;
     }
 
     args << "--ksldfd";
     args << QString::number(fd);
 
     m_lockProcess->start(QStringLiteral(KSCREENLOCKER_GREET_BIN), args);
-    // we wait one minute
-    if (!m_lockProcess->waitForStarted(60000)) {
-        m_lockProcess->kill();
-        m_waylandServer->stop();
-        close(fd);
-        return false;
-    }
     close(fd);
-
-    return true;
 }
 
 void KSldApp::showLockWindow()

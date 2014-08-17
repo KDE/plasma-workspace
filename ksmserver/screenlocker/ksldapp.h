@@ -96,7 +96,7 @@ private Q_SLOTS:
 private:
     void initialize();
     bool establishGrab();
-    bool startLockProcess(EstablishLock establishLock);
+    void startLockProcess(EstablishLock establishLock);
     void showLockWindow();
     void hideLockWindow();
     void doUnlock();
