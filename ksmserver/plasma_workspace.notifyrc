@@ -686,6 +686,7 @@ Name[x-test]=xxLogout Canceledxx
 Comment=Plasma logout was canceled
 Comment[ar]=أُلغِيَ الخروج من بلازما
 Comment[ca]=S'ha cancel·lat la sortida del Plasma
+Comment[cs]=Odhlášení z Plazmy bylo zrušeno
 Comment[de]=Der Abmeldevorgang aus Plasma ist abgebrochen worden
 Comment[en_GB]=Plasma logout was cancelled
 Comment[es]=Se ha cancelado el cierre de sesión de Plasma
