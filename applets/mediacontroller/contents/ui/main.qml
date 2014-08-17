@@ -27,9 +27,28 @@ import org.kde.plasma.extras 2.0 as PlasmaExtras
 Item {
     id: root
 
-    property string track: mpris2Source.data[mpris2Source.current].Metadata["xesam:title"]
-                           || String(mpris2Source.data[mpris2Source.current].Metadata["xesam:url"]).substring(String(mpris2Source.data[mpris2Source.current].Metadata["xesam:url"]).lastIndexOf("/") + 1)
-    property string artist: mpris2Source.data[mpris2Source.current].Metadata["xesam:artist"] || ""
+    property var currentMetadata: mpris2Source.data[mpris2Source.current].Metadata
+    property string track: {
+        if (!currentMetadata) {
+            return ""
+        }
+        var xesamTitle = currentMetadata["xesam:title"]
+        if (xesamTitle) {
+            return xesamTitle
+        }
+        // if no track title is given, print out the file name
+        var xesamUrl = currentMetadata["xesam:url"] ? currentMetadata["xesam:url"].toString() : ""
+        if (!xesamUrl) {
+            return ""
+        }
+        var lastSlashPos = xesamUrl.lastIndexOf('/')
+        if (lastSlashPos < 0) {
+            return ""
+        }
+        var lastUrlPart = xesamUrl.substring(lastSlashPos + 1)
+        return lastUrlPart
+    }
+    property string artist: currentMetadata ? currentMetadata["xesam:artist"] || "" : ""
     property string playerIcon: ""
 
     property bool noPlayer: mpris2Source.sources.length <= 1

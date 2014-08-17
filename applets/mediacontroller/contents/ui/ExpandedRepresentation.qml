@@ -84,7 +84,7 @@ ColumnLayout {
                 opacity: 0.6
 
                 elide: Text.ElideRight
-                text: root.track == "" ? root.track : i18n("No media playing")
+                text: root.track ? root.track : i18n("No media playing")
             }
 
             PlasmaExtras.Heading {
@@ -97,7 +97,7 @@ ColumnLayout {
                 opacity: 0.4
 
                 elide: Text.ElideRight
-                text: root.noPlayer ? "" : root.artist
+                text: root.artist ? root.artist : ""
             }
         }
     }
