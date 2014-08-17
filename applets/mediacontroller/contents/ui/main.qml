@@ -73,19 +73,35 @@ Item {
         State {
             name: "off"
             when: root.noPlayer
-            PropertyChanges { target: plasmoid; status: PlasmaCore.Types.PassiveStatus; }
+            PropertyChanges {
+                target: plasmoid
+                status: PlasmaCore.Types.PassiveStatus
+                toolTipMainText: i18n("No media playing")
+            }
         },
         State {
             name: "playing"
             when: !root.noPlayer && mpris2Source.data[mpris2Source.current].PlaybackStatus == "Playing"
 
-            PropertyChanges { target: plasmoid; status: PlasmaCore.Types.ActiveStatus; icon: "media-playback-start" }
+            PropertyChanges {
+                target: plasmoid
+                status: PlasmaCore.Types.ActiveStatus
+                icon: "media-playback-start"
+                toolTipMainText: track
+                toolTipSubText: artist ? i18nc("Artist of the song", "by %1", artist) : ""
+            }
         },
         State {
             name: "paused"
             when: !root.noPlayer && mpris2Source.data[mpris2Source.current].PlaybackStatus == "Paused"
 
-            PropertyChanges { target: plasmoid; status: PlasmaCore.Types.ActiveStatus; icon: "media-playback-pause" }
+            PropertyChanges {
+                target: plasmoid
+                status: PlasmaCore.Types.ActiveStatus
+                icon: "media-playback-pause"
+                toolTipMainText: track
+                toolTipSubText: artist ? i18nc("Artist of the song", "by %1 (paused)", artist) : i18n("Paused")
+            }
         }
     ]
 }
