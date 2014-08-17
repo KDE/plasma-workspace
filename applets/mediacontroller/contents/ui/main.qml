@@ -39,8 +39,7 @@ Item {
     Plasmoid.icon: "media-playback-start"
     Plasmoid.fullRepresentation: ExpandedRepresentation {}
     Plasmoid.status: PlasmaCore.Types.PassiveStatus
-
-    state: "off"
+    Plasmoid.toolTipMainText: i18n("No media playing")
 
     PlasmaCore.DataSource {
         id: mpris2Source
@@ -70,15 +69,6 @@ Item {
     }
 
     states: [
-        State {
-            name: "off"
-            when: root.noPlayer
-            PropertyChanges {
-                target: plasmoid
-                status: PlasmaCore.Types.PassiveStatus
-                toolTipMainText: i18n("No media playing")
-            }
-        },
         State {
             name: "playing"
             when: !root.noPlayer && mpris2Source.data[mpris2Source.current].PlaybackStatus == "Playing"

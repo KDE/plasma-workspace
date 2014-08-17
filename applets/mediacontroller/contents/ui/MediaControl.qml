@@ -26,7 +26,7 @@ Item {
     id: mediaControl
 
     property alias source: iconItem.source
-    property bool enabled: !root.noPlayer && root.track != "" && root.state != "off"
+    property bool enabled: !root.noPlayer && root.track != "" && root.state != ""
 
     signal triggered
 

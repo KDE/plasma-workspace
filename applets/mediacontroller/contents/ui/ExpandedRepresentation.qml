@@ -68,7 +68,7 @@ ColumnLayout {
             source: mpris2Source.data[mpris2Source.current].Metadata["mpris:artUrl"]
             Layout.preferredHeight: Math.min(expandedRepresentation.height/2, sourceSize.height)
             Layout.preferredWidth: Layout.preferredHeight
-            visible: status == Image.Ready && root.state != "off" && !root.noPlayer && mpris2Source.data[mpris2Source.current].Metadata["mpris:artUrl"] != undefined
+            visible: status == Image.Ready && root.state != "" && !root.noPlayer && mpris2Source.data[mpris2Source.current].Metadata["mpris:artUrl"] != undefined
         }
         Column {
             Layout.fillWidth: true
@@ -84,7 +84,7 @@ ColumnLayout {
                 opacity: 0.6
 
                 elide: Text.ElideRight
-                text: root.track == "" ? i18n("No media playing") : root.track
+                text: root.track == "" ? root.track : i18n("No media playing")
             }
 
             PlasmaExtras.Heading {
@@ -108,7 +108,7 @@ ColumnLayout {
         maximumValue: mpris2Source.data[mpris2Source.current].Metadata["mpris:length"]
         value: 0
         // if there's no "mpris:length" in teh metadata, we cannot seek, so hide it in that case
-        visible: root.state != "off" && !root.noPlayer && mpris2Source.data[mpris2Source.current].Metadata["mpris:length"] != undefined
+        visible: root.state != "" && !root.noPlayer && mpris2Source.data[mpris2Source.current].Metadata["mpris:length"] != undefined
         anchors {
             left: parent.left
             right: parent.right
