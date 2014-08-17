@@ -94,7 +94,7 @@ ColumnLayout {
                     right: parent.right
                 }
                 level: 4
-                opacity: 0.3
+                opacity: 0.4
 
                 elide: Text.ElideRight
                 text: root.noPlayer ? "" : root.artist
