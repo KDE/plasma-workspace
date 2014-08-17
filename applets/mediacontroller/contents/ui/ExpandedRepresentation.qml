@@ -53,9 +53,6 @@ ColumnLayout {
         }
     }
 
-    //anchors.margins: units.largeSpacing
-    //Rectangle { color: "orange"; anchors.fill: parent }
-
     RowLayout {
         id: titleRow
         spacing: units.largeSpacing
