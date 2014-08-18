@@ -132,7 +132,7 @@ Rectangle {
              * the view really is done loading"*/
             Timer {
                 id: makeCurrentTimer
-                interval: 0
+                interval: 100
                 repeat: false
                 property int pendingIndex
                 onPendingIndexChanged: makeCurrentTimer.restart()

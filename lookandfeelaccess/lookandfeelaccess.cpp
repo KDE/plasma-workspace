@@ -78,7 +78,7 @@ LookAndFeelAccess::LookAndFeelAccess(QObject *parent)
 {
     ShellPluginLoader::init();
     d->defaultPackage = Plasma::PluginLoader::self()->loadPackage("Plasma/LookAndFeel");
-    d->defaultPackage.setPath("org.kde.lookandfeel");
+    d->defaultPackage.setPath("org.kde.breeze.desktop");
 
     d->config = KSharedConfig::openConfig("kdeglobals");
     KConfigGroup cg(d->config, "KDE");
@@ -159,7 +159,7 @@ QList<Plasma::Package> LookAndFeelAccess::availablePackages(const QString &compo
     for (const QString &path : paths) {
         Plasma::Package pkg = Plasma::PluginLoader::self()->loadPackage("Plasma/LookAndFeel");
         pkg.setPath(path);
-        if (!component.isEmpty() && !pkg.filePath(component.toUtf8()).isEmpty()) {
+        if (component.isEmpty() || !pkg.filePath(component.toUtf8()).isEmpty()) {
             packages << pkg;
         }
     }

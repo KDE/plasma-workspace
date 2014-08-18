@@ -112,7 +112,7 @@ void KCMSplashScreen::load()
     for (const Plasma::Package &pkg : pkgs) {
         QStandardItem* row = new QStandardItem(pkg.metadata().name());
         row->setData(pkg.metadata().pluginName(), PluginNameRole);
-        row->setData(pkg.filePath("splash", "screenshot.png"), ScreenhotRole);
+        row->setData(pkg.filePath("previews", "splash.png"), ScreenhotRole);
         m_model->appendRow(row);
     }
 }
