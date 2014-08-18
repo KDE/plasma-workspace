@@ -1152,6 +1152,53 @@ void ShellCorona::checkAddPanelAction(const QStringList &sycocaChanges)
     }
 }
 
+void ShellCorona::populateAddPanelsMenu()
+{
+    d->addPanelsMenu->clear();
+    const KPluginInfo emptyInfo;
+
+    KPluginInfo::List panelContainmentPlugins = Plasma::PluginLoader::listContainmentsOfType("Panel");
+    QMap<QString, QPair<KPluginInfo, KService::Ptr> > sorted;
+    foreach (const KPluginInfo &plugin, panelContainmentPlugins) {
+        sorted.insert(plugin.name(), qMakePair(plugin, KService::Ptr(0)));
+    }
+
+    const QString constraint = QString("[X-Plasma-Shell] == '%1' and 'panel' in [X-Plasma-ContainmentCategories]")
+                                      .arg(qApp->applicationName());
+    KService::List templates = KServiceTypeTrader::self()->query("Plasma/LayoutTemplate", constraint);
+    foreach (const KService::Ptr &service, templates) {
+        sorted.insert(service->name(), qMakePair(emptyInfo, service));
+    }
+
+    QMapIterator<QString, QPair<KPluginInfo, KService::Ptr> > it(sorted);
+    Plasma::Package package = Plasma::PluginLoader::self()->loadPackage("Plasma/LayoutTemplate");
+    while (it.hasNext()) {
+        it.next();
+        QPair<KPluginInfo, KService::Ptr> pair = it.value();
+        if (pair.first.isValid()) {
+            KPluginInfo plugin = pair.first;
+            QAction *action = d->addPanelsMenu->addAction(i18n("Empty %1", plugin.name()));
+            if (!plugin.icon().isEmpty()) {
+                action->setIcon(QIcon::fromTheme(plugin.icon()));
+            }
+
+            action->setData(plugin.pluginName());
+        } else {
+            //FIXME: proper names
+            KPluginInfo info(pair.second);
+            const QString path = QStandardPaths::locate(QStandardPaths::GenericDataLocation, package.defaultPackageRoot() + info.pluginName() + "/metadata.desktop");
+            if (!path.isEmpty()) {
+                package.setPath(info.pluginName());
+                const QString scriptFile = package.filePath("mainscript");
+                if (!scriptFile.isEmpty()) {
+                    QAction *action = d->addPanelsMenu->addAction(info.name());
+                    action->setData(QString::fromLatin1("plasma-desktop-template:%1").arg(scriptFile));
+                }
+            }
+        }
+    }
+}
+
 void ShellCorona::addPanel()
 {
     KPluginInfo::List panelPlugins = Plasma::PluginLoader::listContainmentsOfType("Panel");
@@ -1175,7 +1222,20 @@ void ShellCorona::addPanel(QAction *action)
                 [](const QString &msg) {
                     qDebug() << msg;
                 });
-        scriptEngine.evaluateScript(plugin.right(plugin.length() - qstrlen("plasma-desktop-template:")));
+        const QString scriptFile = plugin.right(plugin.length() - qstrlen("plasma-desktop-template:"));
+        QFile file(scriptFile);
+        if (!file.open(QIODevice::ReadOnly | QIODevice::Text)) {
+            qWarning() << i18n("Unable to load script file: %1", scriptFile);
+            return;
+        }
+
+        QString script = file.readAll();
+        if (script.isEmpty()) {
+            // qDebug() << "script is empty";
+            return;
+        }
+
+        scriptEngine.evaluateScript(script, scriptFile);
     } else if (!plugin.isEmpty()) {
         addPanel(plugin);
     }

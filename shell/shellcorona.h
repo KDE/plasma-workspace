@@ -148,6 +148,7 @@ private Q_SLOTS:
     void addPanel();
     void addPanel(QAction *action);
     void containmentDeleted(QObject* cont);
+    void populateAddPanelsMenu();
 
     void outputEnabledChanged();
     void addOutput(KScreen::Output* output);
