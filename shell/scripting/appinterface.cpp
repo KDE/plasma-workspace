@@ -174,7 +174,12 @@ bool AppInterface::hasBattery() const
 
     for (auto device: batteryDevices) {
         Solid::Battery *battery = device.as<Solid::Battery>();
-        if (battery && battery->type() == Solid::Battery::PrimaryBattery) {
+        // check for _both_ primary and power supply status
+        // apparently some devices misreport as "primary", and we don't
+        // want to trigger on just having UPC connected to a desktop box
+        if (battery &&
+            battery->type() == Solid::Battery::PrimaryBattery &&
+            battery->isPowerSupply()) {
             return true;
         }
     }
