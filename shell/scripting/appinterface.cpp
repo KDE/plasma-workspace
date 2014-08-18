@@ -22,7 +22,8 @@
 #include <QEventLoop>
 #include <QTimer>
 
-#include <solid/device.h>
+#include <Solid/Battery>
+#include <Solid/Device>
 
 #include <Plasma/Containment>
 #include <Plasma/Corona>
@@ -169,7 +170,16 @@ void AppInterface::sleep(int ms)
 
 bool AppInterface::hasBattery() const
 {
-  return !Solid::Device::listFromType(Solid::DeviceInterface::Battery).isEmpty();
+    QList<Solid::Device> batteryDevices = Solid::Device::listFromType(Solid::DeviceInterface::Battery);
+
+    for (auto device: batteryDevices) {
+        Solid::Battery *battery = device.as<Solid::Battery>();
+        if (battery && battery->type() == Solid::Battery::PrimaryBattery) {
+            return true;
+        }
+    }
+
+    return false;
 }
 
 QStringList AppInterface::knownWidgetTypes() const
