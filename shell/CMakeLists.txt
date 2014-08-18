@@ -109,4 +109,8 @@ install(TARGETS plasmashell ${INSTALL_TARGETS_DEFAULT_ARGS})
 install(FILES plasmashell.desktop DESTINATION ${AUTOSTART_INSTALL_DIR})
 install( FILES dbus/org.kde.PlasmaShell.xml DESTINATION ${DBUS_INTERFACES_INSTALL_DIR} )
 
+install(FILES
+   scripting/plasma-layout-template.desktop
+   DESTINATION ${SERVICETYPES_INSTALL_DIR})
+
 add_subdirectory(widgetexplorer)

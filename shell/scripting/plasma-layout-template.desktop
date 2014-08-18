@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=ServiceType
+X-KDE-ServiceType=Plasma/LayoutTemplate
+
+[PropertyDef::X-Plasma-Shell]
+Type=QString
+

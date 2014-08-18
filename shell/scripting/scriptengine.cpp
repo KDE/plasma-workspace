@@ -381,12 +381,14 @@ QScriptValue ScriptEngine::loadTemplate(QScriptContext *context, QScriptEngine *
 
     Plasma::Package package = Plasma::PluginLoader::self()->loadPackage("Plasma/LayoutTemplate");
     KPluginInfo info(offers.first());
-    const QString path = QStandardPaths::locate(QStandardPaths::GenericDataLocation, package.defaultPackageRoot() + '/' + info.pluginName() + '/');
+
+    const QString path = QStandardPaths::locate(QStandardPaths::GenericDataLocation, package.defaultPackageRoot() + info.pluginName() + "/metadata.desktop");
     if (path.isEmpty()) {
         // qDebug() << "script path is empty";
         return false;
     }
-    package.setPath(path);
+
+    package.setPath(info.pluginName());
 
     const QString scriptFile = package.filePath("mainscript");
     if (scriptFile.isEmpty()) {
