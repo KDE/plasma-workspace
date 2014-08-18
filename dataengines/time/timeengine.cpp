@@ -44,6 +44,7 @@ TimeEngine::TimeEngine(QObject *parent, const QVariantList &args)
     // To have translated timezone names
     // (effectively a noop if the catalog is already present).
     //KGlobal::locale()->insertCatalog("timezones4");
+    QTimer::singleShot(0, this, SLOT(init()));
 }
 
 TimeEngine::~TimeEngine()
@@ -69,6 +70,7 @@ void TimeEngine::clockSkewed()
 
 void TimeEngine::tzConfigChanged()
 {
+    qDebug() << "Local timezone changed signaled";
     TimeSource *s = qobject_cast<TimeSource *>(containerForSource("Local"));
 
     if (s) {
@@ -76,6 +78,7 @@ void TimeEngine::tzConfigChanged()
     }
 
     updateAllSources();
+    forceImmediateUpdateOfAllVisualizations();
 }
 
 QStringList TimeEngine::sources() const

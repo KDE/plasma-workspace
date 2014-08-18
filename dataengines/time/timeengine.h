@@ -42,7 +42,6 @@ class TimeEngine : public Plasma::DataEngine
         TimeEngine(QObject* parent, const QVariantList& args);
         ~TimeEngine();
 
-        void init();
         QStringList sources() const;
 
     protected:
@@ -52,6 +51,9 @@ class TimeEngine : public Plasma::DataEngine
     protected Q_SLOTS:
         void clockSkewed(); // call when system time changed and all clocks should be updated
         void tzConfigChanged();
+
+    private Q_SLOTS:
+        void init();
 };
 
 #endif // TIMEENGINE_H
