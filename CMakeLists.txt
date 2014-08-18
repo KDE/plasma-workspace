@@ -91,7 +91,7 @@ install(FILES
         DESTINATION ${DATA_INSTALL_DIR}/xsessions
 )
 
-plasma_install_package(lookandfeel org.kde.lookandfeel look-and-feel lookandfeel)
+plasma_install_package(lookandfeel org.kde.breeze.desktop look-and-feel lookandfeel)
 
 if (INSTALL_SDDM_THEME)
 # Install the login theme into the SDDM directory
