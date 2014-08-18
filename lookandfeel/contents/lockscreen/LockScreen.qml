@@ -111,6 +111,12 @@ Image {
                         }
                     }
                 }
+                Keys.onLeftPressed: {
+                    root.userSelect.decrementCurrentIndex();
+                }
+                Keys.onRightPressed: {
+                    root.userSelect.incrementCurrentIndex();
+                }
             }
 
             controls: Item {
