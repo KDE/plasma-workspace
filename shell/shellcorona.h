@@ -160,6 +160,7 @@ private Q_SLOTS:
     void showOpenGLNotCompatibleWarning();
 
 private:
+    KScreen::Output* findPrimaryOutput() const;
     QScreen* insertScreen(QScreen* screen, int idx);
     void removeView(int idx);
     bool isOutputRedundant(KScreen::Output* output) const;

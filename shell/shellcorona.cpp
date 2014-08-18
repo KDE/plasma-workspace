@@ -140,6 +140,15 @@ static KScreen::Output *screenToOutput(QScreen* screen, KScreen::Config* config)
     return 0;
 }
 
+KScreen::Output* ShellCorona::findPrimaryOutput() const
+{
+    foreach (KScreen::Output* output, d->screenConfiguration->connectedOutputs()) {
+        if (output->isPrimary())
+            return output;
+    }
+    return nullptr;
+}
+
 ShellCorona::ShellCorona(QObject *parent)
     : Plasma::Corona(parent),
       d(new Private(this))
@@ -329,8 +338,6 @@ void ShellCorona::load()
         addOutput(output);
     }
     connect(d->screenConfiguration, &KScreen::Config::outputAdded, this, &ShellCorona::addOutput);
-    connect(d->screenConfiguration, &KScreen::Config::primaryOutputChanged,
-            this, &ShellCorona::primaryOutputChanged);
 
     if (!d->waitingPanels.isEmpty()) {
         d->waitingPanelsTimer.start();
@@ -339,10 +346,11 @@ void ShellCorona::load()
 
 void ShellCorona::primaryOutputChanged()
 {
-    KScreen::Config *current = d->screenConfiguration;
-    if (!current->primaryOutput() || !current->primaryOutput()->isEnabled())
+    KScreen::Output* output = findPrimaryOutput();
+    if (!output)
         return;
-    QScreen *newPrimary = outputToScreen(current->primaryOutput());
+
+    QScreen *newPrimary = outputToScreen(output);
     int i=0;
     foreach(DesktopView *view, d->views) {
         if (view->screen() == newPrimary)
@@ -381,12 +389,13 @@ void ShellCorona::screenInvariants() const
 {
     Q_ASSERT(d->views.count() <= QGuiApplication::screens().count());
     QScreen *s = d->views.isEmpty() ? nullptr : d->views[0]->screen();
+    KScreen::Output* primaryOutput = findPrimaryOutput();
     if (!s) {
-        qWarning() << "error: couldn't find primary output" << d->screenConfiguration->primaryOutput();
+        qWarning() << "error: couldn't find primary output" << primaryOutput;
         return;
     }
-    QScreen* ks = outputToScreen(d->screenConfiguration->primaryOutput());
-    Q_ASSERT(!ks || ks == s || !d->screenConfiguration->primaryOutput()->isEnabled());
+    QScreen* ks = outputToScreen(primaryOutput);
+    Q_ASSERT(!ks || ks == s || !primaryOutput->isEnabled());
 
     QSet<QScreen*> screens;
     int i = 0;
@@ -504,7 +513,7 @@ QRect ShellCorona::screenGeometry(int id) const
 {
     if (id>=d->views.count() || id<0) {
         qWarning() << "requesting unexisting screen" << id;
-        QScreen *s = outputToScreen(d->screenConfiguration->primaryOutput());
+        QScreen *s = outputToScreen(findPrimaryOutput());
         return s ? s->geometry() : QRect();
     }
     return d->views[id]->geometry();
@@ -515,7 +524,7 @@ QRegion ShellCorona::availableScreenRegion(int id) const
     if (id>=d->views.count() || id<0) {
         //each screen should have a view
         qWarning() << "requesting unexisting screen" << id;
-        QScreen *s = outputToScreen(d->screenConfiguration->primaryOutput());
+        QScreen *s = outputToScreen(findPrimaryOutput());
         return s ? s->availableGeometry() : QRegion();
     }
     DesktopView *view = d->views[id];
@@ -538,7 +547,7 @@ QRect ShellCorona::availableScreenRect(int id) const
     if (id >= d->views.count() || id < 0) {
         //each screen should have a view
         qWarning() << "requesting unexisting screen" << id;
-        QScreen *s = outputToScreen(d->screenConfiguration->primaryOutput());
+        QScreen *s = outputToScreen(findPrimaryOutput());
         return s ? s->availableGeometry() : QRect();
     }
 
@@ -679,6 +688,7 @@ void ShellCorona::addOutput(KScreen::Output *output)
     connect(output, &KScreen::Output::isEnabledChanged, this, &ShellCorona::outputEnabledChanged, Qt::UniqueConnection);
     connect(output, &KScreen::Output::posChanged, &d->reconsiderOutputsTimer, static_cast<void (QTimer::*)()>(&QTimer::start), Qt::UniqueConnection);
     connect(output, &KScreen::Output::currentModeIdChanged, &d->reconsiderOutputsTimer, static_cast<void (QTimer::*)()>(&QTimer::start), Qt::UniqueConnection);
+    connect(output, &KScreen::Output::isPrimaryChanged, this, &ShellCorona::primaryOutputChanged, Qt::UniqueConnection);
     if (!output->isEnabled()) {
         d->redundantOutputs.remove(output);
         d->reconsiderOutputsTimer.start();
