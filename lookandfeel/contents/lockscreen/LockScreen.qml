@@ -29,6 +29,7 @@ Image {
     property bool debug: false
     property bool shutdownSupported: true
     property string notification
+    property UserSelect userSelect: null
     signal shutdown()
     signal clearPassword()
 
@@ -72,9 +73,12 @@ Image {
                 id: usersSelection
 
                 onVisibleChanged: {
-                    if(visible)
+                    if(visible) {
                         currentIndex = 0;
+                    }
                 }
+                Component.onCompleted: root.userSelect = usersSelection
+
                 notification: root.notification
 
                 model: ListModel {
@@ -126,6 +130,21 @@ Image {
                         onAccepted: unlockFunction()
                         focus: true
                         visible: block.mainItem.model.get(block.mainItem.selectedIndex)["showPassword"]
+
+                        Keys.onLeftPressed: {
+                            if (text == "") {
+                                root.userSelect.decrementCurrentIndex();
+                            } else {
+                                event.accepted = false;
+                            }
+                        }
+                        Keys.onRightPressed: {
+                            if (text == "") {
+                                root.userSelect.incrementCurrentIndex();
+                            } else {
+                                event.accepted = false;
+                            }
+                        }
                     }
 
                     PlasmaComponents.Button {
@@ -142,6 +161,12 @@ Image {
                             case "changeSession":
                                 stackView.push(changeSessionComponent)
                                 break;
+                        }
+                        Keys.onLeftPressed: {
+                            root.userSelect.decrementCurrentIndex();
+                        }
+                        Keys.onRightPressed: {
+                            root.userSelect.incrementCurrentIndex();
                         }
                     }
 
