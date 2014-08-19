@@ -91,7 +91,7 @@ void ClipboardJob::start()
             urls << QUrl::fromLocalFile(parameters().value("urls").toString());
             //qDebug() << "Creating job now " << urls;
             KIO::PreviewJob* job = KIO::filePreview(urls,
-                                                    QSize(128, 64));
+                                                    QSize(128, 128));
             job->setIgnoreMaximumSize(true);
             connect(job, SIGNAL(gotPreview(KFileItem,QPixmap)),
                     this, SLOT(showPreview(KFileItem,QPixmap)));

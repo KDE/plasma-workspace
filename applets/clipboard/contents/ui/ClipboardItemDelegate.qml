@@ -87,16 +87,18 @@ PlasmaComponents.ListItem {
                         previewList.model = urls
                     }
                 }
-                GridView {
+                ListView {
                     id: previewList
 //                     model: DisplayRole.split(" ")
 
-                    property int itemWidth: units.gridUnit * 4
-                    //orientation: Qt.Horizontal
+                    property int itemWidth: units.gridUnit * 3
+                    spacing: units.smallSpacing
+//                     verticalSpacing: units.smallSpacing
+                    orientation: Qt.Horizontal
                     anchors.fill: parent
                     //columns: parent.width / itemWidth
-                    cellWidth: itemWidth
-                    cellHeight: itemHeight
+                    property int cellWidth: itemWidth
+                    property int cellHeight: itemHeight * .66
 
 
                     delegate: KQuickControlsAddons.QPixmapItem {
@@ -104,10 +106,11 @@ PlasmaComponents.ListItem {
 //                         width: parent.width
 //                         height: width * (nativeHeight/nativeWidth)
                         //pixmap: DecorationRole
-                        width: previewList.itemWidth
-                        height: previewList.itemWidth
+                        width: Math.round(height * 1.5)
+                        height: Math.round(parent.height * 0.8)
+                        y: Math.round(parent.height / 10)
                         //visible: TypeRole == 1 || TypeRole == 2
-                        fillMode: KQuickControlsAddons.QPixmapItem.PreserveAspectFit
+                        fillMode: KQuickControlsAddons.QPixmapItem.PreserveAspectCrop
                         Component.onCompleted: {
                             var service = clipboardSource.serviceForSource(UuidRole)
                             var operation = "preview";
@@ -135,7 +138,7 @@ PlasmaComponents.ListItem {
 
                         }
                         Rectangle {
-                            border.width: 2
+                            border.width: 1
                             border.color: "black"
                             color: "transparent"
                             anchors.fill: parent
