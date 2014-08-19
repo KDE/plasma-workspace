@@ -18,7 +18,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-import QtQuick 2.0
+import QtQuick 2.2
 import QtQuick.Layouts 1.1
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as Components
@@ -50,6 +50,7 @@ Item {
                              Locale.NarrowFormat
     property string lastDate: ""
     property string timeFormat
+    property int tzOffset
 
     onShowSecondsChanged: {
         timeFormatCorrection(Qt.locale().timeFormat(Locale.ShortFormat))
@@ -156,26 +157,40 @@ Item {
             timeFormatString = timeFormatString + " t";
         }
 
-
         main.timeFormat = timeFormatString;
     }
 
     function dateTimeChanged()
     {
-        if (!main.showDate) {
-            return;
+        //console.log("Date/time changed!");
+        var doCorrections = false;
+
+        if (main.showDate) {
+            // If the date has changed, force size recalculation, because the day name
+            // or the month name can now be longer/shorter, so we need to adjust applet size
+            var currentDate = Qt.formatDateTime(dataSource.data["Local"]["DateTime"], "yyyy-mm-dd");
+            if (main.lastDate != currentDate) {
+                doCorrections = true;
+                main.lastDate = currentDate
+            }
         }
 
-        // If the date has changed, force size recalculation, because the day name
-        // or the month name can now be longer/shorter, so we need to adjust applet size
-        var currentDate = Qt.formatDateTime(dataSource.data["Local"]["DateTime"], "yyyy-mm-dd");
-        if (main.lastDate != currentDate) {
+        var currentTZOffset = dataSource.data["Local"]["Offset"] / 60;
+        if (currentTZOffset != tzOffset) {
+            doCorrections = true;
+            tzOffset = currentTZOffset;
+            //console.log("TZ offset changed: " + tzOffset);
+            Date.timeZoneUpdated(); // inform the QML JS engine about TZ change
+        }
+
+        if (doCorrections) {
             timeFormatCorrection(main.timeFormat);
-            main.lastDate = currentDate
         }
     }
 
     Component.onCompleted: {
+        tzOffset = new Date().getTimezoneOffset();
+        //console.log("Initial TZ offset: " + tzOffset);
         timeFormatCorrection(Qt.locale().timeFormat(Locale.ShortFormat))
         dataSource.onDataChanged.connect(dateTimeChanged);
     }
