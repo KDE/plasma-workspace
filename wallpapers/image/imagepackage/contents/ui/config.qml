@@ -251,10 +251,6 @@ ColumnLayout {
                 anchors.margins: 4
                 boundsBehavior: Flickable.StopAtBounds
 
-                highlight: Rectangle {
-                    radius: 3
-                    color: syspal.highlight
-                }
                 delegate: WallpaperDelegate {}
                 Timer {
                     id: makeCurrentTimer

@@ -40,93 +40,80 @@ MouseArea {
     //note: this *doesn't* use system colors since it represent a 
     //skeymorphic photograph rather than a widget
     Rectangle {
-        visible: model.screenshot == null
+        id: background
         color: "white"
         anchors {
-            fill: walliePreview
-            margins: 1
+            fill: parent
+            margins: units.smallSpacing
         }
         opacity: 0.8
         Rectangle {
-            color: "black"
-            opacity: 0.3
+            color: cfg_Color
             anchors {
                 fill: parent
-                margins: units.gridUnit
+                margins: units.smallSpacing * 2
             }
-        }
-        QIconItem {
-            anchors.centerIn: parent
-            width: units.iconSizes.large
-            height: width
-            icon: "view-preview"
+            QIconItem {
+                anchors.centerIn: parent
+                width: units.iconSizes.large
+                height: width
+                icon: "view-preview"
+            }
+            QPixmapItem {
+                id: walliePreview
+                anchors.fill: parent
+                visible: model.screenshot != null
+                smooth: true
+                pixmap: model.screenshot
+                fillMode: {
+                    if (cfg_FillMode == Image.Stretch) {
+                        return QPixmapItem.Stretch;
+                    } else if (cfg_FillMode == Image.PreserveAspectFit) {
+                        return QPixmapItem.PreserveAspectFit;
+                    } else if (cfg_FillMode == Image.PreserveAspectCrop) {
+                        return QPixmapItem.PreserveAspectCrop;
+                    } else if (cfg_FillMode == Image.Tile) {
+                        return QPixmapItem.Tile;
+                    } else if (cfg_FillMode == Image.TileVertically) {
+                        return QPixmapItem.TileVertically;
+                    } else if (cfg_FillMode == Image.TileHorizontally) {
+                        return QPixmapItem.TileHorizontally;
+                    }
+                    return QPixmapItem.Pad;
+                }
+            }
+            PlasmaComponents.ToolButton {
+                anchors {
+                    top: parent.top
+                    right: parent.right
+                    margins: units.smallSpacing
+                }
+                iconSource: "list-remove"
+                tooltip: i18nd("plasma_applet_org.kde.image", "Remove wallpaper")
+                flat: false
+                visible: model.removable
+                onClicked: imageWallpaper.removeWallpaper(model.packageName)
+                opacity: wallpaperDelegate.containsMouse ? 1 : 0
+                Behavior on opacity {
+                    PropertyAnimation {
+                        duration: units.longDuration
+                        easing.type: Easing.OutQuad
+                    }
+                }
+            }
         }
     }
-    QPixmapItem {
-        id: walliePreview
-        anchors {
-            left: parent.left
-            right: parent.right
-            verticalCenter: parent.verticalCenter
-        }
-        height: wallpaperDelegate.height + 1
-        width: wallpaperDelegate.width + 1
-        visible: model.screenshot != null
-        smooth: true
-        pixmap: model.screenshot
-        fillMode: {
-            if (cfg_FillMode == Image.Stretch) {
-                return QPixmapItem.Stretch;
-            } else if (cfg_FillMode == Image.PreserveAspectFit) {
-                return QPixmapItem.PreserveAspectFit;
-            } else if (cfg_FillMode == Image.PreserveAspectCrop) {
-                return QPixmapItem.PreserveAspectCrop;
-            } else if (cfg_FillMode == Image.Tile) {
-                return QPixmapItem.Tile;
-            } else if (cfg_FillMode == Image.TileVertically) {
-                return QPixmapItem.TileVertically;
-            } else if (cfg_FillMode == Image.TileHorizontally) {
-                return QPixmapItem.TileHorizontally;
-            }
-            return QPixmapItem.Pad;
-        }
 
-        Rectangle {
-            anchors.fill: parent
-            color: cfg_Color
-            z: parent.z - 1
-        }
-
-        Rectangle {
-            opacity: selected ? 1.0 : 0
-            anchors.fill: parent
-            border.width: units.smallSpacing * 2
-            border.color: syspal.highlight
-            color: "transparent"
-            Behavior on opacity {
-                PropertyAnimation {
-                    duration: units.longDuration
-                    easing.type: Easing.OutQuad
-                }
-            }
-        }
-        PlasmaComponents.ToolButton {
-            anchors {
-                top: parent.top
-                right: parent.right
-                margins: units.smallSpacing
-            }
-            iconSource: "list-remove"
-            tooltip: i18nd("plasma_applet_org.kde.image", "Remove wallpaper")
-            flat: false
-            visible: model.removable
-            onClicked: imageWallpaper.removeWallpaper(model.packageName)
-            opacity: wallpaperDelegate.containsMouse ? 1 : 0
-            Behavior on opacity {
-                PropertyAnimation {
-                    duration: units.longDuration
-                    easing.type: Easing.OutQuad
-                }
+    Rectangle {
+        opacity: selected ? 1.0 : 0
+        anchors.fill: background
+        border.width: units.smallSpacing * 2
+        border.color: syspal.highlight
+        color: "transparent"
+        Behavior on opacity {
+            PropertyAnimation {
+                duration: units.longDuration
+                easing.type: Easing.OutQuad
             }
         }
     }
