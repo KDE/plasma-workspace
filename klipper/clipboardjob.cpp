@@ -85,40 +85,47 @@ void ClipboardJob::start()
         setResult(true);
 
     } else if (operation == QLatin1String("preview")) {
+
+            const int pixelWidth = parameters().value("previewWidth").toInt();
+            const int pixelHeight = parameters().value("previewHeight").toInt();
+
+            if (pixelWidth <= 0 || pixelHeight <= 0) {
+                qWarning() << "Preview size invalid: " << pixelWidth << "x" << pixelHeight;
+                setResult(false);
+                emitResult();
+                return;
+            }
+
             KFileItemList urls;
-            //qDebug() << " URLS: " << parameters["urls"];
-            //urls << KFileItem(QUrl("file://home/sebas/Pictures/cherry-blossoms.jpg"));
-            urls << QUrl::fromLocalFile(parameters().value("urls").toString());
-            //qDebug() << "Creating job now " << urls;
+            urls << QUrl::fromLocalFile(parameters().value("url").toString());
+
             KIO::PreviewJob* job = KIO::filePreview(urls,
-                                                    QSize(128, 128));
-            job->setIgnoreMaximumSize(true);
-            connect(job, SIGNAL(gotPreview(KFileItem,QPixmap)),
-                    this, SLOT(showPreview(KFileItem,QPixmap)));
-            connect(job, SIGNAL(failed(KFileItem)),
-                    this, SLOT(previewFailed(KFileItem)));
+                                                    QSize(pixelWidth, pixelHeight));
+            connect(job, &KIO::PreviewJob::gotPreview, this,
+                [this](KFileItem item, QPixmap preview) {
+                    qDebug() << "============== Preview arrived: " << item.url() << preview.size();
+                    QVariantMap res;
+                    res.insert("url", item.url());
+                    res.insert("preview", preview);
+                    setResult(res);
+                    emitResult();
+                }
+            );
+            connect(job, &KIO::PreviewJob::failed, this,
+                [this](KFileItem item) {
+
+                    qWarning() << "PreviewJob failed for" << item.url() << qobject_cast<KIO::PreviewJob*>(sender())->errorString();
+                    setResult(false);
+                    emitResult();
+                }
+            );
+
+
             job->start();
 
             return;
     } else {
         setResult(false);
     }
-    emitResult();
-}
-
-void ClipboardJob::showPreview(const KFileItem& item, const QPixmap& preview)
-{
-    qDebug() << "============== Preview arrived: " << item.url();
-    QVariantMap res;
-    res.insert("url", item.url());
-    res.insert("preview", preview);
-    setResult(res);
-    emitResult();
-}
-
-void ClipboardJob::previewFailed(const KFileItem& item)
-{
-    qDebug() << "============= preview failed :(";
-    setResult(false);
     emitResult();
 }

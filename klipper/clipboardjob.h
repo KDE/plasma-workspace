@@ -19,8 +19,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #ifndef KLIPPER_CLIPBOARDJOB_H
 #define KLIPPER_CLIPBOARDJOB_H
 
-#include <ServiceJob>
-#include <KFileItem>
+#include <Plasma/ServiceJob>
 
 class Klipper;
 
@@ -32,9 +31,6 @@ public:
     ~ClipboardJob() = default;
 
     void start() override;
-private Q_SLOTS:
-    void showPreview(const KFileItem &item, const QPixmap &preview);
-    void previewFailed(const KFileItem &item);
 
 private:
     Klipper *m_klipper;

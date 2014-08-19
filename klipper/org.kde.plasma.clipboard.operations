@@ -9,8 +9,14 @@
     <group name="edit">
     </group>
     <group name="preview">
-        <entry name="urls" type="StringList">
-            <label>The URLs to preview</label>
+        <entry name="url" type="String">
+            <label>The URL to generate a preview for</label>
+        </entry>
+        <entry name="previewWidth" type="int">
+            <label>The width of the preview in pixel</label>
+        </entry>
+        <entry name="previewHeight" type="int">
+            <label>The height of the preview in pixel</label>
         </entry>
     </group>
     <group name="barcode">

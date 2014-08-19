@@ -80,8 +80,7 @@ target_link_libraries(plasma_engine_clipboard
     KF5::CoreAddons    # KUrlMimeData
     KF5::GlobalAccel
     KF5::IconThemes
-    KF5::KIOCore
-    KF5::KIOWidgets
+    KF5::KIOWidgets    # PreviewJob
     KF5::Plasma
     KF5::Service
     KF5::TextWidgets   # KTextEdit
