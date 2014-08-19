@@ -21,6 +21,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include "history.h"
 #include "historyitem.h"
 
+#include <KIO/PreviewJob>
+#include <QDebug>
+
 ClipboardJob::ClipboardJob(Klipper *klipper, const QString &destination, const QString &operation, const QVariantMap &parameters, QObject *parent)
     : Plasma::ServiceJob(destination, operation, parameters, parent)
     , m_klipper(klipper)
@@ -30,6 +33,7 @@ ClipboardJob::ClipboardJob(Klipper *klipper, const QString &destination, const Q
 void ClipboardJob::start()
 {
     const QString operation = operationName();
+    qDebug()<< "OP: " << operation << parameters();
     // first check for operations not needing an item
     if (operation == QLatin1String("clearHistory")) {
         m_klipper->slotAskClearHistory();
@@ -79,8 +83,42 @@ void ClipboardJob::start()
     } else if (operation == QLatin1String("action")) {
         m_klipper->urlGrabber()->invokeAction(item);
         setResult(true);
+
+    } else if (operation == QLatin1String("preview")) {
+            KFileItemList urls;
+            //qDebug() << " URLS: " << parameters["urls"];
+            //urls << KFileItem(QUrl("file://home/sebas/Pictures/cherry-blossoms.jpg"));
+            urls << QUrl::fromLocalFile(parameters().value("urls").toString());
+            //qDebug() << "Creating job now " << urls;
+            KIO::PreviewJob* job = KIO::filePreview(urls,
+                                                    QSize(128, 64));
+            job->setIgnoreMaximumSize(true);
+            connect(job, SIGNAL(gotPreview(KFileItem,QPixmap)),
+                    this, SLOT(showPreview(KFileItem,QPixmap)));
+            connect(job, SIGNAL(failed(KFileItem)),
+                    this, SLOT(previewFailed(KFileItem)));
+            job->start();
+
+            return;
     } else {
         setResult(false);
     }
+    emitResult();
+}
+
+void ClipboardJob::showPreview(const KFileItem& item, const QPixmap& preview)
+{
+    qDebug() << "============== Preview arrived: " << item.url();
+    QVariantMap res;
+    res.insert("url", item.url());
+    res.insert("preview", preview);
+    setResult(res);
+    emitResult();
+}
+
+void ClipboardJob::previewFailed(const KFileItem& item)
+{
+    qDebug() << "============= preview failed :(";
+    setResult(false);
     emitResult();
 }
