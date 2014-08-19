@@ -65,7 +65,7 @@ Item {
     Plasmoid.fullRepresentation: Item {
         id: dialogItem
         Layout.minimumWidth: units.iconSizes.medium * 9
-        Layout.minimumHeight: units.gridUnit * 13
+        Layout.minimumHeight: units.gridUnit * 26
 
         focus: true
 

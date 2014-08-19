@@ -56,16 +56,93 @@ PlasmaComponents.ListItem {
             PlasmaComponents.Label {
                 height: implicitHeight
                 width: parent.width
+                maximumLineCount: 3
                 text: DisplayRole
-                visible: TypeRole != 1 // TypeRole: 0: Text, 1: Image, 2: Url
+                visible: TypeRole == 0 // TypeRole: 0: Text, 1: Image, 2: Url
                 textFormat: Text.PlainText
             }
             KQuickControlsAddons.QPixmapItem {
+                id: previewPixmap
                 width: parent.width
                 height: width * (nativeHeight/nativeWidth)
                 pixmap: DecorationRole
                 visible: TypeRole == 1
                 fillMode: KQuickControlsAddons.QPixmapItem.PreserveAspectFit
+            }
+            Item {
+                visible: TypeRole == 2
+
+                height: units.gridUnit * 4
+                width: parent.width
+
+                Component.onCompleted: {
+                    if (TypeRole  == 2) {
+                        print("DisplayRole: " + DisplayRole);
+                        print(" sliced: " + DisplayRole.slice(7, DisplayRole.length));
+                        var urls = DisplayRole.slice(7, DisplayRole.length).split("file://");
+                        print("Model data inside delegate: " + urls);
+                        for (var k in urls) {
+                            print("_____________ KEY: " + k + " " + urls[k]);
+                        }
+                        previewList.model = urls
+                    }
+                }
+                GridView {
+                    id: previewList
+//                     model: DisplayRole.split(" ")
+
+                    property int itemWidth: units.gridUnit * 4
+                    //orientation: Qt.Horizontal
+                    anchors.fill: parent
+                    //columns: parent.width / itemWidth
+                    cellWidth: itemWidth
+                    cellHeight: itemHeight
+
+
+                    delegate: KQuickControlsAddons.QPixmapItem {
+                        id: previewPixmap
+//                         width: parent.width
+//                         height: width * (nativeHeight/nativeWidth)
+                        //pixmap: DecorationRole
+                        width: previewList.itemWidth
+                        height: previewList.itemWidth
+                        //visible: TypeRole == 1 || TypeRole == 2
+                        fillMode: KQuickControlsAddons.QPixmapItem.PreserveAspectFit
+                        Component.onCompleted: {
+                            var service = clipboardSource.serviceForSource(UuidRole)
+                            var operation = "preview";
+
+                            function result(job) {
+                                //print("result!..");
+                                if (!job.error) {
+                                    print("Cool!");
+                                    print(" res: " + job.result["url"]);
+                                    pixmap = job.result["preview"];
+                                } else {
+                                    print("Job failed");
+                                }
+                                //spixmap = job.result;
+
+                                //print("ServiceJob error: " + job.error + " result: " + job.result + " op: " + job.operationName);
+                            }
+
+                            var operation = service.operationDescription(operation);
+                            operation.urls = modelData;
+                            //operation.password = password;
+                            var serviceJob = service.startOperationCall(operation);
+                            serviceJob.finished.connect(result);
+                            print("JOb started: " + modelData);
+
+                        }
+                        Rectangle {
+                            border.width: 2
+                            border.color: "black"
+                            color: "transparent"
+                            anchors.fill: parent
+                        }
+                    }
+                }
+
             }
         }
 
