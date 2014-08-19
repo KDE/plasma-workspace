@@ -8,6 +8,11 @@
     </group>
     <group name="edit">
     </group>
+    <group name="preview">
+        <entry name="urls" type="StringList">
+            <label>The URLs to preview</label>
+        </entry>
+    </group>
     <group name="barcode">
     </group>
     <group name="action">
