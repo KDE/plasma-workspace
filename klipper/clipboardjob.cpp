@@ -84,7 +84,7 @@ void ClipboardJob::start()
         m_klipper->urlGrabber()->invokeAction(item);
         setResult(true);
 
-    } else if (operation == QLatin1String("preview")) {
+    } else if (operation == QStringLiteral("preview")) {
 
             const int pixelWidth = parameters().value("previewWidth").toInt();
             const int pixelHeight = parameters().value("previewHeight").toInt();
@@ -97,7 +97,7 @@ void ClipboardJob::start()
             }
 
             QUrl url(parameters().value("url").toString());
-            if (!url.isValid()) {
+            if (!url.isValid() || !url.isLocalFile()) { // no remote files
                 setResult(false);
                 emitResult();
                 return;

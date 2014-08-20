@@ -28,7 +28,7 @@ Item {
     id: main
 
     width: units.gridUnit * 26
-    height: units.gridUnit * 26
+    height: units.gridUnit * 20
 
     //anchors.fill: parent
     Plasmoid.switchWidth: units.gridUnit * 10

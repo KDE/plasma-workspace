@@ -90,27 +90,22 @@ PlasmaComponents.ListItem {
 
                     delegate: KQuickControlsAddons.QPixmapItem {
                         id: previewPixmap
+
                         width: previewList.itemWidth
                         height:  previewList.itemHeight
                         y: Math.round((parent.height - previewList.itemHeight) / 2)
 
-                        //visible: TypeRole == 1 || TypeRole == 2
-
                         fillMode: KQuickControlsAddons.QPixmapItem.PreserveAspectCrop
                         Component.onCompleted: {
-                            var service = clipboardSource.serviceForSource(UuidRole)
-                            var operation = "preview";
 
                             function result(job) {
                                 if (!job.error) {
-                                    print(" res: " + job.result["url"]);
                                     pixmap = job.result["preview"];
-                                } else {
-                                    print("Job failed");
                                 }
                             }
 
-                            var operation = service.operationDescription(operation);
+                            var service = clipboardSource.serviceForSource(UuidRole)
+                            var operation = service.operationDescription("preview");
                             operation.url = modelData;
                             operation.previewWidth = previewPixmap.width;
                             operation.previewHeight = previewPixmap.height;
@@ -151,6 +146,7 @@ PlasmaComponents.ListItem {
             PlasmaComponents.ToolButton {
                 iconSource: "document-edit"
                 enabled: !clipboardSource.editing
+                visible: TypeRole != 2
                 tooltip: i18n("Edit contents")
                 onClicked: menuItem.edit(UuidRole)
             }
