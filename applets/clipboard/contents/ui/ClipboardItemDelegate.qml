@@ -25,6 +25,7 @@ PlasmaComponents.ListItem {
     id: menuItem
 
     property alias supportsBarcodes: barcodeToolButton.visible
+    property int maximumNumberOfPreviews: 4
     signal itemSelected(string uuid)
     signal remove(string uuid)
     signal edit(string uuid)
@@ -70,79 +71,58 @@ PlasmaComponents.ListItem {
                 fillMode: KQuickControlsAddons.QPixmapItem.PreserveAspectFit
             }
             Item {
+                id: previewItem
                 visible: TypeRole == 2
 
-                height: units.gridUnit * 4
+                height: visible ? units.gridUnit * 4 : 0
                 width: parent.width
 
-                Component.onCompleted: {
-                    if (TypeRole  == 2) {
-                        print("DisplayRole: " + DisplayRole);
-                        print(" sliced: " + DisplayRole.slice(7, DisplayRole.length));
-                        var urls = DisplayRole.slice(7, DisplayRole.length).split("file://");
-                        print("Model data inside delegate: " + urls);
-                        for (var k in urls) {
-                            print("_____________ KEY: " + k + " " + urls[k]);
-                        }
-                        previewList.model = urls
-                    }
-                }
                 ListView {
                     id: previewList
-//                     model: DisplayRole.split(" ")
+                    model: TypeRole == 2 ? DisplayRole.split(" ", maximumNumberOfPreviews) : 0
+                    property int itemWidth: units.gridUnit * 4
+                    property int itemHeight: Math.round(itemWidth * 0.66)
+                    interactive: contentWidth > width
 
-                    property int itemWidth: units.gridUnit * 3
                     spacing: units.smallSpacing
-//                     verticalSpacing: units.smallSpacing
                     orientation: Qt.Horizontal
                     anchors.fill: parent
-                    //columns: parent.width / itemWidth
-                    property int cellWidth: itemWidth
-                    property int cellHeight: itemHeight * .66
-
 
                     delegate: KQuickControlsAddons.QPixmapItem {
                         id: previewPixmap
-//                         width: parent.width
-//                         height: width * (nativeHeight/nativeWidth)
-                        //pixmap: DecorationRole
-                        width: Math.round(height * 1.5)
-                        height: Math.round(parent.height * 0.8)
-                        y: Math.round(parent.height / 10)
+                        width: previewList.itemWidth
+                        height:  previewList.itemHeight
+                        y: Math.round((parent.height - previewList.itemHeight) / 2)
+
                         //visible: TypeRole == 1 || TypeRole == 2
+
                         fillMode: KQuickControlsAddons.QPixmapItem.PreserveAspectCrop
                         Component.onCompleted: {
                             var service = clipboardSource.serviceForSource(UuidRole)
                             var operation = "preview";
 
                             function result(job) {
-                                //print("result!..");
                                 if (!job.error) {
-                                    print("Cool!");
                                     print(" res: " + job.result["url"]);
                                     pixmap = job.result["preview"];
                                 } else {
                                     print("Job failed");
                                 }
-                                //spixmap = job.result;
-
-                                //print("ServiceJob error: " + job.error + " result: " + job.result + " op: " + job.operationName);
                             }
 
                             var operation = service.operationDescription(operation);
-                            operation.urls = modelData;
-                            //operation.password = password;
+                            operation.url = modelData;
+                            operation.previewWidth = previewPixmap.width;
+                            operation.previewHeight = previewPixmap.height;
                             var serviceJob = service.startOperationCall(operation);
                             serviceJob.finished.connect(result);
-                            print("JOb started: " + modelData);
-
                         }
-                        Rectangle {
-                            border.width: 1
-                            border.color: "black"
-                            color: "transparent"
-                            anchors.fill: parent
-                        }
+//                         Rectangle {
+//                             border.width: 1
+//                             border.color: "black"
+//                             color: "transparent"
+//                             anchors.fill: parent
+//                         }
                     }
                 }
 

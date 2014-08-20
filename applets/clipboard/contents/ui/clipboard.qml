@@ -26,9 +26,13 @@ import org.kde.plasma.extras 2.0 as PlasmaExtras
 
 Item {
     id: main
-    anchors.fill: parent
+
+    width: units.gridUnit * 26
+    height: units.gridUnit * 26
+
+    //anchors.fill: parent
     Plasmoid.switchWidth: units.gridUnit * 10
-    Plasmoid.switchHeight: units.gridUnit * 10
+    Plasmoid.switchHeight: units.gridUnit * 8
     Plasmoid.status: clipboardSource.data["clipboard"]["empty"] ? PlasmaCore.Types.PassiveStatus : PlasmaCore.Types.ActiveStatus
     Plasmoid.toolTipMainText: i18n("Clipboard Contents")
     Plasmoid.toolTipSubText: clipboardSource.data["clipboard"]["empty"] ? i18n("Clipboard is empty") : clipboardSource.data["clipboard"]["current"]
