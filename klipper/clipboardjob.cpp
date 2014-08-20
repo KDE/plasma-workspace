@@ -23,6 +23,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #include <KIO/PreviewJob>
 #include <QDebug>
+#include <QIcon>
 
 ClipboardJob::ClipboardJob(Klipper *klipper, const QString &destination, const QString &operation, const QVariantMap &parameters, QObject *parent)
     : Plasma::ServiceJob(destination, operation, parameters, parent)
@@ -86,50 +87,57 @@ void ClipboardJob::start()
 
     } else if (operation == QStringLiteral("preview")) {
 
-            const int pixelWidth = parameters().value("previewWidth").toInt();
-            const int pixelHeight = parameters().value("previewHeight").toInt();
-
-            if (pixelWidth <= 0 || pixelHeight <= 0) {
-                qWarning() << "Preview size invalid: " << pixelWidth << "x" << pixelHeight;
-                setResult(false);
-                emitResult();
-                return;
-            }
-
-            QUrl url(parameters().value("url").toString());
-            if (!url.isValid() || !url.isLocalFile()) { // no remote files
-                setResult(false);
-                emitResult();
-                return;
-            }
-
-            KFileItemList urls;
-            urls << url;
-            KIO::PreviewJob* job = KIO::filePreview(urls,
-                                                    QSize(pixelWidth, pixelHeight));
-            connect(job, &KIO::PreviewJob::gotPreview, this,
-                [this](KFileItem item, QPixmap preview) {
-                    qDebug() << "============== Preview arrived: " << item.url() << preview.size();
-                    QVariantMap res;
-                    res.insert("url", item.url());
-                    res.insert("preview", preview);
-                    setResult(res);
-                    emitResult();
-                }
-            );
-            connect(job, &KIO::PreviewJob::failed, this,
-                [this](KFileItem item) {
-
-                    qWarning() << "PreviewJob failed for" << item.url() << qobject_cast<KIO::PreviewJob*>(sender())->errorString();
-                    setResult(false);
-                    emitResult();
-                }
-            );
 
 
-            job->start();
+        const int pixelWidth = parameters().value("previewWidth").toInt();
+        const int pixelHeight = parameters().value("previewHeight").toInt();
 
+        if (pixelWidth <= 0 || pixelHeight <= 0) {
+            qWarning() << "Preview size invalid: " << pixelWidth << "x" << pixelHeight;
+            setResult(false);
+            emitResult();
             return;
+        }
+
+        QUrl url(parameters().value("url").toString());
+        if (!url.isValid() || !url.isLocalFile()) { // no remote files
+            setResult(false);
+            emitResult();
+            return;
+        }
+
+        KFileItemList urls;
+        urls << url;
+        KIO::PreviewJob* job = KIO::filePreview(urls,
+                                                QSize(pixelWidth, pixelHeight));
+        connect(job, &KIO::PreviewJob::gotPreview, this,
+            [this](KFileItem item, QPixmap preview) {
+                qDebug() << "============== Preview arrived: " << item.url() << preview.size();
+                QVariantMap res;
+                res.insert("url", item.url());
+                res.insert("preview", preview);
+                res.insert("icon", false);
+                setResult(res);
+                emitResult();
+            }
+        );
+        connect(job, &KIO::PreviewJob::failed, this,
+            [&](KFileItem item) {
+
+                qWarning() << "PreviewJob failed for" << item.url() << qobject_cast<KIO::PreviewJob*>(sender())->errorString();
+                QVariantMap res;
+                res.insert("url", item.url());
+                QPixmap pix = QIcon::fromTheme(item.currentMimeType().iconName()).pixmap(pixelHeight * 0.8, pixelHeight * 0.8);
+                res.insert("preview", pix);
+                res.insert("icon", true);
+                setResult(res);
+                emitResult();
+            }
+        );
+
+        job->start();
+
+        return;
     } else {
         setResult(false);
     }
