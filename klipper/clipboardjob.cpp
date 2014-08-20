@@ -96,9 +96,15 @@ void ClipboardJob::start()
                 return;
             }
 
-            KFileItemList urls;
-            urls << QUrl::fromLocalFile(parameters().value("url").toString());
+            QUrl url(parameters().value("url").toString());
+            if (!url.isValid()) {
+                setResult(false);
+                emitResult();
+                return;
+            }
 
+            KFileItemList urls;
+            urls << url;
             KIO::PreviewJob* job = KIO::filePreview(urls,
                                                     QSize(pixelWidth, pixelHeight));
             connect(job, &KIO::PreviewJob::gotPreview, this,
