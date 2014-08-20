@@ -56,8 +56,8 @@ QString HistoryURLItem::text() const {
     for (const QUrl &url : m_urls) {
         if (!first) {
             ret.append(QStringLiteral(" "));
-            first = false;
         }
+        first = false;
         ret.append(url.toString(QUrl::FullyEncoded));
     }
     return ret;
