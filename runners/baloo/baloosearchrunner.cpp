@@ -99,6 +99,7 @@ void SearchRunner::match(Plasma::RunnerContext& context, const QString& type,
 
     Baloo::ResultIterator it = query.exec();
 
+    int relevance = 100;
     while (context.isValid() && it.next()) {
         Plasma::QueryMatch match(this);
         match.setIcon(QIcon::fromTheme(it.icon()));
@@ -107,6 +108,8 @@ void SearchRunner::match(Plasma::RunnerContext& context, const QString& type,
         match.setData(it.url());
         match.setType(Plasma::QueryMatch::PossibleMatch);
         match.setMatchCategory(category);
+        match.setRelevance(relevance * .01);
+        relevance--;
 
         QString url = it.url().toLocalFile();
         if (url.startsWith(QDir::homePath())) {
