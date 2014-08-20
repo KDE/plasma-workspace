@@ -97,8 +97,7 @@ void Osd::mediaPlayerVolumeChanged(int percent, const QString &playerName, const
 
 void Osd::kbdLayoutChanged(const QString &layoutName)
 {
-    //FIXME: need a kbd icon
-    showText(QStringLiteral("keyboad-layout"), layoutName);
+    showText(QStringLiteral("keyboard-layout"), layoutName);
 }
 
 void Osd::virtualDesktopChanged(const QString &currentVirtualDesktopName)
