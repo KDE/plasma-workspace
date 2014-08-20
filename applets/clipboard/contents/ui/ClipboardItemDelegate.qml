@@ -74,50 +74,85 @@ PlasmaComponents.ListItem {
                 id: previewItem
                 visible: TypeRole == 2
 
-                height: visible ? units.gridUnit * 4 : 0
+                height: visible ? (units.gridUnit * 4 + units.smallSpacing * 2) : 0
                 width: parent.width
 
                 ListView {
                     id: previewList
                     model: TypeRole == 2 ? DisplayRole.split(" ", maximumNumberOfPreviews) : 0
                     property int itemWidth: units.gridUnit * 4
-                    property int itemHeight: Math.round(itemWidth * 0.66)
+                    property int itemHeight: units.gridUnit * 4
                     interactive: contentWidth > width
 
                     spacing: units.smallSpacing
                     orientation: Qt.Horizontal
                     anchors.fill: parent
 
-                    delegate: KQuickControlsAddons.QPixmapItem {
-                        id: previewPixmap
-
+                    delegate: Item {
                         width: previewList.itemWidth
                         height:  previewList.itemHeight
                         y: Math.round((parent.height - previewList.itemHeight) / 2)
+                        KQuickControlsAddons.QPixmapItem {
+                            id: previewPixmap
 
-                        fillMode: KQuickControlsAddons.QPixmapItem.PreserveAspectCrop
-                        Component.onCompleted: {
+                            anchors.fill: parent
+                            fillMode: KQuickControlsAddons.QPixmapItem.PreserveAspectCrop
+                            Component.onCompleted: {
 
-                            function result(job) {
-                                if (!job.error) {
-                                    pixmap = job.result["preview"];
+                                function result(job) {
+                                    if (!job.error) {
+                                        pixmap = job.result["preview"];
+                                        width = parent.width
+                                        height = parent.height
+                                    } else {
+                                        width = parent.width
+                                        height = parent.height * 0.8
+                                    }
                                 }
-                            }
 
-                            var service = clipboardSource.serviceForSource(UuidRole)
-                            var operation = service.operationDescription("preview");
-                            operation.url = modelData;
-                            operation.previewWidth = previewPixmap.width;
-                            operation.previewHeight = previewPixmap.height;
-                            var serviceJob = service.startOperationCall(operation);
-                            serviceJob.finished.connect(result);
+                                var service = clipboardSource.serviceForSource(UuidRole)
+                                var operation = service.operationDescription("preview");
+                                operation.url = modelData;
+                                operation.previewWidth = previewPixmap.width;
+                                operation.previewHeight = previewPixmap.height;
+                                var serviceJob = service.startOperationCall(operation);
+                                serviceJob.finished.connect(result);
+                            }
+    //                         Rectangle {
+    //                             border.width: 1
+    //                             border.color: "black"
+    //                             color: "transparent"
+    //                             anchors.fill: parent
+    //                         }
                         }
-//                         Rectangle {
-//                             border.width: 1
-//                             border.color: "black"
-//                             color: "transparent"
-//                             anchors.fill: parent
-//                         }
+                        Rectangle {
+                            id: overlay
+                            color: theme.textColor
+                            opacity: 0.6
+                            height: units.gridUnit
+                            anchors {
+                                left: parent.left
+                                right: parent.right
+                                bottom: parent.bottom
+                            }
+                        }
+                        PlasmaComponents.Label {
+                            font.pointSize: theme.smallestFont.pointSize
+                            color: theme.backgroundColor
+                            maximumLineCount: 1
+                            anchors {
+                                verticalCenter: overlay.verticalCenter
+                                left: overlay.left
+                                right: overlay.right
+                            }
+                            elide: Text.ElideRight
+                            horizontalAlignment: Text.AlignHCenter
+                            text: {
+                                var u = modelData.split("/");
+                                return u[u.length - 1];
+
+                            }
+                        }
                     }
                 }
 
