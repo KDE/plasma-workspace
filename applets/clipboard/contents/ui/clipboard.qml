@@ -140,10 +140,10 @@ Item {
             RowLayout {
                 Layout.fillWidth: true
 //                 spacing: 0
-//                 Item {
-//                     width: listMargins.left + 1
-//                     height: 1
-//                 }
+                Item {
+                    width: units.gridUnit / 2 - parent.spacing
+                    height: 1
+                }
                 PlasmaComponents.TextField {
                     id: filter
                     placeholderText: i18n("Search")

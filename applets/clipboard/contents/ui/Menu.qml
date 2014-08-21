@@ -38,13 +38,15 @@ PlasmaExtras.ScrollArea {
         boundsBehavior: Flickable.StopAtBounds
         interactive: contentHeight > height
         highlight: PlasmaComponents.Highlight {
-            x: -units.smallSpacing
-            //anchors.rightMargin: -units.gridUnit * 4
+//             x: -units.smallSpacing
+            anchors.bottomMargin: -listMargins.bottom
+            y: 1
             //width: parent.width + units.gridUnit * 4
-            width: 2000
+//             width: 2000
         }
         highlightMoveDuration: 0
         highlightResizeDuration: 0
+        currentIndex: -1
 
         delegate: ClipboardItemDelegate {
             width: menuListView.width

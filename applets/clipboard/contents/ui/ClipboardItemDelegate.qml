@@ -2,6 +2,7 @@
 This file is part of the KDE project.
 
 Copyright (C) 2014 Martin Gräßlin <mgraesslin@kde.org>
+Copyright     2014 Sebastian Kügler <sebas@kde.org>
 
 This program is free software; you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -32,15 +33,10 @@ PlasmaComponents.ListItem {
     signal barcode(string uuid)
     signal action(string uuid)
 
-    width: parent.width + listMargins.left + listMargins.right
+    width: parent.width - units.gridUnit * 2
     height: Math.max(label.height, toolButtonsLayout.implicitHeight) + 2 * units.smallSpacing
 
-    // + _hi.marginHints.left + _hi.marginHints.right
-    //x: -listMargins.left
-    x: -listMargins.left
-//     PlasmaComponents.ListItem {
-//         id: _hi
-//     }
+   x: -listMargins.left
 
     MouseArea {
         anchors.fill: parent
@@ -51,13 +47,13 @@ PlasmaComponents.ListItem {
         onEntered: menuListView.currentIndex = index
         onExited: menuListView.currentIndex = -1
 
-        Rectangle { visible: main.debug; color: "transparent"; opacity: 1; anchors.fill: parent; border.width: 1 }
+        //Rectangle { visible: main.debug; color: "transparent"; opacity: 1; anchors.fill: parent; border.width: 1 }
         Item {
             id: label
             height: childrenRect.height
             anchors {
                 left: parent.left
-                //leftMargin: units.smallSpacing
+                leftMargin: units.gridUnit / 2
                 right: parent.right
                 //rightMargin: units.smallSpacing
                 verticalCenter: parent.verticalCenter
@@ -76,14 +72,14 @@ PlasmaComponents.ListItem {
                 maximumLineCount: 3
                 text: DisplayRole.trim()
                 visible: TypeRole == 0 // TypeRole: 0: Text, 1: Image, 2: Url
-                textFormat: Text.PlainText
+                //textFormat: Text.PlainText
                 elide: Text.ElideRight
+                wrapMode: Text.Wrap
             }
             KQuickControlsAddons.QPixmapItem {
                 id: previewPixmap
                 width: parent.width
-                x: -1
-                height: width * (nativeHeight/nativeWidth) + units.smallSpacing * 2
+                height: Math.round(width * (nativeHeight/nativeWidth) + units.smallSpacing * 2)
                 pixmap: DecorationRole
                 visible: TypeRole == 1
                 fillMode: KQuickControlsAddons.QPixmapItem.PreserveAspectFit
@@ -145,13 +141,6 @@ PlasmaComponents.ListItem {
                                 var serviceJob = service.startOperationCall(operation);
                                 serviceJob.finished.connect(result);
                             }
-                            Rectangle {
-                                border.width: 1
-                                border.color: "black"
-                                color: "transparent"
-                                //opacity: 0
-                                anchors.fill: parent
-                            }
                         }
                         Rectangle {
                             id: overlay
@@ -172,6 +161,8 @@ PlasmaComponents.ListItem {
                                 verticalCenter: overlay.verticalCenter
                                 left: overlay.left
                                 right: overlay.right
+                                leftMargin: units.smallSpacing
+                                rightMargin: units.smallSpacing
                             }
                             elide: Text.ElideRight
                             horizontalAlignment: Text.AlignHCenter
