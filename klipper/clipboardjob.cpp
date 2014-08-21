@@ -34,7 +34,7 @@ ClipboardJob::ClipboardJob(Klipper *klipper, const QString &destination, const Q
 void ClipboardJob::start()
 {
     const QString operation = operationName();
-    qDebug()<< "OP: " << operation << parameters();
+    //qDebug()<< "OP: " << operation << parameters();
     // first check for operations not needing an item
     if (operation == QLatin1String("clearHistory")) {
         m_klipper->slotAskClearHistory();
@@ -87,29 +87,30 @@ void ClipboardJob::start()
 
     } else if (operation == QStringLiteral("preview")) {
 
-
-
         const int pixelWidth = parameters().value("previewWidth").toInt();
         const int pixelHeight = parameters().value("previewHeight").toInt();
+        QUrl url = parameters().value("url").toUrl();
+        qDebug() << "URL: " << url;
+        KFileItem item(url);
 
         if (pixelWidth <= 0 || pixelHeight <= 0) {
             qWarning() << "Preview size invalid: " << pixelWidth << "x" << pixelHeight;
-            setResult(false);
-            emitResult();
+            iconResult(item);
             return;
         }
 
-        QUrl url(parameters().value("url").toString());
         if (!url.isValid() || !url.isLocalFile()) { // no remote files
-            setResult(false);
-            emitResult();
+            qWarning() << "invalid or non-local: " << url << pixelWidth << "x" << pixelHeight;
+            iconResult(item);
             return;
         }
 
         KFileItemList urls;
-        urls << url;
+        urls << item;
+
         KIO::PreviewJob* job = KIO::filePreview(urls,
                                                 QSize(pixelWidth, pixelHeight));
+        job->setIgnoreMaximumSize(true);
         connect(job, &KIO::PreviewJob::gotPreview, this,
             [this](KFileItem item, QPixmap preview) {
                 qDebug() << "============== Preview arrived: " << item.url() << preview.size();
@@ -117,21 +118,16 @@ void ClipboardJob::start()
                 res.insert("url", item.url());
                 res.insert("preview", preview);
                 res.insert("icon", false);
+                res.insert("previewWidth", preview.size().width());
+                res.insert("previewHeight", preview.size().height());
                 setResult(res);
                 emitResult();
             }
         );
         connect(job, &KIO::PreviewJob::failed, this,
             [&](KFileItem item) {
-
                 qWarning() << "PreviewJob failed for" << item.url() << qobject_cast<KIO::PreviewJob*>(sender())->errorString();
-                QVariantMap res;
-                res.insert("url", item.url());
-                QPixmap pix = QIcon::fromTheme(item.currentMimeType().iconName()).pixmap(pixelHeight * 0.8, pixelHeight * 0.8);
-                res.insert("preview", pix);
-                res.insert("icon", true);
-                setResult(res);
-                emitResult();
+                iconResult(item);
             }
         );
 
@@ -141,5 +137,20 @@ void ClipboardJob::start()
     } else {
         setResult(false);
     }
+    emitResult();
+}
+
+void ClipboardJob::iconResult(const KFileItem& item)
+{
+    QVariantMap res;
+    res.insert("url", item.url());
+    QPixmap pix = QIcon::fromTheme(item.currentMimeType().iconName()).pixmap(128, 128);
+    qDebug() << "Setting icon" << pix.size();
+    res.insert("preview", pix);
+    res.insert("icon", true);
+    res.insert("iconName", item.currentMimeType().iconName());
+    res.insert("previewWidth", pix.size().width());
+    res.insert("previewHeight", pix.size().height());
+    setResult(res);
     emitResult();
 }
