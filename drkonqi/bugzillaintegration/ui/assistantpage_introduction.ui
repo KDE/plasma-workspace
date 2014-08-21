@@ -74,7 +74,7 @@
      <item>
       <widget class="QLabel" name="m_warningLabel">
        <property name="text">
-        <string comment="@info note before starting the bug reporting process">&lt;p&gt;&lt;note&gt;Since communication between you and the developers is required for effective debugging, to continue reporting this bug &lt;strong&gt;it is required for you to agree that developers may contact you.&lt;/strong&gt;&lt;/note&gt;&lt;/p&gt;&lt;p&gt;Feel free to close this dialog if you do not accept this.&lt;/p&gt;</string>
+        <string comment="@info note before starting the bug reporting process">&lt;p&gt;&lt;i&gt;Note&lt;/i&gt;: Since communication between you and the developers is required for effective debugging, to continue reporting this bug &lt;strong&gt;it is required for you to agree that developers may contact you.&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Feel free to close this dialog if you do not accept this.&lt;/p&gt;</string>
        </property>
        <property name="wordWrap">
         <bool>true</bool>

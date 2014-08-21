@@ -325,7 +325,7 @@ void ConclusionPage::aboutToShow()
 
     if (isDuplicate) {
         explanationHTML += QString("<li>%1</li>").arg(xi18nc("@info","Your problem has already been "
-                                                            "reported as bug <numid>%1</numid>.", reportInterface()->duplicateId()));
+                                                            "reported as bug %1.", QString::number(reportInterface()->duplicateId())));
     }
 
     explanationHTML += QLatin1String("</ul></p>");
@@ -404,7 +404,7 @@ void ConclusionPage::openReportInformation()
 {
     if (!m_infoDialog) {
         QString info = reportInterface()->generateReportFullText(false) + QLatin1Char('\n') +
-                            i18nc("@info/plain report to url/mail address","Report to %1",
+                            i18nc("@info report to url/mail address","Report to %1",
                                   DrKonqi::crashedApplication()->bugReportAddress());
 
         m_infoDialog = new ReportInformationDialog(info);

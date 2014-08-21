@@ -14,7 +14,8 @@
    <item>
     <widget class="QLabel" name="m_previewDescriptionLabel">
      <property name="text">
-      <string comment="@label">This is a preview of the report's contents which will be sent. &lt;nl /&gt;
+      <string comment="@label">This is a preview of the report's contents which will be sent. 
+
 If you want to modify it go to the previous pages.</string>
      </property>
      <property name="wordWrap">

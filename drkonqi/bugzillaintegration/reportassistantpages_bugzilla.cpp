@@ -349,7 +349,7 @@ void BugzillaLoginPage::loginFinished(bool logged)
 
         emit loggedTurnToNextPage();
     } else {
-        ui.m_statusWidget->setIdle(i18nc("@info:status/rich","<b>Error: Invalid username or "
+        ui.m_statusWidget->setIdle(i18nc("@info:status","<b>Error: Invalid username or "
                                                                                   "password</b>"));
 
         ui.m_loginButton->setEnabled(true);
@@ -755,7 +755,7 @@ void BugzillaSendPage::openReportContents()
     if (!m_contentsDialog)
     {
         QString report = reportInterface()->generateReportFullText(false) + QLatin1Char('\n') +
-                            i18nc("@info/plain report to KDE bugtracker address","Report to %1",
+                            i18nc("@info report to KDE bugtracker address","Report to %1",
                                   DrKonqi::crashedApplication()->bugReportAddress());
         m_contentsDialog = new ReportInformationDialog(report);
     }

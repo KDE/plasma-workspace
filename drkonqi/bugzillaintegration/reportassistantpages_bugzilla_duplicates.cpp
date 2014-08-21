@@ -317,22 +317,22 @@ void BugzillaDuplicatesPage::searchFinished(const BugMapList & list)
             BugReport::Status status = BugReport::parseStatus(bug.value("bug_status"));
             BugReport::Resolution resolution = BugReport::parseResolution(bug.value("resolution"));
             if (BugReport::isOpen(status)) {
-                customStatusString = i18nc("@info/plain bug status", "[Open]");
+                customStatusString = i18nc("@info bug status", "[Open]");
             } else if (BugReport::isClosed(status) && status != BugReport::NeedsInfo) {
                 if (resolution == BugReport::Fixed) {
-                    customStatusString = i18nc("@info/plain bug resolution", "[Fixed]");
+                    customStatusString = i18nc("@info bug resolution", "[Fixed]");
                 } else if (resolution == BugReport::WorksForMe) {
-                    customStatusString = i18nc("@info/plain bug resolution", "[Non-reproducible]");
+                    customStatusString = i18nc("@info bug resolution", "[Non-reproducible]");
                 } else if (resolution == BugReport::Duplicate) {
-                    customStatusString = i18nc("@info/plain bug resolution", "[Duplicate report]");
+                    customStatusString = i18nc("@info bug resolution", "[Duplicate report]");
                 } else if (resolution == BugReport::Invalid) {
-                    customStatusString = i18nc("@info/plain bug resolution", "[Invalid]");
+                    customStatusString = i18nc("@info bug resolution", "[Invalid]");
                 } else if (resolution == BugReport::Downstream
                     || resolution == BugReport::Upstream) {
-                    customStatusString = i18nc("@info/plain bug resolution", "[External problem]");
+                    customStatusString = i18nc("@info bug resolution", "[External problem]");
                 }
             } else if (status == BugReport::NeedsInfo) {
-                customStatusString = i18nc("@info/plain bug status", "[Incomplete]");
+                customStatusString = i18nc("@info bug status", "[Incomplete]");
             }
 
             title = customStatusString + ' ' + bug["short_desc"];
@@ -539,8 +539,8 @@ void BugzillaDuplicatesPage::possibleDuplicateSelectionChanged()
 void BugzillaDuplicatesPage::attachToBugReport(int bugNumber)
 {
     ui.m_attachToReportLabel->setText(xi18nc("@label", "The report is going to be "
-                            "<strong>attached</strong> to bug <numid>%1</numid>. "
-                            "<a href=\"#\">Cancel</a>", bugNumber));
+                            "<strong>attached</strong> to bug %1. "
+                            "<a href=\"#\">Cancel</a>", QString::number(bugNumber)));
     ui.m_attachToReportLabel->setVisible(true);
     ui.m_attachToReportIcon->setVisible(true);
     reportInterface()->setAttachToBugNumber(bugNumber);
@@ -632,12 +632,12 @@ void BugzillaReportInformationDialog::showBugReport(int bugNumber, bool relatedB
                                     m_parent->bugzillaManager()->urlForBug(m_bugNumber)));
 
     ui.m_statusWidget->setBusy(xi18nc("@info:status","Loading information about bug "
-                                                           "<numid>%1</numid> from %2....",
-                                            m_bugNumber,
+                                                           "%1 from %2....",
+                                            QString::number(m_bugNumber),
                                             QLatin1String(KDE_BUGZILLA_SHORT_URL)));
 
     ui.m_backtraceBrowser->setPlainText(
-                    i18nc("@info/plain","Backtrace of the crash I experienced:\n\n") +
+                    i18nc("@info","Backtrace of the crash I experienced:\n\n") +
                     m_parent->reportInterface()->backtrace());
 
     KConfigGroup config(KSharedConfig::openConfig(), "BugzillaReportInformationDialog");
@@ -672,10 +672,10 @@ void BugzillaReportInformationDialog::bugFetchFinished(BugReport report, QObject
                     "report", "No, let me read the report I selected"));
 
                     if (KMessageBox::questionYesNo(this,
-                       xi18nc("@info","The report you selected (bug <numid>%1</numid>) is already "
-                       "marked as duplicate of bug <numid>%2</numid>. "
+                       xi18nc("@info","The report you selected (bug %1) is already "
+                       "marked as duplicate of bug %2. "
                        "Do you want to read that report instead? (recommended)",
-                       report.bugNumber(), dupId),
+                       report.bugNumber(), QString::number(dupId)),
                        i18nc("@title:window","Nested duplicate detected"), yesItem, noItem)
                                                     == KMessageBox::Yes) {
                         showBugReport(dupId);
@@ -809,8 +809,8 @@ void BugzillaReportInformationDialog::bugFetchFinished(BugReport report, QObject
             m_suggestButton->setEnabled(m_relatedButtonEnabled);
             m_suggestButton->setVisible(m_relatedButtonEnabled);
 
-            ui.m_statusWidget->setIdle(xi18nc("@info:status", "Showing bug <numid>%1</numid>",
-                                                              report.bugNumberAsInt()));
+            ui.m_statusWidget->setIdle(xi18nc("@info:status", "Showing bug %1",
+                                                              QString::number(report.bugNumberAsInt())));
         } else {
             bugFetchError(i18nc("@info", "Invalid report information (malformed data). This could "
                                 "mean that the bug report does not exist, or the bug tracking site "
@@ -903,8 +903,8 @@ BugzillaReportConfirmationDialog::BugzillaReportConfirmationDialog(int bugNumber
     connect(this, SIGNAL(cancelClicked()) , this, SLOT(hide()));
 
     //Set introduction text
-    ui.introLabel->setText(xi18n("You are going to mark your crash as related to bug <numid>%1</numid>",
-                             m_bugNumber));
+    ui.introLabel->setText(i18n("You are going to mark your crash as related to bug %1",
+                             QString::number(m_bugNumber)));
 
     if (commonCrash) { //Common ("massive") crash
         m_showProceedQuestion = true;
