@@ -38,6 +38,8 @@ Item {
     Plasmoid.toolTipSubText: clipboardSource.data["clipboard"]["empty"] ? i18n("Clipboard is empty") : clipboardSource.data["clipboard"]["current"]
     Plasmoid.icon: "klipper"
 
+    property bool debug: false
+
     function action_configure() {
         clipboardSource.service("", "configureKlipper");
     }
@@ -72,6 +74,15 @@ Item {
         Layout.minimumHeight: units.gridUnit * 26
 
         focus: true
+
+        property alias listMargins: listItemSvg.margins
+
+        PlasmaCore.FrameSvgItem {
+            id : listItemSvg
+            imagePath: "widgets/listitem"
+            prefix: "normal"
+            visible: false
+        }
 
         Keys.onPressed: {
             switch(event.key) {
@@ -124,11 +135,15 @@ Item {
                 }
             }
         }
-
         ColumnLayout {
             anchors.fill: parent
             RowLayout {
                 Layout.fillWidth: true
+//                 spacing: 0
+//                 Item {
+//                     width: listMargins.left + 1
+//                     height: 1
+//                 }
                 PlasmaComponents.TextField {
                     id: filter
                     placeholderText: i18n("Search")
@@ -140,6 +155,10 @@ Item {
                     tooltip: i18n("Clear history")
                     onClicked: clipboardSource.service("", "clearHistory")
                 }
+//                 Item {
+//                     width: listMargins.right - 1
+//                     height: 1 // just for valid size
+//                 }
             }
             Menu {
                 id: clipboardMenu
@@ -161,5 +180,6 @@ Item {
                 }
             }
         }
+    Rectangle { color: "transparent"; opacity: 1; anchors.fill: parent; border.width: 1; visible: main.debug; }
     }
 }

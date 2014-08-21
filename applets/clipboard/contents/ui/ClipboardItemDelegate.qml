@@ -25,15 +25,22 @@ PlasmaComponents.ListItem {
     id: menuItem
 
     property alias supportsBarcodes: barcodeToolButton.visible
-    property int maximumNumberOfPreviews: 4
+    property int maximumNumberOfPreviews: Math.floor(width / (units.gridUnit * 4 + units.smallSpacing))
     signal itemSelected(string uuid)
     signal remove(string uuid)
     signal edit(string uuid)
     signal barcode(string uuid)
     signal action(string uuid)
 
-    width: parent.width
+    width: parent.width + listMargins.left + listMargins.right
     height: Math.max(label.height, toolButtonsLayout.implicitHeight) + 2 * units.smallSpacing
+
+    // + _hi.marginHints.left + _hi.marginHints.right
+    //x: -listMargins.left
+    x: -listMargins.left
+//     PlasmaComponents.ListItem {
+//         id: _hi
+//     }
 
     MouseArea {
         anchors.fill: parent
@@ -44,28 +51,39 @@ PlasmaComponents.ListItem {
         onEntered: menuListView.currentIndex = index
         onExited: menuListView.currentIndex = -1
 
+        Rectangle { visible: main.debug; color: "transparent"; opacity: 1; anchors.fill: parent; border.width: 1 }
         Item {
             id: label
             height: childrenRect.height
             anchors {
                 left: parent.left
-                leftMargin: units.smallSpacing
+                //leftMargin: units.smallSpacing
                 right: parent.right
-                rightMargin: units.smallSpacing
+                //rightMargin: units.smallSpacing
                 verticalCenter: parent.verticalCenter
             }
             PlasmaComponents.Label {
                 height: implicitHeight
-                width: parent.width
+                //width: parent.width - units.gridUnit * 4
+                anchors {
+                    left: parent.left
+                    //leftMargin: units.smallSpacing
+                    right: parent.right
+                    rightMargin: units.gridUnit * 2
+                    //rightMargin: units.smallSpacing
+                    //verticalCenter: parent.verticalCenter
+                }
                 maximumLineCount: 3
-                text: DisplayRole
+                text: DisplayRole.trim()
                 visible: TypeRole == 0 // TypeRole: 0: Text, 1: Image, 2: Url
                 textFormat: Text.PlainText
+                elide: Text.ElideRight
             }
             KQuickControlsAddons.QPixmapItem {
                 id: previewPixmap
                 width: parent.width
-                height: width * (nativeHeight/nativeWidth)
+                x: -1
+                height: width * (nativeHeight/nativeWidth) + units.smallSpacing * 2
                 pixmap: DecorationRole
                 visible: TypeRole == 1
                 fillMode: KQuickControlsAddons.QPixmapItem.PreserveAspectFit
@@ -92,38 +110,48 @@ PlasmaComponents.ListItem {
                         width: previewList.itemWidth
                         height:  previewList.itemHeight
                         y: Math.round((parent.height - previewList.itemHeight) / 2)
+                        clip: true
+
                         KQuickControlsAddons.QPixmapItem {
                             id: previewPixmap
 
-                            anchors.fill: parent
-                            fillMode: KQuickControlsAddons.QPixmapItem.PreserveAspectCrop
+                            anchors.centerIn: parent
+                            //fillMode: KQuickControlsAddons.QPixmapItem.PreserveAspectFit
+
                             Component.onCompleted: {
 
                                 function result(job) {
+                                    print("---> result" + job.result.url + job.result.iconName);
                                     if (!job.error) {
-                                        pixmap = job.result["preview"];
-                                        width = parent.width
-                                        height = parent.height
+                                        pixmap = job.result.preview;
+                                        previewPixmap.width = job.result.previewWidth
+                                        previewPixmap.height = job.result.previewHeight
+                                        print("set size: " +previewPixmap.width  + "x" + previewPixmap.height)
                                     } else {
-                                        width = parent.width
-                                        height = parent.height * 0.8
+                                        print("parentsizing");
+                                        previewPixmap.width = parent.width
+                                        previewPixmap.height = parent.height
                                     }
                                 }
 
                                 var service = clipboardSource.serviceForSource(UuidRole)
                                 var operation = service.operationDescription("preview");
                                 operation.url = modelData;
-                                operation.previewWidth = previewPixmap.width;
-                                operation.previewHeight = previewPixmap.height;
+//                                 operation.previewWidth = previewPixmap.width;
+//                                 operation.previewHeight = previewPixmap.height;
+                                operation.previewWidth = previewList.itemWidth * 2;
+                                operation.previewHeight = previewList.itemHeight * 2;
+                                print("Requesting size: " + operation.previewWidth + "x" + operation.previewHeight)
                                 var serviceJob = service.startOperationCall(operation);
                                 serviceJob.finished.connect(result);
                             }
-    //                         Rectangle {
-    //                             border.width: 1
-    //                             border.color: "black"
-    //                             color: "transparent"
-    //                             anchors.fill: parent
-    //                         }
+                            Rectangle {
+                                border.width: 1
+                                border.color: "black"
+                                color: "transparent"
+                                //opacity: 0
+                                anchors.fill: parent
+                            }
                         }
                         Rectangle {
                             id: overlay
