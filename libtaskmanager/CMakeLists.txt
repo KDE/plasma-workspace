@@ -71,8 +71,8 @@ if (X11_FOUND)
 endif()
 
 set_target_properties(taskmanager PROPERTIES 
-                      VERSION 5.0.0
-                      SOVERSION 5
+                      VERSION ${PROJECT_VERSION}
+                      SOVERSION ${PROJECT_VERSION_MAJOR}
                       EXPORT_NAME LibTaskManager)
 install(TARGETS taskmanager EXPORT libtaskmanagerLibraryTargets ${INSTALL_TARGETS_DEFAULT_ARGS} )
 
@@ -93,7 +93,7 @@ install(FILES
    DESTINATION ${INCLUDE_INSTALL_DIR}/taskmanager COMPONENT Devel
    )
 
-write_basic_config_version_file(${CMAKE_CURRENT_BINARY_DIR}/LibTaskManagerConfigVersion.cmake VERSION "${PLASMAWORKSPACE_VERSION_STRING}" COMPATIBILITY AnyNewerVersion)
+write_basic_config_version_file(${CMAKE_CURRENT_BINARY_DIR}/LibTaskManagerConfigVersion.cmake VERSION "${PROJECT_VERSION}" COMPATIBILITY AnyNewerVersion)
 
 set(CMAKECONFIG_INSTALL_DIR ${LIB_INSTALL_DIR}/cmake/LibTaskManager)
 ecm_configure_package_config_file(LibTaskManagerConfig.cmake.in

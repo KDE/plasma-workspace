@@ -10,7 +10,7 @@ set(lib_SRCS
 )
 add_library(plasma_applet-system-monitor SHARED ${lib_SRCS})
 target_link_libraries(plasma_applet-system-monitor KF5::Plasma ${KDE4_KDEUI_LIBS})
-set_target_properties(plasma_applet-system-monitor PROPERTIES VERSION ${GENERIC_LIB_VERSION} SOVERSION ${GENERIC_LIB_SOVERSION} )
+set_target_properties(plasma_applet-system-monitor PROPERTIES VERSION ${PROJECT_VERSION} SOVERSION ${PROJECT_VERSION_MAJOR} )
 
 # HDD Space Monitor
 

@@ -20,8 +20,8 @@ qt5_add_dbus_interface( kworkspace_LIB_SRCS ${KWIN_INTERFACE} kwin_interface )
 add_library(kworkspace ${kworkspace_LIB_SRCS})
 add_library(PW::KWorkspace ALIAS kworkspace)
 set_target_properties(kworkspace PROPERTIES
-                             VERSION 5.0.0
-                             SOVERSION 5
+                             VERSION ${PROJECT_VERSION}
+                             SOVERSION ${PROJECT_VERSION_MAJOR}
                              EXPORT_NAME KWorkspace
                              OUTPUT_NAME kworkspace5
                       )
@@ -47,7 +47,7 @@ if(X11_FOUND)
 endif()
 
 write_basic_config_version_file(${CMAKE_CURRENT_BINARY_DIR}/LibKWorkspaceConfigVersion.cmake VERSION
-                                     "${PLASMAWORKSPACE_VERSION_STRING}" COMPATIBILITY AnyNewerVersion)
+                                     "${PROJECT_VERSION}" COMPATIBILITY AnyNewerVersion)
 
 install(TARGETS kworkspace EXPORT libkworkspaceLibraryTargets ${INSTALL_TARGETS_DEFAULT_ARGS} )
 

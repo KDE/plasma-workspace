@@ -25,7 +25,7 @@ add_definitions(-DTRANSLATION_DOMAIN=\"libkxmlrpcclientprivate5\")
 ecm_setup_version(${KDEPIMLIBS_VERSION} VARIABLE_PREFIX KXMLRPCCLIENTPRIVATE
                         VERSION_HEADER "${CMAKE_CURRENT_BINARY_DIR}/kxmlrpcclientprivate_version.h"
                         PACKAGE_VERSION_FILE "${CMAKE_CURRENT_BINARY_DIR}/KF5XmlRpcClientPrivateConfigVersion.cmake"
-                        SOVERSION 5
+                        SOVERSION ${PROJECT_VERSION_MAJOR}
 )
 
 ########### Find packages ###########
