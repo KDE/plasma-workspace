@@ -583,6 +583,11 @@ QScreen* ShellCorona::screenForId(int screenId) const
     return v ? v->screen() : Q_NULLPTR;
 }
 
+void ShellCorona::remove(DesktopView *desktopView)
+{
+    removeView(d->views.indexOf(desktopView));
+}
+
 PanelView *ShellCorona::panelView(Plasma::Containment *containment) const
 {
     return d->panelViews.value(containment);

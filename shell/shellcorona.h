@@ -79,10 +79,9 @@ public:
 
     KScreen::Config* screensConfiguration() const;
 
-    void removePanel(PanelView* panelView);
     QScreen* screenForId(int screenId) const;
-    
     Q_INVOKABLE void screenInvariants() const;
+    void remove(DesktopView *desktopView);
 
 public Q_SLOTS:
     /**
@@ -108,7 +107,6 @@ public Q_SLOTS:
     void toggleActivityManager();
 
     Plasma::Containment *addPanel(const QString &plugin);
-    void removeScreen(DesktopView* screen);
 
 protected Q_SLOTS:
     /**
