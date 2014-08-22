@@ -357,42 +357,41 @@ void ShellCorona::load()
 
 void ShellCorona::primaryOutputChanged()
 {
-    KScreen::Output* output = findPrimaryOutput();
-    if (!output)
+    if (d->views.isEmpty()) {
         return;
-
-    QScreen *newPrimary = outputToScreen(output);
-    int i=0;
-    foreach(DesktopView *view, d->views) {
-        if (view->screen() == newPrimary)
-            break;
-        i++;
     }
-    QScreen *oldPrimary = d->views.first()->screen();
 
-    //if it was not found, it means that addOutput hasn't been called yet
-    if (i>=d->views.count() || i==0)
+    KScreen::Output* output = findPrimaryOutput();
+    if (!output) {
         return;
-    qDebug() << "primary changed!" << oldPrimary->name() << newPrimary->name() << i;
+    }
 
-    Q_ASSERT(oldPrimary != newPrimary);
-    Q_ASSERT(d->views[0]->screen() != d->views[i]->screen());
-    Q_ASSERT(d->views[0]->screen() == oldPrimary);
-    Q_ASSERT(d->views[0]->screen() != newPrimary);
-    Q_ASSERT(d->views[0]->geometry() == oldPrimary->geometry());
-    qDebug() << "adapting" << newPrimary->geometry() << d->views[0]->containment()->wallpaper()
-                           << oldPrimary->geometry() << d->views[i]->containment()->wallpaper() << i;
+    QScreen *oldPrimary = d->views[0]->screen();
+    QScreen *newPrimary = outputToScreen(output);
+    qDebug() << "primary changed!" << oldPrimary->name() << newPrimary->name();
 
-    d->views[0]->setScreen(newPrimary);
-    d->views[i]->setScreen(oldPrimary);
-    screenInvariants();
+    foreach (DesktopView *view, d->views) {
+        if (view->screen() == newPrimary) {
+            Q_ASSERT(d->views[0]->screen() != view->screen());
 
-    QList<Plasma::Containment*> panels;
-    foreach(PanelView *panel, d->panelViews) {
-        if (panel->screen() == oldPrimary)
+            Q_ASSERT(oldPrimary != newPrimary);
+            Q_ASSERT(d->views[0]->screen() == oldPrimary);
+            Q_ASSERT(d->views[0]->screen() != newPrimary);
+            Q_ASSERT(d->views[0]->geometry() == oldPrimary->geometry());
+            qDebug() << "adapting" << newPrimary->geometry() << oldPrimary->geometry();
+
+            d->views[0]->setScreen(newPrimary);
+            view->setScreen(oldPrimary);
+            break;
+        }
+    }
+
+    foreach (PanelView *panel, d->panelViews) {
+        if (panel->screen() == oldPrimary) {
             panel->setScreen(newPrimary);
-        else if (panel->screen() == newPrimary)
+        } else if (panel->screen() == newPrimary) {
             panel->setScreen(oldPrimary);
+        }
     }
 
     CHECK_SCREEN_INVARIANTS
