@@ -551,8 +551,6 @@ QRegion ShellCorona::availableScreenRegion(int id) const
     return r;
 }
 
-int rectArea(const QRect& r) { return r.width()*r.height(); }
-
 QRect ShellCorona::availableScreenRect(int id) const
 {
     if (id >= d->views.count() || id < 0) {
