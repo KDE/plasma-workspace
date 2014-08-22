@@ -621,26 +621,48 @@ QList<PanelView*> ShellCorona::panelsForScreen(QScreen *screen) const
 
 void ShellCorona::removeView(int idx)
 {
-    if (idx == d->views.count()-1) {
-        QScreen* screen = d->views[idx]->screen();
-        QList<PanelView*> panels = panelsForScreen(screen);
+    if (idx < 0 || idx >= d->views.size()) {
+        return;
+    }
 
-        foreach(PanelView* p, panels) {
-            delete d->panelViews.take(p->containment());
+    bool panelsAltered = false;
+
+    const QScreen *lastScreen = d->views.last()->screen();
+    QMutableHashIterator<const Plasma::Containment *, PanelView *> it(d->panelViews);
+    while (it.hasNext()) {
+        it.next();
+        PanelView *panelView = it.value();
+
+        if (panelView->screen() == lastScreen) {
+            d->waitingPanels << panelView->containment();
+            it.remove();
+            delete panelView;
+            panelsAltered = true;
         }
-        delete d->views.takeLast();
-    } else if (idx < d->views.count()-1) {
-        QScreen* screen = d->views[idx+1]->screen();
-        QList<PanelView*> panels = panelsForScreen(screen);
+    }
 
-        bool wasVisible = d->views[idx]->isVisible();
-        d->views[idx]->setScreen(screen);
-        if (wasVisible)
+    for (int i = d->views.count() - 2; i >= idx; --i) {
+        QScreen *screen = d->views[i + 1]->screen();
+
+        const bool wasVisible = d->views[idx]->isVisible();
+        d->views[i]->setScreen(screen);
+
+        if (wasVisible) {
             d->views[idx]->show(); //when destroying the screen, QScreen might have hidden the window
-        foreach(PanelView* p, panels) {
+        }
+
+        const QList<PanelView *> panels = panelsForScreen(screen);
+        panelsAltered = panelsAltered || !panels.isEmpty();
+        foreach (PanelView *p, panels) {
             p->setScreen(screen);
         }
-        removeView(idx+1);
+    }
+
+    delete d->views.takeLast();
+
+    if (panelsAltered) {
+        emit availableScreenRectChanged();
+        emit availableScreenRegionChanged();
     }
 }
 
