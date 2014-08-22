@@ -103,6 +103,7 @@ if(dbusmenu-qt5_FOUND)
   add_subdirectory(appmenu)
 endif()
 
+add_subdirectory(plasma-windowed)
 add_subdirectory(shell)
 add_subdirectory(freespacenotifier)
 add_subdirectory(klipper)
