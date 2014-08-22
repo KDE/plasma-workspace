@@ -80,7 +80,6 @@ public:
     KScreen::Config* screensConfiguration() const;
 
     QScreen* screenForId(int screenId) const;
-    Q_INVOKABLE void screenInvariants() const;
     void remove(DesktopView *desktopView);
 
 public Q_SLOTS:
@@ -166,6 +165,10 @@ private:
     void reconsiderOutputs();
     QList<PanelView*> panelsForScreen(QScreen* screen) const;
     DesktopView* viewForScreen(QScreen* screen) const;
+
+#ifndef NDEBUG
+    void screenInvariants() const;
+#endif
 
     /**
      * @returns a new containment associated with the specified @p activity and @p screen.

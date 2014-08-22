@@ -66,6 +66,12 @@
 
 #include "../lookandfeelaccess/lookandfeelaccess.h"
 
+#ifndef NDEBUG
+    #define CHECK_SCREEN_INVARIANTS screenInvariants();
+#else
+    #define CHECK_SCREEN_INVARIANTS
+#endif
+
 static const int s_configSyncDelay = 10000; // 10 seconds
 
 class ShellCorona::Private {
@@ -383,24 +389,28 @@ void ShellCorona::primaryOutputChanged()
         else if (panel->screen() == newPrimary)
             panel->setScreen(oldPrimary);
     }
+
+    CHECK_SCREEN_INVARIANTS
 }
 
+#ifndef NDEBUG
 void ShellCorona::screenInvariants() const
 {
     Q_ASSERT(d->views.count() <= QGuiApplication::screens().count());
     QScreen *s = d->views.isEmpty() ? nullptr : d->views[0]->screen();
-    KScreen::Output* primaryOutput = findPrimaryOutput();
+    KScreen::Output *primaryOutput = findPrimaryOutput();
     if (!s) {
         qWarning() << "error: couldn't find primary output" << primaryOutput;
         return;
     }
+
     QScreen* ks = outputToScreen(primaryOutput);
     Q_ASSERT(!ks || ks == s || !primaryOutput->isEnabled());
 
     QSet<QScreen*> screens;
     int i = 0;
-    foreach(DesktopView *view, d->views) {
-        QScreen* screen = view->screen();
+    foreach (const DesktopView *view, d->views) {
+        QScreen *screen = view->screen();
         Q_ASSERT(!screens.contains(screen));
         Q_ASSERT(!d->redundantOutputs.contains(screenToOutput(screen, d->screenConfiguration)));
         Q_ASSERT(view->fillScreen() || ShellManager::s_forceWindowed);
@@ -412,7 +422,7 @@ void ShellCorona::screenInvariants() const
         Q_ASSERT(view->containment()->lastScreen() == i);
         Q_ASSERT(view->isVisible());
 
-        foreach(PanelView* panel, panelsForScreen(screen)) {
+        foreach (const PanelView *panel, panelsForScreen(screen)) {
             Q_ASSERT(panel->containment());
             Q_ASSERT(panel->containment()->screen() == i);
             Q_ASSERT(panel->isVisible());
@@ -422,14 +432,15 @@ void ShellCorona::screenInvariants() const
         ++i;
     }
 
-    foreach(KScreen::Output* out, d->redundantOutputs) {
+    foreach (KScreen::Output* out, d->redundantOutputs) {
         Q_ASSERT(isOutputRedundant(out));
     }
 
-    if(d->views.isEmpty()) {
+    if (d->views.isEmpty()) {
         qWarning() << "no screens!!";
     }
 }
+#endif
 
 void ShellCorona::showAlternativesForApplet(Plasma::Applet *applet)
 {
@@ -685,7 +696,8 @@ void ShellCorona::reconsiderOutputs()
             }
         }
     }
-    screenInvariants();
+
+    CHECK_SCREEN_INVARIANTS
 }
 
 void ShellCorona::addOutput(KScreen::Output *output)
@@ -748,7 +760,7 @@ void ShellCorona::addOutput(KScreen::Output *output)
     emit availableScreenRectChanged();
     emit availableScreenRegionChanged();
 
-    screenInvariants();
+    CHECK_SCREEN_INVARIANTS
 }
 
 QScreen* ShellCorona::insertScreen(QScreen* screen, int idx)
