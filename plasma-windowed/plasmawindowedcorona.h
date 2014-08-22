@@ -39,7 +39,8 @@ public Q_SLOTS:
     void load();
 
 private:
-    PlasmaQuick::View *m_view;
+    QList <PlasmaQuick::View *> m_views;
+    Plasma::Containment *m_containment;
 };
 
 #endif

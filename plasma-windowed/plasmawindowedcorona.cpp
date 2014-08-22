@@ -30,7 +30,7 @@
 
 PlasmaWindowedCorona::PlasmaWindowedCorona(QObject *parent)
     : Plasma::Corona(parent),
-      m_view(0)
+      m_containment(0)
 {
     Plasma::Package package = Plasma::PluginLoader::self()->loadPackage("Plasma/Shell");
     package.setPath("org.kde.plasma.desktop");
@@ -41,7 +41,11 @@ PlasmaWindowedCorona::PlasmaWindowedCorona(QObject *parent)
 
 void PlasmaWindowedCorona::loadApplet(const QString &applet)
 {
-    qWarning()<<applet;
+    PlasmaQuick::View *view = new PlasmaWindowedView(this);
+    view->setContainment(m_containment);
+    view->show();
+    m_views << view;
+
     Plasma::Containment *cont = containments().first();
     KConfigGroup appletsGroup(config(), "StoredApplets");
     QString plugin;
@@ -68,8 +72,9 @@ void PlasmaWindowedCorona::loadApplet(const QString &applet)
 QRect PlasmaWindowedCorona::screenGeometry(int id) const
 {
     Q_UNUSED(id);
-    if(m_view) {
-        return m_view->geometry();
+
+    if(m_views.count() > id ) {
+        return m_views[id]->geometry();
     } else {
         return QRect();
     }
@@ -106,13 +111,11 @@ void PlasmaWindowedCorona::load()
     for (auto c : containments()) {
         qDebug() << "here we are!";
         if (c->containmentType() == Plasma::Types::DesktopContainment) {
-            m_view = new PlasmaWindowedView(this);
+            m_containment = c;
             QAction *removeAction = c->actions()->action("remove");
             if(removeAction) {
                 removeAction->deleteLater();
             }
-            m_view->setContainment(c);
-            m_view->show();
             break;
         }
     }
