@@ -33,7 +33,6 @@ PlasmaWindowedView::PlasmaWindowedView(PlasmaWindowedCorona *corona, QWindow *pa
     : PlasmaQuick::View(corona, parent)
 {
     setTitle(i18n("Plasma Windowed"));
-    corona->setView(this);
     engine()->rootContext()->setContextProperty("desktop", this);
     setSource(QUrl::fromLocalFile(corona->package().filePath("views", "Desktop.qml")));
 }

@@ -99,7 +99,7 @@ void PlasmaWindowedCorona::load()
 
     if (!found) {
         qDebug() << "Loading default layout";
-        loadDefaultLayout();
+        createContainment("org.kde.desktopcontainment"); 
         saveLayout("plasma-windowed-appletsrc");
     }
 
@@ -111,7 +111,6 @@ void PlasmaWindowedCorona::load()
             if(removeAction) {
                 removeAction->deleteLater();
             }
-            setView(m_view);
             m_view->setContainment(c);
             m_view->show();
             break;
@@ -119,15 +118,5 @@ void PlasmaWindowedCorona::load()
     }
 }
 
-void PlasmaWindowedCorona::setView(PlasmaQuick::View *view)
-{
-    m_view = view;
-}
-
-
-void PlasmaWindowedCorona::loadDefaultLayout()
-{
-    createContainment("org.kde.desktopcontainment"); 
-}
 
 #include "plasmawindowedcorona.moc"

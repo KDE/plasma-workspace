@@ -33,9 +33,6 @@ public:
     explicit PlasmaWindowedCorona(QObject * parent = 0);
     QRect screenGeometry(int id) const;
 
-    void setView(PlasmaQuick::View *view);
-    void loadDefaultLayout();
-
     void loadApplet(const QString &applet);
 
 public Q_SLOTS:
