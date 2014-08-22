@@ -45,8 +45,8 @@ ContainmentConfigView::ContainmentConfigView(Plasma::Containment *cont, QWindow 
       m_containment(cont),
       m_wallpaperConfigModel(0),
       m_containmentActionConfigModel(0),
-      m_currentContainmentActionsModel(0),
       m_containmentPluginsConfigModel(0),
+      m_currentContainmentActionsModel(0),
       m_currentWallpaperConfig(0),
       m_ownWallpaperConfig(0)
 {
