@@ -42,25 +42,22 @@ void PlasmaWindowedCorona::loadApplet(const QString &applet)
 {
     qWarning()<<applet;
     Plasma::Containment *cont = containments().first();
-    KConfigGroup appletsGroup = cont->config();
-    appletsGroup = KConfigGroup(&appletsGroup, "Applets");
+    KConfigGroup appletsGroup(config(), "StoredApplets");
     QString plugin;
     for (const QString &group : appletsGroup.groupList()) {
         KConfigGroup cg(&appletsGroup, group);
         plugin = cg.readEntry("plugin", QString());
-        
+
         if (plugin == applet) {
             Plasma::Applet *a = Plasma::PluginLoader::self()->loadApplet(applet, group.toInt());
             a->restore(cg);
-            cont->addApplet(a);
-            
-          //  Plasma::Applet *a = containments().first()->createApplet(applet);
             
             KConfigGroup cg2 = a->config();
-            cg2 = KConfigGroup(&cg2, "Configuration");
             cg = KConfigGroup(&cg, "Configuration");
             cg.copyTo(&cg2);
             cg = KConfigGroup(&cg, "General");
+            cg2 = KConfigGroup(&cg2, "General");
+            cont->addApplet(a);
             return;
         }
     }
@@ -79,20 +76,17 @@ QRect PlasmaWindowedCorona::screenGeometry(int id) const
 
 void PlasmaWindowedCorona::load()
 {
-    //loadLayout("plasma-windowed-appletsrc");
-
-    KConfigGroup conf(config(), "Containments");
+    
+    KSharedConfig::Ptr c = KSharedConfig::openConfig("plasma-windowed-appletsrc", KConfig::SimpleConfig);
+    KConfigGroup conf(c, "Containments");
     conf = KConfigGroup(&conf, "1");
     conf = KConfigGroup(&conf, "Applets");
-
-    KConfigGroup conf2(config(), "Backup");
+    KConfigGroup conf2(c, "StoredApplets");
     conf.copyTo(&conf2);
+    conf.deleteGroup();
+    conf.sync();
+    loadLayout("plasma-windowed-appletsrc");
 
-
-    Plasma::Containment *cont = createContainment("org.kde.desktopcontainment");
-    conf2.copyTo(&conf);
-    conf2.deleteGroup();
-    
 
     bool found = false;
     for (auto c : containments()) {
