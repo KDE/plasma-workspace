@@ -37,6 +37,7 @@ public:
 
 public Q_SLOTS:
     void load();
+    void activateRequested(const QStringList &arguments, const QString &workingDirectory);
 
 private:
     QList <PlasmaQuick::View *> m_views;

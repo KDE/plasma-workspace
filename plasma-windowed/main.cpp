@@ -60,5 +60,7 @@ int main(int argc, char **argv)
     PlasmaWindowedCorona *corona = new PlasmaWindowedCorona();
     corona->loadApplet(parser.positionalArguments().first());
 
+    QObject::connect(&service, &KDBusService::activateRequested, corona, &PlasmaWindowedCorona::activateRequested);
+
     return app.exec();
 }

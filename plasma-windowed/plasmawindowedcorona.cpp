@@ -56,7 +56,7 @@ void PlasmaWindowedCorona::loadApplet(const QString &applet)
         if (plugin == applet) {
             Plasma::Applet *a = Plasma::PluginLoader::self()->loadApplet(applet, group.toInt());
             a->restore(cg);
-            
+
             KConfigGroup cg2 = a->config();
             cg = KConfigGroup(&cg, "Configuration");
             cg.copyTo(&cg2);
@@ -67,6 +67,15 @@ void PlasmaWindowedCorona::loadApplet(const QString &applet)
         }
     }
     containments().first()->createApplet(applet);
+}
+
+void PlasmaWindowedCorona::activateRequested(const QStringList &arguments, const QString &workingDirectory)
+{
+    if (!arguments.count() > 1) {
+        return;
+    }
+
+    loadApplet(arguments[1]);
 }
 
 QRect PlasmaWindowedCorona::screenGeometry(int id) const
@@ -82,7 +91,6 @@ QRect PlasmaWindowedCorona::screenGeometry(int id) const
 
 void PlasmaWindowedCorona::load()
 {
-    
     KSharedConfig::Ptr c = KSharedConfig::openConfig("plasma-windowed-appletsrc", KConfig::SimpleConfig);
     KConfigGroup conf(c, "Containments");
     conf = KConfigGroup(&conf, "1");
