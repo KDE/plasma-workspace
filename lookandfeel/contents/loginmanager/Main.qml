@@ -47,7 +47,7 @@ Image {
     Controls.StackView {
         id: stackView
 
-        height: units.largeSpacing*15
+        height: units.largeSpacing*14
         anchors.centerIn: parent
 
         initialItem: BreezeBlock {

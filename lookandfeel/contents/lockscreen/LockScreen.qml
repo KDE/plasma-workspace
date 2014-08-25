@@ -61,7 +61,7 @@ Image {
 
     StackView {
         id: stackView
-        height: units.largeSpacing * 15
+        height: units.largeSpacing * 14
         anchors {
             verticalCenter: parent.verticalCenter
             left: parent.left
