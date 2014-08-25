@@ -24,6 +24,7 @@
 #include <QQmlContext>
 #include <QQuickItem>
 #include <QResizeEvent>
+#include <QQmlExpression>
 
 #include <QDebug>
 #include <Plasma/Package>
@@ -34,7 +35,9 @@
 PlasmaWindowedView::PlasmaWindowedView(QWindow *parent)
     : QQuickView(parent)
 {
-    
+    engine()->rootContext()->setContextProperty("root", contentItem());
+    QQmlExpression *expr = new QQmlExpression(engine()->rootContext(), contentItem(), "Qt.createQmlObject('import QtQuick 2.0; import org.kde.plasma.core 2.0; Rectangle {color: theme.backgroundColor; anchors.fill:parent}', root, \"\");");
+    expr->evaluate();
 }
 
 PlasmaWindowedView::~PlasmaWindowedView()
@@ -72,6 +75,9 @@ void PlasmaWindowedView::resizeEvent(QResizeEvent *ev)
 
     i->setWidth(ev->size().width());
     i->setHeight(ev->size().height());
+
+    contentItem()->setWidth(ev->size().width());
+    contentItem()->setHeight(ev->size().height());
 }
 
 #include "plasmawindowedview.moc"
