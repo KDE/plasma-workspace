@@ -38,15 +38,16 @@ MouseArea {
         imagePath: "widgets/line"
     }
 
+    PlasmaExtras.Heading {
+        width: parent.width
+        level: 3
+        opacity: 0.6
+        text: i18n("No Devices Available")
+        visible: filterModel.count == 0
+    }
+
     ColumnLayout {
         anchors.fill: parent
-
-        PlasmaComponents.Label {
-            id: header
-            text: i18n("No Devices Available")
-            visible: filterModel.count == 0
-            Layout.fillWidth: true
-        }
 
         PlasmaExtras.ScrollArea {
             Layout.fillWidth: true

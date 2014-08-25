@@ -105,6 +105,14 @@ MouseEventListener {
         imagePath: "widgets/configuration-icons"
     }
 
+    PlasmaExtras.Heading {
+        width: parent.width
+        level: 3
+        opacity: 0.6
+        visible: notificationsApplet.totalCount == 0
+        text: i18n("No new notifications.")
+    }
+
     PlasmaExtras.ScrollArea {
         id: mainScrollArea
         anchors.fill: parent
@@ -124,11 +132,6 @@ MouseEventListener {
             Column {
                 id: contentsColumn
                 width: popupFlickable.width
-
-                PlasmaComponents.Label {
-                    visible: notificationsApplet.totalCount == 0
-                    text: i18n("No new notifications.")
-                }
 
                 //TODO: load those on demand based on configuration
                 Loader {
