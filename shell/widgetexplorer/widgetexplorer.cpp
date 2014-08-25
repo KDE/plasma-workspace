@@ -38,7 +38,6 @@
 #include <Plasma/PackageStructure>
 #include <qstandardpaths.h>
 
-#include <view.h>
 #include "kcategorizeditemsviewmodels_p.h"
 #include "plasmaappletitemmodel_p.h"
 #include "openwidgetassistant_p.h"
@@ -65,8 +64,7 @@ public:
         : q(w),
           containment(0),
           itemModel(w),
-          filterModel(w),
-          view(0)
+          filterModel(w)
     {
     }
 
@@ -99,7 +97,6 @@ public:
     PlasmaAppletItemModel itemModel;
     KCategorizedItemsViewModels::DefaultFilterModel filterModel;
     DefaultItemFilterProxyModel filterItemModel;
-    PlasmaQuickView *view;
     QWeakPointer<KNS3::DownloadDialog> newStuffDialog;
 };
 

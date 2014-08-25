@@ -45,8 +45,8 @@ ContainmentConfigView::ContainmentConfigView(Plasma::Containment *cont, QWindow 
       m_containment(cont),
       m_wallpaperConfigModel(0),
       m_containmentActionConfigModel(0),
-      m_currentContainmentActionsModel(0),
       m_containmentPluginsConfigModel(0),
+      m_currentContainmentActionsModel(0),
       m_currentWallpaperConfig(0),
       m_ownWallpaperConfig(0)
 {
@@ -56,7 +56,6 @@ ContainmentConfigView::ContainmentConfigView(Plasma::Containment *cont, QWindow 
 
     Plasma::Package pkg = Plasma::PluginLoader::self()->loadPackage("Plasma/Wallpaper");
     pkg.setPath(m_containment->wallpaper());
-    QFile file(pkg.filePath("config", "main.xml"));
     KConfigGroup cfg = m_containment->config();
     cfg = KConfigGroup(&cfg, "Wallpaper");
 

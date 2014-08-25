@@ -54,7 +54,7 @@ class ShellCorona : public Plasma::Corona
     Q_CLASSINFO("D-Bus Interface", "org.kde.PlasmaShell")
 
 public:
-    explicit ShellCorona(QObject * parent = 0);
+    explicit ShellCorona(QObject *parent = 0);
     ~ShellCorona();
 
     /**
@@ -77,12 +77,10 @@ public:
 
     Plasma::Containment *setContainmentTypeForScreen(int screen, const QString &plugin);
 
-    KScreen::Config* screensConfiguration() const;
+    KScreen::Config *screensConfiguration() const;
 
-    void removePanel(PanelView* panelView);
-    QScreen* screenForId(int screenId) const;
-    
-    Q_INVOKABLE void screenInvariants() const;
+    QScreen *screenForId(int screenId) const;
+    void remove(DesktopView *desktopView);
 
 public Q_SLOTS:
     /**
@@ -93,7 +91,7 @@ public Q_SLOTS:
     /**
      * Sets the shell that the corona should display
      */
-    void setShell(const QString & shell);
+    void setShell(const QString &shell);
 
     /**
      * Gets the currently shown shell
@@ -108,7 +106,6 @@ public Q_SLOTS:
     void toggleActivityManager();
 
     Plasma::Containment *addPanel(const QString &plugin);
-    void removeScreen(DesktopView* screen);
 
 protected Q_SLOTS:
     /**
@@ -151,7 +148,7 @@ private Q_SLOTS:
     void populateAddPanelsMenu();
 
     void outputEnabledChanged();
-    void addOutput(KScreen::Output* output);
+    void addOutput(KScreen::Output *output);
     void primaryOutputChanged();
 
     void activityOpened();
@@ -161,18 +158,21 @@ private Q_SLOTS:
     void showOpenGLNotCompatibleWarning();
 
 private:
-    KScreen::Output* findPrimaryOutput() const;
-    QScreen* insertScreen(QScreen* screen, int idx);
+    KScreen::Output *findPrimaryOutput() const;
+    QScreen *insertScreen(QScreen *screen, int idx);
     void removeView(int idx);
-    bool isOutputRedundant(KScreen::Output* output) const;
+    bool isOutputRedundant(KScreen::Output *output) const;
     void reconsiderOutputs();
-    QList<PanelView*> panelsForScreen(QScreen* screen) const;
-    DesktopView* viewForScreen(QScreen* screen) const;
+    QList<PanelView *> panelsForScreen(QScreen *screen) const;
+
+#ifndef NDEBUG
+    void screenInvariants() const;
+#endif
 
     /**
      * @returns a new containment associated with the specified @p activity and @p screen.
      */
-    Plasma::Containment* createContainmentForActivity(const QString& activity, int screenNum);
+    Plasma::Containment *createContainmentForActivity(const QString &activity, int screenNum);
     void insertContainment(const QString &activity, int screenNum, Plasma::Containment *containment);
 
     class Private;

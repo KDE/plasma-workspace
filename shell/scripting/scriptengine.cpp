@@ -162,7 +162,7 @@ QScriptValue ScriptEngine::createActivity(QScriptContext *context, QScriptEngine
         connect(watcher, &QFutureWatcherBase::finished, &loop, &QEventLoop::quit);
 
         watcher->setFuture(futureId);
-        
+
         loop.exec();
         id = futureId.result();
     }
@@ -178,6 +178,8 @@ QScriptValue ScriptEngine::createActivity(QScriptContext *context, QScriptEngine
 
 QScriptValue ScriptEngine::setCurrentActivity(QScriptContext *context, QScriptEngine *engine)
 {
+    Q_UNUSED(engine)
+
     if (context->argumentCount() < 0) {
         return context->throwError(i18n("setCurrentActivity required the activity id"));
     }
@@ -188,12 +190,12 @@ QScriptValue ScriptEngine::setCurrentActivity(QScriptContext *context, QScriptEn
 
     QFuture<bool> task = controller.setCurrentActivity(id);
     QEventLoop loop;
-    
+
     QFutureWatcher<bool> *watcher = new QFutureWatcher<bool>();
     connect(watcher, &QFutureWatcherBase::finished, &loop, &QEventLoop::quit);
 
     watcher->setFuture(task);
-    
+
     loop.exec();
 
     return QScriptValue(task.result());
@@ -201,6 +203,8 @@ QScriptValue ScriptEngine::setCurrentActivity(QScriptContext *context, QScriptEn
 
 QScriptValue ScriptEngine::activities(QScriptContext *context, QScriptEngine *engine)
 {
+    Q_UNUSED(context)
+
     KActivities::Consumer consumer;
 
     return qScriptValueFromSequence(engine, consumer.activities());
