@@ -25,6 +25,7 @@
 #include <QQuickItem>
 #include <QResizeEvent>
 #include <QQmlExpression>
+#include <QQmlProperty>
 
 #include <QDebug>
 #include <Plasma/Package>
@@ -42,6 +43,7 @@ PlasmaWindowedView::PlasmaWindowedView(QWindow *parent)
 
 PlasmaWindowedView::~PlasmaWindowedView()
 {
+    m_applet->config().sync();
     m_applet->deleteLater();
 }
 
@@ -57,9 +59,16 @@ void PlasmaWindowedView::setApplet(Plasma::Applet *applet)
         return;
     }
 
+    int width = m_applet->config().readEntry("width", 0);
+    int height = m_applet->config().readEntry("height", 0);
+    if (width > 0 && height > 0) {
+        resize(QSize(width, height));
+    }
+
     i->setParentItem(contentItem());
     i->setVisible(true);
     setTitle(applet->title());
+    setIcon(QIcon::fromTheme(applet->icon()));
 }
 
 void PlasmaWindowedView::resizeEvent(QResizeEvent *ev)
@@ -78,6 +87,8 @@ void PlasmaWindowedView::resizeEvent(QResizeEvent *ev)
 
     contentItem()->setWidth(ev->size().width());
     contentItem()->setHeight(ev->size().height());
+    m_applet->config().writeEntry("width", ev->size().width());
+    m_applet->config().writeEntry("height", ev->size().height());
 }
 
 #include "plasmawindowedview.moc"
