@@ -183,7 +183,6 @@ PlasmaCore.Dialog {
                     PlasmaComponents.Button {
                         text: modelData.text
                         width: theme.mSize(theme.defaultFont).width * 8
-                        height: theme.mSize(theme.defaultFont).width * 2
                         onClicked: {
                             executeAction(notificationProperties.source, modelData.id)
                             actionsColumn.visible = false
