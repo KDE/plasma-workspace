@@ -47,7 +47,7 @@ Image {
     Controls.StackView {
         id: stackView
 
-        height: units.largeSpacing*14
+        height: units.largeSpacing*15
         anchors.centerIn: parent
 
         initialItem: BreezeBlock {
@@ -72,53 +72,72 @@ Image {
                 property alias password: passwordInput.text
                 property alias sessionIndex: sessionCombo.currentIndex
 
-                //NOTE password is deliberately the first child so it gets focus
-                //be careful when re-ordering
-                RowLayout {
+                ColumnLayout {
                     anchors.horizontalCenter: parent.horizontalCenter
-                    PlasmaComponents.TextField {
-                        id: passwordInput
-                        placeholderText: i18nd("plasma_lookandfeel_org.kde.lookandfeel","Password")
-                        echoMode: TextInput.Password
-                        onAccepted: loginPrompt.startLogin()
-                        focus: true
+                    RowLayout {
+                        //NOTE password is deliberately the first child so it gets focus
+                        //be careful when re-ordering
 
-                        //focus works in qmlscene
-                        //but this seems to be needed when loaded from SDDM
-                        //I don't understand why, but we have seen this before in the old lock screen
-                        Timer {
-                            interval: 200
-                            running: true
-                            repeat: false
-                            onTriggered: passwordInput.forceActiveFocus()
-                        }
-                        //end hack
+                        anchors.horizontalCenter: parent.horizontalCenter
+                        PlasmaComponents.TextField {
+                            id: passwordInput
+                            placeholderText: i18nd("plasma_lookandfeel_org.kde.lookandfeel","Password")
+                            echoMode: TextInput.Password
+                            onAccepted: loginPrompt.startLogin()
+                            focus: true
 
-                        Keys.onEscapePressed: {
-                            //nextItemInFocusChain(false) is previous Item
-                            nextItemInFocusChain(false).forceActiveFocus();
-                        }
-
-                        //if empty and left or right is pressed change selection in user switch
-                        //this cannot be in keys.onLeftPressed as then it doesn't reach the password box
-                        Keys.onPressed: {
-                            if (event.key == Qt.Key_Left && !text) {
-                                loginPrompt.mainItem.decrementCurrentIndex();
-                                event.accepted = true
+                            //focus works in qmlscene
+                            //but this seems to be needed when loaded from SDDM
+                            //I don't understand why, but we have seen this before in the old lock screen
+                            Timer {
+                                interval: 200
+                                running: true
+                                repeat: false
+                                onTriggered: passwordInput.forceActiveFocus()
                             }
-                            if (event.key == Qt.Key_Right && !text) {
-                                loginPrompt.mainItem.incrementCurrentIndex();
-                                event.accepted = true
+                            //end hack
+
+                            Keys.onEscapePressed: {
+                                //nextItemInFocusChain(false) is previous Item
+                                nextItemInFocusChain(false).forceActiveFocus();
                             }
+
+                            //if empty and left or right is pressed change selection in user switch
+                            //this cannot be in keys.onLeftPressed as then it doesn't reach the password box
+                            Keys.onPressed: {
+                                if (event.key == Qt.Key_Left && !text) {
+                                    loginPrompt.mainItem.decrementCurrentIndex();
+                                    event.accepted = true
+                                }
+                                if (event.key == Qt.Key_Right && !text) {
+                                    loginPrompt.mainItem.incrementCurrentIndex();
+                                    event.accepted = true
+                                }
+                            }
+
                         }
 
+                        PlasmaComponents.Button {
+                            //this keeps the buttons the same width and thus line up evenly around the centre
+                            Layout.minimumWidth: passwordInput.width
+                            text: i18nd("plasma_lookandfeel_org.kde.lookandfeel","Login")
+                            onClicked: loginPrompt.startLogin();
+                        }
                     }
 
-                    PlasmaComponents.Button {
-                        //this keeps the buttons the same width and thus line up evenly around the centre
-                        Layout.minimumWidth: passwordInput.width
-                        text: i18nd("plasma_lookandfeel_org.kde.lookandfeel","Login")
-                        onClicked: loginPrompt.startLogin();
+                    BreezeLabel {
+                        id: capsLockWarning
+                        text: i18nd("plasma_lookandfeel_org.kde.lookandfeel","Caps Lock is on")
+                        visible: keystateSource.data["Caps Lock"]["Locked"]
+
+                        anchors.horizontalCenter: parent.horizontalCenter
+                        font.weight: Font.Bold
+
+                        PlasmaCore.DataSource {
+                            id: keystateSource
+                            engine: "keystate"
+                            connectedSources: "Caps Lock"
+                        }
                     }
                 }
 
