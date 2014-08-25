@@ -47,7 +47,7 @@ Item {
             return ""
         }
         var lastUrlPart = xesamUrl.substring(lastSlashPos + 1)
-        return lastUrlPart
+        return decodeURIComponent(lastUrlPart)
     }
     property string artist: currentMetadata ? currentMetadata["xesam:artist"] || "" : ""
     property string playerIcon: ""
