@@ -93,7 +93,12 @@ PlasmaComponents.ListItem {
 
                     spacing: units.smallSpacing
                     orientation: Qt.Horizontal
-                    anchors.fill: parent
+                    width: (itemWidth + spacing) * model.length
+                    anchors {
+                        top: parent.top
+                        left: parent.left
+                        bottom: parent.bottom
+                    }
 
                     delegate: Item {
                         width: previewList.itemWidth
@@ -156,6 +161,22 @@ PlasmaComponents.ListItem {
                             }
                         }
                     }
+                }
+                PlasmaComponents.Label {
+                    property int additionalItems: DisplayRole.split(" ").length - maximumNumberOfPreviews
+                    visible: additionalItems > 0
+                    opacity: 0.6
+                    text: i18n("+%1", additionalItems)
+                    anchors {
+                        left: previewList.right
+                        right: parent.right
+                        bottom: parent.bottom
+                        margins: units.smallSpacing
+
+                    }
+                    verticalAlignment: Text.AlignBottom
+                    horizontalAlignment: Text.AlignCenter
+                    font.pointSize: theme.smallestFont.pointSize
                 }
             }
         }
