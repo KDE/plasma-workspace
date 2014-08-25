@@ -47,7 +47,6 @@ PlasmaComponents.ListItem {
         onEntered: menuListView.currentIndex = index
         onExited: menuListView.currentIndex = -1
 
-        //Rectangle { visible: main.debug; color: "transparent"; opacity: 1; anchors.fill: parent; border.width: 1 }
         Item {
             id: label
             height: childrenRect.height
@@ -55,24 +54,18 @@ PlasmaComponents.ListItem {
                 left: parent.left
                 leftMargin: units.gridUnit / 2
                 right: parent.right
-                //rightMargin: units.smallSpacing
                 verticalCenter: parent.verticalCenter
             }
             PlasmaComponents.Label {
                 height: implicitHeight
-                //width: parent.width - units.gridUnit * 4
                 anchors {
                     left: parent.left
-                    //leftMargin: units.smallSpacing
                     right: parent.right
                     rightMargin: units.gridUnit * 2
-                    //rightMargin: units.smallSpacing
-                    //verticalCenter: parent.verticalCenter
                 }
                 maximumLineCount: 3
                 text: DisplayRole.trim()
                 visible: TypeRole == 0 // TypeRole: 0: Text, 1: Image, 2: Url
-                //textFormat: Text.PlainText
                 elide: Text.ElideRight
                 wrapMode: Text.Wrap
             }
@@ -112,32 +105,22 @@ PlasmaComponents.ListItem {
                             id: previewPixmap
 
                             anchors.centerIn: parent
-                            //fillMode: KQuickControlsAddons.QPixmapItem.PreserveAspectFit
 
                             Component.onCompleted: {
-
                                 function result(job) {
-                                    print("---> result" + job.result.url + job.result.iconName);
                                     if (!job.error) {
                                         pixmap = job.result.preview;
                                         previewPixmap.width = job.result.previewWidth
                                         previewPixmap.height = job.result.previewHeight
-                                        print("set size: " +previewPixmap.width  + "x" + previewPixmap.height)
-                                    } else {
-                                        print("parentsizing");
-                                        previewPixmap.width = parent.width
-                                        previewPixmap.height = parent.height
                                     }
                                 }
-
                                 var service = clipboardSource.serviceForSource(UuidRole)
                                 var operation = service.operationDescription("preview");
                                 operation.url = modelData;
-//                                 operation.previewWidth = previewPixmap.width;
-//                                 operation.previewHeight = previewPixmap.height;
+                                // We request a bigger size and then clip out a square in the middle
+                                // so we get uniform delegate sizes without distortion
                                 operation.previewWidth = previewList.itemWidth * 2;
                                 operation.previewHeight = previewList.itemHeight * 2;
-                                print("Requesting size: " + operation.previewWidth + "x" + operation.previewHeight)
                                 var serviceJob = service.startOperationCall(operation);
                                 serviceJob.finished.connect(result);
                             }
@@ -174,7 +157,6 @@ PlasmaComponents.ListItem {
                         }
                     }
                 }
-
             }
         }
 

@@ -30,15 +30,12 @@ Item {
     width: units.gridUnit * 26
     height: units.gridUnit * 20
 
-    //anchors.fill: parent
     Plasmoid.switchWidth: units.gridUnit * 10
     Plasmoid.switchHeight: units.gridUnit * 8
     Plasmoid.status: clipboardSource.data["clipboard"]["empty"] ? PlasmaCore.Types.PassiveStatus : PlasmaCore.Types.ActiveStatus
     Plasmoid.toolTipMainText: i18n("Clipboard Contents")
     Plasmoid.toolTipSubText: clipboardSource.data["clipboard"]["empty"] ? i18n("Clipboard is empty") : clipboardSource.data["clipboard"]["current"]
     Plasmoid.icon: "klipper"
-
-    property bool debug: false
 
     function action_configure() {
         clipboardSource.service("", "configureKlipper");
@@ -139,7 +136,6 @@ Item {
             anchors.fill: parent
             RowLayout {
                 Layout.fillWidth: true
-//                 spacing: 0
                 Item {
                     width: units.gridUnit / 2 - parent.spacing
                     height: 1
@@ -155,10 +151,6 @@ Item {
                     tooltip: i18n("Clear history")
                     onClicked: clipboardSource.service("", "clearHistory")
                 }
-//                 Item {
-//                     width: listMargins.right - 1
-//                     height: 1 // just for valid size
-//                 }
             }
             Menu {
                 id: clipboardMenu
@@ -180,6 +172,5 @@ Item {
                 }
             }
         }
-    Rectangle { color: "transparent"; opacity: 1; anchors.fill: parent; border.width: 1; visible: main.debug; }
     }
 }
