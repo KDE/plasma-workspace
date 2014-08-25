@@ -111,7 +111,7 @@ public:
     QAction *addPanelAction;
     QMenu *addPanelsMenu;
     Plasma::Package lookNFeelPackage;
-    QSet<KScreen::Output*> redundantOutputs;
+    QSet<KScreen::Output *> redundantOutputs;
 #if HAVE_KTEXTEDITOR
     QWeakPointer<InteractiveConsole> console;
 #endif
@@ -590,9 +590,9 @@ QRect ShellCorona::availableScreenRect(int id) const
     return r;
 }
 
-QScreen* ShellCorona::screenForId(int screenId) const
+QScreen *ShellCorona::screenForId(int screenId) const
 {
-    DesktopView* v = d->views.value(screenId);
+    DesktopView *v = d->views.value(screenId);
     return v ? v->screen() : nullptr;
 }
 
@@ -608,7 +608,7 @@ PanelView *ShellCorona::panelView(Plasma::Containment *containment) const
 
 ///// SLOTS
 
-QList<PanelView*> ShellCorona::panelsForScreen(QScreen *screen) const
+QList<PanelView *> ShellCorona::panelsForScreen(QScreen *screen) const
 {
     QList<PanelView *> ret;
     foreach (PanelView *v, d->panelViews) {
@@ -668,7 +668,7 @@ void ShellCorona::removeView(int idx)
 
 void ShellCorona::outputEnabledChanged()
 {
-    KScreen::Output *output = qobject_cast<KScreen::Output*>(sender());
+    KScreen::Output *output = qobject_cast<KScreen::Output *>(sender());
     if (output && output->isEnabled()) {
         addOutput(output);
     }
@@ -801,7 +801,7 @@ void ShellCorona::addOutput(KScreen::Output *output)
 
 QScreen* ShellCorona::insertScreen(QScreen *screen, int idx)
 {
-    if (idx==d->views.count()) {
+    if (idx == d->views.count()) {
         return screen;
     }
 
@@ -819,8 +819,8 @@ QScreen* ShellCorona::insertScreen(QScreen *screen, int idx)
 
 Plasma::Containment *ShellCorona::createContainmentForActivity(const QString& activity, int screenNum)
 {
-    QHash<int, Plasma::Containment*> act = d->desktopContainments.value(activity);
-    QHash<int, Plasma::Containment*>::const_iterator it = act.constFind(screenNum);
+    QHash<int, Plasma::Containment *> act = d->desktopContainments.value(activity);
+    QHash<int, Plasma::Containment *>::const_iterator it = act.constFind(screenNum);
     if (it != act.constEnd()) {
         return *it;
     }
