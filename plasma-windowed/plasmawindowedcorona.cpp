@@ -42,12 +42,11 @@ PlasmaWindowedCorona::PlasmaWindowedCorona(QObject *parent)
 
 void PlasmaWindowedCorona::loadApplet(const QString &applet)
 {
-    PlasmaQuick::View *view = new PlasmaWindowedView(this);
     //view->setContainment(m_containment);
     //view->show();
    // m_views << view;
 
-    QQuickView *v = new QQuickView();
+    PlasmaWindowedView *v = new PlasmaWindowedView();
     v->show();
 
     Plasma::Containment *cont = containments().first();
@@ -68,16 +67,13 @@ void PlasmaWindowedCorona::loadApplet(const QString &applet)
             cg2 = KConfigGroup(&cg2, "General");
             cont->addApplet(a);
 
-            QQuickItem *i = a->property("_plasma_graphicObject").value<QQuickItem *>();
-            i->setParentItem(v->contentItem());
+            v->setApplet(a);
             return;
         }
     }
 
     Plasma::Applet *a = containments().first()->createApplet(applet);
-    QQuickItem *i = a->property("_plasma_graphicObject").value<QQuickItem *>();
-    i->setParentItem(v->contentItem());
-    i->setVisible(true);
+    v->setApplet(a);
 }
 
 void PlasmaWindowedCorona::activateRequested(const QStringList &arguments, const QString &workingDirectory)

@@ -22,16 +22,24 @@
 #ifndef PLASMAWINDOWEDVIEW_H
 #define PLASMAWINDOWEDVIEW_H
 
-#include "plasmaquick/view.h"
+#include <QQuickView>
 #include "plasmawindowedcorona.h"
 
-class PlasmaWindowedView : public PlasmaQuick::View
+class PlasmaWindowedView : public QQuickView
 {
     Q_OBJECT
 
 public:
-    PlasmaWindowedView(PlasmaWindowedCorona *corona, QWindow *parent = 0);
+    PlasmaWindowedView(QWindow *parent = 0);
     ~PlasmaWindowedView();
+
+    void setApplet(Plasma::Applet *applet);
+
+protected:
+    virtual void resizeEvent(QResizeEvent * ev);
+
+private:
+    Plasma::Applet *m_applet;
 };
 
 #endif

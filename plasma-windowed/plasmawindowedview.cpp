@@ -22,6 +22,8 @@
 #include <QUrl>
 #include <QQmlEngine>
 #include <QQmlContext>
+#include <QQuickItem>
+#include <QResizeEvent>
 
 #include <QDebug>
 #include <Plasma/Package>
@@ -29,16 +31,31 @@
 
 #include "plasmawindowedview.h"
 
-PlasmaWindowedView::PlasmaWindowedView(PlasmaWindowedCorona *corona, QWindow *parent)
-    : PlasmaQuick::View(corona, parent)
+PlasmaWindowedView::PlasmaWindowedView(QWindow *parent)
+    : QQuickView(parent)
 {
-    setTitle(i18n("Plasma Windowed"));
-    engine()->rootContext()->setContextProperty("desktop", this);
-    setSource(QUrl::fromLocalFile(corona->package().filePath("views", "Desktop.qml")));
+    
 }
 
 PlasmaWindowedView::~PlasmaWindowedView()
 {
+    m_applet->deleteLater();
+}
+
+void PlasmaWindowedView::setApplet(Plasma::Applet *applet)
+{
+    m_applet = applet;
+    QQuickItem *i = applet->property("_plasma_graphicObject").value<QQuickItem *>();
+    i->setParentItem(contentItem());
+    i->setVisible(true);
+    setTitle(applet->title());
+}
+
+void PlasmaWindowedView::resizeEvent(QResizeEvent *ev)
+{
+    QQuickItem *i = m_applet->property("_plasma_graphicObject").value<QQuickItem *>();
+    i->setWidth(ev->size().width());
+    i->setHeight(ev->size().height());
 }
 
 #include "plasmawindowedview.moc"
