@@ -45,7 +45,15 @@ PlasmaWindowedView::~PlasmaWindowedView()
 void PlasmaWindowedView::setApplet(Plasma::Applet *applet)
 {
     m_applet = applet;
+    if (!applet) {
+        return;
+    }
+
     QQuickItem *i = applet->property("_plasma_graphicObject").value<QQuickItem *>();
+    if (!i) {
+        return;
+    }
+
     i->setParentItem(contentItem());
     i->setVisible(true);
     setTitle(applet->title());
@@ -53,7 +61,15 @@ void PlasmaWindowedView::setApplet(Plasma::Applet *applet)
 
 void PlasmaWindowedView::resizeEvent(QResizeEvent *ev)
 {
+    if (!m_applet) {
+        return;
+    }
+
     QQuickItem *i = m_applet->property("_plasma_graphicObject").value<QQuickItem *>();
+    if (!i) {
+        return;
+    }
+
     i->setWidth(ev->size().width());
     i->setHeight(ev->size().height());
 }
