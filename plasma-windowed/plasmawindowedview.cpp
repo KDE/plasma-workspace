@@ -59,10 +59,9 @@ void PlasmaWindowedView::setApplet(Plasma::Applet *applet)
         return;
     }
 
-    int width = m_applet->config().readEntry("width", 0);
-    int height = m_applet->config().readEntry("height", 0);
-    if (width > 0 && height > 0) {
-        resize(QSize(width, height));
+    const QRect geom = m_applet->config().readEntry("geometry", QRect());
+    if (geom.isValid()) {
+        setGeometry(geom);
     }
 
     i->setParentItem(contentItem());
@@ -89,6 +88,8 @@ void PlasmaWindowedView::resizeEvent(QResizeEvent *ev)
     contentItem()->setHeight(ev->size().height());
     m_applet->config().writeEntry("width", ev->size().width());
     m_applet->config().writeEntry("height", ev->size().height());
+
+    m_applet->config().writeEntry("geometry", QRect(position(), ev->size()));
 }
 
 #include "plasmawindowedview.moc"
