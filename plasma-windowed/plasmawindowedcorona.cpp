@@ -23,6 +23,7 @@
 #include "plasmawindowedview.h"
 #include <QDebug>
 #include <QAction>
+#include <QQuickItem>
 
 #include <KActionCollection>
 #include <Plasma/Package>
@@ -42,9 +43,12 @@ PlasmaWindowedCorona::PlasmaWindowedCorona(QObject *parent)
 void PlasmaWindowedCorona::loadApplet(const QString &applet)
 {
     PlasmaQuick::View *view = new PlasmaWindowedView(this);
-    view->setContainment(m_containment);
-    view->show();
-    m_views << view;
+    //view->setContainment(m_containment);
+    //view->show();
+   // m_views << view;
+
+    QQuickView *v = new QQuickView();
+    v->show();
 
     Plasma::Containment *cont = containments().first();
     KConfigGroup appletsGroup(config(), "StoredApplets");
@@ -63,10 +67,17 @@ void PlasmaWindowedCorona::loadApplet(const QString &applet)
             cg = KConfigGroup(&cg, "General");
             cg2 = KConfigGroup(&cg2, "General");
             cont->addApplet(a);
+
+            QQuickItem *i = a->property("_plasma_graphicObject").value<QQuickItem *>();
+            i->setParentItem(v->contentItem());
             return;
         }
     }
-    containments().first()->createApplet(applet);
+
+    Plasma::Applet *a = containments().first()->createApplet(applet);
+    QQuickItem *i = a->property("_plasma_graphicObject").value<QQuickItem *>();
+    i->setParentItem(v->contentItem());
+    i->setVisible(true);
 }
 
 void PlasmaWindowedCorona::activateRequested(const QStringList &arguments, const QString &workingDirectory)
@@ -81,7 +92,7 @@ void PlasmaWindowedCorona::activateRequested(const QStringList &arguments, const
 QRect PlasmaWindowedCorona::screenGeometry(int id) const
 {
     Q_UNUSED(id);
-
+return QRect();
     if(m_views.count() > id ) {
         return m_views[id]->geometry();
     } else {
