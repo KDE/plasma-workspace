@@ -25,6 +25,12 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include <QDebug>
 #include <QIcon>
 
+const static QString s_iconKey = QStringLiteral("icon");
+const static QString s_previewKey = QStringLiteral("preview");
+const static QString s_previewWidthKey = QStringLiteral("previewWidth");
+const static QString s_previewHeightKey = QStringLiteral("previewHeight");
+const static QString s_urlKey = QStringLiteral("url");
+
 ClipboardJob::ClipboardJob(Klipper *klipper, const QString &destination, const QString &operation, const QVariantMap &parameters, QObject *parent)
     : Plasma::ServiceJob(destination, operation, parameters, parent)
     , m_klipper(klipper)
@@ -34,7 +40,6 @@ ClipboardJob::ClipboardJob(Klipper *klipper, const QString &destination, const Q
 void ClipboardJob::start()
 {
     const QString operation = operationName();
-    //qDebug()<< "OP: " << operation << parameters();
     // first check for operations not needing an item
     if (operation == QLatin1String("clearHistory")) {
         m_klipper->slotAskClearHistory();
@@ -85,11 +90,10 @@ void ClipboardJob::start()
         m_klipper->urlGrabber()->invokeAction(item);
         setResult(true);
 
-    } else if (operation == QStringLiteral("preview")) {
-
-        const int pixelWidth = parameters().value("previewWidth").toInt();
-        const int pixelHeight = parameters().value("previewHeight").toInt();
-        QUrl url = parameters().value("url").toUrl();
+    } else if (operation == s_previewKey) {
+        const int pixelWidth = parameters().value(s_previewWidthKey).toInt();
+        const int pixelHeight = parameters().value(s_previewHeightKey).toInt();
+        QUrl url = parameters().value(s_urlKey).toUrl();
         qDebug() << "URL: " << url;
         KFileItem item(url);
 
@@ -100,7 +104,7 @@ void ClipboardJob::start()
         }
 
         if (!url.isValid() || !url.isLocalFile()) { // no remote files
-            qWarning() << "invalid or non-local: " << url << pixelWidth << "x" << pixelHeight;
+            qWarning() << "Invalid or non-local url for preview: " << url;
             iconResult(item);
             return;
         }
@@ -108,25 +112,22 @@ void ClipboardJob::start()
         KFileItemList urls;
         urls << item;
 
-        KIO::PreviewJob* job = KIO::filePreview(urls,
-                                                QSize(pixelWidth, pixelHeight));
+        KIO::PreviewJob* job = KIO::filePreview(urls, QSize(pixelWidth, pixelHeight));
         job->setIgnoreMaximumSize(true);
         connect(job, &KIO::PreviewJob::gotPreview, this,
-            [this](KFileItem item, QPixmap preview) {
-                qDebug() << "============== Preview arrived: " << item.url() << preview.size();
+            [this](const KFileItem &item, const QPixmap &preview) {
                 QVariantMap res;
-                res.insert("url", item.url());
-                res.insert("preview", preview);
-                res.insert("icon", false);
-                res.insert("previewWidth", preview.size().width());
-                res.insert("previewHeight", preview.size().height());
+                res.insert(s_urlKey, item.url());
+                res.insert(s_previewKey, preview);
+                res.insert(s_iconKey, false);
+                res.insert(s_previewWidthKey, preview.size().width());
+                res.insert(s_previewHeightKey, preview.size().height());
                 setResult(res);
                 emitResult();
             }
         );
         connect(job, &KIO::PreviewJob::failed, this,
-            [&](KFileItem item) {
-                qWarning() << "PreviewJob failed for" << item.url() << qobject_cast<KIO::PreviewJob*>(sender())->errorString();
+            [this](const KFileItem &item) {
                 iconResult(item);
             }
         );
@@ -143,14 +144,13 @@ void ClipboardJob::start()
 void ClipboardJob::iconResult(const KFileItem& item)
 {
     QVariantMap res;
-    res.insert("url", item.url());
+    res.insert(s_urlKey, item.url());
     QPixmap pix = QIcon::fromTheme(item.currentMimeType().iconName()).pixmap(128, 128);
-    qDebug() << "Setting icon" << pix.size();
-    res.insert("preview", pix);
-    res.insert("icon", true);
+    res.insert(s_previewKey, pix);
+    res.insert(s_iconKey, true);
     res.insert("iconName", item.currentMimeType().iconName());
-    res.insert("previewWidth", pix.size().width());
-    res.insert("previewHeight", pix.size().height());
+    res.insert(s_previewWidthKey, pix.size().width());
+    res.insert(s_previewHeightKey, pix.size().height());
     setResult(res);
     emitResult();
 }

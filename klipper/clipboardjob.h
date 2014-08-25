@@ -20,8 +20,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define KLIPPER_CLIPBOARDJOB_H
 
 #include <Plasma/ServiceJob>
-#include <KFileItem>
 
+class KFileItem;
 class Klipper;
 
 class ClipboardJob : public Plasma::ServiceJob
