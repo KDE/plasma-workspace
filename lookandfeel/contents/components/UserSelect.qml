@@ -87,17 +87,18 @@ FocusScope {
     BreezeLabel {
         id: notificationLabel
         anchors {
+            top: usersList.bottom
             bottom: parent.bottom
             horizontalCenter: parent.horizontalCenter
+            margins: units.largeSpacing
         }
 
         width: usersList.userItemWidth * 3 //don't pass the infoPane
         horizontalAlignment: Text.AlignHCenter
+        verticalAlignment: Text.AlignVCenter
         maximumLineCount: 1
         wrapMode: Text.Wrap
 
         font.weight: Font.Bold
-        height: Math.round(Math.max(paintedHeight, theme.mSize(theme.defaultFont).height*1.2))
-
     }
 }

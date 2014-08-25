@@ -69,7 +69,6 @@ UnlockApp::UnlockApp(int &argc, char **argv)
     , m_resetRequestIgnoreTimer(new QTimer(this))
     , m_delayedLockTimer(0)
     , m_testing(false)
-    , m_capsLocked(false)
     , m_ignoreRequests(false)
     , m_immediateLock(false)
     , m_authenticator(new Authenticator(this))
@@ -205,7 +204,6 @@ void UnlockApp::desktopResized()
     if (nScreens > 1) {
         QTimer::singleShot(250, this, SLOT(getFocus()));
     }
-    capsLocked();
 }
 
 void UnlockApp::getFocus()
@@ -356,10 +354,6 @@ bool UnlockApp::eventFilter(QObject *obj, QEvent *event)
         return false; // we don't care
     } else if (event->type() == QEvent::KeyRelease) { // conditionally reshow the saver
         QKeyEvent *ke = static_cast<QKeyEvent *>(event);
-        if (ke->key() == Qt::Key_CapsLock) {
-            capsLocked();
-            return false;
-        }
         if (ke->key() != Qt::Key_Escape) {
             shareEvent(event, qobject_cast<QQuickView*>(obj));
             return false; // irrelevant
@@ -368,21 +362,6 @@ bool UnlockApp::eventFilter(QObject *obj, QEvent *event)
     }
 
     return false;
-}
-
-void UnlockApp::capsLocked()
-{
-    unsigned int lmask;
-    Window dummy1, dummy2;
-    int dummy3, dummy4, dummy5, dummy6;
-    XQueryPointer(QX11Info::display(), DefaultRootWindow( QX11Info::display() ), &dummy1, &dummy2, &dummy3, &dummy4, &dummy5, &dummy6, &lmask);
-    const bool before = m_capsLocked;
-    m_capsLocked = lmask & LockMask;
-    if (before != m_capsLocked) {
-        foreach (QQuickView *view, m_views) {
-            view->rootObject()->setProperty("capsLockOn", m_capsLocked);
-        }
-    }
 }
 
 /*

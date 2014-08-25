@@ -65,7 +65,6 @@ private Q_SLOTS:
 
 private:
     void initialize();
-    void capsLocked();
     void shareEvent(QEvent *e, QQuickView *from);
 
     QUrl m_mainQmlPath;
@@ -74,7 +73,6 @@ private:
     QTimer *m_delayedLockTimer;
     Plasma::Package m_package;
     bool m_testing;
-    bool m_capsLocked;
     bool m_ignoreRequests;
     bool m_immediateLock;
     bool m_runtimeInitialized;

@@ -21,6 +21,7 @@ import QtQuick 2.0
 import QtQuick.Layouts 1.1
 import QtQuick.Controls 1.1
 import org.kde.plasma.components 2.0 as PlasmaComponents
+import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.kscreenlocker 1.0
 import "../components"
 
@@ -60,7 +61,7 @@ Image {
 
     StackView {
         id: stackView
-        height: units.largeSpacing*14
+        height: units.largeSpacing * 15
         anchors {
             verticalCenter: parent.verticalCenter
             left: parent.left
@@ -119,48 +120,60 @@ Image {
                     authenticator.tryUnlock(passwordInput.text);
                 }
 
-                RowLayout {
-
+                ColumnLayout {
                     anchors.horizontalCenter: parent.horizontalCenter
-                    PlasmaComponents.TextField {
-                        id: passwordInput
-                        placeholderText: i18nd("plasma_lookandfeel_org.kde.lookandfeel","Password")
-                        echoMode: TextInput.Password
-                        enabled: !authenticator.graceLocked
-                        onAccepted: unlockFunction()
-                        focus: true
-                        visible: block.mainItem.model.get(block.mainItem.selectedIndex)["showPassword"]
 
-                        Keys.onLeftPressed: {
-                            if (text == "") {
-                                root.userSelect.decrementCurrentIndex();
-                            } else {
-                                event.accepted = false;
+                    RowLayout {
+
+                        anchors.horizontalCenter: parent.horizontalCenter
+                        PlasmaComponents.TextField {
+                            id: passwordInput
+                            placeholderText: i18nd("plasma_lookandfeel_org.kde.lookandfeel","Password")
+                            echoMode: TextInput.Password
+                            enabled: !authenticator.graceLocked
+                            onAccepted: unlockFunction()
+                            focus: true
+                            visible: block.mainItem.model.get(block.mainItem.selectedIndex)["showPassword"]
+
+                            Keys.onLeftPressed: {
+                                if (text == "") {
+                                    root.userSelect.decrementCurrentIndex();
+                                } else {
+                                    event.accepted = false;
+                                }
+                            }
+                            Keys.onRightPressed: {
+                                if (text == "") {
+                                    root.userSelect.incrementCurrentIndex();
+                                } else {
+                                    event.accepted = false;
+                                }
                             }
                         }
-                        Keys.onRightPressed: {
-                            if (text == "") {
-                                root.userSelect.incrementCurrentIndex();
-                            } else {
-                                event.accepted = false;
+
+                        PlasmaComponents.Button {
+                            Layout.minimumWidth: passwordInput.width
+                            text: block.mainItem.model.get(block.mainItem.selectedIndex)["ButtonLabel"]
+                            enabled: !authenticator.graceLocked
+                            onClicked: switch(block.mainItem.model.get(block.mainItem.selectedIndex)["ButtonAction"]) {
+                                case "unlock":
+                                    unlockFunction();
+                                    break;
+                                case "newSession":
+                                    sessions.createNewSession();
+                                    break;
+                                case "changeSession":
+                                    stackView.push(changeSessionComponent)
+                                    break;
                             }
                         }
-                    }
 
-                    PlasmaComponents.Button {
-                        Layout.minimumWidth: passwordInput.width
-                        text: block.mainItem.model.get(block.mainItem.selectedIndex)["ButtonLabel"]
-                        enabled: !authenticator.graceLocked
-                        onClicked: switch(block.mainItem.model.get(block.mainItem.selectedIndex)["ButtonAction"]) {
-                            case "unlock":
-                                unlockFunction();
-                                break;
-                            case "newSession":
-                                sessions.createNewSession();
-                                break;
-                            case "changeSession":
-                                stackView.push(changeSessionComponent)
-                                break;
+                        Connections {
+                            target: root
+                            onClearPassword: {
+                                passwordInput.selectAll();
+                                passwordInput.forceActiveFocus();
+                            }
                         }
                         Keys.onLeftPressed: {
                             root.userSelect.decrementCurrentIndex();
@@ -170,11 +183,18 @@ Image {
                         }
                     }
 
-                    Connections {
-                        target: root
-                        onClearPassword: {
-                            passwordInput.selectAll();
-                            passwordInput.forceActiveFocus();
+                    BreezeLabel {
+                        id: capsLockWarning
+                        text: i18nd("plasma_lookandfeel_org.kde.lookandfeel","Caps Lock is on")
+                        visible: keystateSource.data["Caps Lock"]["Locked"]
+
+                        anchors.horizontalCenter: parent.horizontalCenter
+                        font.weight: Font.Bold
+
+                        PlasmaCore.DataSource {
+                            id: keystateSource
+                            engine: "keystate"
+                            connectedSources: "Caps Lock"
                         }
                     }
                 }
