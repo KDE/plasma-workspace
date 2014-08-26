@@ -42,15 +42,11 @@ PlasmaWindowedCorona::PlasmaWindowedCorona(QObject *parent)
 
 void PlasmaWindowedCorona::loadApplet(const QString &applet)
 {
-    //view->setContainment(m_containment);
-    //view->show();
-   // m_views << view;
-
     PlasmaWindowedView *v = new PlasmaWindowedView();
     v->show();
 
     Plasma::Containment *cont = containments().first();
-    KConfigGroup appletsGroup(config(), "StoredApplets");
+    KConfigGroup appletsGroup(KSharedConfig::openConfig(), "Applets");
     QString plugin;
     for (const QString &group : appletsGroup.groupList()) {
         KConfigGroup cg(&appletsGroup, group);
@@ -60,11 +56,10 @@ void PlasmaWindowedCorona::loadApplet(const QString &applet)
             Plasma::Applet *a = Plasma::PluginLoader::self()->loadApplet(applet, group.toInt());
             a->restore(cg);
 
+            //Access a->config() before adding to containment
+            //will cause applets to be saved in palsmawindowedrc
+            //so applets will only be created on demand
             KConfigGroup cg2 = a->config();
-            cg = KConfigGroup(&cg, "Configuration");
-            cg.copyTo(&cg2);
-            cg = KConfigGroup(&cg, "General");
-            cg2 = KConfigGroup(&cg2, "General");
             cont->addApplet(a);
 
             v->setApplet(a);
@@ -72,7 +67,12 @@ void PlasmaWindowedCorona::loadApplet(const QString &applet)
         }
     }
 
-    Plasma::Applet *a = containments().first()->createApplet(applet);
+    Plasma::Applet *a = Plasma::PluginLoader::self()->loadApplet(applet, 0);
+    //Access a->config() before adding to containment
+    //will cause applets to be saved in palsmawindowedrc
+    //so applets will only be created on demand
+    KConfigGroup cg2 = a->config();
+    containments().first()->addApplet(a);
     v->setApplet(a);
 }
 
@@ -88,24 +88,13 @@ void PlasmaWindowedCorona::activateRequested(const QStringList &arguments, const
 QRect PlasmaWindowedCorona::screenGeometry(int id) const
 {
     Q_UNUSED(id);
-return QRect();
-    if(m_views.count() > id ) {
-        return m_views[id]->geometry();
-    } else {
-        return QRect();
-    }
+    //TODO?
+    return QRect();
 }
 
 void PlasmaWindowedCorona::load()
 {
-    KSharedConfig::Ptr c = KSharedConfig::openConfig("plasmawindowed-appletsrc", KConfig::SimpleConfig);
-    KConfigGroup conf(c, "Containments");
-    conf = KConfigGroup(&conf, "1");
-    conf = KConfigGroup(&conf, "Applets");
-    KConfigGroup conf2(c, "StoredApplets");
-    conf.copyTo(&conf2);
-    conf.deleteGroup();
-    conf.sync();
+    /*this won't load applets, since applets are in plasmawindowedrc*/
     loadLayout("plasmawindowed-appletsrc");
 
 

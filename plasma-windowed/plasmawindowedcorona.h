@@ -40,7 +40,6 @@ public Q_SLOTS:
     void activateRequested(const QStringList &arguments, const QString &workingDirectory);
 
 private:
-    QList <PlasmaQuick::View *> m_views;
     Plasma::Containment *m_containment;
 };
 

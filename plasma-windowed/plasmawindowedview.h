@@ -40,6 +40,8 @@ public:
 protected:
     virtual void resizeEvent(QResizeEvent * ev);
     virtual void mouseReleaseEvent(QMouseEvent *ev);
+    virtual void moveEvent(QMoveEvent *ev);
+    virtual void hideEvent(QHideEvent *ev);
 
 protected Q_SLOTS:
     void showConfigurationInterface(Plasma::Applet *applet);

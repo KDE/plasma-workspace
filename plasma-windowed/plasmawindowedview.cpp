@@ -45,8 +45,6 @@ PlasmaWindowedView::PlasmaWindowedView(QWindow *parent)
 
 PlasmaWindowedView::~PlasmaWindowedView()
 {
-    m_applet->config().sync();
-    m_applet->deleteLater();
 }
 
 void PlasmaWindowedView::setApplet(Plasma::Applet *applet)
@@ -91,8 +89,6 @@ void PlasmaWindowedView::resizeEvent(QResizeEvent *ev)
 
     contentItem()->setWidth(ev->size().width());
     contentItem()->setHeight(ev->size().height());
-    m_applet->config().writeEntry("width", ev->size().width());
-    m_applet->config().writeEntry("height", ev->size().height());
 
     m_applet->config().writeEntry("geometry", QRect(position(), ev->size()));
 }
@@ -101,7 +97,7 @@ void PlasmaWindowedView::mouseReleaseEvent(QMouseEvent *ev)
 {
     QQuickWindow::mouseReleaseEvent(ev);
 
-    if (ev->isAccepted()) {
+    if ((!(ev->buttons() & Qt::RightButton) && ev->button() != Qt::RightButton) || ev->isAccepted()) {
         return;
     }
 
@@ -127,6 +123,20 @@ void PlasmaWindowedView::mouseReleaseEvent(QMouseEvent *ev)
 
     menu.exec(ev->globalPos());
     ev->setAccepted(true);
+}
+
+void PlasmaWindowedView::moveEvent(QMoveEvent *ev)
+{
+    Q_UNUSED(ev)
+    m_applet->config().writeEntry("geometry", QRect(position(), size()));
+}
+
+void PlasmaWindowedView::hideEvent(QHideEvent *ev)
+{
+    Q_UNUSED(ev)
+    m_applet->config().sync();
+    m_applet->deleteLater();
+    deleteLater();
 }
 
 void PlasmaWindowedView::showConfigurationInterface(Plasma::Applet *applet)
