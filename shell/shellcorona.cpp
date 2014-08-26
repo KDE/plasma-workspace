@@ -621,7 +621,7 @@ QList<PanelView *> ShellCorona::panelsForScreen(QScreen *screen) const
 
 void ShellCorona::removeView(int idx)
 {
-    if (idx < 0 || idx >= d->views.size()) {
+    if (idx < 0 || idx >= d->views.count() || d->views.isEmpty()) {
         return;
     }
 
@@ -711,7 +711,7 @@ void ShellCorona::reconsiderOutputs()
             }
         } else if (isOutputRedundant(out)) {
             QScreen *screen = outputToScreen(out);
-            for (int i = 0; i < d->views.size(); ++i) {
+            for (int i = 0; i < d->views.count(); ++i) {
                 if (d->views[i]->screen() == screen) {
                     removeView(i);
                     break;
@@ -854,14 +854,14 @@ void ShellCorona::createWaitingPanels()
             ++requestedScreen;
         }
 
-        if (requestedScreen > (d->views.size() - 1)) {
+        if (requestedScreen > (d->views.count() - 1)) {
             stillWaitingPanels << cont;
             continue;
         }
 
         PanelView* panel = new PanelView(this);
 
-        Q_ASSERT(qBound(0, requestedScreen, d->views.size() -1) == requestedScreen);
+        Q_ASSERT(qBound(0, requestedScreen, d->views.count() - 1) == requestedScreen);
         QScreen *screen = d->views[requestedScreen]->screen();
 
         d->panelViews[cont] = panel;
@@ -1328,7 +1328,7 @@ int ShellCorona::screenForContainment(const Plasma::Containment *containment) co
         }
     }
 
-    for (int i = 0; i < d->views.size(); i++) {
+    for (int i = 0; i < d->views.count(); i++) {
         if (d->views[i]->containment() == containment) {
             return i;
         }
@@ -1337,7 +1337,7 @@ int ShellCorona::screenForContainment(const Plasma::Containment *containment) co
     PanelView *view = d->panelViews.value(containment);
     if (view) {
         QScreen *screen = view->screen();
-        for (int i = 0; i < d->views.size(); i++) {
+        for (int i = 0; i < d->views.count(); i++) {
             if (d->views[i]->screen() == screen) {
                 return i;
             }
