@@ -12,6 +12,7 @@ set(kscreenlocker_greet_SRCS
    authenticator.cpp
    sessions.cpp
    greeterapp.cpp
+   keyboardlayout.cpp
    main.cpp )
 
 qt5_add_resources(kscreenlocker_greet_SRCS fallbacktheme.qrc)
