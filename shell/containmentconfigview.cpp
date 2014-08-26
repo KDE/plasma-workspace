@@ -19,7 +19,7 @@
 
 #include "currentcontainmentactionsmodel.h"
 #include "containmentconfigview.h"
-#include "configmodel.h"
+#include "plasmaquick/configmodel.h"
 #include "shellcorona.h"
 #include "config-workspace.h"
 

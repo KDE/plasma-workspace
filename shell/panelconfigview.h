@@ -20,7 +20,7 @@
 #ifndef PANELCONFIGVIEW_H
 #define PANELCONFIGVIEW_H
 
-#include "configview.h"
+#include "plasmaquick/configview.h"
 #include "panelview.h"
 
 #include <QQuickItem>

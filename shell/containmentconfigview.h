@@ -21,7 +21,7 @@
 #define CONTAINMENTCONFIGVIEW_H
 
 
-#include "configview.h"
+#include "plasmaquick/configview.h"
 
 
 namespace Plasma {

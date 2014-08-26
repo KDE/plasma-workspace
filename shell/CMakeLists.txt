@@ -9,8 +9,6 @@ set(CMAKE_INCLUDE_CURRENT_DIR ON)
 
 set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH})
 
-include_directories(plasmaquick)
-
 find_package(Qt5Qml REQUIRED)
 find_package(Qt5Quick REQUIRED)
 find_package(Qt5DBus REQUIRED)

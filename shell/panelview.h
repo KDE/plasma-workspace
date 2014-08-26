@@ -19,13 +19,12 @@
 #ifndef PANELVIEW_H
 #define PANELVIEW_H
 
-#include <view.h>
 #include <QtCore/qpointer.h>
 #include <Plasma/Theme>
 #include <QTimer>
 
-
-#include <configview.h>
+#include "plasmaquick/view.h"
+#include "plasmaquick/configview.h"
 
 class ShellCorona;
 

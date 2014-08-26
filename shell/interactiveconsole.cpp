@@ -50,7 +50,7 @@
 #include <Plasma/Package>
 
 #include "scripting/desktopscriptengine.h"
-#include "shellpluginloader.h"
+#include "plasmaquick/shellpluginloader.h"
 #include "shellcorona.h"
 
 //TODO:

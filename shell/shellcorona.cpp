@@ -55,8 +55,8 @@
 #include "panelview.h"
 #include "scripting/desktopscriptengine.h"
 #include "widgetexplorer/widgetexplorer.h"
-#include "configview.h"
-#include "shellpluginloader.h"
+#include "plasmaquick/configview.h"
+#include "plasmaquick/shellpluginloader.h"
 #include "shellmanager.h"
 #include "osd.h"
 #if HAVE_KTEXTEDITOR

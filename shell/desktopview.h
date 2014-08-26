@@ -20,7 +20,7 @@
 #define DESKTOVIEW_H
 
 
-#include <view.h>
+#include "plasmaquick/view.h"
 #include "panelconfigview.h"
 #include <QtCore/qpointer.h>
 
