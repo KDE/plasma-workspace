@@ -24,6 +24,8 @@ import QtQuick.Controls 1.1 as Controls
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
 
+import SddmComponents 2.0
+
 import "./components"
 
 Image {
@@ -31,8 +33,20 @@ Image {
     width: 1000
     height: 1000
 
-    source: "components/artwork/background.png"
-    smooth: true
+    Repeater {
+        model: screenModel
+        Background {
+            x: geometry.x; y: geometry.y; width: geometry.width; height:geometry.height
+            source: config.background
+            fillMode: Image.PreserveAspectCrop
+            onStatusChanged: {
+                if (status == Image.Error && source != config.defaultBackground) {
+                    source = config.defaultBackground
+                }
+            }
+        }
+    }
+
     property bool debug: false
 
     Rectangle {
@@ -74,6 +88,7 @@ Image {
 
                 ColumnLayout {
                     anchors.horizontalCenter: parent.horizontalCenter
+                    spacing: 0
                     RowLayout {
                         //NOTE password is deliberately the first child so it gets focus
                         //be careful when re-ordering
