@@ -668,10 +668,7 @@ void ShellCorona::removeView(int idx)
 
 void ShellCorona::outputEnabledChanged()
 {
-    KScreen::Output *output = qobject_cast<KScreen::Output *>(sender());
-    if (output && output->isEnabled()) {
-        addOutput(output);
-    }
+    addOutput(qobject_cast<KScreen::Output *>(sender()));
 }
 
 bool ShellCorona::isOutputRedundant(KScreen::Output *screen) const
