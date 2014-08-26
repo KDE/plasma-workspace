@@ -98,7 +98,7 @@ return QRect();
 
 void PlasmaWindowedCorona::load()
 {
-    KSharedConfig::Ptr c = KSharedConfig::openConfig("plasma-windowed-appletsrc", KConfig::SimpleConfig);
+    KSharedConfig::Ptr c = KSharedConfig::openConfig("plasmawindowed-appletsrc", KConfig::SimpleConfig);
     KConfigGroup conf(c, "Containments");
     conf = KConfigGroup(&conf, "1");
     conf = KConfigGroup(&conf, "Applets");
@@ -106,7 +106,7 @@ void PlasmaWindowedCorona::load()
     conf.copyTo(&conf2);
     conf.deleteGroup();
     conf.sync();
-    loadLayout("plasma-windowed-appletsrc");
+    loadLayout("plasmawindowed-appletsrc");
 
 
     bool found = false;
@@ -119,8 +119,8 @@ void PlasmaWindowedCorona::load()
 
     if (!found) {
         qDebug() << "Loading default layout";
-        createContainment("org.kde.desktopcontainment"); 
-        saveLayout("plasma-windowed-appletsrc");
+        createContainment("empty"); 
+        saveLayout("plasmawindowed-appletsrc");
     }
 
     for (auto c : containments()) {
