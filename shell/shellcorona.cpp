@@ -41,6 +41,7 @@
 #include <KAuthorized>
 #include <KWindowSystem>
 #include <kdeclarative/kdeclarative.h>
+#include <kdeclarative/qmlobject.h>
 #include <KMessageBox>
 
 #include <KScreen/Config>
@@ -48,14 +49,14 @@
 
 #include "config-ktexteditor.h" // HAVE_KTEXTEDITOR
 
-#include "alternativesdialog.h"
+#include "alternativeshelper.h"
 #include "activity.h"
 #include "desktopview.h"
 #include "panelview.h"
 #include "scripting/desktopscriptengine.h"
 #include "widgetexplorer/widgetexplorer.h"
-#include "configview.h"
-#include "shellpluginloader.h"
+#include "plasmaquick/configview.h"
+#include "plasmaquick/shellpluginloader.h"
 #include "shellmanager.h"
 #include "osd.h"
 #if HAVE_KTEXTEDITOR
@@ -112,11 +113,11 @@ public:
     QMenu *addPanelsMenu;
     Plasma::Package lookNFeelPackage;
     QSet<KScreen::Output *> redundantOutputs;
+    QList<KDeclarative::QmlObject *> alternativesObjects;
 #if HAVE_KTEXTEDITOR
     QWeakPointer<InteractiveConsole> console;
 #endif
 
-    QPointer <AlternativesDialog> alternativesDialog;
     KScreen::Config *screenConfiguration;
     QTimer waitingPanelsTimer;
     QTimer appConfigSyncTimer;
@@ -449,13 +450,41 @@ void ShellCorona::screenInvariants() const
 
 void ShellCorona::showAlternativesForApplet(Plasma::Applet *applet)
 {
-    if (!d->alternativesDialog) {
-        d->alternativesDialog = new AlternativesDialog(applet);
+    const QString alternativesQML = package().filePath("appletalternativesui");
+    if (alternativesQML.isEmpty()) {
+        return;
     }
 
-    d->alternativesDialog->show();
+    KDeclarative::QmlObject *qmlObj = new KDeclarative::QmlObject(this);
+    qmlObj->setInitializationDelayed(true);
+    qmlObj->setSource(QUrl::fromLocalFile(alternativesQML));
+
+    AlternativesHelper *helper = new AlternativesHelper(applet, qmlObj);
+    qmlObj->engine()->rootContext()->setContextProperty("alternativesHelper", helper);
+
+    d->alternativesObjects << qmlObj;
+    qmlObj->completeInitialization();
+    connect(qmlObj->rootObject(), SIGNAL(visibleChanged(bool)),
+            this, SLOT(alternativesVisibilityChanged(bool)));
 }
 
+void ShellCorona::alternativesVisibilityChanged(bool visible)
+{
+    if (visible) {
+        return;
+    }
+
+    QObject *root = sender();
+
+    QMutableListIterator<KDeclarative::QmlObject *> it(d->alternativesObjects);
+    while (it.hasNext()) {
+        KDeclarative::QmlObject *obj = it.next();
+        if (obj->rootObject() == root) {
+            it.remove();
+            obj->deleteLater();
+        }
+    }
+}
 
 void ShellCorona::unload()
 {

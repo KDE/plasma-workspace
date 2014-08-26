@@ -9,8 +9,6 @@ set(CMAKE_INCLUDE_CURRENT_DIR ON)
 
 set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH})
 
-include_directories(plasmaquick)
-
 find_package(Qt5Qml REQUIRED)
 find_package(Qt5Quick REQUIRED)
 find_package(Qt5DBus REQUIRED)
@@ -48,7 +46,7 @@ qt5_add_dbus_adaptor(scripting_SRC ${plasmashell_dbusXML} shellcorona.h ShellCor
 
 set (plasma_shell_SRCS
     activity.cpp
-    alternativesdialog.cpp
+    alternativeshelper.cpp
     main.cpp
     containmentconfigview.cpp
     currentcontainmentactionsmodel.cpp

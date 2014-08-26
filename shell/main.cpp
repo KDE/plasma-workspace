@@ -26,7 +26,7 @@
 #include <kdbusservice.h>
 #include <klocalizedstring.h>
 
-#include "shellpluginloader.h"
+#include "plasmaquick/shellpluginloader.h"
 #include "shellmanager.h"
 
 static const char description[] = "Plasma Shell";
