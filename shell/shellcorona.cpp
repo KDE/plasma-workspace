@@ -449,6 +449,10 @@ void ShellCorona::screenInvariants() const
 
 void ShellCorona::showAlternativesForApplet(Plasma::Applet *applet)
 {
+    if (package().filePath("appletalternativesui").isEmpty()) {
+        return;
+    }
+
     if (!d->alternativesDialog) {
         d->alternativesDialog = new AlternativesDialog(applet);
     }

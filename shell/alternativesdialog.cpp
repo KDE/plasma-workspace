@@ -47,7 +47,7 @@ AlternativesDialog::AlternativesDialog(Plasma::Applet *applet, QQuickItem *paren
 
     m_qmlObj = new KDeclarative::QmlObject(this);
     m_qmlObj->setInitializationDelayed(true);
-    m_qmlObj->setSource(QUrl::fromLocalFile(pkg.filePath("explorer", "AppletAlternatives.qml")));
+    m_qmlObj->setSource(QUrl::fromLocalFile(pkg.filePath("appletalternativesui")));
     m_qmlObj->engine()->rootContext()->setContextProperty("alternativesDialog", this);
     m_qmlObj->completeInitialization();
     setMainItem(qobject_cast<QQuickItem *>(m_qmlObj->rootObject()));
