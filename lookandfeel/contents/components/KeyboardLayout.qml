@@ -28,7 +28,6 @@ PlasmaComponents.ToolButton {
     id: kbLayoutButton
     flat: false
     checkable: false
-    Accessible.name: i18ndc("plasma_lookandfeel_org.kde.lookandfeel", "Button to change keyboard layout", "Switch layout")
     activeFocusOnTab: true
 
     onClicked: {
