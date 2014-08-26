@@ -380,11 +380,12 @@ void ShellCorona::primaryOutputChanged()
             Q_ASSERT(d->views[0]->geometry() == oldPrimary->geometry());
             qDebug() << "adapting" << newPrimary->geometry() << oldPrimary->geometry();
 
-            d->views[0]->setScreen(newPrimary);
             view->setScreen(oldPrimary);
             break;
         }
     }
+
+    d->views[0]->setScreen(newPrimary);
 
     foreach (PanelView *panel, d->panelViews) {
         if (panel->screen() == oldPrimary) {
