@@ -59,7 +59,7 @@ fi
 if [  ${XDG_CONFIG_HOME} ]; then
   configDir=$XDG_CONFIG_HOME;
 else
-  configDir=`readlink -e ~/.config`; #this is the default, http://standards.freedesktop.org/basedir-spec/basedir-spec-latest.html
+  configDir=${HOME}/.config; #this is the default, http://standards.freedesktop.org/basedir-spec/basedir-spec-latest.html
 fi
 
 mkdir -p $configDir

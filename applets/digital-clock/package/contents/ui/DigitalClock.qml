@@ -191,7 +191,7 @@ Item {
     Component.onCompleted: {
         tzOffset = new Date().getTimezoneOffset();
         //console.log("Initial TZ offset: " + tzOffset);
-        timeFormatCorrection(Qt.locale().timeFormat(Locale.ShortFormat))
+        timeFormatCorrection(Qt.locale().timeFormat(Locale.ShortFormat));
         dataSource.onDataChanged.connect(dateTimeChanged);
     }
 }

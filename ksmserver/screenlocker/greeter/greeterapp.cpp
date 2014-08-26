@@ -22,6 +22,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include "kscreensaversettings.h"
 #include "sessions.h"
 #include "authenticator.h"
+#include "keyboardlayout.h"
 #include <../../shellpluginloader.h>
 #include "../../../lookandfeelaccess/lookandfeelaccess.h"
 
@@ -90,7 +91,7 @@ void UnlockApp::initialize()
     const char *uri = "org.kde.kscreenlocker";
     //FIXME
 //     qmlRegisterType<GreeterItem>(uri, 1, 0, "GreeterItem");
-//     qmlRegisterType<KeyboardItem>(uri, 1, 0, "KeyboardItem");
+    qmlRegisterType<KeyboardLayout>(uri, 1, 0, "KeyboardLayout");
     qmlRegisterType<SessionSwitching>(uri, 1, 0, "Sessions");
     qmlRegisterType<QAbstractItemModel>();
 

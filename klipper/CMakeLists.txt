@@ -22,7 +22,7 @@ find_package(Prison "1.2.0" QUIET CONFIG)
 set_package_properties(Prison PROPERTIES DESCRIPTION "Prison library"
                        URL "http://projects.kde.org/prison"
                        TYPE OPTIONAL
-                       PURPOSE "Needed to create mobile barcodes from clipboard data"
+                       PURPOSE "Needed to create mobile barcodes from clipboard data (no stable release currently)"
                       )
 if (PRISON_FOUND)
     include_directories(${PRISON_INCLUDE_DIR})

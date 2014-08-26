@@ -122,10 +122,13 @@ Image {
 
                 ColumnLayout {
                     anchors.horizontalCenter: parent.horizontalCenter
-
                     RowLayout {
-
                         anchors.horizontalCenter: parent.horizontalCenter
+
+                        KeyboardLayout {
+                            id: keyboardLayout
+                        }
+
                         PlasmaComponents.TextField {
                             id: passwordInput
                             placeholderText: i18nd("plasma_lookandfeel_org.kde.lookandfeel","Password")

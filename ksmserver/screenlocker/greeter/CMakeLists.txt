@@ -12,6 +12,7 @@ set(kscreenlocker_greet_SRCS
    authenticator.cpp
    sessions.cpp
    greeterapp.cpp
+   keyboardlayout.cpp
    main.cpp 
    ../../../lookandfeelaccess/lookandfeelaccess.cpp
 )
