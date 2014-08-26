@@ -16,7 +16,7 @@ target_link_libraries(kded_ksysguard
 )
 
 install(TARGETS kded_ksysguard DESTINATION ${PLUGIN_INSTALL_DIR})
-install(FILES kded_ksysguard.desktop DESTINATION ${SERVICES_INSTALL_DIR}/kded)
+install(FILES ksysguard.desktop DESTINATION ${SERVICES_INSTALL_DIR}/kded)
 
 add_executable(systemmonitor ksystemactivitydialog.cpp main.cpp)
 
