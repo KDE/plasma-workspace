@@ -26,10 +26,12 @@
 #include <QResizeEvent>
 #include <QQmlExpression>
 #include <QQmlProperty>
+#include <QMenu>
 
 #include <QDebug>
 #include <Plasma/Package>
 #include <KLocalizedString>
+#include <KActionCollection>
 
 #include "plasmawindowedview.h"
 
@@ -90,6 +92,38 @@ void PlasmaWindowedView::resizeEvent(QResizeEvent *ev)
     m_applet->config().writeEntry("height", ev->size().height());
 
     m_applet->config().writeEntry("geometry", QRect(position(), ev->size()));
+}
+
+void PlasmaWindowedView::mouseReleaseEvent(QMouseEvent *ev)
+{
+    QQuickWindow::mouseReleaseEvent(ev);
+
+    if (ev->isAccepted()) {
+        return;
+    }
+
+    QMenu menu;
+
+    foreach (QAction *action, m_applet->contextualActions()) {
+        if (action) {
+            menu.addAction(action);
+        }
+    }
+
+    if (!m_applet->failedToLaunch()) {
+        QAction *runAssociatedApplication = m_applet->actions()->action("run associated application");
+        if (runAssociatedApplication && runAssociatedApplication->isEnabled()) {
+            menu.addAction(runAssociatedApplication);
+        }
+
+        QAction *configureApplet = m_applet->actions()->action("configure");
+        if (configureApplet && configureApplet->isEnabled()) {
+            menu.addAction(configureApplet);
+        }
+    }
+
+    menu.exec(ev->globalPos());
+    ev->setAccepted(true);
 }
 
 #include "plasmawindowedview.moc"

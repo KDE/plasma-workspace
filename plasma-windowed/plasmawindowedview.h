@@ -37,6 +37,7 @@ public:
 
 protected:
     virtual void resizeEvent(QResizeEvent * ev);
+    virtual void mouseReleaseEvent(QMouseEvent *ev);
 
 private:
     Plasma::Applet *m_applet;
