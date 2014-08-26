@@ -70,6 +70,9 @@ void PlasmaWindowedView::setApplet(Plasma::Applet *applet)
     i->setVisible(true);
     setTitle(applet->title());
     setIcon(QIcon::fromTheme(applet->icon()));
+
+    QObject::connect(applet->containment(), &Plasma::Containment::configureRequested,
+                     this, &PlasmaWindowedView::showConfigurationInterface);
 }
 
 void PlasmaWindowedView::resizeEvent(QResizeEvent *ev)
@@ -124,6 +127,23 @@ void PlasmaWindowedView::mouseReleaseEvent(QMouseEvent *ev)
 
     menu.exec(ev->globalPos());
     ev->setAccepted(true);
+}
+
+void PlasmaWindowedView::showConfigurationInterface(Plasma::Applet *applet)
+{
+    if (m_configView) {
+        m_configView->hide();
+        m_configView->deleteLater();
+    }
+
+    if (!applet || !applet->containment()) {
+        return;
+    }
+
+    m_configView = new PlasmaQuick::ConfigView(applet);
+
+    m_configView->init();
+    m_configView->show();
 }
 
 #include "plasmawindowedview.moc"

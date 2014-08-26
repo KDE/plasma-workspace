@@ -23,7 +23,9 @@
 #define PLASMAWINDOWEDVIEW_H
 
 #include <QQuickView>
+#include <QPointer>
 #include "plasmawindowedcorona.h"
+#include "plasmaquick/configview.h"
 
 class PlasmaWindowedView : public QQuickView
 {
@@ -39,8 +41,12 @@ protected:
     virtual void resizeEvent(QResizeEvent * ev);
     virtual void mouseReleaseEvent(QMouseEvent *ev);
 
+protected Q_SLOTS:
+    void showConfigurationInterface(Plasma::Applet *applet);
+
 private:
     Plasma::Applet *m_applet;
+    QPointer<PlasmaQuick::ConfigView> m_configView;
 };
 
 #endif
