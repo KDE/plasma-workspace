@@ -41,6 +41,7 @@
 #include <KAuthorized>
 #include <KWindowSystem>
 #include <kdeclarative/kdeclarative.h>
+#include <kdeclarative/qmlobject.h>
 #include <KMessageBox>
 
 #include <KScreen/Config>
@@ -112,11 +113,11 @@ public:
     QMenu *addPanelsMenu;
     Plasma::Package lookNFeelPackage;
     QSet<KScreen::Output *> redundantOutputs;
+    QList<KDeclarative::QmlObject *> alternativesObjects;
 #if HAVE_KTEXTEDITOR
     QWeakPointer<InteractiveConsole> console;
 #endif
 
-    QPointer <AlternativesDialog> alternativesDialog;
     KScreen::Config *screenConfiguration;
     QTimer waitingPanelsTimer;
     QTimer appConfigSyncTimer;
@@ -449,17 +450,41 @@ void ShellCorona::screenInvariants() const
 
 void ShellCorona::showAlternativesForApplet(Plasma::Applet *applet)
 {
-    if (package().filePath("appletalternativesui").isEmpty()) {
+    const QString alternativesQML = package().filePath("appletalternativesui");
+    if (alternativesQML.isEmpty()) {
         return;
     }
 
-    if (!d->alternativesDialog) {
-        d->alternativesDialog = new AlternativesDialog(applet);
-    }
+    KDeclarative::QmlObject *qmlObj = new KDeclarative::QmlObject(this);
+    qmlObj->setInitializationDelayed(true);
+    qmlObj->setSource(QUrl::fromLocalFile(alternativesQML));
 
-    d->alternativesDialog->show();
+    AlternativesHelper *helper = new AlternativesHelper(applet, qmlObj);
+    qmlObj->engine()->rootContext()->setContextProperty("alternativesHelper", helper);
+
+    d->alternativesObjects << qmlObj;
+    qmlObj->completeInitialization();
+    connect(qmlObj->rootObject(), SIGNAL(visibleChanged(bool)),
+            this, SLOT(alternativesVisibilityChanged(bool)));
 }
 
+void ShellCorona::alternativesVisibilityChanged(bool visible)
+{
+    if (visible) {
+        return;
+    }
+
+    QObject *root = sender();
+
+    QMutableListIterator<KDeclarative::QmlObject *> it(d->alternativesObjects);
+    while (it.hasNext()) {
+        KDeclarative::QmlObject *obj = it.next();
+        if (obj->rootObject() == root) {
+            it.remove();
+            obj->deleteLater();
+        }
+    }
+}
 
 void ShellCorona::unload()
 {

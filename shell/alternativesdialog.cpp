@@ -23,51 +23,35 @@
 #include <QQmlEngine>
 #include <QQmlContext>
 
-#include <kdeclarative/qmlobject.h>
-#include <Plasma/Package>
 #include <Plasma/Containment>
-#include <Plasma/Corona>
 #include <Plasma/PluginLoader>
 
-AlternativesDialog::AlternativesDialog(Plasma::Applet *applet, QQuickItem *parent)
-    : PlasmaQuick::Dialog(parent),
+AlternativesHelper::AlternativesHelper(Plasma::Applet *applet, QObject *parent)
+    : QObject(parent),
       m_applet(applet)
 {
-    setVisualParent(applet->property("_plasma_graphicObject").value<QQuickItem *>());
-    connect(applet, &QObject::destroyed, this, &AlternativesDialog::close);
-    setLocation(applet->location());
-    setFlags(flags()|Qt::WindowStaysOnTopHint);
-    //We already have the proper shellpluginloader
-    Plasma::Package pkg;
-    if (applet && applet->containment() && applet->containment()->corona()) {
-        pkg = applet->containment()->corona()->package();
-    }
-    //TODO: use the proper package: we must be in the corona
-    pkg.setPath("org.kde.plasma.desktop");
-
-    m_qmlObj = new KDeclarative::QmlObject(this);
-    m_qmlObj->setInitializationDelayed(true);
-    m_qmlObj->setSource(QUrl::fromLocalFile(pkg.filePath("appletalternativesui")));
-    m_qmlObj->engine()->rootContext()->setContextProperty("alternativesDialog", this);
-    m_qmlObj->completeInitialization();
-    setMainItem(qobject_cast<QQuickItem *>(m_qmlObj->rootObject()));
 }
 
-AlternativesDialog::~AlternativesDialog()
+AlternativesHelper::~AlternativesHelper()
 {
 }
 
-QStringList AlternativesDialog::appletProvides() const
+QStringList AlternativesHelper::appletProvides() const
 {
     return m_applet->pluginInfo().property("X-Plasma-Provides").value<QStringList>();
 }
 
-QString AlternativesDialog::currentPlugin() const
+QString AlternativesHelper::currentPlugin() const
 {
     return m_applet->pluginInfo().pluginName();
 }
 
-void AlternativesDialog::loadAlternative(const QString &plugin)
+QQuickItem *AlternativesHelper::applet() const
+{
+    return m_applet->property("_plasma_graphicObject").value<QQuickItem *>();
+}
+
+void AlternativesHelper::loadAlternative(const QString &plugin)
 {
     if (plugin == m_applet->pluginInfo().pluginName() || m_applet->isContainment()) {
         return;
@@ -88,13 +72,6 @@ void AlternativesDialog::loadAlternative(const QString &plugin)
     QMetaObject::invokeMethod(contItem, "createApplet", Q_ARG(QString, plugin), Q_ARG(QVariantList, QVariantList()), Q_ARG(QPoint, appletItem->mapToItem(contItem, QPointF(0,0)).toPoint()));
 
     m_applet->destroy();
-}
-
-//To emulate Qt::WA_DeleteOnClose that QWindow doesn't have
-void AlternativesDialog::hideEvent(QHideEvent *ev)
-{
-    QQuickWindow::hideEvent(ev);
-    deleteLater();
 }
 
 #include "moc_alternativesdialog.cpp"
