@@ -9,7 +9,7 @@ add_subdirectory(recentdocuments)
 add_subdirectory(shell)
 # add_subdirectory(solid)
 add_subdirectory(webshortcuts)
-# add_subdirectory(windowedwidgets)
+add_subdirectory(windowedwidgets)
 #
 if(NOT WIN32)
 # add_subdirectory(powerdevil)
