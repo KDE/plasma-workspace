@@ -49,7 +49,7 @@
 
 #include "config-ktexteditor.h" // HAVE_KTEXTEDITOR
 
-#include "alternativesdialog.h"
+#include "alternativeshelper.h"
 #include "activity.h"
 #include "desktopview.h"
 #include "panelview.h"

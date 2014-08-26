@@ -18,7 +18,7 @@
  */
 
 
-#include "alternativesdialog.h"
+#include "alternativeshelper.h"
 
 #include <QQmlEngine>
 #include <QQmlContext>
@@ -74,5 +74,5 @@ void AlternativesHelper::loadAlternative(const QString &plugin)
     m_applet->destroy();
 }
 
-#include "moc_alternativesdialog.cpp"
+#include "moc_alternativeshelper.cpp"
 
