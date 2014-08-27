@@ -23,7 +23,6 @@
 
 #include <QDialog>
 #include <QPointer>
-#include <QScriptValue>
 
 #include <KIO/Job>
 

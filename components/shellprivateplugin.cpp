@@ -20,17 +20,19 @@
     THE SOFTWARE.
 */
 
-#include "widgetexplorerplugin.h"
+#include "shellprivateplugin.h"
 
 #include <QtQml>
 
-#include "widgetexplorer.h"
+#include "widgetexplorer/widgetexplorer.h"
+#include "interactiveconsole/interactiveconsole.h"
 #include <plasma/containment.h>
 
-void WidgetExplorerPlugin::registerTypes(const char *uri)
+void PlasmaShellPrivatePlugin::registerTypes(const char *uri)
 {
     Q_ASSERT(uri == QLatin1String("org.kde.plasma.private.shell"));
 
     qmlRegisterType<Plasma::Containment>();
     qmlRegisterType<WidgetExplorer>(uri, 2, 0, "WidgetExplorer");
+    qmlRegisterType<InteractiveConsole>(uri, 2, 0, "InteractiveConsoleWindow");
 }

@@ -982,18 +982,27 @@ void ShellCorona::showInteractiveConsole()
             return;
         }
 
+        qDebug() << "GOT OUR CONSOLE!" << consoleQML;
         d->interactiveConsole = new KDeclarative::QmlObject(this);
         d->interactiveConsole->setInitializationDelayed(true);
         d->interactiveConsole->setSource(QUrl::fromLocalFile(consoleQML));
-        d->interactiveConsole->completeInitialization();
-        connect(d->interactiveConsole->rootObject(), SIGNAL(visibleChanged(bool)),
-                this, SLOT(interactiveConsoleVisibilityChanged(bool)));
+
         QObject *engine = new WorkspaceScripting::ScriptEngine(this, d->interactiveConsole);
         d->interactiveConsole->engine()->rootContext()->setContextProperty("scriptEngine", engine);
+
+        d->interactiveConsole->completeInitialization();
+        if (d->interactiveConsole->rootObject()) {
+            connect(d->interactiveConsole->rootObject(), SIGNAL(visibleChanged(bool)),
+                    this, SLOT(interactiveConsoleVisibilityChanged(bool)));
+        }
     }
 
-    d->interactiveConsole->rootObject()->setProperty("mode", "Desktop");
-    d->interactiveConsole->rootObject()->setProperty("visible", true);
+    qDebug() << "Going in..." << d->interactiveConsole << d->interactiveConsole->rootObject();
+
+    if (d->interactiveConsole->rootObject()) {
+        d->interactiveConsole->rootObject()->setProperty("mode", "desktop");
+        d->interactiveConsole->rootObject()->setProperty("visible", true);
+    }
 }
 
 void ShellCorona::loadScriptInInteractiveConsole(const QString &script)
