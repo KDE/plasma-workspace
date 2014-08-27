@@ -50,7 +50,6 @@ public:
     static QStringList pendingUpdateScripts(ShellCorona *corona);
 
     ShellCorona *corona() const;
-    bool evaluateScript(const QString &script, const QString &path = QString());
     QScriptValue wrap(Plasma::Applet *w);
     virtual QScriptValue wrap(Plasma::Containment *c);
     QScriptValue wrap(Containment *c);
@@ -58,6 +57,9 @@ public:
 
     static bool isPanel(const Plasma::Containment *c);
     static ScriptEngine *envFor(QScriptEngine *engine);
+
+public Q_SLOTS:
+    bool evaluateScript(const QString &script, const QString &path = QString());
 
 Q_SIGNALS:
     void print(const QString &string);
