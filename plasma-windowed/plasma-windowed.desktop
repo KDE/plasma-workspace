@@ -8,5 +8,4 @@ Hidden=true
 Icon=plasma
 Type=Application
 X-DBUS-StartupType=Unique
-Categories=Qt;KDE;AudioVideo;
 InitialPreference=1

@@ -47,7 +47,6 @@ int main(int argc, char **argv)
     parser.setApplicationDescription(i18n("Plasma Windowed"));
     parser.addVersionOption();
     parser.addHelpOption();
-    parser.addVersionOption();
     parser.addPositionalArgument("applet", i18n("The applet to open."));
     parser.process(app);
 

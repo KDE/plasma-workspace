@@ -108,12 +108,11 @@ void PlasmaWindowedCorona::load()
 
     if (!found) {
         qDebug() << "Loading default layout";
-        createContainment("empty"); 
+        createContainment("empty");
         saveLayout("plasmawindowed-appletsrc");
     }
 
     for (auto c : containments()) {
-        qDebug() << "here we are!";
         if (c->containmentType() == Plasma::Types::DesktopContainment) {
             m_containment = c;
             QAction *removeAction = c->actions()->action("remove");
