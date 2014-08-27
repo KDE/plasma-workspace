@@ -157,6 +157,7 @@ private Q_SLOTS:
     void desktopContainmentDestroyed(QObject*);
     void showOpenGLNotCompatibleWarning();
     void alternativesVisibilityChanged(bool visible);
+    void interactiveConsoleVisibilityChanged(bool visible);
 
 private:
     KScreen::Output *findPrimaryOutput() const;

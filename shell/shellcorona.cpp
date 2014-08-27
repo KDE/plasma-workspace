@@ -59,9 +59,6 @@
 #include "plasmaquick/shellpluginloader.h"
 #include "shellmanager.h"
 #include "osd.h"
-#if HAVE_KTEXTEDITOR
-#include "interactiveconsole.h"
-#endif
 
 #include "plasmashelladaptor.h"
 
@@ -83,6 +80,7 @@ public:
           activityConsumer(new KActivities::Consumer(q)),
           addPanelAction(nullptr),
           addPanelsMenu(nullptr),
+          interactiveConsole(nullptr),
           screenConfiguration(nullptr),
           loading(false)
     {
@@ -114,9 +112,7 @@ public:
     Plasma::Package lookNFeelPackage;
     QSet<KScreen::Output *> redundantOutputs;
     QList<KDeclarative::QmlObject *> alternativesObjects;
-#if HAVE_KTEXTEDITOR
-    QWeakPointer<InteractiveConsole> console;
-#endif
+    KDeclarative::QmlObject *interactiveConsole;
 
     KScreen::Config *screenConfiguration;
     QTimer waitingPanelsTimer;
@@ -976,31 +972,43 @@ void ShellCorona::toggleDashboard()
 void ShellCorona::showInteractiveConsole()
 {
     if (KSharedConfig::openConfig()->isImmutable() || !KAuthorized::authorize("plasma-desktop/scripting_console")) {
+        delete d->interactiveConsole;
+        d->interactiveConsole = 0;
         return;
     }
 
-#if HAVE_KTEXTEDITOR
-    InteractiveConsole *console = d->console.data();
-    if (!console) {
-        d->console = console = new InteractiveConsole(this);
-    }
-    d->console.data()->setMode(InteractiveConsole::PlasmaConsole);
+    if (!d->interactiveConsole) {
+        const QString consoleQML = package().filePath("interactiveconsole");
+        if (consoleQML.isEmpty()) {
+            return;
+        }
 
-    KWindowSystem::setOnDesktop(console->winId(), KWindowSystem::currentDesktop());
-    console->show();
-    console->raise();
-    KWindowSystem::forceActiveWindow(console->winId());
-#endif
+        d->interactiveConsole = new KDeclarative::QmlObject(this);
+        d->interactiveConsole->setInitializationDelayed(true);
+        d->interactiveConsole->setSource(QUrl::fromLocalFile(consoleQML));
+        d->interactiveConsole->completeInitialization();
+        connect(d->interactiveConsole->rootObject(), SIGNAL(visibleChanged(bool)),
+                this, SLOT(interactiveConsoleVisibilityChanged(bool)));
+    }
+
+    d->interactiveConsole->rootObject()->setProperty("mode", "Desktop");
+    d->interactiveConsole->rootObject()->setProperty("visible", true);
 }
 
 void ShellCorona::loadScriptInInteractiveConsole(const QString &script)
 {
-#if HAVE_KTEXTEDITOR
     showInteractiveConsole();
-    if (d->console) {
-        d->console.data()->loadScript(script);
+    if (d->interactiveConsole) {
+        d->interactiveConsole->rootObject()->setProperty("script", script);
     }
-#endif
+}
+
+void ShellCorona::interactiveConsoleVisibilityChanged(bool visible)
+{
+    if (!visible) {
+        d->interactiveConsole->deleteLater();
+        d->interactiveConsole = nullptr;
+    }
 }
 
 void ShellCorona::checkActivities()
