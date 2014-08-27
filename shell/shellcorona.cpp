@@ -988,6 +988,8 @@ void ShellCorona::showInteractiveConsole()
         d->interactiveConsole->completeInitialization();
         connect(d->interactiveConsole->rootObject(), SIGNAL(visibleChanged(bool)),
                 this, SLOT(interactiveConsoleVisibilityChanged(bool)));
+        QObject *engine = new WorkspaceScripting::ScriptEngine(this, d->interactiveConsole);
+        d->interactiveConsole->engine()->rootContext()->setContextProperty("scriptEngine", engine);
     }
 
     d->interactiveConsole->rootObject()->setProperty("mode", "Desktop");
