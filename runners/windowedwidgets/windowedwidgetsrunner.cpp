@@ -21,13 +21,17 @@
 
 #include <QProcess>
 
-#include <KIcon>
+#include <QIcon>
+#include <QMimeData>
 
 #include <QDebug>
-#include <KLocale>
+#include <KLocalizedString>
 #include <KService>
 
 #include <Plasma/Applet>
+#include <Plasma/PluginLoader>
+
+K_EXPORT_PLASMA_RUNNER(windowedwidgets, WindowedWidgetsRunner)
 
 WindowedWidgetsRunner::WindowedWidgetsRunner(QObject *parent, const QVariantList &args)
     : Plasma::AbstractRunner(parent, args)
@@ -56,7 +60,7 @@ void WindowedWidgetsRunner::match(Plasma::RunnerContext &context)
 
    QList<Plasma::QueryMatch> matches;
 
-    foreach (const KPluginInfo &info, Plasma::Applet::listAppletInfo()) {
+    foreach (const KPluginInfo &info, Plasma::PluginLoader::self()->listAppletInfo(QString())) {
         KService::Ptr service = info.service();
 
         if ((service->name().contains(term, Qt::CaseInsensitive) ||
@@ -84,7 +88,7 @@ void WindowedWidgetsRunner::match(Plasma::RunnerContext &context)
         return;
     }
 
-    context.addMatches(term, matches);
+    context.addMatches(matches);
 }
 
 void WindowedWidgetsRunner::run(const Plasma::RunnerContext &context, const Plasma::QueryMatch &match)
@@ -92,7 +96,7 @@ void WindowedWidgetsRunner::run(const Plasma::RunnerContext &context, const Plas
     Q_UNUSED(context);
     KService::Ptr service = KService::serviceByStorageId(match.data().toString());
     if (service) {
-        QProcess::startDetached("plasma-windowed", QStringList() << service->property("X-KDE-PluginInfo-Name", QVariant::String).toString());
+        QProcess::startDetached("plasmawindowed", QStringList() << service->property("X-KDE-PluginInfo-Name", QVariant::String).toString());
     }
 }
 
@@ -110,13 +114,13 @@ void WindowedWidgetsRunner::setupMatch(const KService::Ptr &service, Plasma::Que
     }
 
     if (!service->icon().isEmpty()) {
-        match.setIcon(KIcon(service->icon()));
+        match.setIcon(QIcon::fromTheme(service->icon()));
     }
 }
 
 QMimeData * WindowedWidgetsRunner::mimeDataForMatch(const Plasma::QueryMatch &match)
 {
-    KService::Ptr service = KService::serviceByStorageId(match->data().toString());
+    KService::Ptr service = KService::serviceByStorageId(match.data().toString());
     if (service) {
 
         QMimeData *data = new QMimeData();

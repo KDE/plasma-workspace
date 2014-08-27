@@ -23,8 +23,7 @@
 
 #include <KService>
 
-#include <Plasma/AbstractRunner>
-
+#include <krunner/abstractrunner.h>
 
 /**
  * This class looks for matches in the set of .desktop files installed by
@@ -51,8 +50,6 @@ protected Q_SLOTS:
 protected:
     void setupMatch(const KService::Ptr &service, Plasma::QueryMatch &action);
 };
-
-K_EXPORT_PLASMA_RUNNER(windowedwidgets, WindowedWidgetsRunner)
 
 #endif
 
