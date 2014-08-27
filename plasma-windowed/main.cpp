@@ -70,5 +70,7 @@ int main(int argc, char **argv)
 
     QObject::connect(&service, &KDBusService::activateRequested, corona, &PlasmaWindowedCorona::activateRequested);
 
-    return app.exec();
+    const int ret = app.exec();
+    delete corona;
+    return ret;
 }

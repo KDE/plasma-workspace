@@ -36,7 +36,8 @@
 #include "plasmawindowedview.h"
 
 PlasmaWindowedView::PlasmaWindowedView(QWindow *parent)
-    : QQuickView(parent)
+    : QQuickView(parent),
+      m_applet(0)
 {
     engine()->rootContext()->setContextProperty("root", contentItem());
     QQmlExpression *expr = new QQmlExpression(engine()->rootContext(), contentItem(), "Qt.createQmlObject('import QtQuick 2.0; import org.kde.plasma.core 2.0; Rectangle {color: theme.backgroundColor; anchors.fill:parent}', root, \"\");");

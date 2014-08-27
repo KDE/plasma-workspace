@@ -42,10 +42,21 @@ PlasmaWindowedCorona::PlasmaWindowedCorona(QObject *parent)
 
 void PlasmaWindowedCorona::loadApplet(const QString &applet, const QVariantList &arguments)
 {
+    if (containments().isEmpty()) {
+        return;
+    }
+
+    Plasma::Containment *cont = containments().first();
+
+    //forbid more instances per applet (todo: activate the correpsponding already loaded applet)
+    for (Plasma::Applet *a : cont->applets()) {
+        if (a->pluginInfo().pluginName() == applet) {
+            return;
+        }
+    }
     PlasmaWindowedView *v = new PlasmaWindowedView();
     v->show();
 
-    Plasma::Containment *cont = containments().first();
     KConfigGroup appletsGroup(KSharedConfig::openConfig(), "Applets");
     QString plugin;
     for (const QString &group : appletsGroup.groupList()) {
