@@ -36,7 +36,7 @@ PlasmaComponents.ListItem {
     width: parent.width - units.gridUnit * 2
     height: Math.max(label.height, toolButtonsLayout.implicitHeight) + 2 * units.smallSpacing
 
-   x: -listMargins.left
+    x: -listMargins.left
 
     MouseArea {
         anchors.fill: parent
@@ -166,7 +166,7 @@ PlasmaComponents.ListItem {
                     property int additionalItems: DisplayRole.split(" ").length - maximumNumberOfPreviews
                     visible: additionalItems > 0
                     opacity: 0.6
-                    text: i18n("+%1", additionalItems)
+                    text: i18nc("Indicator that there are more urls in the clipboard than previews shown", "+%1", additionalItems)
                     anchors {
                         left: previewList.right
                         right: parent.right
