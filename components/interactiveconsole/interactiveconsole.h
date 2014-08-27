@@ -52,7 +52,7 @@ class ScriptEngine;
 class InteractiveConsole : public QDialog
 {
     Q_OBJECT
-    Q_PROPERTY(QObject *scriptInterface READ scriptInterface WRITE setScriptInterface NOTIFY scriptInterfaceChanged)
+    Q_PROPERTY(QObject *scriptEngine READ scriptEngine WRITE setScriptInterface NOTIFY scriptEngineChanged)
     Q_PROPERTY(QString mode READ mode WRITE setMode NOTIFY modeChanged)
 
 public:
@@ -69,10 +69,10 @@ public:
     QString mode() const;
 
     void setScriptInterface(QObject *obj);
-    QObject *scriptInterface() const;
+    QObject *scriptEngine() const;
 
 Q_SIGNALS:
-    void scriptInterfaceChanged();
+    void scriptEngineChanged();
     void modeChanged();
 
 protected:
@@ -122,7 +122,7 @@ private:
     QPointer<KIO::Job> m_job;
     bool m_closeWhenCompleted;
     ConsoleMode m_mode;
-    QPointer<QObject> m_interface;
+    QPointer<QObject> m_scriptEngine;
 };
 
 #endif

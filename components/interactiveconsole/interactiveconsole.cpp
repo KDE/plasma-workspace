@@ -232,21 +232,21 @@ QString InteractiveConsole::mode() const
 
 void InteractiveConsole::setScriptInterface(QObject *obj)
 {
-    if (m_interface != obj) {
-        if (m_interface) {
-            disconnect(m_interface, 0, this, 0);
+    if (m_scriptEngine != obj) {
+        if (m_scriptEngine) {
+            disconnect(m_scriptEngine, 0, this, 0);
         }
 
-        m_interface = obj;
-        connect(m_interface, SIGNAL(print(QString)), this, SLOT(print(QString)));
-        connect(m_interface, SIGNAL(printError(QString)), this, SLOT(print(QString)));
-        emit scriptInterfaceChanged();
+        m_scriptEngine = obj;
+        connect(m_scriptEngine, SIGNAL(print(QString)), this, SLOT(print(QString)));
+        connect(m_scriptEngine, SIGNAL(printError(QString)), this, SLOT(print(QString)));
+        emit scriptEngineChanged();
     }
 }
 
-QObject *InteractiveConsole::scriptInterface() const
+QObject *InteractiveConsole::scriptEngine() const
 {
-    return m_interface;
+    return m_scriptEngine;
 }
 
 void InteractiveConsole::loadScript(const QString &script)
@@ -552,9 +552,9 @@ void InteractiveConsole::evaluateScript()
     t.start();
 
     if (m_mode == PlasmaConsole) {
-        if (m_interface) {
+        if (m_scriptEngine) {
             const QString script = m_editorPart ? m_editorPart->text() : m_editor->toPlainText();
-            QMetaObject::invokeMethod(m_interface, "evaluateScript", Q_ARG(QString, script));
+            QMetaObject::invokeMethod(m_scriptEngine, "evaluateScript", Q_ARG(QString, script));
         }
     } else if (m_mode == KWinConsole) {
         QDBusMessage message = QDBusMessage::createMethodCall(s_kwinService, "/Scripting", QString(), "loadScript");
