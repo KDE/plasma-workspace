@@ -83,7 +83,8 @@ void PlasmaWindowedCorona::loadApplet(const QString &applet, const QVariantList 
     //will cause applets to be saved in palsmawindowedrc
     //so applets will only be created on demand
     KConfigGroup cg2 = a->config();
-    containments().first()->addApplet(a);
+    cont->addApplet(a);
+
     v->setApplet(a);
 }
 

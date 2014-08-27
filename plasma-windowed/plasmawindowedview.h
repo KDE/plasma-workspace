@@ -45,9 +45,15 @@ protected:
 
 protected Q_SLOTS:
     void showConfigurationInterface(Plasma::Applet *applet);
+    void minimumWidthChanged();
+    void minimumHeightChanged();
+    void maximumWidthChanged();
+    void maximumHeightChanged();
+
 
 private:
     Plasma::Applet *m_applet;
+    QPointer<QObject> m_layout;
     QPointer<PlasmaQuick::ConfigView> m_configView;
 };
 

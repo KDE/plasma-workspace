@@ -70,6 +70,21 @@ void PlasmaWindowedView::setApplet(Plasma::Applet *applet)
     setTitle(applet->title());
     setIcon(QIcon::fromTheme(applet->icon()));
 
+    foreach (QObject *child, i->children()) {
+        //find for the needed property of Layout: minimum/maximum/preferred sizes and fillWidth/fillHeight
+        if (child->property("minimumWidth").isValid() && child->property("minimumHeight").isValid() &&
+                child->property("preferredWidth").isValid() && child->property("preferredHeight").isValid() &&
+                child->property("maximumWidth").isValid() && child->property("maximumHeight").isValid() &&
+                child->property("fillWidth").isValid() && child->property("fillHeight").isValid()
+           ) {
+            m_layout = child;
+        }
+    }
+
+    if (m_layout) {
+        connect(m_layout, SIGNAL(minimumWidthChanged()), this, SLOT(minimumWidthChanged()));
+        connect(m_layout, SIGNAL(minimumHeightChanged()), this, SLOT(minimumHeightChanged()));
+    }
     QObject::connect(applet->containment(), &Plasma::Containment::configureRequested,
                      this, &PlasmaWindowedView::showConfigurationInterface);
 }
@@ -155,6 +170,42 @@ void PlasmaWindowedView::showConfigurationInterface(Plasma::Applet *applet)
 
     m_configView->init();
     m_configView->show();
+}
+
+void PlasmaWindowedView::minimumWidthChanged()
+{
+    if (!m_layout) {
+        return;
+    }
+
+    setMinimumWidth(m_layout->property("minimumWidth").toInt());
+}
+
+void PlasmaWindowedView::minimumHeightChanged()
+{
+    if (!m_layout) {
+        return;
+    }
+
+    setMinimumHeight(m_layout->property("minimumHeight").toInt());
+}
+
+void PlasmaWindowedView::maximumWidthChanged()
+{
+    if (!m_layout) {
+        return;
+    }
+
+    setMaximumWidth(m_layout->property("maximumWidth").toInt());
+}
+
+void PlasmaWindowedView::maximumHeightChanged()
+{
+    if (!m_layout) {
+        return;
+    }
+
+    setMaximumHeight(m_layout->property("maximumHeight").toInt());
 }
 
 #include "plasmawindowedview.moc"
