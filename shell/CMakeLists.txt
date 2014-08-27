@@ -17,11 +17,8 @@ find_package(KF5CoreAddons REQUIRED)
 find_package(KF5Crash REQUIRED)
 find_package(KF5Solid REQUIRED)
 find_package(KF5Activities REQUIRED)
-find_package(KF5TextEditor) # not part of KF5.0
 find_package(KF5DBusAddons ${KF5_MIN_VERSION} REQUIRED)
 find_package(KF5Declarative ${KF5_MIN_VERSION} REQUIRED)
-
-set(HAVE_KTEXTEDITOR ${KF5TextEditor_FOUND})
 
 configure_file(config-ktexteditor.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-ktexteditor.h )
 
@@ -64,11 +61,6 @@ set (plasma_shell_SRCS
 set(krunner_xml ${plasma-workspace_SOURCE_DIR}/krunner/dbus/org.kde.krunner.App.xml)
 qt5_add_dbus_interface(plasma_shell_SRCS ${krunner_xml} krunner_interface)
 
-if (KF5TextEditor_FOUND)
-   set (plasma_shell_SRCS ${plasma_shell_SRCS}
-       interactiveconsole.cpp
-   )
-endif()
 add_executable(plasmashell
     ${plasma_shell_SRCS}
 )
@@ -93,9 +85,6 @@ target_link_libraries(plasmashell
  KF5::Declarative
  KF5::XmlGui
 )
-if (TARGET KF5::TextEditor)
- target_link_libraries(plasmashell KF5::TextEditor)
-endif()
 target_include_directories(plasmashell PRIVATE "${CMAKE_BINARY_DIR}")
 
 if(HAVE_X11)
