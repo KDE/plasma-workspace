@@ -57,7 +57,16 @@ int main(int argc, char **argv)
     Plasma::PluginLoader::setPluginLoader(new ShellPluginLoader);
 
     PlasmaWindowedCorona *corona = new PlasmaWindowedCorona();
-    corona->loadApplet(parser.positionalArguments().first());
+
+    QVariantList args;
+    QStringList::const_iterator constIterator;
+    constIterator = parser.positionalArguments().constBegin();
+    ++constIterator;
+    for (; constIterator != parser.positionalArguments().constEnd();
+           ++constIterator) {
+        args << (*constIterator);
+    }
+    corona->loadApplet(parser.positionalArguments().first(), args);
 
     QObject::connect(&service, &KDBusService::activateRequested, corona, &PlasmaWindowedCorona::activateRequested);
 

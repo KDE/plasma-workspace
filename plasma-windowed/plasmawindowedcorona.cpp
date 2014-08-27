@@ -40,7 +40,7 @@ PlasmaWindowedCorona::PlasmaWindowedCorona(QObject *parent)
     load();
 }
 
-void PlasmaWindowedCorona::loadApplet(const QString &applet)
+void PlasmaWindowedCorona::loadApplet(const QString &applet, const QVariantList &arguments)
 {
     PlasmaWindowedView *v = new PlasmaWindowedView();
     v->show();
@@ -53,7 +53,7 @@ void PlasmaWindowedCorona::loadApplet(const QString &applet)
         plugin = cg.readEntry("plugin", QString());
 
         if (plugin == applet) {
-            Plasma::Applet *a = Plasma::PluginLoader::self()->loadApplet(applet, group.toInt());
+            Plasma::Applet *a = Plasma::PluginLoader::self()->loadApplet(applet, group.toInt(), arguments);
             a->restore(cg);
 
             //Access a->config() before adding to containment
@@ -67,7 +67,7 @@ void PlasmaWindowedCorona::loadApplet(const QString &applet)
         }
     }
 
-    Plasma::Applet *a = Plasma::PluginLoader::self()->loadApplet(applet, 0);
+    Plasma::Applet *a = Plasma::PluginLoader::self()->loadApplet(applet, 0, arguments);
     //Access a->config() before adding to containment
     //will cause applets to be saved in palsmawindowedrc
     //so applets will only be created on demand
@@ -83,7 +83,16 @@ void PlasmaWindowedCorona::activateRequested(const QStringList &arguments, const
         return;
     }
 
-    loadApplet(arguments[1]);
+    QVariantList args;
+    QStringList::const_iterator constIterator;
+    constIterator = arguments.constBegin();
+    ++constIterator;
+    for (; constIterator != arguments.constEnd();
+           ++constIterator) {
+        args << (*constIterator);
+    }
+
+    loadApplet(arguments[1], args);
 }
 
 QRect PlasmaWindowedCorona::screenGeometry(int id) const
