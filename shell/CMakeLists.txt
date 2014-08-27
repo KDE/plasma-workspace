@@ -29,7 +29,6 @@ set(scripting_SRC
     scripting/applet.cpp
     scripting/containment.cpp
     scripting/configgroup.cpp
-    scripting/desktopscriptengine.cpp
     scripting/i18n.cpp
     scripting/panel.cpp
     scripting/rect.cpp

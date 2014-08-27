@@ -47,7 +47,7 @@
 #include "containment.h"
 #include "configgroup.h"
 #include "i18n.h"
-//#include "packages.h"
+#include "panel.h"
 #include "widget.h"
 #include "../activity.h"
 #include "../shellcorona.h"
@@ -273,7 +273,7 @@ QScriptValue ScriptEngine::wrap(Plasma::Applet *w)
 
 QScriptValue ScriptEngine::wrap(Plasma::Containment *c)
 {
-    Containment *wrapper = new Containment(c);
+    Containment *wrapper = isPanel(c) ? new Panel(c) : new Containment(c);
     return wrap(wrapper);
 }
 

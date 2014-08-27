@@ -53,7 +53,7 @@
 #include "activity.h"
 #include "desktopview.h"
 #include "panelview.h"
-#include "scripting/desktopscriptengine.h"
+#include "scripting/scriptengine.h"
 #include "plasmaquick/configview.h"
 #include "plasmaquick/shellpluginloader.h"
 #include "shellmanager.h"
@@ -508,7 +508,7 @@ void ShellCorona::loadDefaultLayout()
         QString code = file.readAll();
         qDebug() << "evaluating startup script:" << script;
 
-        WorkspaceScripting::DesktopScriptEngine scriptEngine(this, true);
+        WorkspaceScripting::ScriptEngine scriptEngine(this);
 
         connect(&scriptEngine, &WorkspaceScripting::ScriptEngine::printError, this,
                 [](const QString &msg) {
@@ -524,7 +524,7 @@ void ShellCorona::loadDefaultLayout()
 
 void ShellCorona::processUpdateScripts()
 {
-    WorkspaceScripting::DesktopScriptEngine scriptEngine(this, true);
+    WorkspaceScripting::ScriptEngine scriptEngine(this);
 
     connect(&scriptEngine, &WorkspaceScripting::ScriptEngine::printError, this,
             [](const QString &msg) {
@@ -1278,7 +1278,7 @@ void ShellCorona::addPanel(QAction *action)
 {
     const QString plugin = action->data().toString();
     if (plugin.startsWith("plasma-desktop-template:")) {
-        WorkspaceScripting::DesktopScriptEngine scriptEngine(this, true);
+        WorkspaceScripting::ScriptEngine scriptEngine(this);
 
         connect(&scriptEngine, &WorkspaceScripting::ScriptEngine::printError, this,
                 [](const QString &msg) {
