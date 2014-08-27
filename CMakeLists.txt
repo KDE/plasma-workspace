@@ -20,6 +20,7 @@ find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS
 find_package(KF5 REQUIRED COMPONENTS PlasmaQuick)
 find_package(KF5 REQUIRED COMPONENTS SysGuard)
 find_package(KF5 REQUIRED COMPONENTS Screen)
+find_package(KF5TextEditor)
 find_package(KWinDBusInterface CONFIG REQUIRED)
 
 include(KDEInstallDirs)

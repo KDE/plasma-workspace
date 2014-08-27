@@ -20,27 +20,28 @@
 
 #include "interactiveconsole.h"
 
+#include <QAction>
 #include <QDateTime>
 #include <QDBusConnection>
 #include <QDBusMessage>
 #include <QFile>
+#include <QFileDialog>
 #include <QHBoxLayout>
 #include <QLabel>
+#include <QMenu>
 #include <QSplitter>
 #include <QToolButton>
 #include <QVBoxLayout>
 #include <QStandardPaths>
+#include <QTextBrowser>
 #include <QIcon>
 
-#include <QFileDialog>
-#include <QAction>
-#include <KShell>
-#include <KMessageBox>
 #include <klocalizedstring.h>
-#include <QMenu>
+#include <KSharedConfig>
+#include <KMessageBox>
 #include <KServiceTypeTrader>
+#include <KShell>
 #include <KStandardAction>
-#include <QTextBrowser>
 #include <KTextEdit>
 #include <KTextEditor/ConfigInterface>
 #include <KTextEditor/Document>
@@ -48,19 +49,15 @@
 #include <KToolBar>
 
 #include <Plasma/Package>
-
-#include "scripting/desktopscriptengine.h"
-#include "plasmaquick/shellpluginloader.h"
-#include "shellcorona.h"
+#include <Plasma/PluginLoader>
 
 //TODO:
 // interative help?
 static const QString s_autosaveFileName("interactiveconsoleautosave.js");
 static const QString s_kwinService = QStringLiteral("org.kde.KWin");
 
-InteractiveConsole::InteractiveConsole(ShellCorona *corona, QWidget *parent)
+InteractiveConsole::InteractiveConsole(QWidget *parent)
     : QDialog(parent),
-      m_corona(corona),
       m_splitter(new QSplitter(Qt::Vertical, this)),
       m_editorPart(0),
       m_editor(0),
@@ -113,7 +110,7 @@ InteractiveConsole::InteractiveConsole(ShellCorona *corona, QWidget *parent)
     m_plasmaAction->setCheckable(true);
     m_kwinAction->setCheckable(true);
     m_plasmaAction->setChecked(true);
-    connect(modeGroup, SIGNAL(triggered(QAction*)), this, SLOT(modeChanged()));
+    connect(modeGroup, SIGNAL(triggered(QAction*)), this, SLOT(modeSelectionChanged()));
 
     KToolBar *toolBar = new KToolBar(this, true, false);
     toolBar->setToolButtonStyle(Qt::ToolButtonTextBesideIcon);
@@ -204,26 +201,52 @@ InteractiveConsole::~InteractiveConsole()
     cg.writeEntry("SplitterState", m_splitter->saveState());
 }
 
-void InteractiveConsole::setMode(ConsoleMode mode)
+void InteractiveConsole::setMode(const QString &mode)
 {
-    m_mode = mode;
-    switch (mode) {
-    case PlasmaConsole:
+    if (mode.toLower() == "desktop") {
         m_plasmaAction->setChecked(true);
-        break;
-    case KWinConsole:
+    } else if (mode.toLower() == "windowmanager") {
         m_kwinAction->setChecked(true);
-        break;
     }
 }
 
-void InteractiveConsole::modeChanged()
+void InteractiveConsole::modeSelectionChanged()
 {
     if (m_plasmaAction->isChecked()) {
         m_mode = PlasmaConsole;
     } else if (m_kwinAction->isChecked()) {
         m_mode = KWinConsole;
     }
+
+    emit modeChanged();
+}
+
+QString InteractiveConsole::mode() const
+{
+    if (m_mode == KWinConsole) {
+        return "windowmanager";
+    }
+
+    return "desktop";
+}
+
+void InteractiveConsole::setScriptInterface(QObject *obj)
+{
+    if (m_interface != obj) {
+        if (m_interface) {
+            disconnect(m_interface, 0, this, 0);
+        }
+
+        m_interface = obj;
+        connect(m_interface, SIGNAL(print(QString)), this, SLOT(print(QString)));
+        connect(m_interface, SIGNAL(printError(QString)), this, SLOT(print(QString)));
+        emit scriptInterfaceChanged();
+    }
+}
+
+QObject *InteractiveConsole::scriptInterface() const
+{
+    return m_interface;
 }
 
 void InteractiveConsole::loadScript(const QString &script)
@@ -354,9 +377,9 @@ void InteractiveConsole::populateTemplatesMenu()
     }
 
     QMapIterator<QString, KService::Ptr> it(sorted);
-    
-    Plasma::Package package = ShellPluginLoader::self()->loadPackage("Plasma/LayoutTemplate");
-    
+
+    Plasma::Package package = Plasma::PluginLoader::self()->loadPackage("Plasma/LayoutTemplate");
+
     while (it.hasNext()) {
         it.next();
         KPluginInfo info(it.value());
@@ -375,7 +398,7 @@ void InteractiveConsole::populateTemplatesMenu()
 
 void InteractiveConsole::loadTemplate(QAction *action)
 {
-    Plasma::Package package = ShellPluginLoader::self()->loadPackage("Plasma/LayoutTemplate");
+    Plasma::Package package = Plasma::PluginLoader::self()->loadPackage("Plasma/LayoutTemplate");
 
     const QString pluginName = action->data().toString();
     const QString path = QStandardPaths::locate(QStandardPaths::GenericDataLocation
@@ -529,11 +552,10 @@ void InteractiveConsole::evaluateScript()
     t.start();
 
     if (m_mode == PlasmaConsole) {
-        WorkspaceScripting::DesktopScriptEngine scriptEngine(m_corona, false, this);
-        connect(&scriptEngine, SIGNAL(print(QString)), this, SLOT(print(QString)));
-        connect(&scriptEngine, SIGNAL(printError(QString)), this, SLOT(print(QString)));
-        connect(&scriptEngine, SIGNAL(createPendingPanelViews()), m_corona, SLOT(createWaitingPanels()));
-        scriptEngine.evaluateScript(m_editorPart ? m_editorPart->text() : m_editor->toPlainText());
+        if (m_interface) {
+            const QString script = m_editorPart ? m_editorPart->text() : m_editor->toPlainText();
+            QMetaObject::invokeMethod(m_interface, "evaluateScript", Q_ARG(QString, script));
+        }
     } else if (m_mode == KWinConsole) {
         QDBusMessage message = QDBusMessage::createMethodCall(s_kwinService, "/Scripting", QString(), "loadScript");
         QList<QVariant> arguments;

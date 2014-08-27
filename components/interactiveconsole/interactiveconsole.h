@@ -21,10 +21,9 @@
 #ifndef INTERACTIVECONSOLE
 #define INTERACTIVECONSOLE
 
-#include <QWeakPointer>
-#include <QScriptValue>
-
 #include <QDialog>
+#include <QPointer>
+#include <QScriptValue>
 
 #include <KIO/Job>
 
@@ -53,9 +52,11 @@ class ScriptEngine;
 class InteractiveConsole : public QDialog
 {
     Q_OBJECT
+    Q_PROPERTY(QObject *scriptInterface READ scriptInterface WRITE setScriptInterface NOTIFY scriptInterfaceChanged)
+    Q_PROPERTY(QString mode READ mode WRITE setMode NOTIFY modeChanged)
 
 public:
-    InteractiveConsole(ShellCorona *corona, QWidget *parent = 0);
+    InteractiveConsole(QWidget *parent = 0);
     ~InteractiveConsole();
 
     void loadScript(const QString &path);
@@ -63,7 +64,16 @@ public:
         PlasmaConsole,
         KWinConsole
     };
-    void setMode(ConsoleMode mode);
+
+    void setMode(const QString &mode);
+    QString mode() const;
+
+    void setScriptInterface(QObject *obj);
+    QObject *scriptInterface() const;
+
+Q_SIGNALS:
+    void scriptInterfaceChanged();
+    void modeChanged();
 
 protected:
     void showEvent(QShowEvent *);
@@ -89,7 +99,7 @@ private Q_SLOTS:
     void populateTemplatesMenu();
     void loadTemplate(QAction *);
     void useTemplate(QAction *);
-    void modeChanged();
+    void modeSelectionChanged();
 
 private:
     void onClose();
@@ -109,9 +119,10 @@ private:
     QMenu *m_snippetsMenu;
 
     QFileDialog *m_fileDialog;
-    QWeakPointer<KIO::Job> m_job;
+    QPointer<KIO::Job> m_job;
     bool m_closeWhenCompleted;
     ConsoleMode m_mode;
+    QPointer<QObject> m_interface;
 };
 
 #endif
