@@ -276,6 +276,8 @@ void InteractiveConsole::showEvent(QShowEvent *)
     } else {
         m_editor->setFocus();
     }
+
+    emit visibilityChanged();
 }
 
 void InteractiveConsole::closeEvent(QCloseEvent *event)
@@ -296,6 +298,7 @@ void InteractiveConsole::onClose()
     const QString path = QStandardPaths::writableLocation(QStandardPaths::DataLocation) + "/" + s_autosaveFileName;
     m_closeWhenCompleted = true;
     saveScript(QUrl::fromLocalFile(path));
+    emit visibilityChanged();
 }
 
 void InteractiveConsole::print(const QString &string)

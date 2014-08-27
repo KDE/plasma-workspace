@@ -53,6 +53,7 @@ class InteractiveConsole : public QDialog
     Q_OBJECT
     Q_PROPERTY(QObject *scriptEngine READ scriptEngine WRITE setScriptInterface NOTIFY scriptEngineChanged)
     Q_PROPERTY(QString mode READ mode WRITE setMode NOTIFY modeChanged)
+    Q_PROPERTY(bool visible READ isVisible WRITE setVisible NOTIFY visibilityChanged)
 
 public:
     InteractiveConsole(QWidget *parent = 0);
@@ -75,6 +76,7 @@ public Q_SLOTS:
 Q_SIGNALS:
     void scriptEngineChanged();
     void modeChanged();
+    void visibilityChanged();
 
 protected:
     void showEvent(QShowEvent *);
