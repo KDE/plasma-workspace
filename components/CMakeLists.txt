@@ -1,1 +1,1 @@
-install(DIRECTORY . DESTINATION ${QML_INSTALL_DIR}/org/kde/plasma/workspace/components)
+install(DIRECTORY qml/ DESTINATION ${QML_INSTALL_DIR}/org/kde/plasma/workspace/components)
