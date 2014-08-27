@@ -59,7 +59,6 @@ public:
     InteractiveConsole(QWidget *parent = 0);
     ~InteractiveConsole();
 
-    void loadScript(const QString &path);
     enum ConsoleMode {
         PlasmaConsole,
         KWinConsole
@@ -70,6 +69,9 @@ public:
 
     void setScriptInterface(QObject *obj);
     QObject *scriptEngine() const;
+
+public Q_SLOTS:
+    void loadScript(const QString &path);
 
 Q_SIGNALS:
     void scriptEngineChanged();
