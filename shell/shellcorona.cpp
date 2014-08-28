@@ -982,7 +982,6 @@ void ShellCorona::showInteractiveConsole()
             return;
         }
 
-        qDebug() << "GOT OUR CONSOLE!" << consoleQML;
         d->interactiveConsole = new KDeclarative::QmlObject(this);
         d->interactiveConsole->setInitializationDelayed(true);
         d->interactiveConsole->setSource(QUrl::fromLocalFile(consoleQML));
@@ -996,8 +995,6 @@ void ShellCorona::showInteractiveConsole()
                     this, SLOT(interactiveConsoleVisibilityChanged(bool)));
         }
     }
-
-    qDebug() << "Going in..." << d->interactiveConsole << d->interactiveConsole->rootObject();
 
     if (d->interactiveConsole->rootObject()) {
         d->interactiveConsole->rootObject()->setProperty("mode", "desktop");
