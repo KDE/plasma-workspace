@@ -22,6 +22,7 @@ Name[uk]=Буфер обміну
 Name[x-test]=xxClipboardxx
 Comment=Provides access to the clipboard history.
 Comment[ca]=Proporciona accés a l'historial del porta-retalls.
+Comment[cs]=Poskytuje přístup k historii schránky.
 Comment[en_GB]=Provides access to the clipboard history.
 Comment[es]=Proporciona acceso al historial del portapapeles.
 Comment[fi]=Tarjoaa pääsyn leikepöydän historiaan.
