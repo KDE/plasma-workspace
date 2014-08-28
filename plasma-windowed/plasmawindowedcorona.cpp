@@ -65,6 +65,11 @@ void PlasmaWindowedCorona::loadApplet(const QString &applet, const QVariantList 
 
         if (plugin == applet) {
             Plasma::Applet *a = Plasma::PluginLoader::self()->loadApplet(applet, group.toInt(), arguments);
+            if (!a) {
+                qWarning() << "Unable to load applet" << applet << "with arguments" <<arguments;
+                v->deleteLater();
+                return;
+            }
             a->restore(cg);
 
             //Access a->config() before adding to containment
@@ -79,6 +84,12 @@ void PlasmaWindowedCorona::loadApplet(const QString &applet, const QVariantList 
     }
 
     Plasma::Applet *a = Plasma::PluginLoader::self()->loadApplet(applet, 0, arguments);
+    if (!a) {
+        qWarning() << "Unable to load applet" << applet << "with arguments" <<arguments;
+        v->deleteLater();
+        return;
+    }
+
     //Access a->config() before adding to containment
     //will cause applets to be saved in palsmawindowedrc
     //so applets will only be created on demand
