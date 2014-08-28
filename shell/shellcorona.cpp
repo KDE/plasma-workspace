@@ -70,42 +70,6 @@
 
 static const int s_configSyncDelay = 10000; // 10 seconds
 
-static QScreen *outputToScreen(KScreen::Output *output)
-{
-    if (!output) {
-        return nullptr;
-    }
-
-    foreach(QScreen *screen, QGuiApplication::screens()) {
-        if (screen->name() == output->name()) {
-            return screen;
-        }
-    }
-
-    return nullptr;
-}
-
-static KScreen::Output *screenToOutput(QScreen* screen, KScreen::Config* config)
-{
-    foreach(KScreen::Output* output, config->connectedOutputs()) {
-        if (screen->name() == output->name()) {
-            return output;
-        }
-    }
-
-    return nullptr;
-}
-
-KScreen::Output* ShellCorona::findPrimaryOutput() const
-{
-    foreach (KScreen::Output* output, m_screenConfiguration->connectedOutputs()) {
-        if (output->isPrimary())
-            return output;
-    }
-
-    return nullptr;
-}
-
 ShellCorona::ShellCorona(QObject *parent)
     : Plasma::Corona(parent),
       m_activityController(new KActivities::Controller(this)),
@@ -380,7 +344,7 @@ void ShellCorona::screenInvariants() const
     foreach (const DesktopView *view, m_views) {
         QScreen *screen = view->screen();
         Q_ASSERT(!screens.contains(screen));
-        Q_ASSERT(!m_redundantOutputs.contains(screenToOutput(screen, m_screenConfiguration)));
+        Q_ASSERT(!m_redundantOutputs.contains(screenToOutput(screen)));
         Q_ASSERT(view->fillScreen() || ShellManager::s_forceWindowed);
 //         commented out because a different part of the code-base is responsible for this
 //         and sometimes is not yet called here.
@@ -746,7 +710,7 @@ void ShellCorona::addOutput(KScreen::Output *output)
 
     int insertPosition = 0;
     foreach (DesktopView *view, m_views) {
-        KScreen::Output *out = screenToOutput(view->screen(), m_screenConfiguration);
+        KScreen::Output *out = screenToOutput(view->screen());
         if (outputLess(output, out)) {
             break;
         }
@@ -786,6 +750,42 @@ void ShellCorona::addOutput(KScreen::Output *output)
     emit availableScreenRegionChanged();
 
     CHECK_SCREEN_INVARIANTS
+}
+
+QScreen *ShellCorona::outputToScreen(KScreen::Output *output) const
+{
+    if (!output) {
+        return nullptr;
+    }
+
+    foreach (QScreen *screen, QGuiApplication::screens()) {
+        if (screen->name() == output->name()) {
+            return screen;
+        }
+    }
+
+    return nullptr;
+}
+
+KScreen::Output *ShellCorona::screenToOutput(QScreen *screen) const
+{
+    foreach (KScreen::Output *output, m_screenConfiguration->connectedOutputs()) {
+        if (screen->name() == output->name()) {
+            return output;
+        }
+    }
+
+    return nullptr;
+}
+
+KScreen::Output* ShellCorona::findPrimaryOutput() const
+{
+    foreach (KScreen::Output* output, m_screenConfiguration->connectedOutputs()) {
+        if (output->isPrimary())
+            return output;
+    }
+
+    return nullptr;
 }
 
 QScreen* ShellCorona::insertScreen(QScreen *screen, int idx)

@@ -171,6 +171,8 @@ private Q_SLOTS:
     void interactiveConsoleVisibilityChanged(bool visible);
 
 private:
+    QScreen *outputToScreen(KScreen::Output *output) const;
+    KScreen::Output *screenToOutput(QScreen *screen) const;
     KScreen::Output *findPrimaryOutput() const;
     QScreen *insertScreen(QScreen *screen, int idx);
     void removeView(int idx);
