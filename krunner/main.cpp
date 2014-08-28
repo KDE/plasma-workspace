@@ -42,15 +42,6 @@ int main(int argc, char **argv)
 {
     KLocalizedString::setApplicationDomain("krunner");
 
-#if QT_VERSION >= QT_VERSION_CHECK(5, 4, 0)
-//  Forcing OpenGLES is better on some systems, allowing to
-//  take faster code-paths in our integration with the drivers
-
-    QSurfaceFormat format;
-    format.setRenderableType(QSurfaceFormat::OpenGLES);
-    QQuickWindow::setDefaultFormat(format);
-#endif
-
     QQuickWindow::setDefaultAlphaBuffer(true);
     QApplication app(argc, argv);
 //     TODO: Make it a QGuiApplication once we don't depend on KDELibs4Support
