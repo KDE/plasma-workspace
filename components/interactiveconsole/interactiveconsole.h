@@ -51,9 +51,6 @@ class ScriptEngine;
 class InteractiveConsole : public QDialog
 {
     Q_OBJECT
-    Q_PROPERTY(QObject *scriptEngine READ scriptEngine WRITE setScriptInterface NOTIFY scriptEngineChanged)
-    Q_PROPERTY(QString mode READ mode WRITE setMode NOTIFY modeChanged)
-    Q_PROPERTY(bool visible READ isVisible WRITE setVisible NOTIFY visibilityChanged)
 
 public:
     InteractiveConsole(QWidget *parent = 0);
@@ -70,13 +67,12 @@ public:
     void setScriptInterface(QObject *obj);
     QObject *scriptEngine() const;
 
-public Q_SLOTS:
     void loadScript(const QString &path);
 
 Q_SIGNALS:
     void scriptEngineChanged();
     void modeChanged();
-    void visibilityChanged();
+    void visibleChanged(bool);
 
 protected:
     void showEvent(QShowEvent *);
@@ -125,6 +121,52 @@ private:
     bool m_closeWhenCompleted;
     ConsoleMode m_mode;
     QPointer<QObject> m_scriptEngine;
+};
+
+class InteractiveConsoleItem : public QObject
+{
+    Q_OBJECT
+    Q_PROPERTY(QObject *scriptEngine READ scriptEngine WRITE setScriptInterface NOTIFY scriptEngineChanged)
+    Q_PROPERTY(QString mode READ mode WRITE setMode NOTIFY modeChanged)
+    Q_PROPERTY(bool visible READ isVisible WRITE setVisible NOTIFY visibleChanged)
+
+public:
+    InteractiveConsoleItem()
+        : QObject(0),
+          m_dialog(new InteractiveConsole(0))
+    {
+        connect(m_dialog, &InteractiveConsole::scriptEngineChanged,
+                this, &InteractiveConsoleItem::scriptEngineChanged);
+        connect(m_dialog, &InteractiveConsole::modeChanged,
+                this, &InteractiveConsoleItem::modeChanged);
+        connect(m_dialog, &InteractiveConsole::visibleChanged,
+                this, &InteractiveConsoleItem::visibleChanged);
+    }
+
+    ~InteractiveConsoleItem()
+    {
+        m_dialog->deleteLater();
+    }
+
+    void setMode(const QString &mode) { m_dialog->setMode(mode); }
+    QString mode() const { return m_dialog->mode(); }
+
+    void setScriptInterface(QObject *obj) { m_dialog->setScriptInterface(obj); }
+    QObject *scriptEngine() const { return m_dialog->scriptEngine(); }
+
+    void setVisible(bool visible) const { visible ? m_dialog->show() : m_dialog->hide(); }
+    bool isVisible() const { return m_dialog->isVisible(); }
+
+public Q_SLOTS:
+    void loadScript(const QString &path) { m_dialog->loadScript(path); }
+
+Q_SIGNALS:
+    void scriptEngineChanged();
+    void modeChanged();
+    void visibleChanged(bool);
+
+private:
+    InteractiveConsole *m_dialog;
 };
 
 #endif

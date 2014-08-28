@@ -34,5 +34,5 @@ void PlasmaShellPrivatePlugin::registerTypes(const char *uri)
 
     qmlRegisterType<Plasma::Containment>();
     qmlRegisterType<WidgetExplorer>(uri, 2, 0, "WidgetExplorer");
-    qmlRegisterType<InteractiveConsole>(uri, 2, 0, "InteractiveConsoleWindow");
+    qmlRegisterType<InteractiveConsoleItem>(uri, 2, 0, "InteractiveConsoleWindow");
 }

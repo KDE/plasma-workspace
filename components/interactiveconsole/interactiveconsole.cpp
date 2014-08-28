@@ -278,8 +278,8 @@ void InteractiveConsole::showEvent(QShowEvent *)
         m_editor->setFocus();
     }
 
-    emit visibilityChanged();
     KWindowSystem::setOnDesktop(winId(), KWindowSystem::currentDesktop());
+    emit visibleChanged(true);
 }
 
 void InteractiveConsole::closeEvent(QCloseEvent *event)
@@ -289,6 +289,7 @@ void InteractiveConsole::closeEvent(QCloseEvent *event)
     m_closeWhenCompleted = true;
     saveScript(QUrl::fromLocalFile(path));
     QDialog::closeEvent(event);
+    emit visibleChanged(false);
 }
 
 void InteractiveConsole::reject()
