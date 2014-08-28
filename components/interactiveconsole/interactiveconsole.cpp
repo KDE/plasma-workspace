@@ -47,6 +47,7 @@
 #include <KTextEditor/Document>
 #include <KTextEditor/View>
 #include <KToolBar>
+#include <KWindowSystem>
 
 #include <Plasma/Package>
 #include <Plasma/PluginLoader>
@@ -278,6 +279,7 @@ void InteractiveConsole::showEvent(QShowEvent *)
     }
 
     emit visibilityChanged();
+    KWindowSystem::setOnDesktop(winId(), KWindowSystem::currentDesktop());
 }
 
 void InteractiveConsole::closeEvent(QCloseEvent *event)
