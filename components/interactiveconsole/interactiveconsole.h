@@ -105,7 +105,6 @@ private Q_SLOTS:
     void modeSelectionChanged();
 
 private:
-    void onClose();
     void saveScript(const QUrl &url);
 
     ShellCorona *m_corona;

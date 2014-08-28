@@ -284,23 +284,17 @@ void InteractiveConsole::showEvent(QShowEvent *)
 
 void InteractiveConsole::closeEvent(QCloseEvent *event)
 {
-    onClose();
+    // need to save first!
+    const QString path = QStandardPaths::writableLocation(QStandardPaths::DataLocation) + "/" + s_autosaveFileName;
+    m_closeWhenCompleted = true;
+    saveScript(QUrl::fromLocalFile(path));
     QDialog::closeEvent(event);
 }
 
 void InteractiveConsole::reject()
 {
-    onClose();
     QDialog::reject();
-}
-
-void InteractiveConsole::onClose()
-{
-    // need to save first!
-    const QString path = QStandardPaths::writableLocation(QStandardPaths::DataLocation) + "/" + s_autosaveFileName;
-    m_closeWhenCompleted = true;
-    saveScript(QUrl::fromLocalFile(path));
-    emit visibilityChanged();
+    close();
 }
 
 void InteractiveConsole::print(const QString &string)
