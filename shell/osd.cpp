@@ -17,7 +17,6 @@
  */
 
 #include "osd.h"
-#include "plasmaquick/shellpluginloader.h"
 #include "shellcorona.h"
 
 #include <QDBusConnection>

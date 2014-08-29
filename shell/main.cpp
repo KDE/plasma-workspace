@@ -26,7 +26,6 @@
 #include <kdbusservice.h>
 #include <klocalizedstring.h>
 
-#include "plasmaquick/shellpluginloader.h"
 #include "shellmanager.h"
 
 static const char description[] = "Plasma Shell";
@@ -99,12 +98,11 @@ int main(int argc, char** argv)
     QObject::connect(&app, &QGuiApplication::commitDataRequest, disableSessionManagement);
     QObject::connect(&app, &QGuiApplication::saveStateRequest, disableSessionManagement);
 
-    Plasma::PluginLoader::setPluginLoader(new ShellPluginLoader);
-
     ShellManager::setCrashCount(cliOptions.value(crashOption).toInt());
     ShellManager::s_forceWindowed = cliOptions.isSet(winOption);
     ShellManager::s_noRespawn = cliOptions.isSet(respawnOption);
     ShellManager::s_fixedShell = cliOptions.value(shellPluginOption);
+
     QObject::connect(QCoreApplication::instance(), SIGNAL(aboutToQuit()), ShellManager::instance(), SLOT(deleteLater()));
 
     return app.exec();
