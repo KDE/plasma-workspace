@@ -24,33 +24,13 @@
 #include <QDir>
 #include <QStandardPaths>
 
-QString dataDir()
-{
-    QStringList paths = QStandardPaths::standardLocations(QStandardPaths::DataLocation);
-    QDir location;
-    for (auto path: paths) {
-        if (path.startsWith("/home")) {
-            continue;
-        }
-
-        location.setPath(path);
-        location.cdUp();
-        location.cd("plasma");
-        qDebug() << "LOOKING INTO ----------->" << location;
-        if (location.exists()) {
-            break;
-        }
-    }
-    return location.absolutePath();
-}
-
 ShellPackage::ShellPackage(QObject *, const QVariantList &)
 {
 }
 
 void ShellPackage::initPackage(Plasma::Package *package)
 {
-    package->setDefaultPackageRoot(dataDir() + "/shells/");
+    package->setDefaultPackageRoot("shells/");
 
     //Directories
     package->addDirectoryDefinition("applet", "applet", i18n("Applets furniture"));
