@@ -288,7 +288,7 @@ void ShellCorona::primaryOutputChanged()
         return;
     }
 
-    KScreen::Output* output = findPrimaryOutput();
+    KScreen::Output *output = findPrimaryOutput();
     if (!output) {
         return;
     }
@@ -778,9 +778,9 @@ KScreen::Output *ShellCorona::screenToOutput(QScreen *screen) const
     return nullptr;
 }
 
-KScreen::Output* ShellCorona::findPrimaryOutput() const
+KScreen::Output *ShellCorona::findPrimaryOutput() const
 {
-    foreach (KScreen::Output* output, m_screenConfiguration->connectedOutputs()) {
+    foreach (KScreen::Output *output, m_screenConfiguration->connectedOutputs()) {
         if (output->isPrimary())
             return output;
     }
@@ -794,7 +794,7 @@ QScreen* ShellCorona::insertScreen(QScreen *screen, int idx)
         return screen;
     }
 
-    DesktopView* v = m_views[idx];
+    DesktopView *v = m_views[idx];
     QScreen *oldScreen = v->screen();
     v->setScreen(screen);
     foreach (PanelView *panel, m_panelViews) {
