@@ -138,7 +138,7 @@ Rectangle {
                                 right: parent.right
                                 margins: units.smallSpacing
                             }
-                            visible: model.pluginName != "none"
+                            visible: model.pluginName != "None"
                             iconSource: "media-playback-start"
                             tooltip: i18n("Test Splashscreen")
                             flat: false
