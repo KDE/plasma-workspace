@@ -25,26 +25,37 @@
 
 #include "plasma/corona.h"
 
+#include <QSet>
+#include <QTimer>
+
 #include <Plasma/Package>
 
+class Activity;
+class DesktopView;
+class PanelView;
+class QMenu;
+class QScreen;
+
+namespace KActivities
+{
+    class Consumer;
+    class Controller;
+} // namespace KActivities
+
+namespace KDeclarative
+{
+    class QmlObject;
+} // namespace KDeclarative
+
 namespace KScreen {
-class Output;
-class Config;
-}
+    class Output;
+    class Config;
+} // namespace KScreen
 
 namespace Plasma
 {
     class Applet;
 } // namespace Plasma
-
-class Activity;
-class DesktopView;
-class PanelView;
-class QScreen;
-
-namespace KActivities {
-    class Controller;
-}
 
 class ShellCorona : public Plasma::Corona
 {
@@ -160,6 +171,8 @@ private Q_SLOTS:
     void interactiveConsoleVisibilityChanged(bool visible);
 
 private:
+    QScreen *outputToScreen(KScreen::Output *output) const;
+    KScreen::Output *screenToOutput(QScreen *screen) const;
     KScreen::Output *findPrimaryOutput() const;
     QScreen *insertScreen(QScreen *screen, int idx);
     void removeView(int idx);
@@ -177,8 +190,27 @@ private:
     Plasma::Containment *createContainmentForActivity(const QString &activity, int screenNum);
     void insertContainment(const QString &activity, int screenNum, Plasma::Containment *containment);
 
-    class Private;
-    Private * d;
+    QString m_shell;
+    QList<DesktopView *> m_views;
+    KActivities::Controller *m_activityController;
+    KActivities::Consumer *m_activityConsumer;
+    QHash<const Plasma::Containment *, PanelView *> m_panelViews;
+    KConfigGroup m_desktopDefaultsConfig;
+    QList<Plasma::Containment *> m_waitingPanels;
+    QHash<QString, Activity *> m_activities;
+    QHash<QString, QHash<int, Plasma::Containment *> > m_desktopContainments;
+    QAction *m_addPanelAction;
+    QMenu *m_addPanelsMenu;
+    Plasma::Package m_lookNFeelPackage;
+    QSet<KScreen::Output *> m_redundantOutputs;
+    QList<KDeclarative::QmlObject *> m_alternativesObjects;
+    KDeclarative::QmlObject *m_interactiveConsole;
+
+    KScreen::Config *m_screenConfiguration;
+    QTimer m_waitingPanelsTimer;
+    QTimer m_appConfigSyncTimer;
+    QTimer m_reconsiderOutputsTimer;
+    bool m_loading;
 };
 
 #endif // SHELLCORONA_H

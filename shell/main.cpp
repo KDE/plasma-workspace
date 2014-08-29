@@ -18,7 +18,7 @@
  */
 
 #include <QApplication>
-#include <qcommandlineparser.h>
+#include <QCommandLineParser>
 #include <QQuickWindow>
 #include <QSessionManager>
 #include <QDebug>
@@ -31,7 +31,6 @@
 
 static const char description[] = "Plasma Shell";
 static const char version[] = "4.96.0";
-static QCommandLineParser parser;
 
 void noMessageOutput(QtMsgType type, const char *msg)
 {
@@ -51,44 +50,46 @@ int main(int argc, char** argv)
     app.setApplicationVersion(version);
     app.setQuitOnLastWindowClosed(false);
     app.setWindowIcon(QIcon::fromTheme("plasma"));
-    parser.setApplicationDescription(description);
     KDBusService service(KDBusService::Unique);
 
-    QCommandLineOption dbg(QStringList() << QStringLiteral("d") <<
-                           QStringLiteral("qmljsdebugger"),
-                           i18n("Enable QML Javascript debugger"));
+    QCommandLineParser cliOptions;
+    cliOptions.setApplicationDescription(description);
+    cliOptions.addVersionOption();
+    cliOptions.addHelpOption();
 
-    QCommandLineOption win(QStringList() << QStringLiteral("w") <<
-                           QStringLiteral("windowed"),
-                           i18n("Force a windowed view for testing purposes"));
+    QCommandLineOption dbgOption(QStringList() << QStringLiteral("d") <<
+                                 QStringLiteral("qmljsdebugger"),
+                                 i18n("Enable QML Javascript debugger"));
 
-    QCommandLineOption respawn(QStringList() << QStringLiteral("n") <<
-                           QStringLiteral("no-respawn"),
-                           i18n("Do not restart plasma-shell automatically after a crash"));
+    QCommandLineOption winOption(QStringList() << QStringLiteral("w") <<
+                                 QStringLiteral("windowed"),
+                                 i18n("Force a windowed view for testing purposes"));
 
-    QCommandLineOption crash(QStringList() << QStringLiteral("c") << QStringLiteral("crashes"),
-                                     i18n("Recent number of crashes"),
-                                     QStringLiteral("n"));
+    QCommandLineOption respawnOption(QStringList() << QStringLiteral("n") <<
+                                     QStringLiteral("no-respawn"),
+                                     i18n("Do not restart plasma-shell automatically after a crash"));
 
-    QCommandLineOption shutup(QStringList() << QStringLiteral("s") << QStringLiteral("shut-up"),
-                                     i18n("Shuts up the output"));
+    QCommandLineOption crashOption(QStringList() << QStringLiteral("c") << QStringLiteral("crashes"),
+                                   i18n("Recent number of crashes"),
+                                   QStringLiteral("n"));
 
-    QCommandLineOption shellPlugin(QStringList() << QStringLiteral("p") << QStringLiteral("shell-plugin"),
-                                     i18n("Force loading the given shell plugin"),
-                                     QStringLiteral("plugin"));
+    QCommandLineOption shutupOption(QStringList() << QStringLiteral("s") << QStringLiteral("shut-up"),
+                                    i18n("Shuts up the output"));
 
-    parser.addVersionOption();
-    parser.addHelpOption();
-    parser.addOption(dbg);
-    parser.addOption(win);
-    parser.addOption(respawn);
-    parser.addOption(crash);
-    parser.addOption(shutup);
-    parser.addOption(shellPlugin);
+    QCommandLineOption shellPluginOption(QStringList() << QStringLiteral("p") << QStringLiteral("shell-plugin"),
+                                         i18n("Force loading the given shell plugin"),
+                                         QStringLiteral("plugin"));
 
-    parser.process(app);
+    cliOptions.addOption(dbgOption);
+    cliOptions.addOption(winOption);
+    cliOptions.addOption(respawnOption);
+    cliOptions.addOption(crashOption);
+    cliOptions.addOption(shutupOption);
+    cliOptions.addOption(shellPluginOption);
 
-    if (parser.isSet(shutup)) {
+    cliOptions.process(app);
+
+    if (cliOptions.isSet(shutupOption)) {
         qInstallMsgHandler(noMessageOutput);
     }
 
@@ -100,10 +101,10 @@ int main(int argc, char** argv)
 
     Plasma::PluginLoader::setPluginLoader(new ShellPluginLoader);
 
-    ShellManager::setCrashCount(parser.value(crash).toInt());
-    ShellManager::s_forceWindowed = parser.isSet(win);
-    ShellManager::s_noRespawn = parser.isSet(respawn);
-    ShellManager::s_fixedShell = parser.value(shellPlugin);
+    ShellManager::setCrashCount(cliOptions.value(crashOption).toInt());
+    ShellManager::s_forceWindowed = cliOptions.isSet(winOption);
+    ShellManager::s_noRespawn = cliOptions.isSet(respawnOption);
+    ShellManager::s_fixedShell = cliOptions.value(shellPluginOption);
     QObject::connect(QCoreApplication::instance(), SIGNAL(aboutToQuit()), ShellManager::instance(), SLOT(deleteLater()));
 
     return app.exec();
