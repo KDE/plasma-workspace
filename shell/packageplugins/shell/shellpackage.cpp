@@ -67,7 +67,6 @@ void ShellPackage::initPackage(Plasma::Package *package)
                                i18n("A UI for writing, loading and running desktop scripts in the current live session"));
 }
 
-//K_EXPORT_PLASMA_PACKAGE(shellPackage, ShellPackage)
 K_EXPORT_PLASMA_PACKAGE_WITH_JSON(ShellPackage, "plasma-packagestructure-plasma-shell.json")
 
 #include "shellpackage.moc"
