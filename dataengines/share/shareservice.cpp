@@ -23,7 +23,7 @@
 #include <kjsembed/kjsembed.h>
 #include <kjs/JSVariableObject.h>
 
-#include <Plasma/Package>
+#include <Plasma/PluginLoader>
 #include <QDebug>
 
 #include "shareservice.h"
@@ -45,14 +45,13 @@ Plasma::ServiceJob *ShareService::createJob(const QString &operation,
 ShareJob::ShareJob(const QString &destination, const QString &operation,
                    QMap<QString, QVariant> &parameters, QObject *parent)
     : Plasma::ServiceJob(destination, operation, parameters, parent),
-      m_engine(new KJSEmbed::Engine()), m_provider(0), m_package(0)
+      m_engine(new KJSEmbed::Engine()), m_provider(0)
 {
 }
 
 ShareJob::~ShareJob()
 {
     delete m_provider;
-    delete m_package;
 }
 
 void ShareJob::start()
@@ -75,10 +74,10 @@ void ShareJob::start()
         return;
     }
 
-    m_package = new Plasma::Package(ShareProvider::packageStructure());
-    m_package->setPath(path);
-    if (m_package->isValid()) {
-        const QString mainscript = m_package->filePath("mainscript");
+    m_package = Plasma::PluginLoader::self()->loadPackage("Plasma/ShareProvider");
+    m_package.setPath(path);
+    if (m_package.isValid()) {
+        const QString mainscript = m_package.filePath("mainscript");
 
         m_provider = new ShareProvider(m_engine.data(), this);
         connect(m_provider, SIGNAL(readyToPublish()), this, SLOT(publish()));

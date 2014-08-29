@@ -23,8 +23,9 @@
 
 #include "share_package.h"
 #include "config-workspace.h"
+#include "plasma_version.h"
 
-SharePackage::SharePackage(QObject *parent, QVariantList args)
+SharePackage::SharePackage(QObject *, QVariantList)
 {
 }
 
@@ -41,4 +42,6 @@ void SharePackage::initPackage(Plasma::Package* package)
     package->setServicePrefix("plasma-share-");
 }
 
+K_EXPORT_PLASMA_PACKAGE_WITH_JSON(SharePackage, "plasma-packagestructure-share.json")
 
+#include "share_package.moc"

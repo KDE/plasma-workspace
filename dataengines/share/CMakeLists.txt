@@ -5,8 +5,7 @@ add_definitions(-DTRANSLATION_DOMAIN=\"plasma_engine_share\")
 set(share_engine_SRCS
         shareprovider.cpp
         shareengine.cpp
-        shareservice.cpp
-        share_package.cpp)
+        shareservice.cpp)
 
 add_library(plasma_engine_share MODULE ${share_engine_SRCS})
 target_link_libraries(plasma_engine_share
@@ -31,20 +30,7 @@ install(FILES share.operations
 
 set(sharepackage_SRCS
         share_package.cpp
-        plugin_share_package.cpp
 )
 
+add_subdirectory(packagestructure)
 add_subdirectory(backends)
-
-add_library(plasma_packagestructure_share MODULE ${sharepackage_SRCS})
-target_link_libraries(plasma_packagestructure_share
-                      KF5::Plasma
-                      KF5::I18n
-                      KF5::Service
-                      Qt5::Gui
-)
-
-install(TARGETS plasma_packagestructure_share
-                 DESTINATION ${PLUGIN_INSTALL_DIR}/plasma/packagestructure)
-install(FILES data/plasma-packagestructure-share.desktop
-               DESTINATION ${SERVICES_INSTALL_DIR})

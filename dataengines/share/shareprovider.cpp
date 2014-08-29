@@ -31,10 +31,6 @@
 #include <QPixmap>
 
 #include "shareprovider.h"
-#include "share_package.h"
-
-Plasma::PackageStructure* ShareProvider::m_packageStructure(0);
-
 
 ShareProvider::ShareProvider(KJSEmbed::Engine* engine, QObject *parent)
     : QObject(parent), m_isBlob(false), m_isPost(true),
@@ -366,14 +362,6 @@ void ShareProvider::error(const QString &msg)
 {
     // notify the service that it didnt work and the error msg
     emit finishedError(msg);
-}
-
-Plasma::PackageStructure* ShareProvider::packageStructure()
-{
-    if (!m_packageStructure) {
-        m_packageStructure = new SharePackage();
-    }
-    return m_packageStructure;
 }
 
 #include "shareprovider.moc"
