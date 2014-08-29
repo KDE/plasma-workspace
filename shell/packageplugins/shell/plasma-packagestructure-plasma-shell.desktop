@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=Plasma Shell
+Type=Service
+X-KDE-ServiceTypes=Plasma/PackageStructure
+X-KDE-Library=plasma_packagestructure_plasmashell
+
+X-KDE-PluginInfo-Author=Marco Martin
+X-KDE-PluginInfo-Email=notmart@gmail.com
+X-KDE-PluginInfo-Name=Plasma/Shell
+X-KDE-PluginInfo-Version=1
