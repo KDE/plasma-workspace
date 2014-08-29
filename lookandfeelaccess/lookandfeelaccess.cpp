@@ -122,7 +122,7 @@ QString LookAndFeelAccess::theme()
 QString LookAndFeelAccess::filePath(const char *key, const QString &filename) const
 {
     QString path;
-    if (d->package.metadata().isValid() && d->themePackage.isValid()) {
+    if (d->themePackage.metadata().isValid() && d->themePackage.isValid()) {
         path = d->themePackage.filePath(key, filename);
 
         if (!path.isEmpty()) {
