@@ -36,7 +36,6 @@ class ShareProvider : public QObject
 
 public:
     ShareProvider(KJSEmbed::Engine* engine, QObject *parent = 0);
-    static Plasma::PackageStructure* packageStructure();
 
     QString method() const;
     void setMethod(const QString &method);
@@ -96,7 +95,6 @@ private:
     QByteArray m_buffer;
     QByteArray m_boundary;
 
-    static Plasma::PackageStructure *m_packageStructure;
     KJSEmbed::Engine* m_engine;
 };
 

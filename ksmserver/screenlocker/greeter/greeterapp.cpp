@@ -23,7 +23,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include "sessions.h"
 #include "authenticator.h"
 #include "keyboardlayout.h"
-#include <../../shellpluginloader.h>
 #include "../../../lookandfeelaccess/lookandfeelaccess.h"
 
 // workspace

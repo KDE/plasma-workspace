@@ -99,3 +99,5 @@ install(FILES
    scripting/plasma-layout-template.desktop
    DESTINATION ${SERVICETYPES_INSTALL_DIR})
 
+add_subdirectory(packageplugins)
+

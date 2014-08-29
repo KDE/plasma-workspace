@@ -24,7 +24,6 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 ******************************************************************/
 
 #include "shutdowndlg.h"
-#include <shellpluginloader.h>
 
 #include <QApplication>
 #include <QDesktopWidget>
@@ -153,8 +152,6 @@ KSMShutdownDlg::KSMShutdownDlg( QWindow* parent,
 
     QString fileName;
     if(theme.isEmpty()) {
-        ShellPluginLoader::init();
-        
         LookAndFeelAccess access;
         fileName = access.filePath("logoutmainscript");
     } else

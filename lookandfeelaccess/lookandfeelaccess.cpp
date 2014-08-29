@@ -20,12 +20,12 @@
 
 #include "lookandfeelaccess.h"
 
-#include "shellpluginloader.h"
-
 #include <QDebug>
 #include <QDir>
 #include <KDirWatch>
 #include <KSharedConfig>
+
+#include <Plasma/PluginLoader>
 
 class LookAndFeelAccessPrivate
 {
@@ -76,7 +76,6 @@ LookAndFeelAccess::LookAndFeelAccess(QObject *parent)
     : QObject(parent),
       d(new LookAndFeelAccessPrivate(this))
 {
-    ShellPluginLoader::init();
     d->defaultPackage = Plasma::PluginLoader::self()->loadPackage("Plasma/LookAndFeel");
     d->defaultPackage.setPath("org.kde.breeze.desktop");
 

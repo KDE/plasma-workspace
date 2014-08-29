@@ -29,8 +29,6 @@
 #include "plasmawindowedview.h"
 #include "plasmawindowedcorona.h"
 
-#include "plasmaquick/shellpluginloader.h"
-
 static const char version[] = "1.0";
 
 int main(int argc, char **argv)
@@ -53,8 +51,6 @@ int main(int argc, char **argv)
     if (parser.positionalArguments().isEmpty()) {
         parser.showHelp(1);
     }
-
-    Plasma::PluginLoader::setPluginLoader(new ShellPluginLoader);
 
     PlasmaWindowedCorona *corona = new PlasmaWindowedCorona();
 

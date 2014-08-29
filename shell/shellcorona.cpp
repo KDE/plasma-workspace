@@ -54,7 +54,6 @@
 #include "panelview.h"
 #include "scripting/scriptengine.h"
 #include "plasmaquick/configview.h"
-#include "plasmaquick/shellpluginloader.h"
 #include "shellmanager.h"
 #include "osd.h"
 
