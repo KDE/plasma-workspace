@@ -122,7 +122,7 @@ void KCMSplashScreen::save()
 {
     if (m_selectedPlugin.isEmpty()) {
         return;
-    } else if (m_selectedPlugin == "none") {
+    } else if (m_selectedPlugin == "None") {
         m_configGroup.writeEntry("Theme", m_selectedPlugin);
         m_configGroup.writeEntry("Engine", "none");
     } else {
@@ -140,7 +140,7 @@ void KCMSplashScreen::defaults()
 
 void KCMSplashScreen::test(const QString &plugin)
 {
-    if (plugin.isEmpty() || plugin == "none") {
+    if (plugin.isEmpty() || plugin == "None") {
         return;
     }
 
