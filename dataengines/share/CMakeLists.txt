@@ -28,9 +28,5 @@ install(FILES data/plasma_shareprovider.desktop
 install(FILES share.operations
         DESTINATION ${PLASMA_DATA_INSTALL_DIR}/services)
 
-set(sharepackage_SRCS
-        share_package.cpp
-)
-
 add_subdirectory(packagestructure)
 add_subdirectory(backends)

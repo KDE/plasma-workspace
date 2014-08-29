@@ -1,3 +1,7 @@
+set(sharepackage_SRCS
+        share_package.cpp
+)
+
 add_library(plasma_packagestructure_share MODULE ${sharepackage_SRCS})
 kservice_desktop_to_json(plasma_packagestructure_share plasma-packagestructure-share.desktop)
 target_link_libraries(plasma_packagestructure_share
