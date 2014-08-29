@@ -42,7 +42,6 @@
 
 #include "appadaptor.h"
 
-#include "shellpluginloader.h"
 #include "../lookandfeelaccess/lookandfeelaccess.h"
 
 View::View(QWindow *)

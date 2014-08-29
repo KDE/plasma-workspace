@@ -33,7 +33,6 @@
 #include <kdeclarative/qmlobject.h>
 
 #include "view.h"
-#include "shellpluginloader.h"
 
 static const char version[] = "0.1";
 static QCommandLineParser parser;
