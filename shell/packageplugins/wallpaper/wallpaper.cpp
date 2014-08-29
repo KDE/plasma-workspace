@@ -41,7 +41,7 @@ void QmlWallpaperPackage::initPackage(Plasma::Package *package)
         package->setContentsPrefixPaths(platform);
     }
 
-    package->setDefaultPackageRoot("wallpapers/");
+    package->setDefaultPackageRoot("plasma/wallpapers/");
 
     package->addDirectoryDefinition("images", "images", i18n("Images"));
     package->addDirectoryDefinition("theme", "theme", i18n("Themed Images"));

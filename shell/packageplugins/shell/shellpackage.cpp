@@ -30,7 +30,7 @@ ShellPackage::ShellPackage(QObject *, const QVariantList &)
 
 void ShellPackage::initPackage(Plasma::Package *package)
 {
-    package->setDefaultPackageRoot("shells/");
+    package->setDefaultPackageRoot("plasma/shells/");
 
     //Directories
     package->addDirectoryDefinition("applet", "applet", i18n("Applets furniture"));

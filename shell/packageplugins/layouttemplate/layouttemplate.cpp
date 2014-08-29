@@ -25,7 +25,7 @@
 void LayoutTemplatePackage::initPackage(Plasma::Package *package)
 {
     package->setServicePrefix("plasma-layout-template");
-    package->setDefaultPackageRoot("layout-templates/");
+    package->setDefaultPackageRoot("plasma/layout-templates/");
     package->addFileDefinition("mainscript", "layout.js", i18n("Main Script File"));
     package->setRequired("mainscript", true);
 }

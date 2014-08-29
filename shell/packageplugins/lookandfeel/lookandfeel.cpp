@@ -25,7 +25,7 @@
 void LookAndFeelPackage::initPackage(Plasma::Package *package)
 {
     // http://community.kde.org/Plasma/lookAndFeelPackage#
-    package->setDefaultPackageRoot("look-and-feel/");
+    package->setDefaultPackageRoot("plasma/look-and-feel/");
 
     //Defaults
     package->addFileDefinition("defaults", "defaults", i18n("Default settings for theme, etc."));
