@@ -28,7 +28,8 @@
 #include <QDebug>
 
 NotificationsHelper::NotificationsHelper(QObject *parent)
-    : QObject(parent)
+    : QObject(parent),
+    m_popupLocation(Qt::BottomEdge)
 {
     m_offset = QFontMetrics(QGuiApplication::font()).boundingRect("M").height() * 2;
 }
@@ -37,6 +38,16 @@ NotificationsHelper::~NotificationsHelper()
 {
     qDeleteAll(m_availablePopups);
     qDeleteAll(m_popupsOnScreen);
+}
+
+void NotificationsHelper::setPopupLocation(Qt::Edge popupLocation)
+{
+    if (m_popupLocation != popupLocation) {
+        m_popupLocation = popupLocation;
+        emit popupLocationChanged();
+
+        repositionPopups();
+    }
 }
 
 QRect NotificationsHelper::workAreaForScreen(const QRect &screenGeometry)
@@ -111,7 +122,11 @@ void NotificationsHelper::displayNotification(const QVariantMap &notificationDat
     QRect screenArea = workAreaForScreen(m_plasmoidScreen);
 
     popup->setX(screenArea.right() - popup->width() - m_offset);
-    popup->setY(screenArea.bottom() - (m_popupsOnScreen.size() * (popup->height() + m_offset)));
+    if (m_popupLocation == Qt::TopEdge) {
+        popup->setY(screenArea.top() + m_offset + ((m_popupsOnScreen.size() - 1) * (popup->height() + m_offset)));
+    } else {
+        popup->setY(screenArea.bottom() - (m_popupsOnScreen.size() * (popup->height() + m_offset)));
+    }
 
     // Populate the popup with data, this is the component's own QML method
     QMetaObject::invokeMethod(popup, "populatePopup", Q_ARG(QVariant, notificationData));
@@ -145,8 +160,16 @@ void NotificationsHelper::popupClosed(bool visible)
 
 void NotificationsHelper::repositionPopups()
 {
-    for (int i = 0; i < m_popupsOnScreen.size(); i++) {
-        m_popupsOnScreen[i]->setProperty("y", workAreaForScreen(m_plasmoidScreen).bottom() - ((i + 1) * (m_popupsOnScreen[i]->height() + m_offset)));
+    QRect workArea = workAreaForScreen(m_plasmoidScreen);
+
+    for (int i = 0; i < m_popupsOnScreen.size(); ++i) {
+        const int popupHeight = m_popupsOnScreen[i]->height();
+
+        if (m_popupLocation == Qt::TopEdge) {
+            m_popupsOnScreen[i]->setProperty("y", workArea.top() + m_offset + (i * (popupHeight + m_offset)));
+        } else {
+            m_popupsOnScreen[i]->setProperty("y", workArea.bottom() - ((i + 1) * (popupHeight + m_offset)));
+        }
     }
 
     if (!m_queue.isEmpty()) {

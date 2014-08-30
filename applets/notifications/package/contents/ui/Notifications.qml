@@ -185,6 +185,7 @@ Column {
     NotificationsHelper {
         id: notificationPositioner
         plasmoidScreen: plasmoid.screenGeometry
+        popupLocation: plasmoid.location == PlasmaCore.Types.TopEdge ? Qt.TopEdge : Qt.BottomEdge
     }
 
     Repeater {
