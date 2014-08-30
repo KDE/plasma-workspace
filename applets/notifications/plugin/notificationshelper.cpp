@@ -31,7 +31,7 @@ NotificationsHelper::NotificationsHelper(QObject *parent)
     : QObject(parent),
     m_popupLocation(Qt::BottomEdge)
 {
-    m_offset = QFontMetrics(QGuiApplication::font()).boundingRect("M").height() * 2;
+    m_offset = QFontMetrics(QGuiApplication::font()).boundingRect("M").height();
 }
 
 NotificationsHelper::~NotificationsHelper()
