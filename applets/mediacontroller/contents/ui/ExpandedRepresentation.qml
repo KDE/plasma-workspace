@@ -178,25 +178,30 @@ ColumnLayout {
             anchors.centerIn: parent
             spacing: units.largeSpacing
 
-            MediaControl {
+            PlasmaComponents.ToolButton {
                 anchors.verticalCenter: parent.verticalCenter
+                width: expandedRepresentation.controlSize
+                height: width
                 enabled: playerControls.enabled && mpris2Source.data[mpris2Source.current].CanGoPrevious
-                source: "media-skip-backward"
-                onTriggered: root.previous()
+                iconSource: "media-skip-backward"
+                onClicked: root.previous()
             }
 
-            MediaControl {
+            PlasmaComponents.ToolButton {
                 width: expandedRepresentation.controlSize * 1.5
+                height: width
                 enabled: playerControls.enabled
-                source: root.state == "playing" ? "media-playback-pause" : "media-playback-start"
-                onTriggered: root.playPause()
+                iconSource: root.state == "playing" ? "media-playback-pause" : "media-playback-start"
+                onClicked: root.playPause()
             }
 
-            MediaControl {
+            PlasmaComponents.ToolButton {
                 anchors.verticalCenter: parent.verticalCenter
+                width: expandedRepresentation.controlSize
+                height: width
                 enabled: playerControls.enabled && mpris2Source.data[mpris2Source.current].CanGoNext
-                source: "media-skip-forward"
-                onTriggered: root.next()
+                iconSource: "media-skip-forward"
+                onClicked: root.next()
             }
         }
     }
