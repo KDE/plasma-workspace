@@ -74,7 +74,7 @@ ColumnLayout {
         Column {
             Layout.fillWidth: true
             anchors.top: parent.top
-            spacing: albumArt.visible ? units.largeSpacing : units.smallSpacing
+            spacing: units.smallSpacing
             PlasmaExtras.Heading {
                 id: song
                 anchors {
@@ -99,6 +99,27 @@ ColumnLayout {
 
                 elide: Text.ElideRight
                 text: root.artist ? root.artist : ""
+            }
+
+            Item {
+                anchors {
+                    right: parent.right
+                    rightMargin: units.largeSpacing
+                }
+                height: albumArt.visible ? albumArt.height - artist.height - units.smallSpacing - song.height : childrenRect.height
+                width: childrenRect.width
+                visible: !root.noPlayer && mpris2Source.data[mpris2Source.current].CanRaise
+
+                PlasmaComponents.Button {
+                    anchors.bottom: parent.bottom
+                    text: i18nc("Bring the window of player %1 to the front", "Open %1", mpris2Source.data[mpris2Source.current].Identity)
+                    onClicked: {
+                        var service = mpris2Source.serviceForSource(mpris2Source.current);
+                        var operation = service.operationDescription("Raise");
+                        service.startOperationCall(operation);
+                    }
+
+                }
             }
         }
     }
