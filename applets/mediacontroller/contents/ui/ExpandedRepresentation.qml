@@ -130,7 +130,7 @@ ColumnLayout {
         maximumValue: currentMetadata ? currentMetadata["mpris:length"] || 0 : 0
         value: 0
         // if there's no "mpris:length" in teh metadata, we cannot seek, so hide it in that case
-        enabled: playerControls.enabled && currentMetadata && currentMetadata["mpris:length"] && mpris2Source.data[mpris2Source.current].CanSeek
+        enabled: !root.noPlayer && root.track && currentMetadata && currentMetadata["mpris:length"] && mpris2Source.data[mpris2Source.current].CanSeek
         opacity: enabled ? 1 : 0
         Behavior on opacity {
             NumberAnimation { duration: units.longDuration }
@@ -167,7 +167,7 @@ ColumnLayout {
 
         Row {
             id: playerControls
-            property bool enabled: !root.noPlayer && root.track && mpris2Source.data[mpris2Source.current].CanControl
+            property bool enabled: !root.noPlayer && mpris2Source.data[mpris2Source.current].CanControl
             property int controlsSize: theme.mSize(theme.defaultFont).height * 3
 
             anchors.centerIn: parent
