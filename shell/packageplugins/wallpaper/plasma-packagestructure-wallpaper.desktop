@@ -1,5 +1,16 @@
 [Desktop Entry]
 Name=Wallpaper
+Name[ca]=Fons d'escriptori
+Name[es]=Fondo del escritorio
+Name[hu]=Háttérkép
+Name[pl]=Tapeta
+Name[pt]=Papel de Parede
+Name[pt_BR]=Papel de parede
+Name[sk]=Tapeta
+Name[sl]=Slika ozadja
+Name[sv]=Skrivbordsunderlägg
+Name[uk]=Зображення тла
+Name[x-test]=xxWallpaperxx
 Type=Service
 X-KDE-ServiceTypes=Plasma/PackageStructure
 X-KDE-Library=plasma_packagestructure_wallpaper
