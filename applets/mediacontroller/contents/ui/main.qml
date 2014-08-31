@@ -94,6 +94,20 @@ Item {
         connectedSources: current
 
         property string current: "@multiplex"
+
+        onDataChanged: updateOpenPlayerAction()
+    }
+
+    function updateOpenPlayerAction() {
+        if (!root.noPlayer && mpris2Source.data[mpris2Source.current].CanRaise) {
+            plasmoid.setAction("openplayer", i18nc("Bring the window of player %1 to the front", "Open %1", mpris2Source.data[mpris2Source.current].Identity))
+        } else {
+            plasmoid.removeAction("openplayer")
+        }
+    }
+
+    function action_openplayer() {
+        serviceOp(mpris2Source.current, "Raise");
     }
 
     function playPause() {

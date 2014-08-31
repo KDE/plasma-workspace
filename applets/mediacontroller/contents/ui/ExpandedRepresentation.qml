@@ -113,12 +113,7 @@ ColumnLayout {
                 PlasmaComponents.Button {
                     anchors.bottom: parent.bottom
                     text: i18nc("Bring the window of player %1 to the front", "Open %1", mpris2Source.data[mpris2Source.current].Identity)
-                    onClicked: {
-                        var service = mpris2Source.serviceForSource(mpris2Source.current);
-                        var operation = service.operationDescription("Raise");
-                        service.startOperationCall(operation);
-                    }
-
+                    onClicked: root.action_openplayer()
                 }
             }
         }
