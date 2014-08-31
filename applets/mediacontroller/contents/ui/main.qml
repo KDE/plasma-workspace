@@ -123,7 +123,6 @@ Item {
     }
 
     function serviceOp(src, op) {
-        print(" serviceOp: " + src + " Op: " + op);
         var service = mpris2Source.serviceForSource(src);
         var operation = service.operationDescription(op);
         return service.startOperationCall(operation);
