@@ -54,8 +54,8 @@ Item {
 
     property bool noPlayer: mpris2Source.sources.length <= 1
 
-    Plasmoid.switchWidth: units.gridUnit * 10
-    Plasmoid.switchHeight: units.gridUnit * 8
+    Plasmoid.switchWidth: units.gridUnit * 14
+    Plasmoid.switchHeight: units.gridUnit * 10
     Plasmoid.icon: "media-playback-start"
     Plasmoid.status: PlasmaCore.Types.PassiveStatus
     Plasmoid.toolTipMainText: i18n("No media playing")
