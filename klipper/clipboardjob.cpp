@@ -145,7 +145,7 @@ void ClipboardJob::iconResult(const KFileItem& item)
 {
     QVariantMap res;
     res.insert(s_urlKey, item.url());
-    QPixmap pix = QIcon::fromTheme(item.currentMimeType().iconName()).pixmap(128, 128);
+    QPixmap pix = QIcon::fromTheme(item.determineMimeType().iconName()).pixmap(128, 128);
     res.insert(s_previewKey, pix);
     res.insert(s_iconKey, true);
     res.insert("iconName", item.currentMimeType().iconName());
