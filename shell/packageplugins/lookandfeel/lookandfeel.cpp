@@ -90,6 +90,8 @@ void LookAndFeelPackage::pathChanged(Plasma::Package *package)
         Plasma::Package pkg = Plasma::PluginLoader::self()->loadPackage("Plasma/LookAndFeel");
         pkg.setPath(DEFAULT_LOOKANDFEEL);
         package->setFallbackPackage(pkg);
+    } else if (pluginName == DEFAULT_LOOKANDFEEL) {
+        package->setFallbackPackage(Plasma::Package());
     }
 }
 

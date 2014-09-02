@@ -82,6 +82,8 @@ void ShellPackage::pathChanged(Plasma::Package *package)
         Plasma::Package pkg = Plasma::PluginLoader::self()->loadPackage("Plasma/Shell");
         pkg.setPath(DEFAULT_SHELL);
         package->setFallbackPackage(pkg);
+    } else if (pluginName == DEFAULT_SHELL) {
+        package->setFallbackPackage(Plasma::Package());
     }
 }
 
