@@ -29,6 +29,7 @@ class LookAndFeelPackage : public Plasma::PackageStructure
 public:
     LookAndFeelPackage(QObject*, const QVariantList &) {}
     void initPackage(Plasma::Package *package);
+    void pathChanged(Plasma::Package *package);
 };
 
 #endif

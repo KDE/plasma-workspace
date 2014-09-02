@@ -59,8 +59,6 @@
 
 #include "plasmashelladaptor.h"
 
-#include "../lookandfeelaccess/lookandfeelaccess.h"
-
 #ifndef NDEBUG
     #define CHECK_SCREEN_INVARIANTS screenInvariants();
 #else
@@ -79,6 +77,11 @@ ShellCorona::ShellCorona(QObject *parent)
       m_screenConfiguration(nullptr),
       m_loading(false)
 {
+    m_lookAndFeelPackage = Plasma::PluginLoader::self()->loadPackage("Plasma/LookAndFeel");
+    KConfigGroup cg(KSharedConfig::openConfig("kdeglobals"), "KDE");
+    const QString packageName = cg.readEntry("LookAndFeelPackage", QString());
+    m_lookAndFeelPackage.setPath(packageName);
+
     m_appConfigSyncTimer.setSingleShot(true);
     m_appConfigSyncTimer.setInterval(s_configSyncDelay);
     connect(&m_appConfigSyncTimer, &QTimer::timeout, this, &ShellCorona::syncAppConfig);
@@ -125,9 +128,8 @@ ShellCorona::ShellCorona(QObject *parent)
     themeName = plasmarc.readEntry(themeNameKey, themeName);
 
     if (themeName.isEmpty()) {
-        LookAndFeelAccess access;
         KConfigGroup lnfCfg = KConfigGroup(KSharedConfig::openConfig(
-                                                access.filePath("defaults")),
+                                                m_lookAndFeelPackage.filePath("defaults")),
                                                 "plasmarc"
                                            );
         lnfCfg = KConfigGroup(&lnfCfg, themeGroupKey);
@@ -181,6 +183,11 @@ ShellCorona::~ShellCorona()
 {
     qDeleteAll(m_views);
     qDeleteAll(m_panelViews);
+}
+
+Plasma::Package ShellCorona::lookAndFeelPackage()
+{
+    return m_lookAndFeelPackage;
 }
 
 void ShellCorona::setShell(const QString &shell)

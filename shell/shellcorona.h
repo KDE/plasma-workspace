@@ -68,6 +68,8 @@ public:
     explicit ShellCorona(QObject *parent = 0);
     ~ShellCorona();
 
+    Plasma::Package lookAndFeelPackage();
+
     /**
      * Where to save global configuration that doesn't have anything to do with the scene (e.g. views)
      */
@@ -201,7 +203,7 @@ private:
     QHash<QString, QHash<int, Plasma::Containment *> > m_desktopContainments;
     QAction *m_addPanelAction;
     QMenu *m_addPanelsMenu;
-    Plasma::Package m_lookNFeelPackage;
+    Plasma::Package m_lookAndFeelPackage;
     QSet<KScreen::Output *> m_redundantOutputs;
     QList<KDeclarative::QmlObject *> m_alternativesObjects;
     KDeclarative::QmlObject *m_interactiveConsole;

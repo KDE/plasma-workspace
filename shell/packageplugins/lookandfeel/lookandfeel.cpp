@@ -21,6 +21,10 @@
 #include "lookandfeel.h"
 
 #include <KLocalizedString>
+#include <KSharedConfig>
+#include <Plasma/PluginLoader>
+
+#define DEFAULT_LOOKANDFEEL "org.kde.breeze.desktop"
 
 void LookAndFeelPackage::initPackage(Plasma::Package *package)
 {
@@ -73,6 +77,17 @@ void LookAndFeelPackage::initPackage(Plasma::Package *package)
     package->addDirectoryDefinition("windowswitcher", "windowswitcher", i18n("Window Switcher"));
     package->addFileDefinition("windowswitchermainscript", "windowswitcher/WindowSwitcher.qml", i18n("Main Script for Window Switcher"));
 
+}
+
+void LookAndFeelPackage::pathChanged(Plasma::Package *package)
+{
+    const QString pluginName = package->metadata().pluginName();
+
+    if (!pluginName.isEmpty() && pluginName != DEFAULT_LOOKANDFEEL) {
+        Plasma::Package pkg = Plasma::PluginLoader::self()->loadPackage("Plasma/LookAndFeel");
+        pkg.setPath(DEFAULT_LOOKANDFEEL);
+        package->setFallbackPackage(pkg);
+    }
 }
 
 K_EXPORT_PLASMA_PACKAGE_WITH_JSON(LookAndFeelPackage, "plasma-packagestructure-lookandfeel.json")
