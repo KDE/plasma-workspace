@@ -27,6 +27,7 @@ class ShellPackage: public Plasma::PackageStructure
 public:
     ShellPackage(QObject *parent, const QVariantList &list);
     void initPackage(Plasma::Package *package);
+    void pathChanged(Plasma::Package *package);
 };
 
 #endif // SHELLPACKAGE_PLUGIN_H

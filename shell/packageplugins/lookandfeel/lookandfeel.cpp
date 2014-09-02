@@ -21,7 +21,6 @@
 #include "lookandfeel.h"
 
 #include <KLocalizedString>
-#include <KSharedConfig>
 #include <Plasma/PluginLoader>
 
 #define DEFAULT_LOOKANDFEEL "org.kde.breeze.desktop"
@@ -81,6 +80,10 @@ void LookAndFeelPackage::initPackage(Plasma::Package *package)
 
 void LookAndFeelPackage::pathChanged(Plasma::Package *package)
 {
+    if (!package->metadata().isValid()) {
+        return;
+    }
+
     const QString pluginName = package->metadata().pluginName();
 
     if (!pluginName.isEmpty() && pluginName != DEFAULT_LOOKANDFEEL) {

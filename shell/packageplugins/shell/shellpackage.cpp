@@ -19,10 +19,13 @@
 
 #include "shellpackage.h"
 #include <KLocalizedString>
+#include <Plasma/PluginLoader>
 
 #include <QDebug>
 #include <QDir>
 #include <QStandardPaths>
+
+#define DEFAULT_SHELL "org.kde.plasma.desktop"
 
 ShellPackage::ShellPackage(QObject *, const QVariantList &)
 {
@@ -65,6 +68,21 @@ void ShellPackage::initPackage(Plasma::Package *package)
 
     package->addFileDefinition("interactiveconsole", "InteractiveConsole.qml",
                                i18n("A UI for writing, loading and running desktop scripts in the current live session"));
+}
+
+void ShellPackage::pathChanged(Plasma::Package *package)
+{
+    if (!package->metadata().isValid()) {
+        return;
+    }
+
+    const QString pluginName = package->metadata().pluginName();
+
+    if (!pluginName.isEmpty() && pluginName != DEFAULT_SHELL) {
+        Plasma::Package pkg = Plasma::PluginLoader::self()->loadPackage("Plasma/Shell");
+        pkg.setPath(DEFAULT_SHELL);
+        package->setFallbackPackage(pkg);
+    }
 }
 
 K_EXPORT_PLASMA_PACKAGE_WITH_JSON(ShellPackage, "plasma-packagestructure-plasma-shell.json")
