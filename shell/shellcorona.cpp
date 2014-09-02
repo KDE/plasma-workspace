@@ -80,7 +80,9 @@ ShellCorona::ShellCorona(QObject *parent)
     m_lookAndFeelPackage = Plasma::PluginLoader::self()->loadPackage("Plasma/LookAndFeel");
     KConfigGroup cg(KSharedConfig::openConfig("kdeglobals"), "KDE");
     const QString packageName = cg.readEntry("LookAndFeelPackage", QString());
-    m_lookAndFeelPackage.setPath(packageName);
+    if (!packageName.isEmpty()) {
+        m_lookAndFeelPackage.setPath(packageName);
+    }
 
     m_appConfigSyncTimer.setSingleShot(true);
     m_appConfigSyncTimer.setInterval(s_configSyncDelay);

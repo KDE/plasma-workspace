@@ -76,6 +76,7 @@ void LookAndFeelPackage::initPackage(Plasma::Package *package)
     package->addDirectoryDefinition("windowswitcher", "windowswitcher", i18n("Window Switcher"));
     package->addFileDefinition("windowswitchermainscript", "windowswitcher/WindowSwitcher.qml", i18n("Main Script for Window Switcher"));
 
+    package->setPath(DEFAULT_LOOKANDFEEL);
 }
 
 void LookAndFeelPackage::pathChanged(Plasma::Package *package)
@@ -90,7 +91,7 @@ void LookAndFeelPackage::pathChanged(Plasma::Package *package)
         Plasma::Package pkg = Plasma::PluginLoader::self()->loadPackage("Plasma/LookAndFeel");
         pkg.setPath(DEFAULT_LOOKANDFEEL);
         package->setFallbackPackage(pkg);
-    } else if (pluginName == DEFAULT_LOOKANDFEEL) {
+    } else if (package->fallbackPackage().isValid() && pluginName == DEFAULT_LOOKANDFEEL) {
         package->setFallbackPackage(Plasma::Package());
     }
 }
