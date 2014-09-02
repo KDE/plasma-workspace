@@ -25,7 +25,7 @@
 #include <KConfigGroup>
 #include <QListWidget>
 
-#include "../../lookandfeelaccess/lookandfeelaccess.h"
+#include <Plasma/Package>
 
 class QQuickWidget;
 class QStandardItemModel;
@@ -42,6 +42,8 @@ public:
         ScreenhotRole
     };
     KCMSplashScreen(QWidget* parent, const QVariantList& args);
+
+    QList<Plasma::Package> availablePackages(const QString &component);
 
     QStandardItemModel *splashModel();
 
@@ -60,7 +62,7 @@ Q_SIGNALS:
 private:
     QQuickWidget *m_quickWidget;
     QStandardItemModel *m_model;
-    LookAndFeelAccess m_access;
+    Plasma::Package m_package;
     QString m_selectedPlugin;
 
     KConfig m_config;

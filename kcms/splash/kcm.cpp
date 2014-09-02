@@ -37,7 +37,6 @@
 #include <QStandardItemModel>
 
 #include <KLocalizedString>
-#include <Plasma/Package>
 #include <Plasma/PluginLoader>
 
 K_PLUGIN_FACTORY(KCMSplashScreenFactory, registerPlugin<KCMSplashScreen>();)
@@ -73,6 +72,28 @@ KCMSplashScreen::KCMSplashScreen(QWidget* parent, const QVariantList& args)
     layout->addWidget(m_quickWidget);
 }
 
+QList<Plasma::Package> KCMSplashScreen::availablePackages(const QString &component)
+{
+    QList<Plasma::Package> packages;
+    QStringList paths;
+    QStringList dataPaths = QStandardPaths::standardLocations(QStandardPaths::GenericDataLocation);
+
+    for (const QString &path : dataPaths) {
+        QDir dir(path + "/plasma/look-and-feel");
+        paths << dir.entryList(QDir::AllDirs | QDir::NoDotAndDotDot);
+    }
+
+    for (const QString &path : paths) {
+        Plasma::Package pkg = Plasma::PluginLoader::self()->loadPackage("Plasma/LookAndFeel");
+        pkg.setPath(path);
+        if (component.isEmpty() || !pkg.filePath(component.toUtf8()).isEmpty()) {
+            packages << pkg;
+        }
+    }
+
+    return packages;
+}
+
 QStandardItemModel *KCMSplashScreen::splashModel()
 {
     return m_model;
@@ -96,9 +117,16 @@ void KCMSplashScreen::setSelectedPlugin(const QString &plugin)
 
 void KCMSplashScreen::load()
 {
+    m_package = Plasma::PluginLoader::self()->loadPackage("Plasma/LookAndFeel");
+    KConfigGroup cg(KSharedConfig::openConfig("kdeglobals"), "KDE");
+    const QString packageName = cg.readEntry("LookAndFeelPackage", QString());
+    if (!packageName.isEmpty()) {
+        m_package.setPath(packageName);
+    }
+
     QString currentPlugin = m_configGroup.readEntry("Theme", QString());
     if (currentPlugin.isEmpty()) {
-        currentPlugin = m_access.metadata().pluginName();
+        currentPlugin = m_package.metadata().pluginName();
     }
     setSelectedPlugin(currentPlugin);
 
@@ -108,7 +136,7 @@ void KCMSplashScreen::load()
     row->setData("None", PluginNameRole);
     m_model->appendRow(row);
 
-    const QList<Plasma::Package> pkgs = LookAndFeelAccess::availablePackages("splashmainscript");
+    const QList<Plasma::Package> pkgs = availablePackages("splashmainscript");
     for (const Plasma::Package &pkg : pkgs) {
         QStandardItem* row = new QStandardItem(pkg.metadata().name());
         row->setData(pkg.metadata().pluginName(), PluginNameRole);
@@ -135,7 +163,10 @@ void KCMSplashScreen::save()
 
 void KCMSplashScreen::defaults()
 {
-    setSelectedPlugin(m_access.metadata().pluginName());
+    if (m_package.metadata().isValid()) {
+        return;
+    }
+    setSelectedPlugin(m_package.metadata().pluginName());
 }
 
 void KCMSplashScreen::test(const QString &plugin)
