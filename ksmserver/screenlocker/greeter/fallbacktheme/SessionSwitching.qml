@@ -26,9 +26,9 @@ Item {
     property alias switchUserSupported: sessions.switchUserSupported
     implicitWidth: theme.mSize(theme.defaultFont).width * 55
     implicitHeight: theme.mSize(theme.defaultFont).height * 25
-    signal activateSession()
-    signal startNewSession()
-    signal cancel()
+    signal sessionActivated()
+    signal newSessionStarted()
+    signal switchingCanceled()
     Sessions {
         id: sessions
     }
@@ -65,7 +65,7 @@ Item {
                 onClicked: userSessionsView.currentIndex = userSessionsView.indexAt(mouse.x, mouse.y)
                 onDoubleClicked: {
                     sessions.activateSession(userSessionsView.indexAt(mouse.x, mouse.y));
-                    activateSession();
+                    sessionActivated();
                 }
             }
         }
@@ -102,7 +102,7 @@ Item {
             iconSource: "fork"
             onClicked: {
                 sessions.activateSession(userSessionsView.currentIndex);
-                activateSession();
+                sessionActivated();
             }
         }
         AccelButton {
@@ -112,14 +112,14 @@ Item {
             visible: sessions.startNewSessionSupported
             onClicked: {
                 sessions.startNewSession();
-                startNewSession();
+                newSessionStarted();
             }
         }
         AccelButton {
             id: cancelSession
             label: i18nd("kscreenlocker_greet", "Cancel")
             iconSource: "dialog-cancel"
-            onClicked: cancel()
+            onClicked: switchingCanceled()
         }
         anchors.bottom: parent.bottom
         anchors.horizontalCenter: userSessionsUI.horizontalCenter
