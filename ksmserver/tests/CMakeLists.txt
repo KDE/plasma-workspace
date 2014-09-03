@@ -2,7 +2,6 @@ include_directories( ${CMAKE_CURRENT_SOURCE_DIR}/.. )
 
 set(testsh_SRCS
     test.cpp
-    ../../lookandfeelaccess/lookandfeelaccess.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/../shutdowndlg.cpp
 #    ${CMAKE_CURRENT_SOURCE_DIR}/../logouteffect.cpp
 #    ${CMAKE_CURRENT_SOURCE_DIR}/../curtaineffect.cpp
