@@ -18,7 +18,6 @@
  */
 
 #include "SplashWindow.h"
-#include "../../lookandfeelaccess/lookandfeelaccess.h"
 
 #include <QGuiApplication>
 #include <QQmlContext>
@@ -91,12 +90,18 @@ void SplashWindow::setGeometry(const QRect& rect)
 
     if (oldGeometryEmpty) {
 
-        LookAndFeelAccess access;
+        Plasma::Package package = Plasma::PluginLoader::self()->loadPackage("Plasma/LookAndFeel");
+        KConfigGroup cg(KSharedConfig::openConfig("kdeglobals"), "KDE");
+        const QString packageName = cg.readEntry("LookAndFeelPackage", QString());
+        if (!packageName.isEmpty()) {
+            package.setPath(packageName);
+        };
+
         const QString theme = QGuiApplication::arguments().at(1);
         if (!theme.startsWith("--")) {
-            access.setTheme(theme);
+            package.setPath(theme);
         }
 
-        setSource(QUrl::fromLocalFile(access.filePath("splashmainscript")));
+        setSource(QUrl::fromLocalFile(package.filePath("splashmainscript")));
     }
 }
