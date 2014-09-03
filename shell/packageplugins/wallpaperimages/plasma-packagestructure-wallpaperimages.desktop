@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=Wallpaper Images
+Type=Service
+X-KDE-ServiceTypes=Plasma/PackageStructure
+X-KDE-Library=plasma_packagestructure_wallpaperimages
+
+X-KDE-PluginInfo-Author=Aaron Seigo
+X-KDE-PluginInfo-Email=aseigo@kde.org
+X-KDE-PluginInfo-Name=Wallpaper/Images
+X-KDE-PluginInfo-Version=1

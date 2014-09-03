@@ -22,34 +22,15 @@
 
 #include <Plasma/PackageStructure>
 
-#include "image.h"
-
 class WallpaperPackage : public Plasma::PackageStructure
 {
     Q_OBJECT
 
 public:
-    explicit WallpaperPackage(Image *paper, QObject *parent = 0, const QVariantList &args = QVariantList());
+    explicit WallpaperPackage(QObject *parent = 0, const QVariantList &args = QVariantList());
 
     void initPackage(Plasma::Package *package);
     void pathChanged(Plasma::Package *package);
-
-protected:
-    void pathChanged();
-
-private:
-    QSize resSize(const QString &str) const;
-    void findBestPaper(Plasma::Package *package);
-    float distance(const QSize& size, const QSize& desired) const;
-
-private Q_SLOTS:
-    void paperDestroyed();
-    void renderHintsChanged();
-
-private:
-    Image *m_paper;
-    bool m_fullPackage;
-    QSize m_targetSize;
 };
 
 #endif

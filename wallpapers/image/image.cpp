@@ -22,7 +22,9 @@
  ***************************************************************************/
 
 #include "image.h"
-#include "wallpaperpackage.h"
+
+#include <math.h>
+#include <float.h> // FLT_MAX
 
 #include <QAction>
 #include <QApplication>
@@ -42,6 +44,7 @@
 #include <klocalizedstring.h>
 
 #include <Plasma/Theme>
+#include <Plasma/PluginLoader>
 #include <qstandardpaths.h>
 #include "backgroundlistmodel.h"
 
@@ -56,7 +59,7 @@ Image::Image(QObject *parent)
       m_width(0),
       m_height(0)
 {
-    m_wallpaperPackage = Plasma::Package(new WallpaperPackage(this, this));
+    m_wallpaperPackage = Plasma::PluginLoader::self()->loadPackage("Wallpaper/Images");
 
     connect(&m_timer, SIGNAL(timeout()), this, SLOT(nextSlide()));
 
@@ -112,9 +115,73 @@ void Image::setRenderingMode(RenderingMode mode)
         QTimer::singleShot(200, this, SLOT(startSlideshow()));
         updateDirWatch(m_slidePaths);
         updateDirWatch(m_slidePaths);
+    } else {
+        // we need to reset the prefered image
+        setSingleImage();
+    }
+}
+
+float distance(const QSize& size, const QSize& desired)
+{
+    // compute difference of areas
+    float delta = size.width() * size.height() -
+                  desired.width() * desired.height();
+    // scale down to about 1.0
+    delta /= ((desired.width() * desired.height())+(size.width() * size.height()))/2;
+
+    // Difference of areas, slight preference to scale down
+    return delta >= 0.0 ? delta : -delta + 2.0;
+}
+
+QSize resSize(const QString &str)
+{
+    int index = str.indexOf('x');
+    if (index != -1) {
+        return QSize(str.left(index).toInt(),
+                     str.mid(index + 1).toInt());
     }
 
-    emit renderingModeChanged();
+    return QSize();
+}
+
+void Image::findPreferedImageInPackage(Plasma::Package &package)
+{
+    if (!package.isValid()) {
+        return;
+    }
+
+    QStringList images = package.entryList("images");
+    if (images.empty()) {
+        return;
+    }
+
+    //qDebug() << "wanted" << size;
+
+    // choose the nearest resolution
+    float best = FLT_MAX;
+
+    QString bestImage;
+    foreach (const QString &entry, images) {
+        QSize candidate = resSize(QFileInfo(entry).baseName());
+        if (candidate == QSize()) {
+            continue;
+        }
+
+        double dist = distance(candidate, m_targetSize);
+        //qDebug() << "candidate" << candidate << "distance" << dist;
+        if (bestImage.isEmpty() || dist < best) {
+            bestImage = entry;
+            best = dist;
+            //qDebug() << "best" << bestImage;
+            if (dist == 0) {
+                break;
+            }
+        }
+    }
+
+    //qDebug() << "best image" << bestImage;
+    package.removeDefinition("preferred");
+    package.addFileDefinition("preferred", "images/" + bestImage, i18n("Recommended wallpaper file"));
 }
 
 QSize Image::targetSize() const
@@ -152,8 +219,6 @@ void Image::setWidth(int w)
         emit sizeChanged(QSize(m_width, m_height));
     }
 }
-
-
 
 Plasma::Package *Image::package()
 {
@@ -323,6 +388,7 @@ void Image::setSingleImage()
     QString img;
     if (QDir::isAbsolutePath(m_wallpaper)) {
         m_wallpaperPackage.setPath(m_wallpaper);
+        findPreferedImageInPackage(m_wallpaperPackage);
         img = m_wallpaperPackage.filePath("preferred");
         m_wallpaperPath = m_wallpaperPackage.filePath("preferred");
 
@@ -340,6 +406,7 @@ void Image::setSingleImage()
             dir.cdUp();
 
             m_wallpaperPackage.setPath(m_wallpaper);
+            findPreferedImageInPackage(m_wallpaperPackage);
             img = m_wallpaperPackage.filePath("preferred");
             m_wallpaperPath = m_wallpaperPackage.filePath("preferred");
             Q_EMIT wallpaperPathChanged();
@@ -617,6 +684,7 @@ void Image::nextSlide()
     const QString currentPath = m_unseenSlideshowBackgrounds.at(m_currentSlide);
 
     m_wallpaperPackage.setPath(currentPath);
+    findPreferedImageInPackage(m_wallpaperPackage);
 
     m_timer.stop();
     m_timer.start(m_delay * 1000);
@@ -675,7 +743,7 @@ void Image::removeWallpaper(QString name)
 
     //Package plugin name
     if (!name.contains('/')) {
-        Plasma::Package p = Plasma::Package(new WallpaperPackage(this, this));
+        Plasma::Package p = Plasma::PluginLoader::self()->loadPackage("Wallpaper/Images");
         KJob *j = p.uninstall(name, localWallpapers);
         connect(j, &KJob::finished, [=] () {
             m_model->reload(m_usersWallpapers);

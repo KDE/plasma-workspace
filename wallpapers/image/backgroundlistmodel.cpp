@@ -40,7 +40,6 @@
 #include <Plasma/PluginLoader>
 
 #include "image.h"
-#include "wallpaperpackage.h"
 
 QSet<QString> BackgroundFinder::m_suffixes;
 
@@ -57,9 +56,9 @@ void ImageSizeFinder::run()
 }
 
 
-BackgroundListModel::BackgroundListModel(Image *listener, QObject *parent)
+BackgroundListModel::BackgroundListModel(Image *wallpaper, QObject *parent)
     : QAbstractListModel(parent),
-      m_structureParent(listener)
+      m_wallpaper(wallpaper)
 {
     connect(&m_dirwatch, SIGNAL(deleted(QString)), this, SLOT(removeBackground(QString)));
 
@@ -111,7 +110,7 @@ void BackgroundListModel::reload(const QStringList &selected)
         emit countChanged();
     }
 
-    if (!m_structureParent) {
+    if (!m_wallpaper) {
         return;
     }
 
@@ -123,7 +122,7 @@ void BackgroundListModel::reload(const QStringList &selected)
     const QStringList dirs = QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, "wallpapers/", QStandardPaths::LocateDirectory);
     qDebug() << " WP : -------" << dirs;
 
-    BackgroundFinder *finder = new BackgroundFinder(m_structureParent.data(), dirs);
+    BackgroundFinder *finder = new BackgroundFinder(m_wallpaper.data(), dirs);
     connect(finder, SIGNAL(backgroundsFound(QStringList,QString)), this, SLOT(backgroundsFound(QStringList,QString)));
     m_findToken = finder->token();
     finder->start();
@@ -139,7 +138,7 @@ void BackgroundListModel::backgroundsFound(const QStringList &paths, const QStri
 
 void BackgroundListModel::processPaths(const QStringList &paths)
 {
-    if (!m_structureParent) {
+    if (!m_wallpaper) {
         return;
     }
 
@@ -174,10 +173,12 @@ void BackgroundListModel::processPaths(const QStringList &paths)
         if ((info.isSymLink() || contentsIndex != -1) && paths.contains(file)) {
             continue;
         }
+
         if (!contains(file) && QFile::exists(file)) {
-            Plasma::Package package = Plasma::Package(new WallpaperPackage(m_structureParent.data(), m_structureParent.data()));
+            Plasma::Package package = Plasma::PluginLoader::self()->loadPackage("Wallpaper/Images");
             package.setPath(file);
             if (package.isValid()) {
+                m_wallpaper->findPreferedImageInPackage(package);
                 newPackages << package;
             }
         }
@@ -202,18 +203,18 @@ void BackgroundListModel::processPaths(const QStringList &paths)
 
 void BackgroundListModel::addBackground(const QString& path)
 {
-    if (!m_structureParent || !contains(path)) {
+    if (!m_wallpaper || !contains(path)) {
         if (!m_dirwatch.contains(path)) {
             m_dirwatch.addFile(path);
         }
         beginInsertRows(QModelIndex(), 0, 0);
-        //Plasma::Package pkg = Plasma::PluginLoader::self()->loadPackage(QString::fromLatin1("Plasma/Wallpaper"));
-        Plasma::Package pkg = Plasma::Package(new WallpaperPackage(0, 0));
+        Plasma::Package package = Plasma::PluginLoader::self()->loadPackage("Wallpaper/Images");
 
         m_removableWallpapers.insert(path);
-        pkg.setPath(path);
-        qDebug() << "WP Bckground added " << path << pkg.isValid();
-        m_packages.prepend(pkg);
+        package.setPath(path);
+        m_wallpaper->findPreferedImageInPackage(package);
+        qDebug() << "WP Bckground added " << path << package.isValid();
+        m_packages.prepend(package);
         endInsertRows();
         emit countChanged();
     }
@@ -282,7 +283,7 @@ QSize BackgroundListModel::bestSize(const Plasma::Package &package) const
 
 void BackgroundListModel::sizeFound(const QString &path, const QSize &s)
 {
-    if (!m_structureParent) {
+    if (!m_wallpaper) {
         return;
     }
 
@@ -392,7 +393,7 @@ QVariant BackgroundListModel::data(const QModelIndex &index, int role) const
 
 void BackgroundListModel::showPreview(const KFileItem &item, const QPixmap &preview)
 {
-    if (!m_structureParent) {
+    if (!m_wallpaper) {
         return;
     }
 
@@ -423,8 +424,8 @@ Plasma::Package BackgroundListModel::package(int index) const
     return m_packages.at(index);
 }
 
-BackgroundFinder::BackgroundFinder(Image *structureParent, const QStringList &paths)
-    : QThread(structureParent),
+BackgroundFinder::BackgroundFinder(Image *wallpaper, const QStringList &paths)
+    : QThread(wallpaper),
       m_paths(paths),
       m_token(QUuid().toString())
 {
@@ -459,8 +460,7 @@ void BackgroundFinder::run()
 
     QDir dir;
     dir.setFilter(QDir::AllDirs | QDir::Files | QDir::Hidden | QDir::Readable);
-    //Plasma::Package pkg = Plasma::PluginLoader::self()->loadPackage(QString::fromLatin1("Plasma/Wallpaper"));
-    Plasma::Package pkg = Plasma::Package(new WallpaperPackage(0, 0));
+    Plasma::Package package = Plasma::PluginLoader::self()->loadPackage("Wallpaper/Images");
 
     int i;
     for (i = 0; i < m_paths.count(); ++i) {
@@ -479,9 +479,9 @@ void BackgroundFinder::run()
 
                 const QString filePath = wp.filePath();
                 if (QFile::exists(filePath + QString::fromLatin1("/metadata.desktop"))) {
-                    pkg.setPath(filePath);
-                    if (pkg.isValid()) {
-                        papersFound << pkg.path();
+                    package.setPath(filePath);
+                    if (package.isValid()) {
+                        papersFound << package.path();
                         //qDebug() << "adding package" << wp.filePath();
                         continue;
                     }

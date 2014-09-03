@@ -106,7 +106,7 @@ protected Q_SLOTS:
 private:
     QSize bestSize(const Plasma::Package &package) const;
 
-    QWeakPointer<Image> m_structureParent;
+    QPointer<Image> m_wallpaper;
     QList<Plasma::Package> m_packages;
     QSet<QString> m_removableWallpapers;
     QHash<QString, QSize> m_sizeCache;
@@ -123,7 +123,7 @@ class BackgroundFinder : public QThread
     Q_OBJECT
 
 public:
-    BackgroundFinder(Image *structureParent, const QStringList &p);
+    BackgroundFinder(Image *wallpaper, const QStringList &p);
     ~BackgroundFinder();
 
     QString token() const;

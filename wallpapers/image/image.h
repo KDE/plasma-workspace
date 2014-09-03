@@ -105,6 +105,8 @@ class Image : public QObject
         QStringList slidePaths() const;
         void setSlidePaths(const QStringList &slidePaths);
 
+        void findPreferedImageInPackage(Plasma::Package &package);
+
     public Q_SLOTS:
         void nextSlide();
         void removeWallpaper(QString name);
@@ -147,8 +149,6 @@ class Image : public QObject
         void useSingleImageDefaults();
 
     private:
-        static bool s_startupResumed;
-        static bool s_startupSuspended;
 
         int m_delay;
         QStringList m_dirs;
