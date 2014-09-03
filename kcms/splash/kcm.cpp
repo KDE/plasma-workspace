@@ -86,6 +86,7 @@ QList<Plasma::Package> KCMSplashScreen::availablePackages(const QString &compone
     for (const QString &path : paths) {
         Plasma::Package pkg = Plasma::PluginLoader::self()->loadPackage("Plasma/LookAndFeel");
         pkg.setPath(path);
+        pkg.setFallbackPackage(Plasma::Package());
         if (component.isEmpty() || !pkg.filePath(component.toUtf8()).isEmpty()) {
             packages << pkg;
         }

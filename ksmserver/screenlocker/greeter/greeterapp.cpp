@@ -23,7 +23,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include "sessions.h"
 #include "authenticator.h"
 #include "keyboardlayout.h"
-#include "../../../lookandfeelaccess/lookandfeelaccess.h"
 
 // workspace
 #include <kworkspace.h>
@@ -104,9 +103,17 @@ void UnlockApp::initialize()
     KCrash::setDrKonqiEnabled(false);
 
     KScreenSaverSettings::self()->readConfig();
-    LookAndFeelAccess access;
-    access.setTheme(KScreenSaverSettings::theme());
-    m_mainQmlPath = QUrl::fromLocalFile(access.filePath("lockscreenmainscript"));
+    Plasma::Package package = Plasma::PluginLoader::self()->loadPackage("Plasma/LookAndFeel");
+    KConfigGroup cg(KSharedConfig::openConfig("kdeglobals"), "KDE");
+    const QString packageName = cg.readEntry("LookAndFeelPackage", QString());
+    if (!packageName.isEmpty()) {
+        package.setPath(packageName);
+    }
+    if (!KScreenSaverSettings::theme().isEmpty()) {
+        package.setPath(KScreenSaverSettings::theme());
+    }
+
+    m_mainQmlPath = QUrl::fromLocalFile(package.filePath("lockscreenmainscript"));
 
     installEventFilter(this);
 }

@@ -20,8 +20,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 *********************************************************************/
 
 #include <KCModule>
-
-#include "../../../lookandfeelaccess/lookandfeelaccess.h"
+#include <Plasma/Package>
 
 class QQuickWidget;
 class QStandardItemModel;
@@ -38,6 +37,8 @@ public:
         ScreenhotRole
     };
     explicit ScreenLockerKcm(QWidget *parent = nullptr, const QVariantList& args = QVariantList());
+
+    QList<Plasma::Package> availablePackages(const QString &component);
 
     QStandardItemModel *lockerModel();
 
@@ -56,5 +57,5 @@ private:
     QStandardItemModel *m_model;
     QString m_selectedPlugin;
     QQuickWidget *m_quickWidget;
-    LookAndFeelAccess m_access;
+    Plasma::Package m_package;
 };
