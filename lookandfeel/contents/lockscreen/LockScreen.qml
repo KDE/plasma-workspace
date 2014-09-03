@@ -23,6 +23,7 @@ import QtQuick.Controls 1.1
 import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.kscreenlocker 1.0
+import org.kde.plasma.workspace.keyboardlayout 1.0
 import "../components"
 
 Image {

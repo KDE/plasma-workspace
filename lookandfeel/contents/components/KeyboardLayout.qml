@@ -22,7 +22,7 @@ import QtQuick 2.1
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
 
-import org.kde.kscreenlocker 1.0
+import org.kde.plasma.workspace.keyboardlayout 1.0
 
 PlasmaComponents.ToolButton {
     id: kbLayoutButton
