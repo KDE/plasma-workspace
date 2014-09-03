@@ -369,19 +369,16 @@ void Image::addUrls(const QList<QUrl> &urls)
 
 void Image::addUrl(const QUrl &url, bool setAsCurrent)
 {
-    ///qDebug() << "droppage!" << url << url.isLocalFile();
+    //qDebug() << "droppage!" << url << url.isLocalFile() << setAsCurrent;
+    QString path;
     if (url.isLocalFile()) {
-        const QString path = url.toLocalFile();
-        if (setAsCurrent) {
-            setWallpaper(path);
-        } else {
-            if (m_mode != SingleImage) {
-                // it's a slide show, add it to the slide show
-                m_slideshowBackgrounds.append(path);
-                m_unseenSlideshowBackgrounds.append(path);
-            }
-            // always add it to the user papers, though
-            addUsersWallpaper(path);
+        path = url.toLocalFile();
+    } else if (url.scheme().isEmpty()) {
+        path = QStandardPaths::locate(QStandardPaths::GenericDataLocation,
+                                      QLatin1String("wallpapers/") + url.path(),
+                                      QStandardPaths::LocateDirectory);
+        if (path.isEmpty()) {
+            return;
         }
     } else {
         QString wallpaperPath = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QLatin1String("wallpapers/") + url.path();
@@ -394,6 +391,20 @@ void Image::addUrl(const QUrl &url, bool setAsCurrent)
                 connect(job, SIGNAL(result(KJob*)), this, SLOT(addWallpaperRetrieved(KJob*)));
             }
         }
+
+        return;
+    }
+
+    if (setAsCurrent) {
+        setWallpaper(path);
+    } else {
+        if (m_mode != SingleImage) {
+            // it's a slide show, add it to the slide show
+            m_slideshowBackgrounds.append(path);
+            m_unseenSlideshowBackgrounds.append(path);
+        }
+        // always add it to the user papers, though
+        addUsersWallpaper(path);
     }
 }
 
