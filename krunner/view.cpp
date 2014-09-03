@@ -39,10 +39,9 @@
 #include <kdeclarative/qmlobject.h>
 
 #include <Plasma/Package>
+#include <Plasma/PluginLoader>
 
 #include "appadaptor.h"
-
-#include "../lookandfeelaccess/lookandfeelaccess.h"
 
 View::View(QWindow *)
     : PlasmaQuick::Dialog(),
@@ -80,8 +79,15 @@ View::View(QWindow *)
 
     m_qmlObj = new KDeclarative::QmlObject(this);
     m_qmlObj->setInitializationDelayed(true);
-    LookAndFeelAccess access;
-    m_qmlObj->setSource(QUrl::fromLocalFile(access.filePath("runcommandmainscript")));
+
+    Plasma::Package package = Plasma::PluginLoader::self()->loadPackage("Plasma/LookAndFeel");
+    KConfigGroup cg(KSharedConfig::openConfig("kdeglobals"), "KDE");
+    const QString packageName = cg.readEntry("LookAndFeelPackage", QString());
+    if (!packageName.isEmpty()) {
+        package.setPath(packageName);
+    }
+
+    m_qmlObj->setSource(QUrl::fromLocalFile(package.filePath("runcommandmainscript")));
     m_qmlObj->engine()->rootContext()->setContextProperty("runnerWindow", this);
     m_qmlObj->completeInitialization();
     setMainItem(qobject_cast<QQuickItem *>(m_qmlObj->rootObject()));

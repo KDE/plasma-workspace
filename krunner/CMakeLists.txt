@@ -2,7 +2,6 @@ set(krunner_SRCS
     #    fullview.cpp
     main.cpp
     view.cpp
-    ../lookandfeelaccess/lookandfeelaccess.cpp
 )
 
 find_package(KF5Declarative ${KF5_MIN_VERSION} REQUIRED)

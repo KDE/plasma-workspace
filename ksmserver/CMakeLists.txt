@@ -23,7 +23,6 @@ set(ksmserver_KDEINIT_SRCS
     startup.cpp
     shutdown.cpp
     client.cpp
-    ../lookandfeelaccess/lookandfeelaccess.cpp
 #TODO: figure out what do to with these effects
 #    logouteffect.cpp
 #    fadeeffect.cpp
