@@ -68,9 +68,13 @@ void TimeSource::setTimeZone(const QString &tz)
     if (tzParts.count() == 1) {
         // no '/' so just set it as the city
         setData(I18N_NOOP("Timezone City"), trTimezone);
-    } else {
+    } else if (tzParts.count() == 2) {
         setData(I18N_NOOP("Timezone Continent"), tzParts.value(0));
         setData(I18N_NOOP("Timezone City"), tzParts.value(1));
+    } else { // for zones like America/Argentina/Buenos_Aires
+        setData(I18N_NOOP("Timezone Continent"), tzParts.value(0));
+        setData(I18N_NOOP("Timezone Country"), tzParts.value(1));
+        setData(I18N_NOOP("Timezone City"), tzParts.value(2));
     }
 
     updateTime();
