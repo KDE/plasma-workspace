@@ -206,6 +206,8 @@ protected Q_SLOTS:
     void gotNewStartup(const KStartupInfoId&, const KStartupInfoData&);
     //* @internal
     void gotStartupChange(const KStartupInfoId&, const KStartupInfoData&);
+    //* @internal
+    void startupDestroyed(QObject*);
 
     //* @internal
     void taskChanged(::TaskManager::TaskChanges changes);

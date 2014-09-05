@@ -34,6 +34,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 namespace TaskManager
 {
 
+class GroupManager;
 
 /**
  * Wrapper class so we do not have to use the Task class directly and the Task* remains guarded
@@ -85,6 +86,7 @@ public:
     void setLauncherUrl(const QUrl &url);
     void setLauncherUrl(const AbstractGroupableItem *item);
     QUrl launcherUrl() const;
+    static QUrl launcherUrlFromTask(GroupManager *groupManager, Task *task, Startup *startup = 0);
     void resetLauncherCheck();
 
 public Q_SLOTS:

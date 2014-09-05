@@ -93,12 +93,14 @@ public:
     void checkScreenChange();
     void taskDestroyed(QObject *item);
     void startupItemDestroyed(AbstractGroupableItem *);
+    void startupDestroyed(QObject *);
     void checkIfFull();
     void actuallyCheckIfFull();
     bool addTask(::TaskManager::Task *);
     void removeTask(::TaskManager::Task *);
     void addStartup(::TaskManager::Startup *);
     void removeStartup(::TaskManager::Startup *);
+    void actuallyRemoveStartup();
     void sycocaChanged(const QStringList &types);
     void launcherVisibilityChange();
     void checkLauncherVisibility(LauncherItem *launcher);
@@ -124,6 +126,7 @@ public:
 
     QHash<QString, QHash<int, TaskGroup*> > rootGroups; //container for groups
     QList<LauncherItem *> launchers;
+    QList< ::TaskManager::Startup *> startupRemoveList;
     int currentDesktop;
     QString currentActivity;
 
@@ -218,32 +221,80 @@ void GroupManagerPrivate::actuallyReloadTasks()
     emit q->reload();
 }
 
-void GroupManagerPrivate::addStartup(::TaskManager::Startup *task)
+void GroupManagerPrivate::addStartup(::TaskManager::Startup *startup)
 {
-    //kDebug();
-    if (!startupList.contains(task)) {
-        TaskItem *item = new TaskItem(q, task);
-        startupList.insert(task, item);
-        currentRootGroup()->add(item);
-        QObject::connect(item, SIGNAL(destroyed(AbstractGroupableItem*)),
-                         q, SLOT(startupItemDestroyed(AbstractGroupableItem*)));
-    }
-}
-
-void GroupManagerPrivate::removeStartup(::TaskManager::Startup *task)
-{
-    //kDebug();
-    if (!startupList.contains(task)) {
-        qWarning() << "invalid startup task";
+    if (startupList.contains(startup)) {
         return;
     }
 
-    TaskItem *item = startupList.take(task);
+    QHash<Startup *, TaskItem *>::iterator it = startupList.begin();
+    QHash<Startup *, TaskItem *>::iterator itEnd = startupList.end();
+
+    while (it != itEnd) {
+        if (it.key()->desktopId() == startup->desktopId() && it.key()->bin() == startup->bin()) {
+            return;
+        }
+        ++it;
+    }
+
+    foreach(const AbstractGroupableItem *item, currentRootGroup()->members()) {
+        if (item->itemType() == TaskItemType)
+        {
+            const TaskItem *task = static_cast<const TaskItem* >(item);
+
+            if (task->launcherUrl().toLocalFile() == startup->desktopId()
+                || task->taskName().toLower() == startup->bin()) {
+                return;
+            }
+        }
+    }
+
+    TaskItem *item = new TaskItem(q, startup);
+
+    foreach (LauncherItem * launcher, launchers) {
+        if (launcher->associateItemIfMatches(item)) {
+            // Task demands attention, so is to be shown, therefore hide the launcher...
+            currentRootGroup()->remove(launcher);
+        }
+    }
+
+    startupList.insert(startup, item);
+    currentRootGroup()->add(item);
+    QObject::connect(startup, SIGNAL(destroyed(QObject*)), q, SLOT(startupDestroyed(QObject*)));
+    QObject::connect(item, SIGNAL(destroyed(AbstractGroupableItem*)),
+                        q, SLOT(startupItemDestroyed(AbstractGroupableItem*)));
+}
+
+void GroupManagerPrivate::removeStartup(::TaskManager::Startup *startup)
+{
+    startupRemoveList.append(startup);
+    QTimer::singleShot(2000, q, SLOT(actuallyRemoveStartup()));
+}
+
+void GroupManagerPrivate::actuallyRemoveStartup()
+{
+    if (startupRemoveList.isEmpty()) {
+        return;
+    }
+
+    ::TaskManager::Startup *startup = startupRemoveList.takeFirst();
+
+    if (!startupList.contains(startup)) {
+        return;
+    }
+
+    TaskItem *item = startupList.take(startup);
     if (item->parentGroup()) {
         item->parentGroup()->remove(item);
     }
 
     item->setTaskPointer(0);
+
+    foreach (LauncherItem * launcher, launchers) {
+        launcher->removeItemIfAssociated(item);
+    }
+
+    delete startup;
 }
 
 bool GroupManagerPrivate::addTask(::TaskManager::Task *task)
@@ -320,15 +371,19 @@ bool GroupManagerPrivate::addTask(::TaskManager::Task *task)
         TaskItem *startupItem = 0;
         QHash<Startup *, TaskItem *>::iterator it = startupList.begin();
         QHash<Startup *, TaskItem *>::iterator itEnd = startupList.end();
+        const QString desktopId = TaskItem::launcherUrlFromTask(q, task).toLocalFile();
         while (it != itEnd) {
-            if (it.key()->matchesWindow(task->window())) {
+            if (it.key()->matchesWindow(task->window()) || it.key()->desktopId() == desktopId || it.key()->bin() == task->className()) {
                 //kDebug() << "startup task found";
                 item = startupItem = it.value();
+                ::TaskManager::Startup *startup = it.key();
+                startupRemoveList.removeAll(startup);
                 startupList.erase(it);
                 QObject::disconnect(item, 0, q, 0);
                 if (!skip) {
                     item->setTaskPointer(task);
                 }
+                delete startup;
                 break;
             }
             ++it;
@@ -406,6 +461,28 @@ void GroupManagerPrivate::taskDestroyed(QObject *item)
     Task *task = static_cast<Task*>(item);
     if (showOnlyCurrentScreen) {
         geometryTasks.remove(task);
+    }
+}
+
+void GroupManagerPrivate::startupDestroyed(QObject *obj)
+{
+    ::TaskManager::Startup *startup = static_cast< ::TaskManager::Startup *>(obj);
+
+    if (!startupList.contains(startup)) {
+        return;
+    }
+
+    TaskItem *item = startupList.take(startup);
+    startupRemoveList.removeAll(startup);
+
+    if (item->parentGroup()) {
+        item->parentGroup()->remove(item);
+    }
+
+    item->setTaskPointer(0);
+
+    foreach (LauncherItem * launcher, launchers) {
+        launcher->removeItemIfAssociated(item);
     }
 }
 

@@ -109,6 +109,8 @@ void TaskItem::setTaskPointer(Task *task)
         d->launcherUrl.clear();
     }
 
+    resetLauncherCheck();
+
     if (differentTask) {
         if (d->task) {
             disconnect(d->task.data(), 0, this, 0);
@@ -559,24 +561,35 @@ QUrl TaskItem::launcherUrl() const
         return d->launcherUrl;
     }
 
+    // Set a flag so that we remeber that we have already checked for a launcher. This is becasue if we fail, then
+    // we will keep on failing so the isEmpty()  check above is not enough.
+    d->checkedForLauncher = true;
+
+    if (d->task || d->startupTask) {
+        d->launcherUrl = launcherUrlFromTask(static_cast<GroupManager *>(parent()), d->task.data(), d->startupTask.data());
+    }
+
+    return d->launcherUrl;
+}
+
+QUrl TaskItem::launcherUrlFromTask(GroupManager *groupManager, Task *task, Startup *startup)
+{
+    QUrl launcherUrl;
+
     // Search for applications which are executable and case-insensitively match the windowclass of the task and
     // See http://techbase.kde.org/Development/Tutorials/Services/Traders#The_KTrader_Query_Language
     KService::List services;
     bool triedPid = false;
 
-    // Set a flag so that we remeber that we have already checked for a launcher. This is becasue if we fail, then
-    // we will keep on failing so the isEmpty()  check above is not enough.
-    d->checkedForLauncher = true;
-
-    if (d->task && !(d->task.data()->classClass().isEmpty() && d->task.data()->className().isEmpty())) {
+    if (task && !(task->classClass().isEmpty() && task->className().isEmpty())) {
 
         // For KCModules, if we matched on window class, etc, we would end up matching to kcmshell4 - but we are more than likely
         // interested in the actual control module. Therefore we obtain this via the commandline. This commandline may contain
         // "kdeinit4:" or "[kdeinit]", so we remove these first.
-        if ("Kcmshell4" == d->task.data()->classClass()) {
-            d->launcherUrl = getServiceLauncherUrl(d->task.data()->pid(), "KCModule", QStringList() << "kdeinit4:" << "[kdeinit]");
-            if (!d->launcherUrl.isEmpty()) {
-                return d->launcherUrl;
+        if ("Kcmshell4" == task->classClass()) {
+            launcherUrl = getServiceLauncherUrl(task->pid(), "KCModule", QStringList() << "kdeinit4:" << "[kdeinit]");
+            if (!launcherUrl.isEmpty()) {
+                return launcherUrl;
             }
         }
 
@@ -587,31 +600,31 @@ QUrl TaskItem::launcherUrl() const
 
         // Some apps have different launchers depending upon commandline...
         QStringList matchCommandLineFirst = set.readEntry("MatchCommandLineFirst", QStringList());
-        if (!d->task.data()->classClass().isEmpty() && matchCommandLineFirst.contains(d->task.data()->classClass())) {
+        if (!task->classClass().isEmpty() && matchCommandLineFirst.contains(task->classClass())) {
             triedPid = true;
-            services = getServicesViaPid(d->task.data()->pid());
+            services = getServicesViaPid(task->pid());
         }
         // Try to match using className also
-        if (!d->task.data()->className().isEmpty() && matchCommandLineFirst.contains("::"+d->task.data()->className())) {
+        if (!task->className().isEmpty() && matchCommandLineFirst.contains("::"+task->className())) {
             triedPid = true;
-            services = getServicesViaPid(d->task.data()->pid());
+            services = getServicesViaPid(task->pid());
         }
 
         // If the user has manualy set a mapping, respect this first...
-        QString mapped(grp.readEntry(d->task.data()->classClass() + "::" + d->task.data()->className(), QString()));
+        QString mapped(grp.readEntry(task->classClass() + "::" + task->className(), QString()));
 
         if (mapped.endsWith(".desktop")) {
-            d->launcherUrl = QUrl(mapped);
-            return d->launcherUrl;
+            launcherUrl = mapped;
+            return launcherUrl;
         }
 
-        if (!d->task.data()->classClass().isEmpty()) {
+        if (!task->classClass().isEmpty()) {
             if (mapped.isEmpty()) {
-                mapped = grp.readEntry(d->task.data()->classClass(), QString());
+                mapped = grp.readEntry(task->classClass(), QString());
 
                 if (mapped.endsWith(".desktop")) {
-                    d->launcherUrl = QUrl(mapped);
-                    return d->launcherUrl;
+                    launcherUrl = mapped;
+                    return launcherUrl;
                 }
             }
 
@@ -619,8 +632,8 @@ QUrl TaskItem::launcherUrl() const
             // So, Settings/ManualOnly lists window classes where the user will always have to manualy set the launcher...
             QStringList manualOnly = set.readEntry("ManualOnly", QStringList());
 
-            if (!d->task.data()->classClass().isEmpty() && manualOnly.contains(d->task.data()->classClass())) {
-                return d->launcherUrl;
+            if (!task->classClass().isEmpty() && manualOnly.contains(task->classClass())) {
+                return launcherUrl;
             }
 
             if (!mapped.isEmpty()) {
@@ -631,44 +644,44 @@ QUrl TaskItem::launcherUrl() const
                 services = KServiceTypeTrader::self()->query("Application", QString("exist Exec and ('%1' =~ Name)").arg(mapped));
             }
 
-            if (services.empty() && qobject_cast<GroupManager *>(parent())) {
-                QUrl savedUrl = static_cast<GroupManager *>(parent())->launcherForWmClass(d->task.data()->classClass());
+            if (services.empty() && groupManager) {
+                QUrl savedUrl = groupManager->launcherForWmClass(task->classClass());
                 if (savedUrl.isValid()) {
-                    d->launcherUrl = savedUrl;
-                    return d->launcherUrl;
+                    launcherUrl = savedUrl;
+                    return launcherUrl;
                 }
             }
 
             // To match other docks (docky, unity, etc.) attempt to match on DesktopEntryName first...
             if (services.empty()) {
-                services = KServiceTypeTrader::self()->query("Application", QString("exist Exec and ('%1' =~ DesktopEntryName)").arg(d->task.data()->classClass()));
+                services = KServiceTypeTrader::self()->query("Application", QString("exist Exec and ('%1' =~ DesktopEntryName)").arg(task->classClass()));
             }
 
             // Try StartupWMClass
             if (services.empty()) {
-                services = KServiceTypeTrader::self()->query("Application", QString("exist Exec and ('%1' =~ StartupWMClass)").arg(d->task.data()->classClass()));
+                services = KServiceTypeTrader::self()->query("Application", QString("exist Exec and ('%1' =~ StartupWMClass)").arg(task->classClass()));
             }
 
             // Try 'Name' - unfortunately this can be translated, so has a good chance of failing! (As it does for KDE's own "System Settings" (even in English!!))
             if (services.empty()) {
-                services = KServiceTypeTrader::self()->query("Application", QString("exist Exec and ('%1' =~ Name)").arg(d->task.data()->classClass()));
+                services = KServiceTypeTrader::self()->query("Application", QString("exist Exec and ('%1' =~ Name)").arg(task->classClass()));
             }
         }
 
         // Ok, absolute *last* chance, try matching via pid (but only if we have not already tried this!)...
         if (services.empty() && !triedPid) {
-            services = getServicesViaPid(d->task.data()->pid());
+            services = getServicesViaPid(task->pid());
         }
     }
 
-    if (services.empty() && isStartupItem()) {
+    if (services.empty() && startup) {
         // Try to match via desktop filename...
-        if (!startup()->desktopId().isNull() && startup()->desktopId().endsWith(".desktop")) {
-            if (startup()->desktopId().startsWith("/")) {
-                d->launcherUrl = QUrl::fromLocalFile(startup()->desktopId());
-                return d->launcherUrl;
+        if (!startup->desktopId().isNull() && startup->desktopId().endsWith(".desktop")) {
+            if (startup->desktopId().startsWith("/")) {
+                launcherUrl = QUrl::fromLocalFile(startup->desktopId());
+                return launcherUrl;
             } else {
-                QString desktopName = startup()->desktopId();
+                QString desktopName = startup->desktopId();
 
                 if (desktopName.endsWith(".desktop")) {
                     desktopName = desktopName.mid(desktopName.length() - 8);
@@ -679,13 +692,13 @@ QUrl TaskItem::launcherUrl() const
         }
 
         // Try StartupWMClass
-        if (services.empty() && !startup()->wmClass().isNull()) {
-            services = KServiceTypeTrader::self()->query("Application", QString("exist Exec and ('%1' =~ StartupWMClass)").arg(startup()->wmClass()));
+        if (services.empty() && !startup->wmClass().isNull()) {
+            services = KServiceTypeTrader::self()->query("Application", QString("exist Exec and ('%1' =~ StartupWMClass)").arg(startup->wmClass()));
         }
 
         // Try via name...
-        if (services.empty() && !startup()->text().isNull()) {
-            services = KServiceTypeTrader::self()->query("Application", QString("exist Exec and ('%1' =~ Name)").arg(startup()->text()));
+        if (services.empty() && !startup->text().isNull()) {
+            services = KServiceTypeTrader::self()->query("Application", QString("exist Exec and ('%1' =~ Name)").arg(startup->text()));
         }
     }
 
@@ -696,11 +709,11 @@ QUrl TaskItem::launcherUrl() const
         }
 
         if (!path.isEmpty()) {
-            d->launcherUrl = QUrl::fromLocalFile(path);
+            launcherUrl = QUrl::fromLocalFile(path);
         }
     }
 
-    return d->launcherUrl;
+    return launcherUrl;
 }
 
 void TaskItem::resetLauncherCheck()

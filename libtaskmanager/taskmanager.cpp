@@ -422,6 +422,7 @@ void TaskManager::currentDesktopChanged(int desktop)
 void TaskManager::gotNewStartup(const KStartupInfoId& id, const KStartupInfoData& data)
 {
     Startup *s = new Startup(id, data, 0);
+    connect(s, SIGNAL(destroyed(QObject*)), this, SLOT(startupDestroyed(QObject*)));
     d->startups.append(s);
     emit startupAdded(s);
 }
@@ -442,9 +443,13 @@ void TaskManager::killStartup(const KStartupInfoId& id)
         if (startup->id() == id) {
             d->startups.removeAll(startup);
             emit startupRemoved(startup);
-            delete startup;
         }
     }
+}
+
+void TaskManager::startupDestroyed(QObject* obj)
+{
+    d->startups.removeAll(static_cast<Startup *>(obj));
 }
 
 QString TaskManager::desktopName(int desk) const
