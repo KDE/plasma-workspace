@@ -978,7 +978,11 @@ bool GroupManager::separateLaunchers() const
 
 void GroupManager::setSeparateLaunchers(bool s)
 {
-    d->separateLaunchers = s;
+    if (d->separateLaunchers != s) {
+        d->separateLaunchers = s;
+
+        emit separateLaunchersChanged(s);
+    }
 }
 
 bool GroupManager::forceGrouping() const
@@ -988,7 +992,11 @@ bool GroupManager::forceGrouping() const
 
 void GroupManager::setForceGrouping(bool s)
 {
-    d->forceGrouping = s;
+    if (d->forceGrouping != s) {
+        d->forceGrouping = s;
+
+        emit forceGroupingChanged(s);
+    }
 }
 
 void GroupManager::createConfigurationInterface(KConfigDialog *parent)
