@@ -74,9 +74,9 @@ Item {
             } else if (p >= 85) {
                 return "Fill90";
             } else if (p >= 75) {
-                return "Fill90";
-            } else if (p >= 65) {
                 return "Fill80";
+            } else if (p >= 65) {
+                return "Fill70";
             } else if (p >= 55) {
                 return "Fill60";
             } else if (p >= 45) {
