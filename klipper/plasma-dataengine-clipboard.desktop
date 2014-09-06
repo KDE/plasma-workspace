@@ -2,6 +2,7 @@
 Name=Clipboard
 Name[ca]=Porta-retalls
 Name[cs]=Schránka
+Name[de]=Zwischenablage
 Name[en_GB]=Clipboard
 Name[es]=Portapapeles
 Name[fi]=Leikepöytä
@@ -26,6 +27,7 @@ Name[x-test]=xxClipboardxx
 Comment=Clipboard Tool.
 Comment[ca]=Eina de porta-retalls.
 Comment[cs]=Program pro práci se schránkou.
+Comment[de]=Verwaltung der Zwischenablage.
 Comment[en_GB]=Clipboard Tool.
 Comment[es]=Herramienta del portapapeles.
 Comment[fi]=Leikepöytätyökalu.
