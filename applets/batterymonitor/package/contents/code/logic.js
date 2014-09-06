@@ -151,7 +151,7 @@ function iconForBattery(batteryData,pluggedIn) {
     }
 }
 
-function updateTooltip() {
+function updateTooltip(remainingTime) {
     if (powermanagementDisabled) {
         batteries.tooltipSubText = i18n("Power management is disabled");
     } else {
@@ -169,7 +169,13 @@ function updateTooltip() {
         batteries.tooltipMainText = i18n("%1%. Charging", batteries.cumulativePercent);
     } else {
         batteries.tooltipImage = "battery-060"
-        batteries.tooltipMainText = i18n("%1% Battery Remaining", batteries.cumulativePercent);
+
+        if (remainingTime > 0) {
+            // The string returned by formatSpelloutDuration looks really ugly, hence lowercase "remaining" to match it.
+            batteries.tooltipMainText = i18nc("%1 is remaining time, %2 is percentage", "%1 remaining (%2%)", KCoreAddons.Format.formatSpelloutDuration(remainingTime), batteries.cumulativePercent)
+        } else {
+            batteries.tooltipMainText = i18n("%1% Battery Remaining", batteries.cumulativePercent);
+        }
     }
 }
 

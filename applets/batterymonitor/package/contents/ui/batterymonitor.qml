@@ -23,6 +23,7 @@ import QtQuick 2.0
 import QtQuick.Layouts 1.1
 import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
+import org.kde.kcoreaddons 1.0 as KCoreAddons
 import org.kde.plasma.private.battery 1.0
 import "plasmapackage:/code/logic.js" as Logic
 
@@ -44,6 +45,8 @@ Item {
     property int screenBrightnessPercentage
     property int keyboardBrightness
     property int keyboardBrightnessPercentage
+
+    property int remainingTime: Number(pmSource.data["Battery"]["Remaining msec"])
 
     onScreenBrightnessChanged: {
         if (disableBrightnessUpdate) {
@@ -82,7 +85,7 @@ Item {
     function updateLogic() {
         Logic.updateCumulative();
         plasmoid.status = Logic.plasmoidStatus();
-        Logic.updateTooltip();
+        Logic.updateTooltip(batterymonitor.remainingTime);
     }
 
     Plasmoid.compactRepresentation: CompactRepresentation {
@@ -107,7 +110,10 @@ Item {
         onSourceRemoved: {
             disconnectSource(source);
         }
-        onDataChanged: Logic.updateBrightness(batterymonitor, pmSource)
+        onDataChanged: {
+            Logic.updateBrightness(batterymonitor, pmSource)
+            Logic.updateTooltip(batterymonitor.remainingTime)
+        }
     }
 
     property QtObject batteries: PlasmaCore.SortFilterModel {
@@ -149,8 +155,6 @@ Item {
 
         isBrightnessAvailable: pmSource.data["PowerDevil"]["Screen Brightness Available"] ? true : false
         isKeyboardBrightnessAvailable: pmSource.data["PowerDevil"]["Keyboard Brightness Available"] ? true : false
-
-        remainingTime: Number(pmSource.data["Battery"]["Remaining msec"])
 
         pluggedIn: pmSource.data["AC Adapter"] != undefined && pmSource.data["AC Adapter"]["Plugged in"]
 

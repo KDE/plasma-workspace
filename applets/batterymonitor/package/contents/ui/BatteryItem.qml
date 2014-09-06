@@ -36,7 +36,6 @@ Item {
     // NOTE: According to the UPower spec this property is only valid for primary batteries, however
     // UPower seems to set the Present property false when a device is added but not probed yet
     property bool isPresent: model["Plugged in"]
-    property int remainingTime
 
     PlasmaCore.ToolTipArea {
         anchors.fill: parent
@@ -77,7 +76,7 @@ Item {
                 }
                 PlasmaComponents.Label {
                     wrapMode: Text.NoWrap
-                    text: Logic.batteryItemToolTip(model, dialogItem.remainingTime)
+                    text: Logic.batteryItemToolTip(model, batterymonitor.remainingTime)
                     textFormat: Text.RichText // for table to work
                     opacity: 0.5
                 }
