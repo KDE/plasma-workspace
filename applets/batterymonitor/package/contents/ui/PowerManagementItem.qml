@@ -55,8 +55,11 @@ FocusScope {
     MouseArea {
         anchors.fill: parent
 
-        onReleased: pmCheckBox.released();
-        onPressed: pmCheckBox.forceActiveFocus();
+        // We can no longer access the hovered/released methods of CheckBox due to the QtQuick.Controls port
+        onClicked: {
+            pmCheckBox.forceActiveFocus()
+            pmCheckBox.checked = !pmCheckBox.checked
+        }
     }
 }
 
