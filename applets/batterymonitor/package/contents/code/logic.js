@@ -171,8 +171,7 @@ function updateTooltip(remainingTime) {
         batteries.tooltipImage = "battery-060"
 
         if (remainingTime > 0) {
-            // The string returned by formatSpelloutDuration looks really ugly, hence lowercase "remaining" to match it.
-            batteries.tooltipMainText = i18nc("%1 is remaining time, %2 is percentage", "%1 remaining (%2%)", KCoreAddons.Format.formatSpelloutDuration(remainingTime), batteries.cumulativePercent)
+            batteries.tooltipMainText = i18nc("%1 is remaining time, %2 is percentage", "%1 Remaining (%2%)", KCoreAddons.Format.formatDuration(remainingTime), batteries.cumulativePercent)
         } else {
             batteries.tooltipMainText = i18n("%1% Battery Remaining", batteries.cumulativePercent);
         }
