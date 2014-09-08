@@ -63,11 +63,12 @@ void WindowedWidgetsRunner::match(Plasma::RunnerContext &context)
     foreach (const KPluginInfo &info, Plasma::PluginLoader::self()->listAppletInfo(QString())) {
         KService::Ptr service = info.service();
 
-        if ((service->name().contains(term, Qt::CaseInsensitive) ||
+        if (((service->name().contains(term, Qt::CaseInsensitive) ||
              service->genericName().contains(term, Qt::CaseInsensitive) ||
              service->comment().contains(term, Qt::CaseInsensitive)) ||
              service->categories().contains(term, Qt::CaseInsensitive) ||
-             term.startsWith(i18nc("Note this is a KRunner keyword", "mobile applications"))) {
+             term.startsWith(i18nc("Note this is a KRunner keyword", "mobile applications"))) &&
+             !info.property("NoDisplay").toBool()) {
 
             Plasma::QueryMatch match(this);
             setupMatch(service, match);
