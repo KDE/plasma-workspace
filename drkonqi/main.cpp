@@ -72,7 +72,7 @@ int main(int argc, char* argv[])
                          "gkiagia@users.sourceforge.net");
     aboutData.addAuthor(i18nc("@info:credit","A. L. Spehr"), QString(),
                          "spehr@kde.org");
-    aboutData.setProgramIconName("tools-report-bug");
+    qa.setWindowIcon(QIcon::fromTheme("tools-report-bug"));
 
     QCommandLineParser parser;
     parser.setApplicationDescription(description);

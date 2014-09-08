@@ -27,6 +27,7 @@
 #include <KDBusService>
 #include <QDebug>
 #include <QApplication>
+#include <QIcon>
 
 #include <signal.h>
 
@@ -65,7 +66,7 @@ extern "C" Q_DECL_EXPORT int kdemain(int argc, char **argv)
     aboutdata.addAuthor(i18n("Andreas Hartmetz"),i18n("Maintainer"),"ahartmetz@gmail.com");
     aboutdata.addAuthor(i18n("Michael Jansen"),i18n("Maintainer"),"kde@michael-jansen.biz");
 
-    aboutdata.setProgramIconName("kglobalaccel");
+    app.setWindowIcon(QIcon::fromTheme("kglobalaccel"));
     KAboutData::setApplicationData(aboutdata);
 
     // check if kglobalaccel is disabled
