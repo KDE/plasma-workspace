@@ -28,15 +28,13 @@ import "plasmapackage:/code/logic.js" as Logic
 
 MouseArea {
     id: root
-    Layout.minimumWidth: isConstrained() ? units.iconSizes.medium : 24 // NOTE: Keep in sync with systray
-    Layout.minimumHeight: isConstrained() ? units.iconSizes.medium * view.count : 24
+    Layout.minimumWidth: isConstrained ? units.iconSizes.medium : 24 // NOTE: Keep in sync with systray
+    Layout.minimumHeight: isConstrained ? units.iconSizes.medium * view.count : 24
     property real itemSize: Math.min(root.height, root.width/view.count)
 
     onClicked: plasmoid.expanded = !plasmoid.expanded
 
-    function isConstrained() {
-        return (plasmoid.formFactor == PlasmaCore.Types.Vertical || plasmoid.formFactor == PlasmaCore.Types.Horizontal)
-    }
+    readonly property bool isConstrained: plasmoid.formFactor == PlasmaCore.Types.Vertical || plasmoid.formFactor == PlasmaCore.Types.Horizontal
 
     //Should we consider turning this into a Flow item?
     Row {
@@ -48,7 +46,7 @@ MouseArea {
             /*property QtObject pmSource: batterymonitor.pmSource
             property QtObject batteries: batterymonitor.batteries*/
 
-            property bool singleBattery: isConstrained() || !hasBattery
+            property bool singleBattery: isConstrained || !hasBattery
 
             model: singleBattery ? 1 : batteries
 
@@ -69,11 +67,11 @@ MouseArea {
 
                     BatteryIcon {
                         id: batteryIcon
-                        anchors.horizontalCenter: isConstrained() ? undefined : parent.horizontalCenter
+                        anchors.horizontalCenter: isConstrained ? undefined : parent.horizontalCenter
                         hasBattery: batteryContainer.hasBattery
                         percent: batteryContainer.percent
                         pluggedIn: batteryContainer.pluggedIn
-                        height: isConstrained() ? batteryContainer.iconSize : batteryContainer.iconSize - batteryLabel.height
+                        height: isConstrained ? batteryContainer.iconSize : batteryContainer.iconSize - batteryLabel.height
                         width: height
                     }
 
