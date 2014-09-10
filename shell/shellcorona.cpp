@@ -288,6 +288,14 @@ void ShellCorona::load()
     if (!m_waitingPanels.isEmpty()) {
         m_waitingPanelsTimer.start();
     }
+
+    if (config()->isImmutable() ||
+        !KAuthorized::authorize("plasma/plasmashell/unlockedDesktop")) {
+        setImmutability(Plasma::Types::SystemImmutable);
+    } else {
+        KConfigGroup coronaConfig(config(), "General");
+        setImmutability((Plasma::Types::ImmutabilityType)coronaConfig.readEntry("immutability", (int)Plasma::Types::Mutable));
+    }
 }
 
 void ShellCorona::primaryOutputChanged()
