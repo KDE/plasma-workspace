@@ -171,7 +171,9 @@ function updateTooltip(remainingTime) {
         batteries.tooltipImage = "battery-060"
 
         if (remainingTime > 0) {
-            batteries.tooltipMainText = i18nc("%1 is remaining time, %2 is percentage", "%1 Remaining (%2%)", KCoreAddons.Format.formatDuration(remainingTime), batteries.cumulativePercent)
+            batteries.tooltipMainText = i18nc("%1 is remaining time, %2 is percentage", "%1 Remaining (%2%)",
+                                              KCoreAddons.Format.formatDuration(remainingTime, KCoreAddons.FormatTypes.HideSeconds),
+                                              batteries.cumulativePercent)
         } else {
             batteries.tooltipMainText = i18n("%1% Battery Remaining", batteries.cumulativePercent);
         }
@@ -184,7 +186,7 @@ function batteryItemToolTip(batteryData, remainingTime) {
     if (remainingTime > 0 && batteryData["Is Power Supply"] && (batteryData["State"] == "Discharging" || batteryData["State"] == "Charging")) {
         text += "<tr>"
         text += "<td align='right'>" + (batteryData["State"] == "Charging" ? i18n("Time To Full:") : i18n("Time To Empty:")) + "</td>"
-        text += "<td><b>" + KCoreAddons.Format.formatSpelloutDuration(remainingTime) + "</b></td>"
+        text += "<td><b>" + KCoreAddons.Format.formatDuration(remainingTime, KCoreAddons.FormatTypes.HideSeconds) + "</b></td>"
         text += "</tr>"
     }
 
