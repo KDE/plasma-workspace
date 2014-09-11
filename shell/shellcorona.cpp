@@ -1359,7 +1359,7 @@ int ShellCorona::screenForContainment(const Plasma::Containment *containment) co
     }
 
     for (int i = 0; i < m_views.count(); i++) {
-        if (m_views[i]->containment() == containment) {
+        if (m_views[i]->containment() == containment && containment->activity() == m_activityConsumer->currentActivity()) {
             return i;
         }
     }
