@@ -57,7 +57,6 @@ Item {
     Plasmoid.switchWidth: units.gridUnit * 14
     Plasmoid.switchHeight: units.gridUnit * 10
     Plasmoid.icon: "media-playback-start"
-    Plasmoid.status: PlasmaCore.Types.PassiveStatus
     Plasmoid.toolTipMainText: i18n("No media playing")
 
     // HACK Some players like Amarok take quite a while to load the next track
