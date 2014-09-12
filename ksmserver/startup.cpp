@@ -385,7 +385,7 @@ void KSMServer::autoStart2()
                                   QStringLiteral("/KLauncher"),
                                   QDBusConnection::sessionBus());
     klauncher.autoStart((int)2);
-
+    QTimer::singleShot( 10000, this, SLOT(autoStart2Done())); //In case klauncher never returns
 #ifdef KSMSERVER_STARTUP_DEBUG1
     kDebug() << "klauncher" << t.elapsed();
 #endif
@@ -422,6 +422,9 @@ void KSMServer::autoStart2()
 
 void KSMServer::autoStart2Done()
 {
+    if (sender() != klauncherSignals && waitAutoStart2) {
+        qWarning() << "autoStart2Done timedout, this is a BUG!";
+    }
     if( state != FinishingStartup )
         return;
     disconnect( klauncherSignals, SIGNAL(autoStart2Done()), this, SLOT(autoStart2Done()));
