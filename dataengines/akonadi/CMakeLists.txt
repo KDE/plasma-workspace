@@ -21,7 +21,6 @@ target_link_libraries(
     ${KDE4_AKONADI_KMIME_LIBS}
     ${KDE4_KABC_LIBS}
     Qt5::Xml
-    microblog
 )
 
 install(TARGETS plasma_engine_akonadi DESTINATION ${PLUGIN_INSTALL_DIR}/plasma/dataengine)

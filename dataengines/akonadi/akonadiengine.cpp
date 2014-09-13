@@ -33,19 +33,15 @@
 #include <kabc/picture.h>
 #include <kabc/key.h>
 
-#include <microblog/statusitem.h>
-
 using namespace Akonadi;
 
 AkonadiEngine::AkonadiEngine(QObject* parent, const QVariantList& args)
     : Plasma::DataEngine(parent),
     m_emailMonitor(0),
-    m_contactMonitor(0),
-    m_microBlogMonitor(0)
+    m_contactMonitor(0)
 {
     Q_UNUSED(args);
     setMaxSourceCount( 512 ); // Guard against loading thousands of emails
-    // TODO: monitoring for new microblog collections
 }
 
 void AkonadiEngine::initEmailMonitor()
@@ -76,20 +72,6 @@ void AkonadiEngine::initContactMonitor()
     connect(this, SIGNAL(sourceRemoved(QString)), SLOT(stopMonitor(QString)));
 }
 
-void AkonadiEngine::initMicroBlogMonitor()
-{
-    // TODO: set up monitoring for "application/x-vnd.kde.microblog"
-    m_microBlogMonitor = new Monitor( this );
-    m_microBlogMonitor->setMimeTypeMonitored( "application/x-vnd.kde.microblog" );
-    m_microBlogMonitor->setCollectionMonitored(Collection::root(), false);
-    m_microBlogMonitor->itemFetchScope().fetchFullPayload();
-    connect(m_microBlogMonitor, SIGNAL(itemAdded(Akonadi::Item,Akonadi::Collection)),
-            SLOT(microBlogItemAdded(Akonadi::Item)) );
-    connect(m_microBlogMonitor, SIGNAL(itemChanged(Akonadi::Item,QSet<QByteArray>)),
-            SLOT(microBlogItemAdded(Akonadi::Item)) );
-    // remove the monitor on a source that's not used
-    connect(this, SIGNAL(sourceRemoved(QString)), SLOT(stopMonitor(QString)));
-}
 
 AkonadiEngine::~AkonadiEngine()
 {
@@ -97,7 +79,7 @@ AkonadiEngine::~AkonadiEngine()
 
 QStringList AkonadiEngine::sources() const
 {
-    return QStringList() << "EmailCollections" << "ContactCollections" << "MicroBlogs";
+    return QStringList() << "EmailCollections" << "ContactCollections";
 }
 
 void AkonadiEngine::fetchEmailCollectionsDone(KJob* job)
@@ -136,26 +118,6 @@ void AkonadiEngine::fetchContactCollectionsDone(KJob* job)
             }
         }
         qDebug() << i << "Contact collections are in now";
-        scheduleSourcesUpdated();
-    }
-}
-
-void AkonadiEngine::fetchMicroBlogCollectionsDone(KJob* job)
-{
-    // called when the job fetching microblog collections from Akonadi emits result()
-    if ( job->error() ) {
-        qDebug() << "Job Error:" << job->errorString();
-    } else {
-        CollectionFetchJob* cjob = static_cast<CollectionFetchJob*>( job );
-        int i = 0;
-        foreach( const Collection &collection, cjob->collections() ) {
-            if (collection.contentMimeTypes().contains("application/x-vnd.kde.microblog")) {
-                qDebug() << "Microblog setting data:" << collection.name() << collection.url() << collection.contentMimeTypes();
-                i++;
-                setData("MicroblogCollection", QString("MicroBlog-%1").arg(collection.id()), collection.name());
-            }
-        }
-        qDebug() << i << "MicroBlog collections are in now";
         scheduleSourcesUpdated();
     }
 }
@@ -235,27 +197,6 @@ bool AkonadiEngine::sourceRequestEvent(const QString &name)
         setData(name, DataEngine::Data());
         return true;
 
-    } else if (name == "MicroBlogs") {
-        Collection microblogCollection(Collection::root());
-        microblogCollection.setContentMimeTypes(QStringList() << "application/x-vnd.kde.microblog");
-        CollectionFetchJob *fetch = new CollectionFetchJob( microblogCollection, CollectionFetchJob::Recursive);
-        connect( fetch, SIGNAL(result(KJob*)), SLOT(fetchMicroBlogCollectionsDone(KJob*)) );
-        setData(name, DataEngine::Data());
-        return true;
-
-    } else if (name.startsWith(QString("MicroBlog-"))) {
-        qlonglong id = name.split('-')[1].toLongLong();
-        qDebug() << "MicroBlog ID" << id << " requested" << name;
-        ItemFetchJob *fetch = new ItemFetchJob( Akonadi::Collection( id ));
-        if (!m_microBlogMonitor) {
-            initMicroBlogMonitor();
-        }
-        m_microBlogMonitor->setItemMonitored(Item( id ), true);
-        fetch->fetchScope().fetchFullPayload();
-        connect( fetch, SIGNAL(result(KJob*)), SLOT(fetchMicroBlogDone(KJob*)) );
-        setData(name, DataEngine::Data());
-        return true;
-    }
     // We don't understand the request.
     qDebug() << "Don't know what to do with:" << name;
     return false;
@@ -360,39 +301,6 @@ void AkonadiEngine::fetchContactCollectionDone(KJob* job)
     }
 }
 
-void AkonadiEngine::fetchMicroBlogDone(KJob* job)
-{
-    if (job->error()) {
-        qDebug() << "Microblog job failed:" << job->errorString();
-    } else {
-        Item::List items = static_cast<ItemFetchJob*>( job )->items();
-        qDebug() << "Adding microblogs" << items.count();
-        foreach (const Item &item, items) {
-            microBlogItemAdded(item);
-        }
-    }
-}
-
-
-void AkonadiEngine::microBlogItemAdded(const Akonadi::Item &item)
-{
-    // Get the Akonadi::Item's XML payload and parse that, then
-    // put it into the DataEngine's Data
-    qDebug() << "Checking one item";
-    if (item.hasPayload<Microblog::StatusItem>()) {
-        Microblog::StatusItem s = item.payload<Microblog::StatusItem>();
-        const QString source = QString("MicroBlog-%1").arg(s.id());
-        qDebug() << "Adding" << source << s.keys();
-        setData(source, "Date", s.date());
-        setData(source, "Foo", "Bar");
-        foreach (const QString &key, s.keys()) {
-            setData(source, key, s.value(key));
-        }
-        scheduleSourcesUpdated();
-    } else {
-        qDebug() << "Wrong payload (not a StatusItem)";
-    }
-}
 
 void AkonadiEngine::printContact(const QString &source, const KABC::Addressee &a)
 {
