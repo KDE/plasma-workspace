@@ -35,6 +35,7 @@ ColumnLayout {
     property int controlSize: Math.min(height, width) / 4
 
     property int position: mpris2Source.data[mpris2Source.current].Position
+    property bool disablePositionUpdate: false
 
     property bool isExpanded: plasmoid.expanded
 
@@ -47,10 +48,12 @@ ColumnLayout {
     }
 
     onPositionChanged: {
-        // don't set the position while the slider is pressed
-        // which means the user is still holding it down
+        // we don't want to interrupt the user dragging the slider
         if (!seekSlider.pressed) {
-            seekSlider.value = position;
+            // we also don't want passive position updates
+            disablePositionUpdate = true
+            seekSlider.value = position
+            disablePositionUpdate = false
         }
     }
 
@@ -137,7 +140,7 @@ ColumnLayout {
         }
 
         onValueChanged: {
-            if (pressed) {
+            if (!disablePositionUpdate) {
                 var service = mpris2Source.serviceForSource(mpris2Source.current);
                 var operation = service.operationDescription("SetPosition");
                 operation.microseconds = value
@@ -151,8 +154,13 @@ ColumnLayout {
             repeat: true
             running: root.state == "playing" && plasmoid.expanded
             onTriggered: {
+                // some players don't continuously update the seek slider position via mpris
                 // add one second; value in microseconds
-                seekSlider.value += 1000000;
+                if (!seekSlider.pressed) {
+                    disablePositionUpdate = true
+                    seekSlider.value += 1000000
+                    disablePositionUpdate = false
+                }
             }
         }
     }
