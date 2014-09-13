@@ -58,6 +58,7 @@ Item {
     Plasmoid.switchHeight: units.gridUnit * 10
     Plasmoid.icon: "media-playback-start"
     Plasmoid.toolTipMainText: i18n("No media playing")
+    Plasmoid.status: PlasmaCore.Types.ActiveStatus
 
     // HACK Some players like Amarok take quite a while to load the next track
     // this avoids having the plasmoid jump between popup and panel
@@ -72,7 +73,13 @@ Item {
     Timer {
         id: updatePlasmoidStatusTimer
         interval: 250
-        onTriggered: plasmoid.status = (state != "" ? PlasmaCore.Types.ActiveStatus : PlasmaCore.Types.PassiveStatus)
+        onTriggered: {
+            if (state != "") {
+                plasmoid.status = PlasmaCore.Types.ActiveStatus
+            } else {
+                plasmoid.status = PlasmaCore.Types.PassiveStatus
+            }
+        }
     }
 
     Plasmoid.fullRepresentation: ExpandedRepresentation {}
