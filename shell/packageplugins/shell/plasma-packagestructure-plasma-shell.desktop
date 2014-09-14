@@ -22,6 +22,7 @@ Name[sr@latin]=Plasma školjka
 Name[sv]=Plasma-skal
 Name[uk]=Оболонка Плазми
 Name[x-test]=xxPlasma Shellxx
+Name[zh_TW]=Plasma Shell
 Type=Service
 X-KDE-ServiceTypes=Plasma/PackageStructure
 X-KDE-Library=plasma_packagestructure_plasmashell

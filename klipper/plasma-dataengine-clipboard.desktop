@@ -24,6 +24,7 @@ Name[sr@latin]=klipbord
 Name[sv]=Klippbord
 Name[uk]=Буфер обміну
 Name[x-test]=xxClipboardxx
+Name[zh_TW]=剪貼簿
 Comment=Clipboard Tool.
 Comment[ca]=Eina de porta-retalls.
 Comment[cs]=Program pro práci se schránkou.
@@ -48,6 +49,7 @@ Comment[sr@latin]=Alatka za klipbord
 Comment[sv]=Klippbordsverktyg.
 Comment[uk]=Утиліта буфера даних.
 Comment[x-test]=xxClipboard Tool.xx
+Comment[zh_TW]=剪貼簿工具。
 Type=Service
 Icon=klipper
 

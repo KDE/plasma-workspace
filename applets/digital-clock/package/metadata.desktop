@@ -111,6 +111,7 @@ Comment[sr@latin]=Vreme dato u digitalnom formatu
 Comment[sv]=Tid visad med digitalformat
 Comment[uk]=Час, показаний у цифровому форматі
 Comment[x-test]=xxTime displayed in a digital formatxx
+Comment[zh_TW]=以數位格式顯示時間
 
 Icon=preferences-system-time
 Type=Service

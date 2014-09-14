@@ -23,6 +23,7 @@ Comment[sr@latin]=Jezik dizajna površi Povetarac od KDE VDG‑a
 Comment[sv]=Breeze-konstruktionsspråk för skrivbord av KDE VDG
 Comment[uk]=Мова компонування стільниці Breeze, створена KDE VDG
 Comment[x-test]=xxBreeze Desktop Design Language by the KDE VDGxx
+Comment[zh_TW]=KDE VDG 設計的微風桌面設計語言
 Encoding=UTF-8
 Keywords=Desktop, Workspace, Appearance, Look and Feel, Logout, Lock, Suspend, Shutdown, Hibernate,
 Keywords[ca]=Escriptori, Espai de treball, Aparença, Aparença i comportament, Sortida, Bloqueig, Suspensió, Aturada, Hibernació,
@@ -88,6 +89,7 @@ Name[sr@latin]=Povetarac
 Name[sv]=Breeze
 Name[uk]=Breeze
 Name[x-test]=xxBreezexx
+Name[zh_TW]=微風
 Type=Service
 
 X-KDE-ServiceTypes=Plasma/LookAndFeel
