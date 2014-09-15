@@ -20,10 +20,31 @@
 #include "notificationshelper.h"
 
 #include <QtQml>
+#include <QUrl>
+
+class UrlHelper : public QObject {
+    Q_OBJECT
+    public:
+        Q_INVOKABLE bool isUrlValid(const QString &url) const {
+           return QUrl::fromUserInput(url).isValid();
+        }
+};
+
+static QObject *urlcheck_singletontype_provider(QQmlEngine *engine, QJSEngine *scriptEngine)
+{
+    Q_UNUSED(engine)
+    Q_UNUSED(scriptEngine)
+
+    return new UrlHelper();
+}
 
 void NotificationsHelperPlugin::registerTypes(const char *uri)
 {
     Q_ASSERT(uri == QLatin1String("org.kde.plasma.private.notifications"));
 
     qmlRegisterType<NotificationsHelper>(uri, 1, 0, "NotificationsHelper");
+    qmlRegisterSingletonType<UrlHelper>(uri, 1, 0, "UrlHelper", urlcheck_singletontype_provider);
+
 }
+
+#include "notificationshelperplugin.moc"

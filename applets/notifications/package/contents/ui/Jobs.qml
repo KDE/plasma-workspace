@@ -22,6 +22,8 @@ import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 
+import org.kde.plasma.private.notifications 1.0
+
 Column {
     id: jobsRoot
     anchors {
@@ -62,7 +64,7 @@ Column {
                 0,
                 0,
                 0,
-                [{"id": message, "text": i18n("Open")}])
+                UrlHelper.isUrlValid(message) ? [{"id": message, "text": i18n("Open")}] : undefined) // If the source contains "Job", it tries to open the "id" value (which is "message")
 
             delete runningJobs[source]
         }
