@@ -43,8 +43,6 @@ Item {
     property int eta: getData(jobsSource.data, "eta", 0)
     property string speed: getData(jobsSource.data, "speed", '')
 
-    property bool debug: false
-
     function getData(data, name, defaultValue) {
         return data[modelData] ? (data[modelData][name] ? data[modelData][name] : defaultValue) : defaultValue;
     }
