@@ -55,7 +55,7 @@ Column {
                 runningJobs[source]["appIconName"],
                 0,
                 runningJobs[source]["appName"],
-                i18n("%1 [Finished]", runningJobs[source]["infoMessage"]),
+                i18n("%1 Finished", runningJobs[source]["infoMessage"]),
                 message,
                 true,
                 6000,
