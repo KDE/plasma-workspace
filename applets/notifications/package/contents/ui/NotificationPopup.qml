@@ -179,7 +179,7 @@ PlasmaCore.Dialog {
                 }
                 Repeater {
                     id: actionsRepeater
-                    model: new Array()
+                    model: []
                     PlasmaComponents.Button {
                         text: modelData.text
                         width: theme.mSize(theme.defaultFont).width * 12
