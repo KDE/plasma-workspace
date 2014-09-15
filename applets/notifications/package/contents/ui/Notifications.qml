@@ -54,7 +54,11 @@ Column {
         }
 
         for (var i = 0; i < notificationsModel.count; ++i) {
-            if (notificationsModel.get(i).source == source) {
+            if (notificationsModel.get(i).source == source ||
+                (notificationsModel.get(i).appName == appName &&
+                notificationsModel.get(i).summary == summary &&
+                notificationsModel.get(i).body == body)) {
+
                 notificationsModel.remove(i)
                 break
             }
