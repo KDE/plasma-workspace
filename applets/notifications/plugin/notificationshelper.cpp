@@ -144,7 +144,7 @@ void NotificationsHelper::displayNotification(const QVariantMap &notificationDat
         }
 
         if (m_popupLocation == Qt::TopEdge) {
-            popup->setY(screenArea.top() + m_offset + popupsHeightTotal - popup->height());
+            popup->setY(screenArea.top() + popupsHeightTotal - popup->height());
         } else {
             popup->setY(screenArea.bottom() - popupsHeightTotal);
         }
@@ -189,7 +189,7 @@ void NotificationsHelper::repositionPopups()
     for (int i = 0; i < m_popupsOnScreen.size(); ++i) {
 
         if (m_popupLocation == Qt::TopEdge) {
-            m_popupsOnScreen[i]->setProperty("y", workArea.top() + m_offset + cumulativeHeight);
+            m_popupsOnScreen[i]->setProperty("y", workArea.top() + cumulativeHeight);
         } else {
             m_popupsOnScreen[i]->setProperty("y", workArea.bottom() - cumulativeHeight - m_popupsOnScreen[i]->height());
         }
