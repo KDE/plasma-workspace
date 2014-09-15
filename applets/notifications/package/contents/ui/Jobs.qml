@@ -53,7 +53,7 @@ Column {
             notifications.addNotification(
                 source,
                 runningJobs[source]["appIconName"],
-                0,
+                undefined,
                 runningJobs[source]["appName"],
                 i18n("%1 Finished", runningJobs[source]["infoMessage"]),
                 message,
