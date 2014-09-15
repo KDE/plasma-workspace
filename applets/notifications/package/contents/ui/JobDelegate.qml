@@ -58,13 +58,6 @@ Item {
         return f;
     }
 
-    Rectangle {
-        visible: notificationItem.debug
-        color: "orange"
-        opacity: 0.2
-        anchors.fill: parent
-    }
-
     Item {
         id: jobGrid
         anchors {
