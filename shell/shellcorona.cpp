@@ -105,6 +105,7 @@ ShellCorona::ShellCorona(QObject *parent)
 
     connect(this, &Plasma::Corona::startupCompleted, this,
             []() {
+                qDebug() << "Plasma Shell startup completed";
                 QDBusMessage ksplashProgressMessage = QDBusMessage::createMethodCall(QStringLiteral("org.kde.KSplash"),
                                                QStringLiteral("/KSplash"),
                                                QStringLiteral("org.kde.KSplash"),
@@ -1358,21 +1359,17 @@ int ShellCorona::screenForContainment(const Plasma::Containment *containment) co
         }
     }
 
-    for (int i = 0; i < m_views.count(); i++) {
-        if (m_views[i]->containment() == containment && containment->activity() == m_activityConsumer->currentActivity()) {
+    int i = 0;
+    //lastScreen() is the correct screen for panels and for desktop *that have the correct activity()*
+    for (KScreen::Output *output : sortOutputs(m_screenConfiguration->outputs())) {
+        if (containment->lastScreen() == i &&
+            (containment->activity() == m_activityConsumer->currentActivity() ||
+            containment->containmentType() == Plasma::Types::PanelContainment || containment->containmentType() == Plasma::Types::PanelContainment)) {
             return i;
         }
+        ++i;
     }
 
-    PanelView *view = m_panelViews.value(containment);
-    if (view) {
-        QScreen *screen = view->screen();
-        for (int i = 0; i < m_views.count(); i++) {
-            if (m_views[i]->screen() == screen) {
-                return i;
-            }
-        }
-    }
     return -1;
 }
 
