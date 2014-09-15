@@ -1360,11 +1360,14 @@ int ShellCorona::screenForContainment(const Plasma::Containment *containment) co
     }
 
     int i = 0;
-    //lastScreen() is the correct screen for panels and for desktop *that have the correct activity()*
+    //lastScreen() is the correct screen for panels
+    //It is also correct for desktops *that have the correct activity()*
+    //a containment with lastScreen() == 0 but another activity,
+    //won't be associated to a screen
     for (KScreen::Output *output : sortOutputs(m_screenConfiguration->outputs())) {
         if (containment->lastScreen() == i &&
             (containment->activity() == m_activityConsumer->currentActivity() ||
-            containment->containmentType() == Plasma::Types::PanelContainment || containment->containmentType() == Plasma::Types::PanelContainment)) {
+            containment->containmentType() == Plasma::Types::PanelContainment || containment->containmentType() == Plasma::Types::CustomPanelContainment)) {
             return i;
         }
         ++i;
