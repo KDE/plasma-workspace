@@ -277,7 +277,7 @@ Item {
                     height: paintedHeight
 
                     font: theme.smallestFont
-                    text: notificationItem.eta > 0 ? i18nc("Speed and estimated time to completition", "%1 (%2 remaining)", speed, formats.formatSpelloutDuration(notificationItem.eta)) : speed
+                    text: notificationItem.eta > 0 ? i18nc("Speed and estimated time to completition", "%1 (%2 remaining)", speed, KCoreAddons.Format.formatSpelloutDuration(notificationItem.eta)) : speed
                 }
 // FIXME: find a way to plot the signal
 //                     PlasmaWidgets.SignalPlotter {
