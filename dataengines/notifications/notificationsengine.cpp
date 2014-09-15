@@ -245,7 +245,7 @@ uint NotificationsEngine::Notify(const QString &app_name, uint replaces_id,
         QDBusArgument arg = hints["icon_data"].value<QDBusArgument>();
         image = decodeNotificationSpecImageHint(arg);
     }
-    notificationData.insert("image", image);
+    notificationData.insert("image", image.isNull() ? QVariant() : image);
 
     if (hints.contains("urgency")) {
         notificationData.insert("urgency", hints["urgency"].toInt());
