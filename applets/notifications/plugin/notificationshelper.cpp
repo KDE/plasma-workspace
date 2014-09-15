@@ -117,21 +117,43 @@ void NotificationsHelper::displayNotification(const QVariantMap &notificationDat
         // Set the source name directly on the popup object too
         // to avoid looking up the notificationProperties map as above
         popup->setProperty("sourceName", sourceName);
-    }
 
-    QRect screenArea = workAreaForScreen(m_plasmoidScreen);
-
-    popup->setX(screenArea.right() - popup->width() - m_offset);
-    if (m_popupLocation == Qt::TopEdge) {
-        popup->setY(screenArea.top() + m_offset + ((m_popupsOnScreen.size() - 1) * (popup->height() + m_offset)));
-    } else {
-        popup->setY(screenArea.bottom() - (m_popupsOnScreen.size() * (popup->height() + m_offset)));
+        // Set the height to random small number so that we actually receive
+        // the signal connected below
+        popup->setHeight(1);
     }
 
     // Populate the popup with data, this is the component's own QML method
     QMetaObject::invokeMethod(popup, "populatePopup", Q_ARG(QVariant, notificationData));
 
-    popup->show();
+    QMetaObject::Connection popupHeightConnection;
+
+    // Here we need to wait for the notification popup's Dialog to actually
+    // sync its size to the mainItem size, only then we can move on with
+    // positioning it properly
+    popupHeightConnection = connect(popup, &QWindow::heightChanged, [=](){
+        QRect screenArea = workAreaForScreen(m_plasmoidScreen);
+
+        popup->setX(screenArea.right() - popup->width() - m_offset);
+
+        int popupsHeightTotal = 0;
+        // notification popups with 3 buttons are higher than the rest
+        // so we need to count the heights separately
+        Q_FOREACH (QQuickWindow *popupOnScreen, m_popupsOnScreen) {
+            popupsHeightTotal += popupOnScreen->height() + m_offset;
+        }
+
+        if (m_popupLocation == Qt::TopEdge) {
+            popup->setY(screenArea.top() + m_offset + popupsHeightTotal - popup->height());
+        } else {
+            popup->setY(screenArea.bottom() - popupsHeightTotal);
+        }
+
+        popup->show();
+
+        // don't keep the connection around
+        QObject::disconnect(popupHeightConnection);
+    });
 }
 
 void NotificationsHelper::closePopup(const QString &sourceName)
@@ -162,14 +184,17 @@ void NotificationsHelper::repositionPopups()
 {
     QRect workArea = workAreaForScreen(m_plasmoidScreen);
 
+    int cumulativeHeight = m_offset;
+
     for (int i = 0; i < m_popupsOnScreen.size(); ++i) {
-        const int popupHeight = m_popupsOnScreen[i]->height();
 
         if (m_popupLocation == Qt::TopEdge) {
-            m_popupsOnScreen[i]->setProperty("y", workArea.top() + m_offset + (i * (popupHeight + m_offset)));
+            m_popupsOnScreen[i]->setProperty("y", workArea.top() + m_offset + cumulativeHeight);
         } else {
-            m_popupsOnScreen[i]->setProperty("y", workArea.bottom() - ((i + 1) * (popupHeight + m_offset)));
+            m_popupsOnScreen[i]->setProperty("y", workArea.bottom() - cumulativeHeight - m_popupsOnScreen[i]->height());
         }
+
+        cumulativeHeight += (m_popupsOnScreen[i]->height() + m_offset);
     }
 
     if (!m_queue.isEmpty()) {

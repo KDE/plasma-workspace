@@ -39,12 +39,12 @@ PlasmaCore.Dialog {
     function populatePopup(notification)
     {
         notificationProperties = notification
+        actionsRepeater.model = notification.actions
         notificationTimer.interval = notification.expireTimeout
         notificationTimer.restart()
         titleLabel.text = notification.summary
         bodyLabel.text = notification.body
         appIconItem.icon = notification.appIcon
-        actionsRepeater.model = notification.actions
         imageItem.image = notification.image
     }
 
@@ -56,19 +56,19 @@ PlasmaCore.Dialog {
     }
 
     mainItem: MouseEventListener {
-        id: mainItem
-        height: Math.round(5 * units.gridUnit)
-        width: Math.round(21 * units.gridUnit)
+        id: root
+        height: Math.max(actionsColumn.height + closeButton.height + (3 * units.smallSpacing), (5 * units.gridUnit)) //5 * units.gridUnit
+        width: Math.round(23 * units.gridUnit)
 
         state: "controlsHidden"
         hoverEnabled: true
 
         onContainsMouseChanged: {
             if (containsMouse) {
-                mainItem.state = "controlsShown"
+                root.state = "controlsShown"
                 notificationTimer.running = false
             } else {
-                mainItem.state = "controlsHidden"
+                root.state = "controlsHidden"
                 notificationTimer.restart()
             }
         }
@@ -173,7 +173,7 @@ PlasmaCore.Dialog {
                 spacing: units.smallSpacing
                 anchors {
                     bottom: parent.bottom
-                    right: actionsRepeater.count < 3 ? parent.right : closeButton.left
+                    right: parent.right
                     rightMargin: units.smallSpacing
                     bottomMargin: units.smallSpacing
                 }
@@ -182,7 +182,7 @@ PlasmaCore.Dialog {
                     model: new Array()
                     PlasmaComponents.Button {
                         text: modelData.text
-                        width: theme.mSize(theme.defaultFont).width * 8
+                        width: theme.mSize(theme.defaultFont).width * 12
                         onClicked: {
                             executeAction(notificationProperties.source, modelData.id)
                             actionsColumn.visible = false
