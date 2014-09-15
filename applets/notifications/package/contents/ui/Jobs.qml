@@ -64,7 +64,7 @@ Column {
                 0,
                 0,
                 0,
-                UrlHelper.isUrlValid(message) ? [{"id": message, "text": i18n("Open")}] : undefined) // If the source contains "Job", it tries to open the "id" value (which is "message")
+                UrlHelper.isUrlValid(message) ? [{"id": message, "text": i18n("Open")}] : []) // If the source contains "Job", it tries to open the "id" value (which is "message")
 
             delete runningJobs[source]
         }
