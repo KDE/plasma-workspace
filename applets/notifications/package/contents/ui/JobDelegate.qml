@@ -358,13 +358,6 @@ Item {
             }
             height: notificationItem.toolIconSize
 
-            Rectangle {
-                visible: notificationItem.debug
-                color: "green"
-                opacity: 0
-                anchors.fill: parent
-            }
-
             PlasmaComponents.ProgressBar {
                 id: progressBar
                 anchors {
