@@ -369,13 +369,13 @@ void ShellCorona::screenInvariants() const
 //         and sometimes is not yet called here.
 //         Q_ASSERT(!view->fillScreen() || view->geometry() == screen->geometry());
         Q_ASSERT(view->containment());
-        Q_ASSERT(view->containment()->screen() == i);
-        Q_ASSERT(view->containment()->lastScreen() == i);
+        Q_ASSERT(view->containment()->screen() == i || view->containment()->screen() == -1);
+        Q_ASSERT(view->containment()->lastScreen() == i || view->containment()->lastScreen() == -1);
         Q_ASSERT(view->isVisible());
 
         foreach (const PanelView *panel, panelsForScreen(screen)) {
             Q_ASSERT(panel->containment());
-            Q_ASSERT(panel->containment()->screen() == i);
+            Q_ASSERT(panel->containment()->screen() == i || panel->containment()->screen() == -1);
             Q_ASSERT(panel->isVisible());
         }
 
