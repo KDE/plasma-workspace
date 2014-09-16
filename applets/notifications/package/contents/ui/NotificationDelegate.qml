@@ -19,6 +19,7 @@
 
 import QtQuick 2.0
 import org.kde.plasma.components 2.0 as PlasmaComponents
+import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.kquickcontrolsaddons 2.0
 
 PlasmaComponents.ListItem {
@@ -95,181 +96,175 @@ PlasmaComponents.ListItem {
                 easing.type: Easing.InOutQuad
             }
         }
-        Column {
-            width: parent.width
-            spacing: notificationItem.layoutSpacing
 
-            Item {
-                width: parent.width
-                height: summaryLabel.height
+        QIconItem {
+            id: appIconItem
 
-                PlasmaComponents.Label {
-                    id: summaryLabel
-                    anchors {
-                        left: parent.left
-                        right: parent.right
-                        leftMargin: closeButton.width
-                        rightMargin: settingsButton.visible ? settingsButton.width + closeButton.width : closeButton.width
-                    }
-                    height: paintedHeight
+            width: units.iconSizes.large
+            height: units.iconSizes.large
 
-                    text: summary
-                    horizontalAlignment: Text.AlignHCenter
-                    elide: Text.ElideRight
-                    onLinkActivated: Qt.openUrlExternally(link)
+            icon: appIcon
+            visible: !imageItem.visible
+        }
+
+        QImageItem {
+            id: imageItem
+            anchors.fill: appIconItem
+
+            image: image
+            smooth: true
+            visible: nativeWidth > 0
+        }
+
+        Item {
+            id: titleBar
+            height: childrenRect.height
+            anchors {
+                top: parent.top
+                left: appIconItem.right
+                right: parent.right
+                leftMargin: units.smallSpacing * 2
+            }
+
+            PlasmaExtras.Heading {
+                id: summaryLabel
+                level: 4
+                height: paintedHeight
+                anchors {
+                    right: settingsButton.visible ? settingsButton.left : closeButton.left
+                    rightMargin: settingsButton.visible ? settingsButton.width + closeButton.width : closeButton.width
                 }
+                text: summary
+                elide: Text.ElideRight
+                wrapMode: Text.NoWrap
+                onLinkActivated: Qt.openUrlExternally(link)
+            }
 
-                PlasmaComponents.ToolButton {
-                    id: closeButton
-                    anchors {
-                        top: parent.top
-                        right: parent.right
-                    }
-                    width: notificationItem.toolIconSize
-                    height: width
-
-                    iconSource: "window-close"
-
-                    onClicked: {
-                        if (notificationsModel.count > 1) {
-                            removeAnimation.running = true
-                        } else {
-                            closeNotification(model.source)
-                            notificationsModel.remove(index)
-                        }
-                    }
+            PlasmaComponents.ToolButton {
+                id: closeButton
+                anchors {
+                    top: parent.top
+                    right: parent.right
+                    rightMargin: units.smallSpacing
                 }
+                width: notificationItem.toolIconSize
+                height: width
 
-                PlasmaComponents.ToolButton {
-                    id: settingsButton
-                    anchors {
-                        top: parent.top
-                        right: closeButton.left
-                        rightMargin: units.smallSpacing
-                    }
-                    width: notificationItem.toolIconSize
-                    height: width
+                iconSource: "window-close"
 
-                    iconSource: "configure"
-                    visible: model.configurable
-
-                    onClicked: {
-                        plasmoid.hidePopup()
-                        configureNotification(model.appRealName)
+                onClicked: {
+                    if (notificationsModel.count > 1) {
+                        removeAnimation.running = true
+                    } else {
+                        closeNotification(model.source)
+                        notificationsModel.remove(index)
                     }
                 }
             }
 
-            Item {
-                height: childrenRect.height
-                width: parent.width
-
-                QIconItem {
-                    id: appIconItem
-                    anchors {
-                        left: parent.left
-                        verticalCenter: parent.verticalCenter
-                    }
-                    width: units.iconSizes.large
-                    height: units.iconSizes.large
-
-                    icon: appIcon
-                    visible: !imageItem.visible
+            PlasmaComponents.ToolButton {
+                id: settingsButton
+                anchors {
+                    top: parent.top
+                    right: closeButton.left
+                    rightMargin: units.smallSpacing
                 }
+                width: notificationItem.toolIconSize
+                height: width
 
-                QImageItem {
-                    id: imageItem
-                    anchors.fill: appIconItem
+                iconSource: "configure"
+                visible: model.configurable
 
-                    image: image
-                    smooth: true
-                    visible: nativeWidth > 0
+                onClicked: {
+                    plasmoid.hidePopup()
+                    configureNotification(model.appRealName)
                 }
+            }
+        }
 
-                PlasmaComponents.ContextMenu {
-                    id: contextMenu
-                    visualParent: contextMouseArea
+        PlasmaComponents.ContextMenu {
+            id: contextMenu
+            visualParent: contextMouseArea
 
-                    PlasmaComponents.MenuItem {
-                        text: i18n("Copy")
-                        onClicked: bodyText.copy()
+            PlasmaComponents.MenuItem {
+                text: i18n("Copy")
+                onClicked: bodyText.copy()
+            }
+
+            PlasmaComponents.MenuItem {
+                text: i18n("Select All")
+                onClicked: bodyText.selectAll()
+            }
+        }
+
+        MouseArea {
+            id: contextMouseArea
+            anchors {
+                top: titleBar.bottom
+                left: appIconItem.right
+                right: actionsColumn.left
+
+                leftMargin: units.smallSpacing * 2
+                rightMargin: units.smallSpacing * 2
+            }
+            height: bodyText.paintedHeight
+
+            acceptedButtons: Qt.RightButton
+            preventStealing: true
+
+            onPressed: contextMenu.open(mouse.x, mouse.y)
+
+            TextEdit {
+                id: bodyText
+                anchors.fill: parent
+
+                text: body
+                color: theme.textColor
+                selectedTextColor: theme.viewBackgroundColor
+                selectionColor: theme.viewFocusColor
+                font.capitalization: theme.defaultFont.capitalization
+                font.family: theme.defaultFont.family
+                font.italic: theme.defaultFont.italic
+                font.letterSpacing: theme.defaultFont.letterSpacing
+                font.pointSize: theme.defaultFont.pointSize
+                font.strikeout: theme.defaultFont.strikeout
+                font.underline: theme.defaultFont.underline
+                font.weight: theme.defaultFont.weight
+                font.wordSpacing: theme.defaultFont.wordSpacing
+                renderType: Text.NativeRendering
+                selectByMouse: true
+                readOnly: true
+                wrapMode: Text.Wrap
+                textFormat: TextEdit.RichText
+
+                onLinkActivated: Qt.openUrlExternally(link)
+            }
+        }
+
+        Column {
+            id: actionsColumn
+            anchors {
+                top: titleBar.bottom
+                right: parent.right
+                rightMargin: units.smallSpacing
+                topMargin: units.smallSpacing
+            }
+
+            spacing: notificationItem.layoutSpacing
+
+            Repeater {
+                model: actions
+
+                PlasmaComponents.Button {
+                    width: theme.mSize(theme.defaultFont).width * 8
+
+                    text: model.text
+                    onClicked: {
+                        executeAction(source, model.id)
+                        actionsColumn.visible = false
                     }
-
-                    PlasmaComponents.MenuItem {
-                        text: i18n("Select All")
-                        onClicked: bodyText.selectAll()
-                    }
-                }
-
-                MouseArea {
-                    id: contextMouseArea
-                    anchors {
-                        left: appIconItem.right
-                        right: actionsColumn.left
-                        verticalCenter: parent.verticalCenter
-                        leftMargin: units.smallSpacing * 2
-                        rightMargin: units.smallSpacing * 2
-                    }
-                    height: bodyText.paintedHeight
-
-                    acceptedButtons: Qt.RightButton
-                    preventStealing: true
-
-                    onPressed: contextMenu.open(mouse.x, mouse.y)
-
-                    TextEdit {
-                        id: bodyText
-                        anchors.fill: parent
-
-                        text: body
-                        color: theme.textColor
-                        selectedTextColor: theme.viewBackgroundColor
-                        selectionColor: theme.viewFocusColor
-                        font.capitalization: theme.defaultFont.capitalization
-                        font.family: theme.defaultFont.family
-                        font.italic: theme.defaultFont.italic
-                        font.letterSpacing: theme.defaultFont.letterSpacing
-                        font.pointSize: theme.defaultFont.pointSize
-                        font.strikeout: theme.defaultFont.strikeout
-                        font.underline: theme.defaultFont.underline
-                        font.weight: theme.defaultFont.weight
-                        font.wordSpacing: theme.defaultFont.wordSpacing
-                        renderType: Text.NativeRendering
-                        selectByMouse: true
-                        readOnly: true
-                        wrapMode: Text.Wrap
-                        textFormat: TextEdit.RichText
-
-                        onLinkActivated: Qt.openUrlExternally(link)
-                    }
-                }
-
-                Column {
-                    id: actionsColumn
-                    anchors {
-                        right: parent.right
-                        rightMargin: units.smallSpacing
-                        verticalCenter: parent.verticalCenter
-                    }
-
-                    spacing: notificationItem.layoutSpacing
-
-                    Repeater {
-                        model: actions
-
-                        PlasmaComponents.Button {
-                            width: theme.mSize(theme.defaultFont).width * 8
-                            height: theme.mSize(theme.defaultFont).width * 2
-
-                            text: model.text
-                            onClicked: {
-                                executeAction(source, model.id)
-                                actionsColumn.visible = false
-                            }
-                        } // Button
-                    } // Repeater
-                } // Column
-            } // Item
+                } // Button
+            } // Repeater
         } // Column
     } //MouseArea
 
