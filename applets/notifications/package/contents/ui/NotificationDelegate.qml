@@ -131,6 +131,7 @@ PlasmaComponents.ListItem {
                 level: 4
                 height: paintedHeight
                 anchors {
+                    left: parent.left
                     right: settingsButton.visible ? settingsButton.left : closeButton.left
                     rightMargin: settingsButton.visible ? settingsButton.width + closeButton.width : closeButton.width
                 }
