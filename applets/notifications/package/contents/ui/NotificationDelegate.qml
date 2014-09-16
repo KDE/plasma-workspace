@@ -111,7 +111,7 @@ PlasmaComponents.ListItem {
             id: imageItem
             anchors.fill: appIconItem
 
-            image: image
+            image: model.image
             smooth: true
             visible: nativeWidth > 0
         }
