@@ -133,7 +133,7 @@ PlasmaComponents.ListItem {
                 anchors {
                     left: parent.left
                     right: settingsButton.visible ? settingsButton.left : closeButton.left
-                    rightMargin: settingsButton.visible ? settingsButton.width + closeButton.width : closeButton.width
+                    rightMargin: units.smallSpacing
                 }
                 text: summary
                 elide: Text.ElideRight
