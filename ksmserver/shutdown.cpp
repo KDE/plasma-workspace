@@ -161,7 +161,7 @@ void KSMServer::shutdown( KWorkSpace::ShutdownConfirm confirm,
 
         // If the logout was confirmed, let's start a powermanagement inhibition.
         // We store the cookie so we can interrupt it if the logout will be canceled
-        inhibitCookie = Solid::PowerManagement::beginSuppressingSleep();
+        inhibitCookie = Solid::PowerManagement::beginSuppressingSleep("Shutting down system");
 
         shutdownType = sdtype;
         shutdownMode = sdmode;
