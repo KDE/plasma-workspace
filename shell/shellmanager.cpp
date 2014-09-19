@@ -45,8 +45,9 @@ static const QString s_shellLoaderPath = QStringLiteral("/contents/loader.qml");
 bool ShellManager::s_forceWindowed = false;
 bool ShellManager::s_noRespawn = false;
 
-int ShellManager::crashes = 0;
+int ShellManager::s_crashes = 0;
 QString ShellManager::s_fixedShell;
+QString ShellManager::s_restartOptions;
 
 //
 // ShellManager
@@ -241,14 +242,9 @@ ShellManager * ShellManager::instance()
     return manager;
 }
 
-void ShellManager::setCrashCount(int count)
-{
-    crashes = count;
-}
-
 void ShellManager::resetCrashCount()
 {
-    crashes = 0;
+    s_crashes = 0;
 }
 
 void ShellManager::crashHandler(int signal)
@@ -263,13 +259,14 @@ void ShellManager::crashHandler(int signal)
      *
      * This logic is very similar as to how kwin handles it.
      */
-    crashes++;
-    fprintf(stderr, "Application::crashHandler() called with signal %d; recent crashes: %d\n", signal, crashes);
+    s_crashes++;
+    fprintf(stderr, "Application::crashHandler() called with signal %d; recent crashes: %d\n", signal, s_crashes);
     char cmd[1024];
-    sprintf(cmd, "%s --crashes %d &",
-            QFile::encodeName(QCoreApplication::applicationFilePath()).constData(), crashes);
+    sprintf(cmd, "%s %s --crashes %d &",
+            QFile::encodeName(QCoreApplication::applicationFilePath()).constData(), s_restartOptions.toLocal8Bit().constData(), s_crashes);
+    printf("%s\n", cmd);
 
-    if (crashes < 3 && !s_noRespawn) {
+    if (s_crashes < 3 && !s_noRespawn) {
         sleep(1);
         system(cmd);
     } else {

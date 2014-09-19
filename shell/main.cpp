@@ -36,7 +36,8 @@ void noMessageOutput(QtMsgType type, const char *msg)
      Q_UNUSED(type);
      Q_UNUSED(msg);
 }
-int main(int argc, char** argv)
+
+int main(int argc, char *argv[])
 {
     QQuickWindow::setDefaultAlphaBuffer(true);
 
@@ -98,10 +99,30 @@ int main(int argc, char** argv)
     QObject::connect(&app, &QGuiApplication::commitDataRequest, disableSessionManagement);
     QObject::connect(&app, &QGuiApplication::saveStateRequest, disableSessionManagement);
 
-    ShellManager::setCrashCount(cliOptions.value(crashOption).toInt());
+    ShellManager::s_crashes = cliOptions.value(crashOption).toInt();
     ShellManager::s_forceWindowed = cliOptions.isSet(winOption);
     ShellManager::s_noRespawn = cliOptions.isSet(respawnOption);
     ShellManager::s_fixedShell = cliOptions.value(shellPluginOption);
+
+    if (cliOptions.isSet(dbgOption)) {
+        ShellManager::s_restartOptions += " -" + dbgOption.names().first();
+    }
+
+    if (cliOptions.isSet(winOption)) {
+        ShellManager::s_restartOptions += " -" + winOption.names().first();
+    }
+
+    if (cliOptions.isSet(respawnOption)) {
+        ShellManager::s_restartOptions += " -" + respawnOption.names().first();
+    }
+
+    if (cliOptions.isSet(shutupOption)) {
+        ShellManager::s_restartOptions += " -" + shutupOption.names().first();
+    }
+
+    if (cliOptions.isSet(shellPluginOption)) {
+        ShellManager::s_restartOptions += " -" + shellPluginOption.names().first() + " " + ShellManager::s_fixedShell;
+    }
 
     QObject::connect(QCoreApplication::instance(), SIGNAL(aboutToQuit()), ShellManager::instance(), SLOT(deleteLater()));
 

@@ -40,9 +40,9 @@ public:
 
     static bool s_forceWindowed;
     static bool s_noRespawn;
+    static int s_crashes;
     static QString s_fixedShell;
-
-    static void setCrashCount(int count);
+    static QString s_restartOptions;
 
 protected Q_SLOTS:
     void registerHandler(QObject * handler);
@@ -65,7 +65,6 @@ private:
     class Private;
     const QScopedPointer<Private> d;
 
-    static int crashes;
     static void crashHandler(int signal);
 };
 
