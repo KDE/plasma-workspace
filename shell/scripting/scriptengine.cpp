@@ -19,8 +19,6 @@
 
 #include "scriptengine.h"
 
-#include <QApplication>
-#include <QDesktopWidget>
 #include <QDir>
 #include <QDirIterator>
 #include <QFile>
@@ -413,8 +411,7 @@ QScriptValue ScriptEngine::loadTemplate(QScriptContext *context, QScriptEngine *
         return false;
     }
 
-    const QString constraint = QString("[X-Plasma-Shell] == '%1' and [X-KDE-PluginInfo-Name] == '%2'")
-                                      .arg(qApp->applicationName(),layout);
+    const QString constraint = QString("[X-KDE-PluginInfo-Name] == '%2'").arg(layout);
     KService::List offers = KServiceTypeTrader::self()->query("Plasma/LayoutTemplate", constraint);
 
     if (offers.isEmpty()) {
