@@ -57,7 +57,7 @@ PlasmaCore.Dialog {
 
     mainItem: MouseEventListener {
         id: root
-        height: Math.max(actionsColumn.height + closeButton.height + (3 * units.smallSpacing), (5 * units.gridUnit)) //5 * units.gridUnit
+        height: Math.max(actionsColumn.height + closeButton.height + (3 * units.smallSpacing), (4.5 * units.gridUnit))
         width: Math.round(23 * units.gridUnit)
 
         state: "controlsHidden"
@@ -144,7 +144,9 @@ PlasmaCore.Dialog {
                     right: (!notificationProperties || notificationProperties.actions.length == 0) ? parent.right : actionsColumn.left
                     top: titleLabel.bottom
                     bottom: parent.bottom
+
                     margins: units.smallSpacing * 2
+                    topMargin: units.smallSpacing
                 }
             }
 //         }
