@@ -34,8 +34,8 @@ Item {
     implicitWidth: pageColumn.implicitWidth
     implicitHeight: pageColumn.implicitHeight
 
-    property var cfg_shownItems: Array()
-    property var cfg_hiddenItems: Array()
+    property var cfg_shownItems: []
+    property var cfg_hiddenItems: []
 
 
     SystemPalette {
@@ -105,9 +105,12 @@ Item {
                     }
                     model: ListModel {
                         id: cbItems
-                        ListElement { text: "Auto"; val: 1 }
-                        ListElement { text: "Shown"; val: 2 }
-                        ListElement { text: "Hidden"; val: 0 }
+
+                        Component.onCompleted: {
+                            cbItems.append({"text": i18n("Auto"), "val": 1});
+                            cbItems.append({"text": i18n("Shown"), "val": 2});
+                            cbItems.append({"text": i18n("Hidden"), "val": 0});
+                        }
                     }
                 }
             }
