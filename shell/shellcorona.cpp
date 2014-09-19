@@ -364,7 +364,6 @@ void ShellCorona::screenInvariants() const
         QScreen *screen = view->screen();
         Q_ASSERT(!screens.contains(screen));
         Q_ASSERT(!m_redundantOutputs.contains(screenToOutput(screen)));
-        Q_ASSERT(view->fillScreen() || ShellManager::s_forceWindowed);
 //         commented out because a different part of the code-base is responsible for this
 //         and sometimes is not yet called here.
 //         Q_ASSERT(!view->fillScreen() || view->geometry() == screen->geometry());
