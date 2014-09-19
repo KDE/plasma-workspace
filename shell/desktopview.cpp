@@ -107,8 +107,10 @@ void DesktopView::showEvent(QShowEvent* e)
 void DesktopView::adaptToScreen()
 {
     //This happens sometimes, when shutting down the process
-    if (!screen() || m_oldScreen==screen())
+    if (!screen() || m_oldScreen==screen()) {
         return;
+    }
+
 //     qDebug() << "adapting to screen" << screen()->name() << this;
     if (m_fillScreen) {
         setGeometry(screen()->geometry());
@@ -117,7 +119,6 @@ void DesktopView::adaptToScreen()
 
         disconnect(m_oldScreen.data(), &QScreen::geometryChanged, this, static_cast<void (QWindow::*)(const QRect&)>(&QWindow::setGeometry));
         connect(screen(), &QScreen::geometryChanged, this, static_cast<void (QWindow::*)(const QRect&)>(&QWindow::setGeometry), Qt::UniqueConnection);
-
     } else {
         disconnect(screen(), &QScreen::geometryChanged, this, static_cast<void (QWindow::*)(const QRect&)>(&QWindow::setGeometry));
     }

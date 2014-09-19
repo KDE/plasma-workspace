@@ -73,6 +73,7 @@ private:
     static QStringList availableContainments(const QString &type);
     static QScriptValue createActivity(QScriptContext *context, QScriptEngine *engine);
     static QScriptValue setCurrentActivity(QScriptContext *context, QScriptEngine *engine);
+    static QScriptValue currentActivity(QScriptContext *controller, QScriptEngine *engine);
     static QScriptValue activities(QScriptContext *context, QScriptEngine *engine);
     static QScriptValue newPanel(QScriptContext *context, QScriptEngine *engine);
     static QScriptValue desktopsForActivity(QScriptContext *context, QScriptEngine *engine);

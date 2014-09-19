@@ -95,6 +95,11 @@ public:
     QScreen *screenForId(int screenId) const;
     void remove(DesktopView *desktopView);
 
+    /**
+     * @returns a new containment associated with the specified @p activity and @p screen.
+     */
+    Plasma::Containment *createContainmentForActivity(const QString &activity, int screenNum);
+
 public Q_SLOTS:
     /**
      * Request saving applicationConfig on disk, it's event compressed, not immediate
@@ -186,10 +191,6 @@ private:
     void screenInvariants() const;
 #endif
 
-    /**
-     * @returns a new containment associated with the specified @p activity and @p screen.
-     */
-    Plasma::Containment *createContainmentForActivity(const QString &activity, int screenNum);
     void insertContainment(const QString &activity, int screenNum, Plasma::Containment *containment);
 
     QString m_shell;

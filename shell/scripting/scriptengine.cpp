@@ -19,7 +19,6 @@
 
 #include "scriptengine.h"
 
-#include <QApplication>
 #include <QDir>
 #include <QDirIterator>
 #include <QFile>
@@ -96,16 +95,45 @@ QScriptValue ScriptEngine::desktopById(QScriptContext *context, QScriptEngine *e
 QScriptValue ScriptEngine::desktopsForActivity(QScriptContext *context, QScriptEngine *engine)
 {
     if (context->argumentCount() == 0) {
-        return context->throwError(i18n("containmentsByActivity requires an id"));
+        return context->throwError(i18n("desktopsForActivity requires an id"));
     }
 
     QScriptValue containments = engine->newArray();
     int count = 0;
 
     const QString id = context->argument(0).toString();
+
+    // confirm this activity actually exists
+    KActivities::Consumer consumer;
+    bool found = false;
+    for (const QString &act: consumer.activities()) {
+        if (act == id) {
+            found = true;
+            break;
+        }
+    }
+
+    if (!found) {
+        containments.setProperty("length", 0);
+        return containments;
+    }
+
     ScriptEngine *env = envFor(engine);
     foreach (Plasma::Containment *c, env->m_corona->containments()) {
         if (c->activity() == id && !isPanel(c)) {
+            containments.setProperty(count, env->wrap(c));
+            ++count;
+        }
+    }
+
+    if (count == 0) {
+        // we have no desktops for this activity, so lets make them now
+        // this can happen when the activity already exists but has never been activated
+        // with the current shell package and layout.js is run to set up the shell for the
+        // first time
+        const int numScreens = env->m_corona->numScreens();
+        for (int i = 0; i < numScreens; ++i) {
+            Plasma::Containment *c = env->m_corona->createContainmentForActivity(id, i);
             containments.setProperty(count, env->wrap(c));
             ++count;
         }
@@ -147,6 +175,7 @@ QScriptValue ScriptEngine::createActivity(QScriptContext *context, QScriptEngine
     foreach (Plasma::Containment *cont, env->m_corona->containments()) {
         knownActivities.insert(cont->activity());
     }
+
     foreach (const QString &act, consumer.activities()) {
         if (!knownActivities.contains(act)) {
             id = act;
@@ -199,6 +228,14 @@ QScriptValue ScriptEngine::setCurrentActivity(QScriptContext *context, QScriptEn
     loop.exec();
 
     return QScriptValue(task.result());
+}
+
+QScriptValue ScriptEngine::currentActivity(QScriptContext *context, QScriptEngine *engine)
+{
+    Q_UNUSED(context)
+
+    KActivities::Consumer consumer;
+    return consumer.currentActivity();
 }
 
 QScriptValue ScriptEngine::activities(QScriptContext *context, QScriptEngine *engine)
@@ -374,8 +411,7 @@ QScriptValue ScriptEngine::loadTemplate(QScriptContext *context, QScriptEngine *
         return false;
     }
 
-    const QString constraint = QString("[X-Plasma-Shell] == '%1' and [X-KDE-PluginInfo-Name] == '%2'")
-                                      .arg(qApp->applicationName(),layout);
+    const QString constraint = QString("[X-KDE-PluginInfo-Name] == '%2'").arg(layout);
     KService::List offers = KServiceTypeTrader::self()->query("Plasma/LayoutTemplate", constraint);
 
     if (offers.isEmpty()) {
@@ -722,6 +758,7 @@ void ScriptEngine::setupEngine()
     m_scriptSelf.setProperty("QRectF", constructQRectFClass(this));
     m_scriptSelf.setProperty("createActivity", newFunction(ScriptEngine::createActivity));
     m_scriptSelf.setProperty("setCurrentActivity", newFunction(ScriptEngine::setCurrentActivity));
+    m_scriptSelf.setProperty("currentActivity", newFunction(ScriptEngine::currentActivity));
     m_scriptSelf.setProperty("activities", newFunction(ScriptEngine::activities));
     m_scriptSelf.setProperty("Panel", newFunction(ScriptEngine::newPanel, newObject()));
     m_scriptSelf.setProperty("desktopsForActivity", newFunction(ScriptEngine::desktopsForActivity));
