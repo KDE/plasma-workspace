@@ -58,6 +58,12 @@ Item {
     onShowTimezoneChanged: {
         timeFormatCorrection(Qt.locale().timeFormat(Locale.ShortFormat))
     }
+    onDateFormatChanged: {
+        timeFormatCorrection(Qt.locale().timeFormat(Locale.ShortFormat))
+    }
+    onShowDateChanged: {
+        timeFormatCorrection(Qt.locale().timeFormat(Locale.ShortFormat))
+    }
 
     Components.Label  {
         id: timeLabel
