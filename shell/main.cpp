@@ -26,6 +26,7 @@
 #include <kdbusservice.h>
 #include <klocalizedstring.h>
 
+#include "shellcorona.h"
 #include "shellmanager.h"
 
 static const char description[] = "Plasma Shell";
@@ -50,7 +51,6 @@ int main(int argc, char *argv[])
     app.setApplicationVersion(version);
     app.setQuitOnLastWindowClosed(false);
     app.setWindowIcon(QIcon::fromTheme("plasma"));
-    KDBusService service(KDBusService::Unique);
 
     QCommandLineParser cliOptions;
     cliOptions.setApplicationDescription(description);
@@ -80,12 +80,16 @@ int main(int argc, char *argv[])
                                          i18n("Force loading the given shell plugin"),
                                          QStringLiteral("plugin"));
 
+    QCommandLineOption standaloneOption(QStringList() << QStringLiteral("a") << QStringLiteral("standalone"),
+                                         i18n("Load plasmashell as a standalone application"));
+
     cliOptions.addOption(dbgOption);
     cliOptions.addOption(winOption);
     cliOptions.addOption(respawnOption);
     cliOptions.addOption(crashOption);
     cliOptions.addOption(shutupOption);
     cliOptions.addOption(shellPluginOption);
+    cliOptions.addOption(standaloneOption);
 
     cliOptions.process(app);
 
@@ -98,6 +102,18 @@ int main(int argc, char *argv[])
     };
     QObject::connect(&app, &QGuiApplication::commitDataRequest, disableSessionManagement);
     QObject::connect(&app, &QGuiApplication::saveStateRequest, disableSessionManagement);
+
+    if (cliOptions.isSet(standaloneOption)) {
+        app.setApplicationName("plasmashell_"+cliOptions.value(shellPluginOption));
+        KDBusService service(KDBusService::Unique);
+        ShellCorona *corona = new ShellCorona;
+        corona->setShell(cliOptions.value(shellPluginOption));
+        const int ret = app.exec();
+        delete corona;
+        return ret;
+    }
+
+    KDBusService service(KDBusService::Unique);
 
     ShellManager::s_crashes = cliOptions.value(crashOption).toInt();
     ShellManager::s_forceWindowed = cliOptions.isSet(winOption);
