@@ -134,9 +134,9 @@ PlasmaCore.Dialog {
             PlasmaComponents.Label {
                 id: bodyLabel
                 color: theme.textColor
-                wrapMode: Text.Wrap
+                wrapMode: Text.WordWrap
                 elide: Text.ElideRight
-                maximumLineCount: 2
+                maximumLineCount: 4
                 verticalAlignment: Text.AlignTop
                 onLinkActivated: Qt.openUrlExternally(link)
                 anchors {
