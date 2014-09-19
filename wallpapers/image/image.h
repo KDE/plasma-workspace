@@ -145,6 +145,7 @@ class Image : public QObject
         void backgroundsFound(const QStringList &paths, const QString &token);
 
     protected:
+        void syncWallpaperPackage();
         void setSingleImage();
         void useSingleImageDefaults();
 

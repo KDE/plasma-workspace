@@ -379,24 +379,28 @@ void Image::addDirFromSelectionDialog()
     }
 }
 
+void Image::syncWallpaperPackage()
+{
+    m_wallpaperPackage.setPath(m_wallpaper);
+    findPreferedImageInPackage(m_wallpaperPackage);
+    m_wallpaperPath = m_wallpaperPackage.filePath("preferred");
+}
+
 void Image::setSingleImage()
 {
+    const QString oldPath = m_wallpaperPath;
     if (m_wallpaper.isEmpty()) {
         useSingleImageDefaults();
     }
 
     QString img;
     if (QDir::isAbsolutePath(m_wallpaper)) {
-        m_wallpaperPackage.setPath(m_wallpaper);
-        findPreferedImageInPackage(m_wallpaperPackage);
-        img = m_wallpaperPackage.filePath("preferred");
-        m_wallpaperPath = m_wallpaperPackage.filePath("preferred");
+        syncWallpaperPackage();
 
-        if (img.isEmpty() && QFile::exists(m_wallpaper)) {
-            img = m_wallpaper;
-            m_wallpaperPath = m_wallpaper;
+        if (img.isEmpty() && QFile::exists(m_wallpaperPath)) {
+            img = m_wallpaperPath;
         }
-        Q_EMIT wallpaperPathChanged();
+
     } else {
         //if it's not an absolute path, check if it's just a wallpaper name
         const QString path = QStandardPaths::locate(QStandardPaths::GenericDataLocation, QLatin1String("wallpapers/") + QString(m_wallpaper + QString::fromLatin1("/metadata.desktop")));
@@ -405,22 +409,20 @@ void Image::setSingleImage()
             QDir dir(path);
             dir.cdUp();
 
-            m_wallpaperPackage.setPath(m_wallpaper);
-            findPreferedImageInPackage(m_wallpaperPackage);
-            img = m_wallpaperPackage.filePath("preferred");
-            m_wallpaperPath = m_wallpaperPackage.filePath("preferred");
-            Q_EMIT wallpaperPathChanged();
+            syncWallpaperPackage();
+            img = m_wallpaperPath;
         }
     }
 
     if (img.isEmpty()) {
         // ok, so the package we have failed to work out; let's try the default
         // if we have already
-        const QString wallpaper = m_wallpaper;
         useSingleImageDefaults();
-        if (wallpaper != m_wallpaper) {
-            setSingleImage();
-        }
+        syncWallpaperPackage();
+    }
+
+    if (m_wallpaperPath != oldPath) {
+        Q_EMIT wallpaperPathChanged();
     }
 }
 
