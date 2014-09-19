@@ -24,11 +24,13 @@ import org.kde.plasma.components 2.0 as PlasmaComponents
 
 import org.kde.plasma.workspace.keyboardlayout 1.0
 
-PlasmaComponents.ToolButton {
+PlasmaComponents.Button {
     id: kbLayoutButton
-    flat: false
-    checkable: false
+//     flat: false
+//     checkable: false
     activeFocusOnTab: true
+    implicitWidth: minimumWidth
+    text: layout.currentLayout
 
     Accessible.name: i18ndc("plasma_lookandfeel_org.kde.lookandfeel", "Button to change keyboard layout", "Switch layout")
 
@@ -40,28 +42,13 @@ PlasmaComponents.ToolButton {
 
 
     KeyboardLayout {
-          id: layout;
+          id: layout
 
           function nextLayout() {
               var layouts = layout.layouts;
-              var index = layouts.indexOf(layout.currentLayout);
-              if (index == (layouts.length - 1)) {
-                  index = -1
-              }
+              var index = (layouts.indexOf(layout.currentLayout)+1) % layouts.length;
 
-              layout.currentLayout = layouts[index + 1];
+              layout.currentLayout = layouts[index];
           }
-    }
-
-    // Use Label so that we don't set ToolButton's text and icon, which makes the
-    // button tiny and the entire thing looks much cooler
-    PlasmaComponents.Label {
-          id: sizeHelper
-
-          anchors.fill: parent
-
-          verticalAlignment: Qt.AlignVCenter
-          horizontalAlignment: Qt.AlignHCenter
-          text: layout.currentLayout
     }
 }

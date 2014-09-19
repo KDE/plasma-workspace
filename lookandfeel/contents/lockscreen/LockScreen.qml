@@ -126,9 +126,7 @@ Image {
                     RowLayout {
                         anchors.horizontalCenter: parent.horizontalCenter
 
-                        KeyboardLayout {
-                            id: keyboardLayout
-                        }
+                        KeyboardLayoutButton {}
 
                         PlasmaComponents.TextField {
                             id: passwordInput
