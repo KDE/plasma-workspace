@@ -133,7 +133,7 @@ QScriptValue ScriptEngine::desktopsForActivity(QScriptContext *context, QScriptE
         // this can happen when the activity already exists but has never been activated
         // with the current shell package and layout.js is run to set up the shell for the
         // first time
-        const int numScreens = qApp->desktop()->numScreens();
+        const int numScreens = env->m_corona->numScreens();
         for (int i = 0; i < numScreens; ++i) {
             Plasma::Containment *c = env->m_corona->createContainmentForActivity(id, i);
             containments.setProperty(count, env->wrap(c));
