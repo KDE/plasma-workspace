@@ -107,9 +107,9 @@ Item {
                         id: cbItems
 
                         Component.onCompleted: {
-                            cbItems.append({"text": i18n("Auto"), "val": 1});
-                            cbItems.append({"text": i18n("Shown"), "val": 2});
-                            cbItems.append({"text": i18n("Hidden"), "val": 0});
+                            cbItems.append([{"text": i18n("Auto"), "val": 1},
+                                            {"text": i18n("Shown"), "val": 2},
+                                            {"text": i18n("Hidden"), "val": 0}]);
                         }
                     }
                 }
