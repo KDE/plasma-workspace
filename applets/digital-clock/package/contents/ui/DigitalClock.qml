@@ -77,7 +77,7 @@ Item {
         text: Qt.formatTime(dataSource.data["Local"]["DateTime"], main.timeFormat)
               + (showDate ? "<br/>" + Qt.formatDate(dataSource.data["Local"]["DateTime"], Qt.locale().dateFormat(main.dateFormat)) : "" )
         wrapMode: plasmoid.formFactor != PlasmaCore.Types.Horizontal ? Text.WordWrap : Text.NoWrap
-        horizontalAlignment: vertical ? Text.AlignHCenter : Text.AlignLeft // we want left align when horizontal to avoid re-aligning when seconds are visible
+        horizontalAlignment: vertical || main.showDate ? Text.AlignHCenter : Text.AlignLeft // we want left align when horizontal to avoid re-aligning when seconds are visible
         verticalAlignment: Text.AlignVCenter
         height: 0
         width: 0
