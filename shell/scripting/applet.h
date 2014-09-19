@@ -60,8 +60,6 @@ public:
     void setLocked(bool locked);
     bool locked() const;
 
-    bool wallpaperConfigDirty() const;
-
     virtual Plasma::Applet *applet() const;
 
 protected:

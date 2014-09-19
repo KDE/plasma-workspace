@@ -63,14 +63,11 @@ Containment::~Containment()
         if (d->oldWallpaperPlugin != d->wallpaperPlugin ||
             d->oldWallpaperMode != d->wallpaperMode) {
             containment->setWallpaper(d->wallpaperPlugin);
-        } else if (wallpaperConfigDirty()) {
-            KConfigGroup cg(containment->config());
-            cg = KConfigGroup(&cg, "Wallpaper");
-            cg = KConfigGroup(&cg, containment->wallpaper());
         }
     }
 
     reloadConfigIfNeeded();
+
     delete d;
 }
 

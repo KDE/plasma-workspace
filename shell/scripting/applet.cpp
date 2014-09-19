@@ -38,8 +38,7 @@ class Applet::Private
 public:
     Private()
         : configDirty(false),
-          inWallpaperConfig(false),
-          wallpaperConfigDirty(false)
+          inWallpaperConfig(false)
     {
     }
 
@@ -49,7 +48,6 @@ public:
     QStringList globalConfigGroupPath;
     bool configDirty : 1;
     bool inWallpaperConfig : 1;
-    bool wallpaperConfigDirty : 1;
 };
 
 Applet::Applet(QObject *parent)
@@ -118,16 +116,14 @@ void Applet::writeConfig(const QString &key, const QVariant &value)
 {
     if (d->configGroup.isValid()) {
         if (d->inWallpaperConfig) {
-            d->wallpaperConfigDirty = true;
             //hacky, but only way to make the wallpaper react immediately
             QObject *wallpaperGraphicsObject = applet()->property("wallpaperGraphicsObject").value<QObject *>();
-
             if (wallpaperGraphicsObject) {
                 KDeclarative::ConfigPropertyMap *config = static_cast<KDeclarative::ConfigPropertyMap *>(wallpaperGraphicsObject->property("configuration").value<QObject *>());
                 config->setProperty(key.toLatin1(), value);
             }
-        //check if it can be written in the applets' configScheme
         } else if (applet()->configScheme()) {
+            //check if it can be written in the applets' configScheme
             KConfigSkeletonItem *item = applet()->configScheme()->findItemByName(key);
             if (item) {
                 item->setProperty(value);
@@ -273,11 +269,6 @@ bool Applet::locked() const
     }
 
     return app->immutability() != Plasma::Types::Mutable;
-}
-
-bool Applet::wallpaperConfigDirty() const
-{
-    return d->wallpaperConfigDirty;
 }
 
 Plasma::Applet *Applet::applet() const
