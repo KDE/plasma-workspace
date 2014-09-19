@@ -95,7 +95,7 @@ Item {
         onClicked: plasmoid.expanded = !plasmoid.expanded
     }
 
-    Text {
+    Components.Label {
         id: sizehelper
         font.weight: timeLabel.font.weight
         font.italic: timeLabel.font.italic
