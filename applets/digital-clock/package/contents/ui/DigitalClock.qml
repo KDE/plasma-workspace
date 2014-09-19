@@ -64,10 +64,9 @@ Item {
         font {
             weight: plasmoid.configuration.boldText ? Font.Bold : Font.Normal
             italic: plasmoid.configuration.italicText
-            pixelSize: 1024
-            pointSize: 0 // we need to unset pointSize otherwise it breaks the Text.Fit size mode
+            pixelSize: 1024 // random "big enough" sizes - this is used as a max value by the fontSizeMode
+            pointSize: 1024
         }
-        minimumPixelSize: theme.mSize(theme.smallestFont).height
         fontSizeMode: Text.Fit
         text: Qt.formatTime(dataSource.data["Local"]["DateTime"], main.timeFormat)
               + (showDate ? "<br/>" + Qt.formatDate(dataSource.data["Local"]["DateTime"], Qt.locale().dateFormat(main.dateFormat)) : "" )
@@ -95,7 +94,7 @@ Item {
         font.weight: timeLabel.font.weight
         font.italic: timeLabel.font.italic
         font.pixelSize: vertical ? theme.mSize(theme.defaultFont).height * 2 : 1024 // random "big enough" size - this is used as a max pixelSize by the fontSizeMode
-        minimumPixelSize: theme.mSize(theme.smallestFont).height
+        font.pointSize: 1024
         // when seconds are visible, align to left to avoid text jumping with non-proportional font
         // when seconds are disabled, align to right to avoid big gap on the right side when the hours are just one number (like "9:00")
         horizontalAlignment: vertical ? Text.AlignHCenter : (main.showSeconds ? Text.AlignLeft : Text.AlignRight)
