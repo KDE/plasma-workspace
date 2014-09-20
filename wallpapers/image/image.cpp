@@ -146,7 +146,7 @@ QSize resSize(const QString &str)
 
 void Image::findPreferedImageInPackage(Plasma::Package &package)
 {
-    if (!package.isValid()) {
+    if (!package.isValid() || !package.filePath("preferred").isEmpty()) {
         return;
     }
 
@@ -397,10 +397,9 @@ void Image::setSingleImage()
     if (QDir::isAbsolutePath(m_wallpaper)) {
         syncWallpaperPackage();
 
-        if (img.isEmpty() && QFile::exists(m_wallpaperPath)) {
+        if (QFile::exists(m_wallpaperPath)) {
             img = m_wallpaperPath;
         }
-
     } else {
         //if it's not an absolute path, check if it's just a wallpaper name
         const QString path = QStandardPaths::locate(QStandardPaths::GenericDataLocation, QLatin1String("wallpapers/") + QString(m_wallpaper + QString::fromLatin1("/metadata.desktop")));
@@ -416,7 +415,6 @@ void Image::setSingleImage()
 
     if (img.isEmpty()) {
         // ok, so the package we have failed to work out; let's try the default
-        // if we have already
         useSingleImageDefaults();
         syncWallpaperPackage();
     }
@@ -438,14 +436,18 @@ void Image::addUrls(const QList<QUrl> &urls)
 
 void Image::addUrl(const QUrl &url, bool setAsCurrent)
 {
-    //qDebug() << "droppage!" << url << url.isLocalFile() << setAsCurrent;
     QString path;
     if (url.isLocalFile()) {
         path = url.toLocalFile();
     } else if (url.scheme().isEmpty()) {
-        path = QStandardPaths::locate(QStandardPaths::GenericDataLocation,
-                                      QLatin1String("wallpapers/") + url.path(),
-                                      QStandardPaths::LocateDirectory);
+        if (QDir::isAbsolutePath(url.path())) {
+            path = url.path();
+        } else {
+            path = QStandardPaths::locate(QStandardPaths::GenericDataLocation,
+                                          QLatin1String("wallpapers/") + url.path(),
+                                          QStandardPaths::LocateDirectory);
+        }
+
         if (path.isEmpty()) {
             return;
         }

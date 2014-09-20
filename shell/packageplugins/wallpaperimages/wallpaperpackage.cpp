@@ -58,6 +58,7 @@ void WallpaperPackage::pathChanged(Plasma::Package *package)
             ppath = package->path();
         }
     }
+
     QFileInfo info(ppath);
     const bool isFullPackage = info.isDir();
     package->removeDefinition("preferred");
@@ -67,6 +68,7 @@ void WallpaperPackage::pathChanged(Plasma::Package *package)
         package->setContentsPrefixPaths(QStringList() << "contents/");
     } else {
         package->addFileDefinition("screenshot", info.fileName(), i18n("Preview"));
+        package->addFileDefinition("preferred", info.fileName(), QString());
         package->setContentsPrefixPaths(QStringList());
         package->setPath(info.path());
     }
