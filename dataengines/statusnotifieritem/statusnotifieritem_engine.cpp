@@ -140,6 +140,6 @@ void StatusNotifierItemEngine::newItem(const QString &service)
     addSource(itemSource);
 }
 
-K_EXPORT_PLASMA_DATAENGINE_WITH_JSON(statusnotifieritem, StatusNotifierItemEngine,"plasma-engine-statusnotifieritem.json")
+K_EXPORT_PLASMA_DATAENGINE_WITH_JSON(statusnotifieritem, StatusNotifierItemEngine,"plasma-dataengine-statusnotifieritem.json")
 
 #include "statusnotifieritem_engine.moc"
