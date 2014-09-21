@@ -2,6 +2,7 @@
 Name=Clipboard
 Name[ca]=Porta-retalls
 Name[cs]=Schránka
+Name[da]=Udklipsholder
 Name[de]=Zwischenablage
 Name[en_GB]=Clipboard
 Name[es]=Portapapeles
@@ -29,6 +30,7 @@ Name[zh_TW]=剪貼簿
 Comment=Clipboard Tool.
 Comment[ca]=Eina de porta-retalls.
 Comment[cs]=Program pro práci se schránkou.
+Comment[da]=Udklipsholderværktøj.
 Comment[de]=Verwaltung der Zwischenablage.
 Comment[en_GB]=Clipboard Tool.
 Comment[es]=Herramienta del portapapeles.

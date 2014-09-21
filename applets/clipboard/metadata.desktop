@@ -2,6 +2,7 @@
 Name=Clipboard
 Name[ca]=Porta-retalls
 Name[cs]=Schránka
+Name[da]=Udklipsholder
 Name[de]=Zwischenablage
 Name[en_GB]=Clipboard
 Name[es]=Portapapeles
@@ -29,6 +30,7 @@ Name[zh_TW]=剪貼簿
 Comment=Provides access to the clipboard history.
 Comment[ca]=Proporciona accés a l'historial del porta-retalls.
 Comment[cs]=Poskytuje přístup k historii schránky.
+Comment[da]=Giver adgang til udklipsholder-historikken.
 Comment[de]=Ermöglicht den Zugriff auf den Verlauf der Zwischenablage.
 Comment[en_GB]=Provides access to the clipboard history.
 Comment[es]=Proporciona acceso al historial del portapapeles.
