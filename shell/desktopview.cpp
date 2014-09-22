@@ -36,6 +36,7 @@ DesktopView::DesktopView(ShellCorona *corona)
     : PlasmaQuick::View(corona, 0),
       m_corona(corona),
       m_dashboardShown(false),
+      m_fillScreen(false),
       m_windowType(Desktop)
 {
     setTitle(i18n("Desktop"));
@@ -64,6 +65,22 @@ DesktopView::~DesktopView()
 {
 }
 
+bool DesktopView::fillScreen() const
+{
+    return m_fillScreen;
+}
+
+void DesktopView::setFillScreen(bool fillScreen)
+{
+    if (ShellManager::s_forceWindowed || fillScreen == m_fillScreen) {
+        return;
+    }
+
+    m_fillScreen = fillScreen;
+    adaptToScreen();
+    emit fillScreenChanged();
+}
+
 void DesktopView::showEvent(QShowEvent* e)
 {
     adaptToScreen();
@@ -78,7 +95,7 @@ void DesktopView::adaptToScreen()
     }
 
 //     qDebug() << "adapting to screen" << screen()->name() << this;
-    if (m_windowType != Normal && !ShellManager::s_forceWindowed) {
+    if (m_fillScreen && !ShellManager::s_forceWindowed) {
         setGeometry(screen()->geometry());
         setMinimumSize(screen()->geometry().size());
         setMaximumSize(screen()->geometry().size());

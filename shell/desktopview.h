@@ -29,6 +29,7 @@ class ShellCorona;
 class DesktopView : public PlasmaQuick::View
 {
     Q_OBJECT
+    Q_PROPERTY(bool fillScreen READ fillScreen WRITE setFillScreen NOTIFY fillScreenChanged)
     //the qml part doesn't need to be able to write it, hide for now
     Q_PROPERTY(bool dashboardShown READ isDashboardShown NOTIFY dashboardShownChanged)
 
@@ -50,6 +51,9 @@ public:
 
     void adaptToScreen();
     virtual void showEvent(QShowEvent*);
+
+    bool fillScreen() const;
+    void setFillScreen(bool fillScreen);
 
     WindowType windowType() const;
     void setWindowType(WindowType type);
@@ -79,6 +83,7 @@ private:
     QPointer<QScreen> m_oldScreen;
     ShellCorona *m_corona;
     bool m_dashboardShown : 1;
+    bool m_fillScreen : 1;
     WindowType m_windowType;
 };
 
