@@ -167,8 +167,12 @@ bool DesktopView::event(QEvent *e)
     } else if (e->type() == QEvent::Show || e->type() == QEvent::FocusIn) {
         ensureWindowType();
     } else if (e->type() == QEvent::Close) {
-        //prevent ALT+F4 from killing the shell
-        e->ignore();
+        if (ShellManager::s_standaloneOption) {
+            QCoreApplication::quit();
+        } else {
+            //prevent ALT+F4 from killing the shell
+            e->ignore();
+        }
         return true;
     } else if (e->type() == QEvent::FocusOut) {
         QObject *graphicObject = containment()->property("_plasma_graphicObject").value<QObject *>();
