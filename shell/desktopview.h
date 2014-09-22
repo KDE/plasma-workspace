@@ -43,7 +43,7 @@ public:
     };
     Q_ENUMS(WindowType)
 
-    explicit DesktopView(ShellCorona *corona);
+    explicit DesktopView(Plasma::Corona *corona);
     virtual ~DesktopView();
 
     void setDashboardShown(bool shown);
@@ -81,7 +81,6 @@ private:
 
     QPointer<PlasmaQuick::ConfigView> m_configView;
     QPointer<QScreen> m_oldScreen;
-    ShellCorona *m_corona;
     bool m_dashboardShown : 1;
     bool m_fillScreen : 1;
     WindowType m_windowType;

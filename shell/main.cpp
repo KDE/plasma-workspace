@@ -27,6 +27,7 @@
 #include <klocalizedstring.h>
 
 #include "shellcorona.h"
+#include "standaloneappcorona.h"
 #include "shellmanager.h"
 
 static const char description[] = "Plasma Shell";
@@ -139,8 +140,7 @@ int main(int argc, char *argv[])
         Plasma::Theme theme;
         theme.setUseGlobalSettings(false);
         KDBusService service(KDBusService::Unique);
-        ShellCorona *corona = new ShellCorona;
-        corona->setShell(cliOptions.value(shellPluginOption));
+        StandaloneAppCorona *corona = new StandaloneAppCorona(cliOptions.value(shellPluginOption));
         const int ret = app.exec();
         delete corona;
         return ret;

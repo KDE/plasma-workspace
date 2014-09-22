@@ -32,9 +32,8 @@
 
 #include <Plasma/Package>
 
-DesktopView::DesktopView(ShellCorona *corona)
+DesktopView::DesktopView(Plasma::Corona *corona)
     : PlasmaQuick::View(corona, 0),
-      m_corona(corona),
       m_dashboardShown(false),
       m_fillScreen(false),
       m_windowType(Desktop)
@@ -179,7 +178,10 @@ bool DesktopView::event(QEvent *e)
     if (e->type() == QEvent::KeyRelease) {
         QKeyEvent *ke = static_cast<QKeyEvent *>(e);
         if (m_dashboardShown && ke->key() == Qt::Key_Escape) {
-            static_cast<ShellCorona *>(corona())->setDashboardShown(false);
+            ShellCorona *c = qobject_cast<ShellCorona *>(corona());
+            if (c) {
+                c->setDashboardShown(false);
+            }
         }
     } else if (e->type() == QEvent::Show || e->type() == QEvent::FocusIn) {
         ensureWindowType();
@@ -257,7 +259,10 @@ void DesktopView::screenDestroyed(QObject* screen)
 //     otherwise Qt goes mental and starts moving our panels. See:
 //     https://codereview.qt-project.org/#/c/88351/
     if (screen == this->screen()) {
-        m_corona->remove(this);
+        ShellCorona *c = qobject_cast<ShellCorona *>(corona());
+        if (c) {
+            c->remove(this);
+        }
     }
 }
 

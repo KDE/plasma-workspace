@@ -52,6 +52,7 @@ set (plasma_shell_SRCS
     panelshadows.cpp
     shellcorona.cpp
     shellmanager.cpp
+    standaloneappcorona
     osd.cpp
     ${scripting_SRC}
 )
