@@ -29,7 +29,6 @@
 #include "shellmanager.h"
 
 static const char description[] = "Plasma Shell";
-static const char version[] = "4.96.0";
 
 void noMessageOutput(QtMsgType type, const char *msg)
 {
@@ -47,7 +46,7 @@ int main(int argc, char *argv[])
     app.setApplicationName("plasmashell");
     app.setApplicationDisplayName(i18n("Plasma"));
     app.setOrganizationDomain("kde.org");
-    app.setApplicationVersion(version);
+    app.setApplicationVersion(PROJECT_VERSION);
     app.setQuitOnLastWindowClosed(false);
     app.setWindowIcon(QIcon::fromTheme("plasma"));
     KDBusService service(KDBusService::Unique);

@@ -84,6 +84,7 @@ target_link_libraries(plasmashell
  KF5::XmlGui
 )
 target_include_directories(plasmashell PRIVATE "${CMAKE_BINARY_DIR}")
+target_compile_definitions(plasmashell PRIVATE -DPROJECT_VERSION="${PROJECT_VERSION}")
 
 if(HAVE_X11)
   target_link_libraries(plasmashell ${X11_LIBRARIES} XCB::XCB )
