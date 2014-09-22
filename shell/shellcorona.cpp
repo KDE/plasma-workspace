@@ -123,26 +123,28 @@ ShellCorona::ShellCorona(QObject *parent)
         saveLayout();
     });
 
-    const QString themeGroupKey = QStringLiteral("Theme");
-    const QString themeNameKey = QStringLiteral("name");
+    if (!ShellManager::s_standaloneOption) {
+        const QString themeGroupKey = QStringLiteral("Theme");
+        const QString themeNameKey = QStringLiteral("name");
 
-    QString themeName;
+        QString themeName;
 
-    KConfigGroup plasmarc(KSharedConfig::openConfig("plasmarc"), themeGroupKey);
-    themeName = plasmarc.readEntry(themeNameKey, themeName);
+        KConfigGroup plasmarc(KSharedConfig::openConfig("plasmarc"), themeGroupKey);
+        themeName = plasmarc.readEntry(themeNameKey, themeName);
 
-    if (themeName.isEmpty()) {
-        KConfigGroup lnfCfg = KConfigGroup(KSharedConfig::openConfig(
-                                                m_lookAndFeelPackage.filePath("defaults")),
-                                                "plasmarc"
-                                           );
-        lnfCfg = KConfigGroup(&lnfCfg, themeGroupKey);
-        themeName = lnfCfg.readEntry(themeNameKey, themeName);
-    }
+        if (themeName.isEmpty()) {
+            KConfigGroup lnfCfg = KConfigGroup(KSharedConfig::openConfig(
+                                                    m_lookAndFeelPackage.filePath("defaults")),
+                                                    "plasmarc"
+                                            );
+            lnfCfg = KConfigGroup(&lnfCfg, themeGroupKey);
+            themeName = lnfCfg.readEntry(themeNameKey, themeName);
+        }
 
-    if (!themeName.isEmpty()) {
-        Plasma::Theme *t = new Plasma::Theme(this);
-        t->setThemeName(themeName);
+        if (!themeName.isEmpty()) {
+            Plasma::Theme *t = new Plasma::Theme(this);
+            t->setThemeName(themeName);
+        }
     }
 
     connect(this, &ShellCorona::containmentAdded,
