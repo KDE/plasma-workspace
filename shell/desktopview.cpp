@@ -39,8 +39,8 @@ DesktopView::DesktopView(ShellCorona *corona)
       m_fillScreen(false),
       m_windowType(Desktop)
 {
-    setTitle(i18n("Desktop"));
-    setIcon(QIcon::fromTheme("user-desktop"));
+    setTitle(corona->package().metadata().name());
+    setIcon(QIcon::fromTheme(corona->package().metadata().icon()));
     engine()->rootContext()->setContextProperty("desktop", this);
     setSource(QUrl::fromLocalFile(corona->package().filePath("views", "Desktop.qml")));
 
