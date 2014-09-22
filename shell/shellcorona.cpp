@@ -706,6 +706,13 @@ void ShellCorona::addOutput(KScreen::Output *output)
         return;
     }
 
+    //don't do multiscreen if we are a standalone app
+    if (ShellManager::s_standaloneOption &&
+        (output != m_screenConfiguration->primaryOutput() &&
+        (!m_views.isEmpty() || (m_screenConfiguration->primaryOutput() && m_screenConfiguration->primaryOutput()->isEnabled())))) {
+        return;
+    }
+
     connect(output, &KScreen::Output::isEnabledChanged, this, &ShellCorona::outputEnabledChanged, Qt::UniqueConnection);
     connect(output, &KScreen::Output::posChanged, &m_reconsiderOutputsTimer, static_cast<void (QTimer::*)()>(&QTimer::start), Qt::UniqueConnection);
     connect(output, &KScreen::Output::currentModeIdChanged, &m_reconsiderOutputsTimer, static_cast<void (QTimer::*)()>(&QTimer::start), Qt::UniqueConnection);
