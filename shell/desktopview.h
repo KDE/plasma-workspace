@@ -29,26 +29,30 @@ class ShellCorona;
 class DesktopView : public PlasmaQuick::View
 {
     Q_OBJECT
-    Q_PROPERTY(bool stayBehind READ stayBehind WRITE setStayBehind NOTIFY stayBehindChanged)
-    Q_PROPERTY(bool fillScreen READ fillScreen WRITE setFillScreen NOTIFY fillScreenChanged)
     //the qml part doesn't need to be able to write it, hide for now
     Q_PROPERTY(bool dashboardShown READ isDashboardShown NOTIFY dashboardShownChanged)
 
+    Q_PROPERTY(WindowType windowType READ windowType WRITE setWindowType NOTIFY windowTypeChanged)
+
 public:
+    enum WindowType {
+        Normal,
+        Desktop,
+        FullScreen
+    };
+    Q_ENUMS(WindowType)
+
     explicit DesktopView(ShellCorona *corona);
     virtual ~DesktopView();
-
-    bool stayBehind() const;
-    void setStayBehind(bool stayBehind);
-
-    bool fillScreen() const;
-    void setFillScreen(bool fillScreen);
 
     void setDashboardShown(bool shown);
     bool isDashboardShown() const;
 
     void adaptToScreen();
     virtual void showEvent(QShowEvent*);
+
+    WindowType windowType() const;
+    void setWindowType(WindowType type);
 
 protected:
     bool event(QEvent *e);
@@ -65,17 +69,17 @@ Q_SIGNALS:
     void stayBehindChanged();
     void fillScreenChanged();
     void dashboardShownChanged();
+    void windowTypeChanged();
 
 private:
     void coronaPackageChanged(const Plasma::Package &package);
-    void ensureStayBehind();
+    void ensureWindowType();
 
     QPointer<PlasmaQuick::ConfigView> m_configView;
     QPointer<QScreen> m_oldScreen;
     ShellCorona *m_corona;
-    bool m_stayBehind : 1;
-    bool m_fillScreen : 1;
     bool m_dashboardShown : 1;
+    WindowType m_windowType;
 };
 
 #endif // DESKTOVIEW_H
