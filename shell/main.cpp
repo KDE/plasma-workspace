@@ -103,18 +103,6 @@ int main(int argc, char *argv[])
     QObject::connect(&app, &QGuiApplication::commitDataRequest, disableSessionManagement);
     QObject::connect(&app, &QGuiApplication::saveStateRequest, disableSessionManagement);
 
-    if (cliOptions.isSet(standaloneOption)) {
-        app.setApplicationName("plasmashell_"+cliOptions.value(shellPluginOption));
-        KDBusService service(KDBusService::Unique);
-        ShellCorona *corona = new ShellCorona;
-        corona->setShell(cliOptions.value(shellPluginOption));
-        const int ret = app.exec();
-        delete corona;
-        return ret;
-    }
-
-    KDBusService service(KDBusService::Unique);
-
     ShellManager::s_crashes = cliOptions.value(crashOption).toInt();
     ShellManager::s_forceWindowed = cliOptions.isSet(winOption);
     ShellManager::s_noRespawn = cliOptions.isSet(respawnOption);
@@ -139,6 +127,23 @@ int main(int argc, char *argv[])
     if (cliOptions.isSet(shellPluginOption)) {
         ShellManager::s_restartOptions += " -" + shellPluginOption.names().first() + " " + ShellManager::s_fixedShell;
     }
+
+    if (cliOptions.isSet(standaloneOption)) {
+        ShellManager::s_standaloneOption += " -a";
+    }
+
+
+    if (cliOptions.isSet(standaloneOption) && cliOptions.isSet(shellPluginOption)) {
+        app.setApplicationName("plasmashell_"+cliOptions.value(shellPluginOption));
+        KDBusService service(KDBusService::Unique);
+        ShellCorona *corona = new ShellCorona;
+        corona->setShell(cliOptions.value(shellPluginOption));
+        const int ret = app.exec();
+        delete corona;
+        return ret;
+    }
+
+    KDBusService service(KDBusService::Unique);
 
     QObject::connect(QCoreApplication::instance(), SIGNAL(aboutToQuit()), ShellManager::instance(), SLOT(deleteLater()));
 

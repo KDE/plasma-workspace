@@ -40,6 +40,7 @@ public:
 
     static bool s_forceWindowed;
     static bool s_noRespawn;
+    static bool s_standaloneOption;
     static int s_crashes;
     static QString s_fixedShell;
     static QString s_restartOptions;
