@@ -124,28 +124,26 @@ ShellCorona::ShellCorona(QObject *parent)
         saveLayout();
     });
 
-    if (!ShellManager::s_standaloneOption) {
-        const QString themeGroupKey = QStringLiteral("Theme");
-        const QString themeNameKey = QStringLiteral("name");
+    const QString themeGroupKey = QStringLiteral("Theme");
+    const QString themeNameKey = QStringLiteral("name");
 
-        QString themeName;
+    QString themeName;
 
-        KConfigGroup plasmarc(KSharedConfig::openConfig("plasmarc"), themeGroupKey);
-        themeName = plasmarc.readEntry(themeNameKey, themeName);
+    KConfigGroup plasmarc(KSharedConfig::openConfig("plasmarc"), themeGroupKey);
+    themeName = plasmarc.readEntry(themeNameKey, themeName);
 
-        if (themeName.isEmpty()) {
-            KConfigGroup lnfCfg = KConfigGroup(KSharedConfig::openConfig(
-                                                    m_lookAndFeelPackage.filePath("defaults")),
-                                                    "plasmarc"
-                                            );
-            lnfCfg = KConfigGroup(&lnfCfg, themeGroupKey);
-            themeName = lnfCfg.readEntry(themeNameKey, themeName);
-        }
+    if (themeName.isEmpty()) {
+        KConfigGroup lnfCfg = KConfigGroup(KSharedConfig::openConfig(
+                                                m_lookAndFeelPackage.filePath("defaults")),
+                                                "plasmarc"
+                                           );
+        lnfCfg = KConfigGroup(&lnfCfg, themeGroupKey);
+        themeName = lnfCfg.readEntry(themeNameKey, themeName);
+    }
 
-        if (!themeName.isEmpty()) {
-            Plasma::Theme *t = new Plasma::Theme(this);
-            t->setThemeName(themeName);
-        }
+    if (!themeName.isEmpty()) {
+        Plasma::Theme *t = new Plasma::Theme(this);
+        t->setThemeName(themeName);
     }
 
     connect(this, &ShellCorona::containmentAdded,
@@ -706,13 +704,6 @@ void ShellCorona::reconsiderOutputs()
 void ShellCorona::addOutput(KScreen::Output *output)
 {
     if (!output) {
-        return;
-    }
-
-    //don't do multiscreen if we are a standalone app
-    if (ShellManager::s_standaloneOption &&
-        (output != m_screenConfiguration->primaryOutput() &&
-        (!m_views.isEmpty() || (m_screenConfiguration->primaryOutput() && m_screenConfiguration->primaryOutput()->isEnabled())))) {
         return;
     }
 
