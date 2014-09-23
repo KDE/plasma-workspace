@@ -65,8 +65,9 @@ DesktopView::~DesktopView()
 
 void DesktopView::showEvent(QShowEvent* e)
 {
-    adaptToScreen();
     QQuickWindow::showEvent(e);
+    ensureWindowType();
+    adaptToScreen();
 }
 
 void DesktopView::adaptToScreen()
@@ -176,16 +177,18 @@ bool DesktopView::event(QEvent *e)
                 c->setDashboardShown(false);
             }
         }
-    } else if (e->type() == QEvent::Show || e->type() == QEvent::FocusIn) {
-        ensureWindowType();
+
     } else if (e->type() == QEvent::Close) {
-        if (ShellManager::s_standaloneOption) {
-            QCoreApplication::quit();
-        } else {
+        if (!ShellManager::s_standaloneOption) {
             //prevent ALT+F4 from killing the shell
             e->ignore();
+            return true;
         }
-        return true;
+
+    //FIXME: this should *not* be needed
+    } else if (e->type() == QEvent::FocusIn) {
+        ensureWindowType();
+
     } else if (e->type() == QEvent::FocusOut) {
         QObject *graphicObject = containment()->property("_plasma_graphicObject").value<QObject *>();
         if (graphicObject) {

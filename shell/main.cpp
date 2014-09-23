@@ -129,21 +129,14 @@ int main(int argc, char *argv[])
         ShellManager::s_restartOptions += " -" + shellPluginOption.names().first() + " " + ShellManager::s_fixedShell;
     }
 
-    if (cliOptions.isSet(standaloneOption)) {
-        ShellManager::s_restartOptions += " -a";
-    }
-
-
     if (cliOptions.isSet(standaloneOption) && cliOptions.isSet(shellPluginOption)) {
         ShellManager::s_standaloneOption = true;
         app.setApplicationName("plasmashell_"+cliOptions.value(shellPluginOption));
         Plasma::Theme theme;
         theme.setUseGlobalSettings(false);
         KDBusService service(KDBusService::Unique);
-        StandaloneAppCorona *corona = new StandaloneAppCorona(cliOptions.value(shellPluginOption));
-        const int ret = app.exec();
-        delete corona;
-        return ret;
+        StandaloneAppCorona corona(cliOptions.value(shellPluginOption));
+        return app.exec();
     }
 
     KDBusService service(KDBusService::Unique);
