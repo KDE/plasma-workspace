@@ -35,7 +35,6 @@
 DesktopView::DesktopView(Plasma::Corona *corona)
     : PlasmaQuick::View(corona, 0),
       m_dashboardShown(false),
-      m_fillScreen(false),
       m_windowType(Desktop)
 {
     setTitle(corona->package().metadata().name());
@@ -64,22 +63,6 @@ DesktopView::~DesktopView()
 {
 }
 
-bool DesktopView::fillScreen() const
-{
-    return m_fillScreen;
-}
-
-void DesktopView::setFillScreen(bool fillScreen)
-{
-    if (ShellManager::s_forceWindowed || fillScreen == m_fillScreen) {
-        return;
-    }
-
-    m_fillScreen = fillScreen;
-    adaptToScreen();
-    emit fillScreenChanged();
-}
-
 void DesktopView::showEvent(QShowEvent* e)
 {
     adaptToScreen();
@@ -94,7 +77,7 @@ void DesktopView::adaptToScreen()
     }
 
 //     qDebug() << "adapting to screen" << screen()->name() << this;
-    if (m_fillScreen && !ShellManager::s_forceWindowed) {
+    if ((m_windowType == Desktop || m_windowType == WindowedDesktop) && !ShellManager::s_forceWindowed) {
         setGeometry(screen()->geometry());
         setMinimumSize(screen()->geometry().size());
         setMaximumSize(screen()->geometry().size());
@@ -135,11 +118,21 @@ void DesktopView::ensureWindowType()
     }
 
     if (m_windowType == Normal || ShellManager::s_forceWindowed) {
+        setFlags(Qt::Window);
         KWindowSystem::setType(winId(), NET::Normal);
         KWindowSystem::clearState(winId(), NET::FullScreen);
+
     } else if (m_windowType == Desktop) {
+        setFlags(Qt::Window);
         KWindowSystem::setType(winId(), NET::Desktop);
+
+    } else if (m_windowType == WindowedDesktop) {
+        KWindowSystem::setType(winId(), NET::Normal);
+        KWindowSystem::clearState(winId(), NET::FullScreen);
+        setFlags(Qt::FramelessWindowHint | flags());
+
     } else if (m_windowType == FullScreen) {
+        setFlags(Qt::Window);
         KWindowSystem::setType(winId(), NET::Normal);
         KWindowSystem::setState(winId(), NET::FullScreen);
     }

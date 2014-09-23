@@ -29,7 +29,6 @@ class ShellCorona;
 class DesktopView : public PlasmaQuick::View
 {
     Q_OBJECT
-    Q_PROPERTY(bool fillScreen READ fillScreen WRITE setFillScreen NOTIFY fillScreenChanged)
     //the qml part doesn't need to be able to write it, hide for now
     Q_PROPERTY(bool dashboardShown READ isDashboardShown NOTIFY dashboardShownChanged)
 
@@ -37,9 +36,10 @@ class DesktopView : public PlasmaQuick::View
 
 public:
     enum WindowType {
-        Normal,
-        Desktop,
-        FullScreen
+        Normal, /** The window is a normal resizable window with titlebar and appears in the taskbar */
+        FullScreen, /** The window is fullscreen and goes over all the other windows */
+        Desktop, /** The window is the desktop layer, under everything else, doesn't appear in the taskbar */
+        WindowedDesktop /** full screen and borderless as Desktop, but can be brought in front and appears in the taskbar */
     };
     Q_ENUMS(WindowType)
 
@@ -51,9 +51,6 @@ public:
 
     void adaptToScreen();
     virtual void showEvent(QShowEvent*);
-
-    bool fillScreen() const;
-    void setFillScreen(bool fillScreen);
 
     WindowType windowType() const;
     void setWindowType(WindowType type);
@@ -71,7 +68,6 @@ protected Q_SLOTS:
 
 Q_SIGNALS:
     void stayBehindChanged();
-    void fillScreenChanged();
     void dashboardShownChanged();
     void windowTypeChanged();
 
@@ -82,7 +78,6 @@ private:
     QPointer<PlasmaQuick::ConfigView> m_configView;
     QPointer<QScreen> m_oldScreen;
     bool m_dashboardShown : 1;
-    bool m_fillScreen : 1;
     WindowType m_windowType;
 };
 
