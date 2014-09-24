@@ -41,7 +41,18 @@ Item {
     PlasmaCore.DataSource {
         id: dataSource
         engine: "time"
-        connectedSources: ["Local"]
+        connectedSources: {
+            var timeZones = [];
+            for (var i = 0; i < plasmoid.configuration.selectedTimeZones.length; i++) {
+                if (plasmoid.configuration.selectedTimeZones[i] == "") {
+                    continue;
+                }
+
+                timeZones.push(plasmoid.configuration.selectedTimeZones[i]);
+            }
+            timeZones.push("Local");
+            return timeZones;
+        }
         interval: plasmoid.configuration.showSeconds ? 1000 : 30000
     }
 

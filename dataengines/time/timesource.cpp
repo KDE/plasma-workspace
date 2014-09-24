@@ -101,17 +101,22 @@ void TimeSource::updateTime()
         }
     }
 
-    int offset = tz.offsetFromUtc(QDateTime::currentDateTime());
+    QDateTime timeZoneDateTime = QDateTime::currentDateTime().toTimeZone(tz);
+
+    int offset = tz.offsetFromUtc(timeZoneDateTime);
     if (m_offset != offset) {
         m_offset = offset;
         setData(I18N_NOOP("Offset"), m_offset);
     }
 
+    QString abbreviation = tz.abbreviation(timeZoneDateTime);
+    setData(I18N_NOOP("Timezone Abbreviation"), abbreviation);
+
     QDateTime dt;
     if (m_userDateTime) {
         dt = data()["DateTime"].toDateTime();
     } else {
-        dt = QDateTime::currentDateTime().toTimeZone(tz);
+        dt = timeZoneDateTime;
     }
 
     if (m_solarPosition || m_moonPosition) {

@@ -33,4 +33,9 @@ ConfigModel {
          icon: "preferences-desktop-color"
          source: "configAppearance.qml"
     }
+    ConfigCategory {
+        name: i18n("Time Zones")
+        icon: "preferences-system-time"
+        source: "configTimeZones.qml"
+    }
 }

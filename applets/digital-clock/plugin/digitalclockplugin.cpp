@@ -16,14 +16,16 @@
     Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
-#include "processrunnerplugin.h"
+#include "digitalclockplugin.h"
 #include "processrunner.h"
+#include "timezonemodel.h"
 
 #include <QtQml>
 
-void ProcessRunnerPlugin::registerTypes(const char *uri)
+void DigitalClockPlugin::registerTypes(const char *uri)
 {
     Q_ASSERT(uri == QLatin1String("org.kde.plasma.private.digitalclock"));
 
     qmlRegisterType<ProcessRunner>(uri, 1, 0, "ProcessRunner");
+    qmlRegisterType<TimeZoneModel>(uri, 1, 0, "TimeZoneModel");
 }

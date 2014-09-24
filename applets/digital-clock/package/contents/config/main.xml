@@ -6,7 +6,7 @@
   <kcfgfile name=""/>
 
   <group name="Appearance">
-    <entry name="showTimezone" type="Bool">
+    <entry name="showLocalTimezone" type="Bool">
       <default>false</default>
     </entry>
     <entry name="showSeconds" type="Bool">
@@ -26,6 +26,18 @@
     </entry>
     <entry name="timeFormat" type="string">
       <default>default</default>
+    </entry>
+    <entry name="selectedTimeZones" type="StringList">
+        <default>Local</default>
+    </entry>
+    <entry name="lastSelectedTimezone" type="String">
+      <default>Local</default>
+    </entry>
+    <entry name="wheelChangesTimezone" type="Bool">
+      <default>false</default>
+    </entry>
+    <entry name="displayTimezoneAsCode" type="Bool">
+      <default>true</default>
     </entry>
   </group>
 

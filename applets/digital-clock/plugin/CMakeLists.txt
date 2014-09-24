@@ -2,16 +2,18 @@ project(processrunnerplugin)
 
 add_definitions(-DTRANSLATION_DOMAIN=\"plasma_applet_org.kde.plasma.digitalclock\")
 
-set(processrunnerplugin_SRCS
+set(digitalclockplugin_SRCS
     processrunner.cpp
-    processrunnerplugin.cpp
+    timezonemodel.cpp
+    digitalclockplugin.cpp
     )
 
-add_library(processrunnerplugin SHARED ${processrunnerplugin_SRCS})
-target_link_libraries(processrunnerplugin Qt5::Core
+add_library(digitalclockplugin SHARED ${digitalclockplugin_SRCS})
+target_link_libraries(digitalclockplugin Qt5::Core
                                           Qt5::Qml
-                                          KF5::CoreAddons)
+                                          KF5::CoreAddons
+                                          KF5::I18n)
 
-install(TARGETS processrunnerplugin DESTINATION ${QML_INSTALL_DIR}/org/kde/plasma/private/digitalclock)
+install(TARGETS digitalclockplugin DESTINATION ${QML_INSTALL_DIR}/org/kde/plasma/private/digitalclock)
 
 install(FILES qmldir DESTINATION ${QML_INSTALL_DIR}/org/kde/plasma/private/digitalclock)

@@ -43,7 +43,7 @@ Item {
     property bool vertical: plasmoid.formFactor == PlasmaCore.Types.Vertical
 
     property bool showSeconds: plasmoid.configuration.showSeconds
-    property bool showTimezone: plasmoid.configuration.showTimezone
+    property bool showLocalTimezone: plasmoid.configuration.showLocalTimezone
     property bool showDate: plasmoid.configuration.showDate
     property int dateFormat: plasmoid.configuration.dateFormat == "longDate" ? Locale.LongFormat :
                              plasmoid.configuration.dateFormat == "shortDate" ? Locale.ShortFormat :
@@ -52,10 +52,13 @@ Item {
     property string timeFormat
     property int tzOffset
 
+    // This is the index in the list of user selected timezones
+    property int tzIndex: 0
+
     onShowSecondsChanged: {
         timeFormatCorrection(Qt.locale().timeFormat(Locale.ShortFormat))
     }
-    onShowTimezoneChanged: {
+    onShowLocalTimezoneChanged: {
         timeFormatCorrection(Qt.locale().timeFormat(Locale.ShortFormat))
     }
     onDateFormatChanged: {
@@ -74,10 +77,41 @@ Item {
             pointSize: 1024
         }
         fontSizeMode: Text.Fit
-        text: Qt.formatTime(dataSource.data["Local"]["DateTime"], main.timeFormat)
-              + (showDate ? "<br/>" + Qt.formatDate(dataSource.data["Local"]["DateTime"], Qt.locale().dateFormat(main.dateFormat)) : "" )
+        text: {
+            var returnString = "";
+
+            // get the time for the given timezone from the dataengine
+            var now = dataSource.data[plasmoid.configuration.selectedTimeZones[tzIndex]]["DateTime"];
+            // get current UTC time
+            var msUTC = now.getTime() + (now.getTimezoneOffset() * 60000);
+            // add the dataengine TZ offset to it
+            var dateTime = new Date(msUTC + (dataSource.data[plasmoid.configuration.selectedTimeZones[tzIndex]]["Offset"] * 1000));
+
+            // add the timezone string to the clock
+            if (plasmoid.configuration.selectedTimeZones[tzIndex] != "Local" || main.showLocalTimezone) {
+                var timezoneString = plasmoid.configuration.displayTimezoneAsCode ? dataSource.data[plasmoid.configuration.selectedTimeZones[tzIndex]]["Timezone Abbreviation"]
+                                                                                  : dataSource.data[plasmoid.configuration.selectedTimeZones[tzIndex]]["Timezone City"];
+
+                returnString += (showDate ? i18nc("This composes time and a timezone into one string that's displayed in the clock applet (the main clock in the panel). "
+                                                + "%1 is the current time and %2 is either the timezone city or timezone code, depending on user settings",
+                                                  "%1 (%2)", Qt.formatTime(dateTime, main.timeFormat), timezoneString)
+                                          : i18nc("This composes time and a timezone into one string that's displayed in the clock applet (the main clock in the panel). "
+                                                + "From the previous case it's different that it puts the timezone name into separate new line without using ()s",
+                                                  "%1<br/>%2", Qt.formatTime(dateTime, main.timeFormat), timezoneString));
+            } else {
+                // return only the time
+                returnString += Qt.formatTime(dateTime, main.timeFormat);
+            }
+
+            if (showDate) {
+                returnString += "<br/>" + Qt.formatDate(dateTime, Qt.locale().dateFormat(main.dateFormat));
+            }
+
+            return returnString;
+        }
+
         wrapMode: plasmoid.formFactor != PlasmaCore.Types.Horizontal ? Text.WordWrap : Text.NoWrap
-        horizontalAlignment: vertical || main.showDate ? Text.AlignHCenter : Text.AlignLeft // we want left align when horizontal to avoid re-aligning when seconds are visible
+        horizontalAlignment: vertical || !main.showSeconds ? Text.AlignHCenter : Text.AlignLeft // we want left align when horizontal to avoid re-aligning when seconds are visible
         verticalAlignment: Text.AlignVCenter
         height: 0
         width: 0
@@ -85,6 +119,32 @@ Item {
             fill: parent
             leftMargin: units.smallSpacing
             rightMargin: units.smallSpacing
+        }
+
+        MouseArea {
+            anchors.fill: parent
+            enabled: plasmoid.configuration.wheelChangesTimezone
+            onWheel: {
+                var delta = wheel.angleDelta.y || wheel.angleDelta.x
+                var newIndex = main.tzIndex;
+
+                if (delta < 0) {
+                    newIndex--;
+                } else if (delta > 0) {
+                    newIndex++;
+                }
+
+                if (newIndex >= plasmoid.configuration.selectedTimeZones.length) {
+                    newIndex = 0;
+                } else if (newIndex < 0) {
+                    newIndex = plasmoid.configuration.selectedTimeZones.length - 1;
+                }
+
+                plasmoid.configuration.lastSelectedTimezone = plasmoid.configuration.selectedTimeZones[newIndex];
+                main.tzIndex = newIndex;
+
+                dataSource.dataChanged();
+            }
         }
     }
 
@@ -143,23 +203,19 @@ Item {
         }
 
         var st = Qt.formatTime(new Date(2000, 0, 1, 20, 0, 0), timeFormatString);
-        if (main.showTimezone) {
-            st += Qt.formatTime(dataSource.data["Local"]["DateTime"], " t");
+        if (main.showLocalTimezone || plasmoid.configuration.selectedTimeZones[tzIndex] != "Local") {
+            var timezoneString = plasmoid.configuration.displayTimezoneAsCode ? dataSource.data[plasmoid.configuration.selectedTimeZones[tzIndex]]["Timezone Abbreviation"]
+                                                                              : dataSource.data[plasmoid.configuration.selectedTimeZones[tzIndex]]["Timezone City"];
+
+            st += (showDate ? " (" + timezoneString + ")" : "<br/>" + timezoneString);
         }
 
         if (main.showDate) {
-            st += "<br/>" + Qt.formatDate(dataSource.data["Local"]["DateTime"], Qt.locale().dateFormat(main.dateFormat));
+            st += "<br/>" + Qt.formatDate(dataSource.data[plasmoid.configuration.selectedTimeZones[tzIndex]]["DateTime"], Qt.locale().dateFormat(main.dateFormat));
         }
 
         if (sizehelper.text != st) {
             sizehelper.text = st;
-        }
-
-        //FIXME: this always appends the timezone part at the end, it should probably be
-        //       Locale-driven, however QLocale does not provide any hint about where to
-        //       put it
-        if (main.showTimezone && timeFormatString.indexOf('t') == -1) {
-            timeFormatString = timeFormatString + " t";
         }
 
         main.timeFormat = timeFormatString;
@@ -167,7 +223,6 @@ Item {
 
     function dateTimeChanged()
     {
-        //console.log("Date/time changed!");
         var doCorrections = false;
 
         if (main.showDate) {
@@ -184,7 +239,6 @@ Item {
         if (currentTZOffset != tzOffset) {
             doCorrections = true;
             tzOffset = currentTZOffset;
-            //console.log("TZ offset changed: " + tzOffset);
             Date.timeZoneUpdated(); // inform the QML JS engine about TZ change
         }
 
@@ -194,8 +248,15 @@ Item {
     }
 
     Component.onCompleted: {
+        for (var i = 0; i < plasmoid.configuration.selectedTimeZones.length; i++) {
+            if (plasmoid.configuration.selectedTimeZones[i] == plasmoid.configuration.lastSelectedTimezone) {
+                main.tzIndex = i;
+                break;
+            }
+        }
+
         tzOffset = new Date().getTimezoneOffset();
-        //console.log("Initial TZ offset: " + tzOffset);
+        dateTimeChanged();
         timeFormatCorrection(Qt.locale().timeFormat(Locale.ShortFormat));
         dataSource.onDataChanged.connect(dateTimeChanged);
     }

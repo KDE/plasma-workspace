@@ -23,7 +23,7 @@
 #include <QQmlExtensionPlugin>
 
 class QQmlEngine;
-class ProcessRunnerPlugin : public QQmlExtensionPlugin
+class DigitalClockPlugin : public QQmlExtensionPlugin
 {
     Q_OBJECT
     Q_PLUGIN_METADATA(IID "org.qt-project.Qt.QQmlExtensionInterface")
