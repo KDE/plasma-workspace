@@ -1,5 +1,7 @@
 [kdeglobals][KDE]
 widgetStyle=breeze
+
+[kdeglobals][General]
 ColorScheme=Breeze
 
 [kdeglobals][Icons]
