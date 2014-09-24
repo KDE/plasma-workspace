@@ -44,6 +44,12 @@ StandaloneAppCorona::StandaloneAppCorona(const QString &coronaPlugin, QObject *p
     package.setPath(m_coronaPlugin);
     setPackage(package);
 
+    Plasma::Theme theme;
+    theme.setUseGlobalSettings(false);
+
+    KConfigGroup lnfCfg = KConfigGroup(KSharedConfig::openConfig(package.filePath("defaults")), "Theme");
+    theme.setThemeName(lnfCfg.readEntry("name", "default"));
+
     m_desktopDefaultsConfig = KConfigGroup(KSharedConfig::openConfig(package.filePath("defaults")), "Desktop");
 
     connect(m_activityConsumer, SIGNAL(currentActivityChanged(QString)), this, SLOT(currentActivityChanged(QString)));

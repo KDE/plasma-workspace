@@ -132,8 +132,7 @@ int main(int argc, char *argv[])
     if (cliOptions.isSet(standaloneOption) && cliOptions.isSet(shellPluginOption)) {
         ShellManager::s_standaloneOption = true;
         app.setApplicationName("plasmashell_"+cliOptions.value(shellPluginOption));
-        Plasma::Theme theme;
-        theme.setUseGlobalSettings(false);
+
         KDBusService service(KDBusService::Unique);
         StandaloneAppCorona corona(cliOptions.value(shellPluginOption));
         return app.exec();
