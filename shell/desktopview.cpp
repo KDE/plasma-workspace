@@ -32,20 +32,18 @@
 
 #include <Plasma/Package>
 
-DesktopView::DesktopView(ShellCorona *corona)
+DesktopView::DesktopView(Plasma::Corona *corona)
     : PlasmaQuick::View(corona, 0),
-      m_corona(corona),
-      m_stayBehind(false),
-      m_fillScreen(false),
-      m_dashboardShown(false)
+      m_dashboardShown(false),
+      m_windowType(Desktop)
 {
-    setTitle(i18n("Desktop"));
-    setIcon(QIcon::fromTheme("user-desktop"));
+    setTitle(corona->package().metadata().name());
+    setIcon(QIcon::fromTheme(corona->package().metadata().icon()));
     engine()->rootContext()->setContextProperty("desktop", this);
     setSource(QUrl::fromLocalFile(corona->package().filePath("views", "Desktop.qml")));
 
     //For some reason, if I connect the method directly it doesn't get called, I think it's for the lack of argument
-    connect(this, &QWindow::screenChanged, this, [=](QScreen*) { adaptToScreen(); ensureStayBehind(); });
+    connect(this, &QWindow::screenChanged, this, [=](QScreen*) { adaptToScreen(); ensureWindowType(); });
 
     QObject::connect(corona, &Plasma::Corona::packageChanged,
                      this, &DesktopView::coronaPackageChanged);
@@ -65,43 +63,11 @@ DesktopView::~DesktopView()
 {
 }
 
-bool DesktopView::stayBehind() const
-{
-    return m_stayBehind;
-}
-
-void DesktopView::setStayBehind(bool stayBehind)
-{
-    if (ShellManager::s_forceWindowed || stayBehind == m_stayBehind) {
-        return;
-    }
-
-    m_stayBehind = stayBehind;
-    ensureStayBehind();
-
-    emit stayBehindChanged();
-}
-
-bool DesktopView::fillScreen() const
-{
-    return m_fillScreen;
-}
-
-void DesktopView::setFillScreen(bool fillScreen)
-{
-    if (ShellManager::s_forceWindowed || fillScreen == m_fillScreen) {
-        return;
-    }
-
-    m_fillScreen = fillScreen;
-    adaptToScreen();
-    emit fillScreenChanged();
-}
-
 void DesktopView::showEvent(QShowEvent* e)
 {
-    adaptToScreen();
     QQuickWindow::showEvent(e);
+    ensureWindowType();
+    adaptToScreen();
 }
 
 void DesktopView::adaptToScreen()
@@ -112,7 +78,7 @@ void DesktopView::adaptToScreen()
     }
 
 //     qDebug() << "adapting to screen" << screen()->name() << this;
-    if (m_fillScreen) {
+    if ((m_windowType == Desktop || m_windowType == WindowedDesktop) && !ShellManager::s_forceWindowed) {
         setGeometry(screen()->geometry());
         setMinimumSize(screen()->geometry().size());
         setMaximumSize(screen()->geometry().size());
@@ -126,22 +92,57 @@ void DesktopView::adaptToScreen()
     m_oldScreen = screen();
 }
 
-void DesktopView::ensureStayBehind()
+DesktopView::WindowType DesktopView::windowType() const
+{
+    return m_windowType;
+}
+
+void DesktopView::setWindowType(DesktopView::WindowType type)
+{
+    if (m_windowType == type) {
+        return;
+    }
+
+    m_windowType = type;
+
+    ensureWindowType();
+    adaptToScreen();
+
+    emit windowTypeChanged();
+}
+
+void DesktopView::ensureWindowType()
 {
     //This happens sometimes, when shutting down the process
-    if (!screen())
+    if (!screen()) {
         return;
-    if (m_stayBehind) {
-        KWindowSystem::setType(winId(), NET::Desktop);
-    } else {
+    }
+
+    if (m_windowType == Normal || ShellManager::s_forceWindowed) {
+        setFlags(Qt::Window);
         KWindowSystem::setType(winId(), NET::Normal);
+        KWindowSystem::clearState(winId(), NET::FullScreen);
+
+    } else if (m_windowType == Desktop) {
+        setFlags(Qt::Window);
+        KWindowSystem::setType(winId(), NET::Desktop);
+
+    } else if (m_windowType == WindowedDesktop) {
+        KWindowSystem::setType(winId(), NET::Normal);
+        KWindowSystem::clearState(winId(), NET::FullScreen);
+        setFlags(Qt::FramelessWindowHint | flags());
+
+    } else if (m_windowType == FullScreen) {
+        setFlags(Qt::Window);
+        KWindowSystem::setType(winId(), NET::Normal);
+        KWindowSystem::setState(winId(), NET::FullScreen);
     }
 }
 
 void DesktopView::setDashboardShown(bool shown)
 {
     if (shown) {
-        if (m_stayBehind) {
+        if (m_windowType == Desktop) {
             KWindowSystem::setType(winId(), NET::Normal);
             KWindowSystem::clearState(winId(), NET::KeepBelow);
             KWindowSystem::setState(winId(), NET::SkipTaskbar|NET::SkipPager);
@@ -153,7 +154,7 @@ void DesktopView::setDashboardShown(bool shown)
         KWindowSystem::forceActiveWindow(winId());
 
     } else {
-        if (m_stayBehind) {
+        if (m_windowType == Desktop) {
             KWindowSystem::setType(winId(), NET::Desktop);
             KWindowSystem::setState(winId(), NET::SkipTaskbar|NET::SkipPager|NET::KeepBelow);
         }
@@ -171,12 +172,23 @@ bool DesktopView::event(QEvent *e)
     if (e->type() == QEvent::KeyRelease) {
         QKeyEvent *ke = static_cast<QKeyEvent *>(e);
         if (m_dashboardShown && ke->key() == Qt::Key_Escape) {
-            static_cast<ShellCorona *>(corona())->setDashboardShown(false);
+            ShellCorona *c = qobject_cast<ShellCorona *>(corona());
+            if (c) {
+                c->setDashboardShown(false);
+            }
         }
+
     } else if (e->type() == QEvent::Close) {
-        //prevent ALT+F4 from killing the shell
-        e->ignore();
-        return true;
+        if (!ShellManager::s_standaloneOption) {
+            //prevent ALT+F4 from killing the shell
+            e->ignore();
+            return true;
+        }
+
+    //FIXME: this should *not* be needed
+    } else if (e->type() == QEvent::FocusIn) {
+        ensureWindowType();
+
     } else if (e->type() == QEvent::FocusOut) {
         QObject *graphicObject = containment()->property("_plasma_graphicObject").value<QObject *>();
         if (graphicObject) {
@@ -243,7 +255,10 @@ void DesktopView::screenDestroyed(QObject* screen)
 //     otherwise Qt goes mental and starts moving our panels. See:
 //     https://codereview.qt-project.org/#/c/88351/
     if (screen == this->screen()) {
-        m_corona->remove(this);
+        ShellCorona *c = qobject_cast<ShellCorona *>(corona());
+        if (c) {
+            c->remove(this);
+        }
     }
 }
 

@@ -44,12 +44,12 @@ class ScriptEngine : public QScriptEngine
     Q_OBJECT
 
 public:
-    ScriptEngine(ShellCorona *corona, QObject *parent = 0);
+    ScriptEngine(Plasma::Corona *corona, QObject *parent = 0);
     ~ScriptEngine();
 
-    static QStringList pendingUpdateScripts(ShellCorona *corona);
+    static QStringList pendingUpdateScripts(Plasma::Corona *corona);
 
-    ShellCorona *corona() const;
+    Plasma::Corona *corona() const;
     QScriptValue wrap(Plasma::Applet *w);
     virtual QScriptValue wrap(Plasma::Containment *c);
     QScriptValue wrap(Containment *c);
@@ -99,7 +99,7 @@ private Q_SLOTS:
     void exception(const QScriptValue &value);
 
 private:
-    ShellCorona *m_corona;
+    Plasma::Corona *m_corona;
     QScriptValue m_scriptSelf;
 };
 

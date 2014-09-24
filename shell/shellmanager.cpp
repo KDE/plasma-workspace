@@ -44,6 +44,7 @@ static const QString s_shellLoaderPath = QStringLiteral("/contents/loader.qml");
 
 bool ShellManager::s_forceWindowed = false;
 bool ShellManager::s_noRespawn = false;
+bool ShellManager::s_standaloneOption = false;
 
 int ShellManager::s_crashes = 0;
 QString ShellManager::s_fixedShell;

@@ -26,6 +26,8 @@
 #include <kdbusservice.h>
 #include <klocalizedstring.h>
 
+#include "shellcorona.h"
+#include "standaloneappcorona.h"
 #include "shellmanager.h"
 
 static const char description[] = "Plasma Shell";
@@ -49,7 +51,6 @@ int main(int argc, char *argv[])
     app.setApplicationVersion(PROJECT_VERSION);
     app.setQuitOnLastWindowClosed(false);
     app.setWindowIcon(QIcon::fromTheme("plasma"));
-    KDBusService service(KDBusService::Unique);
 
     QCommandLineParser cliOptions;
     cliOptions.setApplicationDescription(description);
@@ -79,12 +80,16 @@ int main(int argc, char *argv[])
                                          i18n("Force loading the given shell plugin"),
                                          QStringLiteral("plugin"));
 
+    QCommandLineOption standaloneOption(QStringList() << QStringLiteral("a") << QStringLiteral("standalone"),
+                                         i18n("Load plasmashell as a standalone application"));
+
     cliOptions.addOption(dbgOption);
     cliOptions.addOption(winOption);
     cliOptions.addOption(respawnOption);
     cliOptions.addOption(crashOption);
     cliOptions.addOption(shutupOption);
     cliOptions.addOption(shellPluginOption);
+    cliOptions.addOption(standaloneOption);
 
     cliOptions.process(app);
 
@@ -122,6 +127,17 @@ int main(int argc, char *argv[])
     if (cliOptions.isSet(shellPluginOption)) {
         ShellManager::s_restartOptions += " -" + shellPluginOption.names().first() + " " + ShellManager::s_fixedShell;
     }
+
+    if (cliOptions.isSet(standaloneOption) && cliOptions.isSet(shellPluginOption)) {
+        ShellManager::s_standaloneOption = true;
+        app.setApplicationName("plasmashell_"+cliOptions.value(shellPluginOption));
+
+        KDBusService service(KDBusService::Unique);
+        StandaloneAppCorona corona(cliOptions.value(shellPluginOption));
+        return app.exec();
+    }
+
+    KDBusService service(KDBusService::Unique);
 
     QObject::connect(QCoreApplication::instance(), SIGNAL(aboutToQuit()), ShellManager::instance(), SLOT(deleteLater()));
 

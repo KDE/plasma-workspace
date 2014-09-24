@@ -77,6 +77,8 @@ ShellCorona::ShellCorona(QObject *parent)
       m_screenConfiguration(nullptr),
       m_loading(false)
 {
+    qmlRegisterUncreatableType<DesktopView>("org.kde.plasma.shell", 2, 0, "Desktop", "It is not possible to create objects of type Desktop");
+
     m_lookAndFeelPackage = Plasma::PluginLoader::self()->loadPackage("Plasma/LookAndFeel");
     KConfigGroup cg(KSharedConfig::openConfig("kdeglobals"), "KDE");
     const QString packageName = cg.readEntry("LookAndFeelPackage", QString());
@@ -121,28 +123,6 @@ ShellCorona::ShellCorona(QObject *parent)
         //saveLayout is a slot but arguments not compatible
         saveLayout();
     });
-
-    const QString themeGroupKey = QStringLiteral("Theme");
-    const QString themeNameKey = QStringLiteral("name");
-
-    QString themeName;
-
-    KConfigGroup plasmarc(KSharedConfig::openConfig("plasmarc"), themeGroupKey);
-    themeName = plasmarc.readEntry(themeNameKey, themeName);
-
-    if (themeName.isEmpty()) {
-        KConfigGroup lnfCfg = KConfigGroup(KSharedConfig::openConfig(
-                                                m_lookAndFeelPackage.filePath("defaults")),
-                                                "plasmarc"
-                                           );
-        lnfCfg = KConfigGroup(&lnfCfg, themeGroupKey);
-        themeName = lnfCfg.readEntry(themeNameKey, themeName);
-    }
-
-    if (!themeName.isEmpty()) {
-        Plasma::Theme *t = new Plasma::Theme(this);
-        t->setThemeName(themeName);
-    }
 
     connect(this, &ShellCorona::containmentAdded,
             this, &ShellCorona::handleContainmentAdded);
@@ -205,6 +185,31 @@ void ShellCorona::setShell(const QString &shell)
     package.setAllowExternalPaths(true);
     setPackage(package);
     m_desktopDefaultsConfig = KConfigGroup(KSharedConfig::openConfig(package.filePath("defaults")), "Desktop");
+
+        const QString themeGroupKey = QStringLiteral("Theme");
+    const QString themeNameKey = QStringLiteral("name");
+
+    QString themeName;
+
+    KConfigGroup plasmarc(KSharedConfig::openConfig("plasmarc"), themeGroupKey);
+    themeName = plasmarc.readEntry(themeNameKey, themeName);
+
+    if (themeName.isEmpty()) {
+        KConfigGroup shellCfg = KConfigGroup(KSharedConfig::openConfig(package.filePath("defaults")), "Theme");
+
+        themeName = shellCfg.readEntry("name", "default");
+        KConfigGroup lnfCfg = KConfigGroup(KSharedConfig::openConfig(
+                                                m_lookAndFeelPackage.filePath("defaults")),
+                                                "plasmarc"
+                                           );
+        lnfCfg = KConfigGroup(&lnfCfg, themeGroupKey);
+        themeName = lnfCfg.readEntry(themeNameKey, themeName);
+    }
+
+    if (!themeName.isEmpty()) {
+        Plasma::Theme *t = new Plasma::Theme(this);
+        t->setThemeName(themeName);
+    }
 
     //FIXME: this would change the runtime platform to a fixed one if available
     // but a different way to load platform specific components is needed beforehand

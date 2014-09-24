@@ -50,13 +50,14 @@
 #include "widget.h"
 #include "../activity.h"
 #include "../shellcorona.h"
+#include "../standaloneappcorona.h"
 
 QScriptValue constructQRectFClass(QScriptEngine *engine);
 
 namespace WorkspaceScripting
 {
 
-ScriptEngine::ScriptEngine(ShellCorona *corona, QObject *parent)
+ScriptEngine::ScriptEngine(Plasma::Corona *corona, QObject *parent)
     : QScriptEngine(parent),
       m_corona(corona)
 {
@@ -133,9 +134,17 @@ QScriptValue ScriptEngine::desktopsForActivity(QScriptContext *context, QScriptE
         // first time
         const int numScreens = env->m_corona->numScreens();
         for (int i = 0; i < numScreens; ++i) {
-            Plasma::Containment *c = env->m_corona->createContainmentForActivity(id, i);
-            containments.setProperty(count, env->wrap(c));
-            ++count;
+            ShellCorona *sc = qobject_cast<ShellCorona *>(env->m_corona);
+            StandaloneAppCorona *ac = qobject_cast<StandaloneAppCorona *>(env->m_corona);
+            if (sc) {
+                Plasma::Containment *c = sc->createContainmentForActivity(id, i);
+                containments.setProperty(count, env->wrap(c));
+                ++count;
+            } else if (ac) {
+                Plasma::Containment *c = ac->createContainmentForActivity(id, i);
+                containments.setProperty(count, env->wrap(c));
+                ++count;
+            }
         }
     }
 
@@ -200,7 +209,14 @@ QScriptValue ScriptEngine::createActivity(QScriptContext *context, QScriptEngine
     if (!plugin.isEmpty()) {
         a->setDefaultPlugin(plugin);
     }
-    env->m_corona->insertActivity(id, a);
+
+    ShellCorona *sc = qobject_cast<ShellCorona *>(env->m_corona);
+    StandaloneAppCorona *ac = qobject_cast<StandaloneAppCorona *>(env->m_corona);
+    if (sc) {
+        sc->insertActivity(id, a);
+    } else if (ac) {
+        ac->insertActivity(id, a);
+    }
 
     return QScriptValue(id);
 }
@@ -281,7 +297,10 @@ QScriptValue ScriptEngine::createContainment(const QString &type, const QString 
     ScriptEngine *env = envFor(engine);
     Plasma::Containment *c;
     if (type == "Panel") {
-        c = env->m_corona->addPanel(plugin);
+        ShellCorona *sc = qobject_cast<ShellCorona *>(env->m_corona);
+        if (sc) {
+            c = sc->addPanel(plugin);
+        }
     } else {
         c = env->m_corona->createContainment(plugin);
     }
@@ -808,7 +827,7 @@ QScriptValue ScriptEngine::desktops(QScriptContext *context, QScriptEngine *engi
     return containments;
 }
 
-ShellCorona *ScriptEngine::corona() const
+Plasma::Corona *ScriptEngine::corona() const
 {
     return m_corona;
 }
@@ -836,7 +855,7 @@ void ScriptEngine::exception(const QScriptValue &value)
     emit printError(value.toVariant().toString());
 }
 
-QStringList ScriptEngine::pendingUpdateScripts(ShellCorona *corona)
+QStringList ScriptEngine::pendingUpdateScripts(Plasma::Corona *corona)
 {
     if (!corona->package().metadata().isValid()) {
         qWarning() << "Warning: corona package invalid";
