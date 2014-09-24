@@ -25,6 +25,7 @@ import QtQuick.Dialogs 1.1
 
 import org.kde.plasma.private.digitalclock 1.0
 import org.kde.plasma.core 2.0 as PlasmaCore
+import org.kde.plasma.components 2.0 as PlasmaComponents
 
 Item {
     id: timeZonesPage
@@ -99,28 +100,34 @@ Item {
                 }
             }
 
-            Row {
+            RowLayout {
                 anchors.fill: parent
                 anchors.margins: units.largeSpacing
                 anchors.leftMargin: units.smallSpacing
+                anchors.rightMargin: units.smallSpacing
                 spacing: units.smallSpacing
 
                 PlasmaCore.IconItem {
                     anchors.verticalCenter: parent.verticalCenter
+                    height: units.iconSizes.smallMedium
+                    width: height
                     source: "dialog-warning"
                 }
 
                 QtControls.Label {
                     id: messageWidgetLabel
-
                     anchors.verticalCenter: parent.verticalCenter
+                    Layout.fillWidth: true
                     text: i18n("At least one time zone needs to be enabled. 'Local' was enabled automatically.")
                     verticalAlignment: Text.AlignVCenter
+                    wrapMode: Text.WordWrap
                 }
 
-                QtControls.Button {
+                PlasmaComponents.ToolButton {
                     anchors.verticalCenter: parent.verticalCenter
-                    text: i18n("OK")
+                    iconName: "dialog-close"
+                    flat: true
+
                     onClicked: {
                         messageWidget.visible = false;
                     }
