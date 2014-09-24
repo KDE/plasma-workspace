@@ -295,7 +295,7 @@ QScriptValue ScriptEngine::createContainment(const QString &type, const QString 
 
 
     ScriptEngine *env = envFor(engine);
-    Plasma::Containment *c;
+    Plasma::Containment *c = 0;
     if (type == "Panel") {
         ShellCorona *sc = qobject_cast<ShellCorona *>(env->m_corona);
         if (sc) {

@@ -56,6 +56,7 @@ StandaloneAppCorona::StandaloneAppCorona(const QString &coronaPlugin, QObject *p
     connect(m_activityConsumer, SIGNAL(activityAdded(QString)), this, SLOT(activityAdded(QString)));
     connect(m_activityConsumer, SIGNAL(activityRemoved(QString)), this, SLOT(activityRemoved(QString)));
 
+    m_view = new DesktopView(this);
     load();
 }
 
@@ -90,7 +91,6 @@ void StandaloneAppCorona::load()
     for (auto c : containments()) {
         qDebug() << "containment found";
         if (c->containmentType() == Plasma::Types::DesktopContainment) {
-            m_view = new DesktopView(this);
             QAction *removeAction = c->actions()->action("remove");
             if(removeAction) {
                 removeAction->deleteLater();
