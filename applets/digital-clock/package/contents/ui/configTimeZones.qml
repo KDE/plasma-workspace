@@ -187,7 +187,7 @@ Item {
             Layout.fillWidth: true
             QtControls.CheckBox {
                 id: enableWheelCheckBox
-                text: i18n("Switch time zone with mouse wheel")
+                text: i18n("Switch Time Zone with Mouse Wheel")
             }
         }
 

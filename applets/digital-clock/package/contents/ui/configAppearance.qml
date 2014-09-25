@@ -48,12 +48,12 @@ Item {
             QtLayouts.ColumnLayout {
                 QtControls.CheckBox {
                     id: boldCheckBox
-                    text: i18n("Bold text")
+                    text: i18n("Bold Text")
                 }
 
                 QtControls.CheckBox {
                     id: italicCheckBox
-                    text: i18n("Italic text")
+                    text: i18n("Italic Text")
                 }
             }
         }
@@ -65,16 +65,16 @@ Item {
             QtLayouts.ColumnLayout {
                 QtControls.CheckBox {
                     id: showSeconds
-                    text: i18n("Show seconds")
+                    text: i18n("Show Seconds")
                 }
 
                 QtControls.CheckBox {
                     id: showLocalTimezone
-                    text: i18n("Show local time zone")
+                    text: i18n("Show Local Time Zone")
                 }
 
                 QtControls.Label {
-                    text: i18n("Display timezone as")
+                    text: i18n("Display Time Zone as:")
                 }
 
                 QtControls.GroupBox {
@@ -85,13 +85,13 @@ Item {
 
                         QtControls.RadioButton {
                             id: timezoneCityRadio
-                            text: i18n("Timezone city")
+                            text: i18n("Time Zone City")
                             exclusiveGroup: timezoneDisplayType
                         }
 
                         QtControls.RadioButton {
                             id: timezoneCodeRadio
-                            text: i18n("Timezone code")
+                            text: i18n("Time Zone Code")
                             exclusiveGroup: timezoneDisplayType
                         }
                     }
@@ -99,12 +99,12 @@ Item {
 
                 QtControls.CheckBox {
                     id: showDate
-                    text: i18n("Show date")
+                    text: i18n("Show Date")
                 }
 
                 QtLayouts.RowLayout {
                     QtControls.Label {
-                        text: i18n("Date format")
+                        text: i18n("Date Format")
                     }
 
                     QtControls.ComboBox {
@@ -113,15 +113,15 @@ Item {
                         textRole: "label"
                         model: [
                             {
-                                'label': i18n("Long date"),
+                                'label': i18n("Long Date"),
                                 'name': "longDate"
                             },
                             {
-                                'label': i18n("Short date"),
+                                'label': i18n("Short Date"),
                                 'name': "shortDate"
                             },
                             {
-                                'label': i18n("Narrow date"),
+                                'label': i18n("Narrow Date"),
                                 'name': "narrowDate"
                             }
                         ]

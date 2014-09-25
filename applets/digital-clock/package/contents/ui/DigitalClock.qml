@@ -92,11 +92,11 @@ Item {
                 var timezoneString = plasmoid.configuration.displayTimezoneAsCode ? dataSource.data[plasmoid.configuration.selectedTimeZones[tzIndex]]["Timezone Abbreviation"]
                                                                                   : dataSource.data[plasmoid.configuration.selectedTimeZones[tzIndex]]["Timezone City"];
 
-                returnString += (showDate ? i18nc("This composes time and a timezone into one string that's displayed in the clock applet (the main clock in the panel). "
-                                                + "%1 is the current time and %2 is either the timezone city or timezone code, depending on user settings",
+                returnString += (showDate ? i18nc("This composes time and a time zone into one string that's displayed in the clock applet (the main clock in the panel). "
+                                                + "%1 is the current time and %2 is either the time zone city or time zone code, depending on user settings",
                                                   "%1 (%2)", Qt.formatTime(dateTime, main.timeFormat), timezoneString)
-                                          : i18nc("This composes time and a timezone into one string that's displayed in the clock applet (the main clock in the panel). "
-                                                + "From the previous case it's different that it puts the timezone name into separate new line without using ()s",
+                                          : i18nc("This composes time and a time zone into one string that's displayed in the clock applet (the main clock in the panel). "
+                                                + "From the previous case it's different that it puts the time zone name into separate new line without using ()s",
                                                   "%1<br/>%2", Qt.formatTime(dateTime, main.timeFormat), timezoneString));
             } else {
                 // return only the time
