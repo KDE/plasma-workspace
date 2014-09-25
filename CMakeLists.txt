@@ -91,8 +91,8 @@ if (INSTALL_SDDM_THEME)
 # Install the login theme into the SDDM directory
 # Longer term we need to look at making SDDM load from look and feel somehow.. and allow copying at runtime
     #NOTE this trailing slash is important to rename the directory
-    install(DIRECTORY lookandfeel/contents/loginmanager/ DESTINATION ${CMAKE_INSTALL_PREFIX}/share/sddm/themes/breeze)
-    install(DIRECTORY lookandfeel/contents/components DESTINATION ${CMAKE_INSTALL_PREFIX}/share/sddm/themes/breeze)
+    install(DIRECTORY lookandfeel/contents/loginmanager/ DESTINATION ${CMAKE_INSTALL_PREFIX}/share/sddm/themes/breeze PATTERN "README.txt" EXCLUDE)
+    install(DIRECTORY lookandfeel/contents/components DESTINATION ${CMAKE_INSTALL_PREFIX}/share/sddm/themes/breeze PATTERN "README.txt" EXCLUDE)
 endif()
 
 add_subdirectory(doc)
