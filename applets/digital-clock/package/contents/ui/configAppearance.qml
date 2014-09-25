@@ -48,12 +48,12 @@ Item {
             QtLayouts.ColumnLayout {
                 QtControls.CheckBox {
                     id: boldCheckBox
-                    text: i18n("Bold Text")
+                    text: i18n("Bold text")
                 }
 
                 QtControls.CheckBox {
                     id: italicCheckBox
-                    text: i18n("Italic Text")
+                    text: i18n("Italic text")
                 }
             }
         }
@@ -65,16 +65,16 @@ Item {
             QtLayouts.ColumnLayout {
                 QtControls.CheckBox {
                     id: showSeconds
-                    text: i18n("Show Seconds")
+                    text: i18n("Show seconds")
                 }
 
                 QtControls.CheckBox {
                     id: showLocalTimezone
-                    text: i18n("Show Local Time Zone")
+                    text: i18n("Show local time zone")
                 }
 
                 QtControls.Label {
-                    text: i18n("Display Time Zone as:")
+                    text: i18n("Display time zone as:")
                 }
 
                 QtControls.GroupBox {
@@ -85,13 +85,13 @@ Item {
 
                         QtControls.RadioButton {
                             id: timezoneCityRadio
-                            text: i18n("Time Zone City")
+                            text: i18n("Time zone city")
                             exclusiveGroup: timezoneDisplayType
                         }
 
                         QtControls.RadioButton {
                             id: timezoneCodeRadio
-                            text: i18n("Time Zone Code")
+                            text: i18n("Time zone code")
                             exclusiveGroup: timezoneDisplayType
                         }
                     }
@@ -99,7 +99,7 @@ Item {
 
                 QtControls.CheckBox {
                     id: showDate
-                    text: i18n("Show Date")
+                    text: i18n("Show date")
                 }
 
                 QtLayouts.RowLayout {
