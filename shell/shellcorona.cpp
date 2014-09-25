@@ -1363,6 +1363,25 @@ int ShellCorona::screenForContainment(const Plasma::Containment *containment) co
         }
     }
 
+    //if the desktop views already exist, base the decision upon them
+    for (int i = 0; i < m_views.count(); i++) {
+        if (m_views[i]->containment() == containment && containment->activity() == m_activityConsumer->currentActivity()) {
+            return i;
+        }
+    }
+
+    //if the panel views already exist, base upon them
+    PanelView *view = m_panelViews.value(containment);
+    if (view) {
+        QScreen *screen = view->screen();
+        for (int i = 0; i < m_views.count(); i++) {
+            if (m_views[i]->screen() == screen) {
+                return i;
+            }
+        }
+    }
+
+    //Failed? fallback on lastScreen()
     int i = 0;
     //lastScreen() is the correct screen for panels
     //It is also correct for desktops *that have the correct activity()*
