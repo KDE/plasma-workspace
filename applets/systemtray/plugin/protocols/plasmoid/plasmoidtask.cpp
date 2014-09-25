@@ -61,6 +61,13 @@ PlasmoidTask::PlasmoidTask(const QString &packageName, int appletId, Plasma::Con
     m_taskGraphicsObject = m_applet->property("_plasma_graphicObject").value<PlasmaQuick::AppletQuickItem *>();
 
     if (m_taskGraphicsObject) {
+        /*override any default size for applets, in the systray the size is NEVER
+         * controlled by applet itself. This caused some plasmoids like
+         * klipper getting expanded for an instant before collapsing again
+         */
+        m_taskGraphicsObject->setWidth(1);
+        m_taskGraphicsObject->setHeight(1);
+
         Plasma::Package package = Plasma::PluginLoader::self()->loadPackage("Plasma/Shell");
         package.setDefaultPackageRoot(PLASMA_RELATIVE_DATA_INSTALL_DIR "/plasmoids/");
         package.setPath("org.kde.plasma.systemtray");
