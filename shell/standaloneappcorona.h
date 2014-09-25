@@ -44,6 +44,7 @@ public:
     Plasma::Containment *createContainmentForActivity(const QString& activity, int screenNum);
 
     void insertActivity(const QString &id, Activity *activity);
+    Plasma::Containment *addPanel(const QString &plugin);
 
 public Q_SLOTS:
     void load();

@@ -298,8 +298,11 @@ QScriptValue ScriptEngine::createContainment(const QString &type, const QString 
     Plasma::Containment *c = 0;
     if (type == "Panel") {
         ShellCorona *sc = qobject_cast<ShellCorona *>(env->m_corona);
+        StandaloneAppCorona *ac = qobject_cast<StandaloneAppCorona *>(env->m_corona);
         if (sc) {
             c = sc->addPanel(plugin);
+        } else if (ac) {
+            c = ac->addPanel(plugin);
         }
     } else {
         c = env->m_corona->createContainment(plugin);

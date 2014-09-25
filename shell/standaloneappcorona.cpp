@@ -188,4 +188,17 @@ void StandaloneAppCorona::insertActivity(const QString &id, Activity *activity)
     }
 }
 
+Plasma::Containment *StandaloneAppCorona::addPanel(const QString &plugin)
+{
+    //this creates a panel that wwill be used for nothing
+    //it's needed by the scriptengine to create 
+    //a corona useful also when launched in fullshell
+    Plasma::Containment *panel = createContainment(plugin);
+    if (!panel) {
+        return 0;
+    }
+
+    return panel;
+}
+
 #include "standaloneappcorona.moc"
