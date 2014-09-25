@@ -78,38 +78,7 @@ Item {
             pointSize: 1024
         }
         fontSizeMode: Text.Fit
-        text: {
-            var returnString = "";
-
-            // get the time for the given timezone from the dataengine
-            var now = dataSource.data[plasmoid.configuration.selectedTimeZones[tzIndex]]["DateTime"];
-            // get current UTC time
-            var msUTC = now.getTime() + (now.getTimezoneOffset() * 60000);
-            // add the dataengine TZ offset to it
-            var dateTime = new Date(msUTC + (dataSource.data[plasmoid.configuration.selectedTimeZones[tzIndex]]["Offset"] * 1000));
-
-            // add the timezone string to the clock
-            if (plasmoid.configuration.selectedTimeZones[tzIndex] != "Local" || main.showLocalTimezone) {
-                var timezoneString = plasmoid.configuration.displayTimezoneAsCode ? dataSource.data[plasmoid.configuration.selectedTimeZones[tzIndex]]["Timezone Abbreviation"]
-                                                                                  : TimezonesI18n.i18nCity(dataSource.data[plasmoid.configuration.selectedTimeZones[tzIndex]]["Timezone City"]);
-
-                returnString += (showDate ? i18nc("This composes time and a time zone into one string that's displayed in the clock applet (the main clock in the panel). "
-                                                + "%1 is the current time and %2 is either the time zone city or time zone code, depending on user settings",
-                                                  "%1 (%2)", Qt.formatTime(dateTime, main.timeFormat), timezoneString)
-                                          : i18nc("This composes time and a time zone into one string that's displayed in the clock applet (the main clock in the panel). "
-                                                + "From the previous case it's different that it puts the time zone name into separate new line without using ()s",
-                                                  "%1<br/>%2", Qt.formatTime(dateTime, main.timeFormat), timezoneString));
-            } else {
-                // return only the time
-                returnString += Qt.formatTime(dateTime, main.timeFormat);
-            }
-
-            if (showDate) {
-                returnString += "<br/>" + Qt.formatDate(dateTime, Qt.locale().dateFormat(main.dateFormat));
-            }
-
-            return returnString;
-        }
+        text: timeForZone(tzIndex, true);
 
         wrapMode: plasmoid.formFactor != PlasmaCore.Types.Horizontal ? Text.WordWrap : Text.NoWrap
         horizontalAlignment: vertical || !main.showSeconds ? Text.AlignHCenter : Text.AlignLeft // we want left align when horizontal to avoid re-aligning when seconds are visible
@@ -222,6 +191,58 @@ Item {
         main.timeFormat = timeFormatString;
     }
 
+    function updateToolTip() {
+        var timezoneString = Qt.formatDate(dataSource.data["Local"]["DateTime"], dateFormatString);
+        if (plasmoid.configuration.selectedTimeZones.length > 1) {
+            timezoneString += "<br />";
+            for (var i = 0; i < plasmoid.configuration.selectedTimeZones.length; ++i) {
+                timezoneString += "<br />" + timeForZone(i, false);
+            }
+        }
+        plasmoid.toolTipSubText = timezoneString;
+    }
+
+    function timeForZone(zone, addlinebreaks) {
+        var returnString = "";
+
+        // get the time for the given timezone from the dataengine
+        var now = dataSource.data[plasmoid.configuration.selectedTimeZones[zone]]["DateTime"];
+        // get current UTC time
+        var msUTC = now.getTime() + (now.getTimezoneOffset() * 60000);
+        // add the dataengine TZ offset to it
+        var dateTime = new Date(msUTC + (dataSource.data[plasmoid.configuration.selectedTimeZones[zone]]["Offset"] * 1000));
+
+        // add the timezone string to the clock
+        if (plasmoid.configuration.selectedTimeZones[zone] != "Local" || main.showLocalTimezone) {
+            var timezoneString = plasmoid.configuration.displayTimezoneAsCode ? dataSource.data[plasmoid.configuration.selectedTimeZones[zone]]["Timezone Abbreviation"]
+                                                                              : TimezonesI18n.i18nCity(dataSource.data[plasmoid.configuration.selectedTimeZones[zone]]["Timezone City"]);
+
+            if (addlinebreaks) {
+                returnString += (showDate ? i18nc("This composes time and a timezone into one string that's displayed in the clock applet (the main clock in the panel). "
+                                                + "%1 is the current time and %2 is either the timezone city or timezone code, depending on user settings",
+                                                "%1 (%2)", Qt.formatTime(dateTime, main.timeFormat), timezoneString)
+                                        : i18nc("This composes time and a timezone into one string that's displayed in the clock applet (the main clock in the panel). "
+                                                + "From the previous case it's different that it puts the timezone name into separate new line without using ()s",
+                                                "%1<br/>%2", Qt.formatTime(dateTime, main.timeFormat), timezoneString));
+            } else {
+                // Without line breaks, and put the timezone first
+                returnString += i18nc("This composes time and a timezone into one string that's displayed in the tooltip of the clock. "
+                                      + "%1 is the timezone city or timezone code depending on user settings and %2 is the current time",
+                                      "%1 %2", timezoneString, Qt.formatTime(dateTime, main.timeFormat));
+            }
+        } else {
+            // return only the time
+            returnString += Qt.formatTime(dateTime, main.timeFormat);
+        }
+
+        if (showDate) {
+            returnString += (addlinebreaks ? "<br/>" + Qt.formatDate(dateTime, Qt.locale().dateFormat(main.dateFormat))
+                                           : " " + Qt.formatDate(dateTime, Qt.locale().dateFormat(main.dateFormat)));
+        }
+
+        return returnString;
+    }
+
     function dateTimeChanged()
     {
         var doCorrections = false;
@@ -259,6 +280,9 @@ Item {
         tzOffset = new Date().getTimezoneOffset();
         dateTimeChanged();
         timeFormatCorrection(Qt.locale().timeFormat(Locale.ShortFormat));
+        updateToolTip();
         dataSource.onDataChanged.connect(dateTimeChanged);
+        dataSource.onDataChanged.connect(updateToolTip);
+        
     }
 }
