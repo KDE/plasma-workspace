@@ -35,7 +35,9 @@ Item {
 
     PlasmaCore.SvgItem {
         id: batterySvg
-        anchors.fill: parent
+        anchors.centerIn: parent
+        width: units.roundToIconSize(Math.min(parent.width, parent.height))
+        height: width
         svg: svg
         elementId: "Battery"
         visible: !otherBatteriesSvg.visible
@@ -43,7 +45,7 @@ Item {
 
     PlasmaCore.SvgItem {
         id: fillSvg
-        anchors.fill: parent
+        anchors.fill: batterySvg
         svg: svg
         elementId: hasBattery ? fillElement(percent) : "Unavailable"
         visible: elementId != "" && !otherBatteriesSvg.visible
@@ -95,7 +97,7 @@ Item {
     }
 
     PlasmaCore.SvgItem {
-        anchors.fill: parent
+        anchors.fill: batterySvg
         svg: svg
         elementId: "AcAdapter"
         visible: pluggedIn && !otherBatteriesSvg.visible
@@ -103,7 +105,7 @@ Item {
 
     PlasmaCore.IconItem {
         id: otherBatteriesSvg
-        anchors.fill: parent
+        anchors.fill: batterySvg
         source: elementForType(batteryType)
         visible: source !== ""
     }
