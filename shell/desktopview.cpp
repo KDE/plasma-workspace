@@ -42,6 +42,9 @@ DesktopView::DesktopView(Plasma::Corona *corona)
     engine()->rootContext()->setContextProperty("desktop", this);
     setSource(QUrl::fromLocalFile(corona->package().filePath("views", "Desktop.qml")));
 
+    ensureWindowType();
+    adaptToScreen();
+
     //For some reason, if I connect the method directly it doesn't get called, I think it's for the lack of argument
     connect(this, &QWindow::screenChanged, this, [=](QScreen*) { adaptToScreen(); ensureWindowType(); });
 
@@ -169,6 +172,7 @@ void DesktopView::setDashboardShown(bool shown)
 
 bool DesktopView::event(QEvent *e)
 {
+    qWarning()<<"AAAAA"<<e;
     if (e->type() == QEvent::KeyRelease) {
         QKeyEvent *ke = static_cast<QKeyEvent *>(e);
         if (m_dashboardShown && ke->key() == Qt::Key_Escape) {
