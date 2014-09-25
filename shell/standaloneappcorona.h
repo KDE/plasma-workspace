@@ -53,6 +53,9 @@ public Q_SLOTS:
     void activityAdded(const QString &id);
     void activityRemoved(const QString &id);
 
+protected Q_SLOTS:
+    int screenForContainment(const Plasma::Containment *containment) const;
+
 private:
     QString m_coronaPlugin;
     KActivities::Consumer *m_activityConsumer;

@@ -201,4 +201,16 @@ Plasma::Containment *StandaloneAppCorona::addPanel(const QString &plugin)
     return panel;
 }
 
+int StandaloneAppCorona::screenForContainment(const Plasma::Containment *containment) const
+{
+    //this simple corona doesn't have multiscreen support
+    if (containment->containmentType() != Plasma::Types::PanelContainment &&
+        containment->containmentType() != Plasma::Types::CustomPanelContainment) {
+        if (containment->activity() != m_activityConsumer->currentActivity()) {
+            return -1;
+        }
+    }
+    return 0;
+}
+
 #include "standaloneappcorona.moc"
