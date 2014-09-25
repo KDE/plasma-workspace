@@ -81,7 +81,7 @@ int main(int argc, char *argv[])
                                          QStringLiteral("plugin"));
 
     QCommandLineOption standaloneOption(QStringList() << QStringLiteral("a") << QStringLiteral("standalone"),
-                                         i18n("Load plasmashell as a standalone application"));
+                                         i18n("Load plasmashell as a standalone application, needs the shell-plugin option to be specified"));
 
     cliOptions.addOption(dbgOption);
     cliOptions.addOption(winOption);
@@ -128,13 +128,17 @@ int main(int argc, char *argv[])
         ShellManager::s_restartOptions += " -" + shellPluginOption.names().first() + " " + ShellManager::s_fixedShell;
     }
 
-    if (cliOptions.isSet(standaloneOption) && cliOptions.isSet(shellPluginOption)) {
-        ShellManager::s_standaloneOption = true;
-        app.setApplicationName("plasmashell_"+cliOptions.value(shellPluginOption));
+    if (cliOptions.isSet(standaloneOption)) {
+        if (cliOptions.isSet(shellPluginOption)) {
+            ShellManager::s_standaloneOption = true;
+            app.setApplicationName("plasmashell_"+cliOptions.value(shellPluginOption));
 
-        KDBusService service(KDBusService::Unique);
-        StandaloneAppCorona corona(cliOptions.value(shellPluginOption));
-        return app.exec();
+            KDBusService service(KDBusService::Unique);
+            StandaloneAppCorona corona(cliOptions.value(shellPluginOption));
+            return app.exec();
+        } else {
+            cliOptions.showHelp(1);
+        }
     }
 
     KDBusService service(KDBusService::Unique);
