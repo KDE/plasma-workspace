@@ -199,10 +199,17 @@ void ContainmentConfigView::applyWallpaper()
 {
     m_containment->setWallpaper(m_currentWallpaper);
 
+    syncWallpaperObjects();
+
+    if (m_currentWallpaperConfig && m_ownWallpaperConfig) {
+        for (auto key : m_ownWallpaperConfig->keys()) {
+            m_currentWallpaperConfig->insert(key, m_ownWallpaperConfig->value(key));
+        }
+    }
+
     delete m_ownWallpaperConfig;
     m_ownWallpaperConfig = 0;
 
-    syncWallpaperObjects();
     emit wallpaperConfigurationChanged();
 }
 
