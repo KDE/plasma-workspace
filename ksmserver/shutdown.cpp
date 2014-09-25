@@ -105,6 +105,8 @@ bool KSMServer::canShutdown()
 void KSMServer::shutdown( KWorkSpace::ShutdownConfirm confirm,
     KWorkSpace::ShutdownType sdtype, KWorkSpace::ShutdownMode sdmode )
 {
+	qDebug() << "Shutdown called with confirm " << confirm
+			 << " type " << sdtype << " and mode " << sdmode;
     pendingShutdown.stop();
     if( dialogActive )
         return;
@@ -150,6 +152,8 @@ void KSMServer::shutdown( KWorkSpace::ShutdownConfirm confirm,
     if (sdmode == KWorkSpace::ShutdownModeDefault)
         sdmode = KWorkSpace::ShutdownModeInteractive;
 
+	qDebug() << "After modifications confirm is " << confirm
+			 << " type is " << sdtype << " and mode " << sdmode;
     dialogActive = true;
     QString bopt;
     if ( !logoutConfirmed ) {
@@ -172,6 +176,8 @@ void KSMServer::shutdown( KWorkSpace::ShutdownConfirm confirm,
                                       QStringLiteral( "restorePreviousLogout" ) )
                         == QStringLiteral( "restorePreviousLogout" ) );
 
+		qDebug() << "saveSession is " << saveSession;
+		
         if ( saveSession )
             sessionGroup = QStringLiteral( "Session: " ) + QString::fromLocal8Bit( SESSION_PREVIOUS_LOGOUT );
 
@@ -217,6 +223,7 @@ void KSMServer::shutdown( KWorkSpace::ShutdownConfirm confirm,
                 SmsSaveYourself( c->connection(), saveType,
                             true, SmInteractStyleAny, false );
         }
+		qDebug() << "clients should be empty, " << clients.isEmpty();
         if ( clients.isEmpty() )
             completeShutdownOrCheckpoint();
     }
@@ -432,6 +439,7 @@ void KSMServer::protectionTimeout()
 
 void KSMServer::completeShutdownOrCheckpoint()
 {
+	qDebug() << "completeShutdownOrCheckpoint called";
     if ( state != Shutdown && state != Checkpoint && state != ClosingSubSession )
         return;
 
@@ -463,6 +471,7 @@ void KSMServer::completeShutdownOrCheckpoint()
     else
         discardSession();
 
+	qDebug() << "state is " << state;
     if ( state == Shutdown ) {
         createLogoutEffectWidget();
         startKilling();
