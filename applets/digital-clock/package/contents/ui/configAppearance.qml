@@ -104,7 +104,7 @@ Item {
 
                 QtLayouts.RowLayout {
                     QtControls.Label {
-                        text: i18n("Date Format")
+                        text: i18n("Date format:")
                     }
 
                     QtControls.ComboBox {
