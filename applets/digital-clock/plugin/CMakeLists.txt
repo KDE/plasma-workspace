@@ -5,6 +5,7 @@ add_definitions(-DTRANSLATION_DOMAIN=\"plasma_applet_org.kde.plasma.digitalclock
 set(digitalclockplugin_SRCS
     processrunner.cpp
     timezonemodel.cpp
+    timezonesi18n.cpp
     digitalclockplugin.cpp
     )
 

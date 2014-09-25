@@ -25,6 +25,8 @@
 
 #include "timezonedata.h"
 
+class TimezonesI18n;
+
 class TimeZoneModel : public QAbstractListModel
 {
     Q_OBJECT
@@ -60,7 +62,7 @@ protected:
 private:
     QList<TimeZoneData> m_data;
     QStringList m_selectedTimeZones;
-
+    TimezonesI18n *m_timezonesI18n;
 };
 
 #endif // TIMEZONEMODEL_H

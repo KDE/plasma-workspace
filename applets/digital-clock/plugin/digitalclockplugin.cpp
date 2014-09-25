@@ -19,8 +19,17 @@
 #include "digitalclockplugin.h"
 #include "processrunner.h"
 #include "timezonemodel.h"
+#include "timezonesi18n.h"
 
 #include <QtQml>
+
+static QObject *timezonesi18n_singletontype_provider(QQmlEngine *engine, QJSEngine *scriptEngine)
+{
+    Q_UNUSED(engine)
+    Q_UNUSED(scriptEngine)
+
+    return new TimezonesI18n();
+}
 
 void DigitalClockPlugin::registerTypes(const char *uri)
 {
@@ -28,4 +37,5 @@ void DigitalClockPlugin::registerTypes(const char *uri)
 
     qmlRegisterType<ProcessRunner>(uri, 1, 0, "ProcessRunner");
     qmlRegisterType<TimeZoneModel>(uri, 1, 0, "TimeZoneModel");
+    qmlRegisterSingletonType<TimezonesI18n>(uri, 1, 0, "TimezonesI18n", timezonesi18n_singletontype_provider);
 }

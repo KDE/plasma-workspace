@@ -19,12 +19,15 @@
  ***************************************************************************/
 
 #include "timezonemodel.h"
+#include "timezonesi18n.h"
 
 #include <QTimeZone>
 #include <KLocalizedString>
 #include <QDebug>
 
-TimeZoneModel::TimeZoneModel(QObject *parent) : QAbstractListModel(parent)
+TimeZoneModel::TimeZoneModel(QObject *parent)
+    : QAbstractListModel(parent),
+      m_timezonesI18n(new TimezonesI18n(this))
 {
     update();
 }
@@ -95,7 +98,7 @@ void TimeZoneModel::update()
     TimeZoneData local;
     local.id = QStringLiteral("Local");
     local.region = i18nc("This means \"Local Timezone\"", "Local");
-    local.city = data.at(1);
+    local.city = m_timezonesI18n->i18nCity(data.at(1));
     local.comment = i18n("Your system time zone");
     local.checked = false;
 
@@ -109,12 +112,12 @@ void TimeZoneModel::update()
     for (auto it = systemTimeZones.constBegin(); it != systemTimeZones.constEnd(); ++it) {
         const QTimeZone zone(*it);
         const QString continentCity = zone.id();
-        const int separator = continentCity.lastIndexOf('/');
+        const QStringList splitted = QString::fromUtf8(zone.id()).split("/");
 
         // CITY | COUNTRY | CONTINENT
-        const QString key = QString("%1|%2|%3").arg(continentCity.mid(separator + 1),
+        const QString key = QString("%1|%2|%3").arg(splitted.last(),
                                                     QLocale::countryToString(zone.country()),
-                                                    continentCity.left(separator));
+                                                    splitted.first());
 
         cities.append(key);
         zonesByCity.insert(key, zone);
@@ -133,8 +136,8 @@ void TimeZoneModel::update()
 
         TimeZoneData newData;
         newData.id = timeZone.id();
-        newData.region = cityCountryContinent.at(2) + QLatin1Char('/') + cityCountryContinent.at(1);
-        newData.city = cityCountryContinent.at(0);
+        newData.region = m_timezonesI18n->i18nContinents(cityCountryContinent.at(2)) + QLatin1Char('/') + m_timezonesI18n->i18nCountry(timeZone.country());
+        newData.city = m_timezonesI18n->i18nCity(cityCountryContinent.at(0));
         newData.comment = comment;
         newData.checked = false;
         m_data.append(newData);

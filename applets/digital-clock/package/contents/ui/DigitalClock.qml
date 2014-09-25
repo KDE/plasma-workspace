@@ -22,6 +22,7 @@ import QtQuick 2.2
 import QtQuick.Layouts 1.1
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as Components
+import org.kde.plasma.private.digitalclock 1.0
 
 Item {
     id: main
@@ -90,7 +91,7 @@ Item {
             // add the timezone string to the clock
             if (plasmoid.configuration.selectedTimeZones[tzIndex] != "Local" || main.showLocalTimezone) {
                 var timezoneString = plasmoid.configuration.displayTimezoneAsCode ? dataSource.data[plasmoid.configuration.selectedTimeZones[tzIndex]]["Timezone Abbreviation"]
-                                                                                  : dataSource.data[plasmoid.configuration.selectedTimeZones[tzIndex]]["Timezone City"];
+                                                                                  : TimezonesI18n.i18nCity(dataSource.data[plasmoid.configuration.selectedTimeZones[tzIndex]]["Timezone City"]);
 
                 returnString += (showDate ? i18nc("This composes time and a time zone into one string that's displayed in the clock applet (the main clock in the panel). "
                                                 + "%1 is the current time and %2 is either the time zone city or time zone code, depending on user settings",
