@@ -374,7 +374,7 @@ QVariant BackgroundListModel::data(const QModelIndex &index, int role) const
     break;
 
     case PackageNameRole:
-        return b.metadata().pluginName().isEmpty() ? b.filePath("preferred") : b.metadata().pluginName();
+        return !b.metadata().isValid() || b.metadata().pluginName().isEmpty() ? b.filePath("preferred") : b.metadata().pluginName();
     break;
 
     case RemovableRole: {
