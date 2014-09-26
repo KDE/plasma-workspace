@@ -33,6 +33,7 @@ Name[sr@latin]=Plasma
 Name[sv]=Plasma
 Name[uk]=Плазма
 Name[x-test]=xxPlasmaxx
+Name[zh_CN]=Plasma
 Name[zh_TW]=Plasma
 Comment=Plasma by KDE
 Comment[ar]=بلازما كدي
