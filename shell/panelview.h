@@ -31,23 +31,60 @@ class ShellCorona;
 class PanelView : public PlasmaQuick::View
 {
     Q_OBJECT
+    /**
+     * Alignment of the panel: when not fullsize it can be aligned at left,
+     * right or center of the screen (left and right work as top/bottom
+     * too for vertical panels)
+     */
     Q_PROPERTY(Qt::Alignment alignment READ alignment WRITE setAlignment NOTIFY alignmentChanged)
+
+    /**
+     * how much the panel is moved from the left/right/center anchor point
+     */
     Q_PROPERTY(int offset READ offset WRITE setOffset NOTIFY offsetChanged)
+
+    /**
+     * height of horizontal panels, width of vertical panels
+     */
     Q_PROPERTY(int thickness READ thickness WRITE setThickness NOTIFY thicknessChanged)
+
+    /**
+     * width of horizontal panels, height of vertical panels
+     */
     Q_PROPERTY(int length READ length WRITE setLength NOTIFY lengthChanged)
+
+    /**
+     * if the panel resizes itself, never resize more than that
+     */
     Q_PROPERTY(int maximumLength READ maximumLength WRITE setMaximumLength NOTIFY maximumLengthChanged)
+
+    /**
+     * if the panel resizes itself, never resize less than that
+     */
     Q_PROPERTY(int minimumLength READ minimumLength WRITE setMinimumLength NOTIFY minimumLengthChanged)
+
+    /**
+     * how much the panel is distant for the screen edge: used by the panel controller to drag it around
+     */
     Q_PROPERTY(int distance READ distance WRITE setDistance NOTIFY distanceChanged)
+
+    /**
+     * informations about the screen in which the panel is in
+     */
     Q_PROPERTY(QScreen *screen READ screen WRITE setScreen NOTIFY screenChangedProxy)
+
+    /**
+     *  how the panel behaves, visible, autohide etc.
+     */
     Q_PROPERTY(VisibilityMode visibilityMode READ visibilityMode WRITE setVisibilityMode NOTIFY visibilityModeChanged)
 
 public:
 
     enum VisibilityMode {
-        NormalPanel = 0,
-        AutoHide,
-        LetWindowsCover,
-        WindowsGoBelow
+        NormalPanel = 0, /** default, always visible panel, the windowmanager reserves a places for it */
+        AutoHide, /**the panel will be shownn only if the mouse cursor is on screen edges */
+        LetWindowsCover, /** always visible, windows will go over the panel, no area reserved */
+        WindowsGoBelow /** always visible, windows will go under the panel, no area reserved */
     };
     Q_ENUMS(VisibilityMode)
 
