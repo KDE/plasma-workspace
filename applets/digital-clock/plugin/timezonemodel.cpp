@@ -136,7 +136,8 @@ void TimeZoneModel::update()
 
         TimeZoneData newData;
         newData.id = timeZone.id();
-        newData.region = m_timezonesI18n->i18nContinents(cityCountryContinent.at(2)) + QLatin1Char('/') + m_timezonesI18n->i18nCountry(timeZone.country());
+        newData.region = timeZone.country() == QLocale::AnyCountry ? QString()
+                                                                   : m_timezonesI18n->i18nContinents(cityCountryContinent.at(2)) + QLatin1Char('/') + m_timezonesI18n->i18nCountry(timeZone.country());
         newData.city = m_timezonesI18n->i18nCity(cityCountryContinent.at(0));
         newData.comment = comment;
         newData.checked = false;
