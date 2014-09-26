@@ -24,6 +24,7 @@ PlasmaCore.Dialog {
     id: root
     location: PlasmaCore.Types.Floating
     type: PlasmaCore.Dialog.Notification
+    outputOnly: true
 
     // OSD Timeout in msecs - how long it will stay on the screen
     property int timeout: 2500
