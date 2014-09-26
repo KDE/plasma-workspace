@@ -98,7 +98,7 @@ void TimeZoneModel::update()
     TimeZoneData local;
     local.id = QStringLiteral("Local");
     local.region = i18nc("This means \"Local Timezone\"", "Local");
-    local.city = m_timezonesI18n->i18nCity(data.at(1));
+    local.city = m_timezonesI18n->i18nCity(data.last());
     local.comment = i18n("Your system time zone");
     local.checked = false;
 
