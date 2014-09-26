@@ -101,7 +101,11 @@ Item {
         id: itemIcon
         width: isHiddenItem ? height * 1.5 : height;
         height: Math.min(parent.width, parent.height)
-        anchors.centerIn: parent
+        anchors {
+            centerIn: isHiddenItem ? undefined : parent
+            left: isHiddenItem ? parent.left : undefined
+            verticalCenter: parent.verticalCenter               
+        }
         source: __icon_name != "" ? __icon_name : (typeof(__icon) != "undefined" ? __icon : "")
     }
 
