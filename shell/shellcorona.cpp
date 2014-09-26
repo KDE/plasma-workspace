@@ -78,6 +78,7 @@ ShellCorona::ShellCorona(QObject *parent)
       m_loading(false)
 {
     qmlRegisterUncreatableType<DesktopView>("org.kde.plasma.shell", 2, 0, "Desktop", "It is not possible to create objects of type Desktop");
+    qmlRegisterUncreatableType<PanelView>("org.kde.plasma.shell", 2, 0, "Panel", "It is not possible to create objects of type Panel");
 
     m_lookAndFeelPackage = Plasma::PluginLoader::self()->loadPackage("Plasma/LookAndFeel");
     KConfigGroup cg(KSharedConfig::openConfig("kdeglobals"), "KDE");

@@ -39,6 +39,7 @@ StandaloneAppCorona::StandaloneAppCorona(const QString &coronaPlugin, QObject *p
       m_view(0)
 {
     qmlRegisterUncreatableType<DesktopView>("org.kde.plasma.shell", 2, 0, "Desktop", "It is not possible to create objects of type Desktop");
+    qmlRegisterUncreatableType<PanelView>("org.kde.plasma.shell", 2, 0, "Panel", "It is not possible to create objects of type Panel");
 
     Plasma::Package package = Plasma::PluginLoader::self()->loadPackage("Plasma/Shell");
     package.setPath(m_coronaPlugin);
