@@ -104,6 +104,10 @@ Item {
         }
         Column {
             spacing: units.smallSpacing * 2
+            QtControls.CheckBox {
+                id: dummyCheckbox
+                visible: false
+            }
             Repeater {
                 model: host.availablePlasmoids
                 delegate: QtControls.CheckBox {
@@ -123,7 +127,7 @@ Item {
                     }
                     QtLayouts.RowLayout {
                         anchors.verticalCenter: parent.verticalCenter
-                        x: height
+                        x: dummyCheckbox.width
                         QIconItem {
                             icon: decoration
                             width: units.iconSizes.small
