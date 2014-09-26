@@ -107,8 +107,7 @@ KQuickControlsAddonsComponents.MouseEventListener {
         if (modelData && modelData.taskItem != undefined) {
             var _size = Math.min(taskItemContainer.width, taskItemContainer.height);
             var _m = (taskItemContainer.height - _size) / 2
-            modelData.taskItem.anchors.verticalCenter = taskItemContainer.verticalCenter;
-            modelData.taskItem.x = 0;
+            modelData.taskItem.anchors.centerIn = taskItemContainer;
             modelData.taskItem.height = _size;
             modelData.taskItem.width = isHiddenItem ? _size * 1.5 : _size;
         }
