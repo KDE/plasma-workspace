@@ -86,6 +86,9 @@ Rectangle {
     }
 
     Component.onCompleted: {
+        if (!configuredImage && imageWallpaper.wallpaperPath) {
+            return;
+        }
         imageWallpaper.addUrl(configuredImage)
         if (wallpaper.pluginName == "org.kde.slideshow") {
             wallpaper.setAction("next", i18nd("plasma_applet_org.kde.image","Next Wallpaper Image"),"user-desktop");
