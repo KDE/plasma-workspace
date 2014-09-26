@@ -106,8 +106,9 @@ void TimeSource::updateTime()
     int offset = tz.offsetFromUtc(timeZoneDateTime);
     if (m_offset != offset) {
         m_offset = offset;
-        setData(I18N_NOOP("Offset"), m_offset);
     }
+
+    setData(I18N_NOOP("Offset"), m_offset);
 
     QString abbreviation = tz.abbreviation(timeZoneDateTime);
     setData(I18N_NOOP("Timezone Abbreviation"), abbreviation);
