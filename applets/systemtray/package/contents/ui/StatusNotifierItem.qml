@@ -43,7 +43,7 @@ Item {
     property int      __status:            modelData.status
 
 
-    property variant icon: modelData.tooltipIcon
+    property variant icon: modelData ? modelData.tooltipIcon : null
     property string toolTipMainText: modelData.tooltipTitle
     property string toolTipSubText: modelData.tooltipText
 
