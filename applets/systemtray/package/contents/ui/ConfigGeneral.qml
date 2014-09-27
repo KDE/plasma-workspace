@@ -30,19 +30,20 @@ import org.kde.private.systemtray 2.0 as SystemTray
 
 Item {
     id: iconsPage
+
+    signal configurationChanged
+
     width: childrenRect.width
     height: childrenRect.height
     implicitWidth: mainColumn.implicitWidth
     implicitHeight: pageColumn.implicitHeight
 
-    property int cfg_itemSize: plasmoid.configuration.itemSize
-    property var cfg_shownCategories: Array()
     property alias cfg_applicationStatusShown: applicationStatus.checked
     property alias cfg_communicationsShown: communications.checked
     property alias cfg_systemServicesShown: systemServices.checked
     property alias cfg_hardwareControlShown: hardwareControl.checked
     property alias cfg_miscellaneousShown: miscellaneous.checked
-    property var cfg_extraItems: Array()
+    property var cfg_extraItems: []
 
     SystemTray.Host {
         id: host
@@ -52,9 +53,8 @@ Item {
         id: palette
     }
 
-    Column {
+    QtLayouts.ColumnLayout {
         id: pageColumn
-        spacing: itemSizeLabel.height / 2
 
         PlasmaExtras.Heading {
             level: 2
@@ -65,7 +65,7 @@ Item {
             width: height
             height: units.gridUnit / 2
         }
-        Column {
+        QtLayouts.ColumnLayout {
             spacing: units.smallSpacing * 2
             QtControls.CheckBox {
                 id: applicationStatus
@@ -102,7 +102,7 @@ Item {
             width: height
             height: units.gridUnit / 2
         }
-        Column {
+        QtLayouts.ColumnLayout {
             spacing: units.smallSpacing * 2
             Repeater {
                 model: host.availablePlasmoids
@@ -120,6 +120,7 @@ Item {
                                 cfg_extraItems.splice(index, 1);
                             }
                         }
+                        configurationChanged() // qml cannot detect changes inside an Array
                     }
                     QtLayouts.RowLayout {
                         anchors.verticalCenter: parent.verticalCenter
