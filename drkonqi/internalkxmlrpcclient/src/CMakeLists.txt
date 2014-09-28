@@ -32,7 +32,7 @@ ecm_generate_headers(KXmlRpcClientPrivate_CamelCase_HEADERS
   REQUIRED_HEADERS KXmlRpcClientPrivate_HEADERS
 )
 
-install(TARGETS KF5XmlRpcClientPrivate EXPORT KF5XmlRpcClientPrivateTargets ${KF5_INSTALL_TARGETS_DEFAULT_ARGS})
+install(TARGETS KF5XmlRpcClientPrivate EXPORT KF5XmlRpcClientPrivateTargets ${KF5_INSTALL_TARGETS_DEFAULT_ARGS} LIBRARY NAMELINK_SKIP)
 
 
 # ecm_generate_pri_file(BASE_NAME KXmlRpcClientPrivate
