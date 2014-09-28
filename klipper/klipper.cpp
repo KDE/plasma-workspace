@@ -358,7 +358,7 @@ void Klipper::showPopupMenu( QMenu* menu )
 }
 
 bool Klipper::loadHistory() {
-    static const char* const failed_load_warning =
+    static const char failed_load_warning[] =
         "Failed to load history resource. Clipboard history cannot be read.";
     // don't use "appdata", klipper is also a kicker applet
     QFile history_file(QStandardPaths::locate(QStandardPaths::GenericDataLocation,
@@ -418,7 +418,7 @@ bool Klipper::loadHistory() {
 }
 
 void Klipper::saveHistory(bool empty) {
-    static const char* const failed_save_warning =
+    static const char failed_save_warning[] =
         "Failed to save history. Clipboard history cannot be saved.";
     // don't use "appdata", klipper is also a kicker applet
     QString history_file_name(QStandardPaths::locate(QStandardPaths::GenericDataLocation,
