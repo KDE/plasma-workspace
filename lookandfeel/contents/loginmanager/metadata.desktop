@@ -28,12 +28,14 @@ Name[sr@latin]=Povetarac
 Name[sv]=Breeze
 Name[uk]=Breeze
 Name[x-test]=xxBreezexx
+<<<<<<< HEAD
 Name[zh_CN]=微风
 Name[zh_TW]=微風
+=======
+>>>>>>> Plasma/5.1
 Description=Breeze Theme
 Description[ar]=سمة النسيم
 Description[ca]=Tema Brisa
-Description[cs]=Motiv Breeze
 Description[da]=Breeze-temaet
 Description[de]=Breeze-Design
 Description[en_GB]=Breeze Theme
@@ -59,8 +61,11 @@ Description[sr@latin]=Tema Povetarac
 Description[sv]=Breeze-tema
 Description[uk]=Тема «Breeze»
 Description[x-test]=xxBreeze Themexx
+<<<<<<< HEAD
 Description[zh_CN]=微风主题
 Description[zh_TW]=微風主題
+=======
+>>>>>>> Plasma/5.1
 Author=David Edmundson
 Copyright=(c) 2014, David Edmundson
 License=CC-BY-SA

@@ -18,6 +18,8 @@
  */
 
 import QtQuick 2.0
+import QtQuick.Layouts 1.1
+
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.plasma.extras 2.0 as PlasmaExtras
@@ -57,8 +59,8 @@ PlasmaCore.Dialog {
 
     mainItem: MouseEventListener {
         id: root
-        height: Math.max(actionsColumn.height + closeButton.height + (3 * units.smallSpacing), (4.5 * units.gridUnit))
-        width: Math.round(23 * units.gridUnit)
+        Layout.minimumWidth: Math.round(23 * units.gridUnit)
+        Layout.minimumHeight: Math.max(actionsColumn.height + closeButton.height + (3 * units.smallSpacing), (4.5 * units.gridUnit))
 
         state: "controlsHidden"
         hoverEnabled: true
