@@ -420,22 +420,42 @@ void DBusSystemTrayTask::syncIcons(const Plasma::DataEngine::Data &properties)
 
 void DBusSystemTrayTask::syncToolTip(const QString &title, const QString &subTitle, const QIcon &toolTipIcon)
 {
-    if (title != m_tooltipTitle) {
-        m_tooltipTitle = title;
-        emit changedTooltipTitle();
+    if (title.isEmpty() && subTitle.isEmpty()) {
+        // if empty tooltip use application name as fallback
+        if (m_tooltipTitle != name()) {
+            m_tooltipTitle = name();
+            emit changedTooltipTitle();
+        }
+
+        if (!m_tooltipText.isEmpty()) {
+            m_tooltipText.clear();
+            emit changedTooltipText();
+        }
+    } else {
+        if (title != m_tooltipTitle) {
+            m_tooltipTitle = title;
+            emit changedTooltipTitle();
+        }
+
+        if (subTitle != m_tooltipText) {
+            m_tooltipText = subTitle;
+            emit changedTooltipText();
+        }
     }
 
-    if (subTitle != m_tooltipText) {
-        m_tooltipText = subTitle;
-        emit changedTooltipText();
+    bool iconNameChanged = false;
+
+    if (toolTipIcon.isNull()) {
+        iconNameChanged = m_tooltipIcon.name() != m_icon.name();
+        m_tooltipIcon = m_icon;
+    } else {
+        iconNameChanged = m_tooltipIcon.name() != toolTipIcon.name();
+        m_tooltipIcon = toolTipIcon;
+        emit changedTooltip();
     }
 
-    bool is_icon_name_changed = (m_tooltipIcon.name() != toolTipIcon.name());
-
-    m_tooltipIcon = toolTipIcon;
     emit changedTooltip();
-
-    if (is_icon_name_changed) {
+    if (iconNameChanged) {
         emit changedTooltipIconName();
     }
 }
