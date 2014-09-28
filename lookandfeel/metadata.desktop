@@ -1,5 +1,14 @@
 [Desktop Entry]
 Comment=Breeze Desktop Design Language by the KDE VDG
+Comment[ca]=Llenguatge de disseny d'escriptori Brisa pel VDG del KDE
+Comment[es]=Lenguaje de diseño del escritorio Breeze, por el VDG de KDE
+Comment[hu]=Breeze asztali designnyelv a KDE VDG-től
+Comment[nl]=Breeze ontwerptaal van het bureaublad door KDE VDG
+Comment[sk]=Jazyk dizajnu plochy vánok od KDE VDG
+Comment[sl]=Sapica, oblikovalni jezik namizja avtorjev KDE VDG
+Comment[sv]=Breeze-konstruktionsspråk för skrivbord av KDE VDG
+Comment[uk]=Мова компонування стільниці Breeze, створена KDE VDG
+Comment[x-test]=xxBreeze Desktop Design Language by the KDE VDGxx
 Encoding=UTF-8
 Keywords=Desktop, Workspace, Appearance, Look and Feel, Logout, Lock, Suspend, Shutdown, Hibernate,
 Keywords[ca]=Escriptori, Espai de treball, Aparença, Aparença i comportament, Sortida, Bloqueig, Suspensió, Aturada, Hibernació,

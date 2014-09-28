@@ -1,6 +1,24 @@
 [Desktop Entry]
 Name=Clipboard
+Name[ca]=Porta-retalls
+Name[es]=Portapapeles
+Name[hu]=Vágólap
+Name[nl]=Klembord
+Name[sk]=Schránka
+Name[sl]=Odložišče
+Name[sv]=Klippbord
+Name[uk]=Буфер обміну
+Name[x-test]=xxClipboardxx
 Comment=Provides access to the clipboard history.
+Comment[ca]=Proporciona accés a l'historial del porta-retalls.
+Comment[es]=Proporciona acceso al historial del portapapeles.
+Comment[hu]=Hozzáférést nyújt a vágólap előzményeihez.
+Comment[nl]=Biedt toegang tot de geschiedenis van klembord.
+Comment[sk]=Poskytuje prístup k histórii schránky.
+Comment[sl]=Ponuja dostop do zgodovine odložišča.
+Comment[sv]=Ger tillgång till klippbordshistoriken.
+Comment[uk]=Надає доступ до журналу буфера обміну даними.
+Comment[x-test]=xxProvides access to the clipboard history.xx
 
 Icon=klipper
 Type=Service

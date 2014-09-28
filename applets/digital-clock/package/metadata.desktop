@@ -55,6 +55,7 @@ Name[nds]=Digitaal Klock
 Name[ne]=डिजिटल घडी
 Name[nl]=Digitale klok
 Name[nn]=Digital klokke
+Name[oc]=Relòtge numeric
 Name[or]=ସାଂଖିକ ଘଡ଼ି
 Name[pa]=ਡਿਜਿਟਲ ਘੜੀ
 Name[pl]=Zegar cyfrowy
@@ -87,6 +88,15 @@ Name[zh_CN]=数字钟
 Name[zh_TW]=數位時鐘
 
 Comment=Time displayed in a digital format
+Comment[ca]=Mostra l'hora en un format digital
+Comment[es]=La hora mostrada en formato digital
+Comment[hu]=Digitális formában kijelzett idő
+Comment[nl]=Tijd weergegeven in een digitale opmaak
+Comment[sk]=Čas zobrazený v digitálnom formáte
+Comment[sl]=Prikaz časa v digitalni obliki
+Comment[sv]=Tid visad med digitalformat
+Comment[uk]=Час, показаний у цифровому форматі
+Comment[x-test]=xxTime displayed in a digital formatxx
 
 Icon=preferences-system-time
 Type=Service

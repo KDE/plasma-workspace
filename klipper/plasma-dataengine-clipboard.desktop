@@ -1,6 +1,24 @@
 [Desktop Entry]
 Name=Clipboard
+Name[ca]=Porta-retalls
+Name[es]=Portapapeles
+Name[hu]=Vágólap
+Name[nl]=Klembord
+Name[sk]=Schránka
+Name[sl]=Odložišče
+Name[sv]=Klippbord
+Name[uk]=Буфер обміну
+Name[x-test]=xxClipboardxx
 Comment=Clipboard Tool.
+Comment[ca]=Eina de porta-retalls.
+Comment[es]=Herramienta del portapapeles.
+Comment[hu]=Vágólapkezelő.
+Comment[nl]=Klembordbeheer.
+Comment[sk]=Nástroj pre schránku.
+Comment[sl]=Orodje za odložišče.
+Comment[sv]=Klippbordsverktyg.
+Comment[uk]=Утиліта буфера даних.
+Comment[x-test]=xxClipboard Tool.xx
 Type=Service
 Icon=klipper
 

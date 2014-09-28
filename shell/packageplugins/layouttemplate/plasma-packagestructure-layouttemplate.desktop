@@ -1,5 +1,14 @@
 [Desktop Entry]
 Name=Layout Template
+Name[ca]=Plantilla de disposició
+Name[es]=Plantilla de distribución
+Name[hu]=Elrendezéssablon
+Name[nl]=Indelingssjabloon
+Name[sk]=Šablóna rozloženia
+Name[sl]=Predloga razporeda
+Name[sv]=Layoutmall
+Name[uk]=Шаблон компонування
+Name[x-test]=xxLayout Templatexx
 Type=Service
 X-KDE-ServiceTypes=Plasma/PackageStructure
 X-KDE-Library=plasma_packagestructure_layouttemplate

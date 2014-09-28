@@ -1,6 +1,24 @@
 [Desktop Entry]
 Name=Plasma Windowed
+Name[ca]=Plasma amb finestres
+Name[es]=Plasma en ventanas
+Name[hu]=Ablakban futtatott plazma
+Name[nl]=Plasma weergegeven in vensters
+Name[sk]=Plasma v okne
+Name[sl]=Okenski način Plasma
+Name[sv]=Plasma i fönster
+Name[uk]=Плазма у вікні
+Name[x-test]=xxPlasma Windowedxx
 Comment=Run Plasmoids as simple applications
+Comment[ca]=Executa els plasmoides com a simples aplicacions
+Comment[es]=Ejecutar plasmoides como aplicaciones simples
+Comment[hu]=Plazmoidok futtatása egyszerű alkalmazásként
+Comment[nl]=Plasmoids uitvoeren als eenvoudige toepassingen
+Comment[sk]=Spúšťať Plazmoidy ako jednoduché aplikácie
+Comment[sl]=Zaganjajte Plasmoide kot preproste programe
+Comment[sv]=Kör Plasmoider som enkla program
+Comment[uk]=Запуск плазмоїдів як простих програм
+Comment[x-test]=xxRun Plasmoids as simple applicationsxx
 
 Exec=plasmawindowed %u
 Terminal=false

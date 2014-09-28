@@ -1,5 +1,14 @@
 [Desktop Entry]
 Name=Plasma Shell
+Name[ca]=Intèrpret d'ordres del Plasma
+Name[es]=Intérprete de Plasma
+Name[hu]=Plasma felület
+Name[nl]=Plasma Shell
+Name[sk]=Plasma Shell
+Name[sl]=Lupina za Plasmo
+Name[sv]=Plasma-skal
+Name[uk]=Оболонка Плазми
+Name[x-test]=xxPlasma Shellxx
 Type=Service
 X-KDE-ServiceTypes=Plasma/PackageStructure
 X-KDE-Library=plasma_packagestructure_plasmashell
