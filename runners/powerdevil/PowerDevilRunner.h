@@ -20,7 +20,7 @@
 #ifndef POWERDEVILRUNNER_H
 #define POWERDEVILRUNNER_H
 
-#include <Plasma/AbstractRunner>
+#include <KRunner/AbstractRunner>
 #include <QDBusConnection>
 
 typedef QMap< QString, QString > StringStringMap;
@@ -54,6 +54,5 @@ class PowerDevilRunner : public Plasma::AbstractRunner
 };
 
 Q_DECLARE_METATYPE(StringStringMap)
-K_EXPORT_PLASMA_RUNNER( powerdevil, PowerDevilRunner )
 
 #endif
