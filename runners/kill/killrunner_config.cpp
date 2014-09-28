@@ -20,9 +20,11 @@
 //Project-Includes
 #include "killrunner_config.h"
 //KDE-Includes
-#include <plasma/abstractrunner.h>
+#include <KSharedConfig>
+#include <KPluginFactory>
+#include <krunner/abstractrunner.h>
 
-K_EXPORT_RUNNER_CONFIG(kill, KillRunnerConfig)
+K_PLUGIN_FACTORY(KillRunnerConfigFactory, registerPlugin<KillRunnerConfig>("kcm_krunner_kill");)
 
 KillRunnerConfigForm::KillRunnerConfigForm(QWidget* parent) : QWidget(parent)
 {
@@ -30,7 +32,7 @@ KillRunnerConfigForm::KillRunnerConfigForm(QWidget* parent) : QWidget(parent)
 }
 
 KillRunnerConfig::KillRunnerConfig(QWidget* parent, const QVariantList& args) :
-        KCModule(ConfigFactory::componentData(), parent, args)
+        KCModule(parent, args)
 {
     m_ui = new KillRunnerConfigForm(this);
 
@@ -88,3 +90,5 @@ void KillRunnerConfig::defaults()
 
     emit changed(true);
 }
+
+#include "killrunner_config.moc"

@@ -20,9 +20,9 @@
 #include "killrunner.h"
 
 #include <QAction>
-
 #include <QDebug>
-#include <KIcon>
+#include <QIcon>
+
 #include <KProcess>
 #include <KUser>
 #include <kauth.h>
@@ -31,6 +31,8 @@
 #include "processcore/process.h"
 
 #include "killrunner_config.h"
+
+K_EXPORT_PLASMA_RUNNER(kill, KillRunner)
 
 KillRunner::KillRunner(QObject *parent, const QVariantList& args)
         : Plasma::AbstractRunner(parent, args),
@@ -139,7 +141,7 @@ void KillRunner::match(Plasma::RunnerContext &context)
         Plasma::QueryMatch match(this);
         match.setText(i18n("Terminate %1", name));
         match.setSubtext(i18n("Process ID: %1\nRunning as user: %2", QString::number(pid), user));
-        match.setIcon(KIcon("application-exit"));
+        match.setIcon(QIcon::fromTheme("application-exit"));
         match.setData(data);
         match.setId(name);
 
@@ -160,7 +162,7 @@ void KillRunner::match(Plasma::RunnerContext &context)
     }
 
     qDebug() << "match count is" << matches.count();
-    context.addMatches(term, matches);
+    context.addMatches(matches);
 }
 
 void KillRunner::run(const Plasma::RunnerContext &context, const Plasma::QueryMatch &match)
@@ -189,7 +191,7 @@ void KillRunner::run(const Plasma::RunnerContext &context, const Plasma::QueryMa
     }
 
     KAuth::Action killAction = QString("org.kde.ksysguard.processlisthelper.sendsignal");
-    killAction.setHelperID("org.kde.ksysguard.processlisthelper");
+    killAction.setHelperId("org.kde.ksysguard.processlisthelper");
     killAction.addArgument("pid0", pid);
     killAction.addArgument("pidcount", 1);
     killAction.addArgument("signal", signal);
@@ -203,8 +205,8 @@ QList<QAction*> KillRunner::actionsForMatch(const Plasma::QueryMatch &match)
     QList<QAction*> ret;
 
     if (!action("SIGTERM")) {
-        (addAction("SIGTERM", KIcon("application-exit"), i18n("Send SIGTERM")))->setData(15);
-        (addAction("SIGKILL", KIcon("process-stop"), i18n("Send SIGKILL")))->setData(9);
+        (addAction("SIGTERM", QIcon::fromTheme("application-exit"), i18n("Send SIGTERM")))->setData(15);
+        (addAction("SIGKILL", QIcon::fromTheme("process-stop"), i18n("Send SIGKILL")))->setData(9);
     }
     ret << action("SIGTERM") << action("SIGKILL");
     return ret;

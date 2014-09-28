@@ -23,7 +23,7 @@
 #include <QReadWriteLock>
 #include <QTimer>
 
-#include <Plasma/AbstractRunner>
+#include <KRunner/AbstractRunner>
 
 #include "killrunner_config.h"
 class QAction;
@@ -72,6 +72,5 @@ private:
     /** timer for retrying the cleanup due to lock contention */
     QTimer m_delayedCleanupTimer;
 };
-K_EXPORT_PLASMA_RUNNER(kill, KillRunner)
 
 #endif

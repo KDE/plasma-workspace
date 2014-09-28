@@ -11,16 +11,25 @@ set(kcm_krunner_kill_SRCS
 ki18n_wrap_ui(kcm_krunner_kill_SRCS killrunner_config.ui)
 add_library(kcm_krunner_kill MODULE ${kcm_krunner_kill_SRCS})
 target_link_libraries(kcm_krunner_kill
-    
-    ${KDE4_KDEUI_LIBS}
-    ${KDE4_KCMUTILS_LIBS} 
     Qt5::Core
     Qt5::Gui
+    KF5::CoreAddons
+    KF5::ConfigCore
+    KF5::I18n
+    KF5::Completion
+    KF5::ConfigWidgets
+    KF5::Runner
     )
     
 add_library(krunner_kill MODULE ${krunner_kill_SRCS})
 target_link_libraries(krunner_kill
-                      KF5::Plasma KIOCore KF5::ProcesCore)
+                      KF5::I18n
+                      KF5::Completion
+                      KF5::ConfigWidgets
+                      KF5::Auth
+                      KF5::Runner
+                      KF5::ProcessCore
+                      )
 add_dependencies(krunner_kill kcm_krunner_kill)
 
 install(TARGETS krunner_kill kcm_krunner_kill
