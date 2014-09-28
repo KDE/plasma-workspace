@@ -260,4 +260,4 @@ void KlipperPopup::slotSetTopActive()
   }
 }
 
-#include "klipperpopup.moc"
+

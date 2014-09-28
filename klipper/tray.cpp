@@ -74,4 +74,4 @@ void KlipperTray::slotPassivePopup(const QString& caption, const QString& text)
     }
 }
 
-#include "tray.moc"
+

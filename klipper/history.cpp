@@ -226,4 +226,4 @@ HistoryItemConstPtr History::first() const
     return index.data(Qt::UserRole).value<HistoryItemConstPtr>();
 }
 
-#include "history.moc"
+

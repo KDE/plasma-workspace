@@ -387,4 +387,4 @@ void EditActionDialog::onSelectionChanged()
     m_ui->pbRemoveCommand->setEnabled( m_ui->twCommandList->selectionModel() && m_ui->twCommandList->selectionModel()->hasSelection() );
 }
 
-#include "editactiondialog.moc"
+
