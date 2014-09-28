@@ -559,6 +559,8 @@ void Image::getNewWallpaper()
 {
     if (!m_newStuffDialog) {
         m_newStuffDialog = new KNS3::DownloadDialog( QString::fromLatin1("wallpaper.knsrc") );
+        KNS3::DownloadDialog* strong = m_newStuffDialog.data();
+        strong->setTitle(i18n("Download Wallpapers"));
         connect(m_newStuffDialog.data(), SIGNAL(accepted()), SLOT(newStuffFinished()));
     }
     m_newStuffDialog.data()->show();
