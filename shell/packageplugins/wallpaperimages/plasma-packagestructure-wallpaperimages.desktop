@@ -1,14 +1,26 @@
 [Desktop Entry]
 Name=Wallpaper Images
 Name[ca]=Imatges de fons d'escriptori
+Name[cs]=Tapety
+Name[da]=Baggrundsbilleder
+Name[de]=Hintergrundbilder
+Name[en_GB]=Wallpaper Images
 Name[es]=Imágenes de fondo del escritorio
 Name[hu]=Háttérképek
 Name[nl]=Achtergrondafbeeldingen
+Name[pl]=Obrazy tapet
+Name[pt]=Imagens do Papel de Parede
+Name[pt_BR]=Papéis de parede
 Name[sk]=Obrázky tapety
 Name[sl]=Slike ozadja
+Name[sr]=Тапетне слике
+Name[sr@ijekavian]=Тапетне слике
+Name[sr@ijekavianlatin]=Tapetne slike
+Name[sr@latin]=Tapetne slike
 Name[sv]=Skrivbordsunderlägg
 Name[uk]=Зображення шпалер
 Name[x-test]=xxWallpaper Imagesxx
+Name[zh_TW]=桌布影像
 Type=Service
 X-KDE-ServiceTypes=Plasma/PackageStructure
 X-KDE-Library=plasma_packagestructure_wallpaperimages
