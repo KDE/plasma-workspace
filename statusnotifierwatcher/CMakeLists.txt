@@ -17,7 +17,7 @@ qt5_add_dbus_interface(kded_statusnotifierwatcher_SRCS ${statusnotifieritem_xml}
 add_library(kded_statusnotifierwatcher MODULE ${kded_statusnotifierwatcher_SRCS})
 
 
-target_link_libraries(kded_statusnotifierwatcher Qt5::DBus KF5::DBusAddons KF5::KDELibs4Support )
+target_link_libraries(kded_statusnotifierwatcher Qt5::DBus KF5::DBusAddons KF5::CoreAddons)
 
 install(TARGETS kded_statusnotifierwatcher  DESTINATION ${PLUGIN_INSTALL_DIR})
 
