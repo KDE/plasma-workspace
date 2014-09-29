@@ -35,6 +35,8 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #include <config-unix.h> // HAVE_LIMITS_H
 #include <config-ksmserver.h>
 
+#include <ksmserver_debug.h>
+
 #include <pwd.h>
 #include <sys/types.h>
 #include <sys/param.h>
@@ -94,7 +96,7 @@ void KSMServer::restoreSession( const QString &sessionName )
 #endif
     state = LaunchingWM;
 
-    qDebug() << "KSMServer::restoreSession " << sessionName;
+    qCDebug(KSMSERVER) << "KSMServer::restoreSession " << sessionName;
     KSharedConfig::Ptr config = KSharedConfig::openConfig();
 
     sessionGroup = QStringLiteral("Session: ") + sessionName;
@@ -196,7 +198,7 @@ void KSMServer::wmProcessChange()
         qWarning() << "Window manager" << wm << "failed to launch";
         if( wm == QStringLiteral( KWIN_BIN ) )
             return; // uhoh, kwin itself failed
-        qDebug() << "Launching KWin";
+        qCDebug(KSMSERVER) << "Launching KWin";
         wm = QStringLiteral( KWIN_BIN );
         wmCommands = ( QStringList() << QStringLiteral( KWIN_BIN ) );
         // launch it
@@ -213,7 +215,7 @@ void KSMServer::autoStart0()
         return;
     state = AutoStart0;
 #ifdef KSMSERVER_STARTUP_DEBUG1
-    qDebug() << t.elapsed();
+    qCDebug(KSMSERVER) << t.elapsed();
 #endif
     org::kde::KLauncher klauncher(QStringLiteral("org.kde.klauncher5"), QStringLiteral("/KLauncher"), QDBusConnection::sessionBus());
     klauncher.autoStart((int)0);
@@ -226,9 +228,9 @@ void KSMServer::autoStart0Done()
     disconnect( klauncherSignals, SIGNAL(autoStart0Done()), this, SLOT(autoStart0Done()));
     if( !checkStartupSuspend())
         return;
-    qDebug() << "Autostart 0 done";
+    qCDebug(KSMSERVER) << "Autostart 0 done";
 #ifdef KSMSERVER_STARTUP_DEBUG1
-    qDebug() << t.elapsed();
+    qCDebug(KSMSERVER) << t.elapsed();
 #endif
 
     state = KcmInitPhase1;
@@ -256,7 +258,7 @@ void KSMServer::kcmPhase1Done()
 {
     if( state != KcmInitPhase1 )
         return;
-    qDebug() << "Kcminit phase 1 done";
+    qCDebug(KSMSERVER) << "Kcminit phase 1 done";
     if (kcminitSignals) {
         disconnect( kcminitSignals, SIGNAL(phase1Done()), this, SLOT(kcmPhase1Done()));
     }
@@ -267,7 +269,7 @@ void KSMServer::kcmPhase1Timeout()
 {
     if( state != KcmInitPhase1 )
         return;
-    qDebug() << "Kcminit phase 1 timeout";
+    qCDebug(KSMSERVER) << "Kcminit phase 1 timeout";
     kcmPhase1Done();
 }
 
@@ -277,7 +279,7 @@ void KSMServer::autoStart1()
         return;
     state = AutoStart1;
 #ifdef KSMSERVER_STARTUP_DEBUG1
-    qDebug()<< t.elapsed();
+    qCDebug(KSMSERVER)<< t.elapsed();
 #endif
     org::kde::KLauncher klauncher(QStringLiteral("org.kde.klauncher5"),
                                   QStringLiteral("/KLauncher"),
@@ -292,13 +294,13 @@ void KSMServer::autoStart1Done()
     disconnect( klauncherSignals, SIGNAL(autoStart1Done()), this, SLOT(autoStart1Done()));
     if( !checkStartupSuspend())
         return;
-    qDebug() << "Autostart 1 done";
+    qCDebug(KSMSERVER) << "Autostart 1 done";
     setupShortcuts(); // done only here, because it needs kglobalaccel :-/
     lastAppStarted = 0;
     lastIdStarted.clear();
     state = Restoring;
 #ifdef KSMSERVER_STARTUP_DEBUG1
-    qDebug()<< t.elapsed();
+    qCDebug(KSMSERVER)<< t.elapsed();
 #endif
     if( defaultSession()) {
         autoStart2();
@@ -375,7 +377,7 @@ void KSMServer::autoStart2()
         return;
     state = FinishingStartup;
 #ifdef KSMSERVER_STARTUP_DEBUG1
-    qDebug()<< t.elapsed();
+    qCDebug(KSMSERVER)<< t.elapsed();
 #endif
     waitAutoStart2 = true;
     waitKcmInit2 = true;
@@ -385,7 +387,7 @@ void KSMServer::autoStart2()
     klauncher.autoStart((int)2);
     QTimer::singleShot( 10000, this, SLOT(autoStart2Done())); //In case klauncher never returns
 #ifdef KSMSERVER_STARTUP_DEBUG1
-    qDebug()<< "klauncher" << t.elapsed();
+    qCDebug(KSMSERVER)<< "klauncher" << t.elapsed();
 #endif
 
     QDBusInterface kded( QStringLiteral( "org.kde.kded5" ),
@@ -394,7 +396,7 @@ void KSMServer::autoStart2()
     kded.call( QStringLiteral( "loadSecondPhase" ) );
 
 #ifdef KSMSERVER_STARTUP_DEBUG1
-    qDebug()<< "kded" << t.elapsed();
+    qCDebug(KSMSERVER)<< "kded" << t.elapsed();
 #endif
 
     // Create dir so that users can find it :-)
@@ -426,7 +428,7 @@ void KSMServer::autoStart2Done()
     if( state != FinishingStartup )
         return;
     disconnect( klauncherSignals, SIGNAL(autoStart2Done()), this, SLOT(autoStart2Done()));
-    qDebug() << "Autostart 2 done";
+    qCDebug(KSMSERVER) << "Autostart 2 done";
     waitAutoStart2 = false;
     finishStartup();
 }
@@ -435,7 +437,7 @@ void KSMServer::kcmPhase2Done()
 {
     if( state != FinishingStartup )
         return;
-    qDebug() << "Kcminit phase 2 done";
+    qCDebug(KSMSERVER) << "Kcminit phase 2 done";
     if (kcminitSignals) {
         disconnect( kcminitSignals, SIGNAL(phase2Done()), this, SLOT(kcmPhase2Done()));
         delete kcminitSignals;
@@ -449,7 +451,7 @@ void KSMServer::kcmPhase2Timeout()
 {
     if( !waitKcmInit2 )
         return;
-    qDebug() << "Kcminit phase 2 timeout";
+    qCDebug(KSMSERVER) << "Kcminit phase 2 timeout";
     kcmPhase2Done();
 }
 
@@ -462,7 +464,7 @@ void KSMServer::finishStartup()
 
     upAndRunning( QStringLiteral( "ready" ) );
 #ifdef KSMSERVER_STARTUP_DEBUG1
-    qDebug()<< t.elapsed();
+    qCDebug(KSMSERVER)<< t.elapsed();
 #endif
 
     state = Idle;
@@ -504,7 +506,7 @@ void KSMServer::resumeStartup( const QString &app )
 
 void KSMServer::startupSuspendTimeout()
 {
-    qDebug() << "Startup suspend timeout:" << state;
+    qCDebug(KSMSERVER) << "Startup suspend timeout:" << state;
     resumeStartupInternal();
 }
 

@@ -16,6 +16,7 @@ configure_file(config-ksmserver.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-ksmse
 ########### next target ###############
 
 set(ksmserver_KDEINIT_SRCS
+    ksmserver_debug.cpp
     main.cpp
     server.cpp
     shutdowndlg.cpp

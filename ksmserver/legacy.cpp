@@ -34,6 +34,8 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 #include <config-workspace.h>
 
+#include <ksmserver_debug.h>
+
 #ifdef HAVE_SYS_TIME_H
 #include <sys/time.h>
 #endif
@@ -77,7 +79,7 @@ static int winsErrorHandler(Display *, XErrorEvent *ev)
 
 void KSMServer::performLegacySessionSave()
 {
-    qDebug() << "Saving legacy session apps";
+    qCDebug(KSMSERVER) << "Saving legacy session apps";
     if (state == ClosingSubSession)
         return; //FIXME implement later
 
@@ -161,7 +163,7 @@ void KSMServer::performLegacySessionSave()
             ev.xclient.data.l[1] = QX11Info::appTime();
             XSelectInput(newdisplay, w, PropertyChangeMask|StructureNotifyMask);
             XSendEvent(newdisplay, w, False, 0, &ev);
-            qDebug() << "sent >save yourself< to legacy app " << (*it).wmclass1 << (*it).wmclass2;
+            qCDebug(KSMSERVER) << "sent >save yourself< to legacy app " << (*it).wmclass1 << (*it).wmclass2;
         }
     }
     // Wait for change in WM_COMMAND with timeout
@@ -184,7 +186,7 @@ void KSMServer::performLegacySessionSave()
             /* Check timeout */
             int msecs = start.elapsed();
             if (msecs >= wmSaveYourselfTimeout) {
-                qDebug() << "legacy timeout expired";
+                qCDebug(KSMSERVER) << "legacy timeout expired";
                 break;
             }
             /* Wait for more events */
@@ -213,7 +215,7 @@ void KSMServer::performLegacySessionSave()
             (*it).wmClientMachine = windowWmClientMachine(w);
         }
     }
-    qDebug() << "Done saving " << legacyWindows.count() << " legacy session apps";
+    qCDebug(KSMSERVER) << "Done saving " << legacyWindows.count() << " legacy session apps";
 }
 
 /*!

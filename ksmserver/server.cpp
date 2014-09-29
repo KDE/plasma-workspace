@@ -32,6 +32,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #include "server.h"
 #include "global.h"
 #include "client.h"
+#include "ksmserver_debug.h"
 #include "ksmserverinterfaceadaptor.h"
 #include "klocalizedstring.h"
 #include "kglobalaccel.h"
@@ -400,7 +401,7 @@ Status SetAuthentication_local (int count, IceListenObj *listenObjs)
                 sock++;
             }
         }
-        qDebug() << "KSMServer: SetAProc_loc: conn " << (unsigned)i << ", prot=" << prot << ", file=" << sock;
+        qCDebug(KSMSERVER) << "KSMServer: SetAProc_loc: conn " << (unsigned)i << ", prot=" << prot << ", file=" << sock;
         if (sock && !strcmp(prot, "local")) {
             chmod(sock, 0700);
         }
@@ -673,7 +674,7 @@ KSMServer::KSMServer( const QString& windowManager, bool _only_local, bool locks
         QByteArray fName = QFile::encodeName(QStandardPaths::writableLocation(QStandardPaths::RuntimeLocation)
                                              + QDir::separator()
                                              + QStringLiteral("KSMserver"));
-        qDebug() << fName;
+        qCDebug(KSMSERVER) << fName;
         QString display = QString::fromLocal8Bit(::getenv("DISPLAY"));
         // strip the screen number from the display
         display.replace(QRegExp(QStringLiteral("\\.[0-9]+$")), QStringLiteral(""));
@@ -849,9 +850,9 @@ void KSMServer::newConnection( int /*socket*/ )
 
     if (cstatus != IceConnectAccepted) {
         if (cstatus == IceConnectIOError)
-            qDebug() << "IO error opening ICE Connection!";
+            qCDebug(KSMSERVER) << "IO error opening ICE Connection!";
         else
-            qDebug() << "ICE Connection rejected!";
+            qCDebug(KSMSERVER) << "ICE Connection rejected!";
         (void )IceCloseConnection (iceConn);
         return;
     }

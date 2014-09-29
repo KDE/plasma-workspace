@@ -32,6 +32,8 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #include <config-workspace.h>
 #include <config-unix.h> // HAVE_LIMITS_H
 
+#include <ksmserver_debug.h>
+
 #include <pwd.h>
 #include <sys/types.h>
 #include <sys/param.h>
@@ -366,14 +368,14 @@ void KSMServer::handlePendingInteractions()
 void KSMServer::cancelShutdown( KSMClient* c )
 {
     clientInteracting = 0;
-    qDebug() << state;
+    qCDebug(KSMSERVER) << state;
     if ( state == ClosingSubSession ) {
         clientsToKill.clear();
         clientsToSave.clear();
         emit subSessionCloseCanceled();
     } else {
         Solid::PowerManagement::stopSuppressingSleep(inhibitCookie);
-        qDebug() << "Client " << c->program() << " (" << c->clientId() << ") canceled shutdown.";
+        qCDebug(KSMSERVER) << "Client " << c->program() << " (" << c->clientId() << ") canceled shutdown.";
 //         KNotification::event( QStringLiteral( "cancellogout" ),
 //                               i18n( "Logout canceled by '%1'", c->program()),
 //                               QPixmap() , 0l , KNotification::DefaultEvent  );
@@ -418,7 +420,7 @@ void KSMServer::protectionTimeout()
 
     foreach( KSMClient* c, clients ) {
         if ( !c->saveYourselfDone && !c->waitForPhase2 ) {
-            qDebug() << "protectionTimeout: client " << c->program() << "(" << c->clientId() << ")";
+            qCDebug(KSMSERVER) << "protectionTimeout: client " << c->program() << "(" << c->clientId() << ")";
             c->saveYourselfDone = true;
         }
     }
@@ -476,17 +478,17 @@ void KSMServer::completeShutdownOrCheckpoint()
 
 void KSMServer::startKilling()
 {
-    qDebug() << "Starting killing clients";
+    qCDebug(KSMSERVER) << "Starting killing clients";
     // kill all clients
     state = Killing;
     foreach( KSMClient* c, clients ) {
         if( isWM( c )) // kill the WM as the last one in order to reduce flicker
             continue;
-        qDebug() << "completeShutdown: client " << c->program() << "(" << c->clientId() << ")";
+        qCDebug(KSMSERVER) << "completeShutdown: client " << c->program() << "(" << c->clientId() << ")";
         SmsDie( c->connection() );
     }
 
-    qDebug() << " We killed all clients. We have now clients.count()=" <<
+    qCDebug(KSMSERVER) << " We killed all clients. We have now clients.count()=" <<
     clients.count() << endl;
     completeKilling();
     QTimer::singleShot( 10000, this, SLOT(timeoutQuit()) );
@@ -494,7 +496,7 @@ void KSMServer::startKilling()
 
 void KSMServer::completeKilling()
 {
-    qDebug() << "KSMServer::completeKilling clients.count()=" <<
+    qCDebug(KSMSERVER) << "KSMServer::completeKilling clients.count()=" <<
         clients.count() << endl;
     if( state == Killing ) {
         bool wait = false;
@@ -518,13 +520,13 @@ void KSMServer::killWM()
     // To prevent kwin from becoming "defunct".
     ScreenLocker::KSldApp::self()->cleanUp();
 #endif
-    qDebug() << "Starting killing WM";
+    qCDebug(KSMSERVER) << "Starting killing WM";
     state = KillingWM;
     bool iswm = false;
     foreach( KSMClient* c, clients ) {
         if( isWM( c )) {
             iswm = true;
-            qDebug() << "killWM: client " << c->program() << "(" << c->clientId() << ")";
+            qCDebug(KSMSERVER) << "killWM: client " << c->program() << "(" << c->clientId() << ")";
             SmsDie( c->connection() );
         }
     }
@@ -538,7 +540,7 @@ void KSMServer::killWM()
 
 void KSMServer::completeKillingWM()
 {
-    qDebug() << "KSMServer::completeKillingWM clients.count()=" <<
+    qCDebug(KSMSERVER) << "KSMServer::completeKillingWM clients.count()=" <<
         clients.count() << endl;
     if( state == KillingWM ) {
         if( clients.isEmpty())
@@ -590,10 +592,10 @@ void KSMServer::createLogoutEffectWidget()
 void KSMServer::saveSubSession(const QString &name, QStringList saveAndClose, QStringList saveOnly)
 {
     if( state != Idle ) { // performing startup
-        qDebug() << "not idle!" << state;
+        qCDebug(KSMSERVER) << "not idle!" << state;
         return;
     }
-    qDebug() << name << saveAndClose << saveOnly;
+    qCDebug(KSMSERVER) << name << saveAndClose << saveOnly;
     state = ClosingSubSession;
     saveType = SmSaveBoth; //both or local? what oes it mean?
     saveSession = true;
@@ -623,15 +625,15 @@ void KSMServer::saveSubSession(const QString &name, QStringList saveAndClose, QS
 
 void KSMServer::startKillingSubSession()
 {
-    qDebug() << "Starting killing clients";
+    qCDebug(KSMSERVER) << "Starting killing clients";
     // kill all clients
     state = KillingSubSession;
     foreach( KSMClient* c, clientsToKill ) {
-        qDebug() << "completeShutdown: client " << c->program() << "(" << c->clientId() << ")";
+        qCDebug(KSMSERVER) << "completeShutdown: client " << c->program() << "(" << c->clientId() << ")";
         SmsDie( c->connection() );
     }
 
-    qDebug() << " We killed some clients. We have now clients.count()=" <<
+    qCDebug(KSMSERVER) << " We killed some clients. We have now clients.count()=" <<
     clients.count() << endl;
     completeKillingSubSession();
     QTimer::singleShot( 10000, this, SLOT(signalSubSessionClosed()) );
@@ -639,7 +641,7 @@ void KSMServer::startKillingSubSession()
 
 void KSMServer::completeKillingSubSession()
 {
-    qDebug() << "KSMServer::completeKillingSubSession clients.count()=" <<
+    qCDebug(KSMSERVER) << "KSMServer::completeKillingSubSession clients.count()=" <<
         clients.count() << endl;
     if( state == KillingSubSession ) {
         bool wait = false;
@@ -663,6 +665,6 @@ void KSMServer::signalSubSessionClosed()
     //TODO tell the subSession manager the close request was carried out
     //so that plasma can close its stuff
     state = Idle;
-    qDebug() << state;
+    qCDebug(KSMSERVER) << state;
     emit subSessionClosed();
 }

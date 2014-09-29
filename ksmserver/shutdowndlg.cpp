@@ -24,6 +24,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 ******************************************************************/
 
 #include "shutdowndlg.h"
+//include <ksmserver_debug.h>
 
 #include <QApplication>
 #include <QDesktopWidget>
@@ -162,7 +163,7 @@ KSMShutdownDlg::KSMShutdownDlg( QWindow* parent,
         fileName = theme;
 
     if (QFile::exists(fileName)) {
-        //qDebug() << "Using QML theme" << fileName;
+        //qCDebug(KSMSERVER) << "Using QML theme" << fileName;
         setSource(QUrl::fromLocalFile(fileName));
     } else {
         qWarning() << "Couldn't find a theme for the Shutdown dialog" << fileName;
