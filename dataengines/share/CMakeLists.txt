@@ -12,7 +12,6 @@ target_link_libraries(plasma_engine_share
                       KF5::Plasma
                       KF5::KIOCore
                       KF5::JsEmbed
-                      KF5::KDELibs4Support
 )
 kservice_desktop_to_json(plasma_engine_share plasma-dataengine-share.desktop)
 

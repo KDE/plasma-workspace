@@ -17,14 +17,15 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA .        *
  ***************************************************************************/
 
-#include <QtCore/QFile>
+#include <QFile>
+#include <QDebug>
+#include <QStandardPaths>
 
-#include <kstandarddirs.h>
 #include <kjsembed/kjsembed.h>
 #include <kjs/JSVariableObject.h>
 
 #include <Plasma/PluginLoader>
-#include <QDebug>
+
 
 #include "shareservice.h"
 #include "shareprovider.h"
@@ -67,7 +68,7 @@ void ShareJob::start()
         service->property("X-KDE-PluginInfo-Name", QVariant::String).toString();
 
     const QString path =
-        KStandardDirs::locate("data", PLASMA_RELATIVE_DATA_INSTALL_DIR "/shareprovider/" + pluginName + '/' );
+        QStandardPaths::locate(QStandardPaths::GenericDataLocation, PLASMA_RELATIVE_DATA_INSTALL_DIR "/shareprovider/" + pluginName + '/' );
 
     if (path.isEmpty()) {
         showError(i18n("Invalid path for the requested provider"));
