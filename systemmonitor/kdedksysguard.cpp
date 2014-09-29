@@ -28,7 +28,6 @@
 #include <KPluginLoader>
 #include <KPluginFactory>
 #include <KLocalizedString>
-#include <KShortcut>
 
 #include <KGlobalAccel>
 #include <KActionCollection>

@@ -10,9 +10,9 @@ target_link_libraries(kded_ksysguard
     KF5::ProcessCore
     KF5::ProcessUi
     KF5::DBusAddons
+    KF5::I18n
     KF5::XmlGui
     KF5::GlobalAccel
-    KF5::KDELibs4Support
 )
 
 install(TARGETS kded_ksysguard DESTINATION ${PLUGIN_INSTALL_DIR})
@@ -24,9 +24,11 @@ target_link_libraries(systemmonitor
     KF5::ProcessCore
     KF5::ProcessUi
     KF5::DBusAddons
+    KF5::ConfigCore
+    KF5::I18n
     KF5::XmlGui
     KF5::GlobalAccel
-    KF5::KDELibs4Support
+    KF5::WindowSystem
 )
 
 install(TARGETS systemmonitor DESTINATION ${BIN_INSTALL_DIR})

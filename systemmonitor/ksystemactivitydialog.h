@@ -21,7 +21,7 @@
 
 #ifndef Q_WS_WIN
 
-#include <KDialog>
+#include <QDialog>
 
 #include "processui/ksysguardprocesslist.h"
 
@@ -30,7 +30,7 @@
  *  It remembers the size and position of the dialog, and sets
  *  the dialog to always be over the other windows
  */
-class KSystemActivityDialog : public KDialog
+class KSystemActivityDialog : public QDialog
 {
     public:
         KSystemActivityDialog(QWidget *parent = NULL);

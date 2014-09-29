@@ -27,23 +27,28 @@
 #include <QString>
 #include <QAction>
 #include <QTreeView>
-
-#include <KConfigGroup>
-#include <KGlobal>
-#include <KWindowSystem>
-#include <KIcon>
-
+#include <QIcon>
+#include <QDialog>
 #include <QDBusConnection>
+#include <QPushButton>
+#include <QVBoxLayout>
+
+#include <KSharedConfig>
+#include <KConfigGroup>
+#include <KWindowConfig>
+#include <KWindowSystem>
+#include <KLocalizedString>
 
 //#include "krunnersettings.h"
 
 KSystemActivityDialog::KSystemActivityDialog(QWidget *parent)
-    : KDialog(parent), m_processList(0)
+    : QDialog(parent), m_processList(0)
 {
     setWindowTitle(i18n("System Activity"));
-    setWindowIcon(KIcon(QLatin1String( "utilities-system-monitor" )));
-    setButtons(0);
-    setMainWidget(&m_processList);
+    setWindowIcon(QIcon::fromTheme(QLatin1String( "utilities-system-monitor" )));
+    QVBoxLayout *mainLayout = new QVBoxLayout;
+    setLayout(mainLayout);
+    mainLayout->addWidget(&m_processList);
     m_processList.setScriptingEnabled(true);
     setSizeGripEnabled(true);
     (void)minimumSizeHint(); //Force the dialog to be laid out now
@@ -56,9 +61,9 @@ KSystemActivityDialog::KSystemActivityDialog(QWidget *parent)
     connect(closeWindow, SIGNAL(triggered(bool)), this, SLOT(accept()));
     addAction(closeWindow);
 
-    setInitialSize(QSize(650, 420));
-    KConfigGroup cg = KGlobal::config()->group("TaskDialog");
-    restoreDialogSize(cg);
+    resize(QSize(650, 420));
+    KConfigGroup cg = KSharedConfig::openConfig()->group("TaskDialog");
+    KWindowConfig::restoreWindowSize(windowHandle(), cg);
 
     m_processList.loadSettings(cg);
     // Since we default to forcing the window to be KeepAbove, if the user turns this off, remember this
@@ -106,15 +111,15 @@ void KSystemActivityDialog::reject ()
 void KSystemActivityDialog::saveDialogSettings()
 {
     //When the user closes the dialog, save the position and the KeepAbove state
-    KConfigGroup cg = KGlobal::config()->group("TaskDialog");
-    saveDialogSize(cg);
+    KConfigGroup cg = KSharedConfig::openConfig()->group("TaskDialog");
+    KWindowConfig::saveWindowSize(windowHandle(), cg);
     m_processList.saveSettings(cg);
 
     // Since we default to forcing the window to be KeepAbove, if the user turns this off, remember this
     // vHanda: Temporarily commented out
     // bool keepAbove = KWindowSystem::windowInfo(winId(), NET::WMState).hasState(NET::KeepAbove);
     // KRunnerSettings::setKeepTaskDialogAbove(keepAbove);
-    KGlobal::config()->sync();
+    KSharedConfig::openConfig()->sync();
 }
 
 #endif // not Q_WS_WIN
