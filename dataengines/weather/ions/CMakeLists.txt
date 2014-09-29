@@ -12,7 +12,7 @@ set_target_properties(weather_ion PROPERTIES
 install (TARGETS weather_ion EXPORT kdeworkspaceLibraryTargets ${INSTALL_TARGETS_DEFAULT_ARGS})
 
 install (FILES ion.h
-               ion_export.h
+               ${CMAKE_CURRENT_BINARY_DIR}/ion_export.h
          DESTINATION ${INCLUDE_INSTALL_DIR}/plasma/weather COMPONENT Devel)
 
 install (FILES includes/Ion
