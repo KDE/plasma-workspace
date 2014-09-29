@@ -40,7 +40,6 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #endif
 #include <time.h>
 
-#include <kglobal.h>
 #include <krandom.h>
 #include "server.h"
 
@@ -82,7 +81,7 @@ void KSMClient::resetState()
  * In this case SmsGenerateClientID() returns NULL, but we really want a
  * client ID, so we fake one.
  */
-K_GLOBAL_STATIC(QString, my_addr)
+Q_GLOBAL_STATIC(QString, my_addr)
 char * safeSmsGenerateClientID( SmsConn /*c*/ )
 {
 //  Causes delays with misconfigured network :-/.

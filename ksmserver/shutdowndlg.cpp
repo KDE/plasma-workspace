@@ -44,15 +44,15 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 #include <Plasma/PluginLoader>
 #include <kiconloader.h>
-#include <klocale.h>
+#include <klocalizedstring.h>
 #include <kuser.h>
 #include <Solid/PowerManagement>
 #include <kwindowsystem.h>
 #include <netwm.h>
 #include <kdeclarative/kdeclarative.h>
+#include <ksharedconfig.h>
 
 #include <stdio.h>
-#include <kxerrorhandler.h>
 #include <X11/Xutil.h>
 #include <X11/Xatom.h>
 
@@ -162,7 +162,7 @@ KSMShutdownDlg::KSMShutdownDlg( QWindow* parent,
         fileName = theme;
 
     if (QFile::exists(fileName)) {
-        //kDebug() << "Using QML theme" << fileName;
+        //qDebug() << "Using QML theme" << fileName;
         setSource(QUrl::fromLocalFile(fileName));
     } else {
         qWarning() << "Couldn't find a theme for the Shutdown dialog" << fileName;
@@ -246,7 +246,6 @@ void KSMShutdownDlg::slotHalt()
     m_shutdownType = KWorkSpace::ShutdownTypeHalt;
     accept();
 }
-
 
 void KSMShutdownDlg::slotSuspend(int spdMethod)
 {

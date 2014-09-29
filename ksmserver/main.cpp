@@ -35,7 +35,6 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 #include <kconfiggroup.h>
 #include <kdbusservice.h>
-#include <kdebug.h>
 #include <KLocalizedString>
 #include <kconfig.h>
 #include <KSharedConfig>
@@ -90,7 +89,7 @@ void checkComposite()
     dpy = XOpenDisplay(0); // open default display
     if (!dpy)
     {
-        kError() << "Cannot connect to the X server";
+        qCritical() << "Cannot connect to the X server";
         return;
     }
 

@@ -68,18 +68,17 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #include <QtDBus/QtDBus>
 #include <QSocketNotifier>
 #include <QStandardPaths>
+#include <QDebug>
+#include <QAction>
 
-#include <kaction.h>
 #include <kactioncollection.h>
 #include <kauthorized.h>
-#include <klocale.h>
 #include <kconfig.h>
+#include <KSharedConfig>
 #include <kdesktopfile.h>
-#include <kapplication.h>
-#include <ktemporaryfile.h>
+#include <QTemporaryFile>
 #include <kconfiggroup.h>
 #include <kprocess.h>
-#include <kdebug.h>
 #include <kshell.h>
 
 #include "server.moc"
@@ -163,7 +162,7 @@ void KSMServer::executeCommand( const QStringList& command )
 
 IceAuthDataEntry *authDataEntries = 0;
 
-static KTemporaryFile *remTempFile = 0;
+static QTemporaryFile *remTempFile = 0;
 
 static IceListenObj *listenObjs = 0;
 int numTransports = 0;
@@ -401,7 +400,7 @@ Status SetAuthentication_local (int count, IceListenObj *listenObjs)
                 sock++;
             }
         }
-        kDebug( 1218 ) << "KSMServer: SetAProc_loc: conn " << (unsigned)i << ", prot=" << prot << ", file=" << sock;
+        qDebug() << "KSMServer: SetAProc_loc: conn " << (unsigned)i << ", prot=" << prot << ", file=" << sock;
         if (sock && !strcmp(prot, "local")) {
             chmod(sock, 0700);
         }
@@ -414,8 +413,8 @@ Status SetAuthentication_local (int count, IceListenObj *listenObjs)
 Status SetAuthentication (int count, IceListenObj *listenObjs,
                           IceAuthDataEntry **authDataEntries)
 {
-    KTemporaryFile addTempFile;
-    remTempFile = new KTemporaryFile;
+    QTemporaryFile addTempFile;
+    remTempFile = new QTemporaryFile;
 
     if (!addTempFile.open() || !remTempFile->open())
         return 0;
@@ -541,8 +540,8 @@ static void sighandler(int sig)
        delete server;
     }
 
-    if (kapp)
-        kapp->quit();
+    if (qApp)
+        qApp->quit();
     //::exit(0);
 }
 
@@ -850,9 +849,9 @@ void KSMServer::newConnection( int /*socket*/ )
 
     if (cstatus != IceConnectAccepted) {
         if (cstatus == IceConnectIOError)
-            kDebug( 1218 ) << "IO error opening ICE Connection!";
+            qDebug() << "IO error opening ICE Connection!";
         else
-            kDebug( 1218 ) << "ICE Connection rejected!";
+            qDebug() << "ICE Connection rejected!";
         (void )IceCloseConnection (iceConn);
         return;
     }
