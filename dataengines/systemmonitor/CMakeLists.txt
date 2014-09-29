@@ -7,10 +7,10 @@ add_library(plasma_engine_systemmonitor MODULE ${systemmonitor_engine_SRCS})
 
 target_link_libraries(plasma_engine_systemmonitor
     Qt5::Network
+    KF5::I18n
     KF5::Plasma
     KF5::Service
     KF5::SysGuard
-    KF5::KDELibs4Support
 )
 
 kservice_desktop_to_json(plasma_engine_systemmonitor plasma-dataengine-systemmonitor.desktop)

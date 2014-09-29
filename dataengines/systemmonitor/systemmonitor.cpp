@@ -22,7 +22,7 @@
 #include <QProcess>
 
 #include <QDebug>
-#include <KLocale>
+#include <KLocalizedString>
 
 #include <Plasma/DataContainer>
 
