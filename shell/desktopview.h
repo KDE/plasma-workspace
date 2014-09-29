@@ -36,7 +36,7 @@ class DesktopView : public PlasmaQuick::View
 
 public:
     enum WindowType {
-        Normal, /** The window is a normal resizable window with titlebar and appears in the taskbar */
+        Window, /** The window is a normal resizable window with titlebar and appears in the taskbar */
         FullScreen, /** The window is fullscreen and goes over all the other windows */
         Desktop, /** The window is the desktop layer, under everything else, doesn't appear in the taskbar */
         WindowedDesktop /** full screen and borderless as Desktop, but can be brought in front and appears in the taskbar */

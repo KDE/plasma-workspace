@@ -121,7 +121,7 @@ void DesktopView::ensureWindowType()
         return;
     }
 
-    if (m_windowType == Normal || ShellManager::s_forceWindowed) {
+    if (m_windowType == Window || ShellManager::s_forceWindowed) {
         setFlags(Qt::Window);
         KWindowSystem::setType(winId(), NET::Normal);
         KWindowSystem::clearState(winId(), NET::FullScreen);
