@@ -1,6 +1,7 @@
 [Desktop Entry]
 Name=Clipboard
 Name[ca]=Porta-retalls
+Name[de]=Zwischenablage
 Name[es]=Portapapeles
 Name[hu]=Vágólap
 Name[nl]=Klembord
@@ -11,6 +12,7 @@ Name[uk]=Буфер обміну
 Name[x-test]=xxClipboardxx
 Comment=Provides access to the clipboard history.
 Comment[ca]=Proporciona accés a l'historial del porta-retalls.
+Comment[de]=Ermöglicht den Zugriff auf den Verlauf der Zwischenablage.
 Comment[es]=Proporciona acceso al historial del portapapeles.
 Comment[hu]=Hozzáférést nyújt a vágólap előzményeihez.
 Comment[nl]=Biedt toegang tot de geschiedenis van klembord.

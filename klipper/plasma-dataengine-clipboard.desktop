@@ -1,6 +1,7 @@
 [Desktop Entry]
 Name=Clipboard
 Name[ca]=Porta-retalls
+Name[de]=Zwischenablage
 Name[es]=Portapapeles
 Name[hu]=Vágólap
 Name[nl]=Klembord
@@ -11,6 +12,7 @@ Name[uk]=Буфер обміну
 Name[x-test]=xxClipboardxx
 Comment=Clipboard Tool.
 Comment[ca]=Eina de porta-retalls.
+Comment[de]=Verwaltung der Zwischenablage.
 Comment[es]=Herramienta del portapapeles.
 Comment[hu]=Vágólapkezelő.
 Comment[nl]=Klembordbeheer.
