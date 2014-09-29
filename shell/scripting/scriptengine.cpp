@@ -248,6 +248,7 @@ QScriptValue ScriptEngine::setCurrentActivity(QScriptContext *context, QScriptEn
 
 QScriptValue ScriptEngine::currentActivity(QScriptContext *context, QScriptEngine *engine)
 {
+    Q_UNUSED(engine)
     Q_UNUSED(context)
 
     KActivities::Consumer consumer;
