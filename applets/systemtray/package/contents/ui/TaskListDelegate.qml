@@ -34,7 +34,7 @@ TaskDelegate {
     height: (root.baseSize * 2)
 
     isHiddenItem: true
-    location: PlasmaCore.Types.RightEdge
+    location: plasmoid.location == PlasmaCore.Types.LeftEdge ? PlasmaCore.Types.LeftEdge : PlasmaCore.Types.RightEdge
 
     PlasmaComponents.Highlight {
         anchors.fill: parent
