@@ -28,8 +28,8 @@ import "plasmapackage:/code/logic.js" as Logic
 
 MouseArea {
     id: root
-    Layout.minimumWidth: isConstrained ? units.iconSizes.medium : 24 // NOTE: Keep in sync with systray
-    Layout.minimumHeight: isConstrained ? units.iconSizes.medium * view.count : 24
+    Layout.minimumWidth: units.iconSizes.small * view.count
+    Layout.minimumHeight: units.iconSizes.small
     property real itemSize: Math.min(root.height, root.width/view.count)
 
     onClicked: plasmoid.expanded = !plasmoid.expanded
