@@ -32,11 +32,15 @@
 
 #include <Plasma/Package>
 
-DesktopView::DesktopView(Plasma::Corona *corona)
+DesktopView::DesktopView(Plasma::Corona *corona, QScreen *targetScreen)
     : PlasmaQuick::View(corona, 0),
       m_dashboardShown(false),
       m_windowType(Desktop)
 {
+    if (targetScreen) {
+        setScreen(targetScreen);
+    }
+
     setTitle(corona->package().metadata().name());
     setIcon(QIcon::fromTheme(corona->package().metadata().icon()));
     engine()->rootContext()->setContextProperty("desktop", this);

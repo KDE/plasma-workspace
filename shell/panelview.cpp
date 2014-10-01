@@ -46,7 +46,7 @@
 
 static const int MINSIZE = 10;
 
-PanelView::PanelView(ShellCorona *corona, QWindow *parent)
+PanelView::PanelView(ShellCorona *corona, QScreen *targetScreen, QWindow *parent)
     : PlasmaQuick::View(corona, parent),
        m_offset(0),
        m_maxLength(0),
@@ -58,6 +58,9 @@ PanelView::PanelView(ShellCorona *corona, QWindow *parent)
        m_visibilityMode(NormalPanel),
        m_background(0)
 {
+    if (targetScreen) {
+        setScreen(targetScreen);
+    }
     setResizeMode(QQuickView::SizeRootObjectToView);
     setClearBeforeRendering(true);
     setColor(QColor(Qt::transparent));

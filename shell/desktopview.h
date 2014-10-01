@@ -43,7 +43,7 @@ public:
     };
     Q_ENUMS(WindowType)
 
-    explicit DesktopView(Plasma::Corona *corona);
+    explicit DesktopView(Plasma::Corona *corona, QScreen *targetScreen = 0);
     virtual ~DesktopView();
 
     void setDashboardShown(bool shown);

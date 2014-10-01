@@ -745,7 +745,7 @@ void ShellCorona::addOutput(KScreen::Output *output)
 
     QScreen* newScreen = insertScreen(screen, insertPosition);
 
-    DesktopView *view = new DesktopView(this);
+    DesktopView *view = new DesktopView(this, screen);
 
     Plasma::Containment *containment = createContainmentForActivity(m_activityController->currentActivity(), m_views.count());
     Q_ASSERT(containment);
@@ -759,7 +759,6 @@ void ShellCorona::addOutput(KScreen::Output *output)
     m_loading = true;
     view->setContainment(containment);
     m_loading = false;
-    view->setScreen(newScreen);
     view->show();
 
     //need to specifically call the reactToScreenChange, since when the screen is shown it's not yet
@@ -876,16 +875,14 @@ void ShellCorona::createWaitingPanels()
             continue;
         }
 
-        PanelView* panel = new PanelView(this);
-
         Q_ASSERT(qBound(0, requestedScreen, m_views.count() - 1) == requestedScreen);
         QScreen *screen = m_views[requestedScreen]->screen();
+        PanelView* panel = new PanelView(this, screen);
 
         m_panelViews[cont] = panel;
         m_loading = true;
         panel->setContainment(cont);
         m_loading = false;
-        panel->setScreen(screen);
         panel->show();
         cont->reactToScreenChange();
 
