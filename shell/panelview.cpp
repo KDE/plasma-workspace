@@ -127,7 +127,7 @@ KConfigGroup PanelView::config() const
     views = KConfigGroup(&views, QString("Panel %1").arg(containment()->id()));
 
     if (formFactor() == Plasma::Types::Vertical) {
-        return KConfigGroup(&views, "Types::Vertical" + QString::number(screen()->size().height()));
+        return KConfigGroup(&views, "Vertical" + QString::number(screen()->size().height()));
     //treat everything else as horizontal
     } else {
         return KConfigGroup(&views, "Horizontal" + QString::number(screen()->size().width()));
