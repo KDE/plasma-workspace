@@ -614,6 +614,8 @@ void PanelView::setAutoHideEnabled(bool enabled)
 void PanelView::resizeEvent(QResizeEvent *ev)
 {
     updateMask();
+    //don't setGeometry() to meke really sure we aren't doing a resize loop
+    setPosition(geometryByDistance(m_distance).topLeft());
     PlasmaQuick::View::resizeEvent(ev);
 }
 
