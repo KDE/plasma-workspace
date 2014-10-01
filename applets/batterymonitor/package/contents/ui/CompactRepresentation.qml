@@ -41,21 +41,18 @@ MouseArea {
         Repeater {
             id: view
 
-            property bool hasBattery: pmSource.data["Battery"]["Has Battery"]
-
-            /*property QtObject pmSource: batterymonitor.pmSource
-            property QtObject batteries: batterymonitor.batteries*/
+            property bool hasBattery: batterymonitor.pmSource.data["Battery"]["Has Battery"]Z
 
             property bool singleBattery: isConstrained || !hasBattery
 
-            model: singleBattery ? 1 : batteries
+            model: singleBattery ? 1 : batterymonitor.batteries
 
             Item {
                 id: batteryContainer
 
-                property bool hasBattery: view.singleBattery ? batteries.count : model["Plugged in"]
-                property int percent: view.singleBattery ? batteries.cumulativePercent : model["Percent"]
-                property bool pluggedIn: view.singleBattery ? batteries.charging : (model["Is Power Supply"] && model["State"] != "Discharging")
+                property bool hasBattery: view.singleBattery ? batterymonitor.batteries.count : model["Plugged in"]
+                property int percent: view.singleBattery ? batterymonitor.batteries.cumulativePercent : model["Percent"]
+                property bool pluggedIn: view.singleBattery ? batterymonitor.batteries.charging : (model["Is Power Supply"] && model["State"] != "Discharging")
 
                 height: root.itemSize
                 width: root.width/view.count
