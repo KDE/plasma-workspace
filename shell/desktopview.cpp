@@ -121,7 +121,7 @@ void DesktopView::setWindowType(DesktopView::WindowType type)
 void DesktopView::ensureWindowType()
 {
     //This happens sometimes, when shutting down the process
-    if (!screen()) {
+    if (!screen() || m_dashboardShown) {
         return;
     }
 
