@@ -31,9 +31,6 @@ Name[uk]=KRunner
 Name[x-test]=xxKRunnerxx
 Name[zh_CN]=KRunner
 Name[zh_TW]=KRunner
-<<<<<<< HEAD
-=======
->>>>>>> Plasma/5.1
 OnlyShowIn=KDE;
 Type=Application
 X-DBUS-StartupType=Unique
