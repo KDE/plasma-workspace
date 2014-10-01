@@ -31,6 +31,9 @@ Item {
         id: svg
         imagePath: "icons/battery"
         colorGroup: PlasmaCore.ColorScope.colorGroup
+        onRepaintNeeded: { // needed to detect the hint item go away when theme changes
+            batterySvg.visible = Qt.binding(function() { return !otherBatteriesSvg.visible && (!svg.hasElement("hint-dont-superimpose-fill") || !hasBattery); })
+        }
     }
 
     PlasmaCore.SvgItem {
@@ -40,7 +43,7 @@ Item {
         height: width
         svg: svg
         elementId: "Battery"
-        visible: !otherBatteriesSvg.visible
+        visible: !otherBatteriesSvg.visible && (!svg.hasElement("hint-dont-superimpose-fill") || !hasBattery)
     }
 
     PlasmaCore.SvgItem {
@@ -48,7 +51,7 @@ Item {
         anchors.fill: batterySvg
         svg: svg
         elementId: hasBattery ? fillElement(percent) : "Unavailable"
-        visible: elementId != "" && !otherBatteriesSvg.visible
+        visible: !otherBatteriesSvg.visible
     }
 
     function fillElement(p) {
@@ -68,8 +71,9 @@ Item {
                 return "Fill40";
             } else if (p >= 10) {
                 return "Fill20";
+            } else {
+                return "Fill0";
             }
-            return "";
         } else {
             if (p >= 95) {
                 return "Fill100";
@@ -91,8 +95,9 @@ Item {
                 return "Fill20";
             } else if (p > 5) {
                 return "Fill10";
+            } else {
+                return "Fill0";
             }
-            return "";
         }
     }
 

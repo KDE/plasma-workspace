@@ -115,8 +115,8 @@ void Osd::showProgress(const QString &icon, const int percent, const QString &ad
 
 void Osd::showText(const QString &icon, const QString &text)
 {
-    m_osdObject->rootObject()->setProperty("osdValue", text);
     m_osdObject->rootObject()->setProperty("showingProgress", false);
+    m_osdObject->rootObject()->setProperty("osdValue", text);
     m_osdObject->rootObject()->setProperty("icon", icon);
 
     showOsd();

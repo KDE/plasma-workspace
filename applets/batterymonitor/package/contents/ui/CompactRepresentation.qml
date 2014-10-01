@@ -28,8 +28,8 @@ import "plasmapackage:/code/logic.js" as Logic
 
 MouseArea {
     id: root
-    Layout.minimumWidth: isConstrained ? units.iconSizes.medium : 24 // NOTE: Keep in sync with systray
-    Layout.minimumHeight: isConstrained ? units.iconSizes.medium * view.count : 24
+    Layout.minimumWidth: units.iconSizes.small * view.count
+    Layout.minimumHeight: units.iconSizes.small
     property real itemSize: Math.min(root.height, root.width/view.count)
 
     onClicked: plasmoid.expanded = !plasmoid.expanded
@@ -41,21 +41,18 @@ MouseArea {
         Repeater {
             id: view
 
-            property bool hasBattery: pmSource.data["Battery"]["Has Battery"]
-
-            /*property QtObject pmSource: batterymonitor.pmSource
-            property QtObject batteries: batterymonitor.batteries*/
+            property bool hasBattery: batterymonitor.pmSource.data["Battery"]["Has Battery"]Z
 
             property bool singleBattery: isConstrained || !hasBattery
 
-            model: singleBattery ? 1 : batteries
+            model: singleBattery ? 1 : batterymonitor.batteries
 
             Item {
                 id: batteryContainer
 
-                property bool hasBattery: view.singleBattery ? batteries.count : model["Plugged in"]
-                property int percent: view.singleBattery ? batteries.cumulativePercent : model["Percent"]
-                property bool pluggedIn: view.singleBattery ? batteries.charging : (model["Is Power Supply"] && model["State"] != "Discharging")
+                property bool hasBattery: view.singleBattery ? batterymonitor.batteries.count : model["Plugged in"]
+                property int percent: view.singleBattery ? batterymonitor.batteries.cumulativePercent : model["Percent"]
+                property bool pluggedIn: view.singleBattery ? batterymonitor.batteries.charging : (model["Is Power Supply"] && model["State"] != "Discharging")
 
                 height: root.itemSize
                 width: root.width/view.count
