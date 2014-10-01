@@ -168,7 +168,7 @@ function updateTooltip(remainingTime) {
         batteries.tooltipImage = "battery-charging"
         batteries.tooltipMainText = i18n("%1%. Charging", batteries.cumulativePercent);
     } else {
-        batteries.tooltipImage = "battery-060"
+        batteries.tooltipImage = "battery-discharging"
 
         if (remainingTime > 0) {
             batteries.tooltipMainText = i18nc("%1 is remaining time, %2 is percentage", "%1 Remaining (%2%)",
