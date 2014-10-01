@@ -133,6 +133,7 @@ void DesktopView::ensureWindowType()
     } else if (m_windowType == Desktop) {
         setFlags(Qt::Window);
         KWindowSystem::setType(winId(), NET::Desktop);
+        KWindowSystem::setState(winId(), NET::KeepBelow);
 
     } else if (m_windowType == WindowedDesktop) {
         KWindowSystem::setType(winId(), NET::Normal);
