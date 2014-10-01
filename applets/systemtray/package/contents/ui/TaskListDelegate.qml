@@ -38,8 +38,6 @@ TaskDelegate {
 
     PlasmaComponents.Highlight {
         anchors.fill: parent
-        //anchors.rightMargin: height
-        anchors.margins: -units.smallSpacing
         opacity: containsMouse && snExpanded ? 1 : 0
         Behavior on opacity { NumberAnimation {} }
     }
