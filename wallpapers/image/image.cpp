@@ -317,6 +317,7 @@ void Image::setSlidePaths(const QStringList &slidePaths)
 void Image::showAddSlidePathsDialog()
 {
     QFileDialog *dialog = new QFileDialog(0, i18n("Directory with the wallpaper to show slides from"), "");
+    dialog->setAttribute(Qt::WA_DeleteOnClose, true );
     dialog->setOptions(QFileDialog::ShowDirsOnly);
     dialog->setAcceptMode(QFileDialog::AcceptOpen);
     connect(dialog, SIGNAL(accepted()), this, SLOT(addDirFromSelectionDialog()));
