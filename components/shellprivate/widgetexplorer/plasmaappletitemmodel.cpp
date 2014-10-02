@@ -236,8 +236,9 @@ void PlasmaAppletItemModel::populateModel(const QStringList &whatChanged)
     foreach (const QString prov, m_provides) {
         if (!first) {
             constraint += " or ";
-            first = false;
         }
+
+        first = false;
         constraint += "'" + prov + "' in [X-Plasma-Provides]";
     }
 
