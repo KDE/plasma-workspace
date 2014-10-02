@@ -40,7 +40,7 @@ Item {
     Connections {
         target: modelData
         onExpandedChanged: {
-            if (modelData.expanded) {
+            if (modelData && modelData.expanded) {
                 plasmoid.expanded = true;
             }
         }

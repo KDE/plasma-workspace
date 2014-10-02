@@ -77,16 +77,17 @@ KQuickControlsAddonsComponents.MouseEventListener {
         opacity: 0.8;
     }
 
-    property bool isExpanded: modelData && modelData.expanded
+    property bool isExpanded: modelData !== undefined && modelData.expanded === true
 
     onIsExpandedChanged: {
-        if (modelData.expanded) {
+        if (isExpanded) {
             var task;
             if (root.expandedTask) {
                 task = root.expandedTask;
             }
             root.expandedTask = modelData;
-            if (task) {
+
+            if (task && task !== modelData) {
                 task.expanded = false;
             }
         } else if (root.expandedTask == modelData) {
@@ -126,7 +127,7 @@ KQuickControlsAddonsComponents.MouseEventListener {
         active: !isExpanded
         icon: modelData && modelData.taskItem ? modelData.taskItem.icon : sniLoader.item.icon
         mainText: modelData && modelData.taskItem ? modelData.taskItem.toolTipMainText : sniLoader.item.toolTipMainText
-        subText: modelData && modelData.taskItem ? modelData.taskItem.toolTipSubText : sniLoader.item.toolTipSubText
+        subText: modelData && modelData.taskItem ? modelData.taskItem.toolTipSubText : (sniLoader.item && sniLoader.item.toolTipSubText ? sniLoader.item.toolTipSubText : "")
         location: modelData && modelData.taskItem ? taskItemContainer.location : sniLoader.item.location
         Loader {
             id: sniLoader
