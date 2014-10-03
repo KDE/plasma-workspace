@@ -284,9 +284,10 @@ Item {
                 // get current UTC time
                 var msUTC = now.getTime() + (now.getTimezoneOffset() * 60000);
                 // add the dataengine TZ offset to it
-                main.currentTime = new Date(msUTC + (dataSource.data[plasmoid.configuration.lastSelectedTimezone]["Offset"] * 1000));
+                var currentTime = new Date(msUTC + (dataSource.data[plasmoid.configuration.lastSelectedTimezone]["Offset"] * 1000));
 
-                return Qt.formatTime(main.currentTime, main.timeFormat);
+                main.currentTime = currentTime;
+                return Qt.formatTime(currentTime, main.timeFormat);
             }
 
             verticalAlignment: Text.AlignVCenter
