@@ -383,6 +383,9 @@ Item {
 
         if (main.showDate) {
             dateLabel.text = Qt.formatDate(main.currentTime, Qt.locale().dateFormat(main.dateFormat));
+        } else {
+            // clear it so it doesn't take space in the layout
+            dateLabel.text = "";
         }
 
         if (sizehelper.text != st) {
