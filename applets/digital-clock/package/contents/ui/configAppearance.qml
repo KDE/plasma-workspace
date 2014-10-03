@@ -42,6 +42,7 @@ Item {
 
     QtLayouts.ColumnLayout {
         QtControls.GroupBox {
+            QtLayouts.Layout.fillWidth: true
             title: i18n("Appearance")
             flat: true
 
@@ -59,10 +60,15 @@ Item {
         }
 
         QtControls.GroupBox {
+            QtLayouts.Layout.fillWidth: true
             title: i18n("Information")
             flat: true
 
             QtLayouts.ColumnLayout {
+                QtControls.CheckBox {
+                    id: showDate
+                    text: i18n("Show date")
+                }
                 QtControls.CheckBox {
                     id: showSeconds
                     text: i18n("Show seconds")
@@ -78,6 +84,7 @@ Item {
                 }
 
                 QtControls.GroupBox {
+                    QtLayouts.Layout.fillWidth: true
                     flat: true
                     QtLayouts.ColumnLayout {
 
@@ -95,11 +102,6 @@ Item {
                             exclusiveGroup: timezoneDisplayType
                         }
                     }
-                }
-
-                QtControls.CheckBox {
-                    id: showDate
-                    text: i18n("Show date")
                 }
 
                 QtLayouts.RowLayout {
