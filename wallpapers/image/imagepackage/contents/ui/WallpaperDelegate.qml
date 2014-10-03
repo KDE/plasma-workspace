@@ -58,6 +58,7 @@ MouseArea {
                 width: units.iconSizes.large
                 height: width
                 icon: "view-preview"
+                visible: !walliePreview.visible
             }
             QPixmapItem {
                 id: walliePreview
