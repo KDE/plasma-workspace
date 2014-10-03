@@ -33,9 +33,7 @@ Item {
     property bool showSeconds: plasmoid.configuration.showSeconds
     property bool showLocalTimezone: plasmoid.configuration.showLocalTimezone
     property bool showDate: plasmoid.configuration.showDate
-    property int dateFormat: plasmoid.configuration.dateFormat == "longDate" ? Locale.LongFormat :
-                             plasmoid.configuration.dateFormat == "shortDate" ? Locale.ShortFormat :
-                             Locale.NarrowFormat
+    property int dateFormat: plasmoid.configuration.dateFormat == "longDate" ? Locale.LongFormat : Locale.ShortFormat
 
     property string lastSelectedTimezone: plasmoid.configuration.lastSelectedTimezone
     property bool displayTimezoneAsCode: plasmoid.configuration.displayTimezoneAsCode
@@ -268,7 +266,7 @@ Item {
         anchors.horizontalCenter: main.horizontalCenter
 
         flow: Flow.TopToBottom
-        spacing: flow == Flow.LeftToRight ? units.smallSpacing : 0
+        spacing: flow == Flow.LeftToRight && timezoneLabel.visible ? units.smallSpacing : 0
 
         Components.Label  {
             id: timeLabel
@@ -286,9 +284,10 @@ Item {
                 // get current UTC time
                 var msUTC = now.getTime() + (now.getTimezoneOffset() * 60000);
                 // add the dataengine TZ offset to it
-                main.currentTime = new Date(msUTC + (dataSource.data[plasmoid.configuration.lastSelectedTimezone]["Offset"] * 1000));
+                var currentTime = new Date(msUTC + (dataSource.data[plasmoid.configuration.lastSelectedTimezone]["Offset"] * 1000));
 
-                return Qt.formatTime(main.currentTime, main.timeFormat);
+                main.currentTime = currentTime;
+                return Qt.formatTime(currentTime, main.timeFormat);
             }
 
             verticalAlignment: Text.AlignVCenter
@@ -383,6 +382,9 @@ Item {
 
         if (main.showDate) {
             dateLabel.text = Qt.formatDate(main.currentTime, Qt.locale().dateFormat(main.dateFormat));
+        } else {
+            // clear it so it doesn't take space in the layout
+            dateLabel.text = "";
         }
 
         if (sizehelper.text != st) {

@@ -839,7 +839,22 @@ void PanelView::themeChanged()
 void PanelView::containmentChanged()
 {
     connect(containment(), SIGNAL(statusChanged(Plasma::Types::ItemStatus)), SLOT(statusChanged(Plasma::Types::ItemStatus)));
-    connect(containment(), SIGNAL(destroyed(QObject *)), this, SLOT(deleteLater()), Qt::QueuedConnection);
+    connect(containment(), &QObject::destroyed, this, [=] (QObject *obj) {
+        Q_UNUSED(obj)
+        //containment()->destroyed() is true only when the user deleted it
+        //so the config is to be thrown away, not during shutdown
+        if (containment()->destroyed()) {
+            KConfigGroup views(m_corona->applicationConfig(), "PlasmaViews");
+            for (auto grp : views.groupList()) {
+                if (grp.contains(QRegExp("Panel " + QString::number(containment()->id()) + "$"))) {
+                    qDebug() << "Panel" << containment()->id() << "removed by user";
+                    views.deleteGroup(grp);
+                }
+                views.sync();
+            }
+            deleteLater();
+        }
+    }, Qt::QueuedConnection);
 }
 
 void PanelView::statusChanged(Plasma::Types::ItemStatus status)
