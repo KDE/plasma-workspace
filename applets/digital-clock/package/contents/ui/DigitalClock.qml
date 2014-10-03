@@ -268,7 +268,7 @@ Item {
         anchors.horizontalCenter: main.horizontalCenter
 
         flow: Flow.TopToBottom
-        spacing: flow == Flow.LeftToRight ? units.smallSpacing : 0
+        spacing: flow == Flow.LeftToRight && timezoneLabel.visible ? units.smallSpacing : 0
 
         Components.Label  {
             id: timeLabel
