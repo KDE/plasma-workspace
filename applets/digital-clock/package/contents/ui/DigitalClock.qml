@@ -33,9 +33,7 @@ Item {
     property bool showSeconds: plasmoid.configuration.showSeconds
     property bool showLocalTimezone: plasmoid.configuration.showLocalTimezone
     property bool showDate: plasmoid.configuration.showDate
-    property int dateFormat: plasmoid.configuration.dateFormat == "longDate" ? Locale.LongFormat :
-                             plasmoid.configuration.dateFormat == "shortDate" ? Locale.ShortFormat :
-                             Locale.NarrowFormat
+    property int dateFormat: plasmoid.configuration.dateFormat == "longDate" ? Locale.LongFormat : Locale.ShortFormat
 
     property string lastSelectedTimezone: plasmoid.configuration.lastSelectedTimezone
     property bool displayTimezoneAsCode: plasmoid.configuration.displayTimezoneAsCode
