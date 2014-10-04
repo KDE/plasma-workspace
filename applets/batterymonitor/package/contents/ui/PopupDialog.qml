@@ -39,24 +39,6 @@ FocusScope {
 
     signal powermanagementChanged(bool checked)
 
-    state: plasmoid.location == PlasmaCore.Types.BottomEdge ? "Bottom" : ""
-
-    states: [
-        State {
-            name: "Bottom"
-            AnchorChanges {
-                target: batteryScrollArea
-                anchors.top: dialog.top
-                anchors.bottom: settingsColumn.top
-            }
-            AnchorChanges {
-                target: settingsColumn
-                anchors.top: undefined
-                anchors.bottom: parent.bottom
-            }
-        }
-    ]
-
     PlasmaExtras.ScrollArea {
         id: batteryScrollArea
         anchors {
@@ -80,10 +62,7 @@ FocusScope {
 
     Column {
         id: settingsColumn
-        anchors {
-            top: dialog.top
-            bottom: undefined
-        }
+        anchors.top: dialog.top
         width: parent.width
         height: childrenRect.height
 
