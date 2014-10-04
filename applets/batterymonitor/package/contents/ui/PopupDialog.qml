@@ -62,10 +62,7 @@ FocusScope {
 
     Column {
         id: settingsColumn
-        anchors {
-            top: dialog.top
-            bottom: undefined
-        }
+        anchors.top: dialog.top
         width: parent.width
         height: childrenRect.height
 
