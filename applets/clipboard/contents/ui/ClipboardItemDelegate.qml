@@ -57,7 +57,6 @@ PlasmaComponents.ListItem {
                 verticalCenter: parent.verticalCenter
             }
             PlasmaComponents.Label {
-                height: implicitHeight
                 anchors {
                     left: parent.left
                     right: parent.right
