@@ -57,7 +57,6 @@ PlasmaComponents.ListItem {
                 verticalCenter: parent.verticalCenter
             }
             PlasmaComponents.Label {
-                height: implicitHeight
                 anchors {
                     left: parent.left
                     right: parent.right
@@ -181,12 +180,13 @@ PlasmaComponents.ListItem {
             }
         }
 
-        RowLayout {
+        Row {
             id: toolButtonsLayout
             anchors {
                 right: label.right
                 verticalCenter: parent.verticalCenter
             }
+            visible: menuListView.currentIndex == index
 
             PlasmaComponents.ToolButton {
                 // TODO: only show for items supporting actions?
@@ -211,10 +211,6 @@ PlasmaComponents.ListItem {
                 iconSource: "edit-delete"
                 tooltip: i18n("Remove from history")
                 onClicked: menuItem.remove(UuidRole)
-            }
-
-            Component.onCompleted: {
-                toolButtonsLayout.visible = Qt.binding(function () { return menuListView.currentIndex == index; });
             }
         }
     }
