@@ -68,6 +68,7 @@ PlasmaComponents.ListItem {
                 visible: TypeRole == 0 // TypeRole: 0: Text, 1: Image, 2: Url
                 elide: Text.ElideRight
                 wrapMode: Text.Wrap
+                textFormat: Text.PlainText
             }
             KQuickControlsAddons.QPixmapItem {
                 id: previewPixmap
