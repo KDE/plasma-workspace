@@ -57,17 +57,16 @@ PlasmaComponents.ListItem {
                 verticalCenter: parent.verticalCenter
             }
             PlasmaComponents.Label {
-                height: implicitHeight
                 anchors {
                     left: parent.left
                     right: parent.right
-                    rightMargin: units.gridUnit * 2
                 }
                 maximumLineCount: 3
                 text: DisplayRole.trim()
                 visible: TypeRole == 0 // TypeRole: 0: Text, 1: Image, 2: Url
                 elide: Text.ElideRight
                 wrapMode: Text.Wrap
+                textFormat: Text.PlainText
             }
             KQuickControlsAddons.QPixmapItem {
                 id: previewPixmap
@@ -156,8 +155,7 @@ PlasmaComponents.ListItem {
                             horizontalAlignment: Text.AlignHCenter
                             text: {
                                 var u = modelData.split("/");
-                                return u[u.length - 1];
-
+                                return decodeURIComponent(u[u.length - 1]);
                             }
                         }
                     }
@@ -181,40 +179,41 @@ PlasmaComponents.ListItem {
             }
         }
 
-        RowLayout {
+        Row {
             id: toolButtonsLayout
             anchors {
                 right: label.right
                 verticalCenter: parent.verticalCenter
             }
+            visible: menuListView.currentIndex == index
 
             PlasmaComponents.ToolButton {
                 // TODO: only show for items supporting actions?
                 iconSource: "system-run"
+                flat: false
                 tooltip: i18n("Invoke action")
                 onClicked: menuItem.action(UuidRole)
             }
             PlasmaComponents.ToolButton {
                 id: barcodeToolButton
                 iconSource: "view-barcode"
+                flat: false
                 tooltip: i18n("Show barcode")
                 onClicked: menuItem.barcode(UuidRole)
             }
             PlasmaComponents.ToolButton {
                 iconSource: "document-edit"
                 enabled: !clipboardSource.editing
+                flat: false
                 visible: TypeRole != 2
                 tooltip: i18n("Edit contents")
                 onClicked: menuItem.edit(UuidRole)
             }
             PlasmaComponents.ToolButton {
                 iconSource: "edit-delete"
+                flat: false
                 tooltip: i18n("Remove from history")
                 onClicked: menuItem.remove(UuidRole)
-            }
-
-            Component.onCompleted: {
-                toolButtonsLayout.visible = Qt.binding(function () { return menuListView.currentIndex == index; });
             }
         }
     }
