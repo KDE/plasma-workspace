@@ -155,8 +155,7 @@ PlasmaComponents.ListItem {
                             horizontalAlignment: Text.AlignHCenter
                             text: {
                                 var u = modelData.split("/");
-                                return u[u.length - 1];
-
+                                return decodeURIComponent(u[u.length - 1]);
                             }
                         }
                     }
