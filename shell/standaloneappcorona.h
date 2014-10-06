@@ -52,6 +52,7 @@ public Q_SLOTS:
     void currentActivityChanged(const QString &newActivity);
     void activityAdded(const QString &id);
     void activityRemoved(const QString &id);
+    void toggleWidgetExplorer();
 
 protected Q_SLOTS:
     int screenForContainment(const Plasma::Containment *containment) const;

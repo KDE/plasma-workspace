@@ -43,6 +43,7 @@ StandaloneAppCorona::StandaloneAppCorona(const QString &coronaPlugin, QObject *p
 
     Plasma::Package package = Plasma::PluginLoader::self()->loadPackage("Plasma/Shell");
     package.setPath(m_coronaPlugin);
+    package.setAllowExternalPaths(true);
     setPackage(package);
 
     Plasma::Theme theme;
@@ -172,12 +173,22 @@ void StandaloneAppCorona::currentActivityChanged(const QString &newActivity)
 
     Plasma::Containment *c = createContainmentForActivity(newActivity, 0);
 
+    connect(c, &Plasma::Containment::showAddWidgetsInterface,
+            this, &StandaloneAppCorona::toggleWidgetExplorer);
+
     QAction *removeAction = c->actions()->action("remove");
     if (removeAction) {
         removeAction->deleteLater();
     }
     m_view->setContainment(c);
 
+}
+
+void StandaloneAppCorona::toggleWidgetExplorer()
+{
+    //The view QML has to provide something to display the widget explorer
+    m_view->rootObject()->metaObject()->invokeMethod(m_view->rootObject(), "toggleWidgetExplorer", Q_ARG(QVariant, QVariant::fromValue(sender())));
+    return;
 }
 
 void StandaloneAppCorona::insertActivity(const QString &id, Activity *activity)
