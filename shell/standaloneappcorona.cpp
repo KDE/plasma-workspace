@@ -78,7 +78,7 @@ void StandaloneAppCorona::load()
 
     bool found = false;
     for (auto c : containments()) {
-        if (c->containmentType() == Plasma::Types::DesktopContainment) {
+        if (c->containmentType() == Plasma::Types::DesktopContainment || c->containmentType() == Plasma::Types::CustomContainment) {
             found = true;
             break;
         }
@@ -92,7 +92,7 @@ void StandaloneAppCorona::load()
 
     for (auto c : containments()) {
         qDebug() << "containment found";
-        if (c->containmentType() == Plasma::Types::DesktopContainment) {
+        if (c->containmentType() == Plasma::Types::DesktopContainment || c->containmentType() == Plasma::Types::CustomContainment) {
             QAction *removeAction = c->actions()->action("remove");
             if(removeAction) {
                 removeAction->deleteLater();
@@ -134,7 +134,9 @@ void StandaloneAppCorona::loadDefaultLayout()
 Plasma::Containment *StandaloneAppCorona::createContainmentForActivity(const QString& activity, int screenNum)
 {
     for (Plasma::Containment *cont : containments()) {
-        if (cont->activity() == activity) {
+        if (cont->activity() == activity &&
+            (cont->containmentType() == Plasma::Types::DesktopContainment ||
+             cont->containmentType() == Plasma::Types::CustomContainment)) {
             return cont;
         }
     }
