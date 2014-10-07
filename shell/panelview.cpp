@@ -553,7 +553,10 @@ void PanelView::showConfigurationInterface(Plasma::Applet *applet)
 
     m_panelConfigView.data()->init();
     m_panelConfigView.data()->show();
-    KWindowSystem::setState(m_panelConfigView.data()->winId(), NET::SkipTaskbar | NET::SkipPager);
+
+    if (cont && cont->isContainment()) {
+        KWindowSystem::setState(m_panelConfigView.data()->winId(), NET::SkipTaskbar | NET::SkipPager);
+    }
 }
 
 void PanelView::restoreAutoHide()
