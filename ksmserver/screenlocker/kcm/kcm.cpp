@@ -25,7 +25,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include <KCModule>
 #include <KPluginFactory>
 #include <QVBoxLayout>
-#include <QQuickWidget>
+#include <QQuickView>
 #include <QtQml>
 #include <QQmlEngine>
 #include <QQmlContext>
@@ -67,16 +67,17 @@ ScreenLockerKcm::ScreenLockerKcm(QWidget *parent, const QVariantList &args)
     roles[ScreenhotRole] = "screenshot";
     m_model->setItemRoleNames(roles);
 
-    m_quickWidget = new QQuickWidget(this);
-    m_quickWidget->setResizeMode(QQuickWidget::SizeRootObjectToView);
+    m_quickView = new QQuickView();
+    QWidget *widget = QWidget::createWindowContainer(m_quickView, this);
+    m_quickView->setResizeMode(QQuickView::SizeRootObjectToView);
     Plasma::Package package = Plasma::PluginLoader::self()->loadPackage("Plasma/Generic");
     package.setDefaultPackageRoot("plasma/kcms");
     package.setPath("screenlocker_kcm");
-    m_quickWidget->rootContext()->setContextProperty("kcm", this);
-    m_quickWidget->setSource(QUrl::fromLocalFile(package.filePath("mainscript")));
-    setMinimumHeight(m_quickWidget->initialSize().height());
+    m_quickView->rootContext()->setContextProperty("kcm", this);
+    m_quickView->setSource(QUrl::fromLocalFile(package.filePath("mainscript")));
+    setMinimumHeight(m_quickView->initialSize().height());
 
-    layout->addWidget(m_quickWidget);
+    layout->addWidget(widget);
 }
 
 QList<Plasma::Package> ScreenLockerKcm::availablePackages(const QString &component)
