@@ -60,10 +60,14 @@ PanelConfigView::PanelConfigView(Plasma::Containment *containment, PanelView *pa
     connect(&m_screenSyncTimer, &QTimer::timeout,
             [=]() {
                 setScreen(panelView->screen());
+                KWindowSystem::setType(winId(), NET::Dock);
+                setFlags(Qt::WindowFlags((flags() | Qt::FramelessWindowHint) & (~Qt::WindowDoesNotAcceptFocus)));
+                KWindowSystem::setState(winId(), NET::KeepAbove);
                 syncGeometry();
             });
 
     KWindowSystem::setType(winId(), NET::Dock);
+    KWindowSystem::setState(winId(), NET::KeepAbove);
     setFlags(Qt::WindowFlags((flags() | Qt::FramelessWindowHint | Qt::BypassWindowManagerHint) & (~Qt::WindowDoesNotAcceptFocus)));
     KWindowSystem::forceActiveWindow(winId());
 
@@ -121,7 +125,10 @@ void PanelConfigView::syncGeometry()
     }
 
     if (m_containment->formFactor() == Plasma::Types::Vertical) {
-        resize(rootObject()->implicitWidth(), screen()->size().height());
+        QSize s(rootObject()->implicitWidth(), screen()->size().height());
+        resize(s);
+        setMinimumSize(s);
+        setMaximumSize(s);
 
         if (m_containment->location() == Plasma::Types::LeftEdge) {
             setPosition(m_panelView->geometry().right(), screen()->geometry().top());
@@ -130,7 +137,10 @@ void PanelConfigView::syncGeometry()
         }
 
     } else {
-        resize(screen()->size().width(), rootObject()->implicitHeight());
+        QSize s(screen()->size().width(), rootObject()->implicitHeight());
+        resize(s);
+        setMinimumSize(s);
+        setMaximumSize(s);
 
         if (m_containment->location() == Plasma::Types::TopEdge) {
             setPosition(screen()->geometry().left(), m_panelView->geometry().bottom());
@@ -143,13 +153,17 @@ void PanelConfigView::syncGeometry()
 void PanelConfigView::showEvent(QShowEvent *ev)
 {
     QQuickWindow::showEvent(ev);
-    syncGeometry();
 
     KWindowSystem::setType(winId(), NET::Dock);
     setFlags(Qt::WindowFlags((flags() | Qt::FramelessWindowHint) & (~Qt::WindowDoesNotAcceptFocus)));
+    KWindowSystem::setState(winId(), NET::KeepAbove);
     KWindowSystem::forceActiveWindow(winId());
     KWindowEffects::enableBlurBehind(winId(), true);
     updateContrast();
+    syncGeometry();
+
+    //this because due to Qt xcb implementation the actual flags gets set only after a while after the window is actually visible
+    m_screenSyncTimer.start();
 
     if (m_containment) {
         m_containment->setUserConfiguring(true);
