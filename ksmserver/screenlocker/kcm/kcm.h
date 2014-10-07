@@ -22,7 +22,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include <KCModule>
 #include <Plasma/Package>
 
-class QQuickWidget;
+class QQuickView;
 class QStandardItemModel;
 
 class ScreenLockerKcm : public KCModule
@@ -56,6 +56,6 @@ Q_SIGNALS:
 private:
     QStandardItemModel *m_model;
     QString m_selectedPlugin;
-    QQuickWidget *m_quickWidget;
+    QQuickView *m_quickView;
     Plasma::Package m_package;
 };
