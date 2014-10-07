@@ -27,7 +27,7 @@
 
 #include <Plasma/Package>
 
-class QQuickWidget;
+class QQuickView;
 class QStandardItemModel;
 
 class KCMSplashScreen : public KCModule
@@ -60,7 +60,7 @@ Q_SIGNALS:
     void selectedPluginChanged();
 
 private:
-    QQuickWidget *m_quickWidget;
+    QQuickView *m_quickView;
     QStandardItemModel *m_model;
     Plasma::Package m_package;
     QString m_selectedPlugin;

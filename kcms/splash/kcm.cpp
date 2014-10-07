@@ -26,7 +26,7 @@
 #include <QDebug>
 #include <QStandardPaths>
 #include <QProcess>
-#include <QQuickWidget>
+#include <QQuickView>
 
 #include <QVBoxLayout>
 #include <QPushButton>
@@ -60,16 +60,17 @@ KCMSplashScreen::KCMSplashScreen(QWidget* parent, const QVariantList& args)
     m_model->setItemRoleNames(roles);
     QVBoxLayout* layout = new QVBoxLayout(this);
 
-    m_quickWidget = new QQuickWidget(this);
-    m_quickWidget->setResizeMode(QQuickWidget::SizeRootObjectToView);
+    m_quickView = new QQuickView();
+    QWidget *widget = QWidget::createWindowContainer(m_quickView, this);
+    m_quickView->setResizeMode(QQuickView::SizeRootObjectToView);
     Plasma::Package package = Plasma::PluginLoader::self()->loadPackage("Plasma/Generic");
     package.setDefaultPackageRoot("plasma/kcms");
     package.setPath("kcm_splashscreen");
-    m_quickWidget->rootContext()->setContextProperty("kcm", this);
-    m_quickWidget->setSource(QUrl::fromLocalFile(package.filePath("mainscript")));
-    setMinimumHeight(m_quickWidget->initialSize().height());
+    m_quickView->rootContext()->setContextProperty("kcm", this);
+    m_quickView->setSource(QUrl::fromLocalFile(package.filePath("mainscript")));
+    setMinimumHeight(m_quickView->initialSize().height());
 
-    layout->addWidget(m_quickWidget);
+    layout->addWidget(widget);
 }
 
 QList<Plasma::Package> KCMSplashScreen::availablePackages(const QString &component)
