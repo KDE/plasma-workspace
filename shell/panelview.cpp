@@ -397,7 +397,7 @@ void PanelView::positionPanel()
         emit thicknessChanged();
         emit lengthChanged();
     }
-    
+
     KWindowEffects::slideWindow(winId(), slideLocation, -1);
 }
 
@@ -423,7 +423,7 @@ QRect PanelView::geometryByDistance(int distance) const
     case Plasma::Types::LeftEdge:
         switch (m_alignment) {
         case Qt::AlignCenter:
-            position = QPoint(QPoint(s->geometry().left(), s->geometry().center().y()) + QPoint(distance, m_offset));
+            position = QPoint(QPoint(s->geometry().left(), s->geometry().center().y()) + QPoint(distance, m_offset - size().height()/2));
             break;
         case Qt::AlignRight:
             position = QPoint(s->geometry().bottomLeft() - QPoint(distance, m_offset + size().height()));
