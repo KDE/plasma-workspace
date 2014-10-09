@@ -387,11 +387,17 @@ public:
 
     void stopCurrentSearch();
 
+    /* Codes for security methods used by Bugzilla in various versions. */
+    enum SecurityMethod {UseCookies, UseTokens, UsePasswords};
+    SecurityMethod securityMethod() { return m_security; };
+
 private Q_SLOTS:
     /* Slots to handle KJob::finished */
     void fetchBugJobFinished(KJob*);
     void searchBugsJobFinished(KJob*);
     void fetchProductInfoFinished(const QVariantMap&);
+
+    void lookupVersion();
 
     void callMessage(const QList<QVariant> & result, const QVariant & id);
     void callFault(int errorCode, const QString & errorString, const QVariant &id);
@@ -405,6 +411,7 @@ Q_SIGNALS:
     void attachToReportSent(int);
     void addMeToCCFinished(int);
     void productInfoFetched(Product);
+    void bugzillaVersionFound();
 
     /* Bugzilla actions had errors */
     void loginError(const QString & errorMsg, const QString & extendedErrorMsg = QString());
@@ -419,10 +426,19 @@ Q_SIGNALS:
 private:
     QString     m_bugTrackerUrl;
     QString     m_username;
+    QString     m_token;
+    QString     m_password;
     bool        m_logged;
+    SecurityMethod m_security;
 
     KIO::Job *  m_searchJob;
     KXmlRpc::Client *m_xmlRpcClient;
+
+    enum SecurityStatus {SecurityDisabled, SecurityEnabled};
+    void callBugzilla(const char* method, const char* id,
+                      QMap<QString, QVariant>& args,
+                      SecurityStatus security);
+    void setFeaturesForVersion(const QString& version);
 };
 
 #endif

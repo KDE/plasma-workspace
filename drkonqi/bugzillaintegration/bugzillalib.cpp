@@ -20,6 +20,7 @@
 
 #include "bugzillalib.h"
 
+#include <QtCore/QtGlobal>
 #include <QtCore/QTextStream>
 #include <QtCore/QByteArray>
 #include <QtCore/QString>
@@ -33,6 +34,7 @@
 #include <KLocalizedString>
 #include <QDebug>
 
+#define MAKE_BUGZILLA_VERSION(a,b,c) (((a) << 16) | ((b) << 8) | (c))
 
 static const char columns[] = "bug_severity,priority,bug_status,product,short_desc,resolution";
 
@@ -62,23 +64,110 @@ BugzillaManager::BugzillaManager(const QString &bugTrackerUrl, QObject *parent)
 {
     m_xmlRpcClient = new KXmlRpc::Client(QUrl(m_bugTrackerUrl + "xmlrpc.cgi"), this);
     m_xmlRpcClient->setUserAgent(QLatin1String("DrKonqi"));
+    // Allow constructors for ReportInterface and assistant dialogs to finish.
+    // We do not want them to be racing the remote Bugzilla database.
+    QMetaObject::invokeMethod (this, "lookupVersion", Qt::QueuedConnection);
 }
+
+// BEGIN Checks of Bugzilla software versions.
+void BugzillaManager::lookupVersion()
+{
+    QMap<QString, QVariant> args;
+    callBugzilla("Bugzilla.version", "version", args, SecurityDisabled);
+}
+
+void BugzillaManager::setFeaturesForVersion(const QString& version)
+{
+    // A procedure to change Dr Konqi behaviour automatically when Bugzilla
+    // software versions change.
+    //
+    // Changes should be added to Dr Konqi AHEAD of when the corresponding
+    // Bugzilla software changes are released into bugs.kde.org, so that
+    // Dr Konqi can continue to operate smoothly, without bug reports and a
+    // reactive KDE software release.
+    //
+    // If Bugzilla announces a change to its software that affects Dr Konqi,
+    // add executable code to implement the change automatically when the
+    // Bugzilla software version changes. It goes at the end of this procedure
+    // and elsewhere in this class (BugzillaManager) and/or other classes where
+    // the change should actually be implemented.
+
+    const int nVersionParts = 3;
+    QString seps = QLatin1String("[._-]");
+    QStringList digits = version.split(QRegExp(seps), QString::SkipEmptyParts);
+    while (digits.count() < nVersionParts) {
+        digits << QLatin1String("0");
+    }
+    if (digits.count() > nVersionParts) {
+        qWarning() << QString("Current Bugzilla version %1 has more than %2 parts. Check that this is not a problem.").arg(version).arg(nVersionParts);
+    }
+    int currentVersion = MAKE_BUGZILLA_VERSION(digits.at(0).toUInt(),
+                             digits.at(1).toUInt(), digits.at(2).toUInt());
+
+    // Set the code(s) for historical versions of Bugzilla - before any change.
+    m_security = UseCookies;    // Used to have cookies for update-security.
+
+    if (currentVersion >= MAKE_BUGZILLA_VERSION(4, 4, 3)) {
+        // Security method changes from cookies to tokens in v4.4.3.
+        m_security = UseTokens;
+    }
+    if (currentVersion >= MAKE_BUGZILLA_VERSION(4, 5, 0)) {
+        // Security method changes from tokens to password-only in v4.5.x.
+        m_security = UsePasswords;
+    }
+
+    qDebug() << "VERSION" << version << "SECURITY" << m_security;
+}
+// END Checks of Bugzilla software versions.
+
+// BEGIN Generic remote-procedure (RPC) call to Bugzilla
+void BugzillaManager::callBugzilla(const char* method, const char* id,
+                                   QMap<QString, QVariant>& args,
+                                   SecurityStatus security)
+{
+    if (security == SecurityEnabled) {
+        switch (m_security) {
+        case UseTokens:
+            qDebug() << method << id << "using token";
+            args.insert(QLatin1String("Bugzilla_token"), m_token);
+            break;
+        case UsePasswords:
+            qDebug() << method << id << "using username" << m_username;
+            args.insert(QLatin1String("Bugzilla_login"), m_username);
+            args.insert(QLatin1String("Bugzilla_password"), m_password);
+            break;
+        case UseCookies:
+            qDebug() << method << id << "using cookies";
+            // Some KDE process other than Dr Konqi should provide cookies.
+            break;
+        }
+    }
+
+    m_xmlRpcClient->call(QLatin1String(method), args,
+            this, SLOT(callMessage(QList<QVariant>,QVariant)),
+            this, SLOT(callFault(int,QString,QVariant)),
+            QString::fromAscii(id));
+}
+// END Generic call to Bugzilla
 
 //BEGIN Login methods
 void BugzillaManager::tryLogin(const QString& username, const QString& password)
 {
     m_username = username;
+    if (m_security == UsePasswords) {
+        m_password = password;
+    }
     m_logged = false;
 
     QMap<QString, QVariant> args;
     args.insert(QLatin1String("login"), username);
     args.insert(QLatin1String("password"), password);
-    args.insert(QLatin1String("remember"), false);
+    if (m_security == UseCookies) {
+        // Removed in Bugzilla 4.4.3 software, which no longer issues cookies.
+        args.insert(QLatin1String("remember"), false);
+    }
 
-    m_xmlRpcClient->call(QLatin1String("User.login"), args,
-            this, SLOT(callMessage(QList<QVariant>,QVariant)),
-            this, SLOT(callFault(int,QString,QVariant)),
-            QString::fromAscii("login"));
+    callBugzilla("User.login", "login", args, SecurityDisabled);
 }
 
 bool BugzillaManager::getLogged() const
@@ -147,10 +236,7 @@ void BugzillaManager::sendReport(const BugReport & report)
     args.insert(QLatin1String("priority"), report.priority());
     args.insert(QLatin1String("severity"), report.bugSeverity());
 
-    m_xmlRpcClient->call(QLatin1String("Bug.create"), args,
-            this, SLOT(callMessage(QList<QVariant>,QVariant)),
-            this, SLOT(callFault(int,QString,QVariant)),
-            QString::fromAscii("Bug.create"));
+    callBugzilla("Bug.create", "Bug.create", args, SecurityEnabled);
 }
 
 void BugzillaManager::attachTextToReport(const QString & text, const QString & filename,
@@ -166,10 +252,8 @@ void BugzillaManager::attachTextToReport(const QString & text, const QString & f
     //data needs to be a QByteArray so that it is encoded in base64 (query.cpp:246)
     args.insert(QLatin1String("data"), text.toUtf8());
 
-    m_xmlRpcClient->call(QLatin1String("Bug.add_attachment"), args,
-            this, SLOT(callMessage(QList<QVariant>,QVariant)),
-            this, SLOT(callFault(int,QString,QVariant)),
-            QString::fromAscii("Bug.add_attachment"));
+    callBugzilla("Bug.add_attachment", "Bug.add_attachment", args,
+                 SecurityEnabled);
 }
 
 void BugzillaManager::addMeToCC(int bugId)
@@ -181,10 +265,7 @@ void BugzillaManager::addMeToCC(int bugId)
     ccChanges.insert(QLatin1String("add"), QVariantList() << m_username);
     args.insert(QLatin1String("cc"), ccChanges);
 
-    m_xmlRpcClient->call(QLatin1String("Bug.update"), args,
-            this, SLOT(callMessage(QList<QVariant>,QVariant)),
-            this, SLOT(callFault(int,QString,QVariant)),
-            QString::fromAscii("Bug.update.cc"));
+    callBugzilla("Bug.update", "Bug.update.cc", args, SecurityEnabled);
 }
 
 void BugzillaManager::fetchProductInfo(const QString & product)
@@ -199,10 +280,7 @@ void BugzillaManager::fetchProductInfo(const QString & product)
 
     args.insert("include_fields", includeFields) ;
 
-    m_xmlRpcClient->call(QLatin1String("Product.get"), args,
-            this, SLOT(callMessage(QList<QVariant>,QVariant)),
-            this, SLOT(callFault(int,QString,QVariant)),
-            QString::fromAscii("Product.get.versions"));
+    callBugzilla("Product.get", "Product.get.versions", args, SecurityDisabled);
 }
 
 
@@ -333,6 +411,10 @@ void BugzillaManager::callMessage(const QList<QVariant> & result, const QVariant
     qDebug() << id << result;
 
     if (id.toString() == QLatin1String("login")) {
+        if ((m_security == UseTokens) && (result.count() > 0)) {
+            QVariantMap map = result.at(0).toMap();
+            m_token = map.value(QLatin1String("token")).toString();
+        }
         m_logged = true;
         Q_EMIT loginFinished(true);
     } else if (id.toString() == QLatin1String("Product.get.versions")) {
@@ -359,6 +441,11 @@ void BugzillaManager::callMessage(const QList<QVariant> & result, const QVariant
         int bug_id = map.value(QLatin1String("id")).toInt();
         Q_ASSERT(bug_id != 0);
         Q_EMIT addMeToCCFinished(bug_id);
+    } else if (id.toString() == QLatin1String("version")) {
+        QVariantMap map = result.at(0).toMap();
+        QString bugzillaVersion = map.value(QLatin1String("version")).toString();
+        setFeaturesForVersion(bugzillaVersion);
+        Q_EMIT bugzillaVersionFound();
     }
 }
 

@@ -66,8 +66,10 @@ static const char konquerorKWalletEntryPassword[] = "Bugzilla_password";
 
 BugzillaLoginPage::BugzillaLoginPage(ReportAssistantDialog * parent) :
         ReportAssistantPage(parent),
-        m_wallet(0), m_walletWasOpenedBefore(false)
+        m_wallet(0), m_walletWasOpenedBefore(false),
+        m_bugzillaVersionFound(false)
 {
+    connect(bugzillaManager(), SIGNAL(bugzillaVersionFound()), this, SLOT(bugzillaVersionFound()));
     connect(bugzillaManager(), SIGNAL(loginFinished(bool)), this, SLOT(loginFinished(bool)));
     connect(bugzillaManager(), SIGNAL(loginError(QString,QString)), this, SLOT(loginError(QString,QString)));
 
@@ -107,10 +109,18 @@ bool BugzillaLoginPage::isComplete()
     return bugzillaManager()->getLogged();
 }
 
+void BugzillaLoginPage::bugzillaVersionFound()
+{
+    // Login depends on first knowing the Bugzilla software version number.
+    m_bugzillaVersionFound = true;
+    updateLoginButtonStatus();
+}
+
 void BugzillaLoginPage::updateLoginButtonStatus()
 {
     ui.m_loginButton->setEnabled( !ui.m_userEdit->text().isEmpty() &&
-                                  !ui.m_passwordEdit->text().isEmpty() );
+                                  !ui.m_passwordEdit->text().isEmpty() &&
+                                  m_bugzillaVersionFound );
 }
 
 void BugzillaLoginPage::loginError(const QString & err, const QString & extendedMessage)
@@ -223,6 +233,10 @@ void BugzillaLoginPage::walletLogin()
 
 bool BugzillaLoginPage::canSetCookies()
 {
+    if (bugzillaManager()->securityMethod() != BugzillaManager::UseCookies) {
+        qDebug() << "Bugzilla software no longer issues cookies.";
+        return false;
+    }
     QDBusInterface kded(QLatin1String("org.kde.kded5"),
                         QLatin1String("/kded"),
                         QLatin1String("org.kde.kded5"));
@@ -285,7 +299,8 @@ void BugzillaLoginPage::loginClicked()
 {
     if (!(ui.m_userEdit->text().isEmpty() || ui.m_passwordEdit->text().isEmpty())) {
 
-        if (!canSetCookies()) {
+        if ((bugzillaManager()->securityMethod() == BugzillaManager::UseCookies)
+            && (!canSetCookies())) {
             return;
         }
 
