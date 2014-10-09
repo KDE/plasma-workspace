@@ -113,7 +113,7 @@ void Panel::setLocation(const QString &locationString)
 PanelView *Panel::panel() const
 {
     Plasma::Containment *c = containment();
-    if (!c) {
+    if (!c || !m_corona) {
         return 0;
     }
 
