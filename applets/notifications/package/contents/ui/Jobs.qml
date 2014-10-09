@@ -113,8 +113,6 @@ Column {
         id: jobsRepeater
 
         model: jobsSource.sources
-        delegate: JobDelegate {
-            toolIconSize: notificationsApplet.toolIconSize
-        }
+        delegate: JobDelegate {}
     }
 }
