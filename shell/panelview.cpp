@@ -272,8 +272,9 @@ void PanelView::setMaximumLength(int length)
     config().writeEntry("maxLength", length);
     m_maxLength = length;
     emit maximumLengthChanged();
-    positionPanel();
     m_corona->requestApplicationConfigSync();
+
+    positionPanel();
 }
 
 int PanelView::minimumLength() const
@@ -298,9 +299,10 @@ void PanelView::setMinimumLength(int length)
     }
     config().writeEntry("minLength", length);
     m_minLength = length;
-    positionPanel();
     emit minimumLengthChanged();
     m_corona->requestApplicationConfigSync();
+
+    positionPanel();
 }
 
 int PanelView::distance() const
@@ -383,7 +385,6 @@ void PanelView::positionPanel()
     setMinimumSize(QSize(0, 0));
     setMaximumSize(screen()->size());
 
-    setGeometry(geometryByDistance(m_distance));
     if (formFactor() == Plasma::Types::Vertical) {
         setMinimumSize(QSize(thickness(), m_minLength));
         setMaximumSize(QSize(thickness(), m_maxLength));
@@ -397,6 +398,8 @@ void PanelView::positionPanel()
         emit thicknessChanged();
         emit lengthChanged();
     }
+
+    setPosition(geometryByDistance(m_distance).topLeft());
 
     KWindowEffects::slideWindow(winId(), slideLocation, -1);
 }
