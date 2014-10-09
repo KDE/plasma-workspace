@@ -111,7 +111,7 @@ Item {
             Repeater {
                 model: host.availablePlasmoids
                 delegate: QtControls.CheckBox {
-                    width: childrenRect.width
+                    QtLayouts.Layout.minimumWidth: childrenRect.width
                     checked: cfg_extraItems.indexOf(plugin) != -1
                     onCheckedChanged: {
                         var index = cfg_extraItems.indexOf(plugin);
