@@ -34,6 +34,7 @@ Item {
         id: expandedItem
         anchors.fill: parent
         imagePath: "widgets/tabbar"
+        visible: fromCurrentTheme
         prefix: {
             var prefix;
             var location;
