@@ -38,6 +38,8 @@ class Panel : public Containment
     Q_PROPERTY(QStringList configKeys READ configKeys)
     Q_PROPERTY(QStringList configGroups READ configGroups)
     Q_PROPERTY(QStringList currentConfigGroup WRITE setCurrentConfigGroup READ currentConfigGroup)
+    Q_PROPERTY(QStringList globalConfigKeys READ globalConfigKeys)
+    Q_PROPERTY(QStringList globalConfigGroups READ globalConfigGroups)
 
     Q_PROPERTY(QString name READ name WRITE setName)
     Q_PROPERTY(QString version READ version)
@@ -47,6 +49,8 @@ class Panel : public Containment
     Q_PROPERTY(int screen READ screen)
     Q_PROPERTY(QString location READ location WRITE setLocation)
     Q_PROPERTY(int id READ id)
+
+    Q_PROPERTY(bool locked READ locked WRITE setLocked)
 
     // panel properties
     Q_PROPERTY(QString alignment READ alignment WRITE setAlignment)
