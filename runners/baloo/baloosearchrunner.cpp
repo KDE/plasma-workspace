@@ -26,6 +26,7 @@
 #include <KRun>
 #include <KRunner/QueryMatch>
 #include <KLocalizedString>
+#include <QMimeDatabase>
 
 #include <Baloo/Query>
 #include <Baloo/Result>
@@ -57,8 +58,7 @@ QStringList SearchRunner::categories() const
          << i18n("Image")
          << i18n("Document")
          << i18n("Video")
-         << i18n("Folder")
-         << i18n("Email");
+         << i18n("Folder");
 
     return list;
 }
@@ -75,8 +75,6 @@ QIcon SearchRunner::categoryIcon(const QString& category) const
         return QIcon::fromTheme("video");
     } else if (category == i18n("Folder")) {
         return QIcon::fromTheme("folder");
-    } else if (category == i18n("Email")) {
-        return QIcon::fromTheme("mail-message");
     }
 
     return Plasma::AbstractRunner::categoryIcon(category);
@@ -102,20 +100,23 @@ void SearchRunner::match(Plasma::RunnerContext& context, const QString& type,
     int relevance = 100;
     while (context.isValid() && it.next()) {
         Plasma::QueryMatch match(this);
-        match.setIcon(QIcon::fromTheme(it.icon()));
+        const QUrl url = it.url();
+        QString localUrl = url.toLocalFile();
+
+        QString iconName = QMimeDatabase().mimeTypeForFile(localUrl).iconName();
+        match.setIcon(QIcon::fromTheme(iconName));
         match.setId(it.id());
-        match.setText(it.text());
-        match.setData(it.url());
+        match.setText(url.fileName());
+        match.setData(url);
         match.setType(Plasma::QueryMatch::PossibleMatch);
         match.setMatchCategory(category);
         match.setRelevance(relevance * .01);
         relevance--;
 
-        QString url = it.url().toLocalFile();
-        if (url.startsWith(QDir::homePath())) {
-            url.replace(0, QDir::homePath().length(), QLatin1String("~"));
+        if (localUrl.startsWith(QDir::homePath())) {
+            localUrl.replace(0, QDir::homePath().length(), QLatin1String("~"));
         }
-        match.setSubtext(url);
+        match.setSubtext(localUrl);
 
         context.addMatch(match);
     }
@@ -128,7 +129,6 @@ void SearchRunner::match(Plasma::RunnerContext& context)
     match(context, QLatin1String("File/Document"), i18n("Document"));
     match(context, QLatin1String("File/Video"), i18n("Video"));
     match(context, QLatin1String("File/Folder"), i18n("Folder"));
-    match(context, QLatin1String("Email"), i18n("Email"));
 }
 
 void SearchRunner::run(const Plasma::RunnerContext&, const Plasma::QueryMatch& match)
