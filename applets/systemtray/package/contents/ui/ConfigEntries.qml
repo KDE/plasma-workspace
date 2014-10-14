@@ -34,6 +34,8 @@ Item {
     implicitWidth: pageColumn.implicitWidth
     implicitHeight: pageColumn.implicitHeight
 
+    signal configurationChanged
+
     property var cfg_shownItems: []
     property var cfg_hiddenItems: []
 
@@ -102,6 +104,7 @@ Item {
                             break;
                         }
                         }
+                        iconsPage.configurationChanged();
                     }
                     model: ListModel {
                         id: cbItems
