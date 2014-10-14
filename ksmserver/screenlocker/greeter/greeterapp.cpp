@@ -23,8 +23,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include "sessions.h"
 #include "authenticator.h"
 
-// workspace
-#include <kworkspace.h>
 // KDE
 #include <KAuthorized>
 #include <KCrash>
@@ -182,13 +180,6 @@ void UnlockApp::desktopResized()
             connect(view->rootObject(), SIGNAL(suspendToDisk()), SLOT(suspendToDisk()));
         }
 
-        QQmlProperty shutdownProperty(view->rootObject(), QStringLiteral("shutdownSupported"));
-        shutdownProperty.write(canLogout);
-        if (canLogout &&
-            view->rootObject()->metaObject()->indexOfSignal(QMetaObject::normalizedSignature("shutdown()").constData()) != -1) {
-            connect(view->rootObject(), SIGNAL(shutdown()), SLOT(shutdown()));
-        }
-
         m_views << view;
     }
 
@@ -289,21 +280,6 @@ void UnlockApp::suspendToDisk()
     m_resetRequestIgnoreTimer->start();
 
     Solid::PowerManagement::requestSleep(Solid::PowerManagement::HibernateState, 0, 0);
-}
-
-void UnlockApp::shutdown()
-{
-    if (m_ignoreRequests) {
-        return;
-    }
-
-    m_ignoreRequests = true;
-    m_resetRequestIgnoreTimer->start();
-
-    const KWorkSpace::ShutdownConfirm confirm = KWorkSpace::ShutdownConfirmNo;
-    const KWorkSpace::ShutdownType type = KWorkSpace::ShutdownTypeHalt;
-
-    KWorkSpace::requestShutDown(confirm, type);
 }
 
 void UnlockApp::setTesting(bool enable)
