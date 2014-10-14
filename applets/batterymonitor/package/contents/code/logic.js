@@ -25,7 +25,6 @@ function updateCumulative() {
     var sum = 0;
     var count = 0;
     var charged = true;
-    var charging = true;
     var plugged = false;
     for (var i=0; i<batteries.count; i++) {
         var b = batteries.get(i);
@@ -38,9 +37,6 @@ function updateCumulative() {
         }
         if (b["State"] != "FullyCharged") {
             charged = false;
-        }
-        if (b["State"] == "Discharging") {
-            charging = false;
         }
         count++;
     }
@@ -59,7 +55,6 @@ function updateCumulative() {
     }
     batteries.cumulativePluggedin = plugged;
     batteries.allCharged = charged;
-    batteries.charging = charging;
 }
 
 function plasmoidStatus() {
@@ -164,7 +159,7 @@ function updateTooltip(remainingTime) {
     } else if (batteries.allCharged) {
         batteries.tooltipImage = "battery-100";
         batteries.tooltipMainText = i18n("Fully Charged");
-    } else if (batteries.charging) {
+    } else if (pmSource.data["AC Adapter"] && pmSource.data["AC Adapter"]["Plugged in"]) {
         batteries.tooltipImage = "battery-charging"
         batteries.tooltipMainText = i18n("%1%. Charging", batteries.cumulativePercent);
     } else {

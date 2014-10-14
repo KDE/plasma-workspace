@@ -30,7 +30,6 @@ Item {
     width: popupFlickable.width
     height: jobGrid.childrenRect.height + (newDetailsItem.state == "expanded" ? units.largeSpacing : units.largeSpacing / 2)
 
-    property int toolIconSize: units.iconSizes.smallMedium
     property int layoutSpacing: units.largeSpacing / 4
     property int animationDuration: units.shortAnimation * 2
     property bool flatButtons: true
@@ -98,8 +97,6 @@ Item {
                 right: parent.right
                 top: summary.top
             }
-            width: notificationItem.toolIconSize
-            height: width
 
             flat: notificationItem.flatButtons
             iconSource: checked ? "list-remove" : "list-add"
@@ -354,7 +351,8 @@ Item {
                 right: parent.right
 
             }
-            height: notificationItem.toolIconSize
+
+            height: pauseButton.height
 
             PlasmaComponents.ProgressBar {
                 id: progressBar
@@ -365,9 +363,8 @@ Item {
                     rightMargin: notificationItem.layoutSpacing
 
                 }
-                //width: parent.width - pauseButton.width*2 - notificationItem.layoutSpacing*3
-                width: 200
-                height: 16
+
+                height: units.gridUnit
 
                 orientation: Qt.Horizontal
                 minimumValue: 0
@@ -385,8 +382,6 @@ Item {
 
             PlasmaComponents.ToolButton {
                 id: pauseButton
-                width: notificationItem.toolIconSize
-                height: width
                 anchors {
                     verticalCenter: parent.verticalCenter
                     right: stopButton.left
@@ -415,8 +410,6 @@ Item {
                     verticalCenter: parent.verticalCenter
                     right: parent.right
                 }
-                width: notificationItem.toolIconSize
-                height: width
 
                 iconSource: "media-playback-stop"
                 flat: notificationItem.flatButtons
@@ -608,7 +601,6 @@ Item {
     }
 
     Component.onCompleted: {
-        print("NNN ICON SIZE: " + toolIconSize + " " + units.iconSizes.smallMedium);
         print("NNN JOBSTATE: " + notificationItem.jobstate);
     }
 }
