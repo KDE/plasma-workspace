@@ -52,7 +52,7 @@ MouseArea {
 
                 property bool hasBattery: view.singleBattery ? batterymonitor.batteries.count : model["Plugged in"]
                 property int percent: view.singleBattery ? batterymonitor.batteries.cumulativePercent : model["Percent"]
-                property bool pluggedIn: view.singleBattery ? batterymonitor.batteries.charging : (model["Is Power Supply"] && model["State"] != "Discharging")
+                property bool pluggedIn: pmSource.data["AC Adapter"] != undefined && pmSource.data["AC Adapter"]["Plugged in"] && (view.singleBattery || model["Is Power Supply"])
 
                 height: root.itemSize
                 width: root.width/view.count

@@ -25,7 +25,6 @@ function updateCumulative() {
     var sum = 0;
     var count = 0;
     var charged = true;
-    var charging = true;
     var plugged = false;
     for (var i=0; i<batteries.count; i++) {
         var b = batteries.get(i);
@@ -38,9 +37,6 @@ function updateCumulative() {
         }
         if (b["State"] != "FullyCharged") {
             charged = false;
-        }
-        if (b["State"] == "Discharging") {
-            charging = false;
         }
         count++;
     }
@@ -59,7 +55,6 @@ function updateCumulative() {
     }
     batteries.cumulativePluggedin = plugged;
     batteries.allCharged = charged;
-    batteries.charging = charging;
 }
 
 function plasmoidStatus() {
