@@ -87,8 +87,6 @@ PanelView::PanelView(ShellCorona *corona, QScreen *targetScreen, QWindow *parent
     connect(this, SIGNAL(locationChanged(Plasma::Types::Location)),
             &m_positionPaneltimer, SLOT(start()));
     connect(this, SIGNAL(containmentChanged()),
-            &m_positionPaneltimer, SLOT(start()));
-    connect(this, SIGNAL(containmentChanged()),
             this, SLOT(containmentChanged()));
     connect(this, &View::locationChanged, [=] () {
                 emit m_corona->availableScreenRectChanged();
@@ -846,6 +844,7 @@ void PanelView::themeChanged()
 
 void PanelView::containmentChanged()
 {
+    positionPanel();
     connect(containment(), SIGNAL(statusChanged(Plasma::Types::ItemStatus)), SLOT(statusChanged(Plasma::Types::ItemStatus)));
     connect(containment(), &QObject::destroyed, this, [=] (QObject *obj) {
         Q_UNUSED(obj)
