@@ -38,183 +38,184 @@ PlasmaComponents.ListItem {
 
     x: -listMargins.left
 
-    MouseArea {
-        anchors.fill: parent
-        hoverEnabled: true
+    enabled: true
 
-        onClicked: menuItem.itemSelected(UuidRole)
+    onClicked: menuItem.itemSelected(UuidRole)
+    onContainsMouseChanged: {
+        if (containsMouse) {
+            menuListView.currentIndex = index
+        } else {
+            menuListView.currentIndex = -1
+        }
+    }
 
-        onEntered: menuListView.currentIndex = index
-        onExited: menuListView.currentIndex = -1
-
-        Item {
-            id: label
-            height: childrenRect.height
+    Item {
+        id: label
+        height: childrenRect.height
+        anchors {
+            left: parent.left
+            leftMargin: units.gridUnit / 2
+            right: parent.right
+            verticalCenter: parent.verticalCenter
+        }
+        PlasmaComponents.Label {
             anchors {
                 left: parent.left
-                leftMargin: units.gridUnit / 2
                 right: parent.right
-                verticalCenter: parent.verticalCenter
+            }
+            maximumLineCount: 3
+            text: DisplayRole.trim()
+            visible: TypeRole == 0 // TypeRole: 0: Text, 1: Image, 2: Url
+            elide: Text.ElideRight
+            wrapMode: Text.Wrap
+            textFormat: Text.PlainText
+        }
+        KQuickControlsAddons.QPixmapItem {
+            id: previewPixmap
+            width: parent.width
+            height: Math.round(width * (nativeHeight/nativeWidth) + units.smallSpacing * 2)
+            pixmap: DecorationRole
+            visible: TypeRole == 1
+            fillMode: KQuickControlsAddons.QPixmapItem.PreserveAspectFit
+        }
+        Item {
+            id: previewItem
+            visible: TypeRole == 2
+
+            height: visible ? (units.gridUnit * 4 + units.smallSpacing * 2) : 0
+            width: parent.width
+
+            ListView {
+                id: previewList
+                model: TypeRole == 2 ? DisplayRole.split(" ", maximumNumberOfPreviews) : 0
+                property int itemWidth: units.gridUnit * 4
+                property int itemHeight: units.gridUnit * 4
+                interactive: contentWidth > width
+
+                spacing: units.smallSpacing
+                orientation: Qt.Horizontal
+                width: (itemWidth + spacing) * model.length
+                anchors {
+                    top: parent.top
+                    left: parent.left
+                    bottom: parent.bottom
+                }
+
+                delegate: Item {
+                    width: previewList.itemWidth
+                    height:  previewList.itemHeight
+                    y: Math.round((parent.height - previewList.itemHeight) / 2)
+                    clip: true
+
+                    KQuickControlsAddons.QPixmapItem {
+                        id: previewPixmap
+
+                        anchors.centerIn: parent
+
+                        Component.onCompleted: {
+                            function result(job) {
+                                if (!job.error) {
+                                    pixmap = job.result.preview;
+                                    previewPixmap.width = job.result.previewWidth
+                                    previewPixmap.height = job.result.previewHeight
+                                }
+                            }
+                            var service = clipboardSource.serviceForSource(UuidRole)
+                            var operation = service.operationDescription("preview");
+                            operation.url = modelData;
+                            // We request a bigger size and then clip out a square in the middle
+                            // so we get uniform delegate sizes without distortion
+                            operation.previewWidth = previewList.itemWidth * 2;
+                            operation.previewHeight = previewList.itemHeight * 2;
+                            var serviceJob = service.startOperationCall(operation);
+                            serviceJob.finished.connect(result);
+                        }
+                    }
+                    Rectangle {
+                        id: overlay
+                        color: theme.textColor
+                        opacity: 0.6
+                        height: units.gridUnit
+                        anchors {
+                            left: parent.left
+                            right: parent.right
+                            bottom: parent.bottom
+                        }
+                    }
+                    PlasmaComponents.Label {
+                        font.pointSize: theme.smallestFont.pointSize
+                        color: theme.backgroundColor
+                        maximumLineCount: 1
+                        anchors {
+                            verticalCenter: overlay.verticalCenter
+                            left: overlay.left
+                            right: overlay.right
+                            leftMargin: units.smallSpacing
+                            rightMargin: units.smallSpacing
+                        }
+                        elide: Text.ElideRight
+                        horizontalAlignment: Text.AlignHCenter
+                        text: {
+                            var u = modelData.split("/");
+                            return decodeURIComponent(u[u.length - 1]);
+                        }
+                    }
+                }
             }
             PlasmaComponents.Label {
+                property int additionalItems: DisplayRole.split(" ").length - maximumNumberOfPreviews
+                visible: additionalItems > 0
+                opacity: 0.6
+                text: i18nc("Indicator that there are more urls in the clipboard than previews shown", "+%1", additionalItems)
                 anchors {
-                    left: parent.left
+                    left: previewList.right
                     right: parent.right
+                    bottom: parent.bottom
+                    margins: units.smallSpacing
+
                 }
-                maximumLineCount: 3
-                text: DisplayRole.trim()
-                visible: TypeRole == 0 // TypeRole: 0: Text, 1: Image, 2: Url
-                elide: Text.ElideRight
-                wrapMode: Text.Wrap
-                textFormat: Text.PlainText
-            }
-            KQuickControlsAddons.QPixmapItem {
-                id: previewPixmap
-                width: parent.width
-                height: Math.round(width * (nativeHeight/nativeWidth) + units.smallSpacing * 2)
-                pixmap: DecorationRole
-                visible: TypeRole == 1
-                fillMode: KQuickControlsAddons.QPixmapItem.PreserveAspectFit
-            }
-            Item {
-                id: previewItem
-                visible: TypeRole == 2
-
-                height: visible ? (units.gridUnit * 4 + units.smallSpacing * 2) : 0
-                width: parent.width
-
-                ListView {
-                    id: previewList
-                    model: TypeRole == 2 ? DisplayRole.split(" ", maximumNumberOfPreviews) : 0
-                    property int itemWidth: units.gridUnit * 4
-                    property int itemHeight: units.gridUnit * 4
-                    interactive: contentWidth > width
-
-                    spacing: units.smallSpacing
-                    orientation: Qt.Horizontal
-                    width: (itemWidth + spacing) * model.length
-                    anchors {
-                        top: parent.top
-                        left: parent.left
-                        bottom: parent.bottom
-                    }
-
-                    delegate: Item {
-                        width: previewList.itemWidth
-                        height:  previewList.itemHeight
-                        y: Math.round((parent.height - previewList.itemHeight) / 2)
-                        clip: true
-
-                        KQuickControlsAddons.QPixmapItem {
-                            id: previewPixmap
-
-                            anchors.centerIn: parent
-
-                            Component.onCompleted: {
-                                function result(job) {
-                                    if (!job.error) {
-                                        pixmap = job.result.preview;
-                                        previewPixmap.width = job.result.previewWidth
-                                        previewPixmap.height = job.result.previewHeight
-                                    }
-                                }
-                                var service = clipboardSource.serviceForSource(UuidRole)
-                                var operation = service.operationDescription("preview");
-                                operation.url = modelData;
-                                // We request a bigger size and then clip out a square in the middle
-                                // so we get uniform delegate sizes without distortion
-                                operation.previewWidth = previewList.itemWidth * 2;
-                                operation.previewHeight = previewList.itemHeight * 2;
-                                var serviceJob = service.startOperationCall(operation);
-                                serviceJob.finished.connect(result);
-                            }
-                        }
-                        Rectangle {
-                            id: overlay
-                            color: theme.textColor
-                            opacity: 0.6
-                            height: units.gridUnit
-                            anchors {
-                                left: parent.left
-                                right: parent.right
-                                bottom: parent.bottom
-                            }
-                        }
-                        PlasmaComponents.Label {
-                            font.pointSize: theme.smallestFont.pointSize
-                            color: theme.backgroundColor
-                            maximumLineCount: 1
-                            anchors {
-                                verticalCenter: overlay.verticalCenter
-                                left: overlay.left
-                                right: overlay.right
-                                leftMargin: units.smallSpacing
-                                rightMargin: units.smallSpacing
-                            }
-                            elide: Text.ElideRight
-                            horizontalAlignment: Text.AlignHCenter
-                            text: {
-                                var u = modelData.split("/");
-                                return decodeURIComponent(u[u.length - 1]);
-                            }
-                        }
-                    }
-                }
-                PlasmaComponents.Label {
-                    property int additionalItems: DisplayRole.split(" ").length - maximumNumberOfPreviews
-                    visible: additionalItems > 0
-                    opacity: 0.6
-                    text: i18nc("Indicator that there are more urls in the clipboard than previews shown", "+%1", additionalItems)
-                    anchors {
-                        left: previewList.right
-                        right: parent.right
-                        bottom: parent.bottom
-                        margins: units.smallSpacing
-
-                    }
-                    verticalAlignment: Text.AlignBottom
-                    horizontalAlignment: Text.AlignCenter
-                    font.pointSize: theme.smallestFont.pointSize
-                }
+                verticalAlignment: Text.AlignBottom
+                horizontalAlignment: Text.AlignCenter
+                font.pointSize: theme.smallestFont.pointSize
             }
         }
+    }
 
-        Row {
-            id: toolButtonsLayout
-            anchors {
-                right: label.right
-                verticalCenter: parent.verticalCenter
-            }
-            visible: menuListView.currentIndex == index
+    Row {
+        id: toolButtonsLayout
+        anchors {
+            right: label.right
+            verticalCenter: parent.verticalCenter
+        }
+        visible: menuListView.currentIndex == index
 
-            PlasmaComponents.ToolButton {
-                // TODO: only show for items supporting actions?
-                iconSource: "system-run"
-                flat: false
-                tooltip: i18n("Invoke action")
-                onClicked: menuItem.action(UuidRole)
-            }
-            PlasmaComponents.ToolButton {
-                id: barcodeToolButton
-                iconSource: "view-barcode"
-                flat: false
-                tooltip: i18n("Show barcode")
-                onClicked: menuItem.barcode(UuidRole)
-            }
-            PlasmaComponents.ToolButton {
-                iconSource: "document-edit"
-                enabled: !clipboardSource.editing
-                flat: false
-                visible: TypeRole != 2
-                tooltip: i18n("Edit contents")
-                onClicked: menuItem.edit(UuidRole)
-            }
-            PlasmaComponents.ToolButton {
-                iconSource: "edit-delete"
-                flat: false
-                tooltip: i18n("Remove from history")
-                onClicked: menuItem.remove(UuidRole)
-            }
+        PlasmaComponents.ToolButton {
+            // TODO: only show for items supporting actions?
+            iconSource: "system-run"
+            flat: false
+            tooltip: i18n("Invoke action")
+            onClicked: menuItem.action(UuidRole)
+        }
+        PlasmaComponents.ToolButton {
+            id: barcodeToolButton
+            iconSource: "view-barcode"
+            flat: false
+            tooltip: i18n("Show barcode")
+            onClicked: menuItem.barcode(UuidRole)
+        }
+        PlasmaComponents.ToolButton {
+            iconSource: "document-edit"
+            enabled: !clipboardSource.editing
+            flat: false
+            visible: TypeRole != 2
+            tooltip: i18n("Edit contents")
+            onClicked: menuItem.edit(UuidRole)
+        }
+        PlasmaComponents.ToolButton {
+            iconSource: "edit-delete"
+            flat: false
+            tooltip: i18n("Remove from history")
+            onClicked: menuItem.remove(UuidRole)
         }
     }
 }
