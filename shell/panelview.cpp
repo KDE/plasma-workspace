@@ -440,14 +440,14 @@ QRect PanelView::geometryByDistance(int distance) const
     case Plasma::Types::RightEdge:
         switch (m_alignment) {
         case Qt::AlignCenter:
-            position = QPoint(QPoint(s->geometry().right(), s->geometry().center().y()) - QPoint(width() + distance, 0) + QPoint(0, m_offset - size().height()/2));
+            position = QPoint(QPoint(s->geometry().right(), s->geometry().center().y()) - QPoint(thickness() + distance, 0) + QPoint(0, m_offset - size().height()/2));
             break;
         case Qt::AlignRight:
-            position = QPoint(s->geometry().bottomRight() - QPoint(width() + distance, 0) - QPoint(0, m_offset + size().height()));
+            position = QPoint(s->geometry().bottomRight() - QPoint(thickness() + distance, 0) - QPoint(0, m_offset + size().height()));
             break;
         case Qt::AlignLeft:
         default:
-            position = QPoint(s->geometry().topRight() - QPoint(width() + distance, 0) + QPoint(0, m_offset));
+            position = QPoint(s->geometry().topRight() - QPoint(thickness() + distance, 0) - QPoint(0, m_offset));
         }
         break;
 
@@ -455,17 +455,19 @@ QRect PanelView::geometryByDistance(int distance) const
     default:
         switch (m_alignment) {
         case Qt::AlignCenter:
-            position = QPoint(QPoint(s->geometry().center().x(), s->geometry().bottom() - height() - distance) + QPoint(m_offset - size().width()/2, 1));
+            position = QPoint(QPoint(s->geometry().center().x(), s->geometry().bottom() - thickness() - distance) + QPoint(m_offset - size().width()/2, 1));
             break;
         case Qt::AlignRight:
-            position = QPoint(s->geometry().bottomRight() - QPoint(0, height() + distance) - QPoint(m_offset + size().width(), 1));
+            position = QPoint(s->geometry().bottomRight() - QPoint(0, thickness() + distance) - QPoint(m_offset + size().width(), 1));
             break;
         case Qt::AlignLeft:
         default:
-            position = QPoint(s->geometry().bottomLeft() - QPoint(0, height() + distance) + QPoint(m_offset, 1));
+            position = QPoint(s->geometry().bottomLeft() - QPoint(0, thickness() + distance) + QPoint(m_offset, 1));
         }
     }
-    return formFactor() == Plasma::Types::Vertical ? QRect(position, QSize(thickness(), length())) : QRect(position, QSize(length(), thickness()));
+    QRect ret = formFactor() == Plasma::Types::Vertical ? QRect(position, QSize(thickness(), length())) : QRect(position, QSize(length(), thickness()));
+    Q_ASSERT(screen()->geometry().contains(ret));
+    return ret;
 }
 
 void PanelView::restore()
