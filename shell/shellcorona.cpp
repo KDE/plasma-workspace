@@ -1175,6 +1175,9 @@ Plasma::Containment *ShellCorona::setContainmentTypeForScreen(int screen, const 
     view->rootObject()->setFocus(true, Qt::MouseFocusReason);
     QTimer::singleShot(2500, oldContainment, SLOT(destroy()));
 
+    emit availableScreenRectChanged();
+    emit availableScreenRegionChanged();
+
     return newContainment;
 }
 
