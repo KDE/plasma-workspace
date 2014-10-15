@@ -1389,7 +1389,7 @@ int ShellCorona::screenForContainment(const Plasma::Containment *containment) co
     //It is also correct for desktops *that have the correct activity()*
     //a containment with lastScreen() == 0 but another activity,
     //won't be associated to a screen
-    qDebug() << "ShellCorona screenForContainment: " << containment << " Last screen is " << containment->lastScreen();
+//     qDebug() << "ShellCorona screenForContainment: " << containment << " Last screen is " << containment->lastScreen();
     for (KScreen::Output *output : sortOutputs(m_screenConfiguration->outputs())) {
         if (containment->lastScreen() == i &&
             (containment->activity() == m_activityConsumer->currentActivity() ||
