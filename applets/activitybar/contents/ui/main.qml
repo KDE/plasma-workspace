@@ -58,4 +58,8 @@ Item {
             }
         }
     }
+
+    Component.onCompleted: {
+        plasmoid.removeAction("configure");
+    }
 }

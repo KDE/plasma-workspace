@@ -50,6 +50,6 @@ Item {
         action.checkable = true;
         action.checked = plasmoid.configuration.expanding;
 
-        plasmoid.action("configure").visible = false;
+        plasmoid.removeAction("configure");
     }
 }
