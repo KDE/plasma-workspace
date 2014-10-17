@@ -262,6 +262,10 @@ void DesktopView::screenDestroyed(QObject* screen)
 //     NOTE: this is overriding the screen destroyed slot, we need to do this because
 //     otherwise Qt goes mental and starts moving our panels. See:
 //     https://codereview.qt-project.org/#/c/88351/
+//     Also note this isnt' called anymore after Qt 5.4, because now it's using a compile-time connect
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
+#   warning Remove method once depending on Qt 5.4
+#endif
     if (screen == this->screen()) {
         ShellCorona *c = qobject_cast<ShellCorona *>(corona());
         if (c) {
