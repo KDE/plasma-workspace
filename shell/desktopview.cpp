@@ -90,7 +90,8 @@ void DesktopView::adaptToScreen()
         setMinimumSize(screen()->geometry().size());
         setMaximumSize(screen()->geometry().size());
 
-        disconnect(m_oldScreen.data(), &QScreen::geometryChanged, this, static_cast<void (QWindow::*)(const QRect&)>(&QWindow::setGeometry));
+        if(m_oldScreen)
+            disconnect(m_oldScreen.data(), &QScreen::geometryChanged, this, static_cast<void (QWindow::*)(const QRect&)>(&QWindow::setGeometry));
         connect(screen(), &QScreen::geometryChanged, this, static_cast<void (QWindow::*)(const QRect&)>(&QWindow::setGeometry), Qt::UniqueConnection);
     } else {
         disconnect(screen(), &QScreen::geometryChanged, this, static_cast<void (QWindow::*)(const QRect&)>(&QWindow::setGeometry));
