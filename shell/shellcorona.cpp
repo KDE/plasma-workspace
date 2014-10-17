@@ -161,6 +161,10 @@ ShellCorona::ShellCorona(QObject *parent)
 
     new Osd(this);
     m_screenConfiguration = KScreen::Config::current();
+
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
+    connect(qGuiApp, &QGuiApplication::screenRemoved, this, &ShellCorona::screenRemoved);
+#endif
 }
 
 ShellCorona::~ShellCorona()
@@ -600,6 +604,16 @@ QList<PanelView *> ShellCorona::panelsForScreen(QScreen *screen) const
     return ret;
 }
 
+DesktopView* ShellCorona::desktopForScreen(QScreen* screen) const
+{
+    foreach (DesktopView *v, m_views) {
+        if (v->screen() == screen) {
+            return v;
+        }
+    }
+    return Q_NULLPTR;
+}
+
 void ShellCorona::removeView(int idx)
 {
     if (idx < 0 || idx >= m_views.count() || m_views.isEmpty()) {
@@ -647,6 +661,14 @@ void ShellCorona::removeView(int idx)
     }
 }
 
+void ShellCorona::screenRemoved(QScreen* screen)
+{
+    if (DesktopView* v = desktopForScreen(screen))
+        remove(v);
+//     addOutput(screenToOutput(screen));
+    m_reconsiderOutputsTimer.start();
+}
+
 void ShellCorona::outputEnabledChanged()
 {
     addOutput(qobject_cast<KScreen::Output *>(sender()));
@@ -683,24 +705,25 @@ void ShellCorona::reconsiderOutputs()
 
     foreach (KScreen::Output *out, m_screenConfiguration->connectedOutputs()) {
         if (!out->isEnabled()) {
+//             qDebug() << "skip screen" << out << desktopForScreen(outputToScreen(out));
             continue;
         }
 
         if (m_redundantOutputs.contains(out)) {
             if (!isOutputRedundant(out)) {
+//                 qDebug() << "not redundant anymore" << out;
                 addOutput(out);
             }
         } else if (isOutputRedundant(out)) {
-            QScreen *screen = outputToScreen(out);
-            for (int i = 0; i < m_views.count(); ++i) {
-                if (m_views[i]->screen() == screen) {
-                    removeView(i);
-                    break;
-                }
-            }
+//             qDebug() << "new redundant screen" << out;
+
+            if (DesktopView* v = desktopForScreen(outputToScreen(out)))
+                remove(v);
 
             m_redundantOutputs.insert(out);
         }
+//         else
+//             qDebug() << "fine screen" << out;
     }
 
     CHECK_SCREEN_INVARIANTS

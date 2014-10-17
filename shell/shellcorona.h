@@ -176,6 +176,7 @@ private Q_SLOTS:
     void showOpenGLNotCompatibleWarning();
     void alternativesVisibilityChanged(bool visible);
     void interactiveConsoleVisibilityChanged(bool visible);
+    void screenRemoved(QScreen* screen);
 
 private:
     QScreen *outputToScreen(KScreen::Output *output) const;
@@ -186,6 +187,7 @@ private:
     bool isOutputRedundant(KScreen::Output *output) const;
     void reconsiderOutputs();
     QList<PanelView *> panelsForScreen(QScreen *screen) const;
+    DesktopView* desktopForScreen(QScreen *screen) const;
 
 #ifndef NDEBUG
     void screenInvariants() const;
