@@ -21,6 +21,7 @@
 #include <QMimeData>
 #include <QIcon>
 #include <QUrl>
+#include <QDir>
 
 #include <QDebug>
 #include <KRun>
@@ -129,6 +130,43 @@ void LocationsRunner::match(Plasma::RunnerContext &context)
     }
 }
 
+static QString convertCaseInsensitivePath(const QString& path)
+{
+    // Split the string on /
+    QStringList dirNames = path.split(QDir::separator(), QString::SkipEmptyParts);
+
+    // Match folders
+    QDir dir("/");
+    for (int i = 0; i < dirNames.size() - 1; i++) {
+        QString dirName = dirNames[i];
+
+        bool foundMatch = false;
+        QStringList entries = dir.entryList(QDir::Dirs);
+        for (const QString& entry: entries) {
+            if (entry.compare(dirName, Qt::CaseInsensitive) == 0) {
+                foundMatch = dir.cd(entry);
+                if (foundMatch) {
+                    break;
+                }
+            }
+        }
+
+        if (!foundMatch) {
+            return path;
+        }
+    }
+
+    QString finalName = dirNames.last();
+    QStringList entries = dir.entryList();
+    for (const QString& entry: entries) {
+        if (entry.compare(finalName, Qt::CaseInsensitive) == 0) {
+            return dir.absoluteFilePath(entry);
+        }
+    }
+
+    return path;
+}
+
 void LocationsRunner::run(const Plasma::RunnerContext &context, const Plasma::QueryMatch &match)
 {
     Q_UNUSED(match)
@@ -138,6 +176,8 @@ void LocationsRunner::run(const Plasma::RunnerContext &context, const Plasma::Qu
     if (location.isEmpty()) {
         return;
     }
+
+    location = convertCaseInsensitivePath(location);
 
     //qDebug() << "command: " << context.query();
     //qDebug() << "url: " << location << data;
