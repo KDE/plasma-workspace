@@ -37,6 +37,7 @@ Name[x-test]=xxPlasmaxx
 Comment=Plasma by KDE
 Comment[ar]=بلازما كدي
 Comment[ca]=Plasma pel KDE
+Comment[cs]=Plasma z KDE
 Comment[da]=Plasma fra KDE
 Comment[de]=Plasma von KDE
 Comment[el]=Plasma από το KDE

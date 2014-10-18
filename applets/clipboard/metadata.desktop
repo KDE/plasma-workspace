@@ -1,6 +1,7 @@
 [Desktop Entry]
 Name=Clipboard
 Name[ca]=Porta-retalls
+Name[cs]=Schránka
 Name[de]=Zwischenablage
 Name[el]=Πρόχειρο
 Name[es]=Portapapeles
@@ -22,6 +23,7 @@ Name[uk]=Буфер обміну
 Name[x-test]=xxClipboardxx
 Comment=Provides access to the clipboard history.
 Comment[ca]=Proporciona accés a l'historial del porta-retalls.
+Comment[cs]=Poskytuje přístup k historii schránky.
 Comment[de]=Ermöglicht den Zugriff auf den Verlauf der Zwischenablage.
 Comment[el]=Παρέχει πρόσβαση στο ιστορικό του προχείρου.
 Comment[es]=Proporciona acceso al historial del portapapeles.

@@ -1,6 +1,7 @@
 [Desktop Entry]
 Name=Plasma Windowed
 Name[ca]=Plasma amb finestres
+Name[cs]=Plasma v okně
 Name[de]=Plasma-Fenster
 Name[el]=Plasma σε παράθυρα
 Name[es]=Plasma en ventanas
@@ -21,6 +22,7 @@ Name[uk]=Плазма у вікні
 Name[x-test]=xxPlasma Windowedxx
 Comment=Run Plasmoids as simple applications
 Comment[ca]=Executa els plasmoides com a simples aplicacions
+Comment[cs]=Spouštějte Plasmoidy jako prosté aplikace
 Comment[de]=Ausführung von Plasmoiden als einfache Anwendungen
 Comment[el]=Εκτέλεση πλασμοειδών ως απλές εφαρμογές
 Comment[es]=Ejecutar plasmoides como aplicaciones simples

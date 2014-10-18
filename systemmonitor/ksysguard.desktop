@@ -43,6 +43,7 @@ Name[x-test]=xxKSysguardxx
 Comment=Launches KSysguard on Ctrl + Escape
 Comment[ar]=يُطلِق مرقاب نظام.ك عند الضغط على Ctrl+Escape
 Comment[ca]=Llança el KSysguard amb Ctrl + Esc
+Comment[cs]=Při Ctrl+Esc spustí KSysguard
 Comment[da]=Starter KSysguard med Ctrl + Escape
 Comment[de]=Startet KSysguard mit Strg+Esc
 Comment[el]=Εκτελεί το KSysguard με Ctrl + Escape
