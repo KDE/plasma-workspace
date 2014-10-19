@@ -241,11 +241,6 @@ void DrKonqi::setPid(int pid)
     instance()->m_pid = pid;
 }
 
-void DrKonqi::setStartupId(const QString &startupId)
-{
-    instance()->m_startupId = startupId;
-}
-
 void DrKonqi::setKdeinit(bool kdeinit)
 {
     instance()->m_kdeinit = kdeinit;
@@ -304,11 +299,6 @@ const QString &DrKonqi::programName()
 int DrKonqi::pid()
 {
     return instance()->m_pid;
-}
-
-const QString &DrKonqi::startupId()
-{
-    return instance()->m_startupId;
 }
 
 bool DrKonqi::isKdeinit()

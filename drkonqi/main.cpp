@@ -32,6 +32,11 @@
 #include <KLocalizedString>
 #include <QCommandLineParser>
 
+#include <config-X11.h>
+#if HAVE_X11
+#include <QX11Info>
+#endif
+
 #include "drkonqi.h"
 #include "drkonqidialog.h"
 
@@ -119,12 +124,18 @@ int main(int argc, char* argv[])
     DrKonqi::setBugAddress(parser.value(bugAddressOption));
     DrKonqi::setProgramName(parser.value(programNameOption));
     DrKonqi::setPid(parser.value(pidOption).toInt());
-    DrKonqi::setStartupId(parser.value(startupIdOption));
     DrKonqi::setKdeinit(parser.isSet(kdeinitOption));
     DrKonqi::setSafer(parser.isSet(saferOption));
     DrKonqi::setRestarted(parser.isSet(restartedOption));
     DrKonqi::setKeepRunning(parser.isSet(keepRunningOption));
     DrKonqi::setThread(parser.value(threadOption).toInt());
+
+#if HAVE_X11 && QT_VERSION >= QT_VERSION_CHECK(5, 4, 0)
+    const QString startupId = parser.value(startupIdOption);
+    if (!startupId.isEmpty()) {
+        QX11Info::setNextStartupId(startupId);
+    }
+#endif
 
     if (!DrKonqi::init()) {
         return 1;

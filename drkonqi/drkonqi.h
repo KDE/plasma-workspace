@@ -45,7 +45,6 @@ public:
     static void setBugAddress(const QString &bugAddress);
     static void setProgramName(const QString &programName);
     static void setPid(int pid);
-    static void setStartupId(const QString &startupId);
     static void setKdeinit(bool kdeinit);
     static void setSafer(bool safer);
     static void setRestarted(bool restarted);
@@ -59,7 +58,6 @@ public:
     static const QString &bugAddress();
     static const QString &programName();
     static int pid();
-    static const QString &startupId();
     static bool isKdeinit();
     static bool isSafer();
     static bool isRestarted();
@@ -81,7 +79,6 @@ private:
     QString m_bugAddress;
     QString m_programName;
     int m_pid;
-    QString m_startupId;
     bool m_kdeinit;
     bool m_safer;
     bool m_restarted;

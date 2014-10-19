@@ -11,7 +11,9 @@ endif ()
 
 configure_file (config-drkonqi.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-drkonqi.h )
 
-include_directories(${KDEPIMLIBS_INCLUDE_DIRS})
+if (HAVE_X11)
+find_package(Qt5 ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS X11Extras)
+endif()
 
 add_definitions(-DKDE_DEFAULT_DEBUG_AREA=1410)
 
@@ -98,7 +100,6 @@ endif()
 
 target_link_libraries(drkonqi
     KF5::I18n
-    KF5::WindowSystem
     KF5::CoreAddons
     KF5::Service
     KF5::ConfigWidgets
@@ -108,5 +109,10 @@ target_link_libraries(drkonqi
     Qt5::DBus
     drkonqi_backtrace_parser
 )
+if (HAVE_X11)
+    target_link_libraries(drkonqi
+        Qt5::X11Extras
+    )
+endif()
 
 install(TARGETS drkonqi DESTINATION ${LIBEXEC_INSTALL_DIR})

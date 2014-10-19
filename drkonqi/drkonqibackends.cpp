@@ -26,7 +26,6 @@
 
 #include <KConfig>
 #include <KConfigGroup>
-#include <KStartupInfo>
 #include <KCrash>
 #include <QStandardPaths>
 #include <QDebug>
@@ -62,13 +61,6 @@ KCrashBackend::~KCrashBackend()
 bool KCrashBackend::init()
 {
     AbstractDrKonqiBackend::init();
-
-    QString startupId(DrKonqi::startupId());
-    if (!startupId.isEmpty()) { // stop startup notification
-        KStartupInfoId id;
-        id.initId(startupId.toLocal8Bit());
-        KStartupInfo::sendFinish(id);
-    }
 
     //check whether the attached process exists and whether we have permissions to inspect it
     if (crashedApplication()->pid() <= 0) {
