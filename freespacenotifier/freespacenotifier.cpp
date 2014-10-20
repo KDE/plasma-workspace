@@ -20,9 +20,6 @@
 #include "freespacenotifier.h"
 
 #include <QDir>
-#include <QFile>
-#include <QLabel>
-#include <QSpinBox>
 #include <QMenu>
 #include <QDebug>
 
