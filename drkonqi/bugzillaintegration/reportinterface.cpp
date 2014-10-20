@@ -440,4 +440,4 @@ ApplicationDetailsExamples * ReportInterface::appDetailsExamples() const
     return m_appDetailsExamples;
 }
 
-#include "reportinterface.moc"
+

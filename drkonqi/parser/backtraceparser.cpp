@@ -391,4 +391,4 @@ void BacktraceParser::calculateRatingData()
     qDebug() << "Have seen stack base:" << haveSeenStackBase << "Lines counted:" << counter;
 }
 
-#include "backtraceparser.moc"
+

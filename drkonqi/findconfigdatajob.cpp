@@ -94,4 +94,4 @@ QStringList FindConfigDataJob::data(InformationType type)
     return result;
 }
 
-#include "findconfigdatajob.moc"
+

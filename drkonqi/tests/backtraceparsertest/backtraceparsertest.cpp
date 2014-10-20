@@ -126,4 +126,4 @@ void BacktraceParserTest::btParserBenchmark()
 }
 
 QTEST_MAIN(BacktraceParserTest)
-#include "backtraceparsertest.moc"
+

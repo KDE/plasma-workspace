@@ -43,4 +43,4 @@ void DetachedProcessMonitor::timerEvent(QTimerEvent *event)
     }
 }
 
-#include "detachedprocessmonitor.moc"
+

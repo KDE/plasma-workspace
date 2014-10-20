@@ -230,4 +230,4 @@ void KCrashBackend::emergencySaveFunction(int signal)
     ::kill(s_pid, SIGKILL);
 }
 
-#include "drkonqibackends.moc"
+

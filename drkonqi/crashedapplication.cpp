@@ -183,4 +183,4 @@ QString getSuggestedKCrashFilename(const CrashedApplication* app)
     return filename;
 }
 
-#include "crashedapplication.moc"
+

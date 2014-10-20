@@ -54,4 +54,4 @@ void BacktraceParserNull::newLine(const QString & lineStr)
 
 //END BacktraceParserNull
 
-#include "backtraceparsernull.moc"
+

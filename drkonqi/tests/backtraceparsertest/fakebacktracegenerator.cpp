@@ -32,4 +32,4 @@ void FakeBacktraceGenerator::sendData(const QString & filename)
     emit newLine(QString());
 }
 
-#include "fakebacktracegenerator.moc"
+
