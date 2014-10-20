@@ -39,6 +39,7 @@ Name[sv]=Plasma arbetsområde för skrivbordet
 Name[tr]=Plasma Masaüstü Çalışma Alanı
 Name[uk]=Робочий простір Плазми для комп’ютерів
 Name[x-test]=xxPlasma Desktop Workspacexx
+Name[zh_CN]=Plasma 桌面工作空间
 Name[zh_TW]=Plasma 桌面工作空間
 Type=Application
 X-KDE-StartupNotify=false

@@ -26,6 +26,7 @@ Name[sr@latin]=Tapet
 Name[sv]=Skrivbordsunderlägg
 Name[uk]=Зображення тла
 Name[x-test]=xxWallpaperxx
+Name[zh_CN]=壁纸
 Name[zh_TW]=桌布
 Type=Service
 X-KDE-ServiceTypes=Plasma/PackageStructure

@@ -66,5 +66,6 @@ Comment[sr@latin]=Plasma od KDE‑a
 Comment[sv]=Plasma av KDE
 Comment[uk]=Плазма KDE
 Comment[x-test]=xxPlasma by KDExx
+Comment[zh_CN]=KDE 的 Plasma
 Comment[zh_TW]=Plasma by KDE
 X-KDE-PluginInfo-Version=${PROJECT_VERSION}
