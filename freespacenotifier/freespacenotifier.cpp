@@ -48,7 +48,7 @@ FreeSpaceNotifier::FreeSpaceNotifier(QObject *parent)
     // If we are running, notifications are enabled
     FreeSpaceNotifierSettings::setEnableNotification(true);
 
-    connect(&timer, SIGNAL(timeout()), SLOT(checkFreeDiskSpace()));
+    connect(&timer, &QTimer::timeout, this, &FreeSpaceNotifier::checkFreeDiskSpace);
     timer.start(1000 * 60 /* 1 minute */);
 }
 
@@ -179,7 +179,7 @@ void FreeSpaceNotifier::showConfiguration()
                     i18nc("The settings dialog main page name, as in 'general settings'", "General"),
                     QStringLiteral("system-run"));
 
-    connect(dialog, SIGNAL(finished()), this, SLOT(configDialogClosed()));
+    connect(dialog, &KConfigDialog::finished, this, &FreeSpaceNotifier::configDialogClosed);
     dialog->setAttribute(Qt::WA_DeleteOnClose);
     dialog->show();
 
@@ -198,7 +198,7 @@ void FreeSpaceNotifier::cleanupNotification()
     // warn again if constantly below limit for too long
     if (m_lastAvailTimer == NULL) {
         m_lastAvailTimer = new QTimer(this);
-        connect(m_lastAvailTimer, SIGNAL(timeout()), SLOT(resetLastAvailable()));
+        connect(m_lastAvailTimer, &QTimer::timeout, this, &FreeSpaceNotifier::resetLastAvailable);
     }
     m_lastAvailTimer->start(1000 * 60 * 60 /* 1 hour*/);
 }
