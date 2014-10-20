@@ -53,8 +53,7 @@ UiServer::UiServer(ProgressListModel* model)
     configureAction->setIcon(QIcon::fromTheme("configure"));
     configureAction->setIconText(configure);
 
-    connect(configureAction, SIGNAL(triggered(bool)), this,
-            SLOT(showConfigurationDialog()));
+    connect(configureAction, &QAction::triggered, this, &UiServer::showConfigurationDialog);
 
     toolBar->addSeparator();
 
@@ -92,7 +91,7 @@ UiServer::~UiServer()
 
 void UiServer::updateConfiguration()
 {
-    Configuration::self()->writeConfig();
+    Configuration::self()->save();
     applySettings();
 }
 
@@ -127,8 +126,7 @@ void UiServer::showConfigurationDialog()
 
     dialog->addPage(configurationUI, i18n("Behavior"), "configure");
 
-    connect(dialog, SIGNAL(settingsChanged(const QString&)), this,
-            SLOT(updateConfiguration()));
+    connect(dialog, &KConfigDialog::settingsChanged, this, &UiServer::updateConfiguration);
     //dialog->button(KDialog::Help)->hide();
     dialog->show();
 }
@@ -151,5 +149,5 @@ UIConfigurationDialog::~UIConfigurationDialog()
 /// ===========================================================
 
 
-#include "uiserver.moc"
-//#include "uiserver_p.moc"
+
+//

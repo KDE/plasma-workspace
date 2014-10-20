@@ -369,4 +369,4 @@ void ProgressListDelegate::slotClearClicked()
     }
 }
 
-#include "progresslistdelegate.moc"
+

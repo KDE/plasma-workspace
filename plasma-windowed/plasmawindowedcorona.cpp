@@ -23,9 +23,8 @@
 #include "plasmawindowedview.h"
 #include <QDebug>
 #include <QAction>
-#include <QQuickItem>
-
 #include <KActionCollection>
+
 #include <Plasma/Package>
 #include <Plasma/PluginLoader>
 

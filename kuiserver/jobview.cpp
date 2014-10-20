@@ -320,9 +320,9 @@ void JobView::addJobContact(const QString& objectPath, const QString& address)
 
     //propagate any request signals from the client's job, up to us, then to the parent KJob
     //otherwise e.g. the pause button on plasma's tray would be broken.
-    connect(client, SIGNAL(suspendRequested()), this, SIGNAL(suspendRequested()));
-    connect(client, SIGNAL(resumeRequested()), this, SIGNAL(resumeRequested()));
-    connect(client, SIGNAL(cancelRequested()), this, SIGNAL(cancelRequested()));
+    connect(client, &org::kde::JobViewV2::suspendRequested, this, &JobView::suspendRequested);
+    connect(client, &org::kde::JobViewV2::resumeRequested, this, &JobView::resumeRequested);
+    connect(client, &org::kde::JobViewV2::cancelRequested, this, &JobView::cancelRequested);
     Q_ASSERT(!m_objectPaths.contains(address));
     m_objectPaths.insert(address, pair);
 
@@ -435,4 +435,4 @@ void JobView::serviceDropped(const QString &address)
     --m_currentPendingCalls;
 }
 
-#include "jobview.moc"
+

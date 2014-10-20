@@ -78,7 +78,7 @@
     </widget>
    </item>
    <item>
-    <widget class="KListWidget" name="actionsList" >
+    <widget class="QListWidget" name="actionsList" >
      <property name="iconSize" >
       <size>
        <width>48</width>
@@ -89,16 +89,6 @@
    </item>
   </layout>
  </widget>
- <customwidgets>
-  <customwidget>
-   <class>KListWidget</class>
-   <extends>QListWidget</extends>
-   <header>klistwidget.h</header>
-  </customwidget>
- </customwidgets>
- <includes>
-  <include location="local" >klistwidget.h</include>
- </includes>
  <resources/>
  <connections/>
 </ui>

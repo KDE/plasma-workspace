@@ -25,9 +25,8 @@ RequestViewCallWatcher::RequestViewCallWatcher(JobView* jobView, const QString& 
         m_jobView(jobView),
         m_service(service)
 {
-    connect(this, SIGNAL(finished(QDBusPendingCallWatcher*)),
-            this, SLOT(slotFinished()));
+    connect(this, &RequestViewCallWatcher::finished, this, &RequestViewCallWatcher::slotFinished);
 }
 
 
-#include "requestviewcallwatcher.moc"
+

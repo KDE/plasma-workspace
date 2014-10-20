@@ -23,7 +23,6 @@
 #include <KCModule>
 #include <KConfig>
 #include <KConfigGroup>
-#include <QListWidget>
 
 #include <Plasma/Package>
 

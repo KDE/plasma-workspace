@@ -19,19 +19,17 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>
  */
 
-#include <QUrl>
-#include <QQmlEngine>
-#include <QQmlContext>
 #include <QQuickItem>
 #include <QResizeEvent>
 #include <QQmlExpression>
-#include <QQmlProperty>
 #include <QMenu>
+#include <QQmlEngine>
+#include <QQmlContext>
 
-#include <QDebug>
-#include <Plasma/Package>
-#include <KLocalizedString>
+
 #include <KActionCollection>
+
+#include <Plasma/Package>
 
 #include "plasmawindowedview.h"
 

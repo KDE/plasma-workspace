@@ -23,7 +23,6 @@
 #include <config-kglobalaccel.h>
 
 #include <QDebug>
-#include <KLocalizedString>
 
 #include <QKeySequence>
 #include <QDBusConnection>

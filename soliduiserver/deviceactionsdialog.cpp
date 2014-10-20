@@ -18,7 +18,6 @@
 */
 
 #include "deviceactionsdialog.h"
-#include <QLayout>
 
 #include <klistwidget.h>
 #include <kicon.h>
@@ -42,13 +41,10 @@ DeviceActionsDialog::DeviceActionsDialog(QWidget *parent)
 
     resize(QSize(400,400).expandedTo(minimumSizeHint()));
 
-    connect(this, SIGNAL(okClicked()),
-            this, SLOT(slotOk()));
-    connect(m_view.actionsList, SIGNAL(doubleClicked(QListWidgetItem *, const QPoint &)),
-            this, SLOT(slotOk()));
+    connect(this, &DeviceActionsDialog::okClicked, this, &DeviceActionsDialog::slotOk);
+    connect(m_view.actionsList, &QListWidget::doubleClicked, this, &DeviceActionsDialog::slotOk);
 
-    connect(this, SIGNAL(finished()),
-            this, SLOT(delayedDestruct()));
+    connect(this, &DeviceActionsDialog::finished, this, &DeviceActionsDialog::delayedDestruct);
 }
 
 DeviceActionsDialog::~DeviceActionsDialog()
@@ -127,4 +123,4 @@ void DeviceActionsDialog::launchAction(DeviceAction *action)
     accept();
 }
 
-#include "deviceactionsdialog.moc"
+

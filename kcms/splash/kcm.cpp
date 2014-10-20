@@ -23,7 +23,6 @@
 #include <KPluginLoader>
 #include <KAboutData>
 #include <KSharedConfig>
-#include <QDebug>
 #include <QStandardPaths>
 #include <QProcess>
 #include <QQuickView>
@@ -31,10 +30,10 @@
 #include <QVBoxLayout>
 #include <QPushButton>
 #include <QMessageBox>
-#include <QtQml>
-#include <QQmlEngine>
-#include <QQmlContext>
 #include <QStandardItemModel>
+#include <QtQml>
+#include <QQmlContext>
+#include <QDir>
 
 #include <KLocalizedString>
 #include <Plasma/PluginLoader>

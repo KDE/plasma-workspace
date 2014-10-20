@@ -36,7 +36,7 @@ ProgressListModel::ProgressListModel(QObject *parent)
     m_serviceWatcher = new QDBusServiceWatcher(this);
     m_serviceWatcher->setConnection(QDBusConnection::sessionBus());
     m_serviceWatcher->setWatchMode(QDBusServiceWatcher::WatchForUnregistration);
-    connect(m_serviceWatcher, SIGNAL(serviceUnregistered(const QString &)), this, SLOT(serviceUnregistered(const QString &)));
+    connect(m_serviceWatcher, &QDBusServiceWatcher::serviceUnregistered, this, &ProgressListModel::serviceUnregistered);
 
     // Register necessary services and D-Bus adaptors.
     new JobViewServerAdaptor(this);
@@ -206,10 +206,11 @@ QDBusObjectPath ProgressListModel::newJob(const QString &appName, const QString 
     endInsertRows();
 
     //The model will now get notified when a job changes -- so it can emit dataChanged(..)
-    connect(newJob, SIGNAL(changed(uint)), this, SLOT(jobChanged(uint)));
-    connect(newJob, SIGNAL(finished(JobView*)), this, SLOT(jobFinished(JobView*)));
-    connect(newJob, SIGNAL(destUrlSet()), this, SLOT(emitJobUrlsChanged()));
+    connect(newJob, &JobView::changed, this, &ProgressListModel::jobChanged);
+    connect(newJob, &JobView::finished, this, &ProgressListModel::jobFinished);
+    connect(newJob, &JobView::destUrlSet, this, &ProgressListModel::emitJobUrlsChanged);
     connect(this, SIGNAL(serviceDropped(const QString&)), newJob, SLOT(serviceDropped(const QString&)));
+
 
     //Forward this new job over to existing DBus clients.
     foreach(QDBusAbstractInterface* interface, m_registeredServices) {
@@ -218,8 +219,7 @@ QDBusObjectPath ProgressListModel::newJob(const QString &appName, const QString 
         QDBusPendingCall pendingCall = interface->asyncCall(QLatin1String("requestView"), appName, appIcon, capabilities);
         RequestViewCallWatcher *watcher = new RequestViewCallWatcher(newJob, interface->service(), pendingCall, this);
 
-        connect(watcher, SIGNAL(callFinished(RequestViewCallWatcher*)),
-                newJob, SLOT(pendingCallFinished(RequestViewCallWatcher*)));
+        connect(watcher, &RequestViewCallWatcher::callFinished, newJob, &JobView::pendingCallFinished);
     }
 
     return newJob->objectPath();
@@ -290,8 +290,7 @@ void ProgressListModel::registerService(const QString &serviceName, const QStrin
                     QDBusPendingCall pendingCall = client->asyncCall(QLatin1String("requestView"), jobView->appName(), jobView->appIconName(), jobView->capabilities());
 
                     RequestViewCallWatcher *watcher = new RequestViewCallWatcher(jobView, serviceName, pendingCall, this);
-                    connect(watcher, SIGNAL(callFinished(RequestViewCallWatcher*)),
-                            jobView, SLOT(pendingCallFinished(RequestViewCallWatcher*)));
+                    connect(watcher, &RequestViewCallWatcher::callFinished, jobView, &JobView::pendingCallFinished);
                 }
             } else {
                 delete client;
@@ -339,4 +338,4 @@ QStringList ProgressListModel::registeredJobContacts()
     return output;
 }
 
-#include "progresslistmodel.moc"
+

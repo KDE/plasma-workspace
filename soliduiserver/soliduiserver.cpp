@@ -98,8 +98,7 @@ void SolidUiServer::showActionsDialog(const QString &udi,
     dialog->setDevice(Solid::Device(udi));
     dialog->setActions(actions);
 
-    connect(dialog, SIGNAL(finished()),
-            this, SLOT(onActionDialogFinished()));
+    connect(dialog, &DeviceActionsDialog::finished, this, &SolidUiServer::onActionDialogFinished);
 
     m_udiToActionsDialog[udi] = dialog;
 
@@ -170,10 +169,8 @@ void SolidUiServer::showPassphraseDialog(const QString &udi,
     }
 
 
-    connect(dialog, SIGNAL(gotPassword(const QString&, bool)),
-            this, SLOT(onPassphraseDialogCompleted(const QString&, bool)));
-    connect(dialog, SIGNAL(rejected()),
-            this, SLOT(onPassphraseDialogRejected()));
+    connect(dialog, &KPasswordDialog::gotPassword, this, &SolidUiServer::onPassphraseDialogCompleted);
+    connect(dialog, &KPasswordDialog::rejected, this, &SolidUiServer::onPassphraseDialogRejected);
 
     m_idToPassphraseDialog[returnService+':'+udi] = dialog;
 

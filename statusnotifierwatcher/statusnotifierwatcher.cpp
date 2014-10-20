@@ -45,7 +45,7 @@ StatusNotifierWatcher::StatusNotifierWatcher(QObject *parent, const QList<QVaria
     m_serviceWatcher->setConnection(dbus);
     m_serviceWatcher->setWatchMode(QDBusServiceWatcher::WatchForUnregistration);
 
-    connect(m_serviceWatcher, SIGNAL(serviceUnregistered(QString)), this, SLOT(serviceUnregistered(QString)));
+    connect(m_serviceWatcher, &QDBusServiceWatcher::serviceUnregistered, this, &StatusNotifierWatcher::serviceUnregistered);
 }
 
 StatusNotifierWatcher::~StatusNotifierWatcher()
