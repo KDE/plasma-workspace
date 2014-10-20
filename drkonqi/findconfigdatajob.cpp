@@ -42,9 +42,9 @@ FindConfigDataJob::~FindConfigDataJob()
 void FindConfigDataJob::start()
 {
     m_job = KIO::storedGet(m_url, KIO::Reload, KIO::HideProgressInfo);
-    connect(m_job, SIGNAL(result(KJob*)), this, SLOT(receivedData(KJob*)));
-    connect(m_job, SIGNAL(infoMessage(KJob*,QString,QString)), this, SIGNAL(infoMessage(KJob*,QString,QString)));
-    connect(m_job, SIGNAL(warning(KJob*,QString,QString)), this, SIGNAL(warning(KJob*,QString,QString)));
+    connect(m_job, &KIO::StoredTransferJob::result, this, &FindConfigDataJob::receivedData);
+    connect(m_job, &KIO::StoredTransferJob::infoMessage, this, &FindConfigDataJob::infoMessage);
+    connect(m_job, &KIO::StoredTransferJob::warning, this, &FindConfigDataJob::warning);
 
     m_job->start();
 }

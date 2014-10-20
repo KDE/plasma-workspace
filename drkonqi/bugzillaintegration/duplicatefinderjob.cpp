@@ -33,8 +33,8 @@ DuplicateFinderJob::DuplicateFinderJob(const QList<int> &bugIds, BugzillaManager
     m_bugIds(bugIds)
 {
     qDebug() << "Possible duplicates:" << m_bugIds;
-    connect(m_manager, SIGNAL(bugReportFetched(BugReport,QObject*)), this, SLOT(slotBugReportFetched(BugReport,QObject*)));
-    connect(m_manager, SIGNAL(bugReportError(QString,QObject*)), this, SLOT(slotBugReportError(QString,QObject*)));
+    connect(m_manager, &BugzillaManager::bugReportFetched, this, &DuplicateFinderJob::slotBugReportFetched);
+    connect(m_manager, &BugzillaManager::bugReportError, this, &DuplicateFinderJob::slotBugReportError);
 }
 
 DuplicateFinderJob::~DuplicateFinderJob()

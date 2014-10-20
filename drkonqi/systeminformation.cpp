@@ -85,7 +85,7 @@ void SystemInformation::tryToSetBugzillaPlatformFromExternalInfo()
         process->setOutputChannelMode(KProcess::OnlyStdoutChannel);
         process->setEnv("LC_ALL", "C");
         *process << lsb_release << "-sd";
-        connect(process, SIGNAL(finished(int,QProcess::ExitStatus)), SLOT(lsbReleaseFinished()));
+        connect(process, static_cast<void (KProcess::*)(int, QProcess::ExitStatus)>(&KProcess::finished), this, &SystemInformation::lsbReleaseFinished);
         process->start();
     } else {
         // when lsb_release is unavailable, turn to /etc/os-release

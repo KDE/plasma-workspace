@@ -53,8 +53,7 @@ void DebugPackageInstaller::installDebugPackages()
     if (!m_installerProcess) {
         //Run process
         m_installerProcess = new KProcess(this);
-        connect(m_installerProcess, SIGNAL(finished(int,QProcess::ExitStatus)),
-                                            this, SLOT(processFinished(int,QProcess::ExitStatus)));
+        connect(m_installerProcess, static_cast<void (KProcess::*)(int, QProcess::ExitStatus)>(&KProcess::finished), this, &DebugPackageInstaller::processFinished);
 
         *m_installerProcess << m_executablePath
                             << DrKonqi::crashedApplication()->executable().absoluteFilePath()
@@ -63,7 +62,7 @@ void DebugPackageInstaller::installDebugPackages()
 
         //Show dialog
         m_progressDialog = new QProgressDialog(i18nc("@info:progress", "Requesting installation of missing " "debug symbols packages..."), i18n("Cancel"), 0, 0, qobject_cast<QWidget*>(parent()));
-        connect(m_progressDialog, SIGNAL(cancelClicked()), this, SLOT(progressDialogCanceled()));
+        connect(m_progressDialog, &QProgressDialog::canceled, this, &DebugPackageInstaller::progressDialogCanceled);
         m_progressDialog->setWindowTitle(i18nc("@title:window", "Missing debug symbols"));
         m_progressDialog->show();
     }

@@ -49,17 +49,16 @@ BacktraceWidget::BacktraceWidget(BacktraceGenerator *generator, QWidget *parent,
 
     //Debug package installer
     m_debugPackageInstaller = new DebugPackageInstaller(this);
-    connect(m_debugPackageInstaller, SIGNAL(error(QString)), this, SLOT(debugPackageError(QString)));
-    connect(m_debugPackageInstaller, SIGNAL(packagesInstalled()), this, SLOT(regenerateBacktrace()));
-    connect(m_debugPackageInstaller, SIGNAL(canceled()), this, SLOT(debugPackageCanceled()));
+    connect(m_debugPackageInstaller, &DebugPackageInstaller::error, this, &BacktraceWidget::debugPackageError);
+    connect(m_debugPackageInstaller, &DebugPackageInstaller::packagesInstalled, this, &BacktraceWidget::regenerateBacktrace);
+    connect(m_debugPackageInstaller, &DebugPackageInstaller::canceled, this, &BacktraceWidget::debugPackageCanceled);
 
-    connect(m_btGenerator, SIGNAL(done()) , this, SLOT(loadData()));
-    connect(m_btGenerator, SIGNAL(someError()) , this, SLOT(loadData()));
-    connect(m_btGenerator, SIGNAL(failedToStart()) , this, SLOT(loadData()));
-    connect(m_btGenerator, SIGNAL(newLine(QString)) , this, SLOT(backtraceNewLine(QString)));
+    connect(m_btGenerator, &BacktraceGenerator::done, this, &BacktraceWidget::loadData);
+    connect(m_btGenerator, &BacktraceGenerator::someError, this, &BacktraceWidget::loadData);
+    connect(m_btGenerator, &BacktraceGenerator::failedToStart, this, &BacktraceWidget::loadData);
+    connect(m_btGenerator, &BacktraceGenerator::newLine, this, &BacktraceWidget::backtraceNewLine);
 
-    connect(ui.m_extraDetailsLabel, SIGNAL(linkActivated(QString)), this,
-            SLOT(extraDetailsLinkActivated(QString)));
+    connect(ui.m_extraDetailsLabel, &QLabel::linkActivated, this, &BacktraceWidget::extraDetailsLinkActivated);
     ui.m_extraDetailsLabel->setVisible(false);
     ui.m_extraDetailsLabel->setStyleSheet(QLatin1String(extraDetailsLabelMargin));
 
@@ -70,19 +69,19 @@ BacktraceWidget::BacktraceWidget(BacktraceGenerator *generator, QWidget *parent,
                           "reload the crash information (backtrace). This is useful when you have "
                           "installed the proper debug symbol packages and you want to obtain "
                           "a better backtrace.")));
-    connect(ui.m_reloadBacktraceButton, SIGNAL(clicked()), this, SLOT(regenerateBacktrace()));
+    connect(ui.m_reloadBacktraceButton, &QPushButton::clicked, this, &BacktraceWidget::regenerateBacktrace);
 
     KGuiItem::assign(ui.m_installDebugButton,
                 KGuiItem2(i18nc("@action:button", "&Install Debug Symbols"),
                           QIcon::fromTheme("system-software-update"), i18nc("@info:tooltip", "Use this button to "
                           "install the missing debug symbols packages.")));
     ui.m_installDebugButton->setVisible(false);
-    connect(ui.m_installDebugButton, SIGNAL(clicked()), this, SLOT(installDebugPackages()));
+    connect(ui.m_installDebugButton, &QPushButton::clicked, this, &BacktraceWidget::installDebugPackages);
 
     KGuiItem::assign(ui.m_copyButton, KGuiItem2(QString(), QIcon::fromTheme("edit-copy"),
                                           i18nc("@info:tooltip", "Use this button to copy the "
                                                 "crash information (backtrace) to the clipboard.")));
-    connect(ui.m_copyButton, SIGNAL(clicked()) , this, SLOT(copyClicked()));
+    connect(ui.m_copyButton, &QPushButton::clicked, this, &BacktraceWidget::copyClicked);
     ui.m_copyButton->setEnabled(false);
 
     KGuiItem::assign(ui.m_saveButton, KGuiItem2(QString(),
@@ -91,7 +90,7 @@ BacktraceWidget::BacktraceWidget(BacktraceGenerator *generator, QWidget *parent,
                                           "crash information (backtrace) to a file. This is useful "
                                           "if you want to take a look at it or to report the bug "
                                           "later.")));
-    connect(ui.m_saveButton, SIGNAL(clicked()) , this, SLOT(saveClicked()));
+    connect(ui.m_saveButton, &QPushButton::clicked, this, &BacktraceWidget::saveClicked);
     ui.m_saveButton->setEnabled(false);
 
     //Create the rating widget
@@ -114,8 +113,7 @@ BacktraceWidget::BacktraceWidget(BacktraceGenerator *generator, QWidget *parent,
                  "actually contain a wealth of useful information.<br />Backtraces are commonly "
                  "used during interactive and post-mortem debugging.</p>"));
         ui.m_backtraceHelpIcon->setPixmap(QIcon::fromTheme("help-hint").pixmap(48,48));
-        connect(ui.m_toggleBacktraceCheckBox, SIGNAL(toggled(bool)), this,
-                SLOT(toggleBacktrace(bool)));
+        connect(ui.m_toggleBacktraceCheckBox, &QCheckBox::toggled, this, &BacktraceWidget::toggleBacktrace);
         toggleBacktrace(false);
     }
 

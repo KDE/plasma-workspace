@@ -305,9 +305,8 @@ void ReportInterface::sendBugReport() const
     if (m_attachToBugNumber > 0)
     {
         //We are going to attach the report to an existent one
-        connect(m_bugzillaManager, SIGNAL(addMeToCCFinished(int)), this, SLOT(addedToCC()));
-        connect(m_bugzillaManager, SIGNAL(addMeToCCError(QString,QString)),
-                this, SIGNAL(sendReportError(QString,QString)));
+        connect(m_bugzillaManager, &BugzillaManager::addMeToCCFinished, this, &ReportInterface::addedToCC);
+        connect(m_bugzillaManager, &BugzillaManager::addMeToCCError, this, &ReportInterface::sendReportError);
         //First add the user to the CC list, then attach
         m_bugzillaManager->addMeToCC(m_attachToBugNumber);
     } else {
@@ -316,10 +315,9 @@ void ReportInterface::sendBugReport() const
         report.setDescription(generateReportFullText(true));
         report.setValid(true);
 
-        connect(m_bugzillaManager, SIGNAL(sendReportErrorInvalidValues()), this, SLOT(sendUsingDefaultProduct()));
-        connect(m_bugzillaManager, SIGNAL(reportSent(int)), this, SIGNAL(reportSent(int)));
-        connect(m_bugzillaManager, SIGNAL(sendReportError(QString,QString)),
-                this, SIGNAL(sendReportError(QString,QString)));
+        connect(m_bugzillaManager, &BugzillaManager::sendReportErrorInvalidValues, this, &ReportInterface::sendUsingDefaultProduct);
+        connect(m_bugzillaManager, &BugzillaManager::reportSent, this, &ReportInterface::reportSent);
+        connect(m_bugzillaManager, &BugzillaManager::sendReportError, this, &ReportInterface::sendReportError);
         m_bugzillaManager->sendReport(report);
     }
 }
@@ -340,9 +338,8 @@ void ReportInterface::sendUsingDefaultProduct() const
 void ReportInterface::addedToCC()
 {
     //The user was added to the CC list, proceed with the attachment
-    connect(m_bugzillaManager, SIGNAL(attachToReportSent(int)), this, SLOT(attachSent(int)));
-    connect(m_bugzillaManager, SIGNAL(attachToReportError(QString,QString)),
-            this, SIGNAL(sendReportError(QString,QString)));
+    connect(m_bugzillaManager, &BugzillaManager::attachToReportSent, this, &ReportInterface::attachSent);
+    connect(m_bugzillaManager, &BugzillaManager::attachToReportError, this, &ReportInterface::sendReportError);
 
     QString reportText = generateReportFullText(true);
     QString comment = generateAttachmentComment();

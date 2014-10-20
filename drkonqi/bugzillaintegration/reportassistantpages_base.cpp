@@ -56,7 +56,7 @@ CrashInformationPage::CrashInformationPage(ReportAssistantDialog * parent)
         : ReportAssistantPage(parent)
 {
     m_backtraceWidget = new BacktraceWidget(DrKonqi::debuggerManager()->backtraceGenerator(), this, true);
-    connect(m_backtraceWidget, SIGNAL(stateChanged()) , this, SLOT(emitCompleteChanged()));
+    connect(m_backtraceWidget, &BacktraceWidget::stateChanged, this, &CrashInformationPage::emitCompleteChanged);
 
     QVBoxLayout *layout = new QVBoxLayout(this);
     layout->setContentsMargins(0,0,0,0);
@@ -135,12 +135,11 @@ BugAwarenessPage::BugAwarenessPage(ReportAssistantDialog * parent)
                                      "What I was doing when the application \"%1\" crashed",
                                          DrKonqi::crashedApplication()->name()));
 
-    connect(ui.m_rememberGroup, SIGNAL(buttonClicked(int)), this, SLOT(updateCheckBoxes()));
+    connect(ui.m_rememberGroup, static_cast<void (QButtonGroup::*)(int)>(&QButtonGroup::buttonClicked), this, &BugAwarenessPage::updateCheckBoxes);
 
     ui.m_appSpecificDetailsExamples->setVisible(reportInterface()->appDetailsExamples()->hasExamples());
 
-    connect(ui.m_appSpecificDetailsExamples, SIGNAL(linkActivated(QString)), this,
-            SLOT(showApplicationDetailsExamples()));
+    connect(ui.m_appSpecificDetailsExamples, &QLabel::linkActivated, this, &BugAwarenessPage::showApplicationDetailsExamples);
 }
 
 void BugAwarenessPage::aboutToShow()
@@ -218,8 +217,7 @@ ConclusionPage::ConclusionPage(ReportAssistantDialog * parent)
                             QIcon::fromTheme("document-preview"),
                             i18nc("@info:tooltip", "Use this button to show the generated "
                             "report information about this crash.")));
-    connect(ui.m_showReportInformationButton, SIGNAL(clicked()),
-            this, SLOT(openReportInformation()));
+    connect(ui.m_showReportInformationButton, &QPushButton::clicked, this, &ConclusionPage::openReportInformation);
 
     ui.m_restartAppOnFinish->setVisible(false);
 }
@@ -439,7 +437,7 @@ ReportInformationDialog::ReportInformationDialog(const QString & reportText)
                                                "generated crash report information to "
                                                "a file. You can use this option to report the "
                                                "bug later.")));
-    connect(saveButton, SIGNAL(clicked(bool)), this, SLOT(saveReport()));
+    connect(saveButton, &QPushButton::clicked, this, &ReportInformationDialog::saveReport);
     ui.buttonBox->addButton(saveButton, QDialogButtonBox::ActionRole);
 
     resize(QSize(800, 600));

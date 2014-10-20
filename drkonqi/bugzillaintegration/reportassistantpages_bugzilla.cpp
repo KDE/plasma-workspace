@@ -83,13 +83,13 @@ BugzillaLoginPage::BugzillaLoginPage(ReportAssistantDialog * parent) :
                                               "username and password.")));
     ui.m_loginButton->setEnabled(false);
 
-    connect(ui.m_loginButton, SIGNAL(clicked()) , this, SLOT(loginClicked()));
+    connect(ui.m_loginButton, &QPushButton::clicked, this, &BugzillaLoginPage::loginClicked);
 
-    connect(ui.m_userEdit, SIGNAL(returnPressed()) , this, SLOT(loginClicked()));
-    connect(ui.m_passwordEdit, SIGNAL(returnPressed()) , this, SLOT(loginClicked()));
+    connect(ui.m_userEdit, &KLineEdit::returnPressed, this, &BugzillaLoginPage::loginClicked);
+    connect(ui.m_passwordEdit, &KLineEdit::returnPressed, this, &BugzillaLoginPage::loginClicked);
 
-    connect(ui.m_userEdit, SIGNAL(textChanged(QString)) , this, SLOT(updateLoginButtonStatus()));
-    connect(ui.m_passwordEdit, SIGNAL(textChanged(QString)) , this, SLOT(updateLoginButtonStatus()));
+    connect(ui.m_userEdit, &KLineEdit::textChanged, this, &BugzillaLoginPage::updateLoginButtonStatus);
+    connect(ui.m_passwordEdit, &KLineEdit::textChanged, this, &BugzillaLoginPage::updateLoginButtonStatus);
 
     ui.m_noticeLabel->setText(
                         xi18nc("@info/rich","<note>You need a user account on the "
@@ -386,12 +386,11 @@ BugzillaInformationPage::BugzillaInformationPage(ReportAssistantDialog * parent)
     m_textCompleteBar = new KCapacityBar(KCapacityBar::DrawTextInline, this);
     ui.horizontalLayout_2->addWidget(m_textCompleteBar);
 
-    connect(ui.m_titleEdit, SIGNAL(textChanged(QString)), this, SLOT(checkTexts()));
-    connect(ui.m_detailsEdit, SIGNAL(textChanged()), this, SLOT(checkTexts()));
+    connect(ui.m_titleEdit, &KLineEdit::textChanged, this, &BugzillaInformationPage::checkTexts);
+    connect(ui.m_detailsEdit, &QTextEdit::textChanged, this, &BugzillaInformationPage::checkTexts);
 
-    connect(ui.m_titleLabel, SIGNAL(linkActivated(QString)), this, SLOT(showTitleExamples()));
-    connect(ui.m_detailsLabel, SIGNAL(linkActivated(QString)), this,
-            SLOT(showDescriptionHelpExamples()));
+    connect(ui.m_titleLabel, &QLabel::linkActivated, this, &BugzillaInformationPage::showTitleExamples);
+    connect(ui.m_detailsLabel, &QLabel::linkActivated, this, &BugzillaInformationPage::showDescriptionHelpExamples);
 
     ui.m_compiledSourcesCheckBox->setChecked(
                                     DrKonqi::systemInformation()->compiledSources());
@@ -683,7 +682,7 @@ BugzillaSendPage::BugzillaSendPage(ReportAssistantDialog * parent)
                             QIcon::fromTheme("document-preview"),
                             i18nc("@info:tooltip", "Use this button to show the generated "
                             "report information about this crash.")));
-    connect(ui.m_showReportContentsButton, SIGNAL(clicked()), this, SLOT(openReportContents()));
+    connect(ui.m_showReportContentsButton, &QPushButton::clicked, this, &BugzillaSendPage::openReportContents);
 
     ui.m_retryButton->setVisible(false);
     connect(ui.m_retryButton, SIGNAL(clicked()), this , SLOT(retryClicked()));
@@ -780,7 +779,7 @@ UnhandledErrorDialog::UnhandledErrorDialog(QWidget * parent, const QString & err
     QPushButton* saveButton = new QPushButton(this);
     saveButton->setText(i18nc("@action:button save html to a file","Save to a file"));
     saveButton->setIcon(QIcon::fromTheme("document-save"));
-    connect(saveButton, SIGNAL(clicked(bool)), this, SLOT(saveErrorMessage()));
+    connect(saveButton, &QPushButton::clicked, this, &UnhandledErrorDialog::saveErrorMessage);
 
     setAttribute(Qt::WA_DeleteOnClose);
 

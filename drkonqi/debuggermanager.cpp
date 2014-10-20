@@ -37,25 +37,25 @@ DebuggerManager::DebuggerManager(const Debugger & internalDebugger,
 {
     d->debuggerRunning = false;
     d->btGenerator = new BacktraceGenerator(internalDebugger, this);
-    connect(d->btGenerator, SIGNAL(starting()), SLOT(onDebuggerStarting()));
-    connect(d->btGenerator, SIGNAL(done()), SLOT(onDebuggerFinished()));
-    connect(d->btGenerator, SIGNAL(someError()), SLOT(onDebuggerFinished()));
-    connect(d->btGenerator, SIGNAL(failedToStart()), SLOT(onDebuggerFinished()));
+    connect(d->btGenerator, &BacktraceGenerator::starting, this, &DebuggerManager::onDebuggerStarting);
+    connect(d->btGenerator, &BacktraceGenerator::done, this, &DebuggerManager::onDebuggerFinished);
+    connect(d->btGenerator, &BacktraceGenerator::someError, this, &DebuggerManager::onDebuggerFinished);
+    connect(d->btGenerator, &BacktraceGenerator::failedToStart, this, &DebuggerManager::onDebuggerFinished);
 
     foreach(const Debugger & debugger, externalDebuggers) {
         if (debugger.isInstalled()) {
             AbstractDebuggerLauncher *l = new DefaultDebuggerLauncher(debugger, this); //FIXME
             d->externalDebuggers.append(l);
-            connect(l, SIGNAL(starting()), SLOT(onDebuggerStarting()));
-            connect(l, SIGNAL(finished()), SLOT(onDebuggerFinished()));
-            connect(l, SIGNAL(invalidated()), SLOT(onDebuggerInvalidated()));
+            connect(l, &AbstractDebuggerLauncher::starting, this, &DebuggerManager::onDebuggerStarting);
+            connect(l, &AbstractDebuggerLauncher::finished, this, &DebuggerManager::onDebuggerFinished);
+            connect(l, &AbstractDebuggerLauncher::invalidated, this, &DebuggerManager::onDebuggerInvalidated);
         }
     }
 
     //setup kdevelop compatibility
     d->dbusOldInterfaceLauncher = new DBusOldInterfaceLauncher(this);
-    connect(d->dbusOldInterfaceLauncher, SIGNAL(starting()), SLOT(onDebuggerStarting()));
-    connect(d->dbusOldInterfaceLauncher, SIGNAL(available()), SLOT(onDBusOldInterfaceDebuggerAvailable()));
+    connect(d->dbusOldInterfaceLauncher, &DBusOldInterfaceLauncher::starting, this, &DebuggerManager::onDebuggerStarting);
+    connect(d->dbusOldInterfaceLauncher, &DBusOldInterfaceLauncher::available, this, &DebuggerManager::onDBusOldInterfaceDebuggerAvailable);
 }
 
 DebuggerManager::~DebuggerManager()

@@ -63,13 +63,7 @@ int main(int argc, char *argv[])
 
     Outputter outputter;
 
-    QObject::connect
-    (
-        &generator,
-        SIGNAL(DebugLine(QString)),
-        &outputter,
-        SLOT(OnDebugLine(QString))
-    );
+    QObject::connect(&generator, &MingwGenerator::DebugLine, &outputter, &Outputter::OnDebugLine);
 
     TThreadsMap::const_iterator it;
     for (it = proc.GetThreads().constBegin(); it != proc.GetThreads().constEnd(); it++)

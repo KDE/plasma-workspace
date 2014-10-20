@@ -44,8 +44,7 @@ ProductMapping::ProductMapping(const CrashedApplication * crashedApp, BugzillaMa
     map(crashedApp->fakeExecutableBaseName());
 
     //Get valid versions
-    connect(m_bugzillaManagerPtr, SIGNAL(productInfoFetched(Product)),
-            this, SLOT(checkProductInfo(Product)));
+    connect(m_bugzillaManagerPtr, &BugzillaManager::productInfoFetched, this, &ProductMapping::checkProductInfo);
 
     m_bugzillaManagerPtr->fetchProductInfo(m_bugzillaProduct);
 }

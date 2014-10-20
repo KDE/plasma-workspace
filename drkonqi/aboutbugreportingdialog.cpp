@@ -44,7 +44,7 @@ AboutBugReportingDialog::AboutBugReportingDialog(QWidget * parent):
     setLayout(layout);
     m_textBrowser = new QTextBrowser(this);
     m_textBrowser->setMinimumSize(QSize(600, 300));
-    connect(m_textBrowser, SIGNAL(anchorClicked(QUrl)), this, SLOT(handleInternalLinks(QUrl)));
+    connect(m_textBrowser, &QTextBrowser::anchorClicked, this, &AboutBugReportingDialog::handleInternalLinks);
 
     QString text =
 
@@ -203,8 +203,8 @@ AboutBugReportingDialog::AboutBugReportingDialog(QWidget * parent):
     layout->addWidget(m_textBrowser);
 
     QDialogButtonBox* box = new QDialogButtonBox(QDialogButtonBox::Close, this);
-    connect(box, SIGNAL(accepted()), SIGNAL(accepted()));
-    connect(box, SIGNAL(rejected()), SIGNAL(rejected()));
+    connect(box, &QDialogButtonBox::accepted, this, &AboutBugReportingDialog::accepted);
+    connect(box, &QDialogButtonBox::rejected, this, &AboutBugReportingDialog::rejected);
     layout->addWidget(box);
 
     KConfigGroup config(KSharedConfig::openConfig(), "AboutBugReportingDialog");

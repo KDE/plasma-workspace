@@ -52,9 +52,8 @@ ReportAssistantDialog::ReportAssistantDialog(QWidget * parent) :
     setWindowTitle(i18nc("@title:window","Crash Reporting Assistant"));
     setWindowIcon(QIcon::fromTheme("tools-report-bug"));
 
-    connect(this, SIGNAL(currentPageChanged(KPageWidgetItem*,KPageWidgetItem*)),
-            this, SLOT(currentPageChanged_slot(KPageWidgetItem*,KPageWidgetItem*)));
-    connect(this, SIGNAL(helpClicked()), this, SLOT(showHelp()));
+    connect(this, &ReportAssistantDialog::currentPageChanged, this, &ReportAssistantDialog::currentPageChanged_slot);
+    connect(button(QDialogButtonBox::Help), &QPushButton::clicked, this, &ReportAssistantDialog::showHelp);
 
     //Create the assistant pages
 
@@ -103,7 +102,7 @@ ReportAssistantDialog::ReportAssistantDialog(QWidget * parent) :
     m_pageWidgetMap.insert(QLatin1String(PAGE_CONCLUSIONS_ID),m_conclusionsPage);
     m_conclusionsPage->setHeader(i18nc("@title","Results of the Analyzed Crash Details"));
     m_conclusionsPage->setIcon(QIcon::fromTheme("dialog-information"));
-    connect(m_conclusions, SIGNAL(finished(bool)), this, SLOT(assistantFinished(bool)));
+    connect(m_conclusions, &ConclusionPage::finished, this, &ReportAssistantDialog::assistantFinished);
 
     //-Bugzilla Login
     BugzillaLoginPage * m_bugzillaLogin =  new BugzillaLoginPage(this);
@@ -114,7 +113,7 @@ ReportAssistantDialog::ReportAssistantDialog(QWidget * parent) :
     m_pageWidgetMap.insert(QLatin1String(PAGE_BZLOGIN_ID),m_bugzillaLoginPage);
     m_bugzillaLoginPage->setHeader(i18nc("@title", "Login into %1", i18n(KDE_BUGZILLA_DESCRIPTION)));
     m_bugzillaLoginPage->setIcon(QIcon::fromTheme("user-identity"));
-    connect(m_bugzillaLogin, SIGNAL(loggedTurnToNextPage()), this, SLOT(loginFinished()));
+    connect(m_bugzillaLogin, &BugzillaLoginPage::loggedTurnToNextPage, this, &ReportAssistantDialog::loginFinished);
 
     //-Bugzilla duplicates
     BugzillaDuplicatesPage * m_bugzillaDuplicates =  new BugzillaDuplicatesPage(this);
@@ -153,7 +152,7 @@ ReportAssistantDialog::ReportAssistantDialog(QWidget * parent) :
     m_pageWidgetMap.insert(QLatin1String(PAGE_BZSEND_ID),m_bugzillaSendPage);
     m_bugzillaSendPage->setHeader(i18nc("@title","Sending the Crash Report"));
     m_bugzillaSendPage->setIcon(QIcon::fromTheme("applications-internet"));
-    connect(m_bugzillaSend, SIGNAL(finished(bool)), this, SLOT(assistantFinished(bool)));
+    connect(m_bugzillaSend, &BugzillaSendPage::finished, this, &ReportAssistantDialog::assistantFinished);
 
     //TODO Remember to keep the pages ordered
     addPage(m_awarenessPage);

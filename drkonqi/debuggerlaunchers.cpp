@@ -30,7 +30,7 @@ DefaultDebuggerLauncher::DefaultDebuggerLauncher(const Debugger & debugger, Debu
     : AbstractDebuggerLauncher(parent), m_debugger(debugger)
 {
     m_monitor = new DetachedProcessMonitor(this);
-    connect(m_monitor, SIGNAL(processFinished()), SLOT(onProcessFinished()));
+    connect(m_monitor, &DetachedProcessMonitor::processFinished, this, &DefaultDebuggerLauncher::onProcessFinished);
 }
 
 QString DefaultDebuggerLauncher::name() const

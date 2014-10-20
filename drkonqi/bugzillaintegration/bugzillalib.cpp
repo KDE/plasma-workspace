@@ -103,7 +103,7 @@ void BugzillaManager::fetchBugReport(int bugnumber, QObject * jobOwner)
 
     KIO::Job * fetchBugJob = KIO::storedGet(url, KIO::Reload, KIO::HideProgressInfo);
     fetchBugJob->setParent(jobOwner);
-    connect(fetchBugJob, SIGNAL(finished(KJob*)) , this, SLOT(fetchBugJobFinished(KJob*)));
+    connect(fetchBugJob, &KIO::Job::finished, this, &BugzillaManager::fetchBugJobFinished);
 }
 
 
@@ -130,7 +130,7 @@ void BugzillaManager::searchBugs(const QStringList & products,
     stopCurrentSearch();
 
     m_searchJob = KIO::storedGet(QUrl(url) , KIO::Reload, KIO::HideProgressInfo);
-    connect(m_searchJob, SIGNAL(finished(KJob*)) , this, SLOT(searchBugsJobFinished(KJob*)));
+    connect(m_searchJob, &KIO::Job::finished, this, &BugzillaManager::searchBugsJobFinished);
 }
 
 void BugzillaManager::sendReport(const BugReport & report)

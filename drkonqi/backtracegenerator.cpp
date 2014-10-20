@@ -95,10 +95,8 @@ bool BacktraceGenerator::start()
     *m_proc << KShell::splitArgs(str);
     m_proc->setOutputChannelMode(KProcess::OnlyStdoutChannel);
     m_proc->setNextOpenMode(QIODevice::ReadWrite | QIODevice::Text);
-    connect(m_proc, SIGNAL(readyReadStandardOutput()),
-            SLOT(slotReadInput()));
-    connect(m_proc, SIGNAL(finished(int,QProcess::ExitStatus)),
-            SLOT(slotProcessExited(int,QProcess::ExitStatus)));
+    connect(m_proc, &KProcess::readyReadStandardOutput, this, &BacktraceGenerator::slotReadInput);
+    connect(m_proc, static_cast<void (KProcess::*)(int, QProcess::ExitStatus)>(&KProcess::finished), this, &BacktraceGenerator::slotProcessExited);
 
     m_proc->start();
     if (!m_proc->waitForStarted()) {
