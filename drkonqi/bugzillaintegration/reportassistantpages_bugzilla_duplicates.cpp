@@ -22,7 +22,6 @@
 #include <QtCore/QDate>
 #include <QtCore/QTimer>
 
-#include <QLabel>
 #include <QTreeWidgetItem>
 #include <QHeaderView>
 

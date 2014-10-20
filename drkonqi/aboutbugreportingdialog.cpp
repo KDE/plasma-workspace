@@ -23,7 +23,6 @@
 #include <KLocalizedString>
 #include <KConfig>
 #include <KSharedConfig>
-#include <KToolInvocation>
 #include <KWindowConfig>
 #include <QTextBrowser>
 #include <qboxlayout.h>

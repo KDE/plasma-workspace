@@ -19,7 +19,6 @@
 
 #include "findconfigdatajob.h"
 
-#include <QDebug>
 #include <KIO/Job>
 #include <KLocalizedString>
 

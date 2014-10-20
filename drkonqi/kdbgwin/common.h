@@ -46,7 +46,6 @@
 
 
 // third: KDE includes
-#include <QDebug>
 
 
 // common defines

@@ -21,7 +21,6 @@
 
 #include "debugpackageinstaller.h"
 
-#include <QDebug>
 #include <QStandardPaths>
 #include <KProcess>
 #include <KLocalizedString>

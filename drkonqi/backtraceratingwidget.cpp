@@ -20,7 +20,6 @@
 #include "backtraceratingwidget.h"
 
 #include <QPainter>
-#include <QPixmap>
 #include <QIcon>
 
 

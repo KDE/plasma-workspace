@@ -20,8 +20,6 @@
 #include "backtracewidget.h"
 
 #include <QLabel>
-#include <QHBoxLayout>
-#include <QVBoxLayout>
 #include <QScrollBar>
 
 #include <KMessageBox>

@@ -20,7 +20,6 @@
 
 #include "reportinterface.h"
 
-#include <QDebug>
 #include <KLocalizedString>
 
 #include "drkonqi.h"
