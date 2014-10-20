@@ -133,7 +133,7 @@ int main(int argc, char* argv[])
 #if HAVE_X11 && QT_VERSION >= QT_VERSION_CHECK(5, 4, 0)
     const QString startupId = parser.value(startupIdOption);
     if (!startupId.isEmpty()) {
-        QX11Info::setNextStartupId(startupId);
+        QX11Info::setNextStartupId(startupId.toUtf8());
     }
 #endif
 
