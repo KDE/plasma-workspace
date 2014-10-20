@@ -28,7 +28,7 @@
 #include <qboxlayout.h>
 #include <QDialogButtonBox>
 #include <qdesktopservices.h>
-
+#include <QPushButton>
 #include "drkonqi_globals.h"
 
 AboutBugReportingDialog::AboutBugReportingDialog(QWidget * parent):
@@ -202,8 +202,7 @@ AboutBugReportingDialog::AboutBugReportingDialog(QWidget * parent):
     layout->addWidget(m_textBrowser);
 
     QDialogButtonBox* box = new QDialogButtonBox(QDialogButtonBox::Close, this);
-    connect(box, &QDialogButtonBox::accepted, this, &AboutBugReportingDialog::accepted);
-    connect(box, &QDialogButtonBox::rejected, this, &AboutBugReportingDialog::rejected);
+    connect(box->button(QDialogButtonBox::Close), &QPushButton::clicked, this, &AboutBugReportingDialog::close);
     layout->addWidget(box);
 
     KConfigGroup config(KSharedConfig::openConfig(), "AboutBugReportingDialog");

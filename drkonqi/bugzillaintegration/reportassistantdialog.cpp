@@ -51,6 +51,7 @@ ReportAssistantDialog::ReportAssistantDialog(QWidget * parent) :
     //Set window properties
     setWindowTitle(i18nc("@title:window","Crash Reporting Assistant"));
     setWindowIcon(QIcon::fromTheme("tools-report-bug"));
+    buttonBox()->addButton(QDialogButtonBox::Help);
 
     connect(this, &ReportAssistantDialog::currentPageChanged, this, &ReportAssistantDialog::currentPageChanged_slot);
     connect(button(QDialogButtonBox::Help), &QPushButton::clicked, this, &ReportAssistantDialog::showHelp);
