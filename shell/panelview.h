@@ -165,6 +165,8 @@ private Q_SLOTS:
 
 private:
     void integrateScreen();
+    bool containmentContainsPosition(const QPointF &point);
+    QPointF positionAdjustedForContainment(const QPointF &point);
 
     int m_offset;
     int m_maxLength;

@@ -671,7 +671,93 @@ bool PanelView::event(QEvent *e)
             m_unhideTimer.start();
         }
     }
+
+    switch (e->type()) {
+        case QEvent::MouseMove:
+        case QEvent::MouseButtonPress:
+        case QEvent::MouseButtonRelease: {
+            QMouseEvent *me = static_cast<QMouseEvent *>(e);
+
+            if (!containmentContainsPosition(me->windowPos())) {
+                QMouseEvent me2(me->type(),
+                                positionAdjustedForContainment(me->windowPos()),
+                                positionAdjustedForContainment(me->windowPos()),
+                                positionAdjustedForContainment(me->windowPos()) + position(),
+                                me->button(), me->buttons(), me->modifiers());
+
+                QCoreApplication::sendEvent(this, &me2);
+                return true;
+            }
+            break;
+        }
+
+        case QEvent::DragEnter: {
+            QDragEnterEvent *de = static_cast<QDragEnterEvent *>(e);
+            if (!containmentContainsPosition(de->pos())) {
+                QDragEnterEvent de2(positionAdjustedForContainment(de->pos()).toPoint(),
+                                    de->possibleActions(), de->mimeData(), de->mouseButtons(), de->keyboardModifiers());
+
+                QCoreApplication::sendEvent(this, &de2);
+                return true;
+            }
+            break;
+        }
+        //DragLeave just works
+        case QEvent::DragLeave:
+            break;
+        case QEvent::DragMove: {
+            QDragMoveEvent *de = static_cast<QDragMoveEvent *>(e);
+            if (!containmentContainsPosition(de->pos())) {
+                QDragMoveEvent de2(positionAdjustedForContainment(de->pos()).toPoint(),
+                                   de->possibleActions(), de->mimeData(), de->mouseButtons(), de->keyboardModifiers());
+
+                QCoreApplication::sendEvent(this, &de2);
+                return true;
+            }
+            break;
+        }
+        case QEvent::Drop: {
+            QDropEvent *de = static_cast<QDropEvent *>(e);
+            if (!containmentContainsPosition(de->pos())) {
+                QDropEvent de2(positionAdjustedForContainment(de->pos()).toPoint(),
+                               de->possibleActions(), de->mimeData(), de->mouseButtons(), de->keyboardModifiers());
+
+                QCoreApplication::sendEvent(this, &de2);
+                return true;
+            }
+            break;
+        }
+
+        default:
+            break;
+    }
+
     return View::event(e);
+}
+
+bool PanelView::containmentContainsPosition(const QPointF &point)
+{
+    QQuickItem *containmentItem = containment()->property("_plasma_graphicObject").value<QQuickItem *>();
+
+    if (!containmentItem) {
+        return false;
+    }
+
+    return QRectF(containmentItem->mapToScene(QPoint(0,0)), QSizeF(containmentItem->width(), containmentItem->height())).contains(point);
+}
+
+QPointF PanelView::positionAdjustedForContainment(const QPointF &point)
+{
+    QQuickItem *containmentItem = containment()->property("_plasma_graphicObject").value<QQuickItem *>();
+
+    if (!containmentItem) {
+        return point;
+    }
+
+    QRectF containmentRect(containmentItem->mapToScene(QPoint(0,0)), QSizeF(containmentItem->width(), containmentItem->height()));
+
+    return QPointF(qBound(containmentRect.left() + 2, point.x(), containmentRect.right() - 2),
+                   qBound(containmentRect.top() + 2, point.y(), containmentRect.bottom() - 2));
 }
 
 void PanelView::updateMask()
