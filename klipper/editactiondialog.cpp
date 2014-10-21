@@ -289,8 +289,8 @@ EditActionDialog::EditActionDialog(QWidget* parent)
     layout->addWidget(dlgWidget);
     layout->addWidget(buttons);
 
-    connect(m_ui->pbAddCommand, SIGNAL(clicked()), SLOT(onAddCommand()) );
-    connect(m_ui->pbRemoveCommand, SIGNAL(clicked()), SLOT(onRemoveCommand()) );
+    connect(m_ui->pbAddCommand, &QPushButton::clicked, this, &EditActionDialog::onAddCommand);
+    connect(m_ui->pbRemoveCommand, &QPushButton::clicked, this, &EditActionDialog::onRemoveCommand);
 
     const KConfigGroup grp = KSharedConfig::openConfig()->group("EditActionDialog");
     KWindowConfig::restoreWindowSize(windowHandle(), grp);

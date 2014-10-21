@@ -24,12 +24,12 @@ ActionsTreeWidget::ActionsTreeWidget(QWidget* parent)
 {
     // these signals indicate that something was changed in actions tree
 
-    connect(this, SIGNAL(itemChanged(QTreeWidgetItem*,int)), SLOT(onItemChanged()));
+    connect(this, &ActionsTreeWidget::itemChanged, this, &ActionsTreeWidget::onItemChanged);
     QAbstractItemModel *treeModel = model();
     if (treeModel)
     {
-        connect(treeModel, SIGNAL(rowsInserted(QModelIndex,int,int)), SLOT(onItemChanged()));
-        connect(treeModel, SIGNAL(rowsRemoved(QModelIndex,int,int)), SLOT(onItemChanged()));
+        connect(treeModel, &QAbstractItemModel::rowsInserted, this, &ActionsTreeWidget::onItemChanged);
+        connect(treeModel, &QAbstractItemModel::rowsRemoved, this, &ActionsTreeWidget::onItemChanged);
     }
 }
 

@@ -80,14 +80,13 @@ ActionsWidget::ActionsWidget(QWidget* parent)
     }
 #endif
 
-    connect(m_ui.kcfg_ActionList, SIGNAL(itemSelectionChanged()), SLOT(onSelectionChanged()));
-    connect(m_ui.kcfg_ActionList, SIGNAL(itemDoubleClicked(QTreeWidgetItem*,int)),
-            SLOT(onEditAction()));
+    connect(m_ui.kcfg_ActionList, &ActionsTreeWidget::itemSelectionChanged, this, &ActionsWidget::onSelectionChanged);
+    connect(m_ui.kcfg_ActionList, &ActionsTreeWidget::itemDoubleClicked, this, &ActionsWidget::onEditAction);
 
-    connect(m_ui.pbAddAction, SIGNAL(clicked()), SLOT(onAddAction()));
-    connect(m_ui.pbEditAction, SIGNAL(clicked()), SLOT(onEditAction()));
-    connect(m_ui.pbDelAction, SIGNAL(clicked()), SLOT(onDeleteAction()));
-    connect(m_ui.pbAdvanced, SIGNAL(clicked()), SLOT(onAdvanced()));
+    connect(m_ui.pbAddAction, &QPushButton::clicked, this, &ActionsWidget::onAddAction);
+    connect(m_ui.pbEditAction, &QPushButton::clicked, this, &ActionsWidget::onEditAction);
+    connect(m_ui.pbDelAction, &QPushButton::clicked, this, &ActionsWidget::onDeleteAction);
+    connect(m_ui.pbAdvanced, &QPushButton::clicked, this, &ActionsWidget::onAdvanced);
 
     onSelectionChanged();
 }

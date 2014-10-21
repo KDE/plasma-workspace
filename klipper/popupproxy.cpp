@@ -166,7 +166,7 @@ int PopupProxy::insertFromSpill( int index ) {
     // make *this a proxy for that menu ('s content).
     if (history->first() && m_spill_uuid != history->first()->uuid()) {
         QMenu* moreMenu = new QMenu(i18n("&More"), m_proxy_for_menu);
-        connect(moreMenu, SIGNAL(aboutToShow()), SLOT(slotAboutToShow()));
+        connect(moreMenu, &QMenu::aboutToShow, this, &PopupProxy::slotAboutToShow);
         QAction *before = index < m_proxy_for_menu->actions().count() ? m_proxy_for_menu->actions().at(index) : 0;
         m_proxy_for_menu->insertMenu(before, moreMenu);
         m_proxy_for_menu = moreMenu;

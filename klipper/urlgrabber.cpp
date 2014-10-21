@@ -52,8 +52,7 @@ URLGrabber::URLGrabber(History* history):
     m_history(history)
 {
     m_myPopupKillTimer->setSingleShot( true );
-    connect( m_myPopupKillTimer, SIGNAL(timeout()),
-             SLOT(slotKillPopupMenu()));
+    connect(m_myPopupKillTimer, &QTimer::timeout, this, &URLGrabber::slotKillPopupMenu);
 
     // testing
     /*
@@ -212,7 +211,7 @@ void URLGrabber::actionMenu( HistoryItemConstPtr item, bool automatically_invoke
 
         m_myMenu = new QMenu;
 
-        connect(m_myMenu, SIGNAL(triggered(QAction*)), SLOT(slotItemSelected(QAction*)));
+        connect(m_myMenu, &QMenu::triggered, this, &URLGrabber::slotItemSelected);
 
         foreach (ClipAction* clipAct, matchingActionsList) {
             m_myMenu->addSection(QIcon::fromTheme( "klipper" ),
@@ -245,13 +244,13 @@ void URLGrabber::actionMenu( HistoryItemConstPtr item, bool automatically_invoke
         {
             m_myMenu->addSeparator();
             QAction *disableAction = new QAction(i18n("Disable This Popup"), this);
-            connect(disableAction, SIGNAL(triggered()), SIGNAL(sigDisablePopup()));
+            connect(disableAction, &QAction::triggered, this, &URLGrabber::sigDisablePopup);
             m_myMenu->addAction(disableAction);
         }
         m_myMenu->addSeparator();
 
         QAction *cancelAction = new QAction(QIcon::fromTheme("dialog-cancel"), i18n("&Cancel"), this);
-        connect(cancelAction, SIGNAL(triggered()), m_myMenu, SLOT(hide()));
+        connect(cancelAction, &QAction::triggered, m_myMenu, &QMenu::hide);
         m_myMenu->addAction(cancelAction);
         m_myClipItem = item;
 

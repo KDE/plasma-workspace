@@ -1013,4 +1013,3 @@ QString Klipper::cycleText() const
     return result;
 }
 
-#include "klipper.moc"
