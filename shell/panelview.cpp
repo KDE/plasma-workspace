@@ -673,7 +673,7 @@ bool PanelView::event(QEvent *e)
     }
 
     /*Fitt's law: if the containment has margins, and the mouse cursor clicked
-     * on the mouse edge, forwar the click in the containment boundaries
+     * on the mouse edge, forward the click in the containment boundaries
      */
     switch (e->type()) {
         case QEvent::MouseMove:
