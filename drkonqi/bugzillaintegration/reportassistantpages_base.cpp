@@ -138,6 +138,7 @@ BugAwarenessPage::BugAwarenessPage(ReportAssistantDialog * parent)
     connect(ui.m_rememberGroup, static_cast<void (QButtonGroup::*)(int)>(&QButtonGroup::buttonClicked), this, &BugAwarenessPage::updateCheckBoxes);
 
     ui.m_appSpecificDetailsExamples->setVisible(reportInterface()->appDetailsExamples()->hasExamples());
+    ui.m_appSpecificDetailsExamples->setContextMenuPolicy(Qt::NoContextMenu);
 
     connect(ui.m_appSpecificDetailsExamples, &QLabel::linkActivated, this, &BugAwarenessPage::showApplicationDetailsExamples);
 }

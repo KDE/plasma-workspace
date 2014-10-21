@@ -122,8 +122,10 @@ BugzillaDuplicatesPage::BugzillaDuplicatesPage(ReportAssistantDialog * parent):
     ui.m_attachToReportIcon->setFixedSize(16,16);
     ui.m_attachToReportIcon->setVisible(false);
     ui.m_attachToReportLabel->setVisible(false);
+    ui.m_attachToReportLabel->setContextMenuPolicy(Qt::NoContextMenu);
     connect(ui.m_attachToReportLabel, SIGNAL(linkActivated(QString)), this,
                                                                 SLOT(cancelAttachToBugReport()));
+    ui.information->setContextMenuPolicy(Qt::NoContextMenu);
     connect(ui.information, SIGNAL(linkActivated(QString)), this, SLOT(informationClicked(QString)));
     showDuplicatesPanel(false);
 }
