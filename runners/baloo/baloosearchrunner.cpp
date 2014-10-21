@@ -97,7 +97,13 @@ void SearchRunner::match(Plasma::RunnerContext& context, const QString& type,
 
     Baloo::ResultIterator it = query.exec();
 
-    int relevance = 100;
+    // KRunner is absolutely retarded and allows plugins to set the global
+    // relevance levels. so Baloo should not set the relevance of results too
+    // high because then Applications will often appear after if the application
+    // runner has not a higher relevance. So stupid.
+    // Each runner plugin should not have to know about the others.
+    // Anyway, that's why we're starting with .75
+    float relevance = .75;
     while (context.isValid() && it.next()) {
         Plasma::QueryMatch match(this);
         const QUrl url = it.url();
@@ -110,8 +116,8 @@ void SearchRunner::match(Plasma::RunnerContext& context, const QString& type,
         match.setData(url);
         match.setType(Plasma::QueryMatch::PossibleMatch);
         match.setMatchCategory(category);
-        match.setRelevance(relevance * .01);
-        relevance--;
+        match.setRelevance(relevance);
+        relevance -= 0.05;
 
         if (localUrl.startsWith(QDir::homePath())) {
             localUrl.replace(0, QDir::homePath().length(), QLatin1String("~"));
