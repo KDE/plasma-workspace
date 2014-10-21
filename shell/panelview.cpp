@@ -738,7 +738,7 @@ bool PanelView::event(QEvent *e)
     return View::event(e);
 }
 
-bool PanelView::containmentContainsPosition(const QPointF &point)
+bool PanelView::containmentContainsPosition(const QPointF &point) const
 {
     QQuickItem *containmentItem = containment()->property("_plasma_graphicObject").value<QQuickItem *>();
 
@@ -749,7 +749,7 @@ bool PanelView::containmentContainsPosition(const QPointF &point)
     return QRectF(containmentItem->mapToScene(QPoint(0,0)), QSizeF(containmentItem->width(), containmentItem->height())).contains(point);
 }
 
-QPointF PanelView::positionAdjustedForContainment(const QPointF &point)
+QPointF PanelView::positionAdjustedForContainment(const QPointF &point) const
 {
     QQuickItem *containmentItem = containment()->property("_plasma_graphicObject").value<QQuickItem *>();
 
