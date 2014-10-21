@@ -20,11 +20,14 @@
 #include "kuiservertest.h"
 #include <kio/jobuidelegate.h>
 #include <QTimer>
-#include <kapplication.h>
-#include <kcmdlineargs.h>
-#include <klocale.h>
+
+
 #include <kio/jobclasses.h>
 #include <kuiserverjobtracker.h>
+#include <QApplication>
+#include <KAboutData>
+#include <KLocalizedString>
+#include <QCommandLineParser>
 
 KJobTest::KJobTest(int numberOfSeconds)
         : KIO::Job(), timer(new QTimer(this)), clockTimer(new QTimer(this)),
@@ -83,9 +86,17 @@ bool KJobTest::doSuspend()
 
 int main(int argc, char **argv)
 {
-    KCmdLineArgs::init(argc, argv, "kjobtest", 0, ki18n("KJobTest"), "0.01", ki18n("A KJob tester"));
+    KAboutData aboutData( QLatin1String("kjobtest"), i18n("KJobTest"), QLatin1String("0.01"));
+    aboutData.setShortDescription(i18n("A KJob tester"));
+    QApplication app(argc, argv);
+    QCommandLineParser parser;
+    KAboutData::setApplicationData(aboutData);
+    parser.addVersionOption();
+    parser.addHelpOption();
+    aboutData.setupCommandLine(&parser);
+    parser.process(app);
+    aboutData.processCommandLine(&parser);
 
-    KApplication app;
 
     KJobTest *myJob = new KJobTest(10 /* 10 seconds before it gets removed */);
     myJob->setUiDelegate(new KIO::JobUiDelegate());
