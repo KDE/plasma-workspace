@@ -44,4 +44,5 @@ void SharePackage::initPackage(Plasma::Package* package)
 
 K_EXPORT_PLASMA_PACKAGE_WITH_JSON(SharePackage, "plasma-packagestructure-share.json")
 
+#include "share_package.moc"
 
