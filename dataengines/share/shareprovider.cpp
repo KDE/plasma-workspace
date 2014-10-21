@@ -364,4 +364,4 @@ void ShareProvider::error(const QString &msg)
     emit finishedError(msg);
 }
 
-#include "shareprovider.moc"
+

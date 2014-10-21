@@ -342,5 +342,5 @@ QString RssEngine::iconLocation(const KUrl & url) const
     return QString();
 }
 
-#include "rss.moc"
+
 

@@ -60,5 +60,5 @@ void SolidDeviceJob::start()
     emitResult();
 }
 
-#include "soliddevicejob.moc"
+
 

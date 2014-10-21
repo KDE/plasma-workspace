@@ -99,5 +99,5 @@ void MouseEngine::updateCursorName(const QString &name)
     scheduleSourcesUpdated();
 }
 
-#include "mouseengine.moc"
+
 

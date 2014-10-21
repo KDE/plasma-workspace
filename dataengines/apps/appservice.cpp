@@ -37,4 +37,4 @@ Plasma::ServiceJob *AppService::createJob(const QString &operation, QMap<QString
     return new AppJob(m_source, operation, parameters, this);
 }
 
-#include "appservice.moc"
+

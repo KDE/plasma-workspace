@@ -819,5 +819,5 @@ int WeatherData::ForecastPeriod::getMinTemp(QVector<WeatherData::ForecastInfo *>
     return result;
 }
 
-#include "ion_wettercom.moc"
+
 // kate: indent-mode cstyle; space-indent on; indent-width 4; 

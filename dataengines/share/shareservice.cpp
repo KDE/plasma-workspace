@@ -162,4 +162,4 @@ void ShareJob::showError(const QString &message)
     emitResult();
 }
 
-#include "shareservice.moc"
+

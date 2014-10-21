@@ -18,7 +18,7 @@
  *****************************************************************************/
 
 #include "ion.h"
-#include "ion.moc"
+
 
 #include <QDebug>
 #include <KLocalizedString>

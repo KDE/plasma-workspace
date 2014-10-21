@@ -1919,4 +1919,4 @@ QMap<QString, QString> EnvCanadaIon::weatherRecords(const QString& source) const
     return recordInfo;
 }
 
-#include "ion_envcan.moc"
+

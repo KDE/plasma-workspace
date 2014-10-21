@@ -81,4 +81,4 @@ void DeviceSignalMapManager::unmapDevice(Solid::StorageAccess *storageaccess)
     disconnect(storageaccess, SIGNAL(accessibilityChanged(bool,QString)), map, SLOT(accessibilityChanged(bool)));
 }
 
-#include "devicesignalmapmanager.moc"
+

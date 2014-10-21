@@ -391,4 +391,4 @@ void AkonadiEngine::contactItemAdded( const Akonadi::Item &item )
     }
 }
 
-#include "akonadiengine.moc"
+

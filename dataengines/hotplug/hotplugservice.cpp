@@ -34,5 +34,5 @@ Plasma::ServiceJob* HotplugService::createJob (const QString& operation,
     return new HotplugJob (m_engine, destination(), operation, parameters, this);
 }
 
-#include "hotplugservice.moc"
+
 

@@ -63,6 +63,6 @@ Plasma::ServiceJob* PlaceService::createJob(const QString& operation,
     }
 }
 
-#include "placeservice.moc"
+
 
 // vim: sw=4 sts=4 et tw=100

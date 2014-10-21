@@ -75,6 +75,6 @@ void LatchKeyJob::start()
     setResult(true);
 }
 
-#include "keyservice.moc"
+
 
 // vim: sw=4 sts=4 et tw=100

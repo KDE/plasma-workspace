@@ -32,4 +32,4 @@ ServiceJob *ActivityService::createJob(const QString &operation, QMap<QString, Q
     return new ActivityJob(m_activityController, m_id, operation, parameters, this);
 }
 
-#include "activityservice.moc"
+

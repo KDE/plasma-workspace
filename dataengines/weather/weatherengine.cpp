@@ -272,4 +272,4 @@ QString WeatherEngine::ionNameForSource(const QString& source) const
     return QString(source.left(offset));
 }
 
-#include "weatherengine.moc"
+

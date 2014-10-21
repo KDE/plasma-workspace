@@ -230,4 +230,4 @@ void EventDataContainer::populateIncidenceData(const KCalCore::Incidence::Ptr &i
     //TODO Collection/Source
 }
 
-#include "eventdatacontainer.moc"
+

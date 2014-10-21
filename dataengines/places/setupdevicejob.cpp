@@ -34,6 +34,6 @@ void SetupDeviceJob::setupError(const QString& message)
     }
 }
 
-#include "setupdevicejob.moc"
+
 
 // vim: sw=4 sts=4 et tw=100

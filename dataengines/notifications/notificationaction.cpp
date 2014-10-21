@@ -71,5 +71,5 @@ void NotificationAction::start()
     emitResult();
 }
 
-#include "notificationaction.moc"
+
 

@@ -110,5 +110,5 @@ bool CursorNotificationHandler::x11Event(XEvent* event)
     return false;
 }
 
-#include "cursornotificationhandler.moc"
+
 

@@ -290,4 +290,4 @@ IonInterface::ConditionIcons IonDebianWeather::toCondition(IonDebianWeather::xml
   return NotAvailable;
 }
 
-#include "iondebianweather.moc"
+

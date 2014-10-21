@@ -80,5 +80,5 @@ QVariant PlacesProxyModel::data(const QModelIndex &index, int role) const
     }
 }
 
-#include "placesproxymodel.moc"
+
 

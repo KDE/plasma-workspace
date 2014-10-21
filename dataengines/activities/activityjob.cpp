@@ -98,4 +98,4 @@ void ActivityJob::start()
     setResult(false);
 }
 
-#include "activityjob.moc"
+

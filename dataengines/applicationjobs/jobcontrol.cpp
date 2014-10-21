@@ -34,5 +34,5 @@ Plasma::ServiceJob* JobControl::createJob(const QString& operation,
     return new JobAction(m_jobView, operation, parameters, this);
 }
 
-#include "jobcontrol.moc"
+
 

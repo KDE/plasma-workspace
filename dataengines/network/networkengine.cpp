@@ -227,4 +227,4 @@ void NetworkEngine::updateWirelessData(const QString &source, const Solid::Contr
             (capabilities & Solid::Control::AccessPoint::Privacy) != 0);
 }
 
-#include "networkengine.moc"
+

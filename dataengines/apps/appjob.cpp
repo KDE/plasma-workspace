@@ -42,4 +42,4 @@ void AppJob::start()
     setResult(false);
 }
 
-#include "appjob.moc"
+

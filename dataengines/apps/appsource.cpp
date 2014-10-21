@@ -103,4 +103,4 @@ void AppSource::updateApp()
     checkForUpdate();
 }
 
-#include "appsource.moc"
+

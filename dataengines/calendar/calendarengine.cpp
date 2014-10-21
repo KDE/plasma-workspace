@@ -311,4 +311,4 @@ bool CalendarEngine::akonadiCalendarSourceRequest(const QString& key, const QStr
 
 #endif // AKONADI_FOUND
 
-#include "calendarengine.moc"
+
