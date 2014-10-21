@@ -21,7 +21,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include "historystringitem.h"
 #include "historyurlitem.h"
 
-#include <QDebug>
 
 HistoryModel::HistoryModel(QObject *parent)
     : QAbstractListModel(parent)

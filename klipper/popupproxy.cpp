@@ -21,7 +21,6 @@
 #include <QRegExp>
 #include <QStyle>
 #include <QPixmap>
-#include <QImage>
 #include <QStyleOption>
 
 #include <KLocalizedString>

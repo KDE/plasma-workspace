@@ -29,7 +29,7 @@
 #include <KHelpMenu>
 #include <KLineEdit>
 #include <KLocalizedString>
-#include <KWindowSystem>
+#include <KWindowInfo>
 
 #include "history.h"
 #include "klipper.h"
