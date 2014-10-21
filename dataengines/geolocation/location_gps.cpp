@@ -116,4 +116,4 @@ void Gps::update()
 
 K_EXPORT_PLASMA_GEOLOCATIONPROVIDER(gps, Gps)
 
-
+#include "location_gps.moc"
