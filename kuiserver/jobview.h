@@ -22,7 +22,6 @@
 #ifndef JOBVIEW_H
 #define JOBVIEW_H
 
-#include <QListView>
 #include <QtDBus/QDBusObjectPath>
 
 #include <kio/global.h>

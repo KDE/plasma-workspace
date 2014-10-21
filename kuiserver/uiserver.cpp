@@ -29,11 +29,9 @@
 
 #include <QWidget>
 #include <QAction>
-#include <QBoxLayout>
 #include <QCloseEvent>
-#include <QToolBar>
 #include <qsystemtrayicon.h>
-
+#include <QToolBar>
 #include <kconfigdialog.h>
 
 UiServer::UiServer(ProgressListModel* model)

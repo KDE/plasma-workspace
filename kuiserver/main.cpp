@@ -26,7 +26,6 @@
 #include "progresslistmodel.h"
 
 #include <kdbusservice.h>
-#include <KLocalizedString>
 
 #include <QCommandLineParser>
 
