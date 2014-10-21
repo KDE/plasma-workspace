@@ -19,14 +19,9 @@
 #include "webshortcutrunner.h"
 
 #include <QDebug>
-#include <QMimeType>
-#include <QMimeDatabase>
-#include <KServiceTypeTrader>
-#include <KSycoca>
 #include <KToolInvocation>
-#include <QUrl>
-#include <KIOWidgets/KUriFilter>
 #include <KLocalizedString>
+#include <KIOWidgets/KUriFilter>
 
 #include <QtDBus/QtDBus>
 
@@ -48,7 +43,7 @@ WebshortcutRunner::WebshortcutRunner(QObject *parent, const QVariantList& args)
     sessionDbus.connect(QString(), "/", "org.kde.KUriFilterPlugin",
                         "configure", this, SLOT(readFiltersConfig()));
 
-    connect(this, SIGNAL(teardown()), this, SLOT(resetState()));
+    connect(this, &WebshortcutRunner::teardown, this, &WebshortcutRunner::resetState);
     readFiltersConfig();
 }
 

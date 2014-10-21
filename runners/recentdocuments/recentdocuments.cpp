@@ -41,9 +41,9 @@ RecentDocuments::RecentDocuments(QObject *parent, const QVariantList& args)
     // listen for changes to the list of recent documents
     KDirWatch *recentDocWatch = new KDirWatch(this);
     recentDocWatch->addDir(KRecentDocument::recentDocumentDirectory(), KDirWatch::WatchFiles);
-    connect(recentDocWatch,SIGNAL(created(QString)),this,SLOT(loadRecentDocuments()));
-    connect(recentDocWatch,SIGNAL(deleted(QString)),this,SLOT(loadRecentDocuments()));
-    connect(recentDocWatch,SIGNAL(dirty(QString)),this,SLOT(loadRecentDocuments()));
+    connect(recentDocWatch, &KDirWatch::created, this, &RecentDocuments::loadRecentDocuments);
+    connect(recentDocWatch, &KDirWatch::deleted, this, &RecentDocuments::loadRecentDocuments);
+    connect(recentDocWatch, &KDirWatch::dirty, this, &RecentDocuments::loadRecentDocuments);
     addSyntax(Plasma::RunnerSyntax(":q:", i18n("Looks for documents recently used with names matching :q:.")));
 }
 
