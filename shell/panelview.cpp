@@ -671,6 +671,60 @@ bool PanelView::event(QEvent *e)
             m_unhideTimer.start();
         }
     }
+
+    switch (e->type()) {
+        case QEvent::MouseMove:
+        case QEvent::MouseButtonPress:
+        case QEvent::MouseButtonRelease: {
+            QMouseEvent *me = static_cast<QMouseEvent *>(e);
+
+            if (me->pos().y() < 5) {
+                QMouseEvent me2(me->type(), QPoint(me->localPos().x(), 15), QPoint(me->windowPos().x(), 15), QPoint(me->screenPos().x(), y()+15), me->button(), me->buttons(), me->modifiers());
+
+                QCoreApplication::sendEvent(this, &me2);
+                return true;
+            }
+            break;
+        }
+
+        case QEvent::DragEnter: {
+            QDragEnterEvent *de = static_cast<QDragEnterEvent *>(e);
+            if (de->pos().y() < 5) {
+                QDragEnterEvent de2(QPoint(de->pos().x(), 15), de->possibleActions(), de->mimeData(), de->mouseButtons(), de->keyboardModifiers());
+
+                QCoreApplication::sendEvent(this, &de2);
+                return true;
+            }
+            break;
+        }
+        //DragLeave just works
+        case QEvent::DragLeave:
+            break;
+        case QEvent::DragMove: {
+            QDragMoveEvent *de = static_cast<QDragMoveEvent *>(e);
+            if (de->pos().y() < 5) {
+                QDragMoveEvent de2(QPoint(de->pos().x(), 15), de->possibleActions(), de->mimeData(), de->mouseButtons(), de->keyboardModifiers());
+
+                QCoreApplication::sendEvent(this, &de2);
+                return true;
+            }
+            break;
+        }
+        case QEvent::Drop: {
+            QDropEvent *de = static_cast<QDropEvent *>(e);
+            if (de->pos().y() < 5) {
+                QDropEvent de2(QPoint(de->pos().x(), 15), de->possibleActions(), de->mimeData(), de->mouseButtons(), de->keyboardModifiers());
+
+                QCoreApplication::sendEvent(this, &de2);
+                return true;
+            }
+            break;
+        }
+
+        default:
+            break;
+    }
+
     return View::event(e);
 }
 
