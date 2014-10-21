@@ -109,9 +109,7 @@ Item {
         anchors {
             top: parent.top
             bottom: !root.vertical ? parent.bottom : tooltip.top
-           // topMargin: !root.vertical ? ((parent.height - root.itemSize) / 2) - units.smallSpacing : units.smallSpacing
             left: parent.left
-            //leftMargin: root.vertical ? 0 : units.smallSpacing
             right: !root.vertical ? tooltip.left : parent.right
         }
         cellWidth: root.vertical ? gridView.width / Math.floor(gridView.width / root.itemSize) : root.itemSize + units.smallSpacing * 2
