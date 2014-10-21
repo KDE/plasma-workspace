@@ -327,8 +327,8 @@ void Klipper::loadSettings()
       item->setProperty(m_bIgnoreSelection);
       item =  KlipperSettings::self()->findItem("Synchronize"); // Mark property as converted.
       item->setProperty(3);
-      KlipperSettings::self()->writeConfig();
-      KlipperSettings::self()->readConfig();
+      KlipperSettings::self()->save();
+      KlipperSettings::self()->load();
 
     }
 }
@@ -337,7 +337,7 @@ void Klipper::saveSettings() const
 {
     m_myURLGrabber->saveSettings();
     KlipperSettings::self()->setVersion(QStringLiteral(KLIPPER_VERSION_STRING));
-    KlipperSettings::self()->writeConfig();
+    KlipperSettings::self()->save();
 
     // other settings should be saved automatically by KConfigDialog
 }
