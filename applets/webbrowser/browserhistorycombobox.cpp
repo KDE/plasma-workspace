@@ -442,5 +442,5 @@ void BrowserHistoryComboBox::setDisplayProgress(bool enable)
 
 } // namespace Plasma
 
-#include "browserhistorycombobox.moc"
+
 

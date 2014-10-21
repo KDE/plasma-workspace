@@ -122,4 +122,4 @@ void MonitorButton::paint(QPainter *p,
                   icon);
 }
 
-#include "monitorbutton.moc"
+

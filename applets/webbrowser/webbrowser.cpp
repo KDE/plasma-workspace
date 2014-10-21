@@ -672,4 +672,4 @@ void WebBrowser::rejectWalletRequest()
 
 K_EXPORT_PLASMA_APPLET(webbrowser, WebBrowser)
 
-#include "webbrowser.moc"
+

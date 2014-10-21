@@ -83,4 +83,4 @@ void MonitorIcon::paint(QPainter *p,
                         d->overlays).pixmap(d->imageSize.toSize()));
 }
 
-#include "monitoricon.moc"
+

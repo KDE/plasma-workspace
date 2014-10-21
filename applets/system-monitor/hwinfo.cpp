@@ -158,4 +158,4 @@ void HWInfo::updateHtml()
     }
 }
 
-#include "hwinfo.moc"
+

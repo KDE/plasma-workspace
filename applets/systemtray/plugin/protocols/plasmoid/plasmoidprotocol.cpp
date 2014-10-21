@@ -319,4 +319,4 @@ void PlasmoidProtocol::serviceUnregistered(const QString &service)
 
 }
 
-#include "plasmoidprotocol.moc"
+

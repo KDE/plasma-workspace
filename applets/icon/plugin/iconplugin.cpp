@@ -28,4 +28,3 @@ void IconPlugin::registerTypes(const char *uri)
     qmlRegisterType<IconPrivate>(uri, 1, 0,"Logic");
 }
 
-#include "iconplugin.moc"

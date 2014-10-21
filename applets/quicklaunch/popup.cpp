@@ -112,4 +112,4 @@ void Popup::syncSizeAndPosition()
 }
 }
 
-#include "popup.moc"
+

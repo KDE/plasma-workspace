@@ -103,4 +103,3 @@ void IconPrivate::open()
     new KRun(m_url, 0);
 }
 
-#include "icon_p.moc"

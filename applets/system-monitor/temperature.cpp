@@ -223,4 +223,4 @@ void Temperature::dataUpdated(const QString& source,
     }
 }
 
-#include "temperature.moc"
+

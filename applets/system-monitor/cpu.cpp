@@ -178,4 +178,4 @@ void SM::Cpu::configAccepted()
     emit configNeedsSaving();
 }
 
-#include "cpu.moc"
+

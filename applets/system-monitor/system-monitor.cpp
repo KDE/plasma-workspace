@@ -294,4 +294,4 @@ void SystemMonitor::constraintsEvent(Plasma::Constraints constraints)
     PopupApplet::constraintsEvent(constraints);
 }
 
-#include "system-monitor.moc"
+

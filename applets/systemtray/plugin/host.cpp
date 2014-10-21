@@ -392,4 +392,4 @@ QStringList Host::categories() const
 
 } // namespace
 
-#include "host.moc"
+

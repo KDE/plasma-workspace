@@ -60,4 +60,4 @@ void WebViewOverlay::paint(QPainter *painter, const QStyleOptionGraphicsItem *op
     painter->fillRect(option->rect, QApplication::palette().window());
 }
 
-#include "webviewoverlay.moc"
+

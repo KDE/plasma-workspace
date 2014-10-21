@@ -116,4 +116,4 @@ void SystemTray::TaskListModel::removeTask(Task *task)
 }
 
 
-#include "tasklistmodel.moc"
+

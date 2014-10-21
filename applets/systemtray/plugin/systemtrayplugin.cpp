@@ -50,4 +50,4 @@ void SystemTrayPlugin::registerTypes(const char *uri)
 
 } // namespace
 
-#include "systemtrayplugin.moc"
+

@@ -474,4 +474,4 @@ int PopupLauncherList::determineDropMarkerIndex(const QPointF &localPos) const
 }
 }
 
-#include "popuplauncherlist.moc"
+

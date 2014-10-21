@@ -288,4 +288,4 @@ bool Hdd_Activity::addVisualization(const QString& source)
     return true;
 }
 
-#include "hdd_activity.moc"
+

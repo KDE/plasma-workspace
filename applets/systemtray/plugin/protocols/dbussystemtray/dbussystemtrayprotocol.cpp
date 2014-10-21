@@ -96,4 +96,4 @@ void DBusSystemTrayProtocol::initRegisteredServices()
 
 }
 
-#include "dbussystemtrayprotocol.moc"
+

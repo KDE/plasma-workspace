@@ -296,4 +296,4 @@ void PlasmoidTask::showMenu(int x, int y)
 
 }
 
-#include "plasmoidtask.moc"
+

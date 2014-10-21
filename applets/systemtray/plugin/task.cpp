@@ -165,4 +165,4 @@ QPointF Task::popupPosition(QQuickItem* visualParent, int x, int y)
 
 }
 
-#include "task.moc"
+

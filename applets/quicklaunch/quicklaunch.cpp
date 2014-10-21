@@ -1003,4 +1003,4 @@ QString Quicklaunch::determineNewDesktopFilePath(const QString &baseName)
 }
 }
 
-#include "quicklaunch.moc"
+

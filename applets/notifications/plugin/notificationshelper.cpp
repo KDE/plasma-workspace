@@ -204,4 +204,4 @@ void NotificationsHelper::repositionPopups()
 
 }
 
-#include "notificationshelper.moc"
+

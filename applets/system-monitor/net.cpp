@@ -196,4 +196,4 @@ void SM::Net::configAccepted()
     emit configNeedsSaving();
 }
 
-#include "net.moc"
+

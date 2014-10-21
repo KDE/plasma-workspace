@@ -32,4 +32,4 @@ Protocol::Protocol(QObject *parent)
 
 }
 
-#include "protocol.moc"
+

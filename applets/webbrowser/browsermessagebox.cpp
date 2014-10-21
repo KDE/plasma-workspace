@@ -56,4 +56,4 @@ Plasma::PushButton *BrowserMessageBox::cancelButton()
     return m_cancelButton;
 }
 
-#include "browsermessagebox.moc"
+

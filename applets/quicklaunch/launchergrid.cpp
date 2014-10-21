@@ -543,4 +543,4 @@ int LauncherGrid::determineDropMarkerIndex(const QPointF &localPos) const
 }
 }
 
-#include "launchergrid.moc"
+

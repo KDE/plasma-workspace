@@ -263,4 +263,4 @@ void Plotter::resizeEvent(QGraphicsSceneResizeEvent* event)
 
 } // namespace
 
-#include "plotter.moc"
+
