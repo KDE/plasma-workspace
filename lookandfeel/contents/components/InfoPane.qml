@@ -44,7 +44,7 @@ ColumnLayout {
 
     RowLayout {
         Layout.alignment: Qt.AlignRight
-        visible: pmSource.connectedSources != "" && pmSource.data["Battery"]["Has Battery"] && pmSource.data["Battery0"]["Is Power Supply"]
+        visible: pmSource.connectedSources != "" && pmSource.data["Battery"]["Has Battery"] && pmSource.data["Battery0"] != undefined && pmSource.data["Battery0"]["Is Power Supply"]
 
         PW.BatteryIcon {
             id: battery
