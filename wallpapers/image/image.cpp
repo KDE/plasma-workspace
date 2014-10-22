@@ -33,6 +33,8 @@
 #include <QEasingCurve>
 #include <QPropertyAnimation>
 #include <QTimer>
+#include <QMimeDatabase>
+#include <QImageReader>
 
 #include <QDebug>
 #include <KDirWatch>
@@ -601,9 +603,18 @@ void Image::showFileDialog()
             path = QStandardPaths::standardLocations(QStandardPaths::HomeLocation).at(0);
         }
 
+        QMimeDatabase db;
+        QStringList imageGlobPatterns;
+        foreach(const QByteArray &mimeType, QImageReader::supportedMimeTypes()) {
+            QMimeType mime(db.mimeTypeForName(mimeType));
+            imageGlobPatterns << mime.globPatterns();
+        }
+
         m_dialog = new QFileDialog(0, i18n("Open Image"),
                                       path,
-                                      i18n("Image Files (*.png *.jpg *.jpeg *.bmp *.svg *.svgz *.xcf)"));
+                                      i18n("Image Files") + " ("+imageGlobPatterns.join(' ') + ')');
+        //i18n people, this isn't a "word puzzle". there is a specific string format for QFileDialog::setNameFilters
+
         m_dialog->setFileMode(QFileDialog::ExistingFile);
         connect(m_dialog, &QDialog::accepted, this, &Image::wallpaperBrowseCompleted);
     }
