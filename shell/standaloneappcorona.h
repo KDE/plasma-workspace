@@ -37,6 +37,8 @@ class StandaloneAppCorona : public Plasma::Corona
 
 public:
     explicit StandaloneAppCorona(const QString &coronaPlugin, QObject * parent = 0);
+    ~StandaloneAppCorona();
+
     QRect screenGeometry(int id) const;
 
     void loadDefaultLayout();
