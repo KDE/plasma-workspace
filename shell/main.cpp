@@ -132,9 +132,11 @@ int main(int argc, char *argv[])
         if (cliOptions.isSet(shellPluginOption)) {
             ShellManager::s_standaloneOption = true;
             app.setApplicationName("plasmashell_"+cliOptions.value(shellPluginOption));
+            app.setQuitOnLastWindowClosed(true);
 
             KDBusService service(KDBusService::Unique);
-            StandaloneAppCorona corona(cliOptions.value(shellPluginOption));
+            //This will not leak, because corona deletes itself on window close
+            StandaloneAppCorona *corona = new StandaloneAppCorona(cliOptions.value(shellPluginOption));
             return app.exec();
         } else {
             cliOptions.showHelp(1);

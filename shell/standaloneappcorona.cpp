@@ -62,6 +62,11 @@ StandaloneAppCorona::StandaloneAppCorona(const QString &coronaPlugin, QObject *p
     load();
 }
 
+StandaloneAppCorona::~StandaloneAppCorona()
+{
+    delete m_view;
+}
+
 QRect StandaloneAppCorona::screenGeometry(int id) const
 {
     Q_UNUSED(id);
