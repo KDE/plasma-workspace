@@ -681,7 +681,9 @@ bool PanelView::event(QEvent *e)
         case QEvent::MouseButtonRelease: {
             QMouseEvent *me = static_cast<QMouseEvent *>(e);
 
-            if (!containmentContainsPosition(me->windowPos())) {
+            //first, don't mess with position if the cursor is actually outside the view:
+            //somebody is doing a click and drag that must not break when the cursor i outside
+            if (geometry().contains(me->screenPos().toPoint()) && !containmentContainsPosition(me->windowPos())) {
                 QMouseEvent me2(me->type(),
                                 positionAdjustedForContainment(me->windowPos()),
                                 positionAdjustedForContainment(me->windowPos()),
