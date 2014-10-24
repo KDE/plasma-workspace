@@ -84,13 +84,14 @@ Item {
         model: host.hiddenTasks
 
         delegate: TaskListDelegate {}
+        visible: root.expandedTask == null || root.expandedTask.status == SystemTray.Task.Passive
     }
 
     PlasmaCore.SvgItem {
         id: separator
 
         width: lineSvg.elementSize("vertical-line").width;
-        visible: root.expandedTask != null
+        visible: root.expandedTask != null && root.expandedTask.status == SystemTray.Task.Passive
 
         anchors {
             left: parent.left
@@ -122,8 +123,7 @@ Item {
         anchors {
             top: parent.top
             topMargin: units.gridUnit
-            leftMargin: -units.gridUnit
-            left: expandedItemContainer.left
+            left: parent.left
             right: parent.right
         }
         text: i18n("Status & Notifications")
@@ -152,8 +152,7 @@ Item {
         id: expandedItemContainer
         animate: false
         anchors {
-            left: parent.left
-            leftMargin: root.baseSize * 3 + units.largeSpacing
+            left: hiddenView.visible ? separator.right : parent.left
             top: root.expandedTask != null ? snHeadingExpanded.bottom : snHeading.bottom
             topMargin: Math.round(units.largeSpacing / 2)
             bottom: parent.bottom
