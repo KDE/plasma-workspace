@@ -106,8 +106,8 @@ void SearchRunner::match(Plasma::RunnerContext& context, const QString& type,
     float relevance = .75;
     while (context.isValid() && it.next()) {
         Plasma::QueryMatch match(this);
-        const QUrl url = it.url();
-        QString localUrl = url.toLocalFile();
+        QString localUrl = it.filePath();
+        const QUrl url = QUrl::fromLocalFile(localUrl);
 
         QString iconName = QMimeDatabase().mimeTypeForFile(localUrl).iconName();
         match.setIcon(QIcon::fromTheme(iconName));
