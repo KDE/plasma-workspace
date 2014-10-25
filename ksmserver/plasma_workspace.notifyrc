@@ -254,7 +254,7 @@ Sound=Oxygen-Sys-List-Match-No.ogg
 [Event/Textcompletion: partial match]
 Name=Textcompletion: Partial Match
 Name[ca]=Compleció de text: coincidència parcial
-Name[cs]=Doplňování textu: částčná shoda 
+Name[cs]=Doplňování textu: částečná shoda 
 Name[da]=Tekstfuldførelse: Delvis match
 Name[de]=Textvervollständigung: teilweise Übereinstimmung
 Name[el]=Συμπλήρωση κειμένου: Μερικό ταίριασμα
