@@ -39,6 +39,8 @@ ActivityRunner::ActivityRunner(QObject *parent, const QVariantList &args)
     connect(this, SIGNAL(prepare()), this, SLOT(prep()));
     connect(this, SIGNAL(teardown()), this, SLOT(down()));
 
+    qRegisterMetaType<KActivities::Consumer::ServiceStatus>();
+
     serviceStatusChanged(KActivities::Consumer::Running);
 }
 

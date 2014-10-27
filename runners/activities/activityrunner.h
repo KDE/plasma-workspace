@@ -23,6 +23,8 @@
 
 #include <KActivities/Controller>
 
+Q_DECLARE_METATYPE(KActivities::Consumer::ServiceStatus)
+
 class ActivityRunner : public Plasma::AbstractRunner
 {
     Q_OBJECT
