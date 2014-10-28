@@ -51,9 +51,9 @@ void ActivityEngine::init()
             insertActivity(id);
         }
 
-        connect(m_activityController, SIGNAL(activityAdded(QString)), this, SLOT(activityAdded(QString)));
-        connect(m_activityController, SIGNAL(activityRemoved(QString)), this, SLOT(activityRemoved(QString)));
-        connect(m_activityController, SIGNAL(currentActivityChanged(QString)), this, SLOT(currentActivityChanged(QString)));
+        connect(m_activityController, &KActivities::Controller::activityAdded, this, &ActivityEngine::activityAdded);
+        connect(m_activityController, &KActivities::Controller::activityRemoved, this, &ActivityEngine::activityRemoved);
+        connect(m_activityController, &KActivities::Controller::currentActivityChanged, this, &ActivityEngine::currentActivityChanged);
 
         //some convenience sources for times when checking every activity source would suck
         //it starts with _ so that it can easily be filtered out of sources()
@@ -69,10 +69,8 @@ void ActivityEngine::init()
                 | QDBusServiceWatcher::WatchForUnregistration,
             this);
 
-        connect(m_watcher, SIGNAL(serviceRegistered(QString)),
-                this, SLOT(enableRanking()));
-        connect(m_watcher, SIGNAL(serviceUnregistered(QString)),
-                this, SLOT(disableRanking()));
+        connect(m_watcher, &QDBusServiceWatcher::serviceRegistered, this, &ActivityEngine::enableRanking);
+        connect(m_watcher, &QDBusServiceWatcher::serviceUnregistered, this, &ActivityEngine::disableRanking);
 
         if (QDBusConnection::sessionBus().interface()->isServiceRegistered(ACTIVITYMANAGER_SERVICE)) {
             enableRanking();
@@ -110,8 +108,8 @@ void ActivityEngine::insertActivity(const QString &id)
     setData(id, "State", state);
     setData(id, "Score", m_activityScores.value(id));
 
-    connect(activity, SIGNAL(infoChanged()), this, SLOT(activityDataChanged()));
-    connect(activity, SIGNAL(stateChanged(KActivities::Info::State)), this, SLOT(activityStateChanged()));
+    connect(activity, &KActivities::Info::infoChanged, this, &ActivityEngine::activityDataChanged);
+    connect(activity, &KActivities::Info::stateChanged, this, &ActivityEngine::activityStateChanged);
 
     m_runningActivities << id;
 }
@@ -128,8 +126,7 @@ void ActivityEngine::enableRanking()
             ACTIVITYRANKING_OBJECT,
             QDBusConnection::sessionBus()
         );
-    connect(m_activityRankingClient, SIGNAL(rankingChanged(QStringList,ActivityDataList)),
-            this, SLOT(rankingChanged(QStringList,ActivityDataList)));
+    connect(m_activityRankingClient, &org::kde::ActivityManager::ActivityRanking::rankingChanged, this, &ActivityEngine::rankingChanged);
 
     QDBusMessage msg = QDBusMessage::createMethodCall(ACTIVITYMANAGER_SERVICE,
                                                       ACTIVITYRANKING_OBJECT,
@@ -137,8 +134,7 @@ void ActivityEngine::enableRanking()
                                                       "activities");
     QDBusPendingReply<ActivityDataList> reply = QDBusConnection::sessionBus().asyncCall(msg);
     QDBusPendingCallWatcher *watcher = new QDBusPendingCallWatcher(reply, this);
-    QObject::connect(watcher, SIGNAL(finished(QDBusPendingCallWatcher*)),
-                     this, SLOT(activityScoresReply(QDBusPendingCallWatcher*)));
+    QObject::connect(watcher, &QDBusPendingCallWatcher::finished, this, &ActivityEngine::activityScoresReply);
 }
 
 void ActivityEngine::activityScoresReply(QDBusPendingCallWatcher *watcher)

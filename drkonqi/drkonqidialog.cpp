@@ -27,6 +27,7 @@
 #include <QMenu>
 #include <QDialogButtonBox>
 #include <QDebug>
+#include <QDesktopServices>
 
 #include "drkonqi.h"
 #include "backtracewidget.h"
@@ -63,7 +64,7 @@ DrKonqiDialog::DrKonqiDialog(QWidget * parent) :
     connect(m_buttonBox, &QDialogButtonBox::rejected, this, &QDialog::rejected);
     l->addWidget(m_buttonBox);
 
-    connect(m_tabWidget, SIGNAL(currentChanged(int)), this, SLOT(tabIndexChanged(int)));
+    connect(m_tabWidget, &QTabWidget::currentChanged, this, &DrKonqiDialog::tabIndexChanged);
 
     buildIntroWidget();
     m_tabWidget->addTab(m_introWidget, i18nc("@title:tab general information", "&General"));
@@ -138,7 +139,7 @@ void DrKonqiDialog::buildIntroWidget()
                                         );
     }
     ui.infoLabel->setText(reportMessage);
-    connect(ui.infoLabel, SIGNAL(linkActivated(QString)), this, SLOT(linkActivated(QString)));
+    connect(ui.infoLabel, &QLabel::linkActivated, this, &DrKonqiDialog::linkActivated);
 
     ui.iconLabel->setPixmap(
                         QPixmap(QStandardPaths::locate(QStandardPaths::DataLocation, QLatin1String("pics/crash.png"))));
@@ -185,7 +186,7 @@ void DrKonqiDialog::buildDialogButtons()
                                  !DrKonqi::isSafer() &&
                                  HAVE_XMLRPCCLIENT;
     reportButton->setEnabled(enableReportAssistant);
-    connect(reportButton, SIGNAL(clicked(bool)), SLOT(startBugReportAssistant()));
+    connect(reportButton, &QPushButton::clicked, this, &DrKonqiDialog::startBugReportAssistant);
 
     //Default debugger button and menu (only for developer mode): User2
     DebuggerManager *debuggerManager = DrKonqi::debuggerManager();
@@ -206,11 +207,9 @@ void DrKonqiDialog::buildDialogButtons()
         addDebugger(launcher);
     }
 
-    connect(debuggerManager, SIGNAL(externalDebuggerAdded(AbstractDebuggerLauncher*)),
-            SLOT(addDebugger(AbstractDebuggerLauncher*)));
-    connect(debuggerManager, SIGNAL(externalDebuggerRemoved(AbstractDebuggerLauncher*)),
-            SLOT(removeDebugger(AbstractDebuggerLauncher*)));
-    connect(debuggerManager, SIGNAL(debuggerRunning(bool)), SLOT(enableDebugMenu(bool)));
+    connect(debuggerManager, &DebuggerManager::externalDebuggerAdded, this, &DrKonqiDialog::addDebugger);
+    connect(debuggerManager, &DebuggerManager::externalDebuggerRemoved, this, &DrKonqiDialog::removeDebugger);
+    connect(debuggerManager, &DebuggerManager::debuggerRunning, this, &DrKonqiDialog::enableDebugMenu);
 
     //Restart application button
     KGuiItem2 restartItem(i18nc("@action:button", "&Restart Application"),
@@ -275,10 +274,10 @@ void DrKonqiDialog::linkActivated(const QString& link)
     if (link == QLatin1String(ABOUT_BUG_REPORTING_URL)) {
         showAboutBugReporting();
     } else if (link == QLatin1String(DRKONQI_REPORT_BUG_URL)) {
-        KToolInvocation::invokeBrowser(link);
+        QDesktopServices::openUrl(QUrl(link));
     } else if (link.startsWith(QLatin1String("http"))) {
         qWarning() << "unexpected link";
-        KToolInvocation::invokeBrowser(link);
+        QDesktopServices::openUrl(QUrl(link));
     }
 }
 
@@ -286,7 +285,7 @@ void DrKonqiDialog::showAboutBugReporting()
 {
     if (!m_aboutBugReportingDialog) {
         m_aboutBugReportingDialog = new AboutBugReportingDialog();
-        connect(this, SIGNAL(destroyed(QObject*)), m_aboutBugReportingDialog, SLOT(close()));
+        connect(this, &DrKonqiDialog::destroyed, m_aboutBugReportingDialog.data(), &AboutBugReportingDialog::close);
     }
     m_aboutBugReportingDialog->show();
     m_aboutBugReportingDialog->raise();

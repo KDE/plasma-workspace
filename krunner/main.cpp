@@ -66,8 +66,7 @@ int main(int argc, char **argv)
     View view;
     view.setVisible(false);
 
-    QObject::connect(&service, SIGNAL(activateRequested(QStringList,QString)),
-                     &view, SLOT(display()));
+    QObject::connect(&service, &KDBusService::activateRequested, &view, &View::display);
 
     return app.exec();
 }

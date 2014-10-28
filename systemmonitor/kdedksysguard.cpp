@@ -51,7 +51,7 @@ void KDEDKSysGuard::init()
 
     QAction* action = actionCollection->addAction(QLatin1String("Show System Activity"));
     action->setText(i18n("Show System Activity"));
-    connect(action, SIGNAL(triggered(bool)), SLOT(showTaskManager()));
+    connect(action, &QAction::triggered, this, &KDEDKSysGuard::showTaskManager);
 
     KGlobalAccel::self()->setGlobalShortcut(action, QKeySequence(Qt::CTRL + Qt::Key_Escape));
 }

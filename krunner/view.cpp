@@ -63,14 +63,14 @@ View::View(QWindow *)
 
     if (KAuthorized::authorize(QLatin1String("run_command"))) {
         QAction *a = new QAction(0);
-        QObject::connect(a, SIGNAL(triggered(bool)), SLOT(displayOrHide()));
+        QObject::connect(a, &QAction::triggered, this, &View::displayOrHide);
         a->setText(i18n("Run Command"));
         a->setObjectName("run command");
         KGlobalAccel::self()->setDefaultShortcut(a, QList<QKeySequence>() << QKeySequence(Qt::ALT + Qt::Key_Space), KGlobalAccel::NoAutoloading);
         KGlobalAccel::self()->setShortcut(a, QList<QKeySequence>() << QKeySequence(Qt::ALT + Qt::Key_Space) << QKeySequence(Qt::ALT + Qt::Key_F2) << Qt::Key_Search);
 
         a = new QAction(0);
-        QObject::connect(a, SIGNAL(triggered(bool)), SLOT(displayWithClipboardContents()));
+        QObject::connect(a, &QAction::triggered, this, &View::displayWithClipboardContents);
         a->setText(i18n("Run Command on clipboard contents"));
         a->setObjectName("run command on clipboard contents");
         KGlobalAccel::self()->setDefaultShortcut(a, QList<QKeySequence>() << QKeySequence(Qt::ALT+Qt::SHIFT+Qt::Key_F2));
@@ -101,9 +101,9 @@ View::View(QWindow *)
         controlScreen(s);
     connect(qApp, &QGuiApplication::screenAdded, this, controlScreen);
 
-    connect(KWindowSystem::self(), SIGNAL(workAreaChanged()), this, SLOT(resetScreenPos()));
+    connect(KWindowSystem::self(), &KWindowSystem::workAreaChanged, this, &View::resetScreenPos);
 
-    connect(this, SIGNAL(visibleChanged(bool)), this, SLOT(resetScreenPos()));
+    connect(this, &View::visibleChanged, this, &View::resetScreenPos);
 
     KDirWatch::self()->addFile(m_config.name());
 

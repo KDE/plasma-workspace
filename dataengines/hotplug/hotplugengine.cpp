@@ -51,7 +51,7 @@ HotplugEngine::HotplugEngine(QObject* parent, const QVariantList& args)
     foreach (const QString &folder, folders) {
         m_dirWatch->addDir(folder, KDirWatch::WatchFiles);
     }
-    connect(m_dirWatch, SIGNAL(dirty(QString)), this, SLOT(updatePredicates(QString)));
+    connect(m_dirWatch, &KDirWatch::dirty, this, &HotplugEngine::updatePredicates);
     init();
 }
 
