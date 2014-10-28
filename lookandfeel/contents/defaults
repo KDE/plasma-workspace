@@ -12,3 +12,6 @@ name=default
 
 [kcminputrc][Mouse]
 cursorTheme=breeze_cursors
+
+[kwinrc][WindowSwitcher]
+LayoutName=org.kde.breeze.desktop
