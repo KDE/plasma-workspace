@@ -323,8 +323,10 @@ void ShellCorona::primaryOutputChanged()
 
     QScreen *oldPrimary = m_views[0]->screen();
     QScreen *newPrimary = outputToScreen(output);
-    if (!newPrimary)
+    if (!newPrimary || newPrimary == oldPrimary) {
+        CHECK_SCREEN_INVARIANTS
         return;
+    }
     qDebug() << "primary changed!" << oldPrimary->name() << newPrimary->name();
 
     foreach (DesktopView *view, m_views) {
