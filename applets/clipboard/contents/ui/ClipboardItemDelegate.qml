@@ -187,7 +187,7 @@ PlasmaComponents.ListItem {
             right: label.right
             verticalCenter: parent.verticalCenter
         }
-        visible: menuListView.currentIndex == index
+        visible: menuItem.ListView.isCurrentItem
 
         PlasmaComponents.ToolButton {
             // TODO: only show for items supporting actions?
