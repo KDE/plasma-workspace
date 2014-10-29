@@ -75,7 +75,7 @@ ColumnLayout {
             width: theme.mSize(theme.defaultFont).width * textLength
             model: [
                         {
-                            'label': i18nd("plasma_applet_org.kde.image", "Scaled && Cropped"),
+                            'label': i18nd("plasma_applet_org.kde.image", "Scaled and Cropped"),
                             'fillMode': Image.PreserveAspectCrop
                         },
                         {
