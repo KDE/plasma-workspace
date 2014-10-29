@@ -24,10 +24,6 @@ set(ksmserver_KDEINIT_SRCS
     startup.cpp
     shutdown.cpp
     client.cpp
-#TODO: figure out what do to with these effects
-#    logouteffect.cpp
-#    fadeeffect.cpp
-#    curtaineffect.cpp)
 )
 
 INCLUDE(CheckCCompilerFlag)
