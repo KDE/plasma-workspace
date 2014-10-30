@@ -696,6 +696,21 @@ bool PanelView::event(QEvent *e)
             break;
         }
 
+        case QEvent::Wheel: {
+            QWheelEvent *we = static_cast<QWheelEvent *>(e);
+
+            if (!containmentContainsPosition(we->pos())) {
+                QWheelEvent we2(positionAdjustedForContainment(we->pos()),
+                                positionAdjustedForContainment(we->pos()) + position(),
+                                we->pixelDelta(), we->angleDelta(), we->delta(),
+                                we->orientation(), we->buttons(), we->modifiers(), we->phase());
+
+                QCoreApplication::sendEvent(this, &we2);
+                return true;
+            }
+            break;
+        }
+
         case QEvent::DragEnter: {
             QDragEnterEvent *de = static_cast<QDragEnterEvent *>(e);
             if (!containmentContainsPosition(de->pos())) {
