@@ -119,4 +119,4 @@ void Startup::clearPixmapData()
 } // TaskManager namespace
 
 
-#include "startup.moc"
+

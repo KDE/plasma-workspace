@@ -137,5 +137,5 @@ bool AbstractGroupableItem::isStartupItem() const
 
 } // TaskManager namespace
 
-#include "abstractgroupableitem.moc"
+
 

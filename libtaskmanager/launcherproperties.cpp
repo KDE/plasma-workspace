@@ -56,13 +56,13 @@ LauncherProperties::LauncherProperties(QWidget *parent)
     setAttribute(Qt::WA_DeleteOnClose);
     setWindowModality(Qt::WindowModal);
     ui.browse->setIcon(QIcon::fromTheme("document-open"));
-    connect(ui.detect, SIGNAL(clicked(bool)), SLOT(detect()));
-    connect(ui.browse, SIGNAL(clicked(bool)), SLOT(browse()));
-    connect(ui.classClass, SIGNAL(textChanged(const QString &)), SLOT(check()));
-    connect(ui.className, SIGNAL(textChanged(const QString &)), SLOT(check()));
-    connect(ui.launcher, SIGNAL(textChanged(const QString &)), SLOT(check()));
-    connect(buttons, SIGNAL(accepted()), SLOT(okClicked()));
-    connect(buttons, SIGNAL(rejected()), SLOT(reject()));
+    connect(ui.detect, &QPushButton::clicked, this, &LauncherProperties::detect);
+    connect(ui.browse, &QPushButton::clicked, this, &LauncherProperties::browse);
+    connect(ui.classClass, &KLineEdit::textChanged, this, &LauncherProperties::check);
+    connect(ui.className, &KLineEdit::textChanged, this, &LauncherProperties::check);
+    connect(ui.launcher, &KLineEdit::textChanged, this, &LauncherProperties::check);
+    connect(buttons, &QDialogButtonBox::accepted, this, &LauncherProperties::okClicked);
+    connect(buttons, &QDialogButtonBox::rejected, this, &LauncherProperties::reject);
     resize(400, 100);
 }
 
@@ -106,7 +106,7 @@ void LauncherProperties::browse()
     dlg->hideRunInTerminal();
     dlg->setAttribute(Qt::WA_DeleteOnClose);
     dlg->setWindowModality(Qt::WindowModal);
-    connect(dlg, SIGNAL(accepted()), SLOT(launcherSelected()));
+    connect(dlg, &KOpenWithDialog::accepted, this, &LauncherProperties::launcherSelected);
     dlg->show();
 }
 
@@ -203,4 +203,4 @@ WId LauncherProperties::findWindow()
 
 }
 
-#include "launcherproperties.moc"
+

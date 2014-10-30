@@ -50,12 +50,12 @@ LauncherConfig::LauncherConfig(KConfigDialog *parent)
     ui.remove->setIcon(QIcon::fromTheme("list-remove"));
     ui.edit->setEnabled(false);
     ui.remove->setEnabled(false);
-    connect(ui.add, SIGNAL(clicked(bool)), SLOT(add()));
-    connect(ui.edit, SIGNAL(clicked(bool)), SLOT(edit()));
-    connect(ui.remove, SIGNAL(clicked(bool)), SLOT(remove()));
-    connect(ui.view, SIGNAL(itemSelectionChanged()), SLOT(selectionChanged()));
+    connect(ui.add, &QPushButton::clicked, this, &LauncherConfig::add);
+    connect(ui.edit, &QPushButton::clicked, this, &LauncherConfig::edit);
+    connect(ui.remove, &QPushButton::clicked, this, &LauncherConfig::remove);
+    connect(ui.view, &QTreeWidget::itemSelectionChanged, this, &LauncherConfig::selectionChanged);
     connect(this, SIGNAL(modified()), parent, SLOT(settingsModified()));
-    connect(ui.label, SIGNAL(leftClickedUrl(const QString&)), SLOT(showMoreInfo()));
+    connect(ui.label, SIGNAL(leftClickedUrl(QString)), SLOT(showMoreInfo()));
     load();
 }
 
@@ -132,7 +132,7 @@ void LauncherConfig::save()
 void LauncherConfig::add()
 {
     LauncherProperties *prop = new LauncherProperties(this);
-    connect(prop, SIGNAL(properties(const QString &, const QString &, const QString &)), SLOT(addWithProperties(const QString &, const QString &, const QString &)));
+    connect(prop, &LauncherProperties::properties, this, &LauncherConfig::addWithProperties);
     prop->run();
 }
 
@@ -157,7 +157,7 @@ void LauncherConfig::edit()
     if (1 == items.count()) {
         QTreeWidgetItem *item = items.at(0);
         LauncherProperties *prop = new LauncherProperties(this);
-        connect(prop, SIGNAL(properties(const QString &, const QString &, const QString &)), SLOT(setProperties(const QString &, const QString &, const QString &)));
+        connect(prop, &LauncherProperties::properties, this, &LauncherConfig::setProperties);
         prop->run(item->text(0), item->text(1), item->text(2));
     }
 }
@@ -209,4 +209,4 @@ void LauncherConfig::showMoreInfo()
 
 }
 
-#include "launcherconfig.moc"
+

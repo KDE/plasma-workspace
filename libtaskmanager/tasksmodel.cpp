@@ -73,8 +73,8 @@ TasksModel::TasksModel(GroupManager *groupManager, QObject *parent)
         connect(groupManager, SIGNAL(reload()), this, SLOT(populateModel()));
     }
 
-    connect(this, SIGNAL(rowsInserted(QModelIndex, int, int)), this, SIGNAL(countChanged()));
-    connect(this, SIGNAL(rowsRemoved(QModelIndex, int, int)), this, SIGNAL(countChanged()));
+    connect(this, &TasksModel::rowsInserted, this, &TasksModel::countChanged);
+    connect(this, &TasksModel::rowsRemoved, this, &TasksModel::countChanged);
 }
 
 TasksModel::~TasksModel()
@@ -382,24 +382,12 @@ void TasksModelPrivate::populateModel()
 
 void TasksModelPrivate::populate(const QModelIndex &parent, TaskGroup *group)
 {
-    QObject::connect(group, SIGNAL(itemAboutToBeAdded(AbstractGroupableItem*, int)),
-                     q, SLOT(itemAboutToBeAdded(AbstractGroupableItem*, int)),
-                     Qt::UniqueConnection);
-    QObject::connect(group, SIGNAL(itemAdded(AbstractGroupableItem*)),
-                     q, SLOT(itemAdded(AbstractGroupableItem*)),
-                     Qt::UniqueConnection);
-    QObject::connect(group, SIGNAL(itemAboutToBeRemoved(AbstractGroupableItem*)),
-                     q, SLOT(itemAboutToBeRemoved(AbstractGroupableItem*)),
-                     Qt::UniqueConnection);
-    QObject::connect(group, SIGNAL(itemRemoved(AbstractGroupableItem*)),
-                     q, SLOT(itemRemoved(AbstractGroupableItem*)),
-                     Qt::UniqueConnection);
-    QObject::connect(group, SIGNAL(itemAboutToMove(AbstractGroupableItem*, int, int)),
-                     q, SLOT(itemAboutToMove(AbstractGroupableItem*, int, int)),
-                     Qt::UniqueConnection);
-    QObject::connect(group, SIGNAL(itemPositionChanged(AbstractGroupableItem*)),
-                     q, SLOT(itemMoved(AbstractGroupableItem*)),
-                     Qt::UniqueConnection);
+    QObject::connect(group, SIGNAL(itemAboutToBeAdded(AbstractGroupableItem*, int)), q, SLOT(itemAboutToBeAdded(AbstractGroupableItem*, int)), Qt::UniqueConnection);
+    QObject::connect(group, SIGNAL(itemAdded(AbstractGroupableItem*)), q, SLOT(itemAdded(AbstractGroupableItem*)), Qt::UniqueConnection);
+    QObject::connect(group, SIGNAL(itemAboutToBeRemoved(AbstractGroupableItem*)), q, SLOT(itemAboutToBeRemoved(AbstractGroupableItem*)), Qt::UniqueConnection);
+    QObject::connect(group, SIGNAL(itemRemoved(AbstractGroupableItem*)), q, SLOT(itemRemoved(AbstractGroupableItem*)), Qt::UniqueConnection);
+    QObject::connect(group, SIGNAL(itemAboutToMove(AbstractGroupableItem*, int, int)), q, SLOT(itemAboutToMove(AbstractGroupableItem*, int, int)), Qt::UniqueConnection);
+    QObject::connect(group, SIGNAL(itemPositionChanged(AbstractGroupableItem*)), q, SLOT(itemMoved(AbstractGroupableItem*)), Qt::UniqueConnection);
 
     if (group->members().isEmpty()) {
         return;
@@ -415,9 +403,7 @@ void TasksModelPrivate::populate(const QModelIndex &parent, TaskGroup *group)
             childGroups << idxGroupPair(idx, static_cast<TaskGroup *>(item));
         }
 
-        QObject::connect(item, SIGNAL(changed(::TaskManager::TaskChanges)),
-                         q, SLOT(itemChanged(::TaskManager::TaskChanges)),
-                         Qt::UniqueConnection);
+        QObject::connect(item, SIGNAL(changed(::TaskManager::TaskChanges)), q, SLOT(itemChanged(::TaskManager::TaskChanges)), Qt::UniqueConnection);
         ++i;
     }
 
@@ -453,9 +439,7 @@ void TasksModelPrivate::itemAboutToBeAdded(AbstractGroupableItem *item, int inde
         parentIdx = q->createIndex(indexOf(parent), 0, parent);
     }
 
-    QObject::connect(item, SIGNAL(changed(::TaskManager::TaskChanges)),
-                    q, SLOT(itemChanged(::TaskManager::TaskChanges)),
-                    Qt::UniqueConnection);
+    QObject::connect(item, SIGNAL(changed(::TaskManager::TaskChanges)), q, SLOT(itemChanged(::TaskManager::TaskChanges)), Qt::UniqueConnection);
 
     q->beginInsertRows(parentIdx, index, index);
 

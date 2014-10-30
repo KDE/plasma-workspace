@@ -261,8 +261,7 @@ void GroupManagerPrivate::addStartup(::TaskManager::Startup *startup)
     startupList.insert(startup, item);
     currentRootGroup()->add(item);
     QObject::connect(startup, SIGNAL(destroyed(QObject*)), q, SLOT(startupDestroyed(QObject*)));
-    QObject::connect(item, SIGNAL(destroyed(AbstractGroupableItem*)),
-                        q, SLOT(startupItemDestroyed(AbstractGroupableItem*)));
+    QObject::connect(item, SIGNAL(destroyed(AbstractGroupableItem*)), q, SLOT(startupItemDestroyed(AbstractGroupableItem*)));
 }
 
 void GroupManagerPrivate::removeStartup(::TaskManager::Startup *startup)

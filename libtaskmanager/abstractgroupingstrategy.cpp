@@ -144,7 +144,7 @@ TaskGroup* AbstractGroupingStrategy::createGroup(ItemList items)
     //kDebug() << "added group" << d->createdGroups.count();
     // NOTE: Queued is vital to make sure groups only get removed after their children, for
     // correct QAbstractItemModel (TasksModel) transaction semantics.
-    connect(newGroup, SIGNAL(itemRemoved(AbstractGroupableItem*)), this, SLOT(checkGroup()), Qt::QueuedConnection);
+    connect(newGroup, &TaskGroup::itemRemoved, this, &AbstractGroupingStrategy::checkGroup, Qt::QueuedConnection);
     foreach (AbstractGroupableItem * item, items) {
         int idx = oldGroupMembers.indexOf(item);
         if (idx >= 0 && idx < index) {
@@ -276,5 +276,5 @@ QList <QIcon> AbstractGroupingStrategy::iconSuggestions(TaskGroup *)
 
 }//namespace
 
-#include "abstractgroupingstrategy.moc"
+
 

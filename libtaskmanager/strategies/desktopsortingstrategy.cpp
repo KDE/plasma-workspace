@@ -111,5 +111,5 @@ void DesktopSortingStrategy::handleItem(AbstractGroupableItem *item)
 
 } //namespace
 
-#include "desktopsortingstrategy.moc"
+
 
