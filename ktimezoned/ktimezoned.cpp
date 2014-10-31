@@ -86,9 +86,9 @@ void KTimeZoned::init(bool restart)
         m_dirWatch->addFile(QStringLiteral("/etc/timezone"));
         m_dirWatch->addFile(QStringLiteral("/etc/localtime"));
 
-        connect(m_dirWatch, SIGNAL(dirty(const QString&)), SLOT(updateLocalZone()));
-        connect(m_dirWatch, SIGNAL(deleted(const QString&)), SLOT(updateLocalZone()));
-        connect(m_dirWatch, SIGNAL(created(const QString&)), SLOT(updateLocalZone()));
+        connect(m_dirWatch, &KDirWatch::dirty, this, &KTimeZoned::updateLocalZone);
+        connect(m_dirWatch, &KDirWatch::deleted, this, &KTimeZoned::updateLocalZone);
+        connect(m_dirWatch, &KDirWatch::created, this, &KTimeZoned::updateLocalZone);
     }
 
     if (!m_zoneTabWatch && findZoneTab(m_zoneTab)) {
@@ -102,9 +102,9 @@ void KTimeZoned::init(bool restart)
         m_zoneTabWatch = new KDirWatch(this);
         m_zoneTabWatch->addDir(m_zoneinfoDir, KDirWatch::WatchFiles);
 
-        connect(m_dirWatch, SIGNAL(dirty(const QString&)), SLOT(updateLocalZone()));
-        connect(m_dirWatch, SIGNAL(created(const QString&)), SLOT(updateLocalZone()));
-        connect(m_dirWatch, SIGNAL(deleted(const QString&)), SLOT(updateLocalZone()));
+        connect(m_dirWatch, &KDirWatch::dirty, this, &KTimeZoned::updateLocalZone);
+        connect(m_dirWatch, &KDirWatch::created, this, &KTimeZoned::updateLocalZone);
+        connect(m_dirWatch, &KDirWatch::deleted, this, &KTimeZoned::updateLocalZone);
     }
 }
 
