@@ -43,7 +43,6 @@ namespace Plasma {
 namespace PlasmaQuick
 {
 
-class ConfigPropertyMap;
 
 class ConfigCategoryPrivate;
 

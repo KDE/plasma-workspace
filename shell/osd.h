@@ -26,7 +26,6 @@ namespace KDeclarative {
     class QmlObject;
 }
 namespace Plasma {
-    class Package;
 }
 
 class QTimer;

@@ -30,8 +30,6 @@
 #include <QStandardItemModel>
 #include <Plasma/Theme>
 
-class AppletInterface;
-class ConfigPropertyMap;
 class PanelView;
 
 namespace Plasma {

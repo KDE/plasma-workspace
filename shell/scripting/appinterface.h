@@ -26,7 +26,6 @@
 
 namespace Plasma
 {
-    class Applet;
     class Containment;
     class Corona;
     class Theme;

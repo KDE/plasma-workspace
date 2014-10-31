@@ -39,7 +39,6 @@ namespace KActivities
 
 namespace Plasma
 {
-    class Containment;
     class Corona;
 } // namespace Plasma
 

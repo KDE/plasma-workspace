@@ -24,7 +24,6 @@
 #include "panelconfigview.h"
 #include <QtCore/qpointer.h>
 
-class ShellCorona;
 
 class DesktopView : public PlasmaQuick::View
 {
