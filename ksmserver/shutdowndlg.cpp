@@ -184,7 +184,6 @@ KSMShutdownDlg::KSMShutdownDlg( QWindow* parent,
     requestActivate();
 
     KWindowSystem::setState(winId(), NET::SkipTaskbar|NET::SkipPager);
-//    adjustSize();
 }
 
 void KSMShutdownDlg::resizeEvent(QResizeEvent *e)
@@ -284,19 +283,16 @@ bool KSMShutdownDlg::confirmShutdown(
         bool maysd, bool choose, KWorkSpace::ShutdownType& sdtype, QString& bootOption,
         const QString& theme)
 {
-    KSMShutdownDlg* l = new KSMShutdownDlg( 0,
-                                            //KSMShutdownFeedback::self(),
-                                            maysd, choose, sdtype, theme );
+    QScopedPointer<KSMShutdownDlg> l(new KSMShutdownDlg( 0, maysd, choose, sdtype, theme ));
+
     XClassHint classHint;
     classHint.res_name = const_cast<char*>("ksmserver");
     classHint.res_class = const_cast<char*>("ksmserver");
-
     XSetClassHint(QX11Info::display(), l->winId(), &classHint);
+
     bool result = l->exec();
     sdtype = l->m_shutdownType;
     bootOption = l->m_bootOption;
-
-    delete l;
 
     return result;
 }
