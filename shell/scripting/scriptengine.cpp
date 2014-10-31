@@ -63,12 +63,12 @@ ScriptEngine::ScriptEngine(Plasma::Corona *corona, QObject *parent)
 {
     Q_ASSERT(m_corona);
     AppInterface *interface = new AppInterface(this);
-    connect(interface, SIGNAL(print(QString)), this, SIGNAL(print(QString)));
+    connect(interface, &AppInterface::print, this, &ScriptEngine::print);
     m_scriptSelf = newQObject(interface, QScriptEngine::QtOwnership,
                               QScriptEngine::ExcludeSuperClassProperties |
                               QScriptEngine::ExcludeSuperClassMethods);
     setupEngine();
-    connect(this, SIGNAL(signalHandlerException(QScriptValue)), this, SLOT(exception(QScriptValue)));
+    connect(this, &ScriptEngine::signalHandlerException, this, &ScriptEngine::exception);
     bindI18N(this);
 }
 

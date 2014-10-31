@@ -46,8 +46,7 @@ Osd::Osd(ShellCorona *corona)
 
     m_osdTimer = new QTimer(this);
     m_osdTimer->setSingleShot(true);
-    connect(m_osdTimer, SIGNAL(timeout()),
-            this, SLOT(hideOsd()));
+    connect(m_osdTimer, &QTimer::timeout, this, &Osd::hideOsd);
 }
 
 Osd::~Osd()

@@ -50,14 +50,14 @@ Activity::Activity(const QString &id, Plasma::Corona *parent)
     m_name = m_info->name();
     m_icon = m_info->icon();
 
-    connect(m_info, SIGNAL(infoChanged()), this, SLOT(activityChanged()));
-    connect(m_info, SIGNAL(stateChanged(KActivities::Info::State)), this, SIGNAL(stateChanged()));
-    connect(m_info, SIGNAL(started()), this, SIGNAL(opened()));
-    connect(m_info, SIGNAL(stopped()), this, SIGNAL(closed()));
-    connect(m_info, SIGNAL(removed()), this, SIGNAL(removed()));
-    connect(m_info, SIGNAL(removed()), this, SLOT(cleanupActivity()));
+    connect(m_info, &KActivities::Info::infoChanged, this, &Activity::activityChanged);
+    connect(m_info, &KActivities::Info::stateChanged, this, &Activity::stateChanged);
+    connect(m_info, &KActivities::Info::started, this, &Activity::opened);
+    connect(m_info, &KActivities::Info::stopped, this, &Activity::closed);
+    connect(m_info, &KActivities::Info::removed, this, &Activity::removed);
+    connect(m_info, &KActivities::Info::removed, this, &Activity::cleanupActivity);
 
-    connect(m_activityConsumer, SIGNAL(currentActivityChanged(QString)), this, SLOT(checkIfCurrent()));
+    connect(m_activityConsumer, &KActivities::Consumer::currentActivityChanged, this, &Activity::checkIfCurrent);
     checkIfCurrent();
 }
 

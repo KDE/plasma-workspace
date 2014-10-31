@@ -56,7 +56,7 @@ ConfigGroup::ConfigGroup(QObject *parent)
     d->synchTimer = new QTimer(this);
     d->synchTimer->setSingleShot(true);
     d->synchTimer->setInterval(1500);
-    connect(d->synchTimer, SIGNAL(timeout()), SLOT(sync()));
+    connect(d->synchTimer, &QTimer::timeout, this, &ConfigGroup::sync);
 }
 
 ConfigGroup::~ConfigGroup()
