@@ -30,7 +30,6 @@
 
 namespace TaskManager
 {
-    class Startup;
     class Task;
 } // namespace TaskManager
 

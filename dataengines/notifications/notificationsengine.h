@@ -24,7 +24,6 @@
 #include <Plasma/DataEngine>
 #include <QSet>
 
-class QTimer;
 
 /**
  *  Engine which provides data sources for notifications.

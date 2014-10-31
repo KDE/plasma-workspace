@@ -138,4 +138,3 @@ void TaskJob::start()
     setResult(false);
 }
 
-#include "taskjob.moc"

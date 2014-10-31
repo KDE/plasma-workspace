@@ -130,4 +130,3 @@ void PowerManagementJob::requestShutDown()
     KWorkSpace::requestShutDown();
 }
 
-#include "powermanagementjob.moc"
