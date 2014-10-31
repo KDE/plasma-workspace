@@ -75,7 +75,7 @@ UnlockApp::UnlockApp(int &argc, char **argv)
 {
     connect(m_authenticator, &Authenticator::succeeded, this, &QCoreApplication::quit);
     initialize();
-    connect(this, SIGNAL(screenAdded(QScreen*)), SLOT(desktopResized()));
+    connect(this, &UnlockApp::screenAdded, this, &UnlockApp::desktopResized);
 }
 
 UnlockApp::~UnlockApp()
@@ -95,7 +95,7 @@ void UnlockApp::initialize()
     // are not processed in quick (and confusing) succession)
     m_resetRequestIgnoreTimer->setSingleShot(true);
     m_resetRequestIgnoreTimer->setInterval(2000);
-    connect(m_resetRequestIgnoreTimer, SIGNAL(timeout()), this, SLOT(resetRequestIgnore()));
+    connect(m_resetRequestIgnoreTimer, &QTimer::timeout, this, &UnlockApp::resetRequestIgnore);
 
     // disable DrKonqi as the crash dialog blocks the restart of the locker
     KCrash::setDrKonqiEnabled(false);
@@ -146,8 +146,7 @@ void UnlockApp::desktopResized()
         connect(QGuiApplication::screens()[i], SIGNAL(destroyed(QObject*)), SLOT(desktopResized()));
         // create the view
         QQuickView *view = new QQuickView();
-        connect(view, SIGNAL(statusChanged(QQuickView::Status)),
-                this, SLOT(viewStatusChanged(QQuickView::Status)));
+        connect(view, &QQuickView::statusChanged, this, &UnlockApp::viewStatusChanged);
 
         if (!m_testing) {
             view->setFlags(Qt::X11BypassWindowManagerHint);
@@ -416,4 +415,3 @@ void UnlockApp::setNoLock(bool noLock)
 
 } // namespace
 
-#include "greeterapp.moc"

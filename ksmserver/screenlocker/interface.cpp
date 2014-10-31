@@ -48,12 +48,12 @@ Interface::Interface(KSldApp *parent)
     QDBusConnection::sessionBus().registerService(QLatin1String("org.kde.screensaver"));
     QDBusConnection::sessionBus().registerObject(QLatin1String("/ScreenSaver"), this);
     QDBusConnection::sessionBus().registerObject(QLatin1String("/org/freedesktop/ScreenSaver"), this);
-    connect(m_daemon, SIGNAL(locked()), SLOT(slotLocked()));
-    connect(m_daemon, SIGNAL(unlocked()), SLOT(slotUnlocked()));
+    connect(m_daemon, &KSldApp::locked, this, &Interface::slotLocked);
+    connect(m_daemon, &KSldApp::unlocked, this, &Interface::slotUnlocked);
 
     m_serviceWatcher->setConnection(QDBusConnection::sessionBus());
     m_serviceWatcher->setWatchMode(QDBusServiceWatcher::WatchForUnregistration);
-    connect(m_serviceWatcher, SIGNAL(serviceUnregistered(QString)), SLOT(serviceUnregistered(QString)));
+    connect(m_serviceWatcher, &QDBusServiceWatcher::serviceUnregistered, this, &Interface::serviceUnregistered);
 
     // Also receive updates triggered through the DBus (from powerdevil) see Bug #177123
     QStringList modules;
@@ -212,4 +212,3 @@ void Interface::sendLockReplies()
 
 } // namespace
 
-#include "interface.moc"

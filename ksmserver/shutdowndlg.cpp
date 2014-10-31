@@ -62,7 +62,6 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #include <config-workspace.h>
 
 //#include "logouteffect.h"
-#include "shutdowndlg.moc"
 
 #include <kjob.h>
 #include <qstandardpaths.h>

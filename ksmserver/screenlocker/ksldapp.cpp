@@ -208,7 +208,7 @@ void KSldApp::initialize()
 
 void KSldApp::configure()
 {
-    KScreenSaverSettings::self()->readConfig();
+    KScreenSaverSettings::self()->load();
     // idle support
     if (m_idleId) {
         KIdleTime::instance()->removeIdleTimeout(m_idleId);
@@ -422,4 +422,3 @@ void KSldApp::uninhibit()
 }
 
 } // namespace
-#include "ksldapp.moc"

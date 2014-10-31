@@ -71,6 +71,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #include <QStandardPaths>
 #include <QDebug>
 #include <QAction>
+#include <QApplication>
 
 #include <kactioncollection.h>
 #include <kauthorized.h>
@@ -82,7 +83,6 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #include <kprocess.h>
 #include <kshell.h>
 
-#include "server.moc"
 
 // must go after #include <config-ksmserver.h>
 #ifdef COMPILE_SCREEN_LOCKER
@@ -133,8 +133,8 @@ KProcess* KSMServer::startApplication( const QStringList& cmd, const QString& cl
         KProcess* process = new KProcess( this );
         *process << command;
         // make it auto-delete
-        connect( process, SIGNAL(error(QProcess::ProcessError)), process, SLOT(deleteLater()));
-        connect( process, SIGNAL(finished(int,QProcess::ExitStatus)), process, SLOT(deleteLater()));
+        connect(process, static_cast<void (KProcess::*)(QProcess::ProcessError)>(&KProcess::error), process, &KProcess::deleteLater);
+        connect(process, static_cast<void (KProcess::*)(int, QProcess::ExitStatus)>(&KProcess::finished), process, &KProcess::deleteLater);
         process->start();
         return process;
     } else {
@@ -641,8 +641,8 @@ KSMServer::KSMServer( const QString& windowManager, bool _only_local, bool locks
     //KGlobal::dirs()->addResourceType( "windowmanagers", "data", "ksmserver/windowmanagers" );
     selectWm( windowManager );
 
-    connect( &startupSuspendTimeoutTimer, SIGNAL(timeout()), SLOT(startupSuspendTimeout()));
-    connect( &pendingShutdown, SIGNAL(timeout()), SLOT(pendingShutdownTimeout()));
+    connect(&startupSuspendTimeoutTimer, &QTimer::timeout, this, &KSMServer::startupSuspendTimeout);
+    connect(&pendingShutdown, &QTimer::timeout, this, &KSMServer::pendingShutdownTimeout);
 
     only_local = _only_local;
 #ifdef HAVE__ICETRANSNOLISTEN
@@ -720,7 +720,7 @@ KSMServer::KSMServer( const QString& windowManager, bool _only_local, bool locks
         fcntl( IceGetListenConnectionNumber( listenObjs[i] ), F_SETFD, FD_CLOEXEC );
         con = new KSMListener( listenObjs[i] );
         listener.append( con );
-        connect( con, SIGNAL(activated(int)), this, SLOT(newConnection(int)) );
+        connect(con, &KSMListener::activated, this, &KSMServer::newConnection);
     }
 
     signal(SIGHUP, sighandler);
@@ -728,9 +728,9 @@ KSMServer::KSMServer( const QString& windowManager, bool _only_local, bool locks
     signal(SIGINT, sighandler);
     signal(SIGPIPE, SIG_IGN);
 
-    connect( &protectionTimer, SIGNAL(timeout()), this, SLOT(protectionTimeout()) );
-    connect( &restoreTimer, SIGNAL(timeout()), this, SLOT(tryRestoreNext()) );
-    connect( qApp, SIGNAL(aboutToQuit()), this, SLOT(cleanUp()) );
+    connect(&protectionTimer, &QTimer::timeout, this, &KSMServer::protectionTimeout);
+    connect(&restoreTimer, &QTimer::timeout, this, &KSMServer::tryRestoreNext);
+    connect(qApp, &QApplication::aboutToQuit, this, &KSMServer::cleanUp);
 }
 
 KSMServer::~KSMServer()
@@ -771,7 +771,7 @@ void KSMServer::cleanUp()
 void* KSMServer::watchConnection( IceConn iceConn )
 {
     KSMConnection* conn = new KSMConnection( iceConn );
-    connect( conn, SIGNAL(activated(int)), this, SLOT(processData(int)) );
+    connect(conn, &KSMConnection::activated, this, &KSMServer::processData);
     return (void*) conn;
 }
 
@@ -1048,22 +1048,22 @@ void KSMServer::setupShortcuts()
         a = actionCollection->addAction(QStringLiteral("Log Out"));
         a->setText(i18n("Log Out"));
         KGlobalAccel::self()->setShortcut(a, QList<QKeySequence>() << Qt::ALT+Qt::CTRL+Qt::Key_Delete);
-        connect(a, SIGNAL(triggered(bool)), SLOT(defaultLogout()));
+        connect(a, &QAction::triggered, this, &KSMServer::defaultLogout);
 
         a = actionCollection->addAction(QStringLiteral("Log Out Without Confirmation"));
         a->setText(i18n("Log Out Without Confirmation"));
         KGlobalAccel::self()->setShortcut(a, QList<QKeySequence>() << Qt::ALT+Qt::CTRL+Qt::SHIFT+Qt::Key_Delete);
-        connect(a, SIGNAL(triggered(bool)), SLOT(logoutWithoutConfirmation()));
+        connect(a, &QAction::triggered, this, &KSMServer::logoutWithoutConfirmation);
 
         a = actionCollection->addAction(QStringLiteral("Halt Without Confirmation"));
         a->setText(i18n("Halt Without Confirmation"));
         KGlobalAccel::self()->setShortcut(a, QList<QKeySequence>() << Qt::ALT+Qt::CTRL+Qt::SHIFT+Qt::Key_PageDown);
-        connect(a, SIGNAL(triggered(bool)), SLOT(haltWithoutConfirmation()));
+        connect(a, &QAction::triggered, this, &KSMServer::haltWithoutConfirmation);
 
         a = actionCollection->addAction(QStringLiteral("Reboot Without Confirmation"));
         a->setText(i18n("Reboot Without Confirmation"));
         KGlobalAccel::self()->setShortcut(a, QList<QKeySequence>() << Qt::ALT+Qt::CTRL+Qt::SHIFT+Qt::Key_PageUp);
-        connect(a, SIGNAL(triggered(bool)), SLOT(rebootWithoutConfirmation()));
+        connect(a, &QAction::triggered, this, &KSMServer::rebootWithoutConfirmation);
     }
 }
 
