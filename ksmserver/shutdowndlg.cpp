@@ -66,8 +66,6 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 #include "shutdowndlg.moc"
 
-#define FONTCOLOR "#bfbfbf"
-
 Q_DECLARE_METATYPE(Solid::PowerManagement::SleepState)
 
 KSMShutdownDlg::KSMShutdownDlg( QWindow* parent,
