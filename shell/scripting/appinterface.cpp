@@ -227,5 +227,5 @@ QStringList AppInterface::knownContainmentTypes(const QString &type) const
 
 }
 
-#include "appinterface.moc"
+
 

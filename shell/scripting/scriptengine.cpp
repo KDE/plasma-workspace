@@ -908,5 +908,5 @@ QStringList ScriptEngine::pendingUpdateScripts(Plasma::Corona *corona)
 
 }
 
-#include "scriptengine.moc"
+
 

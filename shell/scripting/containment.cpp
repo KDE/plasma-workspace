@@ -284,5 +284,5 @@ Plasma::Containment *Containment::containment() const
 
 }
 
-#include "containment.moc"
+
 

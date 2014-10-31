@@ -171,6 +171,6 @@ const KActivities::Info * Activity::info() const
     return m_info;
 }
 
-#include "activity.moc"
+
 
 // vim: sw=4 sts=4 et tw=100

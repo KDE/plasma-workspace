@@ -278,5 +278,5 @@ Plasma::Applet *Applet::applet() const
 
 }
 
-#include "applet.moc"
+
 

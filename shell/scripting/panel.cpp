@@ -410,5 +410,5 @@ void Panel::setHiding(const QString &mode)
 
 }
 
-#include "panel.moc"
+
 

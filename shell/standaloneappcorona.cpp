@@ -232,4 +232,4 @@ int StandaloneAppCorona::screenForContainment(const Plasma::Containment *contain
     return 0;
 }
 
-#include "standaloneappcorona.moc"
+
