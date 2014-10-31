@@ -42,18 +42,21 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #include <QStandardPaths>
 #include <QtX11Extras/qx11info_x11.h>
 #include <QScreen>
+#include <QStandardPaths>
 
 #include <Plasma/PluginLoader>
-#include <kiconloader.h>
-#include <klocalizedstring.h>
-#include <kuser.h>
+#include <KIconLoader>
+#include <KLocalizedString>
+#include <KUser>
 #include <Solid/PowerManagement>
-#include <kwindowsystem.h>
-#include <netwm.h>
-#include <kdeclarative/kdeclarative.h>
-#include <ksharedconfig.h>
+#include <KWindowSystem>
+#include <KDeclarative/KDeclarative>
+#include <KSharedConfig>
+#include <KJob>
 
 #include <stdio.h>
+#include <netwm.h>
+
 #include <X11/Xutil.h>
 #include <X11/Xatom.h>
 
@@ -61,11 +64,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 #include <config-workspace.h>
 
-//#include "logouteffect.h"
 #include "shutdowndlg.moc"
-
-#include <kjob.h>
-#include <qstandardpaths.h>
 
 #define FONTCOLOR "#bfbfbf"
 
