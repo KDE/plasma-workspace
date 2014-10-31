@@ -16,7 +16,6 @@ int main(int argc, char *argv[])
     KAboutData::setApplicationData(about);
     QCommandLineParser options;
     options.addOption(QCommandLineOption(QStringList("t") << "type", i18n("The type of shutdown to emulate: Default, None, Reboot, Halt or Logout"), "name", "None"));
-    options.addOption(QCommandLineOption("theme", i18n("Shutdown dialog theme file."), "path"));
     options.addOption(QCommandLineOption("choose", i18n("Sets the mode where the user can choose between the different options. Use with --type.")));
 
     about.setupCommandLine(&options);
