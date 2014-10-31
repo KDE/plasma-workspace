@@ -42,31 +42,27 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #include <QStandardPaths>
 #include <QtX11Extras/qx11info_x11.h>
 #include <QScreen>
+#include <QStandardPaths>
 
 #include <Plasma/PluginLoader>
-#include <kiconloader.h>
-#include <klocalizedstring.h>
-#include <kuser.h>
+#include <KIconLoader>
+#include <KLocalizedString>
+#include <KUser>
 #include <Solid/PowerManagement>
-#include <kwindowsystem.h>
-#include <netwm.h>
-#include <kdeclarative/kdeclarative.h>
-#include <ksharedconfig.h>
+#include <KWindowSystem>
+#include <KDeclarative/KDeclarative>
+#include <KSharedConfig>
+#include <KJob>
 
 #include <stdio.h>
+#include <netwm.h>
+
 #include <X11/Xutil.h>
 #include <X11/Xatom.h>
 
 #include <kdisplaymanager.h>
 
 #include <config-workspace.h>
-
-//#include "logouteffect.h"
-
-#include <kjob.h>
-#include <qstandardpaths.h>
-
-#define FONTCOLOR "#bfbfbf"
 
 Q_DECLARE_METATYPE(Solid::PowerManagement::SleepState)
 
@@ -188,7 +184,6 @@ KSMShutdownDlg::KSMShutdownDlg( QWindow* parent,
     requestActivate();
 
     KWindowSystem::setState(winId(), NET::SkipTaskbar|NET::SkipPager);
-//    adjustSize();
 }
 
 void KSMShutdownDlg::resizeEvent(QResizeEvent *e)
@@ -288,19 +283,16 @@ bool KSMShutdownDlg::confirmShutdown(
         bool maysd, bool choose, KWorkSpace::ShutdownType& sdtype, QString& bootOption,
         const QString& theme)
 {
-    KSMShutdownDlg* l = new KSMShutdownDlg( 0,
-                                            //KSMShutdownFeedback::self(),
-                                            maysd, choose, sdtype, theme );
+    QScopedPointer<KSMShutdownDlg> l(new KSMShutdownDlg( 0, maysd, choose, sdtype, theme ));
+
     XClassHint classHint;
     classHint.res_name = const_cast<char*>("ksmserver");
     classHint.res_class = const_cast<char*>("ksmserver");
-
     XSetClassHint(QX11Info::display(), l->winId(), &classHint);
+
     bool result = l->exec();
     sdtype = l->m_shutdownType;
     bootOption = l->m_bootOption;
-
-    delete l;
 
     return result;
 }
