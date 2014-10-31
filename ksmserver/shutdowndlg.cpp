@@ -64,8 +64,6 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 #include <config-workspace.h>
 
-#include "shutdowndlg.moc"
-
 Q_DECLARE_METATYPE(Solid::PowerManagement::SleepState)
 
 KSMShutdownDlg::KSMShutdownDlg( QWindow* parent,
