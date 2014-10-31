@@ -94,15 +94,15 @@ void ContextMenu::restore(const KConfigGroup &config)
     if (!m_runCommandAction) {
         m_runCommandAction = new QAction(i18nc("plasma_containmentactions_contextmenu", "Run Command..."), this);
         m_runCommandAction->setIcon(QIcon::fromTheme("system-run"));
-        connect(m_runCommandAction, SIGNAL(triggered(bool)), this, SLOT(runCommand()));
+        connect(m_runCommandAction, &QAction::triggered, this, &ContextMenu::runCommand);
 
         m_lockScreenAction = new QAction(i18nc("plasma_containmentactions_contextmenu", "Lock Screen"), this);
         m_lockScreenAction->setIcon(QIcon::fromTheme("system-lock-screen"));
-        connect(m_lockScreenAction, SIGNAL(triggered(bool)), this, SLOT(lockScreen()));
+        connect(m_lockScreenAction, &QAction::triggered, this, &ContextMenu::lockScreen);
 
         m_logoutAction = new QAction(i18nc("plasma_containmentactions_contextmenu", "Leave..."), this);
         m_logoutAction->setIcon(QIcon::fromTheme("system-log-out"));
-        connect(m_logoutAction, SIGNAL(triggered(bool)), this, SLOT(startLogout()));
+        connect(m_logoutAction, &QAction::triggered, this, &ContextMenu::startLogout);
 
         m_separator1 = new QAction(this);
         m_separator1->setSeparator(true);

@@ -49,7 +49,7 @@ QList<QAction*> SwitchDesktop::contextualActions()
         for (int i = m_actions.count() + 1; i <= numDesktops; ++i) {
             QString name = KWindowSystem::desktopName(i);
             QAction *action = new QAction(QString("%1: %2").arg(i).arg(name), this);
-            connect(action, SIGNAL(triggered()), this, SLOT(switchTo()));
+            connect(action, &QAction::triggered, this, &SwitchDesktop::switchTo);
             action->setData(i);
             m_actions[i] = action;
         }

@@ -23,9 +23,6 @@
 #include <plasma/containmentactions.h>
 
 class QAction;
-class QMenu;
-class QMouseEvent;
-class QWheelEvent;
 
 class SwitchDesktop : public Plasma::ContainmentActions
 {
