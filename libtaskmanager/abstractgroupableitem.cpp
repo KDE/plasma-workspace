@@ -28,6 +28,8 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 #include <QDebug>
 
+#include <KRun>
+
 #include "taskgroup.h"
 #include "taskmanager.h"
 
@@ -133,6 +135,15 @@ bool AbstractGroupableItem::isGroupMember(const GroupPtr group) const
 bool AbstractGroupableItem::isStartupItem() const
 {
     return false;
+}
+
+void AbstractGroupableItem::launchNewInstance() const
+{
+    const QUrl &url = launcherUrl();
+
+    if (url.isValid()) {
+        new KRun(url, 0);
+    }
 }
 
 } // TaskManager namespace

@@ -103,6 +103,7 @@ public:
     virtual bool demandsAttention() const = 0;
     virtual void addMimeData(QMimeData *) const = 0;
     virtual QUrl launcherUrl() const = 0;
+    virtual void launchNewInstance() const;
 
 public Q_SLOTS:
     /** Functions that both, Tasks and Groups have */

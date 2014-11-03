@@ -535,11 +535,7 @@ NewInstanceActionImpl::NewInstanceActionImpl(QObject *parent, AbstractGroupableI
 
 void NewInstanceActionImpl::launchNewInstance()
 {
-    if (!m_url.isValid()) {
-        return;
-    }
-
-    new KRun(m_url, 0);
+    m_abstractItem->launchNewInstance();
 }
 
 EditGroupActionImpl::EditGroupActionImpl(QObject *parent, TaskGroup *group, GroupManager *groupManager)
