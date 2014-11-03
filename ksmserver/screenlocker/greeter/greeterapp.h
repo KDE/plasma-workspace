@@ -59,7 +59,6 @@ private Q_SLOTS:
     void resetRequestIgnore();
     void suspendToRam();
     void suspendToDisk();
-    void shutdown();
     void getFocus();
     void setLockedPropertyOnViews();
 
