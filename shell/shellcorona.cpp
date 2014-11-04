@@ -770,7 +770,7 @@ void ShellCorona::addOutput(KScreen::Output *output)
 
     QScreen* newScreen = insertScreen(screen, insertPosition);
 
-    DesktopView *view = new DesktopView(this, screen);
+    DesktopView *view = new DesktopView(this, newScreen);
 
     Plasma::Containment *containment = createContainmentForActivity(m_activityController->currentActivity(), m_views.count());
     Q_ASSERT(containment);
