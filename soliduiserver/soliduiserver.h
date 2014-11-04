@@ -64,20 +64,5 @@ private:
 
     QMap<QString, DeviceActionsDialog*> m_udiToActionsDialog;
     QMap<QString, KPasswordDialog*> m_idToPassphraseDialog;
-
-#if 0
-private Q_SLOTS:
-    void slotStatResult(KJob *job);
-
-private:
-    bool autostart(const KFileItem &medium);
-
-    bool execAutorun(const KFileItem &medium, const QString &path,
-                     const QString &autorunFile);
-    bool execAutoopen(const KFileItem &medium, const QString &path,
-                      const QString &autoopenFile);
-
-    QMap<KJob*,bool> m_allowNotificationMap;
-#endif
 };
 #endif

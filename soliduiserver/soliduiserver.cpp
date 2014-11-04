@@ -20,6 +20,7 @@
 */
 
 #include "soliduiserver.h"
+#include "config-X11.h"
 
 #include <QFile>
 #include <QStandardPaths>
@@ -43,7 +44,6 @@
 #include "deviceserviceaction.h"
 #include "devicenothingaction.h"
 
-#define TRANSLATION_DOMAIN "soliduiserver"
 K_PLUGIN_FACTORY_WITH_JSON(SolidUiServerFactory,
                            "soliduiserver.json",
                            registerPlugin<SolidUiServer>();
@@ -71,10 +71,9 @@ void SolidUiServer::showActionsDialog(const QString &udi,
     QList<DeviceAction*> actions;
 
     foreach (const QString &desktop, desktopFiles) {
-        QString filePath = QStandardPaths::locate(QStandardPaths::GenericDataLocation, "solid/actions/"+desktop);
+        const QString filePath = QStandardPaths::locate(QStandardPaths::GenericDataLocation, "solid/actions/"+desktop);
 
-        QList<KServiceAction> services
-            = KDesktopFileActions::userDefinedServices(filePath, true);
+        QList<KServiceAction> services = KDesktopFileActions::userDefinedServices(filePath, true);
 
         foreach (const KServiceAction &service, services) {
             DeviceServiceAction *action = new DeviceServiceAction();
@@ -226,7 +225,7 @@ void SolidUiServer::reparentDialog(QWidget *dialog, WId wId, const QString &appI
 
     KWindowSystem::setMainWindow(dialog, wId); // correct, set dialog parent
 
-#ifdef Q_WS_X11
+#ifdef HAVE_X11
     if (modal) {
         KWindowSystem::setState(dialog->winId(), NET::Modal);
     } else {

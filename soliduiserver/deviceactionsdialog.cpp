@@ -20,9 +20,9 @@
 #include "deviceactionsdialog.h"
 
 #include <klistwidget.h>
-#include <kicon.h>
+#include <QIcon>
 #include <QCheckBox>
-
+#include <QDebug>
 
 #include "deviceaction.h"
 #include "ui_deviceactionsdialogview.h"
@@ -30,6 +30,8 @@
 DeviceActionsDialog::DeviceActionsDialog(QWidget *parent)
     : KDialog(parent)
 {
+    qDebug() << Q_FUNC_INFO;
+
     setModal(false);
     setButtons(Ok|Cancel);
     setDefaultButton(Ok);
@@ -61,9 +63,9 @@ void DeviceActionsDialog::setDevice(const Solid::Device &device)
     
     setWindowTitle(label); 
     
-    m_view.iconLabel->setPixmap(KIcon(device.icon()).pixmap(64));
+    m_view.iconLabel->setPixmap(QIcon::fromTheme(device.icon()).pixmap(64));
     m_view.descriptionLabel->setText(device.vendor()+' '+device.product());
-    setWindowIcon(KIcon(device.icon()));
+    setWindowIcon(QIcon::fromTheme(device.icon()));
 }
 
 Solid::Device DeviceActionsDialog::device() const
@@ -91,7 +93,7 @@ void DeviceActionsDialog::updateActionsListBox()
     m_view.actionsList->clear();
 
     foreach (DeviceAction *action, m_actions) {
-        QListWidgetItem *item = new QListWidgetItem(KIcon(action->iconName()),
+        QListWidgetItem *item = new QListWidgetItem(QIcon::fromTheme(action->iconName()),
                                                     action->label());
         item->setData(Qt::UserRole, action->id());
         m_view.actionsList->addItem(item);
@@ -105,8 +107,8 @@ void DeviceActionsDialog::slotOk()
 {
     QListWidgetItem *item = m_view.actionsList->selectedItems().value(0);
 
-    if (item != 0L) {
-        QString id = item->data(Qt::UserRole).toString();
+    if (item) {
+        const QString id = item->data(Qt::UserRole).toString();
 
         foreach (DeviceAction *action, m_actions) {
             if (action->id()==id) {
@@ -122,5 +124,3 @@ void DeviceActionsDialog::launchAction(DeviceAction *action)
     action->execute(m_device);
     accept();
 }
-
-

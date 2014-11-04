@@ -19,7 +19,7 @@
 
 #include "devicenothingaction.h"
 
-#include <klocale.h>
+#include <KLocalizedString>
 
 DeviceNothingAction::DeviceNothingAction()
 	: DeviceAction()
@@ -30,10 +30,9 @@ DeviceNothingAction::DeviceNothingAction()
 
 QString DeviceNothingAction::id() const
 {
-    return "#NothinAction";
+    return "#NothingAction";
 }
 
 void DeviceNothingAction::execute(Solid::Device &/*device*/)
 {
 }
-
