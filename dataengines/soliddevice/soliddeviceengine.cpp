@@ -154,7 +154,7 @@ bool SolidDeviceEngine::populateDeviceData(const QString &name)
 
         devicetypes << I18N_NOOP("Block");
         setData(name, I18N_NOOP("Major"), block->deviceMajor());
-        setData(name, I18N_NOOP("Minor"), block->deviceMajor());
+        setData(name, I18N_NOOP("Minor"), block->deviceMinor());
         setData(name, I18N_NOOP("Device"), block->device());
     }
     if (device.is<Solid::StorageAccess>()) {
@@ -280,10 +280,10 @@ bool SolidDeviceEngine::populateDeviceData(const QString &name)
         setData(name, I18N_NOOP("Write Speed"), opticaldrive->writeSpeed());
 
         //the following method return QList<int> so we need to convert it to QList<QVariant>
-        QList<int> writespeeds = opticaldrive->writeSpeeds();
-        QList<QVariant> variantlist = QList<QVariant>();
+        const QList<int> writespeeds = opticaldrive->writeSpeeds();
+        QList<QVariant> variantlist;
         foreach(int num, writespeeds) {
-            variantlist << QVariant(num);
+            variantlist << num;
         }
         setData(name, I18N_NOOP("Write Speeds"), variantlist);
 
@@ -335,21 +335,24 @@ bool SolidDeviceEngine::populateDeviceData(const QString &name)
 
         //get the content types
         QStringList contenttypelist;
-        Solid::OpticalDisc::ContentTypes contenttypes = opticaldisc->availableContent();
-        if (contenttypes & Solid::OpticalDisc::Audio) {
+        const Solid::OpticalDisc::ContentTypes contenttypes = opticaldisc->availableContent();
+        if (contenttypes.testFlag(Solid::OpticalDisc::Audio)) {
             contenttypelist << I18N_NOOP("Audio");
         }
-        if (contenttypes & Solid::OpticalDisc::Audio) {
+        if (contenttypes.testFlag(Solid::OpticalDisc::Data)) {
             contenttypelist << I18N_NOOP("Data");
         }
-        if (contenttypes & Solid::OpticalDisc::Audio) {
+        if (contenttypes.testFlag(Solid::OpticalDisc::VideoCd)) {
             contenttypelist << I18N_NOOP("Video CD");
         }
-        if (contenttypes & Solid::OpticalDisc::Audio) {
+        if (contenttypes.testFlag(Solid::OpticalDisc::SuperVideoCd)) {
             contenttypelist << I18N_NOOP("Super Video CD");
         }
-        if (contenttypes & Solid::OpticalDisc::Audio) {
+        if (contenttypes.testFlag(Solid::OpticalDisc::VideoDvd)) {
             contenttypelist << I18N_NOOP("Video DVD");
+        }
+        if (contenttypes.testFlag(Solid::OpticalDisc::VideoBluRay)) {
+            contenttypelist << I18N_NOOP("Video Blu Ray");
         }
         setData(name, I18N_NOOP("Available Content"), contenttypelist);
 
