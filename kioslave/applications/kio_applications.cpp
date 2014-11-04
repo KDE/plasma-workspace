@@ -19,14 +19,15 @@
 
 #include <kio/slavebase.h>
 #include <kcomponentdata.h>
-#include <kdebug.h>
-#include <klocale.h>
 #include <sys/stat.h>
 #include <time.h>
 #include <kservice.h>
 #include <kservicegroup.h>
 #include <kstandarddirs.h>
-#include <KUrl>
+#include <KLocalizedString>
+
+#include <QDebug>
+#include <QUrl>
 
 class ApplicationsProtocol : public KIO::SlaveBase
 {
@@ -43,9 +44,11 @@ private:
 };
 
 extern "C" {
-    Q_DECL_EXPORT int kdemain( int, char **argv )
+    Q_DECL_EXPORT int kdemain( int argc, char **argv )
     {
         KComponentData componentData( "kio_applications" );
+        QCoreApplication app(argc, argv);
+
         ApplicationsProtocol slave(argv[1], argv[2], argv[3]);
         slave.dispatchLoop();
         return 0;
@@ -53,12 +56,12 @@ extern "C" {
 }
 
 
-static void createFileEntry(KIO::UDSEntry& entry, const KService::Ptr& service, const KUrl& parentUrl)
+static void createFileEntry(KIO::UDSEntry& entry, const KService::Ptr& service, const QUrl& parentUrl)
 {
     entry.clear();
     entry.insert(KIO::UDSEntry::UDS_NAME, KIO::encodeFileName(service->name()));
     entry.insert(KIO::UDSEntry::UDS_FILE_TYPE, S_IFREG);
-    const QString fileUrl = parentUrl.url(KUrl::AddTrailingSlash) + service->desktopEntryName();
+    const QString fileUrl = parentUrl.url() + '/' + service->desktopEntryName();
     entry.insert(KIO::UDSEntry::UDS_URL, fileUrl);
     entry.insert(KIO::UDSEntry::UDS_ACCESS, 0500);
     entry.insert(KIO::UDSEntry::UDS_MIME_TYPE, "application/x-desktop");
@@ -68,7 +71,7 @@ static void createFileEntry(KIO::UDSEntry& entry, const KService::Ptr& service, 
     entry.insert(KIO::UDSEntry::UDS_ICON_NAME, service->icon());
 }
 
-static void createDirEntry(KIO::UDSEntry& entry, const QString& name, const QString& url, const QString& mime,const QString& iconName)
+static void createDirEntry(KIO::UDSEntry& entry, const QString& name, const QString& url, const QString& mime, const QString& iconName)
 {
     entry.clear();
     entry.insert( KIO::UDSEntry::UDS_NAME, name );
@@ -98,7 +101,7 @@ void ApplicationsProtocol::get( const QUrl & url )
 {
     KService::Ptr service = KService::serviceByDesktopName(url.fileName());
     if (service && service->isValid()) {
-        KUrl redirUrl(KStandardDirs::locate("apps", service->entryPath()));
+        QUrl redirUrl(QUrl::fromLocalFile(KStandardDirs::locate("apps", service->entryPath())));
         redirection(redirUrl);
         finished();
     } else {
@@ -120,13 +123,13 @@ void ApplicationsProtocol::stat(const QUrl& url)
 
     if (grp && grp->isValid()) {
         createDirEntry(entry, ((m_runMode==ApplicationsMode) ? i18n("Applications") : i18n("Programs")),
-                       url.url(), "inode/directory",grp->icon() );
+                       url.url(), "inode/directory", grp->icon() );
     } else {
         KService::Ptr service = KService::serviceByDesktopName( url.fileName() );
         if (service && service->isValid()) {
             createFileEntry(entry, service, url );
         } else {
-            error(KIO::ERR_SLAVE_DEFINED,i18n("Unknown application folder"));
+            error(KIO::ERR_SLAVE_DEFINED, i18n("Unknown application folder"));
             return;
         }
     }
@@ -156,9 +159,8 @@ void ApplicationsProtocol::listDir(const QUrl& url)
     foreach (const KSycocaEntry::Ptr &e, grp->entries(true, true)) {
         if (e->isType(KST_KServiceGroup)) {
             KServiceGroup::Ptr g(static_cast<KServiceGroup*>(e.data()));
-            QString groupCaption = g->caption();
 
-            kDebug() << "ADDING SERVICE GROUP WITH PATH " << g->relPath();
+            //qDebug() << "ADDING SERVICE GROUP WITH PATH " << g->relPath();
 
             // Avoid adding empty groups.
             KServiceGroup::Ptr subMenuRoot = KServiceGroup::group(g->relPath());
@@ -166,33 +168,31 @@ void ApplicationsProtocol::listDir(const QUrl& url)
                 continue;
 
             // Ignore dotfiles.
-            if ((g->name().at(0) == '.'))
+            if (g->name().startsWith('.'))
                 continue;
 
             QString relPath = g->relPath();
-            KUrl dirUrl = url; // preserve protocol, whether that's programs:/ or applications:/
+            QUrl dirUrl = url; // preserve protocol, whether that's programs:/ or applications:/
             dirUrl.setPath('/' + relPath);
-            dirUrl.adjustPath(KUrl::RemoveTrailingSlash);
-            kDebug() << "ApplicationsProtocol: adding entry" << dirUrl;
-            createDirEntry(entry, groupCaption, dirUrl.url(), "inode/directory", g->icon());
-
+            dirUrl = dirUrl.adjusted(QUrl::StripTrailingSlash);
+            //qDebug() << "ApplicationsProtocol: adding entry" << dirUrl;
+            createDirEntry(entry, g->caption(), dirUrl.url(), "inode/directory", g->icon());
         } else {
             KService::Ptr service(static_cast<KService*>(e.data()));
 
-            kDebug() << "the entry name is" << service->desktopEntryName()
-                     << "with path" << service->entryPath();
+            //qDebug() << "the entry name is" << service->desktopEntryName()
+            //         << "with path" << service->entryPath();
 
             if (!service->isApplication()) // how could this happen?
                 continue;
             createFileEntry(entry, service, url);
         }
 
-        listEntry(entry, false);
+        listEntry(entry);
         count++;
     }
 
     totalSize(count);
-    listEntry(entry, true);
+    listEntry(entry);
     finished();
 }
-
