@@ -39,8 +39,8 @@ FreeSpaceNotifier::FreeSpaceNotifier(QObject *parent)
     : QObject(parent)
     , m_lastAvailTimer(NULL)
     , m_notification(NULL)
-    , m_lastAvail(-1)
     , m_sni(NULL)
+    , m_lastAvail(-1)
 {
     // If we are running, notifications are enabled
     FreeSpaceNotifierSettings::setEnableNotification(true);
