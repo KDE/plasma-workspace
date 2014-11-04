@@ -481,7 +481,9 @@ void BackgroundFinder::run()
                 if (QFile::exists(filePath + QString::fromLatin1("/metadata.desktop"))) {
                     package.setPath(filePath);
                     if (package.isValid()) {
-                        papersFound << package.path();
+                        if (!package.filePath("images").isEmpty()) {
+                            papersFound << package.path();
+                        }
                         //qDebug() << "adding package" << wp.filePath();
                         continue;
                     }
