@@ -18,6 +18,7 @@
  */
 
 #include "appinterface.h"
+#include <config-X11.h>
 
 #include <QEventLoop>
 #include <QTimer>
@@ -36,7 +37,7 @@
 #include <windows.h>
 #endif
 
-#ifdef Q_WS_X11
+#ifdef HAVE_X11
 #include <X11/Xlib.h>
 #include <fixx11h.h>
 #endif
@@ -136,7 +137,7 @@ int AppInterface::multiheadScreen() const
 {
     int id = -1;
 
-#ifdef Q_WS_X11
+#ifdef HAVE_X11
     if (multihead()) {
         // with multihead, we "lie" and say that screen 0 is the default screen, in fact, we pretend
         // we have only one screen at all

@@ -18,6 +18,7 @@
 */
 
 #include <config-workspace.h>
+#include <config-X11.h>
 
 #include "main.h"
 #include "klauncher_iface.h"
@@ -181,7 +182,7 @@ KCMInit::KCMInit( KCmdLineArgs* args )
   // This key has no GUI apparently
   KConfig _config( "kcmdisplayrc" );
   KConfigGroup config(&_config, "X11");
-#ifdef Q_WS_X11
+#ifdef HAVE_X11
   bool multihead = !config.readEntry( "disableMultihead", false) &&
                     (QGuiApplication::screens().count() > 1);
 #else
