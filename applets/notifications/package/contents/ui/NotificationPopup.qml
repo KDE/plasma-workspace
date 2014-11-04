@@ -35,19 +35,17 @@ PlasmaCore.Dialog {
     property var notificationProperties
 
     onVisibleChanged: {
-        notificationTimer.running = visible;
+        notificationTimer.running = visible
     }
 
-    function populatePopup(notification)
-    {
+    function populatePopup(notification) {
         notificationProperties = notification
-        actionsRepeater.model = notification.actions
         notificationTimer.interval = notification.expireTimeout
         notificationTimer.restart()
-        titleLabel.text = notification.summary
-        bodyLabel.text = notification.body
-        appIconItem.icon = notification.appIcon
-        imageItem.image = notification.image
+
+        // notification.actions is a JS array, but we can easily append that to our model
+        notificationItem.actions.clear()
+        notificationItem.actions.append(notificationProperties.actions)
     }
 
     Behavior on y {
@@ -60,146 +58,24 @@ PlasmaCore.Dialog {
     mainItem: MouseEventListener {
         id: root
         Layout.minimumWidth: Math.round(23 * units.gridUnit)
-        Layout.minimumHeight: Math.max(actionsColumn.height + closeButton.height + (3 * units.smallSpacing), (4.5 * units.gridUnit))
+        Layout.minimumHeight: notificationItem.implicitHeight
 
-        state: "controlsHidden"
         hoverEnabled: true
-
-        onContainsMouseChanged: {
-            if (containsMouse) {
-                root.state = "controlsShown"
-                notificationTimer.running = false
-            } else {
-                root.state = "controlsHidden"
-                notificationTimer.restart()
-            }
-        }
 
         onClicked: {
             closeNotification(notificationProperties.source)
             notificationPopup.hide()
         }
-
-        QIconItem {
-            id: appIconItem
-            height: units.iconSizes.large
-            width: height
-            visible: !imageItem.visible
-            anchors {
-                left: parent.left
-                top: parent.top
-                margins: units.smallSpacing * 2
+        onContainsMouseChanged: {
+            if (containsMouse) {
+                notificationTimer.stop()
+            } else {
+                notificationTimer.restart()
             }
         }
-
-        QImageItem {
-            id: imageItem
-            anchors.fill: appIconItem
-            smooth: true
-            fillMode: Image.PreserveAspectFit
-            visible: nativeWidth > 0
-        }
-
-        PlasmaExtras.Heading {
-            id: titleLabel
-            level: 4
-            height: paintedHeight
-            elide: Text.ElideRight
-            anchors {
-                left: appIconItem.right
-                //right: closeButton.left
-                top: parent.top
-                right: actionsRepeater.count < 3 ? closeButton.left : actionsColumn.left
-                margins: units.smallSpacing * 2
-            }
-            onLinkActivated: Qt.openUrlExternally(link)
-        }
-
-        /*
-         * this extra item is for clip the overflowed body text
-         * maximumLineCount cannot control the behavior of rich text,
-         * so manual clip is required.
-         */
-//         Item {
-//             id: bodyLabelClip
-//             clip: true
-//             height: Math.min(parent.height - (titleLabel.height+titleLabel.y), bodyLabel.height)
-//             property bool tallText: bodyLabelClip.height >= (bodyLabelClip.parent.height - (titleLabel.height+titleLabel.y)*2)
-//             anchors {
-//                 top: tallText ? titleLabel.bottom : undefined
-//                 verticalCenter: tallText ? undefined : parent.verticalCenter
-//                 left: appIconItem.right
-// //                 right: actionsColumn.left
-//                 leftMargin: 6
-//                 rightMargin: 6
-//             }
-            PlasmaComponents.Label {
-                id: bodyLabel
-                color: theme.textColor
-                wrapMode: Text.WordWrap
-                elide: Text.ElideRight
-                maximumLineCount: 4
-                verticalAlignment: Text.AlignTop
-                onLinkActivated: Qt.openUrlExternally(link)
-                anchors {
-                    left: appIconItem.right
-                    right: (!notificationProperties || notificationProperties.actions.length == 0) ? parent.right : actionsColumn.left
-                    top: titleLabel.bottom
-                    bottom: parent.bottom
-
-                    margins: units.smallSpacing * 2
-                    topMargin: units.smallSpacing
-                }
-            }
-//         }
-
-            PlasmaComponents.ToolButton {
-                id: closeButton
-//                 opacity: 0
-                iconSource: "window-close"
-                width: units.iconSizes.smallMedium
-                height: width
-                flat: false
-                anchors {
-                    right: parent.right
-                    top: parent.top
-                    topMargin: units.smallSpacing
-                    rightMargin: units.smallSpacing
-                }
-                onClicked: {
-                    closeNotification(notificationProperties.source)
-                    notificationPopup.hide()
-                }
-            }
-
-            Column {
-                id: actionsColumn
-                spacing: units.smallSpacing
-                anchors {
-                    bottom: parent.bottom
-                    right: parent.right
-                    rightMargin: units.smallSpacing
-                    bottomMargin: units.smallSpacing
-                }
-                Repeater {
-                    id: actionsRepeater
-                    model: []
-                    PlasmaComponents.Button {
-                        text: modelData.text
-                        width: theme.mSize(theme.defaultFont).width * 12
-                        onClicked: {
-                            executeAction(notificationProperties.source, modelData.id)
-                            actionsColumn.visible = false
-                            notificationPopup.hide()
-                        }
-                    }
-                }
-            }
 
         Timer {
             id: notificationTimer
-            repeat: false
-            running: false
             onTriggered: {
                 if (!notificationProperties.isPersistent) {
                     closeNotification(notificationProperties.source)
@@ -208,40 +84,39 @@ PlasmaCore.Dialog {
             }
         }
 
-        states: [
-        State {
-            name: "controlsShown"
-//             PropertyChanges {
-//                 target: closeButton
-//                 opacity: 1
-//             }
-//             PropertyChanges {
-//                 target: settingsButton
-//                 opacity: 1
-//             }
-        },
-        State {
-            name: "controlsHidden"
-//             PropertyChanges {
-//                 target: closeButton
-//                 opacity: 0
-//             }
-//             PropertyChanges {
-//                 target: settingsButton
-//                 opacity: 0
-//             }
-        }
-        ]
-        transitions: [
-        Transition {
-            NumberAnimation {
-                properties: "opacity"
-                easing.type: Easing.InOutQuad
-                duration: units.longDuration
+        NotificationItem {
+            id: notificationItem
+            property string text
+
+            summary: notificationProperties ? notificationProperties.summary: ""
+            text: notificationProperties ? notificationProperties.body : ""
+            icon: notificationProperties ? notificationProperties.appIcon : ""
+            image: notificationProperties ? notificationProperties.image : undefined
+
+            anchors {
+                fill: parent
+                margins: units.smallSpacing
+            }
+
+            textItem: PlasmaComponents.Label {
+                wrapMode: Text.WordWrap
+                elide: Text.ElideRight
+                maximumLineCount: 4
+                verticalAlignment: Text.AlignTop
+                onLinkActivated: Qt.openUrlExternally(link)
+                text: notificationItem.text
+            }
+
+            onClose: {
+                closeNotification(notificationProperties.source)
+                notificationPopup.hide()
+            }
+            onAction: {
+                executeAction(notificationProperties.source, actionId)
+                actions.clear()
+                notificationPopup.hide()
             }
         }
-        ]
-
     }
 
 }

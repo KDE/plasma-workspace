@@ -97,176 +97,87 @@ PlasmaComponents.ListItem {
             }
         }
 
-        QIconItem {
-            id: appIconItem
+        NotificationItem {
+            id: notification
+            width: parent.width
+            height: implicitHeight
 
-            width: units.iconSizes.large
-            height: units.iconSizes.large
-
+            compact: true
             icon: appIcon
-            visible: !imageItem.visible
-        }
-
-        QImageItem {
-            id: imageItem
-            anchors.fill: appIconItem
-
             image: model.image
-            smooth: true
-            visible: nativeWidth > 0
-        }
+            summary: model.summary
+            configurable: model.configurable
+            // model.actions JS array is implicitly turned into a ListModel which we can assign directly
+            actions: model.actions
 
-        Item {
-            id: titleBar
-            height: childrenRect.height
-            anchors {
-                top: parent.top
-                left: appIconItem.right
-                right: parent.right
-                leftMargin: units.smallSpacing * 2
-            }
+            textItem: MouseArea {
+                id: contextMouseArea
+                height: bodyText.paintedHeight
 
-            PlasmaExtras.Heading {
-                id: summaryLabel
-                level: 4
-                height: paintedHeight
-                anchors {
-                    left: parent.left
-                    right: settingsButton.visible ? settingsButton.left : closeButton.left
-                    rightMargin: units.smallSpacing
-                }
-                text: summary
-                elide: Text.ElideRight
-                wrapMode: Text.NoWrap
-                onLinkActivated: Qt.openUrlExternally(link)
-            }
+                acceptedButtons: Qt.RightButton
+                preventStealing: true
 
-            PlasmaComponents.ToolButton {
-                id: closeButton
-                anchors {
-                    top: parent.top
-                    right: parent.right
-                    rightMargin: units.smallSpacing
-                }
-                width: notificationItem.toolIconSize
-                height: width
+                onPressed: contextMenu.open(mouse.x, mouse.y)
 
-                iconSource: "window-close"
+                PlasmaComponents.ContextMenu {
+                    id: contextMenu
+                    visualParent: contextMouseArea
 
-                onClicked: {
-                    if (notificationsModel.count > 1) {
-                        removeAnimation.running = true
-                    } else {
-                        closeNotification(model.source)
-                        notificationsModel.remove(index)
+                    PlasmaComponents.MenuItem {
+                        text: i18n("Copy")
+                        onClicked: bodyText.copy()
+                    }
+
+                    PlasmaComponents.MenuItem {
+                        text: i18n("Select All")
+                        onClicked: bodyText.selectAll()
                     }
                 }
-            }
 
-            PlasmaComponents.ToolButton {
-                id: settingsButton
-                anchors {
-                    top: parent.top
-                    right: closeButton.left
-                    rightMargin: units.smallSpacing
+                TextEdit {
+                    id: bodyText
+                    anchors.fill: parent
+
+                    text: body
+                    color: theme.textColor
+                    selectedTextColor: theme.viewBackgroundColor
+                    selectionColor: theme.viewFocusColor
+                    font.capitalization: theme.defaultFont.capitalization
+                    font.family: theme.defaultFont.family
+                    font.italic: theme.defaultFont.italic
+                    font.letterSpacing: theme.defaultFont.letterSpacing
+                    font.pointSize: theme.defaultFont.pointSize
+                    font.strikeout: theme.defaultFont.strikeout
+                    font.underline: theme.defaultFont.underline
+                    font.weight: theme.defaultFont.weight
+                    font.wordSpacing: theme.defaultFont.wordSpacing
+                    renderType: Text.NativeRendering
+                    selectByMouse: true
+                    readOnly: true
+                    wrapMode: Text.Wrap
+
+                    onLinkActivated: Qt.openUrlExternally(link)
                 }
-                width: notificationItem.toolIconSize
-                height: width
+            }
 
-                iconSource: "configure"
-                visible: model.configurable
-
-                onClicked: {
-                    plasmoid.hidePopup()
-                    configureNotification(model.appRealName)
+            onClose: {
+                if (notificationsModel.count > 1) {
+                    removeAnimation.running = true
+                } else {
+                    closeNotification(model.source)
+                    notificationsModel.remove(index)
                 }
             }
-        }
-
-        PlasmaComponents.ContextMenu {
-            id: contextMenu
-            visualParent: contextMouseArea
-
-            PlasmaComponents.MenuItem {
-                text: i18n("Copy")
-                onClicked: bodyText.copy()
+            onConfigure: {
+                plasmoid.hidePopup()
+                configureNotification(model.appRealName)
             }
-
-            PlasmaComponents.MenuItem {
-                text: i18n("Select All")
-                onClicked: bodyText.selectAll()
+            onAction: {
+                executeAction(source, actionId)
+                actions.clear()
             }
         }
 
-        MouseArea {
-            id: contextMouseArea
-            anchors {
-                top: titleBar.bottom
-                left: appIconItem.right
-                right: actionsColumn.left
-
-                leftMargin: units.smallSpacing * 2
-                rightMargin: units.smallSpacing * 2
-            }
-            height: bodyText.paintedHeight
-
-            acceptedButtons: Qt.RightButton
-            preventStealing: true
-
-            onPressed: contextMenu.open(mouse.x, mouse.y)
-
-            TextEdit {
-                id: bodyText
-                anchors.fill: parent
-
-                text: body
-                color: theme.textColor
-                selectedTextColor: theme.viewBackgroundColor
-                selectionColor: theme.viewFocusColor
-                font.capitalization: theme.defaultFont.capitalization
-                font.family: theme.defaultFont.family
-                font.italic: theme.defaultFont.italic
-                font.letterSpacing: theme.defaultFont.letterSpacing
-                font.pointSize: theme.defaultFont.pointSize
-                font.strikeout: theme.defaultFont.strikeout
-                font.underline: theme.defaultFont.underline
-                font.weight: theme.defaultFont.weight
-                font.wordSpacing: theme.defaultFont.wordSpacing
-                renderType: Text.NativeRendering
-                selectByMouse: true
-                readOnly: true
-                wrapMode: Text.Wrap
-                textFormat: TextEdit.RichText
-
-                onLinkActivated: Qt.openUrlExternally(link)
-            }
-        }
-
-        Column {
-            id: actionsColumn
-            anchors {
-                top: titleBar.bottom
-                right: parent.right
-                rightMargin: units.smallSpacing
-                topMargin: units.smallSpacing
-            }
-
-            spacing: notificationItem.layoutSpacing
-
-            Repeater {
-                model: actions
-
-                PlasmaComponents.Button {
-                    width: theme.mSize(theme.defaultFont).width * 8
-
-                    text: model.text
-                    onClicked: {
-                        executeAction(source, model.id)
-                        actionsColumn.visible = false
-                    }
-                } // Button
-            } // Repeater
-        } // Column
     } //MouseArea
 
     Component.onCompleted: {
