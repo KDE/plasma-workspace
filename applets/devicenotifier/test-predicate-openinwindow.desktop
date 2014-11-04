@@ -71,5 +71,5 @@ Name[wa]=Drovi avou l' manaedjeu des fitchîs
 Name[x-test]=xxOpen with File Managerxx
 Name[zh_CN]=用文件浏览器打开
 Name[zh_TW]=使用檔案管理員開啟
-Exec=kioclient5 exec %f
+Exec=kde-open5 "%f"
 Icon=system-file-manager

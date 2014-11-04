@@ -35,7 +35,7 @@ public:
         : KMacroExpanderBase('%'), m_device(device) {}
 
 protected:
-    virtual int expandEscapedMacro(const QString &str, int pos, QStringList &ret);
+    virtual int expandEscapedMacro(const QString &str, int pos, QStringList &ret) Q_DECL_OVERRIDE;
 
 private:
     Solid::Device m_device;
@@ -102,10 +102,9 @@ KServiceAction DeviceServiceAction::service() const
 
 int MacroExpander::expandEscapedMacro(const QString &str, int pos, QStringList &ret)
 {
-    uint option = str[pos+1].unicode();
+    ushort option = str[pos+1].unicode();
 
     switch (option) {
-
     case 'f': // Filepath
     case 'F': // case insensitive
         if (m_device.is<Solid::StorageAccess>()) {
@@ -148,7 +147,6 @@ DelayedExecutor::DelayedExecutor(const KServiceAction &service, Solid::Device &d
                 this, SLOT(_k_storageSetupDone(Solid::ErrorType, QVariant, const QString &)));
 
         access->setup();
-
     } else {
         delayedExecute(device.udi());
     }
@@ -160,11 +158,7 @@ void DelayedExecutor::delayedExecute(const QString &udi)
 
     QString exec = m_service.exec();
     MacroExpander mx(device);
-
-    if (!mx.expandMacrosShellQuote(exec)) {
-        qWarning() << ", Syntax error:" << m_service.exec();
-        return;
-    }
+    mx.expandMacros(exec);
 
     KRun::runCommand(exec, QString(), m_service.icon(), 0);
     deleteLater();
