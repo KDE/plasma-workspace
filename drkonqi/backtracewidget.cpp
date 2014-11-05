@@ -25,6 +25,7 @@
 #include <KMessageBox>
 #include <KLocalizedString>
 #include <KToolInvocation>
+#include <qdesktopservices.h>
 
 #include "drkonqi.h"
 #include "backtraceratingwidget.h"
@@ -377,7 +378,7 @@ void BacktraceWidget::extraDetailsLinkActivated(QString link)
 {
     if (link.startsWith(QLatin1String("http"))) {
         //Open externally
-        KToolInvocation::invokeBrowser(link);
+        QDesktopServices::openUrl(QUrl(link));
     } else if (link == QLatin1String("#missingDebugPackages")) {
         BacktraceParser * btParser = m_btGenerator->parser();
 
