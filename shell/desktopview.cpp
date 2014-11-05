@@ -186,15 +186,7 @@ bool DesktopView::event(QEvent *e)
             }
         }
 
-    } else if (e->type() == QEvent::Close) {
-        if (!ShellManager::s_standaloneOption) {
-            //prevent ALT+F4 from killing the shell
-            e->ignore();
-            return true;
-        }
-
-    //FIXME: this should *not* be needed
-    } else if (e->type() == QEvent::FocusIn) {
+    } else if (e->type() == QEvent::FocusIn) {     //FIXME: this should *not* be needed
         ensureWindowType();
 
     } else if (e->type() == QEvent::FocusOut) {
