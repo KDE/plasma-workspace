@@ -313,6 +313,7 @@ void ShellCorona::primaryOutputChanged()
 {
     if (m_loading) {
         QTimer::singleShot(500, this, SLOT(primaryOutputChanged()));
+        return;
     }
 
     if (m_views.isEmpty()) {
