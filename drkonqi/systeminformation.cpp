@@ -214,7 +214,7 @@ QString SystemInformation::fetchOSDetailInformation() const
 #ifdef HAVE_UNAME
     struct utsname buf;
     if (uname(&buf) == -1) {
-        qDebug() << "call to uname failed" << perror;
+        qDebug() << "call to uname failed" << errno;
     } else {
         operatingSystem = QString::fromLocal8Bit(buf.sysname) + ' '
             + QString::fromLocal8Bit(buf.release) + ' '
