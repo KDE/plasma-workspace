@@ -312,7 +312,7 @@ void ShellCorona::load()
 void ShellCorona::primaryOutputChanged()
 {
     if (m_loading) {
-        QTimer::singleShot(500, this, &ShellCorona::primaryOutputChanged);
+        QTimer::singleShot(500, this, SLOT(primaryOutputChanged()));
     }
 
     if (m_views.isEmpty()) {
@@ -1413,19 +1413,17 @@ int ShellCorona::screenForContainment(const Plasma::Containment *containment) co
     }
 
     //Failed? fallback on lastScreen()
-    int i = 0;
     //lastScreen() is the correct screen for panels
     //It is also correct for desktops *that have the correct activity()*
     //a containment with lastScreen() == 0 but another activity,
     //won't be associated to a screen
 //     qDebug() << "ShellCorona screenForContainment: " << containment << " Last screen is " << containment->lastScreen();
-    for (KScreen::Output *output : sortOutputs(m_screenConfiguration->outputs())) {
+    for (int i = 0, count = m_screenConfiguration->outputs().count(); i<count; ++i) {
         if (containment->lastScreen() == i &&
             (containment->activity() == m_activityConsumer->currentActivity() ||
             containment->containmentType() == Plasma::Types::PanelContainment || containment->containmentType() == Plasma::Types::CustomPanelContainment)) {
             return i;
         }
-        ++i;
     }
 
     return -1;
