@@ -42,22 +42,22 @@ Column {
         }
     }
 
-    function addNotification(source, appIcon, image, appName, summary, body, isPersistent, expireTimeout, urgency, appRealName, configurable, actions) {
+    function addNotification(notification) {
         // Do not show duplicated notifications
         for (var i = 0; i < notificationsModel.count; ++i) {
-            if (notificationsModel.get(i).source == source &&
-                notificationsModel.get(i).appName == appName &&
-                notificationsModel.get(i).summary == summary &&
-                notificationsModel.get(i).body == body) {
+            if (notificationsModel.get(i).source == notification.source &&
+                notificationsModel.get(i).appName == notification.appName &&
+                notificationsModel.get(i).summary == notification.summary &&
+                notificationsModel.get(i).body == notification.body) {
                 return
             }
         }
 
         for (var i = 0; i < notificationsModel.count; ++i) {
-            if (notificationsModel.get(i).source == source ||
-                (notificationsModel.get(i).appName == appName &&
-                notificationsModel.get(i).summary == summary &&
-                notificationsModel.get(i).body == body)) {
+            if (notificationsModel.get(i).source == notification.source ||
+                (notificationsModel.get(i).appName == notification.appName &&
+                notificationsModel.get(i).summary == notification.summary &&
+                notificationsModel.get(i).body == notification.body)) {
 
                 notificationsModel.remove(i)
                 break
@@ -66,20 +66,8 @@ Column {
         if (notificationsModel.count > 20) {
             notificationsModel.remove(notificationsModel.count-1)
         }
-        var notification = {"source"  : source,
-                "appIcon" : appIcon,
-                "image"   : image,
-                "appName" : appName,
-                "summary" : summary,
-                "body"    : body,
-                "isPersistent" : isPersistent,
-                "expireTimeout": expireTimeout,
-                "urgency" : urgency,
-                "configurable": configurable,
-                "appRealName": appRealName,
-                "actions" : actions}
 
-        if (isPersistent) {
+        if (notification.isPersistent) {
             notificationsModel.inserting = true;
             notificationsModel.insert(0, notification);
             notificationsModel.inserting = false;
@@ -117,13 +105,12 @@ Column {
 
     Component {
         id: notificationPopupComponent
-        NotificationPopup {
-        }
+        NotificationPopup { }
     }
 
     ListModel {
         id: notificationsModel
-        property bool inserting: false;
+        property bool inserting: false
     }
 
     PlasmaCore.DataSource {
@@ -134,7 +121,7 @@ Column {
         engine: "powermanagement"
         interval: 30000
         connectedSources: ["UserActivity"]
-        //Idle whith more than 5 minutes of user inactivity
+        //Idle with more than 5 minutes of user inactivity
     }
 
     PlasmaCore.DataSource {
@@ -160,28 +147,18 @@ Column {
 
         onNewData: {
             var _data = data; // Temp copy to avoid lots of context switching
-            var actions = new Array()
+            var actions = []
             if (data["actions"] && data["actions"].length % 2 == 0) {
                 for (var i = 0; i < data["actions"].length; i += 2) {
-                    var action = new Object()
-                    action["id"] = data["actions"][i]
-                    action["text"] = data["actions"][i+1]
-                    actions.push(action)
+                    actions.push({
+                        id: data["actions"][i],
+                        text: data["actions"][i+1]
+                    })
                 }
             }
-            notificationsRoot.addNotification(
-                    sourceName,
-                    _data["appIcon"],
-                    _data["image"],
-                    _data["appName"],
-                    _data["summary"],
-                    _data["body"],
-                    _data["isPersistent"],
-                    _data["expireTimeout"],
-                    _data["urgency"],
-                    _data["appRealName"],
-                    _data["configurable"],
-                    actions)
+            _data["source"] = sourceName
+            _data["actions"] = actions
+            notificationsRoot.addNotification(_data)
         }
 
     }
@@ -189,7 +166,7 @@ Column {
     NotificationsHelper {
         id: notificationPositioner
         plasmoidScreen: plasmoid.screenGeometry
-        popupLocation: plasmoid.location == PlasmaCore.Types.TopEdge ? Qt.TopEdge : Qt.BottomEdge
+        popupLocation: plasmoid.location === PlasmaCore.Types.TopEdge ? Qt.TopEdge : Qt.BottomEdge
     }
 
     Repeater {
