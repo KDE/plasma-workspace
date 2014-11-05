@@ -52,19 +52,18 @@ Column {
             }
 
             var message = runningJobs[source]["label1"] ? runningJobs[source]["label1"] : runningJobs[source]["label0"]
-            notifications.addNotification(
-                source,
-                runningJobs[source]["appIconName"],
-                undefined,
-                runningJobs[source]["appName"],
-                i18n("%1 Finished", runningJobs[source]["infoMessage"]),
-                message,
-                true,
-                6000,
-                0,
-                0,
-                0,
-                UrlHelper.isUrlValid(message) ? [{"id": message, "text": i18n("Open")}] : []) // If the source contains "Job", it tries to open the "id" value (which is "message")
+            notifications.addNotification({
+                source: source,
+                appIcon: runningJobs[source]["appIconName"],
+                appName: runningJobs[source]["appName"],
+                summary: i18n("%1 Finished", runningJobs[source]["infoMessage"]),
+                body: message,
+                isPersistent: true,
+                expireTimeout: 6000,
+                urgency: 0,
+                configurable: false,
+                actions: UrlHelper.isUrlValid(message) ? [{"id": message, "text": i18n("Open...")}] : [] // If the source contains "Job", it tries to open the "id" value (which is "message")
+            })
 
             delete runningJobs[source]
         }
