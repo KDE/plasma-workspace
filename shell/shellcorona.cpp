@@ -312,6 +312,10 @@ void ShellCorona::load()
 
 void ShellCorona::primaryOutputChanged()
 {
+    if (m_loading) {
+        QTimer::singleShot(500, this, &ShellCorona::primaryOutputChanged);
+    }
+
     if (m_views.isEmpty()) {
         return;
     }
@@ -360,6 +364,7 @@ void ShellCorona::primaryOutputChanged()
 #ifndef NDEBUG
 void ShellCorona::screenInvariants() const
 {
+    Q_ASSERT(!m_loading);
     Q_ASSERT(m_views.count() <= QGuiApplication::screens().count());
     QScreen *s = m_views.isEmpty() ? nullptr : m_views[0]->screen();
     KScreen::Output *primaryOutput = findPrimaryOutput();
