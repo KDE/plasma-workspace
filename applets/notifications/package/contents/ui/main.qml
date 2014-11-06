@@ -133,24 +133,18 @@ MouseEventListener {
                 id: contentsColumn
                 width: popupFlickable.width
 
-                //TODO: load those on demand based on configuration
                 Loader {
                     id: jobsLoader
-                    source: notificationsApplet.Plasmoid.configuration.ShowJobs ? "Jobs.qml" : ""
-                    anchors {
-                        left: parent.left
-                        right: parent.right
-                    }
+                    width: parent.width
+                    source: "Jobs.qml"
+                    active: notificationsApplet.Plasmoid.configuration.showJobs
                 }
 
                 Loader {
                     id: notificationsLoader
-                    anchors {
-                        left: parent.left
-                        right: parent.right
-                    }
-
-                    source: notificationsApplet.Plasmoid.configuration.ShowNotifications ? "Notifications.qml" : ""
+                    width: parent.width
+                    source: "Notifications.qml"
+                    active: notificationsApplet.Plasmoid.configuration.showNotifications
                 }
             }
         }
