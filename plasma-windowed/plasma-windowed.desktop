@@ -23,6 +23,7 @@ Name[sr@latin]=Plasma u prozoru
 Name[sv]=Plasma i fönster
 Name[uk]=Плазма у вікні
 Name[x-test]=xxPlasma Windowedxx
+Name[zh_CN]=窗口化 Plasma
 Comment=Run Plasmoids as simple applications
 Comment[ca]=Executa els plasmoides com a simples aplicacions
 Comment[cs]=Spouštějte Plasmoidy jako prosté aplikace
@@ -47,6 +48,7 @@ Comment[sr@latin]=Izvršavanje plazmoida kao prostih programa
 Comment[sv]=Kör Plasmoider som enkla program
 Comment[uk]=Запуск плазмоїдів як простих програм
 Comment[x-test]=xxRun Plasmoids as simple applicationsxx
+Comment[zh_CN]=将小部件按一般程序运行
 
 Exec=plasmawindowed %u
 Terminal=false

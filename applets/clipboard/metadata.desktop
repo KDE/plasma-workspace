@@ -24,6 +24,7 @@ Name[sr@latin]=klipbord
 Name[sv]=Klippbord
 Name[uk]=Буфер обміну
 Name[x-test]=xxClipboardxx
+Name[zh_CN]=剪贴板
 Comment=Provides access to the clipboard history.
 Comment[ca]=Proporciona accés a l'historial del porta-retalls.
 Comment[cs]=Poskytuje přístup k historii schránky.
@@ -48,6 +49,7 @@ Comment[sr@latin]=Pristup istorijatu klipborda
 Comment[sv]=Ger tillgång till klippbordshistoriken.
 Comment[uk]=Надає доступ до журналу буфера обміну даними.
 Comment[x-test]=xxProvides access to the clipboard history.xx
+Comment[zh_CN]=提供对剪贴板历史的访问。
 
 Icon=klipper
 Type=Service
