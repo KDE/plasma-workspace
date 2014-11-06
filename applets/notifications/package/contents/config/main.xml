@@ -6,15 +6,11 @@
   <kcfgfile name=""/>
 
   <group name="General">
-    <entry name="CustomPosition" type="Point">
-      <label>where the notification popup will be</label>
-      <default>-1,-1</default>
-    </entry>
-    <entry name="ShowNotifications" type="Bool">
+    <entry name="showNotifications" type="Bool">
       <label>Show the notifications</label>
       <default>true</default>
     </entry>
-    <entry name="ShowJobs" type="Bool">
+    <entry name="showJobs" type="Bool">
       <label>Show the jobs progress</label>
       <default>true</default>
     </entry>
