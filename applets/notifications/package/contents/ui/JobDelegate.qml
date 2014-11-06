@@ -46,15 +46,6 @@ Item {
         return data[modelData] ? (data[modelData][name] ? data[modelData][name] : defaultValue) : defaultValue;
     }
 
-    function friendlyLabel() {
-        // Take the filename, might be improved
-        var els = label0.split("/");
-        if (els.length) {
-            return els[els.length-1];
-        }
-        return f;
-    }
-
     Item {
         id: jobGrid
         anchors {
@@ -88,7 +79,10 @@ Item {
             }
 
             elide: Text.ElideMiddle
-            text: notificationItem.friendlyLabel()
+            text: {
+                var labelSplit = label0.split("/")
+                return labelSplit[labelSplit.length-1]
+            }
         }
 
         PlasmaComponents.ToolButton {
@@ -415,6 +409,7 @@ Item {
                 flat: notificationItem.flatButtons
 
                 onClicked: {
+                    cancelledJobs.push(modelData) // register that it was user-cancelled
                     var service = jobsSource.serviceForSource(modelData)
                     var operation = service.operationDescription("stop")
                     service.startOperationCall(operation)
