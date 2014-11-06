@@ -34,6 +34,8 @@ Column {
     property alias count: jobsRepeater.count
     //height: 192 // FIXME: should be dynamic, once childrenRect works again
 
+    property var cancelledJobs: []
+
     PlasmaCore.DataSource {
         id: jobsSource
 
@@ -51,12 +53,19 @@ Column {
                 return
             }
 
+            var cancelledJobPos = cancelledJobs.indexOf(source)
+            if (cancelledJobPos > -1) {
+                cancelledJobs.splice(cancelledJobPos, 1)
+                return
+            }
+
             var message = runningJobs[source]["label1"] ? runningJobs[source]["label1"] : runningJobs[source]["label0"]
+            var infoMessage = runningJobs[source]["infoMessage"]
             notifications.addNotification({
                 source: source,
                 appIcon: runningJobs[source]["appIconName"],
                 appName: runningJobs[source]["appName"],
-                summary: i18n("%1 Finished", runningJobs[source]["infoMessage"]),
+                summary: infoMessage ? i18n("Job Finished") : i18nc("the job, which can be anything, has finished", "%1: Finished", infoMessage),
                 body: message,
                 isPersistent: true,
                 expireTimeout: 6000,
