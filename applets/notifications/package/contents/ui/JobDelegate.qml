@@ -205,17 +205,26 @@ Item {
                 spacing: notificationItem.layoutSpacing
 
                 function localizeProcessedAmount(id) {
+                    var unit = jobsSource.data[modelData]["processedUnit"+id]
                     //if bytes localise the unit
-                    if (jobsSource.data[modelData]["processedUnit"+id] == "bytes") {
+                    if (unit === "bytes") {
                         return i18nc("How much many bytes (or whether unit in the locale has been copied over total", "%1 of %2",
                                 KCoreAddons.Format.formatByteSize(jobsSource.data[modelData]["processedAmount"+id]),
                                 KCoreAddons.Format.formatByteSize(jobsSource.data[modelData]["totalAmount"+id]))
                     //else print something only if is interesting data (ie more than one file/directory etc to copy
                     } else if (jobsSource.data[modelData]["totalAmount"+id] > 1) {
+                        // HACK Actually the owner of the job is responsible for sending the unit in a user-displayable
+                        // way but this has been broken for years and every other unit (other than files and dirs) is correct
+                        if (unit === "files") {
+                            unit = i18nc("m of n files are being processed", "files")
+                        } else if (unit === "dirs") {
+                            unit = i18nc("m of n dirs are being processed", "dirs")
+                        }
+
                         return i18n( "%1 of %2 %3",
                                 jobsSource.data[modelData]["processedAmount"+id],
                                 jobsSource.data[modelData]["totalAmount"+id],
-                                jobsSource.data[modelData]["processedUnit"+id])
+                                unit)
                     } else {
                         return ""
                     }
