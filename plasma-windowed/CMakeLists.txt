@@ -18,6 +18,7 @@ target_link_libraries(
     KF5::PlasmaQuick
     KF5::Plasma
     KF5::DBusAddons
+    KF5::Notifications
 )
 
 install(TARGETS plasmawindowed ${INSTALL_TARGETS_DEFAULT_ARGS})

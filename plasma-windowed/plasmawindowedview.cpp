@@ -26,8 +26,8 @@
 #include <QQmlEngine>
 #include <QQmlContext>
 
-
 #include <KActionCollection>
+#include <KStatusNotifierItem>
 
 #include <Plasma/Package>
 
@@ -35,7 +35,9 @@
 
 PlasmaWindowedView::PlasmaWindowedView(QWindow *parent)
     : QQuickView(parent),
-      m_applet(0)
+      m_applet(0),
+      m_statusNotifier(0),
+      m_withStatusNotifier(false)
 {
     engine()->rootContext()->setContextProperty("root", contentItem());
     QQmlExpression *expr = new QQmlExpression(engine()->rootContext(), contentItem(), "Qt.createQmlObject('import QtQuick 2.0; import org.kde.plasma.core 2.0; Rectangle {color: theme.backgroundColor; anchors.fill:parent}', root, \"\");");
@@ -44,6 +46,12 @@ PlasmaWindowedView::PlasmaWindowedView(QWindow *parent)
 
 PlasmaWindowedView::~PlasmaWindowedView()
 {
+}
+
+void PlasmaWindowedView::setHasStatusNotifier(bool stay)
+{
+    Q_ASSERT(!m_statusNotifier);
+    m_withStatusNotifier = stay;
 }
 
 void PlasmaWindowedView::setApplet(Plasma::Applet *applet)
@@ -85,6 +93,21 @@ void PlasmaWindowedView::setApplet(Plasma::Applet *applet)
     }
     QObject::connect(applet->containment(), &Plasma::Containment::configureRequested,
                      this, &PlasmaWindowedView::showConfigurationInterface);
+
+    Q_ASSERT(!m_statusNotifier);
+    if (m_withStatusNotifier) {
+        m_statusNotifier = new KStatusNotifierItem(this);
+        m_statusNotifier->setIconByName(applet->icon());
+        m_statusNotifier->setTitle(applet->title());
+        m_statusNotifier->setToolTipTitle(applet->title());
+
+        connect(m_statusNotifier, &KStatusNotifierItem::activateRequested, this, [this](bool active, const QPoint& /*pos*/){
+            setVisible(active);
+            if (active) {
+                raise();
+            }
+        });
+    }
 }
 
 void PlasmaWindowedView::resizeEvent(QResizeEvent *ev)
@@ -149,8 +172,10 @@ void PlasmaWindowedView::hideEvent(QHideEvent *ev)
 {
     Q_UNUSED(ev)
     m_applet->config().sync();
-    m_applet->deleteLater();
-    deleteLater();
+    if (!m_withStatusNotifier) {
+        m_applet->deleteLater();
+        deleteLater();
+    }
 }
 
 void PlasmaWindowedView::showConfigurationInterface(Plasma::Applet *applet)

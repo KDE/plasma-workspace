@@ -30,7 +30,8 @@
 
 PlasmaWindowedCorona::PlasmaWindowedCorona(QObject *parent)
     : Plasma::Corona(parent),
-      m_containment(0)
+      m_containment(0),
+      m_hasStatusNotifier(false)
 {
     Plasma::Package package = Plasma::PluginLoader::self()->loadPackage("Plasma/Shell");
     package.setPath("org.kde.plasma.desktop");
@@ -54,6 +55,7 @@ void PlasmaWindowedCorona::loadApplet(const QString &applet, const QVariantList 
         }
     }
     PlasmaWindowedView *v = new PlasmaWindowedView();
+    v->setHasStatusNotifier(m_hasStatusNotifier);
     v->show();
 
     KConfigGroup appletsGroup(KSharedConfig::openConfig(), "Applets");
@@ -157,5 +159,9 @@ void PlasmaWindowedCorona::load()
     }
 }
 
+void PlasmaWindowedCorona::setHasStatusNotifier(bool stay)
+{
+    m_hasStatusNotifier = stay;
+}
 
 #include "plasmawindowedcorona.moc"

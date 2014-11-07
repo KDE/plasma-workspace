@@ -27,6 +27,8 @@
 #include "plasmawindowedcorona.h"
 #include "plasmaquick/configview.h"
 
+class KStatusNotifierItem;
+
 class PlasmaWindowedView : public QQuickView
 {
     Q_OBJECT
@@ -36,6 +38,7 @@ public:
     ~PlasmaWindowedView();
 
     void setApplet(Plasma::Applet *applet);
+    void setHasStatusNotifier(bool stay);
 
 protected:
     virtual void resizeEvent(QResizeEvent * ev);
@@ -55,6 +58,8 @@ private:
     Plasma::Applet *m_applet;
     QPointer<QObject> m_layout;
     QPointer<PlasmaQuick::ConfigView> m_configView;
+    KStatusNotifierItem* m_statusNotifier;
+    bool m_withStatusNotifier;
 };
 
 #endif

@@ -43,9 +43,11 @@ int main(int argc, char **argv)
 
     QCommandLineParser parser;
     parser.setApplicationDescription(i18n("Plasma Windowed"));
+    parser.addOption(QCommandLineOption("statusnotifier", i18n("Makes the plasmoid stay alive in the Notification Area, even when the window is closed.")));
+    parser.addPositionalArgument("applet", i18n("The applet to open."));
+    parser.addPositionalArgument("args", i18n("Arguments to pass to the plasmoid."), QStringLiteral("[args...]"));
     parser.addVersionOption();
     parser.addHelpOption();
-    parser.addPositionalArgument("applet", i18n("The applet to open."));
     parser.process(app);
 
     if (parser.positionalArguments().isEmpty()) {
@@ -62,6 +64,7 @@ int main(int argc, char **argv)
            ++constIterator) {
         args << (*constIterator);
     }
+    corona->setHasStatusNotifier(parser.isSet("statusnotifier"));
     corona->loadApplet(parser.positionalArguments().first(), args);
 
     QObject::connect(&service, &KDBusService::activateRequested, corona, &PlasmaWindowedCorona::activateRequested);

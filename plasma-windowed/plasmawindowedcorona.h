@@ -33,6 +33,7 @@ public:
     explicit PlasmaWindowedCorona(QObject * parent = 0);
     QRect screenGeometry(int id) const;
 
+    void setHasStatusNotifier(bool stay);
     void loadApplet(const QString &applet, const QVariantList &arguments);
 
 public Q_SLOTS:
@@ -41,6 +42,7 @@ public Q_SLOTS:
 
 private:
     Plasma::Containment *m_containment;
+    bool m_hasStatusNotifier;
 };
 
 #endif
