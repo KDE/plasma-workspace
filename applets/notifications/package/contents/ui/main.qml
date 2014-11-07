@@ -26,6 +26,8 @@ import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.kquickcontrolsaddons 2.0
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 
+import org.kde.plasma.private.notifications 1.0
+
 import "plasmapackage:/ui/uiproperties.js" as UiProperties
 //import "../ui/uiproperties.js" as UiProperties
 
@@ -167,12 +169,16 @@ MouseEventListener {
                 }
             }
         ]
+    }
 
+    function action_notificationskcm() {
+        ProcessRunner.runNotificationsKCM()
     }
 
     Component.onCompleted: {
         //plasmoid.popupIcon = QIcon("preferences-desktop-notification")
         plasmoid.status = PlasmaCore.Types.PassiveStatus
         //var allApplications = new Object
+        plasmoid.setAction("notificationskcm", i18n("&Configure Event Notifications and Actions..."), "preferences-desktop-notification")
     }
 }
