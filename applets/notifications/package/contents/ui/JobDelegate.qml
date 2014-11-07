@@ -360,6 +360,7 @@ Item {
                 maximumValue: 100
                 //percentage doesn't always exist, so doesn't get in the model
                 value: getData(jobsSource.data, "percentage", 0)
+                indeterminate: typeof jobsSource.data[modelData]["percentage"] === "undefined"
             }
 
             PlasmaComponents.ToolButton {
