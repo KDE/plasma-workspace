@@ -109,6 +109,8 @@ install(EXPORT libtaskmanagerLibraryTargets
         DESTINATION ${CMAKECONFIG_INSTALL_DIR}
         FILE LibTaskManagerLibraryTargets.cmake )
 
+install(FILES taskmanagerrulesrc
+        DESTINATION ${CONFIG_INSTALL_DIR})
 
 #set(tasksmodel_SRCS 
 #   modeltest/dynamictreemodel.cpp
