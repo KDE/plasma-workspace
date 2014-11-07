@@ -196,7 +196,7 @@ Item {
             Column {
                 id: detailsColumn
                 anchors {
-                    top: labelName1Text.bottom
+                    top: labelName1Text.visible || label1Text.visible ? labelName1Text.bottom : labelName0Text.bottom
                     topMargin: notificationItem.layoutSpacing
                     right: parent.right
                     left: labelName1Text.right
