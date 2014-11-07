@@ -173,10 +173,8 @@ bool SolidDeviceEngine::populateDeviceData(const QString &name)
             if ( freeDisk != (qulonglong)-1 ) {
                 freeDiskVar.setValue( freeDisk );
             }
-            if (!device.is<Solid::OpticalDisc>()) {
-                setData(name, I18N_NOOP("Free Space"), freeDiskVar );
-                setData(name, I18N_NOOP("Free Space Text"), KFormat().formatByteSize(freeDisk));
-            }
+            setData(name, I18N_NOOP("Free Space"), freeDiskVar);
+            setData(name, I18N_NOOP("Free Space Text"), KFormat().formatByteSize(freeDisk));
         }
 
         m_signalmanager->mapDevice(storageaccess, device.udi());
@@ -201,8 +199,7 @@ bool SolidDeviceEngine::populateDeviceData(const QString &name)
         setData(name, I18N_NOOP("Hotpluggable"), storagedrive->isHotpluggable());
 
         updateHardDiskTemperature(name);
-    }
-    else {
+    } else {
         bool isRemovable = false;
         bool isHotpluggable = false;
         Solid::StorageDrive *drive = getAncestorAs<Solid::StorageDrive>(device);
@@ -399,7 +396,6 @@ bool SolidDeviceEngine::populateDeviceData(const QString &name)
         // Portable Media Players are necessarily Removable and Hotpluggable
         setData(name, I18N_NOOP("Removable"), true);
         setData(name, I18N_NOOP("Hotpluggable"), true);
-
     }
     if (device.is<Solid::Battery>()) {
         Solid::Battery *battery = device.as<Solid::Battery>();
@@ -546,12 +542,6 @@ qulonglong SolidDeviceEngine::freeDiskSpace(const QString &mountPoint)
 bool SolidDeviceEngine::updateFreeSpace(const QString &udi)
 {
     Solid::Device device = m_devicemap.value(udi);
-    if (!device.is<Solid::StorageAccess>() || device.is<Solid::OpticalDisc>()) {
-        return false;
-    } else if (!device.as<Solid::StorageAccess>()->isAccessible()) {
-        removeData(udi, I18N_NOOP("Free Space"));
-        removeData(udi, I18N_NOOP("Free Space Text"));
-    }
 
     Solid::StorageAccess *storageaccess = device.as<Solid::StorageAccess>();
     if (!storageaccess) {
