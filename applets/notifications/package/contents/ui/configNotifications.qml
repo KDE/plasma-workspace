@@ -33,12 +33,12 @@ Item {
     QtLayouts.ColumnLayout {
         QtControls.CheckBox {
             id: showNotificationsCheckBox
-            text: i18n("Application and system notifications")
+            text: i18n("Show application and system notifications")
         }
 
         QtControls.CheckBox {
             id: showJobsCheckBox
-            text: i18n("File transfers and other jobs")
+            text: i18n("Track file transfers and other jobs")
         }
     }
 }
