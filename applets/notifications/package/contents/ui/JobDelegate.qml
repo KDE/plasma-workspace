@@ -113,10 +113,6 @@ Item {
             opacity: newDetailsItem.state == "expanded" ? 0.6 : 0
             state: expandButton.checked ? "expanded" : "collapsed"
 
-            onStateChanged: {
-                print("NNN expand state is now: " + state);
-            }
-
             // 1st row
             //Behavior on height { NumberAnimation { duration: notificationItem.animationDuration } }
             Behavior on opacity { NumberAnimation { duration: notificationItem.animationDuration } }
@@ -188,7 +184,6 @@ Item {
 
                 font: theme.smallestFont
                 text: label1 ? label1 : ''
-                //width: parent.width - labelName0Text.width
                 elide: Text.ElideMiddle
                 visible: label1 != ''
 
@@ -365,13 +360,6 @@ Item {
                 maximumValue: 100
                 //percentage doesn't always exist, so doesn't get in the model
                 value: getData(jobsSource.data, "percentage", 0)
-
-//                     anchors {
-//                         left: parent.left
-//                         right: buttonsRow.left
-//                         verticalCenter: parent.verticalCenter
-//                         rightMargin: notificationItem.layoutSpacing
-//                     }
             }
 
             PlasmaComponents.ToolButton {
@@ -386,7 +374,6 @@ Item {
                 flat: notificationItem.flatButtons
 
                 onClicked: {
-                    print("NNN Current: " + jobstate);
                     var operationName = "suspend"
                     if (notificationItem.jobstate == "suspended") {
                         operationName = "resume"
@@ -394,7 +381,6 @@ Item {
                     var service = jobsSource.serviceForSource(modelData)
                     var operation = service.operationDescription(operationName)
                     service.startOperationCall(operation)
-                    print("NNN now: " + notificationItem.jobstate);
                 }
             }
 
@@ -593,9 +579,5 @@ Item {
         }
         */
 
-    }
-
-    Component.onCompleted: {
-        print("NNN JOBSTATE: " + notificationItem.jobstate);
     }
 }

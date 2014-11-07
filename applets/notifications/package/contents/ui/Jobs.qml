@@ -39,7 +39,7 @@ Column {
     PlasmaCore.DataSource {
         id: jobsSource
 
-        property variant runningJobs
+        property variant runningJobs: ({})
 
         engine: "applicationjobs"
         interval: 0
@@ -96,7 +96,6 @@ Column {
         }
 
         Component.onCompleted: {
-            jobsSource.runningJobs = new Object
             connectedSources = sources
         }
     }
