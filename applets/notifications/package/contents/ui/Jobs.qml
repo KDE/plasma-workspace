@@ -61,6 +61,10 @@ Column {
 
             var message = runningJobs[source]["label1"] ? runningJobs[source]["label1"] : runningJobs[source]["label0"]
             var infoMessage = runningJobs[source]["infoMessage"]
+            if (!message && !infoMessage) {
+                return
+            }
+
             notifications.addNotification({
                 source: source,
                 appIcon: runningJobs[source]["appIconName"],
