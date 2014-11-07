@@ -133,7 +133,7 @@ MouseArea {
             icon: sdSource.data[udi] ? sdSource.data[udi]["Icon"] : ""
             deviceName: sdSource.data[udi] ? sdSource.data[udi]["Description"] : ""
             emblemIcon: Emblems[0]
-            state: model["State"]
+            state: sdSource.data[udi]["State"]
 
             percentUsage: {
                 if (!sdSource.data[udi]) {
@@ -153,7 +153,7 @@ MouseArea {
                     return "emblem-mounted";
                 }
             }
-            mounted: model["Accessible"]
+            mounted: devicenotifier.isMounted(udi)
 
             onLeftActionTriggered: {
                 var operationName = mounted ? "unmount" : "mount";

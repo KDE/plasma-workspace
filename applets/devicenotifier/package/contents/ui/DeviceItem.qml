@@ -91,8 +91,8 @@ Item {
             width: units.iconSizes.medium
             height: width
             z: 900
-            source: deviceItem.icon
-            enabled: deviceItem.state == 0
+            source: icon
+            enabled: state == 0
             anchors {
                 left: parent.left
                 top: parent.top
@@ -102,7 +102,7 @@ Item {
                 id: emblem
                 width: units.iconSizes.medium * 0.5
                 height: width
-                source: deviceItem.state == 0 ? emblemIcon : undefined;
+                source: state == 0 ? emblemIcon : undefined;
                 anchors {
                     left: parent.left
                     bottom: parent.bottom
@@ -131,7 +131,7 @@ Item {
                     left: parent.left
                     right: parent.right
                 }
-                enabled: deviceItem.state == 0
+                enabled: state == 0
             }
 
             PlasmaCore.ToolTipArea {
@@ -139,7 +139,7 @@ Item {
                 height:freeSpaceBar.height
                 active: mounted
 
-                subText: i18nc("@info:status Free disk space", "%1 free", deviceItem.freeSpaceText)
+                subText: freeSpaceText != "" ? i18nc("@info:status Free disk space", "%1 free", freeSpaceText) : ""
                 anchors {
                     left: parent.left
                     right: parent.right
@@ -147,7 +147,7 @@ Item {
 
 
 
-                opacity: (deviceItem.state == 0 && mounted) ? 1 : 0
+                opacity: (state == 0 && mounted) ? 1 : 0
                 PlasmaComponents.ProgressBar {
                     id: freeSpaceBar
                     height: deviceStatus.height
@@ -172,10 +172,10 @@ Item {
                     // FIXME: state changes do not reach the plasmoid if the
                     // device was already attached when the plasmoid was
                     // initialized
-                    text: deviceItem.state == 0 ? container.idleStatus() : (deviceItem.state==1 ? i18nc("Accessing is a less technical word for Mounting; translation should be short and mean \'Currently mounting this device\'", "Accessing...") : i18nc("Removing is a less technical word for Unmounting; translation shoud be short and mean \'Currently unmounting this device\'", "Removing..."))
+                    text: state == 0 ? container.idleStatus() : (state==1 ? i18nc("Accessing is a less technical word for Mounting; translation should be short and mean \'Currently mounting this device\'", "Accessing...") : i18nc("Removing is a less technical word for Unmounting; translation shoud be short and mean \'Currently unmounting this device\'", "Removing..."))
                     font.pointSize: theme.smallestFont.pointSize
                     color: "#99"+(theme.textColor.toString().substr(1))
-                    opacity: deviceItem.state != 0 || container.containsMouse || expanded ? 1 : 0;
+                    opacity: state != 0 || container.containsMouse || expanded ? 1 : 0;
 
                     Behavior on opacity { NumberAnimation { duration: units.shortDuration * 3 } }
                 }
@@ -215,12 +215,12 @@ Item {
                 id: leftAction
                 anchors.fill: parent
                 active: leftActionArea.containsMouse
-                visible: !busySpinner.visible
+                visible: !busySpinner.visible && model["Device Types"].indexOf("Portable Media Player") == -1
 
                 PlasmaCore.ToolTipArea {
                     anchors.fill: leftAction
                     subText: {
-                        if (!model["Accessible"]) {
+                        if (!mounted) {
                             return i18n("Click to mount this device.")
                         } else if (model["Device Types"].indexOf("OpticalDisc") != -1) {
                             return i18n("Click to eject this disc.")
@@ -237,14 +237,14 @@ Item {
                 id: busySpinner
                 anchors.fill: parent
                 running: visible
-                visible: deviceItem.state != 0
+                visible: state != 0
             }
         }
 
         PlasmaCore.ToolTipArea {
             anchors.fill: deviceIcon
             subText: {
-                if (model["Accessible"] || deviceItem.state != 0) {
+                if ((mounted || state != 0) && model["Available Content"] != "Audio") {
                     if (model["Removable"]) {
                         return i18n("It is currently <b>not safe</b> to remove this device: applications may be accessing it. Click the eject button to safely remove this device.")
                     } else {

@@ -48,6 +48,14 @@ Item {
         engine: "hotplug"
         connectedSources: sources
         interval: 0
+
+        onSourceAdded: {
+            disconnectSource(source);
+            connectSource(source);
+        }
+        onSourceRemoved: {
+            disconnectSource(source);
+        }
     }
 
     Plasmoid.compactRepresentation: PlasmaCore.IconItem {
@@ -68,6 +76,8 @@ Item {
         interval: 0
         property string last
         onSourceAdded: {
+            disconnectSource(source);
+            connectSource(source);
             last = source;
             processLastDevice(true);
         }
@@ -77,6 +87,7 @@ Item {
                 devicenotifier.currentExpanded = -1;
                 expandedDevice = "";
             }
+            disconnectSource(source);
         }
 
         onDataChanged: {
@@ -108,7 +119,11 @@ Item {
         property string last
         onSourceAdded: {
             last = source;
+            disconnectSource(source);
             connectSource(source);
+        }
+        onSourceRemoved: {
+            disconnectSource(source);
         }
         onDataChanged: {
             if (last != "") {
