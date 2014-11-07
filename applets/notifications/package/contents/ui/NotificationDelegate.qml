@@ -109,6 +109,7 @@ PlasmaComponents.ListItem {
             configurable: model.configurable
             // model.actions JS array is implicitly turned into a ListModel which we can assign directly
             actions: model.actions
+            created: model.created
 
             textItem: MouseArea {
                 id: contextMouseArea

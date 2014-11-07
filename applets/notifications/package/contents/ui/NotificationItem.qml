@@ -44,8 +44,58 @@ Item {
     property alias image: imageItem.image
     property alias summary: summaryLabel.text
     property alias configurable: settingsButton.visible
+    property var created
 
     property ListModel actions: ListModel { }
+
+    function updateTimeLabel() {
+        if (!created || created.getTime() <= 0) {
+            timeLabel.text = ""
+            return
+        }
+        var currentTime = new Date().getTime()
+        var createdTime = created.getTime()
+        var d = (currentTime - createdTime) / 1000
+        if (d < 10) {
+            timeLabel.text = i18nc("notification was just added, keep short", "Just now")
+        } else if (d < 20) {
+            timeLabel.text = i18nc("10 seconds ago, keep short", "10 s ago");
+        } else if (d < 40) {
+            timeLabel.text = i18nc("30 seconds ago, keep short", "30 s ago");
+        } else if (d < 60 * 60) {
+            timeLabel.text = i18ncp("minutes ago, keep short", "%1 min ago", "%1 min ago", Math.round(d / 60))
+        } else if (d <= 60 * 60 * 23) {
+            timeLabel.text = Qt.formatTime(created, Qt.locale().timeFormat(Locale.ShortFormat).replace(/.ss?/i, ""))
+        } else {
+            var yesterday = new Date()
+            yesterday.setDate(yesterday.getDate() - 1) // this will wrap
+            yesterday.setHours(0)
+            yesterday.setMinutes(0)
+            yesterday.setSeconds(0)
+
+            if (createdTime > yesterday.getTime()) {
+                timeLabel.text = i18nc("notification was added yesterday, keep short", "Yesterday");
+            } else {
+                timeLabel.text = i18ncp("notification was added n days ago, keep short",
+                                        "%1 day ago", "%1 days ago",
+                                        Math.round((currentTime - yesterday.getTime()) / 1000 / 3600 / 24));
+            }
+        }
+    }
+
+    Component.onCompleted: {
+        updateTimeLabel()
+    }
+
+    Connections {
+        target: plasmoid
+        onExpandedChanged: {
+            if (plasmoid.expanded) {
+                updateTimeLabel()
+            }
+        }
+    }
+
 
     QIconItem {
         id: appIconItem
@@ -81,6 +131,11 @@ Item {
             height: paintedHeight
             elide: Text.ElideRight
             wrapMode: Text.NoWrap
+        }
+
+        PlasmaExtras.Heading {
+            id: timeLabel
+            level: 5
         }
 
         PlasmaComponents.ToolButton {

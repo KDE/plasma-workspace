@@ -68,6 +68,8 @@ Column {
         }
 
         if (notification.isPersistent) {
+            notification.created = new Date();
+
             notificationsModel.inserting = true;
             notificationsModel.insert(0, notification);
             notificationsModel.inserting = false;
