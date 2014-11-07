@@ -65,7 +65,7 @@ Column {
                 source: source,
                 appIcon: runningJobs[source]["appIconName"],
                 appName: runningJobs[source]["appName"],
-                summary: infoMessage ? i18n("Job Finished") : i18nc("the job, which can be anything, has finished", "%1: Finished", infoMessage),
+                summary: infoMessage ? i18nc("the job, which can be anything, has finished", "%1: Finished", infoMessage) : i18n("Job Finished"),
                 body: message,
                 isPersistent: true,
                 expireTimeout: 6000,
