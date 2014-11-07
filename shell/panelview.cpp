@@ -748,6 +748,12 @@ bool PanelView::event(QEvent *e)
             break;
         }
 
+        case QEvent::Hide: {
+            if (m_panelConfigView && m_panelConfigView.data()->isVisible()) {
+                m_panelConfigView.data()->hide();
+            }
+            break;
+        }
         default:
             break;
     }
