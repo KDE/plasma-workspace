@@ -70,11 +70,13 @@ BreezeBlock {
 
         Item { height: units.largeSpacing }
 
-        Image {
-            id: actionIcon
+        PlasmaCore.IconItem {
+             id: actionIcon
             Layout.alignment: Qt.AlignHCenter
             Layout.fillHeight: true
-            fillMode: Image.PreserveAspectFit
+            Layout.minimumWidth: height
+            Layout.maximumWidth: height
+            colorGroup: PlasmaCore.ColorScope.colorGroup
             opacity: actionIconMouse.containsMouse ? 1 : 0.7
             MouseArea {
                 id: actionIconMouse
@@ -107,19 +109,19 @@ BreezeBlock {
                 name: "shutdown"
                 PropertyChanges { target: root; currentAction: shutdownRequested }
                 PropertyChanges { target: actionLabel; text: i18nd("plasma_lookandfeel_org.kde.lookandfeel","Shutting down") }
-                PropertyChanges { target: actionIcon; source: "artwork/shutdown_primary.svgz" }
+                PropertyChanges { target: actionIcon; source: "system-shutdown" }
             },
             State {
                 name: "logout"
                 PropertyChanges { target: root; currentAction: logoutRequested }
                 PropertyChanges { target: actionLabel; text: i18nd("plasma_lookandfeel_org.kde.lookandfeel","Logging out") }
-                PropertyChanges { target: actionIcon; source: "artwork/logout_primary.svgz" }
+                PropertyChanges { target: actionIcon; source: "system-log-out" }
             },
             State {
                 name: "reboot"
                 PropertyChanges { target: root; currentAction: rebootRequested }
                 PropertyChanges { target: actionLabel; text: i18nd("plasma_lookandfeel_org.kde.lookandfeel","Rebooting") }
-                PropertyChanges { target: actionIcon; source: "artwork/restart_primary.svgz" }
+                PropertyChanges { target: actionIcon; source: "system-reboot" }
             }
         ]
     }
