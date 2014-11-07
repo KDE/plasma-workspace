@@ -25,6 +25,7 @@
 #include <KConfigGroup>
 #include <klocalizedstring.h>
 #include <KNotifyConfigWidget>
+#include <QGuiApplication>
 
 #include <Plasma/DataContainer>
 #include <Plasma/Service>
@@ -149,7 +150,9 @@ uint NotificationsEngine::Notify(const QString &app_name, uint replaces_id,
 {
     uint partOf = 0;
 
-    if (m_activeNotifications.values().contains(app_name + summary)) {
+    //don't let applications spam too much, except ourself
+    //needed to display all the "applet deleted" notifications and not merge them
+    if (m_activeNotifications.values().contains(app_name + summary) && app_name != QGuiApplication::applicationDisplayName()) {
         // cut off the "notification " from the source name
         partOf = m_activeNotifications.key(app_name + summary).mid(13).toUInt();
 
