@@ -169,7 +169,6 @@ PlasmaComponents.ListItem {
                 }
             }
             onConfigure: {
-                plasmoid.hidePopup()
                 configureNotification(model.appRealName)
             }
             onAction: {
