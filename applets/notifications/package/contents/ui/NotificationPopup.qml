@@ -101,7 +101,6 @@ PlasmaCore.Dialog {
             textItem: PlasmaComponents.Label {
                 wrapMode: Text.WordWrap
                 elide: Text.ElideRight
-                maximumLineCount: 4
                 verticalAlignment: Text.AlignTop
                 onLinkActivated: Qt.openUrlExternally(link)
                 text: notificationItem.text
