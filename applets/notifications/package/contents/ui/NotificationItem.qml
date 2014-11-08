@@ -30,7 +30,13 @@ Item {
     width: parent.width
     implicitHeight: {
         var absoluteMinimum = actionsColumn.height + closeButton.height + 3 * units.smallSpacing
-        return compact ? Math.max(absoluteMinimum, closeButton.height + units.smallSpacing + textItemLoader.item.height) : Math.max(absoluteMinimum, 4.5 * units.gridUnit)
+        if (compact) {
+            // in the notification history just show the popup unconstrained as is with a sensible minimum height
+            return Math.max(absoluteMinimum, closeButton.height + units.smallSpacing + textItemLoader.item.height)
+        }
+        // in the popup make it compact and not more than roughly 2 or 3 lines of text
+        var iconOrTextHeight = Math.max(units.iconSizes.large, textItemLoader.item.implicitHeight) + 2 * units.smallSpacing
+        return Math.max(absoluteMinimum, Math.min(iconOrTextHeight, 5.5 * units.gridUnit))
     }
 
     signal close
@@ -112,8 +118,8 @@ Item {
             top: titleBar.bottom
             left: appIconItem.right
             right: actionsColumn.visible ? actionsColumn.left : parent.right
-            bottom: parent.bottom
-            bottomMargin: units.smallSpacing
+            bottom: compact ? undefined : parent.bottom
+            bottomMargin: compact ? units.smallSpacing : 0
             leftMargin: units.smallSpacing * 2
             rightMargin: units.smallSpacing * 2
         }

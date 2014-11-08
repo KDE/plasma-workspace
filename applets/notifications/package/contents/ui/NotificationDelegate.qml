@@ -100,7 +100,6 @@ PlasmaComponents.ListItem {
         NotificationItem {
             id: notification
             width: parent.width
-            height: implicitHeight
 
             compact: true
             icon: appIcon
