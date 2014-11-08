@@ -169,6 +169,7 @@ PlasmaComponents.ListItem {
                 }
             }
             onConfigure: {
+                plasmoid.expanded = false
                 configureNotification(model.appRealName)
             }
             onAction: {
