@@ -92,6 +92,7 @@ PlasmaCore.Dialog {
             text: notificationProperties ? notificationProperties.body : ""
             icon: notificationProperties ? notificationProperties.appIcon : ""
             image: notificationProperties ? notificationProperties.image : undefined
+            configurable: notificationProperties ? notificationProperties.configurable : false
 
             anchors {
                 fill: parent
@@ -108,6 +109,10 @@ PlasmaCore.Dialog {
 
             onClose: {
                 closeNotification(notificationProperties.source)
+                notificationPopup.hide()
+            }
+            onConfigure: {
+                configureNotification(notificationProperties.appRealName)
                 notificationPopup.hide()
             }
             onAction: {
