@@ -26,13 +26,9 @@ import org.kde.plasma.private.notifications 1.0
 
 Column {
     id: jobsRoot
-    anchors {
-        left: parent.left
-        right: parent.right
-    }
+    width: parent.width
 
     property alias count: jobsRepeater.count
-    //height: 192 // FIXME: should be dynamic, once childrenRect works again
 
     property var cancelledJobs: []
 
@@ -45,7 +41,7 @@ Column {
         interval: 0
 
         onSourceAdded: {
-            connectSource(source);
+            connectSource(source)
         }
 
         onSourceRemoved: {
