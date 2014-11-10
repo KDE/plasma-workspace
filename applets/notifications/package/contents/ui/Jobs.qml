@@ -90,7 +90,7 @@ Column {
         onDataChanged: {
             var total = 0
             for (var i = 0; i < sources.length; ++i) {
-                if (jobsSource.data[sources[i]]["percentage"]) {
+                if (jobsSource.data[sources[i]] && jobsSource.data[sources[i]]["percentage"]) {
                     total += jobsSource.data[sources[i]]["percentage"]
                 }
             }
