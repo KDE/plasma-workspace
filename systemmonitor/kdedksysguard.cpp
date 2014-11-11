@@ -21,7 +21,6 @@
 
 #include <QTimer>
 #include <QAction>
-#include <QDebug>
 #include <QStandardPaths>
 #include <QProcess>
 

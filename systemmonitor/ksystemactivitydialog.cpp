@@ -20,9 +20,7 @@
 
 #include "ksystemactivitydialog.h"
 
-#include <QAbstractScrollArea>
 #include <QCloseEvent>
-#include <QLineEdit>
 #include <QLayout>
 #include <QString>
 #include <QAction>
@@ -32,6 +30,7 @@
 #include <QDBusConnection>
 #include <QPushButton>
 #include <QVBoxLayout>
+#include <QLineEdit>
 
 #include <KSharedConfig>
 #include <KConfigGroup>
