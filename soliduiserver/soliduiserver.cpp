@@ -22,11 +22,9 @@
 #include "soliduiserver.h"
 #include "config-X11.h"
 
-#include <QFile>
 #include <QStandardPaths>
 #include <QDBusInterface>
 #include <QDBusReply>
-#include <QDBusError>
 
 #include <KPluginFactory>
 #include <KLocalizedString>
