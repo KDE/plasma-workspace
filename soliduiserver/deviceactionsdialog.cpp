@@ -19,7 +19,6 @@
 
 #include "deviceactionsdialog.h"
 
-#include <klistwidget.h>
 #include <QIcon>
 #include <QCheckBox>
 #include <QDebug>
