@@ -127,12 +127,12 @@ void FreeSpaceNotifier::checkFreeDiskSpace()
                 m_notification->setComponentName(QStringLiteral("freespacenotifier"));
                 m_notification->sendEvent();
             }
-        }
-    } else {
-        // free space is above limit again, remove the SNI
-        if (m_sni) {
-            m_sni->deleteLater();
-            m_sni = NULL;
+        } else {
+            // free space is above limit again, remove the SNI
+            if (m_sni) {
+                m_sni->deleteLater();
+                m_sni = NULL;
+            }
         }
     }
 }
