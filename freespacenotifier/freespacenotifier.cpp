@@ -85,6 +85,11 @@ void FreeSpaceNotifier::checkFreeDiskSpace()
                 warn = true;
             } else if (avail > m_lastAvail) {     // the user freed some space
                 m_lastAvail = avail;              // so warn if it goes low again
+                if (m_sni) {
+                    // keep the SNI active, but don't blink
+                    m_sni->setStatus(KStatusNotifierItem::Active);
+                    m_sni->setToolTip(QStringLiteral("drive-harddisk"), i18n("Low Disk Space"), i18n("Remaining space in your Home folder: %1 MiB", QLocale::system().toString(avail)));
+                }
             }
             // do not change lastAvail otherwise, to handle free space slowly going down
 
