@@ -45,6 +45,7 @@ public:
     bool isComplete();
 
 private Q_SLOTS:
+    void bugzillaVersionFound();
     void loginClicked();
     void loginFinished(bool);
     void loginError(const QString &, const QString &);
@@ -65,6 +66,7 @@ private:
 
     KWallet::Wallet *                   m_wallet;
     bool                                m_walletWasOpenedBefore;
+    bool                                m_bugzillaVersionFound;
 };
 
 /** Title and details page **/
