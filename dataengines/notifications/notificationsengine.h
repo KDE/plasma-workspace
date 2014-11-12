@@ -23,7 +23,7 @@
 
 #include <Plasma/DataEngine>
 #include <QSet>
-
+#include <QHash>
 
 /**
  *  Engine which provides data sources for notifications.
@@ -72,6 +72,8 @@ private:
     uint m_nextId;
 
     QHash<QString, QString> m_activeNotifications;
+
+    QHash<QString, bool> m_configurableApplications;
 
     /**
      * A "blacklist" of apps for which always the previous notification from this app

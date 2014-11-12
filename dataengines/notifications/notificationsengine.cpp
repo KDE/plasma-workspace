@@ -27,6 +27,8 @@
 #include <KNotifyConfigWidget>
 #include <QGuiApplication>
 
+#include <QRegularExpression>
+
 #include <Plasma/DataContainer>
 #include <Plasma/Service>
 
@@ -227,7 +229,19 @@ uint NotificationsEngine::Notify(const QString &app_name, uint replaces_id,
     bool configurable = false;
     if (hints.contains("x-kde-appname")) {
         appRealName = hints["x-kde-appname"].toString();
-        configurable = true;
+
+        if (m_configurableApplications.contains(appRealName)) {
+            configurable = m_configurableApplications.value(appRealName);
+        } else {
+            // Check whether the application actually has notifications we can configure
+            QScopedPointer<KConfig> config(new KConfig(appRealName + QStringLiteral(".notifyrc"), KConfig::NoGlobals));
+            config->addConfigSources(QStandardPaths::locateAll(QStandardPaths::GenericDataLocation,
+                                     QStringLiteral("knotifications5/") + appRealName + QStringLiteral(".notifyrc")));
+
+            const QRegularExpression regexp("^Event/([^/]*)$");
+            configurable = !config->groupList().filter(regexp).isEmpty();
+            m_configurableApplications.insert(appRealName, configurable);
+        }
     }
     notificationData.insert("appRealName", appRealName);
     notificationData.insert("configurable", configurable);
