@@ -328,7 +328,6 @@ void ShellCorona::primaryOutputChanged()
     QScreen *oldPrimary = m_views[0]->screen();
     QScreen *newPrimary = outputToScreen(output);
     if (!newPrimary || newPrimary == oldPrimary) {
-        CHECK_SCREEN_INVARIANTS
         return;
     }
     qDebug() << "primary changed!" << oldPrimary->name() << newPrimary->name();
@@ -374,7 +373,7 @@ void ShellCorona::screenInvariants() const
     }
 
     QScreen* ks = outputToScreen(primaryOutput);
-    Q_ASSERT(!ks || ks == s || !primaryOutput->isEnabled());
+    Q_ASSERT(!ks || ks == s || !primaryOutput->isEnabled() || m_redundantOutputs.contains(primaryOutput));
 
     QSet<QScreen*> screens;
     int i = 0;
@@ -683,6 +682,7 @@ void ShellCorona::outputEnabledChanged()
 
 bool ShellCorona::isOutputRedundant(KScreen::Output *screen) const
 {
+    Q_ASSERT(screen->currentMode());
     const QRect geometry = screen->geometry();
 
     //FIXME: QScreen doesn't have any idea of "this qscreen is clone of this other one
@@ -711,7 +711,7 @@ void ShellCorona::reconsiderOutputs()
     }
 
     foreach (KScreen::Output *out, m_screenConfiguration->connectedOutputs()) {
-        if (!out->isEnabled()) {
+        if (!out->isEnabled() || !out->currentMode()) {
 //             qDebug() << "skip screen" << out << desktopForScreen(outputToScreen(out));
             continue;
         }
