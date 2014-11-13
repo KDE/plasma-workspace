@@ -123,6 +123,7 @@ Item {
                 Layout.fillHeight: false
                 Layout.fillWidth: true
                 Layout.maximumHeight: main.showDate ? labelsFlow.height + dateLabel.height : labelsFlow.height
+                Layout.minimumHeight: Layout.maximumHeight
             }
 
             PropertyChanges {
