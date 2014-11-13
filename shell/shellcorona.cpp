@@ -683,6 +683,7 @@ void ShellCorona::outputEnabledChanged()
 
 bool ShellCorona::isOutputRedundant(KScreen::Output *screen) const
 {
+    Q_ASSERT(screen->currentMode());
     const QRect geometry = screen->geometry();
 
     //FIXME: QScreen doesn't have any idea of "this qscreen is clone of this other one
@@ -711,7 +712,7 @@ void ShellCorona::reconsiderOutputs()
     }
 
     foreach (KScreen::Output *out, m_screenConfiguration->connectedOutputs()) {
-        if (!out->isEnabled()) {
+        if (!out->isEnabled() || !out->currentMode()) {
 //             qDebug() << "skip screen" << out << desktopForScreen(outputToScreen(out));
             continue;
         }
