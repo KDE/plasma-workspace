@@ -329,7 +329,6 @@ void ShellCorona::primaryOutputChanged()
     QScreen *oldPrimary = m_views[0]->screen();
     QScreen *newPrimary = outputToScreen(output);
     if (!newPrimary || newPrimary == oldPrimary) {
-        CHECK_SCREEN_INVARIANTS
         return;
     }
     qDebug() << "primary changed!" << oldPrimary->name() << newPrimary->name();
@@ -375,7 +374,7 @@ void ShellCorona::screenInvariants() const
     }
 
     QScreen* ks = outputToScreen(primaryOutput);
-    Q_ASSERT(!ks || ks == s || !primaryOutput->isEnabled());
+    Q_ASSERT(!ks || ks == s || !primaryOutput->isEnabled() || m_redundantOutputs.contains(primaryOutput));
 
     QSet<QScreen*> screens;
     int i = 0;
