@@ -115,8 +115,10 @@ void KCMInit::runModules( int phase )
           library = service->library();
       }
 
-      if (library.isEmpty())
+      if (library.isEmpty()) {
+          qWarning() << Q_FUNC_INFO << "library is empty, skipping";
           continue; // Skip
+      }
 
       // see ksmserver's README for the description of the phases
       QVariant vphase = service->property("X-KDE-Init-Phase", QVariant::Int );
@@ -259,10 +261,9 @@ extern "C" Q_DECL_EXPORT int kdemain(int argc, char *argv[])
   KCmdLineArgs::addCmdLineOptions( options ); // Add our own options.
 
   KApplication app;
-  QDBusConnection::sessionBus().interface()->registerService( "org.kde.kcminit",
-      QDBusConnectionInterface::DontQueueService );
-//   KLocale::setMainCatalog(0);
   KCMInit kcminit( KCmdLineArgs::parsedArgs());
+  QDBusConnection::sessionBus().registerObject("/kcminit", &kcminit, QDBusConnection::ExportScriptableContents);
+  QDBusConnection::sessionBus().registerService("org.kde.kcminit");
   return 0;
 }
 
