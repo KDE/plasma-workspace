@@ -161,7 +161,7 @@ QVariant TasksModel::data(const QModelIndex &index, int role) const
     } else if (role == TasksModel::DemandsAttention) {
         return item->demandsAttention();
     } else if (role == TasksModel::LauncherUrl) {
-        return QUrl(item->launcherUrl());
+        return item->launcherUrl();
     } else if (role == TasksModel::WindowList) {
         QVariantList windows;
 

@@ -33,7 +33,6 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #include <KRun>
 #include <KService>
 #include <KServiceTypeTrader>
-#include <KToolInvocation>
 
 // KIO
 #include <kemailsettings.h> // no camelcase include
@@ -231,9 +230,6 @@ void LauncherItem::launch()
         }
 
         QString desktopFile = QStandardPaths::locate(QStandardPaths::ApplicationsLocation, service->entryPath());
-        if (desktopFile.isNull()) {
-            desktopFile = QStandardPaths::locate(QStandardPaths::ApplicationsLocation, service->entryPath());
-        }
         new KRun(QUrl::fromLocalFile(desktopFile), 0);
     } else {
         new KRun(d->url, 0);
@@ -242,7 +238,7 @@ void LauncherItem::launch()
 
 void LauncherItem::addMimeData(QMimeData* mimeData) const
 {
-    mimeData->setData("text/uri-list", d->url.url().toAscii());
+    mimeData->setUrls({d->url});
 }
 
 QUrl LauncherItem::launcherUrl() const
