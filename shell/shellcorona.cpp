@@ -468,7 +468,12 @@ void ShellCorona::requestApplicationConfigSync()
 
 void ShellCorona::loadDefaultLayout()
 {
-    const QString script = package().filePath("defaultlayout");
+    QString script = m_lookAndFeelPackage.filePath("layouts", QString(shell() + "-layout.js").toLatin1());
+
+    if (script.isEmpty()) {
+        script = package().filePath("defaultlayout");
+    }
+
     QFile file(script);
     if (file.open(QIODevice::ReadOnly | QIODevice::Text) ) {
         QString code = file.readAll();

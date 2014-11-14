@@ -76,6 +76,8 @@ void LookAndFeelPackage::initPackage(Plasma::Package *package)
     package->addDirectoryDefinition("windowswitcher", "windowswitcher", i18n("Window Switcher"));
     package->addFileDefinition("windowswitchermainscript", "windowswitcher/WindowSwitcher.qml", i18n("Main Script for Window Switcher"));
 
+    package->addDirectoryDefinition("layouts", "layouts", i18n("Default layout scripts"));
+
     package->setPath(DEFAULT_LOOKANDFEEL);
 }
 
