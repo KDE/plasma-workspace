@@ -27,17 +27,16 @@
 
 #include <QFile>
 #include <QTimer>
+#include <QLibrary>
 
 #include <kapplication.h>
 #include <kcmdlineargs.h>
 #include <k4aboutdata.h>
 #include <kservice.h>
-#include <klibrary.h>
 #include <kdebug.h>
 #include <kconfig.h>
 #include <kconfiggroup.h>
 #include <klocale.h>
-#include <ktoolinvocation.h>
 #include <QtDBus/QtDBus>
 
 #include <kservicetypetrader.h>
@@ -66,9 +65,9 @@ static void waitForReady()
 
 bool KCMInit::runModule(const QString &libName, KService::Ptr service)
 {
-    KLibrary lib(libName);
+    QLibrary lib(libName);
     if (lib.load()) {
-        QVariant tmp = service->property("X-KDE-Init-Symbol", QVariant::String);
+        const QVariant tmp = service->property("X-KDE-Init-Symbol", QVariant::String);
         QString kcminit;
         if( tmp.isValid() )
         {
@@ -80,7 +79,7 @@ bool KCMInit::runModule(const QString &libName, KService::Ptr service)
             kcminit = "kcminit_" + libName;
 
         // get the kcminit_ function
-        KLibrary::void_function_ptr init = lib.resolveFunction(kcminit.toUtf8().constData());
+        QFunctionPointer init = lib.resolve(kcminit.toUtf8().constData());
         if (init) {
             // initialize the module
             kDebug(1208) << "Initializing " << libName << ": " << kcminit;
@@ -97,12 +96,8 @@ bool KCMInit::runModule(const QString &libName, KService::Ptr service)
 
 void KCMInit::runModules( int phase )
 {
-  for(KService::List::Iterator it = list.begin();
-      it != list.end();
-      ++it) {
-      KService::Ptr service = (*it);
-
-      QVariant tmp = service->property("X-KDE-Init-Library", QVariant::String);
+    foreach (const KService::Ptr & service, list) {
+      const QVariant tmp = service->property("X-KDE-Init-Library", QVariant::String);
       QString library;
       if( tmp.isValid() )
       {
@@ -121,7 +116,7 @@ void KCMInit::runModules( int phase )
       }
 
       // see ksmserver's README for the description of the phases
-      QVariant vphase = service->property("X-KDE-Init-Phase", QVariant::Int );
+      const QVariant vphase = service->property("X-KDE-Init-Phase", QVariant::Int );
       int libphase = 1;
       if( vphase.isValid() )
           libphase = vphase.toInt();
@@ -139,22 +134,15 @@ void KCMInit::runModules( int phase )
 
 KCMInit::KCMInit( KCmdLineArgs* args )
 {
-  QDBusConnection::sessionBus().registerObject("/kcminit", this,
-      QDBusConnection::ExportScriptableSlots|QDBusConnection::ExportScriptableSignals);
   QString arg;
   if (args->count() == 1) {
     arg = args->arg(0);
   }
 
-  if (args->isSet("list"))
-  {
+  if (args->isSet("list")) {
     list = KServiceTypeTrader::self()->query( "KCModuleInit" );
 
-    for(KService::List::Iterator it = list.begin();
-        it != list.end();
-        ++it)
-    {
-      KService::Ptr service = (*it);
+    foreach (const KService::Ptr & service, list) {
       if (service->library().isEmpty())
         continue; // Skip
       printf("%s\n", QFile::encodeName(service->desktopEntryName()).data());
@@ -163,7 +151,6 @@ KCMInit::KCMInit( KCmdLineArgs* args )
   }
 
   if (!arg.isEmpty()) {
-
     QString module = arg;
     if (!module.endsWith(".desktop"))
        module += ".desktop";
@@ -172,14 +159,12 @@ KCMInit::KCMInit( KCmdLineArgs* args )
     if ( !serv || serv->library().isEmpty() ) {
       kError(1208) << i18n("Module %1 not found", module) << endl;
       return;
-    } else
+    } else {
       list.append(serv);
-
+    }
   } else {
-
     // locate the desktop files
     list = KServiceTypeTrader::self()->query( "KCModuleInit" );
-
   }
   // This key has no GUI apparently
   KConfig _config( "kcmdisplayrc" );
