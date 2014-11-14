@@ -71,13 +71,12 @@ void KeyStatesEngine::init()
         setData(it2.value(), data);
     }
 
-    connect(&m_keyInfo, SIGNAL(keyPressed(Qt::Key,bool)), this, SLOT(keyPressed(Qt::Key,bool)));
-    connect(&m_keyInfo, SIGNAL(keyLatched(Qt::Key,bool)), this, SLOT(keyLatched(Qt::Key,bool)));
-    connect(&m_keyInfo, SIGNAL(keyLocked(Qt::Key,bool)), this, SLOT(keyLocked(Qt::Key,bool)));
-    connect(&m_keyInfo, SIGNAL(buttonPressed(Qt::MouseButton,bool)),
-            this, SLOT(mouseButtonPressed(Qt::MouseButton,bool)));
-    connect(&m_keyInfo, SIGNAL(keyAdded(Qt::Key)), this, SLOT(keyAdded(Qt::Key)));
-    connect(&m_keyInfo, SIGNAL(keyRemoved(Qt::Key)), this, SLOT(keyRemoved(Qt::Key)));
+    connect(&m_keyInfo, &KModifierKeyInfo::keyPressed, this, &KeyStatesEngine::keyPressed);
+    connect(&m_keyInfo, &KModifierKeyInfo::keyLatched, this, &KeyStatesEngine::keyLatched);
+    connect(&m_keyInfo, &KModifierKeyInfo::keyLocked, this, &KeyStatesEngine::keyLocked);
+    connect(&m_keyInfo, &KModifierKeyInfo::buttonPressed, this, &KeyStatesEngine::mouseButtonPressed);
+    connect(&m_keyInfo, &KModifierKeyInfo::keyAdded, this, &KeyStatesEngine::keyAdded);
+    connect(&m_keyInfo, &KModifierKeyInfo::keyRemoved, this, &KeyStatesEngine::keyRemoved);
 }
 
 Plasma::Service *KeyStatesEngine::serviceForSource(const QString &source)

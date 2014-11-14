@@ -116,7 +116,7 @@ void DictEngine::getDefinition()
         ret += m_tcpSocket->readAll();
     }
 
-    connect(m_tcpSocket, SIGNAL(disconnected()), this, SLOT(socketClosed()));
+    connect(m_tcpSocket, &QTcpSocket::disconnected, this, &DictEngine::socketClosed);
     m_tcpSocket->disconnectFromHost();
     //       setData(m_currentWord, m_dictName, ret);
     //       qWarning()<<ret;
@@ -222,12 +222,12 @@ bool DictEngine::sourceRequestEvent(const QString &query)
         setData(m_currentWord, m_dictName, QString());
         m_tcpSocket = new QTcpSocket(this);
         m_tcpSocket->abort();
-        connect(m_tcpSocket, SIGNAL(disconnected()), this, SLOT(socketClosed()));
+        connect(m_tcpSocket, &QTcpSocket::disconnected, this, &DictEngine::socketClosed);
 
         if (m_currentWord == "list-dictionaries") {
-            connect(m_tcpSocket, SIGNAL(readyRead()), this, SLOT(getDicts()));
+            connect(m_tcpSocket, &QTcpSocket::readyRead, this, &DictEngine::getDicts);
         } else {
-            connect(m_tcpSocket, SIGNAL(readyRead()), this, SLOT(getDefinition()));
+            connect(m_tcpSocket, &QTcpSocket::readyRead, this, &DictEngine::getDefinition);
         }
 
         m_tcpSocket->connectToHost(m_serverName, 2628);
