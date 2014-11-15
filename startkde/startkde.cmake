@@ -153,7 +153,7 @@ if test -n "$kcminputrc_mouse_cursortheme" -o -n "$kcminputrc_mouse_cursorsize" 
 
     kapplymousetheme "$kcminputrc_mouse_cursortheme" "$kcminputrc_mouse_cursorsize"
     if test $? -eq 10; then
-        XCURSOR_THEME=default
+        XCURSOR_THEME=breeze_cursors
         export XCURSOR_THEME
     elif test -n "$kcminputrc_mouse_cursortheme"; then
         XCURSOR_THEME="$kcminputrc_mouse_cursortheme"
