@@ -795,6 +795,7 @@ void ShellCorona::addOutput(KScreen::Output *output)
     view->setContainment(containment);
     m_loading = false;
     view->show();
+    Q_ASSERT(newScreen == view->screen());
 
     //need to specifically call the reactToScreenChange, since when the screen is shown it's not yet
     //in the list. We still don't want to have an invisible view added.
@@ -856,6 +857,7 @@ QScreen* ShellCorona::insertScreen(QScreen *screen, int idx)
     DesktopView *v = m_views[idx];
     QScreen *oldScreen = v->screen();
     v->setScreen(screen);
+    Q_ASSERT(v->screen() == screen);
     foreach (PanelView *panel, m_panelViews) {
         if (panel->screen() == oldScreen) {
             panel->setScreen(screen);
