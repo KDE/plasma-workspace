@@ -213,12 +213,15 @@ uint NotificationsEngine::Notify(const QString &app_name, uint replaces_id,
 
     const QString source = QString("notification %1").arg(id);
 
+    QString bodyFinal = partOf == 0 ? body : _body;
+    bodyFinal = bodyFinal.replace(QLatin1String("\n"), QLatin1String("<br/>"));
+
     Plasma::DataEngine::Data notificationData;
     notificationData.insert("id", QString::number(id));
     notificationData.insert("appName", appname_str);
     notificationData.insert("appIcon", app_icon);
     notificationData.insert("summary", summary);
-    notificationData.insert("body", partOf == 0 ? body : _body);
+    notificationData.insert("body", bodyFinal);
     notificationData.insert("actions", actions);
     notificationData.insert("isPersistent", isPersistent);
     notificationData.insert("expireTimeout", timeout);
