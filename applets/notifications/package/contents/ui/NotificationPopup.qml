@@ -105,6 +105,7 @@ PlasmaCore.Dialog {
                 verticalAlignment: Text.AlignTop
                 onLinkActivated: Qt.openUrlExternally(link)
                 text: notificationItem.text
+                textFormat: Text.StyledText
             }
 
             onClose: {
