@@ -80,11 +80,11 @@ ScreenLockerKcm::ScreenLockerKcm(QWidget *parent, const QVariantList &args)
     layout->addWidget(widget);
 }
 
-QList<Plasma::Package> ScreenLockerKcm::availablePackages(const QString &component)
+QList<Plasma::Package> ScreenLockerKcm::availablePackages(const QString &component) const
 {
     QList<Plasma::Package> packages;
     QStringList paths;
-    QStringList dataPaths = QStandardPaths::standardLocations(QStandardPaths::GenericDataLocation);
+    const QStringList dataPaths = QStandardPaths::standardLocations(QStandardPaths::GenericDataLocation);
 
     for (const QString &path : dataPaths) {
         QDir dir(path + "/plasma/look-and-feel");
@@ -105,6 +105,8 @@ QList<Plasma::Package> ScreenLockerKcm::availablePackages(const QString &compone
 
 void ScreenLockerKcm::load()
 {
+    KCModule::load();
+
     m_package = Plasma::PluginLoader::self()->loadPackage("Plasma/LookAndFeel");
     KConfigGroup cg(KSharedConfig::openConfig("kdeglobals"), "KDE");
     const QString packageName = cg.readEntry("LookAndFeelPackage", QString());
@@ -118,6 +120,7 @@ void ScreenLockerKcm::load()
     }
     setSelectedPlugin(currentPlugin);
 
+    m_model->clear();
     const QList<Plasma::Package> pkgs = availablePackages("lockscreenmainscript");
     for (const Plasma::Package &pkg : pkgs) {
         QStandardItem* row = new QStandardItem(pkg.metadata().name());

@@ -38,7 +38,7 @@ public:
     };
     explicit ScreenLockerKcm(QWidget *parent = nullptr, const QVariantList& args = QVariantList());
 
-    QList<Plasma::Package> availablePackages(const QString &component);
+    QList<Plasma::Package> availablePackages(const QString &component) const;
 
     QStandardItemModel *lockerModel();
 
@@ -46,8 +46,8 @@ public:
     void setSelectedPlugin(const QString &plugin);
 
 public Q_SLOTS:
-    void load();
-    void save() override;
+    void load() Q_DECL_OVERRIDE;
+    void save() Q_DECL_OVERRIDE;
     void test(const QString &plugin);
 
 Q_SIGNALS:
