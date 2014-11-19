@@ -266,9 +266,6 @@ void ShellCorona::load()
     checkActivities();
     if (containments().isEmpty()) {
         loadDefaultLayout();
-        foreach(Plasma::Containment *containment, containments()) {
-            containment->setActivity(m_activityConsumer->currentActivity());
-        }
     } else {
         processUpdateScripts();
         foreach(Plasma::Containment *containment, containments()) {
@@ -875,12 +872,12 @@ Plasma::Containment *ShellCorona::createContainmentForActivity(const QString& ac
         return *it;
     }
 
-    QString plugin = "org.kde.desktopcontainment";
+    QString plugin = m_desktopDefaultsConfig.readEntry("Containment", "org.kde.desktopcontainment");
     if (m_activities.contains(activity)) {
-      //  plugin = m_activities.value(activity)->defaultPlugin();
+        plugin = m_activities.value(activity)->defaultPlugin();
     }
 
-    Plasma::Containment *containment = containmentForScreen(screenNum, m_desktopDefaultsConfig.readEntry("Containment", plugin), QVariantList());
+    Plasma::Containment *containment = containmentForScreen(screenNum, plugin, QVariantList());
     Q_ASSERT(containment);
 
     if (containment) {
