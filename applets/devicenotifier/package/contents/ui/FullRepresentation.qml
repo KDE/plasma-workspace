@@ -171,10 +171,10 @@ MouseArea {
             }
             onOperationResultChanged: {
                 if (operationResult == 1) {
-                    plasmoid.setPopupIconByName("dialog-ok")
+                    devicenotifier.popupIcon = "dialog-ok"
                     popupIconTimer.restart()
                 } else if (operationResult == 2) {
-                    plasmoid.setPopupIconByName("dialog-error")
+                    devicenotifier.popupIcon = "dialog-error"
                     popupIconTimer.restart()
                 }
             }
