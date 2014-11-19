@@ -43,7 +43,6 @@ void SystemTrayPlugin::registerTypes(const char *uri)
     qmlRegisterUncreatableType<SystemTray::Task>(uri, 2, 0, "Task", "You cannot create Task objects.");
     qmlRegisterUncreatableType<SystemTray::DBusSystemTrayTask>(uri, 2, 0, "DBusSystemTrayTask", "You cannot create Task objects.");
     qmlRegisterUncreatableType<SystemTray::PlasmoidTask>(uri, 2, 0, "PlasmoidTask", "You cannot create Task objects.");
-    qmlRegisterUncreatableType<SystemTray::Task>(uri, 2, 0, "Task", "You cannot create Task objects.");
 
     qCDebug(SYSTEMTRAY) << "Categorized debug";
 }
