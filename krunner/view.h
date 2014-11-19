@@ -61,6 +61,7 @@ protected Q_SLOTS:
     void resetScreenPos();
     void displayOrHide();
     void reloadConfig();
+    void objectIncubated();
 
 private:
     QPoint m_customPos;

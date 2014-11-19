@@ -79,6 +79,7 @@ View::View(QWindow *)
 
     m_qmlObj = new KDeclarative::QmlObject(this);
     m_qmlObj->setInitializationDelayed(true);
+    connect(m_qmlObj, &KDeclarative::QmlObject::finished, this, &View::objectIncubated);
 
     Plasma::Package package = Plasma::PluginLoader::self()->loadPackage("Plasma/LookAndFeel");
     KConfigGroup cg(KSharedConfig::openConfig("kdeglobals"), "KDE");
@@ -90,7 +91,6 @@ View::View(QWindow *)
     m_qmlObj->setSource(QUrl::fromLocalFile(package.filePath("runcommandmainscript")));
     m_qmlObj->engine()->rootContext()->setContextProperty("runnerWindow", this);
     m_qmlObj->completeInitialization();
-    setMainItem(qobject_cast<QQuickItem *>(m_qmlObj->rootObject()));
 
     auto controlScreen = [=](QScreen* screen) {
         connect(screen, SIGNAL(geometryChanged(QRect)), SLOT(screenGeometryChanged()));
@@ -124,6 +124,11 @@ View::View(QWindow *)
 
 View::~View()
 {
+}
+
+void View::objectIncubated()
+{
+    setMainItem(qobject_cast<QQuickItem *>(m_qmlObj->rootObject()));
 }
 
 bool View::freeFloating() const
