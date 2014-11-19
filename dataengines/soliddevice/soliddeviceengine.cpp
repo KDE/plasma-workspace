@@ -42,14 +42,14 @@ namespace
                 return parent.as<DevIface>();
             }
         }
-        return NULL;
+        return Q_NULLPTR;
     }
 }
 
 SolidDeviceEngine::SolidDeviceEngine(QObject* parent, const QVariantList& args)
         : Plasma::DataEngine(parent, args),
-          m_temperature(0),
-          m_notifier(0)
+          m_temperature(Q_NULLPTR),
+          m_notifier(Q_NULLPTR)
 {
     Q_UNUSED(args)
     m_signalmanager = new DeviceSignalMapManager(this);
@@ -315,7 +315,7 @@ bool SolidDeviceEngine::populateDeviceData(const QString &name)
         //libsolid cannot notify us when the accessibility of the container changes
         Solid::Device encryptedContainer = storagevolume->encryptedContainer();
         if (encryptedContainer.isValid()) {
-            QString containerUdi = encryptedContainer.udi();
+            const QString containerUdi = encryptedContainer.udi();
             setData(name, I18N_NOOP("Encrypted Container"), containerUdi);
             m_encryptedContainerMap[name] = containerUdi;
             //TODO: compress the calls?
@@ -641,7 +641,7 @@ void SolidDeviceEngine::deviceRemoved(const QString& udi)
 {
     //libsolid cannot notify us when an encrypted container is closed,
     //hence we trigger an update when a device contained in an encrypted container device dies
-    QString containerUdi = m_encryptedContainerMap.value(udi, QString());
+    const QString containerUdi = m_encryptedContainerMap.value(udi, QString());
 
     if (!containerUdi.isEmpty()) {
         forceUpdateAccessibility(containerUdi);
