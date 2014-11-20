@@ -46,19 +46,6 @@ Item {
         anchors.fill: parent
 
         frameVisible: true
-        highlightOnFocus: true;
-
-        Component.onCompleted: {
-            //replace the current binding on the scrollbar that makes it visible when content doesn't fit
-
-            //otherwise we adjust gridSize when we hide the vertical scrollbar and
-            //due to layouting that can make everything adjust which changes the contentWidth/height which
-            //changes our scrollbars and we continue being stuck in a loop
-
-            //looks better to not have everything resize anyway.
-            //BUG: 336301
-            __verticalScrollBar.visible = true
-        }
 
         GridView {
             id: wallpapersGrid
@@ -69,7 +56,7 @@ Item {
             cellHeight: cellWidth / (imageWallpaper.width / imageWallpaper.height)
 
             anchors.margins: 4
-            boundsBehavior: Flickable.StopAtBounds
+            boundsBehavior: Flickable.DragAndOvershootBounds
 
             delegate: WallpaperDelegate {}
             Timer {
