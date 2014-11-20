@@ -27,6 +27,7 @@
 #include <KRunner/QueryMatch>
 #include <KLocalizedString>
 #include <QMimeDatabase>
+#include <QTimer>
 
 #include <Baloo/Query>
 #include <Baloo/Result>
@@ -130,6 +131,28 @@ void SearchRunner::match(Plasma::RunnerContext& context, const QString& type,
 
 void SearchRunner::match(Plasma::RunnerContext& context)
 {
+    const QString text = context.query();
+    //
+    // Baloo (as of 2014-11-20) is single threaded. It has an internal mutex which results in
+    // queries being queued one after another. Also, Baloo is really really slow for small queries
+    // For example - on my SSD, it takes about 1.4 seconds for 'f' with an SSD.
+    // When searching for "fire", it results in "f", "fi", "fir" and then "fire" being searched
+    // We're therefore hacking around this by having a small delay for very short queries so that
+    // they do not get queued internally in Baloo
+    //
+    if (text.length() <= 3) {
+        QEventLoop loop;
+        QTimer timer;
+        connect(&timer, SIGNAL(timeout()), &loop, SLOT(quit()));
+        timer.setSingleShot(true);
+        timer.start(100);
+        loop.exec();
+
+        if (!context.isValid()) {
+            return;
+        }
+    }
+
     match(context, QLatin1String("File/Audio"), i18n("Audio"));
     match(context, QLatin1String("File/Image"), i18n("Image"));
     match(context, QLatin1String("File/Document"), i18n("Document"));
