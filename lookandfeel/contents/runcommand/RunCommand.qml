@@ -43,14 +43,6 @@ ColumnLayout {
         }
     }
 
-    Timer {
-        id: queryTimer
-        interval: 250
-        onTriggered: {
-            root.query = queryField.text
-        }
-    }
-
     RowLayout {
         Layout.alignment: Qt.AlignTop
         PlasmaComponents.ToolButton {
@@ -65,12 +57,7 @@ ColumnLayout {
             clearButtonShown: true
             Layout.minimumWidth: units.gridUnit * 25
             onTextChanged: {
-                if (queryField.text == "") {
-                    root.query = ""
-                    return;
-                }
-                if (!queryTimer.running)
-                    queryTimer.start()
+                root.query = queryField.text
             }
             Keys.onEscapePressed: {
                 runnerWindow.visible = false
