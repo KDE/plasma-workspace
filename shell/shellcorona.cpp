@@ -873,7 +873,7 @@ Plasma::Containment *ShellCorona::createContainmentForActivity(const QString& ac
     }
 
     QString plugin = m_desktopDefaultsConfig.readEntry("Containment", "org.kde.desktopcontainment");
-    if (m_activities.contains(activity)) {
+    if (m_activities.contains(activity) && !m_activities.value(activity)->defaultPlugin().isEmpty()) {
         plugin = m_activities.value(activity)->defaultPlugin();
     }
 
