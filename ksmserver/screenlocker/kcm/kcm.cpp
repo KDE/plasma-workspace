@@ -171,6 +171,7 @@ void ScreenLockerKcm::save()
 
     KScreenSaverSettings::setTheme(m_selectedPlugin);
 
+    KScreenSaverSettings::self()->save();
     // reconfigure through DBus
     OrgKdeScreensaverInterface interface(QStringLiteral("org.kde.screensaver"),
                                          QStringLiteral("/ScreenSaver"),
