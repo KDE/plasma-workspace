@@ -299,7 +299,7 @@ ColumnLayout {
             onClicked: imageWallpaper.showFileDialog();
         }
         QtControls.Button {
-            iconName: "bookmarks"
+            iconName: "get-hot-new-stuff"
             text: i18nd("plasma_applet_org.kde.image","Download Wallpapers")
             onClicked: imageWallpaper.getNewWallpaper();
         }
