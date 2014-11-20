@@ -134,9 +134,6 @@
          <property name="text">
           <string>Update</string>
          </property>
-         <property name="shortcut">
-          <string>Alt+S</string>
-         </property>
         </widget>
        </item>
       </layout>
