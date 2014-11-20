@@ -3,6 +3,7 @@ add_definitions(-DTRANSLATION_DOMAIN=\"screenlocker_kcm\")
 
 set(screenlocker_kcm_SRCS
     kcm.cpp
+    selectimagebutton.cpp
 )
 include_directories(${CMAKE_CURRENT_BINARY_DIR}/../../)
 

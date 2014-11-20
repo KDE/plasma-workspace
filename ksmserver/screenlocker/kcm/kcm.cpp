@@ -24,6 +24,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include <config-ksmserver.h>
 #include <KCModule>
 #include <KPluginFactory>
+#include <KConfigDialogManager>
 #include <QVBoxLayout>
 #include <QQuickView>
 #include <QtQml>
@@ -54,6 +55,8 @@ ScreenLockerKcm::ScreenLockerKcm(QWidget *parent, const QVariantList &args)
     : KCModule(parent, args)
 {
     qmlRegisterType<QStandardItemModel>();
+    KConfigDialogManager::changedMap()->insert("SelectImageButton", SIGNAL(imagePathChanged(QString)));
+
     ScreenLockerKcmForm *ui = new ScreenLockerKcmForm(this);
 
     QVBoxLayout* layout = new QVBoxLayout(this);

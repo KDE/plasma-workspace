@@ -33,7 +33,14 @@ Image {
     property UserSelect userSelect: null
     signal clearPassword()
 
-    source: "../components/artwork/background.png"
+    source: backgroundPath || "../components/artwork/background.png"
+    fillMode: Image.PreserveAspectCrop
+
+    onStatusChanged: {
+        if (status == Image.Error) {
+            source = "../components/artwork/background.png";
+        }
+    }
 
     Connections {
         target: authenticator

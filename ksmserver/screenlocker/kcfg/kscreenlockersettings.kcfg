@@ -30,5 +30,10 @@
       <label></label>
       <whatsthis></whatsthis>
     </entry>
+    <entry key="ThemeBackground" type="String">
+      <default></default>
+      <label></label>
+      <whatsthis></whatsthis>
+    </entry>
   </group>
 </kcfg>

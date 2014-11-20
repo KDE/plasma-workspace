@@ -154,6 +154,7 @@ void UnlockApp::desktopResized()
         context->setContextProperty(QStringLiteral("kscreenlocker_userName"), fullName.isEmpty() ? user.loginName() : fullName);
         context->setContextProperty(QStringLiteral("kscreenlocker_userImage"), user.faceIconPath());
         context->setContextProperty(QStringLiteral("authenticator"), m_authenticator);
+        context->setContextProperty(QStringLiteral("backgroundPath"), KScreenSaverSettings::themeBackground());
 
         view->setSource(m_mainQmlPath);
         view->setResizeMode(QQuickView::SizeRootObjectToView);
