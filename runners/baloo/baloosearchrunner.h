@@ -43,8 +43,8 @@ protected Q_SLOTS:
     void init();
 
 private:
-    void match(Plasma::RunnerContext& context, const QString& type,
-               const QString& category);
+    QList<Plasma::QueryMatch> match(Plasma::RunnerContext& context, const QString& type,
+                                    const QString& category);
 };
 
 #endif // _BALOO_SEARCH_RUNNER_H_

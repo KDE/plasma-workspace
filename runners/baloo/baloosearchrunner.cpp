@@ -81,15 +81,15 @@ QIcon SearchRunner::categoryIcon(const QString& category) const
     return Plasma::AbstractRunner::categoryIcon(category);
 }
 
-void SearchRunner::match(Plasma::RunnerContext& context, const QString& type,
-                         const QString& category)
+QList<Plasma::QueryMatch> SearchRunner::match(Plasma::RunnerContext& context, const QString& type,
+                                              const QString& category)
 {
     if (!context.isValid())
-        return;
+        return QList<Plasma::QueryMatch>();
 
     const QStringList categories = context.enabledCategories();
     if (!categories.isEmpty() && !categories.contains(category))
-        return;
+        return QList<Plasma::QueryMatch>();
 
     Baloo::Query query;
     query.setSearchString(context.query());
@@ -97,6 +97,8 @@ void SearchRunner::match(Plasma::RunnerContext& context, const QString& type,
     query.setLimit(10);
 
     Baloo::ResultIterator it = query.exec();
+
+    QList<Plasma::QueryMatch> matches;
 
     // KRunner is absolutely retarded and allows plugins to set the global
     // relevance levels. so Baloo should not set the relevance of results too
@@ -125,8 +127,10 @@ void SearchRunner::match(Plasma::RunnerContext& context, const QString& type,
         }
         match.setSubtext(localUrl);
 
-        context.addMatch(match);
+        matches << match;
     }
+
+    return matches;
 }
 
 void SearchRunner::match(Plasma::RunnerContext& context)
@@ -153,11 +157,14 @@ void SearchRunner::match(Plasma::RunnerContext& context)
         }
     }
 
-    match(context, QLatin1String("File/Audio"), i18n("Audio"));
-    match(context, QLatin1String("File/Image"), i18n("Image"));
-    match(context, QLatin1String("File/Document"), i18n("Document"));
-    match(context, QLatin1String("File/Video"), i18n("Video"));
-    match(context, QLatin1String("File/Folder"), i18n("Folder"));
+    QList<Plasma::QueryMatch> matches;
+    matches << match(context, QLatin1String("File/Audio"), i18n("Audio"));
+    matches << match(context, QLatin1String("File/Image"), i18n("Image"));
+    matches << match(context, QLatin1String("File/Document"), i18n("Document"));
+    matches << match(context, QLatin1String("File/Video"), i18n("Video"));
+    matches << match(context, QLatin1String("File/Folder"), i18n("Folder"));
+
+    context.addMatches(matches);
 }
 
 void SearchRunner::run(const Plasma::RunnerContext&, const Plasma::QueryMatch& match)
