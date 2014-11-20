@@ -95,8 +95,8 @@ Rectangle {
                             QtControls.Label {
                                 anchors {
                                     horizontalCenter: parent.horizontalCenter
-                                    top: icon.bottom
-                                    topMargin: units.gridUnit
+                                    bottom: parent.bottom
+                                    bottomMargin: units.smallSpacing
                                 }
                                 color: image.status == Image.Ready ? "white" : "gray"
                                 text: model.display
