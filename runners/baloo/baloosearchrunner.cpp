@@ -158,11 +158,11 @@ void SearchRunner::match(Plasma::RunnerContext& context)
     }
 
     QList<Plasma::QueryMatch> matches;
-    matches << match(context, QLatin1String("File/Audio"), i18n("Audio"));
-    matches << match(context, QLatin1String("File/Image"), i18n("Image"));
-    matches << match(context, QLatin1String("File/Document"), i18n("Document"));
-    matches << match(context, QLatin1String("File/Video"), i18n("Video"));
-    matches << match(context, QLatin1String("File/Folder"), i18n("Folder"));
+    matches << match(context, QStringLiteral("Audio"), i18n("Audio"));
+    matches << match(context, QStringLiteral("Image"), i18n("Image"));
+    matches << match(context, QStringLiteral("Document"), i18n("Document"));
+    matches << match(context, QStringLiteral("Video"), i18n("Video"));
+    matches << match(context, QStringLiteral("Folder"), i18n("Folder"));
 
     context.addMatches(matches);
 }
