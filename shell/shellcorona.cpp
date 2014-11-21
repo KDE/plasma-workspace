@@ -872,9 +872,12 @@ Plasma::Containment *ShellCorona::createContainmentForActivity(const QString& ac
         return *it;
     }
 
-    QString plugin = m_desktopDefaultsConfig.readEntry("Containment", "org.kde.desktopcontainment");
-    if (m_activities.contains(activity) && !m_activities.value(activity)->defaultPlugin().isEmpty()) {
-        plugin = m_activities.value(activity)->defaultPlugin();
+    QString plugin;
+    Activity* a = m_activities.value(activity);
+    if (a && !a->defaultPlugin().isEmpty()) {
+        plugin = a->defaultPlugin();
+    } else {
+        plugin = m_desktopDefaultsConfig.readEntry("Containment", "org.kde.desktopcontainment");
     }
 
     Plasma::Containment *containment = containmentForScreen(screenNum, plugin, QVariantList());
