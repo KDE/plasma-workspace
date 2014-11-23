@@ -65,14 +65,8 @@ PlasmaCore.Dialog {
         PlasmaCore.IconItem {
             id: icon
 
-            anchors {
-                top: parent.top
-                left: parent.left
-                right: parent.right
-            }
-
             height: parent.height - progressBar.height - ((units.largeSpacing/2) * 3) //it's an svg
-            width: height
+            width: parent.width
 
             source: root.icon
         }
@@ -104,6 +98,8 @@ PlasmaCore.Dialog {
             visible: !root.showingProgress
             text: root.showingProgress ? "" : (root.osdValue ? root.osdValue : "")
             horizontalAlignment: Text.AlignHCenter
+            wrapMode: Text.NoWrap
+            elide: Text.ElideLeft
         }
     }
 }
