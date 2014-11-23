@@ -74,7 +74,7 @@ void Osd::volumeChanged(int percent)
         icon = QStringLiteral("audio-volume-low");
     } else if (percent == 0) {
         icon = QStringLiteral("audio-volume-muted");
-        showText(icon, i18n("Audio Muted"));
+        showText(icon, i18nc("OSD informing that the system is muted, keep short", "Audio Muted"));
         return;
     }
 
