@@ -37,14 +37,6 @@ PlasmaCore.Dialog {
     // false for displaying the value as normal text
     property bool showingProgress: false
 
-    onVisibleChanged: {
-        // this is needed to prevent fading from "old" values when the OSD shows up
-        if (!visible) {
-            root.icon = "";
-            root.osdValue = 0;
-        }
-    }
-
     mainItem: Item {
         height: units.gridUnit * 15
         width: height

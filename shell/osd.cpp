@@ -130,4 +130,8 @@ void Osd::showOsd()
 void Osd::hideOsd()
 {
     m_osdObject->rootObject()->setProperty("visible", false);
+
+    // this is needed to prevent fading from "old" values when the OSD shows up
+    m_osdObject->rootObject()->setProperty("icon", "");
+    m_osdObject->rootObject()->setProperty("osdValue", 0);
 }
