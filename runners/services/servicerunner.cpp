@@ -1,5 +1,6 @@
 /*
  *   Copyright (C) 2006 Aaron Seigo <aseigo@kde.org>
+ *   Copyright (C) 2014 Vishesh Handa <vhanda@kde.org>
  *
  *   This program is free software; you can redistribute it and/or modify
  *   it under the terms of the GNU Library General Public License version 2 as
@@ -160,6 +161,12 @@ void ServiceRunner::match(Plasma::RunnerContext &context)
             relevance = 0.65;
 
             if (service->genericName().startsWith(term, Qt::CaseInsensitive)) {
+                relevance += 0.05;
+            }
+        } else if (service->exec().contains(term, Qt::CaseInsensitive)) {
+            relevance = 0.7;
+
+            if (service->exec().startsWith(term, Qt::CaseInsensitive)) {
                 relevance += 0.05;
             }
         }
