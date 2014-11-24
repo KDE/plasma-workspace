@@ -21,7 +21,7 @@
 
 #include <QMimeData>
 
-#include <KConfig>
+#include <KDesktopFile>
 #include <KConfigGroup>
 #include <QDebug>
 #include <KDirWatch>
@@ -75,15 +75,13 @@ void RecentDocuments::match(Plasma::RunnerContext &context)
         }
 
         if (document.contains(term, Qt::CaseInsensitive)) {
-            KConfig _config( document, KConfig::SimpleConfig );
-            KConfigGroup config(&_config, "Desktop Entry" );
-            QString niceName =  config.readEntry( "Name" );
+            KDesktopFile config(document);
             Plasma::QueryMatch match(this);
             match.setType(Plasma::QueryMatch::PossibleMatch);
             match.setRelevance(1.0);
-            match.setIcon(QIcon::fromTheme(config.readEntry("Icon")));
-            match.setData(document); // TODO: Read URL[$e], or can we just pass the path to the .desktop file?
-            match.setText(niceName);
+            match.setIcon(QIcon::fromTheme(config.readIcon()));
+            match.setData(config.readUrl());
+            match.setText(config.readName());
             match.setSubtext(i18n("Recent Document"));
             context.addMatch(match);
         }
