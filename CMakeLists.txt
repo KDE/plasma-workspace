@@ -19,7 +19,8 @@ find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS
 # WARNING PlasmaQuick provides unversioned CMake config
 find_package(KF5 REQUIRED COMPONENTS PlasmaQuick)
 find_package(KF5 REQUIRED COMPONENTS SysGuard)
-find_package(KF5 REQUIRED COMPONENTS Screen)
+# Require KScreen >= 5.0.93 due to large API change
+find_package(KF5 5.0.93 REQUIRED COMPONENTS Screen)
 find_package(KF5TextEditor)
 find_package(KWinDBusInterface CONFIG REQUIRED)
 

@@ -38,6 +38,7 @@
 #include <Plasma/Containment>
 #include <Plasma/Package>
 #include <KScreen/Config>
+#include <KScreen/Output>
 
 #if HAVE_X11
 #include <xcb/xcb.h>
@@ -100,10 +101,14 @@ PanelView::PanelView(ShellCorona *corona, QScreen *targetScreen, QWindow *parent
     m_strutsTimer.setSingleShot(true);
     connect(&m_strutsTimer, &QTimer::timeout,
             this, &PanelView::updateStruts);
-    connect(m_corona->screensConfiguration(), &KScreen::Config::outputAdded,
-            this, &PanelView::updateStruts);
-    connect(m_corona->screensConfiguration(), &KScreen::Config::outputRemoved,
-            this, &PanelView::updateStruts);
+    connect(m_corona->screensConfiguration().data(), &KScreen::Config::outputAdded,
+            this, [=] (const KScreen::OutputPtr &) {
+                updateStruts();
+            });
+    connect(m_corona->screensConfiguration().data(), &KScreen::Config::outputRemoved,
+            this, [=] (int) {
+                updateStruts();
+            });
 
     qmlRegisterType<QScreen>();
     engine()->rootContext()->setContextProperty("panel", this);

@@ -30,6 +30,8 @@
 
 #include <Plasma/Package>
 
+#include <KScreen/Types>
+
 class Activity;
 class DesktopView;
 class PanelView;
@@ -49,7 +51,6 @@ namespace KDeclarative
 
 namespace KScreen {
     class Output;
-    class Config;
 } // namespace KScreen
 
 namespace Plasma
@@ -90,7 +91,7 @@ public:
 
     Plasma::Containment *setContainmentTypeForScreen(int screen, const QString &plugin);
 
-    KScreen::Config *screensConfiguration() const;
+    KScreen::ConfigPtr screensConfiguration() const;
 
     QScreen *screenForId(int screenId) const;
     void remove(DesktopView *desktopView);
@@ -166,7 +167,7 @@ private Q_SLOTS:
     void populateAddPanelsMenu();
 
     void outputEnabledChanged();
-    void addOutput(KScreen::Output *output);
+    void addOutput(const KScreen::OutputPtr &output);
     void primaryOutputChanged();
 
     void activityOpened();
@@ -179,12 +180,11 @@ private Q_SLOTS:
     void screenRemoved(QScreen* screen);
 
 private:
-    QScreen *outputToScreen(KScreen::Output *output) const;
-    KScreen::Output *screenToOutput(QScreen *screen) const;
-    KScreen::Output *findPrimaryOutput() const;
+    QScreen *outputToScreen(const KScreen::OutputPtr &output) const;
+    KScreen::OutputPtr screenToOutput(QScreen *screen) const;
     QScreen *insertScreen(QScreen *screen, int idx);
     void removeView(int idx);
-    bool isOutputRedundant(KScreen::Output *output) const;
+    bool isOutputRedundant(const KScreen::OutputPtr &output) const;
     void reconsiderOutputs();
     QList<PanelView *> panelsForScreen(QScreen *screen) const;
     DesktopView* desktopForScreen(QScreen *screen) const;
@@ -207,11 +207,11 @@ private:
     QAction *m_addPanelAction;
     QMenu *m_addPanelsMenu;
     Plasma::Package m_lookAndFeelPackage;
-    QSet<KScreen::Output *> m_redundantOutputs;
+    QSet<KScreen::OutputPtr> m_redundantOutputs;
     QList<KDeclarative::QmlObject *> m_alternativesObjects;
     KDeclarative::QmlObject *m_interactiveConsole;
 
-    KScreen::Config *m_screenConfiguration;
+    KScreen::ConfigPtr m_screenConfiguration;
     QTimer m_waitingPanelsTimer;
     QTimer m_appConfigSyncTimer;
     QTimer m_reconsiderOutputsTimer;

@@ -44,7 +44,9 @@
 #include <KMessageBox>
 
 #include <KScreen/Config>
-#include <kscreen/configmonitor.h>
+#include <KScreen/ConfigMonitor>
+#include <KScreen/GetConfigOperation>
+#include <KScreen/Output>
 
 #include "config-ktexteditor.h" // HAVE_KTEXTEDITOR
 
@@ -160,7 +162,6 @@ ShellCorona::ShellCorona(QObject *parent)
     connect(m_activityConsumer, SIGNAL(activityRemoved(QString)), this, SLOT(activityRemoved(QString)));
 
     new Osd(this);
-    m_screenConfiguration = KScreen::Config::current();
 
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
     connect(qGuiApp, &QGuiApplication::screenRemoved, this, &ShellCorona::screenRemoved);
@@ -228,7 +229,11 @@ void ShellCorona::setShell(const QString &shell)
     if (m_activityConsumer->serviceStatus() == KActivities::Consumer::Unknown) {
         connect(m_activityConsumer, SIGNAL(serviceStatusChanged(Consumer::ServiceStatus)), SLOT(load()), Qt::UniqueConnection);
     } else {
-        load();
+        connect(new KScreen::GetConfigOperation(KScreen::GetConfigOperation::NoEDID), &KScreen::GetConfigOperation::finished,
+                this, [=](KScreen::ConfigOperation *op) {
+                    m_screenConfiguration = qobject_cast<KScreen::GetConfigOperation*>(op)->config();
+                    load();
+                });
     }
 }
 
@@ -237,7 +242,7 @@ QString ShellCorona::shell() const
     return m_shell;
 }
 
-bool outputLess(KScreen::Output *a, KScreen::Output *b)
+bool outputLess(const KScreen::OutputPtr &a, const KScreen::OutputPtr &b)
 {
     return ((a->isEnabled() && !b->isEnabled())
          || (a->isEnabled() == b->isEnabled() && (a->isPrimary() && !b->isPrimary()))
@@ -245,9 +250,9 @@ bool outputLess(KScreen::Output *a, KScreen::Output *b)
          || (a->pos().x() == b->pos().x() && a->pos().y() < b->pos().y()))));
 }
 
-static QList<KScreen::Output*> sortOutputs(const QHash<int, KScreen::Output*> &outputs)
+static QList<KScreen::OutputPtr> sortOutputs(const KScreen::OutputList &outputs)
 {
-    QList<KScreen::Output*> ret = outputs.values();
+    QList<KScreen::OutputPtr> ret = outputs.values();
     std::sort(ret.begin(), ret.end(), outputLess);
     return ret;
 }
@@ -288,10 +293,11 @@ void ShellCorona::load()
 
     KScreen::ConfigMonitor::instance()->addConfig(m_screenConfiguration);
     //we're not going through the connectedOutputs because we need to connect to all outputs
-    for (KScreen::Output *output : sortOutputs(m_screenConfiguration->outputs())) {
+    for (const KScreen::OutputPtr &output : sortOutputs(m_screenConfiguration->outputs())) {
         addOutput(output);
     }
-    connect(m_screenConfiguration, &KScreen::Config::outputAdded, this, &ShellCorona::addOutput);
+    connect(m_screenConfiguration.data(), &KScreen::Config::outputAdded, this, &ShellCorona::addOutput);
+    connect(m_screenConfiguration.data(), &KScreen::Config::primaryOutputChanged, this, &ShellCorona::primaryOutputChanged);
 
     if (!m_waitingPanels.isEmpty()) {
         m_waitingPanelsTimer.start();
@@ -317,7 +323,7 @@ void ShellCorona::primaryOutputChanged()
         return;
     }
 
-    KScreen::Output *output = findPrimaryOutput();
+    const KScreen::OutputPtr output = m_screenConfiguration->primaryOutput();
     if (!output) {
         return;
     }
@@ -363,7 +369,7 @@ void ShellCorona::screenInvariants() const
     Q_ASSERT(!m_loading);
     Q_ASSERT(m_views.count() <= QGuiApplication::screens().count());
     QScreen *s = m_views.isEmpty() ? nullptr : m_views[0]->screen();
-    KScreen::Output *primaryOutput = findPrimaryOutput();
+    const KScreen::OutputPtr primaryOutput = m_screenConfiguration->primaryOutput();
     if (!s) {
         qWarning() << "error: couldn't find primary output" << primaryOutput;
         return;
@@ -396,7 +402,7 @@ void ShellCorona::screenInvariants() const
         ++i;
     }
 
-    foreach (KScreen::Output* out, m_redundantOutputs) {
+    foreach (const KScreen::OutputPtr &out, m_redundantOutputs) {
         Q_ASSERT(isOutputRedundant(out));
     }
 
@@ -521,7 +527,7 @@ QRect ShellCorona::screenGeometry(int id) const
 {
     if (id >= m_views.count() || id < 0) {
         qWarning() << "requesting unexisting screen" << id;
-        QScreen *s = outputToScreen(findPrimaryOutput());
+        QScreen *s = outputToScreen(m_screenConfiguration->primaryOutput());
         return s ? s->geometry() : QRect();
     }
     return m_views[id]->geometry();
@@ -532,7 +538,7 @@ QRegion ShellCorona::availableScreenRegion(int id) const
     if (id >= m_views.count() || id < 0) {
         //each screen should have a view
         qWarning() << "requesting unexisting screen" << id;
-        QScreen *s = outputToScreen(findPrimaryOutput());
+        QScreen *s = outputToScreen(m_screenConfiguration->primaryOutput());
         return s ? s->availableGeometry() : QRegion();
     }
     DesktopView *view = m_views[id];
@@ -553,7 +559,7 @@ QRect ShellCorona::availableScreenRect(int id) const
     if (id >= m_views.count() || id < 0) {
         //each screen should have a view
         qWarning() << "requesting unexisting screen" << id;
-        QScreen *s = outputToScreen(findPrimaryOutput());
+        QScreen *s = outputToScreen(m_screenConfiguration->primaryOutput());
         return s ? s->availableGeometry() : QRect();
     }
 
@@ -679,17 +685,17 @@ void ShellCorona::screenRemoved(QScreen* screen)
 
 void ShellCorona::outputEnabledChanged()
 {
-    addOutput(qobject_cast<KScreen::Output *>(sender()));
+    addOutput(KScreen::OutputPtr(qobject_cast<KScreen::Output *>(sender()), [](void*){}));
 }
 
-bool ShellCorona::isOutputRedundant(KScreen::Output *screen) const
+bool ShellCorona::isOutputRedundant(const KScreen::OutputPtr &screen) const
 {
     Q_ASSERT(screen->currentMode());
     const QRect geometry = screen->geometry();
 
     //FIXME: QScreen doesn't have any idea of "this qscreen is clone of this other one
     //so this ultra inefficient heuristic has to stay until we have a slightly better api
-    foreach (const KScreen::Output *s, m_screenConfiguration->connectedOutputs()) {
+    foreach (const KScreen::OutputPtr &s, m_screenConfiguration->connectedOutputs()) {
         if (screen == s || !s->isEnabled() || !s->currentMode()) {
             continue;
         }
@@ -712,7 +718,7 @@ void ShellCorona::reconsiderOutputs()
         return;
     }
 
-    foreach (KScreen::Output *out, m_screenConfiguration->connectedOutputs()) {
+    foreach (const KScreen::OutputPtr &out, m_screenConfiguration->connectedOutputs()) {
         if (!out->isEnabled() || !out->currentMode()) {
 //             qDebug() << "skip screen" << out << desktopForScreen(outputToScreen(out));
             continue;
@@ -738,16 +744,21 @@ void ShellCorona::reconsiderOutputs()
     CHECK_SCREEN_INVARIANTS
 }
 
-void ShellCorona::addOutput(KScreen::Output *output)
+void ShellCorona::addOutput(const KScreen::OutputPtr &output)
 {
     if (!output) {
         return;
     }
 
-    connect(output, &KScreen::Output::isEnabledChanged, this, &ShellCorona::outputEnabledChanged, Qt::UniqueConnection);
-    connect(output, &KScreen::Output::posChanged, &m_reconsiderOutputsTimer, static_cast<void (QTimer::*)()>(&QTimer::start), Qt::UniqueConnection);
-    connect(output, &KScreen::Output::currentModeIdChanged, &m_reconsiderOutputsTimer, static_cast<void (QTimer::*)()>(&QTimer::start), Qt::UniqueConnection);
-    connect(output, &KScreen::Output::isPrimaryChanged, this, &ShellCorona::primaryOutputChanged, Qt::UniqueConnection);
+    connect(output.data(), &KScreen::Output::isEnabledChanged,
+            this, &ShellCorona::outputEnabledChanged,
+            Qt::UniqueConnection);
+    connect(output.data(), &KScreen::Output::posChanged,
+            &m_reconsiderOutputsTimer, static_cast<void (QTimer::*)()>(&QTimer::start),
+            Qt::UniqueConnection);
+    connect(output.data(), &KScreen::Output::currentModeIdChanged,
+            &m_reconsiderOutputsTimer, static_cast<void (QTimer::*)()>(&QTimer::start),
+            Qt::UniqueConnection);
 
     if (!output->isEnabled()) {
         m_redundantOutputs.remove(output);
@@ -767,7 +778,7 @@ void ShellCorona::addOutput(KScreen::Output *output)
 
     int insertPosition = 0;
     foreach (DesktopView *view, m_views) {
-        KScreen::Output *out = screenToOutput(view->screen());
+        const KScreen::OutputPtr out = screenToOutput(view->screen());
         if (outputLess(output, out)) {
             break;
         }
@@ -809,7 +820,7 @@ void ShellCorona::addOutput(KScreen::Output *output)
     CHECK_SCREEN_INVARIANTS
 }
 
-QScreen *ShellCorona::outputToScreen(KScreen::Output *output) const
+QScreen *ShellCorona::outputToScreen(const KScreen::OutputPtr &output) const
 {
     if (!output) {
         return nullptr;
@@ -824,25 +835,15 @@ QScreen *ShellCorona::outputToScreen(KScreen::Output *output) const
     return nullptr;
 }
 
-KScreen::Output *ShellCorona::screenToOutput(QScreen *screen) const
+KScreen::OutputPtr ShellCorona::screenToOutput(QScreen *screen) const
 {
-    foreach (KScreen::Output *output, m_screenConfiguration->connectedOutputs()) {
+    foreach (const KScreen::OutputPtr &output, m_screenConfiguration->connectedOutputs()) {
         if (screen->name() == output->name()) {
             return output;
         }
     }
 
-    return nullptr;
-}
-
-KScreen::Output *ShellCorona::findPrimaryOutput() const
-{
-    foreach (KScreen::Output *output, m_screenConfiguration->connectedOutputs()) {
-        if (output->isPrimary())
-            return output;
-    }
-
-    return nullptr;
+    return KScreen::OutputPtr();
 }
 
 QScreen* ShellCorona::insertScreen(QScreen *screen, int idx)
@@ -1512,7 +1513,7 @@ void ShellCorona::desktopContainmentDestroyed(QObject *obj)
     }
 }
 
-KScreen::Config* ShellCorona::screensConfiguration() const
+KScreen::ConfigPtr ShellCorona::screensConfiguration() const
 {
     return m_screenConfiguration;
 }
