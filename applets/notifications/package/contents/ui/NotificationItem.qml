@@ -35,7 +35,7 @@ Item {
             return Math.max(absoluteMinimum, closeButton.height + units.smallSpacing + textItemLoader.item.height)
         }
         // in the popup make it compact and not more than roughly 2 or 3 lines of text
-        var iconOrTextHeight = Math.max(units.iconSizes.large, titleBar.height + textItemLoader.item.implicitHeight + 2 * units.smallSpacing)
+        var iconOrTextHeight = Math.max(units.iconSizes.large, titleBar.height + textItemLoader.item.implicitHeight) + 2 * units.smallSpacing
         return Math.max(absoluteMinimum, Math.min(iconOrTextHeight, 5.5 * units.gridUnit))
     }
 
