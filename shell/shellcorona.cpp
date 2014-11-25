@@ -228,13 +228,12 @@ void ShellCorona::setShell(const QString &shell)
 
     if (m_activityConsumer->serviceStatus() == KActivities::Consumer::Unknown) {
         connect(m_activityConsumer, SIGNAL(serviceStatusChanged(Consumer::ServiceStatus)), SLOT(load()), Qt::UniqueConnection);
-    } else {
-        connect(new KScreen::GetConfigOperation(KScreen::GetConfigOperation::NoEDID), &KScreen::GetConfigOperation::finished,
+    }
+    connect(new KScreen::GetConfigOperation(KScreen::GetConfigOperation::NoEDID), &KScreen::GetConfigOperation::finished,
                 this, [=](KScreen::ConfigOperation *op) {
                     m_screenConfiguration = qobject_cast<KScreen::GetConfigOperation*>(op)->config();
                     load();
                 });
-    }
 }
 
 QString ShellCorona::shell() const
@@ -260,7 +259,8 @@ static QList<KScreen::OutputPtr> sortOutputs(const KScreen::OutputList &outputs)
 void ShellCorona::load()
 {
     if (m_shell.isEmpty() ||
-        m_activityConsumer->serviceStatus() == KActivities::Consumer::Unknown) {
+        m_activityConsumer->serviceStatus() == KActivities::Consumer::Unknown ||
+        !m_screenConfiguration) {
         return;
     }
 
