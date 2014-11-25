@@ -1,6 +1,7 @@
 /*
  *  Copyright 2013 Marco Martin <mart@kde.org>
  *  Copyright 2014 Sebastian Kügler <sebas@kde.org>
+ *  Copyright 2014 Kai Uwe Broulik <kde@privat.broulik.de>
  *
  *  This program is free software; you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -17,18 +18,18 @@
  *  Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  2.010-1301, USA.
  */
 
-import QtQuick 2.0
+import QtQuick 2.2
 import org.kde.plasma.wallpapers.image 2.0 as Wallpaper
 import org.kde.plasma.core 2.0 as PlasmaCore
 
-Rectangle {
+Item {
     id: root
-    color: wallpaper.configuration.Color
-    property string configuredImage: wallpaper.configuration.Image
-    property string modelImage: imageWallpaper.wallpaperPath
+
+    readonly property string configuredImage: wallpaper.configuration.Image
+    readonly property string modelImage: imageWallpaper.wallpaperPath
     property Item currentImage: imageB
     property Item otherImage: imageA
-    property int fillMode: wallpaper.configuration.FillMode
+    readonly property int fillMode: wallpaper.configuration.FillMode
 
     //public API, the C++ part will look for those
     function setUrl(url) {
@@ -54,7 +55,10 @@ Rectangle {
         currentImage.opacity = 0
         otherImage.z = 0
         currentImage.z = 1
-        fadeAnim.running = true
+        // Alleviate stuttering by waiting with the fade animation until the image is loaded (or failed to)
+        fadeAnim.running = Qt.binding(function() {
+            return currentImage.status !== Image.Loading && otherImage.status !== Image.Loading
+        })
     }
 
     function fadeFillMode() {
@@ -96,10 +100,6 @@ Rectangle {
         fadeWallpaper()
     }
 
-    Behavior on color {
-        ColorAnimation { duration: units.longDuration }
-    }
-
     Wallpaper.Image {
         id: imageWallpaper
         //the oneliner of difference between image and slideshow wallpapers
@@ -121,13 +121,11 @@ Rectangle {
         fadeWallpaper();
     }
 
-
     SequentialAnimation {
         id: fadeAnim
         running: false
-        PropertyAnimation {
+        OpacityAnimator {
             target: currentImage
-            properties: "opacity"
             from: 0
             to: 1
             duration: units.longDuration
@@ -135,11 +133,21 @@ Rectangle {
         ScriptAction {
             script: {
                 otherImage.opacity = 0;
-                // This leads to flicker, but it would be nice to release the image's memory
-                // after the animation is finished
-                //otherImage.source = "";
                 otherImage.fillMode = fillMode;
+                otherImage.source = "";
             }
+        }
+    }
+
+    Rectangle {
+        id: backgroundColor
+        anchors.fill: parent
+
+        visible: currentImage.fillMode === Image.PreserveAspectFit || currentImage.fillMode === Image.Pad
+              || otherImage.fillMode === Image.PreserveAspectFit || otherImage.fillMode === Image.Pad
+        color: wallpaper.configuration.Color
+        Behavior on color {
+            ColorAnimation { duration: units.longDuration }
         }
     }
 
@@ -147,24 +155,16 @@ Rectangle {
         id: imageA
         anchors.fill: parent
         asynchronous: true
-        clip: true
         cache: false
         fillMode: wallpaper.configuration.FillMode
-        sourceSize {
-            width: imageA.width
-            height: imageA.height
-        }
+        sourceSize: Qt.size(width, height)
     }
     Image {
         id: imageB
         anchors.fill: parent
         asynchronous: true
-        clip: true
         cache: false
         fillMode: wallpaper.configuration.FillMode
-        sourceSize {
-            width: imageB.width
-            height: imageB.height
-        }
+        sourceSize: Qt.size(width, height)
     }
 }
