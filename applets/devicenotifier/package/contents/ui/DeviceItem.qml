@@ -92,7 +92,7 @@ Item {
             height: width
             z: 900
             source: icon
-            enabled: state == 0
+            enabled: deviceItem.state == 0
             anchors {
                 left: parent.left
                 top: parent.top
@@ -102,7 +102,7 @@ Item {
                 id: emblem
                 width: units.iconSizes.medium * 0.5
                 height: width
-                source: state == 0 ? emblemIcon : undefined;
+                source: deviceItem.state == 0 ? emblemIcon : undefined;
                 anchors {
                     left: parent.left
                     bottom: parent.bottom
@@ -131,7 +131,7 @@ Item {
                     left: parent.left
                     right: parent.right
                 }
-                enabled: state == 0
+                enabled: deviceItem.state == 0
             }
 
             PlasmaCore.ToolTipArea {
@@ -147,7 +147,7 @@ Item {
 
 
 
-                opacity: (state == 0 && mounted) ? 1 : 0
+                opacity: (deviceItem.state == 0 && mounted) ? 1 : 0
                 PlasmaComponents.ProgressBar {
                     id: freeSpaceBar
                     height: deviceStatus.height
@@ -172,10 +172,10 @@ Item {
                     // FIXME: state changes do not reach the plasmoid if the
                     // device was already attached when the plasmoid was
                     // initialized
-                    text: state == 0 ? container.idleStatus() : (state==1 ? i18nc("Accessing is a less technical word for Mounting; translation should be short and mean \'Currently mounting this device\'", "Accessing...") : i18nc("Removing is a less technical word for Unmounting; translation shoud be short and mean \'Currently unmounting this device\'", "Removing..."))
+                    text: deviceItem.state == 0 ? container.idleStatus() : (deviceItem.state==1 ? i18nc("Accessing is a less technical word for Mounting; translation should be short and mean \'Currently mounting this device\'", "Accessing...") : i18nc("Removing is a less technical word for Unmounting; translation shoud be short and mean \'Currently unmounting this device\'", "Removing..."))
                     font.pointSize: theme.smallestFont.pointSize
                     color: "#99"+(theme.textColor.toString().substr(1))
-                    opacity: state != 0 || container.containsMouse || expanded ? 1 : 0;
+                    opacity: deviceItem.state != 0 || container.containsMouse || expanded ? 1 : 0;
 
                     Behavior on opacity { NumberAnimation { duration: units.shortDuration * 3 } }
                 }
@@ -237,14 +237,14 @@ Item {
                 id: busySpinner
                 anchors.fill: parent
                 running: visible
-                visible: state != 0
+                visible: deviceItem.state != 0
             }
         }
 
         PlasmaCore.ToolTipArea {
             anchors.fill: deviceIcon
             subText: {
-                if ((mounted || state != 0) && model["Available Content"] != "Audio") {
+                if ((mounted || deviceItem.state != 0) && model["Available Content"] != "Audio") {
                     if (model["Removable"]) {
                         return i18n("It is currently <b>not safe</b> to remove this device: applications may be accessing it. Click the eject button to safely remove this device.")
                     } else {
