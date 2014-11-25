@@ -113,27 +113,6 @@ Item {
         }
     }
 
-    PlasmaCore.DataSource {
-        id: statusSource
-        engine: "devicenotifications"
-        property string last
-        onSourceAdded: {
-            last = source;
-            disconnectSource(source);
-            connectSource(source);
-        }
-        onSourceRemoved: {
-            disconnectSource(source);
-        }
-        onDataChanged: {
-            if (last != "") {
-                statusBar.setData(data[last]["error"], data[last]["errorDetails"], data[last]["udi"]);
-                plasmoid.status = PlasmaCore.Types.NeedsAttentionStatus;
-                plasmoid.expanded = true;
-            }
-        }
-    }
-
     PlasmaCore.SortFilterModel {
         id: filterModel
         sourceModel: PlasmaCore.DataModel {

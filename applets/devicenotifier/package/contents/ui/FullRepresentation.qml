@@ -46,6 +46,31 @@ MouseArea {
         visible: filterModel.count == 0
     }
 
+    PlasmaCore.DataSource {
+        id: statusSource
+        engine: "devicenotifications"
+        property string last
+        onSourceAdded: {
+            console.debug("Source added " + last);
+            last = source;
+            disconnectSource(source);
+            connectSource(source);
+        }
+        onSourceRemoved: {
+            console.debug("Source removed " + last);
+            disconnectSource(source);
+        }
+        onDataChanged: {
+            console.debug("Data changed for " + last);
+            console.debug("Error:" + data[last]["error"]);
+            if (last != "") {
+                statusBar.setData(data[last]["error"], data[last]["errorDetails"], data[last]["udi"]);
+                plasmoid.status = PlasmaCore.Types.NeedsAttentionStatus;
+                plasmoid.expanded = true;
+            }
+        }
+    }
+
     ColumnLayout {
         anchors.fill: parent
 
@@ -113,11 +138,13 @@ MouseArea {
             height: lineSvg.elementSize("horizontal-line").height
 
             visible: statusBar.height>0
+            anchors.bottom: statusBar.top
         }
 
         StatusBar {
             id: statusBar
             Layout.fillWidth: true
+            anchors.bottom: parent.bottom
         }
     }
 

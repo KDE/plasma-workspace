@@ -31,12 +31,11 @@ Item {
     Behavior on height { NumberAnimation { duration: units.longDuration } }
 
     function setData(error, details, udi) {
-        shown = visible;
-        if (shown)
+        if (visible)
             close();
         statusText.text = error;
         detailsText.text = details;
-        if (shown)
+        if (visible)
             showTimer.restart();
         else
             show();
