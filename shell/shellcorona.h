@@ -215,7 +215,6 @@ private:
     QTimer m_waitingPanelsTimer;
     QTimer m_appConfigSyncTimer;
     QTimer m_reconsiderOutputsTimer;
-    bool m_loading;
 };
 
 #endif // SHELLCORONA_H

@@ -5,7 +5,7 @@ set(PROJECT_VERSION_MAJOR 5)
 cmake_minimum_required(VERSION 2.8.12 FATAL_ERROR)
 
 set(QT_MIN_VERSION "5.3.0")
-set(KF5_MIN_VERSION "5.0.0")
+set(KF5_MIN_VERSION "5.4.0")
 set(INSTALL_SDDM_THEME TRUE)
 find_package(Qt5 ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS Widgets Quick QuickWidgets Concurrent Test Script Network)
 
@@ -13,7 +13,7 @@ find_package(ECM 0.0.11 REQUIRED NO_MODULE)
 set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH} ${ECM_KDE_MODULE_DIR})
 
 find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS
-                    Plasma DocTools Runner JsEmbed NotifyConfig Su NewStuff Wallet KCMUtils Baloo
+                    Plasma DocTools Runner JsEmbed NotifyConfig Su NewStuff Wallet KCMUtils
                     IdleTime Declarative WebKit TextWidgets KDELibs4Support Crash)
 
 # WARNING PlasmaQuick provides unversioned CMake config
@@ -21,6 +21,8 @@ find_package(KF5 REQUIRED COMPONENTS PlasmaQuick)
 find_package(KF5 REQUIRED COMPONENTS SysGuard)
 # Require KScreen >= 5.0.93 due to large API change
 find_package(KF5 5.0.93 REQUIRED COMPONENTS Screen)
+# Baloo has a different version scheme than KF5 for now
+find_package(KF5 5.1 REQUIRED COMPONENTS Baloo)
 find_package(KF5TextEditor)
 find_package(KWinDBusInterface CONFIG REQUIRED)
 

@@ -76,8 +76,7 @@ ShellCorona::ShellCorona(QObject *parent)
       m_addPanelAction(nullptr),
       m_addPanelsMenu(nullptr),
       m_interactiveConsole(nullptr),
-      m_screenConfiguration(nullptr),
-      m_loading(false)
+      m_screenConfiguration(nullptr)
 {
     qmlRegisterUncreatableType<DesktopView>("org.kde.plasma.shell", 2, 0, "Desktop", "It is not possible to create objects of type Desktop");
     qmlRegisterUncreatableType<PanelView>("org.kde.plasma.shell", 2, 0, "Panel", "It is not possible to create objects of type Panel");
@@ -314,11 +313,6 @@ void ShellCorona::load()
 
 void ShellCorona::primaryOutputChanged()
 {
-    if (m_loading) {
-        QTimer::singleShot(500, this, SLOT(primaryOutputChanged()));
-        return;
-    }
-
     if (m_views.isEmpty()) {
         return;
     }
@@ -366,7 +360,6 @@ void ShellCorona::primaryOutputChanged()
 #ifndef NDEBUG
 void ShellCorona::screenInvariants() const
 {
-    Q_ASSERT(!m_loading);
     Q_ASSERT(m_views.count() <= QGuiApplication::screens().count());
     QScreen *s = m_views.isEmpty() ? nullptr : m_views[0]->screen();
     const KScreen::OutputPtr primaryOutput = m_screenConfiguration->primaryOutput();
@@ -713,11 +706,6 @@ bool ShellCorona::isOutputRedundant(const KScreen::OutputPtr &screen) const
 
 void ShellCorona::reconsiderOutputs()
 {
-    if (m_loading) {
-        m_reconsiderOutputsTimer.start();
-        return;
-    }
-
     foreach (const KScreen::OutputPtr &out, m_screenConfiguration->connectedOutputs()) {
         if (!out->isEnabled() || !out->currentMode()) {
 //             qDebug() << "skip screen" << out << desktopForScreen(outputToScreen(out));
@@ -799,9 +787,7 @@ void ShellCorona::addOutput(const KScreen::OutputPtr &output)
     }
 
     m_views.append(view);
-    m_loading = true;
     view->setContainment(containment);
-    m_loading = false;
     view->show();
     Q_ASSERT(newScreen == view->screen());
 
@@ -894,11 +880,6 @@ Plasma::Containment *ShellCorona::createContainmentForActivity(const QString& ac
 
 void ShellCorona::createWaitingPanels()
 {
-    if (m_loading) {
-        m_waitingPanelsTimer.start();
-        return;
-    }
-
     QList<Plasma::Containment *> stillWaitingPanels;
 
     foreach (Plasma::Containment *cont, m_waitingPanels) {
@@ -918,9 +899,7 @@ void ShellCorona::createWaitingPanels()
         PanelView* panel = new PanelView(this, screen);
 
         m_panelViews[cont] = panel;
-        m_loading = true;
         panel->setContainment(cont);
-        m_loading = false;
         panel->show();
         cont->reactToScreenChange();
 
