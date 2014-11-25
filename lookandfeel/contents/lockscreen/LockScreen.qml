@@ -134,6 +134,11 @@ Image {
                             onAccepted: unlockFunction()
                             focus: true
                             visible: block.mainItem.model.get(block.mainItem.selectedIndex)["showPassword"]
+                            onVisibleChanged: {
+                                if (visible) {
+                                    forceActiveFocus();
+                                }
+                            }
 
                             Keys.onLeftPressed: {
                                 if (text == "") {
