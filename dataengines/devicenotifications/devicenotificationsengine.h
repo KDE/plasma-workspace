@@ -1,5 +1,6 @@
 /*
  * Copyright (C) 2010 Jacopo De Simoi <wilderkde@gmail.com>
+ * Copyright (C) 2014 by Lukáš Tinkl <ltinkl@redhat.com>
  *
  * This program is free software you can redistribute it and/or
  * modify it under the terms of the GNU Library General Public
@@ -23,6 +24,8 @@
 
 #include <Plasma/DataEngine>
 
+#include "ksolidnotify.h"
+
 /**
  *  Engine which provides data sources for device notifications.
  *  Each notification is represented by one source.
@@ -30,23 +33,16 @@
 class DeviceNotificationsEngine : public Plasma::DataEngine
 {
     Q_OBJECT
-    Q_CLASSINFO("D-Bus Interface", "org.kde.DeviceNotifications")
-
 public:
     DeviceNotificationsEngine( QObject* parent, const QVariantList& args );
     ~DeviceNotificationsEngine();
 
-    virtual void init();
-
-    /**
-     *  This function implements part of Notifications DBus interface.
-     *  Once called, will add notification source to the engine
-     */
-public Q_SLOTS:
-     void notify(int solidError, const QString& error, const QString& errorDetails, const QString &udi);
+private slots:
+     void notify(Solid::ErrorType solidError, const QString& error, const QString& errorDetails, const QString &udi);
 
 private:
     uint m_id;
+    KSolidNotify * m_solidNotify;
 };
 
 #endif

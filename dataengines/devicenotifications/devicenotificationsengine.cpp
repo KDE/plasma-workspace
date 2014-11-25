@@ -1,5 +1,6 @@
 /*
- *   Copyright (C) 2010 Jacopo De Simoi <wilderkde@gmail.com>
+ * Copyright (C) 2010 Jacopo De Simoi <wilderkde@gmail.com>
+ * Copyright (C) 2014 by Lukáš Tinkl <ltinkl@redhat.com>
  *
  * This program is free software you can redistribute it and/or
  * modify it under the terms of the GNU Library General Public
@@ -18,7 +19,6 @@
 */
 
 #include "devicenotificationsengine.h"
-#include "devicenotificationsadaptor.h"
 
 #include <Plasma/DataContainer>
 
@@ -26,26 +26,17 @@
 
 DeviceNotificationsEngine::DeviceNotificationsEngine( QObject* parent, const QVariantList& args )
     : Plasma::DataEngine( parent, args ),
-      m_id(0)
+      m_id(0),
+      m_solidNotify(new KSolidNotify(this))
 {
-    new DeviceNotificationsAdaptor(this);
-
-    QDBusConnection dbus = QDBusConnection::sessionBus();
-    dbus.registerService( "org.kde.DeviceNotifications" );
-    dbus.registerObject( "/org/kde/DeviceNotifications", this );
+    connect(m_solidNotify, &KSolidNotify::notify, this, &DeviceNotificationsEngine::notify);
 }
 
 DeviceNotificationsEngine::~DeviceNotificationsEngine()
 {
-    QDBusConnection dbus = QDBusConnection::sessionBus();
-    dbus.unregisterService( "org.kde.DeviceNotifications" );
 }
 
-void DeviceNotificationsEngine::init()
-{
-}
-
-void DeviceNotificationsEngine::notify(int solidError, const QString& error, const QString& errorDetails, const QString &udi)
+void DeviceNotificationsEngine::notify(Solid::ErrorType solidError, const QString& error, const QString& errorDetails, const QString &udi)
 {
     qDebug() << error << errorDetails << udi;
     const QString source = QString("notification %1").arg(m_id++);
