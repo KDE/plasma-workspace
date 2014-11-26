@@ -246,6 +246,10 @@ void View::positionOnScreen()
 
 void View::displayOrHide()
 {
+    if (isVisible() && !QGuiApplication::focusWindow())  {
+        KWindowSystem::forceActiveWindow(winId());
+        return;
+    }
     setVisible(!isVisible());
 }
 
