@@ -22,11 +22,8 @@
 #include <stdlib.h>
 
 #include <kdebug.h>
-#include <klocale.h>
 #include <kapplication.h>
 #include <kcmdlineargs.h>
-#include <kglobal.h>
-
 
 extern "C" {
 	int Q_DECL_EXPORT kdemain( int argc, char **argv )
@@ -34,8 +31,6 @@ extern "C" {
         // necessary to use other kio slaves
         KComponentData componentData("kio_remote" );
         QCoreApplication app(argc, argv);
-
-        KGlobal::locale();
 
         // start the slave
         RemoteProtocol slave( argv[1], argv[2], argv[3] );
