@@ -206,7 +206,12 @@ QScriptValue ScriptEngine::createActivity(QScriptContext *context, QScriptEngine
     }
 
     Activity *a = new Activity(id, env->m_corona);
-    if (!plugin.isEmpty()) {
+
+    qDebug() << "Setting default Containment plugin:" << plugin;
+    //FIXME: this shouldn't be necessary, but on some systems seems this is needed
+    if (plugin.isEmpty() || plugin == "undefined") {
+        a->setDefaultPlugin("org.kde.desktopcontainment");
+    } else {
         a->setDefaultPlugin(plugin);
     }
 
