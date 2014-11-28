@@ -29,13 +29,13 @@ K_PLUGIN_FACTORY(SolidAutoEjectFactory, registerPlugin<SolidAutoEject>();)
 SolidAutoEject::SolidAutoEject(QObject* parent, const QList<QVariant>&)
     : KDEDModule(parent)
 {
-    QList<Solid::Device> drives = Solid::Device::listFromQuery("IS OpticalDrive");
+    const QList<Solid::Device> drives = Solid::Device::listFromType(Solid::DeviceInterface::OpticalDrive);
     foreach (const Solid::Device &drive, drives) {
         connectDevice(drive);
     }
 
-    connect(Solid::DeviceNotifier::instance(), SIGNAL(deviceAdded(QString)),
-            this, SLOT(onDeviceAdded(QString)));
+    connect(Solid::DeviceNotifier::instance(), &Solid::DeviceNotifier::deviceAdded,
+            this, &SolidAutoEject::onDeviceAdded);
 }
 
 SolidAutoEject::~SolidAutoEject()
@@ -55,10 +55,8 @@ void SolidAutoEject::onEjectPressed(const QString &udi)
 
 void SolidAutoEject::connectDevice(const Solid::Device &device)
 {
-    if (device.is<Solid::OpticalDrive>()) {
-        connect(device.as<Solid::OpticalDrive>(), SIGNAL(ejectPressed(QString)),
-                this, SLOT(onEjectPressed(QString)));
-    }
+    connect(device.as<Solid::OpticalDrive>(), &Solid::OpticalDrive::ejectPressed,
+            this, &SolidAutoEject::onEjectPressed);
 }
 
 #include "solidautoeject.moc"
