@@ -40,8 +40,6 @@ namespace Phonon {
 
 KdePlatformPlugin::KdePlatformPlugin()
 {
-// FIXME: Phonon4Qt5 needs to adopt new qt-only-library i18n technology.
-//    KGlobal::locale()->insertCatalog(QLatin1Literal("phonon_kde"));
 }
 
 KdePlatformPlugin::~KdePlatformPlugin()
