@@ -215,8 +215,12 @@ uint NotificationsEngine::Notify(const QString &app_name, uint replaces_id,
 
     const QString source = QString("notification %1").arg(id);
 
-    QString bodyFinal = partOf == 0 ? body : _body;
+    QString bodyFinal = (partOf == 0 ? body : _body);
     bodyFinal = bodyFinal.replace(QLatin1String("\n"), QLatin1String("<br/>"));
+    // This fancy RegExp escapes every occurence of & since QtQuick Text will blatantly cut off
+    // text where it finds a stray ampersand.
+    // Only &{apos, quot, gt, lt, amp}; as well as &#123 character references will be allowed
+    bodyFinal.replace(QRegularExpression("&(?!(?:apos|quot|[gl]t|amp);|#)"), QLatin1String("&amp;"));
 
     Plasma::DataEngine::Data notificationData;
     notificationData.insert("id", QString::number(id));
