@@ -31,7 +31,9 @@ MouseArea {
     property bool selected: (wallpapersGrid.currentIndex == index)
 
     onSelectedChanged: {
-        cfg_Image = model.path
+        if (selected) {
+            cfg_Image = model.path
+        }
     }
 
     hoverEnabled: true
@@ -133,6 +135,7 @@ MouseArea {
 
     onClicked: {
         wallpapersGrid.currentIndex = index
+        wallpapersGrid.forceActiveFocus();
         cfg_Image = model.path
     }
 

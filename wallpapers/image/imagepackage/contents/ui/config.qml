@@ -244,6 +244,7 @@ ColumnLayout {
                 id: wallpapersGrid
                 model: imageWallpaper.wallpaperModel
                 currentIndex: -1
+                focus: true
 
                 cellWidth: Math.floor(wallpapersGrid.width / Math.max(Math.floor(wallpapersGrid.width / (units.gridUnit*12)), 3))
                 cellHeight: cellWidth / (imageWallpaper.width / imageWallpaper.height)
@@ -252,6 +253,7 @@ ColumnLayout {
                 boundsBehavior: Flickable.StopAtBounds
 
                 delegate: WallpaperDelegate {}
+
                 Timer {
                     id: makeCurrentTimer
                     interval: 100
@@ -259,6 +261,7 @@ ColumnLayout {
                     property string pendingIndex
                     onTriggered: {
                         wallpapersGrid.currentIndex = pendingIndex
+                        wallpapersGrid.forceActiveFocus();
                     }
                 }
 
@@ -266,6 +269,7 @@ ColumnLayout {
                     target: imageWallpaper
                     onCustomWallpaperPicked: wallpapersGrid.currentIndex = 0
                 }
+
             }
         }
     }
