@@ -26,6 +26,9 @@ kcminit=kde|general
 kioclient=kio|general
 ktrash=kio|trash
 
+#KDE Platform (Baloo)
+baloo_file=Baloo|Files
+
 #KDE Platform (Solid)
 solid-action-desktop-gen=solid|general
 bluedevil-audio=solid|bluetooth
@@ -58,6 +61,8 @@ plasmawallpaperviewer=plasmate|general
 plasmoidviewer=plasmate|general
 
 #KDE Plasma Desktop (KWin)
+kwin_x11=kwin|general
+kwin_wayland=kwin|general
 kwin_gles=kwin|general
 kwinactive=kwin|general
 kwinactive_gles=kwin|general
@@ -180,6 +185,7 @@ khipu=khipu|core
 mangonel=Mangonel|mangonel
 kde-nm-connection-editor=plasma-nm|editor
 pairseditor=pairs|editor
+kdeconnectd=kdeconnect|common
 
 kwatchgnupg=kleopatra|general
 homerunviewer=homerun|general
