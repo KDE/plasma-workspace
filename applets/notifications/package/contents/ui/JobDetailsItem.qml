@@ -54,15 +54,7 @@ Column {
                     KCoreAddons.Format.formatByteSize(processed),
                     KCoreAddons.Format.formatByteSize(total))
         //else print something only if is interesting data (ie more than one file/directory etc to copy
-        } else if (total > 1) {
-            // HACK Actually the owner of the job is responsible for sending the unit in a user-displayable
-            // way but this has been broken for years and every other unit (other than files and dirs) is correct
-            if (unit === "files") {
-                unit = i18nc("m of n files are being processed", "files")
-            } else if (unit === "dirs") {
-                unit = i18nc("m of n dirs are being processed", "dirs")
-            }
-
+        } else if (jobsSource.data[modelData]["totalAmount"+id] > 1) {
             return i18n("%1 of %2 %3", processed, total, unit)
         } else {
             return ""
@@ -90,7 +82,7 @@ Column {
                 }
 
                 font: theme.smallestFont
-                text: jobItem["labelName" + index] ? i18nc("placeholder is row description, such as Source or Destination", "%1:", jobItem["labelName" + index]) : ""
+                text: jobItem["labelName" + index] ? i18n("%1:", jobItem["labelName" + index]) : ""
                 horizontalAlignment: Text.AlignRight
             }
 
@@ -140,7 +132,7 @@ Column {
         height: paintedHeight
 
         font: theme.smallestFont
-        text: eta > 0 ? i18nc("Speed and estimated time to completion", "%1 (%2 remaining)", speed, KCoreAddons.Format.formatSpelloutDuration(eta)) : speed
+        text: eta > 0 ? i18nc("Speed and estimated time to completition", "%1 (%2 remaining)", speed, KCoreAddons.Format.formatSpelloutDuration(eta)) : speed
         visible: eta > 0 || speed > 0
     }
 

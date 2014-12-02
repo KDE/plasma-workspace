@@ -65,13 +65,13 @@ Column {
                 source: source,
                 appIcon: runningJobs[source]["appIconName"],
                 appName: runningJobs[source]["appName"],
-                summary: infoMessage ? i18n("Job Finished") : i18nc("the job, which can be anything, has finished", "%1: Finished", infoMessage),
+                summary: i18n("%1 Finished", runningJobs[source]["infoMessage"]),
                 body: message,
                 isPersistent: true,
                 expireTimeout: 6000,
                 urgency: 0,
                 configurable: false,
-                actions: UrlHelper.isUrlValid(message) ? [{"id": message, "text": i18n("Open...")}] : [] // If the source contains "Job", it tries to open the "id" value (which is "message")
+                actions: UrlHelper.isUrlValid(message) ? [{"id": message, "text": i18n("Open")}] : [] // If the source contains "Job", it tries to open the "id" value (which is "message")
             })
 
             delete runningJobs[source]
