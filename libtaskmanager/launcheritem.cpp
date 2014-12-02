@@ -23,6 +23,12 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 // Own
 #include "launcheritem.h"
 
+#include <config-X11.h>
+
+#if HAVE_X11
+#include <QX11Info>
+#endif
+
 #include <KConfigGroup>
 #include <KSharedConfig>
 #include <KDesktopFile>
@@ -33,6 +39,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #include <KRun>
 #include <KService>
 #include <KServiceTypeTrader>
+#include <KStartupInfo>
 
 // KIO
 #include <kemailsettings.h> // no camelcase include
@@ -221,6 +228,14 @@ bool LauncherItem::isGroupItem() const
 
 void LauncherItem::launch()
 {
+        quint32 timeStamp = 0;
+
+#if HAVE_X11
+        if (QX11Info::isPlatformX11()) {
+            timeStamp = QX11Info::appUserTime();
+        }
+#endif
+
     //NOTE: preferred is NOT a protocol, it's just a magic string
     if (d->url.scheme() == "preferred") {
         KService::Ptr service = KService::serviceByStorageId(defaultApplication());
@@ -230,9 +245,9 @@ void LauncherItem::launch()
         }
 
         QString desktopFile = QStandardPaths::locate(QStandardPaths::ApplicationsLocation, service->entryPath());
-        new KRun(QUrl::fromLocalFile(desktopFile), 0);
+        new KRun(QUrl::fromLocalFile(desktopFile), 0, false, KStartupInfo::createNewStartupIdForTimestamp(timeStamp));
     } else {
-        new KRun(d->url, 0);
+        new KRun(d->url, 0, false, KStartupInfo::createNewStartupIdForTimestamp(timeStamp));
     }
 }
 
