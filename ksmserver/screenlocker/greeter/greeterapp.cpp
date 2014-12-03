@@ -57,8 +57,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 namespace ScreenLocker
 {
 
-static const char *DEFAULT_MAIN_PACKAGE = "org.kde.passworddialog";
-
 // App
 UnlockApp::UnlockApp(int &argc, char **argv)
     : QGuiApplication(argc, argv)
@@ -116,16 +114,14 @@ void UnlockApp::initialize()
 
 void UnlockApp::viewStatusChanged(const QQuickView::Status &status)
 {
-    // on error, if we did not load the default qml, try to do so now.
-    if (status == QQuickView::Error &&
-        m_package.metadata().pluginName() != QLatin1String(DEFAULT_MAIN_PACKAGE)) {
-        if (QQuickView *view = qobject_cast<QQuickView *>(sender())) {
-            m_package.setPath(QStandardPaths::locate(QStandardPaths::GenericDataLocation,
-                                                     QStringLiteral("ksmserver/screenlocker/") + QString::fromLatin1(DEFAULT_MAIN_PACKAGE)));
+    QQuickView *view = qobject_cast<QQuickView *>(sender());
 
-            m_mainQmlPath = QUrl("qrc:/fallbacktheme/LockScreen.qml");
-            view->setSource(m_mainQmlPath);
-        }
+    const QUrl fallbackUrl("qrc:/fallbacktheme/LockScreen.qml");
+
+    // on error, load the fallback lockscreen to not lock the user out of the system
+    if (status == QQuickView::Error && view && view->source() != fallbackUrl) {
+        m_mainQmlPath = fallbackUrl;
+        view->setSource(m_mainQmlPath);
     }
 }
 
