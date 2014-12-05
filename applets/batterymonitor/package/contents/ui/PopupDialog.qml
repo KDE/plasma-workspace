@@ -39,6 +39,18 @@ FocusScope {
 
     signal powermanagementChanged(bool checked)
 
+    Component.onCompleted: {
+        // setup handler on slider value manually to avoid change on creation
+
+        brightnessSlider.valueChanged.connect(function() {
+            batterymonitor.screenBrightness = brightnessSlider.value
+        })
+
+        keyboardBrightnessSlider.valueChanged.connect(function() {
+            batterymonitor.keyboardBrightness = keyboardBrightnessSlider.value
+        })
+    }
+
     PlasmaExtras.ScrollArea {
         id: batteryScrollArea
         anchors {
@@ -69,9 +81,9 @@ FocusScope {
         spacing: 0
 
         Components.Label {
-            // this is just for metrics
+            // this is just for metrics, TODO use TextMetrics in 5.4 instead
             id: percentageMeasurementLabel
-            text: "100%"
+            text: i18nc("Used for measurement", "100%")
             visible: false
         }
 
@@ -81,11 +93,9 @@ FocusScope {
             label: i18n("Display Brightness")
             visible: isBrightnessAvailable
             value: batterymonitor.screenBrightness
-            percentage: batterymonitor.screenBrightnessPercentage
-            onValueChanged: batterymonitor.screenBrightness = value
+            maximumValue: batterymonitor.maximumScreenBrightness
             KeyNavigation.tab: keyboardBrightnessSlider
             KeyNavigation.backtab: batteryList
-            focus: true
         }
 
         BrightnessItem {
@@ -93,9 +103,8 @@ FocusScope {
             icon: "input-keyboard-brightness"
             label: i18n("Keyboard Brightness")
             value: batterymonitor.keyboardBrightness
-            percentage: batterymonitor.keyboardBrightnessPercentage
+            maximumValue: batterymonitor.maximumKeyboardBrightness
             visible: isKeyboardBrightnessAvailable
-            onValueChanged: batterymonitor.keyboardBrightness = value
             KeyNavigation.tab: pmSwitch
             KeyNavigation.backtab: brightnessSlider
         }

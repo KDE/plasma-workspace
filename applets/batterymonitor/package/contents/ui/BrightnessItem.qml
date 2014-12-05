@@ -25,14 +25,13 @@ import org.kde.kquickcontrolsaddons 2.0 as KQuickControlsAddons
 
 FocusScope {
     id: brightnessItem
-    clip: true
     width: parent.width
     height: Math.max(brightnessIcon.height, brightnessLabel.height + brightnessSlider.height) + Math.round(units.gridUnit / 2)
 
     property alias icon: brightnessIcon.source
     property alias label: brightnessLabel.text
     property alias value: brightnessSlider.value
-    property int percentage: 0
+    property alias maximumValue: brightnessSlider.maximumValue
 
     PlasmaCore.IconItem {
         id: brightnessIcon
@@ -64,8 +63,7 @@ FocusScope {
             rightMargin: Math.round(units.gridUnit / 2)
         }
         minimumValue: 0
-        maximumValue: 100
-        stepSize: 10
+        stepSize: 1
         focus: true
     }
 
@@ -79,7 +77,13 @@ FocusScope {
         width: percentageMeasurementLabel.width
         height: paintedHeight
         horizontalAlignment: Text.AlignRight
-        text: i18nc("Placeholder is brightness percentage", "%1%", percentage)
+        text: {
+            if (maximumValue < 10) { // makes no sense to calculate percent of this
+                return i18nc("Placeholders are current and maximum brightness step", "%1/%2", value, maximumValue)
+            } else {
+                return i18nc("Placeholder is brightness percentage", "%1%", Math.round(value / maximumValue * 100))
+            }
+        }
     }
 }
 

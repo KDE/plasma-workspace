@@ -42,11 +42,11 @@ Item {
     property bool disableBrightnessUpdate: false
 
     property int screenBrightness
-    property int screenBrightnessPercentage
+    readonly property int maximumScreenBrightness: pmSource.data["PowerDevil"]["Maximum Screen Brightness"]
     property int keyboardBrightness
-    property int keyboardBrightnessPercentage
+    readonly property int maximumKeyboardBrightness: pmSource.data["PowerDevil"]["Maximum Keyboard Brightness"]
 
-    property int remainingTime: Number(pmSource.data["Battery"]["Remaining msec"])
+    readonly property int remainingTime: Number(pmSource.data["Battery"]["Remaining msec"])
 
     onScreenBrightnessChanged: {
         if (disableBrightnessUpdate) {
