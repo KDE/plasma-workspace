@@ -96,6 +96,12 @@ FocusScope {
             maximumValue: batterymonitor.maximumScreenBrightness
             KeyNavigation.tab: keyboardBrightnessSlider
             KeyNavigation.backtab: batteryList
+
+            // Manually dragging the slider around breaks the binding
+            Connections {
+                target: batterymonitor
+                onScreenBrightnessChanged: brightnessSlider.value = batterymonitor.screenBrightness
+            }
         }
 
         BrightnessItem {
@@ -107,6 +113,12 @@ FocusScope {
             visible: isKeyboardBrightnessAvailable
             KeyNavigation.tab: pmSwitch
             KeyNavigation.backtab: brightnessSlider
+
+            // Manually dragging the slider around breaks the binding
+            Connections {
+                target: batterymonitor
+                onKeyboardBrightnessChanged: keyboardBrightnessSlider.value = batterymonitor.keyboardBrightness
+            }
         }
 
         Components.Label {
