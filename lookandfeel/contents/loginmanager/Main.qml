@@ -98,7 +98,10 @@ Image {
                             id: passwordInput
                             placeholderText: i18nd("plasma_lookandfeel_org.kde.lookandfeel","Password")
                             echoMode: TextInput.Password
-                            onAccepted: loginPrompt.startLogin()
+                            onAccepted: {
+                                enabled = false
+                                loginPrompt.startLogin()
+                            }
                             focus: true
 
                             //focus works in qmlscene
@@ -191,6 +194,7 @@ Image {
                 Connections {
                     target: sddm
                     onLoginFailed: {
+                        passwordInput.enabled = true
                         passwordInput.selectAll()
                         passwordInput.forceActiveFocus()
                     }
