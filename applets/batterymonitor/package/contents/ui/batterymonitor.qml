@@ -89,12 +89,24 @@ Item {
     }
 
     Plasmoid.compactRepresentation: CompactRepresentation {
+        property int wheelDelta: 0
+
         onWheel: {
             var delta = wheel.angleDelta.y || wheel.angleDelta.x
-            if (delta > 0) {
-                batterymonitor.screenBrightness = Math.min(100, batterymonitor.screenBrightness + 10)
-            } else if (delta < 0) {
-                batterymonitor.screenBrightness = Math.max(0, batterymonitor.screenBrightness - 10)
+            wheelDelta += delta;
+            // magic number 120 for common "one click"
+            // See: http://qt-project.org/doc/qt-5/qml-qtquick-wheelevent.html#angleDelta-prop
+            var increment = 0;
+            while (wheelDelta >= 120) {
+                wheelDelta -= 120;
+                increment++;
+            }
+            while (wheelDelta <= -120) {
+                wheelDelta += 120;
+                increment--;
+            }
+            if (increment != 0) {
+                batterymonitor.screenBrightness = Math.max(0, Math.min(100, batterymonitor.screenBrightness + increment * 10));
             }
         }
     }
