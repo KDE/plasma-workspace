@@ -39,6 +39,7 @@ Item {
 
     PlasmaCore.ToolTipArea {
         anchors.fill: parent
+        z: 2
 
         mainItem: Row {
             id: batteryItemToolTip
