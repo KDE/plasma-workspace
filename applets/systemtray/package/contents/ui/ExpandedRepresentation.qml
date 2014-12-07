@@ -124,6 +124,7 @@ Item {
             top: parent.top
             topMargin: units.gridUnit
             left: parent.left
+            leftMargin: Math.round(units.largeSpacing / 2)
             right: parent.right
         }
         text: i18n("Status & Notifications")
@@ -153,6 +154,7 @@ Item {
         animate: false
         anchors {
             left: hiddenView.visible ? separator.right : parent.left
+            leftMargin: Math.round(units.largeSpacing / 2)
             top: root.expandedTask != null ? snHeadingExpanded.bottom : snHeading.bottom
             topMargin: Math.round(units.largeSpacing / 2)
             bottom: parent.bottom
