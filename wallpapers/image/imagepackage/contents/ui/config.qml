@@ -265,6 +265,23 @@ ColumnLayout {
                     }
                 }
 
+                Keys.onPressed: {
+                    if (count < 1) {
+                        return;
+                    }
+
+                    if (event.key == Qt.Key_Home) {
+                        currentIndex = 0;
+                    } else if (event.key == Qt.Key_End) {
+                        currentIndex = count - 1;
+                    }
+                }
+
+                Keys.onLeftPressed: moveCurrentIndexLeft()
+                Keys.onRightPressed: moveCurrentIndexRight()
+                Keys.onUpPressed: moveCurrentIndexUp()
+                Keys.onDownPressed: moveCurrentIndexDown()
+
                 Connections {
                     target: imageWallpaper
                     onCustomWallpaperPicked: wallpapersGrid.currentIndex = 0
