@@ -125,10 +125,8 @@ Item {
 
             onValueChanged: {
                 if (!disablePositionUpdate) {
-                    var service = mpris2Source.serviceForSource(mpris2Source.current);
-                    var operation = service.operationDescription("SetPosition");
-                    operation.microseconds = value
-                    service.startOperationCall(operation);
+                    // delay setting the position to avoid race conditions
+                    queuedPositionUpdate.restart()
                 }
             }
 
@@ -147,6 +145,17 @@ Item {
                     }
                 }
             }
+        }
+    }
+
+    Timer {
+        id: queuedPositionUpdate
+        interval: 100
+        onTriggered: {
+            var service = mpris2Source.serviceForSource(mpris2Source.current)
+            var operation = service.operationDescription("SetPosition")
+            operation.microseconds = seekSlider.value
+            service.startOperationCall(operation)
         }
     }
 
