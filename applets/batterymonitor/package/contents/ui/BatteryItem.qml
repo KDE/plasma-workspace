@@ -132,32 +132,8 @@ Item {
                 }
                 batteryType: model["Type"]
                 percent: model["Percent"]
-                hasBattery: model["Plugged in"]
-                pluggedIn: model["State"] != "Discharging" && model["Is Power Supply"]
-            }
-
-            SequentialAnimation {
-                id: chargeAnimation
-                running: units.longDuration > 0 && batteryIcon.pluggedIn && batteryIcon.visible
-                alwaysRunToEnd: true
-                loops: Animation.Infinite
-
-                NumberAnimation {
-                  target: batteryIcon
-                  properties: "opacity"
-                  from: 1.0
-                  to: 0.5
-                  duration: 750
-                  easing.type: Easing.InCubic
-                }
-                NumberAnimation {
-                  target: batteryIcon
-                  properties: "opacity"
-                  from: 0.5
-                  to: 1.0
-                  duration: 750
-                  easing.type: Easing.OutCubic
-                }
+                hasBattery: batteryItem.isPresent
+                pluggedIn: model["State"] == "Charging" && model["Is Power Supply"]
             }
 
             PlasmaComponents.Label {
