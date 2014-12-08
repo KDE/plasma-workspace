@@ -175,44 +175,33 @@ function updateTooltip(remainingTime) {
     }
 }
 
-function batteryItemToolTip(batteryData, remainingTime) {
-    var text = "";
+function batteryDetails(batteryData, remainingTime) {
+    var data = []
 
     if (remainingTime > 0 && batteryData["Is Power Supply"] && (batteryData["State"] == "Discharging" || batteryData["State"] == "Charging")) {
-        text += "<tr>"
-        text += "<td align='right'>" + (batteryData["State"] == "Charging" ? i18n("Time To Full:") : i18n("Time To Empty:")) + "</td>"
-        text += "<td><b>" + KCoreAddons.Format.formatDuration(remainingTime, KCoreAddons.FormatTypes.HideSeconds) + "</b></td>"
-        text += "</tr>"
+        data.push({label: (batteryData["State"] == "Charging" ? i18n("Time To Full:") : i18n("Time To Empty:")) })
+        data.push({value: KCoreAddons.Format.formatDuration(remainingTime, KCoreAddons.FormatTypes.HideSeconds) })
     }
 
-    if (batteryData["Is Power Supply"] &&  batteryData["Capacity"] != "" && typeof batteryData["Capacity"] == "number") {
-        text += "<tr>";
-        text += "<td align='right'>" + i18n("Capacity:") + " </td>";
-        text += "<td><b>" + i18nc("Placeholder is battery capacity", "%1%", batteryData["Capacity"]) + "</b></td>"
-        text += "</tr>";
+    if (batteryData["Is Power Supply"] && batteryData["Capacity"] != "" && typeof batteryData["Capacity"] == "number") {
+        data.push({label: i18n("Capacity:") })
+        data.push({value: i18nc("Placeholder is battery capacity", "%1%", batteryData["Capacity"]) })
     }
 
     // Non-powersupply batteries have a name consisting of the vendor and model already
     if (batteryData["Is Power Supply"]) {
         if (batteryData["Vendor"] != "" && typeof batteryData["Vendor"] == "string") {
-            text += "<tr>";
-            text += "<td align='right'>" + i18n("Vendor:") + " </td>";
-            text += "<td><b>" + batteryData["Vendor"] + "</b></td>";
-            text += "</tr>";
+            data.push({label: i18n("Vendor:") })
+            data.push({value: batteryData["Vendor"] })
         }
 
         if (batteryData["Product"] != "" && typeof batteryData["Product"] == "string") {
-            text += "<tr>";
-            text += "<td align='right'>" + i18n("Model:") + " </td>";
-            text += "<td><b>" + batteryData["Product"] + "</b></td>";
-            text += "</tr>";
+            data.push({label: i18n("Model:") })
+            data.push({value: batteryData["Product"] })
         }
     }
 
-    if (text != "") {
-        return "<table>" + text + "</table>";
-    }
-    return "";
+    return data
 }
 
 function updateBrightness(rootItem, source) {

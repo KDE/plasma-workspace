@@ -31,150 +31,203 @@ import "plasmapackage:/code/logic.js" as Logic
 Item {
     id: batteryItem
     width: parent.width
-    height: Math.max(batteryIcon.height, batteryNameLabel.height + batteryPercentBar.height)
+    height: childrenRect.height
+
+    property var battery
 
     // NOTE: According to the UPower spec this property is only valid for primary batteries, however
     // UPower seems to set the Present property false when a device is added but not probed yet
-    property bool isPresent: model["Plugged in"]
+    readonly property bool isPresent: model["Plugged in"]
 
-    PlasmaCore.ToolTipArea {
-        anchors.fill: parent
-        z: 2
+    property Component batteryDetails: GridLayout {
+        id: detailsLayout
+        columns: 2
+        columnSpacing: units.smallSpacing
+        rowSpacing: 0
 
-        mainItem: Row {
-            id: batteryItemToolTip
+        Repeater {
+            id: detailsRepeater
+            model: Logic.batteryDetails(batteryItem.battery, batterymonitor.remainingTime)
 
-            property int _s: units.largeSpacing / 2
+            PlasmaComponents.Label {
+                id: detailsLabel
+                // using model[x] in Repeater doesn't work with JS Array
+                property var currentItem: detailsRepeater.model[index]
 
-            Layout.minimumWidth: implicitWidth + batteryItemToolTip._s
-            Layout.minimumHeight: implicitHeight + batteryItemToolTip._s * 2
-            Layout.maximumWidth: implicitWidth + batteryItemToolTip._s
-            Layout.maximumHeight: implicitHeight + batteryItemToolTip._s * 2
-            width: implicitWidth + batteryItemToolTip._s
-            height: implicitHeight + batteryItemToolTip._s * 2
+                Layout.fillWidth: true
+                horizontalAlignment: currentItem.value ? Text.AlignLeft : Text.AlignRight
+                text: currentItem.value ? currentItem.value : currentItem.label
 
-            spacing: batteryItemToolTip._s*2
+                states: State {
+                    when: !!detailsLayout.parent.inListView // HACK
+                    PropertyChanges {
+                        target: detailsLabel
+                        horizontalAlignment: currentItem.value ? Text.AlignRight : Text.AlignLeft
+                        font.pointSize: theme.smallestFont.pointSize
+                    }
+                }
+            }
+        }
+    }
+
+    Column {
+        width: parent.width
+        spacing: units.smallSpacing
+
+        PlasmaCore.ToolTipArea {
+            width: parent.width
+            height: Math.max(batteryIcon.height, batteryNameLabel.height + batteryPercentBar.height)
+            active: !detailsLoader.active
+            z: 2
+
+            mainItem: Row {
+                id: batteryItemToolTip
+
+                property int _s: units.largeSpacing / 2
+
+                Layout.minimumWidth: implicitWidth + batteryItemToolTip._s
+                Layout.minimumHeight: implicitHeight + batteryItemToolTip._s * 2
+                Layout.maximumWidth: implicitWidth + batteryItemToolTip._s
+                Layout.maximumHeight: implicitHeight + batteryItemToolTip._s * 2
+                width: implicitWidth + batteryItemToolTip._s
+                height: implicitHeight + batteryItemToolTip._s * 2
+
+                spacing: batteryItemToolTip._s*2
+
+                BatteryIcon {
+                    x: batteryItemToolTip._s * 2
+                    y: batteryItemToolTip._s
+                    width: units.iconSizes.desktop // looks weird and small but that's what DefaultTooltip uses
+                    height: width
+                    batteryType: batteryIcon.batteryType
+                    percent: batteryIcon.percent
+                    hasBattery: batteryIcon.hasBattery
+                    pluggedIn: batteryIcon.pluggedIn
+                }
+
+                Column {
+                    id: mainColumn
+                    x: batteryItemToolTip._s
+                    y: batteryItemToolTip._s
+
+                    PlasmaExtras.Heading {
+                        level: 3
+                        text: batteryNameLabel.text
+                    }
+                    Loader {
+                        sourceComponent: batteryItem.batteryDetails
+                        opacity: 0.5
+                    }
+                }
+            }
 
             BatteryIcon {
-                x: batteryItemToolTip._s * 2
-                y: batteryItemToolTip._s
-                width: units.iconSizes.desktop // looks weird and small but that's what DefaultTooltip uses
+                id: batteryIcon
+                width: units.iconSizes.medium
                 height: width
-                batteryType: batteryIcon.batteryType
-                percent: batteryIcon.percent
-                hasBattery: batteryIcon.hasBattery
-                pluggedIn: batteryIcon.pluggedIn
+                anchors {
+                    verticalCenter: parent.verticalCenter
+                    left: parent.left
+                    leftMargin: Math.round(units.gridUnit / 2)
+                }
+                batteryType: model["Type"]
+                percent: model["Percent"]
+                hasBattery: model["Plugged in"]
+                pluggedIn: model["State"] != "Discharging" && model["Is Power Supply"]
             }
 
-            Column {
-                id: mainColumn
-                x: batteryItemToolTip._s
-                y: batteryItemToolTip._s
+            SequentialAnimation {
+                id: chargeAnimation
+                running: units.longDuration > 0 && batteryIcon.pluggedIn && batteryIcon.visible
+                alwaysRunToEnd: true
+                loops: Animation.Infinite
 
-                PlasmaExtras.Heading {
-                    level: 3
-                    text: batteryNameLabel.text
+                NumberAnimation {
+                  target: batteryIcon
+                  properties: "opacity"
+                  from: 1.0
+                  to: 0.5
+                  duration: 750
+                  easing.type: Easing.InCubic
                 }
-                PlasmaComponents.Label {
-                    wrapMode: Text.NoWrap
-                    text: Logic.batteryItemToolTip(model, batterymonitor.remainingTime)
-                    textFormat: Text.RichText // for table to work
-                    opacity: 0.5
+                NumberAnimation {
+                  target: batteryIcon
+                  properties: "opacity"
+                  from: 0.5
+                  to: 1.0
+                  duration: 750
+                  easing.type: Easing.OutCubic
                 }
+            }
+
+            PlasmaComponents.Label {
+                id: batteryNameLabel
+                anchors {
+                    verticalCenter: isPresent ? undefined : batteryIcon.verticalCenter
+                    bottom: isPresent ? batteryIcon.verticalCenter : undefined
+                    left: batteryIcon.right
+                    leftMargin: units.gridUnit
+                }
+                height: implicitHeight
+                elide: Text.ElideRight
+                text: model["Pretty Name"]
+            }
+
+            PlasmaComponents.Label {
+                id: batteryStatusLabel
+                anchors {
+                    top: batteryNameLabel.top
+                    right: batteryPercentBar.right
+                }
+                text: Logic.stringForBatteryState(model)
+                height: implicitHeight
+                visible: model["Is Power Supply"]
+                opacity: 0.5
+            }
+
+            PlasmaComponents.ProgressBar {
+                id: batteryPercentBar
+                anchors {
+                    top: batteryIcon.verticalCenter
+                    left: batteryNameLabel.left
+                    right: batteryPercent.left
+                    rightMargin: Math.round(units.gridUnit / 2)
+                }
+                minimumValue: 0
+                maximumValue: 100
+                visible: isPresent
+                value: parseInt(model["Percent"])
+            }
+
+            PlasmaComponents.Label {
+                id: batteryPercent
+                anchors {
+                    verticalCenter: batteryPercentBar.verticalCenter
+                    right: parent.right
+                    rightMargin: Math.round(units.gridUnit / 2)
+                }
+                width: percentageMeasurementLabel.width
+                height: paintedHeight
+                horizontalAlignment: Text.AlignRight
+                visible: isPresent
+                text: i18nc("Placeholder is battery percentage", "%1%", model["Percent"])
             }
         }
 
-    }
-
-    BatteryIcon {
-        id: batteryIcon
-        width: units.iconSizes.medium
-        height: width
-        anchors {
-            verticalCenter: parent.verticalCenter
-            left: parent.left
-            leftMargin: Math.round(units.gridUnit / 2)
+        Loader {
+            id: detailsLoader
+            property bool inListView: true
+            anchors {
+                left: parent.left
+                leftMargin: Math.round(units.gridUnit / 2) + batteryIcon.width + units.gridUnit
+                right: parent.right
+                rightMargin: Math.round(units.gridUnit / 2) + batteryPercent.width + Math.round(units.gridUnit / 2)
+            }
+            visible: !!item
+            opacity: 0.5
+            sourceComponent: batteryDetails
+            active: batterymonitor.batteries.count < 2
         }
-        batteryType: model["Type"]
-        percent: model["Percent"]
-        hasBattery: model["Plugged in"]
-        pluggedIn: model["State"] != "Discharging" && model["Is Power Supply"]
     }
 
-    SequentialAnimation {
-      id: chargeAnimation
-      running: units.longDuration > 0 && batteryIcon.pluggedIn && batteryIcon.visible
-      alwaysRunToEnd: true
-      loops: Animation.Infinite
-
-      NumberAnimation {
-          target: batteryIcon
-          properties: "opacity"
-          from: 1.0
-          to: 0.5
-          duration: 750
-          easing.type: Easing.InCubic
-      }
-      NumberAnimation {
-          target: batteryIcon
-          properties: "opacity"
-          from: 0.5
-          to: 1.0
-          duration: 750
-          easing.type: Easing.OutCubic
-      }
-    }
-
-    PlasmaComponents.Label {
-        id: batteryNameLabel
-        anchors {
-            verticalCenter: isPresent ? undefined : batteryIcon.verticalCenter
-            bottom: isPresent ? batteryIcon.verticalCenter : undefined
-            left: batteryIcon.right
-            leftMargin: units.gridUnit
-        }
-        height: implicitHeight
-        elide: Text.ElideRight
-        text: model["Pretty Name"]
-    }
-
-    PlasmaComponents.Label {
-        id: batteryStatusLabel
-        anchors {
-            top: batteryNameLabel.top
-            right: batteryPercentBar.right
-        }
-        text: Logic.stringForBatteryState(model)
-        height: implicitHeight
-        visible: model["Is Power Supply"]
-        opacity: 0.5
-    }
-
-    PlasmaComponents.ProgressBar {
-        id: batteryPercentBar
-        anchors {
-            top: batteryIcon.verticalCenter
-            left: batteryNameLabel.left
-            right: batteryPercent.left
-            rightMargin: Math.round(units.gridUnit / 2)
-        }
-        minimumValue: 0
-        maximumValue: 100
-        visible: isPresent
-        value: parseInt(model["Percent"])
-    }
-
-    PlasmaComponents.Label {
-        id: batteryPercent
-        anchors {
-            verticalCenter: batteryPercentBar.verticalCenter
-            right: parent.right
-            rightMargin: Math.round(units.gridUnit / 2)
-        }
-        width: percentageMeasurementLabel.width
-        height: paintedHeight
-        horizontalAlignment: Text.AlignRight
-        visible: isPresent
-        text: i18nc("Placeholder is battery percentage", "%1%", model["Percent"])
-    }
 }

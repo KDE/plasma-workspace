@@ -68,7 +68,9 @@ FocusScope {
             KeyNavigation.tab: brightnessSlider
             KeyNavigation.backtab: pmSwitch
 
-            delegate: BatteryItem {}
+            delegate: BatteryItem {
+                battery: model
+            }
         }
     }
 
