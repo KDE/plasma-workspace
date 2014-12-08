@@ -71,7 +71,7 @@ void PowermanagementEngine::init()
         if (!QDBusConnection::sessionBus().connect(SOLID_POWERMANAGEMENT_SERVICE,
                                                    "/org/kde/Solid/PowerManagement/Actions/BrightnessControl",
                                                    "org.kde.Solid.PowerManagement.Actions.BrightnessControl",
-                                                   "brightnessChanged", this,
+                                                   "brightnessValueChanged", this,
                                                    SLOT(screenBrightnessChanged(int)))) {
             qDebug() << "error connecting to Brightness changes via dbus";
         }
