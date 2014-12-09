@@ -287,8 +287,6 @@ echo 'startkde: Starting up...'  1>&2
 # /usr/local.
 if test -z "$XDG_DATA_DIRS"; then
     XDG_DATA_DIRS="@CMAKE_INSTALL_PREFIX@/@SHARE_INSTALL_PREFIX@:/usr/share:/usr/local/share"
-else
-    XDG_DATA_DIRS="@CMAKE_INSTALL_PREFIX@/@SHARE_INSTALL_PREFIX@:$XDG_DATA_DIRS"
 fi
 export XDG_DATA_DIRS
 
