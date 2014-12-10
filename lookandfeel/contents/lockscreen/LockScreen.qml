@@ -58,6 +58,12 @@ Image {
         id: sessions
     }
 
+    PlasmaCore.DataSource {
+        id: keystateSource
+        engine: "keystate"
+        connectedSources: "Caps Lock"
+    }
+
     StackView {
         id: stackView
         height: units.largeSpacing * 14
@@ -79,7 +85,17 @@ Image {
                 }
                 Component.onCompleted: root.userSelect = usersSelection
 
-                notification: root.notification
+                notification: {
+                    var text = ""
+                    if (keystateSource.data["Caps Lock"]["Locked"]) {
+                        text += i18nd("plasma_lookandfeel_org.kde.lookandfeel","Caps Lock is on")
+                        if (root.notification) {
+                            text += " • "
+                        }
+                    }
+                    text += root.notification
+                    return text
+                }
 
                 model: ListModel {
                     id: users
@@ -185,21 +201,6 @@ Image {
                         }
                         Keys.onRightPressed: {
                             root.userSelect.incrementCurrentIndex();
-                        }
-                    }
-
-                    BreezeLabel {
-                        id: capsLockWarning
-                        text: i18nd("plasma_lookandfeel_org.kde.lookandfeel","Caps Lock is on")
-                        visible: keystateSource.data["Caps Lock"]["Locked"]
-
-                        anchors.horizontalCenter: parent.horizontalCenter
-                        font.weight: Font.Bold
-
-                        PlasmaCore.DataSource {
-                            id: keystateSource
-                            engine: "keystate"
-                            connectedSources: "Caps Lock"
                         }
                     }
                 }
