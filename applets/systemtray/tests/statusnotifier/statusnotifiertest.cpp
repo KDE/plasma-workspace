@@ -219,7 +219,7 @@ void StatusNotifierTest::enableJob(bool enable)
 {
     qDebug() << "Job enabled." << enable;
     if (enable) {
-        d->job = new PumpJob(this, speedSlider->value());
+        d->job = new PumpJob(speedSlider->value());
         //QObject::connect(d->job, &KJob::percent, this, &StatusNotifierTest::setJobProgress);
         QObject::connect(d->job, SIGNAL(percent(KJob*, unsigned long)), this, SLOT(setJobProgress(KJob*, unsigned long)));
         QObject::connect(d->job, &KJob::result, this, &StatusNotifierTest::result);

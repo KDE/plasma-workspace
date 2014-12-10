@@ -41,7 +41,7 @@ public:
     bool suspended = false;
 };
 
-PumpJob::PumpJob(QObject* parent, int interval) :
+PumpJob::PumpJob(int interval) :
     KIO::Job()
 {
     d = new PumpJobPrivate;

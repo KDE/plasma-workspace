@@ -31,7 +31,7 @@ class PumpJob : public KIO::Job
     Q_OBJECT
 
     public:
-        PumpJob(QObject* parent = 0, int interval = 0);
+        PumpJob(int interval = 0);
         virtual ~PumpJob();
 
         virtual void start();
