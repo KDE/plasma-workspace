@@ -69,27 +69,43 @@ void PowermanagementEngine::init()
 
     if (QDBusConnection::sessionBus().interface()->isServiceRegistered(SOLID_POWERMANAGEMENT_SERVICE)) {
         if (!QDBusConnection::sessionBus().connect(SOLID_POWERMANAGEMENT_SERVICE,
-                                                   "/org/kde/Solid/PowerManagement/Actions/BrightnessControl",
-                                                   "org.kde.Solid.PowerManagement.Actions.BrightnessControl",
-                                                   "brightnessValueChanged", this,
+                                                   QStringLiteral("/org/kde/Solid/PowerManagement/Actions/BrightnessControl"),
+                                                   QStringLiteral("org.kde.Solid.PowerManagement.Actions.BrightnessControl"),
+                                                   QStringLiteral("brightnessValueChanged"), this,
                                                    SLOT(screenBrightnessChanged(int)))) {
             qDebug() << "error connecting to Brightness changes via dbus";
         }
 
         if (!QDBusConnection::sessionBus().connect(SOLID_POWERMANAGEMENT_SERVICE,
-                                                   "/org/kde/Solid/PowerManagement/Actions/KeyboardBrightnessControl",
-                                                   "org.kde.Solid.PowerManagement.Actions.KeyboardBrightnessControl",
-                                                   "keyboardBrightnessValueChanged", this,
+                                                   QStringLiteral("/org/kde/Solid/PowerManagement/Actions/BrightnessControl"),
+                                                   QStringLiteral("org.kde.Solid.PowerManagement.Actions.BrightnessControl"),
+                                                   QStringLiteral("brightnessValueMaxChanged"), this,
+                                                   SLOT(maximumScreenBrightnessChanged(int)))) {
+            qDebug() << "error connecting to max brightness changes via dbus";
+        }
+
+        if (!QDBusConnection::sessionBus().connect(SOLID_POWERMANAGEMENT_SERVICE,
+                                                   QStringLiteral("/org/kde/Solid/PowerManagement/Actions/KeyboardBrightnessControl"),
+                                                   QStringLiteral("org.kde.Solid.PowerManagement.Actions.KeyboardBrightnessControl"),
+                                                   QStringLiteral("keyboardBrightnessValueChanged"), this,
                                                    SLOT(keyboardBrightnessChanged(int)))) {
             qDebug() << "error connecting to Keyboard Brightness changes via dbus";
+        }
+
+        if (!QDBusConnection::sessionBus().connect(SOLID_POWERMANAGEMENT_SERVICE,
+                                                   QStringLiteral("/org/kde/Solid/PowerManagement/Actions/KeyboardBrightnessControl"),
+                                                   QStringLiteral("org.kde.Solid.PowerManagement.Actions.KeyboardBrightnessControl"),
+                                                   QStringLiteral("keyboardBrightnessValueMaxChanged"), this,
+                                                   SLOT(maximumKeyboardBrightnessChanged(int)))) {
+            qDebug() << "error connecting to max keyboard Brightness changes via dbus";
         }
 
         sourceRequestEvent("PowerDevil");
 
         if (!QDBusConnection::sessionBus().connect(SOLID_POWERMANAGEMENT_SERVICE,
-                                                   "/org/kde/Solid/PowerManagement",
+                                                   QStringLiteral("/org/kde/Solid/PowerManagement"),
                                                    SOLID_POWERMANAGEMENT_SERVICE,
-                                                   "batteryRemainingTimeChanged", this,
+                                                   QStringLiteral("batteryRemainingTimeChanged"), this,
                                                    SLOT(batteryRemainingTimeChanged(qulonglong)))) {
             qDebug() << "error connecting to remaining time changes";
         }
@@ -181,13 +197,10 @@ bool PowermanagementEngine::sourceRequestEvent(const QString &name)
         setData("Sleep States", "Hibernate", sleepstates.contains(Solid::PowerManagement::HibernateState));
         setData("Sleep States", "HybridSuspend", sleepstates.contains(Solid::PowerManagement::HybridSuspendState));
     } else if (name == "PowerDevil") {
-        setScreenBrightnessAvailable(false);
-        setKeyboardBrightnessAvailable(false);
-
         QDBusMessage screenMsg = QDBusMessage::createMethodCall(SOLID_POWERMANAGEMENT_SERVICE,
-                                                              "/org/kde/Solid/PowerManagement/Actions/BrightnessControl",
-                                                              "org.kde.Solid.PowerManagement.Actions.BrightnessControl",
-                                                              "brightnessValue");
+                                                              QStringLiteral("/org/kde/Solid/PowerManagement/Actions/BrightnessControl"),
+                                                              QStringLiteral("org.kde.Solid.PowerManagement.Actions.BrightnessControl"),
+                                                              QStringLiteral("brightnessValue"));
         QDBusPendingReply<int> screenReply = QDBusConnection::sessionBus().asyncCall(screenMsg);
         QDBusPendingCallWatcher *screenWatcher = new QDBusPendingCallWatcher(screenReply, this);
         QObject::connect(screenWatcher, &QDBusPendingCallWatcher::finished, this, [this](QDBusPendingCallWatcher *watcher) {
@@ -199,24 +212,23 @@ bool PowermanagementEngine::sourceRequestEvent(const QString &name)
         });
 
         QDBusMessage maxScreenMsg = QDBusMessage::createMethodCall(SOLID_POWERMANAGEMENT_SERVICE,
-                                                                  "/org/kde/Solid/PowerManagement/Actions/BrightnessControl",
-                                                                  "org.kde.Solid.PowerManagement.Actions.BrightnessControl",
-                                                                  "brightnessValueMax");
+                                                                  QStringLiteral("/org/kde/Solid/PowerManagement/Actions/BrightnessControl"),
+                                                                  QStringLiteral("org.kde.Solid.PowerManagement.Actions.BrightnessControl"),
+                                                                  QStringLiteral("brightnessValueMax"));
         QDBusPendingReply<int> maxScreenReply = QDBusConnection::sessionBus().asyncCall(maxScreenMsg);
         QDBusPendingCallWatcher *maxScreenWatcher = new QDBusPendingCallWatcher(maxScreenReply, this);
         QObject::connect(maxScreenWatcher, &QDBusPendingCallWatcher::finished, this, [this](QDBusPendingCallWatcher *watcher) {
             QDBusPendingReply<int> reply = *watcher;
             if (!reply.isError()) {
-                setData("PowerDevil", "Maximum Screen Brightness", reply.value());
-                setScreenBrightnessAvailable(reply.value() > 0);
+                maximumScreenBrightnessChanged(reply.value());
             }
             watcher->deleteLater();
         });
 
         QDBusMessage keyboardMsg = QDBusMessage::createMethodCall(SOLID_POWERMANAGEMENT_SERVICE,
-                                                                "/org/kde/Solid/PowerManagement/Actions/KeyboardBrightnessControl",
-                                                                "org.kde.Solid.PowerManagement.Actions.KeyboardBrightnessControl",
-                                                                "keyboardBrightnessValue");
+                                                                QStringLiteral("/org/kde/Solid/PowerManagement/Actions/KeyboardBrightnessControl"),
+                                                                QStringLiteral("org.kde.Solid.PowerManagement.Actions.KeyboardBrightnessControl"),
+                                                                QStringLiteral("keyboardBrightnessValue"));
         QDBusPendingReply<int> keyboardReply = QDBusConnection::sessionBus().asyncCall(keyboardMsg);
         QDBusPendingCallWatcher *keyboardWatcher = new QDBusPendingCallWatcher(keyboardReply, this);
         QObject::connect(keyboardWatcher, &QDBusPendingCallWatcher::finished, this, [this](QDBusPendingCallWatcher *watcher) {
@@ -228,16 +240,15 @@ bool PowermanagementEngine::sourceRequestEvent(const QString &name)
         });
 
         QDBusMessage maxKeyboardMsg = QDBusMessage::createMethodCall(SOLID_POWERMANAGEMENT_SERVICE,
-                                                                     "/org/kde/Solid/PowerManagement/Actions/KeyboardBrightnessControl",
-                                                                     "org.kde.Solid.PowerManagement.Actions.KeyboardBrightnessControl",
-                                                                     "keyboardBrightnessValueMax");
+                                                                     QStringLiteral("/org/kde/Solid/PowerManagement/Actions/KeyboardBrightnessControl"),
+                                                                     QStringLiteral("org.kde.Solid.PowerManagement.Actions.KeyboardBrightnessControl"),
+                                                                     QStringLiteral("keyboardBrightnessValueMax"));
         QDBusPendingReply<int> maxKeyboardReply = QDBusConnection::sessionBus().asyncCall(maxKeyboardMsg);
         QDBusPendingCallWatcher *maxKeyboardWatcher = new QDBusPendingCallWatcher(maxKeyboardReply, this);
         QObject::connect(maxKeyboardWatcher, &QDBusPendingCallWatcher::finished, this, [this](QDBusPendingCallWatcher *watcher) {
             QDBusPendingReply<int> reply = *watcher;
             if (!reply.isError()) {
-                setData("PowerDevil", "Maximum Keyboard Brightness", reply.value());
-                setKeyboardBrightnessAvailable(reply.value() > 0);
+                maximumKeyboardBrightnessChanged(reply.value());
             }
             watcher->deleteLater();
         });
@@ -447,19 +458,21 @@ void PowermanagementEngine::screenBrightnessChanged(int brightness)
     setData("PowerDevil", "Screen Brightness", brightness);
 }
 
+void PowermanagementEngine::maximumScreenBrightnessChanged(int maximumBrightness)
+{
+    setData("PowerDevil", "Maximum Screen Brightness", maximumBrightness);
+    setData("PowerDevil", "Screen Brightness Available", maximumBrightness > 0);
+}
+
 void PowermanagementEngine::keyboardBrightnessChanged(int brightness)
 {
     setData("PowerDevil", "Keyboard Brightness", brightness);
 }
 
-void PowermanagementEngine::setScreenBrightnessAvailable(bool available)
+void PowermanagementEngine::maximumKeyboardBrightnessChanged(int maximumBrightness)
 {
-    setData("PowerDevil", "Screen Brightness Available", available);
-}
-
-void PowermanagementEngine::setKeyboardBrightnessAvailable(bool available)
-{
-    setData("PowerDevil", "Keyboard Brightness Available", available);
+    setData("PowerDevil", "Maximum Keyboard Brightness", maximumBrightness);
+    setData("PowerDevil", "Keyboard Brightness Available", maximumBrightness > 0);
 }
 
 K_EXPORT_PLASMA_DATAENGINE_WITH_JSON(powermanagement, PowermanagementEngine, "plasma-dataengine-powermanagement.json")

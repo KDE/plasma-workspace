@@ -61,14 +61,13 @@ private Q_SLOTS:
     void deviceAdded(const QString& udi);
     void batteryRemainingTimeChanged(qulonglong time);
     void screenBrightnessChanged(int brightness);
+    void maximumScreenBrightnessChanged(int maximumBrightness);
     void keyboardBrightnessChanged(int brightness);
+    void maximumKeyboardBrightnessChanged(int maximumBrightness);
 
 private:
     QString batteryType(const Solid::Battery *battery) const;
     QStringList basicSourceNames() const;
-
-    void setScreenBrightnessAvailable(bool available);
-    void setKeyboardBrightnessAvailable(bool available);
 
     QStringList m_sources;
 
