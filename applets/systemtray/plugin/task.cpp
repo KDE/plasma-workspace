@@ -36,8 +36,8 @@ public:
     Private()
         : status(Task::UnknownStatus),
           category(Task::UnknownCategory),
-          expanded(false),
-          shown(true)
+          shown(true),
+          expanded(false)
     {
     }
 
