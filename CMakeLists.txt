@@ -74,6 +74,16 @@ if(X11_FOUND AND XCB_XCB_FOUND)
   set(HAVE_X11 1)
 endif()
 
+find_package(KF5Wayland CONFIG)
+set_package_properties(KF5Wayland PROPERTIES
+                       TYPE REQUIRED
+                       PURPOSE "Required for building screenlocker")
+find_package(WaylandScanner)
+find_package(Wayland 1.3 COMPONENTS Client Server)
+set_package_properties(Wayland PROPERTIES
+                       TYPE REQUIRED
+                       PURPOSE "Required for building screenlocker")
+
 include(ConfigureChecks.cmake)
 
 include_directories("${CMAKE_CURRENT_BINARY_DIR}")

@@ -33,10 +33,15 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include <Plasma/Package>
 #include <Plasma/PackageStructure>
 #include <Plasma/PluginLoader>
+// KWayland
+#include <KWayland/Client/connection_thread.h>
+#include <KWayland/Client/event_queue.h>
+#include <KWayland/Client/registry.h>
 // Qt
 #include <QtCore/QTimer>
 #include <QtGui/QKeyEvent>
 #include <qscreen.h>
+#include <QThread>
 
 #include <QQuickView>
 #include <QQuickItem>
@@ -45,6 +50,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include <QQmlProperty>
 
 #include <QX11Info>
+// Wayland
+#include <wayland-client.h>
+#include <wayland-ksld-client-protocol.h>
 // X11
 #include <X11/Xatom.h>
 #include <X11/Xlib.h>
@@ -77,6 +85,18 @@ UnlockApp::UnlockApp(int &argc, char **argv)
 UnlockApp::~UnlockApp()
 {
     qDeleteAll(m_views);
+
+    if (m_ksldInterface) {
+        org_kde_ksld_destroy(m_ksldInterface);
+    }
+    if (m_ksldRegistry) {
+        delete m_ksldRegistry;
+    }
+    if (m_ksldConnection) {
+        m_ksldConnection->deleteLater();
+        m_ksldConnectionThread->quit();
+        m_ksldConnectionThread->wait();
+    }
 }
 
 void UnlockApp::initialize()
@@ -144,6 +164,12 @@ void UnlockApp::desktopResized()
 
         if (!m_testing) {
             view->setFlags(Qt::X11BypassWindowManagerHint);
+        }
+
+        if (m_ksldInterface) {
+            view->create();
+            org_kde_ksld_x11window(m_ksldInterface, view->winId());
+            wl_display_flush(m_ksldConnection->display());
         }
 
         // engine stuff
@@ -388,6 +414,44 @@ void UnlockApp::setGraceTime(int milliseconds)
 void UnlockApp::setNoLock(bool noLock)
 {
     m_noLock = noLock;
+}
+
+void UnlockApp::setKsldSocket(int socket)
+{
+    using namespace KWayland::Client;
+    m_ksldConnection = new ConnectionThread;
+    m_ksldConnection->setSocketFd(socket);
+
+    m_ksldRegistry = new Registry();
+    EventQueue *queue = new EventQueue(m_ksldRegistry);
+
+    connect(m_ksldRegistry, &Registry::interfaceAnnounced, this,
+        [this, queue] (QByteArray interface, quint32 name, quint32 version) {
+            if (interface != QByteArrayLiteral("org_kde_ksld")) {
+                return;
+            }
+            m_ksldInterface = reinterpret_cast<org_kde_ksld*>(wl_registry_bind(*m_ksldRegistry, name, &org_kde_ksld_interface, version));
+            queue->addProxy(m_ksldInterface);
+            for (auto v : m_views) {
+                org_kde_ksld_x11window(m_ksldInterface, v->winId());
+                wl_display_flush(m_ksldConnection->display());
+            }
+        }
+    );
+
+    connect(m_ksldConnection, &ConnectionThread::connected, this,
+        [this, queue] {
+            m_ksldRegistry->create(m_ksldConnection);
+            queue->setup(m_ksldConnection);
+            m_ksldRegistry->setEventQueue(queue);
+            m_ksldRegistry->setup();
+            wl_display_flush(m_ksldConnection->display());
+        }, Qt::QueuedConnection);
+
+    m_ksldConnectionThread = new QThread(this);
+    m_ksldConnection->moveToThread(m_ksldConnectionThread);
+    m_ksldConnectionThread->start();
+    m_ksldConnection->initConnection();
 }
 
 } // namespace

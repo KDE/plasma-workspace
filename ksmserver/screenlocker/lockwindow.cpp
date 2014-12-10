@@ -158,6 +158,7 @@ void LockWindow::hideLockWindow()
       gVRoot = 0;
   }
   XSync(QX11Info::display(), False);
+  m_allowedWindows.clear();
 }
 
 //---------------------------------------------------------------------------
@@ -370,7 +371,7 @@ bool LockWindow::nativeEventFilter(const QByteArray &eventType, void *message, l
                     m_windowInfo[ index ].viewable = true;
                 else
                     qDebug() << "Unknown toplevel for MapNotify";
-                if (isLockWindow(xm->window)) {
+                if (m_allowedWindows.contains(xm->window)) {
                     if (m_lockWindows.contains(xm->window)) {
                         qDebug() << "uhoh! duplicate!";
                     } else {
@@ -497,28 +498,6 @@ void LockWindow::stayOnTop()
         XRestackWindows( QX11Info::display(), stack.data(), count );
 }
 
-bool LockWindow::isLockWindow(Window id)
-{
-    Atom tag = XInternAtom(QX11Info::display(), "_KDE_SCREEN_LOCKER", False);
-    Atom actualType;
-    int actualFormat;
-    unsigned long nitems, remaining;
-    unsigned char *data = 0;
-    Display *display = QX11Info::display();
-
-    int result = XGetWindowProperty(display, id, tag, 0, 1, False, tag, &actualType,
-            &actualFormat, &nitems, &remaining, &data);
-
-    bool lockWindow = false;
-    if (result == Success && actualType == tag) {
-        lockWindow = true;
-    }
-    if (data) {
-        XFree(data);
-    }
-    return lockWindow;
-}
-
 void LockWindow::updateGeo()
 {
     QDesktopWidget *desktop = QApplication::desktop();
@@ -530,6 +509,29 @@ void LockWindow::paintEvent(QPaintEvent* )
     QPainter p(this);
     p.setBrush(QBrush(Qt::black));
     p.drawRect(geometry());
+    stayOnTop();
+}
+
+void LockWindow::addAllowedWindow(quint32 window)
+{
+    m_allowedWindows << window;
+    // test whether it's to show
+    const int index = findWindowInfo( window );
+    if (index == -1 || !m_windowInfo[ index ].viewable) {
+        return;
+    }
+    if (m_lockWindows.contains(window)) {
+        qDebug() << "uhoh! duplicate!";
+    } else {
+        if (!isVisible()) {
+            // not yet shown and we have a lock window, so we show our own window
+            show();
+            setCursor(Qt::ArrowCursor);
+        }
+        m_lockWindows.prepend(window);
+        fakeFocusIn(window);
+        stayOnTop();
+    }
 }
 
 }

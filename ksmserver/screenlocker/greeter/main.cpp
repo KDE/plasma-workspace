@@ -80,11 +80,15 @@ int main(int argc, char* argv[])
                                        QStringLiteral("0"));
     QCommandLineOption nolockOption(QStringLiteral("nolock"),
                                     i18n("Don't show any lock user interface."));
+    QCommandLineOption waylandFdOption(QStringLiteral("ksldfd"),
+                                       i18n("File descriptor for connecting to ksld."),
+                                       QStringLiteral("fd"));
 
     parser.addOption(testingOption);
     parser.addOption(immediateLockOption);
     parser.addOption(graceTimeOption);
     parser.addOption(nolockOption);
+    parser.addOption(waylandFdOption);
     parser.process(app);
 
     if (parser.isSet(testingOption)) {
@@ -94,10 +98,19 @@ int main(int argc, char* argv[])
         app.setImmediateLock(parser.isSet(immediateLockOption));
     }
     app.setNoLock(parser.isSet(nolockOption));
+
     bool ok = false;
     int graceTime = parser.value(graceTimeOption).toInt(&ok);
     if (ok) {
         app.setGraceTime(graceTime);
+    }
+
+    if (parser.isSet(waylandFdOption)) {
+        ok = false;
+        const int fd = parser.value(waylandFdOption).toInt(&ok);
+        if (ok) {
+            app.setKsldSocket(fd);
+        }
     }
     app.desktopResized();
 

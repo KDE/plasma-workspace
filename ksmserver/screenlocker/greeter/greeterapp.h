@@ -29,7 +29,16 @@ namespace Plasma {
     class Package;
 };
 
+namespace KWayland {
+namespace Client {
+    class ConnectionThread;
+    class Registry;
+}
+}
+
 class Authenticator;
+
+struct org_kde_ksld;
 
 namespace ScreenLocker
 {
@@ -47,6 +56,7 @@ public:
     void lockImmediately();
     void setGraceTime(int milliseconds);
     void setNoLock(bool noLock);
+    void setKsldSocket(int socket);
 
 public Q_SLOTS:
     void desktopResized();
@@ -78,6 +88,11 @@ private:
     Authenticator *m_authenticator;
     int m_graceTime;
     bool m_noLock;
+
+    KWayland::Client::ConnectionThread *m_ksldConnection = nullptr;
+    KWayland::Client::Registry *m_ksldRegistry = nullptr;
+    QThread *m_ksldConnectionThread = nullptr;
+    org_kde_ksld *m_ksldInterface = nullptr;
 };
 } // namespace
 

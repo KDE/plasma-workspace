@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<protocol name="ksld">
+    <interface name="org_kde_ksld" version="1">
+        <request name="x11window">
+            <arg name="id" type="uint"/>
+        </request>
+    </interface>
+</protocol>
+

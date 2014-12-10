@@ -41,6 +41,8 @@ public:
     void showLockWindow();
     void hideLockWindow();
 
+    void addAllowedWindow(quint32 window);
+
     virtual bool nativeEventFilter(const QByteArray &eventType, void *message, long *result) override;
 
 Q_SIGNALS:
@@ -59,7 +61,6 @@ private:
     void removeVRoot(Window win);
     int findWindowInfo(Window w);
     void stayOnTop();
-    bool isLockWindow(Window w);
     struct WindowInfo
     {
         Window window;
@@ -67,6 +68,7 @@ private:
     };
     QList<WindowInfo> m_windowInfo;
     QList<WId> m_lockWindows;
+    QList<quint32> m_allowedWindows;
 };
 }
 

@@ -1,6 +1,9 @@
 remove_definitions(-DTRANSLATION_DOMAIN=\"ksmserver\")
 add_definitions(-DTRANSLATION_DOMAIN=\"kscreenlocker\")
 
+# adjusting CMAKE_C_FLAGS to get wayland protocols to compile
+set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -std=gnu90")
+
 add_definitions(-DKDE_DEFAULT_DEBUG_AREA=1223)
 add_subdirectory(kcheckpass)
 add_subdirectory(greeter)
@@ -17,12 +20,18 @@ set(ksld_SRCS
    interface.cpp
    lockwindow.cpp
    logind.cpp
+   waylandserver.cpp
 )
 qt5_add_dbus_adaptor(ksld_SRCS ${screensaver_dbusXML} interface.h ScreenLocker::Interface)
 qt5_add_dbus_adaptor(ksld_SRCS ${kscreensaver_dbusXML} interface.h ScreenLocker::Interface kscreensaveradaptor KScreenSaverAdaptor)
 kconfig_add_kcfg_files(ksld_SRCS kcfg/kscreensaversettings.kcfgc)
 qt5_add_dbus_interface(ksld_SRCS ${ksmserver_xml} ksmserver_interface)
 qt5_add_dbus_interface(ksld_SRCS ${powerdevilpolicyagent_xml} powerdevilpolicyagent)
+
+ecm_add_wayland_server_protocol(ksld_SRCS
+    PROTOCOL protocols/ksld.xml
+    BASENAME ksld
+)
 
 add_library(screenlocker_static STATIC ${ksld_SRCS})
 
@@ -39,6 +48,8 @@ target_link_libraries(screenlocker_static
    ${X11_LIBRARIES}
    ${X11_Xcursor_LIB}
    XCB::XCB
+   KF5::WaylandServer
+   Wayland::Server
 )
 
 # Needed to compile on Arm target.

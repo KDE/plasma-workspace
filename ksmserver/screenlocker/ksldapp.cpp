@@ -26,6 +26,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include "logind.h"
 #include "kscreensaversettings.h"
 #include <config-ksmserver.h>
+#include "waylandserver.h"
 // workspace
 #include <kdisplaymanager.h>
 // KDE
@@ -68,6 +69,7 @@ KSldApp::KSldApp(QObject * parent)
     , m_lockState(Unlocked)
     , m_lockProcess(NULL)
     , m_lockWindow(NULL)
+    , m_waylandServer(new WaylandServer(this))
     , m_lockedTimer(QElapsedTimer())
     , m_idleId(0)
     , m_lockGrace(0)
@@ -330,6 +332,7 @@ void KSldApp::doUnlock()
     m_lockedTimer.invalidate();
     endGraceTime();
     KDisplayManager().setLock(false);
+    m_waylandServer->stop();
     emit unlocked();
 //     KNotification::event( QLatin1String("unlocked"));
 }
@@ -347,12 +350,25 @@ bool KSldApp::startLockProcess(EstablishLock establishLock)
     if (m_lockGrace == -1) {
         args << "--nolock";
     }
+
+    // start the Wayland server
+    int fd = m_waylandServer->start();
+    if (fd == -1) {
+        return false;
+    }
+
+    args << "--ksldfd";
+    args << QString::number(fd);
+
     m_lockProcess->start(QStringLiteral(KSCREENLOCKER_GREET_BIN), args);
     // we wait one minute
     if (!m_lockProcess->waitForStarted(60000)) {
         m_lockProcess->kill();
+        m_waylandServer->stop();
+        close(fd);
         return false;
     }
+    close(fd);
 
     return true;
 }
@@ -369,6 +385,7 @@ void KSldApp::showLockWindow()
             },
             Qt::QueuedConnection
         );
+        connect(m_waylandServer, &WaylandServer::x11WindowAdded, m_lockWindow, &LockWindow::addAllowedWindow);
     }
     m_lockWindow->showLockWindow();
     XSync(QX11Info::display(), False);

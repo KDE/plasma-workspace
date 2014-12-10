@@ -18,6 +18,11 @@ set(kscreenlocker_greet_SRCS
 qt5_add_resources(kscreenlocker_greet_SRCS fallbacktheme.qrc)
 kconfig_add_kcfg_files(kscreenlocker_greet_SRCS ${CMAKE_CURRENT_SOURCE_DIR}/../kcfg/kscreensaversettings.kcfgc)
 
+ecm_add_wayland_client_protocol(kscreenlocker_greet_SRCS
+    PROTOCOL ../protocols/ksld.xml
+    BASENAME ksld
+)
+
 add_executable(kscreenlocker_greet ${kscreenlocker_greet_SRCS})
 
 target_link_libraries(kscreenlocker_greet
@@ -36,6 +41,8 @@ target_link_libraries(kscreenlocker_greet
                         Qt5::X11Extras
                         ${X11_LIBRARIES}
                         KF5::KDELibs4Support
+                        KF5::WaylandClient
+                        Wayland::Client
                         )
 
 install(TARGETS kscreenlocker_greet DESTINATION ${LIBEXEC_INSTALL_DIR})

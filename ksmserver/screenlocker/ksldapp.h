@@ -40,6 +40,7 @@ enum class EstablishLock {
 };
 
 class LockWindow;
+class WaylandServer;
 
 class KSldApp : public QObject
 {
@@ -104,6 +105,7 @@ private:
     LockState m_lockState;
     QProcess *m_lockProcess;
     LockWindow *m_lockWindow;
+    WaylandServer *m_waylandServer;
     /**
      * Timer to measure how long the screen is locked.
      * This information is required by DBus Interface.
