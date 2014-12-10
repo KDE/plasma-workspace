@@ -669,12 +669,6 @@ void Klipper::checkClipData( bool selectionMode )
 #ifdef NOISY_KLIPPER
     qDebug() << "Checking clip data";
 
-    qDebug() << "====== c h e c k C l i p D a t a ============================"
-              << kBacktrace()
-              << "====== c h e c k C l i p D a t a ============================"
-              << endl;;
-
-
     if ( sender() ) {
         qDebug() << "sender=" << sender()->objectName();
     } else {
