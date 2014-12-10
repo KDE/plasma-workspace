@@ -27,7 +27,7 @@ PlasmaCore.Dialog {
     outputOnly: true
 
     // OSD Timeout in msecs - how long it will stay on the screen
-    property int timeout: 2500
+    property int timeout: 1800
     // This is either a text or a number, if showingProgress is set to true,
     // the number will be used as a value for the progress bar
     property var osdValue
