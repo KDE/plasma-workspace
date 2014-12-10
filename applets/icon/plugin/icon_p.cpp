@@ -42,7 +42,7 @@ void IconPrivate::setUrl(QUrl& url) {
 
     if (m_url.isLocalFile()) {
 
-	const KFileItem fileItem(KFileItem::Unknown, KFileItem::Unknown, m_url);
+	const KFileItem fileItem(m_url);
 	const QFileInfo fi(m_url.toLocalFile());
 
 	if (fileItem.isDesktopFile()) {
