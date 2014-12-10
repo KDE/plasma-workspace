@@ -193,11 +193,14 @@ void StatusNotifierTest::timeout()
 
 void StatusNotifierTest::activateRequested(bool active, const QPoint& pos)
 {
+    Q_UNUSED(active);
+    Q_UNUSED(pos);
     log("Activated");
 }
 
 void StatusNotifierTest::secondaryActivateRequested(const QPoint& pos)
 {
+    Q_UNUSED(pos);
     log("secondaryActivateRequested");
 }
 
