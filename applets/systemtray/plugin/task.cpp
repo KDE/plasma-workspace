@@ -120,11 +120,14 @@ void Task::setShown(bool show)
 
 bool Task::expanded() const
 {
+    //virtual method to be overriden if expanded is supported
     return false;
 }
 
 void Task::setExpanded(bool expanded)
 {
+    Q_UNUSED(expanded);
+    //virtual method to be overriden if expanded is supported
 }
 
 QQuickItem* Task::taskItem()
