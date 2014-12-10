@@ -207,7 +207,9 @@ void UnlockApp::getFocus()
     // ie. "type something into the box of every greeter"
     foreach (QQuickView *view, m_views) {
         view->requestActivate();
-        view->setKeyboardGrabEnabled(true); // TODO - check whether this still works in master!
+        if (!m_testing) {
+            view->setKeyboardGrabEnabled(true); // TODO - check whether this still works in master!
+        }
 //         w->setFocus(Qt::OtherFocusReason); // FIXME
     }
     // determine which window should actually be active and have the real input focus/grab
@@ -231,7 +233,9 @@ void UnlockApp::getFocus()
     }
     // activate window and grab input to be sure it really ends up there.
     // focus setting is still required for proper internal QWidget state (and eg. visual reflection)
-    w->setKeyboardGrabEnabled(true); // TODO - check whether this still works in master!
+    if (!m_testing) {
+        w->setKeyboardGrabEnabled(true); // TODO - check whether this still works in master!
+    }
     w->requestActivate();
 //     w->setFocus(Qt::OtherFocusReason); // FIXME
 }
