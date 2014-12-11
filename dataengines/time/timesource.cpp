@@ -27,7 +27,6 @@
 #include "timesource.h"
 
 #include <QDateTime>
-#include <QTimeZone>
 
 #include <KLocalizedString>
 
@@ -61,6 +60,15 @@ void TimeSource::setTimeZone(const QString &tz)
         m_tzName = QString::fromUtf8(QTimeZone::systemTimeZoneId());
     }
 
+    if (m_local) {
+        m_tz = QTimeZone(QTimeZone::systemTimeZoneId());
+    } else {
+        m_tz = QTimeZone(m_tzName.toUtf8());
+        if (!m_tz.isValid()) {
+            m_tz = QTimeZone(QTimeZone::systemTimeZoneId());
+        }
+    }
+
     const QString trTimezone = i18n(m_tzName.toUtf8());
     setData(I18N_NOOP("Timezone"), trTimezone);
 
@@ -91,26 +99,16 @@ TimeSource::~TimeSource()
 
 void TimeSource::updateTime()
 {
-    QTimeZone tz;
-    if (m_local) {
-        tz = QTimeZone(QTimeZone::systemTimeZoneId());
-    } else {
-        tz = QTimeZone(m_tzName.toUtf8());
-        if (!tz.isValid()) {
-            tz = QTimeZone(QTimeZone::systemTimeZoneId());
-        }
-    }
+    QDateTime timeZoneDateTime = QDateTime::currentDateTime().toTimeZone(m_tz);
 
-    QDateTime timeZoneDateTime = QDateTime::currentDateTime().toTimeZone(tz);
-
-    int offset = tz.offsetFromUtc(timeZoneDateTime);
+    int offset = m_tz.offsetFromUtc(timeZoneDateTime);
     if (m_offset != offset) {
         m_offset = offset;
     }
 
     setData(I18N_NOOP("Offset"), m_offset);
 
-    QString abbreviation = tz.abbreviation(timeZoneDateTime);
+    QString abbreviation = m_tz.abbreviation(timeZoneDateTime);
     setData(I18N_NOOP("Timezone Abbreviation"), abbreviation);
 
     QDateTime dt;

@@ -21,6 +21,7 @@
 #define TIMESOURCE_H
 
 #include <Plasma/DataContainer>
+#include <QTimeZone>
 
 class Sun;
 class Moon;
@@ -54,6 +55,7 @@ private:
     bool m_solarPosition : 1;
     bool m_userDateTime : 1;
     bool m_local : 1;
+    QTimeZone m_tz;
 };
 
 #endif
