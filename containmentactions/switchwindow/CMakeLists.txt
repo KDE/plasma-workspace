@@ -9,7 +9,7 @@ kde4_add_ui_files(switchwindow_SRCS config.ui)
 
 add_library(plasma_containmentactions_switchwindow MODULE ${switchwindow_SRCS})
 
-kservice_desktop_to_json(plasma_containmentactions_switchwindow plasma-containmentactions-switchwindow.desktop)
+kcoreaddons_desktop_to_json(plasma_containmentactions_switchwindow plasma-containmentactions-switchwindow.desktop)
 
 target_link_libraries(plasma_containmentactions_switchwindow
                       KF5::Plasma

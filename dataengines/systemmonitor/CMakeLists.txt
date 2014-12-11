@@ -13,7 +13,7 @@ target_link_libraries(plasma_engine_systemmonitor
     KF5::SysGuard
 )
 
-kservice_desktop_to_json(plasma_engine_systemmonitor plasma-dataengine-systemmonitor.desktop)
+kcoreaddons_desktop_to_json(plasma_engine_systemmonitor plasma-dataengine-systemmonitor.desktop)
 
 install(TARGETS plasma_engine_systemmonitor DESTINATION ${PLUGIN_INSTALL_DIR}/plasma/dataengine)
 install(FILES plasma-dataengine-systemmonitor.desktop DESTINATION ${SERVICES_INSTALL_DIR} )

@@ -6,7 +6,7 @@ set(switchactivity_SRCS
 
 add_library(plasma_containmentactions_switchactivity MODULE ${switchactivity_SRCS})
 
-kservice_desktop_to_json(plasma_containmentactions_switchactivity plasma-containmentactions-switchactivity.desktop)
+kcoreaddons_desktop_to_json(plasma_containmentactions_switchactivity plasma-containmentactions-switchactivity.desktop)
 
 target_link_libraries(plasma_containmentactions_switchactivity
                       Qt5::Widgets

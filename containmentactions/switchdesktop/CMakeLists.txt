@@ -6,7 +6,7 @@ set(switchdesktop_SRCS
 
 add_library(plasma_containmentactions_switchdesktop MODULE ${switchdesktop_SRCS})
 
-kservice_desktop_to_json(plasma_containmentactions_switchdesktop plasma-containmentactions-switchdesktop.desktop)
+kcoreaddons_desktop_to_json(plasma_containmentactions_switchdesktop plasma-containmentactions-switchdesktop.desktop)
 
 target_link_libraries(plasma_containmentactions_switchdesktop
                         KF5::Plasma

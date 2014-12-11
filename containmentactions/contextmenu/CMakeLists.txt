@@ -17,7 +17,7 @@ qt5_add_dbus_interface(contextmenu_SRCS ${screensaver_xml} screensaver_interface
 
 add_library(plasma_containmentactions_contextmenu MODULE ${contextmenu_SRCS})
 
-kservice_desktop_to_json(plasma_containmentactions_contextmenu plasma-containmentactions-contextmenu.desktop)
+kcoreaddons_desktop_to_json(plasma_containmentactions_contextmenu plasma-containmentactions-contextmenu.desktop)
 
 target_link_libraries(plasma_containmentactions_contextmenu
                       Qt5::DBus

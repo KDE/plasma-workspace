@@ -6,7 +6,7 @@ set(applauncher_SRCS
 
 add_library(plasma_containmentactions_applauncher MODULE ${applauncher_SRCS})
 
-kservice_desktop_to_json(plasma_containmentactions_applauncher plasma-containmentactions-applauncher.desktop)
+kcoreaddons_desktop_to_json(plasma_containmentactions_applauncher plasma-containmentactions-applauncher.desktop)
 
 target_link_libraries(plasma_containmentactions_applauncher KF5::Plasma KF5::KIOCore KF5::KIOWidgets)
 

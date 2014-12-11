@@ -12,6 +12,6 @@ target_link_libraries(plasma_packagestructure_wallpaper
    KF5::Plasma
 )
 
-kservice_desktop_to_json(plasma_packagestructure_wallpaper plasma-packagestructure-wallpaper.desktop)
+kcoreaddons_desktop_to_json(plasma_packagestructure_wallpaper plasma-packagestructure-wallpaper.desktop)
 
 install(TARGETS plasma_packagestructure_wallpaper DESTINATION ${PLUGIN_INSTALL_DIR}/plasma/packagestructure)

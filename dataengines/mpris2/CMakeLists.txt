@@ -31,7 +31,7 @@ target_link_libraries(plasma_engine_mpris2
    KF5::Plasma
 )
 
-kservice_desktop_to_json(plasma_engine_mpris2 plasma-dataengine-mpris2.desktop)
+kcoreaddons_desktop_to_json(plasma_engine_mpris2 plasma-dataengine-mpris2.desktop)
 
 install(TARGETS plasma_engine_mpris2 DESTINATION ${PLUGIN_INSTALL_DIR}/plasma/dataengine)
 install(FILES plasma-dataengine-mpris2.desktop DESTINATION ${SERVICES_INSTALL_DIR})

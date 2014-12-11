@@ -10,7 +10,7 @@ target_link_libraries(plasma_engine_executable
     KF5::CoreAddons
 )
 
-kservice_desktop_to_json(plasma_engine_executable plasma-dataengine-executable.desktop)
+kcoreaddons_desktop_to_json(plasma_engine_executable plasma-dataengine-executable.desktop)
 
 install(TARGETS plasma_engine_executable DESTINATION ${PLUGIN_INSTALL_DIR}/plasma/dataengine)
 install(FILES plasma-dataengine-executable.desktop DESTINATION ${SERVICES_INSTALL_DIR} )

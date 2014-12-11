@@ -34,7 +34,7 @@ target_link_libraries(plasma_engine_statusnotifieritem
     dbusmenu-qt5
 )
 
-kservice_desktop_to_json(plasma_engine_statusnotifieritem plasma-dataengine-statusnotifieritem.desktop)
+kcoreaddons_desktop_to_json(plasma_engine_statusnotifieritem plasma-dataengine-statusnotifieritem.desktop)
 
 install(TARGETS plasma_engine_statusnotifieritem DESTINATION ${PLUGIN_INSTALL_DIR}/plasma/dataengine)
 install(FILES plasma-dataengine-statusnotifieritem.desktop DESTINATION ${SERVICES_INSTALL_DIR})

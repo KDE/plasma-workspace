@@ -10,7 +10,7 @@ target_link_libraries(plasma_engine_favicons
     Qt5::Gui
 )
 
-kservice_desktop_to_json(plasma_engine_favicons plasma-dataengine-favicons.desktop)
+kcoreaddons_desktop_to_json(plasma_engine_favicons plasma-dataengine-favicons.desktop)
 
 install(TARGETS plasma_engine_favicons DESTINATION ${PLUGIN_INSTALL_DIR}/plasma/dataengine )
 install(FILES plasma-dataengine-favicons.desktop DESTINATION ${SERVICES_INSTALL_DIR} )

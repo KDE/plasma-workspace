@@ -8,7 +8,7 @@ set(packagekit_engine_SRCS
 
 add_library(plasma_engine_packagekit MODULE ${packagekit_engine_SRCS})
 
-kservice_desktop_to_json(plasma_engine_packagekit plasma-dataengine-packagekit.desktop)
+kcoreaddons_desktop_to_json(plasma_engine_packagekit plasma-dataengine-packagekit.desktop)
 
 target_link_libraries(plasma_engine_packagekit KF5::Plasma KF5::CoreAddons Qt5::DBus )
 

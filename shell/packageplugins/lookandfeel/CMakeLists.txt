@@ -5,7 +5,7 @@ set(lookandfeel_SRCS
 )
 
 add_library(plasma_packagestructure_lookandfeel MODULE ${lookandfeel_SRCS})
-kservice_desktop_to_json(plasma_packagestructure_lookandfeel plasma-packagestructure-lookandfeel.desktop)
+kcoreaddons_desktop_to_json(plasma_packagestructure_lookandfeel plasma-packagestructure-lookandfeel.desktop)
 
 target_link_libraries(plasma_packagestructure_lookandfeel
    KF5::I18n

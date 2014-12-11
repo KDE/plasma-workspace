@@ -20,7 +20,7 @@ target_link_libraries(plasma_engine_soliddevice
   KF5::CoreAddons
 )
 
-kservice_desktop_to_json(plasma_engine_soliddevice plasma-dataengine-soliddevice.desktop)
+kcoreaddons_desktop_to_json(plasma_engine_soliddevice plasma-dataengine-soliddevice.desktop)
 
 install(TARGETS plasma_engine_soliddevice DESTINATION ${PLUGIN_INSTALL_DIR}/plasma/dataengine)
 install(FILES plasma-dataengine-soliddevice.desktop DESTINATION ${SERVICES_INSTALL_DIR} )

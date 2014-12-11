@@ -6,7 +6,7 @@ set(contextmenu_SRCS
 
 add_library(plasma_containmentactions_minimalcontextmenu MODULE ${contextmenu_SRCS})
 
-kservice_desktop_to_json(plasma_containmentactions_minimalcontextmenu plasma-containmentactions-minimalcontextmenu.desktop)
+kcoreaddons_desktop_to_json(plasma_containmentactions_minimalcontextmenu plasma-containmentactions-minimalcontextmenu.desktop)
 
 target_link_libraries(plasma_containmentactions_minimalcontextmenu
                       KF5::Plasma

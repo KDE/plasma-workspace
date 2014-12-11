@@ -22,7 +22,7 @@ target_link_libraries(plasma_engine_activities
                       Qt5::DBus
                       Qt5::Widgets
                       )
-kservice_desktop_to_json(plasma_engine_activities plasma-dataengine-activities.desktop)
+kcoreaddons_desktop_to_json(plasma_engine_activities plasma-dataengine-activities.desktop)
 
 install(TARGETS plasma_engine_activities
         DESTINATION ${PLUGIN_INSTALL_DIR}/plasma/dataengine)

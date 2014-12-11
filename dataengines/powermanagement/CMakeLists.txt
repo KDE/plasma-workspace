@@ -23,7 +23,7 @@ target_link_libraries(plasma_engine_powermanagement
     KF5::KDELibs4Support
 )
 
-kservice_desktop_to_json(plasma_engine_powermanagement plasma-dataengine-powermanagement.desktop)
+kcoreaddons_desktop_to_json(plasma_engine_powermanagement plasma-dataengine-powermanagement.desktop)
 
 install(TARGETS plasma_engine_powermanagement DESTINATION ${PLUGIN_INSTALL_DIR}/plasma/dataengine)
 install(FILES plasma-dataengine-powermanagement.desktop DESTINATION ${SERVICES_INSTALL_DIR} )

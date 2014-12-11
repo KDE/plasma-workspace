@@ -17,7 +17,7 @@ target_link_libraries(plasma_engine_places
     KF5::Solid
 )
 
-kservice_desktop_to_json(plasma_engine_places plasma-dataengine-places.desktop)
+kcoreaddons_desktop_to_json(plasma_engine_places plasma-dataengine-places.desktop)
 
 install(TARGETS plasma_engine_places
         DESTINATION ${PLUGIN_INSTALL_DIR}/plasma/dataengine)

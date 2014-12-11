@@ -15,7 +15,7 @@ target_link_libraries(plasma_engine_tasks
                       KF5::Plasma
                       Qt5::DBus
                       taskmanager)
-kservice_desktop_to_json(plasma_engine_tasks plasma-dataengine-tasks.desktop)
+kcoreaddons_desktop_to_json(plasma_engine_tasks plasma-dataengine-tasks.desktop)
 
 install(TARGETS plasma_engine_tasks DESTINATION ${PLUGIN_INSTALL_DIR}/plasma/dataengine)
 install(FILES plasma-dataengine-tasks.desktop DESTINATION ${SERVICES_INSTALL_DIR})

@@ -11,6 +11,6 @@ target_link_libraries(plasma_packagestructure_layoutemplate
    KF5::Plasma
 )
 
-kservice_desktop_to_json(plasma_packagestructure_layoutemplate plasma-packagestructure-layouttemplate.desktop)
+kcoreaddons_desktop_to_json(plasma_packagestructure_layoutemplate plasma-packagestructure-layouttemplate.desktop)
 
 install(TARGETS plasma_packagestructure_layoutemplate DESTINATION ${PLUGIN_INSTALL_DIR}/plasma/packagestructure)

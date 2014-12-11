@@ -13,7 +13,7 @@ target_link_libraries(plasma_engine_share
                       KF5::KIOCore
                       KF5::JsEmbed
 )
-kservice_desktop_to_json(plasma_engine_share plasma-dataengine-share.desktop)
+kcoreaddons_desktop_to_json(plasma_engine_share plasma-dataengine-share.desktop)
 
 install(TARGETS plasma_engine_share
         DESTINATION ${PLUGIN_INSTALL_DIR}/plasma/dataengine)

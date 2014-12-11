@@ -6,7 +6,7 @@ endif ()
 
 add_library(kded_ktimezoned MODULE ${kded_ktimezoned_SRCS})
 
-kservice_desktop_to_json(kded_ktimezoned ktimezoned.desktop)
+kcoreaddons_desktop_to_json(kded_ktimezoned ktimezoned.desktop)
 
 #qt5_add_dbus_adaptor(kded_ktimezoned_SRCS org.kde.KTimeZoned ktimezonedbus.h DBusHandler)
 

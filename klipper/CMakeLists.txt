@@ -71,7 +71,7 @@ install(PROGRAMS org.kde.klipper.desktop DESTINATION ${AUTOSTART_INSTALL_DIR})
 # Plasma Data Engine
 set(plasma_engine_clipboard_SRCS ${libklipper_common_SRCS} clipboardengine.cpp clipboardservice.cpp clipboardjob.cpp)
 add_library(plasma_engine_clipboard MODULE ${plasma_engine_clipboard_SRCS})
-kservice_desktop_to_json(plasma_engine_clipboard plasma-dataengine-clipboard.desktop)
+kcoreaddons_desktop_to_json(plasma_engine_clipboard plasma-dataengine-clipboard.desktop)
 target_link_libraries(plasma_engine_clipboard
     Qt5::DBus
     Qt5::Widgets       # QAction
