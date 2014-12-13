@@ -21,8 +21,6 @@
 #include <QX11Info>
 
 #include <X11/extensions/Xfixes.h>
-#include <fixx11h.h>
-
 
 /*
  * This class is a QWidget because we need an X window to

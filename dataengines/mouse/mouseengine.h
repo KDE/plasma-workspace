@@ -19,7 +19,11 @@
 #ifndef MOUSEENGINE_H
 #define MOUSEENGINE_H
 
+#include <QPoint>
+#include <QTimerEvent>
+
 #include <Plasma/DataEngine>
+
 #include <config-X11.h>
 
 #ifdef HAVE_XFIXES
@@ -50,7 +54,5 @@ private:
     CursorNotificationHandler *handler;
 #endif
 };
-
-K_EXPORT_PLASMA_DATAENGINE(mouse, MouseEngine)
 
 #endif

@@ -32,6 +32,7 @@ MouseEngine::MouseEngine(QObject* parent, const QVariantList& args)
 #endif
 {
     Q_UNUSED(args)
+    init();
 }
 
 
@@ -74,8 +75,6 @@ void MouseEngine::init()
 
     setData(QLatin1String("Name"), QVariant(handler->cursorName()));
 #endif
-
-    scheduleSourcesUpdated();
 }
 
 
@@ -87,8 +86,6 @@ void MouseEngine::timerEvent(QTimerEvent *)
     {
         setData(QLatin1String("Position"), QVariant(pos));
         lastPosition = pos;
-
-        scheduleSourcesUpdated();
     }
 }
 
@@ -96,8 +93,8 @@ void MouseEngine::timerEvent(QTimerEvent *)
 void MouseEngine::updateCursorName(const QString &name)
 {
     setData(QLatin1String("Name"), QVariant(name));
-    scheduleSourcesUpdated();
 }
 
+K_EXPORT_PLASMA_DATAENGINE_WITH_JSON(mouse, MouseEngine, "plasma-dataengine-mouse.json")
 
-
+#include "mouseengine.moc"

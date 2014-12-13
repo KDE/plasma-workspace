@@ -36,7 +36,7 @@ if(Boost_FOUND AND KdepimLibs_FOUND)
 endif()
 
 if(NOT WIN32)
-  #   add_subdirectory(mouse)
+  add_subdirectory(mouse)
   add_subdirectory(systemmonitor)
   add_subdirectory(tasks)
 endif()

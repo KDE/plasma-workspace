@@ -19,10 +19,11 @@
 #ifndef CURSORNOTIFICATIONHANDLER_H
 #define CURSORNOTIFICATIONHANDLER_H
 
-#include <QWidget>
 #include <QMap>
+#include <QWidget>
 
 #include <X11/Xlib.h>
+#include <fixx11h.h>
 
 class CursorNotificationHandler : public QWidget
 {
