@@ -39,11 +39,11 @@ Item {
     // UPower seems to set the Present property false when a device is added but not probed yet
     readonly property bool isPresent: model["Plugged in"]
 
-    property Component batteryDetails: GridLayout {
+    property Component batteryDetails: Flow { // GridLayout crashes with a Repeater in it somehow
         id: detailsLayout
-        columns: 2
-        columnSpacing: units.smallSpacing
-        rowSpacing: 0
+
+        property int leftColumnWidth: 0
+        width: units.gridUnit * 11
 
         Repeater {
             id: detailsRepeater
@@ -51,19 +51,22 @@ Item {
 
             PlasmaComponents.Label {
                 id: detailsLabel
-                // using model[x] in Repeater doesn't work with JS Array
-                property var currentItem: detailsRepeater.model[index]
-
-                Layout.fillWidth: true
-                horizontalAlignment: currentItem.value ? Text.AlignLeft : Text.AlignRight
-                text: currentItem.value ? currentItem.value : currentItem.label
+                width: modelData.value ? parent.width - detailsLayout.leftColumnWidth - units.smallSpacing : detailsLayout.leftColumnWidth + units.smallSpacing
+                onPaintedWidthChanged: { // horrible HACK to get a column layout
+                    if (paintedWidth > detailsLayout.leftColumnWidth) {
+                        detailsLayout.leftColumnWidth = paintedWidth
+                    }
+                }
+                height: paintedHeight
+                text: modelData.value ? modelData.value : modelData.label
 
                 states: State {
                     when: !!detailsLayout.parent.inListView // HACK
                     PropertyChanges {
                         target: detailsLabel
-                        horizontalAlignment: currentItem.value ? Text.AlignRight : Text.AlignLeft
+                        horizontalAlignment: modelData.value ? Text.AlignRight : Text.AlignLeft
                         font.pointSize: theme.smallestFont.pointSize
+                        width: parent.width / 2
                     }
                 }
             }
