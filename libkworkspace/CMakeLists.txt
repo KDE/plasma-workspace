@@ -35,7 +35,6 @@ target_link_libraries(kworkspace
         KF5::I18n
         KF5::WindowSystem
         KF5::Plasma
-        Xau
 )
 target_include_directories(kworkspace PUBLIC "$<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}>"
                                       INTERFACE "$<INSTALL_INTERFACE:${INCLUDE_INSTALL_DIR}/kworkspace5>" )
@@ -43,7 +42,10 @@ target_include_directories(kworkspace PUBLIC "$<BUILD_INTERFACE:${CMAKE_CURRENT_
 configure_file(config-libkworkspace.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-libkworkspace.h)
 
 if(X11_FOUND)
-    target_link_libraries(kworkspace PRIVATE Qt5::X11Extras ${X11_LIBRARIES})
+    if(NOT X11_Xau_FOUND)
+        message(FATAL_ERROR "Found X11, but not libXau which is required for building kworkspace")
+    endif()
+    target_link_libraries(kworkspace PRIVATE Qt5::X11Extras ${X11_LIBRARIES} ${X11_Xau_LIB})
 endif()
 
 write_basic_config_version_file(${CMAKE_CURRENT_BINARY_DIR}/LibKWorkspaceConfigVersion.cmake VERSION
