@@ -16,6 +16,7 @@
 */
 #include "detachedprocessmonitor.h"
 
+#include <errno.h>
 #include <signal.h>
 
 #include <QtCore/QTimerEvent>

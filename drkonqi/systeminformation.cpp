@@ -23,6 +23,7 @@
 #include "systeminformation.h"
 
 #ifdef HAVE_UNAME
+# include <errno.h>
 # include <sys/utsname.h>
 #endif
 

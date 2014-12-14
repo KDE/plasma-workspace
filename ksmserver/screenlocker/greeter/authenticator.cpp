@@ -30,10 +30,11 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include <QTimer>
 
 // system
-#include <unistd.h>
+#include <errno.h>
 #include <sys/types.h>
 #include <sys/socket.h>
 #include <sys/wait.h>
+#include <unistd.h>
 
 Authenticator::Authenticator(QObject *parent)
     : QObject(parent)
