@@ -166,7 +166,7 @@ Item {
         Layout.minimumHeight: units.gridUnit * 13
         // TODO Probably needs a sensible preferredHeight too
 
-        model: batteries
+        model: plasmoid.expanded ? batteries : null
         anchors.fill: parent
         focus: true
 
