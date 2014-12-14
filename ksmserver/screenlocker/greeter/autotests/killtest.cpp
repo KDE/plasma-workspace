@@ -59,7 +59,6 @@ void KillTest::testKill_data()
     QTest::newRow("SIGPIPE")     << SIGPIPE   << true  << QProcess::CrashExit;
     QTest::newRow("SIGALRM")     << SIGALRM   << true  << QProcess::CrashExit;
     QTest::newRow("SIGTERM")     << SIGTERM   << true  << QProcess::NormalExit;
-    QTest::newRow("SIGSTKFLT")   << SIGSTKFLT << true  << QProcess::CrashExit;
     // ignore
     //QTest::newRow("SIGCHLD")   << SIGCHLD;
     //QTest::newRow("SIGCONT")   << SIGCONT;
@@ -76,7 +75,10 @@ void KillTest::testKill_data()
     //QTest::newRow("SIGIO")     << SIGIO;
     //QTest::newRow("SIGPWR")    << SIGPWR;
     QTest::newRow("SIGSYS")      << SIGSYS    << true << QProcess::CrashExit;
+#ifdef Q_OS_LINUX
     QTest::newRow("SIGUNUSED")   << SIGUNUSED << true << QProcess::CrashExit;
+    QTest::newRow("SIGSTKFLT")   << SIGSTKFLT << true  << QProcess::CrashExit;
+#endif
 }
 
 void KillTest::testKill()
@@ -129,7 +131,6 @@ void KillTest::testImmediateKill_data()
     QTest::newRow("SIGPIPE")     << SIGPIPE;
     QTest::newRow("SIGALRM")     << SIGALRM;
     QTest::newRow("SIGTERM")     << SIGTERM;
-    QTest::newRow("SIGSTKFLT")   << SIGSTKFLT;
     // ignore
     //QTest::newRow("SIGCHLD")   << SIGCHLD;
     //QTest::newRow("SIGCONT")   << SIGCONT;
@@ -146,7 +147,10 @@ void KillTest::testImmediateKill_data()
     //QTest::newRow("SIGIO")     << SIGIO;
     //QTest::newRow("SIGPWR")    << SIGPWR;
     QTest::newRow("SIGSYS")      << SIGSYS;
+#ifdef Q_OS_LINUX
+    QTest::newRow("SIGSTKFLT")   << SIGSTKFLT;
     QTest::newRow("SIGUNUSED")   << SIGUNUSED;
+#endif
 }
 
 void KillTest::testImmediateKill()
