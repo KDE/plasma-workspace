@@ -44,14 +44,11 @@ Item {
     //private
     function fadeWallpaper() {
         fadeAnim.running = false
-        if (currentImage == imageA) {
-            currentImage = imageB
-            otherImage = imageA
-        } else {
-            currentImage = imageA
-            otherImage = imageB
-        }
+        swapImages()
         currentImage.source = modelImage
+        currentImage.sourceSize = Qt.size(root.width, root.height)
+        // Prevent source size change when image has just been setup anyway
+        sourceSizeTimer.stop()
         currentImage.opacity = 0
         otherImage.z = 0
         currentImage.z = 1
@@ -63,6 +60,43 @@ Item {
 
     function fadeFillMode() {
         fadeAnim.running = false
+        swapImages()
+        currentImage.sourceSize = otherImage.sourceSize
+        sourceSizeTimer.stop()
+        currentImage.source = modelImage
+        currentImage.opacity = 0
+        otherImage.z = 0
+        currentImage.fillMode = fillMode
+        currentImage.z = 1
+        fadeAnim.running = Qt.binding(function() {
+            return currentImage.status !== Image.Loading && otherImage.status !== Image.Loading
+        })
+    }
+
+    function fadeSourceSize() {
+        if (currentImage.sourceSize === Qt.size(root.width, root.height)) {
+            return
+        }
+
+        fadeAnim.running = false
+        swapImages()
+        currentImage.sourceSize = Qt.size(root.width, root.height)
+        currentImage.opacity = 0
+        currentImage.source = otherImage.source
+        otherImage.z = 0
+        currentImage.z = 1
+        fadeAnim.running = Qt.binding(function() {
+            return currentImage.status !== Image.Loading && otherImage.status !== Image.Loading
+        })
+    }
+
+    function startFadeSourceTimer() {
+        if (width > 0 && height > 0 && (imageA.status !== Image.Null || imageB.status !== Image.Null)) {
+            sourceSizeTimer.restart()
+        }
+    }
+
+    function swapImages() {
         if (currentImage == imageA) {
             currentImage = imageB
             otherImage = imageA
@@ -70,12 +104,6 @@ Item {
             currentImage = imageA
             otherImage = imageB
         }
-        currentImage.source = modelImage
-        currentImage.opacity = 0
-        otherImage.z = 0
-        currentImage.fillMode = fillMode
-        currentImage.z = 1
-        fadeAnim.running = true
     }
 
     Binding {
@@ -87,6 +115,15 @@ Item {
         target: wallpaper.configuration
         property: "height"
         value: root.height
+    }
+
+    onWidthChanged: startFadeSourceTimer()
+    onHeightChanged: startFadeSourceTimer()
+
+    Timer {
+        id: sourceSizeTimer
+        interval: 1000 // always delay reloading the image even when animations are turned off
+        onTriggered: fadeSourceSize()
     }
 
     Component.onCompleted: {
@@ -144,8 +181,9 @@ Item {
         id: backgroundColor
         anchors.fill: parent
 
-        visible: currentImage.fillMode === Image.PreserveAspectFit || currentImage.fillMode === Image.Pad
-              || otherImage.fillMode === Image.PreserveAspectFit || otherImage.fillMode === Image.Pad
+        visible: (currentImage.status === Image.Ready || otherImage.status === Image.Ready) &&
+                 (currentImage.fillMode === Image.PreserveAspectFit || currentImage.fillMode === Image.Pad
+                 || otherImage.fillMode === Image.PreserveAspectFit || otherImage.fillMode === Image.Pad)
         color: wallpaper.configuration.Color
         Behavior on color {
             ColorAnimation { duration: units.longDuration }
@@ -158,7 +196,6 @@ Item {
         asynchronous: true
         cache: false
         fillMode: wallpaper.configuration.FillMode
-        sourceSize: Qt.size(width, height)
     }
     Image {
         id: imageB
@@ -166,6 +203,5 @@ Item {
         asynchronous: true
         cache: false
         fillMode: wallpaper.configuration.FillMode
-        sourceSize: Qt.size(width, height)
     }
 }
