@@ -126,6 +126,10 @@ public Q_SLOTS:
 
     Plasma::Containment *addPanel(const QString &plugin);
 
+    void nextActivity();
+    void previousActivity();
+    void stopCurrentActivity();
+
 protected Q_SLOTS:
     /**
      * Loads the layout and performs the needed checks

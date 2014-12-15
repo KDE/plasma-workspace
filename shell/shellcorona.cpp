@@ -129,7 +129,7 @@ ShellCorona::ShellCorona(QObject *parent)
     connect(this, &ShellCorona::containmentAdded,
             this, &ShellCorona::handleContainmentAdded);
 
-    QAction *dashboardAction = actions()->add<QAction>("show dashboard");
+    QAction *dashboardAction = actions()->addAction("show dashboard");
     QObject::connect(dashboardAction, &QAction::triggered,
                      this, &ShellCorona::setDashboardShown);
     dashboardAction->setText(i18n("Show Dashboard"));
@@ -138,9 +138,7 @@ ShellCorona::ShellCorona(QObject *parent)
     dashboardAction->setCheckable(true);
     dashboardAction->setIcon(QIcon::fromTheme("dashboard-show"));
     dashboardAction->setData(Plasma::Types::ControlAction);
-    KGlobalAccel::self()->setDefaultShortcut(dashboardAction, QList<QKeySequence>() << QKeySequence(Qt::CTRL + Qt::Key_F12));
-    KGlobalAccel::self()->setShortcut(dashboardAction, QList<QKeySequence>() << QKeySequence(Qt::CTRL + Qt::Key_F12));
-
+    KGlobalAccel::self()->setGlobalShortcut(dashboardAction, Qt::CTRL + Qt::Key_F12);
 
     checkAddPanelAction();
     connect(KSycoca::self(), SIGNAL(databaseChanged(QStringList)), this, SLOT(checkAddPanelAction(QStringList)));
@@ -155,6 +153,38 @@ ShellCorona::ShellCorona(QObject *parent)
     activityAction->setData(Plasma::Types::ConfigureAction);
     activityAction->setShortcut(QKeySequence("alt+d, alt+a"));
     activityAction->setShortcutContext(Qt::ApplicationShortcut);
+
+    KGlobalAccel::self()->setGlobalShortcut(activityAction, Qt::META + Qt::Key_Q);
+
+    QAction *nextActivityAction = actions()->addAction("next activity");
+    QObject::connect(nextActivityAction, &QAction::triggered,
+                     this, &ShellCorona::nextActivity);
+
+    nextActivityAction->setText(i18n("Next Activity"));
+    nextActivityAction->setVisible(false);
+
+    KGlobalAccel::self()->setGlobalShortcut(nextActivityAction, Qt::META + Qt::Key_Tab);
+
+    QAction *previousActivityAction = actions()->addAction("previous activity");
+    QObject::connect(previousActivityAction, &QAction::triggered,
+                     this, &ShellCorona::previousActivity);
+
+    previousActivityAction->setText(i18n("Previous Activity"));
+    previousActivityAction->setData(Plasma::Types::ControlAction);
+    previousActivityAction->setVisible(false);
+
+    KGlobalAccel::self()->setGlobalShortcut(previousActivityAction, Qt::META + Qt::SHIFT + Qt::Key_Tab);
+
+    QAction *stopActivityAction = actions()->addAction("stop current activity");
+    QObject::connect(stopActivityAction, &QAction::triggered,
+                     this, &ShellCorona::stopCurrentActivity);
+
+    stopActivityAction->setText(i18n("Stop Current Activity"));
+    stopActivityAction->setData(Plasma::Types::ControlAction);
+    stopActivityAction->setVisible(false);
+
+
+    KGlobalAccel::self()->setGlobalShortcut(stopActivityAction, Qt::META + Qt::Key_S);
 
     connect(m_activityConsumer, SIGNAL(currentActivityChanged(QString)), this, SLOT(currentActivityChanged(QString)));
     connect(m_activityConsumer, SIGNAL(activityAdded(QString)), this, SLOT(activityAdded(QString)));
@@ -1447,6 +1477,45 @@ void ShellCorona::activityRemoved()
             a->destroy();
         }
     }
+}
+
+void ShellCorona::nextActivity()
+{
+    const QStringList list = m_activityConsumer->activities(KActivities::Info::Running);
+    if (list.isEmpty()) {
+        return;
+    }
+
+    const int start = list.indexOf(m_activityController->currentActivity());
+    const int i = (start + 1) % list.size();
+
+    m_activityController->setCurrentActivity(list.at(i));
+}
+
+void ShellCorona::previousActivity()
+{
+    const QStringList list = m_activityConsumer->activities(KActivities::Info::Running);
+    if (list.isEmpty()) {
+        return;
+    }
+
+    const int start = list.indexOf(m_activityController->currentActivity());
+    const int i = start - 1;
+    if(i < 0) {
+        i = list.size() - 1;
+    }
+
+    m_activityController->setCurrentActivity(list.at(i));
+}
+
+void ShellCorona::stopCurrentActivity()
+{
+    const QStringList list = m_activityConsumer->activities(KActivities::Info::Running);
+    if (list.isEmpty()) {
+        return;
+    }
+
+    m_activityController->stopActivity(m_activityConsumer->currentActivity());
 }
 
 void ShellCorona::insertContainment(const QString &activity, int screenNum, Plasma::Containment *containment)
