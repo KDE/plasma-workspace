@@ -1500,7 +1500,7 @@ void ShellCorona::previousActivity()
     }
 
     const int start = list.indexOf(m_activityController->currentActivity());
-    const int i = start - 1;
+    int i = start - 1;
     if(i < 0) {
         i = list.size() - 1;
     }
