@@ -65,8 +65,8 @@ PlasmoidTask::PlasmoidTask(const QString &packageName, int appletId, Plasma::Con
          * controlled by applet itself. This caused some plasmoids like
          * klipper getting expanded for an instant before collapsing again
          */
-        m_taskGraphicsObject->setWidth(1);
-        m_taskGraphicsObject->setHeight(1);
+        m_taskGraphicsObject->setWidth(0);
+        m_taskGraphicsObject->setHeight(0);
 
         Plasma::Package package = Plasma::PluginLoader::self()->loadPackage("Plasma/Shell");
         package.setDefaultPackageRoot(PLASMA_RELATIVE_DATA_INSTALL_DIR "/plasmoids/");
