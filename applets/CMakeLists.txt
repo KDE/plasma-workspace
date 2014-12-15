@@ -1,7 +1,6 @@
 plasma_install_package(activitybar org.kde.plasma.activitybar)
 add_subdirectory(icon)
-#    add_subdirectory(lock_logout)
-#
+
 plasma_install_package(analog-clock org.kde.plasma.analogclock)
 plasma_install_package(mediacontroller org.kde.plasma.mediacontroller)
 plasma_install_package(panelspacer org.kde.plasma.panelspacer)
