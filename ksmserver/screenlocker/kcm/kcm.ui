@@ -75,24 +75,47 @@
      </property>
     </widget>
    </item>
-   <item row="4" column="0">
+   <item row="5" column="0">
     <widget class="QLabel" name="label_3">
      <property name="text">
       <string/>
      </property>
     </widget>
    </item>
-   <item row="2" column="0">
+   <item row="3" column="0">
     <widget class="QLabel" name="label_4">
      <property name="text">
       <string>Custom Background:</string>
      </property>
     </widget>
    </item>
-   <item row="2" column="1">
+   <item row="3" column="1">
     <widget class="SelectImageButton" name="kcfg_ThemeBackground">
      <property name="text">
       <string>...</string>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="1">
+    <widget class="QCheckBox" name="kcfg_LockOnResume">
+     <property name="toolTip">
+      <string>Lock screen when waking up from suspension</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="0">
+    <widget class="QLabel" name="label_5">
+     <property name="toolTip">
+      <string>Lock screen when waking up from suspension</string>
+     </property>
+     <property name="text">
+      <string>Loc&amp;k screen on resume</string>
+     </property>
+     <property name="buddy">
+      <cstring>kcfg_LockOnResume</cstring>
      </property>
     </widget>
    </item>
@@ -105,6 +128,12 @@
    <header>selectimagebutton.h</header>
   </customwidget>
  </customwidgets>
+ <tabstops>
+  <tabstop>kcfg_Timeout</tabstop>
+  <tabstop>kcfg_LockGrace</tabstop>
+  <tabstop>kcfg_LockOnResume</tabstop>
+  <tabstop>kcfg_ThemeBackground</tabstop>
+ </tabstops>
  <resources/>
  <connections/>
 </ui>

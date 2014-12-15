@@ -40,6 +40,8 @@ public:
     void inhibit();
     void uninhibit();
 
+    bool isInhibited() const;
+
 Q_SIGNALS:
     void requestLock();
     void requestUnlock();

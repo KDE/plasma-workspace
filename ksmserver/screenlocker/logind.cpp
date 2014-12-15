@@ -166,3 +166,8 @@ void LogindIntegration::uninhibit()
     }
     m_inhibitFileDescriptor = QDBusUnixFileDescriptor();
 }
+
+bool LogindIntegration::isInhibited() const
+{
+    return m_inhibitFileDescriptor.isValid();
+}

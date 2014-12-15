@@ -27,6 +27,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include <QtCore/QProcess>
 
 // forward declarations
+class LogindIntegration;
 class KActionCollection;
 class QTimer;
 class KSldTest;
@@ -126,6 +127,7 @@ private:
      **/
     QTimer *m_graceTimer;
     int m_inhibitCounter;
+    LogindIntegration *m_logind;
 
     // for auto tests
     friend KSldTest;

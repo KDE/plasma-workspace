@@ -76,6 +76,7 @@ KSldApp::KSldApp(QObject * parent)
     , m_inGraceTime(false)
     , m_graceTimer(new QTimer(this))
     , m_inhibitCounter(0)
+    , m_logind(nullptr)
 {
     initialize();
 }
@@ -198,13 +199,13 @@ void KSldApp::initialize()
     new Interface(this);
 
     // connect to logind
-    LogindIntegration *logind = new LogindIntegration(this);
-    connect(logind, &LogindIntegration::requestLock, this,
+    m_logind = new LogindIntegration(this);
+    connect(m_logind, &LogindIntegration::requestLock, this,
         [this]() {
             lock(EstablishLock::Immediate);
         }
     );
-    connect(logind, &LogindIntegration::requestUnlock, this,
+    connect(m_logind, &LogindIntegration::requestUnlock, this,
         [this]() {
             if (lockState() == Locked) {
                 s_logindExit = true;
@@ -212,39 +213,42 @@ void KSldApp::initialize()
             }
         }
     );
-    connect(logind, &LogindIntegration::prepareForSleep, this,
+    connect(m_logind, &LogindIntegration::prepareForSleep, this,
         [this](bool goingToSleep) {
             if (!goingToSleep) {
                 // not interested in doing anything on wakeup
                 return;
             }
-            // TODO: depend on config option
-            lock(EstablishLock::Immediate);
-        }
-    );
-    connect(logind, &LogindIntegration::inhibited, this,
-        [this, logind]() {
-            // if we are already locked, we immediatelly remove the inhibition lock
-            if (m_lockState == KSldApp::Locked) {
-                logind->uninhibit();
+            if (KScreenSaverSettings::lockOnResume()) {
+                lock(EstablishLock::Immediate);
             }
         }
     );
-    connect(logind, &LogindIntegration::connectedChanged, this,
-        [this, logind]() {
-            if (logind->isConnected() && m_lockState == ScreenLocker::KSldApp::Unlocked) {
-                logind->inhibit();
+    connect(m_logind, &LogindIntegration::inhibited, this,
+        [this]() {
+            // if we are already locked, we immediatelly remove the inhibition lock
+            if (m_lockState == KSldApp::Locked) {
+                m_logind->uninhibit();
+            }
+        }
+    );
+    connect(m_logind, &LogindIntegration::connectedChanged, this,
+        [this]() {
+            if (m_logind->isConnected() && m_lockState == ScreenLocker::KSldApp::Unlocked && KScreenSaverSettings::lockOnResume()) {
+                m_logind->inhibit();
             }
         }
     );
     connect(this, &KSldApp::locked, this,
-        [logind]() {
-            logind->uninhibit();
+        [this]() {
+            m_logind->uninhibit();
         }
     );
     connect(this, &KSldApp::unlocked, this,
-        [logind]() {
-            logind->inhibit();
+        [this]() {
+            if (KScreenSaverSettings::lockOnResume()) {
+                m_logind->inhibit();
+            }
         }
     );
 
@@ -270,6 +274,13 @@ void KSldApp::configure()
         m_lockGrace = KScreenSaverSettings::lockGrace() * 1000;
     } else {
         m_lockGrace = -1;
+    }
+    if (m_logind && m_logind->isConnected()) {
+        if (KScreenSaverSettings::lockOnResume() && !m_logind->isInhibited()) {
+            m_logind->inhibit();
+        } else if (!KScreenSaverSettings::lockOnResume() && m_logind->isInhibited()) {
+            m_logind->uninhibit();
+        }
     }
 }
 
