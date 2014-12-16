@@ -37,24 +37,17 @@ Item {
     property string freeSpaceText
     signal leftActionTriggered
 
-    height: container.childrenRect.height + padding.margins.top + padding.margins.bottom
+    height: container.childrenRect.height + units.gridUnit
     width: parent.width
 
-    PlasmaCore.FrameSvgItem {
-        id: padding
-        imagePath: "widgets/viewitem"
-        prefix: "hover"
-        opacity: 0
-        anchors.fill: parent
-    }
     MouseArea {
         id: container
         anchors {
             fill: parent
-            topMargin: padding.margins.top
-            leftMargin: padding.margins.left
-            rightMargin: padding.margins.right
-            bottomMargin: padding.margins.bottom
+            topMargin: Math.round(units.gridUnit / 2)
+            leftMargin: Math.round(units.gridUnit / 2)
+            rightMargin: Math.round(units.gridUnit / 2)
+            bottomMargin: Math.round(units.gridUnit / 2)
         }
 
         hoverEnabled: true
@@ -95,7 +88,7 @@ Item {
             enabled: deviceItem.state == 0
             anchors {
                 left: parent.left
-                top: parent.top
+                verticalCenter: labelsColumn.verticalCenter
             }
 
             PlasmaCore.IconItem {
@@ -110,17 +103,16 @@ Item {
             }
         }
 
-
         Column {
             id: labelsColumn
-            spacing: padding.margins.top/2
+            height: Math.max(deviceLabel.height + freeSpaceBar.height + deviceStatus.height, deviceIcon.height)
             z: 900
             anchors {
                 top: parent.top
                 left: deviceIcon.right
                 right: leftActionArea.left
-                leftMargin: padding.margins.left
-                rightMargin: padding.margins.right
+                leftMargin: Math.round(units.gridUnit / 2)
+                rightMargin: Math.round(units.gridUnit / 2)
             }
 
             PlasmaComponents.Label {
@@ -136,7 +128,7 @@ Item {
 
             PlasmaCore.ToolTipArea {
                 id: freeSpaceToolip
-                height:freeSpaceBar.height
+                height: freeSpaceBar.height
                 active: mounted
 
                 subText: freeSpaceText != "" ? i18nc("@info:status Free disk space", "%1 free", freeSpaceText) : ""
@@ -144,8 +136,6 @@ Item {
                     left: parent.left
                     right: parent.right
                 }
-
-
 
                 opacity: (deviceItem.state == 0 && mounted) ? 1 : 0
                 PlasmaComponents.ProgressBar {
@@ -155,30 +145,25 @@ Item {
                         left: parent.left
                         right: parent.right
                     }
-                    opacity: mounted ? deviceStatus.opacity : 0
+                    opacity: mounted ? 1 : 0
                     minimumValue: 0
                     maximumValue: 100
                     orientation: Qt.Horizontal
                 }
             }
 
-            Item {
-                width:deviceStatus.width
-                height:deviceStatus.height
-                PlasmaComponents.Label {
-                    id: deviceStatus
+            PlasmaComponents.Label {
+                id: deviceStatus
 
-                    height: paintedHeight
-                    // FIXME: state changes do not reach the plasmoid if the
-                    // device was already attached when the plasmoid was
-                    // initialized
-                    text: deviceItem.state == 0 ? container.idleStatus() : (deviceItem.state==1 ? i18nc("Accessing is a less technical word for Mounting; translation should be short and mean \'Currently mounting this device\'", "Accessing...") : i18nc("Removing is a less technical word for Unmounting; translation shoud be short and mean \'Currently unmounting this device\'", "Removing..."))
-                    font.pointSize: theme.smallestFont.pointSize
-                    color: "#99"+(theme.textColor.toString().substr(1))
-                    opacity: deviceItem.state != 0 || container.containsMouse || expanded ? 1 : 0;
+                height: paintedHeight
+                // FIXME: state changes do not reach the plasmoid if the
+                // device was already attached when the plasmoid was
+                // initialized
+                text: deviceItem.state == 0 ? container.idleStatus() : (deviceItem.state == 1 ? i18nc("Accessing is a less technical word for Mounting; translation should be short and mean \'Currently mounting this device\'", "Accessing...") : i18nc("Removing is a less technical word for Unmounting; translation shoud be short and mean \'Currently unmounting this device\'", "Removing..."))
+                font.pointSize: theme.smallestFont.pointSize
+                color: "#99"+(theme.textColor.toString().substr(1))
 
-                    Behavior on opacity { NumberAnimation { duration: units.shortDuration * 3 } }
-                }
+                Behavior on opacity { NumberAnimation { duration: units.shortDuration * 3 } }
             }
         }
 
@@ -270,6 +255,8 @@ Item {
                 top: labelsColumn.bottom
                 left: deviceIcon.right
                 right: leftActionArea.left
+                leftMargin: Math.round(units.gridUnit / 2)
+                rightMargin: Math.round(units.gridUnit / 2)
             }
             interactive: false
             model: hpSource.data[udi] ? hpSource.data[udi]["actions"] : null
