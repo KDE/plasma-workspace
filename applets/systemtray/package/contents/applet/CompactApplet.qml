@@ -73,6 +73,9 @@ Item {
     }
 
     onCompactRepresentationChanged: {
+        if (!compactRepresentation) {
+            return;
+        }
         compactRepresentation.parent = root;
         compactRepresentation.anchors.fill = root;
         compactRepresentation.visible = true;
