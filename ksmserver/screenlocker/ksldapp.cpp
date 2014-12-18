@@ -122,8 +122,7 @@ void KSldApp::initialize()
         qDebug() << "Configuring Lock Action";
         QAction *a = m_actionCollection->addAction(QLatin1String("Lock Session"));
         a->setText(i18n("Lock Session"));
-        KGlobalAccel::self()->setShortcut(a, QList<QKeySequence>() << Qt::Key_ScreenSaver << Qt::ALT+Qt::CTRL+Qt::Key_L);
-        KGlobalAccel::self()->setDefaultShortcut(a, QList<QKeySequence>() << Qt::Key_ScreenSaver << Qt::ALT+Qt::CTRL+Qt::Key_L);
+        KGlobalAccel::self()->setGlobalShortcut(a, QList<QKeySequence>() << Qt::ALT+Qt::CTRL+Qt::Key_L << Qt::Key_ScreenSaver );
         connect(a, &QAction::triggered, this,
             [this]() {
                 lock(EstablishLock::Immediate);
