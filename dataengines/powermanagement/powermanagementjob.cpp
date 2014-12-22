@@ -92,11 +92,11 @@ void PowerManagementJob::start()
         setResult(Solid::PowerManagement::stopSuppressingScreenPowerManagement(parameters().value("cookie").toInt()));
         return;
     } else if (operation == "setBrightness") {
-        setScreenBrightness(parameters().value("brightness").toInt());
+        setScreenBrightness(parameters().value("brightness").toInt(), parameters().value("silent").toBool());
         setResult(true);
         return;
     } else if (operation == "setKeyboardBrightness") {
-        setKeyboardBrightness(parameters().value("brightness").toInt());
+        setKeyboardBrightness(parameters().value("brightness").toInt(), parameters().value("silent").toBool());
         setResult(true);
         return;
     }
@@ -105,22 +105,22 @@ void PowerManagementJob::start()
     setResult(false);
 }
 
-void PowerManagementJob::setScreenBrightness(int value)
+void PowerManagementJob::setScreenBrightness(int value, bool silent)
 {
     QDBusMessage msg = QDBusMessage::createMethodCall("org.kde.Solid.PowerManagement",
                                                       "/org/kde/Solid/PowerManagement/Actions/BrightnessControl",
                                                       "org.kde.Solid.PowerManagement.Actions.BrightnessControl",
-                                                      "setBrightnessValue");
+                                                      silent ? "setBrightnessValueSilent" : "setBrightnessValue");
     msg << value;
     QDBusConnection::sessionBus().asyncCall(msg);
 }
 
-void PowerManagementJob::setKeyboardBrightness(int value)
+void PowerManagementJob::setKeyboardBrightness(int value, bool silent)
 {
     QDBusMessage msg = QDBusMessage::createMethodCall("org.kde.Solid.PowerManagement",
                                                       "/org/kde/Solid/PowerManagement/Actions/KeyboardBrightnessControl",
                                                       "org.kde.Solid.PowerManagement.Actions.KeyboardBrightnessControl",
-                                                      "setKeyboardBrightnessValue");
+                                                      silent ? "setKeyboardBrightnessValueSilent" : "setKeyboardBrightnessValue");
     msg << value;
     QDBusConnection::sessionBus().asyncCall(msg);
 }

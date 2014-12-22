@@ -37,8 +37,8 @@ class PowerManagementJob : public Plasma::ServiceJob
 
     private:
         void requestShutDown();
-        void setScreenBrightness(int value);
-        void setKeyboardBrightness(int value);
+        void setScreenBrightness(int value, bool silent);
+        void setKeyboardBrightness(int value, bool silent);
 };
 
 #endif // POWERMANAGEMENTJOB_H

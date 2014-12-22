@@ -36,10 +36,16 @@
         <entry name="brightness" type="Int">
           <label>The value of the screen brightness</label>
         </entry>
+        <entry name="silent" type="Bool">
+          <label>Whether the OSD should be suppressed</label>
+        </entry>
     </group>
     <group name="setKeyboardBrightness">
         <entry name="brightness" type="Int">
             <label>The value of the keyboard brightness</label>
+        </entry>
+        <entry name="silent" type="Bool">
+            <label>Whether the OSD should be suppressed</label>
         </entry>
     </group>
 </kcfg>
