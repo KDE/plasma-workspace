@@ -43,8 +43,11 @@ Item {
 
     property int screenBrightness
     readonly property int maximumScreenBrightness: pmSource.data["PowerDevil"] ? pmSource.data["PowerDevil"]["Maximum Screen Brightness"] : 0
+    property bool screenBrightnessSilent: true // whether to suppress the OSD when changing brightness
+
     property int keyboardBrightness
     readonly property int maximumKeyboardBrightness: pmSource.data["PowerDevil"] ? pmSource.data["PowerDevil"]["Maximum Keyboard Brightness"] : 0
+    property bool keyboardBrightnessSilent: true
 
     readonly property int remainingTime: Number(pmSource.data["Battery"]["Remaining msec"])
 
@@ -55,6 +58,7 @@ Item {
         var service = pmSource.serviceForSource("PowerDevil");
         var operation = service.operationDescription("setBrightness");
         operation.brightness = screenBrightness;
+        operation.silent = screenBrightnessSilent
         service.startOperationCall(operation);
     }
     onKeyboardBrightnessChanged: {
@@ -64,6 +68,7 @@ Item {
         var service = pmSource.serviceForSource("PowerDevil");
         var operation = service.operationDescription("setKeyboardBrightness");
         operation.brightness = keyboardBrightness;
+        operation.silent = keyboardBrightnessSilent
         service.startOperationCall(operation);
     }
 
@@ -94,6 +99,9 @@ Item {
         onEntered: wheelDelta = 0
         onExited: wheelDelta = 0
         onWheel: {
+            // show OSD when wheeling since when the popup isn't opened this is the only means of feedback
+            screenBrightnessSilent = false
+
             var delta = wheel.angleDelta.y || wheel.angleDelta.x
             if ((delta < 0 && wheelDelta > 0) || (delta > 0 && wheelDelta < 0)) { // reset when direction changes
                 wheelDelta = 0
@@ -111,7 +119,7 @@ Item {
                 increment--;
             }
             if (increment != 0) {
-                var steps = batterymonitor.maximumScreenBrightness / 10
+                var steps = Math.max(1, Math.round(batterymonitor.maximumScreenBrightness / 20))
                 batterymonitor.screenBrightness = Math.max(0, Math.min(batterymonitor.maximumScreenBrightness, batterymonitor.screenBrightness + increment * steps));
             }
         }
