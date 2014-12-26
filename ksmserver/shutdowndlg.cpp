@@ -77,7 +77,7 @@ KSMShutdownDlg::KSMShutdownDlg( QWindow* parent,
     // window stuff
     setClearBeforeRendering(true);
     setColor(QColor(Qt::transparent));
-    setFlags(Qt::FramelessWindowHint);
+    setFlags(Qt::FramelessWindowHint | Qt::BypassWindowManagerHint);
 
     QPoint globalPosition(QCursor::pos());
     foreach (QScreen *s, QGuiApplication::screens()) {
