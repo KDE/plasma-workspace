@@ -120,6 +120,7 @@ ColumnLayout {
     }
 
     Row {
+        id: colorRow
         spacing: units.largeSpacing / 2
         visible: ~[2,3].indexOf(resizeComboBox.currentIndex)
 
@@ -279,7 +280,9 @@ ColumnLayout {
                 anchors.margins: 4
                 boundsBehavior: Flickable.StopAtBounds
 
-                delegate: WallpaperDelegate {}
+                delegate: WallpaperDelegate {
+                    color: colorRow.visible ? cfg_Color : "black"
+                }
 
                 Timer {
                     id: makeCurrentTimer

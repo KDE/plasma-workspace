@@ -28,6 +28,7 @@ MouseArea {
     width: wallpapersGrid.cellWidth
     height: wallpapersGrid.cellHeight
 
+    property alias color: backgroundRect.color
     property bool selected: (wallpapersGrid.currentIndex == index)
 
     onSelectedChanged: {
@@ -50,6 +51,7 @@ MouseArea {
         }
         opacity: 0.8
         Rectangle {
+            id: backgroundRect
             color: cfg_Color
             anchors {
                 fill: parent
