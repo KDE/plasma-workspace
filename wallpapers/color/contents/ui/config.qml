@@ -20,7 +20,6 @@
 import QtQuick 2.0
 import QtQuick.Controls 1.0 as QtControls
 import QtQuick.Dialogs 1.1 as QtDialogs
-import QtQuick.Layouts 1.0
 //We need units from it
 import org.kde.plasma.core 2.0 as Plasmacore
 
