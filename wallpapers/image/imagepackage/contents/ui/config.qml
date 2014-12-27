@@ -1,5 +1,6 @@
 /*
  *  Copyright 2013 Marco Martin <mart@kde.org>
+ *  Copyright 2014 Kai Uwe Broulik <kde@privat.broulik.de>
  *
  *  This program is free software; you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -18,6 +19,7 @@
 
 import QtQuick 2.0
 import QtQuick.Controls 1.0 as QtControls
+import QtQuick.Dialogs 1.1 as QtDialogs
 import QtQuick.Layouts 1.0
 //We need units from it
 import org.kde.plasma.core 2.0 as Plasmacore
@@ -26,13 +28,11 @@ import org.kde.kquickcontrolsaddons 2.0
 
 ColumnLayout {
     id: root
-    property alias cfg_Color: picker.color
+    property alias cfg_Color: colorDialog.color
     property string cfg_Image
     property int cfg_FillMode
     property var cfg_SlidePaths: ""
     property int cfg_SlideInterval: 0
-
-    spacing: units.largeSpacing / 2
 
     Wallpaper.Image {
         id: imageWallpaper
@@ -112,9 +112,36 @@ ColumnLayout {
         }
     }
 
-    ColorPicker {
-        id: picker
+    QtDialogs.ColorDialog {
+        id: colorDialog
+        modality: Qt.WindowModal
+        showAlphaChannel: false
+        title: i18nd("plasma_applet_org.kde.image", "Select Background Color")
+    }
+
+    Row {
+        spacing: units.largeSpacing / 2
         visible: ~[2,3].indexOf(resizeComboBox.currentIndex)
+
+        QtControls.Label {
+            width: formAlignment - units.largeSpacing
+            anchors.verticalCenter: colorButton.verticalCenter
+            horizontalAlignment: Text.AlignRight
+            text: i18nd("plasma_applet_org.kde.image", "Background Color:")
+        }
+        QtControls.Button {
+            id: colorButton
+            width: units.gridUnit * 3
+            onClicked: colorDialog.open()
+
+            Rectangle {
+                id: colorRect
+                anchors.centerIn: parent
+                width: parent.width - 2 * units.smallSpacing
+                height: theme.mSize(theme.defaultFont).height
+                color: colorDialog.color
+            }
+        }
     }
 
     Component {
