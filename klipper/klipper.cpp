@@ -985,21 +985,21 @@ QString Klipper::cycleText() const
         result += "<tr><td>";
         result += i18n("up");
         result += "</td><td>";
-        result += font_metrics.elidedText(Qt::escape(itemprev->text().simplified()), Qt::ElideMiddle, WIDTH_IN_PIXEL);
+        result += font_metrics.elidedText(itemprev->text().simplified().toHtmlEscaped(), Qt::ElideMiddle, WIDTH_IN_PIXEL);
         result += "</td></tr>";
     }
 
     result += "<tr><td>";
     result += i18n("current");
     result += "</td><td><b>";
-    result += font_metrics.elidedText(Qt::escape(item->text().simplified()), Qt::ElideMiddle, WIDTH_IN_PIXEL);
+    result += font_metrics.elidedText(item->text().simplified().toHtmlEscaped(), Qt::ElideMiddle, WIDTH_IN_PIXEL);
     result += "</b></td></tr>";
 
     if (itemnext) {
         result += "<tr><td>";
         result += i18n("down");
         result += "</td><td>";
-        result += font_metrics.elidedText(Qt::escape(itemnext->text().simplified()), Qt::ElideMiddle, WIDTH_IN_PIXEL);
+        result += font_metrics.elidedText(itemnext->text().simplified().toHtmlEscaped(), Qt::ElideMiddle, WIDTH_IN_PIXEL);
         result += "</td></tr>";
     }
 

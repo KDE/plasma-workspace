@@ -43,7 +43,8 @@ TimeEngine::TimeEngine(QObject *parent, const QVariantList &args)
 
     // To have translated timezone names
     // (effectively a noop if the catalog is already present).
-    //KGlobal::locale()->insertCatalog("timezones4");
+    ////KF5 port: remove this line and define TRANSLATION_DOMAIN in CMakeLists.txt instead
+//KLocale::global()->insertCatalog("timezones4");
     QTimer::singleShot(0, this, SLOT(init()));
 }
 

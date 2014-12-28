@@ -98,12 +98,12 @@ bool CalendarEngine::holidayCalendarSourceRequest(const QString& key, const QStr
     if (key == "holidaysDefaultRegion") {
         // If not set or the locale has changed since last set, then try determine a default region.
         if(m_defaultHolidayRegion.isEmpty() ||
-           m_defaultHolidayRegionCountry != KGlobal::locale()->country() ||
-           m_defaultHolidayRegionLanguage != KGlobal::locale()->language()) {
+           m_defaultHolidayRegionCountry != KLocale::global()->country() ||
+           m_defaultHolidayRegionLanguage != KLocale::global()->language()) {
 
             m_defaultHolidayRegion = QString();
-            m_defaultHolidayRegionCountry = KGlobal::locale()->country();
-            m_defaultHolidayRegionLanguage = KGlobal::locale()->language();
+            m_defaultHolidayRegionCountry = KLocale::global()->country();
+            m_defaultHolidayRegionLanguage = KLocale::global()->language();
 
             m_defaultHolidayRegion = KHolidays::HolidayRegion::defaultRegionCode(
                                                         m_defaultHolidayRegionCountry.toLower(),
@@ -187,10 +187,10 @@ bool CalendarEngine::holidayCalendarSourceRequest(const QString& key, const QStr
         QDate startDate, endDate;
         if (key == "holidaysInMonth") {
             int requestYear, requestMonth;
-            KGlobal::locale()->calendar()->getDate(dateArg, &requestYear, &requestMonth, 0);
-            int lastDay = KGlobal::locale()->calendar()->daysInMonth(dateArg);
-            KGlobal::locale()->calendar()->setDate(startDate, requestYear, requestMonth, 1);
-            KGlobal::locale()->calendar()->setDate(endDate, requestYear, requestMonth, lastDay);
+            KLocale::global()->calendar()->getDate(dateArg, &requestYear, &requestMonth, 0);
+            int lastDay = KLocale::global()->calendar()->daysInMonth(dateArg);
+            KLocale::global()->calendar()->setDate(startDate, requestYear, requestMonth, 1);
+            KLocale::global()->calendar()->setDate(endDate, requestYear, requestMonth, lastDay);
         } else if (argsCount == 2) {
             startDate = dateArg;
             endDate = dateArg;

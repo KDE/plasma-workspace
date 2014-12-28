@@ -96,7 +96,7 @@ void UnlockApp::initialize()
     // disable DrKonqi as the crash dialog blocks the restart of the locker
     KCrash::setDrKonqiEnabled(false);
 
-    KScreenSaverSettings::self()->readConfig();
+    KScreenSaverSettings::self()->load();
     Plasma::Package package = Plasma::PluginLoader::self()->loadPackage("Plasma/LookAndFeel");
     KConfigGroup cg(KSharedConfig::openConfig("kdeglobals"), "KDE");
     const QString packageName = cg.readEntry("LookAndFeelPackage", QString());

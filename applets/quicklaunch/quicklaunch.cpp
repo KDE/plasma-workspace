@@ -597,11 +597,11 @@ void Quicklaunch::onAddLauncherAction()
 
     if (m_contextMenuTriggeredOnPopup) {
         m_popup->launcherList()->insert(
-            m_contextMenuLauncherIndex, KUrl::fromPath(programPath));
+            m_contextMenuLauncherIndex, QUrl::fromLocalFile(programPath));
     }
     else {
         m_launcherGrid->insert(
-            m_contextMenuLauncherIndex, KUrl::fromPath(programPath));
+            m_contextMenuLauncherIndex, QUrl::fromLocalFile(programPath));
     }
 }
 
@@ -640,7 +640,7 @@ void Quicklaunch::onEditLauncherAction()
 
         desktopEntry.sync();
 
-        url = KUrl::fromPath(desktopFilePath);
+        url = QUrl::fromLocalFile(desktopFilePath);
         desktopFileCreated = true;
     }
 
@@ -826,7 +826,7 @@ QStringList Quicklaunch::defaultLaunchers()
     QStringList defaultLauncherUrls;
     Q_FOREACH(const QString &path, defaultLauncherPaths) {
         if (!path.isEmpty() && QDir::isAbsolutePath(path)) {
-            defaultLauncherUrls << KUrl::fromPath(path).url();
+            defaultLauncherUrls << QUrl::fromLocalFile(path).url();
         }
     }
     return defaultLauncherUrls;
@@ -834,7 +834,7 @@ QStringList Quicklaunch::defaultLaunchers()
 
 QString Quicklaunch::defaultBrowserPath()
 {
-    KConfigGroup globalConfigGeneral(KGlobal::config(), "General");
+    KConfigGroup globalConfigGeneral(KSharedConfig::openConfig(), "General");
 
     if (globalConfigGeneral.hasKey("BrowserApplication")) {
         QString browser =
