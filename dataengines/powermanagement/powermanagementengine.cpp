@@ -253,6 +253,21 @@ bool PowermanagementEngine::sourceRequestEvent(const QString &name)
             watcher->deleteLater();
         });
 
+
+        QDBusMessage lidIsPresentMsg = QDBusMessage::createMethodCall(SOLID_POWERMANAGEMENT_SERVICE,
+                                                                      QStringLiteral("/org/kde/Solid/PowerManagement"),
+                                                                      SOLID_POWERMANAGEMENT_SERVICE,
+                                                                      QStringLiteral("isLidPresent"));
+        QDBusPendingReply<bool> lidIsPresentReply = QDBusConnection::sessionBus().asyncCall(lidIsPresentMsg);
+        QDBusPendingCallWatcher *lidIsPresentWatcher = new QDBusPendingCallWatcher(lidIsPresentReply, this);
+        QObject::connect(lidIsPresentWatcher, &QDBusPendingCallWatcher::finished, this, [this](QDBusPendingCallWatcher *watcher) {
+            QDBusPendingReply<bool> reply = *watcher;
+            if (!reply.isError()) {
+                setData("PowerDevil", "Is Lid Present", reply.value());
+            }
+            watcher->deleteLater();
+        });
+
     //any info concerning lock screen/screensaver goes here
     } else if (name == "UserActivity") {
         setData("UserActivity", "IdleTime", KIdleTime::instance()->idleTime());
