@@ -34,7 +34,6 @@
 #include <kwindowsystem.h>
 #include <kpassworddialog.h>
 #include <kwallet.h>
-#include <kicon.h>
 #include <solid/storagevolume.h>
 
 #include "deviceactionsdialog.h"
@@ -138,7 +137,7 @@ void SolidUiServer::showPassphraseDialog(const QString &udi,
     label+= device.product();
 
     dialog->setPrompt(i18n("'%1' needs a password to be accessed. Please enter a password.", label));
-    dialog->setPixmap(KIcon(device.icon()).pixmap(64, 64));
+    dialog->setPixmap(QIcon::fromTheme(device.icon()).pixmap(64, 64));
     dialog->setProperty("soliduiserver.udi", udi);
     dialog->setProperty("soliduiserver.returnService", returnService);
     dialog->setProperty("soliduiserver.returnObject", returnObject);
