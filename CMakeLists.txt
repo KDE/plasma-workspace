@@ -8,13 +8,21 @@ set(QT_MIN_VERSION "5.3.0")
 set(KF5_MIN_VERSION "5.4.0")
 set(INSTALL_SDDM_THEME TRUE)
 find_package(Qt5 ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS Widgets Quick QuickWidgets Concurrent Test Script Network)
+find_package(Qt5WebKitWidgets ${QT_MIN_VERSION} CONFIG)
+
+set_package_properties(Qt5WebKitWidgets PROPERTIES
+                       URL "git://gitorious.org/qt/qtwebkit.git"
+                       DESCRIPTION "Qt Webkit module (web browsing engine)"
+                       TYPE OPTIONAL
+                       PURPOSE "Used by the HTML-based GUI ksysguard library, therefore required for systemmonitor"
+                      )
 
 find_package(ECM 0.0.11 REQUIRED NO_MODULE)
 set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH} ${ECM_KDE_MODULE_DIR})
 
 find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS
                     Plasma DocTools Runner JsEmbed NotifyConfig Su NewStuff Wallet KCMUtils
-                    IdleTime Declarative WebKit TextWidgets KDELibs4Support Crash)
+                    IdleTime Declarative TextWidgets KDELibs4Support Crash)
 
 # WARNING PlasmaQuick provides unversioned CMake config
 find_package(KF5 REQUIRED COMPONENTS PlasmaQuick)
@@ -25,6 +33,7 @@ find_package(KF5 5.0.93 REQUIRED COMPONENTS Screen)
 find_package(KF5 5.1 REQUIRED COMPONENTS Baloo)
 find_package(KF5TextEditor)
 find_package(KWinDBusInterface CONFIG REQUIRED)
+find_package(KF5WebKit)
 
 include(KDEInstallDirs)
 include(KDECMakeSettings)
@@ -124,7 +133,9 @@ add_subdirectory(klipper)
 add_subdirectory(krunner)
 add_subdirectory(ksmserver)
 add_subdirectory(ksplash)
+if(Qt5WebKitWidgets_FOUND)
 add_subdirectory(systemmonitor)
+endif()
 add_subdirectory(statusnotifierwatcher)
 add_subdirectory(startkde)
 add_subdirectory(themes)
@@ -141,7 +152,9 @@ add_subdirectory(kuiserver)
 add_subdirectory(menu)
 add_subdirectory(phonon)
 add_subdirectory(solidautoeject)
+if(KF5Webkit_FOUND)
 add_subdirectory(drkonqi)
+endif()
 add_subdirectory(kglobalaccel)
 add_subdirectory(soliduiserver)
 feature_summary(WHAT ALL INCLUDE_QUIET_PACKAGES FATAL_ON_MISSING_REQUIRED_PACKAGES)
