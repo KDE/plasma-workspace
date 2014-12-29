@@ -30,6 +30,7 @@ Item {
     property Item currentImage: imageB
     property Item otherImage: imageA
     readonly property int fillMode: wallpaper.configuration.FillMode
+    property bool ready: false
 
     //public API, the C++ part will look for those
     function setUrl(url) {
@@ -43,6 +44,14 @@ Item {
 
     //private
     function fadeWallpaper() {
+        if (!ready && width > 0 && height > 0) { // shell startup, setup immediately
+            currentImage.sourceSize = Qt.size(root.width, root.height)
+            currentImage.source = modelImage
+
+            ready = true
+            return
+        }
+
         fadeAnim.running = false
         swapImages()
         currentImage.source = modelImage
@@ -130,12 +139,6 @@ Item {
         if (wallpaper.pluginName == "org.kde.slideshow") {
             wallpaper.setAction("next", i18nd("plasma_applet_org.kde.image","Next Wallpaper Image"),"user-desktop");
         }
-
-        if (!configuredImage && imageWallpaper.wallpaperPath) {
-            return;
-        }
-        imageWallpaper.addUrl(configuredImage)
-        fadeWallpaper()
     }
 
     Wallpaper.Image {
@@ -181,7 +184,7 @@ Item {
         id: backgroundColor
         anchors.fill: parent
 
-        visible: (currentImage.status === Image.Ready || otherImage.status === Image.Ready) &&
+        visible: ready && (currentImage.status === Image.Ready || otherImage.status === Image.Ready) &&
                  (currentImage.fillMode === Image.PreserveAspectFit || currentImage.fillMode === Image.Pad
                  || otherImage.fillMode === Image.PreserveAspectFit || otherImage.fillMode === Image.Pad)
         color: wallpaper.configuration.Color
