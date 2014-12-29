@@ -108,11 +108,10 @@ void BugzillaManager::setFeaturesForVersion(const QString& version)
     m_security = UseCookies;    // Used to have cookies for update-security.
 
     if (currentVersion >= MAKE_BUGZILLA_VERSION(4, 4, 3)) {
-        // Security method changes from cookies to tokens in v4.4.3.
-        m_security = UseTokens;
-    }
-    if (currentVersion >= MAKE_BUGZILLA_VERSION(4, 5, 0)) {
-        // Security method changes from tokens to password-only in v4.5.x.
+        // Security method changes from cookies to tokens in Bugzilla 4.4.3.
+	// BUT, tokens fail when kio_http sends any cookies found in KCookieJar,
+	// so go directly to passwords-only security (supported since Bugzilla
+	// 3.6 and will be enforced in Bugzilla 4.5.x).
         m_security = UsePasswords;
     }
 
