@@ -84,6 +84,11 @@ ColumnLayout {
             onActivated: {
                 runnerWindow.visible = false
             }
+
+            onUpdateQueryString: {
+                queryField.text = text
+                queryField.cursorPosition = cursorPosition
+            }
         }
     }
 }
