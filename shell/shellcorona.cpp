@@ -260,6 +260,9 @@ void ShellCorona::setShell(const QString &shell)
     }
     connect(new KScreen::GetConfigOperation(KScreen::GetConfigOperation::NoEDID), &KScreen::GetConfigOperation::finished,
                 this, [=](KScreen::ConfigOperation *op) {
+                    if (op->hasError()) {
+                        qWarning() << "Error found while setting up ShellCorona's KScreen: " << op->errorString();
+                    }
                     m_screenConfiguration = qobject_cast<KScreen::GetConfigOperation*>(op)->config();
                     load();
                 });
