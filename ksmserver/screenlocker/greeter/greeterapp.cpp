@@ -22,10 +22,12 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include "kscreensaversettings.h"
 #include "sessions.h"
 #include "authenticator.h"
+#include "noaccessnetworkaccessmanagerfactory.h"
 
 // KDE
 #include <KAuthorized>
 #include <KCrash>
+#include <kdeclarative/kdeclarative.h>
 #include <KUser>
 #include <KWindowSystem>
 #include <Solid/PowerManagement>
@@ -162,6 +164,16 @@ void UnlockApp::desktopResized()
         QQuickView *view = new QQuickView();
         connect(view, &QQuickView::statusChanged, this, &UnlockApp::viewStatusChanged);
 
+        // first create KDecoration, to be sure that it created a KIO Network Factory
+        KDeclarative::KDeclarative declarative;
+        declarative.setDeclarativeEngine(view->engine());
+        declarative.setupBindings();
+        // overwrite the factory set by kdeclarative
+        auto oldFactory = view->engine()->networkAccessManagerFactory();
+        view->engine()->setNetworkAccessManagerFactory(nullptr);
+        delete oldFactory;
+        view->engine()->setNetworkAccessManagerFactory(new NoAccessNetworkAccessManagerFactory);
+
         if (!m_testing) {
             view->setFlags(Qt::X11BypassWindowManagerHint);
         }
@@ -201,6 +213,9 @@ void UnlockApp::desktopResized()
             view->rootObject()->metaObject()->indexOfSignal(QMetaObject::normalizedSignature("suspendToDisk()").constData()) != -1) {
             connect(view->rootObject(), SIGNAL(suspendToDisk()), SLOT(suspendToDisk()));
         }
+
+        // verify that the engine's controller didn't change
+        Q_ASSERT(dynamic_cast<NoAccessNetworkAccessManagerFactory*>(view->engine()->networkAccessManagerFactory()));
 
         m_views << view;
     }

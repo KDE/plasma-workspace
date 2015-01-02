@@ -13,6 +13,7 @@ set(kscreenlocker_greet_SRCS
    sessions.cpp
    greeterapp.cpp
    main.cpp
+   noaccessnetworkaccessmanagerfactory.cpp
 )
 
 qt5_add_resources(kscreenlocker_greet_SRCS fallbacktheme.qrc)
@@ -34,6 +35,7 @@ target_link_libraries(kscreenlocker_greet
                         KF5::Crash
                         KF5::I18n
                         KF5::ConfigGui
+                        KF5::Declarative
                         KF5::WindowSystem
                         KF5::Solid
                         Qt5::Quick
