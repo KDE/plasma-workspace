@@ -92,7 +92,7 @@ void LockWindowTest::testBlankScreen()
     ScreenLocker::LockWindow lockWindow;
     lockWindow.showLockWindow();
 
-    // the screen will be blanked once the first lock window gets mapped, so let's create one
+    // the screen used to be blanked once the first lock window gets mapped, so let's create one
     QWindow fakeWindow;
     fakeWindow.setFlags(Qt::X11BypassWindowManagerHint);
     // it's on purpose outside the visual area
@@ -104,6 +104,15 @@ void LockWindowTest::testBlankScreen()
     xcb_change_property(c, XCB_PROP_MODE_REPLACE, fakeWindow.winId(), atom, atom, 32, 0, nullptr);
     xcb_flush(c);
     fakeWindow.show();
+
+    // give it time to be shown
+    QTest::qWait(1000);
+
+    // now lets try to get a screen grab and verify it's black
+    QVERIFY(!isBlack());
+
+    // nowadays we need to pass the window id to the lock window
+    lockWindow.addAllowedWindow(fakeWindow.winId());
 
     // give it time to be shown
     QTest::qWait(1000);
