@@ -23,7 +23,7 @@ import org.kde.plasma.extras 2.0 as PlasmaExtra
 PlasmaCore.Dialog {
     id: root
     location: PlasmaCore.Types.Floating
-    type: PlasmaCore.Dialog.Notification
+    type: PlasmaCore.Dialog.OnScreenDisplay
     outputOnly: true
 
     // OSD Timeout in msecs - how long it will stay on the screen
