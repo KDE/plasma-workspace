@@ -89,6 +89,13 @@ xcb_atom_t screenLockerAtom()
 
 void LockWindowTest::testBlankScreen()
 {
+    // create and show a dummy window to ensure the background doesn't start as black
+    QWidget dummy;
+    dummy.setWindowFlags(Qt::X11BypassWindowManagerHint);
+    dummy.setGeometry(0, 0, 100, 100);
+    dummy.show();
+    xcb_flush(QX11Info::connection());
+
     ScreenLocker::LockWindow lockWindow;
     lockWindow.showLockWindow();
 
@@ -108,7 +115,7 @@ void LockWindowTest::testBlankScreen()
     // give it time to be shown
     QTest::qWait(1000);
 
-    // now lets try to get a screen grab and verify it's black
+    // now lets try to get a screen grab and verify it's not yet black
     QVERIFY(!isBlack());
 
     // nowadays we need to pass the window id to the lock window
@@ -119,6 +126,7 @@ void LockWindowTest::testBlankScreen()
 
     // now lets try to get a screen grab and verify it's black
     QVERIFY(isBlack());
+    dummy.hide();
 
     // destorying the fakeWindow should not remove the blanked screen
     fakeWindow.destroy();
