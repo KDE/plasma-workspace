@@ -29,8 +29,7 @@ PlasmaCore.Dialog {
     id: notificationPopup
 
     location: PlasmaCore.Types.Floating
-    type: PlasmaCore.Dialog.Dock
-    flags: Qt.WindowStaysOnTopHint
+    type: PlasmaCore.Dialog.Notification
 
     property var notificationProperties
 
