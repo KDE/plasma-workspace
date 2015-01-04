@@ -45,7 +45,9 @@ Item {
     Connections {
         target: root
         onExpandedTaskChanged: {
-            parent.expandedFeedback.visible = (root.expandedTask == null)
+            parent.expandedFeedback.opacity = Qt.binding(function() {
+                return root.expandedTask == null && plasmoid.expanded ? 1 : 0
+            })
         }
     }
 
