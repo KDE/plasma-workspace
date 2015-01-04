@@ -100,7 +100,7 @@ Item {
         onExited: wheelDelta = 0
         onWheel: {
             // show OSD when wheeling since when the popup isn't opened this is the only means of feedback
-            screenBrightnessSilent = false
+            screenBrightnessSilent = plasmoid.expanded
 
             var delta = wheel.angleDelta.y || wheel.angleDelta.x
             if ((delta < 0 && wheelDelta > 0) || (delta > 0 && wheelDelta < 0)) { // reset when direction changes
