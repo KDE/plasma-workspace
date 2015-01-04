@@ -255,9 +255,30 @@ void ShellCorona::setShell(const QString &shell)
 
     unload();
 
-    if (m_activityConsumer->serviceStatus() == KActivities::Consumer::Unknown) {
-        connect(m_activityConsumer, SIGNAL(serviceStatusChanged(Consumer::ServiceStatus)), SLOT(load()), Qt::UniqueConnection);
-    }
+
+    /*
+     * we want to make an initial load once we have the initial screen config and we have loaded the activities _IF_ KAMD is running
+     * it is valid for KAMD to not be running.
+     *
+     * Potentially 2 async jobs
+     *
+     * here we connect for status changes from KAMD, and fetch the first config from kscreen.
+     * load() will check that we have a kscreen config, and m_activityConsumer->serviceStatus() is not loading (i.e not unknown)
+     *
+     * It might seem that we only need this connection if the activityConsumer is currently in state Unknown, however
+     * there is an issue where m_activityConsumer will start the kactivitymanagerd, as KAMD is starting the serviceStatus will be "not running"
+     * Whilst we are loading the kscreen config, the event loop runs and we might find KAMD has started.
+     * m_activityConsumer will change from "not running" to unknown, and might still be unknown when the kscreen fetching is complete.
+     *
+     * if that happens we want to continue monitoring for state changes, and only finally load when it is up.
+     *
+     * See https://bugs.kde.org/show_bug.cgi?id=342431 be careful about changing
+     *
+     * The unique connection makes sure we don't reload plasma if KAMD ever crashes and reloads, the signal is disconnected in the body of load
+     */
+
+    connect(m_activityConsumer, SIGNAL(serviceStatusChanged(Consumer::ServiceStatus)), SLOT(load()), Qt::UniqueConnection);
+
     connect(new KScreen::GetConfigOperation(KScreen::GetConfigOperation::NoEDID), &KScreen::GetConfigOperation::finished,
                 this, [=](KScreen::ConfigOperation *op) {
                     if (op->hasError()) {
