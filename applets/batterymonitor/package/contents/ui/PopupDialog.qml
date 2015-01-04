@@ -43,12 +43,10 @@ FocusScope {
         // setup handler on slider value manually to avoid change on creation
 
         brightnessSlider.valueChanged.connect(function() {
-            batterymonitor.screenBrightnessSilent = true
             batterymonitor.screenBrightness = brightnessSlider.value
         })
 
         keyboardBrightnessSlider.valueChanged.connect(function() {
-            batterymonitor.keyboardBrightnessSilent = true
             batterymonitor.keyboardBrightness = keyboardBrightnessSlider.value
         })
     }

@@ -43,11 +43,9 @@ Item {
 
     property int screenBrightness
     readonly property int maximumScreenBrightness: pmSource.data["PowerDevil"] ? pmSource.data["PowerDevil"]["Maximum Screen Brightness"] : 0
-    property bool screenBrightnessSilent: true // whether to suppress the OSD when changing brightness
 
     property int keyboardBrightness
     readonly property int maximumKeyboardBrightness: pmSource.data["PowerDevil"] ? pmSource.data["PowerDevil"]["Maximum Keyboard Brightness"] : 0
-    property bool keyboardBrightnessSilent: true
 
     readonly property int remainingTime: Number(pmSource.data["Battery"]["Remaining msec"])
 
@@ -58,7 +56,8 @@ Item {
         var service = pmSource.serviceForSource("PowerDevil");
         var operation = service.operationDescription("setBrightness");
         operation.brightness = screenBrightness;
-        operation.silent = screenBrightnessSilent
+        // show OSD only when the plasmoid isn't expanded since the moving slider is feedback enough
+        operation.silent = plasmoid.expanded
         service.startOperationCall(operation);
     }
     onKeyboardBrightnessChanged: {
@@ -68,7 +67,7 @@ Item {
         var service = pmSource.serviceForSource("PowerDevil");
         var operation = service.operationDescription("setKeyboardBrightness");
         operation.brightness = keyboardBrightness;
-        operation.silent = keyboardBrightnessSilent
+        operation.silent = plasmoid.expanded
         service.startOperationCall(operation);
     }
 
@@ -99,9 +98,6 @@ Item {
         onEntered: wheelDelta = 0
         onExited: wheelDelta = 0
         onWheel: {
-            // show OSD when wheeling since when the popup isn't opened this is the only means of feedback
-            screenBrightnessSilent = plasmoid.expanded
-
             var delta = wheel.angleDelta.y || wheel.angleDelta.x
             if ((delta < 0 && wheelDelta > 0) || (delta > 0 && wheelDelta < 0)) { // reset when direction changes
                 wheelDelta = 0
