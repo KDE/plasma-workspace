@@ -50,13 +50,14 @@ Item {
         return decodeURIComponent(lastUrlPart)
     }
     property string artist: currentMetadata ? currentMetadata["xesam:artist"] || "" : ""
+    property string albumArt: currentMetadata ? currentMetadata["mpris:artUrl"] || "" : ""
     property string playerIcon: ""
 
     property bool noPlayer: mpris2Source.sources.length <= 1
 
     Plasmoid.switchWidth: units.gridUnit * 14
     Plasmoid.switchHeight: units.gridUnit * 10
-    Plasmoid.icon: "media-playback-start"
+    Plasmoid.icon: albumArt ? albumArt : "media-playback-start"
     Plasmoid.toolTipMainText: i18n("No media playing")
     Plasmoid.status: PlasmaCore.Types.ActiveStatus
 
@@ -85,7 +86,7 @@ Item {
     Plasmoid.fullRepresentation: ExpandedRepresentation {}
 
     Plasmoid.compactRepresentation: PlasmaCore.IconItem {
-        source: Plasmoid.icon
+        source: root.state === "paused" ? "media-playback-pause" : "media-playback-start"
         MouseArea {
             anchors.fill: parent
             acceptedButtons: Qt.LeftButton | Qt.MiddleButton
@@ -146,7 +147,7 @@ Item {
 
             PropertyChanges {
                 target: plasmoid
-                icon: "media-playback-start"
+                icon: albumArt ? albumArt : "media-playback-start"
                 toolTipMainText: track
                 toolTipSubText: artist ? i18nc("Artist of the song", "by %1", artist) : ""
             }
@@ -157,7 +158,7 @@ Item {
 
             PropertyChanges {
                 target: plasmoid
-                icon: "media-playback-pause"
+                icon: albumArt ? albumArt : "media-playback-pause"
                 toolTipMainText: track
                 toolTipSubText: artist ? i18nc("Artist of the song", "by %1 (paused)", artist) : i18n("Paused")
             }

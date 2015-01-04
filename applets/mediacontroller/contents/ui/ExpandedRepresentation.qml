@@ -71,7 +71,7 @@ Item {
 
             Image {
                 id: albumArt
-                source: currentMetadata ? currentMetadata["mpris:artUrl"] || "" : ""
+                source: root.albumArt
                 fillMode: Image.PreserveAspectCrop
                 Layout.preferredHeight: expandedRepresentation.height / 2
                 Layout.preferredWidth: Layout.preferredHeight
