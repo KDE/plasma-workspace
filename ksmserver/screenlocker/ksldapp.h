@@ -93,6 +93,7 @@ Q_SIGNALS:
 private Q_SLOTS:
     void cleanUp();
     void endGraceTime();
+    void solidSuspend();
 
 private:
     void initialize();

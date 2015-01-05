@@ -252,6 +252,15 @@ void KSldApp::initialize()
         }
     );
 
+    // fallback for non-logind systems:
+    // connect to signal emitted by Solid. This is emitted unconditionally also on logind enabled systems
+    // ksld ignores it in case logind is used
+    QDBusConnection::sessionBus().connect(QStringLiteral("org.kde.Solid.PowerManagement"),
+                                          QStringLiteral("/org/kde/Solid/PowerManagement/Actions/SuspendSession"),
+                                          QStringLiteral("org.kde.Solid.PowerManagement.Actions.SuspendSession"),
+                                          QStringLiteral("aboutToSuspend"),
+                                          this, SLOT(solidSuspend()));
+
     configure();
 }
 
@@ -479,6 +488,17 @@ void KSldApp::inhibit()
 void KSldApp::uninhibit()
 {
     --m_inhibitCounter;
+}
+
+void KSldApp::solidSuspend()
+{
+    // ignore in case that we use logind
+    if (m_logind && m_logind->isConnected()) {
+        return;
+    }
+    if (KScreenSaverSettings::lockOnResume()) {
+        lock(EstablishLock::Immediate);
+    }
 }
 
 } // namespace
