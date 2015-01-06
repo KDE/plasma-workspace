@@ -54,7 +54,7 @@ PlasmaCore.Dialog {
         }
     }
 
-    mainItem: MouseEventListener {
+    mainItem: MouseArea {
         id: root
         Layout.minimumWidth: Math.round(23 * units.gridUnit)
         Layout.minimumHeight: notificationItem.implicitHeight
