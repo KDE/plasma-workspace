@@ -13,7 +13,7 @@ set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH} ${ECM_KDE_MODULE_DIR})
 
 find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS
                     Plasma DocTools Runner JsEmbed NotifyConfig Su NewStuff Wallet KCMUtils
-                    IdleTime Declarative TextWidgets KDELibs4Support Crash)
+                    IdleTime Declarative TextWidgets KDELibs4Support Crash GlobalAccel)
 
 # WARNING PlasmaQuick provides unversioned CMake config
 find_package(KF5 REQUIRED COMPONENTS PlasmaQuick)
@@ -156,6 +156,11 @@ add_subdirectory(solidautoeject)
 if(KF5WebKit_FOUND)
 add_subdirectory(drkonqi)
 endif()
+
+#include the local copy if we're building with frameworks < 5.7
+#remove once we hard-depend on >= 5.7
+if(KF5GlobalAccel_VERSION VERSION_LESS "5.7.0")
 add_subdirectory(kglobalaccel)
+endif()
 add_subdirectory(soliduiserver)
 feature_summary(WHAT ALL INCLUDE_QUIET_PACKAGES FATAL_ON_MISSING_REQUIRED_PACKAGES)
