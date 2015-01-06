@@ -29,9 +29,9 @@
 
 #if HAVE_X11
 #include "kglobalaccel_x11.h"
-#elif defined(Q_WS_MACX)
+#elif defined(Q_OS_OSX)
 #include "kglobalaccel_mac.h"
-#elif defined(Q_WS_WIN)
+#elif defined(Q_OS_WIN)
 #include "kglobalaccel_win.h"
 #else
 #include "kglobalaccel_qws.h"

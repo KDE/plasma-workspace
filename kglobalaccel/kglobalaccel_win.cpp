@@ -22,7 +22,7 @@
 #include "kkeyserver_win.h"
 
 #include <QWidgetList>
-#ifdef Q_WS_WIN
+#ifdef Q_OS_WIN
 
 #include "kglobalaccel.h"
 #include "globalshortcutsregistry.h"
@@ -82,4 +82,4 @@ bool KGlobalAccelImpl::winEvent( MSG * message, long * result )
 
 #include "kglobalaccel_win.moc"
 
-#endif // Q_WS_WIN
+#endif // Q_OS_WIN

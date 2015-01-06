@@ -22,7 +22,7 @@
 
 #include <QDebug>
 
-#ifdef Q_WS_MAC
+#ifdef Q_OS_OSX
 
 #include <QMultiMap>
 #include <QList>
@@ -155,4 +155,4 @@ void KGlobalAccelImpl::keyboardLayoutChanged()
 
 #include "kglobalaccel_mac.moc"
 
-#endif // !Q_WS_MAC
+#endif // !Q_OS_OSX
