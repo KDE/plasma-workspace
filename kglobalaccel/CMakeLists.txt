@@ -24,9 +24,6 @@ endif ()
 if ( Q_OS_WIN )
   set( kglobalaccel_SRCS ${kglobalaccel_SRCS} kglobalaccel_win.cpp )
 endif ()
-if ( Q_WS_QWS )
-  set( kglobalaccel_SRCS ${kglobalaccel_SRCS} kglobalaccel_qws.cpp )
-endif ()
 
 configure_file(config-kglobalaccel.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-kglobalaccel.h )
 

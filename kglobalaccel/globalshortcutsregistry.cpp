@@ -33,8 +33,6 @@
 #include "kglobalaccel_mac.h"
 #elif defined(Q_OS_WIN)
 #include "kglobalaccel_win.h"
-#else
-#include "kglobalaccel_qws.h"
 #endif
 
 GlobalShortcutsRegistry::GlobalShortcutsRegistry()
