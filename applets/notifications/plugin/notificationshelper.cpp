@@ -24,20 +24,31 @@
 #include <qfontmetrics.h>
 #include <QTimer>
 #include <QQuickWindow>
+#include <QQuickItem>
 #include <QQmlEngine>
+#include <QTimer>
+#include <QReadWriteLock>
 #include <QDebug>
 
 NotificationsHelper::NotificationsHelper(QObject *parent)
     : QObject(parent),
-    m_popupLocation(Qt::BottomEdge)
+    m_popupLocation(Qt::BottomEdge),
+    m_busy(false)
 {
+    m_mutex = new QReadWriteLock(QReadWriteLock::Recursive);
     m_offset = QFontMetrics(QGuiApplication::font()).boundingRect("M").height();
+
+    m_dispatchTimer = new QTimer(this);
+    m_dispatchTimer->setInterval(500);
+    m_dispatchTimer->setSingleShot(true);
+    connect(m_dispatchTimer, &QTimer::timeout, [this](){m_busy = false; processQueues();});
 }
 
 NotificationsHelper::~NotificationsHelper()
 {
     qDeleteAll(m_availablePopups);
     qDeleteAll(m_popupsOnScreen);
+    delete m_mutex;
 }
 
 void NotificationsHelper::setPopupLocation(Qt::Edge popupLocation)
@@ -71,38 +82,61 @@ void NotificationsHelper::addNotificationPopup(QObject *win)
     // Don't let QML ever delete this component
     QQmlEngine::setObjectOwnership(win, QQmlEngine::CppOwnership);
 
-    connect(popup, SIGNAL(visibleChanged(bool)),
-            this, SLOT(popupClosed(bool)));
-}
+    connect(win, SIGNAL(notificationTimeout()),
+            this, SLOT(onPopupClosed()));
 
-void NotificationsHelper::displayQueuedNotification()
-{
-    if (!m_queue.isEmpty() && !m_availablePopups.isEmpty()) {
-        displayNotification(m_queue.takeFirst());
+    // The popup actual height will get changed after it has been filled
+    // with data, but we set it initially to small value so it's not too
+    // big for eg. one line notifications
+    popup->setHeight(1);
+
+    // This is to make sure the popups won't fly across the whole
+    // screen the first time they appear
+    if (m_popupLocation == Qt::TopEdge) {
+        popup->setY(0);
+    } else {
+        popup->setY(workAreaForScreen(m_plasmoidScreen).height());
     }
+    popup->setX(workAreaForScreen(m_plasmoidScreen).width() - m_offset - popup->width());
+
+    connect(popup, &QWindow::heightChanged, this, &NotificationsHelper::repositionPopups, Qt::UniqueConnection);
+    connect(popup, &QWindow::widthChanged, this, &NotificationsHelper::repositionPopups, Qt::UniqueConnection);
 }
 
-void NotificationsHelper::displayNotification(const QVariantMap &notificationData)
+void NotificationsHelper::processQueues()
 {
-    if (notificationData.isEmpty()) {
+    if (m_busy) {
         return;
     }
+
+    m_mutex->lockForRead();
+    bool shouldProcessShow = !m_showQueue.isEmpty() && !m_availablePopups.isEmpty();
+    m_mutex->unlock();
+
+    if (shouldProcessShow) {
+        m_busy = true;
+        processShow();
+        // Return here, makes the movement more clear and easier to follow
+        return;
+    }
+
+    m_mutex->lockForRead();
+    bool shouldProcessHide = !m_hideQueue.isEmpty();
+    m_mutex->unlock();
+
+    if (shouldProcessHide) {
+        m_busy = true;
+        processHide();
+    }
+}
+
+void NotificationsHelper::processShow()
+{
+    m_mutex->lockForWrite();
+    const QVariantMap notificationData = m_showQueue.takeFirst();
+    m_mutex->unlock();
 
     QString sourceName = notificationData.value("source").toString();
-
-    // All our popups are full, so put it into queue and bail out
-    if (m_availablePopups.isEmpty()) {
-        // ...but first check if we don't already have data for the same source
-        // which would mean that the notification was just updated
-        // so remove the old one and append the newest data only
-        Q_FOREACH (const QVariantMap &data, m_queue) {
-            if (data.value("source").toString() == sourceName) {
-                m_queue.removeOne(data);
-            }
-        }
-        m_queue.append(notificationData);
-        return;
-    }
 
     // Try getting existing popup for the given source
     // (case of notification being just updated)
@@ -111,9 +145,11 @@ void NotificationsHelper::displayNotification(const QVariantMap &notificationDat
     if (!popup) {
         // No existing notification for the given source,
         // take one from the available popups
+        m_mutex->lockForWrite();
         popup = m_availablePopups.takeFirst();
         m_popupsOnScreen << popup;
         m_sourceMap.insert(sourceName, popup);
+        m_mutex->unlock();
         // Set the source name directly on the popup object too
         // to avoid looking up the notificationProperties map as above
         popup->setProperty("sourceName", sourceName);
@@ -125,59 +161,118 @@ void NotificationsHelper::displayNotification(const QVariantMap &notificationDat
 
     // Populate the popup with data, this is the component's own QML method
     QMetaObject::invokeMethod(popup, "populatePopup", Q_ARG(QVariant, notificationData));
+    repositionPopups();
+    QTimer::singleShot(300, popup, SLOT(show()));
 
-    QMetaObject::Connection popupHeightConnection;
+    m_dispatchTimer->start();
+}
 
-    // Here we need to wait for the notification popup's Dialog to actually
-    // sync its size to the mainItem size, only then we can move on with
-    // positioning it properly
-    popupHeightConnection = connect(popup, &QWindow::heightChanged, [=](){
-        QRect screenArea = workAreaForScreen(m_plasmoidScreen);
+void NotificationsHelper::processHide()
+{
+    m_mutex->lockForWrite();
+    QQuickWindow *popup = m_hideQueue.takeFirst();
+    m_mutex->unlock();
 
-        popup->setX(screenArea.right() - popup->width() - m_offset);
+    if (popup) {
+        m_mutex->lockForWrite();
+        // Remove the popup from the active list and return it into the available list
+        m_popupsOnScreen.removeOne(popup);
+        m_sourceMap.remove(popup->property("sourceName").toString());
+        m_availablePopups.append(popup);
+        m_mutex->unlock();
 
-        int popupsHeightTotal = 0;
-        // notification popups with 3 buttons are higher than the rest
-        // so we need to count the heights separately
-        Q_FOREACH (QQuickWindow *popupOnScreen, m_popupsOnScreen) {
-            popupsHeightTotal += popupOnScreen->height() + m_offset;
-        }
-
+        popup->hide();
+        // Shrink the popup again as notifications with lots of text make the popup
+        // huge but setting short text won't make it smaller
+        popup->setHeight(1);
+        // Make sure it flies in from where it's supposed to
         if (m_popupLocation == Qt::TopEdge) {
-            popup->setY(screenArea.top() + popupsHeightTotal - popup->height());
+            popup->setY(0);
         } else {
-            popup->setY(screenArea.bottom() - popupsHeightTotal);
+            popup->setY(workAreaForScreen(m_plasmoidScreen).height());
         }
+    }
 
-        popup->show();
+    m_mutex->lockForRead();
+    bool shouldReposition = !m_popupsOnScreen.isEmpty();// && m_showQueue.isEmpty();
+    m_mutex->unlock();
 
-        // don't keep the connection around
-        QObject::disconnect(popupHeightConnection);
-    });
+    if (shouldReposition) {
+        repositionPopups();
+    }
+
+    m_dispatchTimer->start();
+}
+
+void NotificationsHelper::displayNotification(const QVariantMap &notificationData)
+{
+    if (notificationData.isEmpty()) {
+        return;
+    }
+
+    QVariant sourceName = notificationData.value("source");
+
+    // first check if we don't already have data for the same source
+    // which would mean that the notification was just updated
+    // so remove the old one and append the newest data only
+    QMutableListIterator<QVariantMap> i(m_showQueue);
+    while (i.hasNext()) {
+        if (i.next().value("source") == sourceName) {
+            m_mutex->lockForWrite();
+            i.remove();
+            m_mutex->unlock();
+        }
+    }
+
+    // ...also look into the hide queue, if it's already queued
+    // for hiding, we need to remove it from there otherwise
+    // it will get closed too soon
+    QMutableListIterator<QQuickWindow*> j(m_hideQueue);
+    while (j.hasNext()) {
+        if (j.next()->property("sourceName") == sourceName) {
+            m_mutex->lockForWrite();
+            j.remove();
+            m_mutex->unlock();
+        }
+    }
+
+    m_mutex->lockForWrite();
+    m_showQueue.append(notificationData);
+    m_mutex->unlock();
+
+    processQueues();
 }
 
 void NotificationsHelper::closePopup(const QString &sourceName)
 {
     QQuickWindow *popup = m_sourceMap.value(sourceName);
 
-    if (popup) {
-        popup->hide();
+    m_mutex->lockForRead();
+    bool shouldQueue = popup && !m_hideQueue.contains(popup);
+    m_mutex->unlock();
+
+    if (shouldQueue) {
+        m_mutex->lockForWrite();
+        m_hideQueue.append(popup);
+        m_mutex->unlock();
+        processQueues();
     }
 }
 
-void NotificationsHelper::popupClosed(bool visible)
+void NotificationsHelper::onPopupClosed()
 {
-    if (!visible) {
-        QQuickWindow *popup = qobject_cast<QQuickWindow*>(sender());
-        if (popup) {
-            // Remove the popup from the active list and return it into the available list
-            m_popupsOnScreen.removeOne(popup);
-            m_sourceMap.remove(sender()->property("sourceName").toString());
-            m_availablePopups.append(popup);
-        }
-        repositionPopups();
-    }
+    QQuickWindow *popup = qobject_cast<QQuickWindow*>(sender());
 
+    m_mutex->lockForRead();
+    bool shouldQueue = popup || !m_hideQueue.contains(popup);
+    m_mutex->unlock();
+
+    if (shouldQueue) {
+        m_mutex->lockForWrite();
+        m_hideQueue << popup;
+        m_mutex->unlock();
+        processQueues();
+    }
 }
 
 void NotificationsHelper::repositionPopups()
@@ -186,22 +281,31 @@ void NotificationsHelper::repositionPopups()
 
     int cumulativeHeight = m_offset;
 
-    for (int i = 0; i < m_popupsOnScreen.size(); ++i) {
+    m_mutex->lockForWrite();
 
+    for (int i = 0; i < m_popupsOnScreen.size(); ++i) {
         if (m_popupLocation == Qt::TopEdge) {
-            m_popupsOnScreen[i]->setProperty("y", workArea.top() + cumulativeHeight);
+            if (m_popupsOnScreen[i]->isVisible()) {
+                //if it's visible, go through setProperty which animates it
+                m_popupsOnScreen[i]->setProperty("y", workArea.top() + cumulativeHeight);
+            } else {
+                // ...otherwise just set it directly
+                m_popupsOnScreen[i]->setY(workArea.top() + cumulativeHeight);
+            }
         } else {
-            m_popupsOnScreen[i]->setProperty("y", workArea.bottom() - cumulativeHeight - m_popupsOnScreen[i]->height());
+            if (m_popupsOnScreen[i]->isVisible()) {
+                m_popupsOnScreen[i]->setProperty("y", workArea.bottom() - cumulativeHeight - m_popupsOnScreen[i]->contentItem()->height());
+            } else {
+                m_popupsOnScreen[i]->setY(workArea.bottom() - cumulativeHeight - m_popupsOnScreen[i]->contentItem()->height());
+            }
         }
 
-        cumulativeHeight += (m_popupsOnScreen[i]->height() + m_offset);
+        m_popupsOnScreen[i]->setX(workArea.right() - m_popupsOnScreen[i]->contentItem()->width() - m_offset);
+
+        cumulativeHeight += (m_popupsOnScreen[i]->contentItem()->height() + m_offset);
     }
 
-    if (!m_queue.isEmpty()) {
-        // Delay this a bit so the animations above^ have time to finish; looks a lot better
-        QTimer::singleShot(300, this, SLOT(displayQueuedNotification()));
-    }
-
+    m_mutex->unlock();
 }
 
 

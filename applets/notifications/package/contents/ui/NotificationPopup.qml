@@ -32,6 +32,7 @@ PlasmaCore.Dialog {
     type: PlasmaCore.Dialog.Notification
 
     property var notificationProperties
+    signal notificationTimeout()
 
     onVisibleChanged: {
         notificationTimer.running = visible
@@ -58,6 +59,7 @@ PlasmaCore.Dialog {
         id: root
         Layout.minimumWidth: Math.round(23 * units.gridUnit)
         Layout.minimumHeight: notificationItem.implicitHeight
+        height: notificationItem.implicitHeight
 
         hoverEnabled: true
 
@@ -79,7 +81,7 @@ PlasmaCore.Dialog {
                 if (!notificationProperties.isPersistent) {
                     closeNotification(notificationProperties.source)
                 }
-                notificationPopup.hide()
+                notificationPopup.notificationTimeout();
             }
         }
 

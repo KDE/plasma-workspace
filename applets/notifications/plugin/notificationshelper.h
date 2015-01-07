@@ -25,6 +25,8 @@
 #include <QVariantMap>
 
 class QQuickWindow;
+class QTimer;
+class QReadWriteLock;
 
 class NotificationsHelper : public QObject
 {
@@ -53,8 +55,10 @@ Q_SIGNALS:
     void popupLocationChanged();
 
 private Q_SLOTS:
-    void popupClosed(bool visible);
-    void displayQueuedNotification();
+    void onPopupClosed();
+    void processQueues();
+    void processShow();
+    void processHide();
 
 private:
     void repositionPopups();
@@ -62,10 +66,14 @@ private:
     QList<QQuickWindow*> m_popupsOnScreen;
     QList<QQuickWindow*> m_availablePopups;
     QHash<QString, QQuickWindow*> m_sourceMap;
-    QList<QVariantMap> m_queue;
     QRect m_plasmoidScreen;
     Qt::Edge m_popupLocation;
     int m_offset;
+    bool m_busy;
+    QList<QQuickWindow*> m_hideQueue;
+    QList<QVariantMap> m_showQueue;
+    QReadWriteLock *m_mutex;
+    QTimer *m_dispatchTimer;
 };
 
 #endif // NOTIFICATIONSHELPER_H

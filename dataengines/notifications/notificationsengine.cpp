@@ -177,6 +177,8 @@ uint NotificationsEngine::Notify(const QString &app_name, uint replaces_id,
                 _body = body;
             }
 
+            replaces_id = partOf;
+
             // remove the old notification and replace it with the new one
             // TODO: maybe just update the current notification?
             CloseNotification(partOf);
