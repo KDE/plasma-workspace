@@ -1,6 +1,6 @@
 project(kglobalaccel)
 
-add_definitions(-DTRANSLATION_DOMAIN=\"kglobalaccel\")
+add_definitions(-DTRANSLATION_DOMAIN=\"kglobalaccel5\")
 
 ###############################################################################
 ### KDED Global Accel Daemon
