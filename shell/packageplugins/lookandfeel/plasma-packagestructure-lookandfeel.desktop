@@ -41,7 +41,7 @@ Name[x-test]=xxLook and Feelxx
 Name[zh_CN]=观感
 Name[zh_TW]=外觀與感覺
 Type=Service
-X-KDE-ServiceTypes=Plasma/PackageStructure
+X-KDE-ServiceTypes=KPackage/PackageStructure
 X-KDE-Library=plasma_packagestructure_lookandfeel
 
 X-KDE-PluginInfo-Author=Marco Martin

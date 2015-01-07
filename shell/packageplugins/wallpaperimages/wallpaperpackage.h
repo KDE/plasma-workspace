@@ -20,17 +20,17 @@
 #ifndef WALLPAPERSTRUCTURE_H
 #define WALLPAPERSTRUCTURE_H
 
-#include <Plasma/PackageStructure>
+#include <KPackage/PackageStructure>
 
-class WallpaperPackage : public Plasma::PackageStructure
+class WallpaperPackage : public KPackage::PackageStructure
 {
     Q_OBJECT
 
 public:
     explicit WallpaperPackage(QObject *parent = 0, const QVariantList &args = QVariantList());
 
-    void initPackage(Plasma::Package *package);
-    void pathChanged(Plasma::Package *package);
+    void initPackage(KPackage::Package *package);
+    void pathChanged(KPackage::Package *package);
 };
 
 #endif

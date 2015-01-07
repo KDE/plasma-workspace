@@ -20,6 +20,7 @@ find_package(KF5 REQUIRED COMPONENTS PlasmaQuick)
 find_package(KF5 REQUIRED COMPONENTS SysGuard)
 # Require KScreen >= 5.0.93 due to large API change
 find_package(KF5 5.0.93 REQUIRED COMPONENTS Screen)
+find_package(KF5 REQUIRED COMPONENTS Package)
 # Baloo has a different version scheme than KF5 for now
 find_package(KF5 5.1 REQUIRED COMPONENTS Baloo)
 find_package(KF5TextEditor)

@@ -19,6 +19,7 @@ find_package(KF5Solid REQUIRED)
 find_package(KF5Activities REQUIRED)
 find_package(KF5DBusAddons ${KF5_MIN_VERSION} REQUIRED)
 find_package(KF5Declarative ${KF5_MIN_VERSION} REQUIRED)
+find_package(KF5Package REQUIRED)
 
 configure_file(config-ktexteditor.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-ktexteditor.h )
 

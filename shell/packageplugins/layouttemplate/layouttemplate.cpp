@@ -22,15 +22,14 @@
 
 #include <KLocalizedString>
 
-void LayoutTemplatePackage::initPackage(Plasma::Package *package)
+void LayoutTemplatePackage::initPackage(KPackage::Package *package)
 {
-    package->setServicePrefix("plasma-layout-template");
     package->setDefaultPackageRoot("plasma/layout-templates/");
     package->addFileDefinition("mainscript", "layout.js", i18n("Main Script File"));
     package->setRequired("mainscript", true);
 }
 
-K_EXPORT_PLASMA_PACKAGE_WITH_JSON(LayoutTemplatePackage, "plasma-packagestructure-layouttemplate.json")
+K_EXPORT_KPACKAGE_PACKAGE_WITH_JSON(LayoutTemplatePackage, "plasma-packagestructure-layouttemplate.json")
 
 #include "layouttemplate.moc"
 

@@ -25,11 +25,11 @@
 #include <klocalizedstring.h>
 
 WallpaperPackage::WallpaperPackage(QObject *parent, const QVariantList &args)
-    : Plasma::PackageStructure(parent, args)
+    : KPackage::PackageStructure(parent, args)
 {
 }
 
-void WallpaperPackage::initPackage(Plasma::Package *package)
+void WallpaperPackage::initPackage(KPackage::Package *package)
 {
     package->addDirectoryDefinition("images", "images/", i18n("Images"));
 
@@ -42,7 +42,7 @@ void WallpaperPackage::initPackage(Plasma::Package *package)
     package->setAllowExternalPaths(true);
 }
 
-void WallpaperPackage::pathChanged(Plasma::Package *package)
+void WallpaperPackage::pathChanged(KPackage::Package *package)
 {
     static bool guard = false;
 
@@ -76,7 +76,7 @@ void WallpaperPackage::pathChanged(Plasma::Package *package)
     guard = false;
 }
 
-K_EXPORT_PLASMA_PACKAGE_WITH_JSON(WallpaperPackage, "plasma-packagestructure-wallpaperimages.json")
+K_EXPORT_KPACKAGE_PACKAGE_WITH_JSON(WallpaperPackage, "plasma-packagestructure-wallpaperimages.json")
 
 #include "wallpaperpackage.moc"
 

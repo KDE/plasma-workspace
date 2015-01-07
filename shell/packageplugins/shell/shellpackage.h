@@ -20,14 +20,14 @@
 #ifndef SHELLPACKAGE_PLUGIN_H
 #define SHELLPACKAGE_PLUGIN_H
 
-#include <Plasma/PackageStructure>
+#include <KPackage/PackageStructure>
 
-class ShellPackage: public Plasma::PackageStructure
+class ShellPackage: public KPackage::PackageStructure
 {
 public:
     ShellPackage(QObject *parent, const QVariantList &list);
-    void initPackage(Plasma::Package *package);
-    void pathChanged(Plasma::Package *package);
+    void initPackage(KPackage::Package *package);
+    void pathChanged(KPackage::Package *package);
 };
 
 #endif // SHELLPACKAGE_PLUGIN_H

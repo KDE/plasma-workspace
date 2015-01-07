@@ -22,13 +22,13 @@
 #ifndef WALLPAPER_H
 #define WALLPAPER_H
 
-#include <Plasma/PackageStructure>
+#include <KPackage/PackageStructure>
 
-class QmlWallpaperPackage : public Plasma::PackageStructure
+class QmlWallpaperPackage : public KPackage::PackageStructure
 {
 public:
     QmlWallpaperPackage(QObject*, const QVariantList &) {}
-    void initPackage(Plasma::Package *package);
+    void initPackage(KPackage::Package *package);
 };
 
 #endif
