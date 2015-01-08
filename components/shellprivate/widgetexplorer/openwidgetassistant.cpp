@@ -31,8 +31,8 @@
 #include <KServiceTypeTrader>
 #include <KLocalizedString>
 
-#include <Plasma/PackageStructure>
-#include <Plasma/PluginLoader>
+#include <KPackage/PackageStructure>
+#include <KPackage/PackageLoader>
 
 namespace Plasma
 {
@@ -78,7 +78,7 @@ void OpenWidgetAssistant::finished()
         return;
     }
 
-    Plasma::Package installer = Plasma::PluginLoader::self()->loadPackage("Plasma/Applet");
+    KPackage::Package installer = KPackage::PackageLoader::self()->loadPackage("Plasma/Applet");
 
     if (!installer.install(packageFilePath)) {
         KMessageBox::error(this, i18n("Installing the package %1 failed.", packageFilePath),

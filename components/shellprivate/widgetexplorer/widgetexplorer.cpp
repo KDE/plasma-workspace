@@ -27,16 +27,18 @@
 #include <QQmlProperty>
 
 #include <klocalizedstring.h>
-#include <kservicetypetrader.h>
 #include <KNewStuff3/KNS3/DownloadDialog>
 #include <KWindowSystem>
+#include <KServiceTypeTrader>
 
 #include <Plasma/Applet>
 #include <Plasma/Corona>
 #include <Plasma/Containment>
-#include <Plasma/Package>
-#include <Plasma/PackageStructure>
 #include <qstandardpaths.h>
+
+#include <KPackage/Package>
+#include <KPackage/PackageStructure>
+#include <KPackage/PackageLoader>
 
 #include "kcategorizeditemsviewmodels_p.h"
 #include "plasmaappletitemmodel_p.h"
@@ -92,7 +94,7 @@ public:
     //extra hash so we can look up the names of deleted applets
     QHash<Plasma::Applet *,QString> appletNames;
     QWeakPointer<Plasma::OpenWidgetAssistant> openAssistant;
-    Plasma::Package *package;
+    KPackage::Package *package;
 
     PlasmaAppletItemModel itemModel;
     KCategorizedItemsViewModels::DefaultFilterModel filterModel;
@@ -117,10 +119,10 @@ void WidgetExplorerPrivate::initFilters()
     QSet<QString> existingCategories = itemModel.categories();
     //foreach (const QString &category, Plasma::Applet::listCategories(application)) {
     QStringList cats;
-    KService::List services = KServiceTypeTrader::self()->query("Plasma/Applet", QString());
+    QList<KPluginMetaData> list = KPackage::PackageLoader::self()->listPackages("Plasma/Applet", "plasma/plasmoids");
 
-    foreach (const QExplicitlySharedDataPointer<KService> service, services) {
-        KPluginInfo info(service);
+    for (auto data : list) {
+        KPluginInfo info(data);
         if (info.property("NoDisplay").toBool() || info.category() == i18n("Containments") ||
             info.category().isEmpty()) {
             // we don't want to show the hidden category
@@ -443,7 +445,7 @@ void WidgetExplorer::uninstall(const QString &pluginName)
 {
     const QString packageRoot = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + PLASMA_RELATIVE_DATA_INSTALL_DIR "/plasmoids/";
 
-    Plasma::Package pkg;
+    KPackage::Package pkg;
     pkg.setPath(packageRoot);
     pkg.uninstall(pluginName, packageRoot);
 

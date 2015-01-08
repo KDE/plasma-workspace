@@ -27,6 +27,8 @@
 #include <ksycoca.h>
 #include <kconfig.h>
 #include "config-workspace.h"
+#include <KPluginTrader>
+#include <KPackage/PackageLoader>
 
 PlasmaAppletItem::PlasmaAppletItem(PlasmaAppletItemModel *model,
                                    const KPluginInfo& info,
@@ -242,10 +244,11 @@ void PlasmaAppletItemModel::populateModel(const QStringList &whatChanged)
         constraint += "'" + prov + "' in [X-Plasma-Provides]";
     }
 
-    KService::List services = KServiceTypeTrader::self()->query("Plasma/Applet", constraint);
+    KPluginInfo::List list = KPluginInfo::fromMetaData(KPackage::PackageLoader::self()->listPackages("Plasma/Applet", "plasma/plasmoids").toVector());
 
-    foreach (const QExplicitlySharedDataPointer<KService> service, services) {
-        KPluginInfo info(service);
+    KPluginTrader::applyConstraints(list, constraint);
+
+    for (auto info : list) {
         //qDebug() << info.pluginName() << "NoDisplay" << info.property("NoDisplay").toBool();
         if (info.property("NoDisplay").toBool() || info.category() == i18n("Containments")) {
             // we don't want to show the hidden category
