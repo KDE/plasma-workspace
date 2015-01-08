@@ -6,7 +6,7 @@ Exec=kcmshell5 screenlocker
 X-KDE-Library=screenlocker_kcm
 X-KDE-ParentApp=kcontrol
 
-X-KDE-System-Settings-Parent-Category=display
+X-KDE-System-Settings-Parent-Category=desktopbehavior
 X-KDE-Weight=60
 
 Name=Screen Locking
