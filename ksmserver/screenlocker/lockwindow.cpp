@@ -267,6 +267,7 @@ static void fakeFocusIn( WId window )
     ev.xfocus.mode = NotifyNormal;
     ev.xfocus.detail = NotifyAncestor;
     XSendEvent( QX11Info::display(), window, False, NoEventMask, &ev );
+    XFlush(QX11Info::display());
 }
 
 template< typename T>
@@ -496,6 +497,7 @@ void LockWindow::stayOnTop()
     XRaiseWindow( QX11Info::display(), stack[ 0 ] );
     if( count > 1 )
         XRestackWindows( QX11Info::display(), stack.data(), count );
+    XFlush(QX11Info::display());
 }
 
 void LockWindow::updateGeo()
