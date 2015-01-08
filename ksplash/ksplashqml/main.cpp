@@ -18,7 +18,7 @@
  */
 
 
-#include "SplashApp.h"
+#include "splashapp.h"
 #include <QQuickWindow>
 
 #include <QTextStream>

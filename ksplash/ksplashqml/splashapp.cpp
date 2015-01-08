@@ -18,8 +18,8 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#include "SplashWindow.h"
-#include "SplashApp.h"
+#include "splashwindow.h"
+#include "splashapp.h"
 
 #include <QPixmap>
 #include <QCursor>
@@ -136,4 +136,4 @@ void SplashApp::adoptScreen(QScreen* screen)
     });
 }
 
-#include "SplashApp.moc"
+#include "splashapp.moc"

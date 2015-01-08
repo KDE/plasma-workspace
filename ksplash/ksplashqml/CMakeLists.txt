@@ -4,8 +4,8 @@ add_subdirectory(themes)
 
 set(ksplashqml_SRCS
     main.cpp
-    SplashApp.cpp
-    SplashWindow.cpp
+    splashapp.cpp
+    splashwindow.cpp
    )
 
 add_executable(ksplashqml ${ksplashqml_SRCS})
