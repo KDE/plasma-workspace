@@ -23,6 +23,7 @@
 #include <QDBusMetaType>
 #include <QDBusPendingCall>
 #include <QProcessEnvironment>
+#include <QDebug>
 
 typedef QMap<QString,QString> EnvMap;
 Q_DECLARE_METATYPE(EnvMap)
@@ -39,7 +40,7 @@ int main(int argc, char **argv)
     }
 
     QDBusMessage msg = QDBusMessage::createMethodCall(QStringLiteral("org.freedesktop.DBus"),
-                                                      QStringLiteral("/"),
+                                                      QStringLiteral("/org/freedesktop/DBus"),
                                                       QStringLiteral("org.freedesktop.DBus"),
                                                       QStringLiteral("UpdateActivationEnvironment"));
     qDBusRegisterMetaType<EnvMap>();
@@ -47,5 +48,8 @@ int main(int argc, char **argv)
 
     QDBusPendingCall reply = QDBusConnection::sessionBus().asyncCall(msg);
     reply.waitForFinished();
+    if (reply.isError()) {
+	qDebug() << reply.error().name() << reply.error().message();
+    }
     return reply.isError() ? 1 : 0;
 }
