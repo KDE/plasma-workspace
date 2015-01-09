@@ -326,6 +326,10 @@ void PanelView::setDistance(int dist)
 
 void PanelView::setVisibilityMode(PanelView::VisibilityMode mode)
 {
+    if (m_visibilityMode == mode) {
+        return;
+    }
+
     m_visibilityMode = mode;
 
     if (mode == LetWindowsCover) {
@@ -339,8 +343,10 @@ void PanelView::setVisibilityMode(PanelView::VisibilityMode mode)
         connect(containment(), &Plasma::Applet::activated, this, &PanelView::showTemporarily);
     }
 
-    if (config().isValid())
+    if (config().isValid()) {
         config().writeEntry("panelVisibility", (int)mode);
+        m_corona->requestApplicationConfigSync();
+    }
 
     updateStruts();
 
