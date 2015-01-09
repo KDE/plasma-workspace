@@ -48,9 +48,11 @@
 #include <KTextEditor/View>
 #include <KToolBar>
 #include <KWindowSystem>
+#include <KConfigGroup>
+#include <KPluginInfo>
 
-#include <Plasma/Package>
-#include <Plasma/PluginLoader>
+#include <KPackage/Package>
+#include <KPackage/PackageLoader>
 
 //TODO:
 // interative help?
@@ -378,7 +380,7 @@ void InteractiveConsole::populateTemplatesMenu()
 
     QMapIterator<QString, KService::Ptr> it(sorted);
 
-    Plasma::Package package = Plasma::PluginLoader::self()->loadPackage("Plasma/LayoutTemplate");
+    KPackage::Package package = KPackage::PackageLoader::self()->loadPackage("Plasma/LayoutTemplate");
 
     while (it.hasNext()) {
         it.next();
@@ -398,7 +400,7 @@ void InteractiveConsole::populateTemplatesMenu()
 
 void InteractiveConsole::loadTemplate(QAction *action)
 {
-    Plasma::Package package = Plasma::PluginLoader::self()->loadPackage("Plasma/LayoutTemplate");
+    KPackage::Package package = KPackage::PackageLoader::self()->loadPackage("Plasma/LayoutTemplate");
 
     const QString pluginName = action->data().toString();
     const QString path = QStandardPaths::locate(QStandardPaths::GenericDataLocation
