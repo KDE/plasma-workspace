@@ -25,7 +25,8 @@
 #include <QAction>
 #include <KActionCollection>
 
-#include <Plasma/Package>
+#include <KPackage/Package>
+#include <KPackage/PackageLoader>
 #include <Plasma/PluginLoader>
 
 PlasmaWindowedCorona::PlasmaWindowedCorona(QObject *parent)
@@ -33,9 +34,9 @@ PlasmaWindowedCorona::PlasmaWindowedCorona(QObject *parent)
       m_containment(0),
       m_hasStatusNotifier(false)
 {
-    Plasma::Package package = Plasma::PluginLoader::self()->loadPackage("Plasma/Shell");
+    KPackage::Package package = KPackage::PackageLoader::self()->loadPackage("Plasma/Shell");
     package.setPath("org.kde.plasma.desktop");
-    setPackage(package);
+    setKPackage(package);
     //QMetaObject::invokeMethod(this, "load", Qt::QueuedConnection);
     load();
 }
