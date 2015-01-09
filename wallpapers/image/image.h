@@ -28,8 +28,9 @@
 #include <QStringList>
 #include <QObject>
 #include <QPersistentModelIndex>
+#include <QDateTime>
 
-#include <Plasma/Package>
+#include <KPackage/Package>
 
 
 class QPropertyAnimation;
@@ -92,7 +93,7 @@ class Image : public QObject
         void setWidth(int w);
         void setHeight(int h);
 
-        Plasma::Package *package();
+        KPackage::Package *package();
 
         QAbstractItemModel* wallpaperModel();
 
@@ -105,7 +106,7 @@ class Image : public QObject
         QStringList slidePaths() const;
         void setSlidePaths(const QStringList &slidePaths);
 
-        void findPreferedImageInPackage(Plasma::Package &package);
+        void findPreferedImageInPackage(KPackage::Package &package);
 
     public Q_SLOTS:
         void nextSlide();
@@ -161,7 +162,7 @@ class Image : public QObject
         QSize m_targetSize;
 
         RenderingMode m_mode;
-        Plasma::Package m_wallpaperPackage;
+        KPackage::Package m_wallpaperPackage;
         QStringList m_slideshowBackgrounds;
         QStringList m_unseenSlideshowBackgrounds;
         QStringList m_slidePaths;

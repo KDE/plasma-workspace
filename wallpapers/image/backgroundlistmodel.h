@@ -33,7 +33,7 @@
 
 #include <kimagecache.h>
 
-#include <Plasma/PackageStructure>
+#include <KPackage/PackageStructure>
 
 class QEventLoop;
 class KProgressDialog;
@@ -82,7 +82,7 @@ public:
 
     virtual int rowCount(const QModelIndex &parent = QModelIndex()) const;
     virtual QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const;
-    Plasma::Package package(int index) const;
+    KPackage::Package package(int index) const;
 
     void reload();
     void reload(const QStringList &selected);
@@ -104,10 +104,10 @@ protected Q_SLOTS:
     void processPaths(const QStringList &paths);
 
 private:
-    QSize bestSize(const Plasma::Package &package) const;
+    QSize bestSize(const KPackage::Package &package) const;
 
     QPointer<Image> m_wallpaper;
-    QList<Plasma::Package> m_packages;
+    QList<KPackage::Package> m_packages;
     QSet<QString> m_removableWallpapers;
     QHash<QString, QSize> m_sizeCache;
     QHash<QUrl, QPersistentModelIndex> m_previewJobs;
