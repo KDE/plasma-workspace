@@ -38,11 +38,6 @@
 class QEventLoop;
 class KProgressDialog;
 
-namespace Plasma
-{
-    class Package;
-} // namespace Plasma
-
 class Image;
 
 class ImageSizeFinder : public QObject, public QRunnable

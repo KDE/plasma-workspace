@@ -48,6 +48,8 @@
 #include <KScreen/GetConfigOperation>
 #include <KScreen/Output>
 
+#include <KPackage/PackageLoader>
+
 #include "config-ktexteditor.h" // HAVE_KTEXTEDITOR
 
 #include "alternativeshelper.h"
@@ -81,7 +83,7 @@ ShellCorona::ShellCorona(QObject *parent)
     qmlRegisterUncreatableType<DesktopView>("org.kde.plasma.shell", 2, 0, "Desktop", "It is not possible to create objects of type Desktop");
     qmlRegisterUncreatableType<PanelView>("org.kde.plasma.shell", 2, 0, "Panel", "It is not possible to create objects of type Panel");
 
-    m_lookAndFeelPackage = Plasma::PluginLoader::self()->loadPackage("Plasma/LookAndFeel");
+    m_lookAndFeelPackage = KPackage::PackageLoader::self()->loadPackage("Plasma/LookAndFeel");
     KConfigGroup cg(KSharedConfig::openConfig("kdeglobals"), "KDE");
     const QString packageName = cg.readEntry("LookAndFeelPackage", QString());
     if (!packageName.isEmpty()) {
@@ -203,7 +205,7 @@ ShellCorona::~ShellCorona()
     qDeleteAll(m_panelViews);
 }
 
-Plasma::Package ShellCorona::lookAndFeelPackage()
+KPackage::Package ShellCorona::lookAndFeelPackage()
 {
     return m_lookAndFeelPackage;
 }
@@ -215,10 +217,10 @@ void ShellCorona::setShell(const QString &shell)
     }
 
     m_shell = shell;
-    Plasma::Package package = Plasma::PluginLoader::self()->loadPackage("Plasma/Shell");
+    KPackage::Package package = KPackage::PackageLoader::self()->loadPackage("Plasma/Shell");
     package.setPath(shell);
     package.setAllowExternalPaths(true);
-    setPackage(package);
+    setKPackage(package);
     m_desktopDefaultsConfig = KConfigGroup(KSharedConfig::openConfig(package.filePath("defaults")), "Desktop");
 
         const QString themeGroupKey = QStringLiteral("Theme");
@@ -1308,7 +1310,7 @@ void ShellCorona::populateAddPanelsMenu()
     }
 
     QMapIterator<QString, QPair<KPluginInfo, KService::Ptr> > it(sorted);
-    Plasma::Package package = Plasma::PluginLoader::self()->loadPackage("Plasma/LayoutTemplate");
+    KPackage::Package package = KPackage::PackageLoader::self()->loadPackage("Plasma/LayoutTemplate");
     while (it.hasNext()) {
         it.next();
         QPair<KPluginInfo, KService::Ptr> pair = it.value();

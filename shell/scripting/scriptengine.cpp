@@ -37,10 +37,11 @@
 //#include <kemailsettings.h> // no camelcase include
 
 #include <Plasma/Applet>
-#include <Plasma/Containment>
-#include <Plasma/Package>
 #include <Plasma/PluginLoader>
+#include <Plasma/Containment>
 #include <qstandardpaths.h>
+#include <KPackage/Package>
+#include <KPackage/PackageLoader>
 
 #include "appinterface.h"
 #include "containment.h"
@@ -447,7 +448,7 @@ QScriptValue ScriptEngine::loadTemplate(QScriptContext *context, QScriptEngine *
         return false;
     }
 
-    Plasma::Package package = Plasma::PluginLoader::self()->loadPackage("Plasma/LayoutTemplate");
+    KPackage::Package package = KPackage::PackageLoader::self()->loadPackage("Plasma/LayoutTemplate");
     KPluginInfo info(offers.first());
 
     const QString path = QStandardPaths::locate(QStandardPaths::GenericDataLocation, package.defaultPackageRoot() + info.pluginName() + "/metadata.desktop");
