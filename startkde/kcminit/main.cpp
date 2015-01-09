@@ -28,19 +28,17 @@
 #include <QFile>
 #include <QTimer>
 #include <QLibrary>
+#include <QtDBus/QtDBus>
+#include <QDebug>
 
 #include <kapplication.h>
 #include <kcmdlineargs.h>
 #include <k4aboutdata.h>
 #include <kservice.h>
-#include <kdebug.h>
 #include <kconfig.h>
 #include <kconfiggroup.h>
-#include <klocale.h>
-#include <QtDBus/QtDBus>
-
+#include <klocalizedstring.h>
 #include <kservicetypetrader.h>
-// #include <kdefakes.h>
 
 static int ready[ 2 ];
 static bool startup = false;
@@ -65,31 +63,26 @@ static void waitForReady()
 
 bool KCMInit::runModule(const QString &libName, KService::Ptr service)
 {
-    QLibrary lib(libName);
-    if (lib.load()) {
-        const QVariant tmp = service->property("X-KDE-Init-Symbol", QVariant::String);
-        QString kcminit;
-        if( tmp.isValid() )
-        {
-            kcminit = tmp.toString();
-            if( !kcminit.startsWith( QLatin1String( "kcminit_" ) ) )
-                kcminit = "kcminit_" + kcminit;
-        }
-        else
-            kcminit = "kcminit_" + libName;
+    const QVariant tmp = service->property("X-KDE-Init-Symbol", QVariant::String);
+    QString kcminit;
+    if( tmp.isValid() )
+    {
+        kcminit = tmp.toString();
+        if( !kcminit.startsWith( QLatin1String( "kcminit_" ) ) )
+            kcminit = "kcminit_" + kcminit;
+    }
+    else
+        kcminit = "kcminit_" + libName;
 
-        // get the kcminit_ function
-        QFunctionPointer init = lib.resolve(kcminit.toUtf8().constData());
-        if (init) {
-            // initialize the module
-            kDebug(1208) << "Initializing " << libName << ": " << kcminit;
-
-            void (*func)() = (void(*)())init;
-            func();
-            return true;
-        } else {
-            kDebug(1208) << "Module" << libName << "does not actually have a kcminit function";
-        }
+    // get the kcminit_ function
+    QFunctionPointer init = QLibrary::resolve(KPluginLoader::findPlugin(libName), kcminit.toUtf8().constData());
+    if (init) {
+        // initialize the module
+        qDebug() << "Initializing " << libName << ": " << kcminit;
+        init();
+        return true;
+    } else {
+        qWarning() << "Module" << libName << "was not found or does not actually have a kcminit function";
     }
     return false;
 }
@@ -117,6 +110,7 @@ void KCMInit::runModules( int phase )
 
       // see ksmserver's README for the description of the phases
       const QVariant vphase = service->property("X-KDE-Init-Phase", QVariant::Int );
+
       int libphase = 1;
       if( vphase.isValid() )
           libphase = vphase.toInt();
@@ -157,7 +151,7 @@ KCMInit::KCMInit( KCmdLineArgs* args )
 
     KService::Ptr serv = KService::serviceByStorageId( module );
     if ( !serv || serv->library().isEmpty() ) {
-      kError(1208) << i18n("Module %1 not found", module) << endl;
+      qCritical() << i18n("Module %1 not found", module);
       return;
     } else {
       list.append(serv);
