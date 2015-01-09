@@ -38,8 +38,8 @@
 
 #include <kdeclarative/qmlobject.h>
 
-#include <Plasma/Package>
-#include <Plasma/PluginLoader>
+#include <KPackage/Package>
+#include <KPackage/PackageLoader>
 
 #include "appadaptor.h"
 
@@ -81,7 +81,7 @@ View::View(QWindow *)
     m_qmlObj->setInitializationDelayed(true);
     connect(m_qmlObj, &KDeclarative::QmlObject::finished, this, &View::objectIncubated);
 
-    Plasma::Package package = Plasma::PluginLoader::self()->loadPackage("Plasma/LookAndFeel");
+    KPackage::Package package = KPackage::PackageLoader::self()->loadPackage("Plasma/LookAndFeel");
     KConfigGroup cg(KSharedConfig::openConfig("kdeglobals"), "KDE");
     const QString packageName = cg.readEntry("LookAndFeelPackage", QString());
     if (!packageName.isEmpty()) {
