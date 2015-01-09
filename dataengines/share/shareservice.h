@@ -22,7 +22,7 @@
 
 #include "shareengine.h"
 
-#include <Plasma/Package>
+#include <KPackage/Package>
 #include <Plasma/Service>
 #include <Plasma/ServiceJob>
 
@@ -64,7 +64,7 @@ public Q_SLOTS:
 private:
     QScopedPointer<KJSEmbed::Engine> m_engine;
     ShareProvider *m_provider;
-    Plasma::Package m_package;
+    KPackage::Package m_package;
 };
 
 #endif // SHARE_SERVICE

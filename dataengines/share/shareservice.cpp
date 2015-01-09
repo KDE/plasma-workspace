@@ -24,7 +24,7 @@
 #include <kjsembed/kjsembed.h>
 #include <kjs/JSVariableObject.h>
 
-#include <Plasma/PluginLoader>
+#include <KPackage/PackageLoader>
 
 
 #include "shareservice.h"
@@ -75,7 +75,7 @@ void ShareJob::start()
         return;
     }
 
-    m_package = Plasma::PluginLoader::self()->loadPackage("Plasma/ShareProvider");
+    m_package = KPackage::PackageLoader::self()->loadPackage("Plasma/ShareProvider");
     m_package.setPath(path);
     if (m_package.isValid()) {
         const QString mainscript = m_package.filePath("mainscript");

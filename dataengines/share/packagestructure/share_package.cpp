@@ -18,8 +18,7 @@
  ***************************************************************************/
 
 #include <KLocalizedString>
-#include <Plasma/Applet>
-#include <Plasma/Package>
+#include <KPackage/Package>
 
 #include "share_package.h"
 #include "config-workspace.h"
@@ -29,9 +28,9 @@ SharePackage::SharePackage(QObject *, QVariantList)
 {
 }
 
-void SharePackage::initPackage(Plasma::Package* package)
+void SharePackage::initPackage(KPackage::Package* package)
 {
-//    Plasma::PackageStructure::initPackage(package);
+//    KPackage::PackageStructure::initPackage(package);
     package->addDirectoryDefinition("scripts", "code", i18n("Executable Scripts"));
     QStringList mimetypes;
     mimetypes << "text/*";
@@ -39,10 +38,9 @@ void SharePackage::initPackage(Plasma::Package* package)
 
     package->addFileDefinition("mainscript", "code/main.js", i18n("Main Script File"));
     package->setDefaultPackageRoot(PLASMA_RELATIVE_DATA_INSTALL_DIR "shareprovider/");
-    package->setServicePrefix("plasma-share-");
 }
 
-K_EXPORT_PLASMA_PACKAGE_WITH_JSON(SharePackage, "plasma-packagestructure-share.json")
+K_EXPORT_KPACKAGE_PACKAGE_WITH_JSON(SharePackage, "plasma-packagestructure-share.json")
 
 #include "share_package.moc"
 
