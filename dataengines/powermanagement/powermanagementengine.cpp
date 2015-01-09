@@ -150,12 +150,15 @@ bool PowermanagementEngine::sourceRequestEvent(const QString &name)
                     SLOT(updateBatteryChargeState(int,QString)));
             connect(battery, SIGNAL(chargePercentChanged(int,QString)), this,
                     SLOT(updateBatteryChargePercent(int,QString)));
+            connect(battery, SIGNAL(energyChanged(double,QString)),
+                    this, SLOT(updateBatteryEnergy(double,QString)));
             connect(battery, SIGNAL(presentStateChanged(bool,QString)), this,
                     SLOT(updateBatteryPresentState(bool,QString)));
 
             // Set initial values
             updateBatteryChargeState(battery->chargeState(), deviceBattery.udi());
             updateBatteryChargePercent(battery->chargePercent(), deviceBattery.udi());
+            updateBatteryEnergy(battery->energy(), deviceBattery.udi());
             updateBatteryPresentState(battery->isPresent(), deviceBattery.udi());
             updateBatteryPowerSupplyState(battery->isPowerSupply(), deviceBattery.udi());
 
@@ -354,6 +357,12 @@ void PowermanagementEngine::updateBatteryChargePercent(int newValue, const QStri
 {
     const QString source = m_batterySources[udi];
     setData(source, "Percent", newValue);
+}
+
+void PowermanagementEngine::updateBatteryEnergy(double newValue, const QString &udi)
+{
+    const QString source = m_batterySources[udi];
+    setData(source, "Energy", newValue);
 }
 
 void PowermanagementEngine::updateBatteryPowerSupplyState(bool newState, const QString& udi)

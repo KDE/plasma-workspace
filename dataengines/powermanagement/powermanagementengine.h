@@ -53,6 +53,7 @@ private Q_SLOTS:
     void updateBatteryChargeState(int newState, const QString& udi);
     void updateBatteryPresentState(bool newState, const QString& udi);
     void updateBatteryChargePercent(int newValue, const QString& udi);
+    void updateBatteryEnergy(double newValue, const QString& udi);
     void updateBatteryPowerSupplyState(bool newState, const QString& udi);
     void updateAcPlugState(bool onBattery);
     void updateBatteryNames();

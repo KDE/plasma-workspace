@@ -22,8 +22,9 @@
 var powermanagementDisabled = false;
 
 function updateCumulative() {
-    var sum = 0;
     var count = 0;
+    var energy = 0;
+    var totalEnergy = 0;
     var charged = true;
     var plugged = false;
     for (var i=0; i<batteries.count; i++) {
@@ -32,7 +33,8 @@ function updateCumulative() {
           continue;
         }
         if (b["Plugged in"]) {
-            sum += b["Percent"];
+            energy += b["Energy"];
+            totalEnergy += b["Energy"] / (b["Percent"] / 100) * (b["Capacity"]/100);
             plugged = true;
         }
         if (b["State"] != "FullyCharged") {
@@ -42,7 +44,7 @@ function updateCumulative() {
     }
 
     if (count > 0) {
-      batteries.cumulativePercent = Math.round(sum/count);
+      batteries.cumulativePercent = Math.round(energy/totalEnergy*100);
     } else {
         // We don't have any power supply batteries
         // Use the lowest value from any battery
