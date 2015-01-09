@@ -447,6 +447,8 @@ void PowermanagementEngine::deviceAdded(const QString& udi)
                     SLOT(updateBatteryChargeState(int,QString)));
             connect(battery, SIGNAL(chargePercentChanged(int,QString)), this,
                     SLOT(updateBatteryChargePercent(int,QString)));
+            connect(battery, SIGNAL(energyChanged(double,QString)),
+                    this, SLOT(updateBatteryEnergy(double,QString)));
             connect(battery, SIGNAL(presentStateChanged(bool,QString)), this,
                     SLOT(updateBatteryPresentState(bool,QString)));
             connect(battery, SIGNAL(powerSupplyStateChanged(bool,QString)), this,
@@ -455,6 +457,7 @@ void PowermanagementEngine::deviceAdded(const QString& udi)
             // Set initial values
             updateBatteryChargeState(battery->chargeState(), device.udi());
             updateBatteryChargePercent(battery->chargePercent(), device.udi());
+            updateBatteryEnergy(battery->energy(), deviceBattery.udi());
             updateBatteryPresentState(battery->isPresent(), device.udi());
             updateBatteryPowerSupplyState(battery->isPowerSupply(), device.udi());
 
