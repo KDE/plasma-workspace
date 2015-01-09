@@ -23,7 +23,7 @@ target_link_libraries(screenlocker_kcm
     Qt5::QuickWidgets
 )
 
-kservice_desktop_to_json(screenlocker_kcm screenlocker.desktop)
+kcoreaddons_desktop_to_json(screenlocker_kcm screenlocker.desktop)
 
 install(
     TARGETS
