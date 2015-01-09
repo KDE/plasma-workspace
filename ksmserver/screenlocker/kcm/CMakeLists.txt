@@ -18,8 +18,7 @@ target_link_libraries(screenlocker_kcm
     KF5::ConfigWidgets
     KF5::I18n
     KF5::Service
-    KF5::Plasma
-    KF5::PlasmaQuick
+    KF5::Package
     Qt5::QuickWidgets
 )
 

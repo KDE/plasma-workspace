@@ -33,8 +33,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include <QMessageBox>
 #include <QStandardItemModel>
 
-#include <Plasma/Package>
-#include <Plasma/PluginLoader>
+#include <KPackage/Package>
+#include <KPackage/PackageLoader>
 
 class ScreenLockerKcmForm : public QWidget, public Ui::ScreenLockerKcmForm
 {
@@ -73,7 +73,7 @@ ScreenLockerKcm::ScreenLockerKcm(QWidget *parent, const QVariantList &args)
     m_quickView = new QQuickView();
     QWidget *widget = QWidget::createWindowContainer(m_quickView, this);
     m_quickView->setResizeMode(QQuickView::SizeRootObjectToView);
-    Plasma::Package package = Plasma::PluginLoader::self()->loadPackage("Plasma/Generic");
+    KPackage::Package package = KPackage::PackageLoader::self()->loadPackage("Plasma/Generic");
     package.setDefaultPackageRoot("plasma/kcms");
     package.setPath("screenlocker_kcm");
     m_quickView->rootContext()->setContextProperty("kcm", this);
@@ -83,9 +83,9 @@ ScreenLockerKcm::ScreenLockerKcm(QWidget *parent, const QVariantList &args)
     layout->addWidget(widget);
 }
 
-QList<Plasma::Package> ScreenLockerKcm::availablePackages(const QString &component) const
+QList<KPackage::Package> ScreenLockerKcm::availablePackages(const QString &component) const
 {
-    QList<Plasma::Package> packages;
+    QList<KPackage::Package> packages;
     QStringList paths;
     const QStringList dataPaths = QStandardPaths::standardLocations(QStandardPaths::GenericDataLocation);
 
@@ -95,9 +95,9 @@ QList<Plasma::Package> ScreenLockerKcm::availablePackages(const QString &compone
     }
 
     for (const QString &path : paths) {
-        Plasma::Package pkg = Plasma::PluginLoader::self()->loadPackage("Plasma/LookAndFeel");
+        KPackage::Package pkg = KPackage::PackageLoader::self()->loadPackage("Plasma/LookAndFeel");
         pkg.setPath(path);
-        pkg.setFallbackPackage(Plasma::Package());
+        pkg.setFallbackPackage(KPackage::Package());
         if (component.isEmpty() || !pkg.filePath(component.toUtf8()).isEmpty()) {
             packages << pkg;
         }
@@ -110,7 +110,7 @@ void ScreenLockerKcm::load()
 {
     KCModule::load();
 
-    m_package = Plasma::PluginLoader::self()->loadPackage("Plasma/LookAndFeel");
+    m_package = KPackage::PackageLoader::self()->loadPackage("Plasma/LookAndFeel");
     KConfigGroup cg(KSharedConfig::openConfig("kdeglobals"), "KDE");
     const QString packageName = cg.readEntry("LookAndFeelPackage", QString());
     if (!packageName.isEmpty()) {
@@ -119,15 +119,15 @@ void ScreenLockerKcm::load()
 
     QString currentPlugin = KScreenSaverSettings::theme();
     if (currentPlugin.isEmpty()) {
-        currentPlugin = m_package.metadata().pluginName();
+        currentPlugin = m_package.metadata().pluginId();
     }
     setSelectedPlugin(currentPlugin);
 
     m_model->clear();
-    const QList<Plasma::Package> pkgs = availablePackages("lockscreenmainscript");
-    for (const Plasma::Package &pkg : pkgs) {
+    const QList<KPackage::Package> pkgs = availablePackages("lockscreenmainscript");
+    for (const KPackage::Package &pkg : pkgs) {
         QStandardItem* row = new QStandardItem(pkg.metadata().name());
-        row->setData(pkg.metadata().pluginName(), PluginNameRole);
+        row->setData(pkg.metadata().pluginId(), PluginNameRole);
         row->setData(pkg.filePath("previews", "lockscreen.png"), ScreenhotRole);
         m_model->appendRow(row);
     }
