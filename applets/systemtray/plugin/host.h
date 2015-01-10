@@ -50,6 +50,7 @@ class Host : public QObject
     Q_PROPERTY(QAbstractItemModel* allTasks READ allTasks CONSTANT)
 
     Q_PROPERTY(QAbstractItemModel* availablePlasmoids READ availablePlasmoids CONSTANT)
+    Q_PROPERTY(QStringList defaultPlasmoids READ defaultPlasmoids CONSTANT)
     Q_PROPERTY(QStringList plasmoidsAllowed READ plasmoidsAllowed WRITE setPlasmoidsAllowed NOTIFY plasmoidsAllowedChanged)
 
     Q_PROPERTY(QStringList categories READ categories NOTIFY categoriesChanged)
@@ -89,6 +90,7 @@ public Q_SLOTS:
     QAbstractItemModel* shownTasks();
     QAbstractItemModel* allTasks();
     QAbstractItemModel* availablePlasmoids();
+    QStringList defaultPlasmoids() const;
     QStringList categories() const;
 
 

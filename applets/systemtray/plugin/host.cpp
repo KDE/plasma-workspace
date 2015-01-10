@@ -332,6 +332,18 @@ QAbstractItemModel* Host::availablePlasmoids()
     return d->availablePlasmoidsModel;
 }
 
+QStringList Host::defaultPlasmoids() const
+{
+    QStringList ret;
+    const QString constraint = QStringLiteral("[X-Plasma-NotificationArea] == true and [X-KDE-PluginInfo-EnabledByDefault] == true");
+    const KPluginInfo::List applets = KPluginInfo::fromServices(KServiceTypeTrader::self()->query("Plasma/Applet", constraint));
+
+    foreach (const KPluginInfo &info, applets) {
+        ret += info.pluginName();
+    }
+    return ret;
+}
+
 
 bool HostPrivate::showTask(Task *task) const {
     return task->shown() && task->status() != SystemTray::Task::Passive;

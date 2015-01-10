@@ -111,9 +111,20 @@ Item {
         host.setCategoryShown(SystemTray.Task.Unknown, plasmoid.configuration.miscellaneousShown);
     }
 
+    function checkInitialized(plugins)
+    {
+//         this "uninitialized" comes from the main.xml file, so that we know
+//         it needs to be initialized at runtime
+        if (plugins.length === 1 && plugins[0] === "uninitialized") {
+            plugins = host.defaultPlasmoids;
+            plasmoid.configuration.extraItems = plugins;
+        }
+        return plugins;
+    }
+
     SystemTray.Host {
         id: host
-        plasmoidsAllowed: plasmoid.configuration.extraItems
+        plasmoidsAllowed: checkInitialized(plasmoid.configuration.extraItems)
         rootItem: plasmoid
         forcedShownItems: plasmoid.configuration.shownItems
         forcedHiddenItems: plasmoid.configuration.hiddenItems
