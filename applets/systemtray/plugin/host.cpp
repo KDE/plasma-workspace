@@ -65,7 +65,7 @@ public:
           shownTasksModel(new TaskListModel(host)),
           hiddenTasksModel(new TaskListModel(host)),
           allTasksModel(new TaskListModel(host)),
-          availablePlasmoidsModel(0),
+          availablePlasmoidsModel(Q_NULLPTR),
           plasmoidProtocol(new SystemTray::PlasmoidProtocol(host))
     {
     }
