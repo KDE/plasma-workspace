@@ -107,47 +107,6 @@ function stringForBatteryState(batteryData) {
     }
 }
 
-function iconForBattery(batteryData,pluggedIn) {
-    switch(batteryData["Type"]) {
-        case "Mouse":
-            return "input-mouse-battery";
-        case "Keyboard":
-            return "input-keyboard-battery";
-        case "Pda":
-            return "phone-battery";
-        case "Phone":
-            return "phone-battery";
-        case "UPS":
-            return "battery-ups";
-        default: // Primary and UPS
-            var p = batteryData["Percent"];
-
-            var fill;
-            if (p >= 90) {
-                fill = "100";
-            } else if (p >= 70) {
-                fill = "080";
-            } else if (p >= 50) {
-                fill = "060";
-            } else if (p >= 30) {
-                fill = "040";
-            } else if (p >= 10) {
-                fill = "caution";
-            } else {
-                fill = "low";
-            }
-
-            if (pluggedIn && batteryData["Is Power Supply"]) {
-                return "battery-charging-" + fill;
-            } else {
-                if (p <= 5) {
-                    return "dialog-warning"
-                }
-                return "battery-" + fill;
-            }
-    }
-}
-
 function updateTooltip(remainingTime) {
     if (powermanagementDisabled) {
         batteries.tooltipSubText = i18n("Power management is disabled");
