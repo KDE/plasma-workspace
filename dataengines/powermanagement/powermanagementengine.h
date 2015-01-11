@@ -43,7 +43,6 @@ public:
     ~PowermanagementEngine();
     QStringList sources() const;
     Plasma::Service* serviceForSource(const QString &source);
-
 protected:
     bool sourceRequestEvent(const QString &name);
     bool updateSourceEvent(const QString &source);
@@ -57,6 +56,7 @@ private Q_SLOTS:
     void updateBatteryPowerSupplyState(bool newState, const QString& udi);
     void updateAcPlugState(bool onBattery);
     void updateBatteryNames();
+    void updateOverallBattery();
 
     void deviceRemoved(const QString& udi);
     void deviceAdded(const QString& udi);
@@ -69,11 +69,11 @@ private Q_SLOTS:
 private:
     QString batteryType(const Solid::Battery *battery) const;
     QStringList basicSourceNames() const;
+    QString batteryState2String(int newState) const;
 
     QStringList m_sources;
 
     QHash<QString, QString> m_batterySources;  // <udi, Battery0>
-
 };
 
 

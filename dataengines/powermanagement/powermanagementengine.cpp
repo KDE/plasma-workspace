@@ -169,6 +169,7 @@ bool PowermanagementEngine::sourceRequestEvent(const QString &name)
         }
 
         updateBatteryNames();
+        updateOverallBattery();
 
         setData("Battery", "Has Battery", !batterySources.isEmpty());
         if (!batterySources.isEmpty()) {
@@ -330,7 +331,7 @@ Plasma::Service* PowermanagementEngine::serviceForSource(const QString &source)
     return 0;
 }
 
-void PowermanagementEngine::updateBatteryChargeState(int newState, const QString& udi)
+QString PowermanagementEngine::batteryState2String(int newState) const
 {
     QString state("Unknown");
     if (newState == Solid::Battery::NoCharge) {
@@ -343,8 +344,14 @@ void PowermanagementEngine::updateBatteryChargeState(int newState, const QString
         state = "FullyCharged";
     }
 
+    return state;
+}
+
+void PowermanagementEngine::updateBatteryChargeState(int newState, const QString& udi)
+{
     const QString source = m_batterySources[udi];
-    setData(source, "State", state);
+    setData(source, "State", batteryState2String(newState));
+    updateOverallBattery();
 }
 
 void PowermanagementEngine::updateBatteryPresentState(bool newState, const QString& udi)
@@ -357,6 +364,7 @@ void PowermanagementEngine::updateBatteryChargePercent(int newValue, const QStri
 {
     const QString source = m_batterySources[udi];
     setData(source, "Percent", newValue);
+    updateOverallBattery();
 }
 
 void PowermanagementEngine::updateBatteryEnergy(double newValue, const QString &udi)
@@ -402,6 +410,38 @@ void PowermanagementEngine::updateBatteryNames()
     }
 }
 
+void PowermanagementEngine::updateOverallBattery()
+{
+    const QList<Solid::Device> listBattery = Solid::Device::listFromType(Solid::DeviceInterface::Battery);
+    double energy = 0;
+    double totalEnergy = 0;
+    bool allFullyCharged = true;
+    bool charging = false;
+
+    foreach (const Solid::Device &deviceBattery, listBattery) {
+        const Solid::Battery* battery = deviceBattery.as<Solid::Battery>();
+
+        if (battery->isPowerSupply()) {
+            energy += battery->energy();
+            totalEnergy += battery->energy() / (battery->chargePercent()/100.0) * (battery->capacity()/100.0);
+            allFullyCharged = allFullyCharged && (battery->chargeState() == Solid::Battery::FullyCharged);
+            charging = charging || (battery->chargeState() == Solid::Battery::Charging);
+        }
+    }
+
+    if (totalEnergy > 0) {
+        setData("Battery", "Percent", qRound(energy/totalEnergy*100));
+    }
+
+    if (allFullyCharged) {
+        setData("Battery", "State", "FullyCharged");
+    } else if (charging) {
+        setData("Battery", "State", "Charging");
+    } else {
+        setData("Battery", "State", "Discharging");
+    }
+}
+
 void PowermanagementEngine::updateAcPlugState(bool onBattery)
 {
     setData("AC Adapter", "Plugged in", !onBattery);
@@ -423,6 +463,8 @@ void PowermanagementEngine::deviceRemoved(const QString& udi)
         sourceNames.removeAll(source);
         setData("Battery", "Sources", sourceNames);
         setData("Battery", "Has Battery", !sourceNames.isEmpty());
+
+        updateOverallBattery();
     }
 }
 
@@ -457,7 +499,7 @@ void PowermanagementEngine::deviceAdded(const QString& udi)
             // Set initial values
             updateBatteryChargeState(battery->chargeState(), device.udi());
             updateBatteryChargePercent(battery->chargePercent(), device.udi());
-            updateBatteryEnergy(battery->energy(), deviceBattery.udi());
+            updateBatteryEnergy(battery->energy(), device.udi());
             updateBatteryPresentState(battery->isPresent(), device.udi());
             updateBatteryPowerSupplyState(battery->isPowerSupply(), device.udi());
 
@@ -470,6 +512,7 @@ void PowermanagementEngine::deviceAdded(const QString& udi)
             setData("Battery", "Has Battery", !sourceNames.isEmpty());
 
             updateBatteryNames();
+            updateOverallBattery();
         }
     }
 }
