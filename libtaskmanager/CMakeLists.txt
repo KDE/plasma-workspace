@@ -119,6 +119,6 @@ install(FILES taskmanagerrulesrc
 #   )
 
 #add_executable(tasksmodeltest ${tasksmodel_SRCS})
-#target_link_libraries(tasksmodeltest ${KDE4_KDEUI_LIBS} KF5::KIOCore KF5::KIOWidgets ${X11_LIBRARIES} taskmanager kephal)
+#target_link_libraries(tasksmodeltest  KF5::KIOCore KF5::KIOWidgets ${X11_LIBRARIES} taskmanager kephal)
 
 

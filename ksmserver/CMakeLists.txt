@@ -89,7 +89,7 @@ install(FILES ${CMAKE_CURRENT_BINARY_DIR}/KSMServerDBusInterfaceConfig.cmake
 set(kcheckrunning_SRCS
     kcheckrunning.cpp)
 
-kde4_add_executable( kcheckrunning ${kcheckrunning_SRCS})
+add_executable( kcheckrunning ${kcheckrunning_SRCS})
 
 target_link_libraries(kcheckrunning ${X11_LIBRARIES})
 

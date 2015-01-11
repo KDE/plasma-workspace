@@ -5,7 +5,7 @@ add_definitions(-DTRANSLATION_DOMAIN=\"plasma_containmentactions_switchwindow\")
 set(switchwindow_SRCS
     switch.cpp
 )
-kde4_add_ui_files(switchwindow_SRCS config.ui)
+ki18n_wrap_ui(switchwindow_SRCS config.ui)
 
 add_library(plasma_containmentactions_switchwindow MODULE ${switchwindow_SRCS})
 

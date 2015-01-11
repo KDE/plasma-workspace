@@ -12,7 +12,9 @@ set( testChromeBookmarks_SRCS testchromebookmarks.cpp
 )
 include_directories( ${CMAKE_CURRENT_SOURCE_DIR}/.. ${CMAKE_CURRENT_BINARY_DIR}/.. )
 add_executable( testChromeBookmarks ${testChromeBookmarks_SRCS} )
-#kde4_add_unit_test( testChromeBookmarks TESTNAME plasma-runner-bookmarks-TestChromeBookmarks ${testChromeBookmarks_SRCS} )
+#add_executable( testChromeBookmarksNAME plasma-runner-bookmarks-TestChromeBookmarks ${testChromeBookmarks_SRCS} )
+add_test(testChromeBookmarks testChromeBookmarks)
+ecm_mark_as_test(testChromeBookmarks)
 #add_test( testChromeBookmarks TESTNAME plasma-runner-bookmarks-TestChromeBookmarks ${testChromeBookmarks_SRCS} )
 target_link_libraries( testChromeBookmarks
     Qt5::Gui

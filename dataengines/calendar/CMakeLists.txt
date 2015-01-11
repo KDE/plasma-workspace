@@ -5,7 +5,7 @@ include_directories(
         ${Boost_INCLUDE_DIR}
 )
 
-set( CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${KDE4_ENABLE_EXCEPTIONS}" )
+kde_enable_exceptions()
 
 set(calendar_engine_srcs
     calendarengine.cpp
@@ -26,7 +26,7 @@ target_link_libraries(
     KF5::CoreAddons
     KF5::Plasma
     ${KDE4_KMIME_LIBS}
-    ${KDE4_KCALCORE_LIBS}
+    KF5::CalendarCore
     ${KDE4_KCALUTILS_LIBS}
 )
 

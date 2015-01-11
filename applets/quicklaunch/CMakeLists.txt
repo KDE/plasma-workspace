@@ -12,7 +12,7 @@ set(quicklaunch_SRCS
   quicklaunch.cpp
 )
 
-kde4_add_ui_files(quicklaunch_SRCS quicklaunchConfig.ui)
+ki18n_wrap_ui(quicklaunch_SRCS quicklaunchConfig.ui)
 add_library(plasma_applet_quicklaunch MODULE ${quicklaunch_SRCS})
 
 target_link_libraries(plasma_applet_quicklaunch

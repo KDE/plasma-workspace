@@ -1,5 +1,5 @@
 ########### next target ###############
-#set(EXTERNAL_LIBS KIOCore ${QT_QTSCRIPT_LIBRARY} KF5::Plasma Qt5::Sql)
+#set(EXTERNAL_LIBS KIOCore Qt5::Script KF5::Plasma Qt5::Sql)
 
 add_definitions(-DTRANSLATION_DOMAIN=\"plasma_runner_bookmarksrunner\")
 
