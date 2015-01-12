@@ -99,8 +99,8 @@ BreezeBlock {
         }
 
         BreezeLabel {
-            anchors.right: progressBar.right
             text: i18ndp("plasma_lookandfeel_org.kde.lookandfeel", "In 1 second", "In %1 seconds", root.remainingTime);
+            anchors.horizontalCenter: progressBar.horizontalCenter
         }
 
         state: mode
