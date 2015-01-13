@@ -69,7 +69,7 @@ private Q_SLOTS:
 private:
     QString batteryType(const Solid::Battery *battery) const;
     QStringList basicSourceNames() const;
-    QString batteryState2String(int newState) const;
+    QString batteryStateToString(int newState) const;
 
     QStringList m_sources;
 

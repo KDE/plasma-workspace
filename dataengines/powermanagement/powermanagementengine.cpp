@@ -331,7 +331,7 @@ Plasma::Service* PowermanagementEngine::serviceForSource(const QString &source)
     return 0;
 }
 
-QString PowermanagementEngine::batteryState2String(int newState) const
+QString PowermanagementEngine::batteryStateToString(int newState) const
 {
     QString state("Unknown");
     if (newState == Solid::Battery::NoCharge) {
@@ -350,7 +350,7 @@ QString PowermanagementEngine::batteryState2String(int newState) const
 void PowermanagementEngine::updateBatteryChargeState(int newState, const QString& udi)
 {
     const QString source = m_batterySources[udi];
-    setData(source, "State", batteryState2String(newState));
+    setData(source, "State", batteryStateToString(newState));
     updateOverallBattery();
 }
 
@@ -423,14 +423,16 @@ void PowermanagementEngine::updateOverallBattery()
 
         if (battery->isPowerSupply()) {
             energy += battery->energy();
-            totalEnergy += battery->energy() / (battery->chargePercent()/100.0) * (battery->capacity()/100.0);
+            totalEnergy += battery->energyFull();
             allFullyCharged = allFullyCharged && (battery->chargeState() == Solid::Battery::FullyCharged);
             charging = charging || (battery->chargeState() == Solid::Battery::Charging);
         }
     }
 
     if (totalEnergy > 0) {
-        setData("Battery", "Percent", qRound(energy/totalEnergy*100));
+        setData("Battery", "Percent", qRound(energy / totalEnergy * 100));
+    } else {
+        setData("Battery", "Percent", 0);
     }
 
     if (allFullyCharged) {
