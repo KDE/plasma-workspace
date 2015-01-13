@@ -32,6 +32,18 @@ Item {
     PlasmaComponents.TabBar {
         id: tabBar
         anchors.fill: parent
+        tabPosition: {
+            switch (plasmoid.location) {
+            case PlasmaCore.Types.LeftEdge:
+                return Qt.LeftEdge;
+            case PlasmaCore.Types.RightEdge:
+                return Qt.RightEdge;
+            case PlasmaCore.Types.TopEdge:
+                return Qt.TopEdge;
+            default:
+                return Qt.BottomEdge;
+            }
+        }
 
         Repeater {
             model: Activities.ActivityModel {
