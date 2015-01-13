@@ -92,14 +92,26 @@ View::View(QWindow *)
     m_qmlObj->engine()->rootContext()->setContextProperty("runnerWindow", this);
     m_qmlObj->completeInitialization();
 
-    auto controlScreen = [=](QScreen* screen) {
-        connect(screen, SIGNAL(geometryChanged(QRect)), SLOT(screenGeometryChanged()));
-        connect(screen, SIGNAL(destroyed(QObject*)), SLOT(screenGeometryChanged()));
+    auto screenRemoved = [=](QScreen* screen) {
+        if (screen == this->screen()) {
+            setScreen(qGuiApp->primaryScreen());
+            hide();
+        }
+    };
+
+    auto screenAdded = [=](QScreen* screen) {
+        connect(screen, &QScreen::geometryChanged, this, &View::screenGeometryChanged);
+#if (QT_VERSION < QT_VERSION_CHECK(5, 4, 0))
+        connect(screen, &QObject::destroyed, this, screenRemoved);
+#endif
         screenGeometryChanged();
     };
     foreach(QScreen* s, QGuiApplication::screens())
-        controlScreen(s);
-    connect(qApp, &QGuiApplication::screenAdded, this, controlScreen);
+        screenAdded(s);
+    connect(qApp, &QGuiApplication::screenAdded, this, screenAdded);
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
+    connect(qApp, &QGuiApplication::screenRemoved, this, screenRemoved);
+#endif
 
     connect(KWindowSystem::self(), &KWindowSystem::workAreaChanged, this, &View::resetScreenPos);
 
