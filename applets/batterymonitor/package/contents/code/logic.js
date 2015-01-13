@@ -1,7 +1,7 @@
 /*
  *   Copyright 2011 Sebastian Kügler <sebas@kde.org>
  *   Copyright 2012 Viranch Mehta <viranch.mehta@gmail.com>
- *   Copyright 2014 Kai Uwe Broulik <kde@privat.broulik.de>
+ *   Copyright 2014, 2015 Kai Uwe Broulik <kde@privat.broulik.de>
  *
  *   This program is free software; you can redistribute it and/or modify
  *   it under the terms of the GNU Library General Public License as
@@ -21,77 +21,19 @@
 
 var powermanagementDisabled = false;
 
-function updateCumulative() {
-    var count = 0;
-    var energy = 0;
-    var totalEnergy = 0;
-    var charged = true;
-    var plugged = false;
-    for (var i=0; i<batteries.count; i++) {
-        var b = batteries.get(i);
-        if (!b["Is Power Supply"]) {
-          continue;
-        }
-        if (b["Plugged in"]) {
-            energy += b["Energy"];
-            totalEnergy += b["Energy"] / (b["Percent"] / 100) * (b["Capacity"]/100);
-            plugged = true;
-        }
-        if (b["State"] != "FullyCharged") {
-            charged = false;
-        }
-        count++;
-    }
-
-    if (count > 0) {
-      batteries.cumulativePercent = Math.round(energy/totalEnergy*100);
-    } else {
-        // We don't have any power supply batteries
-        // Use the lowest value from any battery
-        if (batteries.count > 0) {
-            var b = lowestBattery();
-            batteries.cumulativePercent = b["Percent"];
-        } else {
-            batteries.cumulativePercent = 0;
-        }
-    }
-    batteries.cumulativePluggedin = plugged;
-    batteries.allCharged = charged;
-}
-
 function plasmoidStatus() {
     var status = PlasmaCore.Types.PassiveStatus;
     if (powermanagementDisabled) {
         status = PlasmaCore.Types.ActiveStatus;
     }
 
-    if (batteries.cumulativePluggedin) {
-        if (!batteries.allCharged) {
-            status = PlasmaCore.Types.ActiveStatus;
-        }
-    } else if (batteries.count > 0) { // in case your mouse gets low
-        if (batteries.cumulativePercent && batteries.cumulativePercent <= 10) {
-            status = PlasmaCore.Types.NeedsAttentionStatus;
-        }
+    if (pmSource.data["Battery"]["Percent"] <= 10) {
+        status = PlasmaCore.Types.NeedsAttentionStatus
+    } else if (pmSource.data["Battery"]["State"] !== "FullyCharged") {
+        status = PlasmaCore.Types.ActiveStatus
     }
+
     return status;
-}
-
-function lowestBattery() {
-    if (batteries.count == 0) {
-        return;
-    }
-
-    var lowestPercent = 100;
-    var lowestBattery;
-    for(var i=0; i<batteries.count; i++) {
-        var b = batteries.get(i);
-        if (b["Percent"] && b["Percent"] < lowestPercent) {
-            lowestPercent = b["Percent"];
-            lowestBattery = b;
-        }
-    }
-    return b;
 }
 
 function stringForBatteryState(batteryData) {
@@ -114,24 +56,24 @@ function updateTooltip(remainingTime) {
         batteries.tooltipSubText = "";
     }
 
-    if (batteries.count == 0) {
+    if (batteries.count === 0) {
         batteries.tooltipImage = "battery-missing";
         batteries.tooltipMainText = i18n("No Batteries Available");
-    } else if (batteries.allCharged) {
+    } else if (pmSource.data["Battery"]["State"] === "FullyCharged") {
         batteries.tooltipImage = "battery-100";
         batteries.tooltipMainText = i18n("Fully Charged");
     } else if (pmSource.data["AC Adapter"] && pmSource.data["AC Adapter"]["Plugged in"]) {
         batteries.tooltipImage = "battery-charging"
-        batteries.tooltipMainText = i18n("%1%. Charging", batteries.cumulativePercent);
+        batteries.tooltipMainText = i18n("%1%. Charging", pmSource.data["Battery"]["Percent"])
     } else {
         batteries.tooltipImage = "battery-discharging"
 
         if (remainingTime > 0) {
             batteries.tooltipMainText = i18nc("%1 is remaining time, %2 is percentage", "%1 Remaining (%2%)",
                                               KCoreAddons.Format.formatDuration(remainingTime, KCoreAddons.FormatTypes.HideSeconds),
-                                              batteries.cumulativePercent)
+                                              pmSource.data["Battery"]["Percent"])
         } else {
-            batteries.tooltipMainText = i18n("%1% Battery Remaining", batteries.cumulativePercent);
+            batteries.tooltipMainText = i18n("%1% Battery Remaining", pmSource.data["Battery"]["Percent"]);
         }
     }
 }

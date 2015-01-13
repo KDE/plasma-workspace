@@ -1,7 +1,7 @@
 /*
  *   Copyright 2011 Sebastian Kügler <sebas@kde.org>
  *   Copyright 2011 Viranch Mehta <viranch.mehta@gmail.com>
- *   Copyright 2013, 2014 Kai Uwe Broulik <kde@privat.broulik.de>
+ *   Copyright 2013-2015 Kai Uwe Broulik <kde@privat.broulik.de>
  *
  *   This program is free software; you can redistribute it and/or modify
  *   it under the terms of the GNU Library General Public License as
@@ -87,7 +87,6 @@ Item {
     }
 
     function updateLogic() {
-        Logic.updateCumulative();
         plasmoid.status = Logic.plasmoidStatus();
         Logic.updateTooltip(batterymonitor.remainingTime);
     }
@@ -154,11 +153,6 @@ Item {
             }
         }
 
-        property int cumulativePercent
-        property bool cumulativePluggedin
-        // true  --> all batteries charged
-        // false --> one of the batteries charging/discharging
-        property bool allCharged
         property string tooltipMainText
         property string tooltipSubText
         property string tooltipImage
