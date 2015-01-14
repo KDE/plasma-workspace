@@ -1,6 +1,11 @@
 [Desktop Entry]
 Name=Battery and Brightness
+Name[de]=Akku und Bildschirmhelligkeit
+Name[nl]=Batterij en helderheid
 Name[pt_BR]=Bateria e brilho da tela
+Name[sk]=Batéria a jas
+Name[sv]=Batteri och ljusstyrka
+Name[x-test]=xxBattery and Brightnessxx
 Name[zh_CN]=电池和亮度
 Comment=See the power status of your battery
 Comment[ar]=طالع حالة طاقة البطارية
