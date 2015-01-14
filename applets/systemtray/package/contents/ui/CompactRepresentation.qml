@@ -55,7 +55,7 @@ Item {
         var dim = root.vertical ? compactRepresentation.width : compactRepresentation.height
         var rows = Math.floor(dim / root.itemSize);
         var cols = Math.ceil(gridView.count / rows);
-        var res = cols * (root.itemSize + units.smallSpacing*2) + units.smallSpacing + tooltip.width;
+        var res = cols * (root.itemSize + units.smallSpacing*2) + units.smallSpacing + (tooltip.visible ? tooltip.width : 0);
         return res;
     }
 
@@ -63,7 +63,7 @@ Item {
         var dim = root.vertical ? compactRepresentation.width : compactRepresentation.height
         var cols = Math.floor(dim / root.itemSize);
         var rows = Math.ceil(gridView.count / cols);
-        var res = rows * (root.itemSize + units.smallSpacing*2) + units.smallSpacing + tooltip.height;
+        var res = rows * (root.itemSize + units.smallSpacing*2) + units.smallSpacing + (tooltip.visible ? tooltip.height : 0);
         return res;
     }
 
@@ -110,9 +110,9 @@ Item {
 
         anchors {
             top: parent.top
-            bottom: !root.vertical ? parent.bottom : tooltip.top
+            bottom: !root.vertical || !tooltip.visible ? parent.bottom : tooltip.top
             left: parent.left
-            right: !root.vertical ? tooltip.left : parent.right
+            right: !root.vertical && tooltip.visible ? tooltip.left : parent.right
         }
         cellWidth: root.vertical ? gridView.width / Math.floor(gridView.width / root.itemSize) : root.itemSize + units.smallSpacing * 2
         cellHeight: !root.vertical ? gridView.height / Math.floor(gridView.height / root.itemSize) : root.itemSize + units.smallSpacing * 2
@@ -130,6 +130,7 @@ Item {
 
         width: root.vertical ? compactRepresentation.width : units.iconSizes.smallMedium
         height: !root.vertical ? compactRepresentation.height : units.iconSizes.smallMedium
+        visible: systrayhost.hiddenTasks.count > 0
         anchors {
             right: parent.right
             bottom: parent.bottom

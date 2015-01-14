@@ -31,6 +31,8 @@ class Task;
 class TaskListModel : public QAbstractListModel
 {
     Q_OBJECT
+    Q_PROPERTY(int count READ count NOTIFY countChanged)
+
 public:
     TaskListModel(QObject *parent = 0);
     virtual QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const;
@@ -41,6 +43,15 @@ public:
 
     void addTask(Task *task);
     void removeTask(Task *task);
+    
+    int count() const
+    {
+        return rowCount();
+    }
+
+Q_SIGNALS:
+    void countChanged();
+
 private:
     QList<Task*> m_tasks;
 };
