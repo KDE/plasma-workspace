@@ -63,6 +63,10 @@ bool taskLessThan(const Task *lhs, const Task *rhs)
 TaskListModel::TaskListModel(QObject *parent):
     QAbstractListModel(parent)
 {
+    connect(this, SIGNAL(rowsInserted(QModelIndex,int,int)),
+            this, SIGNAL(countChanged()));
+    connect(this, SIGNAL(rowsRemoved(QModelIndex,int,int)),
+            this, SIGNAL(countChanged()));
 }
 
 QVariant TaskListModel::data(const QModelIndex &index, int role) const
