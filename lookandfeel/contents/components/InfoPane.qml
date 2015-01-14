@@ -44,7 +44,7 @@ ColumnLayout {
 
     RowLayout {
         Layout.alignment: Qt.AlignRight
-        visible: pmSource.data["Battery"]["Percentage"]
+        visible: pmSource.data["Battery"]["Percent"]
 
         PW.BatteryIcon {
             id: battery
