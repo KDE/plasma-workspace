@@ -58,9 +58,9 @@ Column {
             // HACK Actually the owner of the job is responsible for sending the unit in a user-displayable
             // way but this has been broken for years and every other unit (other than files and dirs) is correct
             if (unit === "files") {
-                unit = i18nc("m of n files are being processed", "files")
+                return i18ncp("Either just 1 file or m of n files are being processed", "1 file", "%2 of %1 files", total, processed)
             } else if (unit === "dirs") {
-                unit = i18nc("m of n dirs are being processed", "dirs")
+                return i18ncp("Either just 1 dir or m of n dirs are being processed", "1 dir", "%2 of %1 dirs", total, processed)
             }
 
             return i18n("%1 of %2 %3", processed, total, unit)
