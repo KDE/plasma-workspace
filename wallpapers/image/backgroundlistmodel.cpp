@@ -503,7 +503,6 @@ void BackgroundFinder::run()
     deleteLater();
 }
 
-#include "backgroundlistmodel.moc"
 
 
 #endif // BACKGROUNDLISTMODEL_CPP

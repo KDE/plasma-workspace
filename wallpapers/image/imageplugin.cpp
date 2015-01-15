@@ -32,5 +32,4 @@ void ImagePlugin::registerTypes(const char *uri)
 }
 
 
-#include "imageplugin.moc"
 

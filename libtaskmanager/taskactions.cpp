@@ -720,6 +720,5 @@ GroupPopupMenu::GroupPopupMenu(QWidget *parent, TaskGroup *group, GroupManager *
 
 } // TaskManager namespace
 
-#include "taskactions.moc"
 #include "moc_taskactions_p.cpp"
 

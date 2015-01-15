@@ -231,4 +231,3 @@ void PlasmaWindowedView::maximumHeightChanged()
     setMaximumHeight(m_layout->property("maximumHeight").toInt());
 }
 
-#include "plasmawindowedview.moc"

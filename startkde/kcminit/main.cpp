@@ -246,4 +246,3 @@ extern "C" Q_DECL_EXPORT int kdemain(int argc, char *argv[])
   return 0;
 }
 
-#include "main.moc"

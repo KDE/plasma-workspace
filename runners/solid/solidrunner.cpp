@@ -283,4 +283,3 @@ void SolidRunner::fillPreviousDevices()
     }
 }
 
-#include "solidrunner.moc"

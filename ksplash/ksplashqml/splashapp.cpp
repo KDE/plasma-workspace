@@ -136,4 +136,3 @@ void SplashApp::adoptScreen(QScreen* screen)
     });
 }
 
-#include "splashapp.moc"

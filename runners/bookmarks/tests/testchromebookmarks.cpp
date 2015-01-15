@@ -120,6 +120,5 @@ void TestChromeBookmarks::itShouldFindBookmarksFromAllProfiles()
     verifyMatch(matches[3], "bookmark in secondProfile", "http://secondprofile.com/", 0.18, QueryMatch::PossibleMatch);
 }
 
-#include "testchromebookmarks.moc"
 
 QTEST_MAIN(TestChromeBookmarks);

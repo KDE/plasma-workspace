@@ -88,4 +88,3 @@ void OpenWidgetAssistant::finished()
 
 } // Plasma namespace
 
-#include "openwidgetassistant.moc"

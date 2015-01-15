@@ -797,4 +797,3 @@ void Image::removeWallpaper(QString name)
     }
 }
 
-#include "image.moc"
