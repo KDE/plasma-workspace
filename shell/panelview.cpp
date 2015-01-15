@@ -351,6 +351,8 @@ void PanelView::setVisibilityMode(PanelView::VisibilityMode mode)
     updateStruts();
 
     emit visibilityModeChanged();
+    emit corona()->availableScreenRectChanged();
+    emit corona()->availableScreenRegionChanged();
     restoreAutoHide();
 }
 
