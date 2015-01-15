@@ -27,10 +27,12 @@ function plasmoidStatus() {
         status = PlasmaCore.Types.ActiveStatus;
     }
 
-    if (pmSource.data["Battery"]["Percent"] <= 10) {
-        status = PlasmaCore.Types.NeedsAttentionStatus
-    } else if (pmSource.data["Battery"]["State"] !== "FullyCharged") {
-        status = PlasmaCore.Types.ActiveStatus
+    if (pmSource.data["Battery"]["Percent"]) {
+        if (pmSource.data["Battery"]["Percent"] <= 10) {
+            status = PlasmaCore.Types.NeedsAttentionStatus
+        } else if (pmSource.data["Battery"]["State"] !== "FullyCharged") {
+            status = PlasmaCore.Types.ActiveStatus
+        }
     }
 
     return status;
