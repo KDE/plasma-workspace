@@ -55,7 +55,7 @@ Item {
         var dim = root.vertical ? compactRepresentation.width : compactRepresentation.height
         var rows = Math.floor(dim / root.itemSize);
         var cols = Math.ceil(gridView.count / rows);
-        var res = cols * (root.itemSize + units.smallSpacing*2) + units.smallSpacing + (tooltip.visible ? tooltip.width : 0);
+        var res = cols * (root.itemSize + units.smallSpacing) + units.smallSpacing + (tooltip.visible ? tooltip.width : 0);
         return res;
     }
 
@@ -63,7 +63,7 @@ Item {
         var dim = root.vertical ? compactRepresentation.width : compactRepresentation.height
         var cols = Math.floor(dim / root.itemSize);
         var rows = Math.ceil(gridView.count / cols);
-        var res = rows * (root.itemSize + units.smallSpacing*2) + units.smallSpacing + (tooltip.visible ? tooltip.height : 0);
+        var res = rows * (root.itemSize + units.smallSpacing) + units.smallSpacing + (tooltip.visible ? tooltip.height : 0);
         return res;
     }
 
@@ -79,7 +79,7 @@ Item {
     }
 
     function setItemPreferredSize() {
-        var dim = (root.vertical ? compactRepresentation.width : compactRepresentation.height) - units.smallSpacing;
+        var dim = (root.vertical ? compactRepresentation.width : compactRepresentation.height);
         if (root.preferredItemSize != dim) {
             root.preferredItemSize = dim;
         }
@@ -114,8 +114,8 @@ Item {
             left: parent.left
             right: !root.vertical && tooltip.visible ? tooltip.left : parent.right
         }
-        cellWidth: root.vertical ? gridView.width / Math.floor(gridView.width / root.itemSize) : root.itemSize + units.smallSpacing * 2
-        cellHeight: !root.vertical ? gridView.height / Math.floor(gridView.height / root.itemSize) : root.itemSize + units.smallSpacing * 2
+        cellWidth: root.vertical ? gridView.width / Math.floor(gridView.width / root.itemSize) : root.itemSize + units.smallSpacing
+        cellHeight: !root.vertical ? gridView.height / Math.floor(gridView.height / root.itemSize) : root.itemSize + units.smallSpacing
 
         interactive: false
 
