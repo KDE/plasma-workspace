@@ -38,7 +38,7 @@
 #include <KConfig>
 
 NotificationsEngine::NotificationsEngine( QObject* parent, const QVariantList& args )
-    : Plasma::DataEngine( parent, args ), m_nextId( 1 ), m_alwaysReplaceAppsList({QStringLiteral("Clementine"), QStringLiteral("Spotify")})
+    : Plasma::DataEngine( parent, args ), m_nextId( 1 ), m_alwaysReplaceAppsList({QStringLiteral("Clementine"), QStringLiteral("Spotify"), QStringLiteral("Amarok")})
 {
     new NotificationsAdaptor(this);
 
@@ -154,7 +154,7 @@ uint NotificationsEngine::Notify(const QString &app_name, uint replaces_id,
 
     //don't let applications spam too much, except ourself
     //needed to display all the "applet deleted" notifications and not merge them
-    if (m_activeNotifications.values().contains(app_name + summary) && app_name != QGuiApplication::applicationDisplayName()) {
+    if (m_activeNotifications.values().contains(app_name + summary) && app_name != QGuiApplication::applicationDisplayName() && !m_alwaysReplaceAppsList.contains(app_name)) {
         // cut off the "notification " from the source name
         partOf = m_activeNotifications.key(app_name + summary).mid(13).toUInt();
 
