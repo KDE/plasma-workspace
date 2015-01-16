@@ -178,7 +178,10 @@ void NotificationsHelper::processHide()
         // Remove the popup from the active list and return it into the available list
         m_popupsOnScreen.removeOne(popup);
         m_sourceMap.remove(popup->property("sourceName").toString());
-        m_availablePopups.append(popup);
+        if (!m_availablePopups.contains(popup)) {
+            // make extra sure that pointers in here aren't doubled
+            m_availablePopups.append(popup);
+        }
         m_mutex->unlock();
 
         popup->hide();
@@ -264,7 +267,7 @@ void NotificationsHelper::onPopupClosed()
     QQuickWindow *popup = qobject_cast<QQuickWindow*>(sender());
 
     m_mutex->lockForRead();
-    bool shouldQueue = popup || !m_hideQueue.contains(popup);
+    bool shouldQueue = popup && !m_hideQueue.contains(popup);
     m_mutex->unlock();
 
     if (shouldQueue) {
