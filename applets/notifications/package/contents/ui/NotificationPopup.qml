@@ -35,7 +35,9 @@ PlasmaCore.Dialog {
     signal notificationTimeout()
 
     onVisibleChanged: {
-        notificationTimer.running = visible
+        if (!visible) {
+            notificationTimer.stop();
+        }
     }
 
     function populatePopup(notification) {
@@ -70,7 +72,7 @@ PlasmaCore.Dialog {
         onContainsMouseChanged: {
             if (containsMouse) {
                 notificationTimer.stop()
-            } else {
+            } else if (!containsMouse && visible) {
                 notificationTimer.restart()
             }
         }
