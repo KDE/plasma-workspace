@@ -125,6 +125,11 @@ private:
 
     bool m_showHelp;
 
+    /**
+     * The last event which was received. Used to avoid an infinite event loop
+     */
+    QKeyEvent* m_lastEvent;
+
 };
 
 #endif
