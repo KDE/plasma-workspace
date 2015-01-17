@@ -75,7 +75,8 @@ KlipperPopup::KlipperPopup( History* history )
       m_filterWidget( 0 ),
       m_filterWidgetAction( 0 ),
       m_nHistoryItems( 0 ),
-      m_showHelp(true)
+      m_showHelp(true),
+      m_lastEvent(NULL)
 {
     ensurePolished();
     KWindowInfo windowInfo( winId(), NET::WMGeometry );
@@ -181,6 +182,15 @@ void KlipperPopup::plugAction( QAction* action ) {
 
 /* virtual */
 void KlipperPopup::keyPressEvent( QKeyEvent* e ) {
+    // Most events are send down directly to the m_filterWidget. 
+    // If the m_filterWidget does not handle the event, it will 
+    // come back to this method. Remembering the last event stops
+    // the infinite event loop
+    if (m_lastEvent == e) {
+        m_lastEvent= NULL;
+        return;
+    }
+    m_lastEvent= e;
     // If alt-something is pressed, select a shortcut
     // from the menu. Do this by sending a keyPress
     // without the alt-modifier to the superobject.
@@ -240,8 +250,8 @@ void KlipperPopup::keyPressEvent( QKeyEvent* e ) {
 #endif
         setActiveAction(actions().at(actions().indexOf(m_filterWidgetAction)));
         QString lastString = m_filterWidget->text();
-        QApplication::sendEvent(m_filterWidget, e);
 
+        QApplication::sendEvent(m_filterWidget, e);
         if (m_filterWidget->text() != lastString) {
             m_dirty = true;
             rebuild(m_filterWidget->text());
@@ -250,6 +260,7 @@ void KlipperPopup::keyPressEvent( QKeyEvent* e ) {
         break;
     } //default:
     } //case
+    m_lastEvent= NULL;
 }
 
 
