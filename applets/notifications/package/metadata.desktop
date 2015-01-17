@@ -161,6 +161,7 @@ X-KDE-PluginInfo-Website=http://plasma.kde.org/
 X-KDE-ServiceTypes=Plasma/Applet
 X-Plasma-API=declarativeappletscript
 X-Plasma-Provides=org.kde.plasma.notifications
+X-KDE-PluginInfo-EnabledByDefault=true
 
 X-Plasma-MainScript=ui/main.qml
 X-Plasma-RequiredExtensions=LaunchApp
