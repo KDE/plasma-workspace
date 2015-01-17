@@ -26,6 +26,7 @@
 #include <QtCore/QDebug>
 #include <QtCore/QDateTime>
 #include <QtCore/QVariant>
+#include <QtCore/QDataStream>
 #include <QtXml/QDomDocument>
 
 using namespace KXmlRpc;
