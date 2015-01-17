@@ -159,3 +159,4 @@ X-KDE-PluginInfo-Version=2.0
 X-KDE-PluginInfo-Website=http://vizZzion.org
 X-KDE-PluginInfo-Depends=
 X-KDE-PluginInfo-EnabledByDefault=true
+X-Plasma-DBusActivationService=org.kde.Solid.PowerManagement
