@@ -52,6 +52,8 @@ Item {
             PlasmaComponents.Label {
                 id: detailsLabel
                 width: modelData.value ? parent.width - detailsLayout.leftColumnWidth - units.smallSpacing : detailsLayout.leftColumnWidth + units.smallSpacing
+                elide: Text.ElideRight
+                wrapMode: Text.NoWrap
                 onPaintedWidthChanged: { // horrible HACK to get a column layout
                     if (paintedWidth > detailsLayout.leftColumnWidth) {
                         detailsLayout.leftColumnWidth = paintedWidth
