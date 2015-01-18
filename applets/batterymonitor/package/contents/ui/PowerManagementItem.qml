@@ -28,7 +28,7 @@ FocusScope {
     id: brightnessItem
     clip: true
     width: parent.width
-    height: Math.max(pmCheckBox.height, pmLabel.height) + dialog.anchors.topMargin + dialog.anchors.bottomMargin + units.gridUnit + (pmHint.visible ? pmHint.height + pmHint.anchors.topMargin : 0)
+    height: Math.max(pmCheckBox.height, pmLabel.height) + dialog.anchors.topMargin + dialog.anchors.bottomMargin + units.gridUnit / 2 + (pmHintRow.visible ? pmHintRow.height : 0)
 
     property alias enabled: pmCheckBox.checked
 
@@ -90,12 +90,12 @@ FocusScope {
     }
 
     RowLayout {
+        id: pmHintRow
         anchors {
             left: pmLabel.left
             right: parent.right
             rightMargin: units.gridUnit + percentageMeasurementLabel.width
-            top: pmLabel.bottom
-            topMargin: Math.round(units.smallSpacing / 2)
+            top: pmCheckBox.bottom
         }
         spacing: units.smallSpacing
         visible: inhibitions.length > 0
@@ -108,7 +108,6 @@ FocusScope {
         }
 
         Components.Label {
-            id: pmHint
             Layout.fillWidth: true
             text: {
                 if (inhibitions.length > 1) {
