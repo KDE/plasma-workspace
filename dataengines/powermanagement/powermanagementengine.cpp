@@ -600,7 +600,7 @@ void PowermanagementEngine::inhibitionsChanged(const QList<InhibitionInfo> &adde
 
     for(auto it = added.constBegin(); it != added.constEnd(); ++it) {
         const QString &name = (*it).first;
-        QString prettyName;
+        QString prettyName = name;
         QString icon;
         const QString &reason = (*it).second;
 
