@@ -100,8 +100,6 @@ void PowermanagementEngine::init()
             qDebug() << "error connecting to max keyboard Brightness changes via dbus";
         }
 
-        sourceRequestEvent("PowerDevil");
-
         if (!QDBusConnection::sessionBus().connect(SOLID_POWERMANAGEMENT_SERVICE,
                                                    QStringLiteral("/org/kde/Solid/PowerManagement"),
                                                    SOLID_POWERMANAGEMENT_SERVICE,
