@@ -27,6 +27,9 @@
 
 #include <QtDBus/QDBusConnection>
 #include <QHash>
+#include <QPair>
+
+using InhibitionInfo = QPair<QString, QString>;
 
 class QDBusPendingCallWatcher;
 
@@ -65,8 +68,10 @@ private Q_SLOTS:
     void maximumScreenBrightnessChanged(int maximumBrightness);
     void keyboardBrightnessChanged(int brightness);
     void maximumKeyboardBrightnessChanged(int maximumBrightness);
+    void inhibitionsChanged(const QList<InhibitionInfo> &added, const QStringList &removed);
 
 private:
+    void populateApplicationData(const QString &name, QString *prettyName, QString *icon);
     QString batteryType(const Solid::Battery *battery) const;
     QStringList basicSourceNames() const;
     QString batteryStateToString(int newState) const;
@@ -74,6 +79,7 @@ private:
     QStringList m_sources;
 
     QHash<QString, QString> m_batterySources;  // <udi, Battery0>
+    QHash<QString, QPair<QString, QString>> m_applicationInfo; // <appname, <pretty name, icon>>
 };
 
 
