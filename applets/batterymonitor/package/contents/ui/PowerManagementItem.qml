@@ -103,8 +103,8 @@ FocusScope {
         PlasmaCore.IconItem {
             width: units.iconSizes.small
             height: width
-            source: inhibitions.length > 0 ? inhibitions[0].Icon : null
-            visible: source !== null
+            source: inhibitions.length > 0 ? inhibitions[0].Icon || "" : ""
+            visible: source != ""
         }
 
         Components.Label {
@@ -116,8 +116,13 @@ FocusScope {
                                   "%2 and %1 other applications are currently suppressing power management",
                                   inhibitions.length - 1, inhibitions[0].Name) // plural only works on %1
                 } else if (inhibitions.length === 1) {
-                    return i18nc("Some Application is suppressing PM: Reason provided by the app",
-                                 "%1 is currently suppressing power management: %2", inhibitions[0].Name, inhibitions[0].Reason)
+                    if (!inhibitions[0].Reason) {
+                        return i18nc("Some Application is suppressing PM",
+                                     "%1 is currently suppressing power management.", inhibitions[0].Name)
+                    } else {
+                        return i18nc("Some Application is suppressing PM: Reason provided by the app",
+                                     "%1 is currently suppressing power management: %2", inhibitions[0].Name, inhibitions[0].Reason)
+                    }
                 } else {
                     return ""
                 }
