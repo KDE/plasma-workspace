@@ -30,7 +30,6 @@
 
 #include <klocalizedstring.h>
 #include <KIdleTime>
-#include <KDesktopFile>
 
 #include <QDebug>
 
