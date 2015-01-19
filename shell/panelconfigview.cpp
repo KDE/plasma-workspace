@@ -64,6 +64,7 @@ PanelConfigView::PanelConfigView(Plasma::Containment *containment, PanelView *pa
                 setFlags(Qt::WindowFlags((flags() | Qt::FramelessWindowHint) & (~Qt::WindowDoesNotAcceptFocus)));
                 KWindowSystem::setState(winId(), NET::KeepAbove);
                 syncGeometry();
+                syncSlideLocation();
             });
 
     KWindowSystem::setType(winId(), NET::Dock);
@@ -77,8 +78,8 @@ PanelConfigView::PanelConfigView(Plasma::Containment *containment, PanelView *pa
 
     engine()->rootContext()->setContextProperty("panel", panelView);
     engine()->rootContext()->setContextProperty("configDialog", this);
-    connect(containment, &Plasma::Containment::formFactorChanged,
-            this, &PanelConfigView::syncGeometry);
+    connect(containment, &Plasma::Containment::formFactorChanged, this, &PanelConfigView::syncGeometry);
+    connect(containment, &Plasma::Containment::locationChanged, this, &PanelConfigView::syncSlideLocation);
 
     PanelShadows::self()->addWindow(this);
 }
@@ -95,6 +96,7 @@ void PanelConfigView::init()
 {
     setSource(QUrl::fromLocalFile(m_containment->corona()->package().filePath("panelconfigurationui")));
     syncGeometry();
+    syncSlideLocation();
 }
 
 void PanelConfigView::updateContrast()
@@ -150,6 +152,34 @@ void PanelConfigView::syncGeometry()
     }
 }
 
+void PanelConfigView::syncSlideLocation()
+{
+    if (!m_containment) {
+        return;
+    }
+
+    KWindowEffects::SlideFromLocation slideLocation = KWindowEffects::NoEdge;
+
+    switch (m_containment->location()) {
+    case Plasma::Types::TopEdge:
+        slideLocation = KWindowEffects::TopEdge;
+        break;
+    case Plasma::Types::RightEdge:
+        slideLocation = KWindowEffects::RightEdge;
+        break;
+    case Plasma::Types::BottomEdge:
+        slideLocation = KWindowEffects::BottomEdge;
+        break;
+    case Plasma::Types::LeftEdge:
+        slideLocation = KWindowEffects::LeftEdge;
+        break;
+    default:
+        break;
+    }
+
+    KWindowEffects::slideWindow(winId(), slideLocation, -1);
+}
+
 void PanelConfigView::showEvent(QShowEvent *ev)
 {
     QQuickWindow::showEvent(ev);
@@ -161,6 +191,7 @@ void PanelConfigView::showEvent(QShowEvent *ev)
     KWindowEffects::enableBlurBehind(winId(), true);
     updateContrast();
     syncGeometry();
+    syncSlideLocation();
 
     //this because due to Qt xcb implementation the actual flags gets set only after a while after the window is actually visible
     m_screenSyncTimer.start();

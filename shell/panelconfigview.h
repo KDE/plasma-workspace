@@ -63,6 +63,7 @@ protected:
 
 protected Q_SLOTS:
     void syncGeometry();
+    void syncSlideLocation();
 
 private Q_SLOTS:
     void updateContrast();
