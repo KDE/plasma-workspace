@@ -419,7 +419,7 @@ void PowermanagementEngine::updateOverallBattery()
     foreach (const Solid::Device &deviceBattery, listBattery) {
         const Solid::Battery* battery = deviceBattery.as<Solid::Battery>();
 
-        if (battery->isPowerSupply()) {
+        if (battery && battery->isPowerSupply()) {
             energy += battery->energy();
             totalEnergy += battery->energyFull();
             allFullyCharged = allFullyCharged && (battery->chargeState() == Solid::Battery::FullyCharged);
