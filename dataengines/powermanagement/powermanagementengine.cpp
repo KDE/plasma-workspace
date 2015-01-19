@@ -296,24 +296,7 @@ bool PowermanagementEngine::sourceRequestEvent(const QString &name)
             if (!reply.isError()) {
                 removeAllData(QStringLiteral("Inhibitions"));
 
-                foreach (const InhibitionInfo &inhibition, reply.value()) {
-                    const QString &name = inhibition.first;
-                    QString prettyName = name;
-                    QString icon;
-                    const QString &reason = inhibition.second;
-
-                    if (name.isEmpty()) {
-                        continue;
-                    }
-
-                    populateApplicationData(name, &prettyName, &icon);
-
-                    setData(QStringLiteral("Inhibitions"), name, QVariantMap{
-                        {QStringLiteral("Name"), prettyName},
-                        {QStringLiteral("Icon"), icon},
-                        {QStringLiteral("Reason"), reason}
-                    });
-                }
+                inhibitionsChanged(reply.value(), QStringList());
             }
         });
 
@@ -618,27 +601,15 @@ void PowermanagementEngine::populateApplicationData(const QString &name, QString
 {
     if (m_applicationInfo.contains(name)) {
         const auto &info = m_applicationInfo.value(name);
-        if (!info.first.isEmpty()) {
-            *prettyName = info.first;
-        }
-        if (!info.second.isEmpty()) {
-            *icon = info.second;
-        }
+        *prettyName = info.first;
+        *icon = info.second;
     } else {
         KService::Ptr service = KService::serviceByStorageId(name + ".desktop");
         if (service) {
-            KDesktopFile desktopFile(service->entryPath());
+            *prettyName = service->property("Name", QVariant::Invalid).toString(); // cannot be null
+            *icon = service->icon();
 
-            const QString &desktopName = desktopFile.desktopGroup().readEntry("Name");
-            if (!desktopName.isEmpty()) {
-                *prettyName = desktopName;
-            }
-            const QString &desktopIcon = desktopFile.desktopGroup().readEntry("Icon");
-            if (!desktopIcon.isEmpty()) {
-                *icon = desktopIcon;
-            }
-
-            m_applicationInfo.insert(name, qMakePair<QString, QString>(*prettyName, *icon));
+            m_applicationInfo.insert(name, qMakePair(*prettyName, *icon));
         }
     }
 }
