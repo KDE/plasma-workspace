@@ -196,7 +196,7 @@ Item {
         }
         height: childrenRect.height
         spacing: units.smallSpacing
-        visible: notificationItem.actions.count > 0
+        visible: notificationItem.actions && notificationItem.actions.count > 0
 
         Repeater {
             id: actionRepeater
