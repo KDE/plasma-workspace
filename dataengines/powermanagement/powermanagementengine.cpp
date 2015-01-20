@@ -576,13 +576,13 @@ void PowermanagementEngine::maximumKeyboardBrightnessChanged(int maximumBrightne
 
 void PowermanagementEngine::inhibitionsChanged(const QList<InhibitionInfo> &added, const QStringList &removed)
 {
-    for(auto it = removed.constBegin(); it != removed.constEnd(); ++it) {
+    for (auto it = removed.constBegin(); it != removed.constEnd(); ++it) {
         removeData(QStringLiteral("Inhibitions"), (*it));
     }
 
-    for(auto it = added.constBegin(); it != added.constEnd(); ++it) {
+    for (auto it = added.constBegin(); it != added.constEnd(); ++it) {
         const QString &name = (*it).first;
-        QString prettyName = name;
+        QString prettyName;
         QString icon;
         const QString &reason = (*it).second;
 
@@ -609,6 +609,8 @@ void PowermanagementEngine::populateApplicationData(const QString &name, QString
             *icon = service->icon();
 
             m_applicationInfo.insert(name, qMakePair(*prettyName, *icon));
+        } else {
+            *prettyName = name;
         }
     }
 }
