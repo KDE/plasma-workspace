@@ -458,7 +458,7 @@ QRect PanelView::geometryByDistance(int distance) const
             break;
         case Qt::AlignLeft:
         default:
-            position = QPoint(s->geometry().topRight() - QPoint(thickness() + distance, 0) - QPoint(0, m_offset));
+            position = QPoint(s->geometry().topRight() - QPoint(thickness() + distance, 0) + QPoint(0, m_offset));
         }
         break;
 
