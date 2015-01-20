@@ -104,7 +104,7 @@ FocusScope {
             width: units.iconSizes.small
             height: width
             source: inhibitions.length > 0 ? inhibitions[0].Icon || "" : ""
-            visible: source != ""
+            visible: valid
         }
 
         Components.Label {
@@ -127,6 +127,7 @@ FocusScope {
                     return ""
                 }
             }
+            height: implicitHeight
             font.pointSize: theme.smallestFont.pointSize
             wrapMode: Text.WordWrap
             elide: Text.ElideRight
