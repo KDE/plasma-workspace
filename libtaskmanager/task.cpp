@@ -186,7 +186,7 @@ void Task::setActive(bool a)
 
 bool Task::isMaximized() const
 {
-    return d->info.valid(true) && (d->info.state() & NET::Max);
+    return d->info.valid(true) && (d->info.state() & NET::MaxHoriz) && (d->info.state() & NET::MaxVert);
 }
 
 bool Task::isMinimized() const
