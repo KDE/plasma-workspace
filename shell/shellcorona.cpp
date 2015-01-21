@@ -593,7 +593,7 @@ QRegion ShellCorona::availableScreenRegion(int id) const
 
     QRegion r = view->geometry();
     foreach (const PanelView *v, m_panelViews) {
-        if (v->screen() == v->screen() && v->visibilityMode() != PanelView::AutoHide) {
+        if (v->isVisible() && v->screen() == v->screen() && v->visibilityMode() != PanelView::AutoHide) {
             //if the panel is being moved around, we still want to calculate it from the edge
             r -= v->geometryByDistance(0);
         }
@@ -615,7 +615,7 @@ QRect ShellCorona::availableScreenRect(int id) const
 
     QRect r = view->geometry();
     foreach (PanelView *v, m_panelViews) {
-        if (v->screen() == view->screen() && v->visibilityMode() != PanelView::AutoHide) {
+        if (v->isVisible() && v->screen() == view->screen() && v->visibilityMode() != PanelView::AutoHide) {
             switch (v->location()) {
             case Plasma::Types::LeftEdge:
                 r.setLeft(r.left() + v->thickness());
@@ -951,6 +951,10 @@ void ShellCorona::createWaitingPanels()
         Q_ASSERT(qBound(0, requestedScreen, m_views.count() - 1) == requestedScreen);
         QScreen *screen = m_views[requestedScreen]->screen();
         PanelView* panel = new PanelView(this, screen);
+        connect(panel, &QWindow::visibleChanged, [=]() {
+            emit availableScreenRectChanged();
+            emit availableScreenRegionChanged();
+        });
 
         m_panelViews[cont] = panel;
         panel->setContainment(cont);
