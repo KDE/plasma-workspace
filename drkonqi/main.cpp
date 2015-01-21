@@ -40,7 +40,7 @@
 #include "drkonqi.h"
 #include "drkonqidialog.h"
 
-static const char version[] = "2.1.5";
+static const char version[] = PROJECT_VERSION;
 static const char description[] = I18N_NOOP("The KDE Crash Handler gives the user feedback "
                                             "if a program has crashed.");
 
