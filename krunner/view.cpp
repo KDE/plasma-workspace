@@ -106,6 +106,7 @@ View::View(QWindow *)
 #endif
         screenGeometryChanged();
     };
+
     foreach(QScreen* s, QGuiApplication::screens())
         screenAdded(s);
     connect(qApp, &QGuiApplication::screenAdded, this, screenAdded);
@@ -209,11 +210,13 @@ void View::positionOnScreen()
 {
     QScreen* shownOnScreen = 0;
     if (QGuiApplication::screens().count() <= 1) {
-        shownOnScreen = QGuiApplication::screens().first();
+        shownOnScreen = QGuiApplication::primaryScreen();
     } else {
         Q_FOREACH (QScreen* screen, QGuiApplication::screens()) {
-            if (screen->geometry().contains(QCursor::pos()))
+            if (screen->geometry().contains(QCursor::pos(screen))) {
                 shownOnScreen = screen;
+                break;
+            }
         }
     }
     Q_ASSERT(shownOnScreen);
