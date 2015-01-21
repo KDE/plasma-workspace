@@ -86,6 +86,8 @@ ki18n_wrap_ui(drkonqi_SRCS
 
 add_executable(drkonqi ${drkonqi_SRCS})
 
+target_compile_definitions(drkonqi PRIVATE -DPROJECT_VERSION="${PROJECT_VERSION}")
+
 ## TODO Remove internal copy when kxmlrpcclient is released
 set (KF5XmlRpcClient_FOUND FALSE)
 if(NOT KF5XmlRpcClient_FOUND)
