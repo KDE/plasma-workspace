@@ -43,17 +43,18 @@
 #include <Plasma/DataContainer>
 #include "powermanagementservice.h"
 
-typedef QMap< QString, QString > StringStringMap;
-Q_DECLARE_METATYPE(StringStringMap)
-
 static const char SOLID_POWERMANAGEMENT_SERVICE[] = "org.kde.Solid.PowerManagement";
+
+Q_DECLARE_METATYPE(QList<InhibitionInfo>)
+Q_DECLARE_METATYPE(InhibitionInfo)
 
 PowermanagementEngine::PowermanagementEngine(QObject* parent, const QVariantList& args)
         : Plasma::DataEngine(parent, args)
         , m_sources(basicSourceNames())
 {
     Q_UNUSED(args)
-    qDBusRegisterMetaType< StringStringMap >();
+    qDBusRegisterMetaType<QList<InhibitionInfo>>();
+    qDBusRegisterMetaType<InhibitionInfo>();
     init();
 }
 
@@ -101,6 +102,14 @@ void PowermanagementEngine::init()
         }
 
         if (!QDBusConnection::sessionBus().connect(SOLID_POWERMANAGEMENT_SERVICE,
+                                                   QStringLiteral("/org/kde/Solid/PowerManagement/PolicyAgent"),
+                                                   QStringLiteral("org.kde.Solid.PowerManagement.PolicyAgent"),
+                                                   QStringLiteral("InhibitionsChanged"), this,
+                                                   SLOT(inhibitionsChanged(QList<InhibitionInfo>,QStringList)))) {
+            qDebug() << "error connecting to inhibition changes via dbus";
+        }
+
+        if (!QDBusConnection::sessionBus().connect(SOLID_POWERMANAGEMENT_SERVICE,
                                                    QStringLiteral("/org/kde/Solid/PowerManagement"),
                                                    SOLID_POWERMANAGEMENT_SERVICE,
                                                    QStringLiteral("batteryRemainingTimeChanged"), this,
@@ -113,7 +122,7 @@ void PowermanagementEngine::init()
 QStringList PowermanagementEngine::basicSourceNames() const
 {
     QStringList sources;
-    sources << "Battery" << "AC Adapter" << "Sleep States" << "PowerDevil";
+    sources << "Battery" << "AC Adapter" << "Sleep States" << "PowerDevil" << "Inhibitions";
     return sources;
 }
 
@@ -268,6 +277,24 @@ bool PowermanagementEngine::sourceRequestEvent(const QString &name)
                 setData("PowerDevil", "Is Lid Present", reply.value());
             }
             watcher->deleteLater();
+        });
+
+    } else if (name == QLatin1Literal("Inhibitions")) {
+        QDBusMessage inhibitionsMsg = QDBusMessage::createMethodCall(SOLID_POWERMANAGEMENT_SERVICE,
+                                                                     QStringLiteral("/org/kde/Solid/PowerManagement/PolicyAgent"),
+                                                                     "org.kde.Solid.PowerManagement.PolicyAgent",
+                                                                     QStringLiteral("ListInhibitions"));
+        QDBusPendingReply<QList<InhibitionInfo>> inhibitionsReply = QDBusConnection::sessionBus().asyncCall(inhibitionsMsg);
+        QDBusPendingCallWatcher *inhibitionsWatcher = new QDBusPendingCallWatcher(inhibitionsReply, this);
+        QObject::connect(inhibitionsWatcher, &QDBusPendingCallWatcher::finished, this, [this](QDBusPendingCallWatcher *watcher) {
+            QDBusPendingReply<QList<InhibitionInfo>> reply = *watcher;
+            watcher->deleteLater();
+
+            if (!reply.isError()) {
+                removeAllData(QStringLiteral("Inhibitions"));
+
+                inhibitionsChanged(reply.value(), QStringList());
+            }
         });
 
     //any info concerning lock screen/screensaver goes here
@@ -543,6 +570,47 @@ void PowermanagementEngine::maximumKeyboardBrightnessChanged(int maximumBrightne
 {
     setData("PowerDevil", "Maximum Keyboard Brightness", maximumBrightness);
     setData("PowerDevil", "Keyboard Brightness Available", maximumBrightness > 0);
+}
+
+void PowermanagementEngine::inhibitionsChanged(const QList<InhibitionInfo> &added, const QStringList &removed)
+{
+    for (auto it = removed.constBegin(); it != removed.constEnd(); ++it) {
+        removeData(QStringLiteral("Inhibitions"), (*it));
+    }
+
+    for (auto it = added.constBegin(); it != added.constEnd(); ++it) {
+        const QString &name = (*it).first;
+        QString prettyName;
+        QString icon;
+        const QString &reason = (*it).second;
+
+        populateApplicationData(name, &prettyName, &icon);
+
+        setData(QStringLiteral("Inhibitions"), name, QVariantMap{
+            {QStringLiteral("Name"), prettyName},
+            {QStringLiteral("Icon"), icon},
+            {QStringLiteral("Reason"), reason}
+        });
+    }
+}
+
+void PowermanagementEngine::populateApplicationData(const QString &name, QString *prettyName, QString *icon)
+{
+    if (m_applicationInfo.contains(name)) {
+        const auto &info = m_applicationInfo.value(name);
+        *prettyName = info.first;
+        *icon = info.second;
+    } else {
+        KService::Ptr service = KService::serviceByStorageId(name + ".desktop");
+        if (service) {
+            *prettyName = service->property("Name", QVariant::Invalid).toString(); // cannot be null
+            *icon = service->icon();
+
+            m_applicationInfo.insert(name, qMakePair(*prettyName, *icon));
+        } else {
+            *prettyName = name;
+        }
+    }
 }
 
 K_EXPORT_PLASMA_DATAENGINE_WITH_JSON(powermanagement, PowermanagementEngine, "plasma-dataengine-powermanagement.json")
