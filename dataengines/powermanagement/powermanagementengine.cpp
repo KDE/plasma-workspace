@@ -438,6 +438,8 @@ void PowermanagementEngine::updateBatteryNames()
 void PowermanagementEngine::updateOverallBattery()
 {
     const QList<Solid::Device> listBattery = Solid::Device::listFromType(Solid::DeviceInterface::Battery);
+    bool hasCumulative = false;
+
     double energy = 0;
     double totalEnergy = 0;
     bool allFullyCharged = true;
@@ -447,6 +449,8 @@ void PowermanagementEngine::updateOverallBattery()
         const Solid::Battery* battery = deviceBattery.as<Solid::Battery>();
 
         if (battery && battery->isPowerSupply()) {
+            hasCumulative = true;
+
             energy += battery->energy();
             totalEnergy += battery->energyFull();
             allFullyCharged = allFullyCharged && (battery->chargeState() == Solid::Battery::FullyCharged);
@@ -460,13 +464,19 @@ void PowermanagementEngine::updateOverallBattery()
         setData("Battery", "Percent", 0);
     }
 
-    if (allFullyCharged) {
-        setData("Battery", "State", "FullyCharged");
-    } else if (charging) {
-        setData("Battery", "State", "Charging");
+    if (hasCumulative) {
+        if (allFullyCharged) {
+            setData("Battery", "State", "FullyCharged");
+        } else if (charging) {
+            setData("Battery", "State", "Charging");
+        } else {
+            setData("Battery", "State", "Discharging");
+        }
     } else {
-        setData("Battery", "State", "Discharging");
+        setData("Battery", "State", "Unknown");
     }
+
+    setData("Battery", "Has Cumulative", hasCumulative);
 }
 
 void PowermanagementEngine::updateAcPlugState(bool onBattery)

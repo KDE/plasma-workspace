@@ -44,7 +44,7 @@ ColumnLayout {
 
     RowLayout {
         Layout.alignment: Qt.AlignRight
-        visible: pmSource.data["Battery"]["Percent"]
+        visible: pmSource.data["Battery"]["Has Cumulative"]
 
         PW.BatteryIcon {
             id: battery
@@ -61,13 +61,12 @@ ColumnLayout {
             text: {
                 var state = pmSource.data["Battery"] ? pmSource.data["Battery"]["State"] : "";
                 switch(state) {
-                case "NoCharge": //follow through
-                case "Discharging":
-                    return i18nd("plasma_lookandfeel_org.kde.lookandfeel","%1% battery remaining", battery.percent)
+                case "Charging":
+                    return i18nd("plasma_lookandfeel_org.kde.lookandfeel","%1%. Charging", battery.percent)
                 case "FullyCharged":
                     return i18nd("plasma_lookandfeel_org.kde.lookandfeel","Fully charged")
                 default:
-                    return i18nd("plasma_lookandfeel_org.kde.lookandfeel","%1%. Charging", battery.percent)
+                    return i18nd("plasma_lookandfeel_org.kde.lookandfeel","%1% battery remaining", battery.percent)
                 }
             }
             Layout.alignment: Qt.AlignRight
