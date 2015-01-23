@@ -98,6 +98,7 @@ QString QalculateEngine::evaluate(const QString& expression)
     eo.parse_options.angle_unit = ANGLE_UNIT_RADIANS;
     eo.structuring = STRUCTURING_SIMPLIFY;
 
+    CALCULATOR->setPrecision(16);
     MathStructure result = CALCULATOR->calculate(ctext, eo);
 
     PrintOptions po;
