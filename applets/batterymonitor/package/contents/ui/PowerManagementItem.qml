@@ -26,7 +26,6 @@ import org.kde.kquickcontrolsaddons 2.0
 
 FocusScope {
     id: brightnessItem
-    clip: true
     width: parent.width
     height: Math.max(pmCheckBox.height, pmLabel.height) + dialog.anchors.topMargin + dialog.anchors.bottomMargin + units.gridUnit / 2 + (pmHintRow.visible ? pmHintRow.height : 0)
 
@@ -35,7 +34,6 @@ FocusScope {
     Components.CheckBox {
         id: pmCheckBox
         anchors {
-            top: parent.top
             left: parent.left
             leftMargin: Math.round(units.gridUnit / 2) + (units.iconSizes.medium - pmCheckBox.width) / 2
         }
@@ -70,6 +68,17 @@ FocusScope {
             pmCheckBox.forceActiveFocus()
             pmCheckBox.checked = !pmCheckBox.checked
         }
+    }
+
+    Components.ToolButton {
+        anchors {
+            right: parent.right
+            rightMargin: Math.round(units.gridUnit / 2)
+            verticalCenter: pmCheckBox.verticalCenter
+        }
+        iconSource: "configure"
+        onClicked: processRunner.runPowerdevilKCM()
+        tooltip: i18n("Configure Power Saving...")
     }
 
     RowLayout {
