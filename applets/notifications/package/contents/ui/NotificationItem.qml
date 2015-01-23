@@ -90,19 +90,13 @@ Item {
         }
     }
 
-    Component.onCompleted: {
-        updateTimeLabel()
+    Timer {
+        interval: 15000
+        running: plasmoid.expanded
+        repeat: true
+        triggeredOnStart: true
+        onTriggered: updateTimeLabel()
     }
-
-    Connections {
-        target: plasmoid
-        onExpandedChanged: {
-            if (plasmoid.expanded) {
-                updateTimeLabel()
-            }
-        }
-    }
-
 
     QIconItem {
         id: appIconItem
