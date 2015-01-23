@@ -51,26 +51,28 @@ Item {
 
             PlasmaComponents.Label {
                 id: detailsLabel
-                width: modelData.value ? parent.width - detailsLayout.leftColumnWidth - units.smallSpacing : detailsLayout.leftColumnWidth + units.smallSpacing
-                elide: Text.ElideRight
+                width: modelData.value && parent ? parent.width - detailsLayout.leftColumnWidth - units.smallSpacing : detailsLayout.leftColumnWidth + units.smallSpacing
                 wrapMode: Text.NoWrap
                 onPaintedWidthChanged: { // horrible HACK to get a column layout
                     if (paintedWidth > detailsLayout.leftColumnWidth) {
                         detailsLayout.leftColumnWidth = paintedWidth
                     }
                 }
-                height: paintedHeight
+                height: implicitHeight
                 text: modelData.value ? modelData.value : modelData.label
 
-                states: State {
-                    when: !!detailsLayout.parent.inListView // HACK
-                    PropertyChanges {
-                        target: detailsLabel
-                        horizontalAlignment: modelData.value ? Text.AlignRight : Text.AlignLeft
-                        font.pointSize: theme.smallestFont.pointSize
-                        width: parent.width / 2
+                states: [
+                    State {
+                        when: !!detailsLayout.parent.inListView // HACK
+                        PropertyChanges {
+                            target: detailsLabel
+                            horizontalAlignment: modelData.value ? Text.AlignRight : Text.AlignLeft
+                            font.pointSize: theme.smallestFont.pointSize
+                            width: parent ? parent.width / 2 : 0
+                            elide: Text.ElideNone // eliding and height: implicitHeight causes loops
+                        }
                     }
-                }
+                ]
             }
         }
     }
