@@ -49,6 +49,8 @@ Item {
 
     readonly property int remainingTime: Number(pmSource.data["Battery"]["Remaining msec"])
 
+    property var inhibitions: []
+
     onScreenBrightnessChanged: {
         if (disableBrightnessUpdate) {
             return;
@@ -84,6 +86,7 @@ Item {
         Logic.updateBrightness(batterymonitor, pmSource);
         plasmoid.removeAction("configure");
         plasmoid.setAction("powerdevilkcm", i18n("&Configure Power Saving..."), "preferences-system-power-management");
+        Logic.updateInhibitions(batterymonitor, pmSource)
     }
 
     function updateLogic() {
@@ -134,6 +137,7 @@ Item {
         onDataChanged: {
             Logic.updateBrightness(batterymonitor, pmSource)
             Logic.updateTooltip(batterymonitor.remainingTime)
+            Logic.updateInhibitions(batterymonitor, pmSource)
         }
     }
 

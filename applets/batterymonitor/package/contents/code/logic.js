@@ -125,3 +125,19 @@ function updateBrightness(rootItem, source) {
     }
     rootItem.disableBrightnessUpdate = false;
 }
+
+function updateInhibitions(rootItem, source) {
+    var inhibitions = [];
+
+    if (source.data["Inhibitions"]) {
+        for(var key in pmSource.data["Inhibitions"]) {
+            if (key === "plasmashell") { // ignore our own inhibition
+                continue
+            }
+
+            inhibitions.push(pmSource.data["Inhibitions"][key])
+        }
+    }
+
+    rootItem.inhibitions = inhibitions
+}

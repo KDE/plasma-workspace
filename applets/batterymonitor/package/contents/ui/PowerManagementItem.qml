@@ -32,23 +32,6 @@ FocusScope {
 
     property alias enabled: pmCheckBox.checked
 
-    readonly property var inhibitions: {
-        if (!pmSource.data["Inhibitions"]) {
-            return []
-        }
-
-        var inhibitions = []
-        for(var key in pmSource.data["Inhibitions"]) {
-            if (key === "plasmashell") { // ignore our own inhibition
-                continue
-            }
-
-            inhibitions.push(pmSource.data["Inhibitions"][key])
-        }
-
-        return inhibitions
-    }
-
     Components.CheckBox {
         id: pmCheckBox
         anchors {
