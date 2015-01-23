@@ -131,7 +131,7 @@ function updateInhibitions(rootItem, source) {
 
     if (source.data["Inhibitions"]) {
         for(var key in pmSource.data["Inhibitions"]) {
-            if (key === "plasmashell") { // ignore our own inhibition
+            if (key === "plasmashell" || key === "plasmoidviewer") { // ignore our own inhibition
                 continue
             }
 
