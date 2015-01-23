@@ -167,7 +167,7 @@ Item {
     Plasmoid.fullRepresentation: PopupDialog {
         id: dialogItem
         Layout.minimumWidth: units.iconSizes.medium * 9
-        Layout.minimumHeight: units.gridUnit * 13
+        Layout.minimumHeight: units.gridUnit * 15
         // TODO Probably needs a sensible preferredHeight too
 
         model: plasmoid.expanded ? batteries : null
