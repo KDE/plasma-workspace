@@ -77,7 +77,7 @@ FocusScope {
             verticalCenter: pmCheckBox.verticalCenter
         }
         iconSource: "configure"
-        onClicked: processRunner.runPowerdevilKCM()
+        onClicked: batterymonitor.action_powerdevilkcm()
         tooltip: i18n("Configure Power Saving...")
     }
 
