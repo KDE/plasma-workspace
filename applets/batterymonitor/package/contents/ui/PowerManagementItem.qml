@@ -27,7 +27,7 @@ import org.kde.kquickcontrolsaddons 2.0
 FocusScope {
     id: brightnessItem
     width: parent.width
-    height: Math.max(pmCheckBox.height, pmLabel.height) + dialog.anchors.topMargin + dialog.anchors.bottomMargin + units.gridUnit / 2 + (pmHintRow.visible ? pmHintRow.height : 0)
+    height: Math.max(pmCheckBox.height, pmLabel.height) + dialog.anchors.topMargin + dialog.anchors.bottomMargin + units.gridUnit / 2 + pmHintColumn.height
 
     property alias enabled: pmCheckBox.checked
 
@@ -81,8 +81,8 @@ FocusScope {
         tooltip: i18n("Configure Power Saving...")
     }
 
-    RowLayout {
-        id: pmHintRow
+    Column {
+        id: pmHintColumn
         anchors {
             left: pmLabel.left
             right: parent.right
@@ -90,17 +90,18 @@ FocusScope {
             top: pmCheckBox.bottom
         }
         spacing: units.smallSpacing
-        visible: inhibitions.length > 0
 
-        PlasmaCore.IconItem {
-            width: units.iconSizes.small
-            height: width
-            source: inhibitions.length > 0 ? inhibitions[0].Icon || "" : ""
-            visible: valid
+        InhibitionHint {
+            width: parent.width
+            visible: pmSource.data["PowerDevil"] && pmSource.data["PowerDevil"]["Is Lid Present"] && !pmSource.data["PowerDevil"]["Triggers Lid Action"]
+            iconSource: "computer-laptop"
+            text: i18n("Your notebook is configured not to suspend when closing the lid while an external monitor is connected.")
         }
 
-        Components.Label {
-            Layout.fillWidth: true
+        InhibitionHint {
+            width: parent.width
+            visible: inhibitions.length > 0
+            iconSource: inhibitions.length > 0 ? inhibitions[0].Icon || "" : ""
             text: {
                 if (inhibitions.length > 1) {
                     return i18ncp("Some Application and n others are currently suppressing PM",
@@ -119,11 +120,6 @@ FocusScope {
                     return ""
                 }
             }
-            height: implicitHeight
-            font.pointSize: theme.smallestFont.pointSize
-            wrapMode: Text.WordWrap
-            elide: Text.ElideRight
-            maximumLineCount: 2
         }
     }
 }

@@ -102,6 +102,14 @@ void PowermanagementEngine::init()
         }
 
         if (!QDBusConnection::sessionBus().connect(SOLID_POWERMANAGEMENT_SERVICE,
+                                                   QStringLiteral("/org/kde/Solid/PowerManagement/Actions/HandleButtonEvents"),
+                                                   QStringLiteral("org.kde.Solid.PowerManagement.Actions.HandleButtonEvents"),
+                                                   QStringLiteral("triggersLidActionChanged"), this,
+                                                   SLOT(triggersLidActionChanged(bool)))) {
+            qDebug() << "error connecting to lid action trigger changes via dbus";
+        }
+
+        if (!QDBusConnection::sessionBus().connect(SOLID_POWERMANAGEMENT_SERVICE,
                                                    QStringLiteral("/org/kde/Solid/PowerManagement/PolicyAgent"),
                                                    QStringLiteral("org.kde.Solid.PowerManagement.PolicyAgent"),
                                                    QStringLiteral("InhibitionsChanged"), this,
@@ -275,6 +283,20 @@ bool PowermanagementEngine::sourceRequestEvent(const QString &name)
             QDBusPendingReply<bool> reply = *watcher;
             if (!reply.isError()) {
                 setData("PowerDevil", "Is Lid Present", reply.value());
+            }
+            watcher->deleteLater();
+        });
+
+        QDBusMessage triggersLidActionMsg = QDBusMessage::createMethodCall(SOLID_POWERMANAGEMENT_SERVICE,
+                                                                           QStringLiteral("/org/kde/Solid/PowerManagement/Actions/HandleButtonEvents"),
+                                                                           QStringLiteral("org.kde.Solid.PowerManagement.Actions.HandleButtonEvents"),
+                                                                           QStringLiteral("triggersLidAction"));
+        QDBusPendingReply<bool> triggersLidActionReply = QDBusConnection::sessionBus().asyncCall(triggersLidActionMsg);
+        QDBusPendingCallWatcher *triggersLidActionWatcher = new QDBusPendingCallWatcher(triggersLidActionReply, this);
+        QObject::connect(triggersLidActionWatcher, &QDBusPendingCallWatcher::finished, this, [this](QDBusPendingCallWatcher *watcher) {
+            QDBusPendingReply<bool> reply = *watcher;
+            if (!reply.isError()) {
+                triggersLidActionChanged(reply.value());
             }
             watcher->deleteLater();
         });
@@ -580,6 +602,11 @@ void PowermanagementEngine::maximumKeyboardBrightnessChanged(int maximumBrightne
 {
     setData("PowerDevil", "Maximum Keyboard Brightness", maximumBrightness);
     setData("PowerDevil", "Keyboard Brightness Available", maximumBrightness > 0);
+}
+
+void PowermanagementEngine::triggersLidActionChanged(bool triggers)
+{
+    setData("PowerDevil", "Triggers Lid Action", triggers);
 }
 
 void PowermanagementEngine::inhibitionsChanged(const QList<InhibitionInfo> &added, const QStringList &removed)
