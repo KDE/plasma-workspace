@@ -104,8 +104,8 @@ FocusScope {
             text: {
                 if (inhibitions.length > 1) {
                     return i18ncp("Some Application and n others are currently suppressing PM",
-                                  "%2 and %1 other application are currently suppressing power management",
-                                  "%2 and %1 other applications are currently suppressing power management",
+                                  "%2 and %1 other application are currently suppressing power management.",
+                                  "%2 and %1 other applications are currently suppressing power management.",
                                   inhibitions.length - 1, inhibitions[0].Name) // plural only works on %1
                 } else if (inhibitions.length === 1) {
                     if (!inhibitions[0].Reason) {
