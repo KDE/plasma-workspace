@@ -75,32 +75,14 @@ Item {
 
     }
 
-    MouseArea {
-        id: pin
-
-        /* Allows the user to keep the calendar open for reference */
-
-        width: units.largeSpacing
+    // Allows the user to keep the calendar open for reference
+    PlasmaComponents.ToolButton {
+        anchors.right: parent.right
+        width: Math.round(units.gridUnit * 1.25)
         height: width
-        hoverEnabled: true
-        anchors {
-            top: parent.top
-            right: parent.right
-        }
-
-        property bool checked: false
-
-        onClicked: {
-            pin.checked = !pin.checked;
-            plasmoid.hideOnWindowDeactivate = !pin.checked;
-        }
-
-        PlasmaCore.IconItem {
-            anchors.centerIn: parent
-            source: pin.checked ? "window-unpin" : "window-pin"
-            width: units.iconSizes.tiny
-            height: width
-            active: pin.containsMouse
-        }
+        checkable: true
+        iconSource: "window-pin"
+        onCheckedChanged: plasmoid.hideOnWindowDeactivate = !checked
     }
+
 }
