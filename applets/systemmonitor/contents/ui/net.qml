@@ -23,7 +23,7 @@ import QtQuick.Layouts 1.1
 import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
-import org.kde.plasma.extras 2.0 as PlasmaExtras
+import org.kde.kquickcontrolsaddons 2.0 as KQuickAddons
 
 Item {
     id: rootItem
@@ -125,7 +125,7 @@ Item {
         Repeater {
             model: smSource.enabledNetworksCount
 
-            PlasmaExtras.Plotter {
+            KQuickAddons.Plotter {
                 id: plotter
                 property string ifName: smSource.enabledNetworks[modelData]
 
@@ -133,11 +133,11 @@ Item {
                 Layout.fillHeight: true
 
                 dataSets: [
-                    PlasmaExtras.PlotData {
+                    KQuickAddons.PlotData {
                         label: i18n("Download")
                         color: theme.highlightColor
                     },
-                    PlasmaExtras.PlotData {
+                    KQuickAddons.PlotData {
                         label: i18n("Upload")
                         color: cycle(theme.highlightColor, -90)
                     }
