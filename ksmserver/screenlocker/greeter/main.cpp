@@ -53,6 +53,8 @@ int main(int argc, char* argv[])
 {
     KLocalizedString::setApplicationDomain("kscreenlocker_greet");
 
+    // explicitly disable input methods as it makes it impossible to unlock, see BUG 306932
+    qputenv("QT_IM_MODULE", QByteArrayLiteral("compose"));
     ScreenLocker::UnlockApp app(argc, argv);
     QCoreApplication::setApplicationName(QStringLiteral("kscreenlocker_greet"));
     QCoreApplication::setApplicationVersion(QStringLiteral("0.1"));
