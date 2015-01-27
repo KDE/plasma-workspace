@@ -52,7 +52,7 @@ KWin.Switcher {
 
             property bool canStretchX: false
             property bool canStretchY: false
-            width: tabBox.screenGeometry.width * 0.15
+            width: tabBox.screenGeometry.width * 0.15 + (__verticalScrollBar.visible ? __verticalScrollBar.width : 0)
             height: tabBox.screenGeometry.height
             clip: true
             focus: true
@@ -155,3 +155,4 @@ KWin.Switcher {
         }
     }
 }
+
