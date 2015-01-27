@@ -22,6 +22,8 @@
 
 #include <kservice.h>
 
+#include <QSet>
+
 class KCmdLineArgs;
 
 class KCMInit : public QObject
@@ -41,7 +43,7 @@ class KCMInit : public QObject
         bool runModule(const QString &libName, KService::Ptr service);
         void runModules( int phase );
         KService::List list;
-        QStringList alreadyInitialized;
+        QSet<QString> alreadyInitialized;
 };
 
 #endif // MAIN_H

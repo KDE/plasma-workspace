@@ -63,16 +63,17 @@ static void waitForReady()
 
 bool KCMInit::runModule(const QString &libName, KService::Ptr service)
 {
-    const QVariant tmp = service->property("X-KDE-Init-Symbol", QVariant::String);
+    QString KCMINIT_PREFIX=QStringLiteral("kcminit_");
+    const QVariant tmp = service->property(QStringLiteral("X-KDE-Init-Symbol"), QVariant::String);
     QString kcminit;
     if( tmp.isValid() )
     {
         kcminit = tmp.toString();
-        if( !kcminit.startsWith( QLatin1String( "kcminit_" ) ) )
-            kcminit = "kcminit_" + kcminit;
+        if( !kcminit.startsWith( KCMINIT_PREFIX ) )
+            kcminit = KCMINIT_PREFIX + kcminit;
     }
     else
-        kcminit = "kcminit_" + libName;
+        kcminit = KCMINIT_PREFIX + libName;
 
     // get the kcminit_ function
     QFunctionPointer init = QLibrary::resolve(KPluginLoader::findPlugin(libName), kcminit.toUtf8().constData());
@@ -89,14 +90,15 @@ bool KCMInit::runModule(const QString &libName, KService::Ptr service)
 
 void KCMInit::runModules( int phase )
 {
+    QString KCMINIT_PREFIX=QStringLiteral("kcminit_");
     foreach (const KService::Ptr & service, list) {
-      const QVariant tmp = service->property("X-KDE-Init-Library", QVariant::String);
+      const QVariant tmp = service->property(QStringLiteral("X-KDE-Init-Library"), QVariant::String);
       QString library;
       if( tmp.isValid() )
       {
           library = tmp.toString();
-          if( !library.startsWith( QLatin1String( "kcminit_" ) ) )
-              library = QLatin1String( "kcminit_" ) + library;
+          if( !library.startsWith( KCMINIT_PREFIX ) )
+              library = KCMINIT_PREFIX + library;
       }
       else
       {
@@ -109,7 +111,7 @@ void KCMInit::runModules( int phase )
       }
 
       // see ksmserver's README for the description of the phases
-      const QVariant vphase = service->property("X-KDE-Init-Phase", QVariant::Int );
+      const QVariant vphase = service->property(QStringLiteral("X-KDE-Init-Phase"), QVariant::Int );
 
       int libphase = 1;
       if( vphase.isValid() )
@@ -121,7 +123,7 @@ void KCMInit::runModules( int phase )
       // try to load the library
       if (!alreadyInitialized.contains(library)) {
           runModule(library, service);
-          alreadyInitialized.append(library);
+          alreadyInitialized.insert(library);
       }
   }
 }
@@ -146,8 +148,8 @@ KCMInit::KCMInit( KCmdLineArgs* args )
 
   if (!arg.isEmpty()) {
     QString module = arg;
-    if (!module.endsWith(".desktop"))
-       module += ".desktop";
+    if (!module.endsWith(QLatin1String(".desktop")))
+       module += QLatin1String(".desktop");
 
     KService::Ptr serv = KService::serviceByStorageId( module );
     if ( !serv || serv->library().isEmpty() ) {
@@ -162,7 +164,7 @@ KCMInit::KCMInit( KCmdLineArgs* args )
   }
   // This key has no GUI apparently
   KConfig _config( "kcmdisplayrc" );
-  KConfigGroup config(&_config, "X11");
+  KConfigGroup config(&_config, "X11"); //NOTE Wayland case?
 #ifdef HAVE_X11
   bool multihead = !config.readEntry( "disableMultihead", false) &&
                     (QGuiApplication::screens().count() > 1);
@@ -170,12 +172,12 @@ KCMInit::KCMInit( KCmdLineArgs* args )
   bool multihead = false;
 #endif
   // Pass env. var to kdeinit.
-  QString name = "KDE_MULTIHEAD";
-  QString value = multihead ? "true" : "false";
-  OrgKdeKLauncherInterface *iface = new OrgKdeKLauncherInterface("org.kde.klauncher5", "/KLauncher", QDBusConnection::sessionBus());
-  iface->setLaunchEnv(name, value);
+  const char* name = "KDE_MULTIHEAD";
+  const char* value = multihead ? "true" : "false";
+  OrgKdeKLauncherInterface *iface = new OrgKdeKLauncherInterface(QStringLiteral("org.kde.klauncher5"), QStringLiteral("/KLauncher"), QDBusConnection::sessionBus());
+  iface->setLaunchEnv(QLatin1String(name), QLatin1String(value));
   iface->deleteLater();
-  setenv( name.toLatin1().constData(), value.toLatin1().constData(), 1 ); // apply effect also to itself
+  setenv( name, value, 1 ); // apply effect also to itself
 
   if( startup )
   {
@@ -241,8 +243,8 @@ extern "C" Q_DECL_EXPORT int kdemain(int argc, char *argv[])
 
   KApplication app;
   KCMInit kcminit( KCmdLineArgs::parsedArgs());
-  QDBusConnection::sessionBus().registerObject("/kcminit", &kcminit, QDBusConnection::ExportScriptableContents);
-  QDBusConnection::sessionBus().registerService("org.kde.kcminit");
+  QDBusConnection::sessionBus().registerObject(QStringLiteral("/kcminit"), &kcminit, QDBusConnection::ExportScriptableContents);
+  QDBusConnection::sessionBus().registerService(QStringLiteral("org.kde.kcminit"));
   return 0;
 }
 
