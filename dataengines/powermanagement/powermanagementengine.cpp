@@ -646,6 +646,7 @@ void PowermanagementEngine::populateApplicationData(const QString &name, QString
             m_applicationInfo.insert(name, qMakePair(*prettyName, *icon));
         } else {
             *prettyName = name;
+            *icon = name.split(QLatin1Char('/'), QString::SkipEmptyParts).last().toLower();
         }
     }
 }
