@@ -86,6 +86,7 @@ Item {
                             cfg_interfaces.splice(idx, 1);
                         }
                     }
+                    cfg_interfacesChanged();
                 }
             }
         }

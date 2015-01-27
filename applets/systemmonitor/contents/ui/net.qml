@@ -46,6 +46,7 @@ Item {
                  !plasmoid.configuration.interfaces[0])) {
                 enabledNetworks = availableNetworks;
             } else {
+                enabledNetworks = Array();
                 for (var i in availableNetworks) {
                     if (plasmoid.configuration.interfaces.indexOf(availableNetworks[i]) != -1) {
                         enabledNetworks.push(availableNetworks[i]);
@@ -55,10 +56,12 @@ Item {
 
             var newSources = [];
             for (var i in enabledNetworks) {
-                newSources.push("network/interfaces/" + availableNetworks[i] + "/receiver/data");
-                newSources.push("network/interfaces/" + availableNetworks[i] + "/transmitter/data");
+                newSources.push("network/interfaces/" + enabledNetworks[i] + "/receiver/data");
+                newSources.push("network/interfaces/" + enabledNetworks[i] + "/transmitter/data");
             }
             connectedSources = newSources;
+            //to trigger the signal
+            enabledNetworksCount = 0;
             enabledNetworksCount = enabledNetworks.length;
         }
 
