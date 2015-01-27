@@ -42,6 +42,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include <QTimer>
 #include <QProcess>
 #include <QX11Info>
+#include <QDBusReply>
 // X11
 #include <X11/Xlib.h>
 #include <xcb/xcb.h>
@@ -145,7 +146,8 @@ void KSldApp::initialize()
             if (lockState() != Unlocked) {
                 return;
             }
-            if (m_inhibitCounter) {
+            if (m_inhibitCounter // either we got a direct inhibit request thru our outdated o.f.Screensaver iface ...
+                    || isFdoPowerInhibited()) { // ... or the newer one at o.f.PowerManagement.Inhibit
                 // there is at least one process blocking the auto lock of screen locker
                 return;
             }
@@ -395,7 +397,19 @@ void KSldApp::doUnlock()
     KDisplayManager().setLock(false);
     m_waylandServer->stop();
     emit unlocked();
-//     KNotification::event( QLatin1String("unlocked"));
+    //     KNotification::event( QLatin1String("unlocked"));
+}
+
+bool KSldApp::isFdoPowerInhibited() const
+{
+    QDBusMessage msg = QDBusMessage::createMethodCall("org.kde.Solid.PowerManagement.PolicyAgent",
+                                                      "/org/kde/Solid/PowerManagement/PolicyAgent",
+                                                      "org.kde.Solid.PowerManagement.PolicyAgent",
+                                                      "HasInhibition");
+    msg << (uint) 5; // PowerDevil::PolicyAgent::RequiredPolicy::ChangeScreenSettings | PowerDevil::PolicyAgent::RequiredPolicy::InterruptSession
+    QDBusReply<bool> reply = QDBusConnection::sessionBus().asyncCall(msg);
+
+    return reply.isValid() && reply.value();
 }
 
 void KSldApp::startLockProcess(EstablishLock establishLock)

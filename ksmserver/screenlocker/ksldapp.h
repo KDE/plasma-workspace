@@ -102,6 +102,7 @@ private:
     void showLockWindow();
     void hideLockWindow();
     void doUnlock();
+    bool isFdoPowerInhibited() const;
 
     KActionCollection *m_actionCollection;
     LockState m_lockState;
