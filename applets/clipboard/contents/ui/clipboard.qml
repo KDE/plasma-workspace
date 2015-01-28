@@ -35,6 +35,7 @@ Item {
     Plasmoid.status: clipboardSource.data["clipboard"]["empty"] ? PlasmaCore.Types.PassiveStatus : PlasmaCore.Types.ActiveStatus
     Plasmoid.toolTipMainText: i18n("Clipboard Contents")
     Plasmoid.toolTipSubText: clipboardSource.data["clipboard"]["empty"] ? i18n("Clipboard is empty") : clipboardSource.data["clipboard"]["current"]
+    Plasmoid.toolTipTextFormat: Text.PlainText
     Plasmoid.icon: "klipper"
 
     function action_configure() {
