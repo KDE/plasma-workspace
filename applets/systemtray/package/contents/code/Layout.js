@@ -25,8 +25,10 @@ function alignedSize(suggestedsize) {
 
     if (suggestedsize < 16) {
         //do nothing
-    } else if (suggestedsize < 24) {
+    } else if (suggestedsize < 22) {
         resultingsize = 16;
+    } else if (suggestedsize < 24) {
+        resultingsize = 22;
     } else if (suggestedsize < 32) {
         resultingsize = 24;
     } else if (suggestedsize < 48) {
