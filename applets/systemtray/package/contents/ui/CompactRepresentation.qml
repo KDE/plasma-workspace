@@ -32,8 +32,8 @@ Item {
 
     Layout.minimumWidth: !root.vertical ? computeDimension() : 0
     Layout.minimumHeight: !root.vertical ? 0 : computeDimensionHeight()
-    Layout.maximumWidth: Layout.minimumWidth
-    Layout.maximumHeight: Layout.minimumHeight
+    Layout.maximumWidth: plasmoid.formFactor == PlasmaCore.Types.Planar ? units.gridUnit * 3 : Layout.minimumWidth
+    Layout.maximumHeight: plasmoid.formFactor == PlasmaCore.Types.Planar ? units.gridUnit * 3 : Layout.minimumHeight
     Layout.preferredWidth: Layout.minimumWidth
     Layout.preferredHeight: Layout.minimumHeight
 
