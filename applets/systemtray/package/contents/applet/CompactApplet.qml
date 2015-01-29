@@ -71,6 +71,14 @@ Item {
             }
         }
     }
+    PlasmaComponents.BusyIndicator {
+        z: 1000
+        visible: plasmoid && plasmoid.busy
+        running: visible
+        width: Math.min(parent.width, parent.height)
+        height: height
+        anchors.centerIn: parent
+    }
 
     onCompactRepresentationChanged: {
         if (!compactRepresentation) {
