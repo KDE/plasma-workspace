@@ -188,7 +188,7 @@ Image {
                                     unlockFunction();
                                     break;
                                 case "newSession":
-                                    sessions.createNewSession();
+                                    sessions.startNewSession();
                                     break;
                                 case "changeSession":
                                     stackView.push(changeSessionComponent)
