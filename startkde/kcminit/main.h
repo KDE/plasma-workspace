@@ -23,6 +23,7 @@
 #include <kservice.h>
 
 #include <QSet>
+#include <QCommandLineParser>
 
 class KCmdLineArgs;
 
@@ -37,7 +38,7 @@ class KCMInit : public QObject
 	Q_SCRIPTABLE void phase1Done();
 	Q_SCRIPTABLE void phase2Done();
     public:
-        KCMInit( KCmdLineArgs* args );
+        KCMInit( const QCommandLineParser& args );
         virtual ~KCMInit();
     private:
         bool runModule(const QString &libName, KService::Ptr service);

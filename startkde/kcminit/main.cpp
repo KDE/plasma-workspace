@@ -29,11 +29,10 @@
 #include <QTimer>
 #include <QLibrary>
 #include <QtDBus/QtDBus>
+#include <QGuiApplication>
 #include <QDebug>
 
-#include <kapplication.h>
-#include <kcmdlineargs.h>
-#include <k4aboutdata.h>
+#include <kaboutdata.h>
 #include <kservice.h>
 #include <kconfig.h>
 #include <kconfiggroup.h>
@@ -128,14 +127,14 @@ void KCMInit::runModules( int phase )
   }
 }
 
-KCMInit::KCMInit( KCmdLineArgs* args )
+KCMInit::KCMInit( const QCommandLineParser& args )
 {
   QString arg;
-  if (args->count() == 1) {
-    arg = args->arg(0);
+  if (args.positionalArguments().size() == 1) {
+    arg = args.positionalArguments().first();
   }
 
-  if (args->isSet("list")) {
+  if (args.isSet(QStringLiteral("list"))) {
     list = KServiceTypeTrader::self()->query( "KCModuleInit" );
 
     foreach (const KService::Ptr & service, list) {
@@ -162,14 +161,16 @@ KCMInit::KCMInit( KCmdLineArgs* args )
     // locate the desktop files
     list = KServiceTypeTrader::self()->query( "KCModuleInit" );
   }
-  // This key has no GUI apparently
-  KConfig _config( "kcmdisplayrc" );
-  KConfigGroup config(&_config, "X11"); //NOTE Wayland case?
-#ifdef HAVE_X11
-  bool multihead = !config.readEntry( "disableMultihead", false) &&
-                    (QGuiApplication::screens().count() > 1);
-#else
+
+  //NOTE Wayland case?
   bool multihead = false;
+#ifdef HAVE_X11
+  if (qApp->platformName() == QLatin1String("xcb") && QGuiApplication::screens().count() > 1) {
+    KConfig _config( "kcmdisplayrc" );
+    KConfigGroup config(&_config, "X11");
+    // This key has no GUI apparently
+    multihead = !config.readEntry( "disableMultihead", false);
+  }
 #endif
   // Pass env. var to kdeinit.
   const char* name = "KDE_MULTIHEAD";
@@ -179,8 +180,7 @@ KCMInit::KCMInit( KCmdLineArgs* args )
   iface->deleteLater();
   setenv( name, value, 1 ); // apply effect also to itself
 
-  if( startup )
-  {
+  if( startup ) {
      runModules( 0 );
      // Tell KSplash that KCMInit has started
      QDBusMessage ksplashProgressMessage = QDBusMessage::createMethodCall(QStringLiteral("org.kde.KSplash"),
@@ -230,19 +230,22 @@ extern "C" Q_DECL_EXPORT int kdemain(int argc, char *argv[])
   close( ready[ 0 ] );
 
   startup = ( strcmp( argv[ 0 ], "kcminit_startup" ) == 0 ); // started from startkde?
-  K4AboutData aboutData( "kcminit", "kcminit", ki18n("KCMInit"),
-                        "",
-                        ki18n("KCMInit - runs startup initialization for Control Modules."));
 
-  KCmdLineArgs::init(argc, argv, &aboutData);
+  KLocalizedString::setApplicationDomain("kcminit");
+  QGuiApplication app(argc, argv);
+  KAboutData about(QStringLiteral("kcminit"), i18n("KCMInit"), QString(),
+                   i18n("KCMInit - runs startup initialization for Control Modules."), KAboutLicense::GPL);
+  KAboutData::setApplicationData(about);
 
-  KCmdLineOptions options;
-  options.add("list", ki18n("List modules that are run at startup"));
-  options.add("+module", ki18n("Configuration module to run"));
-  KCmdLineArgs::addCmdLineOptions( options ); // Add our own options.
+  QCommandLineParser parser;
+  about.setupCommandLine(&parser);
+  parser.addOption(QCommandLineOption(QStringList() <<  QStringLiteral("list"), i18n("List modules that are run at startup")));
+  parser.addPositionalArgument(QStringLiteral("module"), i18n("Configuration module to run"));
 
-  KApplication app;
-  KCMInit kcminit( KCmdLineArgs::parsedArgs());
+  parser.process(app);
+  about.processCommandLine(&parser);
+
+  KCMInit kcminit( parser );
   QDBusConnection::sessionBus().registerObject(QStringLiteral("/kcminit"), &kcminit, QDBusConnection::ExportScriptableContents);
   QDBusConnection::sessionBus().registerService(QStringLiteral("org.kde.kcminit"));
   return 0;
