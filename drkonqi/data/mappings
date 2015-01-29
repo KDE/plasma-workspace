@@ -54,6 +54,7 @@ plasma-netbook=plasma|plasma-netbook
 kactivitymanagerd=kactivities|general
 plasma-windowed=plasma|general
 plasma-device=Active|General
+plasmashell=plasmashell|general
 
 #KDE Plasma SDK (Plasmate)
 plasmaengineexplorer=plasmate|general
