@@ -145,7 +145,6 @@ X-KDE-ServiceTypes=Plasma/Applet
 X-Plasma-API=declarativeappletscript
 X-Plasma-MainScript=ui/net.qml
 
-X-Plasma-NotificationArea=true
 X-Plasma-ConfigPlugins=solid-actions,device_automounter_kcm
 
 X-KDE-PluginInfo-Author=Marco Martin
