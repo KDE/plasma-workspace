@@ -19,7 +19,7 @@
 
 #include "remoteimpl.h"
 
-#include <kdebug.h>
+#include "kio_remote_debug.h"
 #include <kglobalsettings.h>
 #include <kstandarddirs.h>
 #include <kdesktopfile.h>
@@ -52,7 +52,7 @@ RemoteImpl::RemoteImpl()
 
 void RemoteImpl::listRoot(KIO::UDSEntryList &list) const
 {
-	kDebug(1220) << "RemoteImpl::listRoot";
+	qCDebug(KIOREMOTE_LOG) << "RemoteImpl::listRoot";
 
 	QStringList names_found;
 	const QStringList dirList = KGlobal::dirs()->resourceDirs("remote_entries");
@@ -88,7 +88,7 @@ void RemoteImpl::listRoot(KIO::UDSEntryList &list) const
 
 bool RemoteImpl::findDirectory(const QString &filename, QString &directory) const
 {
-	kDebug(1220) << "RemoteImpl::findDirectory";
+	qCDebug(KIOREMOTE_LOG) << "RemoteImpl::findDirectory";
 
 	const QStringList dirList = KGlobal::dirs()->resourceDirs("remote_entries");
 
@@ -123,7 +123,7 @@ bool RemoteImpl::findDirectory(const QString &filename, QString &directory) cons
 
 QString RemoteImpl::findDesktopFile(const QString &filename) const
 {
-	kDebug(1220) << "RemoteImpl::findDesktopFile";
+	qCDebug(KIOREMOTE_LOG) << "RemoteImpl::findDesktopFile";
 
 	QString directory;
 	if (findDirectory(filename+".desktop", directory))
@@ -136,7 +136,7 @@ QString RemoteImpl::findDesktopFile(const QString &filename) const
 
 KUrl RemoteImpl::findBaseURL(const QString &filename) const
 {
-	kDebug(1220) << "RemoteImpl::findBaseURL";
+	qCDebug(KIOREMOTE_LOG) << "RemoteImpl::findBaseURL";
 
 	const QString file = findDesktopFile(filename);
 	if (!file.isEmpty())
@@ -208,11 +208,11 @@ void RemoteImpl::createEntry(KIO::UDSEntry &entry,
                              const QString &directory,
                              const QString &file) const
 {
-	kDebug(1220) << "RemoteImpl::createEntry";
+	qCDebug(KIOREMOTE_LOG) << "RemoteImpl::createEntry";
 
 	KDesktopFile desktop(directory+file);
 
-	kDebug(1220) << "path = " << directory << file;
+	qCDebug(KIOREMOTE_LOG) << "path = " << directory << file;
 
 	entry.clear();
 
@@ -233,7 +233,7 @@ void RemoteImpl::createEntry(KIO::UDSEntry &entry,
 
 bool RemoteImpl::statNetworkFolder(KIO::UDSEntry &entry, const QString &filename) const
 {
-	kDebug(1220) << "RemoteImpl::statNetworkFolder: " << filename;
+	qCDebug(KIOREMOTE_LOG) << "RemoteImpl::statNetworkFolder: " << filename;
 
 	QString directory;
 	if (findDirectory(filename+".desktop", directory))
@@ -247,12 +247,12 @@ bool RemoteImpl::statNetworkFolder(KIO::UDSEntry &entry, const QString &filename
 
 bool RemoteImpl::deleteNetworkFolder(const QString &filename) const
 {
-	kDebug(1220) << "RemoteImpl::deleteNetworkFolder: " << filename;
+	qCDebug(KIOREMOTE_LOG) << "RemoteImpl::deleteNetworkFolder: " << filename;
 
 	QString directory;
 	if (findDirectory(filename+".desktop", directory))
 	{
-		kDebug(1220) << "Removing " << directory << filename << ".desktop";
+		qCDebug(KIOREMOTE_LOG) << "Removing " << directory << filename << ".desktop";
 		return QFile::remove(directory+filename+".desktop");
 	}
 
@@ -262,7 +262,7 @@ bool RemoteImpl::deleteNetworkFolder(const QString &filename) const
 bool RemoteImpl::renameFolders(const QString &src, const QString &dest,
                                bool overwrite) const
 {
-	kDebug(1220) << "RemoteImpl::renameFolders: "
+	qCDebug(KIOREMOTE_LOG) << "RemoteImpl::renameFolders: "
 	          << src << ", " << dest << endl;
 
 	QString directory;
@@ -273,7 +273,7 @@ bool RemoteImpl::renameFolders(const QString &src, const QString &dest,
 			return false;
 		}
 
-		kDebug(1220) << "Renaming " << directory << src << ".desktop";
+		qCDebug(KIOREMOTE_LOG) << "Renaming " << directory << src << ".desktop";
 		QDir dir(directory);
 		bool res = dir.rename(src+".desktop", dest+".desktop");
 		if (res)
@@ -290,7 +290,7 @@ bool RemoteImpl::renameFolders(const QString &src, const QString &dest,
 bool RemoteImpl::changeFolderTarget(const QString &src, const QString &target,
                                     bool overwrite) const
 {
-	kDebug(1220) << "RemoteImpl::changeFolderTarget: "
+	qCDebug(KIOREMOTE_LOG) << "RemoteImpl::changeFolderTarget: "
 	          << src << ", " << target << endl;
 
 	QString directory;
@@ -301,7 +301,7 @@ bool RemoteImpl::changeFolderTarget(const QString &src, const QString &target,
 			return false;
 		}
 
-		kDebug(1220) << "Changing target " << directory << src << ".desktop";
+		qCDebug(KIOREMOTE_LOG) << "Changing target " << directory << src << ".desktop";
 		KDesktopFile desktop(directory+src+".desktop");
 		desktop.desktopGroup().writeEntry("URL", target);
 		return true;
