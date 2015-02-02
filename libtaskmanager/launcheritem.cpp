@@ -332,12 +332,12 @@ QString LauncherItem::defaultApplication() const
                 services += d.absoluteFilePath(f);
         }
 
-        //kDebug() << "ok, trying in" << services.count();
+        //qDebug() << "ok, trying in" << services.count();
         foreach (const QString & service, services) {
             KConfig config(service, KConfig::SimpleConfig);
             KConfigGroup cg = config.group(QByteArray());
             const QString type = cg.readEntry("valueName", QString());
-            //kDebug() << "    checking" << service << type << application;
+            //qDebug() << "    checking" << service << type << application;
             if (type.compare(application, Qt::CaseInsensitive) == 0) {
                 KConfig store(cg.readPathEntry("storeInFile", "null"));
                 KConfigGroup storeCg(&store, cg.readEntry("valueSection", QString()));

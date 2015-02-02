@@ -252,7 +252,7 @@ QModelIndex TasksModel::index(int row, int column, const QModelIndex &parent) co
         return QModelIndex();
     }
 
-    //kDebug() << "asking for" << row << column;
+    //qDebug() << "asking for" << row << column;
 
     TaskGroup *group = 0;
     if (parent.isValid()) {

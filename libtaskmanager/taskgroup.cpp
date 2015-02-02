@@ -64,14 +64,14 @@ TaskGroup::TaskGroup(GroupManager *parent, const QString &name)
         d(new Private(this, parent))
 {
     d->groupName = name;
-    //kDebug() << "Group Created: Name: " << d->groupName;
+    //qDebug() << "Group Created: Name: " << d->groupName;
 }
 
 TaskGroup::TaskGroup(GroupManager *parent)
     :   AbstractGroupableItem(parent),
         d(new Private(this, parent))
 {
-    //kDebug() << "Group Created: Name: " << d->groupName;
+    //qDebug() << "Group Created: Name: " << d->groupName;
 }
 
 
@@ -83,15 +83,15 @@ TaskGroup::~TaskGroup()
 
 WindowList TaskGroup::winIds() const
 {
-//     kDebug() << name() << d->members.size();
+//     qDebug() << name() << d->members.size();
     if (d->members.isEmpty()) {
-//         kDebug() << "empty group: " << name();
+//         qDebug() << "empty group: " << name();
     }
     WindowList ids;
     foreach (AbstractGroupableItem * groupable, d->members) {
         ids += groupable->winIds();
     }
-//     kDebug() << ids.size();
+//     qDebug() << ids.size();
     return ids;
 }
 
@@ -124,7 +124,7 @@ AbstractGroupableItem *TaskGroup::getMemberByWId(WId id)
             }
         }
     }
-    //kDebug() << "item not found";
+    //qDebug() << "item not found";
     return 0;
 }
 
@@ -142,7 +142,7 @@ AbstractGroupableItem *TaskGroup::getMemberById(int id)
             }
         }
     }
-    //kDebug() << "item not found";
+    //qDebug() << "item not found";
     return 0;
 }
 
@@ -164,18 +164,18 @@ void TaskGroup::add(AbstractGroupableItem *item, int insertIndex)
 {
     /*    if (!item->itemType() == GroupItemType) {
             if ((dynamic_cast<TaskItem*>(item))->task()) {
-                kDebug() << "Add item" << (dynamic_cast<TaskItem*>(item))->task()->visibleName();
+                qDebug() << "Add item" << (dynamic_cast<TaskItem*>(item))->task()->visibleName();
             }
-            kDebug() << " to Group " << name();
+            qDebug() << " to Group " << name();
         }
     */
     if (!item) {
-//         kDebug() << "invalid item";
+//         qDebug() << "invalid item";
         return;
     }
 
     if (d->members.contains(item)) {
-        //kDebug() << "already in this group";
+        //qDebug() << "already in this group";
         return;
     }
 
@@ -248,9 +248,9 @@ void TaskGroup::add(AbstractGroupableItem *item, int insertIndex)
     //For debug
     /* foreach (AbstractGroupableItem *item, d->members) {
          if (item->itemType() == GroupItemType) {
-             kDebug() << (dynamic_cast<TaskGroup*>(item))->name();
+             qDebug() << (dynamic_cast<TaskGroup*>(item))->name();
          } else {
-             kDebug() << (dynamic_cast<TaskItem*>(item))->task()->visibleName();
+             qDebug() << (dynamic_cast<TaskItem*>(item))->task()->visibleName();
          }
      }*/
     emit itemAdded(item);
@@ -296,24 +296,24 @@ void TaskGroup::remove(AbstractGroupableItem *item)
 
     /*
     if (item->itemType() == GroupItemType) {
-        kDebug() << "Remove group" << (dynamic_cast<TaskGroup*>(item))->name();
+        qDebug() << "Remove group" << (dynamic_cast<TaskGroup*>(item))->name();
     } else if ((dynamic_cast<TaskItem*>(item))->task()) {
-        kDebug() << "Remove item" << (dynamic_cast<TaskItem*>(item))->task()->visibleName();
+        qDebug() << "Remove item" << (dynamic_cast<TaskItem*>(item))->task()->visibleName();
     }
-    kDebug() << "from Group: " << name();
+    qDebug() << "from Group: " << name();
     */
 
-    /* kDebug() << "GroupMembers: ";
+    /* qDebug() << "GroupMembers: ";
      foreach (AbstractGroupableItem *item, d->members) {
          if (item->itemType() == GroupItemType) {
-             kDebug() << (dynamic_cast<TaskGroup*>(item))->name();
+             qDebug() << (dynamic_cast<TaskGroup*>(item))->name();
          } else {
-             kDebug() << (dynamic_cast<TaskItem*>(item))->task()->visibleName();
+             qDebug() << (dynamic_cast<TaskItem*>(item))->task()->visibleName();
          }
      }*/
 
     if (!d->members.contains(item)) {
-//         kDebug() << "couldn't find item";
+//         qDebug() << "couldn't find item";
         return;
     }
 
@@ -323,7 +323,7 @@ void TaskGroup::remove(AbstractGroupableItem *item)
     d->members.removeAll(item);
     item->setParentGroup(0);
     /*if (d->members.isEmpty()) {
-        kDebug() << "empty";
+        qDebug() << "empty";
         emit empty(this);
     }*/
 
@@ -398,7 +398,7 @@ bool TaskGroup::hasDirectMember(AbstractGroupableItem *item) const
 /** true if item is in this or any sub group */
 bool TaskGroup::hasMember(AbstractGroupableItem *item) const
 {
-    //kDebug();
+    //qDebug();
     TaskGroup *group = item->parentGroup();
     while (group) {
         if (group == this) {
@@ -420,7 +420,7 @@ AbstractGroupableItem *TaskGroup::directMember(AbstractGroupableItem *item) cons
         tempItem = tempItem->parentGroup();
     }
 
-//     kDebug() << "item not found";
+//     qDebug() << "item not found";
     return 0;
 }
 
@@ -466,7 +466,7 @@ bool TaskGroup::isOnCurrentDesktop() const
 
 void TaskGroup::addMimeData(QMimeData *mimeData) const
 {
-    //kDebug() << d->members.count();
+    //qDebug() << d->members.count();
     if (d->members.isEmpty()) {
         return;
     }
@@ -478,12 +478,12 @@ void TaskGroup::addMimeData(QMimeData *mimeData) const
     memcpy(data.data(), &count, sizeof(int));
     int i = 0;
     foreach (WId id, ids) {
-        //kDebug() << "adding" << id;
+        //qDebug() << "adding" << id;
         memcpy(data.data() + sizeof(int) + sizeof(WId) * i, &id, sizeof(WId));
         ++i;
     }
 
-    //kDebug() << "done:" << data.size() << count;
+    //qDebug() << "done:" << data.size() << count;
     mimeData->setData(Task::groupMimetype(), data);
 }
 
@@ -689,10 +689,10 @@ bool TaskGroup::demandsAttention() const
 
 bool TaskGroup::moveItem(int oldIndex, int newIndex)
 {
-    //kDebug() << oldIndex << newIndex;
+    //qDebug() << oldIndex << newIndex;
     if ((d->members.count() <= newIndex) || (newIndex < 0) ||
             (d->members.count() <= oldIndex || oldIndex < 0)) {
-//         kDebug() << "index out of bounds";
+//         qDebug() << "index out of bounds";
         return false;
     }
 

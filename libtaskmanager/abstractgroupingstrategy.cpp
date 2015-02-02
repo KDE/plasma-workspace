@@ -141,7 +141,7 @@ TaskGroup* AbstractGroupingStrategy::createGroup(ItemList items)
     ItemList oldGroupMembers = oldGroup->members();
     int index = oldGroupMembers.count();
     d->createdGroups.append(newGroup);
-    //kDebug() << "added group" << d->createdGroups.count();
+    //qDebug() << "added group" << d->createdGroups.count();
     // NOTE: Queued is vital to make sure groups only get removed after their children, for
     // correct QAbstractItemModel (TasksModel) transaction semantics.
     connect(newGroup, &TaskGroup::itemRemoved, this, &AbstractGroupingStrategy::checkGroup, Qt::QueuedConnection);
@@ -165,7 +165,7 @@ void AbstractGroupingStrategy::closeGroup(TaskGroup *group)
     Q_ASSERT(group);
     disconnect(group, 0, this, 0);
     d->createdGroups.removeAll(group);
-    //kDebug() << "closig group" << group->name() << d->createdGroups.count();
+    //qDebug() << "closig group" << group->name() << d->createdGroups.count();
     d->usedNames.removeAll(group->name());
     //d->usedIcons.removeAll(group->icon());//TODO
 

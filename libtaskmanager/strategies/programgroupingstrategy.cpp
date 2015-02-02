@@ -181,25 +181,25 @@ void ProgramGroupingStrategy::handleItem(AbstractGroupableItem *item)
     GroupManager *gm = qobject_cast<GroupManager *>(AbstractGroupingStrategy::parent());
 
     if (item->itemType() == GroupItemType) {
-        //kDebug() << item->name() << "item is groupitem";
+        //qDebug() << item->name() << "item is groupitem";
         root->add(item);
         return;
     } else if ((!gm || !gm->forceGrouping()) && d->blackList.contains((static_cast<TaskItem*>(item))->task()->classClass())) {
-        //kDebug() << item->name() << "item is in blacklist";
+        //qDebug() << item->name() << "item is in blacklist";
         root->add(item);
         return;
     }
 
     TaskItem *task = dynamic_cast<TaskItem*>(item);
     if (task && !programGrouping(task, root)) {
-        //kDebug() << item->name() << "joined rootGroup ";
+        //qDebug() << item->name() << "joined rootGroup ";
         root->add(item);
     }
 }
 
 bool ProgramGroupingStrategy::programGrouping(TaskItem* taskItem, TaskGroup* groupItem)
 {
-    //kDebug() << "===== Task:" << taskItem->name() << " <=> Group:" << groupItem->name() << "=====";
+    //qDebug() << "===== Task:" << taskItem->name() << " <=> Group:" << groupItem->name() << "=====";
     QList<AbstractGroupableItem *> list;
     QString name = taskItem->task()->classClass();
 
@@ -208,14 +208,14 @@ bool ProgramGroupingStrategy::programGrouping(TaskItem* taskItem, TaskGroup* gro
         if (item->itemType() == GroupItemType) {
             //TODO: maybe add the condition that the subgroup was created by programGrouping?
             if (programGrouping(taskItem, static_cast<TaskGroup*>(item))) {
-                //kDebug() << "    joined subGroup";
+                //qDebug() << "    joined subGroup";
                 return true;
             }
         } else if (item->itemType() == LauncherItemType) {
             continue;
         } else {
             TaskItem *task = static_cast<TaskItem*>(item);
-            //kDebug() << "    testing" << (task->task() ? task->task()->classClass() : "No task!") << "==" << name;
+            //qDebug() << "    testing" << (task->task() ? task->task()->classClass() : "No task!") << "==" << name;
             if (task != taskItem && task->task() && task->task()->classClass() == name) { //omit startup tasks
                 list.append(item);
             }
@@ -224,7 +224,7 @@ bool ProgramGroupingStrategy::programGrouping(TaskItem* taskItem, TaskGroup* gro
 
     if (!list.isEmpty()) {
         if (groupItem->isRootGroup()) {
-            //kDebug() << "    create Group root group";
+            //qDebug() << "    create Group root group";
             QIcon icon = taskItem->icon();
             list.append(taskItem);
             TaskGroup* group = createGroup(list);
@@ -232,14 +232,14 @@ bool ProgramGroupingStrategy::programGrouping(TaskItem* taskItem, TaskGroup* gro
             group->setIcon(icon);
             connect(group, SIGNAL(checkIcon(TaskGroup*)), this, SLOT(updateIcon(TaskGroup*)));
         } else {
-            //kDebug() << "    joined this Group";
+            //qDebug() << "    joined this Group";
             groupItem->add(taskItem);
         }
 
         return true;
     }
 
-    //kDebug() << "    failed";
+    //qDebug() << "    failed";
     return false;
 }
 

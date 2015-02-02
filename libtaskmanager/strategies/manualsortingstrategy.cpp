@@ -76,7 +76,7 @@ void ManualSortingStrategy::sortItems(ItemList &items)
         return;
     }
 
-    //kDebug();
+    //qDebug();
     QMap<int, AbstractGroupableItem*> launcherMap;
     QList<QString> order;
     QMap<QString, AbstractGroupableItem*> map;

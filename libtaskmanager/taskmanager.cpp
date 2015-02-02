@@ -254,7 +254,7 @@ void TaskManager::windowAdded(WId w)
             if (t) {
                 if (t->window() != w) {
                     t->addTransient(w, info);
-                    // kDebug() << "TM: Transient " << w << " added for Task: " << t->window();
+                    // qDebug() << "TM: Transient " << w << " added for Task: " << t->window();
                 }
                 return;
             }
@@ -291,7 +291,7 @@ void TaskManager::windowAdded(WId w)
         }
     }
 
-    // kDebug() << "TM: Task added for WId: " << w;
+    // qDebug() << "TM: Task added for WId: " << w;
     emit taskAdded(t);
 }
 
@@ -313,13 +313,13 @@ void TaskManager::windowRemoved(WId w)
             d->active = 0;
         }
 
-        //kDebug() << "TM: Task for WId " << w << " removed.";
+        //qDebug() << "TM: Task for WId " << w << " removed.";
         // FIXME: due to a bug in Qt 4.x, the event loop reference count is incorrect
         // when going through x11EventFilter .. :/ so we have to singleShot the deleteLater
         QTimer::singleShot(0, t, SLOT(deleteLater()));
     } else {
         t->removeTransient(w);
-        //kDebug() << "TM: Transient " << w << " for Task " << t->window() << " removed.";
+        //qDebug() << "TM: Transient " << w << " for Task " << t->window() << " removed.";
     }
 }
 
@@ -359,14 +359,14 @@ void TaskManager::windowChanged(WId w, const unsigned long *dirty)
         return;
     }
 
-    //kDebug() << "TaskManager::windowChanged " << w << " " << dirty[NETWinInfo::PROTOCOLS] << dirty[NETWinInfo::PROTOCOLS2];
+    //qDebug() << "TaskManager::windowChanged " << w << " " << dirty[NETWinInfo::PROTOCOLS] << dirty[NETWinInfo::PROTOCOLS2];
 
     unsigned long propagatedChanges = 0;
     if ((dirty[NETWinInfo::PROTOCOLS] & NET::WMState) && t->updateDemandsAttentionState(w)) {
         propagatedChanges = NET::WMState;
     }
 
-    //kDebug() << "got changes, but will we refresh?" << dirty[NETWinInfo::PROTOCOLS] << dirty[NETWinInfo::PROTOCOLS2];
+    //qDebug() << "got changes, but will we refresh?" << dirty[NETWinInfo::PROTOCOLS] << dirty[NETWinInfo::PROTOCOLS2];
     if (dirty[NETWinInfo::PROTOCOLS] || dirty[NETWinInfo::PROTOCOLS2]) {
         // only refresh this stuff if we have other changes besides icons
         t->refresh(Task::WindowProperties(dirty[NETWinInfo::PROTOCOLS] | propagatedChanges, dirty[NETWinInfo::PROTOCOLS2]));
@@ -387,14 +387,14 @@ void TaskManager::taskChanged(::TaskManager::TaskChanges changes)
 
 void TaskManager::activeWindowChanged(WId w)
 {
-    //kDebug() << "TaskManager::activeWindowChanged" << w;
+    //qDebug() << "TaskManager::activeWindowChanged" << w;
     Task *t = findTask(w);
     if (!t) {
         if (d->active) {
             d->active->setActive(false);
             d->active = 0;
         }
-        //kDebug() << "no active window";
+        //qDebug() << "no active window";
     } else {
         if (t->info().windowType(NET::UtilityMask) == NET::Utility) {
             // we don't want to mark utility windows as active since task managers
@@ -410,7 +410,7 @@ void TaskManager::activeWindowChanged(WId w)
 
         d->active = t;
         d->active->setActive(true);
-        //kDebug() << "active window is" << t->name();
+        //qDebug() << "active window is" << t->name();
     }
 }
 

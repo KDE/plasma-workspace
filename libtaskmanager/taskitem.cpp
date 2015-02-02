@@ -80,7 +80,7 @@ TaskItem::TaskItem(QObject *parent, Startup *task)
 TaskItem::~TaskItem()
 {
     emit destroyed(this);
-    //kDebug();
+    //qDebug();
     /*  if (parentGroup()) {
           parentGroup()->remove(this);
       }*/
@@ -141,7 +141,7 @@ Startup *TaskItem::startup() const
 {
     /*
     if (d->startupTask.isNull()) {
-        kDebug() << "pointer is Null";
+        qDebug() << "pointer is Null";
     }
     */
     return d->startupTask.data();

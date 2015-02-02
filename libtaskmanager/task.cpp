@@ -491,7 +491,7 @@ void Task::toggleMaximized()
 
 void Task::setIconified(bool iconify)
 {
-//     kDebug() <<" going to iconify" << d->win;
+//     qDebug() <<" going to iconify" << d->win;
     if (iconify) {
         KWindowSystem::minimizeWindow(d->win);
     } else {
@@ -555,7 +555,7 @@ void Task::activate()
 
 void Task::activateRaiseOrIconify()
 {
-    //kDebug() << isActive() << isIconified() << isOnTop();
+    //qDebug() << isActive() << isIconified() << isOnTop();
     if (!isActive() || isIconified()) {
         activate();
     } else if (!isOnTop()) {
@@ -628,7 +628,7 @@ QList<WId> Task::idsFromMimeData(const QMimeData *mimeData, bool *ok)
 
     if (!mimeData->hasFormat(groupMimetype())) {
         // try to grab a singular id if it exists
-        //kDebug() << "not group type";
+        //qDebug() << "not group type";
         bool singularOk;
         WId id = idFromMimeData(mimeData, &singularOk);
 
@@ -637,7 +637,7 @@ QList<WId> Task::idsFromMimeData(const QMimeData *mimeData, bool *ok)
         }
 
         if (singularOk) {
-            //kDebug() << "and singular failed, too";
+            //qDebug() << "and singular failed, too";
             ids << id;
         }
 
@@ -646,14 +646,14 @@ QList<WId> Task::idsFromMimeData(const QMimeData *mimeData, bool *ok)
 
     QByteArray data(mimeData->data(groupMimetype()));
     if ((unsigned int)data.size() < sizeof(int) + sizeof(WId)) {
-        //kDebug() << "wrong size" << data.size() << sizeof(int) + sizeof(WId);
+        //qDebug() << "wrong size" << data.size() << sizeof(int) + sizeof(WId);
         return ids;
     }
 
     int count = 0;
     memcpy(&count, data.data(), sizeof(int));
     if (count < 1 || (unsigned int)data.size() < sizeof(int) + sizeof(WId) * count) {
-        //kDebug() << "wrong size, 2" << data.size() << count << sizeof(int) + sizeof(WId) * count;
+        //qDebug() << "wrong size, 2" << data.size() << count << sizeof(int) + sizeof(WId) * count;
         return ids;
     }
 
