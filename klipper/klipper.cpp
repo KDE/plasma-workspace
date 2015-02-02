@@ -32,6 +32,7 @@
 #include <QPointer>
 #include <QDBusConnection>
 #include <QSaveFile>
+#include <QtConcurrent>
 
 #include <KGlobalAccel>
 #include <KMessageBox>
@@ -44,6 +45,7 @@
 #include "urlgrabber.h"
 #include "history.h"
 #include "historyitem.h"
+#include "historymodel.h"
 #include "historystringitem.h"
 #include "klipperpopup.h"
 
@@ -330,6 +332,21 @@ void Klipper::loadSettings()
       KlipperSettings::self()->load();
 
     }
+
+    if (m_bKeepContents && !m_saveFileTimer) {
+        m_saveFileTimer = new QTimer(this);
+        m_saveFileTimer->setSingleShot(true);
+        m_saveFileTimer->setInterval(5000);
+        connect(m_saveFileTimer, &QTimer::timeout, this,
+            [this] {
+                QtConcurrent::run(this, &Klipper::saveHistory, false);
+            }
+        );
+        connect(m_history, &History::changed, m_saveFileTimer, static_cast<void (QTimer::*)()>(&QTimer::start));
+    } else {
+        delete m_saveFileTimer;
+        m_saveFileTimer = nullptr;
+    }
 }
 
 void Klipper::saveSettings() const
@@ -417,6 +434,7 @@ bool Klipper::loadHistory() {
 }
 
 void Klipper::saveHistory(bool empty) {
+    QMutexLocker lock(m_history->model()->mutex());
     static const char failed_save_warning[] =
         "Failed to save history. Clipboard history cannot be saved.";
     // don't use "appdata", klipper is also a kicker applet

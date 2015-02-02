@@ -25,6 +25,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 HistoryModel::HistoryModel(QObject *parent)
     : QAbstractListModel(parent)
     , m_maxSize(0)
+    , m_mutex(QMutex::Recursive)
 {
 }
 
@@ -35,6 +36,7 @@ HistoryModel::~HistoryModel()
 
 void HistoryModel::clear()
 {
+    QMutexLocker lock(&m_mutex);
     beginResetModel();
     m_items.clear();
     endResetModel();
@@ -45,6 +47,7 @@ void HistoryModel::setMaxSize(int size)
     if (m_maxSize == size) {
         return;
     }
+    QMutexLocker lock(&m_mutex);
     m_maxSize = size;
     if (m_items.count() > m_maxSize) {
         removeRows(m_maxSize, m_items.count() - m_maxSize);
@@ -102,6 +105,7 @@ bool HistoryModel::removeRows(int row, int count, const QModelIndex &parent)
     if ((row + count) > m_items.count()) {
         return false;
     }
+    QMutexLocker lock(&m_mutex);
     beginRemoveRows(QModelIndex(), row, row + count - 1);
     for (int i = 0; i < count; ++i) {
         m_items.removeAt(row);
@@ -149,6 +153,7 @@ void HistoryModel::insert(QSharedPointer<HistoryItem> item)
         return;
     }
 
+    QMutexLocker lock(&m_mutex);
     if (m_items.count() == m_maxSize) {
         // remove last item
         if (m_maxSize == 0) {
@@ -180,6 +185,7 @@ void HistoryModel::moveToTop(int row)
     if (row == 0 || row >= m_items.count()) {
         return;
     }
+    QMutexLocker lock(&m_mutex);
     beginMoveRows(QModelIndex(), row, row, QModelIndex(), 0);
     m_items.move(row, 0);
     endMoveRows();
@@ -190,6 +196,7 @@ void HistoryModel::moveTopToBack()
     if (m_items.count() < 2) {
         return;
     }
+    QMutexLocker lock(&m_mutex);
     beginMoveRows(QModelIndex(), 0, 0, QModelIndex(), m_items.count());
     auto item = m_items.takeFirst();
     m_items.append(item);

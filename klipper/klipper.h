@@ -206,6 +206,7 @@ private:
     QString cycleText() const;
     KActionCollection* m_collection;
     KlipperMode m_mode;
+    QTimer *m_saveFileTimer = nullptr;
 };
 
 #endif

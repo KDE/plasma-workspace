@@ -20,6 +20,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define KLIPPER_HISTORYMODEL_H
 
 #include <QAbstractListModel>
+#include <QMutex>
 
 class HistoryItem;
 
@@ -55,10 +56,15 @@ public:
 
     void insert(QSharedPointer<HistoryItem> item);
 
+    QMutex *mutex() {
+        return &m_mutex;
+    }
+
 private:
     void moveToTop(int row);
     QList<QSharedPointer<HistoryItem>> m_items;
     int m_maxSize;
+    QMutex m_mutex;
 };
 
 inline int HistoryModel::maxSize() const

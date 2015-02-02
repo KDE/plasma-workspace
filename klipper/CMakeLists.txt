@@ -38,6 +38,7 @@ set(klipper_KDEINIT_SRCS ${libklipper_common_SRCS} main.cpp tray.cpp)
 kf5_add_kdeinit_executable(klipper ${klipper_KDEINIT_SRCS})
 
 target_link_libraries(kdeinit_klipper
+    Qt5::Concurrent
     KF5::Completion # klineedit - port away?
     KF5::ConfigGui
     KF5::CoreAddons
