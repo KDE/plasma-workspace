@@ -65,9 +65,9 @@ AbstractGroupableItem::AbstractGroupableItem(QObject *parent)
 
 AbstractGroupableItem::~AbstractGroupableItem()
 {
-    //kDebug();
+    //qDebug();
     /*if (parentGroup()) {
-        kDebug() << "Error: item gets destroyed but still has a parent group";
+        qDebug() << "Error: item gets destroyed but still has a parent group";
     }*/
     delete d;
 }
@@ -105,7 +105,7 @@ WindowList AbstractGroupableItem::winIds() const
 
 GroupPtr AbstractGroupableItem::parentGroup() const
 {
-    //kDebug();
+    //qDebug();
     return d->m_parentGroup.data();
 }
 
@@ -119,9 +119,9 @@ void AbstractGroupableItem::setParentGroup(const GroupPtr group)
 //Item is member of group
 bool AbstractGroupableItem::isGroupMember(const GroupPtr group) const
 {
-    //kDebug();
+    //qDebug();
     if (!group) {
-        //kDebug() << "Null Group Pointer";
+        //qDebug() << "Null Group Pointer";
         return false;
     }
 

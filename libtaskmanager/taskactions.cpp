@@ -700,7 +700,7 @@ GroupPopupMenu::GroupPopupMenu(QWidget *parent, TaskGroup *group, GroupManager *
     setIcon(group->icon());
     foreach (AbstractGroupableItem * item, group->members()) {
         if (!item) {
-//             kDebug() << "invalid Item";
+//             qDebug() << "invalid Item";
             continue;
         }
 

@@ -47,7 +47,7 @@ void AlphaSortingStrategy::sortItems(ItemList &items)
     GroupManager *gm = qobject_cast<GroupManager *>(parent());
     bool         separateLaunchers = !gm || gm->separateLaunchers();
 
-    //kDebug();
+    //qDebug();
     QMap<QString, AbstractGroupableItem*> map;
     QMap<QString, AbstractGroupableItem*> launcherMap;
 
@@ -71,17 +71,17 @@ void AlphaSortingStrategy::sortItems(ItemList &items)
 
         TaskItem *item = qobject_cast<TaskItem*>(groupable);
         if (!item)  {
-//             kDebug() << "Wrong object type";
+//             qDebug() << "Wrong object type";
             continue;
         }
 
         if (!item->task()) {
-//             kDebug() << "Null Task Pointer";
+//             qDebug() << "Null Task Pointer";
             continue;
         }
 
         //sort by programname not windowname
-        //kDebug() << "inserting multi item" <<  item->task()->classClass();
+        //qDebug() << "inserting multi item" <<  item->task()->classClass();
         map.insertMulti(item->taskName().toLower(), groupable);
     }
 

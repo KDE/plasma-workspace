@@ -198,7 +198,7 @@ void GroupManagerPrivate::reloadTasks()
 
 void GroupManagerPrivate::actuallyReloadTasks()
 {
-    //kDebug() << "number of tasks available " << TaskManager::self()->tasks().size();
+    //qDebug() << "number of tasks available " << TaskManager::self()->tasks().size();
     QHash<WId, Task *> taskList = TaskManager::self()->tasks();
     QMutableHashIterator<WId, Task *> it(taskList);
 
@@ -206,7 +206,7 @@ void GroupManagerPrivate::actuallyReloadTasks()
         it.next();
 
         if (addTask(it.value())) {
-            //kDebug() << "task added " << it.value()->visibleName();
+            //qDebug() << "task added " << it.value()->visibleName();
             it.remove();
         }
     }
@@ -302,8 +302,8 @@ bool GroupManagerPrivate::addTask(::TaskManager::Task *task)
         return false;
     }
 
-    //kDebug();
-    /* kDebug() << task->visibleName()
+    //qDebug();
+    /* qDebug() << task->visibleName()
              << task->visibleNameWithState()
              << task->name()
              << task->className()
@@ -312,12 +312,12 @@ bool GroupManagerPrivate::addTask(::TaskManager::Task *task)
     bool skip = false;
 
     if (!task->showInTaskbar()) {
-        //kDebug() << "Do not show in taskbar";
+        //qDebug() << "Do not show in taskbar";
         skip = true;
     }
 
     if (showOnlyCurrentScreen && !task->isOnScreen(currentScreenGeometry)) {
-        //kDebug() << "Not on this screen and showOnlyCurrentScreen";
+        //qDebug() << "Not on this screen and showOnlyCurrentScreen";
         skip = true;
     }
 
@@ -326,26 +326,26 @@ bool GroupManagerPrivate::addTask(::TaskManager::Task *task)
         // As the Task doesn't demand attention
         // go through all filters whether the task should be displayed or not
         if (showOnlyCurrentDesktop && !task->isOnCurrentDesktop()) {
-            /* kDebug() << "Not on this desktop and showOnlyCurrentDesktop"
+            /* qDebug() << "Not on this desktop and showOnlyCurrentDesktop"
                      << KWindowSystem::currentDesktop() << task->desktop(); */
             skip = true;
         }
 
         if (showOnlyCurrentActivity && !task->isOnCurrentActivity()) {
-            /* kDebug() << "Not on this desktop and showOnlyCurrentActivity"
+            /* qDebug() << "Not on this desktop and showOnlyCurrentActivity"
                      << KWindowSystem::currentActivity() << task->desktop(); */
             skip = true;
         }
 
         if (showOnlyMinimized && !task->isMinimized()) {
-            //kDebug() << "Not minimized and only showing minimized";
+            //qDebug() << "Not minimized and only showing minimized";
             skip = true;
         }
 
         NET::WindowType type = task->info().windowType(NET::NormalMask | NET::DialogMask |
                                NET::OverrideMask | NET::UtilityMask);
         if (type == NET::Utility) {
-            //kDebug() << "skipping utility window" << task->name();
+            //qDebug() << "skipping utility window" << task->name();
             skip = true;
         }
 
@@ -356,7 +356,7 @@ bool GroupManagerPrivate::addTask(::TaskManager::Task *task)
             while (it != d->itemList.end()) {
                 TaskItem *item = it.value();
                 if (item->task()->hasTransient(task->window())) {
-                    kDebug() << "TRANSIENT TRANSIENT TRANSIENT!";
+                    qDebug() << "TRANSIENT TRANSIENT TRANSIENT!";
                     return flase;
                 }
                 ++it;
@@ -373,7 +373,7 @@ bool GroupManagerPrivate::addTask(::TaskManager::Task *task)
         const QString desktopId = TaskItem::launcherUrlFromTask(q, task).toLocalFile();
         while (it != itEnd) {
             if (it.key()->matchesWindow(task->window()) || it.key()->desktopId() == desktopId || it.key()->bin() == task->className()) {
-                //kDebug() << "startup task found";
+                //qDebug() << "startup task found";
                 item = startupItem = it.value();
                 ::TaskManager::Startup *startup = it.key();
                 startupRemoveList.removeAll(startup);
@@ -433,14 +433,14 @@ void GroupManagerPrivate::removeTask(::TaskManager::Task *task)
         return;
     }
 
-    //kDebug() << "remove: " << task->visibleName();
+    //qDebug() << "remove: " << task->visibleName();
     geometryTasks.remove(task);
 
     AbstractGroupableItem *item = currentRootGroup()->getMemberByWId(task->window());
     if (!item) {
         // this can happen if the window hasn't been caught previously,
         // of it it is an ignored type such as a NET::Utility type window
-        //kDebug() << "invalid item";
+        //qDebug() << "invalid item";
         return;
     }
 
@@ -562,7 +562,7 @@ void GroupManagerPrivate::currentActivityChanged(QString newActivity)
 
 void GroupManagerPrivate::currentDesktopChanged(int newDesktop)
 {
-    //kDebug();
+    //qDebug();
     if (!showOnlyCurrentDesktop) {
         return;
     }
@@ -605,7 +605,7 @@ void GroupManagerPrivate::currentDesktopChanged(int newDesktop)
 
 void GroupManagerPrivate::taskChanged(::TaskManager::Task *task, ::TaskManager::TaskChanges changes)
 {
-    //kDebug();
+    //qDebug();
     if (!task) {
         return;
     }
@@ -616,13 +616,13 @@ void GroupManagerPrivate::taskChanged(::TaskManager::Task *task, ::TaskManager::
     if (showOnlyCurrentDesktop && changes & ::TaskManager::DesktopChanged) {
         takeAction = true;
         show = task->isOnCurrentDesktop();
-        //kDebug() << task->visibleName() << "on" << TaskManager::self()->currentDesktop();
+        //qDebug() << task->visibleName() << "on" << TaskManager::self()->currentDesktop();
     }
 
     if (showOnlyCurrentActivity && changes & ::TaskManager::ActivitiesChanged) {
         takeAction = true;
         show = task->isOnCurrentActivity();
-        //kDebug() << task->visibleName() << "on" << TaskManager::self()->currentDesktop();
+        //qDebug() << task->visibleName() << "on" << TaskManager::self()->currentDesktop();
     }
 
     if (showOnlyMinimized && changes & ::TaskManager::StateChanged) {
@@ -665,10 +665,10 @@ void GroupManagerPrivate::taskChanged(::TaskManager::Task *task, ::TaskManager::
     show = show && (!showOnlyCurrentScreen || task->isOnScreen(currentScreenGeometry));
 
     if (show) {
-        //kDebug() << "add(task);";
+        //qDebug() << "add(task);";
         addTask(task);
     } else {
-        //kDebug() << "remove(task);";
+        //qDebug() << "remove(task);";
         removeTask(task);
     }
 }
@@ -689,7 +689,7 @@ void GroupManager::setScreenGeometry(const QRect& geometry)
 
 void GroupManagerPrivate::checkScreenChange()
 {
-    //kDebug();
+    //qDebug();
     if (showOnlyCurrentScreen) {
         foreach (Task *task, geometryTasks) {
             if (task->isOnScreen(currentScreenGeometry)) {
@@ -705,7 +705,7 @@ void GroupManagerPrivate::checkScreenChange()
 
 void GroupManager::reconnect()
 {
-    //kDebug();
+    //qDebug();
     disconnect(TaskManager::self(), SIGNAL(desktopChanged(int)), this, SLOT(currentDesktopChanged(int)));
     disconnect(TaskManager::self(), SIGNAL(activityChanged(QString)), this, SLOT(currentActivityChanged(QString)));
     disconnect(TaskManager::self(), SIGNAL(windowChanged(::TaskManager::Task *, ::TaskManager::TaskChanges)),
@@ -1133,7 +1133,7 @@ bool GroupManager::onlyGroupWhenFull() const
 
 void GroupManager::setOnlyGroupWhenFull(bool onlyGroupWhenFull)
 {
-    //kDebug() << onlyGroupWhenFull;
+    //qDebug() << onlyGroupWhenFull;
     if (d->onlyGroupWhenFull == onlyGroupWhenFull) {
         return;
     }
@@ -1161,7 +1161,7 @@ int GroupManager::fullLimit() const
 
 void GroupManager::setFullLimit(int limit)
 {
-    //kDebug() << limit;
+    //qDebug() << limit;
     if (d->groupIsFullLimit != limit) {
         d->groupIsFullLimit = limit;
 
@@ -1183,7 +1183,7 @@ void GroupManagerPrivate::checkIfFull()
 
 void GroupManagerPrivate::actuallyCheckIfFull()
 {
-    //kDebug();
+    //qDebug();
     if (!onlyGroupWhenFull ||
             groupingStrategy != GroupManager::ProgramGrouping ||
             changingGroupingStrategy) {
@@ -1338,7 +1338,7 @@ void GroupManager::setGroupingStrategy(TaskGroupingStrategy strategy)
     d->changingGroupingStrategy = true;
     d->cachedOnlyGroupWhenFull = d->onlyGroupWhenFull;
 
-    //kDebug() << strategy << kBacktrace();
+    //qDebug() << strategy << kBacktrace();
     if (d->onlyGroupWhenFull) {
         disconnect(d->currentRootGroup(), SIGNAL(itemAdded(AbstractGroupableItem*)), this, SLOT(checkIfFull()));
         disconnect(d->currentRootGroup(), SIGNAL(itemRemoved(AbstractGroupableItem*)), this, SLOT(checkIfFull()));

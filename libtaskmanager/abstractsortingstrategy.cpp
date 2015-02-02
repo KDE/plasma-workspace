@@ -72,7 +72,7 @@ void AbstractSortingStrategy::setType(GroupManager::TaskSortingStrategy type)
 
 void AbstractSortingStrategy::handleGroup(TaskGroup *group)
 {
-    //kDebug();
+    //qDebug();
     if (d->managedGroups.contains(group) || !group) {
         return;
     }
@@ -101,7 +101,7 @@ void AbstractSortingStrategy::removeGroup()
 
 void AbstractSortingStrategy::handleItem(AbstractGroupableItem *item)
 {
-    //kDebug() << item->name();
+    //qDebug() << item->name();
     if (item->itemType() == GroupItemType) {
         handleGroup(qobject_cast<TaskGroup*>(item));
     } else if (item->itemType() == TaskItemType && !(qobject_cast<TaskItem*>(item))->task()) { //ignore startup tasks
@@ -125,7 +125,7 @@ void AbstractSortingStrategy::check(AbstractGroupableItem *itemToCheck)
         qWarning() << "invalid item" << itemToCheck;
         return;
     }
-    //kDebug() << item->name();
+    //qDebug() << item->name();
 
     if (item->itemType() == TaskItemType) {
         if (!(qobject_cast<TaskItem*>(item))->task()) { //ignore startup tasks
@@ -134,7 +134,7 @@ void AbstractSortingStrategy::check(AbstractGroupableItem *itemToCheck)
     }
 
     if (!item->parentGroup()) {
-        //kDebug() << "No parent group";
+        //qDebug() << "No parent group";
         return;
     }
 
@@ -162,7 +162,7 @@ bool AbstractSortingStrategy::manualSortingRequest(AbstractGroupableItem *item, 
 
 bool AbstractSortingStrategy::moveItem(AbstractGroupableItem *item, int newIndex)
 {
-    //kDebug() << "move to " << newIndex;
+    //qDebug() << "move to " << newIndex;
     if (!item->parentGroup()) {
         qWarning() << "error: no parentgroup but the item was asked to move";
         return false;

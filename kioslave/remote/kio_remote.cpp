@@ -18,10 +18,9 @@
 */
 
 #include "kio_remote.h"
-
+#include "kio_remote_debug.h"
 #include <stdlib.h>
 
-#include <kdebug.h>
 #include <kapplication.h>
 #include <kcmdlineargs.h>
 
@@ -52,7 +51,7 @@ RemoteProtocol::~RemoteProtocol()
 
 void RemoteProtocol::listDir(const QUrl &url)
 {
-	kDebug(1220) << "RemoteProtocol::listDir: " << url;
+	qCDebug(KIOREMOTE_LOG) << "RemoteProtocol::listDir: " << url;
 
 	if ( url.path().length() <= 1 )
 	{
@@ -64,14 +63,14 @@ void RemoteProtocol::listDir(const QUrl &url)
 	const QString root_dirname = url.path().mid( 1, second_slash_idx-1 );
 
 	KUrl target = m_impl.findBaseURL( root_dirname );
-	kDebug(1220) << "possible redirection target : " << target;
+	qCDebug(KIOREMOTE_LOG) << "possible redirection target : " << target;
 	if( target.isValid() )
 	{
 		if ( second_slash_idx < 0 ) {
 			second_slash_idx = url.path().size();
 		}
 		target.addPath( url.path().remove(0, second_slash_idx) );
-		kDebug(1220) << "complete redirection target : " << target;
+		qCDebug(KIOREMOTE_LOG) << "complete redirection target : " << target;
 		redirection(target);
 		finished();
 		return;
@@ -110,7 +109,7 @@ void RemoteProtocol::listRoot()
 
 void RemoteProtocol::stat(const QUrl &url)
 {
-	kDebug(1220) << "RemoteProtocol::stat: " << url;
+	qCDebug(KIOREMOTE_LOG) << "RemoteProtocol::stat: " << url;
 
 	QString path = url.path();
 	if ( path.isEmpty() || path == "/" )
@@ -154,13 +153,13 @@ void RemoteProtocol::stat(const QUrl &url)
 	else
 	{
 		KUrl target = m_impl.findBaseURL(  root_dirname );
-		kDebug( 1220 ) << "possible redirection target : " << target;
+		qCDebug(KIOREMOTE_LOG) << "possible redirection target : " << target;
 		if (  target.isValid() )
 		{
 			if ( second_slash_idx < 0 ) {
 				second_slash_idx = url.path().size();
 			}
-			kDebug(1220) << "complete redirection target : " << target;
+			qCDebug(KIOREMOTE_LOG) << "complete redirection target : " << target;
 			target.addPath( url.path().remove( 0, second_slash_idx ) );
 			redirection( target );
 			finished();
@@ -173,7 +172,7 @@ void RemoteProtocol::stat(const QUrl &url)
 
 void RemoteProtocol::del(const QUrl &url, bool /*isFile*/)
 {
-	kDebug(1220) << "RemoteProtocol::del: " << url;
+	qCDebug(KIOREMOTE_LOG) << "RemoteProtocol::del: " << url;
 
 	if (!m_impl.isWizardURL(url)
 	 && m_impl.deleteNetworkFolder(url.fileName()))
@@ -187,10 +186,10 @@ void RemoteProtocol::del(const QUrl &url, bool /*isFile*/)
 
 void RemoteProtocol::get(const QUrl &url)
 {
-	kDebug(1220) << "RemoteProtocol::get: " << url;
+	qCDebug(KIOREMOTE_LOG) << "RemoteProtocol::get: " << url;
 
 	const QString file = m_impl.findDesktopFile( url.fileName() );
-	kDebug(1220) << "desktop file : " << file;
+	qCDebug(KIOREMOTE_LOG) << "desktop file : " << file;
 
 	if (!file.isEmpty())
 	{
