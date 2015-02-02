@@ -1222,6 +1222,7 @@ Plasma::Containment *ShellCorona::setContainmentTypeForScreen(int screen, const 
     }
 
     newContainment->init();
+    newCg.writeEntry("activityId", oldContainment->activity());
     newContainment->restore(newCg);
     newContainment->updateConstraints(Plasma::Types::StartupCompletedConstraint);
     newContainment->save(newCg);
