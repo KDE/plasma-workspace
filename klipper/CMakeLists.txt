@@ -18,17 +18,14 @@ set(libklipper_common_SRCS
     clipcommandprocess.cpp
 )
 
-find_package(Prison "1.2.0" QUIET CONFIG)
-set_package_properties(Prison PROPERTIES DESCRIPTION "Prison library"
+find_package(KF5Prison "1.2.0" QUIET CONFIG)
+set_package_properties(KF5Prison PROPERTIES DESCRIPTION "Prison library"
                        URL "http://projects.kde.org/prison"
                        TYPE OPTIONAL
                        PURPOSE "Needed to create mobile barcodes from clipboard data (no stable release currently)"
                       )
-if (PRISON_FOUND)
-    include_directories(${PRISON_INCLUDE_DIR})
-endif ()
 
-set(HAVE_PRISON ${PRISON_FOUND})
+set(HAVE_PRISON ${KF5Prison_FOUND})
 configure_file(config-klipper.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-klipper.h )
 
 kde4_add_app_icon(libklipper_common_SRCS "${KDE4_ICON_INSTALL_DIR}/oxygen/*/apps/klipper.png")
@@ -58,8 +55,8 @@ target_link_libraries(kdeinit_klipper
 if (X11_FOUND)
   target_link_libraries(kdeinit_klipper XCB::XCB Qt5::X11Extras)
 endif()
-if (PRISON_FOUND)
-  target_link_libraries(kdeinit_klipper ${PRISON_LIBRARIES})
+if (HAVE_PRISON)
+  target_link_libraries(kdeinit_klipper KF5::Prison)
 endif ()
 
 install(TARGETS kdeinit_klipper ${INSTALL_TARGETS_DEFAULT_ARGS})
@@ -92,8 +89,8 @@ target_link_libraries(plasma_engine_clipboard
 if (X11_FOUND)
   target_link_libraries(plasma_engine_clipboard XCB::XCB Qt5::X11Extras)
 endif()
-if (PRISON_FOUND)
-  target_link_libraries(plasma_engine_clipboard ${PRISON_LIBRARIES})
+if (HAVE_PRISON)
+  target_link_libraries(plasma_engine_clipboard KF5::Prison)
 endif ()
 install(TARGETS plasma_engine_clipboard DESTINATION ${PLUGIN_INSTALL_DIR}/plasma/dataengine)
 install(FILES plasma-dataengine-clipboard.desktop DESTINATION ${SERVICES_INSTALL_DIR})
