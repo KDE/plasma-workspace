@@ -213,10 +213,16 @@ void StatusNotifierItemSource::refreshCallback(QDBusPendingCallWatcher *call)
 
         if (!path.isEmpty() && path != data()["IconThemePath"].toString()) {
             if (!m_customIconLoader) {
-                m_customIconLoader = new KIconLoader(QString(), QStringList(path), this);
-            } else {
-                m_customIconLoader->reconfigure(QString(), QStringList(path));
+                m_customIconLoader = new KIconLoader(QString(), QStringList(), this);
             }
+
+            //icons may be either in the root directory of the passed path or in a appdir format
+            //i.e hicolor/32x32/iconname.png
+
+            m_customIconLoader->reconfigure(QString(), QStringList(path));
+
+            //add app dir requires an app name, though this is completely unused in this context
+            m_customIconLoader->addAppDir(QString("unused"), path);
         }
         setData("IconThemePath", path);
 
