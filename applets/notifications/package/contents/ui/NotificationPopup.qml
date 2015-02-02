@@ -30,6 +30,7 @@ PlasmaCore.Dialog {
 
     location: PlasmaCore.Types.Floating
     type: PlasmaCore.Dialog.Notification
+    flags: Qt.WindowDoesNotAcceptFocus
 
     property var notificationProperties
     signal notificationTimeout()
