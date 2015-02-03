@@ -13,10 +13,10 @@
             <label>The URL to generate a preview for</label>
         </entry>
         <entry name="previewWidth" type="int">
-            <label>The width of the preview in pixel</label>
+            <label>The width of the preview in pixels</label>
         </entry>
         <entry name="previewHeight" type="int">
-            <label>The height of the preview in pixel</label>
+            <label>The height of the preview in pixels</label>
         </entry>
     </group>
     <group name="barcode">
