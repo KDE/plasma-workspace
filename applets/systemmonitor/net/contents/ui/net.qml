@@ -38,4 +38,6 @@ Applet {
             root.addSource(source, match[1], rxSource, match[1]);
         }
     }
+
+    delegate: DoublePlotter {}
 }

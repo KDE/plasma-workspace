@@ -106,7 +106,7 @@ Item {
                 Connections {
                     target: iconsPage
                     onCfg_sourcesChanged: {
-                        checkBox.checked = cfg_sources.indexOf(model.source) !== -1;
+                        checkBox.checked = cfg_sources.length == 0 || cfg_sources.indexOf(model.source) !== -1;
                     }
                 }
             }

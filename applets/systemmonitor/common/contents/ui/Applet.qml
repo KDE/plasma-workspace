@@ -29,6 +29,7 @@ Item {
     id: rootItem
 
     signal sourceAdded(string source)
+    property Component delegate
 
     width: units.gridUnit * 20
     height: units.gridUnit * 10
@@ -56,8 +57,8 @@ Item {
            {"source1": source1,
             "friendlyName1": friendlyName1,
             "source2": source2,
-            "friendlyName2": friendlyName2});
-        print("bbbb"+source1+" - "+sourcesModel.count)
+            "friendlyName2": friendlyName2,
+            "dataSource": smSource});
     }
 
     ListModel {
@@ -145,73 +146,112 @@ Item {
         Repeater {
             model: sourcesModel
 
-            KQuickAddons.Plotter {
-                id: plotter
-                property string ifName: model.friendlyName1
+            delegate: rootItem.delegate
+        }
+    }
 
-                Layout.fillWidth: true
-                Layout.fillHeight: true
+    Component {
+        id: singleValuePlotter
+        KQuickAddons.Plotter {
+            id: plotter
+            property string sensorName: model.friendlyName1
 
-                dataSets: [
-                    KQuickAddons.PlotData {
-                        label: i18n("Download")
-                        color: theme.highlightColor
-                    },
-                    KQuickAddons.PlotData {
-                        label: i18n("Upload")
-                        color: cycle(theme.highlightColor, -90)
-                    }
-                ]
+            Layout.fillWidth: true
+            Layout.fillHeight: true
 
-                PlasmaComponents.Label {
-                    anchors {
-                        left: parent.left
-                        top: parent.top
-                    }
-                    text: plotter.ifName
+            dataSets: [
+                KQuickAddons.PlotData {
+                    color: theme.highlightColor
                 }
+            ]
 
-                PlasmaComponents.Label {
-                    id: speedLabel
-                    anchors.centerIn: parent
+            PlasmaComponents.Label {
+                anchors {
+                    left: parent.left
+                    top: parent.top
                 }
+                text: plotter.sensorName
+            }
 
-                Connections {
-                    target: smSource
-                    onNewData: {
-                        if (sourceName.indexOf(model.source1) != 0 && sourceName.indexOf(model.source2) != 0) {
-                            return;
-                        }
+            PlasmaComponents.Label {
+                id: speedLabel
+                anchors.centerIn: parent
+            }
 
-                        if (model.source2) {
-                            var data1 = smSource.data[model.source2];
-                            var data2 = smSource.data[model.source1];
-
-                            if (data1 === undefined || data1.value === undefined ||
-                                data2 === undefined || data2.value === undefined) {
-                                return;
-                            }
-
-                            plotter.addSample([data1.value, data2.value]);
-
-                            speedLabel.text = i18n("%1 %2 / %3 %4", data1.value, data1.units,
-                                            data2.value, data2.units);
-
-                        } else {
-                            var data1 = smSource.data[model.source1];
-
-                            if (data1 === undefined || data1.value === undefined) {
-                                return;
-                            }
-
-                            plotter.addSample(data1.value);
-
-                            speedLabel.text = i18n("%1 %2", data1.value, data1.units);
-                        }
+            Connections {
+                target: smSource
+                onNewData: {
+                    if (sourceName.indexOf(model.source1) != 0) {
+                        return;
                     }
+
+                    var data1 = smSource.data[model.source1];
+
+                    if (data1 === undefined || data1.value === undefined) {
+                        return;
+                    }
+
+                    plotter.addSample(data1.value);
+
+                    speedLabel.text = i18n("%1 %2", data1.value, data1.units);
                 }
             }
         }
     }
 
+    Component {
+        id: twoValuesPlotter
+        KQuickAddons.Plotter {
+            id: plotter
+            property string sensorName: model.friendlyName1
+
+            Layout.fillWidth: true
+            Layout.fillHeight: true
+
+            dataSets: [
+                KQuickAddons.PlotData {
+                    color: theme.highlightColor
+                },
+                KQuickAddons.PlotData {
+                    color: cycle(theme.highlightColor, -90)
+                }
+            ]
+
+            PlasmaComponents.Label {
+                anchors {
+                    left: parent.left
+                    top: parent.top
+                }
+                text: plotter.sensorName
+            }
+
+            PlasmaComponents.Label {
+                id: speedLabel
+                anchors.centerIn: parent
+            }
+
+            Connections {
+                target: smSource
+                onNewData: {
+                    if (sourceName.indexOf(model.source1) != 0 && sourceName.indexOf(model.source2) != 0) {
+                        return;
+                    }
+
+                    var data1 = smSource.data[model.source2];
+                    var data2 = smSource.data[model.source1];
+
+                    if (data1 === undefined || data1.value === undefined ||
+                        data2 === undefined || data2.value === undefined) {
+                        return;
+                    }
+
+                    plotter.addSample([data1.value, data2.value]);
+
+                    speedLabel.text = i18n("%1 %2 / %3 %4", data1.value, data1.units,
+                                    data2.value, data2.units);
+
+                }
+            }
+        }
+    }
 }
