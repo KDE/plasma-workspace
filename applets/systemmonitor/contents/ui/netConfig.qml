@@ -25,7 +25,7 @@ import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.kquickcontrolsaddons 2.0 as KQuickAddons
 
-Applet {
+ConfigGeneral {
     id: root
 
     onSourceAdded: {
@@ -34,8 +34,7 @@ Applet {
         }
         var match = source.match(/^network\/interfaces\/(\w+)\/transmitter\/data$/);
         if (match) {
-            var rxSource = "network/interfaces/" + match[1] + "/receiver/data";
-            root.addSource(source, match[1], rxSource, match[1]);
+            root.addSource(source, match[1]);
         }
     }
 }

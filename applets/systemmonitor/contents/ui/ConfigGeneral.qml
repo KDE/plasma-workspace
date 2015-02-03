@@ -30,40 +30,55 @@ Item {
     implicitWidth: mainColumn.implicitWidth
     implicitHeight: mainColumn.implicitHeight
 
-    property var cfg_interfaces: []
+    property var cfg_sources: []
+
+    signal sourceAdded(string source)
+
+    function addSource(source, friendlyName) {
+        var found = false;
+        for (var i = 0; i < sourcesModel.count; ++i) {
+            var obj = sourcesModel.get(i);
+            if (obj.source == source) {
+                found = true;
+                break;
+            }
+        }
+        if (found) {
+            return;
+        }
+
+        sourcesModel.append(
+                {"source": source,
+                 "friendlyName": friendlyName});
+    }
 
     PlasmaCore.DataSource {
         id: smSource
 
-        property var availableNetworks: []
-        //arrays don't signal
-        property int availableNetworksCount: 0
-
         engine: "systemmonitor"
 
-        Component.onCompleted: {
-            for (var i in smSource.sources) {
-                var source = smSource.sources[i];
-
-                if (source.indexOf("network/interfaces/lo/") !== -1) {
-                    continue;
-                }
-                var match = source.match(/^network\/interfaces\/(\w+)\/transmitter\/data$/);
-                if (match) {
-                    smSource.availableNetworks.push(match[1]);
-                }
-
-                smSource.availableNetworksCount = availableNetworks.length;
-            }
-
-            for (var i = 0; i < repeater.count; ++i) {
-                if (cfg_interfaces.length == 0 || (cfg_interfaces && !cfg_interfaces[0])) {
-                    repeater.itemAt(i).checked = true;
-                } else {
-                    repeater.itemAt(i).checked = cfg_interfaces.indexOf(mainColumn.children[i].text);
+        onSourceAdded: {
+            iconsPage.sourceAdded(source);
+        }
+        onSourceRemoved: {
+            for (var i = sourcesModel.count - 1; i >= 0; --i) {
+                var obj = sourcesModel.get(i);
+                if (obj.source == source) {
+                    sourcesModel.remove(i);
                 }
             }
         }
+    }
+
+    Component.onCompleted: {
+        for (var i in smSource.sources) {
+            var source = smSource.sources[i];
+            iconsPage.sourceAdded(source);
+        }
+    }
+
+    ListModel {
+        id: sourcesModel
     }
 
     Layouts.ColumnLayout {
@@ -71,22 +86,28 @@ Item {
 
         Repeater {
             id: repeater
-            model: smSource.availableNetworksCount
+            model: sourcesModel
             Controls.CheckBox {
                 id: checkBox
-                text: smSource.availableNetworks[modelData]
+                text: model.friendlyName
                 onCheckedChanged: {
                     if (checked) {
-                        if (cfg_interfaces.indexOf(text) == -1) {
-                            cfg_interfaces.push(text);
+                        if (cfg_sources.indexOf(model.source) == -1) {
+                            cfg_sources.push(model.source);
                         }
                     } else {
-                        var idx = cfg_interfaces.indexOf(text);
+                        var idx = cfg_sources.indexOf(model.source);
                         if (idx !== -1) {
-                            cfg_interfaces.splice(idx, 1);
+                            cfg_sources.splice(idx, 1);
                         }
                     }
-                    cfg_interfacesChanged();
+                    cfg_sourcesChanged();
+                }
+                Connections {
+                    target: iconsPage
+                    onCfg_sourcesChanged: {
+                        checkBox.checked = cfg_sources.indexOf(model.source) !== -1;
+                    }
                 }
             }
         }

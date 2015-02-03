@@ -24,6 +24,6 @@ ConfigModel {
     ConfigCategory {
          name: i18n("Interfaces")
          icon: "network-workgroup"
-         source: "configGeneral.qml"
+         source: "netConfig.qml"
     }
 }
