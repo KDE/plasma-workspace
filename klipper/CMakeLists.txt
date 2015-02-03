@@ -70,6 +70,7 @@ set(plasma_engine_clipboard_SRCS ${libklipper_common_SRCS} clipboardengine.cpp c
 add_library(plasma_engine_clipboard MODULE ${plasma_engine_clipboard_SRCS})
 kcoreaddons_desktop_to_json(plasma_engine_clipboard plasma-dataengine-clipboard.desktop)
 target_link_libraries(plasma_engine_clipboard
+    Qt5::Concurrent
     Qt5::DBus
     Qt5::Widgets       # QAction
     KF5::ConfigGui

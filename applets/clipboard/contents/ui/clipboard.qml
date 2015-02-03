@@ -133,44 +133,17 @@ Item {
                 }
             }
         }
-        ColumnLayout {
+        PlasmaComponents.PageStack {
+            id: stack
             anchors.fill: parent
-            RowLayout {
-                Layout.fillWidth: true
-                Item {
-                    width: units.gridUnit / 2 - parent.spacing
-                    height: 1
-                }
-                PlasmaComponents.TextField {
-                    id: filter
-                    placeholderText: i18n("Search")
-                    clearButtonShown: true
-                    Layout.fillWidth: true
-                }
-                PlasmaComponents.ToolButton {
-                    iconSource: "edit-delete"
-                    tooltip: i18n("Clear history")
-                    onClicked: clipboardSource.service("", "clearHistory")
-                }
+            initialPage: ClipboardPage {
+                anchors.fill: parent
             }
-            Menu {
-                id: clipboardMenu
-                model: PlasmaCore.SortFilterModel {
-                    sourceModel: clipboardSource.models.clipboard
-                    filterRole: "DisplayRole"
-                    filterRegExp: filter.text
-                }
-                supportsBarcodes: clipboardSource.data["clipboard"]["supportsBarcodes"]
-                Layout.fillWidth: true
-                Layout.fillHeight: true
-                onItemSelected: clipboardSource.service(uuid, "select")
-                onRemove: clipboardSource.service(uuid, "remove")
-                onEdit: clipboardSource.edit(uuid)
-                onBarcode: clipboardSource.service(uuid, "barcode")
-                onAction: {
-                    clipboardSource.service(uuid, "action")
-                    clipboardMenu.view.currentIndex = 0
-                }
+        }
+        Component {
+            id: barcodePage
+            BarcodePage {
+                anchors.fill: parent
             }
         }
     }

@@ -20,6 +20,15 @@
         </entry>
     </group>
     <group name="barcode">
+        <entry name="width" type="int">
+            <label>The width of the barcode in pixels</label>
+        </entry>
+        <entry name="height" type="int">
+            <label>The height of the barcode in pixels</label>
+        </entry>
+        <entry name="barcodeType" type="int">
+            <label>The barcode type 0 for QrCode, 1 for DataMatrix, 2 for Code 39, 3 for Code 93</label>
+        </entry>
     </group>
     <group name="action">
     </group>
