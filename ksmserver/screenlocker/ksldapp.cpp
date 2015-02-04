@@ -34,7 +34,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include <KAuthorized>
 #include <KIdleTime>
 #include <KLocalizedString>
-// #include <KNotification>
+#include <KNotification>
 #include <KGlobalAccel>
 #include <KCrash>
 // Qt
@@ -315,7 +315,12 @@ void KSldApp::lock(EstablishLock establishLock)
     }
 
     KDisplayManager().setLock(true);
-//     KNotification::event(QLatin1String( "locked" ));
+    KNotification::event(QStringLiteral("locked"),
+                         i18n("Screen locked"),
+                         QPixmap(),
+                         nullptr,
+                         KNotification::CloseOnTimeout,
+                         QStringLiteral("ksmserver"));
 
     // blank the screen
     showLockWindow();
@@ -396,8 +401,13 @@ void KSldApp::doUnlock()
     endGraceTime();
     KDisplayManager().setLock(false);
     m_waylandServer->stop();
+    KNotification::event(QStringLiteral("unlocked"),
+                         i18n("Screen unlocked"),
+                         QPixmap(),
+                         nullptr,
+                         KNotification::CloseOnTimeout,
+                         QStringLiteral("ksmserver"));
     emit unlocked();
-    //     KNotification::event( QLatin1String("unlocked"));
 }
 
 bool KSldApp::isFdoPowerInhibited() const
