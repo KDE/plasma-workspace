@@ -31,6 +31,11 @@ KQuickAddons.Plotter {
     Layout.fillWidth: true
     Layout.fillHeight: true
 
+    function formatLabel(data1, data2) {
+        return i18n("%1 %2 / %3 %4", data1.value, data1.units,
+                            data2.value, data2.units);
+    }
+
     function cycle(color, degrees) {
         var min = Math.min(color.r, Math.min(color.g, color.b));
         var max = Math.max(color.r, Math.max(color.g, color.b));
@@ -92,8 +97,7 @@ KQuickAddons.Plotter {
 
             plotter.addSample([data1.value, data2.value]);
 
-            speedLabel.text = i18n("%1 %2 / %3 %4", data1.value, data1.units,
-                            data2.value, data2.units);
+            speedLabel.text = formatLabel(data1, data2);
         }
     }
 }

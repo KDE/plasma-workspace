@@ -20,58 +20,18 @@
 
 import QtQuick 2.0
 import QtQuick.Layouts 1.1
+import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.kquickcontrolsaddons 2.0 as KQuickAddons
 
+ConfigGeneral {
+    id: root
 
-KQuickAddons.Plotter {
-    id: plotter
-    property string sensorName: model.friendlyName1
-
-    Layout.fillWidth: true
-    Layout.fillHeight: true
-
-    function formatLabel(data) {
-        return i18n("%1 %2", data.value, data.units);
-    }
-
-    dataSets: [
-        KQuickAddons.PlotData {
-            color: theme.highlightColor
-        }
-    ]
-
-    PlasmaComponents.Label {
-        anchors {
-            left: parent.left
-            top: parent.top
-        }
-        text: plotter.sensorName
-    }
-
-    PlasmaComponents.Label {
-        id: speedLabel
-        anchors.centerIn: parent
-    }
-
-    Connections {
-        target: model.dataSource
-        onNewData: {
-            if (sourceName.indexOf(model.source1) != 0) {
-                return;
-            }
-
-            var data1 = model.dataSource.data[model.source1];
-
-            if (data1 === undefined || data1.value === undefined) {
-                return;
-            }
-
-            plotter.addSample([data1.value]);
-
-            speedLabel.text = formatLabel(data1);
+    onSourceAdded: {
+        var match = source.match(/^disk\/([^\/]+)\/Rate\/wblk/);
+        if (match) {
+            root.addSource(source, match[1]);
         }
     }
 }
-
