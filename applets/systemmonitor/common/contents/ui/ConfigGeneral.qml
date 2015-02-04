@@ -31,6 +31,19 @@ Item {
     implicitHeight: mainColumn.implicitHeight
 
     property var cfg_sources: []
+    onCfg_sourcesChanged: {
+        if (cfg_sources.length == 0) {
+            for (var i in mainColumn.children) {
+                var child = mainColumn.children[i];
+                child.checked = true;
+            }
+        } else {
+            for (var i in mainColumn.children) {
+                var child = mainColumn.children[i];
+                child.checked = cfg_sources.indexOf(model.source) !== -1;
+            }
+        }
+    }
 
     signal sourceAdded(string source)
 
@@ -102,12 +115,6 @@ Item {
                         }
                     }
                     cfg_sourcesChanged();
-                }
-                Connections {
-                    target: iconsPage
-                    onCfg_sourcesChanged: {
-                        checkBox.checked = cfg_sources.length == 0 || cfg_sources.indexOf(model.source) !== -1;
-                    }
                 }
             }
         }
