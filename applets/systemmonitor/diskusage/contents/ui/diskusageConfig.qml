@@ -22,23 +22,16 @@ import QtQuick 2.0
 import QtQuick.Layouts 1.1
 import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
+import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.kquickcontrolsaddons 2.0 as KQuickAddons
-import org.kde.kcoreaddons 1.0 as KCoreAddons
 
-Applet {
+ConfigGeneral {
     id: root
 
     onSourceAdded: {
-        if (source === "mem/physical/application") {
-            root.addSource(source, i18n("Physical memory"));
-        } else if (source === "mem/swap/used") {
-            root.addSource(source, i18n("Swap"));
-        }
-    }
-
-    delegate: SinglePlotter {
-        function formatLabel(data) {
-            return KCoreAddons.Format.formatByteSize(data.value * 1024)
+        var match = source.match(/^partitions(.+)\/usedspace/);
+        if (match) {
+            root.addSource(source, match[1]);
         }
     }
 }
