@@ -36,5 +36,10 @@ Applet {
         }
     }
 
-    delegate: DoublePlotter {}
+    delegate: DoublePlotter {
+        function formatLabel(data1, data2) {
+            return i18n("%1 %2 / %3 %4", Math.round(data1.value), data1.units,
+                                Math.round(data2.value), data2.units);
+        }
+    }
 }
