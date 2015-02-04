@@ -18,6 +18,7 @@ set(powerdevilpolicyagent_xml ${KDE4_DBUS_INTERFACES_DIR}/kf5_org.kde.Solid.Powe
 set(ksld_SRCS
    ksldapp.cpp
    interface.cpp
+   globalaccel.cpp
    lockwindow.cpp
    logind.cpp
    waylandserver.cpp
@@ -50,6 +51,7 @@ target_link_libraries(screenlocker_static
    ${X11_LIBRARIES}
    ${X11_Xcursor_LIB}
    XCB::XCB
+   XCB::KEYSYMS
    KF5::WaylandServer
    Wayland::Server
 )

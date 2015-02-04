@@ -29,6 +29,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include <fixx11h.h>
 
 class QTimer;
+
+class GlobalAccel;
+
 namespace ScreenLocker
 {
 class LockWindow : public QWidget, public QAbstractNativeEventFilter
@@ -42,6 +45,10 @@ public:
     void hideLockWindow();
 
     void addAllowedWindow(quint32 window);
+
+    void setGlobalAccel(GlobalAccel *ga) {
+        m_globalAccel = ga;
+    }
 
     virtual bool nativeEventFilter(const QByteArray &eventType, void *message, long *result) override;
 
@@ -69,6 +76,7 @@ private:
     QList<WindowInfo> m_windowInfo;
     QList<WId> m_lockWindows;
     QList<quint32> m_allowedWindows;
+    GlobalAccel *m_globalAccel = nullptr;
 };
 }
 

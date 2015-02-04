@@ -22,6 +22,7 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 *********************************************************************/
 #include "lockwindow.h"
+#include "globalaccel.h"
 // Qt
 #include <QApplication>
 #include <QDebug>
@@ -296,6 +297,12 @@ bool LockWindow::nativeEventFilter(const QByteArray &eventType, void *message, l
     }
     xcb_generic_event_t *event = reinterpret_cast<xcb_generic_event_t*>(message);
     const uint8_t responseType = event->response_type & ~0x80;
+    if (m_globalAccel && responseType == XCB_KEY_PRESS) {
+        if (m_globalAccel->checkKeyPress(reinterpret_cast<xcb_key_press_event_t*>(event))) {
+            emit userActivity();
+            return true;
+        }
+    }
     bool ret = false;
     switch (responseType) {
         case XCB_BUTTON_PRESS:

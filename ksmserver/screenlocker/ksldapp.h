@@ -27,6 +27,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include <QtCore/QProcess>
 
 // forward declarations
+class GlobalAccel;
 class LogindIntegration;
 class KActionCollection;
 class QTimer;
@@ -130,6 +131,7 @@ private:
     QTimer *m_graceTimer;
     int m_inhibitCounter;
     LogindIntegration *m_logind;
+    GlobalAccel *m_globalAccel = nullptr;
 
     // for auto tests
     friend KSldTest;

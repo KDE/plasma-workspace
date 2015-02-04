@@ -22,6 +22,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 *********************************************************************/
 #include "ksldapp.h"
 #include "interface.h"
+#include "globalaccel.h"
 #include "lockwindow.h"
 #include "logind.h"
 #include "kscreensaversettings.h"
@@ -254,6 +255,10 @@ void KSldApp::initialize()
         }
     );
 
+    m_globalAccel = new GlobalAccel(this);
+    connect(this, &KSldApp::locked, m_globalAccel, &GlobalAccel::prepare);
+    connect(this, &KSldApp::unlocked, m_globalAccel, &GlobalAccel::release);
+
     // fallback for non-logind systems:
     // connect to signal emitted by Solid. This is emitted unconditionally also on logind enabled systems
     // ksld ignores it in case logind is used
@@ -454,6 +459,7 @@ void KSldApp::showLockWindow()
 {
     if (!m_lockWindow) {
         m_lockWindow = new LockWindow();
+        m_lockWindow->setGlobalAccel(m_globalAccel);
         connect(m_lockWindow, &LockWindow::userActivity, this,
             [this]() {
                 if (isGraceTime()) {
