@@ -22,24 +22,17 @@ import QtQuick 2.0
 import QtQuick.Layouts 1.1
 import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
+import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.kquickcontrolsaddons 2.0 as KQuickAddons
-import org.kde.kcoreaddons 1.0 as KCoreAddons
 
-Applet {
+ConfigGeneral {
     id: root
 
     onSourceAdded: {
-        var match = source.match(/^disk\/([^\/]+)\/Rate\/wblk/);
-        if (match) {
-            var rSource = "disk/" + match[1] + "/Rate/rblk"
-            root.addSource(source, match[1], rSource, match[1]);
-        }
-    }
-
-    delegate: DoublePlotter {
-        function formatLabel(data1, data2) {
-            return i18n("%1 / %2", KCoreAddons.Format.formatByteSize(data1.value * 1024),
-                        KCoreAddons.Format.formatByteSize(data2.value * 1024));
+        if (source === "mem/physical/application") {
+            root.addSource(source, i18n("Physical memory"));
+        } else if (source === "mem/swap/used") {
+            root.addSource(source, i18n("Swap"));
         }
     }
 }

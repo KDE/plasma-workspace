@@ -29,17 +29,17 @@ Applet {
     id: root
 
     onSourceAdded: {
-        var match = source.match(/^disk\/([^\/]+)\/Rate\/wblk/);
-        if (match) {
-            var rSource = "disk/" + match[1] + "/Rate/rblk"
-            root.addSource(source, match[1], rSource, match[1]);
+        if (source === "mem/physical/application") {
+            root.addSource(source, i18n("Physical memory"));
+        } else if (source === "mem/swap/used") {
+            root.addSource(source, i18n("Swap"));
         }
     }
 
-    delegate: DoublePlotter {
-        function formatLabel(data1, data2) {
-            return i18n("%1 / %2", KCoreAddons.Format.formatByteSize(data1.value * 1024),
-                        KCoreAddons.Format.formatByteSize(data2.value * 1024));
+    delegate: SinglePlotter {
+        function formatLabel(data) {
+            return KCoreAddons.Format.formatByteSize(data.value * 1024)
+            return i18n("%1 %2", data.value, data.units);
         }
     }
 }

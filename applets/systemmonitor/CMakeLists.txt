@@ -7,3 +7,7 @@ plasma_install_package(cpu org.kde.plasma.systemmonitor.cpu)
 
 install(DIRECTORY common/ DESTINATION ${PLASMA_DATA_INSTALL_DIR}/plasmoids/org.kde.plasma.systemmonitor.diskactivity)
 plasma_install_package(diskactivity org.kde.plasma.systemmonitor.diskactivity)
+
+install(DIRECTORY common/ DESTINATION ${PLASMA_DATA_INSTALL_DIR}/plasmoids/org.kde.plasma.systemmonitor.memory)
+plasma_install_package(memory org.kde.plasma.systemmonitor.memory)
+
