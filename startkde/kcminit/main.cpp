@@ -18,10 +18,14 @@
 */
 
 #include <config-workspace.h>
-#include <config-X11.h>
+#include <config-xcb.h>
 
 #include "main.h"
 #include "klauncher_iface.h"
+
+#ifdef XCB_FOUND
+#include <xcb/xcb.h>
+#endif
 
 #include <unistd.h>
 
@@ -127,6 +131,32 @@ void KCMInit::runModules( int phase )
   }
 }
 
+static inline bool enableMultihead()
+{
+#ifdef XCB_FOUND
+  if (qApp->platformName() != QLatin1String("xcb"))
+    return false;
+
+  xcb_connection_t *c = xcb_connect(nullptr, nullptr);
+  if (!c || xcb_connection_has_error(c))
+    return false;
+
+  //on a common setup of laptop plus external vga output this still will be 1
+  const int xcb_screen_count = xcb_setup_roots_length(xcb_get_setup(c));
+  xcb_disconnect(c);
+
+  if (xcb_screen_count <= 1)
+    return false;
+
+  KConfig _config( "kcmdisplayrc" );
+  KConfigGroup config(&_config, "X11");
+  // This key has no GUI apparently
+  return !config.readEntry( "disableMultihead", false);
+#else
+  return false;
+#endif
+}
+
 KCMInit::KCMInit( const QCommandLineParser& args )
 {
   QString arg;
@@ -162,19 +192,9 @@ KCMInit::KCMInit( const QCommandLineParser& args )
     list = KServiceTypeTrader::self()->query( "KCModuleInit" );
   }
 
-  //NOTE Wayland case?
-  bool multihead = false;
-#ifdef HAVE_X11
-  if (qApp->platformName() == QLatin1String("xcb") && QGuiApplication::screens().count() > 1) {
-    KConfig _config( "kcmdisplayrc" );
-    KConfigGroup config(&_config, "X11");
-    // This key has no GUI apparently
-    multihead = !config.readEntry( "disableMultihead", false);
-  }
-#endif
   // Pass env. var to kdeinit.
   const char* name = "KDE_MULTIHEAD";
-  const char* value = multihead ? "true" : "false";
+  const char* value = enableMultihead() ? "true" : "false";
   OrgKdeKLauncherInterface *iface = new OrgKdeKLauncherInterface(QStringLiteral("org.kde.klauncher5"), QStringLiteral("/KLauncher"), QDBusConnection::sessionBus());
   iface->setLaunchEnv(QLatin1String(name), QLatin1String(value));
   iface->deleteLater();
@@ -232,7 +252,7 @@ extern "C" Q_DECL_EXPORT int kdemain(int argc, char *argv[])
   startup = ( strcmp( argv[ 0 ], "kcminit_startup" ) == 0 ); // started from startkde?
 
   KLocalizedString::setApplicationDomain("kcminit");
-  QGuiApplication app(argc, argv);
+  QGuiApplication app(argc, argv); //gui is needed for several modules
   KAboutData about(QStringLiteral("kcminit"), i18n("KCMInit"), QString(),
                    i18n("KCMInit - runs startup initialization for Control Modules."), KAboutLicense::GPL);
   KAboutData::setApplicationData(about);

@@ -1,3 +1,10 @@
+find_package(XCB OPTIONAL_COMPONENTS XCB)
+set_package_properties(XCB PROPERTIES DESCRIPTION "Xcb libraries"
+                       URL "http://www.x.org"
+                       TYPE OPTIONAL
+                       PURPOSE "Required for enabling special X11 multihead mode")
+configure_file(config-xcb.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-xcb.h)
+
 ########### next target ###############
 
 set(kcminit_KDEINIT_SRCS main.cpp)
@@ -7,8 +14,10 @@ qt5_add_dbus_interface(kcminit_KDEINIT_SRCS ${klauncher_xml} klauncher_iface)
 
 kf5_add_kdeinit_executable( kcminit ${kcminit_KDEINIT_SRCS})
 
-#Qt5::Gui is for multihead disabling, remove it if KDE_MULTIHEAD will always be true
 target_link_libraries(kdeinit_kcminit Qt5::Core Qt5::Gui Qt5::DBus KF5::CoreAddons KF5::Service KF5::I18n)
+if (XCB_XCB_FOUND)
+    target_link_libraries(kdeinit_kcminit XCB::XCB)
+endif()
 
 install(TARGETS kdeinit_kcminit ${INSTALL_TARGETS_DEFAULT_ARGS} )
 install(TARGETS kcminit         ${INSTALL_TARGETS_DEFAULT_ARGS} )
@@ -24,6 +33,9 @@ qt5_add_dbus_interface(kcminit_startup_KDEINIT_SRCS ${klauncher_xml} klauncher_i
 kf5_add_kdeinit_executable( kcminit_startup ${kcminit_startup_KDEINIT_SRCS})
 
 target_link_libraries(kdeinit_kcminit_startup Qt5::Core Qt5::Gui Qt5::DBus KF5::CoreAddons KF5::Service KF5::I18n)
+if (XCB_XCB_FOUND)
+    target_link_libraries(kdeinit_kcminit_startup XCB::XCB)
+endif()
 
 install(TARGETS kdeinit_kcminit_startup ${INSTALL_TARGETS_DEFAULT_ARGS} )
 install(TARGETS kcminit_startup         ${INSTALL_TARGETS_DEFAULT_ARGS} )
