@@ -118,28 +118,6 @@ Item {
         }
     }
 
-    function cycle(color, degrees) {
-        var min = Math.min(color.r, Math.min(color.g, color.b));
-        var max = Math.max(color.r, Math.max(color.g, color.b));
-        var c = max - min;
-        var h;
-
-        if (c == 0) {
-            h = 0
-        } else if (max == color.r) {
-            h = ((color.g - color.b) / c) % 6;
-        } else if (max == color.g) {
-            h = ((color.b - color.r) / c) + 2;
-        } else if (max == color.b) {
-            h = ((color.r - color.g) / c) + 4;
-        }
-        var hue = (1/6) * h + (degrees/360);
-        var saturation = c / (1 - Math.abs(2 * ((max+min)/2) - 1));
-        var lightness = (max + min)/2;
-
-        return Qt.hsla(hue, saturation, lightness, 1.0);
-    }
-
     ColumnLayout {
         anchors.fill: parent
         anchors.margins: 0
