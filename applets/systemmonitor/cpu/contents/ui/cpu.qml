@@ -35,5 +35,9 @@ Applet {
         }
     }
 
-    delegate: SinglePlotter {}
+    delegate: SinglePlotter {
+        autoRange: false
+        rangeMin: 0
+        rangeMax: 100
+    }
 }
