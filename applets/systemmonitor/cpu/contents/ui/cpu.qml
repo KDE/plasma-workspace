@@ -39,5 +39,8 @@ Applet {
         autoRange: false
         rangeMin: 0
         rangeMax: 100
+        function formatLabel(data) {
+            return i18n("%1 %2", Math.round(data.value*100)/100, data.units);
+        }
     }
 }
