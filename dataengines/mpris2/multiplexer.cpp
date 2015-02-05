@@ -18,8 +18,14 @@
  */
 
 #include "multiplexer.h"
+#include <mprisplayer.h>
+
+#include <KGlobalAccel>
+#include <KLocalizedString>
 
 #include <QDebug> // for Q_ASSERT
+#include <QAction>
+
 
 // the '@' at the start is not valid for D-Bus names, so it will
 // never interfere with an actual MPRIS2 player
@@ -29,6 +35,51 @@ Multiplexer::Multiplexer(QObject* parent)
     : DataContainer(parent)
 {
     setObjectName(sourceName);
+
+    // setup actions
+    QAction *playPauseAction = new QAction(i18n("Play/Pause media playback"), this);
+    playPauseAction->setObjectName("playpausemedia");
+    KGlobalAccel::setGlobalShortcut(playPauseAction, Qt::Key_MediaPlay);
+    connect(playPauseAction, &QAction::triggered, this,
+        [this] {
+            if (PlayerContainer *active = activePlayer()) {
+                active->playerInterface()->PlayPause();
+            }
+        }
+    );
+
+    QAction *nextAction = new QAction(i18n("Media playback next"), this);
+    nextAction->setObjectName("nextmedia");
+    KGlobalAccel::setGlobalShortcut(nextAction, Qt::Key_MediaNext);
+    connect(nextAction, &QAction::triggered, this,
+        [this] {
+            if (PlayerContainer *active = activePlayer()) {
+                active->playerInterface()->Next();
+            }
+        }
+    );
+
+    QAction *previousAction = new QAction(i18n("Media playback previous"), this);
+    previousAction->setObjectName("previousmedia");
+    KGlobalAccel::setGlobalShortcut(previousAction, Qt::Key_MediaPrevious);
+    connect(previousAction, &QAction::triggered, this,
+        [this] {
+            if (PlayerContainer *active = activePlayer()) {
+                active->playerInterface()->Previous();
+            }
+        }
+    );
+
+    QAction *stopAction = new QAction(i18n("Stop media playback"), this);
+    stopAction->setObjectName("stopmedia");
+    KGlobalAccel::setGlobalShortcut(stopAction, Qt::Key_MediaStop);
+    connect(stopAction, &QAction::triggered, this,
+        [this] {
+            if (PlayerContainer *active = activePlayer()) {
+                active->playerInterface()->Stop();
+            }
+        }
+    );
 }
 
 void Multiplexer::addPlayer(PlayerContainer *container)
