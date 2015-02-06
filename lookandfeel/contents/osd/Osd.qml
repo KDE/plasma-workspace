@@ -37,61 +37,7 @@ PlasmaCore.Dialog {
     // false for displaying the value as normal text
     property bool showingProgress: false
 
-    mainItem: Item {
-        height: units.gridUnit * 15
-        width: height
-
-        //  /--------------------\
-        //  |      spacing       |
-        //  | /----------------\ |
-        //  | |                | |
-        //  | |      icon      | |
-        //  | |                | |
-        //  | |                | |
-        //  | \----------------/ |
-        //  |      spacing       |
-        //  | [progressbar/text] |
-        //  |      spacing       |
-        //  \--------------------/
-
-        PlasmaCore.IconItem {
-            id: icon
-
-            height: parent.height - progressBar.height - ((units.largeSpacing/2) * 3) //it's an svg
-            width: parent.width
-
-            source: root.icon
-        }
-
-        PlasmaComponents.ProgressBar {
-            id: progressBar
-
-            anchors {
-                bottom: parent.bottom
-                left: parent.left
-                right: parent.right
-                margins: Math.floor(units.largeSpacing / 2)
-            }
-
-            visible: root.showingProgress
-            minimumValue: 0
-            maximumValue: 100
-            value: visible ? root.osdValue : 0
-
-        }
-        PlasmaExtra.Heading {
-            anchors {
-                bottom: parent.bottom
-                left: parent.left
-                right: parent.right
-                margins: Math.floor(units.largeSpacing / 2)
-            }
-
-            visible: !root.showingProgress
-            text: root.showingProgress ? "" : (root.osdValue ? root.osdValue : "")
-            horizontalAlignment: Text.AlignHCenter
-            wrapMode: Text.NoWrap
-            elide: Text.ElideLeft
-        }
+    mainItem: OsdItem {
+        rootItem: root
     }
 }
