@@ -20,11 +20,13 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include "waylandserver.h"
 // ksld
 #include <config-ksmserver.h>
+// Wayland
+#include <wayland-server.h>
 #include <wayland-ksld-server-protocol.h>
 // KWayland
 #include <KWayland/Server/display.h>
-// Wayland
-#include <wayland-server.h>
+// Qt
+#include <QDBusConnection>
 // system
 #include <unistd.h>
 #include <fcntl.h>
@@ -34,9 +36,24 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 namespace ScreenLocker
 {
 
+static const QString s_plasmaShellService = QStringLiteral("org.kde.plasmashell");
+static const QString s_osdServicePath = QStringLiteral("/org/kde/osdService");
+static const QString s_osdServiceInterface = QStringLiteral("org.kde.osdService");
+
 WaylandServer::WaylandServer(QObject *parent)
     : QObject(parent)
 {
+    // connect to osd service
+    QDBusConnection::sessionBus().connect(s_plasmaShellService,
+                                          s_osdServicePath,
+                                          s_osdServiceInterface,
+                                          QStringLiteral("osdProgress"),
+                                          this, SLOT(osdProgress(QString,int,QString)));
+    QDBusConnection::sessionBus().connect(s_plasmaShellService,
+                                          s_osdServicePath,
+                                          s_osdServiceInterface,
+                                          QStringLiteral("osdText"),
+                                          this, SLOT(osdText(QString,QString)));
 }
 
 WaylandServer::~WaylandServer()
@@ -67,7 +84,7 @@ int WaylandServer::start()
         close(socketPair[1]);
         return -1;
     }
-    m_interface = wl_global_create(*m_display.data(), &org_kde_ksld_interface, 1, this, bind);
+    m_interface = wl_global_create(*m_display.data(), &org_kde_ksld_interface, 2, this, bind);
     return socketPair[1];
 }
 
@@ -89,7 +106,7 @@ void WaylandServer::bind(wl_client *client, void *data, uint32_t version, uint32
         wl_client_post_no_memory(client);
         return;
     }
-    wl_resource *r = s->m_allowedClient->createResource(&org_kde_ksld_interface, qMin(version, 1u), id);
+    wl_resource *r = s->m_allowedClient->createResource(&org_kde_ksld_interface, qMin(version, 2u), id);
     if (!r) {
         wl_client_post_no_memory(client);
         return;
@@ -99,12 +116,13 @@ void WaylandServer::bind(wl_client *client, void *data, uint32_t version, uint32
         x11WindowCallback
     };
     wl_resource_set_implementation(r, &s_interface, s, unbind);
+    s->addResource(r);
     s->m_allowedClient->flush();
 }
 
 void WaylandServer::unbind(wl_resource *resource)
 {
-    Q_UNUSED(resource)
+    reinterpret_cast<WaylandServer*>(wl_resource_get_user_data(resource))->removeResource(resource);
 }
 
 void WaylandServer::x11WindowCallback(wl_client *client, wl_resource *resource, uint32_t id)
@@ -114,6 +132,38 @@ void WaylandServer::x11WindowCallback(wl_client *client, wl_resource *resource, 
         return;
     }
     emit s->x11WindowAdded(id);
+}
+
+void WaylandServer::addResource(wl_resource *r)
+{
+    m_resources.append(r);
+}
+
+void WaylandServer::removeResource(wl_resource *r)
+{
+    m_resources.removeAll(r);
+}
+
+void WaylandServer::osdProgress(const QString &icon, int percent, const QString &additionalText)
+{
+    for (auto r : m_resources) {
+        if (wl_resource_get_version(r) < 2) {
+            continue;
+        }
+        org_kde_ksld_send_osdProgress(r, icon.toUtf8().constData(), percent, additionalText.toUtf8().constData());
+        m_allowedClient->flush();
+    }
+}
+
+void WaylandServer::osdText(const QString &icon, const QString &additionalText)
+{
+    for (auto r : m_resources) {
+        if (wl_resource_get_version(r) < 2) {
+            continue;
+        }
+        org_kde_ksld_send_osdText(r, icon.toUtf8().constData(), additionalText.toUtf8().constData());
+        m_allowedClient->flush();
+    }
 }
 
 }

@@ -58,6 +58,9 @@ public:
     void setNoLock(bool noLock);
     void setKsldSocket(int socket);
 
+    void osdProgress(const QString &icon, int percent, const QString &additionalText);
+    void osdText(const QString &icon, const QString &additionalText);
+
 public Q_SLOTS:
     void desktopResized();
 

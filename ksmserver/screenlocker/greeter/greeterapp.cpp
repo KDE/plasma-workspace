@@ -431,6 +431,24 @@ void UnlockApp::setNoLock(bool noLock)
     m_noLock = noLock;
 }
 
+
+static void osdProgress(void *data, org_kde_ksld *org_kde_ksld, const char *icon, int32_t percent, const char *text)
+{
+    Q_UNUSED(org_kde_ksld)
+    reinterpret_cast<UnlockApp*>(data)->osdProgress(QString::fromUtf8(icon), percent, QString::fromUtf8(text));
+}
+
+static void osdText(void *data, org_kde_ksld *org_kde_ksld, const char *icon, const char *text)
+{
+    Q_UNUSED(org_kde_ksld)
+    reinterpret_cast<UnlockApp*>(data)->osdText(QString::fromUtf8(icon), QString::fromUtf8(text));
+}
+
+static const struct org_kde_ksld_listener s_listener {
+    osdProgress,
+    osdText
+};
+
 void UnlockApp::setKsldSocket(int socket)
 {
     using namespace KWayland::Client;
@@ -447,6 +465,9 @@ void UnlockApp::setKsldSocket(int socket)
             }
             m_ksldInterface = reinterpret_cast<org_kde_ksld*>(wl_registry_bind(*m_ksldRegistry, name, &org_kde_ksld_interface, version));
             queue->addProxy(m_ksldInterface);
+            if (version >= 2) {
+                org_kde_ksld_add_listener(m_ksldInterface, &s_listener, this);
+            }
             for (auto v : m_views) {
                 org_kde_ksld_x11window(m_ksldInterface, v->winId());
                 wl_display_flush(m_ksldConnection->display());
@@ -467,6 +488,35 @@ void UnlockApp::setKsldSocket(int socket)
     m_ksldConnection->moveToThread(m_ksldConnectionThread);
     m_ksldConnectionThread->start();
     m_ksldConnection->initConnection();
+}
+
+void UnlockApp::osdProgress(const QString &icon, int percent, const QString &additionalText)
+{
+    for (auto v : m_views) {
+        auto osd = v->rootObject()->findChild<QQuickItem*>(QStringLiteral("onScreenDisplay"));
+        if (!osd) {
+            continue;
+        }
+        osd->setProperty("osdValue", percent);
+        osd->setProperty("osdAdditionalText", additionalText);
+        osd->setProperty("showingProgress", true);
+        osd->setProperty("icon", icon);
+        QMetaObject::invokeMethod(osd, "show");
+    }
+}
+
+void UnlockApp::osdText(const QString &icon, const QString &additionalText)
+{
+    for (auto v : m_views) {
+        auto osd = v->rootObject()->findChild<QQuickItem*>(QStringLiteral("onScreenDisplay"));
+        if (!osd) {
+            continue;
+        }
+        osd->setProperty("showingProgress", false);
+        osd->setProperty("osdValue", additionalText);
+        osd->setProperty("icon", icon);
+        QMetaObject::invokeMethod(osd, "show");
+    }
 }
 
 } // namespace

@@ -25,6 +25,7 @@ import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.kscreenlocker 1.0
 import org.kde.plasma.workspace.keyboardlayout 1.0
 import "../components"
+import "../osd"
 
 Image {
     id: root
@@ -257,6 +258,53 @@ Image {
                         }
                     }
                 }
+            }
+        }
+    }
+    PlasmaCore.FrameSvgItem {
+        id: osd
+
+        // OSD Timeout in msecs - how long it will stay on the screen
+        property int timeout: 1800
+        // This is either a text or a number, if showingProgress is set to true,
+        // the number will be used as a value for the progress bar
+        property var osdValue
+        // Icon name to display
+        property string icon
+        // Set to true if the value is meant for progress bar,
+        // false for displaying the value as normal text
+        property bool showingProgress: false
+
+        anchors {
+            horizontalCenter: parent.horizontalCenter
+            bottom: parent.bottom
+        }
+
+        objectName: "onScreenDisplay"
+        visible: false
+        width: osdItem.width + margins.left + margins.right
+        height: osdItem.height + margins.top + margins.bottom
+        imagePath: "widgets/background"
+
+        function show() {
+            osd.visible = true;
+            hideTimer.restart();
+        }
+
+        OsdItem {
+            id: osdItem
+            rootItem: osd
+
+            anchors.centerIn: parent
+        }
+
+        Timer {
+            id: hideTimer
+            interval: osd.timeout
+            onTriggered: {
+                osd.visible = false;
+                osd.icon = "";
+                osd.osdValue = 0;
             }
         }
     }
