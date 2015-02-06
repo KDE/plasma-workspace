@@ -42,7 +42,7 @@ Osd::Osd(ShellCorona *corona)
     m_osdObject->setSource(QUrl::fromLocalFile(osdPath));
     m_timeout = m_osdObject->rootObject()->property("timeout").toInt();
 
-    QDBusConnection::sessionBus().registerObject("/org/kde/osdService", this, QDBusConnection::ExportAllSlots);
+    QDBusConnection::sessionBus().registerObject("/org/kde/osdService", this, QDBusConnection::ExportAllSlots | QDBusConnection::ExportAllSignals);
 
     m_osdTimer = new QTimer(this);
     m_osdTimer->setSingleShot(true);
@@ -109,6 +109,7 @@ void Osd::showProgress(const QString &icon, const int percent, const QString &ad
     m_osdObject->rootObject()->setProperty("showingProgress", true);
     m_osdObject->rootObject()->setProperty("icon", icon);
 
+    emit osdProgress(icon, value, additionalText);
     showOsd();
 }
 
@@ -118,6 +119,7 @@ void Osd::showText(const QString &icon, const QString &text)
     m_osdObject->rootObject()->setProperty("osdValue", text);
     m_osdObject->rootObject()->setProperty("icon", icon);
 
+    emit osdText(icon, text);
     showOsd();
 }
 

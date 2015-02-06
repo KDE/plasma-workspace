@@ -46,6 +46,10 @@ public Q_SLOTS:
     void kbdLayoutChanged(const QString &layoutName);
     void virtualDesktopChanged(const QString &currentVirtualDesktopName);
 
+Q_SIGNALS:
+    void osdProgress(const QString &icon, const int percent, const QString &additionalText);
+    void osdText(const QString &icon, const QString &text);
+
 private Q_SLOTS:
     void hideOsd();
 
