@@ -48,7 +48,9 @@ static const QMap<QString, QList<QString>> s_shortcutWhitelist{
                                                               QStringLiteral("playpausemedia")}},
     {QStringLiteral("/component/kmix"), QList<QString>{QStringLiteral("mute"),
                                                        QStringLiteral("decrease_volume"),
-                                                       QStringLiteral("increase_volume")}}
+                                                       QStringLiteral("increase_volume")}},
+    {QStringLiteral("/component/kded5"), {QStringLiteral("Increase Screen Brightness"),
+                    QStringLiteral("Decrease Screen Brightness")}}
 };
 
 static uint g_keyModMaskXAccel = 0;
