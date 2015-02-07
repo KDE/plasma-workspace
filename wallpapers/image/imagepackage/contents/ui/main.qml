@@ -42,6 +42,10 @@ Item {
         imageWallpaper.nextSlide();
     }
 
+    function action_open() {
+        Qt.openUrlExternally(currentImage.source)
+    }
+
     //private
     function fadeWallpaper() {
         if (!ready && width > 0 && height > 0) { // shell startup, setup immediately
@@ -137,6 +141,7 @@ Item {
 
     Component.onCompleted: {
         if (wallpaper.pluginName == "org.kde.slideshow") {
+            wallpaper.setAction("open", i18nd("plasma_applet_org.kde.image", "Open Wallpaper Image"), "document-open");
             wallpaper.setAction("next", i18nd("plasma_applet_org.kde.image","Next Wallpaper Image"),"user-desktop");
         }
     }
