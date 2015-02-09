@@ -30,7 +30,7 @@ KQuickAddons.Plotter {
 
     Layout.fillWidth: true
     Layout.fillHeight: true
-    Layout.minimumHeight: parent.height / parent.children.length
+    Layout.minimumHeight: parent.height / (parent.children.length - 1)
     Layout.maximumHeight: Layout.minimumHeight
 
     function formatLabel(data1, data2) {

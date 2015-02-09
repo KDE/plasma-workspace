@@ -130,6 +130,7 @@ Item {
     ColumnLayout {
         anchors.fill: parent
         anchors.margins: 0
+        spacing: 0
         Repeater {
             model: sourcesModel
 

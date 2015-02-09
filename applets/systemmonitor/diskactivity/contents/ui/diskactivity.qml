@@ -38,7 +38,7 @@ Applet {
 
     delegate: DoublePlotter {
         function formatLabel(data1, data2) {
-            return i18n("%1 / %2", KCoreAddons.Format.formatByteSize(data1.value * 1024),
+            return i18n("%1/s / %2/s", KCoreAddons.Format.formatByteSize(data1.value * 1024),
                         KCoreAddons.Format.formatByteSize(data2.value * 1024));
         }
     }
