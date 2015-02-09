@@ -30,6 +30,8 @@ KQuickAddons.Plotter {
 
     Layout.fillWidth: true
     Layout.fillHeight: true
+    Layout.minimumHeight: parent.height / parent.children.length
+    Layout.maximumHeight: Layout.minimumHeight
 
     function formatLabel(data1, data2) {
         return i18n("%1 %2 / %3 %4", data1.value, data1.units,
@@ -83,12 +85,12 @@ KQuickAddons.Plotter {
     Connections {
         target: model.dataSource
         onNewData: {
-            if (sourceName.indexOf(model.source1) != 0 && sourceName.indexOf(model.source2) != 0) {
+            if (sourceName.indexOf(decodeURIComponent(model.source1)) != 0 && sourceName.indexOf(decodeURIComponent(model.source2)) != 0) {
                 return;
             }
 
-            var data1 = model.dataSource.data[model.source2];
-            var data2 = model.dataSource.data[model.source1];
+            var data1 = model.dataSource.data[decodeURIComponent(model.source2)];
+            var data2 = model.dataSource.data[decodeURIComponent(model.source1)];
 
             if (data1 === undefined || data1.value === undefined ||
                 data2 === undefined || data2.value === undefined) {

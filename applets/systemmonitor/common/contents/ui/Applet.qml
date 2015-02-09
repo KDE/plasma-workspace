@@ -39,7 +39,8 @@ Item {
         var found = false;
         for (var i = 0; i < sourcesModel.count; ++i) {
             var obj = sourcesModel.get(i);
-            if (obj.source1 == source1 && obj.source2 == source2) {
+            if (obj.source1 == encodeURIComponent(source1) &&
+                obj.source2 == encodeURIComponent(source2)) {
                 found = true;
                 break;
             }
@@ -54,9 +55,9 @@ Item {
         }
 
         sourcesModel.append(
-           {"source1": source1,
+           {"source1": encodeURIComponent(source1),
             "friendlyName1": friendlyName1,
-            "source2": source2,
+            "source2": encodeURIComponent(source2),
             "friendlyName2": friendlyName2,
             "dataSource": smSource});
     }
@@ -78,7 +79,7 @@ Item {
         interval: 2000
         onSourceAdded: {
             if (plasmoid.configuration.sources.length > 0 &&
-                plasmoid.configuration.sources.indexOf(source) === -1) {
+                plasmoid.configuration.sources.indexOf(encodeURIComponent(source)) === -1) {
                 return;
             }
             rootItem.sourceAdded(source);
@@ -103,16 +104,24 @@ Item {
                 }
 
             } else {
-                for (var i in plasmoid.configuration.sources) {
-                    var source = plasmoid.configuration.sources[i];
-                    smSource.sourceAdded(source);
-                }
+                var sourcesToRemove = [];
 
                 for (var i = sourcesModel.count - 1; i >= 0; --i) {
                     var obj = sourcesModel.get(i);
-                    if (plasmoid.configuration.sources.indexOf(obj.source1) === -1) {
-                        smSource.sourceRemoved(obj.source1);
+
+                    if (plasmoid.configuration.sources.indexOf(encodeURIComponent(obj.source1)) === -1) {
+                        sourcesToRemove.push(obj.source1);
                     }
+                }
+
+                for (i = 0; i < sourcesToRemove.length; ++i) {
+                    smSource.sourceRemoved(sourcesToRemove[i]);
+                }
+
+
+                for (var i in plasmoid.configuration.sources) {
+                    var source = decodeURIComponent(plasmoid.configuration.sources[i]);
+                    smSource.sourceAdded(source);
                 }
             }
         }

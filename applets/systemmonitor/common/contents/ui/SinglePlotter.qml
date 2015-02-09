@@ -58,11 +58,11 @@ KQuickAddons.Plotter {
     Connections {
         target: model.dataSource
         onNewData: {
-            if (sourceName.indexOf(model.source1) != 0) {
+            if (sourceName.indexOf(decodeURIComponent(model.source1)) != 0) {
                 return;
             }
 
-            var data1 = model.dataSource.data[model.source1];
+            var data1 = model.dataSource.data[decodeURIComponent(model.source1)];
 
             if (data1 === undefined || data1.value === undefined) {
                 return;

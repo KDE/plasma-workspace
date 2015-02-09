@@ -35,12 +35,16 @@ Item {
         if (cfg_sources.length == 0) {
             for (var i in mainColumn.children) {
                 var child = mainColumn.children[i];
-                child.checked = true;
+                if (child.checked !== undefined) {
+                    child.checked = true;
+                }
             }
         } else {
             for (var i in mainColumn.children) {
                 var child = mainColumn.children[i];
-                child.checked = cfg_sources.indexOf(model.source) !== -1;
+                if (child.checked !== undefined) {
+                    child.checked = cfg_sources.indexOf(child.source) !== -1;
+                }
             }
         }
     }
@@ -61,7 +65,7 @@ Item {
         }
 
         sourcesModel.append(
-                {"source": source,
+                {"source": encodeURIComponent(source),
                  "friendlyName": friendlyName});
     }
 
@@ -103,6 +107,7 @@ Item {
             Controls.CheckBox {
                 id: checkBox
                 text: model.friendlyName
+                property string source: model.source
                 onCheckedChanged: {
                     if (checked) {
                         if (cfg_sources.indexOf(model.source) == -1) {
