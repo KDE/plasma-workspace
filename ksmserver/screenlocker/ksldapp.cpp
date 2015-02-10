@@ -121,7 +121,7 @@ void KSldApp::initialize()
     // Global keys
     m_actionCollection = new KActionCollection(this);
 
-    if (KAuthorized::authorize(QLatin1String("lock_screen"))) {
+    if (KAuthorized::authorizeKAction(QLatin1String("lock_screen"))) {
         qDebug() << "Configuring Lock Action";
         QAction *a = m_actionCollection->addAction(QLatin1String("Lock Session"));
         a->setText(i18n("Lock Session"));
