@@ -164,6 +164,13 @@ Image {
                                 }
                                 text = "";
                             }
+                            onTextChanged: {
+                                if (text == "") {
+                                    clearTimer.stop();
+                                } else {
+                                    clearTimer.restart();
+                                }
+                            }
 
                             Keys.onLeftPressed: {
                                 if (text == "") {
@@ -177,6 +184,14 @@ Image {
                                     root.userSelect.incrementCurrentIndex();
                                 } else {
                                     event.accepted = false;
+                                }
+                            }
+                            Timer {
+                                id: clearTimer
+                                interval: 30000
+                                repeat: false
+                                onTriggered: {
+                                    passwordInput.text = "";
                                 }
                             }
                         }
