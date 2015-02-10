@@ -100,6 +100,11 @@ bool KSMServer::canShutdown()
     return cg.readEntry( "offerShutdown", true ) && KDisplayManager().canShutdown();
 }
 
+bool KSMServer::isShuttingDown() const
+{
+    return state >= Shutdown;
+}
+
 void KSMServer::shutdown( KWorkSpace::ShutdownConfirm confirm,
     KWorkSpace::ShutdownType sdtype, KWorkSpace::ShutdownMode sdmode )
 {
