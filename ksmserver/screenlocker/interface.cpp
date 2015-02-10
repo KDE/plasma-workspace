@@ -24,6 +24,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include "kscreensaveradaptor.h"
 #include "powerdevilpolicyagent.h"
 // KDE
+#include <KAuthorized>
 #include <KIdleTime>
 #include <KRandom>
 // Qt
@@ -99,6 +100,9 @@ uint Interface::GetSessionIdleTime()
 
 void Interface::Lock()
 {
+    if (!KAuthorized::authorizeKAction(QStringLiteral("lock_screen"))) {
+        return;
+    }
     m_daemon->lock(calledFromDBus() ? EstablishLock::Immediate : EstablishLock::Delayed);
 
     if (calledFromDBus() && m_daemon->lockState() == KSldApp::AcquiringLock) {
