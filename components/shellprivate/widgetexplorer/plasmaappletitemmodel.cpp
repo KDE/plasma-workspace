@@ -247,7 +247,7 @@ void PlasmaAppletItemModel::populateModel(const QStringList &whatChanged)
     foreach (const QExplicitlySharedDataPointer<KService> service, services) {
         KPluginInfo info(service);
         //qDebug() << info.pluginName() << "NoDisplay" << info.property("NoDisplay").toBool();
-        if (info.property("NoDisplay").toBool() || info.category() == i18n("Containments")) {
+        if (!info.isValid() || info.property("NoDisplay").toBool() || info.category() == i18n("Containments")) {
             // we don't want to show the hidden category
             continue;
         }
