@@ -70,6 +70,11 @@ void WindowedWidgetsRunner::match(Plasma::RunnerContext &context)
              term.startsWith(i18nc("Note this is a KRunner keyword", "mobile applications"))) &&
              !info.property("NoDisplay").toBool()) {
 
+            QVariant val = info.property("X-Plasma-StandAloneApp");
+            if (!val.isValid() || !val.toBool()) {
+                continue;
+            }
+
             Plasma::QueryMatch match(this);
             setupMatch(service, match);
             if (service->name().compare(term, Qt::CaseInsensitive) == 0) {
