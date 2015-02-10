@@ -21,7 +21,7 @@ import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.plasma.extras 2.0 as PlasmaExtra
 
 Item {
-    property Item rootItem
+    property QtObject rootItem
     height: units.gridUnit * 15
     width: height
 
