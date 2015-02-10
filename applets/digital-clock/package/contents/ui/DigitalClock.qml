@@ -367,7 +367,8 @@ Item {
 
     function setupLabels() {
         var st = Qt.formatTime(new Date(2000, 0, 1, 22, 0, 0), main.timeFormat);
-        var showTimezone = main.showLocalTimezone || plasmoid.configuration.lastSelectedTimezone != "Local";
+        var showTimezone = main.showLocalTimezone || (plasmoid.configuration.lastSelectedTimezone != "Local"
+                                                        && dataSource.data["Local"]["Timezone City"] != dataSource.data[plasmoid.configuration.lastSelectedTimezone]["Timezone City"]);
 
         var timezoneString = "";
 

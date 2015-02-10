@@ -218,7 +218,16 @@ uint NotificationsEngine::Notify(const QString &app_name, uint replaces_id,
     const QString source = QString("notification %1").arg(id);
 
     QString bodyFinal = (partOf == 0 ? body : _body);
+    // First trim whitespace from beginning and end
+    bodyFinal = bodyFinal.trimmed();
+    // Now replace all \ns with <br/>
     bodyFinal = bodyFinal.replace(QLatin1String("\n"), QLatin1String("<br/>"));
+    // Now remove all inner whitespace (\ns are already <br/>s
+    bodyFinal = bodyFinal.simplified();
+    // Finally, check if we don't have multiple <br/>s following,
+    // can happen for example when "\n       \n" is sent, this replaces
+    // all <br/>s in succsession with just one
+    bodyFinal.replace(QRegularExpression("<br/>\\s*<br/>(\\s|<br/>)*"), QLatin1String("<br/>"));
     // This fancy RegExp escapes every occurence of & since QtQuick Text will blatantly cut off
     // text where it finds a stray ampersand.
     // Only &{apos, quot, gt, lt, amp}; as well as &#123 character references will be allowed
