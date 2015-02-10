@@ -22,6 +22,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include "ui_kcm.h"
 #include "screenlocker_interface.h"
 #include <config-ksmserver.h>
+#include <KActionCollection>
+#include <KGlobalAccel>
 #include <KCModule>
 #include <KPluginFactory>
 #include <KConfigDialogManager>
@@ -35,6 +37,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #include <KPackage/Package>
 #include <KPackage/PackageLoader>
+
+static const QString s_lockActionName = QStringLiteral("Lock Session");
 
 class ScreenLockerKcmForm : public QWidget, public Ui::ScreenLockerKcmForm
 {
@@ -53,16 +57,16 @@ ScreenLockerKcmForm::ScreenLockerKcmForm(QWidget *parent)
 
 ScreenLockerKcm::ScreenLockerKcm(QWidget *parent, const QVariantList &args)
     : KCModule(parent, args)
+    , m_actionCollection(new KActionCollection(this, QStringLiteral("ksmserver")))
+    , m_ui(new ScreenLockerKcmForm(this))
 {
     qmlRegisterType<QStandardItemModel>();
     KConfigDialogManager::changedMap()->insert("SelectImageButton", SIGNAL(imagePathChanged(QString)));
 
-    ScreenLockerKcmForm *ui = new ScreenLockerKcmForm(this);
-
     QVBoxLayout* layout = new QVBoxLayout(this);
-    layout->addWidget(ui);
+    layout->addWidget(m_ui);
 
-    addConfig(KScreenSaverSettings::self(), ui);
+    addConfig(KScreenSaverSettings::self(), m_ui);
 
     m_model = new QStandardItemModel(this);
     QHash<int, QByteArray> roles = m_model->roleNames();
@@ -81,6 +85,23 @@ ScreenLockerKcm::ScreenLockerKcm(QWidget *parent, const QVariantList &args)
     setMinimumHeight(m_quickView->initialSize().height());
 
     layout->addWidget(widget);
+
+    m_actionCollection->setConfigGlobal(true);
+    QAction *a = m_actionCollection->addAction(s_lockActionName);
+    a->setProperty("isConfigurationAction", true);
+    m_ui->lockscreenShortcut->setCheckForConflictsAgainst(KKeySequenceWidget::None);
+    a->setText(i18n("Lock Session"));
+    KGlobalAccel::self()->setShortcut(a, QList<QKeySequence>{Qt::ALT+Qt::CTRL+Qt::Key_L, Qt::Key_ScreenSaver});
+    connect(m_ui->lockscreenShortcut, &KKeySequenceWidget::keySequenceChanged, this, &ScreenLockerKcm::shortcutChanged);
+}
+
+void ScreenLockerKcm::shortcutChanged(const QKeySequence &key)
+{
+    if (QAction *a = m_actionCollection->action(s_lockActionName)) {
+        auto shortcuts = KGlobalAccel::self()->shortcut(a);
+        m_ui->lockscreenShortcut->setProperty("changed", !shortcuts.contains(key));
+    }
+    changed();
 }
 
 QList<KPackage::Package> ScreenLockerKcm::availablePackages(const QString &component) const
@@ -131,6 +152,13 @@ void ScreenLockerKcm::load()
         row->setData(pkg.filePath("previews", "lockscreen.png"), ScreenhotRole);
         m_model->appendRow(row);
     }
+
+    if (QAction *a = m_actionCollection->action(s_lockActionName)) {
+        auto shortcuts = KGlobalAccel::self()->shortcut(a);
+        if (!shortcuts.isEmpty()) {
+            m_ui->lockscreenShortcut->setKeySequence(shortcuts.first());
+        }
+    }
 }
 
 QStandardItemModel *ScreenLockerKcm::lockerModel()
@@ -170,11 +198,22 @@ void ScreenLockerKcm::test(const QString &plugin)
 
 void ScreenLockerKcm::save()
 {
+    if (!shouldSaveShortcut()) {
+        QMetaObject::invokeMethod(this, "changed", Qt::QueuedConnection);
+        return;
+    }
     KCModule::save();
 
     KScreenSaverSettings::setTheme(m_selectedPlugin);
 
     KScreenSaverSettings::self()->save();
+    if (m_ui->lockscreenShortcut->property("changed").toBool()) {
+        if (QAction *a = m_actionCollection->action(s_lockActionName)) {
+            KGlobalAccel::self()->setShortcut(a, QList<QKeySequence>{m_ui->lockscreenShortcut->keySequence()}, KGlobalAccel::NoAutoloading);
+            m_actionCollection->writeSettings();
+        }
+        m_ui->lockscreenShortcut->setProperty("changed", false);
+    }
     // reconfigure through DBus
     OrgKdeScreensaverInterface interface(QStringLiteral("org.kde.screensaver"),
                                          QStringLiteral("/ScreenSaver"),
@@ -182,6 +221,29 @@ void ScreenLockerKcm::save()
     if (interface.isValid()) {
         interface.configure();
     }
+}
+
+bool ScreenLockerKcm::shouldSaveShortcut()
+{
+    if (m_ui->lockscreenShortcut->property("changed").toBool()) {
+        const QKeySequence &sequence = m_ui->lockscreenShortcut->keySequence();
+        auto conflicting = KGlobalAccel::getGlobalShortcutsByKey(sequence);
+        if (!conflicting.isEmpty()) {
+            // Inform and ask the user about the conflict and reassigning
+            // the keys sequence
+            if (!KGlobalAccel::promptStealShortcutSystemwide(this, conflicting, sequence)) {
+                return false;
+            }
+            KGlobalAccel::stealShortcutSystemwide(sequence);
+        }
+    }
+    return true;
+}
+
+void ScreenLockerKcm::defaults()
+{
+    KCModule::defaults();
+    m_ui->lockscreenShortcut->setKeySequence(Qt::ALT+Qt::CTRL+Qt::Key_L);
 }
 
 K_PLUGIN_FACTORY_WITH_JSON(ScreenLockerKcmFactory,

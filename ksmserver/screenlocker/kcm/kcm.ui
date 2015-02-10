@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>524</width>
-    <height>193</height>
+    <height>207</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -75,21 +75,21 @@
      </property>
     </widget>
    </item>
-   <item row="5" column="0">
+   <item row="6" column="0">
     <widget class="QLabel" name="label_3">
      <property name="text">
       <string/>
      </property>
     </widget>
    </item>
-   <item row="3" column="0">
+   <item row="4" column="0">
     <widget class="QLabel" name="label_4">
      <property name="text">
       <string>Custom Background:</string>
      </property>
     </widget>
    </item>
-   <item row="3" column="1">
+   <item row="4" column="1">
     <widget class="SelectImageButton" name="kcfg_ThemeBackground">
      <property name="text">
       <string>...</string>
@@ -119,9 +119,31 @@
      </property>
     </widget>
    </item>
+   <item row="3" column="0">
+    <widget class="QLabel" name="label_6">
+     <property name="toolTip">
+      <string>The global keyboard shortcut to lock the screen.</string>
+     </property>
+     <property name="text">
+      <string>Lock screen:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="1">
+    <widget class="KKeySequenceWidget" name="lockscreenShortcut">
+     <property name="toolTip">
+      <string>The global keyboard shortcut to lock the screen.</string>
+     </property>
+    </widget>
+   </item>
   </layout>
  </widget>
  <customwidgets>
+  <customwidget>
+   <class>KKeySequenceWidget</class>
+   <extends>QWidget</extends>
+   <header>kkeysequencewidget.h</header>
+  </customwidget>
   <customwidget>
    <class>SelectImageButton</class>
    <extends>QToolButton</extends>

@@ -24,6 +24,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 class QQuickView;
 class QStandardItemModel;
+class KActionCollection;
+class ScreenLockerKcmForm;
 
 class ScreenLockerKcm : public KCModule
 {
@@ -48,14 +50,19 @@ public:
 public Q_SLOTS:
     void load() Q_DECL_OVERRIDE;
     void save() Q_DECL_OVERRIDE;
+    void defaults() Q_DECL_OVERRIDE;
     void test(const QString &plugin);
 
 Q_SIGNALS:
     void selectedPluginChanged();
 
 private:
+    void shortcutChanged(const QKeySequence &key);
+    bool shouldSaveShortcut();
     QStandardItemModel *m_model;
     QString m_selectedPlugin;
     QQuickView *m_quickView;
     KPackage::Package m_package;
+    KActionCollection *m_actionCollection;
+    ScreenLockerKcmForm *m_ui;
 };
