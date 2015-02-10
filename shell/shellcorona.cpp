@@ -980,8 +980,12 @@ void ShellCorona::handleContainmentAdded(Plasma::Containment *c)
 {
     connect(c, &Plasma::Containment::showAddWidgetsInterface,
             this, &ShellCorona::toggleWidgetExplorer);
+    // Why queued? this is usually triggered after a context menu closes
+    // due to its sync,modal nature it may eat some mouse event from the scene
+    // waiting a bit to create a new window, the dialog seems to reliably
+    // avoid the eating of one click in the panel after the context menu is gone
     connect(c, &Plasma::Containment::appletAlternativesRequested,
-            this, &ShellCorona::showAlternativesForApplet);
+            this, &ShellCorona::showAlternativesForApplet, Qt::QueuedConnection);
 }
 
 void ShellCorona::toggleWidgetExplorer()
