@@ -478,6 +478,20 @@ void ShellCorona::showAlternativesForApplet(Plasma::Applet *applet)
     qmlObj->completeInitialization();
     connect(qmlObj->rootObject(), SIGNAL(visibleChanged(bool)),
             this, SLOT(alternativesVisibilityChanged(bool)));
+
+    connect(applet, &Plasma::Applet::destroyedChanged, [=] (bool destroyed) {
+        if (!destroyed) {
+            return;
+        }
+        QMutableListIterator<KDeclarative::QmlObject *> it(m_alternativesObjects);
+        while (it.hasNext()) {
+            KDeclarative::QmlObject *obj = it.next();
+            if (obj == qmlObj) {
+                it.remove();
+                obj->deleteLater();
+            }
+        }
+    });
 }
 
 void ShellCorona::alternativesVisibilityChanged(bool visible)
