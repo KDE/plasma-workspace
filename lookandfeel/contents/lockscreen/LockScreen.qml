@@ -162,6 +162,7 @@ Image {
                                 if (visible) {
                                     forceActiveFocus();
                                 }
+                                text = "";
                             }
 
                             Keys.onLeftPressed: {
