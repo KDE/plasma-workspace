@@ -213,6 +213,16 @@ bool canShutDown( ShutdownConfirm confirm,
 #endif
 }
 
+bool isShuttingDown()
+{
+    org::kde::KSMServerInterface ksmserver("org.kde.ksmserver", "/KSMServer", QDBusConnection::sessionBus());
+    QDBusReply<bool> reply = ksmserver.isShuttingDown();
+    if (!reply.isValid()) {
+        return false;
+    }
+    return reply;
+}
+
 static QTime smModificationTime;
 void propagateSessionManager()
 {

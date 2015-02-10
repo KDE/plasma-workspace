@@ -131,6 +131,11 @@ namespace KWorkSpace
                                ShutdownMode    sdmode  = ShutdownModeDefault );
 
   /**
+   * Used to check whether a shutdown is currently in progress
+   */
+  KWORKSPACE_EXPORT bool isShuttingDown();
+
+  /**
    * Propagates the network address of the session manager in the
    * SESSION_MANAGER environment variable so that child processes can
    * pick it up.

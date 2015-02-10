@@ -9,6 +9,9 @@
     <method name="canShutdown">
       <arg type="b" direction="out"/>
     </method>
+    <method name="isShuttingDown">
+      <arg type="b" direction="out"/>
+    </method>
     <method name="sessionList">
       <arg type="as" direction="out"/>
     </method>

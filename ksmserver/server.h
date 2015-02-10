@@ -197,6 +197,7 @@ private:
  public Q_SLOTS: //public dcop interface
     void logout( int, int, int );
     bool canShutdown();
+    bool isShuttingDown() const;
     QString currentSession();
     void saveCurrentSession();
     void saveCurrentSessionAs( const QString & );
