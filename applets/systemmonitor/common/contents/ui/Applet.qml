@@ -23,6 +23,7 @@ import QtQuick.Layouts 1.1
 import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
+import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.kquickcontrolsaddons 2.0 as KQuickAddons
 
 Item {
@@ -131,6 +132,10 @@ Item {
         anchors.fill: parent
         anchors.margins: 0
         spacing: 0
+        PlasmaExtras.Heading {
+            level: 2
+            text: plasmoid.title
+        }
         Repeater {
             model: sourcesModel
 
