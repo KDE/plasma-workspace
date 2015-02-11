@@ -29,7 +29,6 @@
 #include <klocalizedstring.h>
 #include <KNewStuff3/KNS3/DownloadDialog>
 #include <KWindowSystem>
-#include <KServiceTypeTrader>
 
 #include <Plasma/Applet>
 #include <Plasma/Corona>
@@ -172,20 +171,6 @@ QList <QObject *>  WidgetExplorer::widgetsMenuActions()
     QObject::connect(action, SIGNAL(triggered(bool)), mapper, SLOT(map()));
     mapper->setMapping(action, QString());
     actionList << action;
-
-    KService::List offers = KServiceTypeTrader::self()->query("Plasma/PackageStructure");
-    foreach (const KService::Ptr &service, offers) {
-        //qDebug() << service->property("X-Plasma-ProvidesWidgetBrowser");
-        if (service->property("X-Plasma-ProvidesWidgetBrowser").toBool()) {
-            WidgetAction *action = new WidgetAction(QIcon::fromTheme("applications-internet"),
-                                          i18nc("%1 is a type of widgets, as defined by "
-                                                "e.g. some plasma-packagestructure-*.desktop files",
-                                                "Download New %1", service->name()), this);
-            QObject::connect(action, SIGNAL(triggered(bool)), mapper, SLOT(map()));
-            mapper->setMapping(action, service->property("X-KDE-PluginInfo-Name").toString());
-            actionList << action;
-        }
-    }
 
     action = new WidgetAction(this);
     action->setSeparator(true);
