@@ -120,7 +120,8 @@ PlasmaQuick::ConfigModel *ContainmentConfigView::wallpaperConfigModel()
     if (!m_wallpaperConfigModel) {
         m_wallpaperConfigModel = new PlasmaQuick::ConfigModel(this);
         QStringList dirs(QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, PLASMA_RELATIVE_DATA_INSTALL_DIR "/wallpapers", QStandardPaths::LocateDirectory));
-        KPackage::Package pkg = KPackage::PackageLoader::self()->loadPackage("Plasma/Generic");
+        KPackage::Package pkg = KPackage::PackageLoader::self()->loadPackage("KPackage/Generic");
+        pkg.addFileDefinition("mainscript", "ui/main.qml", i18n("Main Script File"));
         foreach (const QString &dirPath, dirs) {
             QDir dir(dirPath);
             pkg.setDefaultPackageRoot(dirPath);
