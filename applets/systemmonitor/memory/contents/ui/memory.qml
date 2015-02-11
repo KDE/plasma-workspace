@@ -37,7 +37,11 @@ Applet {
     }
 
     delegate: SinglePlotter {
+        autoRange: false
+        rangeMin: 0
+        rangeMax: 0
         function formatLabel(data) {
+            rangeMax = data.max;
             return KCoreAddons.Format.formatByteSize(data.value * 1024)
         }
     }
