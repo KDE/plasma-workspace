@@ -119,10 +119,10 @@ void WidgetExplorerPrivate::initFilters()
     QSet<QString> existingCategories = itemModel.categories();
     //foreach (const QString &category, Plasma::Applet::listCategories(application)) {
     QStringList cats;
-    QList<KPluginMetaData> list = KPackage::PackageLoader::self()->listPackages("Plasma/Applet", "plasma/plasmoids");
+    const QList<KPluginMetaData> list = KPackage::PackageLoader::self()->listPackages("Plasma/Applet", "plasma/plasmoids");
 
     for (auto data : list) {
-        KPluginInfo info(data);
+        const KPluginInfo info(data);
         if (info.property("NoDisplay").toBool() || info.category() == i18n("Containments") ||
             info.category().isEmpty()) {
             // we don't want to show the hidden category
