@@ -22,12 +22,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #include <QGuiApplication>
 
-#include <Plasma/PackageStructure>
+#include <KPackage/PackageStructure>
 #include <QQuickView>
-
-namespace Plasma {
-    class Package;
-};
 
 namespace KWayland {
 namespace Client {
@@ -83,7 +79,7 @@ private:
     QList<QQuickView*> m_views;
     QTimer *m_resetRequestIgnoreTimer;
     QTimer *m_delayedLockTimer;
-    Plasma::Package m_package;
+    KPackage::Package m_package;
     bool m_testing;
     bool m_ignoreRequests;
     bool m_immediateLock;

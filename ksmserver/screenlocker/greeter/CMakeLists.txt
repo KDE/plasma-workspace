@@ -29,8 +29,7 @@ add_executable(kscreenlocker_greet ${kscreenlocker_greet_SRCS})
 target_link_libraries(kscreenlocker_greet
                         PW::KWorkspace
                         KF5::Solid
-                        KF5::Plasma
-                        KF5::PlasmaQuick
+                        KF5::Package
                         KF5::Service
                         KF5::Crash
                         KF5::I18n

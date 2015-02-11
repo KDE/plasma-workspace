@@ -20,13 +20,13 @@
 #ifndef SHARE_PACKAGE_H
 #define SHARE_PACKAGE_H
 
-#include <plasma/packagestructure.h>
+#include <kpackage/packagestructure.h>
 
-class SharePackage : public Plasma::PackageStructure
+class SharePackage : public KPackage::PackageStructure
 {
 public:
     SharePackage(QObject *parent = 0, QVariantList args = QVariantList());
-    void initPackage(Plasma::Package *package);
+    void initPackage(KPackage::Package *package);
 };
 
 #endif

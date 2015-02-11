@@ -28,9 +28,10 @@
 #include <QStandardPaths>
 #include <QSurfaceFormat>
 #include <KSharedConfig>
+#include <KConfigGroup>
 
-#include <Plasma/Package>
-#include <Plasma/PluginLoader>
+#include <KPackage/Package>
+#include <KPackage/PackageLoader>
 
 SplashWindow::SplashWindow(bool testing, bool window)
     : QQuickView(),
@@ -90,7 +91,7 @@ void SplashWindow::setGeometry(const QRect& rect)
 
     if (oldGeometryEmpty) {
 
-        Plasma::Package package = Plasma::PluginLoader::self()->loadPackage("Plasma/LookAndFeel");
+        KPackage::Package package = KPackage::PackageLoader::self()->loadPackage("Plasma/LookAndFeel");
         KConfigGroup cg(KSharedConfig::openConfig("kdeglobals"), "KDE");
         const QString packageName = cg.readEntry("LookAndFeelPackage", QString());
         if (!packageName.isEmpty()) {

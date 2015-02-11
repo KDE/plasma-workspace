@@ -32,9 +32,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include <KWindowSystem>
 #include <Solid/PowerManagement>
 //Plasma
-#include <Plasma/Package>
-#include <Plasma/PackageStructure>
-#include <Plasma/PluginLoader>
+#include <KPackage/Package>
+#include <KPackage/PackageStructure>
+#include <KPackage/PackageLoader>
 // KWayland
 #include <KWayland/Client/connection_thread.h>
 #include <KWayland/Client/event_queue.h>
@@ -119,7 +119,7 @@ void UnlockApp::initialize()
     KCrash::setDrKonqiEnabled(false);
 
     KScreenSaverSettings::self()->load();
-    Plasma::Package package = Plasma::PluginLoader::self()->loadPackage("Plasma/LookAndFeel");
+    KPackage::Package package = KPackage::PackageLoader::self()->loadPackage("Plasma/LookAndFeel");
     KConfigGroup cg(KSharedConfig::openConfig("kdeglobals"), "KDE");
     const QString packageName = cg.readEntry("LookAndFeelPackage", QString());
     if (!packageName.isEmpty()) {

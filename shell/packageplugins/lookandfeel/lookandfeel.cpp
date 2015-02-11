@@ -21,11 +21,11 @@
 #include "lookandfeel.h"
 
 #include <KLocalizedString>
-#include <Plasma/PluginLoader>
+#include <KPackage/PackageLoader>
 
 #define DEFAULT_LOOKANDFEEL "org.kde.breeze.desktop"
 
-void LookAndFeelPackage::initPackage(Plasma::Package *package)
+void LookAndFeelPackage::initPackage(KPackage::Package *package)
 {
     // http://community.kde.org/Plasma/lookAndFeelPackage#
     package->setDefaultPackageRoot("plasma/look-and-feel/");
@@ -81,23 +81,22 @@ void LookAndFeelPackage::initPackage(Plasma::Package *package)
     package->setPath(DEFAULT_LOOKANDFEEL);
 }
 
-void LookAndFeelPackage::pathChanged(Plasma::Package *package)
+void LookAndFeelPackage::pathChanged(KPackage::Package *package)
 {
     if (!package->metadata().isValid()) {
         return;
     }
 
-    const QString pluginName = package->metadata().pluginName();
+    const QString pluginName = package->metadata().pluginId();
 
     if (!pluginName.isEmpty() && pluginName != DEFAULT_LOOKANDFEEL) {
-        Plasma::Package pkg = Plasma::PluginLoader::self()->loadPackage("Plasma/LookAndFeel");
-        pkg.setPath(DEFAULT_LOOKANDFEEL);
+        KPackage::Package pkg = KPackage::PackageLoader::self()->loadPackage("Plasma/LookAndFeel", DEFAULT_LOOKANDFEEL);
         package->setFallbackPackage(pkg);
     } else if (package->fallbackPackage().isValid() && pluginName == DEFAULT_LOOKANDFEEL) {
-        package->setFallbackPackage(Plasma::Package());
+        package->setFallbackPackage(KPackage::Package());
     }
 }
 
-K_EXPORT_PLASMA_PACKAGE_WITH_JSON(LookAndFeelPackage, "plasma-packagestructure-lookandfeel.json")
+K_EXPORT_KPACKAGE_PACKAGE_WITH_JSON(LookAndFeelPackage, "plasma-packagestructure-lookandfeel.json")
 
 #include "lookandfeel.moc"

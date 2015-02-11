@@ -19,7 +19,7 @@
 
 #include "shellpackage.h"
 #include <KLocalizedString>
-#include <Plasma/PluginLoader>
+#include <KPackage/PackageLoader>
 
 #include <QDebug>
 #include <QDir>
@@ -31,7 +31,7 @@ ShellPackage::ShellPackage(QObject *, const QVariantList &)
 {
 }
 
-void ShellPackage::initPackage(Plasma::Package *package)
+void ShellPackage::initPackage(KPackage::Package *package)
 {
     package->setDefaultPackageRoot("plasma/shells/");
 
@@ -70,24 +70,25 @@ void ShellPackage::initPackage(Plasma::Package *package)
                                i18n("A UI for writing, loading and running desktop scripts in the current live session"));
 }
 
-void ShellPackage::pathChanged(Plasma::Package *package)
+void ShellPackage::pathChanged(KPackage::Package *package)
 {
     if (!package->metadata().isValid()) {
         return;
     }
 
-    const QString pluginName = package->metadata().pluginName();
+    const QString pluginName = package->metadata().pluginId();
 
     if (!pluginName.isEmpty() && pluginName != DEFAULT_SHELL) {
-        Plasma::Package pkg = Plasma::PluginLoader::self()->loadPackage("Plasma/Shell");
-        pkg.setPath(DEFAULT_SHELL);
+        KPackage::Package pkg = KPackage::PackageLoader::self()->loadPackage("Plasma/Shell", DEFAULT_SHELL);
         package->setFallbackPackage(pkg);
     } else if (package->fallbackPackage().isValid() && pluginName == DEFAULT_SHELL) {
-        package->setFallbackPackage(Plasma::Package());
+        package->setFallbackPackage(KPackage::Package());
     }
 }
 
-K_EXPORT_PLASMA_PACKAGE_WITH_JSON(ShellPackage, "plasma-packagestructure-plasma-shell.json")
+
+K_EXPORT_KPACKAGE_PACKAGE_WITH_JSON(ShellPackage, "plasma-packagestructure-plasma-shell.json")
+
 
 #include "shellpackage.moc"
 

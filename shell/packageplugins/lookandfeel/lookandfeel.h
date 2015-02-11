@@ -22,14 +22,14 @@
 #ifndef LOOKANDFEEL_H
 #define LOOKANDFEEL_H
 
-#include <Plasma/PackageStructure>
+#include <KPackage/PackageStructure>
 
-class LookAndFeelPackage : public Plasma::PackageStructure
+class LookAndFeelPackage : public KPackage::PackageStructure
 {
 public:
     LookAndFeelPackage(QObject*, const QVariantList &) {}
-    void initPackage(Plasma::Package *package);
-    void pathChanged(Plasma::Package *package);
+    void initPackage(KPackage::Package *package);
+    void pathChanged(KPackage::Package *package);
 };
 
 #endif

@@ -32,7 +32,7 @@ Name[x-test]=xxPlasma Shellxx
 Name[zh_CN]=Plasma 外壳
 Name[zh_TW]=Plasma Shell
 Type=Service
-X-KDE-ServiceTypes=Plasma/PackageStructure
+X-KDE-ServiceTypes=KPackage/PackageStructure
 X-KDE-Library=plasma_packagestructure_plasmashell
 
 X-KDE-PluginInfo-Author=Marco Martin

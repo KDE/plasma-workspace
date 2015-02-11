@@ -27,8 +27,10 @@
 
 #include <kactivities/consumer.h>
 #include <KActionCollection>
-#include <Plasma/Package>
 #include <Plasma/PluginLoader>
+
+#include <KPackage/Package>
+#include <KPackage/PackageLoader>
 
 #include "scripting/scriptengine.h"
 
@@ -41,10 +43,10 @@ StandaloneAppCorona::StandaloneAppCorona(const QString &coronaPlugin, QObject *p
     qmlRegisterUncreatableType<DesktopView>("org.kde.plasma.shell", 2, 0, "Desktop", "It is not possible to create objects of type Desktop");
     qmlRegisterUncreatableType<PanelView>("org.kde.plasma.shell", 2, 0, "Panel", "It is not possible to create objects of type Panel");
 
-    Plasma::Package package = Plasma::PluginLoader::self()->loadPackage("Plasma/Shell");
+    KPackage::Package package = KPackage::PackageLoader::self()->loadPackage("Plasma/Shell");
     package.setPath(m_coronaPlugin);
     package.setAllowExternalPaths(true);
-    setPackage(package);
+    setKPackage(package);
 
     Plasma::Theme theme;
     theme.setUseGlobalSettings(false);

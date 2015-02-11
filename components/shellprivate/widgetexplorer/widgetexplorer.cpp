@@ -27,16 +27,17 @@
 #include <QQmlProperty>
 
 #include <klocalizedstring.h>
-#include <kservicetypetrader.h>
 #include <KNewStuff3/KNS3/DownloadDialog>
 #include <KWindowSystem>
 
 #include <Plasma/Applet>
 #include <Plasma/Corona>
 #include <Plasma/Containment>
-#include <Plasma/Package>
-#include <Plasma/PackageStructure>
 #include <qstandardpaths.h>
+
+#include <KPackage/Package>
+#include <KPackage/PackageStructure>
+#include <KPackage/PackageLoader>
 
 #include "kcategorizeditemsviewmodels_p.h"
 #include "plasmaappletitemmodel_p.h"
@@ -92,7 +93,7 @@ public:
     //extra hash so we can look up the names of deleted applets
     QHash<Plasma::Applet *,QString> appletNames;
     QWeakPointer<Plasma::OpenWidgetAssistant> openAssistant;
-    Plasma::Package *package;
+    KPackage::Package *package;
 
     PlasmaAppletItemModel itemModel;
     KCategorizedItemsViewModels::DefaultFilterModel filterModel;
@@ -117,10 +118,10 @@ void WidgetExplorerPrivate::initFilters()
     QSet<QString> existingCategories = itemModel.categories();
     //foreach (const QString &category, Plasma::Applet::listCategories(application)) {
     QStringList cats;
-    KService::List services = KServiceTypeTrader::self()->query("Plasma/Applet", QString());
+    const QList<KPluginMetaData> list = KPackage::PackageLoader::self()->listPackages("Plasma/Applet", "plasma/plasmoids");
 
-    foreach (const QExplicitlySharedDataPointer<KService> service, services) {
-        KPluginInfo info(service);
+    for (auto data : list) {
+        const KPluginInfo info(data);
         if (info.property("NoDisplay").toBool() || info.category() == i18n("Containments") ||
             info.category().isEmpty()) {
             // we don't want to show the hidden category
@@ -170,20 +171,6 @@ QList <QObject *>  WidgetExplorer::widgetsMenuActions()
     QObject::connect(action, SIGNAL(triggered(bool)), mapper, SLOT(map()));
     mapper->setMapping(action, QString());
     actionList << action;
-
-    KService::List offers = KServiceTypeTrader::self()->query("Plasma/PackageStructure");
-    foreach (const KService::Ptr &service, offers) {
-        //qDebug() << service->property("X-Plasma-ProvidesWidgetBrowser");
-        if (service->property("X-Plasma-ProvidesWidgetBrowser").toBool()) {
-            WidgetAction *action = new WidgetAction(QIcon::fromTheme("applications-internet"),
-                                          i18nc("%1 is a type of widgets, as defined by "
-                                                "e.g. some plasma-packagestructure-*.desktop files",
-                                                "Download New %1", service->name()), this);
-            QObject::connect(action, SIGNAL(triggered(bool)), mapper, SLOT(map()));
-            mapper->setMapping(action, service->property("X-KDE-PluginInfo-Name").toString());
-            actionList << action;
-        }
-    }
 
     action = new WidgetAction(this);
     action->setSeparator(true);
@@ -443,7 +430,7 @@ void WidgetExplorer::uninstall(const QString &pluginName)
 {
     const QString packageRoot = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + PLASMA_RELATIVE_DATA_INSTALL_DIR "/plasmoids/";
 
-    Plasma::Package pkg;
+    KPackage::Package pkg;
     pkg.setPath(packageRoot);
     pkg.uninstall(pluginName, packageRoot);
 

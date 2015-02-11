@@ -44,7 +44,9 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #include <QScreen>
 #include <QStandardPaths>
 
-#include <Plasma/PluginLoader>
+#include <KPackage/Package>
+#include <KPackage/PackageLoader>
+
 #include <KIconLoader>
 #include <KLocalizedString>
 #include <KUser>
@@ -52,6 +54,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #include <KWindowSystem>
 #include <KDeclarative/KDeclarative>
 #include <KSharedConfig>
+#include <KConfigGroup>
 #include <KJob>
 
 #include <stdio.h>
@@ -146,7 +149,7 @@ KSMShutdownDlg::KSMShutdownDlg( QWindow* parent,
 
     QString fileName;
     if(theme.isEmpty()) {
-        Plasma::Package package = Plasma::PluginLoader::self()->loadPackage("Plasma/LookAndFeel");
+        KPackage::Package package = KPackage::PackageLoader::self()->loadPackage("Plasma/LookAndFeel");
         KConfigGroup cg(KSharedConfig::openConfig("kdeglobals"), "KDE");
         const QString packageName = cg.readEntry("LookAndFeelPackage", QString());
         if (!packageName.isEmpty()) {

@@ -71,7 +71,7 @@ Q_SIGNALS:
     void windowTypeChanged();
 
 private:
-    void coronaPackageChanged(const Plasma::Package &package);
+    void coronaPackageChanged(const KPackage::Package &package);
     void ensureWindowType();
 
     QPointer<PlasmaQuick::ConfigView> m_configView;

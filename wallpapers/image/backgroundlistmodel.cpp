@@ -34,10 +34,11 @@
 #include <KIO/PreviewJob>
 #include <KLocalizedString>
 #include <kimagecache.h>
+#include <kaboutdata.h>
 
-#include <Plasma/Package>
-#include <Plasma/PackageStructure>
-#include <Plasma/PluginLoader>
+#include <KPackage/Package>
+#include <KPackage/PackageStructure>
+#include <KPackage/PackageLoader>
 
 #include "image.h"
 
@@ -142,7 +143,7 @@ void BackgroundListModel::processPaths(const QStringList &paths)
         return;
     }
 
-    QList<Plasma::Package> newPackages;
+    QList<KPackage::Package> newPackages;
     Q_FOREACH (QString file, paths) {
         // check if the path is a symlink and if it is,
         // work with the target rather than the symlink
@@ -175,7 +176,7 @@ void BackgroundListModel::processPaths(const QStringList &paths)
         }
 
         if (!contains(file) && QFile::exists(file)) {
-            Plasma::Package package = Plasma::PluginLoader::self()->loadPackage("Wallpaper/Images");
+            KPackage::Package package = KPackage::PackageLoader::self()->loadPackage("Wallpaper/Images");
             package.setPath(file);
             if (package.isValid()) {
                 m_wallpaper->findPreferedImageInPackage(package);
@@ -185,7 +186,7 @@ void BackgroundListModel::processPaths(const QStringList &paths)
     }
 
     // add new files to dirwatch
-    Q_FOREACH (Plasma::Package b, newPackages) {
+    Q_FOREACH (KPackage::Package b, newPackages) {
         if (!m_dirwatch.contains(b.path())) {
             m_dirwatch.addFile(b.path());
         }
@@ -208,7 +209,7 @@ void BackgroundListModel::addBackground(const QString& path)
             m_dirwatch.addFile(path);
         }
         beginInsertRows(QModelIndex(), 0, 0);
-        Plasma::Package package = Plasma::PluginLoader::self()->loadPackage("Wallpaper/Images");
+        KPackage::Package package = KPackage::PackageLoader::self()->loadPackage("Wallpaper/Images");
 
         m_removableWallpapers.insert(path);
         package.setPath(path);
@@ -260,7 +261,7 @@ int BackgroundListModel::rowCount(const QModelIndex &) const
     return m_packages.size();
 }
 
-QSize BackgroundListModel::bestSize(const Plasma::Package &package) const
+QSize BackgroundListModel::bestSize(const KPackage::Package &package) const
 {
     if (m_sizeCache.contains(package.path())) {
         return m_sizeCache.value(package.path());
@@ -289,7 +290,7 @@ void BackgroundListModel::sizeFound(const QString &path, const QSize &s)
 
     QModelIndex index = indexOf(path);
     if (index.isValid()) {
-        Plasma::Package package = m_packages.at(index.row());
+        KPackage::Package package = m_packages.at(index.row());
         m_sizeCache.insert(package.path(), s);
         emit dataChanged(index, index);
     }
@@ -305,7 +306,7 @@ QVariant BackgroundListModel::data(const QModelIndex &index, int role) const
         return QVariant();
     }
 
-    Plasma::Package b = package(index.row());
+    KPackage::Package b = package(index.row());
     if (!b.isValid()) {
         return QVariant();
     }
@@ -351,8 +352,8 @@ QVariant BackgroundListModel::data(const QModelIndex &index, int role) const
     break;
 
     case AuthorRole:
-        if (b.metadata().isValid()) {
-            return b.metadata().author();
+        if (b.metadata().isValid() && !b.metadata().authors().isEmpty()) {
+            return b.metadata().authors().first().name();
         } else {
             return i18nc("Unknown Author", "Unknown");
         }
@@ -374,7 +375,7 @@ QVariant BackgroundListModel::data(const QModelIndex &index, int role) const
     break;
 
     case PackageNameRole:
-        return !b.metadata().isValid() || b.metadata().pluginName().isEmpty() ? b.filePath("preferred") : b.metadata().pluginName();
+        return !b.metadata().isValid() || b.metadata().pluginId().isEmpty() ? b.filePath("preferred") : b.metadata().pluginId();
     break;
 
     case RemovableRole: {
@@ -404,7 +405,7 @@ void BackgroundListModel::showPreview(const KFileItem &item, const QPixmap &prev
         return;
     }
 
-    Plasma::Package b = package(index.row());
+    KPackage::Package b = package(index.row());
     if (!b.isValid()) {
         return;
     }
@@ -419,7 +420,7 @@ void BackgroundListModel::previewFailed(const KFileItem &item)
     m_previewJobs.remove(item.url());
 }
 
-Plasma::Package BackgroundListModel::package(int index) const
+KPackage::Package BackgroundListModel::package(int index) const
 {
     return m_packages.at(index);
 }
@@ -460,7 +461,7 @@ void BackgroundFinder::run()
 
     QDir dir;
     dir.setFilter(QDir::AllDirs | QDir::Files | QDir::Hidden | QDir::Readable);
-    Plasma::Package package = Plasma::PluginLoader::self()->loadPackage("Wallpaper/Images");
+    KPackage::Package package = KPackage::PackageLoader::self()->loadPackage("Wallpaper/Images");
 
     int i;
     for (i = 0; i < m_paths.count(); ++i) {

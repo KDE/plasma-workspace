@@ -30,7 +30,7 @@
 #include <kwindowsystem.h>
 #include <klocalizedstring.h>
 
-#include <Plasma/Package>
+#include <KPackage/Package>
 
 DesktopView::DesktopView(Plasma::Corona *corona, QScreen *targetScreen)
     : PlasmaQuick::View(corona, 0),
@@ -41,10 +41,10 @@ DesktopView::DesktopView(Plasma::Corona *corona, QScreen *targetScreen)
         setScreen(targetScreen);
     }
 
-    setTitle(corona->package().metadata().name());
-    setIcon(QIcon::fromTheme(corona->package().metadata().icon()));
+    setTitle(corona->kPackage().metadata().name());
+    setIcon(QIcon::fromTheme(corona->kPackage().metadata().iconName()));
     engine()->rootContext()->setContextProperty("desktop", this);
-    setSource(QUrl::fromLocalFile(corona->package().filePath("views", "Desktop.qml")));
+    setSource(QUrl::fromLocalFile(corona->kPackage().filePath("views", "Desktop.qml")));
 
     ensureWindowType();
     adaptToScreen();
@@ -52,7 +52,7 @@ DesktopView::DesktopView(Plasma::Corona *corona, QScreen *targetScreen)
     //For some reason, if I connect the method directly it doesn't get called, I think it's for the lack of argument
     connect(this, &QWindow::screenChanged, this, [=](QScreen*) { adaptToScreen(); ensureWindowType(); });
 
-    QObject::connect(corona, &Plasma::Corona::packageChanged,
+    QObject::connect(corona, &Plasma::Corona::kPackageChanged,
                      this, &DesktopView::coronaPackageChanged);
 
     connect(this, &DesktopView::sceneGraphInitialized, this,
@@ -244,7 +244,7 @@ void DesktopView::showConfigurationInterface(Plasma::Applet *applet)
     m_configView.data()->show();
 }
 
-void DesktopView::coronaPackageChanged(const Plasma::Package &package)
+void DesktopView::coronaPackageChanged(const KPackage::Package &package)
 {
     setContainment(0);
     setSource(QUrl::fromLocalFile(package.filePath("views", "Desktop.qml")));

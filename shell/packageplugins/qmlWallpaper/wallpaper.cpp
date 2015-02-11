@@ -24,7 +24,7 @@
 #include <KLocalizedString>
 #include <KDeclarative/KDeclarative>
 
-void QmlWallpaperPackage::initPackage(Plasma::Package *package)
+void QmlWallpaperPackage::initPackage(KPackage::Package *package)
 {
     package->addFileDefinition("mainscript", "ui/main.qml", i18n("Main Script File"));
     package->setRequired("mainscript", true);
@@ -67,6 +67,6 @@ void QmlWallpaperPackage::initPackage(Plasma::Package *package)
     package->addDirectoryDefinition("translations", "locale", i18n("Translations"));
 }
 
-K_EXPORT_PLASMA_PACKAGE_WITH_JSON(QmlWallpaperPackage, "plasma-packagestructure-wallpaper.json")
+K_EXPORT_KPACKAGE_PACKAGE_WITH_JSON(QmlWallpaperPackage, "plasma-packagestructure-wallpaper.json")
 
 #include "wallpaper.moc"

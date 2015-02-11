@@ -22,13 +22,13 @@
 #ifndef SHELLPACKAGES_H
 #define SHELLPACKAGES_H
 
-#include <Plasma/PackageStructure>
+#include <KPackage/PackageStructure>
 
-class LayoutTemplatePackage : public Plasma::PackageStructure
+class LayoutTemplatePackage : public KPackage::PackageStructure
 {
 public:
     LayoutTemplatePackage(QObject*, const QVariantList &) {}
-    void initPackage(Plasma::Package *package);
+    void initPackage(KPackage::Package *package);
 };
 
 #endif

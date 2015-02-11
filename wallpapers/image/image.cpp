@@ -50,6 +50,8 @@
 #include <qstandardpaths.h>
 #include "backgroundlistmodel.h"
 
+#include <KPackage/PackageLoader>
+
 Image::Image(QObject *parent)
     : QObject(parent),
       m_delay(10),
@@ -61,7 +63,7 @@ Image::Image(QObject *parent)
       m_width(0),
       m_height(0)
 {
-    m_wallpaperPackage = Plasma::PluginLoader::self()->loadPackage("Wallpaper/Images");
+    m_wallpaperPackage = KPackage::PackageLoader::self()->loadPackage("Wallpaper/Images");
 
     connect(&m_timer, SIGNAL(timeout()), this, SLOT(nextSlide()));
 
@@ -146,7 +148,7 @@ QSize resSize(const QString &str)
     return QSize();
 }
 
-void Image::findPreferedImageInPackage(Plasma::Package &package)
+void Image::findPreferedImageInPackage(KPackage::Package &package)
 {
     if (!package.isValid() || !package.filePath("preferred").isEmpty()) {
         return;
@@ -222,7 +224,7 @@ void Image::setWidth(int w)
     }
 }
 
-Plasma::Package *Image::package()
+KPackage::Package *Image::package()
 {
     return &m_wallpaperPackage;
 }
@@ -761,7 +763,7 @@ void Image::removeWallpaper(QString name)
 
     //Package plugin name
     if (!name.contains('/')) {
-        Plasma::Package p = Plasma::PluginLoader::self()->loadPackage("Wallpaper/Images");
+        KPackage::Package p = KPackage::PackageLoader::self()->loadPackage("Wallpaper/Images");
         KJob *j = p.uninstall(name, localWallpapers);
         connect(j, &KJob::finished, [=] () {
             m_model->reload(m_usersWallpapers);

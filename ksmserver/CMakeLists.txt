@@ -73,8 +73,7 @@ target_link_libraries(kdeinit_ksmserver
     Qt5::Quick
     KF5::Declarative
     KF5::DBusAddons
-    KF5::Plasma
-    KF5::PlasmaQuick
+    KF5::Package
     KF5::KDELibs4Support # Solid/PowerManagement
 )
 
