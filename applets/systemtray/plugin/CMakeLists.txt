@@ -24,13 +24,10 @@ target_link_libraries(systemtrayplugin
     KF5::Declarative
     KF5::Plasma
     KF5::PlasmaQuick
-    KF5::WindowSystem
-    KF5::Service
     KF5::I18n
     KF5::IconThemes
     KF5::KIOCore
-    KF5::KIOWidgets
-    KF5::XmlGui
+    KF5::XmlGui #for KActionCollection
     )
 
 set(plugin_install_path ${QML_INSTALL_DIR}/org/kde/private/systemtray)
