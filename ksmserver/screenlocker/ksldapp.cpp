@@ -383,22 +383,29 @@ KActionCollection *KSldApp::actionCollection()
 static bool grabKeyboard();
 static bool grabMouse();
 
+class XServerGrabber
+{
+public:
+    XServerGrabber() {
+        xcb_grab_server(QX11Info::connection());
+    }
+    ~XServerGrabber() {
+        xcb_ungrab_server(QX11Info::connection());
+        xcb_flush(QX11Info::connection());
+    }
+};
+
 bool KSldApp::establishGrab()
 {
+    XServerGrabber serverGrabber;
     XSync(QX11Info::display(), False);
     if (!grabKeyboard()) {
-        sleep(1);
-        if (!grabKeyboard()) {
-            return false;
-        }
+        return false;
     }
 
     if (!grabMouse()) {
-        sleep(1);
-        if (!grabMouse()) {
-            XUngrabKeyboard(QX11Info::display(), CurrentTime);
-            return false;
-        }
+        XUngrabKeyboard(QX11Info::display(), CurrentTime);
+        return false;
     }
 
 #ifdef X11_Xinput_FOUND
