@@ -29,7 +29,7 @@ ConfigGeneral {
     id: root
 
     onSourceAdded: {
-        var match = source.match(/^partitions(.+)\/usedspace/);
+        var match = source.match(/^partitions(.+)\/filllevel/);
         if (match) {
             root.addSource(source, match[1]);
         }

@@ -138,7 +138,6 @@ Item {
         }
         Repeater {
             model: sourcesModel
-
             delegate: rootItem.delegate
         }
     }
