@@ -22,8 +22,8 @@ import org.kde.plasma.configuration 2.0
 
 ConfigModel {
     ConfigCategory {
-         name: i18n("Interfaces")
-         icon: "network-workgroup"
-         source: "configGeneral.qml"
+         name: i18n("CPUs")
+         icon: "cpu"
+         source: "cpuConfig.qml"
     }
 }
