@@ -51,36 +51,11 @@ FocusScope {
         })
     }
 
-    PlasmaExtras.ScrollArea {
-        id: batteryScrollArea
-        anchors {
-            top: settingsColumn.bottom
-            bottom: dialog.bottom
-        }
-        width: parent.width
-
-        ListView {
-            id: batteryList
-
-            boundsBehavior: Flickable.StopAtBounds
-            spacing: Math.round(units.gridUnit / 2)
-
-            KeyNavigation.tab: brightnessSlider
-            KeyNavigation.backtab: pmSwitch
-
-            delegate: BatteryItem {
-                battery: model
-            }
-        }
-    }
-
     Column {
         id: settingsColumn
-        anchors.top: dialog.top
-        width: parent.width
-        height: childrenRect.height
-
-        spacing: 0
+        anchors.horizontalCenter: parent.horizontalCenter
+        width: parent.width - units.gridUnit
+        spacing: Math.round(units.gridUnit / 2)
 
         Components.Label {
             // this is just for metrics, TODO use TextMetrics in 5.4 instead
@@ -91,6 +66,8 @@ FocusScope {
 
         BrightnessItem {
             id: brightnessSlider
+            width: parent.width
+
             icon: "video-display-brightness"
             label: i18n("Display Brightness")
             visible: isBrightnessAvailable
@@ -108,6 +85,8 @@ FocusScope {
 
         BrightnessItem {
             id: keyboardBrightnessSlider
+            width: parent.width
+
             icon: "input-keyboard-brightness"
             label: i18n("Keyboard Brightness")
             value: batterymonitor.keyboardBrightness
@@ -123,15 +102,14 @@ FocusScope {
             }
         }
 
-        Components.Label {
+        PlasmaExtras.Heading {
             anchors {
                 left: parent.left
-                leftMargin: units.gridUnit * 1.5 + units.iconSizes.medium
+                leftMargin: -Math.round(units.gridUnit / 2)
                 right: parent.right
-                rightMargin: units.gridUnit
             }
-            height: pmSwitch.height
-            verticalAlignment: Text.AlignVCenter
+            level: 3
+            opacity: 0.6
             visible: !isKeyboardBrightnessAvailable && !isBrightnessAvailable
             text: i18n("No screen or keyboard brightness controls available")
             wrapMode: Text.Wrap
@@ -139,9 +117,35 @@ FocusScope {
 
         PowerManagementItem {
             id: pmSwitch
+            width: parent.width
             onEnabledChanged: powermanagementChanged(enabled)
             KeyNavigation.tab: batteryList
             KeyNavigation.backtab: keyboardBrightnessSlider
+        }
+    }
+
+    PlasmaExtras.ScrollArea {
+        anchors {
+            horizontalCenter: parent.horizontalCenter
+            top: settingsColumn.bottom
+            topMargin: units.gridUnit // not divided by 2 for unified looks
+            bottom: dialog.bottom
+        }
+        width: parent.width - units.gridUnit
+
+        ListView {
+            id: batteryList
+
+            boundsBehavior: Flickable.StopAtBounds
+            spacing: Math.round(units.gridUnit / 2)
+
+            KeyNavigation.tab: brightnessSlider
+            KeyNavigation.backtab: pmSwitch
+
+            delegate: BatteryItem {
+                width: parent.width
+                battery: model
+            }
         }
     }
 

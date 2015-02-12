@@ -1,6 +1,6 @@
 /*
  *   Copyright 2012-2013 Daniel Nicoletti <dantti12@gmail.com>
- *   Copyright 2013, 2014 Kai Uwe Broulik <kde@privat.broulik.de>
+ *   Copyright 2013-2015 Kai Uwe Broulik <kde@privat.broulik.de>
  *
  *   This program is free software; you can redistribute it and/or modify
  *   it under the terms of the GNU Library General Public License as
@@ -30,7 +30,6 @@ import "plasmapackage:/code/logic.js" as Logic
 
 Item {
     id: batteryItem
-    width: parent.width
     height: childrenRect.height
 
     property var battery
@@ -79,11 +78,11 @@ Item {
 
     Column {
         width: parent.width
-        spacing: units.smallSpacing
+        spacing: 0
 
         PlasmaCore.ToolTipArea {
             width: parent.width
-            height: Math.max(batteryIcon.height, batteryNameLabel.height + batteryPercentBar.height)
+            height: infoRow.height
             active: !detailsLoader.active
             z: 2
 
@@ -128,72 +127,62 @@ Item {
                 }
             }
 
-            BatteryIcon {
-                id: batteryIcon
-                width: units.iconSizes.medium
-                height: width
-                anchors {
-                    verticalCenter: parent.verticalCenter
-                    left: parent.left
-                    leftMargin: Math.round(units.gridUnit / 2)
-                }
-                batteryType: model["Type"]
-                percent: model["Percent"]
-                hasBattery: batteryItem.isPresent
-                pluggedIn: model["State"] == "Charging" && model["Is Power Supply"]
-            }
+            RowLayout {
+                id: infoRow
+                width: parent.width
+                spacing: units.gridUnit
 
-            PlasmaComponents.Label {
-                id: batteryNameLabel
-                anchors {
-                    verticalCenter: isPresent ? undefined : batteryIcon.verticalCenter
-                    bottom: isPresent ? batteryIcon.verticalCenter : undefined
-                    left: batteryIcon.right
-                    leftMargin: units.gridUnit
+                BatteryIcon {
+                    id: batteryIcon
+                    Layout.alignment: Qt.AlignTop
+                    width: units.iconSizes.medium
+                    height: width
+                    batteryType: model.Type
+                    percent: model.Percent
+                    hasBattery: batteryItem.isPresent
+                    pluggedIn: model.State === "Charging" && model["Is Power Supply"]
                 }
-                height: implicitHeight
-                elide: Text.ElideRight
-                text: model["Pretty Name"]
-            }
 
-            PlasmaComponents.Label {
-                id: batteryStatusLabel
-                anchors {
-                    top: batteryNameLabel.top
-                    right: batteryPercentBar.right
-                }
-                text: Logic.stringForBatteryState(model)
-                height: implicitHeight
-                visible: model["Is Power Supply"]
-                opacity: 0.5
-            }
+                Column {
+                    Layout.fillWidth: true
+                    Layout.alignment: batteryItem.isPresent ? Qt.AlignTop : Qt.AlignVCenter
 
-            PlasmaComponents.ProgressBar {
-                id: batteryPercentBar
-                anchors {
-                    top: batteryIcon.verticalCenter
-                    left: batteryNameLabel.left
-                    right: batteryPercent.left
-                    rightMargin: Math.round(units.gridUnit / 2)
-                }
-                minimumValue: 0
-                maximumValue: 100
-                visible: isPresent
-                value: parseInt(model["Percent"])
-            }
+                    RowLayout {
+                        width: parent.width
+                        spacing: units.smallSpacing
 
-            PlasmaComponents.Label {
-                id: batteryPercent
-                anchors {
-                    verticalCenter: batteryPercentBar.verticalCenter
-                    right: parent.right
-                    rightMargin: Math.round(units.gridUnit / 2)
+                        PlasmaComponents.Label {
+                            id: batteryNameLabel
+                            Layout.fillWidth: true
+                            height: implicitHeight
+                            elide: Text.ElideRight
+                            text: model["Pretty Name"]
+                        }
+
+                        PlasmaComponents.Label {
+                            text: Logic.stringForBatteryState(model)
+                            height: implicitHeight
+                            visible: model["Is Power Supply"]
+                            opacity: 0.6
+                        }
+
+                        PlasmaComponents.Label {
+                            id: batteryPercent
+                            height: paintedHeight
+                            horizontalAlignment: Text.AlignRight
+                            visible: batteryItem.isPresent
+                            text: i18nc("Placeholder is battery percentage", "%1%", model.Percent)
+                        }
+                    }
+
+                    PlasmaComponents.ProgressBar {
+                        width: parent.width
+                        minimumValue: 0
+                        maximumValue: 100
+                        visible: batteryItem.isPresent
+                        value: Number(model.Percent)
+                    }
                 }
-                width: percentageMeasurementLabel.width
-                height: paintedHeight
-                horizontalAlignment: Text.AlignRight
-                visible: isPresent
-                text: i18nc("Placeholder is battery percentage", "%1%", model["Percent"])
             }
         }
 
@@ -202,9 +191,8 @@ Item {
             property bool inListView: true
             anchors {
                 left: parent.left
-                leftMargin: Math.round(units.gridUnit / 2) + batteryIcon.width + units.gridUnit
+                leftMargin: batteryIcon.width + units.gridUnit
                 right: parent.right
-                rightMargin: Math.round(units.gridUnit / 2) + batteryPercent.width + Math.round(units.gridUnit / 2)
             }
             visible: !!item
             opacity: 0.5

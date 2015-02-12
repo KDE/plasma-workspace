@@ -24,70 +24,59 @@ import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as Components
 import org.kde.kquickcontrolsaddons 2.0
 
-FocusScope {
-    id: brightnessItem
-    width: parent.width
-    height: Math.max(pmCheckBox.height, pmLabel.height) + dialog.anchors.topMargin + dialog.anchors.bottomMargin + units.gridUnit / 2 + pmHintColumn.height
-
+Column {
     property alias enabled: pmCheckBox.checked
 
-    Components.CheckBox {
-        id: pmCheckBox
-        anchors {
-            left: parent.left
-            leftMargin: Math.round(units.gridUnit / 2) + (units.iconSizes.medium - pmCheckBox.width) / 2
-        }
-        focus: true
-        checked: true
-        // we don't want to mess with the checked state but still reflect that changing it might not yield the desired result
-        opacity: inhibitions.length > 0 ? 0.5 : 1
-        Behavior on opacity {
-            NumberAnimation { duration: units.longDuration }
-        }
-    }
+    spacing: 0
 
-    Components.Label {
-        id: pmLabel
-        anchors {
-            verticalCenter: pmCheckBox.verticalCenter
-            left: pmCheckBox.right
-            leftMargin: units.gridUnit
-        }
-        height: paintedHeight
-        text: i18n("Enable Power Management")
-    }
+    RowLayout {
+        width: parent.width
+        spacing: units.gridUnit
 
-    MouseArea {
-        anchors {
-            left: pmCheckBox.left
-            top: pmCheckBox.top
-            bottom: pmCheckBox.bottom
-            right: pmLabel.right
-        }
-        onClicked: {
-            pmCheckBox.forceActiveFocus()
-            pmCheckBox.checked = !pmCheckBox.checked
-        }
-    }
+        Item {
+            width: units.iconSizes.medium
+            height: width
 
-    Components.ToolButton {
-        anchors {
-            right: parent.right
-            rightMargin: Math.round(units.gridUnit / 2)
-            verticalCenter: pmCheckBox.verticalCenter
+            Components.CheckBox {
+                id: pmCheckBox
+                anchors.centerIn: parent
+                checked: true
+                // we don't want to mess with the checked state but still reflect that changing it might not yield the desired result
+                opacity: inhibitions.length > 0 ? 0.5 : 1
+                Behavior on opacity {
+                    NumberAnimation { duration: units.longDuration }
+                }
+            }
         }
-        iconSource: "configure"
-        onClicked: batterymonitor.action_powerdevilkcm()
-        tooltip: i18n("Configure Power Saving...")
+
+        MouseArea {
+            Layout.fillWidth: true
+            Layout.fillHeight: true
+
+            onClicked: {
+                pmCheckBox.forceActiveFocus()
+                pmCheckBox.checked = !pmCheckBox.checked
+            }
+
+            Components.Label {
+                anchors.fill: parent
+                verticalAlignment: Text.AlignVCenter
+                text: i18n("Enable Power Management")
+            }
+        }
+
+        Components.ToolButton {
+            iconSource: "configure"
+            onClicked: batterymonitor.action_powerdevilkcm()
+            tooltip: i18n("Configure Power Saving...")
+        }
     }
 
     Column {
-        id: pmHintColumn
         anchors {
-            left: pmLabel.left
+            left: parent.left
+            leftMargin: units.iconSizes.medium + units.gridUnit
             right: parent.right
-            rightMargin: units.gridUnit + percentageMeasurementLabel.width
-            top: pmCheckBox.bottom
         }
         spacing: units.smallSpacing
 
