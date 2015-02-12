@@ -22,7 +22,7 @@
 
 #include "share_package.h"
 #include "config-workspace.h"
-#include "plasma_version.h"
+#include <plasma_version.h>
 
 SharePackage::SharePackage(QObject *, QVariantList)
 {
