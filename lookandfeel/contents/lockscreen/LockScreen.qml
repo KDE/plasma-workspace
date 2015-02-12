@@ -54,11 +54,11 @@ Image {
                 root.clearPassword();
             }
         }
-        onMessage: function(text) {
-            root.notification = text;
+        onMessage: {
+            root.notification = msg;
         }
-        onError: function(text) {
-            root.notification = text;
+        onError: {
+            root.notification = err;
         }
     }
     Sessions {

@@ -42,8 +42,8 @@ Q_SIGNALS:
     void failed();
     void succeeded();
     void graceLockedChanged();
-    void message(const QString &);
-    void error(const QString &);
+    void message(const QString & msg); // don't remove the "msg" param, used in QML!!!
+    void error(const QString & err); // don't remove the "err" param, used in QML!!!
 
 private:
     QTimer *m_graceLockTimer;
