@@ -35,7 +35,7 @@
 #include <KMessageBox>
 #include <KToolInvocation>
 #include <KLocalizedString>
-#include <KWallet/kwallet.h>
+#include <kwallet.h>
 #include <KCapacityBar>
 
 /* Unhandled error dialog includes */

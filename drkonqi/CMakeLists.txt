@@ -88,19 +88,6 @@ add_executable(drkonqi ${drkonqi_SRCS})
 
 target_compile_definitions(drkonqi PRIVATE -DPROJECT_VERSION="${PROJECT_VERSION}")
 
-## TODO Remove internal copy when kxmlrpcclient is released
-set (KF5XmlRpcClient_FOUND FALSE)
-if(NOT KF5XmlRpcClient_FOUND)
-    add_subdirectory ( internalkxmlrpcclient )
-    include_directories ( ${CMAKE_CURRENT_BINARY_DIR}/internalkxmlrpcclient/src )
-    target_link_libraries ( drkonqi KF5XmlRpcClientPrivate
-    KF5::WebKit
-    KF5::WidgetsAddons
-    KF5::Completion
-    KF5::Wallet
-)
-endif()
-
 target_link_libraries(drkonqi
     KF5::I18n
     KF5::CoreAddons
@@ -109,7 +96,13 @@ target_link_libraries(drkonqi
     KF5::JobWidgets
     KF5::KIOCore
     KF5::Crash
+    KF5::Completion
     Qt5::DBus
+
+    KF5::XmlRpcClient
+    KF5::WebKit
+    KF5::WidgetsAddons
+    KF5::Wallet
     drkonqi_backtrace_parser
 )
 if (HAVE_X11)
