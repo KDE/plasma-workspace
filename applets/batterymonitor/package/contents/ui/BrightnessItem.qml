@@ -62,7 +62,9 @@ FocusScope {
             right: brightnessPercent.left
             rightMargin: Math.round(units.gridUnit / 2)
         }
-        minimumValue: 0
+        // Don't allow the slider to turn off the screen
+        // Please see https://git.reviewboard.kde.org/r/122505/ for more information
+        minimumValue: maximumValue > 100 ? 1 : 0
         stepSize: 1
         focus: true
     }

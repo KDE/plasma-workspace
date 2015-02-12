@@ -117,8 +117,12 @@ Item {
                 increment--;
             }
             if (increment != 0) {
-                var steps = Math.max(1, Math.round(batterymonitor.maximumScreenBrightness / 20))
-                batterymonitor.screenBrightness = Math.max(0, Math.min(batterymonitor.maximumScreenBrightness, batterymonitor.screenBrightness + increment * steps));
+                var maximumBrightness = batterymonitor.maximumScreenBrightness
+                // Don't allow the UI to turn off the screen
+                // Please see https://git.reviewboard.kde.org/r/122505/ for more information
+                var minimumBrightness = (maximumBrightness > 100 ? 1 : 0)
+                var steps = Math.max(1, Math.round(maximumBrightness / 20))
+                batterymonitor.screenBrightness = Math.max(minimumBrightness, Math.min(maximumBrightness, batterymonitor.screenBrightness + increment * steps));
             }
         }
     }
