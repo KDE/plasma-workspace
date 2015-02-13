@@ -132,6 +132,7 @@ private:
     int m_inhibitCounter;
     LogindIntegration *m_logind;
     GlobalAccel *m_globalAccel = nullptr;
+    bool m_hasXInput2 = false;
 
     // for auto tests
     friend KSldTest;

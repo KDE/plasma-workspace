@@ -79,6 +79,8 @@ if(X11_FOUND)
     message(FATAL_ERROR "\nThe X11 Session Management (SM) development package could not be found.\nPlease install libSM.\n")
   endif(NOT X11_SM_FOUND)
 
+  add_feature_info("XInput" X11_Xinput_FOUND "Required for grabbing XInput2 devices in the screen locker")
+
   find_package(Qt5 ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS X11Extras)
 endif()
 

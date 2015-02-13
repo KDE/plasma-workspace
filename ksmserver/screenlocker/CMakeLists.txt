@@ -56,6 +56,10 @@ target_link_libraries(screenlocker_static
    Wayland::Server
 )
 
+if (X11_Xinput_FOUND)
+    target_link_libraries(screenlocker_static ${X11_Xinput_LIB})
+endif()
+
 # Needed to compile on Arm target.
 set_target_properties(screenlocker_static PROPERTIES COMPILE_FLAGS "-fPIC")
 

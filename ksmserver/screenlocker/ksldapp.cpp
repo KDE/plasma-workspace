@@ -27,6 +27,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include "logind.h"
 #include "kscreensaversettings.h"
 #include <config-ksmserver.h>
+#include <config-X11.h>
 #include "waylandserver.h"
 // workspace
 #include <kdisplaymanager.h>
@@ -47,6 +48,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 // X11
 #include <X11/Xlib.h>
 #include <xcb/xcb.h>
+#ifdef X11_Xinput_FOUND
+#include <X11/extensions/XInput2.h>
+#endif
 // other
 #include <unistd.h>
 #include <signal.h>
@@ -108,9 +112,35 @@ void KSldApp::cleanUp()
 static bool s_graceTimeKill = false;
 static bool s_logindExit = false;
 
+static bool hasXInput()
+{
+#ifdef X11_Xinput_FOUND
+    Display *dpy = QX11Info::display();
+    int xi_opcode, event, error;
+    // init XInput extension
+    if (!XQueryExtension(dpy, "XInputExtension", &xi_opcode, &event, &error)) {
+        return false;
+    }
+
+    // verify that the XInput extension is at at least version 2.0
+    int major = 2, minor = 0;
+    int result = XIQueryVersion(dpy, &major, &minor);
+    if (result == BadImplementation) {
+        // Xinput 2.2 returns BadImplementation if checked against 2.0
+        major = 2;
+        minor = 2;
+        return XIQueryVersion(dpy, &major, &minor) == Success;
+    }
+    return result == Success;
+#else
+    return false;
+#endif
+}
+
 void KSldApp::initialize()
 {
     KCrash::setFlags(KCrash::AutoRestart);
+    m_hasXInput2 = hasXInput();
     // Save X screensaver parameters
     XGetScreenSaver(QX11Info::display(), &s_XTimeout, &s_XInterval, &s_XBlanking, &s_XExposures);
     // And disable it. The internal X screensaver is not used at all, but we use its
@@ -351,7 +381,6 @@ static bool grabMouse();
 bool KSldApp::establishGrab()
 {
     XSync(QX11Info::display(), False);
-
     if (!grabKeyboard()) {
         sleep(1);
         if (!grabKeyboard()) {
@@ -366,6 +395,53 @@ bool KSldApp::establishGrab()
             return false;
         }
     }
+
+#ifdef X11_Xinput_FOUND
+    if (m_hasXInput2) {
+        // get all devices
+        Display *dpy = QX11Info::display();
+        int numMasters;
+        XIDeviceInfo *masters = XIQueryDevice(dpy, XIAllMasterDevices, &numMasters);
+        bool success = true;
+        for (int i = 0; i < numMasters; ++i) {
+            // ignoring core pointer and core keyboard as we already grabbed them
+            if (qstrcmp(masters[i].name, "Virtual core pointer") == 0) {
+                continue;
+            }
+            if (qstrcmp(masters[i].name, "Virtual core keyboard") == 0) {
+                continue;
+            }
+            XIEventMask mask;
+            uchar bitmask[] = { 0, 0 };
+            mask.deviceid = masters[i].deviceid;
+            mask.mask = bitmask;
+            mask.mask_len = sizeof(bitmask);
+            XISetMask(bitmask, XI_ButtonPress);
+            XISetMask(bitmask, XI_ButtonRelease);
+            XISetMask(bitmask, XI_Motion);
+            XISetMask(bitmask, XI_Enter);
+            XISetMask(bitmask, XI_Leave);
+            const int result = XIGrabDevice(dpy, masters[i].deviceid, QX11Info::appRootWindow(),
+                                            XCB_TIME_CURRENT_TIME, XCB_CURSOR_NONE, XIGrabModeAsync,
+                                            XIGrabModeAsync, True, &mask);
+            if (result != XIGrabSuccess) {
+                success = false;
+                break;
+            }
+        }
+        if (!success) {
+            // ungrab all devices again
+            for (int i = 0; i < numMasters; ++i) {
+                XIUngrabDevice(dpy, masters[i].deviceid, XCB_TIME_CURRENT_TIME);
+            }
+            xcb_connection_t *c = QX11Info::connection();
+            xcb_ungrab_keyboard(c, XCB_CURRENT_TIME);
+            xcb_ungrab_pointer(c, XCB_CURRENT_TIME);
+        }
+        XIFreeDeviceInfo(masters);
+        return success;
+    }
+#endif
 
     return true;
 }
@@ -397,6 +473,19 @@ void KSldApp::doUnlock()
     xcb_ungrab_keyboard(c, XCB_CURRENT_TIME);
     xcb_ungrab_pointer(c, XCB_CURRENT_TIME);
     xcb_flush(c);
+#ifdef X11_Xinput_FOUND
+    if (m_hasXInput2) {
+        // get all devices
+        Display *dpy = QX11Info::display();
+        int numMasters;
+        XIDeviceInfo *masters = XIQueryDevice(dpy, XIAllMasterDevices, &numMasters);
+        // ungrab all devices again
+        for (int i = 0; i < numMasters; ++i) {
+            XIUngrabDevice(dpy, masters[i].deviceid, XCB_TIME_CURRENT_TIME);
+        }
+        XIFreeDeviceInfo(masters);
+    }
+#endif
     hideLockWindow();
     // delete the window again, to get rid of event filter
     delete m_lockWindow;
