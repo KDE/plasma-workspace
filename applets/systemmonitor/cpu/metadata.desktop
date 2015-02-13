@@ -1,7 +1,17 @@
 [Desktop Entry]
 Encoding=UTF-8
 Name=CPU Load Monitor
+Name[nl]=Monitor voor CPU-gebruik
+Name[pt]=Monitor de Carga do CPU
+Name[sv]=Övervakning av processorlast
+Name[uk]=Використання процесорів
+Name[x-test]=xxCPU Load Monitorxx
 Comment=Monitor the load of the CPUs
+Comment[nl]=Het gebruik van de CPU's monitoren
+Comment[pt]=Vigia a carga dos CPU's
+Comment[sv]=Övervaka processorernas last
+Comment[uk]=Монітор навантаження на процесори
+Comment[x-test]=xxMonitor the load of the CPUsxx
 
 Type=Service
 Icon=cpu
