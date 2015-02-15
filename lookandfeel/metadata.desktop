@@ -56,6 +56,7 @@ Keywords[tr]=Masaüstü;Çalışma Alanı;Görünüm;Görünüm ve Doku;Çık;Ki
 Keywords[uk]=Desktop;Workspace;Appearance;Look and Feel;Logout;Lock;Suspend;Shutdown;Hibernate;стільниця;робочий простір;воркспейс;вигляд;вигляд і поведінка;вихід;вийти;заблокувати;замкнути;призупинити;вимкнути;приспати;
 Keywords[x-test]=xxDesktopxx;xxWorkspacexx;xxAppearancexx;xxLook and Feelxx;xxLogoutxx;xxLockxx;xxSuspendxx;xxShutdownxx;xxHibernatexx;
 Keywords[zh_CN]=Desktop;Workspace;Appearance;Look and Feel;Logout;Lock;Suspend;Shutdown;Hibernate;桌面;工作空间;外观;观感;注销;锁定;待机;关机;休眠
+Keywords[zh_TW]=Desktop;Workspace;Appearance;Look and Feel;Logout;Lock;Suspend;Shutdown;Hibernate;
 Name=Breeze
 Name[ar]=نسيم
 Name[ca]=Brisa
