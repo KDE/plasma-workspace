@@ -24,6 +24,58 @@ import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
 
 ColumnLayout {
+    Keys.onPressed: {
+        switch(event.key) {
+            case Qt.Key_Up: {
+                clipboardMenu.view.decrementCurrentIndex();
+                event.accepted = true;
+                break;
+            }
+            case Qt.Key_Down: {
+                clipboardMenu.view.incrementCurrentIndex();
+                event.accepted = true;
+                break;
+            }
+            case Qt.Key_Enter:
+            case Qt.Key_Return: {
+                if (clipboardMenu.view.currentIndex >= 0) {
+                    var uuid = clipboardMenu.model.get(clipboardMenu.view.currentIndex).UuidRole
+                    if (uuid) {
+                        clipboardSource.service(uuid, "select")
+                        clipboardMenu.view.currentIndex = 0
+                    }
+                }
+                break;
+            }
+            case Qt.Key_Escape: {
+                if (filter.text == "") {
+                    plasmoid.expanded = false;
+                } else {
+                    filter.text = "";
+                }
+                event.accepted = true;
+                break;
+            }
+            default: { // forward key to filter
+                // filter.text += event.text wil break if the key is backspace
+                if (event.key == Qt.Key_Backspace && filter.text == "") {
+                    return;
+                }
+                if (event.text != "" && !filter.activeFocus) {
+                    clipboardMenu.view.currentIndex = -1
+                    if (event.text == "v" && event.modifiers & Qt.ControlModifier) {
+                        filter.paste();
+                    } else {
+                        filter.text = "";
+                        filter.text += event.text;
+                    }
+                    filter.forceActiveFocus();
+                    event.accepted = true;
+                }
+            }
+        }
+    }
+
     RowLayout {
         Layout.fillWidth: true
         Item {
