@@ -44,7 +44,7 @@ Item {
 
     Component.onCompleted: {
         plasmoid.removeAction("configure");
-        plasmoid.setAction("configure", i18n("Configure"), "configure", "alt+d, s");
+        plasmoid.setAction("configure", i18n("Configure Clipboard..."), "configure", "alt+d, s");
     }
 
     PlasmaCore.DataSource {
