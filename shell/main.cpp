@@ -136,7 +136,7 @@ int main(int argc, char *argv[])
 
             KDBusService service(KDBusService::Unique);
             //This will not leak, because corona deletes itself on window close
-            StandaloneAppCorona *corona = new StandaloneAppCorona(cliOptions.value(shellPluginOption));
+            new StandaloneAppCorona(cliOptions.value(shellPluginOption));
             return app.exec();
         } else {
             cliOptions.showHelp(1);
