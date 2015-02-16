@@ -33,10 +33,7 @@ PlasmaComponents.ListItem {
     signal barcode(string uuid)
     signal action(string uuid)
 
-    width: parent.width - units.gridUnit * 2
     height: Math.max(label.height, toolButtonsLayout.implicitHeight) + 2 * units.smallSpacing
-
-    x: -listMargins.left
 
     enabled: true
 
@@ -54,7 +51,7 @@ PlasmaComponents.ListItem {
         height: childrenRect.height
         anchors {
             left: parent.left
-            leftMargin: units.gridUnit / 2
+            leftMargin: units.gridUnit / 2 - listMargins.left
             right: parent.right
             verticalCenter: parent.verticalCenter
         }

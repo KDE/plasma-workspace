@@ -22,6 +22,7 @@ import QtQuick.Layouts 1.1
 import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
+import org.kde.plasma.extras 2.0 as PlasmaExtras
 
 ColumnLayout {
     Keys.onPressed: {
@@ -76,12 +77,19 @@ ColumnLayout {
         }
     }
 
+    PlasmaExtras.Heading {
+        id: emptyHint
+        Layout.fillWidth: true
+        level: 3
+        opacity: 0.6
+        visible: clipboardMenu.model.count === 0
+        text: i18n("Clipboard history is empty.")
+    }
+
     RowLayout {
         Layout.fillWidth: true
-        Item {
-            width: units.gridUnit / 2 - parent.spacing
-            height: 1
-        }
+        visible: !emptyHint.visible
+
         PlasmaComponents.TextField {
             id: filter
             placeholderText: i18n("Search")
