@@ -204,7 +204,7 @@ PlasmaComponents.ListItem {
             iconSource: "document-edit"
             enabled: !clipboardSource.editing
             flat: false
-            visible: TypeRole != 2
+            visible: TypeRole === 0
             tooltip: i18n("Edit contents")
             onClicked: menuItem.edit(UuidRole)
         }
