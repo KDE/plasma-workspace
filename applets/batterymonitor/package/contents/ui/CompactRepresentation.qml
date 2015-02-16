@@ -41,7 +41,7 @@ MouseArea {
         Repeater {
             id: view
 
-            property bool hasBattery: batterymonitor.pmSource.data["Battery"]["Has Battery"]
+            property bool hasBattery: batterymonitor.pmSource.data["Battery"]["Has Cumulative"]
 
             property bool singleBattery: isConstrained || !hasBattery
 
