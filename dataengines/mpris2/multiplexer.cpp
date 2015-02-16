@@ -20,6 +20,7 @@
 #include "multiplexer.h"
 #include <mprisplayer.h>
 
+#include <KActionCollection>
 #include <KGlobalAccel>
 #include <KLocalizedString>
 
@@ -37,8 +38,10 @@ Multiplexer::Multiplexer(QObject* parent)
     setObjectName(sourceName);
 
     // setup actions
-    QAction *playPauseAction = new QAction(i18n("Play/Pause media playback"), this);
-    playPauseAction->setObjectName("playpausemedia");
+    KActionCollection *actionCollection = new KActionCollection(this, QStringLiteral("mediacontrol"));
+    actionCollection->setComponentDisplayName(i18nc("Name for global shortcuts category", "Media Controller"));
+    QAction *playPauseAction = actionCollection->addAction(QStringLiteral("playpausemedia"));
+    playPauseAction->setText(i18n("Play/Pause media playback"));
     KGlobalAccel::setGlobalShortcut(playPauseAction, Qt::Key_MediaPlay);
     connect(playPauseAction, &QAction::triggered, this,
         [this] {
@@ -48,8 +51,8 @@ Multiplexer::Multiplexer(QObject* parent)
         }
     );
 
-    QAction *nextAction = new QAction(i18n("Media playback next"), this);
-    nextAction->setObjectName("nextmedia");
+    QAction *nextAction = actionCollection->addAction(QStringLiteral("nextmedia"));
+    nextAction->setText(i18n("Media playback next"));
     KGlobalAccel::setGlobalShortcut(nextAction, Qt::Key_MediaNext);
     connect(nextAction, &QAction::triggered, this,
         [this] {
@@ -59,8 +62,8 @@ Multiplexer::Multiplexer(QObject* parent)
         }
     );
 
-    QAction *previousAction = new QAction(i18n("Media playback previous"), this);
-    previousAction->setObjectName("previousmedia");
+    QAction *previousAction = actionCollection->addAction(QStringLiteral("previousmedia"));
+    previousAction->setText(i18n("Media playback previous"));
     KGlobalAccel::setGlobalShortcut(previousAction, Qt::Key_MediaPrevious);
     connect(previousAction, &QAction::triggered, this,
         [this] {
@@ -70,8 +73,8 @@ Multiplexer::Multiplexer(QObject* parent)
         }
     );
 
-    QAction *stopAction = new QAction(i18n("Stop media playback"), this);
-    stopAction->setObjectName("stopmedia");
+    QAction *stopAction = actionCollection->addAction(QStringLiteral("stopmedia"));
+    stopAction->setText(i18n("Stop media playback"));
     KGlobalAccel::setGlobalShortcut(stopAction, Qt::Key_MediaStop);
     connect(stopAction, &QAction::triggered, this,
         [this] {

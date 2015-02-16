@@ -30,6 +30,7 @@ target_link_libraries(plasma_engine_mpris2
    KF5::I18n
    KF5::Service
    KF5::Plasma
+   KF5::XmlGui
 )
 
 kcoreaddons_desktop_to_json(plasma_engine_mpris2 plasma-dataengine-mpris2.desktop)
