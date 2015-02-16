@@ -161,24 +161,6 @@ void Mpris2Engine::serviceNameFetchFinished(QDBusPendingCallWatcher* watcher)
                 // NB: _disappearing_ between sending this call and doing
                 // this processing is fine
                 QString sourceName = serviceName.mid(23);
-
-                if (sourceName == "vlc") {
-                    //FIXME VLC exports two mpris2 interfaces on DBus,
-                    //      one is the interface of a particular instance
-                    //      and the other is just a link to the last used instance
-                    //
-                    //      We don't need the linked interface in the dataengine
-                    //      as we watch all the players separately, so this would
-                    //      just create redundant player control for us
-                    //
-                    //      Proper fix would be to see if both services point
-                    //      to the same raw dbus address but given this needs
-                    //      to be async (we need to call org.freedesktop.DBus.GetNameOwner
-                    //      method) and that the problem happens only with VLC
-                    //      because of the way they do mpris, it's just easier
-                    //      to skip the linking VLC interface altogether
-                    continue;
-                }
                 PlayerContainer *container = qobject_cast<PlayerContainer*>(containerForSource(sourceName));
                 if (!container) {
                     qCDebug(MPRIS2) << "Haven't already seen" << serviceName;
