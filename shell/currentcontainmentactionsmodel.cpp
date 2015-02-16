@@ -234,11 +234,10 @@ void CurrentContainmentActionsModel::showAbout(int row)
             QByteArray(), info.website().toLatin1(),
             info.email().toLatin1());
 
-    aboutData.setProgramIconName(info.icon());
-
     aboutData.addAuthor(ki18n(info.author().toUtf8()).toString(), QByteArray(), info.email().toLatin1());
 
     KAboutApplicationDialog *aboutDialog = new KAboutApplicationDialog(aboutData, qobject_cast<QWidget*>(parent()));
+    aboutDialog->setWindowIcon(QIcon::fromTheme(info.icon()));
     aboutDialog->show();
 }
 
