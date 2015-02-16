@@ -635,9 +635,7 @@ void Image::wallpaperBrowseCompleted()
 {
     Q_ASSERT(m_model);
     if (m_dialog && m_dialog->selectedFiles().count() > 0) {
-        foreach (const QString &file, m_dialog->selectedFiles()) {
-            addUsersWallpaper(m_dialog->selectedFiles()[0]); // FIXME
-        }
+        addUsersWallpaper(m_dialog->selectedFiles().first());
         emit customWallpaperPicked();
     }
 }
