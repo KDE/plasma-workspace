@@ -94,7 +94,7 @@ PanelView::PanelView(ShellCorona *corona, QScreen *targetScreen, QWindow *parent
                 emit m_corona->availableScreenRegionChanged();
             });
 
-    if (!m_corona->package().isValid()) {
+    if (!m_corona->kPackage().isValid()) {
         qWarning() << "Invalid home screen package";
     }
 
@@ -112,7 +112,7 @@ PanelView::PanelView(ShellCorona *corona, QScreen *targetScreen, QWindow *parent
 
     qmlRegisterType<QScreen>();
     engine()->rootContext()->setContextProperty("panel", this);
-    setSource(QUrl::fromLocalFile(m_corona->package().filePath("views", "Panel.qml")));
+    setSource(QUrl::fromLocalFile(m_corona->kPackage().filePath("views", "Panel.qml")));
     PanelShadows::self()->addWindow(this);
 }
 
