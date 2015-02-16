@@ -53,7 +53,8 @@ Item {
             timeZones.push("Local");
             return timeZones;
         }
-        interval: plasmoid.configuration.showSeconds ? 1000 : 30000
+        interval: plasmoid.configuration.showSeconds ? 1000 : 60000
+        intervalAlignment: plasmoid.configuration.showSeconds ? PlasmaCore.Types.NoAlignment : PlasmaCore.Types.AlignToMinute
     }
 
     function setDateFormatString() {
