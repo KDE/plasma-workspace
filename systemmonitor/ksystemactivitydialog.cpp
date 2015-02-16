@@ -52,7 +52,6 @@ KSystemActivityDialog::KSystemActivityDialog(QWidget *parent)
     setSizeGripEnabled(true);
     (void)minimumSizeHint(); //Force the dialog to be laid out now
     layout()->setContentsMargins(0,0,0,0);
-    m_processList.treeView()->setCornerWidget(new QWidget);
 
     // Since we kinda act like an application more than just a Window, map the usual ctrl+Q shortcut to close as well
     QAction *closeWindow = new QAction(this);
