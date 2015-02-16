@@ -128,14 +128,21 @@ Item {
         }
     }
 
+    PlasmaExtras.Heading {
+        id: heading
+        width: parent.width
+        level: 2
+        text: plasmoid.title
+    }
+
     ColumnLayout {
-        anchors.fill: parent
-        anchors.margins: 0
-        spacing: 0
-        PlasmaExtras.Heading {
-            level: 2
-            text: plasmoid.title
+        anchors {
+            top: heading.bottom
+            bottom: parent.bottom
         }
+        width: parent.width
+        spacing: 0
+
         Repeater {
             model: sourcesModel
             delegate: rootItem.delegate
