@@ -126,7 +126,7 @@ void ShellManager::loadHandlers()
             handler->setProperty("pluginName", dir);
             // This property is useful for shells to launch themselves in some specific sessions
             // For example mediacenter shell can be launched when in plasma-mediacenter session
-            handler->setProperty("currentSession", QString(qgetenv("DESKTOP_SESSION")));
+            handler->setProperty("currentSession", QString::fromUtf8(qgetenv("DESKTOP_SESSION")));
             registerHandler(handler);
         }
     }
