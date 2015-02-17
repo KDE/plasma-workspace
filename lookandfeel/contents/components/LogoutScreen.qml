@@ -45,11 +45,6 @@ BreezeBlock {
         shortcut: "Escape"
     }
 
-    Controls.Action {
-        onTriggered: root.currentAction()
-        shortcut: "Return"
-    }
-
     onRemainingTimeChanged: {
         if(remainingTime<0)
             root.currentAction()
@@ -143,6 +138,15 @@ BreezeBlock {
                 id: commitButton
                 onClicked: root.currentAction()
                 focus: true
+
+                Controls.Action {
+                    onTriggered: {
+                        if (commitButton.activeFocus) {
+                            root.currentAction()
+                        }
+                    }
+                    shortcut: "Return"
+                }
             }
         }
 
