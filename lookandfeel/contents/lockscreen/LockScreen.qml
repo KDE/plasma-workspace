@@ -153,7 +153,7 @@ Image {
                             placeholderText: i18nd("plasma_lookandfeel_org.kde.lookandfeel","Password")
                             echoMode: TextInput.Password
                             enabled: !authenticator.graceLocked
-                            onAccepted: unlockFunction()
+                            onAccepted: actionButton.clicked(null)
                             focus: true
                             visible: block.mainItem.model.count > 0 ? !!block.mainItem.model.get(block.mainItem.selectedIndex).showPassword : false
                             onVisibleChanged: {
@@ -195,6 +195,7 @@ Image {
                         }
 
                         PlasmaComponents.Button {
+                            id: actionButton
                             Layout.minimumWidth: passwordInput.width
                             text: block.mainItem.model.count > 0 ? block.mainItem.model.get(block.mainItem.selectedIndex).ButtonLabel : ""
                             enabled: !authenticator.graceLocked
