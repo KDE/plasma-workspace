@@ -109,27 +109,25 @@ Image {
                     id: users
 
                     Component.onCompleted: {
-                        users.append({  "name": kscreenlocker_userName,
-                                        "realName": kscreenlocker_userName,
-                                        "icon": kscreenlocker_userImage,
-                                        "showPassword": true,
-                                        "ButtonLabel": i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Unlock"),
-                                        "ButtonAction": "unlock"
+                        users.append({name: kscreenlocker_userName,
+                                      realName: kscreenlocker_userName,
+                                      icon: kscreenlocker_userImage,
+                                      showPassword: true,
+                                      ButtonLabel: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Unlock"),
+                                      ButtonAction: "unlock"
                         })
                         if(sessions.startNewSessionSupported) {
-                            users.append({  "realName": i18nd("plasma_lookandfeel_org.kde.lookandfeel", "New Session"),
-                                            "icon": "system-log-out", //TODO Need an icon for new session
-                                            "showPassword": false,
-                                            "ButtonLabel": i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Create Session"),
-                                            "ButtonAction": "newSession"
+                            users.append({realName: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "New Session"),
+                                          icon: "system-log-out", //TODO Need an icon for new session
+                                          ButtonLabel: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Create Session"),
+                                          ButtonAction: "newSession"
                             })
                         }
                         if(sessions.switchUserSupported) {
-                            users.append({  "realName": i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Change Session"),
-                                            "icon": "system-switch-user",
-                                            "showPassword": false,
-                                            "ButtonLabel": i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Change Session..."),
-                                            "ButtonAction": "changeSession"
+                            users.append({realName: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Change Session"),
+                                          icon: "system-switch-user",
+                                          ButtonLabel: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Change Session..."),
+                                          ButtonAction: "changeSession"
                             })
                         }
                     }
@@ -157,7 +155,7 @@ Image {
                             enabled: !authenticator.graceLocked
                             onAccepted: unlockFunction()
                             focus: true
-                            visible: block.mainItem.model.get(block.mainItem.selectedIndex)["showPassword"]
+                            visible: block.mainItem.model.count > 0 ? !!block.mainItem.model.get(block.mainItem.selectedIndex).showPassword : false
                             onVisibleChanged: {
                                 if (visible) {
                                     forceActiveFocus();
@@ -198,7 +196,7 @@ Image {
 
                         PlasmaComponents.Button {
                             Layout.minimumWidth: passwordInput.width
-                            text: block.mainItem.model.get(block.mainItem.selectedIndex)["ButtonLabel"]
+                            text: block.mainItem.model.count > 0 ? block.mainItem.model.get(block.mainItem.selectedIndex).ButtonLabel : ""
                             enabled: !authenticator.graceLocked
                             onClicked: switch(block.mainItem.model.get(block.mainItem.selectedIndex)["ButtonAction"]) {
                                 case "unlock":

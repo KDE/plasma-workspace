@@ -21,7 +21,7 @@ import QtQuick 2.2
 
 ListView {
     id: view
-    readonly property string selectedUser: currentItem.userName
+    readonly property string selectedUser: currentItem ? currentItem.userName : ""
     readonly property int userItemWidth: units.largeSpacing * 8
     readonly property int userItemHeight: units.largeSpacing * 8
     readonly property int userFaceSize: units.largeSpacing * 6
@@ -36,7 +36,7 @@ ListView {
 
     delegate: UserDelegate {
         name: (model.realName === "") ? model.name : model.realName
-        userName: model.name
+        userName: model.name || ""
         iconSource: model.icon ? model.icon : "user-identity"
         width: view.userItemWidth
         faceSize: view.userFaceSize
