@@ -139,13 +139,19 @@ BreezeBlock {
                 onClicked: root.currentAction()
                 focus: true
 
-                Controls.Action {
-                    onTriggered: {
-                        if (commitButton.activeFocus) {
-                            root.currentAction()
-                        }
+                function trigger() {
+                    if (commitButton.activeFocus) {
+                        root.currentAction()
                     }
+                }
+
+                Controls.Action {
+                    onTriggered: commitButton.trigger()
                     shortcut: "Return"
+                }
+                Controls.Action {
+                    onTriggered: commitButton.trigger()
+                    shortcut: "Enter" // on numpad
                 }
             }
         }
