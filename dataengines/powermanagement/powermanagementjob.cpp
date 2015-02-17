@@ -110,7 +110,7 @@ void PowerManagementJob::setScreenBrightness(int value, bool silent)
     QDBusMessage msg = QDBusMessage::createMethodCall("org.kde.Solid.PowerManagement",
                                                       "/org/kde/Solid/PowerManagement/Actions/BrightnessControl",
                                                       "org.kde.Solid.PowerManagement.Actions.BrightnessControl",
-                                                      silent ? "setBrightnessValueSilent" : "setBrightnessValue");
+                                                      silent ? "setBrightnessSilent" : "setBrightness");
     msg << value;
     QDBusConnection::sessionBus().asyncCall(msg);
 }
@@ -120,7 +120,7 @@ void PowerManagementJob::setKeyboardBrightness(int value, bool silent)
     QDBusMessage msg = QDBusMessage::createMethodCall("org.kde.Solid.PowerManagement",
                                                       "/org/kde/Solid/PowerManagement/Actions/KeyboardBrightnessControl",
                                                       "org.kde.Solid.PowerManagement.Actions.KeyboardBrightnessControl",
-                                                      silent ? "setKeyboardBrightnessValueSilent" : "setKeyboardBrightnessValue");
+                                                      silent ? "setKeyboardBrightnessSilent" : "setKeyboardBrightness");
     msg << value;
     QDBusConnection::sessionBus().asyncCall(msg);
 }
