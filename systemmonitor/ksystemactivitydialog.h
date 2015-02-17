@@ -32,6 +32,7 @@
  */
 class KSystemActivityDialog : public QDialog
 {
+        Q_OBJECT
     public:
         KSystemActivityDialog(QWidget *parent = NULL);
 
@@ -52,6 +53,9 @@ class KSystemActivityDialog : public QDialog
     protected:
         /** Save the settings if the user clicks (x) button on the window */
         void closeEvent(QCloseEvent *event);
+
+    private slots:
+        void slotInit();
 
     private:
         void saveDialogSettings();

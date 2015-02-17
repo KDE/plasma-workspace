@@ -31,14 +31,14 @@
 #include <QPushButton>
 #include <QVBoxLayout>
 #include <QLineEdit>
+#include <QTimer>
 
 #include <KSharedConfig>
 #include <KConfigGroup>
 #include <KWindowConfig>
 #include <KWindowSystem>
 #include <KLocalizedString>
-
-//#include "krunnersettings.h"
+#include <QDebug>
 
 KSystemActivityDialog::KSystemActivityDialog(QWidget *parent)
     : QDialog(parent), m_processList(0)
@@ -59,7 +59,15 @@ KSystemActivityDialog::KSystemActivityDialog(QWidget *parent)
     connect(closeWindow, &QAction::triggered, this, &KSystemActivityDialog::accept);
     addAction(closeWindow);
 
+    // We need the resizing to be done once the dialog has been initialized
+    // otherwise we don't actually have a window.
+    QTimer::singleShot(0, this, SLOT(slotInit()));
+}
+
+void KSystemActivityDialog::slotInit()
+{
     resize(QSize(650, 420));
+
     KConfigGroup cg = KSharedConfig::openConfig()->group("TaskDialog");
     KWindowConfig::restoreWindowSize(windowHandle(), cg);
 
@@ -67,7 +75,7 @@ KSystemActivityDialog::KSystemActivityDialog(QWidget *parent)
     // Since we default to forcing the window to be KeepAbove, if the user turns this off, remember this
     const bool keepAbove = true; // KRunnerSettings::keepTaskDialogAbove();
     if (keepAbove) {
-        KWindowSystem::setState(winId(), NET::KeepAbove );
+        KWindowSystem::setState(winId(), NET::KeepAbove);
     }
 
     QDBusConnection con = QDBusConnection::sessionBus();
