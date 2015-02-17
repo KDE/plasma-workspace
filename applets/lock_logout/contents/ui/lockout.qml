@@ -27,65 +27,48 @@ import "data.js" as Data
 
 Flow {
     id: lockout
-    Layout.minimumWidth: plasmoid.formFactor == PlasmaCore.Types.Vertical ? 0 : height * visibleButtons
-    Layout.minimumHeight: plasmoid.formFactor == PlasmaCore.Types.Vertical ? width * visibleButtons : 0
+    Layout.minimumWidth: {
+        if (plasmoid.formFactor === PlasmaCore.Types.Vertical) {
+            return 0
+        } else if (plasmoid.formFactor === PlasmaCore.Types.Horizontal) {
+            return height < minButtonSize * visibleButtons ? height * visibleButtons : height / visibleButtons - 1;
+        } else {
+            return width > height ? minButtonSize * visibleButtons : minButtonSize
+        }
+    }
+    Layout.minimumHeight: {
+        if (plasmoid.formFactor === PlasmaCore.Types.Vertical) {
+            return width >= minButtonSize * visibleButtons ? width / visibleButtons - 1 : width * visibleButtons
+        } else if (plasmoid.formFactor === PlasmaCore.Types.Horizontal) {
+            return 0
+        } else {
+            return width > height ? minButtonSize : minButtonSize * visibleButtons
+        }
+    }
+
     Layout.preferredWidth: Layout.minimumWidth
     Layout.preferredHeight: Layout.minimumHeight
 
-    property int minButtonSize: 16
+    readonly property int minButtonSize: units.iconSizes.small
 
     Plasmoid.preferredRepresentation: Plasmoid.fullRepresentation
-    property int visibleButtons: plasmoid.configuration.show_lockScreen + plasmoid.configuration.show_switchUser + plasmoid.configuration.show_requestShutDown + plasmoid.configuration.show_suspendToRam + plasmoid.configuration.show_suspendToDisk;
+    readonly property int visibleButtons: plasmoid.configuration.show_lockScreen + plasmoid.configuration.show_switchUser + plasmoid.configuration.show_requestShutDown + plasmoid.configuration.show_suspendToRam + plasmoid.configuration.show_suspendToDisk;
 
-    property int orientation: Qt.Vertical
-
-    flow: orientation == Qt.Vertical ? Flow.TopToBottom : Flow.LeftToRight
-
-    onWidthChanged: checkLayout();
-    onHeightChanged: checkLayout();
+    flow: {
+        if ((plasmoid.formFactor === PlasmaCore.Types.Vertical && width >= minButtonSize * visibleButtons) ||
+            (plasmoid.formFactor === PlasmaCore.Types.Horizontal && height < minButtonSize * visibleButtons) ||
+            (width > height)) {
+            return Flow.LeftToRight // horizontal
+        } else {
+            return Flow.TopToBottom // vertical
+        }
+    }
 
     PlasmaCore.DataSource {
         id: dataEngine
         engine: "powermanagement"
         connectedSources: ["PowerDevil"]
     }
-
-    function checkLayout() {
-        switch(plasmoid.formFactor) {
-        case PlasmaCore.Types.Vertical:
-            if (width >= minButtonSize*visibleButtons) {
-                orientation = Qt.Horizontal;
-                lockout.Layout.minimumHeight = width/visibleButtons - 1;
-            } else {
-                orientation = Qt.Vertical;
-                lockout.Layout.minimumHeight = width*visibleButtons;
-            }
-            break;
-
-        case PlasmaCore.Types.Horizontal:
-            if (height < minButtonSize*visibleButtons) {
-                orientation = Qt.Horizontal;
-                lockout.Layout.minimumWidth = height*visibleButtons;
-            } else {
-                orientation = Qt.Vertical;
-                lockout.Layout.minimumWidth = height/visibleButtons - 1;
-            }
-            break;
-
-        default:
-            if (width > height) {
-                orientation = Qt.Horizontal;
-                lockout.Layout.minimumWidth = minButtonSize*visibleButtons;
-                lockout.Layout.minimumHeight = minButtonSize;
-            } else {
-                orientation = Qt.Vertical;
-                lockout.Layout.minimumWidth = minButtonSize;
-                lockout.Layout.minimumHeight = minButtonSize*visibleButtons;
-            }
-            break;
-        }
-    }
-
 
     Repeater {
         id: items
