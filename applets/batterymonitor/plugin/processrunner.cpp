@@ -31,5 +31,5 @@ ProcessRunner::~ProcessRunner()
 
 void ProcessRunner::runPowerdevilKCM()
 {
-    QProcess::startDetached("kcmshell5", QStringList() << "powerdevilglobalconfig" << "powerdevilprofilesconfig");
+    QProcess::startDetached("kcmshell5", QStringList() << "powerdevilprofilesconfig" << "powerdevilactivitiesconfig" << "powerdevilglobalconfig");
 }
