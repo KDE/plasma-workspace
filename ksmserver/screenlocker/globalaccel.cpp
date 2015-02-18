@@ -42,7 +42,7 @@ static const QString s_componentInterface = QStringLiteral("org.kde.kglobalaccel
  * E.g. plasmashell might accept media shortcuts, but not shortcuts for switching the activity.
  **/
 static const QMap<QString, QList<QString>> s_shortcutWhitelist{
-    {QStringLiteral("/component/plasmashell"), QList<QString>{QStringLiteral("stopmedia"),
+    {QStringLiteral("/component/mediacontrol"), QList<QString>{QStringLiteral("stopmedia"),
                                                               QStringLiteral("nextmedia"),
                                                               QStringLiteral("previousmedia"),
                                                               QStringLiteral("playpausemedia")}},
