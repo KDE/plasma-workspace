@@ -34,10 +34,6 @@ public:
 
     virtual void update();
 
-protected Q_SLOTS:
-    void readData(KIO::Job *, const QByteArray& data);
-    void result(KJob* job);
-
 private:
     class Private;
     Private *const d;
