@@ -127,11 +127,16 @@ MouseArea {
     Timer {
         interval: 1000 // FIXME TODO: Use platform value for tooltip activation delay.
 
-        running: wallpaperDelegate.containsMouse && !pressed && model.display && model.author
+        running: wallpaperDelegate.containsMouse && !pressed && model.display
 
         onTriggered: {
-            Tooltip.showText(wallpaperDelegate, Qt.point(wallpaperDelegate.mouseX, wallpaperDelegate.mouseY),
-                i18nd("plasma_applet_org.kde.image", "%1 by %2", model.display, model.author));
+            if (model.author) {
+                Tooltip.showText(wallpaperDelegate, Qt.point(wallpaperDelegate.mouseX, wallpaperDelegate.mouseY),
+                                 i18nd("plasma_applet_org.kde.image", "%1 by %2", model.display, model.author));
+            } else {
+                Tooltip.showText(wallpaperDelegate, Qt.point(wallpaperDelegate.mouseX, wallpaperDelegate.mouseY),
+                                 model.display);
+            }
         }
     }
 

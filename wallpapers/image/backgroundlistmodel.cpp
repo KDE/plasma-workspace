@@ -354,7 +354,7 @@ QVariant BackgroundListModel::data(const QModelIndex &index, int role) const
         if (b.metadata().isValid()) {
             return b.metadata().author();
         } else {
-            return i18nc("Unknown Author", "Unknown");
+            return QString();
         }
     break;
 
