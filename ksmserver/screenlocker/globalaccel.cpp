@@ -50,7 +50,9 @@ static const QMap<QString, QList<QString>> s_shortcutWhitelist{
                                                        QStringLiteral("decrease_volume"),
                                                        QStringLiteral("increase_volume")}},
     {QStringLiteral("/component/kded5"), {QStringLiteral("Increase Screen Brightness"),
-                    QStringLiteral("Decrease Screen Brightness")}},
+                                          QStringLiteral("Decrease Screen Brightness"),
+                                          QStringLiteral("Increase Keyboard Brightness"),
+                                          QStringLiteral("Decrease Keyboard Brightness")}},
     {QStringLiteral("/component/KDE_Keyboard_Layout_Switcher"), {QStringLiteral("Switch to Next Keyboard Layout")}}
 };
 
