@@ -2,6 +2,7 @@
 Comment=Breeze Desktop Design Language by the KDE VDG
 Comment[ca]=Llenguatge de disseny d'escriptori Brisa pel VDG del KDE
 Comment[cs]=Jazyk pro návrh pracovní plochy Breeze od KDE VDG
+Comment[da]=Breeze sprog til skrivebordsdesign af KDE VDG
 Comment[de]=Breeze-Arbeitsflächendesign der KDE VG
 Comment[el]=Γλώσσα σχεδιασμού επιφάνειας εργασίας Breeze από το KDE VDG
 Comment[en_GB]=Breeze Desktop Design Language by the KDE VDG
@@ -30,6 +31,7 @@ Comment[zh_CN]=KDE 视觉设计组设计的 Breeze 桌面设计语言
 Encoding=UTF-8
 Keywords=Desktop;Workspace;Appearance;Look and Feel;Logout;Lock;Suspend;Shutdown;Hibernate;
 Keywords[ca]=Escriptori;Espai de treball;Aparença;Aparença i comportament;Sortida;Bloqueig;Suspensió;Aturada;Hibernació;
+Keywords[da]=Skrivebord;Desktop;Arbejdsområde;Udseende;log ud;Lås;Suspendér;Nedlukning;dvale;
 Keywords[de]=Desktop;Arbeitsfläche;Erscheinungsbild;Erscheinungsbild und Verhalten;Abmelden;Sperren;Ruhezustand;Tiefschlaf;Herunterfahren;
 Keywords[el]=Επιφάνεια εργασίας;Χώρος εργασίας; Εμφάνιση;Όψη και Αίσθηση;Αποσύνδεση;Κλείδωμα;Αναστολή;Τερματισμός;Νάρκη;
 Keywords[en_GB]=Desktop;Workspace;Appearance;Look and Feel;Logout;Lock;Suspend;Shutdown;Hibernate;
