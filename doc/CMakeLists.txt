@@ -1,4 +1,4 @@
-add_subdirectory(klipper)
+ecm_optional_add_subdirectory(klipper)
 if(POLKITQT_FOUND)
-  add_subdirectory(PolicyKit-kde)
+  ecm_optional_add_subdirectory(PolicyKit-kde)
 endif()
