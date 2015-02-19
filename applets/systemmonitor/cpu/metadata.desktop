@@ -2,6 +2,7 @@
 Encoding=UTF-8
 Name=CPU Load Monitor
 Name[ca]=Controlador de càrrega de la CPU
+Name[cs]=Monitor zatížení CPU
 Name[en_GB]=CPU Load Monitor
 Name[es]=Monitor de carga de la CPU
 Name[it]=Monitor del carico del processore
