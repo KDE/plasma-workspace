@@ -37,6 +37,7 @@ include(CMakePackageConfigHelpers)
 include(WriteBasicConfigVersionFile)
 include(CheckIncludeFiles)
 include(FeatureSummary)
+include(ECMOptionalAddSubdirectory)
 
 find_package(Qt5WebKitWidgets ${QT_MIN_VERSION} CONFIG)
 
