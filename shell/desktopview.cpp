@@ -148,6 +148,15 @@ void DesktopView::ensureWindowType()
     }
 }
 
+DesktopView::SessionType DesktopView::sessionType() const
+{
+    if (qobject_cast<ShellCorona *>(corona())) {
+        return ShellSession;
+    } else {
+        return ApplicationSession;
+    }
+}
+
 void DesktopView::setDashboardShown(bool shown)
 {
     if (shown) {

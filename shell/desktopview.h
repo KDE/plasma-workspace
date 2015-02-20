@@ -33,6 +33,8 @@ class DesktopView : public PlasmaQuick::View
 
     Q_PROPERTY(WindowType windowType READ windowType WRITE setWindowType NOTIFY windowTypeChanged)
 
+    //What kind of plasma session we're in: are we in a full workspace, an application?...
+    Q_PROPERTY(SessionType sessionType READ sessionType CONSTANT)
 public:
     enum WindowType {
         Window, /** The window is a normal resizable window with titlebar and appears in the taskbar */
@@ -41,6 +43,12 @@ public:
         WindowedDesktop /** full screen and borderless as Desktop, but can be brought in front and appears in the taskbar */
     };
     Q_ENUMS(WindowType)
+
+    enum SessionType {
+        ApplicationSession, /** our session is a normal application */
+        ShellSession /** We are running as the primary user interface of this machine */
+    };
+    Q_ENUMS(SessionType)
 
     explicit DesktopView(Plasma::Corona *corona, QScreen *targetScreen = 0);
     virtual ~DesktopView();
@@ -53,6 +61,8 @@ public:
 
     WindowType windowType() const;
     void setWindowType(WindowType type);
+
+    SessionType sessionType() const;
 
 protected:
     bool event(QEvent *e);
