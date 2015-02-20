@@ -141,7 +141,6 @@ Item {
             bottom: parent.bottom
         }
         width: parent.width
-        spacing: 0
 
         Repeater {
             model: sourcesModel
