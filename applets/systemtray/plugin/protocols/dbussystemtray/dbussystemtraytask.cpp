@@ -466,7 +466,6 @@ void DBusSystemTrayTask::syncToolTip(const QString &title, const QString &subTit
 void DBusSystemTrayTask::syncStatus(QString newStatus)
 {
     Task::Status status = (Task::Status)metaObject()->enumerator(metaObject()->indexOfEnumerator("Status")).keyToValue(newStatus.toLatin1());
-    qCDebug(SYSTEMTRAY) << "ST2 status changed " << this->status() << status;
 
     if (this->status() == status) {
         return;

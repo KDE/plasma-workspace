@@ -68,15 +68,6 @@ KQuickControlsAddonsComponents.MouseEventListener {
     property Item expandedStatusItem: null
     property bool snExpanded: false
 
-    Rectangle {
-        anchors.fill: parent;
-        border.width: 1;
-        border.color: "black";
-        color: "yellow";
-        visible: root.debug;
-        opacity: 0.8;
-    }
-
     property bool isExpanded: modelData !== undefined && modelData.expanded === true
 
     onIsExpandedChanged: {

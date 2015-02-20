@@ -85,15 +85,6 @@ Item {
         }
     }
 
-    Rectangle {
-        anchors.fill: parent;
-        border.width: 1;
-        border.color: "black";
-        color: "green";
-        visible: root.debug;
-        opacity: 0.2;
-    }
-
     Component {
         id: taskDelegateComponent
         TaskDelegate {

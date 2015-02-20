@@ -254,8 +254,6 @@ void Host::addTask(Task *task)
     connect(task, SIGNAL(destroyed(SystemTray::Task*)), this, SLOT(removeTask(SystemTray::Task*)));
     connect(task, SIGNAL(changedStatus()), this, SLOT(slotTaskStatusChanged()));
 
-    qCDebug(SYSTEMTRAY) << "ST2" << task->name() << "(" << task->taskId() << ")";
-
     d->tasks << task;
 
     if (d->shownCategories.contains(task->category())) {
@@ -284,10 +282,7 @@ void Host::slotTaskStatusChanged()
     Task* task = qobject_cast<Task*>(sender());
 
     if (task) {
-        //qCDebug(SYSTEMTRAY) << "ST2 emit taskStatusChanged(task);";
         taskStatusChanged(task);
-    } else {
-        qCDebug(SYSTEMTRAY) << "ST2 changed, but invalid cast";
     }
 }
 
@@ -397,7 +392,6 @@ QStringList Host::categories() const
             cats.append(i18n("Hardware"));
         }
     }
-    qCDebug(SYSTEMTRAY) << "ST2 " << cats;
     return cats;
 }
 

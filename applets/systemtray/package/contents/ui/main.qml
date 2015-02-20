@@ -53,17 +53,12 @@ Item {
     property int baseSize: theme.mSize(theme.defaultFont).height
     property int itemSize: LayoutManager.alignedSize(Math.min(baseSize * 2, preferredItemSize))
 
-    property bool debug: plasmoid.configuration.debug
-
     //a pointer to the Task* that is the current one expanded, that shows full ui
     property QtObject expandedTask: null;
 
     function togglePopup() {
-//         print("toggle popup => " + !plasmoid.expanded);
         if (!plasmoid.expanded) {
             plasmoid.expanded = true
-        } else {
-            //hidePopupTimer.start();
         }
     }
 
@@ -75,15 +70,6 @@ Item {
         Layout.minimumHeight: units.gridUnit * 14
         Layout.preferredWidth: Layout.minimumWidth
         Layout.preferredHeight: Layout.minimumHeight * 1.5
-    }
-
-    Rectangle {
-        anchors.fill: parent;
-        border.width: 2;
-        border.color: "black";
-        color: "blue";
-        visible: root.debug;
-        opacity: 0.2;
     }
 
     Connections {
@@ -129,5 +115,4 @@ Item {
         forcedShownItems: plasmoid.configuration.shownItems
         forcedHiddenItems: plasmoid.configuration.hiddenItems
     }
-
 }

@@ -90,7 +90,6 @@ void Task::setStatus(Status status)
     }
 
     d->status = status;
-    //qCDebug(SYSTEMTRAY) << "ST2 status changed " << status;
     emit changedStatus();
     emit changed(this);
 }
@@ -152,7 +151,6 @@ void Task::setName(QString name)
 QPointF Task::popupPosition(QQuickItem* visualParent, int x, int y)
 {
     if (!visualParent) {
-        qCDebug(SYSTEMTRAY) << "ST2 invalid item";
         return QPointF(0, 0);
     }
 
