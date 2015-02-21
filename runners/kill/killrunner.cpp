@@ -125,14 +125,14 @@ void KillRunner::match(Plasma::RunnerContext &context)
             return;
         }
 
-        const QString name = process->name;
+        const QString name = process->name();
         if (!name.contains(term, Qt::CaseInsensitive)) {
             //Process doesn't match the search term
             continue;
         }
 
-        const quint64 pid = process->pid;
-        const qlonglong uid = process->uid;
+        const quint64 pid = process->pid();
+        const qlonglong uid = process->uid();
         const QString user = getUserName(uid);
 
         QVariantList data;
@@ -148,10 +148,10 @@ void KillRunner::match(Plasma::RunnerContext &context)
         // Set the relevance
         switch (m_sorting) {
         case KillRunnerConfig::CPU:
-            match.setRelevance((process->userUsage + process->sysUsage) / 100);
+            match.setRelevance((process->userUsage() + process->sysUsage()) / 100);
             break;
         case KillRunnerConfig::CPUI:
-            match.setRelevance(1 - (process->userUsage + process->sysUsage) / 100);
+            match.setRelevance(1 - (process->userUsage() + process->sysUsage()) / 100);
             break;
         case KillRunnerConfig::NONE:
             match.setRelevance(name.compare(term, Qt::CaseInsensitive) == 0 ? 1 : 9);
