@@ -468,7 +468,7 @@ static KService::List getServicesViaPid(int pid)
     procs.updateOrAddProcess(pid);
 
     KSysGuard::Process *proc = procs.getProcess(pid);
-    QString cmdline = proc ? proc->command.simplified() : QString(); // proc->command has a trailing space???
+    QString cmdline = proc ? proc->command().simplified() : QString(); // proc->command has a trailing space???
 
     if (cmdline.isEmpty()) {
         return services;
@@ -498,7 +498,7 @@ static KService::List getServicesViaPid(int pid)
 
     if (services.empty() && !QStandardPaths::findExecutable(cmdline).isEmpty()) {
         // cmdline now exists without arguments if there were any
-        services << QExplicitlySharedDataPointer<KService>(new KService(proc->name, cmdline, QString()));
+        services << QExplicitlySharedDataPointer<KService>(new KService(proc->name(), cmdline, QString()));
     }
     return services;
 }
@@ -513,7 +513,7 @@ static QUrl getServiceLauncherUrl(int pid, const QString &type, const QStringLis
     procs.updateOrAddProcess(pid);
 
     KSysGuard::Process *proc = procs.getProcess(pid);
-    QString cmdline = proc ? proc->command.simplified() : QString(); // proc->command has a trailing space???
+    QString cmdline = proc ? proc->command().simplified() : QString(); // proc->command has a trailing space???
 
     if (cmdline.isEmpty()) {
         return QUrl();
