@@ -158,25 +158,6 @@ ShellCorona::ShellCorona(QObject *parent)
 
     KGlobalAccel::self()->setGlobalShortcut(activityAction, Qt::META + Qt::Key_Q);
 
-    QAction *nextActivityAction = actions()->addAction("next activity");
-    QObject::connect(nextActivityAction, &QAction::triggered,
-                     this, &ShellCorona::nextActivity);
-
-    nextActivityAction->setText(i18n("Next Activity"));
-    nextActivityAction->setVisible(false);
-
-    KGlobalAccel::self()->setGlobalShortcut(nextActivityAction, Qt::META + Qt::Key_Tab);
-
-    QAction *previousActivityAction = actions()->addAction("previous activity");
-    QObject::connect(previousActivityAction, &QAction::triggered,
-                     this, &ShellCorona::previousActivity);
-
-    previousActivityAction->setText(i18n("Previous Activity"));
-    previousActivityAction->setData(Plasma::Types::ControlAction);
-    previousActivityAction->setVisible(false);
-
-    KGlobalAccel::self()->setGlobalShortcut(previousActivityAction, Qt::META + Qt::SHIFT + Qt::Key_Tab);
-
     QAction *stopActivityAction = actions()->addAction("stop current activity");
     QObject::connect(stopActivityAction, &QAction::triggered,
                      this, &ShellCorona::stopCurrentActivity);
