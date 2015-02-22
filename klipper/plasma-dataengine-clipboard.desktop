@@ -1,5 +1,6 @@
 [Desktop Entry]
 Name=Clipboard
+Name[bs]=Klipbord
 Name[ca]=Porta-retalls
 Name[cs]=Schránka
 Name[da]=Udklipsholder
@@ -30,6 +31,7 @@ Name[uk]=Буфер обміну
 Name[x-test]=xxClipboardxx
 Name[zh_CN]=剪贴板
 Comment=Clipboard Tool.
+Comment[bs]=Klipbord alat.
 Comment[ca]=Eina de porta-retalls.
 Comment[cs]=Program pro práci se schránkou.
 Comment[da]=Udklipsholderværktøj.

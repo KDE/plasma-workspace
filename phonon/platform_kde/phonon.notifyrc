@@ -69,6 +69,7 @@ Comment[zh_TW]=多媒體系統
 
 [Context/Application]
 Name=Application
+Name[bs]=Aplikacija
 Name[ca]=Aplicació
 Name[cs]=Aplikace
 Name[da]=Program

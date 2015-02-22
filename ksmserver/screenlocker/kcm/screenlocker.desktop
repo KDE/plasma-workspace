@@ -11,6 +11,7 @@ X-KDE-Weight=60
 
 Name=Screen Locking
 Name[ar]=يقفل الشاشة
+Name[bs]=Zaključavanje ekrana
 Name[ca]=Bloqueig de la pantalla
 Name[cs]=Uzamykání obrazovky
 Name[da]=Låsning af skærm
@@ -44,6 +45,7 @@ Name[uk]=Блокування екрана
 Name[x-test]=xxScreen Lockingxx
 Name[zh_CN]=锁屏
 Comment=Screen Locking Timeouts
+Comment[bs]=Pauza zaključavanja ekrana
 Comment[ca]=Temps d'espera pel bloqueig de la pantalla
 Comment[cs]=Časová prodleva pro uzamykání obrazovky
 Comment[da]=Tidsudløb for låsning af skærm

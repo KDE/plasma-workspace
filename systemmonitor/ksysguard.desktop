@@ -10,6 +10,7 @@ X-KDE-Kded-phase=1
 
 Name=KSysguard
 Name[ar]=مرقاب نظام.ك
+Name[bs]=KSysguard
 Name[ca]=KSysguard
 Name[cs]=KSysGuard
 Name[da]=KSysguard
@@ -46,6 +47,7 @@ Name[x-test]=xxKSysguardxx
 Name[zh_CN]=KDE 系统卫士
 Comment=Launches KSysguard on Ctrl + Escape
 Comment[ar]=يُطلِق مرقاب نظام.ك عند الضغط على Ctrl+Escape
+Comment[bs]=Pokreće KSysguard na Ctrl + Escape
 Comment[ca]=Llança el KSysguard amb Ctrl + Esc
 Comment[cs]=Při Ctrl+Esc spustí KSysguard
 Comment[da]=Starter KSysguard med Ctrl + Escape

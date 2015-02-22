@@ -1,6 +1,7 @@
 [SddmGreeterTheme]
 Name=Breeze
 Name[ar]=نسيم
+Name[bs]=Breeze
 Name[ca]=Brisa
 Name[cs]=Breeze
 Name[da]=Breeze
@@ -35,6 +36,7 @@ Name[x-test]=xxBreezexx
 Name[zh_CN]=微风
 Description=Breeze Theme
 Description[ar]=سمة النسيم
+Description[bs]=Breeze Tema
 Description[ca]=Tema Brisa
 Description[cs]=Motiv Breeze
 Description[da]=Breeze-temaet
