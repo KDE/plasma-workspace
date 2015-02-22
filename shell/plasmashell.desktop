@@ -3,6 +3,7 @@ Exec=plasmashell --shut-up
 X-DBUS-StartupType=Unique
 Name=Plasma Desktop Workspace
 Name[ar]=مساحة عمل سطح مكتب بلازما
+Name[bs]=Radni prostor plazma radne površi
 Name[ca]=Espai de treball de l'escriptori Plasma
 Name[ca@valencia]=Espai de treball de l'escriptori Plasma
 Name[cs]=Pracovní plocha Plasma

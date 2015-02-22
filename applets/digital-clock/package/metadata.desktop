@@ -9,7 +9,7 @@ Name[be@latin]=Ličbavy hadzińnik
 Name[bg]=Цифров часовник
 Name[bn]=ডিজিটাল ঘড়ি
 Name[bn_IN]=ডিজিট্যাল ঘড়ি
-Name[bs]=digitalni sat
+Name[bs]=Digitalni sat
 Name[ca]=Rellotge digital
 Name[ca@valencia]=Rellotge digital
 Name[cs]=Digitální hodiny
@@ -88,6 +88,7 @@ Name[zh_CN]=数字钟
 Name[zh_TW]=數位時鐘
 
 Comment=Time displayed in a digital format
+Comment[bs]=Vrijeme prikazano u digitalnom obliku
 Comment[ca]=Mostra l'hora en un format digital
 Comment[cs]=Čas zobrazený v digitální podobě
 Comment[da]=Tiden vist i et digitalt format

@@ -3,6 +3,7 @@ Encoding=UTF-8
 Type=Directory
 Name=Terminal Applications
 Name[ar]=تطبيقات الطرفية
+Name[bs]=Terminalske aplikacije
 Name[ca]=Aplicacions de terminal
 Name[cs]=Terminálové aplikace
 Name[da]=Terminalprogrammer

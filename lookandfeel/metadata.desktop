@@ -1,5 +1,6 @@
 [Desktop Entry]
 Comment=Breeze Desktop Design Language by the KDE VDG
+Comment[bs]=Breeze jezik dizajna radne površine od strane KDE VDG
 Comment[ca]=Llenguatge de disseny d'escriptori Brisa pel VDG del KDE
 Comment[cs]=Jazyk pro návrh pracovní plochy Breeze od KDE VDG
 Comment[da]=Breeze sprog til skrivebordsdesign af KDE VDG
@@ -61,6 +62,7 @@ Keywords[zh_CN]=Desktop;Workspace;Appearance;Look and Feel;Logout;Lock;Suspend;S
 Keywords[zh_TW]=Desktop;Workspace;Appearance;Look and Feel;Logout;Lock;Suspend;Shutdown;Hibernate;
 Name=Breeze
 Name[ar]=نسيم
+Name[bs]=Breeze
 Name[ca]=Brisa
 Name[cs]=Breeze
 Name[da]=Breeze

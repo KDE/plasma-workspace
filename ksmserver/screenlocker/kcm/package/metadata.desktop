@@ -1,6 +1,7 @@
 [Desktop Entry]
 Name=Screen Locking
 Name[ar]=يقفل الشاشة
+Name[bs]=Zaključavanje ekrana
 Name[ca]=Bloqueig de la pantalla
 Name[cs]=Uzamykání obrazovky
 Name[da]=Låsning af skærm
@@ -35,6 +36,7 @@ Name[x-test]=xxScreen Lockingxx
 Name[zh_CN]=锁屏
 Name[zh_TW]=螢幕鎖定
 Comment=Screen Locking Themes
+Comment[bs]=Teme zaključavanja ekrana
 Comment[ca]=Temes per a bloquejar la pantalla
 Comment[cs]=Motiv uzamykání obrazovky
 Comment[da]=Temaer til skærmlås

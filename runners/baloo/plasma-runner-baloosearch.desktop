@@ -1,6 +1,7 @@
 [Desktop Entry]
 Name=Desktop Search
 Name[ar]=بحث سطح المكتب
+Name[bs]=Pretraga radne površine
 Name[ca]=Cerca a l'escriptori
 Name[cs]=Vyhledávací služby
 Name[da]=Skrivebordssøgning
@@ -38,6 +39,7 @@ Name[zh_CN]=桌面搜索
 Name[zh_TW]=桌面搜尋
 Comment=Runner which searches through files, emails and contacts
 Comment[ar]=مشغِّل يبحث في الملفات، والبُرُد الإلكترونية والمتراسلين
+Comment[bs]=Pokretač koji pretražuje kroz fajlove, emailove i kontakte
 Comment[ca]=Executor que cerca per fitxers, correus electrònics i contactes
 Comment[cs]=Spouštěč, který prohledává v souborech, emailech a kontaktech
 Comment[da]=Runner som gennemsøger filer, e-mails og kontakter

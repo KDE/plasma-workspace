@@ -3,6 +3,7 @@ Encoding=UTF-8
 Type=Directory
 Name=Internal Services
 Name[ar]=الخدمات الداخلية
+Name[bs]=Unutrašnji servisi
 Name[ca]=Serveis interns
 Name[cs]=Interní služby
 Name[da]=Interne tjenester

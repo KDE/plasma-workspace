@@ -1,5 +1,6 @@
 [Desktop Entry]
 Name=Clipboard
+Name[bs]=Klipbord
 Name[ca]=Porta-retalls
 Name[cs]=Schránka
 Name[da]=Udklipsholder
@@ -35,6 +36,7 @@ Name[x-test]=xxClipboardxx
 Name[zh_CN]=剪贴板
 Name[zh_TW]=剪貼簿
 Comment=Provides access to the clipboard history.
+Comment[bs]=Omogućava pristup historiji klipborda.
 Comment[ca]=Proporciona accés a l'historial del porta-retalls.
 Comment[cs]=Poskytuje přístup k historii schránky.
 Comment[da]=Giver adgang til udklipsholder-historikken.
