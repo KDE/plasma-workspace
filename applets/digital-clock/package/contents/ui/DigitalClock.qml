@@ -419,7 +419,7 @@ Item {
         // get the time for the given timezone from the dataengine
         var now = dataSource.data[plasmoid.configuration.selectedTimeZones[zone]]["DateTime"];
         // get current UTC time
-        var msUTC = now.getTime() + (now.getTimezoneOffset() * 60000);
+        var msUTC = now.getTime() + (-(now.getTimezoneOffset()) * 60000);
         // add the dataengine TZ offset to it
         var dateTime = new Date(msUTC + (dataSource.data[plasmoid.configuration.selectedTimeZones[zone]]["Offset"] * 1000));
 
@@ -488,7 +488,7 @@ Item {
             }
         }
 
-        tzOffset = new Date().getTimezoneOffset();
+        tzOffset = -(new Date().getTimezoneOffset());
         dateTimeChanged();
         timeFormatCorrection(Qt.locale().timeFormat(Locale.ShortFormat));
         updateToolTip();
