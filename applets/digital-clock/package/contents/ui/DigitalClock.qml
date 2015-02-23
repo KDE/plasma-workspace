@@ -229,10 +229,11 @@ Item {
     MouseArea {
         id: mouseArea
 
+        property int wheelDelta: 0
+
         anchors.fill: parent
 
         onClicked: plasmoid.expanded = !plasmoid.expanded
-
         onWheel: {
             if (!plasmoid.configuration.wheelChangesTimezone) {
                 return;
@@ -240,11 +241,16 @@ Item {
 
             var delta = wheel.angleDelta.y || wheel.angleDelta.x
             var newIndex = main.tzIndex;
-
-            if (delta < 0) {
-                newIndex--;
-            } else if (delta > 0) {
+            wheelDelta += delta;
+            // magic number 120 for common "one click"
+            // See: http://qt-project.org/doc/qt-5/qml-qtquick-wheelevent.html#angleDelta-prop
+            while (wheelDelta >= 120) {
+                wheelDelta -= 120;
                 newIndex++;
+            }
+            while (wheelDelta <= -120) {
+                wheelDelta += 120;
+                newIndex--;
             }
 
             if (newIndex >= plasmoid.configuration.selectedTimeZones.length) {
@@ -253,11 +259,13 @@ Item {
                 newIndex = plasmoid.configuration.selectedTimeZones.length - 1;
             }
 
-            plasmoid.configuration.lastSelectedTimezone = plasmoid.configuration.selectedTimeZones[newIndex];
-            main.tzIndex = newIndex;
+            if (newIndex != main.tzIndex) {
+                plasmoid.configuration.lastSelectedTimezone = plasmoid.configuration.selectedTimeZones[newIndex];
+                main.tzIndex = newIndex;
 
-            dataSource.dataChanged();
-            setupLabels();
+                dataSource.dataChanged();
+                setupLabels();
+            }
         }
     }
 
@@ -411,7 +419,7 @@ Item {
         // get the time for the given timezone from the dataengine
         var now = dataSource.data[plasmoid.configuration.selectedTimeZones[zone]]["DateTime"];
         // get current UTC time
-        var msUTC = now.getTime() + (now.getTimezoneOffset() * 60000);
+        var msUTC = now.getTime() + (-(now.getTimezoneOffset()) * 60000);
         // add the dataengine TZ offset to it
         var dateTime = new Date(msUTC + (dataSource.data[plasmoid.configuration.selectedTimeZones[zone]]["Offset"] * 1000));
 
@@ -480,7 +488,7 @@ Item {
             }
         }
 
-        tzOffset = new Date().getTimezoneOffset();
+        tzOffset = -(new Date().getTimezoneOffset());
         dateTimeChanged();
         timeFormatCorrection(Qt.locale().timeFormat(Locale.ShortFormat));
         updateToolTip();
