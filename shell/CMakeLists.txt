@@ -79,6 +79,7 @@ target_link_libraries(plasmashell
  KF5::IconThemes
  KF5::Activities
  KF5::GlobalAccel
+ KF5::CoreAddons
  KF5::DBusAddons
  KF5::Screen
  KF5::Declarative

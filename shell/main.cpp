@@ -22,6 +22,7 @@
 #include <QQuickWindow>
 #include <QSessionManager>
 #include <QDebug>
+#include <KAboutData>
 
 #include <kdbusservice.h>
 #include <klocalizedstring.h>
@@ -45,10 +46,15 @@ int main(int argc, char *argv[])
     KLocalizedString::setApplicationDomain("plasmashell");
 
     QApplication app(argc, argv);
-    app.setApplicationName("plasmashell");
-    app.setApplicationDisplayName(i18n("Plasma"));
-    app.setOrganizationDomain("kde.org");
-    app.setApplicationVersion(PROJECT_VERSION);
+
+    KAboutData aboutData("plasmashell",
+                        i18n("Plasma"),
+                        QStringLiteral(PROJECT_VERSION),
+                        i18n(description),
+                        KAboutLicense::GPL);
+
+    KAboutData::setApplicationData(aboutData);
+
     app.setQuitOnLastWindowClosed(false);
     app.setWindowIcon(QIcon::fromTheme("plasma"));
 
@@ -92,6 +98,8 @@ int main(int argc, char *argv[])
     cliOptions.addOption(standaloneOption);
 
     cliOptions.process(app);
+
+    KAboutData::applicationData().setupCommandLine(&cliOptions);
 
     if (cliOptions.isSet(shutupOption)) {
         qInstallMsgHandler(noMessageOutput);
