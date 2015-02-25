@@ -35,6 +35,7 @@ Name[sv]=Kör program
 Name[uk]=KRunner
 Name[x-test]=xxKRunnerxx
 Name[zh_CN]=KRunner
+Name[zh_TW]=KRunner
 OnlyShowIn=KDE;
 Type=Application
 X-DBUS-StartupType=Unique

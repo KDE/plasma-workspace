@@ -29,6 +29,7 @@ Name[sv]=Layoutmall
 Name[uk]=Шаблон компонування
 Name[x-test]=xxLayout Templatexx
 Name[zh_CN]=布局模板
+Name[zh_TW]=佈局樣本
 Type=Service
 X-KDE-ServiceTypes=Plasma/PackageStructure
 X-KDE-Library=plasma_packagestructure_layouttemplate
