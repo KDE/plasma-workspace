@@ -22,20 +22,27 @@
 #include <QDebug>
 #include <QNetworkConfigurationManager>
 #include <KServiceTypeTrader>
+#include <NetworkManagerQt/Manager>
 
 static const char SOURCE[] = "location";
 
 Geolocation::Geolocation(QObject* parent, const QVariantList& args)
     : Plasma::DataEngine(parent, args)
-    , m_networkManager(new QNetworkConfigurationManager(this))
 {
     Q_UNUSED(args)
     setMinimumPollingInterval(500);
-    connect(m_networkManager, SIGNAL(onlineStateChanged(bool)),
-            this, SLOT(networkStatusChanged(bool)));
+    connect(NetworkManager::notifier(), &NetworkManager::Notifier::networkingEnabledChanged, this, &Geolocation::networkStatusChanged);
+    connect(NetworkManager::notifier(), &NetworkManager::Notifier::wirelessEnabledChanged, this, &Geolocation::networkStatusChanged);
     m_updateTimer.setInterval(100);
     m_updateTimer.setSingleShot(true);
     connect(&m_updateTimer, SIGNAL(timeout()), this, SLOT(actuallySetData()));
+    m_networkChangedTimer.setInterval(100);
+    m_networkChangedTimer.setSingleShot(true);
+    connect(&m_networkChangedTimer, &QTimer::timeout, this,
+        [this] {
+            updatePlugins(GeolocationProvider::NetworkConnected);
+        }
+    );
     init();
 }
 
@@ -111,7 +118,7 @@ void Geolocation::networkStatusChanged(bool isOnline)
 {
     qDebug() << "network status changed";
     if (isOnline) {
-        updatePlugins(GeolocationProvider::NetworkConnected);
+        m_networkChangedTimer.start();
     }
 }
 

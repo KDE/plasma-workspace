@@ -25,7 +25,6 @@
 #include "geolocationprovider.h"
 
 class GeolocationProvider;
-class QNetworkConfigurationManager;
 
 class Geolocation : public Plasma::DataEngine
 {
@@ -51,9 +50,9 @@ class Geolocation : public Plasma::DataEngine
     private:
         Data m_data;
         EntryAccuracy m_accuracy;
-        QNetworkConfigurationManager *m_networkManager;
         QList<GeolocationProvider *> m_plugins;
         QTimer m_updateTimer;
+        QTimer m_networkChangedTimer;
 };
 
 #endif

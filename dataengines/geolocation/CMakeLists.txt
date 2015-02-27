@@ -31,6 +31,7 @@ target_link_libraries(plasma_engine_geolocation
     KF5::Plasma
     KF5::CoreAddons
     KF5::KIOCore
+    KF5::NetworkManagerQt
     KF5::Service
     KF5::Solid)
 kcoreaddons_desktop_to_json(plasma_engine_geolocation plasma-dataengine-geolocation.desktop)
@@ -43,7 +44,7 @@ install(FILES plasma-geolocationprovider.desktop DESTINATION ${KDE_INSTALL_KSERV
 
 set(plasma_geolocation_ip_SRCS location_ip.cpp)
 add_library(plasma-geolocation-ip MODULE ${plasma_geolocation_ip_SRCS})
-target_link_libraries(plasma-geolocation-ip plasma-geolocation-interface KF5::KIOCore)
+target_link_libraries(plasma-geolocation-ip plasma-geolocation-interface KF5::KIOCore KF5::NetworkManagerQt)
 install(FILES plasma-geolocation-ip.desktop DESTINATION ${KDE_INSTALL_KSERVICES5DIR})
 install(TARGETS plasma-geolocation-ip DESTINATION ${KDE_INSTALL_PLUGINDIR})
 

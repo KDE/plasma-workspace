@@ -27,6 +27,9 @@
 #include <KJob>
 #include <KIO/Job>
 #include <KIO/TransferJob>
+#include <KSharedConfig>
+#include <NetworkManagerQt/Manager>
+#include <NetworkManagerQt/WirelessDevice>
 
 class Ip::Private : public QObject {
     Q_OBJECT
@@ -131,11 +134,45 @@ Ip::~Ip()
     delete d;
 }
 
+static QJsonArray accessPoints()
+{
+    QJsonArray wifiAccessPoints;
+    const KConfigGroup config = KSharedConfig::openConfig()->group(QStringLiteral("org.kde.plasma.geolocation.ip"));
+    if (!NetworkManager::isWirelessEnabled() || !config.readEntry("Wifi", false)) {
+        return wifiAccessPoints;
+    }
+    for (const auto &device : NetworkManager::networkInterfaces()) {
+        QSharedPointer<NetworkManager::WirelessDevice> wifi = qSharedPointerDynamicCast<NetworkManager::WirelessDevice>(device);
+        if (!wifi) {
+            continue;
+        }
+        for (const auto &network : wifi->networks()) {
+            const QString &ssid = network->ssid();
+            if (ssid.isEmpty() || ssid.endsWith(QLatin1String("_nomap"))) {
+                // skip hidden SSID and networks with "_nomap"
+                continue;
+            }
+            for (const auto &accessPoint : network->accessPoints()) {
+                wifiAccessPoints.append(QJsonObject{{QStringLiteral("macAddress"), accessPoint->hardwareAddress()}});
+            }
+        }
+    }
+    return wifiAccessPoints;
+}
+
 void Ip::update()
 {
     d->clear();
-    // TODO: add wifi data if available
-    const QByteArray postData = QByteArrayLiteral("{}");
+    if (!NetworkManager::isNetworkingEnabled()) {
+        setData(Plasma::DataEngine::Data());
+        return;
+    }
+    const QJsonArray wifiAccessPoints = accessPoints();
+    QJsonObject request;
+    if (wifiAccessPoints.count() >= 2) {
+        request.insert(QStringLiteral("wifiAccessPoints"), wifiAccessPoints);
+    }
+    const QByteArray postData = QJsonDocument(request).toJson(QJsonDocument::Compact);
     const QString apiKey = QStringLiteral("60e8eae6-3988-4ada-ad48-2cfddddf216b");
     KIO::TransferJob *datajob = KIO::http_post(QUrl(QStringLiteral("https://location.services.mozilla.com/v1/geolocate?key=%1").arg(apiKey)),
                                                postData,

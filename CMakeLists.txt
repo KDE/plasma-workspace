@@ -13,7 +13,7 @@ set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH} ${ECM_KDE_MODULE_DIR})
 
 find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS
                     Plasma DocTools Runner JsEmbed NotifyConfig Su NewStuff Wallet KCMUtils
-                    IdleTime Declarative TextWidgets KDELibs4Support Crash GlobalAccel)
+                    IdleTime Declarative TextWidgets KDELibs4Support Crash GlobalAccel NetworkManagerQt)
 find_package(KF5XmlRpcClient REQUIRED)
 
 # WARNING PlasmaQuick provides unversioned CMake config
