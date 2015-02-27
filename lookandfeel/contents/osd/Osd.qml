@@ -38,7 +38,7 @@ PlasmaCore.Dialog {
     property bool showingProgress: false
 
     mainItem: Item {
-        height: units.gridUnit * 15
+        height: Math.min(units.gridUnit * 15, Screen.desktopAvailableHeight / 3)
         width: height
 
         //  /--------------------\
