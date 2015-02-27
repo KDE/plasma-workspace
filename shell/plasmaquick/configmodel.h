@@ -1,5 +1,6 @@
 /*
  *   Copyright 2013 Marco Martin <mart@kde.org>
+ *   Copyright 2015 Eike Hein <hein@kde.org>
  *
  *   This program is free software; you can redistribute it and/or modify
  *   it under the terms of the GNU Library General Public License as
@@ -20,7 +21,6 @@
 #ifndef CONFIGMODEL_H
 #define CONFIGMODEL_H
 
-
 #include <QQmlListProperty>
 #include <QAbstractListModel>
 
@@ -36,20 +36,22 @@
 // We mean it.
 //
 
-namespace Plasma {
-    class Applet;
+namespace Plasma
+{
+class Applet;
 }
 
 namespace PlasmaQuick
 {
 
+class ConfigPropertyMap;
 
 class ConfigCategoryPrivate;
 
 class ConfigModelPrivate;
 class ConfigCategory;
 
-/**
+/*
  * This model contains all the possible config categories for a dialog,
  * such as categories of the config dialog for an Applet
  * TODO: it should probably become an import instead of a library?
@@ -63,10 +65,11 @@ class ConfigModel : public QAbstractListModel
 
 public:
     enum Roles {
-        NameRole = Qt::UserRole+1,
+        NameRole = Qt::UserRole + 1,
         IconRole,
         SourceRole,
-        PluginNameRole
+        PluginNameRole,
+        VisibleRole
     };
     ConfigModel(QObject *parent = 0);
     ~ConfigModel();
@@ -78,6 +81,9 @@ public:
     void appendCategory(const QString &iconName, const QString &name,
                         const QString &path, const QString &pluginName);
 
+    void appendCategory(const QString &iconName, const QString &name,
+                        const QString &path, const QString &pluginName, bool visible);
+
     /**
      * clears the model
      **/
@@ -86,9 +92,12 @@ public:
     void setApplet(Plasma::Applet *interface);
     Plasma::Applet *applet() const;
 
-    int count() {return rowCount();}
-    virtual int rowCount(const QModelIndex &index = QModelIndex()) const;
-    virtual QVariant data(const QModelIndex&, int) const;
+    int count()
+    {
+        return rowCount();
+    }
+    int rowCount(const QModelIndex &index = QModelIndex()) const Q_DECL_OVERRIDE;
+    QVariant data(const QModelIndex &, int) const Q_DECL_OVERRIDE;
 
     /**
      * @param row the row for which the data will be returned
