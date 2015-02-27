@@ -22,7 +22,7 @@ import org.kde.plasma.extras 2.0 as PlasmaExtra
 
 Item {
     property QtObject rootItem
-    height: units.gridUnit * 15
+    height: Math.min(units.gridUnit * 15, Screen.desktopAvailableHeight / 3)
     width: height
 
     //  /--------------------\
