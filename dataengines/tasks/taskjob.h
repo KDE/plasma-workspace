@@ -22,7 +22,7 @@
 // plasma
 #include <Plasma/ServiceJob>
 
-//taskmanger
+//taskmanager
 #include <groupmanager.h>
 #include <taskactions.h>
 #include <taskgroup.h>

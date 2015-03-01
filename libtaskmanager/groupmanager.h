@@ -147,7 +147,7 @@ public:
     void setScreenGeometry(const QRect& geometry);
 
     /**
-     * Reconnect all neccessary signals to the taskmanger, and clear the per desktop stored rootGroups
+     * Reconnect all neccessary signals to the taskmanager, and clear the per desktop stored rootGroups
      */
     void reconnect();
 
