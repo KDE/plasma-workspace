@@ -32,7 +32,7 @@ PlasmaComponents.ButtonRow {
     property bool canReboot
     property bool canShutdown
     property bool canLogout
-    property string mode: "shutdown"
+    property string mode
     onModeChanged: {
         switch (mode) {
         case "reboot":
