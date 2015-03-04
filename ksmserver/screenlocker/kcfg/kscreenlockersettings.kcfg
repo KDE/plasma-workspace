@@ -5,11 +5,16 @@
                            http://www.kde.org/standards/kcfg/1.0/kcfg.xsd" >
   <kcfgfile name="kscreenlockerrc" />
   <group name="Daemon">
+    <entry key="Autolock" type="Bool">
+      <default>true</default>
+      <label>Screen lock enabled</label>
+      <whatsthis>Sets whether the screen will be locked after the specified time.</whatsthis>
+    </entry>
     <entry key="Timeout" type="Int">
       <default>5</default>
-      <min>0</min>
+      <min>1</min>
       <label>Screen saver timeout</label>
-      <whatsthis>Sets the minutes after which the screen saver is started.</whatsthis>
+      <whatsthis>Sets the minutes after which the screen is locked.</whatsthis>
     </entry>
     <entry key="Lock" type="Bool">
       <default>true</default>
