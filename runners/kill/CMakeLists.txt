@@ -1,5 +1,3 @@
-project(plasma-runner-kill)
-
 add_definitions(-DTRANSLATION_DOMAIN=\"plasma_runner_kill\")
 
 set(krunner_kill_SRCS killrunner.cpp)

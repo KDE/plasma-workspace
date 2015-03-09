@@ -1,5 +1,3 @@
-project(plasma-containmentactions-paste)
-
 set(paste_SRCS
     paste.cpp
 )

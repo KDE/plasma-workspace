@@ -1,5 +1,3 @@
-project(plasma-statusnotifieritem_engine)
-
 include_directories(${plasma-workspace_SOURCE_DIR}/statusnotifierwatcher)
 include_directories(${dbusmenu-qt5_INCLUDE_DIRS})
 

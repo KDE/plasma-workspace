@@ -1,8 +1,3 @@
-project(kuiserver_engine)
-
-#include (KDE4Defaults)
-#include (MacroLibrary)
-
 add_definitions(-DTRANSLATION_DOMAIN=\"plasma_engine_applicationjobs\")
 
 set(kuiserver_engine_SRCS

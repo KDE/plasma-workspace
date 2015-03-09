@@ -1,5 +1,3 @@
-project(plasma-dataengine-mpris2)
-
 add_definitions(-DTRANSLATION_DOMAIN=\"plasma_engine_mpris2\")
 add_definitions(-DQT_USE_FAST_CONCATENATION -DQT_USE_FAST_OPERATOR_PLUS)
 

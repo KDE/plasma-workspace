@@ -1,5 +1,3 @@
-project("statusnotifiertest")
-
 set(statusnotifiertest_SRCS
     main.cpp
     statusnotifiertest.cpp

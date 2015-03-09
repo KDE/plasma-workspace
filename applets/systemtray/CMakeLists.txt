@@ -1,5 +1,3 @@
-project(plasma-systemtray)
-
 add_subdirectory(plugin)
 add_subdirectory(tests)
 

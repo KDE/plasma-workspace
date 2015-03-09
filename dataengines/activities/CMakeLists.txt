@@ -1,5 +1,3 @@
-project(activityengine)
-
 set(activity_engine_SRCS
         ActivityData.cpp
         activityengine.cpp

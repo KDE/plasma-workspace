@@ -1,5 +1,3 @@
-project(plasma-containmentactions-switchactivity)
-
 set(switchactivity_SRCS
     switch.cpp
 )

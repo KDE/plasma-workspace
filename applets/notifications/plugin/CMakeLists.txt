@@ -1,5 +1,3 @@
-project(notificationshelper)
-
 set(notificationshelper_SRCS
     notificationshelper.cpp
     notificationshelperplugin.cpp

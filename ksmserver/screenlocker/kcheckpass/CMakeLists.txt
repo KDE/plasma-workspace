@@ -1,5 +1,3 @@
-project(KCheckPass)
-
 include_directories( ${UNIXAUTH_INCLUDE_DIRS} )
 check_include_files(paths.h HAVE_PATHS_H)
 configure_file (config-kcheckpass.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-kcheckpass.h )

@@ -1,5 +1,3 @@
-project (freespacenotifier)
-
 add_definitions(-DTRANSLATION_DOMAIN=\"freespacenotifier\")
 
 set(kded_freespacenotifier_SRCS freespacenotifier.cpp module.cpp)

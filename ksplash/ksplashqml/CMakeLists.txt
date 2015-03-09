@@ -1,5 +1,3 @@
-project(ksplashqml)
-
 add_subdirectory(themes)
 
 set(ksplashqml_SRCS

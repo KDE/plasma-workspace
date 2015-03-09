@@ -1,5 +1,3 @@
-project(plasma-containmentactions-applauncher)
-
 set(applauncher_SRCS
     launch.cpp
 )

@@ -1,5 +1,3 @@
-project(packagekitengine)
-
 set(packagekit_engine_SRCS
     packagekitjob.cpp
     packagekitengine.cpp

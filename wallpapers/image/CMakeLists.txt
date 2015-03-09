@@ -1,5 +1,3 @@
-project(plasma-wallpaper-image)
-
 add_definitions(-DTRANSLATION_DOMAIN=\"plasma_applet_org.kde.image\")
 
 set(image_SRCS

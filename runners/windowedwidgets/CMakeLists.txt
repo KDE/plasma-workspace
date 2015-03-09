@@ -1,5 +1,3 @@
-project(windowedwidgetsrunner)
-
 add_definitions(-DTRANSLATION_DOMAIN=\"plasma_runner_windowedwidgets\")
 
 add_library(krunner_windowedwidgets MODULE windowedwidgetsrunner.cpp)

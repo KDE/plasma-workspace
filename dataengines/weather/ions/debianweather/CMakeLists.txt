@@ -1,6 +1,3 @@
-# Project Needs a name ofcourse
-project(iondebianweather)
- 
 # We add our source code here
 set(karaboudjan_SRCS iondebianweather.cpp)
  

@@ -1,5 +1,3 @@
-project(kglobalaccel)
-
 add_definitions(-DTRANSLATION_DOMAIN=\"kglobalaccel5\")
 
 ###############################################################################

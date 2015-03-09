@@ -1,5 +1,3 @@
-project(kdbgwin)
-
 set(kdbgwin_SRCS
     common.h
     main.cpp

@@ -1,5 +1,3 @@
-project(drkonqi)
-
 include (CheckFunctionExists)
 
 check_function_exists("strsignal" HAVE_STRSIGNAL)

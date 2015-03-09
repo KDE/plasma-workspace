@@ -2,8 +2,6 @@
 # define the cmake variable KDEBASE_DISABLE_MULTIMEDIA, i.e,
 # % cmake -DKDEBASE_DISABLE_MULTIMEDIA=ON
 #
-project(PHONON-KDE-RUNTIME)
-
 add_definitions(-DQT_USE_FAST_CONCATENATION -DQT_USE_FAST_OPERATOR_PLUS)
 
 find_package(Phonon4Qt5 4.6.60 NO_MODULE)

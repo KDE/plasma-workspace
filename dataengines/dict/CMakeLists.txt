@@ -1,5 +1,3 @@
-project(plasma-dictengine)
-
 set(dict_engine_SRCS
     dictengine.cpp
 )

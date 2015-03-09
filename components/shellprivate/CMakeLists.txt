@@ -1,5 +1,3 @@
-project(plasmashellprivateplugin)
-
 add_definitions(-DTRANSLATION_DOMAIN=\"plasmashellprivateplugin\")
 
 if (KF5TextEditor_FOUND)

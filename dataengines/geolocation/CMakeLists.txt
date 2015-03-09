@@ -1,7 +1,3 @@
-project(geolocation)
-
-# -------------------------------------------------------------------------------------------------
-
 set(plasma_geolocation_interface_SRCS geolocationprovider.cpp)
 add_library(plasma-geolocation-interface SHARED ${plasma_geolocation_interface_SRCS})
 target_link_libraries(plasma-geolocation-interface

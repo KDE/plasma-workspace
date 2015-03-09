@@ -1,6 +1,3 @@
-project(plasmashell)
-
-
 # Tell CMake to run moc when necessary:
 set(CMAKE_AUTOMOC ON)
 # As moc files are generated in the binary dir, tell CMake

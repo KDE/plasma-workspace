@@ -1,5 +1,3 @@
-project(StatusNotifierWatcher)
-
 set(kded_statusnotifierwatcher_SRCS statusnotifierwatcher.cpp )
 
 qt5_add_dbus_adaptor(kded_statusnotifierwatcher_SRCS     ${KNOTIFICATIONS_DBUS_INTERFACES_DIR}/kf5_org.kde.StatusNotifierWatcher.xml

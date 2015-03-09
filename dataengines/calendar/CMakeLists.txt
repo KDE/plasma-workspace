@@ -1,5 +1,3 @@
-project(calendar_engine)
-
 include_directories(
         ${KDEPIMLIBS_INCLUDE_DIRS}
         ${Boost_INCLUDE_DIR}

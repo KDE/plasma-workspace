@@ -1,5 +1,3 @@
-project(plasma-containmentactions-switchdesktop)
-
 set(switchdesktop_SRCS
     desktop.cpp
 )

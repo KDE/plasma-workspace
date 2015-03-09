@@ -1,4 +1,3 @@
-project(plasma-system-monitor)
 include_directories(${CMAKE_CURRENT_SOURCE_DIR} )
 
 # lib
