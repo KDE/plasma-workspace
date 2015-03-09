@@ -77,5 +77,7 @@ Item {
         horizontalAlignment: Text.AlignHCenter
         wrapMode: Text.NoWrap
         elide: Text.ElideLeft
+        minimumPointSize: theme.defaultFont.pointSize
+        fontSizeMode: Text.HorizontalFit
     }
 }
