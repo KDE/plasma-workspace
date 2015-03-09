@@ -4,7 +4,7 @@ set(krunner_sessions_SRCS
     sessionrunner.cpp
 )
 
-set(screensaver_xml ${ksmserver_SOURCE_DIR}/screenlocker/dbus/org.freedesktop.ScreenSaver.xml)
+set(screensaver_xml ${plasma-workspace_SOURCE_DIR}/ksmserver/screenlocker/dbus/org.freedesktop.ScreenSaver.xml)
 qt5_add_dbus_interface(krunner_sessions_SRCS ${screensaver_xml} screensaver_interface)
 
 add_library(krunner_sessions MODULE ${krunner_sessions_SRCS})
