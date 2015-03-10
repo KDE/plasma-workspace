@@ -1068,7 +1068,7 @@ void GroupManager::setLauncherList(QList<QUrl> launcherList)
 
         l.setQuery(QUrlQuery());
 
-        if (addLauncher(l, QIcon(), name, genericName, wmClass)) {
+        if (addLauncher(l, icon, name, genericName, wmClass)) {
             urls << l;
         }
     }
