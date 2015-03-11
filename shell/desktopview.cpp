@@ -234,8 +234,13 @@ bool DesktopView::isDashboardShown() const
 void DesktopView::showConfigurationInterface(Plasma::Applet *applet)
 {
     if (m_configView) {
-        m_configView.data()->hide();
-        m_configView.data()->deleteLater();
+        if (m_configView->applet() != applet) {
+            m_configView->hide();
+            m_configView->deleteLater();
+        } else {
+            m_configView->requestActivate();
+            return;
+        }
     }
 
     if (!applet || !applet->containment()) {

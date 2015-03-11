@@ -554,6 +554,7 @@ void PanelView::showConfigurationInterface(Plasma::Applet *applet)
     } else if (m_panelConfigView) {
         if (m_panelConfigView->applet() == applet) {
             m_panelConfigView->show();
+            m_panelConfigView->requestActivate();
             return;
         } else {
             m_panelConfigView->hide();
