@@ -32,8 +32,6 @@ Column {
 
     spacing: jobItem.layoutSpacing
 
-    readonly property string labelName1: jobItem.getData(jobsSource.data, "labelName1", '')
-    readonly property string label1: jobItem.getData(jobsSource.data, "label1", '')
     readonly property int eta: jobItem.getData(jobsSource.data, "eta", 0)
     readonly property string speed: jobItem.getData(jobsSource.data, "speed", '')
 
