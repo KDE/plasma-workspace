@@ -84,14 +84,28 @@ Item {
         model: host.hiddenTasks
 
         delegate: TaskListDelegate {}
-        visible: root.expandedTask == null || root.expandedTask.status == SystemTray.Task.Passive
+        visible: {
+            // Normal system tray case; clicked on arrow
+            if (root.expandedTask == null) {
+                return true;
+            // In case applet is hidden; we should show sidebar
+            } else if (plasmoid.configuration.hiddenItems.indexOf(root.expandedTask.taskId) != -1) {
+                return true;
+            // In case applet is shown; we should not show sidebar
+            } else if (plasmoid.configuration.shownItems.indexOf(root.expandedTask.taskId) != -1) {
+                return false;
+            }
+            // At last verify the passive status of applet
+            return root.expandedTask.status == SystemTray.Task.Passive;
+        }
+
     }
 
     PlasmaCore.SvgItem {
         id: separator
 
         width: lineSvg.elementSize("vertical-line").width;
-        visible: root.expandedTask != null && root.expandedTask.status == SystemTray.Task.Passive
+        visible: root.expandedTask != null && hiddenView.visible
 
         anchors {
             left: parent.left
