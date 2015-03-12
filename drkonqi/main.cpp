@@ -130,7 +130,7 @@ int main(int argc, char* argv[])
     DrKonqi::setKeepRunning(parser.isSet(keepRunningOption));
     DrKonqi::setThread(parser.value(threadOption).toInt());
 
-#if HAVE_X11 && QT_VERSION >= QT_VERSION_CHECK(5, 4, 0)
+#if HAVE_X11
     const QString startupId = parser.value(startupIdOption);
     if (!startupId.isEmpty()) {
         QX11Info::setNextStartupId(startupId.toUtf8());

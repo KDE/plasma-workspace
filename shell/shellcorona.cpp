@@ -175,9 +175,7 @@ ShellCorona::ShellCorona(QObject *parent)
 
     new Osd(this);
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
     connect(qGuiApp, &QGuiApplication::screenRemoved, this, &ShellCorona::screenRemoved);
-#endif
 }
 
 ShellCorona::~ShellCorona()

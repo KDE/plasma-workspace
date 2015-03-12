@@ -101,18 +101,13 @@ View::View(QWindow *)
 
     auto screenAdded = [=](QScreen* screen) {
         connect(screen, &QScreen::geometryChanged, this, &View::screenGeometryChanged);
-#if (QT_VERSION < QT_VERSION_CHECK(5, 4, 0))
-        connect(screen, &QObject::destroyed, this, [=](){screenRemoved(screen);});
-#endif
         screenGeometryChanged();
     };
 
     foreach(QScreen* s, QGuiApplication::screens())
         screenAdded(s);
     connect(qApp, &QGuiApplication::screenAdded, this, screenAdded);
-#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
     connect(qApp, &QGuiApplication::screenRemoved, this, screenRemoved);
-#endif
 
     connect(KWindowSystem::self(), &KWindowSystem::workAreaChanged, this, &View::resetScreenPos);
 

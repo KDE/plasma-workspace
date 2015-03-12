@@ -73,7 +73,6 @@ protected Q_SLOTS:
      * It will be called when the configuration is requested
      */
     virtual void showConfigurationInterface(Plasma::Applet *applet);
-    void screenDestroyed(QObject* screen);
 
 Q_SIGNALS:
     void stayBehindChanged();
