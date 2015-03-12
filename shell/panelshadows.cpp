@@ -473,9 +473,6 @@ void PanelShadows::Private::updateShadow(const QWindow *window, Plasma::FrameSvg
     }
 
     Display *dpy = QX11Info::display();
-    if (!dpy) {
-        return;
-    }
     Atom atom = XInternAtom(dpy, "_KDE_NET_WM_SHADOW", False);
 
 //     qDebug() << "going to set the shadow of" << window->winId() << "to" << data;
@@ -494,9 +491,6 @@ void PanelShadows::Private::clearShadow(const QWindow *window)
         return;
     }
     Display *dpy = QX11Info::display();
-    if (!dpy) {
-        return;
-    }
     Atom atom = XInternAtom(dpy, "_KDE_NET_WM_SHADOW", False);
     XDeleteProperty(dpy, window->winId(), atom);
 #else
