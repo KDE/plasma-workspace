@@ -33,8 +33,8 @@ class PowerDevilRunner : public Plasma::AbstractRunner
         PowerDevilRunner( QObject *parent, const QVariantList &args );
         ~PowerDevilRunner();
 
-        void match( Plasma::RunnerContext &context );
-        void run( const Plasma::RunnerContext &context, const Plasma::QueryMatch &action );
+        void match( Plasma::RunnerContext &context ) Q_DECL_OVERRIDE;
+        void run( const Plasma::RunnerContext &context, const Plasma::QueryMatch &action ) Q_DECL_OVERRIDE;
 
     private Q_SLOTS:
         void updateStatus();
@@ -47,8 +47,6 @@ class PowerDevilRunner : public Plasma::AbstractRunner
 
         StringStringMap m_availableProfiles;
         QHash<QString, QString> m_profileIcon;
-        QHash<int, QString> m_suspendMethods;
-        QHash<QString, int> m_synonyms;
 
         int m_shortestCommand;
 };

@@ -35,8 +35,8 @@ class SessionRunner : public Plasma::AbstractRunner
         SessionRunner(QObject *parent, const QVariantList &args);
         ~SessionRunner();
 
-        void match(Plasma::RunnerContext &context);
-        void run(const Plasma::RunnerContext &context, const Plasma::QueryMatch &action);
+        void match(Plasma::RunnerContext &context) Q_DECL_OVERRIDE;
+        void run(const Plasma::RunnerContext &context, const Plasma::QueryMatch &action) Q_DECL_OVERRIDE;
 
         enum { LogoutAction = 1, ShutdownAction, RestartAction, LockAction };
 

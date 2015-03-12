@@ -36,10 +36,9 @@
 K_EXPORT_PLASMA_RUNNER(powerdevil, PowerDevilRunner)
 
 PowerDevilRunner::PowerDevilRunner(QObject *parent, const QVariantList &args)
-        : Plasma::AbstractRunner(parent, args),
-          m_shortestCommand(1000)
+    : Plasma::AbstractRunner(parent, args),
+      m_shortestCommand(1000)
 {
-    Q_UNUSED(args)
     qDBusRegisterMetaType< StringStringMap >();
 
     setObjectName( QLatin1String("PowerDevil" ));
@@ -241,14 +240,6 @@ void PowerDevilRunner::match(Plasma::RunnerContext &context)
             match2.setRelevance(1);
             match2.setId("DimHalf");
             matches.append(match2);
-
-            Plasma::QueryMatch match3(this);
-            match3.setType(Plasma::QueryMatch::ExactMatch);
-            match3.setIcon(QIcon::fromTheme("video-display"));
-            match3.setText(i18n("Turn off screen"));
-            match3.setRelevance(1);
-            match3.setId("TurnOffScreen");
-            matches.append(match3);
         }
     } else if (term.compare(i18nc("Note this is a KRunner keyword", "suspend"), Qt::CaseInsensitive) == 0) {
         QSet< Solid::PowerManagement::SleepState > states = Solid::PowerManagement::supportedSleepStates();
@@ -304,17 +295,18 @@ void PowerDevilRunner::run(const Plasma::RunnerContext &context, const Plasma::Q
     QDBusInterface iface("org.kde.Solid.PowerManagement",
                          "/org/kde/Solid/PowerManagement",
                          "org.kde.Solid.PowerManagement");
+    QDBusInterface brightnessIface("org.kde.Solid.PowerManagement",
+                                   "/org/kde/Solid/PowerManagement/Actions/BrightnessControl",
+                                   "org.kde.Solid.PowerManagement.Actions.BrightnessControl");
     if (match.id().startsWith("PowerDevil_ProfileChange")) {
         iface.asyncCall("loadProfile", match.data().toString());
     } else if (match.id() == "PowerDevil_BrightnessChange") {
-        iface.asyncCall("setBrightness", match.data().toInt());
+        brightnessIface.asyncCall("setBrightness", match.data().toInt());
     } else if (match.id() == "PowerDevil_DimTotal") {
-        iface.asyncCall("setBrightness", 0);
+        brightnessIface.asyncCall("setBrightness", 0);
     } else if (match.id() == "PowerDevil_DimHalf") {
-        iface.asyncCall("setBrightness", -2);
-    } else if (match.id() == "PowerDevil_TurnOffScreen") {
-        // FIXME: Maybe this should be even removed
-        // iface.asyncCall("turnOffScreen");
+        QDBusReply<int> brightness = brightnessIface.asyncCall("brightness");
+        brightnessIface.asyncCall("setBrightness", static_cast<int>(brightness / 2));
     } else if (match.id().startsWith("PowerDevil_Suspend")) {
         switch ((Solid::PowerManagement::SleepState)match.data().toInt()) {
             case Solid::PowerManagement::SuspendState:
