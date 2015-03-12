@@ -35,7 +35,9 @@ Column {
     readonly property int animationDuration: units.shortDuration * 2
 
     readonly property string labelName0: getData(jobsSource.data, "labelName0", '')
+    readonly property string labelName1: getData(jobsSource.data, "labelName1", '')
     readonly property string label0: getData(jobsSource.data, "label0", '')
+    readonly property string label1: getData(jobsSource.data, "label1", '')
     readonly property string jobstate: getData(jobsSource.data, "state", '')
 
     function getData(data, name, defaultValue) {
