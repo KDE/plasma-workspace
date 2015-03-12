@@ -155,6 +155,7 @@ Column {
         PlasmaComponents.ToolButton {
             id: pauseButton
             iconSource: jobItem.jobstate == "suspended" ? "media-playback-start" : "media-playback-pause"
+            visible: getData(jobsSource.data, "suspendable", 0)
 
             onClicked: {
                 var operationName = "suspend"
@@ -170,6 +171,7 @@ Column {
         PlasmaComponents.ToolButton {
             id: stopButton
             iconSource: "media-playback-stop"
+            visible: getData(jobsSource.data, "killable", 0)
 
             onClicked: {
                 cancelledJobs.push(modelData) // register that it was user-cancelled
