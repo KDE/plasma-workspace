@@ -31,8 +31,6 @@
 #include "standaloneappcorona.h"
 #include "shellmanager.h"
 
-static const char description[] = "Plasma Shell";
-
 void noMessageOutput(QtMsgType type, const char *msg)
 {
      Q_UNUSED(type);
@@ -48,10 +46,10 @@ int main(int argc, char *argv[])
     QApplication app(argc, argv);
 
     KAboutData aboutData("plasmashell",
-                        i18n("Plasma"),
-                        QStringLiteral(PROJECT_VERSION),
-                        i18n(description),
-                        KAboutLicense::GPL);
+                         i18n("Plasma Shell"),
+                         QStringLiteral(PROJECT_VERSION),
+                         i18n("Plasma Shell"),
+                         KAboutLicense::GPL);
 
     KAboutData::setApplicationData(aboutData);
 
@@ -59,8 +57,6 @@ int main(int argc, char *argv[])
     app.setWindowIcon(QIcon::fromTheme("plasma"));
 
     QCommandLineParser cliOptions;
-    cliOptions.setApplicationDescription(description);
-    cliOptions.addVersionOption();
     cliOptions.addHelpOption();
 
     QCommandLineOption dbgOption(QStringList() << QStringLiteral("d") <<
@@ -87,7 +83,7 @@ int main(int argc, char *argv[])
                                          QStringLiteral("plugin"));
 
     QCommandLineOption standaloneOption(QStringList() << QStringLiteral("a") << QStringLiteral("standalone"),
-                                         i18n("Load plasmashell as a standalone application, needs the shell-plugin option to be specified"));
+                                        i18n("Load plasmashell as a standalone application, needs the shell-plugin option to be specified"));
 
     cliOptions.addOption(dbgOption);
     cliOptions.addOption(winOption);
