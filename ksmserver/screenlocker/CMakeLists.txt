@@ -76,5 +76,11 @@ install(FILES ${screensaver_dbusXML}
         DESTINATION ${DBUS_INTERFACES_INSTALL_DIR}
         RENAME kf5_org.freedesktop.ScreenSaver.xml)
 
+
+install(FILES   updaters/kscreenlocker.upd DESTINATION ${DATA_INSTALL_DIR}/kconf_update)
+install(PROGRAMS updaters/ksreenlocker_5_3_separate_autologin.pl
+                DESTINATION ${DATA_INSTALL_DIR}/kconf_update)
+
+
 add_subdirectory(autotests)
 add_subdirectory(tests)
