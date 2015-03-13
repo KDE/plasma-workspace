@@ -637,8 +637,6 @@ KSMServer::KSMServer( const QString& windowManager, bool _only_local, bool locks
     clientInteracting = 0;
     xonCommand = config.readEntry( "xonCommand", "xon" );
 
-    //TODO: do we still need this?
-    //KGlobal::dirs()->addResourceType( "windowmanagers", "data", "ksmserver/windowmanagers" );
     selectWm( windowManager );
 
     connect(&startupSuspendTimeoutTimer, &QTimer::timeout, this, &KSMServer::startupSuspendTimeout);
@@ -1010,9 +1008,11 @@ void KSMServer::selectWm( const QString& kdewm )
         return;
     }
     KConfigGroup config(KSharedConfig::openConfig(), "General");
+
     QString cfgwm = config.readEntry( "windowManager", "kwin" );
-    KDesktopFile file( QStandardPaths::ApplicationsLocation,
-                       QStringLiteral( "ksmserver/windowmanagers/" ) + cfgwm + QStringLiteral( ".desktop" ) );
+    KDesktopFile file( QStandardPaths::AppDataLocation,
+                       QStringLiteral( "windowmanagers/" ) + cfgwm + QStringLiteral( ".desktop" ) );
+
     if( file.noDisplay())
         return;
     if( !file.tryExec())
