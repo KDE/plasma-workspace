@@ -14,7 +14,7 @@ qt5_add_dbus_adaptor(krunner_SRCS ${krunner_dbusAppXML} view.h View)
 configure_file(dbus/org.kde.krunner.service.in
                ${CMAKE_CURRENT_BINARY_DIR}/org.kde.krunner.service)
 install(FILES ${CMAKE_CURRENT_BINARY_DIR}/org.kde.krunner.service
-        DESTINATION ${DBUS_SERVICES_INSTALL_DIR})
+        DESTINATION ${KDE_INSTALL_DBUSSERVICEDIR})
 
 
 add_executable(krunner ${krunner_SRCS})
@@ -33,11 +33,11 @@ target_link_libraries(krunner
     KF5::Crash
 )
 
-install(TARGETS krunner ${INSTALL_TARGETS_DEFAULT_ARGS})
-install(FILES ${krunner_dbusAppXML} DESTINATION ${DBUS_INTERFACES_INSTALL_DIR} )
-install(FILES krunner.desktop DESTINATION ${AUTOSTART_INSTALL_DIR})
+install(TARGETS krunner ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
+install(FILES ${krunner_dbusAppXML} DESTINATION ${KDE_INSTALL_DBUSINTERFACEDIR} )
+install(FILES krunner.desktop DESTINATION ${KDE_INSTALL_AUTOSTARTDIR})
 
-set(CMAKECONFIG_INSTALL_DIR "${CMAKECONFIG_INSTALL_PREFIX}/KRunnerAppDBusInterface")
+set(CMAKECONFIG_INSTALL_DIR "${KDE_INSTALL_CMAKEPACKAGEDIR}/KRunnerAppDBusInterface")
 ecm_configure_package_config_file(KRunnerAppDBusInterfaceConfig.cmake.in
     "${CMAKE_CURRENT_BINARY_DIR}/KRunnerAppDBusInterfaceConfig.cmake"
     INSTALL_DESTINATION ${CMAKECONFIG_INSTALL_DIR})

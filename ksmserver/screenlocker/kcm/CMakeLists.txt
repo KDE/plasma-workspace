@@ -30,14 +30,14 @@ install(
     TARGETS
         screenlocker_kcm
     DESTINATION
-        ${PLUGIN_INSTALL_DIR}
+        ${KDE_INSTALL_PLUGINDIR}
 )
 
 install(
     FILES
         screenlocker.desktop
     DESTINATION
-        ${SERVICES_INSTALL_DIR}
+        ${KDE_INSTALL_KSERVICES5DIR}
 )
 
 plasma_install_package(package screenlocker_kcm kcms screenlocker_kcm)

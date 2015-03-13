@@ -19,8 +19,8 @@ if (XCB_XCB_FOUND)
     target_link_libraries(kdeinit_kcminit XCB::XCB)
 endif()
 
-install(TARGETS kdeinit_kcminit ${INSTALL_TARGETS_DEFAULT_ARGS} )
-install(TARGETS kcminit         ${INSTALL_TARGETS_DEFAULT_ARGS} )
+install(TARGETS kdeinit_kcminit ${KDE_INSTALL_TARGETS_DEFAULT_ARGS} )
+install(TARGETS kcminit         ${KDE_INSTALL_TARGETS_DEFAULT_ARGS} )
 
 ########### next target ###############
 
@@ -37,6 +37,6 @@ if (XCB_XCB_FOUND)
     target_link_libraries(kdeinit_kcminit_startup XCB::XCB)
 endif()
 
-install(TARGETS kdeinit_kcminit_startup ${INSTALL_TARGETS_DEFAULT_ARGS} )
-install(TARGETS kcminit_startup         ${INSTALL_TARGETS_DEFAULT_ARGS} )
+install(TARGETS kdeinit_kcminit_startup ${KDE_INSTALL_TARGETS_DEFAULT_ARGS} )
+install(TARGETS kcminit_startup         ${KDE_INSTALL_TARGETS_DEFAULT_ARGS} )
 

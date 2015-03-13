@@ -36,12 +36,12 @@ set(krunner_bookmarksrunner_SRCS
 add_library(krunner_bookmarksrunner MODULE ${krunner_bookmarksrunner_SRCS})
 target_link_libraries(krunner_bookmarksrunner ${EXTERNAL_LIBS})
 
-install(TARGETS krunner_bookmarksrunner DESTINATION ${PLUGIN_INSTALL_DIR} )
+install(TARGETS krunner_bookmarksrunner DESTINATION ${KDE_INSTALL_PLUGINDIR} )
 
 
 ########### install files ###############
 
-install(FILES plasma-runner-bookmarks.desktop DESTINATION ${SERVICES_INSTALL_DIR})
+install(FILES plasma-runner-bookmarks.desktop DESTINATION ${KDE_INSTALL_KSERVICES5DIR})
 
 # Currently tests include only chrome, so no need to get include them if json is not found
 add_subdirectory(tests)

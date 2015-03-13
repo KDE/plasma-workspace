@@ -24,4 +24,4 @@ if ( MSVC OR ("${CMAKE_CXX_COMPILER_ID}" STREQUAL "Intel"))
     target_link_libraries(kdbgwin ${COMMON_LIBS})
 endif ()
 
-install(TARGETS kdbgwin DESTINATION ${LIBEXEC_INSTALL_DIR})
+install(TARGETS kdbgwin DESTINATION ${KDE_INSTALL_LIBEXECDIR})

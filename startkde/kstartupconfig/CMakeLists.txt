@@ -4,7 +4,7 @@ set(kstartupconfig_SRCS kstartupconfig.cpp )
 
 add_executable(kstartupconfig5 ${kstartupconfig_SRCS})
 
-install(TARGETS kstartupconfig5 ${INSTALL_TARGETS_DEFAULT_ARGS} )
+install(TARGETS kstartupconfig5 ${KDE_INSTALL_TARGETS_DEFAULT_ARGS} )
 
 ########### kdostartupconfig ###############
 
@@ -18,5 +18,5 @@ target_link_libraries(kdostartupconfig5
                       KF5::CoreAddons
                       ${LIBBSD_LIBRARIES})
 
-install(TARGETS kdostartupconfig5 ${INSTALL_TARGETS_DEFAULT_ARGS} )
+install(TARGETS kdostartupconfig5 ${KDE_INSTALL_TARGETS_DEFAULT_ARGS} )
 

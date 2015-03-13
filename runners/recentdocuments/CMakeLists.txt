@@ -13,6 +13,6 @@ target_link_libraries(krunner_recentdocuments
     KF5::Runner
 )
 
-install(TARGETS krunner_recentdocuments DESTINATION ${PLUGIN_INSTALL_DIR} )
+install(TARGETS krunner_recentdocuments DESTINATION ${KDE_INSTALL_PLUGINDIR} )
 
-install(FILES recentdocuments.desktop DESTINATION ${SERVICES_INSTALL_DIR})
+install(FILES recentdocuments.desktop DESTINATION ${KDE_INSTALL_KSERVICES5DIR})

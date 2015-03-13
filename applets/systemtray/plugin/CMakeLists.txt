@@ -30,7 +30,7 @@ target_link_libraries(systemtrayplugin
     KF5::XmlGui #for KActionCollection
     )
 
-set(plugin_install_path ${QML_INSTALL_DIR}/org/kde/private/systemtray)
+set(plugin_install_path ${KDE_INSTALL_QMLDIR}/org/kde/private/systemtray)
 
 install(TARGETS systemtrayplugin DESTINATION ${plugin_install_path})
 install(FILES qmldir DESTINATION ${plugin_install_path})

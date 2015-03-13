@@ -37,7 +37,7 @@ target_link_libraries(kworkspace
         KF5::Plasma
 )
 target_include_directories(kworkspace PUBLIC "$<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}>"
-                                      INTERFACE "$<INSTALL_INTERFACE:${INCLUDE_INSTALL_DIR}/kworkspace5>" )
+                                      INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR}/kworkspace5>" )
 
 configure_file(config-libkworkspace.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-libkworkspace.h)
 
@@ -51,15 +51,15 @@ endif()
 write_basic_config_version_file(${CMAKE_CURRENT_BINARY_DIR}/LibKWorkspaceConfigVersion.cmake VERSION
                                      "${PROJECT_VERSION}" COMPATIBILITY AnyNewerVersion)
 
-install(TARGETS kworkspace EXPORT libkworkspaceLibraryTargets ${INSTALL_TARGETS_DEFAULT_ARGS} )
+install(TARGETS kworkspace EXPORT libkworkspaceLibraryTargets ${KDE_INSTALL_TARGETS_DEFAULT_ARGS} )
 
 install( FILES kdisplaymanager.h
                kworkspace.h
                ${CMAKE_CURRENT_BINARY_DIR}/config-libkworkspace.h
                ${CMAKE_CURRENT_BINARY_DIR}/kworkspace_export.h
-         DESTINATION ${INCLUDE_INSTALL_DIR}/kworkspace5 COMPONENT Devel )
+         DESTINATION ${KDE_INSTALL_INCLUDEDIR}/kworkspace5 COMPONENT Devel )
 
-set(CMAKECONFIG_INSTALL_DIR ${LIB_INSTALL_DIR}/cmake/LibKWorkspace)
+set(CMAKECONFIG_INSTALL_DIR ${KDE_INSTALL_LIBDIR}/cmake/LibKWorkspace)
 ecm_configure_package_config_file(LibKWorkspaceConfig.cmake.in
     "${CMAKE_CURRENT_BINARY_DIR}/LibKWorkspaceConfig.cmake"
     INSTALL_DESTINATION ${CMAKECONFIG_INSTALL_DIR})

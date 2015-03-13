@@ -12,14 +12,14 @@ set_target_properties(plasma-geolocation-interface PROPERTIES
    VERSION ${PROJECT_VERSION}
    SOVERSION ${PROJECT_VERSION_MAJOR}
 )
-install(TARGETS plasma-geolocation-interface ${INSTALL_TARGETS_DEFAULT_ARGS})
+install(TARGETS plasma-geolocation-interface ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
 
 install(FILES geolocationprovider.h ${CMAKE_CURRENT_BINARY_DIR}/geolocation_export.h
-        DESTINATION ${INCLUDE_INSTALL_DIR}/plasma/geolocation
+        DESTINATION ${KDE_INSTALL_INCLUDEDIR}/plasma/geolocation
         COMPONENT Devel)
 
 #install(FILES includes/Interface
-#        DESTINATION ${INCLUDE_INSTALL_DIR}/KDE/Plasma/Geolocation
+#        DESTINATION ${KDE_INSTALL_INCLUDEDIR}/KDE/Plasma/Geolocation
 #        COMPONENT Devel)
 # -------------------------------------------------------------------------------------------------
 
@@ -35,17 +35,17 @@ target_link_libraries(plasma_engine_geolocation
     KF5::Solid)
 kcoreaddons_desktop_to_json(plasma_engine_geolocation plasma-dataengine-geolocation.desktop)
 
-install(TARGETS plasma_engine_geolocation DESTINATION ${PLUGIN_INSTALL_DIR}/plasma/dataengine)
-install(FILES plasma-dataengine-geolocation.desktop DESTINATION ${SERVICES_INSTALL_DIR})
-install(FILES plasma-geolocationprovider.desktop DESTINATION ${SERVICETYPES_INSTALL_DIR})
+install(TARGETS plasma_engine_geolocation DESTINATION ${KDE_INSTALL_PLUGINDIR}/plasma/dataengine)
+install(FILES plasma-dataengine-geolocation.desktop DESTINATION ${KDE_INSTALL_KSERVICES5DIR})
+install(FILES plasma-geolocationprovider.desktop DESTINATION ${KDE_INSTALL_KSERVICETYPES5DIR})
 
 # -------------------------------------------------------------------------------------------------
 
 set(plasma_geolocation_ip_SRCS location_ip.cpp)
 add_library(plasma-geolocation-ip MODULE ${plasma_geolocation_ip_SRCS})
 target_link_libraries(plasma-geolocation-ip plasma-geolocation-interface KF5::KIOCore)
-install(FILES plasma-geolocation-ip.desktop DESTINATION ${SERVICES_INSTALL_DIR})
-install(TARGETS plasma-geolocation-ip DESTINATION ${PLUGIN_INSTALL_DIR})
+install(FILES plasma-geolocation-ip.desktop DESTINATION ${KDE_INSTALL_KSERVICES5DIR})
+install(TARGETS plasma-geolocation-ip DESTINATION ${KDE_INSTALL_PLUGINDIR})
 
 # -------------------------------------------------------------------------------------------------
 
@@ -60,8 +60,8 @@ if(LIBGPS_FOUND)
     set(plasma_geolocation_gps_SRCS location_gps.cpp)
     add_library(plasma-geolocation-gps MODULE ${plasma_geolocation_gps_SRCS})
     target_link_libraries(plasma-geolocation-gps plasma-geolocation-interface ${LIBGPS_LIBRARIES})
-    install(FILES plasma-geolocation-gps.desktop DESTINATION ${SERVICES_INSTALL_DIR})
-    install(TARGETS plasma-geolocation-gps DESTINATION ${PLUGIN_INSTALL_DIR})
+    install(FILES plasma-geolocation-gps.desktop DESTINATION ${KDE_INSTALL_KSERVICES5DIR})
+    install(TARGETS plasma-geolocation-gps DESTINATION ${KDE_INSTALL_PLUGINDIR})
 endif()
 
 # -------------------------------------------------------------------------------------------------

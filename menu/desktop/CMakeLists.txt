@@ -39,4 +39,4 @@
    kf5-utilities-peripherals.directory
    kf5-utilities-pim.directory
    kf5-utilities-xutils.directory
-DESTINATION  ${XDG_DIRECTORY_INSTALL_DIR} )
+DESTINATION  ${KDE_INSTALL_DESKTOPDIR} )

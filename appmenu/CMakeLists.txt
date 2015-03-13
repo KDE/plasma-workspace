@@ -35,10 +35,10 @@ target_link_libraries(kded_appmenu
     dbusmenu-qt5
 )
 
-install(TARGETS kded_appmenu  DESTINATION ${PLUGIN_INSTALL_DIR} )
+install(TARGETS kded_appmenu  DESTINATION ${KDE_INSTALL_PLUGINDIR} )
 
 ########### install files ###############
 
-install( FILES appmenu.desktop  DESTINATION  ${SERVICES_INSTALL_DIR}/kded )
-install( FILES com.canonical.AppMenu.Registrar.xml DESTINATION ${DBUS_INTERFACES_INSTALL_DIR} )
-install( FILES org.kde.kappmenu.xml DESTINATION ${DBUS_INTERFACES_INSTALL_DIR} )
+install( FILES appmenu.desktop  DESTINATION  ${KDE_INSTALL_KSERVICES5DIR}/kded )
+install( FILES com.canonical.AppMenu.Registrar.xml DESTINATION ${KDE_INSTALL_DBUSINTERFACEDIR} )
+install( FILES org.kde.kappmenu.xml DESTINATION ${KDE_INSTALL_DBUSINTERFACEDIR} )

@@ -51,7 +51,7 @@ qt5_add_dbus_adaptor( ksmserver_KDEINIT_SRCS org.kde.KSMServerInterface.xml serv
 
 kf5_add_kdeinit_executable( ksmserver ${ksmserver_KDEINIT_SRCS})
 
-set(CMAKECONFIG_INSTALL_DIR "${CMAKECONFIG_INSTALL_PREFIX}/KSMServerDBusInterface")
+set(CMAKECONFIG_INSTALL_DIR "${KDE_INSTALL_CMAKEPACKAGEDIR}/KSMServerDBusInterface")
 
 ecm_configure_package_config_file(KSMServerDBusInterfaceConfig.cmake.in
     ${CMAKE_CURRENT_BINARY_DIR}/KSMServerDBusInterfaceConfig.cmake
@@ -75,9 +75,9 @@ target_link_libraries(kdeinit_ksmserver
     KF5::KDELibs4Support # Solid/PowerManagement
 )
 
-install(TARGETS kdeinit_ksmserver ${INSTALL_TARGETS_DEFAULT_ARGS})
+install(TARGETS kdeinit_ksmserver ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
 
-install(TARGETS ksmserver ${INSTALL_TARGETS_DEFAULT_ARGS})
+install(TARGETS ksmserver ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
 
 install(FILES ${CMAKE_CURRENT_BINARY_DIR}/KSMServerDBusInterfaceConfig.cmake
     DESTINATION ${CMAKECONFIG_INSTALL_DIR})
@@ -91,9 +91,9 @@ add_executable( kcheckrunning ${kcheckrunning_SRCS})
 target_link_libraries(kcheckrunning ${X11_LIBRARIES})
 target_include_directories(kcheckrunning PRIVATE ${X11_X11_INCLUDE_PATH})
 
-install(TARGETS kcheckrunning ${INSTALL_TARGETS_DEFAULT_ARGS})
+install(TARGETS kcheckrunning ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
 
 ########### install files ###############
 
-install( FILES org.kde.KSMServerInterface.xml DESTINATION ${DBUS_INTERFACES_INSTALL_DIR})
-install( DIRECTORY themes/ DESTINATION ${DATA_INSTALL_DIR}/ksmserver/themes )
+install( FILES org.kde.KSMServerInterface.xml DESTINATION ${KDE_INSTALL_DBUSINTERFACEDIR})
+install( DIRECTORY themes/ DESTINATION ${KDE_INSTALL_DATADIR}/ksmserver/themes )

@@ -18,5 +18,5 @@ target_link_libraries(plasma_applet_quicklaunch
   KIOCore
 )
 
-install(TARGETS plasma_applet_quicklaunch DESTINATION ${PLUGIN_INSTALL_DIR})
-install(FILES plasma-applet-quicklaunch.desktop DESTINATION ${SERVICES_INSTALL_DIR})
+install(TARGETS plasma_applet_quicklaunch DESTINATION ${KDE_INSTALL_PLUGINDIR})
+install(FILES plasma-applet-quicklaunch.desktop DESTINATION ${KDE_INSTALL_KSERVICES5DIR})

@@ -14,4 +14,4 @@ target_link_libraries(plasma_packagestructure_wallpaper
 
 kcoreaddons_desktop_to_json(plasma_packagestructure_wallpaper plasma-packagestructure-wallpaper.desktop)
 
-install(TARGETS plasma_packagestructure_wallpaper DESTINATION ${PLUGIN_INSTALL_DIR}/kpackage/packagestructure)
+install(TARGETS plasma_packagestructure_wallpaper DESTINATION ${KDE_INSTALL_PLUGINDIR}/kpackage/packagestructure)

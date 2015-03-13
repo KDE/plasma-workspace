@@ -47,12 +47,12 @@ endif()
 target_link_libraries(kglobalaccel5 kdeinit_kglobalaccel5)
 
 # Install application and configuration
-install( TARGETS kdeinit_kglobalaccel5 ${INSTALL_TARGETS_DEFAULT_ARGS} )
-install( TARGETS kglobalaccel5 ${INSTALL_TARGETS_DEFAULT_ARGS} )
-# install( FILES kglobalaccel.desktop DESTINATION ${AUTOSTART_INSTALL_DIR})
-install( FILES kglobalaccel.desktop  DESTINATION ${SERVICES_INSTALL_DIR} RENAME kglobalaccel5.desktop)
+install( TARGETS kdeinit_kglobalaccel5 ${KDE_INSTALL_TARGETS_DEFAULT_ARGS} )
+install( TARGETS kglobalaccel5 ${KDE_INSTALL_TARGETS_DEFAULT_ARGS} )
+# install( FILES kglobalaccel.desktop DESTINATION ${KDE_INSTALL_AUTOSTARTDIR})
+install( FILES kglobalaccel.desktop  DESTINATION ${KDE_INSTALL_KSERVICES5DIR} RENAME kglobalaccel5.desktop)
 
 configure_file(org.kde.kglobalaccel.service.in
                ${CMAKE_CURRENT_BINARY_DIR}/org.kde.kglobalaccel.service)
 install(FILES ${CMAKE_CURRENT_BINARY_DIR}/org.kde.kglobalaccel.service
-        DESTINATION ${DBUS_SERVICES_INSTALL_DIR})
+        DESTINATION ${KDE_INSTALL_DBUSSERVICEDIR})

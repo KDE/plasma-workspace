@@ -31,7 +31,7 @@ target_link_libraries(krunner_kill
 add_dependencies(krunner_kill kcm_krunner_kill)
 
 install(TARGETS krunner_kill kcm_krunner_kill
-        DESTINATION ${PLUGIN_INSTALL_DIR})
+        DESTINATION ${KDE_INSTALL_PLUGINDIR})
         
 install(FILES plasma-runner-kill.desktop plasma-runner-kill_config.desktop
-        DESTINATION ${SERVICES_INSTALL_DIR})
+        DESTINATION ${KDE_INSTALL_KSERVICES5DIR})

@@ -23,6 +23,6 @@ target_link_libraries(
     Qt5::Xml
 )
 
-install(TARGETS plasma_engine_akonadi DESTINATION ${PLUGIN_INSTALL_DIR}/plasma/dataengine)
-install(FILES plasma-engine-akonadi.desktop DESTINATION ${SERVICES_INSTALL_DIR})
+install(TARGETS plasma_engine_akonadi DESTINATION ${KDE_INSTALL_PLUGINDIR}/plasma/dataengine)
+install(FILES plasma-engine-akonadi.desktop DESTINATION ${KDE_INSTALL_KSERVICES5DIR})
 

@@ -14,6 +14,6 @@ if(HAVE_X11)
   target_link_libraries(krunner_windows Qt5::X11Extras)
 endif()
 
-install(TARGETS krunner_windows DESTINATION ${PLUGIN_INSTALL_DIR} )
+install(TARGETS krunner_windows DESTINATION ${KDE_INSTALL_PLUGINDIR} )
 
-install(FILES plasma-runner-windows.desktop DESTINATION ${SERVICES_INSTALL_DIR})
+install(FILES plasma-runner-windows.desktop DESTINATION ${KDE_INSTALL_KSERVICES5DIR})

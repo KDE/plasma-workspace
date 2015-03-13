@@ -16,9 +16,9 @@ kcoreaddons_desktop_to_json(kded_soliduiserver soliduiserver.desktop)
 
 target_link_libraries(kded_soliduiserver KF5::Solid KF5::DBusAddons KF5::Wallet KF5::KIOCore KF5::WindowSystem KF5::KDELibs4Support)
 
-install(TARGETS kded_soliduiserver DESTINATION ${PLUGIN_INSTALL_DIR})
+install(TARGETS kded_soliduiserver DESTINATION ${KDE_INSTALL_PLUGINDIR})
 
 
 ########### install files ###############
 
-install(FILES soliduiserver.desktop DESTINATION ${SERVICES_INSTALL_DIR}/kded)
+install(FILES soliduiserver.desktop DESTINATION ${KDE_INSTALL_KSERVICES5DIR}/kded)

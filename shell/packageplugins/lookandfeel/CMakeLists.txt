@@ -12,4 +12,4 @@ target_link_libraries(plasma_packagestructure_lookandfeel
    KF5::Package
 )
 
-install(TARGETS plasma_packagestructure_lookandfeel DESTINATION ${PLUGIN_INSTALL_DIR}/kpackage/packagestructure)
+install(TARGETS plasma_packagestructure_lookandfeel DESTINATION ${KDE_INSTALL_PLUGINDIR}/kpackage/packagestructure)

@@ -40,7 +40,7 @@ endif()
 add_library(taskmanager ${taskmanager_LIB_SRCS})
 add_library(PW::LibTaskManager ALIAS taskmanager)
 generate_export_header(taskmanager)
-target_include_directories(taskmanager PUBLIC "$<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}>" "$<INSTALL_INTERFACE:${INCLUDE_INSTALL_DIR}/taskmanager>")
+target_include_directories(taskmanager PUBLIC "$<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}>" "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR}/taskmanager>")
 target_link_libraries(taskmanager
     PUBLIC
         Qt5::Core
@@ -74,7 +74,7 @@ set_target_properties(taskmanager PROPERTIES
                       VERSION ${PROJECT_VERSION}
                       SOVERSION ${PROJECT_VERSION_MAJOR}
                       EXPORT_NAME LibTaskManager)
-install(TARGETS taskmanager EXPORT libtaskmanagerLibraryTargets ${INSTALL_TARGETS_DEFAULT_ARGS} )
+install(TARGETS taskmanager EXPORT libtaskmanagerLibraryTargets ${KDE_INSTALL_TARGETS_DEFAULT_ARGS} )
 
 install(FILES
    abstractgroupableitem.h
@@ -90,12 +90,12 @@ install(FILES
    taskmanager.h
    tasksmodel.h
    ${CMAKE_CURRENT_BINARY_DIR}/taskmanager_export.h
-   DESTINATION ${INCLUDE_INSTALL_DIR}/taskmanager COMPONENT Devel
+   DESTINATION ${KDE_INSTALL_INCLUDEDIR}/taskmanager COMPONENT Devel
    )
 
 write_basic_config_version_file(${CMAKE_CURRENT_BINARY_DIR}/LibTaskManagerConfigVersion.cmake VERSION "${PROJECT_VERSION}" COMPATIBILITY AnyNewerVersion)
 
-set(CMAKECONFIG_INSTALL_DIR ${LIB_INSTALL_DIR}/cmake/LibTaskManager)
+set(CMAKECONFIG_INSTALL_DIR ${KDE_INSTALL_LIBDIR}/cmake/LibTaskManager)
 ecm_configure_package_config_file(LibTaskManagerConfig.cmake.in
     "${CMAKE_CURRENT_BINARY_DIR}/LibTaskManagerConfig.cmake"
     INSTALL_DESTINATION ${CMAKECONFIG_INSTALL_DIR})
@@ -110,7 +110,7 @@ install(EXPORT libtaskmanagerLibraryTargets
         FILE LibTaskManagerLibraryTargets.cmake )
 
 install(FILES taskmanagerrulesrc
-        DESTINATION ${CONFIG_INSTALL_DIR})
+        DESTINATION ${KDE_INSTALL_CONFDIR})
 
 #set(tasksmodel_SRCS 
 #   modeltest/dynamictreemodel.cpp

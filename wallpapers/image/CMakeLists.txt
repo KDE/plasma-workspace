@@ -22,11 +22,11 @@ target_link_libraries(plasma_wallpaper_imageplugin
          KF5::GuiAddons
          )
 
-install(TARGETS plasma_wallpaper_imageplugin DESTINATION ${QML_INSTALL_DIR}/org/kde/plasma/wallpapers/image)
+install(TARGETS plasma_wallpaper_imageplugin DESTINATION ${KDE_INSTALL_QMLDIR}/org/kde/plasma/wallpapers/image)
 
-install(FILES qmldir DESTINATION ${QML_INSTALL_DIR}/org/kde/plasma/wallpapers/image)
+install(FILES qmldir DESTINATION ${KDE_INSTALL_QMLDIR}/org/kde/plasma/wallpapers/image)
 
-install(FILES wallpaper.knsrc DESTINATION ${CONFIG_INSTALL_DIR})
+install(FILES wallpaper.knsrc DESTINATION ${KDE_INSTALL_CONFDIR})
 
 plasma_install_package(imagepackage org.kde.image wallpapers wallpaper)
 plasma_install_package(slideshowpackage org.kde.slideshow wallpapers wallpaper)

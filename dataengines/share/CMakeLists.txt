@@ -14,13 +14,13 @@ target_link_libraries(plasma_engine_share
 kcoreaddons_desktop_to_json(plasma_engine_share plasma-dataengine-share.desktop)
 
 install(TARGETS plasma_engine_share
-        DESTINATION ${PLUGIN_INSTALL_DIR}/plasma/dataengine)
+        DESTINATION ${KDE_INSTALL_PLUGINDIR}/plasma/dataengine)
 
 install(FILES plasma-dataengine-share.desktop
-        DESTINATION ${SERVICES_INSTALL_DIR})
+        DESTINATION ${KDE_INSTALL_KSERVICES5DIR})
 
 install(FILES data/plasma_shareprovider.desktop
-        DESTINATION ${SERVICETYPES_INSTALL_DIR})
+        DESTINATION ${KDE_INSTALL_KSERVICETYPES5DIR})
 
 install(FILES share.operations
         DESTINATION ${PLASMA_DATA_INSTALL_DIR}/services)

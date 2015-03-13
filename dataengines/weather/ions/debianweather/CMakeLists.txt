@@ -7,7 +7,7 @@ target_link_libraries(ion_debianweather weather_ion
                       Qt5::Core)
  
 install(TARGETS ion_debianweather
-       DESTINATION ${PLUGIN_INSTALL_DIR}/plasma/dataengine)
+       DESTINATION ${KDE_INSTALL_PLUGINDIR}/plasma/dataengine)
  
 install(FILES ion-debianweather.desktop
-        DESTINATION ${SERVICES_INSTALL_DIR})
+        DESTINATION ${KDE_INSTALL_KSERVICES5DIR})

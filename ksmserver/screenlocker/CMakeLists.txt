@@ -63,7 +63,7 @@ endif()
 # Needed to compile on Arm target.
 set_target_properties(screenlocker_static PROPERTIES COMPILE_FLAGS "-fPIC")
 
-set(CMAKECONFIG_INSTALL_DIR "${CMAKECONFIG_INSTALL_PREFIX}/ScreenSaverDBusInterface")
+set(CMAKECONFIG_INSTALL_DIR "${KDE_INSTALL_CMAKEPACKAGEDIR}/ScreenSaverDBusInterface")
 ecm_configure_package_config_file(ScreenSaverDBusInterfaceConfig.cmake.in
     ${CMAKE_CURRENT_BINARY_DIR}/ScreenSaverDBusInterfaceConfig.cmake
     INSTALL_DESTINATION ${CMAKECONFIG_INSTALL_DIR})
@@ -71,15 +71,15 @@ ecm_configure_package_config_file(ScreenSaverDBusInterfaceConfig.cmake.in
 install(FILES
         ${CMAKE_CURRENT_BINARY_DIR}/ScreenSaverDBusInterfaceConfig.cmake
         DESTINATION ${CMAKECONFIG_INSTALL_DIR})
-install(FILES kscreenlocker.notifyrc  DESTINATION ${KNOTIFYRC_INSTALL_DIR} RENAME ksmserver.notifyrc)
+install(FILES kscreenlocker.notifyrc  DESTINATION ${KDE_INSTALL_KNOTIFY5RCDIR} RENAME ksmserver.notifyrc)
 install(FILES ${screensaver_dbusXML}
-        DESTINATION ${DBUS_INTERFACES_INSTALL_DIR}
+        DESTINATION ${KDE_INSTALL_DBUSINTERFACEDIR}
         RENAME kf5_org.freedesktop.ScreenSaver.xml)
 
 
-install(FILES   updaters/kscreenlocker.upd DESTINATION ${DATA_INSTALL_DIR}/kconf_update)
+install(FILES   updaters/kscreenlocker.upd DESTINATION ${KDE_INSTALL_DATADIR}/kconf_update)
 install(PROGRAMS updaters/ksreenlocker_5_3_separate_autologin.pl
-                DESTINATION ${DATA_INSTALL_DIR}/kconf_update)
+                DESTINATION ${KDE_INSTALL_DATADIR}/kconf_update)
 
 
 add_subdirectory(autotests)

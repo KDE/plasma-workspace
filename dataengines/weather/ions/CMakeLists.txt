@@ -9,14 +9,14 @@ set_target_properties(weather_ion PROPERTIES
    SOVERSION 7
 )
 
-install (TARGETS weather_ion EXPORT kdeworkspaceLibraryTargets ${INSTALL_TARGETS_DEFAULT_ARGS})
+install (TARGETS weather_ion EXPORT kdeworkspaceLibraryTargets ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
 
 install (FILES ion.h
                ${CMAKE_CURRENT_BINARY_DIR}/ion_export.h
-         DESTINATION ${INCLUDE_INSTALL_DIR}/plasma/weather COMPONENT Devel)
+         DESTINATION ${KDE_INSTALL_INCLUDEDIR}/plasma/weather COMPONENT Devel)
 
 install (FILES includes/Ion
-         DESTINATION ${INCLUDE_INSTALL_DIR}/KDE/Plasma/Weather COMPONENT Devel)
+         DESTINATION ${KDE_INSTALL_INCLUDEDIR}/KDE/Plasma/Weather COMPONENT Devel)
 
 # the individual ion plugins
 #add_subdirectory(bbcukmet)

@@ -8,7 +8,7 @@ set(QT_MIN_VERSION "5.4.0")
 set(KF5_MIN_VERSION "5.8.0")
 set(INSTALL_SDDM_THEME TRUE)
 find_package(Qt5 ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS Widgets Quick QuickWidgets Concurrent Test Script Network)
-find_package(ECM 0.0.11 REQUIRED NO_MODULE)
+find_package(ECM 1.8.0 REQUIRED NO_MODULE)
 set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH} ${ECM_KDE_MODULE_DIR})
 
 find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS
@@ -110,7 +110,7 @@ configure_file(config-X11.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-X11.h)
 configure_file(plasma.desktop.cmake ${CMAKE_CURRENT_BINARY_DIR}/plasma.desktop)
 install(FILES
         ${CMAKE_CURRENT_BINARY_DIR}/plasma.desktop
-        DESTINATION ${DATA_INSTALL_DIR}/xsessions
+        DESTINATION ${KDE_INSTALL_DATADIR}/xsessions
 )
 
 plasma_install_package(lookandfeel org.kde.breeze.desktop look-and-feel lookandfeel)

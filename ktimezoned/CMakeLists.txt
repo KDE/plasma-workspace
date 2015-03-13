@@ -18,10 +18,10 @@ target_link_libraries(kded_ktimezoned
    KF5::DBusAddons # kdedmodule
 )
 
-install(TARGETS kded_ktimezoned DESTINATION ${PLUGIN_INSTALL_DIR})
+install(TARGETS kded_ktimezoned DESTINATION ${KDE_INSTALL_PLUGINDIR})
 
 ########### install files ###############
 
-install( FILES ktimezoned.desktop DESTINATION ${SERVICES_INSTALL_DIR}/kded )
+install( FILES ktimezoned.desktop DESTINATION ${KDE_INSTALL_KSERVICES5DIR}/kded )
 
 

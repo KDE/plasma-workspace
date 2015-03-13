@@ -11,10 +11,10 @@ target_link_libraries(krunner_baloosearchrunner
 
 install(
   TARGETS krunner_baloosearchrunner
-  DESTINATION ${PLUGIN_INSTALL_DIR}
+  DESTINATION ${KDE_INSTALL_PLUGINDIR}
 )
 
 install(
   FILES plasma-runner-baloosearch.desktop
-  DESTINATION ${SERVICES_INSTALL_DIR}
+  DESTINATION ${KDE_INSTALL_KSERVICES5DIR}
 )

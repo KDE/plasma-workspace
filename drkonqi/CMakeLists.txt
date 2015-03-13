@@ -109,4 +109,4 @@ if (HAVE_X11)
     )
 endif()
 
-install(TARGETS drkonqi DESTINATION ${LIBEXEC_INSTALL_DIR})
+install(TARGETS drkonqi DESTINATION ${KDE_INSTALL_LIBEXECDIR})

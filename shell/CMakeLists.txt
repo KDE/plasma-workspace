@@ -91,13 +91,13 @@ if(HAVE_X11)
   target_link_libraries(plasmashell Qt5::X11Extras)
 endif()
 
-install(TARGETS plasmashell ${INSTALL_TARGETS_DEFAULT_ARGS})
-install(FILES plasmashell.desktop DESTINATION ${AUTOSTART_INSTALL_DIR})
-install( FILES dbus/org.kde.PlasmaShell.xml DESTINATION ${DBUS_INTERFACES_INSTALL_DIR} )
+install(TARGETS plasmashell ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
+install(FILES plasmashell.desktop DESTINATION ${KDE_INSTALL_AUTOSTARTDIR})
+install( FILES dbus/org.kde.PlasmaShell.xml DESTINATION ${KDE_INSTALL_DBUSINTERFACEDIR} )
 
 install(FILES
    scripting/plasma-layout-template.desktop
-   DESTINATION ${SERVICETYPES_INSTALL_DIR})
+   DESTINATION ${KDE_INSTALL_KSERVICETYPES5DIR})
 
 add_subdirectory(packageplugins)
 

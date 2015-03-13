@@ -19,6 +19,6 @@ target_link_libraries(
     KF5::Notifications
 )
 
-install(TARGETS plasmawindowed ${INSTALL_TARGETS_DEFAULT_ARGS})
+install(TARGETS plasmawindowed ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
 #even if hidden, the desktop file is needed anyways for kdbusservice::unique
-install(FILES plasma-windowed.desktop DESTINATION ${XDG_APPS_INSTALL_DIR})
+install(FILES plasma-windowed.desktop DESTINATION ${KDE_INSTALL_APPDIR})

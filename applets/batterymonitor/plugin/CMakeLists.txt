@@ -8,6 +8,6 @@ target_link_libraries(batteryplugin Qt5::Core
                                     Qt5::Qml
                                     KF5::CoreAddons)
 
-install(TARGETS batteryplugin DESTINATION ${QML_INSTALL_DIR}/org/kde/plasma/private/battery)
+install(TARGETS batteryplugin DESTINATION ${KDE_INSTALL_QMLDIR}/org/kde/plasma/private/battery)
 
-install(FILES qmldir DESTINATION ${QML_INSTALL_DIR}/org/kde/plasma/private/battery)
+install(FILES qmldir DESTINATION ${KDE_INSTALL_QMLDIR}/org/kde/plasma/private/battery)

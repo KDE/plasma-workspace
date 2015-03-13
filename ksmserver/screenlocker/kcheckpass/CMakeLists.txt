@@ -22,9 +22,9 @@ endif ()
 
 set_property(TARGET kcheckpass APPEND_STRING PROPERTY COMPILE_FLAGS " -U_REENTRANT")
 target_link_libraries(kcheckpass ${UNIXAUTH_LIBRARIES} ${SOCKET_LIBRARIES})
-install(TARGETS kcheckpass DESTINATION ${LIBEXEC_INSTALL_DIR})
+install(TARGETS kcheckpass DESTINATION ${KDE_INSTALL_LIBEXECDIR})
 install(CODE "
-    set(KCP_PATH \"\$ENV{DESTDIR}${LIBEXEC_INSTALL_DIR}/kcheckpass\")
+    set(KCP_PATH \"\$ENV{DESTDIR}${KDE_INSTALL_LIBEXECDIR}/kcheckpass\")
     execute_process(COMMAND sh -c \"chown root '\${KCP_PATH}' && chmod +s '\${KCP_PATH}'\")
 ")
 

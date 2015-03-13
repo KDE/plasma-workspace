@@ -43,7 +43,7 @@ qt5_add_dbus_adaptor(kuiserver_KDEINIT_SRCS org.kde.kuiserver.xml progresslistmo
 configure_file(org.kde.kuiserver.service.in
                ${CMAKE_CURRENT_BINARY_DIR}/org.kde.kuiserver.service)
 install(FILES ${CMAKE_CURRENT_BINARY_DIR}/org.kde.kuiserver.service
-        DESTINATION ${DBUS_SERVICES_INSTALL_DIR} RENAME kf5_org.kde.kuiserver.service)
+        DESTINATION ${KDE_INSTALL_DBUSSERVICEDIR} RENAME kf5_org.kde.kuiserver.service)
 
 #</DBus Stuff>
 
@@ -70,9 +70,9 @@ target_link_libraries(kdeinit_kuiserver5
     KF5::XmlGui
     KF5::I18n
 )
-install(TARGETS kdeinit_kuiserver5 ${INSTALL_TARGETS_DEFAULT_ARGS})
+install(TARGETS kdeinit_kuiserver5 ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
 
 target_link_libraries( kuiserver5 kdeinit_kuiserver5 )
-install(TARGETS kuiserver5 ${INSTALL_TARGETS_DEFAULT_ARGS} )
+install(TARGETS kuiserver5 ${KDE_INSTALL_TARGETS_DEFAULT_ARGS} )
 
-install( FILES kuiserver.desktop  DESTINATION  ${SERVICES_INSTALL_DIR} )
+install( FILES kuiserver.desktop  DESTINATION  ${KDE_INSTALL_KSERVICES5DIR} )

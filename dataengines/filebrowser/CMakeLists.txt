@@ -12,6 +12,6 @@ target_link_libraries(plasma_engine_filebrowser
 
 kcoreaddons_desktop_to_json(plasma_engine_filebrowser plasma-dataengine-filebrowser.desktop)
 
-install(TARGETS plasma_engine_filebrowser DESTINATION ${PLUGIN_INSTALL_DIR}/plasma/dataengine)
-install(FILES plasma-dataengine-filebrowser.desktop DESTINATION ${SERVICES_INSTALL_DIR} )
+install(TARGETS plasma_engine_filebrowser DESTINATION ${KDE_INSTALL_PLUGINDIR}/plasma/dataengine)
+install(FILES plasma-dataengine-filebrowser.desktop DESTINATION ${KDE_INSTALL_KSERVICES5DIR} )
 

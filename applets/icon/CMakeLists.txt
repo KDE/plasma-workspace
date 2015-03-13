@@ -7,7 +7,7 @@ set(iconplugin_SRCS
   plugin/iconplugin.cpp
 )
 
-install(FILES plugin/qmldir DESTINATION ${QML_INSTALL_DIR}/org/kde/plasma/private/icon)
+install(FILES plugin/qmldir DESTINATION ${KDE_INSTALL_QMLDIR}/org/kde/plasma/private/icon)
 
 add_library(iconplugin SHARED ${iconplugin_SRCS})
 
@@ -19,4 +19,4 @@ target_link_libraries(iconplugin
   KF5::KIOWidgets # KRun
 )
 
-install(TARGETS iconplugin DESTINATION ${QML_INSTALL_DIR}/org/kde/plasma/private/icon)
+install(TARGETS iconplugin DESTINATION ${KDE_INSTALL_QMLDIR}/org/kde/plasma/private/icon)

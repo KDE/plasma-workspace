@@ -37,6 +37,6 @@ if(Akonadi_FOUND)
     )
 endif()
 
-install(TARGETS plasma_engine_calendar DESTINATION ${PLUGIN_INSTALL_DIR}/plasma/dataengine)
-install(FILES plasma-dataengine-calendar.desktop DESTINATION ${SERVICES_INSTALL_DIR})
+install(TARGETS plasma_engine_calendar DESTINATION ${KDE_INSTALL_PLUGINDIR}/plasma/dataengine)
+install(FILES plasma-dataengine-calendar.desktop DESTINATION ${KDE_INSTALL_KSERVICES5DIR})
 

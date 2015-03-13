@@ -46,7 +46,7 @@ else ()
     )
 endif ()
 
-install(TARGETS krunner_calculatorrunner DESTINATION ${PLUGIN_INSTALL_DIR} )
+install(TARGETS krunner_calculatorrunner DESTINATION ${KDE_INSTALL_PLUGINDIR} )
 
 ########### install files ###############
-install(FILES plasma-runner-calculator.desktop DESTINATION ${SERVICES_INSTALL_DIR})
+install(FILES plasma-runner-calculator.desktop DESTINATION ${KDE_INSTALL_KSERVICES5DIR})

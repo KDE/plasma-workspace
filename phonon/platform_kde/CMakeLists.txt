@@ -14,10 +14,10 @@ if(NOT WIN32)
                              INSTALL_RPATH_USE_LINK_PATH TRUE
                              SKIP_BUILD_RPATH TRUE
                              BUILD_WITH_INSTALL_RPATH TRUE
-                             INSTALL_RPATH ${LIB_INSTALL_DIR}
+                             INSTALL_RPATH ${KDE_INSTALL_LIBDIR}
    )
 endif()
 
-install(TARGETS kde DESTINATION ${PLUGIN_INSTALL_DIR}/phonon_platform)
-install(FILES phonon.notifyrc DESTINATION ${KNOTIFYRC_INSTALL_DIR})
-install(FILES phononbackend.desktop DESTINATION ${SERVICETYPES_INSTALL_DIR})
+install(TARGETS kde DESTINATION ${KDE_INSTALL_PLUGINDIR}/phonon_platform)
+install(FILES phonon.notifyrc DESTINATION ${KDE_INSTALL_KNOTIFY5RCDIR})
+install(FILES phononbackend.desktop DESTINATION ${KDE_INSTALL_KSERVICETYPES5DIR})

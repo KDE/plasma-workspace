@@ -10,6 +10,6 @@ target_link_libraries(notificationshelperplugin Qt5::Core
                                                 Qt5::Quick
                                                 KF5::WindowSystem)
 
-install(TARGETS notificationshelperplugin DESTINATION ${QML_INSTALL_DIR}/org/kde/plasma/private/notifications)
+install(TARGETS notificationshelperplugin DESTINATION ${KDE_INSTALL_QMLDIR}/org/kde/plasma/private/notifications)
 
-install(FILES qmldir DESTINATION ${QML_INSTALL_DIR}/org/kde/plasma/private/notifications)
+install(FILES qmldir DESTINATION ${KDE_INSTALL_QMLDIR}/org/kde/plasma/private/notifications)

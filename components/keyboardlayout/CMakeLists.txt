@@ -10,6 +10,6 @@ target_link_libraries(keyboardlayoutplugin Qt5::Core
 
 set(keyboardlayoutplugin_PATH /org/kde/plasma/workspace/keyboardlayout)
 install(TARGETS keyboardlayoutplugin
-  DESTINATION ${QML_INSTALL_DIR}${keyboardlayoutplugin_PATH})
+  DESTINATION ${KDE_INSTALL_QMLDIR}${keyboardlayoutplugin_PATH})
 install(FILES qmldir
-  DESTINATION ${QML_INSTALL_DIR}${keyboardlayoutplugin_PATH})
+  DESTINATION ${KDE_INSTALL_QMLDIR}${keyboardlayoutplugin_PATH})

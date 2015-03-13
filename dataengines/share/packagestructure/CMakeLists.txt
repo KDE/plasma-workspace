@@ -12,7 +12,7 @@ target_link_libraries(plasma_packagestructure_share
 )
 
 install(TARGETS plasma_packagestructure_share
-        DESTINATION ${PLUGIN_INSTALL_DIR}/plasma/packagestructure)
-#install(FILES data/plasma-packagestructure-share.desktop DESTINATION ${SERVICES_INSTALL_DIR})
+        DESTINATION ${KDE_INSTALL_PLUGINDIR}/plasma/packagestructure)
+#install(FILES data/plasma-packagestructure-share.desktop DESTINATION ${KDE_INSTALL_KSERVICES5DIR})
 
 

@@ -86,7 +86,7 @@ target_link_libraries(plasma_applet_system-monitor KF5::Plasma  plasma_applet-sy
 # Install
 install(TARGETS
     plasma_applet-system-monitor
-    ${INSTALL_TARGETS_DEFAULT_ARGS})
+    ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
 install(TARGETS
     plasma_applet_sm_hdd_activity
     plasma_applet_sm_hdd
@@ -96,7 +96,7 @@ install(TARGETS
     plasma_applet_sm_cpu
     plasma_applet_sm_ram
     plasma_applet_system-monitor
-    DESTINATION ${PLUGIN_INSTALL_DIR})
+    DESTINATION ${KDE_INSTALL_PLUGINDIR})
 install(FILES
     plasma-applet-sm_hdd_activity.desktop
     plasma-applet-sm_hdd.desktop
@@ -106,7 +106,7 @@ install(FILES
     plasma-applet-sm_cpu.desktop
     plasma-applet-sm_ram.desktop
     plasma-applet-system-monitor.desktop
-    DESTINATION ${SERVICES_INSTALL_DIR})
+    DESTINATION ${KDE_INSTALL_KSERVICES5DIR})
 install(FILES
     hdd_panel.svgz
-    DESTINATION ${DATA_INSTALL_DIR}/desktoptheme/default/system-monitor/)
+    DESTINATION ${KDE_INSTALL_DATADIR}/desktoptheme/default/system-monitor/)

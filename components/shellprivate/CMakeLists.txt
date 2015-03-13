@@ -39,8 +39,8 @@ if (KF5TextEditor_FOUND)
                          KF5::TextEditor)
 endif (KF5TextEditor_FOUND)
 
-install(TARGETS plasmashellprivateplugin DESTINATION ${QML_INSTALL_DIR}/org/kde/plasma/private/shell)
-install(FILES widgetexplorer/plasmoids.knsrc DESTINATION ${CONFIG_INSTALL_DIR})
+install(TARGETS plasmashellprivateplugin DESTINATION ${KDE_INSTALL_QMLDIR}/org/kde/plasma/private/shell)
+install(FILES widgetexplorer/plasmoids.knsrc DESTINATION ${KDE_INSTALL_CONFDIR})
 
-install(FILES qmldir DESTINATION ${QML_INSTALL_DIR}/org/kde/plasma/private/shell)
+install(FILES qmldir DESTINATION ${KDE_INSTALL_QMLDIR}/org/kde/plasma/private/shell)
 

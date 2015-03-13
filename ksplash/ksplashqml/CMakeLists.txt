@@ -15,6 +15,6 @@ target_link_libraries(ksplashqml
     KF5::Package
    )
 
-install(TARGETS ksplashqml ${INSTALL_TARGETS_DEFAULT_ARGS})
-install(FILES org.kde.KSplash.xml DESTINATION ${DBUS_INTERFACES_INSTALL_DIR})
+install(TARGETS ksplashqml ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
+install(FILES org.kde.KSplash.xml DESTINATION ${KDE_INSTALL_DBUSINTERFACEDIR})
 

@@ -4,6 +4,6 @@ target_link_libraries (ion_noaa KF5::Solid KF5::KDELibs4Support KF5::I18n weathe
 
 kcoreaddons_desktop_to_json(ion_noaa ion-noaa.desktop)
 
-install (FILES ion-noaa.desktop DESTINATION ${SERVICES_INSTALL_DIR})
-install (TARGETS ion_noaa DESTINATION ${PLUGIN_INSTALL_DIR}/plasma/dataengine)
+install (FILES ion-noaa.desktop DESTINATION ${KDE_INSTALL_KSERVICES5DIR})
+install (TARGETS ion_noaa DESTINATION ${KDE_INSTALL_PLUGINDIR}/plasma/dataengine)
 

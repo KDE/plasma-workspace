@@ -60,11 +60,11 @@ if (HAVE_PRISON)
   target_link_libraries(kdeinit_klipper KF5::Prison)
 endif ()
 
-install(TARGETS kdeinit_klipper ${INSTALL_TARGETS_DEFAULT_ARGS})
-install(TARGETS klipper         ${INSTALL_TARGETS_DEFAULT_ARGS})
+install(TARGETS kdeinit_klipper ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
+install(TARGETS klipper         ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
 
-install(PROGRAMS org.kde.klipper.desktop DESTINATION ${XDG_APPS_INSTALL_DIR})
-install(PROGRAMS org.kde.klipper.desktop DESTINATION ${AUTOSTART_INSTALL_DIR})
+install(PROGRAMS org.kde.klipper.desktop DESTINATION ${KDE_INSTALL_APPDIR})
+install(PROGRAMS org.kde.klipper.desktop DESTINATION ${KDE_INSTALL_AUTOSTARTDIR})
 
 # Plasma Data Engine
 set(plasma_engine_clipboard_SRCS ${libklipper_common_SRCS} clipboardengine.cpp clipboardservice.cpp clipboardjob.cpp)
@@ -94,8 +94,8 @@ endif()
 if (HAVE_PRISON)
   target_link_libraries(plasma_engine_clipboard KF5::Prison)
 endif ()
-install(TARGETS plasma_engine_clipboard DESTINATION ${PLUGIN_INSTALL_DIR}/plasma/dataengine)
-install(FILES plasma-dataengine-clipboard.desktop DESTINATION ${SERVICES_INSTALL_DIR})
+install(TARGETS plasma_engine_clipboard DESTINATION ${KDE_INSTALL_PLUGINDIR}/plasma/dataengine)
+install(FILES plasma-dataengine-clipboard.desktop DESTINATION ${KDE_INSTALL_KSERVICES5DIR})
 install(FILES org.kde.plasma.clipboard.operations DESTINATION ${PLASMA_DATA_INSTALL_DIR}/services)
 
 add_subdirectory(autotests)

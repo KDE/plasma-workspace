@@ -46,8 +46,8 @@ target_link_libraries(kscreenlocker_greet
                         Wayland::Client
                         )
 
-install(TARGETS kscreenlocker_greet DESTINATION ${LIBEXEC_INSTALL_DIR})
+install(TARGETS kscreenlocker_greet DESTINATION ${KDE_INSTALL_LIBEXECDIR})
 
-install(DIRECTORY themes/org.kde.passworddialog DESTINATION ${DATA_INSTALL_DIR}/ksmserver/screenlocker)
+install(DIRECTORY themes/org.kde.passworddialog DESTINATION ${KDE_INSTALL_DATADIR}/ksmserver/screenlocker)
 
 add_subdirectory(autotests)
