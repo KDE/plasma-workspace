@@ -174,7 +174,6 @@ Column {
             visible: getData(jobsSource.data, "killable", 0)
 
             onClicked: {
-                cancelledJobs.push(modelData) // register that it was user-cancelled
                 var service = jobsSource.serviceForSource(modelData)
                 var operation = service.operationDescription("stop")
                 service.startOperationCall(operation)

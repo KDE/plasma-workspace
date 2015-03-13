@@ -89,7 +89,7 @@ void JobView::timerEvent(QTimerEvent *event)
 
 void JobView::terminate(const QString &errorMessage)
 {
-    setData("error", errorMessage);
+    setData(QStringLiteral("errorText"), errorMessage);
     QTimer::singleShot(0, this, SLOT(finished()));
 }
 
@@ -126,6 +126,11 @@ void JobView::setSuspended(bool suspended)
         setData("numericSpeed", m_speed);
         scheduleUpdate();
     }
+}
+
+void JobView::setError(uint errorCode)
+{
+    setData(QStringLiteral("error"), errorCode);
 }
 
 int JobView::unitId(const QString &unit)

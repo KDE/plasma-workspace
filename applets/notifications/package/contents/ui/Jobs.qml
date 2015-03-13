@@ -30,8 +30,6 @@ Column {
 
     property alias count: jobsRepeater.count
 
-    property var cancelledJobs: []
-
     PlasmaCore.DataSource {
         id: jobsSource
 
@@ -49,9 +47,11 @@ Column {
                 return
             }
 
-            var cancelledJobPos = cancelledJobs.indexOf(source)
-            if (cancelledJobPos > -1) {
-                cancelledJobs.splice(cancelledJobPos, 1)
+            var error = runningJobs[source]["error"]
+            var errorText = runningJobs[source]["errorText"]
+
+            // 1 = ERR_USER_CANCELED - don't show any notification at all
+            if (error == 1) {
                 return
             }
 
@@ -61,13 +61,10 @@ Column {
                 return
             }
 
-            var errorText = runningJobs[source]["error"];
-            var error = errorText != ""
-
             var summary = infoMessage ? i18nc("the job, which can be anything, has finished", "%1: Finished", infoMessage) : i18n("Job Finished")
+
             if (error) {
                 summary = infoMessage ? i18nc("the job, which can be anything, finished with error", "%1: Error", infoMessage) : i18n("Job Error")
-                message = errorText
             }
 
             notifications.addNotification({
@@ -75,7 +72,7 @@ Column {
                 appIcon: runningJobs[source]["appIconName"],
                 appName: runningJobs[source]["appName"],
                 summary: summary,
-                body: message,
+                body: errorText || message,
                 isPersistent: true,
                 expireTimeout: 6000,
                 urgency: 0,

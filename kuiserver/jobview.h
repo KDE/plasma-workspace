@@ -98,7 +98,10 @@ public:
     void setCapabilities(int capabilities);
     int capabilities() const;
 
-    QString error() const;
+    void setError(uint errorCode);
+    uint error() const;
+
+    QString errorText() const;
 
     uint state() const;
 
@@ -201,7 +204,9 @@ private:
 
     QString m_infoMessage;     ///< The information message to be shown
 
-    QString m_error;           ///< The error message of the job, set when it's terminated
+    uint m_error;              ///< The error code of the job, set when it's terminated
+
+    QString m_errorText;       ///< The error message of the job, set when it's terminated
 
     QString m_totalUnit;       ///< The unit used in setTotalAmount
 

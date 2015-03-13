@@ -33,6 +33,7 @@ JobView::JobView(uint jobId, QObject *parent)
     : QObject(parent),
     m_capabilities(-1),
     m_percent(-1),
+    m_error(KJob::NoError),
     m_totalAmount(0),
     m_processAmount(0),
     m_jobId(jobId),
@@ -57,10 +58,11 @@ void JobView::terminate(const QString &errorMessage)
     typedef QPair<QString, QDBusAbstractInterface*> iFacePair;
     foreach(const iFacePair &pair, m_objectPaths) {
         qCDebug(KUISERVER) << "making async call of terminate for: " << pair.first;
+        pair.second->asyncCall(QLatin1String("setError"), m_error);
         pair.second->asyncCall(QLatin1String("terminate"), errorMessage);
     }
 
-    m_error = errorMessage;
+    m_errorText = errorMessage;
 
     if (m_currentPendingCalls < 1) {
         // if hit it means a job exists for *something* but can't be terminated properly
@@ -285,9 +287,19 @@ int JobView::capabilities() const
     return m_capabilities;
 }
 
-QString JobView::error() const
+void JobView::setError(uint errorCode)
+{
+    m_error = errorCode;
+}
+
+uint JobView::error() const
 {
     return m_error;
+}
+
+QString JobView::errorText() const
+{
+    return m_errorText;
 }
 
 uint JobView::jobId() const
@@ -415,7 +427,8 @@ void JobView::pendingCallFinished(RequestViewCallWatcher* watcher)
 
         // forcibly set the percent (should be 100). Since the job missed out on that too.
         client->asyncCall(QLatin1String("setPercent"), m_percent);
-        client->asyncCall(QLatin1String("terminate"), m_error);
+        client->asyncCall(QLatin1String("setError"), m_error);
+        client->asyncCall(QLatin1String("terminate"), m_errorText);
 
         if (m_currentPendingCalls < 1) {
             qCDebug(KUISERVER) << "no more async calls left pending..emitting finished so we can have ourselves deleted.";

@@ -95,6 +95,7 @@ public:
     void setCapabilities(int capabilities);
     void setPercent(uint percent);
     void setSuspended(bool suspended);
+    void setError(uint errorCode);
 
     //vestigal, required to implement this dbus interface
     void setDestUrl(const QDBusVariant &destUrl);
