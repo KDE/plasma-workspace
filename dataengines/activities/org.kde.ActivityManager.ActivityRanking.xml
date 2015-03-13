@@ -8,7 +8,7 @@
 
       <method name="activities">
           <arg type="a(sd)" direction="out" />
-          <annotation name="com.trolltech.QtDBus.QtTypeName.Out0" value="ActivityDataList" />
+          <annotation name="org.qtproject.QtDBus.QtTypeName.Out0" value="ActivityDataList" />
       </method>
 
       <method name="test">
@@ -17,7 +17,7 @@
       <signal name="rankingChanged">
           <arg name="topActivities" type="as" direction="out" />
           <arg name="activities" type="a(sd)" direction="out" />
-          <annotation name="com.trolltech.QtDBus.QtTypeName.In1" value="ActivityDataList" />
+          <annotation name="org.qtproject.QtDBus.QtTypeName.In1" value="ActivityDataList" />
       </signal>
 
   </interface>
