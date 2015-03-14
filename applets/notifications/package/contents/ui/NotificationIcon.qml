@@ -72,47 +72,32 @@ Item {
             running: visible
         }
 
-        Column {
-            id: countColumn
-            anchors.centerIn: parent
+        PlasmaComponents.Label {
+            id: notificationCountLabel
+            property int oldTotalCount: 0
 
+            // anchors.fill: parent breaks at small sizes for some reason
+            anchors.centerIn: parent
+            width: parent.width - units.smallSpacing
+            height: width
+
+            horizontalAlignment: Text.AlignHCenter
+            verticalAlignment: Text.AlignVCenter
+            text: notificationsApplet.totalCount
+            font.pointSize: 100
+            fontSizeMode: Text.Fit
+            minimumPointSize: theme.smallestFont.pointSize
             visible: false
 
-            PlasmaCore.SvgItem {
-                anchors.horizontalCenter: parent.horizontalCenter
-                width: naturalSize.width
-                height: naturalSize.height
-
-                svg: notificationSvg
-                elementId: {
-                    switch (plasmoid.location) {
-                    case PlasmaCore.Types.TopEdge:
-                        return "expander-top"
-                    case PlasmaCore.Types.LeftEdge:
-                        return "expander-left"
-                    case PlasmaCore.Types.RightEdge:
-                        return "expander-right"
-                    default:
-                        return "expander-bottom"
-                    }
-                }
-            }
-
-            PlasmaComponents.Label {
-                height: paintedHeight - 3
-
-                property int totalCount: notificationsApplet.totalCount
-                property int oldTotalCount: 0
-
-                text: totalCount
-                font.pointSize: theme.smallestFont.pointSize
-
+            Connections {
+                target: notificationsApplet
                 onTotalCountChanged: {
-                    if (totalCount > oldTotalCount) {
+                    if (notificationsApplet.totalCount > notificationCountLabel.oldTotalCount) {
                         notificationAnimation.running = true
                     }
-                    oldTotalCount = totalCount
+                    notificationCountLabel.oldTotalCount = notificationsApplet.totalCount
                 }
+
             }
         }
 
@@ -174,7 +159,7 @@ Item {
                     elementId: "notification-disabled"
                 }
                 PropertyChanges {
-                    target: countColumn
+                    target: notificationCountLabel
                     visible: false
                 }
                 PropertyChanges {
@@ -190,7 +175,7 @@ Item {
                     elementId: jobs.count > 0 ? "notification-progress-inactive" : "notification-empty"
                 }
                 PropertyChanges {
-                    target: countColumn
+                    target: notificationCountLabel
                     visible: true
                 }
                 PropertyChanges {
