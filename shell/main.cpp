@@ -46,7 +46,7 @@ int main(int argc, char *argv[])
     QApplication app(argc, argv);
 
     KAboutData aboutData("plasmashell",
-                         i18n("Plasma Shell"),
+                         i18n("Plasma"),
                          QStringLiteral(PROJECT_VERSION),
                          i18n("Plasma Shell"),
                          KAboutLicense::GPL);
