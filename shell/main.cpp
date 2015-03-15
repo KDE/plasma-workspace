@@ -55,6 +55,7 @@ int main(int argc, char *argv[])
 
     KAboutData::setApplicationData(aboutData);
 
+    app.setApplicationDisplayName(i18n("Plasma"));
     app.setQuitOnLastWindowClosed(false);
     app.setWindowIcon(QIcon::fromTheme("plasma"));
 
