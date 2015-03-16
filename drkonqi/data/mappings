@@ -16,6 +16,7 @@ kiconfinder=kdelibs|general
 kuiserver=kdelibs|general
 kded4=kdelibs|kded
 kcmshell4=systemsettings|general
+systemsettings5=systemsettings|general
 kwalletd=kdelibs|kwallet
 kwrited=konsole|kwrited
 kbuildsycoca4=kdelibs|ksycoca
