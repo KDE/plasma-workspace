@@ -246,6 +246,9 @@ void WidgetExplorerPrivate::containmentDestroyed()
 
 void WidgetExplorerPrivate::appletAdded(Plasma::Applet *applet)
 {
+    if (!applet->pluginInfo().isValid()) {
+        return;
+    }
     QString name = applet->pluginInfo().pluginName();
 
     runningApplets[name]++;
