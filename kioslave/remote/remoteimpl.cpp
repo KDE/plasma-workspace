@@ -223,6 +223,7 @@ void RemoteImpl::createEntry(KIO::UDSEntry &entry,
     entry.insert( KIO::UDSEntry::UDS_URL, "remote:/"+new_filename);
 
     entry.insert( KIO::UDSEntry::UDS_FILE_TYPE, S_IFDIR);
+    entry.insert( KIO::UDSEntry::UDS_ACCESS, 0500);
     entry.insert( KIO::UDSEntry::UDS_MIME_TYPE, QString::fromLatin1("inode/directory"));
 
     const QString icon = desktop.readIcon();
