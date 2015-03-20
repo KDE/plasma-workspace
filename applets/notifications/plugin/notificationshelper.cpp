@@ -176,7 +176,7 @@ void NotificationsHelper::processHide()
     if (popup) {
         m_mutex->lockForWrite();
         // Remove the popup from the active list and return it into the available list
-        m_popupsOnScreen.removeOne(popup);
+        m_popupsOnScreen.removeAll(popup);
         m_sourceMap.remove(popup->property("sourceName").toString());
         if (!m_availablePopups.contains(popup)) {
             // make extra sure that pointers in here aren't doubled
