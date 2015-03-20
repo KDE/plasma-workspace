@@ -84,6 +84,7 @@ int WaylandServer::start()
         close(socketPair[1]);
         return -1;
     }
+    connect(m_allowedClient, &KWayland::Server::ClientConnection::disconnected, this, [this] { m_allowedClient = nullptr; });
     m_interface = wl_global_create(*m_display.data(), &org_kde_ksld_interface, 2, this, bind);
     return socketPair[1];
 }
@@ -146,6 +147,9 @@ void WaylandServer::removeResource(wl_resource *r)
 
 void WaylandServer::osdProgress(const QString &icon, int percent, const QString &additionalText)
 {
+    if (!m_allowedClient) {
+        return;
+    }
     for (auto r : m_resources) {
         if (wl_resource_get_version(r) < 2) {
             continue;
@@ -157,6 +161,9 @@ void WaylandServer::osdProgress(const QString &icon, int percent, const QString 
 
 void WaylandServer::osdText(const QString &icon, const QString &additionalText)
 {
+    if (!m_allowedClient) {
+        return;
+    }
     for (auto r : m_resources) {
         if (wl_resource_get_version(r) < 2) {
             continue;
