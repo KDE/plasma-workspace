@@ -61,8 +61,8 @@ Item {
         visible: rootItem.showingProgress
         minimumValue: 0
         maximumValue: 100
-        value: visible ? rootItem.osdValue : 0
 
+        value: Number(rootItem.osdValue)
     }
     PlasmaExtra.Heading {
         anchors {
