@@ -96,7 +96,7 @@ void GeolocationProvider::setIsAvailable(bool available)
     }
 
     m_available = available;
-    emit availabilityChanged(this);
+    Q_EMIT availabilityChanged(this);
 }
 
 void GeolocationProvider::setData(const Plasma::DataEngine::Data &data)

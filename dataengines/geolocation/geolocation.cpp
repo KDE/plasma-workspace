@@ -52,7 +52,7 @@ void Geolocation::init()
     const KService::List offers = KServiceTypeTrader::self()->query("Plasma/GeolocationProvider");
     QVariantList args;
 
-    foreach (const KService::Ptr service, offers) {
+    Q_FOREACH (const KService::Ptr service, offers) {
         QString error;
         GeolocationProvider *plugin = service->createInstance<GeolocationProvider>(0, args, &error);
         if (plugin) {
@@ -91,7 +91,7 @@ bool Geolocation::updatePlugins(GeolocationProvider::UpdateTriggers triggers)
 {
     bool changed = false;
 
-    foreach (GeolocationProvider *plugin, m_plugins) {
+    Q_FOREACH (GeolocationProvider *plugin, m_plugins) {
         changed = plugin->requestUpdate(triggers) || changed;
     }
 
@@ -130,7 +130,7 @@ void Geolocation::pluginAvailabilityChanged(GeolocationProvider *provider)
     provider->requestUpdate(GeolocationProvider::ForcedUpdate);
 
     bool changed = false;
-    foreach (GeolocationProvider *plugin, m_plugins) {
+    Q_FOREACH (GeolocationProvider *plugin, m_plugins) {
         changed = plugin->populateSharedData() || changed;
     }
 

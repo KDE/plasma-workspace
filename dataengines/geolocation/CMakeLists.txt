@@ -25,6 +25,7 @@ install(FILES geolocationprovider.h ${CMAKE_CURRENT_BINARY_DIR}/geolocation_expo
 
 
 add_library(plasma_engine_geolocation MODULE geolocation.cpp)
+target_compile_definitions(plasma_engine_geolocation PRIVATE -DQT_NO_KEYWORDS)
 generate_export_header(plasma_engine_geolocation EXPORT_FILE_NAME "geolocation_export.h" BASE_NAME "GEOLOCATION")
 target_link_libraries(plasma_engine_geolocation
     plasma-geolocation-interface
@@ -44,6 +45,7 @@ install(FILES plasma-geolocationprovider.desktop DESTINATION ${KDE_INSTALL_KSERV
 
 set(plasma_geolocation_ip_SRCS location_ip.cpp)
 add_library(plasma-geolocation-ip MODULE ${plasma_geolocation_ip_SRCS})
+target_compile_definitions(plasma-geolocation-ip PRIVATE -DQT_NO_KEYWORDS)
 target_link_libraries(plasma-geolocation-ip plasma-geolocation-interface KF5::KIOCore KF5::NetworkManagerQt)
 install(FILES plasma-geolocation-ip.desktop DESTINATION ${KDE_INSTALL_KSERVICES5DIR})
 install(TARGETS plasma-geolocation-ip DESTINATION ${KDE_INSTALL_PLUGINDIR})
