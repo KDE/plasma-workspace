@@ -64,7 +64,7 @@ Column {
             var summary = infoMessage ? i18nc("the job, which can be anything, has finished", "%1: Finished", infoMessage) : i18n("Job Finished")
 
             if (error) {
-                summary = infoMessage ? i18nc("the job, which can be anything, finished with error", "%1: Error", infoMessage) : i18n("Job Error")
+                summary = infoMessage ? i18nc("the job, which can be anything, failed to complete", "%1: Failed", infoMessage) : i18n("Job Failed")
             }
 
             notifications.addNotification({
