@@ -116,7 +116,7 @@ void URLGrabber::matchingMimeActions(const QString& clipData)
         return;
     }
     if(url.isLocalFile()) {
-        if ( clipData == "//") {
+        if ( clipData == QLatin1String("//")) {
             //qDebug() << "skipping mime magic due to C++ comment //";
             return;
         }
@@ -145,20 +145,21 @@ void URLGrabber::matchingMimeActions(const QString& clipData)
     }
 
     if ( !mimetype.isDefault() ) {
-        ClipAction* action = new ClipAction( QString(), mimetype.comment() );
         KService::List lst = KMimeTypeTrader::self()->query( mimetype.name(), "Application" );
-        foreach( const KService::Ptr &service, lst ) {
-            QHash<QChar,QString> map;
-            map.insert( 'i', "--icon " + service->icon() );
-            map.insert( 'c', service->name() );
+        if ( !lst.isEmpty() ) {
+            ClipAction* action = new ClipAction( QString(), mimetype.comment() );
+            foreach( const KService::Ptr &service, lst ) {
+                QHash<QChar,QString> map;
+                map.insert( 'i', "--icon " + service->icon() );
+                map.insert( 'c', service->name() );
 
-            QString exec = service->exec();
-            exec = KMacroExpander::expandMacros( exec, map ).trimmed();
+                QString exec = service->exec();
+                exec = KMacroExpander::expandMacros( exec, map ).trimmed();
 
-            action->addCommand( ClipCommand( exec, service->name(), true, service->icon() ) );
-        }
-        if ( !lst.isEmpty() )
+                action->addCommand( ClipCommand( exec, service->name(), true, service->icon() ) );
+            }
             m_myMatches.append( action );
+        }
     }
 }
 
@@ -321,7 +322,7 @@ void URLGrabber::loadSettings()
     int num = cg.readEntry("Number of Actions", 0);
     QString group;
     for ( int i = 0; i < num; i++ ) {
-        group = QString("Action_%1").arg( i );
+        group = QStringLiteral("Action_%1").arg( i );
         m_myActions.append( new ClipAction( KSharedConfig::openConfig(), group ) );
     }
 }
@@ -334,7 +335,7 @@ void URLGrabber::saveSettings() const
     int i = 0;
     QString group;
     foreach (ClipAction* action, m_myActions) {
-        group = QString("Action_%1").arg( i );
+        group = QStringLiteral("Action_%1").arg( i );
         action->save( KSharedConfig::openConfig(), group );
         ++i;
     }

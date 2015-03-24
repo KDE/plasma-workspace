@@ -47,27 +47,27 @@ extern "C" int Q_DECL_EXPORT kdemain(int argc, char *argv[])
                             "2001, Patrick Dubroy"));
   aboutData.addAuthor(i18n("Carsten Pfeiffer"),
                       i18n("Author"),
-                      "pfeiffer@kde.org");
+                      QStringLiteral("pfeiffer@kde.org"));
 
   aboutData.addAuthor(i18n("Andrew Stanley-Jones"),
                       i18n( "Original Author" ),
-                      "asj@cban.com");
+                      QStringLiteral("asj@cban.com"));
 
   aboutData.addAuthor(i18n("Patrick Dubroy"),
                       i18n("Contributor"),
-                      "patrickdu@corel.com");
+                      QStringLiteral("patrickdu@corel.com"));
 
   aboutData.addAuthor(i18n("Luboš Luňák"),
                       i18n("Bugfixes and optimizations"),
-                      "l.lunak@kde.org");
+                      QStringLiteral("l.lunak@kde.org"));
 
   aboutData.addAuthor(i18n("Esben Mose Hansen"),
                       i18n("Previous Maintainer"),
-                      "kde@mosehansen.dk");
+                      QStringLiteral("kde@mosehansen.dk"));
 
   aboutData.addAuthor(i18n("Martin Gräßlin"),
                       i18n("Maintainer"),
-                      "mgraesslin@kde.org");
+                      QStringLiteral("mgraesslin@kde.org"));
   KAboutData::setApplicationData(aboutData);
 
   auto disableSessionManagement = [](QSessionManager &sm) {

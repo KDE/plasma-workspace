@@ -74,7 +74,7 @@ HistoryItemPtr HistoryItem::create( QDataStream& dataStream ) {
     }
     QString type;
     dataStream >> type;
-    if ( type == "url" ) {
+    if ( type == QLatin1String("url") ) {
         QList<QUrl> urls;
         QMap< QString, QString > metaData;
         int cut;
@@ -83,12 +83,12 @@ HistoryItemPtr HistoryItem::create( QDataStream& dataStream ) {
         dataStream >> cut;
         return HistoryItemPtr(new HistoryURLItem( urls, metaData, cut ));
     }
-    if ( type == "string" ) {
+    if ( type == QLatin1String("string") ) {
         QString text;
         dataStream >> text;
         return HistoryItemPtr(new HistoryStringItem( text ));
     }
-    if ( type == "image" ) {
+    if ( type == QLatin1String("image") ) {
         QPixmap image;
         dataStream >> image;
         return HistoryItemPtr(new HistoryImageItem( image ));

@@ -97,7 +97,7 @@ Klipper::Klipper(QObject* parent, const KSharedConfigPtr& config, KlipperMode mo
 {
     if (m_mode == KlipperMode::Standalone) {
         setenv("KSNI_NO_DBUSMENU", "1", 1);
-        QDBusConnection::sessionBus().registerObject("/klipper", this, QDBusConnection::ExportScriptableSlots);
+        QDBusConnection::sessionBus().registerObject(QStringLiteral("/klipper"), this, QDBusConnection::ExportScriptableSlots);
     }
 
     updateTimestamp(); // read initial X user time
@@ -121,7 +121,7 @@ Klipper::Klipper(QObject* parent, const KSharedConfigPtr& config, KlipperMode mo
     m_collection = new KActionCollection( this );
 
     m_toggleURLGrabAction = new KToggleAction( this );
-    m_collection->addAction( "clipboard_action", m_toggleURLGrabAction );
+    m_collection->addAction( QStringLiteral("clipboard_action"), m_toggleURLGrabAction );
     m_toggleURLGrabAction->setText(i18n("Enable Clipboard Actions"));
     m_toggleURLGrabAction->setVisible(m_mode == KlipperMode::Standalone);
     KGlobalAccel::setGlobalShortcut(m_toggleURLGrabAction, QKeySequence(Qt::ALT+Qt::CTRL+Qt::Key_X));
@@ -147,34 +147,35 @@ Klipper::Klipper(QObject* parent, const KSharedConfigPtr& config, KlipperMode mo
         loadHistory();
     }
 
-    m_clearHistoryAction = m_collection->addAction( "clear-history" );
-    m_clearHistoryAction->setIcon( QIcon::fromTheme("edit-clear-history") );
+    m_clearHistoryAction = m_collection->addAction( QStringLiteral("clear-history") );
+    m_clearHistoryAction->setIcon( QIcon::fromTheme(QStringLiteral("edit-clear-history")) );
     m_clearHistoryAction->setText( i18n("C&lear Clipboard History") );
     m_clearHistoryAction->setVisible(m_mode == KlipperMode::Standalone);
     KGlobalAccel::setGlobalShortcut(m_clearHistoryAction, QKeySequence());
     connect(m_clearHistoryAction, SIGNAL(triggered()), SLOT(slotAskClearHistory()));
 
-    m_configureAction = m_collection->addAction( "configure" );
-    m_configureAction->setIcon( QIcon::fromTheme("configure") );
+    QString CONFIGURE=QStringLiteral("configure");
+    m_configureAction = m_collection->addAction( CONFIGURE );
+    m_configureAction->setIcon( QIcon::fromTheme(CONFIGURE) );
     m_configureAction->setText( i18n("&Configure Klipper...") );
     m_configureAction->setVisible(m_mode == KlipperMode::Standalone);
     connect(m_configureAction, SIGNAL(triggered(bool)), SLOT(slotConfigure()));
 
-    m_quitAction = m_collection->addAction( "quit" );
-    m_quitAction->setIcon( QIcon::fromTheme("application-exit") );
+    m_quitAction = m_collection->addAction( QStringLiteral("quit") );
+    m_quitAction->setIcon( QIcon::fromTheme(QStringLiteral("application-exit")) );
     m_quitAction->setText( i18nc("@item:inmenu Quit Klipper", "&Quit") );
     m_quitAction->setVisible(m_mode == KlipperMode::Standalone);
     connect(m_quitAction, SIGNAL(triggered(bool)), SLOT(slotQuit()));
 
-    m_repeatAction = m_collection->addAction("repeat_action");
+    m_repeatAction = m_collection->addAction(QStringLiteral("repeat_action"));
     m_repeatAction->setText(i18n("Manually Invoke Action on Current Clipboard"));
     m_repeatAction->setVisible(m_mode == KlipperMode::Standalone);
     KGlobalAccel::setGlobalShortcut(m_repeatAction, QKeySequence(Qt::ALT+Qt::CTRL+Qt::Key_R));
     connect(m_repeatAction, SIGNAL(triggered()), SLOT(slotRepeatAction()));
 
     // add an edit-possibility
-    m_editAction = m_collection->addAction("edit_clipboard");
-    m_editAction->setIcon(QIcon::fromTheme("document-properties"));
+    m_editAction = m_collection->addAction(QStringLiteral("edit_clipboard"));
+    m_editAction->setIcon(QIcon::fromTheme(QStringLiteral("document-properties")));
     m_editAction->setText(i18n("&Edit Contents..."));
     m_editAction->setVisible(m_mode == KlipperMode::Standalone);
     KGlobalAccel::setGlobalShortcut(m_editAction, QKeySequence());
@@ -186,7 +187,7 @@ Klipper::Klipper(QObject* parent, const KSharedConfigPtr& config, KlipperMode mo
 
 #ifdef HAVE_PRISON
     // add barcode for mobile phones
-    m_showBarcodeAction = m_collection->addAction("show-barcode");
+    m_showBarcodeAction = m_collection->addAction(QStringLiteral("show-barcode"));
     m_showBarcodeAction->setText(i18n("&Show Barcode..."));
     m_showBarcodeAction->setVisible(m_mode == KlipperMode::Standalone);
     KGlobalAccel::setGlobalShortcut(m_showBarcodeAction, QKeySequence());
@@ -198,17 +199,17 @@ Klipper::Klipper(QObject* parent, const KSharedConfigPtr& config, KlipperMode mo
 #endif
 
     // Cycle through history
-    m_cycleNextAction = m_collection->addAction("cycleNextAction");
+    m_cycleNextAction = m_collection->addAction(QStringLiteral("cycleNextAction"));
     m_cycleNextAction->setText(i18n("Next History Item"));
     KGlobalAccel::setGlobalShortcut(m_cycleNextAction, QKeySequence());
     connect(m_cycleNextAction, SIGNAL(triggered(bool)), SLOT(slotCycleNext()));
-    m_cyclePrevAction = m_collection->addAction("cyclePrevAction");
+    m_cyclePrevAction = m_collection->addAction(QStringLiteral("cyclePrevAction"));
     m_cyclePrevAction->setText(i18n("Previous History Item"));
     KGlobalAccel::setGlobalShortcut(m_cyclePrevAction, QKeySequence());
     connect(m_cyclePrevAction, SIGNAL(triggered(bool)), SLOT(slotCyclePrev()));
 
     // Action to show Klipper popup on mouse position
-    m_showOnMousePos = m_collection->addAction("show-on-mouse-pos");
+    m_showOnMousePos = m_collection->addAction(QStringLiteral("show-on-mouse-pos"));
     m_showOnMousePos->setText(i18n("Open Klipper at Mouse Position"));
     KGlobalAccel::setGlobalShortcut(m_showOnMousePos, QKeySequence());
     connect(m_showOnMousePos, SIGNAL(triggered(bool)), this, SLOT(slotPopupMenu()));

@@ -29,7 +29,7 @@ HistoryStringItem::HistoryStringItem( const QString& data )
 
 /* virtual */
 void HistoryStringItem::write( QDataStream& stream ) const {
-    stream << QString( "string" ) << m_data;
+    stream << QStringLiteral( "string" ) << m_data;
 }
 
 QMimeData* HistoryStringItem::mimeData() const
