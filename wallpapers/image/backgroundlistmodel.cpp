@@ -389,7 +389,8 @@ QVariant BackgroundListModel::data(const QModelIndex &index, int role) const
         return QVariant();
     break;
     }
-    return QVariant();
+
+    Q_UNREACHABLE();
 }
 
 void BackgroundListModel::showPreview(const KFileItem &item, const QPixmap &preview)
