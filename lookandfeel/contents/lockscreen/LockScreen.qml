@@ -156,6 +156,14 @@ Image {
                             enabled: !authenticator.graceLocked
                             onAccepted: unlockFunction()
                             focus: true
+                            //HACK: Similar hack is needed in sddm loginscreen
+                            //TODO: investigate
+                            Timer {
+                                interval: 200
+                                running: true
+                                repeat: false
+                                onTriggered: passwordInput.forceActiveFocus()
+                            }
                             visible: block.mainItem.model.get(block.mainItem.selectedIndex)["showPassword"]
                             onVisibleChanged: {
                                 if (visible) {
