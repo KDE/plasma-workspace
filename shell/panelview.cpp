@@ -427,7 +427,7 @@ QRect PanelView::geometryByDistance(int distance) const
             position = QPoint(QPoint(s->geometry().center().x(), s->geometry().top()) + QPoint(m_offset - size().width()/2, distance));
             break;
         case Qt::AlignRight:
-            position = QPoint(s->geometry().topRight() - QPoint(m_offset + size().width(), distance));
+            position = QPoint(QPoint(s->geometry().x() + s->geometry().width(), s->geometry().y()) - QPoint(m_offset + size().width(), distance));
             break;
         case Qt::AlignLeft:
         default:
@@ -441,7 +441,7 @@ QRect PanelView::geometryByDistance(int distance) const
             position = QPoint(QPoint(s->geometry().left(), s->geometry().center().y()) + QPoint(distance, m_offset - size().height()/2));
             break;
         case Qt::AlignRight:
-            position = QPoint(s->geometry().bottomLeft() - QPoint(distance, m_offset + size().height()));
+            position = QPoint(QPoint(s->geometry().left(), s->geometry().y() + s->geometry().height()) - QPoint(distance, m_offset + size().height()));
             break;
         case Qt::AlignLeft:
         default:
@@ -452,14 +452,15 @@ QRect PanelView::geometryByDistance(int distance) const
     case Plasma::Types::RightEdge:
         switch (m_alignment) {
         case Qt::AlignCenter:
-            position = QPoint(QPoint(s->geometry().right(), s->geometry().center().y()) - QPoint(thickness() + distance, 0) + QPoint(0, m_offset - size().height()/2));
+            // Never use rect.right(); for historical reasons it returns left() + width() - 1; see http://doc.qt.io/qt-5/qrect.html#right
+            position = QPoint(QPoint(s->geometry().x() + s->geometry().width(), s->geometry().center().y()) - QPoint(thickness() + distance, 0) + QPoint(0, m_offset - size().height()/2));
             break;
         case Qt::AlignRight:
-            position = QPoint(s->geometry().bottomRight() - QPoint(thickness() + distance, 0) - QPoint(0, m_offset + size().height()));
+            position = QPoint(QPoint(s->geometry().x() + s->geometry().width(), s->geometry().y() + s->geometry().height()) - QPoint(thickness() + distance, 0) - QPoint(0, m_offset + size().height()));
             break;
         case Qt::AlignLeft:
         default:
-            position = QPoint(s->geometry().topRight() - QPoint(thickness() + distance, 0) + QPoint(0, m_offset));
+            position = QPoint(QPoint(s->geometry().x() + s->geometry().width(), s->geometry().y()) - QPoint(thickness() + distance, 0) + QPoint(0, m_offset));
         }
         break;
 
