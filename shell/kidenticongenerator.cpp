@@ -218,6 +218,7 @@ KIdenticonGenerator::KIdenticonGenerator()
 KIdenticonGenerator::~KIdenticonGenerator()
 {
     delete d->theme;
+    delete d;
 }
 
 #define generateIconModes( PARAM ) \
