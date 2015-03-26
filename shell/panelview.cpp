@@ -250,6 +250,7 @@ void PanelView::setLength(int value)
     } else {
         resize(qBound<int>(MINSIZE, value, maxSize), thickness());
     }
+    emit m_corona->availableScreenRegionChanged();
 }
 
 int PanelView::maximumLength() const
