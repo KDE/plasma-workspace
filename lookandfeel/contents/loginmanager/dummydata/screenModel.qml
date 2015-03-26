@@ -13,7 +13,7 @@ ListModel {
     //It's taken from: http://stackoverflow.com/questions/20537417/add-statically-object-to-listmodel
 
     //We create two monitors here, the left one 800x600 and the right one 800x400 pixels
-    //To disable the a screen delete one of the "append" function calls
+    //To disable a screen delete one of the "append" function calls
     Component.onCompleted: {
         append({
             name: "Screen 1",
