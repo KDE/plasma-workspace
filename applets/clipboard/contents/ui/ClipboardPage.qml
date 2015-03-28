@@ -64,7 +64,7 @@ ColumnLayout {
                 }
                 if (event.text != "" && !filter.activeFocus) {
                     clipboardMenu.view.currentIndex = -1
-                    if (event.text == "v" && event.modifiers & Qt.ControlModifier) {
+                    if (event.matches(StandardKey.Paste)) {
                         filter.paste();
                     } else {
                         filter.text = "";
