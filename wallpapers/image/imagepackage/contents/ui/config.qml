@@ -351,7 +351,7 @@ ColumnLayout {
         }
         QtControls.Button {
             iconName: "get-hot-new-stuff"
-            text: i18nd("plasma_applet_org.kde.image","Download Wallpapers")
+            text: i18nd("plasma_applet_org.kde.image","Get New Wallpapers...")
             onClicked: imageWallpaper.getNewWallpaper();
         }
     }
