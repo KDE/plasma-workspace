@@ -552,7 +552,13 @@ void ShellCorona::processUpdateScripts()
                 qDebug() << msg;
             });
     foreach (const QString &script, WorkspaceScripting::ScriptEngine::pendingUpdateScripts(this)) {
-        scriptEngine.evaluateScript(script);
+        QFile file(script);
+        if (file.open(QIODevice::ReadOnly | QIODevice::Text) ) {
+            QString code = file.readAll();
+            scriptEngine.evaluateScript(code);
+        } else {
+            qWarning() << "Unable to open the script file" << script << "for reading";
+        }
     }
 }
 
