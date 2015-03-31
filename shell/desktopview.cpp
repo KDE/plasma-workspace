@@ -90,11 +90,17 @@ void DesktopView::adaptToScreen()
         setMinimumSize(screen()->geometry().size());
         setMaximumSize(screen()->geometry().size());
 
-        if(m_oldScreen)
-            disconnect(m_oldScreen.data(), &QScreen::geometryChanged, this, static_cast<void (QWindow::*)(const QRect&)>(&QWindow::setGeometry));
-        connect(screen(), &QScreen::geometryChanged, this, static_cast<void (QWindow::*)(const QRect&)>(&QWindow::setGeometry), Qt::UniqueConnection);
+        if(m_oldScreen) {
+            disconnect(m_oldScreen.data(), &QScreen::geometryChanged,
+                       this, &DesktopView::screenGeometryChanged);
+        }
+
+        connect(screen(), &QScreen::geometryChanged,
+                this, &DesktopView::screenGeometryChanged, Qt::UniqueConnection);
+
     } else {
-        disconnect(screen(), &QScreen::geometryChanged, this, static_cast<void (QWindow::*)(const QRect&)>(&QWindow::setGeometry));
+        disconnect(screen(), &QScreen::geometryChanged,
+                   this, &DesktopView::screenGeometryChanged);
     }
 
     m_oldScreen = screen();
@@ -257,6 +263,14 @@ void DesktopView::showConfigurationInterface(Plasma::Applet *applet)
     m_configView.data()->init();
     m_configView.data()->show();
 }
+
+void DesktopView::screenGeometryChanged(const QRect &geom)
+{
+    setGeometry(screen()->geometry());
+    setMinimumSize(screen()->geometry().size());
+    setMaximumSize(screen()->geometry().size());
+}
+
 
 void DesktopView::coronaPackageChanged(const KPackage::Package &package)
 {
