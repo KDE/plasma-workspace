@@ -21,10 +21,12 @@ import QtQuick 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.plasma.extras 2.0 as PlasmaExtras
-
+import org.kde.kquickcontrolsaddons 2.0 as KQuickControlsAddons
 import org.kde.private.systemtray 2.0 as SystemTray
 
-Item {
+KQuickControlsAddons.MouseEventListener {
+
+   acceptedButtons: Qt.RightButton
 
    Component.onCompleted: {
        if (root.expandedTask) {
@@ -47,6 +49,14 @@ Item {
                 expandedItemContainer.clear();
             }
         }
+    }
+
+
+    onPressed: {
+        if (!root.expandedTask || expandedItemContainer.x > mouse.x || expandedItemContainer.x + expandedItemContainer.width < mouse.x) {
+            return;
+        }
+        host.showMenu(mouse.screenX, mouse.screenY, root.expandedTask)
     }
 
     MouseArea {

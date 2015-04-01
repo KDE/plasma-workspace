@@ -78,6 +78,7 @@ public:
     KPluginInfo pluginInfo() const;
     QString shortcut() const { return m_shortcut; }
     void    setShortcut(QString text);
+    Plasma::Applet *applet();
 
     Q_INVOKABLE void showMenu(int x, int y);
 

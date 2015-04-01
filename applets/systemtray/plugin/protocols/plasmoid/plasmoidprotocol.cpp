@@ -87,6 +87,7 @@ void PlasmoidProtocol::init()
     m_containment->setImmutability(Plasma::Types::Mutable);
     m_containment->setFormFactor(Plasma::Types::Horizontal);
     m_containment->setLocation(m_systrayApplet->location());
+    m_containment->setContainmentActions("RightButton;NoModifier", "org.kde.contextmenu");
     m_containment->init();
 
     connect(m_systrayApplet, &Plasma::Applet::locationChanged, [=]() {

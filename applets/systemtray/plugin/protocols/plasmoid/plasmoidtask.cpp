@@ -294,6 +294,11 @@ void PlasmoidTask::showMenu(int x, int y)
     desktopMenu.exec(pos);
 }
 
+Plasma::Applet *PlasmoidTask::applet()
+{
+    return m_applet;
+}
+
 }
 
 

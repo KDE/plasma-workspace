@@ -26,6 +26,7 @@
 
 #include <klocalizedstring.h>
 #include <KServiceTypeTrader>
+#include <KActionCollection>
 
 #include <Plasma/Package>
 #include <Plasma/PluginLoader>
@@ -35,8 +36,10 @@
 #include <QTimer>
 #include <QVariant>
 #include <QStandardItemModel>
+#include <QMenu>
 
 #include "protocols/plasmoid/plasmoidprotocol.h"
+#include "protocols/plasmoid/plasmoidtask.h"
 #include "protocols/dbussystemtray/dbussystemtrayprotocol.h"
 #include "tasklistmodel.h"
 
@@ -395,6 +398,54 @@ QStringList Host::categories() const
     return cats;
 }
 
+void Host::showMenu(int x, int y, QObject *task)
+{
+    SystemTray::PlasmoidTask *pt = qobject_cast<SystemTray::PlasmoidTask *>(task);
+    if (!pt) {
+        return;
+    }
+
+    Plasma::Applet *a = pt->applet();
+    if (!a) {
+        return;
+    }
+
+    QMenu desktopMenu;
+    for (auto action : a->contextualActions()) {
+        if (action) {
+            desktopMenu.addAction(action);
+        }
+    }
+    QAction *runAssociatedApplication = a->actions()->action("run associated application");
+    if (runAssociatedApplication && runAssociatedApplication->isEnabled()) {
+        desktopMenu.addAction(runAssociatedApplication);
+    }
+
+    QAction *configureApplet = a->actions()->action("configure");
+    if (configureApplet && configureApplet->isEnabled()) {
+        desktopMenu.addAction(configureApplet);
+    }
+
+    Plasma::Applet *systrayApplet = qobject_cast<Plasma::Applet *>(a->containment()->parent());
+    if (systrayApplet) {
+        QMenu *trayMenu = new QMenu(i18nc("%1 is the name of the applet", "%1 Options", systrayApplet->title()), &desktopMenu);
+        trayMenu->addAction(systrayApplet->actions()->action("configure"));
+        trayMenu->addAction(systrayApplet->actions()->action("remove"));
+        desktopMenu.addMenu(trayMenu);
+
+        Plasma::Containment *c = systrayApplet->containment();
+        if (c) {
+            QMenu *containmentMenu = new QMenu(i18nc("%1 is the name of the containment", "%1 Options", c->title()), &desktopMenu);
+            containmentMenu->addAction(c->actions()->action("configure"));
+            containmentMenu->addAction(c->actions()->action("remove"));
+            desktopMenu.addMenu(containmentMenu);
+        }
+    }
+
+    if (!desktopMenu.isEmpty()) {
+        desktopMenu.exec(QPoint(x, y));
+    }
+}
 
 } // namespace
 
