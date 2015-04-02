@@ -210,11 +210,14 @@ void MenuImporter::finishFakeUnityAboutToShow(QDBusPendingCallWatcher* watcher)
     QDBusPendingReply<uint, DBusMenuLayoutItem> reply = *watcher;
     if (reply.isError()) {
         kWarning() << "Call to GetLayout failed:" << reply.error().message();
+        watcher->deleteLater();
         return;
     }
     QString service = watcher->property("service").toString();
     QString path = watcher->property("path").toString();
     DBusMenuLayoutItem root = reply.argumentAt<1>();
+
+    watcher->deleteLater();
 
     QDBusInterface iface(service, path, "com.canonical.dbusmenu");
     Q_FOREACH(const DBusMenuLayoutItem& dbusMenuItem, root.children) {
