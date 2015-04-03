@@ -65,7 +65,6 @@ MouseArea {
             console.debug("Error:" + data[last]["error"]);
             if (last != "") {
                 statusBar.setData(data[last]["error"], data[last]["errorDetails"], data[last]["udi"]);
-                plasmoid.status = PlasmaCore.Types.NeedsAttentionStatus;
                 plasmoid.expanded = true;
             }
         }
