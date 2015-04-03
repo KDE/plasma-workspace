@@ -88,9 +88,9 @@ MouseArea {
                 property int currentExpanded: -1
                 property bool itemClicked: true
                 delegate: deviceItem
-                highlight: PlasmaComponents.Highlight{
-
-                }
+                highlight: PlasmaComponents.Highlight { }
+                highlightMoveDuration: 0
+                highlightResizeDuration: 0
 
                 //this is needed to make SectionScroller actually work
                 //acceptable since one doesn't have a billion of devices
@@ -110,16 +110,6 @@ MouseArea {
                     delegate: Item {
                         height: childrenRect.height
                         width: notifierDialog.width
-                        PlasmaCore.SvgItem {
-                            visible: parent.y > 0
-                            svg: lineSvg
-                            elementId: "horizontal-line"
-                            anchors {
-                                left: parent.left
-                                right: parent.right
-                            }
-                            height: lineSvg.elementSize("horizontal-line").height
-                        }
                         PlasmaExtras.Heading {
                             level: 3
                             opacity: 0.6
@@ -147,8 +137,6 @@ MouseArea {
             anchors.bottom: parent.bottom
         }
     }
-
-
 
     Component {
         id: deviceItem
