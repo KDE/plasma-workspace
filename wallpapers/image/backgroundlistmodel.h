@@ -66,7 +66,8 @@ public:
         ResolutionRole,
         PathRole,
         PackageNameRole,
-        RemovableRole
+        RemovableRole,
+        PendingDeletionRole
     };
 
     static const int BLUR_INCREMENT = 9;
@@ -75,8 +76,9 @@ public:
     BackgroundListModel(Image *listener, QObject *parent);
     virtual ~BackgroundListModel();
 
-    virtual int rowCount(const QModelIndex &parent = QModelIndex()) const;
-    virtual QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const;
+    virtual int rowCount(const QModelIndex &parent = QModelIndex()) const Q_DECL_OVERRIDE;
+    virtual QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const Q_DECL_OVERRIDE ;
+    bool setData(const QModelIndex& index, const QVariant& value, int role = Qt::EditRole) Q_DECL_OVERRIDE;
     KPackage::Package package(int index) const;
 
     void reload();
@@ -86,6 +88,9 @@ public:
     virtual bool contains(const QString &bg) const;
 
     int count() const {return m_packages.size();};
+
+    Q_INVOKABLE void setPendingDeletion(int rowIndex, bool pendingDeletion);
+    const QStringList wallpapersAwaitingDeletion();
 
 Q_SIGNALS:
     void countChanged();
@@ -111,6 +116,7 @@ private:
 
     QString m_findToken;
     int m_screenshotSize;
+    QHash<QString, int> m_pendingDeletion;
 };
 
 class BackgroundFinder : public QThread

@@ -30,6 +30,7 @@ MouseArea {
 
     property alias color: backgroundRect.color
     property bool selected: (wallpapersGrid.currentIndex == index)
+    opacity: model.pendingDeletion ? 0.5 : 1
 
     onSelectedChanged: {
         if (selected) {
@@ -40,7 +41,7 @@ MouseArea {
     hoverEnabled: true
 
 
-    //note: this *doesn't* use system colors since it represent a 
+    //note: this *doesn't* use system colors since it represent a
     //skeymorphic photograph rather than a widget
     Rectangle {
         id: background
@@ -96,8 +97,28 @@ MouseArea {
                 iconSource: "list-remove"
                 tooltip: i18nd("plasma_applet_org.kde.image", "Remove wallpaper")
                 flat: false
-                visible: model.removable
-                onClicked: imageWallpaper.removeWallpaper(model.packageName)
+                visible: model.removable && !model.pendingDeletion
+                onClicked: imageWallpaper.wallpaperModel.setPendingDeletion(index, true)
+                opacity: wallpaperDelegate.containsMouse ? 1 : 0
+                Behavior on opacity {
+                    PropertyAnimation {
+                        duration: units.longDuration
+                        easing.type: Easing.OutQuad
+                    }
+                }
+            }
+
+            PlasmaComponents.ToolButton {
+                anchors {
+                    top: parent.top
+                    right: parent.right
+                    margins: units.smallSpacing
+                }
+                iconSource: "edit-undo"
+                tooltip: i18nd("plasma_applet_org.kde.image", "Restore wallpaper")
+                flat: false
+                visible: model.pendingDeletion
+                onClicked: imageWallpaper.wallpaperModel.setPendingDeletion(index, !model.pendingDeletion)
                 opacity: wallpaperDelegate.containsMouse ? 1 : 0
                 Behavior on opacity {
                     PropertyAnimation {

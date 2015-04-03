@@ -72,6 +72,7 @@ BackgroundListModel::BackgroundListModel(Image *wallpaper, QObject *parent)
     roleNames[PathRole] = "path";
     roleNames[PackageNameRole] = "packageName";
     roleNames[RemovableRole] = "removable";
+    roleNames[PendingDeletionRole] = "pendingDeletion";
     setRoleNames(roleNames);
 
     //TODO: on Qt 4.4 use the ui scale factor
@@ -385,12 +386,40 @@ QVariant BackgroundListModel::data(const QModelIndex &index, int role) const
     }
     break;
 
+    case PendingDeletionRole: {
+        QUrl wallpaperUrl = QUrl::fromLocalFile(b.filePath("preferred"));
+        return m_pendingDeletion.contains(wallpaperUrl.toLocalFile()) ? m_pendingDeletion[wallpaperUrl.toLocalFile()] : false;
+    }
+    break;
+
     default:
         return QVariant();
     break;
     }
 
     Q_UNREACHABLE();
+}
+
+bool BackgroundListModel::setData(const QModelIndex &index, const QVariant &value, int role)
+{
+    if (!index.isValid()) {
+        return false;
+    }
+
+    if (role == PendingDeletionRole) {
+        KPackage::Package b = package(index.row());
+        if (!b.isValid()) {
+            return false;
+        }
+
+        const QUrl wallpaperUrl = QUrl::fromLocalFile(b.filePath("preferred"));
+        m_pendingDeletion[wallpaperUrl.toLocalFile()] = value.toBool();
+
+        emit dataChanged(index, index);
+        return true;
+    }
+
+    return false;
 }
 
 void BackgroundListModel::showPreview(const KFileItem &item, const QPixmap &preview)
@@ -424,6 +453,24 @@ void BackgroundListModel::previewFailed(const KFileItem &item)
 KPackage::Package BackgroundListModel::package(int index) const
 {
     return m_packages.at(index);
+}
+
+void BackgroundListModel::setPendingDeletion(int rowIndex, bool pendingDeletion)
+{
+    setData(index(rowIndex, 0), pendingDeletion, PendingDeletionRole);
+}
+
+const QStringList BackgroundListModel::wallpapersAwaitingDeletion()
+{
+    QStringList candidates;
+    for (KPackage::Package b : m_packages) {
+        const QUrl wallpaperUrl = QUrl::fromLocalFile(b.filePath("preferred"));
+        if (m_pendingDeletion.contains(wallpaperUrl.toLocalFile()) && m_pendingDeletion[wallpaperUrl.toLocalFile()]) {
+            candidates << wallpaperUrl.toLocalFile();
+        }
+    }
+
+    return candidates;
 }
 
 BackgroundFinder::BackgroundFinder(Image *wallpaper, const QStringList &paths)

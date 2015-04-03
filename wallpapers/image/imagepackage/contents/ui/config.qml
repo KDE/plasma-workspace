@@ -34,6 +34,10 @@ ColumnLayout {
     property var cfg_SlidePaths: ""
     property int cfg_SlideInterval: 0
 
+    function saveConfig() {
+        imageWallpaper.commitDeletion();
+    }
+
     Wallpaper.Image {
         id: imageWallpaper
         width: wallpaper.configuration.width
@@ -54,7 +58,7 @@ ColumnLayout {
         minutesIntervalValue = Math.floor(cfg_SlideInterval % 3600) / 60
         secondsIntervalValue = cfg_SlideInterval % 3600 % 60
     }
-    
+
     //Rectangle { color: "orange"; x: formAlignment; width: formAlignment; height: 20 }
 
     Row {
