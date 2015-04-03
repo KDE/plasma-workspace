@@ -51,7 +51,7 @@ void BatterySignalMapper::chargeStateChanged(int newState)
     emit(deviceChanged(signalmap[sender()], "Charge State", chargestate.at(newState)));
 }
 
-void BatterySignalMapper::plugStateChanged(bool newState)
+void BatterySignalMapper::presentStateChanged(bool newState)
 {
     emit(deviceChanged(signalmap[sender()], "Plugged In", newState));
 }

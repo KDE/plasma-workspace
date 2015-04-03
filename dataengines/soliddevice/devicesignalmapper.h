@@ -66,7 +66,7 @@ class BatterySignalMapper : public DeviceSignalMapper
     public Q_SLOTS:
         void chargePercentChanged(int value);
         void chargeStateChanged(int newState);
-        void plugStateChanged(bool newState);
+        void presentStateChanged(bool newState);
 };
 
 class StorageAccessSignalMapper : public DeviceSignalMapper

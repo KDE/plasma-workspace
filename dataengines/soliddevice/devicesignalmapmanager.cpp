@@ -40,7 +40,7 @@ void DeviceSignalMapManager::mapDevice(Solid::Battery *battery, const QString &u
 
     connect(battery, SIGNAL(chargePercentChanged(int,QString)), map, SLOT(chargePercentChanged(int)));
     connect(battery, SIGNAL(chargeStateChanged(int,QString)), map, SLOT(chargeStateChanged(int)));
-    connect(battery, SIGNAL(plugStateChanged(bool,QString)), map, SLOT(plugStateChanged(bool)));
+    connect(battery, SIGNAL(presentStateChanged(bool,QString)), map, SLOT(presentStateChanged(bool)));
     map->setMapping(battery, udi);
 }
 
@@ -68,7 +68,7 @@ void DeviceSignalMapManager::unmapDevice(Solid::Battery *battery)
 
     disconnect(battery, SIGNAL(chargePercentChanged(int,QString)), map, SLOT(chargePercentChanged(int)));
     disconnect(battery, SIGNAL(chargeStateChanged(int,QString)), map, SLOT(chargeStateChanged(int)));
-    disconnect(battery, SIGNAL(plugStateChanged(bool,QString)), map, SLOT(plugStateChanged(bool)));
+    disconnect(battery, SIGNAL(presentStateChanged(bool,QString)), map, SLOT(presentStateChanged(bool)));
 }
 
 void DeviceSignalMapManager::unmapDevice(Solid::StorageAccess *storageaccess)
