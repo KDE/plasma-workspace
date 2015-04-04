@@ -440,7 +440,7 @@ bool SolidDeviceEngine::populateDeviceData(const QString &name)
         Solid::DeviceInterface::Processor
     };
 
-    for (int i = 0; i < 12; ++i) {
+    for (int i = 0; i < 11; ++i) {
         const Solid::DeviceInterface *interface = device.asDeviceInterface(typeOrder[i]);
         if (interface) {
             setData(name, I18N_NOOP("Type Description"), Solid::DeviceInterface::typeDescription(typeOrder[i]));
