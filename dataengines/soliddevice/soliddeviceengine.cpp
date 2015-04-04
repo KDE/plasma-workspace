@@ -423,13 +423,27 @@ bool SolidDeviceEngine::populateDeviceData(const QString &name)
         m_signalmanager->mapDevice(battery, device.udi());
     }
 
-    int index = Solid::DeviceInterface::staticMetaObject.indexOfEnumerator("Type");
-    QMetaEnum typeEnum = Solid::DeviceInterface::staticMetaObject.enumerator(index);
-    for (int i = typeEnum.keyCount() - 1 ; i > 0; i--) {
-        Solid::DeviceInterface::Type type = (Solid::DeviceInterface::Type)typeEnum.value(i);
-        const Solid::DeviceInterface *interface = device.asDeviceInterface(type);
+    using namespace Solid;
+    // we cannot just iterate the enum in reverse order since Battery comes second to last
+    // and then our phone which also has a battery gets treated as battery :(
+    static const Solid::DeviceInterface::Type typeOrder[] = {
+        Solid::DeviceInterface::PortableMediaPlayer,
+        Solid::DeviceInterface::Camera,
+        Solid::DeviceInterface::OpticalDisc,
+        Solid::DeviceInterface::StorageVolume,
+        Solid::DeviceInterface::OpticalDrive,
+        Solid::DeviceInterface::StorageDrive,
+        Solid::DeviceInterface::NetworkShare,
+        Solid::DeviceInterface::StorageAccess,
+        Solid::DeviceInterface::Block,
+        Solid::DeviceInterface::Battery,
+        Solid::DeviceInterface::Processor
+    };
+
+    for (int i = 0; i < 12; ++i) {
+        const Solid::DeviceInterface *interface = device.asDeviceInterface(typeOrder[i]);
         if (interface) {
-            setData(name, I18N_NOOP("Type Description"), Solid::DeviceInterface::typeDescription(type));
+            setData(name, I18N_NOOP("Type Description"), Solid::DeviceInterface::typeDescription(typeOrder[i]));
             break;
         }
     }
