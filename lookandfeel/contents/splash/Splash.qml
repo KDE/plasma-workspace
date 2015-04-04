@@ -17,8 +17,7 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-import QtQuick 2.1
-
+import QtQuick 2.2
 
 Image {
     id: root
@@ -77,28 +76,25 @@ Image {
         }
     }
 
-    SequentialAnimation {
+    ParallelAnimation {
         id: introAnimation
         running: false
 
-        ParallelAnimation {
-            PropertyAnimation {
-                property: "y"
-                target: topRect
-                to: root.height / 3
-                duration: 1000
-                easing.type: Easing.InOutBack
-                easing.overshoot: 1.0
-            }
-
-            PropertyAnimation {
-                property: "y"
-                target: bottomRect
-                to: 2 * (root.height / 3) - bottomRect.height
-                duration: 1000
-                easing.type: Easing.InOutBack
-                easing.overshoot: 1.0
-            }
+        YAnimator {
+            target: topRect
+            from: root.height
+            to: root.height / 3
+            duration: 1000
+            easing.type: Easing.InOutBack
+            easing.overshoot: 1.0
+        }
+        YAnimator {
+            target: bottomRect
+            from: -bottomRect.height
+            to: 2 * (root.height / 3) - bottomRect.height
+            duration: 1000
+            easing.type: Easing.InOutBack
+            easing.overshoot: 1.0
         }
     }
 }
