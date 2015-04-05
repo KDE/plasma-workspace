@@ -33,35 +33,44 @@ Column {
         width: parent.width
         spacing: units.gridUnit
 
-        Item {
-            width: units.iconSizes.medium
-            height: width
-
-            Components.CheckBox {
-                id: pmCheckBox
-                anchors.centerIn: parent
-                checked: true
-                // we don't want to mess with the checked state but still reflect that changing it might not yield the desired result
-                opacity: inhibitions.length > 0 ? 0.5 : 1
-                Behavior on opacity {
-                    NumberAnimation { duration: units.longDuration }
-                }
-            }
-        }
-
         MouseArea {
             Layout.fillWidth: true
-            Layout.fillHeight: true
-
+            height: childrenRect.height
             onClicked: {
                 pmCheckBox.forceActiveFocus()
                 pmCheckBox.checked = !pmCheckBox.checked
             }
 
-            Components.Label {
+            PlasmaCore.ToolTipArea {
                 anchors.fill: parent
-                verticalAlignment: Text.AlignVCenter
-                text: i18n("Enable Power Management")
+                subText: i18n("Disabling power management will prevent your screen and computer from turning off automatically.\n\n"
+                              + "Most applications will automatically suppress power management when they don't want to have you interrupted.")
+            }
+
+            RowLayout {
+                width: parent.width
+                spacing: units.gridUnit
+
+                Item {
+                    width: units.iconSizes.medium
+                    height: width
+
+                    Components.CheckBox {
+                        id: pmCheckBox
+                        anchors.centerIn: parent
+                        checked: true
+                        // we don't want to mess with the checked state but still reflect that changing it might not yield the desired result
+                        opacity: inhibitions.length > 0 ? 0.5 : 1
+                        Behavior on opacity {
+                            NumberAnimation { duration: units.longDuration }
+                        }
+                    }
+                }
+
+                Components.Label {
+                    Layout.fillWidth: true
+                    text: i18n("Enable Power Management")
+                }
             }
         }
 
