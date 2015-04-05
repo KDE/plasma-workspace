@@ -136,7 +136,7 @@ void WidgetExplorerPrivate::initFilters()
     foreach (const QString &category, cats) {
         const QString lowerCaseCat = category.toLower();
         if (existingCategories.contains(lowerCaseCat)) {
-            const QString trans = i18n(category.toLocal8Bit());
+            const QString trans = i18nd("libplasma5", category.toLocal8Bit());
             categories.insert(trans.toLower(), qMakePair(trans, lowerCaseCat));
         }
     }
