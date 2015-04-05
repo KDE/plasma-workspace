@@ -122,7 +122,7 @@ void WidgetExplorerPrivate::initFilters()
 
     for (auto data : list) {
         const KPluginInfo info(data);
-        if (info.property("NoDisplay").toBool() || info.category() == i18n("Containments") ||
+        if (info.property("NoDisplay").toBool() || info.category() == "Containments" ||
             info.category().isEmpty()) {
             // we don't want to show the hidden category
             continue;

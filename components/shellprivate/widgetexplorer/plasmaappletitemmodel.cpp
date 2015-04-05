@@ -250,7 +250,7 @@ void PlasmaAppletItemModel::populateModel(const QStringList &whatChanged)
 
     for (auto info : list) {
         //qDebug() << info.pluginName() << "NoDisplay" << info.property("NoDisplay").toBool();
-        if (!info.isValid() || info.property("NoDisplay").toBool() || info.category() == i18n("Containments")) {
+        if (!info.isValid() || info.property("NoDisplay").toBool() || info.category() == "Containments") {
             // we don't want to show the hidden category
             continue;
         }
