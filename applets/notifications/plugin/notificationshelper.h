@@ -32,16 +32,30 @@ class NotificationsHelper : public QObject
 {
     Q_OBJECT
     Q_PROPERTY(QRect plasmoidScreen MEMBER m_plasmoidScreen)
-    Q_PROPERTY(Qt::Edge popupLocation MEMBER m_popupLocation WRITE setPopupLocation NOTIFY popupLocationChanged)
+    Q_PROPERTY(PositionOnScreen popupLocation MEMBER m_popupLocation WRITE setPopupLocation NOTIFY popupLocationChanged)
+    Q_ENUMS(PositionOnScreen)
 
 public:
+    enum PositionOnScreen {
+        Default, // Follows the panel
+        TopLeft,
+        TopCenter,
+        TopRight,
+        Left,
+        Center,
+        Right,
+        BottomLeft,
+        BottomCenter,
+        BottomRight
+    };
+
     NotificationsHelper(QObject *parent = 0);
     ~NotificationsHelper();
     Q_INVOKABLE void addNotificationPopup(QObject *win);
     Q_INVOKABLE QRect workAreaForScreen(const QRect &screen);
     Q_INVOKABLE void closePopup(const QString &sourceName);
 
-    void setPopupLocation(Qt::Edge popupLocation);
+    void setPopupLocation(PositionOnScreen popupLocation);
 
     /**
      * Fills the popup with data from notificationData
@@ -67,7 +81,7 @@ private:
     QList<QQuickWindow*> m_availablePopups;
     QHash<QString, QQuickWindow*> m_sourceMap;
     QRect m_plasmoidScreen;
-    Qt::Edge m_popupLocation;
+    PositionOnScreen m_popupLocation;
     int m_offset;
     bool m_busy;
     QList<QQuickWindow*> m_hideQueue;

@@ -32,7 +32,7 @@
 
 NotificationsHelper::NotificationsHelper(QObject *parent)
     : QObject(parent),
-    m_popupLocation(Qt::BottomEdge),
+    m_popupLocation(NotificationsHelper::BottomRight),
     m_busy(false)
 {
     m_mutex = new QReadWriteLock(QReadWriteLock::Recursive);
@@ -51,7 +51,7 @@ NotificationsHelper::~NotificationsHelper()
     delete m_mutex;
 }
 
-void NotificationsHelper::setPopupLocation(Qt::Edge popupLocation)
+void NotificationsHelper::setPopupLocation(PositionOnScreen popupLocation)
 {
     if (m_popupLocation != popupLocation) {
         m_popupLocation = popupLocation;
@@ -92,7 +92,7 @@ void NotificationsHelper::addNotificationPopup(QObject *win)
 
     // This is to make sure the popups won't fly across the whole
     // screen the first time they appear
-    if (m_popupLocation == Qt::TopEdge) {
+    if (m_popupLocation == NotificationsHelper::TopLeft || m_popupLocation == NotificationsHelper::TopCenter || m_popupLocation == NotificationsHelper::TopRight) {
         popup->setY(0);
     } else {
         popup->setY(workAreaForScreen(m_plasmoidScreen).height());
@@ -189,7 +189,7 @@ void NotificationsHelper::processHide()
         // huge but setting short text won't make it smaller
         popup->setHeight(1);
         // Make sure it flies in from where it's supposed to
-        if (m_popupLocation == Qt::TopEdge) {
+        if (m_popupLocation == NotificationsHelper::TopLeft || m_popupLocation == NotificationsHelper::TopCenter || m_popupLocation == NotificationsHelper::TopRight) {
             popup->setY(0);
         } else {
             popup->setY(workAreaForScreen(m_plasmoidScreen).height());
@@ -287,7 +287,7 @@ void NotificationsHelper::repositionPopups()
     m_mutex->lockForWrite();
 
     for (int i = 0; i < m_popupsOnScreen.size(); ++i) {
-        if (m_popupLocation == Qt::TopEdge) {
+        if (m_popupLocation == NotificationsHelper::TopLeft || m_popupLocation == NotificationsHelper::TopCenter || m_popupLocation == NotificationsHelper::TopRight) {
             if (m_popupsOnScreen[i]->isVisible()) {
                 //if it's visible, go through setProperty which animates it
                 m_popupsOnScreen[i]->setProperty("y", workArea.top() + cumulativeHeight);
@@ -303,7 +303,20 @@ void NotificationsHelper::repositionPopups()
             }
         }
 
-        m_popupsOnScreen[i]->setX(workArea.right() - m_popupsOnScreen[i]->contentItem()->width() - m_offset);
+        switch (m_popupLocation) {
+            case TopRight:
+            case BottomRight:
+                m_popupsOnScreen[i]->setX(workArea.right() - m_popupsOnScreen[i]->contentItem()->width() - m_offset);
+                break;
+            case TopCenter:
+            case BottomCenter:
+                m_popupsOnScreen[i]->setX((workArea.width() / 2) - (m_popupsOnScreen[i]->contentItem()->width() / 2));
+                break;
+            case TopLeft:
+            case BottomLeft:
+                m_popupsOnScreen[i]->setX(workArea.left() + m_offset);
+                break;
+        }
 
         cumulativeHeight += (m_popupsOnScreen[i]->contentItem()->height() + m_offset);
     }

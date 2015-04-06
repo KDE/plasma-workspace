@@ -20,12 +20,18 @@
 
 import QtQuick 2.0
 import QtQuick.Controls 1.0 as QtControls
-import QtQuick.Layouts 1.0 as QtLayouts
+import QtQuick.Layouts 1.1 as QtLayouts
+import QtQuick.Window 2.2
+import org.kde.plasma.core 2.0 as PlasmaCore
+
+import org.kde.plasma.private.notifications 1.0
 
 Item {
     id: appearancePage
     width: childrenRect.width
     height: childrenRect.height
+
+    signal configurationChanged
 
     property alias cfg_showNotifications: showNotificationsCheckBox.checked
     property alias cfg_showJobs: showJobsCheckBox.checked
@@ -40,5 +46,21 @@ Item {
             id: showJobsCheckBox
             text: i18n("Track file transfers and other jobs")
         }
+        QtControls.CheckBox {
+            id: useCustomPopupPositionCheckBox
+            text: i18n("Use custom position for the notification popup")
+            checked: plasmoid.nativeInterface.screenPosition != NotificationsHelper.Default
+        }
+
+        ScreenPositionSelector {
+            id: screenPositionSelector
+            enabled: useCustomPopupPositionCheckBox.checked
+            selectedPosition: plasmoid.nativeInterface.screenPosition
+            disabledPositions: [NotificationsHelper.Left, NotificationsHelper.Center, NotificationsHelper.Right]
+        }
+    }
+
+    Component.onCompleted: {
+        plasmoid.nativeInterface.screenPosition = Qt.binding(function() {configurationChanged(); return screenPositionSelector.selectedPosition; });
     }
 }

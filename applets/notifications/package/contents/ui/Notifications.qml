@@ -168,7 +168,17 @@ Column {
     NotificationsHelper {
         id: notificationPositioner
         plasmoidScreen: plasmoid.screenGeometry
-        popupLocation: plasmoid.location === PlasmaCore.Types.TopEdge ? Qt.TopEdge : Qt.BottomEdge
+        popupLocation: {if (plasmoid.nativeInterface.screenPosition == 0) {
+                            // If the screenPosition is the default, follow the panel
+                            if (plasmoid.location === PlasmaCore.Types.TopEdge) {
+                                return NotificationsHelper.TopRight;
+                            } else {
+                                return NotificationsHelper.BottomRight;
+                            }
+                        } else {
+                            return plasmoid.nativeInterface.screenPosition;
+                        }
+                    }
     }
 
     Repeater {
