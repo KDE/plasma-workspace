@@ -2,7 +2,6 @@
 Name=System Monitor
 Name[af]=Stelsel Monitor
 Name[ar]=مرقاب النظام
-Name[ast]=Monitor del sistema
 Name[be]=Сістэмны назіральнік
 Name[be@latin]=Systemny nazirańnik
 Name[bg]=Наблюдение на системата
@@ -85,7 +84,6 @@ Name[zh_CN]=系统监视器
 Name[zh_TW]=系統監視器
 Comment=System monitoring applet
 Comment[ar]=بُريْمج لمراقبة النظام
-Comment[ast]=Miniaplicación de monitorización del sistema
 Comment[be@latin]=Aplet nazirańnia za systemaju
 Comment[bg]=Аплет за наблюдение на системата
 Comment[bn]=সিস্টেম মনিটর অ্যাপলেট

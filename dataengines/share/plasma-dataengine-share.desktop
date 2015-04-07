@@ -1,7 +1,6 @@
 [Desktop Entry]
 Name=Share Services
 Name[ar]=خدمات المشاركة
-Name[ast]=Compartir Servicios
 Name[bg]=Услуги за споделяне
 Name[bs]=Servisi dijeljenja
 Name[ca]=Serveis de compartició
@@ -60,7 +59,6 @@ Name[zh_CN]=共享服务
 Name[zh_TW]=分享服務
 Comment=Engine to share content using different services
 Comment[ar]=محرّك بمشاركة المحتوى باستخدام خدمات مختلفة
-Comment[ast]=Motor pa compartir conteníos a traviés d'estremaos servicios
 Comment[bg]=Споделяне на данни чрез различни услуги
 Comment[bs]=Motor za dijeljenje sadržaja preko različitih servisa
 Comment[ca]=Motor per compartir contingut utilitzant diferents serveis

@@ -1,7 +1,6 @@
 [Desktop Entry]
 Comment=Basic Power Management Operations
 Comment[ar]=عمليات إدارة الطاقة الأساسية
-Comment[ast]=Operaciones básiques de xestión de la batería
 Comment[be@latin]=Prostyja aperacyi dla kiravańnia enerhijaj
 Comment[bg]=Основни операции по захранването
 Comment[bs]=Osnovni postupci upravljanja napajanjem
@@ -78,6 +77,7 @@ Name[ca]=Energia
 Name[cs]=Energie
 Name[de]=Energie
 Name[en_GB]=Power
+Name[es]=Energía
 Name[fi]=Virta
 Name[gl]=Enerxía
 Name[hu]=Teljesítmény

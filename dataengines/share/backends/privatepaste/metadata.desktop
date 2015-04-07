@@ -1,6 +1,5 @@
 [Desktop Entry]
 Name=privatepaste.com
-Name[ast]=privatepaste.com
 Name[bg]=privatepaste.com
 Name[bs]=privatepaste.com
 Name[ca]=privatepaste.com
@@ -59,7 +58,6 @@ Name[zh_CN]=privatepaste.com
 Name[zh_TW]=privatepaste.com
 Comment=Paste text with the PrivatePaste.com service
 Comment[ar]=الصق نصًّا بخدة PrivatePaste.com
-Comment[ast]=Apegar testu per aciu del serviciu PrivatePaste.com
 Comment[bg]=Поставяне на текст през услугата PrivatePaste.com
 Comment[bs]=Naljepljivanje teksta preko servisa privatepaste.com
 Comment[ca]=Enganxa text amb el servei PrivatePaste.com

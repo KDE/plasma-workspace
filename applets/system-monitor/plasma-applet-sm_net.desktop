@@ -2,7 +2,6 @@
 Encoding=UTF-8
 Name=Network Monitor
 Name[ar]=مرقاب الشبكة
-Name[ast]=Monitor de rede
 Name[bg]=Наблюдение на мрежата
 Name[bs]=Nadzor mreže
 Name[ca]=Controlador de la xarxa
@@ -66,7 +65,6 @@ Name[zh_CN]=网络监视器
 Name[zh_TW]=網路監控
 Comment=A network usage monitor
 Comment[ar]=مرقاب لاستخدام الشبكة
-Comment[ast]=Monitor d'usu de la rede
 Comment[be@latin]=Nazirańnik zaniataści sietki
 Comment[bg]=Наблюдение на изпозлването на мрежата
 Comment[bs]=Nadgledanje upotrebe mreže

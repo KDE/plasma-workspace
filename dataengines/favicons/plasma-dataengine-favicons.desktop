@@ -1,7 +1,6 @@
 [Desktop Entry]
 Encoding=UTF-8
 Name=Favicons
-Name[ast]=Favicons
 Name[be@latin]=Ikony sajtaŭ
 Name[bg]=Уеб-икони
 Name[bn]=ফ্যাভ-আইকন
@@ -77,7 +76,6 @@ Name[zh_CN]=网站图标
 Name[zh_TW]=網站圖示
 Comment=Data Engine for getting favicons of web sites
 Comment[ar]=محرّك بيانات للحصول على favicons من مواقع الوِب
-Comment[ast]=Motor de datos pa obtener favicons de los sitios web
 Comment[be@latin]=Systema źviestak dla atrymańnia ikon sajtaŭ
 Comment[bg]=Ядро за изтегляне на уеб-икони от сайтове
 Comment[bs]=Datomotor za dobavljanje favikona veb sajtova

@@ -2,7 +2,6 @@
 Name=Platinum
 Name[af]=Platinum
 Name[ar]=بلاتينوم
-Name[ast]=Platinu
 Name[be]=Платына
 Name[be@latin]=Platinum
 Name[bg]=Платина
@@ -83,7 +82,6 @@ Name[x-test]=xxPlatinumxx
 Name[zh_CN]=Platinum
 Name[zh_TW]=Platinum
 Comment=Built-in unthemed Platinum style
-Comment[ast]=Estilu Platino ensin tema
 Comment[be]=Убудаваны стыль Платына
 Comment[be@latin]=Styl „Platinum”
 Comment[bg]=Вграден платинен стил

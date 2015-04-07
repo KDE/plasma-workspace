@@ -2,7 +2,6 @@
 # ctxt: plasma data engine
 Name=Power Management
 Name[ar]=إدارة الطاقة
-Name[ast]=Xestión d'enerxía
 Name[bg]=Управление на захранването
 Name[bn]=শক্তি ব্যবস্থাপনা
 Name[bs]=Upravljanje napajanjem
@@ -70,7 +69,6 @@ Name[x-test]=xxPower Managementxx
 Name[zh_CN]=电源管理
 Name[zh_TW]=電源管理
 Comment=Battery, AC, sleep and PowerDevil information.
-Comment[ast]=Información de batería, CA, hibernación y PowerDevil.
 Comment[bg]=Данни за батерия, AC, приспиване и PowerDevil
 Comment[bs]=Podaci iz Strujnog đavola o bateriji, AC‑u, i spavanju.
 Comment[ca]=Informació de la bateria, AC, suspensió i del PowerDevil.

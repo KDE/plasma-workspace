@@ -1,7 +1,6 @@
 [Desktop Entry]
 Name=BBC Weather from UK MET Office
 Name[ar]=بي.بي.سي لأحوال الطقس من مكتب الأرصاد الجويّة البريطاني
-Name[ast]=Meteoroloxía de la BBC de la Oficina meteorolóxica del Reinu Xuníu
 Name[be@latin]=Nadvorje „BBC” ad „UK MET Office”
 Name[bg]=Време от BBC (офис UK MET)
 Name[bs]=Meteouslovi po Bi‑bi‑siju
@@ -77,7 +76,6 @@ Name[zh_CN]=英国 MET 办公室提供的 BBC 天气报告
 Name[zh_TW]=BBC 天氣報告，從 UK MET 辦公室來
 Comment=XML Data from the UK MET Office
 Comment[ar]=بيانات XML من مكتب MET البريطاني
-Comment[ast]=Datos XML de la Oficina Meteorolóxica del Reinu Xuníu
 Comment[be@latin]=Źviestki ŭ farmacie „XML” ad „UK MET Office”
 Comment[bg]=XML данни от UK MET
 Comment[bs]=IksML podaci Britanskog meteorološkog ofisa

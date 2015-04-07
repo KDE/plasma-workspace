@@ -2,7 +2,6 @@
 Name=System Tray
 Name[af]=Stelsellaai
 Name[ar]=صينية النظام
-Name[ast]=Bandexa del sistema
 Name[be]=Сістэмны трэй
 Name[be@latin]=Systemny trej
 Name[bg]=Системен панел
@@ -88,7 +87,6 @@ Name[x-test]=xxSystem Trayxx
 Name[zh_CN]=系统托盘
 Name[zh_TW]=系統匣
 Comment=Access hidden applications minimized in the system tray
-Comment[ast]=Acceder a aplicaciones anubríes minimizaes na bandexa del sistema
 Comment[be@latin]=Dostup da schavanych u systemnym trei aplikacyjaŭ
 Comment[bg]=Достъп до минимизираните в системния панел програми
 Comment[bs]=Pristup skrivenim programima minimizovanim u sistemsku kasetu

@@ -1,7 +1,6 @@
 [Desktop Entry]
 Name=Application Notifications
 Name[ar]=إخطارات التطبيقات
-Name[ast]=Notificaciones d'aplicaciones
 Name[be@latin]=Infarmavańni aplikacyj
 Name[bg]=Програмни съобщения
 Name[bn]=অ্যাপলিকেশন বিজ্ঞপ্তি
@@ -76,7 +75,6 @@ Name[x-test]=xxApplication Notificationsxx
 Name[zh_CN]=应用程序通知
 Name[zh_TW]=應用程式通知
 Comment=Passive visual notifications for the user.
-Comment[ast]=Notificaciones visuales pasives pal usuariu.
 Comment[bg]=Пасивни визуални съобщения за потребителя.
 Comment[bs]=Pasivna vizuelna obavještenja za korisnika.
 Comment[ca]=Notificacions visuals passives per a l'usuari.

@@ -2,7 +2,6 @@
 Name=Lock/Logout
 Name[af]=Sluit/Teken af
 Name[ar]=اقفل/اخرج
-Name[ast]=Bloquiar/Finar
 Name[be@latin]=Blok na ekran i vychad z systemy
 Name[bg]=Заключване/Изход
 Name[bn]=লক/লগ-আউট
@@ -84,7 +83,6 @@ Name[zh_CN]=锁定/注销
 Name[zh_TW]=鎖定/登出
 Comment=Lock the screen or log out
 Comment[ar]=اقفل الشاشة أو اخرج
-Comment[ast]=Bloquiar l'escritoriu o colar
 Comment[be@latin]=Blok na ekran ci vychad z systemy
 Comment[bg]=Заключване на екрана и изход
 Comment[bs]=Zaključajte ekran ili se odjavite

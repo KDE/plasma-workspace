@@ -2,7 +2,6 @@
 # ctxt: plasma runner
 Name=Bookmarks
 Name[ar]=العلامات
-Name[ast]=Marcadores
 Name[bg]=Отметки
 Name[bn]=বুকমার্ক
 Name[bs]=Zabilješke
@@ -72,7 +71,6 @@ Name[zh_CN]=书签
 Name[zh_TW]=書籤
 Comment=Find and open bookmarks
 Comment[ar]=اعثر على العلامات وافتحها
-Comment[ast]=Guetar y abrir marcadores
 Comment[be@latin]=Pošuk i adčynieńnie zakładak.
 Comment[bg]=Търсене и зареждане на отметки
 Comment[bn]=বুকমার্ক খোঁজো এবং খোলো

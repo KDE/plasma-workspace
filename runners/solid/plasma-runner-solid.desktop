@@ -2,7 +2,6 @@
 # ctxt: plasma runner
 Name=Devices
 Name[ar]=الأجهزة
-Name[ast]=Preseos
 Name[bg]=Устройства
 Name[bn]=ডিভাইস
 Name[bs]=Uređaji
@@ -73,7 +72,6 @@ Name[zh_CN]=设备
 Name[zh_TW]=裝置
 Comment=Manage removable devices
 Comment[ar]=أدر الأجهزة المنفصلة
-Comment[ast]=Xestionar preseos estrayibles
 Comment[bn]=অপসারণযোগ্য ডিভাইস ব্যবস্থাপনা
 Comment[bs]=Upravljanje uklonjivim uređajima
 Comment[ca]=Gestiona dispositius extraïbles

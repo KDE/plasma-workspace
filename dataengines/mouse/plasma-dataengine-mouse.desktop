@@ -1,7 +1,6 @@
 [Desktop Entry]
 Name=Pointer Position
 Name[ar]=موقع المؤشّر
-Name[ast]=Posición del punteru
 Name[be@latin]=Miesca kursora
 Name[bg]=Разположение на курсора
 Name[bs]=Položaj pokazivača
@@ -73,7 +72,6 @@ Name[zh_CN]=指针位置
 Name[zh_TW]=指標位置
 Comment=Mouse position and cursor
 Comment[ar]=موقع ومؤشّر الفأرة
-Comment[ast]=Posición del mur y cursor
 Comment[bg]=Позиция на мишката и курсора
 Comment[bs]=Položaj miša i pokazivača
 Comment[ca]=Posició del ratolí i del cursor

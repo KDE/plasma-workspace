@@ -2,7 +2,6 @@
 Encoding=UTF-8
 Name=Memory Status
 Name[ar]=حالة الذاكرة
-Name[ast]=Estáu de la memoria
 Name[bg]=Състояние на паметта
 Name[bs]=Stanje memorije
 Name[ca]=Estat de la memòria
@@ -64,7 +63,6 @@ Name[zh_CN]=内存状态
 Name[zh_TW]=記憶體狀態
 Comment=A RAM usage monitor
 Comment[ar]=مرقاب لاستخدام الذاكرة العشوائية
-Comment[ast]=Monitor d'usu de la RAM
 Comment[bg]=Изпозлване на оперативната памет (RAM)
 Comment[bs]=Nadgledanje upotrebe RAM‑a
 Comment[ca]=Un controlador d'ús de la RAM

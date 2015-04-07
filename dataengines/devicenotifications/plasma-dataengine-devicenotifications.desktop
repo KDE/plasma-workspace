@@ -1,7 +1,6 @@
 [Desktop Entry]
 Name=Device Notifications
 Name[ar]=إخطارات الأجهزة
-Name[ast]=Notificaciones de preséu
 Name[bg]=Уведомления от устройства
 Name[bn]=ডিভাইস বিজ্ঞপ্তি
 Name[bs]=Obavještenja o uređajima
@@ -63,7 +62,6 @@ Name[x-test]=xxDevice Notificationsxx
 Name[zh_CN]=设备通知
 Name[zh_TW]=裝置通知
 Comment=Passive device notifications for the user.
-Comment[ast]=Notificaciones pasives de preseos pal usuariu.
 Comment[bg]=Пасивни уведомления от устройствата за потребителя.
 Comment[bs]=Pasivna obavještenja o uređajima za korisnika.
 Comment[ca]=Notificacions passives de dispositius per a l'usuari.

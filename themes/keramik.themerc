@@ -2,7 +2,6 @@
 Name=Keramik
 Name[af]=Keramik
 Name[ar]=خزف
-Name[ast]=Keramik
 Name[be]=Keramik
 Name[be@latin]=Keramik
 Name[bg]=Keramik
@@ -94,7 +93,6 @@ Name[zh_TW]=Keramik
 ConfigPage=kstyle_keramik_config
 Comment=A style using alphablending
 Comment[af]='n Styl met alfa-vermenging
-Comment[ast]=Un estilu qu'usa alphablending
 Comment[be@latin]=Matyŭ z padmiešvańniem alfa-kanału
 Comment[bg]=Стил с алфа смесване
 Comment[bn_IN]=আল্ফা-ব্লেন্ডিং প্রয়োগকারী বিন্যাস

@@ -2,7 +2,6 @@
 Encoding=UTF-8
 Name=Networking
 Name[ar]=الشبكة
-Name[ast]=Rede
 Name[be@latin]=Sietka
 Name[bg]=Мрежа
 Name[bn]=নেটওয়ার্কিং
@@ -80,7 +79,6 @@ Comment=Network interface information
 Comment[af]=Netwerk koppelvlak informasie
 Comment[ar]=معلومات واجهة الشبكة
 Comment[as]=নে'টৱৰ্ক সংযোগমাধ্যমৰ তথ্য
-Comment[ast]=Información sobre la interface de rede
 Comment[be]=Звесткі пра сеткавы інтэрфейс
 Comment[be@latin]=Źviestki pra sietkavyja interfejsy
 Comment[bg]=Данни за мрежовите интерфейси

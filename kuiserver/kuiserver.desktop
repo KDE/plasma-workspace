@@ -2,7 +2,6 @@
 Type=Service
 Name=kuiserver
 Name[af]=kui-bediener
-Name[ast]=kuiserver
 Name[be]=kuiserver
 Name[be@latin]=kuiserver
 Name[bg]=kuiserver
@@ -84,7 +83,6 @@ Exec=kuiserver5
 Comment=KDE's Progress Info UI server
 Comment[af]=KDE se vordering-wys bediener
 Comment[ar]=خادوم واجهة معلومات تقدّم كدي
-Comment[ast]=Sirvidor d'IU de progresu de KDE
 Comment[be]=KDE's Progress Info UI server
 Comment[be@latin]=Server źviestak pra čynnaść aperacyj dla hrafičnaha interfejsu „KDE”
 Comment[bg]=Сървър за интерфейса на KDE

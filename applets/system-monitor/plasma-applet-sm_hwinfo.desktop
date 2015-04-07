@@ -2,7 +2,6 @@
 Encoding=UTF-8
 Name=Hardware Info
 Name[ar]=معلومات العتاد
-Name[ast]=Información del hardware
 Name[bg]=Хардуерни данни
 Name[bs]=Podaci o hardveru
 Name[ca]=Informació del maquinari
@@ -65,7 +64,6 @@ Name[zh_CN]=硬件信息
 Name[zh_TW]=硬體資訊
 Comment=Show hardware info
 Comment[ar]=أظهر معلومات العتاد
-Comment[ast]=Amosar información d'hardware
 Comment[be@latin]=Pakazvaje źviestki pra aparaturu
 Comment[bg]=Показване на данни за хардуера
 Comment[bn]=হার্ডওয়্যার তথ্য দেখাও

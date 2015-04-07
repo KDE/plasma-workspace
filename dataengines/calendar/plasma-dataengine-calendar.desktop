@@ -1,7 +1,6 @@
 [Desktop Entry]
 Name=Calendar
 Name[ar]=التقويم
-Name[ast]=Calendariu
 Name[be@latin]=Kalandar
 Name[bg]=Календар
 Name[bn]=ক্যালেণ্ডার
@@ -79,7 +78,6 @@ Name[zh_CN]=日历
 Name[zh_TW]=行事曆
 Comment=Calendar data engine
 Comment[ar]=محرّك بيانات التقويم
-Comment[ast]=Motor de datos del calendariu
 Comment[bg]=Ядро на календара
 Comment[bs]=Kalendarski datomotor
 Comment[ca]=Motor de dades de calendari

@@ -2,7 +2,6 @@
 Encoding=UTF-8
 Name=CPU Monitor
 Name[ar]=مرقاب المعالج
-Name[ast]=Monitor de CPU
 Name[bg]=Наблюдение на процесора
 Name[bs]=Nadzor procesora
 Name[ca]=Controlador de la CPU
@@ -65,7 +64,6 @@ Name[zh_CN]=CPU 监视器
 Name[zh_TW]=CPU 監視器
 Comment=A CPU usage monitor
 Comment[ar]=مرقاب لاستخدام المعالج
-Comment[ast]=Monitor d'usu de la CPU
 Comment[be@latin]=Nazirańnik zaniataści „CPU”
 Comment[bg]=Наблюдение натоварването на процесора
 Comment[bs]=Nadgledanje upotrebe procesora

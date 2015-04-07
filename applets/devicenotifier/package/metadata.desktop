@@ -1,7 +1,6 @@
 [Desktop Entry]
 Name=Device Notifier
 Name[ar]=مُخطِر الأجهزة
-Name[ast]=Notificador de preséu
 Name[be@latin]=Infarmavańnie pra novyja pryłady
 Name[bg]=Уведомяване за нови устройства
 Name[bn]=ডিভাইস নোটিফায়ার
@@ -78,7 +77,6 @@ Name[zh_CN]=设备通知器
 Name[zh_TW]=裝置通知
 Comment=Notifications and access for new devices
 Comment[ar]=إخطارات ووصول الأجهزة الجديدة
-Comment[ast]=Notificaciones y accesos de nuevos preseos
 Comment[be@latin]=Infarmavańnie j dostup da novych pryładaŭ
 Comment[bg]=Уведомления и достъп до новите устройства
 Comment[bs]=Obavještavanje i pristup novim uređajima

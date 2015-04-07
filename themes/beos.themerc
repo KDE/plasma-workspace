@@ -2,7 +2,6 @@
 Name=BeOS
 Name[af]=BeOS
 Name[as]=BeOS
-Name[ast]=BeOS
 Name[be]=BeOS
 Name[be@latin]=BeOS
 Name[bg]=BeOS
@@ -91,7 +90,6 @@ Name[zh_CN]=BeOS
 Name[zh_TW]=BeOS
 Comment=Unthemed BeOS-like style
 Comment[af]=BeOS-tipe styl sonder temas
-Comment[ast]=Estilu BeOS ensin tema
 Comment[be]=Стыль BeOS
 Comment[be@latin]=Styl systemy „BeOS”
 Comment[bg]=Стил BeOS

@@ -8,7 +8,6 @@ X-KDE-ServiceTypes=
 X-KDE-StartupNotify=false
 
 Name=KDED Global Shortcuts Server
-Name[ast]=Sirvidor d'accesos rápidos globales KDED
 Name[be@latin]=Słužba paŭsiudnych klavijaturnych skarotaŭ dla „KDE”
 Name[bg]=Сървър KDED Global Shortcuts
 Name[bn]=কে.ডি.ই.ডি গ্লোবাল শর্টকাট সার্ভার
