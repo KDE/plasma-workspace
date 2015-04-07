@@ -166,24 +166,6 @@ void KSMServer::clientSetProgram( KSMClient* client )
 {
     if( client->program() == wm )
         autoStart0();
-#ifndef KSMSERVER_STARTUP_DEBUGl
-    if( state == Idle )
-        {
-        static int cnt = 0;
-        if( client->program() == QStringLiteral( "gedit" ) && ( cnt == 0 ))
-            ++cnt;
-        else if( client->program() == QStringLiteral( "konqueror" ) && ( cnt == 1 ))
-            ++cnt;
-        else if( client->program() == QStringLiteral( "kspaceduel" ) && ( cnt == 2 ))
-            ++cnt;
-        else if( client->program() == QStringLiteral( "gedit" ) && ( cnt == 3 ))
-            ++cnt;
-        else
-            cnt = 0;
-        if( cnt == 4 )
-            KMessageBox::information( NULL, QStringLiteral( "drat" ) );
-        }
-#endif
 }
 
 void KSMServer::wmProcessChange()
