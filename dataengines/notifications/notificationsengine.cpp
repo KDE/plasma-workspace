@@ -265,9 +265,20 @@ uint NotificationsEngine::Notify(const QString &app_name, uint replaces_id,
     notificationData.insert("configurable", configurable);
 
     QImage image;
-    if (hints.contains("image_data")) {
+    // Underscored hints was in use in version 1.1 of the spec but has been
+    // replaced by dashed hints in version 1.2. We need to support it for
+    // users of the 1.2 version of the spec.
+    if (hints.contains("image-data")) {
+        QDBusArgument arg = hints["image-data"].value<QDBusArgument>();
+        image = decodeNotificationSpecImageHint(arg);
+    } else if (hints.contains("image_data")) {
         QDBusArgument arg = hints["image_data"].value<QDBusArgument>();
         image = decodeNotificationSpecImageHint(arg);
+    } else if (hints.contains("image-path")) {
+        QString path = findImageForSpecImagePath(hints["image-path"].toString());
+        if (!path.isEmpty()) {
+            image.load(path);
+        }
     } else if (hints.contains("image_path")) {
         QString path = findImageForSpecImagePath(hints["image_path"].toString());
         if (!path.isEmpty()) {
