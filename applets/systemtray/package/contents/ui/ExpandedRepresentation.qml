@@ -60,6 +60,7 @@ KQuickControlsAddons.MouseEventListener {
     }
 
     MouseArea {
+        visible: hiddenView.visible
         anchors {
             top: parent.top
             bottom: parent.bottom
