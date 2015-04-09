@@ -33,8 +33,10 @@ ColumnLayout {
     property int cfg_FillMode
     property var cfg_SlidePaths: ""
     property int cfg_SlideInterval: 0
+    signal restoreIndex(int count)
 
     function saveConfig() {
+        root.restoreIndex(imageWallpaper.wallpaperModel.count)
         imageWallpaper.commitDeletion();
     }
 
@@ -286,6 +288,13 @@ ColumnLayout {
 
                 delegate: WallpaperDelegate {
                     color: colorRow.visible ? cfg_Color : "black"
+                }
+
+                Connections {
+                    target: root
+                    onRestoreIndex: {
+                        wallpapersGrid.currentIndex = wallpapersGrid.currentIndex - count
+                    }
                 }
 
                 Timer {
