@@ -95,6 +95,7 @@ X-KDE-PluginInfo-License=GPL
 X-KDE-PluginInfo-Name=org.kde.plasma.mediacontroller
 X-KDE-PluginInfo-Version=1.0
 X-KDE-PluginInfo-Website=http://plasma.kde.org/
+X-Plasma-StandAloneApp=true
 X-Plasma-API=declarativeappletscript
 X-Plasma-MainScript=ui/main.qml
 X-Plasma-NotificationArea=true

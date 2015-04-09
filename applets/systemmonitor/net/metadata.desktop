@@ -142,6 +142,7 @@ X-KDE-ServiceTypes=Plasma/Applet
 
 X-Plasma-API=declarativeappletscript
 X-Plasma-MainScript=ui/net.qml
+X-Plasma-StandAloneApp=true
 
 X-Plasma-ConfigPlugins=solid-actions,device_automounter_kcm
 
