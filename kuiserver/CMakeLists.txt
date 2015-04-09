@@ -22,7 +22,7 @@ ki18n_wrap_ui(kuiserver_KDEINIT_SRCS configdialog.ui)
 #<DBus Stuff>
 
 #<JobView>
-  set(jobview_xml ${KJOBWIDGETS_DBUS_INTERFACES_DIR}/kf5_org.kde.JobViewV2.xml)
+  set(jobview_xml org.kde.JobView.xml)
 
   qt5_add_dbus_adaptor(kuiserver_KDEINIT_SRCS ${jobview_xml} jobview.h JobView jobviewadaptor )
 

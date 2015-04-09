@@ -1,0 +1,57 @@
+<!DOCTYPE node PUBLIC "-//freedesktop//DTD D-BUS Object Introspection 1.0//EN"
+"http://www.freedesktop.org/standards/dbus/1.0/introspect.dtd">
+<node>
+  <interface name="org.kde.JobViewV2">
+    <method name="terminate">
+      <arg name="errorMessage" type="s" direction="in"/>
+      <annotation name="org.freedesktop.DBus.Method.NoReply" value="true"/>
+    </method>
+    <method name="setSuspended">
+      <arg name="suspended" type="b" direction="in"/>
+      <annotation name="org.freedesktop.DBus.Method.NoReply" value="true"/>
+    </method>
+    <method name="setTotalAmount">
+      <arg name="amount" type="t" direction="in"/>
+      <arg name="unit" type="s" direction="in"/>
+      <annotation name="org.freedesktop.DBus.Method.NoReply" value="true"/>
+    </method>
+    <method name="setProcessedAmount">
+      <arg name="amount" type="t" direction="in"/>
+      <arg name="unit" type="s" direction="in"/>
+      <annotation name="org.freedesktop.DBus.Method.NoReply" value="true"/>
+    </method>
+    <method name="setPercent">
+      <arg name="percent" type="u" direction="in"/>
+      <annotation name="org.freedesktop.DBus.Method.NoReply" value="true"/>
+    </method>
+    <method name="setSpeed">
+      <arg name="bytesPerSecond" type="t" direction="in"/>
+      <annotation name="org.freedesktop.DBus.Method.NoReply" value="true"/>
+    </method>
+    <method name="setInfoMessage">
+      <arg name="message" type="s" direction="in"/>
+      <annotation name="org.freedesktop.DBus.Method.NoReply" value="true"/>
+    </method>
+    <method name="setDescriptionField">
+      <arg name="number" type="u" direction="in"/>
+      <arg name="name" type="s" direction="in"/>
+      <arg name="value" type="s" direction="in"/>
+      <arg name="res" type="b" direction="out"/>
+    </method>
+    <method name="clearDescriptionField">
+      <arg name="number" type="u" direction="in"/>
+      <annotation name="org.freedesktop.DBus.Method.NoReply" value="true"/>
+    </method>
+    <method name="setDestUrl">
+      <arg name="destUrl" type="v" direction="in"/>
+      <annotation name="org.freedesktop.DBus.Method.NoReply" value="true"/>
+    </method>
+    <method name="setError">
+      <arg name="errorCode" type="u" direction="in"/>
+      <annotation name="org.freedesktop.DBus.Method.NoReply" value="true"/>
+    </method>
+    <signal name="suspendRequested"/>
+    <signal name="resumeRequested"/>
+    <signal name="cancelRequested"/>
+  </interface>
+</node>

@@ -324,7 +324,7 @@ void ProgressListModel::serviceUnregistered(const QString &name)
     if (!jobs.isEmpty()) {
         m_jobViewsOwners.remove(name);
         Q_FOREACH(JobView *job, jobs) {
-            job->terminate(QString());
+            job->terminate(job->errorText());
         }
     }
 }

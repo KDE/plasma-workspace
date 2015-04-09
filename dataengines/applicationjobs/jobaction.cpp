@@ -19,6 +19,7 @@
 #include "jobaction.h"
 #include "kuiserverengine.h"
 
+#include <kio/global.h>
 #include <klocalizedstring.h>
 #include <QDebug>
 
@@ -42,6 +43,7 @@ void JobAction::start()
     } else if (operationName() == "stop") {
         m_jobView->requestStateChange(JobView::Stopped);
         //in case the app crashed and won't call terminate on the jobview.
+        m_jobView->setError(KIO::ERR_USER_CANCELED);
         m_jobView->terminate(i18n("Job canceled by user."));
     }
 

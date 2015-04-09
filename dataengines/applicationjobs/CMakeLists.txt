@@ -6,7 +6,7 @@ set(kuiserver_engine_SRCS
     jobaction.cpp
 )
 
-qt5_add_dbus_adaptor(kuiserver_engine_SRCS ${KJOBWIDGETS_DBUS_INTERFACES_DIR}/kf5_org.kde.JobViewV2.xml kuiserverengine.h JobView jobviewadaptor )
+qt5_add_dbus_adaptor(kuiserver_engine_SRCS ${CMAKE_SOURCE_DIR}/kuiserver/org.kde.JobView.xml kuiserverengine.h JobView jobviewadaptor )
 qt5_add_dbus_adaptor(kuiserver_engine_SRCS ${KJOBWIDGETS_DBUS_INTERFACES_DIR}/kf5_org.kde.JobViewServer.xml kuiserverengine.h KuiserverEngine jobviewserveradaptor )
 
 add_library(plasma_engine_applicationjobs MODULE ${kuiserver_engine_SRCS})
