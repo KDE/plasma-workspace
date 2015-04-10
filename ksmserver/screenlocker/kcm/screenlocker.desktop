@@ -82,3 +82,4 @@ Comment[uk]=Часові параметри блокування екрана
 Comment[x-test]=xxScreen Locking Timeoutsxx
 Comment[zh_CN]=锁屏时间
 Comment[zh_TW]=螢幕鎖定逾時
+X-KDE-Keywords=lock,resume, screensaver, screenlock
