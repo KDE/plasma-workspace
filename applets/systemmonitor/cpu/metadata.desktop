@@ -24,7 +24,6 @@ Name[sr@latin]=nadzor opterećenja procesora
 Name[sv]=Övervakning av processorlast
 Name[tr]=İşlemci Yükü İzleyici
 Name[uk]=Використання процесорів
-Name[x-test]=xxCPU Load Monitorxx
 Name[zh_CN]=CPU 负载监视器
 Name[zh_TW]=CPU 負載監視器
 Comment=Monitor the load of the CPUs
@@ -51,7 +50,6 @@ Comment[sr@latin]=Nadgledajte opterećenje procesora
 Comment[sv]=Övervaka processorernas last
 Comment[tr]=İşlemcilerin yüklerini izleyin
 Comment[uk]=Монітор навантаження на процесори
-Comment[x-test]=xxMonitor the load of the CPUsxx
 Comment[zh_CN]=监视 CPU 负载
 Comment[zh_TW]=監視 CPU 的負載
 
