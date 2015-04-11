@@ -73,7 +73,7 @@
     </widget>
    </item>
    <item row="3" column="1">
-    <widget class="KKeySequenceWidget" name="lockscreenShortcut">
+    <widget class="KKeySequenceWidget" name="lockscreenShortcut" native="true">
      <property name="toolTip">
       <string>The global keyboard shortcut to lock the screen.</string>
      </property>
@@ -152,6 +152,13 @@
    <header>selectimagebutton.h</header>
   </customwidget>
  </customwidgets>
+ <tabstops>
+  <tabstop>kcfg_Autolock</tabstop>
+  <tabstop>kcfg_Timeout</tabstop>
+  <tabstop>kcfg_LockGrace</tabstop>
+  <tabstop>kcfg_LockOnResume</tabstop>
+  <tabstop>kcfg_ThemeBackground</tabstop>
+ </tabstops>
  <resources/>
  <connections>
   <connection>
