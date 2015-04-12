@@ -147,6 +147,7 @@ bool PowermanagementEngine::sourceRequestEvent(const QString &name)
 
         if (listBattery.isEmpty()) {
             setData("Battery", "Has Battery", false);
+            setData("Battery", "Has Cumulative", false);
             return true;
         }
 
