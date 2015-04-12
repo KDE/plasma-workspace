@@ -89,7 +89,7 @@ KQuickControlsAddonsComponents.MouseEventListener {
 
     PulseAnimation {
         targetItem: taskItemContainer
-        running: modelData && modelData.status == SystemTray.Task.NeedsAttention
+        running: modelData && modelData.status === SystemTray.Task.NeedsAttention && units.longDuration > 0
     }
 
     onWidthChanged: updatePlasmoidGeometry()

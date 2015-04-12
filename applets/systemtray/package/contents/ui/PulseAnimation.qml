@@ -1,5 +1,6 @@
 /*
  *   Copyright 2013 Sebastian Kügler <sebas@kde.org>
+ *   Copyright 2015 Kai Uwe Broulik <kde@privat.broulik.de>
  *
  *   This program is free software; you can redistribute it and/or modify
  *   it under the terms of the GNU Library General Public License as
@@ -17,55 +18,35 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  2.010-1301, USA.
  */
 
-import QtQuick 2.0
-//import "Animations.js" as Animations
+import QtQuick 2.2
 
 SequentialAnimation {
     id: pulseAnimation
     objectName: "pulseAnimation"
 
     property Item targetItem
-    //property int duration: Animations.normalDuration
-    property int duration: units.longDuration * 6
+    readonly property int duration: 2000
 
-    onRunningChanged: {
-        // Make sure we reset the scale (which is manipulated by the Animation
-        // as to avoid freezing a scale icon when the status changes
-        if (!running) {
-            targetItem.scale = 1.0;
-        }
-    }
-    // Fast scaling while we're animation == more FPS
-    ScriptAction { script: { targetItem.smooth = false } }
+    loops: Animation.Infinite
+    alwaysRunToEnd: true
 
-    SequentialAnimation {
-
-        loops: Animation.Infinite
-
-        PropertyAnimation {
-            target: targetItem
-            property: "scale"
-            from: 1
-            to: 1.2
-            duration: pulseAnimation.duration * 0.15
-            easing.type: Easing.InQuad;
-        }
-
-        PropertyAnimation {
-            target: targetItem
-            property: "scale"
-            from: 1.2
-            to: 1
-            duration: pulseAnimation.duration * 0.15
-            easing.type: Easing.OutQuad;
-        }
-
-        PauseAnimation {
-            duration: pulseAnimation.duration * 0.7
-        }
+    ScaleAnimator {
+        target: targetItem
+        from: 1
+        to: 1.2
+        duration: pulseAnimation.duration * 0.15
+        easing.type: Easing.InQuad
     }
 
-    ScriptAction { script: targetItem.smooth = true }
+    ScaleAnimator {
+        target: targetItem
+        from: 1.2
+        to: 1
+        duration: pulseAnimation.duration * 0.15
+        easing.type: Easing.InQuad
+    }
+
+    PauseAnimation {
+        duration: pulseAnimation.duration * 0.7
+    }
 }
-
-
