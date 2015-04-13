@@ -180,8 +180,8 @@ ShellCorona::ShellCorona(QObject *parent)
 
 ShellCorona::~ShellCorona()
 {
-    qDeleteAll(containments());
     qDeleteAll(m_views);
+    qDeleteAll(containments());
     qDeleteAll(m_panelViews);
 }
 
