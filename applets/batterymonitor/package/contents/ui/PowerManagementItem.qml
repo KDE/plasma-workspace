@@ -43,8 +43,7 @@ Column {
 
             PlasmaCore.ToolTipArea {
                 anchors.fill: parent
-                subText: i18n("Disabling power management will prevent your screen and computer from turning off automatically.\n\n"
-                              + "Most applications will automatically suppress power management when they don't want to have you interrupted.")
+                subText: i18n("Disabling power management will prevent your screen and computer from turning off automatically.\n\nMost applications will automatically suppress power management when they don't want to have you interrupted.")
             }
 
             RowLayout {
