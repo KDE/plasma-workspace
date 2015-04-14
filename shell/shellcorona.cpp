@@ -22,6 +22,8 @@
 
 #include "shellcorona.h"
 
+#include <config-plasma.h>
+
 #include <QApplication>
 #include <QDebug>
 #include <QMenu>
@@ -68,6 +70,12 @@
 #else
     #define CHECK_SCREEN_INVARIANTS
 #endif
+
+#if HAVE_X11
+#include <NETWM>
+#include <QtX11Extras/QX11Info>
+#endif
+
 
 static const int s_configSyncDelay = 10000; // 10 seconds
 
@@ -135,6 +143,10 @@ ShellCorona::ShellCorona(QObject *parent)
     QObject::connect(dashboardAction, &QAction::triggered,
                      this, &ShellCorona::setDashboardShown);
     dashboardAction->setText(i18n("Show Dashboard"));
+    connect(KWindowSystem::self(), &KWindowSystem::showingDesktopChanged, [=](bool showing) {
+        dashboardAction->setText(showing ? i18n("Hide Dashboard") : i18n("Show Dashboard"));
+        dashboardAction->setChecked(showing);
+    });
 
     dashboardAction->setAutoRepeat(true);
     dashboardAction->setCheckable(true);
@@ -1026,16 +1038,12 @@ void ShellCorona::setDashboardShown(bool show)
         dashboardAction->setText(show ? i18n("Hide Dashboard") : i18n("Show Dashboard"));
     }
 
-    foreach (DesktopView *view, m_views) {
-        view->setDashboardShown(show);
-    }
+    KWindowSystem::setShowingDesktop(show);
 }
 
 void ShellCorona::toggleDashboard()
 {
-    foreach (DesktopView *view, m_views) {
-        view->setDashboardShown(!view->isDashboardShown());
-    }
+    setDashboardShown(!KWindowSystem::showingDesktop());
 }
 
 void ShellCorona::showInteractiveConsole()

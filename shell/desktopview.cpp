@@ -34,7 +34,6 @@
 
 DesktopView::DesktopView(Plasma::Corona *corona, QScreen *targetScreen)
     : PlasmaQuick::View(corona, 0),
-      m_dashboardShown(false),
       m_windowType(Desktop)
 {
     if (targetScreen) {
@@ -128,7 +127,7 @@ void DesktopView::setWindowType(DesktopView::WindowType type)
 void DesktopView::ensureWindowType()
 {
     //This happens sometimes, when shutting down the process
-    if (!screen() || m_dashboardShown) {
+    if (!screen()) {
         return;
     }
 
@@ -163,42 +162,14 @@ DesktopView::SessionType DesktopView::sessionType() const
     }
 }
 
-void DesktopView::setDashboardShown(bool shown)
-{
-    if (shown) {
-        if (m_windowType == Desktop) {
-            KWindowSystem::setType(winId(), NET::Normal);
-            KWindowSystem::clearState(winId(), NET::KeepBelow);
-            KWindowSystem::setState(winId(), NET::SkipTaskbar|NET::SkipPager);
-        }
-        setFlags(Qt::FramelessWindowHint | Qt::CustomizeWindowHint);
-
-        raise();
-        KWindowSystem::raiseWindow(winId());
-        KWindowSystem::forceActiveWindow(winId());
-
-    } else {
-        if (m_windowType == Desktop) {
-            KWindowSystem::setType(winId(), NET::Desktop);
-            KWindowSystem::setState(winId(), NET::SkipTaskbar|NET::SkipPager|NET::KeepBelow);
-        }
-        lower();
-        KWindowSystem::lowerWindow(winId());
-
-    }
-
-    m_dashboardShown = shown;
-    emit dashboardShownChanged();
-}
-
 bool DesktopView::event(QEvent *e)
 {
     if (e->type() == QEvent::KeyRelease) {
         QKeyEvent *ke = static_cast<QKeyEvent *>(e);
-        if (m_dashboardShown && ke->key() == Qt::Key_Escape) {
+        if (KWindowSystem::showingDesktop() && ke->key() == Qt::Key_Escape) {
             ShellCorona *c = qobject_cast<ShellCorona *>(corona());
             if (c) {
-                c->setDashboardShown(false);
+                KWindowSystem::setShowingDesktop(false);
             }
         }
 
@@ -229,11 +200,6 @@ void DesktopView::keyPressEvent(QKeyEvent *e)
     }
 
     QQuickView::keyPressEvent(e);
-}
-
-bool DesktopView::isDashboardShown() const
-{
-    return m_dashboardShown;
 }
 
 

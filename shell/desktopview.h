@@ -28,8 +28,6 @@
 class DesktopView : public PlasmaQuick::View
 {
     Q_OBJECT
-    //the qml part doesn't need to be able to write it, hide for now
-    Q_PROPERTY(bool dashboardShown READ isDashboardShown NOTIFY dashboardShownChanged)
 
     Q_PROPERTY(WindowType windowType READ windowType WRITE setWindowType NOTIFY windowTypeChanged)
 
@@ -52,9 +50,6 @@ public:
 
     explicit DesktopView(Plasma::Corona *corona, QScreen *targetScreen = 0);
     virtual ~DesktopView();
-
-    void setDashboardShown(bool shown);
-    bool isDashboardShown() const;
 
     void adaptToScreen();
     virtual void showEvent(QShowEvent*);
@@ -79,7 +74,6 @@ private Q_SLOTS:
 
 Q_SIGNALS:
     void stayBehindChanged();
-    void dashboardShownChanged();
     void windowTypeChanged();
 
 private:
@@ -88,7 +82,6 @@ private:
 
     QPointer<PlasmaQuick::ConfigView> m_configView;
     QPointer<QScreen> m_oldScreen;
-    bool m_dashboardShown : 1;
     WindowType m_windowType;
 };
 
