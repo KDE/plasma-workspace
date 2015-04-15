@@ -113,7 +113,13 @@ bool CurrentContainmentActionsModel::append(const QString &action, const QString
     item->setData(action, ActionRole);
     item->setData(plugin, PluginNameRole);
 
-    m_plugins[action] = Plasma::PluginLoader::self()->loadContainmentActions(m_containment, plugin);
+    Plasma::ContainmentActions *actions = Plasma::PluginLoader::self()->loadContainmentActions(m_containment, plugin);
+
+    if (!actions) {
+        return false;
+    }
+
+    m_plugins[action] = actions;
     m_plugins[action]->setContainment(m_containment);
     //empty config: the new one will ne in default state
     KConfigGroup tempConfig(&m_tempConfigParent, "test");
