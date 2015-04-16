@@ -1,3 +1,0 @@
-[D-BUS Service]
-Name=org.kde.kglobalaccel
-Exec=@CMAKE_INSTALL_PREFIX@/bin/kglobalaccel5

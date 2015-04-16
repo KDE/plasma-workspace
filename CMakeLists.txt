@@ -162,10 +162,5 @@ if(KF5WebKit_FOUND)
 add_subdirectory(drkonqi)
 endif()
 
-#include the local copy if we're building with frameworks < 5.7
-#remove once we hard-depend on >= 5.7
-if(KF5GlobalAccel_VERSION VERSION_LESS "5.7.0")
-add_subdirectory(kglobalaccel)
-endif()
 add_subdirectory(soliduiserver)
 feature_summary(WHAT ALL INCLUDE_QUIET_PACKAGES FATAL_ON_MISSING_REQUIRED_PACKAGES)
