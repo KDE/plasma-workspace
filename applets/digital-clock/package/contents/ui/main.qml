@@ -30,13 +30,21 @@ Item {
     width: units.gridUnit * 10
     height: units.gridUnit * 4
     property string dateFormatString: setDateFormatString()
+    property date tzDate: {
+        // get the time for the given timezone from the dataengine
+        var now = dataSource.data[plasmoid.configuration.lastSelectedTimezone]["DateTime"];
+        // get current UTC time
+        var msUTC = now.getTime() + (now.getTimezoneOffset() * 60000);
+        // add the dataengine TZ offset to it
+        return new Date(msUTC + (dataSource.data[plasmoid.configuration.lastSelectedTimezone]["Offset"] * 1000));
+    }
 
     Plasmoid.preferredRepresentation: Plasmoid.compactRepresentation
     Plasmoid.compactRepresentation: DigitalClock { }
     Plasmoid.fullRepresentation: CalendarView { }
 
-    Plasmoid.toolTipMainText: Qt.formatDate(dataSource.data["Local"]["DateTime"],"dddd")
-    Plasmoid.toolTipSubText:  Qt.formatDate(dataSource.data["Local"]["DateTime"], dateFormatString)
+    Plasmoid.toolTipMainText: Qt.formatDate(tzDate,"dddd")
+    Plasmoid.toolTipSubText:  Qt.formatDate(tzDate, dateFormatString)
 
     PlasmaCore.DataSource {
         id: dataSource
