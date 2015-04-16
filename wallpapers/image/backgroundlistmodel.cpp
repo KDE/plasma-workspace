@@ -240,9 +240,16 @@ QModelIndex BackgroundListModel::indexOf(const QString &path) const
             if (!prefixempty) {
                 prefixempty = ps[0].isEmpty();
             }
-//             if ((!m_packages[i].contentsPrefixPaths().isEmpty()) ||
-//                 (path == m_packages[i].filePath("preferred"))) {
-            if ((path == m_packages[i].filePath("preferred"))) {
+
+
+            //For local files (user wallpapers) path == m_packages[i].filePath("preferred")
+            //E.X. path = "/home/kde/next.png"
+            //m_packages[i].filePath("preferred") = "/home/kde/next.png"
+            //
+            //But for the system wallpapers this is not the case. path != m_packages[i].filePath("preferred")
+            //E.X. path = /usr/share/wallpapers/Next/"
+            //m_packages[i].filePath("preferred") = "/usr/share/wallpapers/Next/contents/images/1920x1080.png"
+            if ((path == m_packages[i].filePath("preferred")) || m_packages[i].filePath("preferred").contains(path)) {
                 qDebug() << "WP TRUE" << (!m_packages[i].contentsPrefixPaths().isEmpty()) << (path == m_packages[i].filePath("preferred"));
                 return index(i, 0);
             }
