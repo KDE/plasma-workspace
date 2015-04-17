@@ -167,7 +167,7 @@ QAction *ContextMenu::action(const QString &name)
             return m_logoutAction;
         }
     } else if (name == "lock widgets") {
-        if (KAuthorized::authorizeKAction("logout")) {
+        if (c->corona() && KAuthorized::authorizeKAction("lock widgets")) {
             return c->corona()->actions()->action("lock widgets");
         }
     } else if (name == "manage activities") {
