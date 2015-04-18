@@ -41,18 +41,18 @@ static const QString s_componentInterface = QStringLiteral("org.kde.kglobalaccel
  * This allows to not only restrict on component, but also restrict on the shortcuts.
  * E.g. plasmashell might accept media shortcuts, but not shortcuts for switching the activity.
  **/
-static const QMap<QString, QList<QString>> s_shortcutWhitelist{
-    {QStringLiteral("/component/mediacontrol"), QList<QString>{QStringLiteral("stopmedia"),
-                                                              QStringLiteral("nextmedia"),
-                                                              QStringLiteral("previousmedia"),
-                                                              QStringLiteral("playpausemedia")}},
-    {QStringLiteral("/component/kmix"), QList<QString>{QStringLiteral("mute"),
-                                                       QStringLiteral("decrease_volume"),
-                                                       QStringLiteral("increase_volume")}},
+static const QMap<QString, QStringList> s_shortcutWhitelist{
+    {QStringLiteral("/component/mediacontrol"), {QStringLiteral("stopmedia"),
+                    QStringLiteral("nextmedia"),
+                    QStringLiteral("previousmedia"),
+                    QStringLiteral("playpausemedia")}},
+    {QStringLiteral("/component/kmix"), {QStringLiteral("mute"),
+                    QStringLiteral("decrease_volume"),
+                    QStringLiteral("increase_volume")}},
     {QStringLiteral("/component/kded5"), {QStringLiteral("Increase Screen Brightness"),
-                                          QStringLiteral("Decrease Screen Brightness"),
-                                          QStringLiteral("Increase Keyboard Brightness"),
-                                          QStringLiteral("Decrease Keyboard Brightness")}},
+                    QStringLiteral("Decrease Screen Brightness"),
+                    QStringLiteral("Increase Keyboard Brightness"),
+                    QStringLiteral("Decrease Keyboard Brightness")}},
     {QStringLiteral("/component/KDE_Keyboard_Layout_Switcher"), {QStringLiteral("Switch to Next Keyboard Layout")}}
 };
 
