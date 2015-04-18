@@ -52,7 +52,10 @@ KQuickAddons.Plotter {
 
     PlasmaComponents.Label {
         id: speedLabel
-        anchors.centerIn: parent
+        anchors.fill: parent
+        wrapMode: Text.WordWrap
+        verticalAlignment: Text.AlignVCenter
+        horizontalAlignment: Text.AlignHCenter
     }
 
     Connections {

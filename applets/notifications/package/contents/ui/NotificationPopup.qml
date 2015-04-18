@@ -41,6 +41,10 @@ PlasmaCore.Dialog {
         }
     }
 
+    onYChanged: {
+        notificationTimer.restart();
+    }
+
     function populatePopup(notification) {
         notificationProperties = notification
         notificationTimer.interval = notification.expireTimeout
