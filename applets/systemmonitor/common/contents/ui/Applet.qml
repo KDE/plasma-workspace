@@ -35,6 +35,8 @@ Item {
     width: units.gridUnit * 20
     height: units.gridUnit * 10
     Plasmoid.preferredRepresentation: plasmoid.fullRepresentation
+    Layout.minimumWidth: units.gridUnit * 10 * (plasmoid.formFactor == PlasmaCore.Types.Horizontal ? sourcesModel.count : 1)
+    Layout.minimumHeight: units.gridUnit * 5 * (plasmoid.formFactor == PlasmaCore.Types.Vertical ? sourcesModel.count : 1)
 
     function addSource(source1, friendlyName1, source2, friendlyName2) {
         var found = false;
@@ -133,11 +135,15 @@ Item {
         width: parent.width
         level: 2
         text: plasmoid.title
+        visible: plasmoid.formFactor != PlasmaCore.Types.Horizontal && plasmoid.formFactor != PlasmaCore.Types.Vertical
     }
 
-    ColumnLayout {
+    GridLayout {
+        rows: 1
+        columns: 1
+        flow: plasmoid.formFactor != PlasmaCore.Types.Horizontal ? GridLayout.LeftToRight : GridLayout.TopToBottom
         anchors {
-            top: heading.bottom
+            top: heading.visible ? heading.bottom : parent.top
             bottom: parent.bottom
         }
         width: parent.width
