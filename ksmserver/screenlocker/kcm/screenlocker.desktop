@@ -84,6 +84,7 @@ Comment[zh_CN]=锁屏时间
 Comment[zh_TW]=螢幕鎖定逾時
 X-KDE-Keywords=lock,resume, screensaver, screenlock
 X-KDE-Keywords[ca]=bloqueig,reprendre,estalvi de pantalla,bloqueig de pantalla
+X-KDE-Keywords[es]=bloquear,reanudar,salvapantallas,bloquear pantalla
 X-KDE-Keywords[fi]=lock,resume, screensaver, screenlock, lukko, lukitseminen, herääminen, näytönsäästäjä, näyttölukko, lukitusnäyttö
 X-KDE-Keywords[gl]=bloquear,desbloquear,salvapantallas,bloqueo de pantalla
 X-KDE-Keywords[nl]=grendel,hervatten, schermbeveiliging, schermbeveiliging
