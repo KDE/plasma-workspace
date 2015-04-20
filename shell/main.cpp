@@ -58,6 +58,7 @@ int main(int argc, char *argv[])
 
     QCommandLineParser cliOptions;
     cliOptions.addHelpOption();
+    cliOptions.addVersionOption();
 
     QCommandLineOption dbgOption(QStringList() << QStringLiteral("d") <<
                                  QStringLiteral("qmljsdebugger"),
