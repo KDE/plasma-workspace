@@ -59,6 +59,7 @@ Item {
                     text: modelData.name
                     elide: Text.ElideRight
                     width: (parent.width / 4) * 3
+                    anchors.verticalCenter: parent.verticalCenter
                 }
                 QtControls.ComboBox {
                     width: parent.width / 4
