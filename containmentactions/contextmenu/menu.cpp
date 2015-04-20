@@ -23,6 +23,7 @@
 #include <QCheckBox>
 #include <QVBoxLayout>
 #include <QSignalMapper>
+#include <QDBusPendingReply>
 
 #include <KActionCollection>
 #include <KAuthorized>
@@ -94,14 +95,17 @@ void ContextMenu::restore(const KConfigGroup &config)
     if (!m_runCommandAction) {
         m_runCommandAction = new QAction(i18nc("plasma_containmentactions_contextmenu", "Run Command..."), this);
         m_runCommandAction->setIcon(QIcon::fromTheme("system-run"));
+        setGlobalActionShortcut(m_runCommandAction, "krunner", "run command");
         connect(m_runCommandAction, &QAction::triggered, this, &ContextMenu::runCommand);
 
         m_lockScreenAction = new QAction(i18nc("plasma_containmentactions_contextmenu", "Lock Screen"), this);
         m_lockScreenAction->setIcon(QIcon::fromTheme("system-lock-screen"));
+        setGlobalActionShortcut(m_lockScreenAction, "ksmserver", "Lock Session");
         connect(m_lockScreenAction, &QAction::triggered, this, &ContextMenu::lockScreen);
 
         m_logoutAction = new QAction(i18nc("plasma_containmentactions_contextmenu", "Leave..."), this);
         m_logoutAction->setIcon(QIcon::fromTheme("system-log-out"));
+        setGlobalActionShortcut(m_logoutAction, "ksmserver", "Log Out");
         connect(m_logoutAction, &QAction::triggered, this, &ContextMenu::startLogout);
 
         m_separator1 = new QAction(this);
@@ -233,6 +237,33 @@ void ContextMenu::logout()
     }
 
     KWorkSpace::requestShutDown();
+}
+
+// TODO port to KGlobalAccel::globalShortcut(const QString& componentName, const QString& actionId) const
+// available in kf5 >= 5.10
+void ContextMenu::setGlobalActionShortcut(QAction * action, const QString &component, const QString &actionId)
+{
+    if (!action)
+        return;
+
+    QDBusMessage msg = QDBusMessage::createMethodCall(QStringLiteral("org.kde.kglobalaccel"),
+                                                      QStringLiteral("/kglobalaccel"),
+                                                      QStringLiteral("org.kde.KGlobalAccel"),
+                                                      QStringLiteral("shortcut"));
+    const QStringList args = {component, actionId, QString(), QString()};
+    msg << args;
+
+    const auto call = QDBusConnection::sessionBus().asyncCall(msg);
+    QDBusPendingCallWatcher *replyWatcher = new QDBusPendingCallWatcher(call, this);
+    QObject::connect(replyWatcher, &QDBusPendingCallWatcher::finished, this, [action, this](QDBusPendingCallWatcher *watcher) {
+        QDBusPendingReply<QList<int>> reply = *watcher;
+        if (!reply.isError()) {
+            action->setShortcut(reply.value().first());
+        } else {
+            qWarning() << Q_FUNC_INFO << reply.error().message() << reply.error().name();
+        }
+        watcher->deleteLater();
+    });
 }
 
 QWidget* ContextMenu::createConfigurationInterface(QWidget* parent)
