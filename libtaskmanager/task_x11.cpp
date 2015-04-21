@@ -60,26 +60,12 @@ void Task::addTransient(WId w, const KWindowInfo &info)
 
 QString Task::className() const
 {
-    XClassHint hint;
-    if (XGetClassHint(QX11Info::display(), d->win, &hint)) {
-        QString nh(hint.res_name);
-        XFree(hint.res_name);
-        XFree(hint.res_class);
-        return nh;
-    }
-    return QString();
+    return d->info.windowClassName();
 }
 
 QString Task::classClass() const
 {
-    XClassHint hint;
-    if (XGetClassHint(QX11Info::display(), d->win, &hint)) {
-        QString ch(hint.res_class);
-        XFree(hint.res_name);
-        XFree(hint.res_class);
-        return ch;
-    }
-    return QString();
+    return d->info.windowClassClass();
 }
 
 int Task::pid() const
