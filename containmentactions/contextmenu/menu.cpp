@@ -258,7 +258,10 @@ void ContextMenu::setGlobalActionShortcut(QAction * action, const QString &compo
     QObject::connect(replyWatcher, &QDBusPendingCallWatcher::finished, this, [action, this](QDBusPendingCallWatcher *watcher) {
         QDBusPendingReply<QList<int>> reply = *watcher;
         if (!reply.isError()) {
-            action->setShortcut(reply.value().first());
+            const auto &value = reply.value();
+            if (!value.isEmpty()) {
+                action->setShortcut(value.first());
+            }
         } else {
             qWarning() << Q_FUNC_INFO << reply.error().message() << reply.error().name();
         }
