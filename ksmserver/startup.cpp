@@ -151,12 +151,14 @@ void KSMServer::launchWM( const QList< QStringList >& wmStartCommands )
 {
     assert( state == LaunchingWM );
 
-    // when we have a window manager, we start it first and give
-    // it some time before launching other processes. Results in a
-    // visually more appealing startup.
-    wmProcess = startApplication( wmStartCommands[ 0 ], QString(), QString(), true );
-    connect( wmProcess, SIGNAL(error(QProcess::ProcessError)), SLOT(wmProcessChange()));
-    connect( wmProcess, SIGNAL(finished(int,QProcess::ExitStatus)), SLOT(wmProcessChange()));
+    if (!(qEnvironmentVariableIsSet("WAYLAND_DISPLAY") || qEnvironmentVariableIsSet("WAYLAND_SOCKET"))) {
+        // when we have a window manager, we start it first and give
+        // it some time before launching other processes. Results in a
+        // visually more appealing startup.
+        wmProcess = startApplication( wmStartCommands[ 0 ], QString(), QString(), true );
+        connect( wmProcess, SIGNAL(error(QProcess::ProcessError)), SLOT(wmProcessChange()));
+        connect( wmProcess, SIGNAL(finished(int,QProcess::ExitStatus)), SLOT(wmProcessChange()));
+    }
     //Let's try to remove this and see how smooth things are nowadays
 //     QTimer::singleShot( 4000, this, SLOT(autoStart0()) );
     autoStart0();
