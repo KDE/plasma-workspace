@@ -104,7 +104,7 @@ void PlasmaWindowedCorona::loadApplet(const QString &applet, const QVariantList 
 void PlasmaWindowedCorona::activateRequested(const QStringList &arguments, const QString &workingDirectory)
 {
     Q_UNUSED(workingDirectory)
-    if (arguments.count() <= 0) {
+    if (arguments.count() <= 1) {
         return;
     }
 
