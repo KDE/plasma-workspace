@@ -39,16 +39,6 @@ include(CheckIncludeFiles)
 include(FeatureSummary)
 include(ECMOptionalAddSubdirectory)
 
-find_package(Qt5WebKitWidgets ${QT_MIN_VERSION} CONFIG)
-
-set_package_properties(Qt5WebKitWidgets PROPERTIES
-                       URL "git://gitorious.org/qt/qtwebkit.git"
-                       DESCRIPTION "Qt Webkit module (web browsing engine)"
-                       TYPE OPTIONAL
-                       PURPOSE "Used by the HTML-based GUI ksysguard library, therefore required for systemmonitor"
-                      )
-
-
 find_package(KF5Activities ${KF5_MIN_VERSION})
 set_package_properties(KF5Activities PROPERTIES DESCRIPTION "management of Plasma activities"
                        TYPE OPTIONAL
@@ -139,9 +129,7 @@ add_subdirectory(klipper)
 add_subdirectory(krunner)
 add_subdirectory(ksmserver)
 add_subdirectory(ksplash)
-if(Qt5WebKitWidgets_FOUND)
 add_subdirectory(systemmonitor)
-endif()
 add_subdirectory(statusnotifierwatcher)
 add_subdirectory(startkde)
 add_subdirectory(themes)
