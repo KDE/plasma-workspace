@@ -56,11 +56,12 @@ StandaloneAppCorona::StandaloneAppCorona(const QString &coronaPlugin, QObject *p
 
     m_desktopDefaultsConfig = KConfigGroup(KSharedConfig::openConfig(package.filePath("defaults")), "Desktop");
 
+    m_view = new DesktopView(this);
+
     connect(m_activityConsumer, SIGNAL(currentActivityChanged(QString)), this, SLOT(currentActivityChanged(QString)));
     connect(m_activityConsumer, SIGNAL(activityAdded(QString)), this, SLOT(activityAdded(QString)));
     connect(m_activityConsumer, SIGNAL(activityRemoved(QString)), this, SLOT(activityRemoved(QString)));
 
-    m_view = new DesktopView(this);
     load();
 }
 
