@@ -34,11 +34,12 @@ Column {
     readonly property int layoutSpacing: units.largeSpacing / 4
     readonly property int animationDuration: units.shortDuration * 2
 
+    readonly property string infoMessage: getData(jobsSource.data, "infoMessage", '')
     readonly property string labelName0: getData(jobsSource.data, "labelName0", '')
     readonly property string labelName1: getData(jobsSource.data, "labelName1", '')
     readonly property string label0: getData(jobsSource.data, "label0", '')
     readonly property string label1: getData(jobsSource.data, "label1", '')
-    readonly property string jobstate: getData(jobsSource.data, "state", '')
+    readonly property bool isSuspended: getData(jobsSource.data, "state", '') === "suspended"
 
     function getData(data, name, defaultValue) {
         return data[modelData] ? (data[modelData][name] ? data[modelData][name] : defaultValue) : defaultValue;
@@ -49,7 +50,7 @@ Column {
         width: parent.width
         opacity: 0.6
         level: 3
-        text: getData(jobsSource.data, "infoMessage", '')
+        text: infoMessage
     }
 
     RowLayout {
@@ -149,17 +150,19 @@ Column {
             maximumValue: 100
             //percentage doesn't always exist, so doesn't get in the model
             value: getData(jobsSource.data, "percentage", 0)
-            indeterminate: plasmoid.expanded && jobsSource.data[modelData] && typeof jobsSource.data[modelData]["percentage"] === "undefined"
+            indeterminate: plasmoid.expanded && jobsSource.data[modelData]
+                           && typeof jobsSource.data[modelData]["percentage"] === "undefined"
+                           && !jobItem.isSuspended
         }
 
         PlasmaComponents.ToolButton {
             id: pauseButton
-            iconSource: jobItem.jobstate == "suspended" ? "media-playback-start" : "media-playback-pause"
+            iconSource: jobItem.isSuspended ? "media-playback-start" : "media-playback-pause"
             visible: getData(jobsSource.data, "suspendable", 0)
 
             onClicked: {
                 var operationName = "suspend"
-                if (jobItem.jobstate == "suspended") {
+                if (jobItem.isSuspended) {
                     operationName = "resume"
                 }
                 var service = jobsSource.serviceForSource(modelData)
