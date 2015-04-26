@@ -50,7 +50,7 @@ Column {
         width: parent.width
         opacity: 0.6
         level: 3
-        text: infoMessage
+        text: jobItem.isSuspended ? i18nc("Placeholder is job name, eg. 'Copying'", "%1 (Paused)", infoMessage) : infoMessage
     }
 
     RowLayout {
