@@ -28,21 +28,34 @@ Column {
     id: jobsRoot
     width: parent.width
 
-    property alias count: jobsRepeater.count
+    property alias count: jobs.count
+
+    ListModel {
+        id: jobs
+    }
 
     PlasmaCore.DataSource {
         id: jobsSource
 
-        property variant runningJobs: ({})
+        property var runningJobs: ({})
 
         engine: "applicationjobs"
         interval: 0
 
         onSourceAdded: {
             connectSource(source)
+            jobs.append({name: source})
         }
 
         onSourceRemoved: {
+            // remove source from jobs model
+            for (var i = 0, len = jobs.count; i < len; ++i) {
+                if (jobs.get(i).name === source) {
+                    jobs.remove(i)
+                    break
+                }
+            }
+
             if (!notifications) {
                 return
             }
@@ -84,9 +97,7 @@ Column {
         }
 
         onNewData: {
-            var jobs = runningJobs
-            jobs[sourceName] = data
-            runningJobs = jobs
+            runningJobs[sourceName] = data
         }
 
         onDataChanged: {
@@ -107,7 +118,7 @@ Column {
     }
 
     Item {
-        visible: jobsRepeater.count > 3
+        visible: jobs.count > 3
 
         PlasmaComponents.ProgressBar {
             anchors {
@@ -123,9 +134,7 @@ Column {
     }
 
     Repeater {
-        id: jobsRepeater
-
-        model: jobsSource.sources
+        model: jobs
         delegate: JobDelegate {}
     }
 }

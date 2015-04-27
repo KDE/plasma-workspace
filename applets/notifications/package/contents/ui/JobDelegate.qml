@@ -42,7 +42,8 @@ Column {
     readonly property bool isSuspended: getData(jobsSource.data, "state", '') === "suspended"
 
     function getData(data, name, defaultValue) {
-        return data[modelData] ? (data[modelData][name] ? data[modelData][name] : defaultValue) : defaultValue;
+        var source = model.name
+        return data[source] ? (data[source][name] ? data[source][name] : defaultValue) : defaultValue;
     }
 
     PlasmaExtras.Heading {
@@ -150,8 +151,8 @@ Column {
             maximumValue: 100
             //percentage doesn't always exist, so doesn't get in the model
             value: getData(jobsSource.data, "percentage", 0)
-            indeterminate: plasmoid.expanded && jobsSource.data[modelData]
-                           && typeof jobsSource.data[modelData]["percentage"] === "undefined"
+            indeterminate: plasmoid.expanded && jobsSource.data[model.name]
+                           && typeof jobsSource.data[model.name]["percentage"] === "undefined"
                            && !jobItem.isSuspended
         }
 
@@ -165,7 +166,7 @@ Column {
                 if (jobItem.isSuspended) {
                     operationName = "resume"
                 }
-                var service = jobsSource.serviceForSource(modelData)
+                var service = jobsSource.serviceForSource(model.name)
                 var operation = service.operationDescription(operationName)
                 service.startOperationCall(operation)
             }
@@ -177,7 +178,7 @@ Column {
             visible: getData(jobsSource.data, "killable", 0)
 
             onClicked: {
-                var service = jobsSource.serviceForSource(modelData)
+                var service = jobsSource.serviceForSource(model.name)
                 var operation = service.operationDescription("stop")
                 service.startOperationCall(operation)
             }
