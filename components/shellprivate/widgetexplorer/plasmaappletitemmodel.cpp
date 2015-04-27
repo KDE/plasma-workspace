@@ -277,7 +277,7 @@ void PlasmaAppletItemModel::setRunningApplets(const QHash<QString, int> &apps)
         PlasmaAppletItem *p = dynamic_cast<PlasmaAppletItem *>(i);
 
         if (p) {
-            const bool running = apps.value(p->pluginName());
+            const int running = apps.value(p->pluginName());
             p->setRunning(running);
         }
     }
