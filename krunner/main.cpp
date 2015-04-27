@@ -28,6 +28,7 @@
 #include <QSessionManager>
 
 #include <KAuthorized>
+#include <KAboutData>
 #include <kdbusservice.h>
 
 #include <kdeclarative/qmlobject.h>
@@ -56,6 +57,14 @@ int main(int argc, char **argv)
     parser.addHelpOption();
     parser.addVersionOption();
     parser.process(app);
+
+    KAboutData aboutData("krunner",
+        i18n("krunner"),
+        QStringLiteral(version),
+        i18n("Run Command interface"),
+        KAboutLicense::GPL);
+
+    KAboutData::setApplicationData(aboutData);
 
     auto disableSessionManagement = [](QSessionManager &sm) {
         sm.setRestartHint(QSessionManager::RestartNever);
