@@ -60,7 +60,7 @@ int main(int argc, char **argv)
 
     KAboutData aboutData("krunner",
         i18n("krunner"),
-        QStringLiteral(version),
+        version,
         i18n("Run Command interface"),
         KAboutLicense::GPL);
 
