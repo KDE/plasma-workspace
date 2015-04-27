@@ -35,6 +35,8 @@
 #include "shellcorona.h"
 #include "config-workspace.h"
 
+#include <KMessageBox>
+#include <KLocalizedString>
 #include <kcrash.h>
 
 static const QString s_shellsDir(QStandardPaths::locate(QStandardPaths::QStandardPaths::GenericDataLocation,
@@ -181,8 +183,11 @@ void ShellManager::updateShell()
     d->shellUpdateDelay.stop();
 
     if (d->handlers.isEmpty()) {
-        qFatal("We have no shell handlers installed");
-        return;
+        KMessageBox::error(0, //wID, but we don't have a window yet
+                           i18nc("Fatal error message body","All shell packages missing.\nThis is an installation issue, please contact your distribution"),
+                           i18nc("Fatal error message title", "Plasma Cannot Start"));
+        qCritical("We have no shell handlers installed");
+        QCoreApplication::exit(-1);
     }
 
     QObject *handler = 0;
@@ -194,8 +199,11 @@ void ShellManager::updateShell()
         if (it != d->handlers.cend()) {
             handler = *it;
         } else {
+            KMessageBox::error(0,
+                               i18nc("Fatal error message body", "Shell package %1 cannot be found", s_fixedShell),
+                               i18nc("Fatal error message title", "Plasma Cannot Start"));
             qCritical("Unable to find the shell plugin '%s'", qPrintable(s_fixedShell));
-            QCoreApplication::exit();
+            QCoreApplication::exit(-1);
         }
     } else {
         // Finding the handler that has the priority closest to zero.
