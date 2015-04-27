@@ -41,7 +41,7 @@ KWin.Switcher {
 
     PlasmaCore.Dialog {
         id: dialog
-        location: PlasmaCore.Types.Floating
+        location: PlasmaCore.Types.LeftEdge
         visible: tabBox.visible
         flags: Qt.X11BypassWindowManagerHint
         x: screenGeometry.x

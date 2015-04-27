@@ -232,6 +232,9 @@ uint NotificationsEngine::Notify(const QString &app_name, uint replaces_id,
     // text where it finds a stray ampersand.
     // Only &{apos, quot, gt, lt, amp}; as well as &#123 character references will be allowed
     bodyFinal.replace(QRegularExpression("&(?!(?:apos|quot|[gl]t|amp);|#)"), QLatin1String("&amp;"));
+    // The Text.StyledText format handles only html3.2 stuff and &apos; is html4 stuff
+    // so we need to replace it here otherwise it will not render at all.
+    bodyFinal.replace(QLatin1String("&apos;"), QChar('\''));
 
     Plasma::DataEngine::Data notificationData;
     notificationData.insert("id", QString::number(id));
