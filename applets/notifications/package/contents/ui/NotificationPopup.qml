@@ -42,7 +42,9 @@ PlasmaCore.Dialog {
     }
 
     onYChanged: {
-        notificationTimer.restart();
+        if (visible) {
+            notificationTimer.restart();
+        }
     }
 
     function populatePopup(notification) {
@@ -108,7 +110,7 @@ PlasmaCore.Dialog {
             }
 
             textItem: PlasmaComponents.Label {
-                wrapMode: Text.WordWrap
+                wrapMode: Text.WrapAtWordBoundaryOrAnywhere
                 elide: Text.ElideRight
                 verticalAlignment: Text.AlignTop
                 onLinkActivated: Qt.openUrlExternally(link)
