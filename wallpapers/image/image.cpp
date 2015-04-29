@@ -799,6 +799,12 @@ void Image::removeWallpaper(QString name)
 
 void Image::commitDeletion()
 {
+    //This is invokable from qml, so at any moment
+    //we can't be sure the model exists
+    if (!m_model) {
+        return;
+    }
+
     for (const QString wallpaperCandidate : m_model->wallpapersAwaitingDeletion()) {
         removeWallpaper(wallpaperCandidate);
     }
