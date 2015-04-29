@@ -120,6 +120,16 @@ void AppInterface::setTheme(const QString &name)
     m_theme->setThemeName(name);
 }
 
+QString AppInterface::locale() const
+{
+    return QLocale::system().name();
+}
+
+QString AppInterface::language() const
+{
+    return QLocale::system().languageToString(QLocale::system().language());
+}
+
 bool AppInterface::multihead() const
 {
 #ifdef Q_OS_WIN

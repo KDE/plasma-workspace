@@ -53,6 +53,8 @@ class AppInterface : public QObject
     Q_PROPERTY(int scriptingVersion READ scriptingVersion)
     Q_PROPERTY(bool multihead READ multihead)
     Q_PROPERTY(bool multiheadScreen READ multihead)
+    Q_PROPERTY(QString locale READ locale)
+    Q_PROPERTY(QString language READ language)
 
 public:
     AppInterface(ScriptEngine *env);
@@ -73,6 +75,9 @@ public:
 
     QString theme() const;
     void setTheme(const QString &name);
+
+    QString locale() const;
+    QString language() const;
 
     bool multihead() const;
     int multiheadScreen() const;
