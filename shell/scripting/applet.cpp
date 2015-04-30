@@ -22,7 +22,6 @@
 #include <QAction>
 
 #include <kservice.h>
-#include <kservicetypetrader.h>
 #include <kdeclarative/configpropertymap.h>
 #include <kconfigloader.h>
 
@@ -233,14 +232,7 @@ QString Applet::version() const
         return QString();
     }
 
-    QString type = app->pluginInfo().pluginName();
-    KService::List services = KServiceTypeTrader::self()->query("Plasma/Applet", "[X-KDE-PluginInfo-Name] == '" + type + "'");
-    if (services.isEmpty()) {
-        return QString();
-    }
-
-    KPluginInfo info(services.first());
-    return info.version();
+    return app->pluginInfo().version();
 }
 
 void Applet::setLocked(bool locked)

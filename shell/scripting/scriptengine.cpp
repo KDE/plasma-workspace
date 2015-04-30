@@ -730,17 +730,10 @@ QScriptValue ScriptEngine::knownWallpaperPlugins(QScriptContext *context, QScrip
         constraint.append("[X-Plasma-FormFactors] ~~ '").append(formFactor).append("'");
     }
 
-    KService::List services = KServiceTypeTrader::self()->query("Plasma/Wallpaper", constraint);
-    QScriptValue rv = engine->newArray(services.size());
-    foreach (const KService::Ptr service, services) {
-        QList<KServiceAction> modeActions = service->actions();
-        QScriptValue modes = engine->newArray(modeActions.size());
-        int i = 0;
-        foreach (const KServiceAction &action, modeActions) {
-            modes.setProperty(i++, action.name());
-        }
-
-        rv.setProperty(service->name(), modes);
+    QList<KPluginMetaData> wallpapers = KPackage::PackageLoader::self()->listPackages("Plasma/Wallpaper", QString());
+    QScriptValue rv = engine->newArray(wallpapers.size());
+    for (auto wp : wallpapers) {
+        rv.setProperty(wp.name(), engine->newArray(0));
     }
 
     return rv;

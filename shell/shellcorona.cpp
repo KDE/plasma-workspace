@@ -37,7 +37,6 @@
 #include <kactivities/controller.h>
 #include <kactivities/consumer.h>
 #include <ksycoca.h>
-#include <kservicetypetrader.h>
 #include <KGlobalAccel>
 #include <KAuthorized>
 #include <KWindowSystem>
@@ -1284,9 +1283,12 @@ void ShellCorona::checkAddPanelAction(const QStringList &sycocaChanges)
     m_addPanelsMenu = 0;
 
     KPluginInfo::List panelContainmentPlugins = Plasma::PluginLoader::listContainmentsOfType("Panel");
-    const QString constraint = QString("[X-Plasma-Shell] == '%1' and 'panel' ~in [X-Plasma-ContainmentCategories]")
-                                      .arg(qApp->applicationName());
-    KService::List templates = KServiceTypeTrader::self()->query("Plasma/LayoutTemplate", constraint);
+
+    auto filter = [](const KPluginMetaData &md) -> bool
+    {
+        return md.value("X-Plasma-Shell") == qApp->applicationName() && md.value("X-Plasma-ContainmentCategories").contains("panel");
+    };
+    QList<KPluginMetaData> templates = KPackage::PackageLoader::self()->findPackages("Plasma/LayoutTemplate", QString(), filter);
 
     if (panelContainmentPlugins.count() + templates.count() == 1) {
         m_addPanelAction = new QAction(i18n("Add Panel"), this);
@@ -1314,23 +1316,25 @@ void ShellCorona::populateAddPanelsMenu()
     const KPluginInfo emptyInfo;
 
     KPluginInfo::List panelContainmentPlugins = Plasma::PluginLoader::listContainmentsOfType("Panel");
-    QMap<QString, QPair<KPluginInfo, KService::Ptr> > sorted;
+    QMap<QString, QPair<KPluginInfo, KPluginMetaData> > sorted;
     foreach (const KPluginInfo &plugin, panelContainmentPlugins) {
-        sorted.insert(plugin.name(), qMakePair(plugin, KService::Ptr(0)));
+        sorted.insert(plugin.name(), qMakePair(plugin, KPluginMetaData()));
     }
 
-    const QString constraint = QString("[X-Plasma-Shell] == '%1' and 'panel' in [X-Plasma-ContainmentCategories]")
-                                      .arg(qApp->applicationName());
-    KService::List templates = KServiceTypeTrader::self()->query("Plasma/LayoutTemplate", constraint);
-    foreach (const KService::Ptr &service, templates) {
-        sorted.insert(service->name(), qMakePair(emptyInfo, service));
+    auto filter = [](const KPluginMetaData &md) -> bool
+    {
+        return md.value("X-Plasma-Shell") == qApp->applicationName() && md.value("X-Plasma-ContainmentCategories").contains("panel");
+    };
+    QList<KPluginMetaData> templates = KPackage::PackageLoader::self()->findPackages("Plasma/LayoutTemplate", QString(), filter);
+    for (auto tpl : templates) {
+        sorted.insert(tpl.name(), qMakePair(emptyInfo, tpl));
     }
 
-    QMapIterator<QString, QPair<KPluginInfo, KService::Ptr> > it(sorted);
+    QMapIterator<QString, QPair<KPluginInfo, KPluginMetaData> > it(sorted);
     KPackage::Package package = KPackage::PackageLoader::self()->loadPackage("Plasma/LayoutTemplate");
     while (it.hasNext()) {
         it.next();
-        QPair<KPluginInfo, KService::Ptr> pair = it.value();
+        QPair<KPluginInfo, KPluginMetaData> pair = it.value();
         if (pair.first.isValid()) {
             KPluginInfo plugin = pair.first;
             QAction *action = m_addPanelsMenu->addAction(i18n("Empty %1", plugin.name()));
