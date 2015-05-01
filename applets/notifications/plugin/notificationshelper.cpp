@@ -164,7 +164,9 @@ void NotificationsHelper::processShow()
     repositionPopups();
     QTimer::singleShot(300, popup, SLOT(show()));
 
-    m_dispatchTimer->start();
+    if (!m_dispatchTimer->isActive()) {
+        m_dispatchTimer->start();
+    }
 }
 
 void NotificationsHelper::processHide()
@@ -204,7 +206,9 @@ void NotificationsHelper::processHide()
         repositionPopups();
     }
 
-    m_dispatchTimer->start();
+    if (!m_dispatchTimer->isActive()) {
+        m_dispatchTimer->start();
+    }
 }
 
 void NotificationsHelper::displayNotification(const QVariantMap &notificationData)
@@ -243,7 +247,12 @@ void NotificationsHelper::displayNotification(const QVariantMap &notificationDat
     m_showQueue.append(notificationData);
     m_mutex->unlock();
 
-    processQueues();
+    if (!m_dispatchTimer->isActive()) {
+        // If the dispatch timer is not already running, process
+        // the queues directly, that should cut the time between
+        // notification emitting the event and popup displaying
+        processQueues();
+    }
 }
 
 void NotificationsHelper::closePopup(const QString &sourceName)
@@ -258,7 +267,10 @@ void NotificationsHelper::closePopup(const QString &sourceName)
         m_mutex->lockForWrite();
         m_hideQueue.append(popup);
         m_mutex->unlock();
-        processQueues();
+
+        if (!m_dispatchTimer->isActive()) {
+            processQueues();
+        }
     }
 }
 
@@ -274,7 +286,10 @@ void NotificationsHelper::onPopupClosed()
         m_mutex->lockForWrite();
         m_hideQueue << popup;
         m_mutex->unlock();
-        processQueues();
+
+        if (!m_dispatchTimer->isActive()) {
+            processQueues();
+        }
     }
 }
 
