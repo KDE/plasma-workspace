@@ -263,6 +263,22 @@ void NotificationsHelper::closePopup(const QString &sourceName)
     bool shouldQueue = popup && !m_hideQueue.contains(popup);
     m_mutex->unlock();
 
+    // Make sure the notification that was closed (programatically)
+    // is not in the show queue. This is important otherwise that
+    // notification will be shown and then never closed (because
+    // the close event arrives here, before it's even shown)
+    QMutableListIterator<QVariantMap> i(m_showQueue);
+    while (i.hasNext()) {
+        if (i.next().value("source") == sourceName) {
+            qDebug() << "########|" << "  (locking mutex for write)";
+            m_mutex->lockForWrite();
+            qDebug() << "########|" << "Removing old data" << i.value().value("summary").toString();
+            i.remove();
+            m_mutex->unlock();
+            qDebug() << "########|" << "  (unlocking mutex)";
+        }
+    }
+
     if (shouldQueue) {
         m_mutex->lockForWrite();
         m_hideQueue.append(popup);
