@@ -47,7 +47,7 @@ void SwitchActivity::makeMenu()
 {
     qDeleteAll(m_actions);
     m_actions.clear();
-    foreach (const QString &id, m_consumer.activities()) {
+    foreach (const QString &id, m_consumer.activities(KActivities::Info::Running)) {
         KActivities::Info info(id);
         QAction *action = new QAction(QIcon::fromTheme(info.icon()), info.name(), this);
         action->setData(id);
@@ -86,18 +86,22 @@ void SwitchActivity::switchTo(QAction *action)
 
 void SwitchActivity::performNextAction()
 {
-    int i = m_consumer.activities().indexOf(m_consumer.currentActivity());
+    const QStringList activities = m_consumer.activities(KActivities::Info::Running);
 
-    i = (i + 1) % m_consumer.activities().size();
-    m_controller.setCurrentActivity(m_consumer.activities().value(i));
+    int i = activities.indexOf(m_consumer.currentActivity());
+
+    i = (i + 1) % activities.size();
+    m_controller.setCurrentActivity(activities[i]);
 }
 
 void SwitchActivity::performPreviousAction()
 {
-    int i = m_consumer.activities().indexOf(m_consumer.currentActivity());
+    const QStringList activities = m_consumer.activities(KActivities::Info::Running);
 
-    i = (i + m_consumer.activities().size() -1) % m_consumer.activities().size();
-    m_controller.setCurrentActivity(m_consumer.activities().value(i));
+    int i = activities.indexOf(m_consumer.currentActivity());
+
+    i = (i + activities.size() - 1) % activities.size();
+    m_controller.setCurrentActivity(activities[i]);
 }
 
 K_EXPORT_PLASMA_CONTAINMENTACTIONS_WITH_JSON(switchactivity, SwitchActivity, "plasma-containmentactions-switchactivity.json")
