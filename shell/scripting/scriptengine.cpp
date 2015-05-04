@@ -759,6 +759,10 @@ QScriptValue ScriptEngine::configFile(QScriptContext *context, QScriptEngine *en
             }
         } else if (ConfigGroup *parent= qobject_cast<ConfigGroup *>(context->argument(0).toQObject())) {
             file = new ConfigGroup(parent);
+
+            if (context->argumentCount() > 1) {
+                file->setGroup(context->argument(1).toString());
+            }
         }
     } else {
         file = new ConfigGroup;
