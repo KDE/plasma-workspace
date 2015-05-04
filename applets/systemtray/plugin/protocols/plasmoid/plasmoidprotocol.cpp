@@ -29,7 +29,6 @@
 #include <kdeclarative/qmlobject.h>
 #include <KLocalizedString>
 #include <kplugintrader.h>
-#include <kservicetypetrader.h>
 
 #include <QLoggingCategory>
 #include <QQmlContext>
@@ -127,15 +126,18 @@ void PlasmoidProtocol::restorePlasmoids()
     //X-Plasma-NotificationArea
     const QString constraint = QString("[X-Plasma-NotificationArea] == true");
 
-    KPluginInfo::List applets = KPluginInfo::fromServices(KServiceTypeTrader::self()->query("Plasma/Applet", constraint));
+    KPluginInfo::List applets;
+    for (auto info : Plasma::PluginLoader::self()->listAppletInfo(QString())) {
+        if (info.property("X-Plasma-NotificationArea") == "true") {
+            applets << info;
+        }
+    }
 
     QStringList ownApplets;
 
     QMap<QString, KPluginInfo> sortedApplets;
     foreach (const KPluginInfo &info, applets) {
-        KService::Ptr service = info.service();
-        const QString dbusactivation = service->property("X-Plasma-DBusActivationService",
-                                                         QVariant::String).toString();
+        const QString dbusactivation = info.property("X-Plasma-DBusActivationService").toString();
         if (!dbusactivation.isEmpty()) {
             qCDebug(SYSTEMTRAY) << "ST Found DBus-able Applet: " << info.pluginName() << dbusactivation;
             m_dbusActivatableTasks[info.pluginName()] = dbusactivation;

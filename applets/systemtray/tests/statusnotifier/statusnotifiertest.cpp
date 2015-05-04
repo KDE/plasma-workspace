@@ -22,7 +22,6 @@
 
 #include <QDebug>
 #include <kservice.h>
-#include <kservicetypetrader.h>
 #include <kplugininfo.h>
 #include <kplugintrader.h>
 

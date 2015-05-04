@@ -25,7 +25,6 @@
 #include "protocol.h"
 
 #include <klocalizedstring.h>
-#include <KServiceTypeTrader>
 #include <KActionCollection>
 
 #include <Plasma/Package>
@@ -309,16 +308,19 @@ QAbstractItemModel* Host::availablePlasmoids()
     if (!d->availablePlasmoidsModel) {
         d->availablePlasmoidsModel = new PlasmoidModel(this);
 
-        //X-Plasma-NotificationArea
-        const QString constraint = QString("[X-Plasma-NotificationArea] == true");
-
-        KPluginInfo::List applets = KPluginInfo::fromServices(KServiceTypeTrader::self()->query("Plasma/Applet", constraint));
+        //Filter X-Plasma-NotificationArea
+        KPluginInfo::List applets;
+        for (auto info : Plasma::PluginLoader::self()->listAppletInfo(QString())) {
+            if (info.property("X-Plasma-NotificationArea") == "true") {
+                applets << info;
+            }
+        }
 
         foreach (const KPluginInfo &info, applets) {
             QString name = info.name();
             KService::Ptr service = info.service();
-            const QString dbusactivation = service->property("X-Plasma-DBusActivationService",
-                                                         QVariant::String).toString();
+            const QString dbusactivation = info.property("X-Plasma-DBusActivationService").toString();
+
             if (!dbusactivation.isEmpty()) {
                 name += i18n(" (Automatic load)");
             }
@@ -333,12 +335,13 @@ QAbstractItemModel* Host::availablePlasmoids()
 QStringList Host::defaultPlasmoids() const
 {
     QStringList ret;
-    const QString constraint = QStringLiteral("[X-Plasma-NotificationArea] == true and [X-KDE-PluginInfo-EnabledByDefault] == true");
-    const KPluginInfo::List applets = KPluginInfo::fromServices(KServiceTypeTrader::self()->query("Plasma/Applet", constraint));
-
-    foreach (const KPluginInfo &info, applets) {
-        ret += info.pluginName();
+    for (auto info : Plasma::PluginLoader::self()->listAppletInfo(QString())) {
+        if (info.property("X-Plasma-NotificationArea") == "true" &&
+            info.isPluginEnabledByDefault()) {
+            ret += info.pluginName();
+        }
     }
+
     return ret;
 }
 
