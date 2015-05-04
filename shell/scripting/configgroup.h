@@ -23,6 +23,8 @@
 #include <QObject>
 #include <QVariant>
 
+#include <KSharedConfig>
+
 class KConfigGroup;
 class ConfigGroupPrivate;
 
@@ -40,6 +42,8 @@ public:
 
     KConfigGroup* configGroup();
 
+    KSharedConfigPtr config() const;
+    void setConfig(KSharedConfigPtr config);
     QString file() const;
     void setFile(const QString &filename);
     QString group() const;

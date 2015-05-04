@@ -753,7 +753,17 @@ QScriptValue ScriptEngine::configFile(QScriptContext *context, QScriptEngine *en
     if (context->argumentCount() > 0) {
         if (context->argument(0).isString()) {
             file = new ConfigGroup;
-            file->setFile(context->argument(0).toString());
+
+            const QString &fileName = context->argument(0).toString();
+            const ScriptEngine *env = envFor(engine);
+            const Plasma::Corona* corona = env->corona();
+
+            if (fileName == corona->config()->name()) {
+                file->setConfig(corona->config());
+            } else {
+                file->setFile(fileName);
+            }
+
             if (context->argumentCount() > 1) {
                 file->setGroup(context->argument(1).toString());
             }

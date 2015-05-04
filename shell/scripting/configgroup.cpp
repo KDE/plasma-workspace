@@ -86,8 +86,31 @@ void ConfigGroup::setFile(const QString& filename)
         return;
     }
     d->file = filename;
+    d->config = 0;
     readConfigFile();
     emit fileChanged();
+}
+
+KSharedConfigPtr ConfigGroup::config() const
+{
+    return d->config;
+}
+
+void ConfigGroup::setConfig(KSharedConfigPtr config)
+{
+    if (d->config == config) {
+        return;
+    }
+
+    d->config = config;
+
+    if (d->config) {
+        d->file = config->name();
+    } else {
+        d->file.clear();
+    }
+
+    readConfigFile();
 }
 
 QString ConfigGroup::group() const
@@ -139,11 +162,15 @@ bool ConfigGroup::readConfigFile()
         d->configGroup = new KConfigGroup(parentGroup->configGroup(), d->group);
         return true;
     } else {
-        if (d->file.isEmpty()) {
-            qWarning() << "Could not find KConfig Parent: specify a file or parent to another ConfigGroup";
-            return false;
+        if (!d->config) {
+            if (d->file.isEmpty()) {
+                qWarning() << "Could not find KConfig Parent: specify a file or parent to another ConfigGroup";
+                return false;
+            }
+
+            d->config = KSharedConfig::openConfig(d->file);
         }
-        d->config = KSharedConfig::openConfig(d->file);
+
         d->configGroup = new KConfigGroup(d->config, d->group);
         return true;
     }
