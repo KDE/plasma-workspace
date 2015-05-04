@@ -72,7 +72,7 @@ Item {
         // remove it + the delimiter and space
         var format = Qt.locale().dateFormat(Locale.LongFormat);
         format = format.replace(/(^dddd.?\s)|(,?\sdddd$)/, "");
-        main.dateFormatString = format;
+        return format;
     }
 
     ProcessRunner {
