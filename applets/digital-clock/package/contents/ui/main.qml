@@ -25,7 +25,7 @@ import org.kde.plasma.private.digitalclock 1.0
 //import org.kde.plasma.calendar 2.0
 
 Item {
-    id: main
+    id: root
 
     width: units.gridUnit * 10
     height: units.gridUnit * 4

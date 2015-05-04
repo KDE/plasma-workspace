@@ -403,7 +403,7 @@ Item {
     }
 
     function updateToolTip() {
-        var timezoneString = Qt.formatDate(main.tzDate, dateFormatString);
+        var timezoneString = Qt.formatDate(root.tzDate, root.dateFormatString);
         if (plasmoid.configuration.selectedTimeZones.length > 1) {
             timezoneString += "<br />";
             for (var i = 0; i < plasmoid.configuration.selectedTimeZones.length; ++i) {
