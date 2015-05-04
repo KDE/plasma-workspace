@@ -26,7 +26,7 @@ import org.kde.plasma.private.digitalclock 1.0
 //import org.kde.plasma.calendar 2.0
 
 Item {
-    id: main
+    id: root
 
     width: units.gridUnit * 10
     height: units.gridUnit * 4
@@ -73,7 +73,7 @@ Item {
         // remove it + the delimiter and space
         var format = Qt.locale().dateFormat(Locale.LongFormat);
         format = format.replace(/(^dddd.?\s)|(,?\sdddd$)/, "");
-        main.dateFormatString = format;
+        return format;
     }
 
     function action_formatskcm() {
