@@ -17,7 +17,6 @@
 */
 
 #include "digitalclockplugin.h"
-#include "processrunner.h"
 #include "timezonemodel.h"
 #include "timezonesi18n.h"
 
@@ -35,7 +34,6 @@ void DigitalClockPlugin::registerTypes(const char *uri)
 {
     Q_ASSERT(uri == QLatin1String("org.kde.plasma.private.digitalclock"));
 
-    qmlRegisterType<ProcessRunner>(uri, 1, 0, "ProcessRunner");
     qmlRegisterType<TimeZoneModel>(uri, 1, 0, "TimeZoneModel");
     qmlRegisterSingletonType<TimezonesI18n>(uri, 1, 0, "TimezonesI18n", timezonesi18n_singletontype_provider);
 }
