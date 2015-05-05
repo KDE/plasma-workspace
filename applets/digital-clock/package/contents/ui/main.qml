@@ -23,6 +23,7 @@ import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.kquickcontrolsaddons 2.0
 import org.kde.plasma.private.digitalclock 1.0
+import org.kde.kquickcontrolsaddons 2.0
 //import org.kde.plasma.calendar 2.0
 
 Item {
