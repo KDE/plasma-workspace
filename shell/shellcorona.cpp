@@ -174,8 +174,6 @@ ShellCorona::ShellCorona(QObject *parent)
     connect(m_activityConsumer, SIGNAL(activityRemoved(QString)), this, SLOT(activityRemoved(QString)));
 
     new Osd(this);
-
-    connect(qGuiApp, &QGuiApplication::screenRemoved, this, &ShellCorona::screenRemoved);
 }
 
 ShellCorona::~ShellCorona()
@@ -333,6 +331,7 @@ void ShellCorona::load()
     }
     connect(m_screenConfiguration.data(), &KScreen::Config::outputAdded, this, &ShellCorona::addOutput);
     connect(m_screenConfiguration.data(), &KScreen::Config::primaryOutputChanged, this, &ShellCorona::primaryOutputChanged);
+    connect(qGuiApp, &QGuiApplication::screenRemoved, this, &ShellCorona::screenRemoved);
 
     if (!m_waitingPanels.isEmpty()) {
         m_waitingPanelsTimer.start();
@@ -762,6 +761,9 @@ bool ShellCorona::isOutputRedundant(const KScreen::OutputPtr &screen) const
 
 void ShellCorona::reconsiderOutputs()
 {
+    if (!m_screenConfiguration) {
+        return;
+    }
     foreach (const KScreen::OutputPtr &out, m_screenConfiguration->connectedOutputs()) {
         if (!out->isEnabled() || !out->currentMode()) {
 //             qDebug() << "skip screen" << out << desktopForScreen(outputToScreen(out));
