@@ -11,6 +11,7 @@ set(testHistory_SRCS
     ../historystringitem.cpp
     ../historyurlitem.cpp
     ../historymodel.cpp
+    ../klipper_debug.cpp
 )
 add_executable(testHistory ${testHistory_SRCS})
 target_link_libraries(testHistory
@@ -32,6 +33,7 @@ set(testHistoryModel_SRCS
     ../historyitem.cpp
     ../historystringitem.cpp
     ../historyurlitem.cpp
+    ../klipper_debug.cpp
 )
 add_executable(testHistoryModel ${testHistoryModel_SRCS})
 target_link_libraries(testHistoryModel

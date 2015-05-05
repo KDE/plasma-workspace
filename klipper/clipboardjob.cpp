@@ -24,7 +24,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include <KIO/PreviewJob>
 #include <QtConcurrent>
 #include <QFutureWatcher>
-#include <QDebug>
+#include "klipper_debug.h"
 #include <QIcon>
 
 #ifdef HAVE_PRISON
@@ -146,17 +146,17 @@ void ClipboardJob::start()
         const int pixelWidth = parameters().value(s_previewWidthKey).toInt();
         const int pixelHeight = parameters().value(s_previewHeightKey).toInt();
         QUrl url = parameters().value(s_urlKey).toUrl();
-        qDebug() << "URL: " << url;
+        qCDebug(KLIPPER_LOG) << "URL: " << url;
         KFileItem item(url);
 
         if (pixelWidth <= 0 || pixelHeight <= 0) {
-            qWarning() << "Preview size invalid: " << pixelWidth << "x" << pixelHeight;
+            qCWarning(KLIPPER_LOG) << "Preview size invalid: " << pixelWidth << "x" << pixelHeight;
             iconResult(item);
             return;
         }
 
         if (!url.isValid() || !url.isLocalFile()) { // no remote files
-            qWarning() << "Invalid or non-local url for preview: " << url;
+            qCWarning(KLIPPER_LOG) << "Invalid or non-local url for preview: " << url;
             iconResult(item);
             return;
         }

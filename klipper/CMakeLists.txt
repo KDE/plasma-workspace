@@ -2,6 +2,7 @@ set(KLIPPER_VERSION_STRING ${PROJECT_VERSION})
 add_definitions(-DTRANSLATION_DOMAIN=\"klipper\")
 
 set(libklipper_common_SRCS
+    klipper_debug.cpp
     klipper.cpp
     urlgrabber.cpp
     configdialog.cpp

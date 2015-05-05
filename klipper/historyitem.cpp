@@ -18,7 +18,7 @@
 */
 #include "historyitem.h"
 
-#include <QDebug>
+#include "klipper_debug.h"
 #include <QMap>
 #include <QPixmap>
 
@@ -44,7 +44,7 @@ HistoryItemPtr HistoryItem::create( const QMimeData* data )
 #if 0
     int i=0;
     foreach ( QString format, data->formats() ) {
-        qDebug() << "format(" << i++ <<"): " << format;
+        qCDebug(KLIPPER_LOG) << "format(" << i++ <<"): " << format;
     }
 #endif
     if (data->hasUrls())
@@ -93,7 +93,7 @@ HistoryItemPtr HistoryItem::create( QDataStream& dataStream ) {
         dataStream >> image;
         return HistoryItemPtr(new HistoryImageItem( image ));
     }
-    qWarning() << "Failed to restore history item: Unknown type \"" << type << "\"" ;
+    qCWarning(KLIPPER_LOG) << "Failed to restore history item: Unknown type \"" << type << "\"" ;
     return HistoryItemPtr();
 }
 

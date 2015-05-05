@@ -25,7 +25,7 @@
 
 #include <zlib.h>
 
-#include <QDebug>
+#include "klipper_debug.h"
 #include <QDir>
 #include <QDialog>
 #include <QMenu>
@@ -381,23 +381,23 @@ bool Klipper::loadHistory() {
     QFile history_file(QStandardPaths::locate(QStandardPaths::GenericDataLocation,
                                               QStringLiteral("klipper/history2.lst")));
     if ( !history_file.exists() ) {
-        qWarning() << failed_load_warning << ": " << "History file does not exist" ;
+        qCWarning(KLIPPER_LOG) << failed_load_warning << ": " << "History file does not exist" ;
         return false;
     }
     if ( !history_file.open( QIODevice::ReadOnly ) ) {
-        qWarning() << failed_load_warning << ": " << history_file.errorString() ;
+        qCWarning(KLIPPER_LOG) << failed_load_warning << ": " << history_file.errorString() ;
         return false;
     }
     QDataStream file_stream( &history_file );
     if( file_stream.atEnd()) {
-        qWarning() << failed_load_warning << ": " << "Error in reading data" ;
+        qCWarning(KLIPPER_LOG) << failed_load_warning << ": " << "Error in reading data" ;
         return false;
     }
     QByteArray data;
     quint32 crc;
     file_stream >> crc >> data;
     if( crc32( 0, reinterpret_cast<unsigned char *>( data.data() ), data.size() ) != crc ) {
-        qWarning() << failed_load_warning << ": " << "CRC checksum does not match" ;
+        qCWarning(KLIPPER_LOG) << failed_load_warning << ": " << "CRC checksum does not match" ;
         return false;
     }
     QDataStream history_stream( &data, QIODevice::ReadOnly );
@@ -445,18 +445,18 @@ void Klipper::saveHistory(bool empty) {
         // try creating the file
         QDir dir(QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation));
         if (!dir.mkpath(QStringLiteral("klipper"))) {
-            qWarning() << failed_save_warning ;
+            qCWarning(KLIPPER_LOG) << failed_save_warning ;
             return;
         }
         history_file_name = dir.absoluteFilePath(QStringLiteral("klipper/history2.lst"));
     }
     if ( history_file_name.isNull() || history_file_name.isEmpty() ) {
-        qWarning() << failed_save_warning ;
+        qCWarning(KLIPPER_LOG) << failed_save_warning ;
         return;
     }
     QSaveFile history_file( history_file_name );
     if (!history_file.open(QIODevice::WriteOnly)) {
-        qWarning() << failed_save_warning ;
+        qCWarning(KLIPPER_LOG) << failed_save_warning ;
         return;
     }
     QByteArray data;
@@ -477,7 +477,7 @@ void Klipper::saveHistory(bool empty) {
     QDataStream ds ( &history_file );
     ds << crc << data;
     if (!history_file.commit()) {
-        qWarning() << failed_save_warning ;
+        qCWarning(KLIPPER_LOG) << failed_save_warning ;
     }
 }
 
@@ -685,22 +685,22 @@ void Klipper::checkClipData( bool selectionMode )
 
 // debug code
 #ifdef NOISY_KLIPPER
-    qDebug() << "Checking clip data";
+    qCDebug(KLIPPER_LOG) << "Checking clip data";
 
     if ( sender() ) {
-        qDebug() << "sender=" << sender()->objectName();
+        qCDebug(KLIPPER_LOG) << "sender=" << sender()->objectName();
     } else {
-        qDebug() << "no sender";
+        qCDebug(KLIPPER_LOG) << "no sender";
     }
 
-    qDebug() << "\nselectionMode=" << selectionMode
+    qCDebug(KLIPPER_LOG) << "\nselectionMode=" << selectionMode
               << "\nowning (sel,cli)=(" << m_clip->ownsSelection() << "," << m_clip->ownsClipboard() << ")"
               << "\ntext=" << m_clip->text( selectionMode ? QClipboard::Selection : QClipboard::Clipboard) << endl;
 #endif
 
     const QMimeData* data = m_clip->mimeData( selectionMode ? QClipboard::Selection : QClipboard::Clipboard );
     if ( !data ) {
-        qWarning() << "No data in clipboard. This not not supposed to happen.";
+        qCWarning(KLIPPER_LOG) << "No data in clipboard. This not not supposed to happen.";
         return;
     }
 
@@ -710,7 +710,7 @@ void Klipper::checkClipData( bool selectionMode )
         // Might be a timeout. Try again
         clipEmpty = data->formats().isEmpty();
 #ifdef NOISY_KLIPPER
-        qDebug() << "was empty. Retried, now " << (clipEmpty?" still empty":" no longer empty");
+        qCDebug(KLIPPER_LOG) << "was empty. Retried, now " << (clipEmpty?" still empty":" no longer empty");
 #endif
     }
 
@@ -719,7 +719,7 @@ void Klipper::checkClipData( bool selectionMode )
         if ( top ) {
             // keep old clipboard after someone set it to null
 #ifdef NOISY_KLIPPER
-            qDebug() << "Resetting clipboard (Prevent empty clipboard)";
+            qCDebug(KLIPPER_LOG) << "Resetting clipboard (Prevent empty clipboard)";
 #endif
             setClipboard( *top, selectionMode ? Selection : Clipboard );
         }
@@ -750,7 +750,7 @@ void Klipper::checkClipData( bool selectionMode )
     HistoryItemPtr item = applyClipChanges( data );
     if (changed) {
 #ifdef NOISY_KLIPPER
-        qDebug() << "Synchronize?" << m_bSynchronize;
+        qCDebug(KLIPPER_LOG) << "Synchronize?" << m_bSynchronize;
 #endif
         if ( m_bSynchronize && item ) {
             setClipboard( *item, selectionMode ? Clipboard : Selection );
@@ -783,13 +783,13 @@ void Klipper::setClipboard( const HistoryItem& item, int mode )
 
     if ( mode & Selection ) {
 #ifdef NOISY_KLIPPER
-        qDebug() << "Setting selection to <" << item.text() << ">";
+        qCDebug(KLIPPER_LOG) << "Setting selection to <" << item.text() << ">";
 #endif
         m_clip->setMimeData( item.mimeData(), QClipboard::Selection );
     }
     if ( mode & Clipboard ) {
 #ifdef NOISY_KLIPPER
-        qDebug() << "Setting clipboard to <" << item.text() << ">";
+        qCDebug(KLIPPER_LOG) << "Setting clipboard to <" << item.text() << ">";
 #endif
         m_clip->setMimeData( item.mimeData(), QClipboard::Clipboard );
     }
@@ -801,7 +801,7 @@ void Klipper::slotClearOverflow()
     m_overflowClearTimer.stop();
 
     if( m_overflowCounter > MAX_CLIPBOARD_CHANGES ) {
-        qDebug() << "App owning the clipboard/selection is lame";
+        qCDebug(KLIPPER_LOG) << "App owning the clipboard/selection is lame";
         // update to the latest data - this unfortunately may trigger the problem again
         newClipData( QClipboard::Selection ); // Always the selection.
     }

@@ -20,7 +20,7 @@
 
 #include <netwm.h>
 
-#include <QDebug>
+#include "klipper_debug.h"
 #include <QMimeDatabase>
 #include <QHash>
 #include <QTimer>
@@ -104,24 +104,24 @@ void URLGrabber::matchingMimeActions(const QString& clipData)
     QUrl url(clipData);
     KConfigGroup cg(KSharedConfig::openConfig(), "Actions");
     if(!cg.readEntry("EnableMagicMimeActions",true)) {
-        //qDebug() << "skipping mime magic due to configuration";
+        //qCDebug(KLIPPER_LOG) << "skipping mime magic due to configuration";
         return;
     }
     if(!url.isValid()) {
-        //qDebug() << "skipping mime magic due to invalid url";
+        //qCDebug(KLIPPER_LOG) << "skipping mime magic due to invalid url";
         return;
     }
     if(url.isRelative()) {  //openinng a relative path will just not work. what path should be used?
-        //qDebug() << "skipping mime magic due to relative url";
+        //qCDebug(KLIPPER_LOG) << "skipping mime magic due to relative url";
         return;
     }
     if(url.isLocalFile()) {
         if ( clipData == QLatin1String("//")) {
-            //qDebug() << "skipping mime magic due to C++ comment //";
+            //qCDebug(KLIPPER_LOG) << "skipping mime magic due to C++ comment //";
             return;
         }
         if(!QFile::exists(url.toLocalFile())) {
-            //qDebug() << "skipping mime magic due to nonexistent localfile";
+            //qCDebug(KLIPPER_LOG) << "skipping mime magic due to nonexistent localfile";
             return;
         }
     }
@@ -183,7 +183,7 @@ const ActionList& URLGrabber::matchingActions( const QString& clipData, bool aut
 
 void URLGrabber::checkNewData( HistoryItemConstPtr item )
 {
-    // qDebug() << "** checking new data: " << clipData;
+    // qCDebug(KLIPPER_LOG) << "** checking new data: " << clipData;
     actionMenu( item, true ); // also creates m_myMatches
 }
 
@@ -271,7 +271,7 @@ void URLGrabber::slotItemSelected(QAction* action)
     QString id = action->data().toString();
 
     if (id.isEmpty()) {
-        qDebug() << "Klipper: no command associated";
+        qCDebug(KLIPPER_LOG) << "Klipper: no command associated";
         return;
     }
 
@@ -281,14 +281,14 @@ void URLGrabber::slotItemSelected(QAction* action)
     if (actionCommand.first)
         execute(actionCommand.first, actionCommand.second);
     else
-        qDebug() << "Klipper: cannot find associated action";
+        qCDebug(KLIPPER_LOG) << "Klipper: cannot find associated action";
 }
 
 
 void URLGrabber::execute( const ClipAction* action, int cmdIdx ) const
 {
     if (!action) {
-        qDebug() << "Action object is null";
+        qCDebug(KLIPPER_LOG) << "Action object is null";
         return;
     }
 
@@ -450,7 +450,7 @@ void ClipAction::addCommand( const ClipCommand& cmd )
 void ClipAction::replaceCommand( int idx, const ClipCommand& cmd )
 {
     if ( idx < 0 || idx >= m_myCommands.count() ) {
-        qDebug() << "wrong command index given";
+        qCDebug(KLIPPER_LOG) << "wrong command index given";
         return;
     }
 
