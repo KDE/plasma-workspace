@@ -98,11 +98,6 @@ cat >$kdeglobalsfile <<EOF
 XftAntialias=true
 XftHintStyle=hintmedium
 XftSubPixel=none
-fixed=Oxygen Mono,9,-1,5,50,0,0,0,0,0
-font=Oxygen-Sans,10,-1,5,50,0,0,0,0,0
-menuFont=Oxygen-Sans,10,-1,5,50,0,0,0,0,0
-smallestReadableFont=Oxygen-Sans,8,-1,5,50,0,0,0,0,0
-toolBarFont=Oxygen-Sans,9,-1,5,50,0,0,0,0,0
 EOF
 }
 
