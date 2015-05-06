@@ -114,7 +114,7 @@ QList<Plasma::QueryMatch> SearchRunner::match(Plasma::RunnerContext& context, co
 
         QString iconName = QMimeDatabase().mimeTypeForFile(localUrl).iconName();
         match.setIcon(QIcon::fromTheme(iconName));
-        match.setId(it.id());
+        match.setId(it.filePath());
         match.setText(url.fileName());
         match.setData(url);
         match.setType(Plasma::QueryMatch::PossibleMatch);
