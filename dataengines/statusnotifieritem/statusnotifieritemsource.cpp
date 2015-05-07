@@ -41,10 +41,6 @@
 #include <netinet/in.h>
 
 #include <dbusmenuimporter.h>
-#ifndef DBUSMENUQT_VERSION
-// DBUSMENUQT_VERSION was introduced in DBusMenuQt 0.4.0
-#define DBUSMENUQT_VERSION 0x000305
-#endif
 
 class PlasmaDBusMenuImporter : public DBusMenuImporter
 {
@@ -334,9 +330,7 @@ void StatusNotifierItemSource::refreshCallback(QDBusPendingCallWatcher *call)
                     qWarning() << "DBusMenu disabled for this application";
                 } else {
                     m_menuImporter = new PlasmaDBusMenuImporter(m_statusNotifierItemInterface->service(), menuObjectPath, iconLoader(), this);
-#if DBUSMENUQT_VERSION >= 0x000400
                     connect(m_menuImporter, SIGNAL(menuUpdated()), this, SLOT(contextMenuReady()));
-#endif
                 }
             }
         }
@@ -348,12 +342,6 @@ void StatusNotifierItemSource::refreshCallback(QDBusPendingCallWatcher *call)
 
 void StatusNotifierItemSource::contextMenuReady()
 {
-#if DBUSMENUQT_VERSION < 0x000400
-    // Work around to avoid infinite recursion because menuReadyToBeShown() is emitted
-    // by DBusMenuImporter at the end of its slot connected to aboutToShow()
-    // (dbusmenu-qt 0.3.5)
-    disconnect(m_menuImporter, SIGNAL(menuReadyToBeShown()), this, SLOT(contextMenuReady()));
-#endif
     emit contextMenuReady(m_menuImporter->menu());
 }
 
@@ -456,16 +444,7 @@ void StatusNotifierItemSource::scroll(int delta, const QString &direction)
 void StatusNotifierItemSource::contextMenu(int x, int y)
 {
     if (m_menuImporter) {
-    #if DBUSMENUQT_VERSION >= 0x000400
         m_menuImporter->updateMenu();
-    #else
-        QMenu *menu = m_menuImporter->menu();
-        // Simulate an "aboutToShow" so that menu->sizeHint() is correct. Otherwise
-        // the menu may show up over the applet if new actions are added on the
-        // fly.
-        connect(m_menuImporter, SIGNAL(menuReadyToBeShown()), this, SLOT(contextMenuReady()));
-        QMetaObject::invokeMethod(menu, "aboutToShow");
-    #endif
     } else {
         qWarning() << "Could not find DBusMenu interface, falling back to calling ContextMenu()";
         if (m_statusNotifierItemInterface && m_statusNotifierItemInterface->isValid()) {
