@@ -30,16 +30,16 @@ ktrash=kio|trash
 #KDE Platform (Baloo)
 baloo_file=Baloo|Files
 
-#KDE Platform (Solid)
+#KDE Platform (Solid/Bluedevil)
 solid-action-desktop-gen=solid|general
-bluedevil-audio=solid|bluetooth
-bluedevil-helper=solid|bluetooth
-bluedevil-input=solid|bluetooth
-bluedevil-monolithic=solid|bluetooth
-bluedevil-network-dun=solid|bluetooth
-bluedevil-network-panu=solid|bluetooth
-bluedevil-sendfile=solid|bluetooth
-bluedevil-wizard=solid|bluetooth
+bluedevil-audio=Bluedevil|general
+bluedevil-helper=Bluedevil|general
+bluedevil-input=Bluedevil|general
+bluedevil-monolithic=Bluedevil|general
+bluedevil-network-dun=Bluedevil|general
+bluedevil-network-panu=Bluedevil|general
+bluedevil-sendfile=Bluedevil|general
+bluedevil-wizard=Bluedevil/wizard
 
 #KDE Plasma Desktop (Plasma & KRunner)
 plasma-desktop=plasma|general
