@@ -163,5 +163,5 @@ X-KDE-PluginInfo-EnabledByDefault=true
 X-KDE-Library=plasma_applet_notifications
 
 X-Plasma-MainScript=ui/main.qml
-X-Plasma-RequiredExtensions=LaunchApp
+X-Plasma-RequiredExtensions=LaunchApp,SharedEngine
 X-Plasma-NotificationArea=true

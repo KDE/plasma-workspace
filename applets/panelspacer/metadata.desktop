@@ -146,3 +146,4 @@ X-KDE-PluginInfo-Category=System Information
 X-KDE-PluginInfo-Depends=
 X-KDE-PluginInfo-License=GPL
 X-KDE-PluginInfo-EnabledByDefault=true
+X-Plasma-RequiredExtensions=SharedEngine

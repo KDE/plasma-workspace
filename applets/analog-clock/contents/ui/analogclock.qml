@@ -25,7 +25,7 @@ import org.kde.plasma.calendar 2.0 as PlasmaCalendar
 import QtQuick.Layouts 1.1
 
 import org.kde.plasma.core 2.0 as PlasmaCore
-import "plasmapackage:/code/logic.js" as Logic
+import "logic.js" as Logic
 
 Item {
     id: analogclock

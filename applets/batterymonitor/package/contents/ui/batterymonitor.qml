@@ -25,7 +25,7 @@ import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.kcoreaddons 1.0 as KCoreAddons
 import org.kde.kquickcontrolsaddons 2.0
-import "plasmapackage:/code/logic.js" as Logic
+import "logic.js" as Logic
 
 Item {
     id: batterymonitor
