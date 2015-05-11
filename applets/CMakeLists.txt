@@ -16,7 +16,6 @@ plasma_install_package(clipboard org.kde.plasma.clipboard)
 # add_subdirectory(quicklaunch)
 #
 if(NOT WIN32)
-#    add_subdirectory(system-monitor)
 #    #notifications
 #    #should compile also on windows? (even if doesn't really make sense)
     add_subdirectory(notifications)
