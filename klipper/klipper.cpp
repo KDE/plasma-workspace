@@ -123,7 +123,6 @@ Klipper::Klipper(QObject* parent, const KSharedConfigPtr& config, KlipperMode mo
     m_toggleURLGrabAction = new KToggleAction( this );
     m_collection->addAction( QStringLiteral("clipboard_action"), m_toggleURLGrabAction );
     m_toggleURLGrabAction->setText(i18n("Enable Clipboard Actions"));
-    m_toggleURLGrabAction->setVisible(m_mode == KlipperMode::Standalone);
     KGlobalAccel::setGlobalShortcut(m_toggleURLGrabAction, QKeySequence(Qt::ALT+Qt::CTRL+Qt::Key_X));
     connect( m_toggleURLGrabAction, SIGNAL(toggled(bool)),
              this, SLOT(setURLGrabberEnabled(bool)));
@@ -150,7 +149,6 @@ Klipper::Klipper(QObject* parent, const KSharedConfigPtr& config, KlipperMode mo
     m_clearHistoryAction = m_collection->addAction( QStringLiteral("clear-history") );
     m_clearHistoryAction->setIcon( QIcon::fromTheme(QStringLiteral("edit-clear-history")) );
     m_clearHistoryAction->setText( i18n("C&lear Clipboard History") );
-    m_clearHistoryAction->setVisible(m_mode == KlipperMode::Standalone);
     KGlobalAccel::setGlobalShortcut(m_clearHistoryAction, QKeySequence());
     connect(m_clearHistoryAction, SIGNAL(triggered()), SLOT(slotAskClearHistory()));
 
@@ -158,18 +156,15 @@ Klipper::Klipper(QObject* parent, const KSharedConfigPtr& config, KlipperMode mo
     m_configureAction = m_collection->addAction( CONFIGURE );
     m_configureAction->setIcon( QIcon::fromTheme(CONFIGURE) );
     m_configureAction->setText( i18n("&Configure Klipper...") );
-    m_configureAction->setVisible(m_mode == KlipperMode::Standalone);
     connect(m_configureAction, SIGNAL(triggered(bool)), SLOT(slotConfigure()));
 
     m_quitAction = m_collection->addAction( QStringLiteral("quit") );
     m_quitAction->setIcon( QIcon::fromTheme(QStringLiteral("application-exit")) );
     m_quitAction->setText( i18nc("@item:inmenu Quit Klipper", "&Quit") );
-    m_quitAction->setVisible(m_mode == KlipperMode::Standalone);
     connect(m_quitAction, SIGNAL(triggered(bool)), SLOT(slotQuit()));
 
     m_repeatAction = m_collection->addAction(QStringLiteral("repeat_action"));
     m_repeatAction->setText(i18n("Manually Invoke Action on Current Clipboard"));
-    m_repeatAction->setVisible(m_mode == KlipperMode::Standalone);
     KGlobalAccel::setGlobalShortcut(m_repeatAction, QKeySequence(Qt::ALT+Qt::CTRL+Qt::Key_R));
     connect(m_repeatAction, SIGNAL(triggered()), SLOT(slotRepeatAction()));
 
@@ -189,7 +184,6 @@ Klipper::Klipper(QObject* parent, const KSharedConfigPtr& config, KlipperMode mo
     // add barcode for mobile phones
     m_showBarcodeAction = m_collection->addAction(QStringLiteral("show-barcode"));
     m_showBarcodeAction->setText(i18n("&Show Barcode..."));
-    m_showBarcodeAction->setVisible(m_mode == KlipperMode::Standalone);
     KGlobalAccel::setGlobalShortcut(m_showBarcodeAction, QKeySequence());
     connect(m_showBarcodeAction, &QAction::triggered, this,
         [this]() {
@@ -217,15 +211,17 @@ Klipper::Klipper(QObject* parent, const KSharedConfigPtr& config, KlipperMode mo
     connect ( history(), SIGNAL(topChanged()), SLOT(slotHistoryTopChanged()) );
     connect( m_popup, SIGNAL(aboutToShow()), SLOT(slotStartShowTimer()) );
 
-    m_popup->plugAction( m_toggleURLGrabAction );
-    m_popup->plugAction( m_clearHistoryAction );
-    m_popup->plugAction( m_configureAction );
-    m_popup->plugAction( m_repeatAction );
-    m_popup->plugAction( m_editAction );
+    if (m_mode == KlipperMode::Standalone) {
+        m_popup->plugAction( m_toggleURLGrabAction );
+        m_popup->plugAction( m_clearHistoryAction );
+        m_popup->plugAction( m_configureAction );
+        m_popup->plugAction( m_repeatAction );
+        m_popup->plugAction( m_editAction );
 #ifdef HAVE_PRISON
-    m_popup->plugAction( m_showBarcodeAction );
+        m_popup->plugAction( m_showBarcodeAction );
 #endif
-    m_popup->plugAction( m_quitAction );
+        m_popup->plugAction( m_quitAction );
+    }
 
     // session manager interaction
     if (m_mode == KlipperMode::Standalone) {
