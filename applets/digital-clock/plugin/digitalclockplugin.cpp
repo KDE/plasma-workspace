@@ -35,5 +35,6 @@ void DigitalClockPlugin::registerTypes(const char *uri)
     Q_ASSERT(uri == QLatin1String("org.kde.plasma.private.digitalclock"));
 
     qmlRegisterType<TimeZoneModel>(uri, 1, 0, "TimeZoneModel");
+    qmlRegisterType<TimeZoneFilterProxy>(uri, 1, 0, "TimeZoneFilterProxy");
     qmlRegisterSingletonType<TimezonesI18n>(uri, 1, 0, "TimezonesI18n", timezonesi18n_singletontype_provider);
 }

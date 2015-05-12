@@ -147,10 +147,9 @@ Item {
             Layout.fillWidth: true
             Layout.fillHeight: true
 
-            model: PlasmaCore.SortFilterModel {
+            model: TimeZoneFilterProxy {
                 sourceModel: timeZones
-                filterRole: "city"
-                filterRegExp: filter.text
+                filterString: filter.text
             }
 
             QtControls.TableViewColumn {
