@@ -22,10 +22,32 @@
 #define TIMEZONEMODEL_H
 
 #include <QAbstractListModel>
+#include <QSortFilterProxyModel>
 
 #include "timezonedata.h"
 
 class TimezonesI18n;
+
+class TimeZoneFilterProxy : public QSortFilterProxyModel
+{
+    Q_OBJECT
+    Q_PROPERTY(QString filterString WRITE setFilterString MEMBER m_filterString NOTIFY filterStringChanged)
+
+public:
+    explicit TimeZoneFilterProxy(QObject *parent = 0);
+    bool filterAcceptsRow(int source_row, const QModelIndex &source_parent) const;
+
+    void setFilterString(const QString &filterString);
+
+Q_SIGNALS:
+    void filterStringChanged();
+
+private:
+    QString m_filterString;
+    QStringMatcher m_stringMatcher;
+};
+
+//=============================================================================
 
 class TimeZoneModel : public QAbstractListModel
 {

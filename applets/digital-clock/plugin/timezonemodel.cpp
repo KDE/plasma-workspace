@@ -22,8 +22,41 @@
 #include "timezonesi18n.h"
 
 #include <QTimeZone>
+#include <QStringMatcher>
 #include <KLocalizedString>
 #include <QDebug>
+
+TimeZoneFilterProxy::TimeZoneFilterProxy(QObject *parent)
+    : QSortFilterProxyModel(parent)
+{
+    m_stringMatcher.setCaseSensitivity(Qt::CaseInsensitive);
+}
+
+bool TimeZoneFilterProxy::filterAcceptsRow(int source_row, const QModelIndex &source_parent) const
+{
+    if (!sourceModel() || m_filterString.isEmpty()) {
+        return true;
+    }
+
+    const QString city = sourceModel()->index(source_row, 0, source_parent).data(TimeZoneModel::CityRole).toString();
+    const QString region = sourceModel()->index(source_row, 0, source_parent).data(TimeZoneModel::RegionRole).toString();
+
+    if (m_stringMatcher.indexIn(city) != -1 || m_stringMatcher.indexIn(region) != -1) {
+        return true;
+    }
+
+    return false;
+}
+
+void TimeZoneFilterProxy::setFilterString(const QString &filterString)
+{
+    m_filterString = filterString;
+    m_stringMatcher.setPattern(filterString);
+    emit filterStringChanged();
+    invalidate();
+}
+
+//=============================================================================
 
 TimeZoneModel::TimeZoneModel(QObject *parent)
     : QAbstractListModel(parent),
