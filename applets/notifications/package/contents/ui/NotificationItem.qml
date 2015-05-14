@@ -39,6 +39,9 @@ Item {
         var iconOrTextHeight = Math.max(units.iconSizes.large, titleBar.height + textItemLoader.item.implicitHeight) + 2 * units.smallSpacing
         return Math.max(absoluteMinimum, Math.min(iconOrTextHeight, 5.5 * units.gridUnit))
     }
+    // We need to clip here because we support displaying images through <img/>
+    // and if we don't clip, they will be painted over the borders of the dialog/item
+    clip: true
 
     signal close
     signal configure
