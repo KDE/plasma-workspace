@@ -66,6 +66,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #include <kconfiggroup.h>
 #include <KSharedConfig>
 #include <kprocess.h>
+#include <KNotification>
 
 #include "global.h"
 #include "server.h"
@@ -83,6 +84,22 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #ifdef KSMSERVER_STARTUP_DEBUG1
 static QTime t;
 #endif
+
+// Put the notification in its own thread as it can happen that
+// PulseAudio will start initializing with this, so let's not
+// block the main thread with waiting for PulseAudio to start
+class NotificationThread : public QThread
+{
+    Q_OBJECT
+    void run() Q_DECL_OVERRIDE {
+        KNotification *loginSound = KNotification::event(QStringLiteral("startkde"),
+                                                         QString(), QPixmap(), 0l,
+                                                         KNotification::DefaultEvent);
+        connect(loginSound, &KNotification::closed, this, &NotificationThread::quit);
+        exec();
+    }
+
+};
 
 /*!  Restores the previous session. Ensures the window manager is
   running (if specified).
@@ -399,9 +416,11 @@ void KSMServer::autoStart2()
     }
     if( !defaultSession())
         restoreLegacySession(KSharedConfig::openConfig().data());
-//     KNotification::event( QStringLiteral( "startkde" ),
-//                           QString(), QPixmap(), 0l,
-//                           KNotification::DefaultEvent ); // this is the time KDE is up, more or less
+
+    NotificationThread *loginSound = new NotificationThread();
+    // Delete the thread when finished
+    connect(loginSound, &NotificationThread::finished, loginSound, &NotificationThread::deleteLater);
+    loginSound->start();
 }
 
 void KSMServer::autoStart2Done()
@@ -539,3 +558,5 @@ void KSMServer::restoreSubSession( const QString& name )
     state = RestoringSubSession;
     tryRestoreNext();
 }
+
+#include "startup.moc"
