@@ -336,7 +336,7 @@ QStringList Host::defaultPlasmoids() const
 {
     QStringList ret;
     for (auto info : Plasma::PluginLoader::self()->listAppletInfo(QString())) {
-        if (info.property("X-Plasma-NotificationArea") == "true" &&
+        if (info.isValid() && info.property("X-Plasma-NotificationArea") == "true" &&
             info.isPluginEnabledByDefault()) {
             ret += info.pluginName();
         }

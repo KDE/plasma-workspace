@@ -128,7 +128,7 @@ void PlasmoidProtocol::restorePlasmoids()
 
     KPluginInfo::List applets;
     for (auto info : Plasma::PluginLoader::self()->listAppletInfo(QString())) {
-        if (info.property("X-Plasma-NotificationArea") == "true") {
+        if (info.isValid() && info.property("X-Plasma-NotificationArea") == "true") {
             applets << info;
         }
     }
