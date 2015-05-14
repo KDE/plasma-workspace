@@ -86,6 +86,9 @@ Item {
     }
 
     Component.onCompleted: {
+        //script, don't bind
+        host.plasmoidsAllowed = initializePlasmoidList()
+
         host.setCategoryShown(SystemTray.Task.ApplicationStatus, plasmoid.configuration.applicationStatusShown);
 
         host.setCategoryShown(SystemTray.Task.Communications, plasmoid.configuration.communicationsShown);
@@ -97,20 +100,40 @@ Item {
         host.setCategoryShown(SystemTray.Task.Unknown, plasmoid.configuration.miscellaneousShown);
     }
 
-    function checkInitialized(plugins)
-    {
-//         this "uninitialized" comes from the main.xml file, so that we know
-//         it needs to be initialized at runtime
-        if (plugins.length === 1 && plugins[0] === "uninitialized") {
-            plugins = host.defaultPlasmoids;
-            plasmoid.configuration.extraItems = plugins;
+    function initializePlasmoidList() {
+        var newKnownItems = [];
+        var newExtraItems = [];
+
+        //NOTE:why this? otherwise the interpreter will execute host.defaultPlasmoids() on
+        //every access of defaults[], resulting in a very slow iteration
+        var defaults = [];
+        //defaults = defaults.concat(host.defaultPlasmoids);
+        defaults = host.defaultPlasmoids.slice()
+        var candidate;
+
+        //Add every plasmoid that is both not enabled explicitly and not already known
+        for (var i = 0; i < defaults.length; ++i) {
+            candidate = defaults[i];
+            if (plasmoid.configuration.knownItems.indexOf(candidate) === -1) {
+                newKnownItems.push(candidate);
+                if (plasmoid.configuration.extraItems.indexOf(candidate) === -1) {
+                    newExtraItems.push(candidate);
+                }
+            }
         }
-        return plugins;
+
+        if (newExtraItems.length > 0) {
+            plasmoid.configuration.extraItems = plasmoid.configuration.extraItems.slice().concat(newExtraItems);
+        }
+        if (newKnownItems.length > 0) {
+            plasmoid.configuration.knownItems = plasmoid.configuration.knownItems.slice().concat(newKnownItems);
+        }
+
+        return plasmoid.configuration.extraItems;
     }
 
     SystemTray.Host {
         id: host
-        plasmoidsAllowed: checkInitialized(plasmoid.configuration.extraItems)
         rootItem: plasmoid
         forcedShownItems: plasmoid.configuration.shownItems
         forcedHiddenItems: plasmoid.configuration.hiddenItems

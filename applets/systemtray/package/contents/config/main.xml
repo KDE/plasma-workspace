@@ -29,14 +29,17 @@
     </entry>
 
     <entry name="extraItems" type="StringList">
-<!--    the initial value of the extraItems is computed by checkInitialized() in main.qml.
-        Depends on the plasmoids marked with X-KDE-PluginInfo-EnabledByDefault=true -->
-      <default>uninitialized</default>
+      <default></default>
     </entry>
     <entry name="hiddenItems" type="StringList">
       <default></default>
     </entry>
     <entry name="shownItems" type="StringList">
+      <default></default>
+    </entry>
+    <!-- All the plasmoids the applet knows of. a plasmoid will be automatically added
+         if X-KDE-PluginInfo-EnabledByDefault=true and is not in the known list-->
+    <entry name="knownItems" type="StringList">
       <default></default>
     </entry>
   </group>
