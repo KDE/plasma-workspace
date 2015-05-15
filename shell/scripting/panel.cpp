@@ -272,7 +272,19 @@ void Panel::setMinimumLength(int pixels)
     PanelView *v = panel();
     Plasma::Containment *c = containment();
 
-    if (!v || !c || pixels < 0) {
+    if (!c || pixels < 0) {
+        return;
+    }
+
+    //NOTE: due to dependency of class creation at startup, we can't in any way have
+    //the panel views already instantiated, so put the property in a placeholder dynamic property
+    if (!v) {
+        QQuickItem *graphicObject = qobject_cast<QQuickItem *>(c->property("_plasma_graphicObject").value<QObject *>());
+
+        if (!graphicObject) {
+            return;
+        }
+        graphicObject->setProperty("_plasma_desktopscripting_minLength", pixels);
         return;
     }
 
@@ -308,7 +320,19 @@ void Panel::setMaximumLength(int pixels)
     PanelView *v = panel();
     Plasma::Containment *c = containment();
 
-    if (!v || !c || pixels < 0) {
+    if (!c || pixels < 0) {
+        return;
+    }
+
+    //NOTE: due to dependency of class creation at startup, we can't in any way have
+    //the panel views already instantiated, so put the property in a placeholder dynamic property
+    if (!v) {
+        QQuickItem *graphicObject = qobject_cast<QQuickItem *>(c->property("_plasma_graphicObject").value<QObject *>());
+
+        if (!graphicObject) {
+            return;
+        }
+        graphicObject->setProperty("_plasma_desktopscripting_maxLength", pixels);
         return;
     }
 
@@ -366,6 +390,15 @@ void Panel::setHeight(int height)
         height = qBound(16, height, max);
 
         v->setThickness(height);
+    } else {
+        //NOTE: due to dependency of class creation at startup, we can't in any way have
+        //the panel views already instantiated, so put the property in a placeholder dynamic property
+        QQuickItem *graphicObject = qobject_cast<QQuickItem *>(c->property("_plasma_graphicObject").value<QObject *>());
+
+        if (!graphicObject) {
+            return;
+        }
+        graphicObject->setProperty("_plasma_desktopscripting_thickness", height);
     }
 }
 

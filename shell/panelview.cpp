@@ -489,21 +489,45 @@ void PanelView::restore()
         return;
     }
 
-    m_offset = config().readEntry<int>("offset", 0);
+    //defaults, may be altered by values writt4en by the scripting in startup phase
+    int defaultOffset = 0;
+    int defaultThickness = 30;
+    int defaultMaxLength = 0;
+    int defaultMinLength = 0;
+
+    QQuickItem *containmentItem = containment()->property("_plasma_graphicObject").value<QQuickItem *>();
+
+    if (containmentItem && containmentItem->property("_plasma_desktopscripting_offset").canConvert<int>()) {
+        defaultOffset = containmentItem->property("_plasma_desktopscripting_offset").toInt();
+    }
+    m_offset = config().readEntry<int>("offset", defaultOffset);
     if (m_alignment != Qt::AlignCenter) {
         m_offset = qMax(0, m_offset);
     }
 
+    if (containmentItem && containmentItem->property("_plasma_desktopscripting_thickness").canConvert<int>()) {
+        defaultThickness = qMax(16, containmentItem->property("_plasma_desktopscripting_thickness").toInt());
+    }
     setAlignment((Qt::Alignment)config().readEntry<int>("alignment", Qt::AlignLeft));
-    setThickness(config().readEntry<int>("thickness", 30));
+    setThickness(config().readEntry<int>("thickness", defaultThickness));
 
     setMinimumSize(QSize(-1, -1));
     //FIXME: an invalid size doesn't work with QWindows
     setMaximumSize(screen()->size());
 
     if (containment()->formFactor() == Plasma::Types::Vertical) {
-        m_maxLength = config().readEntry<int>("maxLength", screen()->size().height());
-        m_minLength = config().readEntry<int>("minLength", screen()->size().height());
+        defaultMaxLength = screen()->size().height();
+        defaultMinLength = screen()->size().height();
+
+        if (containmentItem && containmentItem->property("_plasma_desktopscripting_maxLength").canConvert<int>()) {
+            defaultMaxLength = containmentItem->property("_plasma_desktopscripting_maxLength").toInt();
+        }
+        if (containmentItem && containmentItem->property("_plasma_desktopscripting_minLength").canConvert<int>()) {
+            defaultMinLength = containmentItem->property("_plasma_desktopscripting_minLength").toInt();
+        }
+
+        m_maxLength = config().readEntry<int>("maxLength", defaultMaxLength);
+        m_minLength = config().readEntry<int>("minLength", defaultMinLength);
 
         const int maxSize = screen()->size().height() - m_offset;
         m_maxLength = qBound<int>(MINSIZE, m_maxLength, maxSize);
@@ -516,8 +540,18 @@ void PanelView::restore()
 
     //Horizontal
     } else {
-        m_maxLength = config().readEntry<int>("maxLength", screen()->size().width());
-        m_minLength = config().readEntry<int>("minLength", screen()->size().width());
+        defaultMaxLength = screen()->size().width();
+        defaultMinLength = screen()->size().width();
+
+        if (containmentItem && containmentItem->property("_plasma_desktopscripting_maxLength").canConvert<int>()) {
+            defaultMaxLength = containmentItem->property("_plasma_desktopscripting_maxLength").toInt();
+        }
+        if (containmentItem && containmentItem->property("_plasma_desktopscripting_minLength").canConvert<int>()) {
+            defaultMinLength = containmentItem->property("_plasma_desktopscripting_minLength").toInt();
+        }
+
+        m_maxLength = config().readEntry<int>("maxLength", defaultMaxLength);
+        m_minLength = config().readEntry<int>("minLength", defaultMinLength);
 
         const int maxSize = screen()->size().width() - m_offset;
         m_maxLength = qBound<int>(MINSIZE, m_maxLength, maxSize);
