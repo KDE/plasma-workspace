@@ -1151,6 +1151,7 @@ void ShellCorona::activityAdded(const QString &id)
     }
 
     Activity *a = new Activity(id, this);
+    a->setDefaultPlugin(m_desktopDefaultsConfig.readEntry("Containment", "org.kde.desktopcontainment"));
     m_activities.insert(id, a);
 }
 
