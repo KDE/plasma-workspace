@@ -73,7 +73,7 @@ Item {
         id: sdSource
         engine: "soliddevice"
         connectedSources: hpSource.sources
-        interval: 0
+        interval: plasmoid.expanded ? 5000 : 0
         property string last
         onSourceAdded: {
             disconnectSource(source);
