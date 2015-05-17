@@ -61,11 +61,30 @@ PlasmaComponents.ListItem {
                 right: parent.right
             }
             maximumLineCount: 3
-            text: DisplayRole.trim()
+            text: {
+                var highlightFontTag = "<font color='" + theme.highlightColor + "'>%1</font>"
+
+                var text = DisplayRole
+
+                // first escape any HTML characters to prevent privacy issues
+                text = text.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
+
+                // color code leading or trailing whitespace
+                // the first regex is basically "trim"
+                text = text.replace(/^\s+|\s+$/g, function(match) {
+                    // then inside the trimmed characters ("match") we replace each one individually
+                    match = match.replace(/ /g, "␣") // space
+                                 .replace(/\t/g, "↹") // tab
+                                 .replace(/\n/g, "↵") // return
+                    return highlightFontTag.arg(match)
+                })
+
+                return text
+            }
             visible: TypeRole == 0 // TypeRole: 0: Text, 1: Image, 2: Url
             elide: Text.ElideRight
             wrapMode: Text.Wrap
-            textFormat: Text.PlainText
+            textFormat: Text.StyledText
         }
         KQuickControlsAddons.QPixmapItem {
             id: previewPixmap
