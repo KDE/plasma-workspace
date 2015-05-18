@@ -20,12 +20,12 @@
 #define DESKTOVIEW_H
 
 
-#include "plasmaquick/view.h"
+#include "plasmaquick/containmentview.h"
 #include "panelconfigview.h"
 #include <QtCore/qpointer.h>
 
 
-class DesktopView : public PlasmaQuick::View
+class DesktopView : public PlasmaQuick::ContainmentView
 {
     Q_OBJECT
 

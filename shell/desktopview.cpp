@@ -33,7 +33,7 @@
 #include <KPackage/Package>
 
 DesktopView::DesktopView(Plasma::Corona *corona, QScreen *targetScreen)
-    : PlasmaQuick::View(corona, 0),
+    : PlasmaQuick::ContainmentView(corona, 0),
       m_windowType(Desktop)
 {
     if (targetScreen) {
@@ -183,7 +183,7 @@ bool DesktopView::event(QEvent *e)
         }
     }
 
-    return PlasmaQuick::View::event(e);
+    return PlasmaQuick::ContainmentView::event(e);
 }
 
 void DesktopView::keyPressEvent(QKeyEvent *e)
@@ -199,7 +199,7 @@ void DesktopView::keyPressEvent(QKeyEvent *e)
         }
     }
 
-    QQuickView::keyPressEvent(e);
+    ContainmentView::keyPressEvent(e);
 }
 
 

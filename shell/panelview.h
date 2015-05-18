@@ -23,12 +23,12 @@
 #include <Plasma/Theme>
 #include <QTimer>
 
-#include "plasmaquick/view.h"
+#include "plasmaquick/containmentview.h"
 #include "plasmaquick/configview.h"
 
 class ShellCorona;
 
-class PanelView : public PlasmaQuick::View
+class PanelView : public PlasmaQuick::ContainmentView
 {
     Q_OBJECT
     /**
