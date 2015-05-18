@@ -107,6 +107,11 @@ Item {
         width: units.iconSizes.large
         height: units.iconSizes.large
 
+        anchors {
+            top: parent.top
+            left: parent.left
+        }
+
         visible: !imageItem.visible
     }
 
