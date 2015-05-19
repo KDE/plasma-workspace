@@ -55,8 +55,8 @@ PlasmoidTask::PlasmoidTask(const QString &packageName, int appletId, Plasma::Con
     cont->setImmutability(Plasma::Types::Mutable);
     cont->addApplet(m_applet);
     m_applet->setParent(cont);
-    //NOTE: init() has already been called by Containment::addApplet()
-    //m_applet->init();
+    //FIXME? This is *maybe* not necessary
+    m_applet->init();
 
     m_taskGraphicsObject = m_applet->property("_plasma_graphicObject").value<PlasmaQuick::AppletQuickItem *>();
 
