@@ -43,6 +43,9 @@ MouseEventListener {
     Layout.maximumWidth: -1
     Layout.maximumHeight: mainScrollArea.implicitHeight
 
+    LayoutMirroring.enabled: Qt.application.layoutDirection === Qt.RightToLeft
+    LayoutMirroring.childrenInherit: true
+
     property int toolIconSize: UiProperties.toolIconSize
     property int layoutSpacing: UiProperties.layoutSpacing
 

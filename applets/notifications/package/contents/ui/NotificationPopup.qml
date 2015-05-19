@@ -68,6 +68,9 @@ PlasmaCore.Dialog {
         id: root
         Layout.minimumWidth: Math.round(23 * units.gridUnit)
         Layout.minimumHeight: notificationItem.implicitHeight
+        LayoutMirroring.enabled: Qt.application.layoutDirection === Qt.RightToLeft
+        LayoutMirroring.childrenInherit: true
+
         height: notificationItem.implicitHeight
 
         hoverEnabled: true
