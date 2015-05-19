@@ -1,3 +1,4 @@
+add_definitions(-DTRANSLATION_DOMAIN=\"plasma_engine_devicenotifications\")
 
 set(device_notifications_engine_SRCS
     devicenotificationsengine.cpp

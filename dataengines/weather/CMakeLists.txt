@@ -1,3 +1,5 @@
+add_definitions(-DTRANSLATION_DOMAIN=\"plasma_engine_weather\")
+
 add_subdirectory(ions)
 
 #set(weather_SRCS weatherengine.cpp)
