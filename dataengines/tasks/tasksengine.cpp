@@ -32,7 +32,8 @@ TasksEngine::TasksEngine(QObject *parent, const QVariantList &args) :
     Q_UNUSED(args);
     //TODO HACK Remove
     //TasksModel does not initialize itself, So we need to set grouping strategy.
-    m_groupManager->setGroupingStrategy(static_cast<TaskManager::GroupManager::TaskGroupingStrategy>(0));
+    m_groupManager->setGroupingStrategy(TaskManager::GroupManager::NoGrouping);
+    m_groupManager->setSortingStrategy(TaskManager::GroupManager::DesktopSorting);
     setModel("tasks", m_tasksModel);
     m_groupManager->reconnect();
 }
