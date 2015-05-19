@@ -1,3 +1,5 @@
+add_definitions(-DTRANSLATION_DOMAIN=\"plasma_engine_keystate\")
+
 set(keystate_engine_SRCS
     keystate.cpp
     keyservice.cpp
