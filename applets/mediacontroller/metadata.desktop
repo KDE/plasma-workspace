@@ -101,4 +101,3 @@ X-Plasma-MainScript=ui/main.qml
 X-Plasma-NotificationArea=true
 X-Plasma-Provides=org.kde.plasma.multimediacontrols
 X-Plasma-DBusActivationService=org.mpris.MediaPlayer2.*
-X-Plasma-RequiredExtensions=SharedEngine

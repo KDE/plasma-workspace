@@ -139,4 +139,3 @@ X-Plasma-Provides=org.kde.plasma.time,org.kde.plasma.date
 
 X-Plasma-MainScript=ui/main.qml
 X-Plasma-RemoteLocation=
-X-Plasma-RequiredExtensions=SharedEngine
