@@ -315,6 +315,7 @@ void ShellCorona::load()
     checkActivities();
     if (containments().isEmpty()) {
         loadDefaultLayout();
+        processUpdateScripts();
     } else {
         processUpdateScripts();
         foreach(Plasma::Containment *containment, containments()) {
