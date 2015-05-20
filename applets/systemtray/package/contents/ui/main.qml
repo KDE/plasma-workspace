@@ -83,6 +83,8 @@ Item {
         onHardwareControlShownChanged: host.setCategoryShown(SystemTray.Task.Hardware, plasmoid.configuration.hardwareControlShown);
 
         onMiscellaneousShownChanged: host.setCategoryShown(SystemTray.Task.Unknown, plasmoid.configuration.miscellaneousShown);
+
+        onExtraItemsChanged: host.plasmoidsAllowed = plasmoid.configuration.extraItems
     }
 
     Component.onCompleted: {
