@@ -98,6 +98,7 @@ Name[sv]=Effekt
 Name[uk]=Живлення
 Name[x-test]=xxPowerxx
 Name[zh_CN]=电源
+Name[zh_TW]=電源
 Type=Service
 X-KDE-Library=krunner_powerdevil
 X-KDE-PluginInfo-Author=Dario Freddi
