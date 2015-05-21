@@ -39,7 +39,7 @@
 #include <KLocalizedString>
 #include <kcrash.h>
 
-static const QString s_shellsDir(QStandardPaths::locate(QStandardPaths::QStandardPaths::GenericDataLocation,
+static const QStringList s_shellsDirs(QStandardPaths::locateAll(QStandardPaths::QStandardPaths::GenericDataLocation,
                                                   PLASMA_RELATIVE_DATA_INSTALL_DIR "/shells/",
                                                   QStandardPaths::LocateDirectory));
 static const QString s_shellLoaderPath = QStringLiteral("/contents/loader.qml");
@@ -110,26 +110,28 @@ void ShellManager::loadHandlers()
     // TODO: Use corona's qml engine when it switches from QScriptEngine
     static QQmlEngine * engine = new QQmlEngine(this);
 
-    for (const auto & dir: QDir(s_shellsDir).entryList(QDir::Dirs | QDir::NoDotAndDotDot)) {
-        const QString qmlFile = s_shellsDir + dir + s_shellLoaderPath;
-        // qDebug() << "Making a new instance of " << qmlFile;
+    for (const QString &shellsDir: s_shellsDirs) {
+        for (const auto & dir: QDir(shellsDir).entryList(QDir::Dirs | QDir::NoDotAndDotDot)) {
+            const QString qmlFile = shellsDir + dir + s_shellLoaderPath;
+            // qDebug() << "Making a new instance of " << qmlFile;
 
-        QQmlComponent handlerComponent(engine,
-                QUrl::fromLocalFile(qmlFile)
-            );
-        auto handler = handlerComponent.create();
+            QQmlComponent handlerComponent(engine,
+                    QUrl::fromLocalFile(qmlFile)
+                );
+            auto handler = handlerComponent.create();
 
-        // Writing out the errors
-        for (const auto & error: handlerComponent.errors()) {
-            qWarning() << "Error: " << error;
-        }
+            // Writing out the errors
+            for (const auto & error: handlerComponent.errors()) {
+                qWarning() << "Error: " << error;
+            }
 
-        if (handler) {
-            handler->setProperty("pluginName", dir);
-            // This property is useful for shells to launch themselves in some specific sessions
-            // For example mediacenter shell can be launched when in plasma-mediacenter session
-            handler->setProperty("currentSession", QString::fromUtf8(qgetenv("DESKTOP_SESSION")));
-            registerHandler(handler);
+            if (handler) {
+                handler->setProperty("pluginName", dir);
+                // This property is useful for shells to launch themselves in some specific sessions
+                // For example mediacenter shell can be launched when in plasma-mediacenter session
+                handler->setProperty("currentSession", QString::fromUtf8(qgetenv("DESKTOP_SESSION")));
+                registerHandler(handler);
+            }
         }
     }
 
