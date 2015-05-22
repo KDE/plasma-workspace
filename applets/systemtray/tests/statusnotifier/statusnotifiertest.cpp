@@ -247,6 +247,7 @@ void StatusNotifierTest::enableJob(bool enable)
 
 void StatusNotifierTest::setJobProgress(KJob *j, unsigned long v)
 {
+    Q_UNUSED(j)
     jobProgressBar->setValue(v);
 }
 
