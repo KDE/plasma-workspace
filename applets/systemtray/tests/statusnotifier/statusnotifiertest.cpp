@@ -34,6 +34,7 @@
 #include <QTimer>
 
 #include <QPushButton>
+#include <QMenu>
 
 
 static QTextStream cout(stdout);
@@ -86,7 +87,16 @@ void StatusNotifierTest::init()
     connect(d->systemNotifier, &KStatusNotifierItem::scrollRequested,
             this, &StatusNotifierTest::scrollRequested);
 
+    auto menu = new QMenu(this);
+    menu->addAction(QIcon::fromTheme("document-edit"), "action 1");
+    menu->addAction(QIcon::fromTheme("mail-send"), "action 2");
+    auto subMenu = new QMenu(this);
+    subMenu->setTitle("Sub Menu");
+    subMenu->addAction("subaction1");
+    subMenu->addAction("subaction2");
+    menu->addMenu(subMenu);
 
+    d->systemNotifier->setContextMenu(menu);
 }
 
 StatusNotifierTest::~StatusNotifierTest()
