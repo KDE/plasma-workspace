@@ -36,7 +36,9 @@ Item {
     height: units.gridUnit * 10
     Plasmoid.preferredRepresentation: plasmoid.fullRepresentation
     Layout.minimumWidth: units.gridUnit * 10 * (plasmoid.formFactor == PlasmaCore.Types.Horizontal ? sourcesModel.count : 1)
-    Layout.minimumHeight: units.gridUnit * 5 * (plasmoid.formFactor == PlasmaCore.Types.Vertical ? sourcesModel.count : 1)
+    Layout.minimumHeight: units.gridUnit * 4 * (plasmoid.formFactor == PlasmaCore.Types.Vertical ? sourcesModel.count : 1)
+
+    Layout.preferredHeight: Layout.minimumHeight
 
     function addSource(source1, friendlyName1, source2, friendlyName2) {
         var found = false;

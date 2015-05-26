@@ -31,6 +31,8 @@ KQuickAddons.Plotter {
 
     Layout.fillWidth: true
     Layout.fillHeight: true
+    //FIXME: doesn't seem to properly fill otherwise
+    Layout.preferredHeight: parent.height
 
     function formatLabel(data) {
         return i18n("%1 %2", data.value, data.units);
