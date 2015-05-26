@@ -29,6 +29,11 @@ find_package(KF5TextEditor)
 find_package(KWinDBusInterface CONFIG REQUIRED)
 find_package(KF5WebKit)
 
+find_package(Phonon4Qt5 4.6.60 REQUIRED NO_MODULE)
+set_package_properties(Phonon4Qt5 PROPERTIES
+   DESCRIPTION "Qt-based audio library"
+   TYPE REQUIRED)
+
 include(KDEInstallDirs)
 include(KDECMakeSettings)
 include(KDECompilerSettings)

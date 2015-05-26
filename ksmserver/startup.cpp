@@ -61,12 +61,16 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 #include <QTimer>
 #include <QtDBus/QtDBus>
+#include <phonon/audiooutput.h>
+#include <phonon/mediaobject.h>
+#include <phonon/mediasource.h>
+#include <QStandardPaths>
 
 #include <kconfig.h>
 #include <kconfiggroup.h>
 #include <KSharedConfig>
 #include <kprocess.h>
-#include <KNotification>
+#include <KNotifyConfig>
 
 #include "global.h"
 #include "server.h"
@@ -92,10 +96,35 @@ class NotificationThread : public QThread
 {
     Q_OBJECT
     void run() Q_DECL_OVERRIDE {
-        KNotification *loginSound = KNotification::event(QStringLiteral("startkde"),
-                                                         QString(), QPixmap(), 0l,
-                                                         KNotification::DefaultEvent);
-        connect(loginSound, &KNotification::closed, this, &NotificationThread::quit);
+        // We cannot parent to the thread itself so let's create
+        // a QObject on the stack and parent everythign to it
+        QObject parent;
+        Phonon::AudioOutput *m_audioOutput = new Phonon::AudioOutput(Phonon::NotificationCategory, &parent);
+        KNotifyConfig notifyConfig("plasma_workspace", QList< QPair<QString,QString> >(), "startkde");
+
+        QString soundFilename = notifyConfig.readEntry("Sound");
+        if (soundFilename.isEmpty()) {
+            qWarning() << "Audio notification requested, but no sound file provided in notifyrc file, aborting audio notification";
+            return;
+        }
+
+        QUrl soundURL = QUrl(soundFilename); // this CTOR accepts both absolute paths (/usr/share/sounds/blabla.ogg and blabla.ogg) w/o screwing the scheme
+        if (soundURL.isRelative() && !soundURL.toString().startsWith('/')) { // QUrl considers url.scheme.isEmpty() == url.isRelative()
+            soundURL = QUrl::fromLocalFile(QStandardPaths::locate(QStandardPaths::GenericDataLocation, QStringLiteral("sounds/") + soundFilename));
+
+            if (soundURL.isEmpty()) {
+                qWarning() << "Audio notification requested, but sound file from notifyrc file was not found, aborting audio notification";
+                return;
+            }
+        }
+
+        Phonon::MediaObject *m = new Phonon::MediaObject(&parent);
+        connect(m, &Phonon::MediaObject::finished, this, &NotificationThread::quit);
+
+        Phonon::createPath(m, m_audioOutput);
+
+        m->setCurrentSource(soundURL);
+        m->play();
         exec();
     }
 
@@ -417,6 +446,7 @@ void KSMServer::autoStart2()
     if( !defaultSession())
         restoreLegacySession(KSharedConfig::openConfig().data());
 
+    qCDebug(KSMSERVER) << "Starting notification thread";
     NotificationThread *loginSound = new NotificationThread();
     // Delete the thread when finished
     connect(loginSound, &NotificationThread::finished, loginSound, &NotificationThread::deleteLater);

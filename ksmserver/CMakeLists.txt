@@ -1,6 +1,9 @@
 add_definitions(-DTRANSLATION_DOMAIN=\"ksmserver\")
 
 add_subdirectory( tests )
+
+include_directories(${PHONON_INCLUDE_DIR})
+
 #
 if(NOT WIN32)
   add_subdirectory( screenlocker )
@@ -73,6 +76,7 @@ target_link_libraries(kdeinit_ksmserver
     KF5::DBusAddons
     KF5::Package
     KF5::KDELibs4Support # Solid/PowerManagement
+    ${PHONON_LIBRARIES}
 )
 
 install(TARGETS kdeinit_ksmserver ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})

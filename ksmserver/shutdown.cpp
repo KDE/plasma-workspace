@@ -66,7 +66,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #include <KConfigGroup>
 #include <KLocalizedString>
 #include <KUserTimestamp>
-// #include <KNotification>
+#include <KNotification>
 #include <kdisplaymanager.h>
 #include "server.h"
 #include "global.h"
@@ -476,8 +476,21 @@ void KSMServer::completeShutdownOrCheckpoint()
 
 	qDebug() << "state is " << state;
     if ( state == Shutdown ) {
+        KNotification *n = KNotification::event("exitkde", QString(), QPixmap(), 0l,  KNotification::DefaultEvent); // Plasma says good bye
+        connect(n, &KNotification::closed, this, &KSMServer::startKilling);
+        state = WaitingForKNotify;
+        // https://bugs.kde.org/show_bug.cgi?id=228005
+        // if sound is not working for some reason (e.g. no phonon
+        // backends are installed) the closed() signal never happens
+        // and logoutSoundFinished() never gets called. Add this timer to make
+        // sure the shutdown procedure continues even if sound system is broken.
+        QTimer::singleShot(5000, this, [=]{
+            if (state == WaitingForKNotify) {
+                n->deleteLater();
+                startKilling();
+            }
+        });
         createLogoutEffectWidget();
-        startKilling();
 
     } else if ( state == Checkpoint ) {
         foreach( KSMClient* c, clients ) {
@@ -493,6 +506,10 @@ void KSMServer::completeShutdownOrCheckpoint()
 void KSMServer::startKilling()
 {
     qCDebug(KSMSERVER) << "Starting killing clients";
+    if (state == Killing) {
+        // we are already killing
+        return;
+    }
     // kill all clients
     state = Killing;
     foreach( KSMClient* c, clients ) {
