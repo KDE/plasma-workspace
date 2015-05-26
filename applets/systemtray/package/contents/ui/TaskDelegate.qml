@@ -92,6 +92,28 @@ KQuickControlsAddonsComponents.MouseEventListener {
         running: modelData && modelData.status === SystemTray.Task.NeedsAttention && units.longDuration > 0
     }
 
+    // Fallback for when units.longDuration is off, use the Attention icon
+    Timer {
+        id: needsAttentionTimer
+        interval: 1000
+        repeat: true
+        running: modelData && modelData.status === SystemTray.Task.NeedsAttention && units.longDuration == 0
+
+        onRunningChanged: {
+            if (!running) {
+                sniLoader.item.useAttentionIcon = false;
+            }
+        }
+
+        onTriggered: {
+            if (sniLoader.item.useAttentionIcon) {
+                sniLoader.item.useAttentionIcon = false;
+            } else {
+                sniLoader.item.useAttentionIcon = true;
+            }
+        }
+    }
+
     onWidthChanged: updatePlasmoidGeometry()
     onHeightChanged: updatePlasmoidGeometry()
 

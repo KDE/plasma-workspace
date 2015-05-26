@@ -33,6 +33,7 @@ Item {
     property int location: isHiddenItem ? (plasmoid.location == PlasmaCore.Types.LeftEdge ? PlasmaCore.Types.LeftEdge : PlasmaCore.Types.RightEdge) : plasmoid.location
     property int blink_interval: 1000 // interval of blinking (if status of task is NeedsAttention)
     property variant task: null // task that provides information for item
+    property bool useAttentionIcon: false
 
     property string   __icon_name:         modelData.iconName
     property string   __att_icon_name:     modelData.attIconName
@@ -81,22 +82,6 @@ Item {
         __processClick(Qt.LeftButton, icon_widget)
     }
 
-
-    // Timer for blink effect ==========================================================================================
-    Timer {
-        id: timer_blink
-        running: false
-        repeat: true
-        interval: blink_interval
-
-        property bool is_att_icon: false
-
-        onTriggered: {
-            icon_widget.source = is_att_icon ? __getAttentionIcon() : __getDefaultIcon()
-            is_att_icon = !is_att_icon
-        }
-    }
-    
     PlasmaCore.IconItem {
         id: itemIcon
         width: isHiddenItem ? height * 1.5 : height;
@@ -106,7 +91,7 @@ Item {
             left: isHiddenItem ? parent.left : undefined
             verticalCenter: parent.verticalCenter               
         }
-        source: __icon_name != "" ? __icon_name : (typeof(__icon) != "undefined" ? __icon : "")
+        source: useAttentionIcon ? __getAttentionIcon() : __getDefaultIcon()
     }
 
     // Mouse events handlers ===========================================================================================
@@ -140,7 +125,7 @@ Item {
 
             visible: false
             active: mouse_area.containsMouse
-            source: __icon_name != "" ? __icon_name : (typeof(icon) != "undefined" ? icon : "")
+            source: useAttentionIcon ? __getAttentionIcon() : __getDefaultIcon()
 
             // Overlay icon
             Image {
@@ -180,11 +165,11 @@ Item {
 
     // Functions ==================================================================================
     function __getDefaultIcon() {
-        return task.customIcon(__icon_name != "" ? __icon_name : __icon)
+        return __icon_name != "" ? __icon_name : (typeof(__icon) != "undefined" ? __icon : "")
     }
 
     function __getAttentionIcon() {
-        return task.customIcon(__att_icon_name != "" ? __att_icon_name : __att_icon)
+        return __att_icon_name != "" ? __att_icon_name : (typeof(__att_icon) != "undefined" ? __att_icon : "")
     }
 
     function __processClick(buttons, item) {
@@ -204,76 +189,4 @@ Item {
             break;
         }
     }
-
-    // States =====================================================================================
-    states: [
-        // Static icon
-        State {
-            name: "__STATIC"
-            when: __status !== NeedsAttention
-            PropertyChanges {
-                target: timer_blink
-                running: false
-            }
-            PropertyChanges {
-                target: icon_widget
-                source: __getDefaultIcon()
-                visible: true
-            }
-            PropertyChanges {
-                target: animation
-                visible: false
-                playing: false
-            }
-            StateChangeScript {
-                script: tooltip.target = icon_widget // binding to property doesn't work
-            }
-        },
-        // Attention icon
-        State {
-            name: "__BLINK"
-            when: __status === NeedsAttention && !__movie_path
-            PropertyChanges {
-                target: icon_widget
-                source: __getAttentionIcon()
-                visible: true
-            }
-            PropertyChanges {
-                target: timer_blink
-                running: true
-                is_att_icon: false
-            }
-            PropertyChanges {
-                target: animation
-                visible: false
-                playing: false
-            }
-            StateChangeScript {
-                script: tooltip.target = icon_widget
-            }
-        },
-        // Animation icon
-        State {
-            name: "__ANIM"
-            when: __status === NeedsAttention && __movie_path
-            PropertyChanges {
-                target: timer_blink
-                running: false
-            }
-            PropertyChanges {
-                target: icon_widget
-                source: __getDefaultIcon()
-                visible: false
-            }
-            PropertyChanges {
-                target: animation
-                visible: true
-                playing: true
-            }
-            StateChangeScript {
-                script: tooltip.target = animation
-            }
-        }
-    ]
-
 }
