@@ -60,6 +60,7 @@ PanelView::PanelView(ShellCorona *corona, QScreen *targetScreen, QWindow *parent
        m_background(0)
 {
     if (targetScreen) {
+        setPosition(targetScreen->geometry().topLeft());
         setScreen(targetScreen);
     }
     setResizeMode(QQuickView::SizeRootObjectToView);
