@@ -74,7 +74,7 @@ PanelView::PanelView(ShellCorona *corona, QScreen *targetScreen, QWindow *parent
     m_positionPaneltimer.setSingleShot(true);
     m_positionPaneltimer.setInterval(150);
     connect(&m_positionPaneltimer, &QTimer::timeout,
-            this, [=] () {
+            this, [this] () {
                 restore();
                 positionPanel();
             });
@@ -90,7 +90,7 @@ PanelView::PanelView(ShellCorona *corona, QScreen *targetScreen, QWindow *parent
             &m_positionPaneltimer, SLOT(start()));
     connect(this, SIGNAL(containmentChanged()),
             this, SLOT(containmentChanged()));
-    connect(this, &View::locationChanged, [=] () {
+    connect(this, &View::locationChanged, [this] () {
                 emit m_corona->availableScreenRectChanged();
                 emit m_corona->availableScreenRegionChanged();
             });
@@ -103,11 +103,11 @@ PanelView::PanelView(ShellCorona *corona, QScreen *targetScreen, QWindow *parent
     connect(&m_strutsTimer, &QTimer::timeout,
             this, &PanelView::updateStruts);
     connect(m_corona->screensConfiguration().data(), &KScreen::Config::outputAdded,
-            this, [=] (const KScreen::OutputPtr &) {
+            this, [this] (const KScreen::OutputPtr &) {
                 updateStruts();
             });
     connect(m_corona->screensConfiguration().data(), &KScreen::Config::outputRemoved,
-            this, [=] (int) {
+            this, [this] (int) {
                 updateStruts();
             });
 
@@ -702,7 +702,7 @@ void PanelView::showEvent(QShowEvent *event)
 
     //When the screen is set, the screen is recreated internally, so we need to
     //set anything that depends on the winId()
-    connect(this, &QWindow::screenChanged, this, [=](QScreen* screen) {
+    connect(this, &QWindow::screenChanged, this, [this](QScreen* screen) {
         emit screenChangedProxy(screen);
 
         if (!screen)
@@ -1009,7 +1009,7 @@ void PanelView::containmentChanged()
 {
     positionPanel();
     connect(containment(), SIGNAL(statusChanged(Plasma::Types::ItemStatus)), SLOT(statusChanged(Plasma::Types::ItemStatus)));
-    connect(containment(), &QObject::destroyed, this, [=] (QObject *obj) {
+    connect(containment(), &QObject::destroyed, this, [this] (QObject *obj) {
         Q_UNUSED(obj)
         //containment()->destroyed() is true only when the user deleted it
         //so the config is to be thrown away, not during shutdown

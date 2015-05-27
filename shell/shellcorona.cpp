@@ -130,7 +130,7 @@ ShellCorona::ShellCorona(QObject *parent)
     // Look for theme config in plasmarc, if it isn't configured, take the theme from the
     // LookAndFeel package, if either is set, change the default theme
 
-    connect(qApp, &QCoreApplication::aboutToQuit, [=]() {
+    connect(qApp, &QCoreApplication::aboutToQuit, [this]() {
         //saveLayout is a slot but arguments not compatible
         saveLayout();
     });
@@ -142,7 +142,7 @@ ShellCorona::ShellCorona(QObject *parent)
     QObject::connect(dashboardAction, &QAction::triggered,
                      this, &ShellCorona::setDashboardShown);
     dashboardAction->setText(i18n("Show Dashboard"));
-    connect(KWindowSystem::self(), &KWindowSystem::showingDesktopChanged, [=](bool showing) {
+    connect(KWindowSystem::self(), &KWindowSystem::showingDesktopChanged, [dashboardAction](bool showing) {
         dashboardAction->setText(showing ? i18n("Hide Dashboard") : i18n("Show Dashboard"));
         dashboardAction->setChecked(showing);
     });
@@ -271,7 +271,7 @@ void ShellCorona::setShell(const QString &shell)
     connect(m_activityConsumer, SIGNAL(serviceStatusChanged(Consumer::ServiceStatus)), SLOT(load()), Qt::UniqueConnection);
 
     connect(new KScreen::GetConfigOperation(KScreen::GetConfigOperation::NoEDID), &KScreen::GetConfigOperation::finished,
-                this, [=](KScreen::ConfigOperation *op) {
+                this, [this](KScreen::ConfigOperation *op) {
                     if (op->hasError()) {
                         qWarning() << "Error found while setting up ShellCorona's KScreen: " << op->errorString();
                     }
@@ -471,7 +471,7 @@ void ShellCorona::showAlternativesForApplet(Plasma::Applet *applet)
     connect(qmlObj->rootObject(), SIGNAL(visibleChanged(bool)),
             this, SLOT(alternativesVisibilityChanged(bool)));
 
-    connect(applet, &Plasma::Applet::destroyedChanged, [=] (bool destroyed) {
+    connect(applet, &Plasma::Applet::destroyedChanged, [this, qmlObj] (bool destroyed) {
         if (!destroyed) {
             return;
         }
@@ -967,7 +967,7 @@ void ShellCorona::createWaitingPanels()
         Q_ASSERT(qBound(0, requestedScreen, m_views.count() - 1) == requestedScreen);
         QScreen *screen = m_views[requestedScreen]->screen();
         PanelView* panel = new PanelView(this, screen);
-        connect(panel, &QWindow::visibleChanged, [=]() {
+        connect(panel, &QWindow::visibleChanged, [this]() {
             emit availableScreenRectChanged();
             emit availableScreenRegionChanged();
         });
