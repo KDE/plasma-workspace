@@ -33,11 +33,36 @@ ActivitySortingStrategy::ActivitySortingStrategy(QObject *parent)
 
 class ActivitySortingStrategy::Comparator {
 public:
-    Comparator(QStringList *activitiesOrder) {
+    Comparator(QStringList *activitiesOrder, GroupManager *groupManager) {
         m_activitiesOrder = activitiesOrder;
+        m_groupManager = groupManager;
     }
 
     bool operator()(const AbstractGroupableItem *i1, const AbstractGroupableItem *i2) {
+        if (m_groupManager && m_groupManager->separateLaunchers()) {
+            if (i1->isStartupItem()) {
+                if (i2->isStartupItem()) {
+                    return i1->name().toLower() < i2->name().toLower();
+                }
+                return false;
+            }
+
+            if (i2->isStartupItem()) {
+                return true;
+            }
+
+            if (i1->itemType() == LauncherItemType) {
+                if (i2->itemType() == LauncherItemType) {
+                    return i1->name().toLower() < i2->name().toLower();
+                }
+                return true;
+            }
+
+            if (i2->itemType() == LauncherItemType) {
+                return false;
+            }
+        }
+
         if (!m_priorityCache.contains(i1->id())) {
             addToCache(i1);
         }
@@ -97,6 +122,7 @@ private:
         m_priorityCache[item->id()] = cacheEntry;
     }
 
+    GroupManager *m_groupManager;
     const QStringList *m_activitiesOrder;
     QHash<int, QList<int> > m_priorityCache;
 };
@@ -111,7 +137,7 @@ void ActivitySortingStrategy::sortItems(ItemList& items)
         checkActivitiesOrder(items);
     }
 
-    Comparator comparator(&m_activitiesOrder);
+    Comparator comparator(&m_activitiesOrder, qobject_cast<GroupManager *>(parent()));
 
     qStableSort(items.begin(), items.end(), comparator);
 }
