@@ -90,7 +90,7 @@ Column {
             op["expireTimeout"] = 6000;
             op["urgency"] = 0;
             op["configurable"] = false;
-            op["actions"] = !error && UrlHelper.isUrlValid(message) ? [message, i18n("Open...")] : []; // If the source contains "Job", it tries to open the "id" value (which is "message")
+            op["actions"] = !error && UrlHelper.isUrlValid(message) ? ["jobUrl#" + message, i18n("Open...")] : []; // If the source contains "Job", it tries to open the "id" value (which is "message")
 
             notifications.createNotification(op);
 
