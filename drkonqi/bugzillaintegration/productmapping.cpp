@@ -57,7 +57,7 @@ void ProductMapping::map(const QString & appName)
 
 void ProductMapping::mapUsingInternalFile(const QString & appName)
 {
-    KConfig mappingsFile(QString::fromLatin1("mappings"), KConfig::NoGlobals, QStandardPaths::GenericDataLocation);
+    KConfig mappingsFile(QString::fromLatin1("mappings"), KConfig::NoGlobals, QStandardPaths::DataLocation);
     const KConfigGroup mappings = mappingsFile.group("Mappings");
     if (mappings.hasKey(appName)) {
         QString mappingString = mappings.readEntry(appName);
@@ -82,7 +82,7 @@ void ProductMapping::getRelatedProductsUsingInternalFile(const QString & bugzill
     //ProductGroup ->  kontact=kdepim
     //Groups -> kdepim=kontact|kmail|korganizer|akonadi|pimlibs..etc
 
-    KConfig mappingsFile(QString::fromLatin1("mappings"), KConfig::NoGlobals, QStandardPaths::GenericDataLocation);
+    KConfig mappingsFile(QString::fromLatin1("mappings"), KConfig::NoGlobals, QStandardPaths::DataLocation);
     const KConfigGroup productGroup = mappingsFile.group("ProductGroup");
 
     //Get groups of the application
