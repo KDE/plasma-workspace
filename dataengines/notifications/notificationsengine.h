@@ -53,7 +53,8 @@ public:
 
     QString GetServerInformation(QString& vendor, QString& version, QString& specVersion);
 
-    int createNotification(const QString &appName, const QString &appIcon, const QString &summary, const QString &body, int timeout, bool configurable, const QString &appRealName);
+    int createNotification(const QString &appName, const QString &appIcon, const QString &summary,
+                           const QString &body, int timeout, const QString &appRealName, const QStringList &actions);
 
     void configureNotification(const QString &appName);
 

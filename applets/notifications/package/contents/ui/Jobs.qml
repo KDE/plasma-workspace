@@ -80,18 +80,19 @@ Column {
                 summary = infoMessage ? i18nc("the job, which can be anything, failed to complete", "%1: Failed", infoMessage) : i18n("Job Failed")
             }
 
-            notifications.addNotification({
-                source: source,
-                appIcon: runningJobs[source]["appIconName"],
-                appName: runningJobs[source]["appName"],
+            var op = {
+                appIcon: runningJobs[source].appIconName,
+                appName: runningJobs[source].appName,
                 summary: summary,
                 body: errorText || message,
                 isPersistent: true,
                 expireTimeout: 6000,
                 urgency: 0,
                 configurable: false,
-                actions: !error && UrlHelper.isUrlValid(message) ? [{"id": message, "text": i18n("Open...")}] : [] // If the source contains "Job", it tries to open the "id" value (which is "message")
-            })
+                actions: !error && UrlHelper.isUrlValid(message) ? ["jobUrl#" + message, i18n("Open...")] : []
+            }; // If the actionId contains "jobUrl#", it tries to open the "id" value (which is "message")
+
+            notifications.createNotification(op);
 
             delete runningJobs[source]
         }

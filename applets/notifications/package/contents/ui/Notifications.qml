@@ -80,15 +80,16 @@ Column {
 
     function executeAction(source, id) {
         //try to use the service
-        if (source.indexOf("notification") !== -1) {
+        if (id.indexOf("jobUrl#") === -1) {
             var service = notificationsSource.serviceForSource(source)
             var op = service.operationDescription("invokeAction")
             op["actionId"] = id
 
             service.startOperationCall(op)
         //try to open the id as url
-        } else if (source.indexOf("Job") !== -1) {
-            Qt.openUrlExternally(id)
+        } else if (id.indexOf("jobUrl#") !== -1) {
+            Qt.openUrlExternally(id.slice(7));
+            notificationPositioner.closePopup(source);
         }
     }
 
@@ -97,6 +98,13 @@ Column {
         var op = service.operationDescription("configureNotification")
         op["appRealName"] = appRealName;
         service.startOperationCall(op)
+    }
+    function createNotification(data) {
+        var service = notificationsSource.serviceForSource("notification");
+        var op = service.operationDescription("createNotification");
+        // add everything from "data" to "op"
+        for (var attrname in data) { op[attrname] = data[attrname]; }
+        service.startOperationCall(op);
     }
 
     function closeNotification(source) {

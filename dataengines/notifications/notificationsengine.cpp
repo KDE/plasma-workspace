@@ -354,20 +354,12 @@ QString NotificationsEngine::GetServerInformation(QString& vendor, QString& vers
     return "Plasma";
 }
 
-int NotificationsEngine::createNotification(const QString &appName, const QString &appIcon, const QString &summary, const QString &body, int timeout, bool configurable, const QString &appRealName)
+int NotificationsEngine::createNotification(const QString &appName, const QString &appIcon, const QString &summary,
+                                            const QString &body, int timeout, const QString &appRealName, const QStringList &actions)
 {
-    const QString source = QString("notification %1").arg(++m_nextId);
-    Plasma::DataEngine::Data notificationData;
-    notificationData.insert("id", QString::number(m_nextId));
-    notificationData.insert("appName", appName);
-    notificationData.insert("appIcon", appIcon);
-    notificationData.insert("summary", summary);
-    notificationData.insert("body", body);
-    notificationData.insert("expireTimeout", timeout);
-    notificationData.insert("configurable", configurable);
-    notificationData.insert("appRealName", appRealName);
-
-    setData(source, notificationData);
+    QVariantMap hints;
+    hints.insert("x-kde-appname", appRealName);
+    Notify(appName, 0, appIcon, summary, body, actions, hints, timeout);
     return m_nextId;
 }
 
