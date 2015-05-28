@@ -59,9 +59,9 @@ void NotificationAction::start()
                                               parameters().value("appIcon").toString(),
                                               parameters().value("summary").toString(),
                                               parameters().value("body").toString(),
-                                              parameters().value("timeout").toInt(),
-                                              false,
-                                              QString()
+                                              parameters().value("expireTimeout").toInt(),
+                                              QString(),
+                                              parameters().value("actions").toStringList()
                                              );
         setResult(rv);
     } else if (operationName() == "configureNotification") {

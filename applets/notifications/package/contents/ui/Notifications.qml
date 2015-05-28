@@ -98,6 +98,13 @@ Column {
         op["appRealName"] = appRealName;
         service.startOperationCall(op)
     }
+    function createNotification(data) {
+        var service = notificationsSource.serviceForSource("notification");
+        var op = service.operationDescription("createNotification");
+        // add everything from "data" to "op"
+        for (var attrname in data) { op[attrname] = data[attrname]; }
+        service.startOperationCall(op);
+    }
 
     function closeNotification(source) {
         var service = notificationsSource.serviceForSource(source)

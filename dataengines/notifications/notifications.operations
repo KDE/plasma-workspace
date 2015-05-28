@@ -23,8 +23,11 @@
     <entry name="body" type="String">
       <label>The whole text of the notification</label>
     </entry>
-    <entry name="timeout" type="Int">
+    <entry name="expireTimeout" type="Int">
       <label>The timeout after which the notification will be closed</label>
+    </entry>
+    <entry name="actions" type="StringList">
+      <label>List of actions in the format of [{"id": "id-of-the-action", "text": i18n("User visible text")}], </label>
     </entry>
   </group>
 
