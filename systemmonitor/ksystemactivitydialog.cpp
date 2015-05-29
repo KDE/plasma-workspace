@@ -26,11 +26,14 @@
 #include <QAction>
 #include <QTreeView>
 #include <QIcon>
+#include <QWindow>
 #include <QDialog>
 #include <QDBusConnection>
 #include <QPushButton>
 #include <QVBoxLayout>
 #include <QLineEdit>
+#include <QScreen>
+#include <QDesktopWidget>
 #include <QTimer>
 
 #include <KSharedConfig>
@@ -80,6 +83,13 @@ void KSystemActivityDialog::slotInit()
 
     QDBusConnection con = QDBusConnection::sessionBus();
     con.registerObject(QStringLiteral("/"), this, QDBusConnection::ExportAllSlots);
+
+    QRect geom = windowHandle()->screen()->geometry();
+    QSize ourSize = windowHandle()->size();
+
+    int w = ourSize.width();
+    int h = ourSize.height();
+    setGeometry((geom.width() - w)/2, (geom.height() - h)/2, w, h);
 }
 
 void KSystemActivityDialog::run()
