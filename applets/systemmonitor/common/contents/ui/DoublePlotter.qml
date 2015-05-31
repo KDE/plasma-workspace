@@ -30,6 +30,7 @@ KQuickAddons.Plotter {
 
     Layout.fillWidth: true
     Layout.fillHeight: true
+    horizontalGridLineCount: 0
 
     function formatLabel(data1, data2) {
         return i18n("%1 %2 / %3 %4", data1.value, data1.units,
