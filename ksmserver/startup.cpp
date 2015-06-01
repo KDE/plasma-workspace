@@ -99,8 +99,13 @@ class NotificationThread : public QThread
         // We cannot parent to the thread itself so let's create
         // a QObject on the stack and parent everythign to it
         QObject parent;
-        Phonon::AudioOutput *m_audioOutput = new Phonon::AudioOutput(Phonon::NotificationCategory, &parent);
         KNotifyConfig notifyConfig("plasma_workspace", QList< QPair<QString,QString> >(), "startkde");
+        const QString action = notifyConfig.readEntry("Action");
+        if (action.isEmpty() || !action.split('|').contains("Sound")) {
+            // no startup sound configured
+            return;
+        }
+        Phonon::AudioOutput *m_audioOutput = new Phonon::AudioOutput(Phonon::NotificationCategory, &parent);
 
         QString soundFilename = notifyConfig.readEntry("Sound");
         if (soundFilename.isEmpty()) {
