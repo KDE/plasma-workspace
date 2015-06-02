@@ -144,11 +144,6 @@ public:
      */
     bool trackGeometry() const;
 
-    /**
-    * Returns whether the Window with WId wid is on the screen screen
-    */
-    static bool isOnScreen(const QRect& screen, const WId wid);
-
 Q_SIGNALS:
     /**
      * Emitted when a new task has started.

@@ -546,24 +546,6 @@ bool TaskManager::trackGeometry() const
     return !d->trackGeometryTokens.isEmpty();
 }
 
-bool TaskManager::isOnScreen(const QRect& screen, const WId wid)
-{
-    if (!screen.isValid()) {
-        return true;
-    }
-
-    KWindowInfo wi(wid, NET::WMFrameExtents);
-
-    // for window decos that fudge a bit and claim to extend beyond the
-    // edge of the screen, we just contract a bit.
-    const QRect window = wi.frameGeometry();
-
-    QRect desktop = screen;
-    desktop.adjust(5, 5, -5, -5);
-
-    return window.intersects(desktop);
-}
-
 int TaskManager::currentDesktop() const
 {
     return KWindowSystem::currentDesktop();
