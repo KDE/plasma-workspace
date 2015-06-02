@@ -128,6 +128,8 @@ View::View(QWindow *)
     } else {
         setLocation(Plasma::Types::TopEdge);
     }
+
+    connect(qGuiApp, &QGuiApplication::focusWindowChanged, this, &View::slotFocusWindowChanged);
 }
 
 View::~View()
@@ -137,6 +139,13 @@ View::~View()
 void View::objectIncubated()
 {
     setMainItem(qobject_cast<QQuickItem *>(m_qmlObj->rootObject()));
+}
+
+void View::slotFocusWindowChanged()
+{
+    if (!QGuiApplication::focusWindow()) {
+        setVisible(false);
+    }
 }
 
 bool View::freeFloating() const

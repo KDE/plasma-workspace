@@ -62,6 +62,7 @@ protected Q_SLOTS:
     void displayOrHide();
     void reloadConfig();
     void objectIncubated();
+    void slotFocusWindowChanged();
 
 private:
     QPoint m_customPos;
