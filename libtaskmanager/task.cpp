@@ -275,9 +275,9 @@ bool Task::demandsAttention() const
            !d->transientsDemandingAttention.isEmpty();
 }
 
-bool Task::isOnScreen(const QRect& geometry) const
+bool Task::isOnScreen(const QRect& screen) const
 {
-    return TaskManager::isOnScreen(geometry, d->win);
+    return (d->info.valid(true) && d->info.geometry().intersects(screen));
 }
 
 QRect Task::screen() const
