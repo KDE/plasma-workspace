@@ -62,7 +62,7 @@ StandaloneAppCorona::StandaloneAppCorona(const QString &coronaPlugin, QObject *p
     connect(m_activityConsumer, SIGNAL(activityAdded(QString)), this, SLOT(activityAdded(QString)));
     connect(m_activityConsumer, SIGNAL(activityRemoved(QString)), this, SLOT(activityRemoved(QString)));
 
-    load();
+    connect(m_activityConsumer, SIGNAL(serviceStatusChanged(Consumer::ServiceStatus)), this, SLOT(load()));
 }
 
 StandaloneAppCorona::~StandaloneAppCorona()
@@ -179,7 +179,11 @@ void StandaloneAppCorona::activityRemoved(const QString &id)
 
 void StandaloneAppCorona::currentActivityChanged(const QString &newActivity)
 {
-//  qDebug() << "Activity changed:" << newActivity;
+    //qDebug() << "Activity changed:" << newActivity;
+
+    if (containments().isEmpty()) {
+        return;
+    }
 
     Plasma::Containment *c = createContainmentForActivity(newActivity, 0);
 
