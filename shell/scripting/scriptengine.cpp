@@ -209,9 +209,10 @@ QScriptValue ScriptEngine::createActivity(QScriptContext *context, QScriptEngine
     Activity *a = new Activity(id, env->m_corona);
 
     qDebug() << "Setting default Containment plugin:" << plugin;
-    //FIXME: this shouldn't be necessary, but on some systems seems this is needed
+
     if (plugin.isEmpty() || plugin == "undefined") {
-        a->setDefaultPlugin("org.kde.desktopcontainment");
+        KConfigGroup shellCfg = KConfigGroup(KSharedConfig::openConfig(env->m_corona->package().filePath("defaults")), "Desktop");
+        a->setDefaultPlugin(shellCfg.readEntry("Containment", "org.kde.desktopcontainment"));
     } else {
         a->setDefaultPlugin(plugin);
     }
