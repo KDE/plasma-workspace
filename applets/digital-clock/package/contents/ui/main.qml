@@ -77,11 +77,16 @@ Item {
         return format;
     }
 
+    function action_clockkcm() {
+        KCMShell.open("clock");
+    }
+
     function action_formatskcm() {
         KCMShell.open("formats");
     }
 
     Component.onCompleted: {
+        plasmoid.setAction("clockkcm", i18n("Adjust Date and Time..."), "preferences-system-time");
         plasmoid.setAction("formatskcm", i18n("Set Time Format..."));
     }
 }
