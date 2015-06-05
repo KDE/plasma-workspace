@@ -33,7 +33,7 @@ Item {
         var absoluteMinimum = actionsColumn.height + closeButton.height + 3 * units.smallSpacing
         if (compact) {
             // in the notification history just show the popup unconstrained as is with a sensible minimum height
-            return Math.max(absoluteMinimum, closeButton.height + units.smallSpacing + textItemLoader.item.height)
+            return Math.max(absoluteMinimum, titleBar.height + units.smallSpacing + textItemLoader.item.height)
         }
         // in the popup make it compact and not more than roughly 2 or 3 lines of text
         var iconOrTextHeight = Math.max(units.iconSizes.large, titleBar.height + textItemLoader.item.implicitHeight) + 2 * units.smallSpacing
