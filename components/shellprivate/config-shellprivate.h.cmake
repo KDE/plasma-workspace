@@ -1,2 +1,1 @@
-#cmakedefine01 HAVE_KF5TEXTEDITOR
-
+#cmakedefine01 KF5TextEditor_FOUND

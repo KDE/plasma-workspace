@@ -28,7 +28,7 @@
 #include "widgetexplorer/widgetexplorer.h"
 #include <plasma/containment.h>
 
-#if HAVE_KF5TEXTEDITOR
+#if KF5TextEditor_FOUND
 #include "interactiveconsole/interactiveconsole.h"
 #endif
 
@@ -38,7 +38,7 @@ void PlasmaShellPrivatePlugin::registerTypes(const char *uri)
 
     qmlRegisterType<Plasma::Containment>();
     qmlRegisterType<WidgetExplorer>(uri, 2, 0, "WidgetExplorer");
-#if HAVE_KF5TEXTEDITOR
+#if KF5TextEditor_FOUND
     qmlRegisterType<InteractiveConsoleItem>(uri, 2, 0, "InteractiveConsoleWindow");
 #endif
 }
