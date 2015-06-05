@@ -44,6 +44,7 @@ MouseArea {
     Component.onCompleted: {
         plasmoid.backgroundHints = 2;
         plasmoid.popupIcon = plasmoid.configuration.iconName;
+        plasmoid.activated.connect(logic.open);
     }
 
     PlasmaCore.IconItem {
