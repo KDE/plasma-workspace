@@ -67,9 +67,10 @@ PlasmaCore.Dialog {
     mainItem: MouseArea {
         id: root
         Layout.minimumWidth: notificationItem.width + (units.smallSpacing * 2)
-        Layout.minimumHeight: notificationItem.implicitHeight + (units.smallSpacing * 2)
         LayoutMirroring.enabled: Qt.application.layoutDirection === Qt.RightToLeft
         LayoutMirroring.childrenInherit: true
+
+        height: notificationItem.implicitHeight + (units.smallSpacing * 2)
 
         hoverEnabled: true
 
