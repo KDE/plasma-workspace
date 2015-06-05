@@ -30,13 +30,13 @@ Item {
     id: notificationItem
     width: parent.width
     implicitHeight: {
-        var absoluteMinimum = actionsColumn.height + titleBar.height + 3 * units.smallSpacing
+        var absoluteMinimum = actionsColumn.height + titleBar.height + units.smallSpacing
         if (compact) {
             // in the notification history just show the popup unconstrained as is with a sensible minimum height
             return Math.max(absoluteMinimum, titleBar.height + units.smallSpacing + textItemLoader.item.height)
         }
         // in the popup make it compact and not more than roughly 2 or 3 lines of text
-        var iconOrTextHeight = Math.max(units.iconSizes.large, titleBar.height + textItemLoader.item.height) + units.smallSpacing
+        var iconOrTextHeight = Math.max(units.iconSizes.large, titleBar.height + textItemLoader.item.height + units.smallSpacing)
         return Math.max(absoluteMinimum, Math.min(iconOrTextHeight, 5.5 * units.gridUnit))
     }
     // We need to clip here because we support displaying images through <img/>
@@ -166,6 +166,7 @@ Item {
 
         PlasmaComponents.ToolButton {
             id: closeButton
+
             width: units.iconSizes.smallMedium
             height: width
             flat: compact
@@ -183,7 +184,6 @@ Item {
             left: appIconItem.right
             right: actionsColumn.visible ? actionsColumn.left : parent.right
             bottom: compact ? undefined : parent.bottom
-            bottomMargin: compact ? units.smallSpacing : 0
             leftMargin: units.smallSpacing * 2
             rightMargin: units.smallSpacing * 2
         }
