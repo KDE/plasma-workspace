@@ -66,12 +66,10 @@ PlasmaCore.Dialog {
 
     mainItem: MouseArea {
         id: root
-        Layout.minimumWidth: Math.round(23 * units.gridUnit)
-        Layout.minimumHeight: notificationItem.implicitHeight
+        Layout.minimumWidth: notificationItem.width + (units.smallSpacing * 2)
+        Layout.minimumHeight: notificationItem.implicitHeight + (units.smallSpacing * 2)
         LayoutMirroring.enabled: Qt.application.layoutDirection === Qt.RightToLeft
         LayoutMirroring.childrenInherit: true
-
-        height: notificationItem.implicitHeight
 
         hoverEnabled: true
 
@@ -107,10 +105,10 @@ PlasmaCore.Dialog {
             image: notificationProperties ? notificationProperties.image : undefined
             configurable: notificationProperties ? notificationProperties.configurable : false
 
-            anchors {
-                fill: parent
-                margins: units.smallSpacing
-            }
+            x: units.smallSpacing
+            y: units.smallSpacing
+
+            width: Math.round(23 * units.gridUnit)
 
             textItem: PlasmaComponents.Label {
                 wrapMode: Text.WrapAtWordBoundaryOrAnywhere
