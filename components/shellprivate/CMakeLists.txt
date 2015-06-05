@@ -6,6 +6,7 @@ if (KF5TextEditor_FOUND)
        )
 endif (KF5TextEditor_FOUND)
 
+configure_file(${CMAKE_CURRENT_SOURCE_DIR}/config-shellprivate.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-shellprivate.h)
 
 set(plasmashellprivateplugin_SRCS
     widgetexplorer/kcategorizeditemsviewmodels.cpp

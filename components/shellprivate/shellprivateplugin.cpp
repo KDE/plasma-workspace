@@ -21,12 +21,16 @@
 */
 
 #include "shellprivateplugin.h"
+#include "config-shellprivate.h"
 
 #include <QtQml>
 
 #include "widgetexplorer/widgetexplorer.h"
-#include "interactiveconsole/interactiveconsole.h"
 #include <plasma/containment.h>
+
+#if HAVE_KF5TEXTEDITOR
+#include "interactiveconsole/interactiveconsole.h"
+#endif
 
 void PlasmaShellPrivatePlugin::registerTypes(const char *uri)
 {
@@ -34,5 +38,7 @@ void PlasmaShellPrivatePlugin::registerTypes(const char *uri)
 
     qmlRegisterType<Plasma::Containment>();
     qmlRegisterType<WidgetExplorer>(uri, 2, 0, "WidgetExplorer");
+#if HAVE_KF5TEXTEDITOR
     qmlRegisterType<InteractiveConsoleItem>(uri, 2, 0, "InteractiveConsoleWindow");
+#endif
 }

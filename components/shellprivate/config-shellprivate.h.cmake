@@ -1,0 +1,2 @@
+#cmakedefine01 HAVE_KF5TEXTEDITOR
+
