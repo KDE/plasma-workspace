@@ -40,9 +40,6 @@ Item {
     Layout.preferredWidth: _minimumWidth
     Layout.preferredHeight: Math.round(_minimumHeight * 1.5)
 
-    property int avWidth: Math.round(parent.width - (1.5 * units.largeSpacing))
-    property int avHeight: parent.height - (2 * units.largeSpacing)
-
     //anchors.margins: units.largeSpacing
     property int spacing: units.largeSpacing
     property alias borderWidth: monthView.borderWidth
@@ -62,7 +59,6 @@ Item {
 
     Item {
         id: cal
-        width: avWidth
         anchors.fill: parent
         anchors.margins: spacing
 
