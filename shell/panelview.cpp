@@ -416,7 +416,12 @@ void PanelView::positionPanel()
         emit lengthChanged();
     }
 
-    setPosition(geometryByDistance(m_distance).topLeft());
+    const QPoint pos = geometryByDistance(m_distance).topLeft();
+    setPosition(pos);
+    setupWaylandIntegration();
+    if (m_shellSurface) {
+        m_shellSurface->setPosition(pos);
+    }
 
     KWindowEffects::slideWindow(winId(), slideLocation, -1);
 }
@@ -679,7 +684,12 @@ void PanelView::resizeEvent(QResizeEvent *ev)
 {
     updateMask();
     //don't setGeometry() to meke really sure we aren't doing a resize loop
-    setPosition(geometryByDistance(m_distance).topLeft());
+    const QPoint pos = geometryByDistance(m_distance).topLeft();
+    setPosition(pos);
+    setupWaylandIntegration();
+    if (m_shellSurface) {
+        m_shellSurface->setPosition(pos);
+    }
     PlasmaQuick::View::resizeEvent(ev);
 }
 
