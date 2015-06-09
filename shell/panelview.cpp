@@ -40,6 +40,9 @@
 #include <KScreen/Config>
 #include <KScreen/Output>
 
+#include <KWayland/Client/plasmashell.h>
+#include <KWayland/Client/surface.h>
+
 #if HAVE_X11
 #include <xcb/xcb.h>
 #include <QX11Info>
@@ -57,7 +60,8 @@ PanelView::PanelView(ShellCorona *corona, QScreen *targetScreen, QWindow *parent
        m_alignment(Qt::AlignLeft),
        m_corona(corona),
        m_visibilityMode(NormalPanel),
-       m_background(0)
+       m_background(0),
+       m_shellSurface(nullptr)
 {
     if (targetScreen) {
         setPosition(targetScreen->geometry().topLeft());
@@ -689,6 +693,10 @@ void PanelView::integrateScreen()
 {
     KWindowSystem::setOnAllDesktops(winId(), true);
     KWindowSystem::setType(winId(), NET::Dock);
+    setupWaylandIntegration();
+    if (m_shellSurface) {
+        m_shellSurface->setRole(KWayland::Client::PlasmaShellSurface::Role::Panel);
+    }
     setVisibilityMode(m_visibilityMode);
 
     containment()->reactToScreenChange();
@@ -1058,5 +1066,24 @@ void PanelView::screenDestroyed(QObject* )
 //     }
 }
 
+void PanelView::setupWaylandIntegration()
+{
+    if (m_shellSurface) {
+        // already setup
+        return;
+    }
+    if (ShellCorona *c = qobject_cast<ShellCorona*>(corona())) {
+        using namespace KWayland::Client;
+        PlasmaShell *interface = c->waylandPlasmaShellInterface();
+        if (!interface) {
+            return;
+        }
+        Surface *s = Surface::fromWindow(this);
+        if (!s) {
+            return;
+        }
+        m_shellSurface = interface->createSurface(s, this);
+    }
+}
 
 #include "moc_panelview.cpp"

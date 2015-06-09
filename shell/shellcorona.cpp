@@ -51,6 +51,10 @@
 
 #include <KPackage/PackageLoader>
 
+#include <KWayland/Client/connection_thread.h>
+#include <KWayland/Client/registry.h>
+#include <KWayland/Client/plasmashell.h>
+
 #include "config-ktexteditor.h" // HAVE_KTEXTEDITOR
 
 #include "alternativeshelper.h"
@@ -85,8 +89,10 @@ ShellCorona::ShellCorona(QObject *parent)
       m_addPanelAction(nullptr),
       m_addPanelsMenu(nullptr),
       m_interactiveConsole(nullptr),
-      m_screenConfiguration(nullptr)
+      m_screenConfiguration(nullptr),
+      m_waylandPlasmaShell(nullptr)
 {
+    setupWaylandIntegration();
     qmlRegisterUncreatableType<DesktopView>("org.kde.plasma.shell", 2, 0, "Desktop", "It is not possible to create objects of type Desktop");
     qmlRegisterUncreatableType<PanelView>("org.kde.plasma.shell", 2, 0, "Panel", "It is not possible to create objects of type Panel");
 
@@ -1630,6 +1636,31 @@ void ShellCorona::showOpenGLNotCompatibleWarning()
                       );
     // this doesn't work and I have no idea why.
     QCoreApplication::exit(1);
+}
+
+void ShellCorona::setupWaylandIntegration()
+{
+    if (!QGuiApplication::platformName().startsWith(QLatin1String("wayland"), Qt::CaseInsensitive)) {
+        return;
+    }
+    using namespace KWayland::Client;
+    ConnectionThread *connection = ConnectionThread::fromApplication(this);
+    if (!connection) {
+        return;
+    }
+    Registry *registry = new Registry(this);
+    registry->create(connection);
+    connect(registry, &Registry::plasmaShellAnnounced, this,
+        [this, registry] (quint32 name, quint32 version) {
+            m_waylandPlasmaShell = registry->createPlasmaShell(name, version, this);
+        }
+    );
+    registry->setup();
+}
+
+KWayland::Client::PlasmaShell *ShellCorona::waylandPlasmaShellInterface() const
+{
+    return m_waylandPlasmaShell;
 }
 
 // Desktop corona handler

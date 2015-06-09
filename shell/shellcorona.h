@@ -58,6 +58,14 @@ namespace Plasma
     class Applet;
 } // namespace Plasma
 
+namespace KWayland
+{
+    namespace Client
+    {
+        class PlasmaShell;
+    }
+}
+
 class ShellCorona : public Plasma::Corona
 {
     Q_OBJECT
@@ -100,6 +108,8 @@ public:
      * @returns a new containment associated with the specified @p activity and @p screen.
      */
     Plasma::Containment *createContainmentForActivity(const QString &activity, int screenNum);
+
+    KWayland::Client::PlasmaShell *waylandPlasmaShellInterface() const;
 
 public Q_SLOTS:
     /**
@@ -192,6 +202,7 @@ private:
     void reconsiderOutputs();
     QList<PanelView *> panelsForScreen(QScreen *screen) const;
     DesktopView* desktopForScreen(QScreen *screen) const;
+    void setupWaylandIntegration();
 
 #ifndef NDEBUG
     void screenInvariants() const;
@@ -219,6 +230,8 @@ private:
     QTimer m_waitingPanelsTimer;
     QTimer m_appConfigSyncTimer;
     QTimer m_reconsiderOutputsTimer;
+
+    KWayland::Client::PlasmaShell *m_waylandPlasmaShell;
 };
 
 #endif // SHELLCORONA_H

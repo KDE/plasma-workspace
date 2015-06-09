@@ -28,6 +28,14 @@
 
 class ShellCorona;
 
+namespace KWayland
+{
+    namespace Client
+    {
+        class PlasmaShellSurface;
+    }
+}
+
 class PanelView : public PlasmaQuick::View
 {
     Q_OBJECT
@@ -167,6 +175,7 @@ private:
     void integrateScreen();
     bool containmentContainsPosition(const QPointF &point) const;
     QPointF positionAdjustedForContainment(const QPointF &point) const;
+    void setupWaylandIntegration();
 
     int m_offset;
     int m_maxLength;
@@ -183,6 +192,7 @@ private:
     QTimer m_unhideTimer;
     //only for the mask, not to actually paint
     Plasma::FrameSvg *m_background;
+    KWayland::Client::PlasmaShellSurface *m_shellSurface;
 
     static const int STRUTSTIMERDELAY = 200;
 };
