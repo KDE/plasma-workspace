@@ -24,6 +24,13 @@
 #include "panelconfigview.h"
 #include <QtCore/qpointer.h>
 
+namespace KWayland
+{
+    namespace Client
+    {
+        class PlasmaShellSurface;
+    }
+}
 
 class DesktopView : public PlasmaQuick::View
 {
@@ -79,10 +86,12 @@ Q_SIGNALS:
 private:
     void coronaPackageChanged(const KPackage::Package &package);
     void ensureWindowType();
+    void setupWaylandIntegration();
 
     QPointer<PlasmaQuick::ConfigView> m_configView;
     QPointer<QScreen> m_oldScreen;
     WindowType m_windowType;
+    KWayland::Client::PlasmaShellSurface *m_shellSurface;
 };
 
 #endif // DESKTOVIEW_H

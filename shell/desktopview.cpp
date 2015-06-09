@@ -32,9 +32,13 @@
 
 #include <KPackage/Package>
 
+#include <KWayland/Client/plasmashell.h>
+#include <KWayland/Client/surface.h>
+
 DesktopView::DesktopView(Plasma::Corona *corona, QScreen *targetScreen)
     : PlasmaQuick::View(corona, 0),
-      m_windowType(Desktop)
+      m_windowType(Desktop),
+      m_shellSurface(nullptr)
 {
     if (targetScreen) {
         setScreen(targetScreen);
@@ -135,21 +139,37 @@ void DesktopView::ensureWindowType()
         setFlags(Qt::Window);
         KWindowSystem::setType(winId(), NET::Normal);
         KWindowSystem::clearState(winId(), NET::FullScreen);
+        setupWaylandIntegration();
+        if (m_shellSurface) {
+            m_shellSurface->setRole(KWayland::Client::PlasmaShellSurface::Role::Normal);
+        }
 
     } else if (m_windowType == Desktop) {
         setFlags(Qt::Window);
         KWindowSystem::setType(winId(), NET::Desktop);
         KWindowSystem::setState(winId(), NET::KeepBelow);
+        setupWaylandIntegration();
+        if (m_shellSurface) {
+            m_shellSurface->setRole(KWayland::Client::PlasmaShellSurface::Role::Desktop);
+        }
 
     } else if (m_windowType == WindowedDesktop) {
         KWindowSystem::setType(winId(), NET::Normal);
         KWindowSystem::clearState(winId(), NET::FullScreen);
         setFlags(Qt::FramelessWindowHint | flags());
+        setupWaylandIntegration();
+        if (m_shellSurface) {
+            m_shellSurface->setRole(KWayland::Client::PlasmaShellSurface::Role::Normal);
+        }
 
     } else if (m_windowType == FullScreen) {
         setFlags(Qt::Window);
         KWindowSystem::setType(winId(), NET::Normal);
         KWindowSystem::setState(winId(), NET::FullScreen);
+        setupWaylandIntegration();
+        if (m_shellSurface) {
+            m_shellSurface->setRole(KWayland::Client::PlasmaShellSurface::Role::Normal);
+        }
     }
 }
 
@@ -242,4 +262,24 @@ void DesktopView::coronaPackageChanged(const KPackage::Package &package)
 {
     setContainment(0);
     setSource(QUrl::fromLocalFile(package.filePath("views", "Desktop.qml")));
+}
+
+void DesktopView::setupWaylandIntegration()
+{
+    if (m_shellSurface) {
+        // already setup
+        return;
+    }
+    if (ShellCorona *c = qobject_cast<ShellCorona*>(corona())) {
+        using namespace KWayland::Client;
+        PlasmaShell *interface = c->waylandPlasmaShellInterface();
+        if (!interface) {
+            return;
+        }
+        Surface *s = Surface::fromWindow(this);
+        if (!s) {
+            return;
+        }
+        m_shellSurface = interface->createSurface(s, this);
+    }
 }
