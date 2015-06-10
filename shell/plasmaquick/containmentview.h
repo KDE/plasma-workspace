@@ -16,10 +16,10 @@
  *  Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#ifndef PLASMAQUICKVIEW_H
-#define PLASMAQUICKVIEW_H
+#ifndef PLASMAQUICKCONTAINMENTVIEW_H
+#define PLASMAQUICKCONTAINMENTVIEW_H
 
-#include <QtQuick/QQuickView>
+#include <kquickaddons/quickviewsharedengine.h>
 
 #include "plasma/corona.h"
 #include "plasma/containment.h"
@@ -38,9 +38,9 @@
 namespace PlasmaQuick
 {
 
-class ViewPrivate;
+class ContainmentViewPrivate;
 
-class View : public QQuickView
+class ContainmentView : public KQuickAddons::QuickViewSharedEngine
 {
     Q_OBJECT
     Q_PROPERTY(Plasma::Types::Location location READ location WRITE setLocation NOTIFY locationChanged)
@@ -50,10 +50,10 @@ class View : public QQuickView
 public:
     /**
      * @param corona the corona of this view
-     * @param parent the QWindow this View is parented to
+     * @param parent the QWindow this ContainmentView is parented to
      **/
-    explicit View(Plasma::Corona *corona, QWindow *parent = 0);
-    virtual ~View();
+    explicit ContainmentView(Plasma::Corona *corona, QWindow *parent = 0);
+    virtual ~ContainmentView();
 
     /**
      * @return the corona of this view
@@ -72,28 +72,28 @@ public:
     void setContainment(Plasma::Containment *cont);
 
     /**
-     * @return the containment of this View
+     * @return the containment of this ContainmentView
      **/
     Plasma::Containment *containment() const;
 
     /**
-     * @return the location of this View
+     * @return the location of this ContainmentView
      **/
     Plasma::Types::Location location() const;
-    
+
     /**
-     * Sets the location of the View
-     * @param location the location of the View
+     * Sets the location of the ContainmentView
+     * @param location the location of the ContainmentView
      **/
     void setLocation(Plasma::Types::Location location);
 
     /**
-     * @return the formfactor of the View
+     * @return the formfactor of the ContainmentView
      **/
     Plasma::Types::FormFactor formFactor() const;
 
     /**
-     * @return the screenGeometry of the View
+     * @return the screenGeometry of the ContainmentView
      **/
     QRectF screenGeometry();
 
@@ -125,10 +125,11 @@ Q_SIGNALS:
     void screenGeometryChanged();
 
 private:
-    ViewPrivate *const d;
-    friend class ViewPrivate;
+    ContainmentViewPrivate *const d;
+    Q_PRIVATE_SLOT(d, void updateDestroyed(bool))
+    friend class ContainmentViewPrivate;
 };
 
 }
 
-#endif // View_H
+#endif // CONTAINMENTVIEW_H

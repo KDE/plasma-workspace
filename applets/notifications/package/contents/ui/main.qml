@@ -28,8 +28,7 @@ import org.kde.plasma.extras 2.0 as PlasmaExtras
 
 import org.kde.plasma.private.notifications 1.0
 
-import "plasmapackage:/ui/uiproperties.js" as UiProperties
-//import "../ui/uiproperties.js" as UiProperties
+import "uiproperties.js" as UiProperties
 
 MouseEventListener {
     id: notificationsApplet

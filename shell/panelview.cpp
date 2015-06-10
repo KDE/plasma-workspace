@@ -51,7 +51,7 @@
 static const int MINSIZE = 10;
 
 PanelView::PanelView(ShellCorona *corona, QScreen *targetScreen, QWindow *parent)
-    : PlasmaQuick::View(corona, parent),
+    : PlasmaQuick::ContainmentView(corona, parent),
        m_offset(0),
        m_maxLength(0),
        m_minLength(0),
@@ -67,7 +67,7 @@ PanelView::PanelView(ShellCorona *corona, QScreen *targetScreen, QWindow *parent
         setPosition(targetScreen->geometry().topLeft());
         setScreen(targetScreen);
     }
-    setResizeMode(QQuickView::SizeRootObjectToView);
+    setResizeMode(QuickViewSharedEngine::SizeRootObjectToView);
     setClearBeforeRendering(true);
     setColor(QColor(Qt::transparent));
     setFlags(Qt::FramelessWindowHint|Qt::WindowDoesNotAcceptFocus);
@@ -94,7 +94,7 @@ PanelView::PanelView(ShellCorona *corona, QScreen *targetScreen, QWindow *parent
             &m_positionPaneltimer, SLOT(start()));
     connect(this, SIGNAL(containmentChanged()),
             this, SLOT(containmentChanged()));
-    connect(this, &View::locationChanged, [this] () {
+    connect(this, &ContainmentView::locationChanged, [this] () {
                 emit m_corona->availableScreenRectChanged();
                 emit m_corona->availableScreenRegionChanged();
             });
@@ -690,13 +690,13 @@ void PanelView::resizeEvent(QResizeEvent *ev)
     if (m_shellSurface) {
         m_shellSurface->setPosition(pos);
     }
-    PlasmaQuick::View::resizeEvent(ev);
+    PlasmaQuick::ContainmentView::resizeEvent(ev);
 }
 
 void PanelView::moveEvent(QMoveEvent *ev)
 {
     updateMask();
-    PlasmaQuick::View::moveEvent(ev);
+    PlasmaQuick::ContainmentView::moveEvent(ev);
 }
 
 void PanelView::integrateScreen()
@@ -715,7 +715,7 @@ void PanelView::integrateScreen()
 void PanelView::showEvent(QShowEvent *event)
 {
     PanelShadows::self()->addWindow(this);
-    PlasmaQuick::View::showEvent(event);
+    PlasmaQuick::ContainmentView::showEvent(event);
     integrateScreen();
 
     //When the screen is set, the screen is recreated internally, so we need to
@@ -827,7 +827,7 @@ bool PanelView::event(QEvent *e)
             break;
     }
 
-    return View::event(e);
+    return ContainmentView::event(e);
 }
 
 bool PanelView::containmentContainsPosition(const QPointF &point) const
