@@ -47,6 +47,7 @@ Item {
         MonthView {
             id: calendar
             today: dataSource.data["Local"]["DateTime"]
+            showWeekNumbers: plasmoid.configuration.showWeekNumbers
 
             anchors.fill: parent
         }

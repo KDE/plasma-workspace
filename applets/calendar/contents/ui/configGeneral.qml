@@ -1,5 +1,5 @@
 /*
- * Copyright 2013  Bhushan Shah <bhush94@gmail.com>
+ * Copyright 2015 Martin Klapetek <mklapetek@kde.org>
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License as
@@ -19,18 +19,21 @@
  */
 
 import QtQuick 2.0
+import QtQuick.Controls 1.0 as QtControls
+import QtQuick.Layouts 1.0 as QtLayouts
 
-import org.kde.plasma.configuration 2.0
+Item {
+    id: generalPage
+    
+    width: childrenRect.width
+    height: childrenRect.height
 
-ConfigModel {
-    ConfigCategory {
-         name: i18n("General")
-         icon: "preferences-system-time"
-         source: "configGeneral.qml"
-    }
-    ConfigCategory {
-         name: i18n("Agenda")
-         icon: "view-calendar-agenda"
-         source: "configAgenda.qml"
+    property alias cfg_showWeekNumbers: showWeekNumbers.checked
+
+    QtLayouts.ColumnLayout {
+        QtControls.CheckBox {
+            id: showWeekNumbers
+            text: i18n("Show week numbers in Calendar")
+        }
     }
 }

@@ -12,5 +12,8 @@
     <entry name="endOfWorkingDay" type="int">
       <default>17</default>
     </entry>
+    <entry name="showWeekNumbers" type="Bool">
+        <default>false</default>
+    </entry>
   </group>
 </kcfg>
