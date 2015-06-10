@@ -35,7 +35,7 @@ Item {
     Layout.minimumHeight: _minimumHeight
 
     // The "sensible" values
-    property int _minimumWidth: Math.round(_minimumHeight * 1.5)
+    property int _minimumWidth: monthView.showWeekNumbers ? Math.round(_minimumHeight * 1.75) : Math.round(_minimumHeight * 1.5)
     property int _minimumHeight: units.gridUnit * 14
     Layout.preferredWidth: _minimumWidth
     Layout.preferredHeight: Math.round(_minimumHeight * 1.5)
@@ -66,6 +66,7 @@ Item {
             id: monthView
             borderOpacity: 0.25
             today: root.tzDate
+            showWeekNumbers: plasmoid.configuration.showWeekNumbers
             anchors.fill: parent
         }
 
