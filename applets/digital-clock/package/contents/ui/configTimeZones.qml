@@ -144,8 +144,12 @@ Item {
         QtControls.TableView {
             id: timeZoneView
 
+            signal toggleCurrent
+
             Layout.fillWidth: true
             Layout.fillHeight: true
+
+            Keys.onSpacePressed: toggleCurrent()
 
             model: TimeZoneFilterProxy {
                 sourceModel: timeZones
@@ -157,11 +161,22 @@ Item {
                 width: checkbox.width
                 delegate:
                     QtControls.CheckBox {
+                        id: checkBox
                         anchors.centerIn: parent
                         checked: styleData.value
+                        activeFocusOnTab: false // only let the TableView as a whole get focus
                         onClicked: {
                             //needed for model's setData to be called
                             model.checked = checked;
+                        }
+
+                        Connections {
+                            target: timeZoneView
+                            onToggleCurrent: {
+                                if (styleData.row === timeZoneView.currentRow) {
+                                    model.checked = !checkBox.checked
+                                }
+                            }
                         }
                     }
 
