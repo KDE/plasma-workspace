@@ -28,9 +28,9 @@ ConfigModel {
          icon: "preferences-system-time"
          source: "configGeneral.qml"
     }
-    ConfigCategory {
-         name: i18n("Agenda")
-         icon: "view-calendar-agenda"
-         source: "configAgenda.qml"
-    }
+//     ConfigCategory {
+//          name: i18n("Agenda")
+//          icon: "view-calendar-agenda"
+//          source: "configAgenda.qml"
+//     }
 }
