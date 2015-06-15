@@ -47,7 +47,6 @@ Image {
         target: authenticator
         onFailed: {
             root.notification = i18nd("plasma_lookandfeel_org.kde.lookandfeel","Unlocking failed");
-            root.clearPassword()
         }
         onGraceLockedChanged: {
             if (!authenticator.graceLocked) {
