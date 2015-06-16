@@ -23,6 +23,8 @@
 #include "shellcorona.h"
 #include "config-workspace.h"
 
+#include <KDeclarative/KDeclarative>
+
 #include <kdeclarative/configpropertymap.h>
 #include <kconfigloader.h>
 
@@ -121,6 +123,17 @@ PlasmaQuick::ConfigModel *ContainmentConfigView::wallpaperConfigModel()
         m_wallpaperConfigModel = new PlasmaQuick::ConfigModel(this);
         QStringList dirs(QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, PLASMA_RELATIVE_DATA_INSTALL_DIR "/wallpapers", QStandardPaths::LocateDirectory));
         KPackage::Package pkg = KPackage::PackageLoader::self()->loadPackage("KPackage/Generic");
+        QStringList platform = KDeclarative::KDeclarative::runtimePlatform();
+        if (!platform.isEmpty()) {
+            QMutableStringListIterator it(platform);
+            while (it.hasNext()) {
+                it.next();
+                it.setValue("platformcontents/" + it.value());
+            }
+
+            platform.append("contents");
+            pkg.setContentsPrefixPaths(platform);
+        }
         pkg.addFileDefinition("mainscript", "ui/main.qml", i18n("Main Script File"));
         foreach (const QString &dirPath, dirs) {
             QDir dir(dirPath);
