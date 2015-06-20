@@ -419,7 +419,7 @@ echo 'startkde: Running shutdown scripts...'  1>&2
 # Run scripts found in <config locations>/plasma-workspace/shutdown
 for prefix in `echo "$scriptpath"`; do
   for file in `ls "$prefix"/shutdown 2> /dev/null | egrep -v '(~|\.bak)$'`; do
-    test -x "$prefix$file" && "$prefix$file"
+    test -x "$prefix/shutdown/$file" && "$prefix/shutdown/$file"
   done
 done
 
