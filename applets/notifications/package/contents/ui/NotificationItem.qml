@@ -29,7 +29,7 @@ import org.kde.kquickcontrolsaddons 2.0
 Item {
     id: notificationItem
     width: parent.width
-    implicitHeight: Math.max(units.iconSizes.large, titleBar.height + bottomPart.height)
+    implicitHeight: Math.max(units.iconSizes.large, mainLayout.height)
 
     // We need to clip here because we support displaying images through <img/>
     // and if we don't clip, they will be painted over the borders of the dialog/item
@@ -116,6 +116,8 @@ Item {
     }
 
     ColumnLayout {
+        id: mainLayout
+
         anchors {
             top: parent.top
             left: appIconItem.right
