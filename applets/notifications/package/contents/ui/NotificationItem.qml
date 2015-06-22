@@ -116,6 +116,8 @@ Item {
     }
 
     ColumnLayout {
+        id: mainLayout
+
         anchors {
             top: parent.top
             left: appIconItem.right
