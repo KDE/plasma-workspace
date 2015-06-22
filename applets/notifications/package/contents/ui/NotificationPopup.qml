@@ -118,6 +118,7 @@ PlasmaCore.Dialog {
                 onLinkActivated: Qt.openUrlExternally(link)
                 text: notificationItem.text
                 textFormat: Text.StyledText
+                maximumLineCount: 4
             }
 
             onClose: {
