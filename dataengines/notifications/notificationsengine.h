@@ -60,6 +60,7 @@ public:
 
 public Q_SLOTS:
     void userClosedNotification(uint id);
+    bool registerDBusService();
 
 Q_SIGNALS:
     void NotificationClosed( uint id, uint reason );

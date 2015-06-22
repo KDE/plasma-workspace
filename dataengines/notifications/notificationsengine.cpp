@@ -37,15 +37,33 @@
 #include <kiconloader.h>
 #include <KConfig>
 
+// for ::kill
+#include <signal.h>
+
 NotificationsEngine::NotificationsEngine( QObject* parent, const QVariantList& args )
     : Plasma::DataEngine( parent, args ), m_nextId( 1 ), m_alwaysReplaceAppsList({QStringLiteral("Clementine"), QStringLiteral("Spotify"), QStringLiteral("Amarok")})
 {
     new NotificationsAdaptor(this);
 
-    QDBusConnection dbus = QDBusConnection::sessionBus();
-    bool so = dbus.registerService( "org.freedesktop.Notifications" );
-    bool ro = dbus.registerObject( "/org/freedesktop/Notifications", this );
-    qDebug() << "Are we the only client? (Both have to be true) " << so << ro;
+    if (!registerDBusService()) {
+        QDBusConnection dbus = QDBusConnection::sessionBus();
+        // Retrieve the pid of the current o.f.Notifications service
+        QDBusReply<uint> pidReply = dbus.interface()->servicePid(QStringLiteral("org.freedesktop.Notifications"));
+        uint pid = pidReply.value();
+        // Check if it's not the same app as our own
+        if (pid != qApp->applicationPid()) {
+            QDBusReply<uint> plasmaPidReply = dbus.interface()->servicePid(QStringLiteral("org.kde.plasmashell"));
+            // It's not the same but check if it isn't plasma,
+            // we don't want to kill Plasma
+            if (pid != plasmaPidReply.value()) {
+                qDebug() << "Terminating current Notification service with pid" << pid;
+                // Now finally terminate the service and register our own
+                ::kill(pid, SIGTERM);
+                // Wait 3 seconds and then try registering it again
+                QTimer::singleShot(3000, this, &NotificationsEngine::registerDBusService);
+            }
+        }
+    }
 
     // Read additional single-notification-popup-only from a config file
     KConfig singlePopupConfig("plasma_single_popup_notificationrc");
@@ -61,6 +79,24 @@ NotificationsEngine::~NotificationsEngine()
 
 void NotificationsEngine::init()
 {
+}
+
+bool NotificationsEngine::registerDBusService()
+{
+    QDBusConnection dbus = QDBusConnection::sessionBus();
+    bool so = dbus.registerService(QStringLiteral("org.freedesktop.Notifications"));
+    if (so) {
+        bool ro = dbus.registerObject(QStringLiteral("/org/freedesktop/Notifications"), this);
+        if (ro) {
+            qDebug() << "Notifications service registered";
+            return true;
+        } else {
+            dbus.unregisterService(QStringLiteral("org.freedesktop.Notifications"));
+        }
+    }
+
+    qDebug() << "Failed to register Notifications service";
+    return false;
 }
 
 inline void copyLineRGB32(QRgb* dst, const char* src, int width)
