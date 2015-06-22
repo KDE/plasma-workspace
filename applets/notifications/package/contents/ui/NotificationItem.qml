@@ -29,16 +29,8 @@ import org.kde.kquickcontrolsaddons 2.0
 Item {
     id: notificationItem
     width: parent.width
-    implicitHeight: {
-        var absoluteMinimum = actionsColumn.height + titleBar.height + units.smallSpacing
-        if (compact) {
-            // in the notification history just show the popup unconstrained as is with a sensible minimum height
-            return Math.max(absoluteMinimum, titleBar.height + units.smallSpacing + textItemLoader.item.height)
-        }
-        // in the popup make it compact and not more than roughly 2 or 3 lines of text
-        var iconOrTextHeight = Math.max(units.iconSizes.large, titleBar.height + textItemLoader.item.height + units.smallSpacing)
-        return Math.max(absoluteMinimum, Math.min(iconOrTextHeight, 5.5 * units.gridUnit))
-    }
+    implicitHeight: Math.max(units.iconSizes.large, titleBar.height + bottomPart.height)
+
     // We need to clip here because we support displaying images through <img/>
     // and if we don't clip, they will be painted over the borders of the dialog/item
     clip: true
@@ -123,91 +115,101 @@ Item {
         visible: nativeWidth > 0
     }
 
-    RowLayout {
-        id: titleBar
+    ColumnLayout {
         anchors {
             top: parent.top
             left: appIconItem.right
             right: parent.right
             leftMargin: units.smallSpacing * 2
         }
+
         spacing: units.smallSpacing
 
-        PlasmaExtras.Heading {
-            id: summaryLabel
-            Layout.fillWidth: true
-            level: 4
-            height: paintedHeight
-            elide: Text.ElideRight
-            wrapMode: Text.NoWrap
-        }
+        RowLayout {
+            id: titleBar
+            spacing: units.smallSpacing
+            height: units.iconSizes.smallMedium
 
-        PlasmaExtras.Heading {
-            id: timeLabel
-            level: 5
-            visible: text !== ""
-
-            PlasmaCore.ToolTipArea {
-                anchors.fill: parent
-                subText: Qt.formatDateTime(created, Qt.DefaultLocaleLongDate)
+            PlasmaExtras.Heading {
+                id: summaryLabel
+                Layout.fillWidth: true
+                Layout.fillHeight: true
+                verticalAlignment: Text.AlignVCenter
+                level: 4
+                elide: Text.ElideRight
+                wrapMode: Text.NoWrap
             }
+
+            PlasmaExtras.Heading {
+                id: timeLabel
+                Layout.fillHeight: true
+                level: 5
+                visible: text !== ""
+                verticalAlignment: Text.AlignVCenter
+
+                PlasmaCore.ToolTipArea {
+                    anchors.fill: parent
+                    subText: Qt.formatDateTime(created, Qt.DefaultLocaleLongDate)
+                }
+            }
+
+            PlasmaComponents.ToolButton {
+                id: settingsButton
+                width: units.iconSizes.smallMedium
+                height: width
+                visible: false
+
+                iconSource: "configure"
+
+                onClicked: configure()
+            }
+
+            PlasmaComponents.ToolButton {
+                id: closeButton
+
+                width: units.iconSizes.smallMedium
+                height: width
+                flat: compact
+
+                iconSource: "window-close"
+
+                onClicked: close()
+            }
+
         }
 
-        PlasmaComponents.ToolButton {
-            id: settingsButton
-            width: units.iconSizes.smallMedium
-            height: width
-            visible: false
+        RowLayout {
+            id: bottomPart
+            Layout.alignment: Qt.AlignTop
 
-            iconSource: "configure"
+            Loader {
+                id: textItemLoader
+                Layout.fillWidth: true
+                Layout.fillHeight: true
+                anchors {
+                    leftMargin: units.smallSpacing * 2
+                    rightMargin: units.smallSpacing * 2
+                }
+            }
 
-            onClicked: configure()
-        }
 
-        PlasmaComponents.ToolButton {
-            id: closeButton
+            ColumnLayout {
+                id: actionsColumn
+                Layout.alignment: Qt.AlignTop
+                Layout.maximumWidth: theme.mSize(theme.defaultFont).width * (compact ? 8 : 12)
 
-            width: units.iconSizes.smallMedium
-            height: width
-            flat: compact
+                spacing: units.smallSpacing
+                visible: notificationItem.actions && notificationItem.actions.count > 0
 
-            iconSource: "window-close"
+                Repeater {
+                    id: actionRepeater
+                    model: notificationItem.actions
 
-            onClicked: close()
-        }
-    }
-
-    Loader {
-        id: textItemLoader
-        anchors {
-            top: titleBar.bottom
-            left: appIconItem.right
-            right: actionsColumn.visible ? actionsColumn.left : parent.right
-            bottom: compact ? undefined : parent.bottom
-            leftMargin: units.smallSpacing * 2
-            rightMargin: units.smallSpacing * 2
-        }
-    }
-
-    Column {
-        id: actionsColumn
-        anchors {
-            top: titleBar.bottom
-            right: parent.right
-            topMargin: units.smallSpacing
-        }
-        height: childrenRect.height
-        spacing: units.smallSpacing
-        visible: notificationItem.actions && notificationItem.actions.count > 0
-
-        Repeater {
-            id: actionRepeater
-            model: notificationItem.actions
-
-            PlasmaComponents.Button {
-                width: theme.mSize(theme.defaultFont).width * (compact ? 8 : 12)
-                text: model.text
-                onClicked: notificationItem.action(model.id)
+                    PlasmaComponents.Button {
+                        text: model.text
+                        onClicked: notificationItem.action(model.id)
+                    }
+                }
             }
         }
     }
