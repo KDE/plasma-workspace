@@ -29,7 +29,7 @@ import org.kde.kquickcontrolsaddons 2.0
 Item {
     id: notificationItem
     width: parent.width
-    implicitHeight: Math.max(units.iconSizes.large, mainLayout.height)
+    implicitHeight: Math.max(appIconItem.visible || imageItem.visible ? units.iconSizes.large : 0, mainLayout.height)
 
     // We need to clip here because we support displaying images through <img/>
     // and if we don't clip, they will be painted over the borders of the dialog/item
@@ -42,7 +42,7 @@ Item {
     property alias textItem: textItemLoader.sourceComponent
     property bool compact: false
 
-    property alias icon: appIconItem.icon
+    property alias icon: appIconItem.source
     property alias image: imageItem.image
     property alias summary: summaryLabel.text
     property alias configurable: settingsButton.visible
@@ -93,7 +93,7 @@ Item {
         onTriggered: updateTimeLabel()
     }
 
-    QIconItem {
+    PlasmaCore.IconItem {
         id: appIconItem
 
         width: units.iconSizes.large
@@ -104,7 +104,7 @@ Item {
             left: parent.left
         }
 
-        visible: !imageItem.visible
+        visible: !imageItem.visible && valid
     }
 
     QImageItem {
@@ -120,7 +120,7 @@ Item {
 
         anchors {
             top: parent.top
-            left: appIconItem.right
+            left: appIconItem.visible || imageItem.visible ? appIconItem.right : parent.left
             right: parent.right
             leftMargin: units.smallSpacing * 2
         }
@@ -188,6 +188,7 @@ Item {
                 id: textItemLoader
                 Layout.fillWidth: true
                 Layout.fillHeight: true
+                visible: textItemLoader.item && textItemLoader.item.text !== ""
                 anchors {
                     leftMargin: units.smallSpacing * 2
                     rightMargin: units.smallSpacing * 2
