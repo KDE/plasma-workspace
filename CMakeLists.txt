@@ -5,7 +5,7 @@ set(PROJECT_VERSION_MAJOR 5)
 cmake_minimum_required(VERSION 2.8.12 FATAL_ERROR)
 
 set(QT_MIN_VERSION "5.4.0")
-set(KF5_MIN_VERSION "5.9.0")
+set(KF5_MIN_VERSION "5.12.0")
 set(INSTALL_SDDM_THEME TRUE)
 find_package(Qt5 ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS Widgets Quick QuickWidgets Concurrent Test Script Network)
 find_package(ECM 1.8.0 REQUIRED NO_MODULE)
