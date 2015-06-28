@@ -84,28 +84,33 @@ Item {
                 }
             }
 
-            Column {
+            ColumnLayout {
                 Layout.fillWidth: true
                 spacing: units.smallSpacing / 2
 
                 PlasmaExtras.Heading {
                     id: song
-                    width: parent.width
+                    Layout.fillWidth: true
                     level: 3
                     opacity: 0.6
 
+                    maximumLineCount: 3
+                    wrapMode: Text.WrapAtWordBoundaryOrAnywhere
                     elide: Text.ElideRight
                     text: root.track ? root.track : i18n("No media playing")
                 }
 
                 PlasmaExtras.Heading {
                     id: artist
-                    width: parent.width
+                    Layout.fillWidth: true
                     level: 4
                     opacity: 0.4
+                    maximumLineCount: 2
+                    wrapMode: Text.WrapAtWordBoundaryOrAnywhere
+                    visible: text !== ""
 
                     elide: Text.ElideRight
-                    text: root.artist ? root.artist : ""
+                    text: root.artist || ""
                 }
             }
         }
