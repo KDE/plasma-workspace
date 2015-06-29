@@ -145,7 +145,7 @@ void DesktopView::ensureWindowType()
         }
 
     } else if (m_windowType == Desktop) {
-        setFlags(Qt::Window);
+        setFlags(Qt::Window | Qt::FramelessWindowHint);
         KWindowSystem::setType(winId(), NET::Desktop);
         KWindowSystem::setState(winId(), NET::KeepBelow);
         setupWaylandIntegration();
