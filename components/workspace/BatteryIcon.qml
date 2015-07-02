@@ -125,7 +125,7 @@ Item {
                 return "phone-battery";
             case "Phone":
                 return "phone-battery";
-            case "UPS":
+            case "Ups":
                 return "battery-ups";
             default:
                 return "";
