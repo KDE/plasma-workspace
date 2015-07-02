@@ -78,16 +78,12 @@ Item {
     }
 
     Component.onCompleted: {
-        updateLogic();
         Logic.updateBrightness(batterymonitor, pmSource);
         plasmoid.removeAction("configure");
         plasmoid.setAction("powerdevilkcm", i18n("&Configure Power Saving..."), "preferences-system-power-management");
         Logic.updateInhibitions(batterymonitor, pmSource)
-    }
-
-    function updateLogic() {
-        plasmoid.status = Logic.plasmoidStatus();
-        Logic.updateTooltip(batterymonitor.remainingTime);
+        plasmoid.status = Logic.plasmoidStatus()
+        Logic.updateTooltip(batterymonitor.remainingTime)
     }
 
     Plasmoid.compactRepresentation: CompactRepresentation {
@@ -138,6 +134,7 @@ Item {
             Logic.updateBrightness(batterymonitor, pmSource)
             Logic.updateTooltip(batterymonitor.remainingTime)
             Logic.updateInhibitions(batterymonitor, pmSource)
+            plasmoid.status = Logic.plasmoidStatus()
         }
     }
 
@@ -152,8 +149,6 @@ Item {
             sourceModel: PlasmaCore.DataModel {
                 dataSource: pmSource
                 sourceFilter: "Battery[0-9]+"
-
-                onDataChanged: updateLogic()
             }
         }
 
@@ -214,7 +209,8 @@ Item {
                 });
             }
             Logic.powermanagementDisabled = !checked;
-            updateLogic();
+            Logic.updateTooltip(batterymonitor.remainingTime)
+            plasmoid.status = Logic.plasmoidStatus()
         }
     }
 }
