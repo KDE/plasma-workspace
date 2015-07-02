@@ -467,6 +467,8 @@ void PowermanagementEngine::updateOverallBattery()
     double totalEnergy = 0;
     bool allFullyCharged = true;
     bool charging = false;
+    double totalPercentage = 0;
+    int count = 0;
 
     foreach (const Solid::Device &deviceBattery, listBattery) {
         const Solid::Battery* battery = deviceBattery.as<Solid::Battery>();
@@ -476,13 +478,17 @@ void PowermanagementEngine::updateOverallBattery()
 
             energy += battery->energy();
             totalEnergy += battery->energyFull();
+            totalPercentage += battery->chargePercent();
             allFullyCharged = allFullyCharged && (battery->chargeState() == Solid::Battery::FullyCharged);
             charging = charging || (battery->chargeState() == Solid::Battery::Charging);
+            ++count;
         }
     }
 
     if (totalEnergy > 0) {
         setData("Battery", "Percent", qRound(energy / totalEnergy * 100));
+    } else if (count > 0) { // UPS don't have energy, see Bug 348588
+        setData("Battery", "Percent", qRound(totalPercentage / static_cast<qreal>(count)));
     } else {
         setData("Battery", "Percent", 0);
     }
