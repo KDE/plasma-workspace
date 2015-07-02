@@ -335,13 +335,8 @@ ColumnLayout {
     }
 
     Loader {
-        Layout.fillHeight: true;
-        anchors {
-            left: parent.left
-            right: parent.right
-        }
-        height: units.gridUnit * 30
-
+        Layout.fillWidth: true
+        Layout.fillHeight: true
         sourceComponent: (configDialog.currentWallpaper == "org.kde.image") ? thumbnailsComponent : foldersComponent
     }
 
