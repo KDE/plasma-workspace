@@ -210,12 +210,6 @@ for prefix in `echo $scriptpath`; do
   done
 done
 
-# Set the path for Qt plugins provided by KDE
-QT_PLUGIN_PATH=${QT_PLUGIN_PATH+$QT_PLUGIN_PATH:}`qtpaths --plugin-dir`
-# TODO: Do we really need this?
-QT_PLUGIN_PATH=$QT_PLUGIN_PATH:$kdehome/lib/kde5/plugins/
-export QT_PLUGIN_PATH
-
 # Activate the kde font directories.
 #
 # There are 4 directories that may be used for supplying fonts for KDE.
