@@ -1,5 +1,6 @@
 /*
  *  Copyright 2013 Sebastian Kügler <sebas@kde.org>
+ *  Copyright 2015 Kai Uwe Broulik <kde@privat.broulik.de>
  *
  *  This program is free software; you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -17,13 +18,10 @@
  */
 
 import QtQuick 2.0
+import QtQuick.Layouts 1.1 as QtLayouts
 import QtQuick.Controls 1.0 as QtControls
 
-import org.kde.plasma.core 2.0 as PlasmaCore
-import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.plasma.extras 2.0 as PlasmaExtras
-
-import org.kde.private.systemtray 2.0 as SystemTray
 
 Item {
     id: iconsPage
@@ -32,6 +30,7 @@ Item {
     implicitWidth: pageColumn.implicitWidth
     implicitHeight: pageColumn.implicitHeight
 
+    readonly property int checkedOptions: leave.checked + lock.checked + switchUser.checked + hibernate.checked + sleep.checked
 
     property alias cfg_show_requestShutDown: leave.checked
     property alias cfg_show_lockScreen: lock.checked
@@ -39,38 +38,44 @@ Item {
     property alias cfg_show_suspendToDisk: hibernate.checked
     property alias cfg_show_suspendToRam: sleep.checked
 
-    SystemTray.Host {
-        id: host
+    SystemPalette {
+        id: sypal
     }
 
-    Column {
+    QtLayouts.ColumnLayout {
         id: pageColumn
-        spacing: itemSizeLabel.height / 2
-        PlasmaExtras.Title {
-            text: i18n("Lock/Logout Settings")
+
+        PlasmaExtras.Heading {
+            text: i18nc("Heading for list of actions (leave, lock, shutdown, ...)", "Actions")
+            color: syspal.text
+            level: 2
         }
 
-        Column {
-            QtControls.CheckBox {
-                id: leave
-                text: i18n("Leave")
-            }
-            QtControls.CheckBox {
-                id: lock
-                text: i18n("Lock")
-            }
-            QtControls.CheckBox {
-                id: switchUser
-                text: i18n("Switch User")
-            }
-            QtControls.CheckBox {
-                id: hibernate
-                text: i18n("Hibernate")
-            }
-            QtControls.CheckBox {
-                id: sleep
-                text: i18n("Sleep")
-            }
+        QtControls.CheckBox {
+            id: leave
+            text: i18n("Leave")
+            // ensure user cannot have all options unchecked
+            enabled: checkedOptions > 1 || !checked
+        }
+        QtControls.CheckBox {
+            id: lock
+            text: i18n("Lock")
+            enabled: checkedOptions > 1 || !checked
+        }
+        QtControls.CheckBox {
+            id: switchUser
+            text: i18n("Switch User")
+            enabled: checkedOptions > 1 || !checked
+        }
+        QtControls.CheckBox {
+            id: hibernate
+            text: i18n("Hibernate")
+            enabled: checkedOptions > 1 || !checked
+        }
+        QtControls.CheckBox {
+            id: sleep
+            text: i18n("Sleep")
+            enabled: checkedOptions > 1 || !checked
         }
     }
 }
