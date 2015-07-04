@@ -97,7 +97,7 @@ Flow {
                     id: mouseArea
                     anchors.fill: parent
                     hoverEnabled: true
-                    onReleased: clickHandler(modelData.operation)
+                    onReleased: clickHandler(modelData.operation, this)
 
                     PlasmaCore.ToolTipArea {
                         anchors.fill: parent
@@ -140,19 +140,19 @@ Flow {
     }
     property QueryDialog sleepDialog
 
-    function clickHandler(what) {
+    function clickHandler(what, button) {
         if (what == "suspendToDisk") {
             if (!hibernateDialog) {
                 hibernateDialog = hibernateDialogComponent.createObject(lockout);
             }
-
+            hibernateDialog.visualParent = button
             hibernateDialog.open();
 
         } else if (what == "suspendToRam") {
             if (!sleepDialog) {
                 sleepDialog = sleepDialogComponent.createObject(lockout);
             }
-
+            sleepDialog.visualParent = button
             sleepDialog.open();
 
         } else {
