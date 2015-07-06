@@ -47,6 +47,7 @@ Item {
 
     Plasmoid.toolTipMainText: Qt.formatDate(tzDate,"dddd")
     Plasmoid.toolTipSubText:  Qt.formatDate(tzDate, dateFormatString)
+    Plasmoid.toolTipTextFormat: Text.StyledText
 
     PlasmaCore.DataSource {
         id: dataSource
