@@ -1,4 +1,5 @@
 ecm_optional_add_subdirectory(klipper)
+ecm_optional_add_subdirectory(kcontrol)
 if(POLKITQT_FOUND)
   ecm_optional_add_subdirectory(PolicyKit-kde)
 endif()

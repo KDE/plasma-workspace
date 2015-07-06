@@ -1,0 +1,53 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % English "INCLUDE" > <!-- change language only here -->
+]>
+
+<article id="screenlocker" lang="&language;">
+<articleinfo>
+<title>Screen Locking</title>
+<authorgroup>
+<author>&Mike.McBride; &Mike.McBride.mail;</author>
+<!-- TRANS:ROLES_OF_TRANSLATORS -->
+</authorgroup>
+
+<date>2015-05-20</date>
+<releaseinfo>Plasma 5.3</releaseinfo>
+
+<keywordset>
+<keyword>KDE</keyword>
+<keyword>systemsettings</keyword>
+<keyword>screenlocker</keyword>
+<keyword>screen locker</keyword>
+</keywordset>
+</articleinfo>
+<!--https://bugs.kde.org/show_bug.cgi?id=317156 does this effect screenlock in kf5?-->
+<para>Using this module, you can determine
+how much time must pass before the screen locker is activated, and add
+or remove password protection to your screen locker.</para>
+
+<para>At the top is a check box to have the screen locker <guilabel>Lock screen automatically after</guilabel>, 
+and a spin box which determines the period of inactivity before the screen locker should be started. 
+You can enter any positive number of minutes in this box.</para>
+
+<para>Below that is a spinbox labeled <guilabel>Require password 
+after locking</guilabel>.  If it is checked, when you click a key
+or click a mouse button to end the screen locker after the time in the spinbox and return to your
+work, you must enter a password.  The password used is the same
+password you used to login to your machine. <!--FIXME --></para>
+
+<para>Locking the screen manually causes the password protection to engage immediately.</para>
+
+<para>The default shortcut <keycombo action="simul">&Ctrl;&Alt;<keycap>L</keycap></keycombo> provides a quick 
+way to lock the screen manually.</para>
+
+<para>Check <guilabel>Lock screen on resume</guilabel> if you want a password protected system
+when waking up from suspension.</para>
+
+<para>If you would like to change the background in locked status click on the image button right 
+to <guilabel>Custom Background</guilabel> to opel a menu with actions to load an image from 
+file or clear the currently used image.</para>
+
+</article>

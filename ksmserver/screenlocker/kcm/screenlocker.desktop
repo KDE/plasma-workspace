@@ -5,6 +5,7 @@ Icon=preferences-system
 Exec=kcmshell5 screenlocker
 X-KDE-Library=screenlocker_kcm
 X-KDE-ParentApp=kcontrol
+X-DocPath=kcontrol/screenlocker/index.html
 
 X-KDE-System-Settings-Parent-Category=desktopbehavior
 X-KDE-Weight=60
