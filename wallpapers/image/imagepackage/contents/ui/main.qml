@@ -170,15 +170,23 @@ Item {
     SequentialAnimation {
         id: fadeAnim
         running: false
-        OpacityAnimator {
-            target: currentImage
-            from: 0
-            to: 1
-            duration: units.longDuration
+
+        ParallelAnimation {
+                OpacityAnimator {
+                    target: currentImage
+                    from: 0
+                    to: 1
+                    duration: units.longDuration
+                }
+                OpacityAnimator {
+                    target: otherImage
+                    from: 1
+                    to: 0
+                    duration: units.longDuration
+                }
         }
         ScriptAction {
             script: {
-                otherImage.opacity = 0;
                 otherImage.fillMode = fillMode;
                 otherImage.source = "";
             }
