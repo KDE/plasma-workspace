@@ -175,7 +175,11 @@ void UnlockApp::desktopResized()
         view->engine()->setNetworkAccessManagerFactory(new NoAccessNetworkAccessManagerFactory);
 
         if (!m_testing) {
-            view->setFlags(Qt::X11BypassWindowManagerHint);
+            if (QX11Info::isPlatformX11()) {
+                view->setFlags(Qt::X11BypassWindowManagerHint);
+            } else {
+                view->setFlags(Qt::FramelessWindowHint);
+            }
         }
 
         if (m_ksldInterface) {
@@ -225,7 +229,11 @@ void UnlockApp::desktopResized()
         QQuickView *view = m_views.at(i);
 
         view->setGeometry(QGuiApplication::screens()[i]->geometry());
-        view->show();
+        if (m_testing) {
+            view->show();
+        } else {
+            view->showFullScreen();
+        }
         view->raise();
     }
     // random state update, actually rather required on init only
