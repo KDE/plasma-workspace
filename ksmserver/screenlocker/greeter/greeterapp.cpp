@@ -362,7 +362,7 @@ bool UnlockApp::eventFilter(QObject *obj, QEvent *event)
                 break;
             }
         }
-        if (view && view->winId()) {
+        if (view && view->winId() && QX11Info::isPlatformX11()) {
             // showing greeter view window, set property
             static Atom tag = XInternAtom(QX11Info::display(), "_KDE_SCREEN_LOCKER", False);
             XChangeProperty(QX11Info::display(), view->winId(), tag, tag, 32, PropModeReplace, 0, 0);
