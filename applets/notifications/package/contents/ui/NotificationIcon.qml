@@ -27,7 +27,7 @@ Item {
     PlasmaCore.SvgItem {
         id: notificationSvgItem
         anchors.centerIn: parent
-        width: Math.min(parent.width, parent.height)
+        width: units.roundToIconSize(Math.min(parent.width, parent.height))
         height: width
 
         svg: notificationSvg
