@@ -38,6 +38,7 @@ Comment[zh_TW]=KDE VDG 設計的微風桌面設計語言
 Encoding=UTF-8
 Keywords=Desktop;Workspace;Appearance;Look and Feel;Logout;Lock;Suspend;Shutdown;Hibernate;
 Keywords[ca]=Escriptori;Espai de treball;Aparença;Aparença i comportament;Sortida;Bloqueig;Suspensió;Aturada;Hibernació;
+Keywords[da]=Skrivebord;Desktop;Arbejdsområde;Udseende;log ud;Lås;Suspendér;Nedlukning;dvale;
 Keywords[de]=Desktop;Arbeitsfläche;Erscheinungsbild;Erscheinungsbild und Verhalten;Abmelden;Sperren;Ruhezustand;Tiefschlaf;Herunterfahren;
 Keywords[el]=Επιφάνεια εργασίας;Χώρος εργασίας; Εμφάνιση;Όψη και Αίσθηση;Αποσύνδεση;Κλείδωμα;Αναστολή;Τερματισμός;Νάρκη;
 Keywords[en_GB]=Desktop;Workspace;Appearance;Look and Feel;Logout;Lock;Suspend;Shutdown;Hibernate;
