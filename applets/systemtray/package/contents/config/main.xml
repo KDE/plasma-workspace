@@ -37,6 +37,9 @@
     <entry name="shownItems" type="StringList">
       <default></default>
     </entry>
+    <entry name="showAllItems" type="bool">
+        <default>false</default>
+    </entry>
     <!-- All the plasmoids the applet knows of. a plasmoid will be automatically added
          if X-KDE-PluginInfo-EnabledByDefault=true and is not in the known list-->
     <entry name="knownItems" type="StringList">

@@ -67,6 +67,7 @@ public:
           shownTasksModel(new TaskListModel(host)),
           hiddenTasksModel(new TaskListModel(host)),
           allTasksModel(new TaskListModel(host)),
+          showAllItems(false),
           availablePlasmoidsModel(Q_NULLPTR),
           plasmoidProtocol(new SystemTray::PlasmoidProtocol(host))
     {
@@ -85,6 +86,7 @@ public:
     TaskListModel *hiddenTasksModel;
     TaskListModel *allTasksModel;
 
+    bool showAllItems;
     QStringList forcedShownItems;
     QStringList forcedHiddenItems;
 
@@ -125,6 +127,27 @@ void Host::initTasks()
     }
 }
 
+void Host::populateModels()
+{
+    foreach (Task *task, d->tasks) {
+        if (d->shownCategories.contains(task->category())) {
+            if (isTaskShown(task)) {
+                d->hiddenTasksModel->removeTask(task);
+                d->shownTasksModel->addTask(task);
+            } else {
+                d->shownTasksModel->removeTask(task);
+                d->hiddenTasksModel->addTask(task);
+            }
+        }
+    }
+}
+
+bool Host::isTaskShown(Task *task) const
+{
+    return d->showAllItems || (!d->forcedHiddenItems.contains(task->taskId()) &&
+        (d->forcedShownItems.contains(task->taskId()) || d->showTask(task)));
+}
+
 QQuickItem* Host::rootItem()
 {
     return d->rootItem;
@@ -160,20 +183,8 @@ void Host::setForcedShownItems(const QStringList &items)
 
     d->forcedShownItems = items;
 
-    foreach (Task *task, d->tasks) {
-        if (d->shownCategories.contains(task->category())) {
-            if (!d->forcedHiddenItems.contains(task->taskId()) &&
-                (d->forcedShownItems.contains(task->taskId()) || d->showTask(task))) {
-                d->hiddenTasksModel->removeTask(task);
-                d->shownTasksModel->addTask(task);
-            } else {
-                d->shownTasksModel->removeTask(task);
-                d->hiddenTasksModel->addTask(task);
-            }
-        }
-    }
+    populateModels();
 }
-
 
 QStringList Host::forcedHiddenItems() const
 {
@@ -188,18 +199,23 @@ void Host::setForcedHiddenItems(const QStringList &items)
 
     d->forcedHiddenItems = items;
 
-    foreach (Task *task, d->tasks) {
-        if (d->shownCategories.contains(task->category())) {
-            if (!d->forcedHiddenItems.contains(task->taskId()) &&
-                (d->forcedShownItems.contains(task->taskId()) || d->showTask(task))) {
-                d->hiddenTasksModel->removeTask(task);
-                d->shownTasksModel->addTask(task);
-            } else {
-                d->shownTasksModel->removeTask(task);
-                d->hiddenTasksModel->addTask(task);
-            }
-        }
+    populateModels();
+}
+
+bool Host::showAllItems() const
+{
+    return d->showAllItems;
+}
+
+void Host::setShowAllItems(bool showAllItems)
+{
+    if (showAllItems == d->showAllItems) {
+        return;
     }
+
+    d->showAllItems = showAllItems;
+
+    populateModels();
 }
 
 void Host::setRootItem(QQuickItem* item)
@@ -224,8 +240,7 @@ void Host::setCategoryShown(int cat, bool shown)
             d->shownCategories.insert((Task::Category)cat);
             foreach (Task *task, d->tasks) {
                 if (task->category() == cat) {
-                    if (!d->forcedHiddenItems.contains(task->taskId()) &&
-                        (d->forcedShownItems.contains(task->taskId()) || d->showTask(task))) {
+                    if (isTaskShown(task)) {
                         d->shownTasksModel->addTask(task);
                     } else {
                         d->hiddenTasksModel->addTask(task);
@@ -259,8 +274,7 @@ void Host::addTask(Task *task)
     d->tasks << task;
 
     if (d->shownCategories.contains(task->category())) {
-        if (!d->forcedHiddenItems.contains(task->taskId()) &&
-            (d->forcedShownItems.contains(task->taskId()) || d->showTask(task))) {
+        if (isTaskShown(task)) {
             d->shownTasksModel->addTask(task);
         } else {
             d->hiddenTasksModel->addTask(task);
@@ -363,8 +377,7 @@ void Host::taskStatusChanged(SystemTray::Task *task)
     }
 
     if (task) {
-        if (!d->forcedHiddenItems.contains(task->taskId()) &&
-            (d->forcedShownItems.contains(task->taskId()) || d->showTask(task))) {
+        if (isTaskShown(task)) {
             d->hiddenTasksModel->removeTask(task);
             d->shownTasksModel->addTask(task);
         } else {

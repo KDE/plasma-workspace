@@ -55,6 +55,7 @@ class Host : public QObject
 
     Q_PROPERTY(QStringList categories READ categories NOTIFY categoriesChanged)
 
+    Q_PROPERTY(bool showAllItems READ showAllItems WRITE setShowAllItems NOTIFY showAllItemsChanged)
     Q_PROPERTY(QStringList forcedHiddenItems READ forcedHiddenItems WRITE setForcedHiddenItems NOTIFY forcedHiddenItemsChanged)
     Q_PROPERTY(QStringList forcedShownItems READ forcedShownItems WRITE setForcedShownItems NOTIFY forcedShownItemsChanged)
 
@@ -75,6 +76,9 @@ public:
 
     QStringList plasmoidsAllowed() const;
     void setPlasmoidsAllowed(const QStringList &plasmoids);
+
+    bool showAllItems() const;
+    void setShowAllItems(bool showAllItems);
 
     QStringList forcedShownItems() const;
     void setForcedShownItems(const QStringList &items);
@@ -100,6 +104,7 @@ Q_SIGNALS:
     void rootItemChanged();
     void shownCategoriesChanged();
     void plasmoidsAllowedChanged();
+    void showAllItemsChanged();
     void forcedShownItemsChanged();
     void forcedHiddenItemsChanged();
 
@@ -111,6 +116,10 @@ private Q_SLOTS:
 
 private:
     void initTasks();
+    void populateModels();
+
+    bool isTaskShown(Task *task) const;
+
     HostPrivate* d;
 
 };

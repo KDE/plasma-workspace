@@ -19,6 +19,7 @@
 
 import QtQuick 2.0
 import QtQuick.Controls 1.0 as QtControls
+import QtQuick.Layouts 1.1 as QtLayouts
 
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
@@ -27,97 +28,96 @@ import org.kde.kquickcontrolsaddons 2.0
 
 import org.kde.private.systemtray 2.0 as SystemTray
 
-Item {
+QtLayouts.GridLayout {
     id: iconsPage
-    width: childrenRect.width
-    height: childrenRect.height
-    implicitWidth: pageColumn.implicitWidth
-    implicitHeight: pageColumn.implicitHeight
 
     signal configurationChanged
 
     property var cfg_shownItems: []
     property var cfg_hiddenItems: []
+    property alias cfg_showAllItems: showAllCheckBox.checked
 
+    columns: 3 // so we can indent the entries below...
 
-    SystemPalette {
-        id: palette
+    QtControls.CheckBox {
+        id: showAllCheckBox
+        QtLayouts.Layout.columnSpan: 3
+        QtLayouts.Layout.fillWidth: true
+        text: i18n("Always show all entries")
     }
 
-    Column {
-        id: pageColumn
-        spacing: itemSizeLabel.height / 2
-        width: units.gridUnit * 25
+    Repeater {
+        model: plasmoid.rootItem.systrayHost.allTasks
 
-        Repeater {
-            model: plasmoid.rootItem.systrayHost.allTasks
+        QtControls.Label {
+            QtLayouts.Layout.column: 1
+            QtLayouts.Layout.row: index + 1
+            QtLayouts.Layout.fillWidth: true
 
-            delegate: Row {
-                height: implicitHeight
-                width: parent.width
-                QtControls.Label {
-                    text: modelData.name
-                    elide: Text.ElideRight
-                    width: (parent.width / 4) * 3
-                    anchors.verticalCenter: parent.verticalCenter
-                }
-                QtControls.ComboBox {
-                    width: parent.width / 4
-                    currentIndex: {
-                        if (cfg_shownItems.indexOf(modelData.taskId) != -1) {
-                            return 1;
-                        } else if (cfg_hiddenItems.indexOf(modelData.taskId) != -1) {
-                            return 2;
-                        } else {
-                            return 0;
-                        }
-                    }
-                    onCurrentIndexChanged: {
-                        var shownIndex = cfg_shownItems.indexOf(modelData.taskId);
-                        var hiddenIndex = cfg_hiddenItems.indexOf(modelData.taskId);
+            text: modelData.name
+            elide: Text.ElideRight
+            wrapMode: Text.NoWrap
+        }
+    }
 
-                        switch (currentIndex) {
-                        case 0: {
-                            if (shownIndex > -1) {
-                                cfg_shownItems.splice(shownIndex, 1);
-                            }
-                            if (hiddenIndex > -1) {
-                                cfg_hiddenItems.splice(hiddenIndex, 1);
-                            }
-                            break;
-                        }
-                        case 1: {
-                            if (shownIndex == -1) {
-                                cfg_shownItems.push(modelData.taskId);
-                            }
-                            if (hiddenIndex > -1) {
-                                cfg_hiddenItems.splice(hiddenIndex, 1);
-                            }
-                            break;
-                        }
-                        case 2: {
-                            if (shownIndex > -1) {
-                                cfg_shownItems.splice(shownIndex, 1);
-                            }
-                            if (hiddenIndex == -1) {
-                                cfg_hiddenItems.push(modelData.taskId);
-                            }
-                            break;
-                        }
-                        }
-                        iconsPage.configurationChanged();
-                    }
-                    model: ListModel {
-                        id: cbItems
+    Repeater {
+        model: plasmoid.rootItem.systrayHost.allTasks
 
-                        Component.onCompleted: {
-                            cbItems.append([{"text": i18n("Auto"), "val": 1},
-                                            {"text": i18n("Shown"), "val": 2},
-                                            {"text": i18n("Hidden"), "val": 0}]);
-                        }
-                    }
+        QtControls.ComboBox {
+            QtLayouts.Layout.minimumWidth: Math.round(units.gridUnit * 6.5) // ComboBox sizing is broken
+            QtLayouts.Layout.column: 2
+            QtLayouts.Layout.row: index + 1
+
+            enabled: !showAllCheckBox.checked
+            currentIndex: {
+                if (cfg_shownItems.indexOf(modelData.taskId) != -1) {
+                    return 1;
+                } else if (cfg_hiddenItems.indexOf(modelData.taskId) != -1) {
+                    return 2;
+                } else {
+                    return 0;
                 }
             }
+            onCurrentIndexChanged: {
+                var shownIndex = cfg_shownItems.indexOf(modelData.taskId);
+                var hiddenIndex = cfg_hiddenItems.indexOf(modelData.taskId);
+
+                switch (currentIndex) {
+                case 0: {
+                    if (shownIndex > -1) {
+                        cfg_shownItems.splice(shownIndex, 1);
+                    }
+                    if (hiddenIndex > -1) {
+                        cfg_hiddenItems.splice(hiddenIndex, 1);
+                    }
+                    break;
+                }
+                case 1: {
+                    if (shownIndex == -1) {
+                        cfg_shownItems.push(modelData.taskId);
+                    }
+                    if (hiddenIndex > -1) {
+                        cfg_hiddenItems.splice(hiddenIndex, 1);
+                    }
+                    break;
+                }
+                case 2: {
+                    if (shownIndex > -1) {
+                        cfg_shownItems.splice(shownIndex, 1);
+                    }
+                    if (hiddenIndex == -1) {
+                        cfg_hiddenItems.push(modelData.taskId);
+                    }
+                    break;
+                }
+                }
+                iconsPage.configurationChanged();
+            }
+            model: [i18n("Auto"), i18n("Shown"), i18n("Hidden")]
         }
+    }
+
+    Item { // keep the list tight
+        QtLayouts.Layout.fillHeight: true
     }
 }

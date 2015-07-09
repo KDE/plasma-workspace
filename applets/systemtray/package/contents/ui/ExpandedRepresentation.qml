@@ -99,6 +99,9 @@ KQuickControlsAddons.MouseEventListener {
             // Normal system tray case; clicked on arrow
             if (root.expandedTask == null) {
                 return true;
+            // In case all applets are shown; there's nothing to show
+            } else if (plasmoid.configuration.showAllItems) {
+                return false
             // In case applet is hidden; we should show sidebar
             } else if (plasmoid.configuration.hiddenItems.indexOf(root.expandedTask.taskId) != -1) {
                 return true;
