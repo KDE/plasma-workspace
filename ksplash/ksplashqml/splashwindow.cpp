@@ -49,7 +49,13 @@ SplashWindow::SplashWindow(bool testing, bool window)
     }
 
     if (!m_testing && !m_window) {
-        setFlags(Qt::BypassWindowManagerHint);
+        if (QGuiApplication::platformName().compare(QLatin1String("xcb"), Qt::CaseInsensitive) == 0) {
+            // X11 specific hint only on X11
+            setFlags(Qt::BypassWindowManagerHint);
+        } else {
+            // on other platforms go fullscreen
+            setWindowState(Qt::WindowFullScreen);
+        }
     }
 
     if (m_testing && !m_window) {
