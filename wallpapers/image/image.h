@@ -2,6 +2,7 @@
  *   Copyright 2007 Paolo Capriotti <p.capriotti@gmail.com>                *
  *   Copyright 2008 by Petri Damsten <damu@iki.fi>                         *
  *   Copyright 2014 Sebastian Kügler <sebas@kde.org>                       *
+ *   Copyright 2015 Kai Uwe Broulik <kde@privat.broulik.de>                *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *
@@ -29,6 +30,7 @@
 #include <QObject>
 #include <QPersistentModelIndex>
 #include <QDateTime>
+#include <QQmlParserStatus>
 
 #include <KPackage/Package>
 
@@ -45,9 +47,11 @@ namespace KNS3 {
 
 class BackgroundListModel;
 
-class Image : public QObject
+class Image : public QObject, public QQmlParserStatus
 {
     Q_OBJECT
+    Q_INTERFACES(QQmlParserStatus)
+
     Q_PROPERTY(RenderingMode renderingMode READ renderingMode WRITE setRenderingMode NOTIFY renderingModeChanged)
     Q_PROPERTY(QString wallpaperPath READ wallpaperPath NOTIFY wallpaperPathChanged)
     Q_PROPERTY(QAbstractItemModel *wallpaperModel READ wallpaperModel CONSTANT)
@@ -109,6 +113,9 @@ class Image : public QObject
 
         void findPreferedImageInPackage(KPackage::Package &package);
 
+        void classBegin() override;
+        void componentComplete() override;
+
     public Q_SLOTS:
         void nextSlide();
         void removeWallpaper(QString name);
@@ -153,6 +160,7 @@ class Image : public QObject
 
     private:
 
+        bool m_ready;
         int m_delay;
         QStringList m_dirs;
         QString m_wallpaper;

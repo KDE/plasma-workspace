@@ -4,6 +4,7 @@
  *   Copyright 2008 Petri Damsten <damu@iki.fi>                            *
  *   Copyright 2008 Alexis Ménard <darktears31@gmail.com>                  *
  *   Copyright 2014 Sebastian Kügler <sebas@kde.org>                       *
+ *   Copyright 2015 Kai Uwe Broulik <kde@privat.broulik.de>                *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *
@@ -54,6 +55,7 @@
 
 Image::Image(QObject *parent)
     : QObject(parent),
+      m_ready(false),
       m_delay(10),
       m_dirWatch(new KDirWatch(this)),
       m_mode(SingleImage),
@@ -81,6 +83,22 @@ Image::Image(QObject *parent)
 Image::~Image()
 {
     delete m_dialog;
+}
+
+void Image::classBegin()
+{
+
+}
+
+void Image::componentComplete()
+{
+    // don't bother loading single image until all properties have settled
+    // otherwise we would load a too small image (initial view size) just
+    // to load the proper one afterwards etc etc
+    m_ready = true;
+    if (m_mode == SingleImage) {
+        setSingleImage();
+    }
 }
 
 QString Image::wallpaperPath() const
@@ -196,6 +214,10 @@ QSize Image::targetSize() const
 void Image::setTargetSize(const QSize &size)
 {
     m_targetSize = size;
+
+    if (m_mode == SingleImage) {
+        setSingleImage();
+    }
 }
 
 int Image::height() const
@@ -393,6 +415,15 @@ void Image::syncWallpaperPackage()
 
 void Image::setSingleImage()
 {
+    if (!m_ready) {
+        return;
+    }
+
+    // supposedly QSize::isEmpty() is true if "either width or height are >= 0"
+    if (!m_targetSize.width() || !m_targetSize.height()) {
+        return;
+    }
+
     const QString oldPath = m_wallpaperPath;
     if (m_wallpaper.isEmpty()) {
         useSingleImageDefaults();
