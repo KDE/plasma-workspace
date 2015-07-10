@@ -80,11 +80,6 @@ int main(int argc, char **argv)
 
             return 0;
         }
-
-        // close stdin,stdout,stderr, otherwise startkde will block
-        close(0);
-        close(1);
-        close(2);
     }
 
     //enable to send log output to /tmp/ksplash
@@ -92,6 +87,13 @@ int main(int argc, char **argv)
 //     qInstallMsgHandler(myMessageHandler);
     QQuickWindow::setDefaultAlphaBuffer(true);
     SplashApp app(argc, argv);
+
+    if (!test && !nofork) {
+        // close stdin,stdout,stderr, otherwise startkde will block
+        close(0);
+        close(1);
+        close(2);
+    }
 
     return app.exec();
 }
