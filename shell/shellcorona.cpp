@@ -196,8 +196,10 @@ ShellCorona::ShellCorona(QObject *parent)
 ShellCorona::~ShellCorona()
 {
     qDeleteAll(m_views);
+    m_views.clear();
     qDeleteAll(containments());
     qDeleteAll(m_panelViews);
+    m_panelViews.clear();
 }
 
 KPackage::Package ShellCorona::lookAndFeelPackage()
