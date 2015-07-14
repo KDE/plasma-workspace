@@ -37,11 +37,11 @@ QtLayouts.GridLayout {
     property var cfg_hiddenItems: []
     property alias cfg_showAllItems: showAllCheckBox.checked
 
-    columns: 3 // so we can indent the entries below...
+    columns: 4 // so we can indent the entries below...
 
     QtControls.CheckBox {
         id: showAllCheckBox
-        QtLayouts.Layout.columnSpan: 3
+        QtLayouts.Layout.columnSpan: iconsPage.columns
         QtLayouts.Layout.fillWidth: true
         text: i18n("Always show all entries")
     }
@@ -49,8 +49,20 @@ QtLayouts.GridLayout {
     Repeater {
         model: plasmoid.rootItem.systrayHost.allTasks
 
-        QtControls.Label {
+        QIconItem {
             QtLayouts.Layout.column: 1
+            QtLayouts.Layout.row: index + 1
+            width: units.iconSizes.small
+            height: width
+            icon: modelData.iconName || modelData.icon || ""
+        }
+    }
+
+    Repeater {
+        model: plasmoid.rootItem.systrayHost.allTasks
+
+        QtControls.Label {
+            QtLayouts.Layout.column: 2
             QtLayouts.Layout.row: index + 1
             QtLayouts.Layout.fillWidth: true
 
@@ -65,7 +77,7 @@ QtLayouts.GridLayout {
 
         QtControls.ComboBox {
             QtLayouts.Layout.minimumWidth: Math.round(units.gridUnit * 6.5) // ComboBox sizing is broken
-            QtLayouts.Layout.column: 2
+            QtLayouts.Layout.column: 3
             QtLayouts.Layout.row: index + 1
 
             enabled: !showAllCheckBox.checked

@@ -91,6 +91,7 @@ PlasmoidTask::PlasmoidTask(const QString &packageName, int appletId, Plasma::Con
 
     if (pluginInfo().isValid()) {
         setName(pluginInfo().name());
+        m_iconName = pluginInfo().icon();
     } else {
         qWarning() << "Invalid Plasmoid: " << packageName;
     }

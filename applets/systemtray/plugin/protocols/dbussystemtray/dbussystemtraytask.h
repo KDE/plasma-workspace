@@ -48,6 +48,7 @@ class DBusSystemTrayTask : public Task
     Q_PROPERTY(QIcon attIcon READ attIcon NOTIFY changedIcons)
     Q_PROPERTY(QString overlayIconName READ overlayIconName NOTIFY changedOverlayIconName)
     Q_PROPERTY(QString iconName READ iconName NOTIFY changedIconName)
+    Q_PROPERTY(QIcon icon READ icon NOTIFY changedIcons)
     Q_PROPERTY(QString attIconName READ attIconName NOTIFY changedAttIconName)
     Q_PROPERTY(QString moviePath READ moviePath NOTIFY changedMoviePath)
     Q_PROPERTY(bool isMenu READ isMenu NOTIFY changedIsMenu)
