@@ -1311,7 +1311,6 @@ void ShellCorona::checkAddPanelAction(const QStringList &sycocaChanges)
         m_addPanelAction = m_addPanelsMenu->menuAction();
         m_addPanelAction->setText(i18n("Add Panel"));
         m_addPanelAction->setData(Plasma::Types::AddAction);
-        qDebug() << "populateAddPanelsMenu" << panelContainmentPlugins.count();
         connect(m_addPanelsMenu, SIGNAL(aboutToShow()), this, SLOT(populateAddPanelsMenu()));
         connect(m_addPanelsMenu, SIGNAL(triggered(QAction*)), this, SLOT(addPanel(QAction*)));
     }
