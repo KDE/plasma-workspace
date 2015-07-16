@@ -187,10 +187,11 @@ uint NotificationsEngine::Notify(const QString &app_name, uint replaces_id,
                                  const QStringList &actions, const QVariantMap &hints, int timeout)
 {
     uint partOf = 0;
+    const QString appRealName = hints["x-kde-appname"].toString();
 
     //don't let applications spam too much, except ourself
     //needed to display all the "applet deleted" notifications and not merge them
-    if (m_activeNotifications.values().contains(app_name + summary) && app_name != QLatin1String("Plasma Workspace") && !m_alwaysReplaceAppsList.contains(app_name)) {
+    if (m_activeNotifications.values().contains(app_name + summary) && appRealName != QLatin1String("plasma_workspace") && !m_alwaysReplaceAppsList.contains(app_name)) {
         // cut off the "notification " from the source name
         partOf = m_activeNotifications.key(app_name + summary).mid(13).toUInt();
 
@@ -282,10 +283,8 @@ uint NotificationsEngine::Notify(const QString &app_name, uint replaces_id,
     notificationData.insert("isPersistent", isPersistent);
     notificationData.insert("expireTimeout", timeout);
 
-    QString appRealName;
     bool configurable = false;
-    if (hints.contains("x-kde-appname")) {
-        appRealName = hints["x-kde-appname"].toString();
+    if (!appRealName.isEmpty()) {
 
         if (m_configurableApplications.contains(appRealName)) {
             configurable = m_configurableApplications.value(appRealName);
