@@ -76,8 +76,12 @@ void KillTest::testKill_data()
     //QTest::newRow("SIGPWR")    << SIGPWR;
     QTest::newRow("SIGSYS")      << SIGSYS    << true << QProcess::CrashExit;
 #ifdef Q_OS_LINUX
+#ifdef SIGUNUSED
     QTest::newRow("SIGUNUSED")   << SIGUNUSED << true << QProcess::CrashExit;
+#endif
+#ifdef SIGSTKFLT
     QTest::newRow("SIGSTKFLT")   << SIGSTKFLT << true  << QProcess::CrashExit;
+#endif
 #endif
 }
 
@@ -148,8 +152,12 @@ void KillTest::testImmediateKill_data()
     //QTest::newRow("SIGPWR")    << SIGPWR;
     QTest::newRow("SIGSYS")      << SIGSYS;
 #ifdef Q_OS_LINUX
+#ifdef SIGSTKFLT
     QTest::newRow("SIGSTKFLT")   << SIGSTKFLT;
+#endif
+#ifdef SIGUNUSED
     QTest::newRow("SIGUNUSED")   << SIGUNUSED;
+#endif
 #endif
 }
 
