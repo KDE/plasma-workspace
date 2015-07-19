@@ -139,7 +139,7 @@ Column {
 
         font: theme.smallestFont
         text: eta > 0 ? i18nc("Speed and estimated time to completion", "%1 (%2 remaining)", speed, KCoreAddons.Format.formatSpelloutDuration(eta)) : speed
-        visible: eta > 0 || speed > 0
+        visible: eta > 0 || parseInt(speed) > 0
     }
 
 }
