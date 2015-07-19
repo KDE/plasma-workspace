@@ -753,13 +753,13 @@ bool PanelView::event(QEvent *e)
             //first, don't mess with position if the cursor is actually outside the view:
             //somebody is doing a click and drag that must not break when the cursor i outside
             if (geometry().contains(me->screenPos().toPoint()) && !containmentContainsPosition(me->windowPos())) {
-                QMouseEvent me2(me->type(),
+                auto me2 = new QMouseEvent(me->type(),
                                 positionAdjustedForContainment(me->windowPos()),
                                 positionAdjustedForContainment(me->windowPos()),
                                 positionAdjustedForContainment(me->windowPos()) + position(),
                                 me->button(), me->buttons(), me->modifiers());
 
-                QCoreApplication::sendEvent(this, &me2);
+                QCoreApplication::postEvent(this, me2);
                 return true;
             }
             break;
@@ -769,12 +769,12 @@ bool PanelView::event(QEvent *e)
             QWheelEvent *we = static_cast<QWheelEvent *>(e);
 
             if (!containmentContainsPosition(we->pos())) {
-                QWheelEvent we2(positionAdjustedForContainment(we->pos()),
+                auto we2 = new QWheelEvent(positionAdjustedForContainment(we->pos()),
                                 positionAdjustedForContainment(we->pos()) + position(),
                                 we->pixelDelta(), we->angleDelta(), we->delta(),
                                 we->orientation(), we->buttons(), we->modifiers(), we->phase());
 
-                QCoreApplication::sendEvent(this, &we2);
+                QCoreApplication::postEvent(this, we2);
                 return true;
             }
             break;
@@ -783,10 +783,10 @@ bool PanelView::event(QEvent *e)
         case QEvent::DragEnter: {
             QDragEnterEvent *de = static_cast<QDragEnterEvent *>(e);
             if (!containmentContainsPosition(de->pos())) {
-                QDragEnterEvent de2(positionAdjustedForContainment(de->pos()).toPoint(),
+                auto de2 = new QDragEnterEvent(positionAdjustedForContainment(de->pos()).toPoint(),
                                     de->possibleActions(), de->mimeData(), de->mouseButtons(), de->keyboardModifiers());
 
-                QCoreApplication::sendEvent(this, &de2);
+                QCoreApplication::postEvent(this, de2);
                 return true;
             }
             break;
@@ -797,10 +797,10 @@ bool PanelView::event(QEvent *e)
         case QEvent::DragMove: {
             QDragMoveEvent *de = static_cast<QDragMoveEvent *>(e);
             if (!containmentContainsPosition(de->pos())) {
-                QDragMoveEvent de2(positionAdjustedForContainment(de->pos()).toPoint(),
+                auto de2 = new QDragMoveEvent(positionAdjustedForContainment(de->pos()).toPoint(),
                                    de->possibleActions(), de->mimeData(), de->mouseButtons(), de->keyboardModifiers());
 
-                QCoreApplication::sendEvent(this, &de2);
+                QCoreApplication::postEvent(this, de2);
                 return true;
             }
             break;
@@ -808,10 +808,10 @@ bool PanelView::event(QEvent *e)
         case QEvent::Drop: {
             QDropEvent *de = static_cast<QDropEvent *>(e);
             if (!containmentContainsPosition(de->pos())) {
-                QDropEvent de2(positionAdjustedForContainment(de->pos()).toPoint(),
+                auto de2 = new QDropEvent(positionAdjustedForContainment(de->pos()).toPoint(),
                                de->possibleActions(), de->mimeData(), de->mouseButtons(), de->keyboardModifiers());
 
-                QCoreApplication::sendEvent(this, &de2);
+                QCoreApplication::postEvent(this, de2);
                 return true;
             }
             break;
