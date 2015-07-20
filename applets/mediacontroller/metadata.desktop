@@ -99,5 +99,6 @@ X-Plasma-StandAloneApp=true
 X-Plasma-API=declarativeappletscript
 X-Plasma-MainScript=ui/main.qml
 X-Plasma-NotificationArea=true
+X-Plasma-NotificationAreaCategory=ApplicationStatus
 X-Plasma-Provides=org.kde.plasma.multimediacontrols
 X-Plasma-DBusActivationService=org.mpris.MediaPlayer2.*

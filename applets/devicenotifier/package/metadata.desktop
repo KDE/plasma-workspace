@@ -157,6 +157,7 @@ X-Plasma-API=declarativeappletscript
 X-Plasma-MainScript=ui/devicenotifier.qml
 
 X-Plasma-NotificationArea=true
+X-Plasma-NotificationAreaCategory=Hardware
 X-Plasma-Provides=org.kde.plasma.removabledevices
 
 X-KDE-PluginInfo-Author=Viranch Mehta, Jacopo De Simoi

@@ -156,6 +156,7 @@ X-Plasma-API=declarativeappletscript
 
 X-Plasma-MainScript=ui/batterymonitor.qml
 X-Plasma-NotificationArea=true
+X-Plasma-NotificationAreaCategory=Hardware
 X-Plasma-Provides=org.kde.plasma.powermanagement
 
 X-KDE-PluginInfo-Author=Sebastian Kügler, Kai Uwe Broulik

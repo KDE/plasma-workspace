@@ -81,6 +81,7 @@ X-KDE-ServiceTypes=Plasma/Applet,Plasma/PopupApplet
 X-Plasma-API=declarativeappletscript
 X-Plasma-MainScript=ui/clipboard.qml
 X-Plasma-NotificationArea=true
+X-Plasma-NotificationAreaCategory=SystemServices
 
 X-KDE-PluginInfo-Author=Martin Gräßlin
 X-KDE-PluginInfo-Email=mgraesslin@kde.org

@@ -165,3 +165,4 @@ X-KDE-Library=plasma_applet_notifications
 X-Plasma-MainScript=ui/main.qml
 X-Plasma-RequiredExtensions=LaunchApp
 X-Plasma-NotificationArea=true
+X-Plasma-NotificationAreaCategory=ApplicationStatus
