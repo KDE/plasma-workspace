@@ -100,7 +100,9 @@ MouseArea {
                 visible: model.removable && !model.pendingDeletion
                 onClicked: {
                     imageWallpaper.wallpaperModel.setPendingDeletion(index, true);
-                    wallpapersGrid.currentIndex = (index + 1) % wallpapersGrid.count;
+                    if (wallpapersGrid.currentIndex === index) {
+                        wallpapersGrid.currentIndex = (index + 1) % wallpapersGrid.count;
+                    }
                 }
                 opacity: wallpaperDelegate.containsMouse ? 1 : 0
                 Behavior on opacity {
