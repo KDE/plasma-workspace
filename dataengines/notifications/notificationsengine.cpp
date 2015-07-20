@@ -245,12 +245,17 @@ uint NotificationsEngine::Notify(const QString &app_name, uint replaces_id,
     const int AVERAGE_WORD_LENGTH = 6;
     const int WORD_PER_MINUTE = 250;
     int count = summary.length() + body.length();
-    timeout = 60000 * count / AVERAGE_WORD_LENGTH / WORD_PER_MINUTE;
 
-    // Add two seconds for the user to notice the notification, and ensure
-    // it last at least five seconds, otherwise all the user see is a
-    // flash
-    timeout = 2000 + qMax(timeout, 3000);
+    // -1 is "server default", 0 is persistent with "server default" display time,
+    // anything more should honor the setting
+    if (timeout <= 0) {
+        timeout = 60000 * count / AVERAGE_WORD_LENGTH / WORD_PER_MINUTE;
+
+        // Add two seconds for the user to notice the notification, and ensure
+        // it last at least five seconds, otherwise all the user see is a
+        // flash
+        timeout = 2000 + qMax(timeout, 3000);
+    }
 
     const QString source = QString("notification %1").arg(id);
 
