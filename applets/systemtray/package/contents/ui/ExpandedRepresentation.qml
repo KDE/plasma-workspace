@@ -92,7 +92,7 @@ KQuickControlsAddons.MouseEventListener {
         }
         spacing: units.smallSpacing
 
-        model: host.hiddenTasks
+        model: hiddenTasksModel
 
         delegate: TaskListDelegate {}
         visible: {

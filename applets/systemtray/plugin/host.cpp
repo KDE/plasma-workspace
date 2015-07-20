@@ -64,8 +64,6 @@ public:
     HostPrivate(Host *host)
         : q(host),
           rootItem(0),
-          shownTasksModel(new TaskListModel(host)),
-          hiddenTasksModel(new TaskListModel(host)),
           allTasksModel(new TaskListModel(host)),
           showAllItems(false),
           availablePlasmoidsModel(Q_NULLPTR),
@@ -82,8 +80,6 @@ public:
 
     QSet<Task::Category> shownCategories;
 
-    TaskListModel *shownTasksModel;
-    TaskListModel *hiddenTasksModel;
     TaskListModel *allTasksModel;
 
     bool showAllItems;
@@ -127,27 +123,6 @@ void Host::initTasks()
     }
 }
 
-void Host::populateModels()
-{
-    foreach (Task *task, d->tasks) {
-        if (d->shownCategories.contains(task->category())) {
-            if (isTaskShown(task)) {
-                d->hiddenTasksModel->removeTask(task);
-                d->shownTasksModel->addTask(task);
-            } else {
-                d->shownTasksModel->removeTask(task);
-                d->hiddenTasksModel->addTask(task);
-            }
-        }
-    }
-}
-
-bool Host::isTaskShown(Task *task) const
-{
-    return d->showAllItems || (!d->forcedHiddenItems.contains(task->taskId()) &&
-        (d->forcedShownItems.contains(task->taskId()) || d->showTask(task)));
-}
-
 QQuickItem* Host::rootItem()
 {
     return d->rootItem;
@@ -182,8 +157,7 @@ void Host::setForcedShownItems(const QStringList &items)
     }
 
     d->forcedShownItems = items;
-
-    populateModels();
+    emit forcedShownItemsChanged();
 }
 
 QStringList Host::forcedHiddenItems() const
@@ -198,8 +172,7 @@ void Host::setForcedHiddenItems(const QStringList &items)
     }
 
     d->forcedHiddenItems = items;
-
-    populateModels();
+    emit forcedHiddenItemsChanged();
 }
 
 bool Host::showAllItems() const
@@ -214,8 +187,7 @@ void Host::setShowAllItems(bool showAllItems)
     }
 
     d->showAllItems = showAllItems;
-
-    populateModels();
+    emit showAllItemsChanged();
 }
 
 void Host::setRootItem(QQuickItem* item)
@@ -238,25 +210,12 @@ void Host::setCategoryShown(int cat, bool shown)
     if (shown) {
         if (!d->shownCategories.contains((Task::Category)cat)) {
             d->shownCategories.insert((Task::Category)cat);
-            foreach (Task *task, d->tasks) {
-                if (task->category() == cat) {
-                    if (isTaskShown(task)) {
-                        d->shownTasksModel->addTask(task);
-                    } else {
-                        d->hiddenTasksModel->addTask(task);
-                    }
-                }
-            }
+            emit shownCategoriesChanged();
         }
     } else {
         if (d->shownCategories.contains((Task::Category)cat)) {
             d->shownCategories.remove((Task::Category)cat);
-            foreach (Task *task, d->tasks) {
-                if (task->category() == cat) {
-                    d->shownTasksModel->removeTask(task);
-                    d->hiddenTasksModel->removeTask(task);
-                }
-            }
+            emit shownCategoriesChanged();
         }
     }
 }
@@ -269,17 +228,9 @@ QList<Task*> Host::tasks() const
 void Host::addTask(Task *task)
 {
     connect(task, SIGNAL(destroyed(SystemTray::Task*)), this, SLOT(removeTask(SystemTray::Task*)));
-    connect(task, SIGNAL(changedStatus()), this, SLOT(slotTaskStatusChanged()));
+    connect(task, &Task::changedStatus, this, &Host::taskStatusChanged);
 
     d->tasks << task;
-
-    if (d->shownCategories.contains(task->category())) {
-        if (isTaskShown(task)) {
-            d->shownTasksModel->addTask(task);
-        } else {
-            d->hiddenTasksModel->addTask(task);
-        }
-    }
 
     d->allTasksModel->addTask(task);
 }
@@ -288,28 +239,7 @@ void Host::removeTask(Task *task)
 {
     d->tasks.removeAll(task);
     disconnect(task, 0, this, 0);
-    d->shownTasksModel->removeTask(task);
-    d->hiddenTasksModel->removeTask(task);
     d->allTasksModel->removeTask(task);
-}
-
-void Host::slotTaskStatusChanged()
-{
-    Task* task = qobject_cast<Task*>(sender());
-
-    if (task) {
-        taskStatusChanged(task);
-    }
-}
-
-QAbstractItemModel* Host::hiddenTasks()
-{
-    return d->hiddenTasksModel;
-}
-
-QAbstractItemModel* Host::shownTasks()
-{
-    return d->shownTasksModel;
 }
 
 QAbstractItemModel* Host::allTasks()
@@ -368,23 +298,6 @@ void HostPrivate::setupProtocol(Protocol *protocol)
 {
     QObject::connect(protocol, SIGNAL(taskCreated(SystemTray::Task*)), q, SLOT(addTask(SystemTray::Task*)));
     protocol->init();
-}
-
-void Host::taskStatusChanged(SystemTray::Task *task)
-{
-    if (!d->shownCategories.contains(task->category())) {
-        return;
-    }
-
-    if (task) {
-        if (isTaskShown(task)) {
-            d->hiddenTasksModel->removeTask(task);
-            d->shownTasksModel->addTask(task);
-        } else {
-            d->hiddenTasksModel->addTask(task);
-            d->shownTasksModel->removeTask(task);
-        }
-    }
 }
 
 QStringList Host::categories() const

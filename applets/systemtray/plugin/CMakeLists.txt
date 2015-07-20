@@ -7,6 +7,7 @@ set(systemtrayplugin_SRCS
     protocol.cpp
     task.cpp
     tasklistmodel.cpp
+    tasksproxymodel.cpp
 
     protocols/dbussystemtray/dbussystemtraytask.cpp
     protocols/dbussystemtray/dbussystemtrayprotocol.cpp

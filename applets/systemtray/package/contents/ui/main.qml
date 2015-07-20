@@ -62,9 +62,8 @@ Item {
         }
     }
 
-    Plasmoid.compactRepresentation: CompactRepresentation {
-        systrayhost: host
-    }
+    Plasmoid.compactRepresentation: CompactRepresentation { }
+
     Plasmoid.fullRepresentation: ExpandedRepresentation {
         Layout.minimumWidth: Layout.minimumHeight * 1.75
         Layout.minimumHeight: units.gridUnit * 14
@@ -140,5 +139,17 @@ Item {
         showAllItems: plasmoid.configuration.showAllItems
         forcedShownItems: plasmoid.configuration.shownItems
         forcedHiddenItems: plasmoid.configuration.hiddenItems
+    }
+
+    SystemTray.TasksProxyModel {
+        id: shownTasksModel
+        host: host
+        category: SystemTray.TasksProxyModel.ShownTasksCategory
+    }
+
+    SystemTray.TasksProxyModel {
+        id: hiddenTasksModel
+        host: host
+        category: SystemTray.TasksProxyModel.HiddenTasksCategory
     }
 }

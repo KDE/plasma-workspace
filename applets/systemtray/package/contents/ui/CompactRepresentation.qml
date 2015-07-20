@@ -40,8 +40,6 @@ Item {
     Layout.fillWidth: false
     Layout.fillHeight: false
 
-    property QtObject systrayhost: undefined
-
     Connections {
         target: root
         onExpandedTaskChanged: {
@@ -110,7 +108,7 @@ Item {
 
         interactive: false
 
-        model: systrayhost.shownTasks
+        model: shownTasksModel
 
         delegate: taskDelegateComponent
     }
@@ -121,7 +119,7 @@ Item {
 
         width: root.vertical ? compactRepresentation.width : units.iconSizes.smallMedium
         height: !root.vertical ? compactRepresentation.height : units.iconSizes.smallMedium
-        visible: systrayhost.hiddenTasks.count > 0
+        visible: hiddenTasksModel.count > 0
         anchors {
             right: parent.right
             bottom: parent.bottom

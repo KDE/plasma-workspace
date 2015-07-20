@@ -45,8 +45,6 @@ class Host : public QObject
 {
     Q_OBJECT
 
-    Q_PROPERTY(QAbstractItemModel* hiddenTasks READ hiddenTasks CONSTANT)
-    Q_PROPERTY(QAbstractItemModel* shownTasks READ shownTasks CONSTANT)
     Q_PROPERTY(QAbstractItemModel* allTasks READ allTasks CONSTANT)
 
     Q_PROPERTY(QAbstractItemModel* availablePlasmoids READ availablePlasmoids CONSTANT)
@@ -58,7 +56,6 @@ class Host : public QObject
     Q_PROPERTY(bool showAllItems READ showAllItems WRITE setShowAllItems NOTIFY showAllItemsChanged)
     Q_PROPERTY(QStringList forcedHiddenItems READ forcedHiddenItems WRITE setForcedHiddenItems NOTIFY forcedHiddenItemsChanged)
     Q_PROPERTY(QStringList forcedShownItems READ forcedShownItems WRITE setForcedShownItems NOTIFY forcedShownItemsChanged)
-
 
     Q_PROPERTY(QQuickItem* rootItem READ rootItem WRITE setRootItem NOTIFY rootItemChanged)
 
@@ -90,8 +87,6 @@ public Q_SLOTS:
     void init();
     bool isCategoryShown(int cat) const;
     void setCategoryShown(int cat, bool shown);
-    QAbstractItemModel* hiddenTasks();
-    QAbstractItemModel* shownTasks();
     QAbstractItemModel* allTasks();
     QAbstractItemModel* availablePlasmoids();
     QStringList defaultPlasmoids() const;
@@ -107,18 +102,14 @@ Q_SIGNALS:
     void showAllItemsChanged();
     void forcedShownItemsChanged();
     void forcedHiddenItemsChanged();
+    void taskStatusChanged();
 
 private Q_SLOTS:
     void addTask(SystemTray::Task *task);
     void removeTask(SystemTray::Task *task);
-    void slotTaskStatusChanged();
-    void taskStatusChanged(SystemTray::Task *task);
 
 private:
     void initTasks();
-    void populateModels();
-
-    bool isTaskShown(Task *task) const;
 
     HostPrivate* d;
 
