@@ -92,6 +92,17 @@ PlasmoidTask::PlasmoidTask(const QString &packageName, int appletId, Plasma::Con
     if (pluginInfo().isValid()) {
         setName(pluginInfo().name());
         m_iconName = pluginInfo().icon();
+
+        const QString category = pluginInfo().property("X-Plasma-NotificationAreaCategory").toString();
+        if (!category.isEmpty()) {
+
+            int index = metaObject()->indexOfEnumerator("Category");
+            int key = metaObject()->enumerator(index).keyToValue(category.toLatin1());
+
+            if (key != -1) {
+                setCategory(static_cast<Task::Category>(key));
+            }
+        }
     } else {
         qWarning() << "Invalid Plasmoid: " << packageName;
     }
