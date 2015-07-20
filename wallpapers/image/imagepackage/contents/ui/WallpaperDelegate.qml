@@ -98,7 +98,10 @@ MouseArea {
                 tooltip: i18nd("plasma_applet_org.kde.image", "Remove wallpaper")
                 flat: false
                 visible: model.removable && !model.pendingDeletion
-                onClicked: imageWallpaper.wallpaperModel.setPendingDeletion(index, true)
+                onClicked: {
+                    imageWallpaper.wallpaperModel.setPendingDeletion(index, true);
+                    wallpapersGrid.currentIndex = (index + 1) % wallpapersGrid.count;
+                }
                 opacity: wallpaperDelegate.containsMouse ? 1 : 0
                 Behavior on opacity {
                     PropertyAnimation {
