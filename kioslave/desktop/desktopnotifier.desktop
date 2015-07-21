@@ -19,6 +19,7 @@ Name[sr@ijekavian]=Надзорник фасцикли
 Name[sr@ijekavianlatin]=Nadzornik fascikli
 Name[sr@latin]=Nadzornik fascikli
 Name[sv]=Katalogövervakare
+Name[tr]=Dizin İzleyici
 Name[uk]=Спостереження за каталогами
 Name[x-test]=xxDirectory Watcherxx
 ServiceTypes=KDEDModule
@@ -47,6 +48,7 @@ Comment[sr@ijekavian]=Надгледа измене у фасциклама
 Comment[sr@ijekavianlatin]=Nadgleda izmene u fasciklama
 Comment[sr@latin]=Nadgleda izmene u fasciklama
 Comment[sv]=Övervakar om kataloger ändras
+Comment[tr]=Dizinleri değişiklik için izler
 Comment[uk]=Веде спостереження за змінами у каталогах
 Comment[x-test]=xxMonitors directories for changesxx
 
