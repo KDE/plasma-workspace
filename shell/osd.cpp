@@ -125,7 +125,21 @@ void Osd::showText(const QString &icon, const QString &text)
 
 void Osd::showOsd()
 {
-    m_osdObject->rootObject()->setProperty("visible", true);
+    m_osdTimer->stop();
+    auto *rootObject = m_osdObject->rootObject();
+
+    // if our OSD understands animating the opacity, do it;
+    // otherwise just show it to not break existing lnf packages
+    if (rootObject->property("animateOpacity").isValid()) {
+        rootObject->setProperty("animateOpacity", false);
+        rootObject->setProperty("opacity", 1);
+        rootObject->setProperty("visible", true);
+        rootObject->setProperty("animateOpacity", true);
+        rootObject->setProperty("opacity", 0);
+    } else {
+        rootObject->setProperty("visible", true);
+    }
+
     m_osdTimer->start(m_timeout);
 }
 
