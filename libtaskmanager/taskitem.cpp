@@ -770,6 +770,10 @@ QUrl TaskItem::launcherUrlFromTask(GroupManager *groupManager, Task *task, Start
 
 QIcon TaskItem::launcherIconFromUrl(const QUrl &url)
 {
+    if (url.isEmpty()) {
+        return QIcon();
+    }
+
     if (url.isLocalFile() && KDesktopFile::isDesktopFile(url.toLocalFile())) {
         KDesktopFile f(url.toLocalFile());
 
