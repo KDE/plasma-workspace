@@ -238,7 +238,7 @@ void LauncherItem::launch()
 
     //NOTE: preferred is NOT a protocol, it's just a magic string
     if (d->url.scheme() == "preferred") {
-        KService::Ptr service = KService::serviceByStorageId(defaultApplication());
+        KService::Ptr service = KService::serviceByStorageId(defaultApplication(d->url));
 
         if (!service) {
             return;
@@ -262,9 +262,9 @@ QUrl LauncherItem::launcherUrl() const
 }
 
 //Ugly hack written by Aaron Seigo from plasmagenericshell/scripting/scriptengine.cpp
-QString LauncherItem::defaultApplication() const
+QString LauncherItem::defaultApplication(const QUrl &url)
 {
-    const QString application = d->url.host();
+    const QString application = url.host();
     if (application.isEmpty()) {
         return QString();
     }
@@ -380,7 +380,7 @@ void LauncherItem::setLauncherUrl(const QUrl& url)
         }
     } else if (d->url.scheme() == "preferred") {
         //NOTE: preferred is NOT a protocol, it's just a magic string
-        const KService::Ptr service = KService::serviceByStorageId(defaultApplication());
+        const KService::Ptr service = KService::serviceByStorageId(defaultApplication(d->url));
 
         if (service) {
             QString desktopFile = QStandardPaths::locate(QStandardPaths::ApplicationsLocation, service->entryPath());

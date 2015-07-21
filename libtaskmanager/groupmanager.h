@@ -60,6 +60,7 @@ class TASKMANAGER_EXPORT GroupManager: public QObject
     Q_PROPERTY(bool showOnlyCurrentActivity READ showOnlyCurrentActivity WRITE setShowOnlyCurrentActivity NOTIFY showOnlyCurrentActivityChanged)
     Q_PROPERTY(bool showOnlyMinimized READ showOnlyMinimized WRITE setShowOnlyMinimized NOTIFY showOnlyMinimizedChanged)
     Q_PROPERTY(bool separateLaunchers READ separateLaunchers WRITE setSeparateLaunchers NOTIFY separateLaunchersChanged)
+    Q_PROPERTY(bool alwaysUseLauncherIcons READ alwaysUseLauncherIcons WRITE setAlwaysUseLauncherIcons NOTIFY alwaysUseLauncherIconsChanged)
     Q_PROPERTY(QList<QUrl> launcherList READ launcherList WRITE setLauncherList NOTIFY launcherListChanged)
 
 public:
@@ -189,6 +190,12 @@ public:
     /** set if launchers should been show separate from tasks */
     void setSeparateLaunchers(bool s);
 
+    /** keep using launcher icon for running tasks */
+    bool alwaysUseLauncherIcons() const;
+
+    /** set whether to keep using launcher icons for running tasks */
+    void setAlwaysUseLauncherIcons(bool keep);
+
     /** Should grouping *always* happen? */
     bool forceGrouping() const;
 
@@ -225,6 +232,7 @@ Q_SIGNALS:
     void showOnlyCurrentActivityChanged(bool);
     void showOnlyMinimizedChanged(bool);
     void separateLaunchersChanged(bool);
+    void alwaysUseLauncherIconsChanged(bool);
 
 private:
     Q_PRIVATE_SLOT(d, void currentDesktopChanged(int))

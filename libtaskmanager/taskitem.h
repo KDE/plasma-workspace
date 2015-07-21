@@ -35,6 +35,7 @@ namespace TaskManager
 {
 
 class GroupManager;
+class TaskItemPrivate;
 
 /**
  * Wrapper class so we do not have to use the Task class directly and the Task* remains guarded
@@ -63,6 +64,7 @@ public:
     TASKMANAGER_DEPRECATED bool isGroupItem() const;
 
     QIcon icon() const;
+
     QString name() const;
     QString taskName() const;
 
@@ -87,7 +89,11 @@ public:
     void setLauncherUrl(const AbstractGroupableItem *item);
     QUrl launcherUrl() const;
     static QUrl launcherUrlFromTask(GroupManager *groupManager, Task *task, Startup *startup = 0);
+    static QIcon launcherIconFromUrl(const QUrl &url);
     void resetLauncherCheck();
+
+    bool announceIconChanges() const;
+    void setAnnounceIconChanges(bool announce);
 
 public Q_SLOTS:
     void toDesktop(int);
@@ -118,8 +124,10 @@ Q_SIGNALS:
     void gotTaskPointer();
 
 private:
-    class Private;
-    Private * const d;
+    Q_PRIVATE_SLOT(d, void filterChange(::TaskManager::TaskChanges change))
+
+    friend class TaskItemPrivate;
+    TaskItemPrivate * const d;
 };
 
 } // TaskManager namespace

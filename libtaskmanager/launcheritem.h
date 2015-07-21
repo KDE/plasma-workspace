@@ -89,7 +89,7 @@ public:
     void setLauncherUrl(const QUrl &url);
 
     //preferred applications hack
-    QString defaultApplication() const;
+    static QString defaultApplication(const QUrl &url);
 
 public Q_SLOTS:
     void toDesktop(int);

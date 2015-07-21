@@ -24,11 +24,13 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 // Own
 #include "taskitem.h"
+#include "launcheritem.h"
 
 #include <KActivities/Info>
 #include <KConfig>
 #include <KConfigGroup>
 #include <KDesktopFile>
+#include <KFileItem>
 #include <KService>
 #include <KServiceTypeTrader>
 #include <processcore/processes.h>
@@ -45,24 +47,36 @@ namespace TaskManager
 {
 
 
-class TaskItem::Private
+class TaskItemPrivate
 {
 public:
-    Private()
-        : checkedForLauncher(false) {
+    TaskItemPrivate(TaskItem *item)
+        : q(item),
+        announceIconChanges(false),
+        checkedForLauncher(false) {
     }
 
+    void filterChange(::TaskManager::TaskChanges change);
+    TaskItem *q;
     QWeakPointer<Task> task;
     QWeakPointer<Startup> startupTask;
     QUrl launcherUrl;
+    QIcon launcherIcon;
+    bool announceIconChanges;
     bool checkedForLauncher;
     QString taskName;
 };
 
+void TaskItemPrivate::filterChange(::TaskManager::TaskChanges change)
+{
+    if (announceIconChanges || change != ::TaskManager::TaskChange::IconChanged) {
+        emit q->changed(change);
+    }
+}
 
 TaskItem::TaskItem(QObject *parent, Task *task)
     : AbstractGroupableItem(parent),
-      d(new Private)
+      d(new TaskItemPrivate(this))
 {
     setTaskPointer(task);
 }
@@ -70,10 +84,10 @@ TaskItem::TaskItem(QObject *parent, Task *task)
 
 TaskItem::TaskItem(QObject *parent, Startup *task)
     : AbstractGroupableItem(parent),
-      d(new Private)
+      d(new TaskItemPrivate(this))
 {
     d->startupTask = task;
-    connect(task, SIGNAL(changed(::TaskManager::TaskChanges)), this, SIGNAL(changed(::TaskManager::TaskChanges)));
+    connect(task, SIGNAL(changed(::TaskManager::TaskChanges)), this, SLOT(filterChange(::TaskManager::TaskChanges)));
     connect(task, SIGNAL(destroyed(QObject*)), this, SLOT(taskDestroyed())); //this item isn't useful anymore if the Task was closed
 }
 
@@ -119,7 +133,7 @@ void TaskItem::setTaskPointer(Task *task)
         d->task = task;
 
         if (task) {
-            connect(task, SIGNAL(changed(::TaskManager::TaskChanges)), this, SIGNAL(changed(::TaskManager::TaskChanges)));
+            connect(task, SIGNAL(changed(::TaskManager::TaskChanges)), this, SLOT(filterChange(::TaskManager::TaskChanges)));
             connect(task, SIGNAL(destroyed(QObject*)), this, SLOT(taskDestroyed()));
             emit gotTaskPointer();
         }
@@ -166,7 +180,19 @@ WindowList TaskItem::winIds() const
 QIcon TaskItem::icon() const
 {
     if (d->task) {
-        return d->task.data()->icon();
+        if (static_cast<GroupManager *>(parent())->alwaysUseLauncherIcons()) {
+            if (d->launcherIcon.isNull()) {
+                d->launcherIcon = launcherIconFromUrl(launcherUrl());
+            }
+
+            if (!d->launcherIcon.isNull()) {
+                return d->launcherIcon;
+            } else {
+                return d->task.data()->icon();
+            }
+        } else {
+            return d->task.data()->icon();
+        }
     }
 
     if (d->startupTask) {
@@ -174,6 +200,16 @@ QIcon TaskItem::icon() const
     }
 
     return QIcon();
+}
+
+bool TaskItem::announceIconChanges() const
+{
+    return d->announceIconChanges;
+}
+
+void TaskItem::setAnnounceIconChanges(bool announce)
+{
+    d->announceIconChanges = announce;
 }
 
 QString TaskItem::name() const
@@ -437,7 +473,13 @@ void TaskItem::setLauncherUrl(const QUrl &url)
     if (!d->launcherUrl.isEmpty()) {
         return;
     }
+
     d->launcherUrl = url;
+
+    if (static_cast<GroupManager *>(parent())->alwaysUseLauncherIcons()) {
+        d->launcherIcon = launcherIconFromUrl(url);
+    }
+
     d->taskName = QString(); // Cause name to be re-generated...
 
     KConfig cfg("taskmanagerrulesrc");
@@ -451,7 +493,13 @@ void TaskItem::setLauncherUrl(const AbstractGroupableItem *item)
     if (!d->launcherUrl.isEmpty() || !item) {
         return;
     }
+
     d->launcherUrl = item->launcherUrl();
+
+    if (static_cast<GroupManager *>(parent())->alwaysUseLauncherIcons()) {
+        d->launcherIcon = launcherIconFromUrl(d->launcherUrl);
+    }
+
     d->taskName = QString(); // Cause name to be re-generated...
 }
 
@@ -716,6 +764,32 @@ QUrl TaskItem::launcherUrlFromTask(GroupManager *groupManager, Task *task, Start
     return launcherUrl;
 }
 
+QIcon TaskItem::launcherIconFromUrl(const QUrl &url)
+{
+    if (url.isLocalFile() && KDesktopFile::isDesktopFile(url.toLocalFile())) {
+        KDesktopFile f(url.toLocalFile());
+
+        if (f.tryExec()) {
+            return QIcon::fromTheme(f.readIcon());
+        }
+    } else if (url.scheme() == "preferred") {
+        //NOTE: preferred is NOT a protocol, it's just a magic string
+        const KService::Ptr service = KService::serviceByStorageId(LauncherItem::defaultApplication(url));
+
+        if (service) {
+            QString desktopFile = QStandardPaths::locate(QStandardPaths::ApplicationsLocation, service->entryPath());
+            KDesktopFile f(desktopFile);
+
+            return QIcon::fromTheme(f.readIcon());
+        }
+    } else {
+        const KFileItem fileItem(url);
+        return QIcon::fromTheme(fileItem.iconName());
+    }
+
+    return QIcon();
+}
+
 void TaskItem::resetLauncherCheck()
 {
     if (d->launcherUrl.isEmpty()) {
@@ -749,4 +823,4 @@ bool TaskItem::demandsAttention() const
 
 } // TaskManager namespace
 
-
+#include "moc_taskitem.cpp"
