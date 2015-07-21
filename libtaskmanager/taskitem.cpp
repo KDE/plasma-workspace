@@ -210,6 +210,10 @@ bool TaskItem::announceIconChanges() const
 void TaskItem::setAnnounceIconChanges(bool announce)
 {
     d->announceIconChanges = announce;
+
+    if (announce) {
+        emit changed(::TaskManager::TaskChange::IconChanged);
+    }
 }
 
 QString TaskItem::name() const
