@@ -44,6 +44,9 @@ Item {
     // This is the index in the list of user selected timezones
     property int tzIndex: 0
 
+    // if the date/timezone cannot be fit with the smallest font to its designated space
+    readonly property bool tooSmall: Math.round(2 * (main.height / 5)) <= theme.smallestFont.pixelSize
+
     onDisplayTimezoneAsCodeChanged: { setupLabels(); }
     onStateChanged: { setupLabels(); }
 
@@ -56,7 +59,7 @@ Item {
     states: [
         State {
             name: "horizontalPanel"
-            when: plasmoid.formFactor == PlasmaCore.Types.Horizontal
+            when: plasmoid.formFactor == PlasmaCore.Types.Horizontal && !main.tooSmall
 
             PropertyChanges {
                 target: main
@@ -84,7 +87,8 @@ Item {
                 width: main.showDate ? timezoneLabel.paintedWidth : timeLabel.width
 
                 fontSizeMode: Text.VerticalFit
-                minimumPixelSize: 0
+                minimumPointSize: 1
+                font.pointSize: 1024
                 elide: Text.ElideNone
                 horizontalAlignment: Text.AlignHCenter
             }
@@ -108,6 +112,59 @@ Item {
                 target: sizehelper
 
                 height: main.showDate || timezoneLabel.visible ?  Math.round(3 * (main.height / 5)) : main.height
+                width: sizehelper.paintedWidth
+
+                fontSizeMode: Text.VerticalFit
+            }
+        },
+
+        State {
+            name: "horizontalPanelSmall"
+            when: plasmoid.formFactor == PlasmaCore.Types.Horizontal && main.tooSmall
+
+            PropertyChanges {
+                target: main
+                Layout.fillHeight: true
+                Layout.fillWidth: false
+                Layout.minimumWidth: labelsFlow.width
+                Layout.maximumWidth: Layout.minimumWidth
+
+            }
+
+            PropertyChanges {
+                target: timeLabel
+
+                height: sizehelper.height
+                width: timeLabel.paintedWidth
+
+                wrapMode: Text.NoWrap
+                fontSizeMode: Text.VerticalFit
+                font.pointSize: theme.defaultFont.pointSize
+            }
+
+            PropertyChanges {
+                target: timezoneLabel
+
+                height: sizehelper.height
+                width: timezoneLabel.paintedWidth
+
+                fontSizeMode: Text.VerticalFit
+                minimumPointSize: 1
+                font.pointSize: theme.defaultFont.pointSize
+                elide: Text.ElideNone
+                horizontalAlignment: Text.AlignHCenter
+            }
+
+            PropertyChanges {
+                target: labelsFlow
+
+                flow: Flow.LeftToRight
+            }
+
+            PropertyChanges {
+                target: sizehelper
+
+                height: main.height
                 width: sizehelper.paintedWidth
 
                 fontSizeMode: Text.VerticalFit
@@ -275,7 +332,43 @@ Item {
         anchors.horizontalCenter: main.horizontalCenter
 
         flow: Flow.TopToBottom
-        spacing: flow == Flow.LeftToRight && timezoneLabel.visible ? units.smallSpacing : 0
+        spacing: flow == Flow.LeftToRight && (timezoneLabel.visible || main.tooSmall) ? units.smallSpacing : 0
+
+        Components.Label {
+            id: dateLabelLeft
+
+            height: sizehelper.height
+            visible: main.showDate && main.tooSmall
+
+            font {
+                weight: timeLabel.font.weight
+                italic: timeLabel.font.italic
+                pointSize: theme.defaultFont.pointSize
+            }
+            minimumPixelSize: 0
+
+            fontSizeMode: Text.VerticalFit
+
+            horizontalAlignment: Text.AlignHCenter
+            verticalAlignment: Text.AlignVCenter
+        }
+
+        Item {
+            height: dateLabelLeft.height
+            width: 1
+            visible: main.showDate && main.tooSmall
+
+            Rectangle {
+                id: delimiter
+
+                height: dateLabelLeft.font.pixelSize
+                width: 1
+                anchors.verticalCenter: parent.verticalCenter
+
+                color: theme.textColor
+                opacity: 0.4
+            }
+        }
 
         Components.Label  {
             id: timeLabel
@@ -321,7 +414,7 @@ Item {
         id: dateLabel
 
         anchors.top: labelsFlow.bottom
-        visible: main.showDate
+        visible: main.showDate && !main.tooSmall
 
         font.weight: timeLabel.font.weight
         font.italic: timeLabel.font.italic
@@ -383,7 +476,7 @@ Item {
         if (showTimezone) {
             timezoneString = plasmoid.configuration.displayTimezoneAsCode ? dataSource.data[plasmoid.configuration.lastSelectedTimezone]["Timezone Abbreviation"]
                                                                           : TimezonesI18n.i18nCity(dataSource.data[plasmoid.configuration.lastSelectedTimezone]["Timezone City"]);
-            timezoneLabel.text = main.showDate && plasmoid.formFactor == PlasmaCore.Types.Horizontal ? "(" + timezoneString + ")" : timezoneString;
+            timezoneLabel.text = (main.showDate || main.tooSmall) && plasmoid.formFactor == PlasmaCore.Types.Horizontal ? "(" + timezoneString + ")" : timezoneString;
         } else {
             // this clears the label and that makes it hidden
             timezoneLabel.text = timezoneString;
@@ -391,10 +484,15 @@ Item {
 
 
         if (main.showDate) {
-            dateLabel.text = Qt.formatDate(main.currentTime, Qt.locale().dateFormat(main.dateFormat));
+            if (main.tooSmall) {
+                dateLabelLeft.text = Qt.formatDate(main.currentTime, Qt.locale().dateFormat(main.dateFormat));
+            } else {
+                dateLabel.text = Qt.formatDate(main.currentTime, Qt.locale().dateFormat(main.dateFormat));
+            }
         } else {
             // clear it so it doesn't take space in the layout
             dateLabel.text = "";
+            dateLabelLeft.text = "";
         }
 
         if (sizehelper.text != st) {
