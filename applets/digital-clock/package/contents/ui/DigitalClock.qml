@@ -33,7 +33,15 @@ Item {
     property bool showSeconds: plasmoid.configuration.showSeconds
     property bool showLocalTimezone: plasmoid.configuration.showLocalTimezone
     property bool showDate: plasmoid.configuration.showDate
-    property int dateFormat: plasmoid.configuration.dateFormat == "longDate" ? Locale.LongFormat : Locale.ShortFormat
+    property int dateFormat: {
+        if (plasmoid.configuration.dateFormat === "longDate") {
+            return  Qt.SystemLocaleLongDate;
+        } else if (plasmoid.configuration.dateFormat === "isoDate") {
+            return Qt.ISODate;
+        }
+
+        return Qt.SystemLocaleShortDate;
+    }
 
     property string lastSelectedTimezone: plasmoid.configuration.lastSelectedTimezone
     property bool displayTimezoneAsCode: plasmoid.configuration.displayTimezoneAsCode
@@ -46,6 +54,11 @@ Item {
 
     // if the date/timezone cannot be fit with the smallest font to its designated space
     readonly property bool tooSmall: Math.round(2 * (main.height / 5)) <= theme.smallestFont.pixelSize
+
+    onDateFormatChanged: {
+        setupLabels();
+        updateToolTip();
+    }
 
     onDisplayTimezoneAsCodeChanged: { setupLabels(); }
     onStateChanged: { setupLabels(); }
@@ -485,9 +498,9 @@ Item {
 
         if (main.showDate) {
             if (main.tooSmall) {
-                dateLabelLeft.text = Qt.formatDate(main.currentTime, Qt.locale().dateFormat(main.dateFormat));
+                dateLabelLeft.text = Qt.formatDate(main.currentTime, main.dateFormat);
             } else {
-                dateLabel.text = Qt.formatDate(main.currentTime, Qt.locale().dateFormat(main.dateFormat));
+                dateLabel.text = Qt.formatDate(main.currentTime, main.dateFormat);
             }
         } else {
             // clear it so it doesn't take space in the layout
@@ -501,7 +514,7 @@ Item {
     }
 
     function updateToolTip() {
-        var timezoneString = Qt.formatDate(root.tzDate, root.dateFormatString);
+        var timezoneString = Qt.formatDate(root.tzDate, plasmoid.configuration.dateFormat === "isoDate" ? Qt.ISODate : root.dateFormatString);
         if (plasmoid.configuration.selectedTimeZones.length > 1) {
             timezoneString += "<br />";
             for (var i = 0; i < plasmoid.configuration.selectedTimeZones.length; ++i) {
@@ -545,8 +558,8 @@ Item {
         }
 
         if (showDate) {
-            returnString += (addlinebreaks ? "<br/>" + Qt.formatDate(dateTime, Qt.locale().dateFormat(main.dateFormat))
-                                           : " " + Qt.formatDate(dateTime, Qt.locale().dateFormat(main.dateFormat)));
+            returnString += (addlinebreaks ? "<br/>" + Qt.formatDate(dateTime, main.dateFormat)
+                                           : " " + Qt.formatDate(dateTime, main.dateFormat));
         }
 
         return returnString;

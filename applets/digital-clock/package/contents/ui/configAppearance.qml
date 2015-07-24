@@ -127,6 +127,10 @@ Item {
                             {
                                 'label': i18n("Short Date"),
                                 'name': "shortDate"
+                            },
+                            {
+                                'label': i18n("ISO Date"),
+                                'name': "isoDate"
                             }
                         ]
                         onCurrentIndexChanged: cfg_dateFormat = model[currentIndex]["name"]

@@ -46,7 +46,7 @@ Item {
     Plasmoid.fullRepresentation: CalendarView { }
 
     Plasmoid.toolTipMainText: Qt.formatDate(tzDate,"dddd")
-    Plasmoid.toolTipSubText:  Qt.formatDate(tzDate, dateFormatString)
+    Plasmoid.toolTipSubText:  Qt.formatDate(tzDate, plasmoid.configuration.dateFormat === "isoDate" ? Qt.ISODate : dateFormatString)
     Plasmoid.toolTipTextFormat: Text.StyledText
 
     PlasmaCore.DataSource {
