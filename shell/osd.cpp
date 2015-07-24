@@ -34,12 +34,17 @@ Osd::Osd(ShellCorona *corona)
 {
     const QString osdPath = corona->lookAndFeelPackage().filePath("osdmainscript");
     if (osdPath.isEmpty()) {
-        qWarning() << "Failed to load the OSD script file from" << osdPath;
+        qWarning() << "Failed to load the OSD QML file file from" << osdPath;
         return;
     }
 
     m_osdObject = new KDeclarative::QmlObject(this);
     m_osdObject->setSource(QUrl::fromLocalFile(osdPath));
+    if (m_osdObject->status() != QQmlComponent::Ready) {
+        qWarning() << "Failed to load OSD QML file";
+        return;
+    }
+
     m_timeout = m_osdObject->rootObject()->property("timeout").toInt();
 
     QDBusConnection::sessionBus().registerObject("/org/kde/osdService", this, QDBusConnection::ExportAllSlots | QDBusConnection::ExportAllSignals);
@@ -103,11 +108,17 @@ void Osd::virtualDesktopChanged(const QString &currentVirtualDesktopName)
 
 void Osd::showProgress(const QString &icon, const int percent, const QString &additionalText)
 {
+    auto *rootObject = m_osdObject->rootObject();
+    if (!rootObject) {
+        qWarning() << "Failed to load OSD QML file";
+        return;
+    }
+
     int value = qBound(0, percent, 100);
-    m_osdObject->rootObject()->setProperty("osdValue", value);
-    m_osdObject->rootObject()->setProperty("osdAdditionalText", additionalText);
-    m_osdObject->rootObject()->setProperty("showingProgress", true);
-    m_osdObject->rootObject()->setProperty("icon", icon);
+    rootObject->setProperty("osdValue", value);
+    rootObject->setProperty("osdAdditionalText", additionalText);
+    rootObject->setProperty("showingProgress", true);
+    rootObject->setProperty("icon", icon);
 
     emit osdProgress(icon, value, additionalText);
     showOsd();
@@ -115,9 +126,15 @@ void Osd::showProgress(const QString &icon, const int percent, const QString &ad
 
 void Osd::showText(const QString &icon, const QString &text)
 {
-    m_osdObject->rootObject()->setProperty("showingProgress", false);
-    m_osdObject->rootObject()->setProperty("osdValue", text);
-    m_osdObject->rootObject()->setProperty("icon", icon);
+    auto *rootObject = m_osdObject->rootObject();
+    if (!rootObject) {
+        qWarning() << "Failed to load OSD QML file";
+        return;
+    }
+
+    rootObject->setProperty("showingProgress", false);
+    rootObject->setProperty("osdValue", text);
+    rootObject->setProperty("icon", icon);
 
     emit osdText(icon, text);
     showOsd();
@@ -126,7 +143,11 @@ void Osd::showText(const QString &icon, const QString &text)
 void Osd::showOsd()
 {
     m_osdTimer->stop();
+
     auto *rootObject = m_osdObject->rootObject();
+    if (!rootObject) {
+        return;
+    }
 
     // if our OSD understands animating the opacity, do it;
     // otherwise just show it to not break existing lnf packages
@@ -145,9 +166,14 @@ void Osd::showOsd()
 
 void Osd::hideOsd()
 {
-    m_osdObject->rootObject()->setProperty("visible", false);
+    auto *rootObject = m_osdObject->rootObject();
+    if (!rootObject) {
+        return;
+    }
+
+    rootObject->setProperty("visible", false);
 
     // this is needed to prevent fading from "old" values when the OSD shows up
-    m_osdObject->rootObject()->setProperty("icon", "");
-    m_osdObject->rootObject()->setProperty("osdValue", 0);
+    rootObject->setProperty("icon", "");
+    rootObject->setProperty("osdValue", 0);
 }
