@@ -62,7 +62,7 @@ Item {
                 target: main
                 Layout.fillHeight: true
                 Layout.fillWidth: false
-                Layout.minimumWidth: Math.max(main.showDate ? sizehelper.paintedWidth + timezoneLabel.paintedWidth : Math.max(sizehelper.paintedWidth, timezoneLabel.paintedWidth), dateLabel.width)
+                Layout.minimumWidth: Math.max(labelsFlow.width, dateLabel.paintedWidth)
                 Layout.maximumWidth: Layout.minimumWidth
 
             }
