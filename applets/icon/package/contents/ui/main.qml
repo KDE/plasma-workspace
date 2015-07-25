@@ -30,11 +30,11 @@ MouseArea {
 
     id:root
 
-    height: 64
-    width: 64
+    height: units.iconSizes.desktop + theme.mSize(theme.defaultFont).height
+    width: units.iconSizes.desktop
 
-    Layout.minimumWidth: formFactor == PlasmaCore.Types.Horizontal ? height : 16
-    Layout.minimumHeight: formFactor == PlasmaCore.Types.Vertical ? width  : 16
+    Layout.minimumWidth: formFactor === PlasmaCore.Types.Horizontal ? height : units.iconSizes.small
+    Layout.minimumHeight: formFactor === PlasmaCore.Types.Vertical ? width  : units.iconSizes.small
     property int formFactor: plasmoid.formFactor
     property bool constrained: formFactor == PlasmaCore.Types.Vertical || formFactor == PlasmaCore.Types.Horizontal
     hoverEnabled: true
