@@ -39,6 +39,15 @@ void noMessageOutput(QtMsgType type, const char *msg)
 
 int main(int argc, char *argv[])
 {
+//    Devive pixel ratio has some problems in plasmashell currently.
+//     - dialog continually expands (347951)
+//     - Text element text is screwed (QTBUG-42606)
+//     - Panel struts (350614)
+//  This variable should possibly be removed when all are fixed
+
+    qunsetenv("QT_DEVICE_PIXEL_RATIO");
+
+
     QQuickWindow::setDefaultAlphaBuffer(true);
 
     KLocalizedString::setApplicationDomain("plasmashell");
