@@ -38,11 +38,22 @@ Item {
     // UPower seems to set the Present property false when a device is added but not probed yet
     readonly property bool isPresent: model["Plugged in"]
 
+    readonly property bool isBroken: model.Capacity > 0 && model.Capacity < 50
+
     property Component batteryDetails: Flow { // GridLayout crashes with a Repeater in it somehow
         id: detailsLayout
 
         property int leftColumnWidth: 0
         width: units.gridUnit * 11
+
+        PlasmaComponents.Label {
+            id: brokenBatteryLabel
+            width: parent ? parent.width : implicitWidth
+            wrapMode: Text.WordWrap
+            text: i18n("The capacity of this battery is %1%. This means it is broken and needs a replacement. Please contact your hardware vendor for more details.", model.Capacity)
+            font.pointSize: !!detailsLayout.parent.inListView ? theme.smallestFont.pointSize : theme.defaultFont.pointSize
+            visible: batteryItem.isBroken
+        }
 
         Repeater {
             id: detailsRepeater
@@ -109,6 +120,7 @@ Item {
                     percent: batteryIcon.percent
                     hasBattery: batteryIcon.hasBattery
                     pluggedIn: batteryIcon.pluggedIn
+                    visible: !batteryItem.isBroken
                 }
 
                 Column {
