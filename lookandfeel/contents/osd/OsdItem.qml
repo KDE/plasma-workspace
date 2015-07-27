@@ -42,7 +42,7 @@ Item {
     PlasmaCore.IconItem {
         id: icon
 
-        height: parent.height - progressBar.height - ((units.largeSpacing/2) * 3) //it's an svg
+        height: parent.height - progressBar.height - ((units.smallSpacing/2) * 3) //it's an svg
         width: parent.width
 
         source: rootItem.icon
@@ -55,7 +55,7 @@ Item {
             bottom: parent.bottom
             left: parent.left
             right: parent.right
-            margins: Math.floor(units.largeSpacing / 2)
+            margins: Math.floor(units.smallSpacing / 2)
         }
 
         visible: rootItem.showingProgress
@@ -69,7 +69,7 @@ Item {
             bottom: parent.bottom
             left: parent.left
             right: parent.right
-            margins: Math.floor(units.largeSpacing / 2)
+            margins: Math.floor(units.smallSpacing / 2)
         }
 
         visible: !rootItem.showingProgress
