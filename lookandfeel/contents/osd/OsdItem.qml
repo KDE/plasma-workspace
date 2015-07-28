@@ -23,7 +23,7 @@ import QtQuick.Window 2.2
 
 Item {
     property QtObject rootItem
-    height: Math.min(units.gridUnit * 15, Screen.desktopAvailableHeight / 6)
+    height: Math.min(units.gridUnit * 15, Screen.desktopAvailableHeight / 5)
     width: height
 
     //  /--------------------\
