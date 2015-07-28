@@ -337,6 +337,10 @@ export XDG_CURRENT_DESKTOP
 if test -n "$PAM_KWALLET_LOGIN" ; then
     env | socat STDIN UNIX-CONNECT:$PAM_KWALLET_LOGIN
 fi
+# ...and also to kwalletd5
+if test -n "$PAM_KWALLET5_LOGIN" ; then
+    env | socat STDIN UNIX-CONNECT:$PAM_KWALLET5_LOGIN
+fi
 
 # At this point all environment variables are set, let's send it to the DBus session server to update the activation environment
 @CMAKE_INSTALL_FULL_LIBEXECDIR@/ksyncdbusenv
