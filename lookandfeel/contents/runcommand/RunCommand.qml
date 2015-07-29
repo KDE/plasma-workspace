@@ -57,6 +57,8 @@ ColumnLayout {
         }
         PlasmaComponents.TextField {
             id: queryField
+            property bool allowCompletion: false
+
             clearButtonShown: true
             Layout.minimumWidth: units.gridUnit * 25
 
@@ -64,7 +66,43 @@ ColumnLayout {
 
             onTextChanged: {
                 root.query = queryField.text
+                if (allowCompletion && length > 0) {
+                    var history = runnerWindow.history
+                    var candidate = ""
+                    var shortest = ""
+
+                    for (var i = 0, j = history.length; i < j; ++i) {
+                        var item = history[i]
+
+                        if (item.toLowerCase().indexOf(text.toLowerCase()) === 0) {
+                            if (candidate.length > 0) {
+                                var l = 0;
+
+                                if (item.length < candidate.length) {
+                                    candidate = item
+                                }
+
+                                while (l < Math.min(item.length, shortest.length)) {
+                                    ++l
+                                }
+
+                                shortest = shortest.substring(0, l)
+                            } else {
+                                candidate = item
+                                shortest = item
+                            }
+                        }
+                    }
+
+                    if (candidate.length > 0) {
+                        var oldText = text
+                        text = candidate
+                        select(text.length, oldText.length)
+                    }
+                }
             }
+            Keys.onPressed: allowCompletion = (event.key !== Qt.Key_Backspace && event.key !== Qt.Key_Delete)
+
             Keys.onEscapePressed: {
                 runnerWindow.visible = false
             }
