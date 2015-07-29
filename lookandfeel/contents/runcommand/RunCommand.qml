@@ -27,6 +27,7 @@ ColumnLayout {
     id: root
     property string query
     property string runner
+    property bool showHistory: false
 
     onQueryChanged: {
         queryField.text = query;
@@ -40,6 +41,7 @@ ColumnLayout {
                 listView.currentIndex = -1
             } else {
                 root.query = "";
+                root.showHistory = false
             }
         }
     }
@@ -102,6 +104,16 @@ ColumnLayout {
                 }
             }
             Keys.onPressed: allowCompletion = (event.key !== Qt.Key_Backspace && event.key !== Qt.Key_Delete)
+            Keys.onUpPressed: {
+                if (length === 0) {
+                    root.showHistory = true
+                }
+            }
+            Keys.onDownPressed: {
+                if (length === 0) {
+                    root.showHistory = true
+                }
+            }
 
             Keys.onEscapePressed: {
                 runnerWindow.visible = false
@@ -153,7 +165,8 @@ ColumnLayout {
             keyNavigationWraps: true
             highlight: PlasmaComponents.Highlight {}
             highlightMoveDuration: 0
-            model: runnerWindow.history
+            // we store 50 entries in the history but only show 20 in the UI so it doesn't get too huge
+            model: root.showHistory ? runnerWindow.history.slice(0, 20) : []
             delegate: Milou.ResultDelegate {
                 id: resultDelegate
                 width: listView.width
