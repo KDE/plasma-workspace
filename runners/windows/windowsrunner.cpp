@@ -66,8 +66,10 @@ WindowsRunner::~WindowsRunner()
 {
 }
 
+// Called in the main thread
 void WindowsRunner::gatherInfo()
 {
+    QMutexLocker locker(&m_mutex);
     if (!m_inSession) {
         return;
     }
@@ -100,15 +102,19 @@ void WindowsRunner::gatherInfo()
     m_ready = true;
 }
 
+// Called in the main thread
 void WindowsRunner::prepareForMatchSession()
 {
+    QMutexLocker locker(&m_mutex);
     m_inSession = true;
     m_ready = false;
     QTimer::singleShot(0, this, SLOT(gatherInfo()));
 }
 
+// Called in the main thread
 void WindowsRunner::matchSessionComplete()
 {
+    QMutexLocker locker(&m_mutex);
     m_inSession = false;
     m_ready = false;
     m_desktopNames.clear();
@@ -116,8 +122,10 @@ void WindowsRunner::matchSessionComplete()
     m_windows.clear();
 }
 
+// Called in the secondary thread
 void WindowsRunner::match(Plasma::RunnerContext& context)
 {
+    QMutexLocker locker(&m_mutex);
     if (!m_ready) {
         return;
     }
@@ -313,8 +321,10 @@ void WindowsRunner::match(Plasma::RunnerContext& context)
     }
 }
 
+// Called in the main thread
 void WindowsRunner::run(const Plasma::RunnerContext& context, const Plasma::QueryMatch& match)
 {
+    QMutexLocker locker(&m_mutex);
     Q_UNUSED(context)
     // check if it's a desktop
     if (match.id().startsWith("windows_desktop")) {
@@ -324,7 +334,7 @@ void WindowsRunner::run(const Plasma::RunnerContext& context, const Plasma::Quer
 
     const QStringList parts = match.data().toString().split("_");
     WindowAction action = WindowAction(parts[0].toInt());
-    WId w = WId(parts[1].toULong());
+    WId w(parts[1].toULong());
     //this is needed since KWindowInfo() doesn't exist, m_windows[w] doesn't work
     QHash<WId, KWindowInfo>::iterator i = m_windows.find(w);
     KWindowInfo info = i.value();

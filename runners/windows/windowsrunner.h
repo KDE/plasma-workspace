@@ -55,12 +55,13 @@ class WindowsRunner : public Plasma::AbstractRunner
                                        Plasma::QueryMatch::Type type = Plasma::QueryMatch::ExactMatch);
         bool actionSupported(const KWindowInfo& info, WindowAction action);
 
-        QHash<WId, KWindowInfo> m_windows;
-        QHash<WId, QIcon> m_icons;
-        QStringList m_desktopNames;
+        QHash<WId, KWindowInfo> m_windows; // protected by m_mutex
+        QHash<WId, QIcon> m_icons; // protected by m_mutex
+        QStringList m_desktopNames; // protected by m_mutex
+        QMutex m_mutex;
 
-        bool m_inSession : 1;
-        bool m_ready : 1;
+        bool m_inSession : 1; // only used in the main thread
+        bool m_ready : 1; // protected by m_mutex
 };
 
 #endif // WINDOWSRUNNER_H
