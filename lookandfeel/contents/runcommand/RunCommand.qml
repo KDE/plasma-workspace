@@ -78,17 +78,11 @@ ColumnLayout {
 
                         if (item.toLowerCase().indexOf(text.toLowerCase()) === 0) {
                             if (candidate.length > 0) {
-                                var l = 0;
-
                                 if (item.length < candidate.length) {
                                     candidate = item
                                 }
 
-                                while (l < Math.min(item.length, shortest.length)) {
-                                    ++l
-                                }
-
-                                shortest = shortest.substring(0, l)
+                                shortest = shortest.substring(0, item.length, shortest.length)
                             } else {
                                 candidate = item
                                 shortest = item
