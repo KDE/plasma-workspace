@@ -56,6 +56,7 @@ View::View(QWindow *)
 
     m_config = KConfigGroup(KSharedConfig::openConfig("krunnerrc"), "General");
 
+    setFreeFloating(m_config.readEntry("FreeFloating", false));
     reloadConfig();
 
     new AppAdaptor(this);
