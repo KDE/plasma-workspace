@@ -30,11 +30,11 @@
 
 <legalnotice>&FDLNotice;</legalnotice>
 
-<date>2013-06-02</date>
-<releaseinfo>0.9.7 (&kde; 4.11)</releaseinfo>
+<date>2015-07-20</date>
+<releaseinfo>Plasma 5.4</releaseinfo>
 
 <abstract>
-<para>&klipper; is the &kde; clipboard cut &amp; paste utility.</para>
+<para>&klipper; is the &plasma; clipboard cut &amp; paste utility.</para>
 </abstract>
 
 <keywordset>
@@ -44,14 +44,13 @@
 <keyword>clipboard</keyword>
 </keywordset>
 </bookinfo>
- 
+<!--http://blog.martin-graesslin.com/blog/2014/07/next-generation-klipper/-->
 <chapter id="introduction">
 <title>Introduction</title>
-<para>&klipper; is the &kde; clipboard utility. It stores clipboard
+<para>&klipper; is the &plasma; clipboard utility. It stores clipboard
 history, and allows you to link clipboard contents to application
 actions. Please report any problems or feature requests to <ulink
-url="http://bugs.kde.org">KDEs bugzilla</ulink> or use the <guimenuitem>Report Bug</guimenuitem> 
-item in the <guimenu>Help</guimenu> menu.</para>
+url="http://bugs.kde.org">KDEs bugzilla</ulink>.</para>
 
 </chapter>
 
@@ -60,6 +59,11 @@ item in the <guimenu>Help</guimenu> menu.</para>
 
 <sect1 id="basic-usage">
 <title>Basic Usage</title>
+<para>You can use &klipper; in the systemtray either as &plasma; widget or classic application.
+Both share the same functionality but have a different &GUI; and show the last item of the history 
+when hoovering the &klipper; icon in the systemtray:
+</para>
+
 <screenshot>
 <screeninfo>The &klipper; icon.</screeninfo>
 <mediaobject>
@@ -72,36 +76,70 @@ item in the <guimenu>Help</guimenu> menu.</para>
 </mediaobject>
 </screenshot>
 
+<para>The &klipper; widget is hidden if the clipboard is empty.</para>
+
 <para>To display the clipboard history, click on the &klipper; icon in
- the &kde; panel, or press <keycombo
- action="simul">&Ctrl;&Alt;<keycap>V</keycap> </keycombo>. Previous
- clipboard entries are shown at the top of the popup menu which
- appears. Selecting one of these copies it to the clipboard, from
- where it can be pasted into any &kde; or X application as
- usual.</para>
+the systemtray.</para>
 
-<note><para>The shortcut for this action has to be configured in the 
-<guilabel>System Tray Settings</guilabel> on the <guilabel>Entries</guilabel>
-page.</para></note>
+<sect2 id="klipper-widget">
+<title>&klipper; Widget</title>
+<screenshot>
+<screeninfo>The &klipper; Widget.</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="klipper-widget.png" format="PNG" />
+</imageobject>
+<textobject>
+<phrase>The &klipper; Widget</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
 
-<para>You can search through the clipboard history by opening it
-(click on &klipper;) and typing your query. The results are updated as
-you type. In case you're wondering how to use the accelerator keys in
-the &klipper; menu, just press &Alt; and the accelerator you want. For
-example, to clear the clipboard history when the &klipper; menu is
-open, press &Alt; and the underlined letter in <guimenuitem>Clear Clipboard History</guimenuitem>
-.</para>
-
-<para>Select <guilabel>Show Barcode</guilabel> from the &klipper; popup menu to open a 
-dialog with a <ulink url="http://en.wikipedia.org/wiki/QR_Code">QRCode</ulink> and a 
-<ulink url="http://en.wikipedia.org/wiki/Datamatrix">DataMatrix</ulink> barcode. 
+<para>Hoover an entry with the mouse pointer and four icons appear which enable you to 
+invoke an action, show the barcode, edit the content or remove the entry from the history.
 Use &ksnapshot; to capture the barcodes and save them.
 </para>
 
-<para>To disable &klipper;, click on its icon and 
-from the menu that appears, select
-<guimenuitem>Quit</guimenuitem>.</para>
+<para>You can search through the clipboard history by opening it
+(click on &klipper;) and typing your query. The results are updated as
+you type. To clear the clipboard history click on the icon at the right of
+the search field.
+</para>
 
+<para>The <guilabel>Configure</guilabel> action in the context menu opens the 
+<link linkend="preferences">settings dialog</link>.
+</para>
+
+<para>To disable the &klipper; widget, deselect it in the <guilabel>General</guilabel> page 
+of the <guilabel>System Tray Settings</guilabel> (<keycombo 
+action="simul">&Alt;<keycap>D</keycap></keycombo>, <keycap>S</keycap>).</para>
+
+</sect2>
+
+<sect2 id="klipper-application">
+<title>&klipper; Application</title>
+<screenshot>
+<screeninfo>The &klipper; Application.</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="klipper-application.png" format="PNG" />
+</imageobject>
+<textobject>
+<phrase>The &klipper; Application</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+
+<para>At the top of the available menu actions previous clipboard entries are shown. 
+Selecting one of these copies it to the clipboard, from
+where it can be pasted into any &kde; or X application as usual.</para>
+
+<para>You can search through the clipboard history by typing your query
+in the seach field at the top. The results are updated as
+you type.
+</para>
+
+</sect2>
 </sect1>
 
 <sect1 id="actions">
@@ -112,7 +150,7 @@ based on whether they match a particular regular expression. For
 example, any clipboard contents starting with <quote>http://</quote> can
 be passed to Firefox or &konqueror; as &URL;s to open. In addition, if the 
 contents matches a path, similar actions can be performed according to the file's
-type. E.g, if the path to a <acronym>PDF</acronym> file is copied to the clipboard, the file can be 
+type. &eg;, if the path to a <acronym>PDF</acronym> file is copied to the clipboard, the file can be 
 viewed in &okular;.</para>
 
 <para>To use this feature, just select a &URL; or path. <!-- starting with slash ?-->
@@ -126,19 +164,18 @@ selection.</para>
 contents, select <guimenuitem>Disable This Popup</guimenuitem> on the pop-up menu
 to return to what you were doing before. If you leave the menu, it will
 disappear, leaving you to continue your work. You can change the time
-that the menu remains for in the <guilabel>Configure Klipper...</guilabel>
+that the menu remains for in the settings 
 dialog, with the option <guilabel>Timeout for action popups</guilabel>
 under the <guilabel>General</guilabel> page. You can separately disable the 
 file path part using the option <guilabel>Enable MIME-based actions</guilabel> under
 the <guilabel>Actions</guilabel> page.</para>
-  
-<para>Actions can be disabled completely by clicking on &klipper; and
-deselecting <guimenuitem>Enable Clipboard Actions</guimenuitem>, or by pressing
-<keycombo action="simul">&Ctrl;&Alt;<keycap>X</keycap></keycombo>.</para>
+
+<para>Actions can be disabled completely by pressing
+the shortcut <keycombo action="simul">&Ctrl;&Alt;<keycap>X</keycap></keycombo>.</para>
 
 <para>Clipboard contents which match a regular expression can also be
 edited before performing an action on them. Select <guimenuitem>Edit 
-contents...</guimenuitem> on the &klipper; pop-up menu, and you can
+contents...</guimenuitem> at the right of the clipboard entry, and you can
 change the clipboard contents in the dialog which appears, before
 clicking the <guibutton>OK</guibutton> button to run the appropriate
 action.</para>
@@ -156,7 +193,7 @@ menu to repeat the last action which &klipper; performed.</para>
 <title>General</title>
 <para>
 &klipper; can be used to set the behavior of the clipboard and selection in
-&kde;. 
+&plasma;. 
 </para>
 
 <note><para>The &X-Window; uses two separate clipboard buffers: the
@@ -167,9 +204,8 @@ the clipboard buffer, select it and press
 <keycombo>&Ctrl;<keycap>X</keycap> </keycombo> or
 <keycombo>&Ctrl;<keycap>C</keycap> </keycombo>. Text from the
 clipboard buffer is pasted using <keycombo>&Ctrl;<keycap>V</keycap>
-</keycombo> or by selecting
-<menuchoice><guimenu>Edit</guimenu><guimenuitem>Paste</guimenuitem>
-</menuchoice>.</para>
+</keycombo> or by selecting <guimenuitem>Paste</guimenuitem> 
+in a context menu.</para>
 </note>
 
 <!-- &klipper; can be used to set the clipboard mode for the whole of &kde;. The
@@ -193,7 +229,7 @@ contents of this clipboard.
 <title>Changing Clipboard/Selection Behavior</title>
 <para>
 In order to change clipboard/selection behavior, select
-<guimenuitem>Configure &klipper;...</guimenuitem> from the &klipper; pop-up menu,
+<guimenuitem>Configure &klipper;...</guimenuitem> from the &klipper; context menu,
 and in the dialog box that appears, select the
 <guilabel>General</guilabel> page. Unchecking <guilabel>Synchronize contents of the clipboard and the
 selection</guilabel> makes the clipboard and selection function as completely
@@ -223,17 +259,6 @@ selected, the clipboard functions in the &UNIX; mode; if not, the
 
 <chapter id="preferences">
 <title>Configuring &klipper;</title>
-
-<sect1 id="viewing-options">
-
-<title>Viewing the Configuration Dialog</title>
-
-<para>To view or change &klipper;'s settings, open the &klipper;
-pop-up menu, and select <guimenuitem>Configure Klipper...</guimenuitem>. The &klipper;
-configuration dialog will appear. Its contents are described
-below.</para>
-
-</sect1>
 
 <sect1 id="general-page">
 <title>General Options</title>
@@ -300,7 +325,7 @@ See <xref linkend="clipboard-modes"/>.
 </varlistentry> 
 
 <varlistentry>
-<term><guilabel>Timeout for Action pop-ups</guilabel></term>
+<term><guilabel>Timeout for action popups</guilabel></term>
 <listitem><para>Set the time that a popup menu will remain for if you do
 nothing with it.</para></listitem>
 </varlistentry>
@@ -355,7 +380,7 @@ expression text can be edited as you wish.</para></listitem>
 
 <varlistentry>
 <term>Adding Expressions/Actions</term>
-<listitem><para>Click the <guibutton>Add Action</guibutton> button
+<listitem><para>Click the <guibutton>Add Action...</guibutton> button
 to add a regular expression for &klipper; to match. &klipper; uses
 &Qt;'s <classname>QRegExp</classname>, which understands most regular
 expressions as you would use in <application>grep</application> or
@@ -365,8 +390,8 @@ expressions as you would use in <application>grep</application> or
 <guilabel>Description</guilabel> column.</para>   
 
 <note><para>You can find detailed information about the use of
-<classname>QRegExp</classname> regular expressions at <ulink
-url="http://qt-project.org/doc/qt-4.8/qregexp.html#details">http://qt-project.org/doc/qt-4.8/qregexp.html#details</ulink>.
+		<classname>QRegExp</classname> regular expressions at <ulink
+url="http://doc.qt.io/qt-5/qregexp.html#details">http://doc.qt.io/qt-5/qregexp.html#details</ulink>.
 Note that &klipper; does not support the wildcard mode mentioned on this
 page.</para></note> 
 
@@ -439,7 +464,7 @@ Now type the desired key combination on your keyboard, as in any &kde; applicati
 
 <para>If you define a shortcut for <guilabel>Open Klipper at Mouse Position</guilabel> 
 pressing this shortcut will open the &klipper; popup menu at the position of
-the mouse cursor, instead of their default position (in the &kde; Panel).
+the mouse cursor, instead of their default position (in the &plasma; Panel).
 Useful if you use the mouse more than the keyboard.</para>
 
 </sect1>
@@ -472,42 +497,6 @@ Documentation copyright 2000-2003, 2005 &Philip.Rodrigues;
 
 </chapter>
 
-<appendix id="installation">
-<title>Installation</title>
-
-<sect1 id="getting-klipper">
-<title>How to obtain &klipper;</title>
-
-&install.intro.documentation;
-
-</sect1>
-
-<sect1 id="compilation">
-<title>Compilation and Installation</title>
-&install.compile.documentation; 
-
-<!--
-<para>To remove &klipper; from your panel, select <guimenuitem>Remove
-Klipper</guimenuitem> from the context menu (accessed by left-clicking the
-small handle to the left of the &klipper; icon).</para>
--->
-<!--
-<para>To disable this, simply remove the file 
-<filename>$<envar>KDEDIR</envar>/share/autostart/klipper.desktop</filename>
-or create a file <filename>$<envar>HOME</envar>/share/autostart/klipper.desktop</filename>
-with the following contents:
-
-<programlisting>
-[Desktop Entry]
-Hidden=true
-</programlisting>
-
-The latter will keep the system installation intact and only prevent
-&klipper; being started for you, without affecting other users.
-</para>
--->
-</sect1>
-</appendix>
 
 &documentation.index; 
 
