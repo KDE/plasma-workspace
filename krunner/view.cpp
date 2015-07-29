@@ -56,7 +56,7 @@ View::View(QWindow *)
 
     m_config = KConfigGroup(KSharedConfig::openConfig("krunnerrc"), "General");
 
-    setFreeFloating(m_config.readEntry("FreeFloating", false));
+    reloadConfig();
 
     new AppAdaptor(this);
     QDBusConnection::sessionBus().registerObject(QLatin1String("/App"), this);
@@ -173,6 +173,12 @@ void View::reloadConfig()
 {
     m_config.config()->reparseConfiguration();
     setFreeFloating(m_config.readEntry("FreeFloating", false));
+
+    const QStringList history = m_config.readEntry("history", QStringList());
+    if (m_history != history) {
+        m_history = history;
+        emit historyChanged();
+    }
 }
 
 bool View::event(QEvent *event)
@@ -320,6 +326,30 @@ void View::switchUser()
 void View::displayConfiguration()
 {
     QProcess::startDetached(QStringLiteral("kcmshell5"), QStringList() << QStringLiteral("plasmasearch"));
+}
+
+QStringList View::history() const
+{
+    return m_history;
+}
+
+void View::addToHistory(const QString &item)
+{
+    if (item == QLatin1String("SESSIONS")) {
+        return;
+    }
+
+    m_history.removeOne(item);
+    m_history.prepend(item);
+
+    while (m_history.count() > 10) { // make configurable?
+        m_history.removeLast();
+    }
+
+    emit historyChanged();
+
+    m_config.writeEntry("history", m_history);
+    m_config.sync();
 }
 
 #include "moc_view.cpp"

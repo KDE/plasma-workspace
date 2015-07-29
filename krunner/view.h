@@ -34,6 +34,8 @@ class View : public PlasmaQuick::Dialog
     Q_OBJECT
     Q_CLASSINFO("D-Bus Interface", "org.kde.krunner.App")
 
+    Q_PROPERTY(QStringList history READ history NOTIFY historyChanged)
+
 public:
     explicit View(QWindow *parent = 0);
     virtual ~View();
@@ -42,6 +44,12 @@ public:
 
     bool freeFloating() const;
     void setFreeFloating(bool floating);
+
+    QStringList history() const;
+    Q_INVOKABLE void addToHistory(const QString &item);
+
+Q_SIGNALS:
+    void historyChanged();
 
 protected:
     virtual bool event(QEvent* event);
@@ -70,6 +78,7 @@ private:
     KConfigGroup m_config;
     qreal m_offset;
     bool m_floating : 1;
+    QStringList m_history;
 };
 
 
