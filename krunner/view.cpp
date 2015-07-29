@@ -343,7 +343,7 @@ void View::addToHistory(const QString &item)
     m_history.removeOne(item);
     m_history.prepend(item);
 
-    while (m_history.count() > 10) { // make configurable?
+    while (m_history.count() > 50) { // make configurable?
         m_history.removeLast();
     }
 
