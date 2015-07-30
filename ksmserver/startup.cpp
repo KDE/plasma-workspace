@@ -30,7 +30,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 ******************************************************************/
 
 #include <QDir>
-#include <krun.h>
+#include <Kdelibs4Migration>
 #include <config-workspace.h>
 #include <config-unix.h> // HAVE_LIMITS_H
 #include <config-ksmserver.h>
@@ -434,9 +434,7 @@ void KSMServer::autoStart2()
     qCDebug(KSMSERVER)<< "kded" << t.elapsed();
 #endif
 
-    // Create dir so that users can find it :-)
-    QDir().mkpath(QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation)
-                  + QDir::separator() + QStringLiteral("autostart"));
+    runUserAutostart();
 
     if (kcminitSignals) {
         connect( kcminitSignals, SIGNAL(phase2Done()), SLOT(kcmPhase2Done()));
@@ -456,6 +454,75 @@ void KSMServer::autoStart2()
     // Delete the thread when finished
     connect(loginSound, &NotificationThread::finished, loginSound, &NotificationThread::deleteLater);
     loginSound->start();
+}
+
+void KSMServer::runUserAutostart()
+{
+    // Now let's execute the scripts in the KDE-specific autostart-scripts folder.
+    // (the code for the XDG autostart folder with .desktop files is in klauncher currently -> TODO move it to ksmserver)
+
+    const QString autostartFolder = QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation) + QDir::separator() + QStringLiteral("autostart-scripts");
+
+    QDir dir(autostartFolder);
+    if (!dir.exists()) {
+        // Create dir in all cases, so that users can find it :-)
+        dir.mkpath(".");
+
+        if (!migrateKDE4Autostart(autostartFolder)) {
+            return;
+        }
+    }
+
+    const QStringList entries = dir.entryList(QDir::Files);
+    foreach (const QString &file, entries) {
+        // Don't execute backup files
+        if (!file.endsWith(QLatin1Char('~')) && !file.endsWith(QStringLiteral(".bak")) &&
+                (file[0] != QLatin1Char('%') || !file.endsWith(QLatin1Char('%'))) &&
+                (file[0] != QLatin1Char('#') || !file.endsWith(QLatin1Char('#'))))
+        {
+            const QString fullPath = dir.absolutePath() + QLatin1Char('/') + file;
+            const bool started = QProcess::startDetached(fullPath);
+            if (!started) {
+                qCWarning(KSMSERVER) << "Error starting" << fullPath;
+            }
+        }
+    }
+}
+
+bool KSMServer::migrateKDE4Autostart(const QString &autostartFolder)
+{
+    // Migrate user autostart from kde4
+    Kdelibs4Migration migration;
+    if (!migration.kdeHomeFound()) {
+        return false;
+    }
+    // KDEHOME/Autostart was the default value for KGlobalSettings::autostart()
+    QString oldAutostart = migration.kdeHome() + QStringLiteral("/Autostart");
+    // That path could be customized in kdeglobals
+    const QString oldKdeGlobals = migration.locateLocal("config", "kdeglobals");
+    if (!oldKdeGlobals.isEmpty()) {
+        oldAutostart = KConfig(oldKdeGlobals).group("Paths").readEntry("Autostart", oldAutostart);
+    }
+
+    const QDir oldFolder(oldAutostart);
+    qCDebug(KSMSERVER) << "Copying autostart files from" << oldFolder.path();
+    const QStringList entries = oldFolder.entryList(QDir::Files);
+    foreach (const QString &file, entries) {
+        const QString src = oldFolder.absolutePath() + QLatin1Char('/') + file;
+        const QString dest = autostartFolder + QLatin1Char('/') + file;
+        QFileInfo info(src);
+        bool success;
+        if (info.isSymLink()) {
+            // This will only work with absolute symlink targets
+            success = QFile::link(info.symLinkTarget(), dest);
+        } else {
+            success = QFile::copy(src, dest);
+        }
+        if (!success) {
+            qCWarning(KSMSERVER) << "Error copying" << src << "to" << dest;
+        }
+    }
+    return true;
 }
 
 void KSMServer::autoStart2Done()

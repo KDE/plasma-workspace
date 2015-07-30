@@ -160,6 +160,9 @@ private:
     void killingCompleted();
     void createLogoutEffectWidget();
 
+    void runUserAutostart();
+    bool migrateKDE4Autostart(const QString &autostartFolder);
+
     void discardSession();
     void storeSession();
 
