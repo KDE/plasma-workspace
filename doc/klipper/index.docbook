@@ -61,7 +61,7 @@ url="http://bugs.kde.org">KDEs bugzilla</ulink>.</para>
 <title>Basic Usage</title>
 <para>You can use &klipper; in the systemtray either as &plasma; widget or classic application.
 Both share the same functionality but have a different &GUI; and show the last item of the history 
-when hoovering the &klipper; icon in the systemtray:
+when hovering the &klipper; icon in the systemtray:
 </para>
 
 <screenshot>
@@ -95,7 +95,7 @@ the systemtray.</para>
 </mediaobject>
 </screenshot>
 
-<para>Hoover an entry with the mouse pointer and four icons appear which enable you to 
+<para>Hover an entry with the mouse pointer and four icons appear which enable you to 
 invoke an action, show the barcode, edit the content or remove the entry from the history.
 Use &ksnapshot; to capture the barcodes and save them.
 </para>
@@ -135,7 +135,7 @@ Selecting one of these copies it to the clipboard, from
 where it can be pasted into any &kde; or X application as usual.</para>
 
 <para>You can search through the clipboard history by typing your query
-in the seach field at the top. The results are updated as
+in the search field at the top. The results are updated as
 you type.
 </para>
 
