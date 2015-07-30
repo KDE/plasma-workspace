@@ -57,6 +57,7 @@ int main(int argc, char* argv[])
     KLocalizedString::setApplicationDomain("drkonqi");
 
     QApplication qa(argc, argv);
+    qa.setAttribute(Qt::AA_UseHighDpiPixmaps, true);
     QCoreApplication::setApplicationName(QStringLiteral("drkonqi"));
     QCoreApplication::setApplicationVersion(version);
 
