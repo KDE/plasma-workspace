@@ -274,7 +274,11 @@ Image {
                                 }
                                 PlasmaComponents.Button {
                                     text: i18nd("plasma_lookandfeel_org.kde.lookandfeel","Change Session")
-                                    onClicked: sessions.activateSession(selectSessionBlock.mainItem.selectedIndex)
+                                    onClicked: {
+                                        sessions.activateSession(selectSessionBlock.mainItem.selectedIndex)
+                                        stackView.pop()
+                                        userSelect.selectedIndex = 0;
+                                    }
                                 }
                             }
                         }
