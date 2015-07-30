@@ -17,10 +17,12 @@ var data = [{
     icon: "system-suspend",
     operation: "suspendToRam",
     tooltip_mainText: i18n("Suspend"),
-    tooltip_subText: i18n("Sleep (suspend to RAM)")
+    tooltip_subText: i18n("Sleep (suspend to RAM)"),
+    requires: "Suspend"
 }, {
     icon: "system-suspend-hibernate",
     operation: "suspendToDisk",
     tooltip_mainText: i18n("Hibernate"),
-    tooltip_subText: i18n("Hibernate (suspend to disk)")
+    tooltip_subText: i18n("Hibernate (suspend to disk)"),
+    requires: "Hibernate"
 }]

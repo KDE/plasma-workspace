@@ -21,6 +21,7 @@ import QtQuick 2.0
 import QtQuick.Layouts 1.1 as QtLayouts
 import QtQuick.Controls 1.0 as QtControls
 
+import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 
 Item {
@@ -38,8 +39,17 @@ Item {
     property alias cfg_show_suspendToDisk: hibernate.checked
     property alias cfg_show_suspendToRam: sleep.checked
 
+    readonly property bool canSuspend: dataEngine.data["Sleep States"].Suspend
+    readonly property bool canHibernate: dataEngine.data["Sleep States"].Hibernate
+
     SystemPalette {
         id: sypal
+    }
+
+    PlasmaCore.DataSource {
+        id: dataEngine
+        engine: "powermanagement"
+        connectedSources: ["PowerDevil", "Sleep States"]
     }
 
     QtLayouts.ColumnLayout {
@@ -70,12 +80,12 @@ Item {
         QtControls.CheckBox {
             id: hibernate
             text: i18n("Hibernate")
-            enabled: checkedOptions > 1 || !checked
+            enabled: iconsPage.canHibernate && (checkedOptions > 1 || !checked)
         }
         QtControls.CheckBox {
             id: sleep
             text: i18n("Sleep")
-            enabled: checkedOptions > 1 || !checked
+            enabled: iconsPage.canSuspend && (checkedOptions > 1 || !checked)
         }
     }
 }

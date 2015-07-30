@@ -52,7 +52,18 @@ Flow {
     readonly property int minButtonSize: units.iconSizes.small
 
     Plasmoid.preferredRepresentation: Plasmoid.fullRepresentation
-    readonly property int visibleButtons: plasmoid.configuration.show_lockScreen + plasmoid.configuration.show_switchUser + plasmoid.configuration.show_requestShutDown + plasmoid.configuration.show_suspendToRam + plasmoid.configuration.show_suspendToDisk;
+    readonly property int visibleButtons: {
+        var count = 0
+        for (var i = 0, j = items.count; i < j; ++i) {
+            if (items.itemAt(i).visible) {
+                ++count
+            }
+        }
+        return count
+    }
+
+    readonly property bool canSuspend: dataEngine.data["Sleep States"].Suspend
+    readonly property bool canHibernate: dataEngine.data["Sleep States"].Hibernate
 
     flow: {
         if ((plasmoid.formFactor === PlasmaCore.Types.Vertical && width >= minButtonSize * visibleButtons) ||
@@ -67,7 +78,7 @@ Flow {
     PlasmaCore.DataSource {
         id: dataEngine
         engine: "powermanagement"
-        connectedSources: ["PowerDevil"]
+        connectedSources: ["PowerDevil", "Sleep States"]
     }
 
     Repeater {
@@ -80,7 +91,7 @@ Flow {
 
         delegate: Item {
             id: iconDelegate
-            visible: plasmoid.configuration["show_"+modelData.operation]
+            visible: plasmoid.configuration["show_" + modelData.operation] && (!modelData.hasOwnProperty("requires") || lockout["can" + modelData.requires])
             width: items.itemWidth
             height: items.itemHeight
 
