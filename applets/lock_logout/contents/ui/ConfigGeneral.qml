@@ -49,7 +49,7 @@ Item {
     PlasmaCore.DataSource {
         id: dataEngine
         engine: "powermanagement"
-        connectedSources: ["PowerDevil", "Sleep States"]
+        connectedSources: ["Sleep States"]
     }
 
     QtLayouts.ColumnLayout {
