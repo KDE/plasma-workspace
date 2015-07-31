@@ -105,8 +105,8 @@ private Q_SLOTS:
             eventLoop.exec(QEventLoop::ExcludeUserInputEvents);
         }
 
-        const QUrl srcUrl = QUrl::fromLocalFile(srcFile);
-        const QUrl destUrl = QUrl::fromLocalFile(destFile);
+        const QUrl srcUrl = QUrl(srcFile);
+        const QUrl destUrl = QUrl(destFile);
 
         const QString srcFilePath(m_desktopPath + srcUrl.path());
         QVERIFY(QFile::exists(srcFilePath));
