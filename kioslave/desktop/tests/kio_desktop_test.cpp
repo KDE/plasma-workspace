@@ -21,6 +21,7 @@
 #include <ktemporaryfile.h>
 #include <kdebug.h>
 #include <QDesktopServices>
+#include <QStandardPaths>
 #include <QObject>
 #include <qtest_kde.h>
 #include <kio/job.h>
@@ -38,11 +39,11 @@ private Q_SLOTS:
     {
         setenv( "KDE_FORK_SLAVES", "yes", true );
 
-        // copied from kio_desktop.cpp:
-        m_desktopPath = QDesktopServices::storageLocation(QDesktopServices::DesktopLocation);
-        if (m_desktopPath.isEmpty())
-            m_desktopPath = QDir::homePath() + "/Desktop";
-        // Warning, this defaults to $HOME/Desktop, the _real_ desktop dir.
+        //make KIOs use test mode too
+        setenv("KIOSLAVE_ENABLE_TESTMODE", "1", 1);
+        QStandardPaths::setTestModeEnabled(true);
+
+        m_desktopPath = QStandardPaths::writableLocation(QStandardPaths::DesktopLocation);
         m_testFileName = "kio_desktop_test_file";
     }
     void cleanupTestCase()
