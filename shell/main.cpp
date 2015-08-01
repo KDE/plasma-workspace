@@ -1,6 +1,7 @@
 /*
  *  Copyright 2012 Marco Martin <mart@kde.org>
  *  Copyright 2013 Sebastian Kügler <sebas@kde.org>
+ *  Copyright 2015 David Edmundson <davidedmundson@kde.org>
  *
  *  This program is free software; you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -22,6 +23,8 @@
 #include <QQuickWindow>
 #include <QSessionManager>
 #include <QDebug>
+#include <QMessageBox>
+
 #include <KAboutData>
 
 #include <kdbusservice.h>
@@ -31,10 +34,20 @@
 #include "standaloneappcorona.h"
 #include "shellmanager.h"
 
-void noMessageOutput(QtMsgType type, const char *msg)
+
+void plasmaMessageHandler(QtMsgType type, const QMessageLogContext &context, const QString &message)
 {
-     Q_UNUSED(type);
-     Q_UNUSED(msg);
+    //if we get an openGL error, display it properly in a user visible way.
+    //Qt qFatals when failing to make an openGL context; we can't catch that earlier, so we do it in the error handler and display an error message
+    //otherwise we continually get bug reports
+    if (type == QtFatalMsg && message == QLatin1String("Could not initialize GLX")) {
+        QMessageBox::critical(nullptr, i18n("Plasma Failed To Start"), i18n("Plasma is unable to start as it could not correctly use OpenGL 2.\nPlease confirm your drivers are installed correctly."));
+    }
+
+    //we have to reimplement the behaviour of the default message handler, as now we are always overriding it, and there's no way to access it
+    const QString logMessage = qFormatLogMessage(type, context, message);
+    fprintf(stderr, "%s\n", logMessage.toLocal8Bit().constData());
+    fflush(stderr);
 }
 
 int main(int argc, char *argv[])
@@ -86,7 +99,7 @@ int main(int argc, char *argv[])
                                    QStringLiteral("n"));
 
     QCommandLineOption shutupOption(QStringList() << QStringLiteral("s") << QStringLiteral("shut-up"),
-                                    i18n("Shuts up the output"));
+                                 i18n("Deprecated, does nothing"));
 
     QCommandLineOption shellPluginOption(QStringList() << QStringLiteral("p") << QStringLiteral("shell-plugin"),
                                          i18n("Force loading the given shell plugin"),
@@ -107,9 +120,7 @@ int main(int argc, char *argv[])
 
     KAboutData::applicationData().setupCommandLine(&cliOptions);
 
-    if (cliOptions.isSet(shutupOption)) {
-        qInstallMsgHandler(noMessageOutput);
-    }
+    qInstallMessageHandler(plasmaMessageHandler);
 
     auto disableSessionManagement = [](QSessionManager &sm) {
         sm.setRestartHint(QSessionManager::RestartNever);
