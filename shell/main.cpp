@@ -41,7 +41,7 @@ void plasmaMessageHandler(QtMsgType type, const QMessageLogContext &context, con
     //Qt qFatals when failing to make an openGL context; we can't catch that earlier, so we do it in the error handler and display an error message
     //otherwise we continually get bug reports
     if (type == QtFatalMsg && message == QLatin1String("Could not initialize GLX")) {
-        QMessageBox::critical(nullptr, i18n("Plasma Failed To Start"), i18n("Plasma is unable to start as it could not correctly use OpenGL 2.\nPlease confirm your drivers are installed correctly."));
+        QMessageBox::critical(nullptr, i18n("Plasma Failed To Start"), i18n("Plasma is unable to start as it could not correctly use OpenGL 2.\nPlease check that your graphic drivers are set up correctly."));
     }
 
     //we have to reimplement the behaviour of the default message handler, as now we are always overriding it, and there's no way to access it
