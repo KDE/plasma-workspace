@@ -29,6 +29,9 @@ ExecutableContainer::ExecutableContainer(const QString& command, QObject* parent
 
 ExecutableContainer::~ExecutableContainer()
 {
+    if (m_process) {
+        disconnect(m_process, 0, this, 0);
+    }
     delete m_process;
 }
 
