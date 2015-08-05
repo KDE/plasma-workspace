@@ -60,6 +60,7 @@ class Image : public QObject, public QQmlParserStatus
     Q_PROPERTY(QStringList slidePaths READ slidePaths WRITE setSlidePaths NOTIFY slidePathsChanged)
     Q_PROPERTY(int width MEMBER m_width READ width WRITE setWidth NOTIFY sizeChanged)
     Q_PROPERTY(int height MEMBER m_height READ height WRITE setHeight NOTIFY sizeChanged)
+    Q_PROPERTY(QString photosPath READ photosPath CONSTANT)
 
     public:
 
@@ -115,6 +116,8 @@ class Image : public QObject, public QQmlParserStatus
 
         void classBegin() override;
         void componentComplete() override;
+
+        QString photosPath() const;
 
     public Q_SLOTS:
         void nextSlide();

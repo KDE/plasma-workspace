@@ -101,6 +101,11 @@ void Image::componentComplete()
     }
 }
 
+QString Image::photosPath() const
+{
+    return QStandardPaths::writableLocation(QStandardPaths::PicturesLocation);
+}
+
 QString Image::wallpaperPath() const
 {
     return m_wallpaperPath;
