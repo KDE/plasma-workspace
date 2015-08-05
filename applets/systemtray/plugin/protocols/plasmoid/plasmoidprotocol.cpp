@@ -100,6 +100,9 @@ void PlasmoidProtocol::init()
 
 void PlasmoidProtocol::restorePlasmoids()
 {
+    if (!m_systrayApplet) {
+        return;
+    }
     //First: remove all that are not allowed anymore
     QStringList tasksToDelete;
     foreach (const QString &task, m_tasks.keys()) {
@@ -107,6 +110,20 @@ void PlasmoidProtocol::restorePlasmoids()
             tasksToDelete << task;
         }
     }
+
+    // Check if we want to remove applets based on formfactor
+    foreach (const QString &task, m_tasks.keys()) {
+        PlasmoidTask *plasmoidtask = qobject_cast<PlasmoidTask*>(m_tasks[task]);
+        if (plasmoidtask) {
+            KPluginMetaData md = plasmoidtask->pluginInfo().toMetaData();
+            if (!md.formFactors().isEmpty() && !md.formFactors().contains(m_formFactor)) {
+                if (!tasksToDelete.contains(task)) {
+                    tasksToDelete << task;
+                }
+            }
+        }
+    }
+
     foreach (const QString &task, tasksToDelete) {
         cleanupTask(task);
     }
@@ -115,6 +132,7 @@ void PlasmoidProtocol::restorePlasmoids()
     cg = m_containment->config();
     cg = KConfigGroup(&cg, "Applets");
     foreach (const QString &group, cg.groupList()) {
+
         KConfigGroup appletConfig(&cg, group);
         QString plugin = appletConfig.readEntry("plugin");
         if (!plugin.isEmpty()) {
@@ -129,6 +147,12 @@ void PlasmoidProtocol::restorePlasmoids()
     KPluginInfo::List applets;
     for (auto info : Plasma::PluginLoader::self()->listAppletInfo(QString())) {
         if (info.isValid() && info.property("X-Plasma-NotificationArea") == "true") {
+
+            // Check for FormFactor
+            KPluginMetaData md = info.toMetaData();
+            if (!md.formFactors().isEmpty() && !md.formFactors().contains(m_formFactor)) {
+                continue;
+            }
             applets << info;
         }
     }
@@ -316,6 +340,19 @@ void PlasmoidProtocol::serviceUnregistered(const QString &service)
                 cleanupTask(plugin);
             }
         }
+    }
+}
+
+QString PlasmoidProtocol::formFactor() const
+{
+    return m_formFactor;
+}
+
+void PlasmoidProtocol::setFormFactor(const QString& formfactor)
+{
+    if (m_formFactor != formfactor) {
+        m_formFactor = formfactor;
+        restorePlasmoids();
     }
 }
 

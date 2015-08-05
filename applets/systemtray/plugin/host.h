@@ -52,6 +52,7 @@ class Host : public QObject
     Q_PROPERTY(QStringList plasmoidsAllowed READ plasmoidsAllowed WRITE setPlasmoidsAllowed NOTIFY plasmoidsAllowedChanged)
 
     Q_PROPERTY(QStringList categories READ categories NOTIFY categoriesChanged)
+    Q_PROPERTY(QString formFactor READ formFactor WRITE setFormFactor NOTIFY formFactorChanged)
 
     Q_PROPERTY(bool showAllItems READ showAllItems WRITE setShowAllItems NOTIFY showAllItemsChanged)
     Q_PROPERTY(QStringList forcedHiddenItems READ forcedHiddenItems WRITE setForcedHiddenItems NOTIFY forcedHiddenItemsChanged)
@@ -83,6 +84,9 @@ public:
     QStringList forcedHiddenItems() const;
     void setForcedHiddenItems(const QStringList &items);
 
+    QString formFactor() const;
+    void setFormFactor(const QString &formfactor);
+
 public Q_SLOTS:
     void init();
     bool isCategoryShown(int cat) const;
@@ -103,6 +107,7 @@ Q_SIGNALS:
     void forcedShownItemsChanged();
     void forcedHiddenItemsChanged();
     void taskStatusChanged();
+    void formFactorChanged();
 
 private Q_SLOTS:
     void addTask(SystemTray::Task *task);

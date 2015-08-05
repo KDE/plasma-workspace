@@ -67,7 +67,8 @@ public:
           allTasksModel(new TaskListModel(host)),
           showAllItems(false),
           availablePlasmoidsModel(Q_NULLPTR),
-          plasmoidProtocol(new SystemTray::PlasmoidProtocol(host))
+          plasmoidProtocol(new SystemTray::PlasmoidProtocol(host)),
+          formFactor(QStringLiteral("desktop"))
     {
     }
     void setupProtocol(Protocol *protocol);
@@ -91,6 +92,7 @@ public:
     SystemTray::PlasmoidProtocol *plasmoidProtocol;
 
     QStringList categories;
+    QString formFactor;
 };
 
 Host::Host(QObject* parent) :
@@ -108,6 +110,7 @@ Host::~Host()
 void Host::init()
 {
     d->setupProtocol(new SystemTray::DBusSystemTrayProtocol(this));
+    d->plasmoidProtocol->setFormFactor(d->formFactor);
     d->setupProtocol(d->plasmoidProtocol);
 
     initTasks();
@@ -374,6 +377,21 @@ void Host::showMenu(int x, int y, QObject *task)
     if (!desktopMenu.isEmpty()) {
         desktopMenu.exec(QPoint(x, y));
     }
+}
+
+QString Host::formFactor() const
+{
+    return d->formFactor;
+}
+
+void Host::setFormFactor(const QString &formfactor)
+{
+    if (d->formFactor != formfactor) {
+        d->formFactor = formfactor;
+        d->plasmoidProtocol->setFormFactor(d->formFactor);
+        emit formFactorChanged();
+    }
+
 }
 
 } // namespace

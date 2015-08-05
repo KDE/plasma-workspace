@@ -53,6 +53,9 @@ public:
     QStringList allowedPlugins() const;
     void setAllowedPlugins(const QStringList &allowed);
 
+    QString formFactor() const;
+    void setFormFactor(const QString &formfactor);
+
 protected Q_SLOTS:
     void newTask(const QString &service);
     void cleanupTask(const QString &taskId);
@@ -72,6 +75,7 @@ private:
     Plasma::Containment *m_containment;
     Plasma::Applet *m_systrayApplet;
     QStringList m_allowedPlugins;
+    QString m_formFactor;
 };
 
 }

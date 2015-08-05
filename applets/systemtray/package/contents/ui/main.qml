@@ -136,6 +136,7 @@ Item {
     SystemTray.Host {
         id: host
         rootItem: plasmoid
+        formFactor: "desktop"
         showAllItems: plasmoid.configuration.showAllItems
         forcedShownItems: plasmoid.configuration.shownItems
         forcedHiddenItems: plasmoid.configuration.hiddenItems
