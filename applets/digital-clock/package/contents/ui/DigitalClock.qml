@@ -45,6 +45,7 @@ Item {
 
     property string lastSelectedTimezone: plasmoid.configuration.lastSelectedTimezone
     property bool displayTimezoneAsCode: plasmoid.configuration.displayTimezoneAsCode
+    property int use24hFormat: plasmoid.configuration.use24hFormat
 
     property string lastDate: ""
     property int tzOffset
@@ -67,6 +68,7 @@ Item {
     onShowSecondsChanged:          { timeFormatCorrection(Qt.locale().timeFormat(Locale.ShortFormat)) }
     onShowLocalTimezoneChanged:    { timeFormatCorrection(Qt.locale().timeFormat(Locale.ShortFormat)) }
     onShowDateChanged:             { timeFormatCorrection(Qt.locale().timeFormat(Locale.ShortFormat)) }
+    onUse24hFormatChanged:         { timeFormatCorrection(Qt.locale().timeFormat(Locale.ShortFormat)) }
 
     states: [
         State {
@@ -465,16 +467,30 @@ Item {
     // It can happen that Qt uses the 'C' locale (it's a fallback) and that locale
     // has always ":ss" part in ShortFormat, so we need to remove it.
     function timeFormatCorrection(timeFormatString) {
+        var regexp = /(hh*)(.+)(mm)/i
+        var match = regexp.exec(timeFormatString);
+
+        var hours = match[1];
+        var delimiter = match[2];
+        var minutes = match[3]
+        var seconds = "ss";
+        var amPm = "AP";
+        var uses24hFormatByDefault = timeFormatString.toLowerCase().indexOf("ap") == -1;
+
+        // because QLocale is incredibly stupid and does not convert 12h/24h clock format
+        // when uppercase H is used for hours, needs to be h or hh, so toLowerCase()
+        var result = hours.toLowerCase() + delimiter + minutes;
+
         if (main.showSeconds && timeFormatString.indexOf('s') == -1) {
-            timeFormatString = timeFormatString.replace(/^(hh*)(.+)(mm)(.*?)/i,
-                                                        function(match, firstPart, delimiter, secondPart, rest, offset, original) {
-                return firstPart + delimiter + secondPart + delimiter + "ss" + rest
-            });
-        } else if (!main.showSeconds && timeFormatString.indexOf('s') != -1) {
-            timeFormatString = timeFormatString.replace(/.ss?/i, "");
+            result += delimiter + seconds;
         }
 
-        main.timeFormat = timeFormatString;
+        // add "AM/PM" either if the setting is the default and locale uses it OR if the user unchecked "use 24h format"
+        if ((main.use24hFormat == Qt.PartiallyChecked && !uses24hFormatByDefault) || main.use24hFormat == Qt.Unchecked) {
+            result += " " + amPm;
+        }
+
+        main.timeFormat = result;
         setupLabels();
     }
 
@@ -586,7 +602,7 @@ Item {
         }
 
         if (doCorrections) {
-            timeFormatCorrection(main.timeFormat);
+            timeFormatCorrection(Qt.locale().timeFormat(Locale.ShortFormat));
         }
     }
 

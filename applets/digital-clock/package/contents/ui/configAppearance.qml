@@ -39,7 +39,7 @@ Item {
 
     property alias cfg_showDate: showDate.checked
     property string cfg_dateFormat: "shortDate"
-
+    property alias cfg_use24hFormat: use24hFormat.checkedState
 
     QtLayouts.ColumnLayout {
         QtControls.GroupBox {
@@ -78,6 +78,11 @@ Item {
                 QtControls.CheckBox {
                     id: showSeconds
                     text: i18n("Show seconds")
+                }
+
+                QtControls.CheckBox {
+                    id: use24hFormat
+                    text: i18nc("Checkbox label; means 24h clock format, without am/pm", "Use 24-hour Clock")
                 }
 
                 QtControls.CheckBox {
