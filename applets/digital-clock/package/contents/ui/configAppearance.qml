@@ -90,6 +90,7 @@ Item {
                     text: i18n("Show local time zone")
                 }
 
+
                 QtControls.Label {
                     text: i18n("Display time zone as:")
                 }
@@ -146,16 +147,18 @@ Item {
                                     dateFormat.currentIndex = i;
                                 }
                             }
-
-                            if (plasmoid.configuration.displayTimezoneAsCode) {
-                                timezoneCodeRadio.checked = true;
-                            } else {
-                                timezoneCityRadio.checked = true;
-                            }
                         }
                     }
                 }
             }
+        }
+    }
+
+    Component.onCompleted: {
+        if (plasmoid.configuration.displayTimezoneAsCode) {
+            timezoneCodeRadio.checked = true;
+        } else {
+            timezoneCityRadio.checked = true;
         }
     }
 }
