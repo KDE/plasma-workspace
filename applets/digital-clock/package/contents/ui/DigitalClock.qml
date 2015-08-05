@@ -388,6 +388,7 @@ Item {
             id: timeLabel
 
             font {
+                family: plasmoid.configuration.fontFamily || theme.defaultFont.family
                 weight: plasmoid.configuration.boldText ? Font.Bold : Font.Normal
                 italic: plasmoid.configuration.italicText
                 pixelSize: 1024
@@ -430,6 +431,7 @@ Item {
         anchors.top: labelsFlow.bottom
         visible: main.showDate && !main.tooSmall
 
+        font.family: timeLabel.font.family
         font.weight: timeLabel.font.weight
         font.italic: timeLabel.font.italic
         font.pixelSize: 1024

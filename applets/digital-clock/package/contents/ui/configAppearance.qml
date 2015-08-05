@@ -1,6 +1,7 @@
 /*
  * Copyright 2013  Bhushan Shah <bhush94@gmail.com>
  * Copyright 2013 Sebastian Kügler <sebas@kde.org>
+ * Copyright 2015 Kai Uwe Broulik <kde@privat.broulik.de>
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License as
@@ -28,6 +29,9 @@ Item {
     width: childrenRect.width
     height: childrenRect.height
 
+    signal configurationChanged
+
+    property string cfg_fontFamily
     property alias cfg_boldText: boldCheckBox.checked
     property string cfg_timeFormat: ""
     property alias cfg_italicText: italicCheckBox.checked
@@ -41,13 +45,73 @@ Item {
     property string cfg_dateFormat: "shortDate"
     property alias cfg_use24hFormat: use24hFormat.checkedState
 
+    onCfg_fontFamilyChanged: {
+        // HACK by the time we populate our model and/or the ComboBox is finished the value is still undefined
+        if (cfg_fontFamily) {
+            for (var i = 0, j = fontsModel.count; i < j; ++i) {
+                if (fontsModel.get(i).value == cfg_fontFamily) {
+                    fontFamilyComboBox.currentIndex = i
+                    break
+                }
+            }
+        }
+    }
+
+    ListModel {
+        id: fontsModel
+        Component.onCompleted: {
+            var arr = [] // use temp array to avoid constant binding stuff
+            arr.push({text: i18nc("Use default font", "Default"), value: ""})
+
+            var fonts = Qt.fontFamilies()
+            var foundIndex = 0
+            for (var i = 0, j = fonts.length; i < j; ++i) {
+                arr.push({text: fonts[i], value: fonts[i]})
+            }
+            append(arr)
+        }
+    }
+
     QtLayouts.ColumnLayout {
         QtControls.GroupBox {
             QtLayouts.Layout.fillWidth: true
-            title: i18n("Appearance")
+            title: i18n("Font")
             flat: true
 
-            QtLayouts.ColumnLayout {
+            QtLayouts.GridLayout { // there's no FormLayout :(
+                columns: 2
+                QtLayouts.Layout.fillWidth: true
+
+                QtControls.Label {
+                    QtLayouts.Layout.fillWidth: true
+                    horizontalAlignment: Text.AlignRight
+                    text: i18n("Font style:")
+                }
+
+                QtControls.ComboBox {
+                    id: fontFamilyComboBox
+                    QtLayouts.Layout.fillWidth: true
+                    // ComboBox's sizing is just utterly broken
+                    QtLayouts.Layout.minimumWidth: units.gridUnit * 10
+                    model: fontsModel
+                    // doesn't autodeduce from model because we manually populate it
+                    textRole: "text"
+
+                    onCurrentIndexChanged: {
+                        var current = model.get(currentIndex)
+                        if (current) {
+                            cfg_fontFamily = current.value
+                            appearancePage.configurationChanged()
+                        }
+                    }
+                }
+
+                // spacer, cannot do Qt.AlignTop on the font style label + rowSpan 3, otherwise looks odd
+                Item {
+                    QtLayouts.Layout.fillWidth: true
+                    QtLayouts.Layout.rowSpan: 2
+                }
+
                 QtControls.CheckBox {
                     id: boldCheckBox
                     text: i18n("Bold text")
