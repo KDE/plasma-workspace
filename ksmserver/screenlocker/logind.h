@@ -23,6 +23,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include <QDBusConnection>
 #include <QDBusUnixFileDescriptor>
 #include <QObject>
+#include <QDBusPendingCallWatcher>
 
 class QDBusServiceWatcher;
 
@@ -59,10 +60,16 @@ private:
      **/
     explicit LogindIntegration(const QDBusConnection &connection, QObject *parent = nullptr);
     void logindServiceRegistered();
+    void consolekitServiceRegistered();
+    void commonServiceRegistered(QDBusPendingCallWatcher *watcher);
     QDBusConnection m_bus;
     QDBusServiceWatcher *m_logindServiceWatcher;
     bool m_connected;
     QDBusUnixFileDescriptor m_inhibitFileDescriptor;
+    const QString *m_service;
+    const QString *m_path;
+    const QString *m_managerInterface;
+    const QString *m_sessionInterface;
 };
 
 #endif
