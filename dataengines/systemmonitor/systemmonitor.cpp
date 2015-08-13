@@ -29,10 +29,8 @@
 #include <ksgrd/SensorManager.h>
 
 SystemMonitorEngine::SystemMonitorEngine(QObject* parent, const QVariantList& args)
-    : Plasma::DataEngine(parent)
+    : Plasma::DataEngine(parent, args)
 {
-    Q_UNUSED(args)
-
     KSGRD::SensorMgr = new KSGRD::SensorManager(this);
     KSGRD::SensorMgr->engage("localhost", "", "ksysguardd");
 
