@@ -46,7 +46,7 @@ DesktopView::DesktopView(Plasma::Corona *corona, QScreen *targetScreen)
 
     setTitle(corona->kPackage().metadata().name());
     setIcon(QIcon::fromTheme(corona->kPackage().metadata().iconName()));
-    engine()->rootContext()->setContextProperty("desktop", this);
+    rootContext()->setContextProperty("desktop", this);
     setSource(QUrl::fromLocalFile(corona->kPackage().filePath("views", "Desktop.qml")));
 
     ensureWindowType();
