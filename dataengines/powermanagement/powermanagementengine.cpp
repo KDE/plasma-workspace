@@ -485,7 +485,12 @@ void PowermanagementEngine::updateOverallBattery()
         }
     }
 
-    if (totalEnergy > 0) {
+    if (count == 1) {
+        // Energy is sometimes way off causing us to show rubbish; this is a UPower issue
+        // but anyway having just one battery and the tooltip showing strange readings
+        // compared to the popup doesn't look polished.
+        setData("Battery", "Percent", totalPercentage);
+    } else if (totalEnergy > 0) {
         setData("Battery", "Percent", qRound(energy / totalEnergy * 100));
     } else if (count > 0) { // UPS don't have energy, see Bug 348588
         setData("Battery", "Percent", qRound(totalPercentage / static_cast<qreal>(count)));
