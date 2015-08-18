@@ -84,7 +84,7 @@ Item {
         }
         QtControls.CheckBox {
             id: sleep
-            text: i18n("Sleep")
+            text: i18n("Suspend")
             enabled: iconsPage.canSuspend && (checkedOptions > 1 || !checked)
         }
     }
