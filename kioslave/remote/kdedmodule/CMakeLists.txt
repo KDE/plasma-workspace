@@ -1,6 +1,6 @@
-add_library(kded_remotedirnotify MODULE remotedirnotify.cpp remotedirnotifymodule.cpp ../kio_remote_debug.cpp)
-target_link_libraries(kded_remotedirnotify KF5::DBusAddons KF5::KIOCore KF5::KDELibs4Support)
+add_library(remotedirnotify MODULE remotedirnotify.cpp remotedirnotifymodule.cpp ../kio_remote_debug.cpp)
+kcoreaddons_desktop_to_json(remotedirnotify remotedirnotify.desktop)
 
-install(TARGETS kded_remotedirnotify  DESTINATION ${KDE_INSTALL_PLUGINDIR} )
-install( FILES remotedirnotify.desktop  DESTINATION  ${KDE_INSTALL_KSERVICES5DIR}/kded )
+target_link_libraries(remotedirnotify KF5::DBusAddons KF5::KIOCore KF5::KDELibs4Support)
 
+install(TARGETS remotedirnotify DESTINATION ${KDE_INSTALL_PLUGINDIR}/kf5/kded )

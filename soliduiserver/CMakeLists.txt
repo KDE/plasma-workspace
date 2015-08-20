@@ -11,14 +11,9 @@ set(kded_soliduiserver_SRCS
 
 ki18n_wrap_ui(kded_soliduiserver_SRCS deviceactionsdialogview.ui)
 
-add_library(kded_soliduiserver MODULE ${kded_soliduiserver_SRCS})
-kcoreaddons_desktop_to_json(kded_soliduiserver soliduiserver.desktop)
+add_library(soliduiserver MODULE ${kded_soliduiserver_SRCS})
+kcoreaddons_desktop_to_json(soliduiserver soliduiserver.desktop)
 
-target_link_libraries(kded_soliduiserver KF5::Solid KF5::DBusAddons KF5::Wallet KF5::KIOCore KF5::WindowSystem KF5::KDELibs4Support)
+target_link_libraries(soliduiserver KF5::Solid KF5::DBusAddons KF5::Wallet KF5::KIOCore KF5::WindowSystem KF5::KDELibs4Support)
 
-install(TARGETS kded_soliduiserver DESTINATION ${KDE_INSTALL_PLUGINDIR})
-
-
-########### install files ###############
-
-install(FILES soliduiserver.desktop DESTINATION ${KDE_INSTALL_KSERVICES5DIR}/kded)
+install(TARGETS soliduiserver DESTINATION ${KDE_INSTALL_PLUGINDIR}/kf5/kded)

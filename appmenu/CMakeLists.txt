@@ -21,9 +21,10 @@ qt5_add_dbus_adaptor(kded_appmenu_SRCS com.canonical.AppMenu.Registrar.xml
 qt5_add_dbus_adaptor(kded_appmenu_SRCS org.kde.kappmenu.xml
     appmenu_dbus.h AppmenuDBus appmenuadaptor AppmenuAdaptor)
 
-add_library(kded_appmenu MODULE ${kded_appmenu_SRCS})
+add_library(appmenu MODULE ${kded_appmenu_SRCS})
+kcoreaddons_desktop_to_json(appmenu appmenu.desktop)
 
-target_link_libraries(kded_appmenu
+target_link_libraries(appmenu
     Qt5::DBus
     Qt5::X11Extras
     KF5::DBusAddons
@@ -35,10 +36,9 @@ target_link_libraries(kded_appmenu
     dbusmenu-qt5
 )
 
-install(TARGETS kded_appmenu  DESTINATION ${KDE_INSTALL_PLUGINDIR} )
+install(TARGETS appmenu DESTINATION ${KDE_INSTALL_PLUGINDIR}/kf5/kded )
 
 ########### install files ###############
 
-install( FILES appmenu.desktop  DESTINATION  ${KDE_INSTALL_KSERVICES5DIR}/kded )
 install( FILES com.canonical.AppMenu.Registrar.xml DESTINATION ${KDE_INSTALL_DBUSINTERFACEDIR} )
 install( FILES org.kde.kappmenu.xml DESTINATION ${KDE_INSTALL_DBUSINTERFACEDIR} )

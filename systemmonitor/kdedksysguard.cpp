@@ -33,7 +33,9 @@
 #include <QDBusConnection>
 #include <QDBusConnectionInterface>
 
-K_PLUGIN_FACTORY(KSysGuardFactory, registerPlugin<KDEDKSysGuard>();)
+K_PLUGIN_FACTORY_WITH_JSON(KSysGuardFactory,
+                           "ksysguard.json",
+                           registerPlugin<KDEDKSysGuard>();)
 
 KDEDKSysGuard::KDEDKSysGuard(QObject* parent, const QVariantList&)
 {

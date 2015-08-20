@@ -4,13 +4,12 @@ else ()
     set(kded_ktimezoned_SRCS ktimezoned.cpp)
 endif ()
 
-add_library(kded_ktimezoned MODULE ${kded_ktimezoned_SRCS})
-
-kcoreaddons_desktop_to_json(kded_ktimezoned ktimezoned.desktop)
+add_library(ktimezoned MODULE ${kded_ktimezoned_SRCS})
+kcoreaddons_desktop_to_json(ktimezoned ktimezoned.desktop)
 
 #qt5_add_dbus_adaptor(kded_ktimezoned_SRCS org.kde.KTimeZoned ktimezonedbus.h DBusHandler)
 
-target_link_libraries(kded_ktimezoned
+target_link_libraries(ktimezoned
    Qt5::Core
    Qt5::DBus
    KF5::Service    # plugin factory
@@ -18,10 +17,4 @@ target_link_libraries(kded_ktimezoned
    KF5::DBusAddons # kdedmodule
 )
 
-install(TARGETS kded_ktimezoned DESTINATION ${KDE_INSTALL_PLUGINDIR})
-
-########### install files ###############
-
-install( FILES ktimezoned.desktop DESTINATION ${KDE_INSTALL_KSERVICES5DIR}/kded )
-
-
+install(TARGETS ktimezoned DESTINATION ${KDE_INSTALL_PLUGINDIR}/kf5/kded)

@@ -49,10 +49,9 @@
 #include <kpluginloader.h>
 #include <netwm.h>
 
-K_PLUGIN_FACTORY(AppMenuFactory,
-                 registerPlugin<AppMenuModule>();
-    )
-K_EXPORT_PLUGIN(AppMenuFactory("appmenu"))
+K_PLUGIN_FACTORY_WITH_JSON(AppMenuFactory,
+                           "appmenu.json",
+                           registerPlugin<AppMenuModule>();)
 
 AppMenuModule::AppMenuModule(QObject* parent, const QList<QVariant>&)
     : KDEDModule(parent),

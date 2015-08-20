@@ -1,4 +1,10 @@
 [Desktop Entry]
+Type=Service
+X-KDE-ServiceTypes=KDEDModule
+X-KDE-Library=freespacenotifier
+X-KDE-DBus-ModuleName=freespacenotifier
+X-KDE-Kded-autoload=true
+
 Name=Free Space Notifier
 Name[ar]=مُخطِر المساحة الحرّة
 Name[bg]=Уведомяване за свободно пространство
@@ -122,8 +128,3 @@ Comment[wa]=Advierti cwand i gn a cåzu pupont d' plaece dins vosse ridant måjh
 Comment[x-test]=xxWarns when running out of space on your home folderxx
 Comment[zh_CN]=在您主目录磁盘空间过低时发出警告
 Comment[zh_TW]=當您的家目錄剩餘空間快不足時警告您
-Type=Service
-X-KDE-ServiceTypes=KDEDModule
-X-KDE-Library=freespacenotifier
-X-KDE-DBus-ModuleName=freespacenotifier
-X-KDE-Kded-autoload=true

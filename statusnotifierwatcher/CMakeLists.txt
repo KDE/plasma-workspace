@@ -12,13 +12,10 @@ set_source_files_properties(${statusnotifieritem_xml} PROPERTIES
 )
 qt5_add_dbus_interface(kded_statusnotifierwatcher_SRCS ${statusnotifieritem_xml} statusnotifieritem_interface)
 
-add_library(kded_statusnotifierwatcher MODULE ${kded_statusnotifierwatcher_SRCS})
+add_library(statusnotifierwatcher MODULE ${kded_statusnotifierwatcher_SRCS})
+kcoreaddons_desktop_to_json(statusnotifierwatcher statusnotifierwatcher.desktop)
 
 
-target_link_libraries(kded_statusnotifierwatcher Qt5::DBus KF5::DBusAddons KF5::CoreAddons)
+target_link_libraries(statusnotifierwatcher Qt5::DBus KF5::DBusAddons KF5::CoreAddons)
 
-install(TARGETS kded_statusnotifierwatcher  DESTINATION ${KDE_INSTALL_PLUGINDIR})
-
-
-install( FILES statusnotifierwatcher.desktop  DESTINATION ${KDE_INSTALL_KSERVICES5DIR}/kded)
-
+install(TARGETS statusnotifierwatcher  DESTINATION ${KDE_INSTALL_PLUGINDIR}/kf5/kded)

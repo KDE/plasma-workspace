@@ -28,9 +28,9 @@
 #include "statusnotifierwatcheradaptor.h"
 #include "statusnotifieritem_interface.h"
 
-K_PLUGIN_FACTORY(StatusNotifierWatcherFactory,
-                 registerPlugin<StatusNotifierWatcher>();
-    )
+K_PLUGIN_FACTORY_WITH_JSON(StatusNotifierWatcherFactory,
+                           "statusnotifierwatcher.json",
+                           registerPlugin<StatusNotifierWatcher>();)
 
 StatusNotifierWatcher::StatusNotifierWatcher(QObject *parent, const QList<QVariant>&)
       : KDEDModule(parent)

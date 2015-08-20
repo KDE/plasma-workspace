@@ -4,9 +4,10 @@ set (KDED_KSYSGUARD_SRCS
      kdedksysguard.cpp
 )
 
-add_library(kded_ksysguard MODULE ${KDED_KSYSGUARD_SRCS})
+add_library(ksysguard MODULE ${KDED_KSYSGUARD_SRCS})
+kcoreaddons_desktop_to_json(ksysguard ksysguard.desktop)
 
-target_link_libraries(kded_ksysguard
+target_link_libraries(ksysguard
     KF5::ProcessCore
     KF5::ProcessUi
     KF5::DBusAddons
@@ -15,8 +16,7 @@ target_link_libraries(kded_ksysguard
     KF5::GlobalAccel
 )
 
-install(TARGETS kded_ksysguard DESTINATION ${KDE_INSTALL_PLUGINDIR})
-install(FILES ksysguard.desktop DESTINATION ${KDE_INSTALL_KSERVICES5DIR}/kded)
+install(TARGETS ksysguard DESTINATION ${KDE_INSTALL_PLUGINDIR}/kf5/kded)
 
 add_executable(systemmonitor ksystemactivitydialog.cpp main.cpp)
 

@@ -23,12 +23,11 @@
 #include <kglobal.h>
 
 #include <kpluginfactory.h>
-#include <kpluginloader.h>
+//#include <kpluginloader.h>
 
-K_PLUGIN_FACTORY(RemoteDirNotifyFactory,
-                 registerPlugin<RemoteDirNotifyModule>();
-    )
-K_EXPORT_PLUGIN(RemoteDirNotifyFactory("kio_remote"))
+K_PLUGIN_FACTORY_WITH_JSON(RemoteDirNotifyFactory,
+                           "remotedirnotify.json",
+                           registerPlugin<RemoteDirNotifyModule>();)
 
 RemoteDirNotifyModule::RemoteDirNotifyModule(QObject* parent, const QList<QVariant>&)
 	: KDEDModule(parent)
