@@ -481,10 +481,14 @@ void KSMServer::runUserAutostart()
                 (file[0] != QLatin1Char('#') || !file.endsWith(QLatin1Char('#'))))
         {
             const QString fullPath = dir.absolutePath() + QLatin1Char('/') + file;
-            const bool started = QProcess::startDetached(fullPath);
-            if (!started) {
-                qCWarning(KSMSERVER) << "Error starting" << fullPath;
-            }
+
+            qCDebug(KSMSERVER) << "Starting autostart script " << fullPath;
+            auto p = new QProcess; //deleted in onFinished lambda
+            p->start(fullPath);
+            connect(p, static_cast<void (QProcess::*)(int)>(&QProcess::finished), [p](int exitCode) {
+                qCDebug(KSMSERVER) << "autostart script" << p->program() << "finished with exit code " << exitCode;
+                p->deleteLater();
+            });
         }
     }
 }
