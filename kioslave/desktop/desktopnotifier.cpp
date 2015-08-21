@@ -30,9 +30,9 @@
 #include <QStandardPaths>
 
 
-K_PLUGIN_FACTORY(DesktopNotifierFactory, registerPlugin<DesktopNotifier>();)
-K_EXPORT_PLUGIN(DesktopNotifierFactory("kio_desktop"))
-
+K_PLUGIN_FACTORY_WITH_JSON(DesktopNotifierFactory,
+                           "desktopnotifier.json",
+                           registerPlugin<DesktopNotifier>();)
 
 DesktopNotifier::DesktopNotifier(QObject *parent, const QList<QVariant> &)
     : KDEDModule(parent)
