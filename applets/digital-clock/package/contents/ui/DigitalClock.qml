@@ -54,7 +54,7 @@ Item {
     property int tzIndex: 0
 
     // if the date/timezone cannot be fit with the smallest font to its designated space
-    readonly property bool tooSmall: Math.round(2 * (main.height / 5)) <= theme.smallestFont.pixelSize
+    readonly property bool tooSmall: plasmoid.formFactor == PlasmaCore.Types.Horizontal && Math.round(2 * (main.height / 5)) <= theme.smallestFont.pixelSize
 
     onDateFormatChanged: {
         setupLabels();
