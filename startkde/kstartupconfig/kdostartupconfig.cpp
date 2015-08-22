@@ -83,17 +83,10 @@ int main( int argc, char **argv )
     startupconfig << "#! /bin/sh\n";
     for(;;)
         {
-	  QString line;
-	  {
-	    QByteArray buf;
-	    buf.resize(1024);
-	    if( keys.readLine( buf.data(), buf.length() ) < 0 )
-	      break;
-	    line = QString::fromLocal8Bit(buf);
-	  }
-        line = line.trimmed();
+        QString line = QString::fromLocal8Bit(keys.readLine()).trimmed();
         if( line.isEmpty())
             break;
+
         QString tmp = line;
         QString file, group, key, def;
         file = get_entry( &tmp );
