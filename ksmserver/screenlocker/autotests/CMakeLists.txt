@@ -43,6 +43,7 @@ set(lockWindowTest_SRCS lockwindowtest.cpp ../lockwindow.cpp ../globalaccel.cpp)
 add_executable(lockWindowTest ${lockWindowTest_SRCS})
 target_link_libraries(lockWindowTest
     KF5::GlobalAccel
+    KF5::I18n
     KF5::WindowSystem
     Qt5::Test
     Qt5::X11Extras

@@ -44,11 +44,14 @@ public:
     explicit BackgroundWindow(LockWindow *lock);
     virtual ~BackgroundWindow();
 
+    void emergencyShow();
+
 protected:
     void paintEvent(QPaintEvent *) override;
 
 private:
     LockWindow *m_lock;
+    bool m_greeterFailure = false;
 };
 
 class LockWindow : public QObject, public QAbstractNativeEventFilter
@@ -66,6 +69,8 @@ public:
     void setGlobalAccel(GlobalAccel *ga) {
         m_globalAccel = ga;
     }
+
+    void emergencyShow();
 
     virtual bool nativeEventFilter(const QByteArray &eventType, void *message, long *result) override;
 

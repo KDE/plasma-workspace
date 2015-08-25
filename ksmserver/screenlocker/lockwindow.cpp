@@ -23,6 +23,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 *********************************************************************/
 #include "lockwindow.h"
 #include "globalaccel.h"
+// KDE
+#include <KLocalizedString>
 // Qt
 #include <QApplication>
 #include <QDebug>
@@ -30,6 +32,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include <QPointer>
 #include <QDesktopWidget>
 #include <QPainter>
+#include <QScreen>
 #include <QX11Info>
 // X11
 #include <X11/Xatom.h>
@@ -74,7 +77,31 @@ void BackgroundWindow::paintEvent(QPaintEvent* )
 {
     QPainter p(this);
     p.fillRect(0, 0, width(), height(), Qt::black);
+    if (m_greeterFailure) {
+        auto text = ki18n("The screen locker is broken and unlocking is not possible anymore.\n"
+                          "In order to unlock switch to a virtual terminal (e.g. Ctrl+Alt+F2),\n"
+                          "log in and execute the command:\n\n"
+                          "loginctl unlock-sessions\n\n"
+                          "Afterwards switch back to the running session (Ctrl+Alt+F%1).");
+        text = text.subs(QString::fromLocal8Bit(qgetenv("XDG_VTNR")));
+        p.setPen(Qt::white);
+        QFont f = p.font();
+        f.setBold(true);
+        f.setPointSize(24);
+        p.setFont(f);
+        const auto screens = QGuiApplication::screens();
+        for (auto s : screens) {
+            p.drawText(s->geometry(), Qt::AlignVCenter | Qt::AlignHCenter, text.toString());
+        }
+    }
     m_lock->stayOnTop();
+}
+
+void BackgroundWindow::emergencyShow()
+{
+    m_greeterFailure = true;
+    update();
+    show();
 }
 
 LockWindow::LockWindow()
@@ -88,6 +115,11 @@ LockWindow::LockWindow()
 LockWindow::~LockWindow()
 {
     qApp->removeNativeEventFilter(this);
+}
+
+void LockWindow::emergencyShow()
+{
+    m_background->emergencyShow();
 }
 
 void LockWindow::initialize()

@@ -206,7 +206,12 @@ void KSldApp::initialize()
                 return;
             }
             // failure, restart lock process
-            startLockProcess(EstablishLock::Immediate);
+            m_greeterCrashedCounter++;
+            if (m_greeterCrashedCounter < 4) {
+                startLockProcess(EstablishLock::Immediate);
+            } else if (m_lockWindow) {
+                m_lockWindow->emergencyShow();
+            }
         }
     );
     connect(m_lockProcess, static_cast<void (QProcess::*)(QProcess::ProcessError)>(&QProcess::error), this,
@@ -234,8 +239,12 @@ void KSldApp::initialize()
     connect(m_logind, &LogindIntegration::requestUnlock, this,
         [this]() {
             if (lockState() == Locked) {
-                s_logindExit = true;
-                m_lockProcess->kill();
+                if (m_lockProcess->state() != QProcess::NotRunning) {
+                    s_logindExit = true;
+                    m_lockProcess->kill();
+                } else {
+                    doUnlock();
+                }
             }
         }
     );
@@ -486,6 +495,7 @@ void KSldApp::doUnlock()
     m_lockWindow = NULL;
     m_lockState = Unlocked;
     m_lockedTimer.invalidate();
+    m_greeterCrashedCounter = 0;
     endGraceTime();
     KDisplayManager().setLock(false);
     m_waylandServer->stop();

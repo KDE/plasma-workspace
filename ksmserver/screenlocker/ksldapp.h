@@ -133,6 +133,7 @@ private:
     LogindIntegration *m_logind;
     GlobalAccel *m_globalAccel = nullptr;
     bool m_hasXInput2 = false;
+    int m_greeterCrashedCounter = 0;
 
     // for auto tests
     friend KSldTest;
