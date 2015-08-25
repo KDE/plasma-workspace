@@ -71,6 +71,7 @@ public:
 
 Q_SIGNALS:
     void userActivity();
+    void lockWindowShown();
 
 private Q_SLOTS:
     void updateGeo();

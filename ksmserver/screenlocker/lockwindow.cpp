@@ -411,6 +411,7 @@ bool LockWindow::nativeEventFilter(const QByteArray &eventType, void *message, l
                 }
                 if (xm->window == m_background->winId()) {
                     m_background->update();
+                    emit lockWindowShown();
                     return false;
                 }
                 stayOnTop();

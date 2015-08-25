@@ -209,13 +209,6 @@ void KSldApp::initialize()
             startLockProcess(EstablishLock::Immediate);
         }
     );
-    connect(m_lockProcess, &QProcess::readyReadStandardOutput, this,
-        [this]() {
-            m_lockState = Locked;
-            m_lockedTimer.restart();
-            emit locked();
-        }
-    );
     connect(m_lockProcess, static_cast<void (QProcess::*)(QProcess::ProcessError)>(&QProcess::error), this,
         [this](QProcess::ProcessError error) {
             if (error == QProcess::FailedToStart) {
@@ -557,6 +550,13 @@ void KSldApp::showLockWindow()
                 }
             },
             Qt::QueuedConnection
+        );
+        connect(m_lockWindow, &LockWindow::lockWindowShown, this,
+            [this] {
+                m_lockState = Locked;
+                m_lockedTimer.restart();
+                emit locked();
+            }, Qt::QueuedConnection
         );
         connect(m_waylandServer, &WaylandServer::x11WindowAdded, m_lockWindow, &LockWindow::addAllowedWindow);
     }
