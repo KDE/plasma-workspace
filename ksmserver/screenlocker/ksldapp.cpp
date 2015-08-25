@@ -184,7 +184,6 @@ void KSldApp::initialize()
             }
             if (m_lockGrace) {  // short-circuit if grace time is zero
                 m_inGraceTime = true;
-                m_graceTimer->start(m_lockGrace);
             } else if (m_lockGrace == -1) {
                 m_inGraceTime = true;  // if no timeout configured, grace time lasts forever
             }
@@ -277,6 +276,9 @@ void KSldApp::initialize()
     connect(this, &KSldApp::locked, this,
         [this]() {
             m_logind->uninhibit();
+            if (m_lockGrace > 0 && m_inGraceTime) {
+                m_graceTimer->start(m_lockGrace);
+            }
         }
     );
     connect(this, &KSldApp::unlocked, this,
@@ -526,9 +528,9 @@ void KSldApp::startLockProcess(EstablishLock establishLock)
     if (establishLock == EstablishLock::Immediate) {
         args << "--immediateLock";
     }
-    if (m_graceTimer->isActive()) {
+    if (m_lockGrace > 0) {
         args << "--graceTime";
-        args << QString::number(m_graceTimer->remainingTime());
+        args << QString::number(m_lockGrace);
     }
     if (m_lockGrace == -1) {
         args << "--nolock";
