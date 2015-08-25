@@ -61,9 +61,26 @@ int XSelectInput( Display* dpy, Window w, long e )
 namespace ScreenLocker
 {
 
+BackgroundWindow::BackgroundWindow(LockWindow *lock)
+    : QRasterWindow()
+    , m_lock(lock)
+{
+    setFlags(Qt::X11BypassWindowManagerHint);
+}
+
+BackgroundWindow::~BackgroundWindow() = default;
+
+void BackgroundWindow::paintEvent(QPaintEvent* )
+{
+    QPainter p(this);
+    p.fillRect(0, 0, width(), height(), Qt::black);
+    m_lock->stayOnTop();
+}
+
 LockWindow::LockWindow()
-    : QWidget(nullptr, Qt::X11BypassWindowManagerHint)
+    : QObject()
     , QAbstractNativeEventFilter()
+    , m_background(new BackgroundWindow(this))
 {
     initialize();
 }
@@ -115,12 +132,12 @@ void LockWindow::initialize()
 
 void LockWindow::showLockWindow()
 {
-    hide();
+    m_background->hide();
 
     // Some xscreensaver hacks check for this property
     const char *version = "KDE 4.0";
 
-    XChangeProperty (QX11Info::display(), winId(),
+    XChangeProperty (QX11Info::display(), m_background->winId(),
                      gXA_SCREENSAVER_VERSION, XA_STRING, 8, PropModeReplace,
                      (unsigned char *) version, strlen(version));
 
@@ -130,15 +147,15 @@ void LockWindow::showLockWindow()
     attr.background_pixel = 0;
     attr.event_mask = KeyPressMask | ButtonPressMask | PointerMotionMask |
                         VisibilityChangeMask | ExposureMask;
-    XChangeWindowAttributes(QX11Info::display(), winId(),
+    XChangeWindowAttributes(QX11Info::display(), m_background->winId(),
                             CWEventMask | CWBackPixel, &attr);
 
-    qDebug() << "Lock window Id: " << winId();
+    qDebug() << "Lock window Id: " << m_background->winId();
 
-    move(0, 0);
+    m_background->setPosition(0, 0);
     XSync(QX11Info::display(), False);
 
-    setVRoot( winId(), winId() );
+    setVRoot( m_background->winId(), m_background->winId() );
 }
 
 //---------------------------------------------------------------------------
@@ -148,10 +165,10 @@ void LockWindow::showLockWindow()
 void LockWindow::hideLockWindow()
 {
   emit userActivity();
-  hide();
-  lower();
-  removeVRoot(winId());
-  XDeleteProperty(QX11Info::display(), winId(), gXA_SCREENSAVER_VERSION);
+  m_background->hide();
+  m_background->lower();
+  removeVRoot(m_background->winId());
+  XDeleteProperty(QX11Info::display(), m_background->winId(), gXA_SCREENSAVER_VERSION);
   if ( gVRoot ) {
       unsigned long vroot_data[1] = { gVRootData };
       XChangeProperty(QX11Info::display(), gVRoot, gXA_VROOT, XA_WINDOW, 32,
@@ -383,14 +400,18 @@ bool LockWindow::nativeEventFilter(const QByteArray &eventType, void *message, l
                     if (m_lockWindows.contains(xm->window)) {
                         qDebug() << "uhoh! duplicate!";
                     } else {
-                        if (!isVisible()) {
+                        if (!m_background->isVisible()) {
                             // not yet shown and we have a lock window, so we show our own window
-                            show();
-                            setCursor(Qt::ArrowCursor);
+                            m_background->show();
+                            m_background->setCursor(Qt::ArrowCursor);
                         }
                         m_lockWindows.prepend(xm->window);
                         fakeFocusIn(xm->window);
                     }
+                }
+                if (xm->window == m_background->winId()) {
+                    m_background->update();
+                    return false;
                 }
                 stayOnTop();
                 ret = true;
@@ -499,7 +520,7 @@ void LockWindow::stayOnTop()
     foreach( WId w, m_lockWindows )
         stack[ count++ ] = w;
     // finally, the lock window
-    stack[ count++ ] = winId();
+    stack[ count++ ] = m_background->winId();
     // do the actual restacking if needed
     XRaiseWindow( QX11Info::display(), stack[ 0 ] );
     if( count > 1 )
@@ -510,15 +531,8 @@ void LockWindow::stayOnTop()
 void LockWindow::updateGeo()
 {
     QDesktopWidget *desktop = QApplication::desktop();
-    setGeometry(desktop->geometry());
-}
-
-void LockWindow::paintEvent(QPaintEvent* )
-{
-    QPainter p(this);
-    p.setBrush(QBrush(Qt::black));
-    p.drawRect(geometry());
-    stayOnTop();
+    m_background->setGeometry(desktop->geometry());
+    m_background->update();
 }
 
 void LockWindow::addAllowedWindow(quint32 window)
@@ -532,10 +546,10 @@ void LockWindow::addAllowedWindow(quint32 window)
     if (m_lockWindows.contains(window)) {
         qDebug() << "uhoh! duplicate!";
     } else {
-        if (!isVisible()) {
+        if (!m_background->isVisible()) {
             // not yet shown and we have a lock window, so we show our own window
-            show();
-            setCursor(Qt::ArrowCursor);
+            m_background->show();
+            m_background->setCursor(Qt::ArrowCursor);
         }
         m_lockWindows.prepend(window);
         fakeFocusIn(window);

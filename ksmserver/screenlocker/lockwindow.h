@@ -24,7 +24,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #ifndef SCREENLOCKER_LOCKWINDOW_H
 #define SCREENLOCKER_LOCKWINDOW_H
 #include <QAbstractNativeEventFilter>
-#include <QWidget>
+#include <QRasterWindow>
 #include <X11/Xlib.h>
 #include <fixx11h.h>
 
@@ -34,7 +34,24 @@ class GlobalAccel;
 
 namespace ScreenLocker
 {
-class LockWindow : public QWidget, public QAbstractNativeEventFilter
+
+class LockWindow;
+
+class BackgroundWindow : public QRasterWindow
+{
+    Q_OBJECT
+public:
+    explicit BackgroundWindow(LockWindow *lock);
+    virtual ~BackgroundWindow();
+
+protected:
+    void paintEvent(QPaintEvent *) override;
+
+private:
+    LockWindow *m_lock;
+};
+
+class LockWindow : public QObject, public QAbstractNativeEventFilter
 {
     Q_OBJECT
 public:
@@ -55,9 +72,6 @@ public:
 Q_SIGNALS:
     void userActivity();
 
-protected:
-    virtual void paintEvent(QPaintEvent *);
-
 private Q_SLOTS:
     void updateGeo();
 
@@ -77,6 +91,8 @@ private:
     QList<WId> m_lockWindows;
     QList<quint32> m_allowedWindows;
     GlobalAccel *m_globalAccel = nullptr;
+    QScopedPointer<BackgroundWindow> m_background;
+    friend class BackgroundWindow;
 };
 }
 
