@@ -211,6 +211,8 @@ void CurrentContainmentActionsModel::showConfiguration(int row)
                 pluginInstance->configurationAccepted();
             });
 
+    connect(pluginInstance, &QObject::destroyed, configDlg, &QDialog::reject);
+
     configDlg->show();
 }
 
