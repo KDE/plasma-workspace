@@ -96,7 +96,7 @@ void LockWindowTest::testBlankScreen()
     dummy.show();
     xcb_flush(QX11Info::connection());
 
-    ScreenLocker::LockWindow lockWindow;
+    ScreenLocker::X11Locker lockWindow;
     lockWindow.showLockWindow();
 
     // the screen used to be blanked once the first lock window gets mapped, so let's create one

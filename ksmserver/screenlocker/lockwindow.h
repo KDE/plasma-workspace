@@ -35,13 +35,13 @@ class GlobalAccel;
 namespace ScreenLocker
 {
 
-class LockWindow;
+class X11Locker;
 
 class BackgroundWindow : public QRasterWindow
 {
     Q_OBJECT
 public:
-    explicit BackgroundWindow(LockWindow *lock);
+    explicit BackgroundWindow(X11Locker *lock);
     virtual ~BackgroundWindow();
 
     void emergencyShow();
@@ -50,16 +50,16 @@ protected:
     void paintEvent(QPaintEvent *) override;
 
 private:
-    LockWindow *m_lock;
+    X11Locker *m_lock;
     bool m_greeterFailure = false;
 };
 
-class LockWindow : public QObject, public QAbstractNativeEventFilter
+class X11Locker : public QObject, public QAbstractNativeEventFilter
 {
     Q_OBJECT
 public:
-    LockWindow();
-    virtual ~LockWindow();
+    X11Locker();
+    virtual ~X11Locker();
 
     void showLockWindow();
     void hideLockWindow();

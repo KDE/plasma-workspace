@@ -64,7 +64,7 @@ int XSelectInput( Display* dpy, Window w, long e )
 namespace ScreenLocker
 {
 
-BackgroundWindow::BackgroundWindow(LockWindow *lock)
+BackgroundWindow::BackgroundWindow(X11Locker *lock)
     : QRasterWindow()
     , m_lock(lock)
 {
@@ -104,7 +104,7 @@ void BackgroundWindow::emergencyShow()
     show();
 }
 
-LockWindow::LockWindow()
+X11Locker::X11Locker()
     : QObject()
     , QAbstractNativeEventFilter()
     , m_background(new BackgroundWindow(this))
@@ -112,17 +112,17 @@ LockWindow::LockWindow()
     initialize();
 }
 
-LockWindow::~LockWindow()
+X11Locker::~X11Locker()
 {
     qApp->removeNativeEventFilter(this);
 }
 
-void LockWindow::emergencyShow()
+void X11Locker::emergencyShow()
 {
     m_background->emergencyShow();
 }
 
-void LockWindow::initialize()
+void X11Locker::initialize()
 {
     qApp->installNativeEventFilter(this);
 
@@ -162,7 +162,7 @@ void LockWindow::initialize()
     connect(QApplication::desktop(), SIGNAL(screenCountChanged(int)), SLOT(updateGeo()));
 }
 
-void LockWindow::showLockWindow()
+void X11Locker::showLockWindow()
 {
     m_background->hide();
 
@@ -185,7 +185,7 @@ void LockWindow::showLockWindow()
 //
 // Hide the screen locker window
 //
-void LockWindow::hideLockWindow()
+void X11Locker::hideLockWindow()
 {
   emit userActivity();
   m_background->hide();
@@ -212,7 +212,7 @@ static int ignoreXError(Display *, XErrorEvent *)
 //
 // Save the current virtual root window
 //
-void LockWindow::saveVRoot()
+void X11Locker::saveVRoot()
 {
   Window rootReturn, parentReturn, *children;
   unsigned int numChildren;
@@ -258,7 +258,7 @@ void LockWindow::saveVRoot()
 //
 // Set the virtual root property
 //
-void LockWindow::setVRoot(Window win, Window vr)
+void X11Locker::setVRoot(Window win, Window vr)
 {
     if (gVRoot)
         removeVRoot(gVRoot);
@@ -289,7 +289,7 @@ void LockWindow::setVRoot(Window win, Window vr)
 //
 // Remove the virtual root property
 //
-void LockWindow::removeVRoot(Window win)
+void X11Locker::removeVRoot(Window win)
 {
     XDeleteProperty (QX11Info::display(), win, gXA_VROOT);
 }
@@ -330,7 +330,7 @@ void sendEvent(xcb_generic_event_t *event, xcb_window_t target, int x, int y)
     xcb_send_event(QX11Info::connection(), false, target, XCB_EVENT_MASK_NO_EVENT, reinterpret_cast<const char*>(&e));
 }
 
-bool LockWindow::nativeEventFilter(const QByteArray &eventType, void *message, long int *)
+bool X11Locker::nativeEventFilter(const QByteArray &eventType, void *message, long int *)
 {
     if (eventType != QByteArrayLiteral("xcb_generic_event_t")) {
         return false;
@@ -520,7 +520,7 @@ bool LockWindow::nativeEventFilter(const QByteArray &eventType, void *message, l
     return ret;
 }
 
-int LockWindow::findWindowInfo(Window w)
+int X11Locker::findWindowInfo(Window w)
 {
     for( int i = 0;
          i < m_windowInfo.size();
@@ -530,7 +530,7 @@ int LockWindow::findWindowInfo(Window w)
     return -1;
 }
 
-void LockWindow::stayOnTop()
+void X11Locker::stayOnTop()
 {
 
     // this restacking is written in a way so that
@@ -551,14 +551,14 @@ void LockWindow::stayOnTop()
     XFlush(QX11Info::display());
 }
 
-void LockWindow::updateGeo()
+void X11Locker::updateGeo()
 {
     QDesktopWidget *desktop = QApplication::desktop();
     m_background->setGeometry(desktop->geometry());
     m_background->update();
 }
 
-void LockWindow::addAllowedWindow(quint32 window)
+void X11Locker::addAllowedWindow(quint32 window)
 {
     m_allowedWindows << window;
     // test whether it's to show
