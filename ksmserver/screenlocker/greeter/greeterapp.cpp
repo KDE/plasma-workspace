@@ -197,6 +197,7 @@ void UnlockApp::desktopResized()
         context->setContextProperty(QStringLiteral("kscreenlocker_userImage"), user.faceIconPath());
         context->setContextProperty(QStringLiteral("authenticator"), m_authenticator);
         context->setContextProperty(QStringLiteral("backgroundPath"), KScreenSaverSettings::themeBackground());
+        context->setContextProperty(QStringLiteral("org_kde_plasma_screenlocker_greeter_interfaceVersion"), 1);
 
         view->setSource(m_mainQmlPath);
         view->setResizeMode(QQuickView::SizeRootObjectToView);
@@ -235,6 +236,8 @@ void UnlockApp::desktopResized()
             view->showFullScreen();
         }
         view->raise();
+        QQmlProperty showProperty(view->rootObject(), QStringLiteral("viewVisible"));
+        showProperty.write(true);
     }
     // random state update, actually rather required on init only
     QMetaObject::invokeMethod(this, "getFocus", Qt::QueuedConnection);
