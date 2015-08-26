@@ -28,6 +28,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include <KAuthorized>
 #include <KCrash>
 #include <kdeclarative/kdeclarative.h>
+#include <KDeclarative/KQuickAddons/QuickViewSharedEngine>
 #include <KUser>
 #include <KWindowSystem>
 #include <Solid/PowerManagement>
@@ -134,14 +135,17 @@ void UnlockApp::initialize()
     installEventFilter(this);
 }
 
-void UnlockApp::viewStatusChanged(const QQuickView::Status &status)
+void UnlockApp::viewStatusChanged(const QQmlComponent::Status &status)
 {
-    QQuickView *view = qobject_cast<QQuickView *>(sender());
+    auto *view = qobject_cast<KQuickAddons::QuickViewSharedEngine *>(sender());
+    if (!view) {
+        return;
+    }
 
     const QUrl fallbackUrl("qrc:/fallbacktheme/LockScreen.qml");
 
     // on error, load the fallback lockscreen to not lock the user out of the system
-    if (status == QQuickView::Error && view && view->source() != fallbackUrl) {
+    if (status == QQmlComponent::Error && view && view->source() != fallbackUrl) {
         m_mainQmlPath = fallbackUrl;
         view->setSource(m_mainQmlPath);
     }
@@ -161,10 +165,10 @@ void UnlockApp::desktopResized()
     for (int i = m_views.count(); i < nScreens; ++i) {
         connect(QGuiApplication::screens()[i], SIGNAL(destroyed(QObject*)), SLOT(desktopResized()));
         // create the view
-        QQuickView *view = new QQuickView();
-        connect(view, &QQuickView::statusChanged, this, &UnlockApp::viewStatusChanged);
+        auto *view = new KQuickAddons::QuickViewSharedEngine();
+        connect(view, &KQuickAddons::QuickViewSharedEngine::statusChanged, this, &UnlockApp::viewStatusChanged);
 
-        // first create KDecoration, to be sure that it created a KIO Network Factory
+        // first create KDeclarative, to be sure that it created a KIO Network Factory
         KDeclarative::KDeclarative declarative;
         declarative.setDeclarativeEngine(view->engine());
         declarative.setupBindings();
@@ -200,7 +204,7 @@ void UnlockApp::desktopResized()
         context->setContextProperty(QStringLiteral("org_kde_plasma_screenlocker_greeter_interfaceVersion"), 1);
 
         view->setSource(m_mainQmlPath);
-        view->setResizeMode(QQuickView::SizeRootObjectToView);
+        view->setResizeMode(KQuickAddons::QuickViewSharedEngine::SizeRootObjectToView);
 
         QQmlProperty lockProperty(view->rootObject(), QStringLiteral("locked"));
         lockProperty.write(m_immediateLock || (!m_noLock && !m_delayedLockTimer));
@@ -227,7 +231,7 @@ void UnlockApp::desktopResized()
 
     // update geometry of all views and savers
     for (int i = 0; i < nScreens; ++i) {
-        QQuickView *view = m_views.at(i);
+        auto *view = m_views.at(i);
 
         view->setGeometry(QGuiApplication::screens()[i]->geometry());
         if (m_testing) {
@@ -258,7 +262,7 @@ void UnlockApp::getFocus()
     QWindow *w = 0;
     // this loop is required to make the qml/graphicsscene properly handle the shared keyboard input
     // ie. "type something into the box of every greeter"
-    foreach (QQuickView *view, m_views) {
+    foreach (KQuickAddons::QuickViewSharedEngine *view, m_views) {
         view->requestActivate();
         if (!m_testing) {
             view->setKeyboardGrabEnabled(true); // TODO - check whether this still works in master!
@@ -274,7 +278,7 @@ void UnlockApp::getFocus()
 //         }
 //     }
     if (!w) { // try harder
-        foreach (QQuickView *view, m_views) {
+        foreach (KQuickAddons::QuickViewSharedEngine *view, m_views) {
             if (view->geometry().contains(QCursor::pos())) {
                 w = view;
                 break;
@@ -298,7 +302,7 @@ void UnlockApp::setLockedPropertyOnViews()
     delete m_delayedLockTimer;
     m_delayedLockTimer = 0;
 
-    foreach (QQuickView *view, m_views) {
+    foreach (KQuickAddons::QuickViewSharedEngine *view, m_views) {
         QQmlProperty lockProperty(view->rootObject(), QStringLiteral("locked"));
         lockProperty.write(true);
     }
@@ -342,11 +346,11 @@ void UnlockApp::setTesting(bool enable)
     }
     if (enable) {
         // remove bypass window manager hint
-        foreach (QQuickView * view, m_views) {
+        foreach (KQuickAddons::QuickViewSharedEngine * view, m_views) {
             view->setFlags(view->flags() & ~Qt::X11BypassWindowManagerHint);
         }
     } else {
-        foreach (QQuickView * view, m_views) {
+        foreach (KQuickAddons::QuickViewSharedEngine * view, m_views) {
             view->setFlags(view->flags() | Qt::X11BypassWindowManagerHint);
         }
     }
@@ -366,8 +370,8 @@ void UnlockApp::lockImmediately()
 bool UnlockApp::eventFilter(QObject *obj, QEvent *event)
 {
     if (obj != this && event->type() == QEvent::Show) {
-        QQuickView *view(0);
-        foreach (QQuickView *v, m_views) {
+        KQuickAddons::QuickViewSharedEngine *view(0);
+        foreach (KQuickAddons::QuickViewSharedEngine *v, m_views) {
             if (v == obj) {
                 view = v;
                 break;
@@ -383,12 +387,12 @@ bool UnlockApp::eventFilter(QObject *obj, QEvent *event)
     }
 
     if (event->type() == QEvent::KeyPress) { // react if saver is visible
-        shareEvent(event, qobject_cast<QQuickView*>(obj));
+        shareEvent(event, qobject_cast<KQuickAddons::QuickViewSharedEngine*>(obj));
         return false; // we don't care
     } else if (event->type() == QEvent::KeyRelease) { // conditionally reshow the saver
         QKeyEvent *ke = static_cast<QKeyEvent *>(event);
         if (ke->key() != Qt::Key_Escape) {
-            shareEvent(event, qobject_cast<QQuickView*>(obj));
+            shareEvent(event, qobject_cast<KQuickAddons::QuickViewSharedEngine*>(obj));
             return false; // irrelevant
         }
         return true; // don't pass
@@ -404,7 +408,7 @@ bool UnlockApp::eventFilter(QObject *obj, QEvent *event)
  * even if the focus is actually on a powered off screen.
  */
 
-void UnlockApp::shareEvent(QEvent *e, QQuickView *from)
+void UnlockApp::shareEvent(QEvent *e, KQuickAddons::QuickViewSharedEngine *from)
 {
     // from can be NULL any time (because the parameter is passed as qobject_cast)
     // m_views.contains(from) is atm. supposed to be true but required if any further
@@ -415,7 +419,7 @@ void UnlockApp::shareEvent(QEvent *e, QQuickView *from)
         // Any change in regarded event processing shall be tested thoroughly!
         removeEventFilter(this); // prevent recursion!
         const bool accepted = e->isAccepted(); // store state
-        foreach (QQuickView *view, m_views) {
+        foreach (KQuickAddons::QuickViewSharedEngine *view, m_views) {
             if (view != from) {
                 QCoreApplication::sendEvent(view, e);
                 e->setAccepted(accepted);

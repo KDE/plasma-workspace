@@ -34,6 +34,7 @@ target_link_libraries(kscreenlocker_greet
                         KF5::I18n
                         KF5::ConfigGui
                         KF5::Declarative
+                        KF5::QuickAddons
                         KF5::WindowSystem
                         KF5::Solid
                         Qt5::Quick

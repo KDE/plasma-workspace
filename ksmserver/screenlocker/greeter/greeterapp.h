@@ -23,13 +23,17 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include <QGuiApplication>
 
 #include <KPackage/PackageStructure>
-#include <QQuickView>
+#include <QQmlComponent>
 
 namespace KWayland {
 namespace Client {
     class ConnectionThread;
     class Registry;
 }
+}
+
+namespace KQuickAddons {
+class QuickViewSharedEngine;
 }
 
 class Authenticator;
@@ -64,7 +68,7 @@ protected:
     virtual bool eventFilter(QObject *obj, QEvent *event);
 
 private Q_SLOTS:
-    void viewStatusChanged(const QQuickView::Status &status);
+    void viewStatusChanged(const QQmlComponent::Status &status);
     void resetRequestIgnore();
     void suspendToRam();
     void suspendToDisk();
@@ -73,10 +77,10 @@ private Q_SLOTS:
 
 private:
     void initialize();
-    void shareEvent(QEvent *e, QQuickView *from);
+    void shareEvent(QEvent *e, KQuickAddons::QuickViewSharedEngine *from);
 
     QUrl m_mainQmlPath;
-    QList<QQuickView*> m_views;
+    QList<KQuickAddons::QuickViewSharedEngine*> m_views;
     QTimer *m_resetRequestIgnoreTimer;
     QTimer *m_delayedLockTimer;
     KPackage::Package m_package;
