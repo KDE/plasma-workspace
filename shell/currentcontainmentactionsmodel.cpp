@@ -206,17 +206,10 @@ void CurrentContainmentActionsModel::showConfiguration(int row)
                                                         Qt::Horizontal, configDlg);
     lay->addWidget(buttons);
 
-    QObject::connect(buttons, &QDialogButtonBox::accepted,
+    QObject::connect(buttons, &QDialogButtonBox::accepted, pluginInstance,
             [configDlg, pluginInstance] () {
                 pluginInstance->configurationAccepted();
-                configDlg->deleteLater();
             });
-
-    QObject::connect(buttons, &QDialogButtonBox::rejected,
-            [configDlg] () {
-                configDlg->deleteLater();
-            });
-
 
     configDlg->show();
 }
