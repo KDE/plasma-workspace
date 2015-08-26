@@ -173,15 +173,6 @@ void LockWindow::showLockWindow()
                      gXA_SCREENSAVER_VERSION, XA_STRING, 8, PropModeReplace,
                      (unsigned char *) version, strlen(version));
 
-
-    XSetWindowAttributes attr;
-    // Qt doesn't want to set our background, so let's just use black
-    attr.background_pixel = 0;
-    attr.event_mask = KeyPressMask | ButtonPressMask | PointerMotionMask |
-                        VisibilityChangeMask | ExposureMask;
-    XChangeWindowAttributes(QX11Info::display(), m_background->winId(),
-                            CWEventMask | CWBackPixel, &attr);
-
     qDebug() << "Lock window Id: " << m_background->winId();
 
     m_background->setPosition(0, 0);
