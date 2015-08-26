@@ -162,7 +162,7 @@ Image {
                                 repeat: false
                                 onTriggered: passwordInput.forceActiveFocus()
                             }
-                            visible: block.mainItem.model.count > 0 ? !!block.mainItem.model.get(block.mainItem.selectedIndex).showPassword : false
+                            visible: block.mainItem.model.get(block.mainItem.selectedIndex) ? !!block.mainItem.model.get(block.mainItem.selectedIndex).showPassword : false
                             onVisibleChanged: {
                                 if (visible) {
                                     forceActiveFocus();
@@ -204,7 +204,7 @@ Image {
                         PlasmaComponents.Button {
                             id: actionButton
                             Layout.minimumWidth: passwordInput.width
-                            text: block.mainItem.model.count > 0 ? block.mainItem.model.get(block.mainItem.selectedIndex).ButtonLabel : ""
+                            text: block.mainItem.model.get(block.mainItem.selectedIndex) ? block.mainItem.model.get(block.mainItem.selectedIndex).ButtonLabel : ""
                             enabled: !authenticator.graceLocked
                             onClicked: switch(block.mainItem.model.get(block.mainItem.selectedIndex)["ButtonAction"]) {
                                 case "unlock":
