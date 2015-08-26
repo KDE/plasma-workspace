@@ -435,7 +435,6 @@ bool LockWindow::nativeEventFilter(const QByteArray &eventType, void *message, l
                         if (!m_background->isVisible()) {
                             // not yet shown and we have a lock window, so we show our own window
                             m_background->show();
-                            m_background->setCursor(Qt::ArrowCursor);
                         }
                         m_lockWindows.prepend(xm->window);
                         fakeFocusIn(xm->window);
@@ -582,7 +581,6 @@ void LockWindow::addAllowedWindow(quint32 window)
         if (!m_background->isVisible()) {
             // not yet shown and we have a lock window, so we show our own window
             m_background->show();
-            m_background->setCursor(Qt::ArrowCursor);
         }
         m_lockWindows.prepend(window);
         fakeFocusIn(window);
