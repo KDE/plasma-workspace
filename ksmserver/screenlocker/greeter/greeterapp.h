@@ -73,6 +73,7 @@ private Q_SLOTS:
     void suspendToRam();
     void suspendToDisk();
     void getFocus();
+    void markViewsAsVisible();
     void setLockedPropertyOnViews();
 
 private:

@@ -241,18 +241,18 @@ void UnlockApp::desktopResized()
             view->showFullScreen();
         }
         view->raise();
-        QQmlProperty showProperty(view->rootObject(), QStringLiteral("viewVisible"));
-        showProperty.write(true);
+        connect(view, &QQuickWindow::frameSwapped, this, &UnlockApp::markViewsAsVisible, Qt::QueuedConnection);
     }
+}
+
+void UnlockApp::markViewsAsVisible()
+{
+    auto *view = qobject_cast<KQuickAddons::QuickViewSharedEngine *>(sender());
+    disconnect(view, &QQuickWindow::frameSwapped, this, &UnlockApp::markViewsAsVisible);
+    QQmlProperty showProperty(view->rootObject(), QStringLiteral("viewVisible"));
+    showProperty.write(true);
     // random state update, actually rather required on init only
     QMetaObject::invokeMethod(this, "getFocus", Qt::QueuedConnection);
-    // getFocus on the next event cycle does not work as expected for multiple views
-    // if there's no screensaver, hiding it won't happen and thus not trigger getFocus either
-    // so we call it again in a few miliseconds - the value is nearly random but "must cross some event cycles"
-    // while 150ms worked for me, 250ms gets us a bit more padding without being notable to a human user
-    if (nScreens > 1) {
-        QTimer::singleShot(250, this, SLOT(getFocus()));
-    }
 }
 
 void UnlockApp::getFocus()
