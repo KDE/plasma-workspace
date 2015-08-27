@@ -167,6 +167,7 @@ void UnlockApp::desktopResized()
         // create the view
         auto *view = new KQuickAddons::QuickViewSharedEngine();
         connect(view, &KQuickAddons::QuickViewSharedEngine::statusChanged, this, &UnlockApp::viewStatusChanged);
+        view->setColor(Qt::black);
 
         // first create KDeclarative, to be sure that it created a KIO Network Factory
         KDeclarative::KDeclarative declarative;
