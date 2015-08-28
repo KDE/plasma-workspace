@@ -41,6 +41,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include <KWayland/Client/event_queue.h>
 #include <KWayland/Client/registry.h>
 // Qt
+#include <QAbstractNativeEventFilter>
 #include <QtCore/QTimer>
 #include <QtGui/QKeyEvent>
 #include <qscreen.h>
@@ -60,6 +61,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include <X11/Xatom.h>
 #include <X11/Xlib.h>
 #include <fixx11h.h>
+//
+#include <xcb/xcb.h>
 
 // this is usable to fake a "screensaver" installation for testing
 // *must* be "0" for every public commit!
@@ -67,6 +70,22 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 namespace ScreenLocker
 {
+
+class FocusOutEventFilter : public QAbstractNativeEventFilter
+{
+public:
+    bool nativeEventFilter(const QByteArray &eventType, void *message, long int *result) override {
+        Q_UNUSED(result)
+        if (qstrcmp(eventType, "xcb_generic_event_t") != 0) {
+            return false;
+        }
+        xcb_generic_event_t *event = reinterpret_cast<xcb_generic_event_t*>(message);
+        if ((event->response_type & ~0x80) == XCB_FOCUS_OUT) {
+            return true;
+        }
+        return false;
+    }
+};
 
 // App
 UnlockApp::UnlockApp(int &argc, char **argv)
@@ -83,6 +102,9 @@ UnlockApp::UnlockApp(int &argc, char **argv)
     connect(m_authenticator, &Authenticator::succeeded, this, &QCoreApplication::quit);
     initialize();
     connect(this, &UnlockApp::screenAdded, this, &UnlockApp::desktopResized);
+    if (QX11Info::isPlatformX11()) {
+        installNativeEventFilter(new FocusOutEventFilter);
+    }
 }
 
 UnlockApp::~UnlockApp()
