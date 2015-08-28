@@ -52,6 +52,7 @@ set (plasma_shell_SRCS
     shellmanager.cpp
     standaloneappcorona
     osd.cpp
+    waylanddialogfilter.cpp
     ${scripting_SRC}
 )
 

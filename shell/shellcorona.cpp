@@ -65,6 +65,7 @@
 #include "plasmaquick/configview.h"
 #include "shellmanager.h"
 #include "osd.h"
+#include "waylanddialogfilter.h"
 
 #include "plasmashelladaptor.h"
 
@@ -191,6 +192,8 @@ ShellCorona::ShellCorona(QObject *parent)
     connect(m_activityConsumer, SIGNAL(activityRemoved(QString)), this, SLOT(activityRemoved(QString)));
 
     new Osd(this);
+
+    qApp->installEventFilter(this);
 }
 
 ShellCorona::~ShellCorona()
@@ -200,6 +203,22 @@ ShellCorona::~ShellCorona()
     qDeleteAll(containments());
     qDeleteAll(m_panelViews);
     m_panelViews.clear();
+}
+
+bool ShellCorona::eventFilter(QObject *watched, QEvent *event)
+{
+    if (event->type() == QEvent::PlatformSurface &&
+        watched->inherits("PlasmaQuick::Dialog")) {
+        QPlatformSurfaceEvent *se = static_cast<QPlatformSurfaceEvent *>(event);
+        if (se->surfaceEventType() == QPlatformSurfaceEvent::SurfaceCreated) {
+            if (QGuiApplication::platformName().startsWith(
+                QLatin1String("wayland"), Qt::CaseInsensitive)) {
+                WaylandDialogFilter::install(qobject_cast<QWindow *>(watched), this);
+            }
+        }
+    }
+
+    return QObject::eventFilter(watched, event);
 }
 
 KPackage::Package ShellCorona::lookAndFeelPackage()

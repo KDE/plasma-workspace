@@ -111,6 +111,9 @@ public:
 
     KWayland::Client::PlasmaShell *waylandPlasmaShellInterface() const;
 
+protected:
+    bool eventFilter(QObject *watched, QEvent *event);
+
 public Q_SLOTS:
     /**
      * Request saving applicationConfig on disk, it's event compressed, not immediate
