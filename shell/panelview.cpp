@@ -106,14 +106,9 @@ PanelView::PanelView(ShellCorona *corona, QScreen *targetScreen, QWindow *parent
     m_strutsTimer.setSingleShot(true);
     connect(&m_strutsTimer, &QTimer::timeout,
             this, &PanelView::updateStruts);
-    connect(m_corona->screensConfiguration().data(), &KScreen::Config::outputAdded,
-            this, [this] (const KScreen::OutputPtr &) {
-                updateStruts();
-            });
-    connect(m_corona->screensConfiguration().data(), &KScreen::Config::outputRemoved,
-            this, [this] (int) {
-                updateStruts();
-            });
+
+    connect(m_corona->screensConfiguration()->screen().data(), &KScreen::Screen::currentSizeChanged,
+            this, &PanelView::updateStruts);
 
     qmlRegisterType<QScreen>();
     engine()->rootContext()->setContextProperty("panel", this);
