@@ -33,6 +33,9 @@ Image {
     width: 1000
     height: 1000
 
+    LayoutMirroring.enabled: Qt.application.layoutDirection === Qt.RightToLeft
+    LayoutMirroring.childrenInherit: true
+
     Repeater {
         model: screenModel
         Background {

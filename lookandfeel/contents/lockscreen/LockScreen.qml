@@ -42,6 +42,9 @@ Image {
         }
     }
 
+    LayoutMirroring.enabled: Qt.application.layoutDirection === Qt.RightToLeft
+    LayoutMirroring.childrenInherit: true
+
     Connections {
         target: authenticator
         onFailed: {
