@@ -812,6 +812,7 @@ void ScriptEngine::setupEngine()
     m_scriptSelf.setProperty("applicationPath", newFunction(ScriptEngine::applicationPath));
     m_scriptSelf.setProperty("knownWallpaperPlugins", newFunction(ScriptEngine::knownWallpaperPlugins));
     m_scriptSelf.setProperty("ConfigFile", newFunction(ScriptEngine::configFile));
+    m_scriptSelf.setProperty("gridUnit", ScriptEngine::gridUnit());
 
     setGlobalObject(m_scriptSelf);
 }
@@ -843,6 +844,16 @@ QScriptValue ScriptEngine::desktops(QScriptContext *context, QScriptEngine *engi
 
     containments.setProperty("length", count);
     return containments;
+}
+
+QScriptValue ScriptEngine::gridUnit()
+{
+    int gridUnit = QFontMetrics(QGuiApplication::font()).boundingRect("M").height();
+    if (gridUnit % 2 != 0) {
+        gridUnit++;
+    }
+
+    return gridUnit;
 }
 
 Plasma::Corona *ScriptEngine::corona() const

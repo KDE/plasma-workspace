@@ -23,6 +23,8 @@
 #include <QScriptEngine>
 #include <QScriptValue>
 
+#include <QFontMetrics>
+
 #include <kactivities/controller.h>
 
 #include "../shellcorona.h"
@@ -90,6 +92,7 @@ private:
     static QScriptValue userDataPath(QScriptContext *context, QScriptEngine *engine);
     static QScriptValue knownWallpaperPlugins(QScriptContext *context, QScriptEngine *engine);
     static QScriptValue configFile(QScriptContext *context, QScriptEngine *engine);
+    static QScriptValue gridUnit();
 
     // helpers
     static QScriptValue createContainment(const QString &type, const QString &defautPlugin,
