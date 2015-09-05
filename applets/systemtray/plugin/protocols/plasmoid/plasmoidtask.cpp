@@ -47,11 +47,18 @@ PlasmoidTask::PlasmoidTask(const QString &packageName, int appletId, Plasma::Con
     : Task(parent),
       m_taskId(packageName),
       m_applet(0),
-      m_valid(true)
+      m_valid(false)
 {
     qCDebug(SYSTEMTRAY) << "Loading applet: " << packageName << appletId;
 
     m_applet = Plasma::PluginLoader::self()->loadApplet(packageName, appletId);
+    if (!m_applet) {
+        qWarning() << "could not load plasma applet " << packageName << appletId;
+        return;
+    }
+
+    m_valid = true;
+
     cont->setImmutability(Plasma::Types::Mutable);
     cont->addApplet(m_applet);
     m_applet->setParent(cont);
