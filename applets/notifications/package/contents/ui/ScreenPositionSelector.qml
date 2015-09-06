@@ -29,7 +29,7 @@ QtControls.GroupBox {
     id: monitorPanel
 
     width: units.gridUnit * 13 + units.gridUnit * 2
-    height: (screenRatio * units.gridUnit * 13) + (units.gridUnit * 6)
+    height: (screenRatio * units.gridUnit * 13) + (units.gridUnit * 2) + basePart.height
 
     flat: true
 
@@ -89,11 +89,11 @@ QtControls.GroupBox {
         anchors {
             left: parent.left
             top: topleftPart.bottom
+            bottom: bottomleftPart.top
         }
         svg: monitorSvg
         elementId: "left"
         width: units.gridUnit
-        height: monitorPanel.height - (units.gridUnit * 6)
     }
 
     PlasmaCore.SvgItem {
@@ -101,11 +101,11 @@ QtControls.GroupBox {
         anchors {
             right: parent.right
             top: toprightPart.bottom
+            bottom: bottomrightPart.top
         }
         svg: monitorSvg
         elementId: "right"
         width: units.gridUnit
-        height: monitorPanel.height - (units.gridUnit * 6)
     }
 
     PlasmaCore.SvgItem {
