@@ -39,6 +39,7 @@ Item {
     property alias cfg_show_suspendToDisk: hibernate.checked
     property alias cfg_show_suspendToRam: sleep.checked
 
+    readonly property bool canLockScreen: dataEngine.data["Sleep States"].LockScreen
     readonly property bool canSuspend: dataEngine.data["Sleep States"].Suspend
     readonly property bool canHibernate: dataEngine.data["Sleep States"].Hibernate
 
@@ -65,7 +66,7 @@ Item {
             id: leave
             text: i18n("Leave")
             // ensure user cannot have all options unchecked
-            enabled: checkedOptions > 1 || !checked
+            enabled: iconsPage.canLockScreen && (checkedOptions > 1 || !checked)
         }
         QtControls.CheckBox {
             id: lock

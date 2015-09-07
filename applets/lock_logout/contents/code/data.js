@@ -2,7 +2,8 @@ var data = [{
     icon: "system-lock-screen",
     operation: "lockScreen",
     tooltip_mainText: i18n("Lock"),
-    tooltip_subText: i18n("Lock the screen")
+    tooltip_subText: i18n("Lock the screen"),
+    requires: "LockScreen"
 }, {
     icon: "system-switch-user",
     operation: "switchUser",
