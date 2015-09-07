@@ -22,6 +22,7 @@
 #include "panelshadows_p.h"
 
 #include <QMoveEvent>
+#include <QDebug>
 
 #include <KWayland/Client/plasmashell.h>
 #include <KWayland/Client/surface.h>
@@ -82,7 +83,12 @@ bool WaylandDialogFilter::eventFilter(QObject *watched, QEvent *event)
         }
     } else if (event->type() == QEvent::Show) {
         if (m_dialog == watched) {
-            DialogShadows::self()->addWindow(m_dialog);
+            Plasma::FrameSvg::EnabledBorders enabledBorders = Plasma::FrameSvg::AllBorders;
+            Plasma::FrameSvg *background = m_dialog->property("__plasma_frameSvg").value<Plasma::FrameSvg *>();
+            if (background) {
+                enabledBorders = background->enabledBorders();
+            }
+            DialogShadows::self()->addWindow(m_dialog, enabledBorders);
         }
     }
     return QObject::eventFilter(watched, event);
