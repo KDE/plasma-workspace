@@ -29,6 +29,7 @@
 #include <solid/powermanagement.h>
 
 #include <klocalizedstring.h>
+#include <KAuthorized>
 #include <KIdleTime>
 
 #include <QDebug>
@@ -216,6 +217,7 @@ bool PowermanagementEngine::sourceRequestEvent(const QString &name)
         setData("Sleep States", "Suspend", sleepstates.contains(Solid::PowerManagement::SuspendState));
         setData("Sleep States", "Hibernate", sleepstates.contains(Solid::PowerManagement::HibernateState));
         setData("Sleep States", "HybridSuspend", sleepstates.contains(Solid::PowerManagement::HybridSuspendState));
+        setData("Sleep States", "LockScreen", KAuthorized::authorizeKAction("lock_screen"));
     } else if (name == "PowerDevil") {
         QDBusMessage screenMsg = QDBusMessage::createMethodCall(SOLID_POWERMANAGEMENT_SERVICE,
                                                               QStringLiteral("/org/kde/Solid/PowerManagement/Actions/BrightnessControl"),
