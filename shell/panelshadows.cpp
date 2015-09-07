@@ -111,17 +111,17 @@ public:
     QHash<const QWindow *, Plasma::FrameSvg::EnabledBorders> m_windows;
 };
 
-class DialogShadowsSingleton
+class PanelShadowsSingleton
 {
 public:
-    DialogShadowsSingleton()
+    PanelShadowsSingleton()
     {
     }
 
    PanelShadows self;
 };
 
-Q_GLOBAL_STATIC(DialogShadowsSingleton, privateDialogShadowsSelf)
+Q_GLOBAL_STATIC(PanelShadowsSingleton, privatePanelShadowsSelf)
 
 PanelShadows::PanelShadows(QObject *parent, const QString &prefix)
     : Plasma::Svg(parent),
@@ -138,7 +138,7 @@ PanelShadows::~PanelShadows()
 
 PanelShadows *PanelShadows::self()
 {
-    return &privateDialogShadowsSelf->self;
+    return &privatePanelShadowsSelf->self;
 }
 
 void PanelShadows::addWindow(const QWindow *window, Plasma::FrameSvg::EnabledBorders enabledBorders)

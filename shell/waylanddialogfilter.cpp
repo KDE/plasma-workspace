@@ -27,6 +27,34 @@
 #include <KWayland/Client/surface.h>
 
 
+class DialogShadows : public PanelShadows {
+public:
+    explicit DialogShadows(QObject *parent = 0)
+        : PanelShadows(parent, "dialogs/background")
+    {}
+
+    static DialogShadows *self();
+};
+
+class DialogShadowsSingleton
+{
+public:
+    DialogShadowsSingleton()
+    {
+    }
+
+   DialogShadows self;
+};
+
+Q_GLOBAL_STATIC(DialogShadowsSingleton, privateDialogShadowsSelf)
+
+DialogShadows *DialogShadows::self()
+{
+    return &privateDialogShadowsSelf->self;
+}
+
+
+
 WaylandDialogFilter::WaylandDialogFilter(ShellCorona *c, QWindow *parent)
     : QObject(parent),
       m_dialog(parent)
@@ -37,7 +65,7 @@ WaylandDialogFilter::WaylandDialogFilter(ShellCorona *c, QWindow *parent)
 
 WaylandDialogFilter::~WaylandDialogFilter()
 {
-    PanelShadows::self()->removeWindow(m_dialog);
+    DialogShadows::self()->removeWindow(m_dialog);
 }
 
 void WaylandDialogFilter::install(QWindow *dialog, ShellCorona *c)
@@ -54,7 +82,7 @@ bool WaylandDialogFilter::eventFilter(QObject *watched, QEvent *event)
         }
     } else if (event->type() == QEvent::Show) {
         if (m_dialog == watched) {
-            PanelShadows::self()->addWindow(m_dialog);
+            DialogShadows::self()->addWindow(m_dialog);
         }
     }
     return QObject::eventFilter(watched, event);
