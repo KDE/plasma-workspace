@@ -24,9 +24,16 @@
 #include <QDBusConnection>
 #include <QStringList>
 #include <QTime>
+#include <QSocketNotifier>
 #include <QTimeZone>
 
 #include <Solid/PowerManagement>
+
+#ifdef Q_OS_LINUX
+#include <sys/timerfd.h>
+#include <unistd.h>
+#include <fcntl.h>
+#endif
 
 #include "timesource.h"
 
@@ -54,12 +61,35 @@ TimeEngine::~TimeEngine()
 
 void TimeEngine::init()
 {
-    //QDBusInterface *ktimezoned = new QDBusInterface("org.kde.kded5", "/modules/ktimezoned", "org.kde.KTimeZoned");
     QDBusConnection dbus = QDBusConnection::sessionBus();
     dbus.connect(QString(), QString(), "org.kde.KTimeZoned", "timeZoneChanged", this, SLOT(tzConfigChanged()));
-    dbus.connect(QString(), "/org/kde/kcmshell_clock", "org.kde.kcmshell_clock", "clockUpdated", this, SLOT(clockSkewed()));
 
+#ifdef Q_OS_LINUX
+    //monitor for the system clock being changed
+    auto timeChangedFd = timerfd_create(CLOCK_REALTIME, O_CLOEXEC | O_NONBLOCK);
+    itimerspec timespec;
+    memset(&timespec, 0, sizeof(timespec)); //set all timers to 0 seconds, which creates a timer that won't do anything
+
+    int err = timerfd_settime(timeChangedFd, 3, &timespec, 0); //monitor for the time changing
+    //(flags == TFD_TIMER_ABSTIME | TFD_TIMER_CANCEL_ON_SET). However these are not exposed in glibc so value is hardcoded
+    if (err) {
+        qWarning() << "Could not create timer with TFD_TIMER_CANCEL_ON_SET. Clock skews will not be detected. Error:" << qPrintable(strerror(err));
+    }
+
+    connect(this, &QObject::destroyed, [timeChangedFd]() {
+        close(timeChangedFd);
+    });
+
+    auto notifier = new QSocketNotifier(timeChangedFd, QSocketNotifier::Read, this);
+    connect(notifier, &QSocketNotifier::activated, this, [this](int fd) {
+        uint64_t c;
+        read(fd, &c, 8);
+        clockSkewed();
+    });
+#else
+    dbus.connect(QString(), "/org/kde/kcmshell_clock", "org.kde.kcmshell_clock", "clockUpdated", this, SLOT(clockSkewed()));
     connect( Solid::PowerManagement::notifier(), SIGNAL(resumingFromSuspend()), this , SLOT(clockSkewed()) );
+#endif
 }
 
 void TimeEngine::clockSkewed()
