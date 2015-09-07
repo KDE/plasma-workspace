@@ -62,9 +62,6 @@ Flow {
         return count
     }
 
-    readonly property bool canSuspend: dataEngine.data["Sleep States"].Suspend
-    readonly property bool canHibernate: dataEngine.data["Sleep States"].Hibernate
-
     flow: {
         if ((plasmoid.formFactor === PlasmaCore.Types.Vertical && width >= minButtonSize * visibleButtons) ||
             (plasmoid.formFactor === PlasmaCore.Types.Horizontal && height < minButtonSize * visibleButtons) ||
@@ -91,7 +88,7 @@ Flow {
 
         delegate: Item {
             id: iconDelegate
-            visible: plasmoid.configuration["show_" + modelData.operation] && (!modelData.hasOwnProperty("requires") || lockout["can" + modelData.requires])
+            visible: plasmoid.configuration["show_" + modelData.operation] && (!modelData.hasOwnProperty("requires") || dataEngine.data["Sleep States"][modelData.requires])
             width: items.itemWidth
             height: items.itemHeight
 
