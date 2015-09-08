@@ -160,9 +160,15 @@ bool PlasmoidTask::isWidget() const
     return false; // isn't a widget
 }
 
-void PlasmoidTask::setShortcut(QString text) {
-    if (m_shortcut != text) {
-        m_shortcut = text;
+QKeySequence PlasmoidTask::shortcut() const
+{
+    return m_applet->globalShortcut();
+}
+
+void PlasmoidTask::setShortcut(const QKeySequence &sequence)
+{
+    if (m_applet->globalShortcut() != sequence) {
+        m_applet->setGlobalShortcut(sequence);
         emit changedShortcut();
     }
 }

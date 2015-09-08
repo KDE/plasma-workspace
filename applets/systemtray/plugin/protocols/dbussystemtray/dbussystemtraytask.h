@@ -59,7 +59,6 @@ class DBusSystemTrayTask : public Task
     // property tooltipIconName was introduced to make available some icons in tooltip
     // while PlasmaCore.ToolTip doesn't provide property for icon (not only name of an icon)
     Q_PROPERTY(QString tooltipIconName READ tooltipIconName NOTIFY changedTooltipIconName)
-    Q_PROPERTY(QString shortcut READ shortcut NOTIFY changedShortcut)
 
     friend class DBusSystemTrayProtocol;
 
@@ -85,8 +84,6 @@ public:
     QString tooltipText() const { return m_tooltipText; }
     QIcon   tooltipIcon() const { return m_tooltipIcon; }
     QString tooltipIconName() const { return m_tooltipIcon.name(); }
-    QString shortcut() const { return m_shortcut; }
-    void    setShortcut(QString text);
 
     Q_INVOKABLE void activateContextMenu(int x, int y) const;
     Q_INVOKABLE void activate1(int x, int y) const;
@@ -107,7 +104,6 @@ Q_SIGNALS:
     void changedTooltipTitle();
     void changedTooltipText();
     void changedTooltipIconName();
-    void changedShortcut();
 
 private:
     void syncToolTip(const QString &title, const QString &subTitle, const QIcon &toolTipIcon);
@@ -126,7 +122,6 @@ private:
     QString m_iconName;
     QIcon m_attentionIcon;
     QString m_attentionIconName;
-    QString m_shortcut;
     QString m_moviePath;
     QString m_overlayIconName;
     QString m_iconThemePath;

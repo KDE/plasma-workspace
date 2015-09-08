@@ -78,14 +78,6 @@ bool DBusSystemTrayTask::isWidget() const
     return false; // isn't a widget
 }
 
-void DBusSystemTrayTask::setShortcut(QString text) {
-    if (m_shortcut != text) {
-        m_shortcut = text;
-        emit changedShortcut();
-    }
-}
-
-
 QString DBusSystemTrayTask::taskId() const
 {
     return m_taskId;

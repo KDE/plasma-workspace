@@ -51,7 +51,7 @@ class PlasmoidTask : public Task
 {
     Q_OBJECT
 
-    Q_PROPERTY(QString shortcut READ shortcut NOTIFY changedShortcut)
+    Q_PROPERTY(QKeySequence shortcut READ shortcut WRITE setShortcut NOTIFY changedShortcut)
     Q_PROPERTY(QString iconName READ iconName NOTIFY iconNameChanged)
 
     Q_PROPERTY(QQuickItem* taskItem READ taskItem NOTIFY taskItemChanged)
@@ -76,8 +76,8 @@ public:
 
     QString iconName() const { return m_iconName; }
     KPluginInfo pluginInfo() const;
-    QString shortcut() const { return m_shortcut; }
-    void    setShortcut(QString text);
+    QKeySequence shortcut() const;
+    void setShortcut(const QKeySequence &sequence);
     Plasma::Applet *applet();
 
     Q_INVOKABLE void showMenu(int x, int y);
@@ -106,7 +106,6 @@ private:
 
     QIcon m_icon;
     QString m_iconName;
-    QString m_shortcut;
 
     bool m_valid;
 };
