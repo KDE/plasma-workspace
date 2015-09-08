@@ -186,7 +186,7 @@ QtLayouts.GridLayout {
 
                 KQC.KeySequenceItem {
                     id: keySequenceItem
-                    //anchors.right: parent.right
+                    anchors.right: parent.right
 
                     keySequence: modelData.shortcut
                     // only Plasmoids have that
