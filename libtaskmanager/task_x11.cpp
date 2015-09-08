@@ -25,6 +25,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #include "task_p.h"
 
 #include <QX11Info>
+#include <QGuiApplication>
 #include <X11/Xutil.h>
 #include <fixx11h.h>
 
@@ -249,6 +250,9 @@ void Task::publishIconGeometry(QRect rect)
 
 void Task::refreshActivities()
 {
+    if (!QGuiApplication::platformName().startsWith(QLatin1String("xcb"), Qt::CaseInsensitive)) {
+        return;
+    }
     NETWinInfo info(QX11Info::connection(), d->win, QX11Info::appRootWindow(), 0, NET::WM2Activities);
     QString result(info.activities());
     if (result.isEmpty() || result == "00000000-0000-0000-0000-000000000000") {
