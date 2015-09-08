@@ -24,6 +24,8 @@
 #include <QObject>
 #include <QUrl>
 
+class QJsonArray;
+
 class IconPrivate : public QObject
 {
     Q_OBJECT
@@ -33,7 +35,6 @@ class IconPrivate : public QObject
     Q_PROPERTY(QString genericName READ genericName NOTIFY genericNameChanged)
 
 public:
-
     IconPrivate();
     ~IconPrivate();
 
@@ -41,19 +42,18 @@ public:
     QString name() const;
     QString icon() const;
     QString genericName() const;
-    void setUrl(QUrl& url);
+    void setUrl(const QUrl &url);
 
     Q_INVOKABLE void open();
+    Q_INVOKABLE bool processDroppedUrls(const QJsonArray &droppedUrls);
 
 Q_SIGNALS:
-
     void urlChanged(QUrl newUrl);
     void nameChanged(QString newName);
     void iconChanged(QString newIcon);
     void genericNameChanged(QString newGenericName);
 
 private:
-
     QUrl m_url;
     QString m_name;
     QString m_icon;

@@ -21,10 +21,13 @@
 #include "icon_p.h"
 
 #include <QFileInfo>
+#include <QJsonArray>
 
 #include <KFileItem>
 #include <KDesktopFile>
 #include <KRun>
+#include <KService>
+#include <KShell>
 #include <QMimeType>
 #include <QMimeDatabase>
 
@@ -36,46 +39,44 @@ IconPrivate::IconPrivate() {
 IconPrivate::~IconPrivate() {
 }
 
-void IconPrivate::setUrl(QUrl& url) {
-
+void IconPrivate::setUrl(const QUrl &url)
+{
     m_url = url;
 
     if (m_url.isLocalFile()) {
+        const KFileItem fileItem(m_url);
+        const QFileInfo fi(m_url.toLocalFile());
 
-	const KFileItem fileItem(m_url);
-	const QFileInfo fi(m_url.toLocalFile());
-
-	if (fileItem.isDesktopFile()) {
-	    const KDesktopFile f(m_url.toLocalFile());
-	    m_name = f.readName();
-	    m_icon = f.readIcon();
-	    m_genericName = f.readGenericName();
-	    if (m_name.isNull()) {
-		m_name = QFileInfo(m_url.toLocalFile()).fileName();
-	    }
-	} else {
-	    QMimeDatabase db;
-	    m_name = fi.baseName();
-	    m_icon = db.mimeTypeForUrl(m_url).iconName();
-	    m_genericName = fi.baseName();
-	}
+        if (fileItem.isDesktopFile()) {
+            const KDesktopFile f(m_url.toLocalFile());
+            m_name = f.readName();
+            m_icon = f.readIcon();
+            m_genericName = f.readGenericName();
+            if (m_name.isNull()) {
+                m_name = QFileInfo(m_url.toLocalFile()).fileName();
+            }
+        } else {
+            QMimeDatabase db;
+            m_name = fi.baseName();
+            m_icon = db.mimeTypeForUrl(m_url).iconName();
+            m_genericName = fi.baseName();
+        }
     } else {
-	if (m_url.scheme().contains("http")) {
-	    m_name = m_url.host();
-	} else if (m_name.isEmpty()) {
-	    m_name = m_url.toString();
-	    if (m_name.endsWith(QLatin1String(":/"))) {
-		m_name = m_url.scheme();
-	    }
-	}
-	m_icon = KIO::iconNameForUrl(url);
+        if (m_url.scheme().contains("http")) {
+            m_name = m_url.host();
+        } else if (m_name.isEmpty()) {
+            m_name = m_url.toString();
+            if (m_name.endsWith(QLatin1String(":/"))) {
+                m_name = m_url.scheme();
+            }
+        }
+        m_icon = KIO::iconNameForUrl(url);
     }
 
     emit urlChanged(m_url);
     emit nameChanged(m_name);
     emit iconChanged(m_icon);
     emit genericNameChanged(m_genericName);
-
 }
 
 QUrl IconPrivate::url() const
@@ -96,6 +97,69 @@ QString IconPrivate::icon() const
 QString IconPrivate::genericName() const
 {
     return m_genericName;
+}
+
+bool IconPrivate::processDroppedUrls(const QJsonArray &droppedUrls)
+{
+    if (!m_url.isLocalFile()) {
+        return false;
+    }
+
+    QList<QUrl> urls;
+    foreach (const QJsonValue &droppedUrl, droppedUrls) {
+        // TODO fromLocalFile / user input?
+        const QUrl url(droppedUrl.toString());
+        if (url.isValid()) {
+            urls.append(url);
+        }
+    }
+
+    if (urls.isEmpty()) {
+        return false;
+    }
+
+    const QString stringUrl = m_url.toLocalFile();
+
+    QMimeDatabase db;
+    const QMimeType mimeType = db.mimeTypeForFile(m_url.toLocalFile());
+
+    if (KDesktopFile::isDesktopFile(stringUrl)) {
+        const KDesktopFile desktopFile(stringUrl);
+        const QStringList &supportedMimeTypes = desktopFile.readMimeTypes();
+
+        // if no mime types are given just execute the command in the Desktop file
+        if (supportedMimeTypes.isEmpty()) {
+            KService service(stringUrl);
+            KRun::runService(service, urls, nullptr);
+            return true;
+        }
+
+        // otherwise check if the applicaton supports the dropped type
+        foreach (const QString &supportedType, supportedMimeTypes) {
+            if (mimeType.inherits(supportedType)) {
+                KService service(stringUrl);
+                KRun::runService(service, urls, nullptr);
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    if (mimeType.inherits("application/x-executable") || mimeType.inherits("application/x-shellscript")) {
+        QString params;
+        foreach (const QUrl &url, urls) {
+            // TODO toEncoded?
+            params += QLatin1Char(' ') + KShell::quoteArg(url.isLocalFile() ? url.toLocalFile() : url.toEncoded());
+        }
+
+        KRun::runCommand(KShell::quoteArg(m_url.path()) + QLatin1Char(' ') + params, nullptr);
+        return true;
+    } else if (mimeType.inherits("inode/directory")) {
+        // TODO drop urls thingie from konq/dolphin
+    }
+
+    return false;
 }
 
 void IconPrivate::open()

@@ -24,11 +24,13 @@ import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as Components
 import org.kde.kquickcontrolsaddons 2.0
+import org.kde.draganddrop 2.0 as DragDrop
 import org.kde.plasma.private.icon 1.0
 
 MouseArea {
+    id: root
 
-    id:root
+    property bool containsAcceptableDrag: false
 
     height: units.iconSizes.desktop + theme.mSize(theme.defaultFont).height
     width: units.iconSizes.desktop
@@ -39,29 +41,43 @@ MouseArea {
     property bool constrained: formFactor == PlasmaCore.Types.Vertical || formFactor == PlasmaCore.Types.Horizontal
     hoverEnabled: true
     onClicked: logic.open();
+
     Plasmoid.preferredRepresentation: Plasmoid.fullRepresentation
+    Plasmoid.icon: plasmoid.configuration.iconName
+    Plasmoid.title: plasmoid.configuration.applicationName
+    Plasmoid.backgroundHints: PlasmaCore.Types.TranslucentBackground
 
     Component.onCompleted: {
-        plasmoid.backgroundHints = 2;
-        plasmoid.popupIcon = plasmoid.configuration.iconName;
         plasmoid.activated.connect(logic.open);
+    }
+
+    DragDrop.DropArea {
+        id: dropArea
+        anchors.fill: parent
+        preventStealing: true
+        onDragEnter: root.containsAcceptableDrag = event.mimeData.hasUrls
+        onDragLeave: root.containsAcceptableDrag = false
+        onDrop: {
+            logic.processDroppedUrls(event.mimeData.urls)
+            root.containsAcceptableDrag = false
+        }
     }
 
     PlasmaCore.IconItem {
         id:icon
-        source: plasmoid.configuration.iconName
+        source: plasmoid.icon
         anchors{
             left : parent.left
             right : parent.right
             top : parent.top
             bottom : constrained ? parent.bottom : text.top
         }
-        active: root.containsMouse
+        active: root.containsMouse || root.containsAcceptableDrag
     }
 
     Components.Label {
         id : text
-        text : plasmoid.configuration.applicationName
+        text : plasmoid.title
         anchors {
             left : parent.left
             bottom : parent.bottom
