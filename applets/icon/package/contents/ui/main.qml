@@ -91,9 +91,9 @@ MouseArea {
 
     PlasmaCore.ToolTipArea {
         anchors.fill: parent
-        mainText : plasmoid.configuration.applicationName
-        subText : plasmoid.configuration.genericName
-        icon : plasmoid.configuration.iconName
+        mainText: plasmoid.configuration.applicationName
+        subText: plasmoid.configuration.genericName !== mainText ? plasmoid.configuration.genericName : ""
+        icon: plasmoid.configuration.iconName
     }
 
     Logic {
