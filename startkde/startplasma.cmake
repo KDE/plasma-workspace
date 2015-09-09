@@ -142,7 +142,7 @@ fi
 # lock now and do the rest of the KDE startup underneath the locker.
 KSMSERVEROPTIONS=""
 test -n "$dl" && KSMSERVEROPTIONS=" --lockscreen"
-kwrapper5 ksmserver $KDEWM $KSMSERVEROPTIONS
+kwrapper5 @CMAKE_INSTALL_PREFIX@/@KDE_INSTALL_BINDIR@/ksmserver $KDEWM $KSMSERVEROPTIONS
 if test $? -eq 255; then
   # Startup error
   echo 'startplasma: Could not start ksmserver. Check your installation.'  1>&2
