@@ -78,7 +78,7 @@ Item {
 
             // anchors.fill: parent breaks at small sizes for some reason
             anchors.centerIn: parent
-            width: parent.width - units.smallSpacing
+            width: parent.width - (units.smallSpacing * 2.5 * text.length)
             height: width
 
             horizontalAlignment: Text.AlignHCenter
