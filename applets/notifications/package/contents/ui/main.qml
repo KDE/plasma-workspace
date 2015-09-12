@@ -60,6 +60,12 @@ MouseEventListener {
 
     Plasmoid.switchWidth: units.gridUnit * 20
     Plasmoid.switchHeight: units.gridUnit * 30
+    Plasmoid.icon: {
+        if (jobs && jobs.count) {
+            return "notification-active"
+        }
+        return totalCount ? "notification-inactive" : "notification-disabled"
+    }
 
     Plasmoid.compactRepresentation: Component {
         NotificationIcon {
