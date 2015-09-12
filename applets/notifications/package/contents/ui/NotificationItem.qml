@@ -209,6 +209,7 @@ Item {
                     model: notificationItem.actions
 
                     PlasmaComponents.Button {
+                        Layout.maximumWidth: actionsColumn.Layout.maximumWidth
                         text: model.text
                         onClicked: notificationItem.action(model.id)
                     }
