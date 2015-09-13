@@ -154,7 +154,7 @@ MouseArea {
                     return 0
                 }
                 var freeSpace = new Number(sdSource.data[udi]["Free Space"]);
-                var size = new Number(model["Size"]);
+                var size = new Number(sdSource.data[udi]["Size"]);
                 var used = size-freeSpace;
                 return used*100/size;
             }

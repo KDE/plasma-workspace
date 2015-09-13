@@ -168,13 +168,7 @@ bool SolidDeviceEngine::populateDeviceData(const QString &name)
         setData(name, I18N_NOOP("File Path"), storageaccess->filePath());
 
         if (storageaccess->isAccessible()) {
-            QVariant freeDiskVar;
-            qulonglong freeDisk = freeDiskSpace(storageaccess->filePath());
-            if ( freeDisk != (qulonglong)-1 ) {
-                freeDiskVar.setValue( freeDisk );
-            }
-            setData(name, I18N_NOOP("Free Space"), freeDiskVar);
-            setData(name, I18N_NOOP("Free Space Text"), KFormat().formatByteSize(freeDisk));
+            updateStorageSpace(name);
         }
 
         m_signalmanager->mapDevice(storageaccess, device.udi());
@@ -307,7 +301,6 @@ bool SolidDeviceEngine::populateDeviceData(const QString &name)
         setData(name, I18N_NOOP("File System Type"), storagevolume->fsType());
         setData(name, I18N_NOOP("Label"), storagevolume->label());
         setData(name, I18N_NOOP("UUID"), storagevolume->uuid());
-        setData(name, I18N_NOOP("Size"), storagevolume->size());
         updateInUse(name);
 
         //Check if the volume is part of an encrypted container
@@ -545,16 +538,7 @@ void SolidDeviceEngine::deviceChanged(const QMap<QString, int> &props)
     }
 }
 
-qulonglong SolidDeviceEngine::freeDiskSpace(const QString &mountPoint)
-{
-    KDiskFreeSpaceInfo info = KDiskFreeSpaceInfo::freeSpaceInfo(mountPoint);
-    if (info.isValid()) {
-        return info.available();
-    }
-    return (qulonglong)-1;
-}
-
-bool SolidDeviceEngine::updateFreeSpace(const QString &udi)
+bool SolidDeviceEngine::updateStorageSpace(const QString &udi)
 {
     Solid::Device device = m_devicemap.value(udi);
 
@@ -563,14 +547,15 @@ bool SolidDeviceEngine::updateFreeSpace(const QString &udi)
         return false;
     }
 
-    QVariant freeSpaceVar;
-    qulonglong freeSpace = freeDiskSpace(storageaccess->filePath());
-    if (freeSpace != (qulonglong)-1) {
-        freeSpaceVar.setValue( freeSpace );
+    KDiskFreeSpaceInfo info = KDiskFreeSpaceInfo::freeSpaceInfo(storageaccess->filePath());
+    if (info.isValid()) {
+        setData(udi, I18N_NOOP("Free Space"), QVariant(info.available()));
+        setData(udi, I18N_NOOP("Free Space Text"), KFormat().formatByteSize(info.available()));
+        setData(udi, I18N_NOOP("Size"), QVariant(info.size()));
+        return true;
     }
-    setData(udi, I18N_NOOP("Free Space"), freeSpaceVar );
-    setData(udi, I18N_NOOP("Free Space Text"), KFormat().formatByteSize(freeSpace));
-    return true;
+
+    return false;
 }
 
 bool SolidDeviceEngine::updateHardDiskTemperature(const QString &udi)
@@ -644,7 +629,7 @@ bool SolidDeviceEngine::updateInUse(const QString &udi)
 
 bool SolidDeviceEngine::updateSourceEvent(const QString& source)
 {
-    bool update1 = updateFreeSpace(source);
+    bool update1 = updateStorageSpace(source);
     bool update2 = updateHardDiskTemperature(source);
     bool update3 = updateEmblems(source);
     bool update4 = updateInUse(source);

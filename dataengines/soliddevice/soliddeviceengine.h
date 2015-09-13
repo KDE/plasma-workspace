@@ -67,8 +67,7 @@ protected:
 
 private:
     bool populateDeviceData(const QString &name);
-    qulonglong freeDiskSpace(const QString &mountPoint);
-    bool updateFreeSpace(const QString &udi);
+    bool updateStorageSpace(const QString &udi);
     bool updateHardDiskTemperature(const QString &udi);
     bool updateEmblems(const QString &udi);
     bool updateInUse(const QString &udi);
