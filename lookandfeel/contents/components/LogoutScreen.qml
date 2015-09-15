@@ -130,12 +130,15 @@ BreezeBlock {
             anchors.centerIn: parent
 
             PlasmaComponents.Button {
+                id: cancelButton
                 text: i18nd("plasma_lookandfeel_org.kde.lookandfeel","Cancel")
                 onClicked: root.cancel()
+                Layout.preferredWidth: Math.max(commitButton.implicitWidth, cancelButton.implicitWidth)
             }
 
             PlasmaComponents.Button {
                 id: commitButton
+                Layout.preferredWidth: Math.max(commitButton.implicitWidth, cancelButton.implicitWidth)
                 onClicked: root.currentAction()
                 focus: true
 
