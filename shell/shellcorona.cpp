@@ -758,6 +758,7 @@ void ShellCorona::removeView(int idx)
 
     for (int i = m_views.count() - 2; i >= idx; --i) {
         QScreen *screen = m_views[i + 1]->screen();
+        QScreen *oldScreen = m_views[i]->screen();
 
         const bool wasVisible = m_views[idx]->isVisible();
         m_views[i]->setScreen(screen);
@@ -766,7 +767,7 @@ void ShellCorona::removeView(int idx)
             m_views[idx]->show(); //when destroying the screen, QScreen might have hidden the window
         }
 
-        const QList<PanelView *> panels = panelsForScreen(screen);
+        const QList<PanelView *> panels = panelsForScreen(oldScreen);
         panelsAltered = panelsAltered || !panels.isEmpty();
         foreach (PanelView *p, panels) {
             p->setScreen(screen);
