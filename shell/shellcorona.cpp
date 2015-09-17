@@ -407,6 +407,19 @@ void ShellCorona::primaryOutputChanged()
     if (!newPrimary || newPrimary == oldPrimary) {
         return;
     }
+
+    bool screenAlreadyUsed = false;
+    foreach(DesktopView *view, m_views){
+        if(view->screen() == newPrimary)
+            screenAlreadyUsed = true;
+    }
+
+    if(!screenAlreadyUsed){
+        //This happens when a new primary output gets connected and primaryOutputChanged() is called before addOutput()
+        //addOutput will take care of setting the primary screen
+        return;
+    }
+
     qDebug() << "primary changed!" << oldPrimary->name() << newPrimary->name();
 
     foreach (DesktopView *view, m_views) {
