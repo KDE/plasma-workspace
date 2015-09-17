@@ -20,6 +20,7 @@
 #include "panelconfigview.h"
 #include "panelview.h"
 #include "panelshadows_p.h"
+#include "shellcorona.h"
 
 #include <QDebug>
 #include <QDir>
@@ -35,8 +36,10 @@
 #include <KWindowSystem>
 
 #include <Plasma/Containment>
-#include <Plasma/Corona>
 #include <Plasma/PluginLoader>
+
+#include <KWayland/Client/plasmashell.h>
+#include <KWayland/Client/surface.h>
 
 //////////////////////////////PanelConfigView
 PanelConfigView::PanelConfigView(Plasma::Containment *containment, PanelView *panelView, QWindow *parent)
@@ -228,6 +231,30 @@ void PanelConfigView::focusOutEvent(QFocusEvent *ev)
     }
     Q_UNUSED(ev)
     close();
+}
+
+void PanelConfigView::moveEvent(QMoveEvent *ev)
+{
+    if (!m_shellSurface) {
+        ShellCorona *c = qobject_cast<ShellCorona *>(m_containment->corona());
+
+        if (c) {
+            using namespace KWayland::Client;
+            PlasmaShell *interface = c->waylandPlasmaShellInterface();
+            if (!interface) {
+                return;
+            }
+            Surface *s = Surface::fromWindow(this);
+            if (!s) {
+                return;
+            }
+            m_shellSurface = interface->createSurface(s, this);
+        }
+    }
+
+    if (m_shellSurface) {
+        m_shellSurface->setPosition(ev->pos());
+    }
 }
 
 void PanelConfigView::setVisibilityMode(PanelView::VisibilityMode mode)

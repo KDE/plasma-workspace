@@ -28,12 +28,21 @@
 #include <QJSValue>
 #include <QQmlListProperty>
 #include <QStandardItemModel>
+#include <QPointer>
 #include <Plasma/Theme>
 
 class PanelView;
 
 namespace Plasma {
     class Containment;
+}
+
+namespace KWayland
+{
+    namespace Client
+    {
+        class PlasmaShellSurface;
+    }
 }
 
 class PanelConfigView : public PlasmaQuick::ConfigView
@@ -53,13 +62,12 @@ public:
 protected:
     void showEvent(QShowEvent *ev);
     void hideEvent(QHideEvent *ev);
+    void focusOutEvent(QFocusEvent *ev);
+    void moveEvent(QMoveEvent *ev);
 
 public Q_SLOTS:
     void showAddWidgetDialog();
     void addPanelSpacer();
-
-protected:
-    void focusOutEvent(QFocusEvent *ev);
 
 protected Q_SLOTS:
     void syncGeometry();
@@ -78,6 +86,7 @@ private:
     Plasma::Theme m_theme;
     QTimer m_deleteTimer;
     QTimer m_screenSyncTimer;
+    QPointer<KWayland::Client::PlasmaShellSurface> m_shellSurface;
 };
 
 #endif // multiple inclusion guard
