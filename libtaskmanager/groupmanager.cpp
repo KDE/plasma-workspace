@@ -75,7 +75,6 @@ public:
           changingGroupingStrategy(false),
           readingLauncherConfig(false),
           separateLaunchers(true),
-          alwaysUseLauncherIcons(true),
           forceGrouping(false),
           launchersLocked(false)
     {
@@ -140,7 +139,6 @@ public:
     bool changingGroupingStrategy : 1;
     bool readingLauncherConfig : 1;
     bool separateLaunchers : 1;
-    bool alwaysUseLauncherIcons : 1;
     bool forceGrouping : 1;
     bool launchersLocked : 1;
 };
@@ -983,35 +981,6 @@ void GroupManager::setSeparateLaunchers(bool s)
         d->separateLaunchers = s;
 
         emit separateLaunchersChanged(s);
-    }
-}
-
-bool GroupManager::alwaysUseLauncherIcons() const
-{
-    return d->alwaysUseLauncherIcons;
-}
-
-void GroupManager::setAlwaysUseLauncherIcons(bool keep)
-{
-    if (d->alwaysUseLauncherIcons != keep) {
-        d->alwaysUseLauncherIcons = keep;
-
-        QStack<TaskGroup *> groups;
-        groups.push(d->currentRootGroup());
-
-        while (!groups.isEmpty()) {
-            TaskGroup *group = groups.pop();
-
-            foreach (AbstractGroupableItem * item, group->members()) {
-                if (item->itemType() == GroupItemType) {
-                    groups.push(static_cast<TaskGroup *>(item));
-                } else if (item->itemType() == TaskItemType) {
-                    static_cast<TaskItem *>(item)->setAnnounceIconChanges(!keep);
-                }
-            }
-        }
-
-        emit alwaysUseLauncherIconsChanged(keep);
     }
 }
 

@@ -52,8 +52,8 @@ class TaskItemPrivate
 public:
     TaskItemPrivate(TaskItem *item)
         : q(item),
-        announceIconChanges(false),
-        checkedForLauncher(false) {
+        launcherUrlLookupDone(false),
+        isMenuBackedLauncher(false) {
     }
 
     void filterChange(::TaskManager::TaskChanges change);
@@ -62,14 +62,14 @@ public:
     QWeakPointer<Startup> startupTask;
     QUrl launcherUrl;
     QIcon launcherIcon;
-    bool announceIconChanges;
-    bool checkedForLauncher;
+    bool launcherUrlLookupDone;
+    bool isMenuBackedLauncher;
     QString taskName;
 };
 
 void TaskItemPrivate::filterChange(::TaskManager::TaskChanges change)
 {
-    if (announceIconChanges || change != ::TaskManager::TaskChange::IconChanged) {
+    if (!isMenuBackedLauncher || change != ::TaskManager::TaskChange::IconChanged) {
         emit q->changed(change);
     }
 }
@@ -180,16 +180,12 @@ WindowList TaskItem::winIds() const
 QIcon TaskItem::icon() const
 {
     if (d->task) {
-        if (static_cast<GroupManager *>(parent())->alwaysUseLauncherIcons()) {
-            if (d->launcherIcon.isNull()) {
-                d->launcherIcon = launcherIconFromUrl(launcherUrl());
-            }
+        if (d->launcherIcon.isNull()) {
+            d->launcherIcon = launcherIconFromUrl(launcherUrl());
+        }
 
-            if (!d->launcherIcon.isNull()) {
-                return d->launcherIcon;
-            } else {
-                return d->task.data()->icon();
-            }
+        if (d->isMenuBackedLauncher && !d->launcherIcon.isNull()) {
+            return d->launcherIcon;
         } else {
             return d->task.data()->icon();
         }
@@ -200,20 +196,6 @@ QIcon TaskItem::icon() const
     }
 
     return QIcon();
-}
-
-bool TaskItem::announceIconChanges() const
-{
-    return d->announceIconChanges;
-}
-
-void TaskItem::setAnnounceIconChanges(bool announce)
-{
-    d->announceIconChanges = announce;
-
-    if (announce) {
-        emit changed(::TaskManager::TaskChange::IconChanged);
-    }
 }
 
 QString TaskItem::name() const
@@ -479,8 +461,9 @@ void TaskItem::setLauncherUrl(const QUrl &url)
     }
 
     d->launcherUrl = url;
+    d->isMenuBackedLauncher = launcherUrlIsKnown(d->launcherUrl);
 
-    if (static_cast<GroupManager *>(parent())->alwaysUseLauncherIcons()) {
+    if (!d->isMenuBackedLauncher) {
         d->launcherIcon = launcherIconFromUrl(url);
     }
 
@@ -499,8 +482,9 @@ void TaskItem::setLauncherUrl(const AbstractGroupableItem *item)
     }
 
     d->launcherUrl = item->launcherUrl();
+    d->isMenuBackedLauncher = launcherUrlIsKnown(d->launcherUrl);
 
-    if (static_cast<GroupManager *>(parent())->alwaysUseLauncherIcons()) {
+    if (!d->isMenuBackedLauncher) {
         d->launcherIcon = launcherIconFromUrl(d->launcherUrl);
     }
 
@@ -609,16 +593,17 @@ QUrl TaskItem::launcherUrl() const
         return QUrl();
     }
 
-    if (!d->launcherUrl.isEmpty() || d->checkedForLauncher) {
+    if (!d->launcherUrl.isEmpty() || d->launcherUrlLookupDone) {
         return d->launcherUrl;
     }
 
     // Set a flag so that we remeber that we have already checked for a launcher. This is becasue if we fail, then
     // we will keep on failing so the isEmpty()  check above is not enough.
-    d->checkedForLauncher = true;
+    d->launcherUrlLookupDone = true;
 
     if (d->task || d->startupTask) {
         d->launcherUrl = launcherUrlFromTask(static_cast<GroupManager *>(parent()), d->task.data(), d->startupTask.data());
+        d->isMenuBackedLauncher = launcherUrlIsKnown(d->launcherUrl);
     }
 
     return d->launcherUrl;
@@ -768,6 +753,11 @@ QUrl TaskItem::launcherUrlFromTask(GroupManager *groupManager, Task *task, Start
     return launcherUrl;
 }
 
+bool TaskItem::launcherUrlIsKnown(const QUrl &url)
+{
+    return KService::serviceByStorageId(url.toString());
+}
+
 QIcon TaskItem::launcherIconFromUrl(const QUrl &url)
 {
     if (url.isEmpty()) {
@@ -801,7 +791,7 @@ QIcon TaskItem::launcherIconFromUrl(const QUrl &url)
 void TaskItem::resetLauncherCheck()
 {
     if (d->launcherUrl.isEmpty()) {
-        d->checkedForLauncher = false;
+        d->launcherUrlLookupDone = false;
     }
 }
 

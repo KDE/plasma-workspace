@@ -89,11 +89,9 @@ public:
     void setLauncherUrl(const AbstractGroupableItem *item);
     QUrl launcherUrl() const;
     static QUrl launcherUrlFromTask(GroupManager *groupManager, Task *task, Startup *startup = 0);
+    static bool launcherUrlIsKnown(const QUrl &url);
     static QIcon launcherIconFromUrl(const QUrl &url);
     void resetLauncherCheck();
-
-    bool announceIconChanges() const;
-    void setAnnounceIconChanges(bool announce);
 
 public Q_SLOTS:
     void toDesktop(int);
