@@ -13,8 +13,6 @@ add_subdirectory(digital-clock)
 plasma_install_package(calendar org.kde.plasma.calendar)
 plasma_install_package(clipboard org.kde.plasma.clipboard)
 
-# add_subdirectory(quicklaunch)
-#
 if(NOT WIN32)
 #    #notifications
 #    #should compile also on windows? (even if doesn't really make sense)
