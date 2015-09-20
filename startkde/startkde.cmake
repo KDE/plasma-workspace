@@ -206,7 +206,7 @@ scriptpath=`qtpaths --paths ConfigLocation | tr ':' '\n' | sed 's,$,/plasma-work
 # Add /env/ to the directory to locate the scripts to be sourced
 for prefix in `echo $scriptpath`; do
   for file in "$prefix"/env/*.sh; do
-    test -r "$file" && . "$file"
+    (test -r "$file" && . "$file") || :
   done
 done
 
