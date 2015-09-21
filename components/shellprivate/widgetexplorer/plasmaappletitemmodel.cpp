@@ -194,23 +194,45 @@ PlasmaAppletItemModel* PlasmaAppletItem::appletItemModel()
 
 QVariant PlasmaAppletItem::data(int role) const
 {
-    if (role != PlasmaAppletItemModel::ScreenshotRole) {
+    switch (role) {
+    case PlasmaAppletItemModel::ScreenshotRole:
+        //null = not yet done, empty = tried and failed
+        if (m_screenshot.isNull()) {
+            KPackage::Package pkg = KPackage::PackageLoader::self()->loadPackage("Plasma/Applet");
+            pkg.setDefaultPackageRoot("plasma/plasmoids");
+            pkg.setPath(m_info.pluginName());
+            if (pkg.isValid()) {
+                const_cast<PlasmaAppletItem *>(this)->m_screenshot = pkg.filePath("screenshot");
+            } else {
+                const_cast<PlasmaAppletItem *>(this)->m_screenshot = QString();
+            }
+        } else if (m_screenshot.isEmpty()) {
+            return QVariant();
+        }
+        return m_screenshot;
+
+    case Qt::DecorationRole: {
+        //null = not yet done, empty = tried and failed
+        if (m_icon.isNull()) {
+            KPackage::Package pkg = KPackage::PackageLoader::self()->loadPackage("Plasma/Applet");
+            pkg.setDefaultPackageRoot("plasma/plasmoids");
+            pkg.setPath(m_info.pluginName());
+            if (pkg.isValid() && pkg.metadata().iconName().startsWith("/")) {
+                const_cast<PlasmaAppletItem *>(this)->m_icon = pkg.filePath("", pkg.metadata().iconName().toUtf8());
+            } else {
+                const_cast<PlasmaAppletItem *>(this)->m_icon = QString();
+                return AbstractItem::data(role);
+            }
+        }
+        if (m_icon.isEmpty()) {
+            return AbstractItem::data(role);
+        }
+        return QIcon(m_icon);
+    }
+
+    default:
         return AbstractItem::data(role);
     }
-    //null = not yet done, empty = tried and failed
-    if (m_screenshot.isNull()) {
-        KPackage::Package pkg = KPackage::PackageLoader::self()->loadPackage("Plasma/Applet");
-        pkg.setDefaultPackageRoot("plasma/plasmoids");
-        pkg.setPath(m_info.pluginName());
-        if (pkg.isValid()) {
-            const_cast<PlasmaAppletItem *>(this)->m_screenshot = pkg.filePath("screenshot");
-        } else {
-            const_cast<PlasmaAppletItem *>(this)->m_screenshot = QString();
-        }
-    } else if (m_screenshot.isEmpty()) {
-        return QVariant();
-    }
-    return m_screenshot;
 }
 
 //PlasmaAppletItemModel

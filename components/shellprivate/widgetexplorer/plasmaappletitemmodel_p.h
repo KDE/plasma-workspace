@@ -71,6 +71,7 @@ private:
     PlasmaAppletItemModel * m_model;
     KPluginInfo m_info;
     QString m_screenshot;
+    QString m_icon;
     int m_runningCount;
     bool m_favorite;
     bool m_local;
