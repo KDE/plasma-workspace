@@ -52,6 +52,7 @@ public:
     QString version() const;
     QString author() const;
     QString email() const;
+    QVariant data(int role = Qt::UserRole + 1) const override;
 
     int running() const;
     bool isLocal() const;
@@ -69,6 +70,7 @@ public:
 private:
     PlasmaAppletItemModel * m_model;
     KPluginInfo m_info;
+    QString m_screenshot;
     int m_runningCount;
     bool m_favorite;
     bool m_local;
@@ -90,7 +92,8 @@ public:
         AuthorRole = Qt::UserRole+8,
         EmailRole = Qt::UserRole+9,
         RunningRole = Qt::UserRole+10,
-        LocalRole = Qt::UserRole+11
+        LocalRole = Qt::UserRole+11,
+        ScreenshotRole = Qt::UserRole+12
     };
 
     explicit PlasmaAppletItemModel(QObject * parent = 0);

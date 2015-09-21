@@ -192,6 +192,27 @@ PlasmaAppletItemModel* PlasmaAppletItem::appletItemModel()
     return m_model;
 }
 
+QVariant PlasmaAppletItem::data(int role) const
+{
+    if (role != PlasmaAppletItemModel::ScreenshotRole) {
+        return AbstractItem::data(role);
+    }
+    //null = not yet done, empty = tried and failed
+    if (m_screenshot.isNull()) {
+        KPackage::Package pkg = KPackage::PackageLoader::self()->loadPackage("Plasma/Applet");
+        pkg.setDefaultPackageRoot("plasma/plasmoids");
+        pkg.setPath(m_info.pluginName());
+        if (pkg.isValid()) {
+            const_cast<PlasmaAppletItem *>(this)->m_screenshot = pkg.filePath("screenshot");
+        } else {
+            const_cast<PlasmaAppletItem *>(this)->m_screenshot = QString();
+        }
+    } else if (m_screenshot.isEmpty()) {
+        return QVariant();
+    }
+    return m_screenshot;
+}
+
 //PlasmaAppletItemModel
 
 PlasmaAppletItemModel::PlasmaAppletItemModel(QObject * parent)
@@ -215,6 +236,7 @@ PlasmaAppletItemModel::PlasmaAppletItemModel(QObject * parent)
     newRoleNames[EmailRole] = "email";
     newRoleNames[RunningRole] = "running";
     newRoleNames[LocalRole] = "local";
+    newRoleNames[ScreenshotRole] = "screenshot";
 
     setRoleNames(newRoleNames);
 
