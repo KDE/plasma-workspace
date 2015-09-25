@@ -18,6 +18,8 @@
  */
 
 import QtQuick 2.0
+import QtQuick.Controls.Private 1.0
+import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.kquickcontrolsaddons 2.0
@@ -105,7 +107,7 @@ PlasmaComponents.ListItem {
             icon: appIcon
             image: model.image
             summary: model.summary
-            configurable: model.configurable
+            configurable: model.configurable && !Settings.isMobile
             // model.actions JS array is implicitly turned into a ListModel which we can assign directly
             actions: model.actions
             created: model.created
@@ -139,7 +141,7 @@ PlasmaComponents.ListItem {
                     anchors.fill: parent
 
                     text: body
-                    color: theme.textColor
+                    color: PlasmaCore.ColorScope.textColor
                     selectedTextColor: theme.viewBackgroundColor
                     selectionColor: theme.viewFocusColor
                     font.capitalization: theme.defaultFont.capitalization
@@ -152,6 +154,7 @@ PlasmaComponents.ListItem {
                     font.weight: theme.defaultFont.weight
                     font.wordSpacing: theme.defaultFont.wordSpacing
                     renderType: Text.NativeRendering
+                    enabled: !Settings.isMobile
                     selectByMouse: true
                     readOnly: true
                     wrapMode: Text.Wrap

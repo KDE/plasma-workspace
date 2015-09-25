@@ -38,6 +38,7 @@ Item {
         PlasmaCore.Svg {
             id: notificationSvg
             imagePath: "icons/notification"
+            colorGroup: PlasmaCore.ColorScope.colorGroup
         }
 
         Item {

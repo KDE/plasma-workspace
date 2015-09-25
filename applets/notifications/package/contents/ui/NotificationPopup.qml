@@ -18,6 +18,7 @@
  */
 
 import QtQuick 2.0
+import QtQuick.Controls.Private 1.0
 import QtQuick.Layouts 1.1
 
 import org.kde.plasma.core 2.0 as PlasmaCore
@@ -104,7 +105,7 @@ PlasmaCore.Dialog {
             text: notificationProperties ? notificationProperties.body : ""
             icon: notificationProperties ? notificationProperties.appIcon : ""
             image: notificationProperties ? notificationProperties.image : undefined
-            configurable: notificationProperties ? notificationProperties.configurable : false
+            configurable: (notificationProperties ? notificationProperties.configurable : false) && !Settings.isMobile
 
             x: units.smallSpacing
             y: units.smallSpacing
