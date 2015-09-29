@@ -28,6 +28,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #include "task.h"
 
 #include <QTime>
+#include <QX11Info>
 #include <netwm.h>
 
 namespace TaskManager
@@ -51,7 +52,8 @@ public:
           cachedChangesTimerId(0),
           active(false),
           lastResize(false),
-          demandedAttention(false) {
+          demandedAttention(false),
+          isX11(QX11Info::isPlatformX11()) {
     }
 
     WId win;
@@ -75,6 +77,7 @@ public:
     bool active : 1;
     bool lastResize : 1;
     bool demandedAttention : 1;
+    bool isX11;
 };
 }
 

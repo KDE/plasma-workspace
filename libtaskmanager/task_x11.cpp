@@ -35,7 +35,7 @@ namespace TaskManager
 bool Task::updateDemandsAttentionState(WId w)
 {
     const bool empty = d->transientsDemandingAttention.isEmpty();
-    if (window() != w) {
+    if (window() != w && d->isX11) {
         // 'w' is a transient for this task
         NETWinInfo i(QX11Info::connection(), w, QX11Info::appRootWindow(), NET::WMState);
         if (i.state() & NET::DemandsAttention) {
@@ -71,11 +71,17 @@ QString Task::classClass() const
 
 int Task::pid() const
 {
+    if (!d->isX11) {
+        return -1;
+    }
     return NETWinInfo(QX11Info::connection(), d->win, QX11Info::appRootWindow(), NET::WMPid).pid();
 }
 
 void Task::move()
 {
+    if (!d->isX11) {
+        return;
+    }
     bool on_current = d->info.isOnCurrentDesktop();
 
     if (!on_current) {
@@ -97,6 +103,9 @@ void Task::move()
 
 void Task::resize()
 {
+    if (!d->isX11) {
+        return;
+    }
     bool on_current = d->info.isOnCurrentDesktop();
 
     if (!on_current) {
@@ -118,6 +127,9 @@ void Task::resize()
 
 void Task::setMaximized(bool maximize)
 {
+    if (!d->isX11) {
+        return;
+    }
     KWindowInfo info(d->win, NET::WMState | NET::XAWMState | NET::WMDesktop);
     bool on_current = info.isOnCurrentDesktop();
 
@@ -144,6 +156,9 @@ void Task::setMaximized(bool maximize)
 
 void Task::restore()
 {
+    if (!d->isX11) {
+        return;
+    }
     KWindowInfo info(d->win, NET::WMState | NET::XAWMState | NET::WMDesktop);
     bool on_current = info.isOnCurrentDesktop();
 
@@ -165,6 +180,9 @@ void Task::restore()
 
 void Task::close()
 {
+    if (!d->isX11) {
+        return;
+    }
     NETRootInfo ri(QX11Info::connection(), NET::CloseWindow);
     ri.closeWindowRequest(d->win);
 }
@@ -191,6 +209,9 @@ void Task::toDesktop(int desk)
 
 void Task::setAlwaysOnTop(bool stay)
 {
+    if (!d->isX11) {
+        return;
+    }
     NETWinInfo ni(QX11Info::connection(), d->win, QX11Info::appRootWindow(), NET::WMState);
     if (stay)
         ni.setState(NET::StaysOnTop, NET::StaysOnTop);
@@ -200,6 +221,9 @@ void Task::setAlwaysOnTop(bool stay)
 
 void Task::setKeptBelowOthers(bool below)
 {
+    if (!d->isX11) {
+        return;
+    }
     NETWinInfo ni(QX11Info::connection(), d->win, QX11Info::appRootWindow(), NET::WMState);
 
     if (below) {
@@ -211,6 +235,9 @@ void Task::setKeptBelowOthers(bool below)
 
 void Task::setFullScreen(bool fullscreen)
 {
+    if (!d->isX11) {
+        return;
+    }
     NETWinInfo ni(QX11Info::connection(), d->win, QX11Info::appRootWindow(), NET::WMState);
 
     if (fullscreen) {
@@ -222,6 +249,9 @@ void Task::setFullScreen(bool fullscreen)
 
 void Task::setShaded(bool shade)
 {
+    if (!d->isX11) {
+        return;
+    }
     NETWinInfo ni(QX11Info::connection(), d->win, QX11Info::appRootWindow(), NET::WMState);
     if (shade)
         ni.setState(NET::Shaded, NET::Shaded);
@@ -231,6 +261,9 @@ void Task::setShaded(bool shade)
 
 void Task::publishIconGeometry(QRect rect)
 {
+    if (!d->isX11) {
+        return;
+    }
     if (rect == d->iconGeometry) {
         return;
     }
@@ -250,7 +283,7 @@ void Task::publishIconGeometry(QRect rect)
 
 void Task::refreshActivities()
 {
-    if (!QGuiApplication::platformName().startsWith(QLatin1String("xcb"), Qt::CaseInsensitive)) {
+    if (!d->isX11) {
         return;
     }
     NETWinInfo info(QX11Info::connection(), d->win, QX11Info::appRootWindow(), 0, NET::WM2Activities);
