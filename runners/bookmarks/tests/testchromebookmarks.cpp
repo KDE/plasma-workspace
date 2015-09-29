@@ -27,9 +27,10 @@
 
 using namespace Plasma;
 
-FakeFindProfile findBookmarksInCurrentDirectory(QList<Profile>()
-                                                << Profile("chrome-config-home/Chrome-Bookmarks-Sample.json", new FallbackFavicon()));
-
+void TestChromeBookmarks::initTestCase()
+{
+    m_findBookmarksInCurrentDirectory.reset(new FakeFindProfile(QList<Profile>({Profile("chrome-config-home/Chrome-Bookmarks-Sample.json", new FallbackFavicon())})));
+}
 
 void TestChromeBookmarks::bookmarkFinderShouldFindEachProfileDirectory()
 {
@@ -53,7 +54,7 @@ void TestChromeBookmarks::bookmarkFinderShouldReportNoProfilesOnErrors()
 
 void TestChromeBookmarks::itShouldFindNothingWhenPrepareIsNotCalled()
 {
-  Chrome *chrome = new Chrome(&findBookmarksInCurrentDirectory, this);
+  Chrome *chrome = new Chrome(m_findBookmarksInCurrentDirectory.data(), this);
   QCOMPARE(chrome->match("any", true).size(), 0);
 }
 
@@ -77,7 +78,7 @@ void verifyMatch(BookmarkMatch &match, const QString &title, const QString &url,
 
 void TestChromeBookmarks::itShouldFindAllBookmarks()
 {
-    Chrome *chrome = new Chrome(&findBookmarksInCurrentDirectory, this);
+    Chrome *chrome = new Chrome(m_findBookmarksInCurrentDirectory.data(), this);
     chrome->prepare();
     QList<BookmarkMatch> matches = chrome->match("any", true);
     QCOMPARE(matches.size(), 3);
@@ -88,7 +89,7 @@ void TestChromeBookmarks::itShouldFindAllBookmarks()
 
 void TestChromeBookmarks::itShouldFindOnlyMatches()
 {
-    Chrome *chrome = new Chrome(&findBookmarksInCurrentDirectory, this);
+    Chrome *chrome = new Chrome(m_findBookmarksInCurrentDirectory.data(), this);
     chrome->prepare();
     QList<BookmarkMatch> matches = chrome->match("other", false);
     QCOMPARE(matches.size(), 1);
@@ -97,7 +98,7 @@ void TestChromeBookmarks::itShouldFindOnlyMatches()
 
 void TestChromeBookmarks::itShouldClearResultAfterCallingTeardown()
 {
-    Chrome *chrome = new Chrome(&findBookmarksInCurrentDirectory, this);
+    Chrome *chrome = new Chrome(m_findBookmarksInCurrentDirectory.data(), this);
     chrome->prepare();
     QCOMPARE(chrome->match("any", true).size(), 3);
     chrome->teardown();

@@ -39,6 +39,7 @@ Q_OBJECT
 public:
     explicit TestChromeBookmarks(QObject* parent = 0) : QObject(parent) {}
 private Q_SLOTS:
+  void initTestCase();
   void bookmarkFinderShouldFindEachProfileDirectory();
   void bookmarkFinderShouldReportNoProfilesOnErrors();
   void itShouldFindNothingWhenPrepareIsNotCalled();
@@ -47,6 +48,9 @@ private Q_SLOTS:
   void itShouldFindOnlyMatches();
   void itShouldClearResultAfterCallingTeardown();
   void itShouldFindBookmarksFromAllProfiles();
+
+private:
+    QScopedPointer<FakeFindProfile> m_findBookmarksInCurrentDirectory;
 
 };
 
