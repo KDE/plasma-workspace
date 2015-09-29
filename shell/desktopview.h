@@ -77,7 +77,7 @@ protected Q_SLOTS:
     virtual void showConfigurationInterface(Plasma::Applet *applet);
 
 private Q_SLOTS:
-    void screenGeometryChanged(const QRect &geom);
+    void screenGeometryChanged();
 
 Q_SIGNALS:
     void stayBehindChanged();
