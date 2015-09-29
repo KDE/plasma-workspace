@@ -87,6 +87,10 @@ void DesktopView::adaptToScreen()
         return;
     }
 
+    if(m_oldScreen) {
+        disconnect(m_oldScreen.data(), &QScreen::geometryChanged,
+                    this, &DesktopView::screenGeometryChanged);
+    }
 //     qDebug() << "adapting to screen" << screen()->name() << this;
     if ((m_windowType == Desktop || m_windowType == WindowedDesktop) && !ShellManager::s_forceWindowed) {
 
@@ -95,9 +99,6 @@ void DesktopView::adaptToScreen()
         connect(screen(), &QScreen::geometryChanged,
                 this, &DesktopView::screenGeometryChanged, Qt::UniqueConnection);
 
-    } else {
-        disconnect(screen(), &QScreen::geometryChanged,
-                   this, &DesktopView::screenGeometryChanged);
     }
 
     m_oldScreen = screen();
