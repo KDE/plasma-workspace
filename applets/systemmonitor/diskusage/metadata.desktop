@@ -99,7 +99,7 @@ Comment[zh_CN]=监视硬盘空间使用率的小程序
 Comment[zh_TW]=監視硬碟空間使用量百分比的小程式
 
 Type=Service
-Icon=drive-harddisk
+Icon=org.kde.plasma.systemmonitor.diskusage
 
 X-KDE-ServiceTypes=Plasma/Applet
 

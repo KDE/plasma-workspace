@@ -68,7 +68,7 @@ Comment[zh_CN]=监视 CPU 负载
 Comment[zh_TW]=監視 CPU 的負載
 
 Type=Service
-Icon=cpu
+Icon=org.kde.plasma.systemmonitor.cpu
 
 X-KDE-ServiceTypes=Plasma/Applet
 

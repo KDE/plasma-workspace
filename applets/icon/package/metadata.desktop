@@ -159,6 +159,7 @@ Comment[x-test]=xxA generic iconxx
 Comment[zh_CN]=通用图标
 Comment[zh_TW]=一般圖示
 
+Icon=org.kde.plasma.icontasks
 X-KDE-ServiceTypes=Plasma/Applet
 Type=Service
 

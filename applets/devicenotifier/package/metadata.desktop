@@ -149,7 +149,7 @@ Comment[x-test]=xxNotifications and access for new devicesxx
 Comment[zh_CN]=通知和访问新设备
 Comment[zh_TW]=通知與存取新裝置
 
-Icon=device-notifier
+Icon=org.kde.plasma.devicenotifier
 Type=Service
 X-KDE-ServiceTypes=Plasma/Applet
 

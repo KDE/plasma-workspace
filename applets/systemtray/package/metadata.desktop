@@ -157,7 +157,7 @@ Comment[wa]=Åyoz accès ås programes catchîs metous ås pus ptit el boesse å
 Comment[x-test]=xxAccess hidden applications minimized in the system trayxx
 Comment[zh_CN]=访问在系统托盘中最小化隐藏的应用程序
 Comment[zh_TW]=存取最小化在系統匣內的隱藏應用程式
-Icon=preferences-desktop-notification
+Icon=org.kde.plasma.systemtray
 Type=Service
 
 X-KDE-PluginInfo-Author=Sebastian Kügler
