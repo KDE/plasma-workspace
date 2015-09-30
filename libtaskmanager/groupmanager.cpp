@@ -640,10 +640,12 @@ void GroupManagerPrivate::taskChanged(::TaskManager::Task *task, ::TaskManager::
     }
 
     if (changes & ::TaskManager::AttentionChanged) {
-        // we show tasks anyway if they demand attention
-        // so whenever our state changes ... try to re-adjust it
-        takeAction = true;
-        show = true;
+        if (task->demandsAttention()) {
+            takeAction = true;
+            show = true;
+        } else if (task->info().windowType(NET::UtilityMask) == NET::Utility) {
+            removeTask(task);
+        }
     }
 
     // Some apps, eg. LibreOffice, change classClass/className after start-up...

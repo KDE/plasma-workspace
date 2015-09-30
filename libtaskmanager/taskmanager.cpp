@@ -396,7 +396,7 @@ void TaskManager::activeWindowChanged(WId w)
         }
         //qDebug() << "no active window";
     } else {
-        if (t->info().windowType(NET::UtilityMask) == NET::Utility) {
+        if (t->info().windowType(NET::UtilityMask) == NET::Utility && !t->demandsAttention()) {
             // we don't want to mark utility windows as active since task managers
             // actually care about the main window and skip utility windows; utility
             // windows are hidden when their associated window loses focus anyways
