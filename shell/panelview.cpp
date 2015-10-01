@@ -704,6 +704,7 @@ void PanelView::integrateScreen()
     setupWaylandIntegration();
     if (m_shellSurface) {
         m_shellSurface->setRole(KWayland::Client::PlasmaShellSurface::Role::Panel);
+        m_shellSurface->setSkipTaskbar(true);
     }
     setVisibilityMode(m_visibilityMode);
 

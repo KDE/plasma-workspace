@@ -137,6 +137,7 @@ void DesktopView::ensureWindowType()
         setupWaylandIntegration();
         if (m_shellSurface) {
             m_shellSurface->setRole(KWayland::Client::PlasmaShellSurface::Role::Normal);
+            m_shellSurface->setSkipTaskbar(false);
         }
 
     } else if (m_windowType == Desktop) {
@@ -146,6 +147,7 @@ void DesktopView::ensureWindowType()
         setupWaylandIntegration();
         if (m_shellSurface) {
             m_shellSurface->setRole(KWayland::Client::PlasmaShellSurface::Role::Desktop);
+            m_shellSurface->setSkipTaskbar(true);
         }
 
     } else if (m_windowType == WindowedDesktop) {
@@ -155,6 +157,7 @@ void DesktopView::ensureWindowType()
         setupWaylandIntegration();
         if (m_shellSurface) {
             m_shellSurface->setRole(KWayland::Client::PlasmaShellSurface::Role::Normal);
+            m_shellSurface->setSkipTaskbar(false);
         }
 
     } else if (m_windowType == FullScreen) {
@@ -164,6 +167,7 @@ void DesktopView::ensureWindowType()
         setupWaylandIntegration();
         if (m_shellSurface) {
             m_shellSurface->setRole(KWayland::Client::PlasmaShellSurface::Role::Normal);
+            m_shellSurface->setSkipTaskbar(false);
         }
     }
 }
