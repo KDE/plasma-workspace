@@ -220,7 +220,7 @@ Item {
         id: expandTimer
         interval: 250
         onTriggered: {
-            plasmoid.expanded = !plasmoid.expanded;
+            plasmoid.expanded = true;
         }
     }
 
