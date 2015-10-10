@@ -20,8 +20,12 @@
 
 #include "icon_p.h"
 
+#include <QApplication>
+#include <QDesktopWidget>
+#include <QDropEvent>
 #include <QFileInfo>
 #include <QJsonArray>
+#include <QMimeData>
 
 #include <KFileItem>
 #include <KDesktopFile>
@@ -31,7 +35,9 @@
 #include <QMimeType>
 #include <QMimeDatabase>
 
-#include <kio/global.h>
+#include <KIO/Global>
+#include <KIO/DropJob>
+#include <KJobWidgets>
 
 IconPrivate::IconPrivate() {
 }
@@ -99,16 +105,24 @@ QString IconPrivate::genericName() const
     return m_genericName;
 }
 
-bool IconPrivate::processDroppedUrls(const QJsonArray &droppedUrls)
+bool IconPrivate::processDrop(QObject *dropEvent)
 {
+    Q_ASSERT(dropEvent);
+
     if (!m_url.isLocalFile()) {
         return false;
     }
 
+    // DeclarativeDropEvent and co aren't public
+    const QObject *mimeData = qvariant_cast<QObject *>(dropEvent->property("mimeData"));
+    Q_ASSERT(mimeData);
+
+    const QJsonArray &droppedUrls = mimeData->property("urls").toJsonArray();
+
     QList<QUrl> urls;
+    urls.reserve(droppedUrls.count());
     foreach (const QJsonValue &droppedUrl, droppedUrls) {
-        // TODO fromLocalFile / user input?
-        const QUrl url(droppedUrl.toString());
+        const QUrl url = QUrl::fromUserInput(droppedUrl.toString(), QString(), QUrl::AssumeLocalFile);
         if (url.isValid()) {
             urls.append(url);
         }
@@ -121,7 +135,7 @@ bool IconPrivate::processDroppedUrls(const QJsonArray &droppedUrls)
     const QString stringUrl = m_url.toLocalFile();
 
     QMimeDatabase db;
-    const QMimeType mimeType = db.mimeTypeForFile(m_url.toLocalFile());
+    const QMimeType mimeType = db.mimeTypeForFile(stringUrl);
 
     if (KDesktopFile::isDesktopFile(stringUrl)) {
         const KDesktopFile desktopFile(stringUrl);
@@ -156,7 +170,18 @@ bool IconPrivate::processDroppedUrls(const QJsonArray &droppedUrls)
         KRun::runCommand(KShell::quoteArg(m_url.path()) + QLatin1Char(' ') + params, nullptr);
         return true;
     } else if (mimeType.inherits("inode/directory")) {
-        // TODO drop urls thingie from konq/dolphin
+        QMimeData mimeData;
+        mimeData.setUrls(urls);
+
+        // DeclarativeDropEvent isn't public
+        QDropEvent de(QPointF(dropEvent->property("x").toInt(), dropEvent->property("y").toInt()),
+                      static_cast<Qt::DropActions>(dropEvent->property("proposedActions").toInt()),
+                      &mimeData,
+                      static_cast<Qt::MouseButtons>(dropEvent->property("buttons").toInt()),
+                      static_cast<Qt::KeyboardModifiers>(dropEvent->property("modifiers").toInt()));
+
+        KIO::DropJob *dropJob = KIO::drop(&de, m_url);
+        KJobWidgets::setWindow(dropJob, QApplication::desktop());
     }
 
     return false;

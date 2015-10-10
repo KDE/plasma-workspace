@@ -45,7 +45,7 @@ public:
     void setUrl(const QUrl &url);
 
     Q_INVOKABLE void open();
-    Q_INVOKABLE bool processDroppedUrls(const QJsonArray &droppedUrls);
+    Q_INVOKABLE bool processDrop(QObject *dropEvent);
 
 Q_SIGNALS:
     void urlChanged(QUrl newUrl);

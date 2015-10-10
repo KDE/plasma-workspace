@@ -58,7 +58,7 @@ MouseArea {
         onDragEnter: root.containsAcceptableDrag = event.mimeData.hasUrls
         onDragLeave: root.containsAcceptableDrag = false
         onDrop: {
-            logic.processDroppedUrls(event.mimeData.urls)
+            logic.processDrop(event)
             root.containsAcceptableDrag = false
         }
     }
