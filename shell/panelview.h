@@ -177,6 +177,7 @@ private:
     bool containmentContainsPosition(const QPointF &point) const;
     QPointF positionAdjustedForContainment(const QPointF &point) const;
     void setupWaylandIntegration();
+    bool edgeActivated() const;
 
     int m_offset;
     int m_maxLength;

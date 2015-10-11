@@ -333,14 +333,8 @@ void PanelView::setVisibilityMode(PanelView::VisibilityMode mode)
 
     m_visibilityMode = mode;
 
-    if (mode == LetWindowsCover) {
-        KWindowSystem::setState(winId(), NET::KeepBelow);
-    } else {
-        KWindowSystem::clearState(winId(), NET::KeepBelow);
-    }
-
     disconnect(containment(), &Plasma::Applet::activated, this, &PanelView::showTemporarily);
-    if (!(mode == NormalPanel || mode == WindowsGoBelow || mode == AutoHide)) {
+    if (edgeActivated()) {
         connect(containment(), &Plasma::Applet::activated, this, &PanelView::showTemporarily);
     }
 
@@ -619,7 +613,7 @@ void PanelView::showConfigurationInterface(Plasma::Applet *applet)
 
 void PanelView::restoreAutoHide()
 {
-    setAutoHideEnabled(m_visibilityMode == AutoHide
+    setAutoHideEnabled(edgeActivated()
         && (!containment() || containment()->status() < Plasma::Types::RequiresAttentionStatus)
         && !geometry().contains(QCursor::pos())
     );
@@ -672,6 +666,12 @@ void PanelView::setAutoHideEnabled(bool enabled)
         value = 4;
         break;
     }
+
+    int hideType = 0;
+    if (m_visibilityMode == LetWindowsCover) {
+        hideType = 1;
+    }
+    value |= hideType << 8;
 
     xcb_change_property(c, XCB_PROP_MODE_REPLACE, winId(), atom->atom, XCB_ATOM_CARDINAL, 32, 1, &value);
     KWindowEffects::slideWindow(winId(), slideLocation, -1);
@@ -732,7 +732,7 @@ void PanelView::showEvent(QShowEvent *event)
 
 bool PanelView::event(QEvent *e)
 {
-    if (m_visibilityMode == AutoHide) {
+    if (edgeActivated()) {
         if (e->type() == QEvent::Enter) {
             m_unhideTimer.stop();
         } else if (e->type() == QEvent::Leave) {
@@ -1094,5 +1094,11 @@ void PanelView::setupWaylandIntegration()
         m_shellSurface = interface->createSurface(s, this);
     }
 }
+
+bool PanelView::edgeActivated() const
+{
+    return m_visibilityMode == PanelView::AutoHide || m_visibilityMode == LetWindowsCover;
+}
+
 
 #include "moc_panelview.cpp"
