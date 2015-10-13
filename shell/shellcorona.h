@@ -206,6 +206,7 @@ private:
     QList<PanelView *> panelsForScreen(QScreen *screen) const;
     DesktopView* desktopForScreen(QScreen *screen) const;
     void setupWaylandIntegration();
+    void executeSetupPlasmoidScript(Plasma::Containment *containment, Plasma::Applet *applet);
 
 #ifndef NDEBUG
     void screenInvariants() const;

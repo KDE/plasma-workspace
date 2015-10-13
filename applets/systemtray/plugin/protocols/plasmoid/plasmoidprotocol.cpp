@@ -26,6 +26,7 @@
 
 #include <Plasma/PluginLoader>
 #include <Plasma/Containment>
+#include <Plasma/Corona>
 #include <kdeclarative/qmlobject.h>
 #include <KLocalizedString>
 #include <kplugintrader.h>
@@ -88,6 +89,7 @@ void PlasmoidProtocol::init()
     m_containment->setLocation(m_systrayApplet->location());
     m_containment->setContainmentActions("RightButton;NoModifier", "org.kde.contextmenu");
     m_containment->init();
+    emit m_systrayApplet->containment()->corona()->containmentAdded(m_containment);
 
     connect(m_systrayApplet, &Plasma::Applet::locationChanged, [=]() {
         m_containment->setLocation(m_systrayApplet->location());
@@ -233,6 +235,13 @@ void PlasmoidProtocol::newTask(const QString &service)
 
     if (task->pluginInfo().isValid()) {
         m_tasks[service] = task;
+        //only emit when not restoring
+        if (!m_knownPlugins.contains(service)) {
+            emit m_containment->appletCreated(task->applet());
+        }
+        connect(task->applet(), &QObject::destroyed, [this, service] () {
+            m_knownPlugins.remove(service);
+        });
         emit taskCreated(task);
     } else {
         qWarning() << "Failed to load Plasmoid: " << service;
@@ -245,6 +254,7 @@ void PlasmoidProtocol::cleanupTask(const QString &service)
 
     if (task) {
         m_tasks.remove(service);
+        m_knownPlugins.remove(service);
         if (task->isValid()) {
             emit task->destroyed(task);
         }

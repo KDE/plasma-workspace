@@ -104,6 +104,10 @@ ShellCorona::ShellCorona(QObject *parent)
         m_lookAndFeelPackage.setPath(packageName);
     }
 
+    connect(this, &Plasma::Corona::containmentCreated, this, [this] (Plasma::Containment *c) {
+        executeSetupPlasmoidScript(c, c);
+    });
+
     m_appConfigSyncTimer.setSingleShot(true);
     m_appConfigSyncTimer.setInterval(s_configSyncDelay);
     connect(&m_appConfigSyncTimer, &QTimer::timeout, this, &ShellCorona::syncAppConfig);
@@ -500,7 +504,7 @@ void ShellCorona::showAlternativesForApplet(Plasma::Applet *applet)
     connect(qmlObj->rootObject(), SIGNAL(visibleChanged(bool)),
             this, SLOT(alternativesVisibilityChanged(bool)));
 
-    connect(applet, &Plasma::Applet::destroyedChanged, [this, qmlObj] (bool destroyed) {
+    connect(applet, &Plasma::Applet::destroyedChanged, this, [this, qmlObj] (bool destroyed) {
         if (!destroyed) {
             return;
         }
@@ -1030,6 +1034,46 @@ void ShellCorona::handleContainmentAdded(Plasma::Containment *c)
     // avoid the eating of one click in the panel after the context menu is gone
     connect(c, &Plasma::Containment::appletAlternativesRequested,
             this, &ShellCorona::showAlternativesForApplet, Qt::QueuedConnection);
+
+    connect(c, &Plasma::Containment::appletCreated, this, [this, c] (Plasma::Applet *applet) {
+        executeSetupPlasmoidScript(c, applet);
+    });
+}
+
+void ShellCorona::executeSetupPlasmoidScript(Plasma::Containment *containment, Plasma::Applet *applet)
+{
+    const QString scriptFile = m_lookAndFeelPackage.filePath("plasmoidsetupscripts", applet->pluginInfo().pluginName() + ".js");
+
+    if (scriptFile.isEmpty()) {
+        return;
+    }
+
+    WorkspaceScripting::ScriptEngine scriptEngine(this);
+
+    connect(&scriptEngine, &WorkspaceScripting::ScriptEngine::printError, this,
+            [](const QString &msg) {
+                qWarning() << msg;
+            });
+    connect(&scriptEngine, &WorkspaceScripting::ScriptEngine::print, this,
+            [](const QString &msg) {
+                qDebug() << msg;
+            });
+
+    QFile file(scriptFile);
+    if (!file.open(QIODevice::ReadOnly | QIODevice::Text)) {
+        qWarning() << i18n("Unable to load script file: %1", scriptFile);
+        return;
+    }
+
+    QString script = file.readAll();
+    if (script.isEmpty()) {
+        // qDebug() << "script is empty";
+        return;
+    }
+
+    scriptEngine.globalObject().setProperty("applet", scriptEngine.wrap(applet));
+    scriptEngine.globalObject().setProperty("containment", scriptEngine.wrap(containment));
+    scriptEngine.evaluateScript(script, scriptFile);
 }
 
 void ShellCorona::toggleWidgetExplorer()

@@ -32,6 +32,7 @@ void LookAndFeelPackage::initPackage(KPackage::Package *package)
 
     //Defaults
     package->addFileDefinition("defaults", "defaults", i18n("Default settings for theme, etc."));
+    package->addDirectoryDefinition("plasmoidsetupscripts", "plasmoidsetupscripts", i18n("Script to tweak default configs of plasmoids"));
     //Colors
     package->addFileDefinition("colors", "colors", i18n("Color scheme to use for applications."));
 
