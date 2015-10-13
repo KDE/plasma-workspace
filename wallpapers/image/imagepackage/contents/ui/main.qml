@@ -18,7 +18,7 @@
  *  Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  2.010-1301, USA.
  */
 
-import QtQuick 2.2
+import QtQuick 2.5
 import org.kde.plasma.wallpapers.image 2.0 as Wallpaper
 import org.kde.plasma.core 2.0 as PlasmaCore
 
@@ -212,6 +212,7 @@ Item {
         asynchronous: true
         cache: false
         fillMode: wallpaper.configuration.FillMode
+        autoTransform: true //new API in Qt 5.5, do not backport into Plasma 5.4.
     }
     Image {
         id: imageB
@@ -219,5 +220,6 @@ Item {
         asynchronous: true
         cache: false
         fillMode: wallpaper.configuration.FillMode
+        autoTransform: true //new API in Qt 5.5, do not backport into Plasma 5.4.
     }
 }
