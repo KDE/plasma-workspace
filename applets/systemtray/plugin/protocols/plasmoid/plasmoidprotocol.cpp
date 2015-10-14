@@ -91,7 +91,7 @@ void PlasmoidProtocol::init()
     m_containment->init();
     emit m_systrayApplet->containment()->corona()->containmentAdded(m_containment);
 
-    connect(m_systrayApplet, &Plasma::Applet::locationChanged, [=]() {
+    connect(m_systrayApplet, &Plasma::Applet::locationChanged, this, [=]() {
         m_containment->setLocation(m_systrayApplet->location());
     });
 
@@ -239,7 +239,7 @@ void PlasmoidProtocol::newTask(const QString &service)
         if (!m_knownPlugins.contains(service)) {
             emit m_containment->appletCreated(task->applet());
         }
-        connect(task->applet(), &QObject::destroyed, [this, service] () {
+        connect(task->applet(), &QObject::destroyed, this, [this, service] () {
             m_knownPlugins.remove(service);
         });
         emit taskCreated(task);
