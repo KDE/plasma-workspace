@@ -224,6 +224,7 @@ Item {
                 height: timezoneLabel.height
                 width: timezoneLabel.width
 
+                fontSizeMode: Text.HorizontalFit
                 minimumPixelSize: theme.smallestFont.pixelSize
                 elide: Text.ElideRight
             }
