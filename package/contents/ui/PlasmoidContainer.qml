@@ -25,17 +25,4 @@ Item {
     width: main.itemWidth
     height: main.itemHeight
     property Item applet
-    opacity: applet.status == 1 ? 0 : 1
-    onOpacityChanged: visible = opacity
-
-    Behavior on opacity {
-        NumberAnimation {
-            duration: 300
-            easing.type: Easing.InOutQuad
-        }
-    }
-
-    onWidthChanged: {
-        plasmoidContainer.width = Math.max(main.itemWidth, plasmoidContainer.minimumWidth)
-    }
 }

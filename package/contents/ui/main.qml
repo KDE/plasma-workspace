@@ -18,47 +18,35 @@
  */
 
 import QtQuick 2.1
+import QtQuick.Layouts 1.1
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.plasmoid 2.0
 
-import "LayoutManager.js" as LayoutManager
-
 MouseArea {
     id: main
-    state: height>48?"active":"passive"
 
-    property int itemWidth: main.height*1.4
-    property int itemHeight: height
+    property int itemWidth: Math.min(width, units.iconSizes.medium)
+    property int itemHeight: Math.min(height, units.iconSizes.medium)
+    property bool expanded: false
 
-    Component.onCompleted: {
-        LayoutManager.tasksRow = tasksRow
-        LayoutManager.appletsFlickableParent = tasksRow
-        LayoutManager.plasmoid = plasmoid
-        LayoutManager.root = main
-
-        LayoutManager.restoreOrder()
-    }
-
-
-    function addApplet(applet, pos)
-    {
+    function addApplet(applet, x, y) {
         var component = Qt.createComponent("PlasmoidContainer.qml")
-        var plasmoidContainer = component.createObject(tasksRow, {"x": pos.x, "y": pos.y});
-        var index = tasksRow.children.length
-        if (pos.x >= 0) {
-            //FIXME: this assumes items are square
-            index = pos.x/main.height
-        }
+        var plasmoidContainer = component.createObject(tasksRow, {"x": x, "y": y});
 
-        tasksRow.insertAt(plasmoidContainer, index)
-        plasmoidContainer.anchors.top = tasksRow.top
-        plasmoidContainer.anchors.bottom = tasksRow.bottom
+        plasmoidContainer.parent = tasksRow;
         plasmoidContainer.applet = applet
         applet.parent = plasmoidContainer
         applet.anchors.fill = plasmoidContainer
         applet.visible = true
         plasmoidContainer.visible = true
 
+    }
+
+    Containment.onAppletAdded: {
+        addApplet(applet, x, y);
+    }
+
+    Containment.onAppletRemoved: {
     }
 
     PlasmaCore.DataSource {
@@ -73,96 +61,57 @@ MouseArea {
           }
     }
 
-    Item {
-        anchors.top: parent.top
-        anchors.bottom: parent.bottom
-        anchors.left: parent.left
-        anchors.right: parent.right
-        Flickable {
-            id: tasksFlickable
-            anchors.top: parent.top
-            anchors.bottom: parent.bottom
-            anchors.left: parent.left
-            anchors.leftMargin: (height * 1.4 - height) / 1.5
-            interactive:true
-            contentWidth: tasksRow.width
-            contentHeight: tasksRow.height
+    PlasmaCore.SortFilterModel {
+        id: hiddenTasksModel
+        filterRole: "Status"
+        filterRegExp: "Passive"
+        sourceModel: PlasmaCore.DataModel {
+            dataSource: statusNotifierSource
+        }
+    }
+ 
+    Row {
+        anchors.fill: parent
 
-            width: Math.min(parent.width, tasksRow.width)
+        Flow {
+            id: tasksRow
+            spacing: 4
+            height: parent.height
+            width: parent.width - expander.width
+            property string skipItems
 
-            Row {
-                id: tasksRow
-                spacing: 4
-                height: tasksFlickable.height
-                property string skipItems
-
-                //depends on this to be precise to not make a resize loop
-                onWidthChanged: {
-                    var visibleCount = 0
-                    for (var i = 0; i < tasksRow.children.length; ++i) {
-                        if (tasksRow.children[i].opacity > 0 && tasksRow.children[i].visible) {
-                            ++visibleCount
-                        }
-                    }
-                    main.itemWidth = Math.min(main.height*1.4, centerPanel.x/visibleCount)
-                }
-
-                function insertAt(item, index)
-                {
-                    LayoutManager.insertAt(item, index)
-                }
-
-                function remove(item)
-                {
-                    LayoutManager.remove(item)
-                }
-
-                function saveOrder()
-                {
-                    LayoutManager.saveOrder()
-                }
-
-                Repeater {
-                    id: tasksRepeater
-                    model: PlasmaCore.SortFilterModel {
-                        id: filteredStatusNotifiers
-                        filterRole: "Title"
-                        filterRegExp: tasksRow.skipItems
-                        sourceModel: PlasmaCore.DataModel {
-                            dataSource: statusNotifierSource
-                        }
-                    }
-
-                    delegate: TaskWidget {
+            Repeater {
+                id: tasksRepeater
+                model: PlasmaCore.SortFilterModel {
+                    id: filteredStatusNotifiers
+                    filterRole: "Status"
+                    filterRegExp: "(Active|RequestingAttention)"
+                    sourceModel: PlasmaCore.DataModel {
+                        dataSource: statusNotifierSource
                     }
                 }
 
-
-                Component.onCompleted: {
-                    var items = String(plasmoid.configuration.SkipItems)
-                    if (items != "") {
-                        skipItems = "^(?!" + items + ")"
-                    } else {
-                        skipItems = ""
-                    }
-                }
+                delegate: TaskWidget {}
             }
         }
-        Row {
-            id: centerPanel
-            anchors {
-                top: parent.top
-                bottom: parent.bottom
-                horizontalCenter: parent.horizontalCenter
-            }
+
+        ExpanderArrow {
+            id: expander
         }
-        Row {
-            id: rightPanel
-            anchors {
-                top: parent.top
-                bottom: parent.bottom
-                right: parent.right
-                rightMargin: 8
+    }
+
+    PlasmaCore.Dialog {
+        id: dialog
+        visualParent: main
+        visible: main.expanded
+        mainItem: Column {
+            Layout.minimumWidth: units.gridUnit * 12
+            Layout.minimumHeight: units.gridUnit * 12
+            Repeater {
+                id: hiddenTasksRepeater
+                model: hiddenTasksModel
+
+                delegate: TaskWidget {}
             }
         }
     }
