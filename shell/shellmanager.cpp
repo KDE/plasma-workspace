@@ -115,6 +115,11 @@ void ShellManager::loadHandlers()
             const QString qmlFile = shellsDir + dir + s_shellLoaderPath;
             // qDebug() << "Making a new instance of " << qmlFile;
 
+            //this shell is not valid, ignore it
+            if (!QFile::exists(qmlFile)) {
+                continue;
+            }
+
             QQmlComponent handlerComponent(engine,
                     QUrl::fromLocalFile(qmlFile)
                 );
