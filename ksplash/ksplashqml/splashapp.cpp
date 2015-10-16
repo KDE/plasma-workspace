@@ -124,7 +124,7 @@ void SplashApp::setStage(int stage)
 void SplashApp::adoptScreen(QScreen* screen)
 {
     SplashWindow *w = new SplashWindow(m_testing, m_window);
-    w->setGeometry(screen->availableGeometry());
+    w->setGeometry(screen->geometry());
     w->setStage(m_stage);
     w->show();
     m_windows << w;
