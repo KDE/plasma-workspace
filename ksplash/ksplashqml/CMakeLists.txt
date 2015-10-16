@@ -13,6 +13,7 @@ target_link_libraries(ksplashqml
     Qt5::DBus
     KF5::ConfigCore
     KF5::Package
+    KF5::QuickAddons
    )
 
 install(TARGETS ksplashqml ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})

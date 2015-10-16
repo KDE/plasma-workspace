@@ -20,13 +20,13 @@
 #ifndef SPLASH_WINDOW_H_
 #define SPLASH_WINDOW_H_
 
-#include <QQuickView>
+#include <KQuickAddons/QuickViewSharedEngine>
 
 class QResizeEvent;
 class QMouseEvent;
 class QKeyEvent;
 
-class SplashWindow: public QQuickView
+class SplashWindow: public KQuickAddons::QuickViewSharedEngine
 {
 public:
     SplashWindow(bool testing, bool window);

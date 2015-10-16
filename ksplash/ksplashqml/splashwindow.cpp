@@ -34,7 +34,7 @@
 #include <KPackage/PackageLoader>
 
 SplashWindow::SplashWindow(bool testing, bool window)
-    : QQuickView(),
+    : KQuickAddons::QuickViewSharedEngine(),
       m_stage(0),
       m_testing(testing),
       m_window(window)
@@ -42,7 +42,7 @@ SplashWindow::SplashWindow(bool testing, bool window)
     setColor(Qt::transparent);
     setDefaultAlphaBuffer(true);
     setClearBeforeRendering(true);
-    setResizeMode(QQuickView::SizeRootObjectToView);
+    setResizeMode(KQuickAddons::QuickViewSharedEngine::SizeRootObjectToView);
 
     if (!m_window) {
         setFlags(Qt::FramelessWindowHint | Qt::WindowStaysOnTopHint);
@@ -76,7 +76,7 @@ void SplashWindow::setStage(int stage)
 
 void SplashWindow::keyPressEvent(QKeyEvent *event)
 {
-    QQuickView::keyPressEvent(event);
+    KQuickAddons::QuickViewSharedEngine::keyPressEvent(event);
     if (m_testing && !event->isAccepted() && event->key() == Qt::Key_Escape) {
         close();
     }
@@ -84,7 +84,7 @@ void SplashWindow::keyPressEvent(QKeyEvent *event)
 
 void SplashWindow::mousePressEvent(QMouseEvent *event)
 {
-    QQuickView::mousePressEvent(event);
+    KQuickAddons::QuickViewSharedEngine::mousePressEvent(event);
     if (m_testing && !event->isAccepted()) {
         close();
     }
@@ -93,7 +93,7 @@ void SplashWindow::mousePressEvent(QMouseEvent *event)
 void SplashWindow::setGeometry(const QRect& rect)
 {
     bool oldGeometryEmpty = geometry().isNull();
-    QQuickView::setGeometry(rect);
+    KQuickAddons::QuickViewSharedEngine::setGeometry(rect);
 
     if (oldGeometryEmpty) {
 
