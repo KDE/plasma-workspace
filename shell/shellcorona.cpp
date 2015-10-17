@@ -152,9 +152,9 @@ ShellCorona::ShellCorona(QObject *parent)
     QAction *dashboardAction = actions()->addAction("show dashboard");
     QObject::connect(dashboardAction, &QAction::triggered,
                      this, &ShellCorona::setDashboardShown);
-    dashboardAction->setText(i18n("Show Dashboard"));
+    dashboardAction->setText(i18n("Show Desktop"));
     connect(KWindowSystem::self(), &KWindowSystem::showingDesktopChanged, [dashboardAction](bool showing) {
-        dashboardAction->setText(showing ? i18n("Hide Dashboard") : i18n("Show Dashboard"));
+        dashboardAction->setText(showing ? i18n("Hide Desktop") : i18n("Show Desktop"));
         dashboardAction->setChecked(showing);
     });
 
