@@ -1107,12 +1107,6 @@ void ShellCorona::syncAppConfig()
 
 void ShellCorona::setDashboardShown(bool show)
 {
-    QAction *dashboardAction = actions()->action("show dashboard");
-
-    if (dashboardAction) {
-        dashboardAction->setText(show ? i18n("Hide Dashboard") : i18n("Show Dashboard"));
-    }
-
     KWindowSystem::setShowingDesktop(show);
 }
 
