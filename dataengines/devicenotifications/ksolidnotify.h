@@ -47,6 +47,7 @@ public:
 
 signals:
     void notify(Solid::ErrorType solidError, const QString& error, const QString& errorDetails, const QString &udi);
+    void blockingAppsReady(const QStringList &apps);
 
 protected slots:
     void onDeviceAdded(const QString &udi);
@@ -60,6 +61,7 @@ private slots:
 private:
     void connectSignals(Solid::Device* device);
     bool isSafelyRemovable(const QString &udi);
+    void queryBlockingApps(const QString &devicePath);
 
     QHash<QString, Solid::Device> m_devices;
 };
