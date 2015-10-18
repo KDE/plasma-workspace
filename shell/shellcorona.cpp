@@ -652,7 +652,7 @@ QRegion ShellCorona::availableScreenRegion(int id) const
 
     QRegion r = view->geometry();
     foreach (const PanelView *v, m_panelViews) {
-        if (v->isVisible() && v->screen() == v->screen() && v->visibilityMode() != PanelView::AutoHide) {
+        if (v->isVisible() && view->screen() == v->screen() && v->visibilityMode() != PanelView::AutoHide) {
             //if the panel is being moved around, we still want to calculate it from the edge
             r -= v->geometryByDistance(0);
         }
