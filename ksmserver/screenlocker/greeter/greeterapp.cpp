@@ -256,7 +256,15 @@ void UnlockApp::desktopResized()
     for (int i = 0; i < nScreens; ++i) {
         auto *view = m_views.at(i);
 
-        view->setGeometry(QGuiApplication::screens()[i]->geometry());
+        auto screen = QGuiApplication::screens()[i];
+        view->setGeometry(screen->geometry());
+
+        connect(screen,
+                &QScreen::geometryChanged,
+                view,
+                static_cast<void (KQuickAddons::QuickViewSharedEngine::*)(const QRect&)>(&KQuickAddons::QuickViewSharedEngine::setGeometry)
+        );
+
         if (m_testing) {
             view->show();
         } else {
