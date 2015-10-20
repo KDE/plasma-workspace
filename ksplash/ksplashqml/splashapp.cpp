@@ -126,7 +126,7 @@ void SplashApp::adoptScreen(QScreen* screen)
     SplashWindow *w = new SplashWindow(m_testing, m_window);
     w->setGeometry(screen->geometry());
     w->setStage(m_stage);
-    w->show();
+    w->setVisible(true);
     m_windows << w;
 
     connect(screen, &QScreen::geometryChanged, w, &SplashWindow::setGeometry);
@@ -135,4 +135,3 @@ void SplashApp::adoptScreen(QScreen* screen)
         w->deleteLater();
     });
 }
-
