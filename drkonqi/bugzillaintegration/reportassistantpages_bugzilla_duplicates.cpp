@@ -574,7 +574,7 @@ BugzillaReportInformationDialog::BugzillaReportInformationDialog(BugzillaDuplica
                                   QIcon::fromTheme("view-refresh"),
                                   i18nc("@info:tooltip", "Use this button to retry "
                                                   "loading the bug report.")));
-    connect(ui.m_retryButton, SIGNAL(clicked()), this, SLOT(reloadReport()));
+    connect(ui.m_retryButton, &QPushButton::clicked, this, &BugzillaReportInformationDialog::reloadReport);
 
     m_suggestButton = new QPushButton(this);
     ui.buttonBox->addButton(m_suggestButton, QDialogButtonBox::ActionRole);
@@ -583,7 +583,7 @@ BugzillaReportInformationDialog::BugzillaReportInformationDialog(BugzillaDuplica
                     QIcon::fromTheme("list-add"), i18nc("@info:tooltip", "Use this button to suggest that "
                                              "the crash you experienced is related to this bug "
                                              "report")));
-    connect(this, SIGNAL(user1Clicked()) , this, SLOT(relatedReportClicked()));
+    connect(m_suggestButton, &QPushButton::clicked, this, &BugzillaReportInformationDialog::relatedReportClicked);
 
     connect(ui.m_showOwnBacktraceCheckBox, SIGNAL(toggled(bool)), this, SLOT(toggleShowOwnBacktrace(bool)));
 
