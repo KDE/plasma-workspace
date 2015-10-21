@@ -52,18 +52,7 @@ Item {
     PlasmaCore.DataSource {
         id: dataSource
         engine: "time"
-        connectedSources: {
-            var timeZones = [];
-            for (var i = 0; i < plasmoid.configuration.selectedTimeZones.length; i++) {
-                if (plasmoid.configuration.selectedTimeZones[i] == "") {
-                    continue;
-                }
-
-                timeZones.push(plasmoid.configuration.selectedTimeZones[i]);
-            }
-            timeZones.push("Local");
-            return timeZones;
-        }
+        connectedSources: plasmoid.configuration.selectedTimeZones
         interval: plasmoid.configuration.showSeconds ? 1000 : 60000
         intervalAlignment: plasmoid.configuration.showSeconds ? PlasmaCore.Types.NoAlignment : PlasmaCore.Types.AlignToMinute
     }
