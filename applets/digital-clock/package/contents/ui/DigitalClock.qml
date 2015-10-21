@@ -70,6 +70,21 @@ Item {
     onShowDateChanged:             { timeFormatCorrection(Qt.locale().timeFormat(Locale.ShortFormat)) }
     onUse24hFormatChanged:         { timeFormatCorrection(Qt.locale().timeFormat(Locale.ShortFormat)) }
 
+    Connections {
+        target: plasmoid.configuration
+        onSelectedTimeZonesChanged: {
+            // If the currently selected timezone was removed,
+            // default to the first one in the list
+            var lastSelectedTimezone = plasmoid.configuration.lastSelectedTimezone;
+            if (plasmoid.configuration.selectedTimeZones.indexOf(lastSelectedTimezone) == -1) {
+                plasmoid.configuration.lastSelectedTimezone = plasmoid.configuration.selectedTimeZones[0];
+            }
+
+            setupLabels();
+            setTimezoneIndex();
+        }
+    }
+
     states: [
         State {
             name: "horizontalPanel"
@@ -609,14 +624,17 @@ Item {
         }
     }
 
-    Component.onCompleted: {
+    function setTimezoneIndex() {
         for (var i = 0; i < plasmoid.configuration.selectedTimeZones.length; i++) {
             if (plasmoid.configuration.selectedTimeZones[i] == plasmoid.configuration.lastSelectedTimezone) {
                 main.tzIndex = i;
                 break;
             }
         }
+    }
 
+    Component.onCompleted: {
+        setTimezoneIndex();
         tzOffset = -(new Date().getTimezoneOffset());
         dateTimeChanged();
         timeFormatCorrection(Qt.locale().timeFormat(Locale.ShortFormat));
