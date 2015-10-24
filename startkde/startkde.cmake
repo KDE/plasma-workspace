@@ -339,7 +339,11 @@ if test -n "$PAM_KWALLET5_LOGIN" ; then
 fi
 
 # At this point all environment variables are set, let's send it to the DBus session server to update the activation environment
-@CMAKE_INSTALL_FULL_LIBEXECDIR@/ksyncdbusenv
+if which dbus-update-activation-environment >/dev/null 2>/dev/null ; then
+    dbus-update-activation-environment --systemd --all
+else
+    @CMAKE_INSTALL_FULL_LIBEXECDIR@/ksyncdbusenv
+fi
 if test $? -ne 0; then
   # Startup error
   echo 'startkde: Could not sync environment to dbus.'  1>&2

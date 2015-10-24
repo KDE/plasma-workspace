@@ -208,7 +208,11 @@ QT_QPA_PLATFORM=wayland
 export QT_QPA_PLATFORM
 
 # At this point all environment variables are set, let's send it to the DBus session server to update the activation environment
-@CMAKE_INSTALL_FULL_LIBEXECDIR@/ksyncdbusenv
+if which dbus-update-activation-environment >/dev/null 2>/dev/null ; then
+    dbus-update-activation-environment --systemd --all
+else
+    @CMAKE_INSTALL_FULL_LIBEXECDIR@/ksyncdbusenv
+fi
 if test $? -ne 0; then
   # Startup error
   echo 'startplasmacompositor: Could not sync environment to dbus.'  1>&2
