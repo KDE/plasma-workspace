@@ -48,33 +48,6 @@ xcb_screen_t *defaultScreen()
     return nullptr;
 }
 
-bool isBlack()
-{
-    xcb_connection_t *c = QX11Info::connection();
-    xcb_screen_t *screen = defaultScreen();
-    const int width = screen->width_in_pixels;
-    const int height = screen->height_in_pixels;
-    const auto cookie = xcb_get_image(c, XCB_IMAGE_FORMAT_Z_PIXMAP, QX11Info::appRootWindow(),
-                                      0, 0, width, height, ~0);
-    ScopedCPointer<xcb_get_image_reply_t> xImage(xcb_get_image_reply(c, cookie, nullptr));
-    if (xImage.isNull()) {
-        return false;
-    }
-
-    // this operates on the assumption that X server default depth matches Qt's image format
-    QImage image(xcb_get_image_data(xImage.data()), width, height,
-                 xcb_get_image_data_length(xImage.data()) / height, QImage::Format_ARGB32_Premultiplied);
-
-    for (int i = 0; i < image.width(); i++) {
-        for (int j = 0; j < image.height(); j++) {
-            if (QColor(image.pixel(i, j)).rgb() != qRgb(0, 0, 0)) {
-                return false;
-            }
-        }
-    }
-    return true;
-}
-
 bool isColored(const QColor color, const int x, const int y, const int width, const int height)
 {
     xcb_connection_t *c = QX11Info::connection();
@@ -97,6 +70,15 @@ bool isColored(const QColor color, const int x, const int y, const int width, co
         }
     }
     return true;
+}
+
+bool isBlack()
+{
+    xcb_screen_t *screen = defaultScreen();
+    const int width = screen->width_in_pixels;
+    const int height = screen->height_in_pixels;
+
+    return isColored(Qt::black, 0, 0, width, height);
 }
 
 xcb_atom_t screenLockerAtom()
