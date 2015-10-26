@@ -76,13 +76,12 @@ KQuickControlsAddons.MouseEventListener {
         }
     }
 
-    ListView {
+    PlasmaExtras.ScrollArea {
         id: hiddenView
-        objectName: "hiddenView"
-        clip: false
-        width: parent.width
 
-        interactive: (contentHeight > height)
+        width: parent.width
+        horizontalScrollBarPolicy: Qt.ScrollBarAlwaysOff
+        verticalScrollBarPolicy: root.expandedTask ? Qt.ScrollBarAlwaysOff : Qt.ScrollBarAsNeeded
 
         anchors {
             top: snHeading.bottom
@@ -90,11 +89,7 @@ KQuickControlsAddons.MouseEventListener {
             bottom: parent.bottom
             left: parent.left
         }
-        spacing: units.smallSpacing
 
-        model: hiddenTasksModel
-
-        delegate: TaskListDelegate {}
         visible: {
             // Normal system tray case; clicked on arrow
             if (root.expandedTask == null) {
@@ -113,6 +108,15 @@ KQuickControlsAddons.MouseEventListener {
             return root.expandedTask.status == SystemTray.Task.Passive;
         }
 
+        ListView {
+            clip: true
+            anchors.fill: parent
+            spacing: units.smallSpacing
+
+            model: hiddenTasksModel
+
+            delegate: TaskListDelegate {}
+        }
     }
 
     PlasmaCore.SvgItem {
