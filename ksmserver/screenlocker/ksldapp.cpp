@@ -562,7 +562,7 @@ void KSldApp::showLockWindow()
     if (!m_lockWindow) {
         m_lockWindow = new X11Locker();
         m_lockWindow->setGlobalAccel(m_globalAccel);
-        connect(m_lockWindow, &X11Locker::userActivity, this,
+        connect(m_lockWindow, &AbstractLocker::userActivity, this,
             [this]() {
                 if (isGraceTime()) {
                     unlock();
@@ -570,14 +570,14 @@ void KSldApp::showLockWindow()
             },
             Qt::QueuedConnection
         );
-        connect(m_lockWindow, &X11Locker::lockWindowShown, this,
+        connect(m_lockWindow, &AbstractLocker::lockWindowShown, this,
             [this] {
                 m_lockState = Locked;
                 m_lockedTimer.restart();
                 emit locked();
             }, Qt::QueuedConnection
         );
-        connect(m_waylandServer, &WaylandServer::x11WindowAdded, m_lockWindow, &X11Locker::addAllowedWindow);
+        connect(m_waylandServer, &WaylandServer::x11WindowAdded, m_lockWindow, &AbstractLocker::addAllowedWindow);
     }
     m_lockWindow->showLockWindow();
     XSync(QX11Info::display(), False);

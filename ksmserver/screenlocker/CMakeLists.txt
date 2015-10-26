@@ -16,6 +16,7 @@ set(ksmserver_xml  ${PROJECT_SOURCE_DIR}/ksmserver/org.kde.KSMServerInterface.xm
 set(powerdevilpolicyagent_xml ${KDE4_DBUS_INTERFACES_DIR}/kf5_org.kde.Solid.PowerManagement.PolicyAgent.xml)
 
 set(ksld_SRCS
+   abstractlocker.cpp
    ksldapp.cpp
    interface.cpp
    globalaccel.cpp

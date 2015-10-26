@@ -41,7 +41,7 @@ enum class EstablishLock {
     Delayed
 };
 
-class X11Locker;
+class AbstractLocker;
 class WaylandServer;
 
 class KSldApp : public QObject
@@ -108,7 +108,7 @@ private:
     KActionCollection *m_actionCollection;
     LockState m_lockState;
     QProcess *m_lockProcess;
-    X11Locker *m_lockWindow;
+    AbstractLocker *m_lockWindow;
     WaylandServer *m_waylandServer;
     /**
      * Timer to measure how long the screen is locked.

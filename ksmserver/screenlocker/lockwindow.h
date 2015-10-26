@@ -23,60 +23,33 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 *********************************************************************/
 #ifndef SCREENLOCKER_LOCKWINDOW_H
 #define SCREENLOCKER_LOCKWINDOW_H
+
+#include "abstractlocker.h"
+
 #include <QAbstractNativeEventFilter>
-#include <QRasterWindow>
 #include <X11/Xlib.h>
 #include <fixx11h.h>
 
 class QTimer;
 
-class GlobalAccel;
-
 namespace ScreenLocker
 {
 
-class X11Locker;
+class AbstractLocker;
 
-class BackgroundWindow : public QRasterWindow
-{
-    Q_OBJECT
-public:
-    explicit BackgroundWindow(X11Locker *lock);
-    virtual ~BackgroundWindow();
-
-    void emergencyShow();
-
-protected:
-    void paintEvent(QPaintEvent *) override;
-
-private:
-    X11Locker *m_lock;
-    bool m_greeterFailure = false;
-};
-
-class X11Locker : public QObject, public QAbstractNativeEventFilter
+class X11Locker : public AbstractLocker, public QAbstractNativeEventFilter
 {
     Q_OBJECT
 public:
     X11Locker();
     virtual ~X11Locker();
 
-    void showLockWindow();
-    void hideLockWindow();
+    void showLockWindow() override;
+    void hideLockWindow() override;
 
-    void addAllowedWindow(quint32 window);
-
-    void setGlobalAccel(GlobalAccel *ga) {
-        m_globalAccel = ga;
-    }
-
-    void emergencyShow();
+    void addAllowedWindow(quint32 window) override;
 
     virtual bool nativeEventFilter(const QByteArray &eventType, void *message, long *result) override;
-
-Q_SIGNALS:
-    void userActivity();
-    void lockWindowShown();
 
 private Q_SLOTS:
     void updateGeo();
@@ -87,7 +60,7 @@ private:
     void setVRoot(Window win, Window vr);
     void removeVRoot(Window win);
     int findWindowInfo(Window w);
-    void stayOnTop();
+    void stayOnTop() override;
     struct WindowInfo
     {
         Window window;
@@ -96,9 +69,6 @@ private:
     QList<WindowInfo> m_windowInfo;
     QList<WId> m_lockWindows;
     QList<quint32> m_allowedWindows;
-    GlobalAccel *m_globalAccel = nullptr;
-    QScopedPointer<BackgroundWindow> m_background;
-    friend class BackgroundWindow;
 };
 }
 

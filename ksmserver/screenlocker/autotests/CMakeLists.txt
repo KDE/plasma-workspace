@@ -39,9 +39,9 @@ ecm_mark_as_test(pointerGrabber)
 #######################################
 # LockWindowTest
 #######################################
-set(lockWindowTest_SRCS lockwindowtest.cpp ../lockwindow.cpp ../globalaccel.cpp)
-add_executable(lockWindowTest ${lockWindowTest_SRCS})
-target_link_libraries(lockWindowTest
+set(x11LockerTest_SRCS x11lockertest.cpp ../lockwindow.cpp ../globalaccel.cpp ../abstractlocker.cpp)
+add_executable(x11LockerTest ${x11LockerTest_SRCS})
+target_link_libraries(x11LockerTest
     KF5::GlobalAccel
     KF5::I18n
     KF5::WindowSystem
@@ -52,5 +52,5 @@ target_link_libraries(lockWindowTest
     XCB::XCB
     XCB::KEYSYMS
 )
-add_test(ksmserver-lockWindowTest lockWindowTest)
-ecm_mark_as_test(lockWindowTest)
+add_test(ksmserver-x11LockerTest x11LockerTest)
+ecm_mark_as_test(x11LockerTest)

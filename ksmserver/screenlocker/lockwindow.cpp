@@ -23,6 +23,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 *********************************************************************/
 #include "lockwindow.h"
 #include "globalaccel.h"
+#include "abstractlocker.h"
 // KDE
 #include <KLocalizedString>
 // Qt
@@ -47,50 +48,9 @@ static Atom   gXA_SCREENSAVER_VERSION;
 namespace ScreenLocker
 {
 
-BackgroundWindow::BackgroundWindow(X11Locker *lock)
-    : QRasterWindow()
-    , m_lock(lock)
-{
-    setFlags(Qt::X11BypassWindowManagerHint);
-}
-
-BackgroundWindow::~BackgroundWindow() = default;
-
-void BackgroundWindow::paintEvent(QPaintEvent* )
-{
-    QPainter p(this);
-    p.fillRect(0, 0, width(), height(), Qt::black);
-    if (m_greeterFailure) {
-        auto text = ki18n("The screen locker is broken and unlocking is not possible anymore.\n"
-                          "In order to unlock switch to a virtual terminal (e.g. Ctrl+Alt+F2),\n"
-                          "log in and execute the command:\n\n"
-                          "loginctl unlock-sessions\n\n"
-                          "Afterwards switch back to the running session (Ctrl+Alt+F%1).");
-        text = text.subs(QString::fromLocal8Bit(qgetenv("XDG_VTNR")));
-        p.setPen(Qt::white);
-        QFont f = p.font();
-        f.setBold(true);
-        f.setPointSize(24);
-        p.setFont(f);
-        const auto screens = QGuiApplication::screens();
-        for (auto s : screens) {
-            p.drawText(s->geometry(), Qt::AlignVCenter | Qt::AlignHCenter, text.toString());
-        }
-    }
-    m_lock->stayOnTop();
-}
-
-void BackgroundWindow::emergencyShow()
-{
-    m_greeterFailure = true;
-    update();
-    show();
-}
-
 X11Locker::X11Locker()
-    : QObject()
+    : AbstractLocker()
     , QAbstractNativeEventFilter()
-    , m_background(new BackgroundWindow(this))
 {
     initialize();
 }
@@ -98,11 +58,6 @@ X11Locker::X11Locker()
 X11Locker::~X11Locker()
 {
     qApp->removeNativeEventFilter(this);
-}
-
-void X11Locker::emergencyShow()
-{
-    m_background->emergencyShow();
 }
 
 void X11Locker::initialize()
@@ -317,8 +272,8 @@ bool X11Locker::nativeEventFilter(const QByteArray &eventType, void *message, lo
     }
     xcb_generic_event_t *event = reinterpret_cast<xcb_generic_event_t*>(message);
     const uint8_t responseType = event->response_type & ~0x80;
-    if (m_globalAccel && responseType == XCB_KEY_PRESS) {
-        if (m_globalAccel->checkKeyPress(reinterpret_cast<xcb_key_press_event_t*>(event))) {
+    if (globalAccel() && responseType == XCB_KEY_PRESS) {
+        if (globalAccel()->checkKeyPress(reinterpret_cast<xcb_key_press_event_t*>(event))) {
             emit userActivity();
             return true;
         }
