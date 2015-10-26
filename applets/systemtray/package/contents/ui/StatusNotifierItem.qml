@@ -137,7 +137,7 @@ Item {
                 sourceSize.height: width
                 fillMode: Image.PreserveAspectFit
                 smooth: true
-                source: "image://icon/" + __overlay_icon_name
+                source: __overlay_icon_name==="" ? "" : "image://icon/" + __overlay_icon_name
                 visible: __overlay_icon_name
             }
 
