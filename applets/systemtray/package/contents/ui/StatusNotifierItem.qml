@@ -48,6 +48,9 @@ Item {
     property string toolTipMainText: modelData.tooltipTitle
     property string toolTipSubText: modelData.tooltipText
 
+    readonly property var defaultIcon: __icon_name != "" ? __icon_name : (__icon !== null ? __icon : "")
+    readonly property var attentionIcon: __att_icon_name != "" ? __att_icon_name : (__att_icon !== null ? __att_icon : "")
+
     // Public functions ================================================================================================
     function click(buttons) {
         __processClick(buttons, mouse_area)
@@ -91,7 +94,8 @@ Item {
             left: isHiddenItem ? parent.left : undefined
             verticalCenter: parent.verticalCenter               
         }
-        source: useAttentionIcon ? __getAttentionIcon() : __getDefaultIcon()
+
+        source: useAttentionIcon ? root_item.attentionIcon : root_item.defaultIcon
     }
 
     // Mouse events handlers ===========================================================================================
@@ -125,7 +129,7 @@ Item {
 
             visible: false
             active: mouse_area.containsMouse
-            source: useAttentionIcon ? __getAttentionIcon() : __getDefaultIcon()
+            source: useAttentionIcon ? root_item.attentionIcon : root_item.defaultIcon
 
             // Overlay icon
             Image {
@@ -164,13 +168,6 @@ Item {
     }
 
     // Functions ==================================================================================
-    function __getDefaultIcon() {
-        return __icon_name != "" ? __icon_name : (typeof(__icon) != "undefined" ? __icon : "")
-    }
-
-    function __getAttentionIcon() {
-        return __att_icon_name != "" ? __att_icon_name : (typeof(__att_icon) != "undefined" ? __att_icon : "")
-    }
 
     function __processClick(buttons, item) {
         taskItemContainer.hideToolTip();
