@@ -75,6 +75,30 @@ bool isBlack()
     return true;
 }
 
+bool isColored(const QColor color, const int x, const int y, const int width, const int height)
+{
+    xcb_connection_t *c = QX11Info::connection();
+    const auto cookie = xcb_get_image(c, XCB_IMAGE_FORMAT_Z_PIXMAP, QX11Info::appRootWindow(),
+                                      x, y, width, height, ~0);
+    ScopedCPointer<xcb_get_image_reply_t> xImage(xcb_get_image_reply(c, cookie, nullptr));
+    if (xImage.isNull()) {
+        return false;
+    }
+
+    // this operates on the assumption that X server default depth matches Qt's image format
+    QImage image(xcb_get_image_data(xImage.data()), width, height,
+                 xcb_get_image_data_length(xImage.data()) / height, QImage::Format_ARGB32_Premultiplied);
+
+    for (int i = 0; i < image.width(); i++) {
+        for (int j = 0; j < image.height(); j++) {
+            if (QColor(image.pixel(i, j)) != color) {
+                return false;
+            }
+        }
+    }
+    return true;
+}
+
 xcb_atom_t screenLockerAtom()
 {
     const QByteArray atomName = QByteArrayLiteral("_KDE_SCREEN_LOCKER");
@@ -92,9 +116,19 @@ void LockWindowTest::testBlankScreen()
     // create and show a dummy window to ensure the background doesn't start as black
     QWidget dummy;
     dummy.setWindowFlags(Qt::X11BypassWindowManagerHint);
+    QPalette p;
+    p.setColor(QPalette::Background, Qt::red);
+    dummy.setAutoFillBackground(true);
+    dummy.setPalette(p);
     dummy.setGeometry(0, 0, 100, 100);
     dummy.show();
     xcb_flush(QX11Info::connection());
+
+    // Lets wait till it gets shown
+    QTest::qWait(1000);
+
+    // Verify that red window is shown
+    QVERIFY(isColored(Qt::red, 0, 0, 100, 100));
 
     ScreenLocker::X11Locker lockWindow;
     lockWindow.showLockWindow();
@@ -137,6 +171,10 @@ void LockWindowTest::testBlankScreen()
     // using a QWidget to get proper content which won't be black
     QWidget widgetWindow;
     widgetWindow.setGeometry(10, 10, 100, 100);
+    QPalette p1;
+    p1.setColor(QPalette::Background, Qt::blue);
+    widgetWindow.setAutoFillBackground(true);
+    widgetWindow.setPalette(p1);
     widgetWindow.show();
     const uint32_t values[] = { XCB_STACK_MODE_ABOVE };
     xcb_configure_window(c, widgetWindow.winId(), XCB_CONFIG_WINDOW_STACK_MODE, values);
