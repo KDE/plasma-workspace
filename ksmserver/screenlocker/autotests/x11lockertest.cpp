@@ -48,14 +48,11 @@ xcb_screen_t *defaultScreen()
     return nullptr;
 }
 
-bool isBlack()
+bool isColored(const QColor color, const int x, const int y, const int width, const int height)
 {
     xcb_connection_t *c = QX11Info::connection();
-    xcb_screen_t *screen = defaultScreen();
-    const int width = screen->width_in_pixels;
-    const int height = screen->height_in_pixels;
     const auto cookie = xcb_get_image(c, XCB_IMAGE_FORMAT_Z_PIXMAP, QX11Info::appRootWindow(),
-                                      0, 0, width, height, ~0);
+                                      x, y, width, height, ~0);
     ScopedCPointer<xcb_get_image_reply_t> xImage(xcb_get_image_reply(c, cookie, nullptr));
     if (xImage.isNull()) {
         return false;
@@ -67,12 +64,21 @@ bool isBlack()
 
     for (int i = 0; i < image.width(); i++) {
         for (int j = 0; j < image.height(); j++) {
-            if (QColor(image.pixel(i, j)).rgb() != qRgb(0, 0, 0)) {
+            if (QColor(image.pixel(i, j)) != color) {
                 return false;
             }
         }
     }
     return true;
+}
+
+bool isBlack()
+{
+    xcb_screen_t *screen = defaultScreen();
+    const int width = screen->width_in_pixels;
+    const int height = screen->height_in_pixels;
+
+    return isColored(Qt::black, 0, 0, width, height);
 }
 
 xcb_atom_t screenLockerAtom()
@@ -92,9 +98,19 @@ void LockWindowTest::testBlankScreen()
     // create and show a dummy window to ensure the background doesn't start as black
     QWidget dummy;
     dummy.setWindowFlags(Qt::X11BypassWindowManagerHint);
+    QPalette p;
+    p.setColor(QPalette::Background, Qt::red);
+    dummy.setAutoFillBackground(true);
+    dummy.setPalette(p);
     dummy.setGeometry(0, 0, 100, 100);
     dummy.show();
     xcb_flush(QX11Info::connection());
+
+    // Lets wait till it gets shown
+    QTest::qWait(1000);
+
+    // Verify that red window is shown
+    QVERIFY(isColored(Qt::red, 0, 0, 100, 100));
 
     ScreenLocker::X11Locker lockWindow;
     lockWindow.showLockWindow();
@@ -137,6 +153,10 @@ void LockWindowTest::testBlankScreen()
     // using a QWidget to get proper content which won't be black
     QWidget widgetWindow;
     widgetWindow.setGeometry(10, 10, 100, 100);
+    QPalette p1;
+    p1.setColor(QPalette::Background, Qt::blue);
+    widgetWindow.setAutoFillBackground(true);
+    widgetWindow.setPalette(p1);
     widgetWindow.show();
     const uint32_t values[] = { XCB_STACK_MODE_ABOVE };
     xcb_configure_window(c, widgetWindow.winId(), XCB_CONFIG_WINDOW_STACK_MODE, values);
