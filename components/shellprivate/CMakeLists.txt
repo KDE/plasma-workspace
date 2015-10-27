@@ -33,6 +33,7 @@ target_link_libraries(plasmashellprivateplugin
         KF5::NewStuff
         KF5::KIOFileWidgets
         KF5::WindowSystem
+        KF5::Declarative
 )
 
 if (KF5TextEditor_FOUND)

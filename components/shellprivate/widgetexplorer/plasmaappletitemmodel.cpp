@@ -29,6 +29,7 @@
 #include "config-workspace.h"
 #include <KPluginTrader>
 #include <KPackage/PackageLoader>
+#include <KDeclarative/KDeclarative>
 
 PlasmaAppletItem::PlasmaAppletItem(PlasmaAppletItemModel *model,
                                    const KPluginInfo& info,
@@ -296,6 +297,18 @@ void PlasmaAppletItemModel::populateModel(const QStringList &whatChanged)
         //qDebug() << info.pluginName() << "NoDisplay" << info.property("NoDisplay").toBool();
         if (!info.isValid() || info.property("NoDisplay").toBool() || info.category() == "Containments") {
             // we don't want to show the hidden category
+            continue;
+        }
+
+        bool inFormFactor = true;
+
+        foreach (const QString &formFactor, KDeclarative::KDeclarative::runtimePlatform()) {
+            if (!info.formFactors().isEmpty() &&
+                !info.formFactors().contains(formFactor)) {
+                inFormFactor = false;
+            }
+        }
+        if (!inFormFactor) {
             continue;
         }
 
