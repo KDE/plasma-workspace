@@ -29,8 +29,14 @@ class KSldTest : public QObject
 {
     Q_OBJECT
 private Q_SLOTS:
+    void initTestCase();
     void testEstablishGrab();
 };
+
+void KSldTest::initTestCase()
+{
+    QCoreApplication::setAttribute(Qt::AA_ForceRasterWidgets);
+}
 
 void KSldTest::testEstablishGrab()
 {

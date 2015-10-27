@@ -33,6 +33,7 @@ class LockWindowTest : public QObject
 {
     Q_OBJECT
 private Q_SLOTS:
+    void initTestCase();
     void testBlankScreen();
     void testEmergencyShow();
 };
@@ -93,6 +94,11 @@ xcb_atom_t screenLockerAtom()
         return XCB_ATOM_NONE;
     }
     return atom->atom;
+}
+
+void LockWindowTest::initTestCase()
+{
+    QCoreApplication::setAttribute(Qt::AA_ForceRasterWidgets);
 }
 
 void LockWindowTest::testBlankScreen()
