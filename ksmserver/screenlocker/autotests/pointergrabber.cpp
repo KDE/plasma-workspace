@@ -58,5 +58,11 @@ int main(int argc, char **argv)
     xcb_grab_pointer(c, 1, rootWindow(c, screen), events, XCB_GRAB_MODE_ASYNC, XCB_GRAB_MODE_ASYNC, XCB_WINDOW_NONE, XCB_CURSOR_NONE, XCB_CURRENT_TIME);
     xcb_flush(c);
 
-    return app.exec();
+    const int exitCode = app.exec();
+
+    xcb_ungrab_pointer(c, XCB_CURRENT_TIME);
+    xcb_flush(c);
+    xcb_disconnect(c);
+
+    return exitCode;
 }

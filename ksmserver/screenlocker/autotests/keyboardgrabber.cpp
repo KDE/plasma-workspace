@@ -57,5 +57,11 @@ int main(int argc, char **argv)
     xcb_grab_keyboard(c, 1, rootWindow(c, screen), XCB_CURRENT_TIME, XCB_GRAB_MODE_ASYNC, XCB_GRAB_MODE_ASYNC);
     xcb_flush(c);
 
-    return app.exec();
+    const int exitCode = app.exec();
+
+    xcb_ungrab_keyboard(c, XCB_CURRENT_TIME);
+    xcb_flush(c);
+    xcb_disconnect(c);
+
+    return exitCode;
 }
