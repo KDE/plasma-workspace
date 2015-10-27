@@ -397,14 +397,15 @@ public:
 
 bool KSldApp::establishGrab()
 {
-    XServerGrabber serverGrabber;
     XSync(QX11Info::display(), False);
+    XServerGrabber serverGrabber;
     if (!grabKeyboard()) {
         return false;
     }
 
     if (!grabMouse()) {
         XUngrabKeyboard(QX11Info::display(), CurrentTime);
+        XFlush(QX11Info::display());
         return false;
     }
 
@@ -451,6 +452,7 @@ bool KSldApp::establishGrab()
             xcb_ungrab_pointer(c, XCB_CURRENT_TIME);
         }
         XIFreeDeviceInfo(masters);
+        XFlush(dpy);
         return success;
     }
 #endif
@@ -496,6 +498,7 @@ void KSldApp::doUnlock()
             XIUngrabDevice(dpy, masters[i].deviceid, XCB_TIME_CURRENT_TIME);
         }
         XIFreeDeviceInfo(masters);
+        XFlush(dpy);
     }
 #endif
     hideLockWindow();
