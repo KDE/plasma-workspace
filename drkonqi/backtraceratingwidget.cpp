@@ -32,8 +32,8 @@ BacktraceRatingWidget::BacktraceRatingWidget(QWidget * parent) :
 {
     setMinimumSize(105, 24);
 
-    m_starPixmap = QIcon::fromTheme("favorites").pixmap(QSize(22, 22));
-    m_disabledStarPixmap = QIcon::fromTheme("favorites").pixmap(QSize(22, 22), QIcon::Disabled);
+    m_starPixmap = QIcon::fromTheme("rating").pixmap(QSize(22, 22));
+    m_disabledStarPixmap = QIcon::fromTheme("rating").pixmap(QSize(22, 22), QIcon::Disabled);
     m_errorPixmap = QIcon::fromTheme("dialog-error").pixmap(QSize(22, 22));
 }
 
