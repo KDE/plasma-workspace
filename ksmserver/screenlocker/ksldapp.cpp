@@ -23,7 +23,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include "ksldapp.h"
 #include "interface.h"
 #include "globalaccel.h"
-#include "lockwindow.h"
+#include "x11locker.h"
 #include "logind.h"
 #include "kscreensaversettings.h"
 #include <config-ksmserver.h>

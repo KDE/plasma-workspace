@@ -20,7 +20,7 @@ set(ksld_SRCS
    ksldapp.cpp
    interface.cpp
    globalaccel.cpp
-   lockwindow.cpp
+   x11locker.cpp
    logind.cpp
    waylandserver.cpp
 )
