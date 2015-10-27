@@ -21,6 +21,7 @@ set(ksld_SRCS
    interface.cpp
    globalaccel.cpp
    x11locker.cpp
+   waylandlocker.cpp
    logind.cpp
    waylandserver.cpp
 )

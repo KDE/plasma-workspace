@@ -98,6 +98,7 @@ private Q_SLOTS:
 
 private:
     void initialize();
+    void initializeX11();
     bool establishGrab();
     void startLockProcess(EstablishLock establishLock);
     void showLockWindow();
@@ -133,6 +134,9 @@ private:
     LogindIntegration *m_logind;
     GlobalAccel *m_globalAccel = nullptr;
     bool m_hasXInput2 = false;
+
+    bool m_isX11;
+    bool m_isWayland;
     int m_greeterCrashedCounter = 0;
 
     // for auto tests

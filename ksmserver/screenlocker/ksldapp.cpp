@@ -24,6 +24,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include "interface.h"
 #include "globalaccel.h"
 #include "x11locker.h"
+#include "waylandlocker.h"
 #include "logind.h"
 #include "kscreensaversettings.h"
 #include <config-ksmserver.h>
@@ -45,6 +46,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include <QProcess>
 #include <QX11Info>
 #include <QDBusReply>
+#include <QGuiApplication>
 // X11
 #include <X11/Xlib.h>
 #include <xcb/xcb.h>
@@ -84,6 +86,9 @@ KSldApp::KSldApp(QObject * parent)
     , m_inhibitCounter(0)
     , m_logind(nullptr)
 {
+    m_isX11 = QX11Info::isPlatformX11();
+    m_isWayland = QGuiApplication::platformName().startsWith( QLatin1String("wayland"), Qt::CaseInsensitive);
+
     initialize();
 }
 
@@ -137,9 +142,8 @@ static bool hasXInput()
 #endif
 }
 
-void KSldApp::initialize()
+void KSldApp::initializeX11()
 {
-    KCrash::setFlags(KCrash::AutoRestart);
     m_hasXInput2 = hasXInput();
     // Save X screensaver parameters
     XGetScreenSaver(QX11Info::display(), &s_XTimeout, &s_XInterval, &s_XBlanking, &s_XExposures);
@@ -149,6 +153,14 @@ void KSldApp::initialize()
     // screensaver would prevent DPMS from activating. We use the timer merely to detect
     // user activity.
     XSetScreenSaver(QX11Info::display(), 0, s_XInterval, s_XBlanking, s_XExposures);
+}
+
+void KSldApp::initialize()
+{
+    KCrash::setFlags(KCrash::AutoRestart);
+    if (m_isX11) {
+        initializeX11();
+    }
 
     // Global keys
     m_actionCollection = new KActionCollection(this);
@@ -397,6 +409,9 @@ public:
 
 bool KSldApp::establishGrab()
 {
+    if (!m_isX11) {
+        return true;
+    }
     XSync(QX11Info::display(), False);
     XServerGrabber serverGrabber;
     if (!grabKeyboard()) {
@@ -483,24 +498,26 @@ static bool grabMouse()
 void KSldApp::doUnlock()
 {
     qDebug() << "Grab Released";
-    xcb_connection_t *c = QX11Info::connection();
-    xcb_ungrab_keyboard(c, XCB_CURRENT_TIME);
-    xcb_ungrab_pointer(c, XCB_CURRENT_TIME);
-    xcb_flush(c);
+    if (m_isX11) {
+        xcb_connection_t *c = QX11Info::connection();
+        xcb_ungrab_keyboard(c, XCB_CURRENT_TIME);
+        xcb_ungrab_pointer(c, XCB_CURRENT_TIME);
+        xcb_flush(c);
 #ifdef X11_Xinput_FOUND
-    if (m_hasXInput2) {
-        // get all devices
-        Display *dpy = QX11Info::display();
-        int numMasters;
-        XIDeviceInfo *masters = XIQueryDevice(dpy, XIAllMasterDevices, &numMasters);
-        // ungrab all devices again
-        for (int i = 0; i < numMasters; ++i) {
-            XIUngrabDevice(dpy, masters[i].deviceid, XCB_TIME_CURRENT_TIME);
+        if (m_hasXInput2) {
+            // get all devices
+            Display *dpy = QX11Info::display();
+            int numMasters;
+            XIDeviceInfo *masters = XIQueryDevice(dpy, XIAllMasterDevices, &numMasters);
+            // ungrab all devices again
+            for (int i = 0; i < numMasters; ++i) {
+                XIUngrabDevice(dpy, masters[i].deviceid, XCB_TIME_CURRENT_TIME);
+            }
+            XIFreeDeviceInfo(masters);
+            XFlush(dpy);
         }
-        XIFreeDeviceInfo(masters);
-        XFlush(dpy);
-    }
 #endif
+    }
     hideLockWindow();
     // delete the window again, to get rid of event filter
     delete m_lockWindow;
@@ -563,7 +580,15 @@ void KSldApp::startLockProcess(EstablishLock establishLock)
 void KSldApp::showLockWindow()
 {
     if (!m_lockWindow) {
-        m_lockWindow = new X11Locker();
+        if (m_isX11) {
+            m_lockWindow = new X11Locker();
+        }
+        if (m_isWayland) {
+            m_lockWindow = new WaylandLocker();
+        }
+        if (!m_lockWindow) {
+            return;
+        }
         m_lockWindow->setGlobalAccel(m_globalAccel);
         connect(m_lockWindow, &AbstractLocker::userActivity, this,
             [this]() {
@@ -583,7 +608,9 @@ void KSldApp::showLockWindow()
         connect(m_waylandServer, &WaylandServer::x11WindowAdded, m_lockWindow, &AbstractLocker::addAllowedWindow);
     }
     m_lockWindow->showLockWindow();
-    XSync(QX11Info::display(), False);
+    if (m_isX11) {
+        XSync(QX11Info::display(), False);
+    }
 }
 
 void KSldApp::hideLockWindow()
