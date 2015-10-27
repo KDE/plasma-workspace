@@ -58,6 +58,11 @@ void BackgroundWindow::paintEvent(QPaintEvent* )
         QFont f = p.font();
         f.setBold(true);
         f.setPointSize(24);
+        // for testing emergency mode, we need to disable antialias, as otherwise
+        // screen wouldn't be completely black and white.
+        if (qEnvironmentVariableIsSet("KSLD_TESTMODE")) {
+            f.setStyleStrategy(QFont::NoAntialias);
+        }
         p.setFont(f);
         const auto screens = QGuiApplication::screens();
         for (auto s : screens) {
