@@ -58,6 +58,7 @@ set(CMAKECONFIG_INSTALL_DIR "${KDE_INSTALL_CMAKEPACKAGEDIR}/KSMServerDBusInterfa
 
 ecm_configure_package_config_file(KSMServerDBusInterfaceConfig.cmake.in
     ${CMAKE_CURRENT_BINARY_DIR}/KSMServerDBusInterfaceConfig.cmake
+    PATH_VARS KDE_INSTALL_DBUSINTERFACEDIR
     INSTALL_DESTINATION ${CMAKECONFIG_INSTALL_DIR})
 
 target_link_libraries(kdeinit_ksmserver

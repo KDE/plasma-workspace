@@ -67,6 +67,7 @@ set_target_properties(screenlocker_static PROPERTIES COMPILE_FLAGS "-fPIC")
 set(CMAKECONFIG_INSTALL_DIR "${KDE_INSTALL_CMAKEPACKAGEDIR}/ScreenSaverDBusInterface")
 ecm_configure_package_config_file(ScreenSaverDBusInterfaceConfig.cmake.in
     ${CMAKE_CURRENT_BINARY_DIR}/ScreenSaverDBusInterfaceConfig.cmake
+    PATH_VARS KDE_INSTALL_DBUSINTERFACEDIR
     INSTALL_DESTINATION ${CMAKECONFIG_INSTALL_DIR})
 
 install(FILES
