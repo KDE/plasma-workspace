@@ -43,6 +43,7 @@ include(WriteBasicConfigVersionFile)
 include(CheckIncludeFiles)
 include(FeatureSummary)
 include(ECMOptionalAddSubdirectory)
+include(ECMQtDeclareLoggingCategory)
 
 find_package(KF5Activities ${KF5_MIN_VERSION})
 set_package_properties(KF5Activities PROPERTIES DESCRIPTION "management of Plasma activities"
@@ -152,6 +153,8 @@ add_subdirectory(menu)
 add_subdirectory(phonon)
 add_subdirectory(solidautoeject)
 add_subdirectory(drkonqi)
+
+ecm_optional_add_subdirectory(xembed-sni-proxy)
 
 add_subdirectory(soliduiserver)
 feature_summary(WHAT ALL INCLUDE_QUIET_PACKAGES FATAL_ON_MISSING_REQUIRED_PACKAGES)
