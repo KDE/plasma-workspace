@@ -18,10 +18,13 @@
  */
 
 import QtQuick 2.2
+import QtQuick.Window 2.2
 
 Image {
     id: root
     source: "../components/artwork/background.png"
+    width: Screen.desktopAvailableWidth
+    height: Screen.desktopAvailableHeight
 
     property int stage
 
