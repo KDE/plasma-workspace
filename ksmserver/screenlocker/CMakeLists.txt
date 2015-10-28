@@ -39,7 +39,6 @@ ecm_add_wayland_server_protocol(ksld_SRCS
 add_library(screenlocker_static STATIC ${ksld_SRCS})
 
 target_link_libraries(screenlocker_static
-   PW::KWorkspace
    Qt5::X11Extras
    KF5::I18n
    KF5::IconThemes

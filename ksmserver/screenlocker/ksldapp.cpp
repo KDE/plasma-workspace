@@ -30,8 +30,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include <config-ksmserver.h>
 #include <config-X11.h>
 #include "waylandserver.h"
-// workspace
-#include <kdisplaymanager.h>
 // KDE
 #include <KActionCollection>
 #include <KAuthorized>
@@ -366,7 +364,6 @@ void KSldApp::lock(EstablishLock establishLock)
         return;
     }
 
-    KDisplayManager().setLock(true);
     KNotification::event(QStringLiteral("locked"),
                          i18n("Screen locked"),
                          QPixmap(),
@@ -526,7 +523,6 @@ void KSldApp::doUnlock()
     m_lockedTimer.invalidate();
     m_greeterCrashedCounter = 0;
     endGraceTime();
-    KDisplayManager().setLock(false);
     m_waylandServer->stop();
     KNotification::event(QStringLiteral("unlocked"),
                          i18n("Screen unlocked"),
