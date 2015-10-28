@@ -49,8 +49,6 @@ public:
                   KWorkSpace::ShutdownMode shutdownMode,
                   const QString &bootOption = QString());
 
-    void setLock(bool on);
-
     bool isSwitchable();
     int numReserve();
     void startReserve();

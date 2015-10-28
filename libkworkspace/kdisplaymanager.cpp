@@ -600,14 +600,6 @@ KDisplayManager::bootOptions(QStringList &opts, int &defopt, int &current)
 }
 #endif // KDM_NO_SHUTDOWN
 
-// This only tells KDM to not auto-re-login upon session crash
-void
-KDisplayManager::setLock(bool on)
-{
-    if (DMType == NewKDM || DMType == OldKDM)
-        exec(on ? "lock\n" : "unlock\n");
-}
-
 bool
 KDisplayManager::isSwitchable()
 {
