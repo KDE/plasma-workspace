@@ -35,7 +35,6 @@
 
 #include "view.h"
 
-static const char version[] = "0.1";
 static QCommandLineParser parser;
 
 int main(int argc, char **argv)
@@ -48,7 +47,7 @@ int main(int argc, char **argv)
 //     QGuiApplication app(argc, argv);
     app.setApplicationName("krunner");
     app.setOrganizationDomain("kde.org");
-    app.setApplicationVersion(version);
+    app.setApplicationVersion(QStringLiteral(PROJECT_VERSION));
     app.setQuitOnLastWindowClosed(false);
     parser.setApplicationDescription(i18n("Run Command interface"));
 
@@ -61,7 +60,7 @@ int main(int argc, char **argv)
 
     KAboutData aboutData("krunner",
         i18n("krunner"),
-        version,
+        QStringLiteral(PROJECT_VERSION),
         i18n("Run Command interface"),
         KAboutLicense::GPL);
 

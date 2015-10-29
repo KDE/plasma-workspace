@@ -32,6 +32,7 @@ target_link_libraries(krunner
     KF5::ConfigWidgets
     KF5::Crash
 )
+target_compile_definitions(krunner PRIVATE -DPROJECT_VERSION="${PROJECT_VERSION}")
 
 install(TARGETS krunner ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
 install(FILES ${krunner_dbusAppXML} DESTINATION ${KDE_INSTALL_DBUSINTERFACEDIR} )
