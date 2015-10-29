@@ -51,12 +51,13 @@ int main(int argc, char **argv)
     app.setApplicationVersion(version);
     app.setQuitOnLastWindowClosed(false);
     parser.setApplicationDescription(i18n("Run Command interface"));
-    KDBusService service(KDBusService::Unique);
 
     parser.addVersionOption();
     parser.addHelpOption();
     parser.addVersionOption();
     parser.process(app);
+
+    KDBusService service(KDBusService::Unique);
 
     KAboutData aboutData("krunner",
         i18n("krunner"),
