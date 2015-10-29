@@ -7,7 +7,6 @@ include_directories(${PHONON_INCLUDE_DIR})
 #
 if(NOT WIN32)
   add_subdirectory( screenlocker )
-  set(COMPILE_SCREEN_LOCKER 1)
   set(SCREEN_LOCKER "ksld")
 endif()
 

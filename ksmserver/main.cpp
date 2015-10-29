@@ -273,11 +273,9 @@ extern "C" Q_DECL_EXPORT int kdemain( int argc, char* argv[] )
                                      i18n("Also allow remote connections"));
     parser.addOption(nolocalOption);
 
-#if COMPILE_SCREEN_LOCKER
     QCommandLineOption lockscreenOption(QStringLiteral("lockscreen"),
                                         i18n("Starts the session in locked mode"));
     parser.addOption(lockscreenOption);
-#endif
 
     parser.process(*a);
 
@@ -304,12 +302,8 @@ extern "C" Q_DECL_EXPORT int kdemain( int argc, char* argv[] )
     only_local = false;
 #endif
 
-#if COMPILE_SCREEN_LOCKER
     KSMServer *server = new KSMServer( wm, only_local, parser.isSet(lockscreenOption ) );
-#else
-    KSMServer *server = new KSMServer( wm, only_local );
-#endif
-    
+
     // for the KDE-already-running check in startkde
     KSelectionOwner kde_running( "_KDE_RUNNING", 0 );
     kde_running.claim( false );

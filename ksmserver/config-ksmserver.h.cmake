@@ -1,8 +1,6 @@
 /* Define to 1 if you have the `_IceTransNoListen' function. */
 #cmakedefine HAVE__ICETRANSNOLISTEN 1
 
-#cmakedefine COMPILE_SCREEN_LOCKER 1
-
 #ifndef KSMSERVER_UNIT_TEST
 #define KCHECKPASS_BIN "${CMAKE_INSTALL_FULL_LIBEXECDIR}/kcheckpass"
 #else

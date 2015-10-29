@@ -84,10 +84,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #include <kshell.h>
 
 
-// must go after #include <config-ksmserver.h>
-#ifdef COMPILE_SCREEN_LOCKER
 #include "screenlocker/ksldapp.h"
-#endif
 
 #include <kdisplaymanager.h>
 #include <QX11Info>
@@ -610,14 +607,10 @@ KSMServer::KSMServer( const QString& windowManager, bool _only_local, bool locks
   , sessionGroup( QStringLiteral( "" ) )
   , logoutEffectWidget( NULL )
 {
-#ifdef COMPILE_SCREEN_LOCKER
     ScreenLocker::KSldApp::self();
     if (lockscreen) {
         ScreenLocker::KSldApp::self()->lock(ScreenLocker::EstablishLock::Immediate);
     }
-#else
-    Q_UNUSED(lockscreen)
-#endif
 
     new KSMServerInterfaceAdaptor( this );
     QDBusConnection::sessionBus().registerObject(QStringLiteral("/KSMServer"), this);
