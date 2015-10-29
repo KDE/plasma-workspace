@@ -29,11 +29,11 @@ ApplicationDetailsExamples::ApplicationDetailsExamples(QObject * parent)
 {
     QString binaryName = DrKonqi::crashedApplication()->fakeExecutableBaseName();
 
-    if (binaryName == QLatin1String("plasma-desktop")) {
+    if (binaryName == QLatin1String("plasmashell")) {
        m_examples = i18nc("@info examples about information the user can provide",
        "Widgets you have in your desktop and panels (both official and unofficial), "
        "desktop settings (wallpaper plugin, themes), activities, and dashboard configuration.");
-    } else if (binaryName == QLatin1String("kwin")) {
+    } else if (binaryName == QLatin1String("kwin_x11" || binaryName == QLatin1String("kwin_wayland"))) {
         m_examples = i18nc("@info examples about information the user can provide",
         "State of Desktop Effects (Compositing), kind of effects enabled, window decoration, "
         "and specific window rules and configuration.");
