@@ -36,14 +36,16 @@ ecm_add_wayland_server_protocol(ksld_SRCS
     BASENAME ksld
 )
 
-add_library(screenlocker_static STATIC ${ksld_SRCS})
+add_library(ksld SHARED ${ksld_SRCS})
 
-target_link_libraries(screenlocker_static
+target_link_libraries(ksld
+PUBLIC
+   Qt5::Core
    Qt5::X11Extras
+PRIVATE
    KF5::I18n
    KF5::IconThemes
    KF5::IdleTime
-   KF5::I18n
    KF5::GlobalAccel
    KF5::Notifications
    KF5::XmlGui
@@ -58,11 +60,16 @@ target_link_libraries(screenlocker_static
 )
 
 if (X11_Xinput_FOUND)
-    target_link_libraries(screenlocker_static ${X11_Xinput_LIB})
+    target_link_libraries(ksld PRIVATE ${X11_Xinput_LIB})
 endif()
 
 # Needed to compile on Arm target.
-set_target_properties(screenlocker_static PROPERTIES COMPILE_FLAGS "-fPIC")
+set_target_properties(ksld PROPERTIES COMPILE_FLAGS "-fPIC")
+
+generate_export_header(ksld
+    BASE_NAME ksld
+    EXPORT_MACRO_NAME KSLD_EXPORT
+)
 
 set(CMAKECONFIG_INSTALL_DIR "${KDE_INSTALL_CMAKEPACKAGEDIR}/ScreenSaverDBusInterface")
 ecm_configure_package_config_file(ScreenSaverDBusInterfaceConfig.cmake.in
@@ -70,6 +77,7 @@ ecm_configure_package_config_file(ScreenSaverDBusInterfaceConfig.cmake.in
     PATH_VARS KDE_INSTALL_DBUSINTERFACEDIR
     INSTALL_DESTINATION ${CMAKECONFIG_INSTALL_DIR})
 
+install(TARGETS ksld  ${INSTALL_TARGETS_DEFAULT_ARGS} LIBRARY)
 install(FILES
         ${CMAKE_CURRENT_BINARY_DIR}/ScreenSaverDBusInterfaceConfig.cmake
         DESTINATION ${CMAKECONFIG_INSTALL_DIR})

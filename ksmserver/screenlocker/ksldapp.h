@@ -26,6 +26,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include <QtCore/QElapsedTimer>
 #include <QtCore/QProcess>
 
+#include <ksld_export.h>
+
 // forward declarations
 class GlobalAccel;
 class LogindIntegration;
@@ -44,7 +46,7 @@ enum class EstablishLock {
 class AbstractLocker;
 class WaylandServer;
 
-class KSldApp : public QObject
+class KSLD_EXPORT KSldApp : public QObject
 {
     Q_OBJECT
     Q_CLASSINFO("D-Bus Interface", "org.kde.ksld.App")

@@ -8,7 +8,7 @@ include_directories(${PHONON_INCLUDE_DIR})
 if(NOT WIN32)
   add_subdirectory( screenlocker )
   set(COMPILE_SCREEN_LOCKER 1)
-  set(SCREEN_LOCKER "screenlocker_static")
+  set(SCREEN_LOCKER "ksld")
 endif()
 
 check_library_exists(ICE _IceTransNoListen "" HAVE__ICETRANSNOLISTEN)
