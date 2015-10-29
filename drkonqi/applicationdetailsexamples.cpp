@@ -33,7 +33,7 @@ ApplicationDetailsExamples::ApplicationDetailsExamples(QObject * parent)
        m_examples = i18nc("@info examples about information the user can provide",
        "Widgets you have in your desktop and panels (both official and unofficial), "
        "desktop settings (wallpaper plugin, themes) and activities.");
-    } else if (binaryName == QLatin1String("kwin_x11") || binaryName == QLatin1String("kwin_wayland"))) {
+    } else if (binaryName == QLatin1String("kwin_x11") || binaryName == QLatin1String("kwin_wayland")) {
         m_examples = i18nc("@info examples about information the user can provide",
         "State of Desktop Effects (Compositing), kind of effects enabled, window decoration, "
         "and specific window rules and configuration.");
