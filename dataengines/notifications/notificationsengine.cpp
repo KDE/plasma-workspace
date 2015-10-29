@@ -349,23 +349,17 @@ uint NotificationsEngine::Notify(const QString &app_name, uint replaces_id,
 
 void NotificationsEngine::CloseNotification(uint id)
 {
-    const QString source = QString("notification %1").arg(id);
-    // if we don't have that notification in our list,
-    // it was already closed, so don't emit
-    if (m_activeNotifications.remove(source)) {
-        removeSource(source);
-        emit NotificationClosed(id, 3);
-    }
+    removeNotification(id, 3);
 }
 
-void NotificationsEngine::userClosedNotification(uint id)
+void NotificationsEngine::removeNotification(uint id, uint closeReason)
 {
-    const QString source = QString("notification %1").arg(id);
-    // if we don't have that notification in our list,
-    // it was already closed, so don't emit
+    const QString source = QStringLiteral("notification %1").arg(id);
+    // if we don't have that notification in our local list,
+    // it has already been closed so don't notify a second time
     if (m_activeNotifications.remove(source) > 0) {
         removeSource(source);
-        emit NotificationClosed(id, 2);
+        emit NotificationClosed(id, closeReason);
     }
 }
 

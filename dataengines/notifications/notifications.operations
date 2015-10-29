@@ -10,6 +10,9 @@
   <group name="userClosed">
   </group>
 
+  <group name="expireNotification">
+  </group>
+
   <group name="createNotification">
     <entry name="appName" type="String">
       <label>The name of the notifying application</label>

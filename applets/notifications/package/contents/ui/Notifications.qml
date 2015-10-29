@@ -113,6 +113,12 @@ Column {
         service.startOperationCall(op)
     }
 
+    function expireNotification(source) {
+        var service = notificationsSource.serviceForSource(source)
+        var op = service.operationDescription("expireNotification")
+        service.startOperationCall(op)
+    }
+
     Component {
         id: notificationPopupComponent
         NotificationPopup { }

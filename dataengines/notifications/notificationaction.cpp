@@ -53,7 +53,10 @@ void NotificationAction::start()
         emit m_engine->ActionInvoked(id, parameters()["actionId"].toString());
     } else if (operationName() == "userClosed") {
         //userClosedNotification deletes the job, so we have to invoke it queued, in this case emitResult() can be called
-        m_engine->metaObject()->invokeMethod(m_engine, "userClosedNotification", Qt::QueuedConnection, Q_ARG(uint, id));
+        m_engine->metaObject()->invokeMethod(m_engine, "removeNotication", Qt::QueuedConnection, Q_ARG(uint, id), Q_ARG(uint, 2));
+    } else if (operationName() == "expireNotification") {
+        //expireNotification deletes the job, so we have to invoke it queued, in this case emitResult() can be called
+        m_engine->metaObject()->invokeMethod(m_engine, "removeNotication", Qt::QueuedConnection, Q_ARG(uint, id), Q_ARG(uint, 1));
     } else if (operationName() == "createNotification") {
         int rv = m_engine->createNotification(parameters().value("appName").toString(),
                                               parameters().value("appIcon").toString(),

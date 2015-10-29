@@ -59,7 +59,7 @@ public:
     void configureNotification(const QString &appName);
 
 public Q_SLOTS:
-    void userClosedNotification(uint id);
+    void removeNotification(uint id, uint closeReason);
     bool registerDBusService();
 
 Q_SIGNALS:

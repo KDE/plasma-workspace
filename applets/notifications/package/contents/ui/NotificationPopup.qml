@@ -91,7 +91,7 @@ PlasmaCore.Dialog {
             id: notificationTimer
             onTriggered: {
                 if (!notificationProperties.isPersistent) {
-                    closeNotification(notificationProperties.source)
+                    expireNotification(notificationProperties.source)
                 }
                 notificationPopup.notificationTimeout();
             }
