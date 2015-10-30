@@ -42,6 +42,7 @@ DesktopView::DesktopView(Plasma::Corona *corona, QScreen *targetScreen)
 {
     if (targetScreen) {
         setScreen(targetScreen);
+        setGeometry(targetScreen->geometry());
     }
 
     setTitle(corona->kPackage().metadata().name());
