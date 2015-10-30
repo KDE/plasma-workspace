@@ -77,6 +77,7 @@ ecm_configure_package_config_file(ScreenSaverDBusInterfaceConfig.cmake.in
     PATH_VARS KDE_INSTALL_DBUSINTERFACEDIR
     INSTALL_DESTINATION ${CMAKECONFIG_INSTALL_DIR})
 
+set_target_properties(ksld PROPERTIES VERSION ${PROJECT_VERSION} SOVERSION ${PROJECT_VERSION_MAJOR})
 install(TARGETS ksld  ${INSTALL_TARGETS_DEFAULT_ARGS} LIBRARY)
 install(FILES
         ${CMAKE_CURRENT_BINARY_DIR}/ScreenSaverDBusInterfaceConfig.cmake
