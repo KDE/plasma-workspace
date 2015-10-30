@@ -33,7 +33,7 @@ BreezeBlock {
 
         onVisibleChanged: {
             if(visible) {
-                currentIndex = 0;
+                selectedIndex = 0;
             }
         }
         Component.onCompleted: root.userSelect = usersSelection
@@ -61,14 +61,14 @@ BreezeBlock {
                                 ButtonLabel: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Unlock"),
                                 ButtonAction: "unlock"
                 })
-                if(sessions.startNewSessionSupported) {
+                if (sessionsModel.canStartNewSession) {
                     users.append({realName: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "New Session"),
                                     icon: "system-log-out", //TODO Need an icon for new session
                                     ButtonLabel: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Create Session"),
                                     ButtonAction: "newSession"
                     })
                 }
-                if(sessions.switchUserSupported) {
+                if (sessionsModel.canSwitchUser && sessionsModel.count > 0) {
                     users.append({realName: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Change Session"),
                                     icon: "system-switch-user",
                                     ButtonLabel: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Change Session..."),
@@ -157,7 +157,8 @@ BreezeBlock {
                             unlockFunction();
                             break;
                         case "newSession":
-                            sessions.startNewSession();
+                            // false means don't lock, we're the lock screen
+                            sessionsModel.startNewSession(false);
                             break;
                         case "changeSession":
                             changeSessionComponent.active = true

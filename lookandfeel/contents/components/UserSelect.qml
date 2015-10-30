@@ -28,6 +28,7 @@ FocusScope {
     property alias model: usersList.model
     property alias selectedUser: usersList.selectedUser
     property alias selectedIndex: usersList.currentIndex
+    property alias selectedItem: usersList.currentItem
     property alias delegate: usersList.delegate
     property alias notification: notificationLabel.text
 

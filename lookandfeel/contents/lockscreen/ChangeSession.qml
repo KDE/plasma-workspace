@@ -35,11 +35,32 @@ BreezeBlock {
     main: UserSelect {
         id: sessionSelect
 
-        model: sessions.model
+        model: sessionsModel
         delegate: UserDelegate {
-            name: i18nd("plasma_lookandfeel_org.kde.lookandfeel","%1 (%2)", model.session, model.location)
-            userName: model.session
-            iconSource: "user-identity"
+            // so the button can access it from outside through currentItem
+            readonly property int userVt: model.vtNumber
+
+            name: {
+                if (!model.session) {
+                    return i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Unused")
+                }
+
+                var displayName = model.realName || model.name
+
+                var location = ""
+                if (model.isTty) {
+                    location = i18nd("plasma_lookandfeel_org.kde.lookandfeel", "TTY %1", model.vtNumber)
+                } else if (model.displayNumber) {
+                    location = i18nd("plasma_lookandfeel_org.kde.lookandfeel", "on %1 (%2)", model.vtNumber, model.displayNumber)
+                }
+
+                if (location) {
+                    return i18nd("plasma_lookandfeel_org.kde.lookandfeel", "%1 (%2)", displayName, location)
+                }
+                return displayName
+            }
+            userName: model.name
+            iconSource: model.icon || "user-identity"
             width: ListView.view.userItemWidth
             height: ListView.view.userItemHeight
             faceSize: ListView.view.userFaceSize
@@ -62,9 +83,9 @@ BreezeBlock {
             PlasmaComponents.Button {
                 text: i18nd("plasma_lookandfeel_org.kde.lookandfeel","Change Session")
                 onClicked: {
-                    sessions.activateSession(selectSessionBlock.mainItem.selectedIndex)
+                    sessionsModel.switchUser(selectSessionBlock.mainItem.selectedItem.userVt)
                     stackView.pop()
-                    userSelect.selectedIndex = 0;
+                    userSelect.selectedIndex = 0
                 }
             }
         }
