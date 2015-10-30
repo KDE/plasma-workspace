@@ -64,7 +64,7 @@ PanelView::PanelView(ShellCorona *corona, QScreen *targetScreen, QWindow *parent
        m_shellSurface(nullptr)
 {
     if (targetScreen) {
-        setPosition(targetScreen->geometry().topLeft());
+        setPosition(targetScreen->geometry().center());
         setScreen(targetScreen);
     }
     setResizeMode(QuickViewSharedEngine::SizeRootObjectToView);
@@ -72,7 +72,6 @@ PanelView::PanelView(ShellCorona *corona, QScreen *targetScreen, QWindow *parent
     setColor(QColor(Qt::transparent));
     setFlags(Qt::FramelessWindowHint|Qt::WindowDoesNotAcceptFocus);
 
-    themeChanged();
     connect(&m_theme, &Plasma::Theme::themeChanged, this, &PanelView::themeChanged);
 
     m_positionPaneltimer.setSingleShot(true);
@@ -699,6 +698,7 @@ void PanelView::moveEvent(QMoveEvent *ev)
 
 void PanelView::integrateScreen()
 {
+    themeChanged();
     KWindowSystem::setOnAllDesktops(winId(), true);
     KWindowSystem::setType(winId(), NET::Dock);
     setupWaylandIntegration();
