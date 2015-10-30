@@ -64,7 +64,7 @@ PanelView::PanelView(ShellCorona *corona, QScreen *targetScreen, QWindow *parent
        m_shellSurface(nullptr)
 {
     if (targetScreen) {
-        setPosition(targetScreen->geometry().topLeft());
+        setPosition(targetScreen->geometry().center());
         setScreen(targetScreen);
     }
     setResizeMode(QuickViewSharedEngine::SizeRootObjectToView);
