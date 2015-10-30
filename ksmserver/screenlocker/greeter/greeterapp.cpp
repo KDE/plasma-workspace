@@ -20,7 +20,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 *********************************************************************/
 #include "greeterapp.h"
 #include "kscreensaversettings.h"
-#include "sessions.h"
 #include "authenticator.h"
 #include "noaccessnetworkaccessmanagerfactory.h"
 
@@ -126,12 +125,6 @@ UnlockApp::~UnlockApp()
 
 void UnlockApp::initialize()
 {
-    const char *uri = "org.kde.kscreenlocker";
-    //FIXME
-//     qmlRegisterType<GreeterItem>(uri, 1, 0, "GreeterItem");
-    qmlRegisterType<SessionSwitching>(uri, 1, 0, "Sessions");
-    qmlRegisterType<QAbstractItemModel>();
-
     // set up the request ignore timeout, so that multiple requests to sleep/suspend/shutdown
     // are not processed in quick (and confusing) succession)
     m_resetRequestIgnoreTimer->setSingleShot(true);

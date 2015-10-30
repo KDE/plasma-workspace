@@ -9,7 +9,6 @@ include_directories(
 
 set(kscreenlocker_greet_SRCS
    authenticator.cpp
-   sessions.cpp
    greeterapp.cpp
    main.cpp
    noaccessnetworkaccessmanagerfactory.cpp
@@ -26,7 +25,6 @@ ecm_add_wayland_client_protocol(kscreenlocker_greet_SRCS
 add_executable(kscreenlocker_greet ${kscreenlocker_greet_SRCS})
 
 target_link_libraries(kscreenlocker_greet
-                        PW::KWorkspace
                         KF5::Solid
                         KF5::Package
                         KF5::Service
