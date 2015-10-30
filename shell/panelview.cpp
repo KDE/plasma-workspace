@@ -387,8 +387,6 @@ void PanelView::positionPanel()
     }
     m_strutsTimer.stop();
     m_strutsTimer.start(STRUTSTIMERDELAY);
-    setMinimumSize(QSize(0, 0));
-    setMaximumSize(screen()->size());
 
     if (formFactor() == Plasma::Types::Vertical) {
         setMinimumSize(QSize(thickness(), m_minLength));
