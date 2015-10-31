@@ -44,7 +44,6 @@ class DBusSystemTrayTask : public Task
 {
     Q_OBJECT
 
-    Q_PROPERTY(QIcon icon READ icon NOTIFY changedIcons)
     Q_PROPERTY(QIcon attIcon READ attIcon NOTIFY changedIcons)
     Q_PROPERTY(QString overlayIconName READ overlayIconName NOTIFY changedOverlayIconName)
     Q_PROPERTY(QString iconName READ iconName NOTIFY changedIconName)
