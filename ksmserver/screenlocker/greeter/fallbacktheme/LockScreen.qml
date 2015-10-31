@@ -21,7 +21,8 @@ import QtQuick 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
 
 import org.kde.kquickcontrolsaddons 2.0
-import org.kde.kscreenlocker 1.0
+
+import org.kde.plasma.private.sessions 2.0
 
 import org.kde.plasma.components 2.0 as PlasmaComponents
 
@@ -36,6 +37,10 @@ Item {
         width: parent.width
         height: parent.height
         color: "#111"
+    }
+
+    SessionsModel {
+        id: sessionsModel
     }
 
     Image {
@@ -82,11 +87,7 @@ Item {
     Greeter {
         id: unlockUI
 
-        switchUserEnabled: sessions.switchUserSupported
-
-        Sessions {
-            id: sessions
-        }
+        switchUserEnabled: sessionsModel.canSwitchUser
 
         Connections {
             onAccepted: lockScreen.unlockRequested()

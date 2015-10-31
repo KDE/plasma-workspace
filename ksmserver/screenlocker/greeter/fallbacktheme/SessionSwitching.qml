@@ -20,22 +20,21 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 import QtQuick 2.0
 import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.plasma.extras 2.0 as PlasmaExtras
-import org.kde.kscreenlocker 1.0
 
 Item {
-    property alias switchUserSupported: sessions.switchUserSupported
+    readonly property bool switchUserSupported: sessionsModel.canSwitchUser
+
     implicitWidth: theme.mSize(theme.defaultFont).width * 55
     implicitHeight: theme.mSize(theme.defaultFont).height * 25
     signal sessionActivated()
     signal newSessionStarted()
     signal switchingCanceled()
-    Sessions {
-        id: sessions
-    }
+
     anchors {
         fill: parent
         margins: 6
     }
+
     PlasmaExtras.ScrollArea {
         anchors {
             left: parent.left
@@ -46,13 +45,23 @@ Item {
         height: parent.height - explainText.implicitHeight - buttonRow.height - 10
 
         ListView {
-            model: sessions.model
             id: userSessionsView
+            model: sessionsModel
             anchors.fill: parent
 
             delegate: PlasmaComponents.ListItem {
+                readonly property int userVt: model.vtNumber
+
                 content: PlasmaComponents.Label {
-                    text: i18ndc("kscreenlocker_greet", "thesession name and the location where the session is running (what vt)", "%1 (%2)", session, location)
+                    text: {
+                        var display = model.isTty ? i18ndc("kscreenlocker_greet", "User logged in on console", "TTY") : model.displayNumber || ""
+
+                        return i18ndc("kscreenlocker_greet", "username (terminal, display)", "%1 (%2)",
+                                      (model.realName || model.name || i18ndc("kscreenlocker_greet", "Nobody logged in", "Unused")),
+                                      display ? i18ndc("kscreenlocker_greet", "vt, display", "%1, %2", model.vtNumber, display)
+                                              : model.vtNumber
+                               )
+                    }
                 }
             }
             highlight: PlasmaComponents.Highlight {
@@ -64,7 +73,7 @@ Item {
                 anchors.fill: parent
                 onClicked: userSessionsView.currentIndex = userSessionsView.indexAt(mouse.x, mouse.y)
                 onDoubleClicked: {
-                    sessions.activateSession(userSessionsView.indexAt(mouse.x, mouse.y));
+                    sessionsModel.switchUser(userSessionsView.indexAt(mouse.x, mouse.y).userVt)
                     sessionActivated();
                 }
             }
@@ -101,7 +110,7 @@ Item {
             label: i18nd("kscreenlocker_greet", "Activate")
             iconSource: "fork"
             onClicked: {
-                sessions.activateSession(userSessionsView.currentIndex);
+                sessionsModel.switchUser(userSessionsView.currentItem.userVt)
                 sessionActivated();
             }
         }
@@ -109,9 +118,9 @@ Item {
             id: newSession
             label: i18nd("kscreenlocker_greet", "Start New Session")
             iconSource: "fork"
-            visible: sessions.startNewSessionSupported
+            visible: sessionsModel.canStartNewSession
             onClicked: {
-                sessions.startNewSession();
+                sessionsModel.startNewSession()
                 newSessionStarted();
             }
         }
