@@ -20,7 +20,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 import QtQuick 2.0
 import QtQuick.Controls 1.1
 import org.kde.plasma.core 2.0 as PlasmaCore
-import org.kde.kscreenlocker 1.0
 import org.kde.plasma.private.sessions 2.0
 import "../components"
 
