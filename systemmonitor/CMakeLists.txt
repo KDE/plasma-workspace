@@ -8,8 +8,6 @@ add_library(ksysguard MODULE ${KDED_KSYSGUARD_SRCS})
 kcoreaddons_desktop_to_json(ksysguard ksysguard.desktop)
 
 target_link_libraries(ksysguard
-    KF5::ProcessCore
-    KF5::ProcessUi
     KF5::DBusAddons
     KF5::I18n
     KF5::XmlGui
@@ -21,9 +19,7 @@ install(TARGETS ksysguard DESTINATION ${KDE_INSTALL_PLUGINDIR}/kf5/kded)
 add_executable(systemmonitor ksystemactivitydialog.cpp main.cpp)
 
 target_link_libraries(systemmonitor
-    KF5::ProcessCore
     KF5::ProcessUi
-    KF5::DBusAddons
     KF5::ConfigCore
     KF5::I18n
     KF5::XmlGui
