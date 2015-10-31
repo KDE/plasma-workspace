@@ -41,20 +41,20 @@ BreezeBlock {
 
             name: {
                 if (!model.session) {
-                    return i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Unused")
+                    return i18ndc("plasma_lookandfeel_org.kde.lookandfeel", "Nobody logged in on that session", "Unused")
                 }
 
                 var displayName = model.realName || model.name
 
                 var location = ""
                 if (model.isTty) {
-                    location = i18nd("plasma_lookandfeel_org.kde.lookandfeel", "TTY %1", model.vtNumber)
+                    location = i18ndc("plasma_lookandfeel_org.kde.lookandfeel", "User logged in on console number", "TTY %1", model.vtNumber)
                 } else if (model.displayNumber) {
-                    location = i18nd("plasma_lookandfeel_org.kde.lookandfeel", "on %1 (%2)", model.vtNumber, model.displayNumber)
+                    location = i18ndc("plasma_lookandfeel_org.kde.lookandfeel", "User logged in on console (X display number)", "on %1 (%2)", model.vtNumber, model.displayNumber)
                 }
 
                 if (location) {
-                    return i18nd("plasma_lookandfeel_org.kde.lookandfeel", "%1 (%2)", displayName, location)
+                    return i18ndc("plasma_lookandfeel_org.kde.lookandfeel", "Username (location)", "%1 (%2)", displayName, location)
                 }
                 return displayName
             }
