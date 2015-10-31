@@ -94,10 +94,7 @@ void DesktopView::adaptToScreen()
     }
 //     qDebug() << "adapting to screen" << screen()->name() << this;
     if ((m_windowType == Desktop || m_windowType == WindowedDesktop) && !ShellManager::s_forceWindowed) {
-        setGeometry(screen()->geometry());
-        setMinimumSize(screen()->geometry().size());
-        setMaximumSize(screen()->geometry().size());
-
+        screenGeometryChanged();
         if(m_oldScreen) {
             disconnect(m_oldScreen.data(), &QScreen::geometryChanged,
                        this, &DesktopView::screenGeometryChanged);
@@ -256,11 +253,13 @@ void DesktopView::showConfigurationInterface(Plasma::Applet *applet)
     m_configView.data()->show();
 }
 
-void DesktopView::screenGeometryChanged(const QRect &geom)
+void DesktopView::screenGeometryChanged()
 {
-    setGeometry(screen()->geometry());
-    setMinimumSize(screen()->geometry().size());
-    setMaximumSize(screen()->geometry().size());
+    const QRect geo = screen()->geometry();
+//     qDebug() << "newGeometry" << this << geo << geometry();
+    setGeometry(geo);
+    setMinimumSize(geo.size());
+    setMaximumSize(geo.size());
 }
 
 
