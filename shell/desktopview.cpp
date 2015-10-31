@@ -50,11 +50,7 @@ DesktopView::DesktopView(Plasma::Corona *corona, QScreen *targetScreen)
     rootContext()->setContextProperty("desktop", this);
     setSource(QUrl::fromLocalFile(corona->kPackage().filePath("views", "Desktop.qml")));
 
-    ensureWindowType();
-    adaptToScreen();
-
-    //For some reason, if I connect the method directly it doesn't get called, I think it's for the lack of argument
-    connect(this, &QWindow::screenChanged, this, [=](QScreen*) { adaptToScreen(); ensureWindowType(); });
+    connect(this, &QWindow::screenChanged, this, &DesktopView::adaptToScreen);
 
     QObject::connect(corona, &Plasma::Corona::kPackageChanged,
                      this, &DesktopView::coronaPackageChanged);
@@ -77,12 +73,13 @@ DesktopView::~DesktopView()
 void DesktopView::showEvent(QShowEvent* e)
 {
     QQuickWindow::showEvent(e);
-    ensureWindowType();
     adaptToScreen();
 }
 
 void DesktopView::adaptToScreen()
 {
+    ensureWindowType();
+
     //This happens sometimes, when shutting down the process
     if (!screen() || m_oldScreen==screen()) {
         return;
@@ -121,7 +118,6 @@ void DesktopView::setWindowType(DesktopView::WindowType type)
 
     m_windowType = type;
 
-    ensureWindowType();
     adaptToScreen();
 
     emit windowTypeChanged();
