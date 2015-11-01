@@ -150,22 +150,6 @@ void UnlockApp::initialize()
     installEventFilter(this);
 }
 
-void UnlockApp::viewStatusChanged(const QQmlComponent::Status &status)
-{
-    auto *view = qobject_cast<KQuickAddons::QuickViewSharedEngine *>(sender());
-    if (!view) {
-        return;
-    }
-
-    const QUrl fallbackUrl(QStringLiteral("qrc:/fallbacktheme/LockScreen.qml"));
-
-    // on error, load the fallback lockscreen to not lock the user out of the system
-    if (status == QQmlComponent::Error && view && view->source() != fallbackUrl) {
-        m_mainQmlPath = fallbackUrl;
-        view->setSource(m_mainQmlPath);
-    }
-}
-
 void UnlockApp::desktopResized()
 {
     const int nScreens = screens().count();
@@ -181,7 +165,6 @@ void UnlockApp::desktopResized()
         connect(QGuiApplication::screens()[i], &QObject::destroyed, this, &UnlockApp::desktopResized);
         // create the view
         auto *view = new KQuickAddons::QuickViewSharedEngine();
-        connect(view, &KQuickAddons::QuickViewSharedEngine::statusChanged, this, &UnlockApp::viewStatusChanged);
         view->setColor(Qt::black);
 
         // first create KDeclarative, to be sure that it created a KIO Network Factory
@@ -220,6 +203,14 @@ void UnlockApp::desktopResized()
         context->setContextProperty(QStringLiteral("org_kde_plasma_screenlocker_greeter_interfaceVersion"), 1);
 
         view->setSource(m_mainQmlPath);
+        // on error, load the fallback lockscreen to not lock the user out of the system
+        if (view->status() == QQmlComponent::Error) {
+            static const QUrl fallbackUrl(QUrl(QStringLiteral("qrc:/fallbacktheme/LockScreen.qml")));
+
+            qWarning() << "Failed to load lockscreen QML, falling back to built-in locker";
+            m_mainQmlPath = fallbackUrl;
+            view->setSource(fallbackUrl);
+        }
         view->setResizeMode(KQuickAddons::QuickViewSharedEngine::SizeRootObjectToView);
 
         QQmlProperty lockProperty(view->rootObject(), QStringLiteral("locked"));

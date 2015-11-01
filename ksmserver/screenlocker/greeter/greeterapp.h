@@ -68,7 +68,6 @@ protected:
     virtual bool eventFilter(QObject *obj, QEvent *event);
 
 private Q_SLOTS:
-    void viewStatusChanged(const QQmlComponent::Status &status);
     void resetRequestIgnore();
     void suspendToRam();
     void suspendToDisk();
