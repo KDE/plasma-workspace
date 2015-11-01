@@ -39,7 +39,7 @@ K_PLUGIN_FACTORY_WITH_JSON(KSysGuardFactory,
 
 KDEDKSysGuard::KDEDKSysGuard(QObject* parent, const QVariantList&)
 {
-    QTimer::singleShot(0, this, SLOT(init()));
+    QTimer::singleShot(0, this, &KDEDKSysGuard::init);
 }
 
 KDEDKSysGuard::~KDEDKSysGuard()
@@ -50,7 +50,7 @@ void KDEDKSysGuard::init()
 {
     KActionCollection* actionCollection = new KActionCollection(this);
 
-    QAction* action = actionCollection->addAction(QLatin1String("Show System Activity"));
+    QAction* action = actionCollection->addAction(QStringLiteral("Show System Activity"));
     action->setText(i18n("Show System Activity"));
     connect(action, &QAction::triggered, this, &KDEDKSysGuard::showTaskManager);
 
@@ -61,7 +61,7 @@ void KDEDKSysGuard::showTaskManager()
 {
     QDBusConnection con = QDBusConnection::sessionBus();
     QDBusConnectionInterface* interface = con.interface();
-    if (interface->isServiceRegistered("org.kde.systemmonitor")) {
+    if (interface->isServiceRegistered(QStringLiteral("org.kde.systemmonitor"))) {
         QDBusMessage msg = QDBusMessage::createMethodCall(QStringLiteral("org.kde.systemmonitor"),
                                                           QStringLiteral("/"),
                                                           QStringLiteral("org.qtproject.Qt.QWidget"),
@@ -70,7 +70,7 @@ void KDEDKSysGuard::showTaskManager()
         con.asyncCall(msg);
     }
     else {
-        QString exe = QStandardPaths::findExecutable("systemmonitor");
+        QString exe = QStandardPaths::findExecutable(QStringLiteral("systemmonitor"));
         QProcess::startDetached(exe);
     }
 }

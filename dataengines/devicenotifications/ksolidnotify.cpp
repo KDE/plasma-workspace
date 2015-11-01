@@ -50,10 +50,10 @@ KSolidNotify::KSolidNotify(QObject* parent):
         connectSignals(&m_devices[dev.udi()]);
     }
 
-    connect(Solid::DeviceNotifier::instance(), SIGNAL(deviceAdded(const QString &)),
-            this, SLOT(onDeviceAdded(const QString &)));
-    connect(Solid::DeviceNotifier::instance(), SIGNAL(deviceRemoved(const QString &)),
-            this, SLOT(onDeviceRemoved(const QString &)));
+    connect(Solid::DeviceNotifier::instance(), &Solid::DeviceNotifier::deviceAdded,
+            this, &KSolidNotify::onDeviceAdded);
+    connect(Solid::DeviceNotifier::instance(), &Solid::DeviceNotifier::deviceRemoved,
+            this, &KSolidNotify::onDeviceRemoved);
 }
 
 void KSolidNotify::onDeviceAdded(const QString &udi)
@@ -97,15 +97,15 @@ void KSolidNotify::connectSignals(Solid::Device* device)
 {
     Solid::StorageAccess *access = device->as<Solid::StorageAccess>();
     if (access) {
-        connect(access, SIGNAL(teardownDone(Solid::ErrorType, QVariant, const QString &)),
-                this, SLOT(storageTeardownDone(Solid::ErrorType, QVariant , const QString &)));
-        connect(access, SIGNAL(setupDone(Solid::ErrorType, QVariant, const QString &)),
-                this, SLOT(storageSetupDone(Solid::ErrorType, QVariant , const QString &)));
+        connect(access, &Solid::StorageAccess::teardownDone,
+                this, &KSolidNotify::storageTeardownDone);
+        connect(access, &Solid::StorageAccess::setupDone,
+                this, &KSolidNotify::storageSetupDone);
     }
     if (device->is<Solid::OpticalDisc>()) {
         Solid::OpticalDrive *drive = device->parent().as<Solid::OpticalDrive>();
-        connect(drive, SIGNAL(ejectDone(Solid::ErrorType, QVariant, const QString &)),
-                this, SLOT(storageEjectDone(Solid::ErrorType, QVariant , const QString &)));
+        connect(drive, &Solid::OpticalDrive::ejectDone,
+                this, &KSolidNotify::storageEjectDone);
     }
 }
 
@@ -128,7 +128,7 @@ void KSolidNotify::queryBlockingApps(const QString &devicePath)
     connect(p, static_cast<void (QProcess::*)(int,QProcess::ExitStatus)>(&QProcess::finished), [=](int,QProcess::ExitStatus) {
                 QStringList blockApps;
                 QString out(p->readAll());
-                const QStringList &pidList = out.split(QRegExp("\\s+"), QString::SkipEmptyParts);
+                const QStringList &pidList = out.split(QRegExp(QStringLiteral("\\s+")), QString::SkipEmptyParts);
                 KSysGuard::Processes procs;
                 Q_FOREACH (const QString &pidStr, pidList) {
                     int pid = pidStr.toInt();

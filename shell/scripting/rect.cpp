@@ -296,32 +296,32 @@ QScriptValue constructQRectFClass(QScriptEngine *eng)
     QScriptValue::PropertyFlags getter = QScriptValue::PropertyGetter;
     QScriptValue::PropertyFlags setter = QScriptValue::PropertySetter;
 
-    proto.setProperty("adjust", eng->newFunction(adjust));
-    proto.setProperty("adjusted", eng->newFunction(adjusted), getter);
-    proto.setProperty("translate", eng->newFunction(translate));
-    proto.setProperty("setCoords", eng->newFunction(setCoords));
-    proto.setProperty("setRect", eng->newFunction(setRect));
+    proto.setProperty(QStringLiteral("adjust"), eng->newFunction(adjust));
+    proto.setProperty(QStringLiteral("adjusted"), eng->newFunction(adjusted), getter);
+    proto.setProperty(QStringLiteral("translate"), eng->newFunction(translate));
+    proto.setProperty(QStringLiteral("setCoords"), eng->newFunction(setCoords));
+    proto.setProperty(QStringLiteral("setRect"), eng->newFunction(setRect));
 
-    proto.setProperty("contains", eng->newFunction(contains));
+    proto.setProperty(QStringLiteral("contains"), eng->newFunction(contains));
 
-    proto.setProperty("moveBottom", eng->newFunction(moveBottom));
-    proto.setProperty("moveLeft", eng->newFunction(moveLeft));
-    proto.setProperty("moveRight", eng->newFunction(moveRight));
-    proto.setProperty("moveTo", eng->newFunction(moveTo));
-    proto.setProperty("moveTop", eng->newFunction(moveTop));
+    proto.setProperty(QStringLiteral("moveBottom"), eng->newFunction(moveBottom));
+    proto.setProperty(QStringLiteral("moveLeft"), eng->newFunction(moveLeft));
+    proto.setProperty(QStringLiteral("moveRight"), eng->newFunction(moveRight));
+    proto.setProperty(QStringLiteral("moveTo"), eng->newFunction(moveTo));
+    proto.setProperty(QStringLiteral("moveTop"), eng->newFunction(moveTop));
 
-    proto.setProperty("empty", eng->newFunction(empty), getter);
-    proto.setProperty("null", eng->newFunction(null), getter);
-    proto.setProperty("valid", eng->newFunction(valid), getter);
+    proto.setProperty(QStringLiteral("empty"), eng->newFunction(empty), getter);
+    proto.setProperty(QStringLiteral("null"), eng->newFunction(null), getter);
+    proto.setProperty(QStringLiteral("valid"), eng->newFunction(valid), getter);
 
-    proto.setProperty("left", eng->newFunction(left), getter | setter);
-    proto.setProperty("top", eng->newFunction(top), getter | setter);
-    proto.setProperty("bottom", eng->newFunction(bottom), getter | setter);
-    proto.setProperty("right", eng->newFunction(right), getter | setter);
-    proto.setProperty("height", eng->newFunction(height), getter | setter);
-    proto.setProperty("width", eng->newFunction(width), getter | setter);
-    proto.setProperty("x", eng->newFunction(x), getter | setter);
-    proto.setProperty("y", eng->newFunction(y), getter | setter);
+    proto.setProperty(QStringLiteral("left"), eng->newFunction(left), getter | setter);
+    proto.setProperty(QStringLiteral("top"), eng->newFunction(top), getter | setter);
+    proto.setProperty(QStringLiteral("bottom"), eng->newFunction(bottom), getter | setter);
+    proto.setProperty(QStringLiteral("right"), eng->newFunction(right), getter | setter);
+    proto.setProperty(QStringLiteral("height"), eng->newFunction(height), getter | setter);
+    proto.setProperty(QStringLiteral("width"), eng->newFunction(width), getter | setter);
+    proto.setProperty(QStringLiteral("x"), eng->newFunction(x), getter | setter);
+    proto.setProperty(QStringLiteral("y"), eng->newFunction(y), getter | setter);
 
     eng->setDefaultPrototype(qMetaTypeId<QRectF>(), proto);
     eng->setDefaultPrototype(qMetaTypeId<QRectF*>(), proto);

@@ -31,12 +31,12 @@ class BugzillaLibTest : public QObject
     public:
         BugzillaLibTest(QString user, QString password) : QObject()
         {
-            manager = new BugzillaManager("http://bugstest.kde.org/");
-            connect(manager, SIGNAL(loginFinished(bool)), this, SLOT(loginFinished(bool)));
-            connect(manager, SIGNAL(loginError(QString)), this, SLOT(loginError(QString)));
-            connect(manager, SIGNAL(reportSent(int)), this, SLOT(reportSent(int)));
-            connect(manager, SIGNAL(sendReportError(QString)), this, SLOT(sendReportError(QString)));
-            connect(manager, SIGNAL(sendReportErrorInvalidValues()), this, SLOT(sendBR2()));
+            manager = new BugzillaManager(QStringLiteral("http://bugstest.kde.org/"));
+            connect(manager, &BugzillaManager::loginFinished, this, &BugzillaLibTest::loginFinished);
+            connect(manager, &BugzillaManager::loginError, this, &BugzillaLibTest::loginError);
+            connect(manager, &BugzillaManager::reportSent, this, &BugzillaLibTest::reportSent);
+            connect(manager, &BugzillaManager::sendReportError, this, &BugzillaLibTest::sendReportError);
+            connect(manager, &BugzillaManager::sendReportErrorInvalidValues, this, &BugzillaLibTest::sendBR2);
             manager->tryLogin(user, password);
             qDebug() << "Login ...";
         }
@@ -77,15 +77,15 @@ class BugzillaLibTest : public QObject
         {
             BugReport br;
             br.setValid(true);
-            br.setProduct("konqueror");
-            br.setComponent("general");
-            br.setVersion("undefined");
-            br.setOperatingSystem("Linux");
-            br.setPriority("NOR");
-            br.setPlatform("random test");
-            br.setBugSeverity("crash");
-            br.setShortDescription("bla bla");
-            br.setDescription("bla bla large");
+            br.setProduct(QStringLiteral("konqueror"));
+            br.setComponent(QStringLiteral("general"));
+            br.setVersion(QStringLiteral("undefined"));
+            br.setOperatingSystem(QStringLiteral("Linux"));
+            br.setPriority(QStringLiteral("NOR"));
+            br.setPlatform(QStringLiteral("random test"));
+            br.setBugSeverity(QStringLiteral("crash"));
+            br.setShortDescription(QStringLiteral("bla bla"));
+            br.setDescription(QStringLiteral("bla bla large"));
 
             manager->sendReport(br);
             qDebug() << "Trying to send bug report";
@@ -95,15 +95,15 @@ class BugzillaLibTest : public QObject
         {
             BugReport br;
             br.setValid(true);
-            br.setProduct("konqueror");
-            br.setComponent("general");
-            br.setVersion("undefined");
-            br.setOperatingSystem("Linux");
-            br.setPriority("NOR");
-            br.setPlatform("unspecified");
-            br.setBugSeverity("crash");
-            br.setShortDescription("bla bla");
-            br.setDescription("bla bla large");
+            br.setProduct(QStringLiteral("konqueror"));
+            br.setComponent(QStringLiteral("general"));
+            br.setVersion(QStringLiteral("undefined"));
+            br.setOperatingSystem(QStringLiteral("Linux"));
+            br.setPriority(QStringLiteral("NOR"));
+            br.setPlatform(QStringLiteral("unspecified"));
+            br.setBugSeverity(QStringLiteral("crash"));
+            br.setShortDescription(QStringLiteral("bla bla"));
+            br.setDescription(QStringLiteral("bla bla large"));
 
             manager->sendReport(br);
             qDebug() << "Trying to send bug report";
@@ -127,24 +127,24 @@ class BugzillaLibTest : public QObject
 int main (int argc, char ** argv)
 {
     QApplication app(argc, argv);
-    KAboutData aboutData( "bzlibtest", i18n("BugzillaLib Test (DrKonqi2)"),
-        "1.0", i18n("Test application for bugtracker manager lib"), KAboutLicense::GPL,
+    KAboutData aboutData( QStringLiteral("bzlibtest"), i18n("BugzillaLib Test (DrKonqi2)"),
+        QStringLiteral("1.0"), i18n("Test application for bugtracker manager lib"), KAboutLicense::GPL,
         i18n("(c) 2009, DrKonqi2 Developers"));
 
     QCommandLineParser parser;
-    parser.addOption(QCommandLineOption("user", i18nc("@info:shell","bugstest.kde.org username"), "username"));
-    parser.addOption(QCommandLineOption("pass", i18nc("@info:shell","bugstest.kde.org password"), "password"));
+    parser.addOption(QCommandLineOption(QStringLiteral("user"), i18nc("@info:shell","bugstest.kde.org username"), QStringLiteral("username")));
+    parser.addOption(QCommandLineOption(QStringLiteral("pass"), i18nc("@info:shell","bugstest.kde.org password"), QStringLiteral("password")));
 
     aboutData.setupCommandLine(&parser);
     parser.process(app);
     aboutData.processCommandLine(&parser);
 
-    if (!parser.isSet("user") || !parser.isSet("pass")) {
+    if (!parser.isSet(QStringLiteral("user")) || !parser.isSet(QStringLiteral("pass"))) {
         qDebug() << "Provide bugstest.kde.org username and password. See help";
         return 0;
     }
 
-    new BugzillaLibTest(parser.value("user"), parser.value("pass"));
+    new BugzillaLibTest(parser.value(QStringLiteral("user")), parser.value(QStringLiteral("pass")));
     return app.exec();
 }
 

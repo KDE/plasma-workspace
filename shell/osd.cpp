@@ -47,7 +47,7 @@ Osd::Osd(ShellCorona *corona)
 
     m_timeout = m_osdObject->rootObject()->property("timeout").toInt();
 
-    QDBusConnection::sessionBus().registerObject("/org/kde/osdService", this, QDBusConnection::ExportAllSlots | QDBusConnection::ExportAllSignals);
+    QDBusConnection::sessionBus().registerObject(QStringLiteral("/org/kde/osdService"), this, QDBusConnection::ExportAllSlots | QDBusConnection::ExportAllSignals);
 
     m_osdTimer = new QTimer(this);
     m_osdTimer->setSingleShot(true);

@@ -34,10 +34,10 @@ RemoteDirNotify::RemoteDirNotify()
 	const QString path = KGlobal::dirs()->saveLocation("remote_entries");
 	m_baseURL.setPath(path);
 
-	QDBusConnection::sessionBus().connect(QString(), QString(), "org.kde.KDirNotify",
-				    "FilesAdded", this, SLOT(FilesAdded(QString))); QDBusConnection::sessionBus().connect(QString(), QString(), "org.kde.KDirNotify",
-				    "FilesRemoved", this, SLOT(FilesRemoved(QStringList))); QDBusConnection::sessionBus().connect(QString(), QString(), "org.kde.KDirNotify",
-				    "FilesChanged", this, SLOT(FilesChanged(QStringList)));
+	QDBusConnection::sessionBus().connect(QString(), QString(), QStringLiteral("org.kde.KDirNotify"),
+				    QStringLiteral("FilesAdded"), this, SLOT(FilesAdded(QString))); QDBusConnection::sessionBus().connect(QString(), QString(), QStringLiteral("org.kde.KDirNotify"),
+				    QStringLiteral("FilesRemoved"), this, SLOT(FilesRemoved(QStringList))); QDBusConnection::sessionBus().connect(QString(), QString(), QStringLiteral("org.kde.KDirNotify"),
+				    QStringLiteral("FilesChanged"), this, SLOT(FilesChanged(QStringList)));
 }
 
 KUrl RemoteDirNotify::toRemoteURL(const KUrl &url)

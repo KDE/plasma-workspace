@@ -47,12 +47,12 @@ ShellRunner::ShellRunner(QObject *parent, const QVariantList &args)
     setObjectName( QLatin1String("Command" ));
     setPriority(AbstractRunner::HighestPriority);
     setHasRunOptions(true);
-    m_enabled = KAuthorized::authorizeKAction("run_command") && KAuthorized::authorizeKAction("shell_access");
+    m_enabled = KAuthorized::authorizeKAction(QStringLiteral("run_command")) && KAuthorized::authorizeKAction(QStringLiteral("shell_access"));
     setIgnoredTypes(Plasma::RunnerContext::Directory | Plasma::RunnerContext::File |
                     Plasma::RunnerContext::NetworkLocation | Plasma::RunnerContext::UnknownType |
                     Plasma::RunnerContext::Help);
 
-    addSyntax(Plasma::RunnerSyntax(":q:", i18n("Finds commands that match :q:, using common shell syntax")));
+    addSyntax(Plasma::RunnerSyntax(QStringLiteral(":q:"), i18n("Finds commands that match :q:, using common shell syntax")));
 }
 
 ShellRunner::~ShellRunner()
@@ -71,7 +71,7 @@ void ShellRunner::match(Plasma::RunnerContext &context)
         Plasma::QueryMatch match(this);
         match.setId(term);
         match.setType(Plasma::QueryMatch::ExactMatch);
-        match.setIcon(QIcon::fromTheme("system-run"));
+        match.setIcon(QIcon::fromTheme(QStringLiteral("system-run")));
         match.setText(i18n("Run %1", term));
         match.setRelevance(0.7);
         context.addMatch(match);
@@ -95,12 +95,12 @@ void ShellRunner::run(const Plasma::RunnerContext &context, const Plasma::QueryM
             if (m_inTerminal) {
                 // we have to reimplement this from KToolInvocation because we need to use KDESu
                 KConfigGroup confGroup = KSharedConfig::openConfig()->group("General");
-                exec = confGroup.readPathEntry("TerminalApplication", "konsole");
+                exec = confGroup.readPathEntry("TerminalApplication", QStringLiteral("konsole"));
                 if (!exec.isEmpty()) {
-                    if (exec == "konsole") {
-                        args += " --noclose";
-                    } else if (exec == "xterm") {
-                        args += " -hold";
+                    if (exec == QLatin1String("konsole")) {
+                        args += QLatin1String(" --noclose");
+                    } else if (exec == QLatin1String("xterm")) {
+                        args += QLatin1String(" -hold");
                     }
 
                     args += " -e " + context.query();
@@ -152,10 +152,10 @@ void ShellRunner::createRunOptions(QWidget *parent)
     pal.setColor(QPalette::Normal, QPalette::WindowText, theme->color(Plasma::Theme::TextColor));
     configWidget->setPalette(pal);
 
-    connect(configWidget->m_ui.cbRunAsOther, SIGNAL(clicked(bool)), this, SLOT(setRunAsOtherUser(bool)));
-    connect(configWidget->m_ui.cbRunInTerminal, SIGNAL(clicked(bool)), this, SLOT(setRunInTerminal(bool)));
-    connect(configWidget->m_ui.leUsername, SIGNAL(textChanged(QString)), this, SLOT(setUsername(QString)));
-    connect(configWidget->m_ui.lePassword, SIGNAL(textChanged(QString)), this, SLOT(setPassword(QString)));
+    connect(configWidget->m_ui.cbRunAsOther, &QAbstractButton::clicked, this, &ShellRunner::setRunAsOtherUser);
+    connect(configWidget->m_ui.cbRunInTerminal, &QAbstractButton::clicked, this, &ShellRunner::setRunInTerminal);
+    connect(configWidget->m_ui.leUsername, &QLineEdit::textChanged, this, &ShellRunner::setUsername);
+    connect(configWidget->m_ui.lePassword, &QLineEdit::textChanged, this, &ShellRunner::setPassword);
 }
 
 void ShellRunner::setRunAsOtherUser(bool asOtherUser)

@@ -79,11 +79,11 @@ QList< BookmarkMatch > Firefox::match(const QString& term, bool addEverything)
     QString tmpTerm = term;
     QString query;
     if (addEverything) {
-        query = QString("SELECT moz_bookmarks.fk, moz_bookmarks.title, moz_places.url," \
+        query = QStringLiteral("SELECT moz_bookmarks.fk, moz_bookmarks.title, moz_places.url," \
                     "moz_places.favicon_id FROM moz_bookmarks, moz_places WHERE " \
                     "moz_bookmarks.type = 1 AND moz_bookmarks.fk = moz_places.id");
     } else {
-        const QString escapedTerm = tmpTerm.replace('\'', "\\'");
+        const QString escapedTerm = tmpTerm.replace('\'', QLatin1String("\\'"));
         query = QString("SELECT moz_bookmarks.fk, moz_bookmarks.title, moz_places.url," \
                         "moz_places.favicon_id FROM moz_bookmarks, moz_places WHERE " \
                         "moz_bookmarks.type = 1 AND moz_bookmarks.fk = moz_places.id AND " \
@@ -92,9 +92,9 @@ QList< BookmarkMatch > Firefox::match(const QString& term, bool addEverything)
     }
     QList<QVariantMap> results = m_fetchsqlite->query(query, QMap<QString, QVariant>());
     foreach(QVariantMap result, results) {
-        const QString title = result.value("title").toString();
-        const QUrl url = result.value("url").toUrl();
-        if (url.scheme().contains("place")) {
+        const QString title = result.value(QStringLiteral("title")).toString();
+        const QUrl url = result.value(QStringLiteral("url")).toUrl();
+        if (url.scheme().contains(QStringLiteral("place"))) {
             //Don't use bookmarks with empty title, url or Firefox intern url
             //qDebug() << "element " << url << " was not added";
             continue;
@@ -121,17 +121,17 @@ void Firefox::teardown()
 
 void Firefox::reloadConfiguration()
 {
-    KConfigGroup config(KSharedConfig::openConfig("kdeglobals"), QLatin1String("General") );
-    if (QSqlDatabase::isDriverAvailable("QSQLITE")) {
+    KConfigGroup config(KSharedConfig::openConfig(QStringLiteral("kdeglobals")), QStringLiteral("General") );
+    if (QSqlDatabase::isDriverAvailable(QStringLiteral("QSQLITE"))) {
         KConfigGroup grp = config;
         /* This allows the user to specify a profile database */
-        m_dbFile = grp.readEntry<QString>("dbfile", "");
+        m_dbFile = grp.readEntry<QString>("dbfile", QLatin1String(""));
         if (m_dbFile.isEmpty() || QFile::exists(m_dbFile)) {
             //Try to get the right database file, the default profile is used
             KConfig firefoxProfile(QDir::homePath() + "/.mozilla/firefox/profiles.ini",
                                    KConfig::SimpleConfig);
             QStringList profilesList = firefoxProfile.groupList();
-            profilesList = profilesList.filter(QRegExp("^Profile\\d+$"));
+            profilesList = profilesList.filter(QRegExp(QStringLiteral("^Profile\\d+$")));
             int size = profilesList.size();
 
             QString profilePath;
@@ -155,7 +155,7 @@ void Firefox::reloadConfiguration()
                 return;
             }
 	    //qDebug() << "Profile " << profilePath << " found";
-            profilePath.prepend(QString("%1/.mozilla/firefox/").arg(QDir::homePath()));
+            profilePath.prepend(QStringLiteral("%1/.mozilla/firefox/").arg(QDir::homePath()));
             m_dbFile = profilePath + "/places.sqlite";
             grp.writeEntry("dbfile", m_dbFile);
         }

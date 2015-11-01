@@ -40,8 +40,8 @@ QList<BookmarkMatch> Opera::match( const QString& term, bool addEverything )
 
     // search
     foreach (const QString & entry, m_operaBookmarkEntries) {
-        QStringList entryLines = entry.split("\n");
-        if (!entryLines.first().startsWith(QString("#URL"))) {
+        QStringList entryLines = entry.split(QStringLiteral("\n"));
+        if (!entryLines.first().startsWith(QStringLiteral("#URL"))) {
             continue; // skip folder entries
         }
         entryLines.pop_front();
@@ -80,7 +80,7 @@ void Opera::prepare()
 
         // check format
         QString firstLine = operaBookmarksFile.readLine();
-        if (firstLine.compare("Opera Hotlist version 2.0\n")) {
+        if (firstLine.compare(QLatin1String("Opera Hotlist version 2.0\n"))) {
             //qDebug() << "Format of Opera Bookmarks File might have changed.";
         }
         operaBookmarksFile.readLine(); // skip options line ("Options: encoding = utf8, version=3")
@@ -88,7 +88,7 @@ void Opera::prepare()
 
         // load contents
         QString contents = operaBookmarksFile.readAll();
-        m_operaBookmarkEntries = contents.split("\n\n", QString::SkipEmptyParts);
+        m_operaBookmarkEntries = contents.split(QStringLiteral("\n\n"), QString::SkipEmptyParts);
 
         // close file
         operaBookmarksFile.close();

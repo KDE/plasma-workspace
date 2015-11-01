@@ -36,7 +36,7 @@ NotificationsHelper::NotificationsHelper(QObject *parent)
     m_busy(false)
 {
     m_mutex = new QReadWriteLock(QReadWriteLock::Recursive);
-    m_offset = QFontMetrics(QGuiApplication::font()).boundingRect("M").height();
+    m_offset = QFontMetrics(QGuiApplication::font()).boundingRect(QStringLiteral("M")).height();
 
     m_dispatchTimer = new QTimer(this);
     m_dispatchTimer->setInterval(500);
@@ -136,7 +136,7 @@ void NotificationsHelper::processShow()
     const QVariantMap notificationData = m_showQueue.takeFirst();
     m_mutex->unlock();
 
-    QString sourceName = notificationData.value("source").toString();
+    QString sourceName = notificationData.value(QStringLiteral("source")).toString();
 
     // Try getting existing popup for the given source
     // (case of notification being just updated)
@@ -162,7 +162,7 @@ void NotificationsHelper::processShow()
     // Populate the popup with data, this is the component's own QML method
     QMetaObject::invokeMethod(popup, "populatePopup", Q_ARG(QVariant, notificationData));
     repositionPopups();
-    QTimer::singleShot(300, popup, SLOT(show()));
+    QTimer::singleShot(300, popup, &QWindow::show);
 
     if (!m_dispatchTimer->isActive()) {
         m_dispatchTimer->start();
@@ -217,14 +217,14 @@ void NotificationsHelper::displayNotification(const QVariantMap &notificationDat
         return;
     }
 
-    QVariant sourceName = notificationData.value("source");
+    QVariant sourceName = notificationData.value(QStringLiteral("source"));
 
     // first check if we don't already have data for the same source
     // which would mean that the notification was just updated
     // so remove the old one and append the newest data only
     QMutableListIterator<QVariantMap> i(m_showQueue);
     while (i.hasNext()) {
-        if (i.next().value("source") == sourceName) {
+        if (i.next().value(QStringLiteral("source")) == sourceName) {
             m_mutex->lockForWrite();
             i.remove();
             m_mutex->unlock();
@@ -269,10 +269,10 @@ void NotificationsHelper::closePopup(const QString &sourceName)
     // the close event arrives here, before it's even shown)
     QMutableListIterator<QVariantMap> i(m_showQueue);
     while (i.hasNext()) {
-        if (i.next().value("source") == sourceName) {
+        if (i.next().value(QStringLiteral("source")) == sourceName) {
             qDebug() << "########|" << "  (locking mutex for write)";
             m_mutex->lockForWrite();
-            qDebug() << "########|" << "Removing old data" << i.value().value("summary").toString();
+            qDebug() << "########|" << "Removing old data" << i.value().value(QStringLiteral("summary")).toString();
             i.remove();
             m_mutex->unlock();
             qDebug() << "########|" << "  (unlocking mutex)";

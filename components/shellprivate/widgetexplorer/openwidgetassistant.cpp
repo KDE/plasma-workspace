@@ -54,7 +54,7 @@ OpenWidgetAssistant::OpenWidgetAssistant(QWidget *parent)
 
     m_fileWidget->setFilter(QString());
     QStringList mimes;
-    mimes << "application/x-plasma";
+    mimes << QStringLiteral("application/x-plasma");
     m_fileWidget->setMimeFilter(mimes);
 
     m_filePage = new KPageWidgetItem(m_filePageWidget, i18n("Select Plasmoid File"));
@@ -78,7 +78,7 @@ void OpenWidgetAssistant::finished()
         return;
     }
 
-    KPackage::Package installer = KPackage::PackageLoader::self()->loadPackage("Plasma/Applet");
+    KPackage::Package installer = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Plasma/Applet"));
 
     if (!installer.install(packageFilePath)) {
         KMessageBox::error(this, i18n("Installing the package %1 failed.", packageFilePath),

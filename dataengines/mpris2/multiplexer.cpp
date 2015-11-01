@@ -89,25 +89,25 @@ void Multiplexer::addPlayer(PlayerContainer *container)
 {
     bool makeActive = m_activeName.isEmpty();
 
-    if (container->data().value("PlaybackStatus") == QLatin1String("Playing")) {
+    if (container->data().value(QStringLiteral("PlaybackStatus")) == QLatin1String("Playing")) {
         m_playing.insert(container->objectName(), container);
         if (!makeActive &&
-                data().value("PlaybackStatus") != QLatin1String("Playing")) {
+                data().value(QStringLiteral("PlaybackStatus")) != QLatin1String("Playing")) {
             makeActive = true;
         }
-    } else if (container->data().value("PlaybackStatus") == QLatin1String("Paused")) {
+    } else if (container->data().value(QStringLiteral("PlaybackStatus")) == QLatin1String("Paused")) {
         m_paused.insert(container->objectName(), container);
         if (!makeActive &&
-                data().value("PlaybackStatus") != QLatin1String("Playing") &&
-                data().value("PlaybackStatus") != QLatin1String("Paused")) {
+                data().value(QStringLiteral("PlaybackStatus")) != QLatin1String("Playing") &&
+                data().value(QStringLiteral("PlaybackStatus")) != QLatin1String("Paused")) {
             makeActive = true;
         }
     } else {
         m_stopped.insert(container->objectName(), container);
     }
 
-    connect(container, SIGNAL(dataUpdated(QString,Plasma::DataEngine::Data)),
-            this,      SLOT(playerUpdated(QString,Plasma::DataEngine::Data)));
+    connect(container, &Plasma::DataContainer::dataUpdated,
+            this,      &Multiplexer::playerUpdated);
 
     if (makeActive) {
         m_activeName = container->objectName();
@@ -149,7 +149,7 @@ PlayerContainer *Multiplexer::activePlayer() const
 
 void Multiplexer::playerUpdated(const QString &name, const Plasma::DataEngine::Data &newData)
 {
-    if (newData.value("PlaybackStatus") == QLatin1String("Playing")) {
+    if (newData.value(QStringLiteral("PlaybackStatus")) == QLatin1String("Playing")) {
         if (!m_playing.contains(name)) {
             PlayerContainer *container = m_paused.take(name);
             if (!container) {
@@ -159,14 +159,14 @@ void Multiplexer::playerUpdated(const QString &name, const Plasma::DataEngine::D
             m_playing.insert(name, container);
         }
         if (m_activeName != name &&
-                data().value("PlaybackStatus") != QLatin1String("Playing")) {
+                data().value(QStringLiteral("PlaybackStatus")) != QLatin1String("Playing")) {
             m_activeName = name;
             replaceData(newData);
             checkForUpdate();
             emit activePlayerChanged(activePlayer());
             return;
         }
-    } else if (newData.value("PlaybackStatus") == QLatin1String("Paused")) {
+    } else if (newData.value(QStringLiteral("PlaybackStatus")) == QLatin1String("Paused")) {
         if (!m_paused.contains(name)) {
             PlayerContainer *container = m_playing.take(name);
             if (!container) {
@@ -176,8 +176,8 @@ void Multiplexer::playerUpdated(const QString &name, const Plasma::DataEngine::D
             m_paused.insert(name, container);
         }
         if (m_activeName != name &&
-                data().value("PlaybackStatus") != QLatin1String("Playing") &&
-                data().value("PlaybackStatus") != QLatin1String("Paused")) {
+                data().value(QStringLiteral("PlaybackStatus")) != QLatin1String("Playing") &&
+                data().value(QStringLiteral("PlaybackStatus")) != QLatin1String("Paused")) {
             m_activeName = name;
             replaceData(newData);
             checkForUpdate();
@@ -196,8 +196,8 @@ void Multiplexer::playerUpdated(const QString &name, const Plasma::DataEngine::D
     }
 
     if (m_activeName == name) {
-        bool isPaused = newData.value("PlaybackStatus") == QLatin1String("Paused");
-        bool isStopped = !isPaused && newData.value("PlaybackStatus") != QLatin1String("Playing");
+        bool isPaused = newData.value(QStringLiteral("PlaybackStatus")) == QLatin1String("Paused");
+        bool isStopped = !isPaused && newData.value(QStringLiteral("PlaybackStatus")) != QLatin1String("Playing");
         if (isPaused && !m_playing.isEmpty()) {
             setBestActive();
         } else if (isStopped && (!m_playing.isEmpty() || !m_paused.isEmpty())) {
@@ -247,6 +247,6 @@ void Multiplexer::replaceData(const Plasma::DataEngine::Data &data)
         setData(it.key(), it.value());
         ++it;
     }
-    setData("Source Name", m_activeName);
+    setData(QStringLiteral("Source Name"), m_activeName);
 }
 

@@ -32,10 +32,10 @@ SystemMonitorEngine::SystemMonitorEngine(QObject* parent, const QVariantList& ar
     : Plasma::DataEngine(parent, args)
 {
     KSGRD::SensorMgr = new KSGRD::SensorManager(this);
-    KSGRD::SensorMgr->engage("localhost", "", "ksysguardd");
+    KSGRD::SensorMgr->engage(QStringLiteral("localhost"), QLatin1String(""), QStringLiteral("ksysguardd"));
 
     m_waitingFor= 0;
-    connect(KSGRD::SensorMgr, SIGNAL(update()), this, SLOT(updateMonitorsList()));
+    connect(KSGRD::SensorMgr, &KSGRD::SensorManager::update, this, &SystemMonitorEngine::updateMonitorsList);
     updateMonitorsList();
 }
 
@@ -45,7 +45,7 @@ SystemMonitorEngine::~SystemMonitorEngine()
 
 void SystemMonitorEngine::updateMonitorsList()
 {
-    KSGRD::SensorMgr->sendRequest("localhost", "monitors", (KSGRD::SensorClient*)this, -1);
+    KSGRD::SensorMgr->sendRequest(QStringLiteral("localhost"), QStringLiteral("monitors"), (KSGRD::SensorClient*)this, -1);
 }
 
 QStringList SystemMonitorEngine::sources() const
@@ -74,8 +74,8 @@ bool SystemMonitorEngine::updateSourceEvent(const QString &sensorName)
     const int index = m_sensors.indexOf(sensorName);
 
     if (index != -1) {
-        KSGRD::SensorMgr->sendRequest("localhost", sensorName, (KSGRD::SensorClient*)this, index);
-        KSGRD::SensorMgr->sendRequest("localhost", QString("%1?").arg(sensorName), (KSGRD::SensorClient*)this, -(index + 2));
+        KSGRD::SensorMgr->sendRequest(QStringLiteral("localhost"), sensorName, (KSGRD::SensorClient*)this, index);
+        KSGRD::SensorMgr->sendRequest(QStringLiteral("localhost"), QStringLiteral("%1?").arg(sensorName), (KSGRD::SensorClient*)this, -(index + 2));
     }
 
     return false;
@@ -91,7 +91,7 @@ void SystemMonitorEngine::updateSensors()
     while (it != sources.end()) {
         m_waitingFor++;
         QString sensorName = it.key();
-        KSGRD::SensorMgr->sendRequest( "localhost", sensorName, (KSGRD::SensorClient*)this, -1);
+        KSGRD::SensorMgr->sendRequest( QStringLiteral("localhost"), sensorName, (KSGRD::SensorClient*)this, -1);
         ++it;
     }
 }
@@ -114,7 +114,7 @@ void SystemMonitorEngine::answerReceived(int id, const QList<QByteArray> &answer
             qDebug() << "bad sensor info, only" << newSensorInfo.count()
                      << "entries, and we were expecting 4. Answer was " << answer;
             if(it != sources.constEnd())
-                qDebug() << "value =" << it.value()->data()["value"] << "type=" << it.value()->data()["type"];
+                qDebug() << "value =" << it.value()->data()[QStringLiteral("value")] << "type=" << it.value()->data()[QStringLiteral("type")];
             return;
         }
 
@@ -124,10 +124,10 @@ void SystemMonitorEngine::answerReceived(int id, const QList<QByteArray> &answer
         const QString unit = newSensorInfo[3];
 
         if (it != sources.constEnd()) {
-            it.value()->setData("name", sensorName);
-            it.value()->setData("min", min);
-            it.value()->setData("max", max);
-            it.value()->setData("units", unit);
+            it.value()->setData(QStringLiteral("name"), sensorName);
+            it.value()->setData(QStringLiteral("min"), min);
+            it.value()->setData(QStringLiteral("max"), max);
+            it.value()->setData(QStringLiteral("units"), unit);
         }
 
         return;
@@ -143,7 +143,7 @@ void SystemMonitorEngine::answerReceived(int id, const QList<QByteArray> &answer
             if (newSensorInfo.count() < 2) {
                 continue;
             }
-            if(newSensorInfo.at(1) == "logfile")
+            if(newSensorInfo.at(1) == QLatin1String("logfile"))
                 continue; // logfile data type not currently supported
 
             const QString newSensor = newSensorInfo[0];
@@ -155,14 +155,14 @@ void SystemMonitorEngine::answerReceived(int id, const QList<QByteArray> &answer
                 // automagically removed when disconnected from
                 Plasma::DataContainer *s = containerForSource( newSensor );
                 if ( s ) {
-                    disconnect( s, SIGNAL(becameUnused(QString)), this, SLOT(removeSource(QString)) );
+                    disconnect( s, &Plasma::DataContainer::becameUnused, this, &SystemMonitorEngine::removeSource );
                 }
             }
             DataEngine::Data d;
-            d.insert("value", QVariant());
-            d.insert("type", newSensorInfo[1]);
+            d.insert(QStringLiteral("value"), QVariant());
+            d.insert(QStringLiteral("type"), newSensorInfo[1]);
             setData(newSensor, d);
-            KSGRD::SensorMgr->sendRequest( "localhost", QString("%1?").arg(newSensor), (KSGRD::SensorClient*)this, -(count + 2));
+            KSGRD::SensorMgr->sendRequest( QStringLiteral("localhost"), QStringLiteral("%1?").arg(newSensor), (KSGRD::SensorClient*)this, -(count + 2));
             ++count;
         }
 
@@ -187,7 +187,7 @@ void SystemMonitorEngine::answerReceived(int id, const QList<QByteArray> &answer
     DataEngine::SourceDict sources = containerDict();
     DataEngine::SourceDict::const_iterator it = sources.constFind(m_sensors.value(id));
     if (it != sources.constEnd()) {
-        it.value()->setData("value", reply);
+        it.value()->setData(QStringLiteral("value"), reply);
     }
 
 }

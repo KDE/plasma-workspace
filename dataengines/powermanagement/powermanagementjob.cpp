@@ -46,57 +46,57 @@ void PowerManagementJob::start()
     const QString operation = operationName();
     //qDebug() << "starting operation  ... " << operation;
 
-    if (operation == "lockScreen") {
-        if (KAuthorized::authorizeKAction("lock_screen")) {
-            const QString interface("org.freedesktop.ScreenSaver");
-            QDBusInterface screensaver(interface, "/ScreenSaver");
-            screensaver.asyncCall("Lock");
+    if (operation == QLatin1String("lockScreen")) {
+        if (KAuthorized::authorizeKAction(QStringLiteral("lock_screen"))) {
+            const QString interface(QStringLiteral("org.freedesktop.ScreenSaver"));
+            QDBusInterface screensaver(interface, QStringLiteral("/ScreenSaver"));
+            screensaver.asyncCall(QStringLiteral("Lock"));
             setResult(true);
             return;
         }
         qDebug() << "operation denied " << operation;
         setResult(false);
         return;
-    } else if (operation == "suspend" || operation == "suspendToRam") {
+    } else if (operation == QLatin1String("suspend") || operation == QLatin1String("suspendToRam")) {
         Solid::PowerManagement::requestSleep(Solid::PowerManagement::SuspendState, 0, 0);
         setResult(Solid::PowerManagement::supportedSleepStates().contains(Solid::PowerManagement::SuspendState));
         return;
-    } else if (operation == "suspendToDisk") {
+    } else if (operation == QLatin1String("suspendToDisk")) {
         Solid::PowerManagement::requestSleep(Solid::PowerManagement::HibernateState, 0, 0);
         setResult(Solid::PowerManagement::supportedSleepStates().contains(Solid::PowerManagement::HibernateState));
         return;
-    } else if (operation == "suspendHybrid") {
+    } else if (operation == QLatin1String("suspendHybrid")) {
         Solid::PowerManagement::requestSleep(Solid::PowerManagement::HybridSuspendState, 0, 0);
         setResult(Solid::PowerManagement::supportedSleepStates().contains(Solid::PowerManagement::HybridSuspendState));
         return;
-    } else if (operation == "requestShutDown") {
+    } else if (operation == QLatin1String("requestShutDown")) {
         requestShutDown();
         setResult(true);
         return;
-    } else if (operation == "switchUser") {
+    } else if (operation == QLatin1String("switchUser")) {
         // Taken from kickoff/core/itemhandlers.cpp
-        org::kde::krunner::App krunner("org.kde.krunner", "/App", QDBusConnection::sessionBus());
+        org::kde::krunner::App krunner(QStringLiteral("org.kde.krunner"), QStringLiteral("/App"), QDBusConnection::sessionBus());
         krunner.switchUser();
         setResult(true);
         return;
-    } else if (operation == "beginSuppressingSleep") {
-        setResult(Solid::PowerManagement::beginSuppressingSleep(parameters().value("reason").toString()));
+    } else if (operation == QLatin1String("beginSuppressingSleep")) {
+        setResult(Solid::PowerManagement::beginSuppressingSleep(parameters().value(QStringLiteral("reason")).toString()));
         return;
-    } else if (operation == "stopSuppressingSleep") {
-        setResult(Solid::PowerManagement::stopSuppressingSleep(parameters().value("cookie").toInt()));
+    } else if (operation == QLatin1String("stopSuppressingSleep")) {
+        setResult(Solid::PowerManagement::stopSuppressingSleep(parameters().value(QStringLiteral("cookie")).toInt()));
         return;
-    } else if (operation == "beginSuppressingScreenPowerManagement") {
-        setResult(Solid::PowerManagement::beginSuppressingScreenPowerManagement(parameters().value("reason").toString()));
+    } else if (operation == QLatin1String("beginSuppressingScreenPowerManagement")) {
+        setResult(Solid::PowerManagement::beginSuppressingScreenPowerManagement(parameters().value(QStringLiteral("reason")).toString()));
         return;
-    } else if (operation == "stopSuppressingScreenPowerManagement") {
-        setResult(Solid::PowerManagement::stopSuppressingScreenPowerManagement(parameters().value("cookie").toInt()));
+    } else if (operation == QLatin1String("stopSuppressingScreenPowerManagement")) {
+        setResult(Solid::PowerManagement::stopSuppressingScreenPowerManagement(parameters().value(QStringLiteral("cookie")).toInt()));
         return;
-    } else if (operation == "setBrightness") {
-        setScreenBrightness(parameters().value("brightness").toInt(), parameters().value("silent").toBool());
+    } else if (operation == QLatin1String("setBrightness")) {
+        setScreenBrightness(parameters().value(QStringLiteral("brightness")).toInt(), parameters().value(QStringLiteral("silent")).toBool());
         setResult(true);
         return;
-    } else if (operation == "setKeyboardBrightness") {
-        setKeyboardBrightness(parameters().value("brightness").toInt(), parameters().value("silent").toBool());
+    } else if (operation == QLatin1String("setKeyboardBrightness")) {
+        setKeyboardBrightness(parameters().value(QStringLiteral("brightness")).toInt(), parameters().value(QStringLiteral("silent")).toBool());
         setResult(true);
         return;
     }
@@ -107,9 +107,9 @@ void PowerManagementJob::start()
 
 void PowerManagementJob::setScreenBrightness(int value, bool silent)
 {
-    QDBusMessage msg = QDBusMessage::createMethodCall("org.kde.Solid.PowerManagement",
-                                                      "/org/kde/Solid/PowerManagement/Actions/BrightnessControl",
-                                                      "org.kde.Solid.PowerManagement.Actions.BrightnessControl",
+    QDBusMessage msg = QDBusMessage::createMethodCall(QStringLiteral("org.kde.Solid.PowerManagement"),
+                                                      QStringLiteral("/org/kde/Solid/PowerManagement/Actions/BrightnessControl"),
+                                                      QStringLiteral("org.kde.Solid.PowerManagement.Actions.BrightnessControl"),
                                                       silent ? "setBrightnessSilent" : "setBrightness");
     msg << value;
     QDBusConnection::sessionBus().asyncCall(msg);
@@ -117,9 +117,9 @@ void PowerManagementJob::setScreenBrightness(int value, bool silent)
 
 void PowerManagementJob::setKeyboardBrightness(int value, bool silent)
 {
-    QDBusMessage msg = QDBusMessage::createMethodCall("org.kde.Solid.PowerManagement",
-                                                      "/org/kde/Solid/PowerManagement/Actions/KeyboardBrightnessControl",
-                                                      "org.kde.Solid.PowerManagement.Actions.KeyboardBrightnessControl",
+    QDBusMessage msg = QDBusMessage::createMethodCall(QStringLiteral("org.kde.Solid.PowerManagement"),
+                                                      QStringLiteral("/org/kde/Solid/PowerManagement/Actions/KeyboardBrightnessControl"),
+                                                      QStringLiteral("org.kde.Solid.PowerManagement.Actions.KeyboardBrightnessControl"),
                                                       silent ? "setKeyboardBrightnessSilent" : "setKeyboardBrightness");
     msg << value;
     QDBusConnection::sessionBus().asyncCall(msg);

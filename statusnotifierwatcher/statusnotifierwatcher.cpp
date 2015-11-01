@@ -35,11 +35,11 @@ K_PLUGIN_FACTORY_WITH_JSON(StatusNotifierWatcherFactory,
 StatusNotifierWatcher::StatusNotifierWatcher(QObject *parent, const QList<QVariant>&)
       : KDEDModule(parent)
 {
-    setModuleName("StatusNotifierWatcher");
+    setModuleName(QStringLiteral("StatusNotifierWatcher"));
     new StatusNotifierWatcherAdaptor(this);
     QDBusConnection dbus = QDBusConnection::sessionBus();
-    dbus.registerService("org.kde.StatusNotifierWatcher");
-    dbus.registerObject("/StatusNotifierWatcher", this);
+    dbus.registerService(QStringLiteral("org.kde.StatusNotifierWatcher"));
+    dbus.registerObject(QStringLiteral("/StatusNotifierWatcher"), this);
 
     m_serviceWatcher = new QDBusServiceWatcher(this);
     m_serviceWatcher->setConnection(dbus);
@@ -51,7 +51,7 @@ StatusNotifierWatcher::StatusNotifierWatcher(QObject *parent, const QList<QVaria
 StatusNotifierWatcher::~StatusNotifierWatcher()
 {
     QDBusConnection dbus = QDBusConnection::sessionBus();
-    dbus.unregisterService("org.kde.StatusNotifierWatcher");
+    dbus.unregisterService(QStringLiteral("org.kde.StatusNotifierWatcher"));
 }
 
 
@@ -64,7 +64,7 @@ void StatusNotifierWatcher::RegisterStatusNotifierItem(const QString &serviceOrP
         path = serviceOrPath;
     } else {
         service = serviceOrPath;
-        path = "/StatusNotifierItem";
+        path = QStringLiteral("/StatusNotifierItem");
     }
     QString notifierItemId = service + path;
     if (QDBusConnection::sessionBus().interface()->isServiceRegistered(service).value() &&
@@ -113,7 +113,7 @@ void StatusNotifierWatcher::serviceUnregistered(const QString& name)
 
 void StatusNotifierWatcher::RegisterStatusNotifierHost(const QString &service)
 {
-    if (service.contains("org.kde.StatusNotifierHost-") &&
+    if (service.contains(QStringLiteral("org.kde.StatusNotifierHost-")) &&
         QDBusConnection::sessionBus().interface()->isServiceRegistered(service).value() &&
         !m_statusNotifierHostServices.contains(service)) {
         qDebug()<<"Registering"<<service<<"as system tray";

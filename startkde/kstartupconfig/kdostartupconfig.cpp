@@ -68,7 +68,7 @@ int main( int argc, char **argv )
     QString path = QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation);
     QDir().mkdir(path);
 
-    QString keysname = QStandardPaths::locate(QStandardPaths::GenericConfigLocation, "startupconfigkeys");
+    QString keysname = QStandardPaths::locate(QStandardPaths::GenericConfigLocation, QStringLiteral("startupconfigkeys"));
     QFile keys( keysname );
     if( !keys.open( QIODevice::ReadOnly ))
         return 3;

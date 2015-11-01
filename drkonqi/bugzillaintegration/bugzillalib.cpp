@@ -99,7 +99,7 @@ void BugzillaManager::setFeaturesForVersion(const QString& version)
         digits << QLatin1String("0");
     }
     if (digits.count() > nVersionParts) {
-        qWarning() << QString("Current Bugzilla version %1 has more than %2 parts. Check that this is not a problem.").arg(version).arg(nVersionParts);
+        qWarning() << QStringLiteral("Current Bugzilla version %1 has more than %2 parts. Check that this is not a problem.").arg(version).arg(nVersionParts);
     }
     int currentVersion = MAKE_BUGZILLA_VERSION(digits.at(0).toUInt(),
                              digits.at(1).toUInt(), digits.at(2).toUInt());
@@ -271,13 +271,13 @@ void BugzillaManager::fetchProductInfo(const QString & product)
 {
     QMap<QString, QVariant> args;
 
-    args.insert("names", (QStringList() << product) ) ;
+    args.insert(QStringLiteral("names"), (QStringList() << product) ) ;
 
     QStringList includeFields;
     // currently we only need these informations
-    includeFields << "name" << "is_active" << "components" << "versions";
+    includeFields << QStringLiteral("name") << QStringLiteral("is_active") << QStringLiteral("components") << QStringLiteral("versions");
 
-    args.insert("include_fields", includeFields) ;
+    args.insert(QStringLiteral("include_fields"), includeFields) ;
 
     callBugzilla("Product.get", "Product.get.versions", args, SecurityDisabled);
 }
@@ -349,35 +349,35 @@ void BugzillaManager::searchBugsJobFinished(KJob * job)
 
 static inline Component buildComponent(const QVariantMap& map)
 {
-    QString name = map.value("name").toString();
-    bool active = map.value("is_active").toBool();
+    QString name = map.value(QStringLiteral("name")).toString();
+    bool active = map.value(QStringLiteral("is_active")).toBool();
 
     return Component(name, active);
 }
 
 static inline Version buildVersion(const QVariantMap& map)
 {
-    QString name = map.value("name").toString();
-    bool active = map.value("is_active").toBool();
+    QString name = map.value(QStringLiteral("name")).toString();
+    bool active = map.value(QStringLiteral("is_active")).toBool();
 
     return Version(name, active);
 }
 
 static inline Product buildProduct(const QVariantMap& map)
 {
-    QString name = map.value("name").toString();
-    bool active = map.value("is_active").toBool();
+    QString name = map.value(QStringLiteral("name")).toString();
+    bool active = map.value(QStringLiteral("is_active")).toBool();
 
     Product product(name, active);
 
-    QVariantList components = map.value("components").toList();
+    QVariantList components = map.value(QStringLiteral("components")).toList();
     foreach (const QVariant& c, components) {
         Component component = buildComponent(c.toMap());
         product.addComponent(component);
 
     }
 
-    QVariantList versions = map.value("versions").toList();
+    QVariantList versions = map.value(QStringLiteral("versions")).toList();
     foreach (const QVariant& v, versions) {
         Version version = buildVersion(v.toMap());
         product.addVersion(version);
@@ -390,7 +390,7 @@ void BugzillaManager::fetchProductInfoFinished(const QVariantMap & map)
 {
     QList<Product> products;
 
-    QVariantList plist = map.value("products").toList();
+    QVariantList plist = map.value(QStringLiteral("products")).toList();
     foreach (const QVariant& p, plist) {
         Product product = buildProduct(p.toMap());
         products.append(product);
@@ -510,7 +510,7 @@ BugMapList BugListCSVParser::parse()
         QString headersLine = ts.readLine().remove(QLatin1Char('\"')) ;   //Discard headers
         QString expectedHeadersLine = QString(columns);
 
-        if (headersLine == (QString("bug_id,") + expectedHeadersLine)) {
+        if (headersLine == (QStringLiteral("bug_id,") + expectedHeadersLine)) {
             QStringList headers = expectedHeadersLine.split(',', QString::KeepEmptyParts);
             int headersCount = headers.count();
 
@@ -522,11 +522,11 @@ BugMapList BugListCSVParser::parse()
                 //Get bug_id (always at first column)
                 int bug_id_index = line.indexOf(',');
                 QString bug_id = line.left(bug_id_index);
-                bug.insert("bug_id", bug_id);
+                bug.insert(QStringLiteral("bug_id"), bug_id);
 
                 line = line.mid(bug_id_index + 2);
 
-                QStringList fields = line.split(",\"");
+                QStringList fields = line.split(QStringLiteral(",\""));
 
                 for (int i = 0; i < headersCount && i < fields.count(); i++) {
                     QString field = fields.at(i);
@@ -559,34 +559,34 @@ BugReport BugReportXMLParser::parse()
 
     if (m_valid) {
         //Check bug notfound
-        QDomNodeList bug_number = m_xml.elementsByTagName("bug");
+        QDomNodeList bug_number = m_xml.elementsByTagName(QStringLiteral("bug"));
         QDomNode d = bug_number.at(0);
         QDomNamedNodeMap a = d.attributes();
-        QDomNode d2 = a.namedItem("error");
+        QDomNode d2 = a.namedItem(QStringLiteral("error"));
         m_valid = d2.isNull();
 
         if (m_valid) {
             report.setValid(true);
 
             //Get basic fields
-            report.setBugNumber(getSimpleValue("bug_id"));
-            report.setShortDescription(getSimpleValue("short_desc"));
-            report.setProduct(getSimpleValue("product"));
-            report.setComponent(getSimpleValue("component"));
-            report.setVersion(getSimpleValue("version"));
-            report.setOperatingSystem(getSimpleValue("op_sys"));
-            report.setBugStatus(getSimpleValue("bug_status"));
-            report.setResolution(getSimpleValue("resolution"));
-            report.setPriority(getSimpleValue("priority"));
-            report.setBugSeverity(getSimpleValue("bug_severity"));
-            report.setMarkedAsDuplicateOf(getSimpleValue("dup_id"));
-            report.setVersionFixedIn(getSimpleValue("cf_versionfixedin"));
+            report.setBugNumber(getSimpleValue(QStringLiteral("bug_id")));
+            report.setShortDescription(getSimpleValue(QStringLiteral("short_desc")));
+            report.setProduct(getSimpleValue(QStringLiteral("product")));
+            report.setComponent(getSimpleValue(QStringLiteral("component")));
+            report.setVersion(getSimpleValue(QStringLiteral("version")));
+            report.setOperatingSystem(getSimpleValue(QStringLiteral("op_sys")));
+            report.setBugStatus(getSimpleValue(QStringLiteral("bug_status")));
+            report.setResolution(getSimpleValue(QStringLiteral("resolution")));
+            report.setPriority(getSimpleValue(QStringLiteral("priority")));
+            report.setBugSeverity(getSimpleValue(QStringLiteral("bug_severity")));
+            report.setMarkedAsDuplicateOf(getSimpleValue(QStringLiteral("dup_id")));
+            report.setVersionFixedIn(getSimpleValue(QStringLiteral("cf_versionfixedin")));
 
             //Parse full content + comments
             QStringList m_commentList;
-            QDomNodeList comments = m_xml.elementsByTagName("long_desc");
+            QDomNodeList comments = m_xml.elementsByTagName(QStringLiteral("long_desc"));
             for (int i = 0; i < comments.count(); i++) {
-                QDomElement element = comments.at(i).firstChildElement("thetext");
+                QDomElement element = comments.at(i).firstChildElement(QStringLiteral("thetext"));
                 m_commentList << element.text();
             }
 
@@ -614,14 +614,14 @@ QString BugReportXMLParser::getSimpleValue(const QString & name)   //Extract an 
 
 void BugReport::setBugStatus(const QString &stat)
 {
-    setData("bug_status", stat);
+    setData(QStringLiteral("bug_status"), stat);
 
     m_status = parseStatus(stat);
 }
 
 void BugReport::setResolution(const QString &res)
 {
-    setData("resolution", res);
+    setData(QStringLiteral("resolution"), res);
 
     m_resolution = parseResolution(res);
 }

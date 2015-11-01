@@ -36,11 +36,11 @@ void JobAction::start()
     }
 
     //TODO: check with capabilities before performing actions.
-    if (operationName() == "resume") {
+    if (operationName() == QLatin1String("resume")) {
         m_jobView->requestStateChange(JobView::Running);
-    } else if (operationName() == "suspend") {
+    } else if (operationName() == QLatin1String("suspend")) {
         m_jobView->requestStateChange(JobView::Suspended);
-    } else if (operationName() == "stop") {
+    } else if (operationName() == QLatin1String("stop")) {
         m_jobView->requestStateChange(JobView::Stopped);
         //in case the app crashed and won't call terminate on the jobview.
         m_jobView->setError(KIO::ERR_USER_CANCELED);

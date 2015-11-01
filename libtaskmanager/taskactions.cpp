@@ -125,7 +125,7 @@ QAction* standardGroupingAction(GroupingAction action, AbstractGroupableItem *it
 
 static QString qt_strippedText(QString s)
 {
-    s.remove(QString::fromLatin1("..."));
+    s.remove(QStringLiteral("..."));
     int i = 0;
     while (i < s.size()) {
         ++i;
@@ -167,7 +167,7 @@ bool ToolTipMenu::event(QEvent* e)
 MinimizeActionImpl::MinimizeActionImpl(QObject *parent, AbstractGroupableItem *item)
     : QAction(parent)
 {
-    connect(this, SIGNAL(triggered()), item, SLOT(toggleMinimized()));
+    connect(this, &QAction::triggered, item, &AbstractGroupableItem::toggleMinimized);
     setText(i18n("Mi&nimize"));
     setCheckable(true);
     setChecked(item->isMinimized());
@@ -178,7 +178,7 @@ MinimizeActionImpl::MinimizeActionImpl(QObject *parent, AbstractGroupableItem *i
 MaximizeActionImpl::MaximizeActionImpl(QObject *parent, AbstractGroupableItem *item)
     : QAction(parent)
 {
-    connect(this, SIGNAL(triggered()), item, SLOT(toggleMaximized()));
+    connect(this, &QAction::triggered, item, &AbstractGroupableItem::toggleMaximized);
     setText(i18n("Ma&ximize"));
     setCheckable(true);
     setChecked(item->isMaximized());
@@ -188,7 +188,7 @@ MaximizeActionImpl::MaximizeActionImpl(QObject *parent, AbstractGroupableItem *i
 ShadeActionImpl::ShadeActionImpl(QObject *parent, AbstractGroupableItem *item)
     : QAction(parent)
 {
-    connect(this, SIGNAL(triggered()), item, SLOT(toggleShaded()));
+    connect(this, &QAction::triggered, item, &AbstractGroupableItem::toggleShaded);
     setText(i18n("&Shade"));
     setCheckable(true);
     setChecked(item->isShaded());
@@ -198,7 +198,7 @@ ShadeActionImpl::ShadeActionImpl(QObject *parent, AbstractGroupableItem *item)
 ResizeActionImpl::ResizeActionImpl(QObject *parent, TaskItem* item)
     : QAction(parent)
 {
-    connect(this, SIGNAL(triggered()), item->task(), SLOT(resize()));
+    connect(this, &QAction::triggered, item->task(), &Task::resize);
     setText(i18n("Re&size"));
     setEnabled(item->isActionSupported(NET::ActionResize));
 }
@@ -206,18 +206,18 @@ ResizeActionImpl::ResizeActionImpl(QObject *parent, TaskItem* item)
 MoveActionImpl::MoveActionImpl(QObject *parent, TaskItem* item)
     : QAction(parent)
 {
-    connect(this, SIGNAL(triggered()), item->task(), SLOT(move()));
+    connect(this, &QAction::triggered, item->task(), &Task::move);
     setText(i18n("&Move"));
-    setIcon(QIcon::fromTheme("transform-move"));
+    setIcon(QIcon::fromTheme(QStringLiteral("transform-move")));
     setEnabled(item->isActionSupported(NET::ActionMove));
 }
 
 CloseActionImpl::CloseActionImpl(QObject *parent, AbstractGroupableItem *item)
     : QAction(parent)
 {
-    connect(this, SIGNAL(triggered()), item, SLOT(close()));
+    connect(this, &QAction::triggered, item, &AbstractGroupableItem::close);
     setText(i18n("&Close"));
-    setIcon(QIcon::fromTheme("window-close"));
+    setIcon(QIcon::fromTheme(QStringLiteral("window-close")));
     setEnabled(item->isActionSupported(NET::ActionClose));
 }
 
@@ -248,7 +248,7 @@ void AbstractGroupableItemAction::addToTasks(TaskGroup *group)
 ToCurrentDesktopActionImpl::ToCurrentDesktopActionImpl(QObject *parent, AbstractGroupableItem *item)
     : AbstractGroupableItemAction(parent, item)
 {
-    connect(this, SIGNAL(triggered()), this, SLOT(slotToCurrentDesktop()));
+    connect(this, &QAction::triggered, this, &ToCurrentDesktopActionImpl::slotToCurrentDesktop);
     setText(i18n("Move &To Current Desktop"));
     setEnabled(!item->isOnCurrentDesktop() && item->isActionSupported(NET::ActionChangeDesktop));
 }
@@ -267,13 +267,13 @@ ToDesktopActionImpl::ToDesktopActionImpl(QObject *parent, AbstractGroupableItem 
     : AbstractGroupableItemAction(parent, item),
       m_desktop(desktop)
 {
-    connect(this, SIGNAL(triggered()), this, SLOT(slotToDesktop()));
+    connect(this, &QAction::triggered, this, &ToDesktopActionImpl::slotToDesktop);
     setCheckable(true);
     if (!desktop) { //to All Desktops
         setText(i18n("&All Desktops"));
         setChecked(item->isOnAllDesktops());
     } else {
-        QString name = QString("&%1 %2").arg(desktop).arg(TaskManager::self()->desktopName(desktop).replace('&', "&&"));
+        QString name = QStringLiteral("&%1 %2").arg(desktop).arg(TaskManager::self()->desktopName(desktop).replace('&', QLatin1String("&&")));
         setText(name);
         setChecked(!item->isOnAllDesktops() && item->desktop() == desktop);
     }
@@ -292,7 +292,7 @@ void ToDesktopActionImpl::slotToDesktop()
 ToNewDesktopActionImpl::ToNewDesktopActionImpl(QObject *parent, AbstractGroupableItem *item)
     : AbstractGroupableItemAction(parent, item)
 {
-    connect(this, SIGNAL(triggered()), this, SLOT(slotToNewDesktop()));
+    connect(this, &QAction::triggered, this, &ToNewDesktopActionImpl::slotToNewDesktop);
     setText(i18n("&New Desktop"));
 
     m_newDesktop = TaskManager::self()->numberOfDesktops() + 1;
@@ -336,9 +336,9 @@ DesktopsMenu::DesktopsMenu(QWidget *parent, AbstractGroupableItem *item)
 KeepAboveActionImpl::KeepAboveActionImpl(QObject *parent, AbstractGroupableItem *item)
     : QAction(parent)
 {
-    connect(this, SIGNAL(triggered()), item, SLOT(toggleAlwaysOnTop()));
+    connect(this, &QAction::triggered, item, &AbstractGroupableItem::toggleAlwaysOnTop);
     setText(i18n("Keep &Above Others"));
-    setIcon(QIcon::fromTheme("go-up"));
+    setIcon(QIcon::fromTheme(QStringLiteral("go-up")));
     setCheckable(true);
     setChecked(item->isAlwaysOnTop());
 }
@@ -346,9 +346,9 @@ KeepAboveActionImpl::KeepAboveActionImpl(QObject *parent, AbstractGroupableItem 
 KeepBelowActionImpl::KeepBelowActionImpl(QObject *parent, AbstractGroupableItem *item)
     : QAction(parent)
 {
-    connect(this, SIGNAL(triggered()), item, SLOT(toggleKeptBelowOthers()));
+    connect(this, &QAction::triggered, item, &AbstractGroupableItem::toggleKeptBelowOthers);
     setText(i18n("Keep &Below Others"));
-    setIcon(QIcon::fromTheme("go-down"));
+    setIcon(QIcon::fromTheme(QStringLiteral("go-down")));
     setCheckable(true);
     setChecked(item->isKeptBelowOthers());
 }
@@ -356,9 +356,9 @@ KeepBelowActionImpl::KeepBelowActionImpl(QObject *parent, AbstractGroupableItem 
 ViewFullscreenActionImpl::ViewFullscreenActionImpl(QObject *parent, AbstractGroupableItem *item)
     : QAction(parent)
 {
-    connect(this, SIGNAL(triggered()), item, SLOT(toggleFullScreen()));
+    connect(this, &QAction::triggered, item, &AbstractGroupableItem::toggleFullScreen);
     setText(i18n("&Fullscreen"));
-    setIcon(QIcon::fromTheme("view-fullscreen"));
+    setIcon(QIcon::fromTheme(QStringLiteral("view-fullscreen")));
     setCheckable(true);
     setChecked(item->isFullScreen());
     setEnabled(item->isActionSupported(NET::ActionFullScreen));
@@ -393,9 +393,9 @@ LeaveGroupActionImpl::LeaveGroupActionImpl(QObject *parent, AbstractGroupableIte
     : QAction(parent), abstractItem(item), groupingStrategy(strategy)
 {
     Q_ASSERT(strategy);
-    connect(this, SIGNAL(triggered()), this, SLOT(leaveGroup()));
+    connect(this, &QAction::triggered, this, &LeaveGroupActionImpl::leaveGroup);
     setText(i18n("&Leave Group"));
-    setIcon(QIcon::fromTheme("window-close"));
+    setIcon(QIcon::fromTheme(QStringLiteral("window-close")));
     setEnabled(item->isGrouped());
 }
 
@@ -418,7 +418,7 @@ ToggleLauncherActionImpl::ToggleLauncherActionImpl(QObject *parent, AbstractGrou
         // TaskManager::BasicMenu class, since the menu can no longer be deleted directly after
         // exec() returns. The QML 2 scene graph may be smarter than trying to perform an ungrab
         // on a destroyed item, so reinvestigate whether this is chicanery is still needed.
-        connect(this, SIGNAL(triggered()), this, SLOT(toggleLauncher()), Qt::QueuedConnection);
+        connect(this, &QAction::triggered, this, &ToggleLauncherActionImpl::toggleLauncher, Qt::QueuedConnection);
 
         switch (m_abstractItem->itemType()) {
         case LauncherItemType:
@@ -485,7 +485,7 @@ AppSelectorDialog::AppSelectorDialog(AbstractGroupableItem* item, GroupManager* 
     hideRunInTerminal();
     setAttribute(Qt::WA_DeleteOnClose);
     setWindowModality(Qt::WindowModal);
-    connect(this, SIGNAL(accepted()), SLOT(launcherSelected()));
+    connect(this, &QDialog::accepted, this, &AppSelectorDialog::launcherSelected);
 }
 
 void AppSelectorDialog::launcherSelected()
@@ -522,10 +522,10 @@ NewInstanceActionImpl::NewInstanceActionImpl(QObject *parent, AbstractGroupableI
     if (LauncherItemType == item->itemType()) {
         setVisible(false);
     } else {
-        setIcon(QIcon::fromTheme("system-run"));
+        setIcon(QIcon::fromTheme(QStringLiteral("system-run")));
         setText(i18n("Start New Instance"));
 
-        connect(this, SIGNAL(triggered()), this, SLOT(launchNewInstance()));
+        connect(this, &QAction::triggered, this, &NewInstanceActionImpl::launchNewInstance);
         m_url = item->launcherUrl();
         if (m_url.isEmpty()) {
             setVisible(false);
@@ -542,7 +542,7 @@ EditGroupActionImpl::EditGroupActionImpl(QObject *parent, TaskGroup *group, Grou
     : QAction(parent)
 {
     Q_ASSERT(groupManager);
-    connect(this, SIGNAL(triggered()), group, SIGNAL(groupEditRequest()));
+    connect(this, &QAction::triggered, group, &TaskGroup::groupEditRequest);
     setText(i18n("&Edit Group"));
     //setIcon(QIcon::fromTheme("window-close"));
     bool applicable = true;
@@ -562,7 +562,7 @@ GroupingStrategyMenu::GroupingStrategyMenu(QWidget *parent, AbstractGroupableIte
     Q_ASSERT(item);
     Q_ASSERT(strategy);
 
-    setTitle("Grouping strategy actions");
+    setTitle(QStringLiteral("Grouping strategy actions"));
     if (strategy->taskGrouper()) {
         QList<QAction*> groupingStrategyActions = strategy->taskGrouper()->strategyActions(this, item);
         if (!groupingStrategyActions.empty()) {
@@ -711,7 +711,7 @@ GroupPopupMenu::GroupPopupMenu(QWidget *parent, TaskGroup *group, GroupManager *
             TaskItem *taskItem = qobject_cast<TaskItem*>(item);
             if (taskItem && taskItem->task()) {
                 QAction* action = new QAction(item->icon(), item->name(), this);
-                connect(action, SIGNAL(triggered(bool)), taskItem->task(), SLOT(activateRaiseOrIconify()));
+                connect(action, &QAction::triggered, taskItem->task(), &Task::activateRaiseOrIconify);
                 addAction(action);
             }
         }

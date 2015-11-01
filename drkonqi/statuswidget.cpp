@@ -53,7 +53,7 @@ StatusWidget::StatusWidget(QWidget * parent) :
 
     //Busy widget
     m_throbberWidget = new KPixmapSequenceWidget();
-    m_throbberWidget->setSequence(KPixmapSequence("process-working", 22));
+    m_throbberWidget->setSequence(KPixmapSequence(QStringLiteral("process-working"), 22));
     m_throbberWidget->setSizePolicy(QSizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed));
 
     m_busyLabel = new WrapLabel();

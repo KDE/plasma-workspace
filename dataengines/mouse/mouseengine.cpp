@@ -71,7 +71,7 @@ void MouseEngine::init()
 
 #ifdef HAVE_XFIXES
     handler = new CursorNotificationHandler;
-    connect(handler, SIGNAL(cursorNameChanged(QString)), SLOT(updateCursorName(QString)));
+    connect(handler, &CursorNotificationHandler::cursorNameChanged, this, &MouseEngine::updateCursorName);
 
     setData(QLatin1String("Name"), QVariant(handler->cursorName()));
 #endif

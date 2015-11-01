@@ -136,7 +136,7 @@ void SwitchWindow::makeMenu()
             for (int i = 1; i <= numDesktops; ++i) {
                 if (desktops.contains(i)) {
                     QString name = KWindowSystem::desktopName(i);
-                    name = QString("%1: %2").arg(i).arg(name);
+                    name = QStringLiteral("%1: %2").arg(i).arg(name);
                     QAction *a = new QAction(name, this);
                     a->setSeparator(true);
                     m_actions << a;
@@ -154,7 +154,7 @@ void SwitchWindow::makeMenu()
             for (int i = 1; i <= numDesktops; ++i) {
                 if (desktops.contains(i)) {
                     QString name = KWindowSystem::desktopName(i);
-                    name = QString("%1: %2").arg(i).arg(name);
+                    name = QStringLiteral("%1: %2").arg(i).arg(name);
                     QMenu *subMenu = new QMenu(name);
                     subMenu->addActions(desktops.values(i));
 
@@ -218,7 +218,7 @@ void SwitchWindow::doSwitch(bool up)
     } else {
         if (!m_clearOrderTimer) {
             m_clearOrderTimer = new QTimer(this);
-            connect(m_clearOrderTimer, SIGNAL(timeout()), this, SLOT(clearWindowsOrder()));
+            connect(m_clearOrderTimer, &QTimer::timeout, this, &SwitchWindow::clearWindowsOrder);
             m_clearOrderTimer->setSingleShot(true);
             m_clearOrderTimer->setInterval(1000);
         }

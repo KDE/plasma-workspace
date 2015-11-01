@@ -47,8 +47,8 @@ DesktopView::DesktopView(Plasma::Corona *corona, QScreen *targetScreen)
 
     setTitle(corona->kPackage().metadata().name());
     setIcon(QIcon::fromTheme(corona->kPackage().metadata().iconName()));
-    rootContext()->setContextProperty("desktop", this);
-    setSource(QUrl::fromLocalFile(corona->kPackage().filePath("views", "Desktop.qml")));
+    rootContext()->setContextProperty(QStringLiteral("desktop"), this);
+    setSource(QUrl::fromLocalFile(corona->kPackage().filePath("views", QStringLiteral("Desktop.qml"))));
 
     connect(this, &QWindow::screenChanged, this, &DesktopView::adaptToScreen);
 
@@ -213,8 +213,8 @@ void DesktopView::keyPressEvent(QKeyEvent *e)
     if (!e->modifiers() && !e->isAccepted()) {
         const QString text = e->text().trimmed();
         if (!text.isEmpty() && text[0].isPrint()) {
-            const QString interface("org.kde.krunner");
-            org::kde::krunner::App krunner(interface, "/App", QDBusConnection::sessionBus());
+            const QString interface(QStringLiteral("org.kde.krunner"));
+            org::kde::krunner::App krunner(interface, QStringLiteral("/App"), QDBusConnection::sessionBus());
             krunner.query(text);
             e->accept();
         }
@@ -262,7 +262,7 @@ void DesktopView::screenGeometryChanged()
 void DesktopView::coronaPackageChanged(const KPackage::Package &package)
 {
     setContainment(0);
-    setSource(QUrl::fromLocalFile(package.filePath("views", "Desktop.qml")));
+    setSource(QUrl::fromLocalFile(package.filePath("views", QStringLiteral("Desktop.qml"))));
 }
 
 void DesktopView::setupWaylandIntegration()

@@ -42,11 +42,11 @@ KJobTest::~KJobTest()
 
 void KJobTest::start()
 {
-    connect(timer, SIGNAL(timeout()), this,
-            SLOT(timerTimeout()));
+    connect(timer, &QTimer::timeout, this,
+            &KJobTest::timerTimeout);
 
-    connect(clockTimer, SIGNAL(timeout()), this,
-            SLOT(updateMessage()));
+    connect(clockTimer, &QTimer::timeout, this,
+            &KJobTest::updateMessage);
 
     timer->setSingleShot(true);
     timer->start(seconds * 1000);
@@ -62,7 +62,7 @@ void KJobTest::timerTimeout()
 
     emitResult();
 
-    QTimer::singleShot(0, QCoreApplication::instance(), SLOT(quit()));
+    QTimer::singleShot(0, QCoreApplication::instance(), &QCoreApplication::quit);
 }
 
 void KJobTest::updateMessage()

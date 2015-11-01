@@ -288,7 +288,7 @@ void Task::refreshActivities()
     }
     NETWinInfo info(QX11Info::connection(), d->win, QX11Info::appRootWindow(), 0, NET::WM2Activities);
     QString result(info.activities());
-    if (result.isEmpty() || result == "00000000-0000-0000-0000-000000000000") {
+    if (result.isEmpty() || result == QLatin1String("00000000-0000-0000-0000-000000000000")) {
         d->activities.clear();
     } else {
         d->activities = result.split(',');

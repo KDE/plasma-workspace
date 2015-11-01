@@ -64,7 +64,7 @@ BacktraceWidget::BacktraceWidget(BacktraceGenerator *generator, QWidget *parent,
     //Setup the buttons
     KGuiItem::assign(ui.m_reloadBacktraceButton,
                 KGuiItem2(i18nc("@action:button", "&Reload"),
-                          QIcon::fromTheme("view-refresh"), i18nc("@info:tooltip", "Use this button to "
+                          QIcon::fromTheme(QStringLiteral("view-refresh")), i18nc("@info:tooltip", "Use this button to "
                           "reload the crash information (backtrace). This is useful when you have "
                           "installed the proper debug symbol packages and you want to obtain "
                           "a better backtrace.")));
@@ -72,19 +72,19 @@ BacktraceWidget::BacktraceWidget(BacktraceGenerator *generator, QWidget *parent,
 
     KGuiItem::assign(ui.m_installDebugButton,
                 KGuiItem2(i18nc("@action:button", "&Install Debug Symbols"),
-                          QIcon::fromTheme("system-software-update"), i18nc("@info:tooltip", "Use this button to "
+                          QIcon::fromTheme(QStringLiteral("system-software-update")), i18nc("@info:tooltip", "Use this button to "
                           "install the missing debug symbols packages.")));
     ui.m_installDebugButton->setVisible(false);
     connect(ui.m_installDebugButton, &QPushButton::clicked, this, &BacktraceWidget::installDebugPackages);
 
-    KGuiItem::assign(ui.m_copyButton, KGuiItem2(QString(), QIcon::fromTheme("edit-copy"),
+    KGuiItem::assign(ui.m_copyButton, KGuiItem2(QString(), QIcon::fromTheme(QStringLiteral("edit-copy")),
                                           i18nc("@info:tooltip", "Use this button to copy the "
                                                 "crash information (backtrace) to the clipboard.")));
     connect(ui.m_copyButton, &QPushButton::clicked, this, &BacktraceWidget::copyClicked);
     ui.m_copyButton->setEnabled(false);
 
     KGuiItem::assign(ui.m_saveButton, KGuiItem2(QString(),
-                                          QIcon::fromTheme("document-save"),
+                                          QIcon::fromTheme(QStringLiteral("document-save")),
                                           i18nc("@info:tooltip", "Use this button to save the "
                                           "crash information (backtrace) to a file. This is useful "
                                           "if you want to take a look at it or to report the bug "
@@ -111,7 +111,7 @@ BacktraceWidget::BacktraceWidget(BacktraceGenerator *generator, QWidget *parent,
                  "down where the mess started. They may look meaningless to you, but they might "
                  "actually contain a wealth of useful information.<br />Backtraces are commonly "
                  "used during interactive and post-mortem debugging.</p>"));
-        ui.m_backtraceHelpIcon->setPixmap(QIcon::fromTheme("help-hint").pixmap(48,48));
+        ui.m_backtraceHelpIcon->setPixmap(QIcon::fromTheme(QStringLiteral("help-hint")).pixmap(48,48));
         connect(ui.m_toggleBacktraceCheckBox, &QCheckBox::toggled, this, &BacktraceWidget::toggleBacktrace);
         toggleBacktrace(false);
     }
@@ -204,14 +204,14 @@ void BacktraceWidget::loadData()
         ui.m_backtraceEdit->setPlainText(m_btGenerator->backtrace());
 
         // scroll to crash
-        QTextCursor crashCursor = ui.m_backtraceEdit->document()->find("[KCrash Handler]");
+        QTextCursor crashCursor = ui.m_backtraceEdit->document()->find(QStringLiteral("[KCrash Handler]"));
         if (!crashCursor.isNull()) {
             crashCursor.movePosition(QTextCursor::Up, QTextCursor::MoveAnchor);
             ui.m_backtraceEdit->verticalScrollBar()->setValue(ui.m_backtraceEdit->cursorRect(crashCursor).top());
         }
 
         // highlight if possible
-        if (m_btGenerator->debugger().codeName() == "gdb") {
+        if (m_btGenerator->debugger().codeName() == QLatin1String("gdb")) {
             m_highlighter = new GdbHighlighter(ui.m_backtraceEdit->document(),
                                                m_btGenerator->parser()->parsedBacktraceLines());
         }
@@ -387,15 +387,15 @@ void BacktraceWidget::extraDetailsLinkActivated(QString link)
 
         //HTML message
         QString message;
-        message = "<html>";
+        message = QLatin1String("<html>");
         message += i18n("The packages containing debug information for the following application and libraries are missing:");
-        message += "<br /><ul>";
+        message += QLatin1String("<br /><ul>");
 
         Q_FOREACH(const QString & string, missingDbgForFiles) {
             message += "<li>" + string + "</li>";
         }
 
-        message += "</ul></html>";
+        message += QLatin1String("</ul></html>");
 
         KMessageBox::information(this, message, i18nc("messagebox title","Missing debug information packages"));
     }

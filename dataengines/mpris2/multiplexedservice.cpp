@@ -26,11 +26,11 @@ MultiplexedService::MultiplexedService(Multiplexer *multiplexer, QObject *parent
     : Plasma::Service(parent)
 {
     setObjectName(Multiplexer::sourceName + QLatin1String(" controller"));
-    setName("mpris2");
+    setName(QStringLiteral("mpris2"));
     setDestination(Multiplexer::sourceName);
 
-    connect(multiplexer, SIGNAL(activePlayerChanged(PlayerContainer*)),
-            this, SLOT(activePlayerChanged(PlayerContainer*)));
+    connect(multiplexer, &Multiplexer::activePlayerChanged,
+            this, &MultiplexedService::activePlayerChanged);
 
     activePlayerChanged(multiplexer->activePlayer());
 }
@@ -63,8 +63,8 @@ void MultiplexedService::activePlayerChanged(PlayerContainer *container)
 
     if (container) {
         m_control = new PlayerControl(container, container->getDataEngine());
-        connect(m_control.data(), SIGNAL(enabledOperationsChanged()),
-                this,             SLOT(updateEnabledOperations()));
+        connect(m_control.data(), &PlayerControl::enabledOperationsChanged,
+                this,             &MultiplexedService::updateEnabledOperations);
     }
 
     updateEnabledOperations();

@@ -50,7 +50,7 @@ ReportAssistantDialog::ReportAssistantDialog(QWidget * parent) :
 
     //Set window properties
     setWindowTitle(i18nc("@title:window","Crash Reporting Assistant"));
-    setWindowIcon(QIcon::fromTheme("tools-report-bug"));
+    setWindowIcon(QIcon::fromTheme(QStringLiteral("tools-report-bug")));
     buttonBox()->addButton(QDialogButtonBox::Help);
 
     connect(this, &ReportAssistantDialog::currentPageChanged, this, &ReportAssistantDialog::currentPageChanged_slot);
@@ -69,7 +69,7 @@ ReportAssistantDialog::ReportAssistantDialog(QWidget * parent) :
                 QLatin1String(PAGE_INTRODUCTION_ID));
         m_pageWidgetMap.insert(QLatin1String(PAGE_INTRODUCTION_ID),m_introductionPage);
         m_introductionPage->setHeader(i18nc("@title","Welcome to the Reporting Assistant"));
-        m_introductionPage->setIcon(QIcon::fromTheme("tools-report-bug"));
+        m_introductionPage->setIcon(QIcon::fromTheme(QStringLiteral("tools-report-bug")));
 
         addPage(m_introductionPage);
     }
@@ -82,7 +82,7 @@ ReportAssistantDialog::ReportAssistantDialog(QWidget * parent) :
                                                                 QLatin1String(PAGE_AWARENESS_ID));
     m_pageWidgetMap.insert(QLatin1String(PAGE_AWARENESS_ID),m_awarenessPage);
     m_awarenessPage->setHeader(i18nc("@title","What do you know about the crash?"));
-    m_awarenessPage->setIcon(QIcon::fromTheme("checkbox"));
+    m_awarenessPage->setIcon(QIcon::fromTheme(QStringLiteral("checkbox")));
 
     //-Crash Information Page
     CrashInformationPage * m_backtrace = new CrashInformationPage(this);
@@ -92,7 +92,7 @@ ReportAssistantDialog::ReportAssistantDialog(QWidget * parent) :
                                                         QLatin1String(PAGE_CRASHINFORMATION_ID));
     m_pageWidgetMap.insert(QLatin1String(PAGE_CRASHINFORMATION_ID),m_backtracePage);
     m_backtracePage->setHeader(i18nc("@title","Fetching the Backtrace (Automatic Crash Information)"));
-    m_backtracePage->setIcon(QIcon::fromTheme("run-build"));
+    m_backtracePage->setIcon(QIcon::fromTheme(QStringLiteral("run-build")));
 
     //-Results Page
     ConclusionPage * m_conclusions = new ConclusionPage(this);
@@ -102,7 +102,7 @@ ReportAssistantDialog::ReportAssistantDialog(QWidget * parent) :
                                                                 QLatin1String(PAGE_CONCLUSIONS_ID));
     m_pageWidgetMap.insert(QLatin1String(PAGE_CONCLUSIONS_ID),m_conclusionsPage);
     m_conclusionsPage->setHeader(i18nc("@title","Results of the Analyzed Crash Details"));
-    m_conclusionsPage->setIcon(QIcon::fromTheme("dialog-information"));
+    m_conclusionsPage->setIcon(QIcon::fromTheme(QStringLiteral("dialog-information")));
     connect(m_conclusions, &ConclusionPage::finished, this, &ReportAssistantDialog::assistantFinished);
 
     //-Bugzilla Login
@@ -113,7 +113,7 @@ ReportAssistantDialog::ReportAssistantDialog(QWidget * parent) :
                                                                 QLatin1String(PAGE_BZLOGIN_ID));
     m_pageWidgetMap.insert(QLatin1String(PAGE_BZLOGIN_ID),m_bugzillaLoginPage);
     m_bugzillaLoginPage->setHeader(i18nc("@title", "Login into %1", i18n(KDE_BUGZILLA_DESCRIPTION)));
-    m_bugzillaLoginPage->setIcon(QIcon::fromTheme("user-identity"));
+    m_bugzillaLoginPage->setIcon(QIcon::fromTheme(QStringLiteral("user-identity")));
     connect(m_bugzillaLogin, &BugzillaLoginPage::loggedTurnToNextPage, this, &ReportAssistantDialog::loginFinished);
 
     //-Bugzilla duplicates
@@ -124,7 +124,7 @@ ReportAssistantDialog::ReportAssistantDialog(QWidget * parent) :
                                                             QLatin1String(PAGE_BZDUPLICATES_ID));
     m_pageWidgetMap.insert(QLatin1String(PAGE_BZDUPLICATES_ID),m_bugzillaDuplicatesPage);
     m_bugzillaDuplicatesPage->setHeader(i18nc("@title","Look for Possible Duplicate Reports"));
-    m_bugzillaDuplicatesPage->setIcon(QIcon::fromTheme("repository"));
+    m_bugzillaDuplicatesPage->setIcon(QIcon::fromTheme(QStringLiteral("repository")));
 
     //-Bugzilla information
     BugzillaInformationPage * m_bugzillaInformation =  new BugzillaInformationPage(this);
@@ -134,7 +134,7 @@ ReportAssistantDialog::ReportAssistantDialog(QWidget * parent) :
                                                                 QLatin1String(PAGE_BZDETAILS_ID));
     m_pageWidgetMap.insert(QLatin1String(PAGE_BZDETAILS_ID),m_bugzillaInformationPage);
     m_bugzillaInformationPage->setHeader(i18nc("@title","Enter the Details about the Crash"));
-    m_bugzillaInformationPage->setIcon(QIcon::fromTheme("document-edit"));
+    m_bugzillaInformationPage->setIcon(QIcon::fromTheme(QStringLiteral("document-edit")));
 
     //-Bugzilla Report Preview
     BugzillaPreviewPage * m_bugzillaPreview =  new BugzillaPreviewPage(this);
@@ -143,7 +143,7 @@ ReportAssistantDialog::ReportAssistantDialog(QWidget * parent) :
                                                                 QLatin1String(PAGE_BZPREVIEW_ID));
     m_pageWidgetMap.insert(QLatin1String(PAGE_BZPREVIEW_ID),m_bugzillaPreviewPage);
     m_bugzillaPreviewPage->setHeader(i18nc("@title","Preview the Report"));
-    m_bugzillaPreviewPage->setIcon(QIcon::fromTheme("document-preview"));
+    m_bugzillaPreviewPage->setIcon(QIcon::fromTheme(QStringLiteral("document-preview")));
 
     //-Bugzilla commit
     BugzillaSendPage * m_bugzillaSend =  new BugzillaSendPage(this);
@@ -152,7 +152,7 @@ ReportAssistantDialog::ReportAssistantDialog(QWidget * parent) :
                                                                     QLatin1String(PAGE_BZSEND_ID));
     m_pageWidgetMap.insert(QLatin1String(PAGE_BZSEND_ID),m_bugzillaSendPage);
     m_bugzillaSendPage->setHeader(i18nc("@title","Sending the Crash Report"));
-    m_bugzillaSendPage->setIcon(QIcon::fromTheme("applications-internet"));
+    m_bugzillaSendPage->setIcon(QIcon::fromTheme(QStringLiteral("applications-internet")));
     connect(m_bugzillaSend, &BugzillaSendPage::finished, this, &ReportAssistantDialog::assistantFinished);
 
     //TODO Remember to keep the pages ordered
@@ -176,8 +176,8 @@ ReportAssistantDialog::~ReportAssistantDialog()
 void ReportAssistantDialog::connectSignals(ReportAssistantPage * page)
 {
     //React to the changes in the assistant pages
-    connect(page, SIGNAL(completeChanged(ReportAssistantPage*,bool)),
-             this, SLOT(completeChanged(ReportAssistantPage*,bool)));
+    connect(page, &ReportAssistantPage::completeChanged,
+             this, &ReportAssistantDialog::completeChanged);
 }
 
 void ReportAssistantDialog::currentPageChanged_slot(KPageWidgetItem * current , KPageWidgetItem * before)

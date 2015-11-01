@@ -24,7 +24,7 @@ ActivityService::ActivityService(KActivities::Controller *controller, const QStr
     : m_activityController(controller),
       m_id(source)
 {
-    setName("activities");
+    setName(QStringLiteral("activities"));
 }
 
 ServiceJob *ActivityService::createJob(const QString &operation, QMap<QString, QVariant> &parameters)

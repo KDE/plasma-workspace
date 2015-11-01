@@ -113,13 +113,13 @@ void TimeSource::updateTime()
 
     QDateTime dt;
     if (m_userDateTime) {
-        dt = data()["DateTime"].toDateTime();
+        dt = data()[QStringLiteral("DateTime")].toDateTime();
     } else {
         dt = timeZoneDateTime;
     }
 
     if (m_solarPosition || m_moonPosition) {
-        const QDate prev = data()["DateTime"].toDate();
+        const QDate prev = data()[QStringLiteral("DateTime")].toDate();
         const bool updateDailies = prev != dt.date();
 
         if (m_solarPosition) {
@@ -217,10 +217,10 @@ void TimeSource::addMoonPositionData(const QDateTime &dt)
 {
     Moon* m = moon();
     m->calcForDateTime(dt, m_offset);
-    setData("Moon Azimuth", m->azimuth());
-    setData("Moon Zenith", 90 - m->altitude());
-    setData("Moon Corrected Elevation", m->calcElevation());
-    setData("MoonPhaseAngle", m->phase());
+    setData(QStringLiteral("Moon Azimuth"), m->azimuth());
+    setData(QStringLiteral("Moon Zenith"), 90 - m->altitude());
+    setData(QStringLiteral("Moon Corrected Elevation"), m->calcElevation());
+    setData(QStringLiteral("MoonPhaseAngle"), m->phase());
 }
 
 void TimeSource::addDailyMoonPositionData(const QDateTime &dt)
@@ -228,19 +228,19 @@ void TimeSource::addDailyMoonPositionData(const QDateTime &dt)
     Moon* m = moon();
     QList< QPair<QDateTime, QDateTime> > times = m->timesForAngles(
             QList<double>() << -0.833, dt, m_offset);
-    setData("Moonrise", times[0].first);
-    setData("Moonset", times[0].second);
+    setData(QStringLiteral("Moonrise"), times[0].first);
+    setData(QStringLiteral("Moonset"), times[0].second);
     m->calcForDateTime(QDateTime(dt.date(), QTime(12,0)), m_offset);
-    setData("MoonPhase",  int(m->phase() / 360.0 * 29.0));
+    setData(QStringLiteral("MoonPhase"),  int(m->phase() / 360.0 * 29.0));
 }
 
 void TimeSource::addSolarPositionData(const QDateTime &dt)
 {
     Sun* s = sun();
     s->calcForDateTime(dt, m_offset);
-    setData("Azimuth", s->azimuth());
-    setData("Zenith", 90.0 - s->altitude());
-    setData("Corrected Elevation", s->calcElevation());
+    setData(QStringLiteral("Azimuth"), s->azimuth());
+    setData(QStringLiteral("Zenith"), 90.0 - s->altitude());
+    setData(QStringLiteral("Corrected Elevation"), s->calcElevation());
 }
 
 void TimeSource::addDailySolarPositionData(const QDateTime &dt)
@@ -249,13 +249,13 @@ void TimeSource::addDailySolarPositionData(const QDateTime &dt)
     QList< QPair<QDateTime, QDateTime> > times = s->timesForAngles(
             QList<double>() << -0.833 << -6.0 << -12.0 << -18.0, dt, m_offset);
 
-    setData("Sunrise", times[0].first);
-    setData("Sunset", times[0].second);
-    setData("Civil Dawn", times[1].first);
-    setData("Civil Dusk", times[1].second);
-    setData("Nautical Dawn", times[2].first);
-    setData("Nautical Dusk", times[2].second);
-    setData("Astronomical Dawn", times[3].first);
-    setData("Astronomical Dusk", times[3].second);
+    setData(QStringLiteral("Sunrise"), times[0].first);
+    setData(QStringLiteral("Sunset"), times[0].second);
+    setData(QStringLiteral("Civil Dawn"), times[1].first);
+    setData(QStringLiteral("Civil Dusk"), times[1].second);
+    setData(QStringLiteral("Nautical Dawn"), times[2].first);
+    setData(QStringLiteral("Nautical Dusk"), times[2].second);
+    setData(QStringLiteral("Astronomical Dawn"), times[3].first);
+    setData(QStringLiteral("Astronomical Dusk"), times[3].second);
 }
 

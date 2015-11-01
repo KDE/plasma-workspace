@@ -74,14 +74,14 @@ QList<QAction*> ManualGroupingStrategy::strategyActions(QObject *parent, Abstrac
 
     if (item->isGrouped()) {
         QAction *a = new QAction(i18n("Leave Group"), parent);
-        connect(a, SIGNAL(triggered()), this, SLOT(leaveGroup()));
+        connect(a, &QAction::triggered, this, &ManualGroupingStrategy::leaveGroup);
         actionList.append(a);
         d->tempItem = item;
     }
 
     if (item->itemType() == GroupItemType) {
         QAction *a = new QAction(i18n("Remove Group"), parent);
-        connect(a, SIGNAL(triggered()), this, SLOT(removeGroup()));
+        connect(a, &QAction::triggered, this, &ManualGroupingStrategy::removeGroup);
         actionList.append(a);
         d->tempGroup = dynamic_cast<TaskGroup*>(item);
     }

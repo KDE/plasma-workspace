@@ -104,28 +104,28 @@ void Containment::setWallpaperMode(const QString &wallpaperMode)
 QString Containment::formFactor() const
 {
     if (!d->containment) {
-        return "Planar";
+        return QStringLiteral("Planar");
     }
 
     switch (d->containment.data()->formFactor()) {
         case Plasma::Types::Planar:
-            return "planar";
+            return QStringLiteral("planar");
             break;
         case Plasma::Types::MediaCenter:
-            return "mediacenter";
+            return QStringLiteral("mediacenter");
             break;
         case Plasma::Types::Horizontal:
-            return "horizontal";
+            return QStringLiteral("horizontal");
             break;
         case Plasma::Types::Vertical:
-            return "vertical";
+            return QStringLiteral("vertical");
             break;
         case Plasma::Types::Application:
-            return "application";
+            return QStringLiteral("application");
             break;
     }
 
-    return "Planar";
+    return QStringLiteral("Planar");
 }
 
 QList<int> Containment::widgetIds() const
@@ -217,7 +217,7 @@ QScriptValue Containment::widgets(QScriptContext *context, QScriptEngine *engine
         }
     }
 
-    widgets.setProperty("length", count);
+    widgets.setProperty(QStringLiteral("length"), count);
     return widgets;
 }
 
@@ -265,7 +265,7 @@ void Containment::remove()
 void Containment::showConfigurationInterface()
 {
     if (d->containment) {
-        QAction *configAction = d->containment.data()->actions()->action("configure");
+        QAction *configAction = d->containment.data()->actions()->action(QStringLiteral("configure"));
         if (configAction && configAction->isEnabled()) {
             configAction->trigger();
         }

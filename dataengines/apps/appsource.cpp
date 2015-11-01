@@ -29,7 +29,7 @@ AppSource::AppSource(KServiceGroup::Ptr group, QObject *parent) :
     m_isApp(false)
 {
     setObjectName(m_group->entryPath());
-    setData("isApp", false);
+    setData(QStringLiteral("isApp"), false);
     updateGroup();
 }
 
@@ -40,7 +40,7 @@ AppSource::AppSource(KService::Ptr app, QObject *parent) :
     m_isApp(true)
 {
     setObjectName(m_app->storageId());
-    setData("isApp", true);
+    setData(QStringLiteral("isApp"), true);
     updateApp();
 }
 
@@ -65,10 +65,10 @@ bool AppSource::isApp() const
 
 void AppSource::updateGroup()
 {
-    setData("iconName", m_group->icon());
-    setData("name", m_group->caption());
-    setData("comment", m_group->comment());
-    setData("display", !m_group->noDisplay());
+    setData(QStringLiteral("iconName"), m_group->icon());
+    setData(QStringLiteral("name"), m_group->caption());
+    setData(QStringLiteral("comment"), m_group->comment());
+    setData(QStringLiteral("display"), !m_group->noDisplay());
 
     QStringList entries;
     foreach (KSycocaEntry::Ptr p, m_group->entries(true, false, true)) {
@@ -79,27 +79,27 @@ void AppSource::updateGroup()
             const KServiceGroup::Ptr serviceGroup(static_cast<KServiceGroup*>(p.data()));
             entries << serviceGroup->entryPath();
         } else if (p->isType(KST_KServiceSeparator)) {
-            entries << "---";
+            entries << QStringLiteral("---");
         } else {
             qDebug() << "unexpected object in entry list";
         }
     }
-    setData("entries", entries);
+    setData(QStringLiteral("entries"), entries);
 
     checkForUpdate();
 }
 
 void AppSource::updateApp()
 {
-    setData("iconName", m_app->icon());
-    setData("name", m_app->name());
-    setData("genericName", m_app->genericName());
-    setData("menuId", m_app->menuId());
-    setData("entryPath", m_app->entryPath());
-    setData("comment", m_app->comment());
-    setData("keywords", m_app->keywords());
-    setData("categories", m_app->categories());
-    setData("display", !m_app->noDisplay());
+    setData(QStringLiteral("iconName"), m_app->icon());
+    setData(QStringLiteral("name"), m_app->name());
+    setData(QStringLiteral("genericName"), m_app->genericName());
+    setData(QStringLiteral("menuId"), m_app->menuId());
+    setData(QStringLiteral("entryPath"), m_app->entryPath());
+    setData(QStringLiteral("comment"), m_app->comment());
+    setData(QStringLiteral("keywords"), m_app->keywords());
+    setData(QStringLiteral("categories"), m_app->categories());
+    setData(QStringLiteral("display"), !m_app->noDisplay());
     checkForUpdate();
 }
 

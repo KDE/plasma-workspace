@@ -40,10 +40,10 @@ StandaloneAppCorona::StandaloneAppCorona(const QString &coronaPlugin, QObject *p
       m_activityConsumer(new KActivities::Consumer(this)),
       m_view(0)
 {
-    qmlRegisterUncreatableType<DesktopView>("org.kde.plasma.shell", 2, 0, "Desktop", "It is not possible to create objects of type Desktop");
-    qmlRegisterUncreatableType<PanelView>("org.kde.plasma.shell", 2, 0, "Panel", "It is not possible to create objects of type Panel");
+    qmlRegisterUncreatableType<DesktopView>("org.kde.plasma.shell", 2, 0, "Desktop", QStringLiteral("It is not possible to create objects of type Desktop"));
+    qmlRegisterUncreatableType<PanelView>("org.kde.plasma.shell", 2, 0, "Panel", QStringLiteral("It is not possible to create objects of type Panel"));
 
-    KPackage::Package package = KPackage::PackageLoader::self()->loadPackage("Plasma/Shell");
+    KPackage::Package package = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Plasma/Shell"));
     package.setPath(m_coronaPlugin);
     package.setAllowExternalPaths(true);
     setKPackage(package);
@@ -58,11 +58,11 @@ StandaloneAppCorona::StandaloneAppCorona(const QString &coronaPlugin, QObject *p
 
     m_view = new DesktopView(this);
 
-    connect(m_activityConsumer, SIGNAL(currentActivityChanged(QString)), this, SLOT(currentActivityChanged(QString)));
-    connect(m_activityConsumer, SIGNAL(activityAdded(QString)), this, SLOT(activityAdded(QString)));
-    connect(m_activityConsumer, SIGNAL(activityRemoved(QString)), this, SLOT(activityRemoved(QString)));
+    connect(m_activityConsumer, &KActivities::Consumer::currentActivityChanged, this, &StandaloneAppCorona::currentActivityChanged);
+    connect(m_activityConsumer, &KActivities::Consumer::activityAdded, this, &StandaloneAppCorona::activityAdded);
+    connect(m_activityConsumer, &KActivities::Consumer::activityRemoved, this, &StandaloneAppCorona::activityRemoved);
 
-    connect(m_activityConsumer, SIGNAL(serviceStatusChanged(Consumer::ServiceStatus)), this, SLOT(load()));
+    connect(m_activityConsumer, &KActivities::Consumer::serviceStatusChanged, this, &StandaloneAppCorona::load);
 }
 
 StandaloneAppCorona::~StandaloneAppCorona()
@@ -101,7 +101,7 @@ void StandaloneAppCorona::load()
     for (auto c : containments()) {
         qDebug() << "containment found";
         if (c->containmentType() == Plasma::Types::DesktopContainment || c->containmentType() == Plasma::Types::CustomContainment) {
-            QAction *removeAction = c->actions()->action("remove");
+            QAction *removeAction = c->actions()->action(QStringLiteral("remove"));
             if(removeAction) {
                 removeAction->deleteLater();
             }
@@ -190,7 +190,7 @@ void StandaloneAppCorona::currentActivityChanged(const QString &newActivity)
     connect(c, &Plasma::Containment::showAddWidgetsInterface,
             this, &StandaloneAppCorona::toggleWidgetExplorer);
 
-    QAction *removeAction = c->actions()->action("remove");
+    QAction *removeAction = c->actions()->action(QStringLiteral("remove"));
     if (removeAction) {
         removeAction->deleteLater();
     }

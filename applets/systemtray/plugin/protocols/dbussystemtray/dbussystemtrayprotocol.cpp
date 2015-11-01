@@ -33,7 +33,7 @@ DBusSystemTrayProtocol::DBusSystemTrayProtocol(QObject *parent)
       m_dataEngineConsumer(new Plasma::DataEngineConsumer),
       m_tasks()
 {
-    m_dataEngine = m_dataEngineConsumer->dataEngine("statusnotifieritem");
+    m_dataEngine = m_dataEngineConsumer->dataEngine(QStringLiteral("statusnotifieritem"));
 }
 
 DBusSystemTrayProtocol::~DBusSystemTrayProtocol()
@@ -46,10 +46,10 @@ void DBusSystemTrayProtocol::init()
     qCDebug(SYSTEMTRAY) << "ST Dataengine" << m_dataEngine->isValid();
     if (m_dataEngine->isValid()) {
         initRegisteredServices();
-        connect(m_dataEngine, SIGNAL(sourceAdded(QString)),
-                this, SLOT(newTask(QString)));
-        connect(m_dataEngine, SIGNAL(sourceRemoved(QString)),
-                this, SLOT(cleanupTask(QString)));
+        connect(m_dataEngine, &Plasma::DataEngine::sourceAdded,
+                this, &DBusSystemTrayProtocol::newTask);
+        connect(m_dataEngine, &Plasma::DataEngine::sourceRemoved,
+                this, &DBusSystemTrayProtocol::cleanupTask);
     }
 }
 

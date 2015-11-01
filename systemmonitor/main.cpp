@@ -30,7 +30,7 @@ int main(int argc, char** argv)
     QApplication app(argc, argv);
 
     QDBusConnection con = QDBusConnection::sessionBus();
-    if (!con.registerService("org.kde.systemmonitor")) {
+    if (!con.registerService(QStringLiteral("org.kde.systemmonitor"))) {
         return 0;
     }
 

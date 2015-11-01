@@ -39,13 +39,13 @@ DeviceNotificationsEngine::~DeviceNotificationsEngine()
 void DeviceNotificationsEngine::notify(Solid::ErrorType solidError, const QString& error, const QString& errorDetails, const QString &udi)
 {
     qDebug() << error << errorDetails << udi;
-    const QString source = QString("notification %1").arg(m_id++);
+    const QString source = QStringLiteral("notification %1").arg(m_id++);
 
     Plasma::DataEngine::Data notificationData;
-    notificationData.insert("solidError", solidError);
-    notificationData.insert("error", error);
-    notificationData.insert("errorDetails", errorDetails);
-    notificationData.insert("udi", udi);
+    notificationData.insert(QStringLiteral("solidError"), solidError);
+    notificationData.insert(QStringLiteral("error"), error);
+    notificationData.insert(QStringLiteral("errorDetails"), errorDetails);
+    notificationData.insert(QStringLiteral("udi"), udi);
 
     setData(source, notificationData );
 }

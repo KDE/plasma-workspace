@@ -34,12 +34,12 @@ void PackagekitJob::start()
 {
     const QString operation = operationName();
 
-    if (operation == "uninstallApplication") {
-        QStringList files(parameters()["Url"].toString());
-        QDBusMessage message = QDBusMessage::createMethodCall("org.freedesktop.PackageKit",
-            "/org/freedesktop/PackageKit",
-            "org.freedesktop.PackageKit.Modify",
-            "RemovePackageByFiles");
+    if (operation == QLatin1String("uninstallApplication")) {
+        QStringList files(parameters()[QStringLiteral("Url")].toString());
+        QDBusMessage message = QDBusMessage::createMethodCall(QStringLiteral("org.freedesktop.PackageKit"),
+            QStringLiteral("/org/freedesktop/PackageKit"),
+            QStringLiteral("org.freedesktop.PackageKit.Modify"),
+            QStringLiteral("RemovePackageByFiles"));
         message << (uint) 0;
         message << files;
         message << QString();

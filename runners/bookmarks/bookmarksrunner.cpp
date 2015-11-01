@@ -44,12 +44,12 @@ BookmarksRunner::BookmarksRunner( QObject* parent, const QVariantList &args )
 {
     Q_UNUSED(args)
     //qDebug() << "Creating BookmarksRunner";
-    setObjectName( QLatin1String("Bookmarks" ));
-    addSyntax(Plasma::RunnerSyntax(":q:", i18n("Finds web browser bookmarks matching :q:.")));
+    setObjectName( QStringLiteral("Bookmarks" ));
+    addSyntax(Plasma::RunnerSyntax(QStringLiteral(":q:"), i18n("Finds web browser bookmarks matching :q:.")));
     setDefaultSyntax(Plasma::RunnerSyntax(i18nc("list of all web browser bookmarks", "bookmarks"),
                                    i18n("List all web browser bookmarks")));
 
-    connect(this, SIGNAL(prepare()), this, SLOT(prep()));
+    connect(this, &Plasma::AbstractRunner::prepare, this, &BookmarksRunner::prep);
 }
 
 BookmarksRunner::~BookmarksRunner()
@@ -88,11 +88,11 @@ void BookmarksRunner::match(Plasma::RunnerContext &context)
 QString BookmarksRunner::findBrowserName()
 {
     //HACK find the default browser
-    KConfigGroup config(KSharedConfig::openConfig("kdeglobals"), QLatin1String("General") );
-    QString exec = config.readPathEntry(QLatin1String("BrowserApplication"), QString());
+    KConfigGroup config(KSharedConfig::openConfig(QStringLiteral("kdeglobals")), QStringLiteral("General") );
+    QString exec = config.readPathEntry(QStringLiteral("BrowserApplication"), QString());
     //qDebug() << "Found exec string: " << exec;
     if (exec.isEmpty()) {
-        KService::Ptr service = KMimeTypeTrader::self()->preferredService("text/html");
+        KService::Ptr service = KMimeTypeTrader::self()->preferredService(QStringLiteral("text/html"));
         if (service) {
             exec = service->exec();
         }
@@ -126,7 +126,7 @@ void BookmarksRunner::run(const Plasma::RunnerContext &context, const Plasma::Qu
 
             url.setPath(term.mid(idx, pathLength));
         }
-        url.setScheme("http");
+        url.setScheme(QStringLiteral("http"));
     }
 
     KToolInvocation::invokeBrowser(url.url());

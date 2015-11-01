@@ -39,7 +39,7 @@ HistoryImageItem::HistoryImageItem( const QPixmap& data )
 
 QString HistoryImageItem::text() const {
     if ( m_text.isNull() ) {
-        m_text = QString( "%1x%2x%3 %4" )
+        m_text = QStringLiteral( "%1x%2x%3 %4" )
                  .arg( m_data.width() )
                  .arg( m_data.height() )
                  .arg( m_data.depth() );
@@ -50,7 +50,7 @@ QString HistoryImageItem::text() const {
 
 /* virtual */
 void HistoryImageItem::write( QDataStream& stream ) const {
-    stream << QString( "image" ) << m_data;
+    stream << QStringLiteral( "image" ) << m_data;
 }
 
 QMimeData* HistoryImageItem::mimeData() const

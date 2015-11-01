@@ -29,7 +29,7 @@ TaskService::TaskService(TaskManager::TasksModel *model, TaskManager::GroupManag
     m_model(model),
     m_groupManager(groupManager)
 {
-    setName("tasks");
+    setName(QStringLiteral("tasks"));
 }
 
 TaskService::~TaskService()

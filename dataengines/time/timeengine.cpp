@@ -52,7 +52,7 @@ TimeEngine::TimeEngine(QObject *parent, const QVariantList &args)
     // (effectively a noop if the catalog is already present).
     ////KF5 port: remove this line and define TRANSLATION_DOMAIN in CMakeLists.txt instead
 //KLocale::global()->insertCatalog("timezones4");
-    QTimer::singleShot(0, this, SLOT(init()));
+    QTimer::singleShot(0, this, &TimeEngine::init);
 }
 
 TimeEngine::~TimeEngine()
@@ -62,7 +62,7 @@ TimeEngine::~TimeEngine()
 void TimeEngine::init()
 {
     QDBusConnection dbus = QDBusConnection::sessionBus();
-    dbus.connect(QString(), QString(), "org.kde.KTimeZoned", "timeZoneChanged", this, SLOT(tzConfigChanged()));
+    dbus.connect(QString(), QString(), QStringLiteral("org.kde.KTimeZoned"), QStringLiteral("timeZoneChanged"), this, SLOT(tzConfigChanged()));
 
 #ifdef Q_OS_LINUX
     //monitor for the system clock being changed
@@ -102,10 +102,10 @@ void TimeEngine::clockSkewed()
 void TimeEngine::tzConfigChanged()
 {
     qDebug() << "Local timezone changed signaled";
-    TimeSource *s = qobject_cast<TimeSource *>(containerForSource("Local"));
+    TimeSource *s = qobject_cast<TimeSource *>(containerForSource(QStringLiteral("Local")));
 
     if (s) {
-        s->setTimeZone("Local");
+        s->setTimeZone(QStringLiteral("Local"));
     }
 
     updateAllSources();
@@ -118,7 +118,7 @@ QStringList TimeEngine::sources() const
     Q_FOREACH(const QByteArray &tz, QTimeZone::availableTimeZoneIds()) {
         sources << QString(tz.constData());
     }
-    sources << "Local";
+    sources << QStringLiteral("Local");
     return sources;
 }
 

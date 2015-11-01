@@ -115,7 +115,7 @@ void KlipperPopup::ensureClean() {
 }
 
 void KlipperPopup::buildFromScratch() {
-    addSection(QIcon::fromTheme("klipper"), i18n("Klipper - Clipboard Tool"));
+    addSection(QIcon::fromTheme(QStringLiteral("klipper")), i18n("Klipper - Clipboard Tool"));
 
     m_filterWidget = new KLineEdit(this);
     m_filterWidget->setFocusPolicy( Qt::NoFocus );
@@ -128,7 +128,7 @@ void KlipperPopup::buildFromScratch() {
     for (int i = 0; i < m_actions.count(); i++) {
 
         if (i + 1 == m_actions.count() && m_showHelp) {
-            addMenu(m_helpMenu->menu())->setIcon(QIcon::fromTheme("help-contents"));
+            addMenu(m_helpMenu->menu())->setIcon(QIcon::fromTheme(QStringLiteral("help-contents")));
             addSeparator();
         }
 

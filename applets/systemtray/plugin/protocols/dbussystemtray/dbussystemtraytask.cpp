@@ -92,27 +92,27 @@ void DBusSystemTrayTask::activate1(int x, int y) const
 {
     QVariantMap params;
     if (m_isMenu) {
-        params = m_service->operationDescription("ContextMenu");
+        params = m_service->operationDescription(QStringLiteral("ContextMenu"));
     } else {
-        params = m_service->operationDescription("Activate");
+        params = m_service->operationDescription(QStringLiteral("Activate"));
     }
-    params["x"] = x;
-    params["y"] = y;
+    params[QStringLiteral("x")] = x;
+    params[QStringLiteral("y")] = y;
     KJob *job = m_service->startOperationCall(params);
-    connect(job, SIGNAL(result(KJob*)), this, SLOT(_onContextMenu(KJob*)));
+    connect(job, &KJob::result, this, &DBusSystemTrayTask::_onContextMenu);
 }
 
 void DBusSystemTrayTask::activate2(int x, int y) const
 {
-    QVariantMap params = m_service->operationDescription("SecondaryActivate");
-    params["x"] = x;
-    params["y"] = y;
+    QVariantMap params = m_service->operationDescription(QStringLiteral("SecondaryActivate"));
+    params[QStringLiteral("x")] = x;
+    params[QStringLiteral("y")] = y;
     m_service->startOperationCall(params);
 }
 
 void DBusSystemTrayTask::activateHorzScroll(int delta) const
 {
-    _activateScroll(delta, "Horizontal");
+    _activateScroll(delta, QStringLiteral("Horizontal"));
 }
 
 // Copied from kde-runtime/plasma/declarativeimports/core/iconitem.cpp
@@ -120,7 +120,7 @@ bool static hasm_svgIcon(QVariant source)
 {
     // Set up compat envrionment, afterwards it is 100% copy'n'pastable.
     const QString element = source.toString();
-    const QString filename = element.split("-").first();
+    const QString filename = element.split(QStringLiteral("-")).first();
     Plasma::Svg svgIcon;
     Plasma::Svg *m_svgIcon = &svgIcon;
 
@@ -162,24 +162,24 @@ QVariant DBusSystemTrayTask::customIcon(QVariant variant) const
 
 void DBusSystemTrayTask::activateVertScroll(int delta) const
 {
-    _activateScroll(delta, "Vertical");
+    _activateScroll(delta, QStringLiteral("Vertical"));
 }
 
 void DBusSystemTrayTask::_activateScroll(int delta, QString direction) const
 {
-    QVariantMap params = m_service->operationDescription("Scroll");
-    params["delta"] = delta;
-    params["direction"] = direction;
+    QVariantMap params = m_service->operationDescription(QStringLiteral("Scroll"));
+    params[QStringLiteral("delta")] = delta;
+    params[QStringLiteral("direction")] = direction;
     m_service->startOperationCall(params);
 }
 
 void DBusSystemTrayTask::activateContextMenu(int x, int y) const
 {
-    QVariantMap params = m_service->operationDescription("ContextMenu");
-    params["x"] = x;
-    params["y"] = y;
+    QVariantMap params = m_service->operationDescription(QStringLiteral("ContextMenu"));
+    params[QStringLiteral("x")] = x;
+    params[QStringLiteral("y")] = y;
     KJob *job = m_service->startOperationCall(params);
-    connect(job, SIGNAL(result(KJob*)), this, SLOT(_onContextMenu(KJob*)));
+    connect(job, &KJob::result, this, &DBusSystemTrayTask::_onContextMenu);
 }
 
 void DBusSystemTrayTask::_onContextMenu(KJob *job)
@@ -199,8 +199,8 @@ void DBusSystemTrayTask::_onContextMenu(KJob *job)
 
     if (menu) {
         menu->adjustSize();
-        int x = sjob->parameters()["x"].toInt();
-        int y = sjob->parameters()["y"].toInt();
+        int x = sjob->parameters()[QStringLiteral("x")].toInt();
+        int y = sjob->parameters()[QStringLiteral("y")].toInt();
 
         //try tofind the icon screen coordinates, and adjust the position as a poor
         //man's popupPosition
@@ -244,16 +244,16 @@ void DBusSystemTrayTask::dataUpdated(const QString &taskName, const Plasma::Data
 {
     Q_UNUSED(taskName);
 
-    const QString id = properties["Id"].toString();
+    const QString id = properties[QStringLiteral("Id")].toString();
     bool becomeValid = false;
     if (!id.isEmpty() && id != m_taskId) {
         m_taskId = id;
         m_valid = true;
         becomeValid = true;
-        setObjectName(QString("SystemTray-%1").arg(m_taskId));
+        setObjectName(QStringLiteral("SystemTray-%1").arg(m_taskId));
     }
 
-    QString cat = properties["Category"].toString();
+    QString cat = properties[QStringLiteral("Category")].toString();
     if (!cat.isEmpty()) {
         int index = metaObject()->indexOfEnumerator("Category");
         int key = metaObject()->enumerator(index).keyToValue(cat.toLatin1());
@@ -263,8 +263,8 @@ void DBusSystemTrayTask::dataUpdated(const QString &taskName, const Plasma::Data
         }
     }
 
-    if (properties["TitleChanged"].toBool() || becomeValid) {
-        QString title = properties["Title"].toString();
+    if (properties[QStringLiteral("TitleChanged")].toBool() || becomeValid) {
+        QString title = properties[QStringLiteral("Title")].toString();
         if (!title.isEmpty()) {
             bool is_title_changed = (name() != title);
             setName(title);
@@ -275,22 +275,22 @@ void DBusSystemTrayTask::dataUpdated(const QString &taskName, const Plasma::Data
         }
     }
 
-    if (properties["IconsChanged"].toBool() || becomeValid) {
+    if (properties[QStringLiteral("IconsChanged")].toBool() || becomeValid) {
         syncIcons(properties);
         emit changedIcons();
     }
 
-    if (properties["StatusChanged"].toBool() || becomeValid) {
-        syncStatus(properties["Status"].toString());
+    if (properties[QStringLiteral("StatusChanged")].toBool() || becomeValid) {
+        syncStatus(properties[QStringLiteral("Status")].toString());
     }
 
-    if (properties["ToolTipChanged"].toBool() || becomeValid) {
-        syncToolTip(properties["ToolTipTitle"].toString(),
-                    properties["ToolTipSubTitle"].toString(),
-                    properties["ToolTipIcon"].value<QIcon>());
+    if (properties[QStringLiteral("ToolTipChanged")].toBool() || becomeValid) {
+        syncToolTip(properties[QStringLiteral("ToolTipTitle")].toString(),
+                    properties[QStringLiteral("ToolTipSubTitle")].toString(),
+                    properties[QStringLiteral("ToolTipIcon")].value<QIcon>());
     }
 
-    bool is_menu = properties["ItemIsMenu"].toBool();
+    bool is_menu = properties[QStringLiteral("ItemIsMenu")].toBool();
     if (is_menu != m_isMenu) {
         m_isMenu = is_menu;
         emit changedIsMenu();
@@ -306,14 +306,14 @@ void DBusSystemTrayTask::dataUpdated(const QString &taskName, const Plasma::Data
 
 void DBusSystemTrayTask::syncIcons(const Plasma::DataEngine::Data &properties)
 {
-    m_icon = properties["Icon"].value<QIcon>();
-    m_attentionIcon = properties["AttentionIcon"].value<QIcon>();
+    m_icon = properties[QStringLiteral("Icon")].value<QIcon>();
+    m_attentionIcon = properties[QStringLiteral("AttentionIcon")].value<QIcon>();
 
-    QString icon_name            = properties["IconName"].toString();
-    QString att_icon_name        = properties["AttentionIconName"].toString();
-    QString movie_path           = properties["AttentionMovieName"].toString();
-    QString overlay_icon_name    = properties["OverlayIconName"].value<QString>();
-    QString icon_theme_path      = properties["IconThemePath"].value<QString>();
+    QString icon_name            = properties[QStringLiteral("IconName")].toString();
+    QString att_icon_name        = properties[QStringLiteral("AttentionIconName")].toString();
+    QString movie_path           = properties[QStringLiteral("AttentionMovieName")].toString();
+    QString overlay_icon_name    = properties[QStringLiteral("OverlayIconName")].value<QString>();
+    QString icon_theme_path      = properties[QStringLiteral("IconThemePath")].value<QString>();
     bool is_icon_changed                = false;
     bool is_icon_name_changed           = false;
     bool is_att_icon_name_changed       = false;

@@ -58,8 +58,8 @@ DesktopProtocol::DesktopProtocol(const QByteArray& protocol, const QByteArray &p
 {
     checkLocalInstall();
 
-    QDBusInterface kded("org.kde.kded5", "/kded", "org.kde.kded5");
-    kded.call("loadModule", "desktopnotifier");
+    QDBusInterface kded(QStringLiteral("org.kde.kded5"), QStringLiteral("/kded"), QStringLiteral("org.kde.kded5"));
+    kded.call(QStringLiteral("loadModule"), "desktopnotifier");
 }
 
 DesktopProtocol::~DesktopProtocol()
@@ -80,7 +80,7 @@ void DesktopProtocol::checkLocalInstall()
     bool newRelease;
 
     // Check if we have a new KDE release
-    KConfig config("kio_desktoprc");
+    KConfig config(QStringLiteral("kio_desktoprc"));
     KConfigGroup cg(&config, "General");
     QString version = cg.readEntry("Version", "0.0.0");
     int major = version.section('.', 0, 0).toInt();
@@ -105,15 +105,15 @@ void DesktopProtocol::checkLocalInstall()
 
     if (desktopIsEmpty) {
         // Copy the .directory file
-        QFile::copy(QStandardPaths::locate(QStandardPaths::GenericDataLocation, "kio_desktop/directory.desktop"),
+        QFile::copy(QStandardPaths::locate(QStandardPaths::GenericDataLocation, QStringLiteral("kio_desktop/directory.desktop")),
                     desktopPath + "/.directory");
 
         // Copy the trash link
-        QFile::copy(QStandardPaths::locate(QStandardPaths::GenericDataLocation, "kio_desktop/directory.trash"),
+        QFile::copy(QStandardPaths::locate(QStandardPaths::GenericDataLocation, QStringLiteral("kio_desktop/directory.trash")),
                     desktopPath + "/trash.desktop");
  
         // Copy the desktop links
-        const QStringList links = KGlobal::dirs()->findAllResources("data", "kio_desktop/DesktopLinks/*",
+        const QStringList links = KGlobal::dirs()->findAllResources("data", QStringLiteral("kio_desktop/DesktopLinks/*"),
                                                                     KStandardDirs::NoDuplicates);
         foreach (const QString &link, links) {
             KDesktopFile file(link);
@@ -125,17 +125,17 @@ void DesktopProtocol::checkLocalInstall()
         const QString directoryFile = desktopPath + "/.directory";
         if (QFile::exists(directoryFile)) {
              KDesktopFile file(directoryFile);
-             if (file.readIcon() == "desktop")
+             if (file.readIcon() == QLatin1String("desktop"))
                  file.desktopGroup().writeEntry("Icon", "user-desktop");
         } else
-             QFile::copy(QStandardPaths::locate(QStandardPaths::GenericDataLocation, "kio_desktop/directory.desktop"), directoryFile);
+             QFile::copy(QStandardPaths::locate(QStandardPaths::GenericDataLocation, QStringLiteral("kio_desktop/directory.desktop")), directoryFile);
   
         // Update the home icon to the FDO naming spec
         const QString homeLink = desktopPath + "/Home.desktop";
         if (QFile::exists(homeLink)) {
             KDesktopFile home(homeLink);
             const QString icon = home.readIcon();
-            if (icon == "kfm_home" || icon == "folder_home")
+            if (icon == QLatin1String("kfm_home") || icon == QLatin1String("folder_home"))
                 home.desktopGroup().writeEntry("Icon", "user-home");
         }
 
@@ -143,9 +143,9 @@ void DesktopProtocol::checkLocalInstall()
         const QString trashLink = desktopPath + "/trash.desktop";
         if (QFile::exists(trashLink)) {
             KDesktopFile trash(trashLink);
-            if (trash.readIcon() == "trashcan_full")
+            if (trash.readIcon() == QLatin1String("trashcan_full"))
                 trash.desktopGroup().writeEntry("Icon", "user-trash-full");
-            if (trash.desktopGroup().readEntry("EmptyIcon") == "trashcan_empty")
+            if (trash.desktopGroup().readEntry("EmptyIcon") == QLatin1String("trashcan_empty"))
                 trash.desktopGroup().writeEntry("EmptyIcon", "user-trash");
         }
     }
@@ -154,7 +154,7 @@ void DesktopProtocol::checkLocalInstall()
 
 bool DesktopProtocol::rewriteUrl(const QUrl &url, QUrl &newUrl)
 {
-    newUrl.setScheme("file");
+    newUrl.setScheme(QStringLiteral("file"));
     newUrl.setPath(QStandardPaths::writableLocation(QStandardPaths::DesktopLocation) + '/' + url.path());
     return true;
 }
@@ -166,21 +166,21 @@ void DesktopProtocol::listDir(const QUrl &url)
     KUrl actual;
     rewriteUrl(url, actual);
 
-    QDBusInterface kded("org.kde.kded5", "/modules/desktopnotifier", "org.kde.DesktopNotifier");
-    kded.call("watchDir", actual.path());
+    QDBusInterface kded(QStringLiteral("org.kde.kded5"), QStringLiteral("/modules/desktopnotifier"), QStringLiteral("org.kde.DesktopNotifier"));
+    kded.call(QStringLiteral("watchDir"), actual.path());
 }
 
 QString DesktopProtocol::desktopFile(KIO::UDSEntry &entry) const
 {
     const QString name = entry.stringValue(KIO::UDSEntry::UDS_NAME);
-    if (name == "." || name == "..")
+    if (name == QLatin1String(".") || name == QLatin1String(".."))
         return QString();
 
     KUrl url = processedUrl();
     url.addPath(name);
 
     if (entry.isDir()) {
-        url.addPath(".directory");
+        url.addPath(QStringLiteral(".directory"));
         if (!KStandardDirs::exists(url.path()))
             return QString();
 
@@ -218,7 +218,7 @@ void DesktopProtocol::rename(const QUrl &src, const QUrl &dest, KIO::JobFlags fl
     KUrl url;
     rewriteUrl(src, url);
 
-    if (src.scheme() != "desktop" || dest.scheme() != "desktop" ||
+    if (src.scheme() != QLatin1String("desktop") || dest.scheme() != QLatin1String("desktop") ||
         !KDesktopFile::isDesktopFile(url.path()))
     {
         ForwardingSlaveBase::rename(src, dest, flags);
@@ -228,7 +228,7 @@ void DesktopProtocol::rename(const QUrl &src, const QUrl &dest, KIO::JobFlags fl
     QString friendlyName;
     KUrl destUrl = dest;  
 
-    if (dest.url().endsWith(".desktop")) {
+    if (dest.url().endsWith(QLatin1String(".desktop"))) {
         const QString fileName = dest.fileName(); 
         friendlyName = KIO::decodeFileName(fileName.left(fileName.length() - 8));
     } else {

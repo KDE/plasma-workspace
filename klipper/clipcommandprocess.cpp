@@ -52,7 +52,7 @@ ClipCommandProcess::ClipCommandProcess(const ClipAction& action, const ClipComma
 
     connect(this, SIGNAL(finished(int,QProcess::ExitStatus)), SLOT(slotFinished(int,QProcess::ExitStatus)));
     if (command.output != ClipCommand::IGNORE) {
-        connect(this, SIGNAL(readyRead()), SLOT(slotStdOutputAvailable()));
+        connect(this, &QIODevice::readyRead, this, &ClipCommandProcess::slotStdOutputAvailable);
     }
     if (command.output != ClipCommand::REPLACE) {
         m_historyItem.clear();

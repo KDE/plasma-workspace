@@ -23,7 +23,7 @@
 
 TaskWindowService::TaskWindowService()//  :   m_id(source)
 {
-    setName("windowtasks");
+    setName(QStringLiteral("windowtasks"));
 }
 
 

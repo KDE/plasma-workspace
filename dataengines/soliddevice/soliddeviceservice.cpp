@@ -24,14 +24,14 @@ SolidDeviceService::SolidDeviceService (SolidDeviceEngine* parent, const QString
     : Plasma::Service (parent),
       m_engine(parent)
 {
-    setName ("soliddevice");
+    setName (QStringLiteral("soliddevice"));
     setDestination (source);
 }
 
 Plasma::ServiceJob* SolidDeviceService::createJob (const QString& operation,
                                                    QMap <QString, QVariant>& parameters)
 {
-    if (operation == "updateFreespace") {
+    if (operation == QLatin1String("updateFreespace")) {
         m_engine->updateStorageSpace(destination());
         return 0;
     }

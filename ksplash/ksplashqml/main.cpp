@@ -31,19 +31,19 @@ void logMessageHandler(QtMsgType type, const char *msg)
     QString txt;
     switch (type) {
     case QtDebugMsg:
-        txt = QString("Debug: %1").arg(msg);
+        txt = QStringLiteral("Debug: %1").arg(msg);
         break;
     case QtWarningMsg:
-        txt = QString("Warning: %1").arg(msg);
+        txt = QStringLiteral("Warning: %1").arg(msg);
     break;
     case QtCriticalMsg:
-        txt = QString("Critical: %1").arg(msg);
+        txt = QStringLiteral("Critical: %1").arg(msg);
     break;
     case QtFatalMsg:
-        txt = QString("Fatal: %1").arg(msg);
+        txt = QStringLiteral("Fatal: %1").arg(msg);
     break;
     }
-    QFile outFile("/tmp/ksplash");
+    QFile outFile(QStringLiteral("/tmp/ksplash"));
     outFile.open(QIODevice::WriteOnly | QIODevice::Append);
     QTextStream ts(&outFile);
     ts << txt << '\n';

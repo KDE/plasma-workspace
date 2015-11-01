@@ -42,7 +42,7 @@
 Activity::Activity(const QString &id, Plasma::Corona *parent)
     : QObject(parent),
       m_id(id),
-      m_plugin("org.kde.desktopcontainment"),//FIXME ask the corona
+      m_plugin(QStringLiteral("org.kde.desktopcontainment")),//FIXME ask the corona
       m_info(new KActivities::Info(id, this)),
       m_activityConsumer(new KActivities::Consumer(this)),
       m_current(false)

@@ -55,7 +55,7 @@ class ProcessRunner : public QObject
     Q_OBJECT
     public:
         Q_INVOKABLE void runNotificationsKCM() const {
-            QProcess::startDetached("kcmshell5", QStringList() << "kcmnotify");
+            QProcess::startDetached(QStringLiteral("kcmshell5"), QStringList() << QStringLiteral("kcmnotify"));
         }
 };
 

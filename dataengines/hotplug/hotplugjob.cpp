@@ -29,13 +29,13 @@ void HotplugJob::start()
     QString udi (m_dest);
     QString operation = operationName();
     
-    if (operation == "invokeAction") {
-        QString action = parameters()["predicate"].toString();
+    if (operation == QLatin1String("invokeAction")) {
+        QString action = parameters()[QStringLiteral("predicate")].toString();
 
         QStringList desktopFiles;
         desktopFiles << action;
-        QDBusInterface soliduiserver("org.kde.kded5", "/modules/soliduiserver", "org.kde.SolidUiServer");
-        QDBusReply<void> reply = soliduiserver.call("showActionsDialog", udi, desktopFiles);
+        QDBusInterface soliduiserver(QStringLiteral("org.kde.kded5"), QStringLiteral("/modules/soliduiserver"), QStringLiteral("org.kde.SolidUiServer"));
+        QDBusReply<void> reply = soliduiserver.call(QStringLiteral("showActionsDialog"), udi, desktopFiles);
     }
 
     emitResult();

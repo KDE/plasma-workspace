@@ -43,10 +43,10 @@ BacktraceLineKdbgwin::BacktraceLineKdbgwin(const QString & line)
 
 void BacktraceLineKdbgwin::parse()
 {
-    if (d->m_line == "\n") {
+    if (d->m_line == QLatin1String("\n")) {
         d->m_type = EmptyLine;
         return;
-    } else if (d->m_line == "[KCrash Handler]\n") {
+    } else if (d->m_line == QLatin1String("[KCrash Handler]\n")) {
         d->m_type = KCrash;
         return;
     } else if (d->m_line.startsWith(QLatin1String("Loaded"))) {
@@ -55,10 +55,10 @@ void BacktraceLineKdbgwin::parse()
     }
 
     QRegExp regExp;
-    regExp.setPattern("([^!]+)!" //match the module name, followed by !
+    regExp.setPattern(QStringLiteral("([^!]+)!" //match the module name, followed by !
                       "([^\\(]+)\\(\\) " //match the function name, followed by ()
                       "\\[([^@]+)@ [\\-\\d]+\\] " // [filename @ line]
-                      "at 0x.*"); //at 0xdeadbeef
+                      "at 0x.*")); //at 0xdeadbeef
 
     if (regExp.exactMatch(d->m_line)) {
         d->m_type = StackFrame;
@@ -78,16 +78,16 @@ void BacktraceLineKdbgwin::rate()
     LineRating r;
 
     //for explanations, see the LineRating enum definition
-    if (fileName() != "[unknown]") {
+    if (fileName() != QLatin1String("[unknown]")) {
         r = Good;
-    } else if (libraryName() != "[unknown]") {
-        if (functionName() == "[unknown]") {
+    } else if (libraryName() != QLatin1String("[unknown]")) {
+        if (functionName() == QLatin1String("[unknown]")) {
             r = MissingFunction;
         } else {
             r = MissingSourceFile;
         }
     } else {
-        if (functionName() == "[unknown]") {
+        if (functionName() == QLatin1String("[unknown]")) {
             r = MissingEverything;
         } else {
             r = MissingLibrary;

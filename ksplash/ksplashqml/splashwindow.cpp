@@ -64,7 +64,7 @@ SplashWindow::SplashWindow(bool testing, bool window)
 
     //be sure it will be eventually closed
     //FIXME: should never be stuck
-    QTimer::singleShot(30000, this, SLOT(close()));
+    QTimer::singleShot(30000, this, &QWindow::close);
 }
 
 void SplashWindow::setStage(int stage)
@@ -97,15 +97,15 @@ void SplashWindow::setGeometry(const QRect& rect)
 
     if (oldGeometryEmpty) {
 
-        KPackage::Package package = KPackage::PackageLoader::self()->loadPackage("Plasma/LookAndFeel");
-        KConfigGroup cg(KSharedConfig::openConfig("kdeglobals"), "KDE");
+        KPackage::Package package = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Plasma/LookAndFeel"));
+        KConfigGroup cg(KSharedConfig::openConfig(QStringLiteral("kdeglobals")), "KDE");
         const QString packageName = cg.readEntry("LookAndFeelPackage", QString());
         if (!packageName.isEmpty()) {
             package.setPath(packageName);
         };
 
         const QString theme = QGuiApplication::arguments().at(1);
-        if (!theme.startsWith("--")) {
+        if (!theme.startsWith(QLatin1String("--"))) {
             package.setPath(theme);
         }
 

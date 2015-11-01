@@ -24,7 +24,7 @@
 PackagekitService::PackagekitService(QObject* parent)
     : Plasma::Service(parent)
 {
-    setName("packagekit");
+    setName(QStringLiteral("packagekit"));
 }
 
 Plasma::ServiceJob* PackagekitService::createJob(const QString& operation, QMap< QString, QVariant >& parameters)

@@ -31,14 +31,14 @@ WallpaperPackage::WallpaperPackage(QObject *parent, const QVariantList &args)
 
 void WallpaperPackage::initPackage(KPackage::Package *package)
 {
-    package->addDirectoryDefinition("images", "images/", i18n("Images"));
+    package->addDirectoryDefinition("images", QStringLiteral("images/"), i18n("Images"));
 
     QStringList mimetypes;
-    mimetypes << "image/svg" << "image/png" << "image/jpeg" << "image/jpg";
+    mimetypes << QStringLiteral("image/svg") << QStringLiteral("image/png") << QStringLiteral("image/jpeg") << QStringLiteral("image/jpg");
     package->setMimeTypes("images", mimetypes);
 
     package->setRequired("images", true);
-    package->addFileDefinition("screenshot", "screenshot.png", i18n("Screenshot"));
+    package->addFileDefinition("screenshot", QStringLiteral("screenshot.png"), i18n("Screenshot"));
     package->setAllowExternalPaths(true);
 }
 
@@ -65,7 +65,7 @@ void WallpaperPackage::pathChanged(KPackage::Package *package)
     package->setRequired("images", isFullPackage);
 
     if (isFullPackage) {
-        package->setContentsPrefixPaths(QStringList() << "contents/");
+        package->setContentsPrefixPaths(QStringList() << QStringLiteral("contents/"));
     } else {
         package->addFileDefinition("screenshot", info.fileName(), i18n("Preview"));
         package->addFileDefinition("preferred", info.fileName(), QString());

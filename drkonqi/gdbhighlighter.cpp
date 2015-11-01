@@ -51,7 +51,7 @@ void GdbHighlighter::highlightBlock(const QString& text)
     int cur = 0;
     int next;
     int diff;
-    const QRegExp hexptrPattern("0x[0-9a-f]+", Qt::CaseSensitive, QRegExp::RegExp2);
+    const QRegExp hexptrPattern(QStringLiteral("0x[0-9a-f]+"), Qt::CaseSensitive, QRegExp::RegExp2);
     int lineNr = currentBlock().firstLineNumber();
     while ( cur < text.length() ) {
         next = text.indexOf('\n', cur);
@@ -113,8 +113,8 @@ void GdbHighlighter::highlightBlock(const QString& text)
                         }
                         ++i;
                     }
-                    if (line.functionName() == "qFatal" || line.functionName() == "abort" || line.functionName() == "__assert_fail"
-                        || line.functionName() == "*__GI___assert_fail" || line.functionName() == "*__GI_abort") {
+                    if (line.functionName() == QLatin1String("qFatal") || line.functionName() == QLatin1String("abort") || line.functionName() == QLatin1String("__assert_fail")
+                        || line.functionName() == QLatin1String("*__GI___assert_fail") || line.functionName() == QLatin1String("*__GI_abort")) {
                         setFormat(from, i - from, assertFormat);
                     } else {
                         setFormat(from, i - from, funcFormat);
@@ -124,7 +124,7 @@ void GdbHighlighter::highlightBlock(const QString& text)
             // highlight hexadecimal ptrs
             int idx = 0;
             while ((idx = hexptrPattern.indexIn(lineStr, idx)) != -1) {
-                if (hexptrPattern.cap() == "0x0") {
+                if (hexptrPattern.cap() == QLatin1String("0x0")) {
                     setFormat(idx, hexptrPattern.matchedLength(), nullptrFormat);
                 }
                 idx += hexptrPattern.matchedLength();

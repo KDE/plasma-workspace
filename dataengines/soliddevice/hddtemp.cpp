@@ -62,7 +62,7 @@ bool HddTemp::updateData()
     QTcpSocket socket;
     QString data;
 
-    socket.connectToHost("localhost", 7634);
+    socket.connectToHost(QStringLiteral("localhost"), 7634);
     if (socket.waitForConnected(500)) {
         while (data.length() < 1024) {
             if (!socket.waitForReadyRead(500)) {

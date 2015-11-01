@@ -50,16 +50,16 @@ public:
 
         auto accuracyIt = json.find(QStringLiteral("accuracy"));
         if (accuracyIt != json.end()) {
-            m_data["accuracy"] = (*accuracyIt).toDouble();
+            m_data[QStringLiteral("accuracy")] = (*accuracyIt).toDouble();
         } else {
-            m_data["accuracy"] = 40000;
+            m_data[QStringLiteral("accuracy")] = 40000;
         }
 
         auto locationIt = json.find(QStringLiteral("location"));
         if (locationIt != json.end()) {
             QJsonObject location = (*locationIt).toObject();
-            m_data["latitude"] = location.value(QStringLiteral("lat")).toDouble();
-            m_data["longitude"] = location.value(QStringLiteral("lng")).toDouble();
+            m_data[QStringLiteral("latitude")] = location.value(QStringLiteral("lat")).toDouble();
+            m_data[QStringLiteral("longitude")] = location.value(QStringLiteral("lng")).toDouble();
         }
         checkUpdateData();
     }
@@ -102,8 +102,8 @@ public:
         const QJsonObject json = QJsonDocument::fromJson(m_countryPayload).object();
         m_countryPayload.clear();
 
-        m_data["country"] = json.value(QStringLiteral("country_name")).toString();
-        m_data["country code"] = json.value(QStringLiteral("country_code")).toString();
+        m_data[QStringLiteral("country")] = json.value(QStringLiteral("country_name")).toString();
+        m_data[QStringLiteral("country code")] = json.value(QStringLiteral("country_code")).toString();
         checkUpdateData();
     }
 

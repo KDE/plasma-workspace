@@ -99,7 +99,7 @@ Host::Host(QObject* parent) :
     QObject(parent),
     d(new HostPrivate(this))
 {
-    QTimer::singleShot(0, this, SLOT(init()));
+    QTimer::singleShot(0, this, &Host::init);
 }
 
 Host::~Host()
@@ -258,7 +258,7 @@ QAbstractItemModel* Host::availablePlasmoids()
         //Filter X-Plasma-NotificationArea
         KPluginInfo::List applets;
         for (auto info : Plasma::PluginLoader::self()->listAppletInfo(QString())) {
-            if (info.property("X-Plasma-NotificationArea") == "true") {
+            if (info.property(QStringLiteral("X-Plasma-NotificationArea")) == "true") {
                 applets << info;
             }
         }
@@ -266,7 +266,7 @@ QAbstractItemModel* Host::availablePlasmoids()
         foreach (const KPluginInfo &info, applets) {
             QString name = info.name();
             KService::Ptr service = info.service();
-            const QString dbusactivation = info.property("X-Plasma-DBusActivationService").toString();
+            const QString dbusactivation = info.property(QStringLiteral("X-Plasma-DBusActivationService")).toString();
 
             if (!dbusactivation.isEmpty()) {
                 name += i18n(" (Automatic load)");
@@ -283,7 +283,7 @@ QStringList Host::defaultPlasmoids() const
 {
     QStringList ret;
     for (auto info : Plasma::PluginLoader::self()->listAppletInfo(QString())) {
-        if (info.isValid() && info.property("X-Plasma-NotificationArea") == "true" &&
+        if (info.isValid() && info.property(QStringLiteral("X-Plasma-NotificationArea")) == "true" &&
             info.isPluginEnabledByDefault()) {
             ret += info.pluginName();
         }
@@ -348,12 +348,12 @@ void Host::showMenu(int x, int y, QObject *task)
             desktopMenu.addAction(action);
         }
     }
-    QAction *runAssociatedApplication = a->actions()->action("run associated application");
+    QAction *runAssociatedApplication = a->actions()->action(QStringLiteral("run associated application"));
     if (runAssociatedApplication && runAssociatedApplication->isEnabled()) {
         desktopMenu.addAction(runAssociatedApplication);
     }
 
-    QAction *configureApplet = a->actions()->action("configure");
+    QAction *configureApplet = a->actions()->action(QStringLiteral("configure"));
     if (configureApplet && configureApplet->isEnabled()) {
         desktopMenu.addAction(configureApplet);
     }
@@ -361,15 +361,15 @@ void Host::showMenu(int x, int y, QObject *task)
     Plasma::Applet *systrayApplet = qobject_cast<Plasma::Applet *>(a->containment()->parent());
     if (systrayApplet) {
         QMenu *trayMenu = new QMenu(i18nc("%1 is the name of the applet", "%1 Options", systrayApplet->title()), &desktopMenu);
-        trayMenu->addAction(systrayApplet->actions()->action("configure"));
-        trayMenu->addAction(systrayApplet->actions()->action("remove"));
+        trayMenu->addAction(systrayApplet->actions()->action(QStringLiteral("configure")));
+        trayMenu->addAction(systrayApplet->actions()->action(QStringLiteral("remove")));
         desktopMenu.addMenu(trayMenu);
 
         Plasma::Containment *c = systrayApplet->containment();
         if (c) {
             QMenu *containmentMenu = new QMenu(i18nc("%1 is the name of the containment", "%1 Options", c->title()), &desktopMenu);
-            containmentMenu->addAction(c->actions()->action("configure"));
-            containmentMenu->addAction(c->actions()->action("remove"));
+            containmentMenu->addAction(c->actions()->action(QStringLiteral("configure")));
+            containmentMenu->addAction(c->actions()->action(QStringLiteral("remove")));
             desktopMenu.addMenu(containmentMenu);
         }
     }

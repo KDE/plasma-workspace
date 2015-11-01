@@ -190,7 +190,7 @@ void AbstractGroupingStrategy::closeGroup(TaskGroup *group)
     emit groupRemoved(group);
     // FIXME: due to a bug in Qt 4.x, the event loop reference count is incorrect
     // when going through x11EventFilter .. :/ so we have to singleShot the deleteLater
-    QTimer::singleShot(0, group, SLOT(deleteLater()));
+    QTimer::singleShot(0, group, &QObject::deleteLater);
 }
 
 void AbstractGroupingStrategy::checkGroup()
@@ -251,7 +251,7 @@ QList<QString> AbstractGroupingStrategy::nameSuggestions(TaskGroup *)
     }
 
     if (nameList.isEmpty()) {
-        nameList.append("default");
+        nameList.append(QStringLiteral("default"));
     }
 
     return nameList;
@@ -270,7 +270,7 @@ bool AbstractGroupingStrategy::setIcon(const QIcon &icon, TaskGroup *group)
 QList <QIcon> AbstractGroupingStrategy::iconSuggestions(TaskGroup *)
 {
     QList <QIcon> iconList;
-    iconList.append(QIcon::fromTheme("xorg"));
+    iconList.append(QIcon::fromTheme(QStringLiteral("xorg")));
     return iconList;
 }
 

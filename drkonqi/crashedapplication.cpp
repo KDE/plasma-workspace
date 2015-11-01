@@ -173,7 +173,7 @@ void CrashedApplication::restart()
 QString getSuggestedKCrashFilename(const CrashedApplication* app)
 {
     QString filename = app->fakeExecutableBaseName() + '-' +
-                       app->datetime().toString("yyyyMMdd-hhmmss") +
+                       app->datetime().toString(QStringLiteral("yyyyMMdd-hhmmss")) +
                        ".kcrash.txt";
 
     if (filename.contains('/')) {

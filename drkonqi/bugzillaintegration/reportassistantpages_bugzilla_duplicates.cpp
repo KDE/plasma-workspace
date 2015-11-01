@@ -44,8 +44,8 @@ BugzillaDuplicatesPage::BugzillaDuplicatesPage(ReportAssistantDialog * parent):
 {
     resetDates();
 
-    connect(bugzillaManager(), SIGNAL(searchFinished(BugMapList)),
-             this, SLOT(searchFinished(BugMapList)));
+    connect(bugzillaManager(), &BugzillaManager::searchFinished,
+             this, &BugzillaDuplicatesPage::searchFinished);
     connect(bugzillaManager(), SIGNAL(searchError(QString)),
              this, SLOT(searchError(QString)));
 
@@ -54,7 +54,7 @@ BugzillaDuplicatesPage::BugzillaDuplicatesPage(ReportAssistantDialog * parent):
 
     connect(ui.m_bugListWidget, SIGNAL(itemDoubleClicked(QTreeWidgetItem*,int)),
              this, SLOT(itemClicked(QTreeWidgetItem*,int)));
-    connect(ui.m_bugListWidget, SIGNAL(itemSelectionChanged()), this, SLOT(itemSelectionChanged()));
+    connect(ui.m_bugListWidget, &QTreeWidget::itemSelectionChanged, this, &BugzillaDuplicatesPage::itemSelectionChanged);
 
     QHeaderView * header = ui.m_bugListWidget->header();
     header->setResizeMode(0, QHeaderView::ResizeToContents);
@@ -66,7 +66,7 @@ BugzillaDuplicatesPage::BugzillaDuplicatesPage(ReportAssistantDialog * parent):
                       << i18nc("@item:intable custom bug report number description",
                                                             "Manually enter a bug report ID"));
     customBugItem->setData(0, Qt::UserRole, QLatin1String("custom"));
-    customBugItem->setIcon(1, QIcon::fromTheme("edit-rename"));
+    customBugItem->setIcon(1, QIcon::fromTheme(QStringLiteral("edit-rename")));
 
     QString helpMessage = i18nc("@info:tooltip / whatsthis",
                                 "Select this option to manually load a specific bug report");
@@ -78,55 +78,55 @@ BugzillaDuplicatesPage::BugzillaDuplicatesPage(ReportAssistantDialog * parent):
     ui.m_bugListWidget->addTopLevelItem(customBugItem);
 
     m_searchMoreGuiItem = KGuiItem2(i18nc("@action:button", "Search for more reports"),
-                                                   QIcon::fromTheme("edit-find"),
+                                                   QIcon::fromTheme(QStringLiteral("edit-find")),
                                                    i18nc("@info:tooltip", "Use this button to "
                                                         "search for more similar bug reports on an "
                                                         "earlier date."));
     KGuiItem::assign(ui.m_searchMoreButton, m_searchMoreGuiItem);
-    connect(ui.m_searchMoreButton, SIGNAL(clicked()), this, SLOT(searchMore()));
+    connect(ui.m_searchMoreButton, &QAbstractButton::clicked, this, &BugzillaDuplicatesPage::searchMore);
 
     m_retrySearchGuiItem = KGuiItem2(i18nc("@action:button", "Retry search"),
-                                                   QIcon::fromTheme("edit-find"),
+                                                   QIcon::fromTheme(QStringLiteral("edit-find")),
                                                    i18nc("@info:tooltip", "Use this button to "
                                                         "retry the search that previously "
                                                         "failed."));
 
     KGuiItem::assign(ui.m_openReportButton, KGuiItem2(i18nc("@action:button", "Open selected report"),
-                                                   QIcon::fromTheme("document-preview"),
+                                                   QIcon::fromTheme(QStringLiteral("document-preview")),
                                                    i18nc("@info:tooltip", "Use this button to view "
                                                    "the information of the selected bug report.")));
-    connect(ui.m_openReportButton, SIGNAL(clicked()), this, SLOT(openSelectedReport()));
+    connect(ui.m_openReportButton, &QAbstractButton::clicked, this, &BugzillaDuplicatesPage::openSelectedReport);
 
     KGuiItem::assign(ui.m_stopSearchButton, KGuiItem2(i18nc("@action:button", "Stop searching"),
-                                                   QIcon::fromTheme("process-stop"),
+                                                   QIcon::fromTheme(QStringLiteral("process-stop")),
                                                    i18nc("@info:tooltip", "Use this button to stop "
                                                    "the current search.")));
     ui.m_stopSearchButton->setText(QString()); //FIXME
-    connect(ui.m_stopSearchButton, SIGNAL(clicked()), this, SLOT(stopCurrentSearch()));
+    connect(ui.m_stopSearchButton, &QAbstractButton::clicked, this, &BugzillaDuplicatesPage::stopCurrentSearch);
 
     //Possible duplicates list and buttons
     connect(ui.m_selectedDuplicatesList, SIGNAL(itemDoubleClicked(QListWidgetItem*)),
              this, SLOT(itemClicked(QListWidgetItem*)));
-    connect(ui.m_selectedDuplicatesList, SIGNAL(itemSelectionChanged()),
-             this, SLOT(possibleDuplicateSelectionChanged()));
+    connect(ui.m_selectedDuplicatesList, &QListWidget::itemSelectionChanged,
+             this, &BugzillaDuplicatesPage::possibleDuplicateSelectionChanged);
 
     KGuiItem::assign(ui.m_removeSelectedDuplicateButton,
         KGuiItem2(i18nc("@action:button remove the selected item from a list", "Remove"),
-               QIcon::fromTheme("list-remove"),
+               QIcon::fromTheme(QStringLiteral("list-remove")),
                i18nc("@info:tooltip", "Use this button to remove a selected possible duplicate")));
     ui.m_removeSelectedDuplicateButton->setEnabled(false);
-    connect(ui.m_removeSelectedDuplicateButton, SIGNAL(clicked()), this,
-                                                                SLOT(removeSelectedDuplicate()));
+    connect(ui.m_removeSelectedDuplicateButton, &QAbstractButton::clicked, this,
+                                                                &BugzillaDuplicatesPage::removeSelectedDuplicate);
 
-    ui.m_attachToReportIcon->setPixmap(QIcon::fromTheme("mail-attachment").pixmap(16,16));
+    ui.m_attachToReportIcon->setPixmap(QIcon::fromTheme(QStringLiteral("mail-attachment")).pixmap(16,16));
     ui.m_attachToReportIcon->setFixedSize(16,16);
     ui.m_attachToReportIcon->setVisible(false);
     ui.m_attachToReportLabel->setVisible(false);
     ui.m_attachToReportLabel->setContextMenuPolicy(Qt::NoContextMenu);
-    connect(ui.m_attachToReportLabel, SIGNAL(linkActivated(QString)), this,
-                                                                SLOT(cancelAttachToBugReport()));
+    connect(ui.m_attachToReportLabel, &QLabel::linkActivated, this,
+                                                                &BugzillaDuplicatesPage::cancelAttachToBugReport);
     ui.information->setContextMenuPolicy(Qt::NoContextMenu);
-    connect(ui.information, SIGNAL(linkActivated(QString)), this, SLOT(informationClicked(QString)));
+    connect(ui.information, &QLabel::linkActivated, this, &BugzillaDuplicatesPage::informationClicked);
     showDuplicatesPanel(false);
 }
 
@@ -182,14 +182,14 @@ bool BugzillaDuplicatesPage::showNextPage()
                                              "as similar do not match the crash you have "
                                              "experienced, and you believe it is unlikely that a "
                                              "better match would be found after further review."));
-        noDuplicatesButton.setIcon(QIcon::fromTheme("dialog-cancel"));
+        noDuplicatesButton.setIcon(QIcon::fromTheme(QStringLiteral("dialog-cancel")));
 
         KGuiItem letMeCheckMoreReportsButton;
         letMeCheckMoreReportsButton.setText(i18n("Let me check more reports"));
         letMeCheckMoreReportsButton.setWhatsThis(i18n("Press this button if you would rather "
                                                       "review more reports in order to find a "
                                                       "match for the crash you have experienced."));
-        letMeCheckMoreReportsButton.setIcon(QIcon::fromTheme("document-preview"));
+        letMeCheckMoreReportsButton.setIcon(QIcon::fromTheme(QStringLiteral("document-preview")));
 
         if (KMessageBox::questionYesNo(this,
            i18nc("@info","You have not selected any possible duplicates, or a report to which to attach your "
@@ -218,8 +218,8 @@ void BugzillaDuplicatesPage::performSearch()
 {
     markAsSearching(true);
 
-    QString startDateStr = m_searchingStartDate.toString("yyyy-MM-dd");
-    QString endDateStr = m_searchingEndDate.toString("yyyy-MM-dd");
+    QString startDateStr = m_searchingStartDate.toString(QStringLiteral("yyyy-MM-dd"));
+    QString endDateStr = m_searchingEndDate.toString(QStringLiteral("yyyy-MM-dd"));
 
     ui.m_statusWidget->setBusy(i18nc("@info:status","Searching for duplicates (from %1 to %2)...",
                                    startDateStr, endDateStr));
@@ -234,7 +234,7 @@ void BugzillaDuplicatesPage::performSearch()
     BugReport report = reportInterface()->newBugReportTemplate();
     bugzillaManager()->searchBugs(reportInterface()->relatedBugzillaProducts(),
                                   report.bugSeverity(), startDateStr, endDateStr,
-                                  reportInterface()->firstBacktraceFunctions().join(" "));
+                                  reportInterface()->firstBacktraceFunctions().join(QStringLiteral(" ")));
 #else //Test search
     bugzillaManager()->searchBugs(QStringList() << "plasma", "crash", startDateStr, endDateStr,
        "QGraphicsScenePrivate::processDirtyItemsRecursive");
@@ -252,8 +252,8 @@ void BugzillaDuplicatesPage::stopCurrentSearch()
             ui.m_statusWidget->setIdle(i18nc("@info:status","Search stopped."));
         } else {
             ui.m_statusWidget->setIdle(i18nc("@info:status","Search stopped. Showing results from "
-                                        "%1 to %2", m_startDate.toString("yyyy-MM-dd"),
-                                        m_endDate.toString("yyyy-MM-dd")));
+                                        "%1 to %2", m_startDate.toString(QStringLiteral("yyyy-MM-dd")),
+                                        m_endDate.toString(QStringLiteral("yyyy-MM-dd"))));
         }
     }
 }
@@ -298,15 +298,15 @@ void BugzillaDuplicatesPage::searchFinished(const BugMapList & list)
         markAsSearching(false);
 
         ui.m_statusWidget->setIdle(i18nc("@info:status","Showing results from %1 to %2",
-                                     m_startDate.toString("yyyy-MM-dd"),
-                                     m_endDate.toString("yyyy-MM-dd")));
+                                     m_startDate.toString(QStringLiteral("yyyy-MM-dd")),
+                                     m_endDate.toString(QStringLiteral("yyyy-MM-dd"))));
 
         QList<int> bugIds;
         for (int i = 0; i < results; i++) {
             BugMap bug = list.at(i);
 
             bool ok;
-            int bugId = bug.value("bug_id").toInt(&ok);
+            int bugId = bug.value(QStringLiteral("bug_id")).toInt(&ok);
             if (ok) {
                 bugIds << bugId;
             }
@@ -315,8 +315,8 @@ void BugzillaDuplicatesPage::searchFinished(const BugMapList & list)
 
             //Generate a non-geek readable status
             QString customStatusString;
-            BugReport::Status status = BugReport::parseStatus(bug.value("bug_status"));
-            BugReport::Resolution resolution = BugReport::parseResolution(bug.value("resolution"));
+            BugReport::Status status = BugReport::parseStatus(bug.value(QStringLiteral("bug_status")));
+            BugReport::Resolution resolution = BugReport::parseResolution(bug.value(QStringLiteral("resolution")));
             if (BugReport::isOpen(status)) {
                 customStatusString = i18nc("@info bug status", "[Open]");
             } else if (BugReport::isClosed(status) && status != BugReport::NeedsInfo) {
@@ -336,13 +336,13 @@ void BugzillaDuplicatesPage::searchFinished(const BugMapList & list)
                 customStatusString = i18nc("@info bug status", "[Incomplete]");
             }
 
-            title = customStatusString + ' ' + bug["short_desc"];
+            title = customStatusString + ' ' + bug[QStringLiteral("short_desc")];
 
-            QStringList fields = QStringList() << bug["bug_id"] << title;
+            QStringList fields = QStringList() << bug[QStringLiteral("bug_id")] << title;
 
             QTreeWidgetItem * item = new QTreeWidgetItem(fields);
-            item->setToolTip(0, bug["short_desc"]);
-            item->setToolTip(1, bug["short_desc"]);
+            item->setToolTip(0, bug[QStringLiteral("short_desc")]);
+            item->setToolTip(1, bug[QStringLiteral("short_desc")]);
 
             ui.m_bugListWidget->addTopLevelItem(item);
         }
@@ -367,7 +367,7 @@ void BugzillaDuplicatesPage::searchFinished(const BugMapList & list)
             //We don't call markAsSearching(false) to avoid flicker
             //Delayed call to searchMore to avoid unexpected behaviour (signal/slot)
             //because we are in a slot, and searchMore() will be ending calling this slot again
-            QTimer::singleShot(0, this, SLOT(searchMore()));
+            QTimer::singleShot(0, this, &BugzillaDuplicatesPage::searchMore);
         } else {
             markAsSearching(false);
             ui.m_statusWidget->setIdle(i18nc("@info:status","Search Finished. "
@@ -408,7 +408,7 @@ void BugzillaDuplicatesPage::analyzedDuplicates(KJob *j)
         if (BugReport::isOpen(status) || (BugReport::isClosed(status) && status == BugReport::NeedsInfo)) {
             text = (parentDuplicate == duplicate ? i18nc("@label", "Your crash is a <strong>duplicate</strong> and has already been reported as <a href=\"%1\">Bug %1</a>.", QString::number(duplicate)) :
                 i18nc("@label", "Your crash has already been reported as <a href=\"%1\">Bug %1</a>, which is a <strong>duplicate</strong> of <a href=\"%2\">Bug %2</a>", QString::number(duplicate), QString::number(parentDuplicate))) +
-                '\n' + i18nc("@label", "Only <strong><a href=\"%1\">attach</a></strong> if you can add needed information to the bug report.", QString("attach"));
+                '\n' + i18nc("@label", "Only <strong><a href=\"%1\">attach</a></strong> if you can add needed information to the bug report.", QStringLiteral("attach"));
         } else if (BugReport::isClosed(status)) {
             text = (parentDuplicate == duplicate ? i18nc("@label", "Your crash has already been reported as <a href=\"%1\">Bug %1</a> which has been <strong>closed</strong>.", QString::number(duplicate)) :
                 i18nc("@label", "Your crash has already been reported as <a href=\"%1\">Bug %1</a>, which is a duplicate of the <strong>closed</strong> <a href=\"%2\">Bug %2</a>.", QString::number(duplicate), QString::number(parentDuplicate)));
@@ -486,9 +486,9 @@ void BugzillaDuplicatesPage::showReportInformationDialog(int bugNumber, bool rel
     }
 
     BugzillaReportInformationDialog * infoDialog = new BugzillaReportInformationDialog(this);
-    connect(infoDialog, SIGNAL(possibleDuplicateSelected(int)), this,
-                                                            SLOT(addPossibleDuplicateNumber(int)));
-    connect(infoDialog, SIGNAL(attachToBugReportSelected(int)), this, SLOT(attachToBugReport(int)));
+    connect(infoDialog, &BugzillaReportInformationDialog::possibleDuplicateSelected, this,
+                                                            &BugzillaDuplicatesPage::addPossibleDuplicateNumber);
+    connect(infoDialog, &BugzillaReportInformationDialog::attachToBugReportSelected, this, &BugzillaDuplicatesPage::attachToBugReport);
 
     infoDialog->showBugReport(bugNumber, relatedButtonEnabled);
 }
@@ -571,7 +571,7 @@ BugzillaReportInformationDialog::BugzillaReportInformationDialog(BugzillaDuplica
     ui.setupUi(this);
 
     KGuiItem::assign(ui.m_retryButton, KGuiItem2(i18nc("@action:button", "Retry..."),
-                                  QIcon::fromTheme("view-refresh"),
+                                  QIcon::fromTheme(QStringLiteral("view-refresh")),
                                   i18nc("@info:tooltip", "Use this button to retry "
                                                   "loading the bug report.")));
     connect(ui.m_retryButton, &QPushButton::clicked, this, &BugzillaReportInformationDialog::reloadReport);
@@ -580,16 +580,16 @@ BugzillaReportInformationDialog::BugzillaReportInformationDialog(BugzillaDuplica
     ui.buttonBox->addButton(m_suggestButton, QDialogButtonBox::ActionRole);
     KGuiItem::assign(m_suggestButton,
                 KGuiItem2(i18nc("@action:button", "Suggest this crash is related"),
-                    QIcon::fromTheme("list-add"), i18nc("@info:tooltip", "Use this button to suggest that "
+                    QIcon::fromTheme(QStringLiteral("list-add")), i18nc("@info:tooltip", "Use this button to suggest that "
                                              "the crash you experienced is related to this bug "
                                              "report")));
     connect(m_suggestButton, &QPushButton::clicked, this, &BugzillaReportInformationDialog::relatedReportClicked);
 
-    connect(ui.m_showOwnBacktraceCheckBox, SIGNAL(toggled(bool)), this, SLOT(toggleShowOwnBacktrace(bool)));
+    connect(ui.m_showOwnBacktraceCheckBox, &QAbstractButton::toggled, this, &BugzillaReportInformationDialog::toggleShowOwnBacktrace);
 
     //Connect bugzillalib signals
-    connect(m_parent->bugzillaManager(), SIGNAL(bugReportFetched(BugReport,QObject*)),
-             this, SLOT(bugFetchFinished(BugReport,QObject*)));
+    connect(m_parent->bugzillaManager(), &BugzillaManager::bugReportFetched,
+             this, &BugzillaReportInformationDialog::bugFetchFinished);
     connect(m_parent->bugzillaManager(), SIGNAL(bugReportError(QString,QObject*)),
              this, SLOT(bugFetchError(QString,QObject*)));
 
@@ -600,8 +600,8 @@ BugzillaReportInformationDialog::BugzillaReportInformationDialog(BugzillaDuplica
 
 BugzillaReportInformationDialog::~BugzillaReportInformationDialog()
 {
-    disconnect(m_parent->bugzillaManager(), SIGNAL(bugReportFetched(BugReport,QObject*)),
-             this, SLOT(bugFetchFinished(BugReport,QObject*)));
+    disconnect(m_parent->bugzillaManager(), &BugzillaManager::bugReportFetched,
+             this, &BugzillaReportInformationDialog::bugFetchFinished);
     disconnect(m_parent->bugzillaManager(), SIGNAL(bugReportError(QString,QObject*)),
              this, SLOT(bugFetchError(QString,QObject*)));
 
@@ -694,7 +694,7 @@ void BugzillaReportInformationDialog::bugFetchFinished(BugReport report, QObject
                 QString comment = commentList.at(i);
                 //Don't add duplicates mark comments
                 if (!comment.contains(duplicatesMark)) {
-                    comment.replace('\n', "<br />");
+                    comment.replace('\n', QLatin1String("<br />"));
                     comments += i18nc("comment $number to use as subtitle", "<h4>Comment %1:</h4>", (i+1))
                                     + "<p>" + comment + "</p><hr />";
                     //Count the inline attached crashes (DrKonqi feature)
@@ -754,7 +754,7 @@ void BugzillaReportInformationDialog::bugFetchFinished(BugReport report, QObject
                 customStatusString = i18nc("@info bug status", "Temporarily closed, because of a lack "
                                             "of information");
             } else { //Fallback to other raw values
-                customStatusString = QString("%1 (%2)").arg(report.bugStatus(), report.resolution());
+                customStatusString = QStringLiteral("%1 (%2)").arg(report.bugStatus(), report.resolution());
             }
 
             //Generate notes
@@ -797,7 +797,7 @@ void BugzillaReportInformationDialog::bugFetchFinished(BugReport report, QObject
                                 report.product(), report.component()) +
                 i18nc("@info bug report description",
                                 "<h3>Description of the bug</h3><p>%1</p>",
-                                report.description().replace('\n', "<br />"));
+                                report.description().replace('\n', QLatin1String("<br />")));
 
             if (!comments.isEmpty()) {
                 text += i18nc("@label:textbox bug report comments (already formatted)",
@@ -909,7 +909,7 @@ BugzillaReportConfirmationDialog::BugzillaReportConfirmationDialog(int bugNumber
 
     if (commonCrash) { //Common ("massive") crash
         m_showProceedQuestion = true;
-        ui.commonCrashIcon->setPixmap(QIcon::fromTheme("edit-bomb").pixmap(22,22));
+        ui.commonCrashIcon->setPixmap(QIcon::fromTheme(QStringLiteral("edit-bomb")).pixmap(22,22));
     } else {
         ui.commonCrashLabel->setVisible(false);
         ui.commonCrashIcon->setVisible(false);
@@ -921,7 +921,7 @@ BugzillaReportConfirmationDialog::BugzillaReportConfirmationDialog(int bugNumber
                            "<i>If the crash is the same, adding further information will be useless "
                            "and will consume developers' time.</i>",
                            closedState));
-        ui.closedReportIcon->setPixmap(QIcon::fromTheme("document-close").pixmap(22,22));
+        ui.closedReportIcon->setPixmap(QIcon::fromTheme(QStringLiteral("document-close")).pixmap(22,22));
         m_showProceedQuestion = true;
     } else {
         ui.closedReportLabel->setVisible(false);

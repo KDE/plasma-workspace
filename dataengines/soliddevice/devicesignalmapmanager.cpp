@@ -38,9 +38,9 @@ void DeviceSignalMapManager::mapDevice(Solid::Battery *battery, const QString &u
         map = (BatterySignalMapper*)signalmap[Solid::DeviceInterface::Battery];
     }
 
-    connect(battery, SIGNAL(chargePercentChanged(int,QString)), map, SLOT(chargePercentChanged(int)));
-    connect(battery, SIGNAL(chargeStateChanged(int,QString)), map, SLOT(chargeStateChanged(int)));
-    connect(battery, SIGNAL(presentStateChanged(bool,QString)), map, SLOT(presentStateChanged(bool)));
+    connect(battery, &Solid::Battery::chargePercentChanged, map, &BatterySignalMapper::chargePercentChanged);
+    connect(battery, &Solid::Battery::chargeStateChanged, map, &BatterySignalMapper::chargeStateChanged);
+    connect(battery, &Solid::Battery::presentStateChanged, map, &BatterySignalMapper::presentStateChanged);
     map->setMapping(battery, udi);
 }
 
@@ -55,7 +55,7 @@ void DeviceSignalMapManager::mapDevice(Solid::StorageAccess *storageaccess, cons
         map = (StorageAccessSignalMapper*)signalmap[Solid::DeviceInterface::StorageAccess];
     }
 
-    connect(storageaccess, SIGNAL(accessibilityChanged(bool,QString)), map, SLOT(accessibilityChanged(bool)));
+    connect(storageaccess, &Solid::StorageAccess::accessibilityChanged, map, &StorageAccessSignalMapper::accessibilityChanged);
     map->setMapping(storageaccess, udi);
 }
 
@@ -66,9 +66,9 @@ void DeviceSignalMapManager::unmapDevice(Solid::Battery *battery)
         return;
     }
 
-    disconnect(battery, SIGNAL(chargePercentChanged(int,QString)), map, SLOT(chargePercentChanged(int)));
-    disconnect(battery, SIGNAL(chargeStateChanged(int,QString)), map, SLOT(chargeStateChanged(int)));
-    disconnect(battery, SIGNAL(presentStateChanged(bool,QString)), map, SLOT(presentStateChanged(bool)));
+    disconnect(battery, &Solid::Battery::chargePercentChanged, map, &BatterySignalMapper::chargePercentChanged);
+    disconnect(battery, &Solid::Battery::chargeStateChanged, map, &BatterySignalMapper::chargeStateChanged);
+    disconnect(battery, &Solid::Battery::presentStateChanged, map, &BatterySignalMapper::presentStateChanged);
 }
 
 void DeviceSignalMapManager::unmapDevice(Solid::StorageAccess *storageaccess)
@@ -78,7 +78,7 @@ void DeviceSignalMapManager::unmapDevice(Solid::StorageAccess *storageaccess)
         return;
     }
 
-    disconnect(storageaccess, SIGNAL(accessibilityChanged(bool,QString)), map, SLOT(accessibilityChanged(bool)));
+    disconnect(storageaccess, &Solid::StorageAccess::accessibilityChanged, map, &StorageAccessSignalMapper::accessibilityChanged);
 }
 
 

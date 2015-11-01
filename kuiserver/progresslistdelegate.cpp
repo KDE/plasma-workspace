@@ -232,17 +232,17 @@ QList<QWidget*> ProgressListDelegate::createItemWidgets(const QModelIndex &index
     QList<QWidget*> widgetList;
 
     QPushButton *pauseResumeButton = new QPushButton();
-    pauseResumeButton->setIcon(QIcon::fromTheme("media-playback-pause"));
+    pauseResumeButton->setIcon(QIcon::fromTheme(QStringLiteral("media-playback-pause")));
 
     QPushButton *cancelButton = new QPushButton();
-    cancelButton->setIcon(QIcon::fromTheme("media-playback-stop"));
+    cancelButton->setIcon(QIcon::fromTheme(QStringLiteral("media-playback-stop")));
 
-    QPushButton *clearButton = new QPushButton(QIcon::fromTheme("edit-clear"), i18n("Clear"));
+    QPushButton *clearButton = new QPushButton(QIcon::fromTheme(QStringLiteral("edit-clear")), i18n("Clear"));
     QProgressBar *progressBar = new QProgressBar();
 
-    connect(pauseResumeButton, SIGNAL(clicked(bool)), this, SLOT(slotPauseResumeClicked()));
-    connect(cancelButton, SIGNAL(clicked(bool)), this, SLOT(slotCancelClicked()));
-    connect(clearButton, SIGNAL(clicked(bool)), this, SLOT(slotClearClicked()));
+    connect(pauseResumeButton, &QAbstractButton::clicked, this, &ProgressListDelegate::slotPauseResumeClicked);
+    connect(cancelButton, &QAbstractButton::clicked, this, &ProgressListDelegate::slotCancelClicked);
+    connect(clearButton, &QAbstractButton::clicked, this, &ProgressListDelegate::slotClearClicked);
 
     setBlockedEventTypes(pauseResumeButton, QList<QEvent::Type>() << QEvent::MouseButtonPress
                          << QEvent::MouseButtonRelease << QEvent::MouseButtonDblClick);
@@ -285,11 +285,11 @@ void ProgressListDelegate::updateItemWidgets(const QList<QWidget*> widgets,
     switch (state) {
     case JobView::Running:
         pauseResumeButton->setToolTip(i18n("Pause"));
-        pauseResumeButton->setIcon(QIcon::fromTheme("media-playback-pause"));
+        pauseResumeButton->setIcon(QIcon::fromTheme(QStringLiteral("media-playback-pause")));
         break;
     case JobView::Suspended:
         pauseResumeButton->setToolTip(i18n("Resume"));
-        pauseResumeButton->setIcon(QIcon::fromTheme("media-playback-start"));
+        pauseResumeButton->setIcon(QIcon::fromTheme(QStringLiteral("media-playback-start")));
         break;
     default:
         Q_ASSERT(0);

@@ -70,17 +70,17 @@ AppMenuModule::AppMenuModule(QObject* parent, const QList<QVariant>&)
 
     m_currentScreen = currentScreen();
 
-    connect(m_appmenuDBus, SIGNAL(appShowMenu(int, int, WId)), SLOT(slotShowMenu(int, int, WId)));
-    connect(m_appmenuDBus, SIGNAL(moduleReconfigure()), SLOT(reconfigure()));
+    connect(m_appmenuDBus, &AppmenuDBus::appShowMenu, this, &AppMenuModule::slotShowMenu);
+    connect(m_appmenuDBus, &AppmenuDBus::moduleReconfigure, this, &AppMenuModule::reconfigure);
 
     // transfer our signals to dbus
-    connect(this, SIGNAL(showRequest(qulonglong)), m_appmenuDBus, SIGNAL(showRequest(qulonglong)));
-    connect(this, SIGNAL(menuAvailable(qulonglong)), m_appmenuDBus, SIGNAL(menuAvailable(qulonglong)));
-    connect(this, SIGNAL(clearMenus()), m_appmenuDBus, SIGNAL(clearMenus()));
-    connect(this, SIGNAL(menuHidden(qulonglong)), m_appmenuDBus, SIGNAL(menuHidden(qulonglong)));
-    connect(this, SIGNAL(WindowRegistered(qulonglong, const QString&, const QDBusObjectPath&)),
-            m_appmenuDBus, SIGNAL(WindowRegistered(qulonglong, const QString&, const QDBusObjectPath&)));
-    connect(this, SIGNAL(WindowUnregistered(qulonglong)), m_appmenuDBus, SIGNAL(WindowUnregistered(qulonglong)));
+    connect(this, &AppMenuModule::showRequest, m_appmenuDBus, &AppmenuDBus::showRequest);
+    connect(this, &AppMenuModule::menuAvailable, m_appmenuDBus, &AppmenuDBus::menuAvailable);
+    connect(this, &AppMenuModule::clearMenus, m_appmenuDBus, &AppmenuDBus::clearMenus);
+    connect(this, &AppMenuModule::menuHidden, m_appmenuDBus, &AppmenuDBus::menuHidden);
+    connect(this, &AppMenuModule::WindowRegistered,
+            m_appmenuDBus, &AppmenuDBus::WindowRegistered);
+    connect(this, &AppMenuModule::WindowUnregistered, m_appmenuDBus, &AppmenuDBus::WindowUnregistered);
 }
 
 AppMenuModule::~AppMenuModule()
@@ -140,7 +140,7 @@ void AppMenuModule::slotShowMenu(int x, int y, WId id)
         m_menu->setActiveAction(m_waitingAction);
         m_waitingAction = 0;
     }
-    connect(m_menu, SIGNAL(aboutToHide()), this, SLOT(slotAboutToHide()));
+    connect(m_menu, &QMenu::aboutToHide, this, &AppMenuModule::slotAboutToHide);
 }
 
 void AppMenuModule::slotAboutToHide()
@@ -161,9 +161,9 @@ void AppMenuModule::slotWindowRegistered(WId id, const QString& service, const Q
     }
 
     // Application already active so check if we need create menubar
-    if ( m_menuStyle == "TopMenuBar" && id == KWindowSystem::self()->activeWindow()) {
+    if ( m_menuStyle == QLatin1String("TopMenuBar") && id == KWindowSystem::self()->activeWindow()) {
         slotActiveWindowChanged(id);
-    } else if (m_menuStyle == "ButtonVertical") {
+    } else if (m_menuStyle == QLatin1String("ButtonVertical")) {
         KWindowInfo info(id, 0, NET::WM2WindowClass);
         // Tell Kwin menu is available
         emit menuAvailable(id);
@@ -283,7 +283,7 @@ void AppMenuModule::slotBarNeedResize()
 // reload settings
 void AppMenuModule::reconfigure()
 {
-    KConfig config( "kdeglobals", KConfig::FullConfig );
+    KConfig config( QStringLiteral("kdeglobals"), KConfig::FullConfig );
     KConfigGroup configGroup = config.group("Appmenu Style");
     m_menuStyle = configGroup.readEntry("Style", "InApplication");
 
@@ -299,16 +299,16 @@ void AppMenuModule::reconfigure()
     slotAboutToHide(); // hide vertical menu if exist
 
     // Disconnect all options specifics signals
-    disconnect(KWindowSystem::self(), SIGNAL(activeWindowChanged(WId)), this, SLOT(slotActiveWindowChanged(WId)));
-    disconnect(KWindowSystem::self(), SIGNAL(workAreaChanged()), this, SLOT(slotShowCurrentWindowMenu()));
-    disconnect(m_screenTimer, SIGNAL(timeout()), this, SLOT(slotCurrentScreenChanged()));
+    disconnect(KWindowSystem::self(), &KWindowSystem::activeWindowChanged, this, &AppMenuModule::slotActiveWindowChanged);
+    disconnect(KWindowSystem::self(), &KWindowSystem::workAreaChanged, this, &AppMenuModule::slotShowCurrentWindowMenu);
+    disconnect(m_screenTimer, &QTimer::timeout, this, &AppMenuModule::slotCurrentScreenChanged);
 
     m_screenTimer->stop();
 
     // Tell kwin to clean its titlebar
     emit clearMenus();
 
-    if (m_menuStyle == "InApplication") {
+    if (m_menuStyle == QLatin1String("InApplication")) {
         if (m_menuImporter) {
             delete m_menuImporter;
             m_menuImporter = 0;
@@ -319,21 +319,21 @@ void AppMenuModule::reconfigure()
     // Setup a menu importer if needed
     if (!m_menuImporter) {
         m_menuImporter = new MenuImporter(m_parent);
-        connect(m_menuImporter, SIGNAL(WindowRegistered(WId, const QString&, const QDBusObjectPath&)),
-            SLOT(slotWindowRegistered(WId, const QString&, const QDBusObjectPath&)));
-        connect(m_menuImporter, SIGNAL(WindowUnregistered(WId)),
-            SLOT(slotWindowUnregistered(WId)));
+        connect(m_menuImporter, &MenuImporter::WindowRegistered,
+            this, &AppMenuModule::slotWindowRegistered);
+        connect(m_menuImporter, &MenuImporter::WindowUnregistered,
+            this, &AppMenuModule::slotWindowUnregistered);
         m_menuImporter->connectToBus();
     }
 
-    if( m_menuStyle == "ButtonVertical" ) {
+    if( m_menuStyle == QLatin1String("ButtonVertical") ) {
         foreach(WId id, m_menuImporter->ids()) {
             emit menuAvailable(id);
         }
     }
 
     // Setup top menubar if needed
-    if (m_menuStyle == "TopMenuBar") {
+    if (m_menuStyle == QLatin1String("TopMenuBar")) {
 #if 0
         m_menubar = new TopMenuBar();
         connect(KWindowSystem::self(), SIGNAL(activeWindowChanged(WId)), this, SLOT(slotActiveWindowChanged(WId)));
@@ -356,8 +356,8 @@ KDBusMenuImporter* AppMenuModule::getImporter(WId id)
                                              m_menuImporter->pathForWindow(id), this);
         if (importer) {
             QMetaObject::invokeMethod(importer, "updateMenu", Qt::DirectConnection);
-            connect(importer, SIGNAL(actionActivationRequested(QAction*)),
-                    SLOT(slotActionActivationRequested(QAction*)));
+            connect(importer, &DBusMenuImporter::actionActivationRequested,
+                    this, &AppMenuModule::slotActionActivationRequested);
             m_importers.insert(id, importer);
         }
     }

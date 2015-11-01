@@ -69,9 +69,9 @@ BugzillaLoginPage::BugzillaLoginPage(ReportAssistantDialog * parent) :
         m_wallet(0), m_walletWasOpenedBefore(false),
         m_bugzillaVersionFound(false)
 {
-    connect(bugzillaManager(), SIGNAL(bugzillaVersionFound()), this, SLOT(bugzillaVersionFound()));
-    connect(bugzillaManager(), SIGNAL(loginFinished(bool)), this, SLOT(loginFinished(bool)));
-    connect(bugzillaManager(), SIGNAL(loginError(QString,QString)), this, SLOT(loginError(QString,QString)));
+    connect(bugzillaManager(), &BugzillaManager::bugzillaVersionFound, this, &BugzillaLoginPage::bugzillaVersionFound);
+    connect(bugzillaManager(), &BugzillaManager::loginFinished, this, &BugzillaLoginPage::loginFinished);
+    connect(bugzillaManager(), &BugzillaManager::loginError, this, &BugzillaLoginPage::loginError);
 
     ui.setupUi(this);
     ui.m_statusWidget->setIdle(i18nc("@info:status '1' is replaced with the short URL of the bugzilla ",
@@ -79,7 +79,7 @@ BugzillaLoginPage::BugzillaLoginPage(ReportAssistantDialog * parent) :
                                    QLatin1String(KDE_BUGZILLA_SHORT_URL)));
 
     KGuiItem::assign(ui.m_loginButton, KGuiItem2(i18nc("@action:button", "Login"),
-                                              QIcon::fromTheme("network-connect"),
+                                              QIcon::fromTheme(QStringLiteral("network-connect")),
                                               i18nc("@info:tooltip", "Use this button to login "
                                               "to the KDE bug tracking system using the provided "
                                               "username and password.")));
@@ -160,7 +160,7 @@ void BugzillaLoginPage::aboutToShow()
                                       bugzillaManager()->getUsername()));
     } else {
         //Try to show wallet dialog once this dialog is shown
-        QTimer::singleShot(100, this, SLOT(walletLogin()));
+        QTimer::singleShot(100, this, &BugzillaLoginPage::walletLogin);
     }
 }
 
@@ -484,13 +484,13 @@ void BugzillaInformationPage::aboutToShow()
     QString descriptionTemplate;
     if (ui.m_detailsEdit->toPlainText().isEmpty()) {
         if (reportInterface()->userCanProvideActionsAppDesktop()) {
-            descriptionTemplate += "- What I was doing when the application crashed:\n\n";
+            descriptionTemplate += QLatin1String("- What I was doing when the application crashed:\n\n");
         }
         if (reportInterface()->userCanProvideUnusualBehavior()) {
-            descriptionTemplate += "- Unusual behavior I noticed:\n\n";
+            descriptionTemplate += QLatin1String("- Unusual behavior I noticed:\n\n");
         }
         if (reportInterface()->userCanProvideApplicationConfigDetails()) {
-            descriptionTemplate += "- Custom settings of the application:\n\n";
+            descriptionTemplate += QLatin1String("- Custom settings of the application:\n\n");
         }
         ui.m_detailsEdit->setText(descriptionTemplate);
     }
@@ -503,9 +503,9 @@ int BugzillaInformationPage::currentDescriptionCharactersCount()
     QString description = ui.m_detailsEdit->toPlainText();
 
     //Do not count template messages, and other misc chars
-    description.remove("What I was doing when the application crashed");
-    description.remove("Unusual behavior I noticed");
-    description.remove("Custom settings of the application");
+    description.remove(QStringLiteral("What I was doing when the application crashed"));
+    description.remove(QStringLiteral("Unusual behavior I noticed"));
+    description.remove(QStringLiteral("Custom settings of the application"));
     description.remove('\n');
     description.remove('-');
     description.remove(':');
@@ -682,25 +682,25 @@ BugzillaSendPage::BugzillaSendPage(ReportAssistantDialog * parent)
         : ReportAssistantPage(parent),
         m_contentsDialog(0)
 {
-    connect(reportInterface(), SIGNAL(reportSent(int)), this, SLOT(sent(int)));
-    connect(reportInterface(), SIGNAL(sendReportError(QString,QString)), this, SLOT(sendError(QString,QString)));
+    connect(reportInterface(), &ReportInterface::reportSent, this, &BugzillaSendPage::sent);
+    connect(reportInterface(), &ReportInterface::sendReportError, this, &BugzillaSendPage::sendError);
 
     ui.setupUi(this);
 
     KGuiItem::assign(ui.m_retryButton, KGuiItem2(i18nc("@action:button", "Retry..."),
-                                              QIcon::fromTheme("view-refresh"),
+                                              QIcon::fromTheme(QStringLiteral("view-refresh")),
                                               i18nc("@info:tooltip", "Use this button to retry "
                                                   "sending the crash report if it failed before.")));
 
     KGuiItem::assign(ui.m_showReportContentsButton,
                     KGuiItem2(i18nc("@action:button", "Sho&w Contents of the Report"),
-                            QIcon::fromTheme("document-preview"),
+                            QIcon::fromTheme(QStringLiteral("document-preview")),
                             i18nc("@info:tooltip", "Use this button to show the generated "
                             "report information about this crash.")));
     connect(ui.m_showReportContentsButton, &QPushButton::clicked, this, &BugzillaSendPage::openReportContents);
 
     ui.m_retryButton->setVisible(false);
-    connect(ui.m_retryButton, SIGNAL(clicked()), this , SLOT(retryClicked()));
+    connect(ui.m_retryButton, &QAbstractButton::clicked, this , &BugzillaSendPage::retryClicked);
 
     ui.m_launchPageOnFinish->setVisible(false);
     ui.m_restartAppOnFinish->setVisible(false);
@@ -793,7 +793,7 @@ UnhandledErrorDialog::UnhandledErrorDialog(QWidget * parent, const QString & err
 
     QPushButton* saveButton = new QPushButton(this);
     saveButton->setText(i18nc("@action:button save html to a file","Save to a file"));
-    saveButton->setIcon(QIcon::fromTheme("document-save"));
+    saveButton->setIcon(QIcon::fromTheme(QStringLiteral("document-save")));
     connect(saveButton, &QPushButton::clicked, this, &UnhandledErrorDialog::saveErrorMessage);
 
     setAttribute(Qt::WA_DeleteOnClose);
@@ -802,7 +802,7 @@ UnhandledErrorDialog::UnhandledErrorDialog(QWidget * parent, const QString & err
 
     QLabel * iconLabel = new QLabel(this);
     iconLabel->setFixedSize(32, 32);
-    iconLabel->setPixmap(QIcon::fromTheme("dialog-warning").pixmap(32, 32));
+    iconLabel->setPixmap(QIcon::fromTheme(QStringLiteral("dialog-warning")).pixmap(32, 32));
 
     QLabel * mainLabel = new QLabel(this);
     mainLabel->setWordWrap(true);

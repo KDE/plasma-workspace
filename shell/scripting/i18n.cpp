@@ -113,9 +113,9 @@ QScriptValue jsi18ncp(QScriptContext *context, QScriptEngine *engine)
 void bindI18N(QScriptEngine *engine)
 {
     QScriptValue global = engine->globalObject();
-    global.setProperty("i18n", engine->newFunction(jsi18n));
-    global.setProperty("i18nc", engine->newFunction(jsi18nc));
-    global.setProperty("i18np", engine->newFunction(jsi18np));
-    global.setProperty("i18ncp", engine->newFunction(jsi18ncp));
+    global.setProperty(QStringLiteral("i18n"), engine->newFunction(jsi18n));
+    global.setProperty(QStringLiteral("i18nc"), engine->newFunction(jsi18nc));
+    global.setProperty(QStringLiteral("i18np"), engine->newFunction(jsi18np));
+    global.setProperty(QStringLiteral("i18ncp"), engine->newFunction(jsi18ncp));
 }
 

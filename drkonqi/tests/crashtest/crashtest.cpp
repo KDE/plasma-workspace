@@ -76,14 +76,14 @@ void do_qassert()
 
 void map_function(const QString & s)
 {
-    while ( s != "thread 4" ) {}
+    while ( s != QLatin1String("thread 4") ) {}
     do_crash();
 }
 
 void do_threads()
 {
     QStringList foo;
-    foo << "thread 1" << "thread 2" << "thread 3" << "thread 4" << "thread 5";
+    foo << QStringLiteral("thread 1") << QStringLiteral("thread 2") << QStringLiteral("thread 3") << QStringLiteral("thread 4") << QStringLiteral("thread 5");
     QThreadPool::globalInstance()->setMaxThreadCount(5);
     QtConcurrent::blockingMap(foo, map_function);
 }
@@ -122,22 +122,22 @@ void level1(int t)
 int main(int argc, char *argv[])
 {
   QApplication app(argc, argv);
-  KAboutData aboutData("crashtext", i18n("Crash Test for DrKonqi"),
-                       "1.1",
+  KAboutData aboutData(QStringLiteral("crashtext"), i18n("Crash Test for DrKonqi"),
+                       QStringLiteral("1.1"),
                        i18n("Crash Test for DrKonqi"),
                        KAboutLicense::GPL,
                        i18n("(c) 2000-2002 David Faure, Waldo Bastian"));
 
   QCommandLineParser parser;
-  parser.addOption(QCommandLineOption("autorestart", i18n("Automatically restart")));
-  parser.addPositionalArgument("type", i18n("Type of crash."), "crash|malloc|div0|assert|threads");
+  parser.addOption(QCommandLineOption(QStringLiteral("autorestart"), i18n("Automatically restart")));
+  parser.addPositionalArgument(QStringLiteral("type"), i18n("Type of crash."), QStringLiteral("crash|malloc|div0|assert|threads"));
   aboutData.setupCommandLine(&parser);
   parser.process(app);
   aboutData.processCommandLine(&parser);
 
   //start drkonqi directly so that drkonqi's output goes to the console
   KCrash::CrashFlags flags = KCrash::AlwaysDirectly;
-  if (parser.isSet("autorestart"))
+  if (parser.isSet(QStringLiteral("autorestart")))
     flags |= KCrash::AutoRestart;
   KCrash::setFlags(flags);
 

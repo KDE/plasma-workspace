@@ -34,7 +34,7 @@ TasksEngine::TasksEngine(QObject *parent, const QVariantList &args) :
     //TasksModel does not initialize itself, So we need to set grouping strategy.
     m_groupManager->setGroupingStrategy(TaskManager::GroupManager::NoGrouping);
     m_groupManager->setSortingStrategy(TaskManager::GroupManager::DesktopSorting);
-    setModel("tasks", m_tasksModel);
+    setModel(QStringLiteral("tasks"), m_tasksModel);
     m_groupManager->reconnect();
 }
 
@@ -48,7 +48,7 @@ Plasma::Service *TasksEngine::serviceForSource(const QString &name)
     if (name.isEmpty())
     {
 	service = new TaskWindowService();
-    } else if (name == "tasks") {
+    } else if (name == QLatin1String("tasks")) {
 	service = new TaskService(m_tasksModel, m_groupManager);
     } else {
         service = Plasma::DataEngine::serviceForSource(name);
@@ -59,7 +59,7 @@ Plasma::Service *TasksEngine::serviceForSource(const QString &name)
 
 bool TasksEngine::sourceRequestEvent(const QString &source)
 {
-    if (source == "virtualDesktops") {
+    if (source == QLatin1String("virtualDesktops")) {
         addSource(new VirtualDesktopsSource);
         return true;
     }

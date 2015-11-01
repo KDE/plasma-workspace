@@ -24,8 +24,8 @@
 
 void LayoutTemplatePackage::initPackage(KPackage::Package *package)
 {
-    package->setDefaultPackageRoot("plasma/layout-templates/");
-    package->addFileDefinition("mainscript", "layout.js", i18n("Main Script File"));
+    package->setDefaultPackageRoot(QStringLiteral("plasma/layout-templates/"));
+    package->addFileDefinition("mainscript", QStringLiteral("layout.js"), i18n("Main Script File"));
     package->setRequired("mainscript", true);
 }
 

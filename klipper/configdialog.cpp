@@ -55,10 +55,10 @@ ActionsWidget::ActionsWidget(QWidget* parent)
 {
     m_ui.setupUi(this);
 
-    m_ui.pbAddAction->setIcon(QIcon::fromTheme("list-add"));
-    m_ui.pbDelAction->setIcon(QIcon::fromTheme("list-remove"));
-    m_ui.pbEditAction->setIcon(QIcon::fromTheme("document-edit"));
-    m_ui.pbAdvanced->setIcon(QIcon::fromTheme("configure"));
+    m_ui.pbAddAction->setIcon(QIcon::fromTheme(QStringLiteral("list-add")));
+    m_ui.pbDelAction->setIcon(QIcon::fromTheme(QStringLiteral("list-remove")));
+    m_ui.pbEditAction->setIcon(QIcon::fromTheme(QStringLiteral("document-edit")));
+    m_ui.pbAdvanced->setIcon(QIcon::fromTheme(QStringLiteral("configure")));
 
     const KConfigGroup grp = KSharedConfig::openConfig()->group("ActionsWidget");
     QByteArray hdrState = grp.readEntry("ColumnState", QByteArray());
@@ -147,7 +147,7 @@ void ActionsWidget::updateActionItem( QTreeWidgetItem* item, ClipAction* action 
         QStringList cmdProps;
         cmdProps << command.command << command.description;
         QTreeWidgetItem *child = new QTreeWidgetItem(item, cmdProps);
-        child->setIcon(0, QIcon::fromTheme(command.icon.isEmpty() ? "system-run" : command.icon));
+        child->setIcon(0, QIcon::fromTheme(command.icon.isEmpty() ? QStringLiteral("system-run") : command.icon));
     }
 }
 
@@ -279,17 +279,17 @@ void ActionsWidget::onAdvanced()
 }
 
 ConfigDialog::ConfigDialog(QWidget* parent, KConfigSkeleton* skeleton, const Klipper* klipper, KActionCollection*collection)
-    : KConfigDialog(parent, "preferences", skeleton),
+    : KConfigDialog(parent, QStringLiteral("preferences"), skeleton),
     m_generalPage(new GeneralWidget(this)),
     m_actionsPage(new ActionsWidget(this)),
     m_klipper(klipper)
 {
-    addPage(m_generalPage, i18nc("General Config", "General"), "klipper", i18n("General Configuration"));
-    addPage(m_actionsPage, i18nc("Actions Config", "Actions"), "system-run", i18n("Actions Configuration"));
+    addPage(m_generalPage, i18nc("General Config", "General"), QStringLiteral("klipper"), i18n("General Configuration"));
+    addPage(m_actionsPage, i18nc("Actions Config", "Actions"), QStringLiteral("system-run"), i18n("Actions Configuration"));
 
     QWidget* w = new QWidget(this);
     m_shortcutsWidget = new KShortcutsEditor( collection, w, KShortcutsEditor::GlobalAction );
-    addPage(m_shortcutsWidget, i18nc("Shortcuts Config", "Shortcuts"), "configure-shortcuts", i18n("Shortcuts Configuration"));
+    addPage(m_shortcutsWidget, i18nc("Shortcuts Config", "Shortcuts"), QStringLiteral("configure-shortcuts"), i18n("Shortcuts Configuration"));
 
     const KConfigGroup grp = KSharedConfig::openConfig()->group("ConfigDialog");
     KWindowConfig::restoreWindowSize(windowHandle(), grp);

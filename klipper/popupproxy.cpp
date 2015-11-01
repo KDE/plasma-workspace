@@ -40,7 +40,7 @@ PopupProxy::PopupProxy( KlipperPopup* parent, int menu_height, int menu_width )
     if (!parent->history()->empty()) {
         m_spill_uuid = parent->history()->first()->uuid();
     }
-    connect( parent->history(), SIGNAL(changed()), SLOT(slotHistoryChanged()) );
+    connect( parent->history(), &History::changed, this, &PopupProxy::slotHistoryChanged );
     connect(m_proxy_for_menu, SIGNAL(triggered(QAction*)), parent->history(), SLOT(slotMoveToTop(QAction*)));
 }
 
@@ -93,7 +93,7 @@ void PopupProxy::tryInsertItem( HistoryItem const * const item,
     if ( image.isNull() ) {
         // Squeeze text strings so that do not take up the entire screen (or more)
         QString text = m_proxy_for_menu->fontMetrics().elidedText( item->text().simplified(), Qt::ElideMiddle, m_menu_width );
-        text.replace( '&', "&&" );
+        text.replace( '&', QLatin1String("&&") );
         action->setText(text);
     } else {
 #if 0 // not used because QAction#setIcon does not respect this size; it does scale anyway. TODO: find a way to set a bigger image

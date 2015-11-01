@@ -31,7 +31,7 @@ TaskJob::~TaskJob()
 
 void TaskJob::start()
 {
-    TaskManager::AbstractGroupableItem* item = m_groupManager->rootGroup()->getMemberById(parameters().value("Id").toInt());
+    TaskManager::AbstractGroupableItem* item = m_groupManager->rootGroup()->getMemberById(parameters().value(QStringLiteral("Id")).toInt());
 
     if (!item) {
         return;
@@ -41,96 +41,96 @@ void TaskJob::start()
 
     // only a subset of task operations are exported
     const QString operation = operationName();
-    if (operation == "setMaximized") {
-        taskItem->task()->setMaximized(parameters().value("maximized").toBool());
+    if (operation == QLatin1String("setMaximized")) {
+        taskItem->task()->setMaximized(parameters().value(QStringLiteral("maximized")).toBool());
         setResult(true);
         return;
-    } else if (operation == "setMinimized") {
-        taskItem->task()->setIconified(parameters().value("minimized").toBool());
+    } else if (operation == QLatin1String("setMinimized")) {
+        taskItem->task()->setIconified(parameters().value(QStringLiteral("minimized")).toBool());
         setResult(true);
         return;
-    } else if (operation == "setShaded") {
-        taskItem->task()->setShaded(parameters().value("shaded").toBool());
+    } else if (operation == QLatin1String("setShaded")) {
+        taskItem->task()->setShaded(parameters().value(QStringLiteral("shaded")).toBool());
         setResult(true);
         return;
-    } else if (operation == "setFullScreen") {
-        taskItem->task()->setFullScreen(parameters().value("fullScreen").toBool());
+    } else if (operation == QLatin1String("setFullScreen")) {
+        taskItem->task()->setFullScreen(parameters().value(QStringLiteral("fullScreen")).toBool());
         setResult(true);
         return;
-    } else if (operation == "setAlwaysOnTop") {
-        taskItem->task()->setAlwaysOnTop(parameters().value("alwaysOnTop").toBool());
+    } else if (operation == QLatin1String("setAlwaysOnTop")) {
+        taskItem->task()->setAlwaysOnTop(parameters().value(QStringLiteral("alwaysOnTop")).toBool());
         setResult(true);
         return;
-    } else if (operation == "setKeptBelowOthers") {
-        taskItem->task()->setKeptBelowOthers(parameters().value("keptBelowOthers").toBool());
+    } else if (operation == QLatin1String("setKeptBelowOthers")) {
+        taskItem->task()->setKeptBelowOthers(parameters().value(QStringLiteral("keptBelowOthers")).toBool());
         setResult(true);
         return;
-    } else if (operation == "toggleMaximized") {
+    } else if (operation == QLatin1String("toggleMaximized")) {
         taskItem->task()->toggleMaximized();
         setResult(true);
         return;
-    } else if (operation == "toggleMinimized") {
+    } else if (operation == QLatin1String("toggleMinimized")) {
         taskItem->task()->toggleIconified();
         setResult(true);
         return;
-    } else if (operation == "toggleShaded") {
+    } else if (operation == QLatin1String("toggleShaded")) {
         taskItem->task()->toggleShaded();
         setResult(true);
         return;
-    } else if (operation == "toggleFullScreen") {
+    } else if (operation == QLatin1String("toggleFullScreen")) {
         taskItem->task()->toggleFullScreen();
         setResult(true);
         return;
-    } else if (operation == "toggleAlwaysOnTop") {
+    } else if (operation == QLatin1String("toggleAlwaysOnTop")) {
         taskItem->task()->toggleAlwaysOnTop();
         setResult(true);
         return;
-    } else if (operation == "toggleKeptBelowOthers") {
+    } else if (operation == QLatin1String("toggleKeptBelowOthers")) {
         taskItem->task()->toggleKeptBelowOthers();
         setResult(true);
         return;
-    } else if (operation == "restore") {
+    } else if (operation == QLatin1String("restore")) {
         taskItem->task()->restore();
         setResult(true);
         return;
-    } else if (operation == "resize") {
+    } else if (operation == QLatin1String("resize")) {
         taskItem->task()->resize();
         setResult(true);
         return;
-    } else if (operation == "move") {
+    } else if (operation == QLatin1String("move")) {
         taskItem->task()->move();
         setResult(true);
         return;
-    } else if (operation == "raise") {
+    } else if (operation == QLatin1String("raise")) {
         taskItem->task()->raise();
         setResult(true);
         return;
-    } else if (operation == "lower") {
+    } else if (operation == QLatin1String("lower")) {
         taskItem->task()->lower();
         setResult(true);
         return;
-    } else if (operation == "activate") {
+    } else if (operation == QLatin1String("activate")) {
         taskItem->task()->activate();
         setResult(true);
         return;
-    } else if (operation == "activateRaiseOrIconify") {
+    } else if (operation == QLatin1String("activateRaiseOrIconify")) {
         taskItem->task()->activateRaiseOrIconify();
         setResult(true);
         return;
-    } else if (operation == "close") {
+    } else if (operation == QLatin1String("close")) {
         taskItem->task()->close();
         setResult(true);
         return;
-    } else if (operation == "toDesktop") {
-        taskItem->task()->toDesktop(parameters().value("desktop").toInt());
+    } else if (operation == QLatin1String("toDesktop")) {
+        taskItem->task()->toDesktop(parameters().value(QStringLiteral("desktop")).toInt());
         setResult(true);
         return;
-    } else if (operation == "toCurrentDesktop") {
+    } else if (operation == QLatin1String("toCurrentDesktop")) {
         taskItem->task()->toCurrentDesktop();
         setResult(true);
         return;
-    } else if (operation == "publishIconGeometry") {
-        taskItem->task()->publishIconGeometry(parameters().value("geometry").toRect());
+    } else if (operation == QLatin1String("publishIconGeometry")) {
+        taskItem->task()->publishIconGeometry(parameters().value(QStringLiteral("geometry")).toRect());
         setResult(true);
         return;
     }

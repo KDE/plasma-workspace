@@ -55,7 +55,7 @@ LauncherProperties::LauncherProperties(QWidget *parent)
 
     setAttribute(Qt::WA_DeleteOnClose);
     setWindowModality(Qt::WindowModal);
-    ui.browse->setIcon(QIcon::fromTheme("document-open"));
+    ui.browse->setIcon(QIcon::fromTheme(QStringLiteral("document-open")));
     connect(ui.detect, &QPushButton::clicked, this, &LauncherProperties::detect);
     connect(ui.browse, &QPushButton::clicked, this, &LauncherProperties::browse);
     connect(ui.classClass, &KLineEdit::textChanged, this, &LauncherProperties::check);

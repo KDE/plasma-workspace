@@ -75,16 +75,16 @@ PlasmoidTask::PlasmoidTask(const QString &packageName, int appletId, Plasma::Con
         m_taskGraphicsObject->setWidth(0);
         m_taskGraphicsObject->setHeight(0);
 
-        Plasma::Package package = Plasma::PluginLoader::self()->loadPackage("Plasma/Shell");
+        Plasma::Package package = Plasma::PluginLoader::self()->loadPackage(QStringLiteral("Plasma/Shell"));
         package.setDefaultPackageRoot(PLASMA_RELATIVE_DATA_INSTALL_DIR "/plasmoids/");
-        package.setPath("org.kde.plasma.systemtray");
+        package.setPath(QStringLiteral("org.kde.plasma.systemtray"));
 
         m_taskGraphicsObject->setCoronaPackage(package);
         QMetaObject::invokeMethod(m_taskGraphicsObject, "init", Qt::QueuedConnection);
 
         //old syntax, because we are connecting blindly
-        connect(m_taskGraphicsObject, SIGNAL(expandedChanged(bool)),
-                this, SIGNAL(expandedChanged(bool)));
+        connect(m_taskGraphicsObject, &PlasmaQuick::AppletQuickItem::expandedChanged,
+                this, &Task::expandedChanged);
     }
 
 
@@ -100,7 +100,7 @@ PlasmoidTask::PlasmoidTask(const QString &packageName, int appletId, Plasma::Con
         setName(pluginInfo().name());
         m_iconName = pluginInfo().icon();
 
-        const QString category = pluginInfo().property("X-Plasma-NotificationAreaCategory").toString();
+        const QString category = pluginInfo().property(QStringLiteral("X-Plasma-NotificationAreaCategory")).toString();
         if (!category.isEmpty()) {
 
             int index = metaObject()->indexOfEnumerator("Category");
@@ -180,7 +180,7 @@ void PlasmoidTask::configure()
         return;
     }
 
-    m_applet->actions()->action("configure")->trigger();
+    m_applet->actions()->action(QStringLiteral("configure"))->trigger();
 }
 
 void PlasmoidTask::setLocation(Plasma::Types::Location loc)
@@ -268,8 +268,8 @@ void PlasmoidTask::showMenu(int x, int y)
             desktopMenu.addAction(action);
         }
     }
-    if (m_applet->actions()->action("configure")) {
-        desktopMenu.addAction(m_applet->actions()->action("configure"));
+    if (m_applet->actions()->action(QStringLiteral("configure"))) {
+        desktopMenu.addAction(m_applet->actions()->action(QStringLiteral("configure")));
     }
 
 
@@ -288,11 +288,11 @@ void PlasmoidTask::showMenu(int x, int y)
                             systrayMenu->addAction(action);
                         }
                     }
-                    if (systrayApplet->actions()->action("configure")) {
-                        systrayMenu->addAction(systrayApplet->actions()->action("configure"));
+                    if (systrayApplet->actions()->action(QStringLiteral("configure"))) {
+                        systrayMenu->addAction(systrayApplet->actions()->action(QStringLiteral("configure")));
                     }
-                    if (systrayApplet->actions()->action("remove")) {
-                        systrayMenu->addAction(systrayApplet->actions()->action("remove"));
+                    if (systrayApplet->actions()->action(QStringLiteral("remove"))) {
+                        systrayMenu->addAction(systrayApplet->actions()->action(QStringLiteral("remove")));
                     }
                     desktopMenu.addMenu(systrayMenu);
 

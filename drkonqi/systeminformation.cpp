@@ -36,8 +36,8 @@
 #include <KSharedConfig>
 #include <QStandardPaths>
 
-static const QString OS_UNSPECIFIED = "unspecified";
-static const QString PLATFORM_UNSPECIFIED = "unspecified";
+static const QString OS_UNSPECIFIED = QStringLiteral("unspecified");
+static const QString PLATFORM_UNSPECIFIED = QStringLiteral("unspecified");
 
 SystemInformation::SystemInformation(QObject * parent)
     : QObject(parent)
@@ -84,8 +84,8 @@ void SystemInformation::tryToSetBugzillaPlatformFromExternalInfo()
         qDebug() << "found lsb_release";
         KProcess *process = new KProcess();
         process->setOutputChannelMode(KProcess::OnlyStdoutChannel);
-        process->setEnv("LC_ALL", "C");
-        *process << lsb_release << "-sd";
+        process->setEnv(QStringLiteral("LC_ALL"), QStringLiteral("C"));
+        *process << lsb_release << QStringLiteral("-sd");
         connect(process, static_cast<void (KProcess::*)(int, QProcess::ExitStatus)>(&KProcess::finished), this, &SystemInformation::lsbReleaseFinished);
         process->start();
     } else {
@@ -120,48 +120,48 @@ void SystemInformation::lsbReleaseFinished()
 //side, they need to be updated here as well                                   .
 QString SystemInformation::guessBugzillaPlatform(const QString& distroInfo) const
 {
-    if ( distroInfo.contains("suse",Qt::CaseInsensitive) ) {
+    if ( distroInfo.contains(QStringLiteral("suse"),Qt::CaseInsensitive) ) {
         return (QLatin1String("openSUSE RPMs"));
-    } else if ( distroInfo.contains("mint",Qt::CaseInsensitive) ) {
+    } else if ( distroInfo.contains(QStringLiteral("mint"),Qt::CaseInsensitive) ) {
         return (QLatin1String("Mint (Ubuntu Based)"));
-    } else if ( distroInfo.contains("lmde",Qt::CaseInsensitive) ) {
+    } else if ( distroInfo.contains(QStringLiteral("lmde"),Qt::CaseInsensitive) ) {
         return (QLatin1String("Mint (Debian Based)"));
-    } else if ( distroInfo.contains("ubuntu",Qt::CaseInsensitive) ) {
+    } else if ( distroInfo.contains(QStringLiteral("ubuntu"),Qt::CaseInsensitive) ) {
         return (QLatin1String("Ubuntu Packages"));
-    } else if ( distroInfo.contains("fedora",Qt::CaseInsensitive) ) {
+    } else if ( distroInfo.contains(QStringLiteral("fedora"),Qt::CaseInsensitive) ) {
         return (QLatin1String("Fedora RPMs"));
-    } else if ( distroInfo.contains("redhat",Qt::CaseInsensitive) ) {
+    } else if ( distroInfo.contains(QStringLiteral("redhat"),Qt::CaseInsensitive) ) {
         return (QLatin1String("RedHat RPMs"));
-    } else if ( distroInfo.contains("gentoo",Qt::CaseInsensitive) ) {
+    } else if ( distroInfo.contains(QStringLiteral("gentoo"),Qt::CaseInsensitive) ) {
         return (QLatin1String("Gentoo Packages"));
-    } else if ( distroInfo.contains("mandriva",Qt::CaseInsensitive) ) {
+    } else if ( distroInfo.contains(QStringLiteral("mandriva"),Qt::CaseInsensitive) ) {
         return (QLatin1String("Mandriva RPMs"));
-    } else if ( distroInfo.contains("mageia",Qt::CaseInsensitive) ) {
+    } else if ( distroInfo.contains(QStringLiteral("mageia"),Qt::CaseInsensitive) ) {
         return (QLatin1String("Mageia RPMs"));
-    } else if ( distroInfo.contains("slack",Qt::CaseInsensitive) ) {
+    } else if ( distroInfo.contains(QStringLiteral("slack"),Qt::CaseInsensitive) ) {
         return (QLatin1String("Slackware Packages"));
-    } else if ( distroInfo.contains("pclinuxos",Qt::CaseInsensitive) ) {
+    } else if ( distroInfo.contains(QStringLiteral("pclinuxos"),Qt::CaseInsensitive) ) {
         return (QLatin1String("PCLinuxOS"));
-    } else if ( distroInfo.contains("pardus",Qt::CaseInsensitive) ) {
+    } else if ( distroInfo.contains(QStringLiteral("pardus"),Qt::CaseInsensitive) ) {
         return (QLatin1String("Pardus Packages"));
-    } else if ( distroInfo.contains("freebsd",Qt::CaseInsensitive) ) {
+    } else if ( distroInfo.contains(QStringLiteral("freebsd"),Qt::CaseInsensitive) ) {
         return (QLatin1String("FreeBSD Ports"));
-    } else if ( distroInfo.contains("netbsd",Qt::CaseInsensitive) ) {
+    } else if ( distroInfo.contains(QStringLiteral("netbsd"),Qt::CaseInsensitive) ) {
         return (QLatin1String("NetBSD pkgsrc"));
-    } else if ( distroInfo.contains("openbsd",Qt::CaseInsensitive) ) {
+    } else if ( distroInfo.contains(QStringLiteral("openbsd"),Qt::CaseInsensitive) ) {
         return (QLatin1String("OpenBSD Packages"));
-    } else if ( distroInfo.contains("solaris",Qt::CaseInsensitive) ) {
+    } else if ( distroInfo.contains(QStringLiteral("solaris"),Qt::CaseInsensitive) ) {
         return (QLatin1String("Solaris Packages"));
-    } else if ( distroInfo.contains("chakra",Qt::CaseInsensitive) ) {
+    } else if ( distroInfo.contains(QStringLiteral("chakra"),Qt::CaseInsensitive) ) {
         return (QLatin1String("Chakra"));
-    } else if ( distroInfo.contains("ms windows",Qt::CaseInsensitive) ) {
+    } else if ( distroInfo.contains(QStringLiteral("ms windows"),Qt::CaseInsensitive) ) {
         return (QLatin1String("MS Windows"));
-    } else if ( distroInfo.contains("arch",Qt::CaseInsensitive) ) {
+    } else if ( distroInfo.contains(QStringLiteral("arch"),Qt::CaseInsensitive) ) {
         return (QLatin1String("Archlinux Packages"));
-    } else if ( distroInfo.contains("debian",Qt::CaseInsensitive) ) {
-        if ( distroInfo.contains("unstable",Qt::CaseInsensitive) ) {
+    } else if ( distroInfo.contains(QStringLiteral("debian"),Qt::CaseInsensitive) ) {
+        if ( distroInfo.contains(QStringLiteral("unstable"),Qt::CaseInsensitive) ) {
             return (QLatin1String("Debian unstable"));
-        } else if ( distroInfo.contains("testing",Qt::CaseInsensitive) ) {
+        } else if ( distroInfo.contains(QStringLiteral("testing"),Qt::CaseInsensitive) ) {
             return (QLatin1String("Debian testing"));
         } else {
             return (QLatin1String("Debian stable"));
@@ -228,7 +228,7 @@ QString SystemInformation::fetchOSDetailInformation() const
 
 QString SystemInformation::fetchOSReleaseInformation() const
 {
-    QFile data("/etc/os-release");
+    QFile data(QStringLiteral("/etc/os-release"));
     if (!data.open(QIODevice::ReadOnly | QIODevice::Text)) {
         return QString();
     }
@@ -251,7 +251,7 @@ QString SystemInformation::fetchOSReleaseInformation() const
 
     // the PRETTY_NAME entry should be the most appropriate one,
     // but I could be wrong.
-    const QString prettyName = distroInfos.value("PRETTY_NAME", "Linux");
+    const QString prettyName = distroInfos.value(QStringLiteral("PRETTY_NAME"), QStringLiteral("Linux"));
     return prettyName;
 }
 

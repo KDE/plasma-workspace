@@ -30,7 +30,7 @@ int main(int argc, char **argv)
     QApplication app(argc, argv);
     QCommandLineParser parser;
 
-    const QString description = "Statusnotifier test app";
+    const QString description = QStringLiteral("Statusnotifier test app");
     const char version[] = "1.0";
 
     app.setApplicationVersion(version);

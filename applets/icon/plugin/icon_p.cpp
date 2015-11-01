@@ -68,7 +68,7 @@ void IconPrivate::setUrl(const QUrl &url)
             m_genericName = fi.baseName();
         }
     } else {
-        if (m_url.scheme().contains("http")) {
+        if (m_url.scheme().contains(QStringLiteral("http"))) {
             m_name = m_url.host();
         } else if (m_name.isEmpty()) {
             m_name = m_url.toString();
@@ -160,7 +160,7 @@ bool IconPrivate::processDrop(QObject *dropEvent)
         return false;
     }
 
-    if (mimeType.inherits("application/x-executable") || mimeType.inherits("application/x-shellscript")) {
+    if (mimeType.inherits(QStringLiteral("application/x-executable")) || mimeType.inherits(QStringLiteral("application/x-shellscript"))) {
         QString params;
         foreach (const QUrl &url, urls) {
             // TODO toEncoded?
@@ -169,7 +169,7 @@ bool IconPrivate::processDrop(QObject *dropEvent)
 
         KRun::runCommand(KShell::quoteArg(m_url.path()) + QLatin1Char(' ') + params, nullptr);
         return true;
-    } else if (mimeType.inherits("inode/directory")) {
+    } else if (mimeType.inherits(QStringLiteral("inode/directory"))) {
         QMimeData mimeData;
         mimeData.setUrls(urls);
 

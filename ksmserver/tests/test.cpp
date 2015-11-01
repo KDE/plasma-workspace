@@ -12,11 +12,11 @@ int main(int argc, char *argv[])
 {
     QApplication app(argc, argv);
 
-    KAboutData about("kapptest", i18n("kapptest"), "version");
+    KAboutData about(QStringLiteral("kapptest"), i18n("kapptest"), QStringLiteral("version"));
     KAboutData::setApplicationData(about);
     QCommandLineParser options;
-    options.addOption(QCommandLineOption(QStringList("t") << "type", i18n("The type of shutdown to emulate: Default, None, Reboot, Halt or Logout"), "name", "None"));
-    options.addOption(QCommandLineOption("choose", i18n("Sets the mode where the user can choose between the different options. Use with --type.")));
+    options.addOption(QCommandLineOption(QStringList(QStringLiteral("t")) << QStringLiteral("type"), i18n("The type of shutdown to emulate: Default, None, Reboot, Halt or Logout"), QStringLiteral("name"), QStringLiteral("None")));
+    options.addOption(QCommandLineOption(QStringLiteral("choose"), i18n("Sets the mode where the user can choose between the different options. Use with --type.")));
 
     about.setupCommandLine(&options);
     options.process(app);
@@ -24,7 +24,7 @@ int main(int argc, char *argv[])
 
     KIconLoader::global()->addAppDir(QStringLiteral("ksmserver"));
 
-    QString sdtypeOption = options.value("type").toLower();
+    QString sdtypeOption = options.value(QStringLiteral("type")).toLower();
     KWorkSpace::ShutdownType sdtype = KWorkSpace::ShutdownTypeDefault;
     if (sdtypeOption == QStringLiteral("reboot")) {
         sdtype = KWorkSpace::ShutdownTypeReboot;
@@ -35,6 +35,6 @@ int main(int argc, char *argv[])
     }
 
     QString bopt;
-    (void)KSMShutdownDlg::confirmShutdown( true, options.isSet("choose"), sdtype, bopt, QString() );
+    (void)KSMShutdownDlg::confirmShutdown( true, options.isSet(QStringLiteral("choose")), sdtype, bopt, QString() );
 /*   (void)KSMShutdownDlg::confirmShutdown( false, false, sdtype, bopt ); */
 }

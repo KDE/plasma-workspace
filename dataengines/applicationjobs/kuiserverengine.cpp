@@ -46,11 +46,11 @@ JobView::JobView(QObject* parent)
       m_unitId(0)
 {
     m_jobId = ++s_jobId;
-    setObjectName(QString("Job %1").arg(s_jobId));
+    setObjectName(QStringLiteral("Job %1").arg(s_jobId));
 
     new JobViewV2Adaptor(this);
 
-    m_objectPath.setPath(QString("/DataEngine/applicationjobs/JobView_%1").arg(m_jobId));
+    m_objectPath.setPath(QStringLiteral("/DataEngine/applicationjobs/JobView_%1").arg(m_jobId));
     QDBusConnection::sessionBus().registerObject(m_objectPath.path(), this);
 
     setSuspended(false);
@@ -90,16 +90,16 @@ void JobView::timerEvent(QTimerEvent *event)
 void JobView::terminate(const QString &errorMessage)
 {
     setData(QStringLiteral("errorText"), errorMessage);
-    QTimer::singleShot(0, this, SLOT(finished()));
+    QTimer::singleShot(0, this, &JobView::finished);
 }
 
 void JobView::finished()
 {
     if (m_state != Stopped) {
         m_state = Stopped;
-        setData("state", "stopped");
-        setData("speed", QVariant());
-        setData("numericSpeed", QVariant());
+        setData(QStringLiteral("state"), "stopped");
+        setData(QStringLiteral("speed"), QVariant());
+        setData(QStringLiteral("numericSpeed"), QVariant());
         scheduleUpdate();
     }
 }
@@ -114,16 +114,16 @@ void JobView::setSuspended(bool suspended)
     if (suspended) {
         if (m_state != Suspended) {
             m_state = Suspended;
-            setData("state", "suspended");
-            setData("speed", QVariant());
-            setData("numericSpeed", QVariant());
+            setData(QStringLiteral("state"), "suspended");
+            setData(QStringLiteral("speed"), QVariant());
+            setData(QStringLiteral("numericSpeed"), QVariant());
             scheduleUpdate();
         }
     } else if (m_state != Running) {
         m_state = Running;
-        setData("state", "running");
-        setData("speed", speedString());
-        setData("numericSpeed", m_speed);
+        setData(QStringLiteral("state"), "running");
+        setData(QStringLiteral("speed"), speedString());
+        setData(QStringLiteral("numericSpeed"), m_speed);
         scheduleUpdate();
     }
 }
@@ -140,13 +140,13 @@ int JobView::unitId(const QString &unit)
         id = m_unitMap.value(unit);
     } else {
         id = m_unitId;
-        setData(QString("totalUnit%1").arg(id), unit);
-        setData(QString("totalAmount%1").arg(id), 0);
-        setData(QString("processedUnit%1").arg(id), unit);
-        setData(QString("processedAmount%1").arg(id), 0);
+        setData(QStringLiteral("totalUnit%1").arg(id), unit);
+        setData(QStringLiteral("totalAmount%1").arg(id), 0);
+        setData(QStringLiteral("processedUnit%1").arg(id), unit);
+        setData(QStringLiteral("processedAmount%1").arg(id), 0);
         m_unitMap.insert(unit, m_unitId);
 
-        if (unit == "bytes") {
+        if (unit == QLatin1String("bytes")) {
             m_bytesUnitId = id;
         }
 
@@ -160,23 +160,23 @@ int JobView::unitId(const QString &unit)
 void JobView::updateEta()
 {
     if (m_speed < 1) {
-        setData("eta", 0);
+        setData(QStringLiteral("eta"), 0);
         return;
     }
 
     if (m_totalBytes < 1) {
-        setData("eta", 0);
+        setData(QStringLiteral("eta"), 0);
         return;
     }
 
     const qlonglong remaining = 1000 * (m_totalBytes - m_processedBytes);
-    setData("eta", remaining / m_speed);
+    setData(QStringLiteral("eta"), remaining / m_speed);
 }
 
 void JobView::setTotalAmount(qlonglong amount, const QString &unit)
 {
     const int id = unitId(unit);
-    const QString amountString = QString("totalAmount%1").arg(id);
+    const QString amountString = QStringLiteral("totalAmount%1").arg(id);
     const qlonglong prevTotal = data().value(amountString).toLongLong();
     if (prevTotal != amount) {
         if (id == m_bytesUnitId) {
@@ -192,14 +192,14 @@ void JobView::setTotalAmount(qlonglong amount, const QString &unit)
 void JobView::setProcessedAmount(qlonglong amount, const QString &unit)
 {
     const int id = unitId(unit);
-    const QString processedString = QString("processedAmount%1").arg(id);
+    const QString processedString = QStringLiteral("processedAmount%1").arg(id);
     const qlonglong prevTotal = data().value(processedString).toLongLong();
     if (prevTotal != amount) {
         if (id == m_bytesUnitId) {
             m_processedBytes = amount;
             if (!m_totalBytes && m_processedBytes && (m_percent != 0)) {
                 m_totalBytes = m_processedBytes / m_percent * 100;
-                const QString totalAmountString = QString("totalAmount%1").arg(id);
+                const QString totalAmountString = QStringLiteral("totalAmount%1").arg(id);
                 setData(totalAmountString, m_totalBytes);
             }
             updateEta();
@@ -219,7 +219,7 @@ void JobView::setPercent(uint percent)
 {
     if (m_percent != percent) {
         m_percent = percent;
-        setData("percentage", m_percent);
+        setData(QStringLiteral("percentage"), m_percent);
         scheduleUpdate();
     }
 }
@@ -228,8 +228,8 @@ void JobView::setSpeed(qlonglong bytesPerSecond)
 {
     if (m_speed != bytesPerSecond) {
         m_speed = bytesPerSecond;
-        setData("speed", speedString());
-        setData("numericSpeed", m_speed);
+        setData(QStringLiteral("speed"), speedString());
+        setData(QStringLiteral("numericSpeed"), m_speed);
 
         if (m_bytesUnitId > -1) {
             updateEta();
@@ -246,16 +246,16 @@ QString JobView::speedString() const
 
 void JobView::setInfoMessage(const QString &infoMessage)
 {
-    if (data().value("infoMessage") != infoMessage) {
-        setData("infoMessage", infoMessage);
+    if (data().value(QStringLiteral("infoMessage")) != infoMessage) {
+        setData(QStringLiteral("infoMessage"), infoMessage);
         scheduleUpdate();
     }
 }
 
 bool JobView::setDescriptionField(uint number, const QString &name, const QString &value)
 {
-    const QString labelString = QString("label%1").arg(number);
-    const QString labelNameString = QString("labelName%1").arg(number);
+    const QString labelString = QStringLiteral("label%1").arg(number);
+    const QString labelNameString = QStringLiteral("labelName%1").arg(number);
 
     if (!data().contains(labelNameString) || data().value(labelString) != value) {
         setData(labelNameString, name);
@@ -267,8 +267,8 @@ bool JobView::setDescriptionField(uint number, const QString &name, const QStrin
 
 void JobView::clearDescriptionField(uint number)
 {
-    const QString labelString = QString("label%1").arg(number);
-    const QString labelNameString = QString("labelName%1").arg(number);
+    const QString labelString = QStringLiteral("label%1").arg(number);
+    const QString labelNameString = QStringLiteral("labelName%1").arg(number);
 
     setData(labelNameString, QVariant());
     setData(labelString, QVariant());
@@ -278,21 +278,21 @@ void JobView::clearDescriptionField(uint number)
 void JobView::setAppName(const QString &appName)
 {
     // don't need to update, this is only set once at creation
-    setData("appName", appName);
+    setData(QStringLiteral("appName"), appName);
 }
 
 void JobView::setAppIconName(const QString &appIconName)
 {
     // don't need to update, this is only set once at creation
-    setData("appIconName", appIconName);
+    setData(QStringLiteral("appIconName"), appIconName);
 }
 
 void JobView::setCapabilities(int capabilities)
 {
     if (m_capabilities != uint(capabilities)) {
         m_capabilities = capabilities;
-        setData("suspendable", m_capabilities & KJob::Suspendable);
-        setData("killable", m_capabilities & KJob::Killable);
+        setData(QStringLiteral("suspendable"), m_capabilities & KJob::Suspendable);
+        setData(QStringLiteral("killable"), m_capabilities & KJob::Killable);
         scheduleUpdate();
     }
 }
@@ -331,7 +331,7 @@ KuiserverEngine::KuiserverEngine(QObject* parent, const QVariantList& args)
 
     m_pendingJobsTimer.setSingleShot(true);
     m_pendingJobsTimer.setInterval(500);
-    connect(&m_pendingJobsTimer, SIGNAL(timeout()), this, SLOT(processPendingJobs()));
+    connect(&m_pendingJobsTimer, &QTimer::timeout, this, &KuiserverEngine::processPendingJobs);
     init();
 }
 
@@ -349,7 +349,7 @@ QDBusObjectPath KuiserverEngine::requestView(const QString &appName,
     jobView->setAppName(appName);
     jobView->setAppIconName(appIconName);
     jobView->setCapabilities(capabilities);
-    connect(jobView, SIGNAL(becameUnused(QString)), this, SLOT(removeSource(QString)));
+    connect(jobView, &Plasma::DataContainer::becameUnused, this, &KuiserverEngine::removeSource);
 
     m_pendingJobs << jobView;
     m_pendingJobsTimer.start();
@@ -383,8 +383,8 @@ Plasma::Service* KuiserverEngine::serviceForSource(const QString& source)
 void KuiserverEngine::init()
 {
     // register with the Job UI Serer to receive notifications of jobs becoming available
-    QDBusInterface interface("org.kde.kuiserver", "/JobViewServer"/* object to connect to */,
-                              ""/* use the default interface */, QDBusConnection::sessionBus(), this);
+    QDBusInterface interface(QStringLiteral("org.kde.kuiserver"), QStringLiteral("/JobViewServer")/* object to connect to */,
+                              QLatin1String("")/* use the default interface */, QDBusConnection::sessionBus(), this);
     interface.asyncCall(QLatin1String("registerService"), QDBusConnection::sessionBus().baseService(), "/DataEngine/applicationjobs/JobWatcher");
 }
 

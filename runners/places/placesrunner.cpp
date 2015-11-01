@@ -37,11 +37,11 @@ PlacesRunner::PlacesRunner(QObject* parent, const QVariantList &args)
 {
 //    qRegisterMetaType
     Q_UNUSED(args)
-    setObjectName( QLatin1String("Places" ));
+    setObjectName( QStringLiteral("Places" ));
     Plasma::RunnerSyntax defaultSyntax(i18n("places"), i18n("Lists all file manager locations"));
     setDefaultSyntax(defaultSyntax);
     addSyntax(defaultSyntax);
-    addSyntax(Plasma::RunnerSyntax(":q:", i18n("Finds file manager locations that match :q:")));
+    addSyntax(Plasma::RunnerSyntax(QStringLiteral(":q:"), i18n("Finds file manager locations that match :q:")));
 
     // ensure the bookmarkmanager, etc. in the places model gets creates created in the main thread
     // otherwise crashes ensue
@@ -70,8 +70,8 @@ PlacesRunnerHelper::PlacesRunnerHelper(PlacesRunner *runner)
     : QObject(runner)
 {
     Q_ASSERT(QThread::currentThread() == QCoreApplication::instance()->thread());
-    connect(runner, SIGNAL(doMatch(Plasma::RunnerContext*)),
-            this, SLOT(match(Plasma::RunnerContext*)),
+    connect(runner, &PlacesRunner::doMatch,
+            this, &PlacesRunnerHelper::match,
             Qt::BlockingQueuedConnection);
 }
 

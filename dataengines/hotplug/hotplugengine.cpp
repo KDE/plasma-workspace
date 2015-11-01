@@ -46,7 +46,7 @@ HotplugEngine::HotplugEngine(QObject* parent, const QVariantList& args)
     : Plasma::DataEngine(parent, args),
       m_dirWatch(new KDirWatch(this))
 {
-    const QStringList folders = QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, "solid/actions", QStandardPaths::LocateDirectory);
+    const QStringList folders = QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, QStringLiteral("solid/actions"), QStandardPaths::LocateDirectory);
 
     foreach (const QString &folder, folders) {
         m_dirWatch->addDir(folder, KDirWatch::WatchFiles);
@@ -78,10 +78,10 @@ void HotplugEngine::init()
 
     connect(Solid::DeviceNotifier::instance(), SIGNAL(deviceAdded(QString)),
             this, SLOT(onDeviceAdded(QString)));
-    connect(Solid::DeviceNotifier::instance(), SIGNAL(deviceRemoved(QString)),
-            this, SLOT(onDeviceRemoved(QString)));
+    connect(Solid::DeviceNotifier::instance(), &Solid::DeviceNotifier::deviceRemoved,
+            this, &HotplugEngine::onDeviceRemoved);
 
-    m_encryptedPredicate = Solid::Predicate("StorageVolume", "usage", "Encrypted");
+    m_encryptedPredicate = Solid::Predicate(QStringLiteral("StorageVolume"), QStringLiteral("usage"), "Encrypted");
 
     processNextStartupDevice();
 }
@@ -103,7 +103,7 @@ void HotplugEngine::processNextStartupDevice()
     if (m_startList.isEmpty()) {
         m_predicates.clear();
     } else {
-        QTimer::singleShot(0, this, SLOT(processNextStartupDevice()));
+        QTimer::singleShot(0, this, &HotplugEngine::processNextStartupDevice);
     }
 }
 
@@ -111,7 +111,7 @@ void HotplugEngine::findPredicates()
 {
     m_predicates.clear();
     QStringList files;
-    const QStringList dirs = QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, "solid/actions", QStandardPaths::LocateDirectory);
+    const QStringList dirs = QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, QStringLiteral("solid/actions"), QStandardPaths::LocateDirectory);
     Q_FOREACH (const QString& dir, dirs) {
         QDirIterator it(dir, QStringList() << QStringLiteral("*.desktop"));
         while (it.hasNext()) {
@@ -147,7 +147,7 @@ void HotplugEngine::updatePredicates(const QString &path)
         if (!predicates.isEmpty()) {
             if (sources().contains(udi)) {
                 Plasma::DataEngine::Data data;
-                data.insert("predicateFiles", predicates);
+                data.insert(QStringLiteral("predicateFiles"), predicates);
                 setData(udi, data);
             } else {
                 onDeviceAdded(device, false);
@@ -223,17 +223,17 @@ void HotplugEngine::onDeviceAdded(Solid::Device &device, bool added)
         //qDebug() << device.vendor();
         //qDebug() << "number of interesting desktop file : " << interestingDesktopFiles.size();
         Plasma::DataEngine::Data data;
-        data.insert("added", added);
-        data.insert("udi", device.udi());
+        data.insert(QStringLiteral("added"), added);
+        data.insert(QStringLiteral("udi"), device.udi());
 
         if (!device.description().isEmpty()) {
-            data.insert("text", device.description());
+            data.insert(QStringLiteral("text"), device.description());
         } else {
-            data.insert("text", QString(device.vendor() + QLatin1Char(' ') + device.product()));
+            data.insert(QStringLiteral("text"), QString(device.vendor() + QLatin1Char(' ') + device.product()));
         }
-        data.insert("icon", device.icon());
-        data.insert("emblems", device.emblems());
-        data.insert("predicateFiles", interestingDesktopFiles);
+        data.insert(QStringLiteral("icon"), device.icon());
+        data.insert(QStringLiteral("emblems"), device.emblems());
+        data.insert(QStringLiteral("predicateFiles"), interestingDesktopFiles);
 
         QVariantList actions;
         foreach(const QString& desktop, interestingDesktopFiles) {
@@ -242,15 +242,15 @@ void HotplugEngine::onDeviceAdded(Solid::Device &device, bool added)
             QList<KServiceAction> services = KDesktopFileActions::userDefinedServices(actionUrl, true);
             if (!services.isEmpty()) {
                 Plasma::DataEngine::Data action;
-                action.insert("predicate", desktop);
-                action.insert("text", services[0].text());
-                action.insert("icon", services[0].icon());
+                action.insert(QStringLiteral("predicate"), desktop);
+                action.insert(QStringLiteral("text"), services[0].text());
+                action.insert(QStringLiteral("icon"), services[0].icon());
                 actions << action;
             }
         }
-        data.insert("actions", actions);
+        data.insert(QStringLiteral("actions"), actions);
 
-        data.insert("isEncryptedContainer", isEncryptedContainer);
+        data.insert(QStringLiteral("isEncryptedContainer"), isEncryptedContainer);
 
         setData(device.udi(), data);
         //qDebug() << "add hardware solid : " << udi;

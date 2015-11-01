@@ -29,15 +29,15 @@ ActivityRunner::ActivityRunner(QObject *parent, const QVariantList &args)
       m_activities(0),
       m_consumer(0),
       m_keywordi18n(i18nc("KRunner keyword", "activity")),
-      m_keyword("activity"),
+      m_keyword(QStringLiteral("activity")),
       m_enabled(false)
 {
-    setObjectName(QLatin1String("Activities"));
+    setObjectName(QStringLiteral("Activities"));
     setIgnoredTypes(Plasma::RunnerContext::Directory | Plasma::RunnerContext::File |
                     Plasma::RunnerContext::NetworkLocation | Plasma::RunnerContext::Help);
 
-    connect(this, SIGNAL(prepare()), this, SLOT(prep()));
-    connect(this, SIGNAL(teardown()), this, SLOT(down()));
+    connect(this, &Plasma::AbstractRunner::prepare, this, &ActivityRunner::prep);
+    connect(this, &Plasma::AbstractRunner::teardown, this, &ActivityRunner::down);
 
     qRegisterMetaType<KActivities::Consumer::ServiceStatus>();
 
@@ -49,8 +49,8 @@ void ActivityRunner::prep()
     if (!m_activities) {
         m_activities = new KActivities::Controller(this);
         m_consumer = new KActivities::Consumer(this);
-        connect(m_consumer, SIGNAL(serviceStatusChanged(KActivities::Consumer::ServiceStatus)),
-                this, SLOT(serviceStatusChanged(KActivities::Consumer::ServiceStatus)));
+        connect(m_consumer, &KActivities::Consumer::serviceStatusChanged,
+                this, &ActivityRunner::serviceStatusChanged);
         serviceStatusChanged(m_activities->serviceStatus());
     }
 }
@@ -158,7 +158,7 @@ void ActivityRunner::addMatch(const KActivities::Info &activity, QList<Plasma::Q
     Plasma::QueryMatch match(this);
     match.setData(activity.id());
     match.setType(Plasma::QueryMatch::ExactMatch);
-    match.setIcon(activity.icon().isEmpty() ? QIcon::fromTheme("preferences-activities") : QIcon::fromTheme(activity.icon()));
+    match.setIcon(activity.icon().isEmpty() ? QIcon::fromTheme(QStringLiteral("preferences-activities")) : QIcon::fromTheme(activity.icon()));
     match.setText(i18n("Switch to \"%1\"", activity.name()));
     match.setRelevance(0.7 + ((activity.state() == KActivities::Info::Running ||
                                activity.state() == KActivities::Info::Starting) ? 0.1 : 0));

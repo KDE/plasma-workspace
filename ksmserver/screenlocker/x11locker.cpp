@@ -93,8 +93,8 @@ void X11Locker::initialize()
         }
         XFree( real );
     }
-    connect(QApplication::desktop(), SIGNAL(resized(int)), SLOT(updateGeo()));
-    connect(QApplication::desktop(), SIGNAL(screenCountChanged(int)), SLOT(updateGeo()));
+    connect(QApplication::desktop(), &QDesktopWidget::resized, this, &X11Locker::updateGeo);
+    connect(QApplication::desktop(), &QDesktopWidget::screenCountChanged, this, &X11Locker::updateGeo);
 }
 
 void X11Locker::showLockWindow()

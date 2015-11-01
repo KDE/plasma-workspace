@@ -45,14 +45,14 @@ ShareProvider::ShareProvider(KJSEmbed::Engine* engine, QObject *parent)
 QString ShareProvider::method() const
 {
     if (!m_isPost) {
-        return QString("GET");
+        return QStringLiteral("GET");
     }
-    return QString("POST");
+    return QStringLiteral("POST");
 }
 
 void ShareProvider::setMethod(const QString &method)
 {
-    if (method == "GET") {
+    if (method == QLatin1String("GET")) {
         m_isPost = false;
     } else {
         m_isPost = true;
@@ -135,13 +135,13 @@ void ShareProvider::addPostFile(const QString &contentKey, const QVariant &conte
 
     if(content.type() == QVariant::String) {
         m_content = content.toString();
-        addPostItem(m_contentKey, m_content, "text/plain");
+        addPostItem(m_contentKey, m_content, QStringLiteral("text/plain"));
         addQueryItem(m_contentKey, m_content);
         emit readyToPublish();
     } else if(content.type() == QVariant::Url) {
         publishUrl(content.toUrl());
     } else if(content.type() == QVariant::Image) {
-        QTemporaryFile* file = new QTemporaryFile("shareimage-XXXXXX.png", this);
+        QTemporaryFile* file = new QTemporaryFile(QStringLiteral("shareimage-XXXXXX.png"), this);
         bool b = file->open();
         Q_ASSERT(b);
         file->close();
@@ -151,7 +151,7 @@ void ShareProvider::addPostFile(const QString &contentKey, const QVariant &conte
         Q_ASSERT(b);
         publishUrl(QUrl::fromLocalFile(file->fileName()));
     } else if(content.type() == QVariant::Pixmap) {
-        QTemporaryFile* file = new QTemporaryFile("sharepixmap-XXXXXX.png", this);
+        QTemporaryFile* file = new QTemporaryFile(QStringLiteral("sharepixmap-XXXXXX.png"), this);
         bool b = file->open();
         Q_ASSERT(b);
         file->close();
@@ -168,7 +168,7 @@ void ShareProvider::publishUrl(const QUrl& url)
     m_content = url.toString();
 
     KIO::MimetypeJob *mjob = KIO::mimetype(url, KIO::HideProgressInfo);
-    connect(mjob, SIGNAL(finished(KJob*)), this, SLOT(mimetypeJobFinished(KJob*)));
+    connect(mjob, &KJob::finished, this, &ShareProvider::mimetypeJobFinished);
 }
 
 void ShareProvider::mimetypeJobFinished(KJob *job)
@@ -193,12 +193,12 @@ void ShareProvider::mimetypeJobFinished(KJob *job)
     }
 
     // If it's not text then we should handle it later
-    if (!m_mimetype.startsWith("text/"))
+    if (!m_mimetype.startsWith(QLatin1String("text/")))
         m_isBlob = true;
 
     // try to open the file
     KIO::FileJob *fjob = KIO::open(QUrl(m_content), QIODevice::ReadOnly);
-    connect(fjob, SIGNAL(open(KIO::Job*)), this, SLOT(openFile(KIO::Job*)));
+    connect(fjob, &KIO::FileJob::open, this, &ShareProvider::openFile);
 }
 
 void ShareProvider::openFile(KIO::Job *job)
@@ -206,8 +206,8 @@ void ShareProvider::openFile(KIO::Job *job)
     // finished opening the file, now try to read it's content
     KIO::FileJob *fjob = static_cast<KIO::FileJob*>(job);
     fjob->read(fjob->size());
-    connect(fjob, SIGNAL(data(KIO::Job*,QByteArray)),
-            this, SLOT(finishedContentData(KIO::Job*,QByteArray)));
+    connect(fjob, &KIO::FileJob::data,
+            this, &ShareProvider::finishedContentData);
 }
 
 void ShareProvider::finishedContentData(KIO::Job *job, const QByteArray &data)
@@ -228,7 +228,7 @@ void ShareProvider::uploadData(const QByteArray& data)
 {
     if (!m_isBlob) {
         // it's just text and we can return here using data()
-        addPostItem(m_contentKey, QString::fromLocal8Bit(data), "text/plain");
+        addPostItem(m_contentKey, QString::fromLocal8Bit(data), QStringLiteral("text/plain"));
         addQueryItem(m_contentKey, QString::fromLocal8Bit(data));
         emit readyToPublish();
         return;
@@ -315,23 +315,23 @@ void ShareProvider::publish()
     KIO::TransferJob *tf;
     if (m_isBlob) {
         tf = KIO::http_post(m_service, m_buffer, KIO::HideProgressInfo);
-        tf->addMetaData("content-type","Content-Type: multipart/form-data; boundary=" + m_boundary);
+        tf->addMetaData(QStringLiteral("content-type"),"Content-Type: multipart/form-data; boundary=" + m_boundary);
     } else {
         if (m_isPost) {
             tf = KIO::http_post(m_service,
                                 m_url.encodedQuery(), KIO::HideProgressInfo);
-            tf->addMetaData("content-type", "Content-Type: application/x-www-form-urlencoded");
+            tf->addMetaData(QStringLiteral("content-type"), QStringLiteral("Content-Type: application/x-www-form-urlencoded"));
         } else {
-            QString url = QString("%1?%2").arg(m_service.url(), QString(m_url.encodedQuery()));
+            QString url = QStringLiteral("%1?%2").arg(m_service.url(), QString(m_url.encodedQuery()));
             tf = KIO::get(QUrl(url));
         }
     }
 
-    connect(tf, SIGNAL(data(KIO::Job*,QByteArray)),
-            this, SLOT(readPublishData(KIO::Job*,QByteArray)));
-    connect(tf, SIGNAL(result(KJob*)), this, SLOT(finishedPublish(KJob*)));
-    connect(tf, SIGNAL(redirection(KIO::Job*,QUrl)),
-            this, SLOT(redirected(KIO::Job*,QUrl)));
+    connect(tf, &KIO::TransferJob::data,
+            this, &ShareProvider::readPublishData);
+    connect(tf, &KJob::result, this, &ShareProvider::finishedPublish);
+    connect(tf, &KIO::TransferJob::redirection,
+            this, &ShareProvider::redirected);
 }
 
 void ShareProvider::redirected(KIO::Job *job, const QUrl &to)

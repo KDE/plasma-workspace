@@ -33,15 +33,15 @@ WebshortcutRunner::WebshortcutRunner(QObject *parent, const QVariantList& args)
     setObjectName( QLatin1String("Web Shortcut" ));
     setIgnoredTypes(Plasma::RunnerContext::Directory | Plasma::RunnerContext::File | Plasma::RunnerContext::Executable);
 
-    m_icon = QIcon::fromTheme("internet-web-browser");
+    m_icon = QIcon::fromTheme(QStringLiteral("internet-web-browser"));
 
     m_match.setType(Plasma::QueryMatch::ExactMatch);
     m_match.setRelevance(0.9);
 
     // Listen for KUriFilter plugin config changes and update state...
     QDBusConnection sessionDbus = QDBusConnection::sessionBus();
-    sessionDbus.connect(QString(), "/", "org.kde.KUriFilterPlugin",
-                        "configure", this, SLOT(readFiltersConfig()));
+    sessionDbus.connect(QString(), QStringLiteral("/"), QStringLiteral("org.kde.KUriFilterPlugin"),
+                        QStringLiteral("configure"), this, SLOT(readFiltersConfig()));
 
     connect(this, &WebshortcutRunner::teardown, this, &WebshortcutRunner::resetState);
     readFiltersConfig();

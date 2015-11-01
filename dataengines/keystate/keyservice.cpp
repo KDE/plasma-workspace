@@ -26,15 +26,15 @@ KeyService::KeyService(QObject* parent, KModifierKeyInfo *keyInfo, Qt::Key key)
       m_keyInfo(keyInfo),
       m_key(key)
 {
-    setName("modifierkeystate");
-    setDestination("keys");
+    setName(QStringLiteral("modifierkeystate"));
+    setDestination(QStringLiteral("keys"));
 }
 
 Plasma::ServiceJob* KeyService::createJob(const QString& operation, QMap<QString,QVariant>& parameters)
 {
-    if (operation == "Lock") {
+    if (operation == QLatin1String("Lock")) {
         return new LockKeyJob(this, parameters);
-    } else if (operation == "Latch") {
+    } else if (operation == QLatin1String("Latch")) {
         return new LatchKeyJob(this, parameters);
     }
 
@@ -52,26 +52,26 @@ void KeyService::latch(bool lock)
 }
 
 LockKeyJob::LockKeyJob(KeyService *service, const QMap<QString, QVariant> &parameters)
-    : Plasma::ServiceJob(service->destination(), "Lock", parameters, service),
+    : Plasma::ServiceJob(service->destination(), QStringLiteral("Lock"), parameters, service),
       m_service(service)
 {
 }
 
 void LockKeyJob::start()
 {
-    m_service->lock(parameters().value("Lock").toBool());
+    m_service->lock(parameters().value(QStringLiteral("Lock")).toBool());
     setResult(true);
 }
 
 LatchKeyJob::LatchKeyJob(KeyService *service, const QMap<QString, QVariant> &parameters)
-    : Plasma::ServiceJob(service->destination(), "Lock", parameters, service),
+    : Plasma::ServiceJob(service->destination(), QStringLiteral("Lock"), parameters, service),
       m_service(service)
 {
 }
 
 void LatchKeyJob::start()
 {
-    m_service->latch(parameters().value("Lock").toBool());
+    m_service->latch(parameters().value(QStringLiteral("Lock")).toBool());
     setResult(true);
 }
 

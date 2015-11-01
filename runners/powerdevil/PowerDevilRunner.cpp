@@ -110,17 +110,17 @@ void PowerDevilRunner::initUpdateTriggers()
 {
     // Also receive updates triggered through the DBus
     QDBusConnection dbus = QDBusConnection::sessionBus();
-    if (dbus.interface()->isServiceRegistered("org.kde.Solid.PowerManagement")) {
-        if (!dbus.connect("org.kde.Solid.PowerManagement",
-                          "/org/kde/Solid/PowerManagement",
-                          "org.kde.Solid.PowerManagement",
-                          "profileChanged", this, SLOT(updateStatus()))) {
+    if (dbus.interface()->isServiceRegistered(QStringLiteral("org.kde.Solid.PowerManagement"))) {
+        if (!dbus.connect(QStringLiteral("org.kde.Solid.PowerManagement"),
+                          QStringLiteral("/org/kde/Solid/PowerManagement"),
+                          QStringLiteral("org.kde.Solid.PowerManagement"),
+                          QStringLiteral("profileChanged"), this, SLOT(updateStatus()))) {
             qDebug() << "error!";
         }
-        if (!dbus.connect("org.kde.Solid.PowerManagement",
-                          "/org/kde/Solid/PowerManagement",
-                          "org.kde.Solid.PowerManagement",
-                          "configurationReloaded", this, SLOT(updateStatus()))) {
+        if (!dbus.connect(QStringLiteral("org.kde.Solid.PowerManagement"),
+                          QStringLiteral("/org/kde/Solid/PowerManagement"),
+                          QStringLiteral("org.kde.Solid.PowerManagement"),
+                          QStringLiteral("configurationReloaded"), this, SLOT(updateStatus()))) {
             qDebug() << "error!";
         }
     }
@@ -130,10 +130,10 @@ void PowerDevilRunner::updateStatus()
 {
     // Profiles and their icons
     {
-        KSharedConfigPtr profilesConfig = KSharedConfig::openConfig("powerdevil2profilesrc", KConfig::SimpleConfig);
+        KSharedConfigPtr profilesConfig = KSharedConfig::openConfig(QStringLiteral("powerdevil2profilesrc"), KConfig::SimpleConfig);
         // Request profiles to the daemon
-        QDBusMessage call = QDBusMessage::createMethodCall("org.kde.Solid.PowerManagement", "/org/kde/Solid/PowerManagement",
-                                                           "org.kde.Solid.PowerManagement", "availableProfiles");
+        QDBusMessage call = QDBusMessage::createMethodCall(QStringLiteral("org.kde.Solid.PowerManagement"), QStringLiteral("/org/kde/Solid/PowerManagement"),
+                                                           QStringLiteral("org.kde.Solid.PowerManagement"), QStringLiteral("availableProfiles"));
         QDBusPendingReply< StringStringMap > reply = QDBusConnection::sessionBus().asyncCall(call);
         reply.waitForFinished();
 
@@ -152,7 +152,7 @@ void PowerDevilRunner::updateStatus()
         for (StringStringMap::const_iterator i = m_availableProfiles.constBegin(); i != m_availableProfiles.constEnd(); ++i) {
             KConfigGroup settings(profilesConfig, i.key());
             if (settings.readEntry< QString >("icon", QString()).isEmpty()) {
-                m_profileIcon[i.key()] = "preferences-system-power-management";
+                m_profileIcon[i.key()] = QLatin1String("preferences-system-power-management");
             } else {
                 m_profileIcon[i.key()] = settings.readEntry< QString >("icon", QString());
             }
@@ -217,28 +217,28 @@ void PowerDevilRunner::match(Plasma::RunnerContext &context)
                 int brightness = qBound(0, b, 100);
                 Plasma::QueryMatch match(this);
                 match.setType(Plasma::QueryMatch::ExactMatch);
-                match.setIcon(QIcon::fromTheme("preferences-system-power-management"));
+                match.setIcon(QIcon::fromTheme(QStringLiteral("preferences-system-power-management")));
                 match.setText(i18n("Set Brightness to %1", brightness));
                 match.setData(brightness);
                 match.setRelevance(1);
-                match.setId("BrightnessChange");
+                match.setId(QStringLiteral("BrightnessChange"));
                 matches.append(match);
             }
         } else {
             Plasma::QueryMatch match1(this);
             match1.setType(Plasma::QueryMatch::ExactMatch);
-            match1.setIcon(QIcon::fromTheme("preferences-system-power-management"));
+            match1.setIcon(QIcon::fromTheme(QStringLiteral("preferences-system-power-management")));
             match1.setText(i18n("Dim screen totally"));
             match1.setRelevance(1);
-            match1.setId("DimTotal");
+            match1.setId(QStringLiteral("DimTotal"));
             matches.append(match1);
 
             Plasma::QueryMatch match2(this);
             match2.setType(Plasma::QueryMatch::ExactMatch);
-            match2.setIcon(QIcon::fromTheme("preferences-system-power-management"));
+            match2.setIcon(QIcon::fromTheme(QStringLiteral("preferences-system-power-management")));
             match2.setText(i18n("Dim screen by half"));
             match2.setRelevance(1);
-            match2.setId("DimHalf");
+            match2.setId(QStringLiteral("DimHalf"));
             matches.append(match2);
         }
     } else if (term.compare(i18nc("Note this is a KRunner keyword", "suspend"), Qt::CaseInsensitive) == 0) {
@@ -272,19 +272,19 @@ void PowerDevilRunner::addSuspendMatch(int value, QList<Plasma::QueryMatch> &mat
     switch ((Solid::PowerManagement::SleepState)value) {
         case Solid::PowerManagement::SuspendState:
         case Solid::PowerManagement::StandbyState:
-            match.setIcon(QIcon::fromTheme("system-suspend"));
+            match.setIcon(QIcon::fromTheme(QStringLiteral("system-suspend")));
             match.setText(i18n("Suspend to RAM"));
             match.setRelevance(1);
             break;
         case Solid::PowerManagement::HibernateState:
-            match.setIcon(QIcon::fromTheme("system-suspend-hibernate"));
+            match.setIcon(QIcon::fromTheme(QStringLiteral("system-suspend-hibernate")));
             match.setText(i18n("Suspend to Disk"));
             match.setRelevance(0.99);
             break;
     }
 
     match.setData(value);
-    match.setId("Suspend");
+    match.setId(QStringLiteral("Suspend"));
     matches.append(match);
 }
 
@@ -292,22 +292,22 @@ void PowerDevilRunner::run(const Plasma::RunnerContext &context, const Plasma::Q
 {
     Q_UNUSED(context)
 
-    QDBusInterface iface("org.kde.Solid.PowerManagement",
-                         "/org/kde/Solid/PowerManagement",
-                         "org.kde.Solid.PowerManagement");
-    QDBusInterface brightnessIface("org.kde.Solid.PowerManagement",
-                                   "/org/kde/Solid/PowerManagement/Actions/BrightnessControl",
-                                   "org.kde.Solid.PowerManagement.Actions.BrightnessControl");
-    if (match.id().startsWith("PowerDevil_ProfileChange")) {
-        iface.asyncCall("loadProfile", match.data().toString());
-    } else if (match.id() == "PowerDevil_BrightnessChange") {
-        brightnessIface.asyncCall("setBrightness", match.data().toInt());
-    } else if (match.id() == "PowerDevil_DimTotal") {
-        brightnessIface.asyncCall("setBrightness", 0);
-    } else if (match.id() == "PowerDevil_DimHalf") {
-        QDBusReply<int> brightness = brightnessIface.asyncCall("brightness");
-        brightnessIface.asyncCall("setBrightness", static_cast<int>(brightness / 2));
-    } else if (match.id().startsWith("PowerDevil_Suspend")) {
+    QDBusInterface iface(QStringLiteral("org.kde.Solid.PowerManagement"),
+                         QStringLiteral("/org/kde/Solid/PowerManagement"),
+                         QStringLiteral("org.kde.Solid.PowerManagement"));
+    QDBusInterface brightnessIface(QStringLiteral("org.kde.Solid.PowerManagement"),
+                                   QStringLiteral("/org/kde/Solid/PowerManagement/Actions/BrightnessControl"),
+                                   QStringLiteral("org.kde.Solid.PowerManagement.Actions.BrightnessControl"));
+    if (match.id().startsWith(QLatin1String("PowerDevil_ProfileChange"))) {
+        iface.asyncCall(QStringLiteral("loadProfile"), match.data().toString());
+    } else if (match.id() == QLatin1String("PowerDevil_BrightnessChange")) {
+        brightnessIface.asyncCall(QStringLiteral("setBrightness"), match.data().toInt());
+    } else if (match.id() == QLatin1String("PowerDevil_DimTotal")) {
+        brightnessIface.asyncCall(QStringLiteral("setBrightness"), 0);
+    } else if (match.id() == QLatin1String("PowerDevil_DimHalf")) {
+        QDBusReply<int> brightness = brightnessIface.asyncCall(QStringLiteral("brightness"));
+        brightnessIface.asyncCall(QStringLiteral("setBrightness"), static_cast<int>(brightness / 2));
+    } else if (match.id().startsWith(QLatin1String("PowerDevil_Suspend"))) {
         switch ((Solid::PowerManagement::SleepState)match.data().toInt()) {
             case Solid::PowerManagement::SuspendState:
             case Solid::PowerManagement::StandbyState:

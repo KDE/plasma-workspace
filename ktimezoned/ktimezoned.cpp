@@ -123,7 +123,7 @@ void KTimeZoned::updateLocalZone()
         group.writeEntry(LOCAL_ZONE, m_localZone);
         group.sync();
 
-        QDBusMessage message = QDBusMessage::createSignal("/Daemon", "org.kde.KTimeZoned", "timeZoneChanged");
+        QDBusMessage message = QDBusMessage::createSignal(QStringLiteral("/Daemon"), QStringLiteral("org.kde.KTimeZoned"), QStringLiteral("timeZoneChanged"));
         QDBusConnection::sessionBus().send(message);
     }
 }
@@ -182,7 +182,7 @@ bool KTimeZoned::findZoneTab(const QString &pathFromConfig)
 
 void KTimeZoned::zonetabChanged()
 {
-    QDBusMessage message = QDBusMessage::createSignal("/Daemon", "org.kde.KTimeZoned", "timeZoneDatabaseUpdated");
+    QDBusMessage message = QDBusMessage::createSignal(QStringLiteral("/Daemon"), QStringLiteral("org.kde.KTimeZoned"), QStringLiteral("timeZoneDatabaseUpdated"));
     QDBusConnection::sessionBus().send(message);
 }
 

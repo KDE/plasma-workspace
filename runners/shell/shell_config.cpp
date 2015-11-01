@@ -37,7 +37,7 @@ ShellConfig::ShellConfig(const KConfigGroup &config, QWidget* parent)
     m_ui.setupUi(this);
 
 #ifdef Q_OS_UNIX
-    connect(m_ui.cbRunAsOther, SIGNAL(clicked(bool)), this, SLOT(slotUpdateUser(bool)));
+    connect(m_ui.cbRunAsOther, &QAbstractButton::clicked, this, &ShellConfig::slotUpdateUser);
 #else
     m_ui.cbRunAsOther->hide();
     m_ui.lbUsername->hide();

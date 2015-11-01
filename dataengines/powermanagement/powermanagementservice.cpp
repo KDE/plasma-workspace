@@ -23,7 +23,7 @@
 PowerManagementService::PowerManagementService(QObject *parent)
     : Plasma::Service(parent)
 {
-    setName("powermanagementservice");
+    setName(QStringLiteral("powermanagementservice"));
 }
 
 ServiceJob *PowerManagementService::createJob(const QString &operation,

@@ -48,27 +48,27 @@ void NotificationAction::start()
         id = dest[1].toUInt();
     }
 
-    if (operationName() == "invokeAction") {
+    if (operationName() == QLatin1String("invokeAction")) {
         //qDebug() << "invoking action on " << id;
-        emit m_engine->ActionInvoked(id, parameters()["actionId"].toString());
-    } else if (operationName() == "userClosed") {
+        emit m_engine->ActionInvoked(id, parameters()[QStringLiteral("actionId")].toString());
+    } else if (operationName() == QLatin1String("userClosed")) {
         //userClosedNotification deletes the job, so we have to invoke it queued, in this case emitResult() can be called
         m_engine->metaObject()->invokeMethod(m_engine, "removeNotication", Qt::QueuedConnection, Q_ARG(uint, id), Q_ARG(uint, 2));
-    } else if (operationName() == "expireNotification") {
+    } else if (operationName() == QLatin1String("expireNotification")) {
         //expireNotification deletes the job, so we have to invoke it queued, in this case emitResult() can be called
         m_engine->metaObject()->invokeMethod(m_engine, "removeNotication", Qt::QueuedConnection, Q_ARG(uint, id), Q_ARG(uint, 1));
-    } else if (operationName() == "createNotification") {
-        int rv = m_engine->createNotification(parameters().value("appName").toString(),
-                                              parameters().value("appIcon").toString(),
-                                              parameters().value("summary").toString(),
-                                              parameters().value("body").toString(),
-                                              parameters().value("expireTimeout").toInt(),
+    } else if (operationName() == QLatin1String("createNotification")) {
+        int rv = m_engine->createNotification(parameters().value(QStringLiteral("appName")).toString(),
+                                              parameters().value(QStringLiteral("appIcon")).toString(),
+                                              parameters().value(QStringLiteral("summary")).toString(),
+                                              parameters().value(QStringLiteral("body")).toString(),
+                                              parameters().value(QStringLiteral("expireTimeout")).toInt(),
                                               QString(),
-                                              parameters().value("actions").toStringList()
+                                              parameters().value(QStringLiteral("actions")).toStringList()
                                              );
         setResult(rv);
-    } else if (operationName() == "configureNotification") {
-        m_engine->configureNotification(parameters()["appRealName"].toString());
+    } else if (operationName() == QLatin1String("configureNotification")) {
+        m_engine->configureNotification(parameters()[QStringLiteral("appRealName")].toString());
     }
 
     emitResult();

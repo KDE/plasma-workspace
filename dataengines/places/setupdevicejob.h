@@ -28,12 +28,12 @@ class SetupDeviceJob : public ModelJob
 public:
     SetupDeviceJob(KFilePlacesModel* model, QModelIndex index,
                    QObject* parent = 0)
-        : ModelJob(parent, model, index, "Setup Device")
+        : ModelJob(parent, model, index, QStringLiteral("Setup Device"))
     {
-        connect(model, SIGNAL(setupDone(QModelIndex,bool)),
-                       SLOT(setupDone(QModelIndex,bool)));
-        connect(model, SIGNAL(errorMessage(QString)),
-                       SLOT(setupError(QString)));
+        connect(model, &KFilePlacesModel::setupDone,
+                       this, &SetupDeviceJob::setupDone);
+        connect(model, &KFilePlacesModel::errorMessage,
+                       this, &SetupDeviceJob::setupError);
     }
 
     void start()

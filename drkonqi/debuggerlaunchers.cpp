@@ -80,7 +80,7 @@ DBusOldInterfaceLauncher::DBusOldInterfaceLauncher(DebuggerManager *parent)
     : AbstractDebuggerLauncher(parent)
 {
     m_adaptor = new DBusOldInterfaceAdaptor(this);
-    QDBusConnection::sessionBus().registerObject("/krashinfo", this);
+    QDBusConnection::sessionBus().registerObject(QStringLiteral("/krashinfo"), this);
 }
 
 QString DBusOldInterfaceLauncher::name() const

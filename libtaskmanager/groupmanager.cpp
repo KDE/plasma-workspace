@@ -157,7 +157,7 @@ GroupManager::GroupManager(QObject *parent)
     d->currentDesktop = TaskManager::self()->currentDesktop();
     d->currentActivity = TaskManager::self()->currentActivity();
 
-    d->rootGroups[d->currentActivity][d->currentDesktop] = new TaskGroup(this, "RootGroup");
+    d->rootGroups[d->currentActivity][d->currentDesktop] = new TaskGroup(this, QStringLiteral("RootGroup"));
 
     d->reloadTimer.setSingleShot(true);
     d->reloadTimer.setInterval(0);
@@ -531,7 +531,7 @@ void GroupManagerPrivate::currentActivityChanged(QString newActivity)
 
     if (!rootGroups.contains(newActivity) || !rootGroups.value(newActivity).contains(currentDesktop)) {
         qDebug() << "created new desk group";
-        rootGroups[newActivity][currentDesktop] = new TaskGroup(q, "RootGroup");
+        rootGroups[newActivity][currentDesktop] = new TaskGroup(q, QStringLiteral("RootGroup"));
         if (abstractSortingStrategy) {
             abstractSortingStrategy->handleGroup(rootGroups[newActivity][currentDesktop]);
         }
@@ -573,7 +573,7 @@ void GroupManagerPrivate::currentDesktopChanged(int newDesktop)
 
     if (!rootGroups[currentActivity].contains(newDesktop)) {
         qDebug() << "created new desk group";
-        rootGroups[currentActivity][newDesktop] = new TaskGroup(q, "RootGroup");
+        rootGroups[currentActivity][newDesktop] = new TaskGroup(q, QStringLiteral("RootGroup"));
         if (abstractSortingStrategy) {
             abstractSortingStrategy->handleGroup(rootGroups[currentActivity][newDesktop]);
         }
@@ -856,10 +856,10 @@ void GroupManager::removeLauncher(const QUrl &url)
 
 void GroupManagerPrivate::sycocaChanged(const QStringList &types)
 {
-    if (types.contains("apps")) {
+    if (types.contains(QStringLiteral("apps"))) {
         QList<QUrl> removals;
         foreach (LauncherItem *launcher, launchers) {
-            if (launcher->launcherUrl().scheme() != "preferred" &&
+            if (launcher->launcherUrl().scheme() != QLatin1String("preferred") &&
                 !QFile::exists(launcher->launcherUrl().toLocalFile())) {
                 removals << launcher->launcherUrl();
             }
@@ -1013,27 +1013,27 @@ QList<QUrl> GroupManager::launcherList() const
         QUrl u(l->launcherUrl());
 
         if (!l->wmClass().isEmpty()) {
-            u.addQueryItem("wmClass", l->wmClass());
+            u.addQueryItem(QStringLiteral("wmClass"), l->wmClass());
         }
 
         if (!l->launcherUrl().isValid() || !KDesktopFile::isDesktopFile(l->launcherUrl().toLocalFile())) {
             if (!l->name().isEmpty()) {
-                u.addQueryItem("name", l->name());
+                u.addQueryItem(QStringLiteral("name"), l->name());
             }
 
             if (!l->genericName().isEmpty()) {
-                u.addQueryItem("genericName", l->genericName());
+                u.addQueryItem(QStringLiteral("genericName"), l->genericName());
             }
 
             if (!l->icon().name().isEmpty()) {
-                u.addQueryItem("icon", l->icon().name());
+                u.addQueryItem(QStringLiteral("icon"), l->icon().name());
             } else if (!l->icon().isNull()) {
                 QPixmap pixmap = l->icon().pixmap(QSize(64, 64));
                 QByteArray bytes;
                 QBuffer buffer(&bytes);
                 buffer.open(QIODevice::WriteOnly);
                 pixmap.save(&buffer, "PNG");
-                u.addQueryItem("iconData", bytes.toBase64(QByteArray::Base64UrlEncoding));
+                u.addQueryItem(QStringLiteral("iconData"), bytes.toBase64(QByteArray::Base64UrlEncoding));
             }
         }
 
@@ -1052,10 +1052,10 @@ void GroupManager::setLauncherList(QList<QUrl> launcherList)
     foreach (QUrl l, launcherList) {
         QUrlQuery query(l);
 
-        QString name(query.queryItemValue("name"));
-        QString genericName(query.queryItemValue("genericName"));
-        QString wmClass(query.queryItemValue("wmClass"));
-        QString iconData(query.queryItemValue("iconData"));
+        QString name(query.queryItemValue(QStringLiteral("name")));
+        QString genericName(query.queryItemValue(QStringLiteral("genericName")));
+        QString wmClass(query.queryItemValue(QStringLiteral("wmClass")));
+        QString iconData(query.queryItemValue(QStringLiteral("iconData")));
 
         QIcon icon;
 
@@ -1065,7 +1065,7 @@ void GroupManager::setLauncherList(QList<QUrl> launcherList)
             pixmap.loadFromData(bytes);
             icon.addPixmap(pixmap);
         } else {
-            icon = QIcon::fromTheme(query.queryItemValue("icon"));
+            icon = QIcon::fromTheme(query.queryItemValue(QStringLiteral("icon")));
         }
 
         l.setQuery(QUrlQuery());
@@ -1107,13 +1107,13 @@ int GroupManagerPrivate::launcherIndex(const QUrl &url)
     // .. and if that fails for preferred launcher matches
     index = 0;
     foreach (const LauncherItem * item, launchers) {
-        if (item->launcherUrl().scheme() == "preferred") {
+        if (item->launcherUrl().scheme() == QLatin1String("preferred")) {
             KService::Ptr service = KService::serviceByStorageId(item->defaultApplication(item->launcherUrl()));
 
             if (service) {
                 QUrl prefUrl(service->entryPath());
                 if (prefUrl.scheme().isEmpty()) {
-                    prefUrl.setScheme("file");
+                    prefUrl.setScheme(QStringLiteral("file"));
                 }
 
                 if (prefUrl == url) {

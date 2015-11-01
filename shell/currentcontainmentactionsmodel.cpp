@@ -66,7 +66,7 @@ CurrentContainmentActionsModel::CurrentContainmentActionsModel(Plasma::Containme
         m_plugins[i.key()]->setContainment(m_containment);
         KConfigGroup cfg(&m_baseCfg, i.key());
         m_plugins[i.key()]->restore(cfg);
-        item->setData(m_plugins[i.key()]->pluginInfo().property("X-Plasma-HasConfigurationInterface").toBool(), HasConfigurationInterfaceRole);
+        item->setData(m_plugins[i.key()]->pluginInfo().property(QStringLiteral("X-Plasma-HasConfigurationInterface")).toBool(), HasConfigurationInterfaceRole);
 
         appendRow(item);
     }
@@ -124,7 +124,7 @@ bool CurrentContainmentActionsModel::append(const QString &action, const QString
     //empty config: the new one will ne in default state
     KConfigGroup tempConfig(&m_tempConfigParent, "test");
     m_plugins[action]->restore(tempConfig);
-    item->setData(m_plugins[action]->pluginInfo().property("X-Plasma-HasConfigurationInterface").toBool(), HasConfigurationInterfaceRole);
+    item->setData(m_plugins[action]->pluginInfo().property(QStringLiteral("X-Plasma-HasConfigurationInterface")).toBool(), HasConfigurationInterfaceRole);
     m_removedTriggers.removeAll(action);
 
     appendRow(item);
@@ -160,7 +160,7 @@ void CurrentContainmentActionsModel::update(int row, const QString &action, cons
             //empty config: the new one will ne in default state
             KConfigGroup tempConfig(&m_tempConfigParent, "test");
             m_plugins[action]->restore(tempConfig);
-            setData(idx, m_plugins[action]->pluginInfo().property("X-Plasma-HasConfigurationInterface").toBool(), HasConfigurationInterfaceRole);
+            setData(idx, m_plugins[action]->pluginInfo().property(QStringLiteral("X-Plasma-HasConfigurationInterface")).toBool(), HasConfigurationInterfaceRole);
         }
     }
 }

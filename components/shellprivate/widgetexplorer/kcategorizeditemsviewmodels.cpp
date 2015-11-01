@@ -33,7 +33,7 @@ QString AbstractItem::name() const
 
 QString AbstractItem::id() const
 {
-    QString plugin = data().toMap()["pluginName"].toString();
+    QString plugin = data().toMap()[QStringLiteral("pluginName")].toString();
 
     if (plugin.isEmpty()) {
         return name();
@@ -44,12 +44,12 @@ QString AbstractItem::id() const
 
 QString AbstractItem::description() const
 {
-    return "";
+    return QLatin1String("");
 }
 
 bool AbstractItem::isFavorite() const
 {
-    return passesFiltering(Filter("favorite", true));
+    return passesFiltering(Filter(QStringLiteral("favorite"), true));
 }
 
 int AbstractItem::running() const
@@ -77,12 +77,12 @@ DefaultFilterModel::DefaultFilterModel(QObject *parent) :
     newRoleNames[SeparatorRole] = "separator";
 
     setRoleNames(newRoleNames);
-    connect(this, SIGNAL(modelReset()),
-            this, SIGNAL(countChanged()));
-    connect(this, SIGNAL(rowsInserted(QModelIndex, int, int)),
-            this, SIGNAL(countChanged()));
-    connect(this, SIGNAL(rowsRemoved(QModelIndex, int, int)),
-            this, SIGNAL(countChanged()));
+    connect(this, &QAbstractItemModel::modelReset,
+            this, &DefaultFilterModel::countChanged);
+    connect(this, &QAbstractItemModel::rowsInserted,
+            this, &DefaultFilterModel::countChanged);
+    connect(this, &QAbstractItemModel::rowsRemoved,
+            this, &DefaultFilterModel::countChanged);
 }
 
 void DefaultFilterModel::addFilter(const QString &caption, const Filter &filter, const QIcon &icon)
@@ -143,12 +143,12 @@ void DefaultItemFilterProxyModel::setSourceModel(QAbstractItemModel *sourceModel
     setRoleNames(sourceModel->roleNames());
 
     QSortFilterProxyModel::setSourceModel(model);
-    connect(this, SIGNAL(modelReset()),
-            this, SIGNAL(countChanged()));
-    connect(this, SIGNAL(rowsInserted(QModelIndex, int, int)),
-            this, SIGNAL(countChanged()));
-    connect(this, SIGNAL(rowsRemoved(QModelIndex, int, int)),
-            this, SIGNAL(countChanged()));
+    connect(this, &QAbstractItemModel::modelReset,
+            this, &DefaultItemFilterProxyModel::countChanged);
+    connect(this, &QAbstractItemModel::rowsInserted,
+            this, &DefaultItemFilterProxyModel::countChanged);
+    connect(this, &QAbstractItemModel::rowsRemoved,
+            this, &DefaultItemFilterProxyModel::countChanged);
 }
 
 QAbstractItemModel *DefaultItemFilterProxyModel::sourceModel() const

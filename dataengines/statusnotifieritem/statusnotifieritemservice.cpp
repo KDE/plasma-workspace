@@ -26,7 +26,7 @@ StatusNotifierItemService::StatusNotifierItemService(StatusNotifierItemSource *s
     Plasma::Service(source),
     m_source(source)
 {
-    setName("statusnotifieritem");
+    setName(QStringLiteral("statusnotifieritem"));
 }
 
 StatusNotifierItemService::~StatusNotifierItemService()

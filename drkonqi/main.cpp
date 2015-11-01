@@ -66,19 +66,19 @@ int main(int argc, char* argv[])
     // Session management is not needed, do not even connect in order to survive longer than ksmserver.
     unsetenv("SESSION_MANAGER");
 
-    KAboutData aboutData("drkonqi", i18n("The KDE Crash Handler"),
+    KAboutData aboutData(QStringLiteral("drkonqi"), i18n("The KDE Crash Handler"),
                          version, i18n(description),
                          KAboutLicense::GPL,
                          i18n("(C) 2000-2009, The DrKonqi Authors"));
     aboutData.addAuthor(i18nc("@info:credit","Hans Petter Bieker"), QString(),
-                         "bieker@kde.org");
+                         QStringLiteral("bieker@kde.org"));
     aboutData.addAuthor(i18nc("@info:credit","Dario Andres Rodriguez"), QString(),
-                         "andresbajotierra@gmail.com");
+                         QStringLiteral("andresbajotierra@gmail.com"));
     aboutData.addAuthor(i18nc("@info:credit","George Kiagiadakis"), QString(),
-                         "gkiagia@users.sourceforge.net");
+                         QStringLiteral("gkiagia@users.sourceforge.net"));
     aboutData.addAuthor(i18nc("@info:credit","A. L. Spehr"), QString(),
-                         "spehr@kde.org");
-    qa.setWindowIcon(QIcon::fromTheme("tools-report-bug"));
+                         QStringLiteral("spehr@kde.org"));
+    qa.setWindowIcon(QIcon::fromTheme(QStringLiteral("tools-report-bug")));
 
     QCommandLineParser parser;
     parser.setApplicationDescription(description);

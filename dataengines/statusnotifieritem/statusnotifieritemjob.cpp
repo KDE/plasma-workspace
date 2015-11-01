@@ -34,15 +34,15 @@ StatusNotifierItemJob::~StatusNotifierItemJob()
 void StatusNotifierItemJob::start()
 {
     if (operationName() == QString::fromLatin1("Activate")) {
-        m_source->activate(parameters()["x"].toInt(), parameters()["y"].toInt());
+        m_source->activate(parameters()[QStringLiteral("x")].toInt(), parameters()[QStringLiteral("y")].toInt());
         setResult(0);
     } else if (operationName() == QString::fromLatin1("SecondaryActivate")) {
-        m_source->secondaryActivate(parameters()["x"].toInt(), parameters()["y"].toInt());
+        m_source->secondaryActivate(parameters()[QStringLiteral("x")].toInt(), parameters()[QStringLiteral("y")].toInt());
         setResult(0);
     } else if (operationName() == QString::fromLatin1("ContextMenu")) {
-        m_source->contextMenu(parameters()["x"].toInt(), parameters()["y"].toInt());
+        m_source->contextMenu(parameters()[QStringLiteral("x")].toInt(), parameters()[QStringLiteral("y")].toInt());
     } else if (operationName() == QString::fromLatin1("Scroll")) {
-        m_source->scroll(parameters()["delta"].toInt(), parameters()["direction"].toString());
+        m_source->scroll(parameters()[QStringLiteral("delta")].toInt(), parameters()[QStringLiteral("direction")].toString());
         setResult(0);
     }
 }

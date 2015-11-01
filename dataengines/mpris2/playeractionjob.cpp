@@ -63,71 +63,71 @@ void PlayerActionJob::start()
                || operation == QLatin1String("Next")
                || operation == QLatin1String("Previous")) {
         listenToCall(m_controller->playerInterface()->asyncCall(operation));
-    } else if (operation == "Seek") {
-        if (parameters().value("microseconds").canConvert<long long>()) {
-            listenToCall(m_controller->playerInterface()->Seek(parameters()["microseconds"].toLongLong()));
+    } else if (operation == QLatin1String("Seek")) {
+        if (parameters().value(QStringLiteral("microseconds")).canConvert<long long>()) {
+            listenToCall(m_controller->playerInterface()->Seek(parameters()[QStringLiteral("microseconds")].toLongLong()));
         } else {
-            setErrorText("microseconds");
+            setErrorText(QStringLiteral("microseconds"));
             setError(MissingArgument);
             emitResult();
         }
-    } else if (operation == "SetPosition") {
-        if (parameters().value("microseconds").canConvert<long long>()) {
+    } else if (operation == QLatin1String("SetPosition")) {
+        if (parameters().value(QStringLiteral("microseconds")).canConvert<long long>()) {
             listenToCall(m_controller->playerInterface()->SetPosition(
                              m_controller->trackId(),
-                             parameters()["microseconds"].toLongLong()));
+                             parameters()[QStringLiteral("microseconds")].toLongLong()));
         } else {
-            setErrorText("microseconds");
+            setErrorText(QStringLiteral("microseconds"));
             setError(MissingArgument);
             emitResult();
         }
-    } else if (operation == "OpenUri") {
-        if (parameters().value("uri").canConvert<QUrl>()) {
+    } else if (operation == QLatin1String("OpenUri")) {
+        if (parameters().value(QStringLiteral("uri")).canConvert<QUrl>()) {
             listenToCall(m_controller->playerInterface()->OpenUri(
-                             QString::fromLatin1(parameters()["uri"].toUrl().toEncoded())));
+                             QString::fromLatin1(parameters()[QStringLiteral("uri")].toUrl().toEncoded())));
         } else {
-            qCDebug(MPRIS2) << "uri was of type" << parameters().value("uri").userType();
-            setErrorText("uri");
+            qCDebug(MPRIS2) << "uri was of type" << parameters().value(QStringLiteral("uri")).userType();
+            setErrorText(QStringLiteral("uri"));
             setError(MissingArgument);
             emitResult();
         }
-    } else if (operation == "SetLoopStatus") {
-        if (parameters().value("status").type() == QVariant::String) {
+    } else if (operation == QLatin1String("SetLoopStatus")) {
+        if (parameters().value(QStringLiteral("status")).type() == QVariant::String) {
             setDBusProperty(m_controller->playerInterface()->interface(),
-                    "LoopStatus", QDBusVariant(parameters()["status"]));
+                    QStringLiteral("LoopStatus"), QDBusVariant(parameters()[QStringLiteral("status")]));
         } else {
-            setErrorText("status");
+            setErrorText(QStringLiteral("status"));
             setError(MissingArgument);
             emitResult();
         }
-    } else if (operation == "SetShuffle") {
-        if (parameters().value("on").type() == QVariant::Bool) {
+    } else if (operation == QLatin1String("SetShuffle")) {
+        if (parameters().value(QStringLiteral("on")).type() == QVariant::Bool) {
             setDBusProperty(m_controller->playerInterface()->interface(),
-                    "Shuffle", QDBusVariant(parameters()["on"]));
+                    QStringLiteral("Shuffle"), QDBusVariant(parameters()[QStringLiteral("on")]));
         } else {
-            setErrorText("on");
+            setErrorText(QStringLiteral("on"));
             setError(MissingArgument);
             emitResult();
         }
-    } else if (operation == "SetRate") {
-        if (parameters().value("rate").type() == QVariant::Double) {
+    } else if (operation == QLatin1String("SetRate")) {
+        if (parameters().value(QStringLiteral("rate")).type() == QVariant::Double) {
             setDBusProperty(m_controller->playerInterface()->interface(),
-                    "Rate", QDBusVariant(parameters()["rate"]));
+                    QStringLiteral("Rate"), QDBusVariant(parameters()[QStringLiteral("rate")]));
         } else {
-            setErrorText("rate");
+            setErrorText(QStringLiteral("rate"));
             setError(MissingArgument);
             emitResult();
         }
-    } else if (operation == "SetVolume") {
-        if (parameters().value("level").type() == QVariant::Double) {
+    } else if (operation == QLatin1String("SetVolume")) {
+        if (parameters().value(QStringLiteral("level")).type() == QVariant::Double) {
             setDBusProperty(m_controller->playerInterface()->interface(),
-                    "Volume", QDBusVariant(parameters()["level"]));
+                    QStringLiteral("Volume"), QDBusVariant(parameters()[QStringLiteral("level")]));
         } else {
-            setErrorText("level");
+            setErrorText(QStringLiteral("level"));
             setError(MissingArgument);
             emitResult();
         }
-    } else if (operation == "GetPosition") {
+    } else if (operation == QLatin1String("GetPosition")) {
         m_controller->updatePosition();
     } else {
         setError(UnknownOperation);
@@ -138,8 +138,8 @@ void PlayerActionJob::start()
 void PlayerActionJob::listenToCall(const QDBusPendingCall& call)
 {
     QDBusPendingCallWatcher *watcher = new QDBusPendingCallWatcher(call, this);
-    connect(watcher, SIGNAL(finished(QDBusPendingCallWatcher*)),
-            this,    SLOT(callFinished(QDBusPendingCallWatcher*)));
+    connect(watcher, &QDBusPendingCallWatcher::finished,
+            this,    &PlayerActionJob::callFinished);
 }
 
 void PlayerActionJob::callFinished(QDBusPendingCallWatcher* watcher)

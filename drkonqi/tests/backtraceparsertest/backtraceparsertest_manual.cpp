@@ -28,17 +28,17 @@
 int main(int argc, char **argv)
 {
     QCoreApplication app(argc, argv);
-    KAboutData aboutData("backtraceparsertest_manual", i18n("backtraceparsertest_manual"), "1.0");
+    KAboutData aboutData(QStringLiteral("backtraceparsertest_manual"), i18n("backtraceparsertest_manual"), QStringLiteral("1.0"));
     KAboutData::setApplicationData(aboutData);
 
     QCommandLineParser parser;
-    parser.addOption(QCommandLineOption("debugger", i18n("The debugger name passed to the parser factory"), "name", "gdb"));
-    parser.addPositionalArgument("file", i18n("A file containing the backtrace."), "[file]");
+    parser.addOption(QCommandLineOption(QStringLiteral("debugger"), i18n("The debugger name passed to the parser factory"), QStringLiteral("name"), QStringLiteral("gdb")));
+    parser.addPositionalArgument(QStringLiteral("file"), i18n("A file containing the backtrace."), QStringLiteral("[file]"));
     aboutData.setupCommandLine(&parser);
     parser.process(app);
     aboutData.processCommandLine(&parser);
 
-    QString debugger = parser.value("debugger");
+    QString debugger = parser.value(QStringLiteral("debugger"));
     if(parser.positionalArguments().isEmpty()) {
         parser.showHelp(1);
         return 1;
@@ -58,10 +58,10 @@ int main(int argc, char **argv)
     QMetaEnum metaUsefulness = BacktraceParser::staticMetaObject.enumerator(
                                 BacktraceParser::staticMetaObject.indexOfEnumerator("Usefulness"));
     QTextStream(stdout) << "Usefulness: " << metaUsefulness.valueToKey(btparser->backtraceUsefulness()) << endl;
-    QTextStream(stdout) << "First valid functions: " << btparser->firstValidFunctions().join(" ") << endl;
+    QTextStream(stdout) << "First valid functions: " << btparser->firstValidFunctions().join(QStringLiteral(" ")) << endl;
     QTextStream(stdout) << "Simplified backtrace:\n" << btparser->simplifiedBacktrace() << endl;
     QStringList l = static_cast<QStringList>(btparser->librariesWithMissingDebugSymbols().toList());
-    QTextStream(stdout) << "Missing dbgsym libs: " << l.join(" ") << endl;
+    QTextStream(stdout) << "Missing dbgsym libs: " << l.join(QStringLiteral(" ")) << endl;
 
     return 0;
 }

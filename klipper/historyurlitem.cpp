@@ -47,7 +47,7 @@ HistoryURLItem::HistoryURLItem( const QList<QUrl>& _urls, KUrlMimeData::MetaData
 /* virtual */
 void HistoryURLItem::write( QDataStream& stream ) const
 {
-    stream << QString( "url" ) << m_urls << m_metaData << (int)m_cut;
+    stream << QStringLiteral( "url" ) << m_urls << m_metaData << (int)m_cut;
 }
 
 QString HistoryURLItem::text() const {
@@ -67,7 +67,7 @@ QMimeData* HistoryURLItem::mimeData() const {
     QMimeData *data = new QMimeData();
     data->setUrls(m_urls);
     KUrlMimeData::setMetaData(m_metaData, data);
-    data->setData("application/x-kde-cutselection", QByteArray(m_cut ? "1" : "0"));
+    data->setData(QStringLiteral("application/x-kde-cutselection"), QByteArray(m_cut ? "1" : "0"));
     return data;
 }
 

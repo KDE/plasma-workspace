@@ -88,7 +88,7 @@ bool PumpJob::doKill()
     emitResult();
     d->timer->stop();
     setError(KIO::ERR_USER_CANCELED);
-    setErrorText("You killed the job.");
+    setErrorText(QStringLiteral("You killed the job."));
     return KJob::doKill();
 }
 

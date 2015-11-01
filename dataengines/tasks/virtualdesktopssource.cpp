@@ -23,20 +23,20 @@
 VirtualDesktopsSource::VirtualDesktopsSource() : Plasma::DataContainer()
 {
     setObjectName( QLatin1String("virtualDesktops" ));
-    connect(KWindowSystem::self(), SIGNAL(numberOfDesktopsChanged(int)), this, SLOT(updateDesktopNumber(int)));
-    connect(KWindowSystem::self(), SIGNAL(desktopNamesChanged()), this, SLOT(updateDesktopNames()));
+    connect(KWindowSystem::self(), &KWindowSystem::numberOfDesktopsChanged, this, &VirtualDesktopsSource::updateDesktopNumber);
+    connect(KWindowSystem::self(), &KWindowSystem::desktopNamesChanged, this, &VirtualDesktopsSource::updateDesktopNames);
     updateDesktopNumber(KWindowSystem::self()->numberOfDesktops());
     updateDesktopNames();
 }
 
 VirtualDesktopsSource::~VirtualDesktopsSource()
 {
-    disconnect(KWindowSystem::self(), SIGNAL(numberOfDesktopsChanged(int)), this, SLOT(updateDesktopNumber(int)));
+    disconnect(KWindowSystem::self(), &KWindowSystem::numberOfDesktopsChanged, this, &VirtualDesktopsSource::updateDesktopNumber);
 }
 
 void VirtualDesktopsSource::updateDesktopNumber(int desktop)
 {
-    setData("number", desktop);
+    setData(QStringLiteral("number"), desktop);
     checkForUpdate();
 }
 
@@ -46,6 +46,6 @@ void VirtualDesktopsSource::updateDesktopNames()
     for (int i = 0; i < KWindowSystem::self()->numberOfDesktops(); i++) {
         desktopNames.append(KWindowSystem::self()->desktopName(i + 1));
     }
-    setData("names", desktopNames);
+    setData(QStringLiteral("names"), desktopNames);
     checkForUpdate();
 }

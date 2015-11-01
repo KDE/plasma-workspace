@@ -101,11 +101,11 @@ public:
         DMDEBUG << "Starting refresh chrono for id" << id;
         sChrono.start();
         #endif
-        QDBusPendingCall call = m_interface->asyncCall("GetLayout", id, 1, QStringList());
+        QDBusPendingCall call = m_interface->asyncCall(QStringLiteral("GetLayout"), id, 1, QStringList());
         QDBusPendingCallWatcher *watcher = new QDBusPendingCallWatcher(call, q);
         watcher->setProperty(DBUSMENU_PROPERTY_ID, id);
-        QObject::connect(watcher, SIGNAL(finished(QDBusPendingCallWatcher*)),
-            q, SLOT(slotGetLayoutFinished(QDBusPendingCallWatcher*)));
+        QObject::connect(watcher, &QDBusPendingCallWatcher::finished,
+            q, &DBusMenuImporter::slotGetLayoutFinished);
 
         return watcher;
     }
@@ -130,26 +130,26 @@ public:
         QAction *action = new QAction(parent);
         action->setProperty(DBUSMENU_PROPERTY_ID, id);
 
-        QString type = map.take("type").toString();
-        if (type == "separator") {
+        QString type = map.take(QStringLiteral("type")).toString();
+        if (type == QLatin1String("separator")) {
             action->setSeparator(true);
         }
 
-        if (map.take("children-display").toString() == "submenu") {
+        if (map.take(QStringLiteral("children-display")).toString() == QLatin1String("submenu")) {
             QMenu *menu = createMenu(parent);
             action->setMenu(menu);
         }
 
-        QString toggleType = map.take("toggle-type").toString();
+        QString toggleType = map.take(QStringLiteral("toggle-type")).toString();
         if (!toggleType.isEmpty()) {
             action->setCheckable(true);
-            if (toggleType == "radio") {
+            if (toggleType == QLatin1String("radio")) {
                 QActionGroup *group = new QActionGroup(action);
                 group->addAction(action);
             }
         }
 
-        bool isKdeTitle = map.take("x-kde-title").toBool();
+        bool isKdeTitle = map.take(QStringLiteral("x-kde-title")).toBool();
         updateAction(action, map, map.keys());
 
         if (isKdeTitle) {
@@ -279,7 +279,7 @@ public:
     void sendEvent(int id, const QString &eventId)
     {
         QVariant empty = QVariant::fromValue(QDBusVariant(QString()));
-        m_interface->asyncCall("Event", id, eventId, empty, 0u);
+        m_interface->asyncCall(QStringLiteral("Event"), id, eventId, empty, 0u);
     }
 };
 
@@ -298,13 +298,13 @@ DBusMenuImporter::DBusMenuImporter(const QString &service, const QString &path, 
 
     d->m_pendingLayoutUpdateTimer = new QTimer(this);
     d->m_pendingLayoutUpdateTimer->setSingleShot(true);
-    connect(d->m_pendingLayoutUpdateTimer, SIGNAL(timeout()), SLOT(processPendingLayoutUpdates()));
+    connect(d->m_pendingLayoutUpdateTimer, &QTimer::timeout, this, &DBusMenuImporter::processPendingLayoutUpdates);
 
-    QDBusConnection::sessionBus().connect(service, path, DBUSMENU_INTERFACE, "LayoutUpdated", "ui",
+    QDBusConnection::sessionBus().connect(service, path, DBUSMENU_INTERFACE, QStringLiteral("LayoutUpdated"), QStringLiteral("ui"),
         this, SLOT(slotLayoutUpdated(uint, int)));
-    QDBusConnection::sessionBus().connect(service, path, DBUSMENU_INTERFACE, "ItemsPropertiesUpdated", "a(ia{sv})a(ias)",
+    QDBusConnection::sessionBus().connect(service, path, DBUSMENU_INTERFACE, QStringLiteral("ItemsPropertiesUpdated"), QStringLiteral("a(ia{sv})a(ias)"),
         this, SLOT(slotItemsPropertiesUpdated(DBusMenuItemList, DBusMenuItemKeysList)));
-    QDBusConnection::sessionBus().connect(service, path, DBUSMENU_INTERFACE, "ItemActivationRequested", "iu",
+    QDBusConnection::sessionBus().connect(service, path, DBUSMENU_INTERFACE, QStringLiteral("ItemActivationRequested"), QStringLiteral("iu"),
         this, SLOT(slotItemActivationRequested(int, uint)));
 
     d->refresh(0);
@@ -447,7 +447,7 @@ void DBusMenuImporter::slotGetLayoutFinished(QDBusPendingCallWatcher *watcher)
 
 void DBusMenuImporter::sendClickedEvent(int id)
 {
-    d->sendEvent(id, QString("clicked"));
+    d->sendEvent(id, QStringLiteral("clicked"));
 }
 
 void DBusMenuImporter::updateMenu()
@@ -460,7 +460,7 @@ void DBusMenuImporter::updateMenu()
 
     int id = action->property(DBUSMENU_PROPERTY_ID).toInt();
 
-    QDBusPendingCall call = d->m_interface->asyncCall("AboutToShow", id);
+    QDBusPendingCall call = d->m_interface->asyncCall(QStringLiteral("AboutToShow"), id);
     QDBusPendingCallWatcher *watcher = new QDBusPendingCallWatcher(call, this);
     watcher->setProperty(DBUSMENU_PROPERTY_ID, id);
     connect(watcher, &QDBusPendingCallWatcher::finished, this,
@@ -502,7 +502,7 @@ void DBusMenuImporter::slotMenuAboutToHide()
     Q_ASSERT(action);
 
     int id = action->property(DBUSMENU_PROPERTY_ID).toInt();
-    d->sendEvent(id, QString("closed"));
+    d->sendEvent(id, QStringLiteral("closed"));
 }
 
 void DBusMenuImporter::slotMenuAboutToShow()
@@ -514,7 +514,7 @@ void DBusMenuImporter::slotMenuAboutToShow()
     Q_ASSERT(action);
 
     int id = action->property(DBUSMENU_PROPERTY_ID).toInt();
-    d->sendEvent(id, QString("opened"));
+    d->sendEvent(id, QStringLiteral("opened"));
 }
 
 

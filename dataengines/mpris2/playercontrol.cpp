@@ -33,13 +33,13 @@ PlayerControl::PlayerControl(PlayerContainer* container, QObject* parent)
     , m_container(container)
 {
     setObjectName(container->objectName() + QLatin1String(" controller"));
-    setName("mpris2");
+    setName(QStringLiteral("mpris2"));
     setDestination(container->objectName());
 
-    connect(container, SIGNAL(dataUpdated(QString,Plasma::DataEngine::Data)),
-            this,      SLOT(updateEnabledOperations()));
-    connect(container, SIGNAL(destroyed(QObject*)),
-            this,      SLOT(containerDestroyed()));
+    connect(container, &Plasma::DataContainer::dataUpdated,
+            this,      &PlayerControl::updateEnabledOperations);
+    connect(container, &QObject::destroyed,
+            this,      &PlayerControl::containerDestroyed);
     updateEnabledOperations();
 }
 
@@ -49,31 +49,31 @@ void PlayerControl::updateEnabledOperations()
     if (m_container)
         caps = m_container->capabilities();
 
-    setOperationEnabled("Quit", caps & PlayerContainer::CanQuit);
-    setOperationEnabled("Raise", caps & PlayerContainer::CanRaise);
-    setOperationEnabled("SetFullscreen", caps & PlayerContainer::CanSetFullscreen);
+    setOperationEnabled(QStringLiteral("Quit"), caps & PlayerContainer::CanQuit);
+    setOperationEnabled(QStringLiteral("Raise"), caps & PlayerContainer::CanRaise);
+    setOperationEnabled(QStringLiteral("SetFullscreen"), caps & PlayerContainer::CanSetFullscreen);
 
-    setOperationEnabled("Play", caps & PlayerContainer::CanPlay);
-    setOperationEnabled("Pause", caps & PlayerContainer::CanPause);
-    setOperationEnabled("PlayPause", caps & (PlayerContainer::CanPlay | PlayerContainer::CanPause));
-    setOperationEnabled("Stop", caps & PlayerContainer::CanStop);
-    setOperationEnabled("Next", caps & PlayerContainer::CanGoNext);
-    setOperationEnabled("Previous", caps & PlayerContainer::CanGoPrevious);
-    setOperationEnabled("Seek", caps & PlayerContainer::CanSeek);
-    setOperationEnabled("SetPosition", caps & PlayerContainer::CanSeek);
-    setOperationEnabled("OpenUri", caps & PlayerContainer::CanControl);
-    setOperationEnabled("SetVolume", caps & PlayerContainer::CanControl);
-    setOperationEnabled("SetLoopStatus", caps & PlayerContainer::CanControl);
-    setOperationEnabled("SetRate", caps & PlayerContainer::CanControl);
-    setOperationEnabled("SetShuffle", caps & PlayerContainer::CanControl);
-    setOperationEnabled("GetPosition", true);
+    setOperationEnabled(QStringLiteral("Play"), caps & PlayerContainer::CanPlay);
+    setOperationEnabled(QStringLiteral("Pause"), caps & PlayerContainer::CanPause);
+    setOperationEnabled(QStringLiteral("PlayPause"), caps & (PlayerContainer::CanPlay | PlayerContainer::CanPause));
+    setOperationEnabled(QStringLiteral("Stop"), caps & PlayerContainer::CanStop);
+    setOperationEnabled(QStringLiteral("Next"), caps & PlayerContainer::CanGoNext);
+    setOperationEnabled(QStringLiteral("Previous"), caps & PlayerContainer::CanGoPrevious);
+    setOperationEnabled(QStringLiteral("Seek"), caps & PlayerContainer::CanSeek);
+    setOperationEnabled(QStringLiteral("SetPosition"), caps & PlayerContainer::CanSeek);
+    setOperationEnabled(QStringLiteral("OpenUri"), caps & PlayerContainer::CanControl);
+    setOperationEnabled(QStringLiteral("SetVolume"), caps & PlayerContainer::CanControl);
+    setOperationEnabled(QStringLiteral("SetLoopStatus"), caps & PlayerContainer::CanControl);
+    setOperationEnabled(QStringLiteral("SetRate"), caps & PlayerContainer::CanControl);
+    setOperationEnabled(QStringLiteral("SetShuffle"), caps & PlayerContainer::CanControl);
+    setOperationEnabled(QStringLiteral("GetPosition"), true);
 
     emit enabledOperationsChanged();
 }
 
 QDBusObjectPath PlayerControl::trackId() const
 {
-    QVariant mprisTrackId = m_container->data().value("Metadata").toMap().value("mpris:trackid");
+    QVariant mprisTrackId = m_container->data().value(QStringLiteral("Metadata")).toMap().value(QStringLiteral("mpris:trackid"));
     if (mprisTrackId.canConvert<QDBusObjectPath>()) {
         return mprisTrackId.value<QDBusObjectPath>();
     }

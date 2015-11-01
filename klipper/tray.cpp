@@ -44,7 +44,7 @@ KlipperTray::KlipperTray()
     m_klipper = new Klipper( this, KSharedConfig::openConfig());
     setContextMenu( m_klipper->popup() );
     setAssociatedWidget( m_klipper->popup() );
-    connect( m_klipper->history(), SIGNAL(changed()), SLOT(slotSetToolTipFromHistory()));
+    connect( m_klipper->history(), &History::changed, this, &KlipperTray::slotSetToolTipFromHistory);
     slotSetToolTipFromHistory();
     connect(m_klipper, &Klipper::passivePopup, this, &KlipperTray::slotPassivePopup);
 }
@@ -71,7 +71,7 @@ void KlipperTray::slotPassivePopup(const QString& caption, const QString& text)
         m_notification->setText(text);
     } else {
         m_notification = KNotification::event(KNotification::Notification, caption, text,
-                                              QIcon::fromTheme("klipper").pixmap(QSize(16, 16)));
+                                              QIcon::fromTheme(QStringLiteral("klipper")).pixmap(QSize(16, 16)));
     }
 }
 

@@ -56,8 +56,8 @@ SolidDeviceEngine::SolidDeviceEngine(QObject* parent, const QVariantList& args)
 
     listenForNewDevices();
     setMinimumPollingInterval(1000);
-    connect(this, SIGNAL(sourceRemoved(QString)),
-            this, SLOT(sourceWasRemoved(QString)));
+    connect(this, &Plasma::DataEngine::sourceRemoved,
+            this, &SolidDeviceEngine::sourceWasRemoved);
 }
 
 SolidDeviceEngine::~SolidDeviceEngine()
@@ -77,10 +77,10 @@ void SolidDeviceEngine::listenForNewDevices()
 
     //detect when new devices are added
     m_notifier = Solid::DeviceNotifier::instance();
-    connect(m_notifier, SIGNAL(deviceAdded(QString)),
-            this, SLOT(deviceAdded(QString)));
-    connect(m_notifier, SIGNAL(deviceRemoved(QString)),
-            this, SLOT(deviceRemoved(QString)));
+    connect(m_notifier, &Solid::DeviceNotifier::deviceAdded,
+            this, &SolidDeviceEngine::deviceAdded);
+    connect(m_notifier, &Solid::DeviceNotifier::deviceRemoved,
+            this, &SolidDeviceEngine::deviceRemoved);
 }
 
 bool SolidDeviceEngine::sourceRequestEvent(const QString &name)
@@ -460,10 +460,10 @@ void SolidDeviceEngine::deviceAdded(const QString& udi)
     if (device.is<Solid::OpticalDisc>()) {
         Solid::OpticalDrive *drive = getAncestorAs<Solid::OpticalDrive>(device);
         if (drive) {
-            connect(drive, SIGNAL(ejectRequested(QString)),
-                    this, SLOT(setUnmountingState(QString)));
-            connect(drive, SIGNAL(ejectDone(Solid::ErrorType,QVariant,QString)),
-                    this, SLOT(setIdleState(Solid::ErrorType,QVariant,QString)));
+            connect(drive, &Solid::OpticalDrive::ejectRequested,
+                    this, &SolidDeviceEngine::setUnmountingState);
+            connect(drive, &Solid::OpticalDrive::ejectDone,
+                    this, &SolidDeviceEngine::setIdleState);
         }
     }
     else if (device.is<Solid::StorageVolume>()) {
@@ -479,14 +479,14 @@ void SolidDeviceEngine::deviceAdded(const QString& udi)
 
         Solid::StorageAccess *access = device.as<Solid::StorageAccess>();
         if (access) {
-            connect(access, SIGNAL(setupRequested(QString)),
-                    this, SLOT(setMountingState(QString)));
-            connect(access, SIGNAL(setupDone(Solid::ErrorType,QVariant,QString)),
-                    this, SLOT(setIdleState(Solid::ErrorType,QVariant,QString)));
-            connect(access, SIGNAL(teardownRequested(QString)),
-                    this, SLOT(setUnmountingState(QString)));
-            connect(access, SIGNAL(teardownDone(Solid::ErrorType,QVariant,QString)),
-                    this, SLOT(setIdleState(Solid::ErrorType,QVariant,QString)));
+            connect(access, &Solid::StorageAccess::setupRequested,
+                    this, &SolidDeviceEngine::setMountingState);
+            connect(access, &Solid::StorageAccess::setupDone,
+                    this, &SolidDeviceEngine::setIdleState);
+            connect(access, &Solid::StorageAccess::teardownRequested,
+                    this, &SolidDeviceEngine::setUnmountingState);
+            connect(access, &Solid::StorageAccess::teardownDone,
+                    this, &SolidDeviceEngine::setIdleState);
         }
     }
 }
@@ -531,7 +531,7 @@ void SolidDeviceEngine::setIdleState(Solid::ErrorType error, QVariant errorData,
 void SolidDeviceEngine::deviceChanged(const QMap<QString, int> &props)
 {
     Solid::GenericInterface * iface = qobject_cast<Solid::GenericInterface *>(sender());
-    if (iface && iface->isValid() && props.contains("Size") && iface->property("Size").toInt() > 0) {
+    if (iface && iface->isValid() && props.contains(QStringLiteral("Size")) && iface->property(QStringLiteral("Size")).toInt() > 0) {
         const QString udi = qobject_cast<QObject *>(iface)->property("udi").toString();
         if (populateDeviceData(udi))
             forceImmediateUpdateOfAllVisualizations();

@@ -36,7 +36,7 @@ AboutBugReportingDialog::AboutBugReportingDialog(QWidget * parent):
 {
     setAttribute(Qt::WA_DeleteOnClose, true);
 
-    setWindowIcon(QIcon::fromTheme("help-hint"));
+    setWindowIcon(QIcon::fromTheme(QStringLiteral("help-hint")));
     setWindowTitle(i18nc("@title title of the dialog", "About Bug Reporting - Help"));
 
     QVBoxLayout* layout = new QVBoxLayout(this);
@@ -48,9 +48,9 @@ AboutBugReportingDialog::AboutBugReportingDialog(QWidget * parent):
     QString text =
 
         //Introduction
-        QString("<a name=\"%1\" /><h1>%2</h1>").arg(QLatin1String(PAGE_HELP_BEGIN_ID),
+        QStringLiteral("<a name=\"%1\" /><h1>%2</h1>").arg(QLatin1String(PAGE_HELP_BEGIN_ID),
                                 i18nc("@title","Information about bug reporting")) +
-        QString("<p>%1</p><p>%2</p><p>%3</p>").arg(
+        QStringLiteral("<p>%1</p><p>%2</p><p>%3</p>").arg(
             xi18nc("@info/rich", "You can help us improve this software by filing a bug report."),
             xi18nc("@info/rich","<note>It is safe to close this dialog. If you do not "
                             "want to, you do not have to file a bug report.</note>"),
@@ -59,17 +59,17 @@ AboutBugReportingDialog::AboutBugReportingDialog(QWidget * parent):
                             "need to install some debug packages.)")) +
 
         //Sub-introduction
-        QString("<h1>%1</h1>").arg(i18nc("@title","Bug Reporting Assistant Guide")) +
-        QString("<p>%1</p>").arg(
+        QStringLiteral("<h1>%1</h1>").arg(i18nc("@title","Bug Reporting Assistant Guide")) +
+        QStringLiteral("<p>%1</p>").arg(
             xi18nc("@info/rich","This assistant will guide you through the crash "
                             "reporting process for the KDE bug tracking system. All the "
                             "information you enter on the bug report <strong>must be written "
                             "in English</strong>, if possible, as KDE is formed internationally.")) +
 
         //Bug Awareness Page
-        QString("<a name=\"%1\" /><h2>%2</h2>").arg(QLatin1String(PAGE_AWARENESS_ID),
+        QStringLiteral("<a name=\"%1\" /><h2>%2</h2>").arg(QLatin1String(PAGE_AWARENESS_ID),
                                 i18nc("@title","What do you know about the crash?")) +
-        QString("<p>%1</p><p>%2<ul><li>%3</li><li>%4</li><li>%5</li><li>%6</li><li>%7</li><li>%8</li>"
+        QStringLiteral("<p>%1</p><p>%2<ul><li>%3</li><li>%4</li><li>%5</li><li>%6</li><li>%7</li><li>%8</li>"
         "</ul>%9</p>").arg(
             xi18nc("@info/rich","In this page you need to describe how much do you know about "
                                 "the desktop and the application state before it crashed."),
@@ -90,9 +90,9 @@ AboutBugReportingDialog::AboutBugReportingDialog(QWidget * parent):
                             "the bug report after it is posted to the bug tracking system.")) +
 
         //Crash Information Page
-        QString("<a name=\"%1\" /><h2>%2</h2>").arg(QLatin1String(PAGE_CRASHINFORMATION_ID),
+        QStringLiteral("<a name=\"%1\" /><h2>%2</h2>").arg(QLatin1String(PAGE_CRASHINFORMATION_ID),
                                 i18nc("@title","Crash Information (backtrace)")) +
-        QString("<p>%1</p><p>%2</p><p>%3</p><p>%4</p>").arg(
+        QStringLiteral("<p>%1</p><p>%2</p><p>%3</p><p>%4</p>").arg(
             xi18nc("@info/rich","This page will generate a \"backtrace\" of the crash. This "
                             "is information that tells the developers where the application "
                             "crashed."),
@@ -101,14 +101,14 @@ AboutBugReportingDialog::AboutBugReportingDialog(QWidget * parent):
                             "<interface>Install Debug Symbols</interface> button is available you "
                             "can use it to automatically install the missing information.)"),
             xi18nc("@info/rich", "You can find more information about backtraces, what they mean, "
-                            "and how they are useful at <link>%1</link>",QString(TECHBASE_HOWTO_DOC) ),
+                            "and how they are useful at <link>%1</link>",QStringLiteral(TECHBASE_HOWTO_DOC) ),
             xi18nc("@info/rich","Once you get a useful backtrace (or if you do not want to "
                             "install the missing debugging packages) you can continue.")) +
 
         //Conclusions Page
-        QString("<a name=\"%1\" /><h2>%2</h2>").arg(QLatin1String(PAGE_CONCLUSIONS_ID),
+        QStringLiteral("<a name=\"%1\" /><h2>%2</h2>").arg(QLatin1String(PAGE_CONCLUSIONS_ID),
                                 i18nc("@title","Conclusions")) +
-        QString("<p>%1</p><p>%2</p><p>%3</p>").arg(
+        QStringLiteral("<p>%1</p><p>%2</p><p>%3</p>").arg(
             xi18nc("@info/rich","Using the quality of the crash information gathered, "
                             "and your answers on the previous page, the assistant will "
                             "tell you if the crash is worth reporting or not."),
@@ -122,15 +122,15 @@ AboutBugReportingDialog::AboutBugReportingDialog(QWidget * parent):
                             "and download debug packages.")) +
 
         //Bugzilla Login Page
-        QString("<a name=\"%1\" /><h2>%2</h2>").arg(QLatin1String(PAGE_BZLOGIN_ID),
+        QStringLiteral("<a name=\"%1\" /><h2>%2</h2>").arg(QLatin1String(PAGE_BZLOGIN_ID),
                                     i18nc("@title","Login into the bug tracking system")) +
-        QString("<p>%1</p><p>%2</p><p>%3</p>").arg(
+        QStringLiteral("<p>%1</p><p>%2</p><p>%3</p>").arg(
             xi18nc("@info/rich","We may need to contact you in the future to ask for "
                             "further information. As we need to keep track of the bug reports, "
                             "you "
                             "need to have an account on the KDE bug tracking system. If you do "
                             "not have one, you can create one here: <link>%1</link>",
-                            QString(KDE_BUGZILLA_CREATE_ACCOUNT_URL)),
+                            QStringLiteral(KDE_BUGZILLA_CREATE_ACCOUNT_URL)),
             xi18nc("@info/rich","Then, enter your username and password and "
                             "press the Login button. You can use this login to directly access the "
                             "KDE bug tracking system later."),
@@ -140,9 +140,9 @@ AboutBugReportingDialog::AboutBugReportingDialog(QWidget * parent):
                             "the login fields if you use this assistant again.")) +
 
         //Bugzilla Duplicates Page
-        QString("<a name=\"%1\" /><h2>%2</h2>").arg(QLatin1String(PAGE_BZDUPLICATES_ID),
+        QStringLiteral("<a name=\"%1\" /><h2>%2</h2>").arg(QLatin1String(PAGE_BZDUPLICATES_ID),
                                 i18nc("@title","List of possible duplicate reports")) +
-        QString("<p>%1</p><p>%2</p><p>%3</p><p>%4</p><p><strong>%5</strong></p>").arg(
+        QStringLiteral("<p>%1</p><p>%2</p><p>%3</p><p>%4</p><p><strong>%5</strong></p>").arg(
         //needs some more string cleanup below
             xi18nc("@info/rich","This page will search the bug report system for "
                             "similar crashes which are possible duplicates of your bug. If "
@@ -165,9 +165,9 @@ AboutBugReportingDialog::AboutBugReportingDialog(QWidget * parent):
                                 "not file the bug report, thereby closing the assistant.")) +
 
         //Bugzilla Crash Information - Details Page
-        QString("<a name=\"%1\" /><h2>%2</h2>").arg(QLatin1String(PAGE_BZDETAILS_ID),
+        QStringLiteral("<a name=\"%1\" /><h2>%2</h2>").arg(QLatin1String(PAGE_BZDETAILS_ID),
                                         i18nc("@title","Details of the bug report and your system")) +
-        QString("<p>%1<a href=\"#%2\">%3</a></p><p>%4</p><p>%5</p>").arg(
+        QStringLiteral("<p>%1<a href=\"#%2\">%3</a></p><p>%4</p><p>%5</p>").arg(
             xi18nc("@info/rich","In this case you need to write a title and description "
                             "of the crash. Explain as best you can. "),
             QLatin1String(PAGE_AWARENESS_ID),
@@ -178,9 +178,9 @@ AboutBugReportingDialog::AboutBugReportingDialog(QWidget * parent):
             xi18nc("@info/rich", "<note>You should <strong>write those information in English</strong>.</note>")) +
 
         //Bugzilla Send Page
-        QString("<a name=\"%1\" /><h2>%2</h2>").arg(QLatin1String(PAGE_BZSEND_ID),
+        QStringLiteral("<a name=\"%1\" /><h2>%2</h2>").arg(QLatin1String(PAGE_BZSEND_ID),
                                        i18nc("@title","Sending the Crash Report")) +
-        QString("<p>%1</p><p>%2</p>").arg(
+        QStringLiteral("<p>%1</p><p>%2</p>").arg(
             xi18nc("@info/rich","The last page will send the bug report to the bug tracking "
                             "system and will notify you when it is done. It will then show "
                             "the web address of the bug report in the KDE bug tracking system, "
@@ -190,7 +190,7 @@ AboutBugReportingDialog::AboutBugReportingDialog(QWidget * parent):
                             "If the report cannot be sent because the bug tracking system has a "
                             "problem, you can save it to a file to manually report later.")) +
 
-        QString("<h1>%1</h1><p>%2</p>").arg(
+        QStringLiteral("<h1>%1</h1><p>%2</p>").arg(
             xi18nc("@info/rich", "Thank you for being part of KDE!"),
             xi18nc("@info/rich", "If you are interested in helping us to keep the KDE bug tracker system "
                                  "clean and useful, which allows the developers to be more focused on "

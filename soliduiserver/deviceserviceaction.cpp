@@ -59,7 +59,7 @@ private:
 DeviceServiceAction::DeviceServiceAction()
     : DeviceAction()
 {
-    DeviceAction::setIconName("dialog-cancel");
+    DeviceAction::setIconName(QStringLiteral("dialog-cancel"));
     DeviceAction::setLabel(i18nc("A default name for an action without proper label", "Unknown"));
 }
 
@@ -143,8 +143,8 @@ DelayedExecutor::DelayedExecutor(const KServiceAction &service, Solid::Device &d
             && !device.as<Solid::StorageAccess>()->isAccessible()) {
         Solid::StorageAccess *access = device.as<Solid::StorageAccess>();
 
-        connect(access, SIGNAL(setupDone(Solid::ErrorType, QVariant, const QString &)),
-                this, SLOT(_k_storageSetupDone(Solid::ErrorType, QVariant, const QString &)));
+        connect(access, &Solid::StorageAccess::setupDone,
+                this, &DelayedExecutor::_k_storageSetupDone);
 
         access->setup();
     } else {

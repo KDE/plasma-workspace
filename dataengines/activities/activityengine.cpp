@@ -39,7 +39,7 @@ ActivityEngine::ActivityEngine(QObject* parent, const QVariantList& args)
 
 void ActivityEngine::init()
 {
-    if (qApp->applicationName() == "plasma-netbook") {
+    if (qApp->applicationName() == QLatin1String("plasma-netbook")) {
         //hack for the netbook
         //FIXME can I read a setting or something instead?
     } else {
@@ -59,8 +59,8 @@ void ActivityEngine::init()
         //it starts with _ so that it can easily be filtered out of sources()
         //maybe I should just make it not included in sources() instead?
         m_runningActivities = m_activityController->activities(KActivities::Info::Running);
-        setData("Status", "Current", m_currentActivity);
-        setData("Status", "Running", m_runningActivities);
+        setData(QStringLiteral("Status"), QStringLiteral("Current"), m_currentActivity);
+        setData(QStringLiteral("Status"), QStringLiteral("Running"), m_runningActivities);
 
         m_watcher = new QDBusServiceWatcher(
             ACTIVITYMANAGER_SERVICE,
@@ -83,30 +83,30 @@ void ActivityEngine::insertActivity(const QString &id)
     //id -> name, icon, state
     KActivities::Info *activity = new KActivities::Info(id, this);
     m_activities[id] = activity;
-    setData(id, "Name", activity->name());
-    setData(id, "Icon", activity->icon());
-    setData(id, "Current", m_currentActivity == id);
+    setData(id, QStringLiteral("Name"), activity->name());
+    setData(id, QStringLiteral("Icon"), activity->icon());
+    setData(id, QStringLiteral("Current"), m_currentActivity == id);
 
     QString state;
     switch (activity->state()) {
         case KActivities::Info::Running:
-            state = "Running";
+            state = QLatin1String("Running");
             break;
         case KActivities::Info::Starting:
-            state = "Starting";
+            state = QLatin1String("Starting");
             break;
         case KActivities::Info::Stopping:
-            state = "Stopping";
+            state = QLatin1String("Stopping");
             break;
         case KActivities::Info::Stopped:
-            state = "Stopped";
+            state = QLatin1String("Stopped");
             break;
         case KActivities::Info::Invalid:
         default:
-            state = "Invalid";
+            state = QLatin1String("Invalid");
     }
-    setData(id, "State", state);
-    setData(id, "Score", m_activityScores.value(id));
+    setData(id, QStringLiteral("State"), state);
+    setData(id, QStringLiteral("Score"), m_activityScores.value(id));
 
     connect(activity, &KActivities::Info::infoChanged, this, &ActivityEngine::activityDataChanged);
     connect(activity, &KActivities::Info::stateChanged, this, &ActivityEngine::activityStateChanged);
@@ -130,8 +130,8 @@ void ActivityEngine::enableRanking()
 
     QDBusMessage msg = QDBusMessage::createMethodCall(ACTIVITYMANAGER_SERVICE,
                                                       ACTIVITYRANKING_OBJECT,
-                                                      "org.kde.ActivityManager.ActivityRanking",
-                                                      "activities");
+                                                      QStringLiteral("org.kde.ActivityManager.ActivityRanking"),
+                                                      QStringLiteral("activities"));
     QDBusPendingReply<ActivityDataList> reply = QDBusConnection::sessionBus().asyncCall(msg);
     QDBusPendingCallWatcher *watcher = new QDBusPendingCallWatcher(reply, this);
     QObject::connect(watcher, &QDBusPendingCallWatcher::finished, this, &ActivityEngine::activityScoresReply);
@@ -163,7 +163,7 @@ void ActivityEngine::setActivityScores(const ActivityDataList &activities)
 
     foreach (const ActivityData &activity, activities) {
         if (m_activities.contains(activity.id)) {
-            setData(activity.id, "Score", activity.score);
+            setData(activity.id, QStringLiteral("Score"), activity.score);
         }
         presentActivities.insert(activity.id);
         m_activityScores[activity.id] = activity.score;
@@ -171,7 +171,7 @@ void ActivityEngine::setActivityScores(const ActivityDataList &activities)
 
     foreach (const QString &activityId, m_activityController->activities()) {
         if (!presentActivities.contains(activityId) && m_activities.contains(activityId)) {
-            setData(activityId, "Score", 0);
+            setData(activityId, QStringLiteral("Score"), 0);
         }
     }
 }
@@ -179,7 +179,7 @@ void ActivityEngine::setActivityScores(const ActivityDataList &activities)
 void ActivityEngine::activityAdded(const QString &id)
 {
     insertActivity(id);
-    setData("Status", "Running", m_runningActivities);
+    setData(QStringLiteral("Status"), QStringLiteral("Running"), m_runningActivities);
 }
 
 void ActivityEngine::activityRemoved(const QString &id)
@@ -190,15 +190,15 @@ void ActivityEngine::activityRemoved(const QString &id)
         delete activity;
     }
     m_runningActivities.removeAll(id);
-    setData("Status", "Running", m_runningActivities);
+    setData(QStringLiteral("Status"), QStringLiteral("Running"), m_runningActivities);
 }
 
 void ActivityEngine::currentActivityChanged(const QString &id)
 {
-    setData(m_currentActivity, "Current", false);
+    setData(m_currentActivity, QStringLiteral("Current"), false);
     m_currentActivity = id;
-    setData(id, "Current", true);
-    setData("Status", "Current", id);
+    setData(id, QStringLiteral("Current"), true);
+    setData(QStringLiteral("Status"), QStringLiteral("Current"), id);
 }
 
 void ActivityEngine::activityDataChanged()
@@ -207,10 +207,10 @@ void ActivityEngine::activityDataChanged()
     if (!activity) {
         return;
     }
-    setData(activity->id(), "Name", activity->name());
-    setData(activity->id(), "Icon", activity->icon());
-    setData(activity->id(), "Current", m_currentActivity == activity->id());
-    setData(activity->id(), "Score", m_activityScores.value(activity->id()));
+    setData(activity->id(), QStringLiteral("Name"), activity->name());
+    setData(activity->id(), QStringLiteral("Icon"), activity->icon());
+    setData(activity->id(), QStringLiteral("Current"), m_currentActivity == activity->id());
+    setData(activity->id(), QStringLiteral("Score"), m_activityScores.value(activity->id()));
 }
 
 void ActivityEngine::activityStateChanged()
@@ -223,22 +223,22 @@ void ActivityEngine::activityStateChanged()
     QString state;
     switch (activity->state()) {
         case KActivities::Info::Running:
-            state = "Running";
+            state = QLatin1String("Running");
             break;
         case KActivities::Info::Starting:
-            state = "Starting";
+            state = QLatin1String("Starting");
             break;
         case KActivities::Info::Stopping:
-            state = "Stopping";
+            state = QLatin1String("Stopping");
             break;
         case KActivities::Info::Stopped:
-            state = "Stopped";
+            state = QLatin1String("Stopped");
             break;
         case KActivities::Info::Invalid:
         default:
-            state = "Invalid";
+            state = QLatin1String("Invalid");
     }
-    setData(id, "State", state);
+    setData(id, QStringLiteral("State"), state);
 
     if (activity->state() == KActivities::Info::Running) {
         if (!m_runningActivities.contains(id)) {
@@ -248,7 +248,7 @@ void ActivityEngine::activityStateChanged()
         m_runningActivities.removeAll(id);
     }
 
-    setData("Status", "Running", m_runningActivities);
+    setData(QStringLiteral("Status"), QStringLiteral("Running"), m_runningActivities);
 }
 
 

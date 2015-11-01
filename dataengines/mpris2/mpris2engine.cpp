@@ -42,13 +42,13 @@ Mpris2Engine::Mpris2Engine(QObject* parent,
     QDBusServiceWatcher *serviceWatcher = new QDBusServiceWatcher(
             QString(), QDBusConnection::sessionBus(),
             QDBusServiceWatcher::WatchForOwnerChange, this);
-    connect(serviceWatcher, SIGNAL(serviceOwnerChanged(QString,QString,QString)),
-            this,           SLOT(serviceOwnerChanged(QString,QString,QString)));
+    connect(serviceWatcher, &QDBusServiceWatcher::serviceOwnerChanged,
+            this,           &Mpris2Engine::serviceOwnerChanged);
 
-    QDBusPendingCall async = QDBusConnection::sessionBus().interface()->asyncCall("ListNames");
+    QDBusPendingCall async = QDBusConnection::sessionBus().interface()->asyncCall(QStringLiteral("ListNames"));
     QDBusPendingCallWatcher *callWatcher = new QDBusPendingCallWatcher(async, this);
-    connect(callWatcher, SIGNAL(finished(QDBusPendingCallWatcher*)),
-            this,        SLOT(serviceNameFetchFinished(QDBusPendingCallWatcher*)));
+    connect(callWatcher, &QDBusPendingCallWatcher::finished,
+            this,        &Mpris2Engine::serviceNameFetchFinished);
 }
 
 Plasma::Service* Mpris2Engine::serviceForSource(const QString& source)
@@ -132,10 +132,10 @@ void Mpris2Engine::initialFetchFinished(PlayerContainer* container)
         m_multiplexer.data()->addPlayer(container);
     }
     // don't let future refreshes trigger this
-    disconnect(container, SIGNAL(initialFetchFinished(PlayerContainer*)),
-               this,      SLOT(initialFetchFinished(PlayerContainer*)));
-    disconnect(container, SIGNAL(initialFetchFailed(PlayerContainer*)),
-               this,      SLOT(initialFetchFailed(PlayerContainer*)));
+    disconnect(container, &PlayerContainer::initialFetchFinished,
+               this,      &Mpris2Engine::initialFetchFinished);
+    disconnect(container, &PlayerContainer::initialFetchFailed,
+               this,      &Mpris2Engine::initialFetchFailed);
 }
 
 void Mpris2Engine::initialFetchFailed(PlayerContainer* container)
@@ -153,7 +153,7 @@ void Mpris2Engine::serviceNameFetchFinished(QDBusPendingCallWatcher* watcher)
         qCWarning(MPRIS2) << "Could not get list of available D-Bus services";
     } else {
         foreach (const QString& serviceName, propsReply.value()) {
-            if (serviceName.startsWith("org.mpris.MediaPlayer2.")) {
+            if (serviceName.startsWith(QLatin1String("org.mpris.MediaPlayer2."))) {
                 qCDebug(MPRIS2) << "Found MPRIS2 service" << serviceName;
                 // watch out for race conditions; the media player could
                 // have appeared between starting the service watcher and
@@ -175,10 +175,10 @@ void Mpris2Engine::addMediaPlayer(const QString& serviceName, const QString& sou
 {
     PlayerContainer *container = new PlayerContainer(serviceName, this);
     container->setObjectName(sourceName);
-    connect(container, SIGNAL(initialFetchFinished(PlayerContainer*)),
-            this,      SLOT(initialFetchFinished(PlayerContainer*)));
-    connect(container, SIGNAL(initialFetchFailed(PlayerContainer*)),
-            this,      SLOT(initialFetchFailed(PlayerContainer*)));
+    connect(container, &PlayerContainer::initialFetchFinished,
+            this,      &Mpris2Engine::initialFetchFinished);
+    connect(container, &PlayerContainer::initialFetchFailed,
+            this,      &Mpris2Engine::initialFetchFailed);
 }
 
 void Mpris2Engine::createMultiplexer()

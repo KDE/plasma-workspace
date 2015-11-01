@@ -46,7 +46,7 @@ RemoteImpl::RemoteImpl()
 	if (!dir.exists())
 	{
 		dir.cdUp();
-		dir.mkdir("remoteview");
+		dir.mkdir(QStringLiteral("remoteview"));
 	}
 }
 

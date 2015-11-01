@@ -43,7 +43,7 @@ JobView::JobView(uint jobId, QObject *parent)
 {
     new JobViewV2Adaptor(this);
 
-    m_objectPath.setPath(QString("/JobViewServer/JobView_%1").arg(m_jobId));
+    m_objectPath.setPath(QStringLiteral("/JobViewServer/JobView_%1").arg(m_jobId));
     QDBusConnection::sessionBus().registerObject(m_objectPath.path(), this);
 }
 
@@ -118,13 +118,13 @@ void JobView::setTotalAmount(qulonglong amount, const QString &unit)
     m_totalAmount = amount;
     m_totalUnit = unit;
 
-    if (unit == "bytes") {
+    if (unit == QLatin1String("bytes")) {
         m_sizeTotal = amount ? KFormat().formatByteSize(amount) : QString();
 
-    } else if (unit == "files") {
+    } else if (unit == QLatin1String("files")) {
         m_sizeTotal = amount ? i18np("%1 file", "%1 files", amount) : QString();
 
-    } else if (unit == "dirs") {
+    } else if (unit == QLatin1String("dirs")) {
         m_sizeTotal = amount ? i18np("%1 folder", "%1 folders", amount) : QString();
 
     }
@@ -146,13 +146,13 @@ void JobView::setProcessedAmount(qulonglong amount, const QString &unit)
     m_processAmount = amount;
     m_processUnit = unit;
 
-    if (unit == "bytes") {
+    if (unit == QLatin1String("bytes")) {
         m_sizeProcessed = amount ? KFormat().formatByteSize(amount) : QString();
 
-    } else if (unit == "files") {
+    } else if (unit == QLatin1String("files")) {
         m_sizeProcessed = amount ? i18np("%1 file", "%1 files", amount) : QString();
 
-    } else if (unit == "dirs") {
+    } else if (unit == QLatin1String("dirs")) {
         m_sizeProcessed = amount ? i18np("%1 folder", "%1 folders", amount) : QString();
     }
     emit changed(m_jobId);

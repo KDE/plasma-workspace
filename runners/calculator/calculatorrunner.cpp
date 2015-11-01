@@ -45,16 +45,16 @@ CalculatorRunner::CalculatorRunner( QObject* parent, const QVariantList &args )
     setSpeed(SlowSpeed);
     #endif
 
-    setObjectName( QLatin1String("Calculator" ));
+    setObjectName( QStringLiteral("Calculator" ));
     setIgnoredTypes(Plasma::RunnerContext::Directory | Plasma::RunnerContext::File |
                          Plasma::RunnerContext::NetworkLocation | Plasma::RunnerContext::Executable |
                          Plasma::RunnerContext::ShellCommand);
 
     QString description = i18n("Calculates the value of :q: when :q: is made up of numbers and "
                                "mathematical symbols such as +, -, /, * and ^.");
-    addSyntax(Plasma::RunnerSyntax(":q:", description));
-    addSyntax(Plasma::RunnerSyntax("=:q:", description));
-    addSyntax(Plasma::RunnerSyntax(":q:=", description));
+    addSyntax(Plasma::RunnerSyntax(QStringLiteral(":q:"), description));
+    addSyntax(Plasma::RunnerSyntax(QStringLiteral("=:q:"), description));
+    addSyntax(Plasma::RunnerSyntax(QStringLiteral(":q:="), description));
 }
 
 CalculatorRunner::~CalculatorRunner()
@@ -66,12 +66,12 @@ CalculatorRunner::~CalculatorRunner()
 
 void CalculatorRunner::powSubstitutions(QString& cmd)
 {
-    if (cmd.contains("e+", Qt::CaseInsensitive)) {
-        cmd = cmd.replace("e+", "*10^", Qt::CaseInsensitive);
+    if (cmd.contains(QStringLiteral("e+"), Qt::CaseInsensitive)) {
+        cmd = cmd.replace(QLatin1String("e+"), QLatin1String("*10^"), Qt::CaseInsensitive);
     }
 
-    if (cmd.contains("e-", Qt::CaseInsensitive)) {
-        cmd = cmd.replace("e-", "*10^-", Qt::CaseInsensitive);
+    if (cmd.contains(QStringLiteral("e-"), Qt::CaseInsensitive)) {
+        cmd = cmd.replace(QLatin1String("e-"), QLatin1String("*10^-"), Qt::CaseInsensitive);
     }
 
     // the below code is scary mainly because we have to honor priority
@@ -143,7 +143,7 @@ void CalculatorRunner::powSubstitutions(QString& cmd)
         preIndex = qMax(0, preIndex);
         postIndex = qMin(postIndex, cmd.length());
 
-        cmd.insert(preIndex,"pow(");
+        cmd.insert(preIndex,QLatin1String("pow("));
         // +1 +4 == next position to the last number after we add 4 new characters pow(
         cmd.insert(postIndex + 1 + 4, ')');
         //qDebug() << "from" << preIndex << " to " << postIndex << " got: " << cmd;
@@ -152,16 +152,16 @@ void CalculatorRunner::powSubstitutions(QString& cmd)
 
 void CalculatorRunner::hexSubstitutions(QString& cmd)
 {
-    if (cmd.contains("0x")) {
+    if (cmd.contains(QStringLiteral("0x"))) {
         //Append +0 so that the calculator can serve also as a hex converter
         cmd.append("+0");
         bool ok;
         int pos = 0;
         QString hex;
 
-        while (cmd.contains("0x")) {
+        while (cmd.contains(QStringLiteral("0x"))) {
             hex.clear();
-            pos = cmd.indexOf("0x", pos);
+            pos = cmd.indexOf(QStringLiteral("0x"), pos);
 
             for (int q = 0; q < cmd.size(); q++) {//find end of hex number
                 QChar current = cmd[pos+q+2];
@@ -187,14 +187,14 @@ void CalculatorRunner::userFriendlySubstitutions(QString& cmd)
     hexSubstitutions(cmd);
     powSubstitutions(cmd);
 
-    if (cmd.contains(QRegExp("\\d+and\\d+"))) {
-         cmd = cmd.replace(QRegExp("(\\d+)and(\\d+)"), "\\1&\\2");
+    if (cmd.contains(QRegExp(QStringLiteral("\\d+and\\d+")))) {
+         cmd = cmd.replace(QRegExp(QStringLiteral("(\\d+)and(\\d+)")), QStringLiteral("\\1&\\2"));
     }
-    if (cmd.contains(QRegExp("\\d+or\\d+"))) {
-         cmd = cmd.replace(QRegExp("(\\d+)or(\\d+)"), "\\1|\\2");
+    if (cmd.contains(QRegExp(QStringLiteral("\\d+or\\d+")))) {
+         cmd = cmd.replace(QRegExp(QStringLiteral("(\\d+)or(\\d+)")), QStringLiteral("\\1|\\2"));
     }
-    if (cmd.contains(QRegExp("\\d+xor\\d+"))) {
-         cmd = cmd.replace(QRegExp("(\\d+)xor(\\d+)"), "\\1^\\2");
+    if (cmd.contains(QRegExp(QStringLiteral("\\d+xor\\d+")))) {
+         cmd = cmd.replace(QRegExp(QStringLiteral("(\\d+)xor(\\d+)")), QStringLiteral("\\1^\\2"));
     }
     #endif
 }
@@ -212,11 +212,11 @@ void CalculatorRunner::match(Plasma::RunnerContext &context)
         return;
     }
 
-    if (cmd.toLower() == "universe" || cmd.toLower() == "life") {
+    if (cmd.toLower() == QLatin1String("universe") || cmd.toLower() == QLatin1String("life")) {
         Plasma::QueryMatch match(this);
         match.setType(Plasma::QueryMatch::InformationalMatch);
-        match.setIcon(QIcon::fromTheme("accessories-calculator"));
-        match.setText("42");
+        match.setIcon(QIcon::fromTheme(QStringLiteral("accessories-calculator")));
+        match.setText(QStringLiteral("42"));
         match.setData("42");
         match.setId(term);
         context.addMatch(match);
@@ -253,7 +253,7 @@ void CalculatorRunner::match(Plasma::RunnerContext &context)
 
     userFriendlySubstitutions(cmd);
     #ifndef ENABLE_QALCULATE
-    cmd.replace(QRegExp("([a-zA-Z]+)"), "Math.\\1"); //needed for accessing math funktions like sin(),....
+    cmd.replace(QRegExp(QStringLiteral("([a-zA-Z]+)")), QStringLiteral("Math.\\1")); //needed for accessing math funktions like sin(),....
     #endif
 
     QString result = calculate(cmd);
@@ -264,7 +264,7 @@ void CalculatorRunner::match(Plasma::RunnerContext &context)
 
         Plasma::QueryMatch match(this);
         match.setType(Plasma::QueryMatch::InformationalMatch);
-        match.setIcon(QIcon::fromTheme("accessories-calculator"));
+        match.setIcon(QIcon::fromTheme(QStringLiteral("accessories-calculator")));
         match.setText(result);
         match.setData(result);
         match.setId(term);
@@ -304,9 +304,9 @@ QString CalculatorRunner::calculate(const QString& term)
 
     //ECMAScript has issues with the last digit in simple rational computations
     //This script rounds off the last digit; see bug 167986
-    QString roundedResultString = eng.evaluate("var exponent = 14-(1+Math.floor(Math.log(Math.abs(result))/Math.log(10)));\
+    QString roundedResultString = eng.evaluate(QStringLiteral("var exponent = 14-(1+Math.floor(Math.log(Math.abs(result))/Math.log(10)));\
                                                 var order=Math.pow(10,exponent);\
-                                                (order > 0? Math.round(result*order)/order : 0)").toString();
+                                                (order > 0? Math.round(result*order)/order : 0)")).toString();
 
     roundedResultString.replace('.', QLocale().decimalPoint(), Qt::CaseInsensitive);
 

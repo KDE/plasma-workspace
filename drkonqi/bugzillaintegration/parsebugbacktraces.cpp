@@ -116,7 +116,7 @@ ParseBugBacktraces::ParseBugBacktraces(const BugReport &bug, QObject *parent)
   : QObject(parent),
     m_bug(bug)
 {
-    m_parser = BacktraceParser::newParser("gdb", this);
+    m_parser = BacktraceParser::newParser(QStringLiteral("gdb"), this);
     m_parser->connectToGenerator(this);
 }
 

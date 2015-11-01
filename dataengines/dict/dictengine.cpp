@@ -29,8 +29,8 @@ DictEngine::DictEngine(QObject* parent, const QVariantList& args)
     , m_tcpSocket(0)
 {
     Q_UNUSED(args)
-    m_serverName = "dict.org"; //In case we need to switch it later
-    m_dictName = "wn"; //Default, good dictionary
+    m_serverName = QLatin1String("dict.org"); //In case we need to switch it later
+    m_dictName = QLatin1String("wn"); //Default, good dictionary
 }
 
 DictEngine::~DictEngine()
@@ -52,8 +52,8 @@ static QString wnToHtml(const QString &word, QByteArray &text)
     Q_UNUSED(word)
     QList<QByteArray> splitText = text.split('\n');
     QString def;
-    def += "<dl>\n";
-    QRegExp linkRx("\\{(.*)\\}");
+    def += QLatin1String("<dl>\n");
+    QRegExp linkRx(QStringLiteral("\\{(.*)\\}"));
     linkRx.setMinimal(true);
 
     bool isFirst=true;
@@ -69,7 +69,7 @@ static QString wnToHtml(const QString &word, QByteArray &text)
         }
 
         if (currentLine.startsWith('.')) {
-            def += "</dd>";
+            def += QLatin1String("</dd>");
             continue;
         }
 
@@ -77,17 +77,17 @@ static QString wnToHtml(const QString &word, QByteArray &text)
            || currentLine.startsWith(QLatin1String("151"))
            || currentLine.startsWith(QLatin1String("250"))
            || currentLine.startsWith(QLatin1String("552")))) {
-            currentLine.replace(linkRx,"<a href=\"\\1\">\\1</a>");
+            currentLine.replace(linkRx,QLatin1String("<a href=\"\\1\">\\1</a>"));
 
             if (isFirst) {
                 def += "<dt><b>" + currentLine + "</b></dt>\n<dd>";
                 isFirst = false;
                 continue;
             } else {
-                if (currentLine.contains(QRegExp("([1-9]{1,2}:)"))) {
-                    def += "\n<br>\n";
+                if (currentLine.contains(QRegExp(QStringLiteral("([1-9]{1,2}:)")))) {
+                    def += QLatin1String("\n<br>\n");
                 }
-                currentLine.replace(QRegExp("^([\\s\\S]*[1-9]{1,2}:)"), "<b>\\1</b>");
+                currentLine.replace(QRegExp(QStringLiteral("^([\\s\\S]*[1-9]{1,2}:)")), QLatin1String("<b>\\1</b>"));
                 def += currentLine;
                 continue;
             }
@@ -95,7 +95,7 @@ static QString wnToHtml(const QString &word, QByteArray &text)
 
     }
 
-    def += "</dl>";
+    def += QLatin1String("</dl>");
     return def;
 }
 
@@ -120,7 +120,7 @@ void DictEngine::getDefinition()
     m_tcpSocket->disconnectFromHost();
     //       setData(m_currentWord, m_dictName, ret);
     //       qWarning()<<ret;
-    setData(m_currentWord, "text", wnToHtml(m_currentWord,ret));
+    setData(m_currentWord, QStringLiteral("text"), wnToHtml(m_currentWord,ret));
 }
 
 void DictEngine::getDicts()
@@ -162,7 +162,7 @@ void DictEngine::getDicts()
             tmp2 = curr.section(' ', 1);
   //          theHash.insert(tmp1, tmp2);
             //qDebug() << tmp1 + "  " + tmp2;
-            setData("list-dictionaries", tmp1, tmp2);
+            setData(QStringLiteral("list-dictionaries"), tmp1, tmp2);
         }
     }
 
@@ -205,7 +205,7 @@ bool DictEngine::sourceRequestEvent(const QString &query)
         setDict(queryParts[queryParts.count()-2]);
     //default to wordnet
     } else {
-        setDict("wn");
+        setDict(QStringLiteral("wn"));
     }
 
     //asked for a server?
@@ -213,7 +213,7 @@ bool DictEngine::sourceRequestEvent(const QString &query)
         setServer(queryParts[queryParts.count()-3]);
     //default to wordnet
     } else {
-        setServer("dict.org");
+        setServer(QStringLiteral("dict.org"));
     }
 
     if (m_currentWord.simplified().isEmpty()) {
@@ -224,7 +224,7 @@ bool DictEngine::sourceRequestEvent(const QString &query)
         m_tcpSocket->abort();
         connect(m_tcpSocket, &QTcpSocket::disconnected, this, &DictEngine::socketClosed);
 
-        if (m_currentWord == "list-dictionaries") {
+        if (m_currentWord == QLatin1String("list-dictionaries")) {
             connect(m_tcpSocket, &QTcpSocket::readyRead, this, &DictEngine::getDicts);
         } else {
             connect(m_tcpSocket, &QTcpSocket::readyRead, this, &DictEngine::getDefinition);

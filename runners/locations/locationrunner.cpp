@@ -40,9 +40,9 @@ LocationsRunner::LocationsRunner(QObject *parent, const QVariantList& args)
 {
     Q_UNUSED(args);
     // set the name shown after the result in krunner window
-    setObjectName(QLatin1String("Locations"));
+    setObjectName(QStringLiteral("Locations"));
     setIgnoredTypes(Plasma::RunnerContext::Executable | Plasma::RunnerContext::ShellCommand);
-    addSyntax(Plasma::RunnerSyntax(":q:",
+    addSyntax(Plasma::RunnerSyntax(QStringLiteral(":q:"),
               i18n("Finds local directories and files, network locations and Internet sites with paths matching :q:.")));
 }
 
@@ -63,7 +63,7 @@ void LocationsRunner::match(Plasma::RunnerContext &context)
         if (type == Plasma::RunnerContext::File) {
             match.setIcon(QIcon::fromTheme(KIO::iconNameForUrl(QUrl(term))));
         } else {
-            match.setIcon(QIcon::fromTheme("system-file-manager"));
+            match.setIcon(QIcon::fromTheme(QStringLiteral("system-file-manager")));
         }
 
         match.setRelevance(1);
@@ -71,9 +71,9 @@ void LocationsRunner::match(Plasma::RunnerContext &context)
         match.setType(Plasma::QueryMatch::ExactMatch);
 
         if (type == Plasma::RunnerContext::Directory) {
-            match.setId("opendir");
+            match.setId(QStringLiteral("opendir"));
         } else {
-            match.setId("openfile");
+            match.setId(QStringLiteral("openfile"));
         }
         context.addMatch(match);
     } else if (type == Plasma::RunnerContext::Help) {
@@ -81,13 +81,13 @@ void LocationsRunner::match(Plasma::RunnerContext &context)
         Plasma::QueryMatch match(this);
         match.setType(Plasma::QueryMatch::ExactMatch);
         match.setText(i18n("Open %1", term));
-        match.setIcon(QIcon::fromTheme("system-help"));
+        match.setIcon(QIcon::fromTheme(QStringLiteral("system-help")));
         match.setRelevance(1);
         match.setType(Plasma::QueryMatch::ExactMatch);
-        match.setId("help");
+        match.setId(QStringLiteral("help"));
         context.addMatch(match);
     } else if (type == Plasma::RunnerContext::NetworkLocation || type == Plasma::RunnerContext::UnknownType) {
-        const bool filtered = KUriFilter::self()->filterUri(term, QStringList() << QLatin1String("kshorturifilter"));
+        const bool filtered = KUriFilter::self()->filterUri(term, QStringList() << QStringLiteral("kshorturifilter"));
 
         if (!filtered) {
             return;
@@ -106,7 +106,7 @@ void LocationsRunner::match(Plasma::RunnerContext &context)
 
         if (KProtocolInfo::isHelperProtocol(url.scheme())) {
             //qDebug() << "helper protocol" << url.protocol() <<"call external application" ;
-            if (url.scheme() == "mailto") {
+            if (url.scheme() == QLatin1String("mailto")) {
                 match.setText(i18n("Send email to %1",url.path()));
             } else {
                 match.setText(i18n("Launch with %1", KProtocolInfo::exec(url.scheme())));
@@ -117,11 +117,11 @@ void LocationsRunner::match(Plasma::RunnerContext &context)
         }
 
         if (type == Plasma::RunnerContext::UnknownType) {
-            match.setId("openunknown");
+            match.setId(QStringLiteral("openunknown"));
             match.setRelevance(0.5);
             match.setType(Plasma::QueryMatch::PossibleMatch);
         } else {
-            match.setId("opennetwork");
+            match.setId(QStringLiteral("opennetwork"));
             match.setRelevance(0.7);
             match.setType(Plasma::QueryMatch::ExactMatch);
         }
@@ -136,7 +136,7 @@ static QString convertCaseInsensitivePath(const QString& path)
     QStringList dirNames = path.split(QDir::separator(), QString::SkipEmptyParts);
 
     // Match folders
-    QDir dir("/");
+    QDir dir(QStringLiteral("/"));
     for (int i = 0; i < dirNames.size() - 1; i++) {
         QString dirName = dirNames[i];
 
@@ -182,7 +182,7 @@ void LocationsRunner::run(const Plasma::RunnerContext &context, const Plasma::Qu
     //qDebug() << "command: " << context.query();
     //qDebug() << "url: " << location << data;
 
-    QUrl urlToRun(KUriFilter::self()->filteredUri(location, QStringList() << QLatin1String("kshorturifilter")));
+    QUrl urlToRun(KUriFilter::self()->filteredUri(location, QStringList() << QStringLiteral("kshorturifilter")));
 
     new KRun(urlToRun, 0);
 }

@@ -35,7 +35,7 @@ Geolocation::Geolocation(QObject* parent, const QVariantList& args)
     connect(NetworkManager::notifier(), &NetworkManager::Notifier::wirelessEnabledChanged, this, &Geolocation::networkStatusChanged);
     m_updateTimer.setInterval(100);
     m_updateTimer.setSingleShot(true);
-    connect(&m_updateTimer, SIGNAL(timeout()), this, SLOT(actuallySetData()));
+    connect(&m_updateTimer, &QTimer::timeout, this, &Geolocation::actuallySetData);
     m_networkChangedTimer.setInterval(100);
     m_networkChangedTimer.setSingleShot(true);
     connect(&m_networkChangedTimer, &QTimer::timeout, this,
@@ -49,7 +49,7 @@ Geolocation::Geolocation(QObject* parent, const QVariantList& args)
 void Geolocation::init()
 {
     //TODO: should this be delayed even further, e.g. when the source is requested?
-    const KService::List offers = KServiceTypeTrader::self()->query("Plasma/GeolocationProvider");
+    const KService::List offers = KServiceTypeTrader::self()->query(QStringLiteral("Plasma/GeolocationProvider"));
     QVariantList args;
 
     Q_FOREACH (const KService::Ptr service, offers) {
@@ -58,9 +58,9 @@ void Geolocation::init()
         if (plugin) {
             m_plugins << plugin;
             plugin->init(&m_data, &m_accuracy);
-            connect(plugin, SIGNAL(updated()), this, SLOT(pluginUpdated()));
-            connect(plugin, SIGNAL(availabilityChanged(GeolocationProvider*)),
-                    this, SLOT(pluginAvailabilityChanged(GeolocationProvider*)));
+            connect(plugin, &GeolocationProvider::updated, this, &Geolocation::pluginUpdated);
+            connect(plugin, &GeolocationProvider::availabilityChanged,
+                    this, &Geolocation::pluginAvailabilityChanged);
         } else {
             qDebug() << "Failed to load GeolocationProvider:" << error;
         }

@@ -24,7 +24,7 @@ HotplugService::HotplugService (HotplugEngine* parent, const QString& source)
     : Plasma::Service (parent),
       m_engine(parent)
 {
-    setName ("hotplug");
+    setName (QStringLiteral("hotplug"));
     setDestination (source);
 }
 

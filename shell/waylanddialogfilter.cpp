@@ -31,7 +31,7 @@
 class DialogShadows : public PanelShadows {
 public:
     explicit DialogShadows(QObject *parent = 0)
-        : PanelShadows(parent, "dialogs/background")
+        : PanelShadows(parent, QStringLiteral("dialogs/background"))
     {}
 
     static DialogShadows *self();

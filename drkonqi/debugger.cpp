@@ -27,13 +27,13 @@
 //static
 QList<Debugger> Debugger::availableInternalDebuggers(const QString & backend)
 {
-    return availableDebuggers("debuggers/internal", backend);
+    return availableDebuggers(QStringLiteral("debuggers/internal"), backend);
 }
 
 //static
 QList<Debugger> Debugger::availableExternalDebuggers(const QString & backend)
 {
-    return availableDebuggers("debuggers/external", backend);
+    return availableDebuggers(QStringLiteral("debuggers/external"), backend);
 }
 
 bool Debugger::isValid() const

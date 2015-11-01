@@ -56,7 +56,7 @@ void DesktopNotifier::dirty(const QString &path)
     if (path.startsWith(QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + '/' + "Trash/files")) {
         // Trigger an update of the trash icon
         if (QFile::exists(QStandardPaths::writableLocation(QStandardPaths::DesktopLocation) + "/trash.desktop"))
-            org::kde::KDirNotify::emitFilesChanged(QList<QUrl>() << QUrl("desktop:/trash.desktop"));
+            org::kde::KDirNotify::emitFilesChanged(QList<QUrl>() << QUrl(QStringLiteral("desktop:/trash.desktop")));
     } else {
         // Emitting FilesAdded forces a re-read of the dir
         KUrl url("desktop:/");

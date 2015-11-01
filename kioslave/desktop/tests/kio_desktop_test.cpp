@@ -44,7 +44,7 @@ private Q_SLOTS:
         QStandardPaths::setTestModeEnabled(true);
 
         m_desktopPath = QStandardPaths::writableLocation(QStandardPaths::DesktopLocation);
-        m_testFileName = "kio_desktop_test_file";
+        m_testFileName = QLatin1String("kio_desktop_test_file");
     }
     void cleanupTestCase()
     {
@@ -100,7 +100,7 @@ private Q_SLOTS:
 
         if (withDirListerCache) {
             KDirLister lister;
-            lister.openUrl(QUrl("desktop:/"));
+            lister.openUrl(QUrl(QStringLiteral("desktop:/")));
             QEventLoop eventLoop;
             connect(&lister, static_cast<void (KDirLister::*)()>(&KDirLister::completed), &eventLoop, &QEventLoop::quit);
             eventLoop.exec(QEventLoop::ExcludeUserInputEvents);

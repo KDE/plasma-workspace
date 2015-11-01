@@ -34,10 +34,10 @@ ServiceRunner::ServiceRunner(QObject *parent, const QVariantList &args)
 {
     Q_UNUSED(args)
 
-    setObjectName( QLatin1String("Application" ));
+    setObjectName( QStringLiteral("Application" ));
     setPriority(AbstractRunner::HighestPriority);
 
-    addSyntax(Plasma::RunnerSyntax(":q:", i18n("Finds applications whose name or description match :q:")));
+    addSyntax(Plasma::RunnerSyntax(QStringLiteral(":q:"), i18n("Finds applications whose name or description match :q:")));
 }
 
 ServiceRunner::~ServiceRunner()
@@ -55,9 +55,9 @@ QStringList ServiceRunner::categories() const
 QIcon ServiceRunner::categoryIcon(const QString& category) const
 {
     if (category == i18n("Applications")) {
-        return QIcon::fromTheme("applications-other");
+        return QIcon::fromTheme(QStringLiteral("applications-other"));
     } else if (category == i18n("System Settings")) {
-        return QIcon::fromTheme("preferences-system");
+        return QIcon::fromTheme(QStringLiteral("preferences-system"));
     }
 
     return Plasma::AbstractRunner::categoryIcon(category);
@@ -76,13 +76,13 @@ void ServiceRunner::match(Plasma::RunnerContext &context)
         // Search for applications which are executable and case-insensitively match the search term
         // See http://techbase.kde.org/Development/Tutorials/Services/Traders#The_KTrader_Query_Language
         // if the following is unclear to you.
-        query = QString("exist Exec and ('%1' =~ Name)").arg(term);
-        KService::List services = KServiceTypeTrader::self()->query("Application", query);
+        query = QStringLiteral("exist Exec and ('%1' =~ Name)").arg(term);
+        KService::List services = KServiceTypeTrader::self()->query(QStringLiteral("Application"), query);
 
         if (!services.isEmpty()) {
             //qDebug() << service->name() << "is an exact match!" << service->storageId() << service->exec();
             foreach (const KService::Ptr &service, services) {
-                if (!service->noDisplay() && service->property("NotShowIn", QVariant::String) != "KDE") {
+                if (!service->noDisplay() && service->property(QStringLiteral("NotShowIn"), QVariant::String) != "KDE") {
                     Plasma::QueryMatch match(this);
                     match.setType(Plasma::QueryMatch::ExactMatch);
                     setupMatch(service, match);
@@ -101,7 +101,7 @@ void ServiceRunner::match(Plasma::RunnerContext &context)
 
     // If the term length is < 3, no real point searching the Keywords and GenericName
     if (term.length() < 3) {
-        query = QString("exist Exec and ( (exist Name and '%1' ~~ Name) or ('%1' ~~ Exec) )").arg(term);
+        query = QStringLiteral("exist Exec and ( (exist Name and '%1' ~~ Name) or ('%1' ~~ Exec) )").arg(term);
     } else {
         // Search for applications which are executable and the term case-insensitive matches any of
         // * a substring of one of the keywords
@@ -109,11 +109,11 @@ void ServiceRunner::match(Plasma::RunnerContext &context)
         // * a substring of the Name field
         // Note that before asking for the content of e.g. Keywords and GenericName we need to ask if
         // they exist to prevent a tree evaluation error if they are not defined.
-        query = QString("exist Exec and ( (exist Keywords and '%1' ~subin Keywords) or (exist GenericName and '%1' ~~ GenericName) or (exist Name and '%1' ~~ Name) or ('%1' ~~ Exec) )").arg(term);
+        query = QStringLiteral("exist Exec and ( (exist Keywords and '%1' ~subin Keywords) or (exist GenericName and '%1' ~~ GenericName) or (exist Name and '%1' ~~ Name) or ('%1' ~~ Exec) )").arg(term);
     }
 
-    KService::List services = KServiceTypeTrader::self()->query("Application", query);
-    services += KServiceTypeTrader::self()->query("KCModule", query);
+    KService::List services = KServiceTypeTrader::self()->query(QStringLiteral("Application"), query);
+    services += KServiceTypeTrader::self()->query(QStringLiteral("KCModule"), query);
 
     //qDebug() << "got " << services.count() << " services from " << query;
     foreach (const KService::Ptr &service, services) {
@@ -171,9 +171,9 @@ void ServiceRunner::match(Plasma::RunnerContext &context)
             }
         }
 
-        if (service->categories().contains("KDE") || service->serviceTypes().contains("KCModule")) {
+        if (service->categories().contains(QStringLiteral("KDE")) || service->serviceTypes().contains(QStringLiteral("KCModule"))) {
             //qDebug() << "found a kde thing" << id << match.subtext() << relevance;
-            if (id.startsWith("kde-")) {
+            if (id.startsWith(QLatin1String("kde-"))) {
                 //qDebug() << "old" << service->type();
                 if (!service->isApplication()) {
                     // avoid showing old kcms and what not
@@ -181,7 +181,7 @@ void ServiceRunner::match(Plasma::RunnerContext &context)
                 }
 
                 // This is an older version, let's disambiguate it
-                QString subtext("KDE3");
+                QString subtext(QStringLiteral("KDE3"));
 
                 if (!match.subtext().isEmpty()) {
                     subtext.append(", " + match.subtext());
@@ -195,15 +195,15 @@ void ServiceRunner::match(Plasma::RunnerContext &context)
 
         //qDebug() << service->name() << "is this relevant:" << relevance;
         match.setRelevance(relevance);
-        if (service->serviceTypes().contains("KCModule")) {
+        if (service->serviceTypes().contains(QStringLiteral("KCModule"))) {
             match.setMatchCategory(i18n("System Settings"));
         }
         matches << match;
     }
 
     //search for applications whose categories contains the query
-    query = QString("exist Exec and (exist Categories and '%1' ~subin Categories)").arg(term);
-    services = KServiceTypeTrader::self()->query("Application", query);
+    query = QStringLiteral("exist Exec and (exist Categories and '%1' ~subin Categories)").arg(term);
+    services = KServiceTypeTrader::self()->query(QStringLiteral("Application"), query);
 
     //qDebug() << service->name() << "is an exact match!" << service->storageId() << service->exec();
     foreach (const KService::Ptr &service, services) {
@@ -223,7 +223,7 @@ void ServiceRunner::match(Plasma::RunnerContext &context)
             setupMatch(service, match);
 
             qreal relevance = 0.6;
-            if (service->categories().contains("X-KDE-More") ||
+            if (service->categories().contains(QStringLiteral("X-KDE-More")) ||
                     !service->showInCurrentDesktop()) {
                 relevance = 0.5;
             }

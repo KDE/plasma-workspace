@@ -35,8 +35,8 @@ RecentDocuments::RecentDocuments(QObject *parent, const QVariantList& args)
     : Plasma::AbstractRunner(parent, args)
 {
     Q_UNUSED(args);
-    setObjectName( QLatin1String("Recent Documents" ));
-    m_icon = QIcon::fromTheme("document-open-recent");
+    setObjectName( QStringLiteral("Recent Documents" ));
+    m_icon = QIcon::fromTheme(QStringLiteral("document-open-recent"));
     loadRecentDocuments();
     // listen for changes to the list of recent documents
     KDirWatch *recentDocWatch = new KDirWatch(this);
@@ -44,7 +44,7 @@ RecentDocuments::RecentDocuments(QObject *parent, const QVariantList& args)
     connect(recentDocWatch, &KDirWatch::created, this, &RecentDocuments::loadRecentDocuments);
     connect(recentDocWatch, &KDirWatch::deleted, this, &RecentDocuments::loadRecentDocuments);
     connect(recentDocWatch, &KDirWatch::dirty, this, &RecentDocuments::loadRecentDocuments);
-    addSyntax(Plasma::RunnerSyntax(":q:", i18n("Looks for documents recently used with names matching :q:.")));
+    addSyntax(Plasma::RunnerSyntax(QStringLiteral(":q:"), i18n("Looks for documents recently used with names matching :q:.")));
 }
 
 RecentDocuments::~RecentDocuments()

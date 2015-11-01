@@ -39,9 +39,9 @@ ActivityJob::~ActivityJob()
 void ActivityJob::start()
 {
     const QString operation = operationName();
-    if (operation == "add") {
+    if (operation == QLatin1String("add")) {
         //I wonder how well plasma will handle this...
-        QString name = parameters()["Name"].toString();
+        QString name = parameters()[QStringLiteral("Name")].toString();
         if (name.isEmpty()) {
             name = i18n("unnamed");
         }
@@ -49,8 +49,8 @@ void ActivityJob::start()
         setResult(activityId);
         return;
     }
-    if (operation == "remove") {
-        QString id = parameters()["Id"].toString();
+    if (operation == QLatin1String("remove")) {
+        QString id = parameters()[QStringLiteral("Id")].toString();
         m_activityController->removeActivity(id);
         setResult(true);
         return;
@@ -61,36 +61,36 @@ void ActivityJob::start()
         setResult(false);
         return;
     }
-    if (operation == "setCurrent") {
+    if (operation == QLatin1String("setCurrent")) {
         m_activityController->setCurrentActivity(m_id);
         setResult(true);
         return;
     }
-    if (operation == "stop") {
+    if (operation == QLatin1String("stop")) {
         m_activityController->stopActivity(m_id);
         setResult(true);
         return;
     }
-    if (operation == "start") {
+    if (operation == QLatin1String("start")) {
         m_activityController->startActivity(m_id);
         setResult(true);
         return;
     }
-    if (operation == "setName") {
-        m_activityController->setActivityName(m_id, parameters()["Name"].toString());
+    if (operation == QLatin1String("setName")) {
+        m_activityController->setActivityName(m_id, parameters()[QStringLiteral("Name")].toString());
         setResult(true);
         return;
     }
-    if (operation == "setIcon") {
-        m_activityController->setActivityIcon(m_id, parameters()["Icon"].toString());
+    if (operation == QLatin1String("setIcon")) {
+        m_activityController->setActivityIcon(m_id, parameters()[QStringLiteral("Icon")].toString());
         setResult(true);
         return;
     }
-    if (operation == "toggleActivityManager") {
-        QDBusMessage message = QDBusMessage::createMethodCall("org.kde.plasmashell",
-                                                          "/PlasmaShell",
-                                                          "org.kde.PlasmaShell",
-                                                          "toggleActivityManager");
+    if (operation == QLatin1String("toggleActivityManager")) {
+        QDBusMessage message = QDBusMessage::createMethodCall(QStringLiteral("org.kde.plasmashell"),
+                                                          QStringLiteral("/PlasmaShell"),
+                                                          QStringLiteral("org.kde.PlasmaShell"),
+                                                          QStringLiteral("toggleActivityManager"));
         QDBusConnection::sessionBus().call(message, QDBus::NoBlock);
         setResult(true);
         return;

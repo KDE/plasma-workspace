@@ -78,16 +78,16 @@ MenuImporter::MenuImporter(QObject* parent)
     qDBusRegisterMetaType<DBusMenuLayoutItem>();
     m_serviceWatcher->setConnection(QDBusConnection::sessionBus());
     m_serviceWatcher->setWatchMode(QDBusServiceWatcher::WatchForUnregistration);
-    connect(m_serviceWatcher, SIGNAL(serviceUnregistered(const QString&)), SLOT(slotServiceUnregistered(const QString&)));
+    connect(m_serviceWatcher, &QDBusServiceWatcher::serviceUnregistered, this, &MenuImporter::slotServiceUnregistered);
 
-    QDBusConnection::sessionBus().connect("", "", "com.canonical.dbusmenu", "LayoutUpdated",
+    QDBusConnection::sessionBus().connect(QLatin1String(""), QLatin1String(""), QStringLiteral("com.canonical.dbusmenu"), QStringLiteral("LayoutUpdated"),
                                           this, SLOT(slotLayoutUpdated(uint,int)));
 }
 
 MenuImporter::~MenuImporter()
 {
     QDBusConnection::sessionBus().unregisterService(DBUS_SERVICE);
-    QDBusConnection::sessionBus().disconnect("", "", "com.canonical.dbusmenu", "LayoutUpdated",
+    QDBusConnection::sessionBus().disconnect(QLatin1String(""), QLatin1String(""), QStringLiteral("com.canonical.dbusmenu"), QStringLiteral("LayoutUpdated"),
                                              this, SLOT(slotLayoutUpdated(uint,int)));
 }
 
@@ -196,13 +196,13 @@ void MenuImporter::slotLayoutUpdated(uint /*revision*/, int parentId)
 
 void MenuImporter::fakeUnityAboutToShow()
 {
-    QDBusInterface iface(message().service(), message().path(), "com.canonical.dbusmenu");
-    QDBusPendingCall call = iface.asyncCall("GetLayout", 0, 1, QStringList());
+    QDBusInterface iface(message().service(), message().path(), QStringLiteral("com.canonical.dbusmenu"));
+    QDBusPendingCall call = iface.asyncCall(QStringLiteral("GetLayout"), 0, 1, QStringList());
     QDBusPendingCallWatcher* watcher = new QDBusPendingCallWatcher(call, this);
     watcher->setProperty("service", message().service());
     watcher->setProperty("path", message().path());
-    connect(watcher, SIGNAL(finished(QDBusPendingCallWatcher*)),
-        SLOT(finishFakeUnityAboutToShow(QDBusPendingCallWatcher*)));
+    connect(watcher, &QDBusPendingCallWatcher::finished,
+        this, &MenuImporter::finishFakeUnityAboutToShow);
 }
 
 void MenuImporter::finishFakeUnityAboutToShow(QDBusPendingCallWatcher* watcher)
@@ -219,8 +219,8 @@ void MenuImporter::finishFakeUnityAboutToShow(QDBusPendingCallWatcher* watcher)
 
     watcher->deleteLater();
 
-    QDBusInterface iface(service, path, "com.canonical.dbusmenu");
+    QDBusInterface iface(service, path, QStringLiteral("com.canonical.dbusmenu"));
     Q_FOREACH(const DBusMenuLayoutItem& dbusMenuItem, root.children) {
-        iface.asyncCall("AboutToShow", dbusMenuItem.id);
+        iface.asyncCall(QStringLiteral("AboutToShow"), dbusMenuItem.id);
     }
 }

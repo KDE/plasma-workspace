@@ -94,15 +94,15 @@ StatusNotifierItemSource::StatusNotifierItemSource(const QString &notifierItemId
 
     m_refreshTimer.setSingleShot(true);
     m_refreshTimer.setInterval(10);
-    connect(&m_refreshTimer, SIGNAL(timeout()), this, SLOT(performRefresh()));
+    connect(&m_refreshTimer, &QTimer::timeout, this, &StatusNotifierItemSource::performRefresh);
 
     m_valid = !service.isEmpty() && m_statusNotifierItemInterface->isValid();
     if (m_valid) {
-        connect(m_statusNotifierItemInterface, SIGNAL(NewTitle()), this, SLOT(refreshTitle()));
-        connect(m_statusNotifierItemInterface, SIGNAL(NewIcon()), this, SLOT(refreshIcons()));
-        connect(m_statusNotifierItemInterface, SIGNAL(NewAttentionIcon()), this, SLOT(refreshIcons()));
-        connect(m_statusNotifierItemInterface, SIGNAL(NewOverlayIcon()), this, SLOT(refreshIcons()));
-        connect(m_statusNotifierItemInterface, SIGNAL(NewToolTip()), this, SLOT(refreshToolTip()));
+        connect(m_statusNotifierItemInterface, &OrgKdeStatusNotifierItem::NewTitle, this, &StatusNotifierItemSource::refreshTitle);
+        connect(m_statusNotifierItemInterface, &OrgKdeStatusNotifierItem::NewIcon, this, &StatusNotifierItemSource::refreshIcons);
+        connect(m_statusNotifierItemInterface, &OrgKdeStatusNotifierItem::NewAttentionIcon, this, &StatusNotifierItemSource::refreshIcons);
+        connect(m_statusNotifierItemInterface, &OrgKdeStatusNotifierItem::NewOverlayIcon, this, &StatusNotifierItemSource::refreshIcons);
+        connect(m_statusNotifierItemInterface, &OrgKdeStatusNotifierItem::NewToolTip, this, &StatusNotifierItemSource::refreshToolTip);
         connect(m_statusNotifierItemInterface, SIGNAL(NewStatus(QString)), this, SLOT(syncStatus(QString)));
         refresh();
     }
@@ -125,11 +125,11 @@ Plasma::Service *StatusNotifierItemSource::createService()
 
 void StatusNotifierItemSource::syncStatus(QString status)
 {
-    setData("TitleChanged", false);
-    setData("IconsChanged", false);
-    setData("TooltipChanged", false);
-    setData("StatusChanged", true);
-    setData("Status", status);
+    setData(QStringLiteral("TitleChanged"), false);
+    setData(QStringLiteral("IconsChanged"), false);
+    setData(QStringLiteral("TooltipChanged"), false);
+    setData(QStringLiteral("StatusChanged"), true);
+    setData(QStringLiteral("Status"), status);
     checkForUpdate();
 }
 
@@ -167,12 +167,12 @@ void StatusNotifierItemSource::performRefresh()
 
     m_refreshing = true;
     QDBusMessage message = QDBusMessage::createMethodCall(m_statusNotifierItemInterface->service(),
-                                                          m_statusNotifierItemInterface->path(), "org.freedesktop.DBus.Properties", "GetAll");
+                                                          m_statusNotifierItemInterface->path(), QStringLiteral("org.freedesktop.DBus.Properties"), QStringLiteral("GetAll"));
 
     message << m_statusNotifierItemInterface->interface();
     QDBusPendingCall call = m_statusNotifierItemInterface->connection().asyncCall(message);
     QDBusPendingCallWatcher *watcher = new QDBusPendingCallWatcher(call, this);
-    connect(watcher, SIGNAL(finished(QDBusPendingCallWatcher*)), this, SLOT(refreshCallback(QDBusPendingCallWatcher*)));
+    connect(watcher, &QDBusPendingCallWatcher::finished, this, &StatusNotifierItemSource::refreshCallback);
 }
 
 /**
@@ -193,21 +193,21 @@ void StatusNotifierItemSource::refreshCallback(QDBusPendingCallWatcher *call)
         m_valid = false;
     } else {
         // record what has changed
-        setData("TitleChanged", m_titleUpdate);
+        setData(QStringLiteral("TitleChanged"), m_titleUpdate);
         m_titleUpdate = false;
-        setData("IconsChanged", m_iconUpdate);
+        setData(QStringLiteral("IconsChanged"), m_iconUpdate);
         m_iconUpdate = false;
-        setData("ToolTipChanged", m_tooltipUpdate);
+        setData(QStringLiteral("ToolTipChanged"), m_tooltipUpdate);
         m_tooltipUpdate = false;
-        setData("StatusChanged", m_statusUpdate);
+        setData(QStringLiteral("StatusChanged"), m_statusUpdate);
         m_statusUpdate = false;
 
         //IconThemePath (handle this one first, because it has an impact on
         //others)
         QVariantMap properties = reply.argumentAt<0>();
-        QString path = properties["IconThemePath"].toString();
+        QString path = properties[QStringLiteral("IconThemePath")].toString();
 
-        if (!path.isEmpty() && path != data()["IconThemePath"].toString()) {
+        if (!path.isEmpty() && path != data()[QStringLiteral("IconThemePath")].toString()) {
             if (!m_customIconLoader) {
                 m_customIconLoader = new KIconLoader(QString(), QStringList(), this);
             }
@@ -218,19 +218,19 @@ void StatusNotifierItemSource::refreshCallback(QDBusPendingCallWatcher *call)
             m_customIconLoader->reconfigure(QString(), QStringList(path));
 
             //add app dir requires an app name, though this is completely unused in this context
-            m_customIconLoader->addAppDir(QString("unused"), path);
+            m_customIconLoader->addAppDir(QStringLiteral("unused"), path);
         }
-        setData("IconThemePath", path);
+        setData(QStringLiteral("IconThemePath"), path);
 
-        setData("Category", properties["Category"]);
-        setData("Status", properties["Status"]);
-        setData("Title", properties["Title"]);
-        setData("Id", properties["Id"]);
-        setData("WindowId", properties["WindowId"]);
-        setData("ItemIsMenu", properties["ItemIsMenu"]);
+        setData(QStringLiteral("Category"), properties[QStringLiteral("Category")]);
+        setData(QStringLiteral("Status"), properties[QStringLiteral("Status")]);
+        setData(QStringLiteral("Title"), properties[QStringLiteral("Title")]);
+        setData(QStringLiteral("Id"), properties[QStringLiteral("Id")]);
+        setData(QStringLiteral("WindowId"), properties[QStringLiteral("WindowId")]);
+        setData(QStringLiteral("ItemIsMenu"), properties[QStringLiteral("ItemIsMenu")]);
 
         //Attention Movie
-        setData("AttentionMovieName", properties["AttentionMovieName"]);
+        setData(QStringLiteral("AttentionMovieName"), properties[QStringLiteral("AttentionMovieName")]);
 
         QIcon overlay;
         QStringList overlayNames;
@@ -241,10 +241,10 @@ void StatusNotifierItemSource::refreshCallback(QDBusPendingCallWatcher *call)
             QIcon icon;
             QString iconName;
 
-            properties["OverlayIconPixmap"].value<QDBusArgument>() >> image;
+            properties[QStringLiteral("OverlayIconPixmap")].value<QDBusArgument>() >> image;
             if (image.isEmpty()) {
-                QString iconName = properties["OverlayIconName"].toString();
-                setData("OverlayIconName", iconName);
+                QString iconName = properties[QStringLiteral("OverlayIconName")].toString();
+                setData(QStringLiteral("OverlayIconName"), iconName);
                 if (!iconName.isEmpty()) {
                     overlayNames << iconName;
                     overlay = QIcon(new KIconEngine(iconName, iconLoader()));
@@ -253,9 +253,9 @@ void StatusNotifierItemSource::refreshCallback(QDBusPendingCallWatcher *call)
                 overlay = imageVectorToPixmap(image);
             }
 
-            properties["IconPixmap"].value<QDBusArgument>() >> image;
+            properties[QStringLiteral("IconPixmap")].value<QDBusArgument>() >> image;
             if (image.isEmpty()) {
-                iconName = properties["IconName"].toString();
+                iconName = properties[QStringLiteral("IconName")].toString();
                 if (!iconName.isEmpty()) {
                     icon = QIcon(new KIconEngine(iconName, iconLoader()));
 
@@ -269,8 +269,8 @@ void StatusNotifierItemSource::refreshCallback(QDBusPendingCallWatcher *call)
                     overlayIcon(&icon, &overlay);
                 }
             }
-            setData("Icon", icon);
-            setData("IconName", iconName);
+            setData(QStringLiteral("Icon"), icon);
+            setData(QStringLiteral("IconName"), iconName);
         }
 
         //Attention icon
@@ -278,10 +278,10 @@ void StatusNotifierItemSource::refreshCallback(QDBusPendingCallWatcher *call)
             KDbusImageVector image;
             QIcon attentionIcon;
 
-            properties["AttentionIconPixmap"].value<QDBusArgument>() >> image;
+            properties[QStringLiteral("AttentionIconPixmap")].value<QDBusArgument>() >> image;
             if (image.isEmpty()) {
-                QString iconName = properties["AttentionIconName"].toString();
-                setData("AttentionIconName", iconName);
+                QString iconName = properties[QStringLiteral("AttentionIconName")].toString();
+                setData(QStringLiteral("AttentionIconName"), iconName);
                 if (!iconName.isEmpty()) {
                     attentionIcon = QIcon(new KIconEngine(iconName, iconLoader()));
 
@@ -295,17 +295,17 @@ void StatusNotifierItemSource::refreshCallback(QDBusPendingCallWatcher *call)
                     overlayIcon(&attentionIcon, &overlay);
                 }
             }
-            setData("AttentionIcon", attentionIcon);
+            setData(QStringLiteral("AttentionIcon"), attentionIcon);
         }
 
         //ToolTip
         {
             KDbusToolTipStruct toolTip;
-            properties["ToolTip"].value<QDBusArgument>() >> toolTip;
+            properties[QStringLiteral("ToolTip")].value<QDBusArgument>() >> toolTip;
             if (toolTip.title.isEmpty()) {
-                setData("ToolTipTitle", QVariant());
-                setData("ToolTipSubTitle", QVariant());
-                setData("ToolTipIcon", QVariant());
+                setData(QStringLiteral("ToolTipTitle"), QVariant());
+                setData(QStringLiteral("ToolTipSubTitle"), QVariant());
+                setData(QStringLiteral("ToolTipIcon"), QVariant());
             } else {
                 QIcon toolTipIcon;
                 if (toolTip.image.size() == 0) {
@@ -313,17 +313,17 @@ void StatusNotifierItemSource::refreshCallback(QDBusPendingCallWatcher *call)
                 } else {
                     toolTipIcon = imageVectorToPixmap(toolTip.image);
                 }
-                setData("ToolTipTitle", toolTip.title);
-                setData("ToolTipSubTitle", toolTip.subTitle);
-                setData("ToolTipIcon", toolTipIcon);
+                setData(QStringLiteral("ToolTipTitle"), toolTip.title);
+                setData(QStringLiteral("ToolTipSubTitle"), toolTip.subTitle);
+                setData(QStringLiteral("ToolTipIcon"), toolTipIcon);
             }
         }
 
         //Menu
         if (!m_menuImporter) {
-            QString menuObjectPath = properties["Menu"].value<QDBusObjectPath>().path();
+            QString menuObjectPath = properties[QStringLiteral("Menu")].value<QDBusObjectPath>().path();
             if (!menuObjectPath.isEmpty()) {
-                if (menuObjectPath == "/NO_DBUSMENU") {
+                if (menuObjectPath == QLatin1String("/NO_DBUSMENU")) {
                     // This is a hack to make it possible to disable DBusMenu in an
                     // application. The string "/NO_DBUSMENU" must be the same as in
                     // KStatusNotifierItem::setContextMenu().
@@ -423,21 +423,21 @@ void StatusNotifierItemSource::overlayIcon(QIcon *icon, QIcon *overlay)
 void StatusNotifierItemSource::activate(int x, int y)
 {
     if (m_statusNotifierItemInterface && m_statusNotifierItemInterface->isValid()) {
-        m_statusNotifierItemInterface->call(QDBus::NoBlock, "Activate", x, y);
+        m_statusNotifierItemInterface->call(QDBus::NoBlock, QStringLiteral("Activate"), x, y);
     }
 }
 
 void StatusNotifierItemSource::secondaryActivate(int x, int y)
 {
     if (m_statusNotifierItemInterface && m_statusNotifierItemInterface->isValid()) {
-        m_statusNotifierItemInterface->call(QDBus::NoBlock, "SecondaryActivate", x, y);
+        m_statusNotifierItemInterface->call(QDBus::NoBlock, QStringLiteral("SecondaryActivate"), x, y);
     }
 }
 
 void StatusNotifierItemSource::scroll(int delta, const QString &direction)
 {
     if (m_statusNotifierItemInterface && m_statusNotifierItemInterface->isValid()) {
-        m_statusNotifierItemInterface->call(QDBus::NoBlock, "Scroll", delta, direction);
+        m_statusNotifierItemInterface->call(QDBus::NoBlock, QStringLiteral("Scroll"), delta, direction);
     }
 }
 
@@ -448,7 +448,7 @@ void StatusNotifierItemSource::contextMenu(int x, int y)
     } else {
         qWarning() << "Could not find DBusMenu interface, falling back to calling ContextMenu()";
         if (m_statusNotifierItemInterface && m_statusNotifierItemInterface->isValid()) {
-            m_statusNotifierItemInterface->call(QDBus::NoBlock, "ContextMenu", x, y);
+            m_statusNotifierItemInterface->call(QDBus::NoBlock, QStringLiteral("ContextMenu"), x, y);
         }
     }
 }

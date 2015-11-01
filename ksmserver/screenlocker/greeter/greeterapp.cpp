@@ -135,8 +135,8 @@ void UnlockApp::initialize()
     KCrash::setDrKonqiEnabled(false);
 
     KScreenSaverSettings::self()->load();
-    KPackage::Package package = KPackage::PackageLoader::self()->loadPackage("Plasma/LookAndFeel");
-    KConfigGroup cg(KSharedConfig::openConfig("kdeglobals"), "KDE");
+    KPackage::Package package = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Plasma/LookAndFeel"));
+    KConfigGroup cg(KSharedConfig::openConfig(QStringLiteral("kdeglobals")), "KDE");
     const QString packageName = cg.readEntry("LookAndFeelPackage", QString());
     if (!packageName.isEmpty()) {
         package.setPath(packageName);
@@ -157,7 +157,7 @@ void UnlockApp::viewStatusChanged(const QQmlComponent::Status &status)
         return;
     }
 
-    const QUrl fallbackUrl("qrc:/fallbacktheme/LockScreen.qml");
+    const QUrl fallbackUrl(QStringLiteral("qrc:/fallbacktheme/LockScreen.qml"));
 
     // on error, load the fallback lockscreen to not lock the user out of the system
     if (status == QQmlComponent::Error && view && view->source() != fallbackUrl) {
@@ -178,7 +178,7 @@ void UnlockApp::desktopResized()
     const bool canLogout = KAuthorized::authorizeKAction(QStringLiteral("logout")) && KAuthorized::authorize(QStringLiteral("logout"));
     const QSet<Solid::PowerManagement::SleepState> spdMethods = Solid::PowerManagement::supportedSleepStates();
     for (int i = m_views.count(); i < nScreens; ++i) {
-        connect(QGuiApplication::screens()[i], SIGNAL(destroyed(QObject*)), SLOT(desktopResized()));
+        connect(QGuiApplication::screens()[i], &QObject::destroyed, this, &UnlockApp::desktopResized);
         // create the view
         auto *view = new KQuickAddons::QuickViewSharedEngine();
         connect(view, &KQuickAddons::QuickViewSharedEngine::statusChanged, this, &UnlockApp::viewStatusChanged);

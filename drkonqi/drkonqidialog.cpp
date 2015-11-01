@@ -54,7 +54,7 @@ DrKonqiDialog::DrKonqiDialog(QWidget * parent) :
 
     //Setting dialog title and icon
     setWindowTitle(DrKonqi::crashedApplication()->name());
-    setWindowIcon(QIcon::fromTheme("tools-report-bug"));
+    setWindowIcon(QIcon::fromTheme(QStringLiteral("tools-report-bug")));
 
     QVBoxLayout* l = new QVBoxLayout(this);
     m_tabWidget = new QTabWidget(this);
@@ -144,7 +144,7 @@ void DrKonqiDialog::buildIntroWidget()
     ui.iconLabel->setPixmap(
                         QPixmap(QStandardPaths::locate(QStandardPaths::DataLocation, QLatin1String("pics/crash.png"))));
 
-    ui.detailsTitleLabel->setText(QString("<strong>%1</strong>").arg(i18nc("@label","Details:")));
+    ui.detailsTitleLabel->setText(QStringLiteral("<strong>%1</strong>").arg(i18nc("@label","Details:")));
 
     ui.detailsLabel->setText(xi18nc("@info Note the time information is divided into date and time parts",
                                             "<para>Executable: <application>%1"
@@ -176,7 +176,7 @@ void DrKonqiDialog::buildDialogButtons()
     //Report bug button: User1
     QPushButton* reportButton = new QPushButton(m_buttonBox);
     KGuiItem2 reportItem(i18nc("@action:button", "Report &Bug"),
-                         QIcon::fromTheme("tools-report-bug"),
+                         QIcon::fromTheme(QStringLiteral("tools-report-bug")),
                          i18nc("@info:tooltip", "Starts the bug report assistant."));
     KGuiItem::assign(reportButton, reportItem);
     m_buttonBox->addButton(reportButton, QDialogButtonBox::ActionRole);
@@ -192,7 +192,7 @@ void DrKonqiDialog::buildDialogButtons()
     DebuggerManager *debuggerManager = DrKonqi::debuggerManager();
     m_debugButton = new QPushButton(m_buttonBox);
     KGuiItem2 debugItem(i18nc("@action:button this is the debug menu button label which contains the debugging applications",
-                                               "&Debug"), QIcon::fromTheme("applications-development"),
+                                               "&Debug"), QIcon::fromTheme(QStringLiteral("applications-development")),
                                                i18nc("@info:tooltip", "Starts a program to debug "
                                                      "the crashed application."));
     KGuiItem::assign(m_debugButton, debugItem);
@@ -213,7 +213,7 @@ void DrKonqiDialog::buildDialogButtons()
 
     //Restart application button
     KGuiItem2 restartItem(i18nc("@action:button", "&Restart Application"),
-              QIcon::fromTheme("system-reboot"),
+              QIcon::fromTheme(QStringLiteral("system-reboot")),
               i18nc("@info:tooltip", "Use this button to restart "
               "the crashed application."));
     m_restartButton = new QPushButton(m_buttonBox);
@@ -221,8 +221,8 @@ void DrKonqiDialog::buildDialogButtons()
     m_restartButton->setEnabled(!crashedApp->hasBeenRestarted() &&
                                  crashedApp->fakeExecutableBaseName() != QLatin1String("drkonqi"));
     m_buttonBox->addButton(m_restartButton, QDialogButtonBox::ActionRole);
-    connect(m_restartButton, SIGNAL(clicked(bool)), crashedApp, SLOT(restart()));
-    connect(crashedApp, SIGNAL(restarted(bool)), this, SLOT(applicationRestarted(bool)));
+    connect(m_restartButton, &QAbstractButton::clicked, crashedApp, &CrashedApplication::restart);
+    connect(crashedApp, &CrashedApplication::restarted, this, &DrKonqiDialog::applicationRestarted);
 
     //Close button
     QString tooltipText = i18nc("@info:tooltip",
@@ -234,12 +234,12 @@ void DrKonqiDialog::buildDialogButtons()
 
 void DrKonqiDialog::addDebugger(AbstractDebuggerLauncher *launcher)
 {
-    QAction *action = new QAction(QIcon::fromTheme("applications-development"),
+    QAction *action = new QAction(QIcon::fromTheme(QStringLiteral("applications-development")),
                                   i18nc("@action:inmenu 1 is the debugger name",
                                          "Debug in %1",
                                          launcher->name()), m_debugMenu);
     m_debugMenu->addAction(action);
-    connect(action, SIGNAL(triggered()), launcher, SLOT(start()));
+    connect(action, &QAction::triggered, launcher, &AbstractDebuggerLauncher::start);
     m_debugMenuActions.insert(launcher, action);
 }
 

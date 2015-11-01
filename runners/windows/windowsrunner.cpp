@@ -42,13 +42,13 @@ WindowsRunner::WindowsRunner(QObject* parent, const QVariantList& args)
     Q_UNUSED(args)
     setObjectName( QLatin1String("Windows" ));
 
-    addSyntax(Plasma::RunnerSyntax(":q:", i18n("Finds windows whose name, window class or window role match :q:. "
+    addSyntax(Plasma::RunnerSyntax(QStringLiteral(":q:"), i18n("Finds windows whose name, window class or window role match :q:. "
                                    "It is possible to interact with the windows by using one of the following keywords: "
                                    "activate, close, min(imize), max(imize), fullscreen, shade, keep above and keep below.")));
-    addSyntax(Plasma::RunnerSyntax(":q:", i18n("Finds windows which are on desktop named :q: "
+    addSyntax(Plasma::RunnerSyntax(QStringLiteral(":q:"), i18n("Finds windows which are on desktop named :q: "
                                    "It is possible to interact with the windows by using one of the following keywords: "
                                    "activate, close, min(imize), max(imize), fullscreen, shade, keep above and keep below.")));
-    addSyntax(Plasma::RunnerSyntax(":q:", i18n("Switch to desktop named :q:")));
+    addSyntax(Plasma::RunnerSyntax(QStringLiteral(":q:"), i18n("Switch to desktop named :q:")));
     setDefaultSyntax(Plasma::RunnerSyntax(i18nc("Note this is a KRunner keyword", "window"),
                                    i18n("Lists all windows and allows to activate them. "
                                    "With name=, class=, role= and desktop= the list can be reduced to "
@@ -58,8 +58,8 @@ WindowsRunner::WindowsRunner(QObject* parent, const QVariantList& args)
     addSyntax(Plasma::RunnerSyntax(i18nc("Note this is a KRunner keyword", "desktop"),
                                    i18n("Lists all other desktops and allows to switch to them.")));
 
-    connect(this, SIGNAL(prepare()), this, SLOT(prepareForMatchSession()));
-    connect(this, SIGNAL(teardown()), this, SLOT(matchSessionComplete()));
+    connect(this, &Plasma::AbstractRunner::prepare, this, &WindowsRunner::prepareForMatchSession);
+    connect(this, &Plasma::AbstractRunner::teardown, this, &WindowsRunner::matchSessionComplete);
 }
 
 WindowsRunner::~WindowsRunner()
@@ -108,7 +108,7 @@ void WindowsRunner::prepareForMatchSession()
     QMutexLocker locker(&m_mutex);
     m_inSession = true;
     m_ready = false;
-    QTimer::singleShot(0, this, SLOT(gatherInfo()));
+    QTimer::singleShot(0, this, &WindowsRunner::gatherInfo);
 }
 
 // Called in the main thread
@@ -174,7 +174,7 @@ void WindowsRunner::match(Plasma::RunnerContext& context)
     // keyword match: when term starts with "window" we list all windows
     // the list can be restricted to windows matching a given name, class, role or desktop
     if (term.startsWith(i18nc("Note this is a KRunner keyword", "window") , Qt::CaseInsensitive)) {
-        const QStringList keywords = term.split(" ");
+        const QStringList keywords = term.split(QStringLiteral(" "));
         QString windowName;
         QString windowClass;
         QString windowRole;
@@ -184,14 +184,14 @@ void WindowsRunner::match(Plasma::RunnerContext& context)
                 continue;
             }
             if (keyword.startsWith(i18nc("Note this is a KRunner keyword", "name") + "=" , Qt::CaseInsensitive)) {
-                windowName = keyword.split("=")[1];
+                windowName = keyword.split(QStringLiteral("="))[1];
             } else if (keyword.startsWith(i18nc("Note this is a KRunner keyword", "class") + "=" , Qt::CaseInsensitive)) {
-                windowClass = keyword.split("=")[1];
+                windowClass = keyword.split(QStringLiteral("="))[1];
             } else if (keyword.startsWith(i18nc("Note this is a KRunner keyword", "role") + "=" , Qt::CaseInsensitive)) {
-                windowRole = keyword.split("=")[1];
+                windowRole = keyword.split(QStringLiteral("="))[1];
             } else if (keyword.startsWith(i18nc("Note this is a KRunner keyword", "desktop") + "=" , Qt::CaseInsensitive)) {
                 bool ok;
-                desktop = keyword.split("=")[1].toInt(&ok);
+                desktop = keyword.split(QStringLiteral("="))[1].toInt(&ok);
                 if (!ok || desktop > KWindowSystem::numberOfDesktops()) {
                     desktop = -1; // sanity check
                 }
@@ -252,7 +252,7 @@ void WindowsRunner::match(Plasma::RunnerContext& context)
     bool desktopAdded = false;
     // check for desktop keyword
     if (term.startsWith(i18nc("Note this is a KRunner keyword", "desktop") , Qt::CaseInsensitive)) {
-        const QStringList parts = term.split(" ");
+        const QStringList parts = term.split(QStringLiteral(" "));
         if (parts.size() == 1) {
             // only keyword - list all desktops
             for (int i=1; i<=KWindowSystem::numberOfDesktops(); i++) {
@@ -265,7 +265,7 @@ void WindowsRunner::match(Plasma::RunnerContext& context)
         } else {
             // keyword + desktop - restrict matches
             bool isInt;
-            int desktop = term.mid(parts[0].length() + 1).toInt(&isInt);
+            int desktop = term.midRef(parts[0].length() + 1).toInt(&isInt);
             if (isInt && desktop != KWindowSystem::currentDesktop()) {
                 matches << desktopMatch(desktop);
                 desktopAdded = true;
@@ -327,12 +327,12 @@ void WindowsRunner::run(const Plasma::RunnerContext& context, const Plasma::Quer
     QMutexLocker locker(&m_mutex);
     Q_UNUSED(context)
     // check if it's a desktop
-    if (match.id().startsWith("windows_desktop")) {
+    if (match.id().startsWith(QLatin1String("windows_desktop"))) {
         KWindowSystem::setCurrentDesktop(match.data().toInt());
         return;
     }
 
-    const QStringList parts = match.data().toString().split("_");
+    const QStringList parts = match.data().toString().split(QStringLiteral("_"));
     WindowAction action = WindowAction(parts[0].toInt());
     WId w(parts[1].toULong());
     //this is needed since KWindowInfo() doesn't exist, m_windows[w] doesn't work
@@ -399,7 +399,7 @@ Plasma::QueryMatch WindowsRunner::desktopMatch(int desktop, qreal relevance)
     match.setType(Plasma::QueryMatch::ExactMatch);
     match.setData(desktop);
     match.setId("desktop-" + QString::number(desktop));
-    match.setIcon(QIcon::fromTheme("user-desktop"));
+    match.setIcon(QIcon::fromTheme(QStringLiteral("user-desktop")));
     QString desktopName;
     if (desktop <= m_desktopNames.size()) {
         desktopName = m_desktopNames[desktop - 1];

@@ -75,7 +75,7 @@ LauncherItem::LauncherItem(QObject *parent, const QUrl &url)
       d(new LauncherItemPrivate(this))
 {
     if (url.isEmpty()) {
-        d->icon = QIcon::fromTheme("unknown");
+        d->icon = QIcon::fromTheme(QStringLiteral("unknown"));
     } else {
         setLauncherUrl(url);
     }
@@ -198,7 +198,7 @@ QString LauncherItem::wmClass() const
 void LauncherItem::setName(const QString& name)
 {
     //NOTE: preferred is NOT a protocol, it's just a magic string
-    if (d->url.scheme() != "preferred") {
+    if (d->url.scheme() != QLatin1String("preferred")) {
         d->name = name;
     }
 }
@@ -206,7 +206,7 @@ void LauncherItem::setName(const QString& name)
 void LauncherItem::setGenericName(const QString& genericName)
 {
     //NOTE: preferred is NOT a protocol, it's just a magic string
-    if (d->url.scheme() != "preferred") {
+    if (d->url.scheme() != QLatin1String("preferred")) {
         d->genericName = genericName;
     }
 }
@@ -237,7 +237,7 @@ void LauncherItem::launch()
 #endif
 
     //NOTE: preferred is NOT a protocol, it's just a magic string
-    if (d->url.scheme() == "preferred") {
+    if (d->url.scheme() == QLatin1String("preferred")) {
         KService::Ptr service = KService::serviceByStorageId(defaultApplication(d->url));
 
         if (!service) {
@@ -272,34 +272,34 @@ QString LauncherItem::defaultApplication(const QUrl &url)
     // FIXME: there are some pretty horrible hacks below, in the sense that they assume a very
     // specific implementation system. there is much room for improvement here. see
     // kdebase-runtime/kcontrol/componentchooser/ for all the gory details ;)
-    if (application.compare("mailer", Qt::CaseInsensitive) == 0) {
+    if (application.compare(QLatin1String("mailer"), Qt::CaseInsensitive) == 0) {
         KEMailSettings settings;
 
         // in KToolInvocation, the default is kmail; but let's be friendlier :)
         QString command = settings.getSetting(KEMailSettings::ClientProgram);
         if (command.isEmpty()) {
-            if (KService::Ptr kontact = KService::serviceByStorageId("kontact")) {
+            if (KService::Ptr kontact = KService::serviceByStorageId(QStringLiteral("kontact"))) {
                 return kontact->storageId();
-            } else if (KService::Ptr kmail = KService::serviceByStorageId("kmail")) {
+            } else if (KService::Ptr kmail = KService::serviceByStorageId(QStringLiteral("kmail"))) {
                 return kmail->storageId();
             }
         }
 
         if (!command.isEmpty()) {
-            if (settings.getSetting(KEMailSettings::ClientTerminal) == "true") {
+            if (settings.getSetting(KEMailSettings::ClientTerminal) == QLatin1String("true")) {
                 KConfigGroup confGroup(KSharedConfig::openConfig(), "General");
                 const QString preferredTerminal = confGroup.readPathEntry("TerminalApplication",
-                                                  QString::fromLatin1("konsole"));
-                command = preferredTerminal + QString::fromLatin1(" -e ") + command;
+                                                  QStringLiteral("konsole"));
+                command = preferredTerminal + QLatin1String(" -e ") + command;
             }
 
             return command;
         }
-    } else if (application.compare("browser", Qt::CaseInsensitive) == 0) {
+    } else if (application.compare(QLatin1String("browser"), Qt::CaseInsensitive) == 0) {
         KConfigGroup config(KSharedConfig::openConfig(), "General");
         QString browserApp = config.readPathEntry("BrowserApplication", QString());
         if (browserApp.isEmpty()) {
-            const KService::Ptr htmlApp = KMimeTypeTrader::self()->preferredService(QLatin1String("text/html"));
+            const KService::Ptr htmlApp = KMimeTypeTrader::self()->preferredService(QStringLiteral("text/html"));
             if (htmlApp) {
                 browserApp = htmlApp->storageId();
             }
@@ -308,23 +308,23 @@ QString LauncherItem::defaultApplication(const QUrl &url)
         }
 
         return browserApp;
-    } else if (application.compare("terminal", Qt::CaseInsensitive) == 0) {
+    } else if (application.compare(QLatin1String("terminal"), Qt::CaseInsensitive) == 0) {
         KConfigGroup confGroup(KSharedConfig::openConfig(), "General");
-        return confGroup.readPathEntry("TerminalApplication", QString::fromLatin1("konsole"));
-    } else if (application.compare("filemanager", Qt::CaseInsensitive) == 0) {
-        KService::Ptr service = KMimeTypeTrader::self()->preferredService("inode/directory");
+        return confGroup.readPathEntry("TerminalApplication", QStringLiteral("konsole"));
+    } else if (application.compare(QLatin1String("filemanager"), Qt::CaseInsensitive) == 0) {
+        KService::Ptr service = KMimeTypeTrader::self()->preferredService(QStringLiteral("inode/directory"));
         if (service) {
             return service->storageId();
         }
-    } else if (application.compare("windowmanager", Qt::CaseInsensitive) == 0) {
-        KConfig cfg("ksmserverrc", KConfig::NoGlobals);
+    } else if (application.compare(QLatin1String("windowmanager"), Qt::CaseInsensitive) == 0) {
+        KConfig cfg(QStringLiteral("ksmserverrc"), KConfig::NoGlobals);
         KConfigGroup confGroup(&cfg, "General");
-        return confGroup.readEntry("windowManager", QString::fromLatin1("kwin"));
+        return confGroup.readEntry("windowManager", QStringLiteral("kwin"));
     } else if (KService::Ptr service = KMimeTypeTrader::self()->preferredService(application)) {
         return service->storageId();
     } else {
         // try the files in share/apps/kcm_componentchooser/*.desktop
-        QStringList directories = QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, "kcm_componentchooser", QStandardPaths::LocateDirectory);
+        QStringList directories = QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, QStringLiteral("kcm_componentchooser"), QStandardPaths::LocateDirectory);
         QStringList services;
         foreach(const QString& directory, directories) {
             QDir d(directory);
@@ -339,7 +339,7 @@ QString LauncherItem::defaultApplication(const QUrl &url)
             const QString type = cg.readEntry("valueName", QString());
             //qDebug() << "    checking" << service << type << application;
             if (type.compare(application, Qt::CaseInsensitive) == 0) {
-                KConfig store(cg.readPathEntry("storeInFile", "null"));
+                KConfig store(cg.readPathEntry("storeInFile", QStringLiteral("null")));
                 KConfigGroup storeCg(&store, cg.readEntry("valueSection", QString()));
                 const QString exec = storeCg.readPathEntry(cg.readEntry("valueName", "kcm_componenchooser_null"),
                                      cg.readEntry("defaultImplementation", QString()));
@@ -352,7 +352,7 @@ QString LauncherItem::defaultApplication(const QUrl &url)
         }
     }
 
-    return "";
+    return QLatin1String("");
 }
 
 void LauncherItem::setLauncherUrl(const QUrl& url)
@@ -361,7 +361,7 @@ void LauncherItem::setLauncherUrl(const QUrl& url)
     // into file:/// URLs
     QUrl newUrl(url.url());
 
-    if (d->url.scheme() != "preferred" && newUrl == d->url) {
+    if (d->url.scheme() != QLatin1String("preferred") && newUrl == d->url) {
         return;
     }
 
@@ -378,7 +378,7 @@ void LauncherItem::setLauncherUrl(const QUrl& url)
             d->url = QUrl();
             return;
         }
-    } else if (d->url.scheme() == "preferred") {
+    } else if (d->url.scheme() == QLatin1String("preferred")) {
         //NOTE: preferred is NOT a protocol, it's just a magic string
         const KService::Ptr service = KService::serviceByStorageId(defaultApplication(d->url));
 
@@ -409,7 +409,7 @@ void LauncherItem::setLauncherUrl(const QUrl& url)
     }
 
     if (d->icon.isNull()) {
-        d->icon = QIcon::fromTheme("unknown");
+        d->icon = QIcon::fromTheme(QStringLiteral("unknown"));
     }
 }
 
@@ -421,7 +421,7 @@ bool LauncherItem::isValid() const
 void LauncherItem::setIcon(const QIcon& icon)
 {
     //NOTE: preferred is NOT a protocol, it's just a magic string
-    if (d->url.scheme() != "preferred") {
+    if (d->url.scheme() != QLatin1String("preferred")) {
         d->icon = icon;
     }
 }

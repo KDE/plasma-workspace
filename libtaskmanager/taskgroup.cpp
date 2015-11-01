@@ -42,7 +42,7 @@ class TaskGroup::Private
 public:
     Private(TaskGroup *group, GroupManager *manager)
         : q(group),
-          groupIcon(QIcon::fromTheme("xorg")),
+          groupIcon(QIcon::fromTheme(QStringLiteral("xorg"))),
           groupManager(manager)
     {
     }

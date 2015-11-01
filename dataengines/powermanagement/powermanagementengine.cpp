@@ -64,10 +64,10 @@ PowermanagementEngine::~PowermanagementEngine()
 
 void PowermanagementEngine::init()
 {
-    connect(Solid::DeviceNotifier::instance(), SIGNAL(deviceAdded(QString)),
-            this,                              SLOT(deviceAdded(QString)));
-    connect(Solid::DeviceNotifier::instance(), SIGNAL(deviceRemoved(QString)),
-            this,                              SLOT(deviceRemoved(QString)));
+    connect(Solid::DeviceNotifier::instance(), &Solid::DeviceNotifier::deviceAdded,
+            this,                              &PowermanagementEngine::deviceAdded);
+    connect(Solid::DeviceNotifier::instance(), &Solid::DeviceNotifier::deviceRemoved,
+            this,                              &PowermanagementEngine::deviceRemoved);
 
     if (QDBusConnection::sessionBus().interface()->isServiceRegistered(SOLID_POWERMANAGEMENT_SERVICE)) {
         if (!QDBusConnection::sessionBus().connect(SOLID_POWERMANAGEMENT_SERVICE,
@@ -131,7 +131,7 @@ void PowermanagementEngine::init()
 QStringList PowermanagementEngine::basicSourceNames() const
 {
     QStringList sources;
-    sources << "Battery" << "AC Adapter" << "Sleep States" << "PowerDevil" << "Inhibitions";
+    sources << QStringLiteral("Battery") << QStringLiteral("AC Adapter") << QStringLiteral("Sleep States") << QStringLiteral("PowerDevil") << QStringLiteral("Inhibitions");
     return sources;
 }
 
@@ -142,13 +142,13 @@ QStringList PowermanagementEngine::sources() const
 
 bool PowermanagementEngine::sourceRequestEvent(const QString &name)
 {
-    if (name == "Battery") {
+    if (name == QLatin1String("Battery")) {
         const QList<Solid::Device> listBattery = Solid::Device::listFromType(Solid::DeviceInterface::Battery);
         m_batterySources.clear();
 
         if (listBattery.isEmpty()) {
-            setData("Battery", "Has Battery", false);
-            setData("Battery", "Has Cumulative", false);
+            setData(QStringLiteral("Battery"), QStringLiteral("Has Battery"), false);
+            setData(QStringLiteral("Battery"), QStringLiteral("Has Cumulative"), false);
             return true;
         }
 
@@ -158,19 +158,19 @@ bool PowermanagementEngine::sourceRequestEvent(const QString &name)
         foreach (const Solid::Device &deviceBattery, listBattery) {
             const Solid::Battery* battery = deviceBattery.as<Solid::Battery>();
 
-            const QString source = QString("Battery%1").arg(index++);
+            const QString source = QStringLiteral("Battery%1").arg(index++);
 
             batterySources << source;
             m_batterySources[deviceBattery.udi()] = source;
 
-            connect(battery, SIGNAL(chargeStateChanged(int,QString)), this,
-                    SLOT(updateBatteryChargeState(int,QString)));
-            connect(battery, SIGNAL(chargePercentChanged(int,QString)), this,
-                    SLOT(updateBatteryChargePercent(int,QString)));
-            connect(battery, SIGNAL(energyChanged(double,QString)),
-                    this, SLOT(updateBatteryEnergy(double,QString)));
-            connect(battery, SIGNAL(presentStateChanged(bool,QString)), this,
-                    SLOT(updateBatteryPresentState(bool,QString)));
+            connect(battery, &Solid::Battery::chargeStateChanged, this,
+                    &PowermanagementEngine::updateBatteryChargeState);
+            connect(battery, &Solid::Battery::chargePercentChanged, this,
+                    &PowermanagementEngine::updateBatteryChargePercent);
+            connect(battery, &Solid::Battery::energyChanged,
+                    this, &PowermanagementEngine::updateBatteryEnergy);
+            connect(battery, &Solid::Battery::presentStateChanged, this,
+                    &PowermanagementEngine::updateBatteryPresentState);
 
             // Set initial values
             updateBatteryChargeState(battery->chargeState(), deviceBattery.udi());
@@ -179,22 +179,22 @@ bool PowermanagementEngine::sourceRequestEvent(const QString &name)
             updateBatteryPresentState(battery->isPresent(), deviceBattery.udi());
             updateBatteryPowerSupplyState(battery->isPowerSupply(), deviceBattery.udi());
 
-            setData(source, "Vendor", deviceBattery.vendor());
-            setData(source, "Product", deviceBattery.product());
-            setData(source, "Capacity", battery->capacity());
-            setData(source, "Type", batteryType(battery));
+            setData(source, QStringLiteral("Vendor"), deviceBattery.vendor());
+            setData(source, QStringLiteral("Product"), deviceBattery.product());
+            setData(source, QStringLiteral("Capacity"), battery->capacity());
+            setData(source, QStringLiteral("Type"), batteryType(battery));
         }
 
         updateBatteryNames();
         updateOverallBattery();
 
-        setData("Battery", "Has Battery", !batterySources.isEmpty());
+        setData(QStringLiteral("Battery"), QStringLiteral("Has Battery"), !batterySources.isEmpty());
         if (!batterySources.isEmpty()) {
-            setData("Battery", "Sources", batterySources);
+            setData(QStringLiteral("Battery"), QStringLiteral("Sources"), batterySources);
             QDBusMessage msg = QDBusMessage::createMethodCall(SOLID_POWERMANAGEMENT_SERVICE,
-                                                              "/org/kde/Solid/PowerManagement",
+                                                              QStringLiteral("/org/kde/Solid/PowerManagement"),
                                                               SOLID_POWERMANAGEMENT_SERVICE,
-                                                              "batteryRemainingTime");
+                                                              QStringLiteral("batteryRemainingTime"));
             QDBusPendingReply<qulonglong> reply = QDBusConnection::sessionBus().asyncCall(msg);
             QDBusPendingCallWatcher *watcher = new QDBusPendingCallWatcher(reply, this);
             QObject::connect(watcher, &QDBusPendingCallWatcher::finished, this, [this](QDBusPendingCallWatcher *watcher) {
@@ -207,18 +207,18 @@ bool PowermanagementEngine::sourceRequestEvent(const QString &name)
         }
 
         m_sources = basicSourceNames() + batterySources;
-    } else if (name == "AC Adapter") {
-        connect(Solid::PowerManagement::notifier(), SIGNAL(appShouldConserveResourcesChanged(bool)),
-                this, SLOT(updateAcPlugState(bool)));
+    } else if (name == QLatin1String("AC Adapter")) {
+        connect(Solid::PowerManagement::notifier(), &Solid::PowerManagement::Notifier::appShouldConserveResourcesChanged,
+                this, &PowermanagementEngine::updateAcPlugState);
         updateAcPlugState(Solid::PowerManagement::appShouldConserveResources());
-    } else if (name == "Sleep States") {
+    } else if (name == QLatin1String("Sleep States")) {
         const QSet<Solid::PowerManagement::SleepState> sleepstates = Solid::PowerManagement::supportedSleepStates();
-        setData("Sleep States", "Standby", sleepstates.contains(Solid::PowerManagement::StandbyState));
-        setData("Sleep States", "Suspend", sleepstates.contains(Solid::PowerManagement::SuspendState));
-        setData("Sleep States", "Hibernate", sleepstates.contains(Solid::PowerManagement::HibernateState));
-        setData("Sleep States", "HybridSuspend", sleepstates.contains(Solid::PowerManagement::HybridSuspendState));
-        setData("Sleep States", "LockScreen", KAuthorized::authorizeKAction("lock_screen"));
-    } else if (name == "PowerDevil") {
+        setData(QStringLiteral("Sleep States"), QStringLiteral("Standby"), sleepstates.contains(Solid::PowerManagement::StandbyState));
+        setData(QStringLiteral("Sleep States"), QStringLiteral("Suspend"), sleepstates.contains(Solid::PowerManagement::SuspendState));
+        setData(QStringLiteral("Sleep States"), QStringLiteral("Hibernate"), sleepstates.contains(Solid::PowerManagement::HibernateState));
+        setData(QStringLiteral("Sleep States"), QStringLiteral("HybridSuspend"), sleepstates.contains(Solid::PowerManagement::HybridSuspendState));
+        setData(QStringLiteral("Sleep States"), QStringLiteral("LockScreen"), KAuthorized::authorizeKAction(QStringLiteral("lock_screen")));
+    } else if (name == QLatin1String("PowerDevil")) {
         QDBusMessage screenMsg = QDBusMessage::createMethodCall(SOLID_POWERMANAGEMENT_SERVICE,
                                                               QStringLiteral("/org/kde/Solid/PowerManagement/Actions/BrightnessControl"),
                                                               QStringLiteral("org.kde.Solid.PowerManagement.Actions.BrightnessControl"),
@@ -285,7 +285,7 @@ bool PowermanagementEngine::sourceRequestEvent(const QString &name)
         QObject::connect(lidIsPresentWatcher, &QDBusPendingCallWatcher::finished, this, [this](QDBusPendingCallWatcher *watcher) {
             QDBusPendingReply<bool> reply = *watcher;
             if (!reply.isError()) {
-                setData("PowerDevil", "Is Lid Present", reply.value());
+                setData(QStringLiteral("PowerDevil"), QStringLiteral("Is Lid Present"), reply.value());
             }
             watcher->deleteLater();
         });
@@ -307,7 +307,7 @@ bool PowermanagementEngine::sourceRequestEvent(const QString &name)
     } else if (name == QLatin1Literal("Inhibitions")) {
         QDBusMessage inhibitionsMsg = QDBusMessage::createMethodCall(SOLID_POWERMANAGEMENT_SERVICE,
                                                                      QStringLiteral("/org/kde/Solid/PowerManagement/PolicyAgent"),
-                                                                     "org.kde.Solid.PowerManagement.PolicyAgent",
+                                                                     QStringLiteral("org.kde.Solid.PowerManagement.PolicyAgent"),
                                                                      QStringLiteral("ListInhibitions"));
         QDBusPendingReply<QList<InhibitionInfo>> inhibitionsReply = QDBusConnection::sessionBus().asyncCall(inhibitionsMsg);
         QDBusPendingCallWatcher *inhibitionsWatcher = new QDBusPendingCallWatcher(inhibitionsReply, this);
@@ -323,8 +323,8 @@ bool PowermanagementEngine::sourceRequestEvent(const QString &name)
         });
 
     //any info concerning lock screen/screensaver goes here
-    } else if (name == "UserActivity") {
-        setData("UserActivity", "IdleTime", KIdleTime::instance()->idleTime());
+    } else if (name == QLatin1String("UserActivity")) {
+        setData(QStringLiteral("UserActivity"), QStringLiteral("IdleTime"), KIdleTime::instance()->idleTime());
     } else {
         qDebug() << "Data for '" << name << "' not found";
         return false;
@@ -365,8 +365,8 @@ QString PowermanagementEngine::batteryType(const Solid::Battery* battery) const
 
 bool PowermanagementEngine::updateSourceEvent(const QString &source)
 {
-    if (source == "UserActivity") {
-        setData("UserActivity", "IdleTime", KIdleTime::instance()->idleTime());
+    if (source == QLatin1String("UserActivity")) {
+        setData(QStringLiteral("UserActivity"), QStringLiteral("IdleTime"), KIdleTime::instance()->idleTime());
         return true;
     }
     return Plasma::DataEngine::updateSourceEvent(source);
@@ -374,7 +374,7 @@ bool PowermanagementEngine::updateSourceEvent(const QString &source)
 
 Plasma::Service* PowermanagementEngine::serviceForSource(const QString &source)
 {
-    if (source == "PowerDevil") {
+    if (source == QLatin1String("PowerDevil")) {
         return new PowerManagementService(this);
     }
 
@@ -383,15 +383,15 @@ Plasma::Service* PowermanagementEngine::serviceForSource(const QString &source)
 
 QString PowermanagementEngine::batteryStateToString(int newState) const
 {
-    QString state("Unknown");
+    QString state(QStringLiteral("Unknown"));
     if (newState == Solid::Battery::NoCharge) {
-        state = "NoCharge";
+        state = QLatin1String("NoCharge");
     } else if (newState == Solid::Battery::Charging) {
-        state = "Charging";
+        state = QLatin1String("Charging");
     } else if (newState == Solid::Battery::Discharging) {
-        state = "Discharging";
+        state = QLatin1String("Discharging");
     } else if (newState == Solid::Battery::FullyCharged) {
-        state = "FullyCharged";
+        state = QLatin1String("FullyCharged");
     }
 
     return state;
@@ -400,33 +400,33 @@ QString PowermanagementEngine::batteryStateToString(int newState) const
 void PowermanagementEngine::updateBatteryChargeState(int newState, const QString& udi)
 {
     const QString source = m_batterySources[udi];
-    setData(source, "State", batteryStateToString(newState));
+    setData(source, QStringLiteral("State"), batteryStateToString(newState));
     updateOverallBattery();
 }
 
 void PowermanagementEngine::updateBatteryPresentState(bool newState, const QString& udi)
 {
     const QString source = m_batterySources[udi];
-    setData(source, "Plugged in", newState); // FIXME This needs to be renamed and Battery Monitor adjusted
+    setData(source, QStringLiteral("Plugged in"), newState); // FIXME This needs to be renamed and Battery Monitor adjusted
 }
 
 void PowermanagementEngine::updateBatteryChargePercent(int newValue, const QString& udi)
 {
     const QString source = m_batterySources[udi];
-    setData(source, "Percent", newValue);
+    setData(source, QStringLiteral("Percent"), newValue);
     updateOverallBattery();
 }
 
 void PowermanagementEngine::updateBatteryEnergy(double newValue, const QString &udi)
 {
     const QString source = m_batterySources[udi];
-    setData(source, "Energy", newValue);
+    setData(source, QStringLiteral("Energy"), newValue);
 }
 
 void PowermanagementEngine::updateBatteryPowerSupplyState(bool newState, const QString& udi)
 {
     const QString source = m_batterySources[udi];
-    setData(source, "Is Power Supply", newState);
+    setData(source, QStringLiteral("Is Power Supply"), newState);
 }
 
 void PowermanagementEngine::updateBatteryNames()
@@ -435,25 +435,25 @@ void PowermanagementEngine::updateBatteryNames()
     foreach (QString source, m_batterySources) {
         DataContainer *batteryDataContainer = containerForSource(source);
         if (batteryDataContainer) {
-            const QString batteryVendor = batteryDataContainer->data()["Vendor"].toString();
-            const QString batteryProduct = batteryDataContainer->data()["Product"].toString();
+            const QString batteryVendor = batteryDataContainer->data()[QStringLiteral("Vendor")].toString();
+            const QString batteryProduct = batteryDataContainer->data()[QStringLiteral("Product")].toString();
 
             // Don't show battery name for primary power supply batteries. They usually have cryptic serial number names.
-            const bool showBatteryName = batteryDataContainer->data()["Type"].toString() != QLatin1String("Battery") ||
-                                         !batteryDataContainer->data()["Is Power Supply"].toBool();
+            const bool showBatteryName = batteryDataContainer->data()[QStringLiteral("Type")].toString() != QLatin1String("Battery") ||
+                                         !batteryDataContainer->data()[QStringLiteral("Is Power Supply")].toBool();
 
-            if (!batteryProduct.isEmpty() && batteryProduct != "Unknown Battery" && showBatteryName) {
+            if (!batteryProduct.isEmpty() && batteryProduct != QLatin1String("Unknown Battery") && showBatteryName) {
                 if (!batteryVendor.isEmpty()) {
-                    setData(source, "Pretty Name", QString(batteryVendor + ' ' + batteryProduct));
+                    setData(source, QStringLiteral("Pretty Name"), QString(batteryVendor + ' ' + batteryProduct));
                 } else {
-                    setData(source, "Pretty Name", batteryProduct);
+                    setData(source, QStringLiteral("Pretty Name"), batteryProduct);
                 }
             } else {
                 ++unnamedBatteries;
                 if (unnamedBatteries > 1) {
-                    setData(source, "Pretty Name", i18nc("Placeholder is the battery number", "Battery %1", unnamedBatteries));
+                    setData(source, QStringLiteral("Pretty Name"), i18nc("Placeholder is the battery number", "Battery %1", unnamedBatteries));
                 } else {
-                    setData(source, "Pretty Name", i18n("Battery"));
+                    setData(source, QStringLiteral("Pretty Name"), i18n("Battery"));
                 }
             }
         }
@@ -491,33 +491,33 @@ void PowermanagementEngine::updateOverallBattery()
         // Energy is sometimes way off causing us to show rubbish; this is a UPower issue
         // but anyway having just one battery and the tooltip showing strange readings
         // compared to the popup doesn't look polished.
-        setData("Battery", "Percent", totalPercentage);
+        setData(QStringLiteral("Battery"), QStringLiteral("Percent"), totalPercentage);
     } else if (totalEnergy > 0) {
-        setData("Battery", "Percent", qRound(energy / totalEnergy * 100));
+        setData(QStringLiteral("Battery"), QStringLiteral("Percent"), qRound(energy / totalEnergy * 100));
     } else if (count > 0) { // UPS don't have energy, see Bug 348588
-        setData("Battery", "Percent", qRound(totalPercentage / static_cast<qreal>(count)));
+        setData(QStringLiteral("Battery"), QStringLiteral("Percent"), qRound(totalPercentage / static_cast<qreal>(count)));
     } else {
-        setData("Battery", "Percent", 0);
+        setData(QStringLiteral("Battery"), QStringLiteral("Percent"), 0);
     }
 
     if (hasCumulative) {
         if (allFullyCharged) {
-            setData("Battery", "State", "FullyCharged");
+            setData(QStringLiteral("Battery"), QStringLiteral("State"), "FullyCharged");
         } else if (charging) {
-            setData("Battery", "State", "Charging");
+            setData(QStringLiteral("Battery"), QStringLiteral("State"), "Charging");
         } else {
-            setData("Battery", "State", "Discharging");
+            setData(QStringLiteral("Battery"), QStringLiteral("State"), "Discharging");
         }
     } else {
-        setData("Battery", "State", "Unknown");
+        setData(QStringLiteral("Battery"), QStringLiteral("State"), "Unknown");
     }
 
-    setData("Battery", "Has Cumulative", hasCumulative);
+    setData(QStringLiteral("Battery"), QStringLiteral("Has Cumulative"), hasCumulative);
 }
 
 void PowermanagementEngine::updateAcPlugState(bool onBattery)
 {
-    setData("AC Adapter", "Plugged in", !onBattery);
+    setData(QStringLiteral("AC Adapter"), QStringLiteral("Plugged in"), !onBattery);
 }
 
 void PowermanagementEngine::deviceRemoved(const QString& udi)
@@ -534,8 +534,8 @@ void PowermanagementEngine::deviceRemoved(const QString& udi)
 
         QStringList sourceNames(m_batterySources.values());
         sourceNames.removeAll(source);
-        setData("Battery", "Sources", sourceNames);
-        setData("Battery", "Has Battery", !sourceNames.isEmpty());
+        setData(QStringLiteral("Battery"), QStringLiteral("Sources"), sourceNames);
+        setData(QStringLiteral("Battery"), QStringLiteral("Has Battery"), !sourceNames.isEmpty());
 
         updateOverallBattery();
     }
@@ -558,16 +558,16 @@ void PowermanagementEngine::deviceAdded(const QString& udi)
             sourceNames << source;
             m_batterySources[device.udi()] = source;
 
-            connect(battery, SIGNAL(chargeStateChanged(int,QString)), this,
-                    SLOT(updateBatteryChargeState(int,QString)));
-            connect(battery, SIGNAL(chargePercentChanged(int,QString)), this,
-                    SLOT(updateBatteryChargePercent(int,QString)));
-            connect(battery, SIGNAL(energyChanged(double,QString)),
-                    this, SLOT(updateBatteryEnergy(double,QString)));
-            connect(battery, SIGNAL(presentStateChanged(bool,QString)), this,
-                    SLOT(updateBatteryPresentState(bool,QString)));
-            connect(battery, SIGNAL(powerSupplyStateChanged(bool,QString)), this,
-                    SLOT(updateBatteryPowerSupplyState(bool,QString)));
+            connect(battery, &Solid::Battery::chargeStateChanged, this,
+                    &PowermanagementEngine::updateBatteryChargeState);
+            connect(battery, &Solid::Battery::chargePercentChanged, this,
+                    &PowermanagementEngine::updateBatteryChargePercent);
+            connect(battery, &Solid::Battery::energyChanged,
+                    this, &PowermanagementEngine::updateBatteryEnergy);
+            connect(battery, &Solid::Battery::presentStateChanged, this,
+                    &PowermanagementEngine::updateBatteryPresentState);
+            connect(battery, &Solid::Battery::powerSupplyStateChanged, this,
+                    &PowermanagementEngine::updateBatteryPowerSupplyState);
 
             // Set initial values
             updateBatteryChargeState(battery->chargeState(), device.udi());
@@ -576,13 +576,13 @@ void PowermanagementEngine::deviceAdded(const QString& udi)
             updateBatteryPresentState(battery->isPresent(), device.udi());
             updateBatteryPowerSupplyState(battery->isPowerSupply(), device.udi());
 
-            setData(source, "Vendor", device.vendor());
-            setData(source, "Product", device.product());
-            setData(source, "Capacity", battery->capacity());
-            setData(source, "Type", batteryType(battery));
+            setData(source, QStringLiteral("Vendor"), device.vendor());
+            setData(source, QStringLiteral("Product"), device.product());
+            setData(source, QStringLiteral("Capacity"), battery->capacity());
+            setData(source, QStringLiteral("Type"), batteryType(battery));
 
-            setData("Battery", "Sources", sourceNames);
-            setData("Battery", "Has Battery", !sourceNames.isEmpty());
+            setData(QStringLiteral("Battery"), QStringLiteral("Sources"), sourceNames);
+            setData(QStringLiteral("Battery"), QStringLiteral("Has Battery"), !sourceNames.isEmpty());
 
             updateBatteryNames();
             updateOverallBattery();
@@ -593,34 +593,34 @@ void PowermanagementEngine::deviceAdded(const QString& udi)
 void PowermanagementEngine::batteryRemainingTimeChanged(qulonglong time)
 {
     //qDebug() << "Remaining time 2:" << time;
-    setData("Battery", "Remaining msec", time);
+    setData(QStringLiteral("Battery"), QStringLiteral("Remaining msec"), time);
 }
 
 void PowermanagementEngine::screenBrightnessChanged(int brightness)
 {
-    setData("PowerDevil", "Screen Brightness", brightness);
+    setData(QStringLiteral("PowerDevil"), QStringLiteral("Screen Brightness"), brightness);
 }
 
 void PowermanagementEngine::maximumScreenBrightnessChanged(int maximumBrightness)
 {
-    setData("PowerDevil", "Maximum Screen Brightness", maximumBrightness);
-    setData("PowerDevil", "Screen Brightness Available", maximumBrightness > 0);
+    setData(QStringLiteral("PowerDevil"), QStringLiteral("Maximum Screen Brightness"), maximumBrightness);
+    setData(QStringLiteral("PowerDevil"), QStringLiteral("Screen Brightness Available"), maximumBrightness > 0);
 }
 
 void PowermanagementEngine::keyboardBrightnessChanged(int brightness)
 {
-    setData("PowerDevil", "Keyboard Brightness", brightness);
+    setData(QStringLiteral("PowerDevil"), QStringLiteral("Keyboard Brightness"), brightness);
 }
 
 void PowermanagementEngine::maximumKeyboardBrightnessChanged(int maximumBrightness)
 {
-    setData("PowerDevil", "Maximum Keyboard Brightness", maximumBrightness);
-    setData("PowerDevil", "Keyboard Brightness Available", maximumBrightness > 0);
+    setData(QStringLiteral("PowerDevil"), QStringLiteral("Maximum Keyboard Brightness"), maximumBrightness);
+    setData(QStringLiteral("PowerDevil"), QStringLiteral("Keyboard Brightness Available"), maximumBrightness > 0);
 }
 
 void PowermanagementEngine::triggersLidActionChanged(bool triggers)
 {
-    setData("PowerDevil", "Triggers Lid Action", triggers);
+    setData(QStringLiteral("PowerDevil"), QStringLiteral("Triggers Lid Action"), triggers);
 }
 
 void PowermanagementEngine::inhibitionsChanged(const QList<InhibitionInfo> &added, const QStringList &removed)
@@ -654,7 +654,7 @@ void PowermanagementEngine::populateApplicationData(const QString &name, QString
     } else {
         KService::Ptr service = KService::serviceByStorageId(name + ".desktop");
         if (service) {
-            *prettyName = service->property("Name", QVariant::Invalid).toString(); // cannot be null
+            *prettyName = service->property(QStringLiteral("Name"), QVariant::Invalid).toString(); // cannot be null
             *icon = service->icon();
 
             m_applicationInfo.insert(name, qMakePair(*prettyName, *icon));

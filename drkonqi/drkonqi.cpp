@@ -112,7 +112,7 @@ bool DrKonqi::init()
         // Set drkonqi to handle its own crashes, but only if the crashed app
         // is not drkonqi already. If it is drkonqi, delay enabling crash catching
         // to prevent recursive crashes (in case it crashes at startup)
-        if (crashedApplication()->fakeExecutableBaseName() != "drkonqi") {
+        if (crashedApplication()->fakeExecutableBaseName() != QLatin1String("drkonqi")) {
             qDebug() << "Enabling drkonqi crash catching";
             KCrash::setDrKonqiEnabled(true);
         } else {
@@ -150,7 +150,7 @@ void DrKonqi::saveReport(const QString & reportText, QWidget *parent)
 {
     if (isSafer()) {
         QTemporaryFile tf;
-        tf.setFileTemplate("XXXXXX.kcrash.txt");
+        tf.setFileTemplate(QStringLiteral("XXXXXX.kcrash.txt"));
         tf.setAutoRemove(false);
 
         if (tf.open()) {

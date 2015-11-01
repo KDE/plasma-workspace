@@ -87,17 +87,17 @@ bool KCrashBackend::init()
     if(DrKonqi::isKeepRunning()) {
         stopAttachedProcess();
         debuggerManager()->backtraceGenerator()->start();
-        connect(debuggerManager(), SIGNAL(debuggerFinished()), SLOT(continueAttachedProcess()));
+        connect(debuggerManager(), &DebuggerManager::debuggerFinished, this, &KCrashBackend::continueAttachedProcess);
     } else {
-        connect(debuggerManager(), SIGNAL(debuggerStarting()), SLOT(onDebuggerStarting()));
-        connect(debuggerManager(), SIGNAL(debuggerFinished()), SLOT(onDebuggerFinished()));
+        connect(debuggerManager(), &DebuggerManager::debuggerStarting, this, &KCrashBackend::onDebuggerStarting);
+        connect(debuggerManager(), &DebuggerManager::debuggerFinished, this, &KCrashBackend::onDebuggerFinished);
 
         //stop the process to avoid high cpu usage by other threads (bug 175362).
         //if the process was started by kdeinit, we need to wait a bit for KCrash
         //to reach the alarm(0); call in kdeui/util/kcrash.cpp line 406 or else
         //if we stop it before this call, pending alarm signals will kill the
         //process when we try to continue it.
-        QTimer::singleShot(2000, this, SLOT(stopAttachedProcess()));
+        QTimer::singleShot(2000, this, &KCrashBackend::stopAttachedProcess);
     }
 #endif
 
@@ -121,19 +121,19 @@ CrashedApplication *KCrashBackend::constructCrashedApplication()
     a->m_thread = DrKonqi::thread();
 
     //try to determine the executable that crashed
-    if ( QFileInfo(QString("/proc/%1/exe").arg(a->m_pid)).exists() ) {
+    if ( QFileInfo(QStringLiteral("/proc/%1/exe").arg(a->m_pid)).exists() ) {
         //on linux, the fastest and most reliable way is to get the path from /proc
         qDebug() << "Using /proc to determine executable path";
-        a->m_executable.setFile(QFile::symLinkTarget(QString("/proc/%1/exe").arg(a->m_pid)));
+        a->m_executable.setFile(QFile::symLinkTarget(QStringLiteral("/proc/%1/exe").arg(a->m_pid)));
 
         if (DrKonqi::isKdeinit() ||
-            a->m_executable.fileName().startsWith("python") ) {
+            a->m_executable.fileName().startsWith(QLatin1String("python")) ) {
 
             a->m_fakeBaseName = DrKonqi::appName();
         }
     } else {
         if ( DrKonqi::isKdeinit() ) {
-            a->m_executable = QFileInfo(QStandardPaths::findExecutable("kdeinit5"));
+            a->m_executable = QFileInfo(QStandardPaths::findExecutable(QStringLiteral("kdeinit5")));
             a->m_fakeBaseName = DrKonqi::appName();
         } else {
             QFileInfo execPath(DrKonqi::appName());
@@ -156,10 +156,10 @@ CrashedApplication *KCrashBackend::constructCrashedApplication()
 
 DebuggerManager *KCrashBackend::constructDebuggerManager()
 {
-    QList<Debugger> internalDebuggers = Debugger::availableInternalDebuggers("KCrash");
+    QList<Debugger> internalDebuggers = Debugger::availableInternalDebuggers(QStringLiteral("KCrash"));
     KConfigGroup config(KSharedConfig::openConfig(), "DrKonqi");
 #ifndef Q_OS_WIN
-    QString defaultDebuggerName = config.readEntry("Debugger", QString("gdb"));
+    QString defaultDebuggerName = config.readEntry("Debugger", QStringLiteral("gdb"));
 #else
     QString defaultDebuggerName = config.readEntry("Debugger", QString("kdbgwin"));
 #endif
@@ -185,7 +185,7 @@ DebuggerManager *KCrashBackend::constructDebuggerManager()
         }
     }
 
-    return new DebuggerManager(preferredDebugger, Debugger::availableExternalDebuggers("KCrash"), this);
+    return new DebuggerManager(preferredDebugger, Debugger::availableExternalDebuggers(QStringLiteral("KCrash")), this);
 }
 
 void KCrashBackend::stopAttachedProcess()

@@ -30,12 +30,12 @@ SharePackage::SharePackage(QObject *, QVariantList)
 void SharePackage::initPackage(KPackage::Package* package)
 {
 //    KPackage::PackageStructure::initPackage(package);
-    package->addDirectoryDefinition("scripts", "code", i18n("Executable Scripts"));
+    package->addDirectoryDefinition("scripts", QStringLiteral("code"), i18n("Executable Scripts"));
     QStringList mimetypes;
-    mimetypes << "text/*";
+    mimetypes << QStringLiteral("text/*");
     package->setMimeTypes( "scripts", mimetypes );
 
-    package->addFileDefinition("mainscript", "code/main.js", i18n("Main Script File"));
+    package->addFileDefinition("mainscript", QStringLiteral("code/main.js"), i18n("Main Script File"));
     package->setDefaultPackageRoot(PLASMA_RELATIVE_DATA_INSTALL_DIR "shareprovider/");
 }
 

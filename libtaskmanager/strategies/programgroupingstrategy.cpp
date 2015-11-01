@@ -52,7 +52,7 @@ ProgramGroupingStrategy::ProgramGroupingStrategy(GroupManager *groupManager)
 {
     setType(GroupManager::ProgramGrouping);
 
-    KConfig groupBlacklist("taskbargroupblacklistrc", KConfig::NoGlobals);
+    KConfig groupBlacklist(QStringLiteral("taskbargroupblacklistrc"), KConfig::NoGlobals);
     KConfigGroup blackGroup(&groupBlacklist, "Blacklist");
     d->blackList = blackGroup.readEntry("Applications", QStringList());
 }
@@ -76,7 +76,7 @@ QList<QAction*> ProgramGroupingStrategy::strategyActions(QObject *parent, Abstra
         } else {
             a->setText(i18n("Do not allow this program to be grouped"));
         }
-        connect(a, SIGNAL(triggered()), this, SLOT(toggleGrouping()), Qt::QueuedConnection);
+        connect(a, &QAction::triggered, this, &ProgramGroupingStrategy::toggleGrouping, Qt::QueuedConnection);
 
         actionList.append(a);
         d->tempItem = item;
@@ -139,7 +139,7 @@ void ProgramGroupingStrategy::toggleGrouping()
     // since this class is deleted at every change of virtual desktop (!)
     // So when doing it from the destructor we were constantly sync'ing
     // (and triggering KDirWatch) even when the blacklist hadn't changed at all...
-    KConfig groupBlacklist("taskbargroupblacklistrc", KConfig::NoGlobals);
+    KConfig groupBlacklist(QStringLiteral("taskbargroupblacklistrc"), KConfig::NoGlobals);
     KConfigGroup blackGroup(&groupBlacklist, "Blacklist");
     blackGroup.writeEntry("Applications", d->blackList);
     blackGroup.config()->sync();
@@ -230,7 +230,7 @@ bool ProgramGroupingStrategy::programGrouping(TaskItem* taskItem, TaskGroup* gro
             TaskGroup* group = createGroup(list);
             group->setName(name);
             group->setIcon(icon);
-            connect(group, SIGNAL(checkIcon(TaskGroup*)), this, SLOT(updateIcon(TaskGroup*)));
+            connect(group, &TaskGroup::checkIcon, this, &ProgramGroupingStrategy::updateIcon);
         } else {
             //qDebug() << "    joined this Group";
             groupItem->add(taskItem);

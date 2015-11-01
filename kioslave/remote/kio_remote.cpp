@@ -112,7 +112,7 @@ void RemoteProtocol::stat(const QUrl &url)
 	qCDebug(KIOREMOTE_LOG) << "RemoteProtocol::stat: " << url;
 
 	QString path = url.path();
-	if ( path.isEmpty() || path == "/" )
+	if ( path.isEmpty() || path == QLatin1String("/") )
 	{
 		// The root is "virtual" - it's not a single physical directory
 		KIO::UDSEntry entry;
@@ -207,7 +207,7 @@ void RemoteProtocol::get(const QUrl &url)
 void RemoteProtocol::rename(const QUrl &src, const QUrl &dest,
                             KIO::JobFlags flags)
 {
-	if (src.scheme()!="remote" || dest.scheme()!="remote"
+	if (src.scheme()!=QLatin1String("remote") || dest.scheme()!=QLatin1String("remote")
          || m_impl.isWizardURL(src) || m_impl.isWizardURL(dest))
 	{
 		error(KIO::ERR_UNSUPPORTED_ACTION, src.toDisplayString());

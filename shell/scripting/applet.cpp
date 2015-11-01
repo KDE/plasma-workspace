@@ -76,7 +76,7 @@ void Applet::setCurrentConfigGroup(const QStringList &groupNames)
         d->configGroup = KConfigGroup(&d->configGroup, groupName);
     }
 
-    d->inWallpaperConfig = !groupNames.isEmpty() && groupNames.first() == "Wallpaper";
+    d->inWallpaperConfig = !groupNames.isEmpty() && groupNames.first() == QLatin1String("Wallpaper");
 }
 
 QStringList Applet::currentConfigGroup() const

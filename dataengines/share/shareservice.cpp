@@ -34,7 +34,7 @@
 ShareService::ShareService(ShareEngine *engine)
     : Plasma::Service(engine)
 {
-    setName("share");
+    setName(QStringLiteral("share"));
 }
 
 Plasma::ServiceJob *ShareService::createJob(const QString &operation,
@@ -65,7 +65,7 @@ void ShareJob::start()
     }
 
     QString pluginName =
-        service->property("X-KDE-PluginInfo-Name", QVariant::String).toString();
+        service->property(QStringLiteral("X-KDE-PluginInfo-Name"), QVariant::String).toString();
 
     const QString path =
         QStandardPaths::locate(QStandardPaths::GenericDataLocation, PLASMA_RELATIVE_DATA_INSTALL_DIR "/shareprovider/" + pluginName + '/' );
@@ -75,17 +75,17 @@ void ShareJob::start()
         return;
     }
 
-    m_package = KPackage::PackageLoader::self()->loadPackage("Plasma/ShareProvider");
+    m_package = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Plasma/ShareProvider"));
     m_package.setPath(path);
     if (m_package.isValid()) {
         const QString mainscript = m_package.filePath("mainscript");
 
         m_provider = new ShareProvider(m_engine.data(), this);
-        connect(m_provider, SIGNAL(readyToPublish()), this, SLOT(publish()));
-        connect(m_provider, SIGNAL(finished(QString)),
-                this, SLOT(showResult(QString)));
-        connect(m_provider, SIGNAL(finishedError(QString)),
-                this, SLOT(showError(QString)));
+        connect(m_provider, &ShareProvider::readyToPublish, this, &ShareJob::publish);
+        connect(m_provider, &ShareProvider::finished,
+                this, &ShareJob::showResult);
+        connect(m_provider, &ShareProvider::finishedError,
+                this, &ShareJob::showError);
 
         m_engine->addObject(m_provider, "provider");
 
@@ -119,7 +119,7 @@ void ShareJob::start()
         }
 
         // default is POST (if the plugin does not specify one method)
-        const QString method = vmethod.isValid() ? vmethod.toString() : "POST";
+        const QString method = vmethod.isValid() ? vmethod.toString() : QStringLiteral("POST");
         m_provider->setMethod(method);
 
         // setup the provider
@@ -129,7 +129,7 @@ void ShareJob::start()
         // then we can wait the signal to publish the information
         const QString contentKey = m_engine->callMethod("contentKey")->toString(execState).qstring();
 
-        QVariant contents = parameters()["content"];
+        QVariant contents = parameters()[QStringLiteral("content")];
         if(contents.type() == QVariant::List) {
             QVariantList list = contents.toList();
             if (list.size() == 1) {

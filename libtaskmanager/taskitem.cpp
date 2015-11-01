@@ -88,7 +88,7 @@ TaskItem::TaskItem(QObject *parent, Startup *task)
 {
     d->startupTask = task;
     connect(task, SIGNAL(changed(::TaskManager::TaskChanges)), this, SLOT(filterChange(::TaskManager::TaskChanges)));
-    connect(task, SIGNAL(destroyed(QObject*)), this, SLOT(taskDestroyed())); //this item isn't useful anymore if the Task was closed
+    connect(task, &QObject::destroyed, this, &TaskItem::taskDestroyed); //this item isn't useful anymore if the Task was closed
 }
 
 TaskItem::~TaskItem()
@@ -107,7 +107,7 @@ void TaskItem::taskDestroyed()
     d->task.clear();
     // FIXME: due to a bug in Qt 4.x, the event loop reference count is incorrect
     // when going through x11EventFilter .. :/ so we have to singleShot the deleteLater
-    QTimer::singleShot(0, this, SLOT(deleteLater()));
+    QTimer::singleShot(0, this, &QObject::deleteLater);
 }
 
 void TaskItem::setTaskPointer(Task *task)
@@ -134,7 +134,7 @@ void TaskItem::setTaskPointer(Task *task)
 
         if (task) {
             connect(task, SIGNAL(changed(::TaskManager::TaskChanges)), this, SLOT(filterChange(::TaskManager::TaskChanges)));
-            connect(task, SIGNAL(destroyed(QObject*)), this, SLOT(taskDestroyed()));
+            connect(task, &QObject::destroyed, this, &TaskItem::taskDestroyed);
             emit gotTaskPointer();
         }
     }
@@ -142,7 +142,7 @@ void TaskItem::setTaskPointer(Task *task)
     if (!d->task) {
         // FIXME: due to a bug in Qt 4.x, the event loop reference count is incorrect
         // when going through x11EventFilter .. :/ so we have to singleShot the deleteLater
-        QTimer::singleShot(0, this, SLOT(deleteLater()));
+        QTimer::singleShot(0, this, &QObject::deleteLater);
     }
 }
 
@@ -469,7 +469,7 @@ void TaskItem::setLauncherUrl(const QUrl &url)
 
     d->taskName = QString(); // Cause name to be re-generated...
 
-    KConfig cfg("taskmanagerrulesrc");
+    KConfig cfg(QStringLiteral("taskmanagerrulesrc"));
     KConfigGroup grp(&cfg, "Mapping");
     grp.writeEntry(d->task.data()->classClass() + "::" + d->task.data()->className(), url.url());
     cfg.sync();
@@ -512,23 +512,23 @@ static KService::List getServicesViaPid(int pid)
 
     const int firstSpace = cmdline.indexOf(' ');
 
-    services = KServiceTypeTrader::self()->query("Application", QString("exist Exec and ('%1' =~ Exec)").arg(cmdline));
+    services = KServiceTypeTrader::self()->query(QStringLiteral("Application"), QStringLiteral("exist Exec and ('%1' =~ Exec)").arg(cmdline));
     if (services.empty()) {
         // Could not find with complete commandline, so strip out path part...
         int slash = cmdline.lastIndexOf('/', firstSpace);
         if (slash > 0) {
-            services = KServiceTypeTrader::self()->query("Application", QString("exist Exec and ('%1' =~ Exec)").arg(cmdline.mid(slash + 1)));
+            services = KServiceTypeTrader::self()->query(QStringLiteral("Application"), QStringLiteral("exist Exec and ('%1' =~ Exec)").arg(cmdline.mid(slash + 1)));
         }
     }
 
     if (services.empty() && firstSpace > 0) {
         // Could not find with arguments, so try without...
         cmdline = cmdline.left(firstSpace);
-        services = KServiceTypeTrader::self()->query("Application", QString("exist Exec and ('%1' =~ Exec)").arg(cmdline));
+        services = KServiceTypeTrader::self()->query(QStringLiteral("Application"), QStringLiteral("exist Exec and ('%1' =~ Exec)").arg(cmdline));
 
         int slash = cmdline.lastIndexOf('/');
         if (slash > 0) {
-            services = KServiceTypeTrader::self()->query("Application", QString("exist Exec and ('%1' =~ Exec)").arg(cmdline.mid(slash + 1)));
+            services = KServiceTypeTrader::self()->query(QStringLiteral("Application"), QStringLiteral("exist Exec and ('%1' =~ Exec)").arg(cmdline.mid(slash + 1)));
         }
     }
 
@@ -556,16 +556,16 @@ static QUrl getServiceLauncherUrl(int pid, const QString &type, const QStringLis
     }
 
     foreach (const QString & r, cmdRemovals) {
-        cmdline.replace(r, "");
+        cmdline.replace(r, QLatin1String(""));
     }
 
-    KService::List services = KServiceTypeTrader::self()->query(type, QString("exist Exec and ('%1' =~ Exec)").arg(cmdline));
+    KService::List services = KServiceTypeTrader::self()->query(type, QStringLiteral("exist Exec and ('%1' =~ Exec)").arg(cmdline));
 
     if (services.empty()) {
         // Could not find with complete commandline, so strip out path part...
         int slash = cmdline.lastIndexOf('/', cmdline.indexOf(' '));
         if (slash > 0) {
-            services = KServiceTypeTrader::self()->query(type, QString("exist Exec and ('%1' =~ Exec)").arg(cmdline.mid(slash + 1)));
+            services = KServiceTypeTrader::self()->query(type, QStringLiteral("exist Exec and ('%1' =~ Exec)").arg(cmdline.mid(slash + 1)));
         }
 
         if (services.empty()) {
@@ -624,14 +624,14 @@ QUrl TaskItem::launcherUrlFromTask(GroupManager *groupManager, Task *task, Start
         // interested in the actual control module. Therefore we obtain this via the commandline. This commandline may contain
         // "kdeinit4:" or "[kdeinit]", so we remove these first.
         if ("Kcmshell4" == task->classClass()) {
-            launcherUrl = getServiceLauncherUrl(task->pid(), "KCModule", QStringList() << "kdeinit4:" << "[kdeinit]");
+            launcherUrl = getServiceLauncherUrl(task->pid(), QStringLiteral("KCModule"), QStringList() << QStringLiteral("kdeinit4:") << QStringLiteral("[kdeinit]"));
             if (!launcherUrl.isEmpty()) {
                 return launcherUrl;
             }
         }
 
         // Check to see if this wmClass matched a saved one...
-        KConfig cfg("taskmanagerrulesrc");
+        KConfig cfg(QStringLiteral("taskmanagerrulesrc"));
         KConfigGroup grp(&cfg, "Mapping");
         KConfigGroup set(&cfg, "Settings");
 
@@ -650,7 +650,7 @@ QUrl TaskItem::launcherUrlFromTask(GroupManager *groupManager, Task *task, Start
         // If the user has manualy set a mapping, respect this first...
         QString mapped(grp.readEntry(task->classClass() + "::" + task->className(), QString()));
 
-        if (mapped.endsWith(".desktop")) {
+        if (mapped.endsWith(QLatin1String(".desktop"))) {
             launcherUrl = mapped;
             return launcherUrl;
         }
@@ -659,7 +659,7 @@ QUrl TaskItem::launcherUrlFromTask(GroupManager *groupManager, Task *task, Start
             if (mapped.isEmpty()) {
                 mapped = grp.readEntry(task->classClass(), QString());
 
-                if (mapped.endsWith(".desktop")) {
+                if (mapped.endsWith(QLatin1String(".desktop"))) {
                     launcherUrl = mapped;
                     return launcherUrl;
                 }
@@ -674,11 +674,11 @@ QUrl TaskItem::launcherUrlFromTask(GroupManager *groupManager, Task *task, Start
             }
 
             if (!mapped.isEmpty()) {
-                services = KServiceTypeTrader::self()->query("Application", QString("exist Exec and ('%1' =~ DesktopEntryName)").arg(mapped));
+                services = KServiceTypeTrader::self()->query(QStringLiteral("Application"), QStringLiteral("exist Exec and ('%1' =~ DesktopEntryName)").arg(mapped));
             }
 
             if (!mapped.isEmpty() && services.empty()) {
-                services = KServiceTypeTrader::self()->query("Application", QString("exist Exec and ('%1' =~ Name)").arg(mapped));
+                services = KServiceTypeTrader::self()->query(QStringLiteral("Application"), QStringLiteral("exist Exec and ('%1' =~ Name)").arg(mapped));
             }
 
             if (services.empty() && groupManager) {
@@ -691,17 +691,17 @@ QUrl TaskItem::launcherUrlFromTask(GroupManager *groupManager, Task *task, Start
 
             // To match other docks (docky, unity, etc.) attempt to match on DesktopEntryName first...
             if (services.empty()) {
-                services = KServiceTypeTrader::self()->query("Application", QString("exist Exec and ('%1' =~ DesktopEntryName)").arg(task->classClass()));
+                services = KServiceTypeTrader::self()->query(QStringLiteral("Application"), QStringLiteral("exist Exec and ('%1' =~ DesktopEntryName)").arg(task->classClass()));
             }
 
             // Try StartupWMClass
             if (services.empty()) {
-                services = KServiceTypeTrader::self()->query("Application", QString("exist Exec and ('%1' =~ StartupWMClass)").arg(task->classClass()));
+                services = KServiceTypeTrader::self()->query(QStringLiteral("Application"), QStringLiteral("exist Exec and ('%1' =~ StartupWMClass)").arg(task->classClass()));
             }
 
             // Try 'Name' - unfortunately this can be translated, so has a good chance of failing! (As it does for KDE's own "System Settings" (even in English!!))
             if (services.empty()) {
-                services = KServiceTypeTrader::self()->query("Application", QString("exist Exec and ('%1' =~ Name)").arg(task->classClass()));
+                services = KServiceTypeTrader::self()->query(QStringLiteral("Application"), QStringLiteral("exist Exec and ('%1' =~ Name)").arg(task->classClass()));
             }
         }
 
@@ -713,29 +713,29 @@ QUrl TaskItem::launcherUrlFromTask(GroupManager *groupManager, Task *task, Start
 
     if (services.empty() && startup) {
         // Try to match via desktop filename...
-        if (!startup->desktopId().isNull() && startup->desktopId().endsWith(".desktop")) {
-            if (startup->desktopId().startsWith("/")) {
+        if (!startup->desktopId().isNull() && startup->desktopId().endsWith(QLatin1String(".desktop"))) {
+            if (startup->desktopId().startsWith(QLatin1String("/"))) {
                 launcherUrl = QUrl::fromLocalFile(startup->desktopId());
                 return launcherUrl;
             } else {
                 QString desktopName = startup->desktopId();
 
-                if (desktopName.endsWith(".desktop")) {
+                if (desktopName.endsWith(QLatin1String(".desktop"))) {
                     desktopName = desktopName.mid(desktopName.length() - 8);
                 }
 
-                services = KServiceTypeTrader::self()->query("Application", QString("exist Exec and ('%1' =~ DesktopEntryName)").arg(desktopName));
+                services = KServiceTypeTrader::self()->query(QStringLiteral("Application"), QStringLiteral("exist Exec and ('%1' =~ DesktopEntryName)").arg(desktopName));
             }
         }
 
         // Try StartupWMClass
         if (services.empty() && !startup->wmClass().isNull()) {
-            services = KServiceTypeTrader::self()->query("Application", QString("exist Exec and ('%1' =~ StartupWMClass)").arg(startup->wmClass()));
+            services = KServiceTypeTrader::self()->query(QStringLiteral("Application"), QStringLiteral("exist Exec and ('%1' =~ StartupWMClass)").arg(startup->wmClass()));
         }
 
         // Try via name...
         if (services.empty() && !startup->text().isNull()) {
-            services = KServiceTypeTrader::self()->query("Application", QString("exist Exec and ('%1' =~ Name)").arg(startup->text()));
+            services = KServiceTypeTrader::self()->query(QStringLiteral("Application"), QStringLiteral("exist Exec and ('%1' =~ Name)").arg(startup->text()));
         }
     }
 
@@ -770,7 +770,7 @@ QIcon TaskItem::launcherIconFromUrl(const QUrl &url)
         if (f.tryExec()) {
             return QIcon::fromTheme(f.readIcon());
         }
-    } else if (url.scheme() == "preferred") {
+    } else if (url.scheme() == QLatin1String("preferred")) {
         //NOTE: preferred is NOT a protocol, it's just a magic string
         const KService::Ptr service = KService::serviceByStorageId(LauncherItem::defaultApplication(url));
 

@@ -175,7 +175,7 @@ bool AppInterface::coronaLocked() const
 void AppInterface::sleep(int ms)
 {
     QEventLoop loop;
-    QTimer::singleShot(ms, &loop, SLOT(quit()));
+    QTimer::singleShot(ms, &loop, &QEventLoop::quit);
     loop.exec(QEventLoop::ExcludeUserInputEvents);
 }
 
@@ -216,12 +216,12 @@ QStringList AppInterface::knownWidgetTypes() const
 
 QStringList AppInterface::knownActivityTypes() const
 {
-    return knownContainmentTypes("desktop");
+    return knownContainmentTypes(QStringLiteral("desktop"));
 }
 
 QStringList AppInterface::knownPanelTypes() const
 {
-    return knownContainmentTypes("panel");
+    return knownContainmentTypes(QStringLiteral("panel"));
 }
 
 QStringList AppInterface::knownContainmentTypes(const QString &type) const

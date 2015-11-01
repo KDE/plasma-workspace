@@ -99,15 +99,15 @@ class NotificationThread : public QThread
         // We cannot parent to the thread itself so let's create
         // a QObject on the stack and parent everythign to it
         QObject parent;
-        KNotifyConfig notifyConfig("plasma_workspace", QList< QPair<QString,QString> >(), "startkde");
-        const QString action = notifyConfig.readEntry("Action");
-        if (action.isEmpty() || !action.split('|').contains("Sound")) {
+        KNotifyConfig notifyConfig(QStringLiteral("plasma_workspace"), QList< QPair<QString,QString> >(), QStringLiteral("startkde"));
+        const QString action = notifyConfig.readEntry(QStringLiteral("Action"));
+        if (action.isEmpty() || !action.split('|').contains(QStringLiteral("Sound"))) {
             // no startup sound configured
             return;
         }
         Phonon::AudioOutput *m_audioOutput = new Phonon::AudioOutput(Phonon::NotificationCategory, &parent);
 
-        QString soundFilename = notifyConfig.readEntry("Sound");
+        QString soundFilename = notifyConfig.readEntry(QStringLiteral("Sound"));
         if (soundFilename.isEmpty()) {
             qWarning() << "Audio notification requested, but no sound file provided in notifyrc file, aborting audio notification";
             return;
@@ -156,9 +156,9 @@ void KSMServer::restoreSession( const QString &sessionName )
     int count =  configSessionGroup.readEntry( "count", 0 );
     appsToStart = count;
     upAndRunning( QStringLiteral( "ksmserver" ) );
-    connect( klauncherSignals, SIGNAL(autoStart0Done()), SLOT(autoStart0Done()));
-    connect( klauncherSignals, SIGNAL(autoStart1Done()), SLOT(autoStart1Done()));
-    connect( klauncherSignals, SIGNAL(autoStart2Done()), SLOT(autoStart2Done()));
+    connect( klauncherSignals, &OrgKdeKLauncherInterface::autoStart0Done, this, &KSMServer::autoStart0Done);
+    connect( klauncherSignals, &OrgKdeKLauncherInterface::autoStart1Done, this, &KSMServer::autoStart1Done);
+    connect( klauncherSignals, &OrgKdeKLauncherInterface::autoStart2Done, this, &KSMServer::autoStart2Done);
 
     // find all commands to launch the wm in the session
     QList<QStringList> wmStartCommands;
@@ -191,9 +191,9 @@ void KSMServer::startDefaultSession()
 #endif
     sessionGroup = QString();
     upAndRunning( QStringLiteral( "ksmserver" ) );
-    connect( klauncherSignals, SIGNAL(autoStart0Done()), SLOT(autoStart0Done()));
-    connect( klauncherSignals, SIGNAL(autoStart1Done()), SLOT(autoStart1Done()));
-    connect( klauncherSignals, SIGNAL(autoStart2Done()), SLOT(autoStart2Done()));
+    connect( klauncherSignals, &OrgKdeKLauncherInterface::autoStart0Done, this, &KSMServer::autoStart0Done);
+    connect( klauncherSignals, &OrgKdeKLauncherInterface::autoStart1Done, this, &KSMServer::autoStart1Done);
+    connect( klauncherSignals, &OrgKdeKLauncherInterface::autoStart2Done, this, &KSMServer::autoStart2Done);
 
     launchWM( QList< QStringList >() << wmCommands );
 }
@@ -260,7 +260,7 @@ void KSMServer::autoStart0Done()
 {
     if( state != AutoStart0 )
         return;
-    disconnect( klauncherSignals, SIGNAL(autoStart0Done()), this, SLOT(autoStart0Done()));
+    disconnect( klauncherSignals, &OrgKdeKLauncherInterface::autoStart0Done, this, &KSMServer::autoStart0Done);
     if( !checkStartupSuspend())
         return;
     qCDebug(KSMSERVER) << "Autostart 0 done";
@@ -277,11 +277,11 @@ void KSMServer::autoStart0Done()
         qWarning() << "kcminit not running? If we are running with mobile profile or in another platform other than X11 this is normal.";
         delete kcminitSignals;
         kcminitSignals = 0;
-        QTimer::singleShot(0, this, SLOT(kcmPhase1Done()));
+        QTimer::singleShot(0, this, &KSMServer::kcmPhase1Done);
         return;
     }
     connect( kcminitSignals, SIGNAL(phase1Done()), SLOT(kcmPhase1Done()));
-    QTimer::singleShot( 10000, this, SLOT(kcmPhase1Timeout())); // protection
+    QTimer::singleShot( 10000, this, &KSMServer::kcmPhase1Timeout); // protection
 
     org::kde::KCMInit kcminit(QStringLiteral("org.kde.kcminit"),
                               QStringLiteral("/kcminit"),
@@ -326,7 +326,7 @@ void KSMServer::autoStart1Done()
 {
     if( state != AutoStart1 )
         return;
-    disconnect( klauncherSignals, SIGNAL(autoStart1Done()), this, SLOT(autoStart1Done()));
+    disconnect( klauncherSignals, &OrgKdeKLauncherInterface::autoStart1Done, this, &KSMServer::autoStart1Done);
     if( !checkStartupSuspend())
         return;
     qCDebug(KSMSERVER) << "Autostart 1 done";
@@ -420,7 +420,7 @@ void KSMServer::autoStart2()
                                   QStringLiteral("/KLauncher"),
                                   QDBusConnection::sessionBus());
     klauncher.autoStart((int)2);
-    QTimer::singleShot( 10000, this, SLOT(autoStart2Done())); //In case klauncher never returns
+    QTimer::singleShot( 10000, this, &KSMServer::autoStart2Done); //In case klauncher never returns
 #ifdef KSMSERVER_STARTUP_DEBUG1
     qCDebug(KSMSERVER)<< "klauncher" << t.elapsed();
 #endif
@@ -438,13 +438,13 @@ void KSMServer::autoStart2()
 
     if (kcminitSignals) {
         connect( kcminitSignals, SIGNAL(phase2Done()), SLOT(kcmPhase2Done()));
-        QTimer::singleShot( 10000, this, SLOT(kcmPhase2Timeout())); // protection
+        QTimer::singleShot( 10000, this, &KSMServer::kcmPhase2Timeout); // protection
         org::kde::KCMInit kcminit(QStringLiteral("org.kde.kcminit"),
                                   QStringLiteral("/kcminit"),
                                   QDBusConnection::sessionBus());
         kcminit.runPhase2();
     } else {
-        QTimer::singleShot(0, this, SLOT(kcmPhase2Done()));
+        QTimer::singleShot(0, this, &KSMServer::kcmPhase2Done);
     }
     if( !defaultSession())
         restoreLegacySession(KSharedConfig::openConfig().data());
@@ -466,7 +466,7 @@ void KSMServer::runUserAutostart()
     QDir dir(autostartFolder);
     if (!dir.exists()) {
         // Create dir in all cases, so that users can find it :-)
-        dir.mkpath(".");
+        dir.mkpath(QStringLiteral("."));
 
         if (!migrateKDE4Autostart(autostartFolder)) {
             return;
@@ -503,7 +503,7 @@ bool KSMServer::migrateKDE4Autostart(const QString &autostartFolder)
     // KDEHOME/Autostart was the default value for KGlobalSettings::autostart()
     QString oldAutostart = migration.kdeHome() + QStringLiteral("/Autostart");
     // That path could be customized in kdeglobals
-    const QString oldKdeGlobals = migration.locateLocal("config", "kdeglobals");
+    const QString oldKdeGlobals = migration.locateLocal("config", QStringLiteral("kdeglobals"));
     if (!oldKdeGlobals.isEmpty()) {
         oldAutostart = KConfig(oldKdeGlobals).group("Paths").readEntry("Autostart", oldAutostart);
     }
@@ -536,7 +536,7 @@ void KSMServer::autoStart2Done()
     }
     if( state != FinishingStartup )
         return;
-    disconnect( klauncherSignals, SIGNAL(autoStart2Done()), this, SLOT(autoStart2Done()));
+    disconnect( klauncherSignals, &OrgKdeKLauncherInterface::autoStart2Done, this, &KSMServer::autoStart2Done);
     qCDebug(KSMSERVER) << "Autostart 2 done";
     waitAutoStart2 = false;
     finishStartup();

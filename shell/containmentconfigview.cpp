@@ -56,10 +56,10 @@ ContainmentConfigView::ContainmentConfigView(Plasma::Containment *cont, QWindow 
       m_ownWallpaperConfig(0)
 {
     qmlRegisterType<QAbstractItemModel>();
-    engine()->rootContext()->setContextProperty("configDialog", this);
+    engine()->rootContext()->setContextProperty(QStringLiteral("configDialog"), this);
     setCurrentWallpaper(cont->containment()->wallpaper());
 
-    KPackage::Package pkg = KPackage::PackageLoader::self()->loadPackage("Plasma/Wallpaper");
+    KPackage::Package pkg = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Plasma/Wallpaper"));
     pkg.setPath(m_containment->wallpaper());
     KConfigGroup cfg = m_containment->config();
     cfg = KConfigGroup(&cfg, "Wallpaper");
@@ -83,11 +83,11 @@ PlasmaQuick::ConfigModel *ContainmentConfigView::containmentActionConfigModel()
 
         KPluginInfo::List actions = Plasma::PluginLoader::self()->listContainmentActionsInfo(QString());
 
-        KPackage::Package pkg = KPackage::PackageLoader::self()->loadPackage("Plasma/Generic");
+        KPackage::Package pkg = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Plasma/Generic"));
 
         foreach (const KPluginInfo &info, actions) {
             pkg.setDefaultPackageRoot(QStandardPaths::locate(QStandardPaths::GenericDataLocation, PLASMA_RELATIVE_DATA_INSTALL_DIR "/containmentactions", QStandardPaths::LocateDirectory));
-            m_containmentActionConfigModel->appendCategory(info.icon(), info.name(), pkg.filePath("ui", "config.qml"), info.pluginName());
+            m_containmentActionConfigModel->appendCategory(info.icon(), info.name(), pkg.filePath("ui", QStringLiteral("config.qml")), info.pluginName());
         }
 
     }
@@ -122,7 +122,7 @@ PlasmaQuick::ConfigModel *ContainmentConfigView::wallpaperConfigModel()
     if (!m_wallpaperConfigModel) {
         m_wallpaperConfigModel = new PlasmaQuick::ConfigModel(this);
         QStringList dirs(QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, PLASMA_RELATIVE_DATA_INSTALL_DIR "/wallpapers", QStandardPaths::LocateDirectory));
-        KPackage::Package pkg = KPackage::PackageLoader::self()->loadPackage("KPackage/Generic");
+        KPackage::Package pkg = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("KPackage/Generic"));
         QStringList platform = KDeclarative::KDeclarative::runtimePlatform();
         if (!platform.isEmpty()) {
             QMutableStringListIterator it(platform);
@@ -131,10 +131,10 @@ PlasmaQuick::ConfigModel *ContainmentConfigView::wallpaperConfigModel()
                 it.setValue("platformcontents/" + it.value());
             }
 
-            platform.append("contents");
+            platform.append(QStringLiteral("contents"));
             pkg.setContentsPrefixPaths(platform);
         }
-        pkg.addFileDefinition("mainscript", "ui/main.qml", i18n("Main Script File"));
+        pkg.addFileDefinition("mainscript", QStringLiteral("ui/main.qml"), i18n("Main Script File"));
         foreach (const QString &dirPath, dirs) {
             QDir dir(dirPath);
             pkg.setDefaultPackageRoot(dirPath);
@@ -152,7 +152,7 @@ PlasmaQuick::ConfigModel *ContainmentConfigView::wallpaperConfigModel()
                 if (!pkg.isValid()) {
                     continue;
                 }
-                m_wallpaperConfigModel->appendCategory(pkg.metadata().iconName(), pkg.metadata().name(), pkg.filePath("ui", "config.qml"), package);
+                m_wallpaperConfigModel->appendCategory(pkg.metadata().iconName(), pkg.metadata().name(), pkg.filePath("ui", QStringLiteral("config.qml")), package);
             }
         }
     }
@@ -164,7 +164,7 @@ PlasmaQuick::ConfigModel *ContainmentConfigView::containmentPluginsConfigModel()
     if (!m_containmentPluginsConfigModel) {
         m_containmentPluginsConfigModel = new PlasmaQuick::ConfigModel(this);
 
-        KPluginInfo::List actions = Plasma::PluginLoader::self()->listContainmentsOfType("Desktop");
+        KPluginInfo::List actions = Plasma::PluginLoader::self()->listContainmentsOfType(QStringLiteral("Desktop"));
 
         foreach (const KPluginInfo &info, actions) {
             m_containmentPluginsConfigModel->appendCategory(info.icon(), info.name(), QString(), info.pluginName());
@@ -198,10 +198,10 @@ void ContainmentConfigView::setCurrentWallpaper(const QString &wallpaper)
     } else {
 
         //we have to construct an independent ConfigPropertyMap when we want to configure wallpapers that are not the current one
-        KPackage::Package pkg = KPackage::PackageLoader::self()->loadPackage("Plasma/Generic");
+        KPackage::Package pkg = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Plasma/Generic"));
         pkg.setDefaultPackageRoot(PLASMA_RELATIVE_DATA_INSTALL_DIR "/wallpapers");
         pkg.setPath(wallpaper);
-        QFile file(pkg.filePath("config", "main.xml"));
+        QFile file(pkg.filePath("config", QStringLiteral("main.xml")));
         KConfigGroup cfg = m_containment->config();
         cfg = KConfigGroup(&cfg, "Wallpaper");
         m_currentWallpaperConfig = m_ownWallpaperConfig = new KDeclarative::ConfigPropertyMap(new KConfigLoader(cfg, &file), this);
@@ -237,7 +237,7 @@ void ContainmentConfigView::syncWallpaperObjects()
     if (!wallpaperGraphicsObject) {
         return;
     }
-    engine()->rootContext()->setContextProperty("wallpaper", wallpaperGraphicsObject);
+    engine()->rootContext()->setContextProperty(QStringLiteral("wallpaper"), wallpaperGraphicsObject);
 
     //FIXME: why m_wallpaperGraphicsObject->property("configuration").value<ConfigPropertyMap *>() doesn't work?
     m_currentWallpaperConfig = static_cast<KDeclarative::ConfigPropertyMap *>(wallpaperGraphicsObject->property("configuration").value<QObject *>());

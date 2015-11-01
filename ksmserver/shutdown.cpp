@@ -168,7 +168,7 @@ void KSMServer::shutdown( KWorkSpace::ShutdownConfirm confirm,
 
         // If the logout was confirmed, let's start a powermanagement inhibition.
         // We store the cookie so we can interrupt it if the logout will be canceled
-        inhibitCookie = Solid::PowerManagement::beginSuppressingSleep("Shutting down system");
+        inhibitCookie = Solid::PowerManagement::beginSuppressingSleep(QStringLiteral("Shutting down system"));
 
         shutdownType = sdtype;
         shutdownMode = sdmode;
@@ -476,7 +476,7 @@ void KSMServer::completeShutdownOrCheckpoint()
 
 	qDebug() << "state is " << state;
     if ( state == Shutdown ) {
-        KNotification *n = KNotification::event("exitkde", QString(), QPixmap(), 0l,  KNotification::DefaultEvent); // Plasma says good bye
+        KNotification *n = KNotification::event(QStringLiteral("exitkde"), QString(), QPixmap(), 0l,  KNotification::DefaultEvent); // Plasma says good bye
         connect(n, &KNotification::closed, this, &KSMServer::startKilling);
         state = WaitingForKNotify;
         // https://bugs.kde.org/show_bug.cgi?id=228005
@@ -522,7 +522,7 @@ void KSMServer::startKilling()
     qCDebug(KSMSERVER) << " We killed all clients. We have now clients.count()=" <<
     clients.count() << endl;
     completeKilling();
-    QTimer::singleShot( 10000, this, SLOT(timeoutQuit()) );
+    QTimer::singleShot( 10000, this, &KSMServer::timeoutQuit );
 }
 
 void KSMServer::completeKilling()
@@ -560,7 +560,7 @@ void KSMServer::killWM()
     }
     if( iswm ) {
         completeKillingWM();
-        QTimer::singleShot( 5000, this, SLOT(timeoutWMQuit()) );
+        QTimer::singleShot( 5000, this, &KSMServer::timeoutWMQuit );
     }
     else
         killingCompleted();
@@ -664,7 +664,7 @@ void KSMServer::startKillingSubSession()
     qCDebug(KSMSERVER) << " We killed some clients. We have now clients.count()=" <<
     clients.count() << endl;
     completeKillingSubSession();
-    QTimer::singleShot( 10000, this, SLOT(signalSubSessionClosed()) );
+    QTimer::singleShot( 10000, this, &KSMServer::signalSubSessionClosed );
 }
 
 void KSMServer::completeKillingSubSession()

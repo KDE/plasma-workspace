@@ -45,8 +45,8 @@ int main(int argc, char **argv)
     QApplication app(argc, argv);
 //     TODO: Make it a QGuiApplication once we don't depend on KDELibs4Support
 //     QGuiApplication app(argc, argv);
-    app.setApplicationName("krunner");
-    app.setOrganizationDomain("kde.org");
+    app.setApplicationName(QStringLiteral("krunner"));
+    app.setOrganizationDomain(QStringLiteral("kde.org"));
     app.setApplicationVersion(QStringLiteral(PROJECT_VERSION));
     app.setQuitOnLastWindowClosed(false);
     parser.setApplicationDescription(i18n("Run Command interface"));
@@ -58,7 +58,7 @@ int main(int argc, char **argv)
 
     KDBusService service(KDBusService::Unique);
 
-    KAboutData aboutData("krunner",
+    KAboutData aboutData(QStringLiteral("krunner"),
         i18n("krunner"),
         QStringLiteral(PROJECT_VERSION),
         i18n("Run Command interface"),

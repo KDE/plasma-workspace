@@ -85,7 +85,7 @@ bool DebuggerManager::showExternalDebuggers() const
     //for compatibility with drkonqi 1.0, if "ShowDebugButton" is not specified in the config
     //and the old "ConfigName" key exists and is set to "developer", we show the debug button.
     if (!config.hasKey("ShowDebugButton") &&
-        config.readEntry("ConfigName") == "developer") {
+        config.readEntry("ConfigName") == QLatin1String("developer")) {
         showDebugger = true;
         // migrate and remove the long deprecated entry
         config.writeEntry("ShowDebugButton", true);

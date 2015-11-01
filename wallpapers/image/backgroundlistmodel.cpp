@@ -61,7 +61,7 @@ BackgroundListModel::BackgroundListModel(Image *wallpaper, QObject *parent)
     : QAbstractListModel(parent),
       m_wallpaper(wallpaper)
 {
-    connect(&m_dirwatch, SIGNAL(deleted(QString)), this, SLOT(removeBackground(QString)));
+    connect(&m_dirwatch, &KDirWatch::deleted, this, &BackgroundListModel::removeBackground);
 
     QHash<int, QByteArray>roleNames;
     roleNames[Qt::DisplayRole] = "display";
@@ -79,7 +79,7 @@ BackgroundListModel::BackgroundListModel(Image *wallpaper, QObject *parent)
     QFontMetrics fm(QGuiApplication::font());
     m_screenshotSize = fm.width('M') * 15;
 
-    m_imageCache = new KImageCache("plasma_wallpaper_preview", 10485760);
+    m_imageCache = new KImageCache(QStringLiteral("plasma_wallpaper_preview"), 10485760);
 }
 
 BackgroundListModel::~BackgroundListModel()
@@ -121,11 +121,11 @@ void BackgroundListModel::reload(const QStringList &selected)
         processPaths(selected);
     }
 
-    const QStringList dirs = QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, "wallpapers/", QStandardPaths::LocateDirectory);
+    const QStringList dirs = QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, QStringLiteral("wallpapers/"), QStandardPaths::LocateDirectory);
     qDebug() << " WP : -------" << dirs;
 
     BackgroundFinder *finder = new BackgroundFinder(m_wallpaper.data(), dirs);
-    connect(finder, SIGNAL(backgroundsFound(QStringList,QString)), this, SLOT(backgroundsFound(QStringList,QString)));
+    connect(finder, &BackgroundFinder::backgroundsFound, this, &BackgroundListModel::backgroundsFound);
     m_findToken = finder->token();
     finder->start();
     m_removableWallpapers = QSet<QString>::fromList(selected);
@@ -177,7 +177,7 @@ void BackgroundListModel::processPaths(const QStringList &paths)
         }
 
         if (!contains(file) && QFile::exists(file)) {
-            KPackage::Package package = KPackage::PackageLoader::self()->loadPackage("Wallpaper/Images");
+            KPackage::Package package = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Wallpaper/Images"));
             package.setPath(file);
             if (package.isValid()) {
                 m_wallpaper->findPreferedImageInPackage(package);
@@ -210,7 +210,7 @@ void BackgroundListModel::addBackground(const QString& path)
             m_dirwatch.addFile(path);
         }
         beginInsertRows(QModelIndex(), 0, 0);
-        KPackage::Package package = KPackage::PackageLoader::self()->loadPackage("Wallpaper/Images");
+        KPackage::Package package = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Wallpaper/Images"));
 
         m_removableWallpapers.insert(path);
         package.setPath(path);
@@ -281,8 +281,8 @@ QSize BackgroundListModel::bestSize(const KPackage::Package &package) const
     }
 
     ImageSizeFinder *finder = new ImageSizeFinder(image);
-    connect(finder, SIGNAL(sizeFound(QString,QSize)), this,
-            SLOT(sizeFound(QString,QSize)));
+    connect(finder, &ImageSizeFinder::sizeFound, this,
+            &BackgroundListModel::sizeFound);
     QThreadPool::globalInstance()->start(finder);
 
     QSize size(-1, -1);
@@ -348,10 +348,10 @@ QVariant BackgroundListModel::data(const QModelIndex &index, int role) const
                                                     QSize(m_screenshotSize*1.6,
                                                     m_screenshotSize));
             job->setIgnoreMaximumSize(true);
-            connect(job, SIGNAL(gotPreview(KFileItem,QPixmap)),
-                    this, SLOT(showPreview(KFileItem,QPixmap)));
-            connect(job, SIGNAL(failed(KFileItem)),
-                    this, SLOT(previewFailed(KFileItem)));
+            connect(job, &KIO::PreviewJob::gotPreview,
+                    this, &BackgroundListModel::showPreview);
+            connect(job, &KIO::PreviewJob::failed,
+                    this, &BackgroundListModel::previewFailed);
             const_cast<BackgroundListModel *>(this)->m_previewJobs.insert(file, QPersistentModelIndex(index));
         }
 
@@ -516,7 +516,7 @@ void BackgroundFinder::run()
 
     QDir dir;
     dir.setFilter(QDir::AllDirs | QDir::Files | QDir::Hidden | QDir::Readable);
-    KPackage::Package package = KPackage::PackageLoader::self()->loadPackage("Wallpaper/Images");
+    KPackage::Package package = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Wallpaper/Images"));
 
     int i;
     for (i = 0; i < m_paths.count(); ++i) {

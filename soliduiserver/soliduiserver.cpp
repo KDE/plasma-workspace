@@ -183,7 +183,7 @@ void SolidUiServer::onPassphraseDialogCompleted(const QString &pass, bool keep)
         QString returnObject = dialog->property("soliduiserver.returnObject").toString();
         QDBusInterface returnIface(returnService, returnObject);
 
-        QDBusReply<void> reply = returnIface.call("passphraseReply", pass);
+        QDBusReply<void> reply = returnIface.call(QStringLiteral("passphraseReply"), pass);
 
         QString udi = dialog->property("soliduiserver.udi").toString();
         m_idToPassphraseDialog.remove(returnService+':'+udi);

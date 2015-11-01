@@ -64,7 +64,7 @@ static void createFileEntry(KIO::UDSEntry& entry, const KService::Ptr& service, 
     const QString fileUrl = parentUrl.url() + '/' + service->desktopEntryName();
     entry.insert(KIO::UDSEntry::UDS_URL, fileUrl);
     entry.insert(KIO::UDSEntry::UDS_ACCESS, 0500);
-    entry.insert(KIO::UDSEntry::UDS_MIME_TYPE, "application/x-desktop");
+    entry.insert(KIO::UDSEntry::UDS_MIME_TYPE, QStringLiteral("application/x-desktop"));
     entry.insert(KIO::UDSEntry::UDS_SIZE, 0);
     entry.insert(KIO::UDSEntry::UDS_LOCAL_PATH, KStandardDirs::locate("apps", service->entryPath()));
     entry.insert(KIO::UDSEntry::UDS_MODIFICATION_TIME, time(0));
@@ -123,7 +123,7 @@ void ApplicationsProtocol::stat(const QUrl& url)
 
     if (grp && grp->isValid()) {
         createDirEntry(entry, ((m_runMode==ApplicationsMode) ? i18n("Applications") : i18n("Programs")),
-                       url.url(), "inode/directory", grp->icon() );
+                       url.url(), QStringLiteral("inode/directory"), grp->icon() );
     } else {
         KService::Ptr service = KService::serviceByDesktopName( url.fileName() );
         if (service && service->isValid()) {
@@ -176,7 +176,7 @@ void ApplicationsProtocol::listDir(const QUrl& url)
             dirUrl.setPath('/' + relPath);
             dirUrl = dirUrl.adjusted(QUrl::StripTrailingSlash);
             //qDebug() << "ApplicationsProtocol: adding entry" << dirUrl;
-            createDirEntry(entry, g->caption(), dirUrl.url(), "inode/directory", g->icon());
+            createDirEntry(entry, g->caption(), dirUrl.url(), QStringLiteral("inode/directory"), g->icon());
         } else {
             KService::Ptr service(static_cast<KService*>(e.data()));
 

@@ -110,8 +110,8 @@ PanelView::PanelView(ShellCorona *corona, QScreen *targetScreen, QWindow *parent
             this, &PanelView::updateStruts);
 
     qmlRegisterType<QScreen>();
-    engine()->rootContext()->setContextProperty("panel", this);
-    setSource(QUrl::fromLocalFile(m_corona->kPackage().filePath("views", "Panel.qml")));
+    engine()->rootContext()->setContextProperty(QStringLiteral("panel"), this);
+    setSource(QUrl::fromLocalFile(m_corona->kPackage().filePath("views", QStringLiteral("Panel.qml"))));
     PanelShadows::self()->addWindow(this);
 }
 
@@ -129,7 +129,7 @@ KConfigGroup PanelView::config() const
         return KConfigGroup();
     }
     KConfigGroup views(m_corona->applicationConfig(), "PlasmaViews");
-    views = KConfigGroup(&views, QString("Panel %1").arg(containment()->id()));
+    views = KConfigGroup(&views, QStringLiteral("Panel %1").arg(containment()->id()));
 
     if (formFactor() == Plasma::Types::Vertical) {
         return KConfigGroup(&views, "Vertical" + QString::number(screen()->size().height()));
@@ -859,7 +859,7 @@ void PanelView::updateMask()
     } else {
         if (!m_background) {
             m_background = new Plasma::FrameSvg(this);
-            m_background->setImagePath("widgets/panel-background");
+            m_background->setImagePath(QStringLiteral("widgets/panel-background"));
         }
 
         Plasma::FrameSvg::EnabledBorders borders = Plasma::FrameSvg::AllBorders;
@@ -1058,8 +1058,8 @@ void PanelView::showTemporarily()
     QTimer * t = new QTimer(this);
     t->setSingleShot(true);
     t->setInterval(3000);
-    connect(t, SIGNAL(timeout()), SLOT(restoreAutoHide()));
-    connect(t, SIGNAL(timeout()), t, SLOT(deleteLater()));
+    connect(t, &QTimer::timeout, this, &PanelView::restoreAutoHide);
+    connect(t, &QTimer::timeout, t, &QObject::deleteLater);
     t->start();
 }
 

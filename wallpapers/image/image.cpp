@@ -65,13 +65,13 @@ Image::Image(QObject *parent)
       m_width(0),
       m_height(0)
 {
-    m_wallpaperPackage = KPackage::PackageLoader::self()->loadPackage("Wallpaper/Images");
+    m_wallpaperPackage = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Wallpaper/Images"));
 
-    connect(&m_timer, SIGNAL(timeout()), this, SLOT(nextSlide()));
+    connect(&m_timer, &QTimer::timeout, this, &Image::nextSlide);
 
-    connect(m_dirWatch, SIGNAL(created(QString)), SLOT(pathCreated(QString)));
-    connect(m_dirWatch, SIGNAL(dirty(QString)),   SLOT(pathDirty(QString)));
-    connect(m_dirWatch, SIGNAL(deleted(QString)), SLOT(pathDeleted(QString)));
+    connect(m_dirWatch, &KDirWatch::created, this, &Image::pathCreated);
+    connect(m_dirWatch, &KDirWatch::dirty,   this, &Image::pathDirty);
+    connect(m_dirWatch, &KDirWatch::deleted, this, &Image::pathDeleted);
     m_dirWatch->startScan();
 
     connect(this, &Image::sizeChanged, this, &Image::setTargetSize);
@@ -136,10 +136,10 @@ void Image::setRenderingMode(RenderingMode mode)
 
     if (m_mode == SlideShow) {
         if (m_slidePaths.isEmpty()) {
-            m_slidePaths << QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, "share/wallpapers", QStandardPaths::LocateDirectory);
+            m_slidePaths << QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, QStringLiteral("share/wallpapers"), QStandardPaths::LocateDirectory);
         }
 
-        QTimer::singleShot(200, this, SLOT(startSlideshow()));
+        QTimer::singleShot(200, this, &Image::startSlideshow);
         updateDirWatch(m_slidePaths);
         updateDirWatch(m_slidePaths);
     } else {
@@ -164,8 +164,8 @@ QSize resSize(const QString &str)
 {
     int index = str.indexOf('x');
     if (index != -1) {
-        return QSize(str.left(index).toInt(),
-                     str.mid(index + 1).toInt());
+        return QSize(str.leftRef(index).toInt(),
+                     str.midRef(index + 1).toInt());
     }
 
     return QSize();
@@ -334,7 +334,7 @@ void Image::setSlidePaths(const QStringList &slidePaths)
     m_slidePaths.removeAll(QString());
 
     if (m_slidePaths.isEmpty()) {
-        m_slidePaths << QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, "share/wallpapers", QStandardPaths::LocateDirectory);
+        m_slidePaths << QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, QStringLiteral("share/wallpapers"), QStandardPaths::LocateDirectory);
     }
 
     if (m_mode == SlideShow) {
@@ -347,11 +347,11 @@ void Image::setSlidePaths(const QStringList &slidePaths)
 
 void Image::showAddSlidePathsDialog()
 {
-    QFileDialog *dialog = new QFileDialog(0, i18n("Directory with the wallpaper to show slides from"), "");
+    QFileDialog *dialog = new QFileDialog(0, i18n("Directory with the wallpaper to show slides from"), QLatin1String(""));
     dialog->setAttribute(Qt::WA_DeleteOnClose, true );
     dialog->setOptions(QFileDialog::ShowDirsOnly);
     dialog->setAcceptMode(QFileDialog::AcceptOpen);
-    connect(dialog, SIGNAL(accepted()), this, SLOT(addDirFromSelectionDialog()));
+    connect(dialog, &QDialog::accepted, this, &Image::addDirFromSelectionDialog);
     dialog->show();
 }
 
@@ -498,9 +498,9 @@ void Image::addUrl(const QUrl &url, bool setAsCurrent)
         if (!wallpaperPath.isEmpty()) {
             KIO::FileCopyJob *job = KIO::file_copy(url, QUrl(wallpaperPath), -1, KIO::HideProgressInfo);
             if (setAsCurrent) {
-                connect(job, SIGNAL(result(KJob*)), this, SLOT(setWallpaperRetrieved(KJob*)));
+                connect(job, &KJob::result, this, &Image::setWallpaperRetrieved);
             } else {
-                connect(job, SIGNAL(result(KJob*)), this, SLOT(addWallpaperRetrieved(KJob*)));
+                connect(job, &KJob::result, this, &Image::addWallpaperRetrieved);
             }
         }
 
@@ -559,7 +559,7 @@ void Image::startSlideshow()
         m_unseenSlideshowBackgrounds.clear();
         BackgroundFinder *finder = new BackgroundFinder(this, m_dirs);
         m_findToken = finder->token();
-        connect(finder, SIGNAL(backgroundsFound(QStringList,QString)), this, SLOT(backgroundsFound(QStringList,QString)));
+        connect(finder, &BackgroundFinder::backgroundsFound, this, &Image::backgroundsFound);
         finder->start();
         //TODO: what would be cool: paint on the wallpaper itself a busy widget and perhaps some text
         //about loading wallpaper slideshow while the thread runs
@@ -588,7 +588,7 @@ void Image::backgroundsFound(const QStringList &paths, const QString &token)
     if (m_slideshowBackgrounds.isEmpty()) {
         // no image has been found, which is quite weird... try again later (this is useful for events which
         // are not detected by KDirWatch, like a NFS directory being mounted)
-        QTimer::singleShot(1000, this, SLOT(startSlideshow()));
+        QTimer::singleShot(1000, this, &Image::startSlideshow);
     } else {
         m_currentSlide = -1;
         nextSlide();
@@ -602,7 +602,7 @@ void Image::getNewWallpaper()
         m_newStuffDialog = new KNS3::DownloadDialog( QString::fromLatin1("wallpaper.knsrc") );
         KNS3::DownloadDialog *strong = m_newStuffDialog.data();
         strong->setTitle(i18n("Download Wallpapers"));
-        connect(m_newStuffDialog.data(), SIGNAL(accepted()), SLOT(newStuffFinished()));
+        connect(m_newStuffDialog.data(), &QDialog::accepted, this, &Image::newStuffFinished);
     }
     m_newStuffDialog.data()->show();
 }
@@ -679,7 +679,7 @@ void Image::wallpaperBrowseCompleted()
 void Image::addUsersWallpaper(const QString &file)
 {
     QString f = file;
-    f.replace("file:/", "");
+    f.replace(QLatin1String("file:/"), QLatin1String(""));
     const QFileInfo info(f); // FIXME
 
     //the full file path, so it isn't broken when dealing with symlinks
@@ -797,7 +797,7 @@ void Image::removeWallpaper(QString name)
 
     //Package plugin name
     if (!name.contains('/')) {
-        KPackage::Package p = KPackage::PackageLoader::self()->loadPackage("Wallpaper/Images");
+        KPackage::Package p = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Wallpaper/Images"));
         KJob *j = p.uninstall(name, localWallpapers);
         connect(j, &KJob::finished, [=] () {
             m_model->reload(m_usersWallpapers);

@@ -31,7 +31,7 @@ void SolidDeviceJob::start()
     Solid::Device device (m_dest);
     QString operation = operationName();
     
-    if (operation == "mount") {
+    if (operation == QLatin1String("mount")) {
         if (device.is<Solid::StorageAccess>()) {
             Solid::StorageAccess *access = device.as<Solid::StorageAccess>();
             if (access && !access->isAccessible()) {
@@ -39,7 +39,7 @@ void SolidDeviceJob::start()
             }
         }
     }
-    else if (operation == "unmount") {
+    else if (operation == QLatin1String("unmount")) {
         if (device.is<Solid::OpticalDisc>()) {
             Solid::OpticalDrive *drive = device.as<Solid::OpticalDrive>();
             if (!drive) {

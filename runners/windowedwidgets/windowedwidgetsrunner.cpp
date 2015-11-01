@@ -41,7 +41,7 @@ WindowedWidgetsRunner::WindowedWidgetsRunner(QObject *parent, const QVariantList
     setObjectName( QLatin1String("WindowedWidgets" ));
     setPriority(AbstractRunner::HighestPriority);
 
-    addSyntax(Plasma::RunnerSyntax(":q:", i18n("Finds Plasma widgets whose name or description match :q:")));
+    addSyntax(Plasma::RunnerSyntax(QStringLiteral(":q:"), i18n("Finds Plasma widgets whose name or description match :q:")));
     setDefaultSyntax(Plasma::RunnerSyntax(i18nc("Note this is a KRunner keyword", "mobile applications"), i18n("list all Plasma widgets that can run as standalone applications")));
 }
 
@@ -68,9 +68,9 @@ void WindowedWidgetsRunner::match(Plasma::RunnerContext &context)
              service->comment().contains(term, Qt::CaseInsensitive)) ||
              service->categories().contains(term, Qt::CaseInsensitive) ||
              term.startsWith(i18nc("Note this is a KRunner keyword", "mobile applications"))) &&
-             !info.property("NoDisplay").toBool()) {
+             !info.property(QStringLiteral("NoDisplay")).toBool()) {
 
-            QVariant val = info.property("X-Plasma-StandAloneApp");
+            QVariant val = info.property(QStringLiteral("X-Plasma-StandAloneApp"));
             if (!val.isValid() || !val.toBool()) {
                 continue;
             }
@@ -102,7 +102,7 @@ void WindowedWidgetsRunner::run(const Plasma::RunnerContext &context, const Plas
     Q_UNUSED(context);
     KService::Ptr service = KService::serviceByStorageId(match.data().toString());
     if (service) {
-        QProcess::startDetached("plasmawindowed", QStringList() << service->property("X-KDE-PluginInfo-Name", QVariant::String).toString());
+        QProcess::startDetached(QStringLiteral("plasmawindowed"), QStringList() << service->property(QStringLiteral("X-KDE-PluginInfo-Name"), QVariant::String).toString());
     }
 }
 
@@ -130,8 +130,8 @@ QMimeData * WindowedWidgetsRunner::mimeDataForMatch(const Plasma::QueryMatch &ma
     if (service) {
 
         QMimeData *data = new QMimeData();
-        data->setData("text/x-plasmoidservicename",
-                      service->property("X-KDE-PluginInfo-Name", QVariant::String).toString().toUtf8());
+        data->setData(QStringLiteral("text/x-plasmoidservicename"),
+                      service->property(QStringLiteral("X-KDE-PluginInfo-Name"), QVariant::String).toString().toUtf8());
         return data;
 
     }

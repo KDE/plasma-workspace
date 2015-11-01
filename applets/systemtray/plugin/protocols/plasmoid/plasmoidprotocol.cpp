@@ -83,11 +83,11 @@ void PlasmoidProtocol::init()
         containmentId = cg.groupList().first().toInt();
     }
 
-    m_containment = new Plasma::Containment(m_systrayApplet, "null", containmentId);
+    m_containment = new Plasma::Containment(m_systrayApplet, QStringLiteral("null"), containmentId);
     m_containment->setImmutability(Plasma::Types::Mutable);
     m_containment->setFormFactor(Plasma::Types::Horizontal);
     m_containment->setLocation(m_systrayApplet->location());
-    m_containment->setContainmentActions("RightButton;NoModifier", "org.kde.contextmenu");
+    m_containment->setContainmentActions(QStringLiteral("RightButton;NoModifier"), QStringLiteral("org.kde.contextmenu"));
     m_containment->init();
     emit m_systrayApplet->containment()->corona()->containmentAdded(m_containment);
 
@@ -144,11 +144,11 @@ void PlasmoidProtocol::restorePlasmoids()
     qWarning() << "Known plasmoid ids:"<< m_knownPlugins;
 
     //X-Plasma-NotificationArea
-    const QString constraint = QString("[X-Plasma-NotificationArea] == true");
+    const QString constraint = QStringLiteral("[X-Plasma-NotificationArea] == true");
 
     KPluginInfo::List applets;
     for (auto info : Plasma::PluginLoader::self()->listAppletInfo(QString())) {
-        if (info.isValid() && info.property("X-Plasma-NotificationArea") == "true") {
+        if (info.isValid() && info.property(QStringLiteral("X-Plasma-NotificationArea")) == "true") {
 
             // Check for FormFactor
             KPluginMetaData md = info.toMetaData();
@@ -163,7 +163,7 @@ void PlasmoidProtocol::restorePlasmoids()
 
     QMap<QString, KPluginInfo> sortedApplets;
     foreach (const KPluginInfo &info, applets) {
-        const QString dbusactivation = info.property("X-Plasma-DBusActivationService").toString();
+        const QString dbusactivation = info.property(QStringLiteral("X-Plasma-DBusActivationService")).toString();
         if (!dbusactivation.isEmpty()) {
             qCDebug(SYSTEMTRAY) << "ST Found DBus-able Applet: " << info.pluginName() << dbusactivation;
             m_dbusActivatableTasks[info.pluginName()] = dbusactivation;
@@ -273,14 +273,14 @@ void PlasmoidProtocol::initDBusActivatables()
      * - we start watching for new services, and do the same (serviceNameFetchFinished())
      * - whenever a service is gone, we check whether to unload a Plasmoid (serviceUnregistered())
      */
-    QDBusPendingCall async = QDBusConnection::sessionBus().interface()->asyncCall("ListNames");
+    QDBusPendingCall async = QDBusConnection::sessionBus().interface()->asyncCall(QStringLiteral("ListNames"));
     QDBusPendingCallWatcher *callWatcher = new QDBusPendingCallWatcher(async, this);
     connect(callWatcher, &QDBusPendingCallWatcher::finished,
             [=](QDBusPendingCallWatcher *callWatcher){
                 PlasmoidProtocol::serviceNameFetchFinished(callWatcher, QDBusConnection::sessionBus());
             });
 
-    QDBusPendingCall systemAsync = QDBusConnection::systemBus().interface()->asyncCall("ListNames");
+    QDBusPendingCall systemAsync = QDBusConnection::systemBus().interface()->asyncCall(QStringLiteral("ListNames"));
     QDBusPendingCallWatcher *systemCallWatcher = new QDBusPendingCallWatcher(systemAsync, this);
     connect(systemCallWatcher, &QDBusPendingCallWatcher::finished,
             [=](QDBusPendingCallWatcher *callWatcher){

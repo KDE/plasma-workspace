@@ -44,11 +44,11 @@ Interface::Interface(KSldApp *parent)
     , m_next_cookie(0)
 {
     (void) new ScreenSaverAdaptor( this );
-    QDBusConnection::sessionBus().registerService(QLatin1String("org.freedesktop.ScreenSaver")) ;
+    QDBusConnection::sessionBus().registerService(QStringLiteral("org.freedesktop.ScreenSaver")) ;
     (void) new KScreenSaverAdaptor( this );
-    QDBusConnection::sessionBus().registerService(QLatin1String("org.kde.screensaver"));
-    QDBusConnection::sessionBus().registerObject(QLatin1String("/ScreenSaver"), this);
-    QDBusConnection::sessionBus().registerObject(QLatin1String("/org/freedesktop/ScreenSaver"), this);
+    QDBusConnection::sessionBus().registerService(QStringLiteral("org.kde.screensaver"));
+    QDBusConnection::sessionBus().registerObject(QStringLiteral("/ScreenSaver"), this);
+    QDBusConnection::sessionBus().registerObject(QStringLiteral("/org/freedesktop/ScreenSaver"), this);
     connect(m_daemon, &KSldApp::locked, this, &Interface::slotLocked);
     connect(m_daemon, &KSldApp::unlocked, this, &Interface::slotUnlocked);
 
@@ -107,8 +107,8 @@ bool Interface::SetActive (bool state)
 
 uint Interface::Inhibit(const QString &application_name, const QString &reason_for_inhibit)
 {
-    OrgKdeSolidPowerManagementPolicyAgentInterface policyAgent("org.kde.Solid.PowerManagement.PolicyAgent",
-                                                               "/org/kde/Solid/PowerManagement/PolicyAgent",
+    OrgKdeSolidPowerManagementPolicyAgentInterface policyAgent(QStringLiteral("org.kde.Solid.PowerManagement.PolicyAgent"),
+                                                               QStringLiteral("/org/kde/Solid/PowerManagement/PolicyAgent"),
                                                                QDBusConnection::sessionBus());
     QDBusReply<uint> reply = policyAgent.AddInhibition(ChangeScreenSettings, application_name, reason_for_inhibit);
 
@@ -128,8 +128,8 @@ void Interface::UnInhibit(uint cookie)
     while (it.hasNext()) {
         if (it.next().cookie == cookie) {
             if (uint powerdevilcookie = it.value().powerdevilcookie) {
-                OrgKdeSolidPowerManagementPolicyAgentInterface policyAgent("org.kde.Solid.PowerManagement.PolicyAgent",
-                                                               "/org/kde/Solid/PowerManagement/PolicyAgent",
+                OrgKdeSolidPowerManagementPolicyAgentInterface policyAgent(QStringLiteral("org.kde.Solid.PowerManagement.PolicyAgent"),
+                                                               QStringLiteral("/org/kde/Solid/PowerManagement/PolicyAgent"),
                                                                QDBusConnection::sessionBus());
                 policyAgent.ReleaseInhibition(powerdevilcookie);
             }

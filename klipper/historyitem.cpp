@@ -51,7 +51,7 @@ HistoryItemPtr HistoryItem::create( const QMimeData* data )
     {
         KUrlMimeData::MetaDataMap metaData;
         QList<QUrl> urls = KUrlMimeData::urlsFromMimeData(data, KUrlMimeData::PreferKdeUrls, &metaData);
-        QByteArray bytes = data->data("application/x-kde-cutselection");
+        QByteArray bytes = data->data(QStringLiteral("application/x-kde-cutselection"));
         bool cut = !bytes.isEmpty() && (bytes.at(0) == '1'); // true if 1
         return HistoryItemPtr(new HistoryURLItem(urls, metaData, cut));
     }

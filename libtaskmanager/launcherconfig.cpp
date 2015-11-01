@@ -42,12 +42,12 @@ LauncherConfig::LauncherConfig(KConfigDialog *parent)
 {
     connect(parent, SIGNAL(applyClicked()), SLOT(save()));
     connect(parent, SIGNAL(okClicked()), SLOT(save()));
-    parent->addPage(this, i18n("Launcher Matching Rules"), "fork");
+    parent->addPage(this, i18n("Launcher Matching Rules"), QStringLiteral("fork"));
 
     ui.setupUi(this);
-    ui.add->setIcon(QIcon::fromTheme("list-add"));
-    ui.edit->setIcon(QIcon::fromTheme("document-edit"));
-    ui.remove->setIcon(QIcon::fromTheme("list-remove"));
+    ui.add->setIcon(QIcon::fromTheme(QStringLiteral("list-add")));
+    ui.edit->setIcon(QIcon::fromTheme(QStringLiteral("document-edit")));
+    ui.remove->setIcon(QIcon::fromTheme(QStringLiteral("list-remove")));
     ui.edit->setEnabled(false);
     ui.remove->setEnabled(false);
     connect(ui.add, &QPushButton::clicked, this, &LauncherConfig::add);
@@ -65,7 +65,7 @@ LauncherConfig::~LauncherConfig()
 
 void LauncherConfig::load()
 {
-    KConfig cfg("taskmanagerrulesrc");
+    KConfig cfg(QStringLiteral("taskmanagerrulesrc"));
     KConfigGroup grp(&cfg, "Mapping");
 
     foreach (const QString & key, grp.keyList()) {
@@ -75,7 +75,7 @@ void LauncherConfig::load()
             continue;
         }
 
-        if (launcher.endsWith(".desktop")) {
+        if (launcher.endsWith(QLatin1String(".desktop"))) {
             launcher = QUrl(launcher).toDisplayString(QUrl::PrettyDecoded);
         }
 
@@ -101,7 +101,7 @@ void LauncherConfig::load()
 void LauncherConfig::save()
 {
     QMap<QString, QString> entries;
-    KConfig                cfg("taskmanagerrulesrc");
+    KConfig                cfg(QStringLiteral("taskmanagerrulesrc"));
     KConfigGroup           grp(&cfg, "Mapping");
 
     // Go over view and create entries...

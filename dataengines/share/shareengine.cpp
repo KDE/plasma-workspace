@@ -38,21 +38,21 @@ void ShareEngine::init()
 {
     connect(KSycoca::self(), SIGNAL(databaseChanged(QStringList)),
             this, SLOT(updatePlugins(QStringList)));
-    updatePlugins(QStringList() << "services");
+    updatePlugins(QStringList() << QStringLiteral("services"));
 }
 
 void ShareEngine::updatePlugins(const QStringList &changes)
 {
-    if (!changes.contains("services")) {
+    if (!changes.contains(QStringLiteral("services"))) {
         return;
     }
 
     removeAllSources();
 
-    KService::List services = KServiceTypeTrader::self()->query("Plasma/ShareProvider");
+    KService::List services = KServiceTypeTrader::self()->query(QStringLiteral("Plasma/ShareProvider"));
     QMultiMap<int, KService::Ptr> sortedServices;
     foreach (KService::Ptr service, services) {
-        sortedServices.insert(service->property("X-KDE-Priority").toInt(), service);
+        sortedServices.insert(service->property(QStringLiteral("X-KDE-Priority")).toInt(), service);
     }
 
     QMapIterator<int, KService::Ptr> it(sortedServices);
@@ -62,10 +62,10 @@ void ShareEngine::updatePlugins(const QStringList &changes)
         it.previous();
         KService::Ptr service = it.value();
         const QString pluginName =
-            service->property("X-KDE-PluginInfo-Name", QVariant::String).toString();
+            service->property(QStringLiteral("X-KDE-PluginInfo-Name"), QVariant::String).toString();
 
         const QStringList pluginMimeTypes =
-            service->property("X-KDE-PlasmaShareProvider-MimeType", QVariant::StringList).toStringList();
+            service->property(QStringLiteral("X-KDE-PlasmaShareProvider-MimeType"), QVariant::StringList).toStringList();
 
         const QString storageId = service->storageId();
 
@@ -75,9 +75,9 @@ void ShareEngine::updatePlugins(const QStringList &changes)
 
         // create the list of providers
         Plasma::DataEngine::Data data;
-        data.insert("Name", service->name());
-        data.insert("Service Id", service->storageId());
-        data.insert("Mimetypes", pluginMimeTypes);
+        data.insert(QStringLiteral("Name"), service->name());
+        data.insert(QStringLiteral("Service Id"), service->storageId());
+        data.insert(QStringLiteral("Mimetypes"), pluginMimeTypes);
         setData(pluginName, data);
 
         // create the list of providers by type
@@ -90,7 +90,7 @@ void ShareEngine::updatePlugins(const QStringList &changes)
     QHashIterator<QString, QStringList> it2(mimetypes);
     while (it2.hasNext()) {
         it2.next();
-        setData("Mimetypes", it2.key(), it2.value());
+        setData(QStringLiteral("Mimetypes"), it2.key(), it2.value());
     }
 }
 
@@ -102,11 +102,11 @@ Plasma::Service *ShareEngine::serviceForSource(const QString &source)
         return Plasma::DataEngine::serviceForSource(source);
     }
 
-    if (source.compare("mimetype", Qt::CaseInsensitive) == 0) {
+    if (source.compare(QLatin1String("mimetype"), Qt::CaseInsensitive) == 0) {
         return Plasma::DataEngine::serviceForSource(source);
     }
 
-    const QString id = data->data().value("Service Id").toString();
+    const QString id = data->data().value(QStringLiteral("Service Id")).toString();
     if (id.isEmpty()) {
         return Plasma::DataEngine::serviceForSource(source);
     }

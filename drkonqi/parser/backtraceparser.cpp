@@ -26,9 +26,9 @@
 //factory
 BacktraceParser *BacktraceParser::newParser(const QString & debuggerName, QObject *parent)
 {
-    if (debuggerName == "gdb") {
+    if (debuggerName == QLatin1String("gdb")) {
         return new BacktraceParserGdb(parent);
-    } else if (debuggerName == "kdbgwin") {
+    } else if (debuggerName == QLatin1String("kdbgwin")) {
         return new BacktraceParserKdbgwin(parent);
     } else {
         return new BacktraceParserNull(parent);
@@ -142,11 +142,11 @@ static bool lineIsStackBase(const BacktraceLine & line)
 
     //this is the base frame for all threads except the main thread
     //FIXME that probably works only on linux
-    if ( line.functionName() == "start_thread" )
+    if ( line.functionName() == QLatin1String("start_thread") )
         return true;
 
     QRegExp regExp;
-    regExp.setPattern("(kde)?main"); //main() or kdemain() is the base for the main thread
+    regExp.setPattern(QStringLiteral("(kde)?main")); //main() or kdemain() is the base for the main thread
     if ( regExp.exactMatch(line.functionName()) )
         return true;
 
@@ -155,15 +155,15 @@ static bool lineIsStackBase(const BacktraceLine & line)
     //"QApplicationPrivate::notify_helper", "QApplication::notify" and similar, which
     //are used to send any kind of event to the Qt application. All stack frames below this,
     //with or without debug symbols, are useless to KDE developers, so we ignore them.
-    regExp.setPattern("(Q|K)(Core)?Application(Private)?::notify.*");
+    regExp.setPattern(QStringLiteral("(Q|K)(Core)?Application(Private)?::notify.*"));
     if ( regExp.exactMatch(line.functionName()) )
         return true;
 
     //attempt to recognize crashes that happen after main has returned (bug 200993)
-    if ( line.functionName() == "~KCleanUpGlobalStatic" ||
-         line.functionName() == "~QGlobalStatic" ||
-         line.functionName() == "exit" ||
-         line.functionName() == "*__GI_exit" )
+    if ( line.functionName() == QLatin1String("~KCleanUpGlobalStatic") ||
+         line.functionName() == QLatin1String("~QGlobalStatic") ||
+         line.functionName() == QLatin1String("exit") ||
+         line.functionName() == QLatin1String("*__GI_exit") )
         return true;
 
     return false;
@@ -180,10 +180,10 @@ static bool lineIsStackTop(const BacktraceLine & line)
         return false;
 
     if ( line.functionName().startsWith(QLatin1String("qt_assert")) //qt_assert and qt_assert_x
-        || line.functionName() == "qFatal"
-        || line.functionName() == "abort"
-        || line.functionName() == "*__GI_abort"
-        || line.functionName() == "*__GI___assert_fail" )
+        || line.functionName() == QLatin1String("qFatal")
+        || line.functionName() == QLatin1String("abort")
+        || line.functionName() == QLatin1String("*__GI_abort")
+        || line.functionName() == QLatin1String("*__GI___assert_fail") )
         return true;
 
     return false;
@@ -193,14 +193,14 @@ static bool lineIsStackTop(const BacktraceLine & line)
    for some reason. Currently it ignores all libc/libstdc++/libpthread functions. */
 static bool lineShouldBeIgnored(const BacktraceLine & line)
 {
-    if ( line.libraryName().contains("libc.so")
-        || line.libraryName().contains("libstdc++.so")
+    if ( line.libraryName().contains(QStringLiteral("libc.so"))
+        || line.libraryName().contains(QStringLiteral("libstdc++.so"))
         || line.functionName().startsWith(QLatin1String("*__GI_")) //glibc2.9 uses *__GI_ as prefix
-        || line.libraryName().contains("libpthread.so")
-        || line.libraryName().contains("libglib-2.0.so")
-        || line.libraryName().contains("ntdll.dll")
-        || line.libraryName().contains("kernel32.dll")
-        || line.functionName().contains("_tmain")
+        || line.libraryName().contains(QStringLiteral("libpthread.so"))
+        || line.libraryName().contains(QStringLiteral("libglib-2.0.so"))
+        || line.libraryName().contains(QStringLiteral("ntdll.dll"))
+        || line.libraryName().contains(QStringLiteral("kernel32.dll"))
+        || line.functionName().contains(QStringLiteral("_tmain"))
         || line.functionName() == QLatin1String("WinMain") )
         return true;
 
@@ -216,11 +216,11 @@ static bool isFunctionUseful(const BacktraceLine & line)
     }
 
     //Misc ignores
-    if ( line.functionName() == "__kernel_vsyscall"
-         || line.functionName() == "raise"
-         || line.functionName() == "abort"
-         || line.functionName() == "__libc_message"
-         || line.functionName() == "thr_kill" /* *BSD */) {
+    if ( line.functionName() == QLatin1String("__kernel_vsyscall")
+         || line.functionName() == QLatin1String("raise")
+         || line.functionName() == QLatin1String("abort")
+         || line.functionName() == QLatin1String("__libc_message")
+         || line.functionName() == QLatin1String("thr_kill") /* *BSD */) {
         return false;
     }
 
@@ -251,9 +251,9 @@ static bool isFunctionUseful(const BacktraceLine & line)
     }
 
     //Misc Qt stuff
-    if ( line.functionName() == "qt_message_output"
-        || line.functionName() == "qt_message"
-        || line.functionName() == "qFatal"
+    if ( line.functionName() == QLatin1String("qt_message_output")
+        || line.functionName() == QLatin1String("qt_message")
+        || line.functionName() == QLatin1String("qFatal")
         || line.functionName().startsWith(QLatin1String("qGetPtrHelper"))
         || line.functionName().startsWith(QLatin1String("qt_meta_")) ) {
         return false;

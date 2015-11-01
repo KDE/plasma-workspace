@@ -56,7 +56,7 @@
 
 //TODO:
 // interative help?
-static const QString s_autosaveFileName("interactiveconsoleautosave.js");
+static const QString s_autosaveFileName(QStringLiteral("interactiveconsoleautosave.js"));
 static const QString s_kwinService = QStringLiteral("org.kde.KWin");
 
 InteractiveConsole::InteractiveConsole(QWidget *parent)
@@ -68,9 +68,9 @@ InteractiveConsole::InteractiveConsole(QWidget *parent)
       m_loadAction(KStandardAction::open(this, SLOT(openScriptFile()), this)),
       m_saveAction(KStandardAction::saveAs(this, SLOT(saveScript()), this)),
       m_clearAction(KStandardAction::clear(this, SLOT(clearEditor()), this)),
-      m_executeAction(new QAction(QIcon::fromTheme("system-run"), i18n("&Execute"), this)),
-      m_plasmaAction(new QAction(QIcon::fromTheme("plasma"), i18nc("Toolbar Button to switch to Plasma Scripting Mode", "Plasma"), this)),
-      m_kwinAction(new QAction(QIcon::fromTheme("kwin"), i18nc("Toolbar Button to switch to KWin Scripting Mode", "KWin"), this)),
+      m_executeAction(new QAction(QIcon::fromTheme(QStringLiteral("system-run")), i18n("&Execute"), this)),
+      m_plasmaAction(new QAction(QIcon::fromTheme(QStringLiteral("plasma")), i18nc("Toolbar Button to switch to Plasma Scripting Mode", "Plasma"), this)),
+      m_kwinAction(new QAction(QIcon::fromTheme(QStringLiteral("kwin")), i18nc("Toolbar Button to switch to KWin Scripting Mode", "KWin"), this)),
       m_snippetsMenu(new QMenu(i18n("Templates"), this)),
       m_fileDialog(0),
       m_closeWhenCompleted(false),
@@ -93,19 +93,19 @@ InteractiveConsole::InteractiveConsole(QWidget *parent)
     label->setFont(f);
     editorLayout->addWidget(label);
 
-    connect(m_snippetsMenu, SIGNAL(aboutToShow()), this, SLOT(populateTemplatesMenu()));
+    connect(m_snippetsMenu, &QMenu::aboutToShow, this, &InteractiveConsole::populateTemplatesMenu);
 
     QToolButton *loadTemplateButton = new QToolButton(this);
     loadTemplateButton->setPopupMode(QToolButton::InstantPopup);
     loadTemplateButton->setMenu(m_snippetsMenu);
     loadTemplateButton->setText(i18n("Load"));
-    connect(loadTemplateButton, SIGNAL(triggered(QAction*)), this, SLOT(loadTemplate(QAction*)));
+    connect(loadTemplateButton, &QToolButton::triggered, this, &InteractiveConsole::loadTemplate);
 
     QToolButton *useTemplateButton = new QToolButton(this);
     useTemplateButton->setPopupMode(QToolButton::InstantPopup);
     useTemplateButton->setMenu(m_snippetsMenu);
     useTemplateButton->setText(i18n("Use"));
-    connect(useTemplateButton, SIGNAL(triggered(QAction*)), this, SLOT(useTemplate(QAction*)));
+    connect(useTemplateButton, &QToolButton::triggered, this, &InteractiveConsole::useTemplate);
 
     QActionGroup *modeGroup = new QActionGroup(this);
     modeGroup->addAction(m_plasmaAction);
@@ -113,7 +113,7 @@ InteractiveConsole::InteractiveConsole(QWidget *parent)
     m_plasmaAction->setCheckable(true);
     m_kwinAction->setCheckable(true);
     m_plasmaAction->setChecked(true);
-    connect(modeGroup, SIGNAL(triggered(QAction*)), this, SLOT(modeSelectionChanged()));
+    connect(modeGroup, &QActionGroup::triggered, this, &InteractiveConsole::modeSelectionChanged);
 
     KToolBar *toolBar = new KToolBar(this, true, false);
     toolBar->setToolButtonStyle(Qt::ToolButtonTextBesideIcon);
@@ -128,24 +128,24 @@ InteractiveConsole::InteractiveConsole(QWidget *parent)
 
     editorLayout->addWidget(toolBar);
 
-    KService::List offers = KServiceTypeTrader::self()->query("KTextEditor/Document");
+    KService::List offers = KServiceTypeTrader::self()->query(QStringLiteral("KTextEditor/Document"));
     foreach (const KService::Ptr service, offers) {
         m_editorPart = service->createInstance<KTextEditor::Document>(widget);
         if (m_editorPart) {
-            m_editorPart->setHighlightingMode("JavaScript/PlasmaDesktop");
+            m_editorPart->setHighlightingMode(QStringLiteral("JavaScript/PlasmaDesktop"));
 
             KTextEditor::View * view = m_editorPart->createView(widget);
             view->setContextMenu(view->defaultContextMenu());
 
             KTextEditor::ConfigInterface *config = qobject_cast<KTextEditor::ConfigInterface*>(view);
             if (config) {
-                config->setConfigValue("line-numbers", true);
-                config->setConfigValue("dynamic-word-wrap", true);
+                config->setConfigValue(QStringLiteral("line-numbers"), true);
+                config->setConfigValue(QStringLiteral("dynamic-word-wrap"), true);
             }
 
             editorLayout->addWidget(view);
-            connect(m_editorPart, SIGNAL(textChanged(KTextEditor::Document*)),
-                    this, SLOT(scriptTextChanged()));
+            connect(m_editorPart, &KTextEditor::Document::textChanged,
+                    this, &InteractiveConsole::scriptTextChanged);
             break;
         }
     }
@@ -153,7 +153,7 @@ InteractiveConsole::InteractiveConsole(QWidget *parent)
     if (!m_editorPart) {
         m_editor = new KTextEdit(widget);
         editorLayout->addWidget(m_editor);
-        connect(m_editor, SIGNAL(textChanged()), this, SLOT(scriptTextChanged()));
+        connect(m_editor, &QTextEdit::textChanged, this, &InteractiveConsole::scriptTextChanged);
     }
 
     m_splitter->addWidget(widget);
@@ -188,7 +188,7 @@ InteractiveConsole::InteractiveConsole(QWidget *parent)
 
     scriptTextChanged();
 
-    connect(m_executeAction, SIGNAL(triggered()), this, SLOT(evaluateScript()));
+    connect(m_executeAction, &QAction::triggered, this, &InteractiveConsole::evaluateScript);
     m_executeAction->setShortcut(Qt::CTRL + Qt::Key_E);
 
     const QString autosave = QStandardPaths::writableLocation(QStandardPaths::DataLocation) + "/" + s_autosaveFileName;
@@ -206,9 +206,9 @@ InteractiveConsole::~InteractiveConsole()
 
 void InteractiveConsole::setMode(const QString &mode)
 {
-    if (mode.toLower() == "desktop") {
+    if (mode.toLower() == QLatin1String("desktop")) {
         m_plasmaAction->setChecked(true);
-    } else if (mode.toLower() == "windowmanager") {
+    } else if (mode.toLower() == QLatin1String("windowmanager")) {
         m_kwinAction->setChecked(true);
     }
 }
@@ -227,10 +227,10 @@ void InteractiveConsole::modeSelectionChanged()
 QString InteractiveConsole::mode() const
 {
     if (m_mode == KWinConsole) {
-        return "windowmanager";
+        return QStringLiteral("windowmanager");
     }
 
-    return "desktop";
+    return QStringLiteral("desktop");
 }
 
 void InteractiveConsole::setScriptInterface(QObject *obj)
@@ -257,7 +257,7 @@ void InteractiveConsole::loadScript(const QString &script)
     if (m_editorPart) {
         m_editorPart->closeUrl(false);
         if (m_editorPart->openUrl(QUrl::fromLocalFile(script))) {
-            m_editorPart->setHighlightingMode("JavaScript/PlasmaDesktop");
+            m_editorPart->setHighlightingMode(QStringLiteral("JavaScript/PlasmaDesktop"));
             return;
         }
     } else {
@@ -322,10 +322,10 @@ void InteractiveConsole::openScriptFile()
     m_fileDialog->setWindowTitle(i18n("Open Script File"));
 
     QStringList mimetypes;
-    mimetypes << "application/javascript";
+    mimetypes << QStringLiteral("application/javascript");
     m_fileDialog->setMimeTypeFilters(mimetypes);
 
-    connect(m_fileDialog, SIGNAL(finished(int)), this, SLOT(openScriptUrlSelected(int)));
+    connect(m_fileDialog, &QDialog::finished, this, &InteractiveConsole::openScriptUrlSelected);
     m_fileDialog->show();
 }
 
@@ -351,7 +351,7 @@ void InteractiveConsole::loadScriptFromUrl(const QUrl &url)
     if (m_editorPart) {
         m_editorPart->closeUrl(false);
         m_editorPart->openUrl(url);
-        m_editorPart->setHighlightingMode("JavaScript/PlasmaDesktop");
+        m_editorPart->setHighlightingMode(QStringLiteral("JavaScript/PlasmaDesktop"));
     } else {
         m_editor->clear();
         m_editor->setEnabled(false);
@@ -362,7 +362,7 @@ void InteractiveConsole::loadScriptFromUrl(const QUrl &url)
 
         m_job = KIO::get(url, KIO::Reload, KIO::HideProgressInfo);
         connect(m_job.data(), SIGNAL(data(KIO::Job*,QByteArray)), this, SLOT(scriptFileDataRecvd(KIO::Job*,QByteArray)));
-        connect(m_job.data(), SIGNAL(result(KJob*)), this, SLOT(reenableEditor(KJob*)));
+        connect(m_job.data(), &KJob::result, this, &InteractiveConsole::reenableEditor);
     }
 }
 
@@ -371,16 +371,16 @@ void InteractiveConsole::populateTemplatesMenu()
     m_snippetsMenu->clear();
 
     QMap<QString, KService::Ptr> sorted;
-    const QString constraint = QString("[X-Plasma-Shell] == '%1'")
+    const QString constraint = QStringLiteral("[X-Plasma-Shell] == '%1'")
                                       .arg(qApp->applicationName());
-    KService::List templates = KServiceTypeTrader::self()->query("Plasma/LayoutTemplate", constraint);
+    KService::List templates = KServiceTypeTrader::self()->query(QStringLiteral("Plasma/LayoutTemplate"), constraint);
     foreach (const KService::Ptr &service, templates) {
         sorted.insert(service->name(), service);
     }
 
     QMapIterator<QString, KService::Ptr> it(sorted);
 
-    KPackage::Package package = KPackage::PackageLoader::self()->loadPackage("Plasma/LayoutTemplate");
+    KPackage::Package package = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Plasma/LayoutTemplate"));
 
     while (it.hasNext()) {
         it.next();
@@ -400,7 +400,7 @@ void InteractiveConsole::populateTemplatesMenu()
 
 void InteractiveConsole::loadTemplate(QAction *action)
 {
-    KPackage::Package package = KPackage::PackageLoader::self()->loadPackage("Plasma/LayoutTemplate");
+    KPackage::Package package = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Plasma/LayoutTemplate"));
 
     const QString pluginName = action->data().toString();
     const QString path = QStandardPaths::locate(QStandardPaths::GenericDataLocation
@@ -455,10 +455,10 @@ void InteractiveConsole::saveScript()
     m_fileDialog->setWindowTitle(i18n("Save Script File"));
 
     QStringList mimetypes;
-    mimetypes << "application/javascript";
+    mimetypes << QStringLiteral("application/javascript");
     m_fileDialog->setMimeTypeFilters(mimetypes);
 
-    connect(m_fileDialog, SIGNAL(finished(int)), this, SLOT(saveScriptUrlSelected(int)));
+    connect(m_fileDialog, &QDialog::finished, this, &InteractiveConsole::saveScriptUrlSelected);
     m_fileDialog->show();
 }
 
@@ -497,7 +497,7 @@ void InteractiveConsole::saveScript(const QUrl &url)
 
         m_job = KIO::put(url, -1, KIO::HideProgressInfo);
         connect(m_job.data(), SIGNAL(dataReq(KIO::Job*,QByteArray&)), this, SLOT(scriptFileDataReq(KIO::Job*,QByteArray&)));
-        connect(m_job.data(), SIGNAL(result(KJob*)), this, SLOT(reenableEditor(KJob*)));
+        connect(m_job.data(), &KJob::result, this, &InteractiveConsole::reenableEditor);
     }
 }
 
@@ -539,7 +539,7 @@ void InteractiveConsole::evaluateScript()
     format.setFontUnderline(true);
 
     if (cursor.position() > 0) {
-        cursor.insertText("\n\n");
+        cursor.insertText(QStringLiteral("\n\n"));
     }
 
     QDateTime dt = QDateTime::currentDateTime();
@@ -559,7 +559,7 @@ void InteractiveConsole::evaluateScript()
             QMetaObject::invokeMethod(m_scriptEngine, "evaluateScript", Q_ARG(QString, script));
         }
     } else if (m_mode == KWinConsole) {
-        QDBusMessage message = QDBusMessage::createMethodCall(s_kwinService, "/Scripting", QString(), "loadScript");
+        QDBusMessage message = QDBusMessage::createMethodCall(s_kwinService, QStringLiteral("/Scripting"), QString(), QStringLiteral("loadScript"));
         QList<QVariant> arguments;
         arguments << QVariant(path);
         message.setArguments(arguments);
@@ -568,9 +568,9 @@ void InteractiveConsole::evaluateScript()
             print(reply.errorMessage());
         } else {
             const int id = reply.arguments().first().toInt();
-            QDBusConnection::sessionBus().connect(s_kwinService, "/" + QString::number(id), QString(), "print", this, SLOT(print(QString)));
-            QDBusConnection::sessionBus().connect(s_kwinService, "/" + QString::number(id), QString(), "printError", this, SLOT(print(QString)));
-            message = QDBusMessage::createMethodCall(s_kwinService, "/" + QString::number(id), QString(), "run");
+            QDBusConnection::sessionBus().connect(s_kwinService, "/" + QString::number(id), QString(), QStringLiteral("print"), this, SLOT(print(QString)));
+            QDBusConnection::sessionBus().connect(s_kwinService, "/" + QString::number(id), QString(), QStringLiteral("printError"), this, SLOT(print(QString)));
+            message = QDBusMessage::createMethodCall(s_kwinService, "/" + QString::number(id), QString(), QStringLiteral("run"));
             reply = QDBusConnection::sessionBus().call(message);
             if (reply.type() == QDBusMessage::ErrorMessage) {
                 print(reply.errorMessage());
@@ -578,7 +578,7 @@ void InteractiveConsole::evaluateScript()
         }
     }
 
-    cursor.insertText("\n\n");
+    cursor.insertText(QStringLiteral("\n\n"));
     format.setFontWeight(QFont::Bold);
     // xgettext:no-c-format
     cursor.insertText(i18n("Runtime: %1ms", QString::number(t.elapsed())), format);

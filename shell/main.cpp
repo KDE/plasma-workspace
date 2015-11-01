@@ -68,7 +68,7 @@ int main(int argc, char *argv[])
 
     QApplication app(argc, argv);
 
-    KAboutData aboutData("plasmashell",
+    KAboutData aboutData(QStringLiteral("plasmashell"),
                          i18n("Plasma"),
                          QStringLiteral(PROJECT_VERSION),
                          i18n("Plasma Shell"),
@@ -77,7 +77,7 @@ int main(int argc, char *argv[])
     KAboutData::setApplicationData(aboutData);
 
     app.setQuitOnLastWindowClosed(false);
-    app.setWindowIcon(QIcon::fromTheme("plasma"));
+    app.setWindowIcon(QIcon::fromTheme(QStringLiteral("plasma")));
 
     QCommandLineParser cliOptions;
     cliOptions.addHelpOption();
@@ -171,7 +171,7 @@ int main(int argc, char *argv[])
 
     KDBusService service(KDBusService::Unique);
 
-    QObject::connect(QCoreApplication::instance(), SIGNAL(aboutToQuit()), ShellManager::instance(), SLOT(deleteLater()));
+    QObject::connect(QCoreApplication::instance(), &QCoreApplication::aboutToQuit, ShellManager::instance(), &QObject::deleteLater);
 
     return app.exec();
 }

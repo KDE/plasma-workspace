@@ -116,7 +116,7 @@ QScriptValue ScriptEngine::desktopsForActivity(QScriptContext *context, QScriptE
     }
 
     if (!found) {
-        containments.setProperty("length", 0);
+        containments.setProperty(QStringLiteral("length"), 0);
         return containments;
     }
 
@@ -149,7 +149,7 @@ QScriptValue ScriptEngine::desktopsForActivity(QScriptContext *context, QScriptE
         }
     }
 
-    containments.setProperty("length", count);
+    containments.setProperty(QStringLiteral("length"), count);
     return containments;
 }
 
@@ -210,7 +210,7 @@ QScriptValue ScriptEngine::createActivity(QScriptContext *context, QScriptEngine
 
     qDebug() << "Setting default Containment plugin:" << plugin;
 
-    if (plugin.isEmpty() || plugin == "undefined") {
+    if (plugin.isEmpty() || plugin == QLatin1String("undefined")) {
         KConfigGroup shellCfg = KConfigGroup(KSharedConfig::openConfig(env->m_corona->package().filePath("defaults")), "Desktop");
         a->setDefaultPlugin(shellCfg.readEntry("Containment", "org.kde.desktopcontainment"));
     } else {
@@ -273,13 +273,13 @@ QScriptValue ScriptEngine::activities(QScriptContext *context, QScriptEngine *en
 
 QScriptValue ScriptEngine::newPanel(QScriptContext *context, QScriptEngine *engine)
 {
-    QString plugin("org.kde.panel");
+    QString plugin(QStringLiteral("org.kde.panel"));
 
     if (context->argumentCount() > 0) {
         plugin = context->argument(0).toString();
     }
 
-    return createContainment("Panel", plugin, context, engine);
+    return createContainment(QStringLiteral("Panel"), plugin, context, engine);
 }
 
 QScriptValue ScriptEngine::createContainment(const QString &type, const QString &defaultPlugin,
@@ -304,7 +304,7 @@ QScriptValue ScriptEngine::createContainment(const QString &type, const QString 
 
     ScriptEngine *env = envFor(engine);
     Plasma::Containment *c = 0;
-    if (type == "Panel") {
+    if (type == QLatin1String("Panel")) {
         ShellCorona *sc = qobject_cast<ShellCorona *>(env->m_corona);
         StandaloneAppCorona *ac = qobject_cast<StandaloneAppCorona *>(env->m_corona);
         if (sc) {
@@ -317,7 +317,7 @@ QScriptValue ScriptEngine::createContainment(const QString &type, const QString 
     }
 
     if (c) {
-        if (type == "Panel") {
+        if (type == QLatin1String("Panel")) {
             // some defaults
             c->setFormFactor(Plasma::Types::Horizontal);
             c->setLocation(Plasma::Types::TopEdge);
@@ -349,9 +349,9 @@ QScriptValue ScriptEngine::wrap(Containment *c)
     QScriptValue v = newQObject(c, QScriptEngine::ScriptOwnership,
                                 QScriptEngine::ExcludeSuperClassProperties |
                                 QScriptEngine::ExcludeSuperClassMethods);
-    v.setProperty("widgetById", newFunction(Containment::widgetById));
-    v.setProperty("addWidget", newFunction(Containment::addWidget));
-    v.setProperty("widgets", newFunction(Containment::widgets));
+    v.setProperty(QStringLiteral("widgetById"), newFunction(Containment::widgetById));
+    v.setProperty(QStringLiteral("addWidget"), newFunction(Containment::addWidget));
+    v.setProperty(QStringLiteral("widgets"), newFunction(Containment::widgets));
 
     return v;
 }
@@ -407,7 +407,7 @@ QScriptValue ScriptEngine::panels(QScriptContext *context, QScriptEngine *engine
         }
     }
 
-    panels.setProperty("length", count);
+    panels.setProperty(QStringLiteral("length"), count);
     return panels;
 }
 
@@ -436,20 +436,20 @@ QScriptValue ScriptEngine::loadTemplate(QScriptContext *context, QScriptEngine *
     }
 
     const QString layout = context->argument(0).toString();
-    if (layout.isEmpty() || layout.contains("'")) {
+    if (layout.isEmpty() || layout.contains(QStringLiteral("'"))) {
         // qDebug() << "layout is empty";
         return false;
     }
 
-    const QString constraint = QString("[X-KDE-PluginInfo-Name] == '%2'").arg(layout);
-    KService::List offers = KServiceTypeTrader::self()->query("Plasma/LayoutTemplate", constraint);
+    const QString constraint = QStringLiteral("[X-KDE-PluginInfo-Name] == '%2'").arg(layout);
+    KService::List offers = KServiceTypeTrader::self()->query(QStringLiteral("Plasma/LayoutTemplate"), constraint);
 
     if (offers.isEmpty()) {
         // qDebug() << "offers fail" << constraint;
         return false;
     }
 
-    KPackage::Package package = KPackage::PackageLoader::self()->loadPackage("Plasma/LayoutTemplate");
+    KPackage::Package package = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Plasma/LayoutTemplate"));
     KPluginInfo info(offers.first());
 
     const QString path = QStandardPaths::locate(QStandardPaths::GenericDataLocation, package.defaultPackageRoot() + info.pluginName() + "/metadata.desktop");
@@ -479,8 +479,8 @@ QScriptValue ScriptEngine::loadTemplate(QScriptContext *context, QScriptEngine *
     }
 
     ScriptEngine *env = envFor(engine);
-    env->globalObject().setProperty("templateName", env->newVariant(info.name()), QScriptValue::ReadOnly | QScriptValue::Undeletable);
-    env->globalObject().setProperty("templateComment", env->newVariant(info.comment()), QScriptValue::ReadOnly | QScriptValue::Undeletable);
+    env->globalObject().setProperty(QStringLiteral("templateName"), env->newVariant(info.name()), QScriptValue::ReadOnly | QScriptValue::Undeletable);
+    env->globalObject().setProperty(QStringLiteral("templateComment"), env->newVariant(info.comment()), QScriptValue::ReadOnly | QScriptValue::Undeletable);
 
     QScriptValue rv = env->newObject();
     QScriptContext *ctx = env->pushContext();
@@ -513,18 +513,18 @@ QScriptValue ScriptEngine::applicationExists(QScriptContext *context, QScriptEng
         return true;
     }
 
-    if (application.contains("'")) {
+    if (application.contains(QStringLiteral("'"))) {
         // apostrophes just screw up the trader lookups below, so check for it
         return false;
     }
 
     // next, consult ksycoca for an app by that name
-    if (!KServiceTypeTrader::self()->query("Application", QString("Name =~ '%1'").arg(application)).isEmpty()) {
+    if (!KServiceTypeTrader::self()->query(QStringLiteral("Application"), QStringLiteral("Name =~ '%1'").arg(application)).isEmpty()) {
         return true;
     }
 
     // next, consult ksycoca for an app by that generic name
-    if (!KServiceTypeTrader::self()->query("Application", QString("GenericName =~ '%1'").arg(application)).isEmpty()) {
+    if (!KServiceTypeTrader::self()->query(QStringLiteral("Application"), QStringLiteral("GenericName =~ '%1'").arg(application)).isEmpty()) {
         return true;
     }
 
@@ -557,16 +557,16 @@ QScriptValue ScriptEngine::defaultApplication(QScriptContext *context, QScriptEn
     // FIXME: there are some pretty horrible hacks below, in the sense that they assume a very
     // specific implementation system. there is much room for improvement here. see
     // kdebase-runtime/kcontrol/componentchooser/ for all the gory details ;)
-    if (application.compare("mailer", Qt::CaseInsensitive) == 0) {
+    if (application.compare(QLatin1String("mailer"), Qt::CaseInsensitive) == 0) {
   //      KEMailSettings settings;
 
         // in KToolInvocation, the default is kmail; but let's be friendlier :)
 //        QString command = settings.getSetting(KEMailSettings::ClientProgram);
         QString command;
         if (command.isEmpty()) {
-            if (KService::Ptr kontact = KService::serviceByStorageId("kontact")) {
+            if (KService::Ptr kontact = KService::serviceByStorageId(QStringLiteral("kontact"))) {
                 return storageId ? kontact->storageId() : onlyExec(kontact->exec());
-            } else if (KService::Ptr kmail = KService::serviceByStorageId("kmail")) {
+            } else if (KService::Ptr kmail = KService::serviceByStorageId(QStringLiteral("kmail"))) {
                 return storageId ? kmail->storageId() : onlyExec(kmail->exec());
             }
         }
@@ -575,17 +575,17 @@ QScriptValue ScriptEngine::defaultApplication(QScriptContext *context, QScriptEn
             //if (settings.getSetting(KEMailSettings::ClientTerminal) == "true") {
         if (false) {
                 KConfigGroup confGroup(KSharedConfig::openConfig(), "General");
-                const QString preferredTerminal = confGroup.readPathEntry("TerminalApplication", QString::fromLatin1("konsole"));
-                command = preferredTerminal + QString::fromLatin1(" -e ") + command;
+                const QString preferredTerminal = confGroup.readPathEntry("TerminalApplication", QStringLiteral("konsole"));
+                command = preferredTerminal + QLatin1String(" -e ") + command;
             }
 
             return command;
         }
-    } else if (application.compare("browser", Qt::CaseInsensitive) == 0) {
+    } else if (application.compare(QLatin1String("browser"), Qt::CaseInsensitive) == 0) {
         KConfigGroup config(KSharedConfig::openConfig(), "General");
         QString browserApp = config.readPathEntry("BrowserApplication", QString());
         if (browserApp.isEmpty()) {
-            const KService::Ptr htmlApp = KMimeTypeTrader::self()->preferredService(QLatin1String("text/html"));
+            const KService::Ptr htmlApp = KMimeTypeTrader::self()->preferredService(QStringLiteral("text/html"));
             if (htmlApp) {
                 browserApp = storageId ? htmlApp->storageId() : htmlApp->exec();
             }
@@ -594,26 +594,26 @@ QScriptValue ScriptEngine::defaultApplication(QScriptContext *context, QScriptEn
         }
 
         return onlyExec(browserApp);
-    } else if (application.compare("terminal", Qt::CaseInsensitive) == 0) {
+    } else if (application.compare(QLatin1String("terminal"), Qt::CaseInsensitive) == 0) {
         KConfigGroup confGroup(KSharedConfig::openConfig(), "General");
-        return onlyExec(confGroup.readPathEntry("TerminalApplication", QString::fromLatin1("konsole")));
-    } else if (application.compare("filemanager", Qt::CaseInsensitive) == 0) {
-        KService::Ptr service = KMimeTypeTrader::self()->preferredService("inode/directory");
+        return onlyExec(confGroup.readPathEntry("TerminalApplication", QStringLiteral("konsole")));
+    } else if (application.compare(QLatin1String("filemanager"), Qt::CaseInsensitive) == 0) {
+        KService::Ptr service = KMimeTypeTrader::self()->preferredService(QStringLiteral("inode/directory"));
         if (service) {
             return storageId ? service->storageId() : onlyExec(service->exec());
         }
-    } else if (application.compare("windowmanager", Qt::CaseInsensitive) == 0) {
-        KConfig cfg("ksmserverrc", KConfig::NoGlobals);
+    } else if (application.compare(QLatin1String("windowmanager"), Qt::CaseInsensitive) == 0) {
+        KConfig cfg(QStringLiteral("ksmserverrc"), KConfig::NoGlobals);
         KConfigGroup confGroup(&cfg, "General");
-        return onlyExec(confGroup.readEntry("windowManager", QString::fromLatin1("kwin")));
+        return onlyExec(confGroup.readEntry("windowManager", QStringLiteral("kwin")));
     } else if (KService::Ptr service = KMimeTypeTrader::self()->preferredService(application)) {
         return storageId ? service->storageId() : onlyExec(service->exec());
     } else {
         // try the files in share/apps/kcm_componentchooser/
-        const QStringList services = QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, "kcm_componentchooser/");
+        const QStringList services = QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, QStringLiteral("kcm_componentchooser/"));
         qDebug() << "ok, trying in" << services;
         foreach (const QString &service, services) {
-            if (!service.endsWith(".desktop")) {
+            if (!service.endsWith(QLatin1String(".desktop"))) {
                 continue;
             }
             KConfig config(service, KConfig::SimpleConfig);
@@ -621,7 +621,7 @@ QScriptValue ScriptEngine::defaultApplication(QScriptContext *context, QScriptEn
             const QString type = cg.readEntry("valueName", QString());
             //qDebug() << "    checking" << service << type << application;
             if (type.compare(application, Qt::CaseInsensitive) == 0) {
-                KConfig store(cg.readPathEntry("storeInFile", "null"));
+                KConfig store(cg.readPathEntry("storeInFile", QStringLiteral("null")));
                 KConfigGroup storeCg(&store, cg.readEntry("valueSection", QString()));
                 const QString exec = storeCg.readPathEntry(cg.readEntry("valueName", "kcm_componenchooser_null"),
                                                            cg.readEntry("defaultImplementation", QString()));
@@ -659,16 +659,16 @@ QScriptValue ScriptEngine::applicationPath(QScriptContext *context, QScriptEngin
         return QStandardPaths::locate(QStandardPaths::ApplicationsLocation, service->entryPath());
     }
 
-    if (application.contains("'")) {
+    if (application.contains(QStringLiteral("'"))) {
         // apostrophes just screw up the trader lookups below, so check for it
         return QString();
     }
 
     // next, consult ksycoca for an app by that name
-    KService::List offers = KServiceTypeTrader::self()->query("Application", QString("Name =~ '%1'").arg(application));
+    KService::List offers = KServiceTypeTrader::self()->query(QStringLiteral("Application"), QStringLiteral("Name =~ '%1'").arg(application));
     if (offers.isEmpty()) {
         // next, consult ksycoca for an app by that generic name
-        offers = KServiceTypeTrader::self()->query("Application", QString("GenericName =~ '%1'").arg(application));
+        offers = KServiceTypeTrader::self()->query(QStringLiteral("Application"), QStringLiteral("GenericName =~ '%1'").arg(application));
     }
 
     if (!offers.isEmpty()) {
@@ -692,19 +692,19 @@ QScriptValue ScriptEngine::userDataPath(QScriptContext *context, QScriptEngine *
     }
 
     QStandardPaths::StandardLocation location = QStandardPaths::GenericDataLocation;
-    if (type.compare("desktop", Qt::CaseInsensitive) == 0) {
+    if (type.compare(QLatin1String("desktop"), Qt::CaseInsensitive) == 0) {
         location = QStandardPaths::DesktopLocation;
-    } else if (type.compare("documents", Qt::CaseInsensitive) == 0) {
+    } else if (type.compare(QLatin1String("documents"), Qt::CaseInsensitive) == 0) {
         location = QStandardPaths::DocumentsLocation;
-    } else if (type.compare("music", Qt::CaseInsensitive) == 0) {
+    } else if (type.compare(QLatin1String("music"), Qt::CaseInsensitive) == 0) {
         location = QStandardPaths::MusicLocation;
-    } else if (type.compare("video", Qt::CaseInsensitive) == 0) {
+    } else if (type.compare(QLatin1String("video"), Qt::CaseInsensitive) == 0) {
         location = QStandardPaths::MoviesLocation;
-    } else if (type.compare("downloads", Qt::CaseInsensitive) == 0) {
+    } else if (type.compare(QLatin1String("downloads"), Qt::CaseInsensitive) == 0) {
         location = QStandardPaths::DownloadLocation;
-    } else if (type.compare("pictures", Qt::CaseInsensitive) == 0) {
+    } else if (type.compare(QLatin1String("pictures"), Qt::CaseInsensitive) == 0) {
         location = QStandardPaths::PicturesLocation;
-    } else if (type.compare("config", Qt::CaseInsensitive) == 0) {
+    } else if (type.compare(QLatin1String("config"), Qt::CaseInsensitive) == 0) {
         location = QStandardPaths::GenericConfigLocation;
     }
     if (context->argumentCount() > 1) {
@@ -731,7 +731,7 @@ QScriptValue ScriptEngine::knownWallpaperPlugins(QScriptContext *context, QScrip
         constraint.append("[X-Plasma-FormFactors] ~~ '").append(formFactor).append("'");
     }
 
-    QList<KPluginMetaData> wallpapers = KPackage::PackageLoader::self()->listPackages("Plasma/Wallpaper", QString());
+    QList<KPluginMetaData> wallpapers = KPackage::PackageLoader::self()->listPackages(QStringLiteral("Plasma/Wallpaper"), QString());
     QScriptValue rv = engine->newArray(wallpapers.size());
     for (auto wp : wallpapers) {
         rv.setProperty(wp.name(), engine->newArray(0));
@@ -787,32 +787,32 @@ void ScriptEngine::setupEngine()
     while (it.hasNext()) {
         it.next();
         // we provide our own print implementation, but we want the rest
-        if (it.name() != "print") {
+        if (it.name() != QLatin1String("print")) {
             m_scriptSelf.setProperty(it.name(), it.value());
         }
     }
 
-    m_scriptSelf.setProperty("QRectF", constructQRectFClass(this));
-    m_scriptSelf.setProperty("createActivity", newFunction(ScriptEngine::createActivity));
-    m_scriptSelf.setProperty("setCurrentActivity", newFunction(ScriptEngine::setCurrentActivity));
-    m_scriptSelf.setProperty("currentActivity", newFunction(ScriptEngine::currentActivity));
-    m_scriptSelf.setProperty("activities", newFunction(ScriptEngine::activities));
-    m_scriptSelf.setProperty("Panel", newFunction(ScriptEngine::newPanel, newObject()));
-    m_scriptSelf.setProperty("desktopsForActivity", newFunction(ScriptEngine::desktopsForActivity));
-    m_scriptSelf.setProperty("desktops", newFunction(ScriptEngine::desktops));
-    m_scriptSelf.setProperty("desktopById", newFunction(ScriptEngine::desktopById));
-    m_scriptSelf.setProperty("desktopForScreen", newFunction(ScriptEngine::desktopForScreen));
-    m_scriptSelf.setProperty("panelById", newFunction(ScriptEngine::panelById));
-    m_scriptSelf.setProperty("panels", newFunction(ScriptEngine::panels));
-    m_scriptSelf.setProperty("fileExists", newFunction(ScriptEngine::fileExists));
-    m_scriptSelf.setProperty("loadTemplate", newFunction(ScriptEngine::loadTemplate));
-    m_scriptSelf.setProperty("applicationExists", newFunction(ScriptEngine::applicationExists));
-    m_scriptSelf.setProperty("defaultApplication", newFunction(ScriptEngine::defaultApplication));
-    m_scriptSelf.setProperty("userDataPath", newFunction(ScriptEngine::userDataPath));
-    m_scriptSelf.setProperty("applicationPath", newFunction(ScriptEngine::applicationPath));
-    m_scriptSelf.setProperty("knownWallpaperPlugins", newFunction(ScriptEngine::knownWallpaperPlugins));
-    m_scriptSelf.setProperty("ConfigFile", newFunction(ScriptEngine::configFile));
-    m_scriptSelf.setProperty("gridUnit", ScriptEngine::gridUnit());
+    m_scriptSelf.setProperty(QStringLiteral("QRectF"), constructQRectFClass(this));
+    m_scriptSelf.setProperty(QStringLiteral("createActivity"), newFunction(ScriptEngine::createActivity));
+    m_scriptSelf.setProperty(QStringLiteral("setCurrentActivity"), newFunction(ScriptEngine::setCurrentActivity));
+    m_scriptSelf.setProperty(QStringLiteral("currentActivity"), newFunction(ScriptEngine::currentActivity));
+    m_scriptSelf.setProperty(QStringLiteral("activities"), newFunction(ScriptEngine::activities));
+    m_scriptSelf.setProperty(QStringLiteral("Panel"), newFunction(ScriptEngine::newPanel, newObject()));
+    m_scriptSelf.setProperty(QStringLiteral("desktopsForActivity"), newFunction(ScriptEngine::desktopsForActivity));
+    m_scriptSelf.setProperty(QStringLiteral("desktops"), newFunction(ScriptEngine::desktops));
+    m_scriptSelf.setProperty(QStringLiteral("desktopById"), newFunction(ScriptEngine::desktopById));
+    m_scriptSelf.setProperty(QStringLiteral("desktopForScreen"), newFunction(ScriptEngine::desktopForScreen));
+    m_scriptSelf.setProperty(QStringLiteral("panelById"), newFunction(ScriptEngine::panelById));
+    m_scriptSelf.setProperty(QStringLiteral("panels"), newFunction(ScriptEngine::panels));
+    m_scriptSelf.setProperty(QStringLiteral("fileExists"), newFunction(ScriptEngine::fileExists));
+    m_scriptSelf.setProperty(QStringLiteral("loadTemplate"), newFunction(ScriptEngine::loadTemplate));
+    m_scriptSelf.setProperty(QStringLiteral("applicationExists"), newFunction(ScriptEngine::applicationExists));
+    m_scriptSelf.setProperty(QStringLiteral("defaultApplication"), newFunction(ScriptEngine::defaultApplication));
+    m_scriptSelf.setProperty(QStringLiteral("userDataPath"), newFunction(ScriptEngine::userDataPath));
+    m_scriptSelf.setProperty(QStringLiteral("applicationPath"), newFunction(ScriptEngine::applicationPath));
+    m_scriptSelf.setProperty(QStringLiteral("knownWallpaperPlugins"), newFunction(ScriptEngine::knownWallpaperPlugins));
+    m_scriptSelf.setProperty(QStringLiteral("ConfigFile"), newFunction(ScriptEngine::configFile));
+    m_scriptSelf.setProperty(QStringLiteral("gridUnit"), ScriptEngine::gridUnit());
 
     setGlobalObject(m_scriptSelf);
 }
@@ -842,13 +842,13 @@ QScriptValue ScriptEngine::desktops(QScriptContext *context, QScriptEngine *engi
         }
     }
 
-    containments.setProperty("length", count);
+    containments.setProperty(QStringLiteral("length"), count);
     return containments;
 }
 
 QScriptValue ScriptEngine::gridUnit()
 {
-    int gridUnit = QFontMetrics(QGuiApplication::font()).boundingRect("M").height();
+    int gridUnit = QFontMetrics(QGuiApplication::font()).boundingRect(QStringLiteral("M")).height();
     if (gridUnit % 2 != 0) {
         gridUnit++;
     }
@@ -870,7 +870,7 @@ bool ScriptEngine::evaluateScript(const QString &script, const QString &path)
         QString error = i18n("Error: %1 at line %2\n\nBacktrace:\n%3",
                              uncaughtException().toString(),
                              QString::number(uncaughtExceptionLineNumber()),
-                             uncaughtExceptionBacktrace().join("\n  "));
+                             uncaughtExceptionBacktrace().join(QStringLiteral("\n  ")));
         emit printError(error);
         return false;
     }

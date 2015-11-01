@@ -47,7 +47,7 @@ KSystemActivityDialog::KSystemActivityDialog(QWidget *parent)
     : QDialog(parent), m_processList(0)
 {
     setWindowTitle(i18n("System Activity"));
-    setWindowIcon(QIcon::fromTheme(QLatin1String( "utilities-system-monitor" )));
+    setWindowIcon(QIcon::fromTheme(QStringLiteral( "utilities-system-monitor" )));
     QVBoxLayout *mainLayout = new QVBoxLayout;
     setLayout(mainLayout);
     mainLayout->addWidget(&m_processList);
@@ -64,7 +64,7 @@ KSystemActivityDialog::KSystemActivityDialog(QWidget *parent)
 
     // We need the resizing to be done once the dialog has been initialized
     // otherwise we don't actually have a window.
-    QTimer::singleShot(0, this, SLOT(slotInit()));
+    QTimer::singleShot(0, this, &KSystemActivityDialog::slotInit);
 }
 
 void KSystemActivityDialog::slotInit()

@@ -43,7 +43,7 @@ SearchRunner::SearchRunner(QObject* parent, const QString& serviceId)
 
 void SearchRunner::init()
 {
-    Plasma::RunnerSyntax syntax(":q", i18n("Search through files, emails and contacts"));
+    Plasma::RunnerSyntax syntax(QStringLiteral(":q"), i18n("Search through files, emails and contacts"));
 }
 
 SearchRunner::~SearchRunner()
@@ -66,15 +66,15 @@ QStringList SearchRunner::categories() const
 QIcon SearchRunner::categoryIcon(const QString& category) const
 {
     if (category == i18n("Audio")) {
-        return QIcon::fromTheme("audio");
+        return QIcon::fromTheme(QStringLiteral("audio"));
     } else if (category == i18n("Image")) {
-        return QIcon::fromTheme("image");
+        return QIcon::fromTheme(QStringLiteral("image"));
     } else if (category == i18n("Document")) {
-        return QIcon::fromTheme("application-pdf");
+        return QIcon::fromTheme(QStringLiteral("application-pdf"));
     } else if (category == i18n("Video")) {
-        return QIcon::fromTheme("video");
+        return QIcon::fromTheme(QStringLiteral("video"));
     } else if (category == i18n("Folder")) {
-        return QIcon::fromTheme("folder");
+        return QIcon::fromTheme(QStringLiteral("folder"));
     }
 
     return Plasma::AbstractRunner::categoryIcon(category);
@@ -122,7 +122,7 @@ QList<Plasma::QueryMatch> SearchRunner::match(Plasma::RunnerContext& context, co
         relevance -= 0.05;
 
         if (localUrl.startsWith(QDir::homePath())) {
-            localUrl.replace(0, QDir::homePath().length(), QLatin1String("~"));
+            localUrl.replace(0, QDir::homePath().length(), QStringLiteral("~"));
         }
         match.setSubtext(localUrl);
 
@@ -146,7 +146,7 @@ void SearchRunner::match(Plasma::RunnerContext& context)
     if (text.length() <= 3) {
         QEventLoop loop;
         QTimer timer;
-        connect(&timer, SIGNAL(timeout()), &loop, SLOT(quit()));
+        connect(&timer, &QTimer::timeout, &loop, &QEventLoop::quit);
         timer.setSingleShot(true);
         timer.start(100);
         loop.exec();

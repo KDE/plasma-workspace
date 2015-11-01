@@ -80,7 +80,7 @@ bool BacktraceGenerator::start()
     }
 
     m_proc = new KProcess;
-    m_proc->setEnv("LC_ALL", "C");   // force C locale
+    m_proc->setEnv(QStringLiteral("LC_ALL"), QStringLiteral("C"));   // force C locale
 
     m_temp = new QTemporaryFile;
     m_temp->open();
@@ -146,7 +146,7 @@ void BacktraceGenerator::slotProcessExited(int exitCode, QProcess::ExitStatus ex
     }
 
     //no translation, string appears in the report
-    QString tmp("Application: %progname (%execname), signal: %signame\n");
+    QString tmp(QStringLiteral("Application: %progname (%execname), signal: %signame\n"));
     Debugger::expandString(tmp);
 
     m_parsedBacktrace = tmp + m_parser->parsedBacktrace();

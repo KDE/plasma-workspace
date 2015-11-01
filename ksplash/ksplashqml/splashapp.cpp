@@ -51,20 +51,20 @@ SplashApp::SplashApp(int &argc, char ** argv)
       m_startTime(QDateTime::currentDateTime())
 {
     QCommandLineParser parser;
-    parser.addOption(QCommandLineOption("test", "Run in test mode"));
-    parser.addOption(QCommandLineOption("window", "Run in windowed mode"));
-    parser.addOption(QCommandLineOption("nofork", "Don't fork"));
-    parser.addOption(QCommandLineOption("pid", "Print the pid of the child process"));
+    parser.addOption(QCommandLineOption(QStringLiteral("test"), QStringLiteral("Run in test mode")));
+    parser.addOption(QCommandLineOption(QStringLiteral("window"), QStringLiteral("Run in windowed mode")));
+    parser.addOption(QCommandLineOption(QStringLiteral("nofork"), QStringLiteral("Don't fork")));
+    parser.addOption(QCommandLineOption(QStringLiteral("pid"), QStringLiteral("Print the pid of the child process")));
     parser.addHelpOption();
 
     parser.process(*this);
-    m_testing = parser.isSet("test");
-    m_window = parser.isSet("window");
+    m_testing = parser.isSet(QStringLiteral("test"));
+    m_window = parser.isSet(QStringLiteral("window"));
 
     foreach(QScreen* screen, screens())
         adoptScreen(screen);
 
-    setStage("initial");
+    setStage(QStringLiteral("initial"));
 
     QPixmap cursor(32, 32);
     cursor.fill(Qt::transparent);
@@ -74,7 +74,7 @@ SplashApp::SplashApp(int &argc, char ** argv)
         m_timer.start(TEST_STEP_INTERVAL, this);
     }
 
-    connect(this, SIGNAL(screenAdded(QScreen*)), this, SLOT(adoptScreen(QScreen*)));
+    connect(this, &QGuiApplication::screenAdded, this, &SplashApp::adoptScreen);
 
     QDBusConnection dbus = QDBusConnection::sessionBus();
     dbus.registerObject(QStringLiteral("/KSplash"), this, QDBusConnection::ExportScriptableSlots);

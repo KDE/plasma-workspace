@@ -78,7 +78,7 @@ ShellManager::ShellManager()
     // Using setCrashHandler, we end up in an infinite loop instead of quitting,
     // use setEmergencySaveFunction instead to avoid this.
     KCrash::setEmergencySaveFunction(ShellManager::crashHandler);
-    QTimer::singleShot(15 * 1000, this, SLOT(resetCrashCount()));
+    QTimer::singleShot(15 * 1000, this, &ShellManager::resetCrashCount);
 
     connect(
         &d->shellUpdateDelay, &QTimer::timeout,

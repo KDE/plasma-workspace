@@ -54,7 +54,7 @@ void KillRunnerConfig::load()
 {
     KCModule::load();
 
-    KSharedConfig::Ptr cfg = KSharedConfig::openConfig("krunnerrc");
+    KSharedConfig::Ptr cfg = KSharedConfig::openConfig(QStringLiteral("krunnerrc"));
     KConfigGroup grp = cfg->group("Runners");
     grp = KConfigGroup(&grp, "Kill Runner");
 
@@ -69,7 +69,7 @@ void KillRunnerConfig::save()
 {
     KCModule::save();
 
-    KSharedConfig::Ptr cfg = KSharedConfig::openConfig("krunnerrc");
+    KSharedConfig::Ptr cfg = KSharedConfig::openConfig(QStringLiteral("krunnerrc"));
     KConfigGroup grp = cfg->group("Runners");
     grp = KConfigGroup(&grp, "Kill Runner");
 

@@ -26,7 +26,7 @@
 
 void QmlWallpaperPackage::initPackage(KPackage::Package *package)
 {
-    package->addFileDefinition("mainscript", "ui/main.qml", i18n("Main Script File"));
+    package->addFileDefinition("mainscript", QStringLiteral("ui/main.qml"), i18n("Main Script File"));
     package->setRequired("mainscript", true);
 
     QStringList platform = KDeclarative::KDeclarative::runtimePlatform();
@@ -37,34 +37,34 @@ void QmlWallpaperPackage::initPackage(KPackage::Package *package)
             it.setValue("platformcontents/" + it.value());
         }
 
-        platform.append("contents");
+        platform.append(QStringLiteral("contents"));
         package->setContentsPrefixPaths(platform);
     }
 
-    package->setDefaultPackageRoot("plasma/wallpapers/");
+    package->setDefaultPackageRoot(QStringLiteral("plasma/wallpapers/"));
 
-    package->addDirectoryDefinition("images", "images", i18n("Images"));
-    package->addDirectoryDefinition("theme", "theme", i18n("Themed Images"));
+    package->addDirectoryDefinition("images", QStringLiteral("images"), i18n("Images"));
+    package->addDirectoryDefinition("theme", QStringLiteral("theme"), i18n("Themed Images"));
     QStringList mimetypes;
-    mimetypes << "image/svg+xml" << "image/png" << "image/jpeg";
+    mimetypes << QStringLiteral("image/svg+xml") << QStringLiteral("image/png") << QStringLiteral("image/jpeg");
     package->setMimeTypes("images", mimetypes);
     package->setMimeTypes("theme", mimetypes);
 
-    package->addDirectoryDefinition("config", "config", i18n("Configuration Definitions"));
+    package->addDirectoryDefinition("config", QStringLiteral("config"), i18n("Configuration Definitions"));
     mimetypes.clear();
-    mimetypes << "text/xml";
+    mimetypes << QStringLiteral("text/xml");
     package->setMimeTypes("config", mimetypes);
 
-    package->addDirectoryDefinition("ui", "ui", i18n("User Interface"));
+    package->addDirectoryDefinition("ui", QStringLiteral("ui"), i18n("User Interface"));
 
-    package->addDirectoryDefinition("data", "data", i18n("Data Files"));
+    package->addDirectoryDefinition("data", QStringLiteral("data"), i18n("Data Files"));
 
-    package->addDirectoryDefinition("scripts", "code", i18n("Executable Scripts"));
+    package->addDirectoryDefinition("scripts", QStringLiteral("code"), i18n("Executable Scripts"));
     mimetypes.clear();
-    mimetypes << "text/plain";
+    mimetypes << QStringLiteral("text/plain");
     package->setMimeTypes("scripts", mimetypes);
 
-    package->addDirectoryDefinition("translations", "locale", i18n("Translations"));
+    package->addDirectoryDefinition("translations", QStringLiteral("locale"), i18n("Translations"));
 }
 
 K_EXPORT_KPACKAGE_PACKAGE_WITH_JSON(QmlWallpaperPackage, "plasma-packagestructure-wallpaper.json")

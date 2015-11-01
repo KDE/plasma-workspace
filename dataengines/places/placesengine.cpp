@@ -30,7 +30,7 @@ PlacesEngine::PlacesEngine(QObject *parent, const QVariantList &args)
 {
     m_placesModel = new KFilePlacesModel(this);
     m_proxyModel = new PlacesProxyModel(this, m_placesModel);
-    setModel("places", m_proxyModel);
+    setModel(QStringLiteral("places"), m_proxyModel);
 }
 
 PlacesEngine::~PlacesEngine()
@@ -39,7 +39,7 @@ PlacesEngine::~PlacesEngine()
 
 Plasma::Service *PlacesEngine::serviceForSource(const QString &source)
 {
-    if (source == "places") {
+    if (source == QLatin1String("places")) {
         return new PlaceService(this, m_placesModel);
     }
 

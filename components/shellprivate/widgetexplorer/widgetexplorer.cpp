@@ -104,12 +104,12 @@ public:
 void WidgetExplorerPrivate::initFilters()
 {
     filterModel.addFilter(i18n("All Widgets"),
-                          KCategorizedItemsViewModels::Filter(), QIcon::fromTheme("plasma"));
+                          KCategorizedItemsViewModels::Filter(), QIcon::fromTheme(QStringLiteral("plasma")));
 
     // Filters: Special
     filterModel.addFilter(i18n("Running"),
-                          KCategorizedItemsViewModels::Filter("running", true),
-                          QIcon::fromTheme("dialog-ok"));
+                          KCategorizedItemsViewModels::Filter(QStringLiteral("running"), true),
+                          QIcon::fromTheme(QStringLiteral("dialog-ok")));
 
     filterModel.addSeparator(i18n("Categories:"));
 
@@ -118,11 +118,11 @@ void WidgetExplorerPrivate::initFilters()
     QSet<QString> existingCategories = itemModel.categories();
     //foreach (const QString &category, Plasma::Applet::listCategories(application)) {
     QStringList cats;
-    const QList<KPluginMetaData> list = KPackage::PackageLoader::self()->listPackages("Plasma/Applet", "plasma/plasmoids");
+    const QList<KPluginMetaData> list = KPackage::PackageLoader::self()->listPackages(QStringLiteral("Plasma/Applet"), QStringLiteral("plasma/plasmoids"));
 
     for (auto data : list) {
         const KPluginInfo info(data);
-        if (info.property("NoDisplay").toBool() || info.category() == "Containments" ||
+        if (info.property(QStringLiteral("NoDisplay")).toBool() || info.category() == QLatin1String("Containments") ||
             info.category().isEmpty()) {
             // we don't want to show the hidden category
             continue;
@@ -143,7 +143,7 @@ void WidgetExplorerPrivate::initFilters()
 
     foreach (const catPair &category, categories) {
         filterModel.addFilter(category.first,
-                              KCategorizedItemsViewModels::Filter("category", category.second));
+                              KCategorizedItemsViewModels::Filter(QStringLiteral("category"), category.second));
     }
 
 }
@@ -166,7 +166,7 @@ QList <QObject *>  WidgetExplorer::widgetsMenuActions()
     QSignalMapper *mapper = new QSignalMapper(this);
     QObject::connect(mapper, SIGNAL(mapped(QString)), this, SLOT(downloadWidgets(QString)));
 
-    WidgetAction *action = new WidgetAction(QIcon::fromTheme("applications-internet"),
+    WidgetAction *action = new WidgetAction(QIcon::fromTheme(QStringLiteral("applications-internet")),
                                   i18n("Download New Plasma Widgets"), this);
     QObject::connect(action, SIGNAL(triggered(bool)), mapper, SLOT(map()));
     mapper->setMapping(action, QString());
@@ -176,9 +176,9 @@ QList <QObject *>  WidgetExplorer::widgetsMenuActions()
     action->setSeparator(true);
     actionList << action;
 
-    action = new WidgetAction(QIcon::fromTheme("package-x-generic"),
+    action = new WidgetAction(QIcon::fromTheme(QStringLiteral("package-x-generic")),
                          i18n("Install Widget From Local File..."), this);
-    QObject::connect(action, SIGNAL(triggered(bool)), this, SLOT(openWidgetFile()));
+    QObject::connect(action, &QAction::triggered, this, &WidgetExplorer::openWidgetFile);
     actionList << action;
 
     return actionList;
@@ -342,7 +342,7 @@ void WidgetExplorer::setContainment(Plasma::Containment *containment)
 
         if (d->containment) {
             connect(d->containment, SIGNAL(destroyed(QObject*)), this, SLOT(containmentDestroyed()));
-            connect(d->containment, SIGNAL(immutabilityChanged(Plasma::Types::ImmutabilityType)), this, SLOT(immutabilityChanged(Plasma::Types::ImmutabilityType)));
+            connect(d->containment, &Applet::immutabilityChanged, this, &WidgetExplorer::immutabilityChanged);
 
         }
 
@@ -402,7 +402,7 @@ void WidgetExplorer::immutabilityChanged(Plasma::Types::ImmutabilityType type)
 void WidgetExplorer::downloadWidgets(const QString &type)
 {
     if (!d->newStuffDialog) {
-        d->newStuffDialog = new KNS3::DownloadDialog( QString::fromLatin1("plasmoids.knsrc") );
+        d->newStuffDialog = new KNS3::DownloadDialog( QLatin1String("plasmoids.knsrc") );
         d->newStuffDialog.data()->setWindowTitle(i18n("Download New Plasma Widgets"));
         connect(d->newStuffDialog.data(), SIGNAL(accepted()), SLOT(newStuffFinished()));
     }

@@ -25,7 +25,7 @@ AppService::AppService(AppSource *source) :
     Plasma::Service(source),
     m_source(source)
 {
-    setName("apps");
+    setName(QStringLiteral("apps"));
 }
 
 AppService::~AppService()

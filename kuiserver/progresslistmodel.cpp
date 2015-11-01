@@ -69,8 +69,8 @@ ProgressListModel::ProgressListModel(QObject *parent)
 ProgressListModel::~ProgressListModel()
 {
     QDBusConnection sessionBus = QDBusConnection::sessionBus();
-    sessionBus.unregisterService("org.kde.JobViewServer");
-    sessionBus.unregisterService("org.kde.kuiserver");
+    sessionBus.unregisterService(QStringLiteral("org.kde.JobViewServer"));
+    sessionBus.unregisterService(QStringLiteral("org.kde.kuiserver"));
 
     qDeleteAll(m_jobViews);
     qDeleteAll(m_registeredServices);

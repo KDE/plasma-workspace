@@ -38,7 +38,7 @@ SessionRunner::SessionRunner(QObject *parent, const QVariantList &args)
     setIgnoredTypes(Plasma::RunnerContext::Directory | Plasma::RunnerContext::File | 
                     Plasma::RunnerContext::NetworkLocation);
 
-    m_canLogout = KAuthorized::authorizeKAction("logout") && KAuthorized::authorize("logout");
+    m_canLogout = KAuthorized::authorizeKAction(QStringLiteral("logout")) && KAuthorized::authorize(QStringLiteral("logout"));
     if (m_canLogout) {
         addSyntax(Plasma::RunnerSyntax(i18nc("log out command", "logout"),
                   i18n("Logs out, exiting the current desktop session")));
@@ -46,7 +46,7 @@ SessionRunner::SessionRunner(QObject *parent, const QVariantList &args)
                   i18n("Turns off the computer")));
     }
 
-    if (KAuthorized::authorizeKAction("lock_screen") && m_canLogout) {
+    if (KAuthorized::authorizeKAction(QStringLiteral("lock_screen")) && m_canLogout) {
         addSyntax(Plasma::RunnerSyntax(i18nc("lock screen command", "lock"),
                   i18n("Locks the current sessions and starts the screen saver")));
     }
@@ -66,7 +66,7 @@ SessionRunner::SessionRunner(QObject *parent, const QVariantList &args)
     addSyntax(fastUserSwitchSyntax);
 
     //"SESSIONS" should not be translated; it's used programmaticaly
-    setDefaultSyntax(Plasma::RunnerSyntax("SESSIONS", i18n("Lists all sessions")));
+    setDefaultSyntax(Plasma::RunnerSyntax(QStringLiteral("SESSIONS"), i18n("Lists all sessions")));
 
 }
 
@@ -84,7 +84,7 @@ void SessionRunner::matchCommands(QList<Plasma::QueryMatch> &matches, const QStr
             term.compare(i18n("log out"), Qt::CaseInsensitive) == 0) {
         Plasma::QueryMatch match(this);
         match.setText(i18nc("log out command","Logout"));
-        match.setIcon(QIcon::fromTheme("system-log-out"));
+        match.setIcon(QIcon::fromTheme(QStringLiteral("system-log-out")));
         match.setData(LogoutAction);
         match.setType(Plasma::QueryMatch::ExactMatch);
         match.setRelevance(0.9);
@@ -93,7 +93,7 @@ void SessionRunner::matchCommands(QList<Plasma::QueryMatch> &matches, const QStr
             term.compare(i18nc("restart computer command", "reboot"), Qt::CaseInsensitive) == 0) {
         Plasma::QueryMatch match(this);
         match.setText(i18n("Restart the computer"));
-        match.setIcon(QIcon::fromTheme("system-reboot"));
+        match.setIcon(QIcon::fromTheme(QStringLiteral("system-reboot")));
         match.setData(RestartAction);
         match.setType(Plasma::QueryMatch::ExactMatch);
         match.setRelevance(0.9);
@@ -101,16 +101,16 @@ void SessionRunner::matchCommands(QList<Plasma::QueryMatch> &matches, const QStr
     } else if (term.compare(i18nc("shutdown computer command","shutdown"), Qt::CaseInsensitive) == 0) {
         Plasma::QueryMatch match(this);
         match.setText(i18n("Shutdown the computer"));
-        match.setIcon(QIcon::fromTheme("system-shutdown"));
+        match.setIcon(QIcon::fromTheme(QStringLiteral("system-shutdown")));
         match.setData(ShutdownAction);
         match.setType(Plasma::QueryMatch::ExactMatch);
         match.setRelevance(0.9);
         matches << match;
     } else if (term.compare(i18nc("lock screen command","lock"), Qt::CaseInsensitive) == 0) {
-        if (KAuthorized::authorizeKAction("lock_screen")) {
+        if (KAuthorized::authorizeKAction(QStringLiteral("lock_screen"))) {
             Plasma::QueryMatch match(this);
             match.setText(i18n("Lock the screen"));
-            match.setIcon(QIcon::fromTheme("system-lock-screen"));
+            match.setIcon(QIcon::fromTheme(QStringLiteral("system-lock-screen")));
             match.setData(LockAction);
             match.setType(Plasma::QueryMatch::ExactMatch);
             match.setRelevance(0.9);
@@ -134,7 +134,7 @@ void SessionRunner::match(Plasma::RunnerContext &context)
     // first compare with SESSIONS. this must *NOT* be translated (i18n)
     // as it is used as an internal command trigger (e.g. via d-bus),
     // not as a user supplied query. and yes, "Ugh, magic strings"
-    bool listAll = term.compare("SESSIONS", Qt::CaseInsensitive) == 0 ||
+    bool listAll = term.compare(QLatin1String("SESSIONS"), Qt::CaseInsensitive) == 0 ||
                    term.compare(i18nc("User sessions", "sessions"), Qt::CaseInsensitive) == 0;
 
     if (!listAll) {
@@ -150,18 +150,18 @@ void SessionRunner::match(Plasma::RunnerContext &context)
         }
     }
 
-    qDebug() << "session switching to" << (listAll ? "all sessions" : term);
+    qDebug() << "session switching to" << (listAll ? QStringLiteral("all sessions") : term);
     bool switchUser = listAll ||
                       term.compare(i18n("switch user"), Qt::CaseInsensitive) == 0 ||
                       term.compare(i18n("new session"), Qt::CaseInsensitive) == 0;
 
     if (switchUser &&
-        KAuthorized::authorizeKAction("start_new_session") &&
+        KAuthorized::authorizeKAction(QStringLiteral("start_new_session")) &&
         dm.isSwitchable() &&
         dm.numReserve() >= 0) {
         Plasma::QueryMatch match(this);
         match.setType(Plasma::QueryMatch::ExactMatch);
-        match.setIcon(QIcon::fromTheme("system-switch-user"));
+        match.setIcon(QIcon::fromTheme(QStringLiteral("system-switch-user")));
         match.setText(i18n("New Session"));
         matches << match;
     }
@@ -198,7 +198,7 @@ void SessionRunner::match(Plasma::RunnerContext &context)
                 Plasma::QueryMatch match(this);
                 match.setType(type);
                 match.setRelevance(relevance);
-                match.setIcon(QIcon::fromTheme("user-identity"));
+                match.setIcon(QIcon::fromTheme(QStringLiteral("user-identity")));
                 match.setText(name);
                 match.setData(QString::number(session.vt));
                 matches << match;
@@ -269,8 +269,8 @@ void SessionRunner::run(const Plasma::RunnerContext &context, const Plasma::Quer
 
 void SessionRunner::lock()
 {
-    QString interface("org.freedesktop.ScreenSaver");
-    org::freedesktop::ScreenSaver screensaver(interface, "/ScreenSaver",
+    QString interface(QStringLiteral("org.freedesktop.ScreenSaver"));
+    org::freedesktop::ScreenSaver screensaver(interface, QStringLiteral("/ScreenSaver"),
                                               QDBusConnection::sessionBus());
     if (screensaver.isValid()) {
         screensaver.Lock();

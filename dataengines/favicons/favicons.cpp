@@ -38,11 +38,11 @@ bool FaviconsEngine::updateSourceEvent( const QString &identifier )
 {
     FaviconProvider *provider = new FaviconProvider(this, identifier);
 
-    connect(provider, SIGNAL(finished(FaviconProvider*)), this, SLOT(finished(FaviconProvider*)));
-    connect(provider, SIGNAL(error(FaviconProvider*)), this, SLOT(error(FaviconProvider*)));
+    connect(provider, &FaviconProvider::finished, this, &FaviconsEngine::finished);
+    connect(provider, &FaviconProvider::error, this, &FaviconsEngine::error);
 
     if (!provider->image().isNull()) {
-        setData(provider->identifier(), "Icon", provider->image());
+        setData(provider->identifier(), QStringLiteral("Icon"), provider->image());
     }
 
     return true;
@@ -56,7 +56,7 @@ bool FaviconsEngine::sourceRequestEvent(const QString &identifier)
 
 void FaviconsEngine::finished(FaviconProvider *provider)
 {
-    setData(provider->identifier(), "Icon", provider->image());
+    setData(provider->identifier(), QStringLiteral("Icon"), provider->image());
     provider->deleteLater();
 }
 

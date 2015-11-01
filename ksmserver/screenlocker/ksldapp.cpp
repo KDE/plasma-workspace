@@ -163,9 +163,9 @@ void KSldApp::initialize()
     // Global keys
     m_actionCollection = new KActionCollection(this);
 
-    if (KAuthorized::authorizeKAction(QLatin1String("lock_screen"))) {
+    if (KAuthorized::authorizeKAction(QStringLiteral("lock_screen"))) {
         qDebug() << "Configuring Lock Action";
-        QAction *a = m_actionCollection->addAction(QLatin1String("Lock Session"));
+        QAction *a = m_actionCollection->addAction(QStringLiteral("Lock Session"));
         a->setText(i18n("Lock Session"));
         KGlobalAccel::self()->setGlobalShortcut(a, QList<QKeySequence>() << Qt::ALT+Qt::CTRL+Qt::Key_L << Qt::Key_ScreenSaver );
         connect(a, &QAction::triggered, this,
@@ -535,10 +535,10 @@ void KSldApp::doUnlock()
 
 bool KSldApp::isFdoPowerInhibited() const
 {
-    QDBusMessage msg = QDBusMessage::createMethodCall("org.kde.Solid.PowerManagement.PolicyAgent",
-                                                      "/org/kde/Solid/PowerManagement/PolicyAgent",
-                                                      "org.kde.Solid.PowerManagement.PolicyAgent",
-                                                      "HasInhibition");
+    QDBusMessage msg = QDBusMessage::createMethodCall(QStringLiteral("org.kde.Solid.PowerManagement.PolicyAgent"),
+                                                      QStringLiteral("/org/kde/Solid/PowerManagement/PolicyAgent"),
+                                                      QStringLiteral("org.kde.Solid.PowerManagement.PolicyAgent"),
+                                                      QStringLiteral("HasInhibition"));
     msg << (uint) 5; // PowerDevil::PolicyAgent::RequiredPolicy::ChangeScreenSettings | PowerDevil::PolicyAgent::RequiredPolicy::InterruptSession
     QDBusReply<bool> reply = QDBusConnection::sessionBus().asyncCall(msg);
 
@@ -549,14 +549,14 @@ void KSldApp::startLockProcess(EstablishLock establishLock)
 {
     QStringList args;
     if (establishLock == EstablishLock::Immediate) {
-        args << "--immediateLock";
+        args << QStringLiteral("--immediateLock");
     }
     if (m_lockGrace > 0) {
-        args << "--graceTime";
+        args << QStringLiteral("--graceTime");
         args << QString::number(m_lockGrace);
     }
     if (m_lockGrace == -1) {
-        args << "--nolock";
+        args << QStringLiteral("--nolock");
     }
 
     // start the Wayland server
@@ -566,7 +566,7 @@ void KSldApp::startLockProcess(EstablishLock establishLock)
         return;
     }
 
-    args << "--ksldfd";
+    args << QStringLiteral("--ksldfd");
     args << QString::number(fd);
 
     m_lockProcess->start(QStringLiteral(KSCREENLOCKER_GREET_BIN), args);

@@ -121,7 +121,7 @@ void SessionsModel::reload()
     static QHash<QString, KUser> kusers;
 
     const bool oldShouldLock = m_shouldLock;
-    m_shouldLock = KAuthorized::authorizeKAction("lock_screen") && KScreenSaverSettings::autolock();
+    m_shouldLock = KAuthorized::authorizeKAction(QStringLiteral("lock_screen")) && KScreenSaverSettings::autolock();
     if (m_shouldLock != oldShouldLock) {
         emit shouldLockChanged();
     }

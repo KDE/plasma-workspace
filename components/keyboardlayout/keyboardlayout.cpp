@@ -30,9 +30,9 @@ KeyboardLayout::KeyboardLayout(QObject* parent)
     : QObject(parent)
     , mIface(0)
 {
-    mIface = new QDBusInterface(QLatin1String("org.kde.kded5"),
-                                QLatin1String("/modules/keyboard"),
-                                QLatin1String("org.kde.KeyboardLayouts"),
+    mIface = new QDBusInterface(QStringLiteral("org.kde.kded5"),
+                                QStringLiteral("/modules/keyboard"),
+                                QStringLiteral("org.kde.KeyboardLayouts"),
                                 QDBusConnection::sessionBus(),
                                 this);
     if (!mIface->isValid()) {
@@ -61,10 +61,10 @@ void KeyboardLayout::requestCurrentLayout()
         return;
     }
 
-    QDBusPendingCall pendingLayout = mIface->asyncCall(QLatin1String("getCurrentLayout"));
+    QDBusPendingCall pendingLayout = mIface->asyncCall(QStringLiteral("getCurrentLayout"));
     QDBusPendingCallWatcher *watcher = new QDBusPendingCallWatcher(pendingLayout, this);
-    connect(watcher, SIGNAL(finished(QDBusPendingCallWatcher*)),
-            this, SLOT(onCurrentLayoutReceived(QDBusPendingCallWatcher*)));
+    connect(watcher, &QDBusPendingCallWatcher::finished,
+            this, &KeyboardLayout::onCurrentLayoutReceived);
 }
 
 void KeyboardLayout::onCurrentLayoutReceived(QDBusPendingCallWatcher *watcher)
@@ -85,10 +85,10 @@ void KeyboardLayout::requestLayoutsList()
         return;
     }
 
-    QDBusPendingCall pendingLayout = mIface->asyncCall(QLatin1String("getLayoutsList"));
+    QDBusPendingCall pendingLayout = mIface->asyncCall(QStringLiteral("getLayoutsList"));
     QDBusPendingCallWatcher *watcher = new QDBusPendingCallWatcher(pendingLayout, this);
-    connect(watcher, SIGNAL(finished(QDBusPendingCallWatcher*)),
-            this, SLOT(onLayoutsListReceived(QDBusPendingCallWatcher*)));
+    connect(watcher, &QDBusPendingCallWatcher::finished,
+            this, &KeyboardLayout::onLayoutsListReceived);
 }
 
 
@@ -125,7 +125,7 @@ void KeyboardLayout::setCurrentLayout(const QString &layout)
     }
 
     mCurrentLayout = layout;
-    mIface->asyncCall(QLatin1String("setLayout"), layout);
+    mIface->asyncCall(QStringLiteral("setLayout"), layout);
     Q_EMIT currentLayoutChanged(layout);
 }
 

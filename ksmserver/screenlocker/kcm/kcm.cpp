@@ -61,7 +61,7 @@ ScreenLockerKcm::ScreenLockerKcm(QWidget *parent, const QVariantList &args)
     , m_ui(new ScreenLockerKcmForm(this))
 {
     qmlRegisterType<QStandardItemModel>();
-    KConfigDialogManager::changedMap()->insert("SelectImageButton", SIGNAL(imagePathChanged(QString)));
+    KConfigDialogManager::changedMap()->insert(QStringLiteral("SelectImageButton"), SIGNAL(imagePathChanged(QString)));
 
     QVBoxLayout* layout = new QVBoxLayout(this);
     layout->addWidget(m_ui);
@@ -77,10 +77,10 @@ ScreenLockerKcm::ScreenLockerKcm(QWidget *parent, const QVariantList &args)
     m_quickView = new QQuickView();
     QWidget *widget = QWidget::createWindowContainer(m_quickView, this);
     m_quickView->setResizeMode(QQuickView::SizeRootObjectToView);
-    KPackage::Package package = KPackage::PackageLoader::self()->loadPackage("Plasma/Generic");
-    package.setDefaultPackageRoot("plasma/kcms");
-    package.setPath("screenlocker_kcm");
-    m_quickView->rootContext()->setContextProperty("kcm", this);
+    KPackage::Package package = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Plasma/Generic"));
+    package.setDefaultPackageRoot(QStringLiteral("plasma/kcms"));
+    package.setPath(QStringLiteral("screenlocker_kcm"));
+    m_quickView->rootContext()->setContextProperty(QStringLiteral("kcm"), this);
     m_quickView->setSource(QUrl::fromLocalFile(package.filePath("mainscript")));
     setMinimumHeight(m_quickView->initialSize().height());
 
@@ -116,7 +116,7 @@ QList<KPackage::Package> ScreenLockerKcm::availablePackages(const QString &compo
     }
 
     for (const QString &path : paths) {
-        KPackage::Package pkg = KPackage::PackageLoader::self()->loadPackage("Plasma/LookAndFeel");
+        KPackage::Package pkg = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Plasma/LookAndFeel"));
         pkg.setPath(path);
         pkg.setFallbackPackage(KPackage::Package());
         if (component.isEmpty() || !pkg.filePath(component.toUtf8()).isEmpty()) {
@@ -131,8 +131,8 @@ void ScreenLockerKcm::load()
 {
     KCModule::load();
 
-    m_package = KPackage::PackageLoader::self()->loadPackage("Plasma/LookAndFeel");
-    KConfigGroup cg(KSharedConfig::openConfig("kdeglobals"), "KDE");
+    m_package = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Plasma/LookAndFeel"));
+    KConfigGroup cg(KSharedConfig::openConfig(QStringLiteral("kdeglobals")), "KDE");
     const QString packageName = cg.readEntry("LookAndFeelPackage", QString());
     if (!packageName.isEmpty()) {
         m_package.setPath(packageName);
@@ -145,11 +145,11 @@ void ScreenLockerKcm::load()
     setSelectedPlugin(currentPlugin);
 
     m_model->clear();
-    const QList<KPackage::Package> pkgs = availablePackages("lockscreenmainscript");
+    const QList<KPackage::Package> pkgs = availablePackages(QStringLiteral("lockscreenmainscript"));
     for (const KPackage::Package &pkg : pkgs) {
         QStandardItem* row = new QStandardItem(pkg.metadata().name());
         row->setData(pkg.metadata().pluginId(), PluginNameRole);
-        row->setData(pkg.filePath("previews", "lockscreen.png"), ScreenhotRole);
+        row->setData(pkg.filePath("previews", QStringLiteral("lockscreen.png")), ScreenhotRole);
         m_model->appendRow(row);
     }
 
@@ -184,13 +184,13 @@ void ScreenLockerKcm::setSelectedPlugin(const QString &plugin)
 
 void ScreenLockerKcm::test(const QString &plugin)
 {
-    if (plugin.isEmpty() || plugin == "none") {
+    if (plugin.isEmpty() || plugin == QLatin1String("none")) {
         return;
     }
 
     QProcess proc;
     QStringList arguments;
-    arguments << plugin << "--testing";
+    arguments << plugin << QStringLiteral("--testing");
     if (proc.execute(KSCREENLOCKER_GREET_BIN, arguments)) {
         QMessageBox::critical(this, i18n("Error"), i18n("Failed to successfully test the screen locker."));
     }

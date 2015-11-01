@@ -78,65 +78,65 @@ public:
     {}
 
     void setBugNumber(const QString & value) {
-        setData("bug_id", value);
+        setData(QStringLiteral("bug_id"), value);
     }
     QString bugNumber() const {
-        return getData("bug_id");
+        return getData(QStringLiteral("bug_id"));
     }
     int bugNumberAsInt() const {
-        return getData("bug_id").toInt();
+        return getData(QStringLiteral("bug_id")).toInt();
     }
 
     void setShortDescription(const QString & value) {
-        setData("short_desc", value);
+        setData(QStringLiteral("short_desc"), value);
     }
     QString shortDescription() const {
-        return getData("short_desc");
+        return getData(QStringLiteral("short_desc"));
     }
 
     void setProduct(const QString & value) {
-        setData("product", value);
+        setData(QStringLiteral("product"), value);
     }
     QString product() const {
-        return getData("product");
+        return getData(QStringLiteral("product"));
     }
 
     void setComponent(const QString & value) {
-        setData("component", value);
+        setData(QStringLiteral("component"), value);
     }
     QString component() const {
-        return getData("component");
+        return getData(QStringLiteral("component"));
     }
 
     void setVersion(const QString & value) {
-        setData("version", value);
+        setData(QStringLiteral("version"), value);
     }
     QString version() const {
-        return getData("version");
+        return getData(QStringLiteral("version"));
     }
 
     void setOperatingSystem(const QString & value) {
-        setData("op_sys", value);
+        setData(QStringLiteral("op_sys"), value);
     }
     QString operatingSystem() const {
-        return getData("op_sys");
+        return getData(QStringLiteral("op_sys"));
     }
 
     void setPlatform(const QString & value) {
-        setData("rep_platform", value);
+        setData(QStringLiteral("rep_platform"), value);
     }
     QString platform() const {
-        return getData("rep_platform");
+        return getData(QStringLiteral("rep_platform"));
     }
 
     void setBugStatus(const QString &status);
     QString bugStatus() const {
-        return getData("bug_status");
+        return getData(QStringLiteral("bug_status"));
     }
 
     void setResolution(const QString &resolution);
     QString resolution() const {
-        return getData("resolution");
+        return getData(QStringLiteral("resolution"));
     }
 
     Status statusValue() const {
@@ -148,24 +148,24 @@ public:
     }
 
     void setPriority(const QString & value) {
-        setData("priority", value);
+        setData(QStringLiteral("priority"), value);
     }
     QString priority() const {
-        return getData("priority");
+        return getData(QStringLiteral("priority"));
     }
 
     void setBugSeverity(const QString & value) {
-        setData("bug_severity", value);
+        setData(QStringLiteral("bug_severity"), value);
     }
     QString bugSeverity() const {
-        return getData("bug_severity");
+        return getData(QStringLiteral("bug_severity"));
     }
 
     void setKeywords(const QStringList & keywords) {
-        setData("keywords", keywords.join(","));
+        setData(QStringLiteral("keywords"), keywords.join(QStringLiteral(",")));
     }
     QStringList keywords() const {
-        return getData("keywords").split(',');
+        return getData(QStringLiteral("keywords")).split(',');
     }
 
     void setDescription(const QString & desc) {
@@ -183,17 +183,17 @@ public:
     }
 
     void setMarkedAsDuplicateOf(const QString & dupID) {
-        setData("dup_id", dupID);
+        setData(QStringLiteral("dup_id"), dupID);
     }
     QString markedAsDuplicateOf() const {
-        return getData("dup_id");
+        return getData(QStringLiteral("dup_id"));
     }
 
     void setVersionFixedIn(const QString & dupID) {
-        setData("cf_versionfixedin", dupID);
+        setData(QStringLiteral("cf_versionfixedin"), dupID);
     }
     QString versionFixedIn() const {
-        return getData("cf_versionfixedin");
+        return getData(QStringLiteral("cf_versionfixedin"));
     }
 
     void setValid(bool valid) {

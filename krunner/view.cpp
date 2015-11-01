@@ -54,26 +54,26 @@ View::View(QWindow *)
 
     KCrash::setFlags(KCrash::AutoRestart);
 
-    m_config = KConfigGroup(KSharedConfig::openConfig("krunnerrc"), "General");
+    m_config = KConfigGroup(KSharedConfig::openConfig(QStringLiteral("krunnerrc")), "General");
 
     setFreeFloating(m_config.readEntry("FreeFloating", false));
     reloadConfig();
 
     new AppAdaptor(this);
-    QDBusConnection::sessionBus().registerObject(QLatin1String("/App"), this);
+    QDBusConnection::sessionBus().registerObject(QStringLiteral("/App"), this);
 
-    if (KAuthorized::authorize(QLatin1String("run_command"))) {
+    if (KAuthorized::authorize(QStringLiteral("run_command"))) {
         QAction *a = new QAction(0);
         QObject::connect(a, &QAction::triggered, this, &View::displayOrHide);
         a->setText(i18n("Run Command"));
-        a->setObjectName("run command");
+        a->setObjectName(QStringLiteral("run command"));
         KGlobalAccel::self()->setDefaultShortcut(a, QList<QKeySequence>() << QKeySequence(Qt::ALT + Qt::Key_Space), KGlobalAccel::NoAutoloading);
         KGlobalAccel::self()->setShortcut(a, QList<QKeySequence>() << QKeySequence(Qt::ALT + Qt::Key_Space) << QKeySequence(Qt::ALT + Qt::Key_F2) << Qt::Key_Search);
 
         a = new QAction(0);
         QObject::connect(a, &QAction::triggered, this, &View::displayWithClipboardContents);
         a->setText(i18n("Run Command on clipboard contents"));
-        a->setObjectName("run command on clipboard contents");
+        a->setObjectName(QStringLiteral("run command on clipboard contents"));
         KGlobalAccel::self()->setDefaultShortcut(a, QList<QKeySequence>() << QKeySequence(Qt::ALT+Qt::SHIFT+Qt::Key_F2));
         KGlobalAccel::self()->setShortcut(a, QList<QKeySequence>() << QKeySequence(Qt::ALT+Qt::SHIFT+Qt::Key_F2));
     }
@@ -82,15 +82,15 @@ View::View(QWindow *)
     m_qmlObj->setInitializationDelayed(true);
     connect(m_qmlObj, &KDeclarative::QmlObject::finished, this, &View::objectIncubated);
 
-    KPackage::Package package = KPackage::PackageLoader::self()->loadPackage("Plasma/LookAndFeel");
-    KConfigGroup cg(KSharedConfig::openConfig("kdeglobals"), "KDE");
+    KPackage::Package package = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Plasma/LookAndFeel"));
+    KConfigGroup cg(KSharedConfig::openConfig(QStringLiteral("kdeglobals")), "KDE");
     const QString packageName = cg.readEntry("LookAndFeelPackage", QString());
     if (!packageName.isEmpty()) {
         package.setPath(packageName);
     }
 
     m_qmlObj->setSource(QUrl::fromLocalFile(package.filePath("runcommandmainscript")));
-    m_qmlObj->engine()->rootContext()->setContextProperty("runnerWindow", this);
+    m_qmlObj->engine()->rootContext()->setContextProperty(QStringLiteral("runnerWindow"), this);
     m_qmlObj->completeInitialization();
 
     auto screenRemoved = [=](QScreen* screen) {

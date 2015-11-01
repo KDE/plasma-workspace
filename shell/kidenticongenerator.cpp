@@ -100,7 +100,7 @@ QPixmap KIdenticonGenerator::Private::generatePattern(int size, quint32 hash, QI
 
     QPainter resultPainter(& pixmapResult);
     // resultPainter.fillRect(0, 0, size, size, gradient);
-    svg.paint(& resultPainter, QRect(0, 0, size, size), elementName("content", mode));
+    svg.paint(& resultPainter, QRect(0, 0, size, size), elementName(QStringLiteral("content"), mode));
 
     resultPainter.end();
 
@@ -144,19 +144,19 @@ QString KIdenticonGenerator::Private::elementName(const QString & element, QIcon
 
     switch (mode) {
         case QIcon::Normal:
-            prefix = "normal-";
+            prefix = QStringLiteral("normal-");
             break;
 
         case QIcon::Disabled:
-            prefix = "disabled-";
+            prefix = QStringLiteral("disabled-");
             break;
 
         case QIcon::Selected:
-            prefix = "selected-";
+            prefix = QStringLiteral("selected-");
             break;
 
         case QIcon::Active:
-            prefix = "active-";
+            prefix = QStringLiteral("active-");
             break;
 
         default:
@@ -208,10 +208,10 @@ KIdenticonGenerator::KIdenticonGenerator()
 {
     d->theme = new Plasma::Theme(0);
     // loading SVGs
-    d->shapes.setImagePath("widgets/identiconshapes");
+    d->shapes.setImagePath(QStringLiteral("widgets/identiconshapes"));
     d->shapes.setContainsMultipleImages(true);
 
-    d->svg.setImagePath("widgets/identiconsvg");
+    d->svg.setImagePath(QStringLiteral("widgets/identiconsvg"));
     d->svg.setContainsMultipleImages(true);
 }
 
@@ -261,7 +261,7 @@ QPixmap KIdenticonGenerator::generatePixmap(int size, quint32 hash, QIcon::Mode 
     // Painting background and the pattern
     {
     QPainter painter(& pixmap);
-    d->svg.paint(& painter, QRect(0, 0, size, size), d->elementName("background", mode));
+    d->svg.paint(& painter, QRect(0, 0, size, size), d->elementName(QStringLiteral("background"), mode));
     painter.drawPixmap(0, 0, d->generatePattern(size, hash, mode));
     painter.end();
     }
@@ -277,7 +277,7 @@ QPixmap KIdenticonGenerator::generatePixmap(int size, quint32 hash, QIcon::Mode 
     // Drawing the overlay
     {
     QPainter painter(& pixmap);
-    d->svg.paint(& painter, QRect(0, 0, size, size), d->elementName("overlay", mode));
+    d->svg.paint(& painter, QRect(0, 0, size, size), d->elementName(QStringLiteral("overlay"), mode));
     }
 
     return pixmap;
@@ -292,7 +292,7 @@ QPixmap KIdenticonGenerator::generatePixmap(int size, const QIcon & icon, QIcon:
 
     // Painting background and the pattern
     QPainter painter(& pixmap);
-    d->svg.paint(& painter, QRect(0, 0, size, size), d->elementName("background", mode));
+    d->svg.paint(& painter, QRect(0, 0, size, size), d->elementName(QStringLiteral("background"), mode));
 
     icon.paint(& painter, paintRect, Qt::AlignCenter, mode);
 

@@ -33,14 +33,14 @@ Browser *BrowserFactory::find(const QString& browserName, QObject* parent)
     }
     delete m_previousBrowser;
     m_previousBrowserName = browserName;
-    if (browserName.contains("firefox", Qt::CaseInsensitive) || browserName.contains("iceweasel", Qt::CaseInsensitive)) {
+    if (browserName.contains(QStringLiteral("firefox"), Qt::CaseInsensitive) || browserName.contains(QStringLiteral("iceweasel"), Qt::CaseInsensitive)) {
         m_previousBrowser = new Firefox(parent);
-    } else if (browserName.contains("opera", Qt::CaseInsensitive)) {
+    } else if (browserName.contains(QStringLiteral("opera"), Qt::CaseInsensitive)) {
         m_previousBrowser = new Opera(parent);
-    } else if (browserName.contains("chrome", Qt::CaseInsensitive)) {
-        m_previousBrowser = new Chrome(new FindChromeProfile("google-chrome", QDir::homePath(), parent), parent);
-    } else if (browserName.contains("chromium", Qt::CaseInsensitive)) {
-        m_previousBrowser = new Chrome(new FindChromeProfile("chromium", QDir::homePath(), parent), parent);
+    } else if (browserName.contains(QStringLiteral("chrome"), Qt::CaseInsensitive)) {
+        m_previousBrowser = new Chrome(new FindChromeProfile(QStringLiteral("google-chrome"), QDir::homePath(), parent), parent);
+    } else if (browserName.contains(QStringLiteral("chromium"), Qt::CaseInsensitive)) {
+        m_previousBrowser = new Chrome(new FindChromeProfile(QStringLiteral("chromium"), QDir::homePath(), parent), parent);
     } else {
         m_previousBrowser = new KDEBrowser(parent);
     }
@@ -50,7 +50,7 @@ Browser *BrowserFactory::find(const QString& browserName, QObject* parent)
 
 
 BrowserFactory::BrowserFactory(QObject *parent)
-    : QObject(parent), m_previousBrowser(0), m_previousBrowserName("invalid")
+    : QObject(parent), m_previousBrowser(0), m_previousBrowserName(QStringLiteral("invalid"))
 {
 }
 

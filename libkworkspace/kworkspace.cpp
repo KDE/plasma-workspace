@@ -124,7 +124,7 @@ KRequestShutdownHelper::KRequestShutdownHelper()
     SmcSetProperties( conn, 5, p );
     notifier = new QSocketNotifier( IceConnectionNumber( SmcGetIceConnection( conn )),
         QSocketNotifier::Read, this );
-    connect( notifier, SIGNAL(activated(int)), SLOT(processData()));
+    connect( notifier, &QSocketNotifier::activated, this, &KRequestShutdownHelper::processData);
 #endif
     }
 
@@ -176,7 +176,7 @@ void requestShutDown(ShutdownConfirm confirm, ShutdownType sdtype, ShutdownMode 
          sdtype != ShutdownTypeDefault ||
          sdmode != ShutdownModeDefault )
     {
-        org::kde::KSMServerInterface ksmserver("org.kde.ksmserver", "/KSMServer", QDBusConnection::sessionBus());
+        org::kde::KSMServerInterface ksmserver(QStringLiteral("org.kde.ksmserver"), QStringLiteral("/KSMServer"), QDBusConnection::sessionBus());
         ksmserver.logout((int)confirm,  (int)sdtype,  (int)sdmode);
         return;
     }
@@ -199,7 +199,7 @@ bool canShutDown( ShutdownConfirm confirm,
          sdtype != ShutdownTypeDefault ||
          sdmode != ShutdownModeDefault )
     {
-        org::kde::KSMServerInterface ksmserver("org.kde.ksmserver", "/KSMServer", QDBusConnection::sessionBus());
+        org::kde::KSMServerInterface ksmserver(QStringLiteral("org.kde.ksmserver"), QStringLiteral("/KSMServer"), QDBusConnection::sessionBus());
         QDBusReply<bool> reply = ksmserver.canShutdown();
         if (!reply.isValid()) {
             return false;
@@ -215,7 +215,7 @@ bool canShutDown( ShutdownConfirm confirm,
 
 bool isShuttingDown()
 {
-    org::kde::KSMServerInterface ksmserver("org.kde.ksmserver", "/KSMServer", QDBusConnection::sessionBus());
+    org::kde::KSMServerInterface ksmserver(QStringLiteral("org.kde.ksmserver"), QStringLiteral("/KSMServer"), QDBusConnection::sessionBus());
     QDBusReply<bool> reply = ksmserver.isShuttingDown();
     if (!reply.isValid()) {
         return false;
@@ -230,7 +230,7 @@ void propagateSessionManager()
     QByteArray fName = QFile::encodeName(QStandardPaths::writableLocation(QStandardPaths::RuntimeLocation)+"/KSMserver");
     QString display = QString::fromLocal8Bit( ::getenv(DISPLAY) );
     // strip the screen number from the display
-    display.remove(QRegExp("\\.[0-9]+$"));
+    display.remove(QRegExp(QStringLiteral("\\.[0-9]+$")));
     int i;
     while( (i = display.indexOf(':')) >= 0)
        display[i] = '_';

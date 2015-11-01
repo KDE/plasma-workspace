@@ -149,8 +149,8 @@ KSMShutdownDlg::KSMShutdownDlg( QWindow* parent,
 
     QString fileName;
     if(theme.isEmpty()) {
-        KPackage::Package package = KPackage::PackageLoader::self()->loadPackage("Plasma/LookAndFeel");
-        KConfigGroup cg(KSharedConfig::openConfig("kdeglobals"), "KDE");
+        KPackage::Package package = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Plasma/LookAndFeel"));
+        KConfigGroup cg(KSharedConfig::openConfig(QStringLiteral("kdeglobals")), "KDE");
         const QString packageName = cg.readEntry("LookAndFeelPackage", QString());
         if (!packageName.isEmpty()) {
             package.setPath(packageName);

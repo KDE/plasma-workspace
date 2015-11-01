@@ -41,7 +41,7 @@ PlasmaAppletItem::PlasmaAppletItem(PlasmaAppletItemModel *model,
       m_favorite(flags & Favorite),
       m_local(false)
 {
-    const QString api(m_info.property("X-Plasma-API").toString());
+    const QString api(m_info.property(QStringLiteral("X-Plasma-API")).toString());
     if (!api.isEmpty()) {
         const QString _f = PLASMA_RELATIVE_DATA_INSTALL_DIR "/plasmoids/" + info.pluginName() + '/';
         QFileInfo dir(QStandardPaths::locate(QStandardPaths::QStandardPaths::GenericDataLocation,
@@ -53,7 +53,7 @@ PlasmaAppletItem::PlasmaAppletItem(PlasmaAppletItemModel *model,
     //attrs.insert("recommended", flags & Recommended ? true : false);
     setText(m_info.name() + " - "+ m_info.category().toLower());
 
-    const QString iconName = m_info.icon().isEmpty() ? "application-x-plasma" : info.icon();
+    const QString iconName = m_info.icon().isEmpty() ? QStringLiteral("application-x-plasma") : info.icon();
     QIcon icon = QIcon::fromTheme(iconName);
     setIcon(icon);
 
@@ -131,7 +131,7 @@ void PlasmaAppletItem::setRunning(int count)
 bool PlasmaAppletItem::matches(const QString &pattern) const
 {
     if (m_info.service()) {
-        const QStringList keywords = m_info.property("Keywords").toStringList();
+        const QStringList keywords = m_info.property(QStringLiteral("Keywords")).toStringList();
         foreach (const QString &keyword, keywords) {
             if (keyword.startsWith(pattern, Qt::CaseInsensitive)) {
                 return true;
@@ -163,9 +163,9 @@ bool PlasmaAppletItem::isLocal() const
 
 bool PlasmaAppletItem::passesFiltering(const KCategorizedItemsViewModels::Filter &filter) const
 {
-    if (filter.first == "running") {
+    if (filter.first == QLatin1String("running")) {
         return running();
-    } else if (filter.first == "category") {
+    } else if (filter.first == QLatin1String("category")) {
         return m_info.category().toLower() == filter.second;
     } else {
         return false;
@@ -184,7 +184,7 @@ QMimeData *PlasmaAppletItem::mimeData() const
 QStringList PlasmaAppletItem::mimeTypes() const
 {
     QStringList types;
-    types << QLatin1String("text/x-plasmoidservicename");
+    types << QStringLiteral("text/x-plasmoidservicename");
     return types;
 }
 
@@ -199,8 +199,8 @@ QVariant PlasmaAppletItem::data(int role) const
     case PlasmaAppletItemModel::ScreenshotRole:
         //null = not yet done, empty = tried and failed
         if (m_screenshot.isNull()) {
-            KPackage::Package pkg = KPackage::PackageLoader::self()->loadPackage("Plasma/Applet");
-            pkg.setDefaultPackageRoot("plasma/plasmoids");
+            KPackage::Package pkg = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Plasma/Applet"));
+            pkg.setDefaultPackageRoot(QStringLiteral("plasma/plasmoids"));
             pkg.setPath(m_info.pluginName());
             if (pkg.isValid()) {
                 const_cast<PlasmaAppletItem *>(this)->m_screenshot = pkg.filePath("screenshot");
@@ -215,10 +215,10 @@ QVariant PlasmaAppletItem::data(int role) const
     case Qt::DecorationRole: {
         //null = not yet done, empty = tried and failed
         if (m_icon.isNull()) {
-            KPackage::Package pkg = KPackage::PackageLoader::self()->loadPackage("Plasma/Applet");
-            pkg.setDefaultPackageRoot("plasma/plasmoids");
+            KPackage::Package pkg = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Plasma/Applet"));
+            pkg.setDefaultPackageRoot(QStringLiteral("plasma/plasmoids"));
             pkg.setPath(m_info.pluginName());
-            if (pkg.isValid() && pkg.metadata().iconName().startsWith("/")) {
+            if (pkg.isValid() && pkg.metadata().iconName().startsWith(QLatin1String("/"))) {
                 const_cast<PlasmaAppletItem *>(this)->m_icon = pkg.filePath("", pkg.metadata().iconName().toUtf8());
             } else {
                 const_cast<PlasmaAppletItem *>(this)->m_icon = QString();
@@ -241,7 +241,7 @@ QVariant PlasmaAppletItem::data(int role) const
 PlasmaAppletItemModel::PlasmaAppletItemModel(QObject * parent)
     : QStandardItemModel(parent)
 {
-    KConfig config("plasmarc");
+    KConfig config(QStringLiteral("plasmarc"));
     m_configGroup = KConfigGroup(&config, "Applet Browser");
     m_favorites = m_configGroup.readEntry("favorites").split(',');
     connect(KSycoca::self(), SIGNAL(databaseChanged(QStringList)), this, SLOT(populateModel(QStringList)));
@@ -268,7 +268,7 @@ PlasmaAppletItemModel::PlasmaAppletItemModel(QObject * parent)
 
 void PlasmaAppletItemModel::populateModel(const QStringList &whatChanged)
 {
-    if (!whatChanged.isEmpty() && !whatChanged.contains("services")) {
+    if (!whatChanged.isEmpty() && !whatChanged.contains(QStringLiteral("services"))) {
         return;
     }
 
@@ -282,20 +282,20 @@ void PlasmaAppletItemModel::populateModel(const QStringList &whatChanged)
     bool first = true;
     foreach (const QString prov, m_provides) {
         if (!first) {
-            constraint += " or ";
+            constraint += QLatin1String(" or ");
         }
 
         first = false;
         constraint += "'" + prov + "' in [X-Plasma-Provides]";
     }
 
-    KPluginInfo::List list = KPluginInfo::fromMetaData(KPackage::PackageLoader::self()->listPackages("Plasma/Applet", "plasma/plasmoids").toVector());
+    KPluginInfo::List list = KPluginInfo::fromMetaData(KPackage::PackageLoader::self()->listPackages(QStringLiteral("Plasma/Applet"), QStringLiteral("plasma/plasmoids")).toVector());
 
     KPluginTrader::applyConstraints(list, constraint);
 
     for (auto info : list) {
         //qDebug() << info.pluginName() << "NoDisplay" << info.property("NoDisplay").toBool();
-        if (!info.isValid() || info.property("NoDisplay").toBool() || info.category() == "Containments") {
+        if (!info.isValid() || info.property(QStringLiteral("NoDisplay")).toBool() || info.category() == QLatin1String("Containments")) {
             // we don't want to show the hidden category
             continue;
         }
@@ -354,7 +354,7 @@ void PlasmaAppletItemModel::setRunningApplets(const QString &name, int count)
 QStringList PlasmaAppletItemModel::mimeTypes() const
 {
     QStringList types;
-    types << QLatin1String("text/x-plasmoidservicename");
+    types << QStringLiteral("text/x-plasmoidservicename");
     return types;
 }
 
@@ -416,7 +416,7 @@ void PlasmaAppletItemModel::setFavorite(const QString &plugin, bool favorite)
         m_favorites.removeAll(plugin);
     }
 
-    m_configGroup.writeEntry("favorites", m_favorites.join(","));
+    m_configGroup.writeEntry("favorites", m_favorites.join(QStringLiteral(",")));
     m_configGroup.sync();
 }
 

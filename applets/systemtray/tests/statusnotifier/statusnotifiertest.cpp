@@ -65,7 +65,7 @@ StatusNotifierTest::StatusNotifierTest(QWidget* parent) :
     updateUi();
     show();
     raise();
-    log("started");
+    log(QStringLiteral("started"));
 }
 
 void StatusNotifierTest::init()
@@ -74,7 +74,7 @@ void StatusNotifierTest::init()
     //d->systemNotifier->setCategory(KStatusNotifierItem::SystemServices);
     //d->systemNotifier->setCategory(KStatusNotifierItem::Hardware);
     d->systemNotifier->setCategory(KStatusNotifierItem::Communications);
-    d->systemNotifier->setIconByName("plasma");
+    d->systemNotifier->setIconByName(QStringLiteral("plasma"));
     d->systemNotifier->setStatus(KStatusNotifierItem::Active);
     d->systemNotifier->setToolTipTitle(i18nc("tooltip title", "System Service Item"));
     d->systemNotifier->setTitle(i18nc("title", "StatusNotifierTest"));
@@ -88,12 +88,12 @@ void StatusNotifierTest::init()
             this, &StatusNotifierTest::scrollRequested);
 
     auto menu = new QMenu(this);
-    menu->addAction(QIcon::fromTheme("document-edit"), "action 1");
-    menu->addAction(QIcon::fromTheme("mail-send"), "action 2");
+    menu->addAction(QIcon::fromTheme(QStringLiteral("document-edit")), QStringLiteral("action 1"));
+    menu->addAction(QIcon::fromTheme(QStringLiteral("mail-send")), QStringLiteral("action 2"));
     auto subMenu = new QMenu(this);
-    subMenu->setTitle("Sub Menu");
-    subMenu->addAction("subaction1");
-    subMenu->addAction("subaction2");
+    subMenu->setTitle(QStringLiteral("Sub Menu"));
+    subMenu->addAction(QStringLiteral("subaction1"));
+    subMenu->addAction(QStringLiteral("subaction2"));
     menu->addMenu(subMenu);
 
     d->systemNotifier->setContextMenu(menu);
@@ -204,13 +204,13 @@ void StatusNotifierTest::activateRequested(bool active, const QPoint& pos)
 {
     Q_UNUSED(active);
     Q_UNUSED(pos);
-    log("Activated");
+    log(QStringLiteral("Activated"));
 }
 
 void StatusNotifierTest::secondaryActivateRequested(const QPoint& pos)
 {
     Q_UNUSED(pos);
-    log("secondaryActivateRequested");
+    log(QStringLiteral("secondaryActivateRequested"));
 }
 
 
@@ -218,7 +218,7 @@ void StatusNotifierTest::scrollRequested(int delta, Qt::Orientation orientation)
 {
     ///QString msg  = QString("Scrolled " << " by: ");
     //+     //QString msg  = QString("Scrolled " + ((orientation == Qt::Horizontal) ? "Horizontally" : "Vertically") + " by: " //+ QString::number(delta));
-    QString msg("Scrolled by ");
+    QString msg(QStringLiteral("Scrolled by "));
     msg.append(QString::number(delta));
     msg.append((orientation == Qt::Horizontal) ? " Horizontally" : " Vertically");
     log(msg);

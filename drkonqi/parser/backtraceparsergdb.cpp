@@ -47,18 +47,18 @@ void BacktraceLineGdb::parse()
 {
     QRegExp regExp;
 
-    if (d->m_line == "\n") {
+    if (d->m_line == QLatin1String("\n")) {
         d->m_type = EmptyLine;
         return;
-    } else if (d->m_line == "[KCrash Handler]\n") {
+    } else if (d->m_line == QLatin1String("[KCrash Handler]\n")) {
         d->m_type = KCrash;
         return;
-    } else if (d->m_line.contains("<signal handler called>")) {
+    } else if (d->m_line.contains(QStringLiteral("<signal handler called>"))) {
         d->m_type = SignalHandlerStart;
         return;
     }
 
-    regExp.setPattern("^#([0-9]+)" //matches the stack frame number, ex. "#0"
+    regExp.setPattern(QStringLiteral("^#([0-9]+)" //matches the stack frame number, ex. "#0"
                       "[\\s]+(0x[0-9a-f]+[\\s]+in[\\s]+)?" // matches " 0x0000dead in " (optionally)
                       "((\\(anonymous namespace\\)::)?[^\\(]+)" //matches the function name
                       //(anything except left parenthesis, which is the start of the arguments section)
@@ -71,7 +71,7 @@ void BacktraceLineGdb::parse()
                       "([\\s]+" //beginning of optional file information
                       "(from|at)[\\s]+" //matches "from " or "at "
                       "(.+)" //matches the filename (source file or shared library file)
-                      ")?\n$"); //matches trailing newline.
+                      ")?\n$")); //matches trailing newline.
                     //the )? at the end closes the parenthesis before [\\s]+(from|at) and
                     //notes that the whole expression from there is optional.
 
@@ -81,7 +81,7 @@ void BacktraceLineGdb::parse()
         d->m_functionName = regExp.cap(3).trimmed();
 
         if (!regExp.cap(7).isEmpty()) { //we have file information (stuff after from|at)
-            if (regExp.cap(8) == "at") { //'at' means we have a source file
+            if (regExp.cap(8) == QLatin1String("at")) { //'at' means we have a source file
                 d->m_file = regExp.cap(9);
             } else { //'from' means we have a library
                 d->m_library = regExp.cap(9);
@@ -92,25 +92,25 @@ void BacktraceLineGdb::parse()
         return;
     }
 
-    regExp.setPattern(".*\\(no debugging symbols found\\).*|"
+    regExp.setPattern(QStringLiteral(".*\\(no debugging symbols found\\).*|"
                       ".*\\[Thread debugging using libthread_db enabled\\].*|"
                       ".*\\[New .*|"
                       "0x[0-9a-f]+.*|"
-                      "Current language:.*");
+                      "Current language:.*"));
     if (regExp.exactMatch(d->m_line)) {
         qDebug() << "garbage detected:" << d->m_line;
         d->m_type = Crap;
         return;
     }
 
-    regExp.setPattern("Thread [0-9]+\\s+\\(Thread [0-9a-fx]+\\s+\\(.*\\)\\):\n");
+    regExp.setPattern(QStringLiteral("Thread [0-9]+\\s+\\(Thread [0-9a-fx]+\\s+\\(.*\\)\\):\n"));
     if (regExp.exactMatch(d->m_line)) {
         qDebug() << "thread start detected:" << d->m_line;
         d->m_type = ThreadStart;
         return;
     }
 
-    regExp.setPattern("\\[Current thread is [0-9]+ \\(.*\\)\\]\n");
+    regExp.setPattern(QStringLiteral("\\[Current thread is [0-9]+ \\(.*\\)\\]\n"));
     if (regExp.exactMatch(d->m_line)) {
         qDebug() << "thread indicator detected:" << d->m_line;
         d->m_type = ThreadIndicator;
@@ -128,13 +128,13 @@ void BacktraceLineGdb::rate()
     if (!fileName().isEmpty()) {
         r = Good;
     } else if (!libraryName().isEmpty()) {
-        if (functionName() == "??") {
+        if (functionName() == QLatin1String("??")) {
             r = MissingFunction;
         } else {
             r = MissingSourceFile;
         }
     } else {
-        if (functionName() == "??") {
+        if (functionName() == QLatin1String("??")) {
             r = MissingEverything;
         } else {
             r = MissingLibrary;
@@ -211,7 +211,7 @@ void BacktraceParserGdb::parseLine(const QString & lineStr)
         if (!d->m_isBelowSignalHandler) {
             //replace the stack frames of KCrash with a nice message
             d->m_linesList.erase(d->m_linesList.begin() + d->m_possibleKCrashStart, d->m_linesList.end());
-            d->m_linesList.insert(d->m_possibleKCrashStart, BacktraceLineGdb("[KCrash Handler]\n"));
+            d->m_linesList.insert(d->m_possibleKCrashStart, BacktraceLineGdb(QStringLiteral("[KCrash Handler]\n")));
             d->m_isBelowSignalHandler = true; //next line is the first below the signal handler
         } else {
             //this is not the first time we see a crash handler frame on the same thread,

@@ -30,7 +30,7 @@ GeolocationProvider::GeolocationProvider(QObject *parent, const QVariantList &ar
     m_updateTimer.setSingleShot(true);
     m_updateTimer.setInterval(0);
     qRegisterMetaType<Plasma::DataEngine::Data>("Plasma::DataEngine::Data");
-    connect(&m_updateTimer, SIGNAL(timeout()), this, SIGNAL(updated()));
+    connect(&m_updateTimer, &QTimer::timeout, this, &GeolocationProvider::updated);
 }
 
 void GeolocationProvider::init(Plasma::DataEngine::Data *data, EntryAccuracy *accuracies)
@@ -113,7 +113,7 @@ void GeolocationProvider::setData(const QString &key, const QVariant &value)
     m_updating = false;
     m_data.insert(key, value);
 
-    if (!m_sharedData->contains(key) || m_sharedAccuracies->value("key") < m_accuracy) {
+    if (!m_sharedData->contains(key) || m_sharedAccuracies->value(QStringLiteral("key")) < m_accuracy) {
         m_sharedData->insert(key, value);
         m_sharedAccuracies->insert(key, accuracy());
         m_updateTimer.start();

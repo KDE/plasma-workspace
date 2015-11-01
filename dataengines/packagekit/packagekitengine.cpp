@@ -33,21 +33,21 @@ PackagekitEngine::PackagekitEngine(QObject* parent, const QVariantList& args)
 void PackagekitEngine::init()
 {
     QDBusMessage message;
-    message = QDBusMessage::createMethodCall("org.freedesktop.DBus",
-                                             "/org/freedesktop/DBus",
-                                             "org.freedesktop.DBus",
-                                             "ListActivatableNames");
+    message = QDBusMessage::createMethodCall(QStringLiteral("org.freedesktop.DBus"),
+                                             QStringLiteral("/org/freedesktop/DBus"),
+                                             QStringLiteral("org.freedesktop.DBus"),
+                                             QStringLiteral("ListActivatableNames"));
 
     QDBusMessage reply = QDBusConnection::sessionBus().call(message);
     if (reply.type() == QDBusMessage::ReplyMessage
         && reply.arguments().size() == 1) {
         QStringList list = reply.arguments().first().toStringList();
-        if (list.contains("org.freedesktop.PackageKit")) {
+        if (list.contains(QStringLiteral("org.freedesktop.PackageKit"))) {
             m_pk_available = true;
         }
     }
 
-    setData("Status", "available", m_pk_available);
+    setData(QStringLiteral("Status"), QStringLiteral("available"), m_pk_available);
 }
 
 Plasma::Service* PackagekitEngine::serviceForSource(const QString& source)

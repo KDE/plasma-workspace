@@ -79,8 +79,8 @@ PanelConfigView::PanelConfigView(Plasma::Containment *containment, PanelView *pa
     updateContrast();
     connect(&m_theme, &Plasma::Theme::themeChanged, this, &PanelConfigView::updateContrast);
 
-    engine()->rootContext()->setContextProperty("panel", panelView);
-    engine()->rootContext()->setContextProperty("configDialog", this);
+    engine()->rootContext()->setContextProperty(QStringLiteral("panel"), panelView);
+    engine()->rootContext()->setContextProperty(QStringLiteral("configDialog"), this);
     connect(containment, &Plasma::Containment::formFactorChanged, this, &PanelConfigView::syncGeometry);
     connect(containment, &Plasma::Containment::locationChanged, this, &PanelConfigView::syncSlideLocation);
 
@@ -112,7 +112,7 @@ void PanelConfigView::updateContrast()
 
 void PanelConfigView::showAddWidgetDialog()
 {
-    QAction *addWidgetAction = m_containment->actions()->action("add widgets");
+    QAction *addWidgetAction = m_containment->actions()->action(QStringLiteral("add widgets"));
     if (addWidgetAction) {
         addWidgetAction->trigger();
     }
@@ -120,7 +120,7 @@ void PanelConfigView::showAddWidgetDialog()
 
 void PanelConfigView::addPanelSpacer()
 {
-    m_containment->createApplet("org.kde.plasma.panelspacer");
+    m_containment->createApplet(QStringLiteral("org.kde.plasma.panelspacer"));
 }
 
 void PanelConfigView::syncGeometry()

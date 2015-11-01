@@ -52,7 +52,7 @@ void BacktraceParserTest::fetchData(const QString & group)
 
 void BacktraceParserTest::btParserUsefulnessTest_data()
 {
-    fetchData("usefulness");
+    fetchData(QStringLiteral("usefulness"));
 }
 
 void BacktraceParserTest::btParserUsefulnessTest()
@@ -78,7 +78,7 @@ void BacktraceParserTest::btParserUsefulnessTest()
 
 void BacktraceParserTest::btParserFunctionsTest_data()
 {
-    fetchData("firstValidFunctions");
+    fetchData(QStringLiteral("firstValidFunctions"));
 }
 
 void BacktraceParserTest::btParserFunctionsTest()
@@ -93,7 +93,7 @@ void BacktraceParserTest::btParserFunctionsTest()
     m_generator->sendData(filename);
 
     //compare
-    QString functions = parser->firstValidFunctions().join("|");
+    QString functions = parser->firstValidFunctions().join(QStringLiteral("|"));
     QCOMPARE(functions, result);
 }
 
@@ -102,7 +102,7 @@ void BacktraceParserTest::btParserBenchmark_data()
     QTest::addColumn<QString>("filename");
     QTest::addColumn<QString>("debugger");
 
-    m_settings.beginGroup("debugger");
+    m_settings.beginGroup(QStringLiteral("debugger"));
     QStringList keys = m_settings.allKeys();
     foreach(const QString & key, keys) {
         QTest::newRow(key.toLocal8Bit())

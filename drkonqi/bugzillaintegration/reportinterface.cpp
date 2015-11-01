@@ -144,29 +144,29 @@ QString ReportInterface::generateReportFullText(bool drKonqiStamp) const
     QString report;
 
     //Program name and versions
-    report.append(QString("Application: %1 (%2)\n").arg(crashedApp->fakeExecutableBaseName(),
+    report.append(QStringLiteral("Application: %1 (%2)\n").arg(crashedApp->fakeExecutableBaseName(),
                                                         crashedApp->version()));
     if ( sysInfo->compiledSources() ) {
-        report.append(QString(" (Compiled from sources)\n"));
+        report.append(QStringLiteral(" (Compiled from sources)\n"));
     } else {
-        report.append(QString("\n"));
+        report.append(QStringLiteral("\n"));
     }
-    report.append(QString("Qt Version: %1\n").arg(sysInfo->qtVersion()));
-    report.append(QString("Operating System: %1\n").arg(sysInfo->operatingSystem()));
+    report.append(QStringLiteral("Qt Version: %1\n").arg(sysInfo->qtVersion()));
+    report.append(QStringLiteral("Operating System: %1\n").arg(sysInfo->operatingSystem()));
 
     //LSB output or manually selected distro
     if ( !sysInfo->lsbRelease().isEmpty() ) {
-        report.append(QString("Distribution: %1\n").arg(sysInfo->lsbRelease()));
+        report.append(QStringLiteral("Distribution: %1\n").arg(sysInfo->lsbRelease()));
     } else if ( !sysInfo->bugzillaPlatform().isEmpty() &&
                         sysInfo->bugzillaPlatform() != QLatin1String("unspecified")) {
-        report.append(QString("Distribution (Platform): %1\n").arg(
+        report.append(QStringLiteral("Distribution (Platform): %1\n").arg(
                                                         sysInfo->bugzillaPlatform()));
     }
     report.append(QLatin1Char('\n'));
 
     //Details of the crash situation
     if (isBugAwarenessPageDataUseful()) {
-        report.append(QString("-- Information about the crash:\n"));
+        report.append(QStringLiteral("-- Information about the crash:\n"));
         if (!m_reportDetailText.isEmpty()) {
             report.append(m_reportDetailText.trimmed());
         } else {
@@ -181,21 +181,21 @@ QString ReportInterface::generateReportFullText(bool drKonqiStamp) const
     //Crash reproducibility (only if useful)
     if (m_reproducible !=  ReproducibleUnsure) {
         if (m_reproducible == ReproducibleEverytime) {
-            report.append(QString("The crash can be reproduced every time.\n\n"));
+            report.append(QStringLiteral("The crash can be reproduced every time.\n\n"));
         } else if (m_reproducible == ReproducibleSometimes) {
-            report.append(QString("The crash can be reproduced sometimes.\n\n"));
+            report.append(QStringLiteral("The crash can be reproduced sometimes.\n\n"));
         } else if (m_reproducible == ReproducibleNever) {
-            report.append(QString("The crash does not seem to be reproducible.\n\n"));
+            report.append(QStringLiteral("The crash does not seem to be reproducible.\n\n"));
         }
     }
 
     //Backtrace
-    report.append(QString("-- Backtrace:\n"));
+    report.append(QStringLiteral("-- Backtrace:\n"));
     if (!m_backtrace.isEmpty()) {
         QString formattedBacktrace = m_backtrace.trimmed();
         report.append(formattedBacktrace + QLatin1Char('\n'));
     } else {
-        report.append(QString("A useful backtrace could not be generated\n"));
+        report.append(QStringLiteral("A useful backtrace could not be generated\n"));
     }
 
     //Possible duplicates (selected by the user)
@@ -206,7 +206,7 @@ QString ReportInterface::generateReportFullText(bool drKonqiStamp) const
             duplicatesString += QLatin1String("bug ") + dupe + QLatin1String(", ");
         }
         duplicatesString = duplicatesString.left(duplicatesString.length()-2) + '.';
-        report.append(QString("The reporter indicates this bug may be a duplicate of or related to %1\n")
+        report.append(QStringLiteral("The reporter indicates this bug may be a duplicate of or related to %1\n")
                         .arg(duplicatesString));
     }
 
@@ -220,7 +220,7 @@ QString ReportInterface::generateReportFullText(bool drKonqiStamp) const
                                 QLatin1String(", ");
         }
         duplicatesString = duplicatesString.left(duplicatesString.length()-2) + '.';
-        report.append(QString("Possible duplicates by query: %1\n").arg(duplicatesString));
+        report.append(QStringLiteral("Possible duplicates by query: %1\n").arg(duplicatesString));
     }
 
     if (drKonqiStamp) {
@@ -247,11 +247,11 @@ QString ReportInterface::generateAttachmentComment() const
 
     //Details of the crash situation
     if (isBugAwarenessPageDataUseful()) {
-        comment.append(QString("%1\n\n").arg(m_reportDetailText.trimmed()));
+        comment.append(QStringLiteral("%1\n\n").arg(m_reportDetailText.trimmed()));
     }
 
     //Backtrace (only 6 lines)
-    comment.append(QString("-- Backtrace (Reduced):\n"));
+    comment.append(QStringLiteral("-- Backtrace (Reduced):\n"));
     QString reducedBacktrace =
                 DrKonqi::debuggerManager()->backtraceGenerator()->parser()->simplifiedBacktrace();
     comment.append(reducedBacktrace.trimmed());
@@ -275,7 +275,7 @@ BugReport ReportInterface::newBugReportTemplate() const
     } else {
         report.setPlatform(sysInfo->bugzillaPlatform());
     }
-    report.setKeywords(QStringList() << "drkonqi");
+    report.setKeywords(QStringList() << QStringLiteral("drkonqi"));
     report.setPriority(QLatin1String("NOR"));
     report.setBugSeverity(QLatin1String("crash"));
 

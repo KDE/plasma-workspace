@@ -48,7 +48,7 @@ UiServer::UiServer(ProgressListModel* model)
     toolBar->setToolButtonStyle(Qt::ToolButtonTextBesideIcon);
 
     QAction *configureAction = toolBar->addAction(configure);
-    configureAction->setIcon(QIcon::fromTheme("configure"));
+    configureAction->setIcon(QIcon::fromTheme(QStringLiteral("configure")));
     configureAction->setIconText(configure);
 
     connect(configureAction, &QAction::triggered, this, &UiServer::showConfigurationDialog);
@@ -75,7 +75,7 @@ UiServer::UiServer(ProgressListModel* model)
 
 
     m_systemTray = new QSystemTrayIcon(this);
-    m_systemTray->setIcon(QIcon::fromTheme("view-process-system"));
+    m_systemTray->setIcon(QIcon::fromTheme(QStringLiteral("view-process-system")));
     m_systemTray->setToolTip(i18n("List of running file transfers/jobs (kuiserver)"));
     m_systemTray->show();
     resize(450, 450);
@@ -114,15 +114,15 @@ void UiServer::closeEvent(QCloseEvent *event)
 
 void UiServer::showConfigurationDialog()
 {
-    if (KConfigDialog::showDialog("configuration"))
+    if (KConfigDialog::showDialog(QStringLiteral("configuration")))
         return;
 
-    KConfigDialog *dialog = new KConfigDialog(this, "configuration",
+    KConfigDialog *dialog = new KConfigDialog(this, QStringLiteral("configuration"),
             Configuration::self());
 
     UIConfigurationDialog *configurationUI = new UIConfigurationDialog(0);
 
-    dialog->addPage(configurationUI, i18n("Behavior"), "configure");
+    dialog->addPage(configurationUI, i18n("Behavior"), QStringLiteral("configure"));
 
     connect(dialog, &KConfigDialog::settingsChanged, this, &UiServer::updateConfiguration);
     //dialog->button(KDialog::Help)->hide();

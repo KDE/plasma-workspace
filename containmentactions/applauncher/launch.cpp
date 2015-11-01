@@ -29,7 +29,7 @@
 
 AppLauncher::AppLauncher(QObject *parent, const QVariantList &args)
     : Plasma::ContainmentActions(parent, args),
-      m_group(new KServiceGroup("/"))
+      m_group(new KServiceGroup(QStringLiteral("/")))
 {
 }
 

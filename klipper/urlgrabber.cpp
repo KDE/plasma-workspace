@@ -145,7 +145,7 @@ void URLGrabber::matchingMimeActions(const QString& clipData)
     }
 
     if ( !mimetype.isDefault() ) {
-        KService::List lst = KMimeTypeTrader::self()->query( mimetype.name(), "Application" );
+        KService::List lst = KMimeTypeTrader::self()->query( mimetype.name(), QStringLiteral("Application") );
         if ( !lst.isEmpty() ) {
             ClipAction* action = new ClipAction( QString(), mimetype.comment() );
             foreach( const KService::Ptr &service, lst ) {
@@ -215,7 +215,7 @@ void URLGrabber::actionMenu( HistoryItemConstPtr item, bool automatically_invoke
         connect(m_myMenu, &QMenu::triggered, this, &URLGrabber::slotItemSelected);
 
         foreach (ClipAction* clipAct, matchingActionsList) {
-            m_myMenu->addSection(QIcon::fromTheme( "klipper" ),
+            m_myMenu->addSection(QIcon::fromTheme( QStringLiteral("klipper") ),
                                  i18n("%1 - Actions For: %2", clipAct->description(), KStringHandler::csqueeze(text, 45)));
             QList<ClipCommand> cmdList = clipAct->commands();
             int listSize = cmdList.count();
@@ -250,7 +250,7 @@ void URLGrabber::actionMenu( HistoryItemConstPtr item, bool automatically_invoke
         }
         m_myMenu->addSeparator();
 
-        QAction *cancelAction = new QAction(QIcon::fromTheme("dialog-cancel"), i18n("&Cancel"), this);
+        QAction *cancelAction = new QAction(QIcon::fromTheme(QStringLiteral("dialog-cancel")), i18n("&Cancel"), this);
         connect(cancelAction, &QAction::triggered, m_myMenu, &QMenu::hide);
         m_myMenu->addAction(cancelAction);
         m_myClipItem = item;

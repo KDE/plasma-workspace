@@ -125,11 +125,11 @@ PlayerContainer::PlayerContainer(const QString& busAddress, QObject* parent)
             busAddress, MPRIS2_PATH,
             QDBusConnection::sessionBus(), this);
 
-    connect(m_propsIface, SIGNAL(PropertiesChanged(QString,QVariantMap,QStringList)),
-            this,         SLOT(propertiesChanged(QString,QVariantMap,QStringList)));
+    connect(m_propsIface, &OrgFreedesktopDBusPropertiesInterface::PropertiesChanged,
+            this,         &PlayerContainer::propertiesChanged);
 
-    connect(m_playerIface, SIGNAL(Seeked(qlonglong)),
-            this,          SLOT(seeked(qlonglong)));
+    connect(m_playerIface, &OrgMprisMediaPlayer2PlayerInterface::Seeked,
+            this,          &PlayerContainer::seeked);
 
     refresh();
 }
@@ -142,14 +142,14 @@ void PlayerContainer::refresh()
 
     QDBusPendingCall async = m_propsIface->GetAll(OrgMprisMediaPlayer2Interface::staticInterfaceName());
     QDBusPendingCallWatcher *watcher = new QDBusPendingCallWatcher(async, this);
-    connect(watcher, SIGNAL(finished(QDBusPendingCallWatcher*)),
-            this,    SLOT(getPropsFinished(QDBusPendingCallWatcher*)));
+    connect(watcher, &QDBusPendingCallWatcher::finished,
+            this,    &PlayerContainer::getPropsFinished);
     ++m_fetchesPending;
 
     async = m_propsIface->GetAll(OrgMprisMediaPlayer2PlayerInterface::staticInterfaceName());
     watcher = new QDBusPendingCallWatcher(async, this);
-    connect(watcher, SIGNAL(finished(QDBusPendingCallWatcher*)),
-            this,    SLOT(getPropsFinished(QDBusPendingCallWatcher*)));
+    connect(watcher, &QDBusPendingCallWatcher::finished,
+            this,    &PlayerContainer::getPropsFinished);
     ++m_fetchesPending;
 }
 
@@ -200,9 +200,9 @@ void PlayerContainer::copyProperty(const QString& propName, const QVariant& _val
     }
     if (value.type() != expType) {
         const char * gotTypeCh = QDBusMetaType::typeToSignature(value.userType());
-        QString gotType = gotTypeCh ? QString::fromAscii(gotTypeCh) : "<unknown>";
+        QString gotType = gotTypeCh ? QString::fromAscii(gotTypeCh) : QStringLiteral("<unknown>");
         const char * expTypeCh = QDBusMetaType::typeToSignature(expType);
-        QString expType = expTypeCh ? QString::fromAscii(expTypeCh) : "<unknown>";
+        QString expType = expTypeCh ? QString::fromAscii(expTypeCh) : QStringLiteral("<unknown>");
 
         qCWarning(MPRIS2) << m_dbusAddress << "exports" << propName
             << "as D-Bus type" << gotType
@@ -216,44 +216,44 @@ void PlayerContainer::copyProperty(const QString& propName, const QVariant& _val
         } else if (propName == QLatin1String("Metadata")) {
 
             if (updType == UpdatedSignal) {
-                QDBusObjectPath oldTrackId(data().value("Metadata").toMap().value("mpris:trackid").toString());
-                QDBusObjectPath newTrackId(value.toMap().value("mpris:trackid").toString());
+                QDBusObjectPath oldTrackId(data().value(QStringLiteral("Metadata")).toMap().value(QStringLiteral("mpris:trackid")).toString());
+                QDBusObjectPath newTrackId(value.toMap().value(QStringLiteral("mpris:trackid")).toString());
                 if (oldTrackId != newTrackId) {
-                    setData("Position", static_cast<qlonglong>(0));
+                    setData(QStringLiteral("Position"), static_cast<qlonglong>(0));
                     setData(POS_UPD_STRING, QDateTime::currentDateTimeUtc());
                 }
             }
 
-            if (value.toMap().value("mpris:length").toLongLong() <= 0) {
+            if (value.toMap().value(QStringLiteral("mpris:length")).toLongLong() <= 0) {
                 QMap<QString, QVariant> metadataMap = value.toMap();
-                metadataMap.remove("mpris:length");
+                metadataMap.remove(QStringLiteral("mpris:length"));
                 value = QVariant(metadataMap);
             }
 
         } else if (propName == QLatin1String("Rate") &&
-                data().value("PlaybackStatus").toString() == QLatin1String("Playing")) {
+                data().value(QStringLiteral("PlaybackStatus")).toString() == QLatin1String("Playing")) {
 
-            if (data().contains("Position"))
+            if (data().contains(QStringLiteral("Position")))
                 recalculatePosition();
             m_currentRate = value.toDouble();
 
         } else if (propName == QLatin1String("PlaybackStatus")) {
 
-            if (data().contains("Position") && data().contains("PlaybackStatus")) {
+            if (data().contains(QStringLiteral("Position")) && data().contains(QStringLiteral("PlaybackStatus"))) {
                 updatePosition();
             }
 
             // update the effective rate
-            if (data().contains("Rate")) {
+            if (data().contains(QStringLiteral("Rate"))) {
                 if (value.toString() == QLatin1String("Playing"))
-                    m_currentRate = data().value("Rate").toDouble();
+                    m_currentRate = data().value(QStringLiteral("Rate")).toDouble();
                 else
                     m_currentRate = 0.0;
             }
             if (value.toString() == QLatin1String("Stopped")) {
                 // assume the position has reset to 0, since this is really the
                 // only sensible value for a stopped track
-                setData("Position", static_cast<qint64>(0));
+                setData(QStringLiteral("Position"), static_cast<qint64>(0));
                 setData(POS_UPD_STRING, QDateTime::currentDateTimeUtc());
             }
         } else if (propName == QLatin1String("DesktopEntry")) {
@@ -261,7 +261,7 @@ void PlayerContainer::copyProperty(const QString& propName, const QVariant& _val
             KDesktopFile desktopFile(filename);
             QString iconName = desktopFile.readIcon();
             if (!iconName.isEmpty()) {
-                setData("Desktop Icon Name", iconName);
+                setData(QStringLiteral("Desktop Icon Name"), iconName);
             }
         }
         setData(propName, value);
@@ -287,7 +287,7 @@ void PlayerContainer::updateFromMap(const QVariantMap& map, UpdateType updType)
                 }
             } else {
                 const char * gotTypeCh = QDBusMetaType::typeToSignature(i.value().userType());
-                QString gotType = gotTypeCh ? QString::fromAscii(gotTypeCh) : "<unknown>";
+                QString gotType = gotTypeCh ? QString::fromAscii(gotTypeCh) : QStringLiteral("<unknown>");
 
                 qCWarning(MPRIS2) << m_dbusAddress << "exports" << i.key()
                     << "as D-Bus type" << gotType
@@ -339,10 +339,10 @@ void PlayerContainer::getPropsFinished(QDBusPendingCallWatcher* watcher)
 
 void PlayerContainer::updatePosition()
 {
-    QDBusPendingCall async = m_propsIface->Get(OrgMprisMediaPlayer2PlayerInterface::staticInterfaceName(), "Position");
+    QDBusPendingCall async = m_propsIface->Get(OrgMprisMediaPlayer2PlayerInterface::staticInterfaceName(), QStringLiteral("Position"));
     QDBusPendingCallWatcher *watcher = new QDBusPendingCallWatcher(async, this);
-    connect(watcher, SIGNAL(finished(QDBusPendingCallWatcher*)),
-            this,    SLOT(getPositionFinished(QDBusPendingCallWatcher*)));
+    connect(watcher, &QDBusPendingCallWatcher::finished,
+            this,    &PlayerContainer::getPositionFinished);
 }
 
 void PlayerContainer::getPositionFinished(QDBusPendingCallWatcher* watcher)
@@ -358,7 +358,7 @@ void PlayerContainer::getPositionFinished(QDBusPendingCallWatcher* watcher)
         return;
     }
 
-    setData("Position", propsReply.value().toLongLong());
+    setData(QStringLiteral("Position"), propsReply.value().toLongLong());
     setData(POS_UPD_STRING, QDateTime::currentDateTimeUtc());
     checkForUpdate();
 }
@@ -379,7 +379,7 @@ void PlayerContainer::propertiesChanged(
 
 void PlayerContainer::seeked(qlonglong position)
 {
-    setData("Position", position);
+    setData(QStringLiteral("Position"), position);
     setData(POS_UPD_STRING, QDateTime::currentDateTimeUtc());
     checkForUpdate();
 }
@@ -388,12 +388,12 @@ void PlayerContainer::recalculatePosition()
 {
     Q_ASSERT(data().contains("Position"));
 
-    qint64 pos = data().value("Position").toLongLong();
+    qint64 pos = data().value(QStringLiteral("Position")).toLongLong();
     QDateTime lastUpdated = data().value(POS_UPD_STRING).toDateTime();
     QDateTime now = QDateTime::currentDateTimeUtc();
     qint64 diff = lastUpdated.msecsTo(now) * 1000;
     qint64 newPos = pos + static_cast<qint64>(diff * m_currentRate);
-    setData("Position", newPos);
+    setData(QStringLiteral("Position"), newPos);
     setData(POS_UPD_STRING, now);
 }
 

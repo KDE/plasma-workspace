@@ -55,7 +55,7 @@ bool FileBrowserEngine::sourceRequestEvent(const QString &path)
 {
     qDebug() << "source requested() called: "<< path;
     m_dirWatch->addDir(path);
-    setData(path, "type", QVariant("unknown"));
+    setData(path, QStringLiteral("type"), QVariant("unknown"));
     updateData (path, INIT);
     return true;
 }
@@ -105,23 +105,23 @@ void FileBrowserEngine::updateData(const QString &path, EventType event)
 
             forMatchingSources {
                 qDebug() << "MATCH";
-                it.value()->setData("item.type", QVariant("directory"));
+                it.value()->setData(QStringLiteral("item.type"), QVariant("directory"));
 
                 QVariant vdTmp;
                 if (!visibleDirectories.isEmpty()) vdTmp = QVariant(visibleDirectories);
-                it.value()->setData("directories.visible", vdTmp);
+                it.value()->setData(QStringLiteral("directories.visible"), vdTmp);
 
                 QVariant adTmp;
                 if (!allDirectories.empty()) adTmp = QVariant(allDirectories);
-                it.value()->setData("directories.all", adTmp);
+                it.value()->setData(QStringLiteral("directories.all"), adTmp);
 
                 QVariant vfTmp;
                 if (!visibleFiles.empty()) vfTmp = QVariant(visibleFiles);
-                it.value()->setData("files.visible", vfTmp);
+                it.value()->setData(QStringLiteral("files.visible"), vfTmp);
 
                 QVariant afTmp;
                 if (!allFiles.empty()) afTmp = QVariant(allFiles);
-                it.value()->setData("files.all", afTmp);
+                it.value()->setData(QStringLiteral("files.all"), afTmp);
             }
         }
     } else if (type == FILE) {
@@ -132,7 +132,7 @@ void FileBrowserEngine::updateData(const QString &path, EventType event)
 
             forMatchingSources {
                 qDebug() << "MATCH";
-                it.value()->setData("item.type", QVariant("file"));
+                it.value()->setData(QStringLiteral("item.type"), QVariant("file"));
 
                 for (QHash< QString, KFileMetaInfoItem >::const_iterator i = kfmi.items().constBegin(); i != kfmi.items().constEnd(); ++i) {
                     it.value()->setData(i.key(), i.value().value());
@@ -141,7 +141,7 @@ void FileBrowserEngine::updateData(const QString &path, EventType event)
         }
     } else {
         forMatchingSources {
-            it.value()->setData("item.type", QVariant("imaginary"));
+            it.value()->setData(QStringLiteral("item.type"), QVariant("imaginary"));
         }
     };
 

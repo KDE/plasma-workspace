@@ -24,13 +24,13 @@
 DeviceNothingAction::DeviceNothingAction()
 	: DeviceAction()
 {
-    setIconName("dialog-cancel");
+    setIconName(QStringLiteral("dialog-cancel"));
     setLabel(i18n("Do nothing"));
 }
 
 QString DeviceNothingAction::id() const
 {
-    return "#NothingAction";
+    return QStringLiteral("#NothingAction");
 }
 
 void DeviceNothingAction::execute(Solid::Device &/*device*/)

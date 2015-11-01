@@ -85,7 +85,7 @@ void Task::refreshIcon()
 
         // load the icon for X applications
         if (d->pixmap.isNull()) {
-            d->pixmap = SmallIcon("xorg");
+            d->pixmap = SmallIcon(QStringLiteral("xorg"));
         }
     }
 
@@ -252,9 +252,9 @@ bool Task::isOnTop() const
 
 bool Task::isModified() const
 {
-    static QString modStr = QString::fromUtf8("[") +
+    static QString modStr = QLatin1String("[") +
                             i18nc("marks that a task has been modified", "modified") +
-                            QString::fromUtf8("]");
+                            QLatin1String("]");
     int modStrPos = d->info.visibleName().indexOf(modStr);
 
     return (modStrPos != -1);
@@ -408,7 +408,7 @@ QPixmap Task::bestIcon(int size, bool &isStaticIcon)
 
         // Icon of last resort
         if (pixmap.isNull()) {
-            pixmap = KIconLoader::global()->loadIcon("xorg",
+            pixmap = KIconLoader::global()->loadIcon(QStringLiteral("xorg"),
                      KIconLoader::NoGroup,
                      KIconLoader::SizeSmall);
             isStaticIcon = true;
@@ -429,7 +429,7 @@ QPixmap Task::bestIcon(int size, bool &isStaticIcon)
 
         // Icon of last resort
         if (pixmap.isNull()) {
-            pixmap = KIconLoader::global()->loadIcon("xorg",
+            pixmap = KIconLoader::global()->loadIcon(QStringLiteral("xorg"),
                      KIconLoader::NoGroup,
                      KIconLoader::SizeMedium);
             isStaticIcon = true;
@@ -459,7 +459,7 @@ QPixmap Task::bestIcon(int size, bool &isStaticIcon)
 
         // Icon of last resort
         if (pixmap.isNull()) {
-            pixmap = KIconLoader::global()->loadIcon("xorg",
+            pixmap = KIconLoader::global()->loadIcon(QStringLiteral("xorg"),
                      KIconLoader::NoGroup,
                      size);
             isStaticIcon = true;
@@ -609,12 +609,12 @@ void Task::addMimeData(QMimeData *mimeData) const
 
 QString Task::mimetype()
 {
-    return "windowsystem/winid";
+    return QStringLiteral("windowsystem/winid");
 }
 
 QString Task::groupMimetype()
 {
-    return "windowsystem/multiple-winids";
+    return QStringLiteral("windowsystem/multiple-winids");
 }
 
 QList<WId> Task::idsFromMimeData(const QMimeData *mimeData, bool *ok)

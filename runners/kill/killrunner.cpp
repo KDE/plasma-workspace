@@ -42,12 +42,12 @@ KillRunner::KillRunner(QObject *parent, const QVariantList& args)
     setObjectName( QLatin1String("Kill Runner") );
     reloadConfiguration();
 
-    connect(this, SIGNAL(prepare()), this, SLOT(prep()));
-    connect(this, SIGNAL(teardown()), this, SLOT(cleanup()));
+    connect(this, &Plasma::AbstractRunner::prepare, this, &KillRunner::prep);
+    connect(this, &Plasma::AbstractRunner::teardown, this, &KillRunner::cleanup);
 
     m_delayedCleanupTimer.setInterval(50);
     m_delayedCleanupTimer.setSingleShot(true);
-    connect(&m_delayedCleanupTimer, SIGNAL(timeout()), this, SLOT(cleanup()));
+    connect(&m_delayedCleanupTimer, &QTimer::timeout, this, &KillRunner::cleanup);
 }
 
 KillRunner::~KillRunner()
@@ -141,7 +141,7 @@ void KillRunner::match(Plasma::RunnerContext &context)
         Plasma::QueryMatch match(this);
         match.setText(i18n("Terminate %1", name));
         match.setSubtext(i18n("Process ID: %1\nRunning as user: %2", QString::number(pid), user));
-        match.setIcon(QIcon::fromTheme("application-exit"));
+        match.setIcon(QIcon::fromTheme(QStringLiteral("application-exit")));
         match.setData(data);
         match.setId(name);
 
@@ -181,20 +181,20 @@ void KillRunner::run(const Plasma::RunnerContext &context, const Plasma::QueryMa
     }
 
     QStringList args;
-    args << QString("-%1").arg(signal) << QString("%1").arg(pid);
+    args << QStringLiteral("-%1").arg(signal) << QStringLiteral("%1").arg(pid);
     KProcess *process = new KProcess(this);
-    int returnCode = process->execute("kill", args);
+    int returnCode = process->execute(QStringLiteral("kill"), args);
 
     if (returnCode == 0)
     {
         return;
     }
 
-    KAuth::Action killAction = QString("org.kde.ksysguard.processlisthelper.sendsignal");
-    killAction.setHelperId("org.kde.ksysguard.processlisthelper");
-    killAction.addArgument("pid0", pid);
-    killAction.addArgument("pidcount", 1);
-    killAction.addArgument("signal", signal);
+    KAuth::Action killAction = QStringLiteral("org.kde.ksysguard.processlisthelper.sendsignal");
+    killAction.setHelperId(QStringLiteral("org.kde.ksysguard.processlisthelper"));
+    killAction.addArgument(QStringLiteral("pid0"), pid);
+    killAction.addArgument(QStringLiteral("pidcount"), 1);
+    killAction.addArgument(QStringLiteral("signal"), signal);
     killAction.execute();
 }
 
@@ -204,11 +204,11 @@ QList<QAction*> KillRunner::actionsForMatch(const Plasma::QueryMatch &match)
 
     QList<QAction*> ret;
 
-    if (!action("SIGTERM")) {
-        (addAction("SIGTERM", QIcon::fromTheme("application-exit"), i18n("Send SIGTERM")))->setData(15);
-        (addAction("SIGKILL", QIcon::fromTheme("process-stop"), i18n("Send SIGKILL")))->setData(9);
+    if (!action(QStringLiteral("SIGTERM"))) {
+        (addAction(QStringLiteral("SIGTERM"), QIcon::fromTheme(QStringLiteral("application-exit")), i18n("Send SIGTERM")))->setData(15);
+        (addAction(QStringLiteral("SIGKILL"), QIcon::fromTheme(QStringLiteral("process-stop")), i18n("Send SIGKILL")))->setData(9);
     }
-    ret << action("SIGTERM") << action("SIGKILL");
+    ret << action(QStringLiteral("SIGTERM")) << action(QStringLiteral("SIGKILL"));
     return ret;
 }
 
@@ -218,8 +218,8 @@ QString KillRunner::getUserName(qlonglong uid)
     if (user.isValid()) {
         return user.loginName();
     }
-    qDebug() << QString("No user with UID %1 was found").arg(uid);
-    return "root";//No user with UID uid was found, so root is used
+    qDebug() << QStringLiteral("No user with UID %1 was found").arg(uid);
+    return QStringLiteral("root");//No user with UID uid was found, so root is used
 }
 
 #include "killrunner.moc"

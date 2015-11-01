@@ -69,7 +69,7 @@ void KioMediaStream::reset()
         d->kiojob->suspend();
     }
 
-    d->kiojob->addMetaData("UserAgent", QLatin1String("KDE Phonon"));
+    d->kiojob->addMetaData(QStringLiteral("UserAgent"), QLatin1String("KDE Phonon"));
     connect(d->kiojob, SIGNAL(data(KIO::Job*, QByteArray)),
             this, SLOT(_k_bytestreamData(KIO::Job*, QByteArray)));
     connect(d->kiojob, SIGNAL(result(KJob*)), this, SLOT(_k_bytestreamResult(KJob*)));

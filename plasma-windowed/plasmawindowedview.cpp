@@ -39,8 +39,8 @@ PlasmaWindowedView::PlasmaWindowedView(QWindow *parent)
       m_statusNotifier(0),
       m_withStatusNotifier(false)
 {
-    engine()->rootContext()->setContextProperty("root", contentItem());
-    QQmlExpression *expr = new QQmlExpression(engine()->rootContext(), contentItem(), "Qt.createQmlObject('import QtQuick 2.0; import org.kde.plasma.core 2.0; Rectangle {color: theme.backgroundColor; anchors.fill:parent}', root, \"\");");
+    engine()->rootContext()->setContextProperty(QStringLiteral("root"), contentItem());
+    QQmlExpression *expr = new QQmlExpression(engine()->rootContext(), contentItem(), QStringLiteral("Qt.createQmlObject('import QtQuick 2.0; import org.kde.plasma.core 2.0; Rectangle {color: theme.backgroundColor; anchors.fill:parent}', root, \"\");"));
     expr->evaluate();
 }
 
@@ -147,12 +147,12 @@ void PlasmaWindowedView::mouseReleaseEvent(QMouseEvent *ev)
     }
 
     if (!m_applet->failedToLaunch()) {
-        QAction *runAssociatedApplication = m_applet->actions()->action("run associated application");
+        QAction *runAssociatedApplication = m_applet->actions()->action(QStringLiteral("run associated application"));
         if (runAssociatedApplication && runAssociatedApplication->isEnabled()) {
             menu.addAction(runAssociatedApplication);
         }
 
-        QAction *configureApplet = m_applet->actions()->action("configure");
+        QAction *configureApplet = m_applet->actions()->action(QStringLiteral("configure"));
         if (configureApplet && configureApplet->isEnabled()) {
             menu.addAction(configureApplet);
         }

@@ -66,7 +66,7 @@ NotificationsEngine::NotificationsEngine( QObject* parent, const QVariantList& a
     }
 
     // Read additional single-notification-popup-only from a config file
-    KConfig singlePopupConfig("plasma_single_popup_notificationrc");
+    KConfig singlePopupConfig(QStringLiteral("plasma_single_popup_notificationrc"));
     KConfigGroup singlePopupConfigGroup(&singlePopupConfig, "General");
     m_alwaysReplaceAppsList += QSet<QString>::fromList(singlePopupConfigGroup.readEntry("applications", QStringList()));
 }
@@ -74,7 +74,7 @@ NotificationsEngine::NotificationsEngine( QObject* parent, const QVariantList& a
 NotificationsEngine::~NotificationsEngine()
 {
     QDBusConnection dbus = QDBusConnection::sessionBus();
-    dbus.unregisterService( "org.freedesktop.Notifications" );
+    dbus.unregisterService( QStringLiteral("org.freedesktop.Notifications") );
 }
 
 void NotificationsEngine::init()
@@ -187,13 +187,13 @@ uint NotificationsEngine::Notify(const QString &app_name, uint replaces_id,
                                  const QStringList &actions, const QVariantMap &hints, int timeout)
 {
     uint partOf = 0;
-    const QString appRealName = hints["x-kde-appname"].toString();
+    const QString appRealName = hints[QStringLiteral("x-kde-appname")].toString();
 
     //don't let applications spam too much, except ourself
     //needed to display all the "applet deleted" notifications and not merge them
     if (m_activeNotifications.values().contains(app_name + summary) && appRealName != QLatin1String("plasma_workspace") && !m_alwaysReplaceAppsList.contains(app_name)) {
         // cut off the "notification " from the source name
-        partOf = m_activeNotifications.key(app_name + summary).mid(13).toUInt();
+        partOf = m_activeNotifications.key(app_name + summary).midRef(13).toUInt();
 
     }
 
@@ -203,11 +203,11 @@ uint NotificationsEngine::Notify(const QString &app_name, uint replaces_id,
     QString _body;
 
     if (partOf > 0) {
-        const QString source = QString("notification %1").arg(partOf);
+        const QString source = QStringLiteral("notification %1").arg(partOf);
         Plasma::DataContainer *container = containerForSource(source);
         if (container) {
             // append the body text
-            _body = container->data()["body"].toString();
+            _body = container->data()[QStringLiteral("body")].toString();
             if (_body != body) {
                 _body.append("\n").append(body);
             } else {
@@ -257,7 +257,7 @@ uint NotificationsEngine::Notify(const QString &app_name, uint replaces_id,
         timeout = 2000 + qMax(timeout, 3000);
     }
 
-    const QString source = QString("notification %1").arg(id);
+    const QString source = QStringLiteral("notification %1").arg(id);
 
     QString bodyFinal = (partOf == 0 ? body : _body);
     // First trim whitespace from beginning and end
@@ -269,24 +269,24 @@ uint NotificationsEngine::Notify(const QString &app_name, uint replaces_id,
     // Finally, check if we don't have multiple <br/>s following,
     // can happen for example when "\n       \n" is sent, this replaces
     // all <br/>s in succsession with just one
-    bodyFinal.replace(QRegularExpression("<br/>\\s*<br/>(\\s|<br/>)*"), QLatin1String("<br/>"));
+    bodyFinal.replace(QRegularExpression(QStringLiteral("<br/>\\s*<br/>(\\s|<br/>)*")), QLatin1String("<br/>"));
     // This fancy RegExp escapes every occurence of & since QtQuick Text will blatantly cut off
     // text where it finds a stray ampersand.
     // Only &{apos, quot, gt, lt, amp}; as well as &#123 character references will be allowed
-    bodyFinal.replace(QRegularExpression("&(?!(?:apos|quot|[gl]t|amp);|#)"), QLatin1String("&amp;"));
+    bodyFinal.replace(QRegularExpression(QStringLiteral("&(?!(?:apos|quot|[gl]t|amp);|#)")), QLatin1String("&amp;"));
     // The Text.StyledText format handles only html3.2 stuff and &apos; is html4 stuff
     // so we need to replace it here otherwise it will not render at all.
     bodyFinal.replace(QLatin1String("&apos;"), QChar('\''));
 
     Plasma::DataEngine::Data notificationData;
-    notificationData.insert("id", QString::number(id));
-    notificationData.insert("appName", appname_str);
-    notificationData.insert("appIcon", app_icon);
-    notificationData.insert("summary", summary);
-    notificationData.insert("body", bodyFinal);
-    notificationData.insert("actions", actions);
-    notificationData.insert("isPersistent", isPersistent);
-    notificationData.insert("expireTimeout", timeout);
+    notificationData.insert(QStringLiteral("id"), QString::number(id));
+    notificationData.insert(QStringLiteral("appName"), appname_str);
+    notificationData.insert(QStringLiteral("appIcon"), app_icon);
+    notificationData.insert(QStringLiteral("summary"), summary);
+    notificationData.insert(QStringLiteral("body"), bodyFinal);
+    notificationData.insert(QStringLiteral("actions"), actions);
+    notificationData.insert(QStringLiteral("isPersistent"), isPersistent);
+    notificationData.insert(QStringLiteral("expireTimeout"), timeout);
 
     bool configurable = false;
     if (!appRealName.isEmpty()) {
@@ -299,45 +299,45 @@ uint NotificationsEngine::Notify(const QString &app_name, uint replaces_id,
             config->addConfigSources(QStandardPaths::locateAll(QStandardPaths::GenericDataLocation,
                                      QStringLiteral("knotifications5/") + appRealName + QStringLiteral(".notifyrc")));
 
-            const QRegularExpression regexp("^Event/([^/]*)$");
+            const QRegularExpression regexp(QStringLiteral("^Event/([^/]*)$"));
             configurable = !config->groupList().filter(regexp).isEmpty();
             m_configurableApplications.insert(appRealName, configurable);
         }
     }
-    notificationData.insert("appRealName", appRealName);
-    notificationData.insert("configurable", configurable);
+    notificationData.insert(QStringLiteral("appRealName"), appRealName);
+    notificationData.insert(QStringLiteral("configurable"), configurable);
 
     QImage image;
     // Underscored hints was in use in version 1.1 of the spec but has been
     // replaced by dashed hints in version 1.2. We need to support it for
     // users of the 1.2 version of the spec.
-    if (hints.contains("image-data")) {
-        QDBusArgument arg = hints["image-data"].value<QDBusArgument>();
+    if (hints.contains(QStringLiteral("image-data"))) {
+        QDBusArgument arg = hints[QStringLiteral("image-data")].value<QDBusArgument>();
         image = decodeNotificationSpecImageHint(arg);
-    } else if (hints.contains("image_data")) {
-        QDBusArgument arg = hints["image_data"].value<QDBusArgument>();
+    } else if (hints.contains(QStringLiteral("image_data"))) {
+        QDBusArgument arg = hints[QStringLiteral("image_data")].value<QDBusArgument>();
         image = decodeNotificationSpecImageHint(arg);
-    } else if (hints.contains("image-path")) {
-        QString path = findImageForSpecImagePath(hints["image-path"].toString());
+    } else if (hints.contains(QStringLiteral("image-path"))) {
+        QString path = findImageForSpecImagePath(hints[QStringLiteral("image-path")].toString());
         if (!path.isEmpty()) {
             image.load(path);
         }
-    } else if (hints.contains("image_path")) {
-        QString path = findImageForSpecImagePath(hints["image_path"].toString());
+    } else if (hints.contains(QStringLiteral("image_path"))) {
+        QString path = findImageForSpecImagePath(hints[QStringLiteral("image_path")].toString());
         if (!path.isEmpty()) {
             image.load(path);
         }
-    } else if (hints.contains("icon_data")) {
+    } else if (hints.contains(QStringLiteral("icon_data"))) {
         // This hint was in use in version 1.0 of the spec but has been
         // replaced by "image_data" in version 1.1. We need to support it for
         // users of the 1.0 version of the spec.
-        QDBusArgument arg = hints["icon_data"].value<QDBusArgument>();
+        QDBusArgument arg = hints[QStringLiteral("icon_data")].value<QDBusArgument>();
         image = decodeNotificationSpecImageHint(arg);
     }
-    notificationData.insert("image", image.isNull() ? QVariant() : image);
+    notificationData.insert(QStringLiteral("image"), image.isNull() ? QVariant() : image);
 
-    if (hints.contains("urgency")) {
-        notificationData.insert("urgency", hints["urgency"].toInt());
+    if (hints.contains(QStringLiteral("urgency"))) {
+        notificationData.insert(QStringLiteral("urgency"), hints[QStringLiteral("urgency")].toInt());
     }
 
     setData(source, notificationData);
@@ -371,28 +371,28 @@ Plasma::Service* NotificationsEngine::serviceForSource(const QString& source)
 QStringList NotificationsEngine::GetCapabilities()
 {
     return QStringList()
-        << "body"
-        << "body-hyperlinks"
-        << "body-markup"
-        << "icon-static"
-        << "actions"
+        << QStringLiteral("body")
+        << QStringLiteral("body-hyperlinks")
+        << QStringLiteral("body-markup")
+        << QStringLiteral("icon-static")
+        << QStringLiteral("actions")
         ;
 }
 
 // FIXME: Signature is ugly
 QString NotificationsEngine::GetServerInformation(QString& vendor, QString& version, QString& specVersion)
 {
-    vendor = "KDE";
-    version = "2.0"; // FIXME
-    specVersion = "1.1";
-    return "Plasma";
+    vendor = QLatin1String("KDE");
+    version = QLatin1String("2.0"); // FIXME
+    specVersion = QLatin1String("1.1");
+    return QStringLiteral("Plasma");
 }
 
 int NotificationsEngine::createNotification(const QString &appName, const QString &appIcon, const QString &summary,
                                             const QString &body, int timeout, const QString &appRealName, const QStringList &actions)
 {
     QVariantMap hints;
-    hints.insert("x-kde-appname", appRealName);
+    hints.insert(QStringLiteral("x-kde-appname"), appRealName);
     Notify(appName, 0, appIcon, summary, body, actions, hints, timeout);
     return m_nextId;
 }

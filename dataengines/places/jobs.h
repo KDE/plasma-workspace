@@ -31,9 +31,9 @@ public:
                     const QVariantMap& parameters,
                     QObject* parent = 0)
         : ModelJob(parent, model, index, (index.isValid() ? "Edit" : "Add"), parameters)
-        , m_text(parameters["Name"].toString())
-        , m_url(parameters["Url"].toUrl())
-        , m_icon(parameters["Icon"].toString())
+        , m_text(parameters[QStringLiteral("Name")].toString())
+        , m_url(parameters[QStringLiteral("Url")].toUrl())
+        , m_icon(parameters[QStringLiteral("Icon")].toString())
     {}
 
     void start()
@@ -56,7 +56,7 @@ class RemovePlaceJob : public ModelJob
 public:
     RemovePlaceJob(KFilePlacesModel* model, const QModelIndex& index,
                    QObject* parent)
-        : ModelJob(parent, model, index, "Remove")
+        : ModelJob(parent, model, index, QStringLiteral("Remove"))
     {}
 
     void start()
@@ -88,7 +88,7 @@ class TeardownDeviceJob : public ModelJob
 public:
     TeardownDeviceJob(KFilePlacesModel* model, const QModelIndex& index,
                       QObject* parent = 0)
-        : ModelJob(parent, model, index, "Teardown Device")
+        : ModelJob(parent, model, index, QStringLiteral("Teardown Device"))
     {}
 
     void start()

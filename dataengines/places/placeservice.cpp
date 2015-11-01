@@ -27,35 +27,35 @@ PlaceService::PlaceService(QObject* parent, KFilePlacesModel* model)
     : Plasma::Service(parent),
       m_model(model)
 {
-    setName("org.kde.places");
+    setName(QStringLiteral("org.kde.places"));
 
-    setDestination("places");
+    setDestination(QStringLiteral("places"));
     qDebug() << "Created a place service for" << destination();
 }
 
 Plasma::ServiceJob* PlaceService::createJob(const QString& operation,
                                             QMap<QString,QVariant>& parameters)
 {
-    QModelIndex index = m_model->index(parameters.value("index").toInt(), 0);
+    QModelIndex index = m_model->index(parameters.value(QStringLiteral("index")).toInt(), 0);
 
     if (!index.isValid()) {
         return 0;
     }
 
     qDebug() << "Job" << operation << "with arguments" << parameters << "requested";
-    if (operation == "Add") {
+    if (operation == QLatin1String("Add")) {
         return new AddEditPlaceJob(m_model, index, parameters, this);
-    } else if (operation == "Edit") {
+    } else if (operation == QLatin1String("Edit")) {
         return new AddEditPlaceJob(m_model, QModelIndex(), parameters, this);
-    } else if (operation == "Remove") {
+    } else if (operation == QLatin1String("Remove")) {
         return new RemovePlaceJob(m_model, index, this);
-    } else if (operation == "Hide") {
+    } else if (operation == QLatin1String("Hide")) {
         return new ShowPlaceJob(m_model, index, false, this);
-    } else if (operation == "Show") {
+    } else if (operation == QLatin1String("Show")) {
         return new ShowPlaceJob(m_model, index, true, this);
-    } else if (operation == "Setup Device") {
+    } else if (operation == QLatin1String("Setup Device")) {
         return new SetupDeviceJob(m_model, index, this);
-    } else if (operation == "Teardown Device") {
+    } else if (operation == QLatin1String("Teardown Device")) {
         return new TeardownDeviceJob(m_model, index, this);
     } else {
         // FIXME: BAD!  No!

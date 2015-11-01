@@ -33,15 +33,15 @@ TaskWindowJob::~TaskWindowJob()
 void TaskWindowJob::start()
 {
     const QString operation = operationName();
-    if (operation == "cascade") {
-        QDBusInterface  *kwinInterface = new QDBusInterface("org.kde.kwin", "/KWin", "org.kde.KWin");
-        QDBusPendingCall pcall = kwinInterface->asyncCall("cascadeDesktop");
+    if (operation == QLatin1String("cascade")) {
+        QDBusInterface  *kwinInterface = new QDBusInterface(QStringLiteral("org.kde.kwin"), QStringLiteral("/KWin"), QStringLiteral("org.kde.KWin"));
+        QDBusPendingCall pcall = kwinInterface->asyncCall(QStringLiteral("cascadeDesktop"));
        // kDebug() << " connected to kwin interface! ";
         setResult(true);
         return;
-    } else if (operation == "unclutter") {
-        QDBusInterface  *kwinInterface = new QDBusInterface("org.kde.kwin", "/KWin", "org.kde.KWin");
-        QDBusPendingCall pcall = kwinInterface->asyncCall("unclutterDesktop");
+    } else if (operation == QLatin1String("unclutter")) {
+        QDBusInterface  *kwinInterface = new QDBusInterface(QStringLiteral("org.kde.kwin"), QStringLiteral("/KWin"), QStringLiteral("org.kde.KWin"));
+        QDBusPendingCall pcall = kwinInterface->asyncCall(QStringLiteral("unclutterDesktop"));
       //  kDebug() << "connected to kwin interface! ";
         setResult(true);
         return;

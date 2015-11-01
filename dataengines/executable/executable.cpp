@@ -23,7 +23,7 @@ ExecutableContainer::ExecutableContainer(const QString& command, QObject* parent
     : Plasma::DataContainer(parent), m_process(0)
 {
     setObjectName(command);
-    connect(this, SIGNAL(updateRequested(DataContainer*)), this, SLOT(exec()));
+    connect(this, &Plasma::DataContainer::updateRequested, this, &ExecutableContainer::exec);
     exec();
 }
 
@@ -38,10 +38,10 @@ ExecutableContainer::~ExecutableContainer()
 void ExecutableContainer::finished(int exitCode, QProcess::ExitStatus exitStatus)
 {
     //qDebug() << objectName();
-    setData("exit code", exitCode);
-    setData("exit status", exitStatus);
-    setData("stdout", QString::fromLocal8Bit(m_process->readAllStandardOutput()));
-    setData("stderr", QString::fromLocal8Bit(m_process->readAllStandardError()));
+    setData(QStringLiteral("exit code"), exitCode);
+    setData(QStringLiteral("exit status"), exitStatus);
+    setData(QStringLiteral("stdout"), QString::fromLocal8Bit(m_process->readAllStandardOutput()));
+    setData(QStringLiteral("stderr"), QString::fromLocal8Bit(m_process->readAllStandardError()));
     checkForUpdate();
 }
 

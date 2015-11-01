@@ -192,7 +192,7 @@ QVariant ActionDetailModel::decorationData(ClipCommand* command, ActionDetailMod
 {
     switch (column) {
         case COMMAND_COL:
-            return command->icon.isEmpty() ? QIcon::fromTheme( "system-run" ) : QIcon::fromTheme( command->icon );
+            return command->icon.isEmpty() ? QIcon::fromTheme( QStringLiteral("system-run") ) : QIcon::fromTheme( command->icon );
         case OUTPUT_COL:
         case DESCRIPTION_COL:
             break;
@@ -277,8 +277,8 @@ EditActionDialog::EditActionDialog(QWidget* parent)
     m_ui->leRegExp->setClearButtonShown(true);
     m_ui->leDescription->setClearButtonShown(true);
 
-    m_ui->pbAddCommand->setIcon(QIcon::fromTheme("list-add"));
-    m_ui->pbRemoveCommand->setIcon(QIcon::fromTheme("list-remove"));
+    m_ui->pbAddCommand->setIcon(QIcon::fromTheme(QStringLiteral("list-add")));
+    m_ui->pbRemoveCommand->setIcon(QIcon::fromTheme(QStringLiteral("list-remove")));
 
     // For some reason, the default row height is 30 pixel. Set it to the minimum sectionSize instead,
     // which is the font height+struts.
@@ -314,7 +314,7 @@ void EditActionDialog::setAction(ClipAction* act, int commandIdxToSelect)
     m_model = new ActionDetailModel(act, this);
     m_ui->twCommandList->setModel(m_model);
     m_ui->twCommandList->setItemDelegateForColumn(1, new ActionOutputDelegate);
-    connect(m_ui->twCommandList->selectionModel(), SIGNAL(selectionChanged(QItemSelection,QItemSelection)), SLOT(onSelectionChanged()));
+    connect(m_ui->twCommandList->selectionModel(), &QItemSelectionModel::selectionChanged, this, &EditActionDialog::onSelectionChanged);
 
     updateWidgets( commandIdxToSelect );
 }
@@ -373,7 +373,7 @@ void EditActionDialog::onAddCommand()
     m_model->addCommand(ClipCommand(i18n( "new command" ),
                                     i18n( "Command Description" ),
                                     true,
-                                    "" ));
+                                    QLatin1String("") ));
     m_ui->twCommandList->edit( m_model->index( m_model->rowCount()-1, 0 ));
 }
 

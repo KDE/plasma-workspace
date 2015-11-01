@@ -24,7 +24,7 @@ JobControl::JobControl(QObject* parent, JobView *jobView)
     : Plasma::Service(parent),
       m_jobView(jobView)
 {
-    setName("applicationjobs");
+    setName(QStringLiteral("applicationjobs"));
     setDestination(jobView->objectName());
 }
 

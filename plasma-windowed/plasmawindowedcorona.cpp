@@ -34,8 +34,8 @@ PlasmaWindowedCorona::PlasmaWindowedCorona(QObject *parent)
       m_containment(0),
       m_hasStatusNotifier(false)
 {
-    KPackage::Package package = KPackage::PackageLoader::self()->loadPackage("Plasma/Shell");
-    package.setPath("org.kde.plasma.desktop");
+    KPackage::Package package = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Plasma/Shell"));
+    package.setPath(QStringLiteral("org.kde.plasma.desktop"));
     setKPackage(package);
     //QMetaObject::invokeMethod(this, "load", Qt::QueuedConnection);
     load();
@@ -130,7 +130,7 @@ QRect PlasmaWindowedCorona::screenGeometry(int id) const
 void PlasmaWindowedCorona::load()
 {
     /*this won't load applets, since applets are in plasmawindowedrc*/
-    loadLayout("plasmawindowed-appletsrc");
+    loadLayout(QStringLiteral("plasmawindowed-appletsrc"));
 
 
     bool found = false;
@@ -143,15 +143,15 @@ void PlasmaWindowedCorona::load()
 
     if (!found) {
         qDebug() << "Loading default layout";
-        createContainment("empty");
-        saveLayout("plasmawindowed-appletsrc");
+        createContainment(QStringLiteral("empty"));
+        saveLayout(QStringLiteral("plasmawindowed-appletsrc"));
     }
 
     for (auto c : containments()) {
         if (c->containmentType() == Plasma::Types::DesktopContainment) {
             m_containment = c;
             m_containment->setFormFactor(Plasma::Types::Application);
-            QAction *removeAction = c->actions()->action("remove");
+            QAction *removeAction = c->actions()->action(QStringLiteral("remove"));
             if(removeAction) {
                 removeAction->deleteLater();
             }

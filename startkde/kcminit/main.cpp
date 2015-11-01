@@ -148,7 +148,7 @@ static inline bool enableMultihead()
   if (xcb_screen_count <= 1)
     return false;
 
-  KConfig _config( "kcmdisplayrc" );
+  KConfig _config( QStringLiteral("kcmdisplayrc") );
   KConfigGroup config(&_config, "X11");
   // This key has no GUI apparently
   return !config.readEntry( "disableMultihead", false);
@@ -165,7 +165,7 @@ KCMInit::KCMInit( const QCommandLineParser& args )
   }
 
   if (args.isSet(QStringLiteral("list"))) {
-    list = KServiceTypeTrader::self()->query( "KCModuleInit" );
+    list = KServiceTypeTrader::self()->query( QStringLiteral("KCModuleInit") );
 
     foreach (const KService::Ptr & service, list) {
       if (service->library().isEmpty())
@@ -189,7 +189,7 @@ KCMInit::KCMInit( const QCommandLineParser& args )
     }
   } else {
     // locate the desktop files
-    list = KServiceTypeTrader::self()->query( "KCModuleInit" );
+    list = KServiceTypeTrader::self()->query( QStringLiteral("KCModuleInit") );
   }
 
   // Pass env. var to kdeinit.
@@ -211,7 +211,7 @@ KCMInit::KCMInit( const QCommandLineParser& args )
      QDBusConnection::sessionBus().asyncCall(ksplashProgressMessage);
 
      sendReady();
-     QTimer::singleShot( 300 * 1000, qApp, SLOT(quit())); // just in case
+     QTimer::singleShot( 300 * 1000, qApp, &QCoreApplication::quit); // just in case
      qApp->exec(); // wait for runPhase1() and runPhase2()
   }
   else

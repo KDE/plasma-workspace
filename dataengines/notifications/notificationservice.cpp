@@ -24,7 +24,7 @@ NotificationService::NotificationService(NotificationsEngine* parent, const QStr
     : Plasma::Service(parent),
       m_notificationEngine(parent)
 {
-    setName("notifications");
+    setName(QStringLiteral("notifications"));
     setDestination(source);
 }
 

@@ -107,18 +107,18 @@ TaskManager::TaskManager()
     : QObject(),
       d(new Private(this))
 {
-    connect(KWindowSystem::self(), SIGNAL(windowAdded(WId)),
-            this,       SLOT(windowAdded(WId)));
-    connect(KWindowSystem::self(), SIGNAL(windowRemoved(WId)),
-            this,       SLOT(windowRemoved(WId)));
-    connect(KWindowSystem::self(), SIGNAL(activeWindowChanged(WId)),
-            this,       SLOT(activeWindowChanged(WId)));
-    connect(KWindowSystem::self(), SIGNAL(currentDesktopChanged(int)),
-            this,       SLOT(currentDesktopChanged(int)));
+    connect(KWindowSystem::self(), &KWindowSystem::windowAdded,
+            this,       &TaskManager::windowAdded);
+    connect(KWindowSystem::self(), &KWindowSystem::windowRemoved,
+            this,       &TaskManager::windowRemoved);
+    connect(KWindowSystem::self(), &KWindowSystem::activeWindowChanged,
+            this,       &TaskManager::activeWindowChanged);
+    connect(KWindowSystem::self(), &KWindowSystem::currentDesktopChanged,
+            this,       &TaskManager::currentDesktopChanged);
     connect(KWindowSystem::self(), SIGNAL(windowChanged(WId, const ulong*)),
             this,       SLOT(windowChanged(WId, const ulong*)));
-    connect(&d->activityConsumer, SIGNAL(currentActivityChanged(QString)),
-            this,       SIGNAL(activityChanged(QString)));
+    connect(&d->activityConsumer, &KActivities::Consumer::currentActivityChanged,
+            this,       &TaskManager::activityChanged);
     if (QCoreApplication::instance()) {
         connect(QCoreApplication::instance(), SIGNAL(aboutToQuit()), this, SLOT(onAppExitCleanup()));
     }
@@ -138,9 +138,9 @@ TaskManager::TaskManager()
 
     d->watcher = new KDirWatch(this);
     d->watcher->addFile(QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation)+"/klaunchrc");
-    connect(d->watcher, SIGNAL(dirty(QString)), this, SLOT(configureStartup()));
-    connect(d->watcher, SIGNAL(created(QString)), this, SLOT(configureStartup()));
-    connect(d->watcher, SIGNAL(deleted(QString)), this, SLOT(configureStartup()));
+    connect(d->watcher, &KDirWatch::dirty, this, &TaskManager::configureStartup);
+    connect(d->watcher, &KDirWatch::created, this, &TaskManager::configureStartup);
+    connect(d->watcher, &KDirWatch::deleted, this, &TaskManager::configureStartup);
 
     configureStartup();
 }
@@ -160,7 +160,7 @@ TaskManager::~TaskManager()
 
 void TaskManager::configureStartup()
 {
-    KConfig _c("klaunchrc");
+    KConfig _c(QStringLiteral("klaunchrc"));
     KConfigGroup c(&_c, "FeedbackStyle");
     if (!c.readEntry("TaskbarButton", true)) {
         delete d->startupInfo;
@@ -171,14 +171,14 @@ void TaskManager::configureStartup()
     if (!d->startupInfo) {
         d->startupInfo = new KStartupInfo(KStartupInfo::CleanOnCantDetect, this);
         connect(d->startupInfo,
-                SIGNAL(gotNewStartup(KStartupInfoId, KStartupInfoData)),
-                SLOT(gotNewStartup(KStartupInfoId, KStartupInfoData)));
+                &KStartupInfo::gotNewStartup,
+                this, &TaskManager::gotNewStartup);
         connect(d->startupInfo,
-                SIGNAL(gotStartupChange(KStartupInfoId, KStartupInfoData)),
-                SLOT(gotStartupChange(KStartupInfoId, KStartupInfoData)));
+                &KStartupInfo::gotStartupChange,
+                this, &TaskManager::gotStartupChange);
         connect(d->startupInfo,
-                SIGNAL(gotRemoveStartup(KStartupInfoId, KStartupInfoData)),
-                SLOT(killStartup(KStartupInfoId)));
+                &KStartupInfo::gotRemoveStartup,
+                this, &TaskManager::killStartup);
     }
 
     c = KConfigGroup(&_c, "TaskbarButtonSettings");
@@ -316,7 +316,7 @@ void TaskManager::windowRemoved(WId w)
         //qDebug() << "TM: Task for WId " << w << " removed.";
         // FIXME: due to a bug in Qt 4.x, the event loop reference count is incorrect
         // when going through x11EventFilter .. :/ so we have to singleShot the deleteLater
-        QTimer::singleShot(0, t, SLOT(deleteLater()));
+        QTimer::singleShot(0, t, &QObject::deleteLater);
     } else {
         t->removeTransient(w);
         //qDebug() << "TM: Transient " << w << " for Task " << t->window() << " removed.";
@@ -422,7 +422,7 @@ void TaskManager::currentDesktopChanged(int desktop)
 void TaskManager::gotNewStartup(const KStartupInfoId& id, const KStartupInfoData& data)
 {
     Startup *s = new Startup(id, data, 0);
-    connect(s, SIGNAL(destroyed(QObject*)), this, SLOT(startupDestroyed(QObject*)));
+    connect(s, &QObject::destroyed, this, &TaskManager::startupDestroyed);
     d->startups.append(s);
     emit startupAdded(s);
 }

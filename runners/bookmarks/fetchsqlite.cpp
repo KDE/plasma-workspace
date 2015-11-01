@@ -29,8 +29,8 @@
 FetchSqlite::FetchSqlite(const QString &originalFilePath, const QString &copyTo, QObject *parent) :
     QObject(parent), m_databaseFile(copyTo)
 {
-    m_db = QSqlDatabase::addDatabase("QSQLITE", originalFilePath);
-    m_db.setHostName("localhost");
+    m_db = QSqlDatabase::addDatabase(QStringLiteral("QSQLITE"), originalFilePath);
+    m_db.setHostName(QStringLiteral("localhost"));
 
     QFile originalFile(originalFilePath);
     QFile(copyTo).remove();

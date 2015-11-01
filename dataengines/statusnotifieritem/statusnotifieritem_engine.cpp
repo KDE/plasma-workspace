@@ -25,7 +25,7 @@
 #include <QDebug>
 #include <iostream>
 
-static const QString s_watcherServiceName("org.kde.StatusNotifierWatcher");
+static const QString s_watcherServiceName(QStringLiteral("org.kde.StatusNotifierWatcher"));
 
 StatusNotifierItemEngine::StatusNotifierItemEngine(QObject *parent, const QVariantList& args)
     : Plasma::DataEngine(parent, args),
@@ -61,8 +61,8 @@ void StatusNotifierItemEngine::init()
 
         QDBusServiceWatcher *watcher = new QDBusServiceWatcher(s_watcherServiceName, QDBusConnection::sessionBus(),
                                                                QDBusServiceWatcher::WatchForOwnerChange, this);
-        connect(watcher, SIGNAL(serviceOwnerChanged(QString,QString,QString)),
-                this, SLOT(serviceChange(QString,QString,QString)));
+        connect(watcher, &QDBusServiceWatcher::serviceOwnerChanged,
+                this, &StatusNotifierItemEngine::serviceChange);
 
         registerWatcher(s_watcherServiceName);
     }
@@ -87,14 +87,14 @@ void StatusNotifierItemEngine::registerWatcher(const QString& service)
     if (service == s_watcherServiceName) {
         delete m_statusNotifierWatcher;
 
-        m_statusNotifierWatcher = new org::kde::StatusNotifierWatcher(s_watcherServiceName, "/StatusNotifierWatcher",
+        m_statusNotifierWatcher = new org::kde::StatusNotifierWatcher(s_watcherServiceName, QStringLiteral("/StatusNotifierWatcher"),
 								      QDBusConnection::sessionBus());
         if (m_statusNotifierWatcher->isValid() &&
             m_statusNotifierWatcher->property("ProtocolVersion").toBool() == s_protocolVersion) {
-            connect(m_statusNotifierWatcher, SIGNAL(StatusNotifierItemRegistered(QString)), this, SLOT(serviceRegistered(QString)));
-            connect(m_statusNotifierWatcher, SIGNAL(StatusNotifierItemUnregistered(QString)), this, SLOT(serviceUnregistered(QString)));
+            connect(m_statusNotifierWatcher, &OrgKdeStatusNotifierWatcherInterface::StatusNotifierItemRegistered, this, &StatusNotifierItemEngine::serviceRegistered);
+            connect(m_statusNotifierWatcher, &OrgKdeStatusNotifierWatcherInterface::StatusNotifierItemUnregistered, this, &StatusNotifierItemEngine::serviceUnregistered);
 
-            m_statusNotifierWatcher->call(QDBus::NoBlock, "RegisterStatusNotifierHost", m_serviceName);
+            m_statusNotifierWatcher->call(QDBus::NoBlock, QStringLiteral("RegisterStatusNotifierHost"), m_serviceName);
 
             QStringList registeredItems = m_statusNotifierWatcher->property("RegisteredStatusNotifierItems").value<QStringList>();
             foreach (const QString &service, registeredItems) {
@@ -113,8 +113,8 @@ void StatusNotifierItemEngine::unregisterWatcher(const QString& service)
     if (service == s_watcherServiceName) {
         qDebug()<< s_watcherServiceName << "disappeared";
 
-        disconnect(m_statusNotifierWatcher, SIGNAL(StatusNotifierItemRegistered(QString)), this, SLOT(serviceRegistered(QString)));
-        disconnect(m_statusNotifierWatcher, SIGNAL(StatusNotifierItemUnregistered(QString)), this, SLOT(serviceUnregistered(QString)));
+        disconnect(m_statusNotifierWatcher, &OrgKdeStatusNotifierWatcherInterface::StatusNotifierItemRegistered, this, &StatusNotifierItemEngine::serviceRegistered);
+        disconnect(m_statusNotifierWatcher, &OrgKdeStatusNotifierWatcherInterface::StatusNotifierItemUnregistered, this, &StatusNotifierItemEngine::serviceUnregistered);
 
         removeAllSources();
 
