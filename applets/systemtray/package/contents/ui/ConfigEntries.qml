@@ -138,7 +138,7 @@ QtLayouts.GridLayout {
                     var shownIndex = cfg_shownItems.indexOf(modelData.taskId);
                     var hiddenIndex = cfg_hiddenItems.indexOf(modelData.taskId);
 
-                    switch (currentIndex) {
+                    switch (index) {
                     case 0: {
                         if (shownIndex > -1) {
                             cfg_shownItems.splice(shownIndex, 1);
