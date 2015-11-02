@@ -12,7 +12,6 @@ include_directories(${CMAKE_CURRENT_BINARY_DIR}/../)
 
 set(screensaver_dbusXML dbus/org.freedesktop.ScreenSaver.xml)
 set(kscreensaver_dbusXML dbus/org.kde.screensaver.xml)
-set(ksmserver_xml  ${PROJECT_SOURCE_DIR}/ksmserver/org.kde.KSMServerInterface.xml)
 set(powerdevilpolicyagent_xml ${KDE4_DBUS_INTERFACES_DIR}/kf5_org.kde.Solid.PowerManagement.PolicyAgent.xml)
 
 set(ksld_SRCS
@@ -28,7 +27,6 @@ set(ksld_SRCS
 qt5_add_dbus_adaptor(ksld_SRCS ${screensaver_dbusXML} interface.h ScreenLocker::Interface)
 qt5_add_dbus_adaptor(ksld_SRCS ${kscreensaver_dbusXML} interface.h ScreenLocker::Interface kscreensaveradaptor KScreenSaverAdaptor)
 kconfig_add_kcfg_files(ksld_SRCS kcfg/kscreensaversettings.kcfgc)
-qt5_add_dbus_interface(ksld_SRCS ${ksmserver_xml} ksmserver_interface)
 qt5_add_dbus_interface(ksld_SRCS ${powerdevilpolicyagent_xml} powerdevilpolicyagent)
 
 ecm_add_wayland_server_protocol(ksld_SRCS
