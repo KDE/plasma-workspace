@@ -4,10 +4,12 @@ add_definitions(-DTRANSLATION_DOMAIN=\"kscreenlocker\")
 # adjusting CMAKE_C_FLAGS to get wayland protocols to compile
 set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -std=gnu90")
 
+configure_file(config-kscreenlocker.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-kscreenlocker.h)
+include_directories(${CMAKE_CURRENT_BINARY_DIR})
+
 add_subdirectory(kcheckpass)
 add_subdirectory(greeter)
 add_subdirectory(kcm)
-include_directories(${CMAKE_CURRENT_BINARY_DIR}/../)
 
 set(screensaver_dbusXML dbus/org.freedesktop.ScreenSaver.xml)
 set(kscreensaver_dbusXML dbus/org.kde.screensaver.xml)

@@ -4,7 +4,7 @@ add_definitions(-DTRANSLATION_DOMAIN=\"kscreenlocker_greet\")
 include_directories(
     ${CMAKE_CURRENT_BINARY_DIR}
     ../kcheckpass
-    ${CMAKE_CURRENT_BINARY_DIR}/../../
+    ${CMAKE_CURRENT_BINARY_DIR}/../
 )
 
 set(kscreenlocker_greet_SRCS

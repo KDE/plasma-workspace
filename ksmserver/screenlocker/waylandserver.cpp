@@ -19,7 +19,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 *********************************************************************/
 #include "waylandserver.h"
 // ksld
-#include <config-ksmserver.h>
+#include <config-kscreenlocker.h>
 // Wayland
 #include <wayland-server.h>
 #include <wayland-ksld-server-protocol.h>

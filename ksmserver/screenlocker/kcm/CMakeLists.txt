@@ -5,7 +5,7 @@ set(screenlocker_kcm_SRCS
     kcm.cpp
     selectimagebutton.cpp
 )
-include_directories(${CMAKE_CURRENT_BINARY_DIR}/../../)
+include_directories(${CMAKE_CURRENT_BINARY_DIR}/../)
 
 ki18n_wrap_ui(screenlocker_kcm_SRCS kcm.ui)
 kconfig_add_kcfg_files(screenlocker_kcm_SRCS ../kcfg/kscreensaversettings.kcfgc)

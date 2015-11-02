@@ -21,7 +21,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include "kscreensaversettings.h"
 #include "ui_kcm.h"
 #include "screenlocker_interface.h"
-#include <config-ksmserver.h>
+#include <config-kscreenlocker.h>
 #include <KActionCollection>
 #include <KGlobalAccel>
 #include <KCModule>

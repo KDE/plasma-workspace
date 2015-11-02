@@ -22,7 +22,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 *********************************************************************/
 #include "authenticator.h"
 #include <kcheckpass-enums.h>
-#include <config-ksmserver.h>
+#include <config-kscreenlocker.h>
 
 // Qt
 #include <QFile>

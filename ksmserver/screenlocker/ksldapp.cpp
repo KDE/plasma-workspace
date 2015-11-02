@@ -27,7 +27,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include "waylandlocker.h"
 #include "logind.h"
 #include "kscreensaversettings.h"
-#include <config-ksmserver.h>
+#include <config-kscreenlocker.h>
 #include <config-X11.h>
 #include "waylandserver.h"
 // KDE
