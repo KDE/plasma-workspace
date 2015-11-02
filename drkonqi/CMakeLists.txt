@@ -12,7 +12,6 @@ configure_file (config-drkonqi.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-drkonq
 if (HAVE_X11)
 find_package(Qt5 ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS X11Extras)
 endif()
-find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS WebKit)
 
 add_definitions(-DKDE_DEFAULT_DEBUG_AREA=1410)
 
@@ -98,7 +97,6 @@ target_link_libraries(drkonqi
     Qt5::DBus
 
     KF5::XmlRpcClient
-    KF5::WebKit
     KF5::WidgetsAddons
     KF5::Wallet
     drkonqi_backtrace_parser

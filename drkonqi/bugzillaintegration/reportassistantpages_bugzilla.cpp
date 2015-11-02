@@ -27,6 +27,7 @@
 #include <QCursor>
 #include <QFileDialog>
 #include <QTemporaryFile>
+#include <QTextBrowser>
 
 #include <QtDBus/QDBusInterface>
 #include <QtDBus/QDBusReply>
@@ -39,7 +40,6 @@
 #include <KCapacityBar>
 
 /* Unhandled error dialog includes */
-#include <KWebView>
 #include <KIO/Job>
 #include <KConfigGroup>
 #include <KSharedConfig>
@@ -798,7 +798,7 @@ UnhandledErrorDialog::UnhandledErrorDialog(QWidget * parent, const QString & err
 
     setAttribute(Qt::WA_DeleteOnClose);
 
-    KWebView * htmlView = new KWebView(this);
+    QTextBrowser * htmlView = new QTextBrowser(this);
 
     QLabel * iconLabel = new QLabel(this);
     iconLabel->setFixedSize(32, 32);

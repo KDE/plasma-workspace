@@ -27,7 +27,6 @@ find_package(KF5 REQUIRED COMPONENTS Package)
 find_package(KF5 5.1 REQUIRED COMPONENTS Baloo)
 find_package(KF5TextEditor)
 find_package(KWinDBusInterface CONFIG REQUIRED)
-find_package(KF5WebKit)
 
 find_package(Phonon4Qt5 4.6.60 REQUIRED NO_MODULE)
 set_package_properties(Phonon4Qt5 PROPERTIES
@@ -152,9 +151,7 @@ add_subdirectory(kuiserver)
 add_subdirectory(menu)
 add_subdirectory(phonon)
 add_subdirectory(solidautoeject)
-if(KF5WebKit_FOUND)
 add_subdirectory(drkonqi)
-endif()
 
 add_subdirectory(soliduiserver)
 feature_summary(WHAT ALL INCLUDE_QUIET_PACKAGES FATAL_ON_MISSING_REQUIRED_PACKAGES)
