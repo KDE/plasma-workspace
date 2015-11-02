@@ -53,10 +53,10 @@ void NotificationAction::start()
         emit m_engine->ActionInvoked(id, parameters()[QStringLiteral("actionId")].toString());
     } else if (operationName() == QLatin1String("userClosed")) {
         //userClosedNotification deletes the job, so we have to invoke it queued, in this case emitResult() can be called
-        m_engine->metaObject()->invokeMethod(m_engine, "removeNotication", Qt::QueuedConnection, Q_ARG(uint, id), Q_ARG(uint, 2));
+        m_engine->metaObject()->invokeMethod(m_engine, "removeNotification", Qt::QueuedConnection, Q_ARG(uint, id), Q_ARG(uint, 2));
     } else if (operationName() == QLatin1String("expireNotification")) {
         //expireNotification deletes the job, so we have to invoke it queued, in this case emitResult() can be called
-        m_engine->metaObject()->invokeMethod(m_engine, "removeNotication", Qt::QueuedConnection, Q_ARG(uint, id), Q_ARG(uint, 1));
+        m_engine->metaObject()->invokeMethod(m_engine, "removeNotification", Qt::QueuedConnection, Q_ARG(uint, id), Q_ARG(uint, 1));
     } else if (operationName() == QLatin1String("createNotification")) {
         int rv = m_engine->createNotification(parameters().value(QStringLiteral("appName")).toString(),
                                               parameters().value(QStringLiteral("appIcon")).toString(),
