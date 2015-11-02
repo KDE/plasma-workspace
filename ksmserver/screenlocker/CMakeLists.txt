@@ -4,7 +4,6 @@ add_definitions(-DTRANSLATION_DOMAIN=\"kscreenlocker\")
 # adjusting CMAKE_C_FLAGS to get wayland protocols to compile
 set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -std=gnu90")
 
-add_definitions(-DKDE_DEFAULT_DEBUG_AREA=1223)
 add_subdirectory(kcheckpass)
 add_subdirectory(greeter)
 add_subdirectory(kcm)
