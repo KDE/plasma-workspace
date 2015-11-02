@@ -144,24 +144,36 @@ QString Panel::alignment() const
 
 void Panel::setAlignment(const QString &alignment)
 {
+    Qt::Alignment alignmentValue = Qt::AlignLeft;
+
+    bool success = false;
+
+    if (alignment.compare("left", Qt::CaseInsensitive) == 0) {
+        success = true;
+        alignmentValue = Qt::AlignLeft;
+    } else if (alignment.compare("right", Qt::CaseInsensitive) == 0) {
+        success = true;
+        alignmentValue = Qt::AlignRight;
+    } else if (alignment.compare("center", Qt::CaseInsensitive) == 0) {
+        success = true;
+        alignmentValue = Qt::AlignCenter;
+    }
+
+    if (!success) {
+        return;
+    }
+
     PanelView *v = panel();
     if (v) {
-        bool success = false;
+        v->setOffset(0);
+        v->setAlignment(alignmentValue);
+    } else {
+        QQuickItem *graphicObject = qobject_cast<QQuickItem *>(containment()->property("_plasma_graphicObject").value<QObject *>());
 
-        if (alignment.compare("left", Qt::CaseInsensitive) == 0) {
-            success = true;
-            v->setAlignment(Qt::AlignLeft);
-        } else if (alignment.compare("right", Qt::CaseInsensitive) == 0) {
-            success = true;
-            v->setAlignment(Qt::AlignRight);
-        } else if (alignment.compare("center", Qt::CaseInsensitive) == 0) {
-            success = true;
-            v->setAlignment(Qt::AlignCenter);
+        if (!graphicObject) {
+            return;
         }
-
-        if (success) {
-            v->setOffset(0);
-        }
+        graphicObject->setProperty("_plasma_desktopscripting_alignment", (int)alignmentValue);
     }
 }
 
