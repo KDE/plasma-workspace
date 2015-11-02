@@ -485,13 +485,20 @@ void PanelView::restore()
         return;
     }
 
-    //defaults, may be altered by values writt4en by the scripting in startup phase
+    //defaults, may be altered by values written by the scripting in startup phase
     int defaultOffset = 0;
     int defaultThickness = 30;
     int defaultMaxLength = 0;
     int defaultMinLength = 0;
+    int defaultAlignment = Qt::AlignLeft;
 
     QQuickItem *containmentItem = containment()->property("_plasma_graphicObject").value<QQuickItem *>();
+
+    if (containmentItem && containmentItem->property("_plasma_desktopscripting_alignment").canConvert<int>()) {
+        defaultAlignment = containmentItem->property("_plasma_desktopscripting_alignment").toInt();
+    }
+    setAlignment((Qt::Alignment)config().readEntry<int>("alignment", defaultAlignment));
+
 
     if (containmentItem && containmentItem->property("_plasma_desktopscripting_offset").canConvert<int>()) {
         defaultOffset = containmentItem->property("_plasma_desktopscripting_offset").toInt();
@@ -504,7 +511,6 @@ void PanelView::restore()
     if (containmentItem && containmentItem->property("_plasma_desktopscripting_thickness").canConvert<int>()) {
         defaultThickness = qMax(16, containmentItem->property("_plasma_desktopscripting_thickness").toInt());
     }
-    setAlignment((Qt::Alignment)config().readEntry<int>("alignment", Qt::AlignLeft));
     setThickness(config().readEntry<int>("thickness", defaultThickness));
 
     setMinimumSize(QSize(-1, -1));
