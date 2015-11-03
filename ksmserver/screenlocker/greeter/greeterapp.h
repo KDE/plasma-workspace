@@ -72,7 +72,7 @@ private Q_SLOTS:
     void suspendToRam();
     void suspendToDisk();
     void getFocus();
-    void markViewsAsVisible();
+    void markViewsAsVisible(KQuickAddons::QuickViewSharedEngine *view);
     void setLockedPropertyOnViews();
 
 private:

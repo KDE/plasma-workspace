@@ -255,14 +255,16 @@ void UnlockApp::desktopResized()
             view->showFullScreen();
         }
         view->raise();
-        connect(view, &QQuickWindow::frameSwapped, this, &UnlockApp::markViewsAsVisible, Qt::QueuedConnection);
+
+        connect(view, &QQuickWindow::frameSwapped, this, [this, view] {
+            markViewsAsVisible(view);
+        }, Qt::QueuedConnection);
     }
 }
 
-void UnlockApp::markViewsAsVisible()
+void UnlockApp::markViewsAsVisible(KQuickAddons::QuickViewSharedEngine *view)
 {
-    auto *view = qobject_cast<KQuickAddons::QuickViewSharedEngine *>(sender());
-    disconnect(view, &QQuickWindow::frameSwapped, this, &UnlockApp::markViewsAsVisible);
+    disconnect(view, &QQuickWindow::frameSwapped, this, 0);
     QQmlProperty showProperty(view->rootObject(), QStringLiteral("viewVisible"));
     showProperty.write(true);
     // random state update, actually rather required on init only
