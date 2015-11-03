@@ -18,7 +18,7 @@ ecm_mark_as_test(logindTest)
 # KSldTest
 #######################################
 add_executable(ksldTest ksldtest.cpp)
-target_link_libraries(ksldTest Qt5::Test ksld)
+target_link_libraries(ksldTest Qt5::Test KScreenLocker)
 add_test(ksmserver-ksldTest ksldTest)
 ecm_mark_as_test(ksldTest)
 
