@@ -2,6 +2,7 @@
 Type=Service
 Name=Directory Watcher
 Name[ca]=Vigilant de directori
+Name[ca@valencia]=Vigilant de directori
 Name[da]=Mappeovervåger
 Name[de]=Ordnerüberwachung
 Name[el]=Επόπτης φακέλων
@@ -39,6 +40,7 @@ X-KDE-Kded-load-on-demand=true
 X-KDE-Kded-autoload=false
 Comment=Monitors directories for changes
 Comment[ca]=Controla els canvis en els directoris
+Comment[ca@valencia]=Controla els canvis en els directoris
 Comment[da]=Overvåger mapper for ændringer
 Comment[de]=Überwacht Ordner auf Änderungen
 Comment[el]=Επίβλεψη φακέλων για αλλαγές

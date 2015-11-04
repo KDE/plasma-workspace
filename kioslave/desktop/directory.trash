@@ -2,6 +2,7 @@
 Encoding=UTF-8
 Name=Trash
 Name[ca]=Paperera
+Name[ca@valencia]=Paperera
 Name[da]=Affald
 Name[de]=Papierkorb
 Name[el]=Απορρίμματα
@@ -33,6 +34,7 @@ Name[x-test]=xxTrashxx
 Name[zh_CN]=回收站
 Comment=Contains removed files
 Comment[ca]=Conté els fitxers eliminats
+Comment[ca@valencia]=Conté els fitxers eliminats
 Comment[da]=Indeholder slettede filer
 Comment[de]=Enthält gelöschte Dateien
 Comment[el]=Περιέχει αρχεία που αφαιρέθηκαν
