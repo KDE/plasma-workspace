@@ -2,6 +2,7 @@
 Encoding=UTF-8
 Name=Home
 Name[ca]=Inici
+Name[ca@valencia]=Inici
 Name[da]=Hjem
 Name[de]=Persönlicher Ordner
 Name[en_GB]=Home
@@ -32,6 +33,7 @@ Name[x-test]=xxHomexx
 Name[zh_CN]=主文件夹
 GenericName=Personal Files
 GenericName[ca]=Fitxers personals
+GenericName[ca@valencia]=Fitxers personals
 GenericName[da]=Personlige filer
 GenericName[de]=Persönliche Dateien
 GenericName[el]=Προσωπικά αρχεία
