@@ -44,7 +44,7 @@
 #define SNI_WATCHER_SERVICE_NAME "org.kde.StatusNotifierWatcher"
 #define SNI_WATCHER_PATH "/StatusNotifierWatcher"
 
-static uint16_t s_embedSize = 48; //max size of window to embed. We no longer resize the embedded window as Chromium acts stupidly.
+static uint16_t s_embedSize = 32; //max size of window to embed. We no longer resize the embedded window as Chromium acts stupidly.
 
 int SNIProxy::s_serviceCount = 0;
 
@@ -93,7 +93,7 @@ SNIProxy::SNIProxy(xcb_window_t wid, QObject* parent):
     //create a container window
     auto screen = xcb_setup_roots_iterator (xcb_get_setup (c)).data;
     m_containerWid = xcb_generate_id(c);
-    uint32_t             values[2];
+    uint32_t values[2];
     auto mask = XCB_CW_BACK_PIXEL | XCB_CW_OVERRIDE_REDIRECT;
     values[0] = screen->black_pixel; //draw a solid background so the embeded icon doesn't get garbage in it
     values[1] = true; //bypass wM
@@ -101,9 +101,9 @@ SNIProxy::SNIProxy(xcb_window_t wid, QObject* parent):
                     XCB_COPY_FROM_PARENT,          /* depth         */
                      m_containerWid,               /* window Id     */
                      screen->root,                 /* parent window */
-                     -500, 0,                       /* x, y          */
+                     0, 0,                         /* x, y          */
                      s_embedSize, s_embedSize,     /* width, height */
-                     0,                           /* border_width  */
+                     0,                            /* border_width  */
                      XCB_WINDOW_CLASS_INPUT_OUTPUT,/* class         */
                      screen->root_visual,          /* visual        */
                      mask, values);                /* masks         */
@@ -123,7 +123,7 @@ SNIProxy::SNIProxy(xcb_window_t wid, QObject* parent):
     const uint32_t stackBelowData[] = {XCB_STACK_MODE_BELOW};
     xcb_configure_window(c, m_containerWid, XCB_CONFIG_WINDOW_STACK_MODE, stackBelowData);
 
-    NETWinInfo wm(c, m_containerWid, screen->root, 0);
+    NETWinInfo wm(c, m_containerWid, screen->root, 0, 0);
     wm.setOpacity(0);
 #endif
 
@@ -161,13 +161,13 @@ SNIProxy::SNIProxy(xcb_window_t wid, QObject* parent):
     //this is needed as chormium and such when resized just fill the icon with transparent space and only draw in the middle
     //however spotify does need this as by default the window size is 900px wide.
     //use an artbitrary heuristic to make sure icons are always sensible
-    if (clientGeom->width < 12 || clientGeom->width > s_embedSize ||
-        clientGeom->height < 12 || clientGeom->height > s_embedSize)
+    if (clientGeom->width > s_embedSize || clientGeom->height > s_embedSize )
     {
         const uint32_t windowMoveConfigVals[2] = { s_embedSize, s_embedSize };
         xcb_configure_window(c, wid,
                                 XCB_CONFIG_WINDOW_WIDTH | XCB_CONFIG_WINDOW_HEIGHT,
                                 windowMoveConfigVals);
+	qCDebug(SNIPROXY) << "Resizing window" << wid << Title() << "from w*h" << clientGeom->width << clientGeom->height;
     }
 
     //show the embedded window otherwise nothing happens
@@ -192,18 +192,22 @@ void SNIProxy::update()
 {
     const QImage image = getImageNonComposite();
 
-    bool isTransparentImage = true;
+    int w = image.width();
+    int h = image.height();
 
-    int sum = 0;
-    for (int x = 0; x < image.width(); ++x) {
-        for (int y = 0; y < image.height(); ++y) {
-            sum += qAlpha(image.pixel(x, y));
-            if (sum >= 255) {
-                // There is enough amount of opaque pixels.
-                isTransparentImage = false;
-                break;
-            }
-        }
+    // check for the center and sub-center pixels first and avoid full image scan
+    bool isTransparentImage = qAlpha(image.pixel(w >> 1, h >> 1)) + qAlpha(image.pixel(w >> 2, h >> 2)) == 0;
+
+    // skip scan altogether if sub-center pixel found to be opaque
+    // and break out from the outer loop too on full scan
+    for (int x = 0; x < w && isTransparentImage; ++x) {
+	for (int y = 0; y < h; ++y) {
+	    if (qAlpha(image.pixel(x, y))) {
+		// Found an opaque pixel.
+		isTransparentImage = false;
+		break;
+	    }
+	}
     }
 
     // Update icon only if it is at least partially opaque.
@@ -212,10 +216,15 @@ void SNIProxy::update()
     // with WINE applications.
     if (!isTransparentImage) {
         m_pixmap = QPixmap::fromImage(image);
+	if (w != s_embedSize || h != s_embedSize) {
+	    qCDebug(SNIPROXY) << "Scaling pixmap of window" << m_windowId << Title() << "from w*h" << w << h;
+	    m_pixmap = m_pixmap.scaled(s_embedSize, s_embedSize, Qt::KeepAspectRatio, Qt::SmoothTransformation);
+	}
         emit NewIcon();
+        emit NewToolTip();
     }
     else {
-        qCDebug(SNIPROXY) << "Skip transparent xembed icon";
+        qCDebug(SNIPROXY) << "Skip transparent xembed icon for" << m_windowId << Title();
     }
 }
 
@@ -282,14 +291,14 @@ void SNIProxy::Activate(int x, int y)
     sendClick(XCB_BUTTON_INDEX_1, x, y);
 }
 
-void SNIProxy::ContextMenu(int x, int y)
-{
-    sendClick(XCB_BUTTON_INDEX_3, x, y);
-}
-
 void SNIProxy::SecondaryActivate(int x, int y)
 {
     sendClick(XCB_BUTTON_INDEX_2, x, y);
+}
+
+void SNIProxy::ContextMenu(int x, int y)
+{
+    sendClick(XCB_BUTTON_INDEX_3, x, y);
 }
 
 void SNIProxy::Scroll(int delta, const QString& orientation)
@@ -311,18 +320,41 @@ void SNIProxy::sendClick(uint8_t mouseButton, int x, int y)
     //note x,y are not actually where the mouse is, but the plasmoid
     //ideally we should make this match the plasmoid hit area
 
-    qCDebug(SNIPROXY) << "Sending click " << mouseButton << "to" << x << y;
+    qCDebug(SNIPROXY) << "Received click" << mouseButton << "with passed x*y" << x << y;
 
     auto c = QX11Info::connection();
 
-    //set our window so the middle is where the mouse is
+    auto cookieSize = xcb_get_geometry(c, m_windowId);
+    QScopedPointer<xcb_get_geometry_reply_t> clientGeom(xcb_get_geometry_reply(c, cookieSize, Q_NULLPTR));
+
+    auto cookie = xcb_query_pointer(c, m_windowId);
+    QScopedPointer<xcb_query_pointer_reply_t> pointer(xcb_query_pointer_reply(c, cookie, Q_NULLPTR));
+    /*qCDebug(SNIPROXY) << "samescreen" << pointer->same_screen << endl
+	<< "root x*y" << pointer->root_x << pointer->root_y << endl
+	<< "win x*y" << pointer->win_x << pointer->win_y;*/
+
+    //move our window so the mouse is within its geometry
+    uint32_t configVals[2] = {0, 0};
+    if (mouseButton >= XCB_BUTTON_INDEX_4) {
+	//scroll event, take pointer position
+	configVals[0] = pointer->root_x;
+	configVals[1] = pointer->root_y;
+    } else {
+	if (pointer->root_x > x + clientGeom->width)
+	    configVals[0] = pointer->root_x - clientGeom->width + 1;
+	else
+	    configVals[0] = static_cast<uint32_t>(x);
+	if (pointer->root_y > y + clientGeom->height)
+	    configVals[1] = pointer->root_y - clientGeom->height + 1;
+	else
+	    configVals[1] = static_cast<uint32_t>(y);
+    }
+    xcb_configure_window(c, m_containerWid, XCB_CONFIG_WINDOW_X | XCB_CONFIG_WINDOW_Y, configVals);
+
+    //pull window up
     const uint32_t stackAboveData[] = {XCB_STACK_MODE_ABOVE};
     xcb_configure_window(c, m_containerWid, XCB_CONFIG_WINDOW_STACK_MODE, stackAboveData);
 
-    const uint32_t config_vals[4] = {x, y, s_embedSize, s_embedSize };
-    xcb_configure_window(c, m_containerWid,
-                             XCB_CONFIG_WINDOW_X | XCB_CONFIG_WINDOW_Y | XCB_CONFIG_WINDOW_WIDTH | XCB_CONFIG_WINDOW_HEIGHT,
-                             config_vals);
     //mouse down
     {
         xcb_button_press_event_t* event = new xcb_button_press_event_t;
@@ -364,13 +396,9 @@ void SNIProxy::sendClick(uint8_t mouseButton, int x, int y)
         xcb_send_event(c, false, m_windowId, XCB_EVENT_MASK_BUTTON_RELEASE, (char *) event);
         free(event);
     }
+
 #ifndef VISUAL_DEBUG
     const uint32_t stackBelowData[] = {XCB_STACK_MODE_BELOW};
     xcb_configure_window(c, m_containerWid, XCB_CONFIG_WINDOW_STACK_MODE, stackBelowData);
 #endif
-    }
-
-
-
-
-//
+}
