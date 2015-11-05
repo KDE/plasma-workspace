@@ -83,8 +83,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #include <kprocess.h>
 #include <kshell.h>
 
-
-#include "screenlocker/ksldapp.h"
+#include <KScreenLocker/KsldApp>
 
 #include <kdisplaymanager.h>
 #include <QX11Info>

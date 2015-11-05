@@ -4,12 +4,6 @@ add_subdirectory( tests )
 
 include_directories(${PHONON_INCLUDE_DIR})
 
-#
-if(NOT WIN32)
-  add_subdirectory( screenlocker )
-  set(SCREEN_LOCKER "KScreenLocker")
-endif()
-
 check_library_exists(ICE _IceTransNoListen "" HAVE__ICETRANSNOLISTEN)
 configure_file(config-ksmserver.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-ksmserver.h)
 
@@ -61,7 +55,7 @@ ecm_configure_package_config_file(KSMServerDBusInterfaceConfig.cmake.in
     INSTALL_DESTINATION ${CMAKECONFIG_INSTALL_DIR})
 
 target_link_libraries(kdeinit_ksmserver
-    ${SCREEN_LOCKER}
+    PW::KScreenLocker
     PW::KWorkspace
     KF5::XmlGui
     KF5::GlobalAccel

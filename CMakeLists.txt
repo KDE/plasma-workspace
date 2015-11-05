@@ -28,6 +28,9 @@ find_package(KF5 5.1 REQUIRED COMPONENTS Baloo)
 find_package(KF5TextEditor)
 find_package(KWinDBusInterface CONFIG REQUIRED)
 
+find_package(KScreenLocker REQUIRED)
+find_package(ScreenSaverDBusInterface CONFIG REQUIRED)
+
 find_package(Phonon4Qt5 4.6.60 REQUIRED NO_MODULE)
 set_package_properties(Phonon4Qt5 PROPERTIES
    DESCRIPTION "Qt-based audio library"

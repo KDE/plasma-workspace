@@ -1,5 +1,0 @@
-Version=5
-Id=0.1-autolock
-File=kscreenlockerrc
-Group=Daemon
-Script=ksreenlocker_5_3_separate_autologin.pl,perl

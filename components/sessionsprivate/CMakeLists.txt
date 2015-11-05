@@ -3,9 +3,9 @@ set(sessionsprivateplugin_SRCS
     sessionsprivateplugin.cpp
 )
 
-qt5_add_dbus_interface(sessionsprivateplugin_SRCS ${plasma-workspace_SOURCE_DIR}/ksmserver/screenlocker/dbus/org.freedesktop.ScreenSaver.xml screensaver_interface)
+qt5_add_dbus_interface(sessionsprivateplugin_SRCS ${SCREENSAVER_DBUS_INTERFACE} screensaver_interface)
 
-kconfig_add_kcfg_files(sessionsprivateplugin_SRCS ${plasma-workspace_SOURCE_DIR}/ksmserver/screenlocker/kcfg/kscreensaversettings.kcfgc)
+kconfig_add_kcfg_files(sessionsprivateplugin_SRCS kscreensaversettings.kcfgc)
 
 add_library(sessionsprivateplugin SHARED ${sessionsprivateplugin_SRCS})
 target_link_libraries(sessionsprivateplugin

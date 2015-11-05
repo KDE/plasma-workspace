@@ -9,8 +9,7 @@ set(contextmenu_SRCS
 set(krunner_xml ${plasma-workspace_SOURCE_DIR}/krunner/dbus/org.kde.krunner.App.xml)
 qt5_add_dbus_interface(contextmenu_SRCS ${krunner_xml} krunner_interface)
 
-set(screensaver_xml ${plasma-workspace_SOURCE_DIR}/ksmserver/screenlocker/dbus/org.freedesktop.ScreenSaver.xml)
-qt5_add_dbus_interface(contextmenu_SRCS ${screensaver_xml} screensaver_interface)
+qt5_add_dbus_interface(contextmenu_SRCS ${SCREENSAVER_DBUS_INTERFACE} screensaver_interface)
 
 
 add_library(plasma_containmentactions_contextmenu MODULE ${contextmenu_SRCS})

@@ -11,7 +11,7 @@ set(testsh_SRCS
 add_executable(testsh ${testsh_SRCS})
 
 target_link_libraries(testsh
-     ${SCREEN_LOCKER}
+    PW::KScreenLocker
     PW::KWorkspace
     KF5::KDELibs4Support
     KF5::XmlGui
