@@ -119,9 +119,6 @@
 /* Define to 1 if you have the `vsnprintf' function. */
 #cmakedefine HAVE_VSNPRINTF 1
 
-/* Define to 1 if you have the Wayland libraries. */
-#cmakedefine WAYLAND_FOUND 1
-
 /* KDE's default home directory */
 #cmakedefine KDE_DEFAULT_HOME "${KDE_DEFAULT_HOME}"
 

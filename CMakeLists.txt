@@ -73,13 +73,11 @@ set_package_properties(X11 PROPERTIES DESCRIPTION "X11 libraries"
                         PURPOSE "Required for building the X11 based workspace")
 
 if(X11_FOUND)
-  find_package(XCB MODULE REQUIRED COMPONENTS XCB KEYSYMS)
+  find_package(XCB MODULE REQUIRED COMPONENTS XCB)
   set_package_properties(XCB PROPERTIES TYPE REQUIRED)
   if(NOT X11_SM_FOUND)
     message(FATAL_ERROR "\nThe X11 Session Management (SM) development package could not be found.\nPlease install libSM.\n")
   endif(NOT X11_SM_FOUND)
-
-  add_feature_info("XInput" X11_Xinput_FOUND "Required for grabbing XInput2 devices in the screen locker")
 
   find_package(Qt5 ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS X11Extras)
 endif()
@@ -91,12 +89,7 @@ endif()
 find_package(KF5Wayland CONFIG)
 set_package_properties(KF5Wayland PROPERTIES
                        TYPE REQUIRED
-                       PURPOSE "Required for building screenlocker")
-find_package(WaylandScanner)
-find_package(Wayland 1.3 COMPONENTS Client Server)
-set_package_properties(Wayland PROPERTIES
-                       TYPE REQUIRED
-                       PURPOSE "Required for building screenlocker")
+                       PURPOSE "Required for Wayland integration of plasmashell")
 
 include(ConfigureChecks.cmake)
 

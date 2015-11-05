@@ -42,6 +42,3 @@
 
 /* Define if you have X11 at all */
 #define HAVE_X11 ${X11_FOUND}
-
-/* Define if you have the XInput extension */
-#cmakedefine X11_Xinput_FOUND 1
