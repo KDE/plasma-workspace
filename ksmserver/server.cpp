@@ -606,7 +606,7 @@ KSMServer::KSMServer( const QString& windowManager, bool _only_local, bool locks
   , sessionGroup( QStringLiteral( "" ) )
   , logoutEffectWidget( NULL )
 {
-    ScreenLocker::KSldApp::self();
+    ScreenLocker::KSldApp::self()->initialize();
     if (lockscreen) {
         ScreenLocker::KSldApp::self()->lock(ScreenLocker::EstablishLock::Immediate);
     }
