@@ -41,6 +41,7 @@ ColumnLayout {
                 listView.currentIndex = -1
             } else {
                 root.query = "";
+                root.runner = ""
                 root.showHistory = false
             }
         }
