@@ -69,7 +69,7 @@ MouseArea {
             dataSource: statusNotifierSource
         }
     }
- 
+
     Row {
         anchors.fill: parent
 
@@ -79,6 +79,7 @@ MouseArea {
             height: parent.height
             width: parent.width - expander.width
             property string skipItems
+            flow: plasmoid.formFactor == PlasmaCore.Types.Vertical ? Flow.LeftToRight : Flow.TopToBottom
 
             Repeater {
                 id: tasksRepeater
