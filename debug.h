@@ -1,6 +1,7 @@
 /***************************************************************************
- *   Copyright (C) 2015 Marco Martin <mart@kde.org>                        *
- *
+ *   debug.h                                                               *
+ *                                                                         *
+ *   Copyright 2013 Sebastian Kügler <sebas@kde.org>                       *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *
@@ -18,38 +19,11 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA .        *
  ***************************************************************************/
 
-#ifndef SYSTEMTRAY_H
-#define SYSTEMTRAY_H
+#ifndef SYSTEMTRAYDEBUG_H
+#define SYSTEMTRAYDEBUG_H
 
+#include <QLoggingCategory>
 
-#include <Plasma/Containment>
-
-class QDBusPendingCallWatcher;
-class QDBusConnection;
-
-class SystemTray : public Plasma::Containment
-{
-    Q_OBJECT
-
-public:
-    SystemTray( QObject *parent, const QVariantList &args );
-    ~SystemTray();
-
-    void restorePlasmoids();
-    QStringList allowedPlugins() const;
-    void setAllowedPlugins(const QStringList &allowed);
-
-private Q_SLOTS:
-    void serviceNameFetchFinished(QDBusPendingCallWatcher* watcher, const QDBusConnection &connection);
-    void serviceRegistered(const QString &service);
-    void serviceUnregistered(const QString &service);
-
-private:
-    void initDBusActivatables();
-    QStringList m_allowedPlugins;
-    QHash<QString, int> m_knownPlugins;
-    QHash<QString, QString> m_dbusActivatableTasks;
-    QHash<QString, int> m_dbusServiceCounts;
-};
+Q_DECLARE_LOGGING_CATEGORY(SYSTEMTRAY)
 
 #endif
