@@ -601,14 +601,16 @@ static Status KSMNewClientProc ( SmsConn conn, SmPointer manager_data,
 extern "C" int _IceTransNoListen(const char * protocol);
 #endif
 
-KSMServer::KSMServer( const QString& windowManager, bool _only_local, bool lockscreen )
+KSMServer::KSMServer( const QString& windowManager, InitFlags flags )
   : wmProcess( NULL )
   , sessionGroup( QStringLiteral( "" ) )
   , logoutEffectWidget( NULL )
 {
-    ScreenLocker::KSldApp::self()->initialize();
-    if (lockscreen) {
-        ScreenLocker::KSldApp::self()->lock(ScreenLocker::EstablishLock::Immediate);
+    if (!flags.testFlag(InitFlag::NoLockScreen)) {
+        ScreenLocker::KSldApp::self()->initialize();
+        if (flags.testFlag(InitFlag::ImmediateLockScreen)) {
+            ScreenLocker::KSldApp::self()->lock(ScreenLocker::EstablishLock::Immediate);
+        }
     }
 
     new KSMServerInterfaceAdaptor( this );
@@ -634,7 +636,7 @@ KSMServer::KSMServer( const QString& windowManager, bool _only_local, bool locks
     connect(&startupSuspendTimeoutTimer, &QTimer::timeout, this, &KSMServer::startupSuspendTimeout);
     connect(&pendingShutdown, &QTimer::timeout, this, &KSMServer::pendingShutdownTimeout);
 
-    only_local = _only_local;
+    only_local = flags.testFlag(InitFlag::OnlyLocal);
 #ifdef HAVE__ICETRANSNOLISTEN
     if (only_local)
         _IceTransNoListen("tcp");

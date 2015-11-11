@@ -78,7 +78,14 @@ class KSMServer : public QObject
 {
 Q_OBJECT
 public:
-    KSMServer( const QString& windowManager, bool only_local, bool lockscreen = false );
+    enum class InitFlag {
+        None = 0,
+        OnlyLocal = 1 << 0,
+        ImmediateLockScreen = 1 << 1,
+        NoLockScreen = 1 << 2
+    };
+    Q_DECLARE_FLAGS(InitFlags, InitFlag);
+    KSMServer( const QString& windowManager, InitFlags flags );
     ~KSMServer();
 
     static KSMServer* self();

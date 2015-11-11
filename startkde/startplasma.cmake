@@ -140,8 +140,7 @@ fi
 # will remain undetected.
 # If the session should be locked from the start (locked autologin),
 # lock now and do the rest of the KDE startup underneath the locker.
-KSMSERVEROPTIONS=""
-test -n "$dl" && KSMSERVEROPTIONS=" --lockscreen"
+KSMSERVEROPTIONS=" --no-lockscreen"
 kwrapper5 @CMAKE_INSTALL_FULL_BINDIR@/ksmserver $KDEWM $KSMSERVEROPTIONS
 if test $? -eq 255; then
   # Startup error
