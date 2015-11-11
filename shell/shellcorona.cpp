@@ -1056,6 +1056,10 @@ void ShellCorona::handleContainmentAdded(Plasma::Containment *c)
 
 void ShellCorona::executeSetupPlasmoidScript(Plasma::Containment *containment, Plasma::Applet *applet)
 {
+    if (!applet->pluginInfo().isValid() || !containment->pluginInfo().isValid()) {
+        return;
+    }
+
     const QString scriptFile = m_lookAndFeelPackage.filePath("plasmoidsetupscripts", applet->pluginInfo().pluginName() + ".js");
 
     if (scriptFile.isEmpty()) {
