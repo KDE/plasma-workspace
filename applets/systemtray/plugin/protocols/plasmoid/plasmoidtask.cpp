@@ -262,14 +262,17 @@ void PlasmoidTask::showMenu(int x, int y)
         pos = taskItem()->mapToScene(pos).toPoint() + w->position();
     }
 
-    QMenu desktopMenu;
+    QMenu *desktopMenu = new QMenu;
+    connect(this, &QObject::destroyed, desktopMenu, &QMenu::close);
+    desktopMenu->setAttribute(Qt::WA_DeleteOnClose);
+
     foreach (QAction *action, m_applet->contextualActions()) {
         if (action) {
-            desktopMenu.addAction(action);
+            desktopMenu->addAction(action);
         }
     }
     if (m_applet->actions()->action(QStringLiteral("configure"))) {
-        desktopMenu.addAction(m_applet->actions()->action(QStringLiteral("configure")));
+        desktopMenu->addAction(m_applet->actions()->action(QStringLiteral("configure")));
     }
 
 
@@ -281,7 +284,7 @@ void PlasmoidTask::showMenu(int x, int y)
                 Plasma::Applet *systrayApplet = rootItem->property("_plasma_applet").value<Plasma::Applet*>();
 
                 if (systrayApplet) {
-                    QMenu *systrayMenu = new QMenu(i18n("System Tray Options"), &desktopMenu);
+                    QMenu *systrayMenu = new QMenu(i18n("System Tray Options"), desktopMenu);
 
                     foreach (QAction *action, systrayApplet->contextualActions()) {
                         if (action) {
@@ -294,10 +297,10 @@ void PlasmoidTask::showMenu(int x, int y)
                     if (systrayApplet->actions()->action(QStringLiteral("remove"))) {
                         systrayMenu->addAction(systrayApplet->actions()->action(QStringLiteral("remove")));
                     }
-                    desktopMenu.addMenu(systrayMenu);
+                    desktopMenu->addMenu(systrayMenu);
 
                     if (systrayApplet->containment() && status() >= Active) {
-                        QMenu *containmentMenu = new QMenu(i18nc("%1 is the name of the containment", "%1 Options", systrayApplet->containment()->title()), &desktopMenu);
+                        QMenu *containmentMenu = new QMenu(i18nc("%1 is the name of the containment", "%1 Options", systrayApplet->containment()->title()), desktopMenu);
 
                         foreach (QAction *action, systrayApplet->containment()->contextualActions()) {
                             if (action) {
@@ -309,15 +312,15 @@ void PlasmoidTask::showMenu(int x, int y)
                                 containmentMenu->addAction(action);
                             }
                         }
-                        desktopMenu.addMenu(containmentMenu);
+                        desktopMenu->addMenu(containmentMenu);
                     }
                 }
             }
         }
     }
 
-
-    desktopMenu.exec(pos);
+    desktopMenu->adjustSize();
+    desktopMenu->popup(pos);
 }
 
 Plasma::Applet *PlasmoidTask::applet()
