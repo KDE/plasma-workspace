@@ -53,9 +53,13 @@ PlasmaAppletItem::PlasmaAppletItem(PlasmaAppletItemModel *model,
     //attrs.insert("recommended", flags & Recommended ? true : false);
     setText(m_info.name() + " - "+ m_info.category().toLower());
 
-    const QString iconName = m_info.icon().isEmpty() ? QStringLiteral("application-x-plasma") : info.icon();
-    QIcon icon = QIcon::fromTheme(iconName);
-    setIcon(icon);
+    if (QIcon::hasThemeIcon(info.pluginName())) {
+        setIcon(QIcon::fromTheme(info.pluginName()));
+    } else if (!m_info.icon().isEmpty()) {
+        setIcon(QIcon::fromTheme(info.icon()));
+    } else {
+        setIcon(QIcon::fromTheme(QStringLiteral("application-x-plasma")));
+    }
 
     //set plugininfo parts as roles in the model, only way qml can understand it
     setData(info.name(), PlasmaAppletItemModel::NameRole);
