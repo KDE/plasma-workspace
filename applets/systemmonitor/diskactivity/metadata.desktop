@@ -102,7 +102,7 @@ Comment[zh_CN]=监视硬盘输入输出的小程序
 Comment[zh_TW]=監視硬碟效能與 I/O 的小程式
 
 Type=Service
-Icon=org.kde.plasma.systemmonitor.diskactivity
+Icon=drive-harddisk
 
 X-KDE-ServiceTypes=Plasma/Applet
 

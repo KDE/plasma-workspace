@@ -132,7 +132,7 @@ Comment[zh_CN]=RAM 利用率监视器
 Comment[zh_TW]=記憶體使用量監視器
 
 Type=Service
-Icon=org.kde.plasma.systemmonitor.memory
+Icon=media-flash
 
 X-KDE-ServiceTypes=Plasma/Applet
 

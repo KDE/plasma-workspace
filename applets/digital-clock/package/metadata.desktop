@@ -126,7 +126,7 @@ Comment[x-test]=xxTime displayed in a digital formatxx
 Comment[zh_CN]=以数字格式显示的时间
 Comment[zh_TW]=以數位格式顯示時間
 
-Icon=org.kde.plasma.digitalclock
+Icon=preferences-system-time
 Type=Service
 X-KDE-ParentApp=
 X-KDE-PluginInfo-Author=Heena

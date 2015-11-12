@@ -79,7 +79,7 @@ Comment[x-test]=xxProvides access to the clipboard history.xx
 Comment[zh_CN]=提供对剪贴板历史的访问。
 Comment[zh_TW]=提供剪貼簿歷史紀錄的存取。
 
-Icon=org.kde.plasma.clipboard
+Icon=klipper
 Type=Service
 X-KDE-ServiceTypes=Plasma/Applet,Plasma/PopupApplet
 

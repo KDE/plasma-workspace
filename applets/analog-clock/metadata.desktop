@@ -148,7 +148,7 @@ Comment[x-test]=xxA clock with handsxx
 Comment[zh_CN]=带指针的时钟
 Comment[zh_TW]=有手的時鐘
 
-Icon=org.kde.plasma.analogclock
+Icon=preferences-system-time
 Type=Service
 X-KDE-ServiceTypes=Plasma/Applet
 

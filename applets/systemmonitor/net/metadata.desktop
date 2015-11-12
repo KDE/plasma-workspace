@@ -136,7 +136,7 @@ Comment[x-test]=xxA network usage monitorxx
 Comment[zh_CN]=网络利用率监视器
 Comment[zh_TW]=網路使用量監視器
 Type=Service
-Icon=org.kde.plasma.systemmonitor.net
+Icon=network-workgroup
 
 X-KDE-ServiceTypes=Plasma/Applet
 
