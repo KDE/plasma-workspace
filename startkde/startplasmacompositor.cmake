@@ -70,7 +70,7 @@ EOF
 # fontconfig
 
 usr_share="/usr/share"
-install_share="@CMAKE_INSTALL_PREFIX@/@SHARE_INSTALL_PREFIX@"
+install_share="@KDE_INSTALL_FULL_DATADIR@"
 
 if [ ! $install_share = $usr_share ]; then
 
@@ -84,8 +84,8 @@ if [ ! $install_share = $usr_share ]; then
         mkdir -p $fontsDir
     }
 
-    oxygenDir=$fontsDir/oxygen
-    prefixDir="@CMAKE_INSTALL_PREFIX@/@SHARE_INSTALL_PREFIX@/fonts/oxygen"
+    oxygenDir=$fontsDir/truetype/oxygen
+    prefixDir="@KDE_INSTALL_FULL_DATADIR@/fonts/truetype/oxygen"
 
     # if the oxygen dir doesn't exist, create a symlink to be sure that the
     # Oxygen font is available to the user
@@ -155,7 +155,7 @@ echo 'startplasmacompositor: Starting up...'  1>&2
 # to set it to a list of paths *not* including the KDE prefix if it's not /usr or
 # /usr/local.
 if test -z "$XDG_DATA_DIRS"; then
-    XDG_DATA_DIRS="@CMAKE_INSTALL_PREFIX@/@SHARE_INSTALL_PREFIX@:/usr/share:/usr/local/share"
+XDG_DATA_DIRS="@KDE_INSTALL_FULL_DATADIR@:/usr/share:/usr/local/share"
 fi
 export XDG_DATA_DIRS
 
