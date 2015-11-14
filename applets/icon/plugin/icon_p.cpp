@@ -109,10 +109,6 @@ bool IconPrivate::processDrop(QObject *dropEvent)
 {
     Q_ASSERT(dropEvent);
 
-    if (!m_url.isLocalFile()) {
-        return false;
-    }
-
     // DeclarativeDropEvent and co aren't public
     const QObject *mimeData = qvariant_cast<QObject *>(dropEvent->property("mimeData"));
     Q_ASSERT(mimeData);
@@ -135,7 +131,7 @@ bool IconPrivate::processDrop(QObject *dropEvent)
     const QString stringUrl = m_url.toLocalFile();
 
     QMimeDatabase db;
-    const QMimeType mimeType = db.mimeTypeForFile(stringUrl);
+    const QMimeType mimeType = db.mimeTypeForUrl(m_url);
 
     if (KDesktopFile::isDesktopFile(stringUrl)) {
         const KDesktopFile desktopFile(stringUrl);
