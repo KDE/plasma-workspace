@@ -135,6 +135,11 @@ static QString convertCaseInsensitivePath(const QString& path)
     // Split the string on /
     QStringList dirNames = path.split(QDir::separator(), QString::SkipEmptyParts);
 
+    // if split result is empty, path string can only contain separator.
+    if (dirNames.empty()) {
+        return QStringLiteral("/");
+    }
+
     // Match folders
     QDir dir(QStringLiteral("/"));
     for (int i = 0; i < dirNames.size() - 1; i++) {
