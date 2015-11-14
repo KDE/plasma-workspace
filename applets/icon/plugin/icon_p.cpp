@@ -145,11 +145,16 @@ bool IconPrivate::processDrop(QObject *dropEvent)
         }
 
         // otherwise check if the applicaton supports the dropped type
-        foreach (const QString &supportedType, supportedMimeTypes) {
-            if (mimeType.inherits(supportedType)) {
-                KService service(stringUrl);
-                KRun::runService(service, urls, nullptr);
-                return true;
+        // TODO should we execute if *any* of the urls are supported, or if *all* are?
+        foreach (const QUrl &url, urls) {
+            const QMimeType dropMimeType = db.mimeTypeForUrl(url);
+
+            foreach (const QString &supportedType, supportedMimeTypes) {
+                if (dropMimeType.inherits(supportedType)) {
+                    KService service(stringUrl);
+                    KRun::runService(service, urls, nullptr);
+                    return true;
+                }
             }
         }
 
