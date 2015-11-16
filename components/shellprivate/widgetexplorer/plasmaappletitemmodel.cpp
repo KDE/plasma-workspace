@@ -169,6 +169,8 @@ bool PlasmaAppletItem::passesFiltering(const KCategorizedItemsViewModels::Filter
 {
     if (filter.first == QLatin1String("running")) {
         return running();
+    } else if (filter.first == QLatin1String("local")) {
+        return isLocal();
     } else if (filter.first == QLatin1String("category")) {
         return m_info.category().toLower() == filter.second;
     } else {

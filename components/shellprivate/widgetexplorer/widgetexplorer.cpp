@@ -111,6 +111,10 @@ void WidgetExplorerPrivate::initFilters()
                           KCategorizedItemsViewModels::Filter(QStringLiteral("running"), true),
                           QIcon::fromTheme(QStringLiteral("dialog-ok")));
 
+    filterModel.addFilter(i18n("Uninstallable"),
+                          KCategorizedItemsViewModels::Filter(QStringLiteral("local"), true),
+                          QIcon::fromTheme(QStringLiteral("list-remove")));
+
     filterModel.addSeparator(i18n("Categories:"));
 
     typedef QPair<QString, QString> catPair;
