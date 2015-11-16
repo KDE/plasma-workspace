@@ -435,10 +435,11 @@ void WidgetExplorer::openWidgetFile()
 
 void WidgetExplorer::uninstall(const QString &pluginName)
 {
-    const QString packageRoot = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + PLASMA_RELATIVE_DATA_INSTALL_DIR "/plasmoids/";
+    static const QString packageRoot = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QLatin1Char('/') + PLASMA_RELATIVE_DATA_INSTALL_DIR "/plasmoids/";
 
-    KPackage::Package pkg;
-    pkg.setPath(packageRoot);
+    KPackage::PackageStructure *structure = KPackage::PackageLoader::self()->loadPackageStructure(QStringLiteral("Plasma/Applet"));
+
+    KPackage::Package pkg(structure);
     pkg.uninstall(pluginName, packageRoot);
 
     //FIXME: moreefficient way rather a linear scan?
