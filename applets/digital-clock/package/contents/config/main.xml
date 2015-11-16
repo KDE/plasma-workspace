@@ -48,6 +48,9 @@
     <entry name="use24hFormat" type="UInt">
         <default>1</default>
     </entry>
+    <entry name="enabledCalendarPlugins" type="StringList">
+        <default></default>
+    </entry>
   </group>
 
 </kcfg>
