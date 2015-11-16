@@ -70,6 +70,7 @@ Comment[zh_TW]=多媒體系統
 
 [Context/Application]
 Name=Application
+Name[ast]=Aplicación
 Name[bs]=Aplikacija
 Name[ca]=Aplicació
 Name[ca@valencia]=Aplicació

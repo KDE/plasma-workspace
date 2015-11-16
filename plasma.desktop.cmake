@@ -6,6 +6,7 @@ TryExec=${CMAKE_INSTALL_FULL_BINDIR}/startkde
 DesktopNames=KDE
 Name=Plasma
 Name[ar]=بلازما
+Name[ast]=Plasma
 Name[bs]=Plazma
 Name[ca]=Plasma
 Name[ca@valencia]=Plasma
