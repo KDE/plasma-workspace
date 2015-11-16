@@ -99,6 +99,14 @@ Item {
             }
         }
 
+        Connections {
+            target: plasmoid.configuration
+
+            onEnabledCalendarPluginsChanged: {
+                PlasmaCalendar.EventPluginsManager.enabledPlugins = plasmoid.configuration.enabledCalendarPlugins;
+            }
+        }
+
         PlasmaComponents.Label {
             id: dayLabel
             height: dayHeading.height + dateHeading.height
@@ -218,6 +226,12 @@ Item {
         checkable: true
         iconSource: "window-pin"
         onCheckedChanged: plasmoid.hideOnWindowDeactivate = !checked
+    }
+
+    Component.onCompleted: {
+        // Set the list of enabled plugins from config
+        // to the manager
+        PlasmaCalendar.EventPluginsManager.enabledPlugins = plasmoid.configuration.enabledCalendarPlugins;
     }
 
 }
