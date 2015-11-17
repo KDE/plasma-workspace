@@ -91,6 +91,8 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #include <klauncher_interface.h>
 #include <qstandardpaths.h>
 
+#include "switchuserdialog.h"
+
 KSMServer* the_server = 0;
 
 KSMServer* KSMServer::self()
@@ -1079,4 +1081,15 @@ void KSMServer::haltWithoutConfirmation()
 void KSMServer::rebootWithoutConfirmation()
 {
     shutdown(KWorkSpace::ShutdownConfirmNo, KWorkSpace::ShutdownTypeReboot, KWorkSpace::ShutdownModeDefault);
+}
+
+void KSMServer::openSwitchUserDialog()
+{
+    KDisplayManager dm;
+    if (!dm.isSwitchable()) {
+        return;
+    }
+
+    QScopedPointer<KSMSwitchUserDialog> dlg(new KSMSwitchUserDialog(&dm));
+    dlg->exec();
 }

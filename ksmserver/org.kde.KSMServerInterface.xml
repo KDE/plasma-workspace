@@ -38,6 +38,7 @@
     <method name="restoreSubSession">
       <arg type="s" direction="in"/>
     </method>
+    <method name="openSwitchUserDialog" />
     <signal name="subSessionClosed"/>
     <signal name="subSessionCloseCanceled"/>
     <signal name="subSessionOpened"/>

@@ -217,6 +217,8 @@ private:
                        QStringList saveOnly = QStringList() );
     void restoreSubSession( const QString &name );
 
+    void openSwitchUserDialog();
+
  Q_SIGNALS:
     void subSessionClosed();
     void subSessionCloseCanceled();
