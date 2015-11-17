@@ -50,6 +50,7 @@ Name[zh_CN]=应用程序菜单守护程序
 Name[zh_TW]=應用程式選單伺服程式
 Comment=Transfers application's menu to the desktop
 Comment[ar]=ينقل قائمة التطبيقات إلى سطح المكتب
+Comment[ast]=Tresfier el menú d'aplicaciones al escritoriu
 Comment[bs]=Prebacuje aplikacijski meni na radnu površinu
 Comment[ca]=Transfereix els menús d'aplicació a l'escriptori
 Comment[ca@valencia]=Transfereix els menús d'aplicació a l'escriptori

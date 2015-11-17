@@ -39,6 +39,7 @@ X-KDE-DBus-ModuleName=desktopnotifier
 X-KDE-Kded-load-on-demand=true
 X-KDE-Kded-autoload=false
 Comment=Monitors directories for changes
+Comment[ast]=Monitoriza los direutorios por camudancies
 Comment[ca]=Controla els canvis en els directoris
 Comment[ca@valencia]=Controla els canvis en els directoris
 Comment[da]=Overvåger mapper for ændringer
