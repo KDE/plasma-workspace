@@ -2,6 +2,7 @@
 Type=Service
 Name=Status Notifier Manager
 Name[ar]=مدير مُخطِر الحالة
+Name[ast]=Xestor d'avisador d'estaos
 Name[bn]=স্ট্যাটাস বিজ্ঞপ্তি ম্যানেজার
 Name[bs]=Menadžer izveštavača o stanju
 Name[ca]=Gestor del notificador d'estat

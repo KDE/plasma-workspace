@@ -1,5 +1,6 @@
 [General]
 Name=dbx
+Name[ast]=dbx
 Name[bg]=dbx
 Name[bn]=dbx
 Name[bs]=dBX

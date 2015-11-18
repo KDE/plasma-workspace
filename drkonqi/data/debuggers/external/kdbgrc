@@ -1,5 +1,6 @@
 [General]
 Name=kdbg
+Name[ast]=kdbg
 Name[bg]=kdbg
 Name[bn]=kdbg
 Name[bs]=kdbg
