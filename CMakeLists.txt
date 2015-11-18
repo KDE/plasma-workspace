@@ -105,6 +105,12 @@ install(FILES
         DESTINATION ${KDE_INSTALL_DATADIR}/xsessions
 )
 
+configure_file(plasmawayland.desktop.cmake ${CMAKE_CURRENT_BINARY_DIR}/plasmawayland.desktop)
+install(FILES
+        ${CMAKE_CURRENT_BINARY_DIR}/plasmawayland.desktop
+        DESTINATION ${KDE_INSTALL_DATADIR}/wayland-sessions
+)
+
 plasma_install_package(lookandfeel org.kde.breeze.desktop look-and-feel lookandfeel)
 
 if (INSTALL_SDDM_THEME)
