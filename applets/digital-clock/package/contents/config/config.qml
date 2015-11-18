@@ -1,6 +1,5 @@
 /*
  * Copyright 2013  Bhushan Shah <bhush94@gmail.com>
- * Copyright 2015  Martin Klapetek <mklapetek@kde.org>
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License as
@@ -22,38 +21,21 @@
 import QtQuick 2.0
 
 import org.kde.plasma.configuration 2.0
-import org.kde.plasma.calendar 2.0 as PlasmaCalendar
 
 ConfigModel {
-    id: configModel
-
+//     ConfigCategory {
+//          name: i18n("General")
+//          icon: "preferences-system-time"
+//          source: "configGeneral.qml"
+//     }
     ConfigCategory {
          name: i18n("Appearance")
          icon: "preferences-desktop-color"
          source: "configAppearance.qml"
     }
     ConfigCategory {
-        name: i18n("Calendar")
-        icon: "view-calendar"
-        source: "configCalendar.qml"
-    }
-    ConfigCategory {
         name: i18n("Time Zones")
         icon: "preferences-system-time"
         source: "configTimeZones.qml"
-    }
-
-    Component.onCompleted: {
-        var model = PlasmaCalendar.EventPluginsManager.model;
-
-        for (var i = 0; i < model.rowCount(); i++) {
-            if (model.get(i, "checked") == true) {
-                configModel.appendCategory(model.get(i, "decoration"),
-                                        model.get(i, "display"),
-                                        model.get(i, "configUi"),
-                                        "",
-                                        true);
-            }
-        }
     }
 }
