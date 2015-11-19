@@ -124,6 +124,7 @@ Flow {
             titleIcon: "system-suspend-hibernate"
             titleText: i18n("Hibernate")
             message: i18n("Do you want to suspend to disk (hibernate)?")
+            location: plasmoid.location
 
             acceptButtonText: i18n("Yes")
             rejectButtonText: i18n("No")
@@ -139,6 +140,7 @@ Flow {
             titleIcon: "system-suspend"
             titleText: i18n("Suspend")
             message: i18n("Do you want to suspend to RAM (sleep)?")
+            location: plasmoid.location
 
             acceptButtonText: i18n("Yes")
             rejectButtonText: i18n("No")
