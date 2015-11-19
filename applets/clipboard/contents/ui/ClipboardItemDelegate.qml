@@ -19,6 +19,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 *********************************************************************/
 import QtQuick 2.0
 import QtQuick.Layouts 1.1
+import QtGraphicalEffects 1.0
+
 import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.kquickcontrolsaddons 2.0 as KQuickControlsAddons
 
@@ -27,6 +29,8 @@ PlasmaComponents.ListItem {
 
     property alias supportsBarcodes: barcodeToolButton.visible
     property int maximumNumberOfPreviews: Math.floor(width / (units.gridUnit * 4 + units.smallSpacing))
+    readonly property real gradientThreshold: (label.width - toolButtonsLayout.width) / label.width
+
     signal itemSelected(string uuid)
     signal remove(string uuid)
     signal edit(string uuid)
@@ -46,9 +50,45 @@ PlasmaComponents.ListItem {
         }
     }
 
+    ListView.onIsCurrentItemChanged: {
+        if (ListView.isCurrentItem) {
+            labelMask.source = label // calculate on demand
+        }
+    }
+
+    // this stuff here is used so we can fade out the text behind the tool buttons
+    Item {
+        id: labelMaskSource
+        anchors.fill: label
+        visible: false
+
+        Rectangle {
+            anchors.centerIn: parent
+            rotation: -90 // you cannot even rotate gradients without QtGraphicalEffects
+            width: parent.height
+            height: parent.width
+
+            gradient: Gradient {
+                GradientStop { position: 0.0; color: "white" }
+                GradientStop { position: gradientThreshold - 0.25; color: "white"}
+                GradientStop { position: gradientThreshold; color: "transparent"}
+                GradientStop { position: 1; color: "transparent"}
+            }
+        }
+    }
+
+    OpacityMask {
+        id: labelMask
+        anchors.fill: label
+        cached: true
+        maskSource: labelMaskSource
+        visible: !!source && menuItem.ListView.isCurrentItem
+    }
+
     Item {
         id: label
         height: childrenRect.height
+        visible: !menuItem.ListView.isCurrentItem
         anchors {
             left: parent.left
             leftMargin: units.gridUnit / 2 - listMargins.left
@@ -97,8 +137,8 @@ PlasmaComponents.ListItem {
         Item {
             id: previewItem
             visible: TypeRole == 2
-
-            height: visible ? (units.gridUnit * 4 + units.smallSpacing * 2) : 0
+            // visible updates recursively, our label becomes invisible when hovering, hence no visible check here
+            height: TypeRole == 2 ? (units.gridUnit * 4 + units.smallSpacing * 2) : 0
             width: parent.width
 
             ListView {
