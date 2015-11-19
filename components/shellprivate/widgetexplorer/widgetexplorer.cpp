@@ -450,6 +450,23 @@ void WidgetExplorer::uninstall(const QString &pluginName)
             break;
         }
     }
+
+    // now remove all instances of that applet
+    if (corona()) {
+        const auto &containments = corona()->containments();
+
+        foreach (Containment *c, containments) {
+            const auto &applets = c->applets();
+
+            foreach (Applet *applet, applets) {
+                const auto &appletInfo = applet->pluginInfo();
+
+                if (appletInfo.isValid() && appletInfo.pluginName() == pluginName) {
+                    applet->destroy();
+                }
+            }
+        }
+    }
 }
 
 
