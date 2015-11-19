@@ -318,10 +318,12 @@ void View::querySingleRunner(const QString &runnerName, const QString &term)
 
 void View::switchUser()
 {
-    setVisible(true);
-
-    m_qmlObj->rootObject()->setProperty("runner", "desktopsessions");
-    m_qmlObj->rootObject()->setProperty("query", "SESSIONS");
+    QDBusConnection::sessionBus().asyncCall(
+        QDBusMessage::createMethodCall(QStringLiteral("org.kde.ksmserver"),
+                                       QStringLiteral("/KSMServer"),
+                                       QStringLiteral("org.kde.KSMServerInterface"),
+                                       QStringLiteral("openSwitchUserDialog"))
+    );
 }
 
 void View::displayConfiguration()
