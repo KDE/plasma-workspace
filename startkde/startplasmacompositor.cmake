@@ -219,7 +219,7 @@ if test $? -ne 0; then
   exit 1
 fi
 
-kwin_wayland --xwayland --libinput @CMAKE_INSTALL_FULL_LIBEXECDIR@/startplasma
+@KWIN_WAYLAND_BIN_PATH@ --xwayland --libinput @CMAKE_INSTALL_FULL_LIBEXECDIR@/startplasma
 
 echo 'startplasmacompositor: Shutting down...'  1>&2
 
