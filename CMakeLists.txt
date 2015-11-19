@@ -14,7 +14,12 @@ set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH} ${ECM_KDE_MODULE_DIR})
 find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS
                     Plasma DocTools Runner JsEmbed NotifyConfig Su NewStuff Wallet KCMUtils
                     IdleTime Declarative TextWidgets KDELibs4Support Crash GlobalAccel
-                    NetworkManagerQt DBusAddons)
+                    DBusAddons)
+find_package(KF5NetworkManagerQt ${KF5_MIN_VERSION})
+set_package_properties(KF5NetworkManagerQt PROPERTIES DESCRIPTION "Qt wrapper for NetworkManager API"
+                       TYPE OPTIONAL
+                       PURPOSE "Needed by geolocation data engine."
+                      )
 find_package(KF5XmlRpcClient REQUIRED)
 
 # WARNING PlasmaQuick provides unversioned CMake config
