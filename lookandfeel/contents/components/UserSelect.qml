@@ -31,6 +31,7 @@ FocusScope {
     property alias selectedItem: usersList.currentItem
     property alias delegate: usersList.delegate
     property alias notification: notificationLabel.text
+    property alias infoPaneVisible: infoPaneLoader.active
 
     activeFocusOnTab: true
 
@@ -42,28 +43,20 @@ FocusScope {
         usersList.decrementCurrentIndex()
     }
 
-    InfoPane {
-        id: infoPane
+    Loader {
+        id: infoPaneLoader
         anchors {
             verticalCenter: usersList.verticalCenter
             right: usersList.left
             left: parent.left
         }
+        sourceComponent: InfoPane {}
     }
 
     UserList {
         id: usersList
 
         focus: true
-
-        Rectangle {//debug
-            visible: debug
-            border.color: "red"
-            border.width: 1
-            anchors.fill: parent
-            color: "#00000000"
-            z:-1000
-        }
 
         anchors {
             top: parent.top
@@ -83,6 +76,24 @@ FocusScope {
         onUserSelected: {
             nextItemInFocusChain().forceActiveFocus();
         }
+
+        states: [
+            State {
+                when: !root.infoPaneVisible
+                PropertyChanges {
+                    target: usersList
+                    anchors.leftMargin: 0
+                    // keep current user in the center of the screen
+                    preferredHighlightBegin: (root.width - userItemWidth) / 2
+                    preferredHighlightEnd: (root.width + userItemWidth) / 2
+                }
+                AnchorChanges {
+                    target: usersList
+                    anchors.left: parent.left
+                }
+            }
+
+        ]
     }
 
     BreezeLabel {
