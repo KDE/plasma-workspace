@@ -146,7 +146,7 @@ PlasmaComponents.ListItem {
                 model: TypeRole == 2 ? DisplayRole.split(" ", maximumNumberOfPreviews) : 0
                 property int itemWidth: units.gridUnit * 4
                 property int itemHeight: units.gridUnit * 4
-                interactive: contentWidth > width
+                interactive: false
 
                 spacing: units.smallSpacing
                 orientation: Qt.Horizontal
