@@ -248,28 +248,24 @@ PlasmaComponents.ListItem {
         PlasmaComponents.ToolButton {
             // TODO: only show for items supporting actions?
             iconSource: "system-run"
-            flat: false
             tooltip: i18n("Invoke action")
             onClicked: menuItem.action(UuidRole)
         }
         PlasmaComponents.ToolButton {
             id: barcodeToolButton
             iconSource: "view-barcode"
-            flat: false
             tooltip: i18n("Show barcode")
             onClicked: menuItem.barcode(UuidRole)
         }
         PlasmaComponents.ToolButton {
             iconSource: "document-edit"
             enabled: !clipboardSource.editing
-            flat: false
             visible: TypeRole === 0
             tooltip: i18n("Edit contents")
             onClicked: menuItem.edit(UuidRole)
         }
         PlasmaComponents.ToolButton {
             iconSource: "edit-delete"
-            flat: false
             tooltip: i18n("Remove from history")
             onClicked: menuItem.remove(UuidRole)
         }
