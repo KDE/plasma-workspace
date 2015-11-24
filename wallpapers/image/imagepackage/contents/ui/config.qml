@@ -17,7 +17,7 @@
  *  Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  2.010-1301, USA.
  */
 
-import QtQuick 2.0
+import QtQuick 2.5
 import QtQuick.Controls 1.0 as QtControls
 import QtQuick.Dialogs 1.1 as QtDialogs
 import QtQuick.Layouts 1.0
@@ -62,6 +62,11 @@ ColumnLayout {
     }
 
     //Rectangle { color: "orange"; x: formAlignment; width: formAlignment; height: 20 }
+
+    TextMetrics {
+        id: textMetrics
+        text: "00"
+    }
 
     Row {
         //x: formAlignment - positionLabel.paintedWidth
@@ -168,7 +173,7 @@ ColumnLayout {
                 secondsInterval.value = root.secondsIntervalValue
             }
             //FIXME: there should be only one spinbox: QtControls spinboxes are still too limited for it tough
-            Row {
+            RowLayout {
                 spacing: units.largeSpacing / 2
                 QtControls.Label {
                     width: formAlignment - units.largeSpacing
@@ -179,6 +184,7 @@ ColumnLayout {
                 QtControls.SpinBox {
                     id: hoursInterval
                     anchors.verticalCenter: parent.verticalCenter
+                    Layout.minimumWidth: textMetrics.width + units.gridUnit
                     width: units.gridUnit * 3
                     decimals: 0
                     minimumValue: 0
@@ -196,6 +202,7 @@ ColumnLayout {
                 QtControls.SpinBox {
                     id: minutesInterval
                     anchors.verticalCenter: parent.verticalCenter
+                    Layout.minimumWidth: textMetrics.width + units.gridUnit
                     width: units.gridUnit * 3
                     decimals: 0
                     minimumValue: 0
@@ -213,6 +220,7 @@ ColumnLayout {
                 QtControls.SpinBox {
                     id: secondsInterval
                     anchors.verticalCenter: parent.verticalCenter
+                    Layout.minimumWidth: textMetrics.width + units.gridUnit
                     width: units.gridUnit * 3
                     decimals: 0
                     minimumValue: minutesInterval.value == 0 && hoursInterval.value == 0 ? 1 : 0
