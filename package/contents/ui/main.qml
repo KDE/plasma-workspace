@@ -27,7 +27,7 @@ MouseArea {
 
     property int itemWidth: Math.min(width, units.iconSizes.medium)
     property int itemHeight: Math.min(height, units.iconSizes.medium)
-    property bool expanded: false
+    property alias expanded: dialog.visible
     property Item activeApplet
 
     function addApplet(applet, x, y) {
@@ -105,7 +105,11 @@ MouseArea {
     PlasmaCore.Dialog {
         id: dialog
         visualParent: main
-        visible: root.expanded
+        onVisibleChanged: {
+            if (!visible) {
+                root.activeApplet = null
+            }
+        }
         mainItem: PlasmoidPopupsContainer {
             activeApplet: root.activeApplet
             Column {

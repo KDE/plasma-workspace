@@ -29,7 +29,14 @@ Item {
     Layout.minimumHeight: 300
 
     property Item activeApplet
-    onActiveAppletChanged: mainStack.replace(activeApplet.fullRepresentationItem);
+    visible: activeApplet != null
+    onActiveAppletChanged: {
+        if (activeApplet != null) {
+            mainStack.replace(activeApplet.fullRepresentationItem);
+        } else {
+            mainStack.pop();
+        }
+    }
 
     PlasmaComponents.PageStack {
         id: mainStack
