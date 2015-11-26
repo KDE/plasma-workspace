@@ -31,7 +31,7 @@ MouseArea {
     property Item activeApplet
 
     function addApplet(applet, x, y) {
-        var component = Qt.createComponent("PlasmoidContainer.qml")
+        var component = Qt.createComponent("PlasmoidItem.qml")
         var plasmoidContainer = component.createObject(tasksRow, {"x": x, "y": y});
 
         plasmoidContainer.parent = tasksRow;
@@ -115,7 +115,7 @@ MouseArea {
                     id: hiddenTasksRepeater
                     model: hiddenTasksModel
 
-                    delegate: TaskWidget {}
+                    delegate: StatusNotifierItem {}
                 }
             }
         }
