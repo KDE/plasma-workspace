@@ -23,11 +23,12 @@ import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.plasmoid 2.0
 
 MouseArea {
-    id: main
+    id: root
 
     property int itemWidth: Math.min(width, units.iconSizes.medium)
     property int itemHeight: Math.min(height, units.iconSizes.medium)
     property bool expanded: false
+    property Item activeApplet
 
     function addApplet(applet, x, y) {
         var component = Qt.createComponent("PlasmoidContainer.qml")
@@ -104,15 +105,18 @@ MouseArea {
     PlasmaCore.Dialog {
         id: dialog
         visualParent: main
-        visible: main.expanded
-        mainItem: Column {
-            Layout.minimumWidth: units.gridUnit * 12
-            Layout.minimumHeight: units.gridUnit * 12
-            Repeater {
-                id: hiddenTasksRepeater
-                model: hiddenTasksModel
+        visible: root.expanded
+        mainItem: PlasmoidPopupsContainer {
+            activeApplet: root.activeApplet
+            Column {
+                Layout.minimumWidth: units.gridUnit * 12
+                Layout.minimumHeight: units.gridUnit * 12
+                Repeater {
+                    id: hiddenTasksRepeater
+                    model: hiddenTasksModel
 
-                delegate: TaskWidget {}
+                    delegate: TaskWidget {}
+                }
             }
         }
     }

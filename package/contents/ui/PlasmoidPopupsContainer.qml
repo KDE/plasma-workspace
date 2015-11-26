@@ -18,20 +18,23 @@
  */
 
 import QtQuick 2.1
+import QtQuick.Layouts 1.1
+import org.kde.plasma.core 2.0 as PlasmaCore
+import org.kde.plasma.components 2.0 as PlasmaComponents
 
 Item {
-    id: plasmoidContainer
-    width: root.itemWidth
-    height: root.itemHeight
-    property Item applet
+    id: popupsContainer
 
-    Connections {
-        target: applet
-        onExpandedChanged: {
-            if (expanded) {
-                root.activeApplet = applet;
-                dialog.visible = true;
-            }
-        }
+    Layout.minimumWidth: 300
+    Layout.minimumHeight: 300
+
+    property Item activeApplet
+    onActiveAppletChanged: mainStack.replace(activeApplet.fullRepresentationItem);
+
+    PlasmaComponents.PageStack {
+        id: mainStack
+        anchors.fill: parent
+
+        
     }
 }

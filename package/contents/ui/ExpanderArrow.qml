@@ -29,16 +29,16 @@ PlasmaCore.ToolTipArea {
     id: tooltip
 
     property bool vertical
-    width: vertical ? main.width : units.iconSizes.smallMedium
-    height: !vertical ? main.height : units.iconSizes.smallMedium
+    width: vertical ? root.width : units.iconSizes.smallMedium
+    height: !vertical ? root.height : units.iconSizes.smallMedium
     visible: hiddenTasksModel.count > 0
 
-    subText: main.expanded ? i18n("Hide icons") : i18n("Show hidden icons")
+    subText: root.expanded ? i18n("Hide icons") : i18n("Show hidden icons")
 
     MouseArea {
         id: arrowMouseArea
         anchors.fill: parent
-        onClicked: main.expanded = !main.expanded
+        onClicked: root.expanded = !root.expanded
 
         readonly property int arrowAnimationDuration: units.shortDuration * 3
 
@@ -54,13 +54,13 @@ PlasmaCore.ToolTipArea {
             width: Math.min(parent.width, parent.height)
             height: width
 
-            rotation: main.expanded ? 180 : 0
+            rotation: root.expanded ? 180 : 0
             Behavior on rotation {
                 RotationAnimation {
                     duration: arrowMouseArea.arrowAnimationDuration
                 }
             }
-            opacity: main.expanded ? 0 : 1
+            opacity: root.expanded ? 0 : 1
             Behavior on opacity {
                 NumberAnimation {
                     duration: arrowMouseArea.arrowAnimationDuration
@@ -86,13 +86,13 @@ PlasmaCore.ToolTipArea {
             width: arrow.width
             height: arrow.height
 
-            rotation: main.expanded ? 0 : -180
+            rotation: root.expanded ? 0 : -180
             Behavior on rotation {
                 RotationAnimation {
                     duration: arrowMouseArea.arrowAnimationDuration
                 }
             }
-            opacity: main.expanded ? 1 : 0
+            opacity: root.expanded ? 1 : 0
             Behavior on opacity {
                 NumberAnimation {
                     duration: arrowMouseArea.arrowAnimationDuration

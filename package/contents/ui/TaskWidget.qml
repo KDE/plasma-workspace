@@ -22,8 +22,8 @@ import org.kde.plasma.core 2.0 as PlasmaCore
 
 Item {
     id: taskIcon
-    width: main.itemWidth
-    height: main.itemHeight
+    width: root.itemWidth
+    height: root.itemHeight
 
     PlasmaCore.IconItem {
         source: IconName ? IconName : Icon

@@ -35,9 +35,17 @@ public:
     SystemTray( QObject *parent, const QVariantList &args );
     ~SystemTray();
 
+    void init();
+
     void restorePlasmoids();
     QStringList allowedPlugins() const;
     void setAllowedPlugins(const QStringList &allowed);
+
+    //Creates an applet *if not already existing*
+    void newTask(const QString &task);
+
+    //cleans all instances of a given applet
+    void cleanupTask(const QString &task);
 
 private Q_SLOTS:
     void serviceNameFetchFinished(QDBusPendingCallWatcher* watcher, const QDBusConnection &connection);
