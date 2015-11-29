@@ -50,6 +50,18 @@ FdoSelectionManager::FdoSelectionManager():
 {
     qCDebug(SNIPROXY) << "starting";
 
+    //we may end up calling QCoreApplication::quit() in this method, at which point we need the event loop running
+    QTimer::singleShot(0, this, &FdoSelectionManager::init);
+}
+
+FdoSelectionManager::~FdoSelectionManager()
+{
+    qCDebug(SNIPROXY) << "closing";
+    m_selectionOwner->release();
+}
+
+void FdoSelectionManager::init()
+{
     //load damage extension
     xcb_connection_t *c = QX11Info::connection();
     xcb_prefetch_extension_data(c, &xcb_damage_id);
@@ -65,16 +77,10 @@ FdoSelectionManager::FdoSelectionManager():
 
     qApp->installNativeEventFilter(this);
 
-    m_selectionOwner->claim(false);
     connect(m_selectionOwner, &KSelectionOwner::claimedOwnership, this, &FdoSelectionManager::onClaimedOwnership);
     connect(m_selectionOwner, &KSelectionOwner::failedToClaimOwnership, this, &FdoSelectionManager::onFailedToClaimOwnership);
     connect(m_selectionOwner, &KSelectionOwner::lostOwnership, this, &FdoSelectionManager::onLostOwnership);
-}
-
-FdoSelectionManager::~FdoSelectionManager()
-{
-    qCDebug(SNIPROXY) << "closing";
-    m_selectionOwner->release();
+    m_selectionOwner->claim(false);
 }
 
 void FdoSelectionManager::addDamageWatch(xcb_window_t client)
@@ -178,5 +184,3 @@ void FdoSelectionManager::onLostOwnership()
     qCWarning(SNIPROXY) << "lost ownership of Systray Manager";
     qApp->exit(-1);
 }
-
-
