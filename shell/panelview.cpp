@@ -915,7 +915,8 @@ void PanelView::updateStruts()
 
     if (m_visibilityMode == NormalPanel) {
         const QRect thisScreen = screen()->geometry();
-        const QRect wholeScreen = screen()->virtualGeometry();
+        // QScreen::virtualGeometry() is very unreliable (Qt 5.5)
+        const QRect wholeScreen = QRect(QPoint(0, 0), m_corona->screensConfiguration()->screen()->currentSize());
 
         //Extended struts against a screen edge near to another screen are really harmful, so windows maximized under the panel is a lesser pain
         //TODO: force "windows can cover" in those cases?
