@@ -69,6 +69,7 @@ Q_SIGNALS:
     void popupLocationChanged();
 
 private Q_SLOTS:
+    void onPopupShown();
     void onPopupClosed();
     void processQueues();
     void processShow();
@@ -76,6 +77,7 @@ private Q_SLOTS:
 
 private:
     void repositionPopups();
+    int popupYPosition();
 
     QList<QQuickWindow*> m_popupsOnScreen;
     QList<QQuickWindow*> m_availablePopups;
