@@ -32,7 +32,6 @@ Name[tr]=Dizin İzleyici
 Name[uk]=Спостереження за каталогами
 Name[x-test]=xxDirectory Watcherxx
 Name[zh_CN]=目录监视器
-Name[zh_TW]=目錄監控器
 ServiceTypes=KDEDModule
 X-KDE-ServiceTypes=KDEDModule
 X-KDE-Library=desktopnotifier
@@ -72,5 +71,4 @@ Comment[tr]=Dizinleri değişiklik için izler
 Comment[uk]=Веде спостереження за змінами у каталогах
 Comment[x-test]=xxMonitors directories for changesxx
 Comment[zh_CN]=监视目录的更改
-Comment[zh_TW]=監控目錄的改變
 
