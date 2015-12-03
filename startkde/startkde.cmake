@@ -124,7 +124,7 @@ if [ ! $install_share = $usr_share ]; then
     }
 
     oxygenDir=$fontsDir/oxygen
-    prefixDir="@@KDE_INSTALL_FULL_DATADIR@/fonts/oxygen"
+    prefixDir="@KDE_INSTALL_FULL_DATADIR@/fonts/oxygen"
 
     # if the oxygen dir doesn't exist, create a symlink to be sure that the
     # Oxygen font is available to the user
