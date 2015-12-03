@@ -24,6 +24,8 @@
 
 #include <Plasma/Applet>
 
+#include "../plugin/notificationshelper.h"
+
 class NotificationsApplet : public Plasma::Applet
 {
     Q_OBJECT
@@ -37,12 +39,13 @@ public:
 
 public Q_SLOTS:
     void onScreenPositionChanged(uint position);
+    void onAppletLocationChanged(Plasma::Types::Location location);
 
 Q_SIGNALS:
     void screenPositionChanged(uint position);
 
 private:
-
+    NotificationsHelper::PositionOnScreen m_popupPosition;
 };
 
 

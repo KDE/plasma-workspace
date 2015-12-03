@@ -748,6 +748,7 @@ bool PanelView::event(QEvent *e)
      * on the mouse edge, forward the click in the containment boundaries
      */
     switch (e->type()) {
+        case QEvent::Enter:
         case QEvent::MouseMove:
         case QEvent::MouseButtonPress:
         case QEvent::MouseButtonRelease: {
@@ -755,8 +756,25 @@ bool PanelView::event(QEvent *e)
 
             //first, don't mess with position if the cursor is actually outside the view:
             //somebody is doing a click and drag that must not break when the cursor i outside
-            if (geometry().contains(me->screenPos().toPoint()) && !containmentContainsPosition(me->windowPos())) {
-                auto me2 = new QMouseEvent(me->type(),
+            if (geometry().contains(me->screenPos().toPoint())) {
+                if (!containmentContainsPosition(me->windowPos())) {
+                    auto me2 = new QMouseEvent(me->type(),
+                                    positionAdjustedForContainment(me->windowPos()),
+                                    positionAdjustedForContainment(me->windowPos()),
+                                    positionAdjustedForContainment(me->windowPos()) + position(),
+                                    me->button(), me->buttons(), me->modifiers());
+
+                    QCoreApplication::postEvent(this, me2);
+                    return true;
+                }
+            }
+            break;
+        }
+        case QEvent::Leave: {
+            QMouseEvent *me = static_cast<QMouseEvent *>(e);
+            // don't forget to trigger QEvent::Leave if current mouse position is outside the panel
+            if (!geometry().contains(me->screenPos().toPoint())) {
+                auto me2 = new QMouseEvent(QEvent::Leave,
                                 positionAdjustedForContainment(me->windowPos()),
                                 positionAdjustedForContainment(me->windowPos()),
                                 positionAdjustedForContainment(me->windowPos()) + position(),

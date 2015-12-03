@@ -51,6 +51,11 @@ NotificationsHelper::~NotificationsHelper()
     delete m_mutex;
 }
 
+int NotificationsHelper::popupYPosition()
+{
+    return workAreaForScreen(m_plasmoidScreen).height() - m_offset;
+}
+
 void NotificationsHelper::setPopupLocation(PositionOnScreen popupLocation)
 {
     if (m_popupLocation != popupLocation) {
@@ -58,6 +63,22 @@ void NotificationsHelper::setPopupLocation(PositionOnScreen popupLocation)
         emit popupLocationChanged();
 
         repositionPopups();
+
+        // The visible popups are corrected in repositionPopups
+        // but those that are not on screen need to be corrected
+        // as well, otherwise they will fly from the old popup location
+        m_mutex->lockForWrite();
+        Q_FOREACH (QQuickWindow *popup, m_availablePopups) {
+            if (m_popupLocation == NotificationsHelper::TopLeft
+                    || m_popupLocation == NotificationsHelper::TopCenter
+                    || m_popupLocation == NotificationsHelper::TopRight) {
+
+                popup->setY(m_offset);
+            } else {
+                popup->setY(popupYPosition());
+            }
+        }
+        m_mutex->unlock();
     }
 }
 
@@ -92,15 +113,33 @@ void NotificationsHelper::addNotificationPopup(QObject *win)
 
     // This is to make sure the popups won't fly across the whole
     // screen the first time they appear
-    if (m_popupLocation == NotificationsHelper::TopLeft || m_popupLocation == NotificationsHelper::TopCenter || m_popupLocation == NotificationsHelper::TopRight) {
-        popup->setY(0);
+    if (m_popupLocation == NotificationsHelper::TopLeft
+            || m_popupLocation == NotificationsHelper::TopCenter
+            || m_popupLocation == NotificationsHelper::TopRight) {
+
+        popup->setY(m_offset);
     } else {
-        popup->setY(workAreaForScreen(m_plasmoidScreen).height());
+        popup->setY(popupYPosition());
     }
     popup->setX(workAreaForScreen(m_plasmoidScreen).width() - m_offset - popup->width());
 
     connect(popup, &QWindow::heightChanged, this, &NotificationsHelper::repositionPopups, Qt::UniqueConnection);
     connect(popup, &QWindow::widthChanged, this, &NotificationsHelper::repositionPopups, Qt::UniqueConnection);
+    connect(popup, &QWindow::visibleChanged, this, &NotificationsHelper::onPopupShown, Qt::UniqueConnection);
+}
+
+void NotificationsHelper::onPopupShown()
+{
+    QObject *popup = sender();
+    if (!popup) {
+        return;
+    }
+
+    // Make sure Dialog lays everything out and gets proper geometry
+    QMetaObject::invokeMethod(popup, "updateVisibility", Qt::DirectConnection, Q_ARG(bool, true));
+
+    // Now we can position the popups properly as the geometry is now known
+    repositionPopups();
 }
 
 void NotificationsHelper::processQueues()
@@ -160,8 +199,7 @@ void NotificationsHelper::processShow()
     }
 
     // Populate the popup with data, this is the component's own QML method
-    QMetaObject::invokeMethod(popup, "populatePopup", Q_ARG(QVariant, notificationData));
-    repositionPopups();
+    QMetaObject::invokeMethod(popup, "populatePopup", Qt::DirectConnection, Q_ARG(QVariant, notificationData));
     QTimer::singleShot(300, popup, &QWindow::show);
 
     if (!m_dispatchTimer->isActive()) {
@@ -191,10 +229,13 @@ void NotificationsHelper::processHide()
         // huge but setting short text won't make it smaller
         popup->setHeight(1);
         // Make sure it flies in from where it's supposed to
-        if (m_popupLocation == NotificationsHelper::TopLeft || m_popupLocation == NotificationsHelper::TopCenter || m_popupLocation == NotificationsHelper::TopRight) {
-            popup->setY(0);
+        if (m_popupLocation == NotificationsHelper::TopLeft
+                || m_popupLocation == NotificationsHelper::TopCenter
+                || m_popupLocation == NotificationsHelper::TopRight) {
+
+            popup->setY(m_offset);
         } else {
-            popup->setY(workAreaForScreen(m_plasmoidScreen).height());
+            popup->setY(popupYPosition());
         }
     }
 

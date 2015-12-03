@@ -28,7 +28,11 @@
 NotificationsApplet::NotificationsApplet(QObject *parent, const QVariantList &data)
     : Plasma::Applet(parent, data)
 {
+    KConfigGroup globalGroup = globalConfig();
+    m_popupPosition = (NotificationsHelper::PositionOnScreen)globalGroup.readEntry("popupPosition", 0); //0 is default
 
+    connect(this, &Plasma::Applet::locationChanged,
+            this, &NotificationsApplet::onAppletLocationChanged);
 }
 
 NotificationsApplet::~NotificationsApplet()
@@ -36,20 +40,41 @@ NotificationsApplet::~NotificationsApplet()
 
 }
 
+void NotificationsApplet::onAppletLocationChanged(Plasma::Types::Location location)
+{
+    if (globalConfig().readEntry("popupPosition", 0) == 0) {
+        // If the screenPosition is the default, follow the panel
+        if (location == Plasma::Types::TopEdge) {
+            if (QGuiApplication::isRightToLeft()) {
+                m_popupPosition = NotificationsHelper::TopLeft;
+            } else {
+                m_popupPosition = NotificationsHelper::TopRight;
+            }
+        } else {
+            if (QGuiApplication::isRightToLeft()) {
+                m_popupPosition = NotificationsHelper::BottomLeft;
+            } else {
+                m_popupPosition = NotificationsHelper::BottomRight;
+            }
+        }
+
+        Q_EMIT screenPositionChanged(m_popupPosition);
+    }
+}
+
 uint NotificationsApplet::screenPosition() const
 {
-    KConfigGroup globalGroup = globalConfig();
-    return globalGroup.readEntry("popupPosition", 0); //0 is default
+    return m_popupPosition;
 }
 
 void NotificationsApplet::onScreenPositionChanged(uint position)
 {
     KConfigGroup globalGroup = globalConfig();
     globalGroup.writeEntry("popupPosition", position);
+    m_popupPosition = (NotificationsHelper::PositionOnScreen)position;
 
     Q_EMIT screenPositionChanged(position);
 }
-
 
 K_EXPORT_PLASMA_APPLET_WITH_JSON(notifications, NotificationsApplet, "metadata.json")
 
