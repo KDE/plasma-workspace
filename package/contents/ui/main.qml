@@ -40,7 +40,6 @@ MouseArea {
         applet.anchors.fill = plasmoidContainer
         applet.visible = true
         plasmoidContainer.visible = true
-
     }
 
     Containment.onAppletAdded: {
@@ -69,6 +68,21 @@ MouseArea {
         sourceModel: PlasmaCore.DataModel {
             dataSource: statusNotifierSource
         }
+    }
+
+    property Item oldActiveApplet
+    onActiveAppletChanged: {
+        if (!activeApplet) {
+            dialog.visible = false;
+        }
+        if (oldActiveApplet) {
+            oldActiveApplet.expanded = false;
+        }
+        oldActiveApplet = activeApplet;
+    }
+    Connections {
+        target: activeApplet
+        onExpandedChanged: dialog.visible = activeApplet.expanded
     }
 
     Row {
@@ -104,7 +118,7 @@ MouseArea {
 
     PlasmaCore.Dialog {
         id: dialog
-        visualParent: main
+        visualParent: root
         onVisibleChanged: {
             if (!visible) {
                 root.activeApplet = null

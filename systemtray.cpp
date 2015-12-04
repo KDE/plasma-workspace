@@ -49,12 +49,13 @@ void SystemTray::init()
 
     //TODO: take this from config
     QStringList applets;
-    /*for (auto info : Plasma::PluginLoader::self()->listAppletInfo(QString())) {
-        if (info.isValid() && info.property(QStringLiteral("X-Plasma-NotificationArea")) == "true") {
+    for (auto info : Plasma::PluginLoader::self()->listAppletInfo(QString())) {
+        if (info.isValid() && info.property(QStringLiteral("X-Plasma-NotificationArea")).toBool() == true) {
             applets << info.pluginName();
         }
-    }*/
-    applets << "org.kde.plasma.battery";
+    }
+
+    //applets << "org.kde.plasma.battery";
     setAllowedPlugins(applets);
 }
 
@@ -109,7 +110,7 @@ void SystemTray::restorePlasmoids()
 
     KPluginInfo::List applets;
     for (auto info : Plasma::PluginLoader::self()->listAppletInfo(QString())) {
-        if (info.isValid() && info.property(QStringLiteral("X-Plasma-NotificationArea")) == "true") {
+        if (info.isValid() && info.property(QStringLiteral("X-Plasma-NotificationArea")).toBool() == true) {
             applets << info;
         }
     }
