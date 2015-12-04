@@ -93,7 +93,7 @@ MouseArea {
                     }
                 }
 
-                delegate: TaskWidget {}
+                delegate: StatusNotifierItem {}
             }
         }
 
