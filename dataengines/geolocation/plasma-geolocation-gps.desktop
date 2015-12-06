@@ -66,6 +66,7 @@ Name[x-test]=xxGeolocation GPSxx
 Name[zh_CN]=GPS 位置
 Name[zh_TW]=Geolocation GPS
 Comment=Geolocation from GPS address.
+Comment[ast]=Xeollocalización dende direiciones GPS.
 Comment[bg]=Геолокация от GPS адрес.
 Comment[bs]=Geolociranje kroz GPS adresu.
 Comment[ca]=Geolocalització des d'una adreça GPS.

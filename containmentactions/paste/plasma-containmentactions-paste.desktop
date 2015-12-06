@@ -72,6 +72,7 @@ Type=Service
 Icon=edit-paste
 Comment=Creates a widget from the contents of the clipboard
 Comment[ar]=أنشئ ودجة من محتويات الحافظة
+Comment[ast]=Crea un widget colos conteníos del cartafueyu
 Comment[bg]=Създаване на джаджа със съдържанието на системния буфер
 Comment[bs]=Stvara grafičku kontrolu na osnovu sadržaja klipborda
 Comment[ca]=Crea un estri a partir del contingut del porta-retalls

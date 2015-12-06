@@ -52,6 +52,7 @@ Name[zh_CN]=硬盘空间使用
 Name[zh_TW]=硬碟空間使用量
 Comment=An applet that monitors hard disk space usage and percentage
 Comment[ar]=بُريْمج يراقب استخدام مساحة القرص الصلب ونسبته المئوية
+Comment[ast]=Un applet que monitoriza l'usu y porcentaxe d'espaciu del discu duru
 Comment[bs]=Aplet koji prati  korištenje prostora na hard disku i postotak
 Comment[ca]=Una miniaplicació que controla l'ús d'espai del disc dur i el tant per cent
 Comment[ca@valencia]=Una miniaplicació que controla l'ús d'espai del disc dur i el tant per cent

@@ -36,6 +36,7 @@ Name[x-test]=xxCPU Load Monitorxx
 Name[zh_CN]=CPU 负载监视器
 Name[zh_TW]=CPU 負載監視器
 Comment=Monitor the load of the CPUs
+Comment[ast]=Monitoriza la carga de les CPUs
 Comment[ca]=Controla la càrrega de les CPU
 Comment[ca@valencia]=Controla la càrrega de les CPU
 Comment[cs]=Monitorovat zatížení procesor(ů)

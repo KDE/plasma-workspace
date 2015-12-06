@@ -66,6 +66,7 @@ Name[x-test]=xxGeolocation IPxx
 Name[zh_CN]=IP 位置
 Name[zh_TW]=Geolocation IP
 Comment=Geolocation from IP address.
+Comment[ast]=Xeollocalización dende direiciones IP.
 Comment[bg]=Геолокация по IP-адрес.
 Comment[bs]=Geolociranje kroz IP adresu.
 Comment[ca]=Geolocalització des d'una adreça IP.

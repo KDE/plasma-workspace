@@ -46,6 +46,7 @@ Name[zh_CN]=Plasma
 Name[zh_TW]=Plasma
 Comment=Plasma by KDE
 Comment[ar]=بلازما كدي
+Comment[ast]=Plasma por KDE
 Comment[bs]=Plazma od strane KDe
 Comment[ca]=Plasma pel KDE
 Comment[ca@valencia]=Plasma pel KDE
