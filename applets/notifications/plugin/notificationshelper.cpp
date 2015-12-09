@@ -130,8 +130,8 @@ void NotificationsHelper::addNotificationPopup(QObject *win)
 
 void NotificationsHelper::onPopupShown()
 {
-    QObject *popup = sender();
-    if (!popup) {
+    QWindow *popup = qobject_cast<QWindow*>(sender());
+    if (!popup || !popup->isVisible()) {
         return;
     }
 
