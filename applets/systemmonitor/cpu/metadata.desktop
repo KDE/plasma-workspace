@@ -1,6 +1,7 @@
 [Desktop Entry]
 Encoding=UTF-8
 Name=CPU Load Monitor
+Name[ast]=Monitor de carga de CPU
 Name[ca]=Controlador de càrrega de la CPU
 Name[ca@valencia]=Controlador de càrrega de la CPU
 Name[cs]=Monitor zatížení CPU

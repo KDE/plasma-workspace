@@ -34,6 +34,7 @@ Name[uk]=Смітник
 Name[x-test]=xxTrashxx
 Name[zh_CN]=回收站
 Comment=Contains removed files
+Comment[ast]=Contién ficheros desaniciaos
 Comment[ca]=Conté els fitxers eliminats
 Comment[ca@valencia]=Conté els fitxers eliminats
 Comment[da]=Indeholder slettede filer

@@ -52,6 +52,7 @@ Name[zh_CN]=KDE 系统卫士
 Name[zh_TW]=KSysguard
 Comment=Launches KSysguard on Ctrl + Escape
 Comment[ar]=يُطلِق مرقاب نظام.ك عند الضغط على Ctrl+Escape
+Comment[ast]=Llancia KSysguard con Ctrl + Escape
 Comment[bs]=Pokreće KSysguard na Ctrl + Escape
 Comment[ca]=Llança el KSysguard amb Ctrl + Esc
 Comment[ca@valencia]=Llança el KSysguard amb Ctrl + Esc
