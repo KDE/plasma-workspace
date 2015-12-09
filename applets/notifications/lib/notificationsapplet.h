@@ -38,6 +38,7 @@ public:
     Q_INVOKABLE uint screenPosition() const;
 
 public Q_SLOTS:
+    void init() Q_DECL_OVERRIDE;
     void onScreenPositionChanged(uint position);
     void onAppletLocationChanged(Plasma::Types::Location location);
 
