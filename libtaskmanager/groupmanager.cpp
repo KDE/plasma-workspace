@@ -510,8 +510,7 @@ bool GroupManager::manualGroupingRequest(ItemList items)
 
 bool GroupManager::manualSortingRequest(AbstractGroupableItem* taskItem, int newIndex)
 {
-    if (d->abstractSortingStrategy &&
-            (!launchersLocked() || separateLaunchers() || newIndex >= launcherCount())) {
+    if (d->abstractSortingStrategy && !launchersLocked()) {
         return d->abstractSortingStrategy->manualSortingRequest(taskItem, newIndex);
     }
     return false;
@@ -803,6 +802,8 @@ bool GroupManager::addLauncher(const QUrl &url, const QIcon &icon, const QString
                 }
             }
         }
+
+        d->abstractSortingStrategy->check(launcher);
 
         if (!d->readingLauncherConfig) {
             emit launcherListChanged();
