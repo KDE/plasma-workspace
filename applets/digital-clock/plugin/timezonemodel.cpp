@@ -40,8 +40,10 @@ bool TimeZoneFilterProxy::filterAcceptsRow(int source_row, const QModelIndex &so
 
     const QString city = sourceModel()->index(source_row, 0, source_parent).data(TimeZoneModel::CityRole).toString();
     const QString region = sourceModel()->index(source_row, 0, source_parent).data(TimeZoneModel::RegionRole).toString();
+    const QString comment = sourceModel()->index(source_row, 0, source_parent).data(TimeZoneModel::CommentRole).toString();
 
-    if (m_stringMatcher.indexIn(city) != -1 || m_stringMatcher.indexIn(region) != -1) {
+    if (m_stringMatcher.indexIn(city) != -1 || m_stringMatcher.indexIn(region) != -1 ||
+        m_stringMatcher.indexIn(comment) != -1) {
         return true;
     }
 

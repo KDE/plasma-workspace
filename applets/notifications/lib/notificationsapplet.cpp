@@ -28,8 +28,6 @@
 NotificationsApplet::NotificationsApplet(QObject *parent, const QVariantList &data)
     : Plasma::Applet(parent, data)
 {
-    connect(this, &Plasma::Applet::locationChanged,
-            this, &NotificationsApplet::onAppletLocationChanged);
 }
 
 NotificationsApplet::~NotificationsApplet()
@@ -41,7 +39,12 @@ void NotificationsApplet::init()
     KConfigGroup globalGroup = globalConfig();
     m_popupPosition = (NotificationsHelper::PositionOnScreen)globalGroup.readEntry("popupPosition", 0); //0 is default
 
+    connect(this, &Plasma::Applet::locationChanged,
+            this, &NotificationsApplet::onAppletLocationChanged);
+
     Plasma::Applet::init();
+
+    onAppletLocationChanged(location());
 }
 
 void NotificationsApplet::onAppletLocationChanged(Plasma::Types::Location location)
