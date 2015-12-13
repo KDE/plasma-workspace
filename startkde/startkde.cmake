@@ -6,7 +6,8 @@
 if test "x$1" = x--failsafe; then
     KDE_FAILSAFE=1 # General failsafe flag
     KWIN_COMPOSE=N # Disable KWin's compositing
-    export KWIN_COMPOSE KDE_FAILSAFE
+    QT_XCB_FORCE_SOFTWARE_OPENGL=1
+    export KWIN_COMPOSE KDE_FAILSAFE QT_XCB_FORCE_SOFTWARE_OPENGL
 fi
 
 # When the X server dies we get a HUP signal from xinit. We must ignore it
@@ -411,15 +412,6 @@ test -n "$ksplash_pid" && kill "$ksplash_pid" 2>/dev/null
 
 # Clean up
 kdeinit5_shutdown
-
-echo 'startkde: Running shutdown scripts...'  1>&2
-
-# Run scripts found in <config locations>/plasma-workspace/shutdown
-for prefix in `echo "$scriptpath"`; do
-  for file in `ls "$prefix"/shutdown 2> /dev/null | egrep -v '(~|\.bak)$'`; do
-    test -x "$prefix/shutdown/$file" && "$prefix/shutdown/$file"
-  done
-done
 
 unset KDE_FULL_SESSION
 xprop -root -remove KDE_FULL_SESSION

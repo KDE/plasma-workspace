@@ -757,6 +757,8 @@ void KSMServer::cleanUp()
     signal(SIGTERM, SIG_DFL);
     signal(SIGINT, SIG_DFL);
 
+    runShutdownScripts();
+
     KDisplayManager().shutdown( shutdownType, shutdownMode, bootOption );
 }
 
@@ -1092,4 +1094,29 @@ void KSMServer::openSwitchUserDialog()
 
     QScopedPointer<KSMSwitchUserDialog> dlg(new KSMSwitchUserDialog(&dm));
     dlg->exec();
+}
+
+void KSMServer::runShutdownScripts()
+{
+    const QStringList shutdownFolders = QStandardPaths::locateAll(QStandardPaths::GenericConfigLocation, QStringLiteral("plasma-workspace/shutdown"), QStandardPaths::LocateDirectory);
+    foreach (const QString &shutDownFolder, shutdownFolders) {
+        QDir dir(shutDownFolder);
+        if (!dir.exists()) {
+            continue;
+        }
+
+        const QStringList entries = dir.entryList(QDir::Files);
+        foreach (const QString &file, entries) {
+            // Don't execute backup files
+            if (!file.endsWith(QLatin1Char('~')) && !file.endsWith(QStringLiteral(".bak")) &&
+                    (file[0] != QLatin1Char('%') || !file.endsWith(QLatin1Char('%'))) &&
+                    (file[0] != QLatin1Char('#') || !file.endsWith(QLatin1Char('#'))))
+            {
+                const QString fullPath = dir.absolutePath() + QLatin1Char('/') + file;
+
+                qCDebug(KSMSERVER) << "running shutdown script" << fullPath;
+                QProcess::execute(fullPath);
+            }
+        }
+    }
 }

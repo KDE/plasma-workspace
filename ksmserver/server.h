@@ -202,6 +202,8 @@ private:
     void resumeStartupInternal();
     void setupShortcuts();
 
+    void runShutdownScripts();
+
     // public dcop interface
 
  public Q_SLOTS: //public dcop interface
