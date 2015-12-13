@@ -6,7 +6,8 @@
 if test "x$1" = x--failsafe; then
     KDE_FAILSAFE=1 # General failsafe flag
     KWIN_COMPOSE=N # Disable KWin's compositing
-    export KWIN_COMPOSE KDE_FAILSAFE
+    QT_XCB_FORCE_SOFTWARE_OPENGL=1
+    export KWIN_COMPOSE KDE_FAILSAFE QT_XCB_FORCE_SOFTWARE_OPENGL
 fi
 
 # When the X server dies we get a HUP signal from xinit. We must ignore it
