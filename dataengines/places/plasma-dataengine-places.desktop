@@ -74,7 +74,7 @@ Name[uk]=Місця
 Name[wa]=Plaeces
 Name[x-test]=xxPlacesxx
 Name[zh_CN]=位置
-Name[zh_TW]=地方
+Name[zh_TW]=書籤
 Comment=Places, as seen in the file manager and in file dialogs.
 Comment[ar]=الأماكن، كما في مدير الملفات وحواريات الملفات.
 Comment[bg]=Местата, както се виждат във файловия мениджър и прозорците.
@@ -136,7 +136,7 @@ Comment[uk]=Місця, так, як їх показано у менеджері
 Comment[wa]=Eplaeçmints, come i sont veyous e manaedjeu des fitchîs eyet ezès purneas di dvize des fitchîs.
 Comment[x-test]=xxPlaces, as seen in the file manager and in file dialogs.xx
 Comment[zh_CN]=提供文件管理器和文件对话框里能看到的位置。
-Comment[zh_TW]=在檔案管理員與檔案對話框中看到的「地方」項目。
+Comment[zh_TW]=在檔案管理員與檔案對話框中看到的「書籤」項目。
 Type=Service
 Icon=folder-favorites
 
