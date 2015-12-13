@@ -28,6 +28,8 @@ KQuickControlsAddons.MouseEventListener {
 
    acceptedButtons: Qt.RightButton
 
+   Keys.forwardTo: root.expandedTask ? [root.expandedTask.taskItemExpanded] : [hiddenView]
+
    Component.onCompleted: {
        if (root.expandedTask) {
            root.expandedTask.taskItemExpanded.parent = expandedItemContainer;
@@ -109,7 +111,7 @@ KQuickControlsAddons.MouseEventListener {
         }
 
         ListView {
-            clip: true
+            id: list
             anchors.fill: parent
             spacing: units.smallSpacing
 
