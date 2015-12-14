@@ -311,12 +311,9 @@ void NotificationsHelper::closePopup(const QString &sourceName)
     QMutableListIterator<QVariantMap> i(m_showQueue);
     while (i.hasNext()) {
         if (i.next().value(QStringLiteral("source")) == sourceName) {
-            qDebug() << "########|" << "  (locking mutex for write)";
             m_mutex->lockForWrite();
-            qDebug() << "########|" << "Removing old data" << i.value().value(QStringLiteral("summary")).toString();
             i.remove();
             m_mutex->unlock();
-            qDebug() << "########|" << "  (unlocking mutex)";
         }
     }
 

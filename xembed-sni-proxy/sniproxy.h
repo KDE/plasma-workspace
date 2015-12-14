@@ -28,6 +28,7 @@
 #include <QPixmap>
 
 #include <xcb/xcb.h>
+#include <xcb/xcb_image.h>
 
 #include "snidbus.h"
 
@@ -140,7 +141,9 @@ Q_SIGNALS:
 
 private:
     void sendClick(uint8_t mouseButton, int x, int y);
-    QImage getImageNonComposite();
+    QImage getImageNonComposite() const;
+    bool isTransparentImage(const QImage &image) const;
+    QImage convertFromNative(xcb_image_t *xcbImage) const;
 
     QDBusConnection m_dbus;
     xcb_window_t m_windowId;
