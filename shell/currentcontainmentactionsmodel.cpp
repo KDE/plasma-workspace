@@ -89,7 +89,7 @@ QString CurrentContainmentActionsModel::mouseEventString(int mouseButton, int mo
 
 QString CurrentContainmentActionsModel::wheelEventString(const QPointF &delta, int mouseButtons, int modifiers)
 {
-    QWheelEvent *wheel = new QWheelEvent(QPointF(), QPointF(), delta.toPoint(), QPoint(), 0, Qt::Vertical, (Qt::MouseButtons)mouseButtons, (Qt::KeyboardModifiers) modifiers);
+    QWheelEvent *wheel = new QWheelEvent(QPointF(), QPointF(), delta.toPoint(), QPoint(), 0, qAbs(delta.x()) > qAbs(delta.y()) ? Qt::Horizontal : Qt::Vertical, (Qt::MouseButtons)mouseButtons, (Qt::KeyboardModifiers) modifiers);
 
     QString string = Plasma::ContainmentActions::eventToString(wheel);
 

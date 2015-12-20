@@ -32,7 +32,7 @@
 
 #include <QLoggingCategory>
 #include <QQuickItem>
-#include <QTimer>
+#include <QMetaObject>
 #include <QVariant>
 #include <QStandardItemModel>
 #include <QMenu>
@@ -99,7 +99,8 @@ Host::Host(QObject* parent) :
     QObject(parent),
     d(new HostPrivate(this))
 {
-    QTimer::singleShot(0, this, &Host::init);
+    // Workaround for bug 352055
+    QMetaObject::invokeMethod(this, "init", Qt::QueuedConnection);
 }
 
 Host::~Host()
