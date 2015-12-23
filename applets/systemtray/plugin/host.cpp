@@ -295,7 +295,8 @@ QStringList Host::defaultPlasmoids() const
 
 
 bool HostPrivate::showTask(Task *task) const {
-    return task->shown() && task->status() != SystemTray::Task::Passive;
+    return task->shown() && task->status() != SystemTray::Task::Passive &&
+        task->status() != SystemTray::Task::HiddenStatus;
 }
 
 void HostPrivate::setupProtocol(Protocol *protocol)

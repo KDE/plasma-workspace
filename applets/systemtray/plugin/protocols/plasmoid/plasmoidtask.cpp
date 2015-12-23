@@ -141,6 +141,8 @@ void PlasmoidTask::updateStatus()
         setStatus(Task::Passive);
     } else if (ps == Plasma::Types::NeedsAttentionStatus) {
         setStatus(Task::NeedsAttention);
+    } else if (ps == Plasma::Types::HiddenStatus) {
+        setStatus(Task::HiddenStatus);
     } else {
         setStatus(Task::Active);
     }
