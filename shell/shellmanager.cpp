@@ -37,7 +37,6 @@
 
 #include <KMessageBox>
 #include <KLocalizedString>
-#include <kcrash.h>
 
 static const QStringList s_shellsDirs(QStandardPaths::locateAll(QStandardPaths::QStandardPaths::GenericDataLocation,
                                                   PLASMA_RELATIVE_DATA_INSTALL_DIR "/shells/",
@@ -45,12 +44,8 @@ static const QStringList s_shellsDirs(QStandardPaths::locateAll(QStandardPaths::
 static const QString s_shellLoaderPath = QStringLiteral("/contents/loader.qml");
 
 bool ShellManager::s_forceWindowed = false;
-bool ShellManager::s_noRespawn = false;
 bool ShellManager::s_standaloneOption = false;
-
-int ShellManager::s_crashes = 0;
 QString ShellManager::s_fixedShell;
-QString ShellManager::s_restartOptions;
 
 //
 // ShellManager
@@ -75,16 +70,6 @@ public:
 ShellManager::ShellManager()
     : d(new Private())
 {
-    // Using setCrashHandler, we end up in an infinite loop instead of quitting,
-    // use setEmergencySaveFunction instead to avoid this.
-    KCrash::setEmergencySaveFunction(ShellManager::crashHandler);
-    QTimer::singleShot(15 * 1000, this, &ShellManager::resetCrashCount);
-
-    connect(
-        &d->shellUpdateDelay, &QTimer::timeout,
-        this, &ShellManager::updateShell
-    );
-
     //we have to ensure this is executed after QCoreApplication::exec()
     QMetaObject::invokeMethod(this, "loadHandlers", Qt::QueuedConnection);
 }
@@ -261,35 +246,3 @@ ShellManager * ShellManager::instance()
     return manager;
 }
 
-void ShellManager::resetCrashCount()
-{
-    s_crashes = 0;
-}
-
-void ShellManager::crashHandler(int signal)
-{
-    /* plasma-shell restart logic as crash recovery
-     *
-     * We restart plasma-shell after crashes. When it crashes subsequently on startup,
-     * and more than two times in a row, we give up in order to not endlessly loop.
-     * Once the shell process stays alive for at least 15 seconds, we reset the crash
-     * counter, so a later crash, at runtime rather than on startup will still be
-     * recovered from.
-     *
-     * This logic is very similar as to how kwin handles it.
-     */
-    s_crashes++;
-    fprintf(stderr, "Application::crashHandler() called with signal %d; recent crashes: %d\n", signal, s_crashes);
-    char cmd[1024];
-    sprintf(cmd, "%s %s --crashes %d &",
-            QFile::encodeName(QCoreApplication::applicationFilePath()).constData(), s_restartOptions.toLocal8Bit().constData(), s_crashes);
-    printf("%s\n", cmd);
-
-    if (s_crashes < 3 && !s_noRespawn) {
-        sleep(1);
-        system(cmd);
-    } else {
-        fprintf(stderr, "Too many crashes in short order or respawning disabled, not restarting automatically.\n");
-    }
-
-}
