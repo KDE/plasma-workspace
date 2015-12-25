@@ -185,6 +185,9 @@ SNIProxy::SNIProxy(xcb_window_t wid, QObject* parent):
 
 SNIProxy::~SNIProxy()
 {
+    auto c = QX11Info::connection();
+
+    xcb_destroy_window(c, m_containerWid);
     QDBusConnection::disconnectFromBus(m_dbus.name());
 }
 
