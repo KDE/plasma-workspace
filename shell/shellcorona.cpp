@@ -510,7 +510,7 @@ void ShellCorona::showAlternativesForApplet(Plasma::Applet *applet)
     qmlObj->setSource(QUrl::fromLocalFile(alternativesQML));
 
     AlternativesHelper *helper = new AlternativesHelper(applet, qmlObj);
-    qmlObj->engine()->rootContext()->setContextProperty(QStringLiteral("alternativesHelper"), helper);
+    qmlObj->rootContext()->setContextProperty(QStringLiteral("alternativesHelper"), helper);
 
     m_alternativesObjects << qmlObj;
     qmlObj->completeInitialization();
@@ -1152,7 +1152,7 @@ void ShellCorona::showInteractiveConsole()
         m_interactiveConsole->setSource(QUrl::fromLocalFile(consoleQML));
 
         QObject *engine = new WorkspaceScripting::ScriptEngine(this, m_interactiveConsole);
-        m_interactiveConsole->engine()->rootContext()->setContextProperty(QStringLiteral("scriptEngine"), engine);
+        m_interactiveConsole->rootContext()->setContextProperty(QStringLiteral("scriptEngine"), engine);
 
         m_interactiveConsole->completeInitialization();
         if (m_interactiveConsole->rootObject()) {

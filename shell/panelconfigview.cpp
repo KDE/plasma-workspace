@@ -79,8 +79,8 @@ PanelConfigView::PanelConfigView(Plasma::Containment *containment, PanelView *pa
     updateContrast();
     connect(&m_theme, &Plasma::Theme::themeChanged, this, &PanelConfigView::updateContrast);
 
-    engine()->rootContext()->setContextProperty(QStringLiteral("panel"), panelView);
-    engine()->rootContext()->setContextProperty(QStringLiteral("configDialog"), this);
+    rootContext()->setContextProperty(QStringLiteral("panel"), panelView);
+    rootContext()->setContextProperty(QStringLiteral("configDialog"), this);
     connect(containment, &Plasma::Containment::formFactorChanged, this, &PanelConfigView::syncGeometry);
     connect(containment, &Plasma::Containment::locationChanged, this, &PanelConfigView::syncSlideLocation);
 
