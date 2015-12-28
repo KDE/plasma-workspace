@@ -123,20 +123,25 @@ PanelView::~PanelView()
     PanelShadows::self()->removeWindow(this);
 }
 
-KConfigGroup PanelView::config() const
+KConfigGroup PanelView::panelConfig(ShellCorona *corona, Plasma::Containment *containment, QScreen *screen)
 {
-    if (!containment()) {
+    if (!containment || !screen) {
         return KConfigGroup();
     }
-    KConfigGroup views(m_corona->applicationConfig(), "PlasmaViews");
-    views = KConfigGroup(&views, QStringLiteral("Panel %1").arg(containment()->id()));
+    KConfigGroup views(corona->applicationConfig(), "PlasmaViews");
+    views = KConfigGroup(&views, QStringLiteral("Panel %1").arg(containment->id()));
 
-    if (formFactor() == Plasma::Types::Vertical) {
-        return KConfigGroup(&views, "Vertical" + QString::number(screen()->size().height()));
+    if (containment->formFactor() == Plasma::Types::Vertical) {
+        return KConfigGroup(&views, "Vertical" + QString::number(screen->size().height()));
     //treat everything else as horizontal
     } else {
-        return KConfigGroup(&views, "Horizontal" + QString::number(screen()->size().width()));
+        return KConfigGroup(&views, "Horizontal" + QString::number(screen->size().width()));
     }
+}
+
+KConfigGroup PanelView::config() const
+{
+    return panelConfig(m_corona, containment(), screen());
 }
 
 void PanelView::maximize()
@@ -491,26 +496,12 @@ void PanelView::restore()
     int defaultMaxLength = 0;
     int defaultMinLength = 0;
     int defaultAlignment = Qt::AlignLeft;
-
-    QQuickItem *containmentItem = containment()->property("_plasma_graphicObject").value<QQuickItem *>();
-
-    if (containmentItem && containmentItem->property("_plasma_desktopscripting_alignment").canConvert<int>()) {
-        defaultAlignment = containmentItem->property("_plasma_desktopscripting_alignment").toInt();
-    }
     setAlignment((Qt::Alignment)config().readEntry<int>("alignment", defaultAlignment));
-
-
-    if (containmentItem && containmentItem->property("_plasma_desktopscripting_offset").canConvert<int>()) {
-        defaultOffset = containmentItem->property("_plasma_desktopscripting_offset").toInt();
-    }
     m_offset = config().readEntry<int>("offset", defaultOffset);
     if (m_alignment != Qt::AlignCenter) {
         m_offset = qMax(0, m_offset);
     }
 
-    if (containmentItem && containmentItem->property("_plasma_desktopscripting_thickness").canConvert<int>()) {
-        defaultThickness = qMax(16, containmentItem->property("_plasma_desktopscripting_thickness").toInt());
-    }
     setThickness(config().readEntry<int>("thickness", defaultThickness));
 
     setMinimumSize(QSize(-1, -1));
@@ -520,13 +511,6 @@ void PanelView::restore()
     if (containment()->formFactor() == Plasma::Types::Vertical) {
         defaultMaxLength = screen()->size().height();
         defaultMinLength = screen()->size().height();
-
-        if (containmentItem && containmentItem->property("_plasma_desktopscripting_maxLength").canConvert<int>()) {
-            defaultMaxLength = containmentItem->property("_plasma_desktopscripting_maxLength").toInt();
-        }
-        if (containmentItem && containmentItem->property("_plasma_desktopscripting_minLength").canConvert<int>()) {
-            defaultMinLength = containmentItem->property("_plasma_desktopscripting_minLength").toInt();
-        }
 
         m_maxLength = config().readEntry<int>("maxLength", defaultMaxLength);
         m_minLength = config().readEntry<int>("minLength", defaultMinLength);
@@ -544,13 +528,6 @@ void PanelView::restore()
     } else {
         defaultMaxLength = screen()->size().width();
         defaultMinLength = screen()->size().width();
-
-        if (containmentItem && containmentItem->property("_plasma_desktopscripting_maxLength").canConvert<int>()) {
-            defaultMaxLength = containmentItem->property("_plasma_desktopscripting_maxLength").toInt();
-        }
-        if (containmentItem && containmentItem->property("_plasma_desktopscripting_minLength").canConvert<int>()) {
-            defaultMinLength = containmentItem->property("_plasma_desktopscripting_minLength").toInt();
-        }
 
         m_maxLength = config().readEntry<int>("maxLength", defaultMaxLength);
         m_minLength = config().readEntry<int>("minLength", defaultMinLength);

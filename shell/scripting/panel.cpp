@@ -48,34 +48,34 @@ QString Panel::location() const
 {
     Plasma::Containment *c = containment();
     if (!c) {
-        return QStringLiteral("floating");
+        return "floating";
     }
 
     switch (c->location()) {
         case Plasma::Types::Floating:
-            return QStringLiteral("floating");
+            return "floating";
             break;
         case Plasma::Types::Desktop:
-            return QStringLiteral("desktop");
+            return "desktop";
             break;
         case Plasma::Types::FullScreen:
-            return QStringLiteral("fullscreen");
+            return "fullscreen";
             break;
         case Plasma::Types::TopEdge:
-            return QStringLiteral("top");
+            return "top";
             break;
         case Plasma::Types::BottomEdge:
-            return QStringLiteral("bottom");
+            return "bottom";
             break;
         case Plasma::Types::LeftEdge:
-            return QStringLiteral("left");
+            return "left";
             break;
         case Plasma::Types::RightEdge:
-            return QStringLiteral("right");
+            return "right";
             break;
     }
 
-    return QStringLiteral("floating");
+    return "floating";
 }
 
 void Panel::setLocation(const QString &locationString)
@@ -88,20 +88,20 @@ void Panel::setLocation(const QString &locationString)
     const QString lower = locationString.toLower();
     Plasma::Types::Location loc = Plasma::Types::Floating;
     Plasma::Types::FormFactor ff = Plasma::Types::Planar;
-    if (lower == QLatin1String("desktop")) {
+    if (lower == "desktop") {
         loc = Plasma::Types::Desktop;
-    } else if (lower == QLatin1String("fullscreen")) {
+    } else if (lower == "fullscreen") {
         loc = Plasma::Types::FullScreen;
-    } else if (lower == QLatin1String("top")) {
+    } else if (lower == "top") {
         loc = Plasma::Types::TopEdge;
         ff = Plasma::Types::Horizontal;
-    } else if (lower == QLatin1String("bottom")) {
+    } else if (lower == "bottom") {
         loc = Plasma::Types::BottomEdge;
         ff = Plasma::Types::Horizontal;
-    } else if (lower == QLatin1String("left")) {
+    } else if (lower == "left") {
         loc = Plasma::Types::LeftEdge;
         ff = Plasma::Types::Vertical;
-    } else if (lower == QLatin1String("right")) {
+    } else if (lower == "right") {
         loc = Plasma::Types::RightEdge;
         ff = Plasma::Types::Vertical;
     }
@@ -120,336 +120,148 @@ PanelView *Panel::panel() const
     return m_corona->panelView(c);
 }
 
+
+KConfigGroup Panel::panelConfig() const
+{
+    int screenNum = qMax(screen(), 0); //if we don't have a screen (-1) we'll be put on screen 0
+
+    if (QGuiApplication::screens().size() < screenNum) {
+        return KConfigGroup();
+    }
+    QScreen *s = QGuiApplication::screens().at(screenNum);
+    return PanelView::panelConfig(m_corona, containment(), s);
+}
+
 QString Panel::alignment() const
 {
-    PanelView *v = panel();
-    if (!v) {
-        return QStringLiteral("left");
-    }
-
-    switch (v->alignment()) {
+    switch (panelConfig().readEntry("alignment", 0)) {
         case Qt::AlignRight:
-            return QStringLiteral("right");
+            return "right";
             break;
         case Qt::AlignCenter:
-            return QStringLiteral("center");
+            return "center";
             break;
         default:
-            return QStringLiteral("left");
+            return "left";
             break;
     }
 
-    return QStringLiteral("left");
+    return "left";
 }
 
 void Panel::setAlignment(const QString &alignment)
 {
-    Qt::Alignment alignmentValue = Qt::AlignLeft;
-
-    bool success = false;
-
-    if (alignment.compare(QLatin1String("left"), Qt::CaseInsensitive) == 0) {
-        success = true;
-        alignmentValue = Qt::AlignLeft;
-    } else if (alignment.compare(QLatin1String("right"), Qt::CaseInsensitive) == 0) {
-        success = true;
-        alignmentValue = Qt::AlignRight;
-    } else if (alignment.compare(QLatin1String("center"), Qt::CaseInsensitive) == 0) {
-        success = true;
-        alignmentValue = Qt::AlignCenter;
+    int a = Qt::AlignLeft;
+    if (alignment.compare("right", Qt::CaseInsensitive) == 0) {
+        a = Qt::AlignRight;
+    } else if (alignment.compare("center", Qt::CaseInsensitive) == 0) {
+        a = Qt::AlignCenter;
     }
 
-    if (!success) {
-        return;
-    }
-
-    PanelView *v = panel();
-    if (v) {
-        v->setOffset(0);
-        v->setAlignment(alignmentValue);
-    } else {
-        QQuickItem *graphicObject = qobject_cast<QQuickItem *>(containment()->property("_plasma_graphicObject").value<QObject *>());
-
-        if (!graphicObject) {
-            return;
-        }
-        graphicObject->setProperty("_plasma_desktopscripting_alignment", (int)alignmentValue);
+    panelConfig().writeEntry("alignment", a);
+    if (panel()) {
+        QMetaObject::invokeMethod(panel(), "restore");
     }
 }
 
 int Panel::offset() const
 {
-    PanelView *v = panel();
-    if (v) {
-        return v->offset();
-    }
-
-    return 0;
+    return panelConfig().readEntry("offset", 0);
 }
 
 void Panel::setOffset(int pixels)
 {
-    Plasma::Containment *c = containment();
-    if (pixels < 0 || !c) {
-        return;
-    }
-
-    QQuickItem *graphicObject = qobject_cast<QQuickItem *>(c->property("_plasma_graphicObject").value<QObject *>());
-
-    if (!graphicObject) {
-        return;
-    }
-
-    PanelView *v = panel();
-    if (v) {
-        QRectF screen = v->screen()->geometry();
-        QSizeF size(graphicObject->width(), graphicObject->height());
-
-        if (c->formFactor() == Plasma::Types::Vertical) {
-            if (pixels > screen.height()) {
-                return;
-            }
-
-            if (size.height() + pixels > screen.height()) {
-                graphicObject->setWidth(size.width());
-                graphicObject->setHeight(screen.height() - pixels);
-            }
-        } else if (pixels > screen.width()) {
-            return;
-        } else if (size.width() + pixels > screen.width()) {
-            size.setWidth(screen.width() - pixels);
-            graphicObject->setWidth(size.width());
-            graphicObject->setHeight(size.height());
-            v->setMinimumSize(size.toSize());
-            v->setMaximumSize(size.toSize());
-        }
-
-        v->setOffset(pixels);
-    }
+   panelConfig().writeEntry("offset", pixels);
+   if (panel()) {
+       QMetaObject::invokeMethod(panel(), "restore");
+   }
 }
 
 int Panel::length() const
 {
-    Plasma::Containment *c = containment();
-    if (!c) {
-        return 0;
-    }
-    QQuickItem *graphicObject = qobject_cast<QQuickItem *>(c->property("_plasma_graphicObject").value<QObject *>());
-
-    if (!graphicObject) {
-        return 0;
-    }
-
-    if (c->formFactor() == Plasma::Types::Vertical) {
-        return graphicObject->height();
-    } else {
-        return graphicObject->width();
-    }
+    return panelConfig().readEntry("length", 0);
 }
 
 void Panel::setLength(int pixels)
 {
-    PanelView *v = panel();
-    Plasma::Containment *c = containment();
-
-    if (!v || !c || pixels < 0 || pixels > v->maximumLength() || pixels < v->minimumLength()) {
-        return;
-    }
-
-    QRectF screen = v->screen()->geometry();
-
-    if (c->formFactor() == Plasma::Types::Vertical
-        && pixels > screen.height() - v->offset()) {
-        return;
-    } else if (pixels > screen.width() - v->offset()) {
-        return;
-    }
-
-    v->setLength(pixels);
+   panelConfig().writeEntry("length", pixels);
+   if (panel()) {
+       QMetaObject::invokeMethod(panel(), "restore");
+   }
 }
 
 int Panel::minimumLength() const
 {
-    PanelView *v = panel();
-
-    if (v) {
-        return v->minimumLength();
-    }
-
-    return 0;
+    return panelConfig().readEntry("minLength", 0);
 }
 
 void Panel::setMinimumLength(int pixels)
 {
-    PanelView *v = panel();
-    Plasma::Containment *c = containment();
-
-    if (!c || pixels < 0) {
-        return;
-    }
-
-    //NOTE: due to dependency of class creation at startup, we can't in any way have
-    //the panel views already instantiated, so put the property in a placeholder dynamic property
-    if (!v) {
-        QQuickItem *graphicObject = qobject_cast<QQuickItem *>(c->property("_plasma_graphicObject").value<QObject *>());
-
-        if (!graphicObject) {
-            return;
-        }
-        graphicObject->setProperty("_plasma_desktopscripting_minLength", pixels);
-        return;
-    }
-
-    QRectF screen = v->screen()->geometry();
-
-    if (c->formFactor() == Plasma::Types::Vertical
-        && pixels > screen.height() - v->offset()) {
-        return;
-    } else if (pixels > screen.width() - v->offset()) {
-        return;
-    }
-
-    v->setMinimumLength(pixels);
-
-    if (v->maximumLength() < pixels) {
-        v->setMaximumLength(pixels);
-    }
+   panelConfig().writeEntry("minLength", pixels);
+   if (panel()) {
+       QMetaObject::invokeMethod(panel(), "restore");
+   }
 }
 
 int Panel::maximumLength() const
 {
-    PanelView *v = panel();
-
-    if (v) {
-        return v->maximumLength();
-    }
-
-    return 0;
+    return panelConfig().readEntry("maxLength", 0);
 }
 
 void Panel::setMaximumLength(int pixels)
 {
-    PanelView *v = panel();
-    Plasma::Containment *c = containment();
-
-    if (!c || pixels < 0) {
-        return;
-    }
-
-    //NOTE: due to dependency of class creation at startup, we can't in any way have
-    //the panel views already instantiated, so put the property in a placeholder dynamic property
-    if (!v) {
-        QQuickItem *graphicObject = qobject_cast<QQuickItem *>(c->property("_plasma_graphicObject").value<QObject *>());
-
-        if (!graphicObject) {
-            return;
-        }
-        graphicObject->setProperty("_plasma_desktopscripting_maxLength", pixels);
-        return;
-    }
-
-    QRectF screen = v->screen()->geometry();
-
-    if (c->formFactor() == Plasma::Types::Vertical
-        && pixels > screen.height() - v->offset()) {
-        return;
-    } else if (pixels > screen.width() - v->offset()) {
-        return;
-    }
-
-    v->setMaximumLength(pixels);
-
-    if (v->minimumLength() > pixels) {
-        v->setMinimumLength(pixels);
-    }
+   panelConfig().writeEntry("maxLength", pixels);
+   if (panel()) {
+       QMetaObject::invokeMethod(panel(), "restore");
+   }
 }
 
 int Panel::height() const
 {
-    Plasma::Containment *c = containment();
-    if (!c) {
-        return 0;
-    }
-
-    QQuickItem *graphicObject = qobject_cast<QQuickItem *>(c->property("_plasma_graphicObject").value<QObject *>());
-
-    if (!graphicObject) {
-        return 0;
-    }
-
-    return c->formFactor() == Plasma::Types::Vertical ? graphicObject->width()
-                                               : graphicObject->height();
+    return panelConfig().readEntry("thickness", 0);
 }
 
 void Panel::setHeight(int height)
 {
-    Plasma::Containment *c = containment();
-    if (height < 16 || !c) {
-        return;
-    }
-
-    QQuickItem *graphicObject = qobject_cast<QQuickItem *>(c->property("_plasma_graphicObject").value<QObject *>());
-
-    if (!graphicObject) {
-        return;
-    }
-
-    PanelView *v = panel();
-    if (v) {
-        QRect screen = v->screen()->geometry();
-        QSizeF size(graphicObject->width(), graphicObject->height());
-        const int max = (c->formFactor() == Plasma::Types::Vertical ? screen.width() : screen.height()) / 3;
-        height = qBound(16, height, max);
-
-        v->setThickness(height);
-    } else {
-        //NOTE: due to dependency of class creation at startup, we can't in any way have
-        //the panel views already instantiated, so put the property in a placeholder dynamic property
-        QQuickItem *graphicObject = qobject_cast<QQuickItem *>(c->property("_plasma_graphicObject").value<QObject *>());
-
-        if (!graphicObject) {
-            return;
-        }
-        graphicObject->setProperty("_plasma_desktopscripting_thickness", height);
+    panelConfig().writeEntry("thickness", height);
+    if (panel()) {
+        QMetaObject::invokeMethod(panel(), "restore");
     }
 }
 
 QString Panel::hiding() const
 {
-    PanelView *v = panel();
-    if (v) {
-        switch (v->visibilityMode()) {
-            case PanelView::NormalPanel:
-                return QStringLiteral("none");
-                break;
-            case PanelView::AutoHide:
-                return QStringLiteral("autohide");
-                break;
-            case PanelView::LetWindowsCover:
-                return QStringLiteral("windowscover");
-                break;
-            case PanelView::WindowsGoBelow:
-                return QStringLiteral("windowsbelow");
-                break;
-        }
+    switch (panelConfig().readEntry("panelVisibility", 0)) {
+        case PanelView::NormalPanel:
+            return "none";
+            break;
+        case PanelView::AutoHide:
+            return "autohide";
+            break;
+        case PanelView::LetWindowsCover:
+            return "windowscover";
+            break;
+        case PanelView::WindowsGoBelow:
+            return "windowsbelow";
+            break;
     }
-
-    return QStringLiteral("none");
+    return "none";
 }
 
 void Panel::setHiding(const QString &mode)
 {
-    PanelView *v = panel();
-    if (v) {
-        if (mode.compare(QLatin1String("autohide"), Qt::CaseInsensitive) == 0) {
-            v->setVisibilityMode(PanelView::AutoHide);
-        } else if (mode.compare(QLatin1String("windowscover"), Qt::CaseInsensitive) == 0) {
-            v->setVisibilityMode(PanelView::LetWindowsCover);
-        } else if (mode.compare(QLatin1String("windowsbelow"), Qt::CaseInsensitive) == 0) {
-            v->setVisibilityMode(PanelView::WindowsGoBelow);
-        } else {
-            v->setVisibilityMode(PanelView::NormalPanel);
-        }
+    PanelView::VisibilityMode visibilityMode = PanelView::NormalPanel;
+    if (mode.compare("autohide", Qt::CaseInsensitive) == 0) {
+        visibilityMode = PanelView::AutoHide;
+    } else if (mode.compare("windowscover", Qt::CaseInsensitive) == 0) {
+        visibilityMode = PanelView::LetWindowsCover;
+    } else if (mode.compare("windowsbelow", Qt::CaseInsensitive) == 0) {
+        visibilityMode = PanelView::WindowsGoBelow;
+    }
+
+    panelConfig().writeEntry("panelVisibility", (int)visibilityMode);
+    if (panel()) {
+        QMetaObject::invokeMethod(panel(), "restore");
     }
 }
 

@@ -100,6 +100,7 @@ public Q_SLOTS:
 
 private:
     PanelView *panel() const;
+    KConfigGroup panelConfig() const;
     ShellCorona *m_corona;
 };
 

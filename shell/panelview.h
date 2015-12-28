@@ -133,6 +133,9 @@ public:
      */
     QRect geometryByDistance(int distance) const;
 
+    /* Shared with script/panel.cpp */
+    static KConfigGroup panelConfig(ShellCorona *corona, Plasma::Containment *containment, QScreen *screen);
+
 protected:
     void resizeEvent(QResizeEvent *ev);
     void showEvent(QShowEvent *event);
