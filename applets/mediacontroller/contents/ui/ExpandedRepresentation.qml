@@ -59,15 +59,16 @@ Item {
         }
     }
 
-    Column {
+    ColumnLayout {
         id: titleColumn
         width: constrained ? parent.width - units.largeSpacing : parent.width
         spacing: units.smallSpacing
 
         RowLayout {
             id: titleRow
+            Layout.fillWidth: true
+            Layout.minimumHeight: expandedRepresentation.height / 2
             spacing: units.largeSpacing
-            width: parent.width
 
             Image {
                 id: albumArt
@@ -75,13 +76,7 @@ Item {
                 fillMode: Image.PreserveAspectCrop
                 Layout.preferredHeight: expandedRepresentation.height / 2
                 Layout.preferredWidth: Layout.preferredHeight
-                visible: !!root.track
-
-                PlasmaCore.IconItem {
-                    anchors.fill: parent
-                    source: "tools-rip-audio-cd" // FIXME VDG Needs a proper album art cover dummy
-                    visible: parent.status !== Image.Ready
-                }
+                visible: !!root.track && status === Image.Ready
             }
 
             ColumnLayout {
@@ -117,7 +112,7 @@ Item {
 
         PlasmaComponents.Slider {
             id: seekSlider
-            width: parent.width
+            Layout.fillWidth: true
             z: 999
             maximumValue: currentMetadata ? currentMetadata["mpris:length"] || 0 : 0
             value: 0
