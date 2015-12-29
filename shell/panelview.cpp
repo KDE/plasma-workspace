@@ -216,6 +216,8 @@ void PanelView::setThickness(int value)
     }
 
     m_thickness = value;
+    emit thicknessChanged();
+
     config().writeEntry("thickness", value);
     m_corona->requestApplicationConfigSync();
     positionPanel();
