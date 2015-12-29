@@ -216,13 +216,6 @@ void PanelView::setThickness(int value)
     }
 
     m_thickness = value;
-    if (formFactor() == Plasma::Types::Vertical) {
-        setMinimumWidth(value);
-        setMaximumWidth(value);
-    } else {
-        setMinimumHeight(value);
-        setMaximumHeight(value);
-    }
     config().writeEntry("thickness", value);
     m_corona->requestApplicationConfigSync();
     positionPanel();
