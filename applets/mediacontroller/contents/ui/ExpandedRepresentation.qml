@@ -73,6 +73,7 @@ Item {
             Image {
                 id: albumArt
                 source: root.albumArt
+                asynchronous: true
                 fillMode: Image.PreserveAspectCrop
                 Layout.preferredHeight: expandedRepresentation.height / 2
                 Layout.preferredWidth: Layout.preferredHeight
