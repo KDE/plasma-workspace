@@ -188,6 +188,7 @@ uint NotificationsEngine::Notify(const QString &app_name, uint replaces_id,
 {
     uint partOf = 0;
     const QString appRealName = hints[QStringLiteral("x-kde-appname")].toString();
+    const QString eventId = hints[QStringLiteral("x-kde-eventId")].toString();
 
     //don't let applications spam too much, except ourself
     //needed to display all the "applet deleted" notifications and not merge them
@@ -280,6 +281,7 @@ uint NotificationsEngine::Notify(const QString &app_name, uint replaces_id,
 
     Plasma::DataEngine::Data notificationData;
     notificationData.insert(QStringLiteral("id"), QString::number(id));
+    notificationData.insert(QStringLiteral("eventId"), eventId);
     notificationData.insert(QStringLiteral("appName"), appname_str);
     notificationData.insert(QStringLiteral("appIcon"), app_icon);
     notificationData.insert(QStringLiteral("summary"), summary);
@@ -397,9 +399,12 @@ int NotificationsEngine::createNotification(const QString &appName, const QStrin
     return m_nextId;
 }
 
-void NotificationsEngine::configureNotification(const QString &appName)
+void NotificationsEngine::configureNotification(const QString &appName, const QString &eventId)
 {
-    KNotifyConfigWidget::configure(0, appName);
+    KNotifyConfigWidget *widget = KNotifyConfigWidget::configure(nullptr, appName);
+    if (!eventId.isEmpty()) {
+        widget->selectEvent(eventId);
+    }
 }
 
 K_EXPORT_PLASMA_DATAENGINE_WITH_JSON(notifications, NotificationsEngine, "plasma-dataengine-notifications.json")

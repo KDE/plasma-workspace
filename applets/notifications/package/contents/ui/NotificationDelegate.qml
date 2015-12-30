@@ -174,7 +174,7 @@ PlasmaComponents.ListItem {
             }
             onConfigure: {
                 plasmoid.expanded = false
-                configureNotification(model.appRealName)
+                configureNotification(model.appRealName, model.eventId)
             }
             onAction: {
                 executeAction(source, actionId)

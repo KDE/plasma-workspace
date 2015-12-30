@@ -128,7 +128,7 @@ PlasmaCore.Dialog {
                 notificationPopup.hide()
             }
             onConfigure: {
-                configureNotification(notificationProperties.appRealName)
+                configureNotification(notificationProperties.appRealName, notificationProperties.eventId)
                 notificationPopup.hide()
             }
             onAction: {
