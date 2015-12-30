@@ -31,6 +31,7 @@ MouseArea {
     id: root
 
     property bool containsAcceptableDrag: false
+    property int jumpListCount: 0
 
     height: units.iconSizes.desktop + theme.mSize(theme.defaultFont).height
     width: units.iconSizes.desktop
@@ -43,12 +44,40 @@ MouseArea {
     onClicked: logic.open();
 
     Plasmoid.preferredRepresentation: Plasmoid.fullRepresentation
-    Plasmoid.icon: plasmoid.configuration.iconName
-    Plasmoid.title: plasmoid.configuration.applicationName
+    Plasmoid.icon: logic.icon
+    Plasmoid.title: logic.name
     Plasmoid.backgroundHints: PlasmaCore.Types.TranslucentBackground
 
     Component.onCompleted: {
         plasmoid.activated.connect(logic.open);
+
+        updateActions()
+    }
+
+    function updateActions() {
+        plasmoid.removeAction("properties")
+        plasmoid.removeAction("separator0")
+        for (var i = 0, length = jumpListCount; i < length; ++i) {
+            plasmoid.removeAction("jumplist_" + i)
+        }
+
+        var actions = logic.jumpListActions
+        jumpListCount = actions.length
+        for (var i = 0; i < jumpListCount; ++i) {
+            var item = actions[i]
+            plasmoid.setAction("jumplist_" + i, item.name, item.icon)
+        }
+
+        if (jumpListCount) {
+            plasmoid.setActionSeparator("separator0")
+        }
+    }
+
+    function actionTriggered(name) {
+        if (name.indexOf("jumplist_") === 0) {
+            var actionIndex = parseInt(name.substr("jumplist_".length))
+            logic.execJumpList(actionIndex)
+        }
     }
 
     DragDrop.DropArea {
@@ -91,24 +120,21 @@ MouseArea {
 
     PlasmaCore.ToolTipArea {
         anchors.fill: parent
-        mainText: plasmoid.configuration.applicationName
-        subText: plasmoid.configuration.genericName !== mainText ? plasmoid.configuration.genericName : ""
-        icon: plasmoid.configuration.iconName
+        mainText: logic.name
+        subText: logic.genericName !== mainText ? logic.genericName :""
+        icon: logic.icon
     }
 
     Logic {
         id: logic
         url: plasmoid.configuration.url
+        onJumpListActionsChanged: updateActions()
     }
 
     Connections {
         target: plasmoid
         onExternalData: {
-            plasmoid.configuration.url = data;
-            logic.url = data;
-            plasmoid.configuration.applicationName = logic.name
-            plasmoid.configuration.iconName = logic.icon
-            plasmoid.configuration.genericName = logic.genericName
+            plasmoid.configuration.url = data
         }
     }
 }

@@ -33,6 +33,7 @@ class IconPrivate : public QObject
     Q_PROPERTY(QString name READ name NOTIFY nameChanged)
     Q_PROPERTY(QString icon READ icon NOTIFY iconChanged)
     Q_PROPERTY(QString genericName READ genericName NOTIFY genericNameChanged)
+    Q_PROPERTY(QVariantList jumpListActions READ jumpListActions NOTIFY jumpListActionsChanged)
 
 public:
     IconPrivate();
@@ -42,22 +43,27 @@ public:
     QString name() const;
     QString icon() const;
     QString genericName() const;
+    QVariantList jumpListActions() const;
+
     void setUrl(const QUrl &url);
 
     Q_INVOKABLE void open();
     Q_INVOKABLE bool processDrop(QObject *dropEvent);
+    Q_INVOKABLE void execJumpList(int index);
 
 Q_SIGNALS:
     void urlChanged(QUrl newUrl);
     void nameChanged(QString newName);
     void iconChanged(QString newIcon);
     void genericNameChanged(QString newGenericName);
+    void jumpListActionsChanged(const QVariantList &jumpListActions);
 
 private:
     QUrl m_url;
     QString m_name;
     QString m_icon;
     QString m_genericName;
+    QVariantList m_jumpListActions;
 
 };
 
