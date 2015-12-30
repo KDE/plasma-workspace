@@ -108,6 +108,8 @@ ShellCorona::ShellCorona(QObject *parent)
         executeSetupPlasmoidScript(c, c);
     });
 
+    connect(this, &Plasma::Corona::availableScreenRectChanged, this, &Plasma::Corona::availableScreenRegionChanged);
+
     m_appConfigSyncTimer.setSingleShot(true);
     m_appConfigSyncTimer.setInterval(s_configSyncDelay);
     connect(&m_appConfigSyncTimer, &QTimer::timeout, this, &ShellCorona::syncAppConfig);
@@ -778,7 +780,6 @@ void ShellCorona::removeView(int idx)
 
     if (panelsAltered) {
         emit availableScreenRectChanged();
-        emit availableScreenRegionChanged();
     }
 }
 
@@ -918,7 +919,6 @@ void ShellCorona::addOutput(const KScreen::OutputPtr &output)
     }
 
     emit availableScreenRectChanged();
-    emit availableScreenRegionChanged();
 
     CHECK_SCREEN_INVARIANTS
 }
@@ -1014,10 +1014,9 @@ void ShellCorona::createWaitingPanels()
         Q_ASSERT(qBound(0, requestedScreen, m_views.count() - 1) == requestedScreen);
         QScreen *screen = m_views[requestedScreen]->screen();
         PanelView* panel = new PanelView(this, screen);
-        connect(panel, &QWindow::visibleChanged, [this]() {
-            emit availableScreenRectChanged();
-            emit availableScreenRegionChanged();
-        });
+        connect(panel, &QWindow::visibleChanged, this, &Plasma::Corona::availableScreenRectChanged);
+        connect(panel, &PanelView::locationChanged, this, &Plasma::Corona::availableScreenRectChanged);
+        connect(panel, &PanelView::visibilityModeChanged, this, &Plasma::Corona::availableScreenRectChanged);
 
         m_panelViews[cont] = panel;
         panel->setContainment(cont);
@@ -1028,14 +1027,12 @@ void ShellCorona::createWaitingPanels()
     }
     m_waitingPanels = stillWaitingPanels;
     emit availableScreenRectChanged();
-    emit availableScreenRegionChanged();
 }
 
 void ShellCorona::containmentDeleted(QObject *cont)
 {
     m_panelViews.remove(static_cast<Plasma::Containment*>(cont));
     emit availableScreenRectChanged();
-    emit availableScreenRegionChanged();
 }
 
 void ShellCorona::handleContainmentAdded(Plasma::Containment *c)
@@ -1354,7 +1351,6 @@ Plasma::Containment *ShellCorona::setContainmentTypeForScreen(int screen, const 
     QTimer::singleShot(2500, oldContainment, &Plasma::Applet::destroy);
 
     emit availableScreenRectChanged();
-    emit availableScreenRegionChanged();
 
     return newContainment;
 }

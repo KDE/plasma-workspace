@@ -93,10 +93,6 @@ PanelView::PanelView(ShellCorona *corona, QScreen *targetScreen, QWindow *parent
             &m_positionPaneltimer, SLOT(start()));
     connect(this, SIGNAL(containmentChanged()),
             this, SLOT(containmentChanged()));
-    connect(this, &ContainmentView::locationChanged, [this] () {
-                emit m_corona->availableScreenRectChanged();
-                emit m_corona->availableScreenRegionChanged();
-            });
 
     if (!m_corona->kPackage().isValid()) {
         qWarning() << "Invalid home screen package";
@@ -221,8 +217,6 @@ void PanelView::setThickness(int value)
     config().writeEntry("thickness", value);
     m_corona->requestApplicationConfigSync();
     positionPanel();
-    emit m_corona->availableScreenRectChanged();
-    emit m_corona->availableScreenRegionChanged();
 }
 
 int PanelView::length() const
@@ -345,8 +339,6 @@ void PanelView::setVisibilityMode(PanelView::VisibilityMode mode)
     updateStruts();
 
     emit visibilityModeChanged();
-    emit corona()->availableScreenRectChanged();
-    emit corona()->availableScreenRegionChanged();
     restoreAutoHide();
 }
 
