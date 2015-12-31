@@ -231,5 +231,5 @@ void IconPrivate::execJumpList(int index)
         return;
     }
 
-    KRun::run(exec, {}, nullptr);
+    KRun::run(exec, {}, nullptr, m_name, m_icon);
 }
