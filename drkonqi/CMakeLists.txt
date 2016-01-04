@@ -41,6 +41,7 @@ set(drkonqi_SRCS
     debuggermanager.cpp
     applicationdetailsexamples.cpp
     gdbhighlighter.cpp
+    statusnotifier.cpp
 )
 
 ki18n_wrap_ui(drkonqi_SRCS
@@ -99,6 +100,10 @@ target_link_libraries(drkonqi
     KF5::XmlRpcClient
     KF5::WidgetsAddons
     KF5::Wallet
+
+    KF5::Notifications # for status notifier
+    KF5::IdleTime # hide status notifier only if user saw it
+
     drkonqi_backtrace_parser
 )
 if (HAVE_X11)
