@@ -88,7 +88,8 @@ SNIProxy::SNIProxy(xcb_window_t wid, QObject* parent):
     auto c = QX11Info::connection();
 
     auto cookie = xcb_get_geometry(c, m_windowId);
-    QScopedPointer<xcb_get_geometry_reply_t> clientGeom(xcb_get_geometry_reply(c, cookie, Q_NULLPTR));
+    QScopedPointer<xcb_get_geometry_reply_t, QScopedPointerPodDeleter>
+        clientGeom(xcb_get_geometry_reply(c, cookie, Q_NULLPTR));
 
     //create a container window
     auto screen = xcb_setup_roots_iterator (xcb_get_setup (c)).data;
@@ -242,7 +243,8 @@ QImage SNIProxy::getImageNonComposite() const
 {
     auto c = QX11Info::connection();
     auto cookie = xcb_get_geometry(c, m_windowId);
-    QScopedPointer<xcb_get_geometry_reply_t> geom(xcb_get_geometry_reply(c, cookie, Q_NULLPTR));
+    QScopedPointer<xcb_get_geometry_reply_t, QScopedPointerPodDeleter>
+        geom(xcb_get_geometry_reply(c, cookie, Q_NULLPTR));
 
     xcb_image_t *image = xcb_image_get(c, m_windowId, 0, 0, geom->width, geom->height, 0xFFFFFF, XCB_IMAGE_FORMAT_Z_PIXMAP);
 
@@ -405,10 +407,12 @@ void SNIProxy::sendClick(uint8_t mouseButton, int x, int y)
     auto c = QX11Info::connection();
 
     auto cookieSize = xcb_get_geometry(c, m_windowId);
-    QScopedPointer<xcb_get_geometry_reply_t> clientGeom(xcb_get_geometry_reply(c, cookieSize, Q_NULLPTR));
+    QScopedPointer<xcb_get_geometry_reply_t, QScopedPointerPodDeleter>
+        clientGeom(xcb_get_geometry_reply(c, cookieSize, Q_NULLPTR));
 
     auto cookie = xcb_query_pointer(c, m_windowId);
-    QScopedPointer<xcb_query_pointer_reply_t> pointer(xcb_query_pointer_reply(c, cookie, Q_NULLPTR));
+    QScopedPointer<xcb_query_pointer_reply_t, QScopedPointerPodDeleter>
+        pointer(xcb_query_pointer_reply(c, cookie, Q_NULLPTR));
     /*qCDebug(SNIPROXY) << "samescreen" << pointer->same_screen << endl
 	<< "root x*y" << pointer->root_x << pointer->root_y << endl
 	<< "win x*y" << pointer->win_x << pointer->win_y;*/
@@ -453,7 +457,7 @@ void SNIProxy::sendClick(uint8_t mouseButton, int x, int y)
         event->detail = mouseButton;
 
         xcb_send_event(c, false, m_windowId, XCB_EVENT_MASK_BUTTON_PRESS, (char *) event);
-        free(event);
+        delete event;
     }
 
     //mouse up
@@ -474,7 +478,7 @@ void SNIProxy::sendClick(uint8_t mouseButton, int x, int y)
         event->detail = mouseButton;
 
         xcb_send_event(c, false, m_windowId, XCB_EVENT_MASK_BUTTON_RELEASE, (char *) event);
-        free(event);
+        delete event;
     }
 
 #ifndef VISUAL_DEBUG

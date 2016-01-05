@@ -49,7 +49,7 @@ Item {
         QtControls.CheckBox {
             id: useCustomPopupPositionCheckBox
             text: i18n("Use custom position for the notification popup")
-            checked: plasmoid.nativeInterface.screenPosition != NotificationsHelper.Default
+            checked: plasmoid.nativeInterface.configScreenPosition() != NotificationsHelper.Default
         }
 
         ScreenPositionSelector {

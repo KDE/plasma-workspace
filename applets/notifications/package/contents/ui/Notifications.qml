@@ -180,9 +180,15 @@ Column {
 
     }
 
+    Connections {
+        target: plasmoid.nativeInterface
+        onAvailableScreenRectChanged: {
+            notificationPositioner.setPlasmoidScreenGeometry(availableScreenRect);
+        }
+    }
+
     NotificationsHelper {
         id: notificationPositioner
-        plasmoidScreen: plasmoid.screenGeometry
         popupLocation: plasmoid.nativeInterface.screenPosition
     }
 

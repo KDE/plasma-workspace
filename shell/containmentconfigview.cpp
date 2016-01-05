@@ -56,7 +56,7 @@ ContainmentConfigView::ContainmentConfigView(Plasma::Containment *cont, QWindow 
       m_ownWallpaperConfig(0)
 {
     qmlRegisterType<QAbstractItemModel>();
-    engine()->rootContext()->setContextProperty(QStringLiteral("configDialog"), this);
+    rootContext()->setContextProperty(QStringLiteral("configDialog"), this);
     setCurrentWallpaper(cont->containment()->wallpaper());
 
     KPackage::Package pkg = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Plasma/Wallpaper"));
@@ -237,7 +237,7 @@ void ContainmentConfigView::syncWallpaperObjects()
     if (!wallpaperGraphicsObject) {
         return;
     }
-    engine()->rootContext()->setContextProperty(QStringLiteral("wallpaper"), wallpaperGraphicsObject);
+    rootContext()->setContextProperty(QStringLiteral("wallpaper"), wallpaperGraphicsObject);
 
     //FIXME: why m_wallpaperGraphicsObject->property("configuration").value<ConfigPropertyMap *>() doesn't work?
     m_currentWallpaperConfig = static_cast<KDeclarative::ConfigPropertyMap *>(wallpaperGraphicsObject->property("configuration").value<QObject *>());

@@ -118,7 +118,9 @@ PlasmoidTask::PlasmoidTask(const QString &packageName, int appletId, Plasma::Con
 
 PlasmoidTask::~PlasmoidTask()
 {
-    m_applet->destroy();
+    if (m_applet) {
+        m_applet->destroy();
+    }
 }
 
 KPluginInfo PlasmoidTask::pluginInfo() const
