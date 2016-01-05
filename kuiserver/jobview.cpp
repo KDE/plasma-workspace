@@ -254,7 +254,7 @@ void JobView::setAppName(const QString &appName)
 
 QString JobView::appName() const
 {
-    return m_appIconName;
+    return m_applicationName;
 }
 
 void JobView::setAppIconName(const QString &appIconName)
