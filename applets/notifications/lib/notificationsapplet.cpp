@@ -21,12 +21,17 @@
 
 #include "notificationsapplet.h"
 
+#include <KConfigGroup>
+#include <KWindowSystem>
+
+#include <Plasma/Containment>
+#include <Plasma/Corona>
+
 #include <QDebug>
 
-#include <KConfigGroup>
-
 NotificationsApplet::NotificationsApplet(QObject *parent, const QVariantList &data)
-    : Plasma::Applet(parent, data)
+    : Plasma::Applet(parent, data),
+      m_availableScreenRect(0,0,0,0)
 {
 }
 
@@ -36,36 +41,42 @@ NotificationsApplet::~NotificationsApplet()
 
 void NotificationsApplet::init()
 {
-    KConfigGroup globalGroup = globalConfig();
-    m_popupPosition = (NotificationsHelper::PositionOnScreen)globalGroup.readEntry("popupPosition", 0); //0 is default
+    m_popupPosition = (NotificationsHelper::PositionOnScreen)configScreenPosition();
 
     connect(this, &Plasma::Applet::locationChanged,
             this, &NotificationsApplet::onAppletLocationChanged);
 
+    connect(containment(), &Plasma::Containment::screenChanged,
+            this, &NotificationsApplet::onScreenChanges);
+
+    // This is to handle when eg. panel gets moved on screen
+    // to a different screen edge
+    connect(KWindowSystem::self(), &KWindowSystem::workAreaChanged,
+            this, &NotificationsApplet::onScreenChanges);
+
     Plasma::Applet::init();
 
-    onAppletLocationChanged(location());
+    onScreenChanges();
+    onAppletLocationChanged();
 }
 
-void NotificationsApplet::onAppletLocationChanged(Plasma::Types::Location location)
+void NotificationsApplet::onScreenChanges()
 {
-    if (globalConfig().readEntry("popupPosition", 0) == 0) {
-        // If the screenPosition is the default, follow the panel
-        if (location == Plasma::Types::TopEdge) {
-            if (QGuiApplication::isRightToLeft()) {
-                m_popupPosition = NotificationsHelper::TopLeft;
-            } else {
-                m_popupPosition = NotificationsHelper::TopRight;
-            }
-        } else {
-            if (QGuiApplication::isRightToLeft()) {
-                m_popupPosition = NotificationsHelper::BottomLeft;
-            } else {
-                m_popupPosition = NotificationsHelper::BottomRight;
-            }
-        }
+    m_availableScreenRect = containment()->corona()->availableScreenRect(containment()->screen());
+    Q_EMIT availableScreenRectChanged(m_availableScreenRect);
+}
 
-        Q_EMIT screenPositionChanged(m_popupPosition);
+QRect NotificationsApplet::availableScreenRect() const
+{
+    return m_availableScreenRect;
+}
+
+void NotificationsApplet::onAppletLocationChanged()
+{
+    if (configScreenPosition() == 0) {
+        // If the screenPosition is set to default,
+        // just follow the panel
+        setScreenPositionFromAppletLocation();
     }
 }
 
@@ -78,9 +89,42 @@ void NotificationsApplet::onScreenPositionChanged(uint position)
 {
     KConfigGroup globalGroup = globalConfig();
     globalGroup.writeEntry("popupPosition", position);
-    m_popupPosition = (NotificationsHelper::PositionOnScreen)position;
+    globalGroup.sync();
 
-    Q_EMIT screenPositionChanged(position);
+    // If the position is set to default, let the setScreenPositionFromAppletLocation()
+    // figure out the effective position, otherwise just set it to m_popupPosition
+    // and emit the change
+    if (position == NotificationsHelper::Default) {
+        setScreenPositionFromAppletLocation();
+    } else {
+        m_popupPosition = (NotificationsHelper::PositionOnScreen)position;
+        Q_EMIT screenPositionChanged(m_popupPosition);
+    }
+}
+
+uint NotificationsApplet::configScreenPosition() const
+{
+    KConfigGroup globalGroup = globalConfig();
+    return globalGroup.readEntry("popupPosition", 0); //0 is default
+}
+
+void NotificationsApplet::setScreenPositionFromAppletLocation()
+{
+    if (location() == Plasma::Types::TopEdge) {
+        if (QGuiApplication::isRightToLeft()) {
+            m_popupPosition = NotificationsHelper::TopLeft;
+        } else {
+            m_popupPosition = NotificationsHelper::TopRight;
+        }
+    } else {
+        if (QGuiApplication::isRightToLeft()) {
+            m_popupPosition = NotificationsHelper::BottomLeft;
+        } else {
+            m_popupPosition = NotificationsHelper::BottomRight;
+        }
+    }
+
+    Q_EMIT screenPositionChanged(m_popupPosition);
 }
 
 K_EXPORT_PLASMA_APPLET_WITH_JSON(notifications, NotificationsApplet, "metadata.json")

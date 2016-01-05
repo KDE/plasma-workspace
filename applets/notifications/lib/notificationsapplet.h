@@ -30,23 +30,36 @@ class NotificationsApplet : public Plasma::Applet
 {
     Q_OBJECT
     Q_PROPERTY(uint screenPosition READ screenPosition WRITE onScreenPositionChanged NOTIFY screenPositionChanged)
+    Q_PROPERTY(QRect availableScreenRect READ availableScreenRect NOTIFY availableScreenRectChanged)
 
 public:
     NotificationsApplet(QObject *parent, const QVariantList &data);
     ~NotificationsApplet();
 
-    Q_INVOKABLE uint screenPosition() const;
+    uint screenPosition() const;
+
+    // This is the screen position that is stored
+    // in the config file, used to initialize the
+    // applet settings dialog
+    Q_INVOKABLE uint configScreenPosition() const;
+
+    QRect availableScreenRect() const;
 
 public Q_SLOTS:
     void init() Q_DECL_OVERRIDE;
     void onScreenPositionChanged(uint position);
-    void onAppletLocationChanged(Plasma::Types::Location location);
+    void onAppletLocationChanged();
 
 Q_SIGNALS:
     void screenPositionChanged(uint position);
+    void availableScreenRectChanged(const QRect &availableScreenRect);
 
 private:
+    void setScreenPositionFromAppletLocation();
+    void onScreenChanges();
+
     NotificationsHelper::PositionOnScreen m_popupPosition;
+    QRect m_availableScreenRect;
 };
 
 

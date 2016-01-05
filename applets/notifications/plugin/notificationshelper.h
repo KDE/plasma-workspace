@@ -31,7 +31,6 @@ class QReadWriteLock;
 class NotificationsHelper : public QObject
 {
     Q_OBJECT
-    Q_PROPERTY(QRect plasmoidScreen MEMBER m_plasmoidScreen)
     Q_PROPERTY(PositionOnScreen popupLocation MEMBER m_popupLocation WRITE setPopupLocation NOTIFY popupLocationChanged)
     Q_ENUMS(PositionOnScreen)
 
@@ -52,8 +51,9 @@ public:
     NotificationsHelper(QObject *parent = 0);
     ~NotificationsHelper();
     Q_INVOKABLE void addNotificationPopup(QObject *win);
-    Q_INVOKABLE QRect workAreaForScreen(const QRect &screen);
     Q_INVOKABLE void closePopup(const QString &sourceName);
+
+    Q_INVOKABLE void setPlasmoidScreenGeometry(const QRect &geometry);
 
     void setPopupLocation(PositionOnScreen popupLocation);
 
@@ -67,6 +67,7 @@ public:
 
 Q_SIGNALS:
     void popupLocationChanged();
+//     void plasmoidScreenChanged();
 
 private Q_SLOTS:
     void onPopupShown();
@@ -78,6 +79,7 @@ private Q_SLOTS:
 private:
     void repositionPopups();
     int popupYPosition();
+    void setDefaultPopupPosition(QQuickWindow *popup);
 
     QList<QQuickWindow*> m_popupsOnScreen;
     QList<QQuickWindow*> m_availablePopups;
