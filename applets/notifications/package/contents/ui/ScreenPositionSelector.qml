@@ -39,8 +39,10 @@ QtControls.GroupBox {
 
     onEnabledChanged: {
         if (!enabled) {
-            selectedPosition = NotificationsHelper.Default
+            positionRadios.current = null
         }
+
+        selectedPosition = NotificationsHelper.Default
     }
 
     PlasmaCore.Svg {
