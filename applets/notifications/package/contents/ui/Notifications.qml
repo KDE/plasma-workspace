@@ -190,6 +190,10 @@ Column {
     NotificationsHelper {
         id: notificationPositioner
         popupLocation: plasmoid.nativeInterface.screenPosition
+
+        Component.onCompleted: {
+            notificationPositioner.setPlasmoidScreenGeometry(plasmoid.nativeInterface.availableScreenRect);
+        }
     }
 
     Repeater {
