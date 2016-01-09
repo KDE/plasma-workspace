@@ -48,7 +48,6 @@ extern "C" {
 #include <kmessagebox.h>
 #include <KConfigGroup>
 #include <QTimer>
-#include <QTime>
 #include <QMap>
 
 
@@ -63,16 +62,6 @@ class KSMClient;
 
 class OrgKdeKLauncherInterface;
 class QDBusInterface;
-
-enum SMType { SM_ERROR, SM_WMCOMMAND, SM_WMSAVEYOURSELF };
-struct SMData
-    {
-    SMType type;
-    QStringList wmCommand;
-    QString wmClientMachine;
-    QString wmclass1, wmclass2;
-    };
-typedef QMap<WId,SMData> WindowMap;
 
 class KSMServer : public QObject
 {
@@ -157,7 +146,6 @@ private:
     void completeShutdownOrCheckpoint();
     void startKilling();
     void startKillingSubSession();
-    void performStandardKilling();
     void completeKilling();
     void completeKillingSubSession();
     void killWM();
@@ -188,15 +176,6 @@ private:
     bool defaultSession() const; // empty session
     void setupXIOErrorHandler();
 
-    void performLegacySessionSave();
-    void storeLegacySession( KConfig* config );
-    void restoreLegacySession( KConfig* config );
-    void restoreLegacySessionInternal( KConfigGroup* config, char sep = ',' );
-    QStringList windowWmCommand(WId w);
-    QString windowWmClientMachine(WId w);
-    WId windowWmClientLeader(WId w);
-    QByteArray windowSessionId(WId w, WId leader);
-
     bool checkStartupSuspend();
     void finishStartup();
     void resumeStartupInternal();
@@ -204,9 +183,8 @@ private:
 
     void runShutdownScripts();
 
-    // public dcop interface
-
- public Q_SLOTS: //public dcop interface
+    // public D-Bus interface
+ public Q_SLOTS:
     void logout( int, int, int );
     bool canShutdown();
     bool isShuttingDown() const;
@@ -276,8 +254,6 @@ private:
     QString lastIdStarted;
 
     QStringList excludeApps;
-
-    WindowMap legacyWindows;
 
     OrgKdeKLauncherInterface* klauncherSignals;
     QDBusInterface* kcminitSignals;
