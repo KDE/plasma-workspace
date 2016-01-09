@@ -84,12 +84,13 @@ MouseArea {
 
                 model: filterModel
 
-                property int currentExpanded: -1
-                property bool itemClicked: true
                 delegate: deviceItem
                 highlight: PlasmaComponents.Highlight { }
                 highlightMoveDuration: 0
                 highlightResizeDuration: 0
+                spacing: units.smallSpacing
+
+                currentIndex: devicenotifier.currentIndex
 
                 //this is needed to make SectionScroller actually work
                 //acceptable since one doesn't have a billion of devices
@@ -160,16 +161,20 @@ MouseArea {
             }
             freeSpaceText: sdSource.data[udi] && sdSource.data[udi]["Free Space Text"] ? sdSource.data[udi]["Free Space Text"] : ""
 
-            leftActionIcon: {
-                if (mounted) {
-                    return "media-eject";
+            actionIcon: mounted ? "media-eject" : "emblem-mounted"
+            actionVisible: model["Device Types"].indexOf("Portable Media Player") == -1
+            actionToolTip: {
+                if (!mounted) {
+                    return i18n("Click to access this device from other applications.")
+                } else if (model["Device Types"].indexOf("OpticalDisc") != -1) {
+                    return i18n("Click to eject this disc.")
                 } else {
-                    return "emblem-mounted";
+                    return i18n("Click to safely remove this device.")
                 }
             }
             mounted: devicenotifier.isMounted(udi)
 
-            onLeftActionTriggered: {
+            onActionTriggered: {
                 var operationName = mounted ? "unmount" : "mount";
                 var service = sdSource.serviceForSource(udi);
                 var operation = service.operationDescription(operationName);

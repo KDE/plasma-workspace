@@ -1,6 +1,7 @@
 /*
  *   Copyright 2011 Viranch Mehta <viranch.mehta@gmail.com>
  *   Copyright 2012 Jacopo De Simoi <wilderkde@gmail.com>
+ *   Copyright 2016 Kai Uwe Broulik <kde@privat.broulik.de>
  *
  *   This program is free software; you can redistribute it and/or modify
  *   it under the terms of the GNU Library General Public License as
@@ -19,64 +20,54 @@
  */
 
 import QtQuick 2.0
+import QtQuick.Layouts 1.1
+
 import org.kde.plasma.core 2.0 as PlasmaCore
-import org.kde.kquickcontrolsaddons 2.0
 import org.kde.plasma.components 2.0 as PlasmaComponents
 
-Item {
+MouseArea {
+    id: area
     property string icon
     property alias label: actionText.text
     property string predicate
-    height: actionIcon.height+(2*actionsList.actionVerticalMargins)
-    width: actionsList.width
 
-    PlasmaCore.IconItem {
-        id: actionIcon
-        source: parent.icon
-        height: actionsList.actionIconHeight
-        width: actionsList.actionIconHeight
-        anchors {
-            top: parent.top
-            topMargin: actionsList.actionVerticalMargins
-            bottom: parent.bottom
-            bottomMargin: actionsList.actionVerticalMargins
-            left: parent.left
-            leftMargin: 3
-        }
+    height: row.height + 2 * row.y
+    hoverEnabled: true
+
+    onContainsMouseChanged: {
+        area.ListView.view.currentIndex = (containsMouse ? index : -1)
     }
 
-    PlasmaComponents.Label {
-        id: actionText
-        anchors {
-            top: actionIcon.top
-            bottom: actionIcon.bottom
-            left: actionIcon.right
-            leftMargin: 5
-            right: parent.right
-            rightMargin: 3
-        }
-        verticalAlignment: Text.AlignVCenter
-        wrapMode: Text.WordWrap
+    onClicked: {
+        var service = hpSource.serviceForSource(udi);
+        var operation = service.operationDescription("invokeAction");
+        operation.predicate = predicate;
+        service.startOperationCall(operation);
+        notifierDialog.currentExpanded = -1;
+        notifierDialog.currentIndex = -1;
     }
 
-    MouseArea {
-        anchors.fill: parent
-        hoverEnabled: true
-        onEntered: {
-            actionsList.currentIndex = index;
-            actionsList.highlightItem.opacity = 1;
-//             makeCurrent();
+    RowLayout {
+        id: row
+        anchors.horizontalCenter: parent.horizontalCenter
+        width: parent.width - 2 * units.smallSpacing
+        y: units.smallSpacing
+        spacing: units.smallSpacing
+
+        PlasmaCore.IconItem {
+            source: area.icon
+            width: units.iconSizes.smallMedium
+            height: width
         }
-        onExited: {
-            actionsList.highlightItem.opacity = 0;
-        }
-        onClicked: {
-            var service = hpSource.serviceForSource(udi);
-            var operation = service.operationDescription("invokeAction");
-            operation.predicate = predicate;
-            service.startOperationCall(operation);
-            notifierDialog.currentExpanded = -1;
-            notifierDialog.currentIndex = -1;
+
+        PlasmaComponents.Label {
+            id: actionText
+            Layout.fillWidth: true
+            Layout.fillHeight: true
+            verticalAlignment: Text.AlignVCenter
+            wrapMode: Text.WordWrap
+            elide: Text.ElideRight
+            maximumLineCount: 2
         }
     }
 }
