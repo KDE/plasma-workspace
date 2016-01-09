@@ -237,7 +237,8 @@ MouseArea {
 
             PlasmaComponents.BusyIndicator {
                 id: busyIndicator
-                anchors.fill: parent
+                width: parent.width
+                height: width
                 running: visible
                 visible: deviceItem.state != 0
             }
