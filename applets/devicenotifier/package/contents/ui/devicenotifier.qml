@@ -29,7 +29,15 @@ import org.kde.plasma.extras 2.0 as PlasmaExtras
 
 Item {
     id: devicenotifier
-    property string devicesType: "removable"
+    property string devicesType: {
+        if (plasmoid.configuration.allDevices) {
+            return "all"
+        } else if (plasmoid.configuration.removableDevices) {
+            return "removable"
+        } else {
+            return "nonRemovable"
+        }
+    }
     property string expandedDevice
     property string popupIcon: "device-notifier"
 
@@ -120,18 +128,12 @@ Item {
         }
         filterRole: "Removable"
         filterRegExp: {
-            var all = devicenotifier.Plasmoid.configuration.allDevices;
-            var removable = devicenotifier.Plasmoid.configuration.removableDevices;
-
-            if (all == true) {
-                devicesType = "all";
-                return "";
-            } else if (removable == true) {
-                devicesType = "removable";
-                return "true";
+            if (devicesType === "removable") {
+                return "true"
+            } else if (devicesType === "nonRemovable") {
+                return "false"
             } else {
-                devicesType = "nonRemovable";
-                return "false";
+                return ""
             }
         }
         sortRole: "Timestamp"
