@@ -130,7 +130,7 @@ MouseArea {
             Layout.fillWidth: true
 
             move: Transition {
-                NumberAnimation { property: "y"; duration: unity.longDuration; easing.type: Easing.InOutQuad }
+                NumberAnimation { property: "y"; duration: units.longDuration; easing.type: Easing.InOutQuad }
             }
 
             add: Transition {
@@ -138,7 +138,7 @@ MouseArea {
                     property: "opacity"
                     from: 0
                     to: 1
-                    duration: unity.longDuration
+                    duration: units.longDuration
                     easing.type: Easing.InOutQuad
                 }
             }
