@@ -94,6 +94,31 @@ const QDBusArgument &operator>>(const QDBusArgument &argument, DBusMenuLayoutIte
     return argument;
 }
 
+//// DBusMenuShortcut
+QDBusArgument &operator<<(QDBusArgument &argument, const DBusMenuShortcut &obj)
+{
+    argument.beginArray(qMetaTypeId<QStringList>());
+    typename QList<QStringList>::ConstIterator it = obj.constBegin();
+    typename QList<QStringList>::ConstIterator end = obj.constEnd();
+    for ( ; it != end; ++it)
+        argument << *it;
+    argument.endArray();
+    return argument;
+}
+
+const QDBusArgument &operator>>(const QDBusArgument &argument, DBusMenuShortcut &obj)
+{
+    argument.beginArray();
+    obj.clear();
+    while (!argument.atEnd()) {
+        QStringList item;
+        argument >> item;
+        obj.push_back(item);
+    }
+    argument.endArray();
+    return argument;
+}
+
 void DBusMenuTypes_register()
 {
     static bool registered = false;

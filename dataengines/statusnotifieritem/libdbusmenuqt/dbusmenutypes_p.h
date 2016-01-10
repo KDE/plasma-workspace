@@ -89,5 +89,12 @@ typedef QList<DBusMenuLayoutItem> DBusMenuLayoutItemList;
 
 Q_DECLARE_METATYPE(DBusMenuLayoutItemList)
 
+//// DBusMenuShortcut
+
+class DBusMenuShortcut;
+
+QDBusArgument &operator<<(QDBusArgument &argument, const DBusMenuShortcut &);
+const QDBusArgument &operator>>(const QDBusArgument &argument, DBusMenuShortcut &);
+
 void DBusMenuTypes_register();
 #endif /* DBUSMENUTYPES_P_H */
