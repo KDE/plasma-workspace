@@ -34,8 +34,8 @@ Item {
 
     Plasmoid.fullRepresentation: Item {
 
-        Layout.minimumWidth: units.gridUnit * 20
-        Layout.minimumHeight: units.gridUnit * 20
+        Layout.minimumWidth: units.gridUnit * 3
+        Layout.minimumHeight: units.gridUnit * 3
 
         PlasmaCore.DataSource {
             id: dataSource
