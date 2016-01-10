@@ -167,6 +167,7 @@ Keywords[de]=Sperren;Abmelden;Ruhezustand;Tiefschlaf;Benutzer wechseln;
 Keywords[el]=Κλείδωμα;έξοδος;ύπνωση;νάρκη;εναλλαγήχρήστη;
 Keywords[en_GB]=Lock;Logout;Sleep;Hibernate;Switch User;
 Keywords[es]=Bloquear;Terminar la sesión;Dormir;Hibernar;Cambiar de usuario;
+Keywords[et]=Lukustamine;Väljalogimine;Uni;Talveuni;Kasutaja vahetamine;
 Keywords[eu]=Giltzatu;blokeatu;saio-bukaera;lokartu;hibernatu;aldatu erabiltzailea;
 Keywords[fi]=Lukitse;kirjaudu ulos;valmiustila;lepotila;vaihda käyttäjää;
 Keywords[fr]=Verrouillage, Déconnexion, Hibernation, Changement d'utilisateur, 
