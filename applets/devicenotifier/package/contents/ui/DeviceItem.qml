@@ -46,8 +46,9 @@ MouseArea {
     property alias actionToolTip: action.tooltip
     property bool actionVisible
 
-    height: row.height + 2 * row.y
+    height: row.childrenRect.height + 2 * row.y
     hoverEnabled: true
+
     onContainsMouseChanged: {
         if (containsMouse) {
             devicenotifier.currentIndex = index
