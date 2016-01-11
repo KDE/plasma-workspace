@@ -18,6 +18,7 @@
  */
 
 import QtQuick 2.1
+import org.kde.plasma.core 2.0 as PlasmaCore
 
 Item {
     id: plasmoidContainer
@@ -31,6 +32,13 @@ Item {
             if (expanded) {
                 root.activeApplet = applet;
                 dialog.visible = true;
+            }
+        }
+        onStatusChanged: {
+            if (applet.status == PlasmaCore.Types.PassiveStatus) {
+                plasmoidContainer.parent = hiddenLayout;
+            } else {
+                plasmoidContainer.parent = visibleLayout;
             }
         }
     }

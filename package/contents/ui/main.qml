@@ -30,11 +30,13 @@ MouseArea {
     property alias expanded: dialog.visible
     property Item activeApplet
 
+    property alias visibleLayout: tasksRow
+    property alias hiddenLayout: expandedRepresentation.hiddenLayout
+
     function addApplet(applet, x, y) {
         var component = Qt.createComponent("PlasmoidItem.qml")
-        var plasmoidContainer = component.createObject(tasksRow, {"x": x, "y": y});
+        var plasmoidContainer = component.createObject((applet.status == PlasmaCore.Types.PassiveStatus) ? hiddenLayout : visibleLayout, {"x": x, "y": y});
 
-        plasmoidContainer.parent = tasksRow;
         plasmoidContainer.applet = applet
         applet.parent = plasmoidContainer
         applet.anchors.fill = plasmoidContainer
@@ -124,18 +126,9 @@ MouseArea {
                 root.activeApplet = null
             }
         }
-        mainItem: PlasmoidPopupsContainer {
+        mainItem: ExpandedRepresentation {
+            id: expandedRepresentation
             activeApplet: root.activeApplet
-            Column {
-                Layout.minimumWidth: units.gridUnit * 12
-                Layout.minimumHeight: units.gridUnit * 12
-                Repeater {
-                    id: hiddenTasksRepeater
-                    model: hiddenTasksModel
-
-                    delegate: StatusNotifierItem {}
-                }
-            }
         }
     }
 }
