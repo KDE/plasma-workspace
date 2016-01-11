@@ -68,6 +68,9 @@ extern "C" int Q_DECL_EXPORT kdemain(int argc, char *argv[])
   aboutData.addAuthor(i18n("Martin Gräßlin"),
                       i18n("Maintainer"),
                       QStringLiteral("mgraesslin@kde.org"));
+
+  aboutData.setTranslator(i18nc("NAME OF TRANSLATORS", "Your names"), i18nc("EMAIL OF TRANSLATORS", "Your emails"));
+
   KAboutData::setApplicationData(aboutData);
 
   auto disableSessionManagement = [](QSessionManager &sm) {
