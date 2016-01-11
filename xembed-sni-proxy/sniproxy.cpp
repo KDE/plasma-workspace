@@ -158,23 +158,30 @@ SNIProxy::SNIProxy(xcb_window_t wid, QObject* parent):
                              windowMoveConfigVals);
 
 
+    QSize clientWindowSize;
+
+    if (clientGeom) {
+        clientWindowSize = QSize(clientGeom->width, clientGeom->height);
+    }
     //if the window is a clearly stupid size resize to be something sensible
     //this is needed as chormium and such when resized just fill the icon with transparent space and only draw in the middle
     //however spotify does need this as by default the window size is 900px wide.
     //use an artbitrary heuristic to make sure icons are always sensible
-    if (clientGeom->width > s_embedSize || clientGeom->height > s_embedSize )
+    if (clientWindowSize.isEmpty() || clientWindowSize.width() > s_embedSize || clientWindowSize.height() > s_embedSize )
     {
+	qCDebug(SNIPROXY) << "Resizing window" << wid << Title() << "from w*h" << clientWindowSize;
+
         const uint32_t windowMoveConfigVals[2] = { s_embedSize, s_embedSize };
         xcb_configure_window(c, wid,
                                 XCB_CONFIG_WINDOW_WIDTH | XCB_CONFIG_WINDOW_HEIGHT,
                                 windowMoveConfigVals);
-	qCDebug(SNIPROXY) << "Resizing window" << wid << Title() << "from w*h" << clientGeom->width << clientGeom->height;
+        clientWindowSize = QSize(s_embedSize, s_embedSize);
     }
 
     //show the embedded window otherwise nothing happens
     xcb_map_window(c, wid);
 
-    xcb_clear_area(c, 0, wid, 0, 0, qMin(clientGeom->width, s_embedSize), qMin(clientGeom->height, s_embedSize));
+    xcb_clear_area(c, 0, wid, 0, 0, clientWindowSize.width(), clientWindowSize.height());
 
     xcb_flush(c);
 
@@ -245,6 +252,10 @@ QImage SNIProxy::getImageNonComposite() const
     auto cookie = xcb_get_geometry(c, m_windowId);
     QScopedPointer<xcb_get_geometry_reply_t, QScopedPointerPodDeleter>
         geom(xcb_get_geometry_reply(c, cookie, Q_NULLPTR));
+
+    if (!geom) {
+        return QImage();
+    }
 
     xcb_image_t *image = xcb_image_get(c, m_windowId, 0, 0, geom->width, geom->height, 0xFFFFFF, XCB_IMAGE_FORMAT_Z_PIXMAP);
 

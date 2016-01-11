@@ -381,16 +381,9 @@ void WidgetExplorer::addApplet(const QString &pluginName)
         qWarning() << "Failed to find plasmoid path for " << pluginName;
         return;
     }
-    Plasma::Applet *applet = Plasma::Applet::loadPlasmoid(dirs.first());
 
-    if (applet) {
-        if (d->containment) {
-            d->containment->addApplet(applet);
-        } else {
-            qWarning() << "No containment set (but the applet loaded).";
-        }
-    } else {
-        qWarning() << "Failed to load applet" << pluginName << dirs;
+    if (d->containment) {
+        d->containment->createApplet(dirs.first());
     }
 }
 
