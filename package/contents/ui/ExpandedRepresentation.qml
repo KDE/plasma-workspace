@@ -32,6 +32,7 @@ RowLayout {
 
     Column {
         id: hiddenTasksColumn
+        visible: !activeApplet || activeApplet.parent.parent == hiddenTasksColumn
         objectName: "hiddenTasksColumn"
         Layout.minimumWidth: units.iconSizes.smallMedium
         Layout.maximumWidth: Layout.minimumWidth
@@ -44,6 +45,7 @@ RowLayout {
     }
 
     PlasmaCore.SvgItem {
+        visible: hiddenTasksColumn.visible && !activeApplet
         Layout.minimumWidth: lineSvg.elementSize("vertical-line").width
         Layout.maximumWidth: Layout.minimumWidth
         Layout.fillHeight: true

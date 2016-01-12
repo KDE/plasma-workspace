@@ -30,7 +30,6 @@ Item {
     Layout.minimumHeight: 300
 
     property Item activeApplet
-    visible: activeApplet != null
 
     onActiveAppletChanged: {
         if (activeApplet != null) {

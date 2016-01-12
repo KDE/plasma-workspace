@@ -19,6 +19,7 @@
 
 import QtQuick 2.1
 import org.kde.plasma.core 2.0 as PlasmaCore
+import org.kde.plasma.components 2.0 as PlasmaComponents
 
 Item {
     id: plasmoidContainer
@@ -41,5 +42,13 @@ Item {
                 plasmoidContainer.parent = visibleLayout;
             }
         }
+    }
+    PlasmaComponents.Label {
+        visible: applet.parent.parent.objectName == "hiddenTasksColumn" && !root.activeApplet
+        anchors {
+            left: parent.right
+            verticalCenter: parent.verticalCenter
+        }
+        text: applet.title
     }
 }
