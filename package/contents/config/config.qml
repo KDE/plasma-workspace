@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2015 Marco Martin <mart@kde.org>                        *
+ *   Copyright 2013 by Sebastian Kügler <sebas@kde.org>                    *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *
@@ -17,51 +17,19 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA .        *
  ***************************************************************************/
 
-#include "systemtraycontainer.h"
-#include "debug.h"
+import QtQuick 2.0
 
-#include <QDebug>
-#include <QQuickItem>
+import org.kde.plasma.configuration 2.0
 
-#include <Plasma/Corona>
-#include <kactioncollection.h>
-#include <QAction>
-
-SystemTrayContainer::SystemTrayContainer(QObject *parent, const QVariantList &args)
-    : Plasma::Applet(parent, args)
-{
-}
-
-SystemTrayContainer::~SystemTrayContainer()
-{
-}
-
-void SystemTrayContainer::init()
-{
-    Plasma::Containment *cont = containment();
-    if (!cont) {
-        return;
+ConfigModel {
+    ConfigCategory {
+         name: i18n("General")
+         icon: "preferences-system-windows"
+         source: "ConfigGeneral.qml"
     }
-
-    Plasma::Corona *c = cont->corona();
-    if (!c) {
-        return;
+    ConfigCategory {
+         name: i18n("Entries")
+         icon: "configure-toolbars"
+         source: "ConfigEntries.qml"
     }
-
-    Plasma::Containment *innerCont = c->createContainment("org.kde.plasma.simplesystray");
-    if (!innerCont) {
-        return;
-    }
-    setProperty("_plasma_graphicObject", QVariant::fromValue(innerCont->property("_plasma_graphicObject")));
-
-    connect(innerCont, &Plasma::Containment::configureRequested, this,
-        [this, innerCont] {
-            emit containment()->configureRequested(innerCont);
-        }
-    );
 }
-
-
-K_EXPORT_PLASMA_APPLET_WITH_JSON(systemtraycontainer, SystemTrayContainer, "containermetadata.json")
-
-#include "systemtraycontainer.moc"

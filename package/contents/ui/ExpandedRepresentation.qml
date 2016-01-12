@@ -32,6 +32,7 @@ RowLayout {
 
     Column {
         id: hiddenTasksColumn
+        objectName: "hiddenTasksColumn"
         Layout.minimumWidth: units.iconSizes.smallMedium
         Layout.maximumWidth: Layout.minimumWidth
         Repeater {

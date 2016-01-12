@@ -30,6 +30,8 @@ class QDBusConnection;
 class SystemTray : public Plasma::Containment
 {
     Q_OBJECT
+    Q_PROPERTY(QStringList allowedPlasmoids READ allowedPlasmoids WRITE setAllowedPlasmoids NOTIFY allowedPlasmoidsChanged)
+    Q_PROPERTY(QStringList defaultPlasmoids READ defaultPlasmoids CONSTANT)
 
 public:
     SystemTray( QObject *parent, const QVariantList &args );
@@ -38,8 +40,11 @@ public:
     void init();
 
     void restorePlasmoids();
-    QStringList allowedPlugins() const;
-    void setAllowedPlugins(const QStringList &allowed);
+
+    QStringList defaultPlasmoids() const;
+
+    QStringList allowedPlasmoids() const;
+    void setAllowedPlasmoids(const QStringList &allowed);
 
     //Creates an applet *if not already existing*
     void newTask(const QString &task);
@@ -52,9 +57,12 @@ private Q_SLOTS:
     void serviceRegistered(const QString &service);
     void serviceUnregistered(const QString &service);
 
+Q_SIGNALS:
+    void allowedPlasmoidsChanged();
+
 private:
     void initDBusActivatables();
-    QStringList m_allowedPlugins;
+    QStringList m_allowedPlasmoids;
     QHash<QString, int> m_knownPlugins;
     QHash<QString, QString> m_dbusActivatableTasks;
     QHash<QString, int> m_dbusServiceCounts;

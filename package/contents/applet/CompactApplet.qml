@@ -59,7 +59,7 @@ Item {
         }
         appletRoot.visible = true;
     }
-    
+
     PlasmaCore.FrameSvgItem {
         id: expandedItem
         anchors.fill: parent
@@ -67,7 +67,14 @@ Item {
         visible: fromCurrentTheme
         prefix: {
             var prefix;
-            switch (plasmoid.location) {
+            var location;
+            if (plasmoid.parent && plasmoid.parent.objectName == "taskListDelegate") {
+                location = PlasmaCore.Types.LeftEdge;
+            } else {
+                location = plasmoid.location;
+            }
+            location = PlasmaCore.Types.LeftEdge;
+            switch (location) {
                 case PlasmaCore.Types.LeftEdge:
                     prefix = "west-active-tab";
                     break;

@@ -46,17 +46,6 @@ SystemTray::~SystemTray()
 void SystemTray::init()
 {
     Containment::init();
-
-    //TODO: take this from config
-    QStringList applets;
-    for (auto info : Plasma::PluginLoader::self()->listAppletInfo(QString())) {
-        if (info.isValid() && info.property(QStringLiteral("X-Plasma-NotificationArea")).toBool() == true) {
-            applets << info.pluginName();
-        }
-    }
-
-    //applets << "org.kde.plasma.battery";
-    setAllowedPlugins(applets);
 }
 
 void SystemTray::newTask(const QString &task)
@@ -84,11 +73,16 @@ void SystemTray::cleanupTask(const QString &task)
 
 void SystemTray::restorePlasmoids()
 {
+    if (!isContainment()) {
+        qWarning() << "Loaded as an applet, this shouldn't have happened";
+        return;
+    }
+
     //First: remove all that are not allowed anymore
     QStringList tasksToDelete;
     foreach (Plasma::Applet *applet, applets()) {
         const QString task = applet->pluginInfo().pluginName();
-        if (!m_allowedPlugins.contains(task)) {
+        if (!m_allowedPlasmoids.contains(task)) {
             applet->destroy();
         }
     }
@@ -126,7 +120,7 @@ void SystemTray::restorePlasmoids()
             continue;
         }
 
-        if (m_allowedPlugins.contains(info.pluginName()) &&
+        if (m_allowedPlasmoids.contains(info.pluginName()) &&
             //FIXME
             //!m_tasks.contains(info.pluginName()) &&
             dbusactivation.isEmpty()) {
@@ -156,9 +150,9 @@ void SystemTray::restorePlasmoids()
     }
 
     foreach (const KPluginInfo &info, sortedApplets) {
-        //qCDebug(SYSTEMTRAY) << " Adding applet: " << info.name();
+        qCDebug(SYSTEMTRAY) << " Adding applet: " << info.name();
         qCDebug(SYSTEMTRAY) << "\n\n ==========================================================================================";
-        if (m_allowedPlugins.contains(info.pluginName())) {
+        if (m_allowedPlasmoids.contains(info.pluginName())) {
             newTask(info.pluginName());
         }
     }
@@ -166,16 +160,34 @@ void SystemTray::restorePlasmoids()
     initDBusActivatables();
 }
 
-QStringList SystemTray::allowedPlugins() const
+QStringList SystemTray::defaultPlasmoids() const
 {
-    return m_allowedPlugins;
+    QStringList ret;
+    for (auto info : Plasma::PluginLoader::self()->listAppletInfo(QString())) {
+        if (info.isValid() && info.property(QStringLiteral("X-Plasma-NotificationArea")) == "true" &&
+            info.isPluginEnabledByDefault()) {
+            ret += info.pluginName();
+        }
+    }
+
+    return ret;
 }
 
-void SystemTray::setAllowedPlugins(const QStringList &allowed)
+QStringList SystemTray::allowedPlasmoids() const
 {
-    m_allowedPlugins = allowed;
+    return m_allowedPlasmoids;
+}
+
+void SystemTray::setAllowedPlasmoids(const QStringList &allowed)
+{
+    if (allowed == m_allowedPlasmoids) {
+        return;
+    }
+
+    m_allowedPlasmoids = allowed;
 
     restorePlasmoids();
+    emit allowedPlasmoidsChanged();
 }
 
 void SystemTray::initDBusActivatables()
@@ -236,7 +248,7 @@ void SystemTray::serviceRegistered(const QString &service)
 {
     qDebug() << "DBus service appeared:" << service;
     foreach (const QString &plugin, m_dbusActivatableTasks.keys()) {
-        if (!m_allowedPlugins.contains(plugin)) {
+        if (!m_allowedPlasmoids.contains(plugin)) {
             continue;
         }
         const QString& pattern = m_dbusActivatableTasks.value(plugin);
@@ -254,7 +266,7 @@ void SystemTray::serviceUnregistered(const QString &service)
 {
     qDebug() << "DBus service disappeared:" << service;
     foreach (const QString &plugin, m_dbusActivatableTasks.keys()) {
-        if (!m_allowedPlugins.contains(plugin)) {
+        if (!m_allowedPlasmoids.contains(plugin)) {
             continue;
         }
         const QString& pattern = m_dbusActivatableTasks.value(plugin);

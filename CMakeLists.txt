@@ -32,6 +32,7 @@ target_link_libraries(plasma_applet_systemtraycontainer
                       Qt5::Gui
                       Qt5::Quick
                       KF5::Plasma
+                      KF5::XmlGui
                       KF5::I18n)
 
 

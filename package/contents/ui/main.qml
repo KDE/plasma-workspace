@@ -34,6 +34,7 @@ MouseArea {
     property alias hiddenLayout: expandedRepresentation.hiddenLayout
 
     function addApplet(applet, x, y) {
+        print("Applet created:" + applet.title)
         var component = Qt.createComponent("PlasmoidItem.qml")
         var plasmoidContainer = component.createObject((applet.status == PlasmaCore.Types.PassiveStatus) ? hiddenLayout : visibleLayout, {"x": x, "y": y});
 
@@ -49,6 +50,58 @@ MouseArea {
     }
 
     Containment.onAppletRemoved: {
+    }
+
+     Connections {
+        target: plasmoid.configuration
+        onApplicationStatusShownChanged: plasmoid.nativeInterface.setCategoryShown(SystemTray.Task.ApplicationStatus, plasmoid.configuration.applicationStatusShown);
+
+        onCommunicationsShownChanged: plasmoid.nativeInterface.setCategoryShown(SystemTray.Task.Communications, plasmoid.configuration.communicationsShown);
+
+        onSystemServicesShownChanged: plasmoid.nativeInterface.setCategoryShown(SystemTray.Task.SystemServices, plasmoid.configuration.systemServicesShown);
+
+        onHardwareControlShownChanged: plasmoid.nativeInterface.setCategoryShown(SystemTray.Task.Hardware, plasmoid.configuration.hardwareControlShown);
+
+        onMiscellaneousShownChanged: plasmoid.nativeInterface.setCategoryShown(SystemTray.Task.Unknown, plasmoid.configuration.miscellaneousShown);
+
+        onExtraItemsChanged: plasmoid.nativeInterface.allowedPlasmoids = plasmoid.configuration.extraItems
+    }
+
+    Component.onCompleted: {
+        //script, don't bind
+        plasmoid.nativeInterface.allowedPlasmoids = initializePlasmoidList();
+    }
+
+    function initializePlasmoidList() {
+        var newKnownItems = [];
+        var newExtraItems = [];
+
+        //NOTE:why this? otherwise the interpreter will execute plasmoid.nativeInterface.defaultPlasmoids() on
+        //every access of defaults[], resulting in a very slow iteration
+        var defaults = [];
+        //defaults = defaults.concat(plasmoid.nativeInterface.defaultPlasmoids);
+        defaults = plasmoid.nativeInterface.defaultPlasmoids.slice()
+        var candidate;
+
+        //Add every plasmoid that is both not enabled explicitly and not already known
+        for (var i = 0; i < defaults.length; ++i) {
+            candidate = defaults[i];
+            if (plasmoid.configuration.knownItems.indexOf(candidate) === -1) {
+                newKnownItems.push(candidate);
+                if (plasmoid.configuration.extraItems.indexOf(candidate) === -1) {
+                    newExtraItems.push(candidate);
+                }
+            }
+        }
+
+        if (newExtraItems.length > 0) {
+            plasmoid.configuration.extraItems = plasmoid.configuration.extraItems.slice().concat(newExtraItems);
+        }
+        if (newKnownItems.length > 0) {
+            plasmoid.configuration.knownItems = plasmoid.configuration.knownItems.slice().concat(newKnownItems);
+        }
+
+        return plasmoid.configuration.extraItems;
     }
 
     PlasmaCore.DataSource {
@@ -87,6 +140,7 @@ MouseArea {
         onExpandedChanged: dialog.visible = activeApplet.expanded
     }
 
+    //Main Layout
     Row {
         anchors.fill: parent
 
@@ -118,6 +172,7 @@ MouseArea {
         }
     }
 
+    //Main popup
     PlasmaCore.Dialog {
         id: dialog
         visualParent: root

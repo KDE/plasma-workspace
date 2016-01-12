@@ -6,12 +6,46 @@
   <kcfgfile name=""/>
 
   <group name="General">
-    <entry name="AppletsOrder" type="String">
-      <label>list of all applets</label>
+    <entry name="taskPreferences" type="StringList">
+      <default></default>
     </entry>
-    <entry name="SkipItems" type="String">
-      <label>list of all notifier items to skip</label>
+    <entry name="debug" type="bool">
+      <default>false</default>
+    </entry>
+    <entry name="applicationStatusShown" type="bool">
+      <default>true</default>
+    </entry>
+    <entry name="communicationsShown" type="bool">
+      <default>true</default>
+    </entry>
+    <entry name="systemServicesShown" type="bool">
+      <default>true</default>
+    </entry>
+    <entry name="hardwareControlShown" type="bool">
+      <default>true</default>
+    </entry>
+    <entry name="miscellaneousShown" type="bool">
+      <default>true</default>
+    </entry>
+
+    <entry name="extraItems" type="StringList">
+      <default></default>
+    </entry>
+    <entry name="hiddenItems" type="StringList">
+      <default></default>
+    </entry>
+    <entry name="shownItems" type="StringList">
+      <default></default>
+    </entry>
+    <entry name="showAllItems" type="bool">
+        <default>false</default>
+    </entry>
+    <!-- All the plasmoids the applet knows of. a plasmoid will be automatically added
+         if X-KDE-PluginInfo-EnabledByDefault=true and is not in the known list-->
+    <entry name="knownItems" type="StringList">
+      <default></default>
     </entry>
   </group>
 
 </kcfg>
+

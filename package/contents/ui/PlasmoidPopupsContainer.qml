@@ -21,6 +21,7 @@ import QtQuick 2.1
 import QtQuick.Layouts 1.1
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
+import org.kde.plasma.extras 2.0 as PlasmaExtras
 
 Item {
     id: popupsContainer
@@ -30,6 +31,7 @@ Item {
 
     property Item activeApplet
     visible: activeApplet != null
+
     onActiveAppletChanged: {
         if (activeApplet != null) {
             mainStack.replace(activeApplet.fullRepresentationItem);
@@ -38,10 +40,27 @@ Item {
         }
     }
 
+    PlasmaExtras.Heading {
+        id: heading
+        level: 1
+
+        anchors {
+            top: parent.top
+            topMargin: units.gridUnit
+            left: parent.left
+            leftMargin: units.largeSpacing
+            right: parent.right
+        }
+        text: activeApplet ? activeApplet.title : i18n("Status & Notifications")
+    }
+
     PlasmaComponents.PageStack {
         id: mainStack
-        anchors.fill: parent
-
-        
+        anchors {
+            top: heading.bottom
+            left: parent.left
+            right: parent.right
+            bottom: parent.bottom
+        }
     }
 }
