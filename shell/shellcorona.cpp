@@ -1017,6 +1017,8 @@ void ShellCorona::createWaitingPanels()
         connect(panel, &QWindow::visibleChanged, this, &Plasma::Corona::availableScreenRectChanged);
         connect(panel, &PanelView::locationChanged, this, &Plasma::Corona::availableScreenRectChanged);
         connect(panel, &PanelView::visibilityModeChanged, this, &Plasma::Corona::availableScreenRectChanged);
+        connect(panel, &PanelView::thicknessChanged, this, &Plasma::Corona::availableScreenRectChanged);
+
 
         m_panelViews[cont] = panel;
         panel->setContainment(cont);
