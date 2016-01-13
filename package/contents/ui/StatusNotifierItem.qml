@@ -19,11 +19,14 @@
 
 import QtQuick 2.1
 import org.kde.plasma.core 2.0 as PlasmaCore
+import org.kde.plasma.components 2.0 as PlasmaComponents
 
 Item {
     id: taskIcon
     width: root.itemWidth
     height: root.itemHeight
+
+    property bool hidden: parent.objectName == "hiddenTasksColumn"
 
     PlasmaCore.IconItem {
         source: IconName ? IconName : Icon
@@ -47,5 +50,14 @@ Item {
             operation.y = parent.y + parent.height + 6
             service.startOperationCall(operation)
         }
+    }
+    PlasmaComponents.Label {
+        visible: taskIcon.hidden && !root.activeApplet
+        anchors {
+            left: parent.right
+            verticalCenter: parent.verticalCenter
+            leftMargin: units.smallSpacing
+        }
+        text: Title
     }
 }

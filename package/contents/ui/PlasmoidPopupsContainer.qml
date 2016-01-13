@@ -27,20 +27,24 @@ import org.kde.plasma.extras 2.0 as PlasmaExtras
 Item {
     id: popupsContainer
 
-    Layout.minimumWidth: 300
-    Layout.minimumHeight: 300
+    Layout.minimumWidth: units.gridUnit * 12
+    Layout.minimumHeight: units.gridUnit * 12
 
     property Item activeApplet
 
     onActiveAppletChanged: {
         if (activeApplet != null) {
+            //reset any potential anchor
             activeApplet.fullRepresentationItem.anchors.left = undefined;
             activeApplet.fullRepresentationItem.anchors.top = undefined;
             activeApplet.fullRepresentationItem.anchors.right = undefined;
             activeApplet.fullRepresentationItem.anchors.bottom = undefined;
+            activeApplet.fullRepresentationItem.anchors.centerIn = undefined;
+            activeApplet.fullRepresentationItem.anchors.fill = undefined;
+
             mainStack.replace(activeApplet.fullRepresentationItem);
         } else {
-            //mainStack.clear();
+            mainStack.replace(emptyPage);
         }
     }
 
@@ -50,16 +54,29 @@ Item {
 
         anchors {
             top: parent.top
-            topMargin: units.gridUnit
             left: parent.left
             right: parent.right
         }
         text: activeApplet ? activeApplet.title : i18n("Status & Notifications")
+        MouseArea {
+            anchors.fill: parent
+            onClicked: {
+                if (activeApplet) {
+                    activeApplet.expanded = false;
+                }
+            }
+        }
+    }
+
+    //used to anymate away to nothing
+    Item {
+        id: emptyPage
     }
 
     StackView {
         id: mainStack
-        visible: popupsContainer.activeApplet != null
+        //visible: popupsContainer.activeApplet != null
+        clip: true
         anchors {
             top: heading.bottom
             left: parent.left

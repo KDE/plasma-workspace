@@ -125,21 +125,6 @@ MouseArea {
         }
     }
 
-    Connections {
-        target: activeApplet
-        onExpandedChanged: {
-            if (!activeApplet) {
-                return;
-            }
-            if (activeApplet.expanded) {
-                dialog.visible = true;
-            } else if (!activeApplet.parent.hidden) {
-                dialog.visible = false;
-            }
-            root.activeApplet = null;
-        }
-    }
-
     //Main Layout
     Row {
         anchors.fill: parent

@@ -22,10 +22,12 @@ import QtQuick.Layouts 1.1
 import org.kde.plasma.core 2.0 as PlasmaCore
 
 RowLayout {
-    id: root
+    id: expandedRepresentation
 
-    Layout.minimumWidth: units.gridUnit * 12
-    Layout.minimumHeight: units.gridUnit * 12
+    Layout.minimumWidth: Layout.minimumHeight * 1.75
+    Layout.minimumHeight: units.gridUnit * 14
+    Layout.preferredWidth: Layout.minimumWidth
+    Layout.preferredHeight: Layout.minimumHeight * 1.5
 
     property alias activeApplet: container.activeApplet
     property alias hiddenLayout: hiddenTasksColumn

@@ -37,8 +37,16 @@ Item {
                 }
                 root.activeApplet = applet;
                 dialog.visible = true;
+
+            } else if (root.activeApplet == applet) {
+                if (!applet.parent.hidden) {
+                    dialog.visible = false;
+                }
+                //if not expanded we don't have an active applet anymore
+                root.activeApplet = null;
             }
         }
+
         onStatusChanged: {
             if (applet.status == PlasmaCore.Types.PassiveStatus) {
                 plasmoidContainer.parent = hiddenLayout;
