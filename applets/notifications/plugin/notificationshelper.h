@@ -78,8 +78,6 @@ private Q_SLOTS:
 
 private:
     void repositionPopups();
-    int popupYPosition();
-    void setDefaultPopupPosition(QQuickWindow *popup);
 
     QList<QQuickWindow*> m_popupsOnScreen;
     QList<QQuickWindow*> m_availablePopups;

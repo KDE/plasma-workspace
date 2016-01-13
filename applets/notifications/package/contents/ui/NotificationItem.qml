@@ -184,6 +184,12 @@ Item {
             id: bottomPart
             Layout.alignment: Qt.AlignTop
 
+            // Force the whole thing to collapse if the children are invisible
+            // If there is a big notification followed by a small one, the height
+            // of the popup does not always shrink back, so this forces it to
+            // height=0 when those are invisible. -1 means "default to implicitHeight"
+            Layout.maximumHeight: textItemLoader.visible || actionsColumn.visible ? -1 : 0
+
             Loader {
                 id: textItemLoader
                 Layout.fillWidth: true
