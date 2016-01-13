@@ -29,7 +29,7 @@ Item {
     property bool hidden: parent.objectName == "hiddenTasksColumn"
 
     PlasmaCore.IconItem {
-        source: IconName ? IconName : Icon
+        source: IconName != "" ? IconName : Icon
         width: Math.min(parent.width, parent.height)
         height: width
         anchors.centerIn: parent
