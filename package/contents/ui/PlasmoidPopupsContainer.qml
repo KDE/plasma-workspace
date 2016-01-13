@@ -19,6 +19,7 @@
 
 import QtQuick 2.1
 import QtQuick.Layouts 1.1
+import QtQuick.Controls 1.4
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.plasma.extras 2.0 as PlasmaExtras
@@ -33,9 +34,13 @@ Item {
 
     onActiveAppletChanged: {
         if (activeApplet != null) {
+            activeApplet.fullRepresentationItem.anchors.left = undefined;
+            activeApplet.fullRepresentationItem.anchors.top = undefined;
+            activeApplet.fullRepresentationItem.anchors.right = undefined;
+            activeApplet.fullRepresentationItem.anchors.bottom = undefined;
             mainStack.replace(activeApplet.fullRepresentationItem);
         } else {
-            mainStack.pop();
+            //mainStack.clear();
         }
     }
 
@@ -47,14 +52,14 @@ Item {
             top: parent.top
             topMargin: units.gridUnit
             left: parent.left
-            leftMargin: units.largeSpacing
             right: parent.right
         }
         text: activeApplet ? activeApplet.title : i18n("Status & Notifications")
     }
 
-    PlasmaComponents.PageStack {
+    StackView {
         id: mainStack
+        visible: popupsContainer.activeApplet != null
         anchors {
             top: heading.bottom
             left: parent.left

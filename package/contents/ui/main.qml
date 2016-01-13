@@ -125,19 +125,19 @@ MouseArea {
         }
     }
 
-    property Item oldActiveApplet
-    onActiveAppletChanged: {
-        if (!activeApplet) {
-            dialog.visible = false;
-        }
-        if (oldActiveApplet) {
-            oldActiveApplet.expanded = false;
-        }
-        oldActiveApplet = activeApplet;
-    }
     Connections {
         target: activeApplet
-        onExpandedChanged: dialog.visible = activeApplet.expanded
+        onExpandedChanged: {
+            if (!activeApplet) {
+                return;
+            }
+            if (activeApplet.expanded) {
+                dialog.visible = true;
+            } else if (!activeApplet.parent.hidden) {
+                dialog.visible = false;
+            }
+            root.activeApplet = null;
+        }
     }
 
     //Main Layout

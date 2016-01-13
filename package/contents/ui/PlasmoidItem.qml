@@ -26,11 +26,15 @@ Item {
     width: root.itemWidth
     height: root.itemHeight
     property Item applet
+    property bool hidden: applet.parent.parent.objectName == "hiddenTasksColumn"
 
     Connections {
         target: applet
         onExpandedChanged: {
             if (expanded) {
+                if (root.activeApplet) {
+                    root.activeApplet.expanded = false;
+                }
                 root.activeApplet = applet;
                 dialog.visible = true;
             }
@@ -43,11 +47,13 @@ Item {
             }
         }
     }
+
     PlasmaComponents.Label {
-        visible: applet.parent.parent.objectName == "hiddenTasksColumn" && !root.activeApplet
+        visible: plasmoidContainer.hidden && !root.activeApplet
         anchors {
             left: parent.right
             verticalCenter: parent.verticalCenter
+            leftMargin: units.smallSpacing
         }
         text: applet.title
     }
