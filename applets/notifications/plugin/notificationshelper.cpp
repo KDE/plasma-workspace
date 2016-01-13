@@ -300,19 +300,23 @@ void NotificationsHelper::repositionPopups()
             || m_popupLocation == NotificationsHelper::TopCenter
             || m_popupLocation == NotificationsHelper::TopRight) {
 
-            if (m_popupsOnScreen[i]->isVisible() && m_popupsOnScreen[i]->property("initialPositionSet").toBool() == true) {
+            int posY = m_plasmoidScreen.top() + cumulativeHeight;
+
+            if (m_popupsOnScreen[i]->isVisible() && m_popupsOnScreen[i]->property("initialPositionSet").toBool() == true && m_popupsOnScreen[i]->y() != 0) {
                 //if it's visible, go through setProperty which animates it
-                m_popupsOnScreen[i]->setProperty("y", m_plasmoidScreen.top() + cumulativeHeight);
+                m_popupsOnScreen[i]->setProperty("y", posY);
             } else {
                 // ...otherwise just set it directly
-                m_popupsOnScreen[i]->setY(m_plasmoidScreen.top() + cumulativeHeight);
+                m_popupsOnScreen[i]->setY(posY);
                 m_popupsOnScreen[i]->setProperty("initialPositionSet", true);
             }
         } else {
-            if (m_popupsOnScreen[i]->isVisible() && m_popupsOnScreen[i]->property("initialPositionSet").toBool() == true) {
-                m_popupsOnScreen[i]->setProperty("y", m_plasmoidScreen.bottom() - cumulativeHeight - m_popupsOnScreen[i]->contentItem()->height());
+            int posY = m_plasmoidScreen.bottom() - cumulativeHeight - m_popupsOnScreen[i]->contentItem()->height();
+
+            if (m_popupsOnScreen[i]->isVisible() && m_popupsOnScreen[i]->property("initialPositionSet").toBool() == true && m_popupsOnScreen[i]->y() != 0) {
+                m_popupsOnScreen[i]->setProperty("y", posY);
             } else {
-                m_popupsOnScreen[i]->setY(m_plasmoidScreen.bottom() - cumulativeHeight - m_popupsOnScreen[i]->contentItem()->height());
+                m_popupsOnScreen[i]->setY(posY);
                 m_popupsOnScreen[i]->setProperty("initialPositionSet", true);
             }
         }
