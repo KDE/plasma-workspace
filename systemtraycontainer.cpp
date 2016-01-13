@@ -48,19 +48,28 @@ void SystemTrayContainer::init()
         return;
     }
 
-    Plasma::Containment *innerCont = c->createContainment("org.kde.plasma.simplesystray");
-    if (!innerCont) {
+    m_innerContainment = c->createContainment("org.kde.plasma.simplesystray");
+    if (!m_innerContainment) {
         return;
     }
-    setProperty("_plasma_graphicObject", QVariant::fromValue(innerCont->property("_plasma_graphicObject")));
+    setProperty("_plasma_graphicObject", QVariant::fromValue(m_innerContainment->property("_plasma_graphicObject")));
 
-    connect(innerCont, &Plasma::Containment::configureRequested, this,
-        [this, innerCont] {
-            emit containment()->configureRequested(innerCont);
+    connect(m_innerContainment, &Plasma::Containment::configureRequested, this,
+        [this] {
+            emit containment()->configureRequested(m_innerContainment);
         }
     );
 }
 
+void SystemTrayContainer::constraintsEvent(Plasma::Types::Constraints constraints)
+{
+    if (constraints & Plasma::Types::LocationConstraint) {
+        m_innerContainment->setLocation(location());
+    }
+    if (constraints & Plasma::Types::FormFactorConstraint) {
+        m_innerContainment->setFormFactor(formFactor());
+    }
+}
 
 K_EXPORT_PLASMA_APPLET_WITH_JSON(systemtraycontainer, SystemTrayContainer, "containermetadata.json")
 

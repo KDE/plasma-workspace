@@ -36,11 +36,14 @@ public:
 
     void init();
 
+protected:
+    void constraintsEvent(Plasma::Types::Constraints constraints);
+
 private Q_SLOTS:
     
 
 private:
-
+    QPointer<Plasma::Containment> m_innerContainment;
 };
 
 #endif
