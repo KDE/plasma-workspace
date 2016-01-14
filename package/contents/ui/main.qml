@@ -161,9 +161,11 @@ MouseArea {
     PlasmaCore.Dialog {
         id: dialog
         visualParent: root
+        flags: Qt.WindowStaysOnTopHint
+        location: plasmoid.location
         onVisibleChanged: {
             if (!visible) {
-                root.activeApplet = null
+                root.activeApplet.expanded = false;
             }
         }
         mainItem: ExpandedRepresentation {

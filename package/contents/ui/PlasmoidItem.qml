@@ -32,10 +32,11 @@ Item {
         target: applet
         onExpandedChanged: {
             if (expanded) {
-                if (root.activeApplet) {
-                    root.activeApplet.expanded = false;
-                }
+                var oldApplet = root.activeApplet;
                 root.activeApplet = applet;
+                if (oldApplet) {
+                    oldApplet.expanded = false;
+                }
                 dialog.visible = true;
 
             } else if (root.activeApplet == applet) {

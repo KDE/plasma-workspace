@@ -24,8 +24,8 @@ import org.kde.plasma.core 2.0 as PlasmaCore
 RowLayout {
     id: expandedRepresentation
 
-    Layout.minimumWidth: Layout.minimumHeight * 1.75
-    Layout.minimumHeight: units.gridUnit * 14
+    Layout.minimumWidth: Layout.minimumHeight
+    Layout.minimumHeight: units.gridUnit * 22
     Layout.preferredWidth: Layout.minimumWidth
     Layout.preferredHeight: Layout.minimumHeight * 1.5
 

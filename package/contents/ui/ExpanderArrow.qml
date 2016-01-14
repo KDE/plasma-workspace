@@ -31,7 +31,7 @@ PlasmaCore.ToolTipArea {
     property bool vertical
     width: vertical ? root.width : units.iconSizes.smallMedium
     height: !vertical ? root.height : units.iconSizes.smallMedium
-    visible: hiddenTasksModel.count > 0
+    //visible: hiddenTasksModel.count > 0
 
     subText: root.expanded ? i18n("Hide icons") : i18n("Show hidden icons")
 
