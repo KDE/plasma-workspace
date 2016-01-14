@@ -235,26 +235,42 @@ void PanelConfigView::focusOutEvent(QFocusEvent *ev)
 
 void PanelConfigView::moveEvent(QMoveEvent *ev)
 {
-    if (!m_shellSurface) {
-        ShellCorona *c = qobject_cast<ShellCorona *>(m_containment->corona());
-
-        if (c) {
-            using namespace KWayland::Client;
-            PlasmaShell *interface = c->waylandPlasmaShellInterface();
-            if (!interface) {
-                return;
-            }
-            Surface *s = Surface::fromWindow(this);
-            if (!s) {
-                return;
-            }
-            m_shellSurface = interface->createSurface(s, this);
-        }
-    }
-
     if (m_shellSurface) {
         m_shellSurface->setPosition(ev->pos());
     }
+}
+
+bool PanelConfigView::event(QEvent *e)
+{
+    if (e->type() == QEvent::PlatformSurface) {
+        if (auto pe = dynamic_cast<QPlatformSurfaceEvent*>(e)) {
+            switch (pe->surfaceEventType()) {
+            case QPlatformSurfaceEvent::SurfaceCreated:
+                if (m_shellSurface) {
+                    break;
+                }
+                if (ShellCorona *c = qobject_cast<ShellCorona *>(m_containment->corona())) {
+                    using namespace KWayland::Client;
+                    PlasmaShell *interface = c->waylandPlasmaShellInterface();
+                    if (!interface) {
+                        break;
+                    }
+                    Surface *s = Surface::fromWindow(this);
+                    if (!s) {
+                        break;
+                    }
+                    m_shellSurface = interface->createSurface(s, this);
+                }
+                break;
+            case QPlatformSurfaceEvent::SurfaceAboutToBeDestroyed:
+                delete m_shellSurface;
+                m_shellSurface = nullptr;
+                break;
+            }
+        }
+    }
+
+    return PlasmaQuick::ConfigView::event(e);
 }
 
 void PanelConfigView::setVisibilityMode(PanelView::VisibilityMode mode)

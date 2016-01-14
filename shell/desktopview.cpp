@@ -134,7 +134,6 @@ void DesktopView::ensureWindowType()
         setFlags(Qt::Window);
         KWindowSystem::setType(winId(), NET::Normal);
         KWindowSystem::clearState(winId(), NET::FullScreen);
-        setupWaylandIntegration();
         if (m_shellSurface) {
             m_shellSurface->setRole(KWayland::Client::PlasmaShellSurface::Role::Normal);
             m_shellSurface->setSkipTaskbar(false);
@@ -144,7 +143,6 @@ void DesktopView::ensureWindowType()
         setFlags(Qt::Window | Qt::FramelessWindowHint);
         KWindowSystem::setType(winId(), NET::Desktop);
         KWindowSystem::setState(winId(), NET::KeepBelow);
-        setupWaylandIntegration();
         if (m_shellSurface) {
             m_shellSurface->setRole(KWayland::Client::PlasmaShellSurface::Role::Desktop);
             m_shellSurface->setSkipTaskbar(true);
@@ -154,7 +152,6 @@ void DesktopView::ensureWindowType()
         KWindowSystem::setType(winId(), NET::Normal);
         KWindowSystem::clearState(winId(), NET::FullScreen);
         setFlags(Qt::FramelessWindowHint | flags());
-        setupWaylandIntegration();
         if (m_shellSurface) {
             m_shellSurface->setRole(KWayland::Client::PlasmaShellSurface::Role::Normal);
             m_shellSurface->setSkipTaskbar(false);
@@ -164,7 +161,6 @@ void DesktopView::ensureWindowType()
         setFlags(Qt::Window);
         KWindowSystem::setType(winId(), NET::Normal);
         KWindowSystem::setState(winId(), NET::FullScreen);
-        setupWaylandIntegration();
         if (m_shellSurface) {
             m_shellSurface->setRole(KWayland::Client::PlasmaShellSurface::Role::Normal);
             m_shellSurface->setSkipTaskbar(false);
@@ -199,6 +195,18 @@ bool DesktopView::event(QEvent *e)
         QObject *graphicObject = containment()->property("_plasma_graphicObject").value<QObject *>();
         if (graphicObject) {
             graphicObject->setProperty("focus", false);
+        }
+    } else if (e->type() == QEvent::PlatformSurface) {
+        if (auto pe = dynamic_cast<QPlatformSurfaceEvent*>(e)) {
+            switch (pe->surfaceEventType()) {
+            case QPlatformSurfaceEvent::SurfaceCreated:
+                setupWaylandIntegration();
+                break;
+            case QPlatformSurfaceEvent::SurfaceAboutToBeDestroyed:
+                delete m_shellSurface;
+                m_shellSurface = nullptr;
+                break;
+            }
         }
     }
 

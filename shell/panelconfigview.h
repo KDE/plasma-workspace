@@ -64,6 +64,7 @@ protected:
     void hideEvent(QHideEvent *ev);
     void focusOutEvent(QFocusEvent *ev);
     void moveEvent(QMoveEvent *ev);
+    bool event(QEvent *e);
 
 public Q_SLOTS:
     void showAddWidgetDialog();

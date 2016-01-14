@@ -396,7 +396,6 @@ void PanelView::positionPanel()
 
     const QPoint pos = geometryByDistance(m_distance).topLeft();
     setPosition(pos);
-    setupWaylandIntegration();
     if (m_shellSurface) {
         m_shellSurface->setPosition(pos);
     }
@@ -651,7 +650,6 @@ void PanelView::resizeEvent(QResizeEvent *ev)
     //don't setGeometry() to meke really sure we aren't doing a resize loop
     const QPoint pos = geometryByDistance(m_distance).topLeft();
     setPosition(pos);
-    setupWaylandIntegration();
     if (m_shellSurface) {
         m_shellSurface->setPosition(pos);
     }
@@ -669,7 +667,6 @@ void PanelView::integrateScreen()
     themeChanged();
     KWindowSystem::setOnAllDesktops(winId(), true);
     KWindowSystem::setType(winId(), NET::Dock);
-    setupWaylandIntegration();
     if (m_shellSurface) {
         m_shellSurface->setRole(KWayland::Client::PlasmaShellSurface::Role::Panel);
         m_shellSurface->setSkipTaskbar(true);
@@ -801,6 +798,19 @@ bool PanelView::event(QEvent *e)
             }
             break;
         }
+        case QEvent::PlatformSurface:
+            if (auto pe = dynamic_cast<QPlatformSurfaceEvent*>(e)) {
+                switch (pe->surfaceEventType()) {
+                case QPlatformSurfaceEvent::SurfaceCreated:
+                    setupWaylandIntegration();
+                    break;
+                case QPlatformSurfaceEvent::SurfaceAboutToBeDestroyed:
+                    delete m_shellSurface;
+                    m_shellSurface = nullptr;
+                    break;
+                }
+            }
+            break;
         default:
             break;
     }
