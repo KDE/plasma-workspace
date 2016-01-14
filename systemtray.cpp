@@ -55,6 +55,7 @@ void SystemTray::newTask(const QString &task)
             continue;
         }
         if (task == applet->pluginInfo().pluginName()) {
+            emit appletAdded(applet);
             return;
         }
     }
