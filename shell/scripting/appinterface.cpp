@@ -130,6 +130,11 @@ QString AppInterface::language() const
     return QLocale::system().languageToString(QLocale::system().language());
 }
 
+QString AppInterface::languageId() const
+{
+    return QLocale::system().bcp47Name().section('-', 0, 0);
+}
+
 bool AppInterface::multihead() const
 {
 #ifdef Q_OS_WIN
