@@ -106,9 +106,9 @@ QString Image::photosPath() const
     return QStandardPaths::writableLocation(QStandardPaths::PicturesLocation);
 }
 
-QString Image::wallpaperPath() const
+QUrl Image::wallpaperPath() const
 {
-    return m_wallpaperPath;
+    return QUrl::fromLocalFile(m_wallpaperPath);
 }
 
 void Image::addUrl(const QString &url)

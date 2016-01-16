@@ -53,7 +53,7 @@ class Image : public QObject, public QQmlParserStatus
     Q_INTERFACES(QQmlParserStatus)
 
     Q_PROPERTY(RenderingMode renderingMode READ renderingMode WRITE setRenderingMode NOTIFY renderingModeChanged)
-    Q_PROPERTY(QString wallpaperPath READ wallpaperPath NOTIFY wallpaperPathChanged)
+    Q_PROPERTY(QUrl wallpaperPath READ wallpaperPath NOTIFY wallpaperPathChanged)
     Q_PROPERTY(QAbstractItemModel *wallpaperModel READ wallpaperModel CONSTANT)
     Q_PROPERTY(int slideTimer READ slideTimer WRITE setSlideTimer NOTIFY slideTimerChanged)
     Q_PROPERTY(QStringList usersWallpapers READ usersWallpapers WRITE setUsersWallpapers NOTIFY usersWallpapersChanged)
@@ -73,7 +73,7 @@ class Image : public QObject, public QQmlParserStatus
         Image(QObject* parent = 0);
         ~Image();
 
-        QString wallpaperPath() const;
+        QUrl wallpaperPath() const;
 
         //this is for QML use
         Q_INVOKABLE void addUrl(const QString &url);
