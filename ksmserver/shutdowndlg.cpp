@@ -187,6 +187,9 @@ KSMShutdownDlg::KSMShutdownDlg( QWindow* parent,
     requestActivate();
 
     KWindowSystem::setState(winId(), NET::SkipTaskbar|NET::SkipPager);
+
+    setMouseGrabEnabled(true);
+    setKeyboardGrabEnabled(true);
 }
 
 void KSMShutdownDlg::resizeEvent(QResizeEvent *e)
@@ -202,6 +205,15 @@ void KSMShutdownDlg::resizeEvent(QResizeEvent *e)
 
     setPosition(screen()->geometry().center().x() - width() / 2,
                 screen()->geometry().center().y() - height() / 2);
+}
+
+void KSMShutdownDlg::mousePressEvent(QMouseEvent *e)
+{
+    QQuickView::mousePressEvent(e);
+
+    if (!geometry().contains(e->globalPos())) {
+        reject();
+    }
 }
 
 void KSMShutdownDlg::slotLogout()
