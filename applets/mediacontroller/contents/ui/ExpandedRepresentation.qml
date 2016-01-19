@@ -1,6 +1,6 @@
 /***************************************************************************
  *   Copyright 2013 Sebastian Kügler <sebas@kde.org>                       *
- *   Copyright 2014 Kai Uwe Broulik <kde@privat.broulik.de>                *
+ *   Copyright 2014, 2016 Kai Uwe Broulik <kde@privat.broulik.de>          *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU Library General Public License as       *
@@ -63,6 +63,48 @@ Item {
         id: titleColumn
         width: constrained ? parent.width - units.largeSpacing : parent.width
         spacing: units.smallSpacing
+
+        PlasmaComponents.ComboBox {
+            Layout.fillWidth: true
+            visible: model.length > 2 // more than one player, @multiplex is always there
+            model: {
+                var model = [{
+                    text: i18n("Choose player automatically"),
+                    source: mpris2Source.multiplexSource
+                }]
+
+                var sources = mpris2Source.sources
+                for (var i = 0, length = sources.length; i < length; ++i) {
+                    var source = sources[i]
+                    if (source === mpris2Source.multiplexSource) {
+                        continue
+                    }
+
+                    // we could show the pretty player name ("Identity") here but then we
+                    // would have to connect all sources just for this
+                    model.push({text: source, source: source})
+                }
+
+                return model
+            }
+
+            onModelChanged: {
+                // if model changes, ComboBox resets, so we try to find the current player again...
+                for (var i = 0, length = model.length; i < length; ++i) {
+                    if (model[i].source === mpris2Source.current) {
+                        currentIndex = i
+                        break
+                    }
+                }
+            }
+
+            onActivated: {
+                disablePositionUpdate = true
+                // ComboBox has currentIndex and currentText, why doesn't it have currentItem/currentModelValue?
+                mpris2Source.current = model[index].source
+                disablePositionUpdate = false
+            }
+        }
 
         RowLayout {
             id: titleRow

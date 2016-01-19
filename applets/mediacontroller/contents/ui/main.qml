@@ -102,12 +102,19 @@ Item {
 
     PlasmaCore.DataSource {
         id: mpris2Source
+
+        readonly property string multiplexSource: "@multiplex"
+        property string current: multiplexSource
+
         engine: "mpris2"
         connectedSources: current
 
-        property string current: "@multiplex"
-
-        onDataChanged: updateOpenPlayerAction()
+        onSourceRemoved: {
+            // if player is closed, reset to multiplex source
+            if (source === current) {
+                current = multiplexSource
+            }
+        }
     }
 
     function updateOpenPlayerAction() {
