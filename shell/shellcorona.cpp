@@ -356,7 +356,9 @@ void ShellCorona::load()
         foreach(Plasma::Containment *containment, containments()) {
             if (containment->formFactor() == Plasma::Types::Horizontal ||
                 containment->formFactor() == Plasma::Types::Vertical) {
-                if (!m_waitingPanels.contains(containment)) {
+                //Don't give a view to containments that don't want one (negative lastscreen)
+                //this is pretty mucha special case for the systray
+                if (!m_waitingPanels.contains(containment) && containment->lastScreen() >= 0) {
                     m_waitingPanels << containment;
                 }
             } else {
