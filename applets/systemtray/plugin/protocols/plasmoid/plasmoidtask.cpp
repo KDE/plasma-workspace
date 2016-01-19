@@ -258,14 +258,6 @@ void PlasmoidTask::showMenu(int x, int y)
 {
     QPoint pos(x, y);
 
-    QQuickWindow *w = 0;
-    if (taskItem()) {
-        w = taskItem()->window();
-    }
-    if (w) {
-        pos = taskItem()->mapToScene(pos).toPoint() + w->position();
-    }
-
     QMenu *desktopMenu = new QMenu;
     connect(this, &QObject::destroyed, desktopMenu, &QMenu::close);
     desktopMenu->setAttribute(Qt::WA_DeleteOnClose);
@@ -275,6 +267,12 @@ void PlasmoidTask::showMenu(int x, int y)
             desktopMenu->addAction(action);
         }
     }
+
+    QAction *runAssociatedApplication = m_applet->actions()->action(QStringLiteral("run associated application"));
+    if (runAssociatedApplication && runAssociatedApplication->isEnabled()) {
+        desktopMenu->addAction(runAssociatedApplication);
+    }
+
     if (m_applet->actions()->action(QStringLiteral("configure"))) {
         desktopMenu->addAction(m_applet->actions()->action(QStringLiteral("configure")));
     }

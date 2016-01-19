@@ -64,7 +64,8 @@ Item {
                 }
 
             } else if (mouse.button == Qt.RightButton) {
-                modelData.showMenu(mouse.x, mouse.y);
+                var pos = modelData.popupPosition(parent, mouse.x, mouse.y);
+                modelData.showMenu(pos.x, pos.y);
             }
         }
     }
