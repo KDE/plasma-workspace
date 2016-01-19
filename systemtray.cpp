@@ -37,6 +37,7 @@ SystemTray::SystemTray(QObject *parent, const QVariantList &args)
     : Plasma::Containment(parent, args)
 {
     setHasConfigurationInterface(true);
+    setContainmentType(Plasma::Types::CustomPanelContainment);
 }
 
 SystemTray::~SystemTray()

@@ -48,10 +48,27 @@ void SystemTrayContainer::init()
         return;
     }
 
-    m_innerContainment = c->createContainment("org.kde.plasma.simplesystray");
+    uint id = config().readEntry("SystrayContainmentId", 0);
+    qWarning()<<"CONTAINMENT ID"<<id;
+    if (id > 0) {
+        foreach (Plasma::Containment *candidate, c->containments()) {
+            if (candidate->id() == id) {
+                qWarning()<<candidate;
+                m_innerContainment = candidate;
+                break;
+            }
+        }
+        id = 0;
+    }
+    if (id <= 0) {
+        m_innerContainment = c->createContainment("org.kde.plasma.simplesystray");
+        config().writeEntry("SystrayContainmentId", m_innerContainment->id());
+    }
+
     if (!m_innerContainment) {
         return;
     }
+
     setProperty("_plasma_graphicObject", QVariant::fromValue(m_innerContainment->property("_plasma_graphicObject")));
 
     connect(m_innerContainment, &Plasma::Containment::configureRequested, this,
@@ -67,7 +84,7 @@ void SystemTrayContainer::constraintsEvent(Plasma::Types::Constraints constraint
         m_innerContainment->setLocation(location());
     }
     if (constraints & Plasma::Types::FormFactorConstraint) {
-        m_innerContainment->setFormFactor(formFactor());
+        //m_innerContainment->setFormFactor(formFactor());
     }
 }
 

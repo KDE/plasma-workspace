@@ -1,7 +1,7 @@
 [Desktop Entry]
 Encoding=UTF-8
 Name=Simple Systray
-Comment=A simpler systray
+Comment=A simpler systray (container)
 Icon=preferences-desktop-notification
 Type=Service
 X-KDE-ServiceTypes=Plasma/Applet

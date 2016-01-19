@@ -25,6 +25,7 @@ import org.kde.plasma.plasmoid 2.0
 MouseArea {
     id: root
 
+    Layout.minimumWidth: tasksRow.implicitWidth + expander.implicitWidth
     property int itemWidth: Math.min(width, units.iconSizes.medium)
     property int itemHeight: Math.min(height, units.iconSizes.medium)
     property alias expanded: dialog.visible
@@ -127,6 +128,7 @@ MouseArea {
 
     //Main Layout
     Row {
+        id: mainLayout
         anchors.fill: parent
 
         Flow {
