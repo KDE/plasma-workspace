@@ -41,11 +41,15 @@ Item {
 
     property bool isExpanded: plasmoid.expanded
 
+    function retrievePosition() {
+        var service = mpris2Source.serviceForSource(mpris2Source.current);
+        var operation = service.operationDescription("GetPosition");
+        service.startOperationCall(operation);
+    }
+
     onIsExpandedChanged: {
         if (isExpanded) {
-            var service = mpris2Source.serviceForSource(mpris2Source.current);
-            var operation = service.operationDescription("GetPosition");
-            service.startOperationCall(operation);
+            retrievePosition();
         }
     }
 
@@ -173,6 +177,8 @@ Item {
                 }
             }
 
+            onMaximumValueChanged: retrievePosition()
+
             Timer {
                 id: seekTimer
                 interval: 1000
@@ -183,7 +189,11 @@ Item {
                     // add one second; value in microseconds
                     if (!seekSlider.pressed) {
                         disablePositionUpdate = true
-                        seekSlider.value += 1000000
+                        if (seekSlider.value == seekSlider.maximumValue) {
+                            retrievePosition();
+                        } else {
+                            seekSlider.value += 1000000
+                        }
                         disablePositionUpdate = false
                     }
                 }
