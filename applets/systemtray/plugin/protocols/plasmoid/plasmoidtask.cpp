@@ -309,11 +309,6 @@ void PlasmoidTask::showMenu(int x, int y)
                                 containmentMenu->addAction(action);
                             }
                         }
-                        foreach (QAction *action, systrayApplet->containment()->actions()->actions()) {
-                            if (action) {
-                                containmentMenu->addAction(action);
-                            }
-                        }
                         desktopMenu->addMenu(containmentMenu);
                     }
                 }
