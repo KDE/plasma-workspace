@@ -64,7 +64,9 @@ int main(int argc, char *argv[])
 //  This variable should possibly be removed when all are fixed
 
     qunsetenv("QT_DEVICE_PIXEL_RATIO");
-
+    #if (QT_VERSION >= QT_VERSION_CHECK(5, 6, 0))
+        QCoreApplication::setAttribute(Qt::AA_DisableHighDpiScaling);
+    #endif
 
     QQuickWindow::setDefaultAlphaBuffer(true);
 
