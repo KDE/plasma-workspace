@@ -90,10 +90,13 @@ void SystemTray::restorePlasmoids()
     }
 
     KConfigGroup cg = config();
+    qWarning()<<"AAAAAA"<<cg.exists()<<cg.groupList();
     cg = KConfigGroup(&cg, "Applets");
+    qWarning()<<"BBBBBB"<<id()<<cg.exists()<<cg.groupList();
     foreach (const QString &group, cg.groupList()) {
-
+qWarning()<<"HHHHH"<<group;
         KConfigGroup appletConfig(&cg, group);
+        qWarning()<<cg.exists()<<cg.entryMap()<<appletConfig.entryMap();
         QString plugin = appletConfig.readEntry("plugin");
         if (!plugin.isEmpty()) {
             m_knownPlugins[plugin] = group.toInt();

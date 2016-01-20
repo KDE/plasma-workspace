@@ -6,8 +6,8 @@ Icon=preferences-desktop-notification
 Type=Service
 X-KDE-ServiceTypes=Plasma/Applet
 
-X-Plasma-RootPath=org.kde.plasma.simplesystray
-X-Plasma-API=native
+X-Plasma-API=declarativeappletscript
+X-Plasma-MainScript=ui/main.qml
 X-KDE-PluginInfo-Author=Marco Martin
 X-KDE-PluginInfo-Email=mart@kde.org
 X-KDE-PluginInfo-Name=org.kde.plasma.systraycontainer

@@ -29,6 +29,7 @@ class QQuickItem;
 class SystemTrayContainer : public Plasma::Applet
 {
     Q_OBJECT
+    Q_PROPERTY(QQuickItem *internalSystray READ internalSystray NOTIFY internalSystrayChanged)
 
 public:
     SystemTrayContainer(QObject *parent, const QVariantList &args);
@@ -36,14 +37,20 @@ public:
 
     void init();
 
+    QQuickItem *internalSystray();
+
 protected:
     void constraintsEvent(Plasma::Types::Constraints constraints);
+
+Q_SIGNALS:
+    void internalSystrayChanged();
 
 private Q_SLOTS:
     
 
 private:
     QPointer<Plasma::Containment> m_innerContainment;
+    QPointer<QQuickItem> m_internalSystray;
 };
 
 #endif

@@ -18,7 +18,6 @@
  ***************************************************************************/
 
 #include "systemtraycontainer.h"
-#include "debug.h"
 
 #include <QDebug>
 #include <QQuickItem>
@@ -38,56 +37,73 @@ SystemTrayContainer::~SystemTrayContainer()
 
 void SystemTrayContainer::init()
 {
+    //Applet::init();
     Plasma::Containment *cont = containment();
-    if (!cont) {
-        return;
-    }
+        if (!cont) {
+            return;
+        }
 
-    Plasma::Corona *c = cont->corona();
-    if (!c) {
-        return;
-    }
+        Plasma::Corona *c = cont->corona();
+        if (!c) {
+            return;
+        }
 
-    uint id = config().readEntry("SystrayContainmentId", 0);
-    qWarning()<<"CONTAINMENT ID"<<id;
-    if (id > 0) {
-        foreach (Plasma::Containment *candidate, c->containments()) {
-            if (candidate->id() == id) {
-                qWarning()<<candidate;
-                m_innerContainment = candidate;
-                break;
+        uint id = config().readEntry("SystrayContainmentId", 0);
+        qWarning()<<"CONTAINMENT ID"<<id;
+        if (id > 0) {
+            foreach (Plasma::Containment *candidate, c->containments()) {
+                qWarning()<<"GGGG"<<candidate->id() << id;
+                if (candidate->id() == id) {
+                    qWarning()<<candidate;
+                    m_innerContainment = candidate;
+                    break;
+                }
             }
+            qWarning()<<"shouldn't go there";
+            //id = 0;
         }
-        id = 0;
-    }
-    if (id <= 0) {
-        m_innerContainment = c->createContainment("org.kde.plasma.simplesystray");
-        config().writeEntry("SystrayContainmentId", m_innerContainment->id());
-    }
-
-    if (!m_innerContainment) {
-        return;
-    }
-
-    setProperty("_plasma_graphicObject", QVariant::fromValue(m_innerContainment->property("_plasma_graphicObject")));
-
-    connect(m_innerContainment, &Plasma::Containment::configureRequested, this,
-        [this] {
-            emit containment()->configureRequested(m_innerContainment);
+        qWarning()<<"FOUND ID:"<<id;
+        if (id <= 0) {
+            m_innerContainment = c->createContainment("org.kde.plasma.simplesystray");
+            config().writeEntry("SystrayContainmentId", m_innerContainment->id());
         }
-    );
+
+        if (!m_innerContainment) {
+            return;
+        }
+
+        m_internalSystray = m_innerContainment->property("_plasma_graphicObject").value<QQuickItem *>();
+        emit internalSystrayChanged();
+qWarning()<<"AAAA"<<m_internalSystray;
+        connect(m_innerContainment, &Plasma::Containment::configureRequested, this,
+            [this] {
+                emit containment()->configureRequested(m_innerContainment);
+            }
+        );
 }
 
 void SystemTrayContainer::constraintsEvent(Plasma::Types::Constraints constraints)
 {
     if (constraints & Plasma::Types::LocationConstraint) {
-        m_innerContainment->setLocation(location());
+        if (m_innerContainment) {
+            m_innerContainment->setLocation(location());
+        }
     }
     if (constraints & Plasma::Types::FormFactorConstraint) {
-        //m_innerContainment->setFormFactor(formFactor());
+        if (m_innerContainment) {
+            //m_innerContainment->setFormFactor(formFactor());
+        }
+    }
+    if (constraints & Plasma::Types::StartupCompletedConstraint) {
+        
     }
 }
 
-K_EXPORT_PLASMA_APPLET_WITH_JSON(systemtraycontainer, SystemTrayContainer, "containermetadata.json")
+QQuickItem *SystemTrayContainer::internalSystray()
+{
+    return m_internalSystray;
+}
+
+K_EXPORT_PLASMA_APPLET_WITH_JSON(systemtraycontainer, SystemTrayContainer, "metadata.json")
 
 #include "systemtraycontainer.moc"
