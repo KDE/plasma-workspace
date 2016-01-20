@@ -37,8 +37,23 @@ SystemTrayContainer::~SystemTrayContainer()
 
 void SystemTrayContainer::init()
 {
-    //Applet::init();
-    Plasma::Containment *cont = containment();
+    Applet::init();
+}
+
+void SystemTrayContainer::constraintsEvent(Plasma::Types::Constraints constraints)
+{
+    if (constraints & Plasma::Types::LocationConstraint) {
+        if (m_innerContainment) {
+            m_innerContainment->setLocation(location());
+        }
+    }
+    if (constraints & Plasma::Types::FormFactorConstraint) {
+        if (m_innerContainment) {
+            //m_innerContainment->setFormFactor(formFactor());
+        }
+    }
+    if (constraints & Plasma::Types::StartupCompletedConstraint) {
+        Plasma::Containment *cont = containment();
         if (!cont) {
             return;
         }
@@ -74,28 +89,12 @@ void SystemTrayContainer::init()
 
         m_internalSystray = m_innerContainment->property("_plasma_graphicObject").value<QQuickItem *>();
         emit internalSystrayChanged();
-qWarning()<<"AAAA"<<m_internalSystray;
+
         connect(m_innerContainment, &Plasma::Containment::configureRequested, this,
             [this] {
                 emit containment()->configureRequested(m_innerContainment);
             }
         );
-}
-
-void SystemTrayContainer::constraintsEvent(Plasma::Types::Constraints constraints)
-{
-    if (constraints & Plasma::Types::LocationConstraint) {
-        if (m_innerContainment) {
-            m_innerContainment->setLocation(location());
-        }
-    }
-    if (constraints & Plasma::Types::FormFactorConstraint) {
-        if (m_innerContainment) {
-            //m_innerContainment->setFormFactor(formFactor());
-        }
-    }
-    if (constraints & Plasma::Types::StartupCompletedConstraint) {
-        
     }
 }
 
