@@ -25,19 +25,24 @@ import org.kde.plasma.plasmoid 2.0
 Item {
     id: root
 
-    Layout.minimumWidth: 600
-Component.onCompleted: {
-    plasmoid.nativeInterface.internalSystray.parent = root;
-            print(plasmoid.nativeInterface.internalSystray)
-            plasmoid.nativeInterface.internalSystray.anchors.fill = root
-}
+    Layout.minimumWidth: internalSystray.Layout.minimumWidth
+    Layout.minimumHeight: internalSystray.Layout.minimumHeight
+
+    Plasmoid.preferredRepresentation: Plasmoid.fullRepresentation
+    property Item internalSystray
+
+    Component.onCompleted: {
+        root.internalSystray = plasmoid.nativeInterface.internalSystray;
+        root.internalSystray.parent = root;
+        root.internalSystray.anchors.fill = root;
+    }
+
     Connections {
         target: plasmoid.nativeInterface
         onInternalSystrayChanged: {
-        print("JJJJ")
-            plasmoid.nativeInterface.internalSystray.parent = root;
-            print(plasmoid.nativeInterface.internalSystray)
-            plasmoid.nativeInterface.internalSystray.anchors.fill = root
+            root.internalSystray = plasmoid.nativeInterface.internalSystray;
+            root.internalSystray.parent = root;
+            root.internalSystray.anchors.fill = root;
         }
     }
 }
