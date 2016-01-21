@@ -69,7 +69,7 @@ Column {
 
         PlasmaComponents.ToolButton {
             id: expandButton
-            iconSource: checked ? "list-remove" : "list-add"
+            iconSource: checked ? "arrow-down" : "arrow-left"
             checkable: true
             onCheckedChanged: {
                 if (checked) {
