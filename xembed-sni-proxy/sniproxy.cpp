@@ -421,6 +421,10 @@ void SNIProxy::sendClick(uint8_t mouseButton, int x, int y)
     QScopedPointer<xcb_get_geometry_reply_t, QScopedPointerPodDeleter>
         clientGeom(xcb_get_geometry_reply(c, cookieSize, Q_NULLPTR));
 
+    if (!clientGeom) {
+        return;
+    }
+
     auto cookie = xcb_query_pointer(c, m_windowId);
     QScopedPointer<xcb_query_pointer_reply_t, QScopedPointerPodDeleter>
         pointer(xcb_query_pointer_reply(c, cookie, Q_NULLPTR));
