@@ -49,7 +49,7 @@ void SystemTrayContainer::constraintsEvent(Plasma::Types::Constraints constraint
     }
     if (constraints & Plasma::Types::FormFactorConstraint) {
         if (m_innerContainment) {
-            //m_innerContainment->setFormFactor(formFactor());
+            m_innerContainment->setFormFactor(formFactor());
         }
     }
     if (constraints & Plasma::Types::StartupCompletedConstraint) {
@@ -67,7 +67,6 @@ void SystemTrayContainer::constraintsEvent(Plasma::Types::Constraints constraint
         qWarning()<<"CONTAINMENT ID"<<id;
         if (id > 0) {
             foreach (Plasma::Containment *candidate, c->containments()) {
-                qWarning()<<"GGGG"<<candidate->id() << id;
                 if (candidate->id() == id) {
                     qWarning()<<candidate;
                     m_innerContainment = candidate;

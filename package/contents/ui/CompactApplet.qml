@@ -23,8 +23,23 @@ import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.plasmoid 2.0
 
 
-Item {
+PlasmaCore.ToolTipArea {
     id: appletRoot
+    objectName: "org.kde.desktop-CompactApplet"
+    anchors.fill: parent
+
+    icon: plasmoid.icon
+    mainText: plasmoid.toolTipMainText
+    subText: plasmoid.toolTipSubText
+    location: if (plasmoid.parent && plasmoid.parent.parent.objectName == "hiddenTasksColumn") {
+                return PlasmaCore.Types.RightEdge;
+              } else {
+                return plasmoid.location;
+              }
+    active: !plasmoid.expanded
+    textFormat: plasmoid.toolTipTextFormat
+    mainItem: plasmoid.toolTipItem ? plasmoid.toolTipItem : null
+
     property Item fullRepresentation
     property Item compactRepresentation
     property Item expandedFeedback: expandedItem
@@ -58,47 +73,6 @@ Item {
             compactRepresentation.visible = true;
         }
         appletRoot.visible = true;
-    }
-
-    PlasmaCore.FrameSvgItem {
-        id: expandedItem
-        anchors.fill: parent
-        imagePath: "widgets/tabbar"
-        visible: fromCurrentTheme
-        prefix: {
-            var prefix;
-            var location;
-            if (plasmoid.parent && plasmoid.parent.parent.objectName == "hiddenTasksColumn") {
-                location = PlasmaCore.Types.LeftEdge;
-            } else {
-                location = plasmoid.location;
-            }
-
-            switch (location) {
-                case PlasmaCore.Types.LeftEdge:
-                    prefix = "west-active-tab";
-                    break;
-                case PlasmaCore.Types.TopEdge:
-                    prefix = "north-active-tab";
-                    break;
-                case PlasmaCore.Types.RightEdge:
-                    prefix = "east-active-tab";
-                    break;
-                default:
-                    prefix = "south-active-tab";
-                }
-                if (!hasElementPrefix(prefix)) {
-                    prefix = "active-tab";
-                }
-                return prefix;
-            }
-        opacity: plasmoid.expanded ? 1 : 0
-        Behavior on opacity {
-            NumberAnimation {
-                duration: units.shortDuration
-                easing.type: Easing.InOutQuad
-            }
-        }
     }
 }
 

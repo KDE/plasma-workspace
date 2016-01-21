@@ -126,6 +126,8 @@ MouseArea {
         }
     }
 
+    CurrentItemHighLight {}
+
     //Main Layout
     Row {
         id: mainLayout
@@ -133,7 +135,7 @@ MouseArea {
 
         Flow {
             id: tasksRow
-            spacing: 4
+            spacing: 0
             height: parent.height
             width: parent.width - expander.width
             property string skipItems
