@@ -57,4 +57,9 @@ Image {
             loaderConnection.target = null;
         }
     }
+    Component.onCompleted: {
+        if (root.interfaceVersion < 2) {
+            mainLoader.source = "LockScreenUi.qml";
+        }
+    }
 }
