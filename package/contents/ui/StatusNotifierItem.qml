@@ -52,7 +52,13 @@ Item {
         }
     }
     PlasmaComponents.Label {
-        visible: taskIcon.hidden && !root.activeApplet
+        opacity: taskIcon.hidden && !root.activeApplet ? 1 : 0
+        Behavior on opacity {
+            NumberAnimation {
+                duration: units.longDuration
+                easing.type: Easing.InOutQuad
+            }
+        }
         anchors {
             left: parent.right
             verticalCenter: parent.verticalCenter

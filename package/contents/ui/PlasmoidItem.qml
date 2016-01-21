@@ -58,7 +58,13 @@ Item {
     }
 
     PlasmaComponents.Label {
-        visible: plasmoidContainer.hidden && !root.activeApplet
+        opacity: plasmoidContainer.hidden && !root.activeApplet ? 1 : 0
+        Behavior on opacity {
+            NumberAnimation {
+                duration: units.longDuration
+                easing.type: Easing.InOutQuad
+            }
+        }
         anchors {
             left: parent.right
             verticalCenter: parent.verticalCenter

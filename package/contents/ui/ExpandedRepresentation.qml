@@ -23,6 +23,7 @@ import org.kde.plasma.core 2.0 as PlasmaCore
 
 RowLayout {
     id: expandedRepresentation
+    spacing: 0
 
     Layout.minimumWidth: Layout.minimumHeight
     Layout.minimumHeight: units.gridUnit * 22
@@ -31,18 +32,33 @@ RowLayout {
 
     property alias activeApplet: container.activeApplet
     property alias hiddenLayout: hiddenTasksColumn
-
-    Column {
-        id: hiddenTasksColumn
-        visible: !activeApplet || activeApplet.parent.parent == hiddenTasksColumn
-        objectName: "hiddenTasksColumn"
-        Layout.minimumWidth: units.iconSizes.smallMedium
+    Item {
+        y: units.gridUnit * 4
+        Layout.minimumHeight: hiddenTasksColumn.implicitHeight
+        Layout.minimumWidth: units.iconSizes.medium
         Layout.maximumWidth: Layout.minimumWidth
-        Repeater {
-            id: hiddenTasksRepeater
-            model: hiddenTasksModel
+        visible: !activeApplet || activeApplet.parent.parent == hiddenTasksColumn
 
-            delegate: StatusNotifierItem {}
+        CurrentItemHighLight {
+            target: root.activeApplet && root.activeApplet.parent.parent == hiddenTasksColumn ? root.activeApplet.parent : null
+            location: PlasmaCore.Types.LeftEdge
+        }
+
+        Column {
+            id: hiddenTasksColumn
+            anchors {
+                left: parent.left
+                right: parent.right
+            }
+            
+            objectName: "hiddenTasksColumn"
+
+            Repeater {
+                id: hiddenTasksRepeater
+                model: hiddenTasksModel
+
+                delegate: StatusNotifierItem {}
+            }
         }
     }
 

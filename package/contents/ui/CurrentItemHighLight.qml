@@ -22,14 +22,18 @@ import org.kde.plasma.core 2.0 as PlasmaCore
 
 PlasmaCore.FrameSvgItem {
     id: expandedItem
-    property Item target: root.activeApplet && root.activeApplet.parent.parent == tasksRow ? root.activeApplet.parent : root
+
+    property Item target
+    property int location
+
     x: target.x
     y: target.y
     width: target.width
     height: target.height
+
     imagePath: "widgets/tabbar"
     prefix: {
-        switch (plasmoid.location) {
+        switch (location) {
             case PlasmaCore.Types.LeftEdge:
                 prefix = "west-active-tab";
                 break;
@@ -47,7 +51,7 @@ PlasmaCore.FrameSvgItem {
             }
             return prefix;
         }
-    opacity: dialog.visible ? 1 : 0
+    opacity: target && dialog.visible ? 1 : 0
     Behavior on opacity {
         NumberAnimation {
             duration: units.longDuration

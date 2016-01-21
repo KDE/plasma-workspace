@@ -73,7 +73,7 @@ Item {
         id: emptyPage
     }
 
-    StackView {
+    PlasmaComponents.PageStack {
         id: mainStack
         //visible: popupsContainer.activeApplet != null
         clip: true

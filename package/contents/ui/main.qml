@@ -126,7 +126,10 @@ MouseArea {
         }
     }
 
-    CurrentItemHighLight {}
+    CurrentItemHighLight {
+        target: root.activeApplet && root.activeApplet.parent.parent == tasksRow ? root.activeApplet.parent : root
+        location: plasmoid.location
+    }
 
     //Main Layout
     Row {
