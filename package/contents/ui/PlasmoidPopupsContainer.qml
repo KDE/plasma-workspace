@@ -42,7 +42,7 @@ Item {
             activeApplet.fullRepresentationItem.anchors.centerIn = undefined;
             activeApplet.fullRepresentationItem.anchors.fill = undefined;
 
-            mainStack.replace(activeApplet.fullRepresentationItem);
+            mainStack.replace({item: activeApplet.fullRepresentationItem, immediate: !dialog.visible});
         } else {
             mainStack.replace(emptyPage);
         }
@@ -73,9 +73,8 @@ Item {
         id: emptyPage
     }
 
-    PlasmaComponents.PageStack {
+    StackView {
         id: mainStack
-        //visible: popupsContainer.activeApplet != null
         clip: true
         anchors {
             top: heading.bottom

@@ -33,7 +33,7 @@ RowLayout {
     property alias activeApplet: container.activeApplet
     property alias hiddenLayout: hiddenTasksColumn
     Item {
-        y: units.gridUnit * 4
+        y: units.gridUnit 
         Layout.minimumHeight: hiddenTasksColumn.implicitHeight
         Layout.minimumWidth: units.iconSizes.medium
         Layout.maximumWidth: Layout.minimumWidth
