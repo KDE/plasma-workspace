@@ -43,7 +43,7 @@ MouseArea {
         var operation = service.operationDescription("invokeAction");
         operation.predicate = predicate;
         service.startOperationCall(operation);
-        devicenotifier.currentExpanded = -1;
+        devicenotifier.expandedDevice = "";
         devicenotifier.currentIndex = -1;
     }
 

@@ -21,8 +21,9 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-import QtQuick 2.0
+import QtQuick 2.2
 import QtQuick.Layouts 1.1
+
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.plasma.extras 2.0 as PlasmaExtras
@@ -43,29 +44,48 @@ MouseArea {
         level: 3
         opacity: 0.6
         text: i18n("No Devices Available")
-        visible: filterModel.count == 0
+        visible: notifierDialog.count === 0 && !devicenotifier.pendingDelegateRemoval
     }
 
-    PlasmaCore.DataSource {
-        id: statusSource
-        engine: "devicenotifications"
-        property string last
-        onSourceAdded: {
-            console.debug("Source added " + last);
-            last = source;
-            disconnectSource(source);
-            connectSource(source);
+    // this item is reparented to a delegate that is showing a message to draw focus to it
+    PlasmaComponents.Highlight {
+        id: messageHighlight
+        visible: false
+
+        OpacityAnimator {
+            id: messageHighlightAnimator
+            target: messageHighlight
+            from: 1
+            to: 0
+            duration: 3000
+            easing.type: Easing.InOutQuad
         }
-        onSourceRemoved: {
-            console.debug("Source removed " + last);
-            disconnectSource(source);
+
+        Connections {
+            target: statusSource
+            onLastChanged: {
+                if (!statusSource.last) {
+                    messageHighlightAnimator.stop()
+                    messageHighlight.visible = false
+                }
+            }
         }
-        onDataChanged: {
-            console.debug("Data changed for " + last);
-            console.debug("Error:" + data[last]["error"]);
-            if (last != "") {
-                statusBar.setData(data[last]["error"], data[last]["errorDetails"], data[last]["udi"]);
-                plasmoid.expanded = true;
+
+        function highlight(item) {
+            parent = item
+            width = Qt.binding(function() { return item.width })
+            height = Qt.binding(function() { return item.height })
+            opacity = 1 // Animator is threaded so the old opacity might be visible for a frame or two
+            visible = true
+            messageHighlightAnimator.start()
+        }
+    }
+
+    Connections {
+        target: plasmoid
+        onExpandedChanged: {
+            if (!plasmoid.expanded) {
+                statusSource.clearMessage()
             }
         }
     }
@@ -119,36 +139,18 @@ MouseArea {
                 }
             }
         }
-
-        PlasmaCore.SvgItem {
-            id: statusBarSeparator
-            Layout.fillWidth: true
-            svg: lineSvg
-            elementId: "horizontal-line"
-            height: lineSvg.elementSize("horizontal-line").height
-
-            visible: statusBar.height>0
-            anchors.bottom: statusBar.top
-        }
-
-        StatusBar {
-            id: statusBar
-            Layout.fillWidth: true
-            anchors.bottom: parent.bottom
-        }
     }
 
     Component {
         id: deviceItem
 
         DeviceItem {
-            id: wrapper
             width: notifierDialog.width
             udi: DataEngineSource
-            icon: sdSource.data[udi] ? sdSource.data[udi]["Icon"] : ""
-            deviceName: sdSource.data[udi] ? sdSource.data[udi]["Description"] : ""
+            icon: sdSource.data[udi].Icon
+            deviceName: sdSource.data[udi].Description
             emblemIcon: Emblems[0]
-            state: sdSource.data[udi]["State"]
+            state: sdSource.data[udi].State
 
             percentUsage: {
                 if (!sdSource.data[udi]) {
@@ -180,14 +182,8 @@ MouseArea {
                 var operation = service.operationDescription(operationName);
                 service.startOperationCall(operation);
             }
-            property bool isLast: (expandedDevice == udi)
             property int operationResult: (model["Operation result"])
 
-            onIsLastChanged: {
-                if (isLast) {
-                    devicenotifier.currentExpanded = index
-                }
-            }
             onOperationResultChanged: {
                 if (operationResult == 1) {
                     devicenotifier.popupIcon = "dialog-ok"

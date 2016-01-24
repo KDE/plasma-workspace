@@ -30,24 +30,33 @@ MouseArea {
     id: deviceItem
 
     property string udi
-    property string icon
+    property alias icon: deviceIcon.source
     property alias deviceName: deviceLabel.text
     property string emblemIcon
     property int state
 
     property bool mounted
-    property bool expanded: devicenotifier.currentExpanded == index
+    property bool expanded: devicenotifier.expandedDevice == udi
     property alias percentUsage: freeSpaceBar.value
     property string freeSpaceText
 
     signal actionTriggered
 
-    property alias actionIcon: action.iconName
-    property alias actionToolTip: action.tooltip
+    property alias actionIcon: actionButton.iconName
+    property alias actionToolTip: actionButton.tooltip
     property bool actionVisible
+
+    readonly property bool hasMessage: statusSource.lastUdi == udi && statusSource.data[statusSource.last] ? true : false
+    readonly property var message: hasMessage ? statusSource.data[statusSource.last] || ({}) : ({})
 
     height: row.childrenRect.height + 2 * row.y
     hoverEnabled: true
+
+    onHasMessageChanged: {
+        if (hasMessage) {
+            messageHighlight.highlight(this)
+        }
+    }
 
     onContainsMouseChanged: {
         if (containsMouse) {
@@ -62,14 +71,50 @@ MouseArea {
     }
 
     onClicked: {
-        var actions = hpSource.data[udi].actions
+        var data = hpSource.data[udi]
+        if (!data) {
+            return
+        }
+
+        var actions = data.actions
         if (actions.length === 1) {
             var service = hpSource.serviceForSource(udi)
             var operation = service.operationDescription("invokeAction")
             operation.predicate = actions[0].predicate
             service.startOperationCall(operation)
         } else {
-            devicenotifier.currentExpanded = (expanded ? -1 : index)
+            devicenotifier.expandedDevice = (expanded ? "" : udi)
+        }
+    }
+
+    // this keeps the delegate around for 5 seconds after the device has been
+    // removed in case there was a message, such as "you can now safely remove this"
+    ListView.onRemove: {
+        if (devicenotifier.expandedDevice == udi) {
+            devicenotifier.expandedDevice = ""
+        }
+
+        if (deviceItem.hasMessage) {
+            ListView.delayRemove = true
+            keepDelegateTimer.restart()
+
+            statusMessage.opacity = 1 // HACK seems the Column animation breaksf
+            freeSpaceBar.visible = false
+            actionButton.visible = false
+
+            ++devicenotifier.pendingDelegateRemoval // QTBUG-50380
+        }
+    }
+
+    Timer {
+        id: keepDelegateTimer
+        interval: 3000 // same interval as the auto hide / passive timer
+        onTriggered: {
+            deviceItem.ListView.delayRemove = false
+            // otherwise the last message will show again when this device reappears
+            statusSource.clearMessage()
+
+            --devicenotifier.pendingDelegateRemoval // QTBUG-50380
         }
     }
 
@@ -87,19 +132,30 @@ MouseArea {
             Layout.alignment: Qt.AlignTop
             Layout.preferredWidth: units.iconSizes.medium
             Layout.preferredHeight: width
-            source: deviceItem.icon
             enabled: deviceItem.state == 0
             active: iconToolTip.containsMouse
 
             PlasmaCore.IconItem {
+                id: deviceEmblem
                 anchors {
                     left: parent.left
                     bottom: parent.bottom
                 }
-                id: emblem
                 width: units.iconSizes.small
                 height: width
-                source: deviceItem.state == 0 ? emblemIcon : null
+                source: {
+                    if (deviceItem.hasMessage) {
+                        if (deviceItem.message.solidError === 0) {
+                            return "emblem-information"
+                        } else {
+                            return "emblem-error"
+                        }
+                    } else if (deviceItem.state == 0) {
+                        return emblemIcon
+                    } else {
+                        return ""
+                    }
+                }
             }
 
             PlasmaCore.ToolTipArea {
@@ -177,7 +233,7 @@ MouseArea {
                 height: undefined
                 opacity: 0.6
                 font.pointSize: theme.smallestFont.pointSize
-                visible: deviceItem.state != 0 || !actionsList.visible
+                visible: deviceItem.state != 0 || (!actionsList.visible && !deviceItem.hasMessage)
                 text: {
                     // FIXME: state changes do not reach the plasmoid if the
                     // device was already attached when the plasmoid was initialized
@@ -198,6 +254,18 @@ MouseArea {
                         return i18nc("Removing is a less technical word for Unmounting; translation shoud be short and mean \'Currently unmounting this device\'", "Removing...")
                     }
                 }
+            }
+
+            PlasmaComponents.Label {
+                id: statusMessage
+                width: parent.width
+                height: undefined
+                font.pointSize: theme.smallestFont.pointSize
+                text: deviceItem.hasMessage ? (deviceItem.message.error || "") : ""
+                wrapMode: Text.WordWrap
+                maximumLineCount: 10
+                elide: Text.ElideRight
+                visible: deviceItem.hasMessage
             }
 
             Item { // spacer
@@ -231,7 +299,7 @@ MouseArea {
             Layout.fillHeight: true
 
             PlasmaComponents.ToolButton {
-                id: action
+                id: actionButton
                 visible: !busyIndicator.visible && deviceItem.actionVisible
                 onClicked: actionTriggered()
             }
