@@ -163,7 +163,7 @@ void KSolidNotify::onSolidReply(SolidReplyType type, Solid::ErrorType error, con
             errorMsg = i18n("You are not authorized to mount this device.");
             break;
         case SolidReplyType::Teardown:
-            errorMsg = i18nc("Remove is less technical for unmount", "You are not authorized to remove this devce.");
+            errorMsg = i18nc("Remove is less technical for unmount", "You are not authorized to remove this device.");
             break;
         case SolidReplyType::Eject:
             errorMsg = i18n("You are not authorized to eject this disc.");
