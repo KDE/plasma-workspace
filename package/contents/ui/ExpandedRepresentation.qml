@@ -20,53 +20,52 @@
 import QtQuick 2.1
 import QtQuick.Layouts 1.1
 import org.kde.plasma.core 2.0 as PlasmaCore
+import org.kde.plasma.extras 2.0 as PlasmaExtras
 
-RowLayout {
+Item {
     id: expandedRepresentation
-    spacing: 0
 
     Layout.minimumWidth: Layout.minimumHeight
-    Layout.minimumHeight: units.gridUnit * 22
+    Layout.minimumHeight: units.gridUnit * 20
     Layout.preferredWidth: Layout.minimumWidth
     Layout.preferredHeight: Layout.minimumHeight * 1.5
 
     property alias activeApplet: container.activeApplet
     property alias hiddenLayout: hiddenTasksColumn
-    Item {
-        y: units.gridUnit 
-        Layout.minimumHeight: hiddenTasksColumn.implicitHeight
-        Layout.minimumWidth: units.iconSizes.medium
-        Layout.maximumWidth: Layout.minimumWidth
-        visible: !activeApplet || activeApplet.parent.parent == hiddenTasksColumn
 
-        CurrentItemHighLight {
-            target: root.activeApplet && root.activeApplet.parent.parent == hiddenTasksColumn ? root.activeApplet.parent : null
-            location: PlasmaCore.Types.LeftEdge
+
+    PlasmaExtras.Heading {
+        id: heading
+        level: 1
+
+        anchors {
+            left: parent.left
+            top: parent.top
+            right: parent.right
+            leftMargin: hiddenTasksView.visible ? hiddenTasksColumn.width + units.smallSpacing : 0
         }
 
-        Column {
-            id: hiddenTasksColumn
-            anchors {
-                left: parent.left
-                right: parent.right
-            }
-            
-            objectName: "hiddenTasksColumn"
-
-            Repeater {
-                id: hiddenTasksRepeater
-                model: hiddenTasksModel
-
-                delegate: StatusNotifierItem {}
+        text: activeApplet ? activeApplet.title : i18n("Status & Notifications")
+        MouseArea {
+            anchors.fill: parent
+            onClicked: {
+                if (activeApplet) {
+                    activeApplet.expanded = false;
+                    dialog.visible = true;
+                }
             }
         }
     }
 
     PlasmaCore.SvgItem {
         visible: hiddenTasksColumn.visible && activeApplet
-        Layout.minimumWidth: lineSvg.elementSize("vertical-line").width
-        Layout.maximumWidth: Layout.minimumWidth
-        Layout.fillHeight: true
+        width: lineSvg.elementSize("vertical-line").width
+        x: hiddenTasksColumn.width
+        anchors {
+            top: parent.top
+            bottom: parent.bottom
+            margins: -units.gridUnit
+        }
 
         elementId: "vertical-line"
 
@@ -76,9 +75,55 @@ RowLayout {
         }
     }
 
+    PlasmaExtras.ScrollArea {
+        id: hiddenTasksView
+        anchors {
+            left: parent.left
+            top: heading.bottom
+            bottom: parent.bottom
+        }
+        visible: !activeApplet || activeApplet.parent.parent == hiddenTasksColumn
+        width: activeApplet ? units.iconSizes.smallMedium : parent.width
+
+        Flickable {
+            contentWidth: width
+            contentHeight: hiddenTasksColumn.height
+
+            Item {
+                width: hiddenTasksColumn.width
+                height: hiddenTasksColumn.height
+
+                CurrentItemHighLight {
+                    target: root.activeApplet && root.activeApplet.parent.parent == hiddenTasksColumn ? root.activeApplet.parent : null
+                    location: PlasmaCore.Types.LeftEdge
+                }
+
+                Column {
+                    id: hiddenTasksColumn
+                    spacing: units.smallSpacing
+                    width: units.iconSizes.smallMedium
+                    
+                    objectName: "hiddenTasksColumn"
+
+                    Repeater {
+                        id: hiddenTasksRepeater
+                        model: hiddenTasksModel
+
+                        delegate: StatusNotifierItem {}
+                    }
+                }
+            }
+        }
+    }
+
     PlasmoidPopupsContainer {
         id: container
-        Layout.fillWidth: true
-        Layout.fillHeight: true
+        anchors {
+            left: parent.left
+            right: parent.right
+            top: heading.bottom
+            bottom: parent.bottom
+            leftMargin: hiddenTasksView.visible ? units.iconSizes.smallMedium + units.smallSpacing : 0
+        }
     }
 }

@@ -23,8 +23,8 @@ import org.kde.plasma.components 2.0 as PlasmaComponents
 
 Item {
     id: taskIcon
-    width: root.itemWidth
-    height: root.itemHeight
+    width: hidden ? root.hiddenItemSize : root.itemSize
+    height: width
 
     property bool hidden: parent.objectName == "hiddenTasksColumn"
 

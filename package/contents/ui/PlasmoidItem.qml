@@ -23,8 +23,8 @@ import org.kde.plasma.components 2.0 as PlasmaComponents
 
 Item {
     id: plasmoidContainer
-    width: root.itemWidth
-    height: root.itemHeight
+    width: hidden ? root.hiddenItemSize : root.itemSize
+    height: width
     property Item applet
     property bool hidden: applet.parent.parent.objectName == "hiddenTasksColumn"
 
@@ -51,6 +51,7 @@ Item {
         onStatusChanged: {
             if (applet.status == PlasmaCore.Types.PassiveStatus) {
                 plasmoidContainer.parent = hiddenLayout;
+                plasmoidContainer.x = 0;
             } else {
                 plasmoidContainer.parent = visibleLayout;
             }

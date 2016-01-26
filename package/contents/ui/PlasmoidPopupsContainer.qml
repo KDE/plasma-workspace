@@ -22,10 +22,10 @@ import QtQuick.Layouts 1.1
 import QtQuick.Controls 1.4
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
-import org.kde.plasma.extras 2.0 as PlasmaExtras
 
-Item {
-    id: popupsContainer
+StackView {
+    id: mainStack
+    clip: true
 
     Layout.minimumWidth: units.gridUnit * 12
     Layout.minimumHeight: units.gridUnit * 12
@@ -48,73 +48,42 @@ Item {
         }
     }
 
-    PlasmaExtras.Heading {
-        id: heading
-        level: 1
-
-        anchors {
-            top: parent.top
-            left: parent.left
-            right: parent.right
-        }
-        text: activeApplet ? activeApplet.title : i18n("Status & Notifications")
-        MouseArea {
-            anchors.fill: parent
-            onClicked: {
-                if (activeApplet) {
-                    activeApplet.expanded = false;
-                    dialog.visible = true;
-                }
-            }
-        }
-    }
-
-    //used to anymate away to nothing
+    //used to animate away to nothing
     Item {
         id: emptyPage
     }
 
-    StackView {
-        id: mainStack
-        clip: true
-        anchors {
-            top: heading.bottom
-            left: parent.left
-            right: parent.right
-            bottom: parent.bottom
+    delegate: StackViewDelegate {
+        function transitionFinished(properties) {
+            properties.exitItem.opacity = 1
         }
-        delegate: StackViewDelegate {
-            function transitionFinished(properties) {
-                properties.exitItem.opacity = 1
-            }
-            replaceTransition: StackViewTransition {
-                ParallelAnimation {
-                    PropertyAnimation {
-                        target: enterItem
-                        property: "x"
-                        from: enterItem.width
-                        to: 0
-                    }
-                    PropertyAnimation {
-                        target: enterItem
-                        property: "opacity"
-                        from: 0
-                        to: 1
-                    }
+        replaceTransition: StackViewTransition {
+            ParallelAnimation {
+                PropertyAnimation {
+                    target: enterItem
+                    property: "x"
+                    from: enterItem.width
+                    to: 0
                 }
-                ParallelAnimation {
-                    PropertyAnimation {
-                        target: exitItem
-                        property: "x"
-                        from: 0
-                        to: -exitItem.width
-                    }
-                    PropertyAnimation {
-                        target: exitItem
-                        property: "opacity"
-                        from: 1
-                        to: 0
-                    }
+                PropertyAnimation {
+                    target: enterItem
+                    property: "opacity"
+                    from: 0
+                    to: 1
+                }
+            }
+            ParallelAnimation {
+                PropertyAnimation {
+                    target: exitItem
+                    property: "x"
+                    from: 0
+                    to: -exitItem.width
+                }
+                PropertyAnimation {
+                    target: exitItem
+                    property: "opacity"
+                    from: 1
+                    to: 0
                 }
             }
         }
