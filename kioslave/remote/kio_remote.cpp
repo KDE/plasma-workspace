@@ -89,21 +89,19 @@ void RemoteProtocol::listRoot()
 	totalSize(remote_entries.count()+2);
 
 	m_impl.createTopLevelEntry(entry);
-	listEntry(entry, false);
+	listEntry(entry);
 
-	m_impl.createWizardEntry(entry);
-	listEntry(entry, false);
+	if(m_impl.createWizardEntry(entry))
+        listEntry(entry);
 
 	KIO::UDSEntryList::ConstIterator it = remote_entries.constBegin();
 	const KIO::UDSEntryList::ConstIterator end = remote_entries.constEnd();
 	for(; it!=end; ++it)
 	{
-		listEntry(*it, false);
+		listEntry(*it);
 	}
 
 	entry.clear();
-	listEntry(entry, true);
-
 	finished();
 }
 
