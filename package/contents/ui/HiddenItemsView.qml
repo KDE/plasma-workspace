@@ -20,6 +20,7 @@
 import QtQuick 2.1
 import QtQuick.Layouts 1.1
 import org.kde.plasma.core 2.0 as PlasmaCore
+import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 
 
@@ -35,18 +36,25 @@ PlasmaExtras.ScrollArea {
         contentHeight: hiddenTasksColumn.height
 
         Item {
-            width: hiddenTasksColumn.width
+            width: parent.width
             height: hiddenTasksColumn.height
 
             CurrentItemHighLight {
                 target: root.activeApplet && root.activeApplet.parent.parent == hiddenTasksColumn ? root.activeApplet.parent : null
                 location: PlasmaCore.Types.LeftEdge
             }
+            PlasmaComponents.Highlight {
+                visible: hiddenTasksColumn.hoveredItem != null && !root.activeApplet
+                y: hiddenTasksColumn.hoveredItem.y
+                width: hiddenTasksColumn.hoveredItem.width
+                height: hiddenTasksColumn.hoveredItem.height
+            }
 
             Column {
                 id: hiddenTasksColumn
                 spacing: units.smallSpacing
-                width: units.iconSizes.smallMedium
+                width: parent.width
+                property Item hoveredItem
                 
                 objectName: "hiddenTasksColumn"
 

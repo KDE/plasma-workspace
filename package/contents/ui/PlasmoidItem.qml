@@ -21,12 +21,26 @@ import QtQuick 2.1
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
 
-Item {
+MouseArea {
     id: plasmoidContainer
-    width: hidden ? root.hiddenItemSize : root.itemSize
-    height: width
+    height: hidden ? root.hiddenItemSize : root.itemSize
+    width: labelVisible ? parent.width : height
     property Item applet
     property bool hidden: applet.parent.parent.objectName == "hiddenTasksColumn"
+    property bool labelVisible: plasmoidContainer.hidden && !root.activeApplet
+    hoverEnabled: true
+
+    onEntered: {
+        if (hidden) {
+            root.hiddenLayout.hoveredItem = plasmoidContainer
+        }
+    }
+    onClicked: {
+        applet.expanded = true;
+    }
+    onHeightChanged: {
+        applet.width = height
+    }
 
     Connections {
         target: applet
@@ -59,7 +73,8 @@ Item {
     }
 
     PlasmaComponents.Label {
-        opacity: plasmoidContainer.hidden && !root.activeApplet ? 1 : 0
+        opacity: labelVisible ? 1 : 0
+        x: applet.width + units.smallSpacing
         Behavior on opacity {
             NumberAnimation {
                 duration: units.longDuration
@@ -67,9 +82,7 @@ Item {
             }
         }
         anchors {
-            left: parent.right
             verticalCenter: parent.verticalCenter
-            leftMargin: units.smallSpacing
         }
         text: applet.title
     }

@@ -41,7 +41,10 @@ MouseArea {
 
         plasmoidContainer.applet = applet
         applet.parent = plasmoidContainer
-        applet.anchors.fill = plasmoidContainer
+        applet.anchors.left = plasmoidContainer.left
+        applet.anchors.top = plasmoidContainer.top
+        applet.anchors.bottom = plasmoidContainer.bottom
+        applet.width = plasmoidContainer.height
         applet.visible = true
         plasmoidContainer.visible = true
     }

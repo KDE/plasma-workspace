@@ -42,7 +42,7 @@ Item {
             left: parent.left
             top: parent.top
             right: parent.right
-            leftMargin: hiddenItemsView.visible ? hiddenLayout.width + units.smallSpacing : 0
+            leftMargin: hiddenItemsView.visible ? units.iconSizes.smallMedium + units.smallSpacing : 0
         }
 
         text: activeApplet ? activeApplet.title : i18n("Status & Notifications")
