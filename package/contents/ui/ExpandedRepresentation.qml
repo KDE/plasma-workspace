@@ -31,7 +31,7 @@ Item {
     Layout.preferredHeight: Layout.minimumHeight * 1.5
 
     property alias activeApplet: container.activeApplet
-    property alias hiddenLayout: hiddenTasksColumn
+    property alias hiddenLayout: hiddenItemsView.layout
 
 
     PlasmaExtras.Heading {
@@ -42,7 +42,7 @@ Item {
             left: parent.left
             top: parent.top
             right: parent.right
-            leftMargin: hiddenTasksView.visible ? hiddenTasksColumn.width + units.smallSpacing : 0
+            leftMargin: hiddenItemsView.visible ? hiddenLayout.width + units.smallSpacing : 0
         }
 
         text: activeApplet ? activeApplet.title : i18n("Status & Notifications")
@@ -58,9 +58,9 @@ Item {
     }
 
     PlasmaCore.SvgItem {
-        visible: hiddenTasksColumn.visible && activeApplet
+        visible: hiddenItemsView.visible && activeApplet
         width: lineSvg.elementSize("vertical-line").width
-        x: hiddenTasksColumn.width
+        x: hiddenLayout.width
         anchors {
             top: parent.top
             bottom: parent.bottom
@@ -75,44 +75,12 @@ Item {
         }
     }
 
-    PlasmaExtras.ScrollArea {
-        id: hiddenTasksView
+    HiddenItemsView {
+        id: hiddenItemsView
         anchors {
             left: parent.left
             top: heading.bottom
             bottom: parent.bottom
-        }
-        visible: !activeApplet || activeApplet.parent.parent == hiddenTasksColumn
-        width: activeApplet ? units.iconSizes.smallMedium : parent.width
-
-        Flickable {
-            contentWidth: width
-            contentHeight: hiddenTasksColumn.height
-
-            Item {
-                width: hiddenTasksColumn.width
-                height: hiddenTasksColumn.height
-
-                CurrentItemHighLight {
-                    target: root.activeApplet && root.activeApplet.parent.parent == hiddenTasksColumn ? root.activeApplet.parent : null
-                    location: PlasmaCore.Types.LeftEdge
-                }
-
-                Column {
-                    id: hiddenTasksColumn
-                    spacing: units.smallSpacing
-                    width: units.iconSizes.smallMedium
-                    
-                    objectName: "hiddenTasksColumn"
-
-                    Repeater {
-                        id: hiddenTasksRepeater
-                        model: hiddenTasksModel
-
-                        delegate: StatusNotifierItem {}
-                    }
-                }
-            }
         }
     }
 
@@ -123,7 +91,7 @@ Item {
             right: parent.right
             top: heading.bottom
             bottom: parent.bottom
-            leftMargin: hiddenTasksView.visible ? units.iconSizes.smallMedium + units.smallSpacing : 0
+            leftMargin: hiddenItemsView.visible ? units.iconSizes.smallMedium + units.smallSpacing : 0
         }
     }
 }
