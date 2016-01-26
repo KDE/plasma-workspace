@@ -63,7 +63,7 @@ RowLayout {
     }
 
     PlasmaCore.SvgItem {
-        visible: hiddenTasksColumn.visible || !activeApplet
+        visible: hiddenTasksColumn.visible && activeApplet
         Layout.minimumWidth: lineSvg.elementSize("vertical-line").width
         Layout.maximumWidth: Layout.minimumWidth
         Layout.fillHeight: true

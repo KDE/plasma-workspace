@@ -17,7 +17,7 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-import QtQuick 2.1
+import QtQuick 2.4
 import QtQuick.Layouts 1.1
 import QtQuick.Controls 1.4
 import org.kde.plasma.core 2.0 as PlasmaCore
@@ -63,6 +63,7 @@ Item {
             onClicked: {
                 if (activeApplet) {
                     activeApplet.expanded = false;
+                    dialog.visible = true;
                 }
             }
         }
@@ -81,6 +82,41 @@ Item {
             left: parent.left
             right: parent.right
             bottom: parent.bottom
+        }
+        delegate: StackViewDelegate {
+            function transitionFinished(properties) {
+                properties.exitItem.opacity = 1
+            }
+            replaceTransition: StackViewTransition {
+                ParallelAnimation {
+                    PropertyAnimation {
+                        target: enterItem
+                        property: "x"
+                        from: enterItem.width
+                        to: 0
+                    }
+                    PropertyAnimation {
+                        target: enterItem
+                        property: "opacity"
+                        from: 0
+                        to: 1
+                    }
+                }
+                ParallelAnimation {
+                    PropertyAnimation {
+                        target: exitItem
+                        property: "x"
+                        from: 0
+                        to: -exitItem.width
+                    }
+                    PropertyAnimation {
+                        target: exitItem
+                        property: "opacity"
+                        from: 1
+                        to: 0
+                    }
+                }
+            }
         }
     }
 }
