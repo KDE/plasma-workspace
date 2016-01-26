@@ -70,9 +70,8 @@ Q_SIGNALS:
     void rejected();
 
 protected:
-    void resizeEvent(QResizeEvent *e);
-    void mousePressEvent(QMouseEvent *e);
-    void keyPressEvent(QMouseEvent *e);
+    void resizeEvent(QResizeEvent *e) Q_DECL_OVERRIDE;
+    void mousePressEvent(QMouseEvent *e) Q_DECL_OVERRIDE;
 
 private:
     KSMShutdownDlg( QWindow* parent, bool maysd, bool choose, KWorkSpace::ShutdownType sdtype, const QString& theme );
