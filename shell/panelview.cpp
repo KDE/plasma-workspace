@@ -545,7 +545,7 @@ void PanelView::showConfigurationInterface(Plasma::Applet *applet)
 
     Plasma::Containment *cont = qobject_cast<Plasma::Containment *>(applet);
 
-    if (m_panelConfigView && cont && cont->isContainment()) {
+    if (m_panelConfigView && cont && cont == containment() && cont->isContainment()) {
         if (m_panelConfigView.data()->isVisible()) {
             m_panelConfigView.data()->hide();
         } else {
@@ -564,7 +564,7 @@ void PanelView::showConfigurationInterface(Plasma::Applet *applet)
         }
     }
 
-    if (cont && cont->isContainment()) {
+    if (cont && cont == containment() && cont->isContainment()) {
         m_panelConfigView = new PanelConfigView(cont, this);
     } else {
         m_panelConfigView = new PlasmaQuick::ConfigView(applet);
@@ -573,7 +573,7 @@ void PanelView::showConfigurationInterface(Plasma::Applet *applet)
     m_panelConfigView.data()->init();
     m_panelConfigView.data()->show();
 
-    if (cont && cont->isContainment()) {
+    if (cont && cont == containment() && cont->isContainment()) {
         KWindowSystem::setState(m_panelConfigView.data()->winId(), NET::SkipTaskbar | NET::SkipPager);
     }
 }
