@@ -95,6 +95,7 @@ void SystemTrayContainer::constraintsEvent(Plasma::Types::Constraints constraint
         } else {
             m_innerContainment->setFormFactor(Plasma::Types::Horizontal);
         }
+        m_innerContainment->setLocation(location());
 
         m_internalSystray = m_innerContainment->property("_plasma_graphicObject").value<QQuickItem *>();
         emit internalSystrayChanged();

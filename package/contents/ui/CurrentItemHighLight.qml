@@ -59,24 +59,28 @@ PlasmaCore.FrameSvgItem {
         }
     }
     Behavior on x {
+        enabled: target && expandedItem.opacity == 1
         NumberAnimation {
             duration: units.longDuration
             easing.type: Easing.InOutQuad
         }
     }
     Behavior on y {
+        enabled: target && expandedItem.opacity == 1
         NumberAnimation {
             duration: units.longDuration
             easing.type: Easing.InOutQuad
         }
     }
     Behavior on width {
+        enabled: target && expandedItem.opacity == 1
         NumberAnimation {
             duration: units.longDuration
             easing.type: Easing.InOutQuad
         }
     }
     Behavior on height {
+        enabled: target && expandedItem.opacity == 1
         NumberAnimation {
             duration: units.longDuration
             easing.type: Easing.InOutQuad
