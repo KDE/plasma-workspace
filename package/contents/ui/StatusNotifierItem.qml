@@ -21,22 +21,40 @@ import QtQuick 2.1
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
 
-Item {
+PlasmaCore.ToolTipArea {
     id: taskIcon
-    width: hidden ? root.hiddenItemSize : root.itemSize
-    height: width
+    height: hidden ? root.hiddenItemSize : root.itemSize
+    width: labelVisible ? parent.width : height
+    property bool labelVisible: taskIcon.hidden && !root.activeApplet
+
+    mainText: ToolTipTitle
+    subText: ToolTipSubTitle
+    icon: ToolTipIcon ? ToolTipIcon : plasmoid.nativeInterface.resolveIcon(IconName != "" ? IconName : Icon, IconThemePath)
+
+    location: if (taskIcon.parent && taskIcon.parent.objectName == "hiddenTasksColumn") {
+                return PlasmaCore.Types.RightEdge;
+              } else {
+                return taskIcon.location;
+              }
 
     property bool hidden: parent.objectName == "hiddenTasksColumn"
 
     PlasmaCore.IconItem {
-        source: IconName != "" ? IconName : Icon
+        id: iconItem
+        source: plasmoid.nativeInterface.resolveIcon(IconName != "" ? IconName : Icon, IconThemePath)
         width: Math.min(parent.width, parent.height)
         height: width
-        anchors.centerIn: parent
+
+        anchors {
+            left: parent.left
+            top: parent.top
+            bottom: parent.bottom
+        }
     }
 
     MouseArea {
         anchors.fill: taskIcon
+        hoverEnabled: true
         onClicked: {
             //print(iconSvg.hasElement(IconName))
             var service = statusNotifierSource.serviceForSource(DataEngineSource)
@@ -50,9 +68,15 @@ Item {
             operation.y = parent.y + parent.height + 6
             service.startOperationCall(operation)
         }
+        onEntered: {
+            if (hidden) {
+                root.hiddenLayout.hoveredItem = taskIcon
+            }
+        }
     }
     PlasmaComponents.Label {
-        opacity: taskIcon.hidden && !root.activeApplet ? 1 : 0
+        opacity: labelVisible ? 1 : 0
+        x: iconItem.width + units.smallSpacing
         Behavior on opacity {
             NumberAnimation {
                 duration: units.longDuration
@@ -60,9 +84,7 @@ Item {
             }
         }
         anchors {
-            left: parent.right
             verticalCenter: parent.verticalCenter
-            leftMargin: units.smallSpacing
         }
         text: Title
     }

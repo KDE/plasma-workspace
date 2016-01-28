@@ -31,6 +31,9 @@
 #include <QDBusPendingCallWatcher>
 #include <QRegExp>
 
+#include <KIconLoader>
+#include <KIconEngine>
+
 Q_LOGGING_CATEGORY(SYSTEMTRAY, "systemtray")
 
 SystemTray::SystemTray(QObject *parent, const QVariantList &args)
@@ -71,6 +74,38 @@ void SystemTray::cleanupTask(const QString &task)
             applet->destroy();
         }
     }
+}
+
+QVariant SystemTray::resolveIcon(const QVariant &variant, const QString &iconThemePath)
+{
+    if (variant.canConvert<QString>()) {
+        if (!iconThemePath.isEmpty()) {
+            const QString path = iconThemePath;
+            if (!path.isEmpty()) {
+                // FIXME: If last part of path is not "icons", this won't work!
+                QStringList tokens = path.split('/', QString::SkipEmptyParts);
+                if (tokens.length() >= 3 && tokens.takeLast() == QLatin1String("icons")) {
+                    QString appName = tokens.takeLast();
+
+                    // We use a separate instance of KIconLoader to avoid
+                    // adding all application dirs to KIconLoader::global(), to
+                    // avoid potential icon name clashes between application
+                    // icons
+                    KIconLoader *customIconLoader = new KIconLoader(appName, QStringList(), this);
+                    customIconLoader->addAppDir(appName, path);
+                    return QVariant(QIcon(new KIconEngine(variant.toString(), customIconLoader)));
+                } else {
+                    qWarning() << "Wrong IconThemePath" << path << ": too short or does not end with 'icons'";
+                }
+            }
+
+            //return just the string hoping that IconItem will know how to interpret it anyways as either a normal icon or a SVG from the theme
+            return variant;
+        }
+    }
+
+    // Most importantly QIcons. Nothing to do for those.
+    return variant;
 }
 
 void SystemTray::restorePlasmoids()

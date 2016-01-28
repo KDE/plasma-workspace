@@ -14,6 +14,7 @@ target_link_libraries(plasma_applet_systemtray
                       Qt5::Gui
                       KF5::Plasma
                       Qt5::DBus
+                      KF5::IconThemes
                       KF5::I18n)
 
 

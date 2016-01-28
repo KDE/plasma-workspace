@@ -52,6 +52,13 @@ public:
     //cleans all instances of a given applet
     void cleanupTask(const QString &task);
 
+    //Invokable utilities
+    /**
+     * returns either a simple icon name or a custom path if the app is
+     * using a custom theme
+     */
+    Q_INVOKABLE QVariant resolveIcon(const QVariant &variant, const QString &iconThemePath);
+
 private Q_SLOTS:
     void serviceNameFetchFinished(QDBusPendingCallWatcher* watcher, const QDBusConnection &connection);
     void serviceRegistered(const QString &service);

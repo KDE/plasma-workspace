@@ -89,7 +89,7 @@ void SystemTrayContainer::constraintsEvent(Plasma::Types::Constraints constraint
         m_internalSystray = m_innerContainment->property("_plasma_graphicObject").value<QQuickItem *>();
         emit internalSystrayChanged();
 
-        connect(m_innerContainment, &Plasma::Containment::configureRequested, this,
+        connect(m_innerContainment.data(), &Plasma::Containment::configureRequested, this,
             [this] {
                 emit containment()->configureRequested(m_innerContainment);
             }
