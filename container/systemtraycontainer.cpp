@@ -101,8 +101,8 @@ void SystemTrayContainer::constraintsEvent(Plasma::Types::Constraints constraint
         emit internalSystrayChanged();
 
         connect(m_innerContainment.data(), &Plasma::Containment::configureRequested, this,
-            [this] {
-                emit containment()->configureRequested(m_innerContainment);
+            [this](Plasma::Applet *applet) {
+                emit containment()->configureRequested(applet);
             }
         );
     }

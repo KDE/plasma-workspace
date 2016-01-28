@@ -23,16 +23,23 @@
 #include <QDebug>
 #include <QProcess>
 
-#include <Plasma/PluginLoader>
 
 #include <QDBusConnection>
 #include <QDBusConnectionInterface>
-#include <QDBusServiceWatcher>
 #include <QDBusPendingCallWatcher>
+#include <QDBusServiceWatcher>
+#include <QMenu>
+#include <QQuickItem>
+#include <QQuickWindow>
 #include <QRegExp>
+#include <QScreen>
+
+#include <Plasma/PluginLoader>
 
 #include <KIconLoader>
 #include <KIconEngine>
+#include <KActionCollection>
+#include <KLocalizedString>
 
 Q_LOGGING_CATEGORY(SYSTEMTRAY, "systemtray")
 
@@ -50,6 +57,9 @@ SystemTray::~SystemTray()
 void SystemTray::init()
 {
     Containment::init();
+    actions()->removeAction(actions()->action("add widgets"));
+    actions()->removeAction(actions()->action("add panel"));
+    actions()->removeAction(actions()->action("lock widgets"));
 }
 
 void SystemTray::newTask(const QString &task)
@@ -106,6 +116,85 @@ QVariant SystemTray::resolveIcon(const QVariant &variant, const QString &iconThe
 
     // Most importantly QIcons. Nothing to do for those.
     return variant;
+}
+
+void SystemTray::showPlasmoidMenu(QQuickItem *appletInterface)
+{
+    if (!appletInterface) {
+        return;
+    }
+
+    Plasma::Applet *applet = appletInterface->property("_plasma_applet").value<Plasma::Applet*>();
+
+    QPointF pos = appletInterface->mapToScene(QPointF(15,15));
+
+    if (appletInterface->window() && appletInterface->window()->screen()) {
+        pos = appletInterface->window()->mapToGlobal(pos.toPoint());
+    } else {
+        pos = QPoint();
+    }
+
+    QMenu *desktopMenu = new QMenu;
+    connect(this, &QObject::destroyed, desktopMenu, &QMenu::close);
+    desktopMenu->setAttribute(Qt::WA_DeleteOnClose);
+
+    foreach (QAction *action, applet->contextualActions()) {
+        if (action) {
+            desktopMenu->addAction(action);
+        }
+    }
+
+    QAction *runAssociatedApplication = applet->actions()->action(QStringLiteral("run associated application"));
+    if (runAssociatedApplication && runAssociatedApplication->isEnabled()) {
+        desktopMenu->addAction(runAssociatedApplication);
+    }
+
+    if (applet->actions()->action(QStringLiteral("configure"))) {
+        desktopMenu->addAction(applet->actions()->action(QStringLiteral("configure")));
+    }
+
+
+    //FIXME: systraycontainer?
+    Plasma::Applet *systrayApplet = this;
+
+    if (systrayApplet) {
+        QMenu *systrayMenu = new QMenu(i18n("System Tray Options"), desktopMenu);
+
+        foreach (QAction *action, systrayApplet->contextualActions()) {
+            if (action) {
+                systrayMenu->addAction(action);
+            }
+        }
+        if (systrayApplet->actions()->action(QStringLiteral("configure"))) {
+            systrayMenu->addAction(systrayApplet->actions()->action(QStringLiteral("configure")));
+        }
+        if (systrayApplet->actions()->action(QStringLiteral("remove"))) {
+            systrayMenu->addAction(systrayApplet->actions()->action(QStringLiteral("remove")));
+        }
+        desktopMenu->addMenu(systrayMenu);
+
+        if (systrayApplet->containment() && applet->status() >= Plasma::Types::ActiveStatus) {
+            QMenu *containmentMenu = new QMenu(i18nc("%1 is the name of the containment", "%1 Options", systrayApplet->containment()->title()), desktopMenu);
+
+            foreach (QAction *action, systrayApplet->containment()->contextualActions()) {
+                if (action) {
+                    containmentMenu->addAction(action);
+                }
+            }
+            desktopMenu->addMenu(containmentMenu);
+        }
+    }
+
+    desktopMenu->adjustSize();
+
+    if (QScreen *screen = appletInterface->window()->screen()) {
+        const QRect geo = screen->availableGeometry();
+
+        pos = QPoint(qBound(geo.left(), (int)pos.x(), geo.right() - desktopMenu->width()),
+                        qBound(geo.top(), (int)pos.y(), geo.bottom() - desktopMenu->height()));
+    }
+
+    desktopMenu->popup(pos.toPoint());
 }
 
 void SystemTray::restorePlasmoids()

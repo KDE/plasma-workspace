@@ -36,7 +36,11 @@ AbstractItem {
 
     onClicked: {
         if (applet) {
-            applet.expanded = true;
+            if (mouse.button == Qt.LeftButton) {
+                applet.expanded = true;
+            } else if (mouse.button == Qt.RightButton) {
+                plasmoid.nativeInterface.showPlasmoidMenu(applet, 0, 0);
+            }
         }
     }
     onHeightChanged: {

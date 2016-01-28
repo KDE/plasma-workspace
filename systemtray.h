@@ -26,6 +26,7 @@
 
 class QDBusPendingCallWatcher;
 class QDBusConnection;
+class QQuickItem;
 
 class SystemTray : public Plasma::Containment
 {
@@ -58,6 +59,11 @@ public:
      * using a custom theme
      */
     Q_INVOKABLE QVariant resolveIcon(const QVariant &variant, const QString &iconThemePath);
+
+    /**
+     * Given an AppletInterface pointer, shows a proper context menu fot it
+     */
+    Q_INVOKABLE void showPlasmoidMenu(QQuickItem *appletInterface);
 
 private Q_SLOTS:
     void serviceNameFetchFinished(QDBusPendingCallWatcher* watcher, const QDBusConnection &connection);

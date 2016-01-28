@@ -43,6 +43,7 @@ PlasmaCore.ToolTipArea {
     icon: 
     */
 
+
     location: if (abstractItem.parent && abstractItem.parent.objectName == "hiddenTasksColumn") {
                 return PlasmaCore.Types.RightEdge;
               } else {
@@ -50,10 +51,14 @@ PlasmaCore.ToolTipArea {
               }
 
 
+    //onIconItemChanged: iconItem.parent = mouseArea
+
     MouseArea {
         id: mouseArea
         anchors.fill: abstractItem
         hoverEnabled: true
+        drag.filterChildren: true
+        acceptedButtons: Qt.LeftButton | Qt.RightButton
         onEntered: {
             if (hidden) {
                 root.hiddenLayout.hoveredItem = abstractItem
@@ -78,3 +83,4 @@ PlasmaCore.ToolTipArea {
         }
     }
 }
+

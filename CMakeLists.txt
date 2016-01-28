@@ -12,9 +12,11 @@ kcoreaddons_desktop_to_json(plasma_applet_systemtray package/metadata.desktop)
 
 target_link_libraries(plasma_applet_systemtray
                       Qt5::Gui
+                      Qt5::Quick
                       KF5::Plasma
                       Qt5::DBus
                       KF5::IconThemes
+                      KF5::XmlGui
                       KF5::I18n)
 
 
