@@ -26,10 +26,10 @@ PlasmaCore.FrameSvgItem {
     property Item target
     property int location
 
-    x: target.x
-    y: target.y
-    width: target.width
-    height: target.height
+    x: target ? target.x : 0
+    y: target ? target.y : 0
+    width: target ? target.width : 0
+    height: target ? target.height : 0
 
     imagePath: "widgets/tabbar"
     prefix: {
