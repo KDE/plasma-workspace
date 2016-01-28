@@ -105,6 +105,7 @@ Item {
         }
 
         visible: !imageItem.visible && valid
+        animated: false
     }
 
     QImageItem {
