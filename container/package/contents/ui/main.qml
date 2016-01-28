@@ -33,6 +33,10 @@ Item {
 
     Component.onCompleted: {
         root.internalSystray = plasmoid.nativeInterface.internalSystray;
+
+        if (root.internalSystray == null) {
+            return;
+        }
         root.internalSystray.parent = root;
         root.internalSystray.anchors.fill = root;
     }

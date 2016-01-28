@@ -45,9 +45,9 @@ PlasmaExtras.ScrollArea {
             }
             PlasmaComponents.Highlight {
                 visible: hiddenTasksColumn.hoveredItem != null && !root.activeApplet
-                y: hiddenTasksColumn.hoveredItem.y
-                width: hiddenTasksColumn.hoveredItem.width
-                height: hiddenTasksColumn.hoveredItem.height
+                y: hiddenTasksColumn.hoveredItem ? hiddenTasksColumn.hoveredItem.y : 0
+                width: hiddenTasksColumn.hoveredItem ? hiddenTasksColumn.hoveredItem.width : 0
+                height: hiddenTasksColumn.hoveredItem ? hiddenTasksColumn.hoveredItem.height : 0
             }
 
             Column {

@@ -66,7 +66,7 @@ PlasmaCore.ToolTipArea {
     PlasmaComponents.Label {
         id: label
         opacity: labelVisible ? 1 : 0
-        x: iconItem.width + units.smallSpacing
+        x: iconItem ? iconItem.width + units.smallSpacing : 0
         Behavior on opacity {
             NumberAnimation {
                 duration: units.longDuration

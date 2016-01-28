@@ -42,7 +42,6 @@ PlasmaCore.ToolTipArea {
 
     property Item fullRepresentation
     property Item compactRepresentation
-    property Item expandedFeedback: expandedItem
 
     Layout.minimumWidth: {
         switch (plasmoid.formFactor) {

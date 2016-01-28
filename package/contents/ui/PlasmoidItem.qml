@@ -26,19 +26,23 @@ AbstractItem {
 
     property Item applet
     iconItem: applet
-    text: applet.title
+    text: applet ? applet.title : ""
 
-    mainText: applet.toolTipMainText
-    subText: applet.toolTipSubText
-    icon: applet.icon
-    mainItem: applet.toolTipItem
-    textFormat: toolTipTextFormat
+    mainText: applet ? applet.toolTipMainText : ""
+    subText: applet ? applet.toolTipSubText : ""
+    icon: applet ? applet.icon : ""
+    mainItem: applet && applet.toolTipItem ? applet.toolTipItem : null
+    textFormat: applet ? applet.toolTipTextFormat : ""
 
     onClicked: {
-        applet.expanded = true;
+        if (applet) {
+            applet.expanded = true;
+        }
     }
     onHeightChanged: {
-        applet.width = height
+        if (applet) {
+            applet.width = height
+        }
     }
 
     Connections {
