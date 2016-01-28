@@ -49,7 +49,11 @@ void SystemTrayContainer::constraintsEvent(Plasma::Types::Constraints constraint
     }
     if (constraints & Plasma::Types::FormFactorConstraint) {
         if (m_innerContainment) {
-            m_innerContainment->setFormFactor(formFactor());
+            if (formFactor() == Plasma::Types::Horizontal || formFactor() == Plasma::Types::Vertical) {
+                m_innerContainment->setFormFactor(formFactor());
+            } else {
+                m_innerContainment->setFormFactor(Plasma::Types::Horizontal);
+            }
         }
     }
     if (constraints & Plasma::Types::StartupCompletedConstraint) {
@@ -84,6 +88,12 @@ void SystemTrayContainer::constraintsEvent(Plasma::Types::Constraints constraint
 
         if (!m_innerContainment) {
             return;
+        }
+
+        if (formFactor() == Plasma::Types::Horizontal || formFactor() == Plasma::Types::Vertical) {
+            m_innerContainment->setFormFactor(formFactor());
+        } else {
+            m_innerContainment->setFormFactor(Plasma::Types::Horizontal);
         }
 
         m_internalSystray = m_innerContainment->property("_plasma_graphicObject").value<QQuickItem *>();
