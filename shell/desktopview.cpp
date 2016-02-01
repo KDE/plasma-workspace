@@ -246,6 +246,7 @@ void DesktopView::showConfigurationInterface(Plasma::Applet *applet)
         m_configView = new PlasmaQuick::ConfigView(applet);
     }
     m_configView.data()->init();
+    m_configView.data()->setTransientParent(this);
     m_configView.data()->show();
 }
 
