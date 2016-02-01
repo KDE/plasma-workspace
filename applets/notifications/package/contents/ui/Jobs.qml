@@ -86,7 +86,6 @@ Column {
                 summary: summary,
                 body: errorText || message,
                 isPersistent: true,
-                expireTimeout: 6000,
                 urgency: 0,
                 configurable: false,
                 actions: !error && UrlHelper.isUrlValid(message) ? ["jobUrl#" + message, i18n("Open...")] : []

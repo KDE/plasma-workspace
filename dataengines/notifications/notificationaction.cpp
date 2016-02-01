@@ -58,11 +58,14 @@ void NotificationAction::start()
         //expireNotification deletes the job, so we have to invoke it queued, in this case emitResult() can be called
         m_engine->metaObject()->invokeMethod(m_engine, "removeNotification", Qt::QueuedConnection, Q_ARG(uint, id), Q_ARG(uint, 1));
     } else if (operationName() == QLatin1String("createNotification")) {
+        int expireTimeout = parameters().value(QStringLiteral("expireTimeout")).toInt();
+        bool isPersistent = parameters().value(QStringLiteral("isPersistent")).toBool();
+
         int rv = m_engine->createNotification(parameters().value(QStringLiteral("appName")).toString(),
                                               parameters().value(QStringLiteral("appIcon")).toString(),
                                               parameters().value(QStringLiteral("summary")).toString(),
                                               parameters().value(QStringLiteral("body")).toString(),
-                                              parameters().value(QStringLiteral("expireTimeout")).toInt(),
+                                              isPersistent ? 0 : expireTimeout,
                                               QString(),
                                               parameters().value(QStringLiteral("actions")).toStringList()
                                              );
