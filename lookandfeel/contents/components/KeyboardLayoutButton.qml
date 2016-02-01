@@ -25,11 +25,8 @@ import org.kde.plasma.workspace.keyboardlayout 1.0
 
 PlasmaComponents.Button {
     id: kbLayoutButton
-//     flat: false
-//     checkable: false
-    activeFocusOnTab: true
     implicitWidth: minimumWidth
-    text: layout.currentLayout
+    text: layout.currentLayoutDisplayName
 
     Accessible.name: i18ndc("plasma_lookandfeel_org.kde.lookandfeel", "Button to change keyboard layout", "Switch layout")
 
