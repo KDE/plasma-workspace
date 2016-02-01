@@ -630,7 +630,11 @@ KActivities::Controller *ShellCorona::activityController()
 
 int ShellCorona::numScreens() const
 {
-    return QGuiApplication::screens().count();
+    //don't start loading screens until kscreen has finished initialising.
+    if (!m_screenConfiguration) {
+        return 0;
+    }
+    return m_screenConfiguration->outputs().count();
 }
 
 QRect ShellCorona::screenGeometry(int id) const
