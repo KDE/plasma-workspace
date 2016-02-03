@@ -50,9 +50,9 @@ void TasksProxyModel::setHost(Host *host)
 
             connect(m_host, &Host::taskStatusChanged, this, &TasksProxyModel::invalidateFilter);
             connect(m_host, &Host::shownCategoriesChanged, this, &TasksProxyModel::invalidateFilter);
-            connect(m_host, &Host::showAllItemsChanged, this, &TasksProxyModel::invalidateFilter);
-            connect(m_host, &Host::forcedHiddenItemsChanged, this, &TasksProxyModel::invalidateFilter);
-            connect(m_host, &Host::forcedShownItemsChanged, this, &TasksProxyModel::invalidateFilter);
+            connect(m_host, &Host::showAllItemsChanged, this, &TasksProxyModel::reset);
+            connect(m_host, &Host::forcedHiddenItemsChanged, this, &TasksProxyModel::reset);
+            connect(m_host, &Host::forcedShownItemsChanged, this, &TasksProxyModel::reset);
         }
 
         invalidateFilter();
@@ -72,6 +72,13 @@ void TasksProxyModel::setCategory(Category category)
 
         invalidateFilter();
     }
+}
+
+void TasksProxyModel::reset()
+{
+    beginResetModel();
+    invalidateFilter();
+    endResetModel();
 }
 
 bool TasksProxyModel::filterAcceptsRow(int sourceRow, const QModelIndex &sourceParent) const
