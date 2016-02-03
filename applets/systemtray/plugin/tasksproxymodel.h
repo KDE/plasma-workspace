@@ -56,7 +56,10 @@ public:
 
     virtual bool filterAcceptsRow(int sourceRow, const QModelIndex &sourceParent) const override;
 
-signals:
+private Q_SLOTS:
+    void reset();
+
+Q_SIGNALS:
     void hostChanged();
     void categoryChanged();
     void countChanged();
