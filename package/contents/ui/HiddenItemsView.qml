@@ -28,22 +28,28 @@ PlasmaExtras.ScrollArea {
     id: hiddenTasksView
 
     visible: !activeApplet || activeApplet.parent.parent == hiddenTasksColumn
-    width: activeApplet ? units.iconSizes.smallMedium : parent.width
+    width: activeApplet ? iconColumnWidth : parent.width
     property alias layout: hiddenTasksColumn
+    //Useful to align stuff to the column of icons, both in expanded and shrink modes
+    property int iconColumnWidth: root.hiddenItemSize + highlight.marginHints.left + highlight.marginHints.right
 
     Flickable {
         contentWidth: width
         contentHeight: hiddenTasksColumn.height
 
-        Item {
+        MouseArea {
             width: parent.width
             height: hiddenTasksColumn.height
+            drag.filterChildren: true
+            hoverEnabled: true
+            onExited: hiddenTasksColumn.hoveredItem = null;
 
             CurrentItemHighLight {
                 target: root.activeApplet && root.activeApplet.parent.parent == hiddenTasksColumn ? root.activeApplet.parent : null
                 location: PlasmaCore.Types.LeftEdge
             }
             PlasmaComponents.Highlight {
+                id: highlight
                 visible: hiddenTasksColumn.hoveredItem != null && !root.activeApplet
                 y: hiddenTasksColumn.hoveredItem ? hiddenTasksColumn.hoveredItem.y : 0
                 width: hiddenTasksColumn.hoveredItem ? hiddenTasksColumn.hoveredItem.width : 0
@@ -55,6 +61,7 @@ PlasmaExtras.ScrollArea {
                 spacing: units.smallSpacing
                 width: parent.width
                 property Item hoveredItem
+                property alias marginHints: highlight.marginHints
                 
                 objectName: "hiddenTasksColumn"
 

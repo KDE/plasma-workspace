@@ -24,11 +24,12 @@ import org.kde.plasma.components 2.0 as PlasmaComponents
 PlasmaCore.ToolTipArea {
     id: abstractItem
 
-    height: hidden ? root.hiddenItemSize : root.itemSize
+    height: hidden ? root.hiddenItemSize + marginHints.top + marginHints.bottom : root.itemSize
     width: labelVisible ? parent.width : height
 
     property alias text: label.text
     property bool hidden: parent.objectName == "hiddenTasksColumn"
+    property QtObject marginHints: parent.marginHints
     property bool labelVisible: abstractItem.hidden && !root.activeApplet
     property Item iconItem
 
@@ -51,19 +52,17 @@ PlasmaCore.ToolTipArea {
               }
 
 
-    //onIconItemChanged: iconItem.parent = mouseArea
-
+    onContainsMouseChanged: {
+        if (hidden && containsMouse) {
+            root.hiddenLayout.hoveredItem = abstractItem
+        }
+    }
     MouseArea {
         id: mouseArea
         anchors.fill: abstractItem
         hoverEnabled: true
         drag.filterChildren: true
         acceptedButtons: Qt.LeftButton | Qt.RightButton
-        onEntered: {
-            if (hidden) {
-                root.hiddenLayout.hoveredItem = abstractItem
-            }
-        }
         onClicked: abstractItem.clicked(mouse)
         onWheel: abstractItem.wheel(wheel)
     }

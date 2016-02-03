@@ -20,19 +20,29 @@
 import QtQuick 2.1
 import QtQuick.Layouts 1.1
 import org.kde.plasma.core 2.0 as PlasmaCore
+import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 
 Item {
     id: expandedRepresentation
 
-    Layout.minimumWidth: Layout.minimumHeight
-    Layout.minimumHeight: units.gridUnit * 20
+    Layout.minimumWidth: units.gridUnit * 24
+    Layout.minimumHeight: units.gridUnit * 21
     Layout.preferredWidth: Layout.minimumWidth
     Layout.preferredHeight: Layout.minimumHeight * 1.5
 
+    property bool hideOnWindowDeactivate: !pinButton.checked
     property alias activeApplet: container.activeApplet
     property alias hiddenLayout: hiddenItemsView.layout
 
+    PlasmaComponents.ToolButton {
+        id: pinButton
+        anchors.right: parent.right
+        width: Math.round(units.gridUnit * 1.25)
+        height: width
+        checkable: true
+        iconSource: "window-pin"
+    }
 
     PlasmaExtras.Heading {
         id: heading
@@ -42,7 +52,21 @@ Item {
             left: parent.left
             top: parent.top
             right: parent.right
-            leftMargin: hiddenItemsView.visible ? units.iconSizes.smallMedium + units.smallSpacing : 0
+            topMargin: hiddenItemsView.visible ? units.smallSpacing : 0
+            leftMargin: {
+                //Menu mode
+                if (!activeApplet && hiddenItemsView.visible) {
+                    return units.smallSpacing;
+
+                //applet open, sidebar
+                } else if (activeApplet && hiddenItemsView.visible) {
+                    return hiddenItemsView.iconColumnWidth + units.largeSpacing;
+
+                //applet open, no sidebar
+                } else {
+                    return 0;
+                }
+            }
         }
 
         text: activeApplet ? activeApplet.title : i18n("Status & Notifications")
@@ -91,7 +115,7 @@ Item {
             right: parent.right
             top: heading.bottom
             bottom: parent.bottom
-            leftMargin: hiddenItemsView.visible ? units.iconSizes.smallMedium + units.smallSpacing : 0
+            leftMargin: hiddenItemsView.visible ? hiddenItemsView.iconColumnWidth + units.largeSpacing : 0
         }
     }
 }

@@ -146,6 +146,13 @@ MouseArea {
             width: parent.width - expander.width
             property string skipItems
             flow: plasmoid.formFactor == PlasmaCore.Types.Vertical ? Flow.LeftToRight : Flow.TopToBottom
+            //NOTE: this exists mostly for not causing reference errors
+            property QtObject marginHints: QtObject {
+                property int left: 0
+                property int top: 0
+                property int right: 0
+                property int bottom: 0
+            }
 
             Repeater {
                 id: tasksRepeater
@@ -173,6 +180,7 @@ MouseArea {
         visualParent: root
         flags: Qt.WindowStaysOnTopHint
         location: plasmoid.location
+        hideOnWindowDeactivate: expandedRepresentation.hideOnWindowDeactivate
         onVisibleChanged: {
             if (!visible) {
                 root.activeApplet.expanded = false;
