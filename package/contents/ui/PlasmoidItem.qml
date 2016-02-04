@@ -48,7 +48,13 @@ AbstractItem {
             applet.width = height
         }
     }
-
+onAppletChanged: {
+    print("applet changed");
+    if (!applet) {
+        plasmoidContainer.destroy();
+        print("applet destroyed")
+    }
+}
     Connections {
         target: applet
         onExpandedChanged: {

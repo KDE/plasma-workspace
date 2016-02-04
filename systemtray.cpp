@@ -69,8 +69,9 @@ void SystemTray::newTask(const QString &task)
         if (!applet->pluginInfo().isValid()) {
             continue;
         }
+
+        //only allow one instance per applet
         if (task == applet->pluginInfo().pluginName()) {
-            emit appletAdded(applet);
             return;
         }
     }
