@@ -74,9 +74,34 @@ void KeyboardLayout::onCurrentLayoutReceived(QDBusPendingCallWatcher *watcher)
         qCWarning(KEYBOARD_LAYOUT) << reply.error().message();
     } else {
         mCurrentLayout = reply.value();
+        requestCurrentLayoutDisplayName();
         Q_EMIT currentLayoutChanged(mCurrentLayout);
     }
     watcher->deleteLater();
+}
+
+void KeyboardLayout::requestCurrentLayoutDisplayName()
+{
+    QDBusPendingCall pendingDisplayName = mIface->asyncCallWithArgumentList(QStringLiteral("getLayoutDisplayName"), {mCurrentLayout});
+    QDBusPendingCallWatcher *watcher = new QDBusPendingCallWatcher(pendingDisplayName, this);
+    connect(watcher, &QDBusPendingCallWatcher::finished, this, &KeyboardLayout::onCurrentLayoutDisplayNameReceived);
+}
+
+void KeyboardLayout::onCurrentLayoutDisplayNameReceived(QDBusPendingCallWatcher *watcher)
+{
+    QDBusPendingReply<QString> reply = *watcher;
+    if (reply.isError()) {
+        qCWarning(KEYBOARD_LAYOUT) << reply.error().message();
+    } else {
+        mCurrentLayoutDisplayName = reply.value();
+        Q_EMIT currentLayoutDisplayNameChanged(mCurrentLayoutDisplayName);
+    }
+    watcher->deleteLater();
+}
+
+QString KeyboardLayout::currentLayoutDisplayName() const
+{
+    return mCurrentLayoutDisplayName;
 }
 
 void KeyboardLayout::requestLayoutsList()
@@ -125,6 +150,7 @@ void KeyboardLayout::setCurrentLayout(const QString &layout)
     }
 
     mCurrentLayout = layout;
+    requestCurrentLayoutDisplayName();
     mIface->asyncCall(QStringLiteral("setLayout"), layout);
     Q_EMIT currentLayoutChanged(layout);
 }
@@ -133,11 +159,5 @@ void KeyboardLayout::setCurrentLayout(const QString &layout)
 QStringList KeyboardLayout::layouts() const
 {
     return mLayouts;
-}
-
-void KeyboardLayout::onCurrentLayoutChanged(const QString &newLayout)
-{
-    mCurrentLayout = newLayout;
-    Q_EMIT currentLayoutChanged(newLayout);
 }
 

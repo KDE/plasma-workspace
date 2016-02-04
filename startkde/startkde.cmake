@@ -330,15 +330,6 @@ export KDE_SESSION_UID
 XDG_CURRENT_DESKTOP=KDE
 export XDG_CURRENT_DESKTOP
 
-# At this point all the environment is ready, let's send it to kwalletd if running
-if test -n "$PAM_KWALLET_LOGIN" ; then
-    env | socat STDIN UNIX-CONNECT:$PAM_KWALLET_LOGIN
-fi
-# ...and also to kwalletd5
-if test -n "$PAM_KWALLET5_LOGIN" ; then
-    env | socat STDIN UNIX-CONNECT:$PAM_KWALLET5_LOGIN
-fi
-
 # At this point all environment variables are set, let's send it to the DBus session server to update the activation environment
 if which dbus-update-activation-environment >/dev/null 2>/dev/null ; then
     dbus-update-activation-environment --systemd --all

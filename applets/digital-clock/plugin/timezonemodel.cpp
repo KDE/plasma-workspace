@@ -111,9 +111,13 @@ bool TimeZoneModel::setData(const QModelIndex &index, const QVariant &value, int
 
         if (m_data[index.row()].checked) {
             m_selectedTimeZones.append(m_data[index.row()].id);
+            m_offsetData.insert(m_data[index.row()].id, m_data[index.row()].offsetFromUtc);
         } else {
             m_selectedTimeZones.removeAll(m_data[index.row()].id);
+            m_offsetData.remove(m_data[index.row()].id);
         }
+
+        sortTimeZones();
 
         emit selectedTimeZonesChanged();
         return true;
@@ -176,6 +180,7 @@ void TimeZoneModel::update()
         newData.city = m_timezonesI18n->i18nCity(cityCountryContinent.at(0));
         newData.comment = comment;
         newData.checked = false;
+        newData.offsetFromUtc = timeZone.offsetFromUtc(QDateTime::currentDateTimeUtc());
         m_data.append(newData);
     }
 
@@ -188,11 +193,14 @@ void TimeZoneModel::setSelectedTimeZones(const QStringList &selectedTimeZones)
     for (int i = 0; i < m_data.size(); i++) {
         if (m_selectedTimeZones.contains(m_data.at(i).id)) {
             m_data[i].checked = true;
+            m_offsetData.insert(m_data[i].id, m_data[i].offsetFromUtc);
 
             QModelIndex index = createIndex(i, 0);
             emit dataChanged(index, index);
         }
     }
+
+    sortTimeZones();
 }
 
 void TimeZoneModel::selectLocalTimeZone()
@@ -206,7 +214,8 @@ void TimeZoneModel::selectLocalTimeZone()
     emit selectedTimeZonesChanged();
 }
 
-QHash<int, QByteArray> TimeZoneModel::roleNames() const {
+QHash<int, QByteArray> TimeZoneModel::roleNames() const
+{
     return QHash<int, QByteArray>({
         {TimeZoneIdRole, "timeZoneId"},
         {RegionRole, "region"},
@@ -214,4 +223,12 @@ QHash<int, QByteArray> TimeZoneModel::roleNames() const {
         {CommentRole, "comment"},
         {CheckedRole, "checked"}
     });
+}
+
+void TimeZoneModel::sortTimeZones()
+{
+    std::sort(m_selectedTimeZones.begin(), m_selectedTimeZones.end(),
+              [this](const QString &a, const QString &b) {
+                  return m_offsetData.value(a) < m_offsetData.value(b);
+              });
 }

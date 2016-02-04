@@ -39,6 +39,7 @@
 
 #include "drkonqi.h"
 #include "drkonqidialog.h"
+#include "statusnotifier.h"
 
 static const char version[] = PROJECT_VERSION;
 static const char description[] = I18N_NOOP("The KDE Crash Handler gives the user feedback "
@@ -144,9 +145,28 @@ int main(int argc, char* argv[])
 
     qa.setQuitOnLastWindowClosed(false);
 
-    DrKonqiDialog *w = new DrKonqiDialog();
-    QObject::connect(w, &DrKonqiDialog::rejected, &qa, &QApplication::quit);
-    w->show();
+    auto openDrKonqiDialog = [&qa]{
+        DrKonqiDialog *w = new DrKonqiDialog();
+        QObject::connect(w, &DrKonqiDialog::rejected, &qa, &QApplication::quit);
+        w->show();
+    };
+
+    bool restarted = parser.isSet(restartedOption);
+
+    // if no notification service is running (eg. shell crashed, or other desktop environment)
+    // and we didn't auto-restart the app, open DrKonqi dialog instead of showing an SNI
+    // and emitting a desktop notification
+    if (!restarted && !StatusNotifier::notificationServiceRegistered()) {
+        openDrKonqiDialog();
+    } else {
+        StatusNotifier *statusNotifier = new StatusNotifier();
+        if (!restarted) {
+            statusNotifier->notify();
+        }
+        QObject::connect(statusNotifier, &StatusNotifier::expired, &qa, &QApplication::quit);
+        QObject::connect(statusNotifier, &StatusNotifier::activated, openDrKonqiDialog);
+    }
+
     int ret = qa.exec();
 
     DrKonqi::cleanup();

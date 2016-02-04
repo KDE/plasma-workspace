@@ -56,7 +56,7 @@ public:
     int createNotification(const QString &appName, const QString &appIcon, const QString &summary,
                            const QString &body, int timeout, const QString &appRealName, const QStringList &actions);
 
-    void configureNotification(const QString &appName);
+    void configureNotification(const QString &appName, const QString &eventId = QString());
 
 public Q_SLOTS:
     void removeNotification(uint id, uint closeReason);

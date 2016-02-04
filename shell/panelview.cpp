@@ -93,10 +93,6 @@ PanelView::PanelView(ShellCorona *corona, QScreen *targetScreen, QWindow *parent
             &m_positionPaneltimer, SLOT(start()));
     connect(this, SIGNAL(containmentChanged()),
             this, SLOT(containmentChanged()));
-    connect(this, &ContainmentView::locationChanged, [this] () {
-                emit m_corona->availableScreenRectChanged();
-                emit m_corona->availableScreenRegionChanged();
-            });
 
     if (!m_corona->kPackage().isValid()) {
         qWarning() << "Invalid home screen package";
@@ -123,20 +119,25 @@ PanelView::~PanelView()
     PanelShadows::self()->removeWindow(this);
 }
 
-KConfigGroup PanelView::config() const
+KConfigGroup PanelView::panelConfig(ShellCorona *corona, Plasma::Containment *containment, QScreen *screen)
 {
-    if (!containment()) {
+    if (!containment || !screen) {
         return KConfigGroup();
     }
-    KConfigGroup views(m_corona->applicationConfig(), "PlasmaViews");
-    views = KConfigGroup(&views, QStringLiteral("Panel %1").arg(containment()->id()));
+    KConfigGroup views(corona->applicationConfig(), "PlasmaViews");
+    views = KConfigGroup(&views, QStringLiteral("Panel %1").arg(containment->id()));
 
-    if (formFactor() == Plasma::Types::Vertical) {
-        return KConfigGroup(&views, "Vertical" + QString::number(screen()->size().height()));
+    if (containment->formFactor() == Plasma::Types::Vertical) {
+        return KConfigGroup(&views, "Vertical" + QString::number(screen->size().height()));
     //treat everything else as horizontal
     } else {
-        return KConfigGroup(&views, "Horizontal" + QString::number(screen()->size().width()));
+        return KConfigGroup(&views, "Horizontal" + QString::number(screen->size().width()));
     }
+}
+
+KConfigGroup PanelView::config() const
+{
+    return panelConfig(m_corona, containment(), screen());
 }
 
 void PanelView::maximize()
@@ -211,18 +212,11 @@ void PanelView::setThickness(int value)
     }
 
     m_thickness = value;
-    if (formFactor() == Plasma::Types::Vertical) {
-        setMinimumWidth(value);
-        setMaximumWidth(value);
-    } else {
-        setMinimumHeight(value);
-        setMaximumHeight(value);
-    }
+    emit thicknessChanged();
+
     config().writeEntry("thickness", value);
     m_corona->requestApplicationConfigSync();
     positionPanel();
-    emit m_corona->availableScreenRectChanged();
-    emit m_corona->availableScreenRegionChanged();
 }
 
 int PanelView::length() const
@@ -345,8 +339,6 @@ void PanelView::setVisibilityMode(PanelView::VisibilityMode mode)
     updateStruts();
 
     emit visibilityModeChanged();
-    emit corona()->availableScreenRectChanged();
-    emit corona()->availableScreenRegionChanged();
     restoreAutoHide();
 }
 
@@ -491,26 +483,12 @@ void PanelView::restore()
     int defaultMaxLength = 0;
     int defaultMinLength = 0;
     int defaultAlignment = Qt::AlignLeft;
-
-    QQuickItem *containmentItem = containment()->property("_plasma_graphicObject").value<QQuickItem *>();
-
-    if (containmentItem && containmentItem->property("_plasma_desktopscripting_alignment").canConvert<int>()) {
-        defaultAlignment = containmentItem->property("_plasma_desktopscripting_alignment").toInt();
-    }
     setAlignment((Qt::Alignment)config().readEntry<int>("alignment", defaultAlignment));
-
-
-    if (containmentItem && containmentItem->property("_plasma_desktopscripting_offset").canConvert<int>()) {
-        defaultOffset = containmentItem->property("_plasma_desktopscripting_offset").toInt();
-    }
     m_offset = config().readEntry<int>("offset", defaultOffset);
     if (m_alignment != Qt::AlignCenter) {
         m_offset = qMax(0, m_offset);
     }
 
-    if (containmentItem && containmentItem->property("_plasma_desktopscripting_thickness").canConvert<int>()) {
-        defaultThickness = qMax(16, containmentItem->property("_plasma_desktopscripting_thickness").toInt());
-    }
     setThickness(config().readEntry<int>("thickness", defaultThickness));
 
     setMinimumSize(QSize(-1, -1));
@@ -520,13 +498,6 @@ void PanelView::restore()
     if (containment()->formFactor() == Plasma::Types::Vertical) {
         defaultMaxLength = screen()->size().height();
         defaultMinLength = screen()->size().height();
-
-        if (containmentItem && containmentItem->property("_plasma_desktopscripting_maxLength").canConvert<int>()) {
-            defaultMaxLength = containmentItem->property("_plasma_desktopscripting_maxLength").toInt();
-        }
-        if (containmentItem && containmentItem->property("_plasma_desktopscripting_minLength").canConvert<int>()) {
-            defaultMinLength = containmentItem->property("_plasma_desktopscripting_minLength").toInt();
-        }
 
         m_maxLength = config().readEntry<int>("maxLength", defaultMaxLength);
         m_minLength = config().readEntry<int>("minLength", defaultMinLength);
@@ -544,13 +515,6 @@ void PanelView::restore()
     } else {
         defaultMaxLength = screen()->size().width();
         defaultMinLength = screen()->size().width();
-
-        if (containmentItem && containmentItem->property("_plasma_desktopscripting_maxLength").canConvert<int>()) {
-            defaultMaxLength = containmentItem->property("_plasma_desktopscripting_maxLength").toInt();
-        }
-        if (containmentItem && containmentItem->property("_plasma_desktopscripting_minLength").canConvert<int>()) {
-            defaultMinLength = containmentItem->property("_plasma_desktopscripting_minLength").toInt();
-        }
 
         m_maxLength = config().readEntry<int>("maxLength", defaultMaxLength);
         m_minLength = config().readEntry<int>("minLength", defaultMinLength);
@@ -581,7 +545,7 @@ void PanelView::showConfigurationInterface(Plasma::Applet *applet)
 
     Plasma::Containment *cont = qobject_cast<Plasma::Containment *>(applet);
 
-    if (m_panelConfigView && cont && cont->isContainment()) {
+    if (m_panelConfigView && cont && cont == containment() && cont->isContainment()) {
         if (m_panelConfigView.data()->isVisible()) {
             m_panelConfigView.data()->hide();
         } else {
@@ -600,7 +564,7 @@ void PanelView::showConfigurationInterface(Plasma::Applet *applet)
         }
     }
 
-    if (cont && cont->isContainment()) {
+    if (cont && cont == containment() && cont->isContainment()) {
         m_panelConfigView = new PanelConfigView(cont, this);
     } else {
         m_panelConfigView = new PlasmaQuick::ConfigView(applet);
@@ -609,7 +573,7 @@ void PanelView::showConfigurationInterface(Plasma::Applet *applet)
     m_panelConfigView.data()->init();
     m_panelConfigView.data()->show();
 
-    if (cont && cont->isContainment()) {
+    if (cont && cont == containment() && cont->isContainment()) {
         KWindowSystem::setState(m_panelConfigView.data()->winId(), NET::SkipTaskbar | NET::SkipPager);
     }
 }
@@ -926,7 +890,8 @@ void PanelView::updateStruts()
 
     if (m_visibilityMode == NormalPanel) {
         const QRect thisScreen = screen()->geometry();
-        const QRect wholeScreen = screen()->virtualGeometry();
+        // QScreen::virtualGeometry() is very unreliable (Qt 5.5)
+        const QRect wholeScreen = QRect(QPoint(0, 0), m_corona->screensConfiguration()->screen()->currentSize());
 
         //Extended struts against a screen edge near to another screen are really harmful, so windows maximized under the panel is a lesser pain
         //TODO: force "windows can cover" in those cases?

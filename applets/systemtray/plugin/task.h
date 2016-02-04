@@ -60,7 +60,8 @@ public:
         UnknownStatus = 0,
         Passive = 1,
         Active = 2,
-        NeedsAttention = 3
+        NeedsAttention = 3,
+        HiddenStatus = 6
     };
 
     enum Category {

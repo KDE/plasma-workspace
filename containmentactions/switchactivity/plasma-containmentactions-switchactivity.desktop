@@ -68,6 +68,7 @@ Type=Service
 Icon=dashboard-show
 Comment=Switch to another activity
 Comment[ar]=بدّل إلى نشاط آخر
+Comment[ast]=Camuda a otra actividá
 Comment[bg]=Превключване към друга дейност
 Comment[bs]=Prebacuje na drugu aktivnost
 Comment[ca]=Canvia a una altra activitat

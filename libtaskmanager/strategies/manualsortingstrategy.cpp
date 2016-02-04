@@ -22,7 +22,6 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 ******************************************************************/
 
 #include "manualsortingstrategy.h"
-
 #include <QMap>
 
 namespace TaskManager
@@ -44,10 +43,6 @@ bool ManualSortingStrategy::manualSortingRequest(AbstractGroupableItem *item, in
 
     if (!gm) {
         return false;
-    }
-
-    if (gm->separateLaunchers()) {
-        return moveItem(item, newIndex);
     }
 
     int oldIndex = gm->launcherIndex(item->launcherUrl());
@@ -72,7 +67,7 @@ void ManualSortingStrategy::sortItems(ItemList &items)
 {
     GroupManager *gm = qobject_cast<GroupManager *>(parent());
 
-    if (!gm || gm->separateLaunchers()) {
+    if (!gm) {
         return;
     }
 
@@ -85,7 +80,7 @@ void ManualSortingStrategy::sortItems(ItemList &items)
         if (!groupable) {
             continue;
         }
-        int index = gm ? gm->launcherIndex(groupable->launcherUrl()) : -1;
+        int index = gm && (gm->separateLaunchers() && groupable->itemType() == LauncherItemType) ? gm->launcherIndex(groupable->launcherUrl()) : -1;
         if (index < 0) {
             QString name(groupable->name().toLower());
             map.insertMulti(name, groupable);

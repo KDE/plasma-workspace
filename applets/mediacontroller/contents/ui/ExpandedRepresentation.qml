@@ -1,6 +1,6 @@
 /***************************************************************************
  *   Copyright 2013 Sebastian Kügler <sebas@kde.org>                       *
- *   Copyright 2014 Kai Uwe Broulik <kde@privat.broulik.de>                *
+ *   Copyright 2014, 2016 Kai Uwe Broulik <kde@privat.broulik.de>          *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU Library General Public License as       *
@@ -41,11 +41,15 @@ Item {
 
     property bool isExpanded: plasmoid.expanded
 
+    function retrievePosition() {
+        var service = mpris2Source.serviceForSource(mpris2Source.current);
+        var operation = service.operationDescription("GetPosition");
+        service.startOperationCall(operation);
+    }
+
     onIsExpandedChanged: {
         if (isExpanded) {
-            var service = mpris2Source.serviceForSource(mpris2Source.current);
-            var operation = service.operationDescription("GetPosition");
-            service.startOperationCall(operation);
+            retrievePosition();
         }
     }
 
@@ -59,29 +63,67 @@ Item {
         }
     }
 
-    Column {
+    ColumnLayout {
         id: titleColumn
         width: constrained ? parent.width - units.largeSpacing : parent.width
         spacing: units.smallSpacing
 
+        PlasmaComponents.ComboBox {
+            Layout.fillWidth: true
+            visible: model.length > 2 // more than one player, @multiplex is always there
+            model: {
+                var model = [{
+                    text: i18n("Choose player automatically"),
+                    source: mpris2Source.multiplexSource
+                }]
+
+                var sources = mpris2Source.sources
+                for (var i = 0, length = sources.length; i < length; ++i) {
+                    var source = sources[i]
+                    if (source === mpris2Source.multiplexSource) {
+                        continue
+                    }
+
+                    // we could show the pretty player name ("Identity") here but then we
+                    // would have to connect all sources just for this
+                    model.push({text: source, source: source})
+                }
+
+                return model
+            }
+
+            onModelChanged: {
+                // if model changes, ComboBox resets, so we try to find the current player again...
+                for (var i = 0, length = model.length; i < length; ++i) {
+                    if (model[i].source === mpris2Source.current) {
+                        currentIndex = i
+                        break
+                    }
+                }
+            }
+
+            onActivated: {
+                disablePositionUpdate = true
+                // ComboBox has currentIndex and currentText, why doesn't it have currentItem/currentModelValue?
+                mpris2Source.current = model[index].source
+                disablePositionUpdate = false
+            }
+        }
+
         RowLayout {
             id: titleRow
+            Layout.fillWidth: true
+            Layout.minimumHeight: expandedRepresentation.height / 2
             spacing: units.largeSpacing
-            width: parent.width
 
             Image {
                 id: albumArt
                 source: root.albumArt
+                asynchronous: true
                 fillMode: Image.PreserveAspectCrop
                 Layout.preferredHeight: expandedRepresentation.height / 2
                 Layout.preferredWidth: Layout.preferredHeight
-                visible: !!root.track
-
-                PlasmaCore.IconItem {
-                    anchors.fill: parent
-                    source: "tools-rip-audio-cd" // FIXME VDG Needs a proper album art cover dummy
-                    visible: parent.status !== Image.Ready
-                }
+                visible: !!root.track && status === Image.Ready
             }
 
             ColumnLayout {
@@ -117,7 +159,7 @@ Item {
 
         PlasmaComponents.Slider {
             id: seekSlider
-            width: parent.width
+            Layout.fillWidth: true
             z: 999
             maximumValue: currentMetadata ? currentMetadata["mpris:length"] || 0 : 0
             value: 0
@@ -135,6 +177,8 @@ Item {
                 }
             }
 
+            onMaximumValueChanged: retrievePosition()
+
             Timer {
                 id: seekTimer
                 interval: 1000
@@ -145,7 +189,11 @@ Item {
                     // add one second; value in microseconds
                     if (!seekSlider.pressed) {
                         disablePositionUpdate = true
-                        seekSlider.value += 1000000
+                        if (seekSlider.value == seekSlider.maximumValue) {
+                            retrievePosition();
+                        } else {
+                            seekSlider.value += 1000000
+                        }
                         disablePositionUpdate = false
                     }
                 }

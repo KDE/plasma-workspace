@@ -29,19 +29,30 @@ import org.kde.plasma.extras 2.0 as PlasmaExtras
 
 Item {
     id: devicenotifier
-    property string devicesType: "removable"
+    property string devicesType: {
+        if (plasmoid.configuration.allDevices) {
+            return "all"
+        } else if (plasmoid.configuration.removableDevices) {
+            return "removable"
+        } else {
+            return "nonRemovable"
+        }
+    }
     property string expandedDevice
     property string popupIcon: "device-notifier"
 
     property bool itemClicked: false
-    property int currentExpanded: -1
     property int currentIndex: -1
+
+    // QTBUG-50380: As soon as the item gets removed from the model, all of ListView's
+    // properties (count, contentHeight) pretend the delegate doesn't exist anymore
+    // causing our "No devices" heading to overlap with the remaining device
+    property int pendingDelegateRemoval: 0
 
     Plasmoid.switchWidth: units.gridUnit * 10
     Plasmoid.switchHeight: units.gridUnit * 15
     Plasmoid.toolTipMainText: i18n("No devices available")
     Plasmoid.status : (filterModel.count >  0) ? PlasmaCore.Types.ActiveStatus : PlasmaCore.Types.PassiveStatus
-
 
     PlasmaCore.DataSource {
         id: hpSource
@@ -84,7 +95,6 @@ Item {
 
         onSourceRemoved: {
             if (expandedDevice == source) {
-                devicenotifier.currentExpanded = -1;
                 expandedDevice = "";
             }
             disconnectSource(source);
@@ -120,18 +130,12 @@ Item {
         }
         filterRole: "Removable"
         filterRegExp: {
-            var all = devicenotifier.Plasmoid.configuration.allDevices;
-            var removable = devicenotifier.Plasmoid.configuration.removableDevices;
-
-            if (all == true) {
-                devicesType = "all";
-                return "";
-            } else if (removable == true) {
-                devicesType = "removable";
-                return "true";
+            if (devicesType === "removable") {
+                return "true"
+            } else if (devicesType === "nonRemovable") {
+                return "false"
             } else {
-                devicesType = "nonRemovable";
-                return "false";
+                return ""
             }
         }
         sortRole: "Timestamp"
@@ -149,6 +153,31 @@ Item {
             }
         }
     }
+
+    PlasmaCore.DataSource {
+        id: statusSource
+        engine: "devicenotifications"
+        property string last
+        property string lastUdi
+        onSourceAdded: {
+            last = source;
+            disconnectSource(source);
+            connectSource(source);
+        }
+        onSourceRemoved: disconnectSource(source)
+        onDataChanged: {
+            if (last) {
+                lastUdi = data[last].udi
+                plasmoid.expanded = true
+            }
+        }
+
+        function clearMessage() {
+            last = ""
+            lastUdi = ""
+        }
+    }
+
     Component.onCompleted: {
         if (sdSource.connectedSources.count == 0) {
             Plasmoid.status = PlasmaCore.Types.PassiveStatus;
@@ -165,13 +194,11 @@ Item {
             // (versus only hovered) for autohide purposes
             devicenotifier.itemClicked = true;
             expandedDevice = "";
-            devicenotifier.currentExpanded = -1;
             devicenotifier.currentIndex = -1;
         }
     }
 
-    function expandDevice(udi)
-    {
+    function expandDevice(udi) {
         if (hpSource.data[udi]["actions"].length > 1) {
             expandedDevice = udi
         }
@@ -186,33 +213,24 @@ Item {
         popupIconTimer.restart()
     }
 
-    function isMounted (udi) {
+    function isMounted(udi) {
         var types = sdSource.data[udi]["Device Types"];
-        if (types.indexOf("Storage Access")>=0) {
-            if (sdSource.data[udi]["Accessible"]) {
-                return true;
-            }
-            else {
-                return false;
-            }
+        if (types.indexOf("Storage Access") >= 0) {
+            return sdSource.data[udi]["Accessible"];
         }
-        else if (types.indexOf("Storage Volume")>=0 && types.indexOf("OpticalDisc")>=0) {
-            return true;
-        }
-        else {
-            return false;
-        }
+
+        return (types.indexOf("Storage Volume") >= 0 && types.indexOf("OpticalDisc") >= 0)
     }
 
     Timer {
         id: popupIconTimer
-        interval: 2500
+        interval: 3000
         onTriggered: devicenotifier.popupIcon  = "device-notifier";
     }
 
     Timer {
         id: passiveTimer
-        interval: 2500
+        interval: 3000
         onTriggered: plasmoid.status = PlasmaCore.Types.PassiveStatus
     }
 

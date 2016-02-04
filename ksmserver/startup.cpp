@@ -446,8 +446,6 @@ void KSMServer::autoStart2()
     } else {
         QTimer::singleShot(0, this, &KSMServer::kcmPhase2Done);
     }
-    if( !defaultSession())
-        restoreLegacySession(KSharedConfig::openConfig().data());
 
     qCDebug(KSMSERVER) << "Starting notification thread";
     NotificationThread *loginSound = new NotificationThread();

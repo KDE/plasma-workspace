@@ -1,6 +1,7 @@
 /*
    Copyright (C) 2010 by Jacopo De Simoi <wilderkde@gmail.com>
    Copyright (C) 2014 by Lukáš Tinkl <ltinkl@redhat.com>
+   Copyright (C) 2016 by Kai Uwe Broulik <kde@privat.broulik.de>
 
    This program is free software; you can redistribute it and/or modify
    it under the terms of the GNU General Public License as published by
@@ -37,15 +38,14 @@
 #include <QStringList>
 #include <QProcess>
 
-KSolidNotify::KSolidNotify(QObject* parent):
+KSolidNotify::KSolidNotify(QObject *parent):
     QObject(parent)
 {
     Solid::Predicate p(Solid::DeviceInterface::StorageAccess);
     p |= Solid::Predicate(Solid::DeviceInterface::OpticalDrive);
     p |= Solid::Predicate(Solid::DeviceInterface::PortableMediaPlayer);
-    QList<Solid::Device> devices = Solid::Device::listFromQuery(p);
-    foreach (const Solid::Device &dev, devices)
-    {
+    const QList<Solid::Device> &devices = Solid::Device::listFromQuery(p);
+    for (const Solid::Device &dev : devices) {
         m_devices.insert(dev.udi(), dev);
         connectSignals(&m_devices[dev.udi()]);
     }
@@ -65,25 +65,24 @@ void KSolidNotify::onDeviceAdded(const QString &udi)
 
 void KSolidNotify::onDeviceRemoved(const QString &udi)
 {
-    if (m_devices[udi].is<Solid::StorageVolume>())
-    {
+    if (m_devices[udi].is<Solid::StorageVolume>()) {
         Solid::StorageAccess *access = m_devices[udi].as<Solid::StorageAccess>();
-        if (access)
+        if (access) {
             disconnect(access, 0, this, 0);
+        }
     }
     m_devices.remove(udi);
 }
 
-bool KSolidNotify::isSafelyRemovable(const QString &udi)
+bool KSolidNotify::isSafelyRemovable(const QString &udi) const
 {
     Solid::Device parent = m_devices[udi].parent();
-    if (parent.is<Solid::StorageDrive>())
-    {
+    if (parent.is<Solid::StorageDrive>()) {
         Solid::StorageDrive *drive = parent.as<Solid::StorageDrive>();
         return (!drive->isInUse() && (drive->isHotpluggable() || drive->isRemovable()));
     }
 
-    Solid::StorageAccess* access = m_devices[udi].as<Solid::StorageAccess>();
+    const Solid::StorageAccess *access = m_devices[udi].as<Solid::StorageAccess>();
     if (access) {
         return !m_devices[udi].as<Solid::StorageAccess>()->isAccessible();
     } else {
@@ -93,28 +92,26 @@ bool KSolidNotify::isSafelyRemovable(const QString &udi)
     }
 }
 
-void KSolidNotify::connectSignals(Solid::Device* device)
+void KSolidNotify::connectSignals(Solid::Device *device)
 {
     Solid::StorageAccess *access = device->as<Solid::StorageAccess>();
     if (access) {
-        connect(access, &Solid::StorageAccess::teardownDone,
-                this, &KSolidNotify::storageTeardownDone);
-        connect(access, &Solid::StorageAccess::setupDone,
-                this, &KSolidNotify::storageSetupDone);
+        connect(access, &Solid::StorageAccess::teardownDone, this,
+            [=](Solid::ErrorType error, const QVariant &errorData, const QString &udi) {
+                onSolidReply(SolidReplyType::Teardown, error, errorData, udi);
+        });
+
+        connect(access, &Solid::StorageAccess::setupDone, this,
+            [=](Solid::ErrorType error, const QVariant &errorData, const QString &udi) {
+                onSolidReply(SolidReplyType::Setup, error, errorData, udi);
+        });
     }
     if (device->is<Solid::OpticalDisc>()) {
         Solid::OpticalDrive *drive = device->parent().as<Solid::OpticalDrive>();
-        connect(drive, &Solid::OpticalDrive::ejectDone,
-                this, &KSolidNotify::storageEjectDone);
-    }
-}
-
-void KSolidNotify::storageSetupDone(Solid::ErrorType error, QVariant errorData, const QString &udi)
-{
-    if (error) {
-        Solid::Device device(udi);
-        const QString errorMessage = i18n("Could not mount the following device: %1", device.description());
-        emit notify(error, errorMessage, errorData.toString(), udi);
+        connect(drive, &Solid::OpticalDrive::ejectDone, this,
+            [=](Solid::ErrorType error, const QVariant &errorData, const QString &udi) {
+                onSolidReply(SolidReplyType::Eject, error, errorData, udi);
+        });
     }
 }
 
@@ -149,75 +146,98 @@ void KSolidNotify::queryBlockingApps(const QString &devicePath)
 //    p.start(QStringLiteral("fuser"), {QStringLiteral("-m"), devicePath});
 }
 
-void KSolidNotify::storageTeardownDone(Solid::ErrorType error, QVariant errorData, const QString &udi)
+void KSolidNotify::onSolidReply(SolidReplyType type, Solid::ErrorType error, const QVariant &errorData, const QString &udi)
 {
-    if (error) {
-        Solid::Device device(udi);
-        Solid::StorageAccess *access = device.as<Solid::StorageAccess>();
-        // Without that, our lambda function would capture an uninitialized object, resulting in UB
-        // and random crashes
-        QMetaObject::Connection *c = new QMetaObject::Connection();
-        *c = connect(this, &KSolidNotify::blockingAppsReady,
-                [=] (const QStringList &blockApps) {
-                    QString errorMessage;
-                    if (blockApps.isEmpty()) {
-                        errorMessage = i18n("Could not safely remove the following device: %1\nOne or more files on this device are open within an application", device.description());
-                    } else {
-                        errorMessage = i18np("Could not safely remove the following device: %1\nOne or more files on this device are opened in application \"%3\"\nPlease close it and try again",
-                                "Could not safely remove the following device: %1\nOne or more files on this device are opened in following applications: %3\nPlease close it and try again",
-                                device.description(), blockApps.size(), blockApps.join(i18nc("separator in list of apps blocking device unmount", ", ")));
-                    }
-                    emit notify(error, errorMessage, errorData.toString(), udi);
-                    disconnect(*c);
-                    delete c;
-                });
-        queryBlockingApps(access->filePath());
-    } else if (isSafelyRemovable(udi)) {
-        Solid::Device device(udi);
-        const QString errorMessage = i18nc("The term \"remove\" here means \"physically disconnect the device from the computer\", whereas \"safely\" means \"without risk of data loss\"", "The following device can now be safely removed: %1", device.description());
-        emit notify(error, errorMessage, errorData.toString(), udi);
-    }
-}
+    QString errorMsg;
 
-void KSolidNotify::storageEjectDone(Solid::ErrorType error, QVariant errorData, const QString &udi)
-{
-    if (error)
-    {
-        QString discUdi;
-        foreach (Solid::Device device, m_devices) {
-            if (device.parentUdi() == udi) {
-                discUdi = device.udi();
+    switch (error) {
+    case Solid::ErrorType::NoError:
+        if (isSafelyRemovable(udi)) {
+            errorMsg = i18n("This device can now be safely removed.");
+        }
+        break;
+
+    case Solid::ErrorType::UnauthorizedOperation:
+        switch (type) {
+        case SolidReplyType::Setup:
+            errorMsg = i18n("You are not authorized to mount this device.");
+            break;
+        case SolidReplyType::Teardown:
+            errorMsg = i18nc("Remove is less technical for unmount", "You are not authorized to remove this device.");
+            break;
+        case SolidReplyType::Eject:
+            errorMsg = i18n("You are not authorized to eject this disc.");
+            break;
+        }
+
+        break;
+    case Solid::ErrorType::DeviceBusy: {
+        if (type == SolidReplyType::Setup) { // can this even happen?
+            errorMsg = i18n("Could not mount this device as it is busy.");
+        } else {
+            Solid::Device device;
+
+            if (type == SolidReplyType::Eject) {
+                QString discUdi;
+                foreach (Solid::Device device, m_devices) {
+                    if (device.parentUdi() == udi) {
+                        discUdi = device.udi();
+                    }
+                }
+
+                if (discUdi.isNull()) {
+                    // This should not happen, bail out
+                    return;
+                }
+
+                device = Solid::Device(discUdi);
+            } else {
+                device = Solid::Device(udi);
             }
+
+            Solid::StorageAccess *access = device.as<Solid::StorageAccess>();
+
+            // Without that, our lambda function would capture an uninitialized object, resulting in UB
+            // and random crashes
+            QMetaObject::Connection *c = new QMetaObject::Connection();
+            *c = connect(this, &KSolidNotify::blockingAppsReady, [=] (const QStringList &blockApps) {
+                QString errorMessage;
+                if (blockApps.isEmpty()) {
+                    errorMessage = i18n("One or more files on this device are open within an application.");
+                } else {
+                    errorMessage = i18np("One or more files on this device are opened in application \"%2\".",
+                            "One or more files on this device are opened in following applications: %2.",
+                            blockApps.count(), blockApps.join(i18nc("separator in list of apps blocking device unmount", ", ")));
+                }
+                emit notify(error, errorMessage, errorData.toString(), udi);
+                disconnect(*c);
+                delete c;
+            });
+            queryBlockingApps(access->filePath());
         }
 
-        if (discUdi.isNull()) {
-            //This should not happen, bail out
-            return;
+        break;
+    }
+    case Solid::ErrorType::UserCanceled:
+        // don't point out the obvious to the user, do nothing here
+        break;
+    default:
+        switch (type) {
+        case SolidReplyType::Setup:
+            errorMsg = i18n("Could not mount this device.");
+            break;
+        case SolidReplyType::Teardown:
+            errorMsg = i18nc("Remove is less technical for unmount", "Could not remove this device.");
+            break;
+        case SolidReplyType::Eject:
+            errorMsg = i18n("Could not eject this disc.");
+            break;
         }
 
-        Solid::Device discDevice(discUdi);
-        Solid::StorageAccess *access = discDevice.as<Solid::StorageAccess>();
-        // Without that, our lambda function would capture an uninitialized object, resulting in UB
-        // and random crashes
-        QMetaObject::Connection *c = new QMetaObject::Connection();
-        *c = connect(this, &KSolidNotify::blockingAppsReady,
-                [=] (const QStringList &blockApps) {
-                    QString errorMessage;
-                    if (blockApps.isEmpty()) {
-                        errorMessage = i18n("Could not eject the following device: %1\nOne or more files on this device are open within an application", discDevice.description());
-                    } else {
-                        errorMessage = i18np("Could not eject the following device: %1\nOne or more files on this device are opened in application \"%3\"\nPlease close it and try again",
-                                "Could not eject the following device: %1\nOne or more files on this device are opened in following applications: %3\nPlease close it and try again",
-                                discDevice.description(), blockApps.size(), blockApps.join(i18nc("separator in list of apps blocking device unmount", ", ")));
-                    }
-                    emit notify(error, errorMessage, errorData.toString(), udi);
-                    disconnect(*c);
-                    delete c;
-                });
-        queryBlockingApps(access->filePath());
-    } else if (isSafelyRemovable(udi)) {
-        Solid::Device device(udi);
-        const QString errorMessage = i18n("The following device can now be safely removed: %1", device.description());
-        emit notify(error, errorMessage, errorData.toString(), udi);
+        break;
+    }
+
+    if (!errorMsg.isEmpty()) {
+        emit notify(error, errorMsg, errorData.toString(), udi);
     }
 }

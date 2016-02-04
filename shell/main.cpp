@@ -29,6 +29,7 @@
 
 #include <kdbusservice.h>
 #include <klocalizedstring.h>
+#include <kcrash.h>
 
 #include "shellcorona.h"
 #include "standaloneappcorona.h"
@@ -96,13 +97,9 @@ int main(int argc, char *argv[])
                                  QStringLiteral("windowed"),
                                  i18n("Force a windowed view for testing purposes"));
 
-    QCommandLineOption respawnOption(QStringList() << QStringLiteral("n") <<
+    QCommandLineOption noRespawnOption(QStringList() << QStringLiteral("n") <<
                                      QStringLiteral("no-respawn"),
                                      i18n("Do not restart plasma-shell automatically after a crash"));
-
-    QCommandLineOption crashOption(QStringList() << QStringLiteral("c") << QStringLiteral("crashes"),
-                                   i18n("Recent number of crashes"),
-                                   QStringLiteral("n"));
 
     QCommandLineOption shutupOption(QStringList() << QStringLiteral("s") << QStringLiteral("shut-up"),
                                  i18n("Deprecated, does nothing"));
@@ -116,8 +113,7 @@ int main(int argc, char *argv[])
 
     cliOptions.addOption(dbgOption);
     cliOptions.addOption(winOption);
-    cliOptions.addOption(respawnOption);
-    cliOptions.addOption(crashOption);
+    cliOptions.addOption(noRespawnOption);
     cliOptions.addOption(shutupOption);
     cliOptions.addOption(shellPluginOption);
     cliOptions.addOption(standaloneOption);
@@ -134,29 +130,10 @@ int main(int argc, char *argv[])
     QObject::connect(&app, &QGuiApplication::commitDataRequest, disableSessionManagement);
     QObject::connect(&app, &QGuiApplication::saveStateRequest, disableSessionManagement);
 
-    ShellManager::s_crashes = cliOptions.value(crashOption).toInt();
-    ShellManager::s_forceWindowed = cliOptions.isSet(winOption);
-    ShellManager::s_noRespawn = cliOptions.isSet(respawnOption);
     ShellManager::s_fixedShell = cliOptions.value(shellPluginOption);
 
-    if (cliOptions.isSet(dbgOption)) {
-        ShellManager::s_restartOptions += " -" + dbgOption.names().first();
-    }
-
-    if (cliOptions.isSet(winOption)) {
-        ShellManager::s_restartOptions += " -" + winOption.names().first();
-    }
-
-    if (cliOptions.isSet(respawnOption)) {
-        ShellManager::s_restartOptions += " -" + respawnOption.names().first();
-    }
-
-    if (cliOptions.isSet(shutupOption)) {
-        ShellManager::s_restartOptions += " -" + shutupOption.names().first();
-    }
-
-    if (cliOptions.isSet(shellPluginOption)) {
-        ShellManager::s_restartOptions += " -" + shellPluginOption.names().first() + " " + ShellManager::s_fixedShell;
+    if (!cliOptions.isSet(noRespawnOption)) {
+        KCrash::setFlags(KCrash::AutoRestart);
     }
 
     if (cliOptions.isSet(standaloneOption)) {

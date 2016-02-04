@@ -191,10 +191,7 @@ void KSMServer::shutdown( KWorkSpace::ShutdownConfirm confirm,
         QApplication::setPalette(palette);
         state = Shutdown;
         wmPhase1WaitingCount = 0;
-        saveType = saveSession?SmSaveBoth:SmSaveGlobal;
-#ifndef NO_LEGACY_SESSION_MANAGEMENT
-        performLegacySessionSave();
-#endif
+        saveType = saveSession ? SmSaveBoth : SmSaveGlobal;
         startProtection();
         foreach( KSMClient* c, clients ) {
             c->resetState();
@@ -250,9 +247,6 @@ void KSMServer::saveCurrentSession()
     wmPhase1WaitingCount = 0;
     saveType = SmSaveLocal;
     saveSession = true;
-#ifndef NO_LEGACY_SESSION_MANAGEMENT
-    performLegacySessionSave();
-#endif
     foreach( KSMClient* c, clients ) {
         c->resetState();
         if( isWM( c ) )
@@ -628,10 +622,6 @@ void KSMServer::saveSubSession(const QString &name, QStringList saveAndClose, QS
     saveType = SmSaveBoth; //both or local? what oes it mean?
     saveSession = true;
     sessionGroup = QStringLiteral( "SubSession: " ) + name;
-
-#ifndef NO_LEGACY_SESSION_MANAGEMENT
-    //performLegacySessionSave(); FIXME
-#endif
 
     startProtection();
     foreach( KSMClient* c, clients ) {

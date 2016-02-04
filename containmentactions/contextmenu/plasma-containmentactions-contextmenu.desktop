@@ -1,6 +1,7 @@
 [Desktop Entry]
 Name=Standard Menu
 Name[ar]=قائمة قياسية
+Name[ast]=Menú estándar
 Name[bg]=Стандартно меню
 Name[bs]=Standardni meni
 Name[ca]=Menú estàndard
@@ -68,6 +69,7 @@ Name[zh_CN]=标准菜单
 Name[zh_TW]=標準選單
 Comment=The menu that normally shows on right-click
 Comment[ar]=القائمة التي تظهر عادةً عند الضغط باليمين
+Comment[ast]=El menú que davezu s'amuesa col clic drechu
 Comment[bg]=Менюто, което обикновено се появява при щракване с десен бутон на мишката
 Comment[bs]=Meni koji se obično pokazuje na desni klik
 Comment[ca]=Menú que es mostra normalment amb un clic del botó dret

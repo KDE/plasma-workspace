@@ -27,6 +27,7 @@
 #include <QJsonArray>
 #include <QMimeData>
 
+#include <KConfigGroup>
 #include <KFileItem>
 #include <KDesktopFile>
 #include <KRun>
@@ -61,6 +62,30 @@ void IconPrivate::setUrl(const QUrl &url)
             if (m_name.isNull()) {
                 m_name = QFileInfo(m_url.toLocalFile()).fileName();
             }
+
+            m_jumpListActions.clear();
+
+            const QStringList &actions = f.readActions();
+
+            foreach (const QString &actionName, actions) {
+                const KConfigGroup &actionGroup = f.actionGroup(actionName);
+
+                if (!actionGroup.isValid() || !actionGroup.exists()) {
+                    continue;
+                }
+
+                const QString &name = actionGroup.readEntry(QStringLiteral("Name"));
+                const QString &exec = actionGroup.readEntry(QStringLiteral("Exec"));
+                if (name.isEmpty() || exec.isEmpty()) {
+                    continue;
+                }
+
+                m_jumpListActions << QVariantMap{
+                    {QStringLiteral("name"), name},
+                    {QStringLiteral("icon"), actionGroup.readEntry("Icon")},
+                    {QStringLiteral("exec"), exec}
+                };
+            }
         } else {
             QMimeDatabase db;
             m_name = fi.baseName();
@@ -83,6 +108,7 @@ void IconPrivate::setUrl(const QUrl &url)
     emit nameChanged(m_name);
     emit iconChanged(m_icon);
     emit genericNameChanged(m_genericName);
+    emit jumpListActionsChanged(m_jumpListActions);
 }
 
 QUrl IconPrivate::url() const
@@ -103,6 +129,11 @@ QString IconPrivate::icon() const
 QString IconPrivate::genericName() const
 {
     return m_genericName;
+}
+
+QVariantList IconPrivate::jumpListActions() const
+{
+    return m_jumpListActions;
 }
 
 bool IconPrivate::processDrop(QObject *dropEvent)
@@ -193,3 +224,12 @@ void IconPrivate::open()
     new KRun(m_url, 0);
 }
 
+void IconPrivate::execJumpList(int index)
+{
+    const QString &exec = m_jumpListActions.at(index).toMap().value(QStringLiteral("exec")).toString();
+    if (exec.isEmpty()) {
+        return;
+    }
+
+    KRun::run(exec, {}, nullptr, m_name, m_icon);
+}

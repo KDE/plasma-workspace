@@ -100,12 +100,15 @@ bool TasksProxyModel::filterAcceptsRow(int sourceRow, const QModelIndex &sourceP
         return false;
     }
 
-    if (m_host->showAllItems() && m_category == Category::HiddenTasksCategory) {
+    if (m_host->showAllItems() && (m_category == Category::HiddenTasksCategory ||
+                                   task->status() == SystemTray::Task::HiddenStatus)) {
         return false;
     }
 
     if (!m_host->showAllItems()) {
-        if (m_category == Category::HiddenTasksCategory) {
+        if (task->status() == SystemTray::Task::HiddenStatus) {
+            return false;
+        } else if (m_category == Category::HiddenTasksCategory) {
             return !showTask(task);
         } else if (m_category == Category::ShownTasksCategory) {
             return showTask(task);

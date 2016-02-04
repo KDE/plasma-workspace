@@ -36,6 +36,10 @@ class KeyboardLayout : public QObject
                WRITE setCurrentLayout
                NOTIFY currentLayoutChanged)
 
+    Q_PROPERTY(QString currentLayoutDisplayName
+               READ currentLayoutDisplayName
+               NOTIFY currentLayoutDisplayNameChanged)
+
     Q_PROPERTY(QStringList layouts
                READ layouts
                NOTIFY layoutsChanged)
@@ -45,6 +49,7 @@ public:
     ~KeyboardLayout();
 
     QString currentLayout() const;
+    QString currentLayoutDisplayName() const;
     QStringList layouts() const;
 
 public Q_SLOTS:
@@ -52,20 +57,22 @@ public Q_SLOTS:
 
 Q_SIGNALS:
     void currentLayoutChanged(const QString &newLayout);
+    void currentLayoutDisplayNameChanged(const QString &newLayout);
     void layoutsChanged();
 
 private Q_SLOTS:
     void requestCurrentLayout();
+    void requestCurrentLayoutDisplayName();
     void requestLayoutsList();
 
     void onCurrentLayoutReceived(QDBusPendingCallWatcher *watcher);
+    void onCurrentLayoutDisplayNameReceived(QDBusPendingCallWatcher *watcher);
     void onLayoutsListReceived(QDBusPendingCallWatcher *watcher);
-
-    void onCurrentLayoutChanged(const QString &newLayout);
 
 private:
     QStringList mLayouts;
     QString mCurrentLayout;
+    QString mCurrentLayoutDisplayName;
     QDBusInterface *mIface;
 
 };

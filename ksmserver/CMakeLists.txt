@@ -15,7 +15,6 @@ set(ksmserver_KDEINIT_SRCS
     server.cpp
     shutdowndlg.cpp
     switchuserdialog.cpp
-    legacy.cpp
     startup.cpp
     shutdown.cpp
     client.cpp

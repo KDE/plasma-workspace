@@ -99,10 +99,9 @@ PlasmaCore.Dialog {
 
         NotificationItem {
             id: notificationItem
-            property string text
 
             summary: notificationProperties ? notificationProperties.summary: ""
-            text: notificationProperties ? notificationProperties.body : ""
+            body: notificationProperties ? notificationProperties.body : ""
             icon: notificationProperties ? notificationProperties.appIcon : ""
             image: notificationProperties ? notificationProperties.image : undefined
             configurable: (notificationProperties ? notificationProperties.configurable : false) && !Settings.isMobile
@@ -112,22 +111,12 @@ PlasmaCore.Dialog {
 
             width: Math.round(23 * units.gridUnit)
 
-            textItem: PlasmaComponents.Label {
-                wrapMode: Text.WrapAtWordBoundaryOrAnywhere
-                elide: Text.ElideRight
-                verticalAlignment: Text.AlignTop
-                onLinkActivated: Qt.openUrlExternally(link)
-                text: notificationItem.text
-                textFormat: Text.StyledText
-                maximumLineCount: 4
-            }
-
             onClose: {
                 closeNotification(notificationProperties.source)
                 notificationPopup.hide()
             }
             onConfigure: {
-                configureNotification(notificationProperties.appRealName)
+                configureNotification(notificationProperties.appRealName, notificationProperties.eventId)
                 notificationPopup.hide()
             }
             onAction: {

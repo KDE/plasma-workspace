@@ -39,11 +39,8 @@ public:
     ~ShellManager();
 
     static bool s_forceWindowed;
-    static bool s_noRespawn;
     static bool s_standaloneOption;
-    static int s_crashes;
     static QString s_fixedShell;
-    static QString s_restartOptions;
 
 protected Q_SLOTS:
     void registerHandler(QObject * handler);
@@ -58,15 +55,12 @@ Q_SIGNALS:
 
 private Q_SLOTS:
     void loadHandlers();
-    void resetCrashCount();
 
 private:
     ShellManager();
 
     class Private;
     const QScopedPointer<Private> d;
-
-    static void crashHandler(int signal);
 };
 
 #endif /* SHELLMANAGER_H */

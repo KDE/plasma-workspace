@@ -58,7 +58,7 @@ KQuickControlsAddons.MouseEventListener {
         if (!root.expandedTask || expandedItemContainer.x > mouse.x || expandedItemContainer.x + expandedItemContainer.width < mouse.x) {
             return;
         }
-        host.showMenu(mouse.screenX, mouse.screenY, root.expandedTask)
+        root.expandedTask.showMenu(mouse.screenX, mouse.screenY)
     }
 
     MouseArea {

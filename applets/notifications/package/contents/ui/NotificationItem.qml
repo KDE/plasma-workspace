@@ -39,12 +39,12 @@ Item {
     signal configure
     signal action(string actionId)
 
-    property alias textItem: textItemLoader.sourceComponent
     property bool compact: false
 
     property alias icon: appIconItem.source
     property alias image: imageItem.image
     property alias summary: summaryLabel.text
+    property alias body: bodyText.text
     property alias configurable: settingsButton.visible
     property var created
 
@@ -105,6 +105,7 @@ Item {
         }
 
         visible: !imageItem.visible && valid
+        animated: false
     }
 
     QImageItem {
@@ -188,19 +189,67 @@ Item {
             // If there is a big notification followed by a small one, the height
             // of the popup does not always shrink back, so this forces it to
             // height=0 when those are invisible. -1 means "default to implicitHeight"
-            Layout.maximumHeight: textItemLoader.visible || actionsColumn.visible ? -1 : 0
+            Layout.maximumHeight: bodyText.visible || actionsColumn.visible ? -1 : 0
 
-            Loader {
-                id: textItemLoader
+            MouseArea {
+                id: contextMouseArea
+
                 Layout.fillWidth: true
-                Layout.fillHeight: true
-                visible: textItemLoader.item && textItemLoader.item.text !== ""
+
                 anchors {
                     leftMargin: units.smallSpacing * 2
                     rightMargin: units.smallSpacing * 2
                 }
-            }
 
+                implicitHeight: bodyText.paintedHeight
+
+                acceptedButtons: Qt.RightButton
+                preventStealing: true
+
+                onPressed: contextMenu.open(mouse.x, mouse.y)
+
+                PlasmaComponents.ContextMenu {
+                    id: contextMenu
+                    visualParent: contextMouseArea
+
+                    PlasmaComponents.MenuItem {
+                        text: i18n("Copy")
+                        onClicked: bodyText.copy()
+                    }
+
+                    PlasmaComponents.MenuItem {
+                        text: i18n("Select All")
+                        onClicked: bodyText.selectAll()
+                    }
+                }
+
+                TextEdit {
+                    id: bodyText
+                    enabled: !Settings.isMobile
+                    anchors.fill: parent
+                    visible: bodyText.length !== 0
+
+                    color: PlasmaCore.ColorScope.textColor
+                    selectedTextColor: theme.viewBackgroundColor
+                    selectionColor: theme.viewFocusColor
+                    font.capitalization: theme.defaultFont.capitalization
+                    font.family: theme.defaultFont.family
+                    font.italic: theme.defaultFont.italic
+                    font.letterSpacing: theme.defaultFont.letterSpacing
+                    font.pointSize: theme.defaultFont.pointSize
+                    font.strikeout: theme.defaultFont.strikeout
+                    font.underline: theme.defaultFont.underline
+                    font.weight: theme.defaultFont.weight
+                    font.wordSpacing: theme.defaultFont.wordSpacing
+                    renderType: Text.NativeRendering
+                    selectByMouse: true
+                    readOnly: true
+                    wrapMode: Text.Wrap
+                    textFormat: TextEdit.RichText
+
+                    onLinkActivated: Qt.openUrlExternally(link)
+                }
+            }
 
             ColumnLayout {
                 id: actionsColumn

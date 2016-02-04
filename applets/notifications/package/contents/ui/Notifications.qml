@@ -93,10 +93,11 @@ Column {
         }
     }
 
-    function configureNotification(appRealName) {
+    function configureNotification(appRealName, eventId) {
         var service = notificationsSource.serviceForSource("notification")
         var op = service.operationDescription("configureNotification")
-        op["appRealName"] = appRealName;
+        op.appRealName = appRealName
+        op.eventId = eventId
         service.startOperationCall(op)
     }
     function createNotification(data) {

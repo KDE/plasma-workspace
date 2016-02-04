@@ -90,7 +90,7 @@ void StatusNotifierItemEngine::registerWatcher(const QString& service)
         m_statusNotifierWatcher = new org::kde::StatusNotifierWatcher(s_watcherServiceName, QStringLiteral("/StatusNotifierWatcher"),
 								      QDBusConnection::sessionBus());
         if (m_statusNotifierWatcher->isValid() &&
-            m_statusNotifierWatcher->property("ProtocolVersion").toBool() == s_protocolVersion) {
+            m_statusNotifierWatcher->property("ProtocolVersion").toInt() == s_protocolVersion) {
             connect(m_statusNotifierWatcher, &OrgKdeStatusNotifierWatcherInterface::StatusNotifierItemRegistered, this, &StatusNotifierItemEngine::serviceRegistered);
             connect(m_statusNotifierWatcher, &OrgKdeStatusNotifierWatcherInterface::StatusNotifierItemUnregistered, this, &StatusNotifierItemEngine::serviceUnregistered);
 

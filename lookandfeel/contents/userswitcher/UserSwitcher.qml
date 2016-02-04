@@ -64,7 +64,7 @@ Item {
                 Layout.fillHeight: true
                 horizontalAlignment: Text.AlignHCenter
                 verticalAlignment: Text.AlignVCenter
-                text: i18nc("plasma_lookandfeel_org.kde.lookandfeel","There are currently no other active sessions.")
+                text: i18nd("plasma_lookandfeel_org.kde.lookandfeel","There are currently no other active sessions.")
                 visible: sessionsModel.count === 0
             }
 

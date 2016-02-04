@@ -45,9 +45,16 @@ Item {
     Plasmoid.compactRepresentation: DigitalClock { }
     Plasmoid.fullRepresentation: CalendarView { }
 
-    Plasmoid.toolTipMainText: Qt.formatDate(tzDate,"dddd")
-    Plasmoid.toolTipSubText:  Qt.formatDate(tzDate, plasmoid.configuration.dateFormat === "isoDate" ? Qt.ISODate : dateFormatString)
-    Plasmoid.toolTipTextFormat: Text.StyledText
+    Plasmoid.toolTipItem: Loader {
+        id: tooltipLoader
+
+        Layout.minimumWidth: item.width
+        Layout.maximumWidth: item.width
+        Layout.minimumHeight: item.height
+        Layout.maximumHeight: item.height
+
+        source: "Tooltip.qml"
+    }
 
     PlasmaCore.DataSource {
         id: dataSource

@@ -95,7 +95,6 @@ public Q_SLOTS:
     QAbstractItemModel* availablePlasmoids();
     QStringList defaultPlasmoids() const;
     QStringList categories() const;
-    Q_INVOKABLE void showMenu(int x, int y, QObject *task);
 
 
 Q_SIGNALS:

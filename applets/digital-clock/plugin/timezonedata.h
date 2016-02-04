@@ -31,6 +31,7 @@ public:
     QString city;
     QString comment;
     bool checked;
+    int offsetFromUtc;
 
 };
 

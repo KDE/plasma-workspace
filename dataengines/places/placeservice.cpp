@@ -36,7 +36,7 @@ PlaceService::PlaceService(QObject* parent, KFilePlacesModel* model)
 Plasma::ServiceJob* PlaceService::createJob(const QString& operation,
                                             QMap<QString,QVariant>& parameters)
 {
-    QModelIndex index = m_model->index(parameters.value(QStringLiteral("index")).toInt(), 0);
+    QModelIndex index = m_model->index(parameters.value(QStringLiteral("placeIndex")).toInt(), 0);
 
     if (!index.isValid()) {
         return 0;

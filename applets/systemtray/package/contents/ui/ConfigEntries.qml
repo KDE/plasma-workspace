@@ -50,6 +50,7 @@ QtLayouts.GridLayout {
 
     QtControls.Button { // just for measurement
         id: measureButton
+        text: "measureButton"
         visible: false
     }
 

@@ -70,6 +70,8 @@ Column {
         PlasmaComponents.ToolButton {
             id: expandButton
             iconSource: checked ? "arrow-down" : "arrow-left"
+            tooltip: checked ? i18nc("A button tooltip; hides item details", "Hide Details")
+                             : i18nc("A button tooltip; expands the item to show details", "Show Details")
             checkable: true
             onCheckedChanged: {
                 if (checked) {

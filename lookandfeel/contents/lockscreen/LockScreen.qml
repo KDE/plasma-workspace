@@ -34,7 +34,7 @@ Image {
 
     source: backgroundPath || "../components/artwork/background.png"
     fillMode: Image.PreserveAspectCrop
-    asynchronous: true
+    asynchronous: false
 
     onStatusChanged: {
         if (status == Image.Error) {
@@ -45,71 +45,21 @@ Image {
     LayoutMirroring.enabled: Qt.application.layoutDirection === Qt.RightToLeft
     LayoutMirroring.childrenInherit: true
 
+    Loader {
+        id: mainLoader
+        anchors.fill: parent
+    }
     Connections {
-        target: authenticator
-        onFailed: {
-            root.notification = i18nd("plasma_lookandfeel_org.kde.lookandfeel","Unlocking failed");
-        }
-        onGraceLockedChanged: {
-            if (!authenticator.graceLocked) {
-                root.notification = "";
-                root.clearPassword();
-            }
-        }
-        onMessage: {
-            root.notification = msg;
-        }
-        onError: {
-            root.notification = err;
+        id:loaderConnection
+        target: org_kde_plasma_screenlocker_greeter_view
+        onFrameSwapped: {
+            mainLoader.source = "LockScreenUi.qml";
+            loaderConnection.target = null;
         }
     }
-
-    SessionsModel {
-        id: sessionsModel
-    }
-
-    PlasmaCore.DataSource {
-        id: keystateSource
-        engine: "keystate"
-        connectedSources: "Caps Lock"
-    }
-
-    Loader {
-        id: changeSessionComponent
-        active: false
-        source: "ChangeSession.qml"
-        visible: false
-    }
-
-    StackView {
-        id: stackView
-        height: units.largeSpacing * 14
-        anchors {
-            verticalCenter: parent.verticalCenter
-            left: parent.left
-            right: parent.right
-        }
-
-        initialItem: Loader {
-            active: root.viewVisible
-            source: "MainBlock.qml"
-        }
-    }
-
-    Loader {
-        active: root.viewVisible
-        source: "LockOsd.qml"
-        anchors {
-            horizontalCenter: parent.horizontalCenter
-            bottom: parent.bottom
-        }
-    }
-
     Component.onCompleted: {
-        // version support checks
-        if (root.interfaceVersion < 1) {
-            // ksmserver of 5.4, with greeter of 5.5
-            root.viewVisible = true;
+        if (root.interfaceVersion < 2) {
+            mainLoader.source = "LockScreenUi.qml";
         }
     }
 }

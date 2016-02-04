@@ -5,7 +5,7 @@ set(PROJECT_VERSION_MAJOR 5)
 cmake_minimum_required(VERSION 2.8.12 FATAL_ERROR)
 
 set(QT_MIN_VERSION "5.5.0")
-set(KF5_MIN_VERSION "5.15.0")
+set(KF5_MIN_VERSION "5.18.0")
 set(INSTALL_SDDM_THEME TRUE)
 find_package(Qt5 ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS Widgets Quick QuickWidgets Concurrent Test Script Network)
 find_package(ECM 1.8.0 REQUIRED NO_MODULE)
@@ -14,7 +14,12 @@ set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH} ${ECM_KDE_MODULE_DIR})
 find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS
                     Plasma DocTools Runner JsEmbed NotifyConfig Su NewStuff Wallet KCMUtils
                     IdleTime Declarative TextWidgets KDELibs4Support Crash GlobalAccel
-                    NetworkManagerQt DBusAddons)
+                    DBusAddons)
+find_package(KF5NetworkManagerQt ${KF5_MIN_VERSION})
+set_package_properties(KF5NetworkManagerQt PROPERTIES DESCRIPTION "Qt wrapper for NetworkManager API"
+                       TYPE OPTIONAL
+                       PURPOSE "Needed by geolocation data engine."
+                      )
 find_package(KF5XmlRpcClient REQUIRED)
 
 # WARNING PlasmaQuick provides unversioned CMake config
@@ -38,7 +43,7 @@ set_package_properties(Phonon4Qt5 PROPERTIES
 
 include(KDEInstallDirs)
 include(KDECMakeSettings)
-include(KDECompilerSettings)
+include(KDECompilerSettings NO_POLICY_SCOPE)
 include(ECMPackageConfigHelpers)
 include(ECMMarkNonGuiExecutable)
 include(CMakePackageConfigHelpers)

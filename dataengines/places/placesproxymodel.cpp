@@ -41,7 +41,7 @@ QHash<int, QByteArray>  PlacesProxyModel::roleNames() const
     roles.insert(KFilePlacesModel::SetupNeededRole, "setupNeeded");
     roles.insert(KFilePlacesModel::FixedDeviceRole, "fixedDevice");
     roles.insert(KFilePlacesModel::CapacityBarRecommendedRole, "capacityBarRecommended");
-    roles.insert(IndexRole, "index");
+    roles.insert(PlaceIndexRole, "placeIndex");
     roles.insert(IsDeviceRole, "isDevice");
     roles.insert(PathRole, "path");
     roles.insert(SizeRole, "size");
@@ -53,7 +53,7 @@ QHash<int, QByteArray>  PlacesProxyModel::roleNames() const
 QVariant PlacesProxyModel::data(const QModelIndex &index, int role) const
 {
     switch (role) {
-    case IndexRole:
+    case PlaceIndexRole:
         return index.row();
     case IsDeviceRole:
         return m_placesModel->deviceForIndex(index).isValid();

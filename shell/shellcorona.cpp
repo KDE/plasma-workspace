@@ -108,6 +108,8 @@ ShellCorona::ShellCorona(QObject *parent)
         executeSetupPlasmoidScript(c, c);
     });
 
+    connect(this, &Plasma::Corona::availableScreenRectChanged, this, &Plasma::Corona::availableScreenRegionChanged);
+
     m_appConfigSyncTimer.setSingleShot(true);
     m_appConfigSyncTimer.setInterval(s_configSyncDelay);
     connect(&m_appConfigSyncTimer, &QTimer::timeout, this, &ShellCorona::syncAppConfig);
@@ -354,7 +356,9 @@ void ShellCorona::load()
         foreach(Plasma::Containment *containment, containments()) {
             if (containment->formFactor() == Plasma::Types::Horizontal ||
                 containment->formFactor() == Plasma::Types::Vertical) {
-                if (!m_waitingPanels.contains(containment)) {
+                //Don't give a view to containments that don't want one (negative lastscreen)
+                //this is pretty mucha special case for the systray
+                if (!m_waitingPanels.contains(containment) && containment->lastScreen() >= 0) {
                     m_waitingPanels << containment;
                 }
             } else {
@@ -626,7 +630,11 @@ KActivities::Controller *ShellCorona::activityController()
 
 int ShellCorona::numScreens() const
 {
-    return QGuiApplication::screens().count();
+    //don't start loading screens until kscreen has finished initialising.
+    if (!m_screenConfiguration) {
+        return 0;
+    }
+    return m_screenConfiguration->outputs().count();
 }
 
 QRect ShellCorona::screenGeometry(int id) const
@@ -778,7 +786,6 @@ void ShellCorona::removeView(int idx)
 
     if (panelsAltered) {
         emit availableScreenRectChanged();
-        emit availableScreenRegionChanged();
     }
 }
 
@@ -918,7 +925,6 @@ void ShellCorona::addOutput(const KScreen::OutputPtr &output)
     }
 
     emit availableScreenRectChanged();
-    emit availableScreenRegionChanged();
 
     CHECK_SCREEN_INVARIANTS
 }
@@ -1014,10 +1020,11 @@ void ShellCorona::createWaitingPanels()
         Q_ASSERT(qBound(0, requestedScreen, m_views.count() - 1) == requestedScreen);
         QScreen *screen = m_views[requestedScreen]->screen();
         PanelView* panel = new PanelView(this, screen);
-        connect(panel, &QWindow::visibleChanged, [this]() {
-            emit availableScreenRectChanged();
-            emit availableScreenRegionChanged();
-        });
+        connect(panel, &QWindow::visibleChanged, this, &Plasma::Corona::availableScreenRectChanged);
+        connect(panel, &PanelView::locationChanged, this, &Plasma::Corona::availableScreenRectChanged);
+        connect(panel, &PanelView::visibilityModeChanged, this, &Plasma::Corona::availableScreenRectChanged);
+        connect(panel, &PanelView::thicknessChanged, this, &Plasma::Corona::availableScreenRectChanged);
+
 
         m_panelViews[cont] = panel;
         panel->setContainment(cont);
@@ -1028,14 +1035,12 @@ void ShellCorona::createWaitingPanels()
     }
     m_waitingPanels = stillWaitingPanels;
     emit availableScreenRectChanged();
-    emit availableScreenRegionChanged();
 }
 
 void ShellCorona::containmentDeleted(QObject *cont)
 {
     m_panelViews.remove(static_cast<Plasma::Containment*>(cont));
     emit availableScreenRectChanged();
-    emit availableScreenRegionChanged();
 }
 
 void ShellCorona::handleContainmentAdded(Plasma::Containment *c)
@@ -1354,7 +1359,6 @@ Plasma::Containment *ShellCorona::setContainmentTypeForScreen(int screen, const 
     QTimer::singleShot(2500, oldContainment, &Plasma::Applet::destroy);
 
     emit availableScreenRectChanged();
-    emit availableScreenRegionChanged();
 
     return newContainment;
 }

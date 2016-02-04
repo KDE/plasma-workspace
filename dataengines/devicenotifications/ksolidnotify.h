@@ -53,14 +53,17 @@ protected slots:
     void onDeviceAdded(const QString &udi);
     void onDeviceRemoved(const QString &udi);
 
-private slots:
-    void storageEjectDone(Solid::ErrorType error, QVariant errorData, const QString & udi);
-    void storageTeardownDone(Solid::ErrorType error, QVariant errorData, const QString & udi);
-    void storageSetupDone(Solid::ErrorType error, QVariant errorData, const QString & udi);
-
 private:
+    enum class SolidReplyType {
+        Setup,
+        Teardown,
+        Eject
+    };
+
+    void onSolidReply(SolidReplyType type, Solid::ErrorType error, const QVariant &errorData, const QString &udi);
+
     void connectSignals(Solid::Device* device);
-    bool isSafelyRemovable(const QString &udi);
+    bool isSafelyRemovable(const QString &udi) const;
     void queryBlockingApps(const QString &devicePath);
 
     QHash<QString, Solid::Device> m_devices;

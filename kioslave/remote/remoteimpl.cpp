@@ -34,7 +34,7 @@
 #include <sys/stat.h>
 
 #define WIZARD_URL "remote:/x-wizard_service.desktop"
-#define WIZARD_SERVICE "knetattach"
+#define WIZARD_SERVICE "org.kde.knetattach"
 
 RemoteImpl::RemoteImpl()
 {

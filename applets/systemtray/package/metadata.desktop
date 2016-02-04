@@ -88,6 +88,7 @@ Name[x-test]=xxSystem Trayxx
 Name[zh_CN]=系统托盘
 Name[zh_TW]=系統匣
 Comment=Access hidden applications minimized in the system tray
+Comment[ast]=Accede a aplicaciones anubríes y minimizaes na bandexa'l sistema
 Comment[be@latin]=Dostup da schavanych u systemnym trei aplikacyjaŭ
 Comment[bg]=Достъп до минимизираните в системния панел програми
 Comment[bs]=Pristup skrivenim programima minimizovanim u sistemsku kasetu
