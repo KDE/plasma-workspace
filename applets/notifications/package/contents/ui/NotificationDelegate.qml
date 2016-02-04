@@ -107,62 +107,11 @@ PlasmaComponents.ListItem {
             icon: appIcon
             image: model.image
             summary: model.summary
+            body: model.body
             configurable: model.configurable && !Settings.isMobile
             // model.actions JS array is implicitly turned into a ListModel which we can assign directly
             actions: model.actions
             created: model.created
-
-            textItem: MouseArea {
-                id: contextMouseArea
-                height: bodyText.paintedHeight
-
-                acceptedButtons: Qt.RightButton
-                preventStealing: true
-
-                onPressed: contextMenu.open(mouse.x, mouse.y)
-
-                PlasmaComponents.ContextMenu {
-                    id: contextMenu
-                    visualParent: contextMouseArea
-
-                    PlasmaComponents.MenuItem {
-                        text: i18n("Copy")
-                        onClicked: bodyText.copy()
-                    }
-
-                    PlasmaComponents.MenuItem {
-                        text: i18n("Select All")
-                        onClicked: bodyText.selectAll()
-                    }
-                }
-
-                TextEdit {
-                    id: bodyText
-                    anchors.fill: parent
-
-                    text: body
-                    color: PlasmaCore.ColorScope.textColor
-                    selectedTextColor: theme.viewBackgroundColor
-                    selectionColor: theme.viewFocusColor
-                    font.capitalization: theme.defaultFont.capitalization
-                    font.family: theme.defaultFont.family
-                    font.italic: theme.defaultFont.italic
-                    font.letterSpacing: theme.defaultFont.letterSpacing
-                    font.pointSize: theme.defaultFont.pointSize
-                    font.strikeout: theme.defaultFont.strikeout
-                    font.underline: theme.defaultFont.underline
-                    font.weight: theme.defaultFont.weight
-                    font.wordSpacing: theme.defaultFont.wordSpacing
-                    renderType: Text.NativeRendering
-                    enabled: !Settings.isMobile
-                    selectByMouse: true
-                    readOnly: true
-                    wrapMode: Text.Wrap
-                    textFormat: TextEdit.RichText
-
-                    onLinkActivated: Qt.openUrlExternally(link)
-                }
-            }
 
             onClose: {
                 if (notificationsModel.count > 1) {
