@@ -56,6 +56,7 @@ SystemTray::~SystemTray()
 
 void SystemTray::init()
 {
+    config().writeEntry("lastScreen", -1);
     Containment::init();
     actions()->removeAction(actions()->action("add widgets"));
     actions()->removeAction(actions()->action("add panel"));
