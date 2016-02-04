@@ -40,6 +40,7 @@ public:
 
     void init();
 
+    void restoreContents(KConfigGroup &group) Q_DECL_OVERRIDE;
     void restorePlasmoids();
 
     QStringList defaultPlasmoids() const;

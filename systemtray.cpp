@@ -199,6 +199,12 @@ void SystemTray::showPlasmoidMenu(QQuickItem *appletInterface)
     desktopMenu->popup(pos.toPoint());
 }
 
+void SystemTray::restoreContents(KConfigGroup &group)
+{
+    //Don't do anything here, it's too soon
+    qWarning()<<"RestoreContents doesn't do anything here";
+}
+
 void SystemTray::restorePlasmoids()
 {
     if (!isContainment()) {

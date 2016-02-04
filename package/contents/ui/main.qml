@@ -74,10 +74,6 @@ MouseArea {
     Component.onCompleted: {
         //script, don't bind
         plasmoid.nativeInterface.allowedPlasmoids = initializePlasmoidList();
-        //not care about applets order
-        for (var i = 0; i < plasmoid.applets.length; ++i) {
-            addApplet(plasmoid.applets[i], 0 ,0);
-        }
     }
 
     function initializePlasmoidList() {
