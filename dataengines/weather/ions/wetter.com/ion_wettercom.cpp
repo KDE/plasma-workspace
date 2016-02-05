@@ -44,6 +44,7 @@ WetterComIon::WetterComIon(QObject *parent, const QVariantList &args)
 #if defined(MIN_POLL_INTERVAL)
     setMinimumPollingInterval(MIN_POLL_INTERVAL);
 #endif
+    init();
 }
 
 WetterComIon::~WetterComIon()
@@ -265,6 +266,7 @@ bool WetterComIon::updateIonSource(const QString& source)
         findPlace(sourceAction[2], source);
         return true;
     } else if (sourceAction[1] == "weather" && sourceAction.size() >= 3) {
+        qWarning()<<"WWWW"<<sourceAction;
         if (sourceAction.count() >= 4) {
             if (sourceAction[2].isEmpty()) {
                 setData(source, "validate", "wettercom|malformed");
@@ -311,7 +313,7 @@ void WetterComIon::findPlace(const QString& place, const QString& source)
     md5.addData(QString::fromLatin1(APIKEY).toUtf8());
     md5.addData(place.toUtf8());
 
-    KUrl url = QString::fromLatin1(SEARCH_URL).arg(place).arg(md5.result().toHex().data());
+    QUrl url = QString::fromLatin1(SEARCH_URL).arg(place).arg(md5.result().toHex().data());
 
     m_job = KIO::get(url.url(), KIO::Reload, KIO::HideProgressInfo);
     m_job->addMetaData("cookies", "none");    // Disable displaying cookies
@@ -484,7 +486,7 @@ void WetterComIon::fetchForecast(const QString& source)
     md5.addData(QString::fromLatin1(APIKEY).toUtf8());
     md5.addData(m_place[source].placeCode.toUtf8());
 
-    KUrl url = QString::fromLatin1(FORECAST_URL)
+    QUrl url = QString::fromLatin1(FORECAST_URL)
                .arg(m_place[source].placeCode).arg(md5.result().toHex().data());
 
     m_job = KIO::get(url.url(), KIO::Reload, KIO::HideProgressInfo);
@@ -747,7 +749,7 @@ void WetterComIon::updateWeather(const QString& source, bool parseError)
         data.insert("Credit", m_weatherData[source].credits); // FIXME i18n?
         data.insert("Credit Url", m_weatherData[source].creditsUrl);
 
-        qDebug() << "updated weather data:" << data;
+        qDebug() << "updated weather data:" << weatherSource << data;
     } else {
         qDebug() << "Something went wrong when parsing weather data for source:" << source;
     }
@@ -819,5 +821,7 @@ int WeatherData::ForecastPeriod::getMinTemp(QVector<WeatherData::ForecastInfo *>
     return result;
 }
 
+K_EXPORT_PLASMA_DATAENGINE_WITH_JSON(wettercom, WetterComIon, "ion-wettercom.json")
 
-// kate: indent-mode cstyle; space-indent on; indent-width 4; 
+
+#include "ion_wettercom.moc"

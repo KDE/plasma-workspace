@@ -66,6 +66,7 @@ NOAAIon::NOAAIon(QObject *parent, const QVariantList &args)
         : IonInterface(parent, args)
 {
     Q_UNUSED(args)
+    init();
 }
 
 void NOAAIon::reset()
@@ -76,6 +77,8 @@ void NOAAIon::reset()
 
 NOAAIon::~NOAAIon()
 {
+    //seems necessary to avoid crash
+    removeAllSources();
 }
 
 // Get the master list of locations to be parsed

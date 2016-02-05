@@ -29,7 +29,7 @@
 #include <QtCore/QStringList>
 #include <QCryptographicHash>
 #include <algorithm>
-#include <kurl.h>
+#include <QUrl>
 #include <kio/job.h>
 #include <kio/scheduler.h>
 #include <kdemacros.h>
@@ -167,7 +167,6 @@ private:
     QStringList m_sourcesToReset;
 };
 
-K_EXPORT_PLASMA_DATAENGINE(wettercom, WetterComIon)
 
 #endif
 // kate: indent-mode cstyle; space-indent on; indent-width 4; 
