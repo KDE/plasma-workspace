@@ -57,8 +57,8 @@ BugzillaDuplicatesPage::BugzillaDuplicatesPage(ReportAssistantDialog * parent):
     connect(ui.m_bugListWidget, &QTreeWidget::itemSelectionChanged, this, &BugzillaDuplicatesPage::itemSelectionChanged);
 
     QHeaderView * header = ui.m_bugListWidget->header();
-    header->setResizeMode(0, QHeaderView::ResizeToContents);
-    header->setResizeMode(1, QHeaderView::Interactive);
+    header->setSectionResizeMode(0, QHeaderView::ResizeToContents);
+    header->setSectionResizeMode(1, QHeaderView::Interactive);
 
     //Create manual bug report entry (first one)
     QTreeWidgetItem * customBugItem = new QTreeWidgetItem(
@@ -464,7 +464,7 @@ void BugzillaDuplicatesPage::itemClicked(QTreeWidgetItem * item, int col)
     int bugNumber = 0;
     if (item->data(0, Qt::UserRole) == QLatin1String("custom")) {
         bool ok = false;
-        bugNumber = QInputDialog::getInteger(this,
+        bugNumber = QInputDialog::getInt(this,
                     i18nc("@title:window", "Enter a custom bug report number"),
                     i18nc("@label", "Enter the number of the bug report you want to check"),
                     0, 0, 1000000, 1, &ok);

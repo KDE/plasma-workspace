@@ -145,7 +145,7 @@ void BugzillaManager::callBugzilla(const char* method, const char* id,
     m_xmlRpcClient->call(QLatin1String(method), args,
             this, SLOT(callMessage(QList<QVariant>,QVariant)),
             this, SLOT(callFault(int,QString,QVariant)),
-            QString::fromAscii(id));
+            QLatin1String(id));
 }
 // END Generic call to Bugzilla
 
@@ -246,7 +246,7 @@ void BugzillaManager::attachTextToReport(const QString & text, const QString & f
     args.insert(QLatin1String("file_name"), filename);
     args.insert(QLatin1String("summary"), summary);
     args.insert(QLatin1String("comment"), comment);
-    args.insert(QLatin1String("content_type"), QString::fromAscii("text/plain"));
+    args.insert(QLatin1String("content_type"), QLatin1String("text/plain"));
 
     //data needs to be a QByteArray so that it is encoded in base64 (query.cpp:246)
     args.insert(QLatin1String("data"), text.toUtf8());

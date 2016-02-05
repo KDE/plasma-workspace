@@ -841,23 +841,23 @@ UnhandledErrorDialog::UnhandledErrorDialog(QWidget * parent, const QString & err
 void UnhandledErrorDialog::saveErrorMessage()
 {
     QString defaultName = QLatin1String("drkonqi-unhandled-bugzilla-error.html");
-    QWeakPointer<QFileDialog> dlg = new QFileDialog(this);
-    dlg.data()->selectFile(defaultName);
-    dlg.data()->setWindowTitle(i18nc("@title:window","Select Filename"));
-    dlg.data()->setAcceptMode(QFileDialog::AcceptSave);
-    dlg.data()->setFileMode(QFileDialog::AnyFile);
-    dlg.data()->setConfirmOverwrite(true);
-    if ( dlg.data()->exec() )
+    QPointer<QFileDialog> dlg(new QFileDialog(this));
+    dlg->selectFile(defaultName);
+    dlg->setWindowTitle(i18nc("@title:window","Select Filename"));
+    dlg->setAcceptMode(QFileDialog::AcceptSave);
+    dlg->setFileMode(QFileDialog::AnyFile);
+    dlg->setConfirmOverwrite(true);
+
+    if ( dlg->exec() == QDialog::Accepted )
     {
-        if (dlg.isNull()) {
+        if (!dlg) {
             //Dialog closed externally (ex. via DBus)
             return;
         }
 
         QUrl fileUrl;
-        if(!dlg.data()->selectedUrls().isEmpty())
-            fileUrl = dlg.data()->selectedUrls().first();
-        delete dlg.data();
+        if(!dlg->selectedUrls().isEmpty())
+            fileUrl = dlg->selectedUrls().first();
 
         if (fileUrl.isValid()) {
             QTemporaryFile tf;
@@ -868,6 +868,7 @@ void UnhandledErrorDialog::saveErrorMessage()
             } else {
                 KMessageBox::sorry(this, xi18nc("@info","Cannot open file <filename>%1</filename> "
                                                 "for writing.", tf.fileName()));
+                delete dlg;
                 return;
             }
 
@@ -878,8 +879,7 @@ void UnhandledErrorDialog::saveErrorMessage()
             }
         }
     }
-    else
-        delete dlg.data();
+    delete dlg;
 
 }
 

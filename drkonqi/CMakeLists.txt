@@ -83,6 +83,7 @@ ki18n_wrap_ui(drkonqi_SRCS
 )
 
 add_executable(drkonqi ${drkonqi_SRCS})
+ecm_mark_nongui_executable(drkonqi)
 
 target_compile_definitions(drkonqi PRIVATE -DPROJECT_VERSION="${PROJECT_VERSION}")
 

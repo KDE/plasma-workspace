@@ -41,7 +41,7 @@
 */
 #include "drkonqi.h"
 
-#include <QtCore/QWeakPointer>
+#include <QtCore/QPointer>
 #include <QtCore/QTextStream>
 #include <QtCore/QTimerEvent>
 #include <QtCore/QTemporaryFile>
@@ -166,24 +166,26 @@ void DrKonqi::saveReport(const QString & reportText, QWidget *parent)
     } else {
         QString defname = getSuggestedKCrashFilename(crashedApplication());
 
-        QWeakPointer<QFileDialog> dlg = new QFileDialog(parent, defname);
-        dlg.data()->selectFile(defname);
-        dlg.data()->setWindowTitle(i18nc("@title:window","Select Filename"));
-        dlg.data()->setAcceptMode(QFileDialog::AcceptSave);
-        dlg.data()->setFileMode(QFileDialog::AnyFile);
-        dlg.data()->setConfirmOverwrite(true);
-        dlg.data()->exec();
+        QPointer<QFileDialog> dlg(new QFileDialog(parent, defname));
+        dlg->selectFile(defname);
+        dlg->setWindowTitle(i18nc("@title:window","Select Filename"));
+        dlg->setAcceptMode(QFileDialog::AcceptSave);
+        dlg->setFileMode(QFileDialog::AnyFile);
+        dlg->setConfirmOverwrite(true);
+        if (dlg->exec() != QDialog::Accepted) {
+            return;
+        }
 
-        if (dlg.isNull()) {
+        if (!dlg) {
             //Dialog is invalid, it was probably deleted (ex. via DBus call)
             //return and do not crash
             return;
         }
 
         QUrl fileUrl;
-        if(!dlg.data()->selectedUrls().isEmpty())
-            fileUrl = dlg.data()->selectedUrls().first();
-        delete dlg.data();
+        if(!dlg->selectedUrls().isEmpty())
+            fileUrl = dlg->selectedUrls().first();
+        delete dlg;
 
         if (fileUrl.isValid()) {
             QTemporaryFile tf;
