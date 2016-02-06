@@ -210,7 +210,7 @@ void DesktopView::keyPressEvent(QKeyEvent *e)
     ContainmentView::keyPressEvent(e);
 
     // When a key is pressed on desktop when nothing else is active forward the key to krunner
-    if (!e->modifiers() && !e->isAccepted()) {
+    if ((!e->modifiers() || e->modifiers() == Qt::ShiftModifier) && !e->isAccepted()) {
         const QString text = e->text().trimmed();
         if (!text.isEmpty() && text[0].isPrint()) {
             const QString interface(QStringLiteral("org.kde.krunner"));
