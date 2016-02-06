@@ -24,6 +24,8 @@
 #include <KRunner/AbstractRunner>
 #include <KRunner/QueryMatch>
 
+class QMimeData;
+
 class SearchRunner : public Plasma::AbstractRunner
 {
     Q_OBJECT
@@ -38,6 +40,8 @@ public:
 
     virtual QStringList categories() const;
     virtual QIcon categoryIcon(const QString& category) const;
+
+    QMimeData *mimeDataForMatch(const Plasma::QueryMatch &match) override;
 
 protected Q_SLOTS:
     void init();

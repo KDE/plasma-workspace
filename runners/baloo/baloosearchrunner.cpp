@@ -28,6 +28,7 @@
 #include <KLocalizedString>
 #include <QMimeDatabase>
 #include <QTimer>
+#include <QMimeData>
 
 #include <Baloo/Query>
 
@@ -170,6 +171,13 @@ void SearchRunner::run(const Plasma::RunnerContext&, const Plasma::QueryMatch& m
 {
     const QUrl url = match.data().toUrl();
     new KRun(url, 0);
+}
+
+QMimeData *SearchRunner::mimeDataForMatch(const Plasma::QueryMatch &match)
+{
+    QMimeData *result = new QMimeData();
+    result->setUrls({match.data().toUrl()});
+    return result;
 }
 
 K_EXPORT_PLASMA_RUNNER(baloosearchrunner, SearchRunner)
