@@ -26,16 +26,6 @@ import "../components"
 Item {
     id: lockScreenRoot
 
-    opacity: 0
-    OpacityAnimator {
-        id: appearAnimation
-        target: lockScreenRoot
-        from: 0
-        to: 1
-        duration: units.shortDuration
-        easing.type: Easing.InOutQuad
-    }
-
     Connections {
         target: authenticator
         onFailed: {
@@ -102,6 +92,5 @@ Item {
             // ksmserver of 5.4, with greeter of 5.5
             root.viewVisible = true;
         }
-        appearAnimation.running = true;
     }
 }

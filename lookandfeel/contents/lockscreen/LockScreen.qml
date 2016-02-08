@@ -17,7 +17,7 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 *********************************************************************/
 
-import QtQuick 2.0
+import QtQuick 2.5
 import QtQuick.Controls 1.1
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.private.sessions 2.0
@@ -48,6 +48,15 @@ Image {
     Loader {
         id: mainLoader
         anchors.fill: parent
+        opacity: 0
+        onItemChanged: opacity = 1
+
+        Behavior on opacity {
+            OpacityAnimator {
+                duration: units.longDuration
+                easing.type: Easing.InCubic
+            }
+        }
     }
     Connections {
         id:loaderConnection
