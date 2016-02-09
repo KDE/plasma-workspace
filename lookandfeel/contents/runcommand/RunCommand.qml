@@ -71,30 +71,18 @@ ColumnLayout {
                 root.query = queryField.text
                 if (allowCompletion && length > 0) {
                     var history = runnerWindow.history
-                    var candidate = ""
-                    var shortest = ""
 
+                    // search the first item in the history rather than the shortest matching one
+                    // this way more recently used entries take precedence over older ones (Bug 358985)
                     for (var i = 0, j = history.length; i < j; ++i) {
                         var item = history[i]
 
                         if (item.toLowerCase().indexOf(text.toLowerCase()) === 0) {
-                            if (candidate.length > 0) {
-                                if (item.length < candidate.length) {
-                                    candidate = item
-                                }
-
-                                shortest = shortest.substring(0, item.length, shortest.length)
-                            } else {
-                                candidate = item
-                                shortest = item
-                            }
+                            var oldText = text
+                            text = item
+                            select(text.length, oldText.length)
+                            break
                         }
-                    }
-
-                    if (candidate.length > 0) {
-                        var oldText = text
-                        text = candidate
-                        select(text.length, oldText.length)
                     }
                 }
             }
