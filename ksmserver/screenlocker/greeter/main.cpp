@@ -54,6 +54,7 @@ int main(int argc, char* argv[])
     KLocalizedString::setApplicationDomain("kscreenlocker_greet");
 
     ScreenLocker::UnlockApp app(argc, argv);
+    app.setQuitOnLastWindowClosed(false);
     QCoreApplication::setApplicationName(QStringLiteral("kscreenlocker_greet"));
     QCoreApplication::setApplicationVersion(QStringLiteral("0.1"));
     QCoreApplication::setOrganizationDomain(QStringLiteral("kde.org"));
