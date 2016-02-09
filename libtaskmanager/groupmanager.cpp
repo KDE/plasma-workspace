@@ -29,6 +29,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #include <QTimer>
 #include <QUuid>
 #include <QFile>
+#include <QUrlQuery>
 #include <QDebug>
 
 #include <KConfigGroup>
@@ -1012,32 +1013,34 @@ QList<QUrl> GroupManager::launcherList() const
 
     foreach (LauncherItem *l, d->launchers) {
         QUrl u(l->launcherUrl());
+        QUrlQuery uQuery(u);
 
         if (!l->wmClass().isEmpty()) {
-            u.addQueryItem(QStringLiteral("wmClass"), l->wmClass());
+            uQuery.addQueryItem(QStringLiteral("wmClass"), l->wmClass());
         }
 
         if (!l->launcherUrl().isValid() || !KDesktopFile::isDesktopFile(l->launcherUrl().toLocalFile())) {
             if (!l->name().isEmpty()) {
-                u.addQueryItem(QStringLiteral("name"), l->name());
+                uQuery.addQueryItem(QStringLiteral("name"), l->name());
             }
 
             if (!l->genericName().isEmpty()) {
-                u.addQueryItem(QStringLiteral("genericName"), l->genericName());
+                uQuery.addQueryItem(QStringLiteral("genericName"), l->genericName());
             }
 
             if (!l->icon().name().isEmpty()) {
-                u.addQueryItem(QStringLiteral("icon"), l->icon().name());
+                uQuery.addQueryItem(QStringLiteral("icon"), l->icon().name());
             } else if (!l->icon().isNull()) {
                 QPixmap pixmap = l->icon().pixmap(QSize(64, 64));
                 QByteArray bytes;
                 QBuffer buffer(&bytes);
                 buffer.open(QIODevice::WriteOnly);
                 pixmap.save(&buffer, "PNG");
-                u.addQueryItem(QStringLiteral("iconData"), bytes.toBase64(QByteArray::Base64UrlEncoding));
+                uQuery.addQueryItem(QStringLiteral("iconData"), bytes.toBase64(QByteArray::Base64UrlEncoding));
             }
         }
 
+        u.setQuery(uQuery);
         launchers << u;
     }
 

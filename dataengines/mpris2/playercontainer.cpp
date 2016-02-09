@@ -156,7 +156,7 @@ void PlayerContainer::refresh()
 static bool decodeUri(QVariantMap &map, const QString& entry) {
     if (map.contains(entry)) {
         QString urlString = map.value(entry).toString();
-        QUrl url = QUrl::fromEncoded(urlString.toAscii());
+        QUrl url = QUrl::fromEncoded(urlString.toLatin1());
         if (!url.isValid()) {
             // try to be lenient
             url = QUrl(urlString);
@@ -200,9 +200,9 @@ void PlayerContainer::copyProperty(const QString& propName, const QVariant& _val
     }
     if (value.type() != expType) {
         const char * gotTypeCh = QDBusMetaType::typeToSignature(value.userType());
-        QString gotType = gotTypeCh ? QString::fromAscii(gotTypeCh) : QStringLiteral("<unknown>");
+        QString gotType = gotTypeCh ? QString::fromLatin1(gotTypeCh) : QStringLiteral("<unknown>");
         const char * expTypeCh = QDBusMetaType::typeToSignature(expType);
-        QString expType = expTypeCh ? QString::fromAscii(expTypeCh) : QStringLiteral("<unknown>");
+        QString expType = expTypeCh ? QString::fromLatin1(expTypeCh) : QStringLiteral("<unknown>");
 
         qCWarning(MPRIS2) << m_dbusAddress << "exports" << propName
             << "as D-Bus type" << gotType
@@ -287,7 +287,7 @@ void PlayerContainer::updateFromMap(const QVariantMap& map, UpdateType updType)
                 }
             } else {
                 const char * gotTypeCh = QDBusMetaType::typeToSignature(i.value().userType());
-                QString gotType = gotTypeCh ? QString::fromAscii(gotTypeCh) : QStringLiteral("<unknown>");
+                QString gotType = gotTypeCh ? QString::fromLatin1(gotTypeCh) : QStringLiteral("<unknown>");
 
                 qCWarning(MPRIS2) << m_dbusAddress << "exports" << i.key()
                     << "as D-Bus type" << gotType

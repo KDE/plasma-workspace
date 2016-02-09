@@ -28,6 +28,7 @@
 #include <kjsembed/kjsembed.h>
 #include <kjsembed/variant_binding.h>
 #include <QImage>
+#include <QUrlQuery>
 #include <QPixmap>
 
 #include "shareprovider.h"
@@ -39,7 +40,7 @@ ShareProvider::ShareProvider(KJSEmbed::Engine* engine, QObject *parent)
     // Just make the boundary random part long enough to be sure
     // it's not inside one of the arguments that we are sending
     m_boundary  = "----------";
-    m_boundary += KRandom::randomString(55).toAscii();
+    m_boundary += KRandom::randomString(55).toLatin1();
 }
 
 QString ShareProvider::method() const
@@ -108,19 +109,19 @@ void ShareProvider::addPostItem(const QString &key, const QString &value,
 
     if (!key.isEmpty()) {
         str += "Content-Disposition: form-data; name=\"";
-        str += key.toAscii();
+        str += key.toLatin1();
         str += "\"\r\n";
     }
 
     if (!contentType.isEmpty()) {
-        str += "Content-Type: " + QByteArray(contentType.toAscii());
+        str += "Content-Type: " + QByteArray(contentType.toLatin1());
         str += "\r\n";
         str += "Mime-version: 1.0 ";
         str += "\r\n";
     }
 
     str += "Content-Length: ";
-    str += length.toAscii();
+    str += length.toLatin1();
     str += "\r\n\r\n";
     str += value.toUtf8();
 
@@ -241,16 +242,16 @@ void ShareProvider::uploadData(const QByteArray& data)
     str += m_boundary;
     str += "\r\n";
     str += "Content-Disposition: form-data; name=\"";
-    str += m_contentKey.toAscii();
+    str += m_contentKey.toLatin1();
     str += "\"; ";
     str += "filename=\"";
     str += QFile::encodeName(QUrl(m_content).fileName()).replace(".tmp", ".jpg");
     str += "\"\r\n";
     str += "Content-Length: ";
-    str += fileSize.toAscii();
+    str += fileSize.toLatin1();
     str += "\r\n";
     str += "Content-Type: ";
-    str +=  m_mimetype.toAscii();
+    str +=  m_mimetype.toLatin1();
     str += "\r\n\r\n";
 
     m_buffer.append(str);
@@ -294,7 +295,9 @@ void ShareProvider::finishHeader()
 void ShareProvider::addQueryItem(const QString &key, const QString &value)
 {
     // just add the item to the query's URL
-    m_url.addQueryItem(key, value);
+    QUrlQuery uq(m_url);
+    uq.addQueryItem(key, value);
+    m_url.setQuery(uq);
 }
 
 void ShareProvider::publish()
@@ -319,11 +322,12 @@ void ShareProvider::publish()
     } else {
         if (m_isPost) {
             tf = KIO::http_post(m_service,
-                                m_url.encodedQuery(), KIO::HideProgressInfo);
+                                m_url.query(QUrl::FullyEncoded).toLatin1(), KIO::HideProgressInfo);
             tf->addMetaData(QStringLiteral("content-type"), QStringLiteral("Content-Type: application/x-www-form-urlencoded"));
         } else {
-            QString url = QStringLiteral("%1?%2").arg(m_service.url(), QString(m_url.encodedQuery()));
-            tf = KIO::get(QUrl(url));
+            QUrl url = m_service;
+            url.setQuery(m_url.query());
+            tf = KIO::get(url);
         }
     }
 

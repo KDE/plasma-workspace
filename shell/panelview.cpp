@@ -467,7 +467,7 @@ QRect PanelView::geometryByDistance(int distance) const
         }
     }
     QRect ret = formFactor() == Plasma::Types::Vertical ? QRect(position, QSize(thickness(), length())) : QRect(position, QSize(length(), thickness()));
-    ret = ret.intersect(s->geometry());
+    ret = ret.intersected(s->geometry());
     return ret;
 }
 

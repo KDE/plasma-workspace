@@ -35,7 +35,7 @@ public:
     {
     }
 
-    QWeakPointer<Plasma::Applet> applet;
+    QPointer<Plasma::Applet> applet;
 };
 
 Widget::Widget(Plasma::Applet *applet, QObject *parent)

@@ -53,9 +53,12 @@ public:
     PlasmoidModel(QObject *parent = 0)
         : QStandardItemModel(parent)
     {
+    }
+
+    QHash<int, QByteArray> roleNames() const override {
         QHash<int, QByteArray> roles = roleNames();
         roles[Qt::UserRole+1] = "plugin";
-        setRoleNames(roles);
+        return roles;
     }
 };
 

@@ -252,7 +252,11 @@ PlasmaAppletItemModel::PlasmaAppletItemModel(QObject * parent)
     m_favorites = m_configGroup.readEntry("favorites").split(',');
     connect(KSycoca::self(), SIGNAL(databaseChanged(QStringList)), this, SLOT(populateModel(QStringList)));
 
-    //This is to make QML that is understand it
+    setSortRole(Qt::DisplayRole);
+}
+
+QHash<int, QByteArray> PlasmaAppletItemModel::roleNames() const
+{
     QHash<int, QByteArray> newRoleNames = roleNames();
     newRoleNames[NameRole] = "name";
     newRoleNames[PluginNameRole] = "pluginName";
@@ -266,10 +270,7 @@ PlasmaAppletItemModel::PlasmaAppletItemModel(QObject * parent)
     newRoleNames[RunningRole] = "running";
     newRoleNames[LocalRole] = "local";
     newRoleNames[ScreenshotRole] = "screenshot";
-
-    setRoleNames(newRoleNames);
-
-    setSortRole(Qt::DisplayRole);
+    return newRoleNames;
 }
 
 void PlasmaAppletItemModel::populateModel(const QStringList &whatChanged)

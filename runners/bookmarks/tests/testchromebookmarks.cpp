@@ -73,7 +73,7 @@ void verifyMatch(BookmarkMatch &match, const QString &title, const QString &url,
     QCOMPARE(queryMatch.data().toString(), url);
     QCOMPARE(queryMatch.relevance(), relevance);
     QVERIFY2(queryMatch.type() == type,
-             QString("Wrong query match type: expecting %1 but was %2").arg(type).arg(queryMatch.type() ).toAscii());
+             QStringLiteral("Wrong query match type: expecting %1 but was %2").arg(type, queryMatch.type() ).toLatin1());
 }
 
 void TestChromeBookmarks::itShouldFindAllBookmarks()

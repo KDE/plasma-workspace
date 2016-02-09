@@ -99,6 +99,8 @@ public:
     };
     DefaultFilterModel(QObject *parent = 0);
 
+    QHash<int, QByteArray> roleNames() const override;
+
     /**
      * Adds a filter to the model
      * @param caption The localized string to be displayed as a name of the filter

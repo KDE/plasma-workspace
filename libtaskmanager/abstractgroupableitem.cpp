@@ -24,7 +24,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 // Own
 #include "abstractgroupableitem.h"
 
-#include <QWeakPointer>
+#include <QPointer>
 
 #include <QDebug>
 
@@ -45,7 +45,7 @@ public:
         : m_id(m_nextId++) {
     }
 
-    QWeakPointer<TaskGroup> m_parentGroup;
+    QPointer<TaskGroup> m_parentGroup;
 
     int m_id;
 

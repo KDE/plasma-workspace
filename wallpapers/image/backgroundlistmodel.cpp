@@ -63,18 +63,6 @@ BackgroundListModel::BackgroundListModel(Image *wallpaper, QObject *parent)
 {
     connect(&m_dirwatch, &KDirWatch::deleted, this, &BackgroundListModel::removeBackground);
 
-    QHash<int, QByteArray>roleNames;
-    roleNames[Qt::DisplayRole] = "display";
-    roleNames[Qt::DecorationRole] = "decoration";
-    roleNames[AuthorRole] = "author";
-    roleNames[ScreenshotRole] = "screenshot";
-    roleNames[ResolutionRole] = "resolution";
-    roleNames[PathRole] = "path";
-    roleNames[PackageNameRole] = "packageName";
-    roleNames[RemovableRole] = "removable";
-    roleNames[PendingDeletionRole] = "pendingDeletion";
-    setRoleNames(roleNames);
-
     //TODO: on Qt 4.4 use the ui scale factor
     QFontMetrics fm(QGuiApplication::font());
     m_screenshotSize = fm.width('M') * 15;
@@ -85,6 +73,21 @@ BackgroundListModel::BackgroundListModel(Image *wallpaper, QObject *parent)
 BackgroundListModel::~BackgroundListModel()
 {
     delete m_imageCache;
+}
+
+QHash<int, QByteArray> BackgroundListModel::BackgroundListModel::roleNames() const
+{
+    return {
+    { Qt::DisplayRole, "display" },
+    { Qt::DecorationRole, "decoration" },
+    { AuthorRole, "author" },
+    { ScreenshotRole, "screenshot" },
+    { ResolutionRole, "resolution" },
+    { PathRole, "path" },
+    { PackageNameRole, "packageName" },
+    { RemovableRole, "removable" },
+    { PendingDeletionRole, "pendingDeletion" },
+    };
 }
 
 void BackgroundListModel::removeBackground(const QString &path)

@@ -30,6 +30,7 @@
 #include <QObject>
 #include <QPersistentModelIndex>
 #include <QDateTime>
+#include <QPointer>
 #include <QQmlParserStatus>
 
 #include <KPackage/Package>
@@ -187,7 +188,7 @@ class Image : public QObject, public QQmlParserStatus
         int m_height;
         QString m_img;
         QDateTime m_previousModified;
-        QWeakPointer<KNS3::DownloadDialog> m_newStuffDialog;
+        QPointer<KNS3::DownloadDialog> m_newStuffDialog;
         QString m_findToken;
 };
 

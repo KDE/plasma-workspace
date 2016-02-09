@@ -21,7 +21,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #include "programgroupingstrategy.h"
 
 #include <QAction>
-#include <QWeakPointer>
+#include <QPointer>
 
 #include <KLocalizedString>
 #include <KConfig>
@@ -41,7 +41,7 @@ public:
     }
 
     AbstractGroupingStrategy::EditableGroupProperties editableGroupProperties;
-    QWeakPointer<AbstractGroupableItem> tempItem;
+    QPointer<AbstractGroupableItem> tempItem;
     QStringList blackList; //Programs in this list should not be grouped
 };
 

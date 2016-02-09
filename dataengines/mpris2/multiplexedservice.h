@@ -43,7 +43,7 @@ private Q_SLOTS:
     void activePlayerChanged(PlayerContainer *container);
 
 private:
-    QWeakPointer<PlayerControl> m_control;
+    QPointer<PlayerControl> m_control;
 };
 
 #endif // MULTIPLEXEDSERVICE_H

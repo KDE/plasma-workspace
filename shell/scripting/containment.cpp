@@ -37,7 +37,7 @@ namespace WorkspaceScripting
 class Containment::Private
 {
 public:
-    QWeakPointer<Plasma::Containment> containment;
+    QPointer<Plasma::Containment> containment;
     QString oldWallpaperPlugin;
     QString wallpaperPlugin;
     QString oldWallpaperMode;

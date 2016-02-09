@@ -24,7 +24,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #include "manualgroupingstrategy.h"
 
 #include <QAction>
-#include <QWeakPointer>
+#include <QPointer>
 
 #include <KLocalizedString>
 
@@ -46,7 +46,7 @@ public:
 
     AbstractGroupingStrategy::EditableGroupProperties editableGroupProperties;
     AbstractGroupableItem *tempItem;
-    QWeakPointer<TaskGroup> tempGroup;
+    QPointer<TaskGroup> tempGroup;
 };
 
 

@@ -41,18 +41,10 @@ CurrentContainmentActionsModel::CurrentContainmentActionsModel(Plasma::Containme
       m_containment(cotainment),
       m_tempConfigParent(QString(), KConfig::SimpleConfig)
 {
-    QHash<int, QByteArray> roleNames;
-    roleNames[ActionRole] = "action";
-    roleNames[PluginNameRole] = "pluginName";
-    roleNames[HasConfigurationInterfaceRole] = "hasConfigurationInterface";
-
-    setRoleNames(roleNames);
-
     m_baseCfg = KConfigGroup(m_containment->corona()->config(), "ActionPlugins");
     m_baseCfg = KConfigGroup(&m_baseCfg, QString::number(m_containment->containmentType()));
 
     QHash<QString, Plasma::ContainmentActions*> actions = cotainment->containmentActions();
-
 
     QHashIterator<QString, Plasma::ContainmentActions*> i(actions);
     while (i.hasNext()) {
@@ -74,6 +66,15 @@ CurrentContainmentActionsModel::CurrentContainmentActionsModel(Plasma::Containme
 
 CurrentContainmentActionsModel::~CurrentContainmentActionsModel()
 {
+}
+
+QHash<int, QByteArray> CurrentContainmentActionsModel::roleNames() const
+{
+    return {
+        { ActionRole, "action" },
+        { PluginNameRole, "pluginName" },
+        { HasConfigurationInterfaceRole, "hasConfigurationInterface" }
+    };
 }
 
 QString CurrentContainmentActionsModel::mouseEventString(int mouseButton, int modifiers)

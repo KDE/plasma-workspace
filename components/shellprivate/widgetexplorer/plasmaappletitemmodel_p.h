@@ -114,6 +114,8 @@ public:
     QStringList provides() const;
     void setProvides(const QStringList &provides);
 
+    QHash<int, QByteArray> roleNames() const;
+
 Q_SIGNALS:
     void modelPopulated();
 

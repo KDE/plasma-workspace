@@ -58,8 +58,8 @@ public:
 
     void filterChange(::TaskManager::TaskChanges change);
     TaskItem *q;
-    QWeakPointer<Task> task;
-    QWeakPointer<Startup> startupTask;
+    QPointer<Task> task;
+    QPointer<Startup> startupTask;
     QUrl launcherUrl;
     QIcon launcherIcon;
     bool launcherUrlLookupDone;
@@ -112,7 +112,7 @@ void TaskItem::taskDestroyed()
 
 void TaskItem::setTaskPointer(Task *task)
 {
-    const bool differentTask = d->task.data() != task;
+    const bool differentTask = d->task != task;
 
     if (d->startupTask) {
         disconnect(d->startupTask.data(), 0, this, 0);

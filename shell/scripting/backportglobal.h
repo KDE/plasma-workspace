@@ -45,16 +45,16 @@
     Class* self = qscriptvalue_cast<Class*>(ctx->thisObject()); \
     if (!self) { \
         return ctx->throwError(QScriptContext::TypeError, \
-            QString::fromLatin1("%0.prototype.%1: this object is not a %0") \
-            .arg(#Class).arg(#__fn__)); \
+            QStringLiteral("%0.prototype.%1: this object is not a %0") \
+            .arg(#Class, #__fn__)); \
     }
 
 #define DECLARE_SELF2(Class, __fn__, __ret__) \
     Class* self = qscriptvalue_cast<Class*>(thisObject()); \
     if (!self) { \
         context()->throwError(QScriptContext::TypeError, \
-            QString::fromLatin1("%0.prototype.%1: this object is not a %0") \
-            .arg(#Class).arg(#__fn__)); \
+            QStringLiteral("%0.prototype.%1: this object is not a %0") \
+            .arg(#Class, #__fn__)); \
         return __ret__; \
     }
 
@@ -249,9 +249,9 @@ public:
     {
         if (value.isVariant()) {
             QVariant var = value.toVariant();
-            if (qVariantCanConvert<T*>(var)) {
+            if (var.canConvert<T*>()) {
                 target = qvariant_cast<T*>(var);
-            } else if (qVariantCanConvert<wrapped_pointer_type>(var)) {
+            } else if (var.canConvert<wrapped_pointer_type>()) {
                 target = qvariant_cast<wrapped_pointer_type>(var)->operator T*();
             } else {
                 // look in prototype chain

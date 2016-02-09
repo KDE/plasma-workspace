@@ -70,19 +70,25 @@ DefaultFilterModel::DefaultFilterModel(QObject *parent) :
     QStandardItemModel(0, 1, parent)
 {
     setHeaderData(1, Qt::Horizontal, i18n("Filters"));
-    //This is to make QML that is understand it
-    QHash<int, QByteArray> newRoleNames = roleNames();
-    newRoleNames[FilterTypeRole] = "filterType";
-    newRoleNames[FilterDataRole] = "filterData";
-    newRoleNames[SeparatorRole] = "separator";
 
-    setRoleNames(newRoleNames);
     connect(this, &QAbstractItemModel::modelReset,
             this, &DefaultFilterModel::countChanged);
     connect(this, &QAbstractItemModel::rowsInserted,
             this, &DefaultFilterModel::countChanged);
     connect(this, &QAbstractItemModel::rowsRemoved,
             this, &DefaultFilterModel::countChanged);
+}
+
+QHash<int, QByteArray> DefaultFilterModel::roleNames() const
+{
+    static QHash<int, QByteArray> newRoleNames;
+    if (newRoleNames.isEmpty()) {
+        newRoleNames = roleNames();
+        newRoleNames[FilterTypeRole] = "filterType";
+        newRoleNames[FilterDataRole] = "filterData";
+        newRoleNames[SeparatorRole] = "separator";
+    }
+    return newRoleNames;
 }
 
 void DefaultFilterModel::addFilter(const QString &caption, const Filter &filter, const QIcon &icon)
@@ -139,8 +145,6 @@ void DefaultItemFilterProxyModel::setSourceModel(QAbstractItemModel *sourceModel
         qWarning() << "Expecting a QStandardItemModel!";
         return;
     }
-
-    setRoleNames(sourceModel->roleNames());
 
     QSortFilterProxyModel::setSourceModel(model);
     connect(this, &QAbstractItemModel::modelReset,

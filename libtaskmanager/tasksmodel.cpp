@@ -26,6 +26,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 #include <QMetaEnum>
 #include <QMimeData>
+#include <QPointer>
 
 #include "groupmanager.h"
 #include "taskgroup.h"
@@ -51,7 +52,7 @@ public:
     int indexOf(AbstractGroupableItem *item);
 
     TasksModel *q;
-    QWeakPointer<GroupManager> groupManager;
+    QPointer<GroupManager> groupManager;
     TaskGroup *rootGroup;
 };
 
@@ -59,16 +60,6 @@ TasksModel::TasksModel(GroupManager *groupManager, QObject *parent)
     : QAbstractItemModel(parent),
       d(new TasksModelPrivate(this, groupManager))
 {
-    // set the role names based on the values of the DisplayRoles enum for the sake of QML
-    QHash<int, QByteArray> roles;
-    roles.insert(Qt::DisplayRole, "DisplayRole");
-    roles.insert(Qt::DecorationRole, "DecorationRole");
-    QMetaEnum e = metaObject()->enumerator(metaObject()->indexOfEnumerator("DisplayRoles"));
-    for (int i = 0; i < e.keyCount(); ++i) {
-        roles.insert(e.value(i), e.key(i));
-    }
-    setRoleNames(roles);
-
     if (groupManager) {
         connect(groupManager, SIGNAL(reload()), this, SLOT(populateModel()));
     }
@@ -80,6 +71,23 @@ TasksModel::TasksModel(GroupManager *groupManager, QObject *parent)
 TasksModel::~TasksModel()
 {
     delete d;
+}
+
+QHash<int, QByteArray> TasksModel::roleNames() const
+{
+    // set the role names based on the values of the DisplayRoles enum for the sake of QML
+    static QHash<int, QByteArray> roles;
+    if (roles.isEmpty()) {
+        roles =  {
+            { Qt::DisplayRole, "DisplayRole" },
+            { Qt::DecorationRole, "DecorationRole" }
+        };
+        QMetaEnum e = metaObject()->enumerator(metaObject()->indexOfEnumerator("DisplayRoles"));
+        for (int i = 0; i < e.keyCount(); ++i) {
+            roles.insert(e.value(i), e.key(i));
+        }
+    }
+    return roles;
 }
 
 QVariant TasksModel::data(const QModelIndex &index, int role) const

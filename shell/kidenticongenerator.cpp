@@ -61,7 +61,7 @@ QPixmap KIdenticonGenerator::Private::generatePattern(int size, quint32 hash, QI
     block[2] = tmp & 31; tmp >>= 5;
 
     // Painting alpha channel
-    QPixmap pixmapAlpha(size, size);
+    QImage pixmapAlpha({size, size}, QImage::Format_ARGB32);
     pixmapAlpha.fill(Qt::black);
 
     QPainter painterAlpha(& pixmapAlpha);
@@ -89,9 +89,7 @@ QPixmap KIdenticonGenerator::Private::generatePattern(int size, quint32 hash, QI
     painterAlpha.end();
 
     // Painting final pixmap
-    QPixmap pixmapResult(size, size);
-
-
+    QImage pixmapResult(size, size, QImage::Format_ARGB32);
     pixmapResult.fill(Qt::transparent);
 
     // QRadialGradient gradient(50, 50, 100);
@@ -110,7 +108,7 @@ QPixmap KIdenticonGenerator::Private::generatePattern(int size, quint32 hash, QI
     // KIconEffect::colorize(itmp, colorForHash(hash), 1.0);
     // pixmapResult = pixmapResult.fromImage(itmp);
 
-    return pixmapResult;
+    return QPixmap::fromImage(pixmapResult);
 }
 
 QColor KIdenticonGenerator::Private::colorForHash(quint32 hash) const

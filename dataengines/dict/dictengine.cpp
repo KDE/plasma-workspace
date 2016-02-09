@@ -105,7 +105,7 @@ void DictEngine::getDefinition()
     QByteArray ret;
 
     m_tcpSocket->write(QByteArray("DEFINE "));
-    m_tcpSocket->write(m_dictName.toAscii());
+    m_tcpSocket->write(m_dictName.toLatin1());
     m_tcpSocket->write(QByteArray(" \""));
     m_tcpSocket->write(m_currentWord.toUtf8());
     m_tcpSocket->write(QByteArray("\"\n"));

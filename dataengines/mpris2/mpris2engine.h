@@ -57,7 +57,7 @@ private:
     void addMediaPlayer(const QString& serviceName, const QString& sourceName);
     void createMultiplexer();
 
-    QWeakPointer<Multiplexer> m_multiplexer;
+    QPointer<Multiplexer> m_multiplexer;
 };
 
 #endif // MPRIS2ENGINE_H

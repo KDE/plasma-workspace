@@ -72,6 +72,8 @@ public:
     explicit TasksModel(GroupManager *groupManager, QObject *parent = 0);
     ~TasksModel();
 
+    QHash<int, QByteArray> roleNames() const override;
+
     QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const;
     QModelIndex index(int row, int column, const QModelIndex &parent = QModelIndex()) const;
     QModelIndex parent(const QModelIndex &index) const;

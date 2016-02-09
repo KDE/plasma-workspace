@@ -46,6 +46,8 @@ public:
     CurrentContainmentActionsModel(Plasma::Containment *cotainment, QObject *parent = 0);
     ~CurrentContainmentActionsModel();
 
+    QHash<int, QByteArray> roleNames() const override;
+
     Q_INVOKABLE bool isTriggerUsed(const QString &trigger);
     Q_INVOKABLE QString mouseEventString(int mouseButtons, int modifiers);
     Q_INVOKABLE QString wheelEventString(const QPointF &delta, int mouseButtons, int modifiers);

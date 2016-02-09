@@ -92,13 +92,13 @@ public:
     QHash<QString, int> runningApplets; // applet name => count
     //extra hash so we can look up the names of deleted applets
     QHash<Plasma::Applet *,QString> appletNames;
-    QWeakPointer<Plasma::OpenWidgetAssistant> openAssistant;
+    QPointer<Plasma::OpenWidgetAssistant> openAssistant;
     KPackage::Package *package;
 
     PlasmaAppletItemModel itemModel;
     KCategorizedItemsViewModels::DefaultFilterModel filterModel;
     DefaultItemFilterProxyModel filterItemModel;
-    QWeakPointer<KNS3::DownloadDialog> newStuffDialog;
+    QPointer<KNS3::DownloadDialog> newStuffDialog;
 };
 
 void WidgetExplorerPrivate::initFilters()

@@ -256,7 +256,7 @@ ToCurrentDesktopActionImpl::ToCurrentDesktopActionImpl(QObject *parent, Abstract
 void ToCurrentDesktopActionImpl::slotToCurrentDesktop()
 {
     const int desktop = KWindowSystem::currentDesktop();
-    foreach (QWeakPointer<Task> task, m_tasks) {
+    foreach (auto task, m_tasks) {
         if (task) {
             task.data()->toDesktop(desktop);
         }
@@ -282,7 +282,7 @@ ToDesktopActionImpl::ToDesktopActionImpl(QObject *parent, AbstractGroupableItem 
 
 void ToDesktopActionImpl::slotToDesktop()
 {
-    foreach (QWeakPointer<Task> task, m_tasks) {
+    foreach (auto task, m_tasks) {
         if (task) {
             task.data()->toDesktop(m_desktop);
         }
@@ -306,7 +306,7 @@ void ToNewDesktopActionImpl::slotToNewDesktop()
     NETRootInfo info(QX11Info::connection(), NET::NumberOfDesktops);
     info.setNumberOfDesktops(m_newDesktop);
 
-    foreach (QWeakPointer<Task> task, m_tasks) {
+    foreach (auto task, m_tasks) {
         if (task) {
             task.data()->toDesktop(m_newDesktop);
         }
