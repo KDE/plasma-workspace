@@ -83,7 +83,7 @@ void FdoSelectionManager::init()
     m_selectionOwner->claim(false);
 }
 
-void FdoSelectionManager::addDamageWatch(xcb_window_t client)
+bool FdoSelectionManager::addDamageWatch(xcb_window_t client)
 {
     qCDebug(SNIPROXY) << "adding damage watch for " << client;
 
@@ -94,15 +94,27 @@ void FdoSelectionManager::addDamageWatch(xcb_window_t client)
     m_damageWatches[client] = damageId;
     xcb_damage_create(c, damageId, client, XCB_DAMAGE_REPORT_LEVEL_NON_EMPTY);
 
-    QScopedPointer<xcb_get_window_attributes_reply_t, QScopedPointerPodDeleter> attr(xcb_get_window_attributes_reply(c, attribsCookie, Q_NULLPTR));
+    xcb_generic_error_t *error = Q_NULLPTR;
+    QScopedPointer<xcb_get_window_attributes_reply_t, QScopedPointerPodDeleter> attr(xcb_get_window_attributes_reply(c, attribsCookie, &error));
+    QScopedPointer<xcb_generic_error_t, QScopedPointerPodDeleter> getAttrError(error);
     uint32_t events = XCB_EVENT_MASK_STRUCTURE_NOTIFY;
     if (!attr.isNull()) {
         events = events | attr->your_event_mask;
     }
+    // if window is already gone, there is no need to handle it.
+    if (getAttrError && getAttrError->error_code == XCB_WINDOW) {
+        return false;
+    }
     // the event mask will not be removed again. We cannot track whether another component also needs STRUCTURE_NOTIFY (e.g. KWindowSystem).
     // if we would remove the event mask again, other areas will break.
-    xcb_change_window_attributes(c, client, XCB_CW_EVENT_MASK, &events);
+    const auto changeAttrCookie = xcb_change_window_attributes_checked(c, client, XCB_CW_EVENT_MASK, &events);
+    QScopedPointer<xcb_generic_error_t, QScopedPointerPodDeleter> changeAttrError(xcb_request_check(c, changeAttrCookie));
+    // if window is gone by this point, it will be catched by eventFilter, so no need to check later errors.
+    if (changeAttrError && changeAttrError->error_code == XCB_WINDOW) {
+        return false;
+    }
 
+    return true;
 }
 
 bool FdoSelectionManager::nativeEventFilter(const QByteArray& eventType, void* message, long int* result)
@@ -130,6 +142,11 @@ bool FdoSelectionManager::nativeEventFilter(const QByteArray& eventType, void* m
         if (m_proxies[unmappedWId]) {
             undock(unmappedWId);
         }
+    } else if (responseType == XCB_DESTROY_NOTIFY) {
+        const auto destroyedWId = reinterpret_cast<xcb_destroy_notify_event_t *>(ev)->window;
+        if (m_proxies[destroyedWId]) {
+            undock(destroyedWId);
+        }
     } else if (responseType == m_damageEventBase + XCB_DAMAGE_NOTIFY) {
         const auto damagedWId = reinterpret_cast<xcb_damage_notify_event_t *>(ev)->drawable;
         const auto sniProx = m_proxies[damagedWId];
@@ -153,8 +170,9 @@ void FdoSelectionManager::dock(xcb_window_t winId)
         return;
     }
 
-    addDamageWatch(winId);
-    m_proxies[winId] = new SNIProxy(winId, this);
+    if (addDamageWatch(winId)) {
+        m_proxies[winId] = new SNIProxy(winId, this);
+    }
 }
 
 void FdoSelectionManager::undock(xcb_window_t winId)
