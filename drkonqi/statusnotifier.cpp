@@ -147,6 +147,7 @@ void StatusNotifier::notify()
     });
 
     // when the SNI disappears you won't be able to interact with the notification anymore anyway, so close it
+    connect(this, &StatusNotifier::activated, notification, &KNotification::close);
     connect(this, &StatusNotifier::expired, notification, &KNotification::close);
 }
 
