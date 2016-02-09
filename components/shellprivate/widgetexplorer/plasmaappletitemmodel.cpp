@@ -257,7 +257,7 @@ PlasmaAppletItemModel::PlasmaAppletItemModel(QObject * parent)
 
 QHash<int, QByteArray> PlasmaAppletItemModel::roleNames() const
 {
-    QHash<int, QByteArray> newRoleNames = roleNames();
+    QHash<int, QByteArray> newRoleNames = QAbstractItemModel::roleNames();
     newRoleNames[NameRole] = "name";
     newRoleNames[PluginNameRole] = "pluginName";
     newRoleNames[DescriptionRole] = "description";
