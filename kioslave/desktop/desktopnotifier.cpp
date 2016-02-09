@@ -23,7 +23,7 @@
 #include <KGlobalSettings>
 #include <KPluginFactory>
 #include <KPluginLoader>
-#include <KStandardDirs>
+
 #include <KUrl>
 
 #include <kdirnotify.h>

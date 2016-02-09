@@ -18,14 +18,12 @@
 */
 
 #include <kio/slavebase.h>
-#include <kcomponentdata.h>
 #include <sys/stat.h>
 #include <time.h>
 #include <kservice.h>
 #include <kservicegroup.h>
-#include <kstandarddirs.h>
 #include <KLocalizedString>
-
+#include <KStandardDirs>
 #include <QDebug>
 #include <QUrl>
 
@@ -46,8 +44,8 @@ private:
 extern "C" {
     Q_DECL_EXPORT int kdemain( int argc, char **argv )
     {
-        KComponentData componentData( "kio_applications" );
         QCoreApplication app(argc, argv);
+        app.setApplicationName( "kio_applications" );
 
         ApplicationsProtocol slave(argv[1], argv[2], argv[3]);
         slave.dispatchLoop();

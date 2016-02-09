@@ -21,15 +21,14 @@
 #include "kio_remote_debug.h"
 #include <stdlib.h>
 
-#include <kapplication.h>
-#include <kcmdlineargs.h>
+#include <QCoreApplication>
 
 extern "C" {
 	int Q_DECL_EXPORT kdemain( int argc, char **argv )
 	{
         // necessary to use other kio slaves
-        KComponentData componentData("kio_remote" );
         QCoreApplication app(argc, argv);
+        app.setApplicationName("kio_remote");
 
         // start the slave
         RemoteProtocol slave( argv[1], argv[2], argv[3] );

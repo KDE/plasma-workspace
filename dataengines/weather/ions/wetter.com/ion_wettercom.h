@@ -32,7 +32,6 @@
 #include <QUrl>
 #include <kio/job.h>
 #include <kio/scheduler.h>
-#include <kdemacros.h>
 #include <plasma/dataengine.h>
 #include "../ion.h"
 

@@ -24,7 +24,6 @@
 #include <QTimer>
 
 #include <QDebug>
-#include <KLocale>
 #include <KSycoca>
 
 #include <Plasma/DataContainer>
