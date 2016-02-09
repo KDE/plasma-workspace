@@ -109,14 +109,15 @@ public:
         xembedAtom("_XEMBED"),
         selectionAtom(xcb_atom_name_by_screen("_NET_SYSTEM_TRAY", QX11Info::appScreen())),
         opcodeAtom("_NET_SYSTEM_TRAY_OPCODE"),
-        messageData("_NET_SYSTEM_TRAY_MESSAGE_DATA")
+        messageData("_NET_SYSTEM_TRAY_MESSAGE_DATA"),
+        visualAtom("_NET_SYSTEM_TRAY_VISUAL")
     {}
 
     Atom xembedAtom;
     Atom selectionAtom;
     Atom opcodeAtom;
     Atom messageData;
-
+    Atom visualAtom;
 };
 
 extern Atoms* atoms;

@@ -262,7 +262,7 @@ QImage SNIProxy::getImageNonComposite() const
         return QImage();
     }
 
-    xcb_image_t *image = xcb_image_get(c, m_windowId, 0, 0, geom->width, geom->height, 0xFFFFFF, XCB_IMAGE_FORMAT_Z_PIXMAP);
+    xcb_image_t *image = xcb_image_get(c, m_windowId, 0, 0, geom->width, geom->height, 0xFFFFFFFF, XCB_IMAGE_FORMAT_Z_PIXMAP);
 
     // Don't hook up cleanup yet, we may use a different QImage after all
     QImage naiveConversion = QImage(image->data, image->width, image->height, QImage::Format_ARGB32);

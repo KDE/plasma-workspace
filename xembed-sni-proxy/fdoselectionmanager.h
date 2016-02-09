@@ -51,6 +51,7 @@ private:
     void addDamageWatch(xcb_window_t client);
     void dock(xcb_window_t embed_win);
     void undock(xcb_window_t client);
+    void compositingChanged();
 
     uint8_t m_damageEventBase;
 
