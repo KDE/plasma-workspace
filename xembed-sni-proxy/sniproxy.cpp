@@ -169,12 +169,17 @@ SNIProxy::SNIProxy(xcb_window_t wid, QObject* parent):
     //use an artbitrary heuristic to make sure icons are always sensible
     if (clientWindowSize.isEmpty() || clientWindowSize.width() > s_embedSize || clientWindowSize.height() > s_embedSize )
     {
-	qCDebug(SNIPROXY) << "Resizing window" << wid << Title() << "from w*h" << clientWindowSize;
+        qCDebug(SNIPROXY) << "Resizing window" << wid << Title() << "from w*h" << clientWindowSize;
 
-        const uint32_t windowMoveConfigVals[2] = { s_embedSize, s_embedSize };
-        xcb_configure_window(c, wid,
-                                XCB_CONFIG_WINDOW_WIDTH | XCB_CONFIG_WINDOW_HEIGHT,
-                                windowMoveConfigVals);
+        xcb_configure_notify_event_t event;
+        memset(&event, 0x00, sizeof(xcb_configure_notify_event_t));
+        event.response_type = XCB_CONFIGURE_NOTIFY;
+        event.event = wid;
+        event.window = wid;
+        event.width = s_embedSize;
+        event.height = s_embedSize;
+        xcb_send_event(c, false, wid, XCB_EVENT_MASK_STRUCTURE_NOTIFY, (char *) &event);
+
         clientWindowSize = QSize(s_embedSize, s_embedSize);
     }
 
