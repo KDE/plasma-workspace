@@ -56,7 +56,7 @@ public:
     }
 
     QHash<int, QByteArray> roleNames() const override {
-        QHash<int, QByteArray> roles = roleNames();
+        QHash<int, QByteArray> roles = QStandardItemModel::roleNames();
         roles[Qt::UserRole+1] = "plugin";
         return roles;
     }
