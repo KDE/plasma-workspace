@@ -35,6 +35,8 @@
 #include <Plasma/Containment>
 #include <qstandardpaths.h>
 
+#include <KActivities/Consumer>
+
 #include <KPackage/Package>
 #include <KPackage/PackageStructure>
 #include <KPackage/PackageLoader>
@@ -44,6 +46,7 @@
 #include "openwidgetassistant_p.h"
 #include "config-workspace.h"
 
+using namespace KActivities;
 using namespace KCategorizedItemsViewModels;
 using namespace Plasma;
 
@@ -65,8 +68,12 @@ public:
         : q(w),
           containment(0),
           itemModel(w),
-          filterModel(w)
+          filterModel(w),
+          activitiesConsumer(new KActivities::Consumer())
     {
+        QObject::connect(activitiesConsumer.data(), &Consumer::currentActivityChanged, q, [this] {
+            initRunningApplets();
+        });
     }
 
     void initFilters();
@@ -99,6 +106,8 @@ public:
     KCategorizedItemsViewModels::DefaultFilterModel filterModel;
     DefaultItemFilterProxyModel filterItemModel;
     QPointer<KNS3::DownloadDialog> newStuffDialog;
+
+    QScopedPointer<KActivities::Consumer> activitiesConsumer;
 };
 
 void WidgetExplorerPrivate::initFilters()
@@ -216,8 +225,14 @@ void WidgetExplorerPrivate::initRunningApplets()
 
     appletNames.clear();
     runningApplets.clear();
-    QList<Containment*> containments = c->containments();
-    foreach (Containment *containment, containments) {
+
+    const QList<Containment*> containments = c->containments();
+    for (Containment *containment : containments) {
+        if (containment->containmentType() == Plasma::Types::DesktopContainment
+            && containment->activity() != activitiesConsumer->currentActivity()) {
+            continue;
+        }
+
         addContainment(containment);
     }
 
