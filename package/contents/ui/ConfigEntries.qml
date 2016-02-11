@@ -40,6 +40,14 @@ QtLayouts.GridLayout {
 
     columns: 2 // so we can indent the entries below...
 
+    function saveConfig () {
+        for (var i in tableView.model) {
+            print(tableView.model[i].shortcut)
+            print(tableView.model[i].applet)
+            tableView.model[i].applet.globalShortcut = tableView.model[i].shortcut
+        }
+    }
+
     QtControls.CheckBox {
         id: showAllCheckBox
         QtLayouts.Layout.fillWidth: true
@@ -60,6 +68,35 @@ QtLayouts.GridLayout {
         visible: false
     }
 
+    function retrieveAllItems() {
+        print(plasmoid)
+        print(plasmoid.rootItem.statusNotifierModel)
+        var list = [];
+        for (var i = 0; i < plasmoid.rootItem.statusNotifierModel.count; ++i) {
+            var item = plasmoid.rootItem.statusNotifierModel.get(i);
+            list.push({
+                "index": i,
+                "taskId": item.Id,
+                "name": item.Title,
+                "iconName": plasmoid.nativeInterface.resolveIcon(item.IconName, item.IconThemePath),
+                "icon": item.Icon
+            });
+        }
+        var lastIndex = list.length;
+        for (var i = 0; i < plasmoid.applets.length; ++i) {
+            var item = plasmoid.applets[i]
+            list.push({
+                "index": (i + lastIndex),
+                "applet": item,
+                "taskId": item.pluginName,
+                "name": item.title,
+                "iconName": item.icon,
+                "shortcut": item.globalShortcut
+            });
+        }
+        return list;
+    }
+
     QtControls.TableView {
         id: tableView
         QtLayouts.Layout.fillWidth: true
@@ -67,7 +104,7 @@ QtLayouts.GridLayout {
         QtLayouts.Layout.row: 2
         QtLayouts.Layout.column: 1
 
-        model: plasmoid.rootItem.systrayHost.allTasks
+        model: retrieveAllItems()
         horizontalScrollBarPolicy: Qt.ScrollBarAlwaysOff
         flickableItem.boundsBehavior: Flickable.StopAtBounds
 
@@ -193,7 +230,7 @@ QtLayouts.GridLayout {
                     visible: modelData.hasOwnProperty("shortcut")
                     onKeySequenceChanged: {
                         if (keySequence != modelData.shortcut) {
-                            modelData.shortcut = keySequence
+                            tableView.model[modelData.index].shortcut = keySequence
                             iconsPage.configurationChanged()
                         }
                     }

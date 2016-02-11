@@ -34,6 +34,8 @@ MouseArea {
     property alias visibleLayout: tasksRow
     property alias hiddenLayout: expandedRepresentation.hiddenLayout
 
+    property alias statusNotifierModel: statusNotifierModel
+
     function addApplet(applet, x, y) {
         print("Applet created:" + applet.title)
         var component = Qt.createComponent("PlasmoidItem.qml")
