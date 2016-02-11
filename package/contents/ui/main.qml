@@ -120,13 +120,16 @@ MouseArea {
           }
     }
 
+    PlasmaCore.DataModel {
+        id: statusNotifierModel
+        dataSource: statusNotifierSource
+    }
+
     PlasmaCore.SortFilterModel {
         id: hiddenTasksModel
         filterRole: "Status"
         filterRegExp: "Passive"
-        sourceModel: PlasmaCore.DataModel {
-            dataSource: statusNotifierSource
-        }
+        sourceModel: statusNotifierModel
     }
 
     CurrentItemHighLight {
@@ -160,9 +163,7 @@ MouseArea {
                     id: filteredStatusNotifiers
                     filterRole: "Status"
                     filterRegExp: "(Active|RequestingAttention)"
-                    sourceModel: PlasmaCore.DataModel {
-                        dataSource: statusNotifierSource
-                    }
+                    sourceModel: statusNotifierModel
                 }
 
                 delegate: StatusNotifierItem {}
