@@ -28,11 +28,13 @@ AbstractItem {
     iconItem: applet
     text: applet ? applet.title : ""
 
+    itemId: applet ? applet.pluginName : ""
     mainText: applet ? applet.toolTipMainText : ""
     subText: applet ? applet.toolTipSubText : ""
     icon: applet ? applet.icon : ""
     mainItem: applet && applet.toolTipItem ? applet.toolTipItem : null
     textFormat: applet ? applet.toolTipTextFormat : ""
+    status: applet ? applet.status : PlasmaCore.Types.NoStatus
 
     onClicked: {
         if (applet) {
@@ -48,13 +50,13 @@ AbstractItem {
             applet.width = height
         }
     }
-onAppletChanged: {
-    print("applet changed");
-    if (!applet) {
-        plasmoidContainer.destroy();
-        print("applet destroyed")
+    onAppletChanged: {
+        print("applet changed");
+        if (!applet) {
+            plasmoidContainer.destroy();
+            print("applet destroyed")
+        }
     }
-}
     Connections {
         target: applet
         onExpandedChanged: {
@@ -72,15 +74,6 @@ onAppletChanged: {
                 }
                 //if not expanded we don't have an active applet anymore
                 root.activeApplet = null;
-            }
-        }
-
-        onStatusChanged: {
-            if (applet.status == PlasmaCore.Types.PassiveStatus) {
-                plasmoidContainer.parent = hiddenLayout;
-                plasmoidContainer.x = 0;
-            } else {
-                plasmoidContainer.parent = visibleLayout;
             }
         }
     }

@@ -42,9 +42,7 @@ QtLayouts.GridLayout {
 
     function saveConfig () {
         for (var i in tableView.model) {
-            print(tableView.model[i].shortcut)
-            print(tableView.model[i].applet)
-            tableView.model[i].applet.globalShortcut = tableView.model[i].shortcut
+            //tableView.model[i].applet.globalShortcut = tableView.model[i].shortcut
         }
     }
 

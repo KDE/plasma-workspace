@@ -24,14 +24,27 @@ import org.kde.plasma.components 2.0 as PlasmaComponents
 AbstractItem {
     id: taskIcon
 
+    itemId: Id
     text: Title
     mainText: ToolTipTitle ? ToolTipTitle : ""
     subText: ToolTipSubTitle ? ToolTipSubTitle : ""
     icon: ToolTipIcon ? ToolTipIcon : plasmoid.nativeInterface.resolveIcon(IconName != "" ? IconName : Icon, IconThemePath)
     textFormat: Text.AutoText
 
-    iconItem: iconItem
+    status: {
+        switch (Status) {
+        case "Active":
+            return PlasmaCore.Types.ActiveStatus;
+        case "NeedsAttention":
+            return PlasmaCore.Types.NeedsAttentionStatus;
+        //just assume passive
+        default:
+            return PlasmaCore.Types.PassiveStatus;
+        }
+    }
 
+    iconItem: iconItem
+Component.onCompleted: taskIcon.parent = visibleLayout
     PlasmaCore.IconItem {
         id: iconItem
         source: plasmoid.nativeInterface.resolveIcon(IconName != "" ? IconName : Icon, IconThemePath)

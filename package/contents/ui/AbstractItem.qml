@@ -27,15 +27,20 @@ PlasmaCore.ToolTipArea {
     height: hidden ? root.hiddenItemSize + marginHints.top + marginHints.bottom : root.itemSize
     width: labelVisible ? parent.width : height
 
+    property string itemId
     property alias text: label.text
     property bool hidden: parent.objectName == "hiddenTasksColumn"
     property QtObject marginHints: parent.marginHints
     property bool labelVisible: abstractItem.hidden && !root.activeApplet
     property Item iconItem
+    //PlasmaCore.Types.ItemStatus
+    property int status
 
     signal clicked(var mouse)
     signal wheel(var wheel)
 
+    property bool forcedHidden: plasmoid.configuration.hiddenItems.indexOf(itemId) !== -1
+    property bool forcedShown: plasmoid.configuration.showAllItems || plasmoid.configuration.shownItems.indexOf(itemId) !== -1
 
 
     /* subclasses need to assign to this tiiltip properties
@@ -51,12 +56,35 @@ PlasmaCore.ToolTipArea {
                 return abstractItem.location;
               }
 
+    function updateVisibility() {
+        if (forcedShown || !(forcedHidden || status == PlasmaCore.Types.PassiveStatus)) {
+            abstractItem.parent = visibleLayout;
+        } else {
+            abstractItem.parent = hiddenLayout;
+            abstractItem.x = 0;
+        }
+    }
+
+
+//BEGIN CONNECTIONS
+
+    onStatusChanged: updateVisibility()
 
     onContainsMouseChanged: {
         if (hidden && containsMouse) {
             root.hiddenLayout.hoveredItem = abstractItem
         }
     }
+
+    Component.onCompleted: updateVisibility()
+    onForcedHiddenChanged: updateVisibility()
+    onForcedShownChanged: updateVisibility()
+
+    //dangerous but needed due how repeater reparents
+    onParentChanged: updateVisibility()
+
+//END CONNECTIONS
+
     MouseArea {
         id: mouseArea
         anchors.fill: abstractItem

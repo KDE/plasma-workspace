@@ -64,13 +64,6 @@ PlasmaExtras.ScrollArea {
                 property alias marginHints: highlight.marginHints
                 
                 objectName: "hiddenTasksColumn"
-
-                Repeater {
-                    id: hiddenTasksRepeater
-                    model: hiddenTasksModel
-
-                    delegate: StatusNotifierItem {}
-                }
             }
         }
     }

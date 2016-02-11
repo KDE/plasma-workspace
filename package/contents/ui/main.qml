@@ -127,11 +127,15 @@ MouseArea {
         dataSource: statusNotifierSource
     }
 
-    PlasmaCore.SortFilterModel {
-        id: hiddenTasksModel
-        filterRole: "Status"
-        filterRegExp: "Passive"
-        sourceModel: statusNotifierModel
+    Item {
+        id: statusNotifierContainer
+        visible: false
+        Repeater {
+            id: tasksRepeater
+            model: statusNotifierModel
+
+            delegate: StatusNotifierItem {}
+        }
     }
 
     CurrentItemHighLight {
@@ -158,18 +162,6 @@ MouseArea {
                 property int right: 0
                 property int bottom: 0
             }
-
-            Repeater {
-                id: tasksRepeater
-                model: PlasmaCore.SortFilterModel {
-                    id: filteredStatusNotifiers
-                    filterRole: "Status"
-                    filterRegExp: "(Active|RequestingAttention)"
-                    sourceModel: statusNotifierModel
-                }
-
-                delegate: StatusNotifierItem {}
-            }
         }
 
         ExpanderArrow {
@@ -185,7 +177,7 @@ MouseArea {
         location: plasmoid.location
         hideOnWindowDeactivate: expandedRepresentation.hideOnWindowDeactivate
         onVisibleChanged: {
-            if (!visible) {
+            if (!visible && root.activeApplet) {
                 root.activeApplet.expanded = false;
             }
         }

@@ -82,7 +82,7 @@ void SystemTray::newTask(const QString &task)
 void SystemTray::cleanupTask(const QString &task)
 {
     foreach (Plasma::Applet *applet, applets()) {
-        if (!applet->pluginInfo().isValid() && task == applet->pluginInfo().pluginName()) {
+        if (!applet->pluginInfo().isValid() || task == applet->pluginInfo().pluginName()) {
             applet->destroy();
         }
     }
