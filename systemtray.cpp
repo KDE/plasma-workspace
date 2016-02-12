@@ -103,6 +103,7 @@ QVariant SystemTray::resolveIcon(const QVariant &variant, const QString &iconThe
                     // adding all application dirs to KIconLoader::global(), to
                     // avoid potential icon name clashes between application
                     // icons
+                    //FIXME: leak
                     KIconLoader *customIconLoader = new KIconLoader(appName, QStringList(), this);
                     customIconLoader->addAppDir(appName, path);
                     return QVariant(QIcon(new KIconEngine(variant.toString(), customIconLoader)));
@@ -197,6 +198,20 @@ void SystemTray::showPlasmoidMenu(QQuickItem *appletInterface)
     }
 
     desktopMenu->popup(pos.toPoint());
+}
+
+Q_INVOKABLE QString SystemTray::plasmoidCategory(QQuickItem *appletInterface) const
+{
+    if (!appletInterface) {
+        return "UnknownCategory";
+    }
+
+    Plasma::Applet *applet = appletInterface->property("_plasma_applet").value<Plasma::Applet*>();
+    if (!applet || !applet->pluginInfo().isValid()) {
+        return "UnknownCategory";
+    }
+
+    return applet->pluginInfo().property(QStringLiteral("X-Plasma-NotificationAreaCategory")).toString();
 }
 
 void SystemTray::restoreContents(KConfigGroup &group)

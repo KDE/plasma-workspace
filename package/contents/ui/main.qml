@@ -151,7 +151,7 @@ MouseArea {
     }
 
     Item {
-        id: statusNotifierContainer
+        id: invisibleEntriesContainer
         visible: false
         Repeater {
             id: tasksRepeater

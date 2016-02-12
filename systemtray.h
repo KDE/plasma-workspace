@@ -66,6 +66,12 @@ public:
      */
     Q_INVOKABLE void showPlasmoidMenu(QQuickItem *appletInterface);
 
+    /**
+     * Returns the "X-Plasma-NotificationAreaCategory"
+     * of the plasmoid metadata
+     */
+    Q_INVOKABLE QString plasmoidCategory(QQuickItem *appletInterface) const;
+
 private Q_SLOTS:
     void serviceNameFetchFinished(QDBusPendingCallWatcher* watcher, const QDBusConnection &connection);
     void serviceRegistered(const QString &service);

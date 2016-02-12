@@ -30,6 +30,7 @@ AbstractItem {
     subText: ToolTipSubTitle ? ToolTipSubTitle : ""
     icon: ToolTipIcon ? ToolTipIcon : plasmoid.nativeInterface.resolveIcon(IconName != "" ? IconName : Icon, IconThemePath)
     textFormat: Text.AutoText
+    category: Category
 
     status: {
         switch (Status) {

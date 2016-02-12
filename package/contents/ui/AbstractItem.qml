@@ -28,6 +28,7 @@ PlasmaCore.ToolTipArea {
     width: labelVisible ? parent.width : height
 
     property string itemId
+    property string category
     property alias text: label.text
     property bool hidden: parent.objectName == "hiddenTasksColumn"
     property QtObject marginHints: parent.marginHints
@@ -41,6 +42,7 @@ PlasmaCore.ToolTipArea {
 
     property bool forcedHidden: plasmoid.configuration.hiddenItems.indexOf(itemId) !== -1
     property bool forcedShown: plasmoid.configuration.showAllItems || plasmoid.configuration.shownItems.indexOf(itemId) !== -1
+    property bool categoryShown: shownCategories.indexOf(category) != -1;
 
 
     /* subclasses need to assign to this tiiltip properties
@@ -57,7 +59,9 @@ PlasmaCore.ToolTipArea {
               }
 
     function updateVisibility() {
-        if (forcedShown || !(forcedHidden || status == PlasmaCore.Types.PassiveStatus)) {
+        if (!categoryShown) {
+            abstractItem.parent = invisibleEntriesContainer;
+        } else if (forcedShown || !(forcedHidden || status == PlasmaCore.Types.PassiveStatus)) {
             abstractItem.parent = visibleLayout;
         } else {
             abstractItem.parent = hiddenLayout;
@@ -79,6 +83,7 @@ PlasmaCore.ToolTipArea {
     Component.onCompleted: updateVisibility()
     onForcedHiddenChanged: updateVisibility()
     onForcedShownChanged: updateVisibility()
+    onCategoryShownChanged: updateVisibility()
 
     //dangerous but needed due how repeater reparents
     onParentChanged: updateVisibility()
