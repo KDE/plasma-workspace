@@ -60,15 +60,6 @@ MouseArea {
 
      Connections {
         target: plasmoid.configuration
-        onApplicationStatusShownChanged: plasmoid.nativeInterface.setCategoryShown(SystemTray.Task.ApplicationStatus, plasmoid.configuration.applicationStatusShown);
-
-        onCommunicationsShownChanged: plasmoid.nativeInterface.setCategoryShown(SystemTray.Task.Communications, plasmoid.configuration.communicationsShown);
-
-        onSystemServicesShownChanged: plasmoid.nativeInterface.setCategoryShown(SystemTray.Task.SystemServices, plasmoid.configuration.systemServicesShown);
-
-        onHardwareControlShownChanged: plasmoid.nativeInterface.setCategoryShown(SystemTray.Task.Hardware, plasmoid.configuration.hardwareControlShown);
-
-        onMiscellaneousShownChanged: plasmoid.nativeInterface.setCategoryShown(SystemTray.Task.Unknown, plasmoid.configuration.miscellaneousShown);
 
         onExtraItemsChanged: plasmoid.nativeInterface.allowedPlasmoids = plasmoid.configuration.extraItems
     }
@@ -122,9 +113,41 @@ MouseArea {
           }
     }
 
-    PlasmaCore.DataModel {
+
+    //due to the magic of property bindings this function will be
+    //re-executed all the times a setting changes
+    property var shownCategories: {
+        var array = [];
+        if (plasmoid.configuration.applicationStatusShown) {
+            array.push("ApplicationStatus");
+        }
+        if (plasmoid.configuration.communicationsShown) {
+            array.push("Communications");
+        }
+        if (plasmoid.configuration.systemServicesShown) {
+            array.push("SystemServices");
+        }
+        if (plasmoid.configuration.hardwareControlShown) {
+            array.push("Hardware");
+        }
+        if (plasmoid.configuration.miscellaneousShown) {
+            array.push("UnknownCategory");
+        }
+
+        //nothing? make a regexp that matches nothing
+        if (array.length == 0) {
+            array.push("$^")
+        }
+        return array;
+    }
+    
+    PlasmaCore.SortFilterModel {
         id: statusNotifierModel
-        dataSource: statusNotifierSource
+        filterRole: "Category"
+        filterRegExp: "("+shownCategories.join("|")+")"
+        sourceModel: PlasmaCore.DataModel {
+            dataSource: statusNotifierSource
+        }
     }
 
     Item {
