@@ -66,6 +66,11 @@ ColumnLayout {
             Layout.minimumWidth: units.gridUnit * 25
 
             activeFocusOnPress: true
+            placeholderText: results.runnerName ? i18ndc("plasma_lookandfeel_org.kde.lookandfeel",
+                                                         "Textfield placeholder text, query specific KRunner",
+                                                         "Search '%1'...", results.runnerName)
+                                                : i18ndc("plasma_lookandfeel_org.kde.lookandfeel",
+                                                         "Textfield placeholder text", "Search...")
 
             onTextChanged: {
                 root.query = queryField.text
