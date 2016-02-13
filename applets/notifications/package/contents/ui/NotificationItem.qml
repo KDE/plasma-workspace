@@ -194,6 +194,7 @@ Item {
             MouseArea {
                 id: contextMouseArea
 
+                Layout.alignment: Qt.AlignTop
                 Layout.fillWidth: true
 
                 anchors {
