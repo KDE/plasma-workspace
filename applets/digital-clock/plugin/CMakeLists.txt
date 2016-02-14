@@ -1,5 +1,12 @@
 add_definitions(-DTRANSLATION_DOMAIN=\"plasma_applet_org.kde.plasma.digitalclock\")
 
+find_package(IsoCodes)
+set_package_properties(IsoCodes PROPERTIES DESCRIPTION "ISO language, territory, currency, script codes and their translations"
+                       URL "http://pkg-isocodes.alioth.debian.org/"
+                       PURPOSE "Translation of country names in digital applet"
+                       TYPE RUNTIME
+                      )
+
 set(digitalclockplugin_SRCS
     timezonemodel.cpp
     timezonesi18n.cpp
