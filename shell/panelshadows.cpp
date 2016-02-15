@@ -627,6 +627,10 @@ void PanelShadows::Private::updateShadowWayland(const QWindow *window, Plasma::F
 
 void PanelShadows::Private::clearShadow(const QWindow *window)
 {
+    if (!static_cast<const QSurface*>(window)->surfaceHandle()) {
+        qWarning() << "Cannot clear shadow from window without native surface!";
+        return;
+    }
 #if HAVE_X11
     if (m_isX11) {
         clearShadowX11(window);

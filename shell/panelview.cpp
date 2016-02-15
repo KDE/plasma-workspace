@@ -116,7 +116,6 @@ PanelView::~PanelView()
     if (containment()) {
         m_corona->requestApplicationConfigSync();
     }
-    PanelShadows::self()->removeWindow(this);
 }
 
 KConfigGroup PanelView::panelConfig(ShellCorona *corona, Plasma::Containment *containment, QScreen *screen)
@@ -807,6 +806,7 @@ bool PanelView::event(QEvent *e)
                 case QPlatformSurfaceEvent::SurfaceAboutToBeDestroyed:
                     delete m_shellSurface;
                     m_shellSurface = nullptr;
+                    PanelShadows::self()->removeWindow(this);
                     break;
                 }
             }

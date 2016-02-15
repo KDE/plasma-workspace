@@ -92,7 +92,6 @@ PanelConfigView::~PanelConfigView()
     if (m_panelView) {
         m_panelView->setVisibilityMode(m_visibilityMode);
     }
-    PanelShadows::self()->removeWindow(this);
 }
 
 void PanelConfigView::init()
@@ -265,6 +264,7 @@ bool PanelConfigView::event(QEvent *e)
             case QPlatformSurfaceEvent::SurfaceAboutToBeDestroyed:
                 delete m_shellSurface;
                 m_shellSurface = nullptr;
+                PanelShadows::self()->removeWindow(this);
                 break;
             }
         }
