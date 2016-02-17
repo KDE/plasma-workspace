@@ -18,7 +18,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-import QtQuick 2.2
+import QtQuick 2.5
 import QtQuick.Layouts 1.1
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as Components
@@ -102,7 +102,7 @@ Item {
                 target: timeLabel
 
                 height: sizehelper.height
-                width: timeLabel.paintedWidth
+                width: sizehelper.width
 
                 wrapMode: Text.NoWrap
                 fontSizeMode: Text.VerticalFit
@@ -163,7 +163,7 @@ Item {
                 target: timeLabel
 
                 height: sizehelper.height
-                width: timeLabel.paintedWidth
+                width: sizehelper.width
 
                 wrapMode: Text.NoWrap
                 fontSizeMode: Text.VerticalFit
@@ -214,8 +214,8 @@ Item {
             PropertyChanges {
                 target: timeLabel
 
-                height: sizehelper.paintedHeight
-                width: main.width
+                height: sizehelper.height
+                width: sizehelper.width
 
                 fontSizeMode: Text.VerticalFit
                 wrapMode: Text.WordWrap
@@ -462,6 +462,7 @@ Item {
     Components.Label {
         id: sizehelper
 
+        font.family: timeLabel.font.family
         font.weight: timeLabel.font.weight
         font.italic: timeLabel.font.italic
         font.pixelSize: 1024
@@ -470,6 +471,14 @@ Item {
         verticalAlignment: Text.AlignVCenter
 
         visible: false
+    }
+
+    FontMetrics {
+        id: timeMetrics
+
+        font.family: timeLabel.font.family
+        font.weight: timeLabel.font.weight
+        font.italic: timeLabel.font.italic
     }
 
     // Qt's QLocale does not offer any modular time creating like Klocale did
@@ -512,7 +521,6 @@ Item {
     }
 
     function setupLabels() {
-        var st = Qt.formatTime(new Date(2000, 0, 1, 22, 0, 0), main.timeFormat);
         var showTimezone = main.showLocalTimezone || (plasmoid.configuration.lastSelectedTimezone != "Local"
                                                         && dataSource.data["Local"]["Timezone City"] != dataSource.data[plasmoid.configuration.lastSelectedTimezone]["Timezone City"]);
 
@@ -540,8 +548,30 @@ Item {
             dateLabelLeft.text = "";
         }
 
-        if (sizehelper.text != st) {
-            sizehelper.text = st;
+        // find widest character between 0 and 9
+        var maximumWidthNumber = 0;
+        var maximumAdvanceWidth = 0;
+        for (var i = 0; i <= 9; i++) {
+            var advanceWidth = timeMetrics.advanceWidth(i);
+            if (advanceWidth > maximumAdvanceWidth) {
+                maximumAdvanceWidth = advanceWidth;
+                maximumWidthNumber = i;
+            }
+        }
+        // replace all placeholders with the widest number (two digits)
+        var format = main.timeFormat.replace(/(h+|m+|s+)/g, "" + maximumWidthNumber + maximumWidthNumber); // make sure maximumWidthNumber is formatted as string
+        // build the time string twice, once with an AM time and once with a PM time
+        var date = new Date(2000, 0, 1, 1, 0, 0);
+        var timeAm = Qt.formatTime(date, format);
+        var advanceWidthAm = timeMetrics.advanceWidth(timeAm);
+        date.setHours(13);
+        var timePm = Qt.formatTime(date, format);
+        var advanceWidthPm = timeMetrics.advanceWidth(timePm);
+        // set the sizehelper's text to the widest time string
+        if (advanceWidthAm > advanceWidthPm) {
+            sizehelper.text = timeAm;
+        } else {
+            sizehelper.text = timePm;
         }
     }
 
