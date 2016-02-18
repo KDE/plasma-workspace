@@ -31,7 +31,7 @@ PlasmaCore.ToolTipArea {
     property bool vertical: plasmoid.formFactor == PlasmaCore.Types.Vertical
     implicitWidth: units.iconSizes.smallMedium
     implicitHeight: implicitWidth
-    //visible: hiddenTasksModel.count > 0
+    visible: root.hiddenLayout.children.length > 0
 
     subText: root.expanded ? i18n("Hide icons") : i18n("Show hidden icons")
 
