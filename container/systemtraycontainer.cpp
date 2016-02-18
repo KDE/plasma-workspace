@@ -56,6 +56,7 @@ void SystemTrayContainer::constraintsEvent(Plasma::Types::Constraints constraint
             }
         }
     }
+
     if (constraints & Plasma::Types::UiReadyConstraint) {
         Plasma::Containment *cont = containment();
         if (!cont) {

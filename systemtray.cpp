@@ -35,6 +35,7 @@
 #include <QScreen>
 
 #include <Plasma/PluginLoader>
+#include <Plasma/ServiceJob>
 
 #include <KIconLoader>
 #include <KIconEngine>
@@ -212,6 +213,66 @@ Q_INVOKABLE QString SystemTray::plasmoidCategory(QQuickItem *appletInterface) co
     }
 
     return applet->pluginInfo().property(QStringLiteral("X-Plasma-NotificationAreaCategory")).toString();
+}
+
+void SystemTray::showStatusNotifierContextMenu(KJob *job, QQuickItem *statusNotifierIcon)
+{
+    if (QCoreApplication::closingDown() || !statusNotifierIcon) {
+        // apparently an edge case can be triggered due to the async nature of all this
+        // see: https://bugs.kde.org/show_bug.cgi?id=251977
+        return;
+    }
+
+    Plasma::ServiceJob *sjob = qobject_cast<Plasma::ServiceJob *>(job);
+    if (!sjob) {
+        return;
+    }
+
+    QMenu *menu = qobject_cast<QMenu *>(sjob->result().value<QObject *>());
+
+    if (menu) {
+        menu->adjustSize();
+        int x = sjob->parameters()[QStringLiteral("x")].toInt();
+        int y = sjob->parameters()[QStringLiteral("y")].toInt();
+
+        //try tofind the icon screen coordinates, and adjust the position as a poor
+        //man's popupPosition
+
+        QRect screenItemRect(statusNotifierIcon->mapToScene(QPointF(0, 0)).toPoint(), QSize(statusNotifierIcon->width(), statusNotifierIcon->height()));
+
+        if (statusNotifierIcon->window()) {
+            screenItemRect.moveTopLeft(statusNotifierIcon->window()->mapToGlobal(screenItemRect.topLeft()));
+        }
+
+        switch (location()) {
+        case Plasma::Types::LeftEdge:
+            x = screenItemRect.right();
+            y = screenItemRect.top();
+            break;
+        case Plasma::Types::RightEdge:
+            x = screenItemRect.left() - menu->width();
+            y = screenItemRect.top();
+            break;
+        case Plasma::Types::TopEdge:
+            x = screenItemRect.left();
+            y = screenItemRect.bottom();
+            break;
+        case Plasma::Types::BottomEdge:
+            x = screenItemRect.left();
+            y = screenItemRect.top() - menu->height();
+            break;
+        default:
+            x = screenItemRect.left();
+            if (screenItemRect.top() - menu->height() >= statusNotifierIcon->window()->screen()->geometry().top()) {
+                y = screenItemRect.top() - menu->height();
+            } else {
+                y = screenItemRect.bottom();
+            }
+        }
+
+
+        menu->popup(QPoint(x, y));
+    }
 }
 
 void SystemTray::restoreContents(KConfigGroup &group)

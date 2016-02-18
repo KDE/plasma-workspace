@@ -72,6 +72,11 @@ public:
      */
     Q_INVOKABLE QString plasmoidCategory(QQuickItem *appletInterface) const;
 
+    /**
+     * Shows the context menu for a statusnotifieritem
+     */
+    Q_INVOKABLE void showStatusNotifierContextMenu(KJob *job, QQuickItem *statusNotifierIcon);
+
 private Q_SLOTS:
     void serviceNameFetchFinished(QDBusPendingCallWatcher* watcher, const QDBusConnection &connection);
     void serviceRegistered(const QString &service);
