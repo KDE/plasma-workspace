@@ -94,4 +94,22 @@ AbstractItem {
             break;
         }
     }
+
+    onWheel: {
+        //don't send activateVertScroll with a delta of 0, some clients seem to break (kmix)
+        if (wheel.angleDelta.y !== 0) {
+            var service = statusNotifierSource.serviceForSource(DataEngineSource);
+            var operation = service.operationDescription("Scroll");
+            operation.delta =wheel.angleDelta.y;
+            operation.direction = "Vertical";
+            service.startOperationCall(operation);
+        }
+        if (wheel.angleDelta.x !== 0) {
+            var service = statusNotifierSource.serviceForSource(DataEngineSource);
+            var operation = service.operationDescription("Scroll");
+            operation.delta =wheel.angleDelta.x;
+            operation.direction = "Horizontal";
+            service.startOperationCall(operation);
+        }
+    }
 }
