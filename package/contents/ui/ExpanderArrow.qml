@@ -28,9 +28,9 @@ import org.kde.plasma.extras 2.0 as PlasmaExtras
 PlasmaCore.ToolTipArea {
     id: tooltip
 
-    property bool vertical
-    width: vertical ? root.width : units.iconSizes.smallMedium
-    height: !vertical ? root.height : units.iconSizes.smallMedium
+    property bool vertical: plasmoid.formFactor == PlasmaCore.Types.Vertical
+    implicitWidth: units.iconSizes.smallMedium
+    implicitHeight: implicitWidth
     //visible: hiddenTasksModel.count > 0
 
     subText: root.expanded ? i18n("Hide icons") : i18n("Show hidden icons")

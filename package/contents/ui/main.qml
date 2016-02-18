@@ -26,7 +26,11 @@ import "items"
 MouseArea {
     id: root
 
-    Layout.minimumWidth: tasksRow.implicitWidth + expander.implicitWidth+30
+    Layout.minimumWidth: vertical ? units.iconSizes.small : tasksRow.implicitWidth + expander.implicitWidth + units.smallSpacing
+
+    Layout.minimumHeight: vertical ? tasksRow.implicitHeight+ expander.implicitHeight + units.smallSpacing : units.smallSpacing
+
+    property bool vertical: plasmoid.formFactor == PlasmaCore.Types.Vertical
     property int itemSize: Math.min(Math.min(width, height), units.iconSizes.medium)
     property int hiddenItemSize: units.iconSizes.smallMedium
     property alias expanded: dialog.visible
@@ -151,6 +155,8 @@ MouseArea {
         }
     }
 
+    //This is a dump for items we don't want to be seen or as an incubation, when they are
+    //created as a nursery before going in their final place
     Item {
         id: invisibleEntriesContainer
         visible: false
@@ -168,28 +174,32 @@ MouseArea {
     }
 
     //Main Layout
-    Row {
-        id: mainLayout
-        anchors.fill: parent
 
-        Flow {
-            id: tasksRow
-            spacing: 0
-            height: parent.height
-            width: parent.width - expander.width
-            property string skipItems
-            flow: plasmoid.formFactor == PlasmaCore.Types.Vertical ? Flow.LeftToRight : Flow.TopToBottom
-            //NOTE: this exists mostly for not causing reference errors
-            property QtObject marginHints: QtObject {
-                property int left: 0
-                property int top: 0
-                property int right: 0
-                property int bottom: 0
-            }
+    Flow {
+        id: tasksRow
+        spacing: 0
+        height: parent.height - (vertical ? expander.height : 0)
+        width: parent.width  - (vertical ? 0 : expander.width)
+        property string skipItems
+        flow: vertical ? Flow.LeftToRight : Flow.TopToBottom
+        y: vertical ? 0 : (height % root.itemSize) / 2
+        x: vertical ? (width % root.itemSize) / 2 : 0
+
+        //NOTE: this exists mostly for not causing reference errors
+        property QtObject marginHints: QtObject {
+            property int left: 0
+            property int top: 0
+            property int right: 0
+            property int bottom: 0
         }
+    }
 
-        ExpanderArrow {
-            id: expander
+    ExpanderArrow {
+        id: expander
+        anchors {
+            fill: parent
+            leftMargin: vertical ? 0 : parent.width - implicitWidth
+            topMargin: vertical ? parent.height - implicitHeight : 0
         }
     }
 
