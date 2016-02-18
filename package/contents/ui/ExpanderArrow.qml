@@ -69,14 +69,14 @@ PlasmaCore.ToolTipArea {
 
             svg: arrowSvg
             elementId: {
-                if (plasmoid.location == PlasmaCore.Types.BottomEdge) {
-                    return "up-arrow"
-                } else if (plasmoid.location == PlasmaCore.Types.TopEdge) {
-                    return "down-arrow"
+                if (plasmoid.location == PlasmaCore.Types.TopEdge) {
+                    return "down-arrow";
                 } else if (plasmoid.location == PlasmaCore.Types.LeftEdge) {
-                    return "right-arrow"
+                    return "right-arrow";
+                } else if (plasmoid.location == PlasmaCore.Types.RightEdge) {
+                    return "left-arrow";
                 } else {
-                    return "left-arrow"
+                    return "up-arrow";
                 }
             }
         }
@@ -101,14 +101,14 @@ PlasmaCore.ToolTipArea {
 
             svg: arrowSvg
             elementId: {
-                if (plasmoid.location == PlasmaCore.Types.BottomEdge) {
-                    return "down-arrow"
-                } else if (plasmoid.location == PlasmaCore.Types.TopEdge) {
-                    return "up-arrow"
+                if (plasmoid.location == PlasmaCore.Types.TopEdge) {
+                    return "up-arrow";
                 } else if (plasmoid.location == PlasmaCore.Types.LeftEdge) {
-                    return "left-arrow"
+                    return "left-arrow";
+                } else if (plasmoid.location == PlasmaCore.Types.RightEdge) {
+                    return "right-arrow";
                 } else {
-                    return "right-arrow"
+                    return "down-arrow";
                 }
             }
         }
