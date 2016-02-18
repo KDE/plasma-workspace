@@ -21,6 +21,7 @@ import QtQuick 2.1
 import QtQuick.Layouts 1.1
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.plasmoid 2.0
+import "items"
 
 MouseArea {
     id: root
@@ -38,7 +39,7 @@ MouseArea {
 
     function addApplet(applet, x, y) {
         print("Applet created:" + applet.title)
-        var component = Qt.createComponent("PlasmoidItem.qml")
+        var component = Qt.createComponent("items/PlasmoidItem.qml")
         var plasmoidContainer = component.createObject((applet.status == PlasmaCore.Types.PassiveStatus) ? hiddenLayout : visibleLayout, {"x": x, "y": y});
 
         plasmoidContainer.applet = applet
