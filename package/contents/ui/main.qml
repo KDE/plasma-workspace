@@ -17,7 +17,7 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-import QtQuick 2.1
+import QtQuick 2.5
 import QtQuick.Layouts 1.1
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.plasmoid 2.0
@@ -174,7 +174,6 @@ MouseArea {
     }
 
     //Main Layout
-
     Flow {
         id: tasksRow
         spacing: 0
@@ -182,8 +181,13 @@ MouseArea {
         width: parent.width  - (vertical ? 0 : expander.width)
         property string skipItems
         flow: vertical ? Flow.LeftToRight : Flow.TopToBottom
+        //To make it look centered
         y: vertical ? 0 : (height % root.itemSize) / 2
         x: vertical ? (width % root.itemSize) / 2 : 0
+        //make last icon appeared nearer to the tasskbar
+        //it will look a bit weird when there are 2 lines
+        //FIXME: completely broken
+        //layoutDirection: Qt.RightToLeft 
 
         //NOTE: this exists mostly for not causing reference errors
         property QtObject marginHints: QtObject {
@@ -191,6 +195,23 @@ MouseArea {
             property int top: 0
             property int right: 0
             property int bottom: 0
+        }
+
+        add: Transition {
+            NumberAnimation {
+                property: "scale"
+                from: 0
+                to: 1
+                easing.type: Easing.InQuad
+                duration: units.longDuration
+            }
+        }
+        move: Transition {
+            NumberAnimation {
+                properties: "x,y"
+                easing.type: Easing.InQuad
+                duration: units.longDuration
+            }
         }
     }
 

@@ -114,7 +114,7 @@ PlasmaCore.ToolTipArea {
         visible: abstractItem.hidden
         Behavior on opacity {
             NumberAnimation {
-                duration: 1000//units.longDuration
+                duration: units.longDuration
                 easing.type: Easing.InOutQuad
             }
         }

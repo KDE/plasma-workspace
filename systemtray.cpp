@@ -212,7 +212,12 @@ Q_INVOKABLE QString SystemTray::plasmoidCategory(QQuickItem *appletInterface) co
         return "UnknownCategory";
     }
 
-    return applet->pluginInfo().property(QStringLiteral("X-Plasma-NotificationAreaCategory")).toString();
+    const QString cat = applet->pluginInfo().property(QStringLiteral("X-Plasma-NotificationAreaCategory")).toString();
+
+    if (cat.isEmpty()) {
+        return "UnknownCategory";
+    }
+    return cat;
 }
 
 void SystemTray::showStatusNotifierContextMenu(KJob *job, QQuickItem *statusNotifierIcon)
@@ -291,9 +296,15 @@ void SystemTray::restorePlasmoids()
     //First: remove all that are not allowed anymore
     QStringList tasksToDelete;
     foreach (Plasma::Applet *applet, applets()) {
-        const QString task = applet->pluginInfo().pluginName();
-        if (!m_allowedPlasmoids.contains(task)) {
+        //Here it should always be valid.
+        //for some reason it not always is.
+        if (!applet->pluginInfo().isValid()) {
             applet->destroy();
+        } else {
+            const QString task = applet->pluginInfo().pluginName();
+            if (!m_allowedPlasmoids.contains(task)) {
+                applet->destroy();
+            }
         }
     }
 
