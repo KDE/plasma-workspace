@@ -25,6 +25,7 @@ import org.kde.plasma.calendar 2.0 as PlasmaCalendar
 import QtQuick.Layouts 1.1
 
 import org.kde.plasma.core 2.0 as PlasmaCore
+import org.kde.plasma.components 2.0 as PlasmaComponents
 import "logic.js" as Logic
 
 Item {
@@ -181,7 +182,7 @@ Item {
             width: childrenRect.width + margins.right + margins.left
             height: childrenRect.height + margins.top + margins.bottom
             visible: showTimezone
-            Text {
+            PlasmaComponents.Label {
                 id: timezoneText
                 x: timezoneBg.margins.left
                 y: timezoneBg.margins.top
