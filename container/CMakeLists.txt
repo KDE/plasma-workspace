@@ -1,15 +1,15 @@
 
-plasma_install_package(package org.kde.plasma.systraycontainer)
+plasma_install_package(package org.kde.plasma.systemtray.experimental)
 
 set(systemtraycontainer_SRCS
     systemtraycontainer.cpp
 )
 
-add_library(plasma_applet_systemtraycontainer MODULE ${systemtraycontainer_SRCS})
+add_library(org.kde.plasma.systemtray MODULE ${systemtraycontainer_SRCS})
 
-kcoreaddons_desktop_to_json(plasma_applet_systemtraycontainer package/metadata.desktop)
+kcoreaddons_desktop_to_json(org.kde.plasma.systemtray package/metadata.desktop)
 
-target_link_libraries(plasma_applet_systemtraycontainer
+target_link_libraries(org.kde.plasma.systemtray
                       Qt5::Gui
                       Qt5::Quick
                       KF5::Plasma
@@ -17,6 +17,6 @@ target_link_libraries(plasma_applet_systemtraycontainer
                       KF5::I18n)
 
 
-install(TARGETS plasma_applet_systemtraycontainer DESTINATION ${KDE_INSTALL_PLUGINDIR}/plasma/applets)
+install(TARGETS org.kde.plasma.systemtray DESTINATION ${KDE_INSTALL_PLUGINDIR}/plasma/applets)
 
 

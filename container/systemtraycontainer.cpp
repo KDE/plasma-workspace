@@ -83,7 +83,7 @@ void SystemTrayContainer::constraintsEvent(Plasma::Types::Constraints constraint
         }
         qWarning()<<"FOUND ID:"<<id;
         if (id <= 0) {
-            m_innerContainment = c->createContainment("org.kde.plasma.simplesystray");
+            m_innerContainment = c->createContainment("org.kde.plasma.private.systemtray");
             config().writeEntry("SystrayContainmentId", m_innerContainment->id());
         }
 
