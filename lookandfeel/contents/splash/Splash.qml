@@ -17,7 +17,7 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-import QtQuick 2.2
+import QtQuick 2.5
 
 Image {
     id: root
@@ -31,71 +31,73 @@ Image {
             introAnimation.running = true
         }
     }
-    Rectangle {
-        id: topRect
-        width: parent.width
-        height: (root.height / 3) - bottomRect.height - 1
-        y: root.height
-        color: "#4C000000"
-        Image {
-            source: "images/kde.svgz"
-            anchors.centerIn: parent
-            sourceSize.height: 128
-            sourceSize.width: 128
-        }
+    TextMetrics {
+        id: units
+        text: "M"
+        property int gridUnit: boundingRect.height 
     }
 
     Rectangle {
-        id: bottomRect
+        id: topRect
         width: parent.width
-        y: -height
-        height: 50
+        height: units.gridUnit * 14
+        anchors.centerIn: parent
         color: "#4C000000"
-
-        Rectangle {
-            radius: 3
-            color: "#31363b"
-            anchors.centerIn: parent
-            height: 8
-            width: height*32
+        Column {
+            id: content
+            y: units.gridUnit
+            x: parent.width
+            Image {
+                anchors.horizontalCenter: parent.horizontalCenter
+                source: "images/kde.svgz"
+                sourceSize.height: units.gridUnit * 8
+                sourceSize.width: sourceSize.height
+            }
+            Item {
+                width: 1
+                height: Math.round(units.gridUnit * 3 - progressBar.height/2)
+            }
             Rectangle {
-                radius: 3
-                anchors {
-                    left: parent.left
-                    top: parent.top
-                    bottom: parent.bottom
-                }
-                width: (parent.width / 6) * (stage - 1)
-                color: "#3daee9"
-                Behavior on width { 
-                    PropertyAnimation {
-                        duration: 250
-                        easing.type: Easing.InOutQuad
+                id: progressBar
+                radius: height
+                color: "#31363b"
+                height: Math.round(units.gridUnit/2)
+                width: height*32
+                Rectangle {
+                    radius: 3
+                    anchors {
+                        left: parent.left
+                        top: parent.top
+                        bottom: parent.bottom
+                    }
+                    width: (parent.width / 6) * (stage - 1)
+                    color: "#3daee9"
+                    Behavior on width {
+                        PropertyAnimation {
+                            duration: 250
+                            easing.type: Easing.InOutQuad
+                        }
                     }
                 }
             }
         }
+        Rectangle {
+            id: separator
+            height: 1
+            color: "#fdfdfd"
+            width: parent.width
+            opacity: 0.4
+            y: parent.height - units.gridUnit * 4
+        }
     }
 
-    ParallelAnimation {
+    XAnimator {
         id: introAnimation
         running: false
-
-        YAnimator {
-            target: topRect
-            from: root.height
-            to: root.height / 3
-            duration: 1000
-            easing.type: Easing.InOutBack
-            easing.overshoot: 1.0
-        }
-        YAnimator {
-            target: bottomRect
-            from: -bottomRect.height
-            to: 2 * (root.height / 3) - bottomRect.height
-            duration: 1000
-            easing.type: Easing.InOutBack
-            easing.overshoot: 1.0
-        }
+        target: content
+        from: root.width
+        to: root.width / 2 - content.width/2
+        duration: 1000
+        easing.type: Easing.InOutQuad
     }
 }
