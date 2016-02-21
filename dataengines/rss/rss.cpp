@@ -24,7 +24,7 @@
 //KDE
 #include <QDebug>
 #include <KUrl>
-#include <KStandardDirs>
+#include <KIO/FavIconRequestJob>
 #include <Solid/Networking>
 #include <syndication/item.h>
 #include <syndication/loader.h>
@@ -46,7 +46,6 @@
 #define CACHE_TIMEOUT 60 //time in seconds before the cached feeds are marked
                          //as out of date.
 #define MINIMUM_INTERVAL 60000
-#define FAVICONINTERFACE "org.kde.FavIcon"
 
 RssEngine::RssEngine(QObject* parent, const QVariantList& args)
     : Plasma::DataEngine(parent, args),
@@ -54,11 +53,7 @@ RssEngine::RssEngine(QObject* parent, const QVariantList& args)
 {
     Q_UNUSED(args)
     setMinimumPollingInterval(MINIMUM_INTERVAL);
-    m_favIconsModule = new QDBusInterface("org.kde.kded5", "/modules/favicons",
-                                          FAVICONINTERFACE);
     m_signalMapper = new QSignalMapper(this);
-    connect(m_favIconsModule, SIGNAL(iconChanged(bool,QString,QString)),
-            this, SLOT(slotIconChanged(bool,QString,QString)));
     connect(m_signalMapper, SIGNAL(mapped(QString)),
             this, SLOT(timeout(QString)));
     connect(Solid::Networking::notifier(), SIGNAL(statusChanged(Solid::Networking::Status)),
@@ -68,7 +63,6 @@ RssEngine::RssEngine(QObject* parent, const QVariantList& args)
 
 RssEngine::~RssEngine()
 {
-    delete m_favIconsModule;
 }
 
 void RssEngine::networkStatusChanged(Solid::Networking::Status status)
@@ -140,13 +134,11 @@ bool RssEngine::updateSourceEvent(const QString &name)
     return true;
 }
 
-void RssEngine::slotIconChanged(bool isHost, const QString& hostOrURL,
-                                             const QString& iconName)
+void RssEngine::slotFavIconResult(KJob *kjob)
 {
-    Q_UNUSED(isHost);
-    const QString iconFile = KGlobal::dirs()->findResource("cache",
-                                                     iconName+".png");
-    const QString url = hostOrURL.toLower();
+    KIO::FavIconRequestJob *job = static_cast<KIO::FavIconRequestJob *>(kjob);
+    const QString iconFile = job->iconFile();
+    const QString url = job->hostUrl().toLower();
 
     m_feedIcons[url] = iconFile;
     QMap<QString, QVariant> map;
@@ -219,13 +211,8 @@ void RssEngine::processRss(Syndication::Loader* loader,
             dataItem["time"]        = (uint)item->dateUpdated();
             if (!m_feedIcons.contains(url.toLower()) && !iconRequested) {
                 //lets request an icon, and only do this once per feed.
-                location = iconLocation(u);
-                if (location.isEmpty()) {
-                    m_favIconsModule->call( "downloadHostIcon", u.url() );
-                } else {
-                    //the icon is already in cache, so call this slot manually.
-                    slotIconChanged(false, u.url(), iconLocation(u));
-                }
+                KIO::FavIconRequestJob *job = new KIO::FavIconRequestJob(u);
+                connect(job, &KIO::FavIconRequestJob::result, this, &RssEngine::slotFavIconResult);
                 iconRequested = true;
             }
             dataItem["icon"] = m_feedIcons[url.toLower()];
@@ -331,16 +318,5 @@ QVariantList RssEngine::mergeFeeds(QString source) const
     qSort(result.begin(), result.end(), compare);
     return result;
 }
-
-QString RssEngine::iconLocation(const KUrl & url) const
-{
-    QDBusReply<QString> reply = m_favIconsModule->call( "iconForUrl", url.url() );
-    if (reply.isValid()) {
-        QString result = reply;
-        return result;
-    }
-    return QString();
-}
-
 
 

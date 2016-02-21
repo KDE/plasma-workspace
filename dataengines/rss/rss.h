@@ -56,8 +56,7 @@ class RssEngine : public Plasma::DataEngine
         void processRss(Syndication::Loader* loader,
                         Syndication::FeedPtr feed,
                         Syndication::ErrorCode error);
-        void slotIconChanged(bool isHost, const QString& hostOrURL,
-                                          const QString& iconName);
+        void slotFavIconResult(KJob *job);
         void timeout(const QString & source);
         void networkStatusChanged(Solid::Networking::Status status);
 
@@ -66,7 +65,6 @@ class RssEngine : public Plasma::DataEngine
         void updateFeeds(const QString & source,
                          const QString & title);
         bool cachesUpToDate(const QString & source) const;
-        QString iconLocation(const KUrl & url) const;
 
         QHash<Syndication::Loader*, QString> m_feedMap;
         QHash<Syndication::Loader*, QString> m_sourceMap;
@@ -80,7 +78,6 @@ class RssEngine : public Plasma::DataEngine
         QVariantList                         m_rssSources;
         QSet<QString>                        m_rssSourceNames;
 
-        QDBusInterface *                     m_favIconsModule;
         QSignalMapper *                      m_signalMapper;
 };
 
