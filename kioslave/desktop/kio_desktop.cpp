@@ -23,6 +23,7 @@
 #include <KCmdLineArgs>
 #include <KConfigGroup>
 #include <KDesktopFile>
+#include <KDirNotify>
 #include <KGlobalSettings>
 #include <KStandardDirs>
 #include <KGlobal>
@@ -30,6 +31,7 @@
 #include <kdeversion.h>
 
 #include <kio/udsentry.h>
+#include <kio_version.h>
 
 #include <QFile>
 #include <QDBusInterface>
@@ -213,39 +215,50 @@ void DesktopProtocol::prepareUDSEntry(KIO::UDSEntry &entry, bool listing) const
     entry.insert(KIO::UDSEntry::UDS_TARGET_URL, entry.stringValue(KIO::UDSEntry::UDS_LOCAL_PATH));
 }
 
-void DesktopProtocol::rename(const QUrl &src, const QUrl &dest, KIO::JobFlags flags)
+void DesktopProtocol::rename(const QUrl &_src, const QUrl &_dest, KIO::JobFlags flags)
 {
-    KUrl url;
-    rewriteUrl(src, url);
+    Q_UNUSED(flags)
 
-    if (src.scheme() != QLatin1String("desktop") || dest.scheme() != QLatin1String("desktop") ||
-        !KDesktopFile::isDesktopFile(url.path()))
-    {
-        ForwardingSlaveBase::rename(src, dest, flags);
+    if (_src == _dest) {
+        finished();
         return;
     }
 
-    QString friendlyName;
-    KUrl destUrl = dest;  
+    QUrl src;
+    rewriteUrl(_src, src);
+    const QString srcPath = src.toLocalFile();
 
-    if (dest.url().endsWith(QLatin1String(".desktop"))) {
-        const QString fileName = dest.fileName(); 
-        friendlyName = KIO::decodeFileName(fileName.left(fileName.length() - 8));
-    } else {
-        friendlyName = KIO::decodeFileName(dest.fileName());
-        destUrl.setFileName(destUrl.fileName() + ".desktop");
+    QUrl dest;
+    rewriteUrl(_dest, dest);
+    const QString destPath = dest.toLocalFile();
+
+    if (KDesktopFile::isDesktopFile(srcPath)) {
+        QString friendlyName;
+
+        if (destPath.endsWith(QLatin1String(".desktop"))) {
+            const QString fileName = dest.fileName();
+            friendlyName = KIO::decodeFileName(fileName.left(fileName.length() - 8));
+        } else {
+            friendlyName = KIO::decodeFileName(dest.fileName());
+        }
+
+        // Update the value of the Name field in the file.
+        KDesktopFile file(src.toLocalFile());
+        KConfigGroup cg(file.desktopGroup());
+        cg.writeEntry("Name", friendlyName);
+        cg.writeEntry("Name", friendlyName, KConfigGroup::Persistent | KConfigGroup::Localized);
+        cg.sync();
     }
 
-    // Update the value of the Name field in the file.
-    KDesktopFile file(url.path());
-    KConfigGroup cg(file.desktopGroup());
-    cg.writeEntry("Name", friendlyName);
-    cg.writeEntry("Name", friendlyName, KConfigGroup::Persistent | KConfigGroup::Localized);
-    cg.sync();
-
-    if (src.url() != destUrl.url())
-        ForwardingSlaveBase::rename(src, destUrl, flags);
-    else
+    if (QFile(srcPath).rename(destPath)) {
+#if KIO_VERSION >= QT_VERSION_CHECK(5, 20, 0)
+        org::kde::KDirNotify::emitFileRenamedWithLocalPath(_src, _dest, destPath);
+#else
+        org::kde::KDirNotify::emitFileRenamed(_src, _dest);
+#endif
         finished();
+    } else {
+        error(KIO::ERR_CANNOT_RENAME, srcPath);
+    }
 }
 

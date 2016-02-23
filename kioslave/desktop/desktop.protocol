@@ -14,3 +14,4 @@ moving=true
 opening=true
 maxInstances=4
 Class=:local
+slaveHandlesNotify=Rename
