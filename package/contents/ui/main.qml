@@ -223,7 +223,8 @@ MouseArea {
             property int bottom: 0
         }
 
-        /*add: Transition {
+        /*FIXME: need Qt 5.6 for transitions to look good
+         add: Transition {
             NumberAnimation {
                 property: "scale"
                 from: 0
@@ -231,14 +232,14 @@ MouseArea {
                 easing.type: Easing.InQuad
                 duration: units.longDuration
             }
-        }*/
+        }
         move: Transition {
             NumberAnimation {
                 properties: "x,y"
                 easing.type: Easing.InQuad
                 duration: units.longDuration
             }
-        }
+        }*/
     }
 
     ExpanderArrow {
