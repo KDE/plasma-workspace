@@ -183,7 +183,7 @@ MouseArea {
     //Main Layout
     Flow {
         id: tasksRow
-        spacing: 0
+        spacing: units.smallSpacing
         height: parent.height - (vertical ? expander.height : 0)
         width: parent.width  - (vertical ? 0 : expander.width)
         property string skipItems
