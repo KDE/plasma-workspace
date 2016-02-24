@@ -1,6 +1,6 @@
 [Desktop Entry]
 Encoding=UTF-8
-Name=System tray internal implementation
+Name=System tray
 Icon=preferences-desktop-notification
 Type=Service
 X-KDE-ServiceTypes=Plasma/Applet,Plasma/Containment
