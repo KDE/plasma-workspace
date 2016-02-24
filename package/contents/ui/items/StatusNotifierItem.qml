@@ -53,6 +53,7 @@ AbstractItem {
         source: plasmoid.nativeInterface.resolveIcon(IconName != "" ? IconName : Icon, IconThemePath)
         width: Math.min(parent.width, parent.height)
         height: width
+        active: taskIcon.containsMouse
 
         anchors {
             left: parent.left
