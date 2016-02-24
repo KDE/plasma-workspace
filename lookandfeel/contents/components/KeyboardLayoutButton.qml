@@ -25,6 +25,9 @@ import org.kde.plasma.workspace.keyboardlayout 1.0
 
 PlasmaComponents.Button {
     id: kbLayoutButton
+
+    property bool hidden : false
+
     implicitWidth: minimumWidth
     text: layout.currentLayoutDisplayName
 
@@ -34,7 +37,7 @@ PlasmaComponents.Button {
         layout.nextLayout();
     }
 
-    visible: layout.layouts.length > 1
+    visible: !hidden && layout.layouts.length > 1
 
 
     KeyboardLayout {
