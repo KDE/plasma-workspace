@@ -31,7 +31,7 @@ MouseArea {
     Layout.minimumHeight: vertical ? tasksRow.implicitHeight+ expander.implicitHeight + units.smallSpacing : units.smallSpacing
 
     property bool vertical: plasmoid.formFactor == PlasmaCore.Types.Vertical
-    property int itemSize: Math.min(Math.min(width, height), units.iconSizes.medium)
+    property int itemSize: Math.min(Math.min(width, height), units.iconSizes.smallMedium)
     property int hiddenItemSize: units.iconSizes.smallMedium
     property alias expanded: dialog.visible
     property Item activeApplet
@@ -166,6 +166,13 @@ MouseArea {
 
             delegate: StatusNotifierItem {}
         }
+        //NOTE: this exists mostly for not causing reference errors
+        property QtObject marginHints: QtObject {
+            property int left: 0
+            property int top: 0
+            property int right: 0
+            property int bottom: 0
+        }
     }
 
     CurrentItemHighLight {
@@ -185,9 +192,28 @@ MouseArea {
         y: vertical ? 0 : (height % root.itemSize) / 2
         x: vertical ? (width % root.itemSize) / 2 : 0
         //make last icon appeared nearer to the tasskbar
-        //it will look a bit weird when there are 2 lines
-        //FIXME: completely broken
-        //layoutDirection: Qt.RightToLeft 
+        //TODO: Qt 5.6 will have functions for it
+        function addItem(item) {
+            if (item.parent == tasksRow || item.repositioningInProgress == true || item == marginHints) {
+                return;
+            }
+            var items = [];
+            for (var i = 0; i < tasksRow.children.length; ++i) {
+                items.push(tasksRow.children[i]);
+            }
+
+            for (var i = 0; i < items.length; ++i) {
+                items[i].repositioningInProgress = true;
+                items[i].parent = invisibleEntriesContainer;
+            }
+
+            item.parent = tasksRow;
+
+            for (var i = 0; i < items.length; ++i) {
+                items[i].parent = tasksRow;
+                items[i].repositioningInProgress = false;
+            }
+        }
 
         //NOTE: this exists mostly for not causing reference errors
         property QtObject marginHints: QtObject {
@@ -197,7 +223,7 @@ MouseArea {
             property int bottom: 0
         }
 
-        add: Transition {
+        /*add: Transition {
             NumberAnimation {
                 property: "scale"
                 from: 0
@@ -205,7 +231,7 @@ MouseArea {
                 easing.type: Easing.InQuad
                 duration: units.longDuration
             }
-        }
+        }*/
         move: Transition {
             NumberAnimation {
                 properties: "x,y"

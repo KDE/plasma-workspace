@@ -37,6 +37,9 @@ PlasmaCore.ToolTipArea {
     //PlasmaCore.Types.ItemStatus
     property int status
 
+    //FIXME: Qt 5.6
+    property bool repositioningInProgress: false
+
     signal clicked(var mouse)
     signal wheel(var wheel)
 
@@ -62,7 +65,7 @@ PlasmaCore.ToolTipArea {
         if (!categoryShown) {
             abstractItem.parent = invisibleEntriesContainer;
         } else if (forcedShown || !(forcedHidden || status == PlasmaCore.Types.PassiveStatus)) {
-            abstractItem.parent = visibleLayout;
+            visibleLayout.addItem(abstractItem);
         } else {
             abstractItem.parent = hiddenLayout;
             abstractItem.x = 0;
