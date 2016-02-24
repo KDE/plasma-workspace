@@ -119,10 +119,22 @@ Image {
                     anchors.horizontalCenter: parent.horizontalCenter
                     spacing: 0
                     RowLayout {
-                        //NOTE password is deliberately the first child so it gets focus
-                        //be careful when re-ordering
-
                         anchors.horizontalCenter: parent.horizontalCenter
+
+                        PlasmaComponents.Button {
+                            id: kbdLayoutButton
+                            implicitWidth: minimumWidth
+                            text: keyboard.layouts[keyboard.currentLayout].shortName
+                            visible: keyboard.layouts.length > 1
+
+                            onClicked: {
+                                var idx = (keyboard.currentLayout + 1) % keyboard.layouts.length;
+                                keyboard.currentLayout = idx;
+                            }
+
+                            KeyNavigation.tab: sessionCombo
+                        }
+
                         PlasmaComponents.TextField {
                             id: passwordInput
                             placeholderText: i18nd("plasma_lookandfeel_org.kde.lookandfeel","Password")
@@ -141,8 +153,7 @@ Image {
                             //end hack
 
                             Keys.onEscapePressed: {
-                                //nextItemInFocusChain(false) is previous Item
-                                nextItemInFocusChain(false).forceActiveFocus();
+                                loginPrompt.mainItem.forceActiveFocus();
                             }
 
                             //if empty and left or right is pressed change selection in user switch
@@ -158,6 +169,7 @@ Image {
                                 }
                             }
 
+                            KeyNavigation.backtab: loginPrompt.mainItem
                         }
 
                         PlasmaComponents.Button {
@@ -166,6 +178,8 @@ Image {
                             Layout.minimumWidth: passwordInput.width
                             text: i18nd("plasma_lookandfeel_org.kde.lookandfeel","Login")
                             onClicked: loginPrompt.startLogin();
+
+                            KeyNavigation.tab: kbdLayoutButton
                         }
                     }
 
