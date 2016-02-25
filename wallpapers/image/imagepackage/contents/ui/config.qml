@@ -133,8 +133,6 @@ ColumnLayout {
     Row {
         id: colorRow
         spacing: units.largeSpacing / 2
-        visible: ~[2,3].indexOf(resizeComboBox.currentIndex)
-
         QtControls.Label {
             width: formAlignment - units.largeSpacing
             anchors.verticalCenter: colorButton.verticalCenter
@@ -295,7 +293,7 @@ ColumnLayout {
                 boundsBehavior: Flickable.StopAtBounds
 
                 delegate: WallpaperDelegate {
-                    color: colorRow.visible ? cfg_Color : "black"
+                    color: cfg_Color
                 }
 
                 Connections {

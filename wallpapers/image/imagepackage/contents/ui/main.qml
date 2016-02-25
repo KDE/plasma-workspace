@@ -196,10 +196,7 @@ Item {
     Rectangle {
         id: backgroundColor
         anchors.fill: parent
-
-        visible: ready && (currentImage.status === Image.Ready || otherImage.status === Image.Ready) &&
-                 (currentImage.fillMode === Image.PreserveAspectFit || currentImage.fillMode === Image.Pad
-                 || otherImage.fillMode === Image.PreserveAspectFit || otherImage.fillMode === Image.Pad)
+        visible: ready && (currentImage.status === Image.Ready || otherImage.status === Image.Ready)
         color: wallpaper.configuration.Color
         Behavior on color {
             ColorAnimation { duration: units.longDuration }
