@@ -38,6 +38,11 @@ Item {
 
     SessionsModel {
         id: sessionsModel
+        // the calls takes place asynchronously; if we were to dismiss the dialog right
+        // after startNewSession/switchUser we would be destroyed before the reply
+        // returned leaving us do nothing (Bug 356945)
+        onStartedNewSession: root.dismissed()
+        onSwitchedUser: root.dismissed()
     }
 
     Controls.Action {
@@ -125,7 +130,6 @@ Item {
                 visible: sessionsModel.canStartNewSession
                 onClicked: {
                     sessionsModel.startNewSession(sessionsModel.shouldLock)
-                    root.dismissed()
                 }
             }
 
@@ -148,7 +152,6 @@ Item {
                     visible: sessionsModel.count > 0
                     onClicked: {
                         sessionsModel.switchUser(block.mainItem.selectedItem.vtNumber, sessionsModel.shouldLock)
-                        root.dismissed()
                     }
 
                     Controls.Action {

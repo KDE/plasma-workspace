@@ -86,8 +86,10 @@ public:
 
 signals:
     void shouldLockChanged();
-
     void countChanged();
+
+    void switchedUser(int vt);
+    void startedNewSession();
 
 private:
     void checkScreenLocked(const std::function<void (bool)> &cb);

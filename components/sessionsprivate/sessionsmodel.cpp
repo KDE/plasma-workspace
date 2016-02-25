@@ -45,8 +45,10 @@ SessionsModel::SessionsModel(QObject *parent)
         if (active) {
             if (m_pendingVt) {
                 m_displayManager.switchVT(m_pendingVt);
+                emit switchedUser(m_pendingVt);
             } else if (m_pendingReserve) {
                 m_displayManager.startReserve();
+                emit startNewSession();
             }
 
             m_pendingVt = 0;
@@ -78,6 +80,7 @@ void SessionsModel::switchUser(int vt, bool shouldLock)
 
     if (!shouldLock) {
         m_displayManager.switchVT(vt);
+        emit switchedUser(vt);
         return;
     }
 
@@ -85,6 +88,7 @@ void SessionsModel::switchUser(int vt, bool shouldLock)
         if (locked) {
             // already locked, switch right away
             m_displayManager.switchVT(vt);
+            emit switchedUser(vt);
         } else {
             m_pendingReserve = false;
             m_pendingVt = vt;
@@ -101,6 +105,7 @@ void SessionsModel::startNewSession(bool shouldLock)
 
     if (!shouldLock) {
         m_displayManager.startReserve();
+        emit startedNewSession();
         return;
     }
 
@@ -108,6 +113,7 @@ void SessionsModel::startNewSession(bool shouldLock)
         if (locked) {
             // already locked, switch right away
             m_displayManager.startReserve();
+            emit startedNewSession();
         } else {
             m_pendingReserve = true;
             m_pendingVt = 0;
