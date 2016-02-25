@@ -303,9 +303,9 @@ void StatusNotifierItemSource::refreshCallback(QDBusPendingCallWatcher *call)
             KDbusToolTipStruct toolTip;
             properties[QStringLiteral("ToolTip")].value<QDBusArgument>() >> toolTip;
             if (toolTip.title.isEmpty()) {
-                setData(QStringLiteral("ToolTipTitle"), QVariant());
-                setData(QStringLiteral("ToolTipSubTitle"), QVariant());
-                setData(QStringLiteral("ToolTipIcon"), QVariant());
+                setData(QStringLiteral("ToolTipTitle"), QString());
+                setData(QStringLiteral("ToolTipSubTitle"), QString());
+                setData(QStringLiteral("ToolTipIcon"), QString());
             } else {
                 QIcon toolTipIcon;
                 if (toolTip.image.size() == 0) {
@@ -315,7 +315,11 @@ void StatusNotifierItemSource::refreshCallback(QDBusPendingCallWatcher *call)
                 }
                 setData(QStringLiteral("ToolTipTitle"), toolTip.title);
                 setData(QStringLiteral("ToolTipSubTitle"), toolTip.subTitle);
-                setData(QStringLiteral("ToolTipIcon"), toolTipIcon);
+                if (toolTipIcon.isNull() || toolTipIcon.availableSizes().isEmpty()) {
+                    setData(QStringLiteral("ToolTipIcon"), QString());
+                } else {
+                    setData(QStringLiteral("ToolTipIcon"), toolTipIcon);
+                }
             }
         }
 
