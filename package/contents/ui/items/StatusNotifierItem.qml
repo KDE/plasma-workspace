@@ -26,9 +26,9 @@ AbstractItem {
 
     itemId: Id
     text: Title
-    mainText: ToolTipTitle ? ToolTipTitle : ""
-    subText: ToolTipSubTitle ? ToolTipSubTitle : ""
-    icon: ToolTipIcon ? ToolTipIcon : plasmoid.nativeInterface.resolveIcon(IconName != "" ? IconName : Icon, IconThemePath)
+    mainText: ToolTipTitle != "" ? ToolTipTitle : Title
+    subText: ToolTipSubTitle
+    icon: ToolTipIcon != "" ? ToolTipIcon : plasmoid.nativeInterface.resolveIcon(IconName != "" ? IconName : Icon, IconThemePath)
     textFormat: Text.AutoText
     category: Category
 

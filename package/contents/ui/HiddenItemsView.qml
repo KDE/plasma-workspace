@@ -32,6 +32,7 @@ PlasmaExtras.ScrollArea {
     property alias layout: hiddenTasksColumn
     //Useful to align stuff to the column of icons, both in expanded and shrink modes
     property int iconColumnWidth: root.hiddenItemSize + highlight.marginHints.left + highlight.marginHints.right
+    verticalScrollBarPolicy: activeApplet ? Qt.ScrollBarAlwaysOff : Qt.ScrollBarAsNeeded
 
     Flickable {
         contentWidth: width
