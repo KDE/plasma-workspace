@@ -48,7 +48,7 @@ SessionsModel::SessionsModel(QObject *parent)
                 emit switchedUser(m_pendingVt);
             } else if (m_pendingReserve) {
                 m_displayManager.startReserve();
-                emit startNewSession();
+                emit startedNewSession();
             }
 
             m_pendingVt = 0;
