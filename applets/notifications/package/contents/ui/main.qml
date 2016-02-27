@@ -60,11 +60,26 @@ MouseEventListener {
 
     Plasmoid.switchWidth: units.gridUnit * 20
     Plasmoid.switchHeight: units.gridUnit * 30
+
+    Plasmoid.status: totalCount > 0 ? PlasmaCore.Types.ActiveStatus : PlasmaCore.Types.PassiveStatus
+
     Plasmoid.icon: {
         if (jobs && jobs.count) {
             return "notification-active"
         }
         return totalCount ? "notification-inactive" : "notification-disabled"
+    }
+
+    Plasmoid.toolTipSubText: {
+        if (totalCount == 0) {
+            return i18n("No notifications or jobs")
+        } else if (notifications && !notifications.count) {
+            return i18np("%1 running job", "%1 running jobs", jobs.count)
+        } else if (jobs && !jobs.count) {
+            return i18np("%1 notification", "%1 notifications", notifications.count)
+        } else {
+            return i18np("%1 running job", "%1 running jobs", jobs.count) + "<br/>" + i18np("%1 notification", "%1 notifications", notifications.count)
+        }
     }
 
     Plasmoid.compactRepresentation: Component {
@@ -85,28 +100,6 @@ MouseEventListener {
             state = "default"
             //plasmoid.hidePopup()
             plasmoid.expanded = false;
-        }
-
-        var data = new Object
-        data["image"] = "preferences-desktop-notification"
-        data["mainText"] = i18n("Notifications and Jobs")
-
-        if (totalCount == 0) {
-            data["subText"] = i18n("No notifications or jobs")
-        } else if (!notifications.count) {
-            data["subText"] = i18np("%1 running job", "%1 running jobs", jobs.count)
-        } else if (!jobs.count) {
-            data["subText"] = i18np("%1 notification", "%1 notifications", notifications.count)
-        } else  {
-            data["subText"] = i18np("%1 running job", "%1 running jobs", jobs.count) + "<br/>" + i18np("%1 notification", "%1 notifications", notifications.count)
-        }
-        //plasmoid.popupIconToolTip = data
-        //plasmoid.passivePopup = jobs.count != 0
-
-        if (totalCount > 0) {
-            plasmoid.status = PlasmaCore.Types.ActiveStatus;
-        } else {
-            plasmoid.status = PlasmaCore.Types.PassiveStatus;
         }
     }
 
@@ -184,8 +177,6 @@ MouseEventListener {
     }
 
     Component.onCompleted: {
-        //plasmoid.popupIcon = QIcon("preferences-desktop-notification")
-        plasmoid.status = PlasmaCore.Types.PassiveStatus
         //var allApplications = new Object
         plasmoid.setAction("notificationskcm", i18n("&Configure Event Notifications and Actions..."), "preferences-desktop-notification")
     }
