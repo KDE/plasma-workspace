@@ -73,9 +73,9 @@ MouseEventListener {
     Plasmoid.toolTipSubText: {
         if (totalCount == 0) {
             return i18n("No notifications or jobs")
-        } else if (notifications && !notifications.count) {
+        } else if (!notifications || !notifications.count) {
             return i18np("%1 running job", "%1 running jobs", jobs.count)
-        } else if (jobs && !jobs.count) {
+        } else if (!jobs || !jobs.count) {
             return i18np("%1 notification", "%1 notifications", notifications.count)
         } else {
             return i18np("%1 running job", "%1 running jobs", jobs.count) + "<br/>" + i18np("%1 notification", "%1 notifications", notifications.count)
