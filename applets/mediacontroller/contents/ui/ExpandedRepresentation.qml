@@ -38,6 +38,7 @@ Item {
 
     property int position: mpris2Source.data[mpris2Source.current].Position
     property bool disablePositionUpdate: false
+    property bool keyPressed: false
 
     property bool isExpanded: plasmoid.expanded
 
@@ -55,11 +56,47 @@ Item {
 
     onPositionChanged: {
         // we don't want to interrupt the user dragging the slider
-        if (!seekSlider.pressed) {
+        if (!seekSlider.pressed && !keyPressed && !queuedPositionUpdate.running) {
             // we also don't want passive position updates
             disablePositionUpdate = true
             seekSlider.value = position
             disablePositionUpdate = false
+        }
+    }
+
+    Keys.onPressed: keyPressed = true
+
+    Keys.onReleased: {
+        keyPressed = false
+
+        if (!event.modifiers) {
+            event.accepted = true
+
+            if (event.key === Qt.Key_Space || event.key === Qt.Key_K) {
+                // K is YouTube's key for "play/pause" :)
+                root.playPause()
+            } else if (event.key === Qt.Key_P) {
+                root.previous()
+            } else if (event.key === Qt.Key_N) {
+                root.next()
+            } else if (event.key === Qt.Key_S) {
+                root.stop()
+            } else if (event.key === Qt.Key_Left || event.key === Qt.Key_J) { // TODO ltr languages
+                // seek back 5s
+                seekSlider.value = Math.max(0, seekSlider.value - 5000000) // microseconds
+            } else if (event.key === Qt.Key_Right || event.key === Qt.Key_L) {
+                // seek forward 5s
+                seekSlider.value = Math.min(seekSlider.maximumValue, seekSlider.value + 5000000)
+            } else if (event.key === Qt.Key_Home) {
+                seekSlider.value = 0
+            } else if (event.key === Qt.Key_End) {
+                seekSlider.value = seekSlider.maximumValue
+            } else if (event.key >= Qt.Key_0 && event.key <= Qt.Key_9) {
+                // jump to percentage, ie. 0 = beginnign, 1 = 10% of total length etc
+                seekSlider.value = seekSlider.maximumValue * (event.key - Qt.Key_0) / 10
+            } else {
+                event.accepted = false
+            }
         }
     }
 
@@ -183,7 +220,7 @@ Item {
                 id: seekTimer
                 interval: 1000
                 repeat: true
-                running: root.state == "playing" && plasmoid.expanded
+                running: root.state == "playing" && plasmoid.expanded && !keyPressed
                 onTriggered: {
                     // some players don't continuously update the seek slider position via mpris
                     // add one second; value in microseconds

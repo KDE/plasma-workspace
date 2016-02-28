@@ -141,6 +141,10 @@ Item {
         serviceOp(mpris2Source.current, "Next");
     }
 
+    function stop() {
+        serviceOp(mpris2Source.current, "Stop");
+    }
+
     function serviceOp(src, op) {
         var service = mpris2Source.serviceForSource(src);
         var operation = service.operationDescription(op);
