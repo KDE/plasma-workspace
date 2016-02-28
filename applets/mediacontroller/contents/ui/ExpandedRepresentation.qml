@@ -106,6 +106,7 @@ Item {
         spacing: units.smallSpacing
 
         PlasmaComponents.ComboBox {
+            id: playerCombo
             Layout.fillWidth: true
             visible: model.length > 2 // more than one player, @multiplex is always there
             model: {
@@ -150,7 +151,7 @@ Item {
         RowLayout {
             id: titleRow
             Layout.fillWidth: true
-            Layout.minimumHeight: expandedRepresentation.height / 2
+            Layout.minimumHeight: albumArt.Layout.preferredHeight
             spacing: units.largeSpacing
 
             Image {
@@ -158,7 +159,7 @@ Item {
                 source: root.albumArt
                 asynchronous: true
                 fillMode: Image.PreserveAspectCrop
-                Layout.preferredHeight: expandedRepresentation.height / 2
+                Layout.preferredHeight: expandedRepresentation.height / 2 - (playerCombo.visible ? playerCombo.height : 0)
                 Layout.preferredWidth: Layout.preferredHeight
                 visible: !!root.track && status === Image.Ready
             }
