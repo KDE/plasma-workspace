@@ -41,6 +41,7 @@ class SystemInformation: public QObject
         void setCompiledSources(bool);
 
         QString qtVersion() const;
+        QString frameworksVersion() const;
 
     private Q_SLOTS:
         void lsbReleaseFinished();

@@ -34,7 +34,9 @@
 #include <KConfig>
 #include <KConfigGroup>
 #include <KSharedConfig>
+#include <KCoreAddons>
 #include <QStandardPaths>
+#include <kcoreaddons_version.h>
 
 static const QString OS_UNSPECIFIED = QStringLiteral("unspecified");
 static const QString PLATFORM_UNSPECIFIED = QStringLiteral("unspecified");
@@ -293,4 +295,13 @@ void SystemInformation::setCompiledSources(bool compiled)
 QString SystemInformation::qtVersion() const
 {
     return qVersion();
+}
+
+QString SystemInformation::frameworksVersion() const
+{
+#if KCOREADDONS_VERSION >= QT_VERSION_CHECK(5,20,0)
+    return KCoreAddons::versionString();
+#else
+    return QStringLiteral("Unknown");
+#endif
 }

@@ -152,6 +152,8 @@ QString ReportInterface::generateReportFullText(bool drKonqiStamp) const
         report.append(QStringLiteral("\n"));
     }
     report.append(QStringLiteral("Qt Version: %1\n").arg(sysInfo->qtVersion()));
+    report.append(QStringLiteral("Frameworks Version: %1\n").arg(sysInfo->frameworksVersion()));
+
     report.append(QStringLiteral("Operating System: %1\n").arg(sysInfo->operatingSystem()));
 
     //LSB output or manually selected distro
