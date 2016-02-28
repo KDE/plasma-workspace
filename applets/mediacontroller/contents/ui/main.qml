@@ -55,11 +55,20 @@ Item {
 
     property bool noPlayer: mpris2Source.sources.length <= 1
 
+    readonly property bool canRaise: !root.noPlayer && mpris2Source.data[mpris2Source.current].CanRaise
+
     Plasmoid.switchWidth: units.gridUnit * 14
     Plasmoid.switchHeight: units.gridUnit * 10
     Plasmoid.icon: albumArt ? albumArt : "media-playback-start"
     Plasmoid.toolTipMainText: i18n("No media playing")
     Plasmoid.status: PlasmaCore.Types.ActiveStatus
+
+    Plasmoid.onContextualActionsAboutToShow: {
+        plasmoid.clearActions()
+        if (canRaise) {
+            plasmoid.setAction("openplayer", i18nc("Bring the window of player %1 to the front", "Open %1", mpris2Source.data[mpris2Source.current].Identity))
+        }
+    }
 
     // HACK Some players like Amarok take quite a while to load the next track
     // this avoids having the plasmoid jump between popup and panel
@@ -114,14 +123,6 @@ Item {
             if (source === current) {
                 current = multiplexSource
             }
-        }
-    }
-
-    function updateOpenPlayerAction() {
-        if (!root.noPlayer && mpris2Source.data[mpris2Source.current].CanRaise) {
-            plasmoid.setAction("openplayer", i18nc("Bring the window of player %1 to the front", "Open %1", mpris2Source.data[mpris2Source.current].Identity))
-        } else {
-            plasmoid.removeAction("openplayer")
         }
     }
 
