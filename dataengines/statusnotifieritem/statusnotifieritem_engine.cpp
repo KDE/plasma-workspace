@@ -20,7 +20,10 @@
  ***************************************************************************/
 
 #include "statusnotifieritem_engine.h"
+#include <QStringList>
 #include "statusnotifieritemsource.h"
+
+#include "dbusproperties.h"
 
 #include <QDebug>
 #include <iostream>
@@ -89,17 +92,26 @@ void StatusNotifierItemEngine::registerWatcher(const QString& service)
 
         m_statusNotifierWatcher = new org::kde::StatusNotifierWatcher(s_watcherServiceName, QStringLiteral("/StatusNotifierWatcher"),
 								      QDBusConnection::sessionBus());
-        if (m_statusNotifierWatcher->isValid() &&
-            m_statusNotifierWatcher->property("ProtocolVersion").toInt() == s_protocolVersion) {
+        if (m_statusNotifierWatcher->isValid()) {
+            m_statusNotifierWatcher->call(QDBus::NoBlock, QStringLiteral("RegisterStatusNotifierHost"), m_serviceName);
+
+            OrgFreedesktopDBusPropertiesInterface  propetriesIface(m_statusNotifierWatcher->service(), m_statusNotifierWatcher->path(), m_statusNotifierWatcher->connection());
+
+            QDBusPendingReply<QDBusVariant> pendingItems = propetriesIface.Get(m_statusNotifierWatcher->interface(), "RegisteredStatusNotifierItems");
+
+            QDBusPendingCallWatcher *watcher = new QDBusPendingCallWatcher(pendingItems, this);
+            connect(watcher, &QDBusPendingCallWatcher::finished, this, [=]() {
+                watcher->deleteLater();
+                QDBusReply<QDBusVariant> reply = *watcher;
+                QStringList registeredItems = reply.value().variant().toStringList();
+                foreach (const QString &service, registeredItems) {
+                    newItem(service);
+                }
+            });
+
             connect(m_statusNotifierWatcher, &OrgKdeStatusNotifierWatcherInterface::StatusNotifierItemRegistered, this, &StatusNotifierItemEngine::serviceRegistered);
             connect(m_statusNotifierWatcher, &OrgKdeStatusNotifierWatcherInterface::StatusNotifierItemUnregistered, this, &StatusNotifierItemEngine::serviceUnregistered);
 
-            m_statusNotifierWatcher->call(QDBus::NoBlock, QStringLiteral("RegisterStatusNotifierHost"), m_serviceName);
-
-            QStringList registeredItems = m_statusNotifierWatcher->property("RegisteredStatusNotifierItems").value<QStringList>();
-            foreach (const QString &service, registeredItems) {
-                newItem(service);
-            }
         } else {
             delete m_statusNotifierWatcher;
             m_statusNotifierWatcher = 0;

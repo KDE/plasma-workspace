@@ -17,6 +17,7 @@ set(statusnotifieritem_engine_SRCS
 
 set(statusnotifierwatcher_xml ${KNOTIFICATIONS_DBUS_INTERFACES_DIR}/kf5_org.kde.StatusNotifierWatcher.xml)
 qt5_add_dbus_interface(statusnotifieritem_engine_SRCS ${statusnotifierwatcher_xml} statusnotifierwatcher_interface)
+qt5_add_dbus_interface(statusnotifieritem_engine_SRCS ../mpris2/org.freedesktop.DBus.Properties.xml dbusproperties)
 
 set(statusnotifieritem_xml ${KNOTIFICATIONS_DBUS_INTERFACES_DIR}/kf5_org.kde.StatusNotifierItem.xml)
 
