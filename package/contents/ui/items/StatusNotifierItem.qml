@@ -91,7 +91,13 @@ AbstractItem {
             break;
         }
         case Qt.MiddleButton:
-            
+            var service = statusNotifierSource.serviceForSource(DataEngineSource);
+            var operation = service.operationDescription("SecondaryActivate");
+            operation.x = parent.x;
+
+            operation.y = parent.y;
+            service.startOperationCall(operation);
+            break;
             break;
         }
     }
