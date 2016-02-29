@@ -105,7 +105,7 @@ PlasmaCore.ToolTipArea {
         anchors.fill: abstractItem
         hoverEnabled: true
         drag.filterChildren: true
-        acceptedButtons: Qt.LeftButton | Qt.RightButton
+        acceptedButtons: Qt.LeftButton | Qt.MiddleButton | Qt.RightButton
         onClicked: abstractItem.clicked(mouse)
         onWheel: abstractItem.wheel(wheel)
     }

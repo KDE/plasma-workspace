@@ -280,6 +280,22 @@ void SystemTray::showStatusNotifierContextMenu(KJob *job, QQuickItem *statusNoti
     }
 }
 
+QPointF SystemTray::popupPosition(QQuickItem* visualParent, int x, int y)
+{
+    if (!visualParent) {
+        return QPointF(0, 0);
+    }
+
+    QPointF pos = visualParent->mapToScene(QPointF(x, y));
+
+    if (visualParent->window() && visualParent->window()->screen()) {
+        pos = visualParent->window()->mapToGlobal(pos.toPoint());
+    } else {
+        return QPoint();
+    }
+    return pos;
+}
+
 void SystemTray::restoreContents(KConfigGroup &group)
 {
     //Don't do anything here, it's too soon

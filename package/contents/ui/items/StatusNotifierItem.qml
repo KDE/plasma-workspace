@@ -63,17 +63,19 @@ AbstractItem {
     }
 
     onClicked: {
+        var pos = plasmoid.nativeInterface.popupPosition(taskIcon, 0, 0);
+
         switch (mouse.button) {
         case Qt.LeftButton: {
             var service = statusNotifierSource.serviceForSource(DataEngineSource);
             var operation = service.operationDescription("Activate");
-            operation.x = parent.x;
+            operation.x = pos.x;
 
             // kmix shows main window instead of volume popup if (parent.x, parent.y) == (0, 0), which is the case here.
             // I am passing a position right below the panel (assuming panel is at screen's top).
             // Plasmoids' popups are already shown below the panel, so this make kmix's popup more consistent
             // to them.
-            operation.y = parent.y + parent.height + 6;
+            operation.y = pos.y + parent.height + 6;
             service.startOperationCall(operation);
             break;
         }
@@ -93,9 +95,9 @@ AbstractItem {
         case Qt.MiddleButton:
             var service = statusNotifierSource.serviceForSource(DataEngineSource);
             var operation = service.operationDescription("SecondaryActivate");
-            operation.x = parent.x;
+            operation.x = pos.x;
 
-            operation.y = parent.y;
+            operation.y = pos.y;
             service.startOperationCall(operation);
             break;
             break;

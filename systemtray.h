@@ -77,6 +77,12 @@ public:
      */
     Q_INVOKABLE void showStatusNotifierContextMenu(KJob *job, QQuickItem *statusNotifierIcon);
 
+    /**
+     * Find out global coordinates for a popup given local MouseArea
+     * coordinates
+     */
+    Q_INVOKABLE QPointF popupPosition(QQuickItem* visualParent, int x, int y);
+
 private Q_SLOTS:
     void serviceNameFetchFinished(QDBusPendingCallWatcher* watcher, const QDBusConnection &connection);
     void serviceRegistered(const QString &service);
