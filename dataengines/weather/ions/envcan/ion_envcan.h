@@ -22,7 +22,7 @@
 #ifndef ION_ENVCAN_H
 #define ION_ENVCAN_H
 
-#include <QtXml/QXmlStreamReader>
+#include <QXmlStreamReader>
 #include <QDateTime>
 
 #include <Plasma/DataEngine>

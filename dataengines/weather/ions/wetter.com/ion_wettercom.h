@@ -26,7 +26,7 @@
 #define ION_WETTERCOM_H
 
 #include <QXmlStreamReader>
-#include <QtCore/QStringList>
+#include <QStringList>
 #include <QCryptographicHash>
 #include <algorithm>
 #include <QUrl>

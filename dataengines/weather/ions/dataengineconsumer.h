@@ -22,7 +22,7 @@
 #ifndef PLASMA_DATAENGINECONSUMER_H
 #define PLASMA_DATAENGINECONSUMER_H
 
-#include <QtCore/QSet>
+#include <QSet>
 
 #include <QDebug>
 

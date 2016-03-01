@@ -22,7 +22,7 @@
 #ifndef ION_BBCUKMET_H
 #define ION_BBCUKMET_H
 
-#include <QtXml/QXmlStreamReader>
+#include <QXmlStreamReader>
 #include <QDateTime>
 #include <Plasma/DataEngineConsumer>
 
