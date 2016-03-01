@@ -35,26 +35,6 @@
 #include "standaloneappcorona.h"
 #include "shellmanager.h"
 
-
-void plasmaMessageHandler(QtMsgType type, const QMessageLogContext &context, const QString &message)
-{
-    //if we get an openGL error, display it properly in a user visible way.
-    //Qt qFatals when failing to make an openGL context; we can't catch that earlier, so we do it in the error handler and display an error message
-    //otherwise we continually get bug reports
-    if (Q_UNLIKELY(type == QtFatalMsg)) {
-            if (message == QLatin1String("Could not initialize GLX") ||
-                    message == QLatin1String("QXcbIntegration: Cannot create platform OpenGL context, neither GLX nor EGL are enabled")) {
-                QCoreApplication::setAttribute(Qt::AA_ForceRasterWidgets);
-                QMessageBox::critical(nullptr, i18n("Plasma Failed To Start"), i18n("Plasma is unable to start as it could not correctly use OpenGL 2.\nPlease check that your graphic drivers are set up correctly."));
-        }
-    }
-
-    //we have to reimplement the behaviour of the default message handler, as now we are always overriding it, and there's no way to access it
-    const QString logMessage = qFormatLogMessage(type, context, message);
-    fprintf(stderr, "%s\n", logMessage.toLocal8Bit().constData());
-    fflush(stderr);
-}
-
 int main(int argc, char *argv[])
 {
 //    Devive pixel ratio has some problems in plasmashell currently.
@@ -121,8 +101,6 @@ int main(int argc, char *argv[])
     cliOptions.process(app);
 
     KAboutData::applicationData().setupCommandLine(&cliOptions);
-
-    qInstallMessageHandler(plasmaMessageHandler);
 
 #if QT_VERSION >= QT_VERSION_CHECK(5, 6, 0)
     QGuiApplication::setFallbackSessionManagementEnabled(false);

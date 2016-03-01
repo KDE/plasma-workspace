@@ -901,6 +901,7 @@ void ShellCorona::addOutput(const KScreen::OutputPtr &output)
     QScreen* newScreen = insertScreen(screen, insertPosition);
 
     DesktopView *view = new DesktopView(this, newScreen);
+    connect(view, &QQuickWindow::sceneGraphError, this, &ShellCorona::showOpenGLNotCompatibleWarning);
 
     Plasma::Containment *containment = createContainmentForActivity(m_activityController->currentActivity(), m_views.count());
     Q_ASSERT(containment);
@@ -1020,6 +1021,7 @@ void ShellCorona::createWaitingPanels()
         Q_ASSERT(qBound(0, requestedScreen, m_views.count() - 1) == requestedScreen);
         QScreen *screen = m_views[requestedScreen]->screen();
         PanelView* panel = new PanelView(this, screen);
+        connect(panel, &QQuickWindow::sceneGraphError, this, &ShellCorona::showOpenGLNotCompatibleWarning);
         connect(panel, &QWindow::visibleChanged, this, &Plasma::Corona::availableScreenRectChanged);
         connect(panel, &PanelView::locationChanged, this, &Plasma::Corona::availableScreenRectChanged);
         connect(panel, &PanelView::visibilityModeChanged, this, &Plasma::Corona::availableScreenRectChanged);
@@ -1713,10 +1715,12 @@ void ShellCorona::showOpenGLNotCompatibleWarning()
         return;
     }
     s_multipleInvokations = true;
-    KMessageBox::error(nullptr,
-                       i18n("Your graphics hardware does not support OpenGL (ES) 2. Plasma will abort now."),
-                       i18n("Incompatible OpenGL version detected")
-                      );
+
+    QCoreApplication::setAttribute(Qt::AA_ForceRasterWidgets);
+    QMessageBox::critical(nullptr, i18n("Plasma Failed To Start"),
+                          i18n("Plasma is unable to start as it could not correctly use OpenGL 2.\n Please check that your graphic drivers are set up correctly."));
+    qCritical("Open GL context could not be created");
+
     // this doesn't work and I have no idea why.
     QCoreApplication::exit(1);
 }
