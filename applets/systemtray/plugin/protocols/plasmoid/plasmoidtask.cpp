@@ -40,6 +40,8 @@
 #include "appletquickitem.h"
 #include "config-workspace.h"
 
+#include <plasma_version.h>
+
 namespace SystemTray
 {
 
@@ -288,6 +290,9 @@ void PlasmoidTask::showMenu(int x, int y)
                 if (systrayApplet) {
                     QMenu *systrayMenu = new QMenu(i18n("System Tray Options"), desktopMenu);
 
+#if PLASMA_VERSION >= QT_VERSION_CHECK(5,20,0)
+                    emit systrayApplet->contextualActionsAboutToShow();
+#endif
                     foreach (QAction *action, systrayApplet->contextualActions()) {
                         if (action) {
                             systrayMenu->addAction(action);
