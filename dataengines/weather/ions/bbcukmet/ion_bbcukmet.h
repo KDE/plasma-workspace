@@ -24,9 +24,9 @@
 
 #include <QtXml/QXmlStreamReader>
 #include <QDateTime>
+#include <Plasma/DataEngineConsumer>
 
 #include "../ion.h"
-#include "../dataengineconsumer.h"
 
 class KJob;
 namespace KIO
@@ -172,7 +172,5 @@ private:
     QDateTime m_dateFormat;
     QStringList m_sourcesToReset;
 };
-
-K_EXPORT_PLASMA_DATAENGINE(bbcukmet, UKMETIon)
 
 #endif

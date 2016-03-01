@@ -23,6 +23,11 @@
 
 #include <KIO/Job>
 #include <KUnitConversion/Converter>
+#include <KLocalizedString>
+
+#include <QTextStream>
+#include <QDebug>
+
 
 // ctor, dtor
 UKMETIon::UKMETIon(QObject *parent, const QVariantList &args)
@@ -30,6 +35,7 @@ UKMETIon::UKMETIon(QObject *parent, const QVariantList &args)
 
 {
     Q_UNUSED(args)
+    init();
 }
 
 UKMETIon::~UKMETIon()
@@ -233,7 +239,7 @@ void UKMETIon::getXMLData(const QString& source)
         }
     }
 
-    KUrl url;
+    QUrl url;
     url = m_place[source].XMLurl;
 
     m_job = KIO::get(url.url(), KIO::Reload, KIO::HideProgressInfo);
@@ -251,7 +257,7 @@ void UKMETIon::getXMLData(const QString& source)
 // Parses city list and gets the correct city based on ID number
 void UKMETIon::findPlace(const QString& place, const QString& source)
 {
-    KUrl url;
+    QUrl url;
     url = "http://news.bbc.co.uk/weather/util/search/SearchResultsNode.xhtml?&search=" + place + "&region=world&startIndex=0&count=500";
 
     m_job = KIO::get(url.url(), KIO::Reload, KIO::HideProgressInfo);
@@ -275,14 +281,14 @@ void UKMETIon::findPlace(const QString& place, const QString& source)
 void UKMETIon::getFiveDayForecast(const QString& source)
 {
 
-    KUrl xmlMap(m_place[source].forecastHTMLUrl);    
+    QUrl xmlMap(m_place[source].forecastHTMLUrl);
     
     QString xmlPath = xmlMap.path();
     
     int splitIDPos = xmlPath.lastIndexOf('/');
     QString stationID = xmlPath.midRef(splitIDPos + 1).toString();
     m_place[source].XMLforecastURL = "http://newsrss.bbc.co.uk/weather/forecast/" + stationID + "/Next3DaysRSS.xml" + xmlMap.query();
-    KUrl url(m_place[source].XMLforecastURL);
+    QUrl url(m_place[source].XMLforecastURL);
 
     m_job = KIO::get(url.url(), KIO::Reload, KIO::HideProgressInfo);
     m_job->addMetaData("cookies", "none"); // Disable displaying cookies
@@ -755,6 +761,8 @@ void UKMETIon::updateWeather(const QString& source)
 
     const double lati = periodLatitude(source);
     const double longi = periodLongitude(source);
+//TODO: Port to Plasma5
+#if 0
     const Plasma::DataEngine::Data timeData = m_timeEngine->query(
             QString("Local|Solar|Latitude=%1|Longitude=%2|DateTime=%3")
                 .arg(lati).arg(longi).arg(m_dateFormat.toString(Qt::ISODate)));
@@ -762,10 +770,13 @@ void UKMETIon::updateWeather(const QString& source)
     // Tell applet which icon to use for conditions and provide mapping for condition type to the icons to display
     if (timeData["Corrected Elevation"].toDouble() >= 0.0) {
         //qDebug() << "Using daytime icons\n";
+#endif
         data.insert("Condition Icon", getWeatherIcon(dayIcons(), condition(source)));
+#if 0
     } else {
         data.insert("Condition Icon", getWeatherIcon(nightIcons(), condition(source)));
     }
+#endif
 
     data.insert("Latitude", lati);
     data.insert("Longitude", longi);
@@ -962,3 +973,6 @@ QVector<QString> UKMETIon::forecasts(const QString& source)
 }
 
 
+K_EXPORT_PLASMA_DATAENGINE_WITH_JSON(bbcukmet, UKMETIon, "ion-bbcukmet.json")
+
+#include "ion_bbcukmet.moc"
