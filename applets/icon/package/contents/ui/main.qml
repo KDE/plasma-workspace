@@ -112,10 +112,12 @@ MouseArea {
             bottom : parent.bottom
             right : parent.right
         }
+        height: undefined // unset Label defaults
         horizontalAlignment : Text.AlignHCenter
-        opacity : constrained ? 0 : 1
+        visible: !constrained
         maximumLineCount: 2
-        wrapMode: Text.Wrap
+        elide: Text.ElideRight
+        wrapMode: Text.WrapAtWordBoundaryOrAnywhere
     }
 
     PlasmaCore.ToolTipArea {
