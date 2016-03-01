@@ -25,11 +25,10 @@
 #include <QtXml/QXmlStreamReader>
 #include <QDateTime>
 
-#include <kdemacros.h>
 #include <Plasma/DataEngine>
+#include <Plasma/DataEngineConsumer>
 
 #include "../ion.h"
-#include "../dataengineconsumer.h"
 
 class KJob;
 namespace KIO
@@ -255,7 +254,5 @@ private:
     bool emitWhenSetup;
 
 };
-
-K_EXPORT_PLASMA_DATAENGINE(envcan, EnvCanadaIon)
 
 #endif

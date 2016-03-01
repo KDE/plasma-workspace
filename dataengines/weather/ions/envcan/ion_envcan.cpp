@@ -23,7 +23,7 @@
 
 #include <KIO/Job>
 #include <KUnitConversion/Converter>
-#include <Solid/Networking>
+#include <KLocalizedString>
 #include <Plasma/DataContainer>
 
 
@@ -31,6 +31,7 @@
 EnvCanadaIon::EnvCanadaIon(QObject *parent, const QVariantList &args)
         : IonInterface(parent, args)
 {
+    init();
 }
 
 void EnvCanadaIon::deleteForecasts()
@@ -492,7 +493,7 @@ void EnvCanadaIon::getXMLSetup()
 
     // If network is down, we need to spin and wait
 
-    KIO::TransferJob *job = KIO::get(KUrl("http://dd.weatheroffice.ec.gc.ca/citypage_weather/xml/siteList.xml"), KIO::NoReload, KIO::HideProgressInfo);
+    KIO::TransferJob *job = KIO::get(QUrl("http://dd.weatheroffice.ec.gc.ca/citypage_weather/xml/siteList.xml"), KIO::NoReload, KIO::HideProgressInfo);
 
     m_xmlSetup.clear();
     connect(job, SIGNAL(data(KIO::Job*,QByteArray)), this,
@@ -516,7 +517,7 @@ void EnvCanadaIon::getXMLData(const QString& source)
     QString dataKey = source;
     dataKey.remove("envcan|weather|");
 
-    KUrl url = QString("http://dd.weatheroffice.ec.gc.ca/citypage_weather/xml/" + m_places[dataKey].territoryName + "/" + m_places[dataKey].cityCode + "_e.xml");
+    QUrl url = QString("http://dd.weatheroffice.ec.gc.ca/citypage_weather/xml/" + m_places[dataKey].territoryName + "/" + m_places[dataKey].cityCode + "_e.xml");
     //url="file:///home/spstarr/Desktop/s0000649_e.xml";
     //qDebug() << "Will Try URL: " << url;
 
@@ -1326,6 +1327,8 @@ void EnvCanadaIon::updateWeather(const QString& source)
     QMap<QString, ConditionIcons> conditionList;
     conditionList = conditionIcons();
 
+//TODO: Port to Plasma5
+#if 0
     const double lati = latitude(source).replace(QRegExp("[^0-9.]"), NULL).toDouble();
     const double longi = longitude(source).replace(QRegExp("[^0-9.]"), NULL).toDouble();
     const Plasma::DataEngine::Data timeData = m_timeEngine->query(
@@ -1339,12 +1342,15 @@ void EnvCanadaIon::updateWeather(const QString& source)
         conditionList["fair"] = FewCloudsNight;
         //qDebug() << "Before sunrise/After sunset - using night icons\n";
     } else {
+#endif
         conditionList["decreasing cloud"] = FewCloudsDay;
         conditionList["mostly cloudy"] = PartlyCloudyDay;
         conditionList["partly cloudy"] = PartlyCloudyDay;
         conditionList["fair"] = FewCloudsDay;
         //qDebug() << "Using daytime icons\n";
+#if 0
     }
+#endif
 
     data.insert("Condition Icon", getWeatherIcon(conditionList, condition(source)));
 
@@ -1920,3 +1926,6 @@ QMap<QString, QString> EnvCanadaIon::weatherRecords(const QString& source) const
 }
 
 
+K_EXPORT_PLASMA_DATAENGINE_WITH_JSON(envcan, EnvCanadaIon, "ion-envcan.json")
+
+#include "ion_envcan.moc"

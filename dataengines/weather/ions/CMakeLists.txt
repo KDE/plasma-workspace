@@ -20,7 +20,7 @@ install (FILES includes/Ion
 
 # the individual ion plugins
 #add_subdirectory(bbcukmet)
-#add_subdirectory(envcan)
+add_subdirectory(envcan)
 add_subdirectory(noaa)
 add_subdirectory(wetter.com)
 #add_subdirectory(debianweather)
