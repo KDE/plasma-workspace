@@ -20,6 +20,8 @@
 
 import QtQuick 2.0
 import QtQuick.Layouts 1.1
+import QtGraphicalEffects 1.0
+
 import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as Components
@@ -46,7 +48,7 @@ MouseArea {
     Plasmoid.preferredRepresentation: Plasmoid.fullRepresentation
     Plasmoid.icon: logic.icon
     Plasmoid.title: logic.name
-    Plasmoid.backgroundHints: PlasmaCore.Types.TranslucentBackground
+    Plasmoid.backgroundHints: PlasmaCore.Types.NoBackground
 
     Component.onCompleted: {
         plasmoid.activated.connect(logic.open);
@@ -104,6 +106,25 @@ MouseArea {
         active: root.containsMouse || root.containsAcceptableDrag
     }
 
+    DropShadow {
+        id: textShadow
+
+        anchors.fill: text
+
+        visible: !constrained
+
+        horizontalOffset: units.devicePixelRatio * 2
+        verticalOffset: horizontalOffset
+
+        radius: 9.0
+        samples: 18
+        spread: 0.15
+
+        color: "black"
+
+        source: constrained ? null : text
+    }
+
     Components.Label {
         id : text
         text : plasmoid.title
@@ -114,8 +135,9 @@ MouseArea {
         }
         height: undefined // unset Label defaults
         horizontalAlignment : Text.AlignHCenter
-        visible: !constrained
+        visible: false // rendered by DropShadow
         maximumLineCount: 2
+        color: "white"
         elide: Text.ElideRight
         wrapMode: Text.WrapAtWordBoundaryOrAnywhere
     }
