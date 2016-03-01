@@ -102,10 +102,10 @@ void SystemTray::TaskListModel::addTask(Task *task)
 {
     if (!m_tasks.contains(task)) {
         auto it = qLowerBound(m_tasks.begin(), m_tasks.end(), task, taskLessThan);
-        int index = it - m_tasks.begin();
-        beginInsertRows(QModelIndex(), index, index);
+        // use ResetModel as a workaround for bug 352055
+        beginResetModel();
         m_tasks.insert(it, task);
-        endInsertRows();
+        endResetModel();
     }
 }
 
@@ -113,9 +113,10 @@ void SystemTray::TaskListModel::removeTask(Task *task)
 {
     int index = m_tasks.indexOf(task);
     if (index >= 0 ) {
-        beginRemoveRows(QModelIndex(), index, index);
+        // use ResetModel as a workaround for bug 352055
+        beginResetModel();
         m_tasks.removeAt(index);
-        endRemoveRows();
+        endResetModel();
     }
 }
 
