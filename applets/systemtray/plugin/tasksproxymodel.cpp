@@ -28,6 +28,7 @@ TasksProxyModel::TasksProxyModel(QObject *parent) : QSortFilterProxyModel(parent
 {
     connect(this, &QSortFilterProxyModel::rowsInserted, this, &TasksProxyModel::countChanged);
     connect(this, &QSortFilterProxyModel::rowsRemoved, this, &TasksProxyModel::countChanged);
+    connect(this, &QSortFilterProxyModel::modelReset, this, &TasksProxyModel::countChanged);
 }
 
 Host *TasksProxyModel::host() const
