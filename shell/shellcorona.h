@@ -180,7 +180,6 @@ private Q_SLOTS:
     void checkAddPanelAction(const QStringList &sycocaChanges = QStringList());
     void addPanel();
     void addPanel(QAction *action);
-    void containmentDeleted(QObject* cont);
     void populateAddPanelsMenu();
 
     void outputEnabledChanged();
@@ -190,6 +189,7 @@ private Q_SLOTS:
     void activityOpened();
     void activityClosed();
     void activityRemoved();
+    void panelContainmentDestroyed(QObject* cont);
     void desktopContainmentDestroyed(QObject*);
     void showOpenGLNotCompatibleWarning();
     void alternativesVisibilityChanged(bool visible);

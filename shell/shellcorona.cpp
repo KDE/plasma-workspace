@@ -1031,15 +1031,16 @@ void ShellCorona::createWaitingPanels()
         panel->show();
         cont->reactToScreenChange();
 
-        connect(cont, SIGNAL(destroyed(QObject*)), this, SLOT(containmentDeleted(QObject*)));
+        connect(cont, &QObject::destroyed, this, &ShellCorona::panelContainmentDestroyed);
     }
     m_waitingPanels = stillWaitingPanels;
     emit availableScreenRectChanged();
 }
 
-void ShellCorona::containmentDeleted(QObject *cont)
+void ShellCorona::panelContainmentDestroyed(QObject *cont)
 {
-    m_panelViews.remove(static_cast<Plasma::Containment*>(cont));
+    auto view = m_panelViews.take(static_cast<Plasma::Containment*>(cont));
+    view->deleteLater();
     emit availableScreenRectChanged();
 }
 

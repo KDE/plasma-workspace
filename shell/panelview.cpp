@@ -1029,7 +1029,6 @@ void PanelView::containmentChanged()
                 }
                 views.sync();
             }
-            deleteLater();
         }
     }, Qt::QueuedConnection);
 }
