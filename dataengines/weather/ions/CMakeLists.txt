@@ -23,5 +23,4 @@ install (FILES includes/Ion
 add_subdirectory(envcan)
 add_subdirectory(noaa)
 add_subdirectory(wetter.com)
-#add_subdirectory(debianweather)
 
