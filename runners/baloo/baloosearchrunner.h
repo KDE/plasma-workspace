@@ -41,6 +41,7 @@ public:
     virtual QStringList categories() const;
     virtual QIcon categoryIcon(const QString& category) const;
 
+    QList<QAction *> actionsForMatch(const Plasma::QueryMatch &match) override;
     QMimeData *mimeDataForMatch(const Plasma::QueryMatch &match) override;
 
 protected Q_SLOTS:

@@ -21,6 +21,7 @@
 
 #include "baloosearchrunner.h"
 
+#include <QAction>
 #include <QIcon>
 #include <QDir>
 #include <KRun>
@@ -170,7 +171,28 @@ void SearchRunner::match(Plasma::RunnerContext& context)
 void SearchRunner::run(const Plasma::RunnerContext&, const Plasma::QueryMatch& match)
 {
     const QUrl url = match.data().toUrl();
+
+    if (match.selectedAction()) {
+        if (match.selectedAction()->data().toString() == QLatin1String("openParentDir")) {
+            new KRun(url.adjusted(QUrl::RemoveFilename), nullptr);
+            return;
+        }
+    }
+
     new KRun(url, 0);
+}
+
+QList<QAction *> SearchRunner::actionsForMatch(const Plasma::QueryMatch &match)
+{
+    Q_UNUSED(match)
+
+    const QString openParentDirId = QStringLiteral("openParentDir");
+
+    if (!action(openParentDirId)) {
+        (addAction(openParentDirId, QIcon::fromTheme(QStringLiteral("document-open-folder")), i18n("Open Containing Folder")))->setData(openParentDirId);
+    }
+
+    return {action(openParentDirId)};
 }
 
 QMimeData *SearchRunner::mimeDataForMatch(const Plasma::QueryMatch &match)
