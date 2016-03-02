@@ -34,7 +34,9 @@
 #include <KConfig>
 #include <KConfigGroup>
 #include <KSharedConfig>
+#if KCOREADDONS_VERSION >= QT_VERSION_CHECK(5,20,0)
 #include <KCoreAddons>
+#endif
 #include <QStandardPaths>
 #include <kcoreaddons_version.h>
 
