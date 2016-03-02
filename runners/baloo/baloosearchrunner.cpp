@@ -101,6 +101,8 @@ QList<Plasma::QueryMatch> SearchRunner::match(Plasma::RunnerContext& context, co
 
     QList<Plasma::QueryMatch> matches;
 
+    QMimeDatabase mimeDb;
+
     // KRunner is absolutely retarded and allows plugins to set the global
     // relevance levels. so Baloo should not set the relevance of results too
     // high because then Applications will often appear after if the application
@@ -113,7 +115,7 @@ QList<Plasma::QueryMatch> SearchRunner::match(Plasma::RunnerContext& context, co
         QString localUrl = it.filePath();
         const QUrl url = QUrl::fromLocalFile(localUrl);
 
-        QString iconName = QMimeDatabase().mimeTypeForFile(localUrl).iconName();
+        QString iconName = mimeDb.mimeTypeForFile(localUrl).iconName();
         match.setIcon(QIcon::fromTheme(iconName));
         match.setId(it.filePath());
         match.setText(url.fileName());
