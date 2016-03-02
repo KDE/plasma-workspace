@@ -27,9 +27,12 @@
 // http://api.wetter.com/forecast/weather/city/DE0004329/project/weatherion/cs/89f1264869cce5c6fd5a2db80051f3d8
 
 #include "ion_wettercom.h"
-#include <QDebug>
+
 #include <KUnitConversion/Converter>
-#include <KLocalizedDate>
+#include <KLocalizedString>
+
+#include <QLocale>
+#include <QDebug>
 
 /*
  * Initialization
@@ -714,7 +717,7 @@ void WetterComIon::updateWeather(const QString& source, bool parseError)
 
                 data.insert(QString::fromLatin1("Short Forecast Day %1").arg(i),
                             QString::fromLatin1("%1|%2|%3|%4|%5|%6")
-                            .arg(KLocalizedDate(weather.period.date()).formatDate(KLocale::DayName, KLocale::ShortName))
+                            .arg(QLocale().toString(weather.period.date().day()))
                             .arg(weather.iconName).arg(weather.summary)
                             .arg(weather.tempHigh).arg(weather.tempLow)
                             .arg(weather.probability));

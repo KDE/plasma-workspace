@@ -31,7 +31,6 @@ namespace KIO
 {
     class Job;
 } // namespace KIO
-#include <kdemacros.h>
 
 #include <Plasma/DataEngine>
 #include <Plasma/DataEngineConsumer>

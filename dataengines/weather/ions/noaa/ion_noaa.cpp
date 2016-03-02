@@ -21,11 +21,12 @@
 
 #include "ion_noaa.h"
 
-#include <KUrl>
 #include <KIO/Job>
-#include <KLocalizedDate>
+#include <KLocalizedString>
 #include <QDebug>
 #include <KUnitConversion/Converter>
+
+#include <QLocale>
 
 QMap<QString, IonInterface::WindDirections> NOAAIon::setupWindIconMappings(void) const
 {
@@ -163,7 +164,7 @@ bool NOAAIon::updateIonSource(const QString& source)
 // Parses city list and gets the correct city based on ID number
 void NOAAIon::getXMLSetup() const
 {
-    KIO::TransferJob *job = KIO::get(KUrl("http://www.weather.gov/data/current_obs/index.xml"), KIO::NoReload, KIO::HideProgressInfo);
+    KIO::TransferJob *job = KIO::get(QUrl("http://www.weather.gov/data/current_obs/index.xml"), KIO::NoReload, KIO::HideProgressInfo);
 
     if (job) {
         connect(job, &KIO::TransferJob::data, this,
@@ -186,7 +187,7 @@ void NOAAIon::getXMLData(const QString& source)
 
     QString dataKey = source;
     dataKey.remove(QStringLiteral("noaa|weather|"));
-    KUrl url = m_places[dataKey].XMLurl;
+    QUrl url = m_places[dataKey].XMLurl;
 
     // If this is empty we have no valid data, send out an error and abort.
     if (url.url().isEmpty()) {
@@ -836,7 +837,7 @@ void NOAAIon::getForecast(const QString& source)
     /* Assuming that we have the latitude and longitude data at this point, get the 7-day
      * forecast.
      */
-    KUrl url = QStringLiteral("http://www.weather.gov/forecasts/xml/sample_products/browser_interface/"
+    QUrl url = QStringLiteral("http://www.weather.gov/forecasts/xml/sample_products/browser_interface/"
                        "ndfdBrowserClientByDay.php?lat=%1&lon=%2&format=24+hourly&numDays=7")
                         .arg(latitude(source)).arg(longitude(source));
 
@@ -914,7 +915,7 @@ void NOAAIon::readForecast(const QString& source, QXmlStreamReader& xml)
                         QDateTime date = QDateTime::fromString(data, Qt::ISODate);
 
                         WeatherData::Forecast forecast;
-                        forecast.day = KLocalizedDate(date.date()).formatDate(KLocale::DayName, KLocale::ShortName);
+                        forecast.day = QLocale().toString(date.date().day());
                         forecasts.append(forecast);
                         //qDebug() << forecast.day;
                     }
