@@ -18,7 +18,6 @@
  *
  */
 
-
 #include "baloosearchrunner.h"
 
 #include <QAction>
@@ -125,10 +124,11 @@ QList<Plasma::QueryMatch> SearchRunner::match(Plasma::RunnerContext& context, co
         match.setRelevance(relevance);
         relevance -= 0.05;
 
-        if (localUrl.startsWith(QDir::homePath())) {
-            localUrl.replace(0, QDir::homePath().length(), QStringLiteral("~"));
+        QString folderPath = url.adjusted(QUrl::RemoveFilename | QUrl::StripTrailingSlash).toLocalFile();
+        if (folderPath.startsWith(QDir::homePath())) {
+            folderPath.replace(0, QDir::homePath().length(), QStringLiteral("~"));
         }
-        match.setSubtext(localUrl);
+        match.setSubtext(folderPath);
 
         matches << match;
     }
