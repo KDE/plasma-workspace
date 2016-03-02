@@ -34,11 +34,11 @@
 #include <KConfig>
 #include <KConfigGroup>
 #include <KSharedConfig>
+#include <kcoreaddons_version.h>
 #if KCOREADDONS_VERSION >= QT_VERSION_CHECK(5,20,0)
 #include <KCoreAddons>
 #endif
 #include <QStandardPaths>
-#include <kcoreaddons_version.h>
 
 static const QString OS_UNSPECIFIED = QStringLiteral("unspecified");
 static const QString PLATFORM_UNSPECIFIED = QStringLiteral("unspecified");
