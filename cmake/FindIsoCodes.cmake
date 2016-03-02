@@ -30,6 +30,22 @@
 # OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
 # SUCH DAMAGE.
 
+macro(_ISOCODES_GET_PKGCONFIG_VAR _outvar _varname)
+  execute_process(
+    COMMAND ${PKG_CONFIG_EXECUTABLE} --variable=${_varname} iso-codes
+    OUTPUT_VARIABLE _result
+    RESULT_VARIABLE _null
+  )
+
+  if (_null)
+  else ()
+    string(REGEX REPLACE "[\r\n]" " " _result "${_result}")
+    string(REGEX REPLACE " +$" ""  _result "${_result}")
+    separate_arguments(_result)
+    set(${_outvar} ${_result} CACHE INTERNAL "")
+  endif ()
+endmacro ()
+
 find_package(PkgConfig)
 if (PkgConfig_FOUND)
   if (IsoCodes_MIN_VERSION)
@@ -38,7 +54,7 @@ if (PkgConfig_FOUND)
     pkg_check_modules(_pc_ISOCODES iso-codes)
   endif ()
   if (_pc_ISOCODES_FOUND)
-    pkg_get_variable(IsoCodes_DOMAINS iso-codes domains)
+    _isocodes_get_pkgconfig_var(IsoCodes_DOMAINS "domains")
   endif ()
 endif ()
 
