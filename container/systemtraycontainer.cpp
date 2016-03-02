@@ -33,6 +33,9 @@ SystemTrayContainer::SystemTrayContainer(QObject *parent, const QVariantList &ar
 
 SystemTrayContainer::~SystemTrayContainer()
 {
+    if (destroyed()) {
+        m_innerContainment->destroy();
+    }
 }
 
 void SystemTrayContainer::init()
@@ -78,11 +81,11 @@ void SystemTrayContainer::constraintsEvent(Plasma::Types::Constraints constraint
                     break;
                 }
             }
-            qWarning()<<"shouldn't go there";
+            qWarning() << "Containment id" << id << "was deleted";
             //id = 0;
         }
-        qWarning()<<"FOUND ID:"<<id;
-        if (id <= 0) {
+
+        if (!m_innerContainment) {
             m_innerContainment = c->createContainment("org.kde.plasma.private.systemtray");
             config().writeEntry("SystrayContainmentId", m_innerContainment->id());
         }

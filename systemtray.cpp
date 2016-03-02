@@ -59,9 +59,9 @@ void SystemTray::init()
 {
     config().writeEntry("lastScreen", -1);
     Containment::init();
-    actions()->removeAction(actions()->action("add widgets"));
-    actions()->removeAction(actions()->action("add panel"));
-    actions()->removeAction(actions()->action("lock widgets"));
+    //actions()->removeAction(actions()->action("add widgets"));
+    //actions()->removeAction(actions()->action("add panel"));
+    //actions()->removeAction(actions()->action("lock widgets"));
 }
 
 void SystemTray::newTask(const QString &task)
