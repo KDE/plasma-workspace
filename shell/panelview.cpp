@@ -260,11 +260,6 @@ void PanelView::setMaximumLength(int length)
         setMinimumLength(length);
     }
 
-    if (formFactor() == Plasma::Types::Vertical) {
-        setMaximumHeight(length);
-    } else {
-        setMaximumWidth(length);
-    }
     config().writeEntry("maxLength", length);
     m_maxLength = length;
     emit maximumLengthChanged();
@@ -288,11 +283,6 @@ void PanelView::setMinimumLength(int length)
         setMaximumLength(length);
     }
 
-    if (formFactor() == Plasma::Types::Vertical) {
-        setMinimumHeight(length);
-    } else {
-        setMinimumWidth(length);
-    }
     config().writeEntry("minLength", length);
     m_minLength = length;
     emit minimumLengthChanged();
