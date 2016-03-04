@@ -372,15 +372,9 @@ void PanelView::positionPanel()
     if (formFactor() == Plasma::Types::Vertical) {
         setMinimumSize(QSize(thickness(), m_minLength));
         setMaximumSize(QSize(thickness(), m_maxLength));
-
-        emit thicknessChanged();
-        emit lengthChanged();
     } else {
         setMinimumSize(QSize(m_minLength, thickness()));
         setMaximumSize(QSize(m_maxLength, thickness()));
-
-        emit thicknessChanged();
-        emit lengthChanged();
     }
 
     const QPoint pos = geometryByDistance(m_distance).topLeft();
