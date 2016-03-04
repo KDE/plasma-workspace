@@ -176,6 +176,7 @@ private Q_SLOTS:
     void screenDestroyed(QObject* screen);
 
 private:
+    void resizePanel();
     void integrateScreen();
     bool containmentContainsPosition(const QPointF &point) const;
     QPointF positionAdjustedForContainment(const QPointF &point) const;
@@ -185,6 +186,7 @@ private:
     int m_offset;
     int m_maxLength;
     int m_minLength;
+    int m_contentLength;
     int m_distance;
     int m_thickness;
     Qt::Alignment m_alignment;

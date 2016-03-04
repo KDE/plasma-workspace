@@ -55,6 +55,7 @@ PanelView::PanelView(ShellCorona *corona, QScreen *targetScreen, QWindow *parent
        m_offset(0),
        m_maxLength(0),
        m_minLength(0),
+       m_contentLength(0),
        m_distance(0),
        m_thickness(30),
        m_alignment(Qt::AlignLeft),
@@ -215,33 +216,23 @@ void PanelView::setThickness(int value)
 
     config().writeEntry("thickness", value);
     m_corona->requestApplicationConfigSync();
-    positionPanel();
+    resizePanel();
 }
 
 int PanelView::length() const
 {
-    int defaultLength = formFactor() == Plasma::Types::Vertical ? screen()->size().height() : screen()->size().width();
-    return config().isValid() ? config().readEntry<int>("length", defaultLength) : defaultLength;
+    return m_contentLength;
 }
 
 void PanelView::setLength(int value)
 {
-    if (value == length()) {
+    if (value == m_contentLength) {
         return;
     }
 
-    config().writeEntry("length", value);
-    m_corona->requestApplicationConfigSync();
-    positionPanel();
+    m_contentLength = value;
 
-
-    const int maxSize = screen()->size().width() - m_offset;
-    if (containment()->formFactor() == Plasma::Types::Vertical) {
-        resize(thickness(), qBound<int>(MINSIZE, value, maxSize));
-    //Horizontal
-    } else {
-        resize(qBound<int>(MINSIZE, value, maxSize), thickness());
-    }
+    resizePanel();
     emit m_corona->availableScreenRegionChanged();
 }
 
@@ -265,7 +256,7 @@ void PanelView::setMaximumLength(int length)
     emit maximumLengthChanged();
     m_corona->requestApplicationConfigSync();
 
-    positionPanel();
+    resizePanel();
 }
 
 int PanelView::minimumLength() const
@@ -288,7 +279,7 @@ void PanelView::setMinimumLength(int length)
     emit minimumLengthChanged();
     m_corona->requestApplicationConfigSync();
 
-    positionPanel();
+    resizePanel();
 }
 
 int PanelView::distance() const
@@ -369,14 +360,6 @@ void PanelView::positionPanel()
     m_strutsTimer.stop();
     m_strutsTimer.start(STRUTSTIMERDELAY);
 
-    if (formFactor() == Plasma::Types::Vertical) {
-        setMinimumSize(QSize(thickness(), m_minLength));
-        setMaximumSize(QSize(thickness(), m_maxLength));
-    } else {
-        setMinimumSize(QSize(m_minLength, thickness()));
-        setMaximumSize(QSize(m_maxLength, thickness()));
-    }
-
     const QPoint pos = geometryByDistance(m_distance).topLeft();
     setPosition(pos);
     if (m_shellSurface) {
@@ -453,6 +436,24 @@ QRect PanelView::geometryByDistance(int distance) const
     return ret;
 }
 
+void PanelView::resizePanel()
+{
+
+
+    if (formFactor() == Plasma::Types::Vertical) {
+        const int maxSize = screen()->size().height() - m_offset;
+        setMinimumSize(QSize(thickness(), m_minLength));
+        setMaximumSize(QSize(thickness(), m_maxLength));
+        resize(thickness(), qBound<int>(MINSIZE, m_contentLength, maxSize));
+    } else {
+        const int maxSize = screen()->size().width() - m_offset;
+        setMinimumSize(QSize(m_minLength, thickness()));
+        setMaximumSize(QSize(m_maxLength, thickness()));
+        resize(qBound<int>(MINSIZE, m_contentLength, maxSize), thickness());
+    }
+    //positionPanel will be called implicitly from resizeEvent
+}
+
 void PanelView::restore()
 {
     if (!containment()) {
@@ -487,12 +488,6 @@ void PanelView::restore()
         const int maxSize = screen()->size().height() - m_offset;
         m_maxLength = qBound<int>(MINSIZE, m_maxLength, maxSize);
         m_minLength = qBound<int>(MINSIZE, m_minLength, maxSize);
-
-        resize(thickness(), qBound<int>(MINSIZE, length(), maxSize));
-
-        setMinimumHeight(m_minLength);
-        setMaximumHeight(m_maxLength);
-
     //Horizontal
     } else {
         defaultMaxLength = screen()->size().width();
@@ -504,12 +499,9 @@ void PanelView::restore()
         const int maxSize = screen()->size().width() - m_offset;
         m_maxLength = qBound<int>(MINSIZE, m_maxLength, maxSize);
         m_minLength = qBound<int>(MINSIZE, m_minLength, maxSize);
-
-        resize(qBound<int>(MINSIZE, length(), maxSize), thickness());
-
-        setMinimumWidth(m_minLength);
-        setMaximumWidth(m_maxLength);
     }
+
+    resizePanel();
 
     setVisibilityMode((VisibilityMode)config().readEntry<int>("panelVisibility", (int)NormalPanel));
 
