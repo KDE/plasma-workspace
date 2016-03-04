@@ -634,7 +634,7 @@ int ShellCorona::numScreens() const
     if (!m_screenConfiguration) {
         return 0;
     }
-    return m_screenConfiguration->outputs().count();
+    return m_screenConfiguration->connectedOutputs().count();
 }
 
 QRect ShellCorona::screenGeometry(int id) const
