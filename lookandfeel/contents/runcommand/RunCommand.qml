@@ -159,6 +159,10 @@ ColumnLayout {
                 id: resultDelegate
                 width: listView.width
                 typeText: index === 0 ? i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Recent Queries") : ""
+                additionalActions: [{
+                    icon: "list-remove",
+                    text: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Remove")
+                }]
             }
 
             Keys.onReturnPressed: runCurrentIndex()
@@ -170,7 +174,19 @@ ColumnLayout {
             Keys.onDownPressed: incrementCurrentIndex()
 
             function runCurrentIndex() {
-                queryField.text = runnerWindow.history[currentIndex]
+                var entry = runnerWindow.history[currentIndex]
+                if (entry) {
+                    queryField.text = entry
+                }
+            }
+
+            function runAction(actionIndex) {
+                if (actionIndex === 0) {
+                    // QStringList changes just reset the model, so we'll remember the index and set it again
+                    var currentIndex = listView.currentIndex
+                    runnerWindow.removeFromHistory(currentIndex)
+                    listView.currentIndex = currentIndex
+                }
             }
         }
 

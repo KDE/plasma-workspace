@@ -350,9 +350,25 @@ void View::addToHistory(const QString &item)
     }
 
     emit historyChanged();
-
-    m_config.writeEntry("history", m_history);
+    writeHistory();
     m_config.sync();
+}
+
+void View::removeFromHistory(int index)
+{
+    if (index < 0 || index >= m_history.count()) {
+        return;
+    }
+
+    m_history.removeAt(index);
+    emit historyChanged();
+
+    writeHistory();
+}
+
+void View::writeHistory()
+{
+    m_config.writeEntry("history", m_history);
 }
 
 #include "moc_view.cpp"

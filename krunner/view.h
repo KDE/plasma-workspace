@@ -46,7 +46,9 @@ public:
     void setFreeFloating(bool floating);
 
     QStringList history() const;
+
     Q_INVOKABLE void addToHistory(const QString &item);
+    Q_INVOKABLE void removeFromHistory(int index);
 
 Q_SIGNALS:
     void historyChanged();
@@ -73,6 +75,8 @@ protected Q_SLOTS:
     void slotFocusWindowChanged();
 
 private:
+    void writeHistory();
+
     QPoint m_customPos;
     KDeclarative::QmlObject *m_qmlObj;
     KConfigGroup m_config;
