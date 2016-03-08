@@ -42,13 +42,21 @@
 #include <KPackage/Package>
 #include <KPackage/PackageLoader>
 
+#include <KWayland/Client/connection_thread.h>
+#include <KWayland/Client/registry.h>
+#include <KWayland/Client/surface.h>
+#include <KWayland/Client/plasmashell.h>
+
 #include "appadaptor.h"
 
 View::View(QWindow *)
     : PlasmaQuick::Dialog(),
       m_offset(.5),
-      m_floating(false)
+      m_floating(false),
+      m_plasmaShell(nullptr),
+      m_plasmaShellSurface(nullptr)
 {
+    initWayland();
     setClearBeforeRendering(true);
     setColor(QColor(Qt::transparent));
     setFlags(Qt::FramelessWindowHint);
@@ -138,6 +146,31 @@ View::~View()
 {
 }
 
+void View::initWayland()
+{
+    if (!QGuiApplication::platformName().startsWith(QLatin1String("wayland"))) {
+        return;
+    }
+    using namespace KWayland::Client;
+    auto connection = ConnectionThread::fromApplication(this);
+    if (!connection) {
+        return;
+    }
+    Registry *registry = new Registry(this);
+    registry->create(connection);
+    QObject::connect(registry, &Registry::interfacesAnnounced, this,
+        [registry, this] {
+            const auto interface = registry->interface(Registry::Interface::PlasmaShell);
+            if (interface.name != 0) {
+                m_plasmaShell = registry->createPlasmaShell(interface.name, interface.version, this);
+            }
+        }
+    );
+
+    registry->setup();
+    connection->roundtrip();
+}
+
 void View::objectIncubated()
 {
     setMainItem(qobject_cast<QQuickItem *>(m_qmlObj->rootObject()));
@@ -198,6 +231,30 @@ bool View::event(QEvent *event)
     if (setState) {
         KWindowSystem::setState(winId(), NET::SkipTaskbar | NET::SkipPager | NET::KeepAbove | NET::StaysOnTop);
     }
+
+    if (m_plasmaShell && event->type() == QEvent::PlatformSurface) {
+        if (auto e = dynamic_cast<QPlatformSurfaceEvent*>(event)) {
+            using namespace KWayland::Client;
+            switch (e->surfaceEventType()) {
+            case QPlatformSurfaceEvent::SurfaceCreated: {
+                Surface *s = Surface::fromWindow(this);
+                if (!s) {
+                    return false;
+                }
+                m_plasmaShellSurface = m_plasmaShell->createSurface(s, this);
+                break;
+            }
+            case QPlatformSurfaceEvent::SurfaceAboutToBeDestroyed:
+                delete m_plasmaShellSurface;
+                m_plasmaShellSurface = nullptr;
+                break;
+            }
+        }
+    } else if (m_plasmaShellSurface && event->type() == QEvent::Move) {
+        QMoveEvent *me = static_cast<QMoveEvent *>(event);
+        m_plasmaShellSurface->setPosition(me->pos());
+    }
+
     return retval;
 }
 

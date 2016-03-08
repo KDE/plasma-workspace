@@ -25,6 +25,7 @@ target_link_libraries(krunner
     KF5::WindowSystem
     KF5::ConfigWidgets
     KF5::Crash
+    KF5::WaylandClient
 )
 target_compile_definitions(krunner PRIVATE -DPROJECT_VERSION="${PROJECT_VERSION}")
 
