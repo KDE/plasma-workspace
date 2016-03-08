@@ -17,23 +17,18 @@
  */
 import QtQuick 2.0
 import QtQuick.Layouts 1.1
+
 import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
-import org.kde.plasma.components 2.0 as PlasmaComponents
-import org.kde.plasma.calendar 2.0
-import org.kde.plasma.extras 2.0 as PlasmaExtras
 
+import org.kde.plasma.calendar 2.0
 
 Item {
-    id: main
-
     Plasmoid.switchWidth: units.gridUnit * 12
     Plasmoid.switchHeight: units.gridUnit * 12
 
     Layout.minimumWidth: units.iconSizes.large
     Layout.minimumHeight: units.iconSizes.large
-
-    property int formFactor: plasmoid.formFactor
 
     Plasmoid.fullRepresentation: Item {
 
