@@ -30,12 +30,21 @@ Item {
     Plasmoid.switchWidth: units.gridUnit * 12
     Plasmoid.switchHeight: units.gridUnit * 12
 
+    Layout.minimumWidth: units.iconSizes.large
+    Layout.minimumHeight: units.iconSizes.large
+
     property int formFactor: plasmoid.formFactor
 
     Plasmoid.fullRepresentation: Item {
 
-        Layout.minimumWidth: units.gridUnit * 3
-        Layout.minimumHeight: units.gridUnit * 3
+        // sizing taken from digital clock
+        readonly property int _minimumWidth: monthView.showWeekNumbers ? Math.round(_minimumHeight * 1.75) : Math.round(_minimumHeight * 1.5)
+        readonly property int _minimumHeight: units.gridUnit * 14
+
+        Layout.minimumWidth: _minimumWidth
+        Layout.minimumHeight: _minimumHeight
+        Layout.preferredWidth: _minimumWidth
+        Layout.preferredHeight: Math.round(_minimumHeight * 1.5)
 
         PlasmaCore.DataSource {
             id: dataSource
