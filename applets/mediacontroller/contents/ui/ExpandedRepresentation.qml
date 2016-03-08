@@ -33,8 +33,6 @@ Item {
     Layout.preferredHeight: Layout.minimumHeight * 1.5
 
     readonly property int controlSize: Math.min(height, width) / 4
-    // Basically just needed to match the right margin to the left in systray popup
-    readonly property bool constrained: plasmoid.formFactor == PlasmaCore.Types.Vertical || plasmoid.formFactor == PlasmaCore.Types.Horizontal
 
     property int position: mpris2Source.data[mpris2Source.current].Position
     property bool disablePositionUpdate: false
@@ -102,7 +100,7 @@ Item {
 
     ColumnLayout {
         id: titleColumn
-        width: constrained ? parent.width - units.largeSpacing : parent.width
+        width: parent.width
         spacing: units.smallSpacing
 
         PlasmaComponents.ComboBox {
@@ -263,7 +261,7 @@ Item {
 
     Item {
         anchors.bottom: parent.bottom
-        width: constrained ? parent.width - units.largeSpacing : parent.width
+        width: parent.width
         height: playerControls.height
 
         Row {
