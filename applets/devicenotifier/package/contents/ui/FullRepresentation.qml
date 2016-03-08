@@ -163,7 +163,7 @@ MouseArea {
             }
             freeSpaceText: sdSource.data[udi] && sdSource.data[udi]["Free Space Text"] ? sdSource.data[udi]["Free Space Text"] : ""
 
-            actionIcon: mounted ? "media-eject" : "emblem-mounted"
+            actionIcon: mounted ? "media-eject" : "media-mount"
             actionVisible: model["Device Types"].indexOf("Portable Media Player") == -1
             actionToolTip: {
                 if (!mounted) {
