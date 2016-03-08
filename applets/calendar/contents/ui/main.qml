@@ -17,31 +17,36 @@
  */
 import QtQuick 2.0
 import QtQuick.Layouts 1.1
+
 import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
-import org.kde.plasma.components 2.0 as PlasmaComponents
-import org.kde.plasma.calendar 2.0
-import org.kde.plasma.extras 2.0 as PlasmaExtras
 
+import org.kde.plasma.calendar 2.0
 
 Item {
-    id: main
-
     Plasmoid.switchWidth: units.gridUnit * 12
     Plasmoid.switchHeight: units.gridUnit * 12
 
-    property int formFactor: plasmoid.formFactor
+    Layout.minimumWidth: units.iconSizes.large
+    Layout.minimumHeight: units.iconSizes.large
 
     Plasmoid.fullRepresentation: Item {
 
-        Layout.minimumWidth: units.gridUnit * 3
-        Layout.minimumHeight: units.gridUnit * 3
+        // sizing taken from digital clock
+        readonly property int _minimumWidth: monthView.showWeekNumbers ? Math.round(_minimumHeight * 1.75) : Math.round(_minimumHeight * 1.5)
+        readonly property int _minimumHeight: units.gridUnit * 14
+
+        Layout.minimumWidth: _minimumWidth
+        Layout.minimumHeight: _minimumHeight
+        Layout.preferredWidth: _minimumWidth
+        Layout.preferredHeight: Math.round(_minimumHeight * 1.5)
 
         PlasmaCore.DataSource {
             id: dataSource
             engine: "time"
             connectedSources: ["Local"]
-            interval: 30000
+            interval: 60000
+            intervalAlignment: PlasmaCore.Types.AlignToMinute
         }
 
         MonthView {
