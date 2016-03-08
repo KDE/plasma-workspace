@@ -26,6 +26,7 @@
 #include <QScreen>
 #include <QQmlEngine>
 #include <QClipboard>
+#include <QPlatformSurfaceEvent>
 
 #include <KWindowSystem>
 #include <KWindowEffects>
@@ -188,7 +189,13 @@ bool View::event(QEvent *event)
     // to fix this in 5.4, but till then we must explicitly overwrite it
     // each time.
     const bool retval = Dialog::event(event);
-    if (event->type() != QEvent::DeferredDelete) {
+    bool setState = event->type() == QEvent::Show;
+    if (event->type() == QEvent::PlatformSurface) {
+        if (auto e = dynamic_cast<QPlatformSurfaceEvent*>(event)) {
+            setState = e->surfaceEventType() == QPlatformSurfaceEvent::SurfaceCreated;
+        }
+    }
+    if (setState) {
         KWindowSystem::setState(winId(), NET::SkipTaskbar | NET::SkipPager | NET::KeepAbove | NET::StaysOnTop);
     }
     return retval;
