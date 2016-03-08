@@ -1,5 +1,5 @@
 [Desktop Entry]
-Name=System Tray (Experimental)
+Name=System Tray
 Comment=Access hidden applications minimized in the system tray
 Comment[ast]=Accede a aplicaciones anubríes y minimizaes na bandexa'l sistema
 Comment[be@latin]=Dostup da schavanych u systemnym trei aplikacyjaŭ
@@ -81,7 +81,7 @@ X-Plasma-API=declarativeappletscript
 X-Plasma-MainScript=ui/main.qml
 X-KDE-PluginInfo-Author=Marco Martin
 X-KDE-PluginInfo-Email=mart@kde.org
-X-KDE-PluginInfo-Name=org.kde.plasma.systemtray.experimental
+X-KDE-PluginInfo-Name=org.kde.plasma.systemtray
 X-KDE-PluginInfo-Version=1.0
 X-KDE-PluginInfo-Website=http://plasma.kde.org/
 X-KDE-PluginInfo-Category=Windows and Tasks

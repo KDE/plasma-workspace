@@ -1,5 +1,5 @@
 
-plasma_install_package(package org.kde.plasma.systemtray.experimental)
+plasma_install_package(package org.kde.plasma.systemtray)
 
 set(systemtraycontainer_SRCS
     systemtraycontainer.cpp
