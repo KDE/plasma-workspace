@@ -152,9 +152,8 @@ void ShellManager::registerHandler(QObject * handler)
 
 void ShellManager::deregisterHandler(QObject * handler)
 {
-    if (d->handlers.contains(handler)) {
-        d->handlers.removeAll(handler);
-
+    const int removed = d->handlers.removeAll(handler);
+    if (removed > 0) {
         handler->disconnect(this);
     }
 
