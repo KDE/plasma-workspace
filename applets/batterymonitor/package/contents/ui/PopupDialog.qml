@@ -102,19 +102,6 @@ FocusScope {
             }
         }
 
-        PlasmaExtras.Heading {
-            anchors {
-                left: parent.left
-                leftMargin: -Math.round(units.gridUnit / 2)
-                right: parent.right
-            }
-            level: 3
-            opacity: 0.6
-            visible: !isKeyboardBrightnessAvailable && !isBrightnessAvailable
-            text: i18n("No screen or keyboard brightness controls available")
-            wrapMode: Text.Wrap
-        }
-
         PowerManagementItem {
             id: pmSwitch
             width: parent.width
