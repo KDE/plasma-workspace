@@ -1,6 +1,6 @@
 /*
  *   Copyright 2011 Viranch Mehta <viranch.mehta@gmail.com>
- *   Copyright 2013, 2014 Kai Uwe Broulik <kde@privat.broulik.de>
+ *   Copyright 2013-2016 Kai Uwe Broulik <kde@privat.broulik.de>
  *
  *   This program is free software; you can redistribute it and/or modify
  *   it under the terms of the GNU Library General Public License as

@@ -1,7 +1,7 @@
 /*
  *   Copyright 2011 Sebastian Kügler <sebas@kde.org>
  *   Copyright 2012 Viranch Mehta <viranch.mehta@gmail.com>
- *   Copyright 2014, 2015 Kai Uwe Broulik <kde@privat.broulik.de>
+ *   Copyright 2014-2016 Kai Uwe Broulik <kde@privat.broulik.de>
  *
  *   This program is free software; you can redistribute it and/or modify
  *   it under the terms of the GNU Library General Public License as
@@ -19,25 +19,6 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-var powermanagementDisabled = false;
-
-function plasmoidStatus() {
-    var status = PlasmaCore.Types.PassiveStatus;
-    if (powermanagementDisabled) {
-        status = PlasmaCore.Types.ActiveStatus;
-    }
-
-    if (pmSource.data["Battery"]["Has Cumulative"]) {
-        if (pmSource.data["Battery"]["State"] !== "Charging" && pmSource.data["Battery"]["Percent"] <= 5) {
-            status = PlasmaCore.Types.NeedsAttentionStatus
-        } else if (pmSource.data["Battery"]["State"] !== "FullyCharged") {
-            status = PlasmaCore.Types.ActiveStatus
-        }
-    }
-
-    return status;
-}
-
 function stringForBatteryState(batteryData) {
     if (batteryData["Plugged in"]) {
         switch(batteryData["State"]) {
@@ -48,30 +29,6 @@ function stringForBatteryState(batteryData) {
         }
     } else {
         return i18nc("Battery is currently not present in the bay","Not present");
-    }
-}
-
-function updateTooltip(remainingTime) {
-    if (powermanagementDisabled) {
-        batteries.tooltipSubText = i18n("Power management is disabled");
-    } else {
-        batteries.tooltipSubText = "";
-    }
-
-    if (batteries.count === 0) {
-        batteries.tooltipMainText = i18n("No Batteries Available");
-    } else if (pmSource.data["Battery"]["State"] === "FullyCharged") {
-        batteries.tooltipMainText = i18n("Fully Charged");
-    } else if (pmSource.data["AC Adapter"] && pmSource.data["AC Adapter"]["Plugged in"]) {
-        batteries.tooltipMainText = i18n("%1%. Charging", pmSource.data["Battery"]["Percent"])
-    } else {
-        if (remainingTime > 0) {
-            batteries.tooltipMainText = i18nc("%1 is remaining time, %2 is percentage", "%1 Remaining (%2%)",
-                                              KCoreAddons.Format.formatDuration(remainingTime, KCoreAddons.FormatTypes.HideSeconds),
-                                              pmSource.data["Battery"]["Percent"])
-        } else {
-            batteries.tooltipMainText = i18n("%1% Battery Remaining", pmSource.data["Battery"]["Percent"]);
-        }
     }
 }
 

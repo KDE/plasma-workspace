@@ -35,8 +35,40 @@ Item {
     LayoutMirroring.enabled: Qt.application.layoutDirection == Qt.RightToLeft
     LayoutMirroring.childrenInherit: true
 
-    Plasmoid.toolTipMainText: batteries.tooltipMainText
-    Plasmoid.toolTipSubText: batteries.tooltipSubText
+    Plasmoid.status: {
+        if (powermanagementDisabled) {
+            return PlasmaCore.Types.ActiveStatus
+        }
+
+        if (pmSource.data.Battery["Has Cumulative"]) {
+            if (pmSource.data.Battery.State !== "Charging" && pmSource.data.Battery.Percent <= 5) {
+                return PlasmaCore.Types.NeedsAttentionStatus
+            } else if (pmSource.data["Battery"]["State"] !== "FullyCharged") {
+                return PlasmaCore.Types.ActiveStatus
+            }
+        }
+
+        return PlasmaCore.Types.PassiveStatus
+    }
+
+    Plasmoid.toolTipMainText: {
+        if (batteries.count === 0) {
+            return i18n("No Batteries Available");
+        } else if (pmSource.data["Battery"]["State"] === "FullyCharged") {
+            return i18n("Fully Charged");
+        } else if (pmSource.data["AC Adapter"] && pmSource.data["AC Adapter"]["Plugged in"]) {
+            return i18n("%1%. Charging", pmSource.data["Battery"]["Percent"])
+        } else {
+            if (remainingTime > 0) {
+                return i18nc("%1 is remaining time, %2 is percentage", "%1 Remaining (%2%)",
+                             KCoreAddons.Format.formatDuration(remainingTime, KCoreAddons.FormatTypes.HideSeconds),
+                             pmSource.data["Battery"]["Percent"])
+            } else {
+                return i18n("%1% Battery Remaining", pmSource.data["Battery"]["Percent"]);
+            }
+        }
+    }
+    Plasmoid.toolTipSubText: powermanagementDisabled ? i18n("Power management is disabled") : ""
     Plasmoid.icon: "battery"
 
     property bool disableBrightnessUpdate: false
@@ -48,6 +80,8 @@ Item {
     readonly property int maximumKeyboardBrightness: pmSource.data["PowerDevil"] ? pmSource.data["PowerDevil"]["Maximum Keyboard Brightness"] || 0 : 0
 
     readonly property int remainingTime: Number(pmSource.data["Battery"]["Remaining msec"])
+
+    property bool powermanagementDisabled: false
 
     property var inhibitions: []
 
@@ -82,8 +116,6 @@ Item {
         plasmoid.removeAction("configure");
         plasmoid.setAction("powerdevilkcm", i18n("&Configure Power Saving..."), "preferences-system-power-management");
         Logic.updateInhibitions(batterymonitor, pmSource)
-        plasmoid.status = Logic.plasmoidStatus()
-        Logic.updateTooltip(batterymonitor.remainingTime)
     }
 
     Plasmoid.compactRepresentation: CompactRepresentation {
@@ -132,9 +164,7 @@ Item {
         }
         onDataChanged: {
             Logic.updateBrightness(batterymonitor, pmSource)
-            Logic.updateTooltip(batterymonitor.remainingTime)
             Logic.updateInhibitions(batterymonitor, pmSource)
-            plasmoid.status = Logic.plasmoidStatus()
         }
     }
 
@@ -151,9 +181,6 @@ Item {
                 sourceFilter: "Battery[0-9]+"
             }
         }
-
-        property string tooltipMainText
-        property string tooltipSubText
     }
 
     Plasmoid.fullRepresentation: PopupDialog {
@@ -207,9 +234,7 @@ Item {
                     cookie2 = job.result;
                 });
             }
-            Logic.powermanagementDisabled = !checked;
-            Logic.updateTooltip(batterymonitor.remainingTime)
-            plasmoid.status = Logic.plasmoidStatus()
+            batterymonitor.powermanagementDisabled = !checked
         }
     }
 }
