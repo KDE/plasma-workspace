@@ -183,7 +183,7 @@ MouseArea {
     //Main Layout
     Flow {
         id: tasksRow
-        spacing: units.smallSpacing
+        spacing: 0
         height: parent.height - (vertical ? expander.height : 0)
         width: parent.width  - (vertical ? 0 : expander.width)
         property string skipItems
@@ -191,6 +191,7 @@ MouseArea {
         //To make it look centered
         y: vertical ? 0 : (height % root.itemSize) / 2
         x: vertical ? (width % root.itemSize) / 2 : 0
+
         //make last icon appeared nearer to the tasskbar
         //TODO: Qt 5.6 will have functions for it
         function addItem(item) {
