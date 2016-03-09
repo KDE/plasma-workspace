@@ -86,7 +86,7 @@ void SystemTrayContainer::constraintsEvent(Plasma::Types::Constraints constraint
         }
 
         if (!m_innerContainment) {
-            m_innerContainment = c->createContainment("org.kde.plasma.private.systemtray");
+            m_innerContainment = c->createContainment("org.kde.plasma.private.systemtray", QVariantList() << "org.kde.plasma:force-create");
             config().writeEntry("SystrayContainmentId", m_innerContainment->id());
         }
 
