@@ -84,7 +84,7 @@ ColumnLayout {
 
                         if (item.toLowerCase().indexOf(text.toLowerCase()) === 0) {
                             var oldText = text
-                            text = item
+                            text = text + item.substr(oldText.length)
                             select(text.length, oldText.length)
                             break
                         }
