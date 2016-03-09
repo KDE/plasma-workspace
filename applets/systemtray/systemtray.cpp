@@ -158,6 +158,7 @@ void SystemTray::showPlasmoidMenu(QQuickItem *appletInterface)
     connect(this, &QObject::destroyed, desktopMenu, &QMenu::close);
     desktopMenu->setAttribute(Qt::WA_DeleteOnClose);
 
+    emit applet->contextualActionsAboutToShow();
     foreach (QAction *action, applet->contextualActions()) {
         if (action) {
             desktopMenu->addAction(action);
@@ -196,6 +197,7 @@ void SystemTray::showPlasmoidMenu(QQuickItem *appletInterface)
         if (systrayApplet->containment() && applet->status() >= Plasma::Types::ActiveStatus) {
             QMenu *containmentMenu = new QMenu(i18nc("%1 is the name of the containment", "%1 Options", systrayApplet->containment()->title()), desktopMenu);
 
+            emit systrayApplet->containment()->contextualActionsAboutToShow();
             foreach (QAction *action, systrayApplet->containment()->contextualActions()) {
                 if (action) {
                     containmentMenu->addAction(action);
