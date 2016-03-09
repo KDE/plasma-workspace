@@ -36,10 +36,14 @@ public slots:
     Q_SCRIPTABLE Q_NOREPLY void watchDir(const QString &path);
 
 private slots:
+    void created(const QString &path);
     void dirty(const QString &path);
 
 private:
+    void checkDesktopLocation();
+
     KDirWatch *dirWatch;
+    QUrl m_desktopLocation;
 };
 
 #endif

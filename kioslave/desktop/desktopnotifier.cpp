@@ -37,16 +37,27 @@ K_PLUGIN_FACTORY_WITH_JSON(DesktopNotifierFactory,
 DesktopNotifier::DesktopNotifier(QObject *parent, const QList<QVariant> &)
     : KDEDModule(parent)
 {
+    m_desktopLocation = QUrl::fromLocalFile(QStandardPaths::writableLocation(QStandardPaths::DesktopLocation));
+
     dirWatch = new KDirWatch(this);
     dirWatch->addDir(QStandardPaths::writableLocation(QStandardPaths::DesktopLocation));
     dirWatch->addDir(QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + '/' + "Trash/files");
+    dirWatch->addFile(QStandardPaths::writableLocation(QStandardPaths::ConfigLocation) + QStringLiteral("/user-dirs.dirs"));
 
+    connect(dirWatch, &KDirWatch::created, this, &DesktopNotifier::created);
     connect(dirWatch, &KDirWatch::dirty, this, &DesktopNotifier::dirty);
 }
 
 void DesktopNotifier::watchDir(const QString &path)
 {
     dirWatch->addDir(path);
+}
+
+void DesktopNotifier::created(const QString &path)
+{
+    if (path == QStandardPaths::writableLocation(QStandardPaths::ConfigLocation) + QStringLiteral("/user-dirs.dirs")){
+        checkDesktopLocation();
+    }
 }
 
 void DesktopNotifier::dirty(const QString &path)
@@ -57,12 +68,24 @@ void DesktopNotifier::dirty(const QString &path)
         // Trigger an update of the trash icon
         if (QFile::exists(QStandardPaths::writableLocation(QStandardPaths::DesktopLocation) + "/trash.desktop"))
             org::kde::KDirNotify::emitFilesChanged(QList<QUrl>() << QUrl(QStringLiteral("desktop:/trash.desktop")));
+    } else if (path == QStandardPaths::writableLocation(QStandardPaths::ConfigLocation) + QStringLiteral("/user-dirs.dirs")){
+        checkDesktopLocation();
     } else {
         // Emitting FilesAdded forces a re-read of the dir
         KUrl url("desktop:/");
         url.addPath(KUrl::relativePath(QStandardPaths::writableLocation(QStandardPaths::DesktopLocation), path));
         url.cleanPath();
         org::kde::KDirNotify::emitFilesAdded(url);
+    }
+}
+
+void DesktopNotifier::checkDesktopLocation()
+{
+    const QUrl &currentLocation = QUrl::fromLocalFile(QStandardPaths::writableLocation(QStandardPaths::DesktopLocation));
+
+    if (m_desktopLocation != currentLocation) {
+        m_desktopLocation = currentLocation;
+        org::kde::KDirNotify::emitFilesChanged(QList<QUrl>() << QUrl(QStringLiteral("desktop:/")));
     }
 }
 
