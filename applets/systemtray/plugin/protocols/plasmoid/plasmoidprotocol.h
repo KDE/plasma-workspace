@@ -62,10 +62,11 @@ protected Q_SLOTS:
 
 private Q_SLOTS:
     void serviceNameFetchFinished(QDBusPendingCallWatcher* watcher, const QDBusConnection &connection);
-    void serviceRegistered(const QString &service);
-    void serviceUnregistered(const QString &service);
+    void serviceOwnerChanged(const QString &serviceName, const QString &oldOwner, const QString &newOwner);
 
 private:
+    void serviceRegistered(const QString &service);
+    void serviceUnregistered(const QString &service);
     void initDBusActivatables();
     void newDBusActivatableTask(const QString &pluginName, const QString &dbusService);
     QHash<QString, PlasmoidTask*> m_tasks;

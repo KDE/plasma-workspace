@@ -38,7 +38,6 @@
 
 #include <QDBusConnection>
 #include <QDBusConnectionInterface>
-#include <QDBusServiceWatcher>
 #include <QDBusPendingCallWatcher>
 #include <QRegExp>
 
@@ -306,15 +305,17 @@ void PlasmoidProtocol::serviceNameFetchFinished(QDBusPendingCallWatcher* watcher
     // not just compare them
     // This makes mpris work, since it wants to match org.mpris.MediaPlayer2.dragonplayer
     // against org.mpris.MediaPlayer2
-    QDBusServiceWatcher *serviceWatcher = new QDBusServiceWatcher(QString(),
-                                                connection,
-                                                QDBusServiceWatcher::WatchForOwnerChange,
-                                                this);
-    connect(serviceWatcher, &QDBusServiceWatcher::serviceRegistered, this, &PlasmoidProtocol::serviceRegistered);
-    connect(serviceWatcher, &QDBusServiceWatcher::serviceUnregistered, this, &PlasmoidProtocol::serviceUnregistered);
+    connect(connection.interface(), &QDBusConnectionInterface::serviceOwnerChanged, this, &PlasmoidProtocol::serviceOwnerChanged);
 }
 
-
+void PlasmoidProtocol::serviceOwnerChanged(const QString &serviceName, const QString &oldOwner, const QString &newOwner)
+{
+    if (oldOwner.isEmpty()) {
+        serviceRegistered(serviceName);
+    } else if (newOwner.isEmpty()) {
+        serviceUnregistered(serviceName);
+    }
+}
 
 void PlasmoidProtocol::serviceRegistered(const QString &service)
 {
