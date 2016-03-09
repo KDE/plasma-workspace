@@ -37,7 +37,7 @@ Item {
 
     Plasmoid.toolTipMainText: batteries.tooltipMainText
     Plasmoid.toolTipSubText: batteries.tooltipSubText
-    Plasmoid.icon: batteries.tooltipImage
+    Plasmoid.icon: "battery"
 
     property bool disableBrightnessUpdate: false
 
@@ -154,7 +154,6 @@ Item {
 
         property string tooltipMainText
         property string tooltipSubText
-        property string tooltipImage
     }
 
     Plasmoid.fullRepresentation: PopupDialog {
