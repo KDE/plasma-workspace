@@ -59,17 +59,12 @@ function updateTooltip(remainingTime) {
     }
 
     if (batteries.count === 0) {
-        batteries.tooltipImage = "battery-missing";
         batteries.tooltipMainText = i18n("No Batteries Available");
     } else if (pmSource.data["Battery"]["State"] === "FullyCharged") {
-        batteries.tooltipImage = "battery-100";
         batteries.tooltipMainText = i18n("Fully Charged");
     } else if (pmSource.data["AC Adapter"] && pmSource.data["AC Adapter"]["Plugged in"]) {
-        batteries.tooltipImage = "battery-charging"
         batteries.tooltipMainText = i18n("%1%. Charging", pmSource.data["Battery"]["Percent"])
     } else {
-        batteries.tooltipImage = "battery-discharging"
-
         if (remainingTime > 0) {
             batteries.tooltipMainText = i18nc("%1 is remaining time, %2 is percentage", "%1 Remaining (%2%)",
                                               KCoreAddons.Format.formatDuration(remainingTime, KCoreAddons.FormatTypes.HideSeconds),
