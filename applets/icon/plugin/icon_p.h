@@ -59,6 +59,8 @@ Q_SIGNALS:
     void jumpListActionsChanged(const QVariantList &jumpListActions);
 
 private:
+    void setUrlInternal(const QUrl &url);
+
     QUrl m_url;
     QString m_name;
     QString m_icon;
