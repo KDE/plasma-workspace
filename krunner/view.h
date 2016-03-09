@@ -27,6 +27,13 @@ namespace KDeclarative {
     class QmlObject;
 }
 
+namespace KWayland {
+    namespace Client {
+        class PlasmaShell;
+        class PlasmaShellSurface;
+    }
+}
+
 class ViewPrivate;
 
 class View : public PlasmaQuick::Dialog
@@ -76,6 +83,7 @@ protected Q_SLOTS:
 
 private:
     void writeHistory();
+    void initWayland();
 
     QPoint m_customPos;
     KDeclarative::QmlObject *m_qmlObj;
@@ -83,6 +91,8 @@ private:
     qreal m_offset;
     bool m_floating : 1;
     QStringList m_history;
+    KWayland::Client::PlasmaShell *m_plasmaShell;
+    KWayland::Client::PlasmaShellSurface *m_plasmaShellSurface;
 };
 
 
