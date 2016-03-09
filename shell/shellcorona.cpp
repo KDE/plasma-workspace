@@ -1120,7 +1120,7 @@ void ShellCorona::toggleActivityManager()
     foreach (DesktopView *view, m_views) {
         if (view->screen()->geometry().contains(cursorPos)) {
             //The view QML has to provide something to display the activity explorer
-            view->rootObject()->metaObject()->invokeMethod(view->rootObject(), "toggleActivityManager");
+            view->rootObject()->metaObject()->invokeMethod(view->rootObject(), "toggleActivityManager", Qt::QueuedConnection);
             return;
         }
     }
