@@ -27,7 +27,6 @@
 #include <QDBusConnection>
 #include <QDBusConnectionInterface>
 #include <QDBusPendingCallWatcher>
-#include <QDBusServiceWatcher>
 #include <QMenu>
 #include <QQuickItem>
 #include <QQuickWindow>
@@ -518,15 +517,21 @@ void SystemTray::serviceNameFetchFinished(QDBusPendingCallWatcher* watcher, cons
     // not just compare them
     // This makes mpris work, since it wants to match org.mpris.MediaPlayer2.dragonplayer
     // against org.mpris.MediaPlayer2
-    QDBusServiceWatcher *serviceWatcher = new QDBusServiceWatcher(QString(),
-                                                connection,
-                                                QDBusServiceWatcher::WatchForOwnerChange,
-                                                this);
-    connect(serviceWatcher, &QDBusServiceWatcher::serviceRegistered, this, &SystemTray::serviceRegistered);
-    connect(serviceWatcher, &QDBusServiceWatcher::serviceUnregistered, this, &SystemTray::serviceUnregistered);
+    // QDBusServiceWatcher is not capable for watching wildcard service right now
+    // See:
+    // https://bugreports.qt.io/browse/QTBUG-51683
+    // https://bugreports.qt.io/browse/QTBUG-33829
+    connect(connection.interface(), &QDBusConnectionInterface::serviceOwnerChanged, this, &SystemTray::serviceOwnerChanged);
 }
 
-
+void SystemTray::serviceOwnerChanged(const QString &serviceName, const QString &oldOwner, const QString &newOwner)
+{
+    if (oldOwner.isEmpty()) {
+        serviceRegistered(serviceName);
+    } else if (newOwner.isEmpty()) {
+        serviceUnregistered(serviceName);
+    }
+}
 
 void SystemTray::serviceRegistered(const QString &service)
 {

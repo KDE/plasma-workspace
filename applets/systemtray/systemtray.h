@@ -89,6 +89,9 @@ public:
 
 private Q_SLOTS:
     void serviceNameFetchFinished(QDBusPendingCallWatcher* watcher, const QDBusConnection &connection);
+    void serviceOwnerChanged(const QString &serviceName, const QString &oldOwner, const QString &newOwner);
+
+private:
     void serviceRegistered(const QString &service);
     void serviceUnregistered(const QString &service);
 
