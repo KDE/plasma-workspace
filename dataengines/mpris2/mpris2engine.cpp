@@ -20,7 +20,6 @@
 
 #include <QDBusConnection>
 #include <QDBusConnectionInterface>
-#include <QDBusServiceWatcher>
 #include <QDBusPendingCallWatcher>
 #include <QDBusPendingReply>
 #include <QStringList>
@@ -39,10 +38,7 @@ Mpris2Engine::Mpris2Engine(QObject* parent,
 {
     Q_UNUSED(args)
 
-    QDBusServiceWatcher *serviceWatcher = new QDBusServiceWatcher(
-            QString(), QDBusConnection::sessionBus(),
-            QDBusServiceWatcher::WatchForOwnerChange, this);
-    connect(serviceWatcher, &QDBusServiceWatcher::serviceOwnerChanged,
+    connect(QDBusConnection::sessionBus().interface(), &QDBusConnectionInterface::serviceOwnerChanged,
             this,           &Mpris2Engine::serviceOwnerChanged);
 
     QDBusPendingCall async = QDBusConnection::sessionBus().interface()->asyncCall(QStringLiteral("ListNames"));
