@@ -21,16 +21,18 @@
 #ifndef SYSTEMTRAY_H
 #define SYSTEMTRAY_H
 
-
+#include <QAbstractItemModel>
 #include <Plasma/Containment>
 
 class QDBusPendingCallWatcher;
 class QDBusConnection;
 class QQuickItem;
+class PlasmoidModel;
 
 class SystemTray : public Plasma::Containment
 {
     Q_OBJECT
+    Q_PROPERTY(QAbstractItemModel* availablePlasmoids READ availablePlasmoids CONSTANT)
     Q_PROPERTY(QStringList allowedPlasmoids READ allowedPlasmoids WRITE setAllowedPlasmoids NOTIFY allowedPlasmoidsChanged)
     Q_PROPERTY(QStringList defaultPlasmoids READ defaultPlasmoids CONSTANT)
 
@@ -44,6 +46,8 @@ public:
     void restorePlasmoids();
 
     QStringList defaultPlasmoids() const;
+
+    QAbstractItemModel* availablePlasmoids();
 
     QStringList allowedPlasmoids() const;
     void setAllowedPlasmoids(const QStringList &allowed);
@@ -94,6 +98,7 @@ Q_SIGNALS:
 private:
     void initDBusActivatables();
     QStringList m_allowedPlasmoids;
+    PlasmoidModel *m_availablePlasmoidsModel;
     QHash<QString, int> m_knownPlugins;
     QHash<QString, QString> m_dbusActivatableTasks;
     QHash<QString, int> m_dbusServiceCounts;

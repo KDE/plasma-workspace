@@ -33,6 +33,7 @@
 #include <QQuickWindow>
 #include <QRegExp>
 #include <QScreen>
+#include <QStandardItemModel>
 
 #include <Plasma/PluginLoader>
 #include <Plasma/ServiceJob>
@@ -44,8 +45,24 @@
 
 Q_LOGGING_CATEGORY(SYSTEMTRAY, "systemtray")
 
+class PlasmoidModel: public QStandardItemModel
+{
+public:
+    PlasmoidModel(QObject *parent = 0)
+        : QStandardItemModel(parent)
+    {
+    }
+
+    QHash<int, QByteArray> roleNames() const override {
+        QHash<int, QByteArray> roles = QStandardItemModel::roleNames();
+        roles[Qt::UserRole+1] = "plugin";
+        return roles;
+    }
+};
+
 SystemTray::SystemTray(QObject *parent, const QVariantList &args)
-    : Plasma::Containment(parent, args)
+    : Plasma::Containment(parent, args),
+      m_availablePlasmoidsModel(nullptr)
 {
     setHasConfigurationInterface(true);
     setContainmentType(Plasma::Types::CustomPanelContainment);
@@ -409,6 +426,35 @@ QStringList SystemTray::defaultPlasmoids() const
     }
 
     return ret;
+}
+
+QAbstractItemModel* SystemTray::availablePlasmoids()
+{
+    if (!m_availablePlasmoidsModel) {
+        m_availablePlasmoidsModel = new PlasmoidModel(this);
+
+        //Filter X-Plasma-NotificationArea
+        KPluginInfo::List applets;
+        for (auto info : Plasma::PluginLoader::self()->listAppletInfo(QString())) {
+            if (info.property(QStringLiteral("X-Plasma-NotificationArea")) == "true") {
+                applets << info;
+            }
+        }
+
+        foreach (const KPluginInfo &info, applets) {
+            QString name = info.name();
+            KService::Ptr service = info.service();
+            const QString dbusactivation = info.property(QStringLiteral("X-Plasma-DBusActivationService")).toString();
+
+            if (!dbusactivation.isEmpty()) {
+                name += i18n(" (Automatic load)");
+            }
+            QStandardItem *item = new QStandardItem(QIcon::fromTheme(info.icon()), name);
+            item->setData(info.pluginName());
+            m_availablePlasmoidsModel->appendRow(item);
+        }
+    }
+    return m_availablePlasmoidsModel;
 }
 
 QStringList SystemTray::allowedPlasmoids() const

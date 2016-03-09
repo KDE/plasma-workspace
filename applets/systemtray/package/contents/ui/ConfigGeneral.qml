@@ -103,7 +103,7 @@ Item {
                 visible: false
             }
             Repeater {
-                model: host.availablePlasmoids
+                model: plasmoid.nativeInterface.availablePlasmoids
                 delegate: QtControls.CheckBox {
                     QtLayouts.Layout.minimumWidth: childrenRect.width
                     checked: cfg_extraItems.indexOf(plugin) != -1
