@@ -38,6 +38,7 @@
 
 #include <KIO/Global>
 #include <KIO/DropJob>
+#include <KIO/StatJob>
 #include <KJobWidgets>
 
 IconPrivate::IconPrivate() {
@@ -47,6 +48,23 @@ IconPrivate::~IconPrivate() {
 }
 
 void IconPrivate::setUrl(const QUrl &url)
+{
+    if (url.isLocalFile()) {
+        setUrlInternal(url);
+    } else {
+        KIO::StatJob *statJob = KIO::mostLocalUrl(url, KIO::HideProgressInfo);
+
+        connect(statJob, &KJob::result, [=](KJob *job) {
+            if (!job->error()) {
+                setUrlInternal(static_cast<KIO::StatJob*>(job)->mostLocalUrl());
+            }
+        });
+
+        statJob->start();
+    }
+}
+
+void IconPrivate::setUrlInternal(const QUrl &url)
 {
     m_url = url;
 
