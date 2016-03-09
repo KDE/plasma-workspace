@@ -27,8 +27,6 @@ import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.kquickcontrolsaddons 2.0
 import org.kde.kquickcontrols 2.0 as KQC
 
-import org.kde.private.systemtray 2.0 as SystemTray
-
 QtLayouts.GridLayout {
     id: iconsPage
 

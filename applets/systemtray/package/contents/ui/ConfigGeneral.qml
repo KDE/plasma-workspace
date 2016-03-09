@@ -26,8 +26,6 @@ import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.kquickcontrolsaddons 2.0
 
-import org.kde.private.systemtray 2.0 as SystemTray
-
 Item {
     id: iconsPage
 
@@ -44,10 +42,6 @@ Item {
     property alias cfg_hardwareControlShown: hardwareControl.checked
     property alias cfg_miscellaneousShown: miscellaneous.checked
     property var cfg_extraItems: []
-
-    SystemTray.Host {
-        id: host
-    }
 
     SystemPalette {
         id: palette
