@@ -142,6 +142,7 @@ ColumnLayout {
         QtControls.Button {
             id: colorButton
             width: units.gridUnit * 3
+            text: " " // needed to it gets a proper height...
             onClicked: colorDialog.open()
 
             Rectangle {
