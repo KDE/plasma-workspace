@@ -596,7 +596,9 @@ void ShellCorona::loadDefaultLayout()
                 [](const QString &msg) {
                     qDebug() << msg;
                 });
-        scriptEngine.evaluateScript(code);
+        if (!scriptEngine.evaluateScript(code, script)) {
+            qWarning() << "failed to initialize layout properly:" << script;
+        }
     }
 }
 
@@ -656,7 +658,6 @@ QRegion ShellCorona::availableScreenRegion(int id) const
         return s ? s->availableGeometry() : QRegion();
     }
     DesktopView *view = m_views[id];
-    const QRect screenGeo(view->geometry());
 
     QRegion r = view->geometry();
     foreach (const PanelView *v, m_panelViews) {
@@ -678,7 +679,6 @@ QRect ShellCorona::availableScreenRect(int id) const
     }
 
     DesktopView *view = m_views[id];
-    const QRect screenGeo(view->geometry());
 
     QRect r = view->geometry();
     foreach (PanelView *v, m_panelViews) {
@@ -1667,17 +1667,12 @@ void ShellCorona::insertContainment(const QString &activity, int screenNum, Plas
         return;
     }
 
-    Q_ASSERT(!m_desktopContainments[activity].values().contains(containment));
+    Q_ASSERT(!m_desktopContainments.value(activity).values().contains(containment));
 
     if (cont) {
-        //containment should always be valid, it's been known to get in a mess
-        //so guard anyway
-        Q_ASSERT(cont);
-        if (cont) {
-            disconnect(cont, SIGNAL(destroyed(QObject*)),
-                   this, SLOT(desktopContainmentDestroyed(QObject*)));
-            cont->destroy();
-        }
+        disconnect(cont, SIGNAL(destroyed(QObject*)),
+                this, SLOT(desktopContainmentDestroyed(QObject*)));
+        cont->destroy();
     }
     m_desktopContainments[activity][screenNum] = containment;
 
