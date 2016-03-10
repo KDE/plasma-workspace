@@ -59,7 +59,7 @@ View::View(QWindow *)
     initWayland();
     setClearBeforeRendering(true);
     setColor(QColor(Qt::transparent));
-    setFlags(Qt::FramelessWindowHint);
+    setFlags(Qt::FramelessWindowHint | Qt::WindowStaysOnTopHint);
 
     KCrash::setFlags(KCrash::AutoRestart);
 
@@ -229,7 +229,7 @@ bool View::event(QEvent *event)
         }
     }
     if (setState) {
-        KWindowSystem::setState(winId(), NET::SkipTaskbar | NET::SkipPager | NET::KeepAbove | NET::StaysOnTop);
+        KWindowSystem::setState(winId(), NET::SkipTaskbar | NET::SkipPager);
     }
 
     if (m_plasmaShell && event->type() == QEvent::PlatformSurface) {
@@ -261,7 +261,6 @@ bool View::event(QEvent *event)
 void View::showEvent(QShowEvent *event)
 {
     KWindowSystem::setOnAllDesktops(winId(), true);
-    KWindowSystem::setState(winId(), NET::KeepAbove);
     Dialog::showEvent(event);
     positionOnScreen();
     requestActivate();
