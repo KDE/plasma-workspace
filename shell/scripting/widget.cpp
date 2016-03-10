@@ -128,6 +128,8 @@ int Widget::index() const
 
 void Widget::setIndex(int index)
 {
+    Q_UNUSED(index)
+    /*
     if (!d->applet) {
         return;
     }
@@ -137,7 +139,6 @@ void Widget::setIndex(int index)
     if (!c) {
         return;
     }
-/*
     //FIXME: this is hackish. would be nice to define this for gridlayouts too
     QGraphicsLinearLayout *layout = dynamic_cast<QGraphicsLinearLayout *>(c->layout());
     if (!layout) {
@@ -158,6 +159,7 @@ QRectF Widget::geometry() const
 
 void Widget::setGeometry(const QRectF &geometry)
 {
+    Q_UNUSED(geometry)
     /*if (d->applet) {
         d->applet.data()->setGeometry(geometry);
         KConfigGroup cg = d->applet.data()->config().parent();
