@@ -57,8 +57,7 @@ AbstractItem {
 
         anchors {
             left: parent.left
-            top: parent.top
-            bottom: parent.bottom
+            verticalCenter: parent.verticalCenter
         }
     }
 
