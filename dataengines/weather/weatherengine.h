@@ -66,7 +66,7 @@ public:
     WeatherEngine(QObject *parent, const QVariantList &args);
 
     // Destructor
-    ~WeatherEngine();
+    ~WeatherEngine() override;
 
     // initialization
     void init();
@@ -83,7 +83,7 @@ protected:
      * Reimplemented from Plasma::DataEngine. We use it to communicate to the Ion plugins to set the data sources.
      * @param source The datasource name.
      */
-    bool sourceRequestEvent(const QString &source);
+    bool sourceRequestEvent(const QString &source) override;
 
 protected Q_SLOTS:
     /**
@@ -109,7 +109,7 @@ protected Q_SLOTS:
      * Reimplemented from Plasma::DataEngine.
      * @param source The datasource to update.
      */
-    bool updateSourceEvent(const QString& source);
+    bool updateSourceEvent(const QString& source) override;
 
     /**
      * Whenever networking changes, take action

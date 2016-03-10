@@ -48,73 +48,73 @@ public:
     TaskItem(QObject *parent, Task *item);
     /** Creates a taskitem for a startuptask*/
     TaskItem(QObject *parent, Startup *item);
-    ~TaskItem();
+    ~TaskItem() override;
     /** Sets the taskpointer after the startup pointer */
     void setTaskPointer(Task *task);
     /** Returns a pointer to the  Task; may be NULL */
     Task *task() const;
 
-    WindowList winIds() const;
+    WindowList winIds() const override;
 
     Startup *startup() const;
-    ItemType itemType() const;
+    ItemType itemType() const override;
     /**
     * @deprecated: use itemType() instead
     **/
-    TASKMANAGER_DEPRECATED bool isGroupItem() const;
+    TASKMANAGER_DEPRECATED bool isGroupItem() const override;
 
-    QIcon icon() const;
+    QIcon icon() const override;
 
-    QString name() const;
+    QString name() const override;
     QString taskName() const;
 
     QStringList activities() const;
     QStringList activityNames(bool includeCurrent = true) const;
 
-    bool isStartupItem() const;
-    bool isOnCurrentDesktop() const;
-    bool isOnAllDesktops() const;
-    int desktop() const;
-    bool isShaded() const;
-    bool isMaximized() const;
-    bool isMinimized() const;
-    bool isFullScreen() const;
-    bool isKeptBelowOthers() const;
-    bool isAlwaysOnTop() const;
-    bool isActive() const;
-    bool demandsAttention() const;
-    bool isActionSupported(NET::Action) const;
-    void addMimeData(QMimeData *mimeData) const;
+    bool isStartupItem() const override;
+    bool isOnCurrentDesktop() const override;
+    bool isOnAllDesktops() const override;
+    int desktop() const override;
+    bool isShaded() const override;
+    bool isMaximized() const override;
+    bool isMinimized() const override;
+    bool isFullScreen() const override;
+    bool isKeptBelowOthers() const override;
+    bool isAlwaysOnTop() const override;
+    bool isActive() const override;
+    bool demandsAttention() const override;
+    bool isActionSupported(NET::Action) const override;
+    void addMimeData(QMimeData *mimeData) const override;
     void setLauncherUrl(const QUrl &url);
     void setLauncherUrl(const AbstractGroupableItem *item);
-    QUrl launcherUrl() const;
+    QUrl launcherUrl() const override;
     static QUrl launcherUrlFromTask(GroupManager *groupManager, Task *task, Startup *startup = 0);
     static bool launcherUrlIsKnown(const QUrl &url);
     static QIcon launcherIconFromUrl(const QUrl &url);
     void resetLauncherCheck();
 
 public Q_SLOTS:
-    void toDesktop(int);
+    void toDesktop(int) override;
 
-    void setShaded(bool);
-    void toggleShaded();
+    void setShaded(bool) override;
+    void toggleShaded() override;
 
-    void setMaximized(bool);
-    void toggleMaximized();
+    void setMaximized(bool) override;
+    void toggleMaximized() override;
 
-    void setMinimized(bool);
-    void toggleMinimized();
+    void setMinimized(bool) override;
+    void toggleMinimized() override;
 
-    void setFullScreen(bool);
-    void toggleFullScreen();
+    void setFullScreen(bool) override;
+    void toggleFullScreen() override;
 
-    void setKeptBelowOthers(bool);
-    void toggleKeptBelowOthers();
+    void setKeptBelowOthers(bool) override;
+    void toggleKeptBelowOthers() override;
 
-    void setAlwaysOnTop(bool);
-    void toggleAlwaysOnTop();
+    void setAlwaysOnTop(bool) override;
+    void toggleAlwaysOnTop() override;
 
-    void close();
+    void close() override;
     void taskDestroyed();
 
 Q_SIGNALS:

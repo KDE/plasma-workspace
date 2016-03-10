@@ -45,7 +45,7 @@ class ImageSizeFinder : public QObject, public QRunnable
     Q_OBJECT
     public:
         ImageSizeFinder(const QString &path, QObject *parent = 0);
-        void run();
+        void run() override;
 
     Q_SIGNALS:
         void sizeFound(const QString &path, const QSize &size);
@@ -74,11 +74,11 @@ public:
     static const int MARGIN = 6;
 
     BackgroundListModel(Image *listener, QObject *parent);
-    virtual ~BackgroundListModel();
+    ~BackgroundListModel() override;
 
-    virtual QHash<int, QByteArray> roleNames() const Q_DECL_OVERRIDE;
-    virtual int rowCount(const QModelIndex &parent = QModelIndex()) const Q_DECL_OVERRIDE;
-    virtual QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const Q_DECL_OVERRIDE ;
+    QHash<int, QByteArray> roleNames() const Q_DECL_OVERRIDE;
+    int rowCount(const QModelIndex &parent = QModelIndex()) const Q_DECL_OVERRIDE;
+    QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const Q_DECL_OVERRIDE ;
     bool setData(const QModelIndex& index, const QVariant& value, int role = Qt::EditRole) Q_DECL_OVERRIDE;
     KPackage::Package package(int index) const;
 
@@ -126,7 +126,7 @@ class BackgroundFinder : public QThread
 
 public:
     BackgroundFinder(Image *wallpaper, const QStringList &p);
-    ~BackgroundFinder();
+    ~BackgroundFinder() override;
 
     QString token() const;
 
@@ -136,7 +136,7 @@ Q_SIGNALS:
     void backgroundsFound(const QStringList &paths, const QString &token);
 
 protected:
-    void run();
+    void run() override;
 
 private:
     QStringList m_paths;

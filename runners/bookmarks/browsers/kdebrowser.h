@@ -30,7 +30,7 @@ class KDEFavicon : public Favicon {
     Q_OBJECT
 public:
     KDEFavicon(QObject *parent = 0);
-    virtual QIcon iconFor(const QString &url);
+    QIcon iconFor(const QString &url) override;
 
 };
 
@@ -39,10 +39,10 @@ class KDEBrowser : public QObject, public Browser
     Q_OBJECT
 public:
     explicit KDEBrowser(QObject *parent = 0);
-    virtual QList<BookmarkMatch> match(const QString& term, bool addEverything);
+    QList<BookmarkMatch> match(const QString& term, bool addEverything) override;
 
 public Q_SLOTS:
-    virtual void teardown() {}
+    void teardown() override {}
 
 private:
     KBookmarkManager * const m_bookmarkManager;

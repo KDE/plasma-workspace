@@ -36,7 +36,7 @@ class ShellManager: public QObject {
     Q_OBJECT
 public:
     static ShellManager * instance();
-    ~ShellManager();
+    ~ShellManager() override;
 
     static bool s_forceWindowed;
     static bool s_standaloneOption;

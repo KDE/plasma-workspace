@@ -47,7 +47,7 @@ public:
     QDBusObjectPath trackId() const;
 
     Plasma::ServiceJob* createJob(const QString& operation,
-                                  QMap<QString,QVariant>& parameters);
+                                  QMap<QString,QVariant>& parameters) override;
 
 Q_SIGNALS:
     void enabledOperationsChanged();

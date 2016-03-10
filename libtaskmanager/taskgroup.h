@@ -43,11 +43,11 @@ class TASKMANAGER_EXPORT TaskGroup : public AbstractGroupableItem
 public:
     TaskGroup(GroupManager *parent, const QString& name);
     TaskGroup(GroupManager *parent);
-    ~TaskGroup();
+    ~TaskGroup() override;
 
     GroupManager *manager() const;
     ItemList members() const;
-    WindowList winIds() const;
+    WindowList winIds() const override;
     WindowList directMemberwinIds() const;
 
     AbstractGroupableItem *getMemberByWId(WId id);
@@ -55,17 +55,17 @@ public:
     //including subgroups
     int totalSize();
 
-    QIcon icon() const;
+    QIcon icon() const override;
     void setIcon(const QIcon &icon);
 
-    QString name() const;
+    QString name() const override;
     void setName(const QString &newName);
 
-    ItemType itemType() const;
+    ItemType itemType() const override;
     /**
     * @deprecated: use itemType() instead
     **/
-    TASKMANAGER_DEPRECATED bool isGroupItem() const;
+    TASKMANAGER_DEPRECATED bool isGroupItem() const override;
     bool isRootGroup() const;
 
     /** only true if item is in this group */
@@ -75,22 +75,22 @@ public:
     /** Returns Direct Member group if the passed item is in a subgroup */
     AbstractGroupableItem * directMember(AbstractGroupableItem *) const;
 
-    int desktop() const;
-    bool isShaded() const;
-    bool isMaximized() const;
-    bool isMinimized() const;
-    bool isFullScreen() const;
-    bool isKeptBelowOthers() const;
-    bool isAlwaysOnTop() const;
-    bool isActionSupported(NET::Action) const;
+    int desktop() const override;
+    bool isShaded() const override;
+    bool isMaximized() const override;
+    bool isMinimized() const override;
+    bool isFullScreen() const override;
+    bool isKeptBelowOthers() const override;
+    bool isAlwaysOnTop() const override;
+    bool isActionSupported(NET::Action) const override;
     /** returns true if at least one member is active */
-    bool isActive() const;
+    bool isActive() const override;
     /** returns true if at least one member is demands attention */
-    bool demandsAttention() const;
-    bool isOnAllDesktops() const;
-    bool isOnCurrentDesktop() const;
-    void addMimeData(QMimeData *mimeData) const;
-    QUrl launcherUrl() const;
+    bool demandsAttention() const override;
+    bool isOnAllDesktops() const override;
+    bool isOnCurrentDesktop() const override;
+    void addMimeData(QMimeData *mimeData) const override;
+    QUrl launcherUrl() const override;
 
     /**
      * Sorting strategies may use this to move items around
@@ -101,28 +101,28 @@ public:
 
 public Q_SLOTS:
     /** the following are functions which perform the corresponding actions on all member tasks */
-    void toDesktop(int);
+    void toDesktop(int) override;
 
-    void setShaded(bool);
-    void toggleShaded();
+    void setShaded(bool) override;
+    void toggleShaded() override;
 
-    void setMaximized(bool);
-    void toggleMaximized();
+    void setMaximized(bool) override;
+    void toggleMaximized() override;
 
-    void setMinimized(bool);
-    void toggleMinimized();
+    void setMinimized(bool) override;
+    void toggleMinimized() override;
 
-    void setFullScreen(bool);
-    void toggleFullScreen();
+    void setFullScreen(bool) override;
+    void toggleFullScreen() override;
 
-    void setKeptBelowOthers(bool);
-    void toggleKeptBelowOthers();
+    void setKeptBelowOthers(bool) override;
+    void toggleKeptBelowOthers() override;
 
-    void setAlwaysOnTop(bool);
-    void toggleAlwaysOnTop();
+    void setAlwaysOnTop(bool) override;
+    void toggleAlwaysOnTop() override;
 
     /** close all members of this group */
-    void close();
+    void close() override;
 
     /** add item to group */
     void add(AbstractGroupableItem *item, int insertIndex = -1);

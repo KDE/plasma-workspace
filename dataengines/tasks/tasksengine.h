@@ -54,11 +54,11 @@ class TasksEngine : public Plasma::DataEngine
 
     public:
         TasksEngine(QObject *parent, const QVariantList &args);
-        ~TasksEngine();
-        Plasma::Service *serviceForSource(const QString &name);
+        ~TasksEngine() override;
+        Plasma::Service *serviceForSource(const QString &name) override;
 
     protected:
-        bool sourceRequestEvent(const QString &source);
+        bool sourceRequestEvent(const QString &source) override;
 
     private:
         friend class TaskSource;

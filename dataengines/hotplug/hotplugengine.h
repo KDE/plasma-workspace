@@ -39,9 +39,9 @@ class HotplugEngine : public Plasma::DataEngine
 
     public:
         HotplugEngine( QObject* parent, const QVariantList& args);
-        ~HotplugEngine();
+        ~HotplugEngine() override;
         void init();
-        Plasma::Service* serviceForSource(const QString& source);
+        Plasma::Service* serviceForSource(const QString& source) override;
 
     protected Q_SLOTS:
         void onDeviceAdded(const QString &udi);

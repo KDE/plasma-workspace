@@ -33,10 +33,10 @@ class DictEngine: public Plasma::DataEngine
 
     public:
         DictEngine( QObject* parent, const QVariantList& args );
-        ~DictEngine();
+        ~DictEngine() override;
 
     protected:
-        bool sourceRequestEvent(const QString &word);
+        bool sourceRequestEvent(const QString &word) override;
 
     private Q_SLOTS:
         void getDefinition();

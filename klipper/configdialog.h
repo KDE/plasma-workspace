@@ -88,7 +88,7 @@ class AdvancedWidget : public QWidget
 
 public:
     explicit AdvancedWidget( QWidget* parent = 0L );
-    ~AdvancedWidget();
+    ~AdvancedWidget() override;
 
     void setWMClasses( const QStringList& items );
     QStringList wmClasses() const;
@@ -103,15 +103,15 @@ class ConfigDialog : public KConfigDialog
 
 public:
     ConfigDialog( QWidget* parent, KConfigSkeleton* config, const Klipper* klipper, KActionCollection* collection );
-    ~ConfigDialog();
+    ~ConfigDialog() override;
 
 private:
     // reimp
-    void updateWidgets();
+    void updateWidgets() override;
     // reimp
-    void updateSettings();
+    void updateSettings() override;
     // reimp
-    void updateWidgetsDefault();
+    void updateWidgetsDefault() override;
 
 private:
     GeneralWidget* m_generalPage;

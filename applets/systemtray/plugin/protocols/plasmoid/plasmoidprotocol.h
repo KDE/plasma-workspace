@@ -45,9 +45,9 @@ class PlasmoidProtocol : public Protocol
     friend class PlasmoidTask;
 public:
     PlasmoidProtocol(QObject *parent);
-    ~PlasmoidProtocol();
+    ~PlasmoidProtocol() override;
 
-    void init();
+    void init() override;
     void restorePlasmoids();
 
     QStringList allowedPlugins() const;

@@ -45,7 +45,7 @@ class FaviconProvider : public QObject
         /**
          * Destroys the favicon provider.
          */
-        ~FaviconProvider();
+        ~FaviconProvider() override;
 
         /**
          * Returns the requested image.

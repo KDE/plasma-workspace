@@ -28,13 +28,13 @@ class RemoteProtocol : public KIO::SlaveBase
 public:
 	RemoteProtocol(const QByteArray &protocol, const QByteArray &pool,
 	               const QByteArray &app);
-	virtual ~RemoteProtocol();
-	virtual void listDir(const QUrl &url);
-	virtual void stat(const QUrl &url);
-	virtual void del(const QUrl &url, bool isFile);
-	virtual void get(const QUrl &url);
-	virtual void rename(const QUrl &src, const QUrl &dest, KIO::JobFlags flags);
-	virtual void symlink(const QString &target, const QUrl &dest, KIO::JobFlags flags);
+	~RemoteProtocol() override;
+	void listDir(const QUrl &url) override;
+	void stat(const QUrl &url) override;
+	void del(const QUrl &url, bool isFile) override;
+	void get(const QUrl &url) override;
+	void rename(const QUrl &src, const QUrl &dest, KIO::JobFlags flags) override;
+	void symlink(const QString &target, const QUrl &dest, KIO::JobFlags flags) override;
 
 private:
 	void listRoot();

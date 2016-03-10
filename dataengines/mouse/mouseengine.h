@@ -36,13 +36,13 @@ class MouseEngine : public Plasma::DataEngine
 
 public:
     MouseEngine(QObject* parent, const QVariantList& args);
-    ~MouseEngine();
+    ~MouseEngine() override;
 
-    QStringList sources() const;
+    QStringList sources() const override;
 
 protected:
     void init();
-    void timerEvent(QTimerEvent*);
+    void timerEvent(QTimerEvent*) override;
 
 private Q_SLOTS:
     void updateCursorName(const QString &name);

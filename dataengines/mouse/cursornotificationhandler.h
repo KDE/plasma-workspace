@@ -31,7 +31,7 @@ class CursorNotificationHandler : public QWidget
 
 public:
     CursorNotificationHandler();
-    ~CursorNotificationHandler();
+    ~CursorNotificationHandler() override;
 
     QString cursorName();
 

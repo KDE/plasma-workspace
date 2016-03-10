@@ -57,9 +57,9 @@ public:
         UnknownOperation
     };
 
-    void start();
+    void start() override;
 
-    virtual QString errorString() const;
+    QString errorString() const override;
 
 private Q_SLOTS:
     void callFinished(QDBusPendingCallWatcher*);

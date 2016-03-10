@@ -30,8 +30,8 @@ class DeviceServiceAction : public DeviceAction
 {
 public:
     DeviceServiceAction();
-    virtual QString id() const;
-    virtual void execute(Solid::Device &device);
+    QString id() const override;
+    void execute(Solid::Device &device) override;
 
     void setService(const KServiceAction& service);
     KServiceAction service() const;

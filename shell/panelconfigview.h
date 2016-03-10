@@ -52,19 +52,19 @@ class PanelConfigView : public PlasmaQuick::ConfigView
 
 public:
     PanelConfigView(Plasma::Containment *interface, PanelView *panelView, QWindow *parent = 0);
-    virtual ~PanelConfigView();
+    ~PanelConfigView() override;
 
-    void init();
+    void init() override;
 
     PanelView::VisibilityMode visibilityMode() const;
     void setVisibilityMode(PanelView::VisibilityMode mode);
 
 protected:
-    void showEvent(QShowEvent *ev);
-    void hideEvent(QHideEvent *ev);
-    void focusOutEvent(QFocusEvent *ev);
-    void moveEvent(QMoveEvent *ev);
-    bool event(QEvent *e);
+    void showEvent(QShowEvent *ev) override;
+    void hideEvent(QHideEvent *ev) override;
+    void focusOutEvent(QFocusEvent *ev) override;
+    void moveEvent(QMoveEvent *ev) override;
+    bool event(QEvent *e) override;
 
 public Q_SLOTS:
     void showAddWidgetDialog();

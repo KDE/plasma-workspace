@@ -40,7 +40,7 @@ class TasksProxyModel : public QSortFilterProxyModel
 
 public:
     TasksProxyModel(QObject *parent = nullptr);
-    virtual ~TasksProxyModel() = default;
+    ~TasksProxyModel() override = default;
 
     enum class Category {
         NoTasksCategory,
@@ -54,7 +54,7 @@ public:
     Category category() const;
     void setCategory(Category category);
 
-    virtual bool filterAcceptsRow(int sourceRow, const QModelIndex &sourceParent) const override;
+    bool filterAcceptsRow(int sourceRow, const QModelIndex &sourceParent) const override;
 
 private Q_SLOTS:
     void reset();

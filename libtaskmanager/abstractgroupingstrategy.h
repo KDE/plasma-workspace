@@ -45,7 +45,7 @@ class TASKMANAGER_EXPORT AbstractGroupingStrategy : public QObject
     Q_OBJECT
 public:
     AbstractGroupingStrategy(GroupManager *groupManager);
-    virtual ~AbstractGroupingStrategy();
+    ~AbstractGroupingStrategy() override;
 
     /**
      * Whether the grouping strategy will undo the current group topology

@@ -41,7 +41,7 @@ class FetchSqlite : public QObject
     Q_OBJECT
 public:
     explicit FetchSqlite(const QString &originalFile, const QString &copyTo, QObject *parent = 0);
-    ~FetchSqlite();
+    ~FetchSqlite() override;
     void prepare();
     void teardown();
     QList<QVariantMap> query(const QString &sql, QMap<QString,QVariant> bindObjects);

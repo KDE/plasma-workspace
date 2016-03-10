@@ -57,7 +57,7 @@ class TASKMANAGER_EXPORT AbstractGroupableItem : public QObject
     Q_OBJECT
 public:
     AbstractGroupableItem(QObject *parent);
-    virtual ~AbstractGroupableItem();
+    ~AbstractGroupableItem() override;
 
     virtual QIcon icon() const;
     virtual QString name() const;

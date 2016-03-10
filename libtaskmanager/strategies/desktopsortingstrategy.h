@@ -39,10 +39,10 @@ public:
     DesktopSortingStrategy(QObject *parent);
 protected Q_SLOTS:
     /** Handles a new item*/
-    virtual void handleItem(AbstractGroupableItem *);
+    void handleItem(AbstractGroupableItem *) override;
 private:
     /** Sorts list of items according to strategy*/
-    void sortItems(ItemList&);
+    void sortItems(ItemList&) override;
     static bool lessThan(const AbstractGroupableItem *left, const AbstractGroupableItem *right);
     static bool lessThanSeperateLaunchers(const AbstractGroupableItem *left, const AbstractGroupableItem *right);
 };

@@ -40,12 +40,12 @@ class WaylandDialogFilter : public QObject
     Q_OBJECT
 public:
     WaylandDialogFilter(ShellCorona *c, QWindow *parent = 0);
-    ~WaylandDialogFilter();
+    ~WaylandDialogFilter() override;
 
     static void install(QWindow *dialog, ShellCorona *c);
 
 protected:
-    bool eventFilter(QObject *watched, QEvent *event);
+    bool eventFilter(QObject *watched, QEvent *event) override;
 
 private:
     void setupWaylandIntegration(ShellCorona *c);

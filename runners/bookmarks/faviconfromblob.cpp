@@ -41,7 +41,7 @@
 class StaticQuery : public BuildQuery {
 public:
     StaticQuery(const QString &query) : m_query(query) {}
-    virtual QString query(QSqlDatabase *database) const {
+    QString query(QSqlDatabase *database) const override {
       Q_UNUSED(database);
       return m_query;
     }
@@ -52,7 +52,7 @@ private:
 class ChromeQuery : public BuildQuery {
 public:
     ChromeQuery() {}
-    virtual QString query(QSqlDatabase *database) const {
+    QString query(QSqlDatabase *database) const override {
       //qDebug() << "tables: " << database->tables();
       if(database->tables().contains(QStringLiteral("favicon_bitmaps")))
 	return QStringLiteral("SELECT * FROM favicons " \

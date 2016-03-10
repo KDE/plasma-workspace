@@ -32,12 +32,12 @@ class PumpJob : public KIO::Job
 
     public:
         PumpJob(int interval = 0);
-        virtual ~PumpJob();
+        ~PumpJob() override;
 
-        virtual void start();
-        virtual bool doKill();
-        virtual bool doSuspend();
-        virtual bool doResume();
+        void start() override;
+        bool doKill() override;
+        bool doSuspend() override;
+        bool doResume() override;
 
         virtual bool isSuspended() const;
 

@@ -37,7 +37,7 @@ public:
     }
 
     void start()
-    {
+    override {
         m_model->requestSetup(m_index);
     }
 

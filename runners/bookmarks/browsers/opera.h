@@ -33,10 +33,10 @@ class Opera : public QObject, public Browser
 Q_OBJECT
 public:
     Opera(QObject* parent = 0);
-    virtual QList<BookmarkMatch> match(const QString& term, bool addEverything);
+    QList<BookmarkMatch> match(const QString& term, bool addEverything) override;
 public Q_SLOTS:
-    virtual void prepare();
-    virtual void teardown();
+    void prepare() override;
+    void teardown() override;
 private:
     QStringList m_operaBookmarkEntries;
     Favicon * const m_favicon;

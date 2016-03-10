@@ -35,9 +35,9 @@ class TaskListModel : public QAbstractListModel
 
 public:
     TaskListModel(QObject *parent = 0);
-    virtual QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const;
-    virtual int rowCount(const QModelIndex &parent= QModelIndex()) const;
-    virtual QHash< int, QByteArray > roleNames() const;
+    QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
+    int rowCount(const QModelIndex &parent= QModelIndex()) const override;
+    QHash< int, QByteArray > roleNames() const override;
 
     QList<Task*> tasks() const;
 

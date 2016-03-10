@@ -44,7 +44,7 @@ public:
     enum State { NotLoaded, Loading, Loaded, Failed, FailedToStart };
 
     BacktraceGenerator(const Debugger & debugger, QObject *parent);
-    ~BacktraceGenerator();
+    ~BacktraceGenerator() override;
 
     State state() const {
         return m_state;

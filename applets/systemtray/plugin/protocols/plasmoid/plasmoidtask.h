@@ -61,18 +61,18 @@ class PlasmoidTask : public Task
 
 public:
     PlasmoidTask(const QString &packageName, int appletId, Plasma::Containment *cont, QObject *parent);
-    ~PlasmoidTask();
+    ~PlasmoidTask() override;
 
     bool isValid() const;
-    bool isEmbeddable() const;
-    virtual QString taskId() const;
-    virtual QQuickItem* taskItem();
-    virtual QQuickItem* taskItemExpanded();
-    virtual QIcon icon() const;
-    virtual bool isWidget() const;
-    virtual TaskType type() const { return TypePlasmoid; };
-    virtual bool expanded() const;
-    virtual void setExpanded(bool expanded);
+    bool isEmbeddable() const override;
+    QString taskId() const override;
+    QQuickItem* taskItem() override;
+    QQuickItem* taskItemExpanded() override;
+    QIcon icon() const override;
+    bool isWidget() const override;
+    TaskType type() const override { return TypePlasmoid; };
+    bool expanded() const override;
+    void setExpanded(bool expanded) override;
 
     QString iconName() const { return m_iconName; }
     KPluginInfo pluginInfo() const;

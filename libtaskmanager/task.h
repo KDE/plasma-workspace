@@ -91,7 +91,7 @@ public:
     };
 
     Task(WId win, QObject *parent, const char *name = 0);
-    virtual ~Task();
+    ~Task() override;
 
     WId window() const;
     KWindowInfo info() const;
@@ -437,7 +437,7 @@ Q_SIGNALS:
 
 protected:
     void findWindowFrameId();
-    void timerEvent(QTimerEvent *event);
+    void timerEvent(QTimerEvent *event) override;
     //* @internal */
     void refreshIcon();
     void refreshActivities();

@@ -35,8 +35,8 @@ public:
     virtual void setGeometry(const QRect &rect);
 
 protected:
-    virtual void keyPressEvent(QKeyEvent *event);
-    virtual void mousePressEvent(QMouseEvent *event);
+    void keyPressEvent(QKeyEvent *event) override;
+    void mousePressEvent(QMouseEvent *event) override;
 
 private:
     int m_stage;

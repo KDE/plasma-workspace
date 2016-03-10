@@ -33,7 +33,7 @@ class AlternativesHelper : public QObject
 
 public:
     AlternativesHelper(Plasma::Applet *applet, QObject *parent = 0);
-    ~AlternativesHelper();
+    ~AlternativesHelper() override;
 
     QQuickItem *applet() const;
     QStringList appletProvides() const;

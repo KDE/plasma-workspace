@@ -32,13 +32,13 @@ class Geolocation : public Plasma::DataEngine
 
     public:
         Geolocation(QObject* parent, const QVariantList& args);
-        virtual ~Geolocation();
+        ~Geolocation() override;
         virtual void init();
-        virtual QStringList sources() const;
+        QStringList sources() const override;
 
     protected:
-        bool sourceRequestEvent(const QString &name);
-        bool updateSourceEvent(const QString& name);
+        bool sourceRequestEvent(const QString &name) override;
+        bool updateSourceEvent(const QString& name) override;
         bool updatePlugins(GeolocationProvider::UpdateTriggers triggers);
 
     protected Q_SLOTS:

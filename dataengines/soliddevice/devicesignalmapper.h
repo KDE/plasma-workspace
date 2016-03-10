@@ -44,7 +44,7 @@ class DeviceSignalMapper : public QSignalMapper
 
     public:
         DeviceSignalMapper(QObject *parent=0);
-        ~DeviceSignalMapper();
+        ~DeviceSignalMapper() override;
         
         void setMapping(QObject* device, const QString &udi);
 
@@ -61,7 +61,7 @@ class BatterySignalMapper : public DeviceSignalMapper
 
     public:
         BatterySignalMapper(QObject *parent=0);
-        ~BatterySignalMapper();
+        ~BatterySignalMapper() override;
 
     public Q_SLOTS:
         void chargePercentChanged(int value);
@@ -75,7 +75,7 @@ class StorageAccessSignalMapper : public DeviceSignalMapper
 
     public:
         StorageAccessSignalMapper(QObject *parent=0);
-        ~StorageAccessSignalMapper();
+        ~StorageAccessSignalMapper() override;
 
     public Q_SLOTS:
         void accessibilityChanged(bool accessible);

@@ -37,12 +37,12 @@ class ActivitySortingStrategy: public AbstractSortingStrategy
 
 public:
     ActivitySortingStrategy(QObject *parent);
-    virtual ~ActivitySortingStrategy();
+    ~ActivitySortingStrategy() override;
 
-    void sortItems(ItemList& items);
+    void sortItems(ItemList& items) override;
 
 protected Q_SLOTS:
-    void handleItem(AbstractGroupableItem *item);
+    void handleItem(AbstractGroupableItem *item) override;
     void checkChanges(::TaskManager::TaskChanges changes, ::TaskManager::AbstractGroupableItem *item = 0);
 
 private:

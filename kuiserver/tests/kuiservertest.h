@@ -33,16 +33,16 @@ class KJobTest
 
 public:
     KJobTest(int numberOfSeconds = 5);
-    ~KJobTest();
+    ~KJobTest() override;
 
-    void start();
+    void start() override;
 
 private Q_SLOTS:
     void timerTimeout();
     void updateMessage();
 
 protected:
-    bool doSuspend();
+    bool doSuspend() override;
 
 private:
     QTimer *timer, *clockTimer;

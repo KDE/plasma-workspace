@@ -30,14 +30,14 @@ class HistoryURLItem : public HistoryItem
 {
 public:
     HistoryURLItem( const QList<QUrl>& urls, KUrlMimeData::MetaDataMap metaData, bool cut );
-    virtual QString text() const;
-    virtual bool operator==( const HistoryItem& rhs) const;
-    virtual QMimeData* mimeData() const;
+    QString text() const override;
+    bool operator==( const HistoryItem& rhs) const override;
+    QMimeData* mimeData() const override;
 
     /**
      * Write object on datastream
      */
-    virtual void write( QDataStream& stream ) const;
+    void write( QDataStream& stream ) const override;
 private:
     QList<QUrl> m_urls;
     KUrlMimeData::MetaDataMap m_metaData;

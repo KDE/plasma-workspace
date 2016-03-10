@@ -40,7 +40,7 @@ public:
 
 private:
     /** Sorts list of items according to strategy*/
-    void sortItems(ItemList&);
+    void sortItems(ItemList&) override;
 };
 
 } // TaskManager namespace

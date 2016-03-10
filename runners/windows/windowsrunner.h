@@ -29,10 +29,10 @@ class WindowsRunner : public Plasma::AbstractRunner
 
     public:
         WindowsRunner(QObject* parent, const QVariantList &args);
-        ~WindowsRunner();
+        ~WindowsRunner() override;
 
-        virtual void match(Plasma::RunnerContext& context);
-        virtual void run(const Plasma::RunnerContext& context, const Plasma::QueryMatch& match);
+        void match(Plasma::RunnerContext& context) override;
+        void run(const Plasma::RunnerContext& context, const Plasma::QueryMatch& match) override;
 
     private Q_SLOTS:
         void prepareForMatchSession();

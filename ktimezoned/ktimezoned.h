@@ -34,14 +34,14 @@ class KTimeZoned : public KTimeZonedBase
 
 public:
     KTimeZoned(QObject *parent, const QList<QVariant>&);
-    ~KTimeZoned();
+    ~KTimeZoned() override;
 
 private Q_SLOTS:
     void updateLocalZone();
     void zonetabChanged();
 
 private:
-    void init(bool restart);
+    void init(bool restart) override;
     bool findZoneTab(const QString &pathFromConfig);
 
     KDirWatch *m_dirWatch;       // watcher for timezone config changes

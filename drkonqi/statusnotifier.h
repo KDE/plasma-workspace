@@ -32,7 +32,7 @@ class StatusNotifier : public QObject
 
 public:
     explicit StatusNotifier(QObject *parent = nullptr);
-    virtual ~StatusNotifier();
+    ~StatusNotifier() override;
 
     void notify();
 

@@ -39,10 +39,10 @@ class BugzillaLoginPage: public ReportAssistantPage
 
 public:
     explicit BugzillaLoginPage(ReportAssistantDialog *);
-    ~BugzillaLoginPage();
+    ~BugzillaLoginPage() override;
 
-    void aboutToShow();
-    bool isComplete();
+    void aboutToShow() override;
+    bool isComplete() override;
 
 private Q_SLOTS:
     void bugzillaVersionFound();
@@ -77,11 +77,11 @@ class BugzillaInformationPage : public ReportAssistantPage
 public:
     explicit BugzillaInformationPage(ReportAssistantDialog *);
 
-    void aboutToShow();
-    void aboutToHide();
+    void aboutToShow() override;
+    void aboutToHide() override;
 
-    bool isComplete();
-    bool showNextPage();
+    bool isComplete() override;
+    bool showNextPage() override;
 
 private Q_SLOTS:
     void showTitleExamples();
@@ -110,7 +110,7 @@ class BugzillaPreviewPage : public ReportAssistantPage
 public:
     explicit BugzillaPreviewPage(ReportAssistantDialog *);
 
-    void aboutToShow();
+    void aboutToShow() override;
 
 private:
     Ui::AssistantPageBugzillaPreview    ui;
@@ -124,7 +124,7 @@ class BugzillaSendPage : public ReportAssistantPage
 public:
     explicit BugzillaSendPage(ReportAssistantDialog *);
 
-    void aboutToShow();
+    void aboutToShow() override;
 
 private Q_SLOTS:
     void sent(int);

@@ -63,14 +63,14 @@ class DBusSystemTrayTask : public Task
 
 public:
     DBusSystemTrayTask(const QString &name, Plasma::DataEngine *service, QObject *parent);
-    ~DBusSystemTrayTask();
+    ~DBusSystemTrayTask() override;
 
     bool isValid() const;
-    bool isEmbeddable() const;
-    virtual QString taskId() const;
-    virtual QIcon icon() const;
-    virtual bool isWidget() const;
-    virtual TaskType type() const { return TypeStatusItem; }
+    bool isEmbeddable() const override;
+    QString taskId() const override;
+    QIcon icon() const override;
+    bool isWidget() const override;
+    TaskType type() const override { return TypeStatusItem; }
 
     QString iconName() const { return m_iconName; }
     QIcon   attIcon() const { return m_attentionIcon; }

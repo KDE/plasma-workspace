@@ -70,16 +70,16 @@ public:
     };
 
     explicit TasksModel(GroupManager *groupManager, QObject *parent = 0);
-    ~TasksModel();
+    ~TasksModel() override;
 
     QHash<int, QByteArray> roleNames() const override;
 
-    QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const;
-    QModelIndex index(int row, int column, const QModelIndex &parent = QModelIndex()) const;
-    QModelIndex parent(const QModelIndex &index) const;
-    int columnCount(const QModelIndex &parent = QModelIndex()) const;
+    QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
+    QModelIndex index(int row, int column, const QModelIndex &parent = QModelIndex()) const override;
+    QModelIndex parent(const QModelIndex &index) const override;
+    int columnCount(const QModelIndex &parent = QModelIndex()) const override;
 
-    Q_INVOKABLE int rowCount(const QModelIndex &parent = QModelIndex()) const;
+    Q_INVOKABLE int rowCount(const QModelIndex &parent = QModelIndex()) const override;
     Q_INVOKABLE int launcherCount() const;
 
     Q_INVOKABLE int activeTaskId(TaskGroup *group = 0) const;

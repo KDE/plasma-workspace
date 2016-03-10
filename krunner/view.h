@@ -45,7 +45,7 @@ class View : public PlasmaQuick::Dialog
 
 public:
     explicit View(QWindow *parent = 0);
-    virtual ~View();
+    ~View() override;
 
     void positionOnScreen();
 
@@ -59,8 +59,8 @@ Q_SIGNALS:
     void historyChanged();
 
 protected:
-    virtual bool event(QEvent* event);
-    virtual void showEvent(QShowEvent *event);
+    bool event(QEvent* event) override;
+    void showEvent(QShowEvent *event) override;
 
 public Q_SLOTS:
     void display();

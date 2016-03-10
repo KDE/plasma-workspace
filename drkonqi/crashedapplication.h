@@ -29,7 +29,7 @@ class CrashedApplication : public QObject
 {
     Q_OBJECT
 public:
-    virtual ~CrashedApplication();
+    ~CrashedApplication() override;
 
     /** Returns the crashed program's name, possibly translated (ex. "The KDE Crash Handler") */
     QString name() const;

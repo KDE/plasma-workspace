@@ -63,7 +63,7 @@ class Panel : public Containment
 
 public:
     Panel(Plasma::Containment *containment, QObject *parent = 0);
-    ~Panel();
+    ~Panel() override;
 
     QString location() const;
     void setLocation(const QString &location);
@@ -94,9 +94,9 @@ public Q_SLOTS:
     void showConfigurationInterface() { Containment::showConfigurationInterface(); }
 
     // from the applet interface
-    QVariant readConfig(const QString &key, const QVariant &def = QString()) const { return Applet::readConfig(key, def); }
-    void writeConfig(const QString &key, const QVariant &value) { Applet::writeConfig(key, value); }
-    void reloadConfig() { Applet::reloadConfig(); }
+    QVariant readConfig(const QString &key, const QVariant &def = QString()) const override { return Applet::readConfig(key, def); }
+    void writeConfig(const QString &key, const QVariant &value) override { Applet::writeConfig(key, value); }
+    void reloadConfig() override { Applet::reloadConfig(); }
 
 private:
     PanelView *panel() const;

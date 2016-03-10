@@ -30,7 +30,7 @@ class Paste : public Plasma::ContainmentActions
     public:
         Paste(QObject* parent, const QVariantList& args);
 
-        QList<QAction*> contextualActions();
+        QList<QAction*> contextualActions() override;
 
     private Q_SLOTS:
         void doPaste();

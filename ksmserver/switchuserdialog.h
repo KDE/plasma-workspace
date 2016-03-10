@@ -31,7 +31,7 @@ class KSMSwitchUserDialog : public QQuickView
 
 public:
     explicit KSMSwitchUserDialog(KDisplayManager *dm, QWindow *parent = nullptr);
-    virtual ~KSMSwitchUserDialog() = default;
+    ~KSMSwitchUserDialog() override = default;
 
     void exec();
 

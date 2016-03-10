@@ -56,7 +56,7 @@ class Containment : public Applet
 
 public:
     Containment(Plasma::Containment *containment, QObject *parent = 0);
-    ~Containment();
+    ~Containment() override;
 
     uint id() const;
     QString type() const;
@@ -68,7 +68,7 @@ public:
 
     int screen() const;
 
-    Plasma::Applet *applet() const;
+    Plasma::Applet *applet() const override;
     Plasma::Containment *containment() const;
 
     QString wallpaperPlugin() const;
@@ -85,13 +85,13 @@ public Q_SLOTS:
     void showConfigurationInterface();
 
     // from the applet interface
-    QVariant readConfig(const QString &key, const QVariant &def = QString()) const { return Applet::readConfig(key, def); }
-    void writeConfig(const QString &key, const QVariant &value) { Applet::writeConfig(key, value); }
+    QVariant readConfig(const QString &key, const QVariant &def = QString()) const override { return Applet::readConfig(key, def); }
+    void writeConfig(const QString &key, const QVariant &value) override { Applet::writeConfig(key, value); }
 
-    QVariant readGlobalConfig(const QString &key, const QVariant &def = QString()) const { return Applet::readGlobalConfig(key, def); }
-    void writeGlobalConfig(const QString &key, const QVariant &value) { Applet::writeGlobalConfig(key, value); }
+    QVariant readGlobalConfig(const QString &key, const QVariant &def = QString()) const override { return Applet::readGlobalConfig(key, def); }
+    void writeGlobalConfig(const QString &key, const QVariant &value) override { Applet::writeGlobalConfig(key, value); }
 
-    void reloadConfig() { Applet::reloadConfig(); }
+    void reloadConfig() override { Applet::reloadConfig(); }
 
 private:
     class Private;

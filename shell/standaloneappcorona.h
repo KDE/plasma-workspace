@@ -37,11 +37,11 @@ class StandaloneAppCorona : public Plasma::Corona
 
 public:
     explicit StandaloneAppCorona(const QString &coronaPlugin, QObject * parent = 0);
-    ~StandaloneAppCorona();
+    ~StandaloneAppCorona() override;
 
-    QRect screenGeometry(int id) const;
+    QRect screenGeometry(int id) const override;
 
-    void loadDefaultLayout();
+    void loadDefaultLayout() override;
 
     Plasma::Containment *createContainmentForActivity(const QString& activity, int screenNum);
 
@@ -57,7 +57,7 @@ public Q_SLOTS:
     void toggleWidgetExplorer();
 
 protected Q_SLOTS:
-    int screenForContainment(const Plasma::Containment *containment) const;
+    int screenForContainment(const Plasma::Containment *containment) const override;
 
 private:
     QString m_coronaPlugin;

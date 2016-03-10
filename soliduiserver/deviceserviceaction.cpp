@@ -35,7 +35,7 @@ public:
         : KMacroExpanderBase('%'), m_device(device) {}
 
 protected:
-    virtual int expandEscapedMacro(const QString &str, int pos, QStringList &ret) Q_DECL_OVERRIDE;
+    int expandEscapedMacro(const QString &str, int pos, QStringList &ret) Q_DECL_OVERRIDE;
 
 private:
     Solid::Device m_device;

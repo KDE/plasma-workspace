@@ -30,7 +30,7 @@ public:
     DebuggerManager(const Debugger & internalDebugger,
                     const QList<Debugger> & externalDebuggers,
                     QObject *parent = 0);
-    virtual ~DebuggerManager();
+    ~DebuggerManager() override;
 
     bool debuggerIsRunning() const;
     bool showExternalDebuggers() const;

@@ -41,8 +41,8 @@ class DBusSystemTrayProtocol : public Protocol
     friend class DBusSystemTrayTask;
 public:
     DBusSystemTrayProtocol(QObject *parent);
-    ~DBusSystemTrayProtocol();
-    void init();
+    ~DBusSystemTrayProtocol() override;
+    void init() override;
 
 protected:
     void initRegisteredServices();

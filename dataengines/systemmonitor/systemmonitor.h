@@ -36,16 +36,16 @@ class SystemMonitorEngine : public Plasma::DataEngine, public KSGRD::SensorClien
 
     public:
         /** Inherited from Plasma::DataEngine.  Returns a list of all the sensors that ksysguardd knows about. */
-        virtual QStringList sources() const;
+        QStringList sources() const override;
         SystemMonitorEngine( QObject* parent, const QVariantList& args );
-        ~SystemMonitorEngine();
+        ~SystemMonitorEngine() override;
 
     protected:
-        bool sourceRequestEvent(const QString &name);
+        bool sourceRequestEvent(const QString &name) override;
         /** inherited from SensorClient */
-        virtual void answerReceived( int id, const QList<QByteArray>&answer );
-        virtual void sensorLost( int );
-        virtual bool updateSourceEvent(const QString &sensorName);
+        void answerReceived( int id, const QList<QByteArray>&answer ) override;
+        void sensorLost( int ) override;
+        bool updateSourceEvent(const QString &sensorName) override;
 
     protected Q_SLOTS:
         void updateSensors();

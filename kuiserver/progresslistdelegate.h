@@ -34,10 +34,10 @@ class ProgressListDelegate
 
 public:
     explicit ProgressListDelegate(QObject *parent = 0, QListView *listView = 0);
-    ~ProgressListDelegate();
+    ~ProgressListDelegate() override;
 
-    void paint(QPainter *painter, const QStyleOptionViewItem &option, const QModelIndex &index) const;
-    QSize sizeHint(const QStyleOptionViewItem &option, const QModelIndex &index) const;
+    void paint(QPainter *painter, const QStyleOptionViewItem &option, const QModelIndex &index) const override;
+    QSize sizeHint(const QStyleOptionViewItem &option, const QModelIndex &index) const override;
 
     void setSeparatorPixels(int separatorPixels);
     void setLeftMargin(int leftMargin);
@@ -47,10 +47,10 @@ public:
     void setEditorHeight(int editorHeight);
 
 protected:
-    virtual QList<QWidget*> createItemWidgets(const QModelIndex &index) const;
-    virtual void updateItemWidgets(const QList<QWidget*> widgets,
+    QList<QWidget*> createItemWidgets(const QModelIndex &index) const override;
+    void updateItemWidgets(const QList<QWidget*> widgets,
                                    const QStyleOptionViewItem &option,
-                                   const QPersistentModelIndex &index) const;
+                                   const QPersistentModelIndex &index) const override;
 
 private Q_SLOTS:
     void slotPauseResumeClicked();

@@ -62,7 +62,7 @@ class Host : public QObject
 
 public:
     Host(QObject* parent = 0);
-    virtual ~Host();
+    ~Host() override;
 
     /**
      * @return a list of all known Task instances

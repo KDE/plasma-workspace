@@ -28,7 +28,7 @@ class QmlWallpaperPackage : public KPackage::PackageStructure
 {
 public:
     QmlWallpaperPackage(QObject*, const QVariantList &) {}
-    void initPackage(KPackage::Package *package);
+    void initPackage(KPackage::Package *package) override;
 };
 
 #endif

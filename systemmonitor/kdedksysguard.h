@@ -29,7 +29,7 @@ class KDEDKSysGuard : public KDEDModule
 
 public:
     explicit KDEDKSysGuard(QObject *parent, const QVariantList &);
-    virtual ~KDEDKSysGuard();
+    ~KDEDKSysGuard() override;
 
 private Q_SLOTS:
     void init();

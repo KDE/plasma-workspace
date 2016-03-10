@@ -44,9 +44,9 @@ public:
     PlasmaAppletItem(PlasmaAppletItemModel *model, const KPluginInfo& info, FilterFlags flags = NoFilter);
 
     QString pluginName() const;
-    QString name() const;
+    QString name() const override;
     QString category() const;
-    QString description() const;
+    QString description() const override;
     QString license() const;
     QString website() const;
     QString version() const;
@@ -54,16 +54,16 @@ public:
     QString email() const;
     QVariant data(int role = Qt::UserRole + 1) const override;
 
-    int running() const;
+    int running() const override;
     bool isLocal() const;
-    bool isFavorite() const;
-    void setFavorite(bool favorite);
+    bool isFavorite() const override;
+    void setFavorite(bool favorite) override;
     PlasmaAppletItemModel* appletItemModel();
-    bool matches(const QString &pattern) const;
+    bool matches(const QString &pattern) const override;
 
     //set how many instances of this applet are running
-    void setRunning(int count);
-    bool passesFiltering(const KCategorizedItemsViewModels::Filter & filter) const;
+    void setRunning(int count) override;
+    bool passesFiltering(const KCategorizedItemsViewModels::Filter & filter) const override;
     QMimeData *mimeData() const;
     QStringList mimeTypes() const;
 
@@ -99,10 +99,10 @@ public:
 
     explicit PlasmaAppletItemModel(QObject * parent = 0);
 
-    QStringList mimeTypes() const;
+    QStringList mimeTypes() const override;
     QSet<QString> categories() const;
 
-    QMimeData *mimeData(const QModelIndexList &indexes) const;
+    QMimeData *mimeData(const QModelIndexList &indexes) const override;
 
     void setFavorite(const QString &plugin, bool favorite);
     void setApplication(const QString &app);
@@ -114,7 +114,7 @@ public:
     QStringList provides() const;
     void setProvides(const QStringList &provides);
 
-    QHash<int, QByteArray> roleNames() const;
+    QHash<int, QByteArray> roleNames() const override;
 
 Q_SIGNALS:
     void modelPopulated();

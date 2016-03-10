@@ -75,7 +75,7 @@ class ShellCorona : public Plasma::Corona
 
 public:
     explicit ShellCorona(QObject *parent = 0);
-    ~ShellCorona();
+    ~ShellCorona() override;
 
     KPackage::Package lookAndFeelPackage();
 
@@ -84,10 +84,10 @@ public:
      */
     KSharedConfig::Ptr applicationConfig();
 
-    int numScreens() const;
-    Q_INVOKABLE QRect screenGeometry(int id) const;
-    Q_INVOKABLE QRegion availableScreenRegion(int id) const;
-    Q_INVOKABLE QRect availableScreenRect(int id) const;
+    int numScreens() const override;
+    Q_INVOKABLE QRect screenGeometry(int id) const override;
+    Q_INVOKABLE QRegion availableScreenRegion(int id) const override;
+    Q_INVOKABLE QRect availableScreenRect(int id) const override;
 
     PanelView *panelView(Plasma::Containment *containment) const;
 
@@ -112,7 +112,7 @@ public:
     KWayland::Client::PlasmaShell *waylandPlasmaShellInterface() const;
 
 protected:
-    bool eventFilter(QObject *watched, QEvent *event);
+    bool eventFilter(QObject *watched, QEvent *event) override;
 
 public Q_SLOTS:
     /**
@@ -157,14 +157,14 @@ protected Q_SLOTS:
     /**
      * Loads the default (system wide) layout for this user
      **/
-    void loadDefaultLayout();
+    void loadDefaultLayout() override;
 
     /**
      * Execute any update script
      */
     void processUpdateScripts();
 
-    int screenForContainment(const Plasma::Containment *containment) const;
+    int screenForContainment(const Plasma::Containment *containment) const override;
 
     void showAlternativesForApplet(Plasma::Applet *applet);
 

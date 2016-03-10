@@ -37,7 +37,7 @@ public:
     {}
 
     void start()
-    {
+    override {
         if (m_index.isValid()) {
             m_model->editPlace(m_index, m_text, m_url, m_icon);
         } else {
@@ -60,7 +60,7 @@ public:
     {}
 
     void start()
-    {
+    override {
         m_model->removePlace(m_index);
     }
 };
@@ -75,7 +75,7 @@ public:
     {}
 
     void start()
-    {
+    override {
         m_model->setPlaceHidden(m_index, m_show);
     }
 
@@ -92,7 +92,7 @@ public:
     {}
 
     void start()
-    {
+    override {
         m_model->requestTeardown(m_index);
     }
 };

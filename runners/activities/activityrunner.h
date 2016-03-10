@@ -31,10 +31,10 @@ class ActivityRunner : public Plasma::AbstractRunner
 
     public:
         ActivityRunner(QObject *parent, const QVariantList &args);
-        ~ActivityRunner();
+        ~ActivityRunner() override;
 
-        void match(Plasma::RunnerContext &context);
-        void run(const Plasma::RunnerContext &context, const Plasma::QueryMatch &action);
+        void match(Plasma::RunnerContext &context) override;
+        void run(const Plasma::RunnerContext &context, const Plasma::QueryMatch &action) override;
 
     private Q_SLOTS:
         void prep();

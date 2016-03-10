@@ -33,7 +33,7 @@ class SessionRunner : public Plasma::AbstractRunner
 
     public:
         SessionRunner(QObject *parent, const QVariantList &args);
-        ~SessionRunner();
+        ~SessionRunner() override;
 
         void match(Plasma::RunnerContext &context) Q_DECL_OVERRIDE;
         void run(const Plasma::RunnerContext &context, const Plasma::QueryMatch &action) Q_DECL_OVERRIDE;

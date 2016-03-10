@@ -37,13 +37,13 @@ class FaviconsEngine : public Plasma::DataEngine
 
     public:
         FaviconsEngine( QObject* parent, const QVariantList& args );
-        ~FaviconsEngine();
+        ~FaviconsEngine() override;
 
     protected:
-        bool sourceRequestEvent( const QString &identifier );
+        bool sourceRequestEvent( const QString &identifier ) override;
 
     protected Q_SLOTS:
-        bool updateSourceEvent( const QString &identifier );
+        bool updateSourceEvent( const QString &identifier ) override;
 
     private Q_SLOTS:
         void finished( FaviconProvider* );

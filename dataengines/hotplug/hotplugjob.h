@@ -39,7 +39,7 @@ public:
       {
       }
 
-    void start();
+    void start() override;
 
 private:
     HotplugEngine* m_engine;

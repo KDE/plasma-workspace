@@ -28,7 +28,7 @@
 class FakeFindProfile : public FindProfile {
 public:
   FakeFindProfile(const QList<Profile> &profiles) : m_profiles(profiles) {}
-    virtual QList<Profile> find() { return m_profiles; }
+    QList<Profile> find() override { return m_profiles; }
 private:
   QList<Profile> m_profiles;
 };

@@ -37,7 +37,7 @@ class JobAction : public Plasma::ServiceJob
         {
         }
 
-        void start();
+        void start() override;
 
     private:
         JobView *m_jobView;

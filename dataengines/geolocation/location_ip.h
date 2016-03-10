@@ -30,9 +30,9 @@ class Ip : public GeolocationProvider
     Q_OBJECT
 public:
     explicit Ip(QObject *parent = 0, const QVariantList &args = QVariantList());
-    ~Ip();
+    ~Ip() override;
 
-    virtual void update();
+    void update() override;
 
 private:
     class Private;

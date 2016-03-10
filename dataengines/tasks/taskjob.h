@@ -38,10 +38,10 @@ class TaskJob : public Plasma::ServiceJob
 
     public:
         TaskJob(const TaskManager::TasksModel *model, const TaskManager::GroupManager *groupManager, const QString &operation, QMap<QString, QVariant> &parameters, QObject *parent = NULL);
-        ~TaskJob();
+        ~TaskJob() override;
 
     protected:
-        void start();
+        void start() override;
 
     private:
 	const TaskManager::TasksModel *m_model;

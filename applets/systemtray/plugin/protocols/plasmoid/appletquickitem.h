@@ -81,7 +81,7 @@ class PLASMAQUICK_EXPORT AppletQuickItem : public QQuickItem
 
 public:
     AppletQuickItem(Plasma::Applet *applet, QQuickItem *parent = 0);
-    ~AppletQuickItem();
+    ~AppletQuickItem() override;
 
 ////API NOT SUPPOSED TO BE USED BY QML
     Plasma::Applet *applet() const;
@@ -140,8 +140,8 @@ protected:
     KDeclarative::QmlObject *qmlObject();
 
     //Reimplementation
-    void geometryChanged(const QRectF &newGeometry, const QRectF &oldGeometry);
-    virtual void itemChange(ItemChange change, const ItemChangeData &value);
+    void geometryChanged(const QRectF &newGeometry, const QRectF &oldGeometry) override;
+    void itemChange(ItemChange change, const ItemChangeData &value) override;
 
 
 

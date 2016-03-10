@@ -36,7 +36,7 @@ class AppSource : public Plasma::DataContainer
     public:
         AppSource(KServiceGroup::Ptr startup, QObject *parent);
         AppSource(KService::Ptr app, QObject *parent);
-        ~AppSource();
+        ~AppSource() override;
 
     protected:
         Plasma::Service *createService();

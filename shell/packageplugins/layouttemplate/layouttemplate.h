@@ -28,7 +28,7 @@ class LayoutTemplatePackage : public KPackage::PackageStructure
 {
 public:
     LayoutTemplatePackage(QObject*, const QVariantList &) {}
-    void initPackage(KPackage::Package *package);
+    void initPackage(KPackage::Package *package) override;
 };
 
 #endif

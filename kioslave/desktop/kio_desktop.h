@@ -27,15 +27,15 @@ class DesktopProtocol : public KIO::ForwardingSlaveBase
     Q_OBJECT
 public:
     DesktopProtocol(const QByteArray& protocol, const QByteArray &pool, const QByteArray &app);
-    virtual ~DesktopProtocol();
+    ~DesktopProtocol() override;
 
 protected:
     void checkLocalInstall();
     QString desktopFile(KIO::UDSEntry&) const;
-    virtual bool rewriteUrl(const QUrl &url, QUrl &newUrl);
-    virtual void listDir(const QUrl &url);
-    virtual void prepareUDSEntry(KIO::UDSEntry &entry, bool listing=false) const;
-    virtual void rename(const QUrl &, const QUrl &, KIO::JobFlags flags);
+    bool rewriteUrl(const QUrl &url, QUrl &newUrl) override;
+    void listDir(const QUrl &url) override;
+    void prepareUDSEntry(KIO::UDSEntry &entry, bool listing=false) const override;
+    void rename(const QUrl &, const QUrl &, KIO::JobFlags flags) override;
 };
 
 #endif

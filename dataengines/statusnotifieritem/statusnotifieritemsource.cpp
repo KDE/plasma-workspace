@@ -51,8 +51,8 @@ public:
     {}
 
 protected:
-    virtual QIcon iconForName(const QString &name)
-    {
+    QIcon iconForName(const QString &name)
+    override {
         return QIcon(new KIconEngine(name, m_iconLoader));
     }
 

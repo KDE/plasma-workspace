@@ -37,12 +37,12 @@ class Mpris2Engine : public Plasma::DataEngine
 public:
     Mpris2Engine(QObject* parent, const QVariantList& args);
 
-    Plasma::Service* serviceForSource(const QString& source);
-    virtual QStringList sources() const;
+    Plasma::Service* serviceForSource(const QString& source) override;
+    QStringList sources() const override;
 
 protected:
-    virtual bool sourceRequestEvent(const QString& source);
-    virtual bool updateSourceEvent(const QString& source);
+    bool sourceRequestEvent(const QString& source) override;
+    bool updateSourceEvent(const QString& source) override;
 
 private Q_SLOTS:
     void serviceOwnerChanged(

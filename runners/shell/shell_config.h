@@ -31,7 +31,7 @@ class ShellConfig : public QWidget
     Q_OBJECT
     public:
         explicit ShellConfig(const KConfigGroup &config, QWidget* parent = 0);
-        ~ShellConfig();
+        ~ShellConfig() override;
 
         Ui::shellOptions m_ui;
 

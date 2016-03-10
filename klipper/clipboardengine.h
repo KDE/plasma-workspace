@@ -28,7 +28,7 @@ class ClipboardEngine : public Plasma::DataEngine
     Q_OBJECT
 public:
     ClipboardEngine(QObject *parent, const QVariantList &args);
-    ~ClipboardEngine();
+    ~ClipboardEngine() override;
 
     Plasma::Service *serviceForSource (const QString &source) override;
 

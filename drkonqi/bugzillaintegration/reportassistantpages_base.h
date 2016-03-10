@@ -53,10 +53,10 @@ class CrashInformationPage: public ReportAssistantPage
 public:
     explicit CrashInformationPage(ReportAssistantDialog *);
 
-    void aboutToShow();
-    void aboutToHide();
-    bool isComplete();
-    bool showNextPage();
+    void aboutToShow() override;
+    void aboutToHide() override;
+    bool isComplete() override;
+    bool showNextPage() override;
 
 private:
     BacktraceWidget *        m_backtraceWidget;
@@ -70,8 +70,8 @@ class BugAwarenessPage: public ReportAssistantPage
 public:
     explicit BugAwarenessPage(ReportAssistantDialog *);
 
-    void aboutToShow();
-    void aboutToHide();
+    void aboutToShow() override;
+    void aboutToHide() override;
 
 private Q_SLOTS:
     void showApplicationDetailsExamples();
@@ -90,10 +90,10 @@ class ConclusionPage : public ReportAssistantPage
 public:
     explicit ConclusionPage(ReportAssistantDialog *);
 
-    void aboutToShow();
-    void aboutToHide();
+    void aboutToShow() override;
+    void aboutToHide() override;
 
-    bool isComplete();
+    bool isComplete() override;
 
 private Q_SLOTS:
     void finishClicked();
@@ -117,7 +117,7 @@ class ReportInformationDialog : public QDialog
     Q_OBJECT
 public:
     explicit ReportInformationDialog(const QString & reportText);
-    ~ReportInformationDialog();
+    ~ReportInformationDialog() override;
 
 private Q_SLOTS:
     void saveReport();

@@ -40,13 +40,13 @@ class KuiserverEngine : public Plasma::DataEngine
 
 public:
     KuiserverEngine(QObject* parent, const QVariantList& args);
-    ~KuiserverEngine();
+    ~KuiserverEngine() override;
 
     void init();
 
     QDBusObjectPath requestView(const QString &appName, const QString &appIconName,
                                 int capabilities);
-    Plasma::Service* serviceForSource(const QString& source);
+    Plasma::Service* serviceForSource(const QString& source) override;
 
 private Q_SLOTS:
     void processPendingJobs();
@@ -70,7 +70,7 @@ public:
                };
 
     JobView(QObject *parent = 0);
-    ~JobView();
+    ~JobView() override;
 
     uint jobId() const;
     JobView::State state();
@@ -115,7 +115,7 @@ Q_SIGNALS:
     void cancelRequested();
 
 protected:
-    void timerEvent(QTimerEvent *event);
+    void timerEvent(QTimerEvent *event) override;
 
 private:
     void scheduleUpdate();

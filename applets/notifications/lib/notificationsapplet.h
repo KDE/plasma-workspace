@@ -34,7 +34,7 @@ class NotificationsApplet : public Plasma::Applet
 
 public:
     NotificationsApplet(QObject *parent, const QVariantList &data);
-    ~NotificationsApplet();
+    ~NotificationsApplet() override;
 
     uint screenPosition() const;
 

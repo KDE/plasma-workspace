@@ -48,11 +48,11 @@ class KSystemActivityDialog : public QDialog
         QString filterText() const;
 
         /** Save the settings if the user presses the ESC key */
-        virtual void reject();
+        void reject() override;
 
     protected:
         /** Save the settings if the user clicks (x) button on the window */
-        void closeEvent(QCloseEvent *event);
+        void closeEvent(QCloseEvent *event) override;
 
     private slots:
         void slotInit();

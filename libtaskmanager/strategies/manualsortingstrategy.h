@@ -41,9 +41,9 @@ class ManualSortingStrategy : public AbstractSortingStrategy
     Q_OBJECT
 public:
     ManualSortingStrategy(GroupManager *parent);
-    ~ManualSortingStrategy();
-    bool manualSortingRequest(AbstractGroupableItem *item, int newIndex);
-    void sortItems(ItemList &items);
+    ~ManualSortingStrategy() override;
+    bool manualSortingRequest(AbstractGroupableItem *item, int newIndex) override;
+    void sortItems(ItemList &items) override;
 };
 
 

@@ -38,7 +38,7 @@ class LauncherConfig : public QWidget
 
 public:
     LauncherConfig(KConfigDialog *parent = 0L);
-    virtual ~LauncherConfig();
+    ~LauncherConfig() override;
 
 Q_SIGNALS:
     void modified();

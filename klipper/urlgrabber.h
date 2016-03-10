@@ -44,7 +44,7 @@ class URLGrabber : public QObject
 
 public:
   URLGrabber(History* history);
-  ~URLGrabber();
+  ~URLGrabber() override;
 
   /**
    * Checks a given string whether it matches any of the user-defined criteria.

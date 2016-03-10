@@ -47,7 +47,7 @@ class ScriptEngine : public QScriptEngine
 
 public:
     ScriptEngine(Plasma::Corona *corona, QObject *parent = 0);
-    ~ScriptEngine();
+    ~ScriptEngine() override;
 
     static QStringList pendingUpdateScripts(Plasma::Corona *corona);
 

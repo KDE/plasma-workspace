@@ -31,7 +31,7 @@ class VirtualDesktopsSource : public Plasma::DataContainer
 
         VirtualDesktopsSource();
 
-        ~VirtualDesktopsSource();
+        ~VirtualDesktopsSource() override;
 
     private Q_SLOTS:
 

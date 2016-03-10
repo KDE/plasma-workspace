@@ -40,8 +40,8 @@ public:
     void addCustomStatusWidget(QWidget *);
 
 private:
-    void showEvent(QShowEvent *);
-    void hideEvent(QHideEvent *);
+    void showEvent(QShowEvent *) override;
+    void hideEvent(QHideEvent *) override;
 
     void setBusyCursor();
     void setIdleCursor();
@@ -72,7 +72,7 @@ public:
         adjustHeight();
     }
 
-    bool event(QEvent * e) {
+    bool event(QEvent * e) override {
         if (e->type() == QEvent::ApplicationFontChange || e->type() == QEvent::Resize) {
             adjustHeight();
         }

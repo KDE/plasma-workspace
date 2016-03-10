@@ -46,10 +46,10 @@ class PlacesRunner : public Plasma::AbstractRunner
 
 public:
     PlacesRunner(QObject* parent, const QVariantList &args);
-    ~PlacesRunner();
+    ~PlacesRunner() override;
 
-    void match(Plasma::RunnerContext &context);
-    void run(const Plasma::RunnerContext &context, const Plasma::QueryMatch &action);
+    void match(Plasma::RunnerContext &context) override;
+    void run(const Plasma::RunnerContext &context, const Plasma::QueryMatch &action) override;
 
 Q_SIGNALS:
     void doMatch(Plasma::RunnerContext *context);

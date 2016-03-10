@@ -38,15 +38,15 @@ class ServiceRunner : public Plasma::AbstractRunner
 
     public:
         ServiceRunner(QObject *parent, const QVariantList &args);
-        ~ServiceRunner();
+        ~ServiceRunner() override;
 
-        void match(Plasma::RunnerContext &context);
-        void run(const Plasma::RunnerContext &context, const Plasma::QueryMatch &action);
-        virtual QStringList categories() const;
-        virtual QIcon categoryIcon(const QString& category) const;
+        void match(Plasma::RunnerContext &context) override;
+        void run(const Plasma::RunnerContext &context, const Plasma::QueryMatch &action) override;
+        QStringList categories() const override;
+        QIcon categoryIcon(const QString& category) const override;
 
     protected Q_SLOTS:
-        QMimeData * mimeDataForMatch(const Plasma::QueryMatch &match);
+        QMimeData * mimeDataForMatch(const Plasma::QueryMatch &match) override;
 
     protected:
         void setupMatch(const KService::Ptr &service, Plasma::QueryMatch &action);

@@ -26,8 +26,8 @@ class DeviceNothingAction : public DeviceAction
 {
 public:
     DeviceNothingAction();
-    virtual QString id() const;
-    virtual void execute(Solid::Device &device);
+    QString id() const override;
+    void execute(Solid::Device &device) override;
 };
 
 #endif

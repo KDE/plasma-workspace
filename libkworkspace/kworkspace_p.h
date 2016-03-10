@@ -40,7 +40,7 @@ class KRequestShutdownHelper
     Q_OBJECT
     public:
         KRequestShutdownHelper();
-        virtual ~KRequestShutdownHelper();
+        ~KRequestShutdownHelper() override;
         bool requestShutdown( ShutdownConfirm confirm );
     private Q_SLOTS:
         void processData();

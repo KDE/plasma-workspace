@@ -31,12 +31,12 @@ class FaviconFromBlob : public Favicon
 public:
     static FaviconFromBlob *chrome(const QString &profileDirectory, QObject *parent = 0);
     static FaviconFromBlob *firefox(FetchSqlite *fetchSqlite, QObject *parent = 0);
-    ~FaviconFromBlob();
-    virtual QIcon iconFor(const QString &url);
+    ~FaviconFromBlob() override;
+    QIcon iconFor(const QString &url) override;
 
 public Q_SLOTS:
-    virtual void prepare();
-    virtual void teardown();
+    void prepare() override;
+    void teardown() override;
 
 private:
     FaviconFromBlob(const QString &profileName, BuildQuery *buildQuery, const QString &blobColumn, FetchSqlite *fetchSqlite, QObject *parent = 0);

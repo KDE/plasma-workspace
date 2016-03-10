@@ -86,7 +86,7 @@ public:
 
     Task(QObject *parent = 0);
 
-    virtual ~Task();
+    ~Task() override;
 
     /**
      * Returns whether this task can be embeddable

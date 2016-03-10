@@ -43,7 +43,7 @@ class KlipperPopup : public QMenu
 
 public:
     explicit KlipperPopup( History* history );
-    ~KlipperPopup();
+    ~KlipperPopup() override;
     void plugAction( QAction* action );
 
     /**
@@ -72,7 +72,7 @@ private:
     void buildFromScratch();
 
 protected:
-     virtual void keyPressEvent( QKeyEvent* e );
+     void keyPressEvent( QKeyEvent* e ) override;
 
 private:
     bool m_dirty : 1; // true if menu contents needs to be rebuild.

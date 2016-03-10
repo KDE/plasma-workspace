@@ -31,9 +31,9 @@ class PlacesEngine : public Plasma::DataEngine
 
 public:
     PlacesEngine(QObject* parent, const QVariantList& args);
-    ~PlacesEngine();
+    ~PlacesEngine() override;
 
-    Plasma::Service *serviceForSource(const QString &source);
+    Plasma::Service *serviceForSource(const QString &source) override;
 
 private:
 

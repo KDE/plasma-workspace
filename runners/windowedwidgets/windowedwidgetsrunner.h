@@ -38,13 +38,13 @@ class WindowedWidgetsRunner : public Plasma::AbstractRunner
 
 public:
     WindowedWidgetsRunner(QObject *parent, const QVariantList &args);
-    ~WindowedWidgetsRunner();
+    ~WindowedWidgetsRunner() override;
 
-    void match(Plasma::RunnerContext &context);
-    void run(const Plasma::RunnerContext &context, const Plasma::QueryMatch &action);
+    void match(Plasma::RunnerContext &context) override;
+    void run(const Plasma::RunnerContext &context, const Plasma::QueryMatch &action) override;
 
 protected Q_SLOTS:
-    QMimeData * mimeDataForMatch(const Plasma::QueryMatch &match);
+    QMimeData * mimeDataForMatch(const Plasma::QueryMatch &match) override;
 
 
 protected:
