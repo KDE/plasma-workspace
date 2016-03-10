@@ -51,7 +51,7 @@ Image {
                 anchors.horizontalCenter: parent.horizontalCenter
                 source: "images/kde.svgz"
                 sourceSize.height: units.gridUnit * 8
-                sourceSize.width: sourceSize.height
+                sourceSize.width: units.gridUnit * 8
             }
             Item {
                 width: 1
