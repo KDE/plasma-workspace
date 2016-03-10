@@ -33,14 +33,14 @@ class SystemTrayContainer : public Plasma::Applet
 
 public:
     SystemTrayContainer(QObject *parent, const QVariantList &args);
-    ~SystemTrayContainer();
+    ~SystemTrayContainer() override;
 
-    void init();
+    void init() override;
 
     QQuickItem *internalSystray();
 
 protected:
-    void constraintsEvent(Plasma::Types::Constraints constraints);
+    void constraintsEvent(Plasma::Types::Constraints constraints) override;
 
 Q_SIGNALS:
     void internalSystrayChanged();

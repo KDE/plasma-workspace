@@ -38,9 +38,9 @@ class SystemTray : public Plasma::Containment
 
 public:
     SystemTray( QObject *parent, const QVariantList &args );
-    ~SystemTray();
+    ~SystemTray() override;
 
-    void init();
+    void init() override;
 
     void restoreContents(KConfigGroup &group) Q_DECL_OVERRIDE;
     void restorePlasmoids();
