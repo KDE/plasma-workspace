@@ -32,7 +32,7 @@ class UIConfigurationDialog
 
 public:
     UIConfigurationDialog(QWidget *parent);
-    ~UIConfigurationDialog();
+    ~UIConfigurationDialog() override;
 };
 
 #endif // UISERVER_P_H

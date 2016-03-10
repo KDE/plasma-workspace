@@ -49,7 +49,7 @@ public:
     };
 
     NotificationsHelper(QObject *parent = 0);
-    ~NotificationsHelper();
+    ~NotificationsHelper() override;
     Q_INVOKABLE void addNotificationPopup(QObject *win);
     Q_INVOKABLE void closePopup(const QString &sourceName);
 

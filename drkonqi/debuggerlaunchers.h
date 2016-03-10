@@ -46,10 +46,10 @@ class DefaultDebuggerLauncher : public AbstractDebuggerLauncher
     Q_OBJECT
 public:
     explicit DefaultDebuggerLauncher(const Debugger & debugger, DebuggerManager *parent = 0);
-    virtual QString name() const;
+    QString name() const override;
 
 public Q_SLOTS:
-    virtual void start();
+    void start() override;
 
 private Q_SLOTS:
     void onProcessFinished();
@@ -80,10 +80,10 @@ class DBusOldInterfaceLauncher : public AbstractDebuggerLauncher
     friend class DBusOldInterfaceAdaptor;
 public:
     explicit DBusOldInterfaceLauncher(DebuggerManager *parent = 0);
-    virtual QString name() const;
+    QString name() const override;
 
 public Q_SLOTS:
-    virtual void start();
+    void start() override;
 
 Q_SIGNALS:
     void available();

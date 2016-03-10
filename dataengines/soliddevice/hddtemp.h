@@ -36,12 +36,12 @@ class HddTemp : public QObject
         enum DataType {Temperature=0, Unit};
         
         HddTemp(QObject *parent=0);
-        ~HddTemp();
+        ~HddTemp() override;
         QStringList sources();
         QVariant data(const QString source, const DataType type) const;
 
     protected:
-        void timerEvent(QTimerEvent *event);
+        void timerEvent(QTimerEvent *event) override;
 
     private:
         int m_failCount;

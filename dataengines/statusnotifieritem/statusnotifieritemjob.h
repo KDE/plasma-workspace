@@ -38,10 +38,10 @@ class StatusNotifierItemJob : public Plasma::ServiceJob
 
 public:
     StatusNotifierItemJob(StatusNotifierItemSource *source, const QString &operation, QMap<QString, QVariant> &parameters, QObject *parent = NULL);
-    ~StatusNotifierItemJob();
+    ~StatusNotifierItemJob() override;
 
 protected:
-    void start();
+    void start() override;
 
 private Q_SLOTS:
     void contextMenuReady(QMenu *menu);

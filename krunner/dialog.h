@@ -127,7 +127,7 @@ public:
     Q_ENUMS(WindowType)
 
     Dialog(QQuickItem *parent = 0);
-    ~Dialog();
+    ~Dialog() override;
 
     //PROPERTIES ACCESSORS
     QQuickItem *mainItem() const;
@@ -175,14 +175,14 @@ protected:
     virtual void adjustGeometry(const QRect &geom);
 
     //Reimplementations
-    virtual void classBegin();
-    virtual void componentComplete();
-    virtual void resizeEvent(QResizeEvent *re);
-    virtual void focusInEvent(QFocusEvent *ev);
-    virtual void focusOutEvent(QFocusEvent *ev);
-    virtual void showEvent(QShowEvent *event);
-    virtual void hideEvent(QHideEvent *event);
-    virtual bool event(QEvent *event);
+    void classBegin() override;
+    void componentComplete() override;
+    void resizeEvent(QResizeEvent *re) override;
+    void focusInEvent(QFocusEvent *ev) override;
+    void focusOutEvent(QFocusEvent *ev) override;
+    void showEvent(QShowEvent *event) override;
+    void hideEvent(QHideEvent *event) override;
+    bool event(QEvent *event) override;
 
 private:
     friend class DialogPrivate;

@@ -36,7 +36,7 @@ class FdoSelectionManager : public QObject, public QAbstractNativeEventFilter
 
 public:
     FdoSelectionManager();
-    ~FdoSelectionManager();
+    ~FdoSelectionManager() override;
 
 protected:
     bool nativeEventFilter(const QByteArray & eventType, void * message, long * result) Q_DECL_OVERRIDE;

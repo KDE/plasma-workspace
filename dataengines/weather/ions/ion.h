@@ -57,7 +57,7 @@ public:
     /**
      * Destructor for the ion
      */
-    virtual ~IonInterface();
+    ~IonInterface() override;
 
     /**
      * Returns weather icon filename to display in applet.
@@ -88,7 +88,7 @@ public Q_SLOTS:
      * Reimplemented from Plasma::DataEngine
      * @param source the name of the datasource to be updated
      */
-    bool updateSourceEvent(const QString& source);
+    bool updateSourceEvent(const QString& source) override;
 
     /**
      * Reimplement for ion to reload data if network status comes back up
@@ -112,7 +112,7 @@ protected:
      * Reimplemented from Plasma::DataEngine
      * @param source The datasource being requested
      */
-    bool sourceRequestEvent(const QString &source);
+    bool sourceRequestEvent(const QString &source) override;
 
     /**
      * Reimplement to fetch the data from the ion.

@@ -86,13 +86,13 @@ class Q_DECL_EXPORT NOAAIon : public IonInterface, public Plasma::DataEngineCons
 
 public:
     NOAAIon(QObject *parent, const QVariantList &args);
-    ~NOAAIon();
+    ~NOAAIon() override;
     void init(void);  // Setup the city location, fetching the correct URL name.
-    bool updateIonSource(const QString& source); // Sync data source with Applet
+    bool updateIonSource(const QString& source) override; // Sync data source with Applet
     void updateWeather(const QString& source);
 
 public Q_SLOTS:
-    virtual void reset();
+    void reset() override;
 
 protected Q_SLOTS:
     void setup_slotDataArrived(KIO::Job *, const QByteArray &);

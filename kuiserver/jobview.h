@@ -65,7 +65,7 @@ public:
     };
 
     JobView(uint jobId, QObject *parent = 0);
-    ~JobView();
+    ~JobView() override;
 
     void terminate(const QString &errorMessage);
 

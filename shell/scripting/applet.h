@@ -41,7 +41,7 @@ class Applet : public QObject
 
 public:
     Applet(QObject *parent = 0);
-    ~Applet();
+    ~Applet() override;
 
     QStringList configKeys() const;
     QStringList configGroups() const;

@@ -34,7 +34,7 @@ public:
     enum Usefulness { InvalidUsefulness, Useless, ProbablyUseless, MayBeUseful, ReallyUseful };
 
     static BacktraceParser *newParser(const QString & debuggerName, QObject *parent = 0);
-    virtual ~BacktraceParser();
+    ~BacktraceParser() override;
 
     /*! Connects the parser to the backtrace generator.
      * Any QObject that defines the starting() and newLine(QString) signals will do.

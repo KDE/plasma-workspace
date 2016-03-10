@@ -34,10 +34,10 @@ class KeyStatesEngine : public Plasma::DataEngine
 
 public:
     KeyStatesEngine(QObject *parent, const QVariantList &args);
-    ~KeyStatesEngine();
+    ~KeyStatesEngine() override;
 
     void init();
-    Plasma::Service *serviceForSource(const QString &source);
+    Plasma::Service *serviceForSource(const QString &source) override;
 
 protected:
     //bool sourceRequestEvent(const QString &name);

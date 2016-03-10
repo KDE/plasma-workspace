@@ -40,7 +40,7 @@ class StatusNotifierItemSource : public Plasma::DataContainer
 
 public:
     StatusNotifierItemSource(const QString &service, QObject *parent);
-    ~StatusNotifierItemSource();
+    ~StatusNotifierItemSource() override;
     Plasma::Service *createService();
 
     void activate(int x, int y);

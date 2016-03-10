@@ -32,10 +32,10 @@ class AppJob : public Plasma::ServiceJob
 
     public:
         AppJob(AppSource *source, const QString &operation, QMap<QString, QVariant> &parameters, QObject *parent = 0);
-        ~AppJob();
+        ~AppJob() override;
 
     protected:
-        void start();
+        void start() override;
 
     private:
         AppSource *m_source;

@@ -136,8 +136,8 @@ class DefaultItemFilterProxyModel : public QSortFilterProxyModel
 public:
     DefaultItemFilterProxyModel(QObject *parent = 0);
 
-    bool filterAcceptsRow(int sourceRow, const QModelIndex &sourceParent) const;
-    bool lessThan(const QModelIndex &left, const QModelIndex &right) const;
+    bool filterAcceptsRow(int sourceRow, const QModelIndex &sourceParent) const override;
+    bool lessThan(const QModelIndex &left, const QModelIndex &right) const override;
 
     void setSearchTerm(const QString &pattern);
     QString searchTerm() const;
@@ -150,13 +150,13 @@ public:
 
     void setFilter(const Filter &filter);
 
-    void setSourceModel(QAbstractItemModel *sourceModel);
+    void setSourceModel(QAbstractItemModel *sourceModel) override;
 
     QAbstractItemModel *sourceModel() const;
 
-    int columnCount(const QModelIndex &index) const;
+    int columnCount(const QModelIndex &index) const override;
 
-    QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const;
+    QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
 
     int count() {return rowCount(QModelIndex());}
 

@@ -53,7 +53,7 @@ class TASKMANAGER_EXPORT Startup: public QObject
 public:
     Startup(const KStartupInfoId& id, const KStartupInfoData& data, QObject * parent,
             const char *name = 0);
-    virtual ~Startup();
+    ~Startup() override;
 
     /**
      * The name of the starting task (if known).

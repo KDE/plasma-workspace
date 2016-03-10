@@ -40,12 +40,12 @@ class KillRunner : public Plasma::AbstractRunner
 
 public:
     KillRunner(QObject *parent, const QVariantList& args);
-    ~KillRunner();
+    ~KillRunner() override;
 
-    void match(Plasma::RunnerContext &context);
-    void run(const Plasma::RunnerContext &context, const Plasma::QueryMatch &match);
-    QList<QAction*> actionsForMatch(const Plasma::QueryMatch &match);
-    void reloadConfiguration();
+    void match(Plasma::RunnerContext &context) override;
+    void run(const Plasma::RunnerContext &context, const Plasma::QueryMatch &match) override;
+    QList<QAction*> actionsForMatch(const Plasma::QueryMatch &match) override;
+    void reloadConfiguration() override;
 
 private Q_SLOTS:
     void prep();

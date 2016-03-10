@@ -28,7 +28,7 @@ class ClipboardService : public Plasma::Service
     Q_OBJECT
 public:
     ClipboardService(Klipper *klipper, const QString &uuid);
-    ~ClipboardService() = default;
+    ~ClipboardService() override = default;
 
 protected:
     Plasma::ServiceJob *createJob(const QString &operation, QVariantMap &parameters) override;

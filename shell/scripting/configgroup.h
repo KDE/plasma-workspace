@@ -38,7 +38,7 @@ class ConfigGroup : public QObject
 
 public:
     ConfigGroup(QObject* parent=0);
-    ~ConfigGroup();
+    ~ConfigGroup() override;
 
     KConfigGroup* configGroup();
 

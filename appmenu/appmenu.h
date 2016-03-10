@@ -42,7 +42,7 @@ class AppMenuModule : public KDEDModule,
     Q_OBJECT
 public:
     AppMenuModule(QObject* parent, const QList<QVariant>& list);
-    virtual ~AppMenuModule();
+    ~AppMenuModule() override;
 
 Q_SIGNALS:
     /**

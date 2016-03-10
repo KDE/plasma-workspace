@@ -33,7 +33,7 @@ class VerticalMenu : public QMenu
 Q_OBJECT
 public:
     VerticalMenu(QWidget * parent = 0);
-    ~VerticalMenu();
+    ~VerticalMenu() override;
 
     /**
      * Set menu parent window id
@@ -44,9 +44,9 @@ public:
      */
     WId parentWid() { return m_wid; }
 protected:
-    void keyPressEvent(QKeyEvent*);
-    void keyReleaseEvent(QKeyEvent*);
-    void paintEvent(QPaintEvent*);
+    void keyPressEvent(QKeyEvent*) override;
+    void keyReleaseEvent(QKeyEvent*) override;
+    void paintEvent(QPaintEvent*) override;
 private:
     QMenu *leafMenu();
 private:

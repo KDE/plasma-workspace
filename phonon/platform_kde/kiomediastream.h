@@ -35,13 +35,13 @@ class KioMediaStream : public AbstractMediaStream
     Q_DECLARE_PRIVATE(KioMediaStream)
 public:
     explicit KioMediaStream(const QUrl &url, QObject *parent = 0);
-    ~KioMediaStream();
+    ~KioMediaStream() override;
 
 protected:
-    void reset();
-    void needData();
-    void enoughData();
-    void seekStream(qint64);
+    void reset() override;
+    void needData() override;
+    void enoughData() override;
+    void seekStream(qint64) override;
 
     KioMediaStreamPrivate *d_ptr;
 

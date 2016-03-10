@@ -32,12 +32,12 @@ class SwitchActivity : public Plasma::ContainmentActions
     Q_OBJECT
     public:
         SwitchActivity(QObject* parent, const QVariantList& args);
-        ~SwitchActivity();
+        ~SwitchActivity() override;
 
-        QList<QAction*> contextualActions();
+        QList<QAction*> contextualActions() override;
 
-        void performNextAction();
-        void performPreviousAction();
+        void performNextAction() override;
+        void performPreviousAction() override;
 
     private Q_SLOTS:
         void switchTo(QAction *action);

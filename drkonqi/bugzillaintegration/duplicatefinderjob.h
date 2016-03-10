@@ -69,9 +69,9 @@ class DuplicateFinderJob : public KJob
         };
 
         DuplicateFinderJob(const QList<int> &bugIds, BugzillaManager *manager, QObject *parent = 0);
-        virtual ~DuplicateFinderJob();
+        ~DuplicateFinderJob() override;
 
-        virtual void start();
+        void start() override;
 
         /**
          * Call this after result has been emitted to

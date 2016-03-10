@@ -64,7 +64,7 @@ class TASKMANAGER_EXPORT GroupManager: public QObject
 
 public:
     GroupManager(QObject *parent);
-    ~GroupManager();
+    ~GroupManager() override;
 
     /**
     * Returns a group which contains all items and subgroups.

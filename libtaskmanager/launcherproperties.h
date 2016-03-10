@@ -37,7 +37,7 @@ class LauncherProperties : public QDialog
 
 public:
     LauncherProperties(QWidget *parent = 0L);
-    virtual ~LauncherProperties();
+    ~LauncherProperties() override;
 
     void run(const QString &cc = QString(), const QString &cn = QString(), const QString &l = QString());
 
@@ -52,7 +52,7 @@ private Q_SLOTS:
     void okClicked();
 
 private:
-    bool eventFilter(QObject *o, QEvent *e);
+    bool eventFilter(QObject *o, QEvent *e) override;
     WId findWindow();
 
 private:

@@ -34,11 +34,11 @@ class ShellRunner : public Plasma::AbstractRunner
 
     public:
         ShellRunner(QObject *parent, const QVariantList &args);
-        ~ShellRunner();
+        ~ShellRunner() override;
 
-        void match(Plasma::RunnerContext &context);
-        void run(const Plasma::RunnerContext &context, const Plasma::QueryMatch &action);
-        void createRunOptions(QWidget *parent);
+        void match(Plasma::RunnerContext &context) override;
+        void run(const Plasma::RunnerContext &context, const Plasma::QueryMatch &action) override;
+        void createRunOptions(QWidget *parent) override;
 
     private Q_SLOTS:
         void setRunAsOtherUser(bool asOtherUser);

@@ -54,7 +54,7 @@ class InteractiveConsole : public QDialog
 
 public:
     InteractiveConsole(QWidget *parent = 0);
-    ~InteractiveConsole();
+    ~InteractiveConsole() override;
 
     enum ConsoleMode {
         PlasmaConsole,
@@ -75,12 +75,12 @@ Q_SIGNALS:
     void visibleChanged(bool);
 
 protected:
-    void showEvent(QShowEvent *);
-    void closeEvent(QCloseEvent *event);
+    void showEvent(QShowEvent *) override;
+    void closeEvent(QCloseEvent *event) override;
 
 protected Q_SLOTS:
     void print(const QString &string);
-    void reject();
+    void reject() override;
 
 private Q_SLOTS:
     void openScriptFile();
@@ -144,7 +144,7 @@ public:
     }
 
     ~InteractiveConsoleItem()
-    {
+    override {
         m_dialog->deleteLater();
     }
 

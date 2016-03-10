@@ -56,7 +56,7 @@ class Activity : public QObject
     Q_OBJECT
 public:
     Activity(const QString &id, Plasma::Corona *parent = 0);
-    ~Activity();
+    ~Activity() override;
 
     QString id();
     QString name();

@@ -48,7 +48,7 @@ class FallbackFavicon : public Favicon {
     Q_OBJECT
 public:
     FallbackFavicon(QObject *parent = 0) : Favicon(parent) {}
-    virtual QIcon iconFor(const QString &) { return defaultIcon(); }
+    QIcon iconFor(const QString &) override { return defaultIcon(); }
 };
 
 

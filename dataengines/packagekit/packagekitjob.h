@@ -28,10 +28,10 @@ class PackagekitJob : public Plasma::ServiceJob
     Q_OBJECT
 public:
     PackagekitJob(const QString& destination, const QString& operation, const QMap< QString, QVariant >& parameters, QObject* parent = 0);
-    ~PackagekitJob();
+    ~PackagekitJob() override;
 
 protected:
-    void start();
+    void start() override;
 
 private:
 

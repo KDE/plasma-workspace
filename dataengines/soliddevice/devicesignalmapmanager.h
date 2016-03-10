@@ -29,7 +29,7 @@ class DeviceSignalMapManager : public QObject
 
     public:
         DeviceSignalMapManager(QObject *parent=0);
-        ~DeviceSignalMapManager();
+        ~DeviceSignalMapManager() override;
 
         void mapDevice(Solid::Battery *battery, const QString &udi);
         void mapDevice(Solid::StorageAccess *storageaccess, const QString &udi);

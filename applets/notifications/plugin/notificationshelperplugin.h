@@ -29,8 +29,8 @@ class NotificationsHelperPlugin : public QQmlExtensionPlugin
     Q_PLUGIN_METADATA(IID "org.qt-project.Qt.QQmlExtensionInterface")
 
 public:
-    void registerTypes(const char *uri);
-    void initializeEngine(QQmlEngine *engine, const char *uri);
+    void registerTypes(const char *uri) override;
+    void initializeEngine(QQmlEngine *engine, const char *uri) override;
 
 };
 

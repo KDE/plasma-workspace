@@ -43,9 +43,9 @@ class ProgressListModel: public QAbstractItemModel, protected QDBusContext
 public:
 
     explicit ProgressListModel(QObject *parent = 0);
-    ~ProgressListModel();
+    ~ProgressListModel() override;
 
-    QModelIndex parent(const QModelIndex&) const;
+    QModelIndex parent(const QModelIndex&) const override;
 
 
     /**
@@ -54,7 +54,7 @@ public:
     * @param index    the index in which you want to know the allowed operations
     * @return         the allowed operations on the model/delegate
     */
-    Qt::ItemFlags flags(const QModelIndex &index) const;
+    Qt::ItemFlags flags(const QModelIndex &index) const override;
 
 
     /**
@@ -65,7 +65,7 @@ public:
     * @param role     the role you want to retrieve
     * @return         the data in a QVariant class
     */
-    QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const;
+    QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
 
 
     /**
@@ -77,7 +77,7 @@ public:
     * @param parent   will be ignored
     * @return         the index for the given @p row as a QModelIndex
     */
-    QModelIndex index(int row, int column = 0, const QModelIndex &parent = QModelIndex()) const;
+    QModelIndex index(int row, int column = 0, const QModelIndex &parent = QModelIndex()) const override;
 
     QModelIndex indexForJob(JobView *jobView) const;
 
@@ -88,7 +88,7 @@ public:
     * @param parent   will be ignored
     * @return         the number of columns. In this case is always 1
     */
-    int columnCount(const QModelIndex &parent = QModelIndex()) const;
+    int columnCount(const QModelIndex &parent = QModelIndex()) const override;
 
 
     /**
@@ -97,7 +97,7 @@ public:
     * @param parent   will be ignored
     * @return         the number of rows in the model
     */
-    int rowCount(const QModelIndex &parent = QModelIndex()) const;
+    int rowCount(const QModelIndex &parent = QModelIndex()) const override;
 
 
     /**

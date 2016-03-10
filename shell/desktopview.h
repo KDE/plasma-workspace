@@ -56,10 +56,10 @@ public:
     Q_ENUMS(SessionType)
 
     explicit DesktopView(Plasma::Corona *corona, QScreen *targetScreen = 0);
-    virtual ~DesktopView();
+    ~DesktopView() override;
 
     void adaptToScreen();
-    virtual void showEvent(QShowEvent*);
+    void showEvent(QShowEvent*) override;
 
     WindowType windowType() const;
     void setWindowType(WindowType type);
@@ -67,14 +67,14 @@ public:
     SessionType sessionType() const;
 
 protected:
-    bool event(QEvent *e);
-    void keyPressEvent(QKeyEvent *e);
+    bool event(QEvent *e) override;
+    void keyPressEvent(QKeyEvent *e) override;
 
 protected Q_SLOTS:
     /**
      * It will be called when the configuration is requested
      */
-    virtual void showConfigurationInterface(Plasma::Applet *applet);
+    void showConfigurationInterface(Plasma::Applet *applet) override;
 
 private Q_SLOTS:
     void screenGeometryChanged();

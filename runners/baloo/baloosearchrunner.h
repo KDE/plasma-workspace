@@ -33,19 +33,19 @@ class SearchRunner : public Plasma::AbstractRunner
 public:
     SearchRunner(QObject* parent, const QVariantList& args);
     SearchRunner(QObject* parent, const QString& serviceId = QString());
-    ~SearchRunner();
+    ~SearchRunner() override;
 
-    void match(Plasma::RunnerContext& context);
-    void run(const Plasma::RunnerContext& context, const Plasma::QueryMatch& action);
+    void match(Plasma::RunnerContext& context) override;
+    void run(const Plasma::RunnerContext& context, const Plasma::QueryMatch& action) override;
 
-    virtual QStringList categories() const;
-    virtual QIcon categoryIcon(const QString& category) const;
+    QStringList categories() const override;
+    QIcon categoryIcon(const QString& category) const override;
 
     QList<QAction *> actionsForMatch(const Plasma::QueryMatch &match) override;
     QMimeData *mimeDataForMatch(const Plasma::QueryMatch &match) override;
 
 protected Q_SLOTS:
-    void init();
+    void init() override;
 
 private:
     QList<Plasma::QueryMatch> match(Plasma::RunnerContext& context, const QString& type,

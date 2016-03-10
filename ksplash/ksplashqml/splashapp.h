@@ -35,13 +35,13 @@ class SplashApp: public QGuiApplication
 
 public:
     explicit SplashApp(int &argc, char ** argv);
-    virtual ~SplashApp();
+    ~SplashApp() override;
 
 public Q_SLOTS:
     Q_SCRIPTABLE void setStage(const QString &messgae);
 
 protected:
-    void timerEvent(QTimerEvent *event);
+    void timerEvent(QTimerEvent *event) override;
     void setStage(int stage);
 
 private:

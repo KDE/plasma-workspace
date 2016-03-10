@@ -29,13 +29,13 @@ class RecentDocuments : public Plasma::AbstractRunner {
 
     public:
         RecentDocuments( QObject *parent, const QVariantList& args );
-        ~RecentDocuments();
+        ~RecentDocuments() override;
 
-        void match(Plasma::RunnerContext &context);
-        void run(const Plasma::RunnerContext &context, const Plasma::QueryMatch &match);
+        void match(Plasma::RunnerContext &context) override;
+        void run(const Plasma::RunnerContext &context, const Plasma::QueryMatch &match) override;
 
     private Q_SLOTS:
-        QMimeData * mimeDataForMatch(const Plasma::QueryMatch &match);
+        QMimeData * mimeDataForMatch(const Plasma::QueryMatch &match) override;
 
     private Q_SLOTS:
         void loadRecentDocuments();

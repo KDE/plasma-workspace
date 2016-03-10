@@ -43,12 +43,12 @@ class PowermanagementEngine : public Plasma::DataEngine
 
 public:
     PowermanagementEngine( QObject* parent, const QVariantList& args );
-    ~PowermanagementEngine();
-    QStringList sources() const;
-    Plasma::Service* serviceForSource(const QString &source);
+    ~PowermanagementEngine() override;
+    QStringList sources() const override;
+    Plasma::Service* serviceForSource(const QString &source) override;
 protected:
-    bool sourceRequestEvent(const QString &name);
-    bool updateSourceEvent(const QString &source);
+    bool sourceRequestEvent(const QString &name) override;
+    bool updateSourceEvent(const QString &source) override;
     void init();
 
 private Q_SLOTS:

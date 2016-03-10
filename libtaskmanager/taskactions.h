@@ -91,7 +91,7 @@ class TASKMANAGER_EXPORT ToolTipMenu : public QMenu
 {
 public:
     explicit ToolTipMenu(QWidget *parent = 0, const QString &title = QString());
-    bool event(QEvent* e);
+    bool event(QEvent* e) override;
 };
 
 /** The ToDesktop menu */

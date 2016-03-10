@@ -44,7 +44,7 @@ public:
     };
 
     CurrentContainmentActionsModel(Plasma::Containment *cotainment, QObject *parent = 0);
-    ~CurrentContainmentActionsModel();
+    ~CurrentContainmentActionsModel() override;
 
     QHash<int, QByteArray> roleNames() const override;
 

@@ -35,7 +35,7 @@ public:
     void latch(bool lock);
 
 protected:
-    Plasma::ServiceJob* createJob(const QString& operation, QMap<QString,QVariant>& parameters);
+    Plasma::ServiceJob* createJob(const QString& operation, QMap<QString,QVariant>& parameters) override;
 
 private:
     KModifierKeyInfo *m_keyInfo;
@@ -48,7 +48,7 @@ class LockKeyJob : public Plasma::ServiceJob
 
 public:
     LockKeyJob(KeyService *service, const QMap<QString, QVariant> &parameters);
-    void start();
+    void start() override;
 
 private:
     KeyService *m_service;
@@ -60,7 +60,7 @@ class LatchKeyJob : public Plasma::ServiceJob
 
 public:
     LatchKeyJob(KeyService *service, const QMap<QString, QVariant> &parameters);
-    void start();
+    void start() override;
 
 private:
     KeyService *m_service;

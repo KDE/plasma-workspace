@@ -28,16 +28,16 @@ class ContextMenu : public Plasma::ContainmentActions
     Q_OBJECT
 public:
     ContextMenu(QObject* parent, const QVariantList& args);
-    ~ContextMenu();
+    ~ContextMenu() override;
 
-    void restore(const KConfigGroup&);
+    void restore(const KConfigGroup&) override;
 
-    QList<QAction*> contextualActions();
+    QList<QAction*> contextualActions() override;
     QAction* action(const QString &name);
 
-    QWidget* createConfigurationInterface(QWidget* parent);
-    void configurationAccepted();
-    void save(KConfigGroup &config);
+    QWidget* createConfigurationInterface(QWidget* parent) override;
+    void configurationAccepted() override;
+    void save(KConfigGroup &config) override;
 
 public Q_SLOTS:
     void runCommand();

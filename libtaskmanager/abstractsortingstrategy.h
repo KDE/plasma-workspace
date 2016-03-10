@@ -42,7 +42,7 @@ class TASKMANAGER_EXPORT AbstractSortingStrategy : public QObject
     Q_OBJECT
 public:
     AbstractSortingStrategy(QObject *parent);
-    virtual ~AbstractSortingStrategy();
+    ~AbstractSortingStrategy() override;
 
     /** Returns the strategy type */
     GroupManager::TaskSortingStrategy type() const;

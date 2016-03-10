@@ -39,7 +39,7 @@ class DrKonqiDialog: public QDialog
 
 public:
     explicit DrKonqiDialog(QWidget * parent = 0);
-    ~DrKonqiDialog();
+    ~DrKonqiDialog() override;
 
 private Q_SLOTS:
     void linkActivated(const QString&);

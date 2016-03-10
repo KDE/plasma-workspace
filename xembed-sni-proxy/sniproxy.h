@@ -45,7 +45,7 @@ class SNIProxy : public QObject
 
 public:
     SNIProxy(xcb_window_t wid, QObject *parent=0);
-    ~SNIProxy();
+    ~SNIProxy() override;
 
     void update();
 

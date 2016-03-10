@@ -90,7 +90,7 @@ class WidgetExplorer : public QObject
 
 public:
     explicit WidgetExplorer(QObject *parent = 0);
-    ~WidgetExplorer();
+    ~WidgetExplorer() override;
 
     QString application();
 

@@ -46,13 +46,13 @@ class BugzillaDuplicatesPage : public ReportAssistantPage
 
 public:
     explicit BugzillaDuplicatesPage(ReportAssistantDialog *);
-    ~BugzillaDuplicatesPage();
+    ~BugzillaDuplicatesPage() override;
 
-    void aboutToShow();
-    void aboutToHide();
+    void aboutToShow() override;
+    void aboutToHide() override;
 
-    bool isComplete();
-    bool showNextPage();
+    bool isComplete() override;
+    bool showNextPage() override;
 
 private Q_SLOTS:
     /* Search related methods */
@@ -115,7 +115,7 @@ class BugzillaReportInformationDialog : public QDialog
 
 public:
     explicit BugzillaReportInformationDialog(BugzillaDuplicatesPage*parent=0);
-    ~BugzillaReportInformationDialog();
+    ~BugzillaReportInformationDialog() override;
 
     void showBugReport(int bugNumber, bool relatedButtonEnabled = true);
 
@@ -155,7 +155,7 @@ class BugzillaReportConfirmationDialog : public QDialog
 public:
     BugzillaReportConfirmationDialog(int bugNumber, bool commonCrash, QString closedState,
                                      BugzillaReportInformationDialog * parent);
-    ~BugzillaReportConfirmationDialog();
+    ~BugzillaReportConfirmationDialog() override;
 
 private Q_SLOTS:
     void proceedClicked();

@@ -32,7 +32,7 @@ public:
     void init();
 
 protected:
-    Plasma::Service* serviceForSource(const QString& source);
+    Plasma::Service* serviceForSource(const QString& source) override;
 
 private:
     bool m_pk_available;

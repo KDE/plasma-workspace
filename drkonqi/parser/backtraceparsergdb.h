@@ -28,14 +28,14 @@ class BacktraceParserGdb : public BacktraceParser
 public:
     explicit BacktraceParserGdb(QObject *parent = 0);
 
-    virtual QString parsedBacktrace() const;
-    virtual QList<BacktraceLine> parsedBacktraceLines() const;
+    QString parsedBacktrace() const override;
+    QList<BacktraceLine> parsedBacktraceLines() const override;
 
 protected:
-    virtual BacktraceParserPrivate *constructPrivate() const;
+    BacktraceParserPrivate *constructPrivate() const override;
 
 protected Q_SLOTS:
-    virtual void newLine(const QString & lineStr);
+    void newLine(const QString & lineStr) override;
 
 private:
     void parseLine(const QString & lineStr);

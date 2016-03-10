@@ -38,11 +38,11 @@ class Chrome : public QObject, public Browser
   Q_OBJECT
 public:
     Chrome(FindProfile *findProfile, QObject* parent = 0);
-    ~Chrome();
-    virtual QList<BookmarkMatch> match(const QString &term, bool addEveryThing);
+    ~Chrome() override;
+    QList<BookmarkMatch> match(const QString &term, bool addEveryThing) override;
 public Q_SLOTS:
-    virtual void prepare();
-    virtual void teardown();
+    void prepare() override;
+    void teardown() override;
 private:
     void parseFolder(const QVariantMap &entry, ProfileBookmarks *profile);
     virtual QList<BookmarkMatch> match(const QString &term, bool addEveryThing, ProfileBookmarks *profileBookmarks);

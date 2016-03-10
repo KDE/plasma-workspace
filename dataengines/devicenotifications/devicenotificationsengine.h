@@ -35,7 +35,7 @@ class DeviceNotificationsEngine : public Plasma::DataEngine
     Q_OBJECT
 public:
     DeviceNotificationsEngine( QObject* parent, const QVariantList& args );
-    ~DeviceNotificationsEngine();
+    ~DeviceNotificationsEngine() override;
 
 private slots:
      void notify(Solid::ErrorType solidError, const QString& error, const QString& errorDetails, const QString &udi);

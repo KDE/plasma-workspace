@@ -33,10 +33,10 @@ class FileBrowserEngine : public Plasma::DataEngine
 
 public:
     FileBrowserEngine( QObject* parent, const QVariantList& args );
-    ~FileBrowserEngine();
+    ~FileBrowserEngine() override;
 
 protected:
-    bool sourceRequestEvent(const QString &path);
+    bool sourceRequestEvent(const QString &path) override;
     void init();
 
 protected Q_SLOTS:

@@ -28,7 +28,7 @@ public:
     GdbHighlighter(QTextDocument* parent, const QList<BacktraceLine> & gdbLines);
 
 protected:
-    virtual void highlightBlock(const QString& text);
+    void highlightBlock(const QString& text) override;
 
 private:
     QMap<int, BacktraceLine> lines;

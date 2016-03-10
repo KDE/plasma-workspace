@@ -53,8 +53,8 @@ public:
     WId wid() const { return m_WId; }
 
 protected:
-    virtual QIcon iconForName(const QString &name)
-    {
+    QIcon iconForName(const QString &name)
+    override {
         if(m_icons->contains(name)){
             return QIcon::fromTheme(m_icons->value(name));
         }

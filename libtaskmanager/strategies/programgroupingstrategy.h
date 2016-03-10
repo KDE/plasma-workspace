@@ -40,23 +40,23 @@ class ProgramGroupingStrategy: public AbstractGroupingStrategy
     Q_OBJECT
 public:
     ProgramGroupingStrategy(GroupManager *groupManager);
-    ~ProgramGroupingStrategy();
+    ~ProgramGroupingStrategy() override;
     /** Tasks are passed to this function to be grouped by this strategy
     */
-    void handleItem(AbstractGroupableItem *);
+    void handleItem(AbstractGroupableItem *) override;
 
     /** Returns list of actions that a task can do in this groupingStrategy
     *  fore example: start/stop group tasks of this program
     */
-    QList<QAction*> strategyActions(QObject *parent, AbstractGroupableItem *item);
+    QList<QAction*> strategyActions(QObject *parent, AbstractGroupableItem *item) override;
 
-    EditableGroupProperties editableGroupProperties() {
+    EditableGroupProperties editableGroupProperties() override {
         return None;
     };
 
 protected Q_SLOTS:
     /** Checks if the group is still necessary */
-    void checkGroup();
+    void checkGroup() override;
 private Q_SLOTS:
     /** The program of the sender() of this function is started or stopped being grouped
     *   by this strategy. This is done by adding the program to d->blackList

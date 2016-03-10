@@ -140,12 +140,12 @@ class Q_DECL_EXPORT EnvCanadaIon : public IonInterface, public Plasma::DataEngin
 
 public:
     EnvCanadaIon(QObject *parent, const QVariantList &args);
-    ~EnvCanadaIon();
-    bool updateIonSource(const QString& source); // Sync data source with Applet
+    ~EnvCanadaIon() override;
+    bool updateIonSource(const QString& source) override; // Sync data source with Applet
     void updateWeather(const QString& source);
 
 public Q_SLOTS:
-    virtual void reset();
+    void reset() override;
 
 protected:
     void init();  // Setup the city location, fetching the correct URL name.

@@ -50,12 +50,12 @@ class KCrashBackend : public QObject, public AbstractDrKonqiBackend
     Q_OBJECT
 public:
     KCrashBackend();
-    virtual ~KCrashBackend();
-    virtual bool init();
+    ~KCrashBackend() override;
+    bool init() override;
 
 protected:
-    virtual CrashedApplication *constructCrashedApplication();
-    virtual DebuggerManager *constructDebuggerManager();
+    CrashedApplication *constructCrashedApplication() override;
+    DebuggerManager *constructDebuggerManager() override;
 
 private Q_SLOTS:
     void stopAttachedProcess();

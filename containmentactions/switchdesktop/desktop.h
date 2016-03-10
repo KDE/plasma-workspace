@@ -29,12 +29,12 @@ class SwitchDesktop : public Plasma::ContainmentActions
     Q_OBJECT
     public:
         SwitchDesktop(QObject* parent, const QVariantList& args);
-        ~SwitchDesktop();
+        ~SwitchDesktop() override;
 
-        QList<QAction*> contextualActions();
+        QList<QAction*> contextualActions() override;
 
-        void performNextAction();
-        void performPreviousAction();
+        void performNextAction() override;
+        void performPreviousAction() override;
 
     private Q_SLOTS:
         void switchTo();

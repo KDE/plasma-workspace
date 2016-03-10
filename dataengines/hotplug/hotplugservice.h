@@ -32,7 +32,7 @@ public:
 
 protected:
     Plasma::ServiceJob* createJob (const QString& operation,
-                                   QMap<QString, QVariant>& parameters);
+                                   QMap<QString, QVariant>& parameters) override;
 
 private:
     HotplugEngine *m_engine;

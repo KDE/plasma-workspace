@@ -34,8 +34,8 @@ class StatusNotifierItemEngine : public Plasma::DataEngine {
 public:
     // Basic Create/Destroy
     StatusNotifierItemEngine( QObject *parent, const QVariantList& args );
-    ~StatusNotifierItemEngine();
-    Plasma::Service *serviceForSource(const QString &name);
+    ~StatusNotifierItemEngine() override;
+    Plasma::Service *serviceForSource(const QString &name) override;
 protected:
 
     virtual void init();

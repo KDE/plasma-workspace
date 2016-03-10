@@ -28,7 +28,7 @@ class ExecutableContainer : public Plasma::DataContainer
     Q_OBJECT
     public:
         explicit ExecutableContainer(const QString& command, QObject *parent = 0);
-        virtual ~ExecutableContainer();
+        ~ExecutableContainer() override;
 
     protected Q_SLOTS:
         void finished(int exitCode, QProcess::ExitStatus exitStatus);
@@ -45,7 +45,7 @@ class ExecutableEngine : public Plasma::DataEngine
         ExecutableEngine(QObject *parent, const QVariantList &args);
 
     protected:
-        virtual bool sourceRequestEvent(const QString& source);
+        bool sourceRequestEvent(const QString& source) override;
 };
 
 #endif

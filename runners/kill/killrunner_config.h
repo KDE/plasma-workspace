@@ -49,9 +49,9 @@ public:
     enum Sort {NONE = 0, CPU, CPUI};
 
 public Q_SLOTS:
-    void save();
-    void load();
-    void defaults();
+    void save() override;
+    void load() override;
+    void defaults() override;
 
 private:
     KillRunnerConfigForm* m_ui;

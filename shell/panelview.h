@@ -98,9 +98,9 @@ public:
     Q_ENUMS(VisibilityMode)
 
     explicit PanelView(ShellCorona *corona, QScreen *targetScreen = 0, QWindow *parent = 0);
-    virtual ~PanelView();
+    ~PanelView() override;
 
-    virtual KConfigGroup config() const;
+    KConfigGroup config() const override;
 
     Q_INVOKABLE void maximize();
 
@@ -137,10 +137,10 @@ public:
     static KConfigGroup panelConfig(ShellCorona *corona, Plasma::Containment *containment, QScreen *screen);
 
 protected:
-    void resizeEvent(QResizeEvent *ev);
-    void showEvent(QShowEvent *event);
-    void moveEvent(QMoveEvent *ev);
-    bool event(QEvent *e);
+    void resizeEvent(QResizeEvent *ev) override;
+    void showEvent(QShowEvent *event) override;
+    void moveEvent(QMoveEvent *ev) override;
+    bool event(QEvent *e) override;
     void updateMask();
 
 Q_SIGNALS:
@@ -161,7 +161,7 @@ protected Q_SLOTS:
     /**
      * It will be called when the configuration is requested
      */
-    virtual void showConfigurationInterface(Plasma::Applet *applet);
+    void showConfigurationInterface(Plasma::Applet *applet) override;
     void updateStruts();
 
 private Q_SLOTS:

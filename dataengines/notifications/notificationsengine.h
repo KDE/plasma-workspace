@@ -35,7 +35,7 @@ class NotificationsEngine : public Plasma::DataEngine
 
 public:
     NotificationsEngine( QObject* parent, const QVariantList& args );
-    ~NotificationsEngine();
+    ~NotificationsEngine() override;
 
     virtual void init();
 
@@ -47,7 +47,7 @@ public:
 
     void CloseNotification( uint id );
 
-    Plasma::Service* serviceForSource(const QString& source);
+    Plasma::Service* serviceForSource(const QString& source) override;
 
     QStringList GetCapabilities();
 

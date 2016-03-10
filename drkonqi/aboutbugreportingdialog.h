@@ -30,7 +30,7 @@ class AboutBugReportingDialog: public QDialog
 
 public:
     explicit AboutBugReportingDialog(QWidget * parent = 0);
-    ~AboutBugReportingDialog();
+    ~AboutBugReportingDialog() override;
     void showSection(const QString&);
 
 private Q_SLOTS:

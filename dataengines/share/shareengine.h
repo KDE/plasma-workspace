@@ -32,7 +32,7 @@ class ShareEngine : public Plasma::DataEngine
 public:
     ShareEngine(QObject *parent, const QVariantList &args);
     void init();
-    Plasma::Service *serviceForSource(const QString &source);
+    Plasma::Service *serviceForSource(const QString &source) override;
 
 private Q_SLOTS:
     void updatePlugins(const QStringList &changes);

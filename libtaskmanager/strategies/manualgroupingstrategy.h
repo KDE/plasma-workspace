@@ -43,12 +43,12 @@ class ManualGroupingStrategy: public AbstractGroupingStrategy
     Q_OBJECT
 public:
     ManualGroupingStrategy(GroupManager *groupManager);
-    ~ManualGroupingStrategy();
+    ~ManualGroupingStrategy() override;
 
     /** looks up if this item has been grouped before and groups it accordingly.
     *otherwise the item goes to the rootGroup
     */
-    void handleItem(AbstractGroupableItem *);
+    void handleItem(AbstractGroupableItem *) override;
     /** Should be called if the user wants to manually add an item to a group */
     //bool addItemToGroup(AbstractGroupableItem*, TaskGroup*);
     /** Should be called if the user wants to group items manually */
@@ -57,9 +57,9 @@ public:
     /** Returns list of actions that a task can do in this groupingStrategy
     *  fore example: remove this Task from this group
     */
-    QList<QAction*> strategyActions(QObject *parent, AbstractGroupableItem *item);
+    QList<QAction*> strategyActions(QObject *parent, AbstractGroupableItem *item) override;
 
-    EditableGroupProperties editableGroupProperties();
+    EditableGroupProperties editableGroupProperties() override;
 
 protected Q_SLOTS:
     /** Checks if the group is still necessary, removes group if empty*/

@@ -58,12 +58,12 @@ class SolidDeviceEngine : public Plasma::DataEngine
 
 public:
     SolidDeviceEngine( QObject* parent, const QVariantList& args);
-    ~SolidDeviceEngine();
-    Plasma::Service *serviceForSource (const QString& source);
+    ~SolidDeviceEngine() override;
+    Plasma::Service *serviceForSource (const QString& source) override;
 
 protected:
-    bool sourceRequestEvent(const QString &name);
-    bool updateSourceEvent(const QString& source);
+    bool sourceRequestEvent(const QString &name) override;
+    bool updateSourceEvent(const QString& source) override;
 
 private:
     bool populateDeviceData(const QString &name);

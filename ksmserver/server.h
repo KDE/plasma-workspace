@@ -75,7 +75,7 @@ public:
     };
     Q_DECLARE_FLAGS(InitFlags, InitFlag);
     KSMServer( const QString& windowManager, InitFlags flags );
-    ~KSMServer();
+    ~KSMServer() override;
 
     static KSMServer* self();
 

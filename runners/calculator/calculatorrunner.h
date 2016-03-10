@@ -37,12 +37,12 @@ class CalculatorRunner : public Plasma::AbstractRunner
 
     public:
         CalculatorRunner(QObject* parent, const QVariantList &args);
-        ~CalculatorRunner();
+        ~CalculatorRunner() override;
 
-        void match(Plasma::RunnerContext &context);
+        void match(Plasma::RunnerContext &context) override;
 
     protected Q_SLOTS:
-        QMimeData * mimeDataForMatch(const Plasma::QueryMatch &match);
+        QMimeData * mimeDataForMatch(const Plasma::QueryMatch &match) override;
 
     private:
         QString calculate(const QString& term);

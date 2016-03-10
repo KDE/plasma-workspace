@@ -40,7 +40,7 @@ class NotificationAction : public Plasma::ServiceJob
         {
         }
 
-        void start();
+        void start() override;
 
     private:
         NotificationsEngine* m_engine;

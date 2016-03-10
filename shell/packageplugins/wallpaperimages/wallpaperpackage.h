@@ -29,8 +29,8 @@ class WallpaperPackage : public KPackage::PackageStructure
 public:
     explicit WallpaperPackage(QObject *parent = 0, const QVariantList &args = QVariantList());
 
-    void initPackage(KPackage::Package *package);
-    void pathChanged(KPackage::Package *package);
+    void initPackage(KPackage::Package *package) override;
+    void pathChanged(KPackage::Package *package) override;
 };
 
 #endif

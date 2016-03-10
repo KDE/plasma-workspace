@@ -31,7 +31,7 @@ class PowerDevilRunner : public Plasma::AbstractRunner
 
     public:
         PowerDevilRunner( QObject *parent, const QVariantList &args );
-        ~PowerDevilRunner();
+        ~PowerDevilRunner() override;
 
         void match( Plasma::RunnerContext &context ) Q_DECL_OVERRIDE;
         void run( const Plasma::RunnerContext &context, const Plasma::QueryMatch &action ) Q_DECL_OVERRIDE;

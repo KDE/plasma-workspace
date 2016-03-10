@@ -72,7 +72,7 @@ public:
         VisibleRole
     };
     ConfigModel(QObject *parent = 0);
-    ~ConfigModel();
+    ~ConfigModel() override;
 
     /**
      * add a new category in the model

@@ -32,11 +32,11 @@ class Firefox : public QObject, public Browser
     Q_OBJECT
 public:
     explicit Firefox(QObject *parent = 0);
-    virtual ~Firefox();
-    virtual QList<BookmarkMatch> match(const QString& term, bool addEverything);
+    ~Firefox() override;
+    QList<BookmarkMatch> match(const QString& term, bool addEverything) override;
 public Q_SLOTS:
-    virtual void teardown();
-    virtual void prepare();
+    void teardown() override;
+    void prepare() override;
 private:
     virtual void reloadConfiguration();
     QString m_dbFile;

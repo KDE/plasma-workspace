@@ -36,10 +36,10 @@ class AppService : public Plasma::Service
 
     public:
         AppService(AppSource *source);
-        ~AppService();
+        ~AppService() override;
 
     protected:
-        Plasma::ServiceJob *createJob(const QString &operation, QMap<QString, QVariant> &parameters);
+        Plasma::ServiceJob *createJob(const QString &operation, QMap<QString, QVariant> &parameters) override;
 
     private:
         AppSource *m_source;

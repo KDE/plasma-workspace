@@ -32,10 +32,10 @@ class ApplicationsProtocol : public KIO::SlaveBase
 public:
     enum RunMode { ProgramsMode, ApplicationsMode };
     ApplicationsProtocol(const QByteArray &protocol, const QByteArray &pool, const QByteArray &app);
-    virtual ~ApplicationsProtocol();
-    virtual void get( const QUrl& url );
-    virtual void stat(const QUrl& url);
-    virtual void listDir(const QUrl& url);
+    ~ApplicationsProtocol() override;
+    void get( const QUrl& url ) override;
+    void stat(const QUrl& url) override;
+    void listDir(const QUrl& url) override;
 
 private:
     RunMode m_runMode;

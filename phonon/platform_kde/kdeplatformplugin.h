@@ -36,23 +36,23 @@ class KdePlatformPlugin : public QObject, public PlatformPlugin
     Q_OBJECT
 public:
     KdePlatformPlugin();
-    ~KdePlatformPlugin();
+    ~KdePlatformPlugin() override;
 
-    AbstractMediaStream *createMediaStream(const QUrl &url, QObject *parent);
+    AbstractMediaStream *createMediaStream(const QUrl &url, QObject *parent) override;
 
-    QIcon icon(const QString &name) const;
+    QIcon icon(const QString &name) const override;
     void notification(const char *notificationName, const QString &text,
                       const QStringList &actions, QObject *receiver,
-                      const char *actionSlot) const;
-    QString applicationName() const;
-    QObject *createBackend();
-    QObject *createBackend(const QString &library, const QString &version);
-    bool isMimeTypeAvailable(const QString &mimeType) const;
-    void saveVolume(const QString &outputName, qreal volume);
-    qreal loadVolume(const QString &outputName) const;
+                      const char *actionSlot) const override;
+    QString applicationName() const override;
+    QObject *createBackend() override;
+    QObject *createBackend(const QString &library, const QString &version) override;
+    bool isMimeTypeAvailable(const QString &mimeType) const override;
+    void saveVolume(const QString &outputName, qreal volume) override;
+    qreal loadVolume(const QString &outputName) const override;
 
-    virtual QList<int> objectDescriptionIndexes(ObjectDescriptionType type) const;
-    virtual QHash<QByteArray, QVariant> objectDescriptionProperties(ObjectDescriptionType type, int index) const;
+    QList<int> objectDescriptionIndexes(ObjectDescriptionType type) const override;
+    QHash<QByteArray, QVariant> objectDescriptionProperties(ObjectDescriptionType type, int index) const override;
 
 signals:
     void objectDescriptionChanged(ObjectDescriptionType);

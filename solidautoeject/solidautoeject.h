@@ -32,7 +32,7 @@ class SolidAutoEject : public KDEDModule
 
 public:
     SolidAutoEject(QObject* parent, const QList<QVariant>&);
-    virtual ~SolidAutoEject();
+    ~SolidAutoEject() override;
 
 private slots:
     void onDeviceAdded(const QString &udi);

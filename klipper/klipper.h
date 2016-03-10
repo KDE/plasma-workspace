@@ -63,7 +63,7 @@ public Q_SLOTS:
 
 public:
     Klipper(QObject* parent, const KSharedConfigPtr& config, KlipperMode mode = KlipperMode::Standalone);
-    ~Klipper();
+    ~Klipper() override;
 
     /**
      * Get clipboard history (the "document")

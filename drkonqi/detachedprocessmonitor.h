@@ -30,7 +30,7 @@ Q_SIGNALS:
     void processFinished();
 
 protected:
-    virtual void timerEvent(QTimerEvent *);
+    void timerEvent(QTimerEvent *) override;
 
 private:
     int m_pid;

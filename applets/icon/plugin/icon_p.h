@@ -37,7 +37,7 @@ class IconPrivate : public QObject
 
 public:
     IconPrivate();
-    ~IconPrivate();
+    ~IconPrivate() override;
 
     QUrl url() const;
     QString name() const;

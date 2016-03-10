@@ -101,25 +101,25 @@ class Sun : public SolarSystemObject
 {
     public:
         Sun();
-        virtual void calcForDateTime(const QDateTime& local, int offset);
+        void calcForDateTime(const QDateTime& local, int offset) override;
 
     protected:
-        virtual void rotate(double*, double*);
+        void rotate(double*, double*) override;
 };
 
 class Moon : public SolarSystemObject
 {
     public:
         Moon(Sun *sun);
-        virtual ~Moon() {}; // to not delete the Sun
+        ~Moon() override {}; // to not delete the Sun
 
-        virtual void calcForDateTime(const QDateTime& local, int offset);
+        void calcForDateTime(const QDateTime& local, int offset) override;
         double phase();
 
     protected:
-        virtual bool calcPerturbations(double *RA, double *dec, double *r);
-        virtual void rotate(double*, double*);
-        virtual void topocentricCorrection(double*, double*);
+        bool calcPerturbations(double *RA, double *dec, double *r) override;
+        void rotate(double*, double*) override;
+        void topocentricCorrection(double*, double*) override;
 
     private:
         Sun *m_sun;

@@ -60,7 +60,7 @@ class SessionsModel : public QAbstractListModel
 
 public:
     explicit SessionsModel(QObject *parent = nullptr);
-    virtual ~SessionsModel() = default;
+    ~SessionsModel() override = default;
 
     enum class Role {
         RealName = Qt::DisplayRole,

@@ -55,7 +55,7 @@ class MenuImporter : public QObject, protected QDBusContext
 
 public:
     MenuImporter(QObject*);
-    ~MenuImporter();
+    ~MenuImporter() override;
 
     bool connectToBus();
 

@@ -31,7 +31,7 @@ class PanelShadows : public Plasma::Svg
 
 public:
     explicit PanelShadows(QObject *parent = 0, const QString &prefix = QStringLiteral("widgets/panel-background"));
-    ~PanelShadows();
+    ~PanelShadows() override;
 
     static PanelShadows *self();
 

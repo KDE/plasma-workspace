@@ -43,7 +43,7 @@ class ShareService : public Plasma::Service
 public:
     ShareService(ShareEngine *engine);
     Plasma::ServiceJob *createJob(const QString &operation,
-                                  QMap<QString, QVariant> &parameters);
+                                  QMap<QString, QVariant> &parameters) override;
 };
 
 class ShareJob : public Plasma::ServiceJob
@@ -53,8 +53,8 @@ class ShareJob : public Plasma::ServiceJob
 public:
     ShareJob(const QString &destination, const QString &operation,
              QMap<QString, QVariant> &parameters, QObject *parent = 0);
-    ~ShareJob();
-    void start();
+    ~ShareJob() override;
+    void start() override;
 
 public Q_SLOTS:
     void publish();

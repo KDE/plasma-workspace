@@ -30,20 +30,20 @@ class HistoryStringItem : public HistoryItem
 {
 public:
     HistoryStringItem( const QString& data );
-    virtual ~HistoryStringItem() {}
-    virtual QString text() const;
-    virtual bool operator==( const HistoryItem& rhs) const {
+    ~HistoryStringItem() override {}
+    QString text() const override;
+    bool operator==( const HistoryItem& rhs) const override {
         if ( const HistoryStringItem* casted_rhs = dynamic_cast<const HistoryStringItem*>( &rhs ) ) {
             return casted_rhs->m_data == m_data;
         }
         return false;
     }
-    virtual QMimeData* mimeData() const;
+    QMimeData* mimeData() const override;
 
     /**
      * Write object on datastream
      */
-    virtual void write( QDataStream& stream ) const;
+    void write( QDataStream& stream ) const override;
 
 private:
     QString m_data;

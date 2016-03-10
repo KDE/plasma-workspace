@@ -49,9 +49,9 @@ class ContainmentConfigView : public PlasmaQuick::ConfigView
 
 public:
     ContainmentConfigView(Plasma::Containment *interface, QWindow *parent = 0);
-    virtual ~ContainmentConfigView();
+    ~ContainmentConfigView() override;
 
-    virtual void init();
+    void init() override;
 
     PlasmaQuick::ConfigModel *containmentActionConfigModel();
     QAbstractItemModel *currentContainmentActionsModel();

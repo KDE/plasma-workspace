@@ -43,7 +43,7 @@ class SolidUiServer : public KDEDModule
 
 public:
     SolidUiServer(QObject* parent, const QList<QVariant>&);
-    virtual ~SolidUiServer();
+    ~SolidUiServer() override;
 
 public Q_SLOTS:
     Q_SCRIPTABLE void showActionsDialog(const QString &udi,

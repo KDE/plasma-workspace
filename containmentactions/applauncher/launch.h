@@ -34,11 +34,11 @@ class AppLauncher : public Plasma::ContainmentActions
     Q_OBJECT
     public:
         AppLauncher(QObject* parent, const QVariantList& args);
-        ~AppLauncher();
+        ~AppLauncher() override;
 
         void init(const KConfigGroup &config);
 
-        QList<QAction*> contextualActions();
+        QList<QAction*> contextualActions() override;
 
     protected:
         void makeMenu(QMenu *menu, const KServiceGroup::Ptr group);

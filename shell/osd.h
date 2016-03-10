@@ -36,7 +36,7 @@ class Osd : public QObject {
     Q_CLASSINFO("D-Bus Interface", "org.kde.osdService")
 public:
     Osd(ShellCorona *corona);
-    ~Osd();
+    ~Osd() override;
 
 public Q_SLOTS:
     void brightnessChanged(int percent);

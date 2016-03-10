@@ -35,7 +35,7 @@ class ReportAssistantDialog: public KAssistantDialog
 
 public:
     explicit ReportAssistantDialog(QWidget * parent = 0);
-    ~ReportAssistantDialog();
+    ~ReportAssistantDialog() override;
 
     ReportInterface *reportInterface() const {
         return m_reportInterface;
@@ -52,15 +52,15 @@ private Q_SLOTS:
 
     void showHelp();
 
-    void next();
-    void back();
+    void next() override;
+    void back() override;
 
     //Override default reject method
-    void reject();
+    void reject() override;
 
 private:
     void connectSignals(ReportAssistantPage *);
-    void closeEvent(QCloseEvent*);
+    void closeEvent(QCloseEvent*) override;
 
     QHash<QLatin1String, KPageWidgetItem*>       m_pageWidgetMap;
 

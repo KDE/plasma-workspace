@@ -32,7 +32,7 @@ class TimeSource : public Plasma::DataContainer
 
 public:
     explicit TimeSource(const QString &name, QObject *parent = 0);
-    ~TimeSource();
+    ~TimeSource() override;
     void setTimeZone(const QString &name);
     void updateTime();
 

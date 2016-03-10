@@ -40,13 +40,13 @@ class TimeEngine : public Plasma::DataEngine
     public:
         explicit TimeEngine(const KPluginInfo &plugin, QObject *parent=0);
         TimeEngine(QObject* parent, const QVariantList& args);
-        ~TimeEngine();
+        ~TimeEngine() override;
 
-        QStringList sources() const;
+        QStringList sources() const override;
 
     protected:
-        bool sourceRequestEvent(const QString &name);
-        bool updateSourceEvent(const QString &source);
+        bool sourceRequestEvent(const QString &name) override;
+        bool updateSourceEvent(const QString &source) override;
 
     protected Q_SLOTS:
         void clockSkewed(); // call when system time changed and all clocks should be updated

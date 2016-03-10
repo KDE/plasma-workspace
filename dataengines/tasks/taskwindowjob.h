@@ -32,10 +32,10 @@ class TaskWindowJob : public Plasma::ServiceJob
 
     public:
         TaskWindowJob(const QString &source, const QString &operation, QMap<QString, QVariant> &parameters, QObject *parent = NULL);
-        ~TaskWindowJob();
+        ~TaskWindowJob() override;
 
     protected:
-        void start();
+        void start() override;
 
     private:
         QString m_id;

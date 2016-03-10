@@ -33,7 +33,7 @@ class PowerManagementService : public Plasma::Service
 
 public:
     PowerManagementService(QObject *parent = 0);
-    ServiceJob *createJob(const QString &operation, QMap<QString, QVariant> &parameters);
+    ServiceJob *createJob(const QString &operation, QMap<QString, QVariant> &parameters) override;
 };
 
 #endif // POWERMANAGEMENTSERVICE_H

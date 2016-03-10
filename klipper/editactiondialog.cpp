@@ -55,7 +55,7 @@ class ActionOutputDelegate : public QItemDelegate {
         ActionOutputDelegate(QObject* parent = 0) : QItemDelegate(parent){
         }
 
-        virtual QWidget* createEditor(QWidget* parent, const QStyleOptionViewItem& /*option*/, const QModelIndex& /*index*/) const {
+        QWidget* createEditor(QWidget* parent, const QStyleOptionViewItem& /*option*/, const QModelIndex& /*index*/) const override {
             QComboBox* editor = new QComboBox(parent);
             editor->setInsertPolicy(QComboBox::NoInsert);
             editor->addItem(output2text(ClipCommand::IGNORE), QVariant::fromValue<ClipCommand::Output>(ClipCommand::IGNORE));
@@ -65,18 +65,18 @@ class ActionOutputDelegate : public QItemDelegate {
 
         }
 
-        virtual void setEditorData(QWidget* editor, const QModelIndex& index) const {
+        void setEditorData(QWidget* editor, const QModelIndex& index) const override {
             QComboBox* ed = static_cast<QComboBox*>(editor);
             QVariant data(index.model()->data(index, Qt::EditRole));
             ed->setCurrentIndex(static_cast<int>(data.value<ClipCommand::Output>()));
         }
 
-        virtual void setModelData(QWidget* editor, QAbstractItemModel* model, const QModelIndex& index) const {
+        void setModelData(QWidget* editor, QAbstractItemModel* model, const QModelIndex& index) const override {
             QComboBox* ed = static_cast<QComboBox*>(editor);
             model->setData(index, ed->itemData(ed->currentIndex()));
         }
 
-        virtual void updateEditorGeometry(QWidget* editor, const QStyleOptionViewItem& option, const QModelIndex& /*index*/) const {
+        void updateEditorGeometry(QWidget* editor, const QStyleOptionViewItem& option, const QModelIndex& /*index*/) const override {
             editor->setGeometry(option.rect);
         }
 };
@@ -84,12 +84,12 @@ class ActionOutputDelegate : public QItemDelegate {
 class ActionDetailModel : public QAbstractTableModel {
     public:
         ActionDetailModel(ClipAction* action, QObject* parent = 0);
-        virtual QVariant data(const QModelIndex& index, int role = Qt::DisplayRole) const;
-        virtual bool setData(const QModelIndex& index, const QVariant& value, int role = Qt::EditRole);
-        virtual Qt::ItemFlags flags(const QModelIndex& index) const;
-        virtual int rowCount(const QModelIndex& parent = QModelIndex()) const;
-        virtual int columnCount(const QModelIndex& parent) const;
-        virtual QVariant headerData(int section, Qt::Orientation orientation, int role = Qt::DisplayRole) const;
+        QVariant data(const QModelIndex& index, int role = Qt::DisplayRole) const override;
+        bool setData(const QModelIndex& index, const QVariant& value, int role = Qt::EditRole) override;
+        Qt::ItemFlags flags(const QModelIndex& index) const override;
+        int rowCount(const QModelIndex& parent = QModelIndex()) const override;
+        int columnCount(const QModelIndex& parent) const override;
+        QVariant headerData(int section, Qt::Orientation orientation, int role = Qt::DisplayRole) const override;
         const QList<ClipCommand>& commands() const { return m_commands; }
         void addCommand(const ClipCommand& command);
         void removeCommand(const QModelIndex& index);

@@ -28,10 +28,10 @@ class WebshortcutRunner : public Plasma::AbstractRunner {
 
     public:
         WebshortcutRunner( QObject *parent, const QVariantList& args );
-        ~WebshortcutRunner();
+        ~WebshortcutRunner() override;
 
-        void match(Plasma::RunnerContext &context);
-        void run(const Plasma::RunnerContext &context, const Plasma::QueryMatch &match);
+        void match(Plasma::RunnerContext &context) override;
+        void run(const Plasma::RunnerContext &context, const Plasma::QueryMatch &match) override;
 
     private:
         void loadSyntaxes();

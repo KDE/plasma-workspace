@@ -33,7 +33,7 @@ class KTimeZonedBase : public KDEDModule
 public:
     KTimeZonedBase(QObject *parent, const QList<QVariant>&)
         : KDEDModule(parent) {}
-    virtual ~KTimeZonedBase() {};
+    ~KTimeZonedBase() override {};
 
 public Q_SLOTS:
     /** D-Bus call to initialize the module.

@@ -35,16 +35,16 @@ class PlasmaWindowedView : public QQuickView
 
 public:
     PlasmaWindowedView(QWindow *parent = 0);
-    ~PlasmaWindowedView();
+    ~PlasmaWindowedView() override;
 
     void setApplet(Plasma::Applet *applet);
     void setHasStatusNotifier(bool stay);
 
 protected:
-    virtual void resizeEvent(QResizeEvent * ev);
-    virtual void mouseReleaseEvent(QMouseEvent *ev);
-    virtual void moveEvent(QMoveEvent *ev);
-    virtual void hideEvent(QHideEvent *ev);
+    void resizeEvent(QResizeEvent * ev) override;
+    void mouseReleaseEvent(QMouseEvent *ev) override;
+    void moveEvent(QMoveEvent *ev) override;
+    void hideEvent(QHideEvent *ev) override;
 
 protected Q_SLOTS:
     void showConfigurationInterface(Plasma::Applet *applet);

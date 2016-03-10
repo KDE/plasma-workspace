@@ -98,12 +98,12 @@ class Q_DECL_EXPORT WetterComIon : public IonInterface
 
 public:
     WetterComIon(QObject *parent, const QVariantList &args);
-    ~WetterComIon();
+    ~WetterComIon() override;
 
-    bool updateIonSource(const QString& source);
+    bool updateIonSource(const QString& source) override;
 
 public Q_SLOTS:
-    virtual void reset();
+    void reset() override;
 
 protected Q_SLOTS:
     void setup_slotDataArrived(KIO::Job *, const QByteArray &);

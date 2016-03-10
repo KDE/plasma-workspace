@@ -53,7 +53,7 @@ public:
      * @param parent the QWindow this View is parented to
      **/
     explicit View(Plasma::Corona *corona, QWindow *parent = 0);
-    virtual ~View();
+    ~View() override;
 
     /**
      * @return the corona of this view

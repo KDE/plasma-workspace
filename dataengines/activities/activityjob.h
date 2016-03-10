@@ -34,10 +34,10 @@ class ActivityJob : public Plasma::ServiceJob
 
     public:
         ActivityJob(KActivities::Controller *controller, const QString &id, const QString &operation, QMap<QString, QVariant> &parameters, QObject *parent = 0);
-        ~ActivityJob();
+        ~ActivityJob() override;
 
     protected:
-        void start();
+        void start() override;
 
     private:
         KActivities::Controller *m_activityController;

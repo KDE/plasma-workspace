@@ -43,14 +43,14 @@ class UiServer : public KXmlGuiWindow
 
 public:
     explicit UiServer(ProgressListModel* model);
-    ~UiServer();
+    ~UiServer() override;
 
 public Q_SLOTS:
     void updateConfiguration();
     void applySettings();
 
 protected:
-    virtual void closeEvent(QCloseEvent *event);
+    void closeEvent(QCloseEvent *event) override;
 
 private Q_SLOTS:
     void showConfigurationDialog();

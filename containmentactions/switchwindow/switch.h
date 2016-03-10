@@ -41,17 +41,17 @@ class SwitchWindow : public Plasma::ContainmentActions
     Q_OBJECT
     public:
         SwitchWindow(QObject* parent, const QVariantList& args);
-        ~SwitchWindow();
+        ~SwitchWindow() override;
 
-        void restore(const KConfigGroup &config);
-        QWidget* createConfigurationInterface(QWidget* parent);
-        void configurationAccepted();
-        void save(KConfigGroup &config);
+        void restore(const KConfigGroup &config) override;
+        QWidget* createConfigurationInterface(QWidget* parent) override;
+        void configurationAccepted() override;
+        void save(KConfigGroup &config) override;
 
-        void performNextAction();
-        void performPreviousAction();
+        void performNextAction() override;
+        void performPreviousAction() override;
         void doSwitch(bool up);
-        QList<QAction*> contextualActions();
+        QList<QAction*> contextualActions() override;
 
     private:
         void makeMenu();

@@ -31,7 +31,7 @@ class PlasmaWindowedCorona : public Plasma::Corona
 
 public:
     explicit PlasmaWindowedCorona(QObject * parent = 0);
-    QRect screenGeometry(int id) const;
+    QRect screenGeometry(int id) const override;
 
     void setHasStatusNotifier(bool stay);
     void loadApplet(const QString &applet, const QVariantList &arguments);

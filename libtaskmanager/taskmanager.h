@@ -85,7 +85,7 @@ public:
     static TaskManager* self();
 
     TaskManager();
-    ~TaskManager();
+    ~TaskManager() override;
 
     /**
      * Returns the task for a given WId, or 0 if there is no such task.

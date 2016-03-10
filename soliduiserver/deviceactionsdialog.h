@@ -33,7 +33,7 @@ class DeviceActionsDialog : public KDialog
 
 public:
     DeviceActionsDialog(QWidget *parent=0);
-    ~DeviceActionsDialog();
+    ~DeviceActionsDialog() override;
 
     void setDevice(const Solid::Device &device);
     Solid::Device device() const;

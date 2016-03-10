@@ -33,7 +33,7 @@ class History : public QObject
     Q_OBJECT
 public:
     History( QObject* parent );
-    ~History();
+    ~History() override;
 
     /**
      * Inserts item into clipboard history top

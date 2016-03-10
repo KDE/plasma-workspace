@@ -28,7 +28,7 @@ public:
     explicit BacktraceParserKdbgwin(QObject *parent = 0);
 
 protected Q_SLOTS:
-    virtual void newLine(const QString & lineStr);
+    void newLine(const QString & lineStr) override;
 };
 
 #endif // BACKTRACEPARSERKDBGWIN_H

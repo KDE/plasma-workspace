@@ -45,18 +45,18 @@ public:
      * @param url the URL to the application or file the launcher gets linked to
      */
     LauncherItem(QObject *parent, const QUrl &url);
-    ~LauncherItem();
+    ~LauncherItem() override;
 
     /**
     * @deprecated: use itemType() instead
     **/
-    TASKMANAGER_DEPRECATED bool isGroupItem() const;
-    ItemType itemType() const;
+    TASKMANAGER_DEPRECATED bool isGroupItem() const override;
+    ItemType itemType() const override;
 
     bool isValid() const;
-    QIcon icon() const;
-    QString name() const;
-    QString genericName() const;
+    QIcon icon() const override;
+    QString name() const override;
+    QString genericName() const override;
     QString wmClass() const;
 
     void setIcon(const QIcon &icon);
@@ -72,47 +72,47 @@ public:
     bool shouldShow(const GroupManager *manager) const;
 
     //reimplemented pure virtual methods from abstractgroupableitem
-    bool isOnCurrentDesktop() const;
-    bool isOnAllDesktops() const;
-    int desktop() const;
-    bool isShaded() const;
-    bool isMaximized() const;
-    bool isMinimized() const;
-    bool isFullScreen() const;
-    bool isKeptBelowOthers() const;
-    bool isAlwaysOnTop() const;
-    bool isActionSupported(NET::Action) const;
-    bool isActive() const;
-    bool demandsAttention() const;
-    void addMimeData(QMimeData *mimeData) const;
-    QUrl launcherUrl() const;
+    bool isOnCurrentDesktop() const override;
+    bool isOnAllDesktops() const override;
+    int desktop() const override;
+    bool isShaded() const override;
+    bool isMaximized() const override;
+    bool isMinimized() const override;
+    bool isFullScreen() const override;
+    bool isKeptBelowOthers() const override;
+    bool isAlwaysOnTop() const override;
+    bool isActionSupported(NET::Action) const override;
+    bool isActive() const override;
+    bool demandsAttention() const override;
+    void addMimeData(QMimeData *mimeData) const override;
+    QUrl launcherUrl() const override;
     void setLauncherUrl(const QUrl &url);
 
     //preferred applications hack
     static QString defaultApplication(const QUrl &url);
 
 public Q_SLOTS:
-    void toDesktop(int);
+    void toDesktop(int) override;
 
-    void setShaded(bool);
-    void toggleShaded();
+    void setShaded(bool) override;
+    void toggleShaded() override;
 
-    void setMaximized(bool);
-    void toggleMaximized();
+    void setMaximized(bool) override;
+    void toggleMaximized() override;
 
-    void setMinimized(bool);
-    void toggleMinimized();
+    void setMinimized(bool) override;
+    void toggleMinimized() override;
 
-    void setFullScreen(bool);
-    void toggleFullScreen();
+    void setFullScreen(bool) override;
+    void toggleFullScreen() override;
 
-    void setKeptBelowOthers(bool);
-    void toggleKeptBelowOthers();
+    void setKeptBelowOthers(bool) override;
+    void toggleKeptBelowOthers() override;
 
-    void setAlwaysOnTop(bool);
-    void toggleAlwaysOnTop();
+    void setAlwaysOnTop(bool) override;
+    void toggleAlwaysOnTop() override;
 
-    void close();
+    void close() override;
 
     void launch();
 

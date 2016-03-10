@@ -35,7 +35,7 @@ class TimeZoneFilterProxy : public QSortFilterProxyModel
 
 public:
     explicit TimeZoneFilterProxy(QObject *parent = 0);
-    bool filterAcceptsRow(int source_row, const QModelIndex &source_parent) const;
+    bool filterAcceptsRow(int source_row, const QModelIndex &source_parent) const override;
 
     void setFilterString(const QString &filterString);
 
@@ -56,7 +56,7 @@ class TimeZoneModel : public QAbstractListModel
 
 public:
     explicit TimeZoneModel(QObject *parent = 0);
-    ~TimeZoneModel();
+    ~TimeZoneModel() override;
 
     enum Roles {
         TimeZoneIdRole = Qt::UserRole + 1,
@@ -66,9 +66,9 @@ public:
         CheckedRole
     };
 
-    int rowCount(const QModelIndex &parent) const;
-    QVariant data(const QModelIndex &index, int role) const;
-    bool setData(const QModelIndex &index, const QVariant &value, int role = Qt::EditRole);
+    int rowCount(const QModelIndex &parent) const override;
+    QVariant data(const QModelIndex &index, int role) const override;
+    bool setData(const QModelIndex &index, const QVariant &value, int role = Qt::EditRole) override;
 
     void update();
     void setSelectedTimeZones(const QStringList &selectedTimeZones);
@@ -79,7 +79,7 @@ Q_SIGNALS:
     void selectedTimeZonesChanged();
 
 protected:
-    QHash<int, QByteArray> roleNames() const;
+    QHash<int, QByteArray> roleNames() const override;
 
 private:
     void sortTimeZones();

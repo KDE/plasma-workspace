@@ -46,7 +46,7 @@ class ActivityEngine : public Plasma::DataEngine
 
 public:
     ActivityEngine(QObject* parent, const QVariantList& args);
-    Plasma::Service *serviceForSource(const QString &source);
+    Plasma::Service *serviceForSource(const QString &source) override;
     void init();
 
 public Q_SLOTS:

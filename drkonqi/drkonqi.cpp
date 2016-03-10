@@ -95,7 +95,7 @@ public:
         startTimer(10000); // 10 s
     }
 protected:
-    void timerEvent(QTimerEvent *event) {
+    void timerEvent(QTimerEvent *event) override {
         qDebug() << "Enabling drkonqi crash catching";
         KCrash::setDrKonqiEnabled(true);
         killTimer(event->timerId());
