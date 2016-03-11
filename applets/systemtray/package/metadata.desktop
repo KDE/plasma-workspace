@@ -1,6 +1,16 @@
 [Desktop Entry]
 Encoding=UTF-8
 Name=System tray
+Name[ca]=Safata del sistema
+Name[es]=Bandeja del sistema
+Name[nl]=Systeemvak
+Name[pt]=Bandeja do sistema
+Name[pt_BR]=Área de notificação
+Name[sk]=Systémová lišta
+Name[sl]=Sistemska vrstica
+Name[sv]=Systembricka
+Name[uk]=Системний лоток
+Name[x-test]=xxSystem trayxx
 Icon=preferences-desktop-notification
 Type=Service
 X-KDE-ServiceTypes=Plasma/Applet,Plasma/Containment
