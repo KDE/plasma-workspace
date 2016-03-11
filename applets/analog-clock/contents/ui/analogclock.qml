@@ -113,6 +113,55 @@ Item {
                 elementId: "ClockFace"
             }
 
+            Hand {
+                anchors.topMargin: 3
+                elementId: "HourHandShdow"
+                rotation: 180 + hours * 30 + (minutes/2)
+                svgScale: face.width / face.naturalSize.width
+
+            }
+            Hand {
+                elementId: "HourHand"
+                rotation: 180 + hours * 30 + (minutes/2)
+                svgScale: face.width / face.naturalSize.width
+            }
+
+            Hand {
+                anchors.topMargin: 3
+                elementId: "MinuteHandShadow"
+                rotation: 180 + minutes * 6
+                svgScale: face.width / face.naturalSize.width
+            }
+            Hand {
+                elementId: "MinuteHand"
+                rotation: 180 + minutes * 6
+                svgScale: face.width / face.naturalSize.width
+            }
+
+            Hand {
+                anchors.topMargin: 3
+                elementId: "SecondHandShadow"
+                rotation: 180 + seconds * 6
+                visible: showSecondsHand
+                svgScale: face.width / face.naturalSize.width
+            }
+            Hand {
+                elementId: "SecondHand"
+                rotation: 180 + seconds * 6
+                visible: showSecondsHand
+                svgScale: face.width / face.naturalSize.width
+            }
+
+            PlasmaCore.SvgItem {
+                id: center
+                width: naturalSize.width * face.width / face.naturalSize.width
+                height: naturalSize.height * face.width / face.naturalSize.width
+                anchors.centerIn: clock
+                svg: clockSvg
+                elementId: "HandCenterScrew"
+                z: 1000
+            }
+
             PlasmaCore.SvgItem {
                 anchors.fill: face
                 svg: clockSvg
@@ -120,55 +169,6 @@ Item {
                 width: naturalSize.width * face.width / face.naturalSize.width
                 height: naturalSize.height * face.width / face.naturalSize.width
             }
-        }
-
-        Hand {
-            anchors.topMargin: 3
-            elementId: "HourHandShdow"
-            rotation: 180 + hours * 30 + (minutes/2)
-            svgScale: face.width / face.naturalSize.width
-
-        }
-        Hand {
-            elementId: "HourHand"
-            rotation: 180 + hours * 30 + (minutes/2)
-            svgScale: face.width / face.naturalSize.width
-        }
-
-        Hand {
-            anchors.topMargin: 3
-            elementId: "MinuteHandShadow"
-            rotation: 180 + minutes * 6
-            svgScale: face.width / face.naturalSize.width
-        }
-        Hand {
-            elementId: "MinuteHand"
-            rotation: 180 + minutes * 6
-            svgScale: face.width / face.naturalSize.width
-        }
-
-        Hand {
-            anchors.topMargin: 3
-            elementId: "SecondHandShadow"
-            rotation: 180 + seconds * 6
-            visible: showSecondsHand
-            svgScale: face.width / face.naturalSize.width
-        }
-        Hand {
-            elementId: "SecondHand"
-            rotation: 180 + seconds * 6
-            visible: showSecondsHand
-            svgScale: face.width / face.naturalSize.width
-        }
-
-        PlasmaCore.SvgItem {
-            id: center
-            width: naturalSize.width * face.width / face.naturalSize.width
-            height: naturalSize.height * face.width / face.naturalSize.width
-            anchors.centerIn: clock
-            svg: clockSvg
-            elementId: "HandCenterScrew"
-            z: 1000
         }
 
         PlasmaCore.FrameSvgItem {

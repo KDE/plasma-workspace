@@ -29,21 +29,22 @@ PlasmaCore.SvgItem {
     property alias rotation: rotation.angle
     property double svgScale
 
-    width: naturalSize.width * svgScale
-    height: naturalSize.height * svgScale
+    width: Math.round(naturalSize.width * svgScale) + Math.round(naturalSize.width * svgScale) % 2
+    height: Math.round(naturalSize.height * svgScale) + width % 2
     anchors {
         top: clock.verticalCenter
         topMargin: -width/2
         horizontalCenter: clock.horizontalCenter
     }
+
     svg: clockSvg
     smooth: !anim.running
     transform: Rotation {
         id: rotation
         angle: 0
         origin {
-            x: width/2
-            y: width/2
+            x: secondHand.width/2
+            y: secondHand.width/2
         }
         Behavior on angle {
             RotationAnimation {
