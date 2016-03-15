@@ -69,20 +69,15 @@ AbstractItem {
             var service = statusNotifierSource.serviceForSource(DataEngineSource);
             var operation = service.operationDescription("Activate");
             operation.x = pos.x;
-
-            // kmix shows main window instead of volume popup if (parent.x, parent.y) == (0, 0), which is the case here.
-            // I am passing a position right below the panel (assuming panel is at screen's top).
-            // Plasmoids' popups are already shown below the panel, so this make kmix's popup more consistent
-            // to them.
-            operation.y = pos.y + parent.height + 6;
+            operation.y = pos.y;
             service.startOperationCall(operation);
             break;
         }
         case Qt.RightButton: {
             var service = statusNotifierSource.serviceForSource(DataEngineSource);
             var operation = service.operationDescription("ContextMenu");
-            operation.x = x;
-            operation.y = y;
+            operation.x = pos.x;
+            operation.y = pos.y;
 
             var job = service.startOperationCall(operation);
             job.finished.connect(function () {
