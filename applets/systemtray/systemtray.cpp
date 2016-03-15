@@ -93,7 +93,7 @@ void SystemTray::newTask(const QString &task)
         }
     }
 
-    createApplet(task);
+    createApplet(task, QVariantList() << "org.kde.plasma:force-create");
 }
 
 void SystemTray::cleanupTask(const QString &task)
