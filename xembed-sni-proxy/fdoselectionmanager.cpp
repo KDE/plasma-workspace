@@ -139,20 +139,17 @@ bool FdoSelectionManager::nativeEventFilter(const QByteArray& eventType, void* m
         }
     } else if (responseType == XCB_UNMAP_NOTIFY) {
         const auto unmappedWId = reinterpret_cast<xcb_unmap_notify_event_t *>(ev)->window;
-        if (m_proxies[unmappedWId]) {
+        if (m_proxies.contains(unmappedWId)) {
             undock(unmappedWId);
         }
     } else if (responseType == XCB_DESTROY_NOTIFY) {
         const auto destroyedWId = reinterpret_cast<xcb_destroy_notify_event_t *>(ev)->window;
-        if (m_proxies[destroyedWId]) {
+        if (m_proxies.contains(destroyedWId)) {
             undock(destroyedWId);
         }
     } else if (responseType == m_damageEventBase + XCB_DAMAGE_NOTIFY) {
         const auto damagedWId = reinterpret_cast<xcb_damage_notify_event_t *>(ev)->drawable;
-        const auto sniProx = m_proxies[damagedWId];
-
-        Q_ASSERT(sniProx);
-
+        const auto sniProx = m_proxies.value(damagedWId);
         if(sniProx) {
             sniProx->update();
             xcb_damage_subtract(QX11Info::connection(), m_damageWatches[damagedWId], XCB_NONE, XCB_NONE);
