@@ -34,6 +34,9 @@
 #include "shellcorona.h"
 #include "standaloneappcorona.h"
 #include "shellmanager.h"
+#include "coronatesthelper.h"
+
+#include <QDir>
 
 int main(int argc, char *argv[])
 {
@@ -91,12 +94,17 @@ int main(int argc, char *argv[])
     QCommandLineOption standaloneOption(QStringList() << QStringLiteral("a") << QStringLiteral("standalone"),
                                         i18n("Load plasmashell as a standalone application, needs the shell-plugin option to be specified"));
 
+
+    QCommandLineOption testOption(QStringList() << QStringLiteral("test"),
+                                        i18n("Enables test mode and specifies the layout javascript file to set up the testing environment"), i18n("file"), QStringLiteral("layout.js"));
+
     cliOptions.addOption(dbgOption);
     cliOptions.addOption(winOption);
     cliOptions.addOption(noRespawnOption);
     cliOptions.addOption(shutupOption);
     cliOptions.addOption(shellPluginOption);
     cliOptions.addOption(standaloneOption);
+    cliOptions.addOption(testOption);
 
     cliOptions.process(app);
 
@@ -115,6 +123,25 @@ int main(int argc, char *argv[])
 
     if (!cliOptions.isSet(noRespawnOption)) {
         KCrash::setFlags(KCrash::AutoRestart);
+    }
+
+    if (cliOptions.isSet(testOption)) {
+        const QUrl layoutUrl = QUrl::fromUserInput(cliOptions.value(testOption), {}, QUrl::AssumeLocalFile);
+        if (!layoutUrl.isLocalFile()) {
+            qWarning() << "ensure the layout file is local" << layoutUrl;
+            cliOptions.showHelp(1);
+        }
+
+        QStandardPaths::setTestModeEnabled(true);
+        QDir(QStandardPaths::writableLocation(QStandardPaths::ConfigLocation)).removeRecursively();
+        ShellManager::s_testModeLayout = layoutUrl.toLocalFile();
+
+        QObject::connect(ShellManager::instance(), &ShellManager::shellChanged,
+                         ShellManager::instance(),
+                            [layoutUrl]() {
+                                new CoronaTestHelper(ShellManager::instance()->corona());
+                            }
+                        );
     }
 
     if (cliOptions.isSet(standaloneOption)) {

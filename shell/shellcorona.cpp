@@ -575,8 +575,11 @@ void ShellCorona::requestApplicationConfigSync()
 
 void ShellCorona::loadDefaultLayout()
 {
-    QString script = m_lookAndFeelPackage.filePath("layouts", QString(shell() + "-layout.js").toLatin1());
+    QString script = ShellManager::s_testModeLayout;
 
+    if (script.isEmpty()) {
+        script = m_lookAndFeelPackage.filePath("layouts", QString(shell() + "-layout.js").toLatin1());
+    }
     if (script.isEmpty()) {
         script = package().filePath("defaultlayout");
     }

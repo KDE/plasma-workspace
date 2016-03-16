@@ -46,6 +46,7 @@ static const QString s_shellLoaderPath = QStringLiteral("/contents/loader.qml");
 bool ShellManager::s_forceWindowed = false;
 bool ShellManager::s_standaloneOption = false;
 QString ShellManager::s_fixedShell;
+QString ShellManager::s_testModeLayout;
 
 //
 // ShellManager
@@ -245,3 +246,7 @@ ShellManager * ShellManager::instance()
     return manager;
 }
 
+Plasma::Corona* ShellManager::corona() const
+{
+    return d->corona;
+}

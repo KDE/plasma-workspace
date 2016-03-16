@@ -1,0 +1,14 @@
+var appletName = "@plasmoidName@";
+
+var panel = new Panel
+panel.location = "top";
+panel.height = gridUnit * 2
+panel.addWidget(appletName)
+
+var id = createActivity("Test: "+ appletName);
+var desktopsArray = desktopsForActivity(id);
+for( var j in desktopsArray) {
+    var desktop = desktopsArray[j];
+    desktop.wallpaperPlugin = 'org.kde.color';
+    desktop.addWidget(appletName);
+}

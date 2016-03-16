@@ -22,6 +22,10 @@
 
 #include <QObject>
 
+namespace Plasma {
+    class Corona;
+}
+
 /**
  * ShellManager creates a ShellCorona instance and manages it.
  *
@@ -41,6 +45,9 @@ public:
     static bool s_forceWindowed;
     static bool s_standaloneOption;
     static QString s_fixedShell;
+    static QString s_testModeLayout;
+
+    Plasma::Corona* corona() const;
 
 protected Q_SLOTS:
     void registerHandler(QObject * handler);
