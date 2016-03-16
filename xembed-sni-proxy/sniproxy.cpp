@@ -180,6 +180,11 @@ SNIProxy::SNIProxy(xcb_window_t wid, QObject* parent):
         event.height = s_embedSize;
         xcb_send_event(c, false, wid, XCB_EVENT_MASK_STRUCTURE_NOTIFY, (char *) &event);
 
+        const uint32_t windowMoveConfigVals[2] = { s_embedSize, s_embedSize };
+        xcb_configure_window(c, wid,
+                                XCB_CONFIG_WINDOW_WIDTH | XCB_CONFIG_WINDOW_HEIGHT,
+                                windowMoveConfigVals);
+
         clientWindowSize = QSize(s_embedSize, s_embedSize);
     }
 
