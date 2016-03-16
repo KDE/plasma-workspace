@@ -603,6 +603,8 @@ void ShellCorona::loadDefaultLayout()
             qWarning() << "failed to initialize layout properly:" << script;
         }
     }
+
+    Q_EMIT startupCompleted();
 }
 
 void ShellCorona::processUpdateScripts()
