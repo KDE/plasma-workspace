@@ -39,6 +39,11 @@ set(scripting_SRC
 set(plasmashell_dbusXML dbus/org.kde.PlasmaShell.xml)
 qt5_add_dbus_adaptor(scripting_SRC ${plasmashell_dbusXML} shellcorona.h ShellCorona plasmashelladaptor)
 
+ecm_qt_declare_logging_category(plasmashell HEADER debug.h
+                                               IDENTIFIER PLASMASHELL
+                                               CATEGORY_NAME kde.plasmashell
+                                               DEFAULT_SEVERITY Info)
+
 set (plasma_shell_SRCS
     activity.cpp
     alternativeshelper.cpp
@@ -55,6 +60,7 @@ set (plasma_shell_SRCS
     standaloneappcorona
     osd.cpp
     waylanddialogfilter.cpp
+    debug.cpp
     ${scripting_SRC}
 )
 
