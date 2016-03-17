@@ -178,35 +178,6 @@ void SystemTray::showPlasmoidMenu(QQuickItem *appletInterface)
     //FIXME: systraycontainer?
     Plasma::Applet *systrayApplet = this;
 
-    if (systrayApplet) {
-        QMenu *systrayMenu = new QMenu(i18n("System Tray Options"), desktopMenu);
-
-        foreach (QAction *action, systrayApplet->contextualActions()) {
-            if (action) {
-                systrayMenu->addAction(action);
-            }
-        }
-        if (systrayApplet->actions()->action(QStringLiteral("configure"))) {
-            systrayMenu->addAction(systrayApplet->actions()->action(QStringLiteral("configure")));
-        }
-        if (systrayApplet->actions()->action(QStringLiteral("remove"))) {
-            systrayMenu->addAction(systrayApplet->actions()->action(QStringLiteral("remove")));
-        }
-        desktopMenu->addMenu(systrayMenu);
-
-        if (systrayApplet->containment() && applet->status() >= Plasma::Types::ActiveStatus) {
-            QMenu *containmentMenu = new QMenu(i18nc("%1 is the name of the containment", "%1 Options", systrayApplet->containment()->title()), desktopMenu);
-
-            emit systrayApplet->containment()->contextualActionsAboutToShow();
-            foreach (QAction *action, systrayApplet->containment()->contextualActions()) {
-                if (action) {
-                    containmentMenu->addAction(action);
-                }
-            }
-            desktopMenu->addMenu(containmentMenu);
-        }
-    }
-
     desktopMenu->adjustSize();
 
     if (QScreen *screen = appletInterface->window()->screen()) {
