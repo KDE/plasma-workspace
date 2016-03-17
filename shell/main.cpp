@@ -68,9 +68,8 @@ int main(int argc, char *argv[])
     app.setQuitOnLastWindowClosed(false);
     app.setWindowIcon(QIcon::fromTheme(QStringLiteral("plasma")));
 
+    {
     QCommandLineParser cliOptions;
-    cliOptions.addHelpOption();
-    cliOptions.addVersionOption();
 
     QCommandLineOption dbgOption(QStringList() << QStringLiteral("d") <<
                                  QStringLiteral("qmljsdebugger"),
@@ -106,9 +105,9 @@ int main(int argc, char *argv[])
     cliOptions.addOption(standaloneOption);
     cliOptions.addOption(testOption);
 
+    aboutData.setupCommandLine(&cliOptions);
     cliOptions.process(app);
-
-    KAboutData::applicationData().setupCommandLine(&cliOptions);
+    aboutData.processCommandLine(&cliOptions);
 
 #if QT_VERSION >= QT_VERSION_CHECK(5, 6, 0)
     QGuiApplication::setFallbackSessionManagementEnabled(false);
@@ -157,6 +156,7 @@ int main(int argc, char *argv[])
         } else {
             cliOptions.showHelp(1);
         }
+    }
     }
 
     KDBusService service(KDBusService::Unique);
