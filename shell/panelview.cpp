@@ -438,18 +438,18 @@ QRect PanelView::geometryByDistance(int distance) const
 
 void PanelView::resizePanel()
 {
-
-
     if (formFactor() == Plasma::Types::Vertical) {
-        const int maxSize = screen()->size().height() - m_offset;
-        setMinimumSize(QSize(thickness(), m_minLength));
-        setMaximumSize(QSize(thickness(), m_maxLength));
-        resize(thickness(), qBound<int>(MINSIZE, m_contentLength, maxSize));
+        const int minSize = qMax(MINSIZE, m_minLength);
+        const int maxSize = qMin(m_maxLength, screen()->size().height() - m_offset);
+        setMinimumSize(QSize(thickness(), minSize));
+        setMaximumSize(QSize(thickness(), maxSize));
+        resize(thickness(), qBound(minSize, m_contentLength, maxSize));
     } else {
-        const int maxSize = screen()->size().width() - m_offset;
-        setMinimumSize(QSize(m_minLength, thickness()));
-        setMaximumSize(QSize(m_maxLength, thickness()));
-        resize(qBound<int>(MINSIZE, m_contentLength, maxSize), thickness());
+        const int minSize = qMax(MINSIZE, m_minLength);
+        const int maxSize = qMin(m_maxLength, screen()->size().width() - m_offset);
+        setMinimumSize(QSize(minSize, thickness()));
+        setMaximumSize(QSize(maxSize, thickness()));
+        resize(qBound(minSize, m_contentLength, maxSize), thickness());
     }
     //positionPanel will be called implicitly from resizeEvent
 }
@@ -501,9 +501,9 @@ void PanelView::restore()
         m_minLength = qBound<int>(MINSIZE, m_minLength, maxSize);
     }
 
-    resizePanel();
 
     setVisibilityMode((VisibilityMode)config().readEntry<int>("panelVisibility", (int)NormalPanel));
+    resizePanel();
 
     emit maximumLengthChanged();
     emit minimumLengthChanged();
