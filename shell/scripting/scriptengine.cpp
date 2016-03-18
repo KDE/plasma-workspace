@@ -255,6 +255,47 @@ QScriptValue ScriptEngine::setCurrentActivity(QScriptContext *context, QScriptEn
     return QScriptValue(task.result());
 }
 
+QScriptValue ScriptEngine::setActivityName(QScriptContext *context, QScriptEngine *engine)
+{
+    Q_UNUSED(engine)
+
+    if (context->argumentCount() < 2) {
+        return context->throwError(i18n("setActivityName required the activity id and name"));
+    }
+
+    const QString id = context->argument(0).toString();
+    const QString name = context->argument(1).toString();
+
+    KActivities::Controller controller;
+
+    QFuture<void> task = controller.setActivityName(id, name);
+    QEventLoop loop;
+
+    QFutureWatcher<void> *watcher = new QFutureWatcher<void>();
+    connect(watcher, &QFutureWatcherBase::finished, &loop, &QEventLoop::quit);
+
+    watcher->setFuture(task);
+
+    loop.exec();
+
+    return QScriptValue();
+}
+
+QScriptValue ScriptEngine::activityName(QScriptContext *context, QScriptEngine *engine)
+{
+    Q_UNUSED(engine)
+
+    if (context->argumentCount() < 1) {
+        return context->throwError(i18n("setActivityName required the activity id and name"));
+    }
+
+    const QString id = context->argument(0).toString();
+
+    KActivities::Info info(id);
+
+    return QScriptValue(info.name());
+}
+
 QScriptValue ScriptEngine::currentActivity(QScriptContext *context, QScriptEngine *engine)
 {
     Q_UNUSED(engine)
@@ -799,6 +840,9 @@ void ScriptEngine::setupEngine()
     m_scriptSelf.setProperty(QStringLiteral("setCurrentActivity"), newFunction(ScriptEngine::setCurrentActivity));
     m_scriptSelf.setProperty(QStringLiteral("currentActivity"), newFunction(ScriptEngine::currentActivity));
     m_scriptSelf.setProperty(QStringLiteral("activities"), newFunction(ScriptEngine::activities));
+    m_scriptSelf.setProperty(QStringLiteral("setActivityName"), newFunction(ScriptEngine::setActivityName));
+    m_scriptSelf.setProperty(QStringLiteral("activityName"), newFunction(ScriptEngine::activityName));
+    m_scriptSelf.setProperty(QStringLiteral("setActivityName"), newFunction(ScriptEngine::setActivityName));
     m_scriptSelf.setProperty(QStringLiteral("Panel"), newFunction(ScriptEngine::newPanel, newObject()));
     m_scriptSelf.setProperty(QStringLiteral("desktopsForActivity"), newFunction(ScriptEngine::desktopsForActivity));
     m_scriptSelf.setProperty(QStringLiteral("desktops"), newFunction(ScriptEngine::desktops));

@@ -230,22 +230,6 @@ uint Containment::id() const
     return d->containment.data()->id();
 }
 
-QString Containment::name() const
-{
-    if (!d->containment) {
-        return QString();
-    }
-
-    return d->containment.data()->activity();
-}
-
-void Containment::setName(const QString &name)
-{
-    if (d->containment) {
-        d->containment.data()->setActivity(name);
-    }
-}
-
 QString Containment::type() const
 {
     if (!d->containment) {

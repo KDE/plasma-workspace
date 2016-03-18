@@ -41,7 +41,6 @@ class Panel : public Containment
     Q_PROPERTY(QStringList globalConfigKeys READ globalConfigKeys)
     Q_PROPERTY(QStringList globalConfigGroups READ globalConfigGroups)
 
-    Q_PROPERTY(QString name READ name WRITE setName)
     Q_PROPERTY(QString version READ version)
     Q_PROPERTY(QString type READ type)
     Q_PROPERTY(QString formFactor READ formFactor)
