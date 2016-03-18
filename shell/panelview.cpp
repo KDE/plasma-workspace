@@ -221,7 +221,7 @@ void PanelView::setThickness(int value)
 
 int PanelView::length() const
 {
-    return m_contentLength;
+    return qMax(1, m_contentLength);
 }
 
 void PanelView::setLength(int value)
