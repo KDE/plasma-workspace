@@ -204,6 +204,8 @@ QScriptValue ScriptEngine::createActivity(QScriptContext *context, QScriptEngine
 
         loop.exec();
         id = futureId.result();
+    } else {
+        controller.setActivityName(id, name);
     }
 
     Activity *a = new Activity(id, env->m_corona);
