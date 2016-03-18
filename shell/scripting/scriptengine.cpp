@@ -245,10 +245,10 @@ QScriptValue ScriptEngine::setCurrentActivity(QScriptContext *context, QScriptEn
     QFuture<bool> task = controller.setCurrentActivity(id);
     QEventLoop loop;
 
-    QFutureWatcher<bool> *watcher = new QFutureWatcher<bool>();
-    connect(watcher, &QFutureWatcherBase::finished, &loop, &QEventLoop::quit);
+    QFutureWatcher<bool> watcher;
+    connect(&watcher, &QFutureWatcherBase::finished, &loop, &QEventLoop::quit);
 
-    watcher->setFuture(task);
+    watcher.setFuture(task);
 
     loop.exec();
 
@@ -271,10 +271,10 @@ QScriptValue ScriptEngine::setActivityName(QScriptContext *context, QScriptEngin
     QFuture<void> task = controller.setActivityName(id, name);
     QEventLoop loop;
 
-    QFutureWatcher<void> *watcher = new QFutureWatcher<void>();
-    connect(watcher, &QFutureWatcherBase::finished, &loop, &QEventLoop::quit);
+    QFutureWatcher<void> watcher;
+    connect(&watcher, &QFutureWatcherBase::finished, &loop, &QEventLoop::quit);
 
-    watcher->setFuture(task);
+    watcher.setFuture(task);
 
     loop.exec();
 
