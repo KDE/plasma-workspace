@@ -133,8 +133,11 @@ public Q_SLOTS:
     ///DBUS methods
     void toggleDashboard();
     void setDashboardShown(bool show);
+    void loadInteractiveConsole();
     void showInteractiveConsole();
     void loadScriptInInteractiveConsole(const QString &script);
+    void showInteractiveKWinConsole();
+    void loadKWinScriptInInteractiveConsole(const QString &script);
     void toggleActivityManager();
 
     Plasma::Containment *addPanel(const QString &plugin);

@@ -1146,7 +1146,7 @@ void ShellCorona::toggleDashboard()
     setDashboardShown(!KWindowSystem::showingDesktop());
 }
 
-void ShellCorona::showInteractiveConsole()
+void ShellCorona::loadInteractiveConsole()
 {
     if (KSharedConfig::openConfig()->isImmutable() || !KAuthorized::authorize(QStringLiteral("plasma-desktop/scripting_console"))) {
         delete m_interactiveConsole;
@@ -1173,7 +1173,11 @@ void ShellCorona::showInteractiveConsole()
                     this, SLOT(interactiveConsoleVisibilityChanged(bool)));
         }
     }
+}
 
+void ShellCorona::showInteractiveConsole()
+{
+    loadInteractiveConsole();
     if (m_interactiveConsole->rootObject()) {
         m_interactiveConsole->rootObject()->setProperty("mode", "desktop");
         m_interactiveConsole->rootObject()->setProperty("visible", true);
@@ -1183,6 +1187,24 @@ void ShellCorona::showInteractiveConsole()
 void ShellCorona::loadScriptInInteractiveConsole(const QString &script)
 {
     showInteractiveConsole();
+    if (m_interactiveConsole) {
+        m_interactiveConsole->rootObject()->setProperty("script", script);
+    }
+}
+
+void ShellCorona::showInteractiveKWinConsole()
+{
+    loadInteractiveConsole();
+
+    if (m_interactiveConsole->rootObject()) {
+        m_interactiveConsole->rootObject()->setProperty("mode", "windowmanager");
+        m_interactiveConsole->rootObject()->setProperty("visible", true);
+    }
+}
+
+void ShellCorona::loadKWinScriptInInteractiveConsole(const QString &script)
+{
+    showInteractiveKWinConsole();
     if (m_interactiveConsole) {
         m_interactiveConsole->rootObject()->setProperty("script", script);
     }
