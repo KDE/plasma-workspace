@@ -373,32 +373,34 @@ QRect PanelView::geometryByDistance(int distance) const
 {
     QScreen *s = screen();
     QPoint position;
+    const QRect screenGeometry = s->geometry();
+
     switch (containment()->location()) {
     case Plasma::Types::TopEdge:
         switch (m_alignment) {
         case Qt::AlignCenter:
-            position = QPoint(QPoint(s->geometry().center().x(), s->geometry().top()) + QPoint(m_offset - size().width()/2, distance));
+            position = QPoint(QPoint(screenGeometry.center().x(), screenGeometry.top()) + QPoint(m_offset - width()/2, distance));
             break;
         case Qt::AlignRight:
-            position = QPoint(QPoint(s->geometry().x() + s->geometry().width(), s->geometry().y()) - QPoint(m_offset + size().width(), distance));
+            position = QPoint(QPoint(screenGeometry.x() + screenGeometry.width(), screenGeometry.y()) - QPoint(m_offset + width(), distance));
             break;
         case Qt::AlignLeft:
         default:
-            position = QPoint(s->geometry().topLeft() + QPoint(m_offset, distance));
+            position = QPoint(screenGeometry.topLeft() + QPoint(m_offset, distance));
         }
         break;
 
     case Plasma::Types::LeftEdge:
         switch (m_alignment) {
         case Qt::AlignCenter:
-            position = QPoint(QPoint(s->geometry().left(), s->geometry().center().y()) + QPoint(distance, m_offset - size().height()/2));
+            position = QPoint(QPoint(screenGeometry.left(), screenGeometry.center().y()) + QPoint(distance, m_offset - width()/2));
             break;
         case Qt::AlignRight:
-            position = QPoint(QPoint(s->geometry().left(), s->geometry().y() + s->geometry().height()) - QPoint(distance, m_offset + size().height()));
+            position = QPoint(QPoint(screenGeometry.left(), screenGeometry.y() + screenGeometry.height()) - QPoint(distance, m_offset + width()));
             break;
         case Qt::AlignLeft:
         default:
-            position = QPoint(s->geometry().topLeft() + QPoint(distance, m_offset));
+            position = QPoint(screenGeometry.topLeft() + QPoint(distance, m_offset));
         }
         break;
 
@@ -406,14 +408,14 @@ QRect PanelView::geometryByDistance(int distance) const
         switch (m_alignment) {
         case Qt::AlignCenter:
             // Never use rect.right(); for historical reasons it returns left() + width() - 1; see http://doc.qt.io/qt-5/qrect.html#right
-            position = QPoint(QPoint(s->geometry().x() + s->geometry().width(), s->geometry().center().y()) - QPoint(thickness() + distance, 0) + QPoint(0, m_offset - size().height()/2));
+            position = QPoint(QPoint(screenGeometry.x() + screenGeometry.width(), screenGeometry.center().y()) - QPoint(thickness() + distance, 0) + QPoint(0, m_offset - width()/2));
             break;
         case Qt::AlignRight:
-            position = QPoint(QPoint(s->geometry().x() + s->geometry().width(), s->geometry().y() + s->geometry().height()) - QPoint(thickness() + distance, 0) - QPoint(0, m_offset + size().height()));
+            position = QPoint(QPoint(screenGeometry.x() + screenGeometry.width(), screenGeometry.y() + screenGeometry.height()) - QPoint(thickness() + distance, 0) - QPoint(0, m_offset + width()));
             break;
         case Qt::AlignLeft:
         default:
-            position = QPoint(QPoint(s->geometry().x() + s->geometry().width(), s->geometry().y()) - QPoint(thickness() + distance, 0) + QPoint(0, m_offset));
+            position = QPoint(QPoint(screenGeometry.x() + screenGeometry.width(), screenGeometry.y()) - QPoint(thickness() + distance, 0) + QPoint(0, m_offset));
         }
         break;
 
@@ -421,18 +423,18 @@ QRect PanelView::geometryByDistance(int distance) const
     default:
         switch (m_alignment) {
         case Qt::AlignCenter:
-            position = QPoint(QPoint(s->geometry().center().x(), s->geometry().bottom() - thickness() - distance) + QPoint(m_offset - size().width()/2, 1));
+            position = QPoint(QPoint(screenGeometry.center().x(), screenGeometry.bottom() - thickness() - distance) + QPoint(m_offset - width()/2, 1));
             break;
         case Qt::AlignRight:
-            position = QPoint(s->geometry().bottomRight() - QPoint(0, thickness() + distance) - QPoint(m_offset + size().width(), -1));
+            position = QPoint(screenGeometry.bottomRight() - QPoint(0, thickness() + distance) - QPoint(m_offset + width(), -1));
             break;
         case Qt::AlignLeft:
         default:
-            position = QPoint(s->geometry().bottomLeft() - QPoint(0, thickness() + distance) + QPoint(m_offset, 1));
+            position = QPoint(screenGeometry.bottomLeft() - QPoint(0, thickness() + distance) + QPoint(m_offset, 1));
         }
     }
     QRect ret = formFactor() == Plasma::Types::Vertical ? QRect(position, QSize(thickness(), length())) : QRect(position, QSize(length(), thickness()));
-    ret = ret.intersected(s->geometry());
+    ret = ret.intersected(screenGeometry);
     return ret;
 }
 
