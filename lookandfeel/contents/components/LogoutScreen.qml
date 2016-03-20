@@ -103,19 +103,19 @@ BreezeBlock {
             State {
                 name: "shutdown"
                 PropertyChanges { target: root; currentAction: shutdownRequested }
-                PropertyChanges { target: actionLabel; text: i18nd("plasma_lookandfeel_org.kde.lookandfeel","Shutting down") }
+                PropertyChanges { target: actionLabel; text: i18ndc("plasma_lookandfeel_org.kde.lookandfeel","Dialog heading, confirm shut down, not a status label","Shutting down") }
                 PropertyChanges { target: actionIcon; source: "system-shutdown" }
             },
             State {
                 name: "logout"
                 PropertyChanges { target: root; currentAction: logoutRequested }
-                PropertyChanges { target: actionLabel; text: i18nd("plasma_lookandfeel_org.kde.lookandfeel","Logging out") }
+                PropertyChanges { target: actionLabel; text: i18ndc("plasma_lookandfeel_org.kde.lookandfeel","Dialog heading, confirm log out, not a status label","Logging out") }
                 PropertyChanges { target: actionIcon; source: "system-log-out" }
             },
             State {
                 name: "reboot"
                 PropertyChanges { target: root; currentAction: rebootRequested }
-                PropertyChanges { target: actionLabel; text: i18nd("plasma_lookandfeel_org.kde.lookandfeel","Rebooting") }
+                PropertyChanges { target: actionLabel; text: i18ndc("plasma_lookandfeel_org.kde.lookandfeel","Dialog heading, confirm reboot, not a status label","Rebooting") }
                 PropertyChanges { target: actionIcon; source: "system-reboot" }
             }
         ]
