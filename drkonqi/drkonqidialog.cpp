@@ -264,7 +264,8 @@ void DrKonqiDialog::startBugReportAssistant()
 #if HAVE_XMLRPCCLIENT
     ReportAssistantDialog * bugReportAssistant = new ReportAssistantDialog();
     bugReportAssistant->show();
-    connect(bugReportAssistant, SIGNAL(finished()), SLOT([] () { close(); }));
+    connect(bugReportAssistant, &QObject::destroyed, this, &DrKonqiDialog::reject);
+
     hide();
 #endif
 }
