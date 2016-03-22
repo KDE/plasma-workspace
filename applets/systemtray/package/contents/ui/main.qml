@@ -189,8 +189,8 @@ MouseArea {
         property string skipItems
         flow: vertical ? Flow.LeftToRight : Flow.TopToBottom
         //To make it look centered
-        y: vertical ? 0 : (height % root.itemSize) / 2
-        x: vertical ? (width % root.itemSize) / 2 : 0
+        y: Math.round(height/2 - childrenRect.height/2)
+        x: Math.round(width/2 - childrenRect.width/2)
 
         //make last icon appeared nearer to the tasskbar
         //TODO: Qt 5.6 will have functions for it
