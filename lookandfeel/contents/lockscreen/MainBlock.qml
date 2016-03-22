@@ -90,7 +90,11 @@ BreezeBlock {
             RowLayout {
                 anchors.horizontalCenter: parent.horizontalCenter
 
-                KeyboardLayoutButton {}
+                KeyboardLayoutButton {
+                    id: kbdLayoutButton
+                    hidden: !passwordInput.visible
+                    KeyNavigation.tab: block.mainItem
+                }
 
                 PlasmaComponents.TextField {
                     id: passwordInput
@@ -144,6 +148,7 @@ BreezeBlock {
                             passwordInput.text = "";
                         }
                     }
+                    KeyNavigation.backtab: block.mainItem
                 }
 
                 PlasmaComponents.Button {
@@ -164,6 +169,7 @@ BreezeBlock {
                             stackView.push(changeSessionComponent.item)
                             break;
                     }
+                    KeyNavigation.tab: kbdLayoutButton
                 }
 
                 Connections {
