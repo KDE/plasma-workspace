@@ -605,7 +605,7 @@ void KSMServer::startKilling()
     foreach( KSMClient* c, clients ) {
         if( isWM( c )) // kill the WM as the last one in order to reduce flicker
             continue;
-        qCDebug(KSMSERVER) << "completeShutdown: client " << c->program() << "(" << c->clientId() << ")";
+        qCDebug(KSMSERVER) << "startKilling: client " << c->program() << "(" << c->clientId() << ")";
         SmsDie( c->connection() );
     }
 
