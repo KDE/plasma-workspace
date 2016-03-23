@@ -357,7 +357,12 @@ QString SNIProxy::Category() const
 
 QString SNIProxy::Id() const
 {
-    return QString::number(m_windowId);
+    const auto title = Title();
+    //we always need /some/ ID so if no window title exists, just use the winId.
+    if (title.isEmpty()) {
+        return QString::number(m_windowId);
+    }
+    return title;
 }
 
 KDbusImageVector SNIProxy::IconPixmap() const
