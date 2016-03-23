@@ -218,10 +218,10 @@ MouseArea {
 
         //NOTE: this exists mostly for not causing reference errors
         property QtObject marginHints: QtObject {
-            property int left: 0
-            property int top: 0
-            property int right: 0
-            property int bottom: 0
+            property int left: Math.round(units.smallSpacing / 2)
+            property int top: Math.round(units.smallSpacing / 2)
+            property int right: Math.round(units.smallSpacing / 2)
+            property int bottom: Math.round(units.smallSpacing / 2)
         }
 
         /*FIXME: need Qt 5.6 for transitions to look good
