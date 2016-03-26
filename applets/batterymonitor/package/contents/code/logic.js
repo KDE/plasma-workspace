@@ -22,10 +22,11 @@
 function stringForBatteryState(batteryData) {
     if (batteryData["Plugged in"]) {
         switch(batteryData["State"]) {
-            case "NoCharge": return i18n("Not Charging");
             case "Discharging": return i18n("Discharging");
             case "FullyCharged": return i18n("Fully Charged");
-            default: return i18n("Charging");
+            case "Charging": return i18n("Charging");
+            // when in doubt we're not charging
+            default: return i18n("Not Charging");
         }
     } else {
         return i18nc("Battery is currently not present in the bay","Not present");
