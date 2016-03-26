@@ -469,6 +469,7 @@ void PowermanagementEngine::updateOverallBattery()
     double totalEnergy = 0;
     bool allFullyCharged = true;
     bool charging = false;
+    bool noCharge = false;
     double totalPercentage = 0;
     int count = 0;
 
@@ -483,6 +484,7 @@ void PowermanagementEngine::updateOverallBattery()
             totalPercentage += battery->chargePercent();
             allFullyCharged = allFullyCharged && (battery->chargeState() == Solid::Battery::FullyCharged);
             charging = charging || (battery->chargeState() == Solid::Battery::Charging);
+            noCharge = noCharge || (battery->chargeState() == Solid::Battery::NoCharge);
             ++count;
         }
     }
@@ -505,6 +507,8 @@ void PowermanagementEngine::updateOverallBattery()
             setData(QStringLiteral("Battery"), QStringLiteral("State"), "FullyCharged");
         } else if (charging) {
             setData(QStringLiteral("Battery"), QStringLiteral("State"), "Charging");
+        } else if (noCharge) {
+            setData(QStringLiteral("Battery"), QStringLiteral("State"), "NoCharge");
         } else {
             setData(QStringLiteral("Battery"), QStringLiteral("State"), "Discharging");
         }
