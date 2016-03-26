@@ -58,10 +58,13 @@ Item {
             return i18n("Fully Charged");
         } else if (pmSource.data["AC Adapter"] && pmSource.data["AC Adapter"]["Plugged in"]) {
             var percent = pmSource.data.Battery.Percent
-            if (pmSource.data.Battery.State === "Charging") {
+            var state = pmSource.data.Battery.State
+            if (state === "Charging") {
                 return i18n("%1%. Charging", percent)
+            } else if (state === "NoCharge") {
+                return i18n("%1%. Plugged in, not Charging", percent)
             } else {
-                return i18nc("AC is plugged in but battery full/not charging", "%1%. Plugged in", percent)
+                return i18n("%1%. Plugged in", percent)
             }
         } else {
             if (remainingTime > 0) {
