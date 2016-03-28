@@ -890,6 +890,9 @@ void PanelView::updateStruts()
             }
 
             const QRect otherScreen = corona()->screenGeometry(i);
+            if (!otherScreen.isValid()) {
+                continue;
+            }
 
             switch (location())
             {
