@@ -19,6 +19,7 @@
 
 import QtQuick 2.5
 import QtQuick.Layouts 1.1
+import QtQml.Models 2.2
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.plasmoid 2.0
 import "items"
@@ -41,12 +42,40 @@ MouseArea {
 
     property alias statusNotifierModel: statusNotifierModel
 
-    function addApplet(applet, x, y) {
+    function updateItemVisibility(item) {
+
+        //Invisible
+        if (!item.categoryShown) {
+            if (item.parent == hiddenLayout) {
+                hiddenLayout.model.remove(item.ObjectModel.index, 1);
+            }
+            if (item.parent == visibleLayout) {
+                visibleLayout.model.remove(item.ObjectModel.index, 1);
+            }
+            item.parent = invisibleEntriesContainer;
+
+        //visible
+        } else if (item.forcedShown || !(item.forcedHidden || item.status == PlasmaCore.Types.PassiveStatus)) {
+            if (item.parent == hiddenLayout) {
+                hiddenLayout.model.remove(item.ObjectModel.index, 1);
+            }
+            visibleLayout.model.insert(0, item);
+
+        //hidden
+        } else {
+            if (item.parent == visibleLayout) {
+                visibleLayout.model.remove(item.ObjectModel.index, 1);
+            }
+            hiddenLayout.model.insert(0, item);
+            item.x = 0;
+        }
+    }
+
+    Containment.onAppletAdded: {
         print("Applet created:" + applet.title)
         var component = Qt.createComponent("items/PlasmoidItem.qml")
-        var plasmoidContainer = component.createObject((applet.status == PlasmaCore.Types.PassiveStatus) ? hiddenLayout : visibleLayout, {"x": x, "y": y});
+        var plasmoidContainer = component.createObject(invisibleEntriesContainer, {"x": x, "y": y, "applet": applet});
 
-        plasmoidContainer.applet = applet
         applet.parent = plasmoidContainer
         applet.anchors.left = plasmoidContainer.left
         applet.anchors.top = plasmoidContainer.top
@@ -54,10 +83,6 @@ MouseArea {
         applet.width = plasmoidContainer.height
         applet.visible = true
         plasmoidContainer.visible = true
-    }
-
-    Containment.onAppletAdded: {
-        addApplet(applet, x, y);
     }
 
     Containment.onAppletRemoved: {
@@ -148,8 +173,6 @@ MouseArea {
     
     PlasmaCore.SortFilterModel {
         id: statusNotifierModel
-        filterRole: "Category"
-        filterRegExp: "("+shownCategories.join("|")+")"
         sourceModel: PlasmaCore.DataModel {
             dataSource: statusNotifierSource
         }
@@ -183,6 +206,7 @@ MouseArea {
     //Main Layout
     Flow {
         id: tasksRow
+        property alias model: visibleModel
         spacing: 0
         height: parent.height - (vertical ? expander.height : 0)
         width: parent.width  - (vertical ? 0 : expander.width)
@@ -192,27 +216,9 @@ MouseArea {
         y: Math.round(height/2 - childrenRect.height/2)
         x: Math.round(width/2 - childrenRect.width/2)
 
-        //make last icon appeared nearer to the tasskbar
-        //TODO: Qt 5.6 will have functions for it
-        function addItem(item) {
-            if (item.parent == tasksRow || item.repositioningInProgress == true || item == marginHints) {
-                return;
-            }
-            var items = [];
-            for (var i = 0; i < tasksRow.children.length; ++i) {
-                items.push(tasksRow.children[i]);
-            }
-
-            for (var i = 0; i < items.length; ++i) {
-                items[i].repositioningInProgress = true;
-                items[i].parent = invisibleEntriesContainer;
-            }
-
-            item.parent = tasksRow;
-
-            for (var i = 0; i < items.length; ++i) {
-                items[i].parent = tasksRow;
-                items[i].repositioningInProgress = false;
+        Repeater {
+            model: ObjectModel {
+                id: visibleModel
             }
         }
 
@@ -224,8 +230,7 @@ MouseArea {
             property int bottom: Math.round(units.smallSpacing / 2)
         }
 
-        /*FIXME: need Qt 5.6 for transitions to look good
-         add: Transition {
+        add: Transition {
             NumberAnimation {
                 property: "scale"
                 from: 0
@@ -240,7 +245,7 @@ MouseArea {
                 easing.type: Easing.InQuad
                 duration: units.longDuration
             }
-        }*/
+        }
     }
 
     ExpanderArrow {
