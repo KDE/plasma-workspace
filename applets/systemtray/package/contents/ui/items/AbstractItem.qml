@@ -53,10 +53,10 @@ PlasmaCore.ToolTipArea {
     icon: 
     */
 
-    location: if (abstractItem.parent && abstractItem.parent.objectName == "hiddenTasksColumn") {
+    location: if (abstractItem.parent && abstractItem.parent.objectName == "hiddenTasksColumn" && plasmoid.location != PlasmaCore.Types.LeftEdge) {
                 return PlasmaCore.Types.RightEdge;
               } else {
-                return abstractItem.location;
+                return plasmoid.location;
               }
 
 //BEGIN CONNECTIONS

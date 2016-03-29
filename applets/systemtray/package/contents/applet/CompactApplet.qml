@@ -31,7 +31,7 @@ PlasmaCore.ToolTipArea {
     icon: plasmoid.icon
     mainText: plasmoid.toolTipMainText
     subText: plasmoid.toolTipSubText
-    location: if (plasmoid.parent && plasmoid.parent.parent.objectName == "hiddenTasksColumn") {
+    location: if (plasmoid.parent && plasmoid.parent.parent.objectName == "hiddenTasksColumn" && plasmoid.location != PlasmaCore.Types.LeftEdge) {
                 return PlasmaCore.Types.RightEdge;
               } else {
                 return plasmoid.location;
