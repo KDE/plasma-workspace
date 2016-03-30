@@ -87,6 +87,22 @@ public:
      */
     Q_INVOKABLE QPointF popupPosition(QQuickItem* visualParent, int x, int y);
 
+    /**
+     * Reparent the item "before" with the same parent as the item "after",
+     * then restack it before it, using QQuickITem::stackBefore.
+     * used to quickly reorder icons in the systray (or hidden popup)
+     * @see QQuickITem::stackBefore
+     */
+    Q_INVOKABLE void reorderItemBefore(QQuickItem* before, QQuickItem* after);
+
+    /**
+     * Reparent the item "after" with the same parent as the item "before",
+     * then restack it after it, using QQuickITem::stackAfter.
+     * used to quickly reorder icons in the systray (or hidden popup)
+     * @see QQuickITem::stackAfter
+     */
+    Q_INVOKABLE void reorderItemAfter(QQuickItem* after, QQuickItem* before);
+
 private Q_SLOTS:
     void serviceNameFetchFinished(QDBusPendingCallWatcher* watcher, const QDBusConnection &connection);
     void serviceOwnerChanged(const QString &serviceName, const QString &oldOwner, const QString &newOwner);

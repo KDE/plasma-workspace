@@ -19,7 +19,6 @@
 
 import QtQuick 2.5
 import QtQuick.Layouts 1.1
-import QtQml.Models 2.2
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.plasmoid 2.0
 import "items"
@@ -46,27 +45,37 @@ MouseArea {
 
         //Invisible
         if (!item.categoryShown) {
-            if (item.parent == hiddenLayout) {
-                hiddenLayout.model.remove(item.ObjectModel.index, 1);
+            if (item.parent == invisibleEntriesContainer) {
+                return;
             }
-            if (item.parent == visibleLayout) {
-                visibleLayout.model.remove(item.ObjectModel.index, 1);
-            }
+
             item.parent = invisibleEntriesContainer;
 
         //visible
         } else if (item.forcedShown || !(item.forcedHidden || item.status == PlasmaCore.Types.PassiveStatus)) {
-            if (item.parent == hiddenLayout) {
-                hiddenLayout.model.remove(item.ObjectModel.index, 1);
+
+            if (visibleLayout.children.length == 0) {
+                item.parent = visibleLayout;
+            //notifications is always the first
+            } else if (visibleLayout.children[0].itemId == "org.kde.plasma.notifications" &&
+                       item.itemId != "org.kde.plasma.notifications") {
+                plasmoid.nativeInterface.reorderItemAfter(item, visibleLayout.children[0]);
+            } else {
+                plasmoid.nativeInterface.reorderItemBefore(item, visibleLayout.children[0]);
             }
-            visibleLayout.model.insert(0, item);
 
         //hidden
         } else {
-            if (item.parent == visibleLayout) {
-                visibleLayout.model.remove(item.ObjectModel.index, 1);
+
+            if (hiddenLayout.children.length == 0) {
+                item.parent = hiddenLayout;
+            //notifications is always the first
+            } else if (hiddenLayout.children[0].itemId == "org.kde.plasma.notifications" &&
+                       item.itemId != "org.kde.plasma.notifications") {
+                plasmoid.nativeInterface.reorderItemAfter(item, hiddenLayout.children[0]);
+            } else {
+                plasmoid.nativeInterface.reorderItemBefore(item, hiddenLayout.children[0]);
             }
-            hiddenLayout.model.insert(0, item);
             item.x = 0;
         }
     }
@@ -170,7 +179,7 @@ MouseArea {
         }
         return array;
     }
-    
+
     PlasmaCore.SortFilterModel {
         id: statusNotifierModel
         sourceModel: PlasmaCore.DataModel {
@@ -206,7 +215,6 @@ MouseArea {
     //Main Layout
     Flow {
         id: tasksRow
-        property alias model: visibleModel
         spacing: 0
         height: parent.height - (vertical ? expander.height : 0)
         width: parent.width  - (vertical ? 0 : expander.width)
@@ -216,13 +224,8 @@ MouseArea {
         y: Math.round(height/2 - childrenRect.height/2)
         x: Math.round(width/2 - childrenRect.width/2)
 
-        Repeater {
-            model: ObjectModel {
-                id: visibleModel
-            }
-        }
 
-        //NOTE: this exists mostly for not causing reference errors
+        //Do spacing with margins, to correctly compute the number of lines
         property QtObject marginHints: QtObject {
             property int left: Math.round(units.smallSpacing / 2)
             property int top: Math.round(units.smallSpacing / 2)
@@ -230,7 +233,8 @@ MouseArea {
             property int bottom: Math.round(units.smallSpacing / 2)
         }
 
-        add: Transition {
+        //add doesn't seem to work used in conjunction with stackBefore/stackAfter
+        /*add: Transition {
             NumberAnimation {
                 property: "scale"
                 from: 0
@@ -245,7 +249,7 @@ MouseArea {
                 easing.type: Easing.InQuad
                 duration: units.longDuration
             }
-        }
+        }*/
     }
 
     ExpanderArrow {

@@ -59,13 +59,9 @@ PlasmaCore.ToolTipArea {
                 return abstractItem.location;
               }
 
-    function updateVisibility() {
-        updateItemVisibility(abstractItem);
-    }
-
 //BEGIN CONNECTIONS
 
-    onStatusChanged: updateVisibility()
+    onStatusChanged: updateItemVisibility(abstractItem);
 
     onContainsMouseChanged: {
         if (hidden && containsMouse) {
@@ -73,13 +69,13 @@ PlasmaCore.ToolTipArea {
         }
     }
 
-    Component.onCompleted: updateVisibility()
-    onForcedHiddenChanged: updateVisibility()
-    onForcedShownChanged: updateVisibility()
-    onCategoryShownChanged: updateVisibility()
+    Component.onCompleted: updateItemVisibility(abstractItem);
+    onForcedHiddenChanged: updateItemVisibility(abstractItem);
+    onForcedShownChanged: updateItemVisibility(abstractItem);
+    onCategoryShownChanged: updateItemVisibility(abstractItem);
 
     //dangerous but needed due how repeater reparents
-    onParentChanged: updateVisibility()
+    onParentChanged: updateItemVisibility(abstractItem);
 
 //END CONNECTIONS
 

@@ -19,7 +19,6 @@
 
 import QtQuick 2.1
 import QtQuick.Layouts 1.1
-import QtQml.Models 2.2
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.plasma.extras 2.0 as PlasmaExtras
@@ -60,18 +59,12 @@ PlasmaExtras.ScrollArea {
 
             Column {
                 id: hiddenTasksColumn
-                property alias model: hiddenModel
 
-                Repeater {
-                    model: ObjectModel {
-                        id: hiddenModel
-                    }
-                }
                 spacing: units.smallSpacing
                 width: parent.width
                 property Item hoveredItem
                 property alias marginHints: highlight.marginHints
-                
+
                 objectName: "hiddenTasksColumn"
             }
         }

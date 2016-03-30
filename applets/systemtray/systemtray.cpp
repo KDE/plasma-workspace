@@ -285,6 +285,30 @@ QPointF SystemTray::popupPosition(QQuickItem* visualParent, int x, int y)
     return pos;
 }
 
+void SystemTray::reorderItemBefore(QQuickItem* before, QQuickItem* after)
+{
+    if (!before || !after) {
+        return;
+    }
+
+    before->setVisible(false);
+    before->setParentItem(after->parentItem());
+    before->stackBefore(after);
+    before->setVisible(true);
+}
+
+void SystemTray::reorderItemAfter(QQuickItem* after, QQuickItem* before)
+{
+    if (!before || !after) {
+        return;
+    }
+
+    after->setVisible(false);
+    after->setParentItem(before->parentItem());
+    after->stackAfter(before);
+    after->setVisible(true);
+}
+
 void SystemTray::restoreContents(KConfigGroup &group)
 {
     //Don't do anything here, it's too soon
