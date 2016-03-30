@@ -645,6 +645,12 @@ void GroupManagerPrivate::taskChanged(::TaskManager::Task *task, ::TaskManager::
             show = true;
         } else if (task->info().windowType(NET::UtilityMask) == NET::Utility) {
             removeTask(task);
+        } else if (abstractGroupingStrategy) {
+            // Group tasks again when they no longer demands attention.
+            TaskItem *item = qobject_cast<TaskItem *>(currentRootGroup()->getMemberByWId(task->window()));
+            if (item) {
+                abstractGroupingStrategy->handleItem(item);
+            }
         }
     }
 
@@ -723,10 +729,10 @@ void GroupManager::reconnect()
             connect(TaskManager::self(), SIGNAL(activityChanged(QString)),
                     this, SLOT(currentActivityChanged(QString)));
         }
-
-        connect(TaskManager::self(), SIGNAL(windowChanged(::TaskManager::Task *, ::TaskManager::TaskChanges)),
-                this, SLOT(taskChanged(::TaskManager::Task *, ::TaskManager::TaskChanges)));
     }
+
+    connect(TaskManager::self(), SIGNAL(windowChanged(::TaskManager::Task *, ::TaskManager::TaskChanges)),
+            this, SLOT(taskChanged(::TaskManager::Task *, ::TaskManager::TaskChanges)));
 
     TaskManager::self()->setTrackGeometry(d->showOnlyCurrentScreen, d->configToken);
 

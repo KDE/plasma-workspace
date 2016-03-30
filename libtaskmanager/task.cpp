@@ -50,6 +50,9 @@ Task::Task(WId w, QObject *parent, const char *name)
     // try to load icon via net_wm
     refreshIcon();
     refreshActivities();
+
+    // initial demands attention
+    d->demandedAttention = demandsAttention();
 }
 
 Task::~Task()
