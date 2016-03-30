@@ -59,11 +59,12 @@ PlasmaExtras.ScrollArea {
 
             Column {
                 id: hiddenTasksColumn
+
                 spacing: units.smallSpacing
                 width: parent.width
                 property Item hoveredItem
                 property alias marginHints: highlight.marginHints
-                
+
                 objectName: "hiddenTasksColumn"
             }
         }

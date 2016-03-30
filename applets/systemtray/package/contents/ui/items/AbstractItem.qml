@@ -18,6 +18,7 @@
  */
 
 import QtQuick 2.1
+import QtQml.Models 2.2
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
 
@@ -36,9 +37,7 @@ PlasmaCore.ToolTipArea {
     property Item iconItem
     //PlasmaCore.Types.ItemStatus
     property int status
-
-    //FIXME: Qt 5.6
-    property bool repositioningInProgress: false
+    property QtObject model
 
     signal clicked(var mouse)
     signal wheel(var wheel)
@@ -54,28 +53,15 @@ PlasmaCore.ToolTipArea {
     icon: 
     */
 
-
     location: if (abstractItem.parent && abstractItem.parent.objectName == "hiddenTasksColumn") {
                 return PlasmaCore.Types.RightEdge;
               } else {
                 return abstractItem.location;
               }
 
-    function updateVisibility() {
-        if (!categoryShown) {
-            abstractItem.parent = invisibleEntriesContainer;
-        } else if (forcedShown || !(forcedHidden || status == PlasmaCore.Types.PassiveStatus)) {
-            visibleLayout.addItem(abstractItem);
-        } else {
-            abstractItem.parent = hiddenLayout;
-            abstractItem.x = 0;
-        }
-    }
-
-
 //BEGIN CONNECTIONS
 
-    onStatusChanged: updateVisibility()
+    onStatusChanged: updateItemVisibility(abstractItem);
 
     onContainsMouseChanged: {
         if (hidden && containsMouse) {
@@ -83,13 +69,13 @@ PlasmaCore.ToolTipArea {
         }
     }
 
-    Component.onCompleted: updateVisibility()
-    onForcedHiddenChanged: updateVisibility()
-    onForcedShownChanged: updateVisibility()
-    onCategoryShownChanged: updateVisibility()
+    Component.onCompleted: updateItemVisibility(abstractItem);
+    onForcedHiddenChanged: updateItemVisibility(abstractItem);
+    onForcedShownChanged: updateItemVisibility(abstractItem);
+    onCategoryShownChanged: updateItemVisibility(abstractItem);
 
     //dangerous but needed due how repeater reparents
-    onParentChanged: updateVisibility()
+    onParentChanged: updateItemVisibility(abstractItem);
 
 //END CONNECTIONS
 

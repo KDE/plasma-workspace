@@ -41,12 +41,50 @@ MouseArea {
 
     property alias statusNotifierModel: statusNotifierModel
 
-    function addApplet(applet, x, y) {
+    function updateItemVisibility(item) {
+
+        //Invisible
+        if (!item.categoryShown) {
+            if (item.parent == invisibleEntriesContainer) {
+                return;
+            }
+
+            item.parent = invisibleEntriesContainer;
+
+        //visible
+        } else if (item.forcedShown || !(item.forcedHidden || item.status == PlasmaCore.Types.PassiveStatus)) {
+
+            if (visibleLayout.children.length == 0) {
+                item.parent = visibleLayout;
+            //notifications is always the first
+            } else if (visibleLayout.children[0].itemId == "org.kde.plasma.notifications" &&
+                       item.itemId != "org.kde.plasma.notifications") {
+                plasmoid.nativeInterface.reorderItemAfter(item, visibleLayout.children[0]);
+            } else {
+                plasmoid.nativeInterface.reorderItemBefore(item, visibleLayout.children[0]);
+            }
+
+        //hidden
+        } else {
+
+            if (hiddenLayout.children.length == 0) {
+                item.parent = hiddenLayout;
+            //notifications is always the first
+            } else if (hiddenLayout.children[0].itemId == "org.kde.plasma.notifications" &&
+                       item.itemId != "org.kde.plasma.notifications") {
+                plasmoid.nativeInterface.reorderItemAfter(item, hiddenLayout.children[0]);
+            } else {
+                plasmoid.nativeInterface.reorderItemBefore(item, hiddenLayout.children[0]);
+            }
+            item.x = 0;
+        }
+    }
+
+    Containment.onAppletAdded: {
         print("Applet created:" + applet.title)
         var component = Qt.createComponent("items/PlasmoidItem.qml")
-        var plasmoidContainer = component.createObject((applet.status == PlasmaCore.Types.PassiveStatus) ? hiddenLayout : visibleLayout, {"x": x, "y": y});
+        var plasmoidContainer = component.createObject(invisibleEntriesContainer, {"x": x, "y": y, "applet": applet});
 
-        plasmoidContainer.applet = applet
         applet.parent = plasmoidContainer
         applet.anchors.left = plasmoidContainer.left
         applet.anchors.top = plasmoidContainer.top
@@ -54,10 +92,6 @@ MouseArea {
         applet.width = plasmoidContainer.height
         applet.visible = true
         plasmoidContainer.visible = true
-    }
-
-    Containment.onAppletAdded: {
-        addApplet(applet, x, y);
     }
 
     Containment.onAppletRemoved: {
@@ -145,11 +179,9 @@ MouseArea {
         }
         return array;
     }
-    
+
     PlasmaCore.SortFilterModel {
         id: statusNotifierModel
-        filterRole: "Category"
-        filterRegExp: "("+shownCategories.join("|")+")"
         sourceModel: PlasmaCore.DataModel {
             dataSource: statusNotifierSource
         }
@@ -192,31 +224,8 @@ MouseArea {
         y: Math.round(height/2 - childrenRect.height/2)
         x: Math.round(width/2 - childrenRect.width/2)
 
-        //make last icon appeared nearer to the tasskbar
-        //TODO: Qt 5.6 will have functions for it
-        function addItem(item) {
-            if (item.parent == tasksRow || item.repositioningInProgress == true || item == marginHints) {
-                return;
-            }
-            var items = [];
-            for (var i = 0; i < tasksRow.children.length; ++i) {
-                items.push(tasksRow.children[i]);
-            }
 
-            for (var i = 0; i < items.length; ++i) {
-                items[i].repositioningInProgress = true;
-                items[i].parent = invisibleEntriesContainer;
-            }
-
-            item.parent = tasksRow;
-
-            for (var i = 0; i < items.length; ++i) {
-                items[i].parent = tasksRow;
-                items[i].repositioningInProgress = false;
-            }
-        }
-
-        //NOTE: this exists mostly for not causing reference errors
+        //Do spacing with margins, to correctly compute the number of lines
         property QtObject marginHints: QtObject {
             property int left: Math.round(units.smallSpacing / 2)
             property int top: Math.round(units.smallSpacing / 2)
@@ -224,8 +233,8 @@ MouseArea {
             property int bottom: Math.round(units.smallSpacing / 2)
         }
 
-        /*FIXME: need Qt 5.6 for transitions to look good
-         add: Transition {
+        //add doesn't seem to work used in conjunction with stackBefore/stackAfter
+        /*add: Transition {
             NumberAnimation {
                 property: "scale"
                 from: 0

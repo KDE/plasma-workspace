@@ -46,8 +46,6 @@ AbstractItem {
 
     iconItem: iconItem
 
-    Component.onCompleted: taskIcon.parent = visibleLayout
-
     PlasmaCore.IconItem {
         id: iconItem
         source: plasmoid.nativeInterface.resolveIcon(IconName != "" ? IconName : Icon, IconThemePath)
