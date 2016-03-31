@@ -804,7 +804,9 @@ bool GroupManager::addLauncher(const QUrl &url, const QIcon &icon, const QString
             }
         }
 
-        d->abstractSortingStrategy->check(launcher);
+	if (d->abstractSortingStrategy) {
+            d->abstractSortingStrategy->check(launcher);
+        }
 
         if (!d->readingLauncherConfig) {
             emit launcherListChanged();
