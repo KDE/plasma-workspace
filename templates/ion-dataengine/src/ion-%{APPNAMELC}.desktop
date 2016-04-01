@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=%{APPNAME} Weather Data Provider
+Comment=Access to the weather data provider %{APPNAME}
+X-KDE-ServiceTypes=Plasma/DataEngine
+X-KDE-ParentApp=weatherengine
+Type=Service
+Icon=noneyet
+X-KDE-Library=ion_%{APPNAMELC}
+X-KDE-PluginInfo-Name=%{APPNAMELC}

@@ -1,0 +1,50 @@
+Plasma Weather Ion Dataengine
+-----------------------------
+
+-- Note --
+
+Remember that this dataengine relies on a semi-public API,
+as exposed by the "plasma/weather/ion.h" header.
+While this API has been the same for some time, there is no guarantee
+that it will be stable for all future versions of the weather dataengine
+as part of Plasma Workspace.
+
+The main purpose of having this interface semi-public is to allow everyone
+to easily develop adapters to more weather data providers,
+without needing to work directly in the module plasma-workspace.
+
+Once your ion dataengine is nicely working, please consider to merge
+it into the KDE module plasma-workspace with the existing ion dataengines.
+Looking forward to cover another weather data providers with your help :)
+
+
+-- Build instructions --
+
+cd /where/your/ion/is/generated
+mkdir build
+cd build
+cmake -DCMAKE_INSTALL_PREFIX=MYPREFIX ..
+make
+make install
+
+(MYPREFIX is where you install your Plasma setup, replace it accordingly)
+
+
+-- Test instructions --
+
+Test your ion dataengine with
+plasmaengineexplorer --engine weather
+where you should see your ion listed in the default data "ions".
+You then can test the ion itself by entering into the field for "Source name" e.g.
+%{APPNAMELC}|weather|foo
+or
+%{APPNAMELC}|validate|foo
+with "foo" being some location term which makes sense for your ion dataengine,
+and triggering the button "Request Source".
+
+
+Or try to use it from the Plasma Addons Weather widget.
+Start the widget in a test window with
+plasmawindowed org.kde.plasma.weather
+and then see to use your ion dataengine by configuring the widget to use
+a weatherstation provided via your ion dataengine
