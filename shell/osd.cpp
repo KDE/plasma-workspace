@@ -68,6 +68,24 @@ void Osd::volumeChanged(int percent)
     showProgress(icon, percent);
 }
 
+void Osd::microphoneVolumeChanged(int percent)
+{
+    QString icon;
+    if (percent >= 75) {
+        icon = QStringLiteral("microphone-sensitivity-high");
+    } else if (percent < 75 && percent >= 25) {
+        icon = QStringLiteral("microphone-sensitivity-medium");
+    } else if (percent < 25 && percent > 0) {
+        icon = QStringLiteral("microphone-sensitivity-low");
+    } else if (percent == 0) {
+        icon = QStringLiteral("microphone-sensitivity-muted");
+        showText(icon, i18nc("OSD informing that the microphone is muted, keep short", "Microphone Muted"));
+        return;
+    }
+
+    showProgress(icon, percent);
+}
+
 void Osd::mediaPlayerVolumeChanged(int percent, const QString &playerName, const QString &playerIconName)
 {
     if (percent == 0) {
