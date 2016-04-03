@@ -31,6 +31,7 @@ Name[nb]=Plasma
 Name[nds]=Plasma
 Name[nl]=Plasma
 Name[nn]=Plasma
+Name[pa]=ਪਲਾਜ਼ਮਾ
 Name[pl]=Plazma
 Name[pt]=Plasma
 Name[pt_BR]=Plasma
