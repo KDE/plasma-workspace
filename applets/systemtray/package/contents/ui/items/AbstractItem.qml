@@ -18,7 +18,6 @@
  */
 
 import QtQuick 2.1
-import QtQml.Models 2.2
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
 
