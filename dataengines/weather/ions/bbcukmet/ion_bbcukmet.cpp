@@ -75,7 +75,7 @@ void UKMETIon::init()
     setInitialized(true);
 }
 
-QMap<QString, IonInterface::ConditionIcons> UKMETIon::setupDayIconMappings(void) const
+QMap<QString, IonInterface::ConditionIcons> UKMETIon::setupDayIconMappings() const
 {
 //    ClearDay, FewCloudsDay, PartlyCloudyDay, Overcast,
 //    Showers, ScatteredShowers, Thunderstorm, Snow,
@@ -134,7 +134,7 @@ QMap<QString, IonInterface::ConditionIcons> UKMETIon::setupDayIconMappings(void)
     return dayList;
 }
 
-QMap<QString, IonInterface::ConditionIcons> UKMETIon::setupNightIconMappings(void) const
+QMap<QString, IonInterface::ConditionIcons> UKMETIon::setupNightIconMappings() const
 {
     QMap<QString, ConditionIcons> nightList;
     nightList["clear"] = ClearNight;
@@ -185,13 +185,13 @@ QMap<QString, IonInterface::ConditionIcons> UKMETIon::setupNightIconMappings(voi
     return nightList;
 }
 
-QMap<QString, IonInterface::ConditionIcons> const& UKMETIon::dayIcons(void) const
+QMap<QString, IonInterface::ConditionIcons> const& UKMETIon::dayIcons() const
 {
     static QMap<QString, ConditionIcons> const dval = setupDayIconMappings();
     return dval;
 }
 
-QMap<QString, IonInterface::ConditionIcons> const& UKMETIon::nightIcons(void) const
+QMap<QString, IonInterface::ConditionIcons> const& UKMETIon::nightIcons() const
 {
     static QMap<QString, ConditionIcons> const nval = setupNightIconMappings();
     return nval;

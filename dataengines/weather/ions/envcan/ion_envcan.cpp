@@ -73,7 +73,7 @@ void EnvCanadaIon::init()
     m_timeEngine = dataEngine("time");
 }
 
-QMap<QString, IonInterface::ConditionIcons> EnvCanadaIon::setupConditionIconMappings(void) const
+QMap<QString, IonInterface::ConditionIcons> EnvCanadaIon::setupConditionIconMappings() const
 {
     QMap<QString, ConditionIcons> conditionList;
 
@@ -165,7 +165,7 @@ QMap<QString, IonInterface::ConditionIcons> EnvCanadaIon::setupConditionIconMapp
 }
 
 
-QMap<QString, IonInterface::ConditionIcons> EnvCanadaIon::setupForecastIconMappings(void) const
+QMap<QString, IonInterface::ConditionIcons> EnvCanadaIon::setupForecastIconMappings() const
 {
     QMap<QString, ConditionIcons> forecastList;
 
@@ -413,13 +413,13 @@ QMap<QString, IonInterface::ConditionIcons> EnvCanadaIon::setupForecastIconMappi
     return forecastList;
 }
 
-QMap<QString, IonInterface::ConditionIcons> const& EnvCanadaIon::conditionIcons(void) const
+QMap<QString, IonInterface::ConditionIcons> const& EnvCanadaIon::conditionIcons() const
 {
     static QMap<QString, ConditionIcons> const condval = setupConditionIconMappings();
     return condval;
 }
 
-QMap<QString, IonInterface::ConditionIcons> const& EnvCanadaIon::forecastIcons(void) const
+QMap<QString, IonInterface::ConditionIcons> const& EnvCanadaIon::forecastIcons() const
 {
     static QMap<QString, ConditionIcons> const foreval = setupForecastIconMappings();
     return foreval;

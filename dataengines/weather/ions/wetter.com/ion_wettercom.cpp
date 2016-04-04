@@ -79,7 +79,7 @@ void WetterComIon::init()
     setInitialized(true);
 }
 
-QMap<QString, IonInterface::ConditionIcons> WetterComIon::setupCommonIconMappings(void) const
+QMap<QString, IonInterface::ConditionIcons> WetterComIon::setupCommonIconMappings() const
 {
     QMap<QString, ConditionIcons> conditionList;
 
@@ -126,7 +126,7 @@ QMap<QString, IonInterface::ConditionIcons> WetterComIon::setupCommonIconMapping
     return conditionList;
 }
 
-QMap<QString, IonInterface::ConditionIcons> WetterComIon::setupDayIconMappings(void) const
+QMap<QString, IonInterface::ConditionIcons> WetterComIon::setupDayIconMappings() const
 {
     QMap<QString, ConditionIcons> conditionList = setupCommonIconMappings();
 
@@ -141,13 +141,13 @@ QMap<QString, IonInterface::ConditionIcons> WetterComIon::setupDayIconMappings(v
     return conditionList;
 }
 
-QMap<QString, IonInterface::ConditionIcons> const& WetterComIon::dayIcons(void) const
+QMap<QString, IonInterface::ConditionIcons> const& WetterComIon::dayIcons() const
 {
     static QMap<QString, ConditionIcons> const val = setupDayIconMappings();
     return val;
 }
 
-QMap<QString, IonInterface::ConditionIcons> WetterComIon::setupNightIconMappings(void) const
+QMap<QString, IonInterface::ConditionIcons> WetterComIon::setupNightIconMappings() const
 {
     QMap<QString, ConditionIcons> conditionList = setupCommonIconMappings();
 
@@ -162,13 +162,13 @@ QMap<QString, IonInterface::ConditionIcons> WetterComIon::setupNightIconMappings
     return conditionList;
 }
 
-QMap<QString, IonInterface::ConditionIcons> const& WetterComIon::nightIcons(void) const
+QMap<QString, IonInterface::ConditionIcons> const& WetterComIon::nightIcons() const
 {
     static QMap<QString, ConditionIcons> const val = setupNightIconMappings();
     return val;
 }
 
-QMap<QString, QString> WetterComIon::setupCommonConditionMappings(void) const
+QMap<QString, QString> WetterComIon::setupCommonConditionMappings() const
 {
     QMap<QString, QString> conditionList;
     conditionList["1"]  = i18nc("weather condition", "few clouds");
@@ -220,27 +220,27 @@ QMap<QString, QString> WetterComIon::setupCommonConditionMappings(void) const
     return conditionList;
 }
 
-QMap<QString, QString> WetterComIon::setupDayConditionMappings(void) const
+QMap<QString, QString> WetterComIon::setupDayConditionMappings() const
 {
     QMap<QString, QString> conditionList = setupCommonConditionMappings();
     conditionList["0"]  = i18nc("weather condition", "sunny");
     return conditionList;
 }
 
-QMap<QString, QString> const& WetterComIon::dayConditions(void) const
+QMap<QString, QString> const& WetterComIon::dayConditions() const
 {
     static QMap<QString, QString> const val = setupDayConditionMappings();
     return val;
 }
 
-QMap<QString, QString> WetterComIon::setupNightConditionMappings(void) const
+QMap<QString, QString> WetterComIon::setupNightConditionMappings() const
 {
     QMap<QString, QString> conditionList = setupCommonConditionMappings();
     conditionList["0"]  = i18nc("weather condition", "clear sky");
     return conditionList;
 }
 
-QMap<QString, QString> const& WetterComIon::nightConditions(void) const
+QMap<QString, QString> const& WetterComIon::nightConditions() const
 {
     static QMap<QString, QString> const val = setupNightConditionMappings();
     return val;

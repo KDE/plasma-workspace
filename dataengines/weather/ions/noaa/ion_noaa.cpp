@@ -28,7 +28,7 @@
 
 #include <QLocale>
 
-QMap<QString, IonInterface::WindDirections> NOAAIon::setupWindIconMappings(void) const
+QMap<QString, IonInterface::WindDirections> NOAAIon::setupWindIconMappings() const
 {
     QMap<QString, WindDirections> windDir;
     windDir[QStringLiteral("north")] = N;
@@ -43,20 +43,20 @@ QMap<QString, IonInterface::WindDirections> NOAAIon::setupWindIconMappings(void)
     return windDir;
 }
 
-QMap<QString, IonInterface::ConditionIcons> NOAAIon::setupConditionIconMappings(void) const
+QMap<QString, IonInterface::ConditionIcons> NOAAIon::setupConditionIconMappings() const
 {
 
     QMap<QString, ConditionIcons> conditionList;
     return conditionList;
 }
 
-QMap<QString, IonInterface::ConditionIcons> const& NOAAIon::conditionIcons(void) const
+QMap<QString, IonInterface::ConditionIcons> const& NOAAIon::conditionIcons() const
 {
     static QMap<QString, ConditionIcons> const condval = setupConditionIconMappings();
     return condval;
 }
 
-QMap<QString, IonInterface::WindDirections> const& NOAAIon::windIcons(void) const
+QMap<QString, IonInterface::WindDirections> const& NOAAIon::windIcons() const
 {
     static QMap<QString, WindDirections> const wval = setupWindIconMappings();
     return wval;

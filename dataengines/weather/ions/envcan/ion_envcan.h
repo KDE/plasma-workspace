@@ -161,11 +161,11 @@ private:
     /* Environment Canada Methods - Internal for Ion */
     void deleteForecasts();
 
-    QMap<QString, ConditionIcons> setupConditionIconMappings(void) const;
-    QMap<QString, ConditionIcons> setupForecastIconMappings(void) const;
+    QMap<QString, ConditionIcons> setupConditionIconMappings() const;
+    QMap<QString, ConditionIcons> setupForecastIconMappings() const;
 
-    QMap<QString, ConditionIcons> const& conditionIcons(void) const;
-    QMap<QString, ConditionIcons> const& forecastIcons(void) const;
+    QMap<QString, ConditionIcons> const& conditionIcons() const;
+    QMap<QString, ConditionIcons> const& forecastIcons() const;
 
     // Place information
     QString const country(const QString& source) const;
@@ -198,8 +198,8 @@ private:
     QMap<QString, QString> weatherRecords(const QString& source) const;
 
     // Load and Parse the place XML listing
-    void getXMLSetup(void);
-    bool readXMLSetup(void);
+    void getXMLSetup();
+    bool readXMLSetup();
 
     // Load and parse the specific place(s)
     void getXMLData(const QString& source);

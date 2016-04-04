@@ -118,11 +118,11 @@ protected Q_SLOTS:
 private:
     /* UKMET Methods - Internal for Ion */
 
-    QMap<QString, ConditionIcons> setupDayIconMappings(void) const;
-    QMap<QString, ConditionIcons> setupNightIconMappings(void) const;
+    QMap<QString, ConditionIcons> setupDayIconMappings() const;
+    QMap<QString, ConditionIcons> setupNightIconMappings() const;
 
-    QMap<QString, ConditionIcons> const& nightIcons(void) const;
-    QMap<QString, ConditionIcons> const& dayIcons(void) const;
+    QMap<QString, ConditionIcons> const& nightIcons() const;
+    QMap<QString, ConditionIcons> const& dayIcons() const;
 
     // Load and Parse the place search XML listings
     void findPlace(const QString& place, const QString& source);

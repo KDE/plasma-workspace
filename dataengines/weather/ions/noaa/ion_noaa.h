@@ -87,7 +87,7 @@ class Q_DECL_EXPORT NOAAIon : public IonInterface, public Plasma::DataEngineCons
 public:
     NOAAIon(QObject *parent, const QVariantList &args);
     ~NOAAIon() override;
-    void init(void);  // Setup the city location, fetching the correct URL name.
+    void init();  // Setup the city location, fetching the correct URL name.
     bool updateIonSource(const QString& source) override; // Sync data source with Applet
     void updateWeather(const QString& source);
 
@@ -106,10 +106,10 @@ protected Q_SLOTS:
 
 private:
     /* NOAA Methods - Internal for Ion */
-    QMap<QString, ConditionIcons> setupConditionIconMappings(void) const;
-    QMap<QString, ConditionIcons> const & conditionIcons(void) const;
-    QMap<QString, WindDirections> setupWindIconMappings(void) const;
-    QMap<QString, WindDirections> const& windIcons(void) const;
+    QMap<QString, ConditionIcons> setupConditionIconMappings() const;
+    QMap<QString, ConditionIcons> const & conditionIcons() const;
+    QMap<QString, WindDirections> setupWindIconMappings() const;
+    QMap<QString, WindDirections> const& windIcons() const;
 
     // Place information
     QString const country(const QString& source) const;
@@ -133,8 +133,8 @@ private:
     IonInterface::ConditionIcons getConditionIcon(const QString& weather, bool isDayTime) const;
 
     // Load and Parse the place XML listing
-    void getXMLSetup(void) const;
-    bool readXMLSetup(void);
+    void getXMLSetup() const;
+    bool readXMLSetup();
 
     // Load and parse the specific place(s)
     void getXMLData(const QString& source);
@@ -152,8 +152,8 @@ private:
 
     // Parse weather XML data
     void parseWeatherSite(WeatherData& data, QXmlStreamReader& xml);
-    void parseStationID(void);
-    void parseStationList(void);
+    void parseStationID();
+    void parseStationList();
 
     struct XMLMapInfo {
         QString stateName;
