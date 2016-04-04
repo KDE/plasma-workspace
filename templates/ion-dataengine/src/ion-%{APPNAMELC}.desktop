@@ -1,5 +1,8 @@
 [Desktop Entry]
 Name=%{APPNAME} Weather Data Provider
+Name[ca]=Proveïdor de dades meteorològiques per al %{APPNAME}
+Name[ca@valencia]=Proveïdor de dades meteorològiques per al %{APPNAME}
+Name[es]=Proveedor de datos meteorológicos %{APPNAME}
 Name[nl]=%{APPNAME} Leverancier van weergegevens
 Name[pa]=%{APPNAME} ਮੌਸਮ ਡਾਟਾ ਦੇਣ ਵਾਲਾ
 Name[pt]=Fornecedor de Dados Meteorológicos do %{APPNAME}
@@ -9,6 +12,9 @@ Name[sl]=Ponudnik podatkov za vreme %{APPNAME}
 Name[uk]=Засіб надання даних щодо погоди %{APPNAME}
 Name[x-test]=xx%{APPNAME} Weather Data Providerxx
 Comment=Access to the weather data provider %{APPNAME}
+Comment[ca]=Accés al proveïdor de dades meteorològiques per al {APPNAME}}
+Comment[ca@valencia]=Accés al proveïdor de dades meteorològiques per al {APPNAME}}
+Comment[es]=Acceso al proveedor de datos meteorológicos %{APPNAME}
 Comment[nl]=Toegang tot de leverancier van weergegevens %{APPNAME}
 Comment[pt]=Acesso ao fornecedor de dados meteorológicos do %{APPNAME}
 Comment[pt_BR]=Acesso ao fornecedor de dados meteorológicos do %{APPNAME}
