@@ -863,8 +863,7 @@ void UKMETIon::updateWeather(const QString& source)
         i++;
     }
 
-    // TODO: i18n
-    data.insert("Credit", "Data from BBC Weather");
+    data.insert("Credit", i18n("Data from BBC Weather"));
     data.insert("Credit Url", m_place[source].forecastHTMLUrl);
 
     setData(weatherSource, data);
