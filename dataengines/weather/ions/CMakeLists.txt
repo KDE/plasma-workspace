@@ -19,7 +19,7 @@ install (FILES ion.h
 #          DESTINATION ${KDE_INSTALL_INCLUDEDIR}/KDE/Plasma/Weather COMPONENT Devel)
 
 # the individual ion plugins
-#add_subdirectory(bbcukmet)  seems to need porting to new BBC API
+add_subdirectory(bbcukmet)
 add_subdirectory(envcan)
 add_subdirectory(noaa)
 add_subdirectory(wetter.com)
