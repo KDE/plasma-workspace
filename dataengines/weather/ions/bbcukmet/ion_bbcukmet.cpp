@@ -28,6 +28,11 @@
 #include <QTextStream>
 #include <QDebug>
 
+WeatherData::WeatherData()
+        : obsTime("N/A"), iconPeriodHour(12), iconPeriodMinute(0),
+          longitude(0.), latitude(0.), condition("N/A")
+{
+}
 
 // ctor, dtor
 UKMETIon::UKMETIon(QObject *parent, const QVariantList &args)
@@ -81,11 +86,12 @@ QMap<QString, IonInterface::ConditionIcons> UKMETIon::setupDayIconMappings(void)
     dayList["sunny"] = ClearDay;
     //dayList["sunny night"] = ClearNight;
     dayList["clear"] = ClearDay;
-    dayList["clar sky"] = ClearDay;
+    dayList["clear sky"] = ClearDay;
     dayList["sunny intervals"] = PartlyCloudyDay;
     //dayList["sunny intervals night"] = ClearNight;
     dayList["partly cloudy"] = PartlyCloudyDay;
     dayList["cloudy"] = Overcast;
+    dayList["light cloud"] = Overcast;
     dayList["white cloud"] = Overcast;
     dayList["grey cloud"] = Overcast;
     //dayList["low level cloud"] = NotAvailable;
@@ -136,6 +142,7 @@ QMap<QString, IonInterface::ConditionIcons> UKMETIon::setupNightIconMappings(voi
     nightList["clear intervals"] = PartlyCloudyNight;
     nightList["sunny intervals"] = PartlyCloudyDay; // it's not really sunny
     nightList["sunny"] = ClearDay;
+    nightList["light cloud"] = Overcast;
     nightList["cloudy"] = Overcast;
     nightList["white cloud"] = Overcast;
     nightList["grey cloud"] = Overcast;
@@ -258,7 +265,8 @@ void UKMETIon::getXMLData(const QString& source)
 void UKMETIon::findPlace(const QString& place, const QString& source)
 {
     QUrl url;
-    url = "http://news.bbc.co.uk/weather/util/search/SearchResultsNode.xhtml?&search=" + place + "&region=world&startIndex=0&count=500";
+    /* There's a page= parameter, results are limited to 10 by page */
+    url = "http://www.bbc.com/locator/default/en-GB/search.json?search="+place+"&filter=international&postcode_unit=false&postcode_district=true";
 
     m_job = KIO::get(url.url(), KIO::Reload, KIO::HideProgressInfo);
     m_job->addMetaData("cookies", "none"); // Disable displaying cookies
@@ -287,7 +295,7 @@ void UKMETIon::getFiveDayForecast(const QString& source)
     
     int splitIDPos = xmlPath.lastIndexOf('/');
     QString stationID = xmlPath.midRef(splitIDPos + 1).toString();
-    m_place[source].XMLforecastURL = "http://newsrss.bbc.co.uk/weather/forecast/" + stationID + "/Next3DaysRSS.xml" + xmlMap.query();
+    m_place[source].XMLforecastURL = "http://open.live.bbc.co.uk/weather/feeds/en/" + stationID + "/3dayforecast.rss" + xmlMap.query();
     QUrl url(m_place[source].XMLforecastURL);
 
     m_job = KIO::get(url.url(), KIO::Reload, KIO::HideProgressInfo);
@@ -309,47 +317,38 @@ void UKMETIon::readSearchHTMLData(const QString& source, const QByteArray& html)
     QStringList tokens;
     QString url;
     QString tmp;
-    int flag = 0;
     int counter = 2;
 
-    // "<p><a id="result_40" href ="/weather/forecast/4160?count=200">Vitoria, Brazil</a></p>"
-    QRegExp grabURL("/[a-z]+/[a-z]+/([0-9]+)(\\?[^\"]+)?");
-    QRegExp grabPlace(">([^<]*[a-z()])"); // FIXME: It would be better to strip away the extra '>'
+    // FIXME: use a json parser instead of regexes
+    QRegExp grabURL("\"id\":\\s*\"([0-9]+)\"");
+    QRegExp grabPlace("\"fullName\":\\s*\"([^\"]+)\"");
 
     while (!stream.atEnd()) {
        line = stream.readLine();
-       if (line.contains("<p class=\"response\">") > 0) {
-           flag = 1;
-       }
-
-       if (line.contains("There are no forecasts matching") > 0) {
+       if (line.contains("Sorry, no results found for") > 0) {
            break;
        }
 
-       if (flag) {
+       if (line.contains("\"results\"") > 0) {
 
             if (grabURL.indexIn(line.trimmed()) > 0) {
-                url = "http://newsrss.bbc.co.uk/weather/forecast/" + grabURL.cap(1) + "/ObservationsRSS.xml";
-                if (grabURL.captureCount() > 1) {
-                    url += grabURL.cap(2);
-                }
-                grabPlace.indexIn(line.trimmed());
-                tmp = QString("bbcukmet|").append(grabPlace.cap(1));
 
-                // Duplicate places can exist
-                if (m_locations.contains(tmp)) {
-                    tmp = QString("bbcukmet|").append(QString("%1 (#%2)").arg(grabPlace.cap(1)).arg(counter));
-                    counter++;
-                }
+                for (int captureIndex = 1; captureIndex <= grabURL.captureCount(); captureIndex++) {
 
-                m_place[tmp].XMLurl = url;
-                m_place[tmp].place = grabPlace.cap(1);
-                m_locations.append(tmp);
+                    url = "http://open.live.bbc.co.uk/weather/feeds/en/" + grabURL.cap(captureIndex) + "/observations.rss";
+                    grabPlace.indexIn(line.trimmed());
+                    tmp = QString("bbcukmet|").append(grabPlace.cap(captureIndex));
+
+                    // Duplicate places can exist
+                    if (m_locations.contains(tmp)) {
+                        tmp = QString("bbcukmet|").append(QString("%1 (#%2)").arg(grabPlace.cap(captureIndex)).arg(counter));
+                        counter++;
+                    }
+                    m_place[tmp].XMLurl = url;
+                    m_place[tmp].place = grabPlace.cap(captureIndex);
+                    m_locations.append(tmp);
+                }
             }
-       }
-
-       if (line.contains("<div class=\"line\">") > 0) {
-           flag = 0;
        }
     }
 
@@ -560,15 +559,35 @@ void UKMETIon::parseWeatherObservation(const QString& source, WeatherData& data,
 
                 // Get the observation time and condition
                 int splitIndex = conditionString.lastIndexOf(':');
-                QStringRef conditionData = conditionString.midRef(splitIndex + 1); // Include ':'
-                data.obsTime = conditionString.midRef(0, splitIndex).toString();
+                if (splitIndex >= 0) {
+                    QString conditionData = conditionString.mid(splitIndex + 1); // Skip ':'
+                    data.obsTime = conditionString.left(splitIndex);
 
-                // Friday at 0200 GMT
-                m_dateFormat =  QDateTime::fromString(data.obsTime.split("at")[1].trimmed(), "hhmm 'GMT'");
-                data.iconPeriodHour = m_dateFormat.toString("hh").toInt();
-                data.iconPeriodMinute = m_dateFormat.toString("mm").toInt();
+//TODO: timezone parsing is not yet supported by QDateTime
+#if 0
+                    if (data.obsTime.contains('-')) {
+                        // Saturday - 13:00 CET
+                        // Saturday - 12:00 GMT
+                        m_dateFormat = QDateTime::fromString(data.obsTime.section('-', 1, 1).trimmed(), "hh:mm ZZZ");
+                        if (m_dateFormat.isValid()) {
+                            data.iconPeriodHour = m_dateFormat.toString("hh").toInt();
+                            data.iconPeriodMinute = m_dateFormat.toString("mm").toInt();
+                        }
+                    } else {
+#endif
+                        m_dateFormat = QDateTime();
+#if 0
+                    }
+#endif
 
-                data.condition = conditionData.toString().split('.')[0].trimmed();
+                    if (conditionData.contains(',')) {
+                        data.condition = conditionData.section(',', 0, 0).trimmed();
+
+                        if (data.condition == "null") {
+                            data.condition = "N/A";
+                        }
+                    }
+                }
 
             } else if (xml.name() == "link") {
                 m_place[source].forecastHTMLUrl = xml.readElementText();
@@ -582,20 +601,33 @@ void UKMETIon::parseWeatherObservation(const QString& source, WeatherData& data,
 
                 data.temperature_C = observeData[1].split(QChar(176))[0].trimmed();
 
-                // Temperature might be not available
-                if (data.temperature_C.contains("N/A")) {
+                if (data.temperature_C.contains("N/A") || data.temperature_C.contains("null")) {
                     data.temperature_C = i18n("N/A");
                 }
 
                 data.windDirection = observeData[2].split(',')[0].trimmed();
+                if (data.windDirection.contains("null")) {
+                    data.windDirection = "";
+                }
+
                 data.windSpeed_miles = observeData[3].split(',')[0].split(' ')[1].remove("mph");
+                if (data.windSpeed_miles.contains("null")) {
+                    data.windSpeed_miles = "N/A";
+                }
 
                 data.humidity = observeData[4].split(',')[0].split(' ')[1];
                 if (data.humidity.endsWith('%')) {
                     data.humidity.chop(1);
                 }
+                if (data.humidity.contains("null")) {
+                    data.humidity = "N/A";
+                }
 
                 data.pressure = observeData[5].split(',')[0].split(' ')[1].split("mb")[0];
+                if (data.pressure.contains("null")) {
+                    data.pressure = "N/A";
+                }
+
                 data.pressureTendency = observeData[5].split(',')[1].trimmed();
 
                 data.visibilityStr = observeData[6].trimmed();
@@ -606,6 +638,10 @@ void UKMETIon::parseWeatherObservation(const QString& source, WeatherData& data,
             } else if (xml.name() == "long") {
                 const QString ordinate = xml.readElementText();
                 data.longitude = ordinate.toDouble();
+            } else if (xml.name() == "georss:point") {
+                const QString ordinates = xml.readElementText();
+                data.latitude = ordinates.split(' ')[0].toDouble();
+                data.longitude = ordinates.split(' ')[1].toDouble();
             } else {
                 parseUnknownElement(xml);
             }
@@ -681,8 +717,8 @@ void UKMETIon::parseFiveDayForecast(const QString& source, QXmlStreamReader& xml
     QString line;
     QString period;
     QString summary;
-    QRegExp high("-?\\d+");
-    QRegExp low("-?\\d+");
+    QRegExp high("Maximum Temperature: (-?\\d+).C", Qt::CaseInsensitive);
+    QRegExp  low("Minimum Temperature: (-?\\d+).C", Qt::CaseInsensitive);
     while (!xml.atEnd()) {
         xml.readNext();
         if (xml.name() == "title") {
@@ -693,15 +729,22 @@ void UKMETIon::parseFiveDayForecast(const QString& source, QXmlStreamReader& xml
 
             period = line.split(',')[0].split(':')[0];
             summary = line.split(',')[0].split(':')[1].trimmed();
-            high.indexIn(line.split(',')[1]);
-            low.indexIn(line.split(',')[2]);
+
+            // Sometimes only one of min or max are reported
+            if (high.indexIn(line.split(',')[1]) == -1)
+                forecast->tempHigh = UNKNOWN_TEMPERATURE;
+            else
+                forecast->tempHigh = high.cap(1).toInt();
+
+            if (low.indexIn(line.split(',')[1]) == -1)
+                forecast->tempLow = UNKNOWN_TEMPERATURE;
+            else
+                forecast->tempLow = low.cap(1).toInt();
 
             forecast->period = period;
             forecast->iconName = getWeatherIcon(dayIcons(), summary.toLower());
             forecast->summary = i18nc("weather forecast", summary.toUtf8());
             qDebug() << "i18n summary string: " << qPrintable(forecast->summary);
-            forecast->tempHigh = high.cap(0).toInt();
-            forecast->tempLow = low.cap(0).toInt();
             m_weatherData[source].forecasts.append(forecast);
             forecast = new WeatherData::ForecastInfo;
         }
@@ -761,20 +804,24 @@ void UKMETIon::updateWeather(const QString& source)
 
     const double lati = periodLatitude(source);
     const double longi = periodLongitude(source);
-//TODO: Port to Plasma5
+//TODO: Port to Plasma5, needs also fix of m_dateFormat estimation
 #if 0
-    const Plasma::DataEngine::Data timeData = m_timeEngine->query(
-            QString("Local|Solar|Latitude=%1|Longitude=%2|DateTime=%3")
-                .arg(lati).arg(longi).arg(m_dateFormat.toString(Qt::ISODate)));
+    if (m_dateFormat.isValid()) {
+        const Plasma::DataEngine::Data timeData = m_timeEngine->query(
+                QString("Local|Solar|Latitude=%1|Longitude=%2|DateTime=%3")
+                    .arg(lati).arg(longi).arg(m_dateFormat.toString(Qt::ISODate)));
 
-    // Tell applet which icon to use for conditions and provide mapping for condition type to the icons to display
-    if (timeData["Corrected Elevation"].toDouble() >= 0.0) {
-        //qDebug() << "Using daytime icons\n";
+        // Tell applet which icon to use for conditions and provide mapping for condition type to the icons to display
+        if (timeData["Corrected Elevation"].toDouble() >= 0.0) {
+            //qDebug() << "Using daytime icons\n";
+            data.insert("Condition Icon", getWeatherIcon(dayIcons(), condition(source)));
+        } else {
+            data.insert("Condition Icon", getWeatherIcon(nightIcons(), condition(source)));
+        }
+    } else {
 #endif
         data.insert("Condition Icon", getWeatherIcon(dayIcons(), condition(source)));
 #if 0
-    } else {
-        data.insert("Condition Icon", getWeatherIcon(nightIcons(), condition(source)));
     }
 #endif
 
@@ -816,7 +863,8 @@ void UKMETIon::updateWeather(const QString& source)
         i++;
     }
 
-    data.insert("Credit", i18n("Supported by backstage.bbc.co.uk / Data from UK MET Office"));
+    // TODO: i18n
+    data.insert("Credit", "Data from BBC Weather");
     data.insert("Credit Url", m_place[source].forecastHTMLUrl);
 
     setData(weatherSource, data);
@@ -958,12 +1006,22 @@ QVector<QString> UKMETIon::forecasts(const QString& source)
             m_weatherData[source].forecasts[i]->period.replace("Friday", i18nc("Short for Friday", "Fri"));
         }
 
+        int tempHigh = m_weatherData[source].forecasts[i]->tempHigh;
+        QString tempHighStr = (tempHigh == UNKNOWN_TEMPERATURE)
+                              ? QString::fromLatin1("N/A")
+                              : QString::number(tempHigh);
+
+        int tempLow = m_weatherData[source].forecasts[i]->tempLow;
+        QString tempLowStr = (tempLow == UNKNOWN_TEMPERATURE)
+                             ? QString::fromLatin1("N/A")
+                             : QString::number(tempLow);
+
         forecastData.append(QString("%1|%2|%3|%4|%5|%6") \
                             .arg(m_weatherData[source].forecasts[i]->period) \
                             .arg(m_weatherData[source].forecasts[i]->iconName) \
                             .arg(m_weatherData[source].forecasts[i]->summary) \
-                            .arg(m_weatherData[source].forecasts[i]->tempHigh) \
-                            .arg(m_weatherData[source].forecasts[i]->tempLow) \
+                            .arg(tempHighStr) \
+                            .arg(tempLowStr) \
                             .arg("N/U"));
         //.arg(m_weatherData[source].forecasts[i]->windSpeed)
         //arg(m_weatherData[source].forecasts[i]->windDirection));
