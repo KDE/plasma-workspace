@@ -169,8 +169,8 @@ private:
     QHash<QString, WeatherData> m_weatherData;
 
     // Store KIO jobs
-    QMap<KJob *, QXmlStreamReader*> m_jobXml;
-    QMap<KJob *, QString> m_jobList;
+    QHash<KJob *, QXmlStreamReader*> m_jobXml;
+    QHash<KJob *, QString> m_jobList;
     QXmlStreamReader m_xmlSetup;
 
     Plasma::DataEngine *m_timeEngine;

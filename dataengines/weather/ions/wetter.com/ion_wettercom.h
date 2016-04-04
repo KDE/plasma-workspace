@@ -155,12 +155,12 @@ private:
     QHash<QString, WeatherData> m_weatherData;
 
     // Store KIO jobs - Search list
-    QMap<KJob *, QXmlStreamReader *> m_searchJobXml;
-    QMap<KJob *, QString> m_searchJobList;
+    QHash<KJob *, QXmlStreamReader *> m_searchJobXml;
+    QHash<KJob *, QString> m_searchJobList;
 
     // Store KIO jobs - Forecast retrieval
-    QMap<KJob *, QXmlStreamReader *> m_forecastJobXml;
-    QMap<KJob *, QString> m_forecastJobList;
+    QHash<KJob *, QXmlStreamReader *> m_forecastJobXml;
+    QHash<KJob *, QString> m_forecastJobList;
 
     KIO::TransferJob *m_job;
     QStringList m_sourcesToReset;
