@@ -65,31 +65,29 @@ public:
      */
     WeatherEngine(QObject *parent, const QVariantList &args);
 
-    // Destructor
     ~WeatherEngine() override;
 
+protected: // Plasma::DataEngine API
     /**
-     * Load a plugin
-     * @arg pluginName Name of the plugin
-     * @return IonInterface returns an instance of the loaded plugin
-     */
-    DataEngine* loadIon(const QString& pluginName);
-
-protected:
-    /**
-     * Reimplemented from Plasma::DataEngine. We use it to communicate to the Ion plugins to set the data sources.
+     * We use it to communicate to the Ion plugins to set the data sources.
      * @param source The datasource name.
      */
     bool sourceRequestEvent(const QString &source) override;
 
-protected Q_SLOTS:
     /**
-     * Reimplemented from Plasma::DataEngine.
+     * @param source The datasource to update.
+     */
+    bool updateSourceEvent(const QString& source) override;
+
+protected Q_SLOTS: // expected DataEngine class method
+    /**
+     * Slot method with this signature expected in a DataEngine class.
      * @param source The datasource to be updated.
      * @param data The new data updated.
      */
     void dataUpdated(const QString& source, Plasma::DataEngine::Data data);
 
+private Q_SLOTS:
     void forceUpdate(IonInterface *ion, const QString &source);
 
     /**
@@ -102,11 +100,6 @@ protected Q_SLOTS:
      * @arg source datasource name.
      */
     void removeIonSource(const QString& source);
-    /**
-     * Reimplemented from Plasma::DataEngine.
-     * @param source The datasource to update.
-     */
-    bool updateSourceEvent(const QString& source) override;
 
     /**
      * Whenever networking changes, take action
@@ -121,6 +114,13 @@ protected Q_SLOTS:
 
 private:
     /**
+     * Load a plugin
+     * @arg pluginName Name of the plugin
+     * @return IonInterface returns an instance of the loaded plugin
+     */
+    DataEngine* loadIon(const QString& pluginName);
+
+    /**
      * Get instance of a loaded ion.
      * @returns a IonInterface instance of a loaded plugin.
      */
@@ -132,6 +132,7 @@ private:
      */
     QString ionNameForSource(const QString& source) const;
 
+private:
     QStringList m_ions;
     bool m_networkAvailable;
     QTimer m_reconnectTimer;
