@@ -143,22 +143,23 @@ bool NOAAIon::updateIonSource(const QString& source)
         if (result.size() == 1) {
             setData(source, QStringLiteral("validate"), QStringLiteral("noaa|valid|single|").append(result.join(QStringLiteral("|"))));
             return true;
-        } else if (result.size() > 1) {
+        }
+        if (result.size() > 1) {
             setData(source, QStringLiteral("validate"), QStringLiteral("noaa|valid|multiple|").append(result.join(QStringLiteral("|"))));
             return true;
-        } else if (result.size() == 0) {
-            setData(source, QStringLiteral("validate"), QStringLiteral("noaa|invalid|single|").append(sourceAction[2]));
-            return true;
         }
-    } else if (sourceAction[1] == QLatin1String("weather") && sourceAction.size() > 2) {
-        getXMLData(source);
-        return true;
-    } else {
-        setData(source, QStringLiteral("validate"), "noaa|malformed");
+        // result.size() == 0
+        setData(source, QStringLiteral("validate"), QStringLiteral("noaa|invalid|single|").append(sourceAction[2]));
         return true;
     }
 
-    return false;
+    if (sourceAction[1] == QLatin1String("weather") && sourceAction.size() > 2) {
+        getXMLData(source);
+        return true;
+    }
+
+    setData(source, QStringLiteral("validate"), "noaa|malformed");
+    return true;
 }
 
 // Parses city list and gets the correct city based on ID number
@@ -616,9 +617,9 @@ QString NOAAIon::conditionI18n(const QString& source)
 {
     if (condition(source) == QLatin1String("N/A")) {
         return i18n("N/A");
-    } else {
-        return i18nc("weather condition", condition(source).toUtf8());
     }
+
+    return i18nc("weather condition", condition(source).toUtf8());
 }
 
 QString NOAAIon::dewpoint(const QString& source) const
@@ -629,10 +630,10 @@ QString NOAAIon::dewpoint(const QString& source) const
 QMap<QString, QString> NOAAIon::humidity(const QString& source) const
 {
     QMap<QString, QString> humidityInfo;
+
     if (m_weatherData[source].humidity == QLatin1String("NA")) {
         humidityInfo.insert(QStringLiteral("humidity"), QString(i18n("N/A")));
         humidityInfo.insert(QStringLiteral("humidityUnit"), QString::number(KUnitConversion::NoUnit));
-        return humidityInfo;
     } else {
         humidityInfo.insert(QStringLiteral("humidity"), m_weatherData[source].humidity);
         humidityInfo.insert(QStringLiteral("humidityUnit"), QString::number(KUnitConversion::Percent));
@@ -644,12 +645,8 @@ QMap<QString, QString> NOAAIon::humidity(const QString& source) const
 QMap<QString, QString> NOAAIon::visibility(const QString& source) const
 {
     QMap<QString, QString> visibilityInfo;
-    if (m_weatherData[source].visibility.isEmpty()) {
-        visibilityInfo.insert(QStringLiteral("visibility"), QString(i18n("N/A")));
-        visibilityInfo.insert(QStringLiteral("visibilityUnit"), QString::number(KUnitConversion::NoUnit));
-        return visibilityInfo;
-    }
-    if (m_weatherData[source].visibility == QLatin1String("NA")) {
+    if (m_weatherData[source].visibility.isEmpty() ||
+        m_weatherData[source].visibility == QLatin1String("NA")) {
         visibilityInfo.insert(QStringLiteral("visibility"), QString(i18n("N/A")));
         visibilityInfo.insert(QStringLiteral("visibilityUnit"), QString::number(KUnitConversion::NoUnit));
     } else {
@@ -680,13 +677,8 @@ QMap<QString, QString> NOAAIon::temperature(const QString& source) const
 QMap<QString, QString> NOAAIon::pressure(const QString& source) const
 {
     QMap<QString, QString> pressureInfo;
-    if (m_weatherData[source].pressure.isEmpty()) {
-        pressureInfo.insert(QStringLiteral("pressure"), i18n("N/A"));
-        pressureInfo.insert(QStringLiteral("pressureUnit"), QString::number(KUnitConversion::NoUnit));
-        return pressureInfo;
-    }
-
-    if (m_weatherData[source].pressure == QLatin1String("NA")) {
+    if (m_weatherData[source].pressure.isEmpty() ||
+        m_weatherData[source].pressure == QLatin1String("NA")) {
         pressureInfo.insert(QStringLiteral("pressure"), i18n("N/A"));
         pressureInfo.insert(QStringLiteral("visibilityUnit"), QString::number(KUnitConversion::NoUnit));
     } else {
@@ -734,100 +726,82 @@ QMap<QString, QString> NOAAIon::wind(const QString& source) const
   */
 IonInterface::ConditionIcons NOAAIon::getConditionIcon(const QString& weather, bool isDayTime) const
 {
+    IonInterface::ConditionIcons result;
     // Consider any type of storm, tornado or funnel to be a thunderstorm.
     if (weather.contains(QStringLiteral("thunderstorm")) || weather.contains(QStringLiteral("funnel")) ||
         weather.contains(QStringLiteral("tornado")) || weather.contains(QStringLiteral("storm")) || weather.contains(QStringLiteral("tstms"))) {
 
         if (weather.contains(QStringLiteral("vicinity")) || weather.contains(QStringLiteral("chance"))) {
-            if (isDayTime) {
-                return IonInterface::ChanceThunderstormDay;
-            } else {
-                return IonInterface::ChanceThunderstormNight;
-            }
+            result = isDayTime ? IonInterface::ChanceThunderstormDay : IonInterface::ChanceThunderstormNight;
+        } else {
+            result = IonInterface::Thunderstorm;
         }
-        return IonInterface::Thunderstorm;
 
     } else if (weather.contains(QStringLiteral("pellets")) || weather.contains(QStringLiteral("crystals")) ||
              weather.contains(QStringLiteral("hail"))) {
-        return IonInterface::Hail;
+        result = IonInterface::Hail;
 
     } else if (((weather.contains(QStringLiteral("rain")) || weather.contains(QStringLiteral("drizzle")) ||
               weather.contains(QStringLiteral("showers"))) && weather.contains(QStringLiteral("snow"))) || weather.contains(QStringLiteral("wintry mix"))) {
-        return IonInterface::RainSnow;
+        result = IonInterface::RainSnow;
 
     } else if (weather.contains(QStringLiteral("snow")) && weather.contains(QStringLiteral("light"))) {
-        return IonInterface::LightSnow;
+        result = IonInterface::LightSnow;
 
     } else if (weather.contains(QStringLiteral("snow"))) {
-
         if (weather.contains(QStringLiteral("vicinity")) || weather.contains(QStringLiteral("chance"))) {
-            if (isDayTime) {
-                return IonInterface::ChanceSnowDay;
-            } else {
-                return IonInterface::ChanceSnowNight;
-            }
+            result = isDayTime ? IonInterface::ChanceSnowDay : IonInterface::ChanceSnowNight;
+        } else {
+            result = IonInterface::Snow;
         }
-        return IonInterface::Snow;
 
     } else if (weather.contains(QStringLiteral("freezing rain"))) {
-        return IonInterface::FreezingRain;
+        result = IonInterface::FreezingRain;
 
     } else if (weather.contains(QStringLiteral("freezing drizzle"))) {
-        return IonInterface::FreezingDrizzle;
+        result = IonInterface::FreezingDrizzle;
 
     } else if (weather.contains(QStringLiteral("showers"))) {
 
         if (weather.contains(QStringLiteral("vicinity")) || weather.contains(QStringLiteral("chance"))) {
-            if (isDayTime) {
-                return IonInterface::ChanceShowersDay;
-            } else {
-                return IonInterface::ChanceShowersNight;
-            }
+            result = isDayTime ? IonInterface::ChanceShowersDay : IonInterface::ChanceShowersNight;
+        } else {
+            result = IonInterface::Showers;
         }
-        return IonInterface::Showers;
-
     } else if (weather.contains(QStringLiteral("light rain")) || weather.contains(QStringLiteral("drizzle"))) {
-        return IonInterface::LightRain;
+        result = IonInterface::LightRain;
 
     } else if (weather.contains(QStringLiteral("rain"))) {
-        return IonInterface::Rain;
+        result = IonInterface::Rain;
 
     } else if (weather.contains(QStringLiteral("few clouds")) || weather.contains(QStringLiteral("mostly sunny")) ||
                weather.contains(QStringLiteral("mostly clear")) || weather.contains(QStringLiteral("increasing clouds")) ||
                weather.contains(QStringLiteral("becoming cloudy")) || weather.contains(QStringLiteral("clearing")) ||
                weather.contains(QStringLiteral("decreasing clouds")) || weather.contains(QStringLiteral("becoming sunny"))) {
-        if(isDayTime) {
-            return IonInterface::FewCloudsDay;
-        } else {
-            return IonInterface::FewCloudsNight;
-        }
+        result = isDayTime ? IonInterface::FewCloudsDay : IonInterface::FewCloudsNight;
+
     } else if (weather.contains(QStringLiteral("partly cloudy")) || weather.contains(QStringLiteral("partly sunny")) ||
                weather.contains(QStringLiteral("partly clear"))) {
-        if(isDayTime) {
-            return IonInterface::PartlyCloudyDay;
-        } else {
-            return IonInterface::PartlyCloudyNight;
-        }
+        result = isDayTime ? IonInterface::PartlyCloudyDay : IonInterface::PartlyCloudyNight;
+
     } else if (weather.contains(QStringLiteral("overcast")) || weather.contains(QStringLiteral("cloudy"))) {
-        return IonInterface::Overcast;
+        result = IonInterface::Overcast;
 
     } else if (weather.contains(QStringLiteral("haze")) || weather.contains(QStringLiteral("smoke")) ||
              weather.contains(QStringLiteral("dust")) || weather.contains(QStringLiteral("sand"))) {
-        return IonInterface::Haze;
+        result = IonInterface::Haze;
 
     } else if (weather.contains(QStringLiteral("fair")) || weather.contains(QStringLiteral("clear")) || weather.contains(QStringLiteral("sunny"))) {
-        if (isDayTime) {
-            return IonInterface::ClearDay;
-        } else {
-            return IonInterface::ClearNight;
-        }
+        result = isDayTime ? IonInterface::ClearDay : IonInterface::ClearNight;
+
     } else if (weather.contains(QStringLiteral("fog"))) {
-        return IonInterface::Mist;
+        result = IonInterface::Mist;
 
     } else {
-        return IonInterface::NotAvailable;
-
+        result = IonInterface::NotAvailable;
     }
+
+    return result;
 }
 
 void NOAAIon::getForecast(const QString& source)

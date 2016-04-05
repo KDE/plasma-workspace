@@ -427,6 +427,7 @@ QMap<QString, IonInterface::ConditionIcons> const& EnvCanadaIon::forecastIcons()
 QStringList EnvCanadaIon::validate(const QString& source) const
 {
     QStringList placeList;
+
     QString sourceNormalized = source.toUpper();
     QHash<QString, EnvCanadaIon::XMLMapInfo>::const_iterator it = m_places.constBegin();
     while (it != m_places.constEnd()) {
@@ -467,10 +468,12 @@ bool EnvCanadaIon::updateIonSource(const QString& source)
         if (result.size() == 1) {
             setData(source, "validate", QString("envcan|valid|single|").append(result.join("|")));
             return true;
-        } else if (result.size() > 1) {
+        }
+        if (result.size() > 1) {
             setData(source, "validate", QString("envcan|valid|multiple|").append(result.join("|")));
             return true;
-        } else if (result.size() == 0) {
+        }
+        if (result.size() == 0) {
             setData(source, "validate", QString("envcan|invalid|single|").append(sourceAction[2]));
             return true;
         }
@@ -478,11 +481,9 @@ bool EnvCanadaIon::updateIonSource(const QString& source)
     } else if (sourceAction[1] == "weather" && sourceAction.size() > 2) {
         getXMLData(source);
         return true;
-    } else {
-        setData(source, "validate", "envcan|malformed");
-        return true;
     }
-    return false;
+    setData(source, "validate", "envcan|malformed");
+    return true;
 }
 
 // Parses city list and gets the correct city based on ID number

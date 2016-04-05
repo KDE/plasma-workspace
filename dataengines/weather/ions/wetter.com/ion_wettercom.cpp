@@ -271,7 +271,9 @@ bool WetterComIon::updateIonSource(const QString& source)
         // Look for places to match
         findPlace(sourceAction[2], source);
         return true;
-    } else if (sourceAction[1] == "weather" && sourceAction.size() >= 3) {
+    }
+
+    if (sourceAction[1] == "weather" && sourceAction.size() >= 3) {
         qWarning()<<"WWWW"<<sourceAction;
         if (sourceAction.count() >= 4) {
             if (sourceAction[2].isEmpty()) {
@@ -296,15 +298,13 @@ bool WetterComIon::updateIonSource(const QString& source)
             fetchForecast(sourceAction[2]);
 
             return true;
-        } else {
-            return false;
         }
-    } else {
-        setData(source, "validate", "wettercom|malformed");
-        return true;
+
+        return false;
     }
 
-    return false;
+    setData(source, "validate", "wettercom|malformed");
+    return true;
 }
 
 
@@ -438,34 +438,34 @@ void WetterComIon::validate(const QString& source, bool parseError)
         m_locations.clear();
 
         return;
-    } else {
-        QString placeList;
-        foreach(const QString &place, m_locations) {
-            // Extra data format: placeCode;displayName
-            if (beginflag) {
-                placeList.append(QString::fromLatin1("%1|extra|%2;%3")
-                                 .arg(place).arg(m_place[place].placeCode)
-                                 .arg(m_place[place].displayName));
-                beginflag = false;
-            } else {
-                placeList.append(QString::fromLatin1("|place|%1|extra|%2;%3")
-                                 .arg(place).arg(m_place[place].placeCode)
-                                 .arg(m_place[place].displayName));
-            }
-        }
+    }
 
-        qDebug() << "Returning place list:" << placeList;
-
-        if (m_locations.count() > 1) {
-            setData(source, "validate",
-                    QString::fromLatin1("wettercom|valid|multiple|place|%1")
-                    .arg(placeList));
+    QString placeList;
+    foreach(const QString &place, m_locations) {
+        // Extra data format: placeCode;displayName
+        if (beginflag) {
+            placeList.append(QString::fromLatin1("%1|extra|%2;%3")
+                                .arg(place).arg(m_place[place].placeCode)
+                                .arg(m_place[place].displayName));
+            beginflag = false;
         } else {
-            placeList[0] = placeList[0].toUpper();
-            setData(source, "validate",
-                    QString::fromLatin1("wettercom|valid|single|place|%1")
-                    .arg(placeList));
+            placeList.append(QString::fromLatin1("|place|%1|extra|%2;%3")
+                                .arg(place).arg(m_place[place].placeCode)
+                                .arg(m_place[place].displayName));
         }
+    }
+
+    qDebug() << "Returning place list:" << placeList;
+
+    if (m_locations.count() > 1) {
+        setData(source, "validate",
+                QString::fromLatin1("wettercom|valid|multiple|place|%1")
+                .arg(placeList));
+    } else {
+        placeList[0] = placeList[0].toUpper();
+        setData(source, "validate",
+                QString::fromLatin1("wettercom|valid|single|place|%1")
+                .arg(placeList));
     }
 
     m_locations.clear();

@@ -217,7 +217,9 @@ bool UKMETIon::updateIonSource(const QString& source)
         // Look for places to match
         findPlace(sourceAction[2], source);
         return true;
-    } else if (sourceAction[1] == "weather" && sourceAction.size() >= 3) {
+    }
+
+    if (sourceAction[1] == "weather" && sourceAction.size() >= 3) {
         if (sourceAction.count() >= 3) {
             if (sourceAction[2].isEmpty()) {
                 setData(source, "validate", "bbcukmet|malformed");
@@ -226,15 +228,13 @@ bool UKMETIon::updateIonSource(const QString& source)
             m_place[QString("bbcukmet|%1").arg(sourceAction[2])].XMLurl = sourceAction[3];
             getXMLData(QString("%1|%2").arg(sourceAction[0]).arg(sourceAction[2]));
             return true;
-        } else {
-            return false;
         }
-    } else {
-        setData(source, "validate", "bbcukmet|malformed");
-        return true;
+        return false;
+
     }
 
-    return false;
+    setData(source, "validate", "bbcukmet|malformed");
+    return true;
 }
 
 // Gets specific city XML data
@@ -752,31 +752,30 @@ void UKMETIon::parseFiveDayForecast(const QString& source, QXmlStreamReader& xml
 
 void UKMETIon::validate(const QString& source)
 {
-    bool beginflag = true;
-
-    if (!m_locations.count()) {
+    if (m_locations.isEmpty()) {
         QStringList invalidPlace = source.split('|');
         if (m_place[QString("bbcukmet|%1").arg(invalidPlace[2])].place.isEmpty()) {
             setData(source, "validate", QString("bbcukmet|invalid|multiple|%1").arg(invalidPlace[2]));
         }
-        m_locations.clear();
         return;
-    } else {
-        QString placeList;
-        foreach(const QString &place, m_locations) {
-            if (beginflag) {
-                placeList.append(QString("%1|extra|%2").arg(place.split('|')[1]).arg(m_place[place].XMLurl));
-                beginflag = false;
-            } else {
-                placeList.append(QString("|place|%1|extra|%2").arg(place.split('|')[1]).arg(m_place[place].XMLurl));
-            }
-        }
-        if (m_locations.count() > 1) {
-            setData(source, "validate", QString("bbcukmet|valid|multiple|place|%1").arg(placeList));
+    }
+
+    bool beginflag = true;
+
+    QString placeList;
+    foreach(const QString &place, m_locations) {
+        if (beginflag) {
+            placeList.append(QString("%1|extra|%2").arg(place.split('|')[1]).arg(m_place[place].XMLurl));
+            beginflag = false;
         } else {
-            placeList[0] = placeList[0].toUpper();
-            setData(source, "validate", QString("bbcukmet|valid|single|place|%1").arg(placeList));
+            placeList.append(QString("|place|%1|extra|%2").arg(place.split('|')[1]).arg(m_place[place].XMLurl));
         }
+    }
+    if (m_locations.count() > 1) {
+        setData(source, "validate", QString("bbcukmet|valid|multiple|place|%1").arg(placeList));
+    } else {
+        placeList[0] = placeList[0].toUpper();
+        setData(source, "validate", QString("bbcukmet|valid|single|place|%1").arg(placeList));
     }
     m_locations.clear();
 }
