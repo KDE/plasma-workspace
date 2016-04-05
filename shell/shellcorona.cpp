@@ -1178,7 +1178,7 @@ void ShellCorona::loadInteractiveConsole()
 void ShellCorona::showInteractiveConsole()
 {
     loadInteractiveConsole();
-    if (m_interactiveConsole->rootObject()) {
+    if (m_interactiveConsole && m_interactiveConsole->rootObject()) {
         m_interactiveConsole->rootObject()->setProperty("mode", "desktop");
         m_interactiveConsole->rootObject()->setProperty("visible", true);
     }
@@ -1196,7 +1196,7 @@ void ShellCorona::showInteractiveKWinConsole()
 {
     loadInteractiveConsole();
 
-    if (m_interactiveConsole->rootObject()) {
+    if (m_interactiveConsole && m_interactiveConsole->rootObject()) {
         m_interactiveConsole->rootObject()->setProperty("mode", "windowmanager");
         m_interactiveConsole->rootObject()->setProperty("visible", true);
     }
