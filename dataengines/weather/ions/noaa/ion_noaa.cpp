@@ -260,7 +260,9 @@ void NOAAIon::parseStationID()
     while (!m_xmlSetup.atEnd()) {
         m_xmlSetup.readNext();
 
-        if (m_xmlSetup.isEndElement() && m_xmlSetup.name() == "station") {
+        const QStringRef elementName = m_xmlSetup.name();
+
+        if (m_xmlSetup.isEndElement() && elementName == QLatin1String("station")) {
             if (!xmlurl.isEmpty()) {
                 NOAAIon::XMLMapInfo info;
                 info.stateName = state;
@@ -275,13 +277,13 @@ void NOAAIon::parseStationID()
         }
 
         if (m_xmlSetup.isStartElement()) {
-            if (m_xmlSetup.name() == "station_id") {
+            if (elementName == QLatin1String("station_id")) {
                 stationID = m_xmlSetup.readElementText();
-            } else if (m_xmlSetup.name() == "state") {
+            } else if (elementName == QLatin1String("state")) {
                 state = m_xmlSetup.readElementText();
-            } else if (m_xmlSetup.name() == "station_name") {
+            } else if (elementName == QLatin1String("station_name")) {
                 stationName = m_xmlSetup.readElementText();
-            } else if (m_xmlSetup.name() == "xml_url") {
+            } else if (elementName == QLatin1String("xml_url")) {
                 xmlurl = m_xmlSetup.readElementText().replace(QLatin1String("http://"), QLatin1String("http://www."));
             } else {
                 parseUnknownElement(m_xmlSetup);
@@ -300,7 +302,7 @@ void NOAAIon::parseStationList()
         }
 
         if (m_xmlSetup.isStartElement()) {
-            if (m_xmlSetup.name() == "station") {
+            if (m_xmlSetup.name() == QLatin1String("station")) {
                 parseStationID();
             } else {
                 parseUnknownElement(m_xmlSetup);
@@ -317,7 +319,7 @@ bool NOAAIon::readXMLSetup()
         m_xmlSetup.readNext();
 
         if (m_xmlSetup.isStartElement()) {
-            if (m_xmlSetup.name() == "wx_station_index") {
+            if (m_xmlSetup.name() == QLatin1String("wx_station_index")) {
                 parseStationList();
                 success = true;
             }
@@ -347,16 +349,18 @@ void NOAAIon::parseWeatherSite(WeatherData& data, QXmlStreamReader& xml)
     while (!xml.atEnd()) {
         xml.readNext();
 
+        const QStringRef elementName = xml.name();
+
         if (xml.isStartElement()) {
-            if (xml.name() == "location") {
+            if (elementName == QLatin1String("location")) {
                 data.locationName = xml.readElementText();
-            } else if (xml.name() == "station_id") {
+            } else if (elementName == QLatin1String("station_id")) {
                 data.stationID = xml.readElementText();
-            } else if (xml.name() == "latitude") {
+            } else if (elementName == QLatin1String("latitude")) {
                 data.stationLat = xml.readElementText();
-            } else if (xml.name() == "longitude") {
+            } else if (elementName == QLatin1String("longitude")) {
                 data.stationLon = xml.readElementText();
-            } else if (xml.name() == "observation_time") {
+            } else if (elementName == QLatin1String("observation_time")) {
                 data.observationTime = xml.readElementText();
                 QStringList tmpDateStr = data.observationTime.split(' ');
                 data.observationTime = QStringLiteral("%1 %2").arg(tmpDateStr[6]).arg(tmpDateStr[7]);
@@ -364,36 +368,36 @@ void NOAAIon::parseWeatherSite(WeatherData& data, QXmlStreamReader& xml)
                 data.iconPeriodHour = m_dateFormat.toString(QStringLiteral("HH"));
                 data.iconPeriodAP = m_dateFormat.toString(QStringLiteral("ap"));
 
-            } else if (xml.name() == "weather") {
+            } else if (elementName == QLatin1String("weather")) {
                 data.weather = xml.readElementText();
                 // Pick which icon set depending on period of day
-            } else if (xml.name() == "temp_f") {
+            } else if (elementName == QLatin1String("temp_f")) {
                 data.temperature_F = xml.readElementText();
-            } else if (xml.name() == "temp_c") {
+            } else if (elementName == QLatin1String("temp_c")) {
                 data.temperature_C = xml.readElementText();
-            } else if (xml.name() == "relative_humidity") {
+            } else if (elementName == QLatin1String("relative_humidity")) {
                 data.humidity = xml.readElementText();
-            } else if (xml.name() == "wind_dir") {
+            } else if (elementName == QLatin1String("wind_dir")) {
                 data.windDirection = xml.readElementText();
-            } else if (xml.name() == "wind_mph") {
+            } else if (elementName == QLatin1String("wind_mph")) {
                 data.windSpeed = xml.readElementText();
-            } else if (xml.name() == "wind_gust_mph") {
+            } else if (elementName == QLatin1String("wind_gust_mph")) {
                 data.windGust = xml.readElementText();
-            } else if (xml.name() == "pressure_in") {
+            } else if (elementName == QLatin1String("pressure_in")) {
                 data.pressure = xml.readElementText();
-            } else if (xml.name() == "dewpoint_f") {
+            } else if (elementName == QLatin1String("dewpoint_f")) {
                 data.dewpoint_F = xml.readElementText();
-            } else if (xml.name() == "dewpoint_c") {
+            } else if (elementName == QLatin1String("dewpoint_c")) {
                 data.dewpoint_C = xml.readElementText();
-            } else if (xml.name() == "heat_index_f") {
+            } else if (elementName == QLatin1String("heat_index_f")) {
                 data.heatindex_F = xml.readElementText();
-            } else if (xml.name() == "heat_index_c") {
+            } else if (elementName == QLatin1String("heat_index_c")) {
                 data.heatindex_C = xml.readElementText();
-            } else if (xml.name() == "windchill_f") {
+            } else if (elementName == QLatin1String("windchill_f")) {
                 data.windchill_F = xml.readElementText();
-            } else if (xml.name() == "windchill_c") {
+            } else if (elementName == QLatin1String("windchill_c")) {
                 data.windchill_C = xml.readElementText();
-            } else if (xml.name() == "visibility_mi") {
+            } else if (elementName == QLatin1String("visibility_mi")) {
                 data.visibility = xml.readElementText();
             } else {
                 parseUnknownElement(xml);
@@ -415,7 +419,7 @@ bool NOAAIon::readXMLData(const QString& source, QXmlStreamReader& xml)
         }
 
         if (xml.isStartElement()) {
-            if (xml.name() == "current_observation") {
+            if (xml.name() == QLatin1String("current_observation")) {
                 parseWeatherSite(data, xml);
             } else {
                 parseUnknownElement(xml);
@@ -869,14 +873,14 @@ void NOAAIon::readForecast(const QString& source, QXmlStreamReader& xml)
              * <layout-key> which indicates the separate day listings.  The schema defines it to be
              * the first item before the day listings.
              */
-            if (xml.name() == "layout-key" && xml.readElementText() == QLatin1String("k-p24h-n7-1")) {
+            if (xml.name() == QLatin1String("layout-key") && xml.readElementText() == QLatin1String("k-p24h-n7-1")) {
 
                 // Read days until we get to end of parent (<time-layout>)tag
-                while (! (xml.isEndElement() && xml.name() == "time-layout")) {
+                while (! (xml.isEndElement() && xml.name() == QLatin1String("time-layout"))) {
 
                     xml.readNext();
 
-                    if (xml.name() == "start-valid-time") {
+                    if (xml.name() == QLatin1String("start-valid-time")) {
                         QString data = xml.readElementText();
                         QDateTime date = QDateTime::fromString(data, Qt::ISODate);
 
@@ -887,46 +891,46 @@ void NOAAIon::readForecast(const QString& source, QXmlStreamReader& xml)
                     }
                 }
 
-            } else if (xml.name() == "temperature" && xml.attributes().value(QStringLiteral("type")) == "maximum") {
+            } else if (xml.name() == QLatin1String("temperature") && xml.attributes().value(QStringLiteral("type")) == "maximum") {
 
                 // Read max temps until we get to end tag
                 int i = 0;
-                while (! (xml.isEndElement() && xml.name() == "temperature") &&
+                while (! (xml.isEndElement() && xml.name() == QLatin1String("temperature")) &&
                        i < forecasts.count()) {
 
                     xml.readNext();
 
-                    if (xml.name() == "value") {
+                    if (xml.name() == QLatin1String("value")) {
                         forecasts[i].high = xml.readElementText();
                         //qDebug() << forecasts[i].high;
                         i++;
                     }
                 }
-            } else if (xml.name() == "temperature" && xml.attributes().value(QStringLiteral("type")) == "minimum") {
+            } else if (xml.name() == QLatin1String("temperature") && xml.attributes().value(QStringLiteral("type")) == "minimum") {
 
                 // Read min temps until we get to end tag
                 int i = 0;
-                while (! (xml.isEndElement() && xml.name() == "temperature") &&
+                while (! (xml.isEndElement() && xml.name() == QLatin1String("temperature")) &&
                        i < forecasts.count()) {
 
                     xml.readNext();
 
-                    if (xml.name() == "value") {
+                    if (xml.name() == QLatin1String("value")) {
                         forecasts[i].low = xml.readElementText();
                         //qDebug() << forecasts[i].low;
                         i++;
                     }
                 }
-            } else if (xml.name() == "weather") {
+            } else if (xml.name() == QLatin1String("weather")) {
 
                 // Read weather conditions until we get to end tag
                 int i = 0;
-                while (! (xml.isEndElement() && xml.name() == "weather") &&
+                while (! (xml.isEndElement() && xml.name() == QLatin1String("weather")) &&
                        i < forecasts.count()) {
 
                     xml.readNext();
 
-                    if (xml.name() == "weather-conditions" && xml.isStartElement()) {
+                    if (xml.name() == QLatin1String("weather-conditions") && xml.isStartElement()) {
                         QString summary = xml.attributes().value(QStringLiteral("weather-summary")).toString();
                         forecasts[i].summary = summary;
                         //qDebug() << forecasts[i].summary;

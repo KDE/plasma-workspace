@@ -458,31 +458,31 @@ void UKMETIon::forecast_slotJobFinished(KJob *job)
 
 void UKMETIon::parsePlaceObservation(const QString &source, WeatherData& data, QXmlStreamReader& xml)
 {
-    Q_ASSERT(xml.isStartElement() && xml.name() == "rss");
+    Q_ASSERT(xml.isStartElement() && xml.name() == QLatin1String("rss"));
 
     while (!xml.atEnd()) {
         xml.readNext();
 
-        if (xml.isEndElement() && xml.name() == "rss") {
+        const QStringRef elementName = xml.name();
+
+        if (xml.isEndElement() && elementName == QLatin1String("rss")) {
             break;
         }
 
-        if (xml.isStartElement()) {
-            if (xml.name() == "channel") {
-                parseWeatherChannel(source, data, xml);
-            }
+        if (xml.isStartElement() && elementName == QLatin1String("channel")) {
+            parseWeatherChannel(source, data, xml);
         }
     }
 }
 
 void UKMETIon::parsePlaceForecast(const QString &source, QXmlStreamReader& xml)
 {
-    Q_ASSERT(xml.isStartElement() && xml.name() == "rss");
+    Q_ASSERT(xml.isStartElement() && xml.name() == QLatin1String("rss"));
 
     while (!xml.atEnd()) {
         xml.readNext();
 
-        if (xml.isStartElement() && xml.name() == "channel") {
+        if (xml.isStartElement() && xml.name() == QLatin1String("channel")) {
             parseWeatherForecast(source, xml);
         }
     }
@@ -490,22 +490,24 @@ void UKMETIon::parsePlaceForecast(const QString &source, QXmlStreamReader& xml)
 
 void UKMETIon::parseWeatherChannel(const QString& source, WeatherData& data, QXmlStreamReader& xml)
 {
-    Q_ASSERT(xml.isStartElement() && xml.name() == "channel");
+    Q_ASSERT(xml.isStartElement() && xml.name() == QLatin1String("channel"));
 
     while (!xml.atEnd()) {
         xml.readNext();
 
-        if (xml.isEndElement() && xml.name() == "channel") {
+        const QStringRef elementName = xml.name();
+
+        if (xml.isEndElement() && elementName == QLatin1String("channel")) {
             break;
         }
 
         if (xml.isStartElement()) {
-            if (xml.name() == "title") {
+            if (elementName == QLatin1String("title")) {
                 data.stationName = xml.readElementText().split("Observations for")[1].trimmed();
                 data.stationName.replace("United Kingdom", i18n("UK"));
                 data.stationName.replace("United States of America", i18n("USA"));
 
-            } else if (xml.name() == "item") {
+            } else if (elementName == QLatin1String("item")) {
                 parseWeatherObservation(source, data, xml);
             } else {
                 parseUnknownElement(xml);
@@ -516,17 +518,19 @@ void UKMETIon::parseWeatherChannel(const QString& source, WeatherData& data, QXm
 
 void UKMETIon::parseWeatherForecast(const QString& source, QXmlStreamReader& xml)
 {
-    Q_ASSERT(xml.isStartElement() && xml.name() == "channel");
+    Q_ASSERT(xml.isStartElement() && xml.name() == QLatin1String("channel"));
 
     while (!xml.atEnd()) {
         xml.readNext();
 
-        if (xml.isEndElement() && xml.name() == "channel") {
+        const QStringRef elementName = xml.name();
+
+        if (xml.isEndElement() && elementName == QLatin1String("channel")) {
             break;
         }
 
         if (xml.isStartElement()) {
-            if (xml.name() == "item") {
+            if (elementName == QLatin1String("item")) {
                 parseFiveDayForecast(source, xml);
             } else {
                 parseUnknownElement(xml);
@@ -537,17 +541,19 @@ void UKMETIon::parseWeatherForecast(const QString& source, QXmlStreamReader& xml
 
 void UKMETIon::parseWeatherObservation(const QString& source, WeatherData& data, QXmlStreamReader& xml)
 {
-    Q_ASSERT(xml.isStartElement() && xml.name() == "item");
+    Q_ASSERT(xml.isStartElement() && xml.name() == QLatin1String("item"));
 
     while (!xml.atEnd()) {
         xml.readNext();
 
-        if (xml.isEndElement() && xml.name() == "item") {
+        const QStringRef elementName = xml.name();
+
+        if (xml.isEndElement() && elementName == QLatin1String("item")) {
             break;
         }
 
         if (xml.isStartElement()) {
-            if (xml.name() == "title") {
+            if (elementName == QLatin1String("title")) {
                 QString conditionString = xml.readElementText();
 
                 // Get the observation time and condition
@@ -582,10 +588,10 @@ void UKMETIon::parseWeatherObservation(const QString& source, WeatherData& data,
                     }
                 }
 
-            } else if (xml.name() == "link") {
+            } else if (elementName == QLatin1String("link")) {
                 m_place[source].forecastHTMLUrl = xml.readElementText();
 
-            } else if (xml.name() == "description") {
+            } else if (elementName == QLatin1String("description")) {
                 QString observeString = xml.readElementText();
                 QStringList observeData = observeString.split(':');
 #ifdef __GNUC__
@@ -625,13 +631,13 @@ void UKMETIon::parseWeatherObservation(const QString& source, WeatherData& data,
 
                 data.visibilityStr = observeData[6].trimmed();
 
-            } else if (xml.name() == "lat") {
+            } else if (elementName == QLatin1String("lat")) {
                 const QString ordinate = xml.readElementText();
                 data.latitude = ordinate.toDouble();
-            } else if (xml.name() == "long") {
+            } else if (elementName == QLatin1String("long")) {
                 const QString ordinate = xml.readElementText();
                 data.longitude = ordinate.toDouble();
-            } else if (xml.name() == "georss:point") {
+            } else if (elementName == QLatin1String("georss:point")) {
                 const QString ordinates = xml.readElementText();
                 data.latitude = ordinates.split(' ')[0].toDouble();
                 data.longitude = ordinates.split(' ')[1].toDouble();
@@ -654,7 +660,7 @@ bool UKMETIon::readObservationXMLData(const QString& source, QXmlStreamReader& x
         }
 
         if (xml.isStartElement()) {
-            if (xml.name() == "rss") {
+            if (xml.name() == QLatin1String("rss")) {
                 parsePlaceObservation(source, data, xml);
                 haveObservation = true;
             } else {
@@ -686,7 +692,7 @@ bool UKMETIon::readFiveDayForecastXMLData(const QString& source, QXmlStreamReade
         }
 
         if (xml.isStartElement()) {
-            if (xml.name() == "rss") {
+            if (xml.name() == QLatin1String("rss")) {
                 parsePlaceForecast(source, xml);
                 haveFiveDay = true;
             } else {
@@ -701,7 +707,7 @@ bool UKMETIon::readFiveDayForecastXMLData(const QString& source, QXmlStreamReade
 
 void UKMETIon::parseFiveDayForecast(const QString& source, QXmlStreamReader& xml)
 {
-    Q_ASSERT(xml.isStartElement() && xml.name() == "item");
+    Q_ASSERT(xml.isStartElement() && xml.name() == QLatin1String("item"));
 
     // Flush out the old forecasts when updating.
     m_weatherData[source].forecasts.clear();
@@ -714,7 +720,7 @@ void UKMETIon::parseFiveDayForecast(const QString& source, QXmlStreamReader& xml
     QRegExp  low("Minimum Temperature: (-?\\d+).C", Qt::CaseInsensitive);
     while (!xml.atEnd()) {
         xml.readNext();
-        if (xml.name() == "title") {
+        if (xml.name() == QLatin1String("title")) {
             line = xml.readElementText().trimmed();
 #ifdef __GNUC__
 #warning FIXME: We should make this all use QRegExps in UKMETIon::parseFiveDayForecast() for forecast -spstarr

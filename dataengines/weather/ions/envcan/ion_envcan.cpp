@@ -608,23 +608,25 @@ bool EnvCanadaIon::readXMLSetup()
     while (!m_xmlSetup.atEnd()) {
         m_xmlSetup.readNext();
 
+        const QStringRef elementName = m_xmlSetup.name();
+
         if (m_xmlSetup.isStartElement()) {
 
             // XML ID code to match filename
-            if (m_xmlSetup.name() == "site") {
+            if (elementName == QLatin1String("site")) {
                 code = m_xmlSetup.attributes().value("code").toString();
             }
 
-            if (m_xmlSetup.name() == "nameEn") {
+            if (elementName == QLatin1String("nameEn")) {
                 cityName = m_xmlSetup.readElementText(); // Name of cities
             }
 
-            if (m_xmlSetup.name() == "provinceCode") {
+            if (elementName == QLatin1String("provinceCode")) {
                 territory = m_xmlSetup.readElementText(); // Provinces/Territory list
             }
         }
 
-        if (m_xmlSetup.isEndElement() && m_xmlSetup.name() == "site") {
+        if (m_xmlSetup.isEndElement() && elementName == QLatin1String("site")) {
             EnvCanadaIon::XMLMapInfo info;
             QString tmp = cityName + ", " + territory; // Build the key name.
 
@@ -648,27 +650,29 @@ void EnvCanadaIon::parseWeatherSite(WeatherData& data, QXmlStreamReader& xml)
     while (!xml.atEnd()) {
         xml.readNext();
 
+        const QStringRef elementName = xml.name();
+
         if (xml.isStartElement()) {
-            if (xml.name() == "license") {
+            if (elementName == QLatin1String("license")) {
                 xml.readElementText();
-            } else if (xml.name() == "location") {
+            } else if (elementName == QLatin1String("location")) {
                 parseLocations(data, xml);
-            } else if (xml.name() == "warnings") {
+            } else if (elementName == QLatin1String("warnings")) {
                 // Cleanup warning list on update
                 data.warnings.clear();
                 data.watches.clear();
                 parseWarnings(data, xml);
-            } else if (xml.name() == "currentConditions") {
+            } else if (elementName == QLatin1String("currentConditions")) {
                 parseConditions(data, xml);
-            } else if (xml.name() == "forecastGroup") {
+            } else if (elementName == QLatin1String("forecastGroup")) {
                 // Clean up forecast list on update
                 data.forecasts.clear();
                 parseWeatherForecast(data, xml);
-            } else if (xml.name() == "yesterdayConditions") {
+            } else if (elementName == QLatin1String("yesterdayConditions")) {
                 parseYesterdayWeather(data, xml);
-            } else if (xml.name() == "riseSet") {
+            } else if (elementName == QLatin1String("riseSet")) {
                 parseAstronomicals(data, xml);
-            } else if (xml.name() == "almanac") {
+            } else if (elementName == QLatin1String("almanac")) {
                 parseWeatherRecords(data, xml);
             } else {
                 parseUnknownElement(xml);
@@ -698,7 +702,7 @@ bool EnvCanadaIon::readXMLData(const QString& source, QXmlStreamReader& xml)
         }
 
         if (xml.isStartElement()) {
-            if (xml.name() == "siteData") {
+            if (xml.name() == QLatin1String("siteData")) {
                 parseWeatherSite(data, xml);
             } else {
                 parseUnknownElement(xml);
@@ -714,7 +718,7 @@ bool EnvCanadaIon::readXMLData(const QString& source, QXmlStreamReader& xml)
 void EnvCanadaIon::parseDateTime(WeatherData& data, QXmlStreamReader& xml, WeatherData::WeatherEvent *event)
 {
 
-    Q_ASSERT(xml.isStartElement() && xml.name() == "dateTime");
+    Q_ASSERT(xml.isStartElement() && xml.name() == QLatin1String("dateTime"));
 
     // What kind of date info is this?
     QString dateType = xml.attributes().value("name").toString();
@@ -729,6 +733,8 @@ void EnvCanadaIon::parseDateTime(WeatherData& data, QXmlStreamReader& xml, Weath
             break;
         }
 
+        const QStringRef elementName = xml.name();
+
         if (xml.isStartElement()) {
             if (dateType == "xmlCreation") {
                 return;
@@ -736,19 +742,19 @@ void EnvCanadaIon::parseDateTime(WeatherData& data, QXmlStreamReader& xml, Weath
             if (dateZone == "UTC") {
                 return;
             }
-            if (xml.name() == "year") {
+            if (elementName == QLatin1String("year")) {
                 xml.readElementText();
-            } else if (xml.name() == "month") {
+            } else if (elementName == QLatin1String("month")) {
                 xml.readElementText();
-            } else if (xml.name() == "day") {
+            } else if (elementName == QLatin1String("day")) {
                 xml.readElementText();
-            } else if (xml.name() == "hour")
+            } else if (elementName == QLatin1String("hour"))
                 xml.readElementText();
-            else if (xml.name() == "minute")
+            else if (elementName == QLatin1String("minute"))
                 xml.readElementText();
-            else if (xml.name() == "timeStamp")
+            else if (elementName == QLatin1String("timeStamp"))
                 selectTimeStamp = xml.readElementText();
-            else if (xml.name() == "textSummary") {
+            else if (elementName == QLatin1String("textSummary")) {
                 if (dateType == "eventIssue") {
                     if (event) {
                         event->timestamp = xml.readElementText();
@@ -777,7 +783,7 @@ void EnvCanadaIon::parseDateTime(WeatherData& data, QXmlStreamReader& xml, Weath
 
 void EnvCanadaIon::parseLocations(WeatherData& data, QXmlStreamReader& xml)
 {
-    Q_ASSERT(xml.isStartElement() && xml.name() == "location");
+    Q_ASSERT(xml.isStartElement() && xml.name() == QLatin1String("location"));
 
     while (!xml.atEnd()) {
         xml.readNext();
@@ -786,14 +792,16 @@ void EnvCanadaIon::parseLocations(WeatherData& data, QXmlStreamReader& xml)
             break;
         }
 
+        const QStringRef elementName = xml.name();
+
         if (xml.isStartElement()) {
-            if (xml.name() == "country") {
+            if (elementName == QLatin1String("country")) {
                 data.countryName = xml.readElementText();
-            } else if (xml.name() == "province" || xml.name() == "territory") {
+            } else if (elementName == QLatin1String("province") || elementName == QLatin1String("territory")) {
                 data.longTerritoryName = xml.readElementText();
-            } else if (xml.name() == "name") {
+            } else if (elementName == QLatin1String("name")) {
                 data.cityName = xml.readElementText();
-            } else if (xml.name() == "region") {
+            } else if (elementName == QLatin1String("region")) {
                 data.regionName = xml.readElementText();
             } else {
                 parseUnknownElement(xml);
@@ -804,7 +812,7 @@ void EnvCanadaIon::parseLocations(WeatherData& data, QXmlStreamReader& xml)
 
 void EnvCanadaIon::parseWindInfo(WeatherData& data, QXmlStreamReader& xml)
 {
-    Q_ASSERT(xml.isStartElement() && xml.name() == "wind");
+    Q_ASSERT(xml.isStartElement() && xml.name() == QLatin1String("wind"));
 
     while (!xml.atEnd()) {
         xml.readNext();
@@ -813,14 +821,16 @@ void EnvCanadaIon::parseWindInfo(WeatherData& data, QXmlStreamReader& xml)
             break;
         }
 
+        const QStringRef elementName = xml.name();
+
         if (xml.isStartElement()) {
-            if (xml.name() == "speed") {
+            if (elementName == QLatin1String("speed")) {
                 data.windSpeed = xml.readElementText();
-            } else if (xml.name() == "gust") {
+            } else if (elementName == QLatin1String("gust")) {
                 data.windGust = xml.readElementText();
-            } else if (xml.name() == "direction") {
+            } else if (elementName == QLatin1String("direction")) {
                 data.windDirection = xml.readElementText();
-            } else if (xml.name() == "bearing") {
+            } else if (elementName == QLatin1String("bearing")) {
                 data.windDegrees = xml.attributes().value("degrees").toString();
             } else {
                 parseUnknownElement(xml);
@@ -832,7 +842,7 @@ void EnvCanadaIon::parseWindInfo(WeatherData& data, QXmlStreamReader& xml)
 void EnvCanadaIon::parseConditions(WeatherData& data, QXmlStreamReader& xml)
 {
 
-    Q_ASSERT(xml.isStartElement() && xml.name() == "currentConditions");
+    Q_ASSERT(xml.isStartElement() && xml.name() == QLatin1String("currentConditions"));
     data.temperature = i18n("N/A");
     data.dewpoint = i18n("N/A");
     data.condition = i18n("N/A");
@@ -850,35 +860,37 @@ void EnvCanadaIon::parseConditions(WeatherData& data, QXmlStreamReader& xml)
     while (!xml.atEnd()) {
         xml.readNext();
 
-        if (xml.isEndElement() && xml.name() == "currentConditions")
+        const QStringRef elementName = xml.name();
+
+        if (xml.isEndElement() && elementName == QLatin1String("currentConditions"))
             break;
 
         if (xml.isStartElement()) {
-            if (xml.name() == "station") {
+            if (elementName == QLatin1String("station")) {
                 data.stationID = xml.attributes().value("code").toString();
                 data.stationLat = xml.attributes().value("lat").toString();
                 data.stationLon = xml.attributes().value("lon").toString();
-            } else if (xml.name() == "dateTime") {
+            } else if (elementName == QLatin1String("dateTime")) {
                 parseDateTime(data, xml);
-            } else if (xml.name() == "condition") {
+            } else if (elementName == QLatin1String("condition")) {
                 data.condition = xml.readElementText();
-            } else if (xml.name() == "temperature") {
+            } else if (elementName == QLatin1String("temperature")) {
                 data.temperature = xml.readElementText();
-            } else if (xml.name() == "dewpoint") {
+            } else if (elementName == QLatin1String("dewpoint")) {
                 data.dewpoint = xml.readElementText();
-            } else if (xml.name() == "humidex" || xml.name() == "windChill") {
+            } else if (elementName == QLatin1String("humidex") || elementName == QLatin1String("windChill")) {
                 data.comforttemp = xml.readElementText();
-            } else if (xml.name() == "pressure") {
+            } else if (elementName == QLatin1String("pressure")) {
                 data.pressureTendency = xml.attributes().value("tendency").toString();
                 if (data.pressureTendency.isEmpty()) {
                     data.pressureTendency = "steady";
                 }
                 data.pressure = xml.readElementText().toFloat();
-            } else if (xml.name() == "visibility") {
+            } else if (elementName == QLatin1String("visibility")) {
                 data.visibility = xml.readElementText().toFloat();
-            } else if (xml.name() == "relativeHumidity") {
+            } else if (elementName == QLatin1String("relativeHumidity")) {
                 data.humidity = xml.readElementText();
-            } else if (xml.name() == "wind") {
+            } else if (elementName == QLatin1String("wind")) {
                 parseWindInfo(data, xml);
             }
             //} else {
@@ -896,19 +908,21 @@ void EnvCanadaIon::parseWarnings(WeatherData &data, QXmlStreamReader& xml)
     WeatherData::WeatherEvent *watch = new WeatherData::WeatherEvent;
     WeatherData::WeatherEvent *warning = new WeatherData::WeatherEvent;
 
-    Q_ASSERT(xml.isStartElement() && xml.name() == "warnings");
+    Q_ASSERT(xml.isStartElement() && xml.name() == QLatin1String("warnings"));
     QString eventURL = xml.attributes().value("url").toString();
     int flag = 0;
 
     while (!xml.atEnd()) {
         xml.readNext();
 
-        if (xml.isEndElement() && xml.name() == "warnings") {
+        const QStringRef elementName = xml.name();
+
+        if (xml.isEndElement() && elementName == QLatin1String("warnings")) {
             break;
         }
 
         if (xml.isStartElement()) {
-            if (xml.name() == "dateTime") {
+            if (elementName == QLatin1String("dateTime")) {
                 if (flag == 1) {
                     parseDateTime(data, xml, watch);
                 }
@@ -925,7 +939,7 @@ void EnvCanadaIon::parseWarnings(WeatherData &data, QXmlStreamReader& xml)
                     watch = new WeatherData::WeatherEvent;
                 }
 
-            } else if (xml.name() == "event") {
+            } else if (elementName == QLatin1String("event")) {
                 // Append new event to list.
                 QString eventType = xml.attributes().value("type").toString();
                 if (eventType == "watch") {
@@ -958,21 +972,23 @@ void EnvCanadaIon::parseWarnings(WeatherData &data, QXmlStreamReader& xml)
 void EnvCanadaIon::parseWeatherForecast(WeatherData& data, QXmlStreamReader& xml)
 {
     WeatherData::ForecastInfo* forecast = new WeatherData::ForecastInfo;
-    Q_ASSERT(xml.isStartElement() && xml.name() == "forecastGroup");
+    Q_ASSERT(xml.isStartElement() && xml.name() == QLatin1String("forecastGroup"));
 
     while (!xml.atEnd()) {
         xml.readNext();
 
-        if (xml.isEndElement() && xml.name() == "forecastGroup") {
+        const QStringRef elementName = xml.name();
+
+        if (xml.isEndElement() && elementName == QLatin1String("forecastGroup")) {
             break;
         }
 
         if (xml.isStartElement()) {
-            if (xml.name() == "dateTime") {
+            if (elementName == QLatin1String("dateTime")) {
                 parseDateTime(data, xml);
-            } else if (xml.name() == "regionalNormals") {
+            } else if (elementName == QLatin1String("regionalNormals")) {
                 parseRegionalNormals(data, xml);
-            } else if (xml.name() == "forecast") {
+            } else if (elementName == QLatin1String("forecast")) {
                 parseForecast(data, xml, forecast);
                 forecast = new WeatherData::ForecastInfo;
             } else {
@@ -985,7 +1001,7 @@ void EnvCanadaIon::parseWeatherForecast(WeatherData& data, QXmlStreamReader& xml
 
 void EnvCanadaIon::parseRegionalNormals(WeatherData& data, QXmlStreamReader& xml)
 {
-    Q_ASSERT(xml.isStartElement() && xml.name() == "regionalNormals");
+    Q_ASSERT(xml.isStartElement() && xml.name() == QLatin1String("regionalNormals"));
 
     while (!xml.atEnd()) {
         xml.readNext();
@@ -994,12 +1010,14 @@ void EnvCanadaIon::parseRegionalNormals(WeatherData& data, QXmlStreamReader& xml
             break;
         }
 
+        const QStringRef elementName = xml.name();
+
         if (xml.isStartElement()) {
-            if (xml.name() == "textSummary") {
+            if (elementName == QLatin1String("textSummary")) {
                 xml.readElementText();
-            } else if (xml.name() == "temperature" && xml.attributes().value("class") == "high") {
+            } else if (elementName == QLatin1String("temperature") && xml.attributes().value("class") == "high") {
                 data.normalHigh = xml.readElementText();
-            } else if (xml.name() == "temperature" && xml.attributes().value("class") == "low") {
+            } else if (elementName == QLatin1String("temperature") && xml.attributes().value("class") == "low") {
                 data.normalLow = xml.readElementText();
             }
         }
@@ -1009,36 +1027,38 @@ void EnvCanadaIon::parseRegionalNormals(WeatherData& data, QXmlStreamReader& xml
 void EnvCanadaIon::parseForecast(WeatherData& data, QXmlStreamReader& xml, WeatherData::ForecastInfo *forecast)
 {
 
-    Q_ASSERT(xml.isStartElement() && xml.name() == "forecast");
+    Q_ASSERT(xml.isStartElement() && xml.name() == QLatin1String("forecast"));
 
     while (!xml.atEnd()) {
         xml.readNext();
 
-        if (xml.isEndElement() && xml.name() == "forecast") {
+        const QStringRef elementName = xml.name();
+
+        if (xml.isEndElement() && elementName == QLatin1String("forecast")) {
             data.forecasts.append(forecast);
             break;
         }
 
         if (xml.isStartElement()) {
-            if (xml.name() == "period") {
+            if (elementName == QLatin1String("period")) {
                 forecast->forecastPeriod = xml.attributes().value("textForecastName").toString();
-            } else if (xml.name() == "textSummary") {
+            } else if (elementName == QLatin1String("textSummary")) {
                 forecast->forecastSummary = xml.readElementText();
-            } else if (xml.name() == "abbreviatedForecast") {
+            } else if (elementName == QLatin1String("abbreviatedForecast")) {
                 parseShortForecast(forecast, xml);
-            } else if (xml.name() == "temperatures") {
+            } else if (elementName == QLatin1String("temperatures")) {
                 parseForecastTemperatures(forecast, xml);
-            } else if (xml.name() == "winds") {
+            } else if (elementName == QLatin1String("winds")) {
                 parseWindForecast(forecast, xml);
-            } else if (xml.name() == "precipitation") {
+            } else if (elementName == QLatin1String("precipitation")) {
                 parsePrecipitationForecast(forecast, xml);
-            } else if (xml.name() == "uv") {
+            } else if (elementName == QLatin1String("uv")) {
                 data.UVRating = xml.attributes().value("category").toString();
                 parseUVIndex(data, xml);
-                // else if (xml.name() == "frost") { FIXME: Wait until winter to see what this looks like.
+                // else if (elementName == QLatin1String("frost")) { FIXME: Wait until winter to see what this looks like.
                 //  parseFrost(xml, forecast);
             } else {
-                if (xml.name() != "forecast") {
+                if (elementName != QLatin1String("forecast")) {
                     parseUnknownElement(xml);
                 }
             }
@@ -1048,22 +1068,24 @@ void EnvCanadaIon::parseForecast(WeatherData& data, QXmlStreamReader& xml, Weath
 
 void EnvCanadaIon::parseShortForecast(WeatherData::ForecastInfo *forecast, QXmlStreamReader& xml)
 {
-    Q_ASSERT(xml.isStartElement() && xml.name() == "abbreviatedForecast");
+    Q_ASSERT(xml.isStartElement() && xml.name() == QLatin1String("abbreviatedForecast"));
 
     QString shortText;
 
     while (!xml.atEnd()) {
         xml.readNext();
 
-        if (xml.isEndElement() && xml.name() == "abbreviatedForecast") {
+        const QStringRef elementName = xml.name();
+
+        if (xml.isEndElement() && elementName == QLatin1String("abbreviatedForecast")) {
             break;
         }
 
         if (xml.isStartElement()) {
-            if (xml.name() == "pop") {
+            if (elementName == QLatin1String("pop")) {
                 forecast->popPrecent = xml.readElementText();
             }
-            if (xml.name() == "textSummary") {
+            if (elementName == QLatin1String("textSummary")) {
                 shortText = xml.readElementText();
                 QMap<QString, ConditionIcons> forecastList;
                 forecastList = forecastIcons();
@@ -1101,20 +1123,22 @@ void EnvCanadaIon::parseShortForecast(WeatherData::ForecastInfo *forecast, QXmlS
 
 void EnvCanadaIon::parseUVIndex(WeatherData& data, QXmlStreamReader& xml)
 {
-    Q_ASSERT(xml.isStartElement() && xml.name() == "uv");
+    Q_ASSERT(xml.isStartElement() && xml.name() == QLatin1String("uv"));
 
     while (!xml.atEnd()) {
         xml.readNext();
 
-        if (xml.isEndElement() && xml.name() == "uv") {
+        const QStringRef elementName = xml.name();
+
+        if (xml.isEndElement() && elementName == QLatin1String("uv")) {
             break;
         }
 
         if (xml.isStartElement()) {
-            if (xml.name() == "index") {
+            if (elementName == QLatin1String("index")) {
                 data.UVIndex = xml.readElementText();
             }
-            if (xml.name() == "textSummary") {
+            if (elementName == QLatin1String("textSummary")) {
                 xml.readElementText();
             }
         }
@@ -1123,21 +1147,23 @@ void EnvCanadaIon::parseUVIndex(WeatherData& data, QXmlStreamReader& xml)
 
 void EnvCanadaIon::parseForecastTemperatures(WeatherData::ForecastInfo *forecast, QXmlStreamReader& xml)
 {
-    Q_ASSERT(xml.isStartElement() && xml.name() == "temperatures");
+    Q_ASSERT(xml.isStartElement() && xml.name() == QLatin1String("temperatures"));
 
     while (!xml.atEnd()) {
         xml.readNext();
 
-        if (xml.isEndElement() && xml.name() == "temperatures") {
+        const QStringRef elementName = xml.name();
+
+        if (xml.isEndElement() && elementName == QLatin1String("temperatures")) {
             break;
         }
 
         if (xml.isStartElement()) {
-            if (xml.name() == "temperature" && xml.attributes().value("class") == "low") {
+            if (elementName == QLatin1String("temperature") && xml.attributes().value("class") == "low") {
                 forecast->forecastTempLow = xml.readElementText();
-            } else if (xml.name() == "temperature" && xml.attributes().value("class") == "high") {
+            } else if (elementName == QLatin1String("temperature") && xml.attributes().value("class") == "high") {
                 forecast->forecastTempHigh = xml.readElementText();
-            } else if (xml.name() == "textSummary") {
+            } else if (elementName == QLatin1String("textSummary")) {
                 xml.readElementText();
             }
         }
@@ -1146,21 +1172,23 @@ void EnvCanadaIon::parseForecastTemperatures(WeatherData::ForecastInfo *forecast
 
 void EnvCanadaIon::parsePrecipitationForecast(WeatherData::ForecastInfo *forecast, QXmlStreamReader& xml)
 {
-    Q_ASSERT(xml.isStartElement() && xml.name() == "precipitation");
+    Q_ASSERT(xml.isStartElement() && xml.name() == QLatin1String("precipitation"));
 
     while (!xml.atEnd()) {
         xml.readNext();
 
-        if (xml.isEndElement() && xml.name() == "precipitation") {
+        const QStringRef elementName = xml.name();
+
+        if (xml.isEndElement() && elementName == QLatin1String("precipitation")) {
             break;
         }
 
         if (xml.isStartElement()) {
-            if (xml.name() == "textSummary") {
+            if (elementName == QLatin1String("textSummary")) {
                 forecast->precipForecast = xml.readElementText();
-            } else if (xml.name() == "precipType") {
+            } else if (elementName == QLatin1String("precipType")) {
                 forecast->precipType = xml.readElementText();
-            } else if (xml.name() == "accumulation") {
+            } else if (elementName == QLatin1String("accumulation")) {
                 parsePrecipTotals(forecast, xml);
             }
         }
@@ -1169,18 +1197,20 @@ void EnvCanadaIon::parsePrecipitationForecast(WeatherData::ForecastInfo *forecas
 
 void EnvCanadaIon::parsePrecipTotals(WeatherData::ForecastInfo *forecast, QXmlStreamReader& xml)
 {
-    Q_ASSERT(xml.isStartElement() && xml.name() == "accumulation");
+    Q_ASSERT(xml.isStartElement() && xml.name() == QLatin1String("accumulation"));
 
     while (!xml.atEnd()) {
         xml.readNext();
 
-        if (xml.isEndElement() && xml.name() == "accumulation") {
+        const QStringRef elementName = xml.name();
+
+        if (xml.isEndElement() && elementName == QLatin1String("accumulation")) {
             break;
         }
 
-        if (xml.name() == "name") {
+        if (elementName == QLatin1String("name")) {
             xml.readElementText();
-        } else if (xml.name() == "amount") {
+        } else if (elementName == QLatin1String("amount")) {
             forecast->precipTotalExpected = xml.readElementText();
         }
     }
@@ -1188,17 +1218,19 @@ void EnvCanadaIon::parsePrecipTotals(WeatherData::ForecastInfo *forecast, QXmlSt
 
 void EnvCanadaIon::parseWindForecast(WeatherData::ForecastInfo *forecast, QXmlStreamReader& xml)
 {
-    Q_ASSERT(xml.isStartElement() && xml.name() == "winds");
+    Q_ASSERT(xml.isStartElement() && xml.name() == QLatin1String("winds"));
 
     while (!xml.atEnd()) {
         xml.readNext();
 
-        if (xml.isEndElement() && xml.name() == "winds") {
+        const QStringRef elementName = xml.name();
+
+        if (xml.isEndElement() && elementName == QLatin1String("winds")) {
             break;
         }
 
         if (xml.isStartElement()) {
-            if (xml.name() == "textSummary") {
+            if (elementName == QLatin1String("textSummary")) {
                 forecast->windForecast = xml.readElementText();
             } else {
                 if (xml.name() != "winds") {
@@ -1211,7 +1243,7 @@ void EnvCanadaIon::parseWindForecast(WeatherData::ForecastInfo *forecast, QXmlSt
 
 void EnvCanadaIon::parseYesterdayWeather(WeatherData& data, QXmlStreamReader& xml)
 {
-    Q_ASSERT(xml.isStartElement() && xml.name() == "yesterdayConditions");
+    Q_ASSERT(xml.isStartElement() && xml.name() == QLatin1String("yesterdayConditions"));
 
     while (!xml.atEnd()) {
         xml.readNext();
@@ -1220,12 +1252,14 @@ void EnvCanadaIon::parseYesterdayWeather(WeatherData& data, QXmlStreamReader& xm
             break;
         }
 
+        const QStringRef elementName = xml.name();
+
         if (xml.isStartElement()) {
-            if (xml.name() == "temperature" && xml.attributes().value("class") == "high") {
+            if (elementName == QLatin1String("temperature") && xml.attributes().value("class") == "high") {
                 data.prevHigh = xml.readElementText();
-            } else if (xml.name() == "temperature" && xml.attributes().value("class") == "low") {
+            } else if (elementName == QLatin1String("temperature") && xml.attributes().value("class") == "low") {
                 data.prevLow = xml.readElementText();
-            } else if (xml.name() == "precip") {
+            } else if (elementName == QLatin1String("precip")) {
                 data.prevPrecipType = xml.attributes().value("units").toString();
                 if (data.prevPrecipType.isEmpty()) {
                     data.prevPrecipType = QString::number(KUnitConversion::NoUnit);
@@ -1238,23 +1272,25 @@ void EnvCanadaIon::parseYesterdayWeather(WeatherData& data, QXmlStreamReader& xm
 
 void EnvCanadaIon::parseWeatherRecords(WeatherData& data, QXmlStreamReader& xml)
 {
-    Q_ASSERT(xml.isStartElement() && xml.name() == "almanac");
+    Q_ASSERT(xml.isStartElement() && xml.name() == QLatin1String("almanac"));
 
     while (!xml.atEnd()) {
         xml.readNext();
 
-        if (xml.isEndElement() && xml.name() == "almanac") {
+        const QStringRef elementName = xml.name();
+
+        if (xml.isEndElement() && elementName == QLatin1String("almanac")) {
             break;
         }
 
         if (xml.isStartElement()) {
-            if (xml.name() == "temperature" && xml.attributes().value("class") == "extremeMax") {
+            if (elementName == QLatin1String("temperature") && xml.attributes().value("class") == "extremeMax") {
                 data.recordHigh = xml.readElementText().toFloat();
-            } else if (xml.name() == "temperature" && xml.attributes().value("class") == "extremeMin") {
+            } else if (elementName == QLatin1String("temperature") && xml.attributes().value("class") == "extremeMin") {
                 data.recordLow = xml.readElementText().toFloat();
-            } else if (xml.name() == "precipitation" && xml.attributes().value("class") == "extremeRainfall") {
+            } else if (elementName == QLatin1String("precipitation") && xml.attributes().value("class") == "extremeRainfall") {
                 data.recordRain = xml.readElementText().toFloat();
-            } else if (xml.name() == "precipitation" && xml.attributes().value("class") == "extremeSnowfall") {
+            } else if (elementName == QLatin1String("precipitation") && xml.attributes().value("class") == "extremeSnowfall") {
                 data.recordSnow = xml.readElementText().toFloat();
             }
         }
@@ -1263,19 +1299,21 @@ void EnvCanadaIon::parseWeatherRecords(WeatherData& data, QXmlStreamReader& xml)
 
 void EnvCanadaIon::parseAstronomicals(WeatherData& data, QXmlStreamReader& xml)
 {
-    Q_ASSERT(xml.isStartElement() && xml.name() == "riseSet");
+    Q_ASSERT(xml.isStartElement() && xml.name() == QLatin1String("riseSet"));
 
     while (!xml.atEnd()) {
         xml.readNext();
 
-        if (xml.isEndElement() && xml.name() == "riseSet") {
+        const QStringRef elementName = xml.name();
+
+        if (xml.isEndElement() && elementName == QLatin1String("riseSet")) {
             break;
         }
 
         if (xml.isStartElement()) {
-            if (xml.name() == "disclaimer") {
+            if (elementName == QLatin1String("disclaimer")) {
                 xml.readElementText();
-            } else if (xml.name() == "dateTime") {
+            } else if (elementName == QLatin1String("dateTime")) {
                 parseDateTime(data, xml);
             }
         }

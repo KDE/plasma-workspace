@@ -367,10 +367,12 @@ void WetterComIon::parseSearchResults(const QString& source, QXmlStreamReader& x
     while (!xml.atEnd()) {
         xml.readNext();
 
+        const QStringRef elementName = xml.name();
+
         if (xml.isEndElement()) {
-            if (xml.name() == "search") {
+            if (elementName == QLatin1String("search")) {
                 break;
-            } else if (xml.name() == "item") {
+            } else if (elementName == QLatin1String("item")) {
                 // we parsed a place from the search result
                 QString placeName;
 
@@ -398,15 +400,15 @@ void WetterComIon::parseSearchResults(const QString& source, QXmlStreamReader& x
         }
 
         if (xml.isStartElement()) {
-            if (xml.name() == "name") {
+            if (elementName == QLatin1String("name")) {
                 name = xml.readElementText();
-            } else if (xml.name() == "city_code") {
+            } else if (elementName == QLatin1String("city_code")) {
                 code = xml.readElementText();
-            } else if (xml.name() == "quarter") {
+            } else if (elementName == QLatin1String("quarter")) {
                 quarter = xml.readElementText();
-            } else if (xml.name() == "adm_1_code") {
+            } else if (elementName == QLatin1String("adm_1_code")) {
                 country = xml.readElementText();
-            } else if (xml.name() == "adm_2_name") {
+            } else if (elementName == QLatin1String("adm_2_name")) {
                 state = xml.readElementText();
             }
         }
@@ -558,10 +560,13 @@ void WetterComIon::parseWeatherForecast(const QString& source, QXmlStreamReader&
 
         qDebug() << "parsing xml elem: " << xml.name();
 
+        const QStringRef elementName = xml.name();
+
         if (xml.isEndElement()) {
-            if (xml.name() == "city") {
+            if (elementName == QLatin1String("city")) {
                 break;
-            } else if (xml.name() == "date") {
+            }
+            if (elementName == QLatin1String("date")) {
                 // we have parsed a complete day
 
                 forecastPeriod->period = QDateTime::fromTime_t(summaryUtcTime);
@@ -579,7 +584,7 @@ void WetterComIon::parseWeatherForecast(const QString& source, QXmlStreamReader&
                 summaryWeather = -1;
                 summaryProbability = 0;
                 summaryUtcTime = 0;
-            } else if (xml.name() == "time") {
+            } else if (elementName == QLatin1String("time")) {
                 // we have parsed one forecast
 
                 qDebug() << "Parsed a forecast interval:" << date << time;
@@ -626,17 +631,17 @@ void WetterComIon::parseWeatherForecast(const QString& source, QXmlStreamReader&
         }
 
         if (xml.isStartElement()) {
-            if (xml.name() == "date") {
+            if (elementName == QLatin1String("date")) {
                 date = xml.attributes().value("value").toString();
-            } else if (xml.name() == "time") {
+            } else if (elementName == QLatin1String("time")) {
                 time = xml.attributes().value("value").toString();
-            } else if (xml.name() == "tx") {
+            } else if (elementName == QLatin1String("tx")) {
                 tempMax = qRound(xml.readElementText().toDouble());
                 qDebug() << "parsed t_max:" << tempMax;
-            } else if (xml.name() == "tn") {
+            } else if (elementName == QLatin1String("tn")) {
                 tempMin = qRound(xml.readElementText().toDouble());
                 qDebug() << "parsed t_min:" << tempMin;
-            } else if (xml.name() == "w") {
+            } else if (elementName == QLatin1String("w")) {
                 int tmp = xml.readElementText().toInt();
 
                 if (!time.isEmpty())
@@ -645,10 +650,10 @@ void WetterComIon::parseWeatherForecast(const QString& source, QXmlStreamReader&
                     summaryWeather = tmp;
 
                 qDebug() << "parsed weather condition:" << tmp;
-            } else if (xml.name() == "name") {
+            } else if (elementName == QLatin1String("name")) {
                 m_weatherData[source].stationName = xml.readElementText();
                 qDebug() << "parsed station name:" << m_weatherData[source].stationName;
-            } else if (xml.name() == "pc") {
+            } else if (elementName == QLatin1String("pc")) {
                 int tmp = xml.readElementText().toInt();
 
                 if (!time.isEmpty())
@@ -657,16 +662,16 @@ void WetterComIon::parseWeatherForecast(const QString& source, QXmlStreamReader&
                     summaryProbability = tmp;
 
                 qDebug() << "parsed probability:" << probability;
-            } else if (xml.name() == "text") {
+            } else if (elementName == QLatin1String("text")) {
                 m_weatherData[source].credits = xml.readElementText();
                 qDebug() << "parsed credits:" << m_weatherData[source].credits;
-            } else if (xml.name() == "link") {
+            } else if (elementName == QLatin1String("link")) {
                 m_weatherData[source].creditsUrl = xml.readElementText();
                 qDebug() << "parsed credits url:" << m_weatherData[source].creditsUrl;
-            } else if (xml.name() == "d") {
+            } else if (elementName == QLatin1String("d")) {
                 localTime = xml.readElementText().toInt();
                 qDebug() << "parsed local time:" << localTime;
-            } else if (xml.name() == "du") {
+            } else if (elementName == QLatin1String("du")) {
                 int tmp = xml.readElementText().toInt();
 
                 if (!time.isEmpty())
