@@ -164,15 +164,14 @@ bool NOAAIon::updateIonSource(const QString& source)
 // Parses city list and gets the correct city based on ID number
 void NOAAIon::getXMLSetup() const
 {
-    KIO::TransferJob *job = KIO::get(QUrl("http://www.weather.gov/data/current_obs/index.xml"), KIO::NoReload, KIO::HideProgressInfo);
+    const QUrl url(QStringLiteral("http://www.weather.gov/data/current_obs/index.xml"));
 
-    if (job) {
-        connect(job, &KIO::TransferJob::data, this,
-                &NOAAIon::setup_slotDataArrived);
-        connect(job, &KJob::result, this, &NOAAIon::setup_slotJobFinished);
-    } else {
-        qDebug() << "Could not create place name list transfer job";
-    }
+    KIO::TransferJob* getJob = KIO::get(url, KIO::NoReload, KIO::HideProgressInfo);
+
+    connect(getJob, &KIO::TransferJob::data,
+            this, &NOAAIon::setup_slotDataArrived);
+    connect(getJob, &KJob::result,
+            this, &NOAAIon::setup_slotJobFinished);
 }
 
 // Gets specific city XML data
@@ -187,7 +186,7 @@ void NOAAIon::getXMLData(const QString& source)
 
     QString dataKey = source;
     dataKey.remove(QStringLiteral("noaa|weather|"));
-    QUrl url = m_places[dataKey].XMLurl;
+    const QUrl url = m_places[dataKey].XMLurl;
 
     // If this is empty we have no valid data, send out an error and abort.
     if (url.url().isEmpty()) {
@@ -195,15 +194,14 @@ void NOAAIon::getXMLData(const QString& source)
         return;
     }
 
-    KIO::TransferJob * const m_job = KIO::get(url.url(), KIO::Reload, KIO::HideProgressInfo);
-    m_jobXml.insert(m_job, new QXmlStreamReader);
-    m_jobList.insert(m_job, source);
+    KIO::TransferJob* getJob = KIO::get(url, KIO::Reload, KIO::HideProgressInfo);
+    m_jobXml.insert(getJob, new QXmlStreamReader);
+    m_jobList.insert(getJob, source);
 
-    if (m_job) {
-        connect(m_job, &KIO::TransferJob::data, this,
-                &NOAAIon::slotDataArrived);
-        connect(m_job, &KJob::result, this, &NOAAIon::slotJobFinished);
-    }
+    connect(getJob, &KIO::TransferJob::data,
+            this, &NOAAIon::slotDataArrived);
+    connect(getJob, &KJob::result,
+            this, &NOAAIon::slotJobFinished);
 }
 
 void NOAAIon::setup_slotDataArrived(KIO::Job *job, const QByteArray &data)
@@ -837,19 +835,19 @@ void NOAAIon::getForecast(const QString& source)
     /* Assuming that we have the latitude and longitude data at this point, get the 7-day
      * forecast.
      */
-    QUrl url = QStringLiteral("http://www.weather.gov/forecasts/xml/sample_products/browser_interface/"
-                       "ndfdBrowserClientByDay.php?lat=%1&lon=%2&format=24+hourly&numDays=7")
-                        .arg(latitude(source)).arg(longitude(source));
+    const QUrl url(QLatin1String("http://www.weather.gov/forecasts/xml/sample_products/browser_interface/"
+                                 "ndfdBrowserClientByDay.php?lat=") + latitude(source) +
+                                 QLatin1String("&lon=") + longitude(source) +
+                                 QLatin1String("&format=24+hourly&numDays=7"));
 
-    KIO::TransferJob * const m_job = KIO::get(url, KIO::Reload, KIO::HideProgressInfo);
-    m_jobXml.insert(m_job, new QXmlStreamReader);
-    m_jobList.insert(m_job, source);
+    KIO::TransferJob* getJob = KIO::get(url, KIO::Reload, KIO::HideProgressInfo);
+    m_jobXml.insert(getJob, new QXmlStreamReader);
+    m_jobList.insert(getJob, source);
 
-    if (m_job) {
-        connect(m_job, &KIO::TransferJob::data, this,
-                &NOAAIon::forecast_slotDataArrived);
-        connect(m_job, &KJob::result, this, &NOAAIon::forecast_slotJobFinished);
-    }
+    connect(getJob, &KIO::TransferJob::data,
+            this, &NOAAIon::forecast_slotDataArrived);
+    connect(getJob, &KJob::result,
+            this, &NOAAIon::forecast_slotJobFinished);
 }
 
 void NOAAIon::forecast_slotDataArrived(KIO::Job *job, const QByteArray &data)

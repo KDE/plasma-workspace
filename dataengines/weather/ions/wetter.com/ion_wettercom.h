@@ -162,7 +162,6 @@ private:
     QHash<KJob *, QXmlStreamReader *> m_forecastJobXml;
     QHash<KJob *, QString> m_forecastJobList;
 
-    KIO::TransferJob *m_job;
     QStringList m_sourcesToReset;
 };
 

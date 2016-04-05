@@ -246,44 +246,41 @@ void UKMETIon::getXMLData(const QString& source)
         }
     }
 
-    QUrl url;
-    url = m_place[source].XMLurl;
+    const QUrl url = m_place[source].XMLurl;
 
-    m_job = KIO::get(url.url(), KIO::Reload, KIO::HideProgressInfo);
-    m_job->addMetaData("cookies", "none"); // Disable displaying cookies
-    m_obsJobXml.insert(m_job, new QXmlStreamReader);
-    m_obsJobList.insert(m_job, source);
+    KIO::TransferJob* getJob = KIO::get(url, KIO::Reload, KIO::HideProgressInfo);
+    getJob->addMetaData(QStringLiteral("cookies"), QStringLiteral("none")); // Disable displaying cookies
+    m_obsJobXml.insert(getJob, new QXmlStreamReader);
+    m_obsJobList.insert(getJob, source);
 
-    if (m_job) {
-        connect(m_job, SIGNAL(data(KIO::Job*,QByteArray)), this,
-                SLOT(observation_slotDataArrived(KIO::Job*,QByteArray)));
-        connect(m_job, SIGNAL(result(KJob*)), this, SLOT(observation_slotJobFinished(KJob*)));
-    }
+    connect(getJob, &KIO::TransferJob::data,
+            this, &UKMETIon::observation_slotDataArrived);
+    connect(getJob, &KJob::result,
+            this, &UKMETIon::observation_slotJobFinished);
 }
 
 // Parses city list and gets the correct city based on ID number
 void UKMETIon::findPlace(const QString& place, const QString& source)
 {
-    QUrl url;
     /* There's a page= parameter, results are limited to 10 by page */
-    url = "http://www.bbc.com/locator/default/en-GB/search.json?search="+place+"&filter=international&postcode_unit=false&postcode_district=true";
+    const QUrl url(QLatin1String("http://www.bbc.com/locator/default/en-GB/search.json?search=")+place+
+                   QLatin1String("&filter=international&postcode_unit=false&postcode_district=true"));
 
-    m_job = KIO::get(url.url(), KIO::Reload, KIO::HideProgressInfo);
-    m_job->addMetaData("cookies", "none"); // Disable displaying cookies
-    m_jobHtml.insert(m_job, new QByteArray());
-    m_jobList.insert(m_job, source);
+    KIO::TransferJob* getJob = KIO::get(url, KIO::Reload, KIO::HideProgressInfo);
+    getJob->addMetaData(QStringLiteral("cookies"), QStringLiteral("none")); // Disable displaying cookies
+    m_jobHtml.insert(getJob, new QByteArray());
+    m_jobList.insert(getJob, source);
 
-    if (m_job) {
-        connect(m_job, SIGNAL(data(KIO::Job*,QByteArray)), this,
-                SLOT(setup_slotDataArrived(KIO::Job*,QByteArray)));
-        connect(m_job, SIGNAL(result(KJob*)), this, SLOT(setup_slotJobFinished(KJob*)));
+    connect(getJob, &KIO::TransferJob::data,
+            this, &UKMETIon::setup_slotDataArrived);
+    connect(getJob, &KJob::result,
+            this, &UKMETIon::setup_slotJobFinished);
 
 /*
-        // Handle redirects for direct hit places.
-        connect(m_job, SIGNAL(redirection(KIO::Job*,KUrl)), this,
-                SLOT(setup_slotRedirected(KIO::Job*,KUrl)));
+    // Handle redirects for direct hit places.
+    connect(getJob, SIGNAL(redirection(KIO::Job*,KUrl)),
+            this, SLOT(setup_slotRedirected(KIO::Job*,KUrl)));
 */
-    }
 }
 
 void UKMETIon::getFiveDayForecast(const QString& source)
@@ -296,18 +293,18 @@ void UKMETIon::getFiveDayForecast(const QString& source)
     int splitIDPos = xmlPath.lastIndexOf('/');
     QString stationID = xmlPath.midRef(splitIDPos + 1).toString();
     m_place[source].XMLforecastURL = "http://open.live.bbc.co.uk/weather/feeds/en/" + stationID + "/3dayforecast.rss" + xmlMap.query();
-    QUrl url(m_place[source].XMLforecastURL);
 
-    m_job = KIO::get(url.url(), KIO::Reload, KIO::HideProgressInfo);
-    m_job->addMetaData("cookies", "none"); // Disable displaying cookies
-    m_forecastJobXml.insert(m_job, new QXmlStreamReader);
-    m_forecastJobList.insert(m_job, source);
+    const QUrl url(m_place[source].XMLforecastURL);
 
-    if (m_job) {
-        connect(m_job, SIGNAL(data(KIO::Job*,QByteArray)), this,
-                SLOT(forecast_slotDataArrived(KIO::Job*,QByteArray)));
-        connect(m_job, SIGNAL(result(KJob*)), this, SLOT(forecast_slotJobFinished(KJob*)));
-    }
+    KIO::TransferJob* getJob = KIO::get(url, KIO::Reload, KIO::HideProgressInfo);
+    getJob->addMetaData(QStringLiteral("cookies"), QStringLiteral("none")); // Disable displaying cookies
+    m_forecastJobXml.insert(getJob, new QXmlStreamReader);
+    m_forecastJobList.insert(getJob, source);
+
+    connect(getJob, &KIO::TransferJob::data,
+            this, &UKMETIon::forecast_slotDataArrived);
+    connect(getJob, &KJob::result,
+            this, &UKMETIon::forecast_slotJobFinished);
 }
 
 void UKMETIon::readSearchHTMLData(const QString& source, const QByteArray& html)

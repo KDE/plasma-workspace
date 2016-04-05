@@ -493,12 +493,15 @@ void EnvCanadaIon::getXMLSetup()
 
     // If network is down, we need to spin and wait
 
-    KIO::TransferJob *job = KIO::get(QUrl("http://dd.weatheroffice.ec.gc.ca/citypage_weather/xml/siteList.xml"), KIO::NoReload, KIO::HideProgressInfo);
+    const QUrl url(QStringLiteral("http://dd.weatheroffice.ec.gc.ca/citypage_weather/xml/siteList.xml"));
+
+    KIO::TransferJob* getJob = KIO::get(url, KIO::NoReload, KIO::HideProgressInfo);
 
     m_xmlSetup.clear();
-    connect(job, SIGNAL(data(KIO::Job*,QByteArray)), this,
-            SLOT(setup_slotDataArrived(KIO::Job*,QByteArray)));
-    connect(job, SIGNAL(result(KJob*)), this, SLOT(setup_slotJobFinished(KJob*)));
+    connect(getJob, &KIO::TransferJob::data,
+            this, &EnvCanadaIon::setup_slotDataArrived);
+    connect(getJob, &KJob::result,
+            this, &EnvCanadaIon::setup_slotJobFinished);
 }
 
 // Gets specific city XML data
@@ -517,7 +520,7 @@ void EnvCanadaIon::getXMLData(const QString& source)
     QString dataKey = source;
     dataKey.remove("envcan|weather|");
 
-    QUrl url = QString("http://dd.weatheroffice.ec.gc.ca/citypage_weather/xml/" + m_places[dataKey].territoryName + "/" + m_places[dataKey].cityCode + "_e.xml");
+    const QUrl url(QLatin1String("http://dd.weatheroffice.ec.gc.ca/citypage_weather/xml/") + m_places[dataKey].territoryName + QLatin1Char('/') + m_places[dataKey].cityCode + QLatin1String("_e.xml"));
     //url="file:///home/spstarr/Desktop/s0000649_e.xml";
     //qDebug() << "Will Try URL: " << url;
 
@@ -526,14 +529,15 @@ void EnvCanadaIon::getXMLData(const QString& source)
         return;
     }
 
-    KIO::TransferJob* const newJob  = KIO::get(url.url(), KIO::Reload, KIO::HideProgressInfo);
+    KIO::TransferJob* getJob  = KIO::get(url, KIO::Reload, KIO::HideProgressInfo);
 
-    m_jobXml.insert(newJob, new QXmlStreamReader);
-    m_jobList.insert(newJob, source);
+    m_jobXml.insert(getJob, new QXmlStreamReader);
+    m_jobList.insert(getJob, source);
 
-    connect(newJob, SIGNAL(data(KIO::Job*,QByteArray)), this,
-            SLOT(slotDataArrived(KIO::Job*,QByteArray)));
-    connect(newJob, SIGNAL(result(KJob*)), this, SLOT(slotJobFinished(KJob*)));
+    connect(getJob, &KIO::TransferJob::data,
+            this, &EnvCanadaIon::slotDataArrived);
+    connect(getJob, &KJob::result,
+            this, &EnvCanadaIon::slotJobFinished);
 }
 
 void EnvCanadaIon::setup_slotDataArrived(KIO::Job *job, const QByteArray &data)

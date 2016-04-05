@@ -316,19 +316,17 @@ void WetterComIon::findPlace(const QString& place, const QString& source)
     md5.addData(QString::fromLatin1(APIKEY).toUtf8());
     md5.addData(place.toUtf8());
 
-    QUrl url = QString::fromLatin1(SEARCH_URL).arg(place).arg(md5.result().toHex().data());
+    const QUrl url = QString::fromLatin1(SEARCH_URL).arg(place).arg(md5.result().toHex().data());
 
-    m_job = KIO::get(url.url(), KIO::Reload, KIO::HideProgressInfo);
-    m_job->addMetaData("cookies", "none");    // Disable displaying cookies
-    m_searchJobXml.insert(m_job, new QXmlStreamReader);
-    m_searchJobList.insert(m_job, source);
+    KIO::TransferJob* getJob = KIO::get(url, KIO::Reload, KIO::HideProgressInfo);
+    getJob->addMetaData(QStringLiteral("cookies"), QStringLiteral("none")); // Disable displaying cookies
+    m_searchJobXml.insert(getJob, new QXmlStreamReader);
+    m_searchJobList.insert(getJob, source);
 
-    if (m_job) {
-        connect(m_job, SIGNAL(data(KIO::Job*,QByteArray)), this,
-                SLOT(setup_slotDataArrived(KIO::Job*,QByteArray)));
-        connect(m_job, SIGNAL(result(KJob*)), this,
-                SLOT(setup_slotJobFinished(KJob*)));
-    }
+    connect(getJob, &KIO::TransferJob::data,
+            this, &WetterComIon::setup_slotDataArrived);
+    connect(getJob, &KJob::result,
+            this, &WetterComIon::setup_slotJobFinished);
 }
 
 void WetterComIon::setup_slotDataArrived(KIO::Job *job, const QByteArray &data)
@@ -489,20 +487,18 @@ void WetterComIon::fetchForecast(const QString& source)
     md5.addData(QString::fromLatin1(APIKEY).toUtf8());
     md5.addData(m_place[source].placeCode.toUtf8());
 
-    QUrl url = QString::fromLatin1(FORECAST_URL)
-               .arg(m_place[source].placeCode).arg(md5.result().toHex().data());
+    const QUrl url = QString::fromLatin1(FORECAST_URL)
+                    .arg(m_place[source].placeCode).arg(md5.result().toHex().data());
 
-    m_job = KIO::get(url.url(), KIO::Reload, KIO::HideProgressInfo);
-    m_job->addMetaData("cookies", "none");
-    m_forecastJobXml.insert(m_job, new QXmlStreamReader);
-    m_forecastJobList.insert(m_job, source);
+    KIO::TransferJob* getJob = KIO::get(url, KIO::Reload, KIO::HideProgressInfo);
+    getJob->addMetaData(QStringLiteral("cookies"), QStringLiteral("none"));
+    m_forecastJobXml.insert(getJob, new QXmlStreamReader);
+    m_forecastJobList.insert(getJob, source);
 
-    if (m_job) {
-        connect(m_job, SIGNAL(data(KIO::Job*,QByteArray)), this,
-                SLOT(forecast_slotDataArrived(KIO::Job*,QByteArray)));
-        connect(m_job, SIGNAL(result(KJob*)), this,
-                SLOT(forecast_slotJobFinished(KJob*)));
-    }
+    connect(getJob, &KIO::TransferJob::data,
+            this, &WetterComIon::forecast_slotDataArrived);
+    connect(getJob, &KJob::result,
+            this, &WetterComIon::forecast_slotJobFinished);
 }
 
 void WetterComIon::forecast_slotDataArrived(KIO::Job *job, const QByteArray &data)
