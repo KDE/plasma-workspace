@@ -56,7 +56,7 @@ Plasma::DataEngine *WeatherEngine::loadIon(const QString& plugName)
 {
     KPluginInfo foundPlugin;
 
-    foreach(const KPluginInfo &info, Plasma::PluginLoader::self()->listEngineInfo("weatherengine")) {
+    foreach(const KPluginInfo &info, Plasma::PluginLoader::self()->listEngineInfo(QLatin1String("weatherengine"))) {
         if (info.pluginName() == plugName) {
             foundPlugin = info;
             break;
@@ -97,11 +97,11 @@ void WeatherEngine::init()
 
 void WeatherEngine::updateIonList(const QStringList &changedResources)
 {
-    if (changedResources.isEmpty() || changedResources.contains("services")) {
-        removeAllData("ions");
-        foreach (const KPluginInfo &info, Plasma::PluginLoader::self()->listEngineInfo("weatherengine")) {
-            setData("ions", info.pluginName(),
-                    QString("%1|%2").arg(info.property("Name").toString()).arg(info.pluginName()));
+    if (changedResources.isEmpty() || changedResources.contains(QStringLiteral("services"))) {
+        removeAllData(QStringLiteral("ions"));
+        foreach (const KPluginInfo &info, Plasma::PluginLoader::self()->listEngineInfo(QLatin1String("weatherengine"))) {
+            const QString data = info.property(QStringLiteral("Name")).toString() + QLatin1Char('|') + info.pluginName();
+            setData(QStringLiteral("ions"), info.pluginName(), data);
         }
     }
 }
@@ -225,7 +225,7 @@ void WeatherEngine::forceUpdate(IonInterface *i, const QString &source)
 
 IonInterface* WeatherEngine::ionForSource(const QString& name)
 {
-    int offset = name.indexOf('|');
+    const int offset = name.indexOf(QLatin1Char('|'));
 
     if (offset < 1) {
         return nullptr;
@@ -237,7 +237,8 @@ IonInterface* WeatherEngine::ionForSource(const QString& name)
 
 QString WeatherEngine::ionNameForSource(const QString& source) const
 {
-    int offset = source.indexOf('|');
+    const int offset = source.indexOf(QLatin1Char('|'));
+
     if (offset < 1) {
         return QString();
     }
