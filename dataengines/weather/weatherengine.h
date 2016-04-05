@@ -68,9 +68,6 @@ public:
     // Destructor
     ~WeatherEngine() override;
 
-    // initialization
-    void init();
-
     /**
      * Load a plugin
      * @arg pluginName Name of the plugin

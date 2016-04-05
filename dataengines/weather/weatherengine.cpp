@@ -41,7 +41,17 @@ WeatherEngine::WeatherEngine(QObject *parent, const QVariantList& args)
 
     // Globally notify all plugins to remove their sources (and unload plugin)
     connect(this, SIGNAL(sourceRemoved(QString)), this, SLOT(removeIonSource(QString)));
-    init();
+
+    // Get the list of available plugins but don't load them
+    QNetworkAccessManager::NetworkAccessibility status = m_networkAccessManager->networkAccessible();
+    m_networkAvailable = (status == QNetworkAccessManager::Accessible ||
+                             status == QNetworkAccessManager::UnknownAccessibility);
+    connect(m_networkAccessManager, SIGNAL(networkAccessibleChanged(QNetworkAccessManager::NetworkAccessibility)),
+            this, SLOT(networkStatusChanged(QNetworkAccessManager::NetworkAccessibility)));
+
+    connect(KSycoca::self(), SIGNAL(databaseChanged(QStringList)), this, SLOT(updateIonList()));
+
+    updateIonList();
 }
 
 // Destructor
@@ -79,21 +89,6 @@ Plasma::DataEngine *WeatherEngine::loadIon(const QString& plugName)
 }
 
 /* FIXME: Q_PROPERTY functions to update the list of available plugins */
-
-void WeatherEngine::init()
-{
-    // Get the list of available plugins but don't load them
-    QNetworkAccessManager::NetworkAccessibility status = m_networkAccessManager->networkAccessible();
-    m_networkAvailable = (status == QNetworkAccessManager::Accessible ||
-                             status == QNetworkAccessManager::UnknownAccessibility);
-    connect(m_networkAccessManager, SIGNAL(networkAccessibleChanged(QNetworkAccessManager::NetworkAccessibility)),
-            this, SLOT(networkStatusChanged(QNetworkAccessManager::NetworkAccessibility)));
-
-    connect(KSycoca::self(), SIGNAL(databaseChanged(QStringList)), this, SLOT(updateIonList()));
-
-    updateIonList();
-    qDebug() << "init()";
-}
 
 void WeatherEngine::updateIonList(const QStringList &changedResources)
 {
