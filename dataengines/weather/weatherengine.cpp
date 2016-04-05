@@ -131,7 +131,7 @@ void WeatherEngine::removeIonSource(const QString& source)
 /**
  * SLOT: Push out new data to applet
  */
-void WeatherEngine::dataUpdated(const QString& source, Plasma::DataEngine::Data data)
+void WeatherEngine::dataUpdated(const QString& source, const Plasma::DataEngine::Data& data)
 {
     qDebug() << "dataUpdated()";
     setData(source, data);

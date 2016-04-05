@@ -85,7 +85,7 @@ protected Q_SLOTS: // expected DataEngine class method
      * @param source The datasource to be updated.
      * @param data The new data updated.
      */
-    void dataUpdated(const QString& source, Plasma::DataEngine::Data data);
+    void dataUpdated(const QString& source, const Plasma::DataEngine::Data& data);
 
 private Q_SLOTS:
     void forceUpdate(IonInterface *ion, const QString &source);
