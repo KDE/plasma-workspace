@@ -20,10 +20,9 @@
 
 #include "weatherengine.h"
 
-#include <QCoreApplication>
 #include <QTimer>
-
 #include <QDebug>
+
 #include <KSycoca>
 
 #include <Plasma/DataContainer>
@@ -37,21 +36,17 @@ WeatherEngine::WeatherEngine(QObject *parent, const QVariantList& args)
            m_networkAvailable(false),
            m_networkAccessManager(new QNetworkAccessManager(this))
 {
-    Q_UNUSED(args)
-
     m_reconnectTimer.setSingleShot(true);
     connect(&m_reconnectTimer, SIGNAL(timeout()), this, SLOT(startReconnect()));
 
     // Globally notify all plugins to remove their sources (and unload plugin)
     connect(this, SIGNAL(sourceRemoved(QString)), this, SLOT(removeIonSource(QString)));
-    init();qWarning()<<"RRRR"<<(long)this;
-    
+    init();
 }
 
 // Destructor
 WeatherEngine::~WeatherEngine()
 {
-    qWarning()<<"XXXX"<<(long)this;
 }
 
 /**
@@ -219,7 +214,6 @@ void WeatherEngine::startReconnect()
 
 void WeatherEngine::forceUpdate(IonInterface *i, const QString &source)
 {
-    const QString actualSource(i->pluginInfo().pluginName() + '|' + source);
     Plasma::DataContainer *container = containerForSource(source);
     if (container) {
         qDebug() << "immediate update of" << source;
@@ -248,7 +242,7 @@ QString WeatherEngine::ionNameForSource(const QString& source) const
         return QString();
     }
 
-    return QString(source.left(offset));
+    return source.left(offset);
 }
 
 K_EXPORT_PLASMA_DATAENGINE_WITH_JSON(weather, WeatherEngine, "plasma-dataengine-weather.json")
