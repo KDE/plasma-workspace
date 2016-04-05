@@ -231,6 +231,9 @@ void ShellManager::updateShell()
         d->currentHandler->setProperty("loaded", false);
     }
 
+    // handler will never be null, unless there is no shells
+    // available on the system, which is definitely not something
+    // we want to support :)
     d->currentHandler = handler;
     d->currentHandler->setProperty("loaded", true);
 
