@@ -66,8 +66,11 @@ QMap<QString, IonInterface::WindDirections> const& NOAAIon::windIcons() const
 NOAAIon::NOAAIon(QObject *parent, const QVariantList &args)
         : IonInterface(parent, args)
 {
-    Q_UNUSED(args)
-    init();
+    // Get the real city XML URL so we can parse this
+    getXMLSetup();
+
+    // not used while daytime not considered, see below
+    // m_timeEngine = dataEngine(QStringLiteral("time"));
 }
 
 void NOAAIon::reset()
@@ -80,15 +83,6 @@ NOAAIon::~NOAAIon()
 {
     //seems necessary to avoid crash
     removeAllSources();
-}
-
-// Get the master list of locations to be parsed
-void NOAAIon::init()
-{
-    // Get the real city XML URL so we can parse this
-    getXMLSetup();
-
-    m_timeEngine = dataEngine(QStringLiteral("time"));
 }
 
 QStringList NOAAIon::validate(const QString& source) const

@@ -104,7 +104,6 @@ private Q_SLOTS:
     void forecast_slotJobFinished(KJob *);
 
 private:
-    void init();  // Setup the city location, fetching the correct URL name.
     void updateWeather(const QString& source);
 
     /* NOAA Methods - Internal for Ion */

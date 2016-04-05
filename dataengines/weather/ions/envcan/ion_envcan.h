@@ -155,7 +155,6 @@ private Q_SLOTS:
     void slotJobFinished(KJob *);
 
 private:
-    void init();  // Setup the city location, fetching the correct URL name.
     void updateWeather(const QString& source);
 
     /* Environment Canada Methods - Internal for Ion */

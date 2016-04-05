@@ -30,7 +30,10 @@
 EnvCanadaIon::EnvCanadaIon(QObject *parent, const QVariantList &args)
         : IonInterface(parent, args)
 {
-    init();
+    // Get the real city XML URL so we can parse this
+    getXMLSetup();
+    // not used while daytime not considered, see below
+    // m_timeEngine = dataEngine("time");
 }
 
 void EnvCanadaIon::deleteForecasts()
@@ -62,14 +65,6 @@ EnvCanadaIon::~EnvCanadaIon()
 {
     // Destroy each watch/warning stored in a QVector
     deleteForecasts();
-}
-
-// Get the master list of locations to be parsed
-void EnvCanadaIon::init()
-{
-    // Get the real city XML URL so we can parse this
-    getXMLSetup();
-    m_timeEngine = dataEngine("time");
 }
 
 QMap<QString, IonInterface::ConditionIcons> EnvCanadaIon::setupConditionIconMappings() const

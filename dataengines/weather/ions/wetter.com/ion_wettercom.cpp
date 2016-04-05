@@ -45,12 +45,10 @@ WetterComIon::WetterComIon(QObject *parent, const QVariantList &args)
         : IonInterface(parent, args)
 
 {
-    Q_UNUSED(args)
-
 #if defined(MIN_POLL_INTERVAL)
     setMinimumPollingInterval(MIN_POLL_INTERVAL);
 #endif
-    init();
+    setInitialized(true);
 }
 
 WetterComIon::~WetterComIon()
@@ -75,11 +73,6 @@ void WetterComIon::reset()
     cleanup();
     m_sourcesToReset = sources();
     updateAllSources();
-}
-
-void WetterComIon::init()
-{
-    setInitialized(true);
 }
 
 QMap<QString, IonInterface::ConditionIcons> WetterComIon::setupCommonIconMappings() const

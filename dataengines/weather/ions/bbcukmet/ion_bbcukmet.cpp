@@ -40,8 +40,9 @@ UKMETIon::UKMETIon(QObject *parent, const QVariantList &args)
         : IonInterface(parent, args)
 
 {
-    Q_UNUSED(args)
-    init();
+    // not used while daytime not considered, see below
+    // m_timeEngine = dataEngine("time");
+    setInitialized(true);
 }
 
 UKMETIon::~UKMETIon()
@@ -69,12 +70,6 @@ void UKMETIon::deleteForecasts()
 }
 
 
-// Get the master list of locations to be parsed
-void UKMETIon::init()
-{
-    m_timeEngine = dataEngine("time");
-    setInitialized(true);
-}
 
 QMap<QString, IonInterface::ConditionIcons> UKMETIon::setupDayIconMappings() const
 {

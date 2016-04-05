@@ -116,7 +116,6 @@ private Q_SLOTS:
     void forecast_slotJobFinished(KJob *);
 
 private:
-    void init();
     void cleanup();
 
     // Set up the mapping from the wetter.com condition code to the respective icon / condition name
