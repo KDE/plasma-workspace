@@ -102,14 +102,16 @@ public:
     WetterComIon(QObject *parent, const QVariantList &args);
     ~WetterComIon() override;
 
+public: // IonInterface API
     bool updateIonSource(const QString& source) override;
 
-public Q_SLOTS:
+protected: // IonInterface API
     void reset() override;
 
-protected Q_SLOTS:
+private Q_SLOTS:
     void setup_slotDataArrived(KIO::Job *, const QByteArray &);
     void setup_slotJobFinished(KJob *);
+
     void forecast_slotDataArrived(KIO::Job *, const QByteArray &);
     void forecast_slotJobFinished(KJob *);
 
@@ -143,6 +145,7 @@ private:
     void parseWeatherForecast(const QString& source, QXmlStreamReader& xml);
     void updateWeather(const QString& source, bool parseError);
 
+private:
     struct PlaceInfo {
         QString name;
         QString displayName;

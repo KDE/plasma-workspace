@@ -86,14 +86,14 @@ class Q_DECL_EXPORT NOAAIon : public IonInterface, public Plasma::DataEngineCons
 public:
     NOAAIon(QObject *parent, const QVariantList &args);
     ~NOAAIon() override;
-    void init();  // Setup the city location, fetching the correct URL name.
-    bool updateIonSource(const QString& source) override; // Sync data source with Applet
-    void updateWeather(const QString& source);
 
-public Q_SLOTS:
+public: // IonInterface API
+    bool updateIonSource(const QString& source) override;
+
+protected: // IonInterface API
     void reset() override;
 
-protected Q_SLOTS:
+private Q_SLOTS:
     void setup_slotDataArrived(KIO::Job *, const QByteArray &);
     void setup_slotJobFinished(KJob *);
 
@@ -104,6 +104,9 @@ protected Q_SLOTS:
     void forecast_slotJobFinished(KJob *);
 
 private:
+    void init();  // Setup the city location, fetching the correct URL name.
+    void updateWeather(const QString& source);
+
     /* NOAA Methods - Internal for Ion */
     QMap<QString, ConditionIcons> setupConditionIconMappings() const;
     QMap<QString, ConditionIcons> const & conditionIcons() const;
@@ -154,6 +157,7 @@ private:
     void parseStationID();
     void parseStationList();
 
+private:
     struct XMLMapInfo {
         QString stateName;
         QString stationName;

@@ -84,9 +84,27 @@ class Q_DECL_EXPORT UKMETIon : public IonInterface, public Plasma::DataEngineCon
 
 public:
     UKMETIon(QObject *parent, const QVariantList &args);
-    ~UKMETIon();
+    ~UKMETIon() override;
+
+public: // IonInterface API
+    bool updateIonSource(const QString& source) override;
+
+protected: // IonInterface API
+    void reset() override;
+
+private Q_SLOTS:
+    void setup_slotDataArrived(KIO::Job *, const QByteArray &);
+    void setup_slotJobFinished(KJob *);
+    //void setup_slotRedirected(KIO::Job *, const KUrl &url);
+
+    void observation_slotDataArrived(KIO::Job *, const QByteArray &);
+    void observation_slotJobFinished(KJob *);
+
+    void forecast_slotDataArrived(KIO::Job *, const QByteArray &);
+    void forecast_slotJobFinished(KJob *);
+
+private:
     void init();  // Setup the city location, fetching the correct URL name.
-    bool updateIonSource(const QString& source);
     void updateWeather(const QString& source);
 
     QString place(const QString& source) const;
@@ -105,21 +123,7 @@ public:
     QMap<QString, QString> pressure(const QString& source) const;
     QVector<QString> forecasts(const QString& source);
 
-public Q_SLOTS:
-    virtual void reset();
-
-protected Q_SLOTS:
-    void setup_slotDataArrived(KIO::Job *, const QByteArray &);
-    void setup_slotJobFinished(KJob *);
-    //void setup_slotRedirected(KIO::Job *, const KUrl &url);
-    void observation_slotDataArrived(KIO::Job *, const QByteArray &);
-    void observation_slotJobFinished(KJob *);
-    void forecast_slotDataArrived(KIO::Job *, const QByteArray &);
-    void forecast_slotJobFinished(KJob *);
-
-private:
     /* UKMET Methods - Internal for Ion */
-
     QMap<QString, ConditionIcons> setupDayIconMappings() const;
     QMap<QString, ConditionIcons> setupNightIconMappings() const;
 
@@ -147,6 +151,7 @@ private:
 
     void deleteForecasts();
 
+private:
     struct XMLMapInfo {
         QString place;
         QString XMLurl;

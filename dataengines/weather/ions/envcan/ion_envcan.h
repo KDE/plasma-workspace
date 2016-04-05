@@ -140,16 +140,14 @@ class Q_DECL_EXPORT EnvCanadaIon : public IonInterface, public Plasma::DataEngin
 public:
     EnvCanadaIon(QObject *parent, const QVariantList &args);
     ~EnvCanadaIon() override;
-    bool updateIonSource(const QString& source) override; // Sync data source with Applet
-    void updateWeather(const QString& source);
 
-public Q_SLOTS:
+public: // IonInterface API
+    bool updateIonSource(const QString& source) override;
+
+protected: // IonInterface API
     void reset() override;
 
-protected:
-    void init();  // Setup the city location, fetching the correct URL name.
-
-protected Q_SLOTS:
+private Q_SLOTS:
     void setup_slotDataArrived(KIO::Job *, const QByteArray &);
     void setup_slotJobFinished(KJob *);
 
@@ -157,6 +155,9 @@ protected Q_SLOTS:
     void slotJobFinished(KJob *);
 
 private:
+    void init();  // Setup the city location, fetching the correct URL name.
+    void updateWeather(const QString& source);
+
     /* Environment Canada Methods - Internal for Ion */
     void deleteForecasts();
 
@@ -230,6 +231,7 @@ private:
     void parseAstronomicals(WeatherData& data, QXmlStreamReader& xml);
     void parseWeatherRecords(WeatherData& data, QXmlStreamReader& xml);
 
+private:
     struct XMLMapInfo {
         QString cityName;
         QString territoryName;
