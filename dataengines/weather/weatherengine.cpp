@@ -91,7 +91,7 @@ void WeatherEngine::init()
     QNetworkAccessManager::NetworkAccessibility status = m_networkAccessManager->networkAccessible();
     m_networkAvailable = (status == QNetworkAccessManager::Accessible ||
                              status == QNetworkAccessManager::UnknownAccessibility);
-    connect(m_networkAccessManager, SIGNAL(networkAccessibleChanged(QNetworkAccessManager::NetworkAccessibility )),
+    connect(m_networkAccessManager, SIGNAL(networkAccessibleChanged(QNetworkAccessManager::NetworkAccessibility)),
             this, SLOT(networkStatusChanged(QNetworkAccessManager::NetworkAccessibility)));
 
     connect(KSycoca::self(), SIGNAL(databaseChanged(QStringList)), this, SLOT(updateIonList()));
