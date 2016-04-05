@@ -6,7 +6,7 @@ function(plasmoidtest plasmoidName)
     )
 
     add_test(NAME ${plasmoidName}-test COMMAND
-            plasmashell --shell-plugin org.kde.plasmashelltest --test ${CMAKE_CURRENT_BINARY_DIR}/testLayout-plasmoidName.js
+            plasmashell --test ${CMAKE_CURRENT_BINARY_DIR}/testLayout-plasmoidName.js
     )
 endfunction()
 
