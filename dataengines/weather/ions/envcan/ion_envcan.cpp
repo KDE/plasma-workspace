@@ -1366,8 +1366,8 @@ void EnvCanadaIon::updateWeather(const QString& source)
 
 //TODO: Port to Plasma5
 #if 0
-    const double lati = latitude(source).replace(QRegExp("[^0-9.]"), NULL).toDouble();
-    const double longi = longitude(source).replace(QRegExp("[^0-9.]"), NULL).toDouble();
+    const double lati = latitude(source).remove(QRegExp("[^0-9.]")).toDouble();
+    const double longi = longitude(source).remove(QRegExp("[^0-9.]")).toDouble();
     const Plasma::DataEngine::Data timeData = m_timeEngine->query(
             QString("Local|Solar|Latitude=%1|Longitude=%2")
                 .arg(lati).arg(-1 * longi));

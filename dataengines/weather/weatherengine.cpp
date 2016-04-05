@@ -69,7 +69,7 @@ Plasma::DataEngine *WeatherEngine::loadIon(const QString& plugName)
     }
 
     if (!foundPlugin.isValid()) {
-        return NULL;
+        return nullptr;
     }
 
     // Load the Ion plugin, store it into a QMap to handle multiple ions.
@@ -234,7 +234,7 @@ IonInterface* WeatherEngine::ionForSource(const QString& name)
     int offset = name.indexOf('|');
 
     if (offset < 1) {
-        return NULL;
+        return nullptr;
     }
 
     QString ionName = name.left(offset);
