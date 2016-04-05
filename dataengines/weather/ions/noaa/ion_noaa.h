@@ -22,8 +22,11 @@
 #ifndef ION_NOAA_H
 #define ION_NOAA_H
 
+#include "../ion.h"
+
+#include <Plasma/DataEngineConsumer>
+
 #include <QXmlStreamReader>
-#include <QStringList>
 #include <QDateTime>
 
 class KJob;
@@ -32,10 +35,6 @@ namespace KIO
     class Job;
 } // namespace KIO
 
-#include <Plasma/DataEngine>
-#include <Plasma/DataEngineConsumer>
-
-#include "../ion.h"
 
 class WeatherData
 {

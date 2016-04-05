@@ -22,11 +22,11 @@
 #include "ion_noaa.h"
 
 #include <KIO/Job>
-#include <KLocalizedString>
-#include <QDebug>
 #include <KUnitConversion/Converter>
+#include <KLocalizedString>
 
 #include <QLocale>
+#include <QDebug>
 
 QMap<QString, IonInterface::WindDirections> NOAAIon::setupWindIconMappings() const
 {

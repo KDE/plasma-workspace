@@ -25,6 +25,7 @@
 #include <KUnitConversion/Converter>
 #include <KLocalizedString>
 
+#include <QXmlStreamReader>
 #include <QTextStream>
 #include <QDebug>
 

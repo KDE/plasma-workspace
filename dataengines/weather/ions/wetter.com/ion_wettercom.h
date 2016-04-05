@@ -25,15 +25,9 @@
 #ifndef ION_WETTERCOM_H
 #define ION_WETTERCOM_H
 
-#include <QXmlStreamReader>
-#include <QStringList>
-#include <QCryptographicHash>
-#include <algorithm>
-#include <QUrl>
-#include <kio/job.h>
-#include <kio/scheduler.h>
-#include <plasma/dataengine.h>
 #include "../ion.h"
+
+#include <QVector>
 
 // wetter.com API project data
 #define PROJECTNAME "weatherion"
@@ -41,6 +35,14 @@
 #define FORECAST_URL "http://api.wetter.com/forecast/weather/city/%1/project/" PROJECTNAME "/cs/%2"
 #define APIKEY "07025b9a22b4febcf8e8ec3e6f1140e8"
 #define MIN_POLL_INTERVAL 3600000L // 1 h
+
+class KJob;
+namespace KIO
+{
+    class Job;
+    class TransferJob;
+}
+class QXmlStreamReader;
 
 class WeatherData
 {

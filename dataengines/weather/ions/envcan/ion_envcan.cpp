@@ -24,7 +24,6 @@
 #include <KIO/Job>
 #include <KUnitConversion/Converter>
 #include <KLocalizedString>
-#include <Plasma/DataContainer>
 
 
 // ctor, dtor

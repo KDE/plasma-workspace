@@ -22,13 +22,12 @@
 #ifndef ION_ENVCAN_H
 #define ION_ENVCAN_H
 
-#include <QXmlStreamReader>
-#include <QDateTime>
+#include "../ion.h"
 
-#include <Plasma/DataEngine>
 #include <Plasma/DataEngineConsumer>
 
-#include "../ion.h"
+#include <QXmlStreamReader>
+#include <QDateTime>
 
 class KJob;
 namespace KIO

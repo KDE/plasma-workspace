@@ -28,9 +28,12 @@
 
 #include "ion_wettercom.h"
 
+#include <KIO/Job>
 #include <KUnitConversion/Converter>
 #include <KLocalizedString>
 
+#include <QCryptographicHash>
+#include <QXmlStreamReader>
 #include <QLocale>
 #include <QDebug>
 

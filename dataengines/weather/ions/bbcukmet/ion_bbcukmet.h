@@ -22,11 +22,12 @@
 #ifndef ION_BBCUKMET_H
 #define ION_BBCUKMET_H
 
-#include <QXmlStreamReader>
-#include <QDateTime>
+#include "../ion.h"
+
 #include <Plasma/DataEngineConsumer>
 
-#include "../ion.h"
+#include <QDateTime>
+#include <QVector>
 
 #include <climits>
 
@@ -36,6 +37,7 @@ namespace KIO
     class Job;
     class TransferJob;
 }
+class QXmlStreamReader;
 
 class WeatherData
 {

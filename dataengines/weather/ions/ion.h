@@ -20,7 +20,6 @@
 #ifndef ION_H
 #define ION_H
 
-#include <QObject>
 #include <Plasma/DataEngine>
 
 #include "ion_export.h"
