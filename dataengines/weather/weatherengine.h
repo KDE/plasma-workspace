@@ -118,7 +118,7 @@ private:
      * @arg pluginName Name of the plugin
      * @return IonInterface returns an instance of the loaded plugin
      */
-    DataEngine* loadIon(const QString& pluginName);
+    IonInterface* loadIon(const QString& pluginName);
 
     /**
      * Get instance of a loaded ion.

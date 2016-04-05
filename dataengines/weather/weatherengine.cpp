@@ -37,19 +37,20 @@ WeatherEngine::WeatherEngine(QObject *parent, const QVariantList& args)
            m_networkAccessManager(new QNetworkAccessManager(this))
 {
     m_reconnectTimer.setSingleShot(true);
-    connect(&m_reconnectTimer, SIGNAL(timeout()), this, SLOT(startReconnect()));
+    connect(&m_reconnectTimer, &QTimer::timeout, this, &WeatherEngine::startReconnect);
 
     // Globally notify all plugins to remove their sources (and unload plugin)
-    connect(this, SIGNAL(sourceRemoved(QString)), this, SLOT(removeIonSource(QString)));
+    connect(this, &Plasma::DataEngine::sourceRemoved, this, &WeatherEngine::removeIonSource);
 
     // Get the list of available plugins but don't load them
     QNetworkAccessManager::NetworkAccessibility status = m_networkAccessManager->networkAccessible();
     m_networkAvailable = (status == QNetworkAccessManager::Accessible ||
-                             status == QNetworkAccessManager::UnknownAccessibility);
-    connect(m_networkAccessManager, SIGNAL(networkAccessibleChanged(QNetworkAccessManager::NetworkAccessibility)),
-            this, SLOT(networkStatusChanged(QNetworkAccessManager::NetworkAccessibility)));
+                          status == QNetworkAccessManager::UnknownAccessibility);
+    connect(m_networkAccessManager, &QNetworkAccessManager::networkAccessibleChanged,
+            this, &WeatherEngine::networkStatusChanged);
 
-    connect(KSycoca::self(), SIGNAL(databaseChanged(QStringList)), this, SLOT(updateIonList()));
+    connect(KSycoca::self(), static_cast<void (KSycoca::*)(const QStringList&)>(&KSycoca::databaseChanged),
+            this, &WeatherEngine::updateIonList);
 
     updateIonList();
 }
@@ -62,7 +63,7 @@ WeatherEngine::~WeatherEngine()
 /**
  * Loads an ion plugin given a plugin name found via KService.
  */
-Plasma::DataEngine *WeatherEngine::loadIon(const QString& plugName)
+IonInterface *WeatherEngine::loadIon(const QString& plugName)
 {
     KPluginInfo foundPlugin;
 
@@ -78,10 +79,16 @@ Plasma::DataEngine *WeatherEngine::loadIon(const QString& plugName)
     }
 
     // Load the Ion plugin, store it into a QMap to handle multiple ions.
-    Plasma::DataEngine *ion = dataEngine(foundPlugin.pluginName());
+    Plasma::DataEngine *engine = dataEngine(foundPlugin.pluginName());
+    IonInterface *ion = qobject_cast<IonInterface*>(engine);
+
+    if (!ion) {
+        return nullptr;
+    }
+
     ion->setObjectName(plugName);
-    connect(ion, SIGNAL(sourceAdded(QString)), this, SLOT(newIonSource(QString)));
-    connect(ion, SIGNAL(forceUpdate(IonInterface*,QString)), this, SLOT(forceUpdate(IonInterface*,QString)));
+    connect(ion, &DataEngine::sourceAdded, this, &WeatherEngine::newIonSource);
+    connect(ion, &IonInterface::forceUpdate, this, &WeatherEngine::forceUpdate);
 
     m_ions << plugName;
 
@@ -142,7 +149,7 @@ void WeatherEngine::dataUpdated(const QString& source, const Plasma::DataEngine:
  */
 bool WeatherEngine::sourceRequestEvent(const QString &source)
 {
-    Plasma::DataEngine *ion = ionForSource(source);
+    IonInterface* ion = ionForSource(source);
 
     if (!ion) {
         ion = loadIon(ionNameForSource(source));
