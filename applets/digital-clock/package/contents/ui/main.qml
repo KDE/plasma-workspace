@@ -24,7 +24,7 @@ import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.kquickcontrolsaddons 2.0
 import org.kde.plasma.private.digitalclock 1.0
 import org.kde.kquickcontrolsaddons 2.0
-//import org.kde.plasma.calendar 2.0
+import org.kde.plasma.calendar 2.0 as PlasmaCalendar
 
 Item {
     id: root
@@ -85,5 +85,9 @@ Item {
     Component.onCompleted: {
         plasmoid.setAction("clockkcm", i18n("Adjust Date and Time..."), "preferences-system-time");
         plasmoid.setAction("formatskcm", i18n("Set Time Format..."));
+
+        // Set the list of enabled plugins from config
+        // to the manager
+        PlasmaCalendar.EventPluginsManager.enabledPlugins = plasmoid.configuration.enabledCalendarPlugins;
     }
 }

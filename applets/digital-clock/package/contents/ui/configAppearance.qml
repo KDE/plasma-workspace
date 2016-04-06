@@ -23,6 +23,7 @@
 import QtQuick 2.0
 import QtQuick.Controls 1.0 as QtControls
 import QtQuick.Layouts 1.0 as QtLayouts
+import org.kde.plasma.calendar 2.0 as PlasmaCalendar
 
 Item {
     id: appearancePage
@@ -39,7 +40,6 @@ Item {
     property alias cfg_showLocalTimezone: showLocalTimezone.checked
     property alias cfg_displayTimezoneAsCode: timezoneCodeRadio.checked
     property alias cfg_showSeconds: showSeconds.checked
-    property alias cfg_showWeekNumbers: showWeekNumbers.checked
 
     property alias cfg_showDate: showDate.checked
     property string cfg_dateFormat: "shortDate"
@@ -134,10 +134,6 @@ Item {
                     id: showDate
                     text: i18n("Show date")
                 }
-                QtControls.CheckBox {
-                    id: showWeekNumbers
-                    text: i18n("Show week numbers in Calendar")
-                }
 
                 QtControls.CheckBox {
                     id: showSeconds
@@ -153,7 +149,6 @@ Item {
                     id: showLocalTimezone
                     text: i18n("Show local time zone")
                 }
-
 
                 QtControls.Label {
                     text: i18n("Display time zone as:")
