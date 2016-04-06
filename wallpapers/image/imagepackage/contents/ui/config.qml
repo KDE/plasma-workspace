@@ -51,15 +51,9 @@ ColumnLayout {
         imageWallpaper.slidePaths = cfg_SlidePaths
     }
 
-    property int hoursIntervalValue
-    property int minutesIntervalValue
-    property int secondsIntervalValue
-
-    onCfg_SlideIntervalChanged: {
-        hoursIntervalValue = Math.floor(cfg_SlideInterval / 3600)
-        minutesIntervalValue = Math.floor(cfg_SlideInterval % 3600) / 60
-        secondsIntervalValue = cfg_SlideInterval % 3600 % 60
-    }
+    property int hoursIntervalValue: Math.floor(cfg_SlideInterval / 3600)
+    property int minutesIntervalValue: Math.floor(cfg_SlideInterval % 3600) / 60
+    property int secondsIntervalValue: cfg_SlideInterval % 3600 % 60
 
     //Rectangle { color: "orange"; x: formAlignment; width: formAlignment; height: 20 }
 
@@ -163,13 +157,7 @@ ColumnLayout {
                 target: root
                 onHoursIntervalValueChanged: hoursInterval.value = root.hoursIntervalValue
                 onMinutesIntervalValueChanged: minutesInterval.value = root.minutesIntervalValue
-                onSecondsIntervalValueChanged: {
-                    secondsInterval.value = root.secondsIntervalValue}
-            }
-            Component.onCompleted: {
-                hoursInterval.value = root.hoursIntervalValue
-                minutesInterval.value = root.minutesIntervalValue
-                secondsInterval.value = root.secondsIntervalValue
+                onSecondsIntervalValueChanged: secondsInterval.value = root.secondsIntervalValue
             }
             //FIXME: there should be only one spinbox: QtControls spinboxes are still too limited for it tough
             RowLayout {
@@ -186,6 +174,7 @@ ColumnLayout {
                     Layout.minimumWidth: textMetrics.width + units.gridUnit
                     width: units.gridUnit * 3
                     decimals: 0
+                    value: root.hoursIntervalValue
                     minimumValue: 0
                     maximumValue: 24
                     onValueChanged: cfg_SlideInterval = hoursInterval.value * 3600 + minutesInterval.value * 60 + secondsInterval.value
@@ -204,6 +193,7 @@ ColumnLayout {
                     Layout.minimumWidth: textMetrics.width + units.gridUnit
                     width: units.gridUnit * 3
                     decimals: 0
+                    value: root.minutesIntervalValue
                     minimumValue: 0
                     maximumValue: 60
                     onValueChanged: cfg_SlideInterval = hoursInterval.value * 3600 + minutesInterval.value * 60 + secondsInterval.value
@@ -222,7 +212,8 @@ ColumnLayout {
                     Layout.minimumWidth: textMetrics.width + units.gridUnit
                     width: units.gridUnit * 3
                     decimals: 0
-                    minimumValue: minutesInterval.value == 0 && hoursInterval.value == 0 ? 1 : 0
+                    value: root.secondsIntervalValue
+                    minimumValue: root.hoursIntervalValue === 0 && root.minutesIntervalValue === 0 ? 1 : 0
                     maximumValue: 60
                     onValueChanged: cfg_SlideInterval = hoursInterval.value * 3600 + minutesInterval.value * 60 + secondsInterval.value
                 }
