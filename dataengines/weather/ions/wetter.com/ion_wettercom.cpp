@@ -79,45 +79,45 @@ QMap<QString, IonInterface::ConditionIcons> WetterComIon::setupCommonIconMapping
 {
     QMap<QString, ConditionIcons> conditionList;
 
-    conditionList["3"]  = Overcast;
-    conditionList["30"] = Overcast;
-    conditionList["4"]  = Haze;
-    conditionList["40"] = Haze;
-    conditionList["45"] = Haze;
-    conditionList["48"] = Haze;
-    conditionList["49"] = Haze;
-    conditionList["5"]  = Mist;
-    conditionList["50"] = Mist;
-    conditionList["51"] = Mist;
-    conditionList["53"] = Mist;
-    conditionList["55"] = Mist;
-    conditionList["56"] = FreezingDrizzle;
-    conditionList["57"] = FreezingDrizzle;
-    conditionList["6"]  = Rain;
-    conditionList["60"] = LightRain;
-    conditionList["61"] = LightRain;
-    conditionList["63"] = Rain;
-    conditionList["65"] = Rain;
-    conditionList["66"] = FreezingRain;
-    conditionList["67"] = FreezingRain;
-    conditionList["68"] = RainSnow;
-    conditionList["69"] = RainSnow;
-    conditionList["7"]  = Snow;
-    conditionList["70"] = LightSnow;
-    conditionList["71"] = LightSnow;
-    conditionList["73"] = Snow;
-    conditionList["75"] = Flurries;
-    conditionList["8"]  = Showers;
-    conditionList["81"] = Showers;
-    conditionList["82"] = Showers;
-    conditionList["83"] = RainSnow;
-    conditionList["84"] = RainSnow;
-    conditionList["85"] = Snow;
-    conditionList["86"] = Snow;
-    conditionList["9"] = Thunderstorm;
-    conditionList["90"] = Thunderstorm;
-    conditionList["96"] = Thunderstorm;
-    conditionList["999"] = NotAvailable;
+    conditionList.insert(QStringLiteral("3"),  Overcast);
+    conditionList.insert(QStringLiteral("30"), Overcast);
+    conditionList.insert(QStringLiteral("4"),  Haze);
+    conditionList.insert(QStringLiteral("40"), Haze);
+    conditionList.insert(QStringLiteral("45"), Haze);
+    conditionList.insert(QStringLiteral("48"), Haze);
+    conditionList.insert(QStringLiteral("49"), Haze);
+    conditionList.insert(QStringLiteral("5"),  Mist);
+    conditionList.insert(QStringLiteral("50"), Mist);
+    conditionList.insert(QStringLiteral("51"), Mist);
+    conditionList.insert(QStringLiteral("53"), Mist);
+    conditionList.insert(QStringLiteral("55"), Mist);
+    conditionList.insert(QStringLiteral("56"), FreezingDrizzle);
+    conditionList.insert(QStringLiteral("57"), FreezingDrizzle);
+    conditionList.insert(QStringLiteral("6"),  Rain);
+    conditionList.insert(QStringLiteral("60"), LightRain);
+    conditionList.insert(QStringLiteral("61"), LightRain);
+    conditionList.insert(QStringLiteral("63"), Rain);
+    conditionList.insert(QStringLiteral("65"), Rain);
+    conditionList.insert(QStringLiteral("66"), FreezingRain);
+    conditionList.insert(QStringLiteral("67"), FreezingRain);
+    conditionList.insert(QStringLiteral("68"), RainSnow);
+    conditionList.insert(QStringLiteral("69"), RainSnow);
+    conditionList.insert(QStringLiteral("7"),  Snow);
+    conditionList.insert(QStringLiteral("70"), LightSnow);
+    conditionList.insert(QStringLiteral("71"), LightSnow);
+    conditionList.insert(QStringLiteral("73"), Snow);
+    conditionList.insert(QStringLiteral("75"), Flurries);
+    conditionList.insert(QStringLiteral("8"),  Showers);
+    conditionList.insert(QStringLiteral("81"), Showers);
+    conditionList.insert(QStringLiteral("82"), Showers);
+    conditionList.insert(QStringLiteral("83"), RainSnow);
+    conditionList.insert(QStringLiteral("84"), RainSnow);
+    conditionList.insert(QStringLiteral("85"), Snow);
+    conditionList.insert(QStringLiteral("86"), Snow);
+    conditionList.insert(QStringLiteral("9"),  Thunderstorm);
+    conditionList.insert(QStringLiteral("90"), Thunderstorm);
+    conditionList.insert(QStringLiteral("96"), Thunderstorm);
+    conditionList.insert(QStringLiteral("999"), NotAvailable);
 
     return conditionList;
 }
@@ -126,13 +126,13 @@ QMap<QString, IonInterface::ConditionIcons> WetterComIon::setupDayIconMappings()
 {
     QMap<QString, ConditionIcons> conditionList = setupCommonIconMappings();
 
-    conditionList["0"]  = ClearDay;
-    conditionList["1"]  = FewCloudsDay;
-    conditionList["10"] = FewCloudsDay;
-    conditionList["2"]  = PartlyCloudyDay;
-    conditionList["20"] = PartlyCloudyDay;
-    conditionList["80"] = ChanceShowersDay;
-    conditionList["95"] = ChanceThunderstormDay;
+    conditionList.insert(QStringLiteral("0"),  ClearDay);
+    conditionList.insert(QStringLiteral("1"),  FewCloudsDay);
+    conditionList.insert(QStringLiteral("10"), FewCloudsDay);
+    conditionList.insert(QStringLiteral("2"),  PartlyCloudyDay);
+    conditionList.insert(QStringLiteral("20"), PartlyCloudyDay);
+    conditionList.insert(QStringLiteral("80"), ChanceShowersDay);
+    conditionList.insert(QStringLiteral("95"), ChanceThunderstormDay);
 
     return conditionList;
 }
@@ -147,13 +147,13 @@ QMap<QString, IonInterface::ConditionIcons> WetterComIon::setupNightIconMappings
 {
     QMap<QString, ConditionIcons> conditionList = setupCommonIconMappings();
 
-    conditionList["0"]  = ClearNight;
-    conditionList["1"]  = FewCloudsNight;
-    conditionList["10"] = FewCloudsNight;
-    conditionList["2"]  = PartlyCloudyNight;
-    conditionList["20"] = PartlyCloudyNight;
-    conditionList["80"] = ChanceShowersNight;
-    conditionList["95"] = ChanceThunderstormNight;
+    conditionList.insert(QStringLiteral("0"),  ClearNight);
+    conditionList.insert(QStringLiteral("1"),  FewCloudsNight);
+    conditionList.insert(QStringLiteral("10"), FewCloudsNight);
+    conditionList.insert(QStringLiteral("2"),  PartlyCloudyNight);
+    conditionList.insert(QStringLiteral("20"), PartlyCloudyNight);
+    conditionList.insert(QStringLiteral("80"), ChanceShowersNight);
+    conditionList.insert(QStringLiteral("95"), ChanceThunderstormNight);
 
     return conditionList;
 }
@@ -167,51 +167,51 @@ QMap<QString, IonInterface::ConditionIcons> const& WetterComIon::nightIcons() co
 QMap<QString, QString> WetterComIon::setupCommonConditionMappings() const
 {
     QMap<QString, QString> conditionList;
-    conditionList["1"]  = i18nc("weather condition", "few clouds");
-    conditionList["10"] = i18nc("weather condition", "few clouds");
-    conditionList["2"]  = i18nc("weather condition", "cloudy");
-    conditionList["20"] = i18nc("weather condition", "cloudy");
-    conditionList["3"]  = i18nc("weather condition", "overcast");
-    conditionList["30"] = i18nc("weather condition", "overcast");
-    conditionList["4"]  = i18nc("weather condition", "haze");
-    conditionList["40"] = i18nc("weather condition", "haze");
-    conditionList["45"] = i18nc("weather condition", "haze");
-    conditionList["48"] = i18nc("weather condition", "fog with icing");
-    conditionList["49"] = i18nc("weather condition", "fog with icing");
-    conditionList["5"]  = i18nc("weather condition", "drizzle");
-    conditionList["50"] = i18nc("weather condition", "drizzle");
-    conditionList["51"] = i18nc("weather condition", "light drizzle");
-    conditionList["53"] = i18nc("weather condition", "drizzle");
-    conditionList["55"] = i18nc("weather condition", "heavy drizzle");
-    conditionList["56"] = i18nc("weather condition", "freezing drizzle");
-    conditionList["57"] = i18nc("weather condition", "heavy freezing drizzle");
-    conditionList["6"]  = i18nc("weather condition", "rain");
-    conditionList["60"] = i18nc("weather condition", "light rain");
-    conditionList["61"] = i18nc("weather condition", "light rain");
-    conditionList["63"] = i18nc("weather condition", "moderate rain");
-    conditionList["65"] = i18nc("weather condition", "heavy rain");
-    conditionList["66"] = i18nc("weather condition", "light freezing rain");
-    conditionList["67"] = i18nc("weather condition", "freezing rain");
-    conditionList["68"] = i18nc("weather condition", "light rain snow");
-    conditionList["69"] = i18nc("weather condition", "heavy rain snow");
-    conditionList["7"]  = i18nc("weather condition", "snow");
-    conditionList["70"] = i18nc("weather condition", "light snow");
-    conditionList["71"] = i18nc("weather condition", "light snow");
-    conditionList["73"] = i18nc("weather condition", "moderate snow");
-    conditionList["75"] = i18nc("weather condition", "heavy snow");
-    conditionList["8"]  = i18nc("weather condition", "showers");
-    conditionList["80"] = i18nc("weather condition", "light showers");
-    conditionList["81"] = i18nc("weather condition", "showers");
-    conditionList["82"] = i18nc("weather condition", "heavy showers");
-    conditionList["83"] = i18nc("weather condition", "light snow rain showers");
-    conditionList["84"] = i18nc("weather condition", "heavy snow rain showers");
-    conditionList["85"] = i18nc("weather condition", "light snow showers");
-    conditionList["86"] = i18nc("weather condition", "snow showers");
-    conditionList["9"]  = i18nc("weather condition", "thunderstorm");
-    conditionList["90"] = i18nc("weather condition", "thunderstorm");
-    conditionList["95"] = i18nc("weather condition", "light thunderstorm");
-    conditionList["96"] = i18nc("weather condition", "heavy thunderstorm");
-    conditionList["999"] = i18nc("weather condition", "n/a");
+    conditionList.insert(QStringLiteral("1"),  i18nc("weather condition", "few clouds"));
+    conditionList.insert(QStringLiteral("10"), i18nc("weather condition", "few clouds"));
+    conditionList.insert(QStringLiteral("2"),  i18nc("weather condition", "cloudy"));
+    conditionList.insert(QStringLiteral("20"), i18nc("weather condition", "cloudy"));
+    conditionList.insert(QStringLiteral("3"),  i18nc("weather condition", "overcast"));
+    conditionList.insert(QStringLiteral("30"), i18nc("weather condition", "overcast"));
+    conditionList.insert(QStringLiteral("4"),  i18nc("weather condition", "haze"));
+    conditionList.insert(QStringLiteral("40"), i18nc("weather condition", "haze"));
+    conditionList.insert(QStringLiteral("45"), i18nc("weather condition", "haze"));
+    conditionList.insert(QStringLiteral("48"), i18nc("weather condition", "fog with icing"));
+    conditionList.insert(QStringLiteral("49"), i18nc("weather condition", "fog with icing"));
+    conditionList.insert(QStringLiteral("5"),  i18nc("weather condition", "drizzle"));
+    conditionList.insert(QStringLiteral("50"), i18nc("weather condition", "drizzle"));
+    conditionList.insert(QStringLiteral("51"), i18nc("weather condition", "light drizzle"));
+    conditionList.insert(QStringLiteral("53"), i18nc("weather condition", "drizzle"));
+    conditionList.insert(QStringLiteral("55"), i18nc("weather condition", "heavy drizzle"));
+    conditionList.insert(QStringLiteral("56"), i18nc("weather condition", "freezing drizzle"));
+    conditionList.insert(QStringLiteral("57"), i18nc("weather condition", "heavy freezing drizzle"));
+    conditionList.insert(QStringLiteral("6"),  i18nc("weather condition", "rain"));
+    conditionList.insert(QStringLiteral("60"), i18nc("weather condition", "light rain"));
+    conditionList.insert(QStringLiteral("61"), i18nc("weather condition", "light rain"));
+    conditionList.insert(QStringLiteral("63"), i18nc("weather condition", "moderate rain"));
+    conditionList.insert(QStringLiteral("65"), i18nc("weather condition", "heavy rain"));
+    conditionList.insert(QStringLiteral("66"), i18nc("weather condition", "light freezing rain"));
+    conditionList.insert(QStringLiteral("67"), i18nc("weather condition", "freezing rain"));
+    conditionList.insert(QStringLiteral("68"), i18nc("weather condition", "light rain snow"));
+    conditionList.insert(QStringLiteral("69"), i18nc("weather condition", "heavy rain snow"));
+    conditionList.insert(QStringLiteral("7"),  i18nc("weather condition", "snow"));
+    conditionList.insert(QStringLiteral("70"), i18nc("weather condition", "light snow"));
+    conditionList.insert(QStringLiteral("71"), i18nc("weather condition", "light snow"));
+    conditionList.insert(QStringLiteral("73"), i18nc("weather condition", "moderate snow"));
+    conditionList.insert(QStringLiteral("75"), i18nc("weather condition", "heavy snow"));
+    conditionList.insert(QStringLiteral("8"),  i18nc("weather condition", "showers"));
+    conditionList.insert(QStringLiteral("80"), i18nc("weather condition", "light showers"));
+    conditionList.insert(QStringLiteral("81"), i18nc("weather condition", "showers"));
+    conditionList.insert(QStringLiteral("82"), i18nc("weather condition", "heavy showers"));
+    conditionList.insert(QStringLiteral("83"), i18nc("weather condition", "light snow rain showers"));
+    conditionList.insert(QStringLiteral("84"), i18nc("weather condition", "heavy snow rain showers"));
+    conditionList.insert(QStringLiteral("85"), i18nc("weather condition", "light snow showers"));
+    conditionList.insert(QStringLiteral("86"), i18nc("weather condition", "snow showers"));
+    conditionList.insert(QStringLiteral("9"),  i18nc("weather condition", "thunderstorm"));
+    conditionList.insert(QStringLiteral("90"), i18nc("weather condition", "thunderstorm"));
+    conditionList.insert(QStringLiteral("95"), i18nc("weather condition", "light thunderstorm"));
+    conditionList.insert(QStringLiteral("96"), i18nc("weather condition", "heavy thunderstorm"));
+    conditionList.insert(QStringLiteral("999"), i18nc("weather condition", "n/a"));
 
     return conditionList;
 }
@@ -219,7 +219,7 @@ QMap<QString, QString> WetterComIon::setupCommonConditionMappings() const
 QMap<QString, QString> WetterComIon::setupDayConditionMappings() const
 {
     QMap<QString, QString> conditionList = setupCommonConditionMappings();
-    conditionList["0"]  = i18nc("weather condition", "sunny");
+    conditionList.insert(QStringLiteral("0"), i18nc("weather condition", "sunny"));
     return conditionList;
 }
 
@@ -232,7 +232,7 @@ QMap<QString, QString> const& WetterComIon::dayConditions() const
 QMap<QString, QString> WetterComIon::setupNightConditionMappings() const
 {
     QMap<QString, QString> conditionList = setupCommonConditionMappings();
-    conditionList["0"]  = i18nc("weather condition", "clear sky");
+    conditionList.insert(QStringLiteral("0"), i18nc("weather condition", "clear sky"));
     return conditionList;
 }
 
@@ -253,32 +253,31 @@ bool WetterComIon::updateIonSource(const QString& source)
     // ionname|validate|place_name|extra - Triggers validation of place
     // ionname|weather|place_name|extra - Triggers receiving weather of place
 
-    QStringList sourceAction = source.split('|');
+    const QStringList sourceAction = source.split(QLatin1Char('|'));
 
     if (sourceAction.size() < 3) {
-        setData(source, "validate", "wettercom|malformed");
+        setData(source, QStringLiteral("validate"), QStringLiteral("wettercom|malformed"));
         return true;
     }
 
-    if (sourceAction[1] == "validate" && sourceAction.size() >= 3) {
+    if (sourceAction[1] == QLatin1String("validate") && sourceAction.size() >= 3) {
         // Look for places to match
         findPlace(sourceAction[2], source);
         return true;
     }
 
-    if (sourceAction[1] == "weather" && sourceAction.size() >= 3) {
-        qWarning()<<"WWWW"<<sourceAction;
+    if (sourceAction[1] == QLatin1String("weather") && sourceAction.size() >= 3) {
         if (sourceAction.count() >= 4) {
             if (sourceAction[2].isEmpty()) {
-                setData(source, "validate", "wettercom|malformed");
+                setData(source, QStringLiteral("validate"), QStringLiteral("wettercom|malformed"));
                 return true;
             }
 
             // Extra data format: placeCode;displayName
-            QStringList extraData = sourceAction[3].split(';');
+            const QStringList extraData = sourceAction[3].split(QLatin1Char(';'));
 
             if (extraData.count() != 2) {
-                setData(source, "validate", "wettercom|malformed");
+                setData(source, QStringLiteral("validate"), QStringLiteral("wettercom|malformed"));
                 return true;
             }
 
@@ -296,7 +295,7 @@ bool WetterComIon::updateIonSource(const QString& source)
         return false;
     }
 
-    setData(source, "validate", "wettercom|malformed");
+    setData(source, QStringLiteral("validate"), QStringLiteral("wettercom|malformed"));
     return true;
 }
 
@@ -311,8 +310,9 @@ void WetterComIon::findPlace(const QString& place, const QString& source)
     md5.addData(QString::fromLatin1(PROJECTNAME).toUtf8());
     md5.addData(QString::fromLatin1(APIKEY).toUtf8());
     md5.addData(place.toUtf8());
+    const QString encodedKey = QString::fromLatin1(md5.result().toHex());
 
-    const QUrl url = QString::fromLatin1(SEARCH_URL).arg(place).arg(md5.result().toHex().data());
+    const QUrl url = QString::fromLatin1(SEARCH_URL).arg(place, encodedKey);
 
     KIO::TransferJob* getJob = KIO::get(url, KIO::Reload, KIO::HideProgressInfo);
     getJob->addMetaData(QStringLiteral("cookies"), QStringLiteral("none")); // Disable displaying cookies
@@ -339,8 +339,7 @@ void WetterComIon::setup_slotDataArrived(KIO::Job *job, const QByteArray &data)
 void WetterComIon::setup_slotJobFinished(KJob *job)
 {
     if (job->error() == 149) {
-        setData(m_searchJobList[job], "validate",
-                QString::fromLatin1("wettercom|timeout"));
+        setData(m_searchJobList[job], QStringLiteral("validate"), QStringLiteral("wettercom|timeout"));
         disconnectSource(m_searchJobList[job], this);
         m_searchJobList.remove(job);
         delete m_searchJobXml[job];
@@ -391,11 +390,11 @@ void WetterComIon::parseSearchResults(const QString& source, QXmlStreamReader& x
                 m_place[placeName].placeCode = code;
                 m_locations.append(placeName);
 
-                name = "";
-                code = "";
-                quarter = "";
-                country = "";
-                state = "";
+                name.clear();
+                code.clear();
+                quarter.clear();
+                country.clear();
+                state.clear();
             }
         }
 
@@ -422,10 +421,10 @@ void WetterComIon::validate(const QString& source, bool parseError)
     bool beginflag = true;
 
     if (!m_locations.count() || parseError) {
-        QStringList invalidPlace = source.split('|');
+        const QStringList invalidPlace = source.split(QLatin1Char('|'));
 
         if (m_place[invalidPlace[2]].name.isEmpty()) {
-            setData(source, "validate",
+            setData(source, QStringLiteral("validate"),
                     QString::fromLatin1("wettercom|invalid|multiple|%1")
                     .arg(invalidPlace[2]));
         }
@@ -453,12 +452,12 @@ void WetterComIon::validate(const QString& source, bool parseError)
     qDebug() << "Returning place list:" << placeList;
 
     if (m_locations.count() > 1) {
-        setData(source, "validate",
+        setData(source, QStringLiteral("validate"),
                 QString::fromLatin1("wettercom|valid|multiple|place|%1")
                 .arg(placeList));
     } else {
         placeList[0] = placeList[0].toUpper();
-        setData(source, "validate",
+        setData(source, QStringLiteral("validate"),
                 QString::fromLatin1("wettercom|valid|single|place|%1")
                 .arg(placeList));
     }
@@ -484,9 +483,9 @@ void WetterComIon::fetchForecast(const QString& source)
     md5.addData(QString::fromLatin1(PROJECTNAME).toUtf8());
     md5.addData(QString::fromLatin1(APIKEY).toUtf8());
     md5.addData(m_place[source].placeCode.toUtf8());
+    const QString encodedKey = QString::fromLatin1(md5.result().toHex());
 
-    const QUrl url = QString::fromLatin1(FORECAST_URL)
-                    .arg(m_place[source].placeCode).arg(md5.result().toHex().data());
+    const QUrl url = QString::fromLatin1(FORECAST_URL).arg(m_place[source].placeCode, encodedKey);
 
     KIO::TransferJob* getJob = KIO::get(url, KIO::Reload, KIO::HideProgressInfo);
     getJob->addMetaData(QStringLiteral("cookies"), QStringLiteral("none"));
@@ -580,7 +579,7 @@ void WetterComIon::parseWeatherForecast(const QString& source, QXmlStreamReader&
                 m_weatherData[source].forecasts.append(forecastPeriod);
                 forecastPeriod = new WeatherData::ForecastPeriod;
 
-                date = "";
+                date.clear();
                 summaryWeather = -1;
                 summaryProbability = 0;
                 summaryUtcTime = 0;
@@ -626,15 +625,15 @@ void WetterComIon::parseWeatherForecast(const QString& source, QXmlStreamReader&
                 weather = -1;
                 probability = 0;
                 utcTime = localTime = 0;
-                time = "";
+                time.clear();
             }
         }
 
         if (xml.isStartElement()) {
             if (elementName == QLatin1String("date")) {
-                date = xml.attributes().value("value").toString();
+                date = xml.attributes().value(QStringLiteral("value")).toString();
             } else if (elementName == QLatin1String("time")) {
-                time = xml.attributes().value("value").toString();
+                time = xml.attributes().value(QStringLiteral("value")).toString();
             } else if (elementName == QLatin1String("tx")) {
                 tempMax = qRound(xml.readElementText().toDouble());
                 qDebug() << "parsed t_max:" << tempMax;
@@ -699,13 +698,13 @@ void WetterComIon::updateWeather(const QString& source, bool parseError)
                             .arg(m_place[source].displayName);
 
     Plasma::DataEngine::Data data;
-    data.insert("Place", m_place[source].displayName);
+    data.insert(QStringLiteral("Place"), m_place[source].displayName);
 
     if (!parseError && !m_weatherData[source].forecasts.isEmpty()) {
-        data.insert("Station", m_place[source].displayName);
+        data.insert(QStringLiteral("Station"), m_place[source].displayName);
         //data.insert("Condition Icon", "N/A");
         //data.insert("Temperature", "N/A");
-        data.insert("Temperature Unit", QString::number(KUnitConversion::Celsius));
+        data.insert(QStringLiteral("Temperature Unit"), QString::number(KUnitConversion::Celsius));
 
         int i = 0;
         foreach(WeatherData::ForecastPeriod * forecastPeriod, m_weatherData[source].forecasts) {
@@ -744,10 +743,10 @@ void WetterComIon::updateWeather(const QString& source, bool parseError)
         }
 
         // Set number of forecasts per day/night supported
-        data.insert("Total Weather Days", i);
+        data.insert(QStringLiteral("Total Weather Days"), i);
 
-        data.insert("Credit", m_weatherData[source].credits); // FIXME i18n?
-        data.insert("Credit Url", m_weatherData[source].creditsUrl);
+        data.insert(QStringLiteral("Credit"), m_weatherData[source].credits); // FIXME i18n?
+        data.insert(QStringLiteral("Credit Url"), m_weatherData[source].creditsUrl);
 
         qDebug() << "updated weather data:" << weatherSource << data;
     } else {
