@@ -25,8 +25,10 @@
 #include <KUnitConversion/Converter>
 #include <KLocalizedString>
 
+#include <QJsonDocument>
+#include <QJsonObject>
+#include <QJsonArray>
 #include <QXmlStreamReader>
-#include <QTextStream>
 #include <QDebug>
 
 WeatherData::WeatherData()
@@ -307,48 +309,34 @@ void UKMETIon::getFiveDayForecast(const QString& source)
 
 void UKMETIon::readSearchHTMLData(const QString& source, const QByteArray& html)
 {
-    QTextStream stream(html);
-
     int counter = 2;
-qDebug() <<"searchresult bbcukmet:"<< html;
-    // FIXME: use a json parser instead of regexes
-    QRegExp grabURL(QStringLiteral("\"id\":\\s*\"([0-9]+)\""));
-    QRegExp grabPlace(QStringLiteral("\"fullName\":\\s*\"([^\"]+)\""));
 
-    while (!stream.atEnd()) {
-       QString line = stream.readLine();
-       if (line.contains(QStringLiteral("Sorry, no results found for")) > 0) {
-           break;
-       }
+    QJsonObject jsonDocumentObject = QJsonDocument::fromJson(html).object();
 
-       if (line.contains(QStringLiteral("\"results\"")) > 0) {
+    if (!jsonDocumentObject.isEmpty()) {
+        QJsonArray results = jsonDocumentObject.value(QStringLiteral("results")).toArray();
 
-            if (grabURL.indexIn(line.trimmed()) > 0) {
+        foreach(const QJsonValue & resultValue, results) {
+            QJsonObject result = resultValue.toObject();
+            const QString id = result.value(QStringLiteral("id")).toString();
+            const QString fullName = result.value(QStringLiteral("fullName")).toString();
 
-                for (int captureIndex = 1; captureIndex <= grabURL.captureCount(); captureIndex++) {
+            if (!id.isEmpty() && !fullName.isEmpty()) {
+                const QString url = QStringLiteral("http://open.live.bbc.co.uk/weather/feeds/en/") + id + QStringLiteral("/observations.rss");
 
-                    const QString url = QStringLiteral("http://open.live.bbc.co.uk/weather/feeds/en/") + grabURL.cap(captureIndex) + QStringLiteral("/observations.rss");
+                QString tmp = QStringLiteral("bbcukmet|") + fullName;
 
-                    grabPlace.indexIn(line.trimmed());
-                    QString tmp = QStringLiteral("bbcukmet|") + grabPlace.cap(captureIndex);
-
-                    // Duplicate places can exist
-                    if (m_locations.contains(tmp)) {
-                        tmp += QStringLiteral(" (#") + QString::number(counter) + QLatin1Char(')');
-                        counter++;
-                    }
-                    m_place[tmp].XMLurl = url;
-                    m_place[tmp].place = grabPlace.cap(captureIndex);
-                    m_locations.append(tmp);
+                // Duplicate places can exist
+                if (m_locations.contains(tmp)) {
+                    tmp += QStringLiteral(" (#") + QString::number(counter) + QLatin1Char(')');
+                    counter++;
                 }
+                m_place[tmp].XMLurl = url;
+                m_place[tmp].place = fullName;
+                m_locations.append(tmp);
             }
        }
     }
-
-    // I stream ok?
-    //if (stream.status() == QTextStream::Ok) {
-        //return true;
-    //}
 
     validate(source);
 }
