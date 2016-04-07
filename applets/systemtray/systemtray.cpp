@@ -402,7 +402,6 @@ void SystemTray::restorePlasmoids()
 
     foreach (const KPluginInfo &info, sortedApplets) {
         qCDebug(SYSTEMTRAY) << " Adding applet: " << info.name();
-        qCDebug(SYSTEMTRAY) << "\n\n ==========================================================================================";
         if (m_allowedPlasmoids.contains(info.pluginName())) {
             newTask(info.pluginName());
         }
