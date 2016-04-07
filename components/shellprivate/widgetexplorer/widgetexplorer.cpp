@@ -135,6 +135,9 @@ void WidgetExplorerPrivate::initFilters()
 
     for (auto data : list) {
         const KPluginInfo info(data);
+        if (!info.isValid()) {
+            continue;
+        }
         if (info.property(QStringLiteral("NoDisplay")).toBool() || info.category() == QLatin1String("Containments") ||
             info.category().isEmpty()) {
             // we don't want to show the hidden category
