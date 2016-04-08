@@ -105,7 +105,7 @@ Item {
                         } else if (!model.name && !model.session) {
                             return i18ndc("plasma_lookandfeel_org.kde.lookandfeel","Unused session, nobody logged in there", "Unused")
                         } else if (model.displayNumber) {
-                            return i18ndc("plasma_lookandfeel_org.kde.lookandfeel","Username (on display number)", "%1 (%2)", username, model.displayNumber)
+                            return i18ndc("plasma_lookandfeel_org.kde.lookandfeel","Username (on display number)", "%1 (on Display %2)", username, model.displayNumber)
                         }
 
                         return username
