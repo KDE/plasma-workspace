@@ -201,7 +201,7 @@ void CurrentContainmentActionsModel::showConfiguration(int row)
         title = w->windowTitle();
     }
 
-    configDlg->setWindowTitle(title.isEmpty() ? i18n("Configure Plugin") :title);
+    configDlg->setWindowTitle(title.isEmpty() ? i18n("Configure Mouse Actions Plugin") :title);
     //put buttons below
     QDialogButtonBox *buttons = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel,
                                                         Qt::Horizontal, configDlg);
