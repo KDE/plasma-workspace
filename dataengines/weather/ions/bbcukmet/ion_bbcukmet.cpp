@@ -92,10 +92,11 @@ QMap<QString, IonInterface::ConditionIcons> UKMETIon::setupDayIconMappings() con
     dayList.insert(QStringLiteral("sunny intervals"), PartlyCloudyDay);
     //dayList.insert(QStringLiteral("sunny intervals night"), ClearNight);
     dayList.insert(QStringLiteral("partly cloudy"), PartlyCloudyDay);
-    dayList.insert(QStringLiteral("cloudy"), Overcast);
-    dayList.insert(QStringLiteral("light cloud"), Overcast);
-    dayList.insert(QStringLiteral("white cloud"), Overcast);
+    dayList.insert(QStringLiteral("cloudy"), PartlyCloudyDay);
+    dayList.insert(QStringLiteral("light cloud"), PartlyCloudyDay);
+    dayList.insert(QStringLiteral("white cloud"), PartlyCloudyDay);
     dayList.insert(QStringLiteral("grey cloud"), Overcast);
+    dayList.insert(QStringLiteral("thick cloud"), Overcast);
     //dayList.insert(QStringLiteral("low level cloud"), NotAvailable);
     //dayList.insert(QStringLiteral("medium level cloud"), NotAvailable);
     //dayList.insert(QStringLiteral("sandstorm"), NotAvailable);
@@ -144,11 +145,12 @@ QMap<QString, IonInterface::ConditionIcons> UKMETIon::setupNightIconMappings() c
     nightList.insert(QStringLiteral("clear intervals"), PartlyCloudyNight);
     nightList.insert(QStringLiteral("sunny intervals"), PartlyCloudyDay); // it's not really sunny
     nightList.insert(QStringLiteral("sunny"), ClearDay);
-    nightList.insert(QStringLiteral("light cloud"), Overcast);
-    nightList.insert(QStringLiteral("cloudy"), Overcast);
-    nightList.insert(QStringLiteral("white cloud"), Overcast);
-    nightList.insert(QStringLiteral("grey cloud"), Overcast);
+    nightList.insert(QStringLiteral("light cloud"), PartlyCloudyNight);
     nightList.insert(QStringLiteral("partly cloudy"), PartlyCloudyNight);
+    nightList.insert(QStringLiteral("cloudy"), PartlyCloudyNight);
+    nightList.insert(QStringLiteral("white cloud"), PartlyCloudyNight);
+    nightList.insert(QStringLiteral("grey cloud"), Overcast);
+    nightList.insert(QStringLiteral("thick cloud"), Overcast);
     nightList.insert(QStringLiteral("drizzle"), LightRain);
     nightList.insert(QStringLiteral("misty"), Mist);
     nightList.insert(QStringLiteral("mist"), Mist);
