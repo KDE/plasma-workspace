@@ -1,5 +1,12 @@
 add_definitions(-DTRANSLATION_DOMAIN=\"plasma_engine_weather\")
 
+add_definitions(
+    -DQT_USE_QSTRINGBUILDER
+    -DQT_NO_CAST_TO_ASCII
+    -DQT_NO_CAST_FROM_ASCII
+    -DQT_NO_CAST_FROM_BYTEARRAY
+)
+
 add_subdirectory(ions)
 
 set(weather_SRCS weatherengine.cpp)

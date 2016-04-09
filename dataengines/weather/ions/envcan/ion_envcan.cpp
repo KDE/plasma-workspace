@@ -72,89 +72,90 @@ QMap<QString, IonInterface::ConditionIcons> EnvCanadaIon::setupConditionIconMapp
     QMap<QString, ConditionIcons> conditionList;
 
     // Explicit periods
-    conditionList["mainly sunny"] = FewCloudsDay;
-    conditionList["mainly clear"] = FewCloudsNight;
-    conditionList["sunny"] = ClearDay;
-    conditionList["clear"] = ClearNight;
+    conditionList.insert(QStringLiteral("mainly sunny"), FewCloudsDay);
+    conditionList.insert(QStringLiteral("mainly clear"), FewCloudsNight);
+    conditionList.insert(QStringLiteral("sunny"), ClearDay);
+    conditionList.insert(QStringLiteral("clear"), ClearNight);
 
     // Available conditions
-    conditionList["blowing snow"] = Snow;
-    conditionList["cloudy"] = Overcast;
-    conditionList["distant precipitation"] = LightRain;
-    conditionList["drifting snow"] = Flurries;
-    conditionList["drizzle"] = LightRain;
-    conditionList["dust"] = NotAvailable;
-    conditionList["dust devils"] = NotAvailable;
-    conditionList["fog"] = Mist;
-    conditionList["fog bank near station"] = Mist;
-    conditionList["fog depositing ice"] = Mist;
-    conditionList["fog patches"] = Mist;
-    conditionList["freezing drizzle"] = FreezingDrizzle;
-    conditionList["freezing rain"] = FreezingRain;
-    conditionList["funnel cloud"] = NotAvailable;
-    conditionList["hail"] = Hail;
-    conditionList["haze"] = Haze;
-    conditionList["heavy blowing snow"] = Snow;
-    conditionList["heavy drifting snow"] = Snow;
-    conditionList["heavy drizzle"] = LightRain;
-    conditionList["heavy hail"] = Hail;
-    conditionList["heavy mixed rain and drizzle"] = LightRain;
-    conditionList["heavy mixed rain and snow shower"] = RainSnow;
-    conditionList["heavy rain"] = Rain;
-    conditionList["heavy rain and snow"] = RainSnow;
-    conditionList["heavy rainshower"] = Rain;
-    conditionList["heavy snow"] = Snow;
-    conditionList["heavy snow pellets"] = Snow;
-    conditionList["heavy snowshower"] = Snow;
-    conditionList["heavy thunderstorm with hail"] = Thunderstorm;
-    conditionList["heavy thunderstorm with rain"] = Thunderstorm;
-    conditionList["ice crystals"] = Flurries;
-    conditionList["ice pellets"] = Hail;
-    conditionList["increasing cloud"] = Overcast;
-    conditionList["light drizzle"] = LightRain;
-    conditionList["light freezing drizzle"] = FreezingRain;
-    conditionList["light freezing rain"] = FreezingRain;
-    conditionList["light rain"] = LightRain;
-    conditionList["light rainshower"] = LightRain;
-    conditionList["light snow"] = LightSnow;
-    conditionList["light snow pellets"] = LightSnow;
-    conditionList["light snowshower"] = Flurries;
-    conditionList["lightning visible"] = Thunderstorm;
-    conditionList["mist"] = Mist;
-    conditionList["mixed rain and drizzle"] = LightRain;
-    conditionList["mixed rain and snow shower"] = RainSnow;
-    conditionList["not reported"] = NotAvailable;
-    conditionList["rain"] = Rain;
-    conditionList["rain and snow"] = RainSnow;
-    conditionList["rainshower"] = LightRain;
-    conditionList["recent drizzle"] = LightRain;
-    conditionList["recent dust or sand storm"] = NotAvailable;
-    conditionList["recent fog"] = Mist;
-    conditionList["recent freezing precipitation"] = FreezingDrizzle;
-    conditionList["recent hail"] = Hail;
-    conditionList["recent rain"] = Rain;
-    conditionList["recent rain and snow"] = RainSnow;
-    conditionList["recent rainshower"] = Rain;
-    conditionList["recent snow"] = Snow;
-    conditionList["recent snowshower"] = Flurries;
-    conditionList["recent thunderstorm"] = Thunderstorm;
-    conditionList["recent thunderstorm with hail"] = Thunderstorm;
-    conditionList["recent thunderstorm with heavy hail"] = Thunderstorm;
-    conditionList["recent thunderstorm with heavy rain"] = Thunderstorm;
-    conditionList["recent thunderstorm with rain"] = Thunderstorm;
-    conditionList["sand or dust storm"] = NotAvailable;
-    conditionList["severe sand or dust storm"] = NotAvailable;
-    conditionList["shallow fog"] = Mist;
-    conditionList["smoke"] = NotAvailable;
-    conditionList["snow"] = Snow;
-    conditionList["snow crystals"] = Flurries;
-    conditionList["snow grains"] = Flurries;
-    conditionList["squalls"] = Snow;
-    conditionList["thunderstorm with hail"] = Thunderstorm;
-    conditionList["thunderstorm with rain"] = Thunderstorm;
-    conditionList["thunderstorm with sand or dust storm"] = Thunderstorm;
-    conditionList["thunderstorm without precipitation"] = Thunderstorm;
-    conditionList["tornado"] = NotAvailable;
+    conditionList.insert(QStringLiteral("blowing snow"), Snow);
+    conditionList.insert(QStringLiteral("cloudy"), Overcast);
+    conditionList.insert(QStringLiteral("distant precipitation"), LightRain);
+    conditionList.insert(QStringLiteral("drifting snow"), Flurries);
+    conditionList.insert(QStringLiteral("drizzle"), LightRain);
+    conditionList.insert(QStringLiteral("dust"), NotAvailable);
+    conditionList.insert(QStringLiteral("dust devils"), NotAvailable);
+    conditionList.insert(QStringLiteral("fog"), Mist);
+    conditionList.insert(QStringLiteral("fog bank near station"), Mist);
+    conditionList.insert(QStringLiteral("fog depositing ice"), Mist);
+    conditionList.insert(QStringLiteral("fog patches"), Mist);
+    conditionList.insert(QStringLiteral("freezing drizzle"), FreezingDrizzle);
+    conditionList.insert(QStringLiteral("freezing rain"), FreezingRain);
+    conditionList.insert(QStringLiteral("funnel cloud"), NotAvailable);
+    conditionList.insert(QStringLiteral("hail"), Hail);
+    conditionList.insert(QStringLiteral("haze"), Haze);
+    conditionList.insert(QStringLiteral("heavy blowing snow"), Snow);
+    conditionList.insert(QStringLiteral("heavy drifting snow"), Snow);
+    conditionList.insert(QStringLiteral("heavy drizzle"), LightRain);
+    conditionList.insert(QStringLiteral("heavy hail"), Hail);
+    conditionList.insert(QStringLiteral("heavy mixed rain and drizzle"), LightRain);
+    conditionList.insert(QStringLiteral("heavy mixed rain and snow shower"), RainSnow);
+    conditionList.insert(QStringLiteral("heavy rain"), Rain);
+    conditionList.insert(QStringLiteral("heavy rain and snow"), RainSnow);
+    conditionList.insert(QStringLiteral("heavy rainshower"), Rain);
+    conditionList.insert(QStringLiteral("heavy snow"), Snow);
+    conditionList.insert(QStringLiteral("heavy snow pellets"), Snow);
+    conditionList.insert(QStringLiteral("heavy snowshower"), Snow);
+    conditionList.insert(QStringLiteral("heavy thunderstorm with hail"), Thunderstorm);
+    conditionList.insert(QStringLiteral("heavy thunderstorm with rain"), Thunderstorm);
+    conditionList.insert(QStringLiteral("ice crystals"), Flurries);
+    conditionList.insert(QStringLiteral("ice pellets"), Hail);
+    conditionList.insert(QStringLiteral("increasing cloud"), Overcast);
+    conditionList.insert(QStringLiteral("light drizzle"), LightRain);
+    conditionList.insert(QStringLiteral("light freezing drizzle"), FreezingRain);
+    conditionList.insert(QStringLiteral("light freezing rain"), FreezingRain);
+    conditionList.insert(QStringLiteral("light rain"), LightRain);
+    conditionList.insert(QStringLiteral("light rainshower"), LightRain);
+    conditionList.insert(QStringLiteral("light snow"), LightSnow);
+    conditionList.insert(QStringLiteral("light snow pellets"), LightSnow);
+    conditionList.insert(QStringLiteral("light snowshower"), Flurries);
+    conditionList.insert(QStringLiteral("lightning visible"), Thunderstorm);
+    conditionList.insert(QStringLiteral("mist"), Mist);
+    conditionList.insert(QStringLiteral("mixed rain and drizzle"), LightRain);
+    conditionList.insert(QStringLiteral("mixed rain and snow shower"), RainSnow);
+    conditionList.insert(QStringLiteral("not reported"), NotAvailable);
+    conditionList.insert(QStringLiteral("rain"), Rain);
+    conditionList.insert(QStringLiteral("rain and snow"), RainSnow);
+    conditionList.insert(QStringLiteral("rainshower"), LightRain);
+    conditionList.insert(QStringLiteral("recent drizzle"), LightRain);
+    conditionList.insert(QStringLiteral("recent dust or sand storm"), NotAvailable);
+    conditionList.insert(QStringLiteral("recent fog"), Mist);
+    conditionList.insert(QStringLiteral("recent freezing precipitation"), FreezingDrizzle);
+    conditionList.insert(QStringLiteral("recent hail"), Hail);
+    conditionList.insert(QStringLiteral("recent rain"), Rain);
+    conditionList.insert(QStringLiteral("recent rain and snow"), RainSnow);
+    conditionList.insert(QStringLiteral("recent rainshower"), Rain);
+    conditionList.insert(QStringLiteral("recent snow"), Snow);
+    conditionList.insert(QStringLiteral("recent snowshower"), Flurries);
+    conditionList.insert(QStringLiteral("recent thunderstorm"), Thunderstorm);
+    conditionList.insert(QStringLiteral("recent thunderstorm with hail"), Thunderstorm);
+    conditionList.insert(QStringLiteral("recent thunderstorm with heavy hail"), Thunderstorm);
+    conditionList.insert(QStringLiteral("recent thunderstorm with heavy rain"), Thunderstorm);
+    conditionList.insert(QStringLiteral("recent thunderstorm with rain"), Thunderstorm);
+    conditionList.insert(QStringLiteral("sand or dust storm"), NotAvailable);
+    conditionList.insert(QStringLiteral("severe sand or dust storm"), NotAvailable);
+    conditionList.insert(QStringLiteral("shallow fog"), Mist);
+    conditionList.insert(QStringLiteral("smoke"), NotAvailable);
+    conditionList.insert(QStringLiteral("snow"), Snow);
+    conditionList.insert(QStringLiteral("snow crystals"), Flurries);
+    conditionList.insert(QStringLiteral("snow grains"), Flurries);
+    conditionList.insert(QStringLiteral("squalls"), Snow);
+    conditionList.insert(QStringLiteral("thunderstorm with hail"), Thunderstorm);
+    conditionList.insert(QStringLiteral("thunderstorm with rain"), Thunderstorm);
+    conditionList.insert(QStringLiteral("thunderstorm with sand or dust storm"), Thunderstorm);
+    conditionList.insert(QStringLiteral("thunderstorm without precipitation"), Thunderstorm);
+    conditionList.insert(QStringLiteral("tornado"), NotAvailable);
+
     return conditionList;
 }
 
@@ -164,245 +165,245 @@ QMap<QString, IonInterface::ConditionIcons> EnvCanadaIon::setupForecastIconMappi
     QMap<QString, ConditionIcons> forecastList;
 
     // Abbreviated forecast descriptions
-    forecastList["a few flurries"] = Flurries;
-    forecastList["a few flurries mixed with ice pellets"] = RainSnow;
-    forecastList["a few flurries or rain showers"] = RainSnow;
-    forecastList["a few flurries or thundershowers"] = RainSnow;
-    forecastList["a few rain showers or flurries"] = RainSnow;
-    forecastList["a few rain showers or wet flurries"] = RainSnow;
-    forecastList["a few showers"] = LightRain;
-    forecastList["a few showers or drizzle"] = LightRain;
-    forecastList["a few showers or thundershowers"] = Thunderstorm;
-    forecastList["a few showers or thunderstorms"] = Thunderstorm;
-    forecastList["a few thundershowers"] = Thunderstorm;
-    forecastList["a few thunderstorms"] = Thunderstorm;
-    forecastList["a few wet flurries"] = RainSnow;
-    forecastList["a few wet flurries or rain showers"] = RainSnow;
-    forecastList["a mix of sun and cloud"] = PartlyCloudyDay;
-    forecastList["cloudy with sunny periods"] = PartlyCloudyDay;
-    forecastList["partly cloudy"] = PartlyCloudyDay;
-    forecastList["mainly sunny"] = FewCloudsDay;
-    forecastList["sunny"] = ClearDay;
-    forecastList["blizzard"] = Snow;
-    forecastList["clear"] = ClearNight;
-    forecastList["cloudy"] = Overcast;
-    forecastList["drizzle"] = LightRain;
-    forecastList["drizzle mixed with freezing drizzle"] = FreezingDrizzle;
-    forecastList["drizzle mixed with rain"] = LightRain;
-    forecastList["drizzle or freezing drizzle"] = LightRain;
-    forecastList["drizzle or rain"] = LightRain;
-    forecastList["flurries"] = Flurries;
-    forecastList["flurries at times heavy"] = Flurries;
-    forecastList["flurries at times heavy or rain snowers"] = RainSnow;
-    forecastList["flurries mixed with ice pellets"] = FreezingRain;
-    forecastList["flurries or ice pellets"] = FreezingRain;
-    forecastList["flurries or rain showers"] = RainSnow;
-    forecastList["flurries or thundershowers"] = Flurries;
-    forecastList["fog"] = Mist;
-    forecastList["fog developing"] = Mist;
-    forecastList["fog dissipating"] = Mist;
-    forecastList["fog patches"] = Mist;
-    forecastList["freezing drizzle"] = FreezingDrizzle;
-    forecastList["freezing rain"] = FreezingRain;
-    forecastList["freezing rain mixed with rain"] = FreezingRain;
-    forecastList["freezing rain mixed with snow"] = FreezingRain;
-    forecastList["freezing rain or ice pellets"] = FreezingRain;
-    forecastList["freezing rain or rain"] = FreezingRain;
-    forecastList["freezing rain or snow"] = FreezingRain;
-    forecastList["ice fog"] = Mist;
-    forecastList["ice fog developing"] = Mist;
-    forecastList["ice fog dissipating"] = Mist;
-    forecastList["ice pellet"] = Hail;
-    forecastList["ice pellet mixed with freezing rain"] = Hail;
-    forecastList["ice pellet mixed with snow"] = Hail;
-    forecastList["ice pellet or snow"] = RainSnow;
-    forecastList["light snow"] = LightSnow;
-    forecastList["light snow and blizzard"] = LightSnow;
-    forecastList["light snow and blizzard and blowing snow"] = Snow;
-    forecastList["light snow and blowing snow"] = LightSnow;
-    forecastList["light snow mixed with freezing drizzle"] = FreezingDrizzle;
-    forecastList["light snow mixed with freezing rain"] = FreezingRain;
-    forecastList["light snow or ice pellets"] = LightSnow;
-    forecastList["light snow or rain"] = RainSnow;
-    forecastList["light wet snow"] = RainSnow;
-    forecastList["light wet snow or rain"] = RainSnow;
-    forecastList["local snow squalls"] = Snow;
-    forecastList["near blizzard"] = Snow;
-    forecastList["overcast"] = Overcast;
-    forecastList["increasing cloudiness"] = Overcast;
-    forecastList["increasing clouds"] = Overcast;
-    forecastList["periods of drizzle"] = LightRain;
-    forecastList["periods of drizzle mixed with freezing drizzle"] = FreezingDrizzle;
-    forecastList["periods of drizzle mixed with rain"] = LightRain;
-    forecastList["periods of drizzle or freezing drizzle"] = FreezingDrizzle;
-    forecastList["periods of drizzle or rain"] = LightRain;
-    forecastList["periods of freezing drizzle"] = FreezingDrizzle;
-    forecastList["periods of freezing drizzle or drizzle"] = FreezingDrizzle;
-    forecastList["periods of freezing drizzle or rain"] = FreezingDrizzle;
-    forecastList["periods of freezing rain"] = FreezingRain;
-    forecastList["periods of freezing rain mixed with ice pellets"] = FreezingRain;
-    forecastList["periods of freezing rain mixed with rain"] = FreezingRain;
-    forecastList["periods of freezing rain mixed with snow"] = FreezingRain;
-    forecastList["periods of freezing rain mixed with freezing drizzle"] = FreezingRain;
-    forecastList["periods of freezing rain or ice pellets"] = FreezingRain;
-    forecastList["periods of freezing rain or rain"] = FreezingRain;
-    forecastList["periods of freezing rain or snow"] = FreezingRain;
-    forecastList["periods of ice pellet"] = Hail;
-    forecastList["periods of ice pellet mixed with freezing rain"] = Hail;
-    forecastList["periods of ice pellet mixed with snow"] = Hail;
-    forecastList["periods of ice pellet or freezing rain"] = Hail;
-    forecastList["periods of ice pellet or snow"] = Hail;
-    forecastList["periods of light snow"] = LightSnow;
-    forecastList["periods of light snow and blizzard"] = Snow;
-    forecastList["periods of light snow and blizzard and blowing snow"] = Snow;
-    forecastList["periods of light snow and blowing snow"] = LightSnow;
-    forecastList["periods of light snow mixed with freezing drizzle"] = RainSnow;
-    forecastList["periods of light snow mixed with freezing rain"] = RainSnow;
-    forecastList["periods of light snow mixed with ice pelletS"] = LightSnow;
-    forecastList["periods of light snow mixed with rain"] = RainSnow;
-    forecastList["periods of light snow or freezing drizzle"] = RainSnow;
-    forecastList["periods of light snow or freezing rain"] = RainSnow;
-    forecastList["periods of light snow or ice pellets"] = LightSnow;
-    forecastList["periods of light snow or rain"] = RainSnow;
-    forecastList["periods of light wet snow"] = LightSnow;
-    forecastList["periods of light wet snow mixed with rain"] = RainSnow;
-    forecastList["periods of light wet snow or rain"] = RainSnow;
-    forecastList["periods of rain"] = Rain;
-    forecastList["periods of rain mixed with freezing rain"] = Rain;
-    forecastList["periods of rain mixed with snow"] = RainSnow;
-    forecastList["periods of rain or drizzle"] = Rain;
-    forecastList["periods of rain or freezing rain"] = Rain;
-    forecastList["periods of rain or thundershowers"] = Showers;
-    forecastList["periods of rain or thunderstorms"] = Thunderstorm;
-    forecastList["periods of rain or snow"] = RainSnow;
-    forecastList["periods of snow"] = Snow;
-    forecastList["periods of snow and blizzard"] = Snow;
-    forecastList["periods of snow and blizzard and blowing snow"] = Snow;
-    forecastList["periods of snow and blowing snow"] = Snow;
-    forecastList["periods of snow mixed with freezing drizzle"] = RainSnow;
-    forecastList["periods of snow mixed with freezing rain"] = RainSnow;
-    forecastList["periods of snow mixed with ice pellets"] = Snow;
-    forecastList["periods of snow mixed with rain"] = RainSnow;
-    forecastList["periods of snow or freezing drizzle"] = RainSnow;
-    forecastList["periods of snow or freezing rain"] = RainSnow;
-    forecastList["periods of snow or ice pellets"] = Snow;
-    forecastList["periods of snow or rain"] = RainSnow;
-    forecastList["periods of rain or snow"] = RainSnow;
-    forecastList["periods of wet snow"] = Snow;
-    forecastList["periods of wet snow mixed with rain"] = RainSnow;
-    forecastList["periods of wet snow or rain"] = RainSnow;
-    forecastList["rain"] = Rain;
-    forecastList["rain at times heavy"] = Rain;
-    forecastList["rain at times heavy mixed with freezing rain"] = FreezingRain;
-    forecastList["rain at times heavy mixed with snow"] = RainSnow;
-    forecastList["rain at times heavy or drizzle"] = Rain;
-    forecastList["rain at times heavy or freezing rain"] = Rain;
-    forecastList["rain at times heavy or snow"] = RainSnow;
-    forecastList["rain at times heavy or thundershowers"] = Showers;
-    forecastList["rain at times heavy or thunderstorms"] = Thunderstorm;
-    forecastList["rain mixed with freezing rain"] = FreezingRain;
-    forecastList["rain mixed with snow"] = RainSnow;
-    forecastList["rain or drizzle"] = Rain;
-    forecastList["rain or freezing rain"] = Rain;
-    forecastList["rain or snow"] = RainSnow;
-    forecastList["rain or thundershowers"] = Showers;
-    forecastList["rain or thunderstorms"] = Thunderstorm;
-    forecastList["rain showers or flurries"] = RainSnow;
-    forecastList["rain showers or wet flurries"] = RainSnow;
-    forecastList["showers"] = Showers;
-    forecastList["showers at times heavy"] = Showers;
-    forecastList["showers at times heavy or thundershowers"] = Showers;
-    forecastList["showers at times heavy or thunderstorms"] = Thunderstorm;
-    forecastList["showers or drizzle"] = Showers;
-    forecastList["showers or thundershowers"] = Thunderstorm;
-    forecastList["showers or thunderstorms"] = Thunderstorm;
-    forecastList["smoke"] = NotAvailable;
-    forecastList["snow"] = Snow;
-    forecastList["snow and blizzard"] = Snow;
-    forecastList["snow and blizzard and blowing snow"] = Snow;
-    forecastList["snow and blowing snow"] = Snow;
-    forecastList["snow at times heavy"] = Snow;
-    forecastList["snow at times heavy and blizzard"] = Snow;
-    forecastList["snow at times heavy and blowing snow"] = Snow;
-    forecastList["snow at times heavy mixed with freezing drizzle"] = RainSnow;
-    forecastList["snow at times heavy mixed with freezing rain"] = RainSnow;
-    forecastList["snow at times heavy mixed with ice pellets"] = Snow;
-    forecastList["snow at times heavy mixed with rain"] = RainSnow;
-    forecastList["snow at times heavy or freezing rain"] = RainSnow;
-    forecastList["snow at times heavy or ice pellets"] = Snow;
-    forecastList["snow at times heavy or rain"] = RainSnow;
-    forecastList["snow mixed with freezing drizzle"] = RainSnow;
-    forecastList["snow mixed with freezing rain"] = RainSnow;
-    forecastList["snow mixed with ice pellets"] = Snow;
-    forecastList["snow mixed with rain"] = RainSnow;
-    forecastList["snow or freezing drizzle"] = RainSnow;
-    forecastList["snow or freezing rain"] = RainSnow;
-    forecastList["snow or ice pellets"] = Snow;
-    forecastList["snow or rain"] = RainSnow;
-    forecastList["snow squalls"] = Snow;
-    forecastList["sunny"] = ClearDay;
-    forecastList["sunny with cloudy periods"] = PartlyCloudyDay;
-    forecastList["thunderstorms"] = Thunderstorm;
-    forecastList["thunderstorms and possible hail"] = Thunderstorm;
-    forecastList["wet flurries"] = Flurries;
-    forecastList["wet flurries at times heavy"] = Flurries;
-    forecastList["wet flurries at times heavy or rain snowers"] = RainSnow;
-    forecastList["wet flurries or rain showers"] = RainSnow;
-    forecastList["wet snow"] = Snow;
-    forecastList["wet snow at times heavy"] = Snow;
-    forecastList["wet snow at times heavy mixed with rain"] = RainSnow;
-    forecastList["wet snow mixed with rain"] = RainSnow;
-    forecastList["wet snow or rain"] = RainSnow;
-    forecastList["windy"] = NotAvailable;
+    forecastList.insert(QStringLiteral("a few flurries"), Flurries);
+    forecastList.insert(QStringLiteral("a few flurries mixed with ice pellets"), RainSnow);
+    forecastList.insert(QStringLiteral("a few flurries or rain showers"), RainSnow);
+    forecastList.insert(QStringLiteral("a few flurries or thundershowers"), RainSnow);
+    forecastList.insert(QStringLiteral("a few rain showers or flurries"), RainSnow);
+    forecastList.insert(QStringLiteral("a few rain showers or wet flurries"), RainSnow);
+    forecastList.insert(QStringLiteral("a few showers"), LightRain);
+    forecastList.insert(QStringLiteral("a few showers or drizzle"), LightRain);
+    forecastList.insert(QStringLiteral("a few showers or thundershowers"), Thunderstorm);
+    forecastList.insert(QStringLiteral("a few showers or thunderstorms"), Thunderstorm);
+    forecastList.insert(QStringLiteral("a few thundershowers"), Thunderstorm);
+    forecastList.insert(QStringLiteral("a few thunderstorms"), Thunderstorm);
+    forecastList.insert(QStringLiteral("a few wet flurries"), RainSnow);
+    forecastList.insert(QStringLiteral("a few wet flurries or rain showers"), RainSnow);
+    forecastList.insert(QStringLiteral("a mix of sun and cloud"), PartlyCloudyDay);
+    forecastList.insert(QStringLiteral("cloudy with sunny periods"), PartlyCloudyDay);
+    forecastList.insert(QStringLiteral("partly cloudy"), PartlyCloudyDay);
+    forecastList.insert(QStringLiteral("mainly sunny"), FewCloudsDay);
+    forecastList.insert(QStringLiteral("sunny"), ClearDay);
+    forecastList.insert(QStringLiteral("blizzard"), Snow);
+    forecastList.insert(QStringLiteral("clear"), ClearNight);
+    forecastList.insert(QStringLiteral("cloudy"), Overcast);
+    forecastList.insert(QStringLiteral("drizzle"), LightRain);
+    forecastList.insert(QStringLiteral("drizzle mixed with freezing drizzle"), FreezingDrizzle);
+    forecastList.insert(QStringLiteral("drizzle mixed with rain"), LightRain);
+    forecastList.insert(QStringLiteral("drizzle or freezing drizzle"), LightRain);
+    forecastList.insert(QStringLiteral("drizzle or rain"), LightRain);
+    forecastList.insert(QStringLiteral("flurries"), Flurries);
+    forecastList.insert(QStringLiteral("flurries at times heavy"), Flurries);
+    forecastList.insert(QStringLiteral("flurries at times heavy or rain snowers"), RainSnow);
+    forecastList.insert(QStringLiteral("flurries mixed with ice pellets"), FreezingRain);
+    forecastList.insert(QStringLiteral("flurries or ice pellets"), FreezingRain);
+    forecastList.insert(QStringLiteral("flurries or rain showers"), RainSnow);
+    forecastList.insert(QStringLiteral("flurries or thundershowers"), Flurries);
+    forecastList.insert(QStringLiteral("fog"), Mist);
+    forecastList.insert(QStringLiteral("fog developing"), Mist);
+    forecastList.insert(QStringLiteral("fog dissipating"), Mist);
+    forecastList.insert(QStringLiteral("fog patches"), Mist);
+    forecastList.insert(QStringLiteral("freezing drizzle"), FreezingDrizzle);
+    forecastList.insert(QStringLiteral("freezing rain"), FreezingRain);
+    forecastList.insert(QStringLiteral("freezing rain mixed with rain"), FreezingRain);
+    forecastList.insert(QStringLiteral("freezing rain mixed with snow"), FreezingRain);
+    forecastList.insert(QStringLiteral("freezing rain or ice pellets"), FreezingRain);
+    forecastList.insert(QStringLiteral("freezing rain or rain"), FreezingRain);
+    forecastList.insert(QStringLiteral("freezing rain or snow"), FreezingRain);
+    forecastList.insert(QStringLiteral("ice fog"), Mist);
+    forecastList.insert(QStringLiteral("ice fog developing"), Mist);
+    forecastList.insert(QStringLiteral("ice fog dissipating"), Mist);
+    forecastList.insert(QStringLiteral("ice pellet"), Hail);
+    forecastList.insert(QStringLiteral("ice pellet mixed with freezing rain"), Hail);
+    forecastList.insert(QStringLiteral("ice pellet mixed with snow"), Hail);
+    forecastList.insert(QStringLiteral("ice pellet or snow"), RainSnow);
+    forecastList.insert(QStringLiteral("light snow"), LightSnow);
+    forecastList.insert(QStringLiteral("light snow and blizzard"), LightSnow);
+    forecastList.insert(QStringLiteral("light snow and blizzard and blowing snow"), Snow);
+    forecastList.insert(QStringLiteral("light snow and blowing snow"), LightSnow);
+    forecastList.insert(QStringLiteral("light snow mixed with freezing drizzle"), FreezingDrizzle);
+    forecastList.insert(QStringLiteral("light snow mixed with freezing rain"), FreezingRain);
+    forecastList.insert(QStringLiteral("light snow or ice pellets"), LightSnow);
+    forecastList.insert(QStringLiteral("light snow or rain"), RainSnow);
+    forecastList.insert(QStringLiteral("light wet snow"), RainSnow);
+    forecastList.insert(QStringLiteral("light wet snow or rain"), RainSnow);
+    forecastList.insert(QStringLiteral("local snow squalls"), Snow);
+    forecastList.insert(QStringLiteral("near blizzard"), Snow);
+    forecastList.insert(QStringLiteral("overcast"), Overcast);
+    forecastList.insert(QStringLiteral("increasing cloudiness"), Overcast);
+    forecastList.insert(QStringLiteral("increasing clouds"), Overcast);
+    forecastList.insert(QStringLiteral("periods of drizzle"), LightRain);
+    forecastList.insert(QStringLiteral("periods of drizzle mixed with freezing drizzle"), FreezingDrizzle);
+    forecastList.insert(QStringLiteral("periods of drizzle mixed with rain"), LightRain);
+    forecastList.insert(QStringLiteral("periods of drizzle or freezing drizzle"), FreezingDrizzle);
+    forecastList.insert(QStringLiteral("periods of drizzle or rain"), LightRain);
+    forecastList.insert(QStringLiteral("periods of freezing drizzle"), FreezingDrizzle);
+    forecastList.insert(QStringLiteral("periods of freezing drizzle or drizzle"), FreezingDrizzle);
+    forecastList.insert(QStringLiteral("periods of freezing drizzle or rain"), FreezingDrizzle);
+    forecastList.insert(QStringLiteral("periods of freezing rain"), FreezingRain);
+    forecastList.insert(QStringLiteral("periods of freezing rain mixed with ice pellets"), FreezingRain);
+    forecastList.insert(QStringLiteral("periods of freezing rain mixed with rain"), FreezingRain);
+    forecastList.insert(QStringLiteral("periods of freezing rain mixed with snow"), FreezingRain);
+    forecastList.insert(QStringLiteral("periods of freezing rain mixed with freezing drizzle"), FreezingRain);
+    forecastList.insert(QStringLiteral("periods of freezing rain or ice pellets"), FreezingRain);
+    forecastList.insert(QStringLiteral("periods of freezing rain or rain"), FreezingRain);
+    forecastList.insert(QStringLiteral("periods of freezing rain or snow"), FreezingRain);
+    forecastList.insert(QStringLiteral("periods of ice pellet"), Hail);
+    forecastList.insert(QStringLiteral("periods of ice pellet mixed with freezing rain"), Hail);
+    forecastList.insert(QStringLiteral("periods of ice pellet mixed with snow"), Hail);
+    forecastList.insert(QStringLiteral("periods of ice pellet or freezing rain"), Hail);
+    forecastList.insert(QStringLiteral("periods of ice pellet or snow"), Hail);
+    forecastList.insert(QStringLiteral("periods of light snow"), LightSnow);
+    forecastList.insert(QStringLiteral("periods of light snow and blizzard"), Snow);
+    forecastList.insert(QStringLiteral("periods of light snow and blizzard and blowing snow"), Snow);
+    forecastList.insert(QStringLiteral("periods of light snow and blowing snow"), LightSnow);
+    forecastList.insert(QStringLiteral("periods of light snow mixed with freezing drizzle"), RainSnow);
+    forecastList.insert(QStringLiteral("periods of light snow mixed with freezing rain"), RainSnow);
+    forecastList.insert(QStringLiteral("periods of light snow mixed with ice pelletS"), LightSnow);
+    forecastList.insert(QStringLiteral("periods of light snow mixed with rain"), RainSnow);
+    forecastList.insert(QStringLiteral("periods of light snow or freezing drizzle"), RainSnow);
+    forecastList.insert(QStringLiteral("periods of light snow or freezing rain"), RainSnow);
+    forecastList.insert(QStringLiteral("periods of light snow or ice pellets"), LightSnow);
+    forecastList.insert(QStringLiteral("periods of light snow or rain"), RainSnow);
+    forecastList.insert(QStringLiteral("periods of light wet snow"), LightSnow);
+    forecastList.insert(QStringLiteral("periods of light wet snow mixed with rain"), RainSnow);
+    forecastList.insert(QStringLiteral("periods of light wet snow or rain"), RainSnow);
+    forecastList.insert(QStringLiteral("periods of rain"), Rain);
+    forecastList.insert(QStringLiteral("periods of rain mixed with freezing rain"), Rain);
+    forecastList.insert(QStringLiteral("periods of rain mixed with snow"), RainSnow);
+    forecastList.insert(QStringLiteral("periods of rain or drizzle"), Rain);
+    forecastList.insert(QStringLiteral("periods of rain or freezing rain"), Rain);
+    forecastList.insert(QStringLiteral("periods of rain or thundershowers"), Showers);
+    forecastList.insert(QStringLiteral("periods of rain or thunderstorms"), Thunderstorm);
+    forecastList.insert(QStringLiteral("periods of rain or snow"), RainSnow);
+    forecastList.insert(QStringLiteral("periods of snow"), Snow);
+    forecastList.insert(QStringLiteral("periods of snow and blizzard"), Snow);
+    forecastList.insert(QStringLiteral("periods of snow and blizzard and blowing snow"), Snow);
+    forecastList.insert(QStringLiteral("periods of snow and blowing snow"), Snow);
+    forecastList.insert(QStringLiteral("periods of snow mixed with freezing drizzle"), RainSnow);
+    forecastList.insert(QStringLiteral("periods of snow mixed with freezing rain"), RainSnow);
+    forecastList.insert(QStringLiteral("periods of snow mixed with ice pellets"), Snow);
+    forecastList.insert(QStringLiteral("periods of snow mixed with rain"), RainSnow);
+    forecastList.insert(QStringLiteral("periods of snow or freezing drizzle"), RainSnow);
+    forecastList.insert(QStringLiteral("periods of snow or freezing rain"), RainSnow);
+    forecastList.insert(QStringLiteral("periods of snow or ice pellets"), Snow);
+    forecastList.insert(QStringLiteral("periods of snow or rain"), RainSnow);
+    forecastList.insert(QStringLiteral("periods of rain or snow"), RainSnow);
+    forecastList.insert(QStringLiteral("periods of wet snow"), Snow);
+    forecastList.insert(QStringLiteral("periods of wet snow mixed with rain"), RainSnow);
+    forecastList.insert(QStringLiteral("periods of wet snow or rain"), RainSnow);
+    forecastList.insert(QStringLiteral("rain"), Rain);
+    forecastList.insert(QStringLiteral("rain at times heavy"), Rain);
+    forecastList.insert(QStringLiteral("rain at times heavy mixed with freezing rain"), FreezingRain);
+    forecastList.insert(QStringLiteral("rain at times heavy mixed with snow"), RainSnow);
+    forecastList.insert(QStringLiteral("rain at times heavy or drizzle"), Rain);
+    forecastList.insert(QStringLiteral("rain at times heavy or freezing rain"), Rain);
+    forecastList.insert(QStringLiteral("rain at times heavy or snow"), RainSnow);
+    forecastList.insert(QStringLiteral("rain at times heavy or thundershowers"), Showers);
+    forecastList.insert(QStringLiteral("rain at times heavy or thunderstorms"), Thunderstorm);
+    forecastList.insert(QStringLiteral("rain mixed with freezing rain"), FreezingRain);
+    forecastList.insert(QStringLiteral("rain mixed with snow"), RainSnow);
+    forecastList.insert(QStringLiteral("rain or drizzle"), Rain);
+    forecastList.insert(QStringLiteral("rain or freezing rain"), Rain);
+    forecastList.insert(QStringLiteral("rain or snow"), RainSnow);
+    forecastList.insert(QStringLiteral("rain or thundershowers"), Showers);
+    forecastList.insert(QStringLiteral("rain or thunderstorms"), Thunderstorm);
+    forecastList.insert(QStringLiteral("rain showers or flurries"), RainSnow);
+    forecastList.insert(QStringLiteral("rain showers or wet flurries"), RainSnow);
+    forecastList.insert(QStringLiteral("showers"), Showers);
+    forecastList.insert(QStringLiteral("showers at times heavy"), Showers);
+    forecastList.insert(QStringLiteral("showers at times heavy or thundershowers"), Showers);
+    forecastList.insert(QStringLiteral("showers at times heavy or thunderstorms"), Thunderstorm);
+    forecastList.insert(QStringLiteral("showers or drizzle"), Showers);
+    forecastList.insert(QStringLiteral("showers or thundershowers"), Thunderstorm);
+    forecastList.insert(QStringLiteral("showers or thunderstorms"), Thunderstorm);
+    forecastList.insert(QStringLiteral("smoke"), NotAvailable);
+    forecastList.insert(QStringLiteral("snow"), Snow);
+    forecastList.insert(QStringLiteral("snow and blizzard"), Snow);
+    forecastList.insert(QStringLiteral("snow and blizzard and blowing snow"), Snow);
+    forecastList.insert(QStringLiteral("snow and blowing snow"), Snow);
+    forecastList.insert(QStringLiteral("snow at times heavy"), Snow);
+    forecastList.insert(QStringLiteral("snow at times heavy and blizzard"), Snow);
+    forecastList.insert(QStringLiteral("snow at times heavy and blowing snow"), Snow);
+    forecastList.insert(QStringLiteral("snow at times heavy mixed with freezing drizzle"), RainSnow);
+    forecastList.insert(QStringLiteral("snow at times heavy mixed with freezing rain"), RainSnow);
+    forecastList.insert(QStringLiteral("snow at times heavy mixed with ice pellets"), Snow);
+    forecastList.insert(QStringLiteral("snow at times heavy mixed with rain"), RainSnow);
+    forecastList.insert(QStringLiteral("snow at times heavy or freezing rain"), RainSnow);
+    forecastList.insert(QStringLiteral("snow at times heavy or ice pellets"), Snow);
+    forecastList.insert(QStringLiteral("snow at times heavy or rain"), RainSnow);
+    forecastList.insert(QStringLiteral("snow mixed with freezing drizzle"), RainSnow);
+    forecastList.insert(QStringLiteral("snow mixed with freezing rain"), RainSnow);
+    forecastList.insert(QStringLiteral("snow mixed with ice pellets"), Snow);
+    forecastList.insert(QStringLiteral("snow mixed with rain"), RainSnow);
+    forecastList.insert(QStringLiteral("snow or freezing drizzle"), RainSnow);
+    forecastList.insert(QStringLiteral("snow or freezing rain"), RainSnow);
+    forecastList.insert(QStringLiteral("snow or ice pellets"), Snow);
+    forecastList.insert(QStringLiteral("snow or rain"), RainSnow);
+    forecastList.insert(QStringLiteral("snow squalls"), Snow);
+    forecastList.insert(QStringLiteral("sunny"), ClearDay);
+    forecastList.insert(QStringLiteral("sunny with cloudy periods"), PartlyCloudyDay);
+    forecastList.insert(QStringLiteral("thunderstorms"), Thunderstorm);
+    forecastList.insert(QStringLiteral("thunderstorms and possible hail"), Thunderstorm);
+    forecastList.insert(QStringLiteral("wet flurries"), Flurries);
+    forecastList.insert(QStringLiteral("wet flurries at times heavy"), Flurries);
+    forecastList.insert(QStringLiteral("wet flurries at times heavy or rain snowers"), RainSnow);
+    forecastList.insert(QStringLiteral("wet flurries or rain showers"), RainSnow);
+    forecastList.insert(QStringLiteral("wet snow"), Snow);
+    forecastList.insert(QStringLiteral("wet snow at times heavy"), Snow);
+    forecastList.insert(QStringLiteral("wet snow at times heavy mixed with rain"), RainSnow);
+    forecastList.insert(QStringLiteral("wet snow mixed with rain"), RainSnow);
+    forecastList.insert(QStringLiteral("wet snow or rain"), RainSnow);
+    forecastList.insert(QStringLiteral("windy"), NotAvailable);
 
-    forecastList["chance of drizzle mixed with freezing drizzle"] = LightRain;
-    forecastList["chance of flurries mixed with ice pellets"] = Flurries;
-    forecastList["chance of flurries or ice pellets"] = Flurries;
-    forecastList["chance of flurries or rain showers"] = RainSnow;
-    forecastList["chance of flurries or thundershowers"] = RainSnow;
-    forecastList["chance of freezing drizzle"] = FreezingDrizzle;
-    forecastList["chance of freezing rain"] = FreezingRain;
-    forecastList["chance of freezing rain mixed with snow"] = RainSnow;
-    forecastList["chance of freezing rain or rain"] = FreezingRain;
-    forecastList["chance of freezing rain or snow"] = RainSnow;
-    forecastList["chance of light snow and blowing snow"] = LightSnow;
-    forecastList["chance of light snow mixed with freezing drizzle"] = LightSnow;
-    forecastList["chance of light snow mixed with ice pellets"] = LightSnow;
-    forecastList["chance of light snow mixed with rain"] = RainSnow;
-    forecastList["chance of light snow or freezing rain"] = RainSnow;
-    forecastList["chance of light snow or ice pellets"] = LightSnow;
-    forecastList["chance of light snow or rain"] = RainSnow;
-    forecastList["chance of light wet snow"] = Snow;
-    forecastList["chance of rain"] = Rain;
-    forecastList["chance of rain at times heavy"] = Rain;
-    forecastList["chance of rain mixed with snow"] = RainSnow;
-    forecastList["chance of rain or drizzle"] = Rain;
-    forecastList["chance of rain or freezing rain"] = Rain;
-    forecastList["chance of rain or snow"] = RainSnow;
-    forecastList["chance of rain showers or flurries"] = RainSnow;
-    forecastList["chance of rain showers or wet flurries"] = RainSnow;
-    forecastList["chance of severe thunderstorms"] = Thunderstorm;
-    forecastList["chance of showers at times heavy"] = Rain;
-    forecastList["chance of showers at times heavy or thundershowers"] = Thunderstorm;
-    forecastList["chance of showers at times heavy or thunderstorms"] = Thunderstorm;
-    forecastList["chance of showers or thundershowers"] = Thunderstorm;
-    forecastList["chance of showers or thunderstorms"] = Thunderstorm;
-    forecastList["chance of snow"] = Snow;
-    forecastList["chance of snow and blizzard"] = Snow;
-    forecastList["chance of snow mixed with freezing drizzle"] = Snow;
-    forecastList["chance of snow mixed with freezing rain"] = RainSnow;
-    forecastList["chance of snow mixed with rain"] = RainSnow;
-    forecastList["chance of snow or rain"] = RainSnow;
-    forecastList["chance of snow squalls"] = Snow;
-    forecastList["chance of thundershowers"] = Showers;
-    forecastList["chance of thunderstorms"] = Thunderstorm;
-    forecastList["chance of thunderstorms and possible hail"] = Thunderstorm;
-    forecastList["chance of wet flurries"] = Flurries;
-    forecastList["chance of wet flurries at times heavy"] = Flurries;
-    forecastList["chance of wet flurries or rain showers"] = RainSnow;
-    forecastList["chance of wet snow"] = Snow;
-    forecastList["chance of wet snow mixed with rain"] = RainSnow;
-    forecastList["chance of wet snow or rain"] = RainSnow;
+    forecastList.insert(QStringLiteral("chance of drizzle mixed with freezing drizzle"), LightRain);
+    forecastList.insert(QStringLiteral("chance of flurries mixed with ice pellets"), Flurries);
+    forecastList.insert(QStringLiteral("chance of flurries or ice pellets"), Flurries);
+    forecastList.insert(QStringLiteral("chance of flurries or rain showers"), RainSnow);
+    forecastList.insert(QStringLiteral("chance of flurries or thundershowers"), RainSnow);
+    forecastList.insert(QStringLiteral("chance of freezing drizzle"), FreezingDrizzle);
+    forecastList.insert(QStringLiteral("chance of freezing rain"), FreezingRain);
+    forecastList.insert(QStringLiteral("chance of freezing rain mixed with snow"), RainSnow);
+    forecastList.insert(QStringLiteral("chance of freezing rain or rain"), FreezingRain);
+    forecastList.insert(QStringLiteral("chance of freezing rain or snow"), RainSnow);
+    forecastList.insert(QStringLiteral("chance of light snow and blowing snow"), LightSnow);
+    forecastList.insert(QStringLiteral("chance of light snow mixed with freezing drizzle"), LightSnow);
+    forecastList.insert(QStringLiteral("chance of light snow mixed with ice pellets"), LightSnow);
+    forecastList.insert(QStringLiteral("chance of light snow mixed with rain"), RainSnow);
+    forecastList.insert(QStringLiteral("chance of light snow or freezing rain"), RainSnow);
+    forecastList.insert(QStringLiteral("chance of light snow or ice pellets"), LightSnow);
+    forecastList.insert(QStringLiteral("chance of light snow or rain"), RainSnow);
+    forecastList.insert(QStringLiteral("chance of light wet snow"), Snow);
+    forecastList.insert(QStringLiteral("chance of rain"), Rain);
+    forecastList.insert(QStringLiteral("chance of rain at times heavy"), Rain);
+    forecastList.insert(QStringLiteral("chance of rain mixed with snow"), RainSnow);
+    forecastList.insert(QStringLiteral("chance of rain or drizzle"), Rain);
+    forecastList.insert(QStringLiteral("chance of rain or freezing rain"), Rain);
+    forecastList.insert(QStringLiteral("chance of rain or snow"), RainSnow);
+    forecastList.insert(QStringLiteral("chance of rain showers or flurries"), RainSnow);
+    forecastList.insert(QStringLiteral("chance of rain showers or wet flurries"), RainSnow);
+    forecastList.insert(QStringLiteral("chance of severe thunderstorms"), Thunderstorm);
+    forecastList.insert(QStringLiteral("chance of showers at times heavy"), Rain);
+    forecastList.insert(QStringLiteral("chance of showers at times heavy or thundershowers"), Thunderstorm);
+    forecastList.insert(QStringLiteral("chance of showers at times heavy or thunderstorms"), Thunderstorm);
+    forecastList.insert(QStringLiteral("chance of showers or thundershowers"), Thunderstorm);
+    forecastList.insert(QStringLiteral("chance of showers or thunderstorms"), Thunderstorm);
+    forecastList.insert(QStringLiteral("chance of snow"), Snow);
+    forecastList.insert(QStringLiteral("chance of snow and blizzard"), Snow);
+    forecastList.insert(QStringLiteral("chance of snow mixed with freezing drizzle"), Snow);
+    forecastList.insert(QStringLiteral("chance of snow mixed with freezing rain"), RainSnow);
+    forecastList.insert(QStringLiteral("chance of snow mixed with rain"), RainSnow);
+    forecastList.insert(QStringLiteral("chance of snow or rain"), RainSnow);
+    forecastList.insert(QStringLiteral("chance of snow squalls"), Snow);
+    forecastList.insert(QStringLiteral("chance of thundershowers"), Showers);
+    forecastList.insert(QStringLiteral("chance of thunderstorms"), Thunderstorm);
+    forecastList.insert(QStringLiteral("chance of thunderstorms and possible hail"), Thunderstorm);
+    forecastList.insert(QStringLiteral("chance of wet flurries"), Flurries);
+    forecastList.insert(QStringLiteral("chance of wet flurries at times heavy"), Flurries);
+    forecastList.insert(QStringLiteral("chance of wet flurries or rain showers"), RainSnow);
+    forecastList.insert(QStringLiteral("chance of wet snow"), Snow);
+    forecastList.insert(QStringLiteral("chance of wet snow mixed with rain"), RainSnow);
+    forecastList.insert(QStringLiteral("chance of wet snow or rain"), RainSnow);
 
     return forecastList;
 }
@@ -427,15 +428,11 @@ QStringList EnvCanadaIon::validate(const QString& source) const
     QHash<QString, EnvCanadaIon::XMLMapInfo>::const_iterator it = m_places.constBegin();
     while (it != m_places.constEnd()) {
         if (it.key().toUpper().contains(sourceNormalized)) {
-            placeList.append(QString("place|").append(it.key()));
+            placeList.append(QStringLiteral("place|") + it.key());
         }
         ++it;
     }
 
-    // Check if placeList is empty if so, return nothing.
-    if (placeList.isEmpty()) {
-        return QStringList();
-    }
     placeList.sort();
     return placeList;
 }
@@ -449,35 +446,31 @@ bool EnvCanadaIon::updateIonSource(const QString& source)
     // ionname|validate|place_name - Triggers validation of place
     // ionname|weather|place_name - Triggers receiving weather of place
 
-    QStringList sourceAction = source.split('|');
+    const QStringList sourceAction = source.split(QLatin1Char('|'));
 
     // Guard: if the size of array is not 2 then we have bad data, return an error
     if (sourceAction.size() < 2) {
-        setData(source, "validate", "envcan|malformed");
+        setData(source, QStringLiteral("validate"), QStringLiteral("envcan|malformed"));
         return true;
     }
 
-    if (sourceAction[1] == "validate" && sourceAction.size() > 2) {
-        QStringList result = validate(sourceAction[2]);
+    if (sourceAction[1] == QLatin1String("validate") && sourceAction.size() > 2) {
+        const QStringList result = validate(sourceAction[2]);
 
-        if (result.size() == 1) {
-            setData(source, "validate", QString("envcan|valid|single|").append(result.join("|")));
-            return true;
-        }
-        if (result.size() > 1) {
-            setData(source, "validate", QString("envcan|valid|multiple|").append(result.join("|")));
-            return true;
-        }
-        if (result.size() == 0) {
-            setData(source, "validate", QString("envcan|invalid|single|").append(sourceAction[2]));
-            return true;
-        }
+        const QString reply =
+            (result.size() == 1) ? QStringLiteral("envcan|valid|single|") + result[0] :
+            (result.size() > 1) ?  QStringLiteral("envcan|valid|multiple|") + result.join(QLatin1Char('|')) :
+            /*else*/               QStringLiteral("envcan|invalid|single|") + sourceAction[2];
+        setData(source, QStringLiteral("validate"), reply);
 
-    } else if (sourceAction[1] == "weather" && sourceAction.size() > 2) {
+        return true;
+
+    }
+    if (sourceAction[1] == QLatin1String("weather") && sourceAction.size() > 2) {
         getXMLData(source);
         return true;
     }
-    setData(source, "validate", "envcan|malformed");
+    setData(source, QStringLiteral("validate"), QStringLiteral("envcan|malformed"));
     return true;
 }
 
@@ -502,7 +495,7 @@ void EnvCanadaIon::getXMLSetup()
 // Gets specific city XML data
 void EnvCanadaIon::getXMLData(const QString& source)
 {
-    foreach (const QString &fetching, m_jobList) {
+    foreach (const QString& fetching, m_jobList) {
         if (fetching == source) {
             // already getting this source and awaiting the data
             return;
@@ -513,14 +506,14 @@ void EnvCanadaIon::getXMLData(const QString& source)
 
     // Demunge source name for key only.
     QString dataKey = source;
-    dataKey.remove("envcan|weather|");
+    dataKey.remove(QStringLiteral("envcan|weather|"));
 
-    const QUrl url(QLatin1String("http://dd.weatheroffice.ec.gc.ca/citypage_weather/xml/") + m_places[dataKey].territoryName + QLatin1Char('/') + m_places[dataKey].cityCode + QLatin1String("_e.xml"));
+    const QUrl url(QLatin1String("http://dd.weatheroffice.ec.gc.ca/citypage_weather/xml/") + m_places[dataKey].territoryName + QLatin1Char('/') + m_places[dataKey].cityCode + QStringLiteral("_e.xml"));
     //url="file:///home/spstarr/Desktop/s0000649_e.xml";
     //qDebug() << "Will Try URL: " << url;
 
     if (m_places[dataKey].territoryName.isEmpty() && m_places[dataKey].cityCode.isEmpty()) {
-        setData(source, "validate", QString("envcan|malformed"));
+        setData(source, QStringLiteral("validate"), QStringLiteral("envcan|malformed"));
         return;
     }
 
@@ -614,7 +607,7 @@ bool EnvCanadaIon::readXMLSetup()
 
             // XML ID code to match filename
             if (elementName == QLatin1String("site")) {
-                code = m_xmlSetup.attributes().value("code").toString();
+                code = m_xmlSetup.attributes().value(QStringLiteral("code")).toString();
             }
 
             if (elementName == QLatin1String("nameEn")) {
@@ -628,7 +621,7 @@ bool EnvCanadaIon::readXMLSetup()
 
         if (m_xmlSetup.isEndElement() && elementName == QLatin1String("site")) {
             EnvCanadaIon::XMLMapInfo info;
-            QString tmp = cityName + ", " + territory; // Build the key name.
+            QString tmp = cityName + QStringLiteral(", ") + territory; // Build the key name.
 
             // Set the mappings
             info.cityCode = code;
@@ -685,14 +678,13 @@ void EnvCanadaIon::parseWeatherSite(WeatherData& data, QXmlStreamReader& xml)
 bool EnvCanadaIon::readXMLData(const QString& source, QXmlStreamReader& xml)
 {
     WeatherData data;
-    data.comforttemp = i18n("N/A");
     data.recordHigh = 0.0;
     data.recordLow = 0.0;
 
     //qDebug() << "readXMLData()";
 
     QString dataKey = source;
-    dataKey.remove("envcan|weather|");
+    dataKey.remove(QStringLiteral("envcan|weather|"));
     data.shortTerritoryName = m_places[dataKey].territoryName;
     while (!xml.atEnd()) {
         xml.readNext();
@@ -721,8 +713,8 @@ void EnvCanadaIon::parseDateTime(WeatherData& data, QXmlStreamReader& xml, Weath
     Q_ASSERT(xml.isStartElement() && xml.name() == QLatin1String("dateTime"));
 
     // What kind of date info is this?
-    QString dateType = xml.attributes().value("name").toString();
-    QString dateZone = xml.attributes().value("zone").toString();
+    const QString dateType = xml.attributes().value(QStringLiteral("name")).toString();
+    const QString dateZone = xml.attributes().value(QStringLiteral("zone")).toString();
 
     QString selectTimeStamp;
 
@@ -736,10 +728,10 @@ void EnvCanadaIon::parseDateTime(WeatherData& data, QXmlStreamReader& xml, Weath
         const QStringRef elementName = xml.name();
 
         if (xml.isStartElement()) {
-            if (dateType == "xmlCreation") {
+            if (dateType == QLatin1String("xmlCreation")) {
                 return;
             }
-            if (dateZone == "UTC") {
+            if (dateZone == QLatin1String("UTC")) {
                 return;
             }
             if (elementName == QLatin1String("year")) {
@@ -755,25 +747,25 @@ void EnvCanadaIon::parseDateTime(WeatherData& data, QXmlStreamReader& xml, Weath
             else if (elementName == QLatin1String("timeStamp"))
                 selectTimeStamp = xml.readElementText();
             else if (elementName == QLatin1String("textSummary")) {
-                if (dateType == "eventIssue") {
+                if (dateType == QLatin1String("eventIssue")) {
                     if (event) {
                         event->timestamp = xml.readElementText();
                     }
-                } else if (dateType == "observation") {
+                } else if (dateType == QLatin1String("observation")) {
                     xml.readElementText();
-                    m_dateFormat = QDateTime::fromString(selectTimeStamp, "yyyyMMddHHmmss");
-                    data.obsTimestamp = m_dateFormat.toString("dd.MM.yyyy @ hh:mm");
-                    data.iconPeriodHour = m_dateFormat.toString("hh").toInt();
-                    data.iconPeriodMinute = m_dateFormat.toString("mm").toInt();
-                } else if (dateType == "forecastIssue") {
+                    m_dateFormat = QDateTime::fromString(selectTimeStamp, QStringLiteral("yyyyMMddHHmmss"));
+                    data.obsTimestamp = m_dateFormat.toString(QStringLiteral("dd.MM.yyyy @ hh:mm"));
+                    data.iconPeriodHour = m_dateFormat.toString(QStringLiteral("hh")).toInt();
+                    data.iconPeriodMinute = m_dateFormat.toString(QStringLiteral("mm")).toInt();
+                } else if (dateType == QLatin1String("forecastIssue")) {
                     data.forecastTimestamp = xml.readElementText();
-                } else if (dateType == "sunrise") {
+                } else if (dateType == QLatin1String("sunrise")) {
                     data.sunriseTimestamp = xml.readElementText();
-                } else if (dateType == "sunset") {
+                } else if (dateType == QLatin1String("sunset")) {
                     data.sunsetTimestamp = xml.readElementText();
-                } else if (dateType == "moonrise") {
+                } else if (dateType == QLatin1String("moonrise")) {
                     data.moonriseTimestamp = xml.readElementText();
-                } else if (dateType == "moonset") {
+                } else if (dateType == QLatin1String("moonset")) {
                     data.moonsetTimestamp = xml.readElementText();
                 }
             }
@@ -831,7 +823,7 @@ void EnvCanadaIon::parseWindInfo(WeatherData& data, QXmlStreamReader& xml)
             } else if (elementName == QLatin1String("direction")) {
                 data.windDirection = xml.readElementText();
             } else if (elementName == QLatin1String("bearing")) {
-                data.windDegrees = xml.attributes().value("degrees").toString();
+                data.windDegrees = xml.attributes().value(QStringLiteral("degrees")).toString();
             } else {
                 parseUnknownElement(xml);
             }
@@ -854,8 +846,6 @@ void EnvCanadaIon::parseConditions(WeatherData& data, QXmlStreamReader& xml)
     data.pressureTendency = i18n("N/A");
     data.visibility = 0;
     data.humidity = i18n("N/A");
-    data.windSpeed = i18n("N/A");
-    data.windGust = i18n("N/A");
 
     while (!xml.atEnd()) {
         xml.readNext();
@@ -867,9 +857,9 @@ void EnvCanadaIon::parseConditions(WeatherData& data, QXmlStreamReader& xml)
 
         if (xml.isStartElement()) {
             if (elementName == QLatin1String("station")) {
-                data.stationID = xml.attributes().value("code").toString();
-                data.stationLat = xml.attributes().value("lat").toString();
-                data.stationLon = xml.attributes().value("lon").toString();
+                data.stationID = xml.attributes().value(QStringLiteral("code")).toString();
+                data.stationLat = xml.attributes().value(QStringLiteral("lat")).toString();
+                data.stationLon = xml.attributes().value(QStringLiteral("lon")).toString();
             } else if (elementName == QLatin1String("dateTime")) {
                 parseDateTime(data, xml);
             } else if (elementName == QLatin1String("condition")) {
@@ -881,9 +871,9 @@ void EnvCanadaIon::parseConditions(WeatherData& data, QXmlStreamReader& xml)
             } else if (elementName == QLatin1String("humidex") || elementName == QLatin1String("windChill")) {
                 data.comforttemp = xml.readElementText();
             } else if (elementName == QLatin1String("pressure")) {
-                data.pressureTendency = xml.attributes().value("tendency").toString();
+                data.pressureTendency = xml.attributes().value(QStringLiteral("tendency")).toString();
                 if (data.pressureTendency.isEmpty()) {
-                    data.pressureTendency = "steady";
+                    data.pressureTendency = QStringLiteral("steady");
                 }
                 data.pressure = xml.readElementText().toFloat();
             } else if (elementName == QLatin1String("visibility")) {
@@ -909,7 +899,7 @@ void EnvCanadaIon::parseWarnings(WeatherData &data, QXmlStreamReader& xml)
     WeatherData::WeatherEvent *warning = new WeatherData::WeatherEvent;
 
     Q_ASSERT(xml.isStartElement() && xml.name() == QLatin1String("warnings"));
-    QString eventURL = xml.attributes().value("url").toString();
+    QString eventURL = xml.attributes().value(QStringLiteral("url")).toString();
     int flag = 0;
 
     while (!xml.atEnd()) {
@@ -941,24 +931,24 @@ void EnvCanadaIon::parseWarnings(WeatherData &data, QXmlStreamReader& xml)
 
             } else if (elementName == QLatin1String("event")) {
                 // Append new event to list.
-                QString eventType = xml.attributes().value("type").toString();
-                if (eventType == "watch") {
+                QString eventType = xml.attributes().value(QStringLiteral("type")).toString();
+                if (eventType == QLatin1String("watch")) {
                     watch->url = eventURL;
                     watch->type = eventType;
-                    watch->priority = xml.attributes().value("priority").toString();
-                    watch->description = xml.attributes().value("description").toString();
+                    watch->priority = xml.attributes().value(QStringLiteral("priority")).toString();
+                    watch->description = xml.attributes().value(QStringLiteral("description")).toString();
                     flag = 1;
                 }
 
-                if (eventType == "warning") {
+                if (eventType == QLatin1String("warning")) {
                     warning->url = eventURL;
                     warning->type = eventType;
-                    warning->priority = xml.attributes().value("priority").toString();
-                    warning->description = xml.attributes().value("description").toString();
+                    warning->priority = xml.attributes().value(QStringLiteral("priority")).toString();
+                    warning->description = xml.attributes().value(QStringLiteral("description")).toString();
                     flag = 2;
                 }
             } else {
-                if (xml.name() != "dateTime") {
+                if (xml.name() != QLatin1String("dateTime")) {
                     parseUnknownElement(xml);
                 }
             }
@@ -1015,9 +1005,9 @@ void EnvCanadaIon::parseRegionalNormals(WeatherData& data, QXmlStreamReader& xml
         if (xml.isStartElement()) {
             if (elementName == QLatin1String("textSummary")) {
                 xml.readElementText();
-            } else if (elementName == QLatin1String("temperature") && xml.attributes().value("class") == "high") {
+            } else if (elementName == QLatin1String("temperature") && xml.attributes().value(QStringLiteral("class")) == QLatin1String("high")) {
                 data.normalHigh = xml.readElementText();
-            } else if (elementName == QLatin1String("temperature") && xml.attributes().value("class") == "low") {
+            } else if (elementName == QLatin1String("temperature") && xml.attributes().value(QStringLiteral("class")) == QLatin1String("low")) {
                 data.normalLow = xml.readElementText();
             }
         }
@@ -1041,7 +1031,7 @@ void EnvCanadaIon::parseForecast(WeatherData& data, QXmlStreamReader& xml, Weath
 
         if (xml.isStartElement()) {
             if (elementName == QLatin1String("period")) {
-                forecast->forecastPeriod = xml.attributes().value("textForecastName").toString();
+                forecast->forecastPeriod = xml.attributes().value(QStringLiteral("textForecastName")).toString();
             } else if (elementName == QLatin1String("textSummary")) {
                 forecast->forecastSummary = xml.readElementText();
             } else if (elementName == QLatin1String("abbreviatedForecast")) {
@@ -1053,7 +1043,7 @@ void EnvCanadaIon::parseForecast(WeatherData& data, QXmlStreamReader& xml, Weath
             } else if (elementName == QLatin1String("precipitation")) {
                 parsePrecipitationForecast(forecast, xml);
             } else if (elementName == QLatin1String("uv")) {
-                data.UVRating = xml.attributes().value("category").toString();
+                data.UVRating = xml.attributes().value(QStringLiteral("category")).toString();
                 parseUVIndex(data, xml);
                 // else if (elementName == QLatin1String("frost")) { FIXME: Wait until winter to see what this looks like.
                 //  parseFrost(xml, forecast);
@@ -1087,32 +1077,32 @@ void EnvCanadaIon::parseShortForecast(WeatherData::ForecastInfo *forecast, QXmlS
             }
             if (elementName == QLatin1String("textSummary")) {
                 shortText = xml.readElementText();
-                QMap<QString, ConditionIcons> forecastList;
-                forecastList = forecastIcons();
-                if ((forecast->forecastPeriod == "tonight") || (forecast->forecastPeriod.contains("night"))) {
-                    forecastList["a few clouds"] = FewCloudsNight;
-                    forecastList["cloudy periods"] = PartlyCloudyNight;
-                    forecastList["chance of drizzle mixed with rain"] = ChanceShowersNight;
-                    forecastList["chance of drizzle"] = ChanceShowersNight;
-                    forecastList["chance of drizzle or rain"] = ChanceShowersNight;
-                    forecastList["chance of flurries"] = ChanceSnowNight;
-                    forecastList["chance of light snow"] = ChanceSnowNight;
-                    forecastList["chance of flurries at times heavy"] = ChanceSnowNight;
-                    forecastList["chance of showers or drizzle"] = ChanceShowersNight;
-                    forecastList["chance of showers"] = ChanceShowersNight;
-                    forecastList["clearing"] = ClearNight;
+                QMap<QString, ConditionIcons> forecastList = forecastIcons();
+                if ((forecast->forecastPeriod == QLatin1String("tonight")) ||
+                    (forecast->forecastPeriod.contains(QLatin1String("night")))) {
+                    forecastList.insert(QStringLiteral("a few clouds"), FewCloudsNight);
+                    forecastList.insert(QStringLiteral("cloudy periods"), PartlyCloudyNight);
+                    forecastList.insert(QStringLiteral("chance of drizzle mixed with rain"), ChanceShowersNight);
+                    forecastList.insert(QStringLiteral("chance of drizzle"), ChanceShowersNight);
+                    forecastList.insert(QStringLiteral("chance of drizzle or rain"), ChanceShowersNight);
+                    forecastList.insert(QStringLiteral("chance of flurries"), ChanceSnowNight);
+                    forecastList.insert(QStringLiteral("chance of light snow"), ChanceSnowNight);
+                    forecastList.insert(QStringLiteral("chance of flurries at times heavy"), ChanceSnowNight);
+                    forecastList.insert(QStringLiteral("chance of showers or drizzle"), ChanceShowersNight);
+                    forecastList.insert(QStringLiteral("chance of showers"), ChanceShowersNight);
+                    forecastList.insert(QStringLiteral("clearing"), ClearNight);
                 } else {
-                    forecastList["a few clouds"] = FewCloudsDay;
-                    forecastList["cloudy periods"] = PartlyCloudyDay;
-                    forecastList["chance of drizzle mixed with rain"] = ChanceShowersDay;
-                    forecastList["chance of drizzle"] = ChanceShowersDay;
-                    forecastList["chance of drizzle or rain"] = ChanceShowersDay;
-                    forecastList["chance of flurries"] = ChanceSnowDay;
-                    forecastList["chance of light snow"] = ChanceSnowDay;
-                    forecastList["chance of flurries at times heavy"] = ChanceSnowDay;
-                    forecastList["chance of showers or drizzle"] = ChanceShowersDay;
-                    forecastList["chance of showers"] = ChanceShowersDay;
-                    forecastList["clearing"] = ClearDay;
+                    forecastList.insert(QStringLiteral("a few clouds"), FewCloudsDay);
+                    forecastList.insert(QStringLiteral("cloudy periods"), PartlyCloudyDay);
+                    forecastList.insert(QStringLiteral("chance of drizzle mixed with rain"), ChanceShowersDay);
+                    forecastList.insert(QStringLiteral("chance of drizzle"), ChanceShowersDay);
+                    forecastList.insert(QStringLiteral("chance of drizzle or rain"), ChanceShowersDay);
+                    forecastList.insert(QStringLiteral("chance of flurries"), ChanceSnowDay);
+                    forecastList.insert(QStringLiteral("chance of light snow"), ChanceSnowDay);
+                    forecastList.insert(QStringLiteral("chance of flurries at times heavy"), ChanceSnowDay);
+                    forecastList.insert(QStringLiteral("chance of showers or drizzle"), ChanceShowersDay);
+                    forecastList.insert(QStringLiteral("chance of showers"), ChanceShowersDay);
+                    forecastList.insert(QStringLiteral("clearing"), ClearDay);
                 }
                 forecast->shortForecast = shortText;
                 forecast->iconName = getWeatherIcon(forecastList, shortText.toLower());
@@ -1159,9 +1149,9 @@ void EnvCanadaIon::parseForecastTemperatures(WeatherData::ForecastInfo *forecast
         }
 
         if (xml.isStartElement()) {
-            if (elementName == QLatin1String("temperature") && xml.attributes().value("class") == "low") {
+            if (elementName == QLatin1String("temperature") && xml.attributes().value(QStringLiteral("class")) == QLatin1String("low")) {
                 forecast->forecastTempLow = xml.readElementText();
-            } else if (elementName == QLatin1String("temperature") && xml.attributes().value("class") == "high") {
+            } else if (elementName == QLatin1String("temperature") && xml.attributes().value(QStringLiteral("class")) == QLatin1String("high")) {
                 forecast->forecastTempHigh = xml.readElementText();
             } else if (elementName == QLatin1String("textSummary")) {
                 xml.readElementText();
@@ -1233,7 +1223,7 @@ void EnvCanadaIon::parseWindForecast(WeatherData::ForecastInfo *forecast, QXmlSt
             if (elementName == QLatin1String("textSummary")) {
                 forecast->windForecast = xml.readElementText();
             } else {
-                if (xml.name() != "winds") {
+                if (xml.name() != QLatin1String("winds")) {
                     parseUnknownElement(xml);
                 }
             }
@@ -1255,12 +1245,12 @@ void EnvCanadaIon::parseYesterdayWeather(WeatherData& data, QXmlStreamReader& xm
         const QStringRef elementName = xml.name();
 
         if (xml.isStartElement()) {
-            if (elementName == QLatin1String("temperature") && xml.attributes().value("class") == "high") {
+            if (elementName == QLatin1String("temperature") && xml.attributes().value(QStringLiteral("class")) == QLatin1String("high")) {
                 data.prevHigh = xml.readElementText();
-            } else if (elementName == QLatin1String("temperature") && xml.attributes().value("class") == "low") {
+            } else if (elementName == QLatin1String("temperature") && xml.attributes().value(QStringLiteral("class")) == QLatin1String("low")) {
                 data.prevLow = xml.readElementText();
             } else if (elementName == QLatin1String("precip")) {
-                data.prevPrecipType = xml.attributes().value("units").toString();
+                data.prevPrecipType = xml.attributes().value(QStringLiteral("units")).toString();
                 if (data.prevPrecipType.isEmpty()) {
                     data.prevPrecipType = QString::number(KUnitConversion::NoUnit);
                 }
@@ -1284,13 +1274,13 @@ void EnvCanadaIon::parseWeatherRecords(WeatherData& data, QXmlStreamReader& xml)
         }
 
         if (xml.isStartElement()) {
-            if (elementName == QLatin1String("temperature") && xml.attributes().value("class") == "extremeMax") {
+            if (elementName == QLatin1String("temperature") && xml.attributes().value(QStringLiteral("class")) == QLatin1String("extremeMax")) {
                 data.recordHigh = xml.readElementText().toFloat();
-            } else if (elementName == QLatin1String("temperature") && xml.attributes().value("class") == "extremeMin") {
+            } else if (elementName == QLatin1String("temperature") && xml.attributes().value(QStringLiteral("class")) == QLatin1String("extremeMin")) {
                 data.recordLow = xml.readElementText().toFloat();
-            } else if (elementName == QLatin1String("precipitation") && xml.attributes().value("class") == "extremeRainfall") {
+            } else if (elementName == QLatin1String("precipitation") && xml.attributes().value(QStringLiteral("class")) == QLatin1String("extremeRainfall")) {
                 data.recordRain = xml.readElementText().toFloat();
-            } else if (elementName == QLatin1String("precipitation") && xml.attributes().value("class") == "extremeSnowfall") {
+            } else if (elementName == QLatin1String("precipitation") && xml.attributes().value(QStringLiteral("class")) == QLatin1String("extremeSnowfall")) {
                 data.recordSnow = xml.readElementText().toFloat();
             }
         }
@@ -1343,21 +1333,18 @@ void EnvCanadaIon::updateWeather(const QString& source)
 
     QMap<QString, QString> dataFields;
     Plasma::DataEngine::Data data;
-    QStringList fieldList;
-    QVector<QString> forecastList;
-    int i = 0;
 
-    data.insert("Country", country(source));
-    data.insert("Place", QString("%1, %2").arg(city(source)).arg(territory(source)));
-    data.insert("Region", region(source));
-    data.insert("Station", station(source));
+    data.insert(QStringLiteral("Country"), country(source));
+    data.insert(QStringLiteral("Place"), QVariant(city(source) + QStringLiteral(", ") + territory(source)));
+    data.insert(QStringLiteral("Region"), region(source));
+    data.insert(QStringLiteral("Station"), station(source));
 
-    data.insert("Latitude", latitude(source));
-    data.insert("Longitude", longitude(source));
+    data.insert(QStringLiteral("Latitude"), latitude(source));
+    data.insert(QStringLiteral("Longitude"), longitude(source));
 
     // Real weather - Current conditions
-    data.insert("Observation Period", observationTime(source));
-    data.insert("Current Conditions", i18nc("weather condition", condition(source).toUtf8()));
+    data.insert(QStringLiteral("Observation Period"), observationTime(source));
+    data.insert(QStringLiteral("Current Conditions"), i18nc("weather condition", condition(source).toUtf8().data()));
     //qDebug() << "i18n condition string: " << qPrintable(condition(source));
 
     // Tell applet which icon to use for conditions and provide mapping for condition type to the icons to display
@@ -1373,113 +1360,115 @@ void EnvCanadaIon::updateWeather(const QString& source)
                 .arg(lati).arg(-1 * longi));
 
     if (timeData["Corrected Elevation"].toDouble() < 0.0) {
-        conditionList["decreasing cloud"] = FewCloudsNight;
-        conditionList["mostly cloudy"] = PartlyCloudyNight;
-        conditionList["partly cloudy"] = PartlyCloudyNight;
-        conditionList["fair"] = FewCloudsNight;
+        conditionList.insert(QStringLiteral("decreasing cloud"), FewCloudsNight);
+        conditionList.insert(QStringLiteral("mostly cloudy"), PartlyCloudyNight);
+        conditionList.insert(QStringLiteral("partly cloudy"), PartlyCloudyNight);
+        conditionList.insert(QStringLiteral("fair"), FewCloudsNight);
         //qDebug() << "Before sunrise/After sunset - using night icons\n";
     } else {
 #endif
-        conditionList["decreasing cloud"] = FewCloudsDay;
-        conditionList["mostly cloudy"] = PartlyCloudyDay;
-        conditionList["partly cloudy"] = PartlyCloudyDay;
-        conditionList["fair"] = FewCloudsDay;
+        conditionList.insert(QStringLiteral("decreasing cloud"), FewCloudsDay);
+        conditionList.insert(QStringLiteral("mostly cloudy"), PartlyCloudyDay);
+        conditionList.insert(QStringLiteral("partly cloudy"), PartlyCloudyDay);
+        conditionList.insert(QStringLiteral("fair"), FewCloudsDay);
         //qDebug() << "Using daytime icons\n";
 #if 0
     }
 #endif
 
-    data.insert("Condition Icon", getWeatherIcon(conditionList, condition(source)));
+    data.insert(QStringLiteral("Condition Icon"), getWeatherIcon(conditionList, condition(source)));
 
     dataFields = temperature(source);
-    data.insert("Temperature", dataFields["temperature"]);
+    data.insert(QStringLiteral("Temperature"), dataFields[QStringLiteral("temperature")]);
 
     // Do we have a comfort temperature? if so display it
-    if (dataFields["comfortTemperature"] != "N/A" && !dataFields["comfortTemperature"].isEmpty()) {
-        if (dataFields["comfortTemperature"].toFloat() <= 0) {
-            data.insert("Windchill", QString("%1").arg(dataFields["comfortTemperature"]));
-            data.insert("Humidex", i18n("N/A"));
+    const QString &comfortTemperature = dataFields[QStringLiteral("comfortTemperature")];
+    if (comfortTemperature != i18n("N/A") && !comfortTemperature.isEmpty()) {
+        // TODO: switch might depend on temperature unit
+        if (comfortTemperature.toFloat() <= 0) {
+            data.insert(QStringLiteral("Windchill"), comfortTemperature);
+            data.insert(QStringLiteral("Humidex"), i18n("N/A"));
         } else {
-            data.insert("Humidex", QString("%1").arg(dataFields["comfortTemperature"]));
-            data.insert("Windchill", i18n("N/A"));
+            data.insert(QStringLiteral("Windchill"), i18n("N/A"));
+            data.insert(QStringLiteral("Humidex"), comfortTemperature);
         }
     } else {
-        data.insert("Windchill", i18n("N/A"));
-        data.insert("Humidex", i18n("N/A"));
+        data.insert(QStringLiteral("Windchill"), i18n("N/A"));
+        data.insert(QStringLiteral("Humidex"), i18n("N/A"));
     }
 
     // Used for all temperatures
-    data.insert("Temperature Unit", dataFields["temperatureUnit"]);
+    data.insert(QStringLiteral("Temperature Unit"), dataFields[QStringLiteral("temperatureUnit")]);
 
-    data.insert("Dewpoint", dewpoint(source));
+    data.insert(QStringLiteral("Dewpoint"), dewpoint(source));
 
     dataFields = pressure(source);
-    data.insert("Pressure", dataFields["pressure"]);
-    data.insert("Pressure Unit", dataFields["pressureUnit"]);
-    data.insert("Pressure Tendency", dataFields["pressureTendency"]);
+    data.insert(QStringLiteral("Pressure"), dataFields[QStringLiteral("pressure")]);
+    data.insert(QStringLiteral("Pressure Unit"), dataFields[QStringLiteral("pressureUnit")]);
+    data.insert(QStringLiteral("Pressure Tendency"), dataFields[QStringLiteral("pressureTendency")]);
 
     dataFields = visibility(source);
-    data.insert("Visibility", dataFields["visibility"]);
-    data.insert("Visibility Unit", dataFields["visibilityUnit"]);
+    data.insert(QStringLiteral("Visibility"), dataFields[QStringLiteral("visibility")]);
+    data.insert(QStringLiteral("Visibility Unit"), dataFields[QStringLiteral("visibilityUnit")]);
 
     dataFields = humidity(source);
-    data.insert("Humidity", dataFields["humidity"]);
-    data.insert("Humidity Unit", dataFields["humidityUnit"]);
+    data.insert(QStringLiteral("Humidity"), dataFields[QStringLiteral("humidity")]);
+    data.insert(QStringLiteral("Humidity Unit"), dataFields[QStringLiteral("humidityUnit")]);
 
     dataFields = wind(source);
-    data.insert("Wind Speed", dataFields["windSpeed"]);
-    data.insert("Wind Speed Unit", dataFields["windUnit"]);
+    data.insert(QStringLiteral("Wind Speed"), dataFields[QStringLiteral("windSpeed")]);
+    data.insert(QStringLiteral("Wind Speed Unit"), dataFields[QStringLiteral("windUnit")]);
 
-    data.insert("Wind Gust", dataFields["windGust"]);
-    data.insert("Wind Direction", dataFields["windDirection"]);
-    data.insert("Wind Degrees", dataFields["windDegrees"]);
-    data.insert("Wind Gust Unit", dataFields["windGustUnit"]);
+    data.insert(QStringLiteral("Wind Gust"), dataFields[QStringLiteral("windGust")]);
+    data.insert(QStringLiteral("Wind Direction"), dataFields[QStringLiteral("windDirection")]);
+    data.insert(QStringLiteral("Wind Degrees"), dataFields[QStringLiteral("windDegrees")]);
+    data.insert(QStringLiteral("Wind Gust Unit"), dataFields[QStringLiteral("windGustUnit")]);
 
     dataFields = regionalTemperatures(source);
-    data.insert("Normal High", dataFields["normalHigh"]);
-    data.insert("Normal Low", dataFields["normalLow"]);
+    data.insert(QStringLiteral("Normal High"), dataFields[QStringLiteral("normalHigh")]);
+    data.insert(QStringLiteral("Normal Low"), dataFields[QStringLiteral("normalLow")]);
 
     // Check if UV index is available for the location
     dataFields = uvIndex(source);
-    data.insert("UV Index", dataFields["uvIndex"]);
-    data.insert("UV Rating", dataFields["uvRating"]);
+    data.insert(QStringLiteral("UV Index"), dataFields[QStringLiteral("uvIndex")]);
+    data.insert(QStringLiteral("UV Rating"), dataFields[QStringLiteral("uvRating")]);
 
     dataFields = watches(source);
 
     // Set number of forecasts per day/night supported
-    data.insert("Total Watches Issued", m_weatherData[source].watches.size());
+    data.insert(QStringLiteral("Total Watches Issued"), m_weatherData[source].watches.size());
 
     // Check if we have warnings or watches
-    for (int i = 0; i < m_weatherData[source].watches.size(); i++) {
-        fieldList = dataFields[QString("watch %1").arg(i)].split('|');
-        data.insert(QString("Watch Priority %1").arg(i), fieldList[0]);
-        data.insert(QString("Watch Description %1").arg(i), fieldList[1]);
-        data.insert(QString("Watch Info %1").arg(i), fieldList[2]);
-        data.insert(QString("Watch Timestamp %1").arg(i), fieldList[3]);
+    for (int i = 0; i < m_weatherData[source].watches.size(); ++i) {
+        const QString number = QString::number(i);
+        const QStringList fieldList = dataFields[QStringLiteral("watch ") + number].split(QLatin1Char('|'));
+        data.insert(QStringLiteral("Watch Priority ") + number, fieldList[0]);
+        data.insert(QStringLiteral("Watch Description ") + number, fieldList[1]);
+        data.insert(QStringLiteral("Watch Info ") + number, fieldList[2]);
+        data.insert(QStringLiteral("Watch Timestamp ") + number, fieldList[3]);
     }
 
     dataFields = warnings(source);
 
-    data.insert("Total Warnings Issued", m_weatherData[source].warnings.size());
+    data.insert(QStringLiteral("Total Warnings Issued"), m_weatherData[source].warnings.size());
 
-    for (int k = 0; k < m_weatherData[source].warnings.size(); k++) {
-        fieldList = dataFields[QString("warning %1").arg(k)].split('|');
-        data.insert(QString("Warning Priority %1").arg(k), fieldList[0]);
-        data.insert(QString("Warning Description %1").arg(k), fieldList[1]);
-        data.insert(QString("Warning Info %1").arg(k), fieldList[2]);
-        data.insert(QString("Warning Timestamp %1").arg(k), fieldList[3]);
+    for (int k = 0; k < m_weatherData[source].warnings.size(); ++k) {
+        const QString number = QString::number(k);
+        const QStringList fieldList = dataFields[QStringLiteral("warning ") + number].split(QLatin1Char('|'));
+        data.insert(QStringLiteral("Warning Priority ") + number, fieldList[0]);
+        data.insert(QStringLiteral("Warning Description ") + number, fieldList[1]);
+        data.insert(QStringLiteral("Warning Info ") + number, fieldList[2]);
+        data.insert(QStringLiteral("Warning Timestamp ") + number, fieldList[3]);
     }
 
-    forecastList = forecasts(source);
+    const QVector<QString> forecastList = forecasts(source);
 
     // Set number of forecasts per day/night supported
-    data.insert("Total Weather Days", m_weatherData[source].forecasts.size());
+    data.insert(QStringLiteral("Total Weather Days"), m_weatherData[source].forecasts.size());
 
-    foreach(const QString &forecastItem, forecastList) {
-        fieldList = forecastItem.split('|');
-
-        data.insert(QString("Short Forecast Day %1").arg(i), QString("%1|%2|%3|%4|%5|%6") \
-                .arg(fieldList[0]).arg(fieldList[1]).arg(fieldList[2]).arg(fieldList[3]).arg(fieldList[4]).arg(fieldList[5]));
+    int i = 0;
+    foreach(const QString& forecastItem, forecastList) {
+        data.insert(QStringLiteral("Short Forecast Day %1").arg(i), forecastItem);
 
         /*
                 data.insert(QString("Long Forecast Day %1").arg(i), QString("%1|%2|%3|%4|%5|%6|%7|%8") \
@@ -1490,30 +1479,30 @@ void EnvCanadaIon::updateWeather(const QString& source)
     }
 
     dataFields = yesterdayWeather(source);
-    data.insert("Yesterday High", dataFields["prevHigh"]);
-    data.insert("Yesterday Low", dataFields["prevLow"]);
+    data.insert(QStringLiteral("Yesterday High"), dataFields[QStringLiteral("prevHigh")]);
+    data.insert(QStringLiteral("Yesterday Low"), dataFields[QStringLiteral("prevLow")]);
 
-    data.insert("Yesterday Precip Total", dataFields["prevPrecip"]);
-    data.insert("Yesterday Precip Unit", dataFields["prevPrecipUnit"]);
+    data.insert(QStringLiteral("Yesterday Precip Total"), dataFields[QStringLiteral("prevPrecip")]);
+    data.insert(QStringLiteral("Yesterday Precip Unit"), dataFields[QStringLiteral("prevPrecipUnit")]);
 
     dataFields = sunriseSet(source);
-    data.insert("Sunrise At", dataFields["sunrise"]);
-    data.insert("Sunset At", dataFields["sunset"]);
+    data.insert(QStringLiteral("Sunrise At"), dataFields[QStringLiteral("sunrise")]);
+    data.insert(QStringLiteral("Sunset At"), dataFields[QStringLiteral("sunset")]);
 
     dataFields = moonriseSet(source);
-    data.insert("Moonrise At", dataFields["moonrise"]);
-    data.insert("Moonset At", dataFields["moonset"]);
+    data.insert(QStringLiteral("Moonrise At"), dataFields[QStringLiteral("moonrise")]);
+    data.insert(QStringLiteral("Moonset At"), dataFields[QStringLiteral("moonset")]);
 
     dataFields = weatherRecords(source);
-    data.insert("Record High Temperature", dataFields["recordHigh"]);
-    data.insert("Record Low Temperature", dataFields["recordLow"]);
+    data.insert(QStringLiteral("Record High Temperature"), dataFields[QStringLiteral("recordHigh")]);
+    data.insert(QStringLiteral("Record Low Temperature"), dataFields[QStringLiteral("recordLow")]);
 
-    data.insert("Record Rainfall", dataFields["recordRain"]);
-    data.insert("Record Rainfall Unit", dataFields["recordRainUnit"]);
-    data.insert("Record Snowfall", dataFields["recordSnow"]);
-    data.insert("Record Snowfall Unit", dataFields["recordSnowUnit"]);
+    data.insert(QStringLiteral("Record Rainfall"), dataFields[QStringLiteral("recordRain")]);
+    data.insert(QStringLiteral("Record Rainfall Unit"), dataFields[QStringLiteral("recordRainUnit")]);
+    data.insert(QStringLiteral("Record Snowfall"), dataFields[QStringLiteral("recordSnow")]);
+    data.insert(QStringLiteral("Record Snowfall Unit"), dataFields[QStringLiteral("recordSnowUnit")]);
 
-    data.insert("Credit", i18n("Meteorological data is provided by Environment Canada"));
+    data.insert(QStringLiteral("Credit"), i18n("Meteorological data is provided by Environment Canada"));
     setData(source, data);
 }
 
@@ -1540,11 +1529,9 @@ QString EnvCanadaIon::region(const QString& source) const
 
 QString EnvCanadaIon::station(const QString& source) const
 {
-    if (!m_weatherData[source].stationID.isEmpty()) {
-        return m_weatherData[source].stationID.toUpper();
-    }
+    const QString& stationID = m_weatherData[source].stationID;
 
-    return i18n("N/A");
+    return stationID.isEmpty() ? i18n("N/A") : stationID.toUpper();
 }
 
 QString EnvCanadaIon::latitude(const QString& source) const
@@ -1574,30 +1561,28 @@ int EnvCanadaIon::periodMinute(const QString& source) const
 
 QString EnvCanadaIon::condition(const QString& source)
 {
-    if (m_weatherData[source].condition.isEmpty()) {
-        m_weatherData[source].condition = i18n("N/A");
-    }
-    return (m_weatherData[source].condition.toUtf8());
+    const QString& condition = m_weatherData[source].condition;
+
+    return condition.isEmpty() ? i18n("N/A") : condition;
 }
 
 QString EnvCanadaIon::dewpoint(const QString& source) const
 {
-    if (!m_weatherData[source].dewpoint.isEmpty()) {
-        return (QString::number(m_weatherData[source].dewpoint.toFloat(), 'f', 1));
-    }
-    return i18n("N/A");
+    const QString& dewpoint = m_weatherData[source].dewpoint;
+
+    return dewpoint.isEmpty() ? i18n("N/A") : QString::number(m_weatherData[source].dewpoint.toFloat(), 'f', 1);
 }
 
 QMap<QString, QString> EnvCanadaIon::humidity(const QString& source) const
 {
     QMap<QString, QString> humidityInfo;
-    if (!m_weatherData[source].humidity.isEmpty()) {
-        humidityInfo.insert("humidity", m_weatherData[source].humidity);
-        humidityInfo.insert("humidityUnit", QString::number(KUnitConversion::Percent));
-    } else {
-        humidityInfo.insert("humidity", i18n("N/A"));
-        humidityInfo.insert("humidityUnit", QString::number(KUnitConversion::NoUnit));
-    }
+
+    const WeatherData& weatherData = m_weatherData[source];
+
+    const QString& humidity = weatherData.humidity;
+    humidityInfo.insert(QStringLiteral("humidity"), humidity.isEmpty() ? i18n("N/A") : humidity);
+    humidityInfo.insert(QStringLiteral("humidityUnit"), QString::number(humidity.isEmpty() ? KUnitConversion::NoUnit : KUnitConversion::Percent));
+
     return humidityInfo;
 }
 
@@ -1605,63 +1590,60 @@ QMap<QString, QString> EnvCanadaIon::visibility(const QString& source) const
 {
     QMap<QString, QString> visibilityInfo;
 
-    if (m_weatherData[source].visibility != 0) {
-        visibilityInfo.insert("visibility", QString::number(m_weatherData[source].visibility, 'f', 1));
-        visibilityInfo.insert("visibilityUnit", QString::number(KUnitConversion::Kilometer));
-    } else {
-        visibilityInfo.insert("visibility", i18n("N/A"));
-        visibilityInfo.insert("visibilityUnit", QString::number(KUnitConversion::NoUnit));
-    }
+    const WeatherData& weatherData = m_weatherData[source];
+
+    const float visibility = weatherData.visibility;
+    visibilityInfo.insert(QStringLiteral("visibility"), (visibility == 0) ? i18n("N/A") : QString::number(m_weatherData[source].visibility, 'f', 1));
+    visibilityInfo.insert(QStringLiteral("visibilityUnit"), QString::number((visibility == 0) ? KUnitConversion::NoUnit : KUnitConversion::Kilometer));
+
     return visibilityInfo;
 }
 
 QMap<QString, QString> EnvCanadaIon::temperature(const QString& source) const
 {
     QMap<QString, QString> temperatureInfo;
-    if (!m_weatherData[source].temperature.isEmpty()) {
-        temperatureInfo.insert("temperature", QString::number(m_weatherData[source].temperature.toFloat(), 'f', 1));
-    }
 
-    if (m_weatherData[source].temperature == i18n("N/A")) {
-        temperatureInfo.insert("temperature", i18n("N/A"));
-    }
+    const WeatherData& weatherData = m_weatherData[source];
 
-    temperatureInfo.insert("comfortTemperature", i18n("N/A"));
+    const QString& temperature = weatherData.temperature;
+    temperatureInfo.insert(QStringLiteral("temperature"), temperature == i18n("N/A") ? temperature : QString::number(temperature.toFloat(), 'f', 1));
 
-    if (m_weatherData[source].comforttemp != i18n("N/A")) {
-        temperatureInfo.insert("comfortTemperature", m_weatherData[source].comforttemp);
-    }
+    const QString& comforttemp = weatherData.comforttemp;
+    temperatureInfo.insert(QStringLiteral("comfortTemperature"), comforttemp);
 
     // This is used for not just current temperature but also 8 days. Cannot be NoUnit.
-    temperatureInfo.insert("temperatureUnit", QString::number(KUnitConversion::Celsius));
+    temperatureInfo.insert(QStringLiteral("temperatureUnit"), QString::number(KUnitConversion::Celsius));
+
     return temperatureInfo;
 }
 
 QMap<QString, QString> EnvCanadaIon::watches(const QString& source) const
 {
     QMap<QString, QString> watchData;
-    QString watchType;
-    for (int i = 0; i < m_weatherData[source].watches.size(); ++i) {
-        watchType = QString("watch %1").arg(i);
-        watchData[watchType] = QString("%1|%2|%3|%4").arg(m_weatherData[source].watches[i]->priority) \
-                               .arg(m_weatherData[source].watches[i]->description) \
-                               .arg(m_weatherData[source].watches[i]->url) \
-                               .arg(m_weatherData[source].watches[i]->timestamp);
+
+    const QVector<WeatherData::WeatherEvent*>& watches = m_weatherData[source].watches;
+    for (int i = 0; i < watches.size(); ++i) {
+        const WeatherData::WeatherEvent* watch = watches.at(i);
+        watchData.insert(QStringLiteral("watch %1").arg(i),
+                         QStringLiteral("%1|%2|%3|%4")
+                         .arg(watch->priority, watch->description, watch->url, watch->timestamp));
     }
+
     return watchData;
 }
 
 QMap<QString, QString> EnvCanadaIon::warnings(const QString& source) const
 {
     QMap<QString, QString> warningData;
-    QString warnType;
-    for (int i = 0; i < m_weatherData[source].warnings.size(); ++i) {
-        warnType = QString("warning %1").arg(i);
-        warningData[warnType] = QString("%1|%2|%3|%4").arg(m_weatherData[source].warnings[i]->priority) \
-                                .arg(m_weatherData[source].warnings[i]->description) \
-                                .arg(m_weatherData[source].warnings[i]->url) \
-                                .arg(m_weatherData[source].warnings[i]->timestamp);
+
+    const QVector<WeatherData::WeatherEvent*>& warnings = m_weatherData[source].warnings;
+    for (int i = 0; i < warnings.size(); ++i) {
+        const WeatherData::WeatherEvent* warning = warnings.at(i);
+        warningData.insert(QStringLiteral("warning %1").arg(i),
+                           QStringLiteral("%1|%2|%3|%4")
+                           .arg(warning->priority, warning->description, warning->url, warning->timestamp));
     }
+
     return warningData;
 }
 
@@ -1706,56 +1688,27 @@ QVector<QString> EnvCanadaIon::forecasts(const QString& source)
         }
     }
 
-    for (int i = 0; i < m_weatherData[source].forecasts.size(); ++i) {
+    foreach(const WeatherData::ForecastInfo *forecastInfo, m_weatherData[source].forecasts) {
+        QString forecastPeriod = forecastInfo->forecastPeriod;
         // We need to shortform the day/night strings.
 
-        if (m_weatherData[source].forecasts[i]->forecastPeriod.contains("Today")) {
-            m_weatherData[source].forecasts[i]->forecastPeriod.replace("Today", i18n("day"));
-        }
+        forecastPeriod.replace(QStringLiteral("Today"), i18n("day"));
+        forecastPeriod.replace(QStringLiteral("Tonight"), i18nc("Short for tonight", "nite"));
+        forecastPeriod.replace(QStringLiteral("night"), i18nc("Short for night, appended to the end of the weekday", "nt"));
+        forecastPeriod.replace(QStringLiteral("Saturday"), i18nc("Short for Saturday", "Sat"));
+        forecastPeriod.replace(QStringLiteral("Sunday"), i18nc("Short for Sunday", "Sun"));
+        forecastPeriod.replace(QStringLiteral("Monday"), i18nc("Short for Monday", "Mon"));
+        forecastPeriod.replace(QStringLiteral("Tuesday"), i18nc("Short for Tuesday", "Tue"));
+        forecastPeriod.replace(QStringLiteral("Wednesday"), i18nc("Short for Wednesday", "Wed"));
+        forecastPeriod.replace(QStringLiteral("Thursday"), i18nc("Short for Thursday", "Thu"));
+        forecastPeriod.replace(QStringLiteral("Friday"), i18nc("Short for Friday", "Fri"));
 
-        if (m_weatherData[source].forecasts[i]->forecastPeriod.contains("Tonight")) {
-            m_weatherData[source].forecasts[i]->forecastPeriod.replace("Tonight", i18nc("Short for tonight", "nite"));
-        }
-
-        if (m_weatherData[source].forecasts[i]->forecastPeriod.contains("night")) {
-            m_weatherData[source].forecasts[i]->forecastPeriod.replace("night", i18nc("Short for night, appended to the end of the weekday", "nt"));
-        }
-
-        if (m_weatherData[source].forecasts[i]->forecastPeriod.contains("Saturday")) {
-            m_weatherData[source].forecasts[i]->forecastPeriod.replace("Saturday", i18nc("Short for Saturday", "Sat"));
-        }
-
-        if (m_weatherData[source].forecasts[i]->forecastPeriod.contains("Sunday")) {
-            m_weatherData[source].forecasts[i]->forecastPeriod.replace("Sunday", i18nc("Short for Sunday", "Sun"));
-        }
-
-        if (m_weatherData[source].forecasts[i]->forecastPeriod.contains("Monday")) {
-            m_weatherData[source].forecasts[i]->forecastPeriod.replace("Monday", i18nc("Short for Monday", "Mon"));
-        }
-
-        if (m_weatherData[source].forecasts[i]->forecastPeriod.contains("Tuesday")) {
-            m_weatherData[source].forecasts[i]->forecastPeriod.replace("Tuesday", i18nc("Short for Tuesday", "Tue"));
-        }
-
-        if (m_weatherData[source].forecasts[i]->forecastPeriod.contains("Wednesday")) {
-            m_weatherData[source].forecasts[i]->forecastPeriod.replace("Wednesday", i18nc("Short for Wednesday", "Wed"));
-        }
-
-        if (m_weatherData[source].forecasts[i]->forecastPeriod.contains("Thursday")) {
-            m_weatherData[source].forecasts[i]->forecastPeriod.replace("Thursday", i18nc("Short for Thursday", "Thu"));
-        }
-        if (m_weatherData[source].forecasts[i]->forecastPeriod.contains("Friday")) {
-            m_weatherData[source].forecasts[i]->forecastPeriod.replace("Friday", i18nc("Short for Friday", "Fri"));
-        }
-
-        forecastData.append(QString("%1|%2|%3|%4|%5|%6") \
-                            .arg(m_weatherData[source].forecasts[i]->forecastPeriod) \
-                            .arg(m_weatherData[source].forecasts[i]->iconName) \
-                            .arg(i18nc("weather forecast", m_weatherData[source].forecasts[i]->shortForecast.toUtf8())) \
-                            .arg(m_weatherData[source].forecasts[i]->forecastTempHigh) \
-                            .arg(m_weatherData[source].forecasts[i]->forecastTempLow) \
-                            .arg(m_weatherData[source].forecasts[i]->popPrecent));
-        //qDebug() << "i18n summary string: " << qPrintable(i18n(m_weatherData[source].forecasts[i]->shortForecast.toUtf8()));
+        forecastData.append(QStringLiteral("%1|%2|%3|%4|%5|%6")
+                            .arg(forecastPeriod, forecastInfo->iconName,
+                                 i18nc("weather forecast", forecastInfo->shortForecast.toUtf8().data()),
+                                 forecastInfo->forecastTempHigh, forecastInfo->forecastTempLow,
+                                 forecastInfo->popPrecent));
+        //qDebug() << "i18n summary string: " << qPrintable(i18n(forecastInfo->shortForecast.toUtf8()));
     }
     return forecastData;
 }
@@ -1764,15 +1717,13 @@ QMap<QString, QString> EnvCanadaIon::pressure(const QString& source) const
 {
     QMap<QString, QString> pressureInfo;
 
-    if (m_weatherData[source].pressure == 0) {
-        pressureInfo.insert("pressure", i18n("N/A"));
-        pressureInfo.insert("pressureUnit", QString::number(KUnitConversion::NoUnit));
-        pressureInfo.insert("pressureTendency", "N/A");
-    } else {
-        pressureInfo.insert("pressure", QString::number(m_weatherData[source].pressure, 'f', 1));
-        pressureInfo.insert("pressureUnit", QString::number(KUnitConversion::Kilopascal));
-        pressureInfo.insert("pressureTendency", i18nc("pressure tendency", m_weatherData[source].pressureTendency.toUtf8()));
-    }
+    const WeatherData& weatherData = m_weatherData[source];
+
+    const float pressure = weatherData.pressure;
+    pressureInfo.insert(QStringLiteral("pressure"), (pressure == 0) ? i18n("N/A") : QString::number(pressure, 'f', 1));
+    pressureInfo.insert(QStringLiteral("pressureUnit"), QString::number((pressure == 0) ? KUnitConversion::NoUnit : KUnitConversion::Kilopascal));
+    pressureInfo.insert(QStringLiteral("pressureTendency"), (pressure == 0) ? QStringLiteral("N/A") : i18nc("pressure tendency", weatherData.pressureTendency.toUtf8().data()));
+
     return pressureInfo;
 }
 
@@ -1780,35 +1731,35 @@ QMap<QString, QString> EnvCanadaIon::wind(const QString& source) const
 {
     QMap<QString, QString> windInfo;
 
+    const WeatherData& weatherData = m_weatherData[source];
+
+    const QString& windSpeed = weatherData.windSpeed;
     // May not have any winds
-    if (m_weatherData[source].windSpeed.isEmpty()) {
-        windInfo.insert("windSpeed", i18n("N/A"));
-        windInfo.insert("windUnit", QString::number(KUnitConversion::NoUnit));
-    } else if (m_weatherData[source].windSpeed.toInt() == 0) {
-        windInfo.insert("windSpeed", i18nc("wind speed", "Calm"));
-        windInfo.insert("windUnit", QString::number(KUnitConversion::NoUnit));
+    if (windSpeed.isEmpty()) {
+        windInfo.insert(QStringLiteral("windSpeed"), i18n("N/A"));
+        windInfo.insert(QStringLiteral("windUnit"), QString::number(KUnitConversion::NoUnit));
+    } else if (windSpeed.toInt() == 0) {
+        windInfo.insert(QStringLiteral("windSpeed"), i18nc("wind speed", "Calm"));
+        windInfo.insert(QStringLiteral("windUnit"), QString::number(KUnitConversion::NoUnit));
     } else {
-        windInfo.insert("windSpeed", QString::number(m_weatherData[source].windSpeed.toInt()));
-        windInfo.insert("windUnit", QString::number(KUnitConversion::KilometerPerHour));
+        windInfo.insert(QStringLiteral("windSpeed"), QString::number(windSpeed.toInt()));
+        windInfo.insert(QStringLiteral("windUnit"), QString::number(KUnitConversion::KilometerPerHour));
     }
 
+    const QString& windGust = weatherData.windGust;
     // May not always have gusty winds
-    if (m_weatherData[source].windGust.isEmpty() || m_weatherData[source].windGust == 0) {
-        windInfo.insert("windGust", i18n("N/A"));
-        windInfo.insert("windGustUnit", QString::number(KUnitConversion::NoUnit));
-    } else {
-        windInfo.insert("windGust", QString::number(m_weatherData[source].windGust.toInt()));
-        windInfo.insert("windGustUnit", QString::number(KUnitConversion::KilometerPerHour));
-    }
+    windInfo.insert(QStringLiteral("windGust"), windGust.isEmpty() ? i18n("N/A") : QString::number(windGust.toInt()));
+    windInfo.insert(QStringLiteral("windGustUnit"), QString::number(windGust.isEmpty() ? KUnitConversion::NoUnit : KUnitConversion::KilometerPerHour));
 
-    if (m_weatherData[source].windDirection.isEmpty() && m_weatherData[source].windSpeed.isEmpty()) {
-        windInfo.insert("windDirection", i18n("N/A"));
-        windInfo.insert("windDegrees", i18n("N/A"));
-    } else if (m_weatherData[source].windSpeed.toInt() == 0) {
-        windInfo.insert("windDirection", i18nc("wind direction - wind speed is too low to measure", "VR")); // Variable/calm
+    const QString& windDirection = weatherData.windDirection;
+    if (windDirection.isEmpty() && windSpeed.isEmpty()) {
+        windInfo.insert(QStringLiteral("windDirection"), i18n("N/A"));
+        windInfo.insert(QStringLiteral("windDegrees"), i18n("N/A"));
+    } else if (windSpeed.toInt() == 0) {
+        windInfo.insert(QStringLiteral("windDirection"), i18nc("wind direction - wind speed is too low to measure", "VR")); // Variable/calm
     } else {
-        windInfo.insert("windDirection", i18nc("wind direction", m_weatherData[source].windDirection.toUtf8()));
-        windInfo.insert("windDegrees", m_weatherData[source].windDegrees);
+        windInfo.insert(QStringLiteral("windDirection"), i18nc("wind direction", windDirection.toUtf8().data()));
+        windInfo.insert(QStringLiteral("windDegrees"), weatherData.windDegrees);
     }
     return windInfo;
 }
@@ -1817,17 +1768,13 @@ QMap<QString, QString> EnvCanadaIon::uvIndex(const QString& source) const
 {
     QMap<QString, QString> uvInfo;
 
-    if (m_weatherData[source].UVRating.isEmpty()) {
-        uvInfo.insert("uvRating", i18n("N/A"));
-    } else {
-        uvInfo.insert("uvRating", m_weatherData[source].UVRating);
-    }
+    const WeatherData& weatherData = m_weatherData[source];
 
-    if (m_weatherData[source].UVIndex.isEmpty()) {
-        uvInfo.insert("uvIndex", i18n("N/A"));
-    } else {
-        uvInfo.insert("uvIndex", m_weatherData[source].UVIndex);
-    }
+    const QString& UVRating = weatherData.UVRating;
+    uvInfo.insert(QStringLiteral("uvRating"), UVRating.isEmpty() ? i18n("N/A") : UVRating);
+
+    const QString& UVIndex = weatherData.UVIndex;
+    uvInfo.insert(QStringLiteral("uvIndex"), UVIndex.isEmpty() ? i18n("N/A") : UVIndex);
 
     return uvInfo;
 }
@@ -1836,17 +1783,13 @@ QMap<QString, QString> EnvCanadaIon::regionalTemperatures(const QString& source)
 {
     QMap<QString, QString> regionalTempInfo;
 
-    if (m_weatherData[source].normalHigh.isEmpty()) {
-        regionalTempInfo.insert("normalHigh", i18n("N/A"));
-    } else {
-        regionalTempInfo.insert("normalHigh", m_weatherData[source].normalHigh);
-    }
+    const WeatherData& weatherData = m_weatherData[source];
 
-    if (m_weatherData[source].normalLow.isEmpty()) {
-        regionalTempInfo.insert("normalLow", i18n("N/A"));
-    } else {
-        regionalTempInfo.insert("normalLow", m_weatherData[source].normalLow);
-    }
+    const QString& normalHigh = weatherData.normalHigh;
+    regionalTempInfo.insert(QStringLiteral("normalHigh"), normalHigh.isEmpty() ? i18n("N/A") : normalHigh);
+
+    const QString& normalLow = weatherData.normalLow;
+    regionalTempInfo.insert(QStringLiteral("normalLow"), normalLow.isEmpty() ? i18n("N/A") : normalLow);
 
     return regionalTempInfo;
 }
@@ -1855,35 +1798,28 @@ QMap<QString, QString> EnvCanadaIon::yesterdayWeather(const QString& source) con
 {
     QMap<QString, QString> yesterdayInfo;
 
-    if (m_weatherData[source].prevHigh.isEmpty()) {
-        yesterdayInfo.insert("prevHigh", i18n("N/A"));
-    } else {
-        yesterdayInfo.insert("prevHigh", m_weatherData[source].prevHigh);
-    }
+    const WeatherData& weatherData = m_weatherData[source];
 
-    if (m_weatherData[source].prevLow.isEmpty()) {
-        yesterdayInfo.insert("prevLow", i18n("N/A"));
-    } else {
-        yesterdayInfo.insert("prevLow", m_weatherData[source].prevLow);
-    }
+    const QString& prevHigh = weatherData.prevHigh;
+    yesterdayInfo.insert(QStringLiteral("prevHigh"), prevHigh.isEmpty() ? i18n("N/A") : prevHigh);
 
-    if (m_weatherData[source].prevPrecipTotal == "Trace") {
-        yesterdayInfo.insert("prevPrecip", i18nc("precipitation total, very little", "Trace"));
-        return yesterdayInfo;
-    }
+    const QString& prevLow = weatherData.prevLow;
+    yesterdayInfo.insert(QStringLiteral("prevLow"), prevLow.isEmpty() ? i18n("N/A") : prevLow);
 
-    if (m_weatherData[source].prevPrecipTotal.isEmpty()) {
-        yesterdayInfo.insert("prevPrecip", i18n("N/A"));
-        yesterdayInfo.insert("prevPrecipUnit", QString::number(KUnitConversion::NoUnit));
+    const QString& prevPrecipTotal = weatherData.prevPrecipTotal;
+    if (prevPrecipTotal == QLatin1String("Trace")) {
+        yesterdayInfo.insert(QStringLiteral("prevPrecip"), i18nc("precipitation total, very little", "Trace"));
+    } else if (prevPrecipTotal.isEmpty()) {
+        yesterdayInfo.insert(QStringLiteral("prevPrecip"), i18n("N/A"));
+        yesterdayInfo.insert(QStringLiteral("prevPrecipUnit"), QString::number(KUnitConversion::NoUnit));
     } else {
-        yesterdayInfo.insert("prevPrecipTotal", m_weatherData[source].prevPrecipTotal);
-        if (m_weatherData[source].prevPrecipType == "mm") {
-            yesterdayInfo.insert("prevPrecipUnit", QString::number(KUnitConversion::Millimeter));
-        } else if (m_weatherData[source].prevPrecipType == "cm") {
-            yesterdayInfo.insert("prevPrecipUnit", QString::number(KUnitConversion::Centimeter));
-        } else {
-            yesterdayInfo.insert("prevPrecipUnit", QString::number(KUnitConversion::NoUnit));
-        }
+        yesterdayInfo.insert(QStringLiteral("prevPrecipTotal"), prevPrecipTotal);
+        const QString& prevPrecipType = weatherData.prevPrecipType;
+        const KUnitConversion::UnitId unit =
+            (prevPrecipType == QLatin1String("mm")) ? KUnitConversion::Millimeter :
+            (prevPrecipType == QLatin1String("cm")) ? KUnitConversion::Centimeter :
+            /*else*/                                  KUnitConversion::NoUnit;
+        yesterdayInfo.insert(QStringLiteral("prevPrecipUnit"), QString::number(unit));
     }
 
     return yesterdayInfo;
@@ -1893,17 +1829,13 @@ QMap<QString, QString> EnvCanadaIon::sunriseSet(const QString& source) const
 {
     QMap<QString, QString> sunInfo;
 
-    if (m_weatherData[source].sunriseTimestamp.isEmpty()) {
-        sunInfo.insert("sunrise", i18n("N/A"));
-    } else {
-        sunInfo.insert("sunrise", m_weatherData[source].sunriseTimestamp);
-    }
+    const WeatherData& weatherData = m_weatherData[source];
 
-    if (m_weatherData[source].sunsetTimestamp.isEmpty()) {
-        sunInfo.insert("sunset", i18n("N/A"));
-    } else {
-        sunInfo.insert("sunset", m_weatherData[source].sunsetTimestamp);
-    }
+    const QString& sunriseTimestamp = weatherData.sunriseTimestamp;
+    sunInfo.insert(QStringLiteral("sunrise"), sunriseTimestamp.isEmpty() ? i18n("N/A") : sunriseTimestamp);
+
+    const QString& sunsetTimestamp = weatherData.sunsetTimestamp;
+    sunInfo.insert(QStringLiteral("sunset"), sunsetTimestamp.isEmpty() ? i18n("N/A") : sunsetTimestamp);
 
     return sunInfo;
 }
@@ -1912,17 +1844,13 @@ QMap<QString, QString> EnvCanadaIon::moonriseSet(const QString& source) const
 {
     QMap<QString, QString> moonInfo;
 
-    if (m_weatherData[source].moonriseTimestamp.isEmpty()) {
-        moonInfo.insert("moonrise", i18n("N/A"));
-    } else {
-        moonInfo.insert("moonrise", m_weatherData[source].moonriseTimestamp);
-    }
+    const WeatherData& weatherData = m_weatherData[source];
 
-    if (m_weatherData[source].moonsetTimestamp.isEmpty()) {
-        moonInfo.insert("moonset", i18n("N/A"));
-    } else {
-        moonInfo.insert("moonset", m_weatherData[source].moonsetTimestamp);
-    }
+    const QString& moonriseTimestamp = weatherData.moonriseTimestamp;
+    moonInfo.insert(QStringLiteral("moonrise"), moonriseTimestamp.isEmpty() ? i18n("N/A") : moonriseTimestamp);
+
+    const QString& moonsetTimestamp = weatherData.moonsetTimestamp;
+    moonInfo.insert(QStringLiteral("moonset"), moonsetTimestamp.isEmpty() ? i18n("N/A"): moonsetTimestamp);
 
     return moonInfo;
 }
@@ -1931,33 +1859,21 @@ QMap<QString, QString> EnvCanadaIon::weatherRecords(const QString& source) const
 {
     QMap<QString, QString> recordInfo;
 
-    if (m_weatherData[source].recordHigh == 0) {
-        recordInfo.insert("recordHigh", i18n("N/A"));
-    } else {
-        recordInfo.insert("recordHigh", QString("%1").arg(m_weatherData[source].recordHigh));
-    }
+    const WeatherData& weatherData = m_weatherData[source];
 
-    if (m_weatherData[source].recordLow == 0) {
-        recordInfo.insert("recordLow", i18n("N/A"));
-    } else {
-        recordInfo.insert("recordLow", QString("%1").arg(m_weatherData[source].recordLow));
-    }
+    const float recordHigh = weatherData.recordHigh;
+    recordInfo.insert(QStringLiteral("recordHigh"), (recordHigh == 0) ? i18n("N/A") : QString::number(recordHigh, 'f', -1));
 
-    if (m_weatherData[source].recordRain == 0) {
-        recordInfo.insert("recordRain", i18n("N/A"));
-        recordInfo.insert("recordRainUnit", QString::number(KUnitConversion::NoUnit));
-    } else {
-        recordInfo.insert("recordRain", QString("%1").arg(m_weatherData[source].recordRain));
-        recordInfo.insert("recordRainUnit", QString::number(KUnitConversion::Millimeter));
-    }
+    const float recordLow = weatherData.recordLow;
+    recordInfo.insert(QStringLiteral("recordLow"), (recordLow == 0) ? i18n("N/A") : QString::number(recordLow, 'f', -1));
 
-    if (m_weatherData[source].recordSnow == 0) {
-        recordInfo.insert("recordSnow", i18n("N/A"));
-        recordInfo.insert("recordSnowUnit", QString::number(KUnitConversion::NoUnit));
-    } else {
-        recordInfo.insert("recordSnow", QString("%1").arg(m_weatherData[source].recordSnow));
-        recordInfo.insert("recordSnowUnit", QString::number(KUnitConversion::Centimeter));
-    }
+    const float recordRain = weatherData.recordRain;
+    recordInfo.insert(QStringLiteral("recordRain"), (recordRain == 0) ? i18n("N/A") : QString::number(recordRain, 'f', -1));
+    recordInfo.insert(QStringLiteral("recordRainUnit"), QString::number((recordRain == 0) ?KUnitConversion::NoUnit : KUnitConversion::Millimeter));
+
+    const float recordSnow = weatherData.recordSnow;
+    recordInfo.insert(QStringLiteral("recordSnow"), (recordSnow == 0) ? i18n("N/A") : QString::number(recordSnow, 'f', -1));
+    recordInfo.insert(QStringLiteral("recordSnowUnit"), QString::number((recordSnow == 0) ? KUnitConversion::NoUnit : KUnitConversion::Centimeter));
 
     return recordInfo;
 }
