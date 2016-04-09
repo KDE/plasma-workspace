@@ -750,10 +750,10 @@ void UKMETIon::parseFiveDayForecast(const QString& source, QXmlStreamReader& xml
 void UKMETIon::validate(const QString& source)
 {
     if (m_locations.isEmpty()) {
-        const QStringList invalidPlace = source.split(QLatin1Char('|'));
-        if (m_place[QStringLiteral("bbcukmet|")+invalidPlace[2]].place.isEmpty()) {
+        const QString invalidPlace = source.section(QLatin1Char('|'), 2, 2);
+        if (m_place[QStringLiteral("bbcukmet|")+invalidPlace].place.isEmpty()) {
             setData(source, QStringLiteral("validate"),
-                    QVariant(QStringLiteral("bbcukmet|invalid|multiple|") + invalidPlace[2]));
+                    QVariant(QStringLiteral("bbcukmet|invalid|multiple|") + invalidPlace));
         }
         return;
     }
@@ -782,9 +782,6 @@ void UKMETIon::updateWeather(const QString& source)
     weatherSource.append(QLatin1Char('|') + m_place[source].XMLurl);
 
     QMap<QString, QString> dataFields;
-    QStringList fieldList;
-    QVector<QString> forecastList;
-    int i = 0;
 
     Plasma::DataEngine::Data data;
 
@@ -841,18 +838,14 @@ void UKMETIon::updateWeather(const QString& source)
     data.insert(QStringLiteral("Wind Direction"), dataFields[QStringLiteral("windDirection")]);
 
     // 5 Day forecast info
-    forecastList = forecasts(source);
+    const QVector<QString> forecastList = forecasts(source);
 
     // Set number of forecasts per day/night supported
     data.insert(QStringLiteral("Total Weather Days"), m_weatherData[source].forecasts.size());
 
+    int i = 0;
     foreach(const QString &forecastItem, forecastList) {
-        // TODO: why the split and rejoin? to support missing fields?
-        fieldList = forecastItem.split(QLatin1Char('|'));
-
-        data.insert(QStringLiteral("Short Forecast Day ") + QString::number(i),
-                    QString::fromLatin1("%1|%2|%3|%4|%5|%6")
-                    .arg(fieldList[0],fieldList[1],fieldList[2],fieldList[3],fieldList[4],fieldList[5]));
+        data.insert(QStringLiteral("Short Forecast Day %1").arg(i), forecastItem);
         i++;
     }
 
@@ -918,7 +911,7 @@ QMap<QString, QString> UKMETIon::wind(const QString& source) const
         windInfo.insert(QStringLiteral("windSpeed"), i18n("N/A"));
         windInfo.insert(QStringLiteral("windUnit"), QString::number(KUnitConversion::NoUnit));
     } else {
-        windInfo.insert(QStringLiteral("windSpeed"), QString(m_weatherData[source].windSpeed_miles));
+        windInfo.insert(QStringLiteral("windSpeed"), m_weatherData[source].windSpeed_miles);
         windInfo.insert(QStringLiteral("windUnit"), QString::number(KUnitConversion::MilePerHour));
     }
     if (m_weatherData[source].windDirection.isEmpty()) {
@@ -989,13 +982,9 @@ QVector<QString> UKMETIon::forecasts(const QString& source)
                              ? QStringLiteral("N/A")
                              : QString::number(tempLow);
 
-        forecastData.append(QString::fromLatin1("%1|%2|%3|%4|%5|%6") \
-                            .arg(period) \
-                            .arg(forecastInfo->iconName) \
-                            .arg(forecastInfo->summary) \
-                            .arg(tempHighStr) \
-                            .arg(tempLowStr) \
-                            .arg(QStringLiteral("N/U")));
+        forecastData.append(QStringLiteral("%1|%2|%3|%4|%5|%6")
+                            .arg(period, forecastInfo->iconName, forecastInfo->summary,
+                                 tempHighStr, tempLowStr, QStringLiteral("N/U")));
         //.arg(forecastInfo->windSpeed)
         //arg(forecastInfo->windDirection));
     }
