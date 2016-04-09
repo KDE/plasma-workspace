@@ -36,6 +36,7 @@ AbstractItem {
     mainItem: applet && applet.toolTipItem ? applet.toolTipItem : null
     textFormat: applet ? applet.toolTipTextFormat : ""
     status: applet ? applet.status : PlasmaCore.Types.NoStatus
+    active: root.activeApplet != applet
 
     onClicked: {
         if (applet) {
