@@ -23,7 +23,7 @@
 #include <QDebug>
 #include <KLocalizedString>
 
-class IonInterface::Private
+class Q_DECL_HIDDEN IonInterface::Private
 {
 public:
     Private(IonInterface *i)
