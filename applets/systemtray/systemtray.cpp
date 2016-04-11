@@ -146,7 +146,7 @@ void SystemTray::showPlasmoidMenu(QQuickItem *appletInterface)
 
     Plasma::Applet *applet = appletInterface->property("_plasma_applet").value<Plasma::Applet*>();
 
-    QPointF pos = appletInterface->mapToScene(QPointF(15,15));
+    QPointF pos = appletInterface->mapToScene(QPointF(0, 0));
 
     if (appletInterface->window() && appletInterface->window()->screen()) {
         pos = appletInterface->window()->mapToGlobal(pos.toPoint());
