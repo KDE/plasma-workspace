@@ -32,6 +32,7 @@ Name[sv]=XembedSniProxy
 Name[uk]=XembedSniProxy
 Name[x-test]=xxXembedSniProxyxx
 Name[zh_CN]=XembedSniProxy
+Name[zh_TW]=XembedSniProxy
 Type=Application
 X-KDE-StartupNotify=false
 OnlyShowIn=KDE;
