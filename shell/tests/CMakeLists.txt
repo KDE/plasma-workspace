@@ -1,4 +1,7 @@
 function(plasmoidtest plasmoidName)
+    if (Qt5Core_VERSION_STRING VERSION_LESS "5.6.1")
+        return()
+    endif ()
     configure_file(
             ${CMAKE_CURRENT_SOURCE_DIR}/testLayout.js.in
             ${CMAKE_CURRENT_BINARY_DIR}/testLayout-${plasmoidName}.js
