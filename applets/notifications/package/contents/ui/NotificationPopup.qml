@@ -26,6 +26,8 @@ import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.kquickcontrolsaddons 2.0
 
+import org.kde.kquickcontrolsaddons 2.0 as KQuickControlsAddons
+
 PlasmaCore.Dialog {
     id: notificationPopup
 
@@ -65,7 +67,7 @@ PlasmaCore.Dialog {
         }
     }
 
-    mainItem: MouseArea {
+    mainItem: KQuickControlsAddons.MouseEventListener {
         id: root
         LayoutMirroring.enabled: Qt.application.layoutDirection === Qt.RightToLeft
         LayoutMirroring.childrenInherit: true
