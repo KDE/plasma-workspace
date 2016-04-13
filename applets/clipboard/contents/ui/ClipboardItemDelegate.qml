@@ -41,7 +41,10 @@ PlasmaComponents.ListItem {
 
     enabled: true
 
-    onClicked: menuItem.itemSelected(UuidRole)
+    onClicked: {
+        menuItem.itemSelected(UuidRole);
+        plasmoid.expanded = false;
+    }
     onContainsMouseChanged: {
         if (containsMouse) {
             menuListView.currentIndex = index
