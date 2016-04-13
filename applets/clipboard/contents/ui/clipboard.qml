@@ -27,8 +27,8 @@ import org.kde.plasma.extras 2.0 as PlasmaExtras
 Item {
     id: main
 
-    Plasmoid.switchWidth: units.gridUnit * 10
-    Plasmoid.switchHeight: units.gridUnit * 8
+    Plasmoid.switchWidth: units.gridUnit * 5
+    Plasmoid.switchHeight: units.gridUnit * 5
     Plasmoid.status: clipboardSource.data["clipboard"]["empty"] ? PlasmaCore.Types.PassiveStatus : PlasmaCore.Types.ActiveStatus
     Plasmoid.toolTipMainText: i18n("Clipboard Contents")
     Plasmoid.toolTipSubText: clipboardSource.data["clipboard"]["empty"] ? i18n("Clipboard is empty") : clipboardSource.data["clipboard"]["current"]
@@ -65,8 +65,8 @@ Item {
 
     Plasmoid.fullRepresentation: Item {
         id: dialogItem
-        Layout.minimumWidth: units.iconSizes.medium * 9
-        Layout.minimumHeight: units.gridUnit * 26
+        Layout.minimumWidth: units.gridUnit * 5
+        Layout.minimumHeight: units.gridUnit * 5
 
         focus: true
 
