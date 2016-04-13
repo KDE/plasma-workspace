@@ -657,6 +657,7 @@ void PanelShadows::Private::clearShadowWayland(const QWindow *window)
         return;
     }
     m_wayland.manager->removeShadow(surface);
+    surface->commit(KWayland::Client::Surface::CommitFlag::None);
 }
 
 bool PanelShadows::enabled() const
