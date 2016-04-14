@@ -819,7 +819,7 @@ void UKMETIon::updateWeather(const QString& source)
 
     dataFields = humidity(source);
     data.insert(QStringLiteral("Humidity"), dataFields[QStringLiteral("humidity")]);
-    data.insert(QStringLiteral("Humidity Field"), dataFields[QStringLiteral("humidityUnit")]);
+    data.insert(QStringLiteral("Humidity Unit"), dataFields[QStringLiteral("humidityUnit")]);
 
     data.insert(QStringLiteral("Visibility"), visibility(source));
 
