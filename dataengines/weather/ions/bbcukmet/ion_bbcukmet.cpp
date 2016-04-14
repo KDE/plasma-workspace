@@ -849,7 +849,7 @@ void UKMETIon::updateWeather(const QString& source)
         i++;
     }
 
-    data.insert(QStringLiteral("Credit"), i18n("Data from BBC Weather"));
+    data.insert(QStringLiteral("Credit"), i18nc("credit line, keep string short", "Data from BBC\302\240Weather"));
     data.insert(QStringLiteral("Credit Url"), m_place[source].forecastHTMLUrl);
 
     setData(weatherSource, data);

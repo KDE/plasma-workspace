@@ -1502,7 +1502,7 @@ void EnvCanadaIon::updateWeather(const QString& source)
     data.insert(QStringLiteral("Record Snowfall"), dataFields[QStringLiteral("recordSnow")]);
     data.insert(QStringLiteral("Record Snowfall Unit"), dataFields[QStringLiteral("recordSnowUnit")]);
 
-    data.insert(QStringLiteral("Credit"), i18n("Meteorological data is provided by Environment Canada"));
+    data.insert(QStringLiteral("Credit"), i18nc("credit line, keep string short", "Data from Environment\302\240Canada"));
     setData(source, data);
 }
 

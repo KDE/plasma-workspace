@@ -536,7 +536,7 @@ void NOAAIon::updateWeather(const QString& source)
     data.insert(QStringLiteral("Wind Gust"), dataFields[QStringLiteral("windGust")]);
     data.insert(QStringLiteral("Wind Gust Unit"), dataFields[QStringLiteral("windGustUnit")]);
     data.insert(QStringLiteral("Wind Direction"), getWindDirectionIcon(windIcons(), dataFields[QStringLiteral("windDirection")].toLower()));
-    data.insert(QStringLiteral("Credit"), i18n("Data provided by NOAA National Weather Service"));
+    data.insert(QStringLiteral("Credit"), i18nc("credit line, keep string short)", "Data from NOAA National\302\240Weather\302\240Service"));
 
     int dayIndex = 0;
     foreach(const WeatherData::Forecast &forecast, m_weatherData[source].forecasts) {
