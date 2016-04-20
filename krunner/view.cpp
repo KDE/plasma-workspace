@@ -18,7 +18,8 @@
 
 #include "view.h"
 
-#include <QApplication>
+#include <QAction>
+#include <QGuiApplication>
 #include <QDebug>
 #include <QDesktopWidget>
 #include <QQuickItem>
@@ -32,7 +33,6 @@
 #include <KWindowEffects>
 #include <KAuthorized>
 #include <KGlobalAccel>
-#include <QAction>
 #include <KLocalizedString>
 #include <KDirWatch>
 #include <KCrash/KCrash>
@@ -102,22 +102,22 @@ View::View(QWindow *)
     m_qmlObj->engine()->rootContext()->setContextProperty(QStringLiteral("runnerWindow"), this);
     m_qmlObj->completeInitialization();
 
-    auto screenRemoved = [=](QScreen* screen) {
+    auto screenRemoved = [this](QScreen* screen) {
         if (screen == this->screen()) {
             setScreen(qGuiApp->primaryScreen());
             hide();
         }
     };
 
-    auto screenAdded = [=](QScreen* screen) {
+    auto screenAdded = [this](QScreen* screen) {
         connect(screen, &QScreen::geometryChanged, this, &View::screenGeometryChanged);
         screenGeometryChanged();
     };
 
     foreach(QScreen* s, QGuiApplication::screens())
         screenAdded(s);
-    connect(qApp, &QGuiApplication::screenAdded, this, screenAdded);
-    connect(qApp, &QGuiApplication::screenRemoved, this, screenRemoved);
+    connect(qGuiApp, &QGuiApplication::screenAdded, this, screenAdded);
+    connect(qGuiApp, &QGuiApplication::screenRemoved, this, screenRemoved);
 
     connect(KWindowSystem::self(), &KWindowSystem::workAreaChanged, this, &View::resetScreenPos);
 
@@ -433,5 +433,3 @@ void View::writeHistory()
 {
     m_config.writeEntry("history", m_history);
 }
-
-#include "moc_view.cpp"

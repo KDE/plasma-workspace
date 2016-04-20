@@ -22,12 +22,10 @@
 
 #include <QQuickItem>
 #include <QQuickWindow>
-#include <QWeakPointer>
 #include <QPoint>
 #include <QQmlParserStatus>
 
 #include <Plasma/Plasma>
-#include <Plasma/Theme>
 
 #include <netwm_def.h>
 

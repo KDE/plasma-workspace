@@ -19,8 +19,7 @@
 #include <QApplication>
 #include <KLocalizedString>
 
-#include <qcommandlineparser.h>
-#include <qcommandlineoption.h>
+#include <QCommandLineParser>
 #include <QAction>
 #include <QUrl>
 #include <QDebug>
@@ -29,7 +28,7 @@
 
 #include <KAuthorized>
 #include <KAboutData>
-#include <kdbusservice.h>
+#include <KDBusService>
 
 #include <kdeclarative/qmlobject.h>
 

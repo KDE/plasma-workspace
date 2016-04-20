@@ -14,16 +14,12 @@ install(FILES ${CMAKE_CURRENT_BINARY_DIR}/org.kde.krunner.service
 add_executable(krunner ${krunner_SRCS})
 
 target_link_libraries(krunner
-    Qt5::Widgets
     Qt5::Quick
     KF5::Declarative
     KF5::I18n
-    KF5::Plasma
     KF5::PlasmaQuick
     KF5::GlobalAccel
     KF5::DBusAddons
-    KF5::WindowSystem
-    KF5::ConfigWidgets
     KF5::Crash
     KF5::WaylandClient
 )

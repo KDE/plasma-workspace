@@ -20,6 +20,8 @@
 #define VIEW_H
 
 #include <QtQuick/QQuickView>
+#include <KConfigGroup>
+#include <KSharedConfig>
 
 #include "dialog.h"
 
