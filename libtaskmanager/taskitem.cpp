@@ -709,6 +709,38 @@ QUrl TaskItem::launcherUrlFromTask(GroupManager *groupManager, Task *task, Start
         if (services.empty() && !triedPid) {
             services = getServicesViaPid(task->pid());
         }
+
+        // Try to improve on a possible from-binary fallback.
+        // If no services were found or we got a fake-service back from getServicesViaPid()
+        // we attempt to improve on this by adding a loosely matched reverse-domain-name
+        // DesktopEntryName. Namely anything that is '*.classClass.desktop' would qualify here.
+        //
+        // Illustrative example of a case where the above heuristics would fail to produce
+        // a reasonable result:
+        // - org.kde.dragonplayer.desktop
+        // - binary is 'dragon'
+        // - qapp appname and thus classClass is 'dragonplayer'
+        // - classClass cannot directly match the desktop file because of RDN
+        // - classClass also cannot match the binary because of name mismatch
+        // - in the following code *.classClass can match org.kde.dragonplayer though
+        if (task && (services.empty() || services.at(0)->desktopEntryName().isEmpty())) {
+            auto matchingServices = KServiceTypeTrader::self()->query(QStringLiteral("Application"), QStringLiteral("exist Exec and ('%1' ~~ DesktopEntryName)").arg(task->classClass()));
+            QMutableListIterator<KService::Ptr> it(matchingServices);
+            while (it.hasNext()) {
+                auto service = it.next();
+                if (!service->desktopEntryName().endsWith("." + task->classClass())) {
+                    it.remove();
+                }
+            }
+            // Exactly one match is expected, otherwise we discard the results as to reduce
+            // the likelihood of false-positive mappings. Since we essentially eliminate the
+            // uniqueness that RDN is meant to bring to the table we could potentially end
+            // up with more than one match here.
+            if (matchingServices.length() == 1) {
+                services = matchingServices;
+            }
+        }
+
     }
 
     if (services.empty() && startup) {
