@@ -4,7 +4,8 @@ import QtQuick 2.0
 //we only implement what's needed for a basic multi-monitor test
 
 ListModel {
-
+    property int primary: 0
+    
     //Creating multiple ListElement objects doesn't work, because a ListElement can only take numbers,
     //strings, booleans or enums, but we need a rect (it stores the screen size/position).
     //We can insert rects into the ListModel by using this workaround
