@@ -22,10 +22,11 @@
 
 #include <Plasma/ServiceJob>
 
+#include "playercontrol.h"
+
 class QDBusPendingCallWatcher;
 class QDBusPendingCall;
 class QDBusVariant;
-class PlayerControl;
 
 class PlayerActionJob : public Plasma::ServiceJob
 {
@@ -68,7 +69,7 @@ private Q_SLOTS:
 private:
     void listenToCall(const QDBusPendingCall& call);
 
-    PlayerControl *m_controller;
+    QPointer<PlayerControl> m_controller;
 };
 
 #endif // PLAYERACTIONJOB_H

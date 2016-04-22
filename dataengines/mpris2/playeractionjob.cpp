@@ -19,8 +19,6 @@
 
 #include "playeractionjob.h"
 
-#include "playercontrol.h"
-
 #include <dbusproperties.h>
 #include <mprisplayer.h>
 #include <mprisroot.h>
@@ -45,6 +43,12 @@ PlayerActionJob::PlayerActionJob(const QString& operation,
 void PlayerActionJob::start()
 {
     const QString operation(operationName());
+
+    if (!m_controller) {
+        setError(Failed);
+        emitResult();
+        return;
+    }
 
     qCDebug(MPRIS2) << "Trying to perform the action" << operationName();
     if (!m_controller->isOperationEnabled(operation)) {
@@ -160,6 +164,12 @@ void PlayerActionJob::callFinished(QDBusPendingCallWatcher* watcher)
 
 void PlayerActionJob::setDBusProperty(const QString& iface, const QString& propName, const QDBusVariant& value)
 {
+    if (!m_controller) {
+        setError(Failed);
+        emitResult();
+        return;
+    }
+
     listenToCall(
         m_controller->propertiesInterface()->Set(iface, propName, value)
     );
@@ -168,7 +178,8 @@ void PlayerActionJob::setDBusProperty(const QString& iface, const QString& propN
 QString PlayerActionJob::errorString() const
 {
     if (error() == Denied) {
-        return i18n("The media player '%1' cannot perform the action '%2'.", m_controller->name(), operationName());
+        const QString name = m_controller ? m_controller->name() : QString();
+        return i18n("The media player '%1' cannot perform the action '%2'.", name, operationName());
     } else if (error() == Failed) {
         return i18n("Attempting to perform the action '%1' failed with the message '%2'.",
                 operationName(), errorText());
