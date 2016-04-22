@@ -487,11 +487,7 @@ Item {
     // and Short does not provide seconds. So if seconds are enabled, we need to add it here.
     //
     // What happens here is that it looks for the delimiter between "h" and "m", takes it
-    // and appends it after "mm" and then appends "ss" for the seconds. Also it checks
-    // if the format string already does not contain the seconds part.
-    //
-    // It can happen that Qt uses the 'C' locale (it's a fallback) and that locale
-    // has always ":ss" part in ShortFormat, so we need to remove it.
+    // and appends it after "mm" and then appends "ss" for the seconds.
     function timeFormatCorrection(timeFormatString) {
         var regexp = /(hh*)(.+)(mm)/i
         var match = regexp.exec(timeFormatString);
@@ -507,7 +503,7 @@ Item {
         // when uppercase H is used for hours, needs to be h or hh, so toLowerCase()
         var result = hours.toLowerCase() + delimiter + minutes;
 
-        if (main.showSeconds && timeFormatString.indexOf('s') == -1) {
+        if (main.showSeconds) {
             result += delimiter + seconds;
         }
 
