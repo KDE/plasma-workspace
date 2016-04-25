@@ -54,13 +54,16 @@ private Q_SLOTS:
     void hideOsd();
 
 private:
+    bool init();
+
     void showProgress(const QString &icon, const int percent, const QString &additionalText = QString());
     void showText(const QString &icon, const QString &text);
     void showOsd();
 
-    KDeclarative::QmlObject *m_osdObject;
-    QTimer *m_osdTimer;
-    int m_timeout;
+    QString m_osdPath;
+    KDeclarative::QmlObject *m_osdObject = nullptr;
+    QTimer *m_osdTimer = nullptr;
+    int m_timeout = 0;
 };
 
 #endif // OSD_H
