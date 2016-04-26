@@ -157,7 +157,7 @@ void DesktopProtocol::checkLocalInstall()
 bool DesktopProtocol::rewriteUrl(const QUrl &url, QUrl &newUrl)
 {
     newUrl.setScheme(QStringLiteral("file"));
-    newUrl.setPath(QStandardPaths::writableLocation(QStandardPaths::DesktopLocation) + '/' + url.path());
+    newUrl.setPath(QStandardPaths::writableLocation(QStandardPaths::DesktopLocation) + url.path());
     return true;
 }
 
