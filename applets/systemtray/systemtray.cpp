@@ -44,6 +44,30 @@
 
 Q_LOGGING_CATEGORY(SYSTEMTRAY, "systemtray")
 
+/*
+ * An app may also load icons from their own directories, so we need a new iconloader that takes this into account
+ * This is wrapped into a subclass of iconengine so the iconloader lifespan matches the icon object
+ */
+class AppIconEngine : public KIconEngine
+{
+public:
+    AppIconEngine(const QString &variant, const QString &path, const QString &appName);
+    ~AppIconEngine();
+private:
+    KIconLoader* m_loader;
+};
+
+AppIconEngine::AppIconEngine(const QString &variant, const QString &path, const QString &appName) :
+    KIconEngine(variant, m_loader = new KIconLoader(appName, QStringList()))
+{
+    m_loader->addAppDir(appName, path);
+}
+
+AppIconEngine::~AppIconEngine()
+{
+    delete m_loader;
+}
+
 class PlasmoidModel: public QStandardItemModel
 {
 public:
@@ -116,14 +140,7 @@ QVariant SystemTray::resolveIcon(const QVariant &variant, const QString &iconThe
                 if (tokens.length() >= 3 && tokens.takeLast() == QLatin1String("icons")) {
                     const QString appName = tokens.takeLast().toString();
 
-                    // We use a separate instance of KIconLoader to avoid
-                    // adding all application dirs to KIconLoader::global(), to
-                    // avoid potential icon name clashes between application
-                    // icons
-                    //FIXME: leak
-                    KIconLoader *customIconLoader = new KIconLoader(appName, QStringList(), this);
-                    customIconLoader->addAppDir(appName, path);
-                    return QVariant(QIcon(new KIconEngine(variant.toString(), customIconLoader)));
+                    return QVariant(QIcon(new AppIconEngine(variant.toString(), path, appName)));
                 } else {
                     qWarning() << "Wrong IconThemePath" << path << ": too short or does not end with 'icons'";
                 }
