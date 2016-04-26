@@ -174,10 +174,6 @@ void SystemTray::showPlasmoidMenu(QQuickItem *appletInterface)
         desktopMenu->addAction(applet->actions()->action(QStringLiteral("configure")));
     }
 
-
-    //FIXME: systraycontainer?
-    Plasma::Applet *systrayApplet = this;
-
     desktopMenu->adjustSize();
 
     if (QScreen *screen = appletInterface->window()->screen()) {
@@ -311,6 +307,7 @@ void SystemTray::reorderItemAfter(QQuickItem* after, QQuickItem* before)
 
 void SystemTray::restoreContents(KConfigGroup &group)
 {
+    Q_UNUSED(group);
     //Don't do anything here, it's too soon
     qWarning()<<"RestoreContents doesn't do anything here";
 }
@@ -351,7 +348,6 @@ void SystemTray::restorePlasmoids()
     qWarning() << "Known plasmoid ids:"<< m_knownPlugins;
 
     //X-Plasma-NotificationArea
-    const QString constraint = QStringLiteral("[X-Plasma-NotificationArea] == true");
 
     KPluginInfo::List applets;
     foreach (const auto &info, Plasma::PluginLoader::self()->listAppletInfo(QString())) {
