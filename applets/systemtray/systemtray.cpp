@@ -354,7 +354,7 @@ void SystemTray::restorePlasmoids()
     const QString constraint = QStringLiteral("[X-Plasma-NotificationArea] == true");
 
     KPluginInfo::List applets;
-    for (auto info : Plasma::PluginLoader::self()->listAppletInfo(QString())) {
+    foreach (const auto &info, Plasma::PluginLoader::self()->listAppletInfo(QString())) {
         if (info.isValid() && info.property(QStringLiteral("X-Plasma-NotificationArea")).toBool() == true) {
             applets << info;
         }
@@ -413,7 +413,7 @@ void SystemTray::restorePlasmoids()
 QStringList SystemTray::defaultPlasmoids() const
 {
     QStringList ret;
-    for (auto info : Plasma::PluginLoader::self()->listAppletInfo(QString())) {
+    Q_FOREACH (const auto &info, Plasma::PluginLoader::self()->listAppletInfo(QString())) {
         if (info.isValid() && info.property(QStringLiteral("X-Plasma-NotificationArea")) == "true" &&
             info.isPluginEnabledByDefault()) {
             ret += info.pluginName();
@@ -430,8 +430,8 @@ QAbstractItemModel* SystemTray::availablePlasmoids()
 
         //Filter X-Plasma-NotificationArea
         KPluginInfo::List applets;
-        for (auto info : Plasma::PluginLoader::self()->listAppletInfo(QString())) {
-            if (info.property(QStringLiteral("X-Plasma-NotificationArea")) == "true") {
+        foreach (const auto& info, Plasma::PluginLoader::self()->listAppletInfo(QString())) {
+            if (info.property(QStringLiteral("X-Plasma-NotificationArea")) == QLatin1String("true")) {
                 applets << info;
             }
         }
