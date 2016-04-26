@@ -112,9 +112,9 @@ QVariant SystemTray::resolveIcon(const QVariant &variant, const QString &iconThe
             const QString path = iconThemePath;
             if (!path.isEmpty()) {
                 // FIXME: If last part of path is not "icons", this won't work!
-                QStringList tokens = path.split('/', QString::SkipEmptyParts);
+                auto tokens = path.splitRef('/', QString::SkipEmptyParts);
                 if (tokens.length() >= 3 && tokens.takeLast() == QLatin1String("icons")) {
-                    QString appName = tokens.takeLast();
+                    const QString appName = tokens.takeLast().toString();
 
                     // We use a separate instance of KIconLoader to avoid
                     // adding all application dirs to KIconLoader::global(), to
@@ -222,8 +222,9 @@ void SystemTray::showStatusNotifierContextMenu(KJob *job, QQuickItem *statusNoti
 
     if (menu) {
         menu->adjustSize();
-        int x = sjob->parameters()[QStringLiteral("x")].toInt();
-        int y = sjob->parameters()[QStringLiteral("y")].toInt();
+        const auto parameters = sjob->parameters();
+        int x = parameters[QStringLiteral("x")].toInt();
+        int y = parameters[QStringLiteral("y")].toInt();
 
         //try tofind the icon screen coordinates, and adjust the position as a poor
         //man's popupPosition
