@@ -88,6 +88,42 @@ void Osd::virtualDesktopChanged(const QString &currentVirtualDesktopName)
     showText(QString(), currentVirtualDesktopName);
 }
 
+void Osd::touchpadEnabledChanged(bool touchpadEnabled)
+{
+    if (touchpadEnabled) {
+        showText(QStringLiteral("input-touchpad-on"), i18nc("touchpad was enabled, keep short", "Touchpad On"));
+    } else {
+        showText(QStringLiteral("input-touchpad-off"), i18nc("touchpad was disabled, keep short", "Touchpad Off"));
+    }
+}
+
+void Osd::wifiEnabledChanged(bool wifiEnabled)
+{
+    if (wifiEnabled) {
+        showText(QStringLiteral("network-wireless-on"), i18nc("wireless lan was enabled, keep short", "Wifi On"));
+    } else {
+        showText(QStringLiteral("network-wireless-off"), i18nc("wireless lan was disabled, keep short", "Wifi Off"));
+    }
+}
+
+void Osd::bluetoothEnabledChanged(bool bluetoothEnabled)
+{
+    if (bluetoothEnabled) {
+        showText(QStringLiteral("preferences-system-bluetooth"), i18nc("Bluetooth was enabled, keep short", "Bluetooth On"));
+    } else {
+        showText(QStringLiteral("preferences-system-bluetooth-inactive"), i18nc("Bluetooth was disabled, keep short", "Bluetooth Off"));
+    }
+}
+
+void Osd::wwanEnabledChanged(bool wwanEnabled)
+{
+    if (wwanEnabled) {
+        showText(QStringLiteral("network-mobile-on"), i18nc("mobile internet was enabled, keep short", "Mobile Internet On"));
+    } else {
+        showText(QStringLiteral("network-mobile-off"), i18nc("mobile internet was disabled, keep short", "Mobile Internet Off"));
+    }
+}
+
 bool Osd::init()
 {
     if (m_osdObject && m_osdObject->rootObject()) {

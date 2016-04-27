@@ -45,6 +45,10 @@ public Q_SLOTS:
     void mediaPlayerVolumeChanged(int percent, const QString &playerName, const QString &playerIconName);
     void kbdLayoutChanged(const QString &layoutName);
     void virtualDesktopChanged(const QString &currentVirtualDesktopName);
+    void touchpadEnabledChanged(bool touchpadEnabled);
+    void wifiEnabledChanged(bool wifiEnabled);
+    void bluetoothEnabledChanged(bool bluetoothEnabled);
+    void wwanEnabledChanged(bool wwanEnabled);
 
 Q_SIGNALS:
     void osdProgress(const QString &icon, const int percent, const QString &additionalText);
