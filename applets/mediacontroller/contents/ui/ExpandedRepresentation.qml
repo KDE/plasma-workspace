@@ -278,7 +278,10 @@ Item {
                 height: width
                 enabled: playerControls.enabled && mpris2Source.data[mpris2Source.current].CanGoPrevious
                 iconSource: "media-skip-backward"
-                onClicked: root.previous()
+                onClicked: {
+                    seekSlider.value = 0    // Let the media start from beginning. Bug 362473
+                    root.previous()
+                }
             }
 
             PlasmaComponents.ToolButton {
@@ -295,7 +298,10 @@ Item {
                 height: width
                 enabled: playerControls.enabled && mpris2Source.data[mpris2Source.current].CanGoNext
                 iconSource: "media-skip-forward"
-                onClicked: root.next()
+                onClicked: {
+                    seekSlider.value = 0    // Let the media start from beginning. Bug 362473
+                    root.next()
+                }
             }
         }
     }
