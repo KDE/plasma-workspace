@@ -117,10 +117,6 @@ void ServiceRunner::match(Plasma::RunnerContext &context)
 
     //qDebug() << "got " << services.count() << " services from " << query;
     foreach (const KService::Ptr &service, services) {
-        if (!context.isValid()) {
-            return;
-        }
-
         if (service->noDisplay()) {
             continue;
         }
@@ -207,10 +203,6 @@ void ServiceRunner::match(Plasma::RunnerContext &context)
 
     //qDebug() << service->name() << "is an exact match!" << service->storageId() << service->exec();
     foreach (const KService::Ptr &service, services) {
-        if (!context.isValid()) {
-            return;
-        }
-
         if (!service->noDisplay()) {
             QString id = service->storageId();
             QString exec = service->exec();
