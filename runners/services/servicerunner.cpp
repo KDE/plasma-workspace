@@ -237,6 +237,48 @@ void ServiceRunner::match(Plasma::RunnerContext &context)
         }
     }
 
+    // search for jump list actions
+    if (term.length() >= 3) {
+        query = QStringLiteral("exist Actions"); // doesn't work
+        services = KServiceTypeTrader::self()->query(QStringLiteral("Application"));//, query);
+
+        foreach (const KService::Ptr &service, services) {
+            if (service->noDisplay()) {
+                continue;
+            }
+
+            foreach (const KServiceAction &action, service->actions()) {
+                if (action.text().isEmpty() || action.exec().isEmpty() || seen.contains(action.exec())) {
+                    continue;
+                }
+
+                if (!action.text().contains(term, Qt::CaseInsensitive)) {
+                    continue;
+                }
+
+                Plasma::QueryMatch match(this);
+                match.setType(Plasma::QueryMatch::HelperMatch);
+                if (!action.icon().isEmpty()) {
+                    match.setIcon(QIcon::fromTheme(action.icon()));
+                } else {
+                    match.setIcon(QIcon::fromTheme(service->icon()));
+                }
+                match.setText(i18nc("Jump list search result, %1 is action (eg. open new tab), %2 is application (eg. browser)",
+                                    "%1 - %2", action.text(), service->name()));
+                match.setData(action.exec());
+
+                qreal relevance = 0.5;
+                if (action.text().startsWith(term, Qt::CaseInsensitive)) {
+                    relevance += 0.05;
+                }
+
+                match.setRelevance(relevance);
+
+                matches << match;
+            }
+        }
+    }
+
     //context.addMatches(term, matches);
     context.addMatches(matches);
 }
@@ -244,9 +286,14 @@ void ServiceRunner::match(Plasma::RunnerContext &context)
 void ServiceRunner::run(const Plasma::RunnerContext &context, const Plasma::QueryMatch &match)
 {
     Q_UNUSED(context);
+    if (match.type() == Plasma::QueryMatch::HelperMatch) { // Jump List Action
+         KRun::run(match.data().toString(), {}, nullptr);
+         return;
+    }
+
     KService::Ptr service = KService::serviceByStorageId(match.data().toString());
     if (service) {
-        KRun::run(*service, QList<QUrl>(), 0);
+        KRun::runService(*service, {}, nullptr);
     }
 }
 
