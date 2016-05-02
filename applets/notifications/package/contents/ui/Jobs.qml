@@ -88,6 +88,7 @@ Column {
                 isPersistent: true,
                 urgency: 0,
                 configurable: false,
+                skipGrouping: true, // Bug 360156
                 actions: !error && UrlHelper.isUrlValid(message) ? ["jobUrl#" + message, i18n("Open...")] : []
             }; // If the actionId contains "jobUrl#", it tries to open the "id" value (which is "message")
 

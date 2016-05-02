@@ -32,6 +32,9 @@
     <entry name="actions" type="StringList">
       <label>List of actions in the format of [{"id": "id-of-the-action", "text": i18n("User visible text")}], </label>
     </entry>
+    <entry name="skipGrouping" type="Bool">
+      <label>Whether to skip grouping this notification to a similar previous one</label
+    </entry>
   </group>
 
   <group name="configureNotification">

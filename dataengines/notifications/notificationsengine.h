@@ -54,7 +54,7 @@ public:
     QString GetServerInformation(QString& vendor, QString& version, QString& specVersion);
 
     int createNotification(const QString &appName, const QString &appIcon, const QString &summary,
-                           const QString &body, int timeout, const QString &appRealName, const QStringList &actions);
+                           const QString &body, int timeout, const QStringList &actions, const QVariantMap &hints);
 
     void configureNotification(const QString &appName, const QString &eventId = QString());
 

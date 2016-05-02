@@ -61,14 +61,18 @@ void NotificationAction::start()
         int expireTimeout = parameters().value(QStringLiteral("expireTimeout")).toInt();
         bool isPersistent = parameters().value(QStringLiteral("isPersistent")).toBool();
 
+        QVariantMap hints;
+        if (parameters().value(QStringLiteral("skipGrouping")).toBool()) {
+            hints.insert(QStringLiteral("x-kde-skipGrouping"), true);
+        }
+
         int rv = m_engine->createNotification(parameters().value(QStringLiteral("appName")).toString(),
                                               parameters().value(QStringLiteral("appIcon")).toString(),
                                               parameters().value(QStringLiteral("summary")).toString(),
                                               parameters().value(QStringLiteral("body")).toString(),
                                               isPersistent ? 0 : expireTimeout,
-                                              QString(),
-                                              parameters().value(QStringLiteral("actions")).toStringList()
-                                             );
+                                              parameters().value(QStringLiteral("actions")).toStringList(),
+                                              hints);
         setResult(rv);
     } else if (operationName() == QLatin1String("configureNotification")) {
         m_engine->configureNotification(parameters()[QStringLiteral("appRealName")].toString(),

@@ -392,10 +392,8 @@ QString NotificationsEngine::GetServerInformation(QString& vendor, QString& vers
 }
 
 int NotificationsEngine::createNotification(const QString &appName, const QString &appIcon, const QString &summary,
-                                            const QString &body, int timeout, const QString &appRealName, const QStringList &actions)
+                                            const QString &body, int timeout, const QStringList &actions, const QVariantMap &hints)
 {
-    QVariantMap hints;
-    hints.insert(QStringLiteral("x-kde-appname"), appRealName);
     Notify(appName, 0, appIcon, summary, body, actions, hints, timeout);
     return m_nextId;
 }
