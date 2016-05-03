@@ -27,6 +27,8 @@
 
 #include <QSet>
 #include <QTimer>
+#include <QDBusVariant>
+#include <QDBusContext>
 
 #include <KPackage/Package>
 
@@ -66,7 +68,7 @@ namespace KWayland
     }
 }
 
-class ShellCorona : public Plasma::Corona
+class ShellCorona : public Plasma::Corona, QDBusContext
 {
     Q_OBJECT
     Q_PROPERTY(QString shell READ shell WRITE setShell)
@@ -139,6 +141,7 @@ public Q_SLOTS:
     void showInteractiveKWinConsole();
     void loadKWinScriptInInteractiveConsole(const QString &script);
     void toggleActivityManager();
+    void evaluateScript(const QString &string);
 
     Plasma::Containment *addPanel(const QString &plugin);
 

@@ -1210,6 +1210,31 @@ void ShellCorona::loadKWinScriptInInteractiveConsole(const QString &script)
     }
 }
 
+void ShellCorona::evaluateScript(const QString &script) {
+    if (immutability() != Plasma::Types::Mutable) {
+        if (calledFromDBus()) {
+            sendErrorReply(QDBusError::Failed, QStringLiteral("Widgets are locked"));
+        }
+        return;
+    }
+
+    WorkspaceScripting::ScriptEngine scriptEngine(this);
+
+    connect(&scriptEngine, &WorkspaceScripting::ScriptEngine::printError, this,
+        [](const QString &msg) {
+            qWarning() << msg;
+        });
+    connect(&scriptEngine, &WorkspaceScripting::ScriptEngine::print, this,
+            [](const QString &msg) {
+                qDebug() << msg;
+            });
+
+    scriptEngine.evaluateScript(script);
+    if (scriptEngine.hasUncaughtException() && calledFromDBus()) {
+        sendErrorReply(QDBusError::Failed, scriptEngine.uncaughtException().toString());
+    }
+}
+
 void ShellCorona::interactiveConsoleVisibilityChanged(bool visible)
 {
     if (!visible) {

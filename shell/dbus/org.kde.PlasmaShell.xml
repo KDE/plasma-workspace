@@ -18,5 +18,8 @@
     <method name="loadKWinScriptInInteractiveConsole">
       <arg name="script" type="s" direction="in"/>
     </method>
+    <method name="evaluateScript">
+      <arg name="script" type="s" direction="in"/>
+    </method>
   </interface>
 </node>
