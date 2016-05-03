@@ -35,6 +35,11 @@ find_package(KWinDBusInterface CONFIG REQUIRED)
 
 find_package(KScreenLocker REQUIRED)
 find_package(ScreenSaverDBusInterface CONFIG REQUIRED)
+find_package(KF5Holidays)
+set_package_properties(KF5Holidays PROPERTIES DESCRIPTION "Holidays provider for Plasma calendar"
+                       TYPE OPTIONAL
+                       PURPOSE "Needed to for holidays plugin for Plasma Calendar."
+                      )
 
 find_package(Phonon4Qt5 4.6.60 REQUIRED NO_MODULE)
 set_package_properties(Phonon4Qt5 PROPERTIES
@@ -165,6 +170,10 @@ add_subdirectory(drkonqi)
 ecm_optional_add_subdirectory(xembed-sni-proxy)
 
 add_subdirectory(soliduiserver)
+
+if(KF5Holidays_FOUND)
+    add_subdirectory(plasmacalendarintegration)
+endif()
 
 add_subdirectory(templates)
 
