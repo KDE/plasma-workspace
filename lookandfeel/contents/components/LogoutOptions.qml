@@ -75,7 +75,7 @@ PlasmaComponents.ButtonRow {
         iconSource: "system-shutdown"
         visible: root.canShutdown
         checkable: true
-        Accessible.name: i18ndc("plasma_lookandfeel_org.kde.lookandfeel", "Button to shut down the computer", "Shutdown")
+        Accessible.name: i18ndc("plasma_lookandfeel_org.kde.lookandfeel", "Button to shut down the computer", "Shut down")
         activeFocusOnTab: true
 
         onClicked: {
