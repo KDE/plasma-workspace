@@ -177,7 +177,7 @@ private:
 
     Plasma::DataEngine *m_timeEngine;
     QDateTime m_dateFormat;
-    bool emitWhenSetup;
+    // bool emitWhenSetup;
     QStringList m_sourcesToReset;
 };
 
