@@ -197,6 +197,18 @@ Item {
                 text: section
             }
         }
+
+        PlasmaExtras.Heading {
+            anchors.fill: holidaysList
+            anchors.leftMargin: units.largeSpacing
+            anchors.rightMargin: units.largeSpacing
+            text: monthView.isToday(monthView.currentDate) ? i18n("No events for today")
+                                                           : i18n("No events for this day");
+            level: 3
+            opacity: 0.4
+            visible: holidaysList.count == 0
+        }
+
     }
     Item {
         id: cal
