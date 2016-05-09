@@ -28,16 +28,9 @@ import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 
-MouseArea {
+Item {
     Layout.minimumWidth: units.gridUnit * 18
     Layout.minimumHeight: units.gridUnit * 22
-
-    hoverEnabled: true
-
-    PlasmaCore.Svg {
-        id: lineSvg
-        imagePath: "widgets/line"
-    }
 
     PlasmaExtras.Heading {
         width: parent.width
@@ -196,4 +189,4 @@ MouseArea {
             Behavior on height { NumberAnimation { duration: units.shortDuration * 3 } }
         }
     }
-} // MouseArea
+}
