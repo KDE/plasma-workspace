@@ -42,6 +42,7 @@ Item {
         height: width
         checkable: true
         iconSource: "window-pin"
+        z: 2
     }
 
     PlasmaExtras.Heading {
