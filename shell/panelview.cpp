@@ -196,7 +196,6 @@ void PanelView::setOffset(int offset)
     positionPanel();
     emit offsetChanged();
     m_corona->requestApplicationConfigSync();
-    m_strutsTimer.start(STRUTSTIMERDELAY);
     emit m_corona->availableScreenRegionChanged();
 }
 
@@ -357,9 +356,6 @@ void PanelView::positionPanel()
         slideLocation = KWindowEffects::BottomEdge;
         break;
     }
-    m_strutsTimer.stop();
-    m_strutsTimer.start(STRUTSTIMERDELAY);
-
     const QPoint pos = geometryByDistance(m_distance).topLeft();
     setPosition(pos);
     if (m_shellSurface) {
@@ -624,18 +620,20 @@ void PanelView::setAutoHideEnabled(bool enabled)
 void PanelView::resizeEvent(QResizeEvent *ev)
 {
     updateMask();
-    //don't setGeometry() to meke really sure we aren't doing a resize loop
+    //don't setGeometry() to make really sure we aren't doing a resize loop
     const QPoint pos = geometryByDistance(m_distance).topLeft();
     setPosition(pos);
     if (m_shellSurface) {
         m_shellSurface->setPosition(pos);
     }
+    m_strutsTimer.start(STRUTSTIMERDELAY);
     PlasmaQuick::ContainmentView::resizeEvent(ev);
 }
 
 void PanelView::moveEvent(QMoveEvent *ev)
 {
     updateMask();
+    m_strutsTimer.start(STRUTSTIMERDELAY);
     PlasmaQuick::ContainmentView::moveEvent(ev);
 }
 
@@ -873,6 +871,7 @@ void PanelView::updateStruts()
     if (!containment() || !screen()) {
         return;
     }
+
 
     NETExtendedStrut strut;
 
