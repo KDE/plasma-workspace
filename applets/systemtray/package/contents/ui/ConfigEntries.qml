@@ -227,7 +227,12 @@ QtLayouts.GridLayout {
                     visible: modelData.hasOwnProperty("shortcut")
                     onKeySequenceChanged: {
                         if (keySequence != modelData.shortcut) {
-                            tableView.model[modelData.index].shortcut = keySequence
+                            // both SNIs and plasmoids are listed in the same TableView
+                            // but they come from two separate models, so we need to subtract
+                            // the SNI model count to get the actual plasmoid index
+                            var index = modelData.index - plasmoid.rootItem.statusNotifierModel.count
+                            plasmoid.applets[index].globalShortcut = keySequence
+
                             iconsPage.configurationChanged()
                         }
                     }
