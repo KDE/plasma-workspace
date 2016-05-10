@@ -26,6 +26,8 @@ import org.kde.plasma.components 2.0 as PlasmaComponents
 StackView {
     id: mainStack
     clip: true
+    focus: true
+    Keys.forwardTo: [currentItem]
 
     Layout.minimumWidth: units.gridUnit * 12
     Layout.minimumHeight: units.gridUnit * 12
