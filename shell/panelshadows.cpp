@@ -435,35 +435,38 @@ void PanelShadows::Private::freeX11Pixmaps()
     if (!m_isX11) {
         return;
     }
+
+    auto *display = QX11Info::display();
+    if (!display) {
+        return;
+    }
+
     foreach (const QPixmap &pixmap, m_shadowPixmaps) {
-        if (!QX11Info::display()) {
-            return;
-        }
         if (!pixmap.isNull()) {
-            XFreePixmap(QX11Info::display(), reinterpret_cast<unsigned long>(createPixmap(pixmap)));
+            XFreePixmap(display, reinterpret_cast<unsigned long>(createPixmap(pixmap)));
         }
     }
 
     if (!m_emptyCornerPix.isNull()) {
-        XFreePixmap(QX11Info::display(), reinterpret_cast<unsigned long>(createPixmap(m_emptyCornerPix)));
+        XFreePixmap(display, reinterpret_cast<unsigned long>(createPixmap(m_emptyCornerPix)));
     }
     if (!m_emptyCornerBottomPix.isNull()) {
-        XFreePixmap(QX11Info::display(), reinterpret_cast<unsigned long>(createPixmap(m_emptyCornerBottomPix)));
+        XFreePixmap(display, reinterpret_cast<unsigned long>(createPixmap(m_emptyCornerBottomPix)));
     }
     if (!m_emptyCornerLeftPix.isNull()) {
-        XFreePixmap(QX11Info::display(), reinterpret_cast<unsigned long>(createPixmap(m_emptyCornerLeftPix)));
+        XFreePixmap(display, reinterpret_cast<unsigned long>(createPixmap(m_emptyCornerLeftPix)));
     }
     if (!m_emptyCornerRightPix.isNull()) {
-        XFreePixmap(QX11Info::display(), reinterpret_cast<unsigned long>(createPixmap(m_emptyCornerRightPix)));
+        XFreePixmap(display, reinterpret_cast<unsigned long>(createPixmap(m_emptyCornerRightPix)));
     }
     if (!m_emptyCornerTopPix.isNull()) {
-        XFreePixmap(QX11Info::display(), reinterpret_cast<unsigned long>(createPixmap(m_emptyCornerTopPix)));
+        XFreePixmap(display, reinterpret_cast<unsigned long>(createPixmap(m_emptyCornerTopPix)));
     }
     if (!m_emptyVerticalPix.isNull()) {
-        XFreePixmap(QX11Info::display(), reinterpret_cast<unsigned long>(createPixmap(m_emptyVerticalPix)));
+        XFreePixmap(display, reinterpret_cast<unsigned long>(createPixmap(m_emptyVerticalPix)));
     }
     if (!m_emptyHorizontalPix.isNull()) {
-        XFreePixmap(QX11Info::display(), reinterpret_cast<unsigned long>(createPixmap(m_emptyHorizontalPix)));
+        XFreePixmap(display, reinterpret_cast<unsigned long>(createPixmap(m_emptyHorizontalPix)));
     }
 #endif
 }
