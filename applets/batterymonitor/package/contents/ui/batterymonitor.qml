@@ -54,6 +54,10 @@ Item {
     Plasmoid.toolTipMainText: {
         if (batteries.count === 0) {
             return i18n("No Batteries Available");
+        } else if (!pmSource.data["Battery"]["Has Cumulative"]) {
+            // Bug 362924: Distinguish between no batteries and no power supply batteries
+            // just show the generic applet title in the latter case
+            return i18n("Battery and Brightness")
         } else if (pmSource.data["Battery"]["State"] === "FullyCharged") {
             return i18n("Fully Charged");
         } else if (pmSource.data["AC Adapter"] && pmSource.data["AC Adapter"]["Plugged in"]) {
