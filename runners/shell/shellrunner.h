@@ -21,9 +21,6 @@
 
 #include <krunner/abstractrunner.h>
 
-class QWidget;
-
-
 /**
  * This class runs programs using the literal name of the binary, much as one
  * would use at a shell prompt.
@@ -38,20 +35,10 @@ class ShellRunner : public Plasma::AbstractRunner
 
         void match(Plasma::RunnerContext &context) override;
         void run(const Plasma::RunnerContext &context, const Plasma::QueryMatch &action) override;
-        void createRunOptions(QWidget *parent) override;
-
-    private Q_SLOTS:
-        void setRunAsOtherUser(bool asOtherUser);
-        void setRunInTerminal(bool runInTerminal);
-        void setUsername(const QString &username);
-        void setPassword(const QString &password);
+        QList<QAction *> actionsForMatch(const Plasma::QueryMatch &match);
 
     private:
-        QString m_username;
-        QString m_password;
         bool m_enabled;
-        bool m_inTerminal;
-        bool m_asOtherUser;
 };
 
 

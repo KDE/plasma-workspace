@@ -1,5 +1,6 @@
 /*
  *   Copyright (C) 2006 Aaron Seigo <aseigo@kde.org>
+ *   Copyright (C) 2016 Kai Uwe Broulik <kde@privat.broulik.de>
  *
  *   This program is free software; you can redistribute it and/or modify
  *   it under the terms of the GNU Library General Public License version 2 as
@@ -17,10 +18,6 @@
  */
 
 #include "shellrunner.h"
-
-#include <QWidget>
-#include <QPushButton>
-#include <QIcon>
 
 #include <KAuthorized>
 #include <QDebug>
@@ -40,9 +37,7 @@
 K_EXPORT_PLASMA_RUNNER(shell, ShellRunner)
 
 ShellRunner::ShellRunner(QObject *parent, const QVariantList &args)
-    : Plasma::AbstractRunner(parent, args),
-      m_inTerminal(false),
-      m_asOtherUser(false)
+    : Plasma::AbstractRunner(parent, args)
 {
     setObjectName( QLatin1String("Command" ));
     setPriority(AbstractRunner::HighestPriority);
@@ -82,100 +77,27 @@ void ShellRunner::run(const Plasma::RunnerContext &context, const Plasma::QueryM
 {
     Q_UNUSED(match);
 
-    // filter match's id to remove runner's name
-    // as this is the command we want to run
-
     if (m_enabled) {
-#ifdef Q_OS_UNIX
-        //qDebug() << m_asOtherUser << m_username << m_password;
-        if (m_asOtherUser && !m_username.isEmpty()) {
-            //TODO: provide some user feedback on failure
-            QString exec;
-            QString args;
-            if (m_inTerminal) {
-                // we have to reimplement this from KToolInvocation because we need to use KDESu
-                KConfigGroup confGroup = KSharedConfig::openConfig()->group("General");
-                exec = confGroup.readPathEntry("TerminalApplication", QStringLiteral("konsole"));
-                if (!exec.isEmpty()) {
-                    if (exec == QLatin1String("konsole")) {
-                        args += QLatin1String(" --noclose");
-                    } else if (exec == QLatin1String("xterm")) {
-                        args += QLatin1String(" -hold");
-                    }
-
-                    args += " -e " + context.query();
-                }
-            } else {
-                const QStringList commandLine = KShell::splitArgs(context.query(), KShell::TildeExpand);
-                if (!commandLine.isEmpty()) {
-                    exec = commandLine.at(0);
-                }
-
-                args = context.query().right(context.query().size() - commandLine.at(0).length());
-            }
-
-            if (!exec.isEmpty()) {
-                exec = QStandardPaths::findExecutable(exec);
-                exec.append(args);
-                if (!exec.isEmpty()) {
-                    KDESu::SuProcess client(m_username.toLocal8Bit(), exec.toLocal8Bit());
-                    const QByteArray password = m_password.toLocal8Bit();
-                    //TODO handle errors like wrong password via KNotifications in 4.7
-                    client.exec(password.constData());
-                }
-            }
-        } else
-#endif
-        if (m_inTerminal) {
+        if (match.selectedAction() && match.selectedAction() == actions().value(QStringLiteral("runInTerminal"))) {
             KToolInvocation::invokeTerminal(context.query());
         } else {
             KRun::runCommand(context.query(), NULL);
         }
     }
-
-    // reset for the next run!
-    m_inTerminal = false;
-    m_asOtherUser = false;
-    m_username.clear();
-    m_password.clear();
 }
 
-void ShellRunner::createRunOptions(QWidget *parent)
+QList<QAction *> ShellRunner::actionsForMatch(const Plasma::QueryMatch &match)
 {
-    //TODO: for multiple runners?
-    //TODO: sync palette on theme changes
-    ShellConfig *configWidget = new ShellConfig(config(), parent);
+    Q_UNUSED(match)
 
-    QPalette pal = configWidget->palette();
-    Plasma::Theme *theme = new Plasma::Theme(this);
-    pal.setColor(QPalette::Normal, QPalette::Window, theme->color(Plasma::Theme::BackgroundColor));
-    pal.setColor(QPalette::Normal, QPalette::WindowText, theme->color(Plasma::Theme::TextColor));
-    configWidget->setPalette(pal);
+    const QString runInTerminalId = QStringLiteral("runInTerminal");
 
-    connect(configWidget->m_ui.cbRunAsOther, &QAbstractButton::clicked, this, &ShellRunner::setRunAsOtherUser);
-    connect(configWidget->m_ui.cbRunInTerminal, &QAbstractButton::clicked, this, &ShellRunner::setRunInTerminal);
-    connect(configWidget->m_ui.leUsername, &QLineEdit::textChanged, this, &ShellRunner::setUsername);
-    connect(configWidget->m_ui.lePassword, &QLineEdit::textChanged, this, &ShellRunner::setPassword);
-}
+    QAction *terminalAction = action(runInTerminalId);
+    if (!terminalAction) {
+        terminalAction = addAction(runInTerminalId, QIcon::fromTheme(QStringLiteral("utilities-terminal")), i18n("Run in Terminal Window"));
+    };
 
-void ShellRunner::setRunAsOtherUser(bool asOtherUser)
-{
-    m_asOtherUser = asOtherUser;
-}
-
-void ShellRunner::setRunInTerminal(bool runInTerminal)
-{
-    m_inTerminal = runInTerminal;
-}
-
-void ShellRunner::setUsername(const QString &username)
-{
-    m_username = username;
-}
-
-void ShellRunner::setPassword(const QString &password)
-{
-    m_password = password;
+    return {terminalAction};
 }
 
 #include "shellrunner.moc"
