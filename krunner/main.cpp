@@ -54,6 +54,10 @@ int main(int argc, char **argv)
     parser.addVersionOption();
     parser.process(app);
 
+    if (!KAuthorized::authorize(QStringLiteral("run_command"))) {
+        return -1;
+    }
+
     KDBusService service(KDBusService::Unique);
 
     KAboutData aboutData(QStringLiteral("krunner"),

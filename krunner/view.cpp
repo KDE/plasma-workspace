@@ -71,21 +71,19 @@ View::View(QWindow *)
     new AppAdaptor(this);
     QDBusConnection::sessionBus().registerObject(QStringLiteral("/App"), this);
 
-    if (KAuthorized::authorize(QStringLiteral("run_command"))) {
-        QAction *a = new QAction(0);
-        QObject::connect(a, &QAction::triggered, this, &View::displayOrHide);
-        a->setText(i18n("Run Command"));
-        a->setObjectName(QStringLiteral("run command"));
-        KGlobalAccel::self()->setDefaultShortcut(a, QList<QKeySequence>() << QKeySequence(Qt::ALT + Qt::Key_Space), KGlobalAccel::NoAutoloading);
-        KGlobalAccel::self()->setShortcut(a, QList<QKeySequence>() << QKeySequence(Qt::ALT + Qt::Key_Space) << QKeySequence(Qt::ALT + Qt::Key_F2) << Qt::Key_Search);
+    QAction *a = new QAction(0);
+    QObject::connect(a, &QAction::triggered, this, &View::displayOrHide);
+    a->setText(i18n("Run Command"));
+    a->setObjectName(QStringLiteral("run command"));
+    KGlobalAccel::self()->setDefaultShortcut(a, QList<QKeySequence>() << QKeySequence(Qt::ALT + Qt::Key_Space), KGlobalAccel::NoAutoloading);
+    KGlobalAccel::self()->setShortcut(a, QList<QKeySequence>() << QKeySequence(Qt::ALT + Qt::Key_Space) << QKeySequence(Qt::ALT + Qt::Key_F2) << Qt::Key_Search);
 
-        a = new QAction(0);
-        QObject::connect(a, &QAction::triggered, this, &View::displayWithClipboardContents);
-        a->setText(i18n("Run Command on clipboard contents"));
-        a->setObjectName(QStringLiteral("run command on clipboard contents"));
-        KGlobalAccel::self()->setDefaultShortcut(a, QList<QKeySequence>() << QKeySequence(Qt::ALT+Qt::SHIFT+Qt::Key_F2));
-        KGlobalAccel::self()->setShortcut(a, QList<QKeySequence>() << QKeySequence(Qt::ALT+Qt::SHIFT+Qt::Key_F2));
-    }
+    a = new QAction(0);
+    QObject::connect(a, &QAction::triggered, this, &View::displayWithClipboardContents);
+    a->setText(i18n("Run Command on clipboard contents"));
+    a->setObjectName(QStringLiteral("run command on clipboard contents"));
+    KGlobalAccel::self()->setDefaultShortcut(a, QList<QKeySequence>() << QKeySequence(Qt::ALT+Qt::SHIFT+Qt::Key_F2));
+    KGlobalAccel::self()->setShortcut(a, QList<QKeySequence>() << QKeySequence(Qt::ALT+Qt::SHIFT+Qt::Key_F2));
 
     m_qmlObj = new KDeclarative::QmlObject(this);
     m_qmlObj->setInitializationDelayed(true);
