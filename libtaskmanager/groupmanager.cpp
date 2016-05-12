@@ -1077,7 +1077,11 @@ void GroupManager::setLauncherList(QList<QUrl> launcherList)
             pixmap.loadFromData(bytes);
             icon.addPixmap(pixmap);
         } else {
-            icon = QIcon::fromTheme(query.queryItemValue(QStringLiteral("icon")));
+            QString iconName = query.queryItemValue(QStringLiteral("icon"));
+
+            if (!iconName.isEmpty()) {
+                icon = QIcon::fromTheme(iconName);
+            }
         }
 
         l.setQuery(QUrlQuery());
