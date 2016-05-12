@@ -25,6 +25,7 @@
 
 #include <QDebug>
 #include <QIcon>
+#include <QMimeData>
 #include <QUrl>
 #include <KRun>
 #include <KLocalizedString>
@@ -157,6 +158,17 @@ void PlacesRunner::run(const Plasma::RunnerContext &context, const Plasma::Query
             delete places;
         }
     }
+}
+
+QMimeData *PlacesRunner::mimeDataForMatch(const Plasma::QueryMatch &match)
+{
+    if (match.data().type() == QVariant::Url) {
+        QMimeData *result = new QMimeData();
+        result->setUrls({match.data().toUrl()});
+        return result;
+    }
+
+    return nullptr;
 }
 
 //if a device needed mounting, this slot gets called when it's finished.
