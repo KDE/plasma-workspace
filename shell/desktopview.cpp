@@ -29,6 +29,7 @@
 
 #include <kwindowsystem.h>
 #include <klocalizedstring.h>
+#include <KAuthorized>
 
 #include <KPackage/Package>
 
@@ -223,6 +224,9 @@ void DesktopView::keyPressEvent(QKeyEvent *e)
         const QString text = e->text().trimmed();
         if (!text.isEmpty() && text[0].isPrint()) {
             const QString interface(QStringLiteral("org.kde.krunner"));
+            if (!KAuthorized::authorize(QStringLiteral("run_command"))) {
+                return;
+            }
             org::kde::krunner::App krunner(interface, QStringLiteral("/App"), QDBusConnection::sessionBus());
             krunner.query(text);
             e->accept();
