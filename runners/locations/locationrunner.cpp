@@ -130,10 +130,10 @@ void LocationsRunner::match(Plasma::RunnerContext &context)
     }
 }
 
-static QString convertCaseInsensitivePath(const QString& path)
+static QString convertCaseInsensitivePath(const QString &path)
 {
     // Split the string on /
-    QStringList dirNames = path.split(QDir::separator(), QString::SkipEmptyParts);
+    const auto dirNames = path.splitRef(QDir::separator(), QString::SkipEmptyParts);
 
     // if split result is empty, path string can only contain separator.
     if (dirNames.empty()) {
@@ -142,12 +142,12 @@ static QString convertCaseInsensitivePath(const QString& path)
 
     // Match folders
     QDir dir(QStringLiteral("/"));
-    for (int i = 0; i < dirNames.size() - 1; i++) {
-        QString dirName = dirNames[i];
+    for (int i = 0; i < dirNames.size() - 1; ++i) {
+        const QStringRef dirName = dirNames.at(i);
 
         bool foundMatch = false;
-        QStringList entries = dir.entryList(QDir::Dirs);
-        for (const QString& entry: entries) {
+        const QStringList entries = dir.entryList(QDir::Dirs);
+        for (const QString &entry : entries) {
             if (entry.compare(dirName, Qt::CaseInsensitive) == 0) {
                 foundMatch = dir.cd(entry);
                 if (foundMatch) {
@@ -161,9 +161,9 @@ static QString convertCaseInsensitivePath(const QString& path)
         }
     }
 
-    QString finalName = dirNames.last();
-    QStringList entries = dir.entryList();
-    for (const QString& entry: entries) {
+    const QStringRef finalName = dirNames.last();
+    const QStringList entries = dir.entryList();
+    for (const QString &entry : entries) {
         if (entry.compare(finalName, Qt::CaseInsensitive) == 0) {
             return dir.absoluteFilePath(entry);
         }
@@ -187,7 +187,7 @@ void LocationsRunner::run(const Plasma::RunnerContext &context, const Plasma::Qu
     //qDebug() << "command: " << context.query();
     //qDebug() << "url: " << location << data;
 
-    QUrl urlToRun(KUriFilter::self()->filteredUri(location, QStringList() << QStringLiteral("kshorturifilter")));
+    QUrl urlToRun(KUriFilter::self()->filteredUri(location, {QStringLiteral("kshorturifilter")}));
 
     new KRun(urlToRun, 0);
 }
@@ -196,12 +196,8 @@ QMimeData * LocationsRunner::mimeDataForMatch(const Plasma::QueryMatch &match)
 {
     const QString data = match.data().toString();
     if (!data.isEmpty()) {
-        QUrl url(data);
-        QList<QUrl> list;
-        list << url;
         QMimeData *result = new QMimeData();
-        result->setUrls(list);
-        result->setText(data);
+        result->setUrls({QUrl(data)});
         return result;
     }
 
