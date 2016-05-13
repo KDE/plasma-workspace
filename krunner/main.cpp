@@ -50,7 +50,6 @@ int main(int argc, char **argv)
     app.setQuitOnLastWindowClosed(false);
     parser.setApplicationDescription(i18n("Run Command interface"));
 
-    parser.addVersionOption();
     parser.addHelpOption();
     parser.addVersionOption();
     parser.process(app);
