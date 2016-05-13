@@ -68,19 +68,22 @@ void AlternativesHelper::loadAlternative(const QString &plugin)
         return;
     }
 
-    Plasma::Applet *newApplet = Q_NULLPTR;
-    //TODO: map the position to containment coordinates
-    QMetaObject::invokeMethod(contItem, "createApplet", Q_RETURN_ARG(Plasma::Applet *, newApplet), Q_ARG(QString, plugin), Q_ARG(QVariantList, QVariantList()), Q_ARG(QPoint, appletItem->mapToItem(contItem, QPointF(0,0)).toPoint()));
-
     // ensure the global shortcut is moved to the new applet
     const QKeySequence &shortcut = m_applet->globalShortcut();
     m_applet->setGlobalShortcut(QKeySequence()); // need to unmap the old one first
 
-    if (newApplet) {
-        newApplet->setGlobalShortcut(shortcut);
-    }
+    const QPoint newPos = appletItem->mapToItem(contItem, QPointF(0,0)).toPoint();
 
     m_applet->destroy();
+
+    connect(m_applet, &QObject::destroyed, [=]() {
+        Plasma::Applet *newApplet = Q_NULLPTR;
+        QMetaObject::invokeMethod(contItem, "createApplet", Q_RETURN_ARG(Plasma::Applet *, newApplet), Q_ARG(QString, plugin), Q_ARG(QVariantList, QVariantList()), Q_ARG(QPoint, newPos));
+
+        if (newApplet) {
+            newApplet->setGlobalShortcut(shortcut);
+        }
+    });
 }
 
 #include "moc_alternativeshelper.cpp"
