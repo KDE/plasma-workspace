@@ -66,6 +66,10 @@ SplashApp::SplashApp(int &argc, char ** argv)
 
     setStage(QStringLiteral("initial"));
 
+    if (QGuiApplication::platformName().startsWith(QLatin1String("wayland"), Qt::CaseInsensitive)) {
+        setStage(QStringLiteral("wm"));
+    }
+
     QPixmap cursor(32, 32);
     cursor.fill(Qt::transparent);
     setOverrideCursor(QCursor(cursor));
