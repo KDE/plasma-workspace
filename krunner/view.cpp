@@ -405,6 +405,10 @@ void View::addToHistory(const QString &item)
         return;
     }
 
+    if (!KAuthorized::authorize(QStringLiteral("lineedit_text_completion"))) {
+        return;
+    }
+
     m_history.removeOne(item);
     m_history.prepend(item);
 
