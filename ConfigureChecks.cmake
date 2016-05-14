@@ -1,28 +1,8 @@
 set(CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/cmake ${CMAKE_MODULE_PATH} )
-include(UnixAuth)
-set_package_properties(PAM PROPERTIES DESCRIPTION "PAM Libraries"
-                       URL "https://www.kernel.org/pub/linux/libs/pam/"
-                       TYPE OPTIONAL
-                       PURPOSE "Required for screen unlocking and optionally used by the KDM log in manager"
-                      )
 include(CheckTypeSize)
 include(FindPkgConfig)
 
 # find_package(XKB) # kxkb, kdm
-
-if (PAM_FOUND)
-    set(KDE4_COMMON_PAM_SERVICE "kde" CACHE STRING "The PAM service to use unless overridden for a particular app.")
-
-    macro(define_pam_service APP)
-        string(TOUPPER ${APP}_PAM_SERVICE var)
-        set(cvar KDE4_${var})
-        set(${cvar} "${KDE4_COMMON_PAM_SERVICE}" CACHE STRING "The PAM service for ${APP}.")
-        mark_as_advanced(${cvar})
-        set(${var} "\"${${cvar}}\"")
-    endmacro(define_pam_service)
-
-    define_pam_service(kscreensaver)
-endif (PAM_FOUND)
 
 set(KWIN_BIN "kwin_x11" CACHE STRING "Name of the KWin binary")
 
@@ -36,8 +16,6 @@ get_filename_component(XBINDIR "${proto_xbindir}" ABSOLUTE)
 get_filename_component(xrootdir "${XBINDIR}" PATH)
 set(XLIBDIR "${xrootdir}/lib/X11")
 
-check_function_exists(getpassphrase HAVE_GETPASSPHRASE)
-check_function_exists(vsyslog HAVE_VSYSLOG)
 check_function_exists(statvfs HAVE_STATVFS)
 
 check_include_files(limits.h HAVE_LIMITS_H)
