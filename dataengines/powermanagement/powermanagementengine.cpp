@@ -218,6 +218,7 @@ bool PowermanagementEngine::sourceRequestEvent(const QString &name)
         setData(QStringLiteral("Sleep States"), QStringLiteral("Hibernate"), sleepstates.contains(Solid::PowerManagement::HibernateState));
         setData(QStringLiteral("Sleep States"), QStringLiteral("HybridSuspend"), sleepstates.contains(Solid::PowerManagement::HybridSuspendState));
         setData(QStringLiteral("Sleep States"), QStringLiteral("LockScreen"), KAuthorized::authorizeKAction(QStringLiteral("lock_screen")));
+        setData(QStringLiteral("Sleep States"), QStringLiteral("Logout"), KAuthorized::authorize(QStringLiteral("logout")));
     } else if (name == QLatin1String("PowerDevil")) {
         QDBusMessage screenMsg = QDBusMessage::createMethodCall(SOLID_POWERMANAGEMENT_SERVICE,
                                                               QStringLiteral("/org/kde/Solid/PowerManagement/Actions/BrightnessControl"),
