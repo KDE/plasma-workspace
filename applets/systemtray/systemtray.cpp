@@ -191,6 +191,11 @@ void SystemTray::showPlasmoidMenu(QQuickItem *appletInterface)
         desktopMenu->addAction(applet->actions()->action(QStringLiteral("configure")));
     }
 
+    if (desktopMenu->isEmpty()) {
+        delete desktopMenu;
+        return;
+    }
+
     desktopMenu->adjustSize();
 
     if (QScreen *screen = appletInterface->window()->screen()) {
