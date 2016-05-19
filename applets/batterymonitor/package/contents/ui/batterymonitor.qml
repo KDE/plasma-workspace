@@ -97,6 +97,11 @@ Item {
 
     property var inhibitions: []
 
+    readonly property var kcms: ["powerdevilprofilesconfig.desktop",
+                                 "powerdevilactivitiesconfig.desktop",
+                                 "powerdevilglobalconfig.desktop"]
+    readonly property bool kcmsAuthorized: KCMShell.authorize(batterymonitor.kcms).length > 0
+
     onScreenBrightnessChanged: {
         if (disableBrightnessUpdate) {
             return;
@@ -120,14 +125,17 @@ Item {
     }
 
     function action_powerdevilkcm() {
-        KCMShell.open(["powerdevilprofilesconfig", "powerdevilactivitiesconfig", "powerdevilglobalconfig"]);
+        KCMShell.open(batterymonitor.kcms);
     }
 
     Component.onCompleted: {
         Logic.updateBrightness(batterymonitor, pmSource);
         plasmoid.removeAction("configure");
-        plasmoid.setAction("powerdevilkcm", i18n("&Configure Power Saving..."), "preferences-system-power-management");
         Logic.updateInhibitions(batterymonitor, pmSource)
+
+        if (batterymonitor.kcmsAuthorized) {
+            plasmoid.setAction("powerdevilkcm", i18n("&Configure Power Saving..."), "preferences-system-power-management");
+        }
     }
 
     Plasmoid.compactRepresentation: CompactRepresentation {

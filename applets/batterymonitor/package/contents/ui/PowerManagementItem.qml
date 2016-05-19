@@ -77,6 +77,7 @@ Column {
             iconSource: "configure"
             onClicked: batterymonitor.action_powerdevilkcm()
             tooltip: i18n("Configure Power Saving...")
+            visible: batterymonitor.kcmsAuthorized
         }
     }
 
