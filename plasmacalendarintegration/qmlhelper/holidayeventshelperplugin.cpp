@@ -28,24 +28,24 @@
 class QmlConfigHelper : public QObject
 {
     Q_OBJECT
+    Q_PROPERTY(QStringList selectedRegions READ selectedRegions NOTIFY selectedRegionsChanged)
 
 public:
     QmlConfigHelper(QObject *parent = 0) : QObject(parent)
     {
         KSharedConfig::Ptr config = KSharedConfig::openConfig("plasma_calendar_holiday_regions");
         m_configGroup = config->group("General");
-        connect(this, &QmlConfigHelper::selectedRegionsChanged, [=] {
-            m_configGroup.writeEntry("selectedRegions", m_regions);
-        });
+        m_regions = m_configGroup.readEntry("selectedRegions", QStringList());
     }
 
-    ~QmlConfigHelper()
+    QStringList selectedRegions() const
     {
-        m_configGroup.sync();
+        return m_regions;
     }
 
     Q_INVOKABLE void saveConfig()
     {
+        m_configGroup.writeEntry("selectedRegions", m_regions);
         m_configGroup.sync();
     }
 
@@ -53,16 +53,15 @@ public:
     {
         if (!m_regions.contains(region)) {
             m_regions.append(region);
+            Q_EMIT selectedRegionsChanged();
         }
-
-        Q_EMIT selectedRegionsChanged();
     }
 
     Q_INVOKABLE void removeRegion(const QString &region)
     {
-        m_regions.removeOne(region);
-
-        Q_EMIT selectedRegionsChanged();
+        if (m_regions.removeOne(region)) {
+            Q_EMIT selectedRegionsChanged();
+        }
     }
 
 Q_SIGNALS:

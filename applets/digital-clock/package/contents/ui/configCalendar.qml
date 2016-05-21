@@ -58,6 +58,7 @@ Item {
                         onClicked: {
                             //needed for model's setData to be called
                             model.checked = checked;
+                            calendarPage.configurationChanged();
                         }
                     }
                 }

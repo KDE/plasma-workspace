@@ -24,7 +24,6 @@ import QtQuick.Controls 1.2 as QtControls
 import QtQuick.Layouts 1.0
 import QtQuick.Dialogs 1.1
 
-import org.kde.plasma.private.digitalclock 1.0
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.kholidays 1.0 as KHolidays
@@ -35,9 +34,11 @@ Item {
     width: parent.width
     height: parent.height
 
+    signal configurationChanged
+
     function saveConfig()
     {
-        KHolidays.HolidayRegionsModel.saveConfig();
+        configHelper.saveConfig();
     }
 
     // This is just for getting the column width
@@ -78,7 +79,7 @@ Item {
                 delegate: QtControls.CheckBox {
                     id: checkBox
                     anchors.centerIn: parent
-                    checked: styleData.value
+                    checked: model ? configHelper.selectedRegions.indexOf(model.region) != -1 : false
                     activeFocusOnTab: false // only let the TableView as a whole get focus
                     onClicked: {
                         //needed for model's setData to be called
@@ -87,6 +88,7 @@ Item {
                         } else {
                             configHelper.removeRegion(model.region);
                         }
+                        holidaysConfig.configurationChanged();
                     }
                 }
 
