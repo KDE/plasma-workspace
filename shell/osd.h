@@ -50,6 +50,7 @@ public Q_SLOTS:
     void wifiEnabledChanged(bool wifiEnabled);
     void bluetoothEnabledChanged(bool bluetoothEnabled);
     void wwanEnabledChanged(bool wwanEnabled);
+    void virtualKeyboardEnabledChanged(bool virtualKeyboardEnabled);
 
 Q_SIGNALS:
     void osdProgress(const QString &icon, const int percent, const QString &additionalText);
