@@ -10,6 +10,7 @@ target_link_libraries(krunner_services
     KF5::I18n
     KF5::Runner
     KF5::Service
+    KF5::Activities
 )
 
 install(TARGETS krunner_services DESTINATION ${KDE_INSTALL_PLUGINDIR} )

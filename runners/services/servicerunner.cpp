@@ -24,6 +24,8 @@
 #include <QIcon>
 #include <QDebug>
 #include <QUrl>
+
+#include <KActivities/ResourceInstance>
 #include <KLocalizedString>
 #include <KRun>
 #include <KService>
@@ -285,6 +287,11 @@ void ServiceRunner::run(const Plasma::RunnerContext &context, const Plasma::Quer
 
     KService::Ptr service = KService::serviceByStorageId(match.data().toString());
     if (service) {
+        KActivities::ResourceInstance::notifyAccessed(
+            QUrl(QStringLiteral("applications:") + service->storageId()),
+            QStringLiteral("org.kde.krunner")
+        );
+
         KRun::runService(*service, {}, nullptr);
     }
 }
