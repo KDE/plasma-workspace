@@ -142,64 +142,69 @@ Item {
                              + agenda.dateString(" yyyy")
         }
 
-        ListView {
-            id: holidaysList
+        PlasmaExtras.ScrollArea {
+            id: holidaysView
             anchors {
                 top: dateHeading.bottom
                 left: parent.left
                 right: parent.right
                 bottom: parent.bottom
             }
+            flickableItem.boundsBehavior: Flickable.StopAtBounds
 
-            delegate: Item {
-                id: eventItem
-                width: holidaysList.width
-                height: eventTitle.paintedHeight
-                property bool hasTime: {
-                    var startIsMidnight = modelData.startDateTime.getHours() == 0
-                                       && modelData.startDateTime.getMinutes() == 0;
+            ListView {
+                id: holidaysList
 
-                    var endIsMidnight = modelData.endDateTime.getHours() == 0
-                                     && modelData.endDateTime.getMinutes() == 0;
+                delegate: Item {
+                    id: eventItem
+                    width: holidaysList.width
+                    height: eventTitle.paintedHeight
+                    property bool hasTime: {
+                        var startIsMidnight = modelData.startDateTime.getHours() == 0
+                                           && modelData.startDateTime.getMinutes() == 0;
 
-                    var sameDay = modelData.startDateTime.getDate() == modelData.endDateTime.getDate()
-                               && modelData.startDateTime.getDay() == modelData.endDateTime.getDay()
+                        var endIsMidnight = modelData.endDateTime.getHours() == 0
+                                         && modelData.endDateTime.getMinutes() == 0;
 
-                    if (startIsMidnight && endIsMidnight && sameDay) {
-                        return false
-                    }
+                        var sameDay = modelData.startDateTime.getDate() == modelData.endDateTime.getDate()
+                                   && modelData.startDateTime.getDay() == modelData.endDateTime.getDay()
 
-                    return true;
-                }
-
-                PlasmaComponents.Label {
-                    text: {
-                        if (modelData.startDateTime - modelData.endDateTime === 0) {
-                            return Qt.formatTime(modelData.startDateTime);
-                        } else {
-                            return Qt.formatTime(modelData.startDateTime) + " - " + Qt.formatTime(modelData.endDateTime);
+                        if (startIsMidnight && endIsMidnight && sameDay) {
+                            return false
                         }
-                    }
-                    visible: eventItem.hasTime
-                }
-                PlasmaComponents.Label {
-                    id: eventTitle
-                    width: eventItem.hasTime ? parent.width * 0.7 : parent.width
-                    anchors.right: parent.right
-                    text: modelData.title
-                }
-            }
 
-            section.property: "modelData.eventType"
-            section.delegate: PlasmaExtras.Heading {
-                level: 3
-                elide: Text.ElideRight
-                text: section
+                        return true;
+                    }
+
+                    PlasmaComponents.Label {
+                        text: {
+                            if (modelData.startDateTime - modelData.endDateTime === 0) {
+                                return Qt.formatTime(modelData.startDateTime);
+                            } else {
+                                return Qt.formatTime(modelData.startDateTime) + " - " + Qt.formatTime(modelData.endDateTime);
+                            }
+                        }
+                        visible: eventItem.hasTime
+                    }
+                    PlasmaComponents.Label {
+                        id: eventTitle
+                        width: eventItem.hasTime ? parent.width * 0.7 : parent.width
+                        anchors.right: parent.right
+                        text: modelData.title
+                    }
+                }
+
+                section.property: "modelData.eventType"
+                section.delegate: PlasmaExtras.Heading {
+                    level: 3
+                    elide: Text.ElideRight
+                    text: section
+                }
             }
         }
 
         PlasmaExtras.Heading {
-            anchors.fill: holidaysList
+            anchors.fill: holidaysView
             anchors.leftMargin: units.largeSpacing
             anchors.rightMargin: units.largeSpacing
             text: monthView.isToday(monthView.currentDate) ? i18n("No events for today")
