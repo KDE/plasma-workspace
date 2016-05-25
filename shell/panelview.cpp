@@ -553,7 +553,10 @@ void PanelView::showConfigurationInterface(Plasma::Applet *applet)
 void PanelView::restoreAutoHide()
 {
     setAutoHideEnabled(edgeActivated()
-        && (!containment() || containment()->status() < Plasma::Types::RequiresAttentionStatus)
+        && (!containment() ||
+                (containment()->status() < Plasma::Types::RequiresAttentionStatus
+                 || containment()->status() == Plasma::Types::HiddenStatus)
+                )
         && !geometry().contains(QCursor::pos())
     );
 }
