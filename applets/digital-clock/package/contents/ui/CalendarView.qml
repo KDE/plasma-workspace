@@ -158,7 +158,7 @@ Item {
                 delegate: Item {
                     id: eventItem
                     width: holidaysList.width
-                    height: eventTitle.paintedHeight
+                    height: eventTitle.paintedHeight + units.smallSpacing
                     property bool hasTime: {
                         var startIsMidnight = modelData.startDateTime.getHours() == 0
                                            && modelData.startDateTime.getMinutes() == 0;
@@ -191,6 +191,8 @@ Item {
                         width: eventItem.hasTime ? parent.width * 0.7 : parent.width
                         anchors.right: parent.right
                         text: modelData.title
+                        wrapMode: Text.Wrap
+                        verticalAlignment: Text.AlignTop
                     }
                 }
 
