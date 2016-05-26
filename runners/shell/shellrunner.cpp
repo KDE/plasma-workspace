@@ -42,7 +42,7 @@ ShellRunner::ShellRunner(QObject *parent, const QVariantList &args)
     setObjectName( QLatin1String("Command" ));
     setPriority(AbstractRunner::HighestPriority);
     setHasRunOptions(true);
-    m_enabled = KAuthorized::authorizeKAction(QStringLiteral("run_command")) && KAuthorized::authorizeKAction(QStringLiteral("shell_access"));
+    m_enabled = KAuthorized::authorize(QStringLiteral("run_command")) && KAuthorized::authorize(QStringLiteral("shell_access"));
     setIgnoredTypes(Plasma::RunnerContext::Directory | Plasma::RunnerContext::File |
                     Plasma::RunnerContext::NetworkLocation | Plasma::RunnerContext::UnknownType |
                     Plasma::RunnerContext::Help);
