@@ -32,8 +32,6 @@
 
 #include <KPackage/Package>
 
-#include <KScreen/Types>
-
 class Activity;
 class DesktopView;
 class PanelView;
@@ -100,8 +98,6 @@ public:
     void insertActivity(const QString &id, Activity *activity);
 
     Plasma::Containment *setContainmentTypeForScreen(int screen, const QString &plugin);
-
-    KScreen::ConfigPtr screensConfiguration() const;
 
     QScreen *screenForId(int screenId) const;
     void remove(DesktopView *desktopView);
@@ -188,8 +184,7 @@ private Q_SLOTS:
     void addPanel(QAction *action);
     void populateAddPanelsMenu();
 
-    void outputEnabledChanged();
-    void addOutput(const KScreen::OutputPtr &output);
+    void addOutput(QScreen* screen);
     void primaryOutputChanged();
 
     void activityOpened();
@@ -203,11 +198,10 @@ private Q_SLOTS:
     void screenRemoved(QScreen* screen);
 
 private:
-    QScreen *outputToScreen(const KScreen::OutputPtr &output) const;
-    KScreen::OutputPtr screenToOutput(QScreen *screen) const;
+    void updateStruts();
     QScreen *insertScreen(QScreen *screen, int idx);
     void removeView(int idx);
-    bool isOutputRedundant(const KScreen::OutputPtr &output) const;
+    bool isOutputRedundant(QScreen* screen) const;
     void reconsiderOutputs();
     QList<PanelView *> panelsForScreen(QScreen *screen) const;
     DesktopView* desktopForScreen(QScreen *screen) const;
@@ -232,11 +226,10 @@ private:
     QAction *m_addPanelAction;
     QMenu *m_addPanelsMenu;
     KPackage::Package m_lookAndFeelPackage;
-    QSet<KScreen::OutputPtr> m_redundantOutputs;
+    QSet<QScreen*> m_redundantOutputs;
     QList<KDeclarative::QmlObject *> m_alternativesObjects;
     KDeclarative::QmlObject *m_interactiveConsole;
 
-    KScreen::ConfigPtr m_screenConfiguration;
     QTimer m_waitingPanelsTimer;
     QTimer m_appConfigSyncTimer;
     QTimer m_reconsiderOutputsTimer;

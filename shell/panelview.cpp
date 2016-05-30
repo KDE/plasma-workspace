@@ -37,8 +37,6 @@
 
 #include <Plasma/Containment>
 #include <Plasma/Package>
-#include <KScreen/Config>
-#include <KScreen/Output>
 
 #include <KWayland/Client/plasmashell.h>
 #include <KWayland/Client/surface.h>
@@ -88,6 +86,7 @@ PanelView::PanelView(ShellCorona *corona, QScreen *targetScreen, QWindow *parent
     connect(&m_unhideTimer, &QTimer::timeout,
             this, &PanelView::restoreAutoHide);
 
+    m_lastScreen = targetScreen;
     connect(screen(), SIGNAL(geometryChanged(QRect)),
             &m_positionPaneltimer, SLOT(start()));
     connect(this, SIGNAL(locationChanged(Plasma::Types::Location)),
@@ -101,9 +100,6 @@ PanelView::PanelView(ShellCorona *corona, QScreen *targetScreen, QWindow *parent
 
     m_strutsTimer.setSingleShot(true);
     connect(&m_strutsTimer, &QTimer::timeout,
-            this, &PanelView::updateStruts);
-
-    connect(m_corona->screensConfiguration()->screen().data(), &KScreen::Screen::currentSizeChanged,
             this, &PanelView::updateStruts);
 
     qmlRegisterType<QScreen>();
@@ -658,19 +654,23 @@ void PanelView::showEvent(QShowEvent *event)
 {
     PanelShadows::self()->addWindow(this);
     PlasmaQuick::ContainmentView::showEvent(event);
-    integrateScreen();
 
     //When the screen is set, the screen is recreated internally, so we need to
     //set anything that depends on the winId()
-    connect(this, &QWindow::screenChanged, this, [this](QScreen* screen) {
-        emit screenChangedProxy(screen);
+    connect(this, &QWindow::screenChanged, this, &PanelView::moveScreen, Qt::UniqueConnection);
+    integrateScreen();
+}
 
-        if (!screen)
-            return;
-        integrateScreen();
-        showTemporarily();
-        m_positionPaneltimer.start();
-    });
+void PanelView::moveScreen(QScreen* screen)
+{
+    emit screenChangedProxy(screen);
+    m_lastScreen = screen;
+
+    if (!screen)
+        return;
+    integrateScreen();
+    showTemporarily();
+    m_positionPaneltimer.start();
 }
 
 bool PanelView::event(QEvent *e)
@@ -881,7 +881,7 @@ void PanelView::updateStruts()
     if (m_visibilityMode == NormalPanel) {
         const QRect thisScreen = screen()->geometry();
         // QScreen::virtualGeometry() is very unreliable (Qt 5.5)
-        const QRect wholeScreen = QRect(QPoint(0, 0), m_corona->screensConfiguration()->screen()->currentSize());
+        const QRect wholeScreen = QRect(QPoint(0, 0), screen()->geometry().size());
 
         //Extended struts against a screen edge near to another screen are really harmful, so windows maximized under the panel is a lesser pain
         //TODO: force "windows can cover" in those cases?

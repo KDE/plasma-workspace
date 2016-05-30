@@ -136,6 +136,8 @@ public:
     /* Shared with script/panel.cpp */
     static KConfigGroup panelConfig(ShellCorona *corona, Plasma::Containment *containment, QScreen *screen);
 
+    void updateStruts();
+
 protected:
     void resizeEvent(QResizeEvent *ev) override;
     void showEvent(QShowEvent *event) override;
@@ -162,7 +164,6 @@ protected Q_SLOTS:
      * It will be called when the configuration is requested
      */
     void showConfigurationInterface(Plasma::Applet *applet) override;
-    void updateStruts();
 
 private Q_SLOTS:
     void themeChanged();
@@ -176,6 +177,7 @@ private Q_SLOTS:
     void screenDestroyed(QObject* screen);
 
 private:
+    void moveScreen(QScreen* screen);
     void resizePanel();
     void integrateScreen();
     bool containmentContainsPosition(const QPointF &point) const;
@@ -200,6 +202,7 @@ private:
     //only for the mask, not to actually paint
     Plasma::FrameSvg *m_background;
     KWayland::Client::PlasmaShellSurface *m_shellSurface;
+    QWeakPointer<QScreen> m_lastScreen;
 
     static const int STRUTSTIMERDELAY = 200;
 };
