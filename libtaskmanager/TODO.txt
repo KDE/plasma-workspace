@@ -1,0 +1,8 @@
+Larger outstanding tasks:
+- Implement missing kwayland bits (e.g. transient handling, virtual desktop logic).
+
+Other:
+- Old lib compressed window changes over 200ms before grabbing new data from the server, might need to be added back to avoid a DoS vector.
+- Tests tests tests.
+- Code cleanup and addressing FIXMEs.
+- Reconsider the library exports.

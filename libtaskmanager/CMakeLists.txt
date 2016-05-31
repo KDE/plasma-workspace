@@ -1,0 +1,105 @@
+add_subdirectory(declarative)
+add_subdirectory(autotests)
+
+set(taskmanager_LIB_SRCS
+    abstracttasksmodel.cpp
+    activityinfo.cpp
+    concatenatetasksproxymodel.cpp
+    launchertasksmodel.cpp
+    startuptasksmodel.cpp
+    taskfilterproxymodel.cpp
+    taskgroupingproxymodel.cpp
+    tasksmodel.cpp
+    tasktools.cpp
+    virtualdesktopinfo.cpp
+    waylandtasksmodel.cpp
+)
+
+if (X11_FOUND)
+    set(taskmanager_LIB_SRCS
+        ${taskmanager_LIB_SRCS}
+        xwindowtasksmodel.cpp
+    )
+endif()
+
+add_library(taskmanager ${taskmanager_LIB_SRCS})
+add_library(PW::LibTaskManager ALIAS taskmanager)
+
+generate_export_header(taskmanager)
+
+target_include_directories(taskmanager PUBLIC "$<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}>" "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR}/taskmanager>")
+
+target_link_libraries(taskmanager
+    PUBLIC
+        Qt5::Core
+        Qt5::Gui
+        Qt5::Quick
+        KF5::WaylandClient
+    PRIVATE
+        KF5::Activities
+        KF5::ItemModels
+        KF5::ConfigCore
+        KF5::KIOCore
+        KF5::KIOWidgets
+        KF5::ProcessCore
+        KF5::WindowSystem
+)
+
+if (X11_FOUND)
+    target_link_libraries(taskmanager
+        PRIVATE
+            Qt5::X11Extras
+            KF5::IconThemes)
+endif()
+
+set_target_properties(taskmanager PROPERTIES
+                      VERSION ${PROJECT_VERSION}
+                      SOVERSION ${PROJECT_VERSION_MAJOR}
+                      EXPORT_NAME LibTaskManager)
+
+install(TARGETS taskmanager EXPORT libtaskmanagerLibraryTargets ${KDE_INSTALL_TARGETS_DEFAULT_ARGS} )
+
+install(FILES
+    abstracttasksmodel.h
+    abstracttasksmodeliface.h
+    activityinfo.h
+    concatenatetasksproxymodel.h
+    launchertasksmodel.h
+    startuptasksmodel.h
+    taskfilterproxymodel.h
+    taskgroupingproxymodel.h
+    tasksmodel.h
+    tasktools.h
+    virtualdesktopinfo.h
+    waylandtasksmodel.h
+    ${CMAKE_CURRENT_BINARY_DIR}/taskmanager_export.h
+    DESTINATION ${KDE_INSTALL_INCLUDEDIR}/taskmanager COMPONENT Devel
+)
+
+if (X11_FOUND)
+    install(FILES
+        xwindowtasksmodel.h
+        ${CMAKE_CURRENT_BINARY_DIR}/taskmanager_export.h
+        DESTINATION ${KDE_INSTALL_INCLUDEDIR}/taskmanager COMPONENT Devel
+    )
+endif()
+
+write_basic_config_version_file(${CMAKE_CURRENT_BINARY_DIR}/LibTaskManagerConfigVersion.cmake VERSION "${PROJECT_VERSION}" COMPATIBILITY AnyNewerVersion)
+
+set(CMAKECONFIG_INSTALL_DIR ${KDE_INSTALL_LIBDIR}/cmake/LibTaskManager)
+
+ecm_configure_package_config_file(LibTaskManagerConfig.cmake.in
+    "${CMAKE_CURRENT_BINARY_DIR}/LibTaskManagerConfig.cmake"
+    INSTALL_DESTINATION ${CMAKECONFIG_INSTALL_DIR})
+
+install(FILES ${CMAKE_CURRENT_BINARY_DIR}/LibTaskManagerConfig.cmake
+              ${CMAKE_CURRENT_BINARY_DIR}/LibTaskManagerConfigVersion.cmake
+        DESTINATION ${CMAKECONFIG_INSTALL_DIR})
+
+install(EXPORT libtaskmanagerLibraryTargets
+        NAMESPACE PW::
+        DESTINATION ${CMAKECONFIG_INSTALL_DIR}
+        FILE LibTaskManagerLibraryTargets.cmake )
+
+install(FILES taskmanagerrulesrc
+        DESTINATION ${KDE_INSTALL_CONFDIR})
