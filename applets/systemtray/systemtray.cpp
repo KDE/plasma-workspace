@@ -551,11 +551,13 @@ void SystemTray::serviceOwnerChanged(const QString &serviceName, const QString &
 void SystemTray::serviceRegistered(const QString &service)
 {
     qCDebug(SYSTEMTRAY) << "DBus service appeared:" << service;
-    foreach (const QString &plugin, m_dbusActivatableTasks.keys()) {
+    for (auto it = m_dbusActivatableTasks.constBegin(), end = m_dbusActivatableTasks.constEnd(); it != end; ++it) {
+        const QString &plugin = it.key();
         if (!m_allowedPlasmoids.contains(plugin)) {
             continue;
         }
-        const QString& pattern = m_dbusActivatableTasks.value(plugin);
+
+        const QString &pattern = it.value();
         QRegExp rx(pattern);
         rx.setPatternSyntax(QRegExp::Wildcard);
         if (rx.exactMatch(service)) {
@@ -569,11 +571,14 @@ void SystemTray::serviceRegistered(const QString &service)
 void SystemTray::serviceUnregistered(const QString &service)
 {
     qCDebug(SYSTEMTRAY) << "DBus service disappeared:" << service;
-    foreach (const QString &plugin, m_dbusActivatableTasks.keys()) {
+
+    for (auto it = m_dbusActivatableTasks.constBegin(), end = m_dbusActivatableTasks.constEnd(); it != end; ++it) {
+        const QString &plugin = it.key();
         if (!m_allowedPlasmoids.contains(plugin)) {
             continue;
         }
-        const QString& pattern = m_dbusActivatableTasks.value(plugin);
+
+        const QString &pattern = it.value();
         QRegExp rx(pattern);
         rx.setPatternSyntax(QRegExp::Wildcard);
         if (rx.exactMatch(service)) {
