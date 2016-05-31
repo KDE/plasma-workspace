@@ -14,7 +14,7 @@ target_link_libraries(plasma_containmentactions_switchwindow
                       KF5::KIOCore
                       KF5::I18n
                       KF5::WindowSystem
-                      taskmanager)
+                      legacytaskmanager)
 
 install(TARGETS plasma_containmentactions_switchwindow DESTINATION ${KDE_INSTALL_PLUGINDIR})
 install(FILES plasma-containmentactions-switchwindow.desktop DESTINATION ${KDE_INSTALL_KSERVICES5DIR})

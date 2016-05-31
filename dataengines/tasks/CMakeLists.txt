@@ -14,7 +14,7 @@ target_link_libraries(plasma_engine_tasks
                       KF5::WindowSystem
                       KF5::Plasma
                       Qt5::DBus
-                      taskmanager)
+                      legacytaskmanager)
 kcoreaddons_desktop_to_json(plasma_engine_tasks plasma-dataengine-tasks.desktop)
 
 install(TARGETS plasma_engine_tasks DESTINATION ${KDE_INSTALL_PLUGINDIR}/plasma/dataengine)

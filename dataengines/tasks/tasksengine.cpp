@@ -26,14 +26,14 @@
 
 TasksEngine::TasksEngine(QObject *parent, const QVariantList &args) :
     Plasma::DataEngine(parent, args),
-    m_groupManager(new TaskManager::GroupManager(this)),
-    m_tasksModel(new TaskManager::TasksModel(m_groupManager, this))
+    m_groupManager(new LegacyTaskManager::GroupManager(this)),
+    m_tasksModel(new LegacyTaskManager::TasksModel(m_groupManager, this))
 {
     Q_UNUSED(args);
     //TODO HACK Remove
     //TasksModel does not initialize itself, So we need to set grouping strategy.
-    m_groupManager->setGroupingStrategy(TaskManager::GroupManager::NoGrouping);
-    m_groupManager->setSortingStrategy(TaskManager::GroupManager::DesktopSorting);
+    m_groupManager->setGroupingStrategy(LegacyTaskManager::GroupManager::NoGrouping);
+    m_groupManager->setSortingStrategy(LegacyTaskManager::GroupManager::DesktopSorting);
     setModel(QStringLiteral("tasks"), m_tasksModel);
     m_groupManager->reconnect();
 }

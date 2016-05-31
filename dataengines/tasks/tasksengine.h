@@ -23,15 +23,15 @@
 #include <Plasma/DataEngine>
 #include <Plasma/Service>
 
-// libtaskmanager
-#include <taskmanager.h>
+// liblegacytaskmanager
+#include <legacytaskmanager.h>
 #include <tasksmodel.h>
 #include <groupmanager.h>
 
-namespace TaskManager
+namespace LegacyTaskManager
 {
     class Task;
-} // namespace TaskManager
+} // namespace LegacyTaskManager
 
 /**
  * Tasks Data Engine
@@ -44,7 +44,7 @@ namespace TaskManager
  * A service is also provided for each task. It exposes some operations that can be
  * performed on the windows (ex: maximize, minimize, activate).
  *
- * The data and operations are provided and handled by the taskmanager library.
+ * The data and operations are provided and handled by the legacytaskmanager library.
  * It should be noted that only a subset of data and operations are exposed.
  */
 class TasksEngine : public Plasma::DataEngine
@@ -63,8 +63,8 @@ class TasksEngine : public Plasma::DataEngine
     private:
         friend class TaskSource;
         friend class TaskWindowService;
-	TaskManager::GroupManager *m_groupManager;
-        TaskManager::TasksModel *m_tasksModel;
+	LegacyTaskManager::GroupManager *m_groupManager;
+        LegacyTaskManager::TasksModel *m_tasksModel;
 };
 
 #endif // TASKSENGINE_H

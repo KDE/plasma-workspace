@@ -24,7 +24,7 @@
 // own
 #include "taskjob.h"
 
-TaskService::TaskService(TaskManager::TasksModel *model, TaskManager::GroupManager *groupManager) :
+TaskService::TaskService(LegacyTaskManager::TasksModel *model, LegacyTaskManager::GroupManager *groupManager) :
     Plasma::Service(),
     m_model(model),
     m_groupManager(groupManager)

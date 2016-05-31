@@ -34,12 +34,12 @@
 
 SwitchWindow::SwitchWindow(QObject *parent, const QVariantList &args)
     : Plasma::ContainmentActions(parent, args),
-      m_groupManager(new TaskManager::GroupManager(this)),
-      m_tasksModel(new TaskManager::TasksModel(m_groupManager, this)),
+      m_groupManager(new LegacyTaskManager::GroupManager(this)),
+      m_tasksModel(new LegacyTaskManager::TasksModel(m_groupManager, this)),
       m_mode(AllFlat),
       m_clearOrderTimer(0)
 {
-    m_groupManager->setGroupingStrategy(static_cast<TaskManager::GroupManager::TaskGroupingStrategy>(0));
+    m_groupManager->setGroupingStrategy(static_cast<LegacyTaskManager::GroupManager::TaskGroupingStrategy>(0));
     m_groupManager->reconnect();
 }
 
@@ -100,7 +100,7 @@ void SwitchWindow::makeMenu()
 
     //make all the window actions
     for (int i = 0; i < m_tasksModel->rowCount(); ++i) {
-        if (m_tasksModel->data(m_tasksModel->index(i, 0), TaskManager::TasksModel::IsStartup).toBool()) {
+        if (m_tasksModel->data(m_tasksModel->index(i, 0), LegacyTaskManager::TasksModel::IsStartup).toBool()) {
             qDebug() << "skipped fake task";
             continue;
         }
@@ -113,8 +113,8 @@ void SwitchWindow::makeMenu()
 
         QAction *action = new QAction(name, this);
         action->setIcon(m_tasksModel->data(m_tasksModel->index(i, 0), Qt::DecorationRole).value<QIcon>());
-        action->setData(m_tasksModel->data(m_tasksModel->index(i, 0), TaskManager::TasksModel::Id).toString());
-        desktops.insert(m_tasksModel->data(m_tasksModel->index(i, 0), TaskManager::TasksModel::Desktop).toInt(), action);
+        action->setData(m_tasksModel->data(m_tasksModel->index(i, 0), LegacyTaskManager::TasksModel::Id).toString());
+        desktops.insert(m_tasksModel->data(m_tasksModel->index(i, 0), LegacyTaskManager::TasksModel::Desktop).toInt(), action);
         connect(action, &QAction::triggered, [=]() {
             switchTo(action);
         });
@@ -184,12 +184,12 @@ void SwitchWindow::switchTo(QAction *action)
 {
     int id = action->data().toInt();
     qDebug() << id;
-    TaskManager::AbstractGroupableItem* item = m_groupManager->rootGroup()->getMemberById(id);
+    LegacyTaskManager::AbstractGroupableItem* item = m_groupManager->rootGroup()->getMemberById(id);
 
     if (!item) {
         return;
     }
-    TaskManager::TaskItem* taskItem = static_cast<TaskManager::TaskItem*>(item);
+    LegacyTaskManager::TaskItem* taskItem = static_cast<LegacyTaskManager::TaskItem*>(item);
     taskItem->task()->activateRaiseOrIconify();
 }
 

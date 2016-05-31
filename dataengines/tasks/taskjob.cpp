@@ -18,7 +18,7 @@
 
 #include "taskjob.h"
 
-TaskJob::TaskJob(const TaskManager::TasksModel *model, const TaskManager::GroupManager *groupManager, const QString &operation, QMap<QString, QVariant> &parameters, QObject *parent) :
+TaskJob::TaskJob(const LegacyTaskManager::TasksModel *model, const LegacyTaskManager::GroupManager *groupManager, const QString &operation, QMap<QString, QVariant> &parameters, QObject *parent) :
     ServiceJob(model->objectName(), operation, parameters, parent),
     m_model(model),
     m_groupManager(groupManager)
@@ -31,13 +31,13 @@ TaskJob::~TaskJob()
 
 void TaskJob::start()
 {
-    TaskManager::AbstractGroupableItem* item = m_groupManager->rootGroup()->getMemberById(parameters().value(QStringLiteral("Id")).toInt());
+    LegacyTaskManager::AbstractGroupableItem* item = m_groupManager->rootGroup()->getMemberById(parameters().value(QStringLiteral("Id")).toInt());
 
     if (!item) {
         return;
     }
 
-    TaskManager::TaskItem* taskItem = static_cast<TaskManager::TaskItem*>(item);
+    LegacyTaskManager::TaskItem* taskItem = static_cast<LegacyTaskManager::TaskItem*>(item);
 
     // only a subset of task operations are exported
     const QString operation = operationName();

@@ -34,15 +34,15 @@ class TaskService : public Plasma::Service
     Q_OBJECT
 
     public:
-        TaskService(TaskManager::TasksModel *model, TaskManager::GroupManager *groupManager);
+        TaskService(LegacyTaskManager::TasksModel *model, LegacyTaskManager::GroupManager *groupManager);
         ~TaskService() override;
 
     protected:
         Plasma::ServiceJob *createJob(const QString &operation, QMap<QString, QVariant> &parameters) override;
 
     private:
-	TaskManager::TasksModel *m_model;
-	TaskManager::GroupManager *m_groupManager;
+	LegacyTaskManager::TasksModel *m_model;
+	LegacyTaskManager::GroupManager *m_groupManager;
 
 };
 

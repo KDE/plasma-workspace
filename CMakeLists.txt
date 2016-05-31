@@ -132,7 +132,7 @@ endif()
 
 add_subdirectory(doc)
 add_subdirectory(libkworkspace)
-add_subdirectory(libtaskmanager)
+add_subdirectory(liblegacytaskmanager)
 add_subdirectory(components)
 
 if(dbusmenu-qt5_FOUND)

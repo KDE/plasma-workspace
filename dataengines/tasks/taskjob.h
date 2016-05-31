@@ -22,7 +22,7 @@
 // plasma
 #include <Plasma/ServiceJob>
 
-//taskmanager
+//legacytaskmanager
 #include <groupmanager.h>
 #include <taskactions.h>
 #include <taskgroup.h>
@@ -37,15 +37,15 @@ class TaskJob : public Plasma::ServiceJob
     Q_OBJECT
 
     public:
-        TaskJob(const TaskManager::TasksModel *model, const TaskManager::GroupManager *groupManager, const QString &operation, QMap<QString, QVariant> &parameters, QObject *parent = NULL);
+        TaskJob(const LegacyTaskManager::TasksModel *model, const LegacyTaskManager::GroupManager *groupManager, const QString &operation, QMap<QString, QVariant> &parameters, QObject *parent = NULL);
         ~TaskJob() override;
 
     protected:
         void start() override;
 
     private:
-	const TaskManager::TasksModel *m_model;
-	const TaskManager::GroupManager *m_groupManager;
+	const LegacyTaskManager::TasksModel *m_model;
+	const LegacyTaskManager::GroupManager *m_groupManager;
 
 };
 
