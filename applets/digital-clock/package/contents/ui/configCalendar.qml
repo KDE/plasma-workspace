@@ -48,17 +48,19 @@ Item {
             title: i18n("Available Calendar Plugins")
             flat: true
 
-            Repeater {
-                id: calendarPluginsRepeater
-                model: PlasmaCalendar.EventPluginsManager.model
-                delegate: QtLayouts.RowLayout {
-                    QtControls.CheckBox {
-                        text: model.display
-                        checked: model.checked
-                        onClicked: {
-                            //needed for model's setData to be called
-                            model.checked = checked;
-                            calendarPage.configurationChanged();
+            QtLayouts.ColumnLayout {
+                Repeater {
+                    id: calendarPluginsRepeater
+                    model: PlasmaCalendar.EventPluginsManager.model
+                    delegate: QtLayouts.RowLayout {
+                        QtControls.CheckBox {
+                            text: model.display
+                            checked: model.checked
+                            onClicked: {
+                                //needed for model's setData to be called
+                                model.checked = checked;
+                                calendarPage.configurationChanged();
+                            }
                         }
                     }
                 }
