@@ -560,59 +560,58 @@ void PanelView::restoreAutoHide()
 void PanelView::setAutoHideEnabled(bool enabled)
 {
 #if HAVE_X11
-    xcb_connection_t *c = QX11Info::connection();
-    if (!c) {
-        return;
+    if (QX11Info::isPlatformX11()) {
+        xcb_connection_t *c = QX11Info::connection();
+
+        const QByteArray effectName = QByteArrayLiteral("_KDE_NET_WM_SCREEN_EDGE_SHOW");
+        xcb_intern_atom_cookie_t atomCookie = xcb_intern_atom_unchecked(c, false, effectName.length(), effectName.constData());
+
+        QScopedPointer<xcb_intern_atom_reply_t, QScopedPointerPodDeleter> atom(xcb_intern_atom_reply(c, atomCookie, NULL));
+
+        if (!atom) {
+            return;
+        }
+
+        if (!enabled) {
+            xcb_delete_property(c, winId(), atom->atom);
+            return;
+        }
+
+        KWindowEffects::SlideFromLocation slideLocation = KWindowEffects::NoEdge;
+        uint32_t value = 0;
+
+        switch (location()) {
+        case Plasma::Types::TopEdge:
+            value = 0;
+            slideLocation = KWindowEffects::TopEdge;
+            break;
+        case Plasma::Types::RightEdge:
+            value = 1;
+            slideLocation = KWindowEffects::RightEdge;
+            break;
+        case Plasma::Types::BottomEdge:
+            value = 2;
+            slideLocation = KWindowEffects::BottomEdge;
+            break;
+        case Plasma::Types::LeftEdge:
+            value = 3;
+            slideLocation = KWindowEffects::LeftEdge;
+            break;
+        case Plasma::Types::Floating:
+        default:
+            value = 4;
+            break;
+        }
+
+        int hideType = 0;
+        if (m_visibilityMode == LetWindowsCover) {
+            hideType = 1;
+        }
+        value |= hideType << 8;
+
+        xcb_change_property(c, XCB_PROP_MODE_REPLACE, winId(), atom->atom, XCB_ATOM_CARDINAL, 32, 1, &value);
+        KWindowEffects::slideWindow(winId(), slideLocation, -1);
     }
-
-    const QByteArray effectName = QByteArrayLiteral("_KDE_NET_WM_SCREEN_EDGE_SHOW");
-    xcb_intern_atom_cookie_t atomCookie = xcb_intern_atom_unchecked(c, false, effectName.length(), effectName.constData());
-
-    QScopedPointer<xcb_intern_atom_reply_t, QScopedPointerPodDeleter> atom(xcb_intern_atom_reply(c, atomCookie, NULL));
-
-    if (!atom) {
-        return;
-    }
-
-    if (!enabled) {
-        xcb_delete_property(c, winId(), atom->atom);
-        return;
-    }
-
-    KWindowEffects::SlideFromLocation slideLocation = KWindowEffects::NoEdge;
-    uint32_t value = 0;
-
-    switch (location()) {
-    case Plasma::Types::TopEdge:
-        value = 0;
-        slideLocation = KWindowEffects::TopEdge;
-        break;
-    case Plasma::Types::RightEdge:
-        value = 1;
-        slideLocation = KWindowEffects::RightEdge;
-        break;
-    case Plasma::Types::BottomEdge:
-        value = 2;
-        slideLocation = KWindowEffects::BottomEdge;
-        break;
-    case Plasma::Types::LeftEdge:
-        value = 3;
-        slideLocation = KWindowEffects::LeftEdge;
-        break;
-    case Plasma::Types::Floating:
-    default:
-        value = 4;
-        break;
-    }
-
-    int hideType = 0;
-    if (m_visibilityMode == LetWindowsCover) {
-        hideType = 1;
-    }
-    value |= hideType << 8;
-
-    xcb_change_property(c, XCB_PROP_MODE_REPLACE, winId(), atom->atom, XCB_ATOM_CARDINAL, 32, 1, &value);
-    KWindowEffects::slideWindow(winId(), slideLocation, -1);
 #endif
 }
 
