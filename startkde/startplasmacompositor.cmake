@@ -124,6 +124,10 @@ if test -n "$kcminputrc_mouse_cursortheme" -o -n "$kcminputrc_mouse_cursorsize" 
     fi
 fi
 
+if test "$kcmfonts_general_forcefontdpi" -ne 0; then
+    export QT_WAYLAND_FORCE_DPI=$kcmfonts_general_forcefontdpi
+fi
+
 # Source scripts found in <config locations>/plasma-workspace/env/*.sh
 # (where <config locations> correspond to the system and user's configuration
 # directories, as identified by Qt's qtpaths,  e.g.  $HOME/.config
