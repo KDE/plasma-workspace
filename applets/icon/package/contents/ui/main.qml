@@ -104,6 +104,7 @@ MouseArea {
             bottom : constrained ? parent.bottom : text.top
         }
         active: root.containsMouse || root.containsAcceptableDrag
+        usesPlasmaTheme: false
     }
 
     DropShadow {
