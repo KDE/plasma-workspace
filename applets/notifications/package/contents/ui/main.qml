@@ -78,7 +78,7 @@ MouseEventListener {
         } else if (!jobs || !jobs.count) {
             return i18np("%1 notification", "%1 notifications", notifications.count)
         } else {
-            return i18np("%1 running job", "%1 running jobs", jobs.count) + "<br/>" + i18np("%1 notification", "%1 notifications", notifications.count)
+            return i18np("%1 running job", "%1 running jobs", jobs.count) + "\n" + i18np("%1 notification", "%1 notifications", notifications.count)
         }
     }
 
