@@ -91,7 +91,7 @@ Column {
 
         InhibitionHint {
             width: parent.width
-            visible: pmSource.data["PowerDevil"] && pmSource.data["PowerDevil"]["Is Lid Present"] && !pmSource.data["PowerDevil"]["Triggers Lid Action"]
+            visible: pmSource.data["PowerDevil"] && pmSource.data["PowerDevil"]["Is Lid Present"] && !pmSource.data["PowerDevil"]["Triggers Lid Action"] ? true : false
             iconSource: "computer-laptop"
             text: i18n("Your notebook is configured not to suspend when closing the lid while an external monitor is connected.")
         }
