@@ -78,6 +78,12 @@ PlasmaCore.Dialog {
         hoverEnabled: true
 
         onClicked: {
+            // the MEL would close the notification before the action button
+            // onClicked handler would fire effectively breaking notification actions
+            if (notificationItem.pressedAction()) {
+                return
+            }
+
             closeNotification(notificationProperties.source)
             notificationPopup.hide()
         }

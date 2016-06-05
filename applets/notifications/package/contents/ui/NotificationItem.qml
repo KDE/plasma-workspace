@@ -51,6 +51,21 @@ Item {
 
     property ListModel actions: ListModel { }
 
+    function pressedAction() {
+        for (var i = 0, count = actionRepeater.count; i < count; ++i) {
+            var item = actionRepeater.itemAt(i)
+            if (item.pressed) {
+                return item
+            }
+        }
+
+        if (settingsButton.pressed) {
+            return settingsButton
+        }
+
+        return null
+    }
+
     function updateTimeLabel() {
         if (!created || created.getTime() <= 0) {
             timeLabel.text = ""
