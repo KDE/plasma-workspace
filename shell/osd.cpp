@@ -53,16 +53,16 @@ void Osd::keyboardBrightnessChanged(int percent)
 void Osd::volumeChanged(int percent)
 {
     QString icon;
-    if (percent >= 75) {
-        icon = QStringLiteral("audio-volume-high");
-    } else if (percent < 75 && percent >= 25) {
-        icon = QStringLiteral("audio-volume-medium");
-    } else if (percent < 25 && percent > 0) {
-        icon = QStringLiteral("audio-volume-low");
-    } else if (percent == 0) {
+    if (percent <= 0) {
         icon = QStringLiteral("audio-volume-muted");
         showText(icon, i18nc("OSD informing that the system is muted, keep short", "Audio Muted"));
         return;
+    } else if (percent <= 25) {
+        icon = QStringLiteral("audio-volume-low");
+    } else if (percent <= 75) {
+        icon = QStringLiteral("audio-volume-medium");
+    } else {
+        icon = QStringLiteral("audio-volume-high");
     }
 
     showProgress(icon, percent);
@@ -71,16 +71,16 @@ void Osd::volumeChanged(int percent)
 void Osd::microphoneVolumeChanged(int percent)
 {
     QString icon;
-    if (percent >= 75) {
-        icon = QStringLiteral("microphone-sensitivity-high");
-    } else if (percent < 75 && percent >= 25) {
-        icon = QStringLiteral("microphone-sensitivity-medium");
-    } else if (percent < 25 && percent > 0) {
-        icon = QStringLiteral("microphone-sensitivity-low");
-    } else if (percent == 0) {
+    if (percent <= 0) {
         icon = QStringLiteral("microphone-sensitivity-muted");
         showText(icon, i18nc("OSD informing that the microphone is muted, keep short", "Microphone Muted"));
         return;
+    } else if (percent <= 25) {
+        icon = QStringLiteral("microphone-sensitivity-low");
+    } else if (percent <= 75) {
+        icon = QStringLiteral("microphone-sensitivity-medium");
+    } else {
+        icon = QStringLiteral("microphone-sensitivity-high");
     }
 
     showProgress(icon, percent);
