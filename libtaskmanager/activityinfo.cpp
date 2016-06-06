@@ -31,12 +31,8 @@ public:
     Private(ActivityInfo *q);
     ~Private();
 
-    QHash<QString, KActivities::Info *> activityInfos;
-
     static int instanceCount;
     static KActivities::Consumer* activityConsumer;
-
-    void refreshActivityInfos();
 
 private:
     ActivityInfo *q;
@@ -57,40 +53,8 @@ ActivityInfo::Private::~Private()
 
     if (!instanceCount) {
         delete activityConsumer;
+        activityConsumer = nullptr;
     }
-}
-
-void ActivityInfo::Private::refreshActivityInfos()
-{
-    QMutableHashIterator<QString, KActivities::Info *> it(activityInfos);
-
-    // Cull invalid activities.
-    while (it.hasNext()) {
-        it.next();
-
-        if (!it.value()->isValid()) {
-            delete it.value();
-            it.remove();
-        }
-    }
-
-    // Find new activities and start listening for changes in their state.
-    foreach(const QString &activity, activityConsumer->activities()) {
-        if (!activityInfos.contains(activity)) {
-            KActivities::Info *info = new KActivities::Info(activity, q);
-
-            // By connecting to ourselves, we will immediately clean up when an
-            // activity's state transitions to Invalid.
-            connect(info, SIGNAL(stateChanged(KActivities::Info::State)),
-                q, SLOT(refreshActivityInfos()));
-
-            activityInfos.insert(activity, info);
-        }
-    }
-
-    // Activity list or activity state changes -> number of running
-    // activities may have changed.
-    q->numberOfRunningActivitiesChanged();
 }
 
 ActivityInfo::ActivityInfo(QObject *parent) : QObject(parent)
@@ -100,12 +64,10 @@ ActivityInfo::ActivityInfo(QObject *parent) : QObject(parent)
         d->activityConsumer = new KActivities::Consumer();
     }
 
-    d->refreshActivityInfos();
-
     connect(d->activityConsumer, &KActivities::Consumer::currentActivityChanged,
         this, &ActivityInfo::currentActivityChanged);
-    connect(d->activityConsumer, SIGNAL(activitiesChanged(QStringList)),
-        this, SLOT(refreshActivityInfos()));
+    connect(d->activityConsumer, &KActivities::Consumer::runningActivitiesChanged,
+        this, &ActivityInfo::numberOfRunningActivitiesChanged);
 }
 
 ActivityInfo::~ActivityInfo()
@@ -139,5 +101,3 @@ QString ActivityInfo::activityName(const QString &id)
 }
 
 }
-
-#include "moc_activityinfo.cpp"

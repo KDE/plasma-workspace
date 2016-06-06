@@ -89,8 +89,6 @@ Q_SIGNALS:
 private:
     class Private;
     QScopedPointer<Private> d;
-
-    Q_PRIVATE_SLOT(d, void refreshActivityInfos())
 };
 
 }
