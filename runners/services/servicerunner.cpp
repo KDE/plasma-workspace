@@ -292,7 +292,7 @@ void ServiceRunner::run(const Plasma::RunnerContext &context, const Plasma::Quer
             QStringLiteral("org.kde.krunner")
         );
 
-        KRun::runService(*service, {}, nullptr);
+        new KRun(QUrl::fromLocalFile(service->entryPath()), nullptr, true);
     }
 }
 
