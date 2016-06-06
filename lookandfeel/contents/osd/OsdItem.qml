@@ -42,7 +42,8 @@ Item {
     PlasmaCore.IconItem {
         id: icon
 
-        height: parent.height - progressBar.height - ((units.smallSpacing/2) * 3) //it's an svg
+        height: parent.height - (showingProgress ? progressBar.height : label.height)
+                              - ((units.smallSpacing/2) * 3) //it's an svg
         width: parent.width
 
         source: rootItem.icon
@@ -65,6 +66,7 @@ Item {
         value: Number(rootItem.osdValue)
     }
     PlasmaExtra.Heading {
+        id: label
         anchors {
             bottom: parent.bottom
             left: parent.left
@@ -75,7 +77,8 @@ Item {
         visible: !rootItem.showingProgress
         text: rootItem.showingProgress ? "" : (rootItem.osdValue ? rootItem.osdValue : "")
         horizontalAlignment: Text.AlignHCenter
-        wrapMode: Text.NoWrap
+        wrapMode: Text.WordWrap
+        maximumLineCount: 2
         elide: Text.ElideLeft
         minimumPointSize: theme.defaultFont.pointSize
         fontSizeMode: Text.HorizontalFit
