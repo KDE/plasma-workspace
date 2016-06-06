@@ -112,7 +112,6 @@ void WaylandTasksModel::Private::addWindow(KWayland::Client::PlasmaWindow *windo
 
     windows.append(window);
 
-    // FIXME TODO: appid apparently not available yet.
     KService::Ptr service = KService::serviceByStorageId(window->appId());
 
     if (service) {
