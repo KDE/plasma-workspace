@@ -15,3 +15,9 @@ Dragon=dragonplayer
 [Settings]
 ManualOnly=Wine
 MatchCommandLineFirst=VirtualBox
+
+[Rewrite Rules][google-chrome][1]
+Property=ClassName
+Identifier=DesktopEntryName
+Match=(?<=crx_)(?'match'[a-z]+)
+Target=chrome-%1-default

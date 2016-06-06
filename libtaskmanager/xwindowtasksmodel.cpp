@@ -40,6 +40,7 @@ License along with this library.  If not, see <http://www.gnu.org/licenses/>.
 #include <QIcon>
 #include <QFile>
 #include <QGuiApplication>
+#include <QRegularExpression>
 #include <QScreen>
 #include <QSet>
 #include <QStandardPaths>
@@ -524,6 +525,52 @@ QUrl XWindowTasksModel::Private::windowUrl(WId window)
 
             if (!classClass.isEmpty() && manualOnly.contains(classClass)) {
                 return url;
+            }
+
+            KConfigGroup rewriteRulesGroup(rulesConfig, QStringLiteral("Rewrite Rules"));
+            if (rewriteRulesGroup.hasGroup(classClass)) {
+                KConfigGroup rewriteGroup(&rewriteRulesGroup, classClass);
+
+                const QStringList &rules = rewriteGroup.groupList();
+                for (const QString &rule : rules) {
+                    KConfigGroup ruleGroup(&rewriteGroup, rule);
+
+                    const QString propertyConfig = ruleGroup.readEntry(QStringLiteral("Property"), QString());
+
+                    QString matchProperty;
+                    if (propertyConfig == QLatin1String("ClassClass")) {
+                        matchProperty = classClass;
+                    } else if (propertyConfig == QLatin1String("ClassName")) {
+                        matchProperty = className;
+                    }
+
+                    if (matchProperty.isEmpty()) {
+                        continue;
+                    }
+
+                    const QString serviceSearchIdentifier = ruleGroup.readEntry(QStringLiteral("Identifier"), QString());
+                    if (serviceSearchIdentifier.isEmpty()) {
+                        continue;
+                    }
+
+                    QRegularExpression regExp(ruleGroup.readEntry(QStringLiteral("Match")));
+                    const auto match = regExp.match(matchProperty);
+
+                    if (match.hasMatch()) {
+                        const QString actualMatch = match.captured(QStringLiteral("match"));
+                        if (actualMatch.isEmpty()) {
+                            continue;
+                        }
+
+                        const QString rewrittenString = ruleGroup.readEntry(QStringLiteral("Target")).arg(actualMatch);
+
+                        services = KServiceTypeTrader::self()->query(QStringLiteral("Application"), QStringLiteral("exist Exec and ('%1' =~ %2)").arg(rewrittenString, serviceSearchIdentifier));
+
+                        if (!services.isEmpty()) {
+                            break;
+                        }
+                    }
+                }
             }
 
             if (!mapped.isEmpty()) {
