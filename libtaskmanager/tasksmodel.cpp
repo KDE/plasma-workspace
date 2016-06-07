@@ -347,8 +347,8 @@ void TasksModel::Private::initModels()
                         const QString &launcherAppId = launcherIndex.data(AbstractTasksModel::AppId).toString();
 
                         if ((!appId.isEmpty() && appId == launcherAppId)
-                            || launcherUrlsMatch(launcherUrl, launcherIndex.data(AbstractTasksModel::LauncherUrl).toUrl(),
-                            IgnoreQueryItems)) {
+                            || (launcherUrl.isValid() && launcherUrlsMatch(launcherUrl,
+                            launcherIndex.data(AbstractTasksModel::LauncherUrl).toUrl(), IgnoreQueryItems))) {
                             launcherTasksModel->dataChanged(launcherIndex, launcherIndex);
                         }
                     }
@@ -1311,8 +1311,8 @@ bool TasksModel::filterAcceptsRow(int sourceRow, const QModelIndex &sourceParent
             const QString &filteredAppId = filteredIndex.data(AbstractTasksModel::AppId).toString();
 
             if ((!appId.isEmpty() && appId == filteredAppId)
-                || launcherUrlsMatch(launcherUrl, filteredIndex.data(AbstractTasksModel::LauncherUrl).toUrl(),
-                IgnoreQueryItems)) {
+                || (launcherUrl.isValid() && launcherUrlsMatch(launcherUrl,
+                filteredIndex.data(AbstractTasksModel::LauncherUrl).toUrl(), IgnoreQueryItems))) {
                 emit launcherCountChanged();
 
                 return false;

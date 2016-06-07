@@ -236,14 +236,15 @@ bool appsMatch(const QModelIndex &a, const QModelIndex &b)
     const QString &aAppId = a.data(AbstractTasksModel::AppId).toString();
     const QString &bAppId = b.data(AbstractTasksModel::AppId).toString();
 
-    if (!aAppId.isEmpty() && bAppId.isEmpty() && (aAppId == bAppId)) {
+    if (!aAppId.isEmpty() && aAppId == bAppId) {
         return true;
     }
 
     const QUrl &aLauncherUrl = a.data(AbstractTasksModel::LauncherUrl).toUrl();
     const QUrl &bLauncherUrl = b.data(AbstractTasksModel::LauncherUrl).toUrl();
 
-    if (aLauncherUrl.isValid() && bLauncherUrl.isValid() && (aLauncherUrl == bLauncherUrl)) {
+    if (aLauncherUrl.isValid() && launcherUrlsMatch(aLauncherUrl, bLauncherUrl,
+        IgnoreQueryItems)) {
         return true;
     }
 
