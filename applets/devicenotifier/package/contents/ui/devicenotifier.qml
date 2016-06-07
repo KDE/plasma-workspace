@@ -238,7 +238,9 @@ Item {
         id: expandTimer
         interval: 250
         onTriggered: {
-            plasmoid.expanded = true;
+            if (plasmoid.configuration.popupOnNewDevice) { // Bug 351592
+                plasmoid.expanded = true;
+            }
         }
     }
 

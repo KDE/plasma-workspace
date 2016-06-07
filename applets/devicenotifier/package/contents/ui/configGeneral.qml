@@ -33,6 +33,7 @@ Item {
     property alias cfg_removableDevices: removableOnly.checked
     property alias cfg_nonRemovableDevices: nonRemovableOnly.checked
     property alias cfg_allDevices: allDevices.checked
+    property alias cfg_popupOnNewDevice: autoPopup.checked
 
     Layouts.ColumnLayout {
         id: mainColumn
@@ -53,6 +54,12 @@ Item {
             id: allDevices
             text: i18n("All devices")
             exclusiveGroup: deviceFilter
+        }
+
+        Controls.CheckBox {
+            id: autoPopup
+            Layouts.Layout.fillWidth: true
+            text: i18n("Open popup when new device is plugged in")
         }
     }
 }
