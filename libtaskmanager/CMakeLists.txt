@@ -54,7 +54,7 @@ endif()
 
 set_target_properties(taskmanager PROPERTIES
                       VERSION ${PROJECT_VERSION}
-                      SOVERSION ${PROJECT_VERSION_MAJOR}
+                      SOVERSION 6
                       EXPORT_NAME LibTaskManager)
 
 install(TARGETS taskmanager EXPORT libtaskmanagerLibraryTargets ${KDE_INSTALL_TARGETS_DEFAULT_ARGS} )
