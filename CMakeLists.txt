@@ -109,7 +109,7 @@ configure_file(config-unix.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-unix.h )
 configure_file(config-X11.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-X11.h)
 install(FILES
         ${CMAKE_CURRENT_BINARY_DIR}/config-X11.h
-        DESTINATION ${INCLUDE_INSTALL_DIR}/taskmanager COMPONENT Devel
+        DESTINATION ${KDE_INSTALL_INCLUDEDIR}/legacytaskmanager COMPONENT Devel
 )
 configure_file(plasma.desktop.cmake ${CMAKE_CURRENT_BINARY_DIR}/plasma.desktop)
 install(FILES
