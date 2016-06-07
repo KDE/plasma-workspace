@@ -105,7 +105,6 @@ PanelView::PanelView(ShellCorona *corona, QScreen *targetScreen, QWindow *parent
     qmlRegisterType<QScreen>();
     rootContext()->setContextProperty(QStringLiteral("panel"), this);
     setSource(QUrl::fromLocalFile(m_corona->kPackage().filePath("views", QStringLiteral("Panel.qml"))));
-    PanelShadows::self()->addWindow(this);
 }
 
 PanelView::~PanelView()
@@ -293,6 +292,11 @@ void PanelView::setDistance(int dist)
     positionPanel();
 }
 
+Plasma::FrameSvg::EnabledBorders PanelView::enabledBorders() const
+{
+    return m_enabledBorders;
+}
+
 void PanelView::setVisibilityMode(PanelView::VisibilityMode mode)
 {
     if (m_visibilityMode == mode) {
@@ -359,6 +363,8 @@ void PanelView::positionPanel()
     }
 
     KWindowEffects::slideWindow(winId(), slideLocation, -1);
+
+    updateEnabledBorders();
 }
 
 QRect PanelView::geometryByDistance(int distance) const
@@ -651,7 +657,7 @@ void PanelView::integrateScreen()
 
 void PanelView::showEvent(QShowEvent *event)
 {
-    PanelShadows::self()->addWindow(this);
+    PanelShadows::self()->addWindow(this, enabledBorders());
     PlasmaQuick::ContainmentView::showEvent(event);
 
     //When the screen is set, the screen is recreated internally, so we need to
@@ -831,37 +837,7 @@ void PanelView::updateMask()
             m_background->setImagePath(QStringLiteral("widgets/panel-background"));
         }
 
-        Plasma::FrameSvg::EnabledBorders borders = Plasma::FrameSvg::AllBorders;
-        switch (location()) {
-        case Plasma::Types::TopEdge:
-            borders &= ~Plasma::FrameSvg::TopBorder;
-            break;
-        case Plasma::Types::LeftEdge:
-            borders &= ~Plasma::FrameSvg::LeftBorder;
-            break;
-        case Plasma::Types::RightEdge:
-            borders &= ~Plasma::FrameSvg::RightBorder;
-            break;
-        case Plasma::Types::BottomEdge:
-            borders &= ~Plasma::FrameSvg::BottomBorder;
-            break;
-        default:
-            break;
-        }
-
-        if (x() <= screen()->geometry().x()) {
-            borders &= ~Plasma::FrameSvg::LeftBorder;
-        }
-        if (x() + width() >= screen()->geometry().x() + screen()->geometry().width()) {
-            borders &= ~Plasma::FrameSvg::RightBorder;
-        }
-        if (y() <= screen()->geometry().y()) {
-            borders &= ~Plasma::FrameSvg::TopBorder;
-        }
-        if (y() + height() >= screen()->geometry().y() + screen()->geometry().height()) {
-            borders &= ~Plasma::FrameSvg::BottomBorder;
-        }
-        m_background->setEnabledBorders(borders);
+        m_background->setEnabledBorders(enabledBorders());
 
         m_background->resizeFrame(size());
         setMask(m_background->mask());
@@ -1069,6 +1045,49 @@ void PanelView::setupWaylandIntegration()
 bool PanelView::edgeActivated() const
 {
     return m_visibilityMode == PanelView::AutoHide || m_visibilityMode == LetWindowsCover;
+}
+
+void PanelView::updateEnabledBorders()
+{
+    Plasma::FrameSvg::EnabledBorders borders = Plasma::FrameSvg::AllBorders;
+
+    switch (location()) {
+    case Plasma::Types::TopEdge:
+        borders &= ~Plasma::FrameSvg::TopBorder;
+        break;
+    case Plasma::Types::LeftEdge:
+        borders &= ~Plasma::FrameSvg::LeftBorder;
+        break;
+    case Plasma::Types::RightEdge:
+        borders &= ~Plasma::FrameSvg::RightBorder;
+        break;
+    case Plasma::Types::BottomEdge:
+        borders &= ~Plasma::FrameSvg::BottomBorder;
+        break;
+    default:
+        break;
+    }
+
+    if (x() <= screen()->geometry().x()) {
+        borders &= ~Plasma::FrameSvg::LeftBorder;
+    }
+    if (x() + width() >= screen()->geometry().x() + screen()->geometry().width()) {
+        borders &= ~Plasma::FrameSvg::RightBorder;
+    }
+    if (y() <= screen()->geometry().y()) {
+        borders &= ~Plasma::FrameSvg::TopBorder;
+    }
+    if (y() + height() >= screen()->geometry().y() + screen()->geometry().height()) {
+        borders &= ~Plasma::FrameSvg::BottomBorder;
+    }
+
+    if (m_enabledBorders != borders) {
+
+        PanelShadows::self()->setEnabledBorders(this, borders);
+
+        m_enabledBorders = borders;
+        emit enabledBordersChanged();
+    }
 }
 
 
