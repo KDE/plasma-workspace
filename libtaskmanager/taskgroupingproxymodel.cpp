@@ -599,6 +599,15 @@ int TaskGroupingProxyModel::rowCount(const QModelIndex &parent) const
     return d->rowMap.count();
 }
 
+bool TaskGroupingProxyModel::hasChildren(const QModelIndex &parent) const
+{
+    if ((parent.model() && parent.model() != this) || !sourceModel()) {
+        return false;
+    }
+
+    return rowCount(parent);
+}
+
 int TaskGroupingProxyModel::columnCount(const QModelIndex &parent) const
 {
     Q_UNUSED(parent)

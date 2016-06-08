@@ -62,6 +62,7 @@ public:
     QModelIndex mapToSource(const QModelIndex &proxyIndex) const override;
 
     int rowCount(const QModelIndex &parent = QModelIndex()) const override;
+    bool hasChildren(const QModelIndex &parent = QModelIndex()) const override;
     int columnCount(const QModelIndex &parent = QModelIndex()) const override;
 
     QVariant data(const QModelIndex &proxyIndex, int role) const override;
