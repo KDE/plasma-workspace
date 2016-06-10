@@ -28,6 +28,27 @@
 #include <QLocale>
 #include <QDebug>
 
+
+WeatherData::WeatherData()
+  : stationLat(qQNaN())
+  , stationLon(qQNaN())
+  , temperature_F(qQNaN())
+  , temperature_C(qQNaN())
+  , humidity(qQNaN())
+  , windSpeed(qQNaN())
+  , windGust(qQNaN())
+  , pressure(qQNaN())
+  , dewpoint_F(qQNaN())
+  , dewpoint_C(qQNaN())
+  , heatindex_F(qQNaN())
+  , heatindex_C(qQNaN())
+  , windchill_F(qQNaN())
+  , windchill_C(qQNaN())
+  , visibility(qQNaN())
+{
+}
+
+
 QMap<QString, IonInterface::WindDirections> NOAAIon::setupWindIconMappings() const
 {
     QMap<QString, WindDirections> windDir;
@@ -250,6 +271,33 @@ void NOAAIon::setup_slotJobFinished(KJob *job)
     }
 }
 
+void NOAAIon::parseFloat(float& value, const QString& string)
+{
+    bool ok = false;
+    const float result = string.toFloat(&ok);
+    if (ok) {
+        value = result;
+    }
+}
+
+void NOAAIon::parseFloat(float& value, QXmlStreamReader& xml)
+{
+    bool ok = false;
+    const float result = xml.readElementText().toFloat(&ok);
+    if (ok) {
+        value = result;
+    }
+}
+
+void NOAAIon::parseDouble(double& value, QXmlStreamReader& xml)
+{
+    bool ok = false;
+    const double result = xml.readElementText().toDouble(&ok);
+    if (ok) {
+        value = result;
+    }
+}
+
 void NOAAIon::parseStationID()
 {
     QString state;
@@ -330,21 +378,21 @@ bool NOAAIon::readXMLSetup()
 
 void NOAAIon::parseWeatherSite(WeatherData& data, QXmlStreamReader& xml)
 {
-    data.temperature_C = i18n("N/A");
-    data.temperature_F = i18n("N/A");
-    data.dewpoint_C = i18n("N/A");
-    data.dewpoint_F = i18n("N/A");
-    data.weather = i18n("N/A");
+    data.temperature_C = qQNaN();
+    data.temperature_F = qQNaN();
+    data.dewpoint_C = qQNaN();
+    data.dewpoint_F = qQNaN();
+    data.weather = QStringLiteral("N/A");
     data.stationID = i18n("N/A");
-    data.pressure = i18n("N/A");
-    data.visibility = i18n("N/A");
-    data.humidity = i18n("N/A");
-    data.windSpeed = i18n("N/A");
-    data.windGust = i18n("N/A");
-    data.windchill_F = i18n("N/A");
-    data.windchill_C = i18n("N/A");
-    data.heatindex_F = i18n("N/A");
-    data.heatindex_C = i18n("N/A");
+    data.pressure = qQNaN();
+    data.visibility = qQNaN();
+    data.humidity = qQNaN();
+    data.windSpeed = qQNaN();
+    data.windGust = qQNaN();
+    data.windchill_F = qQNaN();
+    data.windchill_C = qQNaN();
+    data.heatindex_F = qQNaN();
+    data.heatindex_C = qQNaN();
 
     while (!xml.atEnd()) {
         xml.readNext();
@@ -357,9 +405,9 @@ void NOAAIon::parseWeatherSite(WeatherData& data, QXmlStreamReader& xml)
             } else if (elementName == QLatin1String("station_id")) {
                 data.stationID = xml.readElementText();
             } else if (elementName == QLatin1String("latitude")) {
-                data.stationLat = xml.readElementText();
+                parseDouble(data.stationLat, xml);
             } else if (elementName == QLatin1String("longitude")) {
-                data.stationLon = xml.readElementText();
+                parseDouble(data.stationLon, xml);
             } else if (elementName == QLatin1String("observation_time")) {
                 data.observationTime = xml.readElementText();
                 QStringList tmpDateStr = data.observationTime.split(QLatin1Char(' '));
@@ -369,36 +417,47 @@ void NOAAIon::parseWeatherSite(WeatherData& data, QXmlStreamReader& xml)
                 data.iconPeriodAP = m_dateFormat.toString(QStringLiteral("ap"));
 
             } else if (elementName == QLatin1String("weather")) {
-                data.weather = xml.readElementText();
+                const QString weather = xml.readElementText();
+                data.weather = (weather.isEmpty() || weather == QLatin1String("NA")) ? QStringLiteral("N/A") : weather;
                 // Pick which icon set depending on period of day
             } else if (elementName == QLatin1String("temp_f")) {
-                data.temperature_F = xml.readElementText();
+                parseFloat(data.temperature_F, xml);
             } else if (elementName == QLatin1String("temp_c")) {
-                data.temperature_C = xml.readElementText();
+                parseFloat(data.temperature_C, xml);
             } else if (elementName == QLatin1String("relative_humidity")) {
-                data.humidity = xml.readElementText();
+                parseFloat(data.humidity, xml);
             } else if (elementName == QLatin1String("wind_dir")) {
                 data.windDirection = xml.readElementText();
             } else if (elementName == QLatin1String("wind_mph")) {
-                data.windSpeed = xml.readElementText();
+                const QString windSpeed = xml.readElementText();
+                if (windSpeed == QLatin1String("NA")) {
+                    data.windSpeed = 0.0;
+                } else {
+                    parseFloat(data.windSpeed, windSpeed);
+                }
             } else if (elementName == QLatin1String("wind_gust_mph")) {
-                data.windGust = xml.readElementText();
+                const QString windGust = xml.readElementText();
+                if (windGust == QLatin1String("NA") || windGust == QLatin1String("N/A")) {
+                    data.windGust = 0.0;
+                } else {
+                    parseFloat(data.windGust, windGust);
+                }
             } else if (elementName == QLatin1String("pressure_in")) {
-                data.pressure = xml.readElementText();
+                parseFloat(data.pressure, xml);
             } else if (elementName == QLatin1String("dewpoint_f")) {
-                data.dewpoint_F = xml.readElementText();
+                parseFloat(data.dewpoint_F, xml);
             } else if (elementName == QLatin1String("dewpoint_c")) {
-                data.dewpoint_C = xml.readElementText();
+                parseFloat(data.dewpoint_C, xml);
             } else if (elementName == QLatin1String("heat_index_f")) {
-                data.heatindex_F = xml.readElementText();
+                parseFloat(data.heatindex_F, xml);
             } else if (elementName == QLatin1String("heat_index_c")) {
-                data.heatindex_C = xml.readElementText();
+                parseFloat(data.heatindex_C, xml);
             } else if (elementName == QLatin1String("windchill_f")) {
-                data.windchill_F = xml.readElementText();
+                parseFloat(data.windchill_F, xml);
             } else if (elementName == QLatin1String("windchill_c")) {
-                data.windchill_C = xml.readElementText();
+                parseFloat(data.windchill_C, xml);
             } else if (elementName == QLatin1String("visibility_mi")) {
-                data.visibility = xml.readElementText();
+                parseFloat(data.visibility, xml);
             } else {
                 parseUnknownElement(xml);
             }
@@ -450,20 +509,27 @@ void NOAAIon::parseUnknownElement(QXmlStreamReader& xml) const
 
 void NOAAIon::updateWeather(const QString& source)
 {
-    QMap<QString, QString> dataFields;
+    const WeatherData& weatherData = m_weatherData[source];
+
     Plasma::DataEngine::Data data;
 
-    data.insert(QStringLiteral("Country"), country(source));
-    data.insert(QStringLiteral("Place"), place(source));
-    data.insert(QStringLiteral("Station"), station(source));
+    data.insert(QStringLiteral("Country"), QStringLiteral("USA"));
+    data.insert(QStringLiteral("Place"), weatherData.locationName);
+    data.insert(QStringLiteral("Station"), weatherData.stationID);
 
-    data.insert(QStringLiteral("Latitude"), latitude(source));
-    data.insert(QStringLiteral("Longitude"), longitude(source));
+    const double lat = weatherData.stationLat;
+    const double lon = weatherData.stationLon;
+    if (!qIsNaN(lat) && !qIsNaN(lon)) {
+        data.insert(QStringLiteral("Latitude"), lat);
+        data.insert(QStringLiteral("Longitude"), lon);
+    }
 
     // Real weather - Current conditions
-    data.insert(QStringLiteral("Observation Period"), observationTime(source));
-    data.insert(QStringLiteral("Current Conditions"), conditionI18n(source));
-    qDebug() << "i18n condition string: " << qPrintable(conditionI18n(source));
+    data.insert(QStringLiteral("Observation Period"), weatherData.observationTime);
+    const QString conditionI18n = weatherData.weather == QLatin1String("N/A") ? i18n("N/A") : i18nc("weather condition", weatherData.weather.toUtf8().data());
+
+    data.insert(QStringLiteral("Current Conditions"), conditionI18n);
+    qDebug() << "i18n condition string: " << qPrintable(conditionI18n);
 
 //TODO: Port to Plasma2
 #if 0
@@ -480,66 +546,78 @@ void NOAAIon::updateWeather(const QString& source)
     if (currentTime > sunriseTime && currentTime < sunsetTime) {
 #endif
         // Day
-        QString weather = condition(source).toLower();
+        QString weather = weatherData.weather.toLower();
         ConditionIcons condition = getConditionIcon(weather, true);
         data.insert(QStringLiteral("Condition Icon"), getWeatherIcon(condition));
         qDebug() << "Using daytime icons\n";
 #if 0
     } else {
         // Night
-        QString weather = condition(source).toLower();
+        QString weather = weatherData.weather.toLower();
         ConditionIcons condition = getConditionIcon(weather, false);
         data.insert("Condition Icon", getWeatherIcon(condition));
         qDebug() << "Using nighttime icons\n";
     }
 #endif
 
-    dataFields = temperature(source);
-    data.insert(QStringLiteral("Temperature"), dataFields[QStringLiteral("temperature")]);
-    data.insert(QStringLiteral("Temperature Unit"), dataFields[QStringLiteral("temperatureUnit")]);
-
-    // Do we have a comfort temperature? if so display it
-    if (dataFields[QStringLiteral("comfortTemperature")] != QLatin1String("N/A")) {
-        if (m_weatherData[source].windchill_F != QLatin1String("NA")) {
-            data.insert(QStringLiteral("Windchill"), QStringLiteral("%1").arg(dataFields[QStringLiteral("comfortTemperature")]));
-            data.insert(QStringLiteral("Humidex"), i18n("N/A"));
-        }
-        if (m_weatherData[source].heatindex_F != QLatin1String("NA") && m_weatherData[source].temperature_F.toInt() != m_weatherData[source].heatindex_F.toInt()) {
-            data.insert(QStringLiteral("Humidex"), QStringLiteral("%1").arg(dataFields[QStringLiteral("comfortTemperature")]));
-            data.insert(QStringLiteral("Windchill"), i18n("N/A"));
-        }
-    } else {
-        data.insert(QStringLiteral("Windchill"), i18n("N/A"));
-        data.insert(QStringLiteral("Humidex"), i18n("N/A"));
+    if (!qIsNaN(weatherData.temperature_F)) {
+        data.insert(QStringLiteral("Temperature"), weatherData.temperature_F);
     }
 
-    data.insert(QStringLiteral("Dewpoint"), dewpoint(source));
-    dataFields = pressure(source);
-    data.insert(QStringLiteral("Pressure"), dataFields[QStringLiteral("pressure")]);
-    data.insert(QStringLiteral("Pressure Unit"), dataFields[QStringLiteral("pressureUnit")]);
+    // Used for all temperatures
+    data.insert(QStringLiteral("Temperature Unit"), KUnitConversion::Fahrenheit);
 
-    dataFields = visibility(source);
-    data.insert(QStringLiteral("Visibility"), dataFields[QStringLiteral("visibility")]);
-    data.insert(QStringLiteral("Visibility Unit"), dataFields[QStringLiteral("visibilityUnit")]);
+    if (!qIsNaN(weatherData.windchill_F)) {
+        data.insert(QStringLiteral("Windchill"), weatherData.windchill_F);
+    }
 
-    dataFields = humidity(source);
-    data.insert(QStringLiteral("Humidity"), dataFields[QStringLiteral("humidity")]);
-    data.insert(QStringLiteral("Humidity Unit"), dataFields[QStringLiteral("humidityUnit")]);
+    if (!qIsNaN(weatherData.heatindex_F)) {
+        data.insert(QStringLiteral("Heat Index"), weatherData.heatindex_F);
+    }
 
-    // Set number of forecasts per day/night supported, none for this ion right now
-    data.insert(QStringLiteral("Total Weather Days"), 0);
+    if (!qIsNaN(weatherData.dewpoint_F)) {
+        data.insert(QStringLiteral("Dewpoint"), weatherData.dewpoint_F);
+    }
 
-    dataFields = wind(source);
-    data.insert(QStringLiteral("Wind Speed"), dataFields[QStringLiteral("windSpeed")]);
-    data.insert(QStringLiteral("Wind Speed Unit"), dataFields[QStringLiteral("windUnit")]);
+    if (!qIsNaN(weatherData.pressure)) {
+        data.insert(QStringLiteral("Pressure"), weatherData.pressure);
+        data.insert(QStringLiteral("Pressure Unit"), KUnitConversion::InchesOfMercury);
+    }
 
-    data.insert(QStringLiteral("Wind Gust"), dataFields[QStringLiteral("windGust")]);
-    data.insert(QStringLiteral("Wind Gust Unit"), dataFields[QStringLiteral("windGustUnit")]);
-    data.insert(QStringLiteral("Wind Direction"), getWindDirectionIcon(windIcons(), dataFields[QStringLiteral("windDirection")].toLower()));
-    data.insert(QStringLiteral("Credit"), i18nc("credit line, keep string short)", "Data from NOAA National\302\240Weather\302\240Service"));
+    if (!qIsNaN(weatherData.visibility)) {
+        data.insert(QStringLiteral("Visibility"), weatherData.visibility);
+        data.insert(QStringLiteral("Visibility Unit"), KUnitConversion::Mile);
+    }
 
-    int dayIndex = 0;
-    foreach(const WeatherData::Forecast &forecast, m_weatherData[source].forecasts) {
+    if (!qIsNaN(weatherData.humidity)) {
+        data.insert(QStringLiteral("Humidity"), weatherData.humidity);
+        data.insert(QStringLiteral("Humidity Unit"), KUnitConversion::Percent);
+    }
+
+    if (!qIsNaN(weatherData.windSpeed)) {
+        data.insert(QStringLiteral("Wind Speed"), weatherData.windSpeed);
+    }
+
+    if (!qIsNaN(weatherData.windSpeed) || !qIsNaN(weatherData.windGust)) {
+        data.insert(QStringLiteral("Wind Speed Unit"), KUnitConversion::MilePerHour);
+    }
+
+    if (!qIsNaN(weatherData.windGust)) {
+        data.insert(QStringLiteral("Wind Gust"), weatherData.windGust);
+    }
+
+    if (!qIsNaN(weatherData.windSpeed) && static_cast<int>(weatherData.windSpeed) == 0) {
+        data.insert(QStringLiteral("Wind Direction"), QStringLiteral("VR")); // Variable/calm
+    } else if (!weatherData.windDirection.isEmpty()) {
+        data.insert(QStringLiteral("Wind Direction"),
+                    getWindDirectionIcon(windIcons(), weatherData.windDirection.toLower()));
+    }
+
+    // Set number of forecasts per day/night supported
+    data.insert(QStringLiteral("Total Weather Days"), weatherData.forecasts.size());
+
+    int i = 0;
+    foreach(const WeatherData::Forecast &forecast, weatherData.forecasts) {
 
         ConditionIcons icon = getConditionIcon(forecast.summary.toLower(), true);
         QString iconName = getWeatherIcon(icon);
@@ -552,168 +630,20 @@ void NOAAIon::updateWeather(const QString& source)
         }
 
         // Get the short day name for the forecast
-        data.insert(QStringLiteral("Short Forecast Day %1").arg(dayIndex), QStringLiteral("%1|%2|%3|%4|%5|%6")
-                .arg(forecast.day).arg(iconName)
-                .arg(i18nc("weather forecast", forecast.summary.toUtf8().data()))
-                .arg(forecast.high).arg(forecast.low).arg(QStringLiteral("N/U")));
-        dayIndex++;
+        data.insert(QStringLiteral("Short Forecast Day %1").arg(i),
+                    QStringLiteral("%1|%2|%3|%4|%5|%6")
+                    .arg(forecast.day)
+                    .arg(iconName)
+                    .arg(i18nc("weather forecast", forecast.summary.toUtf8().data()))
+                    .arg(forecast.high)
+                    .arg(forecast.low)
+                    .arg(QStringLiteral()));
+        ++i;
     }
 
-    // Set number of forecasts per day/night supported
-    data.insert(QStringLiteral("Total Weather Days"), dayIndex);
-
-
+    data.insert(QStringLiteral("Credit"), i18nc("credit line, keep string short)", "Data from NOAA National\302\240Weather\302\240Service"));
 
     setData(source, data);
-}
-
-QString const NOAAIon::country(const QString& source) const
-{
-    Q_UNUSED(source);
-    return QStringLiteral("USA");
-}
-
-QString NOAAIon::place(const QString& source) const
-{
-    return m_weatherData[source].locationName;
-}
-
-QString NOAAIon::station(const QString& source) const
-{
-    return m_weatherData[source].stationID;
-}
-
-QString NOAAIon::latitude(const QString& source) const
-{
-    return m_weatherData[source].stationLat;
-}
-
-QString NOAAIon::longitude(const QString& source) const
-{
-    return m_weatherData[source].stationLon;
-}
-
-QString NOAAIon::observationTime(const QString& source) const
-{
-    return m_weatherData[source].observationTime;
-}
-
-int NOAAIon::periodHour(const QString& source) const
-{
-    return m_weatherData[source].iconPeriodHour.toInt();
-}
-
-QString NOAAIon::condition(const QString& source)
-{
-    if (m_weatherData[source].weather.isEmpty() || m_weatherData[source].weather == QLatin1String("NA")) {
-        m_weatherData[source].weather = QLatin1String("N/A");
-    }
-    return m_weatherData[source].weather;
-}
-
-QString NOAAIon::conditionI18n(const QString& source)
-{
-    if (condition(source) == QLatin1String("N/A")) {
-        return i18n("N/A");
-    }
-
-    return i18nc("weather condition", condition(source).toUtf8().data());
-}
-
-QString NOAAIon::dewpoint(const QString& source) const
-{
-    return m_weatherData[source].dewpoint_F;
-}
-
-QMap<QString, QString> NOAAIon::humidity(const QString& source) const
-{
-    QMap<QString, QString> humidityInfo;
-
-    if (m_weatherData[source].humidity == QLatin1String("NA")) {
-        humidityInfo.insert(QStringLiteral("humidity"), QString(i18n("N/A")));
-        humidityInfo.insert(QStringLiteral("humidityUnit"), QString::number(KUnitConversion::NoUnit));
-    } else {
-        humidityInfo.insert(QStringLiteral("humidity"), m_weatherData[source].humidity);
-        humidityInfo.insert(QStringLiteral("humidityUnit"), QString::number(KUnitConversion::Percent));
-    }
-
-    return humidityInfo;
-}
-
-QMap<QString, QString> NOAAIon::visibility(const QString& source) const
-{
-    QMap<QString, QString> visibilityInfo;
-    if (m_weatherData[source].visibility.isEmpty() ||
-        m_weatherData[source].visibility == QLatin1String("NA")) {
-        visibilityInfo.insert(QStringLiteral("visibility"), QString(i18n("N/A")));
-        visibilityInfo.insert(QStringLiteral("visibilityUnit"), QString::number(KUnitConversion::NoUnit));
-    } else {
-        visibilityInfo.insert(QStringLiteral("visibility"), m_weatherData[source].visibility);
-        visibilityInfo.insert(QStringLiteral("visibilityUnit"), QString::number(KUnitConversion::Mile));
-    }
-    return visibilityInfo;
-}
-
-QMap<QString, QString> NOAAIon::temperature(const QString& source) const
-{
-    QMap<QString, QString> temperatureInfo;
-    temperatureInfo.insert(QStringLiteral("temperature"), m_weatherData[source].temperature_F);
-    temperatureInfo.insert(QStringLiteral("temperatureUnit"), QString::number(KUnitConversion::Fahrenheit));
-    temperatureInfo.insert(QStringLiteral("comfortTemperature"), i18n("N/A"));
-
-    if (m_weatherData[source].heatindex_F != QLatin1String("NA") && m_weatherData[source].windchill_F == QLatin1String("NA")) {
-        temperatureInfo.insert(QStringLiteral("comfortTemperature"), m_weatherData[source].heatindex_F);
-    }
-
-    if (m_weatherData[source].windchill_F != QLatin1String("NA") && m_weatherData[source].heatindex_F == QLatin1String("NA")) {
-        temperatureInfo.insert(QStringLiteral("comfortTemperature"), m_weatherData[source].windchill_F);
-    }
-
-    return temperatureInfo;
-}
-
-QMap<QString, QString> NOAAIon::pressure(const QString& source) const
-{
-    QMap<QString, QString> pressureInfo;
-    if (m_weatherData[source].pressure.isEmpty() ||
-        m_weatherData[source].pressure == QLatin1String("NA")) {
-        pressureInfo.insert(QStringLiteral("pressure"), i18n("N/A"));
-        pressureInfo.insert(QStringLiteral("visibilityUnit"), QString::number(KUnitConversion::NoUnit));
-    } else {
-        pressureInfo.insert(QStringLiteral("pressure"), m_weatherData[source].pressure);
-        pressureInfo.insert(QStringLiteral("pressureUnit"), QString::number(KUnitConversion::InchesOfMercury));
-    }
-    return pressureInfo;
-}
-
-QMap<QString, QString> NOAAIon::wind(const QString& source) const
-{
-    QMap<QString, QString> windInfo;
-
-    // May not have any winds
-    if (m_weatherData[source].windSpeed == QLatin1String("NA")) {
-        windInfo.insert(QStringLiteral("windSpeed"), i18nc("wind speed", "Calm"));
-        windInfo.insert(QStringLiteral("windUnit"), QString::number(KUnitConversion::NoUnit));
-    } else {
-        windInfo.insert(QStringLiteral("windSpeed"), QString::number(m_weatherData[source].windSpeed.toFloat(), 'f', 1));
-        windInfo.insert(QStringLiteral("windUnit"), QString::number(KUnitConversion::MilePerHour));
-    }
-
-    // May not always have gusty winds
-    if (m_weatherData[source].windGust == QLatin1String("NA") || m_weatherData[source].windGust == QLatin1String("N/A")) {
-        windInfo.insert(QStringLiteral("windGust"), i18n("N/A"));
-        windInfo.insert(QStringLiteral("windGustUnit"), QString::number(KUnitConversion::NoUnit));
-    } else {
-        windInfo.insert(QStringLiteral("windGust"), QString::number(m_weatherData[source].windGust.toFloat(), 'f', 1));
-        windInfo.insert(QStringLiteral("windGustUnit"), QString::number(KUnitConversion::MilePerHour));
-    }
-
-    if (m_weatherData[source].windDirection.isEmpty()) {
-        windInfo.insert(QStringLiteral("windDirection"), i18n("N/A"));
-    } else {
-        windInfo.insert(QStringLiteral("windDirection"), i18nc("wind direction", m_weatherData[source].windDirection.toUtf8().data()));
-    }
-    return windInfo;
 }
 
 /**
@@ -804,12 +734,18 @@ IonInterface::ConditionIcons NOAAIon::getConditionIcon(const QString& weather, b
 
 void NOAAIon::getForecast(const QString& source)
 {
+    const double lat = m_weatherData[source].stationLat;
+    const double lon = m_weatherData[source].stationLon;
+    if (qIsNaN(lat) || qIsNaN(lon)) {
+        return;
+    }
+
     /* Assuming that we have the latitude and longitude data at this point, get the 7-day
      * forecast.
      */
     const QUrl url(QLatin1String("http://www.weather.gov/forecasts/xml/sample_products/browser_interface/"
-                                 "ndfdBrowserClientByDay.php?lat=") + latitude(source) +
-                                 QLatin1String("&lon=") + longitude(source) +
+                                 "ndfdBrowserClientByDay.php?lat=") + QString::number(lat) +
+                                 QLatin1String("&lon=") + QString::number(lon) +
                                  QLatin1String("&format=24+hourly&numDays=7"));
 
     KIO::TransferJob* getJob = KIO::get(url, KIO::Reload, KIO::HideProgressInfo);

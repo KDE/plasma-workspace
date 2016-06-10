@@ -39,6 +39,8 @@ class WeatherData
 {
 
 public:
+    WeatherData();
+
     // WeatherEvent can have more than one, especially in Canada, eh? :)
     struct WeatherEvent {
         QString url;
@@ -50,14 +52,16 @@ public:
 
     // Five day forecast
     struct ForecastInfo {
+        ForecastInfo();
+
         QString forecastPeriod;
         QString forecastSummary;
         QString iconName;
         QString shortForecast;
 
-        QString forecastTempHigh;
-        QString forecastTempLow;
-        QString popPrecent;
+        float tempHigh;
+        float tempLow;
+        float popPrecent;
         QString windForecast;
 
         QString precipForecast;
@@ -72,8 +76,8 @@ public:
     QString cityName;
     QString regionName;
     QString stationID;
-    QString stationLat;
-    QString stationLon;
+    double stationLat;
+    double stationLon;
 
     // Current observation information.
     QString obsTimestamp;
@@ -83,28 +87,29 @@ public:
     int iconPeriodMinute;
 
     QString condition;
-    QString temperature;
-    QString dewpoint;
+    float temperature;
+    float dewpoint;
 
     // In winter windchill, in summer, humidex
-    QString comforttemp;
+    QString humidex;
+    float windchill;
 
     float pressure;
     QString pressureTendency;
 
     float visibility;
-    QString humidity;
+    float humidity;
 
-    QString windSpeed;
-    QString windGust;
+    float windSpeed;
+    float windGust;
     QString windDirection;
     QString windDegrees;
 
     QVector <WeatherData::WeatherEvent *> watches;
     QVector <WeatherData::WeatherEvent *> warnings;
 
-    QString normalHigh;
-    QString normalLow;
+    float normalHigh;
+    float normalLow;
 
     QString forecastTimestamp;
 
@@ -115,8 +120,8 @@ public:
     QVector <WeatherData::ForecastInfo *> forecasts;
 
     // Historical data from previous day.
-    QString prevHigh;
-    QString prevLow;
+    float prevHigh;
+    float prevLow;
     QString prevPrecipType;
     QString prevPrecipTotal;
 
@@ -133,6 +138,9 @@ public:
     float recordSnow;
 };
 
+/**
+ * https://weather.gc.ca/mainmenu/disclaimer_e.html
+ */
 class Q_DECL_EXPORT EnvCanadaIon : public IonInterface, public Plasma::DataEngineConsumer
 {
     Q_OBJECT
@@ -165,36 +173,6 @@ private:
 
     QMap<QString, ConditionIcons> const& conditionIcons() const;
     QMap<QString, ConditionIcons> const& forecastIcons() const;
-
-    // Place information
-    QString const country(const QString& source) const;
-    QString territory(const QString& source) const;
-    QString city(const QString& source) const;
-    QString region(const QString& source) const;
-    QString station(const QString& source) const;
-    QString latitude(const QString& source) const;
-    QString longitude(const QString& source) const;
-
-    // Current Conditions Weather info
-    QString observationTime(const QString& source) const;
-    int periodHour(const QString& source) const;
-    int periodMinute(const QString& source) const;
-    QMap<QString, QString> watches(const QString& source) const;
-    QMap<QString, QString> warnings(const QString& source) const;
-    QString condition(const QString& source);
-    QMap<QString, QString> temperature(const QString& source) const;
-    QString dewpoint(const QString& source) const;
-    QMap<QString, QString> humidity(const QString& source) const;
-    QMap<QString, QString> visibility(const QString& source) const;
-    QMap<QString, QString> pressure(const QString& source) const;
-    QMap<QString, QString> wind(const QString& source) const;
-    QMap<QString, QString> regionalTemperatures(const QString& source) const;
-    QMap<QString, QString> uvIndex(const QString& source) const;
-    QVector<QString> forecasts(const QString& source);
-    QMap<QString, QString> yesterdayWeather(const QString& source) const;
-    QMap<QString, QString> sunriseSet(const QString& source) const;
-    QMap<QString, QString> moonriseSet(const QString& source) const;
-    QMap<QString, QString> weatherRecords(const QString& source) const;
 
     // Load and Parse the place XML listing
     void getXMLSetup();
@@ -229,6 +207,8 @@ private:
     void parseYesterdayWeather(WeatherData& data, QXmlStreamReader& xml);
     void parseAstronomicals(WeatherData& data, QXmlStreamReader& xml);
     void parseWeatherRecords(WeatherData& data, QXmlStreamReader& xml);
+
+    void parseFloat(float& value, QXmlStreamReader& xml);
 
 private:
     struct XMLMapInfo {

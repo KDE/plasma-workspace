@@ -691,7 +691,7 @@ void WetterComIon::updateWeather(const QString& source, bool parseError)
         data.insert(QStringLiteral("Station"), m_place[source].displayName);
         //data.insert("Condition Icon", "N/A");
         //data.insert("Temperature", "N/A");
-        data.insert(QStringLiteral("Temperature Unit"), QString::number(KUnitConversion::Celsius));
+        data.insert(QStringLiteral("Temperature Unit"), KUnitConversion::Celsius);
 
         int i = 0;
         foreach(WeatherData::ForecastPeriod * forecastPeriod, m_weatherData[source].forecasts) {

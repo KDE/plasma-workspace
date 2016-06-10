@@ -40,11 +40,13 @@ class WeatherData
 {
 
 public:
+    WeatherData();
+
     //QString countryName; // USA
     QString locationName;
     QString stationID;
-    QString stationLat;
-    QString stationLon;
+    double stationLat;
+    double stationLon;
     QString stateName;
 
     // Current observation information.
@@ -53,21 +55,21 @@ public:
     QString iconPeriodAP;
     QString weather;
 
-    QString temperature_F;
-    QString temperature_C;
-    QString humidity;
+    float temperature_F;
+    float temperature_C;
+    float humidity;
     QString windString;
     QString windDirection;
-    QString windSpeed; // Float value
-    QString windGust; // Float value
-    QString pressure;
-    QString dewpoint_F;
-    QString dewpoint_C;
-    QString heatindex_F;
-    QString heatindex_C;
-    QString windchill_F;
-    QString windchill_C;
-    QString visibility;
+    float windSpeed;
+    float windGust;
+    float pressure;
+    float dewpoint_F;
+    float dewpoint_C;
+    float heatindex_F;
+    float heatindex_C;
+    float windchill_F;
+    float windchill_C;
+    float visibility;
 
     struct Forecast
     {
@@ -112,25 +114,8 @@ private:
     QMap<QString, WindDirections> setupWindIconMappings() const;
     QMap<QString, WindDirections> const& windIcons() const;
 
-    // Place information
-    QString const country(const QString& source) const;
-    QString place(const QString& source) const;
-    QString station(const QString& source) const;
-    QString latitude(const QString& source) const;
-    QString longitude(const QString& source) const;
-
     // Current Conditions Weather info
-    QString observationTime(const QString& source) const;
     //bool night(const QString& source);
-    int periodHour(const QString& source) const;
-    QString condition(const QString& source);
-    QString conditionI18n(const QString& source);
-    QMap<QString, QString> temperature(const QString& source) const;
-    QString dewpoint(const QString& source) const;
-    QMap<QString, QString> humidity(const QString& source) const;
-    QMap<QString, QString> visibility(const QString& source) const;
-    QMap<QString, QString> pressure(const QString& source) const;
-    QMap<QString, QString> wind(const QString& source) const;
     IonInterface::ConditionIcons getConditionIcon(const QString& weather, bool isDayTime) const;
 
     // Load and Parse the place XML listing
@@ -155,6 +140,10 @@ private:
     void parseWeatherSite(WeatherData& data, QXmlStreamReader& xml);
     void parseStationID();
     void parseStationList();
+
+    void parseFloat(float& value, const QString& string);
+    void parseFloat(float& value, QXmlStreamReader& xml);
+    void parseDouble(double& value, QXmlStreamReader& xml);
 
 private:
     struct XMLMapInfo {
