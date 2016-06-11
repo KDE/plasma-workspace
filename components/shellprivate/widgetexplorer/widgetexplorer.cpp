@@ -305,7 +305,7 @@ WidgetExplorer::WidgetExplorer(QObject *parent)
     //FIXME: delay
     setApplication();
     d->initRunningApplets();
-    
+
     d->filterItemModel.setSortCaseSensitivity(Qt::CaseInsensitive);
     d->filterItemModel.setDynamicSortFilter(true);
     d->filterItemModel.setSourceModel(&d->itemModel);
@@ -416,6 +416,7 @@ void WidgetExplorer::immutabilityChanged(Plasma::Types::ImmutabilityType type)
 
 void WidgetExplorer::downloadWidgets(const QString &type)
 {
+    Q_UNUSED(type);
     if (!d->newStuffDialog) {
         d->newStuffDialog = new KNS3::DownloadDialog( QLatin1String("plasmoids.knsrc") );
         d->newStuffDialog.data()->setWindowTitle(i18n("Download New Plasma Widgets"));

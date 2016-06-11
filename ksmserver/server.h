@@ -73,7 +73,7 @@ public:
         ImmediateLockScreen = 1 << 1,
         NoLockScreen = 1 << 2
     };
-    Q_DECLARE_FLAGS(InitFlags, InitFlag);
+    Q_DECLARE_FLAGS(InitFlags, InitFlag)
     KSMServer( const QString& windowManager, InitFlags flags );
     ~KSMServer() override;
 

@@ -55,7 +55,7 @@ class TASKMANAGER_EXPORT TaskFilterProxyModel : public QSortFilterProxyModel, pu
 
 public:
     explicit TaskFilterProxyModel(QObject *parent = 0);
-    virtual ~TaskFilterProxyModel();;
+    virtual ~TaskFilterProxyModel();
 
     void setSourceModel(QAbstractItemModel *sourceModel) override;
 

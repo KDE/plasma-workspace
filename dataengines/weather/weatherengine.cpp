@@ -214,8 +214,9 @@ void WeatherEngine::startReconnect()
     }
 }
 
-void WeatherEngine::forceUpdate(IonInterface *i, const QString &source)
+void WeatherEngine::forceUpdate(IonInterface *ion, const QString &source)
 {
+    Q_UNUSED(ion);
     Plasma::DataContainer *container = containerForSource(source);
     if (container) {
         qDebug() << "immediate update of" << source;
@@ -251,4 +252,3 @@ QString WeatherEngine::ionNameForSource(const QString& source) const
 K_EXPORT_PLASMA_DATAENGINE_WITH_JSON(weather, WeatherEngine, "plasma-dataengine-weather.json")
 
 #include "weatherengine.moc"
-
