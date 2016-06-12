@@ -113,8 +113,10 @@ void SystemTrayContainer::constraintsEvent(Plasma::Types::Constraints constraint
             }
         );
 
-        //don't let internal systray manage context menus
-        m_internalSystray->setAcceptedMouseButtons(Qt::NoButton);
+        if (m_internalSystray) {
+            //don't let internal systray manage context menus
+            m_internalSystray->setAcceptedMouseButtons(Qt::NoButton);
+        }
 
         //replace internal remove action with ours
         m_innerContainment->actions()->addAction("remove", actions()->action("remove"));
