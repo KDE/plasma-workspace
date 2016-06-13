@@ -557,7 +557,7 @@ void SystemTray::serviceOwnerChanged(const QString &serviceName, const QString &
 
 void SystemTray::serviceRegistered(const QString &service)
 {
-    qCDebug(SYSTEMTRAY) << "DBus service appeared:" << service;
+    //qCDebug(SYSTEMTRAY) << "DBus service appeared:" << service;
     for (auto it = m_dbusActivatableTasks.constBegin(), end = m_dbusActivatableTasks.constEnd(); it != end; ++it) {
         const QString &plugin = it.key();
         if (!m_allowedPlasmoids.contains(plugin)) {
@@ -568,7 +568,7 @@ void SystemTray::serviceRegistered(const QString &service)
         QRegExp rx(pattern);
         rx.setPatternSyntax(QRegExp::Wildcard);
         if (rx.exactMatch(service)) {
-            qCDebug(SYSTEMTRAY) << "ST : DBus service " << m_dbusActivatableTasks[plugin] << "appeared. Loading " << plugin;
+            //qCDebug(SYSTEMTRAY) << "ST : DBus service " << m_dbusActivatableTasks[plugin] << "appeared. Loading " << plugin;
             newTask(plugin);
             m_dbusServiceCounts[plugin]++;
         }
@@ -577,7 +577,7 @@ void SystemTray::serviceRegistered(const QString &service)
 
 void SystemTray::serviceUnregistered(const QString &service)
 {
-    qCDebug(SYSTEMTRAY) << "DBus service disappeared:" << service;
+    //qCDebug(SYSTEMTRAY) << "DBus service disappeared:" << service;
 
     for (auto it = m_dbusActivatableTasks.constBegin(), end = m_dbusActivatableTasks.constEnd(); it != end; ++it) {
         const QString &plugin = it.key();
@@ -592,7 +592,7 @@ void SystemTray::serviceUnregistered(const QString &service)
             m_dbusServiceCounts[plugin]--;
             Q_ASSERT(m_dbusServiceCounts[plugin] >= 0);
             if (m_dbusServiceCounts[plugin] == 0) {
-                qCDebug(SYSTEMTRAY) << "ST : DBus service " << m_dbusActivatableTasks[plugin] << " disappeared. Unloading " << plugin;
+                //qCDebug(SYSTEMTRAY) << "ST : DBus service " << m_dbusActivatableTasks[plugin] << " disappeared. Unloading " << plugin;
                 cleanupTask(plugin);
             }
         }
