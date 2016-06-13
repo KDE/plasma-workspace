@@ -141,9 +141,6 @@ void DrKonqiDialog::buildIntroWidget()
     ui.infoLabel->setText(reportMessage);
     connect(ui.infoLabel, &QLabel::linkActivated, this, &DrKonqiDialog::linkActivated);
 
-    ui.iconLabel->setPixmap(
-                        QPixmap(QStandardPaths::locate(QStandardPaths::DataLocation, QLatin1String("pics/crash.png"))));
-
     ui.detailsTitleLabel->setText(QStringLiteral("<strong>%1</strong>").arg(i18nc("@label","Details:")));
 
     ui.detailsLabel->setText(xi18nc("@info Note the time information is divided into date and time parts",
