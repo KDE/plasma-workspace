@@ -657,17 +657,15 @@ QUrl XWindowTasksModel::Private::launcherUrl(WId window)
         return data.url;
     }
 
-    const QIcon &i = icon(window);
+    QUrl url = data.url;
 
-    if (i.isNull()) {
+    // FIXME Hard-coding 64x64 or SizeLarge is not scaling-aware.
+
+    const QPixmap pixmap = KWindowSystem::icon(window, KIconLoader::SizeLarge, KIconLoader::SizeLarge, false);
+    if (pixmap.isNull()) {
         return data.url;
     }
-
-    QUrl url = data.url;
     QUrlQuery uQuery(url);
-
-    // FIXME Hard-coding 64px is not scaling-aware.
-    const QPixmap pixmap = i.pixmap(QSize(64, 64));
     QByteArray bytes;
     QBuffer buffer(&bytes);
     buffer.open(QIODevice::WriteOnly);
