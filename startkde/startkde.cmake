@@ -71,7 +71,7 @@ kcminputrc Mouse cursorTheme 'breeze_cursors'
 kcminputrc Mouse cursorSize ''
 ksplashrc KSplash Theme Breeze
 ksplashrc KSplash Engine KSplashQML
-kdeglobals KScreen ScaleFactor 1
+kdeglobals KScreen ScreenScaleFactors ''
 kcmfonts General forceFontDPI 0
 EOF
 
@@ -142,8 +142,8 @@ if test $returncode -ne 0; then
 fi
 [ -r $configDir/startupconfig ] && . $configDir/startupconfig
 
-if test "$kdeglobals_kscreen_scalefactor" -ne 1; then
-    export QT_DEVICE_PIXEL_RATIO=$kdeglobals_kscreen_scalefactor
+if [ "$kdeglobals_kscreen_screenscalefactors" ]; then
+    export QT_SCREEN_SCALE_FACTORS="$kdeglobals_kscreen_screenscalefactors"
 fi
 
 # XCursor mouse theme needs to be applied here to work even for kded or ksmserver
