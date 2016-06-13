@@ -27,6 +27,18 @@ Item {
     Plasmoid.switchWidth: units.gridUnit * 12
     Plasmoid.switchHeight: units.gridUnit * 12
 
+    Plasmoid.toolTipMainText: Qt.formatDate(dataSource.data.Local.DateTime, "dddd")
+    Plasmoid.toolTipSubText: {
+        // this logic is taken from digital-clock:
+        // remove "dddd" from the locale format string
+        // /all/ locales in LongFormat have "dddd" either
+        // at the beginning or at the end. so we just
+        // remove it + the delimiter and space
+        var format = Qt.locale().dateFormat(Locale.LongFormat);
+        format = format.replace(/(^dddd.?\s)|(,?\sdddd$)/, "");
+        return Qt.formatDate(dataSource.data.Local.DateTime, format)
+    }
+
     Layout.minimumWidth: units.iconSizes.large
     Layout.minimumHeight: units.iconSizes.large
 
