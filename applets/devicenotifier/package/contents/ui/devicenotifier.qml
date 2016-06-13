@@ -51,8 +51,28 @@ Item {
 
     Plasmoid.switchWidth: units.gridUnit * 10
     Plasmoid.switchHeight: units.gridUnit * 15
-    Plasmoid.toolTipMainText: i18n("No devices available")
-    Plasmoid.status : (filterModel.count >  0) ? PlasmaCore.Types.ActiveStatus : PlasmaCore.Types.PassiveStatus
+
+    Plasmoid.toolTipMainText: filterModel.count > 0 && filterModel.get(0) ? i18n("Most Recent Device") : i18n("No Devices Available")
+    Plasmoid.toolTipSubText: {
+        if (filterModel.count > 0) {
+            var data = filterModel.get(0)
+            if (data && data.Description) {
+                return data.Description
+            }
+        }
+        return ""
+    }
+    Plasmoid.icon: {
+        if (filterModel.count > 0) {
+            var data = filterModel.get(0)
+            if (data && data.Icon) {
+                return data.Icon
+            }
+        }
+        return "device-notifier"
+    }
+
+    Plasmoid.status: (filterModel.count > 0 || pendingDelegateRemoval > 0) ? PlasmaCore.Types.ActiveStatus : PlasmaCore.Types.PassiveStatus
 
     PlasmaCore.DataSource {
         id: hpSource
@@ -140,18 +160,6 @@ Item {
         }
         sortRole: "Timestamp"
         sortOrder: Qt.DescendingOrder
-        onCountChanged: {
-            var data = filterModel.get(0);
-            if (data && (data["Icon"] != undefined)) {
-                plasmoid.icon = data["Icon"];
-                plasmoid.toolTipMainText = i18n("Most recent device");
-                plasmoid.toolTipSubText = data["Description"];
-            } else {
-                plasmoid.icon = "device-notifier";
-                plasmoid.toolTipMainText = i18n("No devices available");
-                plasmoid.toolTipSubText = "";
-            }
-        }
     }
 
     PlasmaCore.DataSource {
@@ -226,12 +234,6 @@ Item {
         id: popupIconTimer
         interval: 3000
         onTriggered: devicenotifier.popupIcon  = "device-notifier";
-    }
-
-    Timer {
-        id: passiveTimer
-        interval: 3000
-        onTriggered: plasmoid.status = PlasmaCore.Types.PassiveStatus
     }
 
     Timer {

@@ -109,15 +109,6 @@ Item {
                 //acceptable since one doesn't have a billion of devices
                 cacheBuffer: 1000
 
-                onCountChanged: {
-                    if (count == 0) {
-                        passiveTimer.restart()
-                    } else {
-                        passiveTimer.stop()
-                        plasmoid.status = PlasmaCore.Types.ActiveStatus
-                    }
-                }
-
                 section {
                     property: "Type Description"
                     delegate: Item {
