@@ -46,6 +46,8 @@ class TASKMANAGER_EXPORT TaskGroupingProxyModel : public QAbstractProxyModel, pu
     Q_OBJECT
 
     Q_PROPERTY(TasksModel::GroupMode groupMode READ groupMode WRITE setGroupMode NOTIFY groupModeChanged)
+    Q_PROPERTY(bool groupDemandingAttention READ groupDemandingAttention WRITE setGroupDemandingAttention
+        NOTIFY groupDemandingAttentionChanged)
     Q_PROPERTY(int windowTasksThreshold READ windowTasksThreshold WRITE setWindowTasksThreshold NOTIFY windowTasksThresholdChanged)
     Q_PROPERTY(QStringList blacklistedAppIds READ blacklistedAppIds WRITE setBlacklistedAppIds NOTIFY blacklistedAppIdsChanged)
     Q_PROPERTY(QStringList blacklistedLauncherUrls READ blacklistedLauncherUrls WRITE setBlacklistedLauncherUrls
@@ -95,6 +97,26 @@ public:
      * @param mode A TasksModel group mode.
      **/
     void setGroupMode(TasksModel::GroupMode mode);
+
+    /**
+     * Whether new tasks which demand attention
+     * (AbstractTasksModel::IsDemandingAttention) should be grouped immediately,
+     * or only once they have stopped demanding attention. Defaults to @c false.
+     *
+     * @see setGroupDemandingAttention
+     * @returns whether tasks which demand attention are grouped immediately.
+     **/
+    bool groupDemandingAttention() const;
+
+    /**
+     * Sets whether new tasks which demand attention
+     * (AbstractTasksModel::IsDemandingAttention) should be grouped immediately,
+     * or only once they have stopped demanding attention.
+     *
+     * @see groupDemandingAttention
+     * @param group Whether tasks with demand attention should be grouped immediately.
+     **/
+    void setGroupDemandingAttention(bool group);
 
     /**
      * As window tasks (AbstractTasksModel::IsWindow) come and go in the source
@@ -330,6 +352,7 @@ public:
 
 Q_SIGNALS:
     void groupModeChanged() const;
+    void groupDemandingAttentionChanged() const;
     void windowTasksThresholdChanged() const;
     void blacklistedAppIdsChanged() const;
     void blacklistedLauncherUrlsChanged() const;
