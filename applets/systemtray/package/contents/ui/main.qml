@@ -208,6 +208,7 @@ MouseArea {
     }
 
     CurrentItemHighLight {
+        visualParent: tasksRow
         target: root.activeApplet && root.activeApplet.parent.parent == tasksRow ? root.activeApplet.parent : root
         location: plasmoid.location
     }
