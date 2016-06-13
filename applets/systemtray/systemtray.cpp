@@ -338,8 +338,7 @@ void SystemTray::reorderItemAfter(QQuickItem* after, QQuickItem* before)
 void SystemTray::restoreContents(KConfigGroup &group)
 {
     Q_UNUSED(group);
-    //Don't do anything here, it's too soon
-    qCWarning(SYSTEMTRAY)<<"RestoreContents doesn't do anything here";
+    //NOTE: RestoreContents shouldnn't do anything here because is too soon, so have an empty reimplementation
 }
 
 void SystemTray::restorePlasmoids()
