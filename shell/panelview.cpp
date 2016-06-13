@@ -995,7 +995,7 @@ void PanelView::statusChanged(Plasma::Types::ItemStatus status)
 {
     if (status == Plasma::Types::NeedsAttentionStatus) {
         showTemporarily();
-    } else if (status == Plasma::AcceptingInputStatus) {
+    } else if (status == Plasma::Types::AcceptingInputStatus) {
         KWindowSystem::forceActiveWindow(winId());
     } else {
         restoreAutoHide();
