@@ -95,7 +95,7 @@ void SystemTrayContainer::constraintsEvent(Plasma::Types::Constraints constraint
         }
 
         m_innerContainment->setParent(this);
-        connect(containment(), &Plasma::Containment::screenChanged, m_innerContainment, &Plasma::Containment::reactToScreenChange);
+        connect(containment(), &Plasma::Containment::screenChanged, m_innerContainment.data(), &Plasma::Containment::reactToScreenChange);
         if (formFactor() == Plasma::Types::Horizontal || formFactor() == Plasma::Types::Vertical) {
             m_innerContainment->setFormFactor(formFactor());
         } else {
