@@ -219,7 +219,7 @@ void XWindowTasksModel::Private::addWindow(WId window)
     const WId leader = info.transientFor();
 
     // Handle transient.
-    if (leader > 0 && leader != QX11Info::appRootWindow()
+    if (leader > 0 && leader != window && leader != QX11Info::appRootWindow()
         && !transients.contains(window) && windows.contains(leader)) {
         transients.insert(window);
 
