@@ -33,10 +33,9 @@
 #define TEST_STEP_INTERVAL 2000
 
 /**
- * There are 7 stages in ksplash
+ * There are 6 used stages in ksplash
  *  - initial
- *  - kded
- *  - confupdate
+ *  - kinit
  *  - ksmserver
  *  - wm
  *  - ready
@@ -104,6 +103,11 @@ void SplashApp::timerEvent(QTimerEvent * event)
 
 void SplashApp::setStage(const QString &stage)
 {
+    //filter out startup events from KDED as they will be removed in a future release
+    if (stage == QLatin1String("kded") || stage == QLatin1String("confupdate")) {
+        return;
+    }
+
     qDebug() << "Loading stage " << stage << m_startTime.msecsTo(QDateTime::currentDateTime());
 
     if (m_stages.contains(stage)) {
@@ -115,7 +119,7 @@ void SplashApp::setStage(const QString &stage)
 
 void SplashApp::setStage(int stage)
 {
-    if (m_stage == 7) {
+    if (m_stage == 6) {
         QGuiApplication::exit(EXIT_SUCCESS);
     }
 
