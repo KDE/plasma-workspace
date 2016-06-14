@@ -35,6 +35,8 @@ ColumnLayout {
         font.weight: Font.DemiBold
         fontSizeMode: Text.HorizontalFit
         font.pointSize: 36
+        // NativeRendering is utterly broken at large font sizes, ripping apart letters and stuff
+        renderType: Text.QtRendering
     }
 
     BreezeLabel {
