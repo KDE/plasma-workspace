@@ -134,18 +134,6 @@ PlasmaCore.ColorScope {
                 connectedSources: ["Battery", "AC Adapter"]
             }
         }
-        KeyboardButton {
-        }
-
-        PlasmaComponents.Label {
-            text: Qt.formatTime(timeSource.data["Local"]["DateTime"])
-            //Do I need the FontMetrics magic to set implicitWidth?
-            PlasmaCore.DataSource {
-                id: timeSource
-                engine: "time"
-                connectedSources: ["Local"]
-                interval: 1000
-            }
-        }
+        KeyboardButton { }
     }
 }

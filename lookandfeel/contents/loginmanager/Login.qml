@@ -24,6 +24,14 @@ Item {
         mainStack.currentItem.forceActiveFocus();
     }
 
+    PlasmaCore.DataSource {
+        id: timeSource
+        engine: "time"
+        connectedSources: ["Local"]
+        interval: 60000
+        intervalAlignment: PlasmaCore.Types.AlignToMinute
+    }
+
     Component {
         id: userView
         //even though stackview is a scope in itself we need a spacer item to align the user list
@@ -97,6 +105,32 @@ Item {
         onTriggered: root.notificationMessage = ""
     }
 
+    ColumnLayout {
+        anchors {
+            horizontalCenter: parent.horizontalCenter
+            bottom: mainStack.bottom
+            // so it is positioined above the users but doesn't overlap them
+            bottomMargin: units.gridUnit * 11
+        }
+
+        PlasmaComponents.Label {
+            Layout.fillWidth: true
+            height: undefined // unset Label default
+            horizontalAlignment: Text.AlignHCenter
+            font.pointSize: dateLabel.font.pointSize * 4
+            // there's a bug in Qt's native rendering where it will screw up large fonts
+            renderType: Text.QtRendering
+            text: Qt.formatTime(timeSource.data["Local"]["DateTime"])
+        }
+
+        PlasmaComponents.Label {
+            id: dateLabel
+            Layout.fillWidth: true
+            height: undefined // unset Label default
+            horizontalAlignment: Text.AlignHCenter
+            text: Qt.formatDate(timeSource.data["Local"]["DateTime"], Qt.DefaultLocaleLongDate)
+        }
+    }
 
     //main bit:
     StackView {
