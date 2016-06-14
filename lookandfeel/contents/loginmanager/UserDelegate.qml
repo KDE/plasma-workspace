@@ -33,7 +33,7 @@ Item {
     property string iconSource
 
     implicitWidth: units.gridUnit * 8 //6 wide + 1 either side spacing
-    implicitHeight: units.gridUnit * 7  + usernameDelegate.implicitHeight
+    implicitHeight: units.gridUnit * 7  + (name ? usernameDelegate.implicitHeight : 0)
 
     signal clicked()
 
