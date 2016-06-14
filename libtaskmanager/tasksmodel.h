@@ -691,6 +691,8 @@ protected:
     bool lessThan(const QModelIndex &left, const QModelIndex &right) const;
 
 private:
+    Q_INVOKABLE void updateLauncherCount();
+
     class Private;
     class TasksModelLessThan;
     friend class TasksModelLessThan;

@@ -66,6 +66,7 @@ public:
 
     bool anyTaskDemandsAttention = false;
 
+    int launcherCount = 0;
     int virtualDesktop = -1;
     int screen = -1;
     QString activity;
@@ -198,11 +199,11 @@ void TasksModel::Private::initModels()
     QObject::connect(launcherTasksModel, &LauncherTasksModel::launcherListChanged,
         q, &TasksModel::launcherListChanged);
     QObject::connect(launcherTasksModel, &QAbstractItemModel::rowsInserted,
-        q, &TasksModel::launcherCountChanged);
+        q, &TasksModel::updateLauncherCount);
     QObject::connect(launcherTasksModel, &QAbstractItemModel::rowsRemoved,
-        q, &TasksModel::launcherCountChanged);
+        q, &TasksModel::updateLauncherCount);
     QObject::connect(launcherTasksModel, &QAbstractItemModel::modelReset,
-        q, &TasksModel::launcherCountChanged);
+        q, &TasksModel::updateLauncherCount);
 
     concatProxyModel = new ConcatenateTasksProxyModel(q);
 
@@ -386,7 +387,7 @@ void TasksModel::Private::initModels()
 
                         QMetaObject::invokeMethod(launcherTasksModel, "dataChanged", Qt::QueuedConnection,
                             Q_ARG(QModelIndex, launcherIndex), Q_ARG(QModelIndex, launcherIndex));
-                        QMetaObject::invokeMethod(q, "launcherCountChanged", Qt::QueuedConnection);
+                        QMetaObject::invokeMethod(q, "updateLauncherCount", Qt::QueuedConnection);
                     }
                 }
             }
@@ -732,16 +733,15 @@ int TasksModel::rowCount(const QModelIndex &parent) const
     return QSortFilterProxyModel::rowCount(parent);
 }
 
-int TasksModel::launcherCount() const
+void TasksModel::updateLauncherCount()
 {
-    // TODO: Optimize algorithm or cache the output.
-
     QList<QUrl> launchers = QUrl::fromStringList(d->launcherTasksModel->launcherList());
 
     for(int i = 0; i < d->filterProxyModel->rowCount(); ++i) {
         const QModelIndex &filterIndex = d->filterProxyModel->index(i, 0);
 
         if (!filterIndex.data(AbstractTasksModel::IsLauncher).toBool()) {
+            // TODO: It would be much faster if we didn't ask for a URL with serialized PNG data in it, just to discard it a few lines below
             const QUrl &launcherUrl = filterIndex.data(AbstractTasksModel::LauncherUrl).toUrl();
 
             QMutableListIterator<QUrl> it(launchers);
@@ -756,7 +756,15 @@ int TasksModel::launcherCount() const
         }
     }
 
-    return launchers.count();
+    if (d->launcherCount != launchers.count()) {
+        d->launcherCount = launchers.count();
+        emit launcherCountChanged();
+    }
+}
+
+int TasksModel::launcherCount() const
+{
+    return d->launcherCount;
 }
 
 bool TasksModel::anyTaskDemandsAttention() const
@@ -1313,7 +1321,8 @@ bool TasksModel::filterAcceptsRow(int sourceRow, const QModelIndex &sourceParent
             if ((!appId.isEmpty() && appId == filteredAppId)
                 || (launcherUrl.isValid() && launcherUrlsMatch(launcherUrl,
                 filteredIndex.data(AbstractTasksModel::LauncherUrl).toUrl(), IgnoreQueryItems))) {
-                emit launcherCountChanged();
+                // TODO: Do this outside of filterAcceptsRow, based on notification that something changed
+                QMetaObject::invokeMethod(const_cast<TasksModel *>(this), "updateLauncherCount", Qt::QueuedConnection);
 
                 return false;
             }
