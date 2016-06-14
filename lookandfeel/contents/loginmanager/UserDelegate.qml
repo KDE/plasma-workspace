@@ -32,14 +32,14 @@ Item {
     property string userName
     property string iconSource
 
-    implicitWidth: units.gridUnit * 8 //6 wide + 1 either side spacing
-    implicitHeight: units.gridUnit * 7  + (name ? usernameDelegate.implicitHeight : 0)
+    implicitWidth: units.gridUnit * 10 //6 wide + 1 either side spacing
+    implicitHeight: units.gridUnit * 9  + (userName ? usernameDelegate.implicitHeight : 0)
 
     signal clicked()
 
     Item {
         id: imageSource
-        implicitWidth: units.gridUnit * 6
+        implicitWidth: units.gridUnit * 8
         implicitHeight: implicitWidth
 
         //we sometimes have a path to an image sometimes an icon
