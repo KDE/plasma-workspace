@@ -66,18 +66,24 @@ DrKonqiDialog::DrKonqiDialog(QWidget * parent) :
 
     connect(m_tabWidget, &QTabWidget::currentChanged, this, &DrKonqiDialog::tabIndexChanged);
 
-    buildIntroWidget();
-    m_tabWidget->addTab(m_introWidget, i18nc("@title:tab general information", "&General"));
+    KConfigGroup config(KSharedConfig::openConfig(), "General");
+
+    if (!config.readEntry(QStringLiteral("ShowOnlyBacktrace"), false)) {
+        buildIntroWidget();
+        m_tabWidget->addTab(m_introWidget, i18nc("@title:tab general information", "&General"));
+    }
 
     m_backtraceWidget = new BacktraceWidget(DrKonqi::debuggerManager()->backtraceGenerator(), this);
     m_backtraceWidget->setMinimumSize(QSize(575, 240));
     m_tabWidget->addTab(m_backtraceWidget, i18nc("@title:tab", "&Developer Information"));
 
+    m_tabWidget->tabBar()->setVisible(m_tabWidget->count() > 1);
+
     buildDialogButtons();
 
     setMinimumSize(QSize(640,320));
     resize(minimumSize());
-    KConfigGroup config(KSharedConfig::openConfig(), "General");
+
     KWindowConfig::restoreWindowSize(windowHandle(), config);
     setLayout(l);
 }
