@@ -43,6 +43,11 @@ PlasmaCore.ToolTipArea {
     property Item fullRepresentation
     property Item compactRepresentation
 
+    Connections {
+        target: plasmoid
+        onContextualActionsAboutToShow: appletRoot.hideToolTip()
+    }
+
     Layout.minimumWidth: {
         switch (plasmoid.formFactor) {
         case PlasmaCore.Types.Vertical:
