@@ -318,7 +318,9 @@ void TasksModel::Private::initModels()
     QObject::connect(groupingProxyModel, &QAbstractItemModel::rowsInserted, q,
         [this](const QModelIndex &parent, int first, int last) {
             if (parent.isValid()) {
-                consolidateManualSortMapForGroup(parent);
+                if (sortMode == SortManual) {
+                    consolidateManualSortMapForGroup(parent);
+                }
 
                 // Existence of a group means everything below this has already been done.
                 return;
