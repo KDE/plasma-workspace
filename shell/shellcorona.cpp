@@ -200,7 +200,10 @@ ShellCorona::~ShellCorona()
 {
     qDeleteAll(m_views);
     m_views.clear();
-    qDeleteAll(containments());
+    while (!containments().isEmpty()) {
+        //deleting a containment will remove it from the list due to QObject::destroyed connect in Corona
+        delete containments().first();
+    }
     qDeleteAll(m_panelViews);
     m_panelViews.clear();
 }
