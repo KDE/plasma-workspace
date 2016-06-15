@@ -1,6 +1,7 @@
 /*
  * Copyright 2013  Heena Mahour <heena393@gmail.com>
  * Copyright 2013 Sebastian Kügler <sebas@kde.org>
+ * Copyright 2016 Kai Uwe Broulik <kde@privat.broulik.de>
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License as
@@ -20,6 +21,7 @@ import QtQuick.Layouts 1.1
 
 import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
+import org.kde.plasma.components 2.0 as PlasmaComponents
 
 import org.kde.plasma.calendar 2.0
 
@@ -42,6 +44,46 @@ Item {
     Layout.minimumWidth: units.iconSizes.large
     Layout.minimumHeight: units.iconSizes.large
 
+    PlasmaCore.DataSource {
+        id: dataSource
+        engine: "time"
+        connectedSources: ["Local"]
+        interval: 60000
+        intervalAlignment: PlasmaCore.Types.AlignToMinute
+    }
+
+    Plasmoid.compactRepresentation: MouseArea {
+        onClicked: plasmoid.expanded = !plasmoid.expanded
+
+        PlasmaCore.IconItem {
+            anchors.fill: parent
+            source: Qt.resolvedUrl("../images/mini-calendar.svgz")
+
+            PlasmaComponents.Label {
+                anchors {
+                    fill: parent
+                    margins: Math.round(parent.width * 0.1)
+                }
+                height: undefined
+                horizontalAlignment: Text.AlignHCenter
+                verticalAlignment: Text.AlignVCenter
+                font.pixelSize: 1000
+                minimumPointSize: theme.smallestFont.pointSize
+                text: {
+                    var d = new Date(dataSource.data.Local.DateTime)
+                    var format = plasmoid.configuration.compactDisplay
+
+                    if (format === "w") {
+                        return plasmoid.nativeInterface.weekNumber(d)
+                    }
+
+                    return Qt.formatDate(d, format)
+                }
+                fontSizeMode: Text.Fit
+            }
+        }
+    }
+
     Plasmoid.fullRepresentation: Item {
 
         // sizing taken from digital clock
@@ -52,14 +94,6 @@ Item {
         Layout.minimumHeight: _minimumHeight
         Layout.preferredWidth: _minimumWidth
         Layout.preferredHeight: Math.round(_minimumHeight * 1.5)
-
-        PlasmaCore.DataSource {
-            id: dataSource
-            engine: "time"
-            connectedSources: ["Local"]
-            interval: 60000
-            intervalAlignment: PlasmaCore.Types.AlignToMinute
-        }
 
         MonthView {
             id: calendar

@@ -15,5 +15,8 @@
     <entry name="showWeekNumbers" type="Bool">
         <default>false</default>
     </entry>
+    <entry name="compactDisplay" type="String">
+        <default>d</default>
+    </entry>
   </group>
 </kcfg>
