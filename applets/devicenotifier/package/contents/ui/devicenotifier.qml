@@ -50,7 +50,7 @@ Item {
     property int pendingDelegateRemoval: 0
 
     Plasmoid.switchWidth: units.gridUnit * 10
-    Plasmoid.switchHeight: units.gridUnit * 15
+    Plasmoid.switchHeight: units.gridUnit * 10
 
     Plasmoid.toolTipMainText: filterModel.count > 0 && filterModel.get(0) ? i18n("Most Recent Device") : i18n("No Devices Available")
     Plasmoid.toolTipSubText: {
@@ -91,8 +91,8 @@ Item {
 
     Plasmoid.compactRepresentation: PlasmaCore.IconItem {
         source: devicenotifier.popupIcon
-        width: 36;
-        height: 36;
+        width: units.iconSizes.medium;
+        height: units.iconSizes.medium;
         MouseArea {
             anchors.fill: parent
             onClicked: plasmoid.expanded = !plasmoid.expanded

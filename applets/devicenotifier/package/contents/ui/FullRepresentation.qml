@@ -29,8 +29,8 @@ import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 
 Item {
-    Layout.minimumWidth: units.gridUnit * 18
-    Layout.minimumHeight: units.gridUnit * 22
+    Layout.minimumWidth: units.gridUnit * 12
+    Layout.minimumHeight: units.gridUnit * 12
 
     PlasmaExtras.Heading {
         width: parent.width
