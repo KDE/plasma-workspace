@@ -21,6 +21,7 @@ License along with this library.  If not, see <http://www.gnu.org/licenses/>.
 #include "tasksmodel.h"
 #include "activityinfo.h"
 #include "concatenatetasksproxymodel.h"
+#include "flattentaskgroupsproxymodel.h"
 #include "taskfilterproxymodel.h"
 #include "taskgroupingproxymodel.h"
 #include "tasktools.h"
@@ -63,6 +64,8 @@ public:
     ConcatenateTasksProxyModel* concatProxyModel = nullptr;
     TaskFilterProxyModel* filterProxyModel = nullptr;
     TaskGroupingProxyModel* groupingProxyModel = nullptr;
+    FlattenTaskGroupsProxyModel* flattenGroupsProxyModel = nullptr;
+    AbstractTasksModelIface *abstractTasksSourceModel = nullptr;
 
     bool anyTaskDemandsAttention = false;
 
@@ -81,10 +84,14 @@ public:
     static ActivityInfo* activityInfo;
     static int activityInfoUsers;
 
+    bool groupInline = false;
+    int groupingWindowTasksThreshold = -1;
+
     void initModels();
     void updateAnyTaskDemandsAttention();
     void updateManualSortMap();
-    void syncManualSortMapForGroup(const QModelIndex &parent);
+    void consolidateManualSortMapForGroup(const QModelIndex &groupingProxyIndex);
+    void updateGroupInline();
     QModelIndex preFilterIndex(const QModelIndex &sourceIndex) const;
     void updateActivityTaskCounts();
     void forceResort();
@@ -148,10 +155,11 @@ void TasksModel::Private::initModels()
 {
     // NOTE: Overview over the entire model chain assembled here:
     // {X11,Wayland}WindowTasksModel, StartupTasksModel, LauncherTasksModel
-    //  -> ConcatenateTasksProxyModel concatenates them into a single list.
-    //   -> TaskFilterProxyModel filters by state (e.g. virtual desktop).
-    //    -> TaskGroupingProxyModel groups by application (we go from flat list to tree).
-    //     -> TasksModel collapses top-level items into task lifecycle abstraction, sorts.
+    //  -> concatProxyModel concatenates them into a single list.
+    //   -> filterProxyModel filters by state (e.g. virtual desktop).
+    //    -> groupingProxyModel groups by application (we go from flat list to tree).
+    //     -> flattenGroupsProxyModel (optionally, if groupInline == true) flattens groups out.
+    //      -> TasksModel collapses (top-level) items into task lifecycle abstraction; sorts.
 
     if (!windowTasksModel && QGuiApplication::platformName().startsWith(QLatin1String("wayland"))) {
         windowTasksModel = new WaylandTasksModel();
@@ -302,8 +310,6 @@ void TasksModel::Private::initModels()
     groupingProxyModel->setSourceModel(filterProxyModel);
     QObject::connect(groupingProxyModel, &TaskGroupingProxyModel::groupModeChanged,
         q, &TasksModel::groupModeChanged);
-    QObject::connect(groupingProxyModel, &TaskGroupingProxyModel::windowTasksThresholdChanged,
-        q, &TasksModel::groupingWindowTasksThresholdChanged);
     QObject::connect(groupingProxyModel, &TaskGroupingProxyModel::blacklistedAppIdsChanged,
         q, &TasksModel::groupingAppIdBlacklistChanged);
     QObject::connect(groupingProxyModel, &TaskGroupingProxyModel::blacklistedLauncherUrlsChanged,
@@ -311,8 +317,10 @@ void TasksModel::Private::initModels()
 
     QObject::connect(groupingProxyModel, &QAbstractItemModel::rowsInserted, q,
         [this](const QModelIndex &parent, int first, int last) {
-            // We can ignore group members.
             if (parent.isValid()) {
+                consolidateManualSortMapForGroup(parent);
+
+                // Existence of a group means everything below this has already been done.
                 return;
             }
 
@@ -400,7 +408,7 @@ void TasksModel::Private::initModels()
             Q_UNUSED(bottomRight)
 
             // We can ignore group members.
-            if (topLeft.isValid()) {
+            if (topLeft.parent().isValid()) {
                 return;
             }
 
@@ -415,27 +423,10 @@ void TasksModel::Private::initModels()
         [this]() { updateAnyTaskDemandsAttention(); }
     );
 
+    abstractTasksSourceModel = groupingProxyModel;
     q->setSourceModel(groupingProxyModel);
 
-    QObject::connect(q, &QAbstractItemModel::rowsInserted, q,
-        [this](const QModelIndex &parent, int first, int last) {
-            Q_UNUSED(first)
-            Q_UNUSED(last)
-
-            q->countChanged();
-
-            // If we're in manual sort mode, we need to consolidate new children
-            // of a group in the manual sort map to prepare for when a group
-            // gets dissolved.
-            // This is done after we've already had a chance to sort the new child
-            // in alphabetically in this proxy.
-            if (sortMode == SortManual && parent.isValid()) {
-                syncManualSortMapForGroup(parent);
-            }
-        }
-    );
-
-
+    QObject::connect(q, &QAbstractItemModel::rowsInserted, q, &TasksModel::countChanged);
     QObject::connect(q, &QAbstractItemModel::rowsRemoved, q, &TasksModel::countChanged);
     QObject::connect(q, &QAbstractItemModel::modelReset, q, &TasksModel::countChanged);
 }
@@ -470,6 +461,17 @@ void TasksModel::Private::updateManualSortMap()
         // Full sort.
         TasksModelLessThan lt(concatProxyModel, q, false);
         std::stable_sort(sortedPreFilterRows.begin(), sortedPreFilterRows.end(), lt);
+
+        // Consolidate sort map entries for groups.
+        if (q->groupMode() != GroupDisabled) {
+            for (int i = 0; i < groupingProxyModel->rowCount(); ++i) {
+                const QModelIndex &groupingIndex = groupingProxyModel->index(i, 0);
+
+                if (groupingIndex.data(AbstractTasksModel::IsGroupParent).toBool()) {
+                    consolidateManualSortMapForGroup(groupingIndex);
+                }
+            }
+        }
 
         return;
     }
@@ -519,27 +521,84 @@ void TasksModel::Private::updateManualSortMap()
     }
 }
 
-void TasksModel::Private::syncManualSortMapForGroup(const QModelIndex &parent)
+void TasksModel::Private::consolidateManualSortMapForGroup(const QModelIndex &groupingProxyIndex)
 {
-    const int childCount = q->rowCount(parent);
+    // Consolidates sort map entries for a group's items to be contiguous
+    // after the group's first item and the same order as in groupingProxyModel.
 
-    if (childCount != -1) {
-        const QModelIndex &preFilterParent = preFilterIndex(q->mapToSource(parent));
+    const int childCount = groupingProxyModel->rowCount(groupingProxyIndex);
 
-        // We're moving the trailing children to the sort map position of
-        // the first child, so we're skipping the first child.
-        for (int i = 1; i < childCount; ++i) {
-            const QModelIndex &preFilterChildIndex = preFilterIndex(q->mapToSource(parent.child(i, 0)));
-            const int childSortIndex = sortedPreFilterRows.indexOf(preFilterChildIndex.row());
-            const int parentSortIndex = sortedPreFilterRows.indexOf(preFilterParent.row());
-            const int insertPos = (parentSortIndex + i) + ((parentSortIndex + i) > childSortIndex ? -1 : 0);
-            sortedPreFilterRows.move(childSortIndex, insertPos);
+    if (!childCount) {
+        return;
+    }
+
+    const QModelIndex &leader = groupingProxyIndex.child(0, 0);
+    const QModelIndex &preFilterLeader = filterProxyModel->mapToSource(groupingProxyModel->mapToSource(leader));
+
+    // We're moving the trailing children to the sort map position of
+    // the first child, so we're skipping the first child.
+    for (int i = 1; i < childCount; ++i) {
+        const QModelIndex &child = groupingProxyIndex.child(i, 0);
+        const QModelIndex &preFilterChild = filterProxyModel->mapToSource(groupingProxyModel->mapToSource(child));
+        const int leaderPos = sortedPreFilterRows.indexOf(preFilterLeader.row());
+        const int childPos = sortedPreFilterRows.indexOf(preFilterChild.row());
+        const int insertPos = (leaderPos + i) + ((leaderPos + i) > childPos ? -1 : 0);
+        sortedPreFilterRows.move(childPos, insertPos);
+    }
+}
+
+void TasksModel::Private::updateGroupInline()
+{
+    if (q->groupMode() != GroupDisabled && groupInline) {
+        if (flattenGroupsProxyModel) {
+            return;
+        }
+
+        // Exempting tasks which demand attention from grouping is not
+        // necessary when all group children are shown inline anyway
+        // and would interfere with our sort-tasks-together goals.
+        groupingProxyModel->setGroupDemandingAttention(true);
+
+        // Likewise, ignore the window tasks threshold when making
+        // grouping decisions.
+        groupingProxyModel->setWindowTasksThreshold(-1);
+
+        flattenGroupsProxyModel = new FlattenTaskGroupsProxyModel(q);
+        flattenGroupsProxyModel->setSourceModel(groupingProxyModel);
+
+        abstractTasksSourceModel = flattenGroupsProxyModel;
+        q->setSourceModel(flattenGroupsProxyModel);
+
+        if (sortMode == SortManual) {
+            forceResort();
+        }
+    } else {
+        if (!flattenGroupsProxyModel) {
+            return;
+        }
+
+        groupingProxyModel->setGroupDemandingAttention(false);
+        groupingProxyModel->setWindowTasksThreshold(groupingWindowTasksThreshold);
+
+        abstractTasksSourceModel = groupingProxyModel;
+        q->setSourceModel(groupingProxyModel);
+
+        delete flattenGroupsProxyModel;
+        flattenGroupsProxyModel = nullptr;
+
+        if (sortMode == SortManual) {
+            forceResort();
         }
     }
 }
 
 QModelIndex TasksModel::Private::preFilterIndex(const QModelIndex &sourceIndex) const {
-    return filterProxyModel->mapToSource(groupingProxyModel->mapToSource(sourceIndex));
+    // Only in inline grouping mode, we have an additional proxy layer.
+    if (flattenGroupsProxyModel) {
+        return filterProxyModel->mapToSource(groupingProxyModel->mapToSource(flattenGroupsProxyModel->mapToSource(sourceIndex)));
+    } else {
+        return filterProxyModel->mapToSource(groupingProxyModel->mapToSource(sourceIndex));
+    }
 }
 
 void TasksModel::Private::updateActivityTaskCounts()
@@ -737,11 +796,12 @@ void TasksModel::updateLauncherCount()
 {
     QList<QUrl> launchers = QUrl::fromStringList(d->launcherTasksModel->launcherList());
 
-    for(int i = 0; i < d->filterProxyModel->rowCount(); ++i) {
+    for (int i = 0; i < d->filterProxyModel->rowCount(); ++i) {
         const QModelIndex &filterIndex = d->filterProxyModel->index(i, 0);
 
         if (!filterIndex.data(AbstractTasksModel::IsLauncher).toBool()) {
-            // TODO: It would be much faster if we didn't ask for a URL with serialized PNG data in it, just to discard it a few lines below
+            // TODO: It would be much faster if we didn't ask for a URL with serialized PNG
+            // data in it, just to discard it a few lines below.
             const QUrl &launcherUrl = filterIndex.data(AbstractTasksModel::LauncherUrl).toUrl();
 
             QMutableListIterator<QUrl> it(launchers);
@@ -897,6 +957,7 @@ void TasksModel::setSeparateLaunchers(bool separate)
     if (d->separateLaunchers != separate) {
         d->separateLaunchers = separate;
 
+        d->updateManualSortMap();
         d->forceResort();
 
         emit separateLaunchersChanged();
@@ -931,23 +992,46 @@ TasksModel::GroupMode TasksModel::groupMode() const
 void TasksModel::setGroupMode(GroupMode mode)
 {
     if (d->groupingProxyModel) {
+        if (mode == GroupDisabled && d->flattenGroupsProxyModel) {
+            d->flattenGroupsProxyModel->setSourceModel(nullptr);
+        }
+
         d->groupingProxyModel->setGroupMode(mode);
+        d->updateGroupInline();
+    }
+}
+
+bool TasksModel::groupInline() const
+{
+    return d->groupInline;
+}
+
+void TasksModel::setGroupInline(bool groupInline)
+{
+    if (d->groupInline != groupInline) {
+        d->groupInline = groupInline;
+
+        d->updateGroupInline();
+
+        emit groupInlineChanged();
     }
 }
 
 int TasksModel::groupingWindowTasksThreshold() const
 {
-    if (!d->groupingProxyModel) {
-        return -1;
-    }
-
-    return d->groupingProxyModel->windowTasksThreshold();
+    return d->groupingWindowTasksThreshold;
 }
 
 void TasksModel::setGroupingWindowTasksThreshold(int threshold)
 {
-    if (d->groupingProxyModel) {
-        d->groupingProxyModel->setWindowTasksThreshold(threshold);
+    if (d->groupingWindowTasksThreshold != threshold) {
+        d->groupingWindowTasksThreshold = threshold;
+
+        if (!d->groupInline && d->groupingProxyModel) {
+            d->groupingProxyModel->setWindowTasksThreshold(threshold);
+        }
+
+        emit groupingWindowTasksThresholdChanged();
     }
 }
 
@@ -1039,98 +1123,100 @@ int TasksModel::launcherPosition(const QUrl &url) const
 void TasksModel::requestActivate(const QModelIndex &index)
 {
     if (index.isValid() && index.model() == this) {
-        d->groupingProxyModel->requestActivate(mapToSource(index));
+        d->abstractTasksSourceModel->requestActivate(mapToSource(index));
     }
 }
 
 void TasksModel::requestNewInstance(const QModelIndex &index)
 {
     if (index.isValid() && index.model() == this) {
-        d->groupingProxyModel->requestNewInstance(mapToSource(index));
+        d->abstractTasksSourceModel->requestNewInstance(mapToSource(index));
     }
 }
 
 void TasksModel::requestClose(const QModelIndex &index)
 {
     if (index.isValid() && index.model() == this) {
-        d->groupingProxyModel->requestClose(mapToSource(index));
+        d->abstractTasksSourceModel->requestClose(mapToSource(index));
     }
 }
 
 void TasksModel::requestMove(const QModelIndex &index)
 {
     if (index.isValid() && index.model() == this) {
-        d->groupingProxyModel->requestMove(mapToSource(index));
+        d->abstractTasksSourceModel->requestMove(mapToSource(index));
     }
 }
 
 void TasksModel::requestResize(const QModelIndex &index)
 {
     if (index.isValid() && index.model() == this) {
-        d->groupingProxyModel->requestResize(mapToSource(index));
+        d->abstractTasksSourceModel->requestResize(mapToSource(index));
     }
 }
 
 void TasksModel::requestToggleMinimized(const QModelIndex &index)
 {
     if (index.isValid() && index.model() == this) {
-        d->groupingProxyModel->requestToggleMinimized(mapToSource(index));
+        d->abstractTasksSourceModel->requestToggleMinimized(mapToSource(index));
     }
 }
 
 void TasksModel::requestToggleMaximized(const QModelIndex &index)
 {
     if (index.isValid() && index.model() == this) {
-        d->groupingProxyModel->requestToggleMaximized(mapToSource(index));
+        d->abstractTasksSourceModel->requestToggleMaximized(mapToSource(index));
     }
 }
 
 void TasksModel::requestToggleKeepAbove(const QModelIndex &index)
 {
     if (index.isValid() && index.model() == this) {
-        d->groupingProxyModel->requestToggleKeepAbove(mapToSource(index));
+        d->abstractTasksSourceModel->requestToggleKeepAbove(mapToSource(index));
     }
 }
 
 void TasksModel::requestToggleKeepBelow(const QModelIndex &index)
 {
     if (index.isValid() && index.model() == this) {
-        d->groupingProxyModel->requestToggleKeepBelow(mapToSource(index));
+        d->abstractTasksSourceModel->requestToggleKeepBelow(mapToSource(index));
     }
 }
 
 void TasksModel::requestToggleFullScreen(const QModelIndex &index)
 {
     if (index.isValid() && index.model() == this) {
-        d->groupingProxyModel->requestToggleFullScreen(mapToSource(index));
+        d->abstractTasksSourceModel->requestToggleFullScreen(mapToSource(index));
     }
 }
 
 void TasksModel::requestToggleShaded(const QModelIndex &index)
 {
     if (index.isValid() && index.model() == this) {
-        d->groupingProxyModel->requestToggleShaded(mapToSource(index));
+        d->abstractTasksSourceModel->requestToggleShaded(mapToSource(index));
     }
 }
 
 void TasksModel::requestVirtualDesktop(const QModelIndex &index, qint32 desktop)
 {
     if (index.isValid() && index.model() == this) {
-        d->groupingProxyModel->requestVirtualDesktop(mapToSource(index), desktop);
+        d->abstractTasksSourceModel->requestVirtualDesktop(mapToSource(index), desktop);
     }
 }
 
 void TasksModel::requestPublishDelegateGeometry(const QModelIndex &index, const QRect &geometry, QObject *delegate)
 {
     if (index.isValid() && index.model() == this) {
-        d->groupingProxyModel->requestPublishDelegateGeometry(mapToSource(index), geometry, delegate);
+        d->abstractTasksSourceModel->requestPublishDelegateGeometry(mapToSource(index), geometry, delegate);
     }
 }
 
 void TasksModel::requestToggleGrouping(const QModelIndex &index)
 {
     if (index.isValid() && index.model() == this) {
-        d->groupingProxyModel->requestToggleGrouping(mapToSource(index));
+        const QModelIndex &target = (d->flattenGroupsProxyModel
+            ? d->flattenGroupsProxyModel->mapToSource(mapToSource(index)) : mapToSource(index));
+        d->groupingProxyModel->requestToggleGrouping(target);
     }
 }
 
@@ -1175,24 +1261,69 @@ bool TasksModel::move(int row, int newPos)
         }
     }
 
-    beginMoveRows(QModelIndex(), row, row, QModelIndex(), (newPos >row) ? newPos + 1 : newPos);
+    // Treat flattened-out groups as single items.
+    if (d->flattenGroupsProxyModel) {
+        QModelIndex groupingRowIndex = d->flattenGroupsProxyModel->mapToSource(mapToSource(index(row, 0)));
+        const QModelIndex &groupingRowIndexParent = groupingRowIndex.parent();
+        QModelIndex groupingNewPosIndex = d->flattenGroupsProxyModel->mapToSource(mapToSource(index(newPos, 0)));
+        const QModelIndex &groupingNewPosIndexParent = groupingNewPosIndex.parent();
 
-    // Translate to sort map indices.
-    const QModelIndex &rowIndex = index(row, 0);
-    const QModelIndex &preFilterRowIndex = d->preFilterIndex(mapToSource(rowIndex));
-    row = d->sortedPreFilterRows.indexOf(preFilterRowIndex.row());
-    newPos = d->sortedPreFilterRows.indexOf(d->preFilterIndex(mapToSource(index(newPos, 0))).row());
+        // Disallow moves within a flattened-out group (TODO: for now, anyway).
+        if (groupingRowIndexParent.isValid()
+            && (groupingRowIndexParent == groupingNewPosIndex
+            || groupingRowIndexParent == groupingNewPosIndexParent)) {
+            return false;
+        }
 
-    // Update sort mapping.
-    d->sortedPreFilterRows.move(row, newPos);
+        int offset = 0;
+        int extraChildCount = 0;
 
-    endMoveRows();
+        if (groupingRowIndexParent.isValid()) {
+            offset = groupingRowIndex.row();
+            extraChildCount = d->groupingProxyModel->rowCount(groupingRowIndexParent) - 1;
+            groupingRowIndex = groupingRowIndexParent;
+        }
 
-    // Move children along with the group.
-    // This can be safely done after the row move transaction as the sort
-    // map isn't consulted for rows below the top level.
-    if (groupMode() != GroupDisabled && rowCount(rowIndex)) {
-        d->syncManualSortMapForGroup(rowIndex);
+        if (groupingNewPosIndexParent.isValid()) {
+            groupingNewPosIndex = groupingNewPosIndexParent;
+        }
+
+        beginMoveRows(QModelIndex(), (row - offset), (row - offset) + extraChildCount,
+            QModelIndex(), (newPos > row) ? newPos + 1 : newPos);
+
+        row = d->sortedPreFilterRows.indexOf(d->filterProxyModel->mapToSource(d->groupingProxyModel->mapToSource(groupingRowIndex)).row());
+        newPos = d->sortedPreFilterRows.indexOf(d->filterProxyModel->mapToSource(d->groupingProxyModel->mapToSource(groupingNewPosIndex)).row());
+
+        // Update sort mappings.
+        d->sortedPreFilterRows.move(row, newPos);
+
+        if (groupingRowIndexParent.isValid()) {
+            d->consolidateManualSortMapForGroup(groupingRowIndexParent);
+        }
+
+        if (groupingNewPosIndexParent.isValid()) {
+            d->consolidateManualSortMapForGroup(groupingNewPosIndexParent);
+        }
+
+        endMoveRows();
+    } else {
+        beginMoveRows(QModelIndex(), row, row, QModelIndex(), (newPos >row) ? newPos + 1 : newPos);
+
+        // Translate to sort map indices.
+        const QModelIndex &groupingRowIndex = mapToSource(index(row, 0));
+        const QModelIndex &preFilterRowIndex = d->preFilterIndex(groupingRowIndex);
+        row = d->sortedPreFilterRows.indexOf(preFilterRowIndex.row());
+        newPos = d->sortedPreFilterRows.indexOf(d->preFilterIndex(mapToSource(index(newPos, 0))).row());
+
+        // Update sort mapping.
+        d->sortedPreFilterRows.move(row, newPos);
+
+        // If we moved a group parent, consolidate sort map for children.
+        if (groupMode() != GroupDisabled && d->groupingProxyModel->rowCount(groupingRowIndex)) {
+            d->consolidateManualSortMapForGroup(groupingRowIndex);
+        }
+
+        endMoveRows();
     }
 
     // Resort.
@@ -1234,6 +1365,9 @@ void TasksModel::syncLaunchers()
 
     setLauncherList(QUrl::toStringList(sortedLaunchers.values()));
     d->launcherSortingDirty = false;
+
+    d->updateManualSortMap();
+    d->forceResort();
 }
 
 QModelIndex TasksModel::activeTask() const
@@ -1282,12 +1416,19 @@ QModelIndex TasksModel::makeModelIndex(int row, int childRow) const
 
 bool TasksModel::filterAcceptsRow(int sourceRow, const QModelIndex &sourceParent) const
 {
-    // All our filtering occurs at the top-level; group children always go through.
+    // All our filtering occurs at the top-level; anything below always
+    // goes through.
     if (sourceParent.isValid()) {
         return true;
     }
 
     const QModelIndex &sourceIndex = sourceModel()->index(sourceRow, 0);
+
+    // In inline grouping mode, filter out group parents.
+    if (d->flattenGroupsProxyModel && sourceIndex.data(AbstractTasksModel::IsGroupParent).toBool()) {
+        return false;
+    }
+
     const QString &appId = sourceIndex.data(AbstractTasksModel::AppId).toString();
     const QString &appName = sourceIndex.data(AbstractTasksModel::AppName).toString();
 
@@ -1321,9 +1462,8 @@ bool TasksModel::filterAcceptsRow(int sourceRow, const QModelIndex &sourceParent
             if ((!appId.isEmpty() && appId == filteredAppId)
                 || (launcherUrl.isValid() && launcherUrlsMatch(launcherUrl,
                 filteredIndex.data(AbstractTasksModel::LauncherUrl).toUrl(), IgnoreQueryItems))) {
-                // TODO: Do this outside of filterAcceptsRow, based on notification that something changed
+                // TODO: Do this outside of filterAcceptsRow, based on notification that something changed.
                 QMetaObject::invokeMethod(const_cast<TasksModel *>(this), "updateLauncherCount", Qt::QueuedConnection);
-
                 return false;
             }
         }
@@ -1334,10 +1474,8 @@ bool TasksModel::filterAcceptsRow(int sourceRow, const QModelIndex &sourceParent
 
 bool TasksModel::lessThan(const QModelIndex &left, const QModelIndex &right) const
 {
-    // In manual sort mode we sort top-level items by referring to a map we keep.
-    // Insertions into the map are placed using a combination of Private::lessThan
-    // and simple append behavior. Child items are sorted alphabetically.
-    if (d->sortMode == SortManual && !left.parent().isValid() && !right.parent().isValid()) {
+    // In manual sort mode, sort by map.
+    if (d->sortMode == SortManual) {
         return (d->sortedPreFilterRows.indexOf(d->preFilterIndex(left).row())
             < d->sortedPreFilterRows.indexOf(d->preFilterIndex(right).row()));
     }

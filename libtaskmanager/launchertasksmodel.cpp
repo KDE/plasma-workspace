@@ -175,14 +175,27 @@ void LauncherTasksModel::setLauncherList(const QStringList &launchers)
     }
 
     if (d->launchers != urls) {
-        beginResetModel();
+        // Common case optimization: If the list changed but its size
+        // did not (e.g. due to reordering by a user of this model),
+        // just clear the caches and announce new data instead of
+        // resetting.
+        if (d->launchers.count() == urls.count()) {
+            d->launchers.clear();
+            d->appDataCache.clear();
 
-        d->launchers.clear();
-        d->appDataCache.clear();
+            d->launchers = urls;
 
-        d->launchers = urls;
+            emit dataChanged(index(0, 0), index(d->launchers.count() - 1, 0));
+        } else {
+            beginResetModel();
 
-        endResetModel();
+            d->launchers.clear();
+            d->appDataCache.clear();
+
+            d->launchers = urls;
+
+            endResetModel();
+        }
 
         emit launcherListChanged();
     }
