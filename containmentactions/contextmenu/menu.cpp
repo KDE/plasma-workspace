@@ -137,7 +137,13 @@ QList<QAction*> ContextMenu::contextualActions()
                 }
             }
         } else if (QAction *a = action(name)) {
-            actions << a;
+            // Bug 364292: show "Remove this Panel" option only when panelcontroller is opened
+            if (name != QLatin1String("remove") || c->isUserConfiguring() ||
+                (c->containmentType() != Plasma::Types::PanelContainment
+                 && c->containmentType() != Plasma::Types::CustomPanelContainment)) {
+
+                actions << a;
+            }
         }
     }
 
