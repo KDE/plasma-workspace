@@ -1287,7 +1287,16 @@ bool TasksModel::move(int row, int newPos)
         }
 
         if (groupingNewPosIndexParent.isValid()) {
-            groupingNewPosIndex = groupingNewPosIndexParent;
+            int extra = d->groupingProxyModel->rowCount(groupingNewPosIndexParent) - 1;
+
+            if (newPos > row) {
+                newPos += extra;
+                newPos -= groupingNewPosIndex.row();
+                groupingNewPosIndex = groupingNewPosIndexParent.child(extra, 0);
+            } else {
+                newPos -= groupingNewPosIndex.row();
+                groupingNewPosIndex = groupingNewPosIndexParent;
+            }
         }
 
         beginMoveRows(QModelIndex(), (row - offset), (row - offset) + extraChildCount,
@@ -1301,10 +1310,6 @@ bool TasksModel::move(int row, int newPos)
 
         if (groupingRowIndexParent.isValid()) {
             d->consolidateManualSortMapForGroup(groupingRowIndexParent);
-        }
-
-        if (groupingNewPosIndexParent.isValid()) {
-            d->consolidateManualSortMapForGroup(groupingNewPosIndexParent);
         }
 
         endMoveRows();
