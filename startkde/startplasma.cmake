@@ -120,7 +120,6 @@ xprop -root -f KDE_SESSION_VERSION 32c -set KDE_SESSION_VERSION 5
 # We set LD_BIND_NOW to increase the efficiency of kdeinit.
 # kdeinit unsets this variable before loading applications.
 LD_BIND_NOW=true @CMAKE_INSTALL_FULL_LIBEXECDIR_KF5@/start_kdeinit_wrapper --kded +kcminit_startup
-qdbus org.kde.KSplash /KSplash org.kde.KSplash.setStage kinit
 if test $? -ne 0; then
   # Startup error
   echo 'startplasma: Could not start kdeinit5. Check your installation.'  1>&2
@@ -128,6 +127,8 @@ if test $? -ne 0; then
   xmessage -geometry 500x100 "Could not start kdeinit5. Check your installation."
   exit 1
 fi
+
+qdbus org.kde.KSplash /KSplash org.kde.KSplash.setStage kinit
 
 # finally, give the session control to the session manager
 # see kdebase/ksmserver for the description of the rest of the startup sequence
