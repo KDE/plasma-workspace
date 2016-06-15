@@ -270,6 +270,9 @@ void DesktopView::screenGeometryChanged()
     setGeometry(geo);
     setMinimumSize(geo.size());
     setMaximumSize(geo.size());
+    if (m_shellSurface) {
+        m_shellSurface->setPosition(geo.topLeft());
+    }
 }
 
 
@@ -296,5 +299,6 @@ void DesktopView::setupWaylandIntegration()
             return;
         }
         m_shellSurface = interface->createSurface(s, this);
+        m_shellSurface->setPosition(screen()->geometry().topLeft());
     }
 }
