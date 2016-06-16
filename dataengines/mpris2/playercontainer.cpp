@@ -75,6 +75,8 @@ static QVariant::Type expPropType(const QString& propName)
         return QVariant::Bool;
     else if (propName == QLatin1String("CanRaise"))
         return QVariant::Bool;
+    else if (propName == QLatin1String("CanQuit"))
+        return QVariant::Bool;
     return QVariant::Invalid;
 }
 
