@@ -346,15 +346,14 @@ void TasksModel::Private::initModels()
                 // When we get a window or startup we have a launcher for, cause the launcher to be re-filtered.
                 if (sourceIndex.data(AbstractTasksModel::IsWindow).toBool()
                     || sourceIndex.data(AbstractTasksModel::IsStartup).toBool()) {
-                    const QUrl &launcherUrl = sourceIndex.data(AbstractTasksModel::LauncherUrl).toUrl();
+                    const QUrl &launcherUrl = sourceIndex.data(AbstractTasksModel::LauncherUrlWithoutIcon).toUrl();
 
                     for (int i = 0; i < launcherTasksModel->rowCount(); ++i) {
                         QModelIndex launcherIndex = launcherTasksModel->index(i, 0);
                         const QString &launcherAppId = launcherIndex.data(AbstractTasksModel::AppId).toString();
 
-                        if ((!appId.isEmpty() && appId == launcherAppId)
-                            || (launcherUrl.isValid() && launcherUrlsMatch(launcherUrl,
-                            launcherIndex.data(AbstractTasksModel::LauncherUrl).toUrl(), IgnoreQueryItems))) {
+                        if ((!appId.isEmpty() && appId == launcherAppId) || (launcherUrl.isValid()
+                            && launcherUrl == launcherIndex.data(AbstractTasksModel::LauncherUrlWithoutIcon).toUrl())) {
                             launcherTasksModel->dataChanged(launcherIndex, launcherIndex);
                         }
                     }
@@ -382,7 +381,7 @@ void TasksModel::Private::initModels()
                     continue;
                 }
 
-                const QUrl &launcherUrl = sourceIndex.data(AbstractTasksModel::LauncherUrl).toUrl();
+                const QUrl &launcherUrl = sourceIndex.data(AbstractTasksModel::LauncherUrlWithoutIcon).toUrl();
 
                 if (!launcherUrl.isEmpty() && launcherUrl.isValid()) {
                     const int pos = launcherTasksModel->launcherPosition(launcherUrl);
@@ -516,7 +515,7 @@ void TasksModel::Private::updateManualSortMap()
                      const QModelIndex &concatProxyIndex = concatProxyModel->index(sortedPreFilterRows.at(i), 0);
 
                      if (concatProxyIndex.data(AbstractTasksModel::IsLauncher).toBool()
-                        || launcherTasksModel->launcherPosition(concatProxyIndex.data(AbstractTasksModel::LauncherUrl).toUrl()) != -1) {
+                        || launcherTasksModel->launcherPosition(concatProxyIndex.data(AbstractTasksModel::LauncherUrlWithoutIcon).toUrl()) != -1) {
                         insertPos = i + 1;
                      } else {
                         break;
@@ -534,8 +533,7 @@ void TasksModel::Private::updateManualSortMap()
                      const QModelIndex &concatProxyIndex = concatProxyModel->index(sortedPreFilterRows.at(i), 0);
 
                      if (!concatProxyIndex.data(AbstractTasksModel::IsLauncher).toBool()
-                         && launcherUrlsMatch(idx.data(AbstractTasksModel::LauncherUrl).toUrl(),
-                         concatProxyIndex.data(AbstractTasksModel::LauncherUrl).toUrl(), IgnoreQueryItems)) {
+                         && idx.data(AbstractTasksModel::LauncherUrlWithoutIcon) == concatProxyIndex.data(AbstractTasksModel::LauncherUrlWithoutIcon)) {
                          sortedPreFilterRows.move(i, insertPos);
 
                          if (insertPos > i) {
@@ -832,14 +830,15 @@ void TasksModel::updateLauncherCount()
         if (!filterIndex.data(AbstractTasksModel::IsLauncher).toBool()) {
             // TODO: It would be much faster if we didn't ask for a URL with serialized PNG
             // data in it, just to discard it a few lines below.
-            const QUrl &launcherUrl = filterIndex.data(AbstractTasksModel::LauncherUrl).toUrl();
+            const QUrl &launcherUrl = filterIndex.data(AbstractTasksModel::LauncherUrlWithoutIcon).toUrl();
 
             QMutableListIterator<QUrl> it(launchers);
 
             while(it.hasNext()) {
                 it.next();
 
-                if (launcherUrlsMatch(launcherUrl, it.value(), IgnoreQueryItems)) {
+                // RemoveQuery to strip possible fallback icon from stored launcher.
+                if (launcherUrl == it.value().adjusted(QUrl::RemoveQuery)) {
                     it.remove();
                 }
             }
@@ -1365,7 +1364,7 @@ bool TasksModel::move(int row, int newPos)
 
     if (!d->separateLaunchers && isLauncherMove) {
         const QModelIndex &idx = d->concatProxyModel->index(d->sortedPreFilterRows.at(newPos), 0);
-        const QUrl &launcherUrl = idx.data(AbstractTasksModel::LauncherUrl).toUrl();
+        const QUrl &launcherUrl = idx.data(AbstractTasksModel::LauncherUrlWithoutIcon).toUrl();
 
         // Move launcher for launcher-backed task along with task if launchers
         // are not being kept separate.
@@ -1382,8 +1381,7 @@ bool TasksModel::move(int row, int newPos)
             for (int i = (d->sortedPreFilterRows.count() - 1); i >= 0; --i) {
                 const QModelIndex &concatProxyIndex = d->concatProxyModel->index(d->sortedPreFilterRows.at(i), 0);
 
-                if (launcherUrlsMatch(launcherUrl,
-                    concatProxyIndex.data(AbstractTasksModel::LauncherUrl).toUrl(), IgnoreQueryItems)) {
+                if (launcherUrl == concatProxyIndex.data(AbstractTasksModel::LauncherUrlWithoutIcon).toUrl()) {
                     d->sortedPreFilterRows.move(i, newPos);
 
                     if (newPos > i) {
@@ -1415,9 +1413,10 @@ void TasksModel::syncLaunchers()
         int row = -1;
 
         for (int i = 0; i < rowCount(); ++i) {
-            const QUrl &rowLauncherUrl = index(i, 0).data(AbstractTasksModel::LauncherUrl).toUrl();
+            const QUrl &rowLauncherUrl = index(i, 0).data(AbstractTasksModel::LauncherUrlWithoutIcon).toUrl();
 
-            if (launcherUrlsMatch(launcherUrl, rowLauncherUrl, IgnoreQueryItems)) {
+            // RemoveQuery to strip possible fallback icon from stored launcher.
+            if (launcherUrl.adjusted(QUrl::RemoveQuery) == rowLauncherUrl) {
                 row = i;
                 break;
             }
@@ -1531,7 +1530,7 @@ bool TasksModel::filterAcceptsRow(int sourceRow, const QModelIndex &sourceParent
     // Filter launcher tasks we already have a startup or window task for (that
     // got through filtering).
     if (sourceIndex.data(AbstractTasksModel::IsLauncher).toBool()) {
-        const QUrl &launcherUrl = sourceIndex.data(AbstractTasksModel::LauncherUrl).toUrl();
+        const QUrl &launcherUrl = sourceIndex.data(AbstractTasksModel::LauncherUrlWithoutIcon).toUrl();
 
         for (int i = 0; i < d->filterProxyModel->rowCount(); ++i) {
             const QModelIndex &filteredIndex = d->filterProxyModel->index(i, 0);
@@ -1543,9 +1542,8 @@ bool TasksModel::filterAcceptsRow(int sourceRow, const QModelIndex &sourceParent
 
             const QString &filteredAppId = filteredIndex.data(AbstractTasksModel::AppId).toString();
 
-            if ((!appId.isEmpty() && appId == filteredAppId)
-                || (launcherUrl.isValid() && launcherUrlsMatch(launcherUrl,
-                filteredIndex.data(AbstractTasksModel::LauncherUrl).toUrl(), IgnoreQueryItems))) {
+            if ((!appId.isEmpty() && appId == filteredAppId) || (launcherUrl.isValid()
+                && launcherUrl == filteredIndex.data(AbstractTasksModel::LauncherUrlWithoutIcon).toUrl())) {
                 return false;
             }
         }

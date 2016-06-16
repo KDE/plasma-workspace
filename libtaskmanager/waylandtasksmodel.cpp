@@ -49,6 +49,7 @@ public:
     void initWayland();
     void addWindow(KWayland::Client::PlasmaWindow *window);
     void dataChanged(KWayland::Client::PlasmaWindow *window, int role);
+    void dataChanged(KWayland::Client::PlasmaWindow *window, const QVector<int> &roles);
 
 private:
     WaylandTasksModel *q;
@@ -151,7 +152,8 @@ void WaylandTasksModel::Private::addWindow(KWayland::Client::PlasmaWindow *windo
                 serviceCache.remove(window);
             }
 
-            dataChanged(window, AppId);
+            dataChanged(window, QVector<int>{AppId, AppName, GenericName,
+                LauncherUrl, LauncherUrlWithoutIcon});
         }
     );
 
@@ -234,6 +236,12 @@ void WaylandTasksModel::Private::dataChanged(KWayland::Client::PlasmaWindow *win
     emit q->dataChanged(idx, idx, QVector<int>{role});
 }
 
+void WaylandTasksModel::Private::dataChanged(KWayland::Client::PlasmaWindow *window, const QVector<int> &roles)
+{
+    QModelIndex idx = q->index(windows.indexOf(window));
+    emit q->dataChanged(idx, idx, roles);
+}
+
 WaylandTasksModel::WaylandTasksModel(QObject *parent)
     : AbstractTasksModel(parent)
     , d(new Private(this))
@@ -267,11 +275,9 @@ QVariant WaylandTasksModel::data(const QModelIndex &index, int role) const
         if (d->serviceCache.contains(window)) {
             return d->serviceCache.value(window)->genericName();
         }
-    } else if (role == LauncherUrl) {
+    } else if (role == LauncherUrl || role == LauncherUrlWithoutIcon) {
         if (d->serviceCache.contains(window)) {
             return QUrl::fromLocalFile(d->serviceCache.value(window)->entryPath());
-        } else {
-            return window->title();
         }
     } else if (role == IsWindow) {
         return true;

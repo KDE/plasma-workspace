@@ -87,7 +87,7 @@ public:
     QIcon icon(WId window);
     QString mimeType() const;
     QUrl windowUrl(WId window);
-    QUrl launcherUrl(WId window);
+    QUrl launcherUrl(WId window, bool encodeFallbackIcon = true);
     QUrl serviceUrl(int pid, const QString &type, const QStringList &cmdRemovals);
     KService::List servicesFromPid(int pid);
     int screen(WId window);
@@ -649,11 +649,11 @@ QUrl XWindowTasksModel::Private::windowUrl(WId window)
     return url;
 }
 
-QUrl XWindowTasksModel::Private::launcherUrl(WId window)
+QUrl XWindowTasksModel::Private::launcherUrl(WId window, bool encodeFallbackIcon)
 {
     const AppData &data = appData(window);
 
-    if (!data.icon.name().isEmpty()) {
+    if (!encodeFallbackIcon || !data.icon.name().isEmpty()) {
         return data.url;
     }
 
@@ -844,6 +844,8 @@ QVariant XWindowTasksModel::data(const QModelIndex &index, int role) const
         return d->appData(window).genericName;
     } else if (role == LauncherUrl) {
         return d->launcherUrl(window);
+    } else if (role == LauncherUrlWithoutIcon) {
+        return d->launcherUrl(window, false /* encodeFallbackIcon */);
     } else if (role == LegacyWinIdList) {
         return QVariantList() << window;
     } else if (role == MimeType) {
