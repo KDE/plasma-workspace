@@ -28,7 +28,7 @@ Item {
     id: expandedRepresentation
 
     Layout.minimumWidth: Layout.minimumHeight * 1.333
-    Layout.minimumHeight: theme.mSize(theme.defaultFont).height * 8
+    Layout.minimumHeight: units.gridUnit * 10
     Layout.preferredWidth: Layout.minimumWidth * 1.5
     Layout.preferredHeight: Layout.minimumHeight * 1.5
 
