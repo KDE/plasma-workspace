@@ -207,12 +207,6 @@ void TasksModel::Private::initModels()
     launcherTasksModel = new LauncherTasksModel(q);
     QObject::connect(launcherTasksModel, &LauncherTasksModel::launcherListChanged,
         q, &TasksModel::launcherListChanged);
-    QObject::connect(launcherTasksModel, &QAbstractItemModel::rowsInserted,
-        q, &TasksModel::updateLauncherCount);
-    QObject::connect(launcherTasksModel, &QAbstractItemModel::rowsRemoved,
-        q, &TasksModel::updateLauncherCount);
-    QObject::connect(launcherTasksModel, &QAbstractItemModel::modelReset,
-        q, &TasksModel::updateLauncherCount);
 
     concatProxyModel = new ConcatenateTasksProxyModel(q);
 
@@ -428,6 +422,10 @@ void TasksModel::Private::initModels()
 
     abstractTasksSourceModel = groupingProxyModel;
     q->setSourceModel(groupingProxyModel);
+
+    QObject::connect(q, &QAbstractItemModel::rowsInserted, q, &TasksModel::updateLauncherCount);
+    QObject::connect(q, &QAbstractItemModel::rowsRemoved, q, &TasksModel::updateLauncherCount);
+    QObject::connect(q, &QAbstractItemModel::modelReset, q, &TasksModel::updateLauncherCount);
 
     QObject::connect(q, &QAbstractItemModel::rowsInserted, q, &TasksModel::countChanged);
     QObject::connect(q, &QAbstractItemModel::rowsRemoved, q, &TasksModel::countChanged);
@@ -1548,8 +1546,6 @@ bool TasksModel::filterAcceptsRow(int sourceRow, const QModelIndex &sourceParent
             if ((!appId.isEmpty() && appId == filteredAppId)
                 || (launcherUrl.isValid() && launcherUrlsMatch(launcherUrl,
                 filteredIndex.data(AbstractTasksModel::LauncherUrl).toUrl(), IgnoreQueryItems))) {
-                // TODO: Do this outside of filterAcceptsRow, based on notification that something changed.
-                QMetaObject::invokeMethod(const_cast<TasksModel *>(this), "updateLauncherCount", Qt::QueuedConnection);
                 return false;
             }
         }
