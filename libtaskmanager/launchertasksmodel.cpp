@@ -135,6 +135,17 @@ QVariant LauncherTasksModel::data(const QModelIndex &index, int role) const
     } else if (role == LauncherUrl) {
         // Take resolved URL from cache.
         return data.url;
+    } else if (role == LauncherUrlWithoutIcon) {
+        // Take resolved URL from cache.
+        QUrl url = data.url;
+
+        if (url.hasQuery()) {
+            QUrlQuery query(url);
+            query.removeQueryItem(QLatin1String("iconData"));
+            url.setQuery(query);
+        }
+
+        return url;
     } else if (role == IsLauncher) {
         return true;
     } else if (role == IsOnAllVirtualDesktops) {

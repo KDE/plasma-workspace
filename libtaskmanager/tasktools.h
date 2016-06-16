@@ -82,11 +82,8 @@ TASKMANAGER_EXPORT AppData appDataFromUrl(const QUrl &url, const QIcon &fallback
 TASKMANAGER_EXPORT QString defaultApplication(const QUrl &url);
 
 /**
- * Compares two launcher URLs either strictly or ignoring the query string.
- *
- * In launcher URLs, the query string is used to hold metadata such as an
- * icon. When comparing tasks by launcher URL, this metadata should usually
- * be ignored. This function serves this need.
+ * Convenience function to compare two launcher URLs either strictly
+ * or ignoring their query strings.
  *
  * @see LauncherTasksModel
  * @param a The first launcher URL.
@@ -96,6 +93,13 @@ TASKMANAGER_EXPORT QString defaultApplication(const QUrl &url);
  **/
 TASKMANAGER_EXPORT bool launcherUrlsMatch(const QUrl &a, const QUrl &b, UrlComparisonMode mode = Strict);
 
+/**
+ * Determines whether tasks model entries belong to the same app.
+ *
+ * @param a The first model index.
+ * @param b The second model index.
+ * @returns @c true if the model entries belong to the same app.
+ **/
 TASKMANAGER_EXPORT bool appsMatch(const QModelIndex &a, const QModelIndex &b);
 }
 
