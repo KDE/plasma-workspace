@@ -28,8 +28,8 @@ kioclient=kio|general
 ktrash=kio|trash
 
 #KDE Platform (Baloo)
-baloo_file=Baloo|General
-baloo_file_extractor=Baloo|General
+baloo_file=frameworks-baloo|Baloo File Daemon
+baloo_file_extractor=frameworks-baloo|Baloo File Daemon
 
 #KDE Platform (Solid/Bluedevil)
 solid-action-desktop-gen=solid|general
