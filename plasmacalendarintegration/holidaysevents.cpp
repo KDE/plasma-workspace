@@ -68,7 +68,10 @@ void HolidaysEventsPlugin::loadEventsForDateRange(const QDate &startDate, const 
             eventData.setEventType(CalendarEvents::EventData::Holiday);
             eventData.setIsMinor(false);
 
-            data.insert(holiday.observedStartDate(), eventData);
+            // make sure to add events spanning multiple days to all of them
+            for (QDate d = holiday.observedStartDate(); d <= holiday.observedEndDate(); d = d.addDays(1)) {
+                data.insert(d, eventData);
+            }
         }
     }
 
