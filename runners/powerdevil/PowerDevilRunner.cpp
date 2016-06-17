@@ -197,7 +197,7 @@ void PowerDevilRunner::match(Plasma::RunnerContext &context)
             }
             Plasma::QueryMatch match(this);
             match.setType(Plasma::QueryMatch::ExactMatch);
-            match.setIcon(QIcon::fromTheme(m_profileIcon[i.key()]));
+            match.setIconName(m_profileIcon[i.key()]);
             match.setText(i18n("Set Profile to '%1'", i.value()));
             match.setData(i.key());
             match.setRelevance(1);
@@ -217,7 +217,7 @@ void PowerDevilRunner::match(Plasma::RunnerContext &context)
                 int brightness = qBound(0, b, 100);
                 Plasma::QueryMatch match(this);
                 match.setType(Plasma::QueryMatch::ExactMatch);
-                match.setIcon(QIcon::fromTheme(QStringLiteral("preferences-system-power-management")));
+                match.setIconName(QStringLiteral("preferences-system-power-management"));
                 match.setText(i18n("Set Brightness to %1", brightness));
                 match.setData(brightness);
                 match.setRelevance(1);
@@ -227,7 +227,7 @@ void PowerDevilRunner::match(Plasma::RunnerContext &context)
         } else {
             Plasma::QueryMatch match1(this);
             match1.setType(Plasma::QueryMatch::ExactMatch);
-            match1.setIcon(QIcon::fromTheme(QStringLiteral("preferences-system-power-management")));
+            match1.setIconName(QStringLiteral("preferences-system-power-management"));
             match1.setText(i18n("Dim screen totally"));
             match1.setRelevance(1);
             match1.setId(QStringLiteral("DimTotal"));
@@ -235,7 +235,7 @@ void PowerDevilRunner::match(Plasma::RunnerContext &context)
 
             Plasma::QueryMatch match2(this);
             match2.setType(Plasma::QueryMatch::ExactMatch);
-            match2.setIcon(QIcon::fromTheme(QStringLiteral("preferences-system-power-management")));
+            match2.setIconName(QStringLiteral("preferences-system-power-management"));
             match2.setText(i18n("Dim screen by half"));
             match2.setRelevance(1);
             match2.setId(QStringLiteral("DimHalf"));
@@ -272,12 +272,12 @@ void PowerDevilRunner::addSuspendMatch(int value, QList<Plasma::QueryMatch> &mat
     switch ((Solid::PowerManagement::SleepState)value) {
         case Solid::PowerManagement::SuspendState:
         case Solid::PowerManagement::StandbyState:
-            match.setIcon(QIcon::fromTheme(QStringLiteral("system-suspend")));
+            match.setIconName(QStringLiteral("system-suspend"));
             match.setText(i18n("Suspend to RAM"));
             match.setRelevance(1);
             break;
         case Solid::PowerManagement::HibernateState:
-            match.setIcon(QIcon::fromTheme(QStringLiteral("system-suspend-hibernate")));
+            match.setIconName(QStringLiteral("system-suspend-hibernate"));
             match.setText(i18n("Suspend to Disk"));
             match.setRelevance(0.99);
             break;

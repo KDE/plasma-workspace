@@ -36,7 +36,6 @@ RecentDocuments::RecentDocuments(QObject *parent, const QVariantList& args)
 {
     Q_UNUSED(args);
     setObjectName( QStringLiteral("Recent Documents" ));
-    m_icon = QIcon::fromTheme(QStringLiteral("document-open-recent"));
     loadRecentDocuments();
     // listen for changes to the list of recent documents
     KDirWatch *recentDocWatch = new KDirWatch(this);
@@ -53,7 +52,6 @@ RecentDocuments::~RecentDocuments()
 
 void RecentDocuments::loadRecentDocuments()
 {
-    //qDebug() << "Refreshing recent documents.";
     m_recentdocuments = KRecentDocument::recentDocuments();
 }
 
@@ -79,10 +77,11 @@ void RecentDocuments::match(Plasma::RunnerContext &context)
             Plasma::QueryMatch match(this);
             match.setType(Plasma::QueryMatch::PossibleMatch);
             match.setRelevance(1.0);
-            match.setIcon(QIcon::fromTheme(config.readIcon()));
+            match.setIconName(config.readIcon());
             match.setData(config.readUrl());
             match.setText(config.readName());
             match.setSubtext(i18n("Recent Document"));
+
             context.addMatch(match);
         }
     }

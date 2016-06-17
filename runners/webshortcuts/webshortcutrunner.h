@@ -41,7 +41,6 @@ class WebshortcutRunner : public Plasma::AbstractRunner {
         void resetState();
 
     private:
-        QIcon m_icon;
         Plasma::QueryMatch m_match;
         bool m_filterBeforeRun;
 

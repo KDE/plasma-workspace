@@ -399,7 +399,7 @@ Plasma::QueryMatch WindowsRunner::desktopMatch(int desktop, qreal relevance)
     match.setType(Plasma::QueryMatch::ExactMatch);
     match.setData(desktop);
     match.setId("desktop-" + QString::number(desktop));
-    match.setIcon(QIcon::fromTheme(QStringLiteral("user-desktop")));
+    match.setIconName(QStringLiteral("user-desktop"));
     QString desktopName;
     if (desktop <= m_desktopNames.size()) {
         desktopName = m_desktopNames[desktop - 1];

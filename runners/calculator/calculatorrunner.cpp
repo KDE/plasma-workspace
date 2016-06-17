@@ -215,7 +215,7 @@ void CalculatorRunner::match(Plasma::RunnerContext &context)
     if (cmd.toLower() == QLatin1String("universe") || cmd.toLower() == QLatin1String("life")) {
         Plasma::QueryMatch match(this);
         match.setType(Plasma::QueryMatch::InformationalMatch);
-        match.setIcon(QIcon::fromTheme(QStringLiteral("accessories-calculator")));
+        match.setIconName(QStringLiteral("accessories-calculator"));
         match.setText(QStringLiteral("42"));
         match.setData("42");
         match.setId(term);
@@ -264,7 +264,7 @@ void CalculatorRunner::match(Plasma::RunnerContext &context)
 
         Plasma::QueryMatch match(this);
         match.setType(Plasma::QueryMatch::InformationalMatch);
-        match.setIcon(QIcon::fromTheme(QStringLiteral("accessories-calculator")));
+        match.setIconName(QStringLiteral("accessories-calculator"));
         match.setText(result);
         match.setData(result);
         match.setId(term);

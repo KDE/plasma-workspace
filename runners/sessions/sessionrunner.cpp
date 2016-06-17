@@ -84,7 +84,7 @@ void SessionRunner::matchCommands(QList<Plasma::QueryMatch> &matches, const QStr
             term.compare(i18n("log out"), Qt::CaseInsensitive) == 0) {
         Plasma::QueryMatch match(this);
         match.setText(i18nc("log out command","Logout"));
-        match.setIcon(QIcon::fromTheme(QStringLiteral("system-log-out")));
+        match.setIconName(QStringLiteral("system-log-out"));
         match.setData(LogoutAction);
         match.setType(Plasma::QueryMatch::ExactMatch);
         match.setRelevance(0.9);
@@ -93,7 +93,7 @@ void SessionRunner::matchCommands(QList<Plasma::QueryMatch> &matches, const QStr
             term.compare(i18nc("restart computer command", "reboot"), Qt::CaseInsensitive) == 0) {
         Plasma::QueryMatch match(this);
         match.setText(i18n("Restart the computer"));
-        match.setIcon(QIcon::fromTheme(QStringLiteral("system-reboot")));
+        match.setIconName(QStringLiteral("system-reboot"));
         match.setData(RestartAction);
         match.setType(Plasma::QueryMatch::ExactMatch);
         match.setRelevance(0.9);
@@ -101,7 +101,7 @@ void SessionRunner::matchCommands(QList<Plasma::QueryMatch> &matches, const QStr
     } else if (term.compare(i18nc("shutdown computer command","shutdown"), Qt::CaseInsensitive) == 0) {
         Plasma::QueryMatch match(this);
         match.setText(i18n("Shutdown the computer"));
-        match.setIcon(QIcon::fromTheme(QStringLiteral("system-shutdown")));
+        match.setIconName(QStringLiteral("system-shutdown"));
         match.setData(ShutdownAction);
         match.setType(Plasma::QueryMatch::ExactMatch);
         match.setRelevance(0.9);
@@ -110,7 +110,7 @@ void SessionRunner::matchCommands(QList<Plasma::QueryMatch> &matches, const QStr
         if (KAuthorized::authorizeKAction(QStringLiteral("lock_screen"))) {
             Plasma::QueryMatch match(this);
             match.setText(i18n("Lock the screen"));
-            match.setIcon(QIcon::fromTheme(QStringLiteral("system-lock-screen")));
+            match.setIconName(QStringLiteral("system-lock-screen"));
             match.setData(LockAction);
             match.setType(Plasma::QueryMatch::ExactMatch);
             match.setRelevance(0.9);
@@ -161,7 +161,7 @@ void SessionRunner::match(Plasma::RunnerContext &context)
         dm.numReserve() >= 0) {
         Plasma::QueryMatch match(this);
         match.setType(Plasma::QueryMatch::ExactMatch);
-        match.setIcon(QIcon::fromTheme(QStringLiteral("system-switch-user")));
+        match.setIconName(QStringLiteral("system-switch-user"));
         match.setText(i18n("New Session"));
         matches << match;
     }
@@ -198,7 +198,7 @@ void SessionRunner::match(Plasma::RunnerContext &context)
                 Plasma::QueryMatch match(this);
                 match.setType(type);
                 match.setRelevance(relevance);
-                match.setIcon(QIcon::fromTheme(QStringLiteral("user-identity")));
+                match.setIconName(QStringLiteral("user-identity"));
                 match.setText(name);
                 match.setData(QString::number(session.vt));
                 matches << match;

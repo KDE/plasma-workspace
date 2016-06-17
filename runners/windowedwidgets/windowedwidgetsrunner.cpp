@@ -120,7 +120,7 @@ void WindowedWidgetsRunner::setupMatch(const KService::Ptr &service, Plasma::Que
     }
 
     if (!service->icon().isEmpty()) {
-        match.setIcon(QIcon::fromTheme(service->icon()));
+        match.setIconName(service->icon());
     }
 }
 

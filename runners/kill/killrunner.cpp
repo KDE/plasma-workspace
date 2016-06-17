@@ -141,7 +141,7 @@ void KillRunner::match(Plasma::RunnerContext &context)
         Plasma::QueryMatch match(this);
         match.setText(i18n("Terminate %1", name));
         match.setSubtext(i18n("Process ID: %1\nRunning as user: %2", QString::number(pid), user));
-        match.setIcon(QIcon::fromTheme(QStringLiteral("application-exit")));
+        match.setIconName(QStringLiteral("application-exit"));
         match.setData(data);
         match.setId(name);
 

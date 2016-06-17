@@ -61,9 +61,9 @@ void LocationsRunner::match(Plasma::RunnerContext &context)
         match.setText(i18n("Open %1", term));
 
         if (type == Plasma::RunnerContext::File) {
-            match.setIcon(QIcon::fromTheme(KIO::iconNameForUrl(QUrl(term))));
+            match.setIconName(KIO::iconNameForUrl(QUrl(term)));
         } else {
-            match.setIcon(QIcon::fromTheme(QStringLiteral("system-file-manager")));
+            match.setIconName(QStringLiteral("system-file-manager"));
         }
 
         match.setRelevance(1);
@@ -81,7 +81,7 @@ void LocationsRunner::match(Plasma::RunnerContext &context)
         Plasma::QueryMatch match(this);
         match.setType(Plasma::QueryMatch::ExactMatch);
         match.setText(i18n("Open %1", term));
-        match.setIcon(QIcon::fromTheme(QStringLiteral("system-help")));
+        match.setIconName(QStringLiteral("system-help"));
         match.setRelevance(1);
         match.setType(Plasma::QueryMatch::ExactMatch);
         match.setId(QStringLiteral("help"));
@@ -101,7 +101,7 @@ void LocationsRunner::match(Plasma::RunnerContext &context)
 
         Plasma::QueryMatch match(this);
         match.setText(i18n("Go to %1", url.toDisplayString()));
-        match.setIcon(QIcon::fromTheme(KProtocolInfo::icon(url.scheme())));
+        match.setIconName(KProtocolInfo::icon(url.scheme()));
         match.setData(url.url());
 
         if (KProtocolInfo::isHelperProtocol(url.scheme())) {

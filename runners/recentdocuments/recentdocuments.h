@@ -41,7 +41,6 @@ class RecentDocuments : public Plasma::AbstractRunner {
         void loadRecentDocuments();
 
     private:
-        QIcon m_icon;
         QStringList m_recentdocuments;
 };
 
