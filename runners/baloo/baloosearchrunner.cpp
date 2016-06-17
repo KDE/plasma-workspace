@@ -32,6 +32,8 @@
 
 #include <Baloo/Query>
 
+#include <KIO/OpenFileManagerWindowJob>
+
 SearchRunner::SearchRunner(QObject* parent, const QVariantList& args)
     : Plasma::AbstractRunner(parent, args)
 {
@@ -174,11 +176,9 @@ void SearchRunner::run(const Plasma::RunnerContext&, const Plasma::QueryMatch& m
 {
     const QUrl url = match.data().toUrl();
 
-    if (match.selectedAction()) {
-        if (match.selectedAction()->data().toString() == QLatin1String("openParentDir")) {
-            new KRun(url.adjusted(QUrl::RemoveFilename), nullptr);
-            return;
-        }
+    if (match.selectedAction() && match.selectedAction()->data().toString() == QLatin1String("openParentDir")) {
+        KIO::highlightInFileManager({url});
+        return;
     }
 
     new KRun(url, 0);
