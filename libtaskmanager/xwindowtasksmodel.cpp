@@ -778,11 +778,8 @@ KService::List XWindowTasksModel::Private::servicesFromPid(int pid)
 
 int XWindowTasksModel::Private::screen(WId window)
 {
-    const KWindowInfo *info = windowInfo(window);
     const QPoint &windowCenter = windowInfo(window)->frameGeometry().center();
-
     const QList<QScreen *> &screens = QGuiApplication::screens();
-
     int screen = 0;
     int shortestDistance = INT_MAX;
 
