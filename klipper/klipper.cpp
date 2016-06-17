@@ -50,8 +50,7 @@
 #include "klipperpopup.h"
 
 #ifdef HAVE_PRISON
-#include <prison/DataMatrixBarcode>
-#include <prison/QRCodeBarcode>
+#include <prison/Prison>
 #endif
 
 #include <config-X11.h>
@@ -913,7 +912,7 @@ void Klipper::editData(const QSharedPointer< const HistoryItem > &item)
 class BarcodeLabel : public QLabel
 {
 public:
-    BarcodeLabel(prison::AbstractBarcode *barcode, QWidget *parent = nullptr)
+    BarcodeLabel(Prison::AbstractBarcode *barcode, QWidget *parent = nullptr)
         : QLabel(parent)
         , m_barcode(barcode)
         {
@@ -926,12 +925,12 @@ protected:
         setPixmap(QPixmap::fromImage(m_barcode->toImage(event->size())));
     }
 private:
-    QScopedPointer<prison::AbstractBarcode> m_barcode;
+    QScopedPointer<Prison::AbstractBarcode> m_barcode;
 };
 
 void Klipper::showBarcode(const QSharedPointer< const HistoryItem > &item)
 {
-    using namespace prison;
+    using namespace Prison;
     QPointer<QDialog> dlg(new QDialog());
     dlg->setWindowTitle( i18n("Mobile Barcode") );
     QDialogButtonBox *buttons = new QDialogButtonBox(QDialogButtonBox::Ok, dlg);
@@ -942,8 +941,8 @@ void Klipper::showBarcode(const QSharedPointer< const HistoryItem > &item)
     QWidget* mw = new QWidget(dlg);
     QHBoxLayout* layout = new QHBoxLayout(mw);
 
-    QRCodeBarcode *qrCode = new QRCodeBarcode;
-    DataMatrixBarcode *dataMatrix = new DataMatrixBarcode;
+    AbstractBarcode *qrCode = createBarcode(QRCode);
+    AbstractBarcode *dataMatrix = createBarcode(DataMatrix);
     if (item) {
         qrCode->setData(item->text());
         dataMatrix->setData(item->text());
