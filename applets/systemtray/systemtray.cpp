@@ -90,16 +90,7 @@ SystemTray::SystemTray(QObject *parent, const QVariantList &args)
       m_availablePlasmoidsModel(nullptr)
 {
     setHasConfigurationInterface(true);
-
-//FIXME . An extra ContainmentType was added for frameworks 5.24. Plasma 5.7 depends on frameworks 5.23 so the enum value is copied directly
-// remove for Plamsa 5.9.
-    setContainmentType(
-#if PLASMA_VERSION >= QT_VERSION_CHECK(5,24,0)
-        Plasma::Types::CustomEmbeddedContainment
-#else
-        (Plasma::Types::ContainmentType)129
-#endif
-    );
+    setContainmentType(Plasma::Types::CustomEmbeddedContainment);
 }
 
 SystemTray::~SystemTray()
