@@ -779,15 +779,32 @@ KService::List XWindowTasksModel::Private::servicesFromPid(int pid)
 int XWindowTasksModel::Private::screen(WId window)
 {
     const KWindowInfo *info = windowInfo(window);
+    const QPoint &windowCenter = windowInfo(window)->frameGeometry().center();
+
     const QList<QScreen *> &screens = QGuiApplication::screens();
 
+    int screen = 0;
+    int shortestDistance = INT_MAX;
+
     for (int i = 0; i < screens.count(); ++i) {
-        if (screens.at(i)->geometry().intersects(info->geometry())) {
+        const QRect &screenGeomtry = screens.at(i)->geometry();
+
+        if (screenGeomtry.contains(windowCenter)) {
             return i;
+        }
+
+        int distance = QPoint(screenGeomtry.topLeft() - windowCenter).manhattanLength();
+        distance = qMin(distance, QPoint(screenGeomtry.topRight() - windowCenter).manhattanLength());
+        distance = qMin(distance, QPoint(screenGeomtry.bottomRight() - windowCenter).manhattanLength());
+        distance = qMin(distance, QPoint(screenGeomtry.bottomLeft() - windowCenter).manhattanLength());
+
+        if (distance < shortestDistance) {
+            shortestDistance = distance;
+            screen = i;
         }
     }
 
-    return -1;
+    return screen;
 }
 
 QStringList XWindowTasksModel::Private::activities(WId window)
