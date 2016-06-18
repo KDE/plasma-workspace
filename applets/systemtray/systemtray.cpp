@@ -162,7 +162,7 @@ QVariant SystemTray::resolveIcon(const QVariant &variant, const QString &iconThe
     return variant;
 }
 
-void SystemTray::showPlasmoidMenu(QQuickItem *appletInterface)
+void SystemTray::showPlasmoidMenu(QQuickItem *appletInterface, int x, int y)
 {
     if (!appletInterface) {
         return;
@@ -170,7 +170,7 @@ void SystemTray::showPlasmoidMenu(QQuickItem *appletInterface)
 
     Plasma::Applet *applet = appletInterface->property("_plasma_applet").value<Plasma::Applet*>();
 
-    QPointF pos = appletInterface->mapToScene(QPointF(0, 0));
+    QPointF pos = appletInterface->mapToScene(QPointF(x, y));
 
     if (appletInterface->window() && appletInterface->window()->screen()) {
         pos = appletInterface->window()->mapToGlobal(pos.toPoint());

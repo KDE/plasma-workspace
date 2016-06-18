@@ -43,7 +43,7 @@ AbstractItem {
             if (mouse.button == Qt.LeftButton) {
                 applet.expanded = true;
             } else if (mouse.button == Qt.RightButton) {
-                plasmoid.nativeInterface.showPlasmoidMenu(applet, 0, 0);
+                plasmoid.nativeInterface.showPlasmoidMenu(applet, 0, plasmoidContainer.hidden ? applet.height : 0);
             }
         }
     }
