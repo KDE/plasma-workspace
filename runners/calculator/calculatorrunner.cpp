@@ -314,6 +314,28 @@ QString CalculatorRunner::calculate(const QString& term)
     #endif
 }
 
+void CalculatorRunner::run(const Plasma::RunnerContext &context, const Plasma::QueryMatch &match)
+{
+    Q_UNUSED(context);
+
+    if (match.selectedAction()) {
+        m_engine->copyToClipboard();
+    }
+}
+
+QList<QAction *> CalculatorRunner::actionsForMatch(const Plasma::QueryMatch &match)
+{
+    Q_UNUSED(match)
+
+    const QString copyToClipboard = QStringLiteral("copyToClipboard");
+
+    if (!action(copyToClipboard)) {
+        (addAction(copyToClipboard, QIcon::fromTheme(QStringLiteral("edit-copy")), i18n("Copy to Clipboard")));
+    }
+
+    return {action(copyToClipboard)};
+}
+
 QMimeData * CalculatorRunner::mimeDataForMatch(const Plasma::QueryMatch &match)
 {
     //qDebug();
