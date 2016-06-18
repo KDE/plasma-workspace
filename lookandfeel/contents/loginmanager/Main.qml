@@ -36,6 +36,10 @@ Image {
     LayoutMirroring.enabled: Qt.application.layoutDirection === Qt.RightToLeft
     LayoutMirroring.childrenInherit: true
 
+    //we made some reverts, but I want to keep some i18n messages around so we don't lose the translations if/when we restore this
+    property string unused1: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Select User")
+    property string unused2: i18nd("plasma_lookandfeel_org.kde.lookandfeel","Search for User")
+
     Repeater {
         model: screenModel
         Background {
