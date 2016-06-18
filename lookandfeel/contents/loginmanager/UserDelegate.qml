@@ -54,8 +54,8 @@ Item {
 
         PlasmaCore.IconItem {
             id: faceIcon
-            source: (face.status === Image.Error || face.status === Image.Null) ? "user-identity" : undefined
-            visible: valid
+            source: visible ? "user-identity" : undefined
+            visible: (face.status == Image.Error || face.status == Image.Null)
             anchors.fill: parent
         }
     }
