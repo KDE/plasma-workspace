@@ -19,7 +19,6 @@
  */
 
 import QtQuick 2.5
-import QtQuick.Window 2.2
 
 Item {
     property int stage
@@ -57,12 +56,10 @@ Item {
         opacity: 0
 
         Image {
-            readonly property int size: units.gridUnit * 8
             anchors.horizontalCenter: parent.horizontalCenter
             source: "images/kde.svgz"
-            width: size
-            height: size
-            sourceSize: Qt.size(size * Screen.devicePixelRatio, size * Screen.devicePixelRatio)
+            sourceSize.height: units.gridUnit * 8
+            sourceSize.width: units.gridUnit * 8
         }
 
         Rectangle {
