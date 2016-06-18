@@ -63,6 +63,7 @@ Item {
                 anchors.right: parent.right
                 model: userModel
                 focus: true
+                currentIndex: userModel.lastIndex
                 onUserSelected: nextItemInFocusChain().forceActiveFocus()
             }
         }
