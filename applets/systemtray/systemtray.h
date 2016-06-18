@@ -66,9 +66,9 @@ public:
     Q_INVOKABLE QVariant resolveIcon(const QVariant &variant, const QString &iconThemePath);
 
     /**
-     * Given an AppletInterface pointer, shows a proper context menu fot it
+     * Given an AppletInterface pointer, shows a proper context menu for it
      */
-    Q_INVOKABLE void showPlasmoidMenu(QQuickItem *appletInterface);
+    Q_INVOKABLE void showPlasmoidMenu(QQuickItem *appletInterface, int x, int y);
 
     /**
      * Returns the "X-Plasma-NotificationAreaCategory"
