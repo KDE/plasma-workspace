@@ -123,15 +123,6 @@ Item {
 
         onAccepted: startLogin()
 
-        //focus works in qmlscene
-        //but this seems to be needed when loaded from SDDM
-        //I don't understand why, but we have seen this before in the old lock screen
-        Timer {
-            interval: 200
-            running: true
-            onTriggered: passwordBox.forceActiveFocus()
-        }
-
         Keys.onEscapePressed: {
             mainStack.currentItem.forceActiveFocus();
         }
