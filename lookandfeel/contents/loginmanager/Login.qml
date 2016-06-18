@@ -32,12 +32,6 @@ Item {
         intervalAlignment: PlasmaCore.Types.AlignToMinute
     }
 
-    PlasmaCore.DataSource {
-        id: keystateSource
-        engine: "keystate"
-        connectedSources: "Caps Lock"
-    }
-
     Component {
         id: userView
         //even though stackview is a scope in itself we need a spacer item to align the user list
@@ -211,16 +205,6 @@ Item {
         anchors.horizontalCenter: parent.horizontalCenter
         anchors.top: loginButton.bottom
         anchors.topMargin: units.smallSpacing
-        text: {
-            var text = ""
-            if (keystateSource.data["Caps Lock"]["Locked"]) {
-                text += i18nd("plasma_lookandfeel_org.kde.lookandfeel","Caps Lock is on")
-                if (root.notificationMessage) {
-                    text += " • "
-                }
-            }
-            text += root.notificationMessage
-            return text
-        }
+        text: root.notificationMessage
     }
 }
