@@ -1,7 +1,7 @@
 import QtQuick 2.0
 
 ListModel {
-    property int lastIndex: 1
+    property int lastIndex: 0
     ListElement {
         name: "KDE"
     }

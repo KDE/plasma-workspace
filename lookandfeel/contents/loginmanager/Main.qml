@@ -18,134 +18,258 @@
  */
 
 import QtQuick 2.2
-
 import QtQuick.Layouts 1.1
-import QtQuick.Controls 1.1
+import QtQuick.Controls 1.1 as Controls
 
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
-import org.kde.plasma.extras 2.0 as PlasmaExtras
 
-import org.kde.plasma.workspace.components 2.0
+import SddmComponents 2.0
 
-PlasmaCore.ColorScope {
+import "./components"
+
+Image {
     id: root
-    colorGroup: PlasmaCore.Theme.ComplementaryColorGroup
-    width: 1600
-    height: 900
+    width: 1000
+    height: 1000
 
     LayoutMirroring.enabled: Qt.application.layoutDirection === Qt.RightToLeft
     LayoutMirroring.childrenInherit: true
 
     Repeater {
         model: screenModel
-
         Background {
-            x: geometry.x
-            y: geometry.y
-            width: geometry.width
-            height:geometry.height
+            x: geometry.x; y: geometry.y; width: geometry.width; height:geometry.height
             source: config.background
             fillMode: Image.PreserveAspectCrop
+            onStatusChanged: {
+                if (status == Image.Error && source != config.defaultBackground) {
+                    source = config.defaultBackground
+                }
+            }
         }
     }
 
-    Login {
-        id: login
-        sessionIndex: sessionButton.currentIndex
+    property bool debug: false
 
-        anchors.top: parent.top
-        anchors.topMargin: footer.height
-        anchors.bottom: footer.top
-        anchors.left: parent.left
-        anchors.right: parent.right
-
-        searching: !config.usernamePrompt
-
-        focus: true
+    Rectangle {
+        id: debug3
+        color: "green"
+        visible: debug
+        width: 3
+        height: parent.height
+        anchors.horizontalCenter: root.horizontalCenter
     }
 
-    //Footer
-    RowLayout {
-        id: footer
-        anchors.bottom: parent.bottom
-        anchors.left: parent.left
-        anchors.right: parent.right
-        anchors.margins: units.smallSpacing
+    Controls.StackView {
+        id: stackView
 
-        SessionButton {
-            id: sessionButton
-            Component.onCompleted: {
-                currentIndex = sessionModel.lastIndex
+        //Display the loginpromt only in the primary screen
+        readonly property rect geometry: screenModel.geometry(screenModel.primary)
+        width: geometry.width
+        x: geometry.x
+        height: units.largeSpacing*14
+        //Display the BreezeBlock in the middle of each screen
+        y: geometry.y + (geometry.height / 2) - (height / 2)
+
+        initialItem: BreezeBlock {
+            id: loginPrompt
+
+            //Enable clipping whilst animating, otherwise the items would be shifted to other screens in multiscreen setups
+            //As there are only 2 items (loginPrompt and logoutScreenComponent), it's sufficient to do it only in this component
+            //Remember to enable clipping whilst animating when creating additional items for the StackView!
+            Controls.Stack.onStatusChanged: {
+                if(Controls.Stack.status === Controls.Stack.Activating || Controls.Stack.status === Controls.Stack.Deactivating){
+                    stackView.clip = true;
+                }else if(Controls.Stack.status === Controls.Stack.Active || Controls.Stack.status === Controls.Stack.Inactive){
+                    stackView.clip = false;
+                }
+            }
+
+            main: UserSelect {
+                model: userModel
+                selectedIndex: userModel.lastIndex
+
+                //Resets the "Login Failed" notification after 3 seconds
+                Timer {
+                    id: notificationResetTimer
+                    interval: 3000
+                    onTriggered: notification = ""
+                }
+
+                Connections {
+                    target: sddm
+                    onLoginFailed: {
+                        notificationResetTimer.restart()
+                        notification = i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Login Failed")
+                    }
+                }
+
+            }
+
+            controls: Item {
+                height: childrenRect.height
+
+                property alias password: passwordInput.text
+                property alias sessionIndex: sessionCombo.currentIndex
+                property alias buttonEnabled: loginButton.enabled
+                property alias pwFieldEnabled: passwordInput.enabled
+
+                ColumnLayout {
+                    anchors.horizontalCenter: parent.horizontalCenter
+                    spacing: 0
+                    RowLayout {
+                        anchors.horizontalCenter: parent.horizontalCenter
+
+                        PlasmaComponents.Button {
+                            id: kbdLayoutButton
+                            implicitWidth: minimumWidth
+                            text: keyboard.layouts[keyboard.currentLayout].shortName
+                            visible: keyboard.layouts.length > 1
+
+                            onClicked: {
+                                var idx = (keyboard.currentLayout + 1) % keyboard.layouts.length;
+                                keyboard.currentLayout = idx;
+                            }
+
+                            KeyNavigation.tab: sessionCombo
+                        }
+
+                        PlasmaComponents.TextField {
+                            id: passwordInput
+                            placeholderText: i18nd("plasma_lookandfeel_org.kde.lookandfeel","Password")
+                            echoMode: TextInput.Password
+                            onAccepted: loginPrompt.startLogin()
+                            focus: true
+
+                            //focus works in qmlscene
+                            //but this seems to be needed when loaded from SDDM
+                            //I don't understand why, but we have seen this before in the old lock screen
+                            Timer {
+                                interval: 200
+                                running: true
+                                onTriggered: passwordInput.forceActiveFocus()
+                            }
+                            //end hack
+
+                            Keys.onEscapePressed: {
+                                loginPrompt.mainItem.forceActiveFocus();
+                            }
+
+                            //if empty and left or right is pressed change selection in user switch
+                            //this cannot be in keys.onLeftPressed as then it doesn't reach the password box
+                            Keys.onPressed: {
+                                if (event.key == Qt.Key_Left && !text) {
+                                    loginPrompt.mainItem.decrementCurrentIndex();
+                                    event.accepted = true
+                                }
+                                if (event.key == Qt.Key_Right && !text) {
+                                    loginPrompt.mainItem.incrementCurrentIndex();
+                                    event.accepted = true
+                                }
+                            }
+
+                            KeyNavigation.backtab: loginPrompt.mainItem
+                        }
+
+                        PlasmaComponents.Button {
+                            id: loginButton
+                            //this keeps the buttons the same width and thus line up evenly around the centre
+                            Layout.minimumWidth: passwordInput.width
+                            text: i18nd("plasma_lookandfeel_org.kde.lookandfeel","Login")
+                            onClicked: loginPrompt.startLogin();
+
+                            KeyNavigation.tab: kbdLayoutButton
+                        }
+                    }
+
+                    BreezeLabel {
+                        id: capsLockWarning
+                        text: i18nd("plasma_lookandfeel_org.kde.lookandfeel","Caps Lock is on")
+                        visible: keystateSource.data["Caps Lock"]["Locked"]
+
+                        anchors.horizontalCenter: parent.horizontalCenter
+                        font.weight: Font.Bold
+
+                        PlasmaCore.DataSource {
+                            id: keystateSource
+                            engine: "keystate"
+                            connectedSources: "Caps Lock"
+                        }
+                    }
+                }
+
+                PlasmaComponents.ComboBox {
+                    id: sessionCombo
+                    model: sessionModel
+                    currentIndex: sessionModel.lastIndex
+
+                    width: 200
+                    textRole: "name"
+
+                    anchors.left: parent.left
+                }
+
+                LogoutOptions {
+                    mode: ""
+                    canShutdown: true
+                    canReboot: true
+                    canLogout: false
+                    exclusive: false
+
+                    anchors {
+                        right: parent.right
+                    }
+
+                    onModeChanged: {
+                        if (mode) {
+                            stackView.push(logoutScreenComponent, {"mode": mode})
+                        }
+                    }
+                    onVisibleChanged: if(visible) {
+                                          mode = ""
+                                      }
+                }
+
+                Connections {
+                    target: sddm
+                    onLoginFailed: {
+                        //Re-enable button and textfield
+                        passwordInput.enabled = true
+                        passwordInput.selectAll()
+                        passwordInput.forceActiveFocus()
+                        loginButton.enabled = true;
+                    }
+                }
+
+            }
+
+            function startLogin () {
+                //Disable button and textfield while password check is running
+                controlsItem.pwFieldEnabled = false;
+                controlsItem.buttonEnabled = false;
+                //Clear notification in case the notificationResetTimer hasn't expired yet
+                mainItem.notification = ""
+                sddm.login(mainItem.selectedUser, controlsItem.password, controlsItem.sessionIndex)
+            }
+
+            Component {
+                id: logoutScreenComponent
+                LogoutScreen {
+                    onCancel: {
+                        stackView.pop()
+                    }
+
+                    onShutdownRequested: {
+                        sddm.powerOff()
+                    }
+
+                    onRebootRequested: {
+                        sddm.reboot()
+                    }
+                }
             }
         }
-        PlasmaComponents.ToolButton {
-            implicitWidth: minimumWidth
-            property alias searching : login.searching
 
-            iconSource: searching ? "edit-select" : "search"
-            text: searching ? "Select User" : "Search for User"
-
-            onClicked: {
-                searching = !searching
-            }
-        }
-        Item {
-            Layout.fillWidth: true
-        }
-
-        PlasmaComponents.ToolButton {
-            iconSource: "system-suspend"
-            text: i18nd("plasma_lookandfeel_org.kde.lookandfeel","Suspend")
-            implicitWidth: minimumWidth
-            onClicked: sddm.suspend()
-            visible: sddm.canSuspend
-        }
-
-        PlasmaComponents.ToolButton {
-            iconSource: "system-reboot"
-            text: i18nd("plasma_lookandfeel_org.kde.lookandfeel","Restart")
-            implicitWidth: minimumWidth
-            onClicked: sddm.reboot()
-            visible: sddm.canReboot
-        }
-
-        PlasmaComponents.ToolButton {
-            iconSource: "system-shutdown"
-            text: i18nd("plasma_lookandfeel_org.kde.lookandfeel","Shutdown")
-            implicitWidth: minimumWidth
-            onClicked: sddm.powerOff()
-            visible: sddm.canPowerOff
-        }
-
-        BatteryIcon {
-            implicitWidth: units.iconSizes.medium
-            implicitHeight: units.iconSizes.medium
-
-            visible: pmSource.data["Battery"]["Has Cumulative"]
-
-            hasBattery: true
-            percent: pmSource.data["Battery"]["Percent"]
-            pluggedIn: pmSource.data["AC Adapter"] ? pmSource.data["AC Adapter"]["Plugged in"] : false
-
-            PlasmaCore.DataSource {
-                id: pmSource
-                engine: "powermanagement"
-                connectedSources: ["Battery", "AC Adapter"]
-            }
-        }
-        KeyboardButton {
-        }
-
-        PlasmaComponents.Label {
-            text: Qt.formatTime(timeSource.data["Local"]["DateTime"])
-            //Do I need the FontMetrics magic to set implicitWidth?
-            PlasmaCore.DataSource {
-                id: timeSource
-                engine: "time"
-                connectedSources: ["Local"]
-                interval: 1000
-            }
-        }
     }
 }
