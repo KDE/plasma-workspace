@@ -2,6 +2,7 @@
 Name=%{APPNAME} Weather Data Provider
 Name[ca]=Proveïdor de dades meteorològiques per al %{APPNAME}
 Name[ca@valencia]=Proveïdor de dades meteorològiques per al %{APPNAME}
+Name[da]=%{APPNAME} vejrdata-udbyder
 Name[de]=%{APPNAME}-Wetterdatenanbieter
 Name[el]=%{APPNAME} Πάροχος δεδομένων καιρού
 Name[en_GB]=%{APPNAME} Weather Data Provider
@@ -30,6 +31,7 @@ Name[zh_CN]=%{APPNAME} 天气数据提供商
 Comment=Access to the weather data provider %{APPNAME}
 Comment[ca]=Accés al proveïdor de dades meteorològiques per al {APPNAME}}
 Comment[ca@valencia]=Accés al proveïdor de dades meteorològiques per al {APPNAME}}
+Comment[da]=Adgang til vejrdata-udbyderen %{APPNAME}
 Comment[de]=Zugriff auf den Wetterdatenanbieter %{APPNAME}
 Comment[el]=Πρόσβαση στον πάροχο δεδομένων καιρού %{APPNAME}
 Comment[en_GB]=Access to the weather data provider %{APPNAME}
