@@ -42,6 +42,8 @@
 #include <KActionCollection>
 #include <KLocalizedString>
 
+#include <plasma_version.h>
+
 Q_LOGGING_CATEGORY(SYSTEMTRAY, "systemtray")
 
 /*
@@ -88,7 +90,7 @@ SystemTray::SystemTray(QObject *parent, const QVariantList &args)
       m_availablePlasmoidsModel(nullptr)
 {
     setHasConfigurationInterface(true);
-    setContainmentType(Plasma::Types::CustomPanelContainment);
+    setContainmentType(Plasma::Types::CustomEmbeddedContainment);
 }
 
 SystemTray::~SystemTray()
@@ -97,11 +99,7 @@ SystemTray::~SystemTray()
 
 void SystemTray::init()
 {
-    config().writeEntry("lastScreen", -1);
     Containment::init();
-    //actions()->removeAction(actions()->action("add widgets"));
-    //actions()->removeAction(actions()->action("add panel"));
-    //actions()->removeAction(actions()->action("lock widgets"));
 }
 
 void SystemTray::newTask(const QString &task)
@@ -155,7 +153,7 @@ QVariant SystemTray::resolveIcon(const QVariant &variant, const QString &iconThe
     return variant;
 }
 
-void SystemTray::showPlasmoidMenu(QQuickItem *appletInterface)
+void SystemTray::showPlasmoidMenu(QQuickItem *appletInterface, int x, int y)
 {
     if (!appletInterface) {
         return;
@@ -163,7 +161,7 @@ void SystemTray::showPlasmoidMenu(QQuickItem *appletInterface)
 
     Plasma::Applet *applet = appletInterface->property("_plasma_applet").value<Plasma::Applet*>();
 
-    QPointF pos = appletInterface->mapToScene(QPointF(0, 0));
+    QPointF pos = appletInterface->mapToScene(QPointF(x, y));
 
     if (appletInterface->window() && appletInterface->window()->screen()) {
         pos = appletInterface->window()->mapToGlobal(pos.toPoint());
@@ -331,8 +329,7 @@ void SystemTray::reorderItemAfter(QQuickItem* after, QQuickItem* before)
 void SystemTray::restoreContents(KConfigGroup &group)
 {
     Q_UNUSED(group);
-    //Don't do anything here, it's too soon
-    qCWarning(SYSTEMTRAY)<<"RestoreContents doesn't do anything here";
+    //NOTE: RestoreContents shouldnn't do anything here because is too soon, so have an empty reimplementation
 }
 
 void SystemTray::restorePlasmoids()
@@ -550,7 +547,7 @@ void SystemTray::serviceOwnerChanged(const QString &serviceName, const QString &
 
 void SystemTray::serviceRegistered(const QString &service)
 {
-    qCDebug(SYSTEMTRAY) << "DBus service appeared:" << service;
+    //qCDebug(SYSTEMTRAY) << "DBus service appeared:" << service;
     for (auto it = m_dbusActivatableTasks.constBegin(), end = m_dbusActivatableTasks.constEnd(); it != end; ++it) {
         const QString &plugin = it.key();
         if (!m_allowedPlasmoids.contains(plugin)) {
@@ -561,7 +558,7 @@ void SystemTray::serviceRegistered(const QString &service)
         QRegExp rx(pattern);
         rx.setPatternSyntax(QRegExp::Wildcard);
         if (rx.exactMatch(service)) {
-            qCDebug(SYSTEMTRAY) << "ST : DBus service " << m_dbusActivatableTasks[plugin] << "appeared. Loading " << plugin;
+            //qCDebug(SYSTEMTRAY) << "ST : DBus service " << m_dbusActivatableTasks[plugin] << "appeared. Loading " << plugin;
             newTask(plugin);
             m_dbusServiceCounts[plugin]++;
         }
@@ -570,7 +567,7 @@ void SystemTray::serviceRegistered(const QString &service)
 
 void SystemTray::serviceUnregistered(const QString &service)
 {
-    qCDebug(SYSTEMTRAY) << "DBus service disappeared:" << service;
+    //qCDebug(SYSTEMTRAY) << "DBus service disappeared:" << service;
 
     for (auto it = m_dbusActivatableTasks.constBegin(), end = m_dbusActivatableTasks.constEnd(); it != end; ++it) {
         const QString &plugin = it.key();
@@ -585,7 +582,7 @@ void SystemTray::serviceUnregistered(const QString &service)
             m_dbusServiceCounts[plugin]--;
             Q_ASSERT(m_dbusServiceCounts[plugin] >= 0);
             if (m_dbusServiceCounts[plugin] == 0) {
-                qCDebug(SYSTEMTRAY) << "ST : DBus service " << m_dbusActivatableTasks[plugin] << " disappeared. Unloading " << plugin;
+                //qCDebug(SYSTEMTRAY) << "ST : DBus service " << m_dbusActivatableTasks[plugin] << " disappeared. Unloading " << plugin;
                 cleanupTask(plugin);
             }
         }

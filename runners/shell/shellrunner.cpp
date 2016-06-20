@@ -66,7 +66,7 @@ void ShellRunner::match(Plasma::RunnerContext &context)
         Plasma::QueryMatch match(this);
         match.setId(term);
         match.setType(Plasma::QueryMatch::ExactMatch);
-        match.setIcon(QIcon::fromTheme(QStringLiteral("system-run")));
+        match.setIconName(QStringLiteral("system-run"));
         match.setText(i18n("Run %1", term));
         match.setRelevance(0.7);
         context.addMatch(match);

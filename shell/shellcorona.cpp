@@ -200,7 +200,10 @@ ShellCorona::~ShellCorona()
 {
     qDeleteAll(m_views);
     m_views.clear();
-    qDeleteAll(containments());
+    while (!containments().isEmpty()) {
+        //deleting a containment will remove it from the list due to QObject::destroyed connect in Corona
+        delete containments().first();
+    }
     qDeleteAll(m_panelViews);
     m_panelViews.clear();
 }
@@ -342,14 +345,14 @@ void ShellCorona::load()
     } else {
         processUpdateScripts();
         foreach(Plasma::Containment *containment, containments()) {
-            if (containment->formFactor() == Plasma::Types::Horizontal ||
-                containment->formFactor() == Plasma::Types::Vertical) {
+            if (containment->containmentType() == Plasma::Types::PanelContainment || containment->containmentType() == Plasma::Types::CustomPanelContainment) {
                 //Don't give a view to containments that don't want one (negative lastscreen)
                 //this is pretty mucha special case for the systray
                 if (!m_waitingPanels.contains(containment) && containment->lastScreen() >= 0) {
                     m_waitingPanels << containment;
                 }
-            } else {
+            //historically CustomContainments are treated as desktops
+            } else if (containment->containmentType() == Plasma::Types::DesktopContainment || containment->containmentType() == Plasma::Types::CustomContainment) {
                 //FIXME ideally fix this, or at least document the crap out of it
                 int screen = containment->lastScreen();
                 if (screen < 0) {

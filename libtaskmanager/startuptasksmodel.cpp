@@ -246,7 +246,7 @@ QVariant StartupTasksModel::data(const QModelIndex &index, int role) const
         return idFromPath;
     } else if (role == AppName) {
         return data.findName();
-    } else if (role == LauncherUrl) {
+    } else if (role == LauncherUrl || role == LauncherUrlWithoutIcon) {
         return d->launcherUrls.value(id);
     } else if (role == IsStartup) {
         return true;

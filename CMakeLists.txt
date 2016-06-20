@@ -1,11 +1,11 @@
 project(plasma-workspace)
-set(PROJECT_VERSION "5.6.90")
+set(PROJECT_VERSION "5.7.90")
 set(PROJECT_VERSION_MAJOR 5)
 
 cmake_minimum_required(VERSION 2.8.12 FATAL_ERROR)
 
-set(QT_MIN_VERSION "5.6.0")
-set(KF5_MIN_VERSION "5.18.0")
+set(QT_MIN_VERSION "5.6.1")
+set(KF5_MIN_VERSION "5.24.0")
 set(INSTALL_SDDM_THEME TRUE)
 find_package(Qt5 ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS Widgets Quick QuickWidgets Concurrent Test Script Network)
 find_package(ECM 1.8.0 REQUIRED NO_MODULE)
@@ -107,7 +107,10 @@ include_directories("${CMAKE_CURRENT_BINARY_DIR}")
 configure_file(config-workspace.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-workspace.h)
 configure_file(config-unix.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-unix.h )
 configure_file(config-X11.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-X11.h)
-
+install(FILES
+        ${CMAKE_CURRENT_BINARY_DIR}/config-X11.h
+        DESTINATION ${KDE_INSTALL_INCLUDEDIR}/legacytaskmanager COMPONENT Devel
+)
 configure_file(plasma.desktop.cmake ${CMAKE_CURRENT_BINARY_DIR}/plasma.desktop)
 install(FILES
         ${CMAKE_CURRENT_BINARY_DIR}/plasma.desktop

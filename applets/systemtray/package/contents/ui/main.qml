@@ -97,6 +97,15 @@ MouseArea {
     Containment.onAppletRemoved: {
     }
 
+    Connections {
+        target: plasmoid
+        onUserConfiguringChanged: {
+            if (plasmoid.userConfiguring) {
+                dialog.visible = false
+            }
+        }
+    }
+
      Connections {
         target: plasmoid.configuration
 
@@ -208,6 +217,7 @@ MouseArea {
     }
 
     CurrentItemHighLight {
+        visualParent: tasksRow
         target: root.activeApplet && root.activeApplet.parent.parent == tasksRow ? root.activeApplet.parent : root
         location: plasmoid.location
     }

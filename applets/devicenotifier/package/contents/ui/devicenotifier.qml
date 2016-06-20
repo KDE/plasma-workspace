@@ -50,9 +50,29 @@ Item {
     property int pendingDelegateRemoval: 0
 
     Plasmoid.switchWidth: units.gridUnit * 10
-    Plasmoid.switchHeight: units.gridUnit * 15
-    Plasmoid.toolTipMainText: i18n("No devices available")
-    Plasmoid.status : (filterModel.count >  0) ? PlasmaCore.Types.ActiveStatus : PlasmaCore.Types.PassiveStatus
+    Plasmoid.switchHeight: units.gridUnit * 10
+
+    Plasmoid.toolTipMainText: filterModel.count > 0 && filterModel.get(0) ? i18n("Most Recent Device") : i18n("No Devices Available")
+    Plasmoid.toolTipSubText: {
+        if (filterModel.count > 0) {
+            var data = filterModel.get(0)
+            if (data && data.Description) {
+                return data.Description
+            }
+        }
+        return ""
+    }
+    Plasmoid.icon: {
+        if (filterModel.count > 0) {
+            var data = filterModel.get(0)
+            if (data && data.Icon) {
+                return data.Icon
+            }
+        }
+        return "device-notifier"
+    }
+
+    Plasmoid.status: (filterModel.count > 0 || pendingDelegateRemoval > 0) ? PlasmaCore.Types.ActiveStatus : PlasmaCore.Types.PassiveStatus
 
     PlasmaCore.DataSource {
         id: hpSource
@@ -71,8 +91,8 @@ Item {
 
     Plasmoid.compactRepresentation: PlasmaCore.IconItem {
         source: devicenotifier.popupIcon
-        width: 36;
-        height: 36;
+        width: units.iconSizes.medium;
+        height: units.iconSizes.medium;
         MouseArea {
             anchors.fill: parent
             onClicked: plasmoid.expanded = !plasmoid.expanded
@@ -140,18 +160,6 @@ Item {
         }
         sortRole: "Timestamp"
         sortOrder: Qt.DescendingOrder
-        onCountChanged: {
-            var data = filterModel.get(0);
-            if (data && (data["Icon"] != undefined)) {
-                plasmoid.icon = data["Icon"];
-                plasmoid.toolTipMainText = i18n("Most recent device");
-                plasmoid.toolTipSubText = data["Description"];
-            } else {
-                plasmoid.icon = "device-notifier";
-                plasmoid.toolTipMainText = i18n("No devices available");
-                plasmoid.toolTipSubText = "";
-            }
-        }
     }
 
     PlasmaCore.DataSource {
@@ -229,16 +237,12 @@ Item {
     }
 
     Timer {
-        id: passiveTimer
-        interval: 3000
-        onTriggered: plasmoid.status = PlasmaCore.Types.PassiveStatus
-    }
-
-    Timer {
         id: expandTimer
         interval: 250
         onTriggered: {
-            plasmoid.expanded = true;
+            if (plasmoid.configuration.popupOnNewDevice) { // Bug 351592
+                plasmoid.expanded = true;
+            }
         }
     }
 

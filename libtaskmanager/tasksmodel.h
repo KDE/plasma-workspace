@@ -81,6 +81,7 @@ class TASKMANAGER_EXPORT TasksModel : public QSortFilterProxyModel, public Abstr
     Q_PROPERTY(bool launchInPlace READ launchInPlace WRITE setLaunchInPlace NOTIFY launchInPlaceChanged)
 
     Q_PROPERTY(GroupMode groupMode READ groupMode WRITE setGroupMode NOTIFY groupModeChanged)
+    Q_PROPERTY(bool groupInline READ groupInline WRITE setGroupInline NOTIFY groupInlineChanged)
     Q_PROPERTY(int groupingWindowTasksThreshold READ groupingWindowTasksThreshold
                WRITE setGroupingWindowTasksThreshold NOTIFY groupingWindowTasksThresholdChanged)
     Q_PROPERTY(QStringList groupingAppIdBlacklist READ groupingAppIdBlacklist
@@ -187,8 +188,6 @@ public:
      * The id of the activity used in filtering by activity. Usually
      * set to the id of the current activity. Defaults to an empty id.
      *
-     * FIXME: Implement.
-     *
      * @see setActivity
      * @returns the id of the activity used in filtering.
      **/
@@ -196,8 +195,6 @@ public:
 
     /**
      * Set the id of the activity to use in filtering by activity.
-     *
-     * FIXME: Implement.
      *
      * @see activity
      * @param activity An activity id.
@@ -361,6 +358,35 @@ public:
     void setGroupMode(TasksModel::GroupMode mode);
 
     /**
+     * Returns whether grouping is done "inline" or not, i.e. whether groups
+     * are maintained inside the flat, top-level list, or by forming a tree.
+     * In inline grouping mode, move() on a group member will move all siblings
+     * as well, and sorting is first done among groups, then group members.
+     *
+     * Further, in inline grouping mode, the groupingWindowTasksThreshold
+     * setting is ignored: Grouping is always done.
+     *
+     * @see setGroupInline
+     * @see move
+     * @see groupingWindowTasksThreshold
+     * @returns whether grouping is done inline or not.
+     **/
+    bool groupInline() const;
+
+    /**
+     * Sets whether grouping is done "inline" or not, i.e. whether groups
+     * are maintained inside the flat, top-level list, or by forming a tree.
+     * In inline grouping mode, move() on a group member will move all siblings
+     * as well, and sorting is first done among groups, then group members.
+     *
+     * @see groupInline
+     * @see move
+     * @see groupingWindowTasksThreshold
+     * @param inline Whether to do grouping inline or not.
+     **/
+    void setGroupInline(bool groupInline);
+
+    /**
      * As window tasks (AbstractTasksModel::IsWindow) come and go, groups will
      * be formed when this threshold value is exceeded, and  broken apart when
      * it matches or falls below.
@@ -368,7 +394,11 @@ public:
      * Defaults to @c -1, which means grouping is done regardless of the number
      * of window tasks.
      *
+     * When the groupInline property is set to @c true, the threshold is ignored:
+     * Grouping is always done.
+     *
      * @see setGroupingWindowTasksThreshold
+     * @see groupInline
      * @return the threshold number of window tasks used in grouping decisions.
      **/
     int groupingWindowTasksThreshold() const;
@@ -380,7 +410,11 @@ public:
      * If set to -1, grouping will be done regardless of the number of window tasks
      * in the source model.
      *
+     * When the groupInline property is set to @c true, the threshold is ignored:
+     * Grouping is always done.
+     *
      * @see groupingWindowTasksThreshold
+     * @see groupInline
      * @param threshold A threshold number of window tasks used in grouping
      * decisions.
      **/
@@ -625,11 +659,16 @@ public:
     /**
      * Moves a (top-level) task to a new position in the list. The insert
      * position is bounded to the list start and end.
+     *
      * syncLaunchers() should be called after a set of move operations to
-     * update the launcher list to reflect the new order.
+     * update the launcherList property to reflect the new order.
+     *
+     * When the groupInline property is set to @c true, a move request
+     * for a group member will bring all siblings along.
      *
      * @see syncLaunchers
      * @see launcherList
+     * @see setGroupInline
      * @param index An index in this tasks model.
      * @param newPos The new list position to move the task to.
      */
@@ -682,6 +721,7 @@ Q_SIGNALS:
     void separateLaunchersChanged() const;
     void launchInPlaceChanged() const;
     void groupModeChanged() const;
+    void groupInlineChanged() const;
     void groupingWindowTasksThresholdChanged() const;
     void groupingAppIdBlacklistChanged() const;
     void groupingLauncherUrlBlacklistChanged() const;
@@ -691,6 +731,8 @@ protected:
     bool lessThan(const QModelIndex &left, const QModelIndex &right) const;
 
 private:
+    Q_INVOKABLE void updateLauncherCount();
+
     class Private;
     class TasksModelLessThan;
     friend class TasksModelLessThan;

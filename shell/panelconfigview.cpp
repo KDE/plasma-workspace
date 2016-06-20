@@ -67,7 +67,7 @@ PanelConfigView::PanelConfigView(Plasma::Containment *containment, PanelView *pa
                 setFlags(Qt::WindowFlags((flags() | Qt::FramelessWindowHint) & (~Qt::WindowDoesNotAcceptFocus)));
                 KWindowSystem::setState(winId(), NET::KeepAbove);
                 syncGeometry();
-                syncSlideLocation();
+                syncLocation();
             });
 
     KWindowSystem::setType(winId(), NET::Dock);
@@ -82,9 +82,7 @@ PanelConfigView::PanelConfigView(Plasma::Containment *containment, PanelView *pa
     rootContext()->setContextProperty(QStringLiteral("panel"), panelView);
     rootContext()->setContextProperty(QStringLiteral("configDialog"), this);
     connect(containment, &Plasma::Containment::formFactorChanged, this, &PanelConfigView::syncGeometry);
-    connect(containment, &Plasma::Containment::locationChanged, this, &PanelConfigView::syncSlideLocation);
-
-    PanelShadows::self()->addWindow(this);
+    connect(containment, &Plasma::Containment::locationChanged, this, &PanelConfigView::syncLocation);
 }
 
 PanelConfigView::~PanelConfigView()
@@ -98,7 +96,7 @@ void PanelConfigView::init()
 {
     setSource(QUrl::fromLocalFile(m_containment->corona()->kPackage().filePath("panelconfigurationui")));
     syncGeometry();
-    syncSlideLocation();
+    syncLocation();
 }
 
 void PanelConfigView::updateContrast()
@@ -154,32 +152,45 @@ void PanelConfigView::syncGeometry()
     }
 }
 
-void PanelConfigView::syncSlideLocation()
+void PanelConfigView::syncLocation()
 {
     if (!m_containment) {
         return;
     }
 
     KWindowEffects::SlideFromLocation slideLocation = KWindowEffects::NoEdge;
+    Plasma::FrameSvg::EnabledBorders enabledBorders = Plasma::FrameSvg::AllBorders;
 
     switch (m_containment->location()) {
     case Plasma::Types::TopEdge:
         slideLocation = KWindowEffects::TopEdge;
+        enabledBorders = Plasma::FrameSvg::BottomBorder;
         break;
     case Plasma::Types::RightEdge:
         slideLocation = KWindowEffects::RightEdge;
+        enabledBorders = Plasma::FrameSvg::LeftBorder;
         break;
     case Plasma::Types::BottomEdge:
         slideLocation = KWindowEffects::BottomEdge;
+        enabledBorders = Plasma::FrameSvg::TopBorder;
         break;
     case Plasma::Types::LeftEdge:
         slideLocation = KWindowEffects::LeftEdge;
+        enabledBorders = Plasma::FrameSvg::RightBorder;
         break;
     default:
         break;
     }
 
     KWindowEffects::slideWindow(winId(), slideLocation, -1);
+
+    if (m_enabledBorders != enabledBorders) {
+        m_enabledBorders = enabledBorders;
+
+        PanelShadows::self()->setEnabledBorders(this, enabledBorders);
+
+        emit enabledBordersChanged();
+    }
 }
 
 void PanelConfigView::showEvent(QShowEvent *ev)
@@ -193,7 +204,7 @@ void PanelConfigView::showEvent(QShowEvent *ev)
     KWindowEffects::enableBlurBehind(winId(), true);
     updateContrast();
     syncGeometry();
-    syncSlideLocation();
+    syncLocation();
 
     //this because due to Qt xcb implementation the actual flags gets set only after a while after the window is actually visible
     m_screenSyncTimer.start();
@@ -207,7 +218,7 @@ void PanelConfigView::showEvent(QShowEvent *ev)
     if (m_visibilityMode != PanelView::NormalPanel) {
         m_panelView->setVisibilityMode(PanelView::WindowsGoBelow);
     }
-    PanelShadows::self()->addWindow(this);
+    PanelShadows::self()->addWindow(this, m_enabledBorders);
 }
 
 void PanelConfigView::hideEvent(QHideEvent *ev)
@@ -286,6 +297,11 @@ void PanelConfigView::setVisibilityMode(PanelView::VisibilityMode mode)
 PanelView::VisibilityMode PanelConfigView::visibilityMode() const
 {
     return m_visibilityMode;
+}
+
+Plasma::FrameSvg::EnabledBorders PanelConfigView::enabledBorders() const
+{
+    return m_enabledBorders;
 }
 
 #include "moc_panelconfigview.cpp"

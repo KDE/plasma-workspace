@@ -102,7 +102,7 @@ void WeatherEngine::updateIonList(const QStringList &changedResources)
     if (changedResources.isEmpty() || changedResources.contains(QStringLiteral("services"))) {
         removeAllData(QStringLiteral("ions"));
         foreach (const KPluginInfo &info, Plasma::PluginLoader::self()->listEngineInfo(QLatin1String("weatherengine"))) {
-            const QString data = info.property(QStringLiteral("Name")).toString() + QLatin1Char('|') + info.pluginName();
+            const QString data = info.name() + QLatin1Char('|') + info.pluginName();
             setData(QStringLiteral("ions"), info.pluginName(), data);
         }
     }
@@ -214,8 +214,9 @@ void WeatherEngine::startReconnect()
     }
 }
 
-void WeatherEngine::forceUpdate(IonInterface *i, const QString &source)
+void WeatherEngine::forceUpdate(IonInterface *ion, const QString &source)
 {
+    Q_UNUSED(ion);
     Plasma::DataContainer *container = containerForSource(source);
     if (container) {
         qDebug() << "immediate update of" << source;
@@ -251,4 +252,3 @@ QString WeatherEngine::ionNameForSource(const QString& source) const
 K_EXPORT_PLASMA_DATAENGINE_WITH_JSON(weather, WeatherEngine, "plasma-dataengine-weather.json")
 
 #include "weatherengine.moc"
-

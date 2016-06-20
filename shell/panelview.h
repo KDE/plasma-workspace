@@ -78,6 +78,12 @@ class PanelView : public PlasmaQuick::ContainmentView
     Q_PROPERTY(int distance READ distance WRITE setDistance NOTIFY distanceChanged)
 
     /**
+     * The borders that should have a shadow
+     * @since 5.7
+     */
+    Q_PROPERTY(Plasma::FrameSvg::EnabledBorders enabledBorders READ enabledBorders NOTIFY enabledBordersChanged)
+
+    /**
      * informations about the screen in which the panel is in
      */
     Q_PROPERTY(QScreen *screen READ screen WRITE setScreen NOTIFY screenChangedProxy)
@@ -125,6 +131,8 @@ public:
     int distance() const;
     void setDistance(int dist);
 
+    Plasma::FrameSvg::EnabledBorders enabledBorders() const;
+
     VisibilityMode visibilityMode() const;
     void setVisibilityMode(PanelView::VisibilityMode mode);
 
@@ -154,6 +162,7 @@ Q_SIGNALS:
     void maximumLengthChanged();
     void minimumLengthChanged();
     void distanceChanged();
+    void enabledBordersChanged();
 
     //QWindow does not have a property for screen. Adding this property requires re-implementing the signal
     void screenChangedProxy(QScreen *screen);
@@ -184,6 +193,7 @@ private:
     QPointF positionAdjustedForContainment(const QPointF &point) const;
     void setupWaylandIntegration();
     bool edgeActivated() const;
+    void updateEnabledBorders();
 
     int m_offset;
     int m_maxLength;
@@ -201,6 +211,7 @@ private:
     QTimer m_unhideTimer;
     //only for the mask, not to actually paint
     Plasma::FrameSvg *m_background;
+    Plasma::FrameSvg::EnabledBorders m_enabledBorders = Plasma::FrameSvg::AllBorders;
     KWayland::Client::PlasmaShellSurface *m_shellSurface;
     QWeakPointer<QScreen> m_lastScreen;
 

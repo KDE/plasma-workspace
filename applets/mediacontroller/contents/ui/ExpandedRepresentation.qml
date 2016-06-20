@@ -28,7 +28,7 @@ Item {
     id: expandedRepresentation
 
     Layout.minimumWidth: Layout.minimumHeight * 1.333
-    Layout.minimumHeight: theme.mSize(theme.defaultFont).height * 8
+    Layout.minimumHeight: units.gridUnit * 10
     Layout.preferredWidth: Layout.minimumWidth * 1.5
     Layout.preferredHeight: Layout.minimumHeight * 1.5
 
@@ -154,11 +154,13 @@ Item {
 
             Image {
                 id: albumArt
+                readonly property int size: Math.round(expandedRepresentation.height / 2 - (playerCombo.count > 2 ? playerCombo.height : 0))
                 source: root.albumArt
                 asynchronous: true
                 fillMode: Image.PreserveAspectCrop
-                Layout.preferredHeight: expandedRepresentation.height / 2 - (playerCombo.visible ? playerCombo.height : 0)
-                Layout.preferredWidth: Layout.preferredHeight
+                sourceSize: Qt.size(size, size)
+                Layout.preferredHeight: size
+                Layout.preferredWidth: size
                 visible: !!root.track && status === Image.Ready
             }
 

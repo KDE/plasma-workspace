@@ -19,15 +19,17 @@
 
 #include "recentdocuments.h"
 
+#include <QAction>
+#include <QDir>
 #include <QMimeData>
 
 #include <KDesktopFile>
 #include <KConfigGroup>
-#include <QDebug>
 #include <KDirWatch>
 #include <KRun>
 #include <KRecentDocument>
 #include <KLocalizedString>
+#include <KIO/OpenFileManagerWindowJob>
 
 K_EXPORT_PLASMA_RUNNER(recentdocuments, RecentDocuments)
 
@@ -36,7 +38,6 @@ RecentDocuments::RecentDocuments(QObject *parent, const QVariantList& args)
 {
     Q_UNUSED(args);
     setObjectName( QStringLiteral("Recent Documents" ));
-    m_icon = QIcon::fromTheme(QStringLiteral("document-open-recent"));
     loadRecentDocuments();
     // listen for changes to the list of recent documents
     KDirWatch *recentDocWatch = new KDirWatch(this);
@@ -53,7 +54,6 @@ RecentDocuments::~RecentDocuments()
 
 void RecentDocuments::loadRecentDocuments()
 {
-    //qDebug() << "Refreshing recent documents.";
     m_recentdocuments = KRecentDocument::recentDocuments();
 }
 
@@ -69,6 +69,8 @@ void RecentDocuments::match(Plasma::RunnerContext &context)
         return;
     }
 
+    const QString homePath = QDir::homePath();
+
     foreach (const QString &document, m_recentdocuments) {
         if (!context.isValid()) {
             return;
@@ -79,10 +81,21 @@ void RecentDocuments::match(Plasma::RunnerContext &context)
             Plasma::QueryMatch match(this);
             match.setType(Plasma::QueryMatch::PossibleMatch);
             match.setRelevance(1.0);
-            match.setIcon(QIcon::fromTheme(config.readIcon()));
+            match.setIconName(config.readIcon());
             match.setData(config.readUrl());
             match.setText(config.readName());
-            match.setSubtext(i18n("Recent Document"));
+
+            QUrl folderUrl = QUrl(config.readUrl()).adjusted(QUrl::RemoveFilename | QUrl::StripTrailingSlash);
+            if (folderUrl.isLocalFile()) {
+                QString folderPath = folderUrl.toLocalFile();
+                if (folderPath.startsWith(homePath)) {
+                    folderPath.replace(0, homePath.length(), QStringLiteral("~"));
+                }
+                match.setSubtext(folderPath);
+            } else {
+                match.setSubtext(folderUrl.toDisplayString());
+            }
+
             context.addMatch(match);
         }
     }
@@ -91,18 +104,39 @@ void RecentDocuments::match(Plasma::RunnerContext &context)
 void RecentDocuments::run(const Plasma::RunnerContext &context, const Plasma::QueryMatch &match)
 {
     Q_UNUSED(context)
-    QString url = match.data().toString();
-    qDebug() << "Opening Recent Document" << url;
+
+    const QString url = match.data().toString();
+
+    if (match.selectedAction() && match.selectedAction()->data().toString() == QLatin1String("openParentDir")) {
+        KIO::highlightInFileManager({QUrl(url)});
+        return;
+    }
+
     new KRun(url, 0);
+}
+
+QList<QAction *> RecentDocuments::actionsForMatch(const Plasma::QueryMatch &match)
+{
+    Q_UNUSED(match)
+
+    const QString openParentDirId = QStringLiteral("openParentDir");
+
+    if (!action(openParentDirId)) {
+        (addAction(openParentDirId, QIcon::fromTheme(QStringLiteral("document-open-folder")), i18n("Open Containing Folder")))->setData(openParentDirId);
+    }
+
+    QList<QAction *> actions;
+
+    if (QUrl(match.data().toString()).isLocalFile()) {
+        actions << action(openParentDirId);
+    }
+
+    return actions;
 }
 
 QMimeData * RecentDocuments::mimeDataForMatch(const Plasma::QueryMatch& match)
 {
-    QMimeData * result = new QMimeData();
-    QList<QUrl> urls;
-    urls << QUrl(match.data().toString());
-    result->setUrls(urls);
-
+    QMimeData *result = new QMimeData();
     result->setText(match.data().toString());
     return result;
 }

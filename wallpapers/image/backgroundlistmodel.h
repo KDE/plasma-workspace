@@ -57,7 +57,7 @@ class ImageSizeFinder : public QObject, public QRunnable
 class BackgroundListModel : public QAbstractListModel
 {
     Q_OBJECT
-        Q_PROPERTY(int count READ count NOTIFY countChanged);
+    Q_PROPERTY(int count READ count NOTIFY countChanged)
 
 public:
     enum {

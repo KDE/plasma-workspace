@@ -33,8 +33,6 @@ WebshortcutRunner::WebshortcutRunner(QObject *parent, const QVariantList& args)
     setObjectName( QLatin1String("Web Shortcut" ));
     setIgnoredTypes(Plasma::RunnerContext::Directory | Plasma::RunnerContext::File | Plasma::RunnerContext::Executable);
 
-    m_icon = QIcon::fromTheme(QStringLiteral("internet-web-browser"));
-
     m_match.setType(Plasma::QueryMatch::ExactMatch);
     m_match.setRelevance(0.9);
 
@@ -134,7 +132,7 @@ void WebshortcutRunner::match(Plasma::RunnerContext &context)
     m_match.setData(filterData.uri().url());
     m_match.setId("WebShortcut:" + key);
 
-    m_match.setIcon(QIcon::fromTheme(filterData.iconName()));
+    m_match.setIconName(filterData.iconName());
     m_match.setText(i18n("Search %1 for %2", m_lastProvider, filterData.searchTerm()));
     context.addMatch(m_match);
 }

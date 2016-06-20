@@ -28,10 +28,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include <QIcon>
 
 #ifdef HAVE_PRISON
-#include <prison/QRCodeBarcode>
-#include <prison/DataMatrixBarcode>
-#include <prison/Code39Barcode>
-#include <prison/Code93Barcode>
+#include <prison/Prison>
 #endif
 
 const static QString s_iconKey = QStringLiteral("icon");
@@ -92,26 +89,26 @@ void ClipboardJob::start()
 #ifdef HAVE_PRISON
         int pixelWidth = parameters().value(QStringLiteral("width")).toInt();
         int pixelHeight = parameters().value(QStringLiteral("height")).toInt();
-        prison::AbstractBarcode *code = nullptr;
+        Prison::AbstractBarcode *code = nullptr;
         switch (parameters().value(QStringLiteral("barcodeType")).toInt()) {
         case 1: {
-            code = new prison::DataMatrixBarcode;
+            code = Prison::createBarcode(Prison::DataMatrix);
             const int size = qMin(pixelWidth, pixelHeight);
             pixelWidth = size;
             pixelHeight = size;
             break;
         }
         case 2: {
-            code = new prison::Code39Barcode;
+            code = Prison::createBarcode(Prison::Code39);
             break;
         }
         case 3: {
-            code = new prison::Code93Barcode;
+            code = Prison::createBarcode(Prison::Code93);
             break;
         }
         case 0:
         default: {
-            code = new prison::QRCodeBarcode;
+            code = Prison::createBarcode(Prison::QRCode);
             const int size = qMin(pixelWidth, pixelHeight);
             pixelWidth = size;
             pixelHeight = size;
@@ -129,7 +126,7 @@ void ClipboardJob::start()
                     emitResult();
                 }
             );
-            auto future = QtConcurrent::run(code, &prison::AbstractBarcode::toImage, QSizeF(pixelWidth, pixelHeight));
+            auto future = QtConcurrent::run(code, &Prison::AbstractBarcode::toImage, QSizeF(pixelWidth, pixelHeight));
             watcher->setFuture(future);
             return;
         } else {

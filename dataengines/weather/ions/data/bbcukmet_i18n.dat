@@ -91,28 +91,8 @@ weather forecast|thunder storm
 weather forecast|thundery shower
 weather forecast|tropical storm
 weather forecast|white cloud
-wind direction|N
-wind direction|NNE
-wind direction|NE
-wind direction|ENE
-wind direction|E
-wind direction|SSE
-wind direction|SE
-wind direction|ESE
-wind direction|S
-wind direction|NNW
-wind direction|NW
-wind direction|WNW
-wind direction|W
-wind direction|SSW
-wind direction|SW
-wind direction|WSW
-wind direction|VR
-visibility|Very good
+visibility|Very Good
 visibility|Good
 visibility|Moderate
 visibility|Poor
-visibility|Very poor
-pressure tendency|rising
-pressure tendency|falling
-pressure tendency|no change
+visibility|Very Poor

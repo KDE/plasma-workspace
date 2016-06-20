@@ -8,9 +8,9 @@ plasma_install_package(lock_logout org.kde.plasma.lock_logout)
 
 add_subdirectory(systemmonitor)
 add_subdirectory(batterymonitor)
+add_subdirectory(calendar)
 add_subdirectory(devicenotifier)
 add_subdirectory(digital-clock)
-plasma_install_package(calendar org.kde.plasma.calendar)
 plasma_install_package(clipboard org.kde.plasma.clipboard)
 
 if(NOT WIN32)

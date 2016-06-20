@@ -42,6 +42,8 @@ class CalculatorRunner : public Plasma::AbstractRunner
         void match(Plasma::RunnerContext &context) override;
 
     protected Q_SLOTS:
+        void run(const Plasma::RunnerContext &context, const Plasma::QueryMatch &match) override;
+        QList<QAction *> actionsForMatch(const Plasma::QueryMatch &match) override;
         QMimeData * mimeDataForMatch(const Plasma::QueryMatch &match) override;
 
     private:

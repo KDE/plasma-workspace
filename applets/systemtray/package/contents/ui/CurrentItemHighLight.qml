@@ -23,16 +23,18 @@ import org.kde.plasma.core 2.0 as PlasmaCore
 PlasmaCore.FrameSvgItem {
     id: expandedItem
 
+    property Item visualParent
     property Item target
     property int location
 
-    x: target ? target.x : 0
-    y: target ? target.y : 0
-    width: target ? target.width : 0
-    height: target ? target.height : 0
+    x: Math.max(0, (target ? target.x : 0) + (visualParent ? visualParent.x : 0))
+    y: Math.max(0, (target ? target.y : 0) + (visualParent ? visualParent.y : 0))
+    width: Math.min(parent.width, target ? target.width : 0)
+    height: Math.min(parent.height, target ? target.height : 0)
 
     imagePath: "widgets/tabbar"
     prefix: {
+        var prefix = ""
         switch (location) {
             case PlasmaCore.Types.LeftEdge:
                 prefix = "west-active-tab";

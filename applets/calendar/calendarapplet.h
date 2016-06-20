@@ -1,5 +1,5 @@
 /*
- * Copyright 2015 Martin Klapetek <mklapetek@kde.org>
+ * Copyright 2016 Kai Uwe Broulik <kde@privat.broulik.de>
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License as
@@ -15,25 +15,24 @@
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ *
  */
 
-import QtQuick 2.0
-import QtQuick.Controls 1.0 as QtControls
-import QtQuick.Layouts 1.0 as QtLayouts
+#pragma once
 
-Item {
-    id: generalPage
-    
-    width: childrenRect.width
-    height: childrenRect.height
+#include <Plasma/Applet>
 
-    property alias cfg_showWeekNumbers: showWeekNumbers.checked
+class QDateTime;
 
-    QtLayouts.ColumnLayout {
-        QtControls.CheckBox {
-            id: showWeekNumbers
-            text: i18n("Show week numbers in Calendar")
-        }
-    }
-}
+class CalendarApplet : public Plasma::Applet
+{
+    Q_OBJECT
+
+public:
+    explicit CalendarApplet(QObject *parent, const QVariantList &data);
+    ~CalendarApplet() override;
+
+    Q_INVOKABLE int weekNumber(const QDateTime &dateTime) const;
+
+};

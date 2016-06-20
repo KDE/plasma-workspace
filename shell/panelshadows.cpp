@@ -168,6 +168,16 @@ void PanelShadows::removeWindow(const QWindow *window)
     }
 }
 
+void PanelShadows::setEnabledBorders(const QWindow *window, Plasma::FrameSvg::EnabledBorders enabledBorders)
+{
+    if (!window || !d->m_windows.contains(window)) {
+        return;
+    }
+
+    d->updateShadow(window, enabledBorders);
+}
+
+
 void PanelShadows::Private::windowDestroyed(QObject *deletedObject)
 {
     m_windows.remove(static_cast<QWindow *>(deletedObject));

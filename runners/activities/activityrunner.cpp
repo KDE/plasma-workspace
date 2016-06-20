@@ -158,7 +158,7 @@ void ActivityRunner::addMatch(const KActivities::Info &activity, QList<Plasma::Q
     Plasma::QueryMatch match(this);
     match.setData(activity.id());
     match.setType(Plasma::QueryMatch::ExactMatch);
-    match.setIcon(activity.icon().isEmpty() ? QIcon::fromTheme(QStringLiteral("preferences-activities")) : QIcon::fromTheme(activity.icon()));
+    match.setIconName(activity.icon().isEmpty() ? QStringLiteral("preferences-activities") : activity.icon());
     match.setText(i18n("Switch to \"%1\"", activity.name()));
     match.setRelevance(0.7 + ((activity.state() == KActivities::Info::Running ||
                                activity.state() == KActivities::Info::Starting) ? 0.1 : 0));

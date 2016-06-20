@@ -94,6 +94,8 @@ void SystemTrayContainer::constraintsEvent(Plasma::Types::Constraints constraint
             return;
         }
 
+        m_innerContainment->setParent(this);
+        connect(containment(), &Plasma::Containment::screenChanged, m_innerContainment.data(), &Plasma::Containment::reactToScreenChange);
         if (formFactor() == Plasma::Types::Horizontal || formFactor() == Plasma::Types::Vertical) {
             m_innerContainment->setFormFactor(formFactor());
         } else {
@@ -111,8 +113,10 @@ void SystemTrayContainer::constraintsEvent(Plasma::Types::Constraints constraint
             }
         );
 
-        //don't let internal systray manage context menus
-        m_internalSystray->setAcceptedMouseButtons(Qt::NoButton);
+        if (m_internalSystray) {
+            //don't let internal systray manage context menus
+            m_internalSystray->setAcceptedMouseButtons(Qt::NoButton);
+        }
 
         //replace internal remove action with ours
         m_innerContainment->actions()->addAction("remove", actions()->action("remove"));

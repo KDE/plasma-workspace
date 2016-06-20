@@ -128,6 +128,8 @@ if test $? -ne 0; then
   exit 1
 fi
 
+qdbus org.kde.KSplash /KSplash org.kde.KSplash.setStage kinit
+
 # finally, give the session control to the session manager
 # see kdebase/ksmserver for the description of the rest of the startup sequence
 # if the KDEWM environment variable has been set, then it will be used as KDE's

@@ -253,9 +253,9 @@ void ServiceRunner::match(Plasma::RunnerContext &context)
                 Plasma::QueryMatch match(this);
                 match.setType(Plasma::QueryMatch::HelperMatch);
                 if (!action.icon().isEmpty()) {
-                    match.setIcon(QIcon::fromTheme(action.icon()));
+                    match.setIconName(action.icon());
                 } else {
-                    match.setIcon(QIcon::fromTheme(service->icon()));
+                    match.setIconName(service->icon());
                 }
                 match.setText(i18nc("Jump list search result, %1 is action (eg. open new tab), %2 is application (eg. browser)",
                                     "%1 - %2", action.text(), service->name()));
@@ -292,7 +292,7 @@ void ServiceRunner::run(const Plasma::RunnerContext &context, const Plasma::Quer
             QStringLiteral("org.kde.krunner")
         );
 
-        new KRun(QUrl::fromLocalFile(service->entryPath()), nullptr, true);
+        KRun::runService(*service, {}, nullptr, true);
     }
 }
 
@@ -310,7 +310,7 @@ void ServiceRunner::setupMatch(const KService::Ptr &service, Plasma::QueryMatch 
     }
 
     if (!service->icon().isEmpty()) {
-        match.setIcon(QIcon::fromTheme(service->icon()));
+        match.setIconName(service->icon());
     }
 }
 

@@ -53,6 +53,7 @@ public:
         AppName,          /**< Application name. */
         GenericName,      /**< Generic application name. */
         LauncherUrl,      /**< URL that can be used to launch this application (.desktop or executable). */
+        LauncherUrlWithoutIcon, /**< Special path to get a launcher URL while skipping fallback icon encoding. Used as speed optimization. */
         LegacyWinIdList,  /**< X11 window ids. Stopgap until we have something better. */
         MimeType,         /**< MIME type for this task (window, window group), needed for DND. */
         MimeData,         /**< Data for MimeType. */

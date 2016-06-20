@@ -29,8 +29,6 @@
 #include <QDateTime>
 #include <QVector>
 
-#include <climits>
-
 class KJob;
 namespace KIO
 {
@@ -55,22 +53,23 @@ public:
 
     QString condition;
     QString conditionIcon;
-    QString temperature_C;
+    float temperature_C;
     QString windDirection;
-    QString windSpeed_miles;
-    QString humidity;
-    QString pressure;
+    float windSpeed_miles;
+    float humidity;
+    float pressure;
     QString pressureTendency;
     QString visibilityStr;
 
     // Five day forecast
     struct ForecastInfo {
+        ForecastInfo();
         QString period;
         QString iconName;
         QString summary;
-        int tempHigh;
-        int tempLow;
-        int windSpeed;
+        float tempHigh;
+        float tempLow;
+        float windSpeed;
         QString windDirection;
     };
 
@@ -106,28 +105,16 @@ private Q_SLOTS:
 private:
     void updateWeather(const QString& source);
 
-    QString place(const QString& source) const;
-    QString station(const QString& source) const;
-    QString observationTime(const QString& source) const;
     //bool night(const QString& source) const;
-    int periodHour(const QString& source) const;
-    int periodMinute(const QString& source) const;
-    double periodLatitude(const QString& source) const;
-    double periodLongitude(const QString& source) const;
-    QString condition(const QString& source) const;
-    QMap<QString, QString> temperature(const QString& source) const;
-    QMap<QString, QString> wind(const QString& source) const;
-    QMap<QString, QString> humidity(const QString& source) const;
-    QString visibility(const QString& source) const;
-    QMap<QString, QString> pressure(const QString& source) const;
-    QVector<QString> forecasts(const QString& source);
 
     /* UKMET Methods - Internal for Ion */
     QMap<QString, ConditionIcons> setupDayIconMappings() const;
     QMap<QString, ConditionIcons> setupNightIconMappings() const;
+    QMap<QString, IonInterface::WindDirections> setupWindIconMappings() const;
 
     QMap<QString, ConditionIcons> const& nightIcons() const;
     QMap<QString, ConditionIcons> const& dayIcons() const;
+    QMap<QString, IonInterface::WindDirections> const& windIcons() const;
 
     // Load and Parse the place search XML listings
     void findPlace(const QString& place, const QString& source);
@@ -147,6 +134,8 @@ private:
     void parsePlaceForecast(const QString& source, QXmlStreamReader& xml);
     void parseWeatherForecast(const QString& source, QXmlStreamReader& xml);
     void parseUnknownElement(QXmlStreamReader& xml) const;
+
+    void parseFloat(float& value, const QString& string);
 
     void deleteForecasts();
 
@@ -179,8 +168,6 @@ private:
 
     QDateTime m_dateFormat;
     QStringList m_sourcesToReset;
-
-    static const int UNKNOWN_TEMPERATURE = INT_MIN;
 };
 
 #endif

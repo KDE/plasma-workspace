@@ -135,6 +135,17 @@ QVariant LauncherTasksModel::data(const QModelIndex &index, int role) const
     } else if (role == LauncherUrl) {
         // Take resolved URL from cache.
         return data.url;
+    } else if (role == LauncherUrlWithoutIcon) {
+        // Take resolved URL from cache.
+        QUrl url = data.url;
+
+        if (url.hasQuery()) {
+            QUrlQuery query(url);
+            query.removeQueryItem(QLatin1String("iconData"));
+            url.setQuery(query);
+        }
+
+        return url;
     } else if (role == IsLauncher) {
         return true;
     } else if (role == IsOnAllVirtualDesktops) {
@@ -175,14 +186,27 @@ void LauncherTasksModel::setLauncherList(const QStringList &launchers)
     }
 
     if (d->launchers != urls) {
-        beginResetModel();
+        // Common case optimization: If the list changed but its size
+        // did not (e.g. due to reordering by a user of this model),
+        // just clear the caches and announce new data instead of
+        // resetting.
+        if (d->launchers.count() == urls.count()) {
+            d->launchers.clear();
+            d->appDataCache.clear();
 
-        d->launchers.clear();
-        d->appDataCache.clear();
+            d->launchers = urls;
 
-        d->launchers = urls;
+            emit dataChanged(index(0, 0), index(d->launchers.count() - 1, 0));
+        } else {
+            beginResetModel();
 
-        endResetModel();
+            d->launchers.clear();
+            d->appDataCache.clear();
+
+            d->launchers = urls;
+
+            endResetModel();
+        }
 
         emit launcherListChanged();
     }

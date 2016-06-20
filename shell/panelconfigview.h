@@ -49,6 +49,7 @@ class PanelConfigView : public PlasmaQuick::ConfigView
 {
     Q_OBJECT
     Q_PROPERTY(PanelView::VisibilityMode visibilityMode READ visibilityMode WRITE setVisibilityMode NOTIFY visibilityModeChanged)
+    Q_PROPERTY(Plasma::FrameSvg::EnabledBorders enabledBorders READ enabledBorders NOTIFY enabledBordersChanged)
 
 public:
     PanelConfigView(Plasma::Containment *interface, PanelView *panelView, QWindow *parent = 0);
@@ -58,6 +59,8 @@ public:
 
     PanelView::VisibilityMode visibilityMode() const;
     void setVisibilityMode(PanelView::VisibilityMode mode);
+
+    Plasma::FrameSvg::EnabledBorders enabledBorders() const;
 
 protected:
     void showEvent(QShowEvent *ev) override;
@@ -72,18 +75,20 @@ public Q_SLOTS:
 
 protected Q_SLOTS:
     void syncGeometry();
-    void syncSlideLocation();
+    void syncLocation();
 
 private Q_SLOTS:
     void updateContrast();
 
 Q_SIGNALS:
     void visibilityModeChanged();
+    void enabledBordersChanged();
 
 private:
     Plasma::Containment *m_containment;
     QPointer<PanelView> m_panelView;
     PanelView::VisibilityMode m_visibilityMode;
+    Plasma::FrameSvg::EnabledBorders m_enabledBorders = Plasma::FrameSvg::AllBorders;
     Plasma::Theme m_theme;
     QTimer m_deleteTimer;
     QTimer m_screenSyncTimer;

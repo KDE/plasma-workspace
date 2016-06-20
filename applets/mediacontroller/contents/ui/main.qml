@@ -56,6 +56,7 @@ Item {
     property bool noPlayer: mpris2Source.sources.length <= 1
 
     readonly property bool canRaise: !root.noPlayer && mpris2Source.data[mpris2Source.current].CanRaise
+    readonly property bool canQuit: !root.noPlayer && mpris2Source.data[mpris2Source.current].CanQuit
 
     Plasmoid.switchWidth: units.gridUnit * 14
     Plasmoid.switchHeight: units.gridUnit * 10
@@ -67,6 +68,9 @@ Item {
         plasmoid.clearActions()
         if (canRaise) {
             plasmoid.setAction("openplayer", i18nc("Bring the window of player %1 to the front", "Open %1", mpris2Source.data[mpris2Source.current].Identity))
+        }
+        if (canQuit) {
+            plasmoid.setAction("quitplayer", i18nc("Quit player", "Quit"), "application-exit")
         }
     }
 
@@ -128,6 +132,9 @@ Item {
 
     function action_openplayer() {
         serviceOp(mpris2Source.current, "Raise");
+    }
+    function action_quitplayer() {
+        serviceOp(mpris2Source.current, "Quit");
     }
 
     function playPause() {

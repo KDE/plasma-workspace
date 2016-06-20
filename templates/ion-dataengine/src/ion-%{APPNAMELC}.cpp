@@ -110,11 +110,11 @@ void %{APPNAME}Ion::onWeatherDataReport(const QString &source)
 
     // examples, see the existing ion dataengines for other keys in use:
     // plasma-workspace/dataengines/weather/ions/
-    // an overview document with all common keys and value types is yet to be written
+    // For an overview of all common keys and value types see plasma-workspace/dataengines/weather/ions/ion.h
     data.insert(QStringLiteral("Place"), "Some %{APPNAME} place");
     data.insert(QStringLiteral("Station"), "Some %{APPNAME} station");
     data.insert(QStringLiteral("Credit"), "%{APPNAME} weather data provider");
-    data.insert(QStringLiteral("Temperature"), "23.4");
+    data.insert(QStringLiteral("Temperature"), 23.4);
     data.insert(QStringLiteral("Temperature Unit"), QString::number(KUnitConversion::Celsius));
 
     // finally set the created data for the given source key, so it will be pushed out to all consumers

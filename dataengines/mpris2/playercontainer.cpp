@@ -75,6 +75,8 @@ static QVariant::Type expPropType(const QString& propName)
         return QVariant::Bool;
     else if (propName == QLatin1String("CanRaise"))
         return QVariant::Bool;
+    else if (propName == QLatin1String("CanQuit"))
+        return QVariant::Bool;
     return QVariant::Invalid;
 }
 
@@ -98,8 +100,6 @@ static PlayerContainer::Cap capFromName(const QString& capName)
         return PlayerContainer::CanGoNext;
     else if (capName == QLatin1String("CanGoPrevious"))
         return PlayerContainer::CanGoPrevious;
-    else if (capName == QLatin1String("CanRaise"))
-        return PlayerContainer::CanRaise;
     return PlayerContainer::NoCaps;
 }
 

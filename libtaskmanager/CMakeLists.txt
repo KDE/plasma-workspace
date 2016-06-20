@@ -5,6 +5,7 @@ set(taskmanager_LIB_SRCS
     abstracttasksmodel.cpp
     activityinfo.cpp
     concatenatetasksproxymodel.cpp
+    flattentaskgroupsproxymodel.cpp
     launchertasksmodel.cpp
     startuptasksmodel.cpp
     taskfilterproxymodel.cpp
@@ -34,10 +35,10 @@ target_link_libraries(taskmanager
         Qt5::Core
         Qt5::Gui
         Qt5::Quick
+        KF5::ItemModels
         KF5::WaylandClient
     PRIVATE
         KF5::Activities
-        KF5::ItemModels
         KF5::ConfigCore
         KF5::KIOCore
         KF5::KIOWidgets
@@ -54,7 +55,7 @@ endif()
 
 set_target_properties(taskmanager PROPERTIES
                       VERSION ${PROJECT_VERSION}
-                      SOVERSION ${PROJECT_VERSION_MAJOR}
+                      SOVERSION 6
                       EXPORT_NAME LibTaskManager)
 
 install(TARGETS taskmanager EXPORT libtaskmanagerLibraryTargets ${KDE_INSTALL_TARGETS_DEFAULT_ARGS} )
@@ -64,6 +65,7 @@ install(FILES
     abstracttasksmodeliface.h
     activityinfo.h
     concatenatetasksproxymodel.h
+    flattentaskgroupsproxymodel.h
     launchertasksmodel.h
     startuptasksmodel.h
     taskfilterproxymodel.h

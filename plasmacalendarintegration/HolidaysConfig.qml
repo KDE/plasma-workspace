@@ -57,7 +57,7 @@ Item {
         QtControls.TextField {
             id: filter
             Layout.fillWidth: true
-            placeholderText: i18n("Search Holiday Regions")
+            placeholderText: i18nd("kholidays_calendar_plugin", "Search Holiday Regions")
         }
 
         QtControls.TableView {
@@ -97,15 +97,15 @@ Item {
             }
             QtControls.TableViewColumn {
                 role: "region"
-                title: i18n("Region")
+                title: i18nd("kholidays_calendar_plugin", "Region")
             }
             QtControls.TableViewColumn {
                 role: "name"
-                title: i18n("Name")
+                title: i18nd("kholidays_calendar_plugin", "Name")
             }
             QtControls.TableViewColumn {
                 role: "description"
-                title: i18n("Description")
+                title: i18nd("kholidays_calendar_plugin", "Description")
             }
         }
     }

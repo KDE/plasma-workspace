@@ -216,19 +216,13 @@ QString defaultApplication(const QUrl &url)
     return QString("");
 }
 
-bool launcherUrlsMatch(const QUrl &_a, const QUrl &_b, UrlComparisonMode mode)
+bool launcherUrlsMatch(const QUrl &a, const QUrl &b, UrlComparisonMode mode)
 {
     if (mode == IgnoreQueryItems) {
-        QUrl a(_a);
-        a.setQuery(QUrlQuery());
-
-        QUrl b(_b);
-        b.setQuery(QUrlQuery());
-
-        return (a == b);
+        return (a.adjusted(QUrl::RemoveQuery) == b.adjusted(QUrl::RemoveQuery));
     }
 
-    return (_a == _b);
+    return (a == b);
 }
 
 bool appsMatch(const QModelIndex &a, const QModelIndex &b)
@@ -236,14 +230,14 @@ bool appsMatch(const QModelIndex &a, const QModelIndex &b)
     const QString &aAppId = a.data(AbstractTasksModel::AppId).toString();
     const QString &bAppId = b.data(AbstractTasksModel::AppId).toString();
 
-    if (!aAppId.isEmpty() && bAppId.isEmpty() && (aAppId == bAppId)) {
+    if (!aAppId.isEmpty() && aAppId == bAppId) {
         return true;
     }
 
-    const QUrl &aLauncherUrl = a.data(AbstractTasksModel::LauncherUrl).toUrl();
-    const QUrl &bLauncherUrl = b.data(AbstractTasksModel::LauncherUrl).toUrl();
+    const QUrl &aUrl = a.data(AbstractTasksModel::LauncherUrlWithoutIcon).toUrl();
+    const QUrl &bUrl = b.data(AbstractTasksModel::LauncherUrlWithoutIcon).toUrl();
 
-    if (aLauncherUrl.isValid() && bLauncherUrl.isValid() && (aLauncherUrl == bLauncherUrl)) {
+    if (aUrl.isValid() && aUrl == bUrl) {
         return true;
     }
 

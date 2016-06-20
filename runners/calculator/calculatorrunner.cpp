@@ -215,7 +215,7 @@ void CalculatorRunner::match(Plasma::RunnerContext &context)
     if (cmd.toLower() == QLatin1String("universe") || cmd.toLower() == QLatin1String("life")) {
         Plasma::QueryMatch match(this);
         match.setType(Plasma::QueryMatch::InformationalMatch);
-        match.setIcon(QIcon::fromTheme(QStringLiteral("accessories-calculator")));
+        match.setIconName(QStringLiteral("accessories-calculator"));
         match.setText(QStringLiteral("42"));
         match.setData("42");
         match.setId(term);
@@ -264,7 +264,7 @@ void CalculatorRunner::match(Plasma::RunnerContext &context)
 
         Plasma::QueryMatch match(this);
         match.setType(Plasma::QueryMatch::InformationalMatch);
-        match.setIcon(QIcon::fromTheme(QStringLiteral("accessories-calculator")));
+        match.setIconName(QStringLiteral("accessories-calculator"));
         match.setText(result);
         match.setData(result);
         match.setId(term);
@@ -312,6 +312,28 @@ QString CalculatorRunner::calculate(const QString& term)
 
     return roundedResultString;
     #endif
+}
+
+void CalculatorRunner::run(const Plasma::RunnerContext &context, const Plasma::QueryMatch &match)
+{
+    Q_UNUSED(context);
+
+    if (match.selectedAction()) {
+        m_engine->copyToClipboard();
+    }
+}
+
+QList<QAction *> CalculatorRunner::actionsForMatch(const Plasma::QueryMatch &match)
+{
+    Q_UNUSED(match)
+
+    const QString copyToClipboard = QStringLiteral("copyToClipboard");
+
+    if (!action(copyToClipboard)) {
+        (addAction(copyToClipboard, QIcon::fromTheme(QStringLiteral("edit-copy")), i18n("Copy to Clipboard")));
+    }
+
+    return {action(copyToClipboard)};
 }
 
 QMimeData * CalculatorRunner::mimeDataForMatch(const Plasma::QueryMatch &match)

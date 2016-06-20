@@ -5,7 +5,7 @@ import QtQuick 2.0
 
 ListModel {
     property int primary: 0
-    
+
     //Creating multiple ListElement objects doesn't work, because a ListElement can only take numbers,
     //strings, booleans or enums, but we need a rect (it stores the screen size/position).
     //We can insert rects into the ListModel by using this workaround
@@ -27,6 +27,6 @@ ListModel {
 
     function geometry() {
         //return the primary monitor size
-        return Qt.rect(800, 0, 800, 400);
+        return Qt.rect(800, 800, 0, 200);
     }
 }

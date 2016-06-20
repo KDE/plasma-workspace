@@ -35,13 +35,13 @@ class RecentDocuments : public Plasma::AbstractRunner {
         void run(const Plasma::RunnerContext &context, const Plasma::QueryMatch &match) override;
 
     private Q_SLOTS:
+        QList<QAction *> actionsForMatch(const Plasma::QueryMatch &match) override;
         QMimeData * mimeDataForMatch(const Plasma::QueryMatch &match) override;
 
     private Q_SLOTS:
         void loadRecentDocuments();
 
     private:
-        QIcon m_icon;
         QStringList m_recentdocuments;
 };
 

@@ -99,43 +99,43 @@ QString IonInterface::getWindDirectionIcon(const QMap<QString, WindDirections> &
 {
     switch (windDirList[windDirection.toLower()]) {
     case N:
-        return i18n("N");
+        return QStringLiteral("N");
     case NNE:
-        return i18n("NNE");
+        return QStringLiteral("NNE");
     case NE:
-        return i18n("NE");
+        return QStringLiteral("NE");
     case ENE:
-        return i18n("ENE");
+        return QStringLiteral("ENE");
     case E:
-        return i18n("E");
+        return QStringLiteral("E");
     case SSE:
-        return i18n("SSE");
+        return QStringLiteral("SSE");
     case SE:
-        return i18n("SE");
+        return QStringLiteral("SE");
     case ESE:
-        return i18n("ESE");
+        return QStringLiteral("ESE");
     case S:
-        return i18n("S");
+        return QStringLiteral("S");
     case NNW:
-        return i18n("NNW");
+        return QStringLiteral("NNW");
     case NW:
-        return i18n("NW");
+        return QStringLiteral("NW");
     case WNW:
-        return i18n("WNW");
+        return QStringLiteral("WNW");
     case W:
-        return i18n("W");
+        return QStringLiteral("W");
     case SSW:
-        return i18n("SSW");
+        return QStringLiteral("SSW");
     case SW:
-        return i18n("SW");
+        return QStringLiteral("SW");
     case WSW:
-        return i18n("WSW");
+        return QStringLiteral("WSW");
     case VR:
-        return i18n("N/A"); // For now, we'll make a variable wind icon later on
+        return QStringLiteral("VR"); // For now, we'll make a variable wind icon later on
     }
 
     // No icon available, use 'X'
-    return i18n("N/A");
+    return QString();
 }
 
 /**

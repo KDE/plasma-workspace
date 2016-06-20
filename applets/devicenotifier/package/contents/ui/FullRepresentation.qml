@@ -29,8 +29,8 @@ import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 
 Item {
-    Layout.minimumWidth: units.gridUnit * 18
-    Layout.minimumHeight: units.gridUnit * 22
+    Layout.minimumWidth: units.gridUnit * 12
+    Layout.minimumHeight: units.gridUnit * 12
 
     PlasmaExtras.Heading {
         width: parent.width
@@ -108,15 +108,6 @@ Item {
                 //this is needed to make SectionScroller actually work
                 //acceptable since one doesn't have a billion of devices
                 cacheBuffer: 1000
-
-                onCountChanged: {
-                    if (count == 0) {
-                        passiveTimer.restart()
-                    } else {
-                        passiveTimer.stop()
-                        plasmoid.status = PlasmaCore.Types.ActiveStatus
-                    }
-                }
 
                 section {
                     property: "Type Description"

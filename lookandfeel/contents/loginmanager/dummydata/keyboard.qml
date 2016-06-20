@@ -4,7 +4,7 @@ QtObject
 {
     property int currentLayout : 0
     property var layouts : [
-        { shortName: "us", longName: "English" },
-        { shortName: "cz", longName: "Czech" }
+        { shortName: "US", longName: "English" },
+        { shortName: "CZ", longName: "Czech" }
     ]
 }

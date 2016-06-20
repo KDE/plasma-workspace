@@ -35,6 +35,7 @@ public:
     AbstractTasksModelIface *abstractTasksSourceModel = nullptr;
 
     TasksModel::GroupMode groupMode = TasksModel::GroupApplications;
+    bool groupDemandingAttention = false;
     int windowTasksThreshold = -1;
 
     QVector<QVector<int>> rowMap;
@@ -154,13 +155,39 @@ void TaskGroupingProxyModel::Private::sourceRowsAboutToBeRemoved(const QModelInd
                 if (sourceRows.count() == 1) {
                     q->beginRemoveRows(QModelIndex(), j, j);
                     rowMap.remove(j);
+
+                    // index() encodes parent row numbers in indices returned for group
+                    // members. endRemoveRows() is not aware of this scheme, and so won't
+                    // update any persistent indices with new row values. We're now going
+                    // to do it ourselves.
+                    foreach (const QModelIndex &idx, q->persistentIndexList()) {
+                        // internalId() for group members is parent row + 1, so the first
+                        // id after j is (j + 2).
+                        if (idx.internalId() > ((uint)j + 1)) {
+                            q->changePersistentIndex(idx, q->createIndex(idx.row(), 0, idx.internalId() - 1));
+                        }
+                    }
+
                     q->endRemoveRows();
                 // Dissolve group.
                 } else if (sourceRows.count() == 2) {
                     const QModelIndex parent = q->index(j, 0);
                     q->beginRemoveRows(parent, 0, 1);
                     rowMap[j].remove(mapIndex);
+
+                    // index() encodes parent row numbers in indices returned for group
+                    // members. endRemoveRows() is not aware of this scheme, and so won't
+                    // invalidate persistent indices for the members of the group we're
+                    // dissolving. We're now going to do it ourselves.
+                    foreach (const QModelIndex &idx, q->persistentIndexList()) {
+                        if (idx.internalId() == ((uint)j + 1)) {
+                            q->changePersistentIndex(idx, QModelIndex());
+                        }
+                    }
+
                     q->endRemoveRows();
+
+                    // We're no longer a group parent.
                     q->dataChanged(parent, parent);
                 // Remove group member.
                 } else {
@@ -168,6 +195,9 @@ void TaskGroupingProxyModel::Private::sourceRowsAboutToBeRemoved(const QModelInd
                     q->beginRemoveRows(parent, mapIndex, mapIndex);
                     rowMap[j].remove(mapIndex);
                     q->endRemoveRows();
+
+                    // Various roles of the parent evaluate child data, and the
+                    // child list has changed.
                     q->dataChanged(parent, parent);
                 }
 
@@ -219,15 +249,14 @@ void TaskGroupingProxyModel::Private::sourceDataChanged(QModelIndex topLeft, QMo
         // child in data(); it _might_ be worth adding constraints here later.
         if (parent.isValid()) {
             q->dataChanged(parent, parent, roles);
-
-            return;
         }
 
-        // tryToGroup() exempts tasks which demand attention from being grouped.
-        // If this task is no longer demanding attention, we need to try grouping
-        // it now.
-        if (roles.contains(AbstractTasksModel::IsDemandingAttention) &&
-            !sourceIndex.data(AbstractTasksModel::IsDemandingAttention).toBool()) {
+        // When Private::groupDemandingAttention is false, tryToGroup() exempts tasks
+        // which demand attention from being grouped. Therefore if this task is no longer
+        // demanding attention, we need to try grouping it now.
+        if (!parent.isValid()
+            && !groupDemandingAttention && roles.contains(AbstractTasksModel::IsDemandingAttention)
+            && !sourceIndex.data(AbstractTasksModel::IsDemandingAttention).toBool()) {
 
             if (shouldGroupTasks() && tryToGroup(sourceIndex)) {
                 q->beginRemoveRows(QModelIndex(), proxyIndex.row(), proxyIndex.row());
@@ -360,9 +389,11 @@ bool TaskGroupingProxyModel::Private::tryToGroup(const QModelIndex &sourceIndex,
         return false;
     }
 
-    // If this task is demanding attention, don't group it at this time. We'll
-    // try to group it once it no longer demands attention.
-    if (sourceIndex.data(AbstractTasksModel::IsDemandingAttention).toBool()) {
+    // If Private::groupDemandingAttention is false and this task is demanding
+    // attention, don't group it at this time. We'll instead try to group it once
+    // it no longer demands attention (see sourceDataChanged()).
+    if (!groupDemandingAttention
+        && sourceIndex.data(AbstractTasksModel::IsDemandingAttention).toBool()) {
         return false;
     }
 
@@ -466,13 +497,26 @@ void TaskGroupingProxyModel::Private::breakGroupFor(const QModelIndex &index, bo
     // TODO: This could technically be optimized, though it's very
     // unlikely to be ever worth it.
     if (!silent) {
-        q->beginRemoveRows(index, 0, (extraChildren.count() + 1));
+        q->beginRemoveRows(index, 0, extraChildren.count());
     }
 
     rowMap[row].resize(1);
 
+    // index() encodes parent row numbers in indices returned for group
+    // members. endRemoveRows() is not aware of this scheme, and so won't
+    // invalidate persistent indices for the members of the group we're
+    // dissolving. We're now going to do it ourselves.
+    foreach (const QModelIndex &idx, q->persistentIndexList()) {
+        if (idx.internalId() == ((uint)row + 1)) {
+            q->changePersistentIndex(idx, QModelIndex());
+        }
+    }
+
     if (!silent) {
         q->endRemoveRows();
+
+        // We're no longer a group parent.
+        q->dataChanged(index, index);
 
         q->beginInsertRows(QModelIndex(), rowMap.count(),
             rowMap.count() + (extraChildren.count() - 1));
@@ -484,9 +528,6 @@ void TaskGroupingProxyModel::Private::breakGroupFor(const QModelIndex &index, bo
 
     if (!silent) {
         q->endInsertRows();
-
-        // We're no longer a group parent.
-        q->dataChanged(index, index);
     }
 }
 
@@ -501,15 +542,19 @@ TaskGroupingProxyModel::~TaskGroupingProxyModel()
 
 QModelIndex TaskGroupingProxyModel::index(int row, int column, const QModelIndex &parent) const
 {
-    if (row < 0 || column < 0) {
+    if (row < 0 || column != 0) {
         return QModelIndex();
     }
 
-    if (parent.isValid()) {
+    if (parent.isValid() && row < d->rowMap.at(parent.row()).count()) {
         return createIndex(row, column, parent.row() + 1);
     }
 
-    return createIndex(row, column, (quintptr)0);
+    if (row < d->rowMap.count()) {
+        return createIndex(row, column, (quintptr)0);
+    }
+
+    return QModelIndex();
 }
 
 QModelIndex TaskGroupingProxyModel::parent(const QModelIndex &child) const
@@ -581,6 +626,12 @@ int TaskGroupingProxyModel::rowCount(const QModelIndex &parent) const
     }
 
     if (parent.isValid() && parent.model() == this) {
+        // Don't return row count for top-level item at child row: Group members
+        // never have further children of their own.
+        if (parent.parent().isValid()) {
+            return 0;
+        }
+
         if (parent.row() < 0 || parent.row() >= d->rowMap.count()) {
             return 0;
         }
@@ -597,6 +648,15 @@ int TaskGroupingProxyModel::rowCount(const QModelIndex &parent) const
     }
 
     return d->rowMap.count();
+}
+
+bool TaskGroupingProxyModel::hasChildren(const QModelIndex &parent) const
+{
+    if ((parent.model() && parent.model() != this) || !sourceModel()) {
+        return false;
+    }
+
+    return rowCount(parent);
 }
 
 int TaskGroupingProxyModel::columnCount(const QModelIndex &parent) const
@@ -758,6 +818,23 @@ void TaskGroupingProxyModel::setGroupMode(TasksModel::GroupMode mode)
         d->checkGrouping();
 
         emit groupModeChanged();
+    }
+}
+
+bool TaskGroupingProxyModel::groupDemandingAttention() const
+{
+    return d->groupDemandingAttention;
+}
+
+void TaskGroupingProxyModel::setGroupDemandingAttention(bool group)
+{
+    if (d->groupDemandingAttention != group) {
+
+        d->groupDemandingAttention = group;
+
+        d->checkGrouping();
+
+        emit groupDemandingAttentionChanged();
     }
 }
 

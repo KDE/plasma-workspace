@@ -87,7 +87,7 @@ public:
     QIcon icon(WId window);
     QString mimeType() const;
     QUrl windowUrl(WId window);
-    QUrl launcherUrl(WId window);
+    QUrl launcherUrl(WId window, bool encodeFallbackIcon = true);
     QUrl serviceUrl(int pid, const QString &type, const QStringList &cmdRemovals);
     KService::List servicesFromPid(int pid);
     int screen(WId window);
@@ -219,7 +219,7 @@ void XWindowTasksModel::Private::addWindow(WId window)
     const WId leader = info.transientFor();
 
     // Handle transient.
-    if (leader > 0 && leader != QX11Info::appRootWindow()
+    if (leader > 0 && leader != window && leader != QX11Info::appRootWindow()
         && !transients.contains(window) && windows.contains(leader)) {
         transients.insert(window);
 
@@ -649,25 +649,23 @@ QUrl XWindowTasksModel::Private::windowUrl(WId window)
     return url;
 }
 
-QUrl XWindowTasksModel::Private::launcherUrl(WId window)
+QUrl XWindowTasksModel::Private::launcherUrl(WId window, bool encodeFallbackIcon)
 {
     const AppData &data = appData(window);
 
-    if (!data.icon.name().isEmpty()) {
-        return data.url;
-    }
-
-    const QIcon &i = icon(window);
-
-    if (i.isNull()) {
+    if (!encodeFallbackIcon || !data.icon.name().isEmpty()) {
         return data.url;
     }
 
     QUrl url = data.url;
-    QUrlQuery uQuery(url);
 
-    // FIXME Hard-coding 64px is not scaling-aware.
-    const QPixmap pixmap = i.pixmap(QSize(64, 64));
+    // FIXME Hard-coding 64x64 or SizeLarge is not scaling-aware.
+
+    const QPixmap pixmap = KWindowSystem::icon(window, KIconLoader::SizeLarge, KIconLoader::SizeLarge, false);
+    if (pixmap.isNull()) {
+        return data.url;
+    }
+    QUrlQuery uQuery(url);
     QByteArray bytes;
     QBuffer buffer(&bytes);
     buffer.open(QIODevice::WriteOnly);
@@ -780,16 +778,30 @@ KService::List XWindowTasksModel::Private::servicesFromPid(int pid)
 
 int XWindowTasksModel::Private::screen(WId window)
 {
-    const KWindowInfo *info = windowInfo(window);
+    const QPoint &windowCenter = windowInfo(window)->frameGeometry().center();
     const QList<QScreen *> &screens = QGuiApplication::screens();
+    int screen = 0;
+    int shortestDistance = INT_MAX;
 
     for (int i = 0; i < screens.count(); ++i) {
-        if (screens.at(i)->geometry().intersects(info->geometry())) {
+        const QRect &screenGeomtry = screens.at(i)->geometry();
+
+        if (screenGeomtry.contains(windowCenter)) {
             return i;
+        }
+
+        int distance = QPoint(screenGeomtry.topLeft() - windowCenter).manhattanLength();
+        distance = qMin(distance, QPoint(screenGeomtry.topRight() - windowCenter).manhattanLength());
+        distance = qMin(distance, QPoint(screenGeomtry.bottomRight() - windowCenter).manhattanLength());
+        distance = qMin(distance, QPoint(screenGeomtry.bottomLeft() - windowCenter).manhattanLength());
+
+        if (distance < shortestDistance) {
+            shortestDistance = distance;
+            screen = i;
         }
     }
 
-    return -1;
+    return screen;
 }
 
 QStringList XWindowTasksModel::Private::activities(WId window)
@@ -846,6 +858,8 @@ QVariant XWindowTasksModel::data(const QModelIndex &index, int role) const
         return d->appData(window).genericName;
     } else if (role == LauncherUrl) {
         return d->launcherUrl(window);
+    } else if (role == LauncherUrlWithoutIcon) {
+        return d->launcherUrl(window, false /* encodeFallbackIcon */);
     } else if (role == LegacyWinIdList) {
         return QVariantList() << window;
     } else if (role == MimeType) {
