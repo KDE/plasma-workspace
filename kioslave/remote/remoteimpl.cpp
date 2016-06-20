@@ -19,7 +19,7 @@
 
 #include "remoteimpl.h"
 
-#include "kio_remote_debug.h"
+#include "debug.h"
 #include <kglobalsettings.h>
 #include <kstandarddirs.h>
 #include <kdesktopfile.h>

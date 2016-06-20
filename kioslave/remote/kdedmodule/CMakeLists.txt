@@ -1,4 +1,4 @@
-add_library(remotedirnotify MODULE remotedirnotify.cpp remotedirnotifymodule.cpp ../kio_remote_debug.cpp)
+add_library(remotedirnotify MODULE remotedirnotify.cpp remotedirnotifymodule.cpp ../debug.cpp)
 kcoreaddons_desktop_to_json(remotedirnotify remotedirnotify.desktop)
 
 target_link_libraries(remotedirnotify KF5::DBusAddons KF5::KIOCore KF5::KDELibs4Support)

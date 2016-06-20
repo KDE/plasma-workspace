@@ -18,7 +18,7 @@
 */
 
 #include "kio_remote.h"
-#include "kio_remote_debug.h"
+#include "debug.h"
 #include <stdlib.h>
 
 #include <QCoreApplication>

@@ -18,7 +18,7 @@
 
 #include "remotedirnotify.h"
 
-#include "../kio_remote_debug.h"
+#include "../debug.h"
 #include <klocale.h>
 #include <kglobal.h>
 #include <kstandarddirs.h>
