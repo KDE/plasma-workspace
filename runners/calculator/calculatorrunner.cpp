@@ -25,6 +25,8 @@
 #include "qalculate_engine.h"
 #else
 #include <QScriptEngine>
+#include <QGuiApplication>
+#include <QClipboard>
 #endif
 
 #include <QIcon>
@@ -317,10 +319,13 @@ QString CalculatorRunner::calculate(const QString& term)
 void CalculatorRunner::run(const Plasma::RunnerContext &context, const Plasma::QueryMatch &match)
 {
     Q_UNUSED(context);
-
+#ifdef ENABLE_QALCULATE
     if (match.selectedAction()) {
         m_engine->copyToClipboard();
     }
+#else
+    QGuiApplication::clipboard()->setText(match.text());
+#endif
 }
 
 QList<QAction *> CalculatorRunner::actionsForMatch(const Plasma::QueryMatch &match)
