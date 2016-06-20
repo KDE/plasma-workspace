@@ -108,7 +108,7 @@ public:
 
     QHash<int, QByteArray> roleNames() const override;
 
-    Q_INVOKABLE int rowCount(const QModelIndex &parent = QModelIndex()) const; // Invokable.
+    Q_INVOKABLE int rowCount(const QModelIndex &parent = QModelIndex()) const override; // Invokable.
 
     /**
      * The number of launcher tasks in the tast list.
@@ -513,7 +513,7 @@ public:
      *
      * @param index An index in this tasks model.
      **/
-    Q_INVOKABLE void requestActivate(const QModelIndex &index);
+    Q_INVOKABLE void requestActivate(const QModelIndex &index) override;
 
     /**
      * Request an additional instance of the application backing the task
@@ -521,14 +521,14 @@ public:
      *
      * @param index An index in this tasks model.
      **/
-    Q_INVOKABLE void requestNewInstance(const QModelIndex &index);
+    Q_INVOKABLE void requestNewInstance(const QModelIndex &index) override;
 
     /**
      * Request the task at the given index be closed.
      *
      * @param index An index in this tasks model.
      **/
-    Q_INVOKABLE void requestClose(const QModelIndex &index);
+    Q_INVOKABLE void requestClose(const QModelIndex &index) override;
 
     /**
      * Request starting an interactive move for the task at the given index.
@@ -538,7 +538,7 @@ public:
      *
      * @param index An index in this tasks model.
      **/
-    Q_INVOKABLE void requestMove(const QModelIndex &index);
+    Q_INVOKABLE void requestMove(const QModelIndex &index) override;
 
     /**
      * Request starting an interactive resize for the task at the given index.
@@ -548,7 +548,7 @@ public:
      *
      * @param index An index in this tasks model.
      **/
-    Q_INVOKABLE void requestResize(const QModelIndex &index);
+    Q_INVOKABLE void requestResize(const QModelIndex &index) override;
 
     /**
      * Request toggling the minimized state of the task at the given index.
@@ -558,7 +558,7 @@ public:
      *
      * @param index An index in this tasks model.
      **/
-    Q_INVOKABLE void requestToggleMinimized(const QModelIndex &index);
+    Q_INVOKABLE void requestToggleMinimized(const QModelIndex &index) override;
 
     /**
      * Request toggling the maximized state of the task at the given index.
@@ -568,7 +568,7 @@ public:
      *
      * @param index An index in this tasks model.
      **/
-    Q_INVOKABLE void requestToggleMaximized(const QModelIndex &index);
+    Q_INVOKABLE void requestToggleMaximized(const QModelIndex &index) override;
 
     /**
      * Request toggling the keep-above state of the task at the given index.
@@ -578,7 +578,7 @@ public:
      *
      * @param index An index in this tasks model.
      **/
-    Q_INVOKABLE void requestToggleKeepAbove(const QModelIndex &index);
+    Q_INVOKABLE void requestToggleKeepAbove(const QModelIndex &index) override;
 
     /**
      * Request toggling the keep-below state of the task at the given index.
@@ -588,7 +588,7 @@ public:
      *
      * @param index An index in this tasks model.
      **/
-    Q_INVOKABLE void requestToggleKeepBelow(const QModelIndex &index);
+    Q_INVOKABLE void requestToggleKeepBelow(const QModelIndex &index) override;
 
     /**
      * Request toggling the fullscreen state of the task at the given index.
@@ -598,7 +598,7 @@ public:
      *
      * @param index An index in this tasks model.
      **/
-    Q_INVOKABLE void requestToggleFullScreen(const QModelIndex &index);
+    Q_INVOKABLE void requestToggleFullScreen(const QModelIndex &index) override;
 
     /**
      * Request toggling the shaded state of the task at the given index.
@@ -608,7 +608,7 @@ public:
      *
      * @param index An index in this tasks model.
      **/
-    Q_INVOKABLE void requestToggleShaded(const QModelIndex &index);
+    Q_INVOKABLE void requestToggleShaded(const QModelIndex &index) override;
 
     /**
      * Request moving the task at the given index to the specified virtual
@@ -620,7 +620,7 @@ public:
      * @param index An index in this tasks model.
      * @param desktop A virtual desktop number.
      **/
-    Q_INVOKABLE void requestVirtualDesktop(const QModelIndex &index, qint32 desktop);
+    Q_INVOKABLE void requestVirtualDesktop(const QModelIndex &index, qint32 desktop) override;
 
     /**
      * Request informing the window manager of new geometry for a visual
@@ -638,7 +638,7 @@ public:
      * reject invalid objects.
      **/
     Q_INVOKABLE void requestPublishDelegateGeometry(const QModelIndex &index, const QRect &geometry,
-        QObject *delegate = nullptr);
+        QObject *delegate = nullptr) override;
 
     /**
      * Request toggling whether the task at the given index, along with any
@@ -727,8 +727,8 @@ Q_SIGNALS:
     void groupingLauncherUrlBlacklistChanged() const;
 
 protected:
-    bool filterAcceptsRow(int sourceRow, const QModelIndex &sourceParent) const;
-    bool lessThan(const QModelIndex &left, const QModelIndex &right) const;
+    bool filterAcceptsRow(int sourceRow, const QModelIndex &sourceParent) const override;
+    bool lessThan(const QModelIndex &left, const QModelIndex &right) const override;
 
 private:
     Q_INVOKABLE void updateLauncherCount();
