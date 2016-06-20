@@ -40,7 +40,9 @@ Applet {
         rangeMin: 0
         rangeMax: 100
         function formatLabel(data) {
-            return i18n("%1 %2", Math.round(data.value*100)/100, data.units);
+            //i18nc("CPU usage: %1 is the value, %2 the unit datatype", "%1 %2")
+            //return i18n("%1 %2", Math.round(data.value), data.units);
+            return i18nc("CPU usage: %1 is the value, %2 the unit datatype", "%1 %2", Math.round(data.value), data.units);
         }
     }
 }

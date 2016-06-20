@@ -32,10 +32,10 @@ Item {
     signal sourceAdded(string source)
     property Component delegate
 
-    width: units.gridUnit * 20
+    width: units.gridUnit * 10
     height: units.gridUnit * 10
     Plasmoid.preferredRepresentation: plasmoid.fullRepresentation
-    Layout.minimumWidth: units.gridUnit * 10 * (plasmoid.formFactor == PlasmaCore.Types.Horizontal ? sourcesModel.count : 1)
+    Layout.minimumWidth: units.gridUnit * 12 * (plasmoid.formFactor == PlasmaCore.Types.Horizontal ? sourcesModel.count : 1)
     Layout.minimumHeight: units.gridUnit * 4 * (plasmoid.formFactor == PlasmaCore.Types.Vertical ? sourcesModel.count : 1)
 
     Layout.preferredHeight: Layout.minimumHeight

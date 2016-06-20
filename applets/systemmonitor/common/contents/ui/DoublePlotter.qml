@@ -33,7 +33,7 @@ KQuickAddons.Plotter {
     horizontalGridLineCount: 0
 
     function formatLabel(data1, data2) {
-        return i18n("%1 %2 / %3 %4", data1.value, data1.units,
+        return i18nc("%1 and %3 are data values, %2 and %4 are unit datatypes", "%1 %2 | %3 %4", data1.value, data1.units,
                             data2.value, data2.units);
     }
 
@@ -78,10 +78,10 @@ KQuickAddons.Plotter {
 
     PlasmaComponents.Label {
         id: speedLabel
-        anchors.fill: parent
         wrapMode: Text.WordWrap
-        verticalAlignment: Text.AlignVCenter
-        horizontalAlignment: Text.AlignHCenter
+        anchors {
+            right: parent.right
+        }
     }
 
     Connections {
