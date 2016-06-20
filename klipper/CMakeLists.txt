@@ -19,7 +19,7 @@ set(libklipper_common_SRCS
     clipcommandprocess.cpp
 )
 
-find_package(KF5Prison "1.2.1" EXACT QUIET CONFIG)
+find_package(KF5Prison "1.2.2" EXACT QUIET CONFIG)
 set_package_properties(KF5Prison PROPERTIES DESCRIPTION "Prison library"
                        URL "http://projects.kde.org/prison"
                        TYPE OPTIONAL
