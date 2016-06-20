@@ -1415,8 +1415,7 @@ void TasksModel::syncLaunchers()
         for (int i = 0; i < rowCount(); ++i) {
             const QUrl &rowLauncherUrl = index(i, 0).data(AbstractTasksModel::LauncherUrlWithoutIcon).toUrl();
 
-            // RemoveQuery to strip possible fallback icon from stored launcher.
-            if (launcherUrl.adjusted(QUrl::RemoveQuery) == rowLauncherUrl) {
+            if (launcherUrlsMatch(launcherUrl, rowLauncherUrl, IgnoreQueryItems)) {
                 row = i;
                 break;
             }
