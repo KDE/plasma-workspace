@@ -24,9 +24,10 @@ import org.kde.plasma.components 2.0 as PlasmaComponents
 PlasmaCore.ToolTipArea {
     id: abstractItem
 
-    height: hidden ? root.hiddenItemSize + marginHints.top + marginHints.bottom : root.itemSize + marginHints.top + marginHints.bottom
-    width: labelVisible ? parent.width : height + marginHints.left + marginHints.right
+    height: effectiveItemSize + marginHints.top + marginHints.bottom
+    width: labelVisible ? parent.width : effectiveItemSize + marginHints.left + marginHints.right
 
+    property real effectiveItemSize: hidden ? root.hiddenItemSize : root.itemSize
     property string itemId
     property string category
     property alias text: label.text

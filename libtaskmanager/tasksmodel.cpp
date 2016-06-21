@@ -207,6 +207,8 @@ void TasksModel::Private::initModels()
     launcherTasksModel = new LauncherTasksModel(q);
     QObject::connect(launcherTasksModel, &LauncherTasksModel::launcherListChanged,
         q, &TasksModel::launcherListChanged);
+    QObject::connect(launcherTasksModel, &LauncherTasksModel::launcherListChanged,
+        q, &TasksModel::updateLauncherCount);
 
     concatProxyModel = new ConcatenateTasksProxyModel(q);
 

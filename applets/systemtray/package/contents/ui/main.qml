@@ -60,7 +60,7 @@ MouseArea {
             } else if (visibleLayout.children[0].itemId == "org.kde.plasma.notifications" &&
                        item.itemId != "org.kde.plasma.notifications") {
                 plasmoid.nativeInterface.reorderItemAfter(item, visibleLayout.children[0]);
-            } else {
+            } else if (visibleLayout.children[0] != item) {
                 plasmoid.nativeInterface.reorderItemBefore(item, visibleLayout.children[0]);
             }
 
@@ -73,7 +73,7 @@ MouseArea {
             } else if (hiddenLayout.children[0].itemId == "org.kde.plasma.notifications" &&
                        item.itemId != "org.kde.plasma.notifications") {
                 plasmoid.nativeInterface.reorderItemAfter(item, hiddenLayout.children[0]);
-            } else {
+            } else if (hiddenLayout.children[0] != item) {
                 plasmoid.nativeInterface.reorderItemBefore(item, hiddenLayout.children[0]);
             }
             item.x = 0;

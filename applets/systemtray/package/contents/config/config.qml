@@ -29,7 +29,7 @@ ConfigModel {
     }
     ConfigCategory {
          name: i18n("Entries")
-         icon: "configure-toolbars"
+         icon: "preferences-desktop-notification"
          source: "ConfigEntries.qml"
     }
 }
