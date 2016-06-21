@@ -268,6 +268,13 @@ void TaskFilterProxyModel::requestVirtualDesktop(const QModelIndex &index, qint3
     }
 }
 
+void TaskFilterProxyModel::requestActivities(const QModelIndex &index, const QStringList &activities)
+{
+    if (d->sourceTasksModel && index.isValid() && index.model() == this) {
+        d->sourceTasksModel->requestActivities(mapToSource(index), activities);
+    }
+}
+
 void TaskFilterProxyModel::requestPublishDelegateGeometry(const QModelIndex &index, const QRect &geometry, QObject *delegate)
 {
     if (index.isValid() && index.model() == this) {

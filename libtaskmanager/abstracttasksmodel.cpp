@@ -113,6 +113,12 @@ void AbstractTasksModel::requestVirtualDesktop(const QModelIndex &index, qint32 
     Q_UNUSED(desktop)
 }
 
+void AbstractTasksModel::requestActivities(const QModelIndex &index, const QStringList &activities)
+{
+    Q_UNUSED(index)
+    Q_UNUSED(activities)
+}
+
 void AbstractTasksModel::requestPublishDelegateGeometry(const QModelIndex &index, const QRect &geometry, QObject *delegate)
 {
     Q_UNUSED(index)

@@ -72,7 +72,7 @@ public:
      *
      * @returns the list of currently-running activities defined in the session.
      **/
-    QStringList runningActivities() const;
+    Q_INVOKABLE QStringList runningActivities() const;
 
     /**
      * The name of the activity of the given id.

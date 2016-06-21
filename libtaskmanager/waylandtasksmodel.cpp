@@ -462,6 +462,12 @@ void WaylandTasksModel::requestVirtualDesktop(const QModelIndex &index, qint32 d
     d->windows.at(index.row())->requestVirtualDesktop(desktop);
 }
 
+void WaylandTasksModel::requestActivities(const QModelIndex &index, const QStringList &activities)
+{
+    Q_UNUSED(index)
+    Q_UNUSED(activities)
+}
+
 void WaylandTasksModel::requestPublishDelegateGeometry(const QModelIndex &index, const QRect &geometry, QObject *delegate)
 {
     /*

@@ -1127,6 +1127,27 @@ void TaskGroupingProxyModel::requestVirtualDesktop(const QModelIndex &index, qin
     }
 }
 
+void TaskGroupingProxyModel::requestActivities(const QModelIndex &index, const QStringList &activities)
+{
+    if (!d->abstractTasksSourceModel || !index.isValid() || index.model() != this) {
+        return;
+    }
+
+    if (index.parent().isValid() || !d->isGroup(index.row())) {
+        d->abstractTasksSourceModel->requestActivities(mapToSource(index), activities);
+    } else {
+        const int row = index.row();
+
+        for (int i = (rowCount(index) - 1); i >= 1; --i) {
+            const QModelIndex &sourceChild = mapToSource(index.child(i, 0));
+            d->abstractTasksSourceModel->requestActivities(sourceChild, activities);
+        }
+
+        d->abstractTasksSourceModel->requestActivities(mapToSource(TaskGroupingProxyModel::index(row, 0)),
+            activities);
+    }
+}
+
 void TaskGroupingProxyModel::requestPublishDelegateGeometry(const QModelIndex &index, const QRect &geometry, QObject *delegate)
 {
     if (!d->abstractTasksSourceModel || !index.isValid() || index.model() != this) {

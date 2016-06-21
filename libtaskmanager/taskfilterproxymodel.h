@@ -325,6 +325,19 @@ public:
     void requestVirtualDesktop(const QModelIndex &index, qint32 desktop) override;
 
     /**
+     * Request moving the task at the given index to the specified activities.
+     *
+     * This is meant for tasks that have an associated window, and may be
+     * a no-op when there is no window.
+     *
+     * This base implementation does nothing.
+     *
+     * @param index An index in this tasks model.
+     * @param activities The new list of activities.
+     **/
+    void requestActivities(const QModelIndex &index, const QStringList &activities);
+
+    /**
      * Request informing the window manager of new geometry for a visual
      * delegate for the task at the given index. The geometry should be in
      * screen coordinates.

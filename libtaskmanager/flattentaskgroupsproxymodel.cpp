@@ -140,6 +140,13 @@ void FlattenTaskGroupsProxyModel::requestVirtualDesktop(const QModelIndex &index
     }
 }
 
+void FlattenTaskGroupsProxyModel::requestActivities(const QModelIndex &index, const QStringList &activities)
+{
+    if (d->sourceTasksModel && index.isValid() && index.model() == this) {
+        d->sourceTasksModel->requestActivities(mapToSource(index), activities);
+    }
+}
+
 void FlattenTaskGroupsProxyModel::requestPublishDelegateGeometry(const QModelIndex &index, const QRect &geometry, QObject *delegate)
 {
     if (index.isValid() && index.model() == this) {

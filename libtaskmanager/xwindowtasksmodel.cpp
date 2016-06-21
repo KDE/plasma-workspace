@@ -1199,6 +1199,18 @@ void XWindowTasksModel::requestVirtualDesktop(const QModelIndex &index, qint32 d
     }
 }
 
+void XWindowTasksModel::requestActivities(const QModelIndex &index, const QStringList &activities)
+{
+    if (!index.isValid() || index.model() != this || index.row() < 0 || index.row() >= d->windows.count()) {
+        return;
+    }
+
+    const WId window = d->windows.at(index.row());
+
+    KWindowSystem::setOnActivities(window, activities);
+}
+
+
 void XWindowTasksModel::requestPublishDelegateGeometry(const QModelIndex &index, const QRect &geometry, QObject *delegate)
 {
     Q_UNUSED(delegate)

@@ -1232,6 +1232,13 @@ void TasksModel::requestVirtualDesktop(const QModelIndex &index, qint32 desktop)
     }
 }
 
+void TasksModel::requestActivities(const QModelIndex &index, const QStringList &activities)
+{
+    if (index.isValid() && index.model() == this) {
+        d->groupingProxyModel->requestActivities(mapToSource(index), activities);
+    }
+}
+
 void TasksModel::requestPublishDelegateGeometry(const QModelIndex &index, const QRect &geometry, QObject *delegate)
 {
     if (index.isValid() && index.model() == this) {

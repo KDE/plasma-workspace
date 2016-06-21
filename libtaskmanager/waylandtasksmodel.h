@@ -163,6 +163,16 @@ public:
     void requestVirtualDesktop(const QModelIndex &index, qint32 desktop) override;
 
     /**
+     * Request moving the window at the given index to the specified activities
+     *
+     * FIXME: This currently does nothing as activities is not implementated in kwin/kwayland
+     *
+     * @param index An index in this window tasks model.
+     * @param desktop A virtual desktop number.
+     **/
+    void requestActivities(const QModelIndex &index, const QStringList &activities) override;
+
+    /**
      * Request informing the window manager of new geometry for a visual
      * delegate for the window at the given index. The geometry is retrieved
      * from the delegate object passed. Right now, QQuickItem is the only
