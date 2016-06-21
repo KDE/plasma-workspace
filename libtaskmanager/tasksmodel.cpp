@@ -1516,18 +1516,13 @@ bool TasksModel::filterAcceptsRow(int sourceRow, const QModelIndex &sourceParent
     const QString &appId = sourceIndex.data(AbstractTasksModel::AppId).toString();
     const QString &appName = sourceIndex.data(AbstractTasksModel::AppName).toString();
 
-    // Filter startup tasks we already have a window task for (that got through
-    // filtering).
+    // Filter startup tasks we already have a window task for.
     if (sourceIndex.data(AbstractTasksModel::IsStartup).toBool()) {
-        for (int i = 0; i < d->filterProxyModel->rowCount(); ++i) {
-            const QModelIndex &filterIndex = d->filterProxyModel->index(i, 0);
+        for (int i = 0; i < d->windowTasksModel->rowCount(); ++i) {
+            const QModelIndex &windowIndex = d->windowTasksModel->index(i, 0);
 
-            if (!filterIndex.data(AbstractTasksModel::IsWindow).toBool()) {
-                continue;
-            }
-
-            if (appId == filterIndex.data(AbstractTasksModel::AppId).toString()
-                || appName == filterIndex.data(AbstractTasksModel::AppName).toString()) {
+            if (appId == windowIndex.data(AbstractTasksModel::AppId).toString()
+                || appName == windowIndex.data(AbstractTasksModel::AppName).toString()) {
                 return false;
             }
         }
