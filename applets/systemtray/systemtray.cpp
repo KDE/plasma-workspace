@@ -363,7 +363,6 @@ void SystemTray::restorePlasmoids()
             m_knownPlugins[plugin] = group.toInt();
         }
     }
-    qCWarning(SYSTEM_TRAY) << "Known plasmoid ids:"<< m_knownPlugins;
 
     //X-Plasma-NotificationArea
 
