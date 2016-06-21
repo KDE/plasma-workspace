@@ -53,7 +53,6 @@ AbstractItem {
         }
     }
     onAppletChanged: {
-        print("applet changed");
         if (!applet) {
             plasmoidContainer.destroy();
             print("applet destroyed")
