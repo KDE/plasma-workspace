@@ -81,7 +81,6 @@ MouseArea {
     }
 
     Containment.onAppletAdded: {
-        print("Applet created:" + applet.title)
         var component = Qt.createComponent("items/PlasmoidItem.qml")
         var plasmoidContainer = component.createObject(invisibleEntriesContainer, {"x": x, "y": y, "applet": applet});
 
