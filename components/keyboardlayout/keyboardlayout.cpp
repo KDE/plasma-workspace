@@ -23,8 +23,7 @@
 #include <QtDBus/QDBusReply>
 
 #include <QDebug>
-
-Q_LOGGING_CATEGORY(KEYBOARD_LAYOUT, "org.kde.keyboardLayout")
+#include "debug.h"
 
 KeyboardLayout::KeyboardLayout(QObject* parent)
     : QObject(parent)

@@ -44,8 +44,6 @@
 
 #include <plasma_version.h>
 
-Q_LOGGING_CATEGORY(SYSTEMTRAY, "systemtray")
-
 /*
  * An app may also load icons from their own directories, so we need a new iconloader that takes this into account
  * This is wrapped into a subclass of iconengine so the iconloader lifespan matches the icon object
@@ -149,7 +147,7 @@ QVariant SystemTray::resolveIcon(const QVariant &variant, const QString &iconThe
 
                     return QVariant(QIcon(new AppIconEngine(variant.toString(), path, appName)));
                 } else {
-                    qCWarning(SYSTEMTRAY) << "Wrong IconThemePath" << path << ": too short or does not end with 'icons'";
+                    qCWarning(SYSTEM_TRAY) << "Wrong IconThemePath" << path << ": too short or does not end with 'icons'";
                 }
             }
 
@@ -344,7 +342,7 @@ void SystemTray::restoreContents(KConfigGroup &group)
 void SystemTray::restorePlasmoids()
 {
     if (!isContainment()) {
-        qCWarning(SYSTEMTRAY) << "Loaded as an applet, this shouldn't have happened";
+        qCWarning(SYSTEM_TRAY) << "Loaded as an applet, this shouldn't have happened";
         return;
     }
 
@@ -374,7 +372,7 @@ void SystemTray::restorePlasmoids()
             m_knownPlugins[plugin] = group.toInt();
         }
     }
-    qCWarning(SYSTEMTRAY) << "Known plasmoid ids:"<< m_knownPlugins;
+    qCWarning(SYSTEM_TRAY) << "Known plasmoid ids:"<< m_knownPlugins;
 
     //X-Plasma-NotificationArea
 
@@ -391,7 +389,7 @@ void SystemTray::restorePlasmoids()
     foreach (const KPluginInfo &info, applets) {
         const QString dbusactivation = info.property(QStringLiteral("X-Plasma-DBusActivationService")).toString();
         if (!dbusactivation.isEmpty()) {
-            qCDebug(SYSTEMTRAY) << "ST Found DBus-able Applet: " << info.pluginName() << dbusactivation;
+            qCDebug(SYSTEM_TRAY) << "ST Found DBus-able Applet: " << info.pluginName() << dbusactivation;
             m_dbusActivatableTasks[info.pluginName()] = dbusactivation;
             continue;
         }
@@ -426,7 +424,7 @@ void SystemTray::restorePlasmoids()
     }
 
     foreach (const KPluginInfo &info, sortedApplets) {
-        qCDebug(SYSTEMTRAY) << " Adding applet: " << info.name();
+        qCDebug(SYSTEM_TRAY) << " Adding applet: " << info.name();
         if (m_allowedPlasmoids.contains(info.pluginName())) {
             newTask(info.pluginName());
         }
@@ -526,7 +524,7 @@ void SystemTray::serviceNameFetchFinished(QDBusPendingCallWatcher* watcher, cons
     watcher->deleteLater();
 
     if (propsReply.isError()) {
-        qCWarning(SYSTEMTRAY) << "Could not get list of available D-Bus services";
+        qCWarning(SYSTEM_TRAY) << "Could not get list of available D-Bus services";
     } else {
         foreach (const QString& serviceName, propsReply.value()) {
             serviceRegistered(serviceName);
@@ -556,7 +554,7 @@ void SystemTray::serviceOwnerChanged(const QString &serviceName, const QString &
 
 void SystemTray::serviceRegistered(const QString &service)
 {
-    //qCDebug(SYSTEMTRAY) << "DBus service appeared:" << service;
+    //qCDebug(SYSTEM_TRAY) << "DBus service appeared:" << service;
     for (auto it = m_dbusActivatableTasks.constBegin(), end = m_dbusActivatableTasks.constEnd(); it != end; ++it) {
         const QString &plugin = it.key();
         if (!m_allowedPlasmoids.contains(plugin)) {
@@ -567,7 +565,7 @@ void SystemTray::serviceRegistered(const QString &service)
         QRegExp rx(pattern);
         rx.setPatternSyntax(QRegExp::Wildcard);
         if (rx.exactMatch(service)) {
-            //qCDebug(SYSTEMTRAY) << "ST : DBus service " << m_dbusActivatableTasks[plugin] << "appeared. Loading " << plugin;
+            //qCDebug(SYSTEM_TRAY) << "ST : DBus service " << m_dbusActivatableTasks[plugin] << "appeared. Loading " << plugin;
             newTask(plugin);
             m_dbusServiceCounts[plugin]++;
         }
@@ -576,7 +574,7 @@ void SystemTray::serviceRegistered(const QString &service)
 
 void SystemTray::serviceUnregistered(const QString &service)
 {
-    //qCDebug(SYSTEMTRAY) << "DBus service disappeared:" << service;
+    //qCDebug(SYSTEM_TRAY) << "DBus service disappeared:" << service;
 
     for (auto it = m_dbusActivatableTasks.constBegin(), end = m_dbusActivatableTasks.constEnd(); it != end; ++it) {
         const QString &plugin = it.key();
@@ -591,7 +589,7 @@ void SystemTray::serviceUnregistered(const QString &service)
             m_dbusServiceCounts[plugin]--;
             Q_ASSERT(m_dbusServiceCounts[plugin] >= 0);
             if (m_dbusServiceCounts[plugin] == 0) {
-                //qCDebug(SYSTEMTRAY) << "ST : DBus service " << m_dbusActivatableTasks[plugin] << " disappeared. Unloading " << plugin;
+                //qCDebug(SYSTEM_TRAY) << "ST : DBus service " << m_dbusActivatableTasks[plugin] << " disappeared. Unloading " << plugin;
                 cleanupTask(plugin);
             }
         }

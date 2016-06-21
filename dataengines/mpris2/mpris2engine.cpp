@@ -30,8 +30,6 @@
 #include "multiplexer.h"
 #include "multiplexedservice.h"
 
-Q_LOGGING_CATEGORY(MPRIS2, "plasma.engine.mpris2")
-
 Mpris2Engine::Mpris2Engine(QObject* parent,
                                    const QVariantList& args)
     : Plasma::DataEngine(parent)

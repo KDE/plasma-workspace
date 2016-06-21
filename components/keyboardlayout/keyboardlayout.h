@@ -22,7 +22,6 @@
 
 #include <QtCore/QObject>
 #include <QtCore/QStringList>
-#include <QtCore/QLoggingCategory>
 
 class QDBusInterface;
 class QDBusPendingCallWatcher;
@@ -76,8 +75,6 @@ private:
     QDBusInterface *mIface;
 
 };
-
-Q_DECLARE_LOGGING_CATEGORY(KEYBOARD_LAYOUT)
 
 
 #endif // KEYBOARDLAYOUT_H

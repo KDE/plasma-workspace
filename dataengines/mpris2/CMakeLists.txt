@@ -10,6 +10,11 @@ set(mpris2_engine_SRCS
     playercontainer.cpp
 )
 
+ecm_qt_declare_logging_category(mpris2_engine_SRCS HEADER debug.h
+                                               IDENTIFIER MPRIS2
+                                               CATEGORY_NAME kde.dataengine.mpris
+                                               DEFAULT_SEVERITY Info)
+
 set_source_files_properties(
    org.freedesktop.DBus.Properties.xml
    org.mpris.MediaPlayer2.Player.xml
