@@ -69,8 +69,8 @@ QUrl ShareProvider::url() const
 void ShareProvider::setUrl(const QString &url)
 {
     // set the provider's url
-    m_url = url;
-    m_service = url;
+    m_url = QUrl(url);
+    m_service = m_url;
 }
 
 QString ShareProvider::parseXML(const QString &key, const QString &data)

@@ -133,6 +133,8 @@ if (INSTALL_SDDM_THEME)
     install(DIRECTORY lookandfeel/contents/components DESTINATION ${KDE_INSTALL_FULL_DATADIR}/sddm/themes/breeze PATTERN "README.txt" EXCLUDE)
 endif()
 
+add_definitions(-DQT_NO_URL_CAST_FROM_STRING)
+
 add_subdirectory(doc)
 add_subdirectory(libkworkspace)
 add_subdirectory(libtaskmanager)

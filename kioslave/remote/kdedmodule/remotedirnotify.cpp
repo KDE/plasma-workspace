@@ -35,8 +35,10 @@ RemoteDirNotify::RemoteDirNotify()
 	m_baseURL.setPath(path);
 
 	QDBusConnection::sessionBus().connect(QString(), QString(), QStringLiteral("org.kde.KDirNotify"),
-				    QStringLiteral("FilesAdded"), this, SLOT(FilesAdded(QString))); QDBusConnection::sessionBus().connect(QString(), QString(), QStringLiteral("org.kde.KDirNotify"),
-				    QStringLiteral("FilesRemoved"), this, SLOT(FilesRemoved(QStringList))); QDBusConnection::sessionBus().connect(QString(), QString(), QStringLiteral("org.kde.KDirNotify"),
+				    QStringLiteral("FilesAdded"), this, SLOT(FilesAdded(QString)));
+	QDBusConnection::sessionBus().connect(QString(), QString(), QStringLiteral("org.kde.KDirNotify"),
+				    QStringLiteral("FilesRemoved"), this, SLOT(FilesRemoved(QStringList)));
+	QDBusConnection::sessionBus().connect(QString(), QString(), QStringLiteral("org.kde.KDirNotify"),
 				    QStringLiteral("FilesChanged"), this, SLOT(FilesChanged(QStringList)));
 }
 
@@ -81,11 +83,11 @@ void RemoteDirNotify::FilesAdded(const QString &directory)
 {
 	qCDebug(KIOREMOTE_LOG) << "RemoteDirNotify::FilesAdded";
 
-	KUrl new_dir = toRemoteURL(directory);
+	QUrl new_dir = toRemoteURL(directory);
 
 	if (new_dir.isValid())
 	{
-		org::kde::KDirNotify::emitFilesAdded( new_dir.url() );
+		org::kde::KDirNotify::emitFilesAdded(new_dir);
 	}
 }
 
@@ -103,11 +105,11 @@ inline void evil_hack(const KUrl::List &list)
 
 	for (; it!=end; ++it)
 	{
-		KUrl url = (*it).upUrl();
+		QUrl url = (*it).upUrl();
 
 		if (!notified.contains(url))
 		{
-			org::kde::KDirNotify::emitFilesAdded(url.url());
+			org::kde::KDirNotify::emitFilesAdded(url);
 			notified.append(url);
 		}
 	}

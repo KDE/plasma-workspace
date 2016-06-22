@@ -312,7 +312,7 @@ void WetterComIon::findPlace(const QString& place, const QString& source)
     md5.addData(place.toUtf8());
     const QString encodedKey = QString::fromLatin1(md5.result().toHex());
 
-    const QUrl url = QString::fromLatin1(SEARCH_URL).arg(place, encodedKey);
+    const QUrl url(QString::fromLatin1(SEARCH_URL).arg(place, encodedKey));
 
     KIO::TransferJob* getJob = KIO::get(url, KIO::Reload, KIO::HideProgressInfo);
     getJob->addMetaData(QStringLiteral("cookies"), QStringLiteral("none")); // Disable displaying cookies
@@ -472,7 +472,7 @@ void WetterComIon::fetchForecast(const QString& source)
     md5.addData(m_place[source].placeCode.toUtf8());
     const QString encodedKey = QString::fromLatin1(md5.result().toHex());
 
-    const QUrl url = QString::fromLatin1(FORECAST_URL).arg(m_place[source].placeCode, encodedKey);
+    const QUrl url(QString::fromLatin1(FORECAST_URL).arg(m_place[source].placeCode, encodedKey));
 
     KIO::TransferJob* getJob = KIO::get(url, KIO::Reload, KIO::HideProgressInfo);
     getJob->addMetaData(QStringLiteral("cookies"), QStringLiteral("none"));

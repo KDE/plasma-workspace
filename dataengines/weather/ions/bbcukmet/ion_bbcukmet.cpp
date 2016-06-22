@@ -291,7 +291,7 @@ void UKMETIon::getXMLData(const QString& source)
         }
     }
 
-    const QUrl url = m_place[source].XMLurl;
+    const QUrl url(m_place[source].XMLurl);
 
     KIO::TransferJob* getJob = KIO::get(url, KIO::Reload, KIO::HideProgressInfo);
     getJob->addMetaData(QStringLiteral("cookies"), QStringLiteral("none")); // Disable displaying cookies

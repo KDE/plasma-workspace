@@ -202,7 +202,7 @@ void NOAAIon::getXMLData(const QString& source)
 
     QString dataKey = source;
     dataKey.remove(QStringLiteral("noaa|weather|"));
-    const QUrl url = m_places[dataKey].XMLurl;
+    const QUrl url(m_places[dataKey].XMLurl);
 
     // If this is empty we have no valid data, send out an error and abort.
     if (url.url().isEmpty()) {

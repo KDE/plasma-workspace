@@ -501,11 +501,11 @@ QUrl XWindowTasksModel::Private::windowUrl(WId window)
             services = servicesFromPid(pid);
         }
 
-        // If the user has manualy set a mapping, respect this first...
+        // If the user has manually set a mapping, respect this first...
         QString mapped(grp.readEntry(classClass + "::" + className, QString()));
 
         if (mapped.endsWith(QLatin1String(".desktop"))) {
-            url = mapped;
+            url = QUrl(mapped);
             return url;
         }
 
@@ -514,7 +514,7 @@ QUrl XWindowTasksModel::Private::windowUrl(WId window)
                 mapped = grp.readEntry(classClass, QString());
 
                 if (mapped.endsWith(QLatin1String(".desktop"))) {
-                    url = mapped;
+                    url = QUrl(mapped);
                     return url;
                 }
             }

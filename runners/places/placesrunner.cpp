@@ -115,7 +115,7 @@ void PlacesRunnerHelper::match(Plasma::RunnerContext *c)
             //if we have to mount it set the device udi instead of the URL, as we can't open it directly
             QUrl url;
             if (m_places.isDevice(current_index) && m_places.setupNeeded(current_index)) {
-                url = m_places.deviceForIndex(current_index).udi();
+                url = QUrl(m_places.deviceForIndex(current_index).udi());
             } else {
                 url = m_places.url(current_index);
             }

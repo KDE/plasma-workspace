@@ -112,7 +112,7 @@ void RecentDocuments::run(const Plasma::RunnerContext &context, const Plasma::Qu
         return;
     }
 
-    new KRun(url, 0);
+    new KRun(QUrl(url), 0);
 }
 
 QList<QAction *> RecentDocuments::actionsForMatch(const Plasma::QueryMatch &match)

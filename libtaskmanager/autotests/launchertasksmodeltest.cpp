@@ -104,7 +104,7 @@ void LauncherTasksModelTest::shouldRejectDuplicates()
 
     QCOMPARE(launcherListChangedSpy.count(), 1);
 
-    bool added = m.requestAddLauncher(urlStrings.at(0));
+    bool added = m.requestAddLauncher(QUrl(urlStrings.at(0)));
 
     QVERIFY(!added);
     QCOMPARE(launcherListChangedSpy.count(), 1);
@@ -119,19 +119,19 @@ void LauncherTasksModelTest::shouldAddRemoveLauncher()
     QSignalSpy launcherListChangedSpy(&m, &LauncherTasksModel::launcherListChanged);
     QVERIFY(launcherListChangedSpy.isValid());
 
-    bool added = m.requestAddLauncher(m_urlStrings.at(0));
+    bool added = m.requestAddLauncher(QUrl(m_urlStrings.at(0)));
 
     QVERIFY(added);
     QCOMPARE(launcherListChangedSpy.count(), 1);
 
     QCOMPARE(m.launcherList().at(0), m_urlStrings.at(0));
 
-    bool removed = m.requestRemoveLauncher(m_urlStrings.at(0));
+    bool removed = m.requestRemoveLauncher(QUrl(m_urlStrings.at(0)));
 
     QVERIFY(removed);
     QCOMPARE(launcherListChangedSpy.count(), 2);
 
-    removed = m.requestRemoveLauncher(m_urlStrings.at(0));
+    removed = m.requestRemoveLauncher(QUrl(m_urlStrings.at(0)));
 
     QVERIFY(!removed);
 
@@ -149,8 +149,8 @@ void LauncherTasksModelTest::shouldReturnValidLauncherPositions()
 
     QCOMPARE(launcherListChangedSpy.count(), 1);
 
-    QCOMPARE(m.launcherPosition(m_urlStrings.at(0)), 0);
-    QCOMPARE(m.launcherPosition(m_urlStrings.at(1)), 1);
+    QCOMPARE(m.launcherPosition(QUrl(m_urlStrings.at(0))), 0);
+    QCOMPARE(m.launcherPosition(QUrl(m_urlStrings.at(1))), 1);
 }
 
 void LauncherTasksModelTest::shouldReturnValidData()

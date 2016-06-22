@@ -1420,8 +1420,9 @@ void TasksModel::syncLaunchers()
 
     QMap<int, QUrl> sortedLaunchers;
 
-    foreach(const QUrl &launcherUrl, launcherList()) {
+    foreach(const QString &launcherUrlStr, launcherList()) {
         int row = -1;
+        QUrl launcherUrl(launcherUrlStr);
 
         for (int i = 0; i < rowCount(); ++i) {
             const QUrl &rowLauncherUrl = index(i, 0).data(AbstractTasksModel::LauncherUrlWithoutIcon).toUrl();

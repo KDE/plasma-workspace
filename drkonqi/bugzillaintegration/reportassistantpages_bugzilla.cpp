@@ -872,7 +872,7 @@ void UnhandledErrorDialog::saveErrorMessage()
                 return;
             }
 
-            KIO::FileCopyJob* job = KIO::file_copy(tf.fileName(), fileUrl);
+            KIO::FileCopyJob* job = KIO::file_copy(QUrl::fromLocalFile(tf.fileName()), fileUrl);
             KJobWidgets::setWindow(job, this);
             if (!job->exec()) {
                 KMessageBox::sorry(this, job->errorString());

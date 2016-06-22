@@ -651,7 +651,7 @@ QUrl TaskItem::launcherUrlFromTask(GroupManager *groupManager, Task *task, Start
         QString mapped(grp.readEntry(task->classClass() + "::" + task->className(), QString()));
 
         if (mapped.endsWith(QLatin1String(".desktop"))) {
-            launcherUrl = mapped;
+            launcherUrl = QUrl(mapped);
             return launcherUrl;
         }
 
@@ -660,7 +660,7 @@ QUrl TaskItem::launcherUrlFromTask(GroupManager *groupManager, Task *task, Start
                 mapped = grp.readEntry(task->classClass(), QString());
 
                 if (mapped.endsWith(QLatin1String(".desktop"))) {
-                    launcherUrl = mapped;
+                    launcherUrl = QUrl(mapped);
                     return launcherUrl;
                 }
             }
