@@ -364,7 +364,6 @@ void TasksModel::Private::initModels()
          }
     );
 
-    // When a window is removed, we have to trigger a re-filter of matching launchers.
     QObject::connect(groupingProxyModel, &QAbstractItemModel::rowsAboutToBeRemoved, q,
         [this](const QModelIndex &parent, int first, int last) {
             // We can ignore group members.
@@ -379,7 +378,10 @@ void TasksModel::Private::initModels()
                     updateAnyTaskDemandsAttention();
                 }
 
-                if (!sourceIndex.data(AbstractTasksModel::IsWindow).toBool()) {
+                // When a window or startup task is removed, we have to trigger a re-filter of
+                // matching launchers to (possibly) pop them back in.
+                if (!(sourceIndex.data(AbstractTasksModel::IsWindow).toBool()
+                      || sourceIndex.data(AbstractTasksModel::IsStartup).toBool())) {
                     continue;
                 }
 
