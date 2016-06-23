@@ -101,6 +101,7 @@ ShellCorona::ShellCorona(QObject *parent)
 
     KDirWatch::self()->addFile(QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation) + QLatin1Char('/') + QStringLiteral("kdeglobals"));
     connect(KDirWatch::self(), &KDirWatch::dirty, this, &ShellCorona::updateLookAndFeelPackage);
+    connect(KDirWatch::self(), &KDirWatch::created, this, &ShellCorona::updateLookAndFeelPackage);
 
     connect(this, &Plasma::Corona::containmentCreated, this, [this] (Plasma::Containment *c) {
         executeSetupPlasmoidScript(c, c);
