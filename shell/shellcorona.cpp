@@ -578,6 +578,12 @@ void ShellCorona::unload()
     if (m_shell.isEmpty()) {
         return;
     }
+    qDeleteAll(m_views);
+    m_views.clear();
+    qDeleteAll(m_panelViews.values());
+    m_panelViews.clear();
+    m_desktopContainments.clear();
+    m_waitingPanels.clear();
 
     qDeleteAll(containments());
 }
