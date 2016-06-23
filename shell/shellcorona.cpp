@@ -311,7 +311,7 @@ void ShellCorona::setShell(const QString &shell)
 }
 
 void ShellCorona::updateLookAndFeelPackage(const QString &file)
-{qWarning()<<"AAAA"<<file;
+{
     //only care about kdeglobals
     if (!file.endsWith(QStringLiteral("kdeglobals"))) {
         return;
