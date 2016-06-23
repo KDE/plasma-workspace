@@ -128,6 +128,8 @@ public Q_SLOTS:
      */
     QString shell() const;
 
+    QString dumpCurrentLayoutJS();
+
     ///DBUS methods
     void toggleDashboard();
     void setDashboardShown(bool show);

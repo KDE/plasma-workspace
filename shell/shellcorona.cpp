@@ -129,7 +129,7 @@ ShellCorona::ShellCorona(QObject *parent)
     dbus.registerObject(QStringLiteral("/PlasmaShell"), this);
 
     connect(this, &Plasma::Corona::startupCompleted, this,
-            []() {
+            [this]() {
                 qDebug() << "Plasma Shell startup completed";
                 QDBusMessage ksplashProgressMessage = QDBusMessage::createMethodCall(QStringLiteral("org.kde.KSplash"),
                                                QStringLiteral("/KSplash"),
@@ -137,6 +137,8 @@ ShellCorona::ShellCorona(QObject *parent)
                                                QStringLiteral("setStage"));
                 ksplashProgressMessage.setArguments(QList<QVariant>() << QStringLiteral("desktop"));
                 QDBusConnection::sessionBus().asyncCall(ksplashProgressMessage);
+                //TODO: remove
+                qWarning() << dumpCurrentLayoutJS();
             });
 
     // Look for theme config in plasmarc, if it isn't configured, take the theme from the
@@ -308,6 +310,53 @@ void ShellCorona::setShell(const QString &shell)
     connect(m_activityConsumer, &KActivities::Consumer::serviceStatusChanged, this, &ShellCorona::load, Qt::UniqueConnection);
 
     load();
+}
+
+QString ShellCorona::dumpCurrentLayoutJS()
+{
+    QString script;
+
+    foreach (Activity *act, m_activities) {
+        const QString name = act->info()->name();
+        script += "var " + name + "Id = createActivity(\"" + name + "\");\n";
+        script += "var " + name + "DesktopsArray = desktopsForActivity(" + name + "Id);\n";
+        script += "for (var j = 0; j < " + name + "DesktopsArray.length; j++) {\n";
+        //enumerate containments
+        foreach (Plasma::Containment *cont, m_desktopContainments.value(act->id()).values()) {
+            script += "    var cont = " + name + "DesktopsArray[j];\n\n";
+            script += "    cont.wallpaperPlugin = '" + cont->wallpaper() + "';\n";
+            script += "    cont.currentConfigGroup = \"General\";";
+
+            //enumerate config keys for containment
+            KConfigGroup cg = cont->config();
+            cg = KConfigGroup(&cg, "General");
+            QMap<QString, QString>::const_iterator i;
+            QMap<QString, QString> map = cg.entryMap();
+            for (i = map.constBegin(); i != map.constEnd(); ++i) {
+                script += "        cont.writeConfig(\"" + i.key() + "\", \"" + i.value() + "\");\n";
+            }
+
+            script += "\n\n";
+            foreach (Plasma::Applet *applet, cont->applets()) {
+                script += "        {\n";
+                script += "            var applet = cont.addWidget(\"" + applet->pluginInfo().pluginName() + "\")";
+                //TODO: shortcuts group or all groups
+                script += "            applet.currentConfigGroup = Array(\"Configuration\", \"General\");";
+
+                KConfigGroup cg = applet->config();
+                cg = KConfigGroup(&cg, "General");
+                QMap<QString, QString>::const_iterator i;
+                QMap<QString, QString> map = cg.entryMap();
+                for (i = map.constBegin(); i != map.constEnd(); ++i) {
+                    script += "            applet.writeConfig(\"" + i.key() + "\", \"" + i.value() + "\");\n";
+                    script += "        }\n";
+                }
+            }
+        }
+        script += "}\n";
+    }
+
+    return script;
 }
 
 void ShellCorona::updateLookAndFeelPackage(const QString &file)
