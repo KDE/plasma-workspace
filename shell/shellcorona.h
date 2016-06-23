@@ -196,6 +196,7 @@ private Q_SLOTS:
     void alternativesVisibilityChanged(bool visible);
     void interactiveConsoleVisibilityChanged(bool visible);
     void screenRemoved(QScreen* screen);
+    void updateLookAndFeelPackage(const QString &file);
 
 private:
     void updateStruts();

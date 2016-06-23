@@ -43,6 +43,7 @@
 #include <kdeclarative/kdeclarative.h>
 #include <kdeclarative/qmlobject.h>
 #include <KMessageBox>
+#include <kdirwatch.h>
 
 #include <KPackage/PackageLoader>
 
@@ -97,6 +98,9 @@ ShellCorona::ShellCorona(QObject *parent)
     if (!packageName.isEmpty()) {
         m_lookAndFeelPackage.setPath(packageName);
     }
+
+    KDirWatch::self()->addFile(QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation) + QLatin1Char('/') + QStringLiteral("kdeglobals"));
+    connect(KDirWatch::self(), &KDirWatch::dirty, this, &ShellCorona::updateLookAndFeelPackage);
 
     connect(this, &Plasma::Corona::containmentCreated, this, [this] (Plasma::Containment *c) {
         executeSetupPlasmoidScript(c, c);
@@ -305,6 +309,31 @@ void ShellCorona::setShell(const QString &shell)
     load();
 }
 
+void ShellCorona::updateLookAndFeelPackage(const QString &file)
+{qWarning()<<"AAAA"<<file;
+    //only care about kdeglobals
+    if (!file.endsWith(QStringLiteral("kdeglobals"))) {
+        return;
+    }
+
+    //TODO: put here anything that needs to update lnf-based
+    KConfigGroup cg(KSharedConfig::openConfig(QStringLiteral("kdeglobals")), "KDE");
+    const QString packageName = cg.readEntry("LookAndFeelPackage", QString());
+    if (packageName.isEmpty()) {
+        return;
+    }
+
+    if (packageName == m_lookAndFeelPackage.metadata().pluginId()) {
+        return;
+    }
+
+    m_lookAndFeelPackage.setPath(packageName);
+
+    //NOTE: updateng the plasma theme should *not* be necessary here as the kcm is already doing this
+    unload();
+    load();
+}
+
 QString ShellCorona::shell() const
 {
     return m_shell;
@@ -336,7 +365,16 @@ void ShellCorona::load()
 
     disconnect(m_activityConsumer, &KActivities::Consumer::serviceStatusChanged, this, &ShellCorona::load);
 
-    loadLayout("plasma-" + m_shell + "-appletsrc");
+    QString configFileName("plasma-" + m_shell);
+    //NOTE: this is for retrocompatibility: keep who is using the default lnf package
+    //the old config file name
+    //TODO:alternative: kconfigupdate?
+    if (m_lookAndFeelPackage.metadata().pluginId() != "org.kde.breeze.desktop") {
+        configFileName += "-" + m_lookAndFeelPackage.metadata().pluginId();
+    }
+    configFileName += "-appletsrc";
+
+    loadLayout(configFileName);
 
     checkActivities();
     if (containments().isEmpty()) {
