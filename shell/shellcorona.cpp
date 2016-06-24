@@ -317,42 +317,59 @@ QString ShellCorona::dumpCurrentLayoutJS()
     QString script;
 
     foreach (Activity *act, m_activities) {
+        script += "{\n";
         const QString name = act->info()->name();
-        script += "var " + name + "Id = createActivity(\"" + name + "\");\n";
-        script += "var " + name + "DesktopsArray = desktopsForActivity(" + name + "Id);\n";
-        script += "for (var j = 0; j < " + name + "DesktopsArray.length; j++) {\n";
+        script += "    var activityId = createActivity(\"" + name + "\");\n";
+        script += "    var desktopsArray = desktopsForActivity(activityId);\n";
+        script += "    for (var j = 0; j < desktopsArray.length; j++) {\n";
         //enumerate containments
         foreach (Plasma::Containment *cont, m_desktopContainments.value(act->id()).values()) {
-            script += "    var cont = " + name + "DesktopsArray[j];\n\n";
-            script += "    cont.wallpaperPlugin = '" + cont->wallpaper() + "';\n";
-            script += "    cont.currentConfigGroup = \"General\";";
+            script += "        var cont = desktopsArray[j];\n\n";
+            script += "        cont.wallpaperPlugin = '" + cont->wallpaper() + "';\n";
 
             //enumerate config keys for containment
-            KConfigGroup cg = cont->config();
-            cg = KConfigGroup(&cg, "General");
-            QMap<QString, QString>::const_iterator i;
-            QMap<QString, QString> map = cg.entryMap();
-            for (i = map.constBegin(); i != map.constEnd(); ++i) {
-                script += "        cont.writeConfig(\"" + i.key() + "\", \"" + i.value() + "\");\n";
+            KConfigGroup contConfig = cont->config();
+            foreach (const QString &group, contConfig.groupList()) {
+                if (group == "Applets") {
+                    continue;
+                }
+                KConfigGroup cg = KConfigGroup(&contConfig, group);
+                script += "        cont.currentConfigGroup = \"" + group + "\";\n";
+                QMap<QString, QString>::const_iterator i;
+                QMap<QString, QString> map = cg.entryMap();
+                for (i = map.constBegin(); i != map.constEnd(); ++i) {
+                    script += "        cont.writeConfig(\"" + i.key() + "\", \"" + i.value() + "\");\n";
+                }
             }
 
             script += "\n\n";
             foreach (Plasma::Applet *applet, cont->applets()) {
                 script += "        {\n";
-                script += "            var applet = cont.addWidget(\"" + applet->pluginInfo().pluginName() + "\")";
+                script += "            var applet = cont.addWidget(\"" + applet->pluginInfo().pluginName() + "\");\n";
                 //TODO: shortcuts group or all groups
-                script += "            applet.currentConfigGroup = Array(\"Configuration\", \"General\");";
+                
 
-                KConfigGroup cg = applet->config();
-                cg = KConfigGroup(&cg, "General");
+                KConfigGroup appletConfig = applet->config();
                 QMap<QString, QString>::const_iterator i;
-                QMap<QString, QString> map = cg.entryMap();
+                QMap<QString, QString> map = appletConfig.entryMap();
                 for (i = map.constBegin(); i != map.constEnd(); ++i) {
                     script += "            applet.writeConfig(\"" + i.key() + "\", \"" + i.value() + "\");\n";
-                    script += "        }\n";
                 }
+                foreach (const QString &group, appletConfig.groupList()) {
+                    KConfigGroup cg = KConfigGroup(&appletConfig, group);
+                    QMap<QString, QString>::const_iterator i;
+                    QMap<QString, QString> map = cg.entryMap();
+                    script += "            applet.currentConfigGroup = \"" + group + "\";\n";
+
+                    for (i = map.constBegin(); i != map.constEnd(); ++i) {
+                        script += "            applet.writeConfig(\"" + i.key() + "\", \"" + i.value() + "\");\n";
+                    }
+                }
+
+                script += "        }\n";
             }
         }
+        script += "    }\n";
         script += "}\n";
     }
 
