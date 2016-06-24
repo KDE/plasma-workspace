@@ -312,6 +312,56 @@ void ShellCorona::setShell(const QString &shell)
     load();
 }
 
+
+QString dumpconfigGroup(const KConfigGroup &rootGroup, const QString &prefix)
+{
+    QString script;
+    QStringList hierarchy;
+    QList<KConfigGroup> groups;
+    groups << rootGroup;
+    QSet<QString> visitedNodes;
+
+    //perform a depth-first tree traversal for config groups
+    while (!groups.isEmpty()) {
+        KConfigGroup cg = groups.last();
+
+        KConfigGroup parentCg = cg;
+        //FIXME: name is not enoug
+        hierarchy.clear();
+        while (parentCg.isValid() && parentCg.name() != rootGroup.name()) {
+            hierarchy.prepend(parentCg.name());
+            parentCg = parentCg.parent();
+        }
+
+        visitedNodes.insert(hierarchy.join(QChar()));
+        groups.pop_back();
+
+        if (!cg.keyList().isEmpty()) {
+            script += "\n";
+            //TODO: this is conditional if applet or containment
+            if (hierarchy.length() > 0) {
+                script += prefix + ".currentConfigGroup = Array(\"" + hierarchy.join("\", \"") + "\");\n";
+            }
+
+            QMap<QString, QString>::const_iterator i;
+            QMap<QString, QString> map = cg.entryMap();
+            for (i = map.constBegin(); i != map.constEnd(); ++i) {
+                script += prefix + ".writeConfig(\"" + i.key() + "\", \"" + i.value() + "\");\n";
+            }
+        }
+
+        foreach (const QString &groupName, cg.groupList()) {
+            if (groupName == QStringLiteral("Applets") ||
+                visitedNodes.contains(hierarchy.join(QChar()) + groupName)) {
+                continue;
+            }
+            groups << KConfigGroup(&cg, groupName);
+        }
+    }
+
+    return script;
+}
+
 QString ShellCorona::dumpCurrentLayoutJS()
 {
     QString script;
@@ -329,42 +379,15 @@ QString ShellCorona::dumpCurrentLayoutJS()
 
             //enumerate config keys for containment
             KConfigGroup contConfig = cont->config();
-            foreach (const QString &group, contConfig.groupList()) {
-                if (group == "Applets") {
-                    continue;
-                }
-                KConfigGroup cg = KConfigGroup(&contConfig, group);
-                script += "        cont.currentConfigGroup = \"" + group + "\";\n";
-                QMap<QString, QString>::const_iterator i;
-                QMap<QString, QString> map = cg.entryMap();
-                for (i = map.constBegin(); i != map.constEnd(); ++i) {
-                    script += "        cont.writeConfig(\"" + i.key() + "\", \"" + i.value() + "\");\n";
-                }
-            }
+            script += dumpconfigGroup(contConfig, QStringLiteral("        cont"));
 
             script += "\n\n";
             foreach (Plasma::Applet *applet, cont->applets()) {
                 script += "        {\n";
                 script += "            var applet = cont.addWidget(\"" + applet->pluginInfo().pluginName() + "\");\n";
-                //TODO: shortcuts group or all groups
-                
 
                 KConfigGroup appletConfig = applet->config();
-                QMap<QString, QString>::const_iterator i;
-                QMap<QString, QString> map = appletConfig.entryMap();
-                for (i = map.constBegin(); i != map.constEnd(); ++i) {
-                    script += "            applet.writeConfig(\"" + i.key() + "\", \"" + i.value() + "\");\n";
-                }
-                foreach (const QString &group, appletConfig.groupList()) {
-                    KConfigGroup cg = KConfigGroup(&appletConfig, group);
-                    QMap<QString, QString>::const_iterator i;
-                    QMap<QString, QString> map = cg.entryMap();
-                    script += "            applet.currentConfigGroup = \"" + group + "\";\n";
-
-                    for (i = map.constBegin(); i != map.constEnd(); ++i) {
-                        script += "            applet.writeConfig(\"" + i.key() + "\", \"" + i.value() + "\");\n";
-                    }
-                }
+                script += dumpconfigGroup(appletConfig, QStringLiteral("            applet"));
 
                 script += "        }\n";
             }
