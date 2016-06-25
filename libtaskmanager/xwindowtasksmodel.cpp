@@ -475,7 +475,7 @@ QUrl XWindowTasksModel::Private::windowUrl(WId window)
         // interested in the actual control module. Therefore we obtain this via the commandline. This commandline may contain
         // "kdeinit4:" or "[kdeinit]", so we remove these first.
         // FIXME This looks like ancient old crap we can do better now.
-        if ("Kcmshell5" == classClass) {
+        if (classClass == "kcmshell5") {
             url = serviceUrl(pid, QStringLiteral("KCModule"), QStringList() << QStringLiteral("kdeinit5:") << QStringLiteral("[kdeinit]"));
 
             if (!url.isEmpty()) {
