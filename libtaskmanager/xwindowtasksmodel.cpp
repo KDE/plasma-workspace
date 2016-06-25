@@ -471,10 +471,10 @@ QUrl XWindowTasksModel::Private::windowUrl(WId window)
     if (!(classClass.isEmpty() && className.isEmpty())) {
         int pid = NETWinInfo(QX11Info::connection(), window, QX11Info::appRootWindow(), NET::WMPid, 0).pid();
 
-        // For KCModules, if we matched on window class, etc, we would end up matching to kcmshell4 - but we are more than likely
-        // interested in the actual control module. Therefore we obtain this via the commandline. This commandline may contain
-        // "kdeinit4:" or "[kdeinit]", so we remove these first.
-        // FIXME This looks like ancient old crap we can do better now.
+        // For KCModules, if we matched on window class, etc, we would end up matching
+        // to kcmshell5 itself - but we are more than likely interested in the actual
+        // control module. Therefore we obtain this via the commandline. This commandline
+        // may contain "kdeinit4:" or "[kdeinit]", so we remove these first.
         if (classClass == "kcmshell5") {
             url = serviceUrl(pid, QStringLiteral("KCModule"), QStringList() << QStringLiteral("kdeinit5:") << QStringLiteral("[kdeinit]"));
 
