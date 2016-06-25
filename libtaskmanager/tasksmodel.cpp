@@ -832,8 +832,6 @@ void TasksModel::updateLauncherCount()
         const QModelIndex &filterIndex = d->filterProxyModel->index(i, 0);
 
         if (!filterIndex.data(AbstractTasksModel::IsLauncher).toBool()) {
-            // TODO: It would be much faster if we didn't ask for a URL with serialized PNG
-            // data in it, just to discard it a few lines below.
             const QUrl &launcherUrl = filterIndex.data(AbstractTasksModel::LauncherUrlWithoutIcon).toUrl();
 
             QMutableListIterator<QUrl> it(launchers);

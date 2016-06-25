@@ -308,8 +308,49 @@ public:
      **/
     void setSortMode(SortMode mode);
 
-    // FIXME TODO: Add docs once fully implemented.
+    /**
+     * Whether launchers are kept separate from other kinds of tasks.
+     * Defaults to @c true.
+     *
+     * When enabled, launcher tasks are sorted first in the tasks model
+     * and move() disallows moving them below the last launcher task,
+     * or moving a different kind of task above the first launcher. New
+     * launcher tasks are inserted after the last launcher task. When
+     * disabled, move() allows mixing, and new launcher tasks are
+     * appended to the model.
+     *
+     * Further, when disabled, the model always behaves as if
+     * launchInPlace is enabled: A window task takes the place of the
+     * first matching launcher task.
+     *
+     * @see LauncherTasksModel
+     * @see move
+     * @see launchInPlace
+     * @see setSeparateLaunchers
+     * @return whether launcher tasks are kept separate.
+     */
     bool separateLaunchers() const;
+
+    /**
+     * Sets whether launchers are kept separate from other kinds of tasks.
+     *
+     * When enabled, launcher tasks are sorted first in the tasks model
+     * and move() disallows moving them below the last launcher task,
+     * or moving a different kind of task above the first launcher. New
+     * launcher tasks are inserted after the last launcher task. When
+     * disabled, move() allows mixing, and new launcher tasks are
+     * appended to the model.
+     *
+     * Further, when disabled, the model always behaves as if
+     * launchInPlace is enabled: A window task takes the place of the
+     * first matching launcher task.
+     *
+     * @see LauncherTasksModel
+     * @see move
+     * @see launchInPlace
+     * @see separateLaunchers
+     * @param separate Whether to keep launcher tasks separate.
+     */
     void setSeparateLaunchers(bool separate);
 
     /**
