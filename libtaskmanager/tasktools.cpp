@@ -175,11 +175,6 @@ QString defaultApplication(const QUrl &url)
         if (service) {
             return service->storageId();
         }
-    } else if (application.compare(QLatin1String("windowmanager"), Qt::CaseInsensitive) == 0) {
-        KConfig cfg(QStringLiteral("ksmserverrc"), KConfig::NoGlobals);
-        KConfigGroup confGroup(&cfg, "General");
-
-        return confGroup.readEntry("windowManager", QStringLiteral("kwin"));
     } else if (KService::Ptr service = KMimeTypeTrader::self()->preferredService(application)) {
         return service->storageId();
     } else {
