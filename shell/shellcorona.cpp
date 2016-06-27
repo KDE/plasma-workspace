@@ -313,7 +313,7 @@ void ShellCorona::setShell(const QString &shell)
 }
 
 
-QString dumpconfigGroup(const KConfigGroup &rootGroup, const QString &prefix)
+QString dumpconfigGroupJS(const KConfigGroup &rootGroup, const QString &prefix)
 {
     QString script;
     QStringList hierarchy;
@@ -346,7 +346,10 @@ QString dumpconfigGroup(const KConfigGroup &rootGroup, const QString &prefix)
             QMap<QString, QString>::const_iterator i;
             QMap<QString, QString> map = cg.entryMap();
             for (i = map.constBegin(); i != map.constEnd(); ++i) {
-                script += prefix + ".writeConfig(\"" + i.key() + "\", \"" + i.value() + "\");\n";
+                //some blacklisted keys we don't want to save
+                if (i.key() != QStringLiteral("activityId")) {
+                    script += prefix + ".writeConfig(\"" + i.key() + "\", \"" + i.value() + "\");\n";
+                }
             }
         }
 
@@ -366,6 +369,7 @@ QString ShellCorona::dumpCurrentLayoutJS()
 {
     QString script;
 
+    //dump desktop containments
     foreach (Activity *act, m_activities) {
         script += "{\n";
         const QString name = act->info()->name();
@@ -379,21 +383,80 @@ QString ShellCorona::dumpCurrentLayoutJS()
 
             //enumerate config keys for containment
             KConfigGroup contConfig = cont->config();
-            script += dumpconfigGroup(contConfig, QStringLiteral("        cont"));
+            script += "        //Containment configuration\n";
+            script += dumpconfigGroupJS(contConfig, QStringLiteral("        cont"));
 
             script += "\n\n";
             foreach (Plasma::Applet *applet, cont->applets()) {
                 script += "        {\n";
+                script += "            //Configuration of applet " + applet->title() + "\n";
                 script += "            var applet = cont.addWidget(\"" + applet->pluginInfo().pluginName() + "\");\n";
 
                 KConfigGroup appletConfig = applet->config();
-                script += dumpconfigGroup(appletConfig, QStringLiteral("            applet"));
+                script += dumpconfigGroupJS(appletConfig, QStringLiteral("            applet"));
 
                 script += "        }\n";
             }
         }
         script += "    }\n";
         script += "}\n";
+    }
+
+    //same gridUnit calculation as ScriptEngine
+    int gridUnit = QFontMetrics(QGuiApplication::font()).boundingRect(QStringLiteral("M")).height();
+    if (gridUnit % 2 != 0) {
+        gridUnit++;
+    }
+    //dump panels
+    QHash<const Plasma::Containment *, PanelView *>::const_iterator i;
+    for (i = m_panelViews.constBegin(); i != m_panelViews.constEnd(); ++i) {
+        const Plasma::Containment *cont = i.key();
+        const PanelView *view = i.value();
+
+        script += "{\n";
+        script += "    var panel = new Panel;\n";
+        qreal units = 1;
+
+        switch (cont->location()) {
+        case Plasma::Types::TopEdge:
+            script += "    panel.location = \"top\";\n";
+            units = view->height() / gridUnit;
+            break;
+        case Plasma::Types::LeftEdge:
+            script += "    panel.location = \"left\";\n";
+            units = view->width() / gridUnit;
+            break;
+        case Plasma::Types::RightEdge:
+            script += "    panel.location = \"right\";\n";
+            units = view->width() / gridUnit;
+            break;
+        case Plasma::Types::BottomEdge:
+        default:
+            script += "    panel.location = \"bottom\";\n";
+            units = view->height() / gridUnit;
+            break;
+        }
+        script += "    panel.height = gridUnit * " + QString::number(units) + ";\n";
+
+        //enumerate config keys for containment
+        KConfigGroup contConfig = cont->config();
+        script += "    //Panel containment configuration\n";
+        script += dumpconfigGroupJS(contConfig, QStringLiteral("    panel"));
+        script += "\n\n";
+
+        foreach (Plasma::Applet *applet, cont->applets()) {
+            script += "    {\n";
+            script += "        //Configuration of applet " + applet->title() + "\n";
+            script += "        var applet = panel.addWidget(\"" + applet->pluginInfo().pluginName() + "\");\n";
+
+            KConfigGroup appletConfig = applet->config();
+            script += dumpconfigGroupJS(appletConfig, QStringLiteral("        applet"));
+
+            script += "    }\n";
+        }
+
+        script += "}\n";
+        script += "\n\n";
     }
 
     return script;
