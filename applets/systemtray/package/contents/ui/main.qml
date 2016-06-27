@@ -96,6 +96,15 @@ MouseArea {
     Containment.onAppletRemoved: {
     }
 
+    Connections {
+        target: plasmoid
+        onUserConfiguringChanged: {
+            if (plasmoid.userConfiguring) {
+                dialog.visible = false
+            }
+        }
+    }
+
      Connections {
         target: plasmoid.configuration
 
