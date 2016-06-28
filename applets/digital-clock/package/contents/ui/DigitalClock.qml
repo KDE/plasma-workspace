@@ -406,7 +406,6 @@ Item {
                 family: plasmoid.configuration.fontFamily || theme.defaultFont.family
                 weight: plasmoid.configuration.boldText ? Font.Bold : Font.Normal
                 italic: plasmoid.configuration.italicText
-                pixelSize: 1024
                 pointSize: 1024
             }
 
@@ -431,7 +430,6 @@ Item {
 
             font.weight: timeLabel.font.weight
             font.italic: timeLabel.font.italic
-            font.pixelSize: 1024
             font.pointSize: 1024
             minimumPixelSize: 0
 
@@ -449,7 +447,6 @@ Item {
         font.family: timeLabel.font.family
         font.weight: timeLabel.font.weight
         font.italic: timeLabel.font.italic
-        font.pixelSize: 1024
         font.pointSize: 1024
         minimumPixelSize: 0
 
@@ -465,7 +462,6 @@ Item {
         font.family: timeLabel.font.family
         font.weight: timeLabel.font.weight
         font.italic: timeLabel.font.italic
-        font.pixelSize: 1024
         font.pointSize: 1024
 
         verticalAlignment: Text.AlignVCenter
