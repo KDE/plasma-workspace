@@ -88,6 +88,7 @@ class TASKMANAGER_EXPORT TasksModel : public QSortFilterProxyModel, public Abstr
                WRITE setGroupingAppIdBlacklist NOTIFY groupingAppIdBlacklistChanged)
     Q_PROPERTY(QStringList groupingLauncherUrlBlacklist READ groupingLauncherUrlBlacklist
                WRITE setGroupingLauncherUrlBlacklist NOTIFY groupingLauncherUrlBlacklistChanged)
+    Q_PROPERTY(QModelIndex activeTask READ activeTask NOTIFY activeTaskChanged)
 
 public:
     enum SortMode {
@@ -510,6 +511,15 @@ public:
     void setGroupingLauncherUrlBlacklist(const QStringList &list);
 
     /**
+     * Finds the first active (AbstractTasksModel::IsActive) task in the model
+     * and returns its QModelIndex, or a null QModelIndex if no active task is
+     * found.
+     *
+     * @returns the model index for the first active task, if any.
+     */
+    QModelIndex activeTask() const;
+
+    /**
      * Request adding a launcher with the given URL.
      *
      * If this URL is already in the list, the request will fail. URLs are
@@ -725,15 +735,6 @@ public:
     Q_INVOKABLE void syncLaunchers();
 
     /**
-     * Finds the first active (AbstractTasksModel::IsActive) task in the model
-     * and returns its QModelIndex, or a null QModelIndex if no active task is
-     * found.
-     *
-     * @returns the model index for the first active task, if any.
-     */
-    Q_INVOKABLE QModelIndex activeTask() const;
-
-    /**
      * Given a row in the model, returns a QModelIndex for it. To get an index
      * for a child in a task group, an optional child row may be passed as well.
      *
@@ -766,6 +767,7 @@ Q_SIGNALS:
     void groupingWindowTasksThresholdChanged() const;
     void groupingAppIdBlacklistChanged() const;
     void groupingLauncherUrlBlacklistChanged() const;
+    void activeTaskChanged() const;
 
 protected:
     bool filterAcceptsRow(int sourceRow, const QModelIndex &sourceParent) const;

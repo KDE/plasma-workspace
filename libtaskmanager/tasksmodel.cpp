@@ -197,6 +197,10 @@ void TasksModel::Private::initModels()
             if (sortMode == SortActivity && roles.contains(AbstractTasksModel::Activities)) {
                 updateActivityTaskCounts();
             }
+
+            if (roles.contains(AbstractTasksModel::IsActive)) {
+                emit q->activeTaskChanged();
+            }
         }
     );
 
