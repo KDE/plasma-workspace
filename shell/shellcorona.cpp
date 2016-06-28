@@ -138,7 +138,6 @@ ShellCorona::ShellCorona(QObject *parent)
                 ksplashProgressMessage.setArguments(QList<QVariant>() << QStringLiteral("desktop"));
                 QDBusConnection::sessionBus().asyncCall(ksplashProgressMessage);
                 //TODO: remove
-                qWarning() << dumpCurrentLayoutJS();
             });
 
     // Look for theme config in plasmarc, if it isn't configured, take the theme from the

@@ -128,8 +128,6 @@ public Q_SLOTS:
      */
     QString shell() const;
 
-    QString dumpCurrentLayoutJS();
-
     ///DBUS methods
     void toggleDashboard();
     void setDashboardShown(bool show);
@@ -140,6 +138,7 @@ public Q_SLOTS:
     void loadKWinScriptInInteractiveConsole(const QString &script);
     void toggleActivityManager();
     void evaluateScript(const QString &string);
+    QString dumpCurrentLayoutJS();
 
     Plasma::Containment *addPanel(const QString &plugin);
 
