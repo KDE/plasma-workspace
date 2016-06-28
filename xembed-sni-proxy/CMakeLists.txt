@@ -43,16 +43,17 @@ qt5_add_dbus_adaptor(XEMBED_SNI_PROXY_SOURCES org.kde.StatusNotifierItem.xml
 set(statusnotifierwatcher_xml org.kde.StatusNotifierWatcher.xml)
 qt5_add_dbus_interface(XEMBED_SNI_PROXY_SOURCES ${statusnotifierwatcher_xml} statusnotifierwatcher_interface)
 
+ecm_qt_declare_logging_category(XEMBED_SNI_PROXY_SOURCES HEADER debug.h
+                                               IDENTIFIER SNIPROXY
+                                               CATEGORY_NAME kde.xembedsniproxy
+                                               DEFAULT_SEVERITY Info)
+
 add_executable(xembedsniproxy ${XEMBED_SNI_PROXY_SOURCES})
 
 
 
 set_package_properties(XCB PROPERTIES TYPE REQUIRED)
 
-ecm_qt_declare_logging_category(xembedsniproxy HEADER debug.h
-                                               IDENTIFIER SNIPROXY
-                                               CATEGORY_NAME kde.xembedsniproxy
-                                               DEFAULT_SEVERITY Info)
 
 target_link_libraries(xembedsniproxy
     Qt5::Core
