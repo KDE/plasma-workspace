@@ -212,7 +212,8 @@ void DesktopProtocol::prepareUDSEntry(KIO::UDSEntry &entry, bool listing) const
     }
 
     // Set the target URL to the local path 
-    entry.insert(KIO::UDSEntry::UDS_TARGET_URL, entry.stringValue(KIO::UDSEntry::UDS_LOCAL_PATH));
+    QUrl localUrl(QUrl::fromLocalFile(entry.stringValue(KIO::UDSEntry::UDS_LOCAL_PATH)));
+    entry.insert(KIO::UDSEntry::UDS_TARGET_URL, localUrl.toString());
 }
 
 void DesktopProtocol::rename(const QUrl &_src, const QUrl &_dest, KIO::JobFlags flags)
