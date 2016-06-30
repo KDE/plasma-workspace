@@ -83,14 +83,16 @@ Item {
     }
 
     PlasmaCore.SvgItem {
-        visible: hiddenItemsView.visible && activeApplet
-        width: lineSvg.elementSize("vertical-line").width
-        x: hiddenLayout.width
         anchors {
+            left: parent.left
+            leftMargin: hiddenLayout.width
             top: parent.top
             bottom: parent.bottom
             margins: -units.gridUnit
         }
+
+        visible: hiddenItemsView.visible && activeApplet
+        width: lineSvg.elementSize("vertical-line").width
 
         elementId: "vertical-line"
 

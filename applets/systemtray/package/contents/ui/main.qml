@@ -290,6 +290,9 @@ MouseArea {
         mainItem: ExpandedRepresentation {
             id: expandedRepresentation
             activeApplet: root.activeApplet
+
+            LayoutMirroring.enabled: Qt.application.layoutDirection === Qt.RightToLeft
+            LayoutMirroring.childrenInherit: true
         }
     }
 }

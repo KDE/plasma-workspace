@@ -101,17 +101,18 @@ PlasmaCore.ToolTipArea {
 
     PlasmaComponents.Label {
         id: label
+        anchors {
+            left: parent.left
+            leftMargin: iconItem ? iconItem.width + units.smallSpacing : 0
+            verticalCenter: parent.verticalCenter
+        }
         opacity: labelVisible ? 1 : 0
-        x: iconItem ? iconItem.width + units.smallSpacing : 0
         visible: abstractItem.hidden
         Behavior on opacity {
             NumberAnimation {
                 duration: units.longDuration
                 easing.type: Easing.InOutQuad
             }
-        }
-        anchors {
-            verticalCenter: parent.verticalCenter
         }
     }
 }
