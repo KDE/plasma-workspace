@@ -342,8 +342,8 @@ void TasksModel::Private::initModels()
                     for (int i = 0; i < startupTasksModel->rowCount(); ++i) {
                         QModelIndex startupIndex = startupTasksModel->index(i, 0);
 
-                        if (appId == startupIndex.data(AbstractTasksModel::AppId).toString()
-                            || appName == startupIndex.data(AbstractTasksModel::AppName).toString()) {
+                        if ((!appId.isEmpty() && appId == startupIndex.data(AbstractTasksModel::AppId).toString())
+                            || (!appName.isEmpty() && appName == startupIndex.data(AbstractTasksModel::AppName).toString())) {
                             startupTasksModel->dataChanged(startupIndex, startupIndex);
                         }
                     }
@@ -352,14 +352,10 @@ void TasksModel::Private::initModels()
                 // When we get a window or startup we have a launcher for, cause the launcher to be re-filtered.
                 if (sourceIndex.data(AbstractTasksModel::IsWindow).toBool()
                     || sourceIndex.data(AbstractTasksModel::IsStartup).toBool()) {
-                    const QUrl &launcherUrl = sourceIndex.data(AbstractTasksModel::LauncherUrlWithoutIcon).toUrl();
-
                     for (int i = 0; i < launcherTasksModel->rowCount(); ++i) {
-                        QModelIndex launcherIndex = launcherTasksModel->index(i, 0);
-                        const QString &launcherAppId = launcherIndex.data(AbstractTasksModel::AppId).toString();
+                        const QModelIndex &launcherIndex = launcherTasksModel->index(i, 0);
 
-                        if ((!appId.isEmpty() && appId == launcherAppId) || (launcherUrl.isValid()
-                            && launcherUrl == launcherIndex.data(AbstractTasksModel::LauncherUrlWithoutIcon).toUrl())) {
+                        if (appsMatch(sourceIndex, launcherIndex)) {
                             launcherTasksModel->dataChanged(launcherIndex, launcherIndex);
                         }
                     }
@@ -389,17 +385,12 @@ void TasksModel::Private::initModels()
                     continue;
                 }
 
-                const QUrl &launcherUrl = sourceIndex.data(AbstractTasksModel::LauncherUrlWithoutIcon).toUrl();
+                for (int j = 0; j < launcherTasksModel->rowCount(); ++j) {
+                    const QModelIndex &launcherIndex = launcherTasksModel->index(j, 0);
 
-                if (!launcherUrl.isEmpty() && launcherUrl.isValid()) {
-                    const int pos = launcherTasksModel->launcherPosition(launcherUrl);
-
-                    if (pos != -1) {
-                        QModelIndex launcherIndex = launcherTasksModel->index(pos, 0);
-
+                    if (appsMatch(sourceIndex, launcherIndex)) {
                         QMetaObject::invokeMethod(launcherTasksModel, "dataChanged", Qt::QueuedConnection,
                             Q_ARG(QModelIndex, launcherIndex), Q_ARG(QModelIndex, launcherIndex));
-                        QMetaObject::invokeMethod(q, "updateLauncherCount", Qt::QueuedConnection);
                     }
                 }
             }
@@ -830,29 +821,16 @@ int TasksModel::rowCount(const QModelIndex &parent) const
 
 void TasksModel::updateLauncherCount()
 {
-    QList<QUrl> launchers = QUrl::fromStringList(d->launcherTasksModel->launcherList());
+    int count = 0;
 
-    for (int i = 0; i < d->filterProxyModel->rowCount(); ++i) {
-        const QModelIndex &filterIndex = d->filterProxyModel->index(i, 0);
-
-        if (!filterIndex.data(AbstractTasksModel::IsLauncher).toBool()) {
-            const QUrl &launcherUrl = filterIndex.data(AbstractTasksModel::LauncherUrlWithoutIcon).toUrl();
-
-            QMutableListIterator<QUrl> it(launchers);
-
-            while(it.hasNext()) {
-                it.next();
-
-                // RemoveQuery to strip possible fallback icon from stored launcher.
-                if (launcherUrl == it.value().adjusted(QUrl::RemoveQuery)) {
-                    it.remove();
-                }
-            }
+    for (int i = 0; i < rowCount(); ++i) {
+        if (index(i, 0).data(AbstractTasksModel::IsLauncher).toBool()) {
+            ++count;
         }
     }
 
-    if (d->launcherCount != launchers.count()) {
-        d->launcherCount = launchers.count();
+    if (d->launcherCount != count) {
+        d->launcherCount = count;
         emit launcherCountChanged();
     }
 }
@@ -1487,8 +1465,6 @@ QModelIndex TasksModel::makeModelIndex(int row, int childRow) const
         return QModelIndex();
     }
 
-    const QModelIndex &parent = index(row, 0);
-
     if (childRow == -1) {
         return index(row, 0);
     } else {
@@ -1525,8 +1501,8 @@ bool TasksModel::filterAcceptsRow(int sourceRow, const QModelIndex &sourceParent
         for (int i = 0; i < d->windowTasksModel->rowCount(); ++i) {
             const QModelIndex &windowIndex = d->windowTasksModel->index(i, 0);
 
-            if (appId == windowIndex.data(AbstractTasksModel::AppId).toString()
-                || appName == windowIndex.data(AbstractTasksModel::AppName).toString()) {
+            if ((!appId.isEmpty() && appId == windowIndex.data(AbstractTasksModel::AppId).toString())
+                || (appName.isEmpty() && appName == windowIndex.data(AbstractTasksModel::AppName).toString())) {
                 return false;
             }
         }
@@ -1535,8 +1511,6 @@ bool TasksModel::filterAcceptsRow(int sourceRow, const QModelIndex &sourceParent
     // Filter launcher tasks we already have a startup or window task for (that
     // got through filtering).
     if (sourceIndex.data(AbstractTasksModel::IsLauncher).toBool()) {
-        const QUrl &launcherUrl = sourceIndex.data(AbstractTasksModel::LauncherUrlWithoutIcon).toUrl();
-
         for (int i = 0; i < d->filterProxyModel->rowCount(); ++i) {
             const QModelIndex &filteredIndex = d->filterProxyModel->index(i, 0);
 
@@ -1545,10 +1519,7 @@ bool TasksModel::filterAcceptsRow(int sourceRow, const QModelIndex &sourceParent
                 continue;
             }
 
-            const QString &filteredAppId = filteredIndex.data(AbstractTasksModel::AppId).toString();
-
-            if ((!appId.isEmpty() && appId == filteredAppId) || (launcherUrl.isValid()
-                && launcherUrl == filteredIndex.data(AbstractTasksModel::LauncherUrlWithoutIcon).toUrl())) {
+            if (appsMatch(sourceIndex, filteredIndex)) {
                 return false;
             }
         }
