@@ -18,6 +18,7 @@
  ***************************************************************************/
 
 #include "systemtraycontainer.h"
+#include "debug.h"
 
 #include <QDebug>
 #include <QQuickItem>
@@ -72,16 +73,14 @@ void SystemTrayContainer::constraintsEvent(Plasma::Types::Constraints constraint
         }
 
         uint id = config().readEntry("SystrayContainmentId", 0);
-        qWarning()<<"CONTAINMENT ID"<<id;
         if (id > 0) {
             foreach (Plasma::Containment *candidate, c->containments()) {
                 if (candidate->id() == id) {
-                    qWarning()<<candidate;
                     m_innerContainment = candidate;
                     break;
                 }
             }
-            qWarning() << "Containment id" << id << "was deleted";
+            qCDebug(SYSTEM_TRAY_CONTAINER) << "Containment id" << id << "that used to be a system tray was deleted";
             //id = 0;
         }
 

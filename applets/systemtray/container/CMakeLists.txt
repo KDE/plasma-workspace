@@ -5,6 +5,11 @@ set(systemtraycontainer_SRCS
     systemtraycontainer.cpp
 )
 
+ecm_qt_declare_logging_category(systemtraycontainer_SRCS HEADER debug.h
+                                            IDENTIFIER SYSTEM_TRAY_CONTAINER
+                                            CATEGORY_NAME kde.systemtraycontainer
+                                            DEFAULT_SEVERITY Info)
+
 add_library(org.kde.plasma.systemtray MODULE ${systemtraycontainer_SRCS})
 
 kcoreaddons_desktop_to_json(org.kde.plasma.systemtray package/metadata.desktop)
