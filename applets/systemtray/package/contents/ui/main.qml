@@ -278,8 +278,13 @@ MouseArea {
         location: plasmoid.location
         hideOnWindowDeactivate: expandedRepresentation.hideOnWindowDeactivate
         onVisibleChanged: {
-            if (!visible && root.activeApplet) {
-                root.activeApplet.expanded = false;
+            if (!visible) {
+                plasmoid.status = PlasmaCore.Types.PassiveStatus;
+                if (root.activeApplet) {
+                    root.activeApplet.expanded = false;
+                }
+            } else {
+                plasmoid.status = PlasmaCore.Types.RequiresAttentionStatus;
             }
         }
         mainItem: ExpandedRepresentation {
