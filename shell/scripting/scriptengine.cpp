@@ -190,6 +190,11 @@ QScriptValue ScriptEngine::createActivity(QScriptContext *context, QScriptEngine
         if (!knownActivities.contains(act)) {
             id = act;
         }
+        KActivities::Info info(act);
+
+        if (info.name() == name) {
+            return act;
+        }
     }
 
     if (id.isEmpty()) {
