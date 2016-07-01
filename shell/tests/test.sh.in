@@ -1,0 +1,3 @@
+#!/bin/sh
+plasmashell --test "@CMAKE_CURRENT_BINARY_DIR@/testLayout-@plasmoidName@.js"
+kactivitymanagerd stop

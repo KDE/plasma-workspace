@@ -7,9 +7,13 @@ function(plasmoidtest plasmoidName)
             ${CMAKE_CURRENT_BINARY_DIR}/testLayout-${plasmoidName}.js
             @ONLY
     )
+    configure_file(${CMAKE_CURRENT_SOURCE_DIR}/test.sh.in
+                   ${CMAKE_CURRENT_BINARY_DIR}/test-${plasmoidName}.sh
+                   @ONLY
+    )
 
     add_test(NAME ${plasmoidName}-test COMMAND
-            plasmashell --test ${CMAKE_CURRENT_BINARY_DIR}/testLayout-plasmoidName.js
+            sh ${CMAKE_CURRENT_BINARY_DIR}/test-${plasmoidName}.sh
     )
 endfunction()
 
