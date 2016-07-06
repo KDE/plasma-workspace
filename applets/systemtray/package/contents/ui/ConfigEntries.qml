@@ -121,7 +121,7 @@ QtLayouts.GridLayout {
 
         QtControls.TableViewColumn {
             id: entryColumn
-            width: tableView.width - visibilityColumn.width - shortcutColumn.width - 5
+            width: tableView.viewport.width - visibilityColumn.width - shortcutColumn.width
             title: i18nc("Name of the system tray entry", "Entry")
             movable: false
             resizable: false
