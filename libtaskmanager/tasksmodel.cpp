@@ -829,8 +829,7 @@ int TasksModel::rowCount(const QModelIndex &parent) const
 
 QVariant TasksModel::data(const QModelIndex &proxyIndex, int role) const
 {
-    if (proxyIndex.data(AbstractTasksModel::IsGroupParent).toBool()
-        && role == AbstractTasksModel::LegacyWinIdList) {
+    if (rowCount(proxyIndex) && role == AbstractTasksModel::LegacyWinIdList) {
         QVariantList winIds;
 
         for (int i = 0; i < rowCount(proxyIndex); ++i) {
