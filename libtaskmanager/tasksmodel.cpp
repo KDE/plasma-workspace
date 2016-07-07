@@ -339,12 +339,16 @@ void TasksModel::Private::initModels()
                 if (sourceIndex.data(AbstractTasksModel::IsWindow).toBool()) {
                     const QString &appName = sourceIndex.data(AbstractTasksModel::AppName).toString();
 
-                    for (int i = 0; i < startupTasksModel->rowCount(); ++i) {
-                        QModelIndex startupIndex = startupTasksModel->index(i, 0);
+                    for (int i = 0; i < filterProxyModel->rowCount(); ++i) {
+                        QModelIndex filterIndex = filterProxyModel->index(i, 0);
 
-                        if ((!appId.isEmpty() && appId == startupIndex.data(AbstractTasksModel::AppId).toString())
-                            || (!appName.isEmpty() && appName == startupIndex.data(AbstractTasksModel::AppName).toString())) {
-                            startupTasksModel->dataChanged(startupIndex, startupIndex);
+                        if (!filterIndex.data(AbstractTasksModel::IsStartup).toBool()) {
+                            continue;
+                        }
+
+                        if ((!appId.isEmpty() && appId == filterIndex.data(AbstractTasksModel::AppId).toString())
+                            || (!appName.isEmpty() && appName == filterIndex.data(AbstractTasksModel::AppName).toString())) {
+                            filterProxyModel->dataChanged(filterIndex, filterIndex);
                         }
                     }
                 }
@@ -352,11 +356,15 @@ void TasksModel::Private::initModels()
                 // When we get a window or startup we have a launcher for, cause the launcher to be re-filtered.
                 if (sourceIndex.data(AbstractTasksModel::IsWindow).toBool()
                     || sourceIndex.data(AbstractTasksModel::IsStartup).toBool()) {
-                    for (int i = 0; i < launcherTasksModel->rowCount(); ++i) {
-                        const QModelIndex &launcherIndex = launcherTasksModel->index(i, 0);
+                    for (int i = 0; i < filterProxyModel->rowCount(); ++i) {
+                        const QModelIndex &filterIndex = filterProxyModel->index(i, 0);
 
-                        if (appsMatch(sourceIndex, launcherIndex)) {
-                            launcherTasksModel->dataChanged(launcherIndex, launcherIndex);
+                        if (!filterIndex.data(AbstractTasksModel::IsLauncher).toBool()) {
+                            continue;
+                        }
+
+                        if (appsMatch(sourceIndex, filterIndex)) {
+                            filterProxyModel->dataChanged(filterIndex, filterIndex);
                         }
                     }
                 }
@@ -1498,11 +1506,15 @@ bool TasksModel::filterAcceptsRow(int sourceRow, const QModelIndex &sourceParent
 
     // Filter startup tasks we already have a window task for.
     if (sourceIndex.data(AbstractTasksModel::IsStartup).toBool()) {
-        for (int i = 0; i < d->windowTasksModel->rowCount(); ++i) {
-            const QModelIndex &windowIndex = d->windowTasksModel->index(i, 0);
+        for (int i = 0; i < d->filterProxyModel->rowCount(); ++i) {
+            const QModelIndex &filterIndex = d->filterProxyModel->index(i, 0);
 
-            if ((!appId.isEmpty() && appId == windowIndex.data(AbstractTasksModel::AppId).toString())
-                || (appName.isEmpty() && appName == windowIndex.data(AbstractTasksModel::AppName).toString())) {
+            if (!filterIndex.data(AbstractTasksModel::IsWindow).toBool()) {
+                continue;
+            }
+
+            if ((!appId.isEmpty() && appId == filterIndex.data(AbstractTasksModel::AppId).toString())
+                || (appName.isEmpty() && appName == filterIndex.data(AbstractTasksModel::AppName).toString())) {
                 return false;
             }
         }
