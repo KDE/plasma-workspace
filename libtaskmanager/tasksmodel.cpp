@@ -827,6 +827,22 @@ int TasksModel::rowCount(const QModelIndex &parent) const
     return QSortFilterProxyModel::rowCount(parent);
 }
 
+QVariant TasksModel::data(const QModelIndex &proxyIndex, int role) const
+{
+    if (proxyIndex.data(AbstractTasksModel::IsGroupParent).toBool()
+        && role == AbstractTasksModel::LegacyWinIdList) {
+        QVariantList winIds;
+
+        for (int i = 0; i < rowCount(proxyIndex); ++i) {
+            winIds.append(proxyIndex.child(i, 0).data(AbstractTasksModel::LegacyWinIdList).toList());
+        }
+
+        return winIds;
+    }
+
+    return QSortFilterProxyModel::data(proxyIndex, role);
+}
+
 void TasksModel::updateLauncherCount()
 {
     int count = 0;

@@ -111,6 +111,8 @@ public:
 
     Q_INVOKABLE int rowCount(const QModelIndex &parent = QModelIndex()) const override; // Invokable.
 
+    QVariant data(const QModelIndex &proxyIndex, int role) const override;
+
     /**
      * The number of launcher tasks in the tast list.
      *
