@@ -441,6 +441,8 @@ void BugzillaInformationPage::aboutToShow()
             ui.m_distroChooserCombo->addItem(i18nc("@label:listbox KDE distribution method",
                                                    "Mandriva"), "Mandriva RPMs");
             ui.m_distroChooserCombo->addItem(i18nc("@label:listbox KDE distribution method",
+                                                   "Neon"), "Neon Packages");
+            ui.m_distroChooserCombo->addItem(i18nc("@label:listbox KDE distribution method",
                                                    "OpenSUSE"), "openSUSE RPMs");
             ui.m_distroChooserCombo->addItem(i18nc("@label:listbox KDE distribution method",
                                                    "Pardus"), "Pardus Packages");
