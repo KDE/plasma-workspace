@@ -356,8 +356,8 @@ void ShellCorona::load()
                 //FIXME ideally fix this, or at least document the crap out of it
                 int screen = containment->lastScreen();
                 if (screen < 0) {
-                    screen = m_desktopContainments[containment->activity()].count();
-                    qDebug() << "last screen is < 0 so putting containment on screen " << screen;
+                    screen = 0;
+                    qWarning() << "last screen is < 0 so putting containment on screen " << screen;
                 }
                 insertContainment(containment->activity(), screen, containment);
             }
