@@ -235,6 +235,8 @@ QtLayouts.GridLayout {
 
                             iconsPage.configurationChanged()
                         }
+
+                        shortcutColumn.resizeToContents()
                     }
                 }
             }
