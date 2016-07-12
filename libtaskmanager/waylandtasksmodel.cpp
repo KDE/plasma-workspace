@@ -315,7 +315,7 @@ QVariant WaylandTasksModel::data(const QModelIndex &index, int role) const
         return window->virtualDesktop();
     } else if (role == IsOnAllVirtualDesktops) {
         return window->isOnAllDesktops();
-    } else if (role == ScreenGeometry) {
+    } else if (role == Screen) {
         // FIXME Implement.
     } else if (role == Activities) {
         // FIXME Implement.
