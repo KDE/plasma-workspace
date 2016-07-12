@@ -30,8 +30,6 @@ License along with this library.  If not, see <http://www.gnu.org/licenses/>.
 #include <KSharedConfig>
 
 #include <QDir>
-#include <QGuiApplication>
-#include <QScreen>
 
 namespace TaskManager
 {
@@ -239,37 +237,6 @@ bool appsMatch(const QModelIndex &a, const QModelIndex &b)
     }
 
     return false;
-}
-
-QRect screenGeometry(const QPoint &pos)
-{
-    if (pos.isNull()) {
-        return QRect();
-    }
-
-    const QList<QScreen *> &screens = QGuiApplication::screens();
-    QRect screenGeometry;
-    int shortestDistance = INT_MAX;
-
-    for (int i = 0; i < screens.count(); ++i) {
-        const QRect &geometry = screens.at(i)->geometry();
-
-        if (geometry.contains(pos)) {
-            return geometry;
-        }
-
-        int distance = QPoint(geometry.topLeft() - pos).manhattanLength();
-        distance = qMin(distance, QPoint(geometry.topRight() - pos).manhattanLength());
-        distance = qMin(distance, QPoint(geometry.bottomRight() - pos).manhattanLength());
-        distance = qMin(distance, QPoint(geometry.bottomLeft() - pos).manhattanLength());
-
-        if (distance < shortestDistance) {
-            shortestDistance = distance;
-            screenGeometry = geometry;
-        }
-    }
-
-    return screenGeometry;
 }
 
 }

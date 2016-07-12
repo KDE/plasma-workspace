@@ -68,7 +68,7 @@ class TASKMANAGER_EXPORT TasksModel : public QSortFilterProxyModel, public Abstr
     Q_PROPERTY(bool anyTaskDemandsAttention READ anyTaskDemandsAttention NOTIFY anyTaskDemandsAttentionChanged)
 
     Q_PROPERTY(int virtualDesktop READ virtualDesktop WRITE setVirtualDesktop NOTIFY virtualDesktopChanged)
-    Q_PROPERTY(QRect screenGeometry READ screenGeometry WRITE setScreenGeometry NOTIFY screenGeometryChanged)
+    Q_PROPERTY(int screen READ screen WRITE setScreen NOTIFY screenChanged)
     Q_PROPERTY(QString activity READ activity WRITE setActivity NOTIFY activityChanged)
 
     Q_PROPERTY(bool filterByVirtualDesktop READ filterByVirtualDesktop WRITE setFilterByVirtualDesktop NOTIFY filterByVirtualDesktopChanged)
@@ -169,23 +169,23 @@ public:
     void setVirtualDesktop(int virtualDesktop);
 
     /**
-     * The geometry of the screen used in filtering by screen. Defaults
-     * to a null QRect.
+     * The number of the screen used in filtering by screen. Usually
+     * set to the number of the current screen. Defaults to @c -1.
      *
-     * @see setGeometryScreen
-     * @returns the geometry of the screen used in filtering.
+     * @see setScreen
+     * @returns the number of the screen used in filtering.
      **/
-    QRect screenGeometry() const;
+    int screen() const;
 
     /**
-     * Set the geometry of the screen to use in filtering by screen.
+     * Set the number of the screen to use in filtering by screen.
      *
-     * If set to an invalid QRect, filtering by screen is disabled.
+     * If set to @c -1, filtering by screen is disabled.
      *
-     * @see screenGeometry
-     * @param geometry A screen geometry.
+     * @see screen
+     * @param screen A screen number.
      **/
-    void setScreenGeometry(const QRect &geometry);
+    void setScreen(int screen);
 
     /**
      * The id of the activity used in filtering by activity. Usually
@@ -768,7 +768,7 @@ Q_SIGNALS:
     void launcherListChanged() const;
     void anyTaskDemandsAttentionChanged() const;
     void virtualDesktopChanged() const;
-    void screenGeometryChanged() const;
+    void screenChanged() const;
     void activityChanged() const;
     void filterByVirtualDesktopChanged() const;
     void filterByScreenChanged() const;

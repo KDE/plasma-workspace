@@ -294,8 +294,8 @@ void TasksModel::Private::initModels()
     filterProxyModel->setSourceModel(concatProxyModel);
     QObject::connect(filterProxyModel, &TaskFilterProxyModel::virtualDesktopChanged,
         q, &TasksModel::virtualDesktopChanged);
-    QObject::connect(filterProxyModel, &TaskFilterProxyModel::screenGeometryChanged,
-        q, &TasksModel::screenGeometryChanged);
+    QObject::connect(filterProxyModel, &TaskFilterProxyModel::screenChanged,
+        q, &TasksModel::screenChanged);
     QObject::connect(filterProxyModel, &TaskFilterProxyModel::activityChanged,
         q, &TasksModel::activityChanged);
     QObject::connect(filterProxyModel, &TaskFilterProxyModel::filterByVirtualDesktopChanged,
@@ -878,14 +878,14 @@ void TasksModel::setVirtualDesktop(int virtualDesktop)
     d->filterProxyModel->setVirtualDesktop(virtualDesktop);
 }
 
-QRect TasksModel::screenGeometry() const
+int TasksModel::screen() const
 {
-    return d->filterProxyModel->screenGeometry();
+    return d->filterProxyModel->screen();
 }
 
-void TasksModel::setScreenGeometry(const QRect &geometry)
+void TasksModel::setScreen(int screen)
 {
-    d->filterProxyModel->setScreenGeometry(geometry);
+    d->filterProxyModel->setScreen(screen);
 }
 
 QString TasksModel::activity() const

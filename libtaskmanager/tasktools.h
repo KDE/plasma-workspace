@@ -101,15 +101,6 @@ TASKMANAGER_EXPORT bool launcherUrlsMatch(const QUrl &a, const QUrl &b, UrlCompa
  * @returns @c true if the model entries belong to the same app.
  **/
 TASKMANAGER_EXPORT bool appsMatch(const QModelIndex &a, const QModelIndex &b);
-
-/**
- * Given global coordinates, returns the geometry of the screen they are
- * on, or the geometry of the screen they are closest to.
- *
- * @param pos Coordinates in global space.
- * @return The geometry of the screen containing pos or closest to pos.
- */
-TASKMANAGER_EXPORT QRect screenGeometry(const QPoint &pos);
 }
 
 #endif
