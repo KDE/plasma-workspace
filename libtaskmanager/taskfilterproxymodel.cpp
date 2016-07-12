@@ -32,7 +32,7 @@ public:
     AbstractTasksModelIface *sourceTasksModel = nullptr;
 
     uint virtualDesktop = 0;
-    int screen = -1;
+    QRect screenGeometry;
     QString activity;
 
     bool filterByVirtualDesktop = false;
@@ -84,21 +84,21 @@ void TaskFilterProxyModel::setVirtualDesktop(uint virtualDesktop)
     }
 }
 
-int TaskFilterProxyModel::screen() const
+QRect TaskFilterProxyModel::screenGeometry() const
 {
-    return d->screen;
+    return d->screenGeometry;
 }
 
-void TaskFilterProxyModel::setScreen(int screen)
+void TaskFilterProxyModel::setScreenGeometry(const QRect &geometry)
 {
-    if (d->screen != screen) {
-        d->screen = screen;
+    if (d->screenGeometry != geometry) {
+        d->screenGeometry = geometry;
 
         if (d->filterByScreen) {
             invalidateFilter();
         }
 
-        emit screenChanged();
+        emit screenGeometryChanged();
     }
 }
 
@@ -310,16 +310,11 @@ bool TaskFilterProxyModel::filterAcceptsRow(int sourceRow, const QModelIndex &so
     }
 
     // Filter by screen.
-    if (d->filterByScreen && d->screen != -1) {
-        const QVariant &screen = sourceIdx.data(AbstractTasksModel::Screen);
+    if (d->filterByScreen && d->screenGeometry.isValid()) {
+        const QRect &screenGeometry = sourceIdx.data(AbstractTasksModel::ScreenGeometry).toRect();
 
-        if (!screen.isNull()) {
-            bool ok = false;
-            const int i = screen.toInt(&ok);
-
-            if (ok && i != -1 && i != d->screen) {
-                return false;
-            }
+        if (screenGeometry.isValid() && screenGeometry != d->screenGeometry) {
+            return false;
         }
     }
 

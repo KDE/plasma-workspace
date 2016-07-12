@@ -39,9 +39,7 @@ License along with this library.  If not, see <http://www.gnu.org/licenses/>.
 #include <QDir>
 #include <QIcon>
 #include <QFile>
-#include <QGuiApplication>
 #include <QRegularExpression>
-#include <QScreen>
 #include <QSet>
 #include <QStandardPaths>
 #include <QTimer>
@@ -90,7 +88,6 @@ public:
     QUrl launcherUrl(WId window, bool encodeFallbackIcon = true);
     QUrl serviceUrl(int pid, const QString &type, const QStringList &cmdRemovals);
     KService::List servicesFromPid(int pid);
-    int screen(WId window);
     QStringList activities(WId window);
     bool demandsAttention(WId window);
 
@@ -378,7 +375,7 @@ void XWindowTasksModel::Private::windowChanged(WId window, NET::Properties prope
 
     if (properties & NET::WMGeometry) {
         wipeInfoCache = true;
-        changedRoles << Screen;
+        changedRoles << ScreenGeometry;
     }
 
     if (properties2 & NET::WM2Activities) {
@@ -776,34 +773,6 @@ KService::List XWindowTasksModel::Private::servicesFromPid(int pid)
     return services;
 }
 
-int XWindowTasksModel::Private::screen(WId window)
-{
-    const QPoint &windowCenter = windowInfo(window)->frameGeometry().center();
-    const QList<QScreen *> &screens = QGuiApplication::screens();
-    int screen = 0;
-    int shortestDistance = INT_MAX;
-
-    for (int i = 0; i < screens.count(); ++i) {
-        const QRect &screenGeomtry = screens.at(i)->geometry();
-
-        if (screenGeomtry.contains(windowCenter)) {
-            return i;
-        }
-
-        int distance = QPoint(screenGeomtry.topLeft() - windowCenter).manhattanLength();
-        distance = qMin(distance, QPoint(screenGeomtry.topRight() - windowCenter).manhattanLength());
-        distance = qMin(distance, QPoint(screenGeomtry.bottomRight() - windowCenter).manhattanLength());
-        distance = qMin(distance, QPoint(screenGeomtry.bottomLeft() - windowCenter).manhattanLength());
-
-        if (distance < shortestDistance) {
-            shortestDistance = distance;
-            screen = i;
-        }
-    }
-
-    return screen;
-}
-
 QStringList XWindowTasksModel::Private::activities(WId window)
 {
     NETWinInfo ni(QX11Info::connection(), window, QX11Info::appRootWindow(), 0, NET::WM2Activities);
@@ -903,8 +872,8 @@ QVariant XWindowTasksModel::data(const QModelIndex &index, int role) const
         return d->windowInfo(window)->desktop();
     } else if (role == IsOnAllVirtualDesktops) {
         return d->windowInfo(window)->onAllDesktops();
-    } else if (role == Screen) {
-        return d->screen(window);
+    } else if (role == ScreenGeometry) {
+        return screenGeometry(d->windowInfo(window)->frameGeometry().center());
     } else if (role == Activities) {
         return d->activities(window);
     } else if (role == IsDemandingAttention) {
