@@ -1529,7 +1529,7 @@ bool TasksModel::filterAcceptsRow(int sourceRow, const QModelIndex &sourceParent
             }
 
             if ((!appId.isEmpty() && appId == filterIndex.data(AbstractTasksModel::AppId).toString())
-                || (appName.isEmpty() && appName == filterIndex.data(AbstractTasksModel::AppName).toString())) {
+                || (!appName.isEmpty() && appName == filterIndex.data(AbstractTasksModel::AppName).toString())) {
                 return false;
             }
         }
