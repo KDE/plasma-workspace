@@ -53,7 +53,7 @@ namespace TaskManager
 {
 
 static const NET::Properties windowInfoFlags = NET::WMState | NET::XAWMState | NET::WMDesktop |
-        NET::WMVisibleName | NET::WMGeometry |
+        NET::WMVisibleName | NET::WMGeometry | NET::WMFrameExtents |
         NET::WMWindowType;
 static const NET::Properties2 windowInfoFlags2 = NET::WM2WindowClass | NET::WM2AllowedActions;
 
