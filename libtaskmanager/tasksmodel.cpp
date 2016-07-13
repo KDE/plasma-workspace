@@ -1125,9 +1125,9 @@ bool TasksModel::requestAddLauncher(const QUrl &url)
     if (d->launcherTasksModel) {
         bool added = d->launcherTasksModel->requestAddLauncher(url);
 
-        // If using manual sorting and launch-in-place sorting, we need
-        // to trigger a sort map update to move any window tasks to their
-        // launcher position now.
+        // If using manual and launch-in-place sorting with separate launchers,
+        // we need to trigger a sort map update to move any window tasks to
+        // their launcher position now.
         if (added && d->sortMode == SortManual && (d->launchInPlace || !d->separateLaunchers)) {
             d->updateManualSortMap();
             d->forceResort();
@@ -1142,7 +1142,17 @@ bool TasksModel::requestAddLauncher(const QUrl &url)
 bool TasksModel::requestRemoveLauncher(const QUrl &url)
 {
     if (d->launcherTasksModel) {
-        return d->launcherTasksModel->requestRemoveLauncher(url);
+        bool removed = d->launcherTasksModel->requestRemoveLauncher(url);
+
+        // If using manual and launch-in-place sorting with separate launchers,
+        // we need to trigger a sort map update to move any window tasks no
+        // longer backed by a launcher out of the launcher area.
+        if (removed && d->sortMode == SortManual && (d->launchInPlace || !d->separateLaunchers)) {
+            d->updateManualSortMap();
+            d->forceResort();
+        }
+
+        return removed;
     }
 
     return false;
