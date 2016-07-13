@@ -685,27 +685,29 @@ bool TasksModel::Private::lessThan(const QModelIndex &left, const QModelIndex &r
             return (left.row() < right.row());
         } else if (left.data(AbstractTasksModel::IsLauncher).toBool() && !right.data(AbstractTasksModel::IsLauncher).toBool()) {
             if (launchInPlace) {
-                const int rightPos = q->launcherPosition(right.data(AbstractTasksModel::LauncherUrl).toUrl());
+                const int leftPos = q->launcherPosition(left.data(AbstractTasksModel::LauncherUrlWithoutIcon).toUrl());
+                const int rightPos = q->launcherPosition(right.data(AbstractTasksModel::LauncherUrlWithoutIcon).toUrl());
 
                 if (rightPos != -1) {
-                    return (left.row() < rightPos);
+                    return (leftPos < rightPos);
                 }
             }
 
             return true;
         } else if (!left.data(AbstractTasksModel::IsLauncher).toBool() && right.data(AbstractTasksModel::IsLauncher).toBool()) {
             if (launchInPlace) {
-                const int leftPos = q->launcherPosition(left.data(AbstractTasksModel::LauncherUrl).toUrl());
+                const int leftPos = q->launcherPosition(left.data(AbstractTasksModel::LauncherUrlWithoutIcon).toUrl());
+                const int rightPos = q->launcherPosition(right.data(AbstractTasksModel::LauncherUrlWithoutIcon).toUrl());
 
                 if (leftPos != -1) {
-                    return (leftPos < right.row());
+                    return (leftPos < rightPos);
                 }
             }
 
             return false;
         } else if (launchInPlace) {
-            const int leftPos = q->launcherPosition(left.data(AbstractTasksModel::LauncherUrl).toUrl());
-            const int rightPos = q->launcherPosition(right.data(AbstractTasksModel::LauncherUrl).toUrl());
+            const int leftPos = q->launcherPosition(left.data(AbstractTasksModel::LauncherUrlWithoutIcon).toUrl());
+            const int rightPos = q->launcherPosition(right.data(AbstractTasksModel::LauncherUrlWithoutIcon).toUrl());
 
             if (leftPos != -1 && rightPos != -1) {
                 return (leftPos < rightPos);
