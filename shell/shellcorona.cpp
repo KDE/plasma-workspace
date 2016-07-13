@@ -1237,9 +1237,11 @@ Activity *ShellCorona::activity(const QString &id)
 void ShellCorona::insertActivity(const QString &id, Activity *activity)
 {
     m_activities.insert(id, activity);
-    Plasma::Containment *c = createContainmentForActivity(id, m_views.count());
-    if (c) {
-        c->config().writeEntry("lastScreen", 0);
+    for (int i = 0; i < m_views.count(); ++i) {
+        Plasma::Containment *c = createContainmentForActivity(id, i);
+        if (c) {
+            c->config().writeEntry("lastScreen", i);
+        }
     }
 }
 
