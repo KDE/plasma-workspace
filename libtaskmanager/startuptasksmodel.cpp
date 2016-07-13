@@ -254,11 +254,7 @@ QVariant StartupTasksModel::data(const QModelIndex &index, int role) const
         return data.desktop();
     } else if (role == IsOnAllVirtualDesktops) {
         return (data.desktop() == 0);
-    } /* else if (role == Screen) {
-        // You might be tempted to do this, but KStartupInfoData::screen()
-        // is actually the X11 screen.
-        return (data.screen() == 0);
-    } */
+    }
 
     return QVariant();
 }
