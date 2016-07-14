@@ -1,5 +1,6 @@
 /*
  *   Copyright 2010 Chani Armitage <chani@kde.org>
+ *   Copyright 2016 Ivan Cukic <ivan.cukic@kde.org>
  *
  *   This program is free software; you can redistribute it and/or modify
  *   it under the terms of the GNU General Public License as
@@ -26,6 +27,8 @@
 #include <kactivities/info.h>
 #include <kconfiggroup.h>
 
+#include <memory>
+
 class QSize;
 class QString;
 class QPixmap;
@@ -33,7 +36,7 @@ class KConfig;
 
 namespace KActivities
 {
-    class Consumer;
+    class Controller;
 } // namespace KActivities
 
 
@@ -41,8 +44,6 @@ namespace Plasma
 {
     class Corona;
 } // namespace Plasma
-
-class DesktopCorona;
 
 /**
  * This class represents one activity.
@@ -58,28 +59,19 @@ public:
     Activity(const QString &id, Plasma::Corona *parent = 0);
     ~Activity() override;
 
-    QString id();
-    QString name();
-    QPixmap pixmap(const QSize &size); //FIXME do we want diff. sizes? updates?
-
-    enum State {
-        Invalid  = KActivities::Info::Invalid,
-        Running  = KActivities::Info::Running,
-        Starting = KActivities::Info::Starting,
-        Stopped  = KActivities::Info::Stopped,
-        Stopping = KActivities::Info::Stopping,
-        PreCreation = 32
-    };
+    QString id() const;
+    QString name() const;
+    QPixmap pixmap(const QSize &size) const; //FIXME do we want diff. sizes? updates?
 
     /**
      * whether this is the currently active activity
      */
-    bool isCurrent();
+    bool isCurrent() const;
 
     /**
      * state of the activity
      */
-    KActivities::Info::State state();
+    KActivities::Info::State state() const;
 
     /**
      * set the plugin to use when creating new containments
@@ -132,18 +124,13 @@ public Q_SLOTS:
     void open();
 
 private Q_SLOTS:
-    void activityChanged();
-    void checkIfCurrent();
     void cleanupActivity();
 
 private:
-    QString m_id;
-    QString m_name;
-    QString m_icon;
+    KActivities::Info m_info;
     QString m_plugin;
-    KActivities::Info *m_info;
-    KActivities::Consumer *m_activityConsumer;
-    bool m_current;
+    std::shared_ptr<KActivities::Controller> m_activityController;
+
 };
 
 #endif
