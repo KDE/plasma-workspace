@@ -1,5 +1,6 @@
 /********************************************************************
 Copyright 2016  Eike Hein <hein@kde.org>
+Copyright 2008  Aaron J. Seigo <aseigo@kde.org>
 
 This library is free software; you can redistribute it and/or
 modify it under the terms of the GNU Lesser General Public
@@ -47,8 +48,6 @@ License along with this library.  If not, see <http://www.gnu.org/licenses/>.
 #include <QTimer>
 #include <QX11Info>
 
-#include <netwm.h>
-
 namespace TaskManager
 {
 
@@ -85,7 +84,8 @@ public:
     AppData appData(WId window);
 
     QIcon icon(WId window);
-    QString mimeType() const;
+    static QString mimeType();
+    static QString groupMimeType();
     QUrl windowUrl(WId window);
     QUrl launcherUrl(WId window, bool encodeFallbackIcon = true);
     QUrl serviceUrl(int pid, const QString &type, const QStringList &cmdRemovals);
@@ -452,9 +452,14 @@ QIcon XWindowTasksModel::Private::icon(WId window)
     return icon;
 }
 
-QString XWindowTasksModel::Private::mimeType() const
+QString XWindowTasksModel::Private::mimeType()
 {
     return QStringLiteral("windowsystem/winid");
+}
+
+QString XWindowTasksModel::Private::groupMimeType()
+{
+    return QStringLiteral("windowsystem/multiple-winids");
 }
 
 QUrl XWindowTasksModel::Private::windowUrl(WId window)
@@ -1241,6 +1246,82 @@ void XWindowTasksModel::requestPublishDelegateGeometry(const QModelIndex &index,
     }
 
     ni.setIconGeometry(rect);
+}
+
+WId XWindowTasksModel::winIdFromMimeData(const QMimeData *mimeData, bool *ok)
+{
+    Q_ASSERT(mimeData);
+
+    if (ok) {
+        *ok = false;
+    }
+
+    if (!mimeData->hasFormat(Private::mimeType())) {
+        return 0;
+    }
+
+    QByteArray data(mimeData->data(Private::mimeType()));
+    if (data.size() != sizeof(WId)) {
+        return 0;
+    }
+
+    WId id;
+    memcpy(&id, data.data(), sizeof(WId));
+
+    if (ok) {
+        *ok = true;
+    }
+
+    return id;
+}
+
+QList<WId> XWindowTasksModel::winIdsFromMimeData(const QMimeData *mimeData, bool *ok)
+{
+    Q_ASSERT(mimeData);
+    QList<WId> ids;
+
+    if (ok) {
+        *ok = false;
+    }
+
+    if (!mimeData->hasFormat(Private::groupMimeType())) {
+        // Try to extract single window id.
+        bool singularOk;
+        WId id = winIdFromMimeData(mimeData, &singularOk);
+
+        if (ok) {
+            *ok = singularOk;
+        }
+
+        if (singularOk) {
+            ids << id;
+        }
+
+        return ids;
+    }
+
+    QByteArray data(mimeData->data(Private::groupMimeType()));
+    if ((unsigned int)data.size() < sizeof(int) + sizeof(WId)) {
+        return ids;
+    }
+
+    int count = 0;
+    memcpy(&count, data.data(), sizeof(int));
+    if (count < 1 || (unsigned int)data.size() < sizeof(int) + sizeof(WId) * count) {
+        return ids;
+    }
+
+    WId id;
+    for (int i = 0; i < count; ++i) {
+        memcpy(&id, data.data() + sizeof(int) + sizeof(WId) * i, sizeof(WId));
+        ids << id;
+    }
+
+    if (ok) {
+        *ok = true;
+    }
+
+    return ids;
 }
 
 }

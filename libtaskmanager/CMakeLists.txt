@@ -36,13 +36,13 @@ target_link_libraries(taskmanager
         Qt5::Gui
         Qt5::Quick
         KF5::ItemModels
-        KF5::WaylandClient
     PRIVATE
         KF5::Activities
         KF5::ConfigCore
         KF5::KIOCore
         KF5::KIOWidgets
         KF5::ProcessCore
+        KF5::WaylandClient
         KF5::WindowSystem
 )
 
