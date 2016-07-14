@@ -189,7 +189,7 @@ ShellCorona::ShellCorona(QObject *parent)
 
     connect(m_activityConsumer, &KActivities::Consumer::currentActivityChanged, this, &ShellCorona::currentActivityChanged);
     connect(m_activityConsumer, &KActivities::Consumer::activityAdded, this, &ShellCorona::activityAdded);
-    connect(m_activityConsumer, SIGNAL(activityRemoved(QString)), this, SLOT(activityRemoved(QString)));
+    connect(m_activityConsumer, &KActivities::Consumer::activityRemoved, this, &ShellCorona::activityRemoved);
 
     new Osd(this);
 
@@ -1563,38 +1563,6 @@ int ShellCorona::screenForContainment(const Plasma::Containment *containment) co
     }
 
     return -1;
-}
-
-void ShellCorona::activityOpened()
-{
-    Activity *activity = qobject_cast<Activity *>(sender());
-    if (activity) {
-        QList<Plasma::Containment*> cs = importLayout(activity->config());
-        for (Plasma::Containment *containment : cs) {
-            insertContainment(activity->name(), containment->lastScreen(), containment);
-        }
-    }
-}
-
-void ShellCorona::activityClosed()
-{
-    Activity *activity = qobject_cast<Activity *>(sender());
-    if (activity) {
-        KConfigGroup cg = activity->config();
-        exportLayout(cg, m_desktopContainments.value(activity->name()).values());
-    }
-}
-
-void ShellCorona::activityRemoved()
-{
-    //when an activity is removed delete all associated desktop containments
-    Activity *activity = qobject_cast<Activity *>(sender());
-    if (activity) {
-        QHash< int, Plasma::Containment* > containmentHash = m_desktopContainments.take(activity->name());
-        for (auto a : containmentHash) {
-            a->destroy();
-        }
-    }
 }
 
 void ShellCorona::nextActivity()
