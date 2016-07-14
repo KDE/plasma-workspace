@@ -44,6 +44,7 @@
 
 #if HAVE_X11
 #include <xcb/xcb.h>
+#include <NETWM>
 #include <QX11Info>
 #endif
 
@@ -871,6 +872,70 @@ void PanelView::updateMask()
     }
 }
 
+bool PanelView::canSetStrut() const
+{
+#if HAVE_X11
+    if (!QX11Info::isPlatformX11()) {
+        return true;
+    }
+    // read the wm name, need to do this every time which means a roundtrip unfortunately
+    // but WM might have changed
+    NETRootInfo rootInfo(QX11Info::connection(), NET::Supported | NET::SupportingWMCheck);
+    if (qstricmp(rootInfo.wmName(), "KWin") == 0) {
+        // KWin since 5.7 can handle this fine, so only exclude for other window managers
+        return true;
+    }
+
+    const QRect thisScreen = screen()->geometry();
+    const int numScreens = corona()->numScreens();
+    if (numScreens < 2) {
+        return true;
+    }
+
+    //Extended struts against a screen edge near to another screen are really harmful, so windows maximized under the panel is a lesser pain
+    //TODO: force "windows can cover" in those cases?
+    foreach (int id, m_corona->screenIds()) {
+        if (id == containment()->screen()) {
+            continue;
+        }
+
+        const QRect otherScreen = corona()->screenGeometry(id);
+        if (!otherScreen.isValid()) {
+            continue;
+        }
+
+        switch (location())
+        {
+            case Plasma::Types::TopEdge:
+            if (otherScreen.bottom() <= thisScreen.top()) {
+                return false;
+            }
+            break;
+        case Plasma::Types::BottomEdge:
+            if (otherScreen.top() >= thisScreen.bottom()) {
+                return false;
+            }
+            break;
+        case Plasma::Types::RightEdge:
+            if (otherScreen.left() >= thisScreen.right()) {
+                return false;
+            }
+            break;
+        case Plasma::Types::LeftEdge:
+            if (otherScreen.right() <= thisScreen.left()) {
+                return false;
+            }
+            break;
+        default:
+            return false;
+        }
+    }
+    return true;
+#else
+    return true;
+#endif
+}
+
 void PanelView::updateStruts()
 {
     if (!containment() || !m_screenToFollow) {
@@ -885,47 +950,9 @@ void PanelView::updateStruts()
         // QScreen::virtualGeometry() is very unreliable (Qt 5.5)
         const QRect wholeScreen = QRect(QPoint(0, 0), m_screenToFollow->virtualSize());
 
-        //Extended struts against a screen edge near to another screen are really harmful, so windows maximized under the panel is a lesser pain
-        //TODO: force "windows can cover" in those cases?
-        foreach (int id, m_corona->screenIds()) {
-            if (id == containment()->screen()) {
-                continue;
-            }
-
-            const QRect otherScreen = corona()->screenGeometry(id);
-            if (!otherScreen.isValid()) {
-                continue;
-            }
-
-            switch (location())
-            {
-                case Plasma::Types::TopEdge:
-                if (otherScreen.bottom() <= thisScreen.top()) {
-                    KWindowSystem::setExtendedStrut(winId(), 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
-                    return;
-                }
-                break;
-            case Plasma::Types::BottomEdge:
-                if (otherScreen.top() >= thisScreen.bottom()) {
-                    KWindowSystem::setExtendedStrut(winId(), 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
-                    return;
-                }
-                break;
-            case Plasma::Types::RightEdge:
-                if (otherScreen.left() >= thisScreen.right()) {
-                    KWindowSystem::setExtendedStrut(winId(), 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
-                    return;
-                }
-                break;
-            case Plasma::Types::LeftEdge:
-                if (otherScreen.right() <= thisScreen.left()) {
-                    KWindowSystem::setExtendedStrut(winId(), 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
-                    return;
-                }
-                break;
-            default:
-                return;
-            }
+        if (!canSetStrut()) {
+            KWindowSystem::setExtendedStrut(winId(), 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+            return;
         }
         // extended struts are to the combined screen geoms, not the single screen
         int leftOffset = thisScreen.x();

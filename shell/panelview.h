@@ -200,6 +200,7 @@ private:
     void setupWaylandIntegration();
     bool edgeActivated() const;
     void updateEnabledBorders();
+    bool canSetStrut() const;
 
     int m_offset;
     int m_maxLength;
