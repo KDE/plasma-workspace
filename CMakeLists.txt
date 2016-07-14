@@ -138,7 +138,6 @@ add_definitions(-DQT_NO_URL_CAST_FROM_STRING)
 add_subdirectory(doc)
 add_subdirectory(libkworkspace)
 add_subdirectory(libtaskmanager)
-add_subdirectory(liblegacytaskmanager)
 add_subdirectory(components)
 
 if(dbusmenu-qt5_FOUND)
