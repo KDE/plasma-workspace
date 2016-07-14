@@ -179,14 +179,12 @@ QScriptValue ScriptEngine::createActivity(QScriptContext *context, QScriptEngine
 
     QString id;
 
-    KActivities::Consumer consumer;
-
     QSet <QString> knownActivities;
     foreach (Plasma::Containment *cont, env->m_corona->containments()) {
         knownActivities.insert(cont->activity());
     }
 
-    foreach (const QString &act, consumer.activities()) {
+    foreach (const QString &act, controller.activities()) {
         if (!knownActivities.contains(act)) {
             id = act;
         }
