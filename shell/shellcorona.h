@@ -187,9 +187,6 @@ private Q_SLOTS:
     void addOutput(QScreen* screen);
     void primaryOutputChanged();
 
-    void activityOpened();
-    void activityClosed();
-    void activityRemoved();
     void panelContainmentDestroyed(QObject* cont);
     void desktopContainmentDestroyed(QObject*);
     void showOpenGLNotCompatibleWarning();
