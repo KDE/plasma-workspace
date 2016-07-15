@@ -87,6 +87,8 @@ public:
     Q_INVOKABLE QRegion availableScreenRegion(int id) const override;
     Q_INVOKABLE QRect availableScreenRect(int id) const override;
 
+    Q_INVOKABLE QStringList availableActivities() const;
+
     PanelView *panelView(Plasma::Containment *containment) const;
 
     //Those two are a bit of an hack but are just for desktop scripting

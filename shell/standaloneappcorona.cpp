@@ -202,6 +202,11 @@ void StandaloneAppCorona::toggleWidgetExplorer()
     return;
 }
 
+QStringList StandaloneAppCorona::availableActivities() const
+{
+    return m_activityContainmentPlugins.keys();
+}
+
 void StandaloneAppCorona::insertActivity(const QString &id, const QString &plugin)
 {
     m_activityContainmentPlugins.insert(id, plugin);

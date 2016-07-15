@@ -46,6 +46,8 @@ public:
     void insertActivity(const QString &id, const QString &plugin);
     Plasma::Containment *addPanel(const QString &plugin);
 
+    Q_INVOKABLE QStringList availableActivities() const;
+
 public Q_SLOTS:
     void load();
 

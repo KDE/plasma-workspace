@@ -54,6 +54,16 @@
 
 QScriptValue constructQRectFClass(QScriptEngine *engine);
 
+namespace {
+    template <typename T>
+    inline void awaitFuture(const QFuture<T> &future)
+    {
+        while (!future.isFinished()) {
+            QCoreApplication::processEvents();
+        }
+    }
+}
+
 namespace WorkspaceScripting
 {
 
@@ -93,6 +103,23 @@ QScriptValue ScriptEngine::desktopById(QScriptContext *context, QScriptEngine *e
     return engine->undefinedValue();
 }
 
+QStringList ScriptEngine::availableActivities(QScriptContext *context, QScriptEngine *engine)
+{
+    Q_UNUSED(engine)
+
+    ScriptEngine *env = envFor(engine);
+
+    ShellCorona *sc = qobject_cast<ShellCorona *>(env->m_corona);
+    StandaloneAppCorona *ac = qobject_cast<StandaloneAppCorona *>(env->m_corona);
+    if (sc) {
+        return sc->availableActivities();
+    } else if (ac) {
+        return ac->availableActivities();
+    }
+
+    return QStringList();
+}
+
 QScriptValue ScriptEngine::desktopsForActivity(QScriptContext *context, QScriptEngine *engine)
 {
     if (context->argumentCount() == 0) {
@@ -105,9 +132,8 @@ QScriptValue ScriptEngine::desktopsForActivity(QScriptContext *context, QScriptE
     const QString id = context->argument(0).toString();
 
     // confirm this activity actually exists
-    KActivities::Consumer consumer;
     bool found = false;
-    for (const QString &act: consumer.activities()) {
+    for (const QString &act: availableActivities(context, engine)) {
         if (act == id) {
             found = true;
             break;
@@ -176,16 +202,11 @@ QScriptValue ScriptEngine::createActivity(QScriptContext *context, QScriptEngine
 
     KActivities::Controller controller;
 
-    //TODO: if there are activities without containment, recycle
+    // This is not the nicest way to do this, but createActivity
+    // is a synchronous API :/
     QFuture<QString> futureId = controller.addActivity(name);
-    QEventLoop loop;
+    awaitFuture(futureId);
 
-    QFutureWatcher<QString> *watcher = new QFutureWatcher<QString>();
-    connect(watcher, &QFutureWatcherBase::finished, &loop, &QEventLoop::quit);
-
-    watcher->setFuture(futureId);
-
-    loop.exec();
     QString id = futureId.result();
 
     qDebug() << "Setting default Containment plugin:" << plugin;
@@ -219,14 +240,7 @@ QScriptValue ScriptEngine::setCurrentActivity(QScriptContext *context, QScriptEn
     KActivities::Controller controller;
 
     QFuture<bool> task = controller.setCurrentActivity(id);
-    QEventLoop loop;
-
-    QFutureWatcher<bool> watcher;
-    connect(&watcher, &QFutureWatcherBase::finished, &loop, &QEventLoop::quit);
-
-    watcher.setFuture(task);
-
-    loop.exec();
+    awaitFuture(task);
 
     return QScriptValue(task.result());
 }
@@ -245,14 +259,7 @@ QScriptValue ScriptEngine::setActivityName(QScriptContext *context, QScriptEngin
     KActivities::Controller controller;
 
     QFuture<void> task = controller.setActivityName(id, name);
-    QEventLoop loop;
-
-    QFutureWatcher<void> watcher;
-    connect(&watcher, &QFutureWatcherBase::finished, &loop, &QEventLoop::quit);
-
-    watcher.setFuture(task);
-
-    loop.exec();
+    awaitFuture(task);
 
     return QScriptValue();
 }
@@ -285,9 +292,7 @@ QScriptValue ScriptEngine::activities(QScriptContext *context, QScriptEngine *en
 {
     Q_UNUSED(context)
 
-    KActivities::Consumer consumer;
-
-    return qScriptValueFromSequence(engine, consumer.activities());
+    return qScriptValueFromSequence(engine, availableActivities(context, engine));
 }
 
 QScriptValue ScriptEngine::newPanel(QScriptContext *context, QScriptEngine *engine)
