@@ -80,7 +80,6 @@ static const int s_configSyncDelay = 10000; // 10 seconds
 ShellCorona::ShellCorona(QObject *parent)
     : Plasma::Corona(parent),
       m_activityController(new KActivities::Controller(this)),
-      m_activityConsumer(new KActivities::Consumer(this)),
       m_addPanelAction(nullptr),
       m_addPanelsMenu(nullptr),
       m_interactiveConsole(nullptr),
@@ -186,9 +185,9 @@ ShellCorona::ShellCorona(QObject *parent)
 
     KGlobalAccel::self()->setGlobalShortcut(stopActivityAction, Qt::META + Qt::Key_S);
 
-    connect(m_activityConsumer, &KActivities::Consumer::currentActivityChanged, this, &ShellCorona::currentActivityChanged);
-    connect(m_activityConsumer, &KActivities::Consumer::activityAdded, this, &ShellCorona::activityAdded);
-    connect(m_activityConsumer, &KActivities::Consumer::activityRemoved, this, &ShellCorona::activityRemoved);
+    connect(m_activityController, &KActivities::Controller::currentActivityChanged, this, &ShellCorona::currentActivityChanged);
+    connect(m_activityController, &KActivities::Controller::activityAdded, this, &ShellCorona::activityAdded);
+    connect(m_activityController, &KActivities::Controller::activityRemoved, this, &ShellCorona::activityRemoved);
 
     new Osd(this);
 
@@ -243,7 +242,7 @@ void ShellCorona::setShell(const QString &shell)
     setKPackage(package);
     m_desktopDefaultsConfig = KConfigGroup(KSharedConfig::openConfig(package.filePath("defaults")), "Desktop");
 
-        const QString themeGroupKey = QStringLiteral("Theme");
+    const QString themeGroupKey = QStringLiteral("Theme");
     const QString themeNameKey = QStringLiteral("name");
 
     QString themeName;
@@ -285,12 +284,12 @@ void ShellCorona::setShell(const QString &shell)
      * Potentially 2 async jobs
      *
      * here we connect for status changes from KAMD, and fetch the first config from kscreen.
-     * load() will check that we have a kscreen config, and m_activityConsumer->serviceStatus() is not loading (i.e not unknown)
+     * load() will check that we have a kscreen config, and m_activityController->serviceStatus() is not loading (i.e not unknown)
      *
      * It might seem that we only need this connection if the activityConsumer is currently in state Unknown, however
-     * there is an issue where m_activityConsumer will start the kactivitymanagerd, as KAMD is starting the serviceStatus will be "not running"
+     * there is an issue where m_activityController will start the kactivitymanagerd, as KAMD is starting the serviceStatus will be "not running"
      * Whilst we are loading the kscreen config, the event loop runs and we might find KAMD has started.
-     * m_activityConsumer will change from "not running" to unknown, and might still be unknown when the kscreen fetching is complete.
+     * m_activityController will change from "not running" to unknown, and might still be unknown when the kscreen fetching is complete.
      *
      * if that happens we want to continue monitoring for state changes, and only finally load when it is up.
      *
@@ -299,7 +298,7 @@ void ShellCorona::setShell(const QString &shell)
      * The unique connection makes sure we don't reload plasma if KAMD ever crashes and reloads, the signal is disconnected in the body of load
      */
 
-    connect(m_activityConsumer, &KActivities::Consumer::serviceStatusChanged, this, &ShellCorona::load, Qt::UniqueConnection);
+    connect(m_activityController, &KActivities::Controller::serviceStatusChanged, this, &ShellCorona::load, Qt::UniqueConnection);
 
     load();
 }
@@ -329,11 +328,11 @@ static QList<QScreen*> sortOutputs(const QList<QScreen*> &outputs)
 void ShellCorona::load()
 {
     if (m_shell.isEmpty() ||
-        m_activityConsumer->serviceStatus() == KActivities::Consumer::Unknown) {
+        m_activityController->serviceStatus() == KActivities::Controller::Unknown) {
         return;
     }
 
-    disconnect(m_activityConsumer, &KActivities::Consumer::serviceStatusChanged, this, &ShellCorona::load);
+    disconnect(m_activityController, &KActivities::Controller::serviceStatusChanged, this, &ShellCorona::load);
 
     loadLayout("plasma-" + m_shell + "-appletsrc");
 
@@ -1163,15 +1162,15 @@ void ShellCorona::interactiveConsoleVisibilityChanged(bool visible)
 
 void ShellCorona::checkActivities()
 {
-    KActivities::Consumer::ServiceStatus status = m_activityController->serviceStatus();
+    KActivities::Controller::ServiceStatus status = m_activityController->serviceStatus();
     //qDebug() << "$%$%$#%$%$%Status:" << status;
-    if (status != KActivities::Consumer::Running) {
+    if (status != KActivities::Controller::Running) {
         //panic and give up - better than causing a mess
         qDebug() << "ShellCorona::checkActivities is called whilst activity daemon is still connecting";
         return;
     }
 
-    QStringList existingActivities = m_activityConsumer->activities();
+    QStringList existingActivities = m_activityController->activities();
     foreach (const QString &id, existingActivities) {
         activityAdded(id);
     }
@@ -1521,7 +1520,7 @@ int ShellCorona::screenForContainment(const Plasma::Containment *containment) co
 
     //if the desktop views already exist, base the decision upon them
     for (int i = 0; i < m_views.count(); i++) {
-        if (m_views[i]->containment() == containment && containment->activity() == m_activityConsumer->currentActivity()) {
+        if (m_views[i]->containment() == containment && containment->activity() == m_activityController->currentActivity()) {
             return i;
         }
     }
@@ -1545,7 +1544,7 @@ int ShellCorona::screenForContainment(const Plasma::Containment *containment) co
 //     qDebug() << "ShellCorona screenForContainment: " << containment << " Last screen is " << containment->lastScreen();
     for (int i = 0, count = qGuiApp->screens().count(); i<count; ++i) {
         if (containment->lastScreen() == i &&
-            (containment->activity() == m_activityConsumer->currentActivity() ||
+            (containment->activity() == m_activityController->currentActivity() ||
             containment->containmentType() == Plasma::Types::PanelContainment || containment->containmentType() == Plasma::Types::CustomPanelContainment)) {
             return i;
         }
@@ -1556,7 +1555,7 @@ int ShellCorona::screenForContainment(const Plasma::Containment *containment) co
 
 void ShellCorona::nextActivity()
 {
-    const QStringList list = m_activityConsumer->activities(KActivities::Info::Running);
+    const QStringList list = m_activityController->activities(KActivities::Info::Running);
     if (list.isEmpty()) {
         return;
     }
@@ -1569,7 +1568,7 @@ void ShellCorona::nextActivity()
 
 void ShellCorona::previousActivity()
 {
-    const QStringList list = m_activityConsumer->activities(KActivities::Info::Running);
+    const QStringList list = m_activityController->activities(KActivities::Info::Running);
     if (list.isEmpty()) {
         return;
     }
@@ -1585,12 +1584,12 @@ void ShellCorona::previousActivity()
 
 void ShellCorona::stopCurrentActivity()
 {
-    const QStringList list = m_activityConsumer->activities(KActivities::Info::Running);
+    const QStringList list = m_activityController->activities(KActivities::Info::Running);
     if (list.isEmpty()) {
         return;
     }
 
-    m_activityController->stopActivity(m_activityConsumer->currentActivity());
+    m_activityController->stopActivity(m_activityController->currentActivity());
 }
 
 void ShellCorona::insertContainment(const QString &activity, int screenNum, Plasma::Containment *containment)

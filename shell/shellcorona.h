@@ -39,7 +39,6 @@ class QScreen;
 
 namespace KActivities
 {
-    class Consumer;
     class Controller;
 } // namespace KActivities
 
@@ -212,7 +211,6 @@ private:
     QString m_shell;
     QList<DesktopView *> m_views;
     KActivities::Controller *m_activityController;
-    KActivities::Consumer *m_activityConsumer;
     QHash<const Plasma::Containment *, PanelView *> m_panelViews;
     KConfigGroup m_desktopDefaultsConfig;
     QList<Plasma::Containment *> m_waitingPanels;
