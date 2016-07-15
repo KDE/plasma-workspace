@@ -608,11 +608,6 @@ void ShellCorona::processUpdateScripts()
     }
 }
 
-KActivities::Controller *ShellCorona::activityController()
-{
-    return m_activityController;
-}
-
 int ShellCorona::numScreens() const
 {
     return qGuiApp->screens().count();
