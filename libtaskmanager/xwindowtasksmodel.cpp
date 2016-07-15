@@ -224,7 +224,7 @@ void XWindowTasksModel::Private::addWindow(WId window)
         transients.insert(window);
 
         // Update demands attention state for leader.
-        if (info.state() & NET::DemandsAttention && windows.contains(leader)) {
+        if (info.hasState(NET::DemandsAttention) && windows.contains(leader)) {
             transientsDemandingAttention.insertMulti(leader, window);
             dataChanged(leader, QVector<int>{IsDemandingAttention});
         }
@@ -297,7 +297,7 @@ void XWindowTasksModel::Private::transientChanged(WId window, NET::Properties pr
             return;
         }
 
-        if (info.state() & NET::DemandsAttention) {
+        if (info.hasState(NET::DemandsAttention)) {
             if (!transientsDemandingAttention.values(leader).contains(window)) {
                 transientsDemandingAttention.insertMulti(leader, window);
                 dataChanged(leader, QVector<int>{IsDemandingAttention});
@@ -309,7 +309,7 @@ void XWindowTasksModel::Private::transientChanged(WId window, NET::Properties pr
     } else if (properties2 & NET::WM2TransientFor) {
         const KWindowInfo info(window, NET::WMState | NET::XAWMState, NET::WM2TransientFor);
 
-        if (info.state() & NET::DemandsAttention) {
+        if (info.hasState(NET::DemandsAttention)) {
             WId oldLeader = info.transientFor();
             QMutableHashIterator<WId, WId> i(transientsDemandingAttention);
 
@@ -825,7 +825,7 @@ QStringList XWindowTasksModel::Private::activities(WId window)
 bool XWindowTasksModel::Private::demandsAttention(WId window)
 {
     if (windows.contains(window)) {
-        return ((windowInfo(window)->state() & NET::DemandsAttention)
+        return ((windowInfo(window)->hasState(NET::DemandsAttention))
         || transientsDemandingAttention.contains(window));
     }
 
@@ -885,23 +885,23 @@ QVariant XWindowTasksModel::data(const QModelIndex &index, int role) const
         return d->windowInfo(window)->actionSupported(NET::ActionMax);
     } else if (role == IsMaximized) {
         const KWindowInfo *info = d->windowInfo(window);
-        return (bool)(info->state() & NET::MaxHoriz) && (bool)(info->state() & NET::MaxVert);
+        return info->hasState(NET::MaxHoriz) && info->hasState(NET::MaxVert);
     } else if (role == IsMinimizable) {
         return d->windowInfo(window)->actionSupported(NET::ActionMinimize);
     } else if (role == IsMinimized) {
         return d->windowInfo(window)->isMinimized();
     } else if (role == IsKeepAbove) {
-        return (bool)(d->windowInfo(window)->state() & NET::StaysOnTop);
+        return d->windowInfo(window)->hasState(NET::StaysOnTop);
     } else if (role == IsKeepBelow) {
-        return (bool)(d->windowInfo(window)->state() & NET::KeepBelow);
+        return d->windowInfo(window)->hasState(NET::KeepBelow);
     } else if (role == IsFullScreenable) {
         return d->windowInfo(window)->actionSupported(NET::ActionFullScreen);
     } else if (role == IsFullScreen) {
-        return (bool)(d->windowInfo(window)->state() & NET::FullScreen);
+        return d->windowInfo(window)->hasState(NET::FullScreen);
     } else if (role == IsShadeable) {
         return d->windowInfo(window)->actionSupported(NET::ActionShade);
     } else if (role == IsShaded) {
-        return (bool)(d->windowInfo(window)->state() & NET::Shaded);
+        return d->windowInfo(window)->hasState(NET::Shaded);
     } else if (role == IsVirtualDesktopChangeable) {
         return d->windowInfo(window)->actionSupported(NET::ActionChangeDesktop);
     } else if (role == VirtualDesktop) {
@@ -915,7 +915,7 @@ QVariant XWindowTasksModel::data(const QModelIndex &index, int role) const
     } else if (role == IsDemandingAttention) {
         return d->demandsAttention(window);
     } else if (role == SkipTaskbar) {
-        return (bool)(d->windowInfo(window)->state() & NET::SkipTaskbar);
+        return d->windowInfo(window)->hasState(NET::SkipTaskbar);
     }
 
     return QVariant();
@@ -948,7 +948,7 @@ void XWindowTasksModel::requestActivate(const QModelIndex &index)
             foreach (const WId transient, d->transients) {
                 KWindowInfo info(transient, NET::WMState, NET::WM2TransientFor);
 
-                if (info.valid(true) && (info.state() & NET::Shaded) && info.transientFor() == window) {
+                if (info.valid(true) && info.hasState(NET::Shaded) && info.transientFor() == window) {
                     window = transient;
                     break;
                 }
@@ -1070,7 +1070,7 @@ void XWindowTasksModel::requestToggleMaximized(const QModelIndex &index)
     const WId window = d->windows.at(index.row());
     const KWindowInfo *info = d->windowInfo(window);
     bool onCurrent = info->isOnCurrentDesktop();
-    bool restore = (info->state() & NET::MaxHoriz) && (bool)(info->state() & NET::MaxVert);
+    bool restore = (info->hasState(NET::MaxHoriz) && info->hasState(NET::MaxVert));
 
     // FIXME: Move logic up into proxy? (See also others.)
     if (!onCurrent) {
@@ -1105,7 +1105,7 @@ void XWindowTasksModel::requestToggleKeepAbove(const QModelIndex &index)
 
     NETWinInfo ni(QX11Info::connection(), window, QX11Info::appRootWindow(), NET::WMState, 0);
 
-    if (info->state() & NET::StaysOnTop) {
+    if (info->hasState(NET::StaysOnTop)) {
         ni.setState(0, NET::StaysOnTop);
     } else {
         ni.setState(NET::StaysOnTop, NET::StaysOnTop);
@@ -1123,7 +1123,7 @@ void XWindowTasksModel::requestToggleKeepBelow(const QModelIndex &index)
 
     NETWinInfo ni(QX11Info::connection(), window, QX11Info::appRootWindow(), NET::WMState, 0);
 
-    if (info->state() & NET::KeepBelow) {
+    if (info->hasState(NET::KeepBelow)) {
         ni.setState(0, NET::KeepBelow);
     } else {
         ni.setState(NET::KeepBelow, NET::KeepBelow);
@@ -1141,7 +1141,7 @@ void XWindowTasksModel::requestToggleFullScreen(const QModelIndex &index)
 
     NETWinInfo ni(QX11Info::connection(), window, QX11Info::appRootWindow(), NET::WMState, 0);
 
-    if (info->state() & NET::FullScreen) {
+    if (info->hasState(NET::FullScreen)) {
         ni.setState(0, NET::FullScreen);
     } else {
         ni.setState(NET::FullScreen, NET::FullScreen);
@@ -1159,7 +1159,7 @@ void XWindowTasksModel::requestToggleShaded(const QModelIndex &index)
 
     NETWinInfo ni(QX11Info::connection(), window, QX11Info::appRootWindow(), NET::WMState, 0);
 
-    if (info->state() & NET::Shaded) {
+    if (info->hasState(NET::Shaded)) {
         ni.setState(0, NET::Shaded);
     } else {
         ni.setState(NET::Shaded, NET::Shaded);
