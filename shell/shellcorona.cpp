@@ -677,6 +677,11 @@ QRect ShellCorona::availableScreenRect(int id) const
     return r;
 }
 
+QStringList ShellCorona::availableActivities() const
+{
+    return m_activityContainmentPlugins.keys();
+}
+
 QScreen *ShellCorona::screenForId(int screenId) const
 {
     DesktopView *v = m_views.value(screenId);
@@ -1219,6 +1224,8 @@ void ShellCorona::activityRemoved(const QString &id)
 
 void ShellCorona::insertActivity(const QString &id, const QString &plugin)
 {
+    activityAdded(id);
+
     m_activityContainmentPlugins.insert(id, plugin);
     for (int i = 0; i < m_views.count(); ++i) {
         Plasma::Containment *c = createContainmentForActivity(id, i);

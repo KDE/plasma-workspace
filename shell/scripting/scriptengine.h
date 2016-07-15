@@ -71,8 +71,8 @@ private:
     void setupEngine();
     static QString onlyExec(const QString &commandLine);
 
-    // containment accessors
-    static QStringList availableContainments(const QString &type);
+    static QStringList availableActivities(QScriptContext *context, QScriptEngine *engine);
+
     static QScriptValue createActivity(QScriptContext *context, QScriptEngine *engine);
     static QScriptValue setCurrentActivity(QScriptContext *context, QScriptEngine *engine);
     static QScriptValue currentActivity(QScriptContext *controller, QScriptEngine *engine);
