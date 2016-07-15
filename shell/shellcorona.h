@@ -89,8 +89,6 @@ public:
 
     PanelView *panelView(Plasma::Containment *containment) const;
 
-    KActivities::Controller *activityController();
-
     //Those two are a bit of an hack but are just for desktop scripting
     void insertActivity(const QString &id, const QString &plugin);
 
