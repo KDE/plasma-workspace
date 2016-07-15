@@ -49,7 +49,6 @@
 #include "i18n.h"
 #include "panel.h"
 #include "widget.h"
-#include "../activity.h"
 #include "../shellcorona.h"
 #include "../standaloneappcorona.h"
 
@@ -171,7 +170,7 @@ QScriptValue ScriptEngine::createActivity(QScriptContext *context, QScriptEngine
     }
 
     const QString name = context->argument(0).toString();
-    const QString plugin = context->argument(1).toString();
+    QString plugin = context->argument(1).toString();
 
     ScriptEngine *env = envFor(engine);
 
@@ -189,23 +188,19 @@ QScriptValue ScriptEngine::createActivity(QScriptContext *context, QScriptEngine
     loop.exec();
     QString id = futureId.result();
 
-    Activity *a = new Activity(id, env->m_corona);
-
     qDebug() << "Setting default Containment plugin:" << plugin;
 
     if (plugin.isEmpty() || plugin == QLatin1String("undefined")) {
         KConfigGroup shellCfg = KConfigGroup(KSharedConfig::openConfig(env->m_corona->package().filePath("defaults")), "Desktop");
-        a->setDefaultPlugin(shellCfg.readEntry("Containment", "org.kde.desktopcontainment"));
-    } else {
-        a->setDefaultPlugin(plugin);
+        plugin = shellCfg.readEntry("Containment", "org.kde.desktopcontainment");
     }
 
     ShellCorona *sc = qobject_cast<ShellCorona *>(env->m_corona);
     StandaloneAppCorona *ac = qobject_cast<StandaloneAppCorona *>(env->m_corona);
     if (sc) {
-        sc->insertActivity(id, a);
+        sc->insertActivity(id, plugin);
     } else if (ac) {
-        ac->insertActivity(id, a);
+        ac->insertActivity(id, plugin);
     }
 
     return QScriptValue(id);

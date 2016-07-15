@@ -45,7 +45,6 @@ ecm_qt_declare_logging_category(plasmashell HEADER debug.h
                                                DEFAULT_SEVERITY Info)
 
 set (plasma_shell_SRCS
-    activity.cpp
     alternativeshelper.cpp
     main.cpp
     containmentconfigview.cpp

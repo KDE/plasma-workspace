@@ -53,7 +53,6 @@
 #include "config-ktexteditor.h" // HAVE_KTEXTEDITOR
 
 #include "alternativeshelper.h"
-#include "activity.h"
 #include "desktopview.h"
 #include "panelview.h"
 #include "scripting/scriptengine.h"
@@ -910,11 +909,8 @@ Plasma::Containment *ShellCorona::createContainmentForActivity(const QString& ac
         return *it;
     }
 
-    QString plugin;
-    Activity* a = m_activities.value(activity);
-    if (a && !a->defaultPlugin().isEmpty()) {
-        plugin = a->defaultPlugin();
-    } else {
+    QString plugin = m_activityContainmentPlugins.value(activity);
+    if (plugin.isEmpty()) {
         plugin = m_desktopDefaultsConfig.readEntry("Containment", "org.kde.desktopcontainment");
     }
 
@@ -1213,30 +1209,23 @@ void ShellCorona::currentActivityChanged(const QString &newActivity)
 void ShellCorona::activityAdded(const QString &id)
 {
     //TODO more sanity checks
-    if (m_activities.contains(id)) {
+    if (m_activityContainmentPlugins.contains(id)) {
         qWarning() << "Activity added twice" << id;
         return;
     }
 
-    Activity *a = new Activity(id, this);
-    a->setDefaultPlugin(m_desktopDefaultsConfig.readEntry("Containment", "org.kde.desktopcontainment"));
-    m_activities.insert(id, a);
+    const QString plugin = m_desktopDefaultsConfig.readEntry("Containment", "org.kde.desktopcontainment");
+    m_activityContainmentPlugins.insert(id, plugin);
 }
 
 void ShellCorona::activityRemoved(const QString &id)
 {
-    Activity *a = m_activities.take(id);
-    a->deleteLater();
+    m_activityContainmentPlugins.remove(id);
 }
 
-Activity *ShellCorona::activity(const QString &id)
+void ShellCorona::insertActivity(const QString &id, const QString &plugin)
 {
-    return m_activities.value(id);
-}
-
-void ShellCorona::insertActivity(const QString &id, Activity *activity)
-{
-    m_activities.insert(id, activity);
+    m_activityContainmentPlugins.insert(id, plugin);
     for (int i = 0; i < m_views.count(); ++i) {
         Plasma::Containment *c = createContainmentForActivity(id, i);
         if (c) {

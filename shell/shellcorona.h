@@ -32,7 +32,6 @@
 
 #include <KPackage/Package>
 
-class Activity;
 class DesktopView;
 class PanelView;
 class QMenu;
@@ -94,8 +93,7 @@ public:
     KActivities::Controller *activityController();
 
     //Those two are a bit of an hack but are just for desktop scripting
-    Activity *activity(const QString &id);
-    void insertActivity(const QString &id, Activity *activity);
+    void insertActivity(const QString &id, const QString &plugin);
 
     Plasma::Containment *setContainmentTypeForScreen(int screen, const QString &plugin);
 
@@ -218,7 +216,7 @@ private:
     QHash<const Plasma::Containment *, PanelView *> m_panelViews;
     KConfigGroup m_desktopDefaultsConfig;
     QList<Plasma::Containment *> m_waitingPanels;
-    QHash<QString, Activity *> m_activities;
+    QHash<QString, QString> m_activityContainmentPlugins;
     QHash<QString, QHash<int, Plasma::Containment *> > m_desktopContainments;
     QAction *m_addPanelAction;
     QMenu *m_addPanelsMenu;
