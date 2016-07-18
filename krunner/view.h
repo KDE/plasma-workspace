@@ -64,6 +64,7 @@ Q_SIGNALS:
 
 protected:
     bool event(QEvent* event) override;
+    void resizeEvent(QResizeEvent *event) override;
     void showEvent(QShowEvent *event) override;
 
 public Q_SLOTS:

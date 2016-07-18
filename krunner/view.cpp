@@ -256,6 +256,13 @@ bool View::event(QEvent *event)
     return retval;
 }
 
+void View::resizeEvent(QResizeEvent *event)
+{
+    if (event->oldSize().width() != event->size().width()) {
+        positionOnScreen();
+    }
+}
+
 void View::showEvent(QShowEvent *event)
 {
     KWindowSystem::setOnAllDesktops(winId(), true);
