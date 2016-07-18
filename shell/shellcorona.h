@@ -91,7 +91,7 @@ public:
 
     PanelView *panelView(Plasma::Containment *containment) const;
 
-    //Those two are a bit of an hack but are just for desktop scripting
+    // This one is a bit of an hack but are just for desktop scripting
     void insertActivity(const QString &id, const QString &plugin);
 
     Plasma::Containment *setContainmentTypeForScreen(int screen, const QString &plugin);
