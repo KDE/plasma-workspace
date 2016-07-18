@@ -63,6 +63,8 @@
 
 #include "plasmashelladaptor.h"
 
+#include "futureutil.h"
+
 #ifndef NDEBUG
     #define CHECK_SCREEN_INVARIANTS screenInvariants();
 #else
@@ -902,13 +904,16 @@ QScreen* ShellCorona::insertScreen(QScreen *screen, int idx)
 
 Plasma::Containment *ShellCorona::createContainmentForActivity(const QString& activity, int screenNum)
 {
-    QHash<int, Plasma::Containment *> act = m_desktopContainments.value(activity);
-    QHash<int, Plasma::Containment *>::const_iterator it = act.constFind(screenNum);
-    if (it != act.constEnd()) {
-        return *it;
+    if (m_desktopContainments.contains(activity)) {
+        QHash<int, Plasma::Containment *> act = m_desktopContainments.value(activity);
+        QHash<int, Plasma::Containment *>::const_iterator it = act.constFind(screenNum);
+        if (it != act.constEnd() && (*it)) {
+            return *it;
+        }
     }
 
     QString plugin = m_activityContainmentPlugins.value(activity);
+
     if (plugin.isEmpty()) {
         plugin = m_desktopDefaultsConfig.readEntry("Containment", "org.kde.desktopcontainment");
     }
@@ -1225,6 +1230,24 @@ void ShellCorona::activityRemoved(const QString &id)
 void ShellCorona::insertActivity(const QString &id, const QString &plugin)
 {
     activityAdded(id);
+
+    const QString currentActivityReally = m_activityController->currentActivity();
+
+    // TODO: This needs to go away!
+    // The containment creation API does not know when we have a
+    // new activity to create a containment for, we need to pretend
+    // that the current activity has been changed
+    QFuture<bool> currentActivity = m_activityController->setCurrentActivity(id);
+    awaitFuture(currentActivity);
+
+    if (!currentActivity.result()) {
+        qDebug() << "Failed to create and switch to the activity";
+        return;
+    }
+
+    while (m_activityController->currentActivity() != id) {
+        QCoreApplication::processEvents();
+    }
 
     m_activityContainmentPlugins.insert(id, plugin);
     for (int i = 0; i < m_views.count(); ++i) {
