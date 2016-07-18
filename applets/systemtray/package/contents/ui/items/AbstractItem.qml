@@ -80,7 +80,7 @@ PlasmaCore.ToolTipArea {
 //END CONNECTIONS
 
     PulseAnimation {
-        targetItem: abstractItem
+        targetItem: iconItem
         running: (abstractItem.status === PlasmaCore.Types.NeedsAttentionStatus ||
             abstractItem.status === PlasmaCore.Types.RequiresAttentionStatus ) &&
             units.longDuration > 0
