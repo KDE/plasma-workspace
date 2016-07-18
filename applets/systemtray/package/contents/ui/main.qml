@@ -31,7 +31,7 @@ MouseArea {
     Layout.minimumHeight: vertical ? tasksRow.implicitHeight+ expander.implicitHeight + units.smallSpacing : units.smallSpacing
 
     property bool vertical: plasmoid.formFactor == PlasmaCore.Types.Vertical
-    property int itemSize: Math.min(Math.min(width, height), units.iconSizes.medium)
+    property int itemSize: units.roundToIconSize(Math.min(Math.min(width, height), units.iconSizes.medium))
     property int hiddenItemSize: units.iconSizes.smallMedium
     property alias expanded: dialog.visible
     property Item activeApplet
