@@ -85,7 +85,7 @@ Column {
                 appName: runningJobs[source].appName,
                 summary: summary,
                 body: errorText || message,
-                isPersistent: true,
+                isPersistent: !!error, // we'll assume success to be the note-unworthy default, only be persistent in error case
                 urgency: 0,
                 configurable: false,
                 skipGrouping: true, // Bug 360156
