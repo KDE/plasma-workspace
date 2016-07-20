@@ -27,6 +27,7 @@
 
 #include <Plasma/Corona>
 #include <Plasma/Containment>
+#include <Plasma/PluginLoader>
 
 #include "scriptengine.h"
 #include "widget.h"
@@ -171,7 +172,7 @@ QScriptValue Containment::widgetById(QScriptContext *context, QScriptEngine *eng
 QScriptValue Containment::addWidget(QScriptContext *context, QScriptEngine *engine)
 {
     if (context->argumentCount() == 0) {
-        return context->throwError(i18n("widgetById requires a name of a widget or a widget object"));
+        return context->throwError(i18n("addWidget requires a name of a widget or a widget object"));
     }
 
     Containment *c = qobject_cast<Containment*>(context->thisObject().toQObject());
@@ -182,8 +183,19 @@ QScriptValue Containment::addWidget(QScriptContext *context, QScriptEngine *engi
 
     QScriptValue v = context->argument(0);
     Plasma::Applet *applet = 0;
+    int id = -1;
+    if (context->argumentCount() > 1 && context->argument(1).isNumber()) {
+        id = context->argument(1).toInteger();
+    }
     if (v.isString()) {
-        applet = c->d->containment.data()->createApplet(v.toString());
+        if (id == -1) {
+            applet = c->d->containment.data()->createApplet(v.toString());
+        } else {
+            applet = Plasma::PluginLoader::self()->loadApplet(v.toString(), id, QVariantList());
+            if (applet) {
+                c->d->containment.data()->addApplet(applet);
+            }
+        }
         if (applet) {
             ScriptEngine *env = ScriptEngine::envFor(engine);
             return env->wrap(applet);

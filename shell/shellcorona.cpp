@@ -374,30 +374,30 @@ QString ShellCorona::dumpCurrentLayoutJS()
         const QString name = act->info()->name();
         script += "    var activityId = createActivity(\"" + name + "\");\n";
         script += "    var desktopsArray = desktopsForActivity(activityId);\n";
-        script += "    for (var j = 0; j < desktopsArray.length; j++) {\n";
         //enumerate containments
+        int i = 0;
         foreach (Plasma::Containment *cont, m_desktopContainments.value(act->id()).values()) {
-            script += "        var cont = desktopsArray[j];\n\n";
-            script += "        cont.wallpaperPlugin = '" + cont->wallpaper() + "';\n";
+            script += "    var cont = desktopsArray[" + QString::number(i) + "];\n\n";
+            script += "    cont.wallpaperPlugin = '" + cont->wallpaper() + "';\n";
 
             //enumerate config keys for containment
             KConfigGroup contConfig = cont->config();
-            script += "        //Containment configuration\n";
-            script += dumpconfigGroupJS(contConfig, QStringLiteral("        cont"));
+            script += "    //Containment configuration\n";
+            script += dumpconfigGroupJS(contConfig, QStringLiteral("    cont"));
 
             script += "\n\n";
             foreach (Plasma::Applet *applet, cont->applets()) {
-                script += "        {\n";
-                script += "            //Configuration of applet " + applet->title() + "\n";
-                script += "            var applet = cont.addWidget(\"" + applet->pluginInfo().pluginName() + "\");\n";
+                script += "    {\n";
+                script += "        //Configuration of applet " + applet->title() + "\n";
+                script += "        var applet = cont.addWidget(\"" + applet->pluginInfo().pluginName() + "\", " + QString::number(applet->id()) + ");\n";
 
                 KConfigGroup appletConfig = applet->config();
                 script += dumpconfigGroupJS(appletConfig, QStringLiteral("            applet"));
 
-                script += "        }\n";
+                script += "    }\n";
             }
+            ++i;
         }
-        script += "    }\n";
         script += "}\n";
     }
 
@@ -446,7 +446,7 @@ QString ShellCorona::dumpCurrentLayoutJS()
         foreach (Plasma::Applet *applet, cont->applets()) {
             script += "    {\n";
             script += "        //Configuration of applet " + applet->title() + "\n";
-            script += "        var applet = panel.addWidget(\"" + applet->pluginInfo().pluginName() + "\");\n";
+            script += "        var applet = panel.addWidget(\"" + applet->pluginInfo().pluginName() + "\", " + QString::number(applet->id()) + ");\n";
 
             KConfigGroup appletConfig = applet->config();
             script += dumpconfigGroupJS(appletConfig, QStringLiteral("        applet"));
