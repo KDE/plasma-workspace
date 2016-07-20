@@ -33,7 +33,7 @@ MouseArea {
     property var iconSizes: ["small", "smallMedium", "medium", "large", "huge", "enormous"];
 
     property bool vertical: plasmoid.formFactor == PlasmaCore.Types.Vertical
-    property int itemSize: Math.min(Math.min(width, height), units.iconSizes[iconSizes[plasmoid.configuration.iconSize]])
+    property int itemSize: units.roundToIconSize(Math.min(Math.min(width, height), units.iconSizes[iconSizes[plasmoid.configuration.iconSize]]))
     property int hiddenItemSize: units.iconSizes.smallMedium
     property alias expanded: dialog.visible
     property Item activeApplet
