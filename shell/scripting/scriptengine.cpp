@@ -189,6 +189,22 @@ QScriptValue ScriptEngine::desktopForScreen(QScriptContext *context, QScriptEngi
     return env->wrap(env->m_corona->containmentForScreen(screen));
 }
 
+QScriptValue ScriptEngine::removeActivity(QScriptContext *context, QScriptEngine *engine)
+{
+    if (context->argumentCount() < 0) {
+        return context->throwError(i18n("removeActivity required the activity id"));
+    }
+
+    const auto id = context->argument(0).toString();
+
+    KActivities::Controller controller;
+    const auto result = controller.removeActivity(id);
+
+    awaitFuture(result);
+
+    return QScriptValue();
+}
+
 QScriptValue ScriptEngine::createActivity(QScriptContext *context, QScriptEngine *engine)
 {
     if (context->argumentCount() < 0) {
@@ -818,6 +834,7 @@ void ScriptEngine::setupEngine()
 
     m_scriptSelf.setProperty(QStringLiteral("QRectF"), constructQRectFClass(this));
     m_scriptSelf.setProperty(QStringLiteral("createActivity"), newFunction(ScriptEngine::createActivity));
+    m_scriptSelf.setProperty(QStringLiteral("removeActivity"), newFunction(ScriptEngine::removeActivity));
     m_scriptSelf.setProperty(QStringLiteral("setCurrentActivity"), newFunction(ScriptEngine::setCurrentActivity));
     m_scriptSelf.setProperty(QStringLiteral("currentActivity"), newFunction(ScriptEngine::currentActivity));
     m_scriptSelf.setProperty(QStringLiteral("activities"), newFunction(ScriptEngine::activities));
