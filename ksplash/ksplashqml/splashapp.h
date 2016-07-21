@@ -28,6 +28,14 @@
 
 class SplashWindow;
 
+namespace KWayland
+{
+namespace Client
+{
+class PlasmaShell;
+}
+}
+
 class SplashApp: public QGuiApplication
 {
     Q_OBJECT
@@ -37,6 +45,11 @@ public:
     explicit SplashApp(int &argc, char ** argv);
     ~SplashApp() override;
 
+
+    KWayland::Client::PlasmaShell *waylandPlasmaShellInterface() const {
+        return m_waylandPlasmaShell;
+    }
+
 public Q_SLOTS:
     Q_SCRIPTABLE void setStage(const QString &messgae);
 
@@ -45,6 +58,7 @@ protected:
     void setStage(int stage);
 
 private:
+    void setupWaylandIntegration();
     int m_stage;
     QList<SplashWindow *> m_windows;
     bool m_testing;
@@ -52,6 +66,8 @@ private:
     QStringList m_stages;
     QBasicTimer m_timer;
     QDateTime m_startTime;
+
+    KWayland::Client::PlasmaShell *m_waylandPlasmaShell = nullptr;
 
 private Q_SLOTS:
     void adoptScreen(QScreen*);
