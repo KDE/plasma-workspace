@@ -111,4 +111,3 @@ install(FILES
    DESTINATION ${KDE_INSTALL_KSERVICETYPES5DIR})
 
 add_subdirectory(packageplugins)
-add_subdirectory(tests)
