@@ -51,6 +51,7 @@ class KSMShutdownDlg : public QQuickView
 public:
     KSMShutdownDlg( QWindow* parent, bool maysd, bool choose, KWorkSpace::ShutdownType sdtype, const QString& theme );
 
+    void init();
     bool result() const;
 
     KWorkSpace::ShutdownType shutdownType() const {
@@ -73,13 +74,14 @@ Q_SIGNALS:
 
 protected:
     void resizeEvent(QResizeEvent *e) Q_DECL_OVERRIDE;
-    void mousePressEvent(QMouseEvent *e) Q_DECL_OVERRIDE;
 
 private:
+    void rePosition();
     KWorkSpace::ShutdownType m_shutdownType;
     QString m_bootOption;
     QStringList rebootOptions;
     bool m_result : 1;
+    QString m_theme;
 };
 
 #endif

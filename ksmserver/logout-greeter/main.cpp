@@ -24,14 +24,112 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #include <QApplication>
 #include <QCommandLineParser>
 #include <QDebug>
+#include <QScreen>
 #include "../shutdowndlg.h"
 
 #include <unistd.h>
 
+class Greeter : public QObject
+{
+    Q_OBJECT
+public:
+    Greeter(int fd, bool shutdownAllowed, bool choose, KWorkSpace::ShutdownType type);
+    virtual ~Greeter();
+
+    void init();
+
+    bool eventFilter(QObject *watched, QEvent *event) override;
+
+private:
+    void adoptScreen(QScreen *screen);
+    void rejected();
+
+    int m_fd;
+    bool m_shutdownAllowed;
+    bool m_choose;
+    KWorkSpace::ShutdownType m_shutdownType;
+    QVector<KSMShutdownDlg *> m_dialogs;
+};
+
+Greeter::Greeter(int fd, bool shutdownAllowed, bool choose, KWorkSpace::ShutdownType type)
+    : QObject()
+    , m_fd(fd)
+    , m_shutdownAllowed(shutdownAllowed)
+    , m_choose(choose)
+    , m_shutdownType(type)
+{
+}
+
+Greeter::~Greeter()
+{
+    qDeleteAll(m_dialogs);
+}
+
+void Greeter::init()
+{
+    foreach (QScreen *screen, qApp->screens()) {
+        adoptScreen(screen);
+    }
+    connect(qApp, &QGuiApplication::screenAdded, this, &Greeter::adoptScreen);
+}
+
+void Greeter::adoptScreen(QScreen* screen)
+{
+    // TODO: last argument is the theme, maybe add command line option for it?
+    KSMShutdownDlg *w = new KSMShutdownDlg(nullptr, m_shutdownAllowed, m_choose, m_shutdownType, QString());
+    w->installEventFilter(this);
+    m_dialogs << w;
+
+    QObject::connect(screen, &QObject::destroyed, w, [w, this] {
+        m_dialogs.removeOne(w);
+        w->deleteLater();
+    });
+    connect(w, &KSMShutdownDlg::rejected, this, &Greeter::rejected);
+    connect(w, &KSMShutdownDlg::accepted, this,
+        [w, this] {
+            if (m_fd != -1) {
+                QFile f;
+                if (f.open(m_fd, QFile::WriteOnly, QFile::AutoCloseHandle)) {
+                    f.write(QByteArray::number(int(w->shutdownType())));
+                    f.close();
+                }
+            }
+            QApplication::quit();
+        }
+    );
+    w->setScreen(screen);
+    w->init();
+}
+
+void Greeter::rejected()
+{
+    if (m_fd != -1) {
+        close(m_fd);
+    }
+    QApplication::exit(1);
+}
+
+bool Greeter::eventFilter(QObject *watched, QEvent *event)
+{
+    if (qobject_cast<KSMShutdownDlg*>(watched)) {
+        if (event->type() == QEvent::MouseButtonPress) {
+            // check that the position is on no window
+            QMouseEvent *me = static_cast<QMouseEvent*>(event);
+            for (auto it = m_dialogs.constBegin(); it != m_dialogs.constEnd(); ++it) {
+                if ((*it)->geometry().contains(me->globalPos())) {
+                    return false;
+                }
+            }
+            // click outside, close
+            rejected();
+        }
+    }
+    return false;
+}
+
 int main(int argc, char *argv[])
 {
-    // TODO: remove dependency on X11
-    qputenv("QT_QPA_PLATFORM", "xcb");
+    QQuickWindow::setDefaultAlphaBuffer(true);
     QApplication app(argc, argv);
 
     QCommandLineParser parser;
@@ -81,32 +179,10 @@ int main(int argc, char *argv[])
             fd = dup(passedFd);
         }
     }
-
-    // TODO: last argument is the theme, maybe add command line option for it?
-    // TODO: create one dialog per screen, properly handle screen add/remove
-    KSMShutdownDlg dlg(nullptr,
-                       parser.isSet(shutdownAllowedOption),
-                       parser.isSet(chooseOption), type, QString());
-    QObject::connect(&dlg, &KSMShutdownDlg::rejected, &app,
-        [fd] {
-            if (fd != -1) {
-                close(fd);
-            }
-            QApplication::exit(1);
-        }
-    );
-    QObject::connect(&dlg, &KSMShutdownDlg::accepted, &app,
-        [fd, &dlg] {
-            if (fd != -1) {
-                QFile f;
-                if (f.open(fd, QFile::WriteOnly, QFile::AutoCloseHandle)) {
-                    f.write(QByteArray::number(int(dlg.shutdownType())));
-                    f.close();
-                }
-            }
-            QApplication::quit();
-        }
-    );
+    Greeter greeter(fd, parser.isSet(shutdownAllowedOption), parser.isSet(chooseOption), type);
+    greeter.init();
 
     return app.exec();
 }
+
+#include "main.moc"
