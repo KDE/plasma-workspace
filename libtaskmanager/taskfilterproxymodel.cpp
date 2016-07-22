@@ -288,7 +288,8 @@ bool TaskFilterProxyModel::filterAcceptsRow(int sourceRow, const QModelIndex &so
 
     // Filter by virtual desktop.
     if (d->filterByVirtualDesktop && d->virtualDesktop != 0) {
-        if (!sourceIdx.data(AbstractTasksModel::IsOnAllVirtualDesktops).toBool()) {
+        if (!sourceIdx.data(AbstractTasksModel::IsOnAllVirtualDesktops).toBool()
+            && !sourceIdx.data(AbstractTasksModel::IsDemandingAttention).toBool()) {
             const QVariant &virtualDesktop = sourceIdx.data(AbstractTasksModel::VirtualDesktop);
 
             if (!virtualDesktop.isNull()) {
