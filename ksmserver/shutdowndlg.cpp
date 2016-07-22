@@ -97,6 +97,11 @@ KSMShutdownDlg::KSMShutdownDlg( QWindow* parent,
         XInternAtom( QX11Info::display(), "WM_WINDOW_ROLE", False ), XA_STRING, 8, PropModeReplace,
         (unsigned char *)"logoutdialog", strlen( "logoutdialog" ));
 
+    XClassHint classHint;
+    classHint.res_name = const_cast<char*>("ksmserver");
+    classHint.res_class = const_cast<char*>("ksmserver");
+    XSetClassHint(QX11Info::display(), winId(), &classHint);
+
 
     //QQuickView *windowContainer = QQuickView::createWindowContainer(m_view, this);
     //windowContainer->setSizePolicy(QSizePolicy::Preferred, QSizePolicy::Preferred);
