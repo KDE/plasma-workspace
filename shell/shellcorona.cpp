@@ -302,7 +302,7 @@ void ShellCorona::setShell(const QString &shell)
 
     connect(m_activityController, &KActivities::Controller::serviceStatusChanged, this, &ShellCorona::load, Qt::UniqueConnection);
 
-    if (m_activityController->serviceStatus() == KActivities::Controller::Running) {
+    if (m_activityController->serviceStatus() != KActivities::Controller::Unknown) {
         load();
     }
 }
@@ -332,7 +332,7 @@ static QList<QScreen*> sortOutputs(const QList<QScreen*> &outputs)
 void ShellCorona::load()
 {
     if (m_shell.isEmpty() ||
-        m_activityController->serviceStatus() != KActivities::Controller::Running) {
+        m_activityController->serviceStatus() == KActivities::Controller::Unknown) {
         return;
     }
 
