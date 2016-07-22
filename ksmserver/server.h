@@ -204,6 +204,8 @@ private:
 
     void runShutdownScripts();
 
+    void performLogout();
+
     // public dcop interface
 
  public Q_SLOTS: //public dcop interface
@@ -287,6 +289,8 @@ private:
     //subSession stuff
     QList<KSMClient*> clientsToKill;
     QList<KSMClient*> clientsToSave;
+
+    friend bool readFromPipe(int pipe);
 };
 
 #endif

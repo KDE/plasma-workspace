@@ -50,11 +50,8 @@ class KSMShutdownDlg : public QQuickView
 
 public:
     KSMShutdownDlg( QWindow* parent, bool maysd, bool choose, KWorkSpace::ShutdownType sdtype, const QString& theme );
-    static bool confirmShutdown(
-            bool maysd, bool choose, KWorkSpace::ShutdownType& sdtype, QString& bopt, const QString& theme );
 
     bool result() const;
-    bool exec();
 
     KWorkSpace::ShutdownType shutdownType() const {
         return m_shutdownType;

@@ -286,33 +286,3 @@ void KSMShutdownDlg::reject()
 {
     emit rejected();
 }
-
-bool KSMShutdownDlg::exec()
-{
-    QEventLoop loop;
-    m_result = false;
-    connect(this, &KSMShutdownDlg::accepted, &loop, &QEventLoop::quit);
-    connect(this, &KSMShutdownDlg::accepted, [=]() { m_result = true; });
-
-    connect(this, &KSMShutdownDlg::rejected, &loop, &QEventLoop::quit);
-    loop.exec();
-    return m_result;
-}
-
-bool KSMShutdownDlg::confirmShutdown(
-        bool maysd, bool choose, KWorkSpace::ShutdownType& sdtype, QString& bootOption,
-        const QString& theme)
-{
-    QScopedPointer<KSMShutdownDlg> l(new KSMShutdownDlg( 0, maysd, choose, sdtype, theme ));
-
-    XClassHint classHint;
-    classHint.res_name = const_cast<char*>("ksmserver");
-    classHint.res_class = const_cast<char*>("ksmserver");
-    XSetClassHint(QX11Info::display(), l->winId(), &classHint);
-
-    bool result = l->exec();
-    sdtype = l->m_shutdownType;
-    bootOption = l->m_bootOption;
-
-    return result;
-}
