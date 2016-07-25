@@ -345,7 +345,12 @@ void ShellCorona::load()
     loadLayout("plasma-" + m_shell + "-appletsrc");
 
     checkActivities();
+
     if (containments().isEmpty()) {
+        // Seems like we never really get to this point since loadLayout already
+        // (virtually) calls loadDefaultLayout if it does not load anything
+        // from the config file. Maybe if the config file is not empty,
+        // but still does not have any containments
         loadDefaultLayout();
         processUpdateScripts();
     } else {
@@ -574,6 +579,14 @@ void ShellCorona::loadDefaultLayout()
     if (file.open(QIODevice::ReadOnly | QIODevice::Text) ) {
         QString code = file.readAll();
         qDebug() << "evaluating startup script:" << script;
+
+        // We need to know which activities are here in order for
+        // the scripting engine to work. activityAdded does not mind
+        // if we pass it the same activity multiple times
+        QStringList existingActivities = m_activityController->activities();
+        foreach (const QString &id, existingActivities) {
+            activityAdded(id);
+        }
 
         WorkspaceScripting::ScriptEngine scriptEngine(this);
 
