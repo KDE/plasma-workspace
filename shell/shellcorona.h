@@ -106,9 +106,13 @@ public:
 
     KWayland::Client::PlasmaShell *waylandPlasmaShellInterface() const;
 
+
     ScreenPool *screenPool() const;
 
     QList<int> screenIds() const;
+
+    QString defaultContainmentPlugin() const;
+
 
 protected:
     bool eventFilter(QObject *watched, QEvent *event) override;
@@ -217,6 +221,7 @@ private:
     QMap<int, DesktopView *> m_desktopViewforId;
     QHash<const Plasma::Containment *, PanelView *> m_panelViews;
     KConfigGroup m_desktopDefaultsConfig;
+    KConfigGroup m_lnfDefaultsConfig;
     QList<Plasma::Containment *> m_waitingPanels;
     QHash<QString, QString> m_activityContainmentPlugins;
     QHash<QString, QHash<int, Plasma::Containment *> > m_desktopContainments;

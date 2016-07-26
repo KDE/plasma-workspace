@@ -230,16 +230,18 @@ QScriptValue ScriptEngine::createActivity(QScriptContext *context, QScriptEngine
 
     qDebug() << "Setting default Containment plugin:" << plugin;
 
-    if (plugin.isEmpty() || plugin == QLatin1String("undefined")) {
-        KConfigGroup shellCfg = KConfigGroup(KSharedConfig::openConfig(env->m_corona->package().filePath("defaults")), "Desktop");
-        plugin = shellCfg.readEntry("Containment", "org.kde.desktopcontainment");
-    }
-
     ShellCorona *sc = qobject_cast<ShellCorona *>(env->m_corona);
     StandaloneAppCorona *ac = qobject_cast<StandaloneAppCorona *>(env->m_corona);
     if (sc) {
+        if (plugin.isEmpty() || plugin == QLatin1String("undefined")) {
+            plugin = sc->defaultContainmentPlugin();
+        }
         sc->insertActivity(id, plugin);
     } else if (ac) {
+        if (plugin.isEmpty() || plugin == QLatin1String("undefined")) {
+            KConfigGroup shellCfg = KConfigGroup(KSharedConfig::openConfig(env->m_corona->package().filePath("defaults")), "Desktop");
+            plugin = shellCfg.readEntry("Containment", "org.kde.desktopcontainment");
+        }
         ac->insertActivity(id, plugin);
     }
 
