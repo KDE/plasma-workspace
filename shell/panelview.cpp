@@ -22,6 +22,7 @@
 #include "shellcorona.h"
 #include "panelshadows_p.h"
 #include "panelconfigview.h"
+#include "screenpool.h"
 
 #include <QAction>
 #include <QApplication>
@@ -64,6 +65,7 @@ PanelView::PanelView(ShellCorona *corona, QScreen *targetScreen, QWindow *parent
 {
     if (targetScreen) {
         setPosition(targetScreen->geometry().center());
+        setScreenToFollow(targetScreen);
         setScreen(targetScreen);
     }
     setResizeMode(QuickViewSharedEngine::SizeRootObjectToView);
@@ -87,8 +89,6 @@ PanelView::PanelView(ShellCorona *corona, QScreen *targetScreen, QWindow *parent
             this, &PanelView::restoreAutoHide);
 
     m_lastScreen = targetScreen;
-    connect(screen(), SIGNAL(geometryChanged(QRect)),
-            &m_positionPaneltimer, SLOT(start()));
     connect(this, SIGNAL(locationChanged(Plasma::Types::Location)),
             &m_positionPaneltimer, SLOT(start()));
     connect(this, SIGNAL(containmentChanged()),
@@ -132,16 +132,16 @@ KConfigGroup PanelView::panelConfig(ShellCorona *corona, Plasma::Containment *co
 
 KConfigGroup PanelView::config() const
 {
-    return panelConfig(m_corona, containment(), screen());
+    return panelConfig(m_corona, containment(), m_screenToFollow);
 }
 
 void PanelView::maximize()
 {
     int length;
     if (containment()->formFactor() == Plasma::Types::Vertical) {
-        length = screen()->size().height();
+        length = m_screenToFollow->size().height();
     } else {
-        length = screen()->size().width();
+        length = m_screenToFollow->size().width();
     }
     setOffset(0);
     setMinimumLength(length);
@@ -177,12 +177,12 @@ void PanelView::setOffset(int offset)
     }
 
     if (formFactor() == Plasma::Types::Vertical) {
-        if (offset + m_maxLength > screen()->size().height()) {
-            setMaximumLength( -m_offset + screen()->size().height() );
+        if (offset + m_maxLength > m_screenToFollow->size().height()) {
+            setMaximumLength( -m_offset + m_screenToFollow->size().height() );
         }
     } else {
-        if (offset + m_maxLength > screen()->size().width()) {
-            setMaximumLength( -m_offset + screen()->size().width() );
+        if (offset + m_maxLength > m_screenToFollow->size().width()) {
+            setMaximumLength( -m_offset + m_screenToFollow->size().width() );
         }
     }
 
@@ -358,6 +358,7 @@ void PanelView::positionPanel()
     }
     const QPoint pos = geometryByDistance(m_distance).topLeft();
     setPosition(pos);
+
     if (m_shellSurface) {
         m_shellSurface->setPosition(pos);
     }
@@ -369,7 +370,7 @@ void PanelView::positionPanel()
 
 QRect PanelView::geometryByDistance(int distance) const
 {
-    QScreen *s = screen();
+    QScreen *s = m_screenToFollow;
     QPoint position;
     const QRect screenGeometry = s->geometry();
 
@@ -440,13 +441,13 @@ void PanelView::resizePanel()
 {
     if (formFactor() == Plasma::Types::Vertical) {
         const int minSize = qMax(MINSIZE, m_minLength);
-        const int maxSize = qMin(m_maxLength, screen()->size().height() - m_offset);
+        const int maxSize = qMin(m_maxLength, m_screenToFollow->size().height() - m_offset);
         setMinimumSize(QSize(thickness(), minSize));
         setMaximumSize(QSize(thickness(), maxSize));
         resize(thickness(), qBound(minSize, m_contentLength, maxSize));
     } else {
         const int minSize = qMax(MINSIZE, m_minLength);
-        const int maxSize = qMin(m_maxLength, screen()->size().width() - m_offset);
+        const int maxSize = qMin(m_maxLength, m_screenToFollow->size().width() - m_offset);
         setMinimumSize(QSize(minSize, thickness()));
         setMaximumSize(QSize(maxSize, thickness()));
         resize(qBound(minSize, m_contentLength, maxSize), thickness());
@@ -476,27 +477,27 @@ void PanelView::restore()
 
     setMinimumSize(QSize(-1, -1));
     //FIXME: an invalid size doesn't work with QWindows
-    setMaximumSize(screen()->size());
+    setMaximumSize(m_screenToFollow->size());
 
     if (containment()->formFactor() == Plasma::Types::Vertical) {
-        defaultMaxLength = screen()->size().height();
-        defaultMinLength = screen()->size().height();
+        defaultMaxLength = m_screenToFollow->size().height();
+        defaultMinLength = m_screenToFollow->size().height();
 
         m_maxLength = config().readEntry<int>("maxLength", defaultMaxLength);
         m_minLength = config().readEntry<int>("minLength", defaultMinLength);
 
-        const int maxSize = screen()->size().height() - m_offset;
+        const int maxSize = m_screenToFollow->size().height() - m_offset;
         m_maxLength = qBound<int>(MINSIZE, m_maxLength, maxSize);
         m_minLength = qBound<int>(MINSIZE, m_minLength, maxSize);
     //Horizontal
     } else {
-        defaultMaxLength = screen()->size().width();
-        defaultMinLength = screen()->size().width();
+        defaultMaxLength = m_screenToFollow->size().width();
+        defaultMinLength = m_screenToFollow->size().width();
 
         m_maxLength = config().readEntry<int>("maxLength", defaultMaxLength);
         m_minLength = config().readEntry<int>("minLength", defaultMinLength);
 
-        const int maxSize = screen()->size().width() - m_offset;
+        const int maxSize = m_screenToFollow->size().width() - m_offset;
         m_maxLength = qBound<int>(MINSIZE, m_maxLength, maxSize);
         m_minLength = qBound<int>(MINSIZE, m_minLength, maxSize);
     }
@@ -643,6 +644,8 @@ void PanelView::moveEvent(QMoveEvent *ev)
 
 void PanelView::integrateScreen()
 {
+    connect(m_screenToFollow, SIGNAL(geometryChanged(QRect)),
+            this, SLOT(positionPanel()));
     themeChanged();
     KWindowSystem::setOnAllDesktops(winId(), true);
     KWindowSystem::setType(winId(), NET::Dock);
@@ -652,7 +655,9 @@ void PanelView::integrateScreen()
     }
     setVisibilityMode(m_visibilityMode);
 
-    containment()->reactToScreenChange();
+    if (containment()) {
+        containment()->reactToScreenChange();
+    }
 }
 
 void PanelView::showEvent(QShowEvent *event)
@@ -660,19 +665,41 @@ void PanelView::showEvent(QShowEvent *event)
     PanelShadows::self()->addWindow(this, enabledBorders());
     PlasmaQuick::ContainmentView::showEvent(event);
 
-    //When the screen is set, the screen is recreated internally, so we need to
-    //set anything that depends on the winId()
-    connect(this, &QWindow::screenChanged, this, &PanelView::moveScreen, Qt::UniqueConnection);
     integrateScreen();
 }
 
-void PanelView::moveScreen(QScreen* screen)
+void PanelView::setScreenToFollow(QScreen *screen)
 {
-    emit screenChangedProxy(screen);
-    m_lastScreen = screen;
-
-    if (!screen)
+    if (screen == m_screenToFollow) {
         return;
+    }
+
+    /*connect(screen, &QObject::destroyed, this, [this]() {
+        if (PanelView::screen()) {
+            m_screenToFollow = PanelView::screen();
+            adaptToScreen();
+        }
+    });*/
+
+    m_screenToFollow = screen;
+    setScreen(screen);
+    adaptToScreen();
+}
+
+QScreen *PanelView::screenToFollow() const
+{
+    return m_screenToFollow;
+}
+
+void PanelView::adaptToScreen()
+{
+    emit screenToFollowChanged(m_screenToFollow);
+    m_lastScreen = m_screenToFollow;
+
+    if (!m_screenToFollow) {
+        return;
+    }
+
     integrateScreen();
     showTemporarily();
     m_positionPaneltimer.start();
@@ -846,7 +873,7 @@ void PanelView::updateMask()
 
 void PanelView::updateStruts()
 {
-    if (!containment() || !screen()) {
+    if (!containment() || !m_screenToFollow) {
         return;
     }
 
@@ -854,19 +881,18 @@ void PanelView::updateStruts()
     NETExtendedStrut strut;
 
     if (m_visibilityMode == NormalPanel) {
-        const QRect thisScreen = screen()->geometry();
+        const QRect thisScreen = m_screenToFollow->geometry();
         // QScreen::virtualGeometry() is very unreliable (Qt 5.5)
-        const QRect wholeScreen = QRect(QPoint(0, 0), screen()->virtualSize());
+        const QRect wholeScreen = QRect(QPoint(0, 0), m_screenToFollow->virtualSize());
 
         //Extended struts against a screen edge near to another screen are really harmful, so windows maximized under the panel is a lesser pain
         //TODO: force "windows can cover" in those cases?
-        const int numScreens = corona()->numScreens();
-        for (int i = 0; i < numScreens; ++i) {
-            if (i == containment()->screen()) {
+        foreach (int id, m_corona->screenIds()) {
+            if (id == containment()->screen()) {
                 continue;
             }
 
-            const QRect otherScreen = corona()->screenGeometry(i);
+            const QRect otherScreen = corona()->screenGeometry(id);
             if (!otherScreen.isValid()) {
                 continue;
             }
@@ -1019,8 +1045,8 @@ void PanelView::screenDestroyed(QObject* )
 //     NOTE: this is overriding the screen destroyed slot, we need to do this because
 //     otherwise Qt goes mental and starts moving our panels. See:
 //     https://codereview.qt-project.org/#/c/88351/
-//     if(screen == this->screen()) {
-//         DO NOTHING, panels are moved by ::removeScreen
+//     if(screen == this->m_screenToFollow) {
+//         DO NOTHING, panels are moved by ::readaptToScreen
 //     }
 }
 
@@ -1070,16 +1096,16 @@ void PanelView::updateEnabledBorders()
         break;
     }
 
-    if (x() <= screen()->geometry().x()) {
+    if (x() <= m_screenToFollow->geometry().x()) {
         borders &= ~Plasma::FrameSvg::LeftBorder;
     }
-    if (x() + width() >= screen()->geometry().x() + screen()->geometry().width()) {
+    if (x() + width() >= m_screenToFollow->geometry().x() + m_screenToFollow->geometry().width()) {
         borders &= ~Plasma::FrameSvg::RightBorder;
     }
-    if (y() <= screen()->geometry().y()) {
+    if (y() <= m_screenToFollow->geometry().y()) {
         borders &= ~Plasma::FrameSvg::TopBorder;
     }
-    if (y() + height() >= screen()->geometry().y() + screen()->geometry().height()) {
+    if (y() + height() >= m_screenToFollow->geometry().y() + m_screenToFollow->geometry().height()) {
         borders &= ~Plasma::FrameSvg::BottomBorder;
     }
 

@@ -86,7 +86,7 @@ class PanelView : public PlasmaQuick::ContainmentView
     /**
      * informations about the screen in which the panel is in
      */
-    Q_PROPERTY(QScreen *screen READ screen WRITE setScreen NOTIFY screenChangedProxy)
+    Q_PROPERTY(QScreen *screenToFollow READ screenToFollow WRITE setScreenToFollow NOTIFY screenToFollowChanged)
 
     /**
      *  how the panel behaves, visible, autohide etc.
@@ -146,6 +146,12 @@ public:
 
     void updateStruts();
 
+    /*This is different from screen() as is always there, even if the window is
+      temporarly outside the screen or if is hidden: only plasmashell will ever
+      change this property, unlike QWindow::screen()*/
+    void setScreenToFollow(QScreen* screen);
+    QScreen* screenToFollow() const;
+
 protected:
     void resizeEvent(QResizeEvent *ev) override;
     void showEvent(QShowEvent *event) override;
@@ -165,7 +171,7 @@ Q_SIGNALS:
     void enabledBordersChanged();
 
     //QWindow does not have a property for screen. Adding this property requires re-implementing the signal
-    void screenChangedProxy(QScreen *screen);
+    void screenToFollowChanged(QScreen *screen);
     void visibilityModeChanged();
 
 protected Q_SLOTS:
@@ -184,9 +190,9 @@ private Q_SLOTS:
     void statusChanged(Plasma::Types::ItemStatus);
     void restoreAutoHide();
     void screenDestroyed(QObject* screen);
+    void adaptToScreen();
 
 private:
-    void moveScreen(QScreen* screen);
     void resizePanel();
     void integrateScreen();
     bool containmentContainsPosition(const QPointF &point) const;
@@ -213,7 +219,8 @@ private:
     Plasma::FrameSvg *m_background;
     Plasma::FrameSvg::EnabledBorders m_enabledBorders = Plasma::FrameSvg::AllBorders;
     KWayland::Client::PlasmaShellSurface *m_shellSurface;
-    QWeakPointer<QScreen> m_lastScreen;
+    QPointer<QScreen> m_lastScreen;
+    QPointer<QScreen> m_screenToFollow;
 
     static const int STRUTSTIMERDELAY = 200;
 };

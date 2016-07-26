@@ -51,6 +51,7 @@
 #include "widget.h"
 #include "../shellcorona.h"
 #include "../standaloneappcorona.h"
+#include "../screenpool.h"
 
 QScriptValue constructQRectFClass(QScriptEngine *engine);
 
@@ -158,15 +159,17 @@ QScriptValue ScriptEngine::desktopsForActivity(QScriptContext *context, QScriptE
         // this can happen when the activity already exists but has never been activated
         // with the current shell package and layout.js is run to set up the shell for the
         // first time
-        const int numScreens = env->m_corona->numScreens();
-        for (int i = 0; i < numScreens; ++i) {
-            ShellCorona *sc = qobject_cast<ShellCorona *>(env->m_corona);
-            StandaloneAppCorona *ac = qobject_cast<StandaloneAppCorona *>(env->m_corona);
-            if (sc) {
+        ShellCorona *sc = qobject_cast<ShellCorona *>(env->m_corona);
+        StandaloneAppCorona *ac = qobject_cast<StandaloneAppCorona *>(env->m_corona);
+        if (sc) {
+            foreach (int i, sc->screenIds()) {
                 Plasma::Containment *c = sc->createContainmentForActivity(id, i);
                 containments.setProperty(count, env->wrap(c));
                 ++count;
-            } else if (ac) {
+            }
+        } else if (ac) {
+            const int numScreens = env->m_corona->numScreens();
+            for (int i = 0; i < numScreens; ++i) {
                 Plasma::Containment *c = ac->createContainmentForActivity(id, i);
                 containments.setProperty(count, env->wrap(c));
                 ++count;

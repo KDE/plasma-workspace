@@ -61,6 +61,7 @@ set (plasma_shell_SRCS
     waylanddialogfilter.cpp
     coronatesthelper.cpp
     debug.cpp
+    screenpool.cpp
     ${scripting_SRC}
 )
 
@@ -111,3 +112,4 @@ install(FILES
    DESTINATION ${KDE_INSTALL_KSERVICETYPES5DIR})
 
 add_subdirectory(packageplugins)
+add_subdirectory(autotests)

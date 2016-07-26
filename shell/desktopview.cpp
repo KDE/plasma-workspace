@@ -42,6 +42,7 @@ DesktopView::DesktopView(Plasma::Corona *corona, QScreen *targetScreen)
       m_shellSurface(nullptr)
 {
     if (targetScreen) {
+        setScreenToFollow(targetScreen);
         setScreen(targetScreen);
         setGeometry(targetScreen->geometry());
     }
@@ -78,12 +79,34 @@ void DesktopView::showEvent(QShowEvent* e)
     adaptToScreen();
 }
 
+void DesktopView::setScreenToFollow(QScreen *screen)
+{
+    if (screen == m_screenToFollow) {
+        return;
+    }
+
+    /*connect(screen, &QObject::destroyed, this, [this]() {
+        if (DesktopView::screen()) {
+            m_screenToFollow = DesktopView::screen();
+            adaptToScreen();
+        }
+    });*/
+    m_screenToFollow = screen;
+    setScreen(screen);
+    adaptToScreen();
+}
+
+QScreen *DesktopView::screenToFollow() const
+{
+    return m_screenToFollow;
+}
+
 void DesktopView::adaptToScreen()
 {
     ensureWindowType();
 
     //This happens sometimes, when shutting down the process
-    if (!screen() || m_oldScreen==screen()) {
+    if (!m_screenToFollow || m_oldScreen==m_screenToFollow) {
         return;
     }
 
@@ -91,20 +114,20 @@ void DesktopView::adaptToScreen()
         disconnect(m_oldScreen.data(), &QScreen::geometryChanged,
                     this, &DesktopView::screenGeometryChanged);
     }
-//     qDebug() << "adapting to screen" << screen()->name() << this;
-    if ((m_windowType == Desktop || m_windowType == WindowedDesktop) && !ShellManager::s_forceWindowed) {
-        screenGeometryChanged();
-        if(m_oldScreen) {
-            disconnect(m_oldScreen.data(), &QScreen::geometryChanged,
-                       this, &DesktopView::screenGeometryChanged);
-        }
-
-        connect(screen(), &QScreen::geometryChanged,
-                this, &DesktopView::screenGeometryChanged, Qt::UniqueConnection);
-
+//     qDebug() << "adapting to screen" << m_screenToFollow->name() << this;
+    if(m_oldScreen) {
+        disconnect(m_oldScreen.data(), &QScreen::geometryChanged,
+                    this, &DesktopView::screenGeometryChanged);
     }
 
-    m_oldScreen = screen();
+    if ((m_windowType == Desktop || m_windowType == WindowedDesktop) && !ShellManager::s_forceWindowed) {
+        screenGeometryChanged();
+
+        connect(m_screenToFollow.data(), &QScreen::geometryChanged,
+                this, &DesktopView::screenGeometryChanged, Qt::UniqueConnection);
+    }
+
+    m_oldScreen = m_screenToFollow;
 }
 
 DesktopView::WindowType DesktopView::windowType() const
@@ -265,7 +288,7 @@ void DesktopView::showConfigurationInterface(Plasma::Applet *applet)
 
 void DesktopView::screenGeometryChanged()
 {
-    const QRect geo = screen()->geometry();
+    const QRect geo = m_screenToFollow->geometry();
 //     qDebug() << "newGeometry" << this << geo << geometry();
     setGeometry(geo);
     setMinimumSize(geo.size());
@@ -299,6 +322,6 @@ void DesktopView::setupWaylandIntegration()
             return;
         }
         m_shellSurface = interface->createSurface(s, this);
-        m_shellSurface->setPosition(screen()->geometry().topLeft());
+        m_shellSurface->setPosition(m_screenToFollow->geometry().topLeft());
     }
 }

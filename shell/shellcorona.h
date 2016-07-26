@@ -36,6 +36,7 @@ class DesktopView;
 class PanelView;
 class QMenu;
 class QScreen;
+class ScreenPool;
 
 namespace KActivities
 {
@@ -96,8 +97,7 @@ public:
 
     Plasma::Containment *setContainmentTypeForScreen(int screen, const QString &plugin);
 
-    QScreen *screenForId(int screenId) const;
-    void remove(DesktopView *desktopView);
+    void removeDesktop(DesktopView *desktopView);
 
     /**
      * @returns a new containment associated with the specified @p activity and @p screen.
@@ -105,6 +105,10 @@ public:
     Plasma::Containment *createContainmentForActivity(const QString &activity, int screenNum);
 
     KWayland::Client::PlasmaShell *waylandPlasmaShellInterface() const;
+
+    ScreenPool *screenPool() const;
+
+    QList<int> screenIds() const;
 
 protected:
     bool eventFilter(QObject *watched, QEvent *event) override;
@@ -193,8 +197,6 @@ private Q_SLOTS:
 
 private:
     void updateStruts();
-    QScreen *insertScreen(QScreen *screen, int idx);
-    void removeView(int idx);
     bool isOutputRedundant(QScreen* screen) const;
     void reconsiderOutputs();
     QList<PanelView *> panelsForScreen(QScreen *screen) const;
@@ -208,9 +210,11 @@ private:
 
     void insertContainment(const QString &activity, int screenNum, Plasma::Containment *containment);
 
+    ScreenPool *m_screenPool;
     QString m_shell;
-    QList<DesktopView *> m_views;
     KActivities::Controller *m_activityController;
+    //map from screen number to desktop view, qmap as order is important
+    QMap<int, DesktopView *> m_desktopViewforId;
     QHash<const Plasma::Containment *, PanelView *> m_panelViews;
     KConfigGroup m_desktopDefaultsConfig;
     QList<Plasma::Containment *> m_waitingPanels;
