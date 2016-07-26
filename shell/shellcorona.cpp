@@ -117,6 +117,8 @@ ShellCorona::ShellCorona(QObject *parent)
     connect(&m_reconsiderOutputsTimer, &QTimer::timeout, this, &ShellCorona::reconsiderOutputs);
 
     m_desktopDefaultsConfig = KConfigGroup(KSharedConfig::openConfig(package().filePath("defaults")), "Desktop");
+    m_lnfDefaultsConfig = KConfigGroup(KSharedConfig::openConfig(m_lookAndFeelPackage.filePath("defaults")), "Desktop");
+    m_lnfDefaultsConfig = KConfigGroup(&m_lnfDefaultsConfig, QStringLiteral("org.kde.plasma.desktop"));
 
     new PlasmaShellAdaptor(this);
 
@@ -243,6 +245,8 @@ void ShellCorona::setShell(const QString &shell)
     package.setAllowExternalPaths(true);
     setKPackage(package);
     m_desktopDefaultsConfig = KConfigGroup(KSharedConfig::openConfig(package.filePath("defaults")), "Desktop");
+    m_lnfDefaultsConfig = KConfigGroup(KSharedConfig::openConfig(m_lookAndFeelPackage.filePath("defaults")), "Desktop");
+    m_lnfDefaultsConfig = KConfigGroup(&m_lnfDefaultsConfig, shell);
 
     const QString themeGroupKey = QStringLiteral("Theme");
     const QString themeNameKey = QStringLiteral("name");
@@ -917,7 +921,7 @@ Plasma::Containment *ShellCorona::createContainmentForActivity(const QString& ac
     QString plugin = m_activityContainmentPlugins.value(activity);
 
     if (plugin.isEmpty()) {
-        plugin = m_desktopDefaultsConfig.readEntry("Containment", "org.kde.desktopcontainment");
+        plugin = defaultContainmentPlugin();
     }
 
     Plasma::Containment *containment = containmentForScreen(screenNum, plugin, QVariantList());
@@ -1220,8 +1224,7 @@ void ShellCorona::activityAdded(const QString &id)
         return;
     }
 
-    const QString plugin = m_desktopDefaultsConfig.readEntry("Containment", "org.kde.desktopcontainment");
-    m_activityContainmentPlugins.insert(id, plugin);
+    m_activityContainmentPlugins.insert(id, defaultContainmentPlugin());
 }
 
 void ShellCorona::activityRemoved(const QString &id)
@@ -1697,6 +1700,15 @@ void ShellCorona::setupWaylandIntegration()
 KWayland::Client::PlasmaShell *ShellCorona::waylandPlasmaShellInterface() const
 {
     return m_waylandPlasmaShell;
+}
+
+QString ShellCorona::defaultContainmentPlugin() const
+{
+    QString plugin = m_lnfDefaultsConfig.readEntry("Containment", QString());
+    if (plugin.isEmpty()) {
+        plugin = m_desktopDefaultsConfig.readEntry("Containment", "org.kde.desktopcontainment");
+    }
+    return plugin;
 }
 
 void ShellCorona::updateStruts()
