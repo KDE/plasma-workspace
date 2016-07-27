@@ -497,13 +497,29 @@ QScriptValue ScriptEngine::loadTemplate(QScriptContext *context, QScriptEngine *
     KPackage::Package package = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Plasma/LayoutTemplate"));
     KPluginInfo info(offers.first());
 
-    const QString path = QStandardPaths::locate(QStandardPaths::GenericDataLocation, package.defaultPackageRoot() + info.pluginName() + "/metadata.desktop");
-    if (path.isEmpty()) {
-        // qDebug() << "script path is empty";
-        return false;
+    QString path;
+    {
+        ScriptEngine *env = envFor(engine);
+        ShellCorona *sc = qobject_cast<ShellCorona *>(env->m_corona);
+        if (sc) {
+            const QString overridePackagePath = sc->lookAndFeelPackage().path() + QStringLiteral("contents/layouts/") + info.pluginName();
+
+            path = overridePackagePath + QStringLiteral("/metadata.desktop");
+            if (QFile::exists(path)) {
+                package.setPath(overridePackagePath);
+            }
+        }
     }
 
-    package.setPath(info.pluginName());
+    if (!package.isValid()) {
+        path = QStandardPaths::locate(QStandardPaths::GenericDataLocation, package.defaultPackageRoot() + info.pluginName() + "/metadata.desktop");
+        if (path.isEmpty()) {
+            // qDebug() << "script path is empty";
+            return false;
+        }
+
+        package.setPath(info.pluginName());
+    }
 
     const QString scriptFile = package.filePath("mainscript");
     if (scriptFile.isEmpty()) {
