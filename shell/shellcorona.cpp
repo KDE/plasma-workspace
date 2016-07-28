@@ -710,7 +710,11 @@ void ShellCorona::unload()
     m_desktopContainments.clear();
     m_waitingPanels.clear();
 
-    qDeleteAll(containments());
+    while (!containments().isEmpty()) {
+        //deleting a containment will remove it from the list due to QObject::destroyed connect in Corona
+        //this form doesn't crash, while qDeleteAll(containments()) does
+        delete containments().first();
+    }
 }
 
 KSharedConfig::Ptr ShellCorona::applicationConfig()
