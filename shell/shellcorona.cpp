@@ -709,6 +709,7 @@ void ShellCorona::unload()
     m_panelViews.clear();
     m_desktopContainments.clear();
     m_waitingPanels.clear();
+    m_activityContainmentPlugins.clear();
 
     while (!containments().isEmpty()) {
         //deleting a containment will remove it from the list due to QObject::destroyed connect in Corona
@@ -730,6 +731,12 @@ void ShellCorona::requestApplicationConfigSync()
 
 void ShellCorona::loadDefaultLayout()
 {
+    //NOTE: Is important the containments already exist for each screen
+    // at the moment of the script execution
+    for (QScreen* screen : qGuiApp->screens()) {
+        addOutput(screen);
+    }
+
     QString script = ShellManager::s_testModeLayout;
 
     if (script.isEmpty()) {
