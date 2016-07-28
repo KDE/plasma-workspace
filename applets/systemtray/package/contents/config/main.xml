@@ -45,6 +45,9 @@
     <entry name="knownItems" type="StringList">
       <default></default>
     </entry>
+    <entry name="iconSize" type="Int">
+      <default>2</default>
+    </entry>
   </group>
 
 </kcfg>

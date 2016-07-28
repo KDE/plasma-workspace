@@ -197,6 +197,10 @@ void TasksModel::Private::initModels()
             if (sortMode == SortActivity && roles.contains(AbstractTasksModel::Activities)) {
                 updateActivityTaskCounts();
             }
+
+            if (roles.contains(AbstractTasksModel::IsActive)) {
+                emit q->activeTaskChanged();
+            }
         }
     );
 
@@ -260,8 +264,8 @@ void TasksModel::Private::initModels()
         }
     );
 
-    // If we're in manual sort mode, we need to update the sort map on row removals.
-    QObject::connect(concatProxyModel, &QAbstractItemModel::rowsAboutToBeRemoved, q,
+    // If we're in manual sort mode, we need to update the sort map after row removals.
+    QObject::connect(concatProxyModel, &QAbstractItemModel::rowsRemoved, q,
         [this](const QModelIndex &parent, int first, int last) {
             Q_UNUSED(parent)
 
@@ -335,12 +339,16 @@ void TasksModel::Private::initModels()
                 if (sourceIndex.data(AbstractTasksModel::IsWindow).toBool()) {
                     const QString &appName = sourceIndex.data(AbstractTasksModel::AppName).toString();
 
-                    for (int i = 0; i < startupTasksModel->rowCount(); ++i) {
-                        QModelIndex startupIndex = startupTasksModel->index(i, 0);
+                    for (int i = 0; i < filterProxyModel->rowCount(); ++i) {
+                        QModelIndex filterIndex = filterProxyModel->index(i, 0);
 
-                        if (appId == startupIndex.data(AbstractTasksModel::AppId).toString()
-                            || appName == startupIndex.data(AbstractTasksModel::AppName).toString()) {
-                            startupTasksModel->dataChanged(startupIndex, startupIndex);
+                        if (!filterIndex.data(AbstractTasksModel::IsStartup).toBool()) {
+                            continue;
+                        }
+
+                        if ((!appId.isEmpty() && appId == filterIndex.data(AbstractTasksModel::AppId).toString())
+                            || (!appName.isEmpty() && appName == filterIndex.data(AbstractTasksModel::AppName).toString())) {
+                            filterProxyModel->dataChanged(filterIndex, filterIndex);
                         }
                     }
                 }
@@ -348,15 +356,15 @@ void TasksModel::Private::initModels()
                 // When we get a window or startup we have a launcher for, cause the launcher to be re-filtered.
                 if (sourceIndex.data(AbstractTasksModel::IsWindow).toBool()
                     || sourceIndex.data(AbstractTasksModel::IsStartup).toBool()) {
-                    const QUrl &launcherUrl = sourceIndex.data(AbstractTasksModel::LauncherUrlWithoutIcon).toUrl();
+                    for (int i = 0; i < filterProxyModel->rowCount(); ++i) {
+                        const QModelIndex &filterIndex = filterProxyModel->index(i, 0);
 
-                    for (int i = 0; i < launcherTasksModel->rowCount(); ++i) {
-                        QModelIndex launcherIndex = launcherTasksModel->index(i, 0);
-                        const QString &launcherAppId = launcherIndex.data(AbstractTasksModel::AppId).toString();
+                        if (!filterIndex.data(AbstractTasksModel::IsLauncher).toBool()) {
+                            continue;
+                        }
 
-                        if ((!appId.isEmpty() && appId == launcherAppId) || (launcherUrl.isValid()
-                            && launcherUrl == launcherIndex.data(AbstractTasksModel::LauncherUrlWithoutIcon).toUrl())) {
-                            launcherTasksModel->dataChanged(launcherIndex, launcherIndex);
+                        if (appsMatch(sourceIndex, filterIndex)) {
+                            filterProxyModel->dataChanged(filterIndex, filterIndex);
                         }
                     }
                 }
@@ -385,17 +393,12 @@ void TasksModel::Private::initModels()
                     continue;
                 }
 
-                const QUrl &launcherUrl = sourceIndex.data(AbstractTasksModel::LauncherUrlWithoutIcon).toUrl();
+                for (int j = 0; j < launcherTasksModel->rowCount(); ++j) {
+                    const QModelIndex &launcherIndex = launcherTasksModel->index(j, 0);
 
-                if (!launcherUrl.isEmpty() && launcherUrl.isValid()) {
-                    const int pos = launcherTasksModel->launcherPosition(launcherUrl);
-
-                    if (pos != -1) {
-                        QModelIndex launcherIndex = launcherTasksModel->index(pos, 0);
-
+                    if (appsMatch(sourceIndex, launcherIndex)) {
                         QMetaObject::invokeMethod(launcherTasksModel, "dataChanged", Qt::QueuedConnection,
                             Q_ARG(QModelIndex, launcherIndex), Q_ARG(QModelIndex, launcherIndex));
-                        QMetaObject::invokeMethod(q, "updateLauncherCount", Qt::QueuedConnection);
                     }
                 }
             }
@@ -682,27 +685,29 @@ bool TasksModel::Private::lessThan(const QModelIndex &left, const QModelIndex &r
             return (left.row() < right.row());
         } else if (left.data(AbstractTasksModel::IsLauncher).toBool() && !right.data(AbstractTasksModel::IsLauncher).toBool()) {
             if (launchInPlace) {
-                const int rightPos = q->launcherPosition(right.data(AbstractTasksModel::LauncherUrl).toUrl());
+                const int leftPos = q->launcherPosition(left.data(AbstractTasksModel::LauncherUrlWithoutIcon).toUrl());
+                const int rightPos = q->launcherPosition(right.data(AbstractTasksModel::LauncherUrlWithoutIcon).toUrl());
 
                 if (rightPos != -1) {
-                    return (left.row() < rightPos);
+                    return (leftPos < rightPos);
                 }
             }
 
             return true;
         } else if (!left.data(AbstractTasksModel::IsLauncher).toBool() && right.data(AbstractTasksModel::IsLauncher).toBool()) {
             if (launchInPlace) {
-                const int leftPos = q->launcherPosition(left.data(AbstractTasksModel::LauncherUrl).toUrl());
+                const int leftPos = q->launcherPosition(left.data(AbstractTasksModel::LauncherUrlWithoutIcon).toUrl());
+                const int rightPos = q->launcherPosition(right.data(AbstractTasksModel::LauncherUrlWithoutIcon).toUrl());
 
                 if (leftPos != -1) {
-                    return (leftPos < right.row());
+                    return (leftPos < rightPos);
                 }
             }
 
             return false;
         } else if (launchInPlace) {
-            const int leftPos = q->launcherPosition(left.data(AbstractTasksModel::LauncherUrl).toUrl());
-            const int rightPos = q->launcherPosition(right.data(AbstractTasksModel::LauncherUrl).toUrl());
+            const int leftPos = q->launcherPosition(left.data(AbstractTasksModel::LauncherUrlWithoutIcon).toUrl());
+            const int rightPos = q->launcherPosition(right.data(AbstractTasksModel::LauncherUrlWithoutIcon).toUrl());
 
             if (leftPos != -1 && rightPos != -1) {
                 return (leftPos < rightPos);
@@ -824,33 +829,33 @@ int TasksModel::rowCount(const QModelIndex &parent) const
     return QSortFilterProxyModel::rowCount(parent);
 }
 
+QVariant TasksModel::data(const QModelIndex &proxyIndex, int role) const
+{
+    if (rowCount(proxyIndex) && role == AbstractTasksModel::LegacyWinIdList) {
+        QVariantList winIds;
+
+        for (int i = 0; i < rowCount(proxyIndex); ++i) {
+            winIds.append(proxyIndex.child(i, 0).data(AbstractTasksModel::LegacyWinIdList).toList());
+        }
+
+        return winIds;
+    }
+
+    return QSortFilterProxyModel::data(proxyIndex, role);
+}
+
 void TasksModel::updateLauncherCount()
 {
-    QList<QUrl> launchers = QUrl::fromStringList(d->launcherTasksModel->launcherList());
+    int count = 0;
 
-    for (int i = 0; i < d->filterProxyModel->rowCount(); ++i) {
-        const QModelIndex &filterIndex = d->filterProxyModel->index(i, 0);
-
-        if (!filterIndex.data(AbstractTasksModel::IsLauncher).toBool()) {
-            // TODO: It would be much faster if we didn't ask for a URL with serialized PNG
-            // data in it, just to discard it a few lines below.
-            const QUrl &launcherUrl = filterIndex.data(AbstractTasksModel::LauncherUrlWithoutIcon).toUrl();
-
-            QMutableListIterator<QUrl> it(launchers);
-
-            while(it.hasNext()) {
-                it.next();
-
-                // RemoveQuery to strip possible fallback icon from stored launcher.
-                if (launcherUrl == it.value().adjusted(QUrl::RemoveQuery)) {
-                    it.remove();
-                }
-            }
+    for (int i = 0; i < rowCount(); ++i) {
+        if (index(i, 0).data(AbstractTasksModel::IsLauncher).toBool()) {
+            ++count;
         }
     }
 
-    if (d->launcherCount != launchers.count()) {
-        d->launcherCount = launchers.count();
+    if (d->launcherCount != count) {
+        d->launcherCount = count;
         emit launcherCountChanged();
     }
 }
@@ -1120,9 +1125,9 @@ bool TasksModel::requestAddLauncher(const QUrl &url)
     if (d->launcherTasksModel) {
         bool added = d->launcherTasksModel->requestAddLauncher(url);
 
-        // If using manual sorting and launch-in-place sorting, we need
-        // to trigger a sort map update to move any window tasks to their
-        // launcher position now.
+        // If using manual and launch-in-place sorting with separate launchers,
+        // we need to trigger a sort map update to move any window tasks to
+        // their launcher position now.
         if (added && d->sortMode == SortManual && (d->launchInPlace || !d->separateLaunchers)) {
             d->updateManualSortMap();
             d->forceResort();
@@ -1137,7 +1142,17 @@ bool TasksModel::requestAddLauncher(const QUrl &url)
 bool TasksModel::requestRemoveLauncher(const QUrl &url)
 {
     if (d->launcherTasksModel) {
-        return d->launcherTasksModel->requestRemoveLauncher(url);
+        bool removed = d->launcherTasksModel->requestRemoveLauncher(url);
+
+        // If using manual and launch-in-place sorting with separate launchers,
+        // we need to trigger a sort map update to move any window tasks no
+        // longer backed by a launcher out of the launcher area.
+        if (removed && d->sortMode == SortManual && (d->launchInPlace || !d->separateLaunchers)) {
+            d->updateManualSortMap();
+            d->forceResort();
+        }
+
+        return removed;
     }
 
     return false;
@@ -1493,8 +1508,6 @@ QModelIndex TasksModel::makeModelIndex(int row, int childRow) const
         return QModelIndex();
     }
 
-    const QModelIndex &parent = index(row, 0);
-
     if (childRow == -1) {
         return index(row, 0);
     } else {
@@ -1528,11 +1541,15 @@ bool TasksModel::filterAcceptsRow(int sourceRow, const QModelIndex &sourceParent
 
     // Filter startup tasks we already have a window task for.
     if (sourceIndex.data(AbstractTasksModel::IsStartup).toBool()) {
-        for (int i = 0; i < d->windowTasksModel->rowCount(); ++i) {
-            const QModelIndex &windowIndex = d->windowTasksModel->index(i, 0);
+        for (int i = 0; i < d->filterProxyModel->rowCount(); ++i) {
+            const QModelIndex &filterIndex = d->filterProxyModel->index(i, 0);
 
-            if (appId == windowIndex.data(AbstractTasksModel::AppId).toString()
-                || appName == windowIndex.data(AbstractTasksModel::AppName).toString()) {
+            if (!filterIndex.data(AbstractTasksModel::IsWindow).toBool()) {
+                continue;
+            }
+
+            if ((!appId.isEmpty() && appId == filterIndex.data(AbstractTasksModel::AppId).toString())
+                || (!appName.isEmpty() && appName == filterIndex.data(AbstractTasksModel::AppName).toString())) {
                 return false;
             }
         }
@@ -1541,8 +1558,6 @@ bool TasksModel::filterAcceptsRow(int sourceRow, const QModelIndex &sourceParent
     // Filter launcher tasks we already have a startup or window task for (that
     // got through filtering).
     if (sourceIndex.data(AbstractTasksModel::IsLauncher).toBool()) {
-        const QUrl &launcherUrl = sourceIndex.data(AbstractTasksModel::LauncherUrlWithoutIcon).toUrl();
-
         for (int i = 0; i < d->filterProxyModel->rowCount(); ++i) {
             const QModelIndex &filteredIndex = d->filterProxyModel->index(i, 0);
 
@@ -1551,10 +1566,7 @@ bool TasksModel::filterAcceptsRow(int sourceRow, const QModelIndex &sourceParent
                 continue;
             }
 
-            const QString &filteredAppId = filteredIndex.data(AbstractTasksModel::AppId).toString();
-
-            if ((!appId.isEmpty() && appId == filteredAppId) || (launcherUrl.isValid()
-                && launcherUrl == filteredIndex.data(AbstractTasksModel::LauncherUrlWithoutIcon).toUrl())) {
+            if (appsMatch(sourceIndex, filteredIndex)) {
                 return false;
             }
         }

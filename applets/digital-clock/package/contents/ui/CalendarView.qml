@@ -29,15 +29,18 @@ Item {
     Layout.minimumHeight: _minimumHeight
 
     // The "sensible" values
-    property int _minimumWidth: _minimumHeight * 1.5 + (monthView.showWeekNumbers ? Math.round(_minimumHeight * 1.75) : Math.round(_minimumHeight * 1.5))
+    property int _minimumWidth: (showAgenda ? agendaViewWidth : 0) + monthViewWidth
     property int _minimumHeight: units.gridUnit * 14
     Layout.preferredWidth: _minimumWidth
     Layout.preferredHeight: _minimumHeight * 1.5
 
-    property int avWidth: (parent.width - (3 * units.largeSpacing)) / 2
-    property int avHeight: parent.height - (2 * units.largeSpacing)
+    readonly property bool showAgenda: PlasmaCalendar.EventPluginsManager.enabledPlugins.length > 0
 
-    //anchors.margins: units.largeSpacing
+    readonly property int agendaViewWidth: _minimumHeight * 1.5
+    readonly property int monthViewWidth: monthView.showWeekNumbers ? Math.round(_minimumHeight * 1.75) : Math.round(_minimumHeight * 1.5)
+
+    property int boxWidth: (agendaViewWidth + monthViewWidth - ((showAgenda ? 3 : 4) * spacing)) / 2
+
     property int spacing: units.largeSpacing
     property alias borderWidth: monthView.borderWidth
     property alias monthView: monthView
@@ -55,8 +58,9 @@ Item {
 
     Item {
         id: agenda
+        visible: calendar.showAgenda
 
-        width: avWidth
+        width: boxWidth
         anchors {
             top: parent.top
             left: parent.left
@@ -319,7 +323,7 @@ Item {
     }
     Item {
         id: cal
-        width: avWidth
+        width: boxWidth
         anchors {
             top: parent.top
             right: parent.right

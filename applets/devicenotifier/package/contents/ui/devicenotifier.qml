@@ -2,7 +2,7 @@
  *   Copyright 2011 Viranch Mehta <viranch.mehta@gmail.com>
  *   Copyright 2012 Jacopo De Simoi <wilderkde@gmail.com>
  *   Copyright 2014 David Edmundson <davidedmundson@kde.org>
- *
+ *   Copyright 2016 Kai Uwe Broulik <kde@privat.broulik.de>
  *
  *   This program is free software; you can redistribute it and/or modify
  *   it under the terms of the GNU Library General Public License as
@@ -27,8 +27,13 @@ import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 
+import org.kde.kquickcontrolsaddons 2.0
+
 Item {
     id: devicenotifier
+
+    readonly property string automounterKcmName: "device_automounter_kcm"
+
     property string devicesType: {
         if (plasmoid.configuration.allDevices) {
             return "all"
@@ -190,6 +195,14 @@ Item {
         if (sdSource.connectedSources.count == 0) {
             Plasmoid.status = PlasmaCore.Types.PassiveStatus;
         }
+
+        if (KCMShell.authorize(devicenotifier.automounterKcmName + ".desktop").length > 0) {
+            plasmoid.setAction("openAutomounterKcm", i18nc("Open auto mounter kcm", "Configure Removable Devices"), "drive-removable-media")
+        }
+    }
+
+    function action_openAutomounterKcm() {
+        KCMShell.open([devicenotifier.automounterKcmName])
     }
 
     Plasmoid.onExpandedChanged: {

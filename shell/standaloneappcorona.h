@@ -25,8 +25,6 @@
 #include <plasma/corona.h>
 #include "desktopview.h"
 
-class Activity;
-
 namespace KActivities {
     class Consumer;
 }
@@ -45,8 +43,10 @@ public:
 
     Plasma::Containment *createContainmentForActivity(const QString& activity, int screenNum);
 
-    void insertActivity(const QString &id, Activity *activity);
+    void insertActivity(const QString &id, const QString &plugin);
     Plasma::Containment *addPanel(const QString &plugin);
+
+    Q_INVOKABLE QStringList availableActivities() const;
 
 public Q_SLOTS:
     void load();
@@ -64,7 +64,7 @@ private:
     KActivities::Consumer *m_activityConsumer;
     KConfigGroup m_desktopDefaultsConfig;
     DesktopView *m_view;
-    QHash<QString, Activity *> m_activities;
+    QHash<QString, QString> m_activityContainmentPlugins;
 };
 
 #endif

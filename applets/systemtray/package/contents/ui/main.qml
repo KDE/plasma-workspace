@@ -30,8 +30,10 @@ MouseArea {
 
     Layout.minimumHeight: vertical ? tasksRow.implicitHeight+ expander.implicitHeight + units.smallSpacing : units.smallSpacing
 
+    property var iconSizes: ["small", "smallMedium", "medium", "large", "huge", "enormous"];
+
     property bool vertical: plasmoid.formFactor == PlasmaCore.Types.Vertical
-    property int itemSize: Math.min(Math.min(width, height), units.iconSizes.smallMedium)
+    property int itemSize: units.roundToIconSize(Math.min(Math.min(width, height), units.iconSizes[iconSizes[plasmoid.configuration.iconSize]]))
     property int hiddenItemSize: units.iconSizes.smallMedium
     property alias expanded: dialog.visible
     property Item activeApplet
@@ -94,6 +96,15 @@ MouseArea {
     }
 
     Containment.onAppletRemoved: {
+    }
+
+    Connections {
+        target: plasmoid
+        onUserConfiguringChanged: {
+            if (plasmoid.userConfiguring) {
+                dialog.visible = false
+            }
+        }
     }
 
      Connections {
@@ -269,13 +280,21 @@ MouseArea {
         location: plasmoid.location
         hideOnWindowDeactivate: expandedRepresentation.hideOnWindowDeactivate
         onVisibleChanged: {
-            if (!visible && root.activeApplet) {
-                root.activeApplet.expanded = false;
+            if (!visible) {
+                plasmoid.status = PlasmaCore.Types.PassiveStatus;
+                if (root.activeApplet) {
+                    root.activeApplet.expanded = false;
+                }
+            } else {
+                plasmoid.status = PlasmaCore.Types.RequiresAttentionStatus;
             }
         }
         mainItem: ExpandedRepresentation {
             id: expandedRepresentation
             activeApplet: root.activeApplet
+
+            LayoutMirroring.enabled: Qt.application.layoutDirection === Qt.RightToLeft
+            LayoutMirroring.childrenInherit: true
         }
     }
 }

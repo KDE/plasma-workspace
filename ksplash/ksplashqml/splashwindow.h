@@ -29,7 +29,7 @@ class QKeyEvent;
 class SplashWindow: public KQuickAddons::QuickViewSharedEngine
 {
 public:
-    SplashWindow(bool testing, bool window);
+    SplashWindow(bool testing = false, bool window = false);
 
     void setStage(int stage);
     virtual void setGeometry(const QRect &rect);

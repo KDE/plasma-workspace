@@ -127,10 +127,6 @@ View::View(QWindow *)
     connect(KDirWatch::self(), &KDirWatch::dirty, this, &View::reloadConfig);
     connect(KDirWatch::self(), &KDirWatch::created, this, &View::reloadConfig);
 
-    if (m_qmlObj->rootObject()) {
-        connect(m_qmlObj->rootObject(), SIGNAL(widthChanged()), this, SLOT(resetScreenPos()));
-    }
-
     if (m_floating) {
         setLocation(Plasma::Types::Floating);
     } else {
@@ -171,6 +167,7 @@ void View::initWayland()
 
 void View::objectIncubated()
 {
+    connect(m_qmlObj->rootObject(), SIGNAL(widthChanged()), this, SLOT(resetScreenPos()));
     setMainItem(qobject_cast<QQuickItem *>(m_qmlObj->rootObject()));
 }
 
@@ -254,6 +251,13 @@ bool View::event(QEvent *event)
     }
 
     return retval;
+}
+
+void View::resizeEvent(QResizeEvent *event)
+{
+    if (event->oldSize().width() != event->size().width()) {
+        positionOnScreen();
+    }
 }
 
 void View::showEvent(QShowEvent *event)

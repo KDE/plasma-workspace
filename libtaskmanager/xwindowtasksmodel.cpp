@@ -1,5 +1,6 @@
 /********************************************************************
 Copyright 2016  Eike Hein <hein@kde.org>
+Copyright 2008  Aaron J. Seigo <aseigo@kde.org>
 
 This library is free software; you can redistribute it and/or
 modify it under the terms of the GNU Lesser General Public
@@ -47,13 +48,11 @@ License along with this library.  If not, see <http://www.gnu.org/licenses/>.
 #include <QTimer>
 #include <QX11Info>
 
-#include <netwm.h>
-
 namespace TaskManager
 {
 
 static const NET::Properties windowInfoFlags = NET::WMState | NET::XAWMState | NET::WMDesktop |
-        NET::WMVisibleName | NET::WMGeometry |
+        NET::WMVisibleName | NET::WMGeometry | NET::WMFrameExtents |
         NET::WMWindowType;
 static const NET::Properties2 windowInfoFlags2 = NET::WM2WindowClass | NET::WM2AllowedActions;
 
@@ -85,7 +84,8 @@ public:
     AppData appData(WId window);
 
     QIcon icon(WId window);
-    QString mimeType() const;
+    static QString mimeType();
+    static QString groupMimeType();
     QUrl windowUrl(WId window);
     QUrl launcherUrl(WId window, bool encodeFallbackIcon = true);
     QUrl serviceUrl(int pid, const QString &type, const QStringList &cmdRemovals);
@@ -224,7 +224,7 @@ void XWindowTasksModel::Private::addWindow(WId window)
         transients.insert(window);
 
         // Update demands attention state for leader.
-        if (info.state() & NET::DemandsAttention && windows.contains(leader)) {
+        if (info.hasState(NET::DemandsAttention) && windows.contains(leader)) {
             transientsDemandingAttention.insertMulti(leader, window);
             dataChanged(leader, QVector<int>{IsDemandingAttention});
         }
@@ -297,7 +297,7 @@ void XWindowTasksModel::Private::transientChanged(WId window, NET::Properties pr
             return;
         }
 
-        if (info.state() & NET::DemandsAttention) {
+        if (info.hasState(NET::DemandsAttention)) {
             if (!transientsDemandingAttention.values(leader).contains(window)) {
                 transientsDemandingAttention.insertMulti(leader, window);
                 dataChanged(leader, QVector<int>{IsDemandingAttention});
@@ -309,7 +309,7 @@ void XWindowTasksModel::Private::transientChanged(WId window, NET::Properties pr
     } else if (properties2 & NET::WM2TransientFor) {
         const KWindowInfo info(window, NET::WMState | NET::XAWMState, NET::WM2TransientFor);
 
-        if (info.state() & NET::DemandsAttention) {
+        if (info.hasState(NET::DemandsAttention)) {
             WId oldLeader = info.transientFor();
             QMutableHashIterator<WId, WId> i(transientsDemandingAttention);
 
@@ -452,9 +452,14 @@ QIcon XWindowTasksModel::Private::icon(WId window)
     return icon;
 }
 
-QString XWindowTasksModel::Private::mimeType() const
+QString XWindowTasksModel::Private::mimeType()
 {
     return QStringLiteral("windowsystem/winid");
+}
+
+QString XWindowTasksModel::Private::groupMimeType()
+{
+    return QStringLiteral("windowsystem/multiple-winids");
 }
 
 QUrl XWindowTasksModel::Private::windowUrl(WId window)
@@ -471,11 +476,11 @@ QUrl XWindowTasksModel::Private::windowUrl(WId window)
     if (!(classClass.isEmpty() && className.isEmpty())) {
         int pid = NETWinInfo(QX11Info::connection(), window, QX11Info::appRootWindow(), NET::WMPid, 0).pid();
 
-        // For KCModules, if we matched on window class, etc, we would end up matching to kcmshell4 - but we are more than likely
-        // interested in the actual control module. Therefore we obtain this via the commandline. This commandline may contain
-        // "kdeinit4:" or "[kdeinit]", so we remove these first.
-        // FIXME This looks like ancient old crap we can do better now.
-        if ("Kcmshell5" == classClass) {
+        // For KCModules, if we matched on window class, etc, we would end up matching
+        // to kcmshell5 itself - but we are more than likely interested in the actual
+        // control module. Therefore we obtain this via the commandline. This commandline
+        // may contain "kdeinit4:" or "[kdeinit]", so we remove these first.
+        if (classClass == "kcmshell5") {
             url = serviceUrl(pid, QStringLiteral("KCModule"), QStringList() << QStringLiteral("kdeinit5:") << QStringLiteral("[kdeinit]"));
 
             if (!url.isEmpty()) {
@@ -820,7 +825,7 @@ QStringList XWindowTasksModel::Private::activities(WId window)
 bool XWindowTasksModel::Private::demandsAttention(WId window)
 {
     if (windows.contains(window)) {
-        return ((windowInfo(window)->state() & NET::DemandsAttention)
+        return ((windowInfo(window)->hasState(NET::DemandsAttention))
         || transientsDemandingAttention.contains(window));
     }
 
@@ -880,23 +885,23 @@ QVariant XWindowTasksModel::data(const QModelIndex &index, int role) const
         return d->windowInfo(window)->actionSupported(NET::ActionMax);
     } else if (role == IsMaximized) {
         const KWindowInfo *info = d->windowInfo(window);
-        return (bool)(info->state() & NET::MaxHoriz) && (bool)(info->state() & NET::MaxVert);
+        return info->hasState(NET::MaxHoriz) && info->hasState(NET::MaxVert);
     } else if (role == IsMinimizable) {
         return d->windowInfo(window)->actionSupported(NET::ActionMinimize);
     } else if (role == IsMinimized) {
         return d->windowInfo(window)->isMinimized();
     } else if (role == IsKeepAbove) {
-        return (bool)(d->windowInfo(window)->state() & NET::StaysOnTop);
+        return d->windowInfo(window)->hasState(NET::StaysOnTop);
     } else if (role == IsKeepBelow) {
-        return (bool)(d->windowInfo(window)->state() & NET::KeepBelow);
+        return d->windowInfo(window)->hasState(NET::KeepBelow);
     } else if (role == IsFullScreenable) {
         return d->windowInfo(window)->actionSupported(NET::ActionFullScreen);
     } else if (role == IsFullScreen) {
-        return (bool)(d->windowInfo(window)->state() & NET::FullScreen);
+        return d->windowInfo(window)->hasState(NET::FullScreen);
     } else if (role == IsShadeable) {
         return d->windowInfo(window)->actionSupported(NET::ActionShade);
     } else if (role == IsShaded) {
-        return (bool)(d->windowInfo(window)->state() & NET::Shaded);
+        return d->windowInfo(window)->hasState(NET::Shaded);
     } else if (role == IsVirtualDesktopChangeable) {
         return d->windowInfo(window)->actionSupported(NET::ActionChangeDesktop);
     } else if (role == VirtualDesktop) {
@@ -910,7 +915,7 @@ QVariant XWindowTasksModel::data(const QModelIndex &index, int role) const
     } else if (role == IsDemandingAttention) {
         return d->demandsAttention(window);
     } else if (role == SkipTaskbar) {
-        return (bool)(d->windowInfo(window)->state() & NET::SkipTaskbar);
+        return d->windowInfo(window)->hasState(NET::SkipTaskbar);
     }
 
     return QVariant();
@@ -943,7 +948,7 @@ void XWindowTasksModel::requestActivate(const QModelIndex &index)
             foreach (const WId transient, d->transients) {
                 KWindowInfo info(transient, NET::WMState, NET::WM2TransientFor);
 
-                if (info.valid(true) && (info.state() & NET::Shaded) && info.transientFor() == window) {
+                if (info.valid(true) && info.hasState(NET::Shaded) && info.transientFor() == window) {
                     window = transient;
                     break;
                 }
@@ -1065,7 +1070,7 @@ void XWindowTasksModel::requestToggleMaximized(const QModelIndex &index)
     const WId window = d->windows.at(index.row());
     const KWindowInfo *info = d->windowInfo(window);
     bool onCurrent = info->isOnCurrentDesktop();
-    bool restore = (info->state() & NET::MaxHoriz) && (bool)(info->state() & NET::MaxVert);
+    bool restore = (info->hasState(NET::MaxHoriz) && info->hasState(NET::MaxVert));
 
     // FIXME: Move logic up into proxy? (See also others.)
     if (!onCurrent) {
@@ -1100,7 +1105,7 @@ void XWindowTasksModel::requestToggleKeepAbove(const QModelIndex &index)
 
     NETWinInfo ni(QX11Info::connection(), window, QX11Info::appRootWindow(), NET::WMState, 0);
 
-    if (info->state() & NET::StaysOnTop) {
+    if (info->hasState(NET::StaysOnTop)) {
         ni.setState(0, NET::StaysOnTop);
     } else {
         ni.setState(NET::StaysOnTop, NET::StaysOnTop);
@@ -1118,7 +1123,7 @@ void XWindowTasksModel::requestToggleKeepBelow(const QModelIndex &index)
 
     NETWinInfo ni(QX11Info::connection(), window, QX11Info::appRootWindow(), NET::WMState, 0);
 
-    if (info->state() & NET::KeepBelow) {
+    if (info->hasState(NET::KeepBelow)) {
         ni.setState(0, NET::KeepBelow);
     } else {
         ni.setState(NET::KeepBelow, NET::KeepBelow);
@@ -1136,7 +1141,7 @@ void XWindowTasksModel::requestToggleFullScreen(const QModelIndex &index)
 
     NETWinInfo ni(QX11Info::connection(), window, QX11Info::appRootWindow(), NET::WMState, 0);
 
-    if (info->state() & NET::FullScreen) {
+    if (info->hasState(NET::FullScreen)) {
         ni.setState(0, NET::FullScreen);
     } else {
         ni.setState(NET::FullScreen, NET::FullScreen);
@@ -1154,7 +1159,7 @@ void XWindowTasksModel::requestToggleShaded(const QModelIndex &index)
 
     NETWinInfo ni(QX11Info::connection(), window, QX11Info::appRootWindow(), NET::WMState, 0);
 
-    if (info->state() & NET::Shaded) {
+    if (info->hasState(NET::Shaded)) {
         ni.setState(0, NET::Shaded);
     } else {
         ni.setState(NET::Shaded, NET::Shaded);
@@ -1241,6 +1246,82 @@ void XWindowTasksModel::requestPublishDelegateGeometry(const QModelIndex &index,
     }
 
     ni.setIconGeometry(rect);
+}
+
+WId XWindowTasksModel::winIdFromMimeData(const QMimeData *mimeData, bool *ok)
+{
+    Q_ASSERT(mimeData);
+
+    if (ok) {
+        *ok = false;
+    }
+
+    if (!mimeData->hasFormat(Private::mimeType())) {
+        return 0;
+    }
+
+    QByteArray data(mimeData->data(Private::mimeType()));
+    if (data.size() != sizeof(WId)) {
+        return 0;
+    }
+
+    WId id;
+    memcpy(&id, data.data(), sizeof(WId));
+
+    if (ok) {
+        *ok = true;
+    }
+
+    return id;
+}
+
+QList<WId> XWindowTasksModel::winIdsFromMimeData(const QMimeData *mimeData, bool *ok)
+{
+    Q_ASSERT(mimeData);
+    QList<WId> ids;
+
+    if (ok) {
+        *ok = false;
+    }
+
+    if (!mimeData->hasFormat(Private::groupMimeType())) {
+        // Try to extract single window id.
+        bool singularOk;
+        WId id = winIdFromMimeData(mimeData, &singularOk);
+
+        if (ok) {
+            *ok = singularOk;
+        }
+
+        if (singularOk) {
+            ids << id;
+        }
+
+        return ids;
+    }
+
+    QByteArray data(mimeData->data(Private::groupMimeType()));
+    if ((unsigned int)data.size() < sizeof(int) + sizeof(WId)) {
+        return ids;
+    }
+
+    int count = 0;
+    memcpy(&count, data.data(), sizeof(int));
+    if (count < 1 || (unsigned int)data.size() < sizeof(int) + sizeof(WId) * count) {
+        return ids;
+    }
+
+    WId id;
+    for (int i = 0; i < count; ++i) {
+        memcpy(&id, data.data() + sizeof(int) + sizeof(WId) * i, sizeof(WId));
+        ids << id;
+    }
+
+    if (ok) {
+        *ok = true;
+    }
+
+    return ids;
 }
 
 }

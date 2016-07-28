@@ -58,6 +58,12 @@ public:
     explicit DesktopView(Plasma::Corona *corona, QScreen *targetScreen = 0);
     ~DesktopView() override;
 
+    /*This is different from screen() as is always there, even if the window is
+      temporarly outside the screen or if is hidden: only plasmashell will ever
+      change this property, unlike QWindow::screen()*/
+    void setScreenToFollow(QScreen *screen);
+    QScreen *screenToFollow() const;
+
     void adaptToScreen();
     void showEvent(QShowEvent*) override;
 
@@ -90,6 +96,7 @@ private:
 
     QPointer<PlasmaQuick::ConfigView> m_configView;
     QPointer<QScreen> m_oldScreen;
+    QPointer<QScreen> m_screenToFollow;
     WindowType m_windowType;
     KWayland::Client::PlasmaShellSurface *m_shellSurface;
 };

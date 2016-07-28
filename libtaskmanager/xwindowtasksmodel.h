@@ -25,6 +25,10 @@ License along with this library.  If not, see <http://www.gnu.org/licenses/>.
 
 #include "taskmanager_export.h"
 
+#include <QMimeData>
+
+#include <netwm.h>
+
 namespace TaskManager
 {
 
@@ -197,6 +201,22 @@ public:
      **/
     void requestPublishDelegateGeometry(const QModelIndex &index, const QRect &geometry,
         QObject *delegate = nullptr) override;
+
+    /**
+     * Tries to extract a X11 window id from supplied mime data.
+     *
+     * @param mimeData Some mime data.
+     * @param @ok Set to true or false on success or failure.
+     */
+    static WId winIdFromMimeData(const QMimeData *mimeData, bool *ok = 0);
+
+    /**
+     * Tries to extract X11 window ids from supplied mime data.
+     *
+     * @param mimeData Some mime data.
+     * @param @ok Set to true or false on success or failure.
+     */
+    static QList<WId> winIdsFromMimeData(const QMimeData *mimeData, bool *ok = 0);
 
 private:
     class Private;

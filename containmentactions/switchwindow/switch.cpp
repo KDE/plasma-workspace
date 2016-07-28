@@ -27,20 +27,18 @@
 #include <QMenu>
 #include <KWindowSystem>
 
-#include <taskgroup.h>
-
 #include <Plasma/DataEngine>
 #include <Plasma/Service>
 
+#include "abstracttasksmodel.h"
+
 SwitchWindow::SwitchWindow(QObject *parent, const QVariantList &args)
     : Plasma::ContainmentActions(parent, args),
-      m_groupManager(new LegacyTaskManager::GroupManager(this)),
-      m_tasksModel(new LegacyTaskManager::TasksModel(m_groupManager, this)),
+      m_tasksModel(new TaskManager::TasksModel(this)),
       m_mode(AllFlat),
       m_clearOrderTimer(0)
 {
-    m_groupManager->setGroupingStrategy(static_cast<LegacyTaskManager::GroupManager::TaskGroupingStrategy>(0));
-    m_groupManager->reconnect();
+    m_tasksModel->setGroupMode(TaskManager::TasksModel::GroupDisabled);
 }
 
 SwitchWindow::~SwitchWindow()
@@ -100,7 +98,7 @@ void SwitchWindow::makeMenu()
 
     //make all the window actions
     for (int i = 0; i < m_tasksModel->rowCount(); ++i) {
-        if (m_tasksModel->data(m_tasksModel->index(i, 0), LegacyTaskManager::TasksModel::IsStartup).toBool()) {
+        if (m_tasksModel->data(m_tasksModel->index(i, 0), TaskManager::AbstractTasksModel::IsStartup).toBool()) {
             qDebug() << "skipped fake task";
             continue;
         }
@@ -111,10 +109,16 @@ void SwitchWindow::makeMenu()
             continue;
         }
 
+        const QVariantList &idList = m_tasksModel->data(m_tasksModel->index(i, 0), TaskManager::AbstractTasksModel::LegacyWinIdList).toList();
+
+        if (!idList.count()) {
+            continue;
+        }
+
         QAction *action = new QAction(name, this);
         action->setIcon(m_tasksModel->data(m_tasksModel->index(i, 0), Qt::DecorationRole).value<QIcon>());
-        action->setData(m_tasksModel->data(m_tasksModel->index(i, 0), LegacyTaskManager::TasksModel::Id).toString());
-        desktops.insert(m_tasksModel->data(m_tasksModel->index(i, 0), LegacyTaskManager::TasksModel::Desktop).toInt(), action);
+        action->setData(idList.at(0));
+        desktops.insert(m_tasksModel->data(m_tasksModel->index(i, 0), TaskManager::AbstractTasksModel::VirtualDesktop).toInt(), action);
         connect(action, &QAction::triggered, [=]() {
             switchTo(action);
         });
@@ -183,14 +187,8 @@ QList<QAction*> SwitchWindow::contextualActions()
 void SwitchWindow::switchTo(QAction *action)
 {
     int id = action->data().toInt();
-    qDebug() << id;
-    LegacyTaskManager::AbstractGroupableItem* item = m_groupManager->rootGroup()->getMemberById(id);
 
-    if (!item) {
-        return;
-    }
-    LegacyTaskManager::TaskItem* taskItem = static_cast<LegacyTaskManager::TaskItem*>(item);
-    taskItem->task()->activateRaiseOrIconify();
+    KWindowSystem::forceActiveWindow(id);
 }
 
 void SwitchWindow::clearWindowsOrder()

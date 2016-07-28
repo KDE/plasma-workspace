@@ -32,15 +32,14 @@
 
 #include <KPackage/Package>
 
-class Activity;
 class DesktopView;
 class PanelView;
 class QMenu;
 class QScreen;
+class ScreenPool;
 
 namespace KActivities
 {
-    class Consumer;
     class Controller;
 } // namespace KActivities
 
@@ -89,18 +88,16 @@ public:
     Q_INVOKABLE QRegion availableScreenRegion(int id) const override;
     Q_INVOKABLE QRect availableScreenRect(int id) const override;
 
+    Q_INVOKABLE QStringList availableActivities() const;
+
     PanelView *panelView(Plasma::Containment *containment) const;
 
-    KActivities::Controller *activityController();
-
-    //Those two are a bit of an hack but are just for desktop scripting
-    Activity *activity(const QString &id);
-    void insertActivity(const QString &id, Activity *activity);
+    // This one is a bit of an hack but are just for desktop scripting
+    void insertActivity(const QString &id, const QString &plugin);
 
     Plasma::Containment *setContainmentTypeForScreen(int screen, const QString &plugin);
 
-    QScreen *screenForId(int screenId) const;
-    void remove(DesktopView *desktopView);
+    void removeDesktop(DesktopView *desktopView);
 
     /**
      * @returns a new containment associated with the specified @p activity and @p screen.
@@ -108,6 +105,14 @@ public:
     Plasma::Containment *createContainmentForActivity(const QString &activity, int screenNum);
 
     KWayland::Client::PlasmaShell *waylandPlasmaShellInterface() const;
+
+
+    ScreenPool *screenPool() const;
+
+    QList<int> screenIds() const;
+
+    QString defaultContainmentPlugin() const;
+
 
 protected:
     bool eventFilter(QObject *watched, QEvent *event) override;
@@ -188,9 +193,6 @@ private Q_SLOTS:
     void addOutput(QScreen* screen);
     void primaryOutputChanged();
 
-    void activityOpened();
-    void activityClosed();
-    void activityRemoved();
     void panelContainmentDestroyed(QObject* cont);
     void desktopContainmentDestroyed(QObject*);
     void showOpenGLNotCompatibleWarning();
@@ -201,8 +203,6 @@ private Q_SLOTS:
 
 private:
     void updateStruts();
-    QScreen *insertScreen(QScreen *screen, int idx);
-    void removeView(int idx);
     bool isOutputRedundant(QScreen* screen) const;
     void reconsiderOutputs();
     QList<PanelView *> panelsForScreen(QScreen *screen) const;
@@ -216,14 +216,16 @@ private:
 
     void insertContainment(const QString &activity, int screenNum, Plasma::Containment *containment);
 
+    ScreenPool *m_screenPool;
     QString m_shell;
-    QList<DesktopView *> m_views;
     KActivities::Controller *m_activityController;
-    KActivities::Consumer *m_activityConsumer;
+    //map from screen number to desktop view, qmap as order is important
+    QMap<int, DesktopView *> m_desktopViewforId;
     QHash<const Plasma::Containment *, PanelView *> m_panelViews;
     KConfigGroup m_desktopDefaultsConfig;
+    KConfigGroup m_lnfDefaultsConfig;
     QList<Plasma::Containment *> m_waitingPanels;
-    QHash<QString, Activity *> m_activities;
+    QHash<QString, QString> m_activityContainmentPlugins;
     QHash<QString, QHash<int, Plasma::Containment *> > m_desktopContainments;
     QAction *m_addPanelAction;
     QMenu *m_addPanelsMenu;

@@ -24,9 +24,7 @@
 #include <plasma/containmentactions.h>
 
 // liblegacytaskmanager
-#include <legacytaskmanager.h>
 #include <tasksmodel.h>
-#include <groupmanager.h>
 
 class QAction;
 class QTimer;
@@ -68,8 +66,7 @@ class SwitchWindow : public Plasma::ContainmentActions
         };
 
         QList <QAction *> m_actions;
-        LegacyTaskManager::GroupManager *m_groupManager;
-        LegacyTaskManager::TasksModel *m_tasksModel;
+        TaskManager::TasksModel *m_tasksModel;
         Ui::Config m_ui;
         MenuMode m_mode;
         QTimer *m_clearOrderTimer;

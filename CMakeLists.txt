@@ -107,10 +107,6 @@ include_directories("${CMAKE_CURRENT_BINARY_DIR}")
 configure_file(config-workspace.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-workspace.h)
 configure_file(config-unix.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-unix.h )
 configure_file(config-X11.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-X11.h)
-install(FILES
-        ${CMAKE_CURRENT_BINARY_DIR}/config-X11.h
-        DESTINATION ${KDE_INSTALL_INCLUDEDIR}/legacytaskmanager COMPONENT Devel
-)
 configure_file(plasma.desktop.cmake ${CMAKE_CURRENT_BINARY_DIR}/plasma.desktop)
 install(FILES
         ${CMAKE_CURRENT_BINARY_DIR}/plasma.desktop
@@ -138,7 +134,6 @@ add_definitions(-DQT_NO_URL_CAST_FROM_STRING)
 add_subdirectory(doc)
 add_subdirectory(libkworkspace)
 add_subdirectory(libtaskmanager)
-add_subdirectory(liblegacytaskmanager)
 add_subdirectory(components)
 
 if(dbusmenu-qt5_FOUND)

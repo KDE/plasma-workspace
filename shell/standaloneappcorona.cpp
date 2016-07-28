@@ -21,7 +21,6 @@
 
 #include "standaloneappcorona.h"
 #include "desktopview.h"
-#include "activity.h"
 #include <QDebug>
 #include <QAction>
 
@@ -162,19 +161,17 @@ Plasma::Containment *StandaloneAppCorona::createContainmentForActivity(const QSt
 void StandaloneAppCorona::activityAdded(const QString &id)
 {
     //TODO more sanity checks
-    if (m_activities.contains(id)) {
+    if (m_activityContainmentPlugins.contains(id)) {
         qWarning() << "Activity added twice" << id;
         return;
     }
 
-    Activity *a = new Activity(id, this);
-    m_activities.insert(id, a);
+    m_activityContainmentPlugins.insert(id, QString());
 }
 
 void StandaloneAppCorona::activityRemoved(const QString &id)
 {
-    Activity *a = m_activities.take(id);
-    a->deleteLater();
+    m_activityContainmentPlugins.remove(id);
 }
 
 void StandaloneAppCorona::currentActivityChanged(const QString &newActivity)
@@ -205,9 +202,14 @@ void StandaloneAppCorona::toggleWidgetExplorer()
     return;
 }
 
-void StandaloneAppCorona::insertActivity(const QString &id, Activity *activity)
+QStringList StandaloneAppCorona::availableActivities() const
 {
-    m_activities.insert(id, activity);
+    return m_activityContainmentPlugins.keys();
+}
+
+void StandaloneAppCorona::insertActivity(const QString &id, const QString &plugin)
+{
+    m_activityContainmentPlugins.insert(id, plugin);
     Plasma::Containment *c = createContainmentForActivity(id, 0);
     if (c) {
         c->config().writeEntry("lastScreen", 0);
@@ -217,7 +219,7 @@ void StandaloneAppCorona::insertActivity(const QString &id, Activity *activity)
 Plasma::Containment *StandaloneAppCorona::addPanel(const QString &plugin)
 {
     //this creates a panel that wwill be used for nothing
-    //it's needed by the scriptengine to create 
+    //it's needed by the scriptengine to create
     //a corona useful also when launched in fullshell
     Plasma::Containment *panel = createContainment(plugin);
     if (!panel) {

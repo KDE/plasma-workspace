@@ -49,11 +49,21 @@
 #include "i18n.h"
 #include "panel.h"
 #include "widget.h"
-#include "../activity.h"
 #include "../shellcorona.h"
 #include "../standaloneappcorona.h"
+#include "../screenpool.h"
 
 QScriptValue constructQRectFClass(QScriptEngine *engine);
+
+namespace {
+    template <typename T>
+    inline void awaitFuture(const QFuture<T> &future)
+    {
+        while (!future.isFinished()) {
+            QCoreApplication::processEvents();
+        }
+    }
+}
 
 namespace WorkspaceScripting
 {
@@ -94,6 +104,23 @@ QScriptValue ScriptEngine::desktopById(QScriptContext *context, QScriptEngine *e
     return engine->undefinedValue();
 }
 
+QStringList ScriptEngine::availableActivities(QScriptContext *context, QScriptEngine *engine)
+{
+    Q_UNUSED(engine)
+
+    ScriptEngine *env = envFor(engine);
+
+    ShellCorona *sc = qobject_cast<ShellCorona *>(env->m_corona);
+    StandaloneAppCorona *ac = qobject_cast<StandaloneAppCorona *>(env->m_corona);
+    if (sc) {
+        return sc->availableActivities();
+    } else if (ac) {
+        return ac->availableActivities();
+    }
+
+    return QStringList();
+}
+
 QScriptValue ScriptEngine::desktopsForActivity(QScriptContext *context, QScriptEngine *engine)
 {
     if (context->argumentCount() == 0) {
@@ -106,9 +133,8 @@ QScriptValue ScriptEngine::desktopsForActivity(QScriptContext *context, QScriptE
     const QString id = context->argument(0).toString();
 
     // confirm this activity actually exists
-    KActivities::Consumer consumer;
     bool found = false;
-    for (const QString &act: consumer.activities()) {
+    for (const QString &act: availableActivities(context, engine)) {
         if (act == id) {
             found = true;
             break;
@@ -133,15 +159,17 @@ QScriptValue ScriptEngine::desktopsForActivity(QScriptContext *context, QScriptE
         // this can happen when the activity already exists but has never been activated
         // with the current shell package and layout.js is run to set up the shell for the
         // first time
-        const int numScreens = env->m_corona->numScreens();
-        for (int i = 0; i < numScreens; ++i) {
-            ShellCorona *sc = qobject_cast<ShellCorona *>(env->m_corona);
-            StandaloneAppCorona *ac = qobject_cast<StandaloneAppCorona *>(env->m_corona);
-            if (sc) {
+        ShellCorona *sc = qobject_cast<ShellCorona *>(env->m_corona);
+        StandaloneAppCorona *ac = qobject_cast<StandaloneAppCorona *>(env->m_corona);
+        if (sc) {
+            foreach (int i, sc->screenIds()) {
                 Plasma::Containment *c = sc->createContainmentForActivity(id, i);
                 containments.setProperty(count, env->wrap(c));
                 ++count;
-            } else if (ac) {
+            }
+        } else if (ac) {
+            const int numScreens = env->m_corona->numScreens();
+            for (int i = 0; i < numScreens; ++i) {
                 Plasma::Containment *c = ac->createContainmentForActivity(id, i);
                 containments.setProperty(count, env->wrap(c));
                 ++count;
@@ -164,6 +192,22 @@ QScriptValue ScriptEngine::desktopForScreen(QScriptContext *context, QScriptEngi
     return env->wrap(env->m_corona->containmentForScreen(screen));
 }
 
+QScriptValue ScriptEngine::removeActivity(QScriptContext *context, QScriptEngine *engine)
+{
+    if (context->argumentCount() < 0) {
+        return context->throwError(i18n("removeActivity required the activity id"));
+    }
+
+    const auto id = context->argument(0).toString();
+
+    KActivities::Controller controller;
+    const auto result = controller.removeActivity(id);
+
+    awaitFuture(result);
+
+    return QScriptValue();
+}
+
 QScriptValue ScriptEngine::createActivity(QScriptContext *context, QScriptEngine *engine)
 {
     if (context->argumentCount() < 0) {
@@ -171,65 +215,34 @@ QScriptValue ScriptEngine::createActivity(QScriptContext *context, QScriptEngine
     }
 
     const QString name = context->argument(0).toString();
-    const QString plugin = context->argument(1).toString();
+    QString plugin = context->argument(1).toString();
 
     ScriptEngine *env = envFor(engine);
 
     KActivities::Controller controller;
 
-    QString id;
+    // This is not the nicest way to do this, but createActivity
+    // is a synchronous API :/
+    QFuture<QString> futureId = controller.addActivity(name);
+    awaitFuture(futureId);
 
-    KActivities::Consumer consumer;
-
-    QSet <QString> knownActivities;
-    foreach (Plasma::Containment *cont, env->m_corona->containments()) {
-        knownActivities.insert(cont->activity());
-    }
-
-    foreach (const QString &act, consumer.activities()) {
-        if (!knownActivities.contains(act)) {
-            id = act;
-        }
-        KActivities::Info info(act);
-
-        if (info.name() == name) {
-            return act;
-        }
-    }
-
-    if (id.isEmpty()) {
-        //TODO: if there are activities without containment, recycle
-        QFuture<QString> futureId = controller.addActivity(name);
-        QEventLoop loop;
-
-        QFutureWatcher<QString> *watcher = new QFutureWatcher<QString>();
-        connect(watcher, &QFutureWatcherBase::finished, &loop, &QEventLoop::quit);
-
-        watcher->setFuture(futureId);
-
-        loop.exec();
-        id = futureId.result();
-    } else {
-        controller.setActivityName(id, name);
-    }
-
-    Activity *a = new Activity(id, env->m_corona);
+    QString id = futureId.result();
 
     qDebug() << "Setting default Containment plugin:" << plugin;
-
-    if (plugin.isEmpty() || plugin == QLatin1String("undefined")) {
-        KConfigGroup shellCfg = KConfigGroup(KSharedConfig::openConfig(env->m_corona->package().filePath("defaults")), "Desktop");
-        a->setDefaultPlugin(shellCfg.readEntry("Containment", "org.kde.desktopcontainment"));
-    } else {
-        a->setDefaultPlugin(plugin);
-    }
 
     ShellCorona *sc = qobject_cast<ShellCorona *>(env->m_corona);
     StandaloneAppCorona *ac = qobject_cast<StandaloneAppCorona *>(env->m_corona);
     if (sc) {
-        sc->insertActivity(id, a);
+        if (plugin.isEmpty() || plugin == QLatin1String("undefined")) {
+            plugin = sc->defaultContainmentPlugin();
+        }
+        sc->insertActivity(id, plugin);
     } else if (ac) {
-        ac->insertActivity(id, a);
+        if (plugin.isEmpty() || plugin == QLatin1String("undefined")) {
+            KConfigGroup shellCfg = KConfigGroup(KSharedConfig::openConfig(env->m_corona->package().filePath("defaults")), "Desktop");
+            plugin = shellCfg.readEntry("Containment", "org.kde.desktopcontainment");
+        }
+        ac->insertActivity(id, plugin);
     }
 
     return QScriptValue(id);
@@ -248,14 +261,7 @@ QScriptValue ScriptEngine::setCurrentActivity(QScriptContext *context, QScriptEn
     KActivities::Controller controller;
 
     QFuture<bool> task = controller.setCurrentActivity(id);
-    QEventLoop loop;
-
-    QFutureWatcher<bool> watcher;
-    connect(&watcher, &QFutureWatcherBase::finished, &loop, &QEventLoop::quit);
-
-    watcher.setFuture(task);
-
-    loop.exec();
+    awaitFuture(task);
 
     return QScriptValue(task.result());
 }
@@ -274,14 +280,7 @@ QScriptValue ScriptEngine::setActivityName(QScriptContext *context, QScriptEngin
     KActivities::Controller controller;
 
     QFuture<void> task = controller.setActivityName(id, name);
-    QEventLoop loop;
-
-    QFutureWatcher<void> watcher;
-    connect(&watcher, &QFutureWatcherBase::finished, &loop, &QEventLoop::quit);
-
-    watcher.setFuture(task);
-
-    loop.exec();
+    awaitFuture(task);
 
     return QScriptValue();
 }
@@ -314,9 +313,7 @@ QScriptValue ScriptEngine::activities(QScriptContext *context, QScriptEngine *en
 {
     Q_UNUSED(context)
 
-    KActivities::Consumer consumer;
-
-    return qScriptValueFromSequence(engine, consumer.activities());
+    return qScriptValueFromSequence(engine, availableActivities(context, engine));
 }
 
 QScriptValue ScriptEngine::newPanel(QScriptContext *context, QScriptEngine *engine)
@@ -842,6 +839,7 @@ void ScriptEngine::setupEngine()
 
     m_scriptSelf.setProperty(QStringLiteral("QRectF"), constructQRectFClass(this));
     m_scriptSelf.setProperty(QStringLiteral("createActivity"), newFunction(ScriptEngine::createActivity));
+    m_scriptSelf.setProperty(QStringLiteral("removeActivity"), newFunction(ScriptEngine::removeActivity));
     m_scriptSelf.setProperty(QStringLiteral("setCurrentActivity"), newFunction(ScriptEngine::setCurrentActivity));
     m_scriptSelf.setProperty(QStringLiteral("currentActivity"), newFunction(ScriptEngine::currentActivity));
     m_scriptSelf.setProperty(QStringLiteral("activities"), newFunction(ScriptEngine::activities));

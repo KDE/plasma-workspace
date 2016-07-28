@@ -23,7 +23,7 @@ import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.private.sessions 2.0
 import "../components"
 
-Image {
+Item {
     id: root
     property bool viewVisible: false
     property bool debug: false
@@ -31,16 +31,6 @@ Image {
     property UserSelect userSelect: null
     property int interfaceVersion: org_kde_plasma_screenlocker_greeter_interfaceVersion ? org_kde_plasma_screenlocker_greeter_interfaceVersion : 0
     signal clearPassword()
-
-    source: backgroundPath || "../components/artwork/background.png"
-    fillMode: Image.PreserveAspectCrop
-    asynchronous: false
-
-    onStatusChanged: {
-        if (status == Image.Error) {
-            source = "../components/artwork/background.png";
-        }
-    }
 
     LayoutMirroring.enabled: Qt.application.layoutDirection === Qt.RightToLeft
     LayoutMirroring.childrenInherit: true

@@ -111,7 +111,7 @@ void ServiceRunner::match(Plasma::RunnerContext &context)
         // * a substring of the Name field
         // Note that before asking for the content of e.g. Keywords and GenericName we need to ask if
         // they exist to prevent a tree evaluation error if they are not defined.
-        query = QStringLiteral("exist Exec and ( (exist Keywords and '%1' ~subin Keywords) or (exist GenericName and '%1' ~~ GenericName) or (exist Name and '%1' ~~ Name) or ('%1' ~~ Exec) )").arg(term);
+        query = QStringLiteral("exist Exec and ( (exist Keywords and '%1' ~subin Keywords) or (exist GenericName and '%1' ~~ GenericName) or (exist Name and '%1' ~~ Name) or ('%1' ~~ Exec) or (exist Comment and '%1' ~~ Comment) )").arg(term);
     }
 
     KService::List services = KServiceTypeTrader::self()->query(QStringLiteral("Application"), query);
@@ -165,6 +165,12 @@ void ServiceRunner::match(Plasma::RunnerContext &context)
             relevance = 0.7;
 
             if (service->exec().startsWith(term, Qt::CaseInsensitive)) {
+                relevance += 0.05;
+            }
+        } else if (service->comment().contains(term, Qt::CaseInsensitive)) {
+            relevance = 0.5;
+
+            if (service->comment().startsWith(term, Qt::CaseInsensitive)) {
                 relevance += 0.05;
             }
         }

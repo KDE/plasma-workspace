@@ -88,6 +88,7 @@ class TASKMANAGER_EXPORT TasksModel : public QSortFilterProxyModel, public Abstr
                WRITE setGroupingAppIdBlacklist NOTIFY groupingAppIdBlacklistChanged)
     Q_PROPERTY(QStringList groupingLauncherUrlBlacklist READ groupingLauncherUrlBlacklist
                WRITE setGroupingLauncherUrlBlacklist NOTIFY groupingLauncherUrlBlacklistChanged)
+    Q_PROPERTY(QModelIndex activeTask READ activeTask NOTIFY activeTaskChanged)
 
 public:
     enum SortMode {
@@ -109,6 +110,8 @@ public:
     QHash<int, QByteArray> roleNames() const override;
 
     Q_INVOKABLE int rowCount(const QModelIndex &parent = QModelIndex()) const override; // Invokable.
+
+    QVariant data(const QModelIndex &proxyIndex, int role) const override;
 
     /**
      * The number of launcher tasks in the tast list.
@@ -308,8 +311,49 @@ public:
      **/
     void setSortMode(SortMode mode);
 
-    // FIXME TODO: Add docs once fully implemented.
+    /**
+     * Whether launchers are kept separate from other kinds of tasks.
+     * Defaults to @c true.
+     *
+     * When enabled, launcher tasks are sorted first in the tasks model
+     * and move() disallows moving them below the last launcher task,
+     * or moving a different kind of task above the first launcher. New
+     * launcher tasks are inserted after the last launcher task. When
+     * disabled, move() allows mixing, and new launcher tasks are
+     * appended to the model.
+     *
+     * Further, when disabled, the model always behaves as if
+     * launchInPlace is enabled: A window task takes the place of the
+     * first matching launcher task.
+     *
+     * @see LauncherTasksModel
+     * @see move
+     * @see launchInPlace
+     * @see setSeparateLaunchers
+     * @return whether launcher tasks are kept separate.
+     */
     bool separateLaunchers() const;
+
+    /**
+     * Sets whether launchers are kept separate from other kinds of tasks.
+     *
+     * When enabled, launcher tasks are sorted first in the tasks model
+     * and move() disallows moving them below the last launcher task,
+     * or moving a different kind of task above the first launcher. New
+     * launcher tasks are inserted after the last launcher task. When
+     * disabled, move() allows mixing, and new launcher tasks are
+     * appended to the model.
+     *
+     * Further, when disabled, the model always behaves as if
+     * launchInPlace is enabled: A window task takes the place of the
+     * first matching launcher task.
+     *
+     * @see LauncherTasksModel
+     * @see move
+     * @see launchInPlace
+     * @see separateLaunchers
+     * @param separate Whether to keep launcher tasks separate.
+     */
     void setSeparateLaunchers(bool separate);
 
     /**
@@ -467,6 +511,15 @@ public:
      * @param list a blacklist of launcher URLs to be consulted before grouping a task.
      **/
     void setGroupingLauncherUrlBlacklist(const QStringList &list);
+
+    /**
+     * Finds the first active (AbstractTasksModel::IsActive) task in the model
+     * and returns its QModelIndex, or a null QModelIndex if no active task is
+     * found.
+     *
+     * @returns the model index for the first active task, if any.
+     */
+    QModelIndex activeTask() const;
 
     /**
      * Request adding a launcher with the given URL.
@@ -697,15 +750,6 @@ public:
     Q_INVOKABLE void syncLaunchers();
 
     /**
-     * Finds the first active (AbstractTasksModel::IsActive) task in the model
-     * and returns its QModelIndex, or a null QModelIndex if no active task is
-     * found.
-     *
-     * @returns the model index for the first active task, if any.
-     */
-    Q_INVOKABLE QModelIndex activeTask() const;
-
-    /**
      * Given a row in the model, returns a QModelIndex for it. To get an index
      * for a child in a task group, an optional child row may be passed as well.
      *
@@ -738,6 +782,7 @@ Q_SIGNALS:
     void groupingWindowTasksThresholdChanged() const;
     void groupingAppIdBlacklistChanged() const;
     void groupingLauncherUrlBlacklistChanged() const;
+    void activeTaskChanged() const;
 
 protected:
     bool filterAcceptsRow(int sourceRow, const QModelIndex &sourceParent) const override;

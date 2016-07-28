@@ -41,12 +41,10 @@ public:
 
 protected:
     void constraintsEvent(Plasma::Types::Constraints constraints) override;
+    void ensureSystrayExists();
 
 Q_SIGNALS:
     void internalSystrayChanged();
-
-private Q_SLOTS:
-    
 
 private:
     QPointer<Plasma::Containment> m_innerContainment;
