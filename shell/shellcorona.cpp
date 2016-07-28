@@ -375,13 +375,13 @@ QString ShellCorona::dumpCurrentLayoutJS()
     QString script;
 
     //dump desktop containments
-    script += "var activityId = currentActivity();\n";
-    script += "var desktopsArray = desktopsForActivity(activityId);\n";
+    script += "//////Desktops\n";
+    script += "var desktopsArray = desktopsForActivity(currentActivity());\n";
     //enumerate containments
     int i = 0;
     foreach (DesktopView *view, m_desktopViewforId.values()) {
         Plasma::Containment *cont = view->containment();
-        script += "{\n";
+        script += "if (desktopsArray.length > " + QString::number(i) + ") {\n";
         script += "    var cont = desktopsArray[" + QString::number(i) + "];\n\n";
         script += "    cont.wallpaperPlugin = '" + cont->wallpaper() + "';\n";
 
@@ -397,12 +397,12 @@ QString ShellCorona::dumpCurrentLayoutJS()
             script += "        var applet = cont.addWidget(\"" + applet->pluginInfo().pluginName() + "\", " + QString::number(applet->id()) + ");\n";
 
             KConfigGroup appletConfig = applet->config();
-            script += dumpconfigGroupJS(appletConfig, QStringLiteral("            applet"));
+            script += dumpconfigGroupJS(appletConfig, QStringLiteral("        applet"));
 
             script += "    }\n";
         }
         ++i;
-        script += "}\n";
+        script += "}\n\n";
     }
 
     //same gridUnit calculation as ScriptEngine
@@ -416,6 +416,7 @@ QString ShellCorona::dumpCurrentLayoutJS()
         const Plasma::Containment *cont = it.key();
         const PanelView *view = it.value();
 
+        script += "//////Panels\n";
         script += "{\n";
         script += "    var panel = new Panel;\n";
         qreal units = 1;
