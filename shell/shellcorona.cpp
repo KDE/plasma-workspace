@@ -713,6 +713,7 @@ void ShellCorona::unload()
     while (!containments().isEmpty()) {
         //deleting a containment will remove it from the list due to QObject::destroyed connect in Corona
         //this form doesn't crash, while qDeleteAll(containments()) does
+        delete containments().first()->property("_plasma_graphicObject").value<QObject *>();
         delete containments().first();
     }
 }
