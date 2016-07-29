@@ -885,7 +885,8 @@ QScriptValue ScriptEngine::desktops(QScriptContext *context, QScriptEngine *engi
     int count = 0;
 
     foreach (Plasma::Containment *c, env->corona()->containments()) {
-        if (!isPanel(c)) {
+        //make really sure we get actual desktops, so check for a non empty activty id
+        if (!isPanel(c) && !c->activity().isEmpty()) {
             containments.setProperty(count, env->wrap(c));
             ++count;
         }
