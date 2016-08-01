@@ -34,7 +34,7 @@ Item {
 
     readonly property int controlSize: Math.min(height, width) / 4
 
-    property int position: mpris2Source.data[mpris2Source.current].Position
+    property int position: mpris2Source.currentData.Position || 0
     property bool disablePositionUpdate: false
     property bool keyPressed: false
 
@@ -72,13 +72,13 @@ Item {
 
             if (event.key === Qt.Key_Space || event.key === Qt.Key_K) {
                 // K is YouTube's key for "play/pause" :)
-                root.playPause()
+                root.action_playPause()
             } else if (event.key === Qt.Key_P) {
-                root.previous()
+                root.action_previous()
             } else if (event.key === Qt.Key_N) {
-                root.next()
+                root.action_next()
             } else if (event.key === Qt.Key_S) {
-                root.stop()
+                root.action_stop()
             } else if (event.key === Qt.Key_Left || event.key === Qt.Key_J) { // TODO ltr languages
                 // seek back 5s
                 seekSlider.value = Math.max(0, seekSlider.value - 5000000) // microseconds
@@ -202,7 +202,7 @@ Item {
             maximumValue: currentMetadata ? currentMetadata["mpris:length"] || 0 : 0
             value: 0
             // if there's no "mpris:length" in teh metadata, we cannot seek, so hide it in that case
-            enabled: !root.noPlayer && root.track && currentMetadata && currentMetadata["mpris:length"] && mpris2Source.data[mpris2Source.current].CanSeek
+            enabled: !root.noPlayer && root.track && currentMetadata && currentMetadata["mpris:length"] && mpris2Source.currentData.CanSeek ? true : false
             opacity: enabled ? 1 : 0
             Behavior on opacity {
                 NumberAnimation { duration: units.longDuration }
@@ -256,9 +256,9 @@ Item {
             bottom: titleColumn.bottom
             bottomMargin: seekSlider.height // Cannot anchor around in a column/row, and being lazy
         }
-        text: i18nc("Bring the window of player %1 to the front", "Open %1", mpris2Source.data[mpris2Source.current].Identity)
-        visible: !root.noPlayer && mpris2Source.data[mpris2Source.current].CanRaise
-        onClicked: root.action_openplayer()
+        text: i18nc("Bring the window of player %1 to the front", "Open %1", mpris2Source.currentData.Identity)
+        visible: !root.noPlayer && root.canRaise
+        onClicked: root.action_open()
     }
 
     Item {
@@ -268,7 +268,7 @@ Item {
 
         Row {
             id: playerControls
-            property bool enabled: !root.noPlayer && mpris2Source.data[mpris2Source.current].CanControl
+            property bool enabled: root.canControl
             property int controlsSize: theme.mSize(theme.defaultFont).height * 3
 
             anchors.horizontalCenter: parent.horizontalCenter
@@ -278,11 +278,11 @@ Item {
                 anchors.verticalCenter: parent.verticalCenter
                 width: expandedRepresentation.controlSize
                 height: width
-                enabled: playerControls.enabled && mpris2Source.data[mpris2Source.current].CanGoPrevious
+                enabled: playerControls.enabled && root.canGoPrevious
                 iconSource: "media-skip-backward"
                 onClicked: {
                     seekSlider.value = 0    // Let the media start from beginning. Bug 362473
-                    root.previous()
+                    root.action_previous()
                 }
             }
 
@@ -291,18 +291,18 @@ Item {
                 height: width
                 enabled: playerControls.enabled
                 iconSource: root.state == "playing" ? "media-playback-pause" : "media-playback-start"
-                onClicked: root.playPause()
+                onClicked: root.action_playPause()
             }
 
             PlasmaComponents.ToolButton {
                 anchors.verticalCenter: parent.verticalCenter
                 width: expandedRepresentation.controlSize
                 height: width
-                enabled: playerControls.enabled && mpris2Source.data[mpris2Source.current].CanGoNext
+                enabled: playerControls.enabled && root.canGoNext
                 iconSource: "media-skip-forward"
                 onClicked: {
                     seekSlider.value = 0    // Let the media start from beginning. Bug 362473
-                    root.next()
+                    root.action_next()
                 }
             }
         }
