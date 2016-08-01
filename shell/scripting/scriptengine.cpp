@@ -192,22 +192,6 @@ QScriptValue ScriptEngine::desktopForScreen(QScriptContext *context, QScriptEngi
     return env->wrap(env->m_corona->containmentForScreen(screen));
 }
 
-QScriptValue ScriptEngine::removeActivity(QScriptContext *context, QScriptEngine *engine)
-{
-    if (context->argumentCount() < 0) {
-        return context->throwError(i18n("removeActivity required the activity id"));
-    }
-
-    const auto id = context->argument(0).toString();
-
-    KActivities::Controller controller;
-    const auto result = controller.removeActivity(id);
-
-    awaitFuture(result);
-
-    return QScriptValue();
-}
-
 QScriptValue ScriptEngine::createActivity(QScriptContext *context, QScriptEngine *engine)
 {
     if (context->argumentCount() < 0) {
@@ -497,13 +481,29 @@ QScriptValue ScriptEngine::loadTemplate(QScriptContext *context, QScriptEngine *
     KPackage::Package package = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Plasma/LayoutTemplate"));
     KPluginInfo info(offers.first());
 
-    const QString path = QStandardPaths::locate(QStandardPaths::GenericDataLocation, package.defaultPackageRoot() + info.pluginName() + "/metadata.desktop");
-    if (path.isEmpty()) {
-        // qDebug() << "script path is empty";
-        return false;
+    QString path;
+    {
+        ScriptEngine *env = envFor(engine);
+        ShellCorona *sc = qobject_cast<ShellCorona *>(env->m_corona);
+        if (sc) {
+            const QString overridePackagePath = sc->lookAndFeelPackage().path() + QStringLiteral("contents/layouts/") + info.pluginName();
+
+            path = overridePackagePath + QStringLiteral("/metadata.desktop");
+            if (QFile::exists(path)) {
+                package.setPath(overridePackagePath);
+            }
+        }
     }
 
-    package.setPath(info.pluginName());
+    if (!package.isValid()) {
+        path = QStandardPaths::locate(QStandardPaths::GenericDataLocation, package.defaultPackageRoot() + info.pluginName() + "/metadata.desktop");
+        if (path.isEmpty()) {
+            // qDebug() << "script path is empty";
+            return false;
+        }
+
+        package.setPath(info.pluginName());
+    }
 
     const QString scriptFile = package.filePath("mainscript");
     if (scriptFile.isEmpty()) {
@@ -839,7 +839,6 @@ void ScriptEngine::setupEngine()
 
     m_scriptSelf.setProperty(QStringLiteral("QRectF"), constructQRectFClass(this));
     m_scriptSelf.setProperty(QStringLiteral("createActivity"), newFunction(ScriptEngine::createActivity));
-    m_scriptSelf.setProperty(QStringLiteral("removeActivity"), newFunction(ScriptEngine::removeActivity));
     m_scriptSelf.setProperty(QStringLiteral("setCurrentActivity"), newFunction(ScriptEngine::setCurrentActivity));
     m_scriptSelf.setProperty(QStringLiteral("currentActivity"), newFunction(ScriptEngine::currentActivity));
     m_scriptSelf.setProperty(QStringLiteral("activities"), newFunction(ScriptEngine::activities));
@@ -885,7 +884,8 @@ QScriptValue ScriptEngine::desktops(QScriptContext *context, QScriptEngine *engi
     int count = 0;
 
     foreach (Plasma::Containment *c, env->corona()->containments()) {
-        if (!isPanel(c)) {
+        //make really sure we get actual desktops, so check for a non empty activty id
+        if (!isPanel(c) && !c->activity().isEmpty()) {
             containments.setProperty(count, env->wrap(c));
             ++count;
         }

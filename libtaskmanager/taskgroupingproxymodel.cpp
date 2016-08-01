@@ -742,7 +742,7 @@ QVariant TaskGroupingProxyModel::data(const QModelIndex &proxyIndex, int role) c
             // TODO: Nothing needs this for now and it would add complexity to
             // make it a list; skip it until needed.
             return QVariant();
-        } else if (role == AbstractTasksModel::Screen) {
+        } else if (role == AbstractTasksModel::ScreenGeometry) {
             // TODO: Nothing needs this for now and it would add complexity to
             // make it a list; skip it until needed.
             return QVariant();

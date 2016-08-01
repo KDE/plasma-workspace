@@ -19,6 +19,7 @@ License along with this library.  If not, see <http://www.gnu.org/licenses/>.
 *********************************************************************/
 
 #include "waylandtasksmodel.h"
+#include "tasktools.h"
 
 #include <KActivities/ResourceInstance>
 #include <KRun>
@@ -221,6 +222,10 @@ void WaylandTasksModel::Private::addWindow(KWayland::Client::PlasmaWindow *windo
         [window, this] { this->dataChanged(window, IsOnAllVirtualDesktops); }
     );
 
+    QObject::connect(window, &KWayland::Client::PlasmaWindow::geometryChanged, q,
+        [window, this] { this->dataChanged(window, QVector<int>{Geometry, ScreenGeometry}); }
+    );
+
     QObject::connect(window, &KWayland::Client::PlasmaWindow::demandsAttentionChanged, q,
         [window, this] { this->dataChanged(window, IsDemandingAttention); }
     );
@@ -315,8 +320,10 @@ QVariant WaylandTasksModel::data(const QModelIndex &index, int role) const
         return window->virtualDesktop();
     } else if (role == IsOnAllVirtualDesktops) {
         return window->isOnAllDesktops();
-    } else if (role == Screen) {
-        // FIXME Implement.
+    } else if (role == Geometry) {
+        return window->geometry();
+    } else if (role == ScreenGeometry) {
+        return screenGeometry(window->geometry().center());
     } else if (role == Activities) {
         // FIXME Implement.
     } else if (role == IsDemandingAttention) {

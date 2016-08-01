@@ -79,7 +79,8 @@ public:
         IsVirtualDesktopChangeable, /**< requestVirtualDesktop (see below) available. */
         VirtualDesktop,   /**< Virtual desktop for the task (i.e. window). */
         IsOnAllVirtualDesktops, /**< Task is on all virtual desktops. */
-        Screen,           /**< Screen for the task (i.e. window). */
+        Geometry,         /**< The task's geometry (i.e. the window's). */
+        ScreenGeometry,   /**< Screen geometry for the task (i.e. the window's screen). */
         Activities,       /**< Activities for the task (i.e. window). */
         IsDemandingAttention, /**< Task is demanding attention. */
         SkipTaskbar       /**< Task desires not to be shown in a user interface. */

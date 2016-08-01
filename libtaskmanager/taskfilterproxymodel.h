@@ -22,6 +22,7 @@ License along with this library.  If not, see <http://www.gnu.org/licenses/>.
 #define TASKFILTERPROXYMODEL_H
 
 #include <QSortFilterProxyModel>
+#include <QRect>
 
 #include "abstracttasksmodeliface.h"
 
@@ -45,7 +46,7 @@ class TASKMANAGER_EXPORT TaskFilterProxyModel : public QSortFilterProxyModel, pu
     Q_OBJECT
 
     Q_PROPERTY(int virtualDesktop READ virtualDesktop WRITE setVirtualDesktop NOTIFY virtualDesktopChanged)
-    Q_PROPERTY(int screen READ screen WRITE setScreen NOTIFY screenChanged)
+    Q_PROPERTY(QRect screenGeomeyry READ screenGeometry WRITE setScreenGeometry NOTIFY screenGeometryChanged)
     Q_PROPERTY(QString activity READ activity WRITE setActivity NOTIFY activityChanged)
 
     Q_PROPERTY(bool filterByVirtualDesktop READ filterByVirtualDesktop WRITE setFilterByVirtualDesktop NOTIFY filterByVirtualDesktopChanged)
@@ -82,23 +83,23 @@ public:
     void setVirtualDesktop(uint virtualDesktop);
 
     /**
-     * The number of the screen used in filtering by screen. Usually
-     * set to the number of the current screen. Defaults to @c -1.
+     * The geometry of the screen used in filtering by screen. Defaults
+     * to a null QRect.
      *
-     * @see setScreen
-     * @returns the number of the screen used in filtering.
+     * @see setGeometryScreen
+     * @returns the geometry of the screen used in filtering.
      **/
-    int screen() const;
+    QRect screenGeometry() const;
 
     /**
-     * Set the number of the screen to use in filtering by screen.
+     * Set the geometry of the screen to use in filtering by screen.
      *
-     * If set to @c -1, filtering by screen is disabled.
+     * If set to an invalid QRect, filtering by screen is disabled.
      *
-     * @see screen
-     * @param screen A screen number.
+     * @see screenGeometry
+     * @param geometry A screen geometry.
      **/
-    void setScreen(int screen);
+    void setScreenGeometry(const QRect &geometry);
 
     /**
      * The id of the activity used in filtering by activity. Usually
@@ -353,7 +354,7 @@ public:
 
 Q_SIGNALS:
     void virtualDesktopChanged() const;
-    void screenChanged() const;
+    void screenGeometryChanged() const;
     void activityChanged() const;
     void filterByVirtualDesktopChanged() const;
     void filterByScreenChanged() const;
