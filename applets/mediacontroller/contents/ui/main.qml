@@ -128,11 +128,19 @@ Item {
         source: root.state === "paused" ? "media-playback-pause" : "media-playback-start"
         MouseArea {
             anchors.fill: parent
-            acceptedButtons: Qt.LeftButton | Qt.MiddleButton
+            acceptedButtons: Qt.LeftButton | Qt.MiddleButton | Qt.BackButton | Qt.ForwardButton
             onClicked: {
-                if (mouse.button == Qt.MiddleButton) {
+                switch (mouse.button) {
+                case Qt.MiddleButton:
                     root.action_playPause()
-                } else {
+                    break
+                case Qt.BackButton:
+                    root.action_previous()
+                    break
+                case Qt.ForwardButton:
+                    root.action_next()
+                    break
+                default:
                     plasmoid.expanded = !plasmoid.expanded
                 }
             }
