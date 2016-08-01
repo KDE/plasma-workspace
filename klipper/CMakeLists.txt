@@ -65,7 +65,7 @@ install(TARGETS kdeinit_klipper ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
 install(TARGETS klipper         ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
 
 install(PROGRAMS org.kde.klipper.desktop DESTINATION ${KDE_INSTALL_APPDIR})
-install(PROGRAMS org.kde.klipper.desktop DESTINATION ${KDE_INSTALL_AUTOSTARTDIR})
+install(PROGRAMS klipper.desktop DESTINATION ${KDE_INSTALL_AUTOSTARTDIR})
 
 # Plasma Data Engine
 set(plasma_engine_clipboard_SRCS ${libklipper_common_SRCS} clipboardengine.cpp clipboardservice.cpp clipboardjob.cpp)
