@@ -250,17 +250,6 @@ Item {
         }
     }
 
-    PlasmaComponents.Button {
-        anchors {
-            right: titleColumn.right
-            bottom: titleColumn.bottom
-            bottomMargin: seekSlider.height // Cannot anchor around in a column/row, and being lazy
-        }
-        text: i18nc("Bring the window of player %1 to the front", "Open %1", mpris2Source.currentData.Identity)
-        visible: !root.noPlayer && root.canRaise
-        onClicked: root.action_open()
-    }
-
     Item {
         anchors.bottom: parent.bottom
         width: parent.width
