@@ -126,8 +126,12 @@ Item {
 
     Plasmoid.compactRepresentation: PlasmaCore.IconItem {
         source: root.state === "paused" ? "media-playback-pause" : "media-playback-start"
+        active: compactMouse.containsMouse
+
         MouseArea {
+            id: compactMouse
             anchors.fill: parent
+            hoverEnabled: true
             acceptedButtons: Qt.LeftButton | Qt.MiddleButton | Qt.BackButton | Qt.ForwardButton
             onClicked: {
                 switch (mouse.button) {
