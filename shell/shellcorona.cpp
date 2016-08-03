@@ -547,6 +547,9 @@ void ShellCorona::load()
         }
     }
 
+    //NOTE: this is needed in case loadLayout() did *not* call loadDefaultLayout()
+    //it needs to be after of loadLayout() as it would always create new
+    //containments on each startup otherwise
     for (QScreen* screen : qGuiApp->screens()) {
         addOutput(screen);
     }
@@ -732,7 +735,8 @@ void ShellCorona::requestApplicationConfigSync()
 void ShellCorona::loadDefaultLayout()
 {
     //NOTE: Is important the containments already exist for each screen
-    // at the moment of the script execution
+    // at the moment of the script execution,the same loop in :load()
+    // is executed too late
     for (QScreen* screen : qGuiApp->screens()) {
         addOutput(screen);
     }
