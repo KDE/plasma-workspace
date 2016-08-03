@@ -29,6 +29,8 @@
 
 #include <QtDBus/QtDBus>
 
+#include <KWindowSystem>
+
 namespace Xcb {
     Xcb::Atoms* atoms;
 }
@@ -41,7 +43,7 @@ int main(int argc, char ** argv)
 
     QGuiApplication app(argc, argv);
 
-    if (app.platformName() != QLatin1String("xcb")) {
+    if (!KWindowSystem::isPlatformX11()) {
         qFatal("xembed-sni-proxy is only useful XCB. Aborting");
     }
 

@@ -25,6 +25,7 @@ License along with this library.  If not, see <http://www.gnu.org/licenses/>.
 #include <KService>
 #include <KStartupInfo>
 #include <KSycoca>
+#include <KWindowSystem>
 
 #include <config-X11.h>
 
@@ -288,7 +289,7 @@ void LauncherTasksModel::requestNewInstance(const QModelIndex &index)
     quint32 timeStamp = 0;
 
 #if HAVE_X11
-        if (QX11Info::isPlatformX11()) {
+        if (KWindowSystem::isPlatformX11()) {
             timeStamp = QX11Info::appUserTime();
         }
 #endif

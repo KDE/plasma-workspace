@@ -23,6 +23,7 @@
 
 #include <config-plasma.h>
 
+#include <KWindowSystem>
 #if HAVE_X11
 #include <QX11Info>
 #include <X11/Xatom.h>
@@ -47,7 +48,7 @@ public:
 #if HAVE_X11
         ,_connection( 0x0 ),
         _gc( 0x0 )
-        , m_isX11(QX11Info::isPlatformX11())
+        , m_isX11(KWindowSystem::isPlatformX11())
 #endif
     {
         setupWaylandIntegration();
@@ -680,7 +681,7 @@ bool PanelShadows::enabled() const
 
 void PanelShadows::Private::setupWaylandIntegration()
 {
-    if (!QGuiApplication::platformName().startsWith(QLatin1String("wayland"), Qt::CaseInsensitive)) {
+    if (!KWindowSystem::isPlatformWayland()) {
         return;
     }
     using namespace KWayland::Client;

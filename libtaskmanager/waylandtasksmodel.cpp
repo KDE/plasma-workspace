@@ -28,6 +28,7 @@ License along with this library.  If not, see <http://www.gnu.org/licenses/>.
 #include <KWayland/Client/plasmawindowmanagement.h>
 #include <KWayland/Client/registry.h>
 #include <KWayland/Client/surface.h>
+#include <KWindowSystem>
 
 #include <QGuiApplication>
 #include <QQuickItem>
@@ -63,7 +64,7 @@ WaylandTasksModel::Private::Private(WaylandTasksModel *q)
 
 void WaylandTasksModel::Private::initWayland()
 {
-    if (!QGuiApplication::platformName().startsWith(QLatin1String("wayland"), Qt::CaseInsensitive)) {
+    if (!KWindowSystem::isPlatformWayland()) {
         return;
     }
 

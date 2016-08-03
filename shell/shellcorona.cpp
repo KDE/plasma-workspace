@@ -217,8 +217,7 @@ bool ShellCorona::eventFilter(QObject *watched, QEvent *event)
         watched->inherits("PlasmaQuick::Dialog")) {
         QPlatformSurfaceEvent *se = static_cast<QPlatformSurfaceEvent *>(event);
         if (se->surfaceEventType() == QPlatformSurfaceEvent::SurfaceCreated) {
-            if (QGuiApplication::platformName().startsWith(
-                QLatin1String("wayland"), Qt::CaseInsensitive)) {
+            if (KWindowSystem::isPlatformWayland()) {
                 WaylandDialogFilter::install(qobject_cast<QWindow *>(watched), this);
             }
         }
@@ -1581,7 +1580,7 @@ void ShellCorona::showOpenGLNotCompatibleWarning()
 
 void ShellCorona::setupWaylandIntegration()
 {
-    if (!QGuiApplication::platformName().startsWith(QLatin1String("wayland"), Qt::CaseInsensitive)) {
+    if (!KWindowSystem::isPlatformWayland()) {
         return;
     }
     using namespace KWayland::Client;

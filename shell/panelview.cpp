@@ -567,7 +567,7 @@ void PanelView::restoreAutoHide()
 void PanelView::setAutoHideEnabled(bool enabled)
 {
 #if HAVE_X11
-    if (QX11Info::isPlatformX11()) {
+    if (KWindowSystem::isPlatformX11()) {
         xcb_connection_t *c = QX11Info::connection();
 
         const QByteArray effectName = QByteArrayLiteral("_KDE_NET_WM_SCREEN_EDGE_SHOW");

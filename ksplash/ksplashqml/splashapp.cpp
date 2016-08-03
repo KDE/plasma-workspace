@@ -72,7 +72,7 @@ SplashApp::SplashApp(int &argc, char ** argv)
 
     setStage(QStringLiteral("initial"));
 
-    if (QGuiApplication::platformName().startsWith(QLatin1String("wayland"), Qt::CaseInsensitive)) {
+    if (KWindowSystem::isPlatformWayland()) {
         setStage(QStringLiteral("wm"));
     }
 
