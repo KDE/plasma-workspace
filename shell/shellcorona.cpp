@@ -345,14 +345,15 @@ QString dumpconfigGroupJS(const KConfigGroup &rootGroup, const QString &prefix)
             script += "\n";
             //TODO: this is conditional if applet or containment
             if (hierarchy.length() > 0) {
-                script += prefix + ".currentConfigGroup = Array(\"" + hierarchy.join("\", \"") + "\");\n";
+                 script += QStringLiteral("    //all config values in the \"%1\" group\n").arg(hierarchy.last());
+                script += prefix + QStringLiteral(".currentConfigGroup = Array(\"") + hierarchy.join("\", \"") + "\");\n";
             }
 
             QMap<QString, QString>::const_iterator i;
             QMap<QString, QString> map = cg.entryMap();
             for (i = map.constBegin(); i != map.constEnd(); ++i) {
                 //some blacklisted keys we don't want to save
-                if (i.key() != QStringLiteral("activityId")) {
+                if (i.key() != QStringLiteral("activityId") || i.key() != QStringLiteral("ItemsGeometries")) {
                     script += prefix + ".writeConfig(\"" + i.key() + "\", \"" + i.value() + "\");\n";
                 }
             }
