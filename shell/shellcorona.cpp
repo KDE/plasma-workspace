@@ -530,6 +530,13 @@ void ShellCorona::requestApplicationConfigSync()
 
 void ShellCorona::loadDefaultLayout()
 {
+    //NOTE: Is important the containments already exist for each screen
+    // at the moment of the script execution,the same loop in :load()
+    // is executed too late
+    for (QScreen* screen : qGuiApp->screens()) {
+        addOutput(screen);
+    }
+
     QString script = ShellManager::s_testModeLayout;
 
     if (script.isEmpty()) {
