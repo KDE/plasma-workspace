@@ -57,6 +57,7 @@ Rectangle {
             height: root.height / 3
         }
         Image {
+            id: busyIndicator
             anchors.horizontalCenter: parent.horizontalCenter
             source: "images/busywidget.svgz"
             sourceSize.height: units.gridUnit * 3
