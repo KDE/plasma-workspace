@@ -20,6 +20,7 @@
 #include "containment.h"
 
 #include <QAction>
+#include <QQuickItem>
 
 #include <klocalizedstring.h>
 #include <kactioncollection.h>
@@ -184,11 +185,45 @@ QScriptValue Containment::addWidget(QScriptContext *context, QScriptEngine *engi
     QScriptValue v = context->argument(0);
     Plasma::Applet *applet = 0;
     int id = -1;
-    if (context->argumentCount() > 1 && context->argument(1).isNumber()) {
-        id = context->argument(1).toInteger();
+    QRect geometry(-1, -1, -1, -1);
+    if (context->argumentCount() > 1) {
+        //The user provided an applet id as parameter
+        if (context->argument(1).isNumber()) {
+            id = context->argument(1).toInteger();
+
+        //The user provided a geometry as parameter
+        } else if (context->argument(1).isObject()) {
+            //Try to reconstruct a rectangle from the object hat has been passed
+            //It's expected a js object such as
+            //addWidget("org.kde.plasma.analogclock", {"x": 0, "y": 100, "width": 300, "height": 400});
+            const QVariantMap geom = context->argument(1).toVariant().value<QVariantMap>();
+            geometry = QRect(geom.value(QStringLiteral("x")).toInt(), geom.value(QStringLiteral("y")).toInt(),
+                        geom.value(QStringLiteral("width")).toInt(), geom.value(QStringLiteral("height")).toInt());
+        }
     }
     if (v.isString()) {
+        //A position has been supplied: search for the containment's graphics object
+        QQuickItem *containmentItem = nullptr;
+
+        if (geometry.x() >= 0 && geometry.y() >= 0) {
+            containmentItem = c->d->containment.data()->property("_plasma_graphicObject").value<QQuickItem *>();
+            Plasma::Applet *applet = nullptr;
+            if (containmentItem) {
+                QMetaObject::invokeMethod(containmentItem , "createApplet", Qt::DirectConnection, Q_RETURN_ARG(Plasma::Applet *, applet), Q_ARG(QString, v.toString()), Q_ARG(QVariantList, QVariantList()), Q_ARG(QRect, geometry));
+            }
+            if (applet) {
+                ScriptEngine *env = ScriptEngine::envFor(engine);
+                return env->wrap(applet);
+            }
+        }
+
+        //Case in which either:
+        // * a geometry wasn't provided
+        // * containmentItem wasn't found
         if (id == -1) {
+            if (geometry.x() >= 0 && geometry.y() >= 0) {
+                
+            }
             applet = c->d->containment.data()->createApplet(v.toString());
         } else {
             applet = Plasma::PluginLoader::self()->loadApplet(v.toString(), id, QVariantList());

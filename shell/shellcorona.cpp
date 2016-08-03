@@ -389,12 +389,32 @@ QString ShellCorona::dumpCurrentLayoutJS()
         KConfigGroup contConfig = cont->config();
         script += "    //Containment configuration\n";
         script += dumpconfigGroupJS(contConfig, QStringLiteral("    cont"));
+        
+        //try to parse the items geometries
+        KConfigGroup genericConf(&contConfig, QStringLiteral("General"));
+        const QStringList appletsGeomStrings = genericConf.readEntry(QStringLiteral("ItemsGeometries"), QString()).split(QChar(';'));
+
+        QHash<QString, QRect> appletGeometries;
+        for (const QString encoded : appletsGeomStrings) {
+            const QStringList keyValue = encoded.split(QChar(':'));
+            if (keyValue.length() != 2) {
+                continue;
+            }
+            QStringList rectPieces = keyValue.last().split(QChar(','));
+            if (rectPieces.length() != 5) {
+                continue;
+            }
+            QRect rect(rectPieces[0].toInt(), rectPieces[1].toInt(),
+                       rectPieces[2].toInt(), rectPieces[3].toInt());
+            appletGeometries[keyValue.first()] = rect;
+        }
 
         script += "\n\n";
         foreach (Plasma::Applet *applet, cont->applets()) {
+            const QRect geometry = appletGeometries.value(QStringLiteral("Applet-") % QString::number(applet->id()));
             script += "    {\n";
             script += "        //Configuration of applet " + applet->title() + "\n";
-            script += "        var applet = cont.addWidget(\"" + applet->pluginInfo().pluginName() + "\", " + QString::number(applet->id()) + ");\n";
+            script += "        var applet = cont.addWidget(\"" + applet->pluginInfo().pluginName() + "\", {\"x\": " + QString::number(geometry.x()) + ",\"y\"; " + QString::number(geometry.y()) + ",\"width\": " + QString::number(geometry.width()) + ", \"height\": " + QString::number(geometry.height()) + "});\n";
 
             KConfigGroup appletConfig = applet->config();
             script += dumpconfigGroupJS(appletConfig, QStringLiteral("        applet"));
