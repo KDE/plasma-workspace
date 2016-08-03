@@ -28,7 +28,7 @@ import org.kde.plasma.extras 2.0 as PlasmaExtras
 Item {
     id: root
 
-    property var currentMetadata: mpris2Source.data[mpris2Source.current] ? mpris2Source.data[mpris2Source.current].Metadata : undefined
+    property var currentMetadata: mpris2Source.currentData ? mpris2Source.currentData.Metadata : undefined
     property string track: {
         if (!currentMetadata) {
             return ""
@@ -55,8 +55,12 @@ Item {
 
     property bool noPlayer: mpris2Source.sources.length <= 1
 
-    readonly property bool canRaise: !root.noPlayer && mpris2Source.data[mpris2Source.current].CanRaise
-    readonly property bool canQuit: !root.noPlayer && mpris2Source.data[mpris2Source.current].CanQuit
+    readonly property bool canRaise: !root.noPlayer && mpris2Source.currentData.CanRaise
+    readonly property bool canQuit: !root.noPlayer && mpris2Source.currentData.CanQuit
+
+    readonly property bool canControl: !root.noPlayer && mpris2Source.currentData.CanControl
+    readonly property bool canGoPrevious: canControl && mpris2Source.currentData.CanGoPrevious
+    readonly property bool canGoNext: canControl && mpris2Source.currentData.CanGoNext
 
     Plasmoid.switchWidth: units.gridUnit * 14
     Plasmoid.switchHeight: units.gridUnit * 10
@@ -67,10 +71,32 @@ Item {
     Plasmoid.onContextualActionsAboutToShow: {
         plasmoid.clearActions()
         if (canRaise) {
-            plasmoid.setAction("openplayer", i18nc("Bring the window of player %1 to the front", "Open %1", mpris2Source.data[mpris2Source.current].Identity))
+            plasmoid.setAction("open", i18nc("Open player window or bring it to the front if already open", "Open"))
         }
+
+        if (canControl) {
+            plasmoid.setAction("previous", i18nc("Play previous track", "Previous Track"), "media-skip-backward");
+            plasmoid.action("previous").enabled = Qt.binding(function() {
+                return root.canGoPrevious
+            })
+
+            if (root.state == "playing") {
+                plasmoid.setAction("playPause", i18nc("Pause playback", "Pause"), "media-playback-pause")
+            } else {
+                plasmoid.setAction("playPause", i18nc("Start playback", "Play"), "media-playback-start")
+            }
+
+            plasmoid.setAction("next", i18nc("Play next track", "Next Track"), "media-skip-forward")
+            plasmoid.action("next").enabled = Qt.binding(function() {
+                return root.canGoNext
+            })
+
+            plasmoid.setAction("stop", i18nc("Stop playback", "Stop"), "media-playback-stop")
+        }
+
         if (canQuit) {
-            plasmoid.setAction("quitplayer", i18nc("Quit player", "Quit"), "application-exit")
+            plasmoid.setActionSeparator("quitseparator");
+            plasmoid.setAction("quit", i18nc("Quit player", "Quit"), "application-exit")
         }
     }
 
@@ -100,13 +126,25 @@ Item {
 
     Plasmoid.compactRepresentation: PlasmaCore.IconItem {
         source: root.state === "paused" ? "media-playback-pause" : "media-playback-start"
+        active: compactMouse.containsMouse
+
         MouseArea {
+            id: compactMouse
             anchors.fill: parent
-            acceptedButtons: Qt.LeftButton | Qt.MiddleButton
+            hoverEnabled: true
+            acceptedButtons: Qt.LeftButton | Qt.MiddleButton | Qt.BackButton | Qt.ForwardButton
             onClicked: {
-                if (mouse.button == Qt.MiddleButton) {
-                    root.playPause()
-                } else {
+                switch (mouse.button) {
+                case Qt.MiddleButton:
+                    root.action_playPause()
+                    break
+                case Qt.BackButton:
+                    root.action_previous()
+                    break
+                case Qt.ForwardButton:
+                    root.action_next()
+                    break
+                default:
                     plasmoid.expanded = !plasmoid.expanded
                 }
             }
@@ -119,6 +157,8 @@ Item {
         readonly property string multiplexSource: "@multiplex"
         property string current: multiplexSource
 
+        readonly property var currentData: data[current]
+
         engine: "mpris2"
         connectedSources: current
 
@@ -130,26 +170,34 @@ Item {
         }
     }
 
-    function action_openplayer() {
+    function action_open() {
         serviceOp(mpris2Source.current, "Raise");
     }
-    function action_quitplayer() {
+    function action_quit() {
         serviceOp(mpris2Source.current, "Quit");
     }
 
-    function playPause() {
+    function action_play() {
+        serviceOp(mpris2Source.current, "Play");
+    }
+
+    function action_pause() {
+        serviceOp(mpris2Source.current, "Pause");
+    }
+
+    function action_playPause() {
         serviceOp(mpris2Source.current, "PlayPause");
     }
 
-    function previous() {
+    function action_previous() {
         serviceOp(mpris2Source.current, "Previous");
     }
 
-    function next() {
+    function action_next() {
         serviceOp(mpris2Source.current, "Next");
     }
 
-    function stop() {
+    function action_stop() {
         serviceOp(mpris2Source.current, "Stop");
     }
 
@@ -162,7 +210,7 @@ Item {
     states: [
         State {
             name: "playing"
-            when: !root.noPlayer && mpris2Source.data[mpris2Source.current].PlaybackStatus == "Playing"
+            when: !root.noPlayer && mpris2Source.currentData.PlaybackStatus === "Playing"
 
             PropertyChanges {
                 target: plasmoid
@@ -173,7 +221,7 @@ Item {
         },
         State {
             name: "paused"
-            when: !root.noPlayer && mpris2Source.data[mpris2Source.current].PlaybackStatus == "Paused"
+            when: !root.noPlayer && mpris2Source.currentData.PlaybackStatus === "Paused"
 
             PropertyChanges {
                 target: plasmoid

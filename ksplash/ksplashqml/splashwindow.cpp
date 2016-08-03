@@ -18,6 +18,7 @@
  */
 
 #include "splashwindow.h"
+#include "splashapp.h"
 
 #include <QGuiApplication>
 #include <QQmlContext>
@@ -32,6 +33,10 @@
 
 #include <KPackage/Package>
 #include <KPackage/PackageLoader>
+
+#include <KWayland/Client/surface.h>
+#include <KWayland/Client/plasmashell.h>
+#include <KWindowSystem>
 
 SplashWindow::SplashWindow(bool testing, bool window)
     : KQuickAddons::QuickViewSharedEngine(),
@@ -49,16 +54,17 @@ SplashWindow::SplashWindow(bool testing, bool window)
     }
 
     if (!m_testing && !m_window) {
-        if (QGuiApplication::platformName().compare(QLatin1String("xcb"), Qt::CaseInsensitive) == 0) {
+        if (KWindowSystem::isPlatformX11()) {
             // X11 specific hint only on X11
             setFlags(Qt::BypassWindowManagerHint);
-        } else {
+        } else if (!KWindowSystem::isPlatformWayland()) {
             // on other platforms go fullscreen
+            // on Wayland we cannot go fullscreen due to QTBUG 54883
             setWindowState(Qt::WindowFullScreen);
         }
     }
 
-    if (m_testing && !m_window) {
+    if (m_testing && !m_window && !KWindowSystem::isPlatformWayland()) {
         setWindowState(Qt::WindowFullScreen);
     }
 
@@ -72,6 +78,24 @@ void SplashWindow::setStage(int stage)
     m_stage = stage;
 
     rootObject()->setProperty("stage", stage);
+}
+
+bool SplashWindow::event(QEvent *e)
+{
+    if (e->type() == QEvent::PlatformSurface) {
+        if (auto pe = dynamic_cast<QPlatformSurfaceEvent*>(e)) {
+            switch (pe->surfaceEventType()) {
+            case QPlatformSurfaceEvent::SurfaceCreated:
+                setupWaylandIntegration();
+                break;
+            case QPlatformSurfaceEvent::SurfaceAboutToBeDestroyed:
+                delete m_shellSurface;
+                m_shellSurface = nullptr;
+                break;
+            }
+        }
+    }
+    return KQuickAddons::QuickViewSharedEngine::event(e);
 }
 
 void SplashWindow::keyPressEvent(QKeyEvent *event)
@@ -110,5 +134,33 @@ void SplashWindow::setGeometry(const QRect& rect)
         }
 
         setSource(QUrl::fromLocalFile(package.filePath("splashmainscript")));
+    }
+
+    if (m_shellSurface) {
+        m_shellSurface->setPosition(geometry().topLeft());
+    }
+}
+
+void SplashWindow::setupWaylandIntegration()
+{
+    if (m_shellSurface) {
+        // already setup
+        return;
+    }
+    if (SplashApp *a = qobject_cast<SplashApp*>(qApp)) {
+        using namespace KWayland::Client;
+        PlasmaShell *interface = a->waylandPlasmaShellInterface();
+        if (!interface) {
+            return;
+        }
+        Surface *s = Surface::fromWindow(this);
+        if (!s) {
+            return;
+        }
+        m_shellSurface = interface->createSurface(s, this);
+        // Use OSD to make it go above all other windows
+        // that's the closest we have to the X11 unmanged layer we have on Wayland
+        m_shellSurface->setRole(PlasmaShellSurface::Role::OnScreenDisplay);
+        m_shellSurface->setPosition(geometry().topLeft());
     }
 }

@@ -30,6 +30,11 @@
 #include <QDebug>
 #include <QCommandLineParser>
 
+#include <KWindowSystem>
+#include <KWayland/Client/connection_thread.h>
+#include <KWayland/Client/registry.h>
+#include <KWayland/Client/plasmashell.h>
+
 #define TEST_STEP_INTERVAL 2000
 
 /**
@@ -59,6 +64,8 @@ SplashApp::SplashApp(int &argc, char ** argv)
     parser.process(*this);
     m_testing = parser.isSet(QStringLiteral("test"));
     m_window = parser.isSet(QStringLiteral("window"));
+
+    setupWaylandIntegration();
 
     foreach(QScreen* screen, screens())
         adoptScreen(screen);
@@ -142,4 +149,25 @@ void SplashApp::adoptScreen(QScreen* screen)
         m_windows.removeAll(w);
         w->deleteLater();
     });
+}
+
+void SplashApp::setupWaylandIntegration()
+{
+    if (!KWindowSystem::isPlatformWayland()) {
+        return;
+    }
+    using namespace KWayland::Client;
+    ConnectionThread *connection = ConnectionThread::fromApplication(this);
+    if (!connection) {
+        return;
+    }
+    Registry *registry = new Registry(this);
+    registry->create(connection);
+    connect(registry, &Registry::plasmaShellAnnounced, this,
+        [this, registry] (quint32 name, quint32 version) {
+            m_waylandPlasmaShell = registry->createPlasmaShell(name, version, this);
+        }
+    );
+    registry->setup();
+    connection->roundtrip();
 }
