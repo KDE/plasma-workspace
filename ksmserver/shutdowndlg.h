@@ -41,6 +41,15 @@ namespace Plasma
     class FrameSvg;
 }
 
+namespace KWayland
+{
+namespace Client
+{
+class PlasmaShell;
+class PlasmaShellSurface;
+}
+}
+
 class QQuickView;
 
 // The confirmation dialog
@@ -49,7 +58,7 @@ class KSMShutdownDlg : public QQuickView
     Q_OBJECT
 
 public:
-    KSMShutdownDlg( QWindow* parent, bool maysd, bool choose, KWorkSpace::ShutdownType sdtype, const QString& theme );
+    KSMShutdownDlg( QWindow* parent, bool maysd, bool choose, KWorkSpace::ShutdownType sdtype, const QString& theme, KWayland::Client::PlasmaShell *plasmaShell = nullptr );
 
     void init();
     bool result() const;
@@ -74,14 +83,18 @@ Q_SIGNALS:
 
 protected:
     void resizeEvent(QResizeEvent *e) Q_DECL_OVERRIDE;
+    bool event(QEvent *e) override;
 
 private:
     void rePosition();
+    void setupWaylandIntegration();
     KWorkSpace::ShutdownType m_shutdownType;
     QString m_bootOption;
     QStringList rebootOptions;
     bool m_result : 1;
     QString m_theme;
+    KWayland::Client::PlasmaShell *m_waylandPlasmaShell;
+    KWayland::Client::PlasmaShellSurface *m_shellSurface = nullptr;
 };
 
 #endif

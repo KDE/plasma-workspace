@@ -27,6 +27,12 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #include <QScreen>
 #include "../shutdowndlg.h"
 
+#include <KWindowSystem>
+
+#include <KWayland/Client/connection_thread.h>
+#include <KWayland/Client/registry.h>
+#include <KWayland/Client/plasmashell.h>
+
 #include <unistd.h>
 
 class Greeter : public QObject
@@ -43,12 +49,14 @@ public:
 private:
     void adoptScreen(QScreen *screen);
     void rejected();
+    void setupWaylandIntegration();
 
     int m_fd;
     bool m_shutdownAllowed;
     bool m_choose;
     KWorkSpace::ShutdownType m_shutdownType;
     QVector<KSMShutdownDlg *> m_dialogs;
+    KWayland::Client::PlasmaShell *m_waylandPlasmaShell;
 };
 
 Greeter::Greeter(int fd, bool shutdownAllowed, bool choose, KWorkSpace::ShutdownType type)
@@ -57,6 +65,7 @@ Greeter::Greeter(int fd, bool shutdownAllowed, bool choose, KWorkSpace::Shutdown
     , m_shutdownAllowed(shutdownAllowed)
     , m_choose(choose)
     , m_shutdownType(type)
+    , m_waylandPlasmaShell(nullptr)
 {
 }
 
@@ -65,8 +74,30 @@ Greeter::~Greeter()
     qDeleteAll(m_dialogs);
 }
 
+void Greeter::setupWaylandIntegration()
+{
+    if (!KWindowSystem::isPlatformWayland()) {
+        return;
+    }
+    using namespace KWayland::Client;
+    ConnectionThread *connection = ConnectionThread::fromApplication(this);
+    if (!connection) {
+        return;
+    }
+    Registry *registry = new Registry(this);
+    registry->create(connection);
+    connect(registry, &Registry::plasmaShellAnnounced, this,
+        [this, registry] (quint32 name, quint32 version) {
+            m_waylandPlasmaShell = registry->createPlasmaShell(name, version, this);
+        }
+    );
+    registry->setup();
+    connection->roundtrip();
+}
+
 void Greeter::init()
 {
+    setupWaylandIntegration();
     foreach (QScreen *screen, qApp->screens()) {
         adoptScreen(screen);
     }
@@ -76,7 +107,7 @@ void Greeter::init()
 void Greeter::adoptScreen(QScreen* screen)
 {
     // TODO: last argument is the theme, maybe add command line option for it?
-    KSMShutdownDlg *w = new KSMShutdownDlg(nullptr, m_shutdownAllowed, m_choose, m_shutdownType, QString());
+    KSMShutdownDlg *w = new KSMShutdownDlg(nullptr, m_shutdownAllowed, m_choose, m_shutdownType, QString(), m_waylandPlasmaShell);
     w->installEventFilter(this);
     m_dialogs << w;
 

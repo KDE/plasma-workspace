@@ -62,19 +62,24 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 #include <X11/Xutil.h>
 #include <X11/Xatom.h>
+#include <fixx11h.h>
 
 #include <kdisplaymanager.h>
 
 #include <config-workspace.h>
 
+#include <KWayland/Client/surface.h>
+#include <KWayland/Client/plasmashell.h>
+
 Q_DECLARE_METATYPE(Solid::PowerManagement::SleepState)
 
 KSMShutdownDlg::KSMShutdownDlg( QWindow* parent,
                                 bool maysd, bool choose, KWorkSpace::ShutdownType sdtype,
-                                const QString& theme)
+                                const QString& theme, KWayland::Client::PlasmaShell *plasmaShell)
   : QQuickView(parent),
     m_result(false),
-    m_theme(theme)
+    m_theme(theme),
+    m_waylandPlasmaShell(plasmaShell)
     // this is a WType_Popup on purpose. Do not change that! Not
     // having a popup here has severe side effects.
 {
@@ -210,10 +215,51 @@ void KSMShutdownDlg::resizeEvent(QResizeEvent *e)
     rePosition();
 }
 
+bool KSMShutdownDlg::event(QEvent *e)
+{
+    if (e->type() == QEvent::PlatformSurface) {
+        if (auto pe = dynamic_cast<QPlatformSurfaceEvent*>(e)) {
+            switch (pe->surfaceEventType()) {
+            case QPlatformSurfaceEvent::SurfaceCreated:
+                setupWaylandIntegration();
+                break;
+            case QPlatformSurfaceEvent::SurfaceAboutToBeDestroyed:
+                delete m_shellSurface;
+                m_shellSurface = nullptr;
+                break;
+            }
+        }
+    }
+    return QQuickView::event(e);
+}
+
+void KSMShutdownDlg::setupWaylandIntegration()
+{
+    if (m_shellSurface) {
+        // already setup
+        return;
+    }
+    using namespace KWayland::Client;
+    if (!m_waylandPlasmaShell) {
+        return;
+    }
+    Surface *s = Surface::fromWindow(this);
+    if (!s) {
+        return;
+    }
+    m_shellSurface = m_waylandPlasmaShell->createSurface(s, this);
+    // TODO: set a proper window type to indicate to KWin that this is the logout dialog
+    // maybe we need a dedicated type for it?
+    m_shellSurface->setPosition(geometry().topLeft());
+}
+
 void KSMShutdownDlg::rePosition()
 {
     setPosition(screen()->geometry().center().x() - width() / 2,
                 screen()->geometry().center().y() - height() / 2);
+    if (m_shellSurface) {
+        m_shellSurface->setPosition(geometry().topLeft());
+    }
 }
 
 void KSMShutdownDlg::slotLogout()

@@ -10,6 +10,7 @@ target_link_libraries(ksmserver-logout-greeter
     KF5::I18n
     KF5::Package
     KF5::KDELibs4Support # Solid/PowerManagement
+    KF5::WaylandClient
     ${X11_LIBRARIES}
 )
 install(TARGETS ksmserver-logout-greeter DESTINATION ${KDE_INSTALL_LIBEXECDIR})
