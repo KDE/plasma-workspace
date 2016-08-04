@@ -61,29 +61,29 @@ void ScreenPoolTest::cleanupTestCase()
 
 void ScreenPoolTest::testScreenInsertion()
 {
-    m_screenPool->insertScreenMapping(0, QStringLiteral("DVI-0"));
+    m_screenPool->insertScreenMapping(0, QStringLiteral("FAKE-0"));
     QCOMPARE(m_screenPool->knownIds().count(), 1);
-    QCOMPARE(m_screenPool->connector(0), QStringLiteral("DVI-0"));
-    QCOMPARE(m_screenPool->id(QStringLiteral("DVI-0")), 0);
+    QCOMPARE(m_screenPool->connector(0), QStringLiteral("FAKE-0"));
+    QCOMPARE(m_screenPool->id(QStringLiteral("FAKE-0")), 0);
 
-    m_screenPool->insertScreenMapping(1, QStringLiteral("VGA-0"));
+    m_screenPool->insertScreenMapping(1, QStringLiteral("FAKE-1"));
     QCOMPARE(m_screenPool->knownIds().count(), 2);
-    QCOMPARE(m_screenPool->connector(1), QStringLiteral("VGA-0"));
-    QCOMPARE(m_screenPool->id(QStringLiteral("VGA-0")), 1);
+    QCOMPARE(m_screenPool->connector(1), QStringLiteral("FAKE-1"));
+    QCOMPARE(m_screenPool->id(QStringLiteral("FAKE-1")), 1);
 }
 
 void ScreenPoolTest::testPrimarySwap()
 {
-    QCOMPARE(m_screenPool->primaryConnector(), QStringLiteral("DVI-0"));
-    m_screenPool->setPrimaryConnector(QStringLiteral("VGA-0"));
+    QCOMPARE(m_screenPool->primaryConnector(), QStringLiteral("FAKE-0"));
+    m_screenPool->setPrimaryConnector(QStringLiteral("FAKE-1"));
 
     QCOMPARE(m_screenPool->knownIds().count(), 2);
 
-    QCOMPARE(m_screenPool->connector(0), QStringLiteral("VGA-0"));
-    QCOMPARE(m_screenPool->id(QStringLiteral("VGA-0")), 0);
+    QCOMPARE(m_screenPool->connector(0), QStringLiteral("FAKE-1"));
+    QCOMPARE(m_screenPool->id(QStringLiteral("FAKE-1")), 0);
 
-    QCOMPARE(m_screenPool->connector(1), QStringLiteral("DVI-0"));
-    QCOMPARE(m_screenPool->id(QStringLiteral("DVI-0")), 1);
+    QCOMPARE(m_screenPool->connector(1), QStringLiteral("FAKE-0"));
+    QCOMPARE(m_screenPool->id(QStringLiteral("FAKE-0")), 1);
 }
 
 QTEST_MAIN(ScreenPoolTest)
