@@ -185,7 +185,7 @@ QScriptValue Containment::addWidget(QScriptContext *context, QScriptEngine *engi
     QScriptValue v = context->argument(0);
     Plasma::Applet *applet = 0;
     int id = -1;
-    QRect geometry(-1, -1, -1, -1);
+    QRectF geometry(-1, -1, -1, -1);
     if (context->argumentCount() > 1) {
         //The user provided an applet id as parameter
         if (context->argument(1).isNumber()) {
@@ -197,7 +197,7 @@ QScriptValue Containment::addWidget(QScriptContext *context, QScriptEngine *engi
             //It's expected a js object such as
             //addWidget("org.kde.plasma.analogclock", {"x": 0, "y": 100, "width": 300, "height": 400});
             const QVariantMap geom = context->argument(1).toVariant().value<QVariantMap>();
-            geometry = QRect(geom.value(QStringLiteral("x")).toInt(), geom.value(QStringLiteral("y")).toInt(),
+            geometry = QRectF(geom.value(QStringLiteral("x")).toInt(), geom.value(QStringLiteral("y")).toInt(),
                         geom.value(QStringLiteral("width")).toInt(), geom.value(QStringLiteral("height")).toInt());
         }
     }
@@ -209,7 +209,7 @@ QScriptValue Containment::addWidget(QScriptContext *context, QScriptEngine *engi
             containmentItem = c->d->containment.data()->property("_plasma_graphicObject").value<QQuickItem *>();
             Plasma::Applet *applet = nullptr;
             if (containmentItem) {
-                QMetaObject::invokeMethod(containmentItem , "createApplet", Qt::DirectConnection, Q_RETURN_ARG(Plasma::Applet *, applet), Q_ARG(QString, v.toString()), Q_ARG(QVariantList, QVariantList()), Q_ARG(QRect, geometry));
+                QMetaObject::invokeMethod(containmentItem , "createApplet", Qt::DirectConnection, Q_RETURN_ARG(Plasma::Applet *, applet), Q_ARG(QString, v.toString()), Q_ARG(QVariantList, QVariantList()), Q_ARG(QRectF, geometry));
             }
             if (applet) {
                 ScriptEngine *env = ScriptEngine::envFor(engine);
