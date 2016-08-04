@@ -44,13 +44,19 @@ private:
 
 void ScreenPoolTest::initTestCase()
 {
-        QStandardPaths::enableTestMode(true);
+    QStandardPaths::enableTestMode(true);
 
-        m_screenPool = new ScreenPool(KSharedConfig::openConfig(), this);
+    KConfigGroup cg(KSharedConfig::openConfig(), QStringLiteral("ScreenConnectors"));
+    cg.deleteGroup();
+    cg.sync();
+    m_screenPool = new ScreenPool(KSharedConfig::openConfig(), this);
 }
 
 void ScreenPoolTest::cleanupTestCase()
 {
+    KConfigGroup cg(KSharedConfig::openConfig(), QStringLiteral("ScreenConnectors"));
+    cg.deleteGroup();
+    cg.sync();
 }
 
 void ScreenPoolTest::testScreenInsertion()
