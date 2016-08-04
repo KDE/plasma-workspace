@@ -551,14 +551,8 @@ void ShellCorona::load()
 
     disconnect(m_activityController, &KActivities::Controller::serviceStatusChanged, this, &ShellCorona::load);
 
-    QString configFileName("plasma-" + m_shell);
-    //NOTE: this is for retrocompatibility: keep who is using the default lnf package
-    //the old config file name
-    //TODO:alternative: kconfigupdate?
-    if (m_lookAndFeelPackage.metadata().pluginId() != "org.kde.breeze.desktop") {
-        configFileName += "-" + m_lookAndFeelPackage.metadata().pluginId();
-    }
-    configFileName += "-appletsrc";
+    //TODO: a kconf_update script is needed
+    QString configFileName("plasma-" + m_shell) + QChar('-') + m_lookAndFeelPackage.metadata().pluginId() + QStringLiteral("-appletsrc");
 
     loadLayout(configFileName);
 
