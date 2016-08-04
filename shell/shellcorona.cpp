@@ -469,15 +469,40 @@ QString ShellCorona::dumpCurrentLayoutJS()
         script += dumpconfigGroupJS(contConfig, QStringLiteral("    panel"));
         script += "\n\n";
 
-        foreach (Plasma::Applet *applet, cont->applets()) {
-            script += "    {\n";
-            script += "        //Configuration of applet " + applet->title() + "\n";
-            script += "        var applet = panel.addWidget(\"" + applet->pluginInfo().pluginName() + "\", " + QString::number(applet->id()) + ");\n";
+        //try to parse the encoded applets order
+        KConfigGroup genericConf(&contConfig, QStringLiteral("General"));
+        const QStringList appletsOrderStrings = genericConf.readEntry(QStringLiteral("AppletOrder"), QString()).split(QChar(';'));
+        //consider the applet order to be valid only if there are as many entries as applets()
+        if (appletsOrderStrings.length() == cont->applets().length()) {
+            foreach (const QString &stringId, appletsOrderStrings) {
+                KConfigGroup appletConfig(&contConfig, QStringLiteral("Applets"));
+                appletConfig = KConfigGroup(&appletConfig, stringId);
+                const QString pluginName = appletConfig.readEntry(QStringLiteral("plugin"), QString());
 
-            KConfigGroup appletConfig = applet->config();
-            script += dumpconfigGroupJS(appletConfig, QStringLiteral("        applet"));
+                if (pluginName.isEmpty()) {
+                    continue;
+                }
 
-            script += "    }\n";
+                script += "    {\n";
+                script += "        //Configuration of applet " + pluginName + "\n";
+                script += "        var applet = panel.addWidget(\"" + pluginName + "\");\n";
+
+                script += dumpconfigGroupJS(appletConfig, QStringLiteral("        applet"));
+
+                script += "    }\n";
+            }
+        //applets order not found, just use order returned by applets()
+        } else {
+            foreach (Plasma::Applet *applet, cont->applets()) {
+                script += "    {\n";
+                script += "        //Configuration of applet " + applet->pluginInfo().pluginName() + "\n";
+                script += "        var applet = panel.addWidget(\"" + applet->pluginInfo().pluginName() + "\", " + QString::number(applet->id()) + ");\n";
+
+                KConfigGroup appletConfig = applet->config();
+                script += dumpconfigGroupJS(appletConfig, QStringLiteral("        applet"));
+
+                script += "    }\n";
+            }
         }
 
         script += "}\n";
