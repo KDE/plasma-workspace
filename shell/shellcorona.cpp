@@ -1635,6 +1635,22 @@ void ShellCorona::updateStruts()
     }
 }
 
+
+void ShellCorona::activateLauncherMenu()
+{
+    for (auto it = m_panelViews.constBegin(), end = m_panelViews.constEnd(); it != end; ++it) {
+        const auto applets = it.key()->applets();
+        for (auto applet : applets) {
+            if (applet->pluginInfo().property("X-Plasma-Provides").toStringList().contains(QStringLiteral("org.kde.plasma.launchermenu"))) {
+                if (!applet->globalShortcut().isEmpty()) {
+                    emit applet->activated();
+                    return;
+                }
+            }
+        }
+    }
+}
+
 // Desktop corona handler
 
 

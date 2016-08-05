@@ -21,5 +21,7 @@
     <method name="evaluateScript">
       <arg name="script" type="s" direction="in"/>
     </method>
+    <method name="activateLauncherMenu">
+    </method>
   </interface>
 </node>

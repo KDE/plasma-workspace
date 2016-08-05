@@ -143,6 +143,7 @@ public Q_SLOTS:
     void loadKWinScriptInInteractiveConsole(const QString &script);
     void toggleActivityManager();
     void evaluateScript(const QString &string);
+    void activateLauncherMenu();
 
     Plasma::Containment *addPanel(const QString &plugin);
 
