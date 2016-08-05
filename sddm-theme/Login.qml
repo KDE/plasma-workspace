@@ -71,7 +71,7 @@ Item {
     function startLogin() {
         root.loggingIn = true
         root.notificationMessage = ""
-        sddm.login("user", mainStack.currentItem.userName, sessionButton.currentIndex)
+        sddm.login(mainStack.currentItem.userName, passwordBox.text, sessionButton.currentIndex)
     }
 
     Connections {
@@ -102,6 +102,7 @@ Item {
         anchors.verticalCenterOffset: units.largeSpacing * 5
         placeholderText: "Password"
         focus: true
+        echoMode: TextInput.Password
 
         enabled: !loggingIn
 
