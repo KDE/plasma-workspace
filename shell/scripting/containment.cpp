@@ -184,15 +184,10 @@ QScriptValue Containment::addWidget(QScriptContext *context, QScriptEngine *engi
 
     QScriptValue v = context->argument(0);
     Plasma::Applet *applet = 0;
-    int id = -1;
     QRectF geometry(-1, -1, -1, -1);
     if (context->argumentCount() > 1) {
-        //The user provided an applet id as parameter
-        if (context->argument(1).isNumber()) {
-            id = context->argument(1).toInteger();
-
         //The user provided a geometry as parameter
-        } else if (context->argument(1).isObject()) {
+        if (context->argument(1).isObject()) {
             //Try to reconstruct a rectangle from the object hat has been passed
             //It's expected a js object such as
             //addWidget("org.kde.plasma.analogclock", {"x": 0, "y": 100, "width": 300, "height": 400});
@@ -220,17 +215,8 @@ QScriptValue Containment::addWidget(QScriptContext *context, QScriptEngine *engi
         //Case in which either:
         // * a geometry wasn't provided
         // * containmentItem wasn't found
-        if (id == -1) {
-            if (geometry.x() >= 0 && geometry.y() >= 0) {
-                
-            }
-            applet = c->d->containment.data()->createApplet(v.toString());
-        } else {
-            applet = Plasma::PluginLoader::self()->loadApplet(v.toString(), id, QVariantList());
-            if (applet) {
-                c->d->containment.data()->addApplet(applet);
-            }
-        }
+        applet = c->d->containment.data()->createApplet(v.toString());
+
         if (applet) {
             ScriptEngine *env = ScriptEngine::envFor(engine);
             return env->wrap(applet);

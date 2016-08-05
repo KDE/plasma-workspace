@@ -64,7 +64,7 @@
 #include "waylanddialogfilter.h"
 
 #include "plasmashelladaptor.h"
-
+#include "debug.h"
 #include "futureutil.h"
 
 #ifndef NDEBUG
