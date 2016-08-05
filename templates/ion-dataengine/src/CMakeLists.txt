@@ -8,7 +8,7 @@ target_link_libraries (ion_%{APPNAMELC}
     KF5::UnitConversion
 )
 
-kcoreaddons_desktop_to_json(ion_%{APPNAMELC} ion-%{APPNAMELC}.desktop)
+kcoreaddons_desktop_to_json(ion_%{APPNAMELC} ion-%{APPNAMELC}.desktop SERVICE_TYPES plasma-dataengine.desktop)
 
 install (FILES ion-%{APPNAMELC}.desktop DESTINATION ${KDE_INSTALL_KSERVICES5DIR})
 
