@@ -47,6 +47,8 @@ ScreenPool::ScreenPool(KSharedConfig::Ptr config, QObject *parent)
             !m_idForConnector.contains(connector)) {
             m_connectorForId[key.toInt()] = connector;
             m_idForConnector[connector] = key.toInt();
+        } else if (m_idForConnector.value(connector) != key.toInt()) {
+            m_configGroup.deleteEntry(key);
         }
     }
 }
@@ -68,13 +70,12 @@ void ScreenPool::setPrimaryConnector(const QString &primary)
     }
     Q_ASSERT(m_idForConnector.contains(primary));
 
-    int oldId = m_idForConnector.value(primary);
+    int oldIdForPrimary = m_idForConnector.value(primary);
 
     m_idForConnector[primary] = 0;
     m_connectorForId[0] = primary;
-    m_idForConnector[m_primaryConnector] = oldId;
-    m_connectorForId[oldId] = m_primaryConnector;
-
+    m_idForConnector[m_primaryConnector] = oldIdForPrimary;
+    m_connectorForId[oldIdForPrimary] = m_primaryConnector;
     m_primaryConnector = primary;
     save();
 }
