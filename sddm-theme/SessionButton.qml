@@ -3,6 +3,8 @@ import QtQuick 2.2
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
 
+import QtQuick.Controls 1.3 as QQC
+
 PlasmaComponents.ToolButton {
     id: root
     property int currentIndex: -1
@@ -10,28 +12,19 @@ PlasmaComponents.ToolButton {
     implicitWidth: minimumWidth
 
     iconSource: ""
-    text: menu.content[currentIndex].text
+    text: instantiator.objectAt(currentIndex).text
 
-    onClicked: menu.open()
-
-    PlasmaComponents.ContextMenu {
+    menu: QQC.Menu {
         id: menu
-        visualParent: root
-
-        property Item _children : Item {
-            Repeater {
-                model: sessionModel
-                id: repeater
-                delegate: PlasmaComponents.MenuItem {
-                    text: model.name
-//                             icon:
-                    onClicked: {
-                        root.currentIndex = model.index
-                        console.log(model.index)
-                    }
-                    Component.onCompleted: {
-                        parent = menu
-                    }
+        Instantiator {
+            id: instantiator
+            model: sessionModel
+            onObjectAdded: menu.insertItem(index, object)
+            onObjectRemoved: menu.removeItem( object )
+            delegate: QQC.MenuItem {
+                text: model.name
+                onTriggered: {
+                    root.currentIndex = model.index
                 }
             }
         }
