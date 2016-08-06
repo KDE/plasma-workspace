@@ -61,11 +61,13 @@ void ScreenPoolTest::cleanupTestCase()
 
 void ScreenPoolTest::testScreenInsertion()
 {
+    qWarning() << "Known ids" << m_screenPool->knownIds();
     m_screenPool->insertScreenMapping(0, QStringLiteral("FAKE-0"));
     QCOMPARE(m_screenPool->knownIds().count(), 1);
     QCOMPARE(m_screenPool->connector(0), QStringLiteral("FAKE-0"));
     QCOMPARE(m_screenPool->id(QStringLiteral("FAKE-0")), 0);
 
+    qWarning() << "Known ids" << m_screenPool->knownIds();
     m_screenPool->insertScreenMapping(1, QStringLiteral("FAKE-1"));
     QCOMPARE(m_screenPool->knownIds().count(), 2);
     QCOMPARE(m_screenPool->connector(1), QStringLiteral("FAKE-1"));
