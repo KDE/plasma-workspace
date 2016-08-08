@@ -24,6 +24,7 @@ License along with this library.  If not, see <http://www.gnu.org/licenses/>.
 #include <QStandardPaths>
 #include <QTemporaryDir>
 #include <QTest>
+#include <QScreen>
 
 #include "../screenpool.h"
 
@@ -61,31 +62,38 @@ void ScreenPoolTest::cleanupTestCase()
 
 void ScreenPoolTest::testScreenInsertion()
 {
+    int firstScreen = 0;
+    if (QGuiApplication::primaryScreen()) {
+        ++firstScreen;
+    }
     qWarning() << "Known ids" << m_screenPool->knownIds();
-    m_screenPool->insertScreenMapping(0, QStringLiteral("FAKE-0"));
-    QCOMPARE(m_screenPool->knownIds().count(), 1);
-    QCOMPARE(m_screenPool->connector(0), QStringLiteral("FAKE-0"));
-    QCOMPARE(m_screenPool->id(QStringLiteral("FAKE-0")), 0);
+    m_screenPool->insertScreenMapping(firstScreen, QStringLiteral("FAKE-0"));
+    QCOMPARE(m_screenPool->knownIds().count(), firstScreen + 1);
+    QCOMPARE(m_screenPool->connector(firstScreen), QStringLiteral("FAKE-0"));
+    QCOMPARE(m_screenPool->id(QStringLiteral("FAKE-0")), firstScreen);
 
     qWarning() << "Known ids" << m_screenPool->knownIds();
-    m_screenPool->insertScreenMapping(1, QStringLiteral("FAKE-1"));
-    QCOMPARE(m_screenPool->knownIds().count(), 2);
-    QCOMPARE(m_screenPool->connector(1), QStringLiteral("FAKE-1"));
-    QCOMPARE(m_screenPool->id(QStringLiteral("FAKE-1")), 1);
+    m_screenPool->insertScreenMapping(firstScreen + 1, QStringLiteral("FAKE-1"));
+    QCOMPARE(m_screenPool->knownIds().count(), firstScreen + 2);
+    QCOMPARE(m_screenPool->connector(firstScreen + 1), QStringLiteral("FAKE-1"));
+    QCOMPARE(m_screenPool->id(QStringLiteral("FAKE-1")), firstScreen + 1);
 }
 
 void ScreenPoolTest::testPrimarySwap()
 {
-    QCOMPARE(m_screenPool->primaryConnector(), QStringLiteral("FAKE-0"));
+    const QString oldPrimary = QGuiApplication::primaryScreen()->name();
+    QCOMPARE(m_screenPool->primaryConnector(), oldPrimary);
+    const int oldScreenCount = m_screenPool->knownIds().count();
+    const int oldIdOfFake1 = m_screenPool->id(QStringLiteral("FAKE-1"));
     m_screenPool->setPrimaryConnector(QStringLiteral("FAKE-1"));
 
-    QCOMPARE(m_screenPool->knownIds().count(), 2);
+    QCOMPARE(m_screenPool->knownIds().count(), oldScreenCount);
 
     QCOMPARE(m_screenPool->connector(0), QStringLiteral("FAKE-1"));
     QCOMPARE(m_screenPool->id(QStringLiteral("FAKE-1")), 0);
 
-    QCOMPARE(m_screenPool->connector(1), QStringLiteral("FAKE-0"));
-    QCOMPARE(m_screenPool->id(QStringLiteral("FAKE-0")), 1);
+    QCOMPARE(m_screenPool->connector(oldIdOfFake1), oldPrimary);
+    QCOMPARE(m_screenPool->id(oldPrimary), oldIdOfFake1);
 }
 
 QTEST_MAIN(ScreenPoolTest)
