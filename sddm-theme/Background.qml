@@ -46,7 +46,7 @@ FocusScope {
             }
         }
         cached: true
-        visible: image.status == Image.Null || Image.Error
+        visible: image.status == Image.Null || image.status == Image.Error
     }
 
     Image {
