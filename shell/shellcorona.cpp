@@ -560,7 +560,6 @@ void ShellCorona::load()
         if (QFile::exists(oldConfigFilePath)) {
             qCDebug(PLASMASHELL) << "Old config file older than Plasma 5.8 found: moving to new location";
             QFile::rename(oldConfigFilePath, QStandardPaths::writableLocation(QStandardPaths::ConfigLocation) + QChar('/') + configFileName);
-            
         }
     }
     loadLayout(configFileName);
@@ -766,7 +765,6 @@ void ShellCorona::unload()
     while (!containments().isEmpty()) {
         //deleting a containment will remove it from the list due to QObject::destroyed connect in Corona
         //this form doesn't crash, while qDeleteAll(containments()) does
-        delete containments().first()->property("_plasma_graphicObject").value<QObject *>();
         delete containments().first();
     }
 }
