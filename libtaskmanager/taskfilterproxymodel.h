@@ -53,6 +53,7 @@ class TASKMANAGER_EXPORT TaskFilterProxyModel : public QSortFilterProxyModel, pu
     Q_PROPERTY(bool filterByScreen READ filterByScreen WRITE setFilterByScreen NOTIFY filterByScreenChanged)
     Q_PROPERTY(bool filterByActivity READ filterByActivity WRITE setFilterByActivity NOTIFY filterByActivityChanged)
     Q_PROPERTY(bool filterNotMinimized READ filterNotMinimized WRITE setFilterNotMinimized NOTIFY filterNotMinimizedChanged)
+    Q_PROPERTY(bool filterSkipTaskbar READ filterSkipTaskbar WRITE setFilterSkipTaskbar NOTIFY filterSkipTaskbarChanged)
 
 public:
     explicit TaskFilterProxyModel(QObject *parent = 0);
@@ -210,6 +211,26 @@ public:
     void setFilterNotMinimized(bool filter);
 
     /**
+     * Whether tasks which indicate they want to be omitted from 'task bars'
+     * should be filtered. Defaults to @c true.
+     *
+     * @see setFilterSkipTaskbar
+     * @returns @c true if tasks which want to skip the 'task bar' should be
+     * filtered.
+     **/
+    bool filterSkipTaskbar() const;
+
+    /**
+     * Set whether tasks which indicate they want to be omitted from 'task bars'
+     * should be filtered.
+     *
+     * @see filterSkipTaskbar
+     * @param filter Whether tasks which want to skip the 'task bar' should be
+     * filtered.
+     **/
+    void setFilterSkipTaskbar(bool filter);
+
+    /**
      * Request activation of the task at the given index. Derived classes are
      * free to interpret the meaning of "activate" themselves depending on
      * the nature and state of the task, e.g. launch or raise a window task.
@@ -360,6 +381,7 @@ Q_SIGNALS:
     void filterByScreenChanged() const;
     void filterByActivityChanged() const;
     void filterNotMinimizedChanged() const;
+    void filterSkipTaskbarChanged() const;
 
 protected:
     bool filterAcceptsRow(int sourceRow, const QModelIndex &sourceParent) const override;

@@ -39,6 +39,7 @@ public:
     bool filterByScreen = false;
     bool filterByActivity = false;
     bool filterNotMinimized = false;
+    bool filterSkipTaskbar = true;
 
 private:
     TaskFilterProxyModel *q;
@@ -184,6 +185,22 @@ void TaskFilterProxyModel::setFilterNotMinimized(bool filter)
     }
 }
 
+bool TaskFilterProxyModel::filterSkipTaskbar() const
+{
+    return d->filterSkipTaskbar;
+}
+
+void TaskFilterProxyModel::setFilterSkipTaskbar(bool filter)
+{
+    if (d->filterSkipTaskbar != filter) {
+        d->filterSkipTaskbar = filter;
+
+        invalidateFilter();
+
+        emit filterSkipTaskbarChanged();
+    }
+}
+
 void TaskFilterProxyModel::requestActivate(const QModelIndex &index)
 {
     if (d->sourceTasksModel && index.isValid() && index.model() == this) {
@@ -289,7 +306,7 @@ bool TaskFilterProxyModel::filterAcceptsRow(int sourceRow, const QModelIndex &so
     const QModelIndex &sourceIdx = sourceModel()->index(sourceRow, 0);
 
     // Filter tasks that are not to be shown on the task bar.
-    if (sourceIdx.data(AbstractTasksModel::SkipTaskbar).toBool()) {
+    if (d->filterSkipTaskbar && sourceIdx.data(AbstractTasksModel::SkipTaskbar).toBool()) {
         return false;
     }
 
