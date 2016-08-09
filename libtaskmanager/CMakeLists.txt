@@ -14,6 +14,7 @@ set(taskmanager_LIB_SRCS
     tasktools.cpp
     virtualdesktopinfo.cpp
     waylandtasksmodel.cpp
+    windowtasksmodel.cpp
 )
 
 if (X11_FOUND)
@@ -74,6 +75,7 @@ install(FILES
     tasktools.h
     virtualdesktopinfo.h
     waylandtasksmodel.h
+    windowtasksmodel.h
     ${CMAKE_CURRENT_BINARY_DIR}/taskmanager_export.h
     DESTINATION ${KDE_INSTALL_INCLUDEDIR}/taskmanager COMPONENT Devel
 )

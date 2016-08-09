@@ -26,24 +26,13 @@ License along with this library.  If not, see <http://www.gnu.org/licenses/>.
 #include "taskgroupingproxymodel.h"
 #include "tasktools.h"
 
-#include <config-X11.h>
-
 #include "launchertasksmodel.h"
-#include "waylandtasksmodel.h"
 #include "startuptasksmodel.h"
-#if HAVE_X11
-#include "xwindowtasksmodel.h"
-#endif
-
-#include <KWindowSystem>
+#include "windowtasksmodel.h"
 
 #include <QGuiApplication>
 #include <QTimer>
 #include <QUrl>
-
-#if HAVE_X11
-#include <QX11Info>
-#endif
 
 #include <numeric>
 
@@ -58,7 +47,7 @@ public:
 
     static int instanceCount;
 
-    static AbstractTasksModel* windowTasksModel;
+    static WindowTasksModel* windowTasksModel;
     static StartupTasksModel* startupTasksModel;
     LauncherTasksModel* launcherTasksModel = nullptr;
     ConcatenateTasksProxyModel* concatProxyModel = nullptr;
@@ -124,7 +113,7 @@ private:
 };
 
 int TasksModel::Private::instanceCount = 0;
-AbstractTasksModel* TasksModel::Private::windowTasksModel = nullptr;
+WindowTasksModel* TasksModel::Private::windowTasksModel = nullptr;
 StartupTasksModel* TasksModel::Private::startupTasksModel = nullptr;
 ActivityInfo* TasksModel::Private::activityInfo = nullptr;
 int TasksModel::Private::activityInfoUsers = 0;
@@ -156,22 +145,16 @@ TasksModel::Private::~Private()
 void TasksModel::Private::initModels()
 {
     // NOTE: Overview over the entire model chain assembled here:
-    // {X11,Wayland}WindowTasksModel, StartupTasksModel, LauncherTasksModel
+    // WindowTasksModel, StartupTasksModel, LauncherTasksModel
     //  -> concatProxyModel concatenates them into a single list.
     //   -> filterProxyModel filters by state (e.g. virtual desktop).
     //    -> groupingProxyModel groups by application (we go from flat list to tree).
     //     -> flattenGroupsProxyModel (optionally, if groupInline == true) flattens groups out.
     //      -> TasksModel collapses (top-level) items into task lifecycle abstraction; sorts.
 
-    if (!windowTasksModel && KWindowSystem::isPlatformWayland()) {
-        windowTasksModel = new WaylandTasksModel();
+    if (!windowTasksModel) {
+        windowTasksModel = new WindowTasksModel();
     }
-
-#if HAVE_X11
-    if (!windowTasksModel && KWindowSystem::isPlatformX11()) {
-        windowTasksModel = new XWindowTasksModel();
-    }
-#endif
 
     QObject::connect(windowTasksModel, &QAbstractItemModel::rowsInserted, q,
         [this]() {
