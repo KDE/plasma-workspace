@@ -89,6 +89,7 @@ public:
     int groupingWindowTasksThreshold = -1;
 
     void initModels();
+    void initLauncherTasksModel();
     void updateAnyTaskDemandsAttention();
     void updateManualSortMap();
     void consolidateManualSortMapForGroup(const QModelIndex &groupingProxyIndex);
@@ -208,17 +209,10 @@ void TasksModel::Private::initModels()
         startupTasksModel = new StartupTasksModel();
     }
 
-    launcherTasksModel = new LauncherTasksModel(q);
-    QObject::connect(launcherTasksModel, &LauncherTasksModel::launcherListChanged,
-        q, &TasksModel::launcherListChanged);
-    QObject::connect(launcherTasksModel, &LauncherTasksModel::launcherListChanged,
-        q, &TasksModel::updateLauncherCount);
-
     concatProxyModel = new ConcatenateTasksProxyModel(q);
 
     concatProxyModel->addSourceModel(windowTasksModel);
     concatProxyModel->addSourceModel(startupTasksModel);
-    concatProxyModel->addSourceModel(launcherTasksModel);
 
     // If we're in manual sort mode, we need to seed the sort map on pending row
     // insertions.
@@ -388,7 +382,8 @@ void TasksModel::Private::initModels()
 
                 // When a window or startup task is removed, we have to trigger a re-filter of
                 // matching launchers to (possibly) pop them back in.
-                if (!(sourceIndex.data(AbstractTasksModel::IsWindow).toBool()
+                if (!launcherTasksModel
+                      || !(sourceIndex.data(AbstractTasksModel::IsWindow).toBool()
                       || sourceIndex.data(AbstractTasksModel::IsStartup).toBool())) {
                     continue;
                 }
@@ -453,6 +448,21 @@ void TasksModel::Private::updateAnyTaskDemandsAttention()
         anyTaskDemandsAttention = taskFound;
         q->anyTaskDemandsAttentionChanged();
     }
+}
+
+void TasksModel::Private::initLauncherTasksModel()
+{
+    if (launcherTasksModel) {
+        return;
+    }
+
+    launcherTasksModel = new LauncherTasksModel(q);
+    QObject::connect(launcherTasksModel, &LauncherTasksModel::launcherListChanged,
+        q, &TasksModel::launcherListChanged);
+    QObject::connect(launcherTasksModel, &LauncherTasksModel::launcherListChanged,
+        q, &TasksModel::updateLauncherCount);
+
+    concatProxyModel->addSourceModel(launcherTasksModel);
 }
 
 void TasksModel::Private::updateManualSortMap()
@@ -846,6 +856,10 @@ QVariant TasksModel::data(const QModelIndex &proxyIndex, int role) const
 
 void TasksModel::updateLauncherCount()
 {
+    if (!d->launcherTasksModel) {
+        return;
+    }
+
     int count = 0;
 
     for (int i = 0; i < rowCount(); ++i) {
@@ -1114,29 +1128,26 @@ QStringList TasksModel::launcherList() const
 
 void TasksModel::setLauncherList(const QStringList &launchers)
 {
-    if (d->launcherTasksModel) {
-        d->launcherTasksModel->setLauncherList(launchers);
-        d->launchersEverSet = true;
-    }
+    d->initLauncherTasksModel();
+    d->launcherTasksModel->setLauncherList(launchers);
+    d->launchersEverSet = true;
 }
 
 bool TasksModel::requestAddLauncher(const QUrl &url)
 {
-    if (d->launcherTasksModel) {
-        bool added = d->launcherTasksModel->requestAddLauncher(url);
+    d->initLauncherTasksModel();
 
-        // If using manual and launch-in-place sorting with separate launchers,
-        // we need to trigger a sort map update to move any window tasks to
-        // their launcher position now.
-        if (added && d->sortMode == SortManual && (d->launchInPlace || !d->separateLaunchers)) {
-            d->updateManualSortMap();
-            d->forceResort();
-        }
+    bool added = d->launcherTasksModel->requestAddLauncher(url);
 
-        return added;
+    // If using manual and launch-in-place sorting with separate launchers,
+    // we need to trigger a sort map update to move any window tasks to
+    // their launcher position now.
+    if (added && d->sortMode == SortManual && (d->launchInPlace || !d->separateLaunchers)) {
+        d->updateManualSortMap();
+        d->forceResort();
     }
 
-    return false;
+    return added;
 }
 
 bool TasksModel::requestRemoveLauncher(const QUrl &url)
@@ -1302,7 +1313,8 @@ bool TasksModel::move(int row, int newPos)
     }
 
     if (d->separateLaunchers) {
-        const int firstTask = (d->launchInPlace ? d->launcherTasksModel->rowCount() : launcherCount());
+        const int firstTask = (d->launcherTasksModel ?
+            (d->launchInPlace ? d->launcherTasksModel->rowCount() : launcherCount()) : 0);
 
         // Don't allow launchers to be moved past the last launcher.
         if (isLauncherMove && newPos >= firstTask) {
