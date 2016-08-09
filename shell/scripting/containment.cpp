@@ -185,15 +185,20 @@ QScriptValue Containment::addWidget(QScriptContext *context, QScriptEngine *engi
     QScriptValue v = context->argument(0);
     Plasma::Applet *applet = 0;
     QRectF geometry(-1, -1, -1, -1);
-    if (context->argumentCount() > 1) {
+    if (context->argumentCount() > 4) {
         //The user provided a geometry as parameter
-        if (context->argument(1).isObject()) {
+        if (context->argument(1).isNumber() &&
+            context->argument(2).isNumber() &&
+            context->argument(3).isNumber() &&
+            context->argument(4).isNumber()) {
             //Try to reconstruct a rectangle from the object hat has been passed
             //It's expected a js object such as
             //addWidget("org.kde.plasma.analogclock", {"x": 0, "y": 100, "width": 300, "height": 400});
             const QVariantMap geom = context->argument(1).toVariant().value<QVariantMap>();
-            geometry = QRectF(geom.value(QStringLiteral("x")).toInt(), geom.value(QStringLiteral("y")).toInt(),
-                        geom.value(QStringLiteral("width")).toInt(), geom.value(QStringLiteral("height")).toInt());
+            geometry = QRectF(context->argument(1).toNumber(),
+                              context->argument(2).toNumber(),
+                              context->argument(3).toNumber(),
+                              context->argument(4).toNumber());
         }
     }
     if (v.isString()) {
