@@ -144,6 +144,7 @@ public Q_SLOTS:
     void toggleActivityManager();
     void evaluateScript(const QString &string);
     QString dumpCurrentLayoutJS();
+    void reloadDefaultLayout();
 
     Plasma::Containment *addPanel(const QString &plugin);
 

@@ -24,5 +24,7 @@
     <method name="dumpCurrentLayoutJS">
       <arg name="script" type="s" direction="out"/>
     </method>
+    <method name="reloadDefaultLayout">
+    </method>
   </interface>
 </node>

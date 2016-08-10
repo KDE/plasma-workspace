@@ -547,6 +547,16 @@ QString ShellCorona::dumpCurrentLayoutJS()
     return script;
 }
 
+void ShellCorona::reloadDefaultLayout()
+{
+    for (const QString &group : config()->groupList()) {
+        config()->deleteGroup(group);
+    }
+    config()->sync();
+    unload();
+    load();
+}
+
 void ShellCorona::updateLookAndFeelPackage(const QString &file)
 {
     //only care about kdeglobals
