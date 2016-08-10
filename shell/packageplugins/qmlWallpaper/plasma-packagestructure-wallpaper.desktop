@@ -51,3 +51,4 @@ X-KDE-PluginInfo-Author=Marco Martin
 X-KDE-PluginInfo-Email=notmart@gmail.com
 X-KDE-PluginInfo-Name=Plasma/Wallpaper
 X-KDE-PluginInfo-Version=1
+X-KDE-ParentApp=org.kde.plasmashell
