@@ -74,7 +74,9 @@ Item {
                 sourceModel: KHolidays.HolidayRegionsModel {
                     id: holidaysModel
                 }
-                filterString: filter.text
+                // SortFilterModel doesn't have a case-sensitivity option...
+                // but filterRegExp always causes case-insensitive sorting
+                filterRegExp: filter.text
                 filterRole: "name"
             }
 

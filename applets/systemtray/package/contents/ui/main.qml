@@ -26,9 +26,9 @@ import "items"
 MouseArea {
     id: root
 
-    Layout.minimumWidth: vertical ? units.iconSizes.small : tasksRow.implicitWidth + expander.implicitWidth + units.smallSpacing
+    Layout.minimumWidth: vertical ? units.iconSizes.small : tasksRow.implicitWidth + (expander.visible ? expander.implicitWidth : 0) + units.smallSpacing
 
-    Layout.minimumHeight: vertical ? tasksRow.implicitHeight+ expander.implicitHeight + units.smallSpacing : units.smallSpacing
+    Layout.minimumHeight: vertical ? tasksRow.implicitHeight + (expander.visible ? expander.implicitHeight : 0) + units.smallSpacing : units.smallSpacing
 
     property var iconSizes: ["small", "smallMedium", "medium", "large", "huge", "enormous"];
 
@@ -227,8 +227,8 @@ MouseArea {
     Flow {
         id: tasksRow
         spacing: 0
-        height: parent.height - (vertical ? expander.height : 0)
-        width: parent.width  - (vertical ? 0 : expander.width)
+        height: parent.height - (vertical && expander.visible ? expander.height : 0)
+        width: parent.width - (vertical || !expander.visible ? 0 : expander.width)
         property string skipItems
         flow: vertical ? Flow.LeftToRight : Flow.TopToBottom
         //To make it look centered
