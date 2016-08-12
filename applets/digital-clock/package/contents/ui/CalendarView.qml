@@ -124,6 +124,7 @@ Item {
 
         PlasmaComponents.Label {
             id: dayLabel
+            anchors.left: parent.left
             height: dayHeading.height + dateHeading.height
             width: paintedWidth
             font.pixelSize: height
