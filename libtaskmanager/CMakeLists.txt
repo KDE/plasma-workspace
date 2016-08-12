@@ -3,6 +3,7 @@ add_subdirectory(autotests)
 
 set(taskmanager_LIB_SRCS
     abstracttasksmodel.cpp
+    abstracttasksproxymodeliface.cpp
     activityinfo.cpp
     concatenatetasksproxymodel.cpp
     flattentaskgroupsproxymodel.cpp

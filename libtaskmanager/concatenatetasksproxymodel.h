@@ -21,7 +21,7 @@ License along with this library.  If not, see <http://www.gnu.org/licenses/>.
 #ifndef CONCATENATETASKSPROXYMODEL_H
 #define CONCATENATETASKSPROXYMODEL_H
 
-#include "abstracttasksmodeliface.h"
+#include "abstracttasksproxymodeliface.h"
 
 #include <KConcatenateRowsProxyModel>
 
@@ -40,165 +40,15 @@ namespace TaskManager
  **/
 
 class TASKMANAGER_EXPORT ConcatenateTasksProxyModel : public KConcatenateRowsProxyModel,
-    public AbstractTasksModelIface
+    public AbstractTasksProxyModelIface
 {
     Q_OBJECT
 
 public:
     explicit ConcatenateTasksProxyModel(QObject *parent = 0);
     virtual ~ConcatenateTasksProxyModel();
-
-    /**
-     * Request activation of the task at the given index. Derived classes are
-     * free to interpret the meaning of "activate" themselves depending on
-     * the nature and state of the task, e.g. launch or raise a window task.
-     *
-     * @param index An index in this tasks model.
-     **/
-    void requestActivate(const QModelIndex &index);
-
-    /**
-     * Request an additional instance of the application backing the task
-     * at the given index.
-     *
-     * @param index An index in this tasks model.
-     **/
-    void requestNewInstance(const QModelIndex &index);
-
-    /**
-     * Requests to open the given URLs with the application backing the task
-     * at the given index.
-     *
-     * @param index An index in this tasks model.
-     * @param urls The URLs to be passed to the application.
-     **/
-    virtual void requestOpenUrls(const QModelIndex &index, const QList<QUrl> &urls);
-
-    /**
-     * Request the task at the given index be closed.
-     *
-     * @param index An index in this tasks model.
-     **/
-    void requestClose(const QModelIndex &index);
-
-    /**
-     * Request starting an interactive move for the task at the given index.
-     *
-     * This is meant for tasks that have an associated window, and may be
-     * a no-op when there is no window.
-     *
-     * @param index An index in this tasks model.
-     **/
-    void requestMove(const QModelIndex &index);
-
-    /**
-     * Request starting an interactive resize for the task at the given index.
-     *
-     * This is meant for tasks that have an associated window, and may be a
-     * no-op when there is no window.
-     *
-     * @param index An index in this tasks model.
-     **/
-    void requestResize(const QModelIndex &index);
-
-    /**
-     * Request toggling the minimized state of the task at the given index.
-     *
-     * This is meant for tasks that have an associated window, and may be
-     * a no-op when there is no window.
-     *
-     * @param index An index in this tasks model.
-     **/
-    void requestToggleMinimized(const QModelIndex &index);
-
-    /**
-     * Request toggling the maximized state of the task at the given index.
-     *
-     * This is meant for tasks that have an associated window, and may be
-     * a no-op when there is no window.
-     *
-     * @param index An index in this tasks model.
-     **/
-    void requestToggleMaximized(const QModelIndex &index);
-
-    /**
-     * Request toggling the keep-above state of the task at the given index.
-     *
-     * This is meant for tasks that have an associated window, and may be
-     * a no-op when there is no window.
-     *
-     * @param index An index in this tasks model.
-     **/
-    void requestToggleKeepAbove(const QModelIndex &index);
-
-    /**
-     * Request toggling the keep-below state of the task at the given index.
-     *
-     * This is meant for tasks that have an associated window, and may be
-     * a no-op when there is no window.
-     *
-     * @param index An index in this tasks model.
-     **/
-    void requestToggleKeepBelow(const QModelIndex &index);
-
-    /**
-     * Request toggling the fullscreen state of the task at the given index.
-     *
-     * This is meant for tasks that have an associated window, and may be
-     * a no-op when there is no window.
-     *
-     * @param index An index in this tasks model.
-     **/
-    void requestToggleFullScreen(const QModelIndex &index);
-
-    /**
-     * Request toggling the shaded state of the task at the given index.
-     *
-     * This is meant for tasks that have an associated window, and may be
-     * a no-op when there is no window.
-     *
-     * @param index An index in this tasks model.
-     **/
-    void requestToggleShaded(const QModelIndex &index);
-
-    /**
-     * Request moving the task at the given index to the specified virtual
-     * desktop.
-     *
-     * This is meant for tasks that have an associated window, and may be
-     * a no-op when there is no window.
-     *
-     * @param index An index in this tasks model.
-     * @param desktop A virtual desktop number.
-     **/
-    void requestVirtualDesktop(const QModelIndex &index, qint32 desktop);
-
-    /**
-     * Request moving the task at the given index to the specified activities.
-     *
-     * This is meant for tasks that have an associated window, and may be
-     * a no-op when there is no window.
-     *
-     * This base implementation does nothing.
-     *
-     * @param index An index in this tasks model.
-     * @param activities The new list of activities.
-     **/
-    void requestActivities(const QModelIndex &index, const QStringList &activities);
-
-    /**
-     * Request informing the window manager of new geometry for a visual
-     * delegate for the task at the given index. The geometry should be in
-     * screen coordinates.
-     *
-     * @param index An index in this tasks model.
-     * @param geometry Visual delegate geometry in screen coordinates.
-     * @param delegate The delegate. Implementations are on their own with
-     * regard to extracting information from this, and should take care to
-     * reject invalid objects.
-     **/
-    void requestPublishDelegateGeometry(const QModelIndex &index, const QRect &geometry,
-        QObject *delegate = nullptr);
+protected:
+    QModelIndex mapIfaceToSource(const QModelIndex &index) const Q_DECL_OVERRIDE;
 };
 
 }

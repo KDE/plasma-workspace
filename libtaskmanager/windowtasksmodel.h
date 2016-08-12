@@ -23,7 +23,7 @@ License along with this library.  If not, see <http://www.gnu.org/licenses/>.
 
 #include <QIdentityProxyModel>
 
-#include "abstracttasksmodeliface.h"
+#include "abstracttasksproxymodeliface.h"
 
 #include "taskmanager_export.h"
 
@@ -40,7 +40,7 @@ namespace TaskManager
  * @author Eike Hein <hein@kde.org>
  **/
 
-class TASKMANAGER_EXPORT WindowTasksModel : public QIdentityProxyModel, public AbstractTasksModelIface
+class TASKMANAGER_EXPORT WindowTasksModel : public QIdentityProxyModel, public AbstractTasksProxyModelIface
 {
     Q_OBJECT
 
@@ -50,123 +50,8 @@ public:
 
     QHash<int, QByteArray> roleNames() const override;
 
-    /**
-     * Request activation of the window at the given index.
-     *
-     * @param index An index in this window tasks model.
-     **/
-    void requestActivate(const QModelIndex &index) override;
-
-    /**
-     * Request an additional instance of the application owning the window
-     * at the given index. Success depends on whether a
-     * AbstractTasksModel::LauncherUrl could be derived from window metadata.
-     *
-     * @param index An index in this window tasks model.
-     **/
-    void requestNewInstance(const QModelIndex &index) override;
-
-    /**
-     * Runs the application backing the launcher at the given index with the given URLs.
-     * Success depends on whether a AbstractTasksModel::LauncherUrl could be
-     * derived from window metadata and a KService could be found from that.
-     *
-     * @param index An index in this launcher tasks model
-     * @param urls The URLs to be passed to the application
-     */
-    void requestOpenUrls(const QModelIndex &index, const QList<QUrl> &urls) override;
-
-    /**
-     * Request the window at the given index be closed.
-     *
-     * @param index An index in this window tasks model.
-     **/
-    void requestClose(const QModelIndex &index) override;
-
-    /**
-     * Request starting an interactive move for the window at the given index.
-     *
-     * @param index An index in this window tasks model.
-     **/
-    void requestMove(const QModelIndex &index) override;
-
-    /**
-     * Request starting an interactive resize for the window at the given index.
-     *
-     * @param index An index in this window tasks model.
-     **/
-    void requestResize(const QModelIndex &index) override;
-
-    /**
-     * Request toggling the minimized state of the window at the given index.
-     *
-     * @param index An index in this window tasks model.
-     **/
-    void requestToggleMinimized(const QModelIndex &index) override;
-
-    /**
-     * Request toggling the maximized state of the window at the given index.
-     *
-     * @param index An index in this window tasks model.
-     **/
-    void requestToggleMaximized(const QModelIndex &index) override;
-
-    /**
-     * Request toggling the keep-above state of the window at the given index.
-     *
-     * @param index An index in this window tasks model.
-     **/
-    void requestToggleKeepAbove(const QModelIndex &index) override;
-
-    /**
-     * Request toggling the keep-below state of the window at the given index.
-     *
-     * @param index An index in this window tasks model.
-     **/
-    void requestToggleKeepBelow(const QModelIndex &index) override;
-
-    /**
-     * Request toggling the fullscreen state of the window at the given index.
-     *
-     * @param index An index in this window tasks model.
-     **/
-    void requestToggleFullScreen(const QModelIndex &index) override;
-
-    /**
-     * Request toggling the shaded state of the window at the given index.
-     *
-     * @param index An index in this window tasks model.
-     **/
-    void requestToggleShaded(const QModelIndex &index) override;
-
-    /**
-     * Request moving the window at the given index to the specified virtual
-     * desktop.
-     *
-     * @param index An index in this window tasks model.
-     * @param desktop A virtual desktop number.
-     **/
-    void requestVirtualDesktop(const QModelIndex &index, qint32 desktop) override;
-
-    /**
-     * Request moving the window at the given index to the specified activities.
-     *
-     * @param index An index in this tasks model.
-     * @param activities The new list of activities.
-     **/
-    void requestActivities(const QModelIndex &index, const QStringList &activities) override;
-
-    /**
-     * Request informing the window manager of new geometry for a visual
-     * delegate for the window at the given index.
-     *
-     * @param index An index in this window tasks model.
-     * @param geometry Visual delegate geometry in screen coordinates.
-     * @param delegate The delegate.
-     **/
-    void requestPublishDelegateGeometry(const QModelIndex &index, const QRect &geometry,
-        QObject *delegate = nullptr) override;
-
+protected:
+    QModelIndex mapIfaceToSource(const QModelIndex &index) const Q_DECL_OVERRIDE;
 private:
     class Private;
     QScopedPointer<Private> d;
