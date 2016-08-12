@@ -46,7 +46,6 @@ public Q_SLOTS:
     void logout();
 
 private:
-    void setGlobalActionShortcut(QAction * action, const QString & component, const QString & actionId);
     QAction *m_runCommandAction;
     QAction *m_lockScreenAction;
     QAction *m_logoutAction;

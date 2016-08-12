@@ -19,6 +19,7 @@ kcoreaddons_desktop_to_json(plasma_containmentactions_contextmenu plasma-contain
 target_link_libraries(plasma_containmentactions_contextmenu
                       Qt5::DBus
                       KF5::I18n
+                      KF5::GlobalAccel
                       KF5::Plasma
                       KF5::XmlGui
                       KF5::KIOCore
