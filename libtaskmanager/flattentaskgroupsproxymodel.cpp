@@ -70,6 +70,13 @@ void FlattenTaskGroupsProxyModel::requestNewInstance(const QModelIndex &index)
     }
 }
 
+void FlattenTaskGroupsProxyModel::requestOpenUrls(const QModelIndex &index, const QList<QUrl> &urls)
+{
+    if (d->sourceTasksModel && index.isValid() && index.model() == this) {
+        d->sourceTasksModel->requestOpenUrls(mapToSource(index), urls);
+    }
+}
+
 void FlattenTaskGroupsProxyModel::requestClose(const QModelIndex &index)
 {
     if (d->sourceTasksModel && index.isValid() && index.model() == this) {

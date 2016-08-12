@@ -1175,6 +1175,13 @@ void TasksModel::requestNewInstance(const QModelIndex &index)
     }
 }
 
+void TasksModel::requestOpenUrls(const QModelIndex &index, const QList<QUrl> &urls)
+{
+    if (index.isValid() && index.model() == this) {
+        d->abstractTasksSourceModel->requestOpenUrls(mapToSource(index), urls);
+    }
+}
+
 void TasksModel::requestClose(const QModelIndex &index)
 {
     if (index.isValid() && index.model() == this) {

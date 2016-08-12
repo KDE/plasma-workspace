@@ -215,6 +215,14 @@ void TaskFilterProxyModel::requestNewInstance(const QModelIndex &index)
     }
 }
 
+void TaskFilterProxyModel::requestOpenUrls(const QModelIndex &index, const QList<QUrl> &urls)
+{
+    if (d->sourceTasksModel && index.isValid() && index.model() == this) {
+        d->sourceTasksModel->requestOpenUrls(mapToSource(index), urls);
+    }
+}
+
+
 void TaskFilterProxyModel::requestClose(const QModelIndex &index)
 {
     if (d->sourceTasksModel && index.isValid() && index.model() == this) {

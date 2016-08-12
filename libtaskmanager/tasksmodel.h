@@ -577,6 +577,15 @@ public:
     Q_INVOKABLE void requestNewInstance(const QModelIndex &index) override;
 
     /**
+     * Requests to open the given URLs with the application backing the task
+     * at the given index.
+     *
+     * @param index An index in this tasks model.
+     * @param urls The URLs to be passed to the application.
+     **/
+    Q_INVOKABLE void requestOpenUrls(const QModelIndex &index, const QList<QUrl> &urls);
+
+    /**
      * Request the task at the given index be closed.
      *
      * @param index An index in this tasks model.

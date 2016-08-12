@@ -64,6 +64,22 @@ void ConcatenateTasksProxyModel::requestNewInstance(const QModelIndex &index)
     }
 }
 
+void ConcatenateTasksProxyModel::requestOpenUrls(const QModelIndex &index, const QList<QUrl> &urls)
+{
+    if (!index.isValid() || index.model() != this) {
+        return;
+    }
+
+    const QModelIndex &sourceIndex = mapToSource(index);
+    const AbstractTasksModelIface *m = dynamic_cast<const AbstractTasksModelIface *>(sourceIndex.model());
+
+    if (m) {
+        // NOTE: KConcatenateRowsProxyModel offers no way to get a non-const pointer
+        // to one of the source models, so we have to go through a mapped index.
+        const_cast<AbstractTasksModelIface *>(m)->requestOpenUrls(sourceIndex, urls);
+    }
+}
+
 void ConcatenateTasksProxyModel::requestClose(const QModelIndex &index)
 {
     if (!index.isValid() || index.model() != this) {

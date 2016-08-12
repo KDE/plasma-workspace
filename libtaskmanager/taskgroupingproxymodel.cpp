@@ -938,6 +938,15 @@ void TaskGroupingProxyModel::requestNewInstance(const QModelIndex &index)
     d->abstractTasksSourceModel->requestNewInstance(mapToSource(index));
 }
 
+void TaskGroupingProxyModel::requestOpenUrls(const QModelIndex &index, const QList<QUrl> &urls)
+{
+    if (!d->abstractTasksSourceModel || !index.isValid() || index.model() != this) {
+        return;
+    }
+
+    d->abstractTasksSourceModel->requestOpenUrls(mapToSource(index), urls);
+}
+
 void TaskGroupingProxyModel::requestClose(const QModelIndex &index)
 {
     if (!d->abstractTasksSourceModel || !index.isValid() || index.model() != this) {

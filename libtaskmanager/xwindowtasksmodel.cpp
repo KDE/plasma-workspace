@@ -943,6 +943,21 @@ void XWindowTasksModel::requestNewInstance(const QModelIndex &index)
     }
 }
 
+void XWindowTasksModel::requestOpenUrls(const QModelIndex &index, const QList<QUrl> &urls)
+{
+    if (!index.isValid() || index.model() != this || index.row() < 0
+        || index.row() >= d->windows.count()
+        || urls.isEmpty()) {
+        return;
+    }
+
+    const QUrl &url = d->appData(d->windows.at(index.row())).url;
+    const KService::Ptr service = KService::serviceByDesktopPath(url.toLocalFile());
+    if (service) {
+        KRun::runApplication(*service, urls, nullptr, false, {}, KStartupInfo::createNewStartupIdForTimestamp(QX11Info::appUserTime()));
+    }
+}
+
 void XWindowTasksModel::requestClose(const QModelIndex &index)
 {
     if (!index.isValid() || index.model() != this || index.row() < 0 || index.row() >= d->windows.count()) {

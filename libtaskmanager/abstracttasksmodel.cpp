@@ -62,6 +62,12 @@ void AbstractTasksModel::requestNewInstance(const QModelIndex &index)
     Q_UNUSED(index)
 }
 
+void AbstractTasksModel::requestOpenUrls(const QModelIndex &index, const QList<QUrl> &urls)
+{
+    Q_UNUSED(index)
+    Q_UNUSED(urls)
+}
+
 void AbstractTasksModel::requestClose(const QModelIndex &index)
 {
     Q_UNUSED(index)
