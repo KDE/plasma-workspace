@@ -77,7 +77,7 @@ PlasmaCore.ColorScope {
             property alias searching : login.searching
 
             iconSource: searching ? "edit-select" : "search"
-            text: searching ? "Select User" : "Search for User"
+            text: searching ? i18nd("plasma_lookandfeel_org.kde.lookandfeel","Select User") : i18nd("plasma_lookandfeel_org.kde.lookandfeel","Search for User")
 
             onClicked: {
                 searching = !searching

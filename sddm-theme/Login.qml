@@ -100,7 +100,7 @@ Item {
         anchors.horizontalCenter: parent.horizontalCenter
         anchors.verticalCenter: parent.verticalCenter
         anchors.verticalCenterOffset: units.largeSpacing * 5
-        placeholderText: "Password"
+        placeholderText: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Password")
         focus: true
         echoMode: TextInput.Password
 
@@ -132,7 +132,7 @@ Item {
         anchors.top: passwordBox.bottom
         anchors.topMargin: units.smallSpacing
 
-        text: "Login"
+        text: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Login")
         enabled: !loggingIn
 
         onClicked: startLogin();
