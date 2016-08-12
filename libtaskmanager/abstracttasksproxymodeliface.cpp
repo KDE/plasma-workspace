@@ -54,6 +54,20 @@ void AbstractTasksProxyModelIface::requestNewInstance(const QModelIndex &index)
     }
 }
 
+void AbstractTasksProxyModelIface::requestOpenUrls(const QModelIndex &index, const QList<QUrl> &urls)
+{
+    if (!index.isValid()) {
+        return;
+    }
+
+    const QModelIndex &sourceIndex = mapIfaceToSource(index);
+    const AbstractTasksModelIface *m = dynamic_cast<const AbstractTasksModelIface *>(sourceIndex.model());
+
+    if (m) {
+        const_cast<AbstractTasksModelIface *>(m)->requestOpenUrls(sourceIndex, urls);
+    }
+}
+
 void AbstractTasksProxyModelIface::requestClose(const QModelIndex &index)
 {
     if (!index.isValid()) {
