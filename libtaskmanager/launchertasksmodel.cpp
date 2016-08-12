@@ -338,7 +338,7 @@ void LauncherTasksModel::requestOpenUrls(const QModelIndex &index, const QList<Q
         return;
     }
 
-    KRun::runApplication(*service, urls, nullptr, false, {}, KStartupInfo::createNewStartupIdForTimestamp(timeStamp));
+    KRun::runApplication(*service, urls, nullptr, 0, {}, KStartupInfo::createNewStartupIdForTimestamp(timeStamp));
 }
 
 }

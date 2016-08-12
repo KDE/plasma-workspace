@@ -954,7 +954,7 @@ void XWindowTasksModel::requestOpenUrls(const QModelIndex &index, const QList<QU
     const QUrl &url = d->appData(d->windows.at(index.row())).url;
     const KService::Ptr service = KService::serviceByDesktopPath(url.toLocalFile());
     if (service) {
-        KRun::runApplication(*service, urls, nullptr, false, {}, KStartupInfo::createNewStartupIdForTimestamp(QX11Info::appUserTime()));
+        KRun::runApplication(*service, urls, nullptr, 0, {}, KStartupInfo::createNewStartupIdForTimestamp(QX11Info::appUserTime()));
     }
 }
 

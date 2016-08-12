@@ -388,7 +388,7 @@ void WaylandTasksModel::requestOpenUrls(const QModelIndex &index, const QList<QU
     if (d->serviceCache.contains(window)) {
         const KService::Ptr service = d->serviceCache.value(window);
 
-        KRun::runApplication(*service, urls, nullptr, false);
+        KRun::runApplication(*service, urls, nullptr, 0);
 
         KActivities::ResourceInstance::notifyAccessed(QUrl("applications:" + service->storageId()),
             "org.kde.libtaskmanager");
