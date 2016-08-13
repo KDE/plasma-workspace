@@ -213,9 +213,6 @@ bool DesktopView::event(QEvent *e)
             }
         }
 
-    } else if (e->type() == QEvent::FocusIn) {     //FIXME: this should *not* be needed
-        ensureWindowType();
-
     } else if (e->type() == QEvent::FocusOut && containment()) {
         QObject *graphicObject = containment()->property("_plasma_graphicObject").value<QObject *>();
         if (graphicObject) {
