@@ -144,7 +144,20 @@ public Q_SLOTS:
     void toggleActivityManager();
     void evaluateScript(const QString &string);
     QString dumpCurrentLayoutJS();
-    void reloadDefaultLayout();
+
+    /**
+     * loads the shell layout from a look and feel package,
+     * restoring it at the last moment it was used, restoring
+     * any changes the user made
+     */
+    void loadLookAndFeelLayout(const QString &layout);
+
+    /**
+     * loads the shell layout from a look and feel package,
+     * resetting it to the default layout exported in the
+     * look and feel package
+     */
+    void loadLookAndFeelDefaultLayout(const QString &layout);
 
     Plasma::Containment *addPanel(const QString &plugin);
 
@@ -200,7 +213,6 @@ private Q_SLOTS:
     void alternativesVisibilityChanged(bool visible);
     void interactiveConsoleVisibilityChanged(bool visible);
     void screenRemoved(QScreen* screen);
-    void updateLookAndFeelPackage(const QString &file);
 
 private:
     void updateStruts();

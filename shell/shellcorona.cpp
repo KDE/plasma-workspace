@@ -101,10 +101,6 @@ ShellCorona::ShellCorona(QObject *parent)
         m_lookAndFeelPackage.setPath(packageName);
     }
 
-    KDirWatch::self()->addFile(QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation) + QLatin1Char('/') + QStringLiteral("kdeglobals"));
-    connect(KDirWatch::self(), &KDirWatch::dirty, this, &ShellCorona::updateLookAndFeelPackage);
-    connect(KDirWatch::self(), &KDirWatch::created, this, &ShellCorona::updateLookAndFeelPackage);
-
     connect(this, &Plasma::Corona::containmentCreated, this, [this] (Plasma::Containment *c) {
         executeSetupPlasmoidScript(c, c);
     });
@@ -547,35 +543,42 @@ QString ShellCorona::dumpCurrentLayoutJS()
     return script;
 }
 
-void ShellCorona::reloadDefaultLayout()
+void ShellCorona::loadLookAndFeelDefaultLayout(const QString &packageName)
 {
-    for (const QString &group : config()->groupList()) {
-        config()->deleteGroup(group);
+    KPackage::Package newPack = m_lookAndFeelPackage;
+    newPack.setPath(packageName);
+
+    if (!newPack.isValid()) {
+        return;
     }
-    config()->sync();
+
+    KSharedConfig::Ptr conf = KSharedConfig::openConfig(QStringLiteral("plasma-") + m_shell + QChar('-') + m_lookAndFeelPackage.metadata().pluginId() + QStringLiteral("-appletsrc"), KConfig::SimpleConfig);
+
+    m_lookAndFeelPackage.setPath(packageName);
+
+    //get rid of old config
+    for (const QString &group : conf->groupList()) {
+        conf->deleteGroup(group);
+    }
+    conf->sync();
     unload();
     load();
 }
 
-void ShellCorona::updateLookAndFeelPackage(const QString &file)
+void ShellCorona::loadLookAndFeelLayout(const QString &packageName)
 {
-    //only care about kdeglobals
-    if (!file.endsWith(QStringLiteral("kdeglobals"))) {
-        return;
-    }
-
-    //TODO: put here anything that needs to update lnf-based
-    KConfigGroup cg(KSharedConfig::openConfig(QStringLiteral("kdeglobals")), "KDE");
-    const QString packageName = cg.readEntry("LookAndFeelPackage", QString());
-    if (packageName.isEmpty()) {
-        return;
-    }
-
     if (packageName == m_lookAndFeelPackage.metadata().pluginId()) {
         return;
     }
 
-    m_lookAndFeelPackage.setPath(packageName);
+    KPackage::Package newPack = m_lookAndFeelPackage;
+    newPack.setPath(packageName);
+
+    if (!newPack.isValid()) {
+        return;
+    }
+
+    m_lookAndFeelPackage = newPack;
 
     //NOTE: updateng the plasma theme should *not* be necessary here as the kcm is already doing this
     unload();
