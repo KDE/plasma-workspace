@@ -67,7 +67,7 @@ PlasmaComponents.ListItem {
 
         Rectangle {
             anchors.centerIn: parent
-            rotation: Qt.application.layoutDirection === Qt.RightToLeft ? 90 : -90 // you cannot even rotate gradients without QtGraphicalEffects
+            rotation: -90 // you cannot even rotate gradients without QtGraphicalEffects
             width: parent.height
             height: parent.width
 
