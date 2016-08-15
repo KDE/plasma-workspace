@@ -212,12 +212,6 @@ bool DesktopView::event(QEvent *e)
                 KWindowSystem::setShowingDesktop(false);
             }
         }
-
-    } else if (e->type() == QEvent::FocusOut && containment()) {
-        QObject *graphicObject = containment()->property("_plasma_graphicObject").value<QObject *>();
-        if (graphicObject) {
-            graphicObject->setProperty("focus", false);
-        }
     } else if (e->type() == QEvent::PlatformSurface) {
         if (auto pe = dynamic_cast<QPlatformSurfaceEvent*>(e)) {
             switch (pe->surfaceEventType()) {
