@@ -383,6 +383,7 @@ QString ShellCorona::dumpCurrentLayoutJS()
     int i = 0;
 
     //dump panels
+    //two separate loops to have desktops and panels separated in scripts
     script += "//////Panels\n";
     foreach (Plasma::Containment *cont, containments()) {
         if ((cont->formFactor() == Plasma::Types::Horizontal || cont->formFactor() == Plasma::Types::Vertical) &&
