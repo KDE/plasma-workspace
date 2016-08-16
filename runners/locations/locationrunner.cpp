@@ -95,7 +95,7 @@ void LocationsRunner::match(Plasma::RunnerContext &context)
 
         QUrl url(term);
 
-        if (!KProtocolInfo::isKnownProtocol(url.scheme())) {
+        if (url.isEmpty() || !KProtocolInfo::isKnownProtocol(url.scheme())) {
             return;
         }
 
