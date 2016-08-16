@@ -10,10 +10,10 @@ PlasmaComponents.ToolButton {
 
     property int currentIndex: -1
 
-    text: instantiator.objectAt(currentIndex).shortName
+    text: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Keyboard Layout: %1", instantiator.objectAt(currentIndex).shortName)
     implicitWidth: minimumWidth
 
-        Component.onCompleted: currentIndex = Qt.binding(function() {return keyboard.currentLayout});
+    Component.onCompleted: currentIndex = Qt.binding(function() {return keyboard.currentLayout});
 
     menu: QQC.Menu {
         id: keyboardMenu

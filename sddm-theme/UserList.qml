@@ -47,6 +47,9 @@ ListView {
         userName: model.name
         iconSource: model.icon || ""
 
+        width: userItemWidth
+        height: userItemHeight
+
         onClicked: {
             ListView.view.currentIndex = index;
             ListView.view.userSelected();

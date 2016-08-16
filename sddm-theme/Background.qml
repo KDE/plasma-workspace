@@ -27,26 +27,13 @@ import QtGraphicalEffects 1.0
 
 
 FocusScope {
-    id: container
-
     property alias source: image.source
     property alias fillMode: image.fillMode
     property alias status: image.status
 
-    LinearGradient {
-        x: geometry.x; y: geometry.y; width: geometry.width; height:geometry.height
-        gradient: Gradient {
-            GradientStop {
-                position: 0.0
-                color: "#1fb4f9"
-            }
-            GradientStop {
-                position: 1.0
-                color: "#197cf1"
-            }
-        }
-        cached: true
-        visible: image.status == Image.Null || image.status == Image.Error
+    Rectangle {
+        anchors.fill: parent
+        color: "#1d99f3"
     }
 
     Image {
@@ -56,10 +43,5 @@ FocusScope {
         clip: true
         focus: true
         smooth: true
-    }
-
-    MouseArea {
-        anchors.fill: parent
-        onClicked: container.focus = true
     }
 }

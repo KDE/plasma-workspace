@@ -23,15 +23,22 @@ Item
 
 
     function login(user, password, sessionIndex) {
-        console.log("SDDM - logging in as ", user, password)
-        //pretend login failed
+        console.log("SDDM - logging in as ", user, password, sessionIndex)
 
-        tryLogin.start();
+        //modify as appropriate for testing
+        var success = false
+
+        if (success) {
+            loginSucceeded();
+        } else {
+            tryLogin.start();
+        }
+
     }
 
     Timer {
         id: tryLogin
-        interval: 3000
+        interval: 1000
         onTriggered: loginFailed();
     }
 

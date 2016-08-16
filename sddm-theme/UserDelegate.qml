@@ -31,16 +31,14 @@ Item {
     property string name
     property string userName
     property string iconSource
-
-    implicitWidth: units.gridUnit * 8 //6 wide + 1 either side spacing
-    implicitHeight: units.gridUnit * 7  + usernameDelegate.implicitHeight
-
     signal clicked()
+
+    property real faceSize: Math.min(width, height - usernameDelegate.height - units.smallSpacing)
 
     Item {
         id: imageSource
-        implicitWidth: units.gridUnit * 6
-        implicitHeight: implicitWidth
+        width: faceSize
+        height: faceSize
 
         //we sometimes have a path to an image sometimes an icon
         //IconItem tries to load a full path as an icon which is rubbish
@@ -57,6 +55,7 @@ Item {
             source: visible ? "user-identity" : undefined
             visible: (face.status == Image.Error || face.status == Image.Null)
             anchors.fill: parent
+            anchors.margins: units.gridUnit * 0.5 // because mockup says so...
         }
     }
 
@@ -64,8 +63,8 @@ Item {
         anchors.top: parent.top
         anchors.horizontalCenter: parent.horizontalCenter
 
-        implicitWidth: imageSource.width
-        implicitHeight: imageSource.height
+        width: imageSource.width
+        height: imageSource.height
 
         supportsAtlasTextures: true
 
@@ -75,7 +74,7 @@ Item {
             live: false
         }
 
-        property var colorBorder: theme.buttonFocusColor
+        property var colorBorder: PlasmaCore.ColorScope.textColor
 
         //draw a circle with an antialised border
         //innerRadius = size of the inner circle with contents
@@ -83,8 +82,8 @@ Item {
         //blend = area to blend between two colours
         //all sizes are normalised so 0.5 == half the width of the texture
 
-        //if copying into another project don't forget to * qt_Opacity. It's just unused here
-        //and connect themeChanged to update()
+        //if copying into another project don't forget to connect themeChanged to update()
+        //but in SDDM that's a bit pointless
         fragmentShader: "
                         varying highp vec2 qt_TexCoord0;
                         uniform highp float qt_Opacity;
@@ -92,7 +91,7 @@ Item {
 
                         uniform vec4 colorBorder;
                         float blend = 0.01;
-                        float innerRadius = 0.48;
+                        float innerRadius = 0.47;
                         float outerRadius = innerRadius + 0.02;
                         vec4 colorEmpty = vec4(0.0, 0.0, 0.0, 0.0);
 
@@ -111,7 +110,9 @@ Item {
                             else if (dist < outerRadius + blend)
                                 gl_FragColor = mix(colorBorder, colorEmpty, ((dist - outerRadius) / blend));
                             else
-                                gl_FragColor = colorEmpty;
+                                gl_FragColor = colorEmpty ;
+
+                            gl_FragColor = gl_FragColor * qt_Opacity;
                     }
         "
     }
@@ -125,10 +126,11 @@ Item {
             left: parent.left
             right: parent.right
         }
+        height: implicitHeight // work around stupid bug in Plasma Components that sets the height
         text: wrapper.name
         elide: Text.ElideRight
         horizontalAlignment: Text.AlignHCenter
-        //make an indication that this has active focus, this only happens when reached with text navigation
+        //make an indication that this has active focus, this only happens when reached with keyboard navigation
         font.underline: wrapper.activeFocus
     }
 

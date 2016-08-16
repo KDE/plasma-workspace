@@ -1,5 +1,5 @@
 /*
- *   Copyright 2014 David Edmundson <davidedmundson@kde.org>
+ *   Copyright 2016 David Edmundson <davidedmundson@kde.org>
  *
  *   This program is free software; you can redistribute it and/or modify
  *   it under the terms of the GNU Library General Public License as
@@ -29,8 +29,11 @@ import org.kde.plasma.extras 2.0 as PlasmaExtras
 PlasmaCore.ColorScope {
     id: root
     colorGroup: PlasmaCore.Theme.ComplementaryColorGroup
+
     width: 1600
     height: 900
+
+    property string notificationMessage
 
     LayoutMirroring.enabled: Qt.application.layoutDirection === Qt.RightToLeft
     LayoutMirroring.childrenInherit: true
@@ -45,100 +48,149 @@ PlasmaCore.ColorScope {
         }
     }
 
-    Login {
-        id: login
-        sessionIndex: sessionButton.currentIndex
 
-        anchors.top: parent.top
-        anchors.topMargin: footer.height
-        anchors.bottom: footer.top
-        anchors.left: parent.left
-        anchors.right: parent.right
+    Clock {
+        anchors.bottom: parent.verticalCenter
+        anchors.bottomMargin: units.gridUnit * 13
+        anchors.horizontalCenter: parent.horizontalCenter
+    }
 
-        focus: true
+
+    StackView {
+        id: mainStack
+        anchors {
+            top: parent.top
+            bottom: footer.top
+            left: parent.left
+            right: parent.right
+            topMargin: footer.height // effectively centre align within the view
+        }
+        focus: true //StackView is an implicit focus scope, so we need to give this focus so the item inside will have it
+        initialItem: Login {
+            userListModel: userModel
+            userListCurrentIndex: userModel.lastIndex >= 0 ? userModel.lastIndex : 0
+
+            notificationMessage: root.notificationMessage
+
+            actionItems: [
+                ActionButton {
+                    iconSource: "system-suspend"
+                    text: i18nd("plasma_lookandfeel_org.kde.lookandfeel","Suspend")
+                    onClicked: sddm.suspend()
+                    enabled: sddm.canSuspend
+                },
+                ActionButton {
+                    iconSource: "system-reboot"
+                    text: i18nd("plasma_lookandfeel_org.kde.lookandfeel","Restart")
+                    onClicked: sddm.reboot()
+                    enabled: sddm.canReboot
+                },
+                ActionButton {
+                    iconSource: "system-shutdown"
+                    text: i18nd("plasma_lookandfeel_org.kde.lookandfeel","Shutdown")
+                    onClicked: sddm.powerOff()
+                    enabled: sddm.canPowerOff
+                },
+                ActionButton {
+                    iconSource: "system-search"
+                    text: i18nd("plasma_lookandfeel_org.kde.lookandfeel","Different User")
+                    onClicked: mainStack.push(userPrompt)
+                    enabled: true
+                }
+            ]
+
+            onLoginRequest: {
+                root.notificationMessage = ""
+                sddm.login(username, password, sessionButton.currentIndex)
+            }
+        }
+
+        Behavior on opacity {
+            OpacityAnimator {
+                duration: units.longDuration
+            }
+        }
+
+    }
+
+    Component {
+        id: userPrompt
+        Login {
+            showUsernamePrompt: true
+            notificationMessage: root.notificationMessage
+
+            userListModel: QtObject {
+                property string name: i18nd("plasma_lookandfeel_org", "Login as different user")
+                property string iconSource: ""
+            }
+
+            onLoginRequest: {
+                root.notificationMessage = ""
+                sddm.login(username, password, sessionButton.currentIndex)
+            }
+
+            actionItems: [
+                ActionButton {
+                    iconSource: "system-suspend" //FIXME waiting on VDG to tell me icon name
+                    text: i18nd("plasma_lookandfeel_org.kde.lookandfeel","Back")
+                    onClicked: mainStack.pop()
+                }
+            ]
+        }
     }
 
     //Footer
     RowLayout {
         id: footer
-        anchors.bottom: parent.bottom
-        anchors.left: parent.left
-        anchors.right: parent.right
-        anchors.margins: units.smallSpacing
+        anchors {
+            bottom: parent.bottom
+            left: parent.left
+            right: parent.right
+            margins: units.smallSpacing
+        }
 
-        SessionButton {
-            id: sessionButton
-            Component.onCompleted: {
-                currentIndex = sessionModel.lastIndex
+        Behavior on opacity {
+            OpacityAnimator {
+                duration: units.longDuration
             }
         }
-        PlasmaComponents.ToolButton {
-            implicitWidth: minimumWidth
-            property alias searching : login.searching
 
-            iconSource: searching ? "edit-select" : "search"
-            text: searching ? i18nd("plasma_lookandfeel_org.kde.lookandfeel","Select User") : i18nd("plasma_lookandfeel_org.kde.lookandfeel","Search for User")
-
-            onClicked: {
-                searching = !searching
-            }
-        }
-        Item {
-            Layout.fillWidth: true
-        }
-
-        PlasmaComponents.ToolButton {
-            iconSource: "system-suspend"
-            text: i18nd("plasma_lookandfeel_org.kde.lookandfeel","Suspend")
-            implicitWidth: minimumWidth
-            onClicked: sddm.suspend()
-            visible: sddm.canSuspend
-        }
-
-        PlasmaComponents.ToolButton {
-            iconSource: "system-reboot"
-            text: i18nd("plasma_lookandfeel_org.kde.lookandfeel","Restart")
-            implicitWidth: minimumWidth
-            onClicked: sddm.reboot()
-            visible: sddm.canReboot
-        }
-
-        PlasmaComponents.ToolButton {
-            iconSource: "system-shutdown"
-            text: i18nd("plasma_lookandfeel_org.kde.lookandfeel","Shutdown")
-            implicitWidth: minimumWidth
-            onClicked: sddm.powerOff()
-            visible: sddm.canPowerOff
-        }
-
-        BatteryIcon {
-            implicitWidth: units.iconSizes.medium
-            implicitHeight: units.iconSizes.medium
-
-            visible: pmSource.data["Battery"]["Has Cumulative"]
-
-            hasBattery: true
-            percent: pmSource.data["Battery"]["Percent"]
-            pluggedIn: pmSource.data["AC Adapter"] ? pmSource.data["AC Adapter"]["Plugged in"] : false
-
-            PlasmaCore.DataSource {
-                id: pmSource
-                engine: "powermanagement"
-                connectedSources: ["Battery", "AC Adapter"]
-            }
-        }
         KeyboardButton {
         }
 
-        PlasmaComponents.Label {
-            text: Qt.formatTime(timeSource.data["Local"]["DateTime"])
-            //Do I need the FontMetrics magic to set implicitWidth?
-            PlasmaCore.DataSource {
-                id: timeSource
-                engine: "time"
-                connectedSources: ["Local"]
-                interval: 1000
-            }
+        SessionButton {
+            id: sessionButton
+        }
+
+        Item {
+            Layout.fillWidth: true
         }
     }
+
+    Connections {
+        target: sddm
+        onLoginFailed: {
+            notificationMessage = i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Login Failed")
+        }
+        onLoginSucceeded: {
+            //note SDDM will kill the greeter at some random point after this
+            //there is no certainty any transition will finish, it depends on the time it
+            //takes to complete the init
+            mainStack.opacity = 0
+            footer.opacity = 0
+        }
+    }
+
+    onNotificationMessageChanged: {
+        if (notificationMessage) {
+            notificationResetTimer.start();
+        }
+    }
+
+    Timer {
+        id: notificationResetTimer
+        interval: 3000
+        onTriggered: notificationMessage = ""
+    }
+
 }
