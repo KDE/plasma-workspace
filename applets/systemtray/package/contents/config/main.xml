@@ -46,7 +46,7 @@
       <default></default>
     </entry>
     <entry name="iconSize" type="Int">
-      <default>2</default>
+      <default>1</default>
     </entry>
   </group>
 

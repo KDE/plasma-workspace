@@ -142,7 +142,7 @@ View::~View()
 
 void View::initWayland()
 {
-    if (!QGuiApplication::platformName().startsWith(QLatin1String("wayland"))) {
+    if (!KWindowSystem::isPlatformWayland()) {
         return;
     }
     using namespace KWayland::Client;

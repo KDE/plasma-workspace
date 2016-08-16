@@ -7,7 +7,7 @@ target_link_libraries (ion_bbcukmet
     KF5::I18n
 )
 
-kcoreaddons_desktop_to_json(ion_bbcukmet ion-bbcukmet.desktop)
+kcoreaddons_desktop_to_json(ion_bbcukmet ion-bbcukmet.desktop SERVICE_TYPES plasma-dataengine.desktop)
 
 install (FILES ion-bbcukmet.desktop DESTINATION ${KDE_INSTALL_KSERVICES5DIR})
 

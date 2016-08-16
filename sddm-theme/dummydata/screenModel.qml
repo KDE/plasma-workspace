@@ -16,12 +16,12 @@ ListModel {
     Component.onCompleted: {
         append({
             name: "Screen 1",
-            geometry: {x: 0, y: 0, width: 800, height: 600},
+            geometry: {x: 0, y: 0, width: 1600, height: 900},
         });
 
         append({
             name: "Screen 2",
-            geometry: {x: 800, y: 0, width: 800, height: 400},
+            geometry: {x: 1980, y: 0, width: 1600, height: 900},
         });
     }
 

@@ -13,19 +13,20 @@ ListModel {
     ListElement {
         name: "afiestas"
         realName: "Alex Fiestas"
-        icon: ""
+        icon: "../face1.jpeg"
         homeDir: ""
     }
     ListElement {
-        name: "apol"
-        realName: "Aleix Pol"
-        icon: ""
+        //no real name and no icon
+        name: "someperson"
+        realName: ""
         homeDir: ""
     }
     ListElement {
+        //deliberately long name
         name: "shadeslayer"
-        realName: "Rohan Garg"
-        icon: ""
+        realName: "Sebastian Schweinstager"
+        icon: "/home/david/.face.icon"
         homeDir:""
     }
 }

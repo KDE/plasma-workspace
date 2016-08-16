@@ -162,12 +162,12 @@ void TasksModel::Private::initModels()
     //     -> flattenGroupsProxyModel (optionally, if groupInline == true) flattens groups out.
     //      -> TasksModel collapses (top-level) items into task lifecycle abstraction; sorts.
 
-    if (!windowTasksModel && QGuiApplication::platformName().startsWith(QLatin1String("wayland"))) {
+    if (!windowTasksModel && KWindowSystem::isPlatformWayland()) {
         windowTasksModel = new WaylandTasksModel();
     }
 
 #if HAVE_X11
-    if (!windowTasksModel && QX11Info::isPlatformX11()) {
+    if (!windowTasksModel && KWindowSystem::isPlatformX11()) {
         windowTasksModel = new XWindowTasksModel();
     }
 #endif

@@ -39,6 +39,7 @@
 #include <KActionCollection>
 #include <KToggleAction>
 #include <KTextEdit>
+#include <KWindowSystem>
 
 #include "configdialog.h"
 #include "klippersettings.h"
@@ -630,7 +631,7 @@ bool Klipper::blockFetchingNewData()
 //   selected when Klipper asked first.
 // Use XQueryPointer rather than QApplication::mouseButtons()/keyboardModifiers(), because
 //   Klipper needs the very current state.
-    if (!QX11Info::isPlatformX11()) {
+    if (!KWindowSystem::isPlatformX11()) {
         return false;
     }
     xcb_connection_t *c = QX11Info::connection();
@@ -857,7 +858,7 @@ bool Klipper::ignoreClipboardChanges() const
 void Klipper::updateTimestamp()
 {
 #if HAVE_X11
-    if (QX11Info::isPlatformX11()) {
+    if (KWindowSystem::isPlatformX11()) {
         QX11Info::setAppTime(QX11Info::getTimestamp());
     }
 #endif

@@ -7,7 +7,7 @@ target_link_libraries (ion_envcan
     KF5::I18n
 )
 
-kcoreaddons_desktop_to_json(ion_envcan ion-envcan.desktop)
+kcoreaddons_desktop_to_json(ion_envcan ion-envcan.desktop SERVICE_TYPES plasma-dataengine.desktop)
 
 install (FILES ion-envcan.desktop DESTINATION ${KDE_INSTALL_KSERVICES5DIR})
 

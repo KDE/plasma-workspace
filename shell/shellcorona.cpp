@@ -219,8 +219,7 @@ bool ShellCorona::eventFilter(QObject *watched, QEvent *event)
         watched->inherits("PlasmaQuick::Dialog")) {
         QPlatformSurfaceEvent *se = static_cast<QPlatformSurfaceEvent *>(event);
         if (se->surfaceEventType() == QPlatformSurfaceEvent::SurfaceCreated) {
-            if (QGuiApplication::platformName().startsWith(
-                QLatin1String("wayland"), Qt::CaseInsensitive)) {
+            if (KWindowSystem::isPlatformWayland()) {
                 WaylandDialogFilter::install(qobject_cast<QWindow *>(watched), this);
             }
         }
@@ -683,13 +682,13 @@ void ShellCorona::primaryOutputChanged()
     const int oldIdOfPrimary = m_screenPool->id(newPrimary->name());
     //swap order in m_desktopViewforId
     if (m_desktopViewforId.contains(0) && m_desktopViewforId.contains(oldIdOfPrimary)) {
-        DesktopView *oldPrimaryDesktop = m_desktopViewforId.value(0);
-        DesktopView *newPrimaryDesktop = m_desktopViewforId.value(oldIdOfPrimary);
+        DesktopView *primaryDesktop = m_desktopViewforId.value(0);
+        DesktopView *oldDesktopOfPrimary = m_desktopViewforId.value(oldIdOfPrimary);
 
-        oldPrimaryDesktop->setScreenToFollow(newPrimaryDesktop->screenToFollow());
-        newPrimaryDesktop->setScreenToFollow(newPrimary);
-        m_desktopViewforId[0] = newPrimaryDesktop;
-        m_desktopViewforId[oldIdOfPrimary] = oldPrimaryDesktop;
+        primaryDesktop->setScreenToFollow(newPrimary);
+        oldDesktopOfPrimary->setScreenToFollow(oldPrimary);
+        primaryDesktop->show();
+        oldDesktopOfPrimary->show();
     }
     m_screenPool->setPrimaryConnector(newPrimary->name());
 
@@ -708,21 +707,21 @@ void ShellCorona::primaryOutputChanged()
 void ShellCorona::screenInvariants() const
 {
     Q_ASSERT(m_desktopViewforId.keys().count() <= QGuiApplication::screens().count());
-    QScreen *s = !m_desktopViewforId.contains(0) ? nullptr : m_desktopViewforId.value(0)->screen();
+    QScreen *s = !m_desktopViewforId.contains(0) ? nullptr : m_desktopViewforId.value(0)->screenToFollow();
 
     QScreen* ks = qGuiApp->primaryScreen();
-    Q_ASSERT(ks == s);
 
     QSet<QScreen*> screens;
     foreach (const int id, m_desktopViewforId.keys()) {
         const DesktopView *view = m_desktopViewforId.value(id);
-        QScreen *screen = view->screen();
+        QScreen *screen = view->screenToFollow();
         Q_ASSERT(!screens.contains(screen));
         Q_ASSERT(!m_redundantOutputs.contains(screen));
 //         commented out because a different part of the code-base is responsible for this
 //         and sometimes is not yet called here.
 //         Q_ASSERT(!view->fillScreen() || view->geometry() == screen->geometry());
         Q_ASSERT(view->containment());
+
         Q_ASSERT(view->containment()->screen() == id || view->containment()->screen() == -1);
         Q_ASSERT(view->containment()->lastScreen() == id || view->containment()->lastScreen() == -1);
         Q_ASSERT(view->isVisible());
@@ -994,7 +993,8 @@ void ShellCorona::removeDesktop(DesktopView *desktopView)
         }
     }
 
-    delete m_desktopViewforId.value(idx);
+    Q_ASSERT(m_desktopViewforId.value(idx) == desktopView);
+    delete desktopView;
     m_desktopViewforId.remove(idx);
 }
 
@@ -1009,7 +1009,7 @@ QList<PanelView *> ShellCorona::panelsForScreen(QScreen *screen) const
 {
     QList<PanelView *> ret;
     foreach (PanelView *v, m_panelViews) {
-        if (v->screen() == screen) {
+        if (v->screenToFollow() == screen) {
             ret += v;
         }
     }
@@ -1082,7 +1082,6 @@ void ShellCorona::reconsiderOutputs()
 void ShellCorona::addOutput(QScreen* screen)
 {
     Q_ASSERT(screen);
-
     connect(screen, &QScreen::geometryChanged,
             &m_reconsiderOutputsTimer, static_cast<void (QTimer::*)()>(&QTimer::start),
             Qt::UniqueConnection);
@@ -1133,10 +1132,10 @@ void ShellCorona::addOutput(QScreen* screen)
 Plasma::Containment *ShellCorona::createContainmentForActivity(const QString& activity, int screenNum)
 {
     if (m_desktopContainments.contains(activity)) {
-        QHash<int, Plasma::Containment *> act = m_desktopContainments.value(activity);
-        QHash<int, Plasma::Containment *>::const_iterator it = act.constFind(screenNum);
-        if (it != act.constEnd() && (*it)) {
-            return *it;
+        for (Plasma::Containment *cont : m_desktopContainments.value(activity)) {
+            if (cont->screen() == screenNum && cont->activity() == activity) {
+                return cont;
+            }
         }
     }
 
@@ -1826,9 +1825,15 @@ void ShellCorona::stopCurrentActivity()
 
 void ShellCorona::insertContainment(const QString &activity, int screenNum, Plasma::Containment *containment)
 {
-    Plasma::Containment *cont = m_desktopContainments.value(activity).value(screenNum);
-    if (containment == cont) {
-        return;
+    Plasma::Containment *cont = nullptr;
+    for (Plasma::Containment *c : m_desktopContainments.value(activity)) {
+        if (c->screen() == screenNum) {
+            cont = c;
+            if (containment == cont) {
+                return;
+            }
+            break;
+        }
     }
 
     Q_ASSERT(!m_desktopContainments.value(activity).values().contains(containment));
@@ -1838,7 +1843,7 @@ void ShellCorona::insertContainment(const QString &activity, int screenNum, Plas
                 this, SLOT(desktopContainmentDestroyed(QObject*)));
         cont->destroy();
     }
-    m_desktopContainments[activity][screenNum] = containment;
+    m_desktopContainments[activity].insert(containment);
 
     //when a containment gets deleted update our map of containments
     connect(containment, SIGNAL(destroyed(QObject*)), this, SLOT(desktopContainmentDestroyed(QObject*)));
@@ -1851,7 +1856,7 @@ void ShellCorona::desktopContainmentDestroyed(QObject *obj)
     // so keep ugly bookeeping by hand
     auto containment = static_cast<Plasma::Containment*>(obj);
     for (auto a : m_desktopContainments) {
-        QMutableHashIterator<int, Plasma::Containment *> it(a);
+        QMutableSetIterator<Plasma::Containment *> it(a);
         while (it.hasNext()) {
             it.next();
             if (it.value() == containment) {
@@ -1881,7 +1886,7 @@ void ShellCorona::showOpenGLNotCompatibleWarning()
 
 void ShellCorona::setupWaylandIntegration()
 {
-    if (!QGuiApplication::platformName().startsWith(QLatin1String("wayland"), Qt::CaseInsensitive)) {
+    if (!KWindowSystem::isPlatformWayland()) {
         return;
     }
     using namespace KWayland::Client;

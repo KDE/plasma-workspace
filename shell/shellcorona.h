@@ -239,7 +239,7 @@ private:
     KConfigGroup m_lnfDefaultsConfig;
     QList<Plasma::Containment *> m_waitingPanels;
     QHash<QString, QString> m_activityContainmentPlugins;
-    QHash<QString, QHash<int, Plasma::Containment *> > m_desktopContainments;
+    QHash<QString, QSet<Plasma::Containment *> > m_desktopContainments;
     QAction *m_addPanelAction;
     QMenu *m_addPanelsMenu;
     KPackage::Package m_lookAndFeelPackage;
