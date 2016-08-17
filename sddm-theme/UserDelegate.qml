@@ -35,6 +35,14 @@ Item {
 
     property real faceSize: Math.min(width, height - usernameDelegate.height - units.smallSpacing)
 
+    opacity: isCurrent ? 1.0 : 0.5
+
+    Behavior on opacity {
+        OpacityAnimator {
+            duration: units.longDuration
+        }
+    }
+
     Item {
         id: imageSource
         width: faceSize
