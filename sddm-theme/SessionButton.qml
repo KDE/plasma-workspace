@@ -30,7 +30,7 @@ PlasmaComponents.ToolButton {
 
     implicitWidth: minimumWidth
 
-    iconSource: ""
+    visible: menu.items.length > 1
 
     text: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Desktop Session: %1", instantiator.objectAt(currentIndex).text || "")
 

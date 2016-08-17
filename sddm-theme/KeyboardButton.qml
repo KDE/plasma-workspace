@@ -13,6 +13,8 @@ PlasmaComponents.ToolButton {
     text: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Keyboard Layout: %1", instantiator.objectAt(currentIndex).shortName)
     implicitWidth: minimumWidth
 
+    visible: menu.items.length > 1
+
     Component.onCompleted: currentIndex = Qt.binding(function() {return keyboard.currentLayout});
 
     menu: QQC.Menu {
