@@ -39,6 +39,7 @@ Item {
             left: parent.left
             right: parent.right
         }
+        colorGroup: PlasmaCore.ColorScope.colorGroup
         active: mouseArea.containsMouse || root.activeFocus
     }
     PlasmaComponents.Label {
