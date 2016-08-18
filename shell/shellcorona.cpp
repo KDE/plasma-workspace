@@ -592,7 +592,7 @@ void ShellCorona::loadLookAndFeelDefaultLayout(const QString &packageName)
         return;
     }
 
-    KSharedConfig::Ptr conf = KSharedConfig::openConfig(QStringLiteral("plasma-") + m_shell + QChar('-') + m_lookAndFeelPackage.metadata().pluginId() + QStringLiteral("-appletsrc"), KConfig::SimpleConfig);
+    KSharedConfig::Ptr conf = KSharedConfig::openConfig(QStringLiteral("plasma-") + m_shell + QStringLiteral("-appletsrc"), KConfig::SimpleConfig);
 
     m_lookAndFeelPackage.setPath(packageName);
 
@@ -601,26 +601,6 @@ void ShellCorona::loadLookAndFeelDefaultLayout(const QString &packageName)
         conf->deleteGroup(group);
     }
     conf->sync();
-    unload();
-    load();
-}
-
-void ShellCorona::loadLookAndFeelLayout(const QString &packageName)
-{
-    if (packageName == m_lookAndFeelPackage.metadata().pluginId()) {
-        return;
-    }
-
-    KPackage::Package newPack = m_lookAndFeelPackage;
-    newPack.setPath(packageName);
-
-    if (!newPack.isValid()) {
-        return;
-    }
-
-    m_lookAndFeelPackage = newPack;
-
-    //NOTE: updateng the plasma theme should *not* be necessary here as the kcm is already doing this
     unload();
     load();
 }
@@ -640,16 +620,8 @@ void ShellCorona::load()
     disconnect(m_activityController, &KActivities::Controller::serviceStatusChanged, this, &ShellCorona::load);
 
     //TODO: a kconf_update script is needed
-    QString configFileName(QStringLiteral("plasma-") + m_shell + QChar('-') + m_lookAndFeelPackage.metadata().pluginId() + QStringLiteral("-appletsrc"));
+    QString configFileName(QStringLiteral("plasma-") + m_shell + QStringLiteral("-appletsrc"));
 
-    //NOTE: this is just for the transition from Plasma 5.7
-    {
-        QString oldConfigFilePath(QStandardPaths::writableLocation(QStandardPaths::ConfigLocation) + QStringLiteral("/plasma-") + m_shell + QStringLiteral("-appletsrc"));
-        if (QFile::exists(oldConfigFilePath)) {
-            qCDebug(PLASMASHELL) << "Old config file older than Plasma 5.8 found: moving to new location";
-            QFile::rename(oldConfigFilePath, QStandardPaths::writableLocation(QStandardPaths::ConfigLocation) + QChar('/') + configFileName);
-        }
-    }
     loadLayout(configFileName);
 
     checkActivities();

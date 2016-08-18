@@ -149,13 +149,6 @@ public Q_SLOTS:
 
     /**
      * loads the shell layout from a look and feel package,
-     * restoring it at the last moment it was used, restoring
-     * any changes the user made
-     */
-    void loadLookAndFeelLayout(const QString &layout);
-
-    /**
-     * loads the shell layout from a look and feel package,
      * resetting it to the default layout exported in the
      * look and feel package
      */
