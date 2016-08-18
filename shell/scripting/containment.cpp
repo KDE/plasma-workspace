@@ -193,8 +193,7 @@ QScriptValue Containment::addWidget(QScriptContext *context, QScriptEngine *engi
             context->argument(4).isNumber()) {
             //Try to reconstruct a rectangle from the object hat has been passed
             //It's expected a js object such as
-            //addWidget("org.kde.plasma.analogclock", {"x": 0, "y": 100, "width": 300, "height": 400});
-            const QVariantMap geom = context->argument(1).toVariant().value<QVariantMap>();
+            //addWidget("org.kde.plasma.analogclock", 0, 100, 300, 400);
             geometry = QRectF(context->argument(1).toNumber(),
                               context->argument(2).toNumber(),
                               context->argument(3).toNumber(),
