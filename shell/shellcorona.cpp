@@ -884,7 +884,6 @@ void ShellCorona::createWaitingPanels()
 
         m_panelViews[cont] = panel;
         panel->setContainment(cont);
-        panel->show();
         cont->reactToScreenChange();
 
         connect(cont, &QObject::destroyed, this, &ShellCorona::panelContainmentDestroyed);
