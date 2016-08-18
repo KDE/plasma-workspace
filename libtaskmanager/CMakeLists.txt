@@ -65,6 +65,7 @@ install(TARGETS taskmanager EXPORT libtaskmanagerLibraryTargets ${KDE_INSTALL_TA
 install(FILES
     abstracttasksmodel.h
     abstracttasksmodeliface.h
+    abstracttasksproxymodeliface.h
     activityinfo.h
     concatenatetasksproxymodel.h
     flattentaskgroupsproxymodel.h
