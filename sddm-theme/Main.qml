@@ -131,7 +131,7 @@ PlasmaCore.ColorScope {
 
             actionItems: [
                 ActionButton {
-                    iconSource: "system-suspend" //FIXME waiting on VDG to tell me icon name
+                    iconSource: "go-previous-view"
                     text: i18nd("plasma_lookandfeel_org.kde.lookandfeel","Back")
                     onClicked: mainStack.pop()
                 }
