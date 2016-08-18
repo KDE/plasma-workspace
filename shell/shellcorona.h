@@ -145,7 +145,7 @@ public Q_SLOTS:
     void evaluateScript(const QString &string);
     void activateLauncherMenu();
 
-    QString dumpCurrentLayoutJS();
+    QByteArray dumpCurrentLayoutJS() const;
 
     /**
      * loads the shell layout from a look and feel package,

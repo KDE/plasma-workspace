@@ -30,6 +30,9 @@
 #include <QQmlContext>
 #include <QDBusConnection>
 
+#include <QJsonObject>
+#include <QJsonDocument>
+
 #include <kactioncollection.h>
 #include <klocalizedstring.h>
 #include <Plasma/Package>
@@ -313,23 +316,30 @@ void ShellCorona::setShell(const QString &shell)
 }
 
 
-QString dumpconfigGroupJS(const KConfigGroup &rootGroup, const QString &prefix)
+QJsonArray dumpconfigGroupJS(const KConfigGroup &rootGroup)
 {
-    QString script;
+    QJsonArray result;
+
     QStringList hierarchy;
-    QList<KConfigGroup> groups;
-    groups << rootGroup;
+    QList<KConfigGroup> groups{rootGroup};
     QSet<QString> visitedNodes;
 
-    QSet<QString> forbiddenKeys;
-    forbiddenKeys << QStringLiteral("activityId") << QStringLiteral("ItemsGeometries") << QStringLiteral("AppletOrder") << QStringLiteral("SystrayContainmentId") << QStringLiteral("location") << QStringLiteral("plugin");
+    const QSet<QString> forbiddenKeys {
+            QStringLiteral("activityId"),
+            QStringLiteral("ItemsGeometries"),
+            QStringLiteral("AppletOrder"),
+            QStringLiteral("SystrayContainmentId"),
+            QStringLiteral("location"),
+            QStringLiteral("plugin")
+        };
 
-    //perform a depth-first tree traversal for config groups
+    // Perform a depth-first tree traversal for config groups
     while (!groups.isEmpty()) {
         KConfigGroup cg = groups.last();
 
         KConfigGroup parentCg = cg;
-        //FIXME: name is not enoug
+        //FIXME: name is not enough
+
         hierarchy.clear();
         while (parentCg.isValid() && parentCg.name() != rootGroup.name()) {
             hierarchy.prepend(parentCg.name());
@@ -339,20 +349,26 @@ QString dumpconfigGroupJS(const KConfigGroup &rootGroup, const QString &prefix)
         visitedNodes.insert(hierarchy.join(QChar()));
         groups.pop_back();
 
+        QJsonObject configGroupJson;
+
         if (!cg.keyList().isEmpty()) {
-            script += "\n";
             //TODO: this is conditional if applet or containment
             if (hierarchy.length() > 0) {
-                 script += QStringLiteral("    //all config values in the \"%1\" group\n").arg(hierarchy.last());
-                script += prefix + QStringLiteral(".currentConfigGroup = Array(\"") + hierarchy.join("\", \"") + "\");\n";
+                QJsonArray currentConfigGroup;
+
+                foreach (const QString &item, hierarchy) {
+                    currentConfigGroup << item;
+                }
+
+                configGroupJson.insert("currentConfigGroup", currentConfigGroup);
             }
 
-            QMap<QString, QString>::const_iterator i;
-            QMap<QString, QString> map = cg.entryMap();
-            for (i = map.constBegin(); i != map.constEnd(); ++i) {
+            const auto map = cg.entryMap();
+            auto i = map.cbegin();
+            for (; i != map.cend(); ++i) {
                 //some blacklisted keys we don't want to save
                 if (!forbiddenKeys.contains(i.key())) {
-                    script += prefix + ".writeConfig(\"" + i.key() + "\", \"" + i.value() + "\");\n";
+                    configGroupJson.insert(i.key(), i.value());
                 }
             }
         }
@@ -364,14 +380,19 @@ QString dumpconfigGroupJS(const KConfigGroup &rootGroup, const QString &prefix)
             }
             groups << KConfigGroup(&cg, groupName);
         }
+
+        if (!configGroupJson.isEmpty()) {
+            result << configGroupJson;
+        }
     }
 
-    return script;
+    return result;
 }
 
-QString ShellCorona::dumpCurrentLayoutJS()
+QByteArray ShellCorona::dumpCurrentLayoutJS() const
 {
-    QString script;
+    QJsonObject root;
+    root.insert("serializationFormatVersion", "1");
 
     //same gridUnit calculation as ScriptEngine
     int gridUnit = QFontMetrics(QGuiApplication::font()).boundingRect(QStringLiteral("M")).height();
@@ -379,168 +400,187 @@ QString ShellCorona::dumpCurrentLayoutJS()
         gridUnit++;
     }
 
-    int i = 0;
+    auto isPanel = [] (Plasma::Containment *cont) {
+        return
+            (cont->formFactor() == Plasma::Types::Horizontal
+                || cont->formFactor() == Plasma::Types::Vertical) &&
+            (cont->location() == Plasma::Types::TopEdge
+                || cont->location() == Plasma::Types::BottomEdge
+                || cont->location() == Plasma::Types::LeftEdge
+                || cont->location() == Plasma::Types::RightEdge) &&
+            cont->pluginInfo().pluginName() != QStringLiteral("org.kde.plasma.private.systemtray");
+    };
 
-    //dump panels
-    //two separate loops to have desktops and panels separated in scripts
-    script += "//////Panels\n";
-    foreach (Plasma::Containment *cont, containments()) {
-        if ((cont->formFactor() == Plasma::Types::Horizontal || cont->formFactor() == Plasma::Types::Vertical) &&
-            (cont->location() == Plasma::Types::TopEdge || cont->location() == Plasma::Types::BottomEdge ||
-            cont->location() == Plasma::Types::LeftEdge ||
-            cont->location() == Plasma::Types::RightEdge) &&
-            cont->pluginInfo().pluginName() != QStringLiteral("org.kde.plasma.private.systemtray")) {
+    auto isDesktop = [] (Plasma::Containment *cont) {
+        return !cont->activity().isEmpty();
+    };
 
-            const PanelView *view = m_panelViews.value(cont);
+    const auto containments = ShellCorona::containments();
 
-            script += "{\n";
-            script += "    var panel = new Panel;\n";
+    // Collecting panels
 
-            switch (cont->location()) {
-            case Plasma::Types::TopEdge:
-                script += "    panel.location = \"top\";\n";
-                break;
-            case Plasma::Types::LeftEdge:
-                script += "    panel.location = \"left\";\n";
-                break;
-            case Plasma::Types::RightEdge:
-                script += "    panel.location = \"right\";\n";
-                break;
-            case Plasma::Types::BottomEdge:
-            default:
-                script += "    panel.location = \"bottom\";\n";
-                break;
-            }
+    QJsonArray panelsJsonArray;
 
-            //for panels we don't have view for, fallback to 4 units
-            qreal units = 4;
-
-            //Repeated switch as one depends from view the other doesn't
-            if (view) {
-                switch (cont->location()) {
-                case Plasma::Types::TopEdge:
-                    units = view->height() / gridUnit;
-                    break;
-                case Plasma::Types::LeftEdge:
-                    units = view->width() / gridUnit;
-                    break;
-                case Plasma::Types::RightEdge:
-                    units = view->width() / gridUnit;
-                    break;
-                case Plasma::Types::BottomEdge:
-                default:
-                    units = view->height() / gridUnit;
-                    break;
-                }
-            }
-
-            script += "    panel.height = gridUnit * " + QString::number(units) + ";\n";
-
-            //enumerate config keys for containment
-            KConfigGroup contConfig = cont->config();
-            script += "    //Panel containment configuration\n";
-            script += dumpconfigGroupJS(contConfig, QStringLiteral("    panel"));
-            script += "\n\n";
-
-            //try to parse the encoded applets order
-            KConfigGroup genericConf(&contConfig, QStringLiteral("General"));
-            const QStringList appletsOrderStrings = genericConf.readEntry(QStringLiteral("AppletOrder"), QString()).split(QChar(';'));
-            //consider the applet order to be valid only if there are as many entries as applets()
-            if (appletsOrderStrings.length() == cont->applets().length()) {
-                foreach (const QString &stringId, appletsOrderStrings) {
-                    KConfigGroup appletConfig(&contConfig, QStringLiteral("Applets"));
-                    appletConfig = KConfigGroup(&appletConfig, stringId);
-                    const QString pluginName = appletConfig.readEntry(QStringLiteral("plugin"), QString());
-
-                    if (pluginName.isEmpty()) {
-                        continue;
-                    }
-
-                    script += "    {\n";
-                    script += "        //Configuration of applet " + pluginName + "\n";
-                    script += "        var applet = panel.addWidget(\"" + pluginName + "\");\n";
-
-                    script += dumpconfigGroupJS(appletConfig, QStringLiteral("        applet"));
-
-                    script += "    }\n";
-                }
-            //applets order not found, just use order returned by applets()
-            } else {
-                foreach (Plasma::Applet *applet, cont->applets()) {
-                    script += "    {\n";
-                    script += "        //Configuration of applet " + applet->pluginInfo().pluginName() + "\n";
-                    script += "        var applet = panel.addWidget(\"" + applet->pluginInfo().pluginName() + "\", " + QString::number(applet->id()) + ");\n";
-
-                    KConfigGroup appletConfig = applet->config();
-                    script += dumpconfigGroupJS(appletConfig, QStringLiteral("        applet"));
-
-                    script += "    }\n";
-                }
-            }
-
-            script += "}\n";
-            script += "\n\n";
+    foreach (Plasma::Containment *cont, containments) {
+        if (!isPanel(cont)) {
+            continue;
         }
-    }
 
-    //dump desktop containments
-    script += "//////Desktops\n";
-    script += "var desktopsArray = desktopsForActivity(currentActivity());\n";
+        QJsonObject panelJson;
 
-    //two separate loops to have desktops and panels separated in scripts
-    foreach (Plasma::Containment *cont, containments()) {
-        if (!cont->activity().isEmpty()) {
-            script += "if (desktopsArray.length > " + QString::number(i) + ") {\n";
-            script += "    var cont = desktopsArray[" + QString::number(i) + "];\n\n";
-            script += "    cont.wallpaperPlugin = '" + cont->wallpaper() + "';\n";
+        const PanelView *view = m_panelViews.value(cont);
+        const auto location = cont->location();
 
-            //enumerate config keys for containment
-            KConfigGroup contConfig = cont->config();
-            script += "    //Containment configuration\n";
-            script += dumpconfigGroupJS(contConfig, QStringLiteral("    cont"));
+        panelJson.insert("location",
+                location == Plasma::Types::TopEdge   ? "top"
+              : location == Plasma::Types::LeftEdge  ? "left"
+              : location == Plasma::Types::RightEdge ? "right"
+              : /* Plasma::Types::BottomEdge */        "bottom");
 
-            //try to parse the items geometries
-            KConfigGroup genericConf(&contConfig, QStringLiteral("General"));
-            const QStringList appletsGeomStrings = genericConf.readEntry(QStringLiteral("ItemsGeometries"), QString()).split(QChar(';'));
+        const qreal units =
+                // If we do not have a panel, fallback to 4 units
+                !view     ?  4
+              : location == Plasma::Types::TopEdge   ? view->height() / gridUnit
+              : location == Plasma::Types::LeftEdge  ? view->width()  / gridUnit
+              : location == Plasma::Types::RightEdge ? view->width()  / gridUnit
+              : /* Plasma::Types::BottomEdge */        view->height() / gridUnit;
 
-            QHash<QString, QRect> appletGeometries;
-            for (const QString encoded : appletsGeomStrings) {
-                const QStringList keyValue = encoded.split(QChar(':'));
-                if (keyValue.length() != 2) {
+        panelJson.insert("height", units);
+
+        // Saving the config keys
+        const KConfigGroup contConfig = cont->config();
+
+        panelJson.insert("config", dumpconfigGroupJS(contConfig));
+
+        // Generate the applets array
+        QJsonArray appletsJsonArray;
+
+        // Try to parse the encoded applets order
+        const KConfigGroup genericConf(&contConfig, QStringLiteral("General"));
+        const QStringList appletsOrderStrings =
+            genericConf.readEntry(QStringLiteral("AppletOrder"), QString())
+                .split(QChar(';'));
+
+        // Consider the applet order to be valid only if there are as many entries as applets()
+        if (appletsOrderStrings.length() == cont->applets().length()) {
+            foreach (const QString &appletId, appletsOrderStrings) {
+                KConfigGroup appletConfig(&contConfig, QStringLiteral("Applets"));
+                appletConfig = KConfigGroup(&appletConfig, appletId);
+
+                const QString pluginName =
+                    appletConfig.readEntry(QStringLiteral("plugin"), QString());
+
+                if (pluginName.isEmpty()) {
                     continue;
                 }
-                QStringList rectPieces = keyValue.last().split(QChar(','));
-                if (rectPieces.length() != 5) {
-                    continue;
-                }
-                QRect rect(rectPieces[0].toInt(), rectPieces[1].toInt(),
-                        rectPieces[2].toInt(), rectPieces[3].toInt());
-                appletGeometries[keyValue.first()] = rect;
+
+                QJsonObject appletJson;
+
+                appletJson.insert("plugin", pluginName);
+                appletJson.insert("config", dumpconfigGroupJS(appletConfig));
+
+                appletsJsonArray << appletJson;
             }
 
-            script += "\n\n";
+        } else {
             foreach (Plasma::Applet *applet, cont->applets()) {
-                const QRect geometry = appletGeometries.value(QStringLiteral("Applet-") % QString::number(applet->id()));
-                script += "    {\n";
-                script += "        //Configuration of applet " + applet->title() + "\n";
-                script += "        var applet = cont.addWidget(\"" + applet->pluginInfo().pluginName() + "\", gridUnit * " + QString::number(geometry.x()/gridUnit) +
-                        ", gridUnit * " + QString::number(geometry.y()/gridUnit) +
-                        ", gridUnit * " + QString::number(geometry.width()/gridUnit) +
-                        ", gridUnit * " + QString::number(geometry.height()/gridUnit) + ");\n";
+                QJsonObject appletJson;
 
                 KConfigGroup appletConfig = applet->config();
-                script += dumpconfigGroupJS(appletConfig, QStringLiteral("        applet"));
 
-                script += "    }\n";
+                appletJson.insert("plugin", applet->pluginInfo().pluginName());
+                appletJson.insert("config", dumpconfigGroupJS(appletConfig));
+
+                appletsJsonArray << appletJson;
             }
-            ++i;
-            script += "}\n\n";
         }
+
+        panelJson.insert("applets", appletsJsonArray);
+
+        panelsJsonArray << panelJson;
     }
 
+    root.insert("panels", panelsJsonArray);
+
+    // Now we are collecting desktops
+
+    QJsonArray desktopsJson;
+
+    const auto currentActivity = m_activityController->currentActivity();
+
+    foreach (Plasma::Containment *cont, containments) {
+        if (!isDesktop(cont) || cont->activity() != currentActivity) {
+            continue;
+        }
+
+        QJsonObject desktopJson;
+
+        desktopJson.insert("wallpaperPlugin", cont->wallpaper());
+
+        // Get the config for the containment
+        KConfigGroup contConfig = cont->config();
+        desktopJson.insert("config", dumpconfigGroupJS(contConfig));
+
+        // Try to parse the item geometries
+        const KConfigGroup genericConf(&contConfig, QStringLiteral("General"));
+        const QStringList appletsGeomStrings =
+            genericConf.readEntry(QStringLiteral("ItemsGeometries"), QString())
+                .split(QChar(';'));
 
 
-    return script;
+        QHash<QString, QRect> appletGeometries;
+        foreach (const QString &encoded, appletsGeomStrings) {
+            const QStringList keyValue = encoded.split(QChar(':'));
+            if (keyValue.length() != 2) {
+                continue;
+            }
+
+            const QStringList rectPieces = keyValue.last().split(QChar(','));
+            if (rectPieces.length() != 5) {
+                continue;
+            }
+
+            QRect rect(rectPieces[0].toInt(), rectPieces[1].toInt(),
+                       rectPieces[2].toInt(), rectPieces[3].toInt());
+
+            appletGeometries[keyValue.first()] = rect;
+        }
+
+        QJsonArray appletsJsonArray;
+
+        foreach (Plasma::Applet *applet, cont->applets()) {
+            const QRect geometry = appletGeometries.value(
+                QStringLiteral("Applet-") % QString::number(applet->id()));
+
+            QJsonObject appletJson;
+
+            appletJson.insert("title",      applet->title());
+            appletJson.insert("plugin",     applet->pluginInfo().pluginName());
+
+            appletJson.insert("geometry.x",      geometry.x() / gridUnit);
+            appletJson.insert("geometry.y",      geometry.y() / gridUnit);
+            appletJson.insert("geometry.width",  geometry.width() / gridUnit);
+            appletJson.insert("geometry.height", geometry.height() / gridUnit);
+
+            KConfigGroup appletConfig = applet->config();
+            appletJson.insert("config", dumpconfigGroupJS(appletConfig));
+
+            appletsJsonArray << appletJson;
+        }
+
+        desktopJson.insert("applets", appletsJsonArray);
+        desktopsJson << desktopJson;
+    }
+
+    root.insert("desktops", desktopsJson);
+
+    QJsonDocument json;
+    json.setObject(root);
+
+    return
+        "var plasma = getApiVersion(1);\n\n"
+        "var layout = " + json.toJson() + ";\n\n"
+        "plasma.loadSerializedLayout(layout);\n";
 }
 
 void ShellCorona::loadLookAndFeelDefaultLayout(const QString &packageName)

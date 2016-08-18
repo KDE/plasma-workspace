@@ -33,6 +33,7 @@ set(scripting_SRC
     scripting/panel.cpp
     scripting/rect.cpp
     scripting/scriptengine.cpp
+    scripting/scriptengine_v1.cpp
     scripting/widget.cpp
 )
 

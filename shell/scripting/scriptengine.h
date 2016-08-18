@@ -71,34 +71,17 @@ private:
     void setupEngine();
     static QString onlyExec(const QString &commandLine);
 
-    static QStringList availableActivities(QScriptContext *context, QScriptEngine *engine);
+    static QScriptValue createAPIForVersion(QScriptContext *context, QScriptEngine *engine);
 
-    static QScriptValue createActivity(QScriptContext *context, QScriptEngine *engine);
-    static QScriptValue setCurrentActivity(QScriptContext *context, QScriptEngine *engine);
-    static QScriptValue currentActivity(QScriptContext *controller, QScriptEngine *engine);
-    static QScriptValue activities(QScriptContext *context, QScriptEngine *engine);
-    static QScriptValue setActivityName(QScriptContext *context, QScriptEngine *engine);
-    static QScriptValue activityName(QScriptContext *context, QScriptEngine *engine);
-    static QScriptValue newPanel(QScriptContext *context, QScriptEngine *engine);
-    static QScriptValue desktopsForActivity(QScriptContext *context, QScriptEngine *engine);
-    static QScriptValue desktops(QScriptContext *context, QScriptEngine *engine);
-    static QScriptValue desktopById(QScriptContext *context, QScriptEngine *engine);
-    static QScriptValue desktopForScreen(QScriptContext *context, QScriptEngine *engine);
-    static QScriptValue panelById(QScriptContext *context, QScriptEngine *engine);
-    static QScriptValue panels(QScriptContext *context, QScriptEngine *engine);
-    static QScriptValue fileExists(QScriptContext *context, QScriptEngine *engine);
-    static QScriptValue loadTemplate(QScriptContext *context, QScriptEngine *engine);
-    static QScriptValue applicationExists(QScriptContext *context, QScriptEngine *engine);
-    static QScriptValue defaultApplication(QScriptContext *context, QScriptEngine *engine);
-    static QScriptValue applicationPath(QScriptContext *context, QScriptEngine *engine);
-    static QScriptValue userDataPath(QScriptContext *context, QScriptEngine *engine);
-    static QScriptValue knownWallpaperPlugins(QScriptContext *context, QScriptEngine *engine);
-    static QScriptValue configFile(QScriptContext *context, QScriptEngine *engine);
-    static QScriptValue gridUnit();
+    // Script API versions
+    class V1;
 
     // helpers
-    static QScriptValue createContainment(const QString &type, const QString &defautPlugin,
-                                          QScriptContext *context, QScriptEngine *engine);
+    QStringList availableActivities() const;
+    QList<Containment*> desktopsForActivity(const QString &id);
+    Containment *createContainment(const QString &type, const QString &plugin);
+
+    static int gridUnit();
 
 private Q_SLOTS:
     void exception(const QScriptValue &value);

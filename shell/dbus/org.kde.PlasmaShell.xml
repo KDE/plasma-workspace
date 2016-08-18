@@ -22,7 +22,8 @@
       <arg name="script" type="s" direction="in"/>
     </method>
     <method name="dumpCurrentLayoutJS">
-      <arg name="script" type="s" direction="out"/>
+      <arg name="script" type="ay" direction="out"/>
+    </method>
     </method>
     <method name="loadLookAndFeelLayout">
         <arg name="layout" type="s" direction="in"/>
