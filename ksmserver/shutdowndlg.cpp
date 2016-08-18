@@ -73,7 +73,8 @@ KSMShutdownDlg::KSMShutdownDlg( QWindow* parent,
                                 bool maysd, bool choose, KWorkSpace::ShutdownType sdtype,
                                 const QString& theme)
   : QQuickView(parent),
-    m_result(false)
+    m_result(false),
+    m_theme(theme)
     // this is a WType_Popup on purpose. Do not change that! Not
     // having a popup here has severe side effects.
 {
@@ -82,21 +83,19 @@ KSMShutdownDlg::KSMShutdownDlg( QWindow* parent,
     setColor(QColor(Qt::transparent));
     setFlags(Qt::FramelessWindowHint | Qt::BypassWindowManagerHint);
 
-    QPoint globalPosition(QCursor::pos());
-    foreach (QScreen *s, QGuiApplication::screens()) {
-        if (s->geometry().contains(globalPosition)) {
-            setScreen(s);
-            break;
-        }
-    }
-
 
     // Qt doesn't set this on unmanaged windows
     //FIXME: or does it?
-    XChangeProperty( QX11Info::display(), winId(),
-        XInternAtom( QX11Info::display(), "WM_WINDOW_ROLE", False ), XA_STRING, 8, PropModeReplace,
-        (unsigned char *)"logoutdialog", strlen( "logoutdialog" ));
+    if (KWindowSystem::isPlatformX11()) {
+        XChangeProperty( QX11Info::display(), winId(),
+            XInternAtom( QX11Info::display(), "WM_WINDOW_ROLE", False ), XA_STRING, 8, PropModeReplace,
+            (unsigned char *)"logoutdialog", strlen( "logoutdialog" ));
 
+        XClassHint classHint;
+        classHint.res_name = const_cast<char*>("ksmserver");
+        classHint.res_class = const_cast<char*>("ksmserver");
+        XSetClassHint(QX11Info::display(), winId(), &classHint);
+    }
 
     //QQuickView *windowContainer = QQuickView::createWindowContainer(m_view, this);
     //windowContainer->setSizePolicy(QSizePolicy::Preferred, QSizePolicy::Preferred);
@@ -136,9 +135,6 @@ KSMShutdownDlg::KSMShutdownDlg( QWindow* parent,
     rebootOptionsMap->insert(QStringLiteral("options"), QVariant::fromValue(rebootOptions));
     rebootOptionsMap->insert(QStringLiteral("default"), QVariant::fromValue(def));
     context->setContextProperty(QStringLiteral("rebootOptions"), rebootOptionsMap);
-    context->setContextProperty(QStringLiteral("screenGeometry"), screen()->geometry());
-
-    setModality(Qt::ApplicationModal);
 
     // engine stuff
     KDeclarative::KDeclarative kdeclarative;
@@ -146,9 +142,14 @@ KSMShutdownDlg::KSMShutdownDlg( QWindow* parent,
     kdeclarative.initialize();
     kdeclarative.setupBindings();
 //    windowContainer->installEventFilter(this);
+}
+
+void KSMShutdownDlg::init()
+{
+    rootContext()->setContextProperty(QStringLiteral("screenGeometry"), screen()->geometry());
 
     QString fileName;
-    if(theme.isEmpty()) {
+    if(m_theme.isEmpty()) {
         KPackage::Package package = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Plasma/LookAndFeel"));
         KConfigGroup cg(KSharedConfig::openConfig(QStringLiteral("kdeglobals")), "KDE");
         const QString packageName = cg.readEntry("LookAndFeelPackage", QString());
@@ -158,7 +159,7 @@ KSMShutdownDlg::KSMShutdownDlg( QWindow* parent,
 
         fileName = package.filePath("logoutmainscript");
     } else
-        fileName = theme;
+        fileName = m_theme;
 
     if (QFile::exists(fileName)) {
         //qCDebug(KSMSERVER) << "Using QML theme" << fileName;
@@ -168,8 +169,7 @@ KSMShutdownDlg::KSMShutdownDlg( QWindow* parent,
         return;
     }
 
-    setPosition(screen()->virtualGeometry().center().x() - width() / 2,
-                screen()->virtualGeometry().center().y() - height() / 2);
+    rePosition();
 
     if(!errors().isEmpty()) {
         qWarning() << errors();
@@ -183,7 +183,11 @@ KSMShutdownDlg::KSMShutdownDlg( QWindow* parent,
     connect(rootObject(), SIGNAL(cancelRequested()), SLOT(reject()));
     connect(rootObject(), SIGNAL(lockScreenRequested()), SLOT(slotLockScreen()));
 
-    show();
+    connect(screen(), &QScreen::geometryChanged, this, [this] {
+        rootContext()->setContextProperty(QStringLiteral("screenGeometry"), this->screen()->geometry());
+    });
+
+    QQuickView::show();
     requestActivate();
 
     KWindowSystem::setState(winId(), NET::SkipTaskbar|NET::SkipPager);
@@ -203,17 +207,13 @@ void KSMShutdownDlg::resizeEvent(QResizeEvent *e)
 //        setMask(m_view->mask());
     }
 
-    setPosition(screen()->geometry().center().x() - width() / 2,
-                screen()->geometry().center().y() - height() / 2);
+    rePosition();
 }
 
-void KSMShutdownDlg::mousePressEvent(QMouseEvent *e)
+void KSMShutdownDlg::rePosition()
 {
-    QQuickView::mousePressEvent(e);
-
-    if (!geometry().contains(e->globalPos())) {
-        reject();
-    }
+    setPosition(screen()->geometry().center().x() - width() / 2,
+                screen()->geometry().center().y() - height() / 2);
 }
 
 void KSMShutdownDlg::slotLogout()
@@ -280,34 +280,4 @@ void KSMShutdownDlg::accept()
 void KSMShutdownDlg::reject()
 {
     emit rejected();
-}
-
-bool KSMShutdownDlg::exec()
-{
-    QEventLoop loop;
-    m_result = false;
-    connect(this, &KSMShutdownDlg::accepted, &loop, &QEventLoop::quit);
-    connect(this, &KSMShutdownDlg::accepted, [=]() { m_result = true; });
-
-    connect(this, &KSMShutdownDlg::rejected, &loop, &QEventLoop::quit);
-    loop.exec();
-    return m_result;
-}
-
-bool KSMShutdownDlg::confirmShutdown(
-        bool maysd, bool choose, KWorkSpace::ShutdownType& sdtype, QString& bootOption,
-        const QString& theme)
-{
-    QScopedPointer<KSMShutdownDlg> l(new KSMShutdownDlg( 0, maysd, choose, sdtype, theme ));
-
-    XClassHint classHint;
-    classHint.res_name = const_cast<char*>("ksmserver");
-    classHint.res_class = const_cast<char*>("ksmserver");
-    XSetClassHint(QX11Info::display(), l->winId(), &classHint);
-
-    bool result = l->exec();
-    sdtype = l->m_shutdownType;
-    bootOption = l->m_bootOption;
-
-    return result;
 }

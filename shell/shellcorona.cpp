@@ -1184,7 +1184,6 @@ void ShellCorona::createWaitingPanels()
 
         m_panelViews[cont] = panel;
         panel->setContainment(cont);
-        panel->show();
         cont->reactToScreenChange();
 
         connect(cont, &QObject::destroyed, this, &ShellCorona::panelContainmentDestroyed);
@@ -1932,6 +1931,22 @@ void ShellCorona::updateStruts()
 {
     foreach(PanelView* view, m_panelViews) {
         view->updateStruts();
+    }
+}
+
+
+void ShellCorona::activateLauncherMenu()
+{
+    for (auto it = m_panelViews.constBegin(), end = m_panelViews.constEnd(); it != end; ++it) {
+        const auto applets = it.key()->applets();
+        for (auto applet : applets) {
+            if (applet->pluginInfo().property("X-Plasma-Provides").toStringList().contains(QStringLiteral("org.kde.plasma.launchermenu"))) {
+                if (!applet->globalShortcut().isEmpty()) {
+                    emit applet->activated();
+                    return;
+                }
+            }
+        }
     }
 }
 

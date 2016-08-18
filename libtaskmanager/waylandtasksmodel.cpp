@@ -375,6 +375,26 @@ void WaylandTasksModel::requestNewInstance(const QModelIndex &index)
     }
 }
 
+void WaylandTasksModel::requestOpenUrls(const QModelIndex &index, const QList<QUrl> &urls)
+{
+    if (!index.isValid() || index.model() != this || index.row() < 0
+        || index.row() >= d->windows.count()
+        || urls.isEmpty()) {
+        return;
+    }
+
+    KWayland::Client::PlasmaWindow *window = d->windows.at(index.row());
+
+    if (d->serviceCache.contains(window)) {
+        const KService::Ptr service = d->serviceCache.value(window);
+
+        KRun::runApplication(*service, urls, nullptr, 0);
+
+        KActivities::ResourceInstance::notifyAccessed(QUrl("applications:" + service->storageId()),
+            "org.kde.libtaskmanager");
+    }
+}
+
 void WaylandTasksModel::requestClose(const QModelIndex &index)
 {
     if (!index.isValid() || index.model() != this || index.row() < 0 || index.row() >= d->windows.count()) {

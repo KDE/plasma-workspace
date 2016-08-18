@@ -18,30 +18,31 @@ You should have received a copy of the GNU Lesser General Public
 License along with this library.  If not, see <http://www.gnu.org/licenses/>.
 *********************************************************************/
 
-#ifndef ABSTRACTASKSMODELIFACE_H
-#define ABSTRACTASKSMODELIFACE_H
+#ifndef ABSTRACTASKSPROXYMODELIFACE_H
+#define ABSTRACTASKSPROXYMODELIFACE_H
 
 #include <QObject>
 
 #include "taskmanager_export.h"
+#include "abstracttasksmodeliface.h"
 
 namespace TaskManager
 {
 
 /**
- * @short Pure virtual method interface for tasks model implementations.
+ * @short Pure method interface for tasks model implementations.
  *
- * This is the pure virtual method interface implemented by AbstractTasksModel,
+ * This is the pure method interface implemented by AbstractTasksModel,
  * as well as other model classes in this library which cannot inherit from
  * AbstractTasksModel.
  *
  * @author Eike Hein <hein@kde.org>
  **/
 
-class TASKMANAGER_EXPORT AbstractTasksModelIface
+class TASKMANAGER_EXPORT AbstractTasksProxyModelIface : public AbstractTasksModelIface
 {
 public:
-    virtual ~AbstractTasksModelIface() {}
+    ~AbstractTasksProxyModelIface() {}
 
     /**
      * Request activation of the task at the given index. Implementing classes
@@ -50,15 +51,15 @@ public:
      *
      * @param index An index in this tasks model.
      **/
-    virtual void requestActivate(const QModelIndex &index) = 0;
+    void requestActivate(const QModelIndex &index) Q_DECL_OVERRIDE;
 
     /**
-     * Request an additional instance of the application backing the task at
-     * the given index.
+     * Request an additional instance of the application backing the task
+     * at the given index.
      *
      * @param index An index in this tasks model.
      **/
-    virtual void requestNewInstance(const QModelIndex &index) = 0;
+    void requestNewInstance(const QModelIndex &index) Q_DECL_OVERRIDE;
 
     /**
      * Requests to open the given URLs with the application backing the task
@@ -67,14 +68,14 @@ public:
      * @param index An index in this tasks model.
      * @param urls The URLs to be passed to the application.
      **/
-    virtual void requestOpenUrls(const QModelIndex &index, const QList<QUrl> &urls) = 0;
+    virtual void requestOpenUrls(const QModelIndex &index, const QList<QUrl> &urls);
 
     /**
      * Request the task at the given index be closed.
      *
      * @param index An index in this tasks model.
      **/
-    virtual void requestClose(const QModelIndex &index) = 0;
+    void requestClose(const QModelIndex &index) Q_DECL_OVERRIDE;
 
     /**
      * Request starting an interactive move for the task at the given index.
@@ -84,7 +85,7 @@ public:
      *
      * @param index An index in this tasks model.
      **/
-    virtual void requestMove(const QModelIndex &index) = 0;
+    void requestMove(const QModelIndex &index) Q_DECL_OVERRIDE;
 
     /**
      * Request starting an interactive resize for the task at the given index.
@@ -94,7 +95,7 @@ public:
      *
      * @param index An index in this tasks model.
      **/
-    virtual void requestResize(const QModelIndex &index) = 0;
+    void requestResize(const QModelIndex &index) Q_DECL_OVERRIDE;
 
     /**
      * Request toggling the minimized state of the task at the given index.
@@ -104,7 +105,7 @@ public:
      *
      * @param index An index in this tasks model.
      **/
-    virtual void requestToggleMinimized(const QModelIndex &index) = 0;
+    void requestToggleMinimized(const QModelIndex &index) Q_DECL_OVERRIDE;
 
     /**
      * Request toggling the maximized state of the task at the given index.
@@ -114,7 +115,7 @@ public:
      *
      * @param index An index in this tasks model.
      **/
-    virtual void requestToggleMaximized(const QModelIndex &index) = 0;
+    void requestToggleMaximized(const QModelIndex &index) Q_DECL_OVERRIDE;
 
     /**
      * Request toggling the keep-above state of the task at the given index.
@@ -124,7 +125,7 @@ public:
      *
      * @param index An index in this tasks model.
      **/
-    virtual void requestToggleKeepAbove(const QModelIndex &index) = 0;
+    void requestToggleKeepAbove(const QModelIndex &index) Q_DECL_OVERRIDE;
 
     /**
      * Request toggling the keep-below state of the task at the given index.
@@ -134,7 +135,7 @@ public:
      *
      * @param index An index in this tasks model.
      **/
-    virtual void requestToggleKeepBelow(const QModelIndex &index) = 0;
+    void requestToggleKeepBelow(const QModelIndex &index) Q_DECL_OVERRIDE;
 
     /**
      * Request toggling the fullscreen state of the task at the given index.
@@ -144,7 +145,7 @@ public:
      *
      * @param index An index in this tasks model.
      **/
-    virtual void requestToggleFullScreen(const QModelIndex &index) = 0;
+    void requestToggleFullScreen(const QModelIndex &index) Q_DECL_OVERRIDE;
 
     /**
      * Request toggling the shaded state of the task at the given index.
@@ -154,7 +155,7 @@ public:
      *
      * @param index An index in this tasks model.
      **/
-    virtual void requestToggleShaded(const QModelIndex &index) = 0;
+    void requestToggleShaded(const QModelIndex &index) Q_DECL_OVERRIDE;
 
     /**
      * Request moving the task at the given index to the specified virtual
@@ -166,11 +167,10 @@ public:
      * @param index An index in this tasks model.
      * @param desktop A virtual desktop number.
      **/
-    virtual void requestVirtualDesktop(const QModelIndex &index, qint32 desktop = -1) = 0;
+    void requestVirtualDesktop(const QModelIndex &index, qint32 desktop = -1) Q_DECL_OVERRIDE;
 
     /**
-     * Request moving the task at the given index to the specified virtual
-     * activities.
+     * Request moving the task at the given index to the specified activities.
      *
      * This is meant for tasks that have an associated window, and may be
      * a no-op when there is no window.
@@ -178,15 +178,12 @@ public:
      * @param index An index in this tasks model.
      * @param activities The new list of activities.
      **/
-    virtual void requestActivities(const QModelIndex &index, const QStringList &activities) = 0;
+    void requestActivities(const QModelIndex &index, const QStringList &activities) Q_DECL_OVERRIDE;
 
     /**
      * Request informing the window manager of new geometry for a visual
      * delegate for the task at the given index. The geometry should be in
      * screen coordinates.
-     *
-     * FIXME: Doesn't deal with the long-standing problem of multiple
-     * delegates in multiple applets.
      *
      * @param index An index in this tasks model.
      * @param geometry Visual delegate geometry in screen coordinates.
@@ -194,8 +191,17 @@ public:
      * regard to extracting information from this, and should take care to
      * reject invalid objects.
      **/
-    virtual void requestPublishDelegateGeometry(const QModelIndex &index, const QRect &geometry,
-        QObject *delegate = nullptr) = 0;
+    void requestPublishDelegateGeometry(const QModelIndex &index, const QRect &geometry,
+        QObject *delegate = nullptr) Q_DECL_OVERRIDE;
+
+protected:
+    /*
+     * Map the passed QModelIndex to the source model index
+     * so that AbstractTasksModelIface methods can be passed on
+     * Subclasses should override this.
+     */
+    virtual QModelIndex mapIfaceToSource(const QModelIndex &index) const = 0;
+
 };
 
 }

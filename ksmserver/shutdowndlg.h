@@ -49,11 +49,14 @@ class KSMShutdownDlg : public QQuickView
     Q_OBJECT
 
 public:
-    static bool confirmShutdown(
-            bool maysd, bool choose, KWorkSpace::ShutdownType& sdtype, QString& bopt, const QString& theme );
+    KSMShutdownDlg( QWindow* parent, bool maysd, bool choose, KWorkSpace::ShutdownType sdtype, const QString& theme );
 
+    void init();
     bool result() const;
-    bool exec();
+
+    KWorkSpace::ShutdownType shutdownType() const {
+        return m_shutdownType;
+    }
 
 public Q_SLOTS:
     void accept();
@@ -71,14 +74,14 @@ Q_SIGNALS:
 
 protected:
     void resizeEvent(QResizeEvent *e) Q_DECL_OVERRIDE;
-    void mousePressEvent(QMouseEvent *e) Q_DECL_OVERRIDE;
 
 private:
-    KSMShutdownDlg( QWindow* parent, bool maysd, bool choose, KWorkSpace::ShutdownType sdtype, const QString& theme );
+    void rePosition();
     KWorkSpace::ShutdownType m_shutdownType;
     QString m_bootOption;
     QStringList rebootOptions;
     bool m_result : 1;
+    QString m_theme;
 };
 
 #endif

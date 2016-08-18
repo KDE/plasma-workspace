@@ -411,7 +411,7 @@ void UKMETIon::setup_slotDataArrived(KIO::Job *job, const QByteArray &data)
 
 void UKMETIon::setup_slotJobFinished(KJob *job)
 {
-    if (job->error() == 149) {
+    if (job->error() == KIO::ERR_SERVER_TIMEOUT) {
         setData(m_jobList[job], QStringLiteral("validate"), QStringLiteral("bbcukmet|timeout"));
         disconnectSource(m_jobList[job], this);
         m_jobList.remove(job);

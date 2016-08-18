@@ -39,6 +39,7 @@ public:
     bool filterByScreen = false;
     bool filterByActivity = false;
     bool filterNotMinimized = false;
+    bool filterSkipTaskbar = true;
 
 private:
     TaskFilterProxyModel *q;
@@ -184,102 +185,25 @@ void TaskFilterProxyModel::setFilterNotMinimized(bool filter)
     }
 }
 
-void TaskFilterProxyModel::requestActivate(const QModelIndex &index)
+bool TaskFilterProxyModel::filterSkipTaskbar() const
 {
-    if (d->sourceTasksModel && index.isValid() && index.model() == this) {
-        d->sourceTasksModel->requestActivate(mapToSource(index));
+    return d->filterSkipTaskbar;
+}
+
+void TaskFilterProxyModel::setFilterSkipTaskbar(bool filter)
+{
+    if (d->filterSkipTaskbar != filter) {
+        d->filterSkipTaskbar = filter;
+
+        invalidateFilter();
+
+        emit filterSkipTaskbarChanged();
     }
 }
 
-void TaskFilterProxyModel::requestNewInstance(const QModelIndex &index)
+QModelIndex TaskFilterProxyModel::mapIfaceToSource(const QModelIndex &index) const
 {
-    if (d->sourceTasksModel && index.isValid() && index.model() == this) {
-        d->sourceTasksModel->requestNewInstance(mapToSource(index));
-    }
-}
-
-void TaskFilterProxyModel::requestClose(const QModelIndex &index)
-{
-    if (d->sourceTasksModel && index.isValid() && index.model() == this) {
-        d->sourceTasksModel->requestClose(mapToSource(index));
-    }
-}
-
-void TaskFilterProxyModel::requestMove(const QModelIndex &index)
-{
-    if (d->sourceTasksModel && index.isValid() && index.model() == this) {
-        d->sourceTasksModel->requestMove(mapToSource(index));
-    }
-}
-
-void TaskFilterProxyModel::requestResize(const QModelIndex &index)
-{
-    if (d->sourceTasksModel && index.isValid() && index.model() == this) {
-        d->sourceTasksModel->requestResize(mapToSource(index));
-    }
-}
-
-void TaskFilterProxyModel::requestToggleMinimized(const QModelIndex &index)
-{
-    if (d->sourceTasksModel && index.isValid() && index.model() == this) {
-        d->sourceTasksModel->requestToggleMinimized(mapToSource(index));
-    }
-}
-
-void TaskFilterProxyModel::requestToggleMaximized(const QModelIndex &index)
-{
-    if (d->sourceTasksModel && index.isValid() && index.model() == this) {
-        d->sourceTasksModel->requestToggleMaximized(mapToSource(index));
-    }
-}
-
-void TaskFilterProxyModel::requestToggleKeepAbove(const QModelIndex &index)
-{
-    if (d->sourceTasksModel && index.isValid() && index.model() == this) {
-        d->sourceTasksModel->requestToggleKeepAbove(mapToSource(index));
-    }
-}
-
-void TaskFilterProxyModel::requestToggleKeepBelow(const QModelIndex &index)
-{
-    if (d->sourceTasksModel && index.isValid() && index.model() == this) {
-        d->sourceTasksModel->requestToggleKeepBelow(mapToSource(index));
-    }
-}
-
-void TaskFilterProxyModel::requestToggleFullScreen(const QModelIndex &index)
-{
-    if (d->sourceTasksModel && index.isValid() && index.model() == this) {
-        d->sourceTasksModel->requestToggleFullScreen(mapToSource(index));
-    }
-}
-
-void TaskFilterProxyModel::requestToggleShaded(const QModelIndex &index)
-{
-    if (d->sourceTasksModel && index.isValid() && index.model() == this) {
-        d->sourceTasksModel->requestToggleShaded(mapToSource(index));
-    }
-}
-
-void TaskFilterProxyModel::requestVirtualDesktop(const QModelIndex &index, qint32 desktop)
-{
-    if (d->sourceTasksModel && index.isValid() && index.model() == this) {
-        d->sourceTasksModel->requestVirtualDesktop(mapToSource(index), desktop);
-    }
-}
-
-void TaskFilterProxyModel::requestActivities(const QModelIndex &index, const QStringList &activities)
-{
-    if (d->sourceTasksModel && index.isValid() && index.model() == this) {
-        d->sourceTasksModel->requestActivities(mapToSource(index), activities);
-    }
-}
-
-void TaskFilterProxyModel::requestPublishDelegateGeometry(const QModelIndex &index, const QRect &geometry, QObject *delegate)
-{
-    if (index.isValid() && index.model() == this) {
-        d->sourceTasksModel->requestPublishDelegateGeometry(mapToSource(index), geometry, delegate);
-    }
+    return mapToSource(index);
 }
 
 bool TaskFilterProxyModel::filterAcceptsRow(int sourceRow, const QModelIndex &sourceParent) const
@@ -289,7 +213,7 @@ bool TaskFilterProxyModel::filterAcceptsRow(int sourceRow, const QModelIndex &so
     const QModelIndex &sourceIdx = sourceModel()->index(sourceRow, 0);
 
     // Filter tasks that are not to be shown on the task bar.
-    if (sourceIdx.data(AbstractTasksModel::SkipTaskbar).toBool()) {
+    if (d->filterSkipTaskbar && sourceIdx.data(AbstractTasksModel::SkipTaskbar).toBool()) {
         return false;
     }
 
@@ -311,7 +235,7 @@ bool TaskFilterProxyModel::filterAcceptsRow(int sourceRow, const QModelIndex &so
     }
 
     // Filter by screen.
-    if (d->filterByScreen && d->screenGeometry.isValid()) {        
+    if (d->filterByScreen && d->screenGeometry.isValid()) {
         const QRect &screenGeometry = sourceIdx.data(AbstractTasksModel::ScreenGeometry).toRect();
 
         if (screenGeometry.isValid() && screenGeometry != d->screenGeometry) {

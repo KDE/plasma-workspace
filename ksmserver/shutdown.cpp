@@ -31,6 +31,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 #include <config-workspace.h>
 #include <config-unix.h> // HAVE_LIMITS_H
+#include <config-ksmserver.h>
 
 #include <ksmserver_debug.h>
 
@@ -60,6 +61,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #include <QPushButton>
 #include <QTimer>
 #include <QtDBus/QtDBus>
+#include <QtConcurrentRun>
 
 #include <KConfig>
 #include <KSharedConfig>
@@ -71,7 +73,6 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #include "server.h"
 #include "global.h"
 #include "client.h"
-#include "shutdowndlg.h"
 
 #include <solid/powermanagement.h>
 
@@ -103,6 +104,26 @@ bool KSMServer::canShutdown()
 bool KSMServer::isShuttingDown() const
 {
     return state >= Shutdown;
+}
+
+bool readFromPipe(int pipe)
+{
+    QFile readPipe;
+    if (!readPipe.open(pipe, QIODevice::ReadOnly)) {
+        return false;
+    }
+    QByteArray result = readPipe.readLine();
+    if (result.isEmpty()) {
+        return false;
+    }
+    bool ok = false;
+    const int number = result.toInt(&ok);
+    if (!ok) {
+        return false;
+    }
+    KSMServer::self()->shutdownType = KWorkSpace::ShutdownType(number);
+
+    return true;
 }
 
 void KSMServer::shutdown( KWorkSpace::ShutdownConfirm confirm,
@@ -157,79 +178,148 @@ void KSMServer::shutdown( KWorkSpace::ShutdownConfirm confirm,
 
 	qDebug() << "After modifications confirm is " << confirm
 			 << " type is " << sdtype << " and mode " << sdmode;
-    dialogActive = true;
     QString bopt;
     if ( !logoutConfirmed ) {
-        KUserTimestamp::updateUserTimestamp();
-        logoutConfirmed = KSMShutdownDlg::confirmShutdown( maysd, choose, sdtype, bopt, QString());
-    }
+        int pipeFds[2];
+        if (pipe(pipeFds) != 0) {
+            return;
+        }
+        QProcess *p = new QProcess(this);
+        p->setProgram(QStringLiteral(LOGOUT_GREETER_BIN));
+        QStringList arguments;
+        if (maysd) {
+            arguments << QStringLiteral("--shutdown-allowed");
+        }
+        if (choose) {
+            arguments << QStringLiteral("--choose");
+        }
+        if (sdtype != KWorkSpace::ShutdownTypeDefault) {
+            arguments << QStringLiteral("--mode");
+            switch (sdtype) {
+            case KWorkSpace::ShutdownTypeHalt:
+                arguments << QStringLiteral("shutdown");
+                break;
+            case KWorkSpace::ShutdownTypeReboot:
+                arguments << QStringLiteral("reboot");
+                break;
+            case KWorkSpace::ShutdownTypeNone:
+            default:
+                // logout
+                arguments << QStringLiteral("logout");
+                break;
+            }
+        }
+        arguments << QStringLiteral("--mode-fd");
+        arguments << QString::number(pipeFds[1]);
+        p->setArguments(arguments);
 
-    if ( logoutConfirmed ) {
+        const int resultPipe = pipeFds[0];
+        connect(p, static_cast<void (QProcess::*)(QProcess::ProcessError)>(&QProcess::error), this,
+            [this, resultPipe] {
+                close(resultPipe);
+                dialogActive = false;
+            }
+        );
 
-        // If the logout was confirmed, let's start a powermanagement inhibition.
-        // We store the cookie so we can interrupt it if the logout will be canceled
-        inhibitCookie = Solid::PowerManagement::beginSuppressingSleep(QStringLiteral("Shutting down system"));
+        connect(p, static_cast<void (QProcess::*)(int, QProcess::ExitStatus)>(&QProcess::finished), this,
+            [this, resultPipe, sdmode, p] (int exitCode) {
+                p->deleteLater();
+                dialogActive = false;
+                if (exitCode != 0) {
+                    close(resultPipe);
+                    return;
+                }
+                QFutureWatcher<bool> *watcher = new QFutureWatcher<bool>();
+                QObject::connect(watcher, &QFutureWatcher<bool>::finished, this,
+                    [this, sdmode, watcher] {
+                        const bool result = watcher->result();
+                        if (!result) {
+                            // it failed to read, don't logout
+                            return;
+                        }
+                        shutdownMode = sdmode;
+                        bootOption = QString();
+                        performLogout();
+                    }, Qt::QueuedConnection);
+                QObject::connect(watcher, &QFutureWatcher<void>::finished, watcher, &QFutureWatcher<bool>::deleteLater, Qt::QueuedConnection);
+                watcher->setFuture(QtConcurrent::run(readFromPipe, resultPipe));
+            }
+        );
 
+        dialogActive = true;
+        p->start();
+        close(pipeFds[1]);
+    } else {
         shutdownType = sdtype;
         shutdownMode = sdmode;
         bootOption = bopt;
 
-        // shall we save the session on logout?
-        saveSession = ( cg.readEntry( "loginMode",
-                                      QStringLiteral( "restorePreviousLogout" ) )
-                        == QStringLiteral( "restorePreviousLogout" ) );
+        performLogout();
+    }
+}
 
-		qDebug() << "saveSession is " << saveSession;
-		
-        if ( saveSession )
-            sessionGroup = QStringLiteral( "Session: " ) + QString::fromLocal8Bit( SESSION_PREVIOUS_LOGOUT );
+void KSMServer::performLogout()
+{
+    // If the logout was confirmed, let's start a powermanagement inhibition.
+    // We store the cookie so we can interrupt it if the logout will be canceled
+    inhibitCookie = Solid::PowerManagement::beginSuppressingSleep(QStringLiteral("Shutting down system"));
 
-        // Set the real desktop background to black so that exit looks
-        // clean regardless of what was on "our" desktop.
-                QPalette palette;
-        palette.setColor( QApplication::desktop()->backgroundRole(), Qt::black );
-        QApplication::setPalette(palette);
-        state = Shutdown;
-        wmPhase1WaitingCount = 0;
-        saveType = saveSession?SmSaveBoth:SmSaveGlobal;
+    // shall we save the session on logout?
+    KConfigGroup cg(KSharedConfig::openConfig(), "General");
+    saveSession = ( cg.readEntry( "loginMode",
+                                    QStringLiteral( "restorePreviousLogout" ) )
+                    == QStringLiteral( "restorePreviousLogout" ) );
+
+    qDebug() << "saveSession is " << saveSession;
+
+    if ( saveSession )
+        sessionGroup = QStringLiteral( "Session: " ) + QString::fromLocal8Bit( SESSION_PREVIOUS_LOGOUT );
+
+    // Set the real desktop background to black so that exit looks
+    // clean regardless of what was on "our" desktop.
+            QPalette palette;
+    palette.setColor( QApplication::desktop()->backgroundRole(), Qt::black );
+    QApplication::setPalette(palette);
+    state = Shutdown;
+    wmPhase1WaitingCount = 0;
+    saveType = saveSession?SmSaveBoth:SmSaveGlobal;
 #ifndef NO_LEGACY_SESSION_MANAGEMENT
-        performLegacySessionSave();
+    performLegacySessionSave();
 #endif
-        startProtection();
+    startProtection();
+    foreach( KSMClient* c, clients ) {
+        c->resetState();
+        // Whoever came with the idea of phase 2 got it backwards
+        // unfortunately. Window manager should be the very first
+        // one saving session data, not the last one, as possible
+        // user interaction during session save may alter
+        // window positions etc.
+        // Moreover, KWin's focus stealing prevention would lead
+        // to undesired effects while session saving (dialogs
+        // wouldn't be activated), so it needs be assured that
+        // KWin will turn it off temporarily before any other
+        // user interaction takes place.
+        // Therefore, make sure the WM finishes its phase 1
+        // before others a chance to change anything.
+        // KWin will check if the session manager is ksmserver,
+        // and if yes it will save in phase 1 instead of phase 2.
+        if( isWM( c ) )
+            ++wmPhase1WaitingCount;
+    }
+    if (wmPhase1WaitingCount > 0) {
         foreach( KSMClient* c, clients ) {
-            c->resetState();
-            // Whoever came with the idea of phase 2 got it backwards
-            // unfortunately. Window manager should be the very first
-            // one saving session data, not the last one, as possible
-            // user interaction during session save may alter
-            // window positions etc.
-            // Moreover, KWin's focus stealing prevention would lead
-            // to undesired effects while session saving (dialogs
-            // wouldn't be activated), so it needs be assured that
-            // KWin will turn it off temporarily before any other
-            // user interaction takes place.
-            // Therefore, make sure the WM finishes its phase 1
-            // before others a chance to change anything.
-            // KWin will check if the session manager is ksmserver,
-            // and if yes it will save in phase 1 instead of phase 2.
             if( isWM( c ) )
-                ++wmPhase1WaitingCount;
-        }
-        if (wmPhase1WaitingCount > 0) {
-            foreach( KSMClient* c, clients ) {
-                if( isWM( c ) )
-                    SmsSaveYourself( c->connection(), saveType,
-                                true, SmInteractStyleAny, false );
-            }
-        } else { // no WM, simply start them all
-            foreach( KSMClient* c, clients )
                 SmsSaveYourself( c->connection(), saveType,
                             true, SmInteractStyleAny, false );
         }
-		qDebug() << "clients should be empty, " << clients.isEmpty();
-        if ( clients.isEmpty() )
-            completeShutdownOrCheckpoint();
+    } else { // no WM, simply start them all
+        foreach( KSMClient* c, clients )
+            SmsSaveYourself( c->connection(), saveType,
+                        true, SmInteractStyleAny, false );
     }
+    qDebug() << "clients should be empty, " << clients.isEmpty();
+    if ( clients.isEmpty() )
+        completeShutdownOrCheckpoint();
     dialogActive = false;
 }
 

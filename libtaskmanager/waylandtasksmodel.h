@@ -81,6 +81,16 @@ public:
     void requestNewInstance(const QModelIndex &index) override;
 
     /**
+     * Runs the application backing the launcher at the given index with the given URLs.
+     * Success depends on whether a AbstractTasksModel::LauncherUrl could be
+     * derived from window metadata and a KService could be found from that.
+     *
+     * @param index An index in this launcher tasks model
+     * @param urls The URLs to be passed to the application
+     */
+    void requestOpenUrls(const QModelIndex &index, const QList<QUrl> &urls) override;
+
+    /**
      * Request the window at the given index be closed.
      *
      * @param index An index in this window tasks model.

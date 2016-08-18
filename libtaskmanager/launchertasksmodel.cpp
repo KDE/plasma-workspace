@@ -308,4 +308,37 @@ void LauncherTasksModel::requestNewInstance(const QModelIndex &index)
     }
 }
 
+void LauncherTasksModel::requestOpenUrls(const QModelIndex &index, const QList<QUrl> &urls)
+{
+    if (!index.isValid() || index.model() != this
+        || index.row() < 0 || index.row() >= d->launchers.count()
+        || urls.isEmpty()) {
+        return;
+    }
+
+    const QUrl &url = d->launchers.at(index.row());
+
+    quint32 timeStamp = 0;
+
+#if HAVE_X11
+        if (KWindowSystem::isPlatformX11()) {
+            timeStamp = QX11Info::appUserTime();
+        }
+#endif
+
+    KService::Ptr service;
+
+    if (url.scheme() == QLatin1String("preferred")) {
+        service = KService::serviceByStorageId(defaultApplication(url));
+    } else {
+        service = KService::serviceByDesktopPath(url.toLocalFile());
+    }
+
+    if (!service) {
+        return;
+    }
+
+    KRun::runApplication(*service, urls, nullptr, 0, {}, KStartupInfo::createNewStartupIdForTimestamp(timeStamp));
+}
+
 }

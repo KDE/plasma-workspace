@@ -132,6 +132,14 @@ public:
      */
     void requestNewInstance(const QModelIndex &index) override;
 
+    /**
+     * Runs the application backing the launcher at the given index with the given URLs.
+     *
+     * @param index An index in this launcher tasks model
+     * @param urls The URLs to be passed to the application
+     */
+    void requestOpenUrls(const QModelIndex &index, const QList<QUrl> &urls) override;
+
 Q_SIGNALS:
     void launcherListChanged() const;
 

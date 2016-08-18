@@ -75,6 +75,7 @@ View::View(QWindow *)
     QObject::connect(a, &QAction::triggered, this, &View::displayOrHide);
     a->setText(i18n("Run Command"));
     a->setObjectName(QStringLiteral("run command"));
+    a->setProperty("componentDisplayName", i18nc("Name for krunner shortcuts category", "Run Command"));
     KGlobalAccel::self()->setDefaultShortcut(a, QList<QKeySequence>() << QKeySequence(Qt::ALT + Qt::Key_Space), KGlobalAccel::NoAutoloading);
     KGlobalAccel::self()->setShortcut(a, QList<QKeySequence>() << QKeySequence(Qt::ALT + Qt::Key_Space) << QKeySequence(Qt::ALT + Qt::Key_F2) << Qt::Key_Search);
 
@@ -82,6 +83,7 @@ View::View(QWindow *)
     QObject::connect(a, &QAction::triggered, this, &View::displayWithClipboardContents);
     a->setText(i18n("Run Command on clipboard contents"));
     a->setObjectName(QStringLiteral("run command on clipboard contents"));
+    a->setProperty("componentDisplayName", i18nc("Name for krunner shortcuts category", "Run Command"));
     KGlobalAccel::self()->setDefaultShortcut(a, QList<QKeySequence>() << QKeySequence(Qt::ALT+Qt::SHIFT+Qt::Key_F2));
     KGlobalAccel::self()->setShortcut(a, QList<QKeySequence>() << QKeySequence(Qt::ALT+Qt::SHIFT+Qt::Key_F2));
 

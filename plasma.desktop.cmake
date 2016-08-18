@@ -77,6 +77,7 @@ Comment[nb]=Plasma av KDE
 Comment[nds]=Plasma vun KDE
 Comment[nl]=Plasma door KDE
 Comment[nn]=Plasma frå KDE
+Comment[pa]=KDE ਵਲੋਂ ਪਲਾਜ਼ਮਾ
 Comment[pl]=Plazma dzięki KDE
 Comment[pt]=Plasma do KDE
 Comment[pt_BR]=Plasma do KDE

@@ -29,6 +29,7 @@
 #include <KAuthorized>
 #include <QDebug>
 #include <QIcon>
+#include <KGlobalAccel>
 #include <KLocalizedString>
 
 #include <Plasma/Containment>
@@ -95,17 +96,17 @@ void ContextMenu::restore(const KConfigGroup &config)
     if (!m_runCommandAction) {
         m_runCommandAction = new QAction(i18nc("plasma_containmentactions_contextmenu", "Run Command..."), this);
         m_runCommandAction->setIcon(QIcon::fromTheme(QStringLiteral("system-run")));
-        setGlobalActionShortcut(m_runCommandAction, QStringLiteral("krunner"), QStringLiteral("run command"));
+        m_runCommandAction->setShortcut(KGlobalAccel::self()->globalShortcut(QStringLiteral("krunner"), QStringLiteral("run command")).value(0));
         connect(m_runCommandAction, &QAction::triggered, this, &ContextMenu::runCommand);
 
         m_lockScreenAction = new QAction(i18nc("plasma_containmentactions_contextmenu", "Lock Screen"), this);
         m_lockScreenAction->setIcon(QIcon::fromTheme(QStringLiteral("system-lock-screen")));
-        setGlobalActionShortcut(m_lockScreenAction, QStringLiteral("ksmserver"), QStringLiteral("Lock Session"));
+        m_lockScreenAction->setShortcut(KGlobalAccel::self()->globalShortcut(QStringLiteral("ksmserver"), QStringLiteral("Lock Session")).value(0));
         connect(m_lockScreenAction, &QAction::triggered, this, &ContextMenu::lockScreen);
 
         m_logoutAction = new QAction(i18nc("plasma_containmentactions_contextmenu", "Leave..."), this);
         m_logoutAction->setIcon(QIcon::fromTheme(QStringLiteral("system-log-out")));
-        setGlobalActionShortcut(m_logoutAction, QStringLiteral("ksmserver"), QStringLiteral("Log Out"));
+        m_logoutAction->setShortcut(KGlobalAccel::self()->globalShortcut(QStringLiteral("ksmserver"), QStringLiteral("Log Out")).value(0));
         connect(m_logoutAction, &QAction::triggered, this, &ContextMenu::startLogout);
 
         m_separator1 = new QAction(this);
@@ -243,36 +244,6 @@ void ContextMenu::logout()
     }
 
     KWorkSpace::requestShutDown();
-}
-
-// TODO port to KGlobalAccel::globalShortcut(const QString& componentName, const QString& actionId) const
-// available in kf5 >= 5.10
-void ContextMenu::setGlobalActionShortcut(QAction * action, const QString &component, const QString &actionId)
-{
-    if (!action)
-        return;
-
-    QDBusMessage msg = QDBusMessage::createMethodCall(QStringLiteral("org.kde.kglobalaccel"),
-                                                      QStringLiteral("/kglobalaccel"),
-                                                      QStringLiteral("org.kde.KGlobalAccel"),
-                                                      QStringLiteral("shortcut"));
-    const QStringList args = {component, actionId, QString(), QString()};
-    msg << args;
-
-    const auto call = QDBusConnection::sessionBus().asyncCall(msg);
-    QDBusPendingCallWatcher *replyWatcher = new QDBusPendingCallWatcher(call, this);
-    QObject::connect(replyWatcher, &QDBusPendingCallWatcher::finished, this, [action, this](QDBusPendingCallWatcher *watcher) {
-        QDBusPendingReply<QList<int>> reply = *watcher;
-        if (!reply.isError()) {
-            const auto &value = reply.value();
-            if (!value.isEmpty()) {
-                action->setShortcut(value.first());
-            }
-        } else {
-            qWarning() << Q_FUNC_INFO << reply.error().message() << reply.error().name();
-        }
-        watcher->deleteLater();
-    });
 }
 
 QWidget* ContextMenu::createConfigurationInterface(QWidget* parent)

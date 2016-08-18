@@ -338,7 +338,7 @@ void WetterComIon::setup_slotDataArrived(KIO::Job *job, const QByteArray &data)
 
 void WetterComIon::setup_slotJobFinished(KJob *job)
 {
-    if (job->error() == 149) {
+    if (job->error() == KIO::ERR_SERVER_TIMEOUT) {
         setData(m_searchJobList[job], QStringLiteral("validate"), QStringLiteral("wettercom|timeout"));
         disconnectSource(m_searchJobList[job], this);
         m_searchJobList.remove(job);

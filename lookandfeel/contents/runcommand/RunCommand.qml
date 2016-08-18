@@ -29,6 +29,9 @@ ColumnLayout {
     property string runner
     property bool showHistory: false
 
+    LayoutMirroring.enabled: Qt.application.layoutDirection === Qt.RightToLeft
+    LayoutMirroring.childrenInherit: true
+
     onQueryChanged: {
         queryField.text = query;
     }

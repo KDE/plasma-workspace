@@ -143,6 +143,8 @@ public Q_SLOTS:
     void loadKWinScriptInInteractiveConsole(const QString &script);
     void toggleActivityManager();
     void evaluateScript(const QString &string);
+    void activateLauncherMenu();
+
     QString dumpCurrentLayoutJS();
 
     /**
@@ -158,6 +160,7 @@ public Q_SLOTS:
      * look and feel package
      */
     void loadLookAndFeelDefaultLayout(const QString &layout);
+
 
     Plasma::Containment *addPanel(const QString &plugin);
 

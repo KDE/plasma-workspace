@@ -18,12 +18,12 @@ You should have received a copy of the GNU Lesser General Public
 License along with this library.  If not, see <http://www.gnu.org/licenses/>.
 *********************************************************************/
 
-#ifndef FLATTENTASKGROUPSPROXYMODEL_H
-#define FLATTENTASKGROUPSPROXYMODEL_H
+#ifndef WINDOWTASKSMODEL_H
+#define WINDOWTASKSMODEL_H
+
+#include <QIdentityProxyModel>
 
 #include "abstracttasksproxymodeliface.h"
-
-#include <KDescendantsProxyModel>
 
 #include "taskmanager_export.h"
 
@@ -31,25 +31,24 @@ namespace TaskManager
 {
 
 /**
- * @short A proxy tasks model for flattening a tree-structured tasks model
- * into a list-structured tasks model.
+ * @short A window tasks model.
  *
- * This proxy model is a subclass of KDescendantsProxyModel implementing
- * AbstractTasksModelIface.
+ * This model presents tasks sourced from window data retrieved from the
+ * windowing server the host process is connected to. The underlying
+ * windowing system is abstracted away.
  *
  * @author Eike Hein <hein@kde.org>
  **/
 
-class TASKMANAGER_EXPORT FlattenTaskGroupsProxyModel : public KDescendantsProxyModel,
-    public AbstractTasksProxyModelIface
+class TASKMANAGER_EXPORT WindowTasksModel : public QIdentityProxyModel, public AbstractTasksProxyModelIface
 {
     Q_OBJECT
 
 public:
-    explicit FlattenTaskGroupsProxyModel(QObject *parent = 0);
-    virtual ~FlattenTaskGroupsProxyModel();
+    explicit WindowTasksModel(QObject *parent = 0);
+    virtual ~WindowTasksModel();
 
-    void setSourceModel(QAbstractItemModel *sourceModel) override;
+    QHash<int, QByteArray> roleNames() const override;
 
 protected:
     QModelIndex mapIfaceToSource(const QModelIndex &index) const Q_DECL_OVERRIDE;

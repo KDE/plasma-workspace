@@ -32,6 +32,9 @@ Item {
     width: childrenRect.width + units.gridUnit
     height: childrenRect.height + units.gridUnit
 
+    LayoutMirroring.enabled: Qt.application.layoutDirection === Qt.RightToLeft
+    LayoutMirroring.childrenInherit: true
+
     function timeForZone(zone) {
         // get the time for the given timezone from the dataengine
         var now = dataSource.data[zone]["DateTime"];

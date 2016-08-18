@@ -1,11 +1,12 @@
 add_definitions(-DTRANSLATION_DOMAIN=\"ksmserver\")
 
-add_subdirectory( tests )
-
 include_directories(${PHONON_INCLUDE_DIR})
 
 check_library_exists(ICE _IceTransNoListen "" HAVE__ICETRANSNOLISTEN)
 configure_file(config-ksmserver.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-ksmserver.h)
+
+include_directories(${CMAKE_CURRENT_BINARY_DIR})
+add_subdirectory(logout-greeter)
 
 ########### next target ###############
 
@@ -13,7 +14,6 @@ set(ksmserver_KDEINIT_SRCS
     ksmserver_debug.cpp
     main.cpp
     server.cpp
-    shutdowndlg.cpp
     switchuserdialog.cpp
     legacy.cpp
     startup.cpp
@@ -72,6 +72,7 @@ target_link_libraries(kdeinit_ksmserver
     KF5::Package
     KF5::KDELibs4Support # Solid/PowerManagement
     ${PHONON_LIBRARIES}
+    Qt5::Concurrent
 )
 
 install(TARGETS kdeinit_ksmserver ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})

@@ -51,7 +51,6 @@ Item {
     }
     property string artist: currentMetadata ? currentMetadata["xesam:artist"] || "" : ""
     property string albumArt: currentMetadata ? currentMetadata["mpris:artUrl"] || "" : ""
-    property string playerIcon: ""
 
     property bool noPlayer: mpris2Source.sources.length <= 1
 
@@ -71,7 +70,8 @@ Item {
     Plasmoid.onContextualActionsAboutToShow: {
         plasmoid.clearActions()
         if (canRaise) {
-            plasmoid.setAction("open", i18nc("Open player window or bring it to the front if already open", "Open"))
+            var icon = mpris2Source.currentData["Desktop Icon Name"] || ""
+            plasmoid.setAction("open", i18nc("Open player window or bring it to the front if already open", "Open"), icon)
         }
 
         if (canControl) {
