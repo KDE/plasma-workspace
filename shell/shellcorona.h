@@ -145,6 +145,16 @@ public Q_SLOTS:
     void evaluateScript(const QString &string);
     void activateLauncherMenu();
 
+    QByteArray dumpCurrentLayoutJS() const;
+
+    /**
+     * loads the shell layout from a look and feel package,
+     * resetting it to the default layout exported in the
+     * look and feel package
+     */
+    void loadLookAndFeelDefaultLayout(const QString &layout);
+
+
     Plasma::Containment *addPanel(const QString &plugin);
 
     void nextActivity();

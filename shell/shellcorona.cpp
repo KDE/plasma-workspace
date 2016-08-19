@@ -30,6 +30,9 @@
 #include <QQmlContext>
 #include <QDBusConnection>
 
+#include <QJsonObject>
+#include <QJsonDocument>
+
 #include <kactioncollection.h>
 #include <klocalizedstring.h>
 #include <Plasma/Package>
@@ -43,6 +46,7 @@
 #include <kdeclarative/kdeclarative.h>
 #include <kdeclarative/qmlobject.h>
 #include <KMessageBox>
+#include <kdirwatch.h>
 
 #include <KPackage/PackageLoader>
 
@@ -63,7 +67,7 @@
 #include "waylanddialogfilter.h"
 
 #include "plasmashelladaptor.h"
-
+#include "debug.h"
 #include "futureutil.h"
 
 #ifndef NDEBUG
@@ -128,7 +132,7 @@ ShellCorona::ShellCorona(QObject *parent)
     dbus.registerObject(QStringLiteral("/PlasmaShell"), this);
 
     connect(this, &Plasma::Corona::startupCompleted, this,
-            []() {
+            [this]() {
                 qDebug() << "Plasma Shell startup completed";
                 QDBusMessage ksplashProgressMessage = QDBusMessage::createMethodCall(QStringLiteral("org.kde.KSplash"),
                                                QStringLiteral("/KSplash"),
@@ -136,6 +140,7 @@ ShellCorona::ShellCorona(QObject *parent)
                                                QStringLiteral("setStage"));
                 ksplashProgressMessage.setArguments(QList<QVariant>() << QStringLiteral("desktop"));
                 QDBusConnection::sessionBus().asyncCall(ksplashProgressMessage);
+                //TODO: remove
             });
 
     // Look for theme config in plasmarc, if it isn't configured, take the theme from the
@@ -310,6 +315,296 @@ void ShellCorona::setShell(const QString &shell)
     }
 }
 
+
+QJsonArray dumpconfigGroupJS(const KConfigGroup &rootGroup)
+{
+    QJsonArray result;
+
+    QStringList hierarchy;
+    QList<KConfigGroup> groups{rootGroup};
+    QSet<QString> visitedNodes;
+
+    const QSet<QString> forbiddenKeys {
+            QStringLiteral("activityId"),
+            QStringLiteral("ItemsGeometries"),
+            QStringLiteral("AppletOrder"),
+            QStringLiteral("SystrayContainmentId"),
+            QStringLiteral("location"),
+            QStringLiteral("plugin")
+        };
+
+    // Perform a depth-first tree traversal for config groups
+    while (!groups.isEmpty()) {
+        KConfigGroup cg = groups.last();
+
+        KConfigGroup parentCg = cg;
+        //FIXME: name is not enough
+
+        hierarchy.clear();
+        while (parentCg.isValid() && parentCg.name() != rootGroup.name()) {
+            hierarchy.prepend(parentCg.name());
+            parentCg = parentCg.parent();
+        }
+
+        visitedNodes.insert(hierarchy.join(QChar()));
+        groups.pop_back();
+
+        QJsonObject configGroupJson;
+
+        if (!cg.keyList().isEmpty()) {
+            //TODO: this is conditional if applet or containment
+            if (hierarchy.length() > 0) {
+                QJsonArray currentConfigGroup;
+
+                foreach (const QString &item, hierarchy) {
+                    currentConfigGroup << item;
+                }
+
+                configGroupJson.insert("currentConfigGroup", currentConfigGroup);
+            }
+
+            const auto map = cg.entryMap();
+            auto i = map.cbegin();
+            for (; i != map.cend(); ++i) {
+                //some blacklisted keys we don't want to save
+                if (!forbiddenKeys.contains(i.key())) {
+                    configGroupJson.insert(i.key(), i.value());
+                }
+            }
+        }
+
+        foreach (const QString &groupName, cg.groupList()) {
+            if (groupName == QStringLiteral("Applets") ||
+                visitedNodes.contains(hierarchy.join(QChar()) + groupName)) {
+                continue;
+            }
+            groups << KConfigGroup(&cg, groupName);
+        }
+
+        if (!configGroupJson.isEmpty()) {
+            result << configGroupJson;
+        }
+    }
+
+    return result;
+}
+
+QByteArray ShellCorona::dumpCurrentLayoutJS() const
+{
+    QJsonObject root;
+    root.insert("serializationFormatVersion", "1");
+
+    //same gridUnit calculation as ScriptEngine
+    int gridUnit = QFontMetrics(QGuiApplication::font()).boundingRect(QStringLiteral("M")).height();
+    if (gridUnit % 2 != 0) {
+        gridUnit++;
+    }
+
+    auto isPanel = [] (Plasma::Containment *cont) {
+        return
+            (cont->formFactor() == Plasma::Types::Horizontal
+                || cont->formFactor() == Plasma::Types::Vertical) &&
+            (cont->location() == Plasma::Types::TopEdge
+                || cont->location() == Plasma::Types::BottomEdge
+                || cont->location() == Plasma::Types::LeftEdge
+                || cont->location() == Plasma::Types::RightEdge) &&
+            cont->pluginInfo().pluginName() != QStringLiteral("org.kde.plasma.private.systemtray");
+    };
+
+    auto isDesktop = [] (Plasma::Containment *cont) {
+        return !cont->activity().isEmpty();
+    };
+
+    const auto containments = ShellCorona::containments();
+
+    // Collecting panels
+
+    QJsonArray panelsJsonArray;
+
+    foreach (Plasma::Containment *cont, containments) {
+        if (!isPanel(cont)) {
+            continue;
+        }
+
+        QJsonObject panelJson;
+
+        const PanelView *view = m_panelViews.value(cont);
+        const auto location = cont->location();
+
+        panelJson.insert("location",
+                location == Plasma::Types::TopEdge   ? "top"
+              : location == Plasma::Types::LeftEdge  ? "left"
+              : location == Plasma::Types::RightEdge ? "right"
+              : /* Plasma::Types::BottomEdge */        "bottom");
+
+        const qreal units =
+                // If we do not have a panel, fallback to 4 units
+                !view     ?  4
+              : location == Plasma::Types::TopEdge   ? view->height() / gridUnit
+              : location == Plasma::Types::LeftEdge  ? view->width()  / gridUnit
+              : location == Plasma::Types::RightEdge ? view->width()  / gridUnit
+              : /* Plasma::Types::BottomEdge */        view->height() / gridUnit;
+
+        panelJson.insert("height", units);
+
+        // Saving the config keys
+        const KConfigGroup contConfig = cont->config();
+
+        panelJson.insert("config", dumpconfigGroupJS(contConfig));
+
+        // Generate the applets array
+        QJsonArray appletsJsonArray;
+
+        // Try to parse the encoded applets order
+        const KConfigGroup genericConf(&contConfig, QStringLiteral("General"));
+        const QStringList appletsOrderStrings =
+            genericConf.readEntry(QStringLiteral("AppletOrder"), QString())
+                .split(QChar(';'));
+
+        // Consider the applet order to be valid only if there are as many entries as applets()
+        if (appletsOrderStrings.length() == cont->applets().length()) {
+            foreach (const QString &appletId, appletsOrderStrings) {
+                KConfigGroup appletConfig(&contConfig, QStringLiteral("Applets"));
+                appletConfig = KConfigGroup(&appletConfig, appletId);
+
+                const QString pluginName =
+                    appletConfig.readEntry(QStringLiteral("plugin"), QString());
+
+                if (pluginName.isEmpty()) {
+                    continue;
+                }
+
+                QJsonObject appletJson;
+
+                appletJson.insert("plugin", pluginName);
+                appletJson.insert("config", dumpconfigGroupJS(appletConfig));
+
+                appletsJsonArray << appletJson;
+            }
+
+        } else {
+            foreach (Plasma::Applet *applet, cont->applets()) {
+                QJsonObject appletJson;
+
+                KConfigGroup appletConfig = applet->config();
+
+                appletJson.insert("plugin", applet->pluginInfo().pluginName());
+                appletJson.insert("config", dumpconfigGroupJS(appletConfig));
+
+                appletsJsonArray << appletJson;
+            }
+        }
+
+        panelJson.insert("applets", appletsJsonArray);
+
+        panelsJsonArray << panelJson;
+    }
+
+    root.insert("panels", panelsJsonArray);
+
+    // Now we are collecting desktops
+
+    QJsonArray desktopsJson;
+
+    const auto currentActivity = m_activityController->currentActivity();
+
+    foreach (Plasma::Containment *cont, containments) {
+        if (!isDesktop(cont) || cont->activity() != currentActivity) {
+            continue;
+        }
+
+        QJsonObject desktopJson;
+
+        desktopJson.insert("wallpaperPlugin", cont->wallpaper());
+
+        // Get the config for the containment
+        KConfigGroup contConfig = cont->config();
+        desktopJson.insert("config", dumpconfigGroupJS(contConfig));
+
+        // Try to parse the item geometries
+        const KConfigGroup genericConf(&contConfig, QStringLiteral("General"));
+        const QStringList appletsGeomStrings =
+            genericConf.readEntry(QStringLiteral("ItemsGeometries"), QString())
+                .split(QChar(';'));
+
+
+        QHash<QString, QRect> appletGeometries;
+        foreach (const QString &encoded, appletsGeomStrings) {
+            const QStringList keyValue = encoded.split(QChar(':'));
+            if (keyValue.length() != 2) {
+                continue;
+            }
+
+            const QStringList rectPieces = keyValue.last().split(QChar(','));
+            if (rectPieces.length() != 5) {
+                continue;
+            }
+
+            QRect rect(rectPieces[0].toInt(), rectPieces[1].toInt(),
+                       rectPieces[2].toInt(), rectPieces[3].toInt());
+
+            appletGeometries[keyValue.first()] = rect;
+        }
+
+        QJsonArray appletsJsonArray;
+
+        foreach (Plasma::Applet *applet, cont->applets()) {
+            const QRect geometry = appletGeometries.value(
+                QStringLiteral("Applet-") % QString::number(applet->id()));
+
+            QJsonObject appletJson;
+
+            appletJson.insert("title",      applet->title());
+            appletJson.insert("plugin",     applet->pluginInfo().pluginName());
+
+            appletJson.insert("geometry.x",      geometry.x() / gridUnit);
+            appletJson.insert("geometry.y",      geometry.y() / gridUnit);
+            appletJson.insert("geometry.width",  geometry.width() / gridUnit);
+            appletJson.insert("geometry.height", geometry.height() / gridUnit);
+
+            KConfigGroup appletConfig = applet->config();
+            appletJson.insert("config", dumpconfigGroupJS(appletConfig));
+
+            appletsJsonArray << appletJson;
+        }
+
+        desktopJson.insert("applets", appletsJsonArray);
+        desktopsJson << desktopJson;
+    }
+
+    root.insert("desktops", desktopsJson);
+
+    QJsonDocument json;
+    json.setObject(root);
+
+    return
+        "var plasma = getApiVersion(1);\n\n"
+        "var layout = " + json.toJson() + ";\n\n"
+        "plasma.loadSerializedLayout(layout);\n";
+}
+
+void ShellCorona::loadLookAndFeelDefaultLayout(const QString &packageName)
+{
+    KPackage::Package newPack = m_lookAndFeelPackage;
+    newPack.setPath(packageName);
+
+    if (!newPack.isValid()) {
+        return;
+    }
+
+    KSharedConfig::Ptr conf = KSharedConfig::openConfig(QStringLiteral("plasma-") + m_shell + QStringLiteral("-appletsrc"), KConfig::SimpleConfig);
+
+    m_lookAndFeelPackage.setPath(packageName);
+
+    //get rid of old config
+    for (const QString &group : conf->groupList()) {
+        conf->deleteGroup(group);
+    }
+    conf->sync();
+    unload();
+    load();
+}
+
 QString ShellCorona::shell() const
 {
     return m_shell;
@@ -324,7 +619,10 @@ void ShellCorona::load()
 
     disconnect(m_activityController, &KActivities::Controller::serviceStatusChanged, this, &ShellCorona::load);
 
-    loadLayout("plasma-" + m_shell + "-appletsrc");
+    //TODO: a kconf_update script is needed
+    QString configFileName(QStringLiteral("plasma-") + m_shell + QStringLiteral("-appletsrc"));
+
+    loadLayout(configFileName);
 
     checkActivities();
 
@@ -357,6 +655,9 @@ void ShellCorona::load()
         }
     }
 
+    //NOTE: this is needed in case loadLayout() did *not* call loadDefaultLayout()
+    //it needs to be after of loadLayout() as it would always create new
+    //containments on each startup otherwise
     for (QScreen* screen : qGuiApp->screens()) {
         addOutput(screen);
     }
@@ -513,8 +814,19 @@ void ShellCorona::unload()
     if (m_shell.isEmpty()) {
         return;
     }
+    qDeleteAll(m_desktopViewforId.values());
+    m_desktopViewforId.clear();
+    qDeleteAll(m_panelViews.values());
+    m_panelViews.clear();
+    m_desktopContainments.clear();
+    m_waitingPanels.clear();
+    m_activityContainmentPlugins.clear();
 
-    qDeleteAll(containments());
+    while (!containments().isEmpty()) {
+        //deleting a containment will remove it from the list due to QObject::destroyed connect in Corona
+        //this form doesn't crash, while qDeleteAll(containments()) does
+        delete containments().first();
+    }
 }
 
 KSharedConfig::Ptr ShellCorona::applicationConfig()
