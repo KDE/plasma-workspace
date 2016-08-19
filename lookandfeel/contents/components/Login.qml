@@ -152,7 +152,7 @@ Item {
         //align centre, but cap to the width of the screen
         anchors {
             top: prompts.bottom
-            topMargin: units.gridUnit * 0.25
+            topMargin: units.smallSpacing
             horizontalCenter: parent.horizontalCenter
         }
     }
