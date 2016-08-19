@@ -38,6 +38,8 @@ void LookAndFeelPackage::initPackage(KPackage::Package *package)
 
     //Directories
     package->addDirectoryDefinition("previews", QStringLiteral("previews"), i18n("Preview Images"));
+    package->addFileDefinition("preview", QStringLiteral("previews/preview.png"), i18n("Preview for the whole style"));
+    package->addFileDefinition("fullscreenpreview", QStringLiteral("previews/fullscreenpreview.jpg"), i18n("Full size preview for the whole style"));
     package->addFileDefinition("loginmanagerpreview", QStringLiteral("previews/loginmanager.png"), i18n("Preview for the Login Manager"));
     package->addFileDefinition("lockscreenpreview", QStringLiteral("previews/lockscreen.png"), i18n("Preview for the Lock Screen"));
     package->addFileDefinition("userswitcherpreview", QStringLiteral("previews/userswitcher.png"), i18n("Preview for the Userswitcher"));
