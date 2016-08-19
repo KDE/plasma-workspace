@@ -22,9 +22,13 @@ import QtQuick 2.2
 ListView {
     id: view
     readonly property string selectedUser: currentItem ? currentItem.userName : ""
-    readonly property int userItemWidth: units.largeSpacing * 8
-    readonly property int userItemHeight: units.largeSpacing * 8
-    readonly property int userFaceSize: units.largeSpacing * 6
+    readonly property int userItemWidth: units.gridUnit * 8
+    readonly property int userItemHeight: units.gridUnit * 8
+    readonly property int userFaceSize: units.gridUnit * 6
+
+    implicitHeight: userItemHeight
+
+    activeFocusOnTab : true
 
     /*
      * Signals that a user was explicitly selected
@@ -34,12 +38,17 @@ ListView {
     orientation: ListView.Horizontal
     highlightRangeMode: ListView.StrictlyEnforceRange
 
+    //centre align selected item (which implicitly centre aligns the rest
+    preferredHighlightBegin: width/2 - userItemWidth/2
+    preferredHighlightEnd: preferredHighlightBegin
+
     delegate: UserDelegate {
-        name: (model.realName === "") ? model.name : model.realName
-        userName: model.name || ""
-        iconSource: model.icon ? model.icon : "user-identity"
-        width: ListView.view.userItemWidth
-        faceSize: ListView.view.userFaceSize
+        name: model.realName || model.name
+        userName: model.name
+        iconSource: model.icon || ""
+
+        width: userItemWidth
+        height: userItemHeight
 
         onClicked: {
             ListView.view.currentIndex = index;

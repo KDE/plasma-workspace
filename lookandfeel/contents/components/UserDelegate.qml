@@ -18,7 +18,7 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-import QtQuick 2.2
+import QtQuick 2.4
 
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
@@ -31,90 +31,115 @@ Item {
     property string name
     property string userName
     property string iconSource
-    property int faceSize: frame.width
-
     signal clicked()
 
-    height: faceSize + loginText.implicitHeight
+    property real faceSize: Math.min(width, height - usernameDelegate.height - units.largeSpacing)
 
-    opacity: isCurrent ? 1.0 : 0.618
+    opacity: isCurrent ? 1.0 : 0.5
 
     Behavior on opacity {
-        NumberAnimation { duration: 250 }
+        OpacityAnimator {
+            duration: units.longDuration
+        }
     }
 
     Item {
-        id: imageWrapper
-        anchors {
-            top: parent.top
-            left: parent.left
-            right: parent.right
-        }
-
-        height: parent.height - loginText.height
-
-        //TODO there code was to show a blue border on mouseover
-        //which shows that something is interactable.
-        //we can't have that whilst using widgets/background as the base
-        //I'd quite like it back
-
-        PlasmaCore.FrameSvgItem {
-            id: frame
-            imagePath: "widgets/background"
-
-            //width is set in alias at top
-            width: Math.round(faceSize * (isCurrent ? 1.0 : 0.8))
-            height: width
-
-            Behavior on width {
-                NumberAnimation {
-                    duration: 100
-                }
-            }
-            anchors {
-                centerIn: parent
-            }
-        }
+        id: imageSource
+        width: faceSize
+        height: faceSize
 
         //we sometimes have a path to an image sometimes an icon
-        //IconItem in it's infinite wisdom tries to load a full path as an icon which is rubbish
+        //IconItem tries to load a full path as an icon which is rubbish
         //we try loading it as a normal image, if that fails we fall back to IconItem
         Image {
             id: face
             source: wrapper.iconSource
-            anchors {
-                fill: frame
-                //negative to make frame around the image
-                topMargin: frame.margins.top
-                leftMargin: frame.margins.left
-                rightMargin: frame.margins.right
-                bottomMargin: frame.margins.bottom
-            }
+            fillMode: Image.PreserveAspectCrop
+            anchors.fill: parent
         }
 
         PlasmaCore.IconItem {
             id: faceIcon
-            source: wrapper.iconSource
-            visible: face.status == Image.Error
-            anchors.fill: face
+            source: visible ? "user-identity" : undefined
+            visible: (face.status == Image.Error || face.status == Image.Null)
+            anchors.fill: parent
+            anchors.margins: units.gridUnit * 0.5 // because mockup says so...
         }
     }
 
-    BreezeLabel {
-        id: loginText
+    ShaderEffect {
+        anchors.top: parent.top
+        anchors.horizontalCenter: parent.horizontalCenter
+
+        width: imageSource.width
+        height: imageSource.height
+
+        supportsAtlasTextures: true
+
+        property var source: ShaderEffectSource {
+            sourceItem: imageSource
+            hideSource: true
+            live: false
+        }
+
+        property var colorBorder: PlasmaCore.ColorScope.textColor
+
+        //draw a circle with an antialised border
+        //innerRadius = size of the inner circle with contents
+        //outerRadius = size of the border
+        //blend = area to blend between two colours
+        //all sizes are normalised so 0.5 == half the width of the texture
+
+        //if copying into another project don't forget to connect themeChanged to update()
+        //but in SDDM that's a bit pointless
+        fragmentShader: "
+                        varying highp vec2 qt_TexCoord0;
+                        uniform highp float qt_Opacity;
+                        uniform lowp sampler2D source;
+
+                        uniform vec4 colorBorder;
+                        float blend = 0.01;
+                        float innerRadius = 0.47;
+                        float outerRadius = innerRadius + 0.02;
+                        vec4 colorEmpty = vec4(0.0, 0.0, 0.0, 0.0);
+
+                        void main() {
+                            vec4 colorSource = texture2D(source, qt_TexCoord0.st);
+
+                            vec2 m = qt_TexCoord0 - vec2(0.5, 0.5);
+                            float dist = sqrt(m.x * m.x + m.y * m.y);
+
+                            if (dist < innerRadius)
+                                gl_FragColor = colorSource;
+                            else if (dist < innerRadius + blend)
+                                gl_FragColor = mix(colorSource, colorBorder, ((dist - innerRadius) / blend));
+                            else if (dist < outerRadius)
+                                gl_FragColor = colorBorder;
+                            else if (dist < outerRadius + blend)
+                                gl_FragColor = mix(colorBorder, colorEmpty, ((dist - outerRadius) / blend));
+                            else
+                                gl_FragColor = colorEmpty ;
+
+                            gl_FragColor = gl_FragColor * qt_Opacity;
+                    }
+        "
+    }
+
+
+
+    PlasmaComponents.Label {
+        id: usernameDelegate
         anchors {
             bottom: parent.bottom
             left: parent.left
             right: parent.right
         }
+        height: implicitHeight // work around stupid bug in Plasma Components that sets the height
         text: wrapper.name
         elide: Text.ElideRight
         horizontalAlignment: Text.AlignHCenter
-        maximumLineCount: 2
-        wrapMode: Text.Wrap
-        //make an indication that this has active focus, this only happens when reached with text navigation
+        //make an indication that this has active focus, this only happens when reached with keyboard navigation
         font.underline: wrapper.activeFocus
-        height: Math.round(Math.max(paintedHeight, theme.mSize(theme.defaultFont).height*1.2))
     }
 
     MouseArea {
