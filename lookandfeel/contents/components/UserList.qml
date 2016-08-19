@@ -50,6 +50,8 @@ ListView {
         width: userItemWidth
         height: userItemHeight
 
+        isCurrent: ListView.isCurrentItem
+
         onClicked: {
             ListView.view.currentIndex = index;
             ListView.view.userSelected();

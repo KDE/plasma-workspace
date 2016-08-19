@@ -26,7 +26,7 @@ import org.kde.plasma.components 2.0 as PlasmaComponents
 Item {
     id: wrapper
 
-    property bool isCurrent: ListView.isCurrentItem
+    property bool isCurrent: true
 
     property string name
     property string userName
