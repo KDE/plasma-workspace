@@ -29,10 +29,6 @@ Item {
     id: root
 
     /*
-     * Whether a text box for the user to type a username should be visible
-     */
-    property bool showUsernamePrompt: false
-    /*
      * Any message to be displayed to the user, visible above the text fields
      */
     property alias notificationMessage: notificationsLabel.text
@@ -47,35 +43,33 @@ Item {
      * The following roles should exist:
      *  - name
      *  - iconSource
+     *
+     * The following are also handled:
+     *  - vtNumber
+     *  - displayNumber
+     *  - session
+     *  - isTty
      */
-    property alias userListModel: userList.model
+    property alias userListModel: userListView.model
 
     /*
      * Self explanatory
      */
-    property alias userListCurrentIndex: userList.currentIndex
+    property alias userListCurrentIndex: userListView.currentIndex
+    property var userListCurrentModelData: userListView.currentItem === null ? [] : userListView.currentItem.m
 
+    property alias userList: userListView
 
-    /*
-     * Login has been requested with the following username and password
-     * If username field is visible, it will be taken from that, otherwise from the "name" property of the currentIndex
-     */
-    signal loginRequest(string username, string password)
+    default property alias _children: innerLayout.children
 
-    function startLogin() {
-        var username = showUsernamePrompt ? userNameInput.text : userList.selectedUser
-        var password = passwordBox.text
-        loginRequest(username, password);
-    }
 
     UserList {
-        id: userList
+        id: userListView
         anchors {
             bottom: parent.verticalCenter
             left: parent.left
             right: parent.right
         }
-        onUserSelected: passwordBox.forceActiveFocus()
     }
 
     ColumnLayout {
@@ -97,49 +91,11 @@ Item {
             font.italic: true
         }
 
-        PlasmaComponents.TextField {
-            id: userNameInput
+        ColumnLayout {
             Layout.fillWidth: true
-
-            visible: showUsernamePrompt
-            focus: showUsernamePrompt //if there's a username prompt it gets focus first, otherwise password does
-            placeholderText: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Username");
+            id: innerLayout
         }
 
-        PlasmaComponents.TextField {
-            id: passwordBox
-            Layout.fillWidth: true
-
-            placeholderText: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Password");
-            focus: !showUsernamePrompt
-            echoMode: TextInput.Password
-
-            onAccepted: startLogin()
-
-            Keys.onEscapePressed: {
-                mainStack.currentItem.forceActiveFocus();
-            }
-
-            //if empty and left or right is pressed change selection in user switch
-            //this cannot be in keys.onLeftPressed as then it doesn't reach the password box
-            Keys.onPressed: {
-                if (event.key == Qt.Key_Left && !text) {
-                    userList.decrementCurrentIndex();
-                    event.accepted = true
-                }
-                if (event.key == Qt.Key_Right && !text) {
-                    userList.incrementCurrentIndex();
-                    event.accepted = true
-                }
-            }
-        }
-        PlasmaComponents.Button {
-            id: loginButton
-            Layout.fillWidth: true
-
-            text: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Login")
-            onClicked: startLogin();
-        }
         Item {
             Layout.fillHeight: true
         }

@@ -19,12 +19,18 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 import QtQuick 2.5
 import QtQuick.Controls 1.1
+import QtQuick.Layouts 1.1
+
 import org.kde.plasma.core 2.0 as PlasmaCore
+import org.kde.plasma.components 2.0 as PlasmaComponents
+
 import org.kde.plasma.private.sessions 2.0
 import "../components"
 
-Item {
+PlasmaCore.ColorScope {
     id: lockScreenRoot
+
+    colorGroup: PlasmaCore.Theme.ComplementaryColorGroup
 
     Connections {
         target: authenticator
@@ -62,18 +68,88 @@ Item {
         visible: false
     }
 
-    StackView {
-        id: stackView
-        height: units.largeSpacing * 14
-        anchors {
-            verticalCenter: parent.verticalCenter
-            left: parent.left
-            right: parent.right
-        }
+    Clock {
+        anchors.bottom: parent.verticalCenter
+        anchors.bottomMargin: units.gridUnit * 13
+        anchors.horizontalCenter: parent.horizontalCenter
+    }
 
-        initialItem: Loader {
-            active: root.viewVisible
-            source: "MainBlock.qml"
+    ListModel {
+        id: users
+
+        Component.onCompleted: {
+            users.append({name: kscreenlocker_userName,
+                            realName: kscreenlocker_userName,
+                            icon: kscreenlocker_userImage,
+
+            })
+            if (sessionsModel.canStartNewSession) {
+                users.append({realName: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "New Session"),
+                                name: "__new_session",
+                                icon: "system-log-out", //TODO Need an icon for new session
+                })
+            }
+        }
+    }
+
+    StackView {
+        id: mainStack
+        anchors.fill: parent
+        focus: true //StackView is an implicit focus scope, so we need to give this focus so the item inside will have it
+        initialItem: MainBlock {
+            userListModel: users
+            notificationMessage: {
+                var text = ""
+                if (keystateSource.data["Caps Lock"]["Locked"]) {
+                    text += i18nd("plasma_lookandfeel_org.kde.lookandfeel","Caps Lock is on")
+                    if (root.notification) {
+                        text += " • "
+                    }
+                }
+                text += root.notification
+                return text
+            }
+
+            onNewSession: {
+                sessionsModel.startNewSession(false);
+            }
+
+            onLoginRequest: {
+                root.notification = ""
+                authenticator.tryUnlock(password)
+            }
+
+            actionItems: [
+                ActionButton {
+                    text: i18nd("org.kde.plasma_lookandfeel_org.kde.lookandfeel", "Switch User")
+                    iconSource: "system-switch-user"
+                    onClicked: mainStack.push(switchSessionPage)
+                    visible: sessionsModel.count > 1 && sessionsModel.canSwitchUser
+                }
+            ]
+        }
+    }
+
+    Component {
+        id: switchSessionPage
+        SessionManagementScreen {
+            userListModel: sessionsModel
+
+            PlasmaComponents.Button {
+                Layout.fillWidth: true
+                text: "Switch Session"
+                onClicked: {
+                    sessionsModel.switchUser(userListCurrentModelData.vtNumber)
+                }
+            }
+
+            actionItems: [
+                ActionButton {
+                    iconSource: "go-previous"
+                    text: i18nd("plasma_lookandfeel_org.kde.lookandfeel","Back")
+                    onClicked: mainStack.pop()
+                }
+            ]
         }
     }
 
@@ -85,6 +161,24 @@ Item {
             bottom: parent.bottom
         }
     }
+
+    RowLayout {
+        id: footer
+        anchors {
+            bottom: parent.bottom
+            left: parent.left
+            right: parent.right
+            margins: units.smallSpacing
+        }
+
+        KeyboardLayoutButton {
+        }
+
+        Item {
+            Layout.fillWidth: true
+        }
+    }
+
 
     Component.onCompleted: {
         // version support checks
