@@ -29,7 +29,7 @@ Item {
 
     activeFocusOnTab: true
 
-    implicitWidth: units.gridUnit * 4
+    implicitWidth: Math.max(units.gridUnit * 4, label.contentWidth)
     implicitHeight: units.gridUnit * 3 + units.smallSpacing + label.implicitHeight
 
     PlasmaCore.IconItem {
@@ -52,7 +52,7 @@ Item {
         }
         horizontalAlignment: Text.AlignHCenter
         verticalAlignment: Text.AlignTop
-        wrapMode: Text.Wrap
+        wrapMode: Text.WordWrap
     }
 
     MouseArea {
