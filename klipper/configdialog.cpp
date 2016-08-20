@@ -289,7 +289,7 @@ ConfigDialog::ConfigDialog(QWidget* parent, KConfigSkeleton* skeleton, const Kli
 
     QWidget* w = new QWidget(this);
     m_shortcutsWidget = new KShortcutsEditor( collection, w, KShortcutsEditor::GlobalAction );
-    addPage(m_shortcutsWidget, i18nc("Shortcuts Config", "Shortcuts"), QStringLiteral("configure-shortcuts"), i18n("Shortcuts Configuration"));
+    addPage(m_shortcutsWidget, i18nc("Shortcuts Config", "Shortcuts"), QStringLiteral("preferences-desktop-keyboard"), i18n("Shortcuts Configuration"));
 
     const KConfigGroup grp = KSharedConfig::openConfig()->group("ConfigDialog");
     KWindowConfig::restoreWindowSize(windowHandle(), grp);
