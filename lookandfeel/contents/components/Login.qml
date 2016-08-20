@@ -110,7 +110,7 @@ Item {
             id: passwordBox
             Layout.fillWidth: true
 
-            placeholderText: "Password"
+            placeholderText: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Password");
             focus: !showUsernamePrompt
             echoMode: TextInput.Password
 
