@@ -132,7 +132,7 @@ ShellCorona::ShellCorona(QObject *parent)
     dbus.registerObject(QStringLiteral("/PlasmaShell"), this);
 
     connect(this, &Plasma::Corona::startupCompleted, this,
-            [this]() {
+            []() {
                 qDebug() << "Plasma Shell startup completed";
                 QDBusMessage ksplashProgressMessage = QDBusMessage::createMethodCall(QStringLiteral("org.kde.KSplash"),
                                                QStringLiteral("/KSplash"),
