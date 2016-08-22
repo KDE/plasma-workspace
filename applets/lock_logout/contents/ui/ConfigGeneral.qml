@@ -66,12 +66,12 @@ Item {
             id: leave
             text: i18n("Leave")
             // ensure user cannot have all options unchecked
-            enabled: iconsPage.canLockScreen && (checkedOptions > 1 || !checked)
+            enabled: checkedOptions > 1 || !checked
         }
         QtControls.CheckBox {
             id: lock
             text: i18n("Lock")
-            enabled: checkedOptions > 1 || !checked
+            enabled: iconsPage.canLockScreen && (checkedOptions > 1 || !checked)
         }
         QtControls.CheckBox {
             id: switchUser
