@@ -268,7 +268,7 @@ Item {
                 width: expandedRepresentation.controlSize
                 height: width
                 enabled: playerControls.enabled && root.canGoPrevious
-                iconSource: "media-skip-backward"
+                iconSource: LayoutMirroring.enabled ? "media-skip-forward" : "media-skip-backward"
                 onClicked: {
                     seekSlider.value = 0    // Let the media start from beginning. Bug 362473
                     root.action_previous()
@@ -288,7 +288,7 @@ Item {
                 width: expandedRepresentation.controlSize
                 height: width
                 enabled: playerControls.enabled && root.canGoNext
-                iconSource: "media-skip-forward"
+                iconSource: LayoutMirroring.enabled ? "media-skip-backward" : "media-skip-forward"
                 onClicked: {
                     seekSlider.value = 0    // Let the media start from beginning. Bug 362473
                     root.action_next()

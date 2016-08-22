@@ -75,7 +75,8 @@ Item {
         }
 
         if (canControl) {
-            plasmoid.setAction("previous", i18nc("Play previous track", "Previous Track"), "media-skip-backward");
+            plasmoid.setAction("previous", i18nc("Play previous track", "Previous Track"),
+                               Qt.application.layoutDirection === Qt.RightToLeft ? "media-skip-forward" : "media-skip-backward");
             plasmoid.action("previous").enabled = Qt.binding(function() {
                 return root.canGoPrevious
             })
@@ -86,7 +87,8 @@ Item {
                 plasmoid.setAction("playPause", i18nc("Start playback", "Play"), "media-playback-start")
             }
 
-            plasmoid.setAction("next", i18nc("Play next track", "Next Track"), "media-skip-forward")
+            plasmoid.setAction("next", i18nc("Play next track", "Next Track"),
+                               Qt.application.layoutDirection === Qt.RightToLeft ? "media-skip-backward" : "media-skip-forward")
             plasmoid.action("next").enabled = Qt.binding(function() {
                 return root.canGoNext
             })
