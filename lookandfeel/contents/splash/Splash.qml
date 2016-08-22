@@ -36,28 +36,37 @@ Rectangle {
         }
     }
 
-    TextMetrics {
-        id: units
-        text: "M"
-        property int gridUnit: boundingRect.height 
-    }
-
-    Column {
+    Item {
         id: content
-        opacity: 0
-        anchors.centerIn: parent
+        anchors.fill: parent
+        TextMetrics {
+            id: units
+            text: "M"
+            property int gridUnit: boundingRect.height
+            property int largeSpacing: units.gridUnit
+            property int smallSpacing: Math.max(2, gridUnit/4)
+        }
+
         Image {
+            //match SDDM/lockscreen avatar positioning
+            property real offset: units.height + units.largeSpacing
+            property real size: units.gridUnit * 8 - offset
+
             anchors.horizontalCenter: parent.horizontalCenter
+            anchors.bottomMargin: offset
+            anchors.bottom: parent.verticalCenter
+
             source: "images/kde.svgz"
-            sourceSize.height: units.gridUnit * 8
-            sourceSize.width: units.gridUnit * 8
+
+            sourceSize.width: size
+            sourceSize.height: size
         }
-        Item {
-            width: 1
-            height: root.height / 3
-        }
+
         Image {
             id: busyIndicator
+            //again sync from SDDM theme
+            anchors.top: parent.verticalCenter
+            anchors.topMargin: units.gridUnit * 10 + units.smallSpacing
             anchors.horizontalCenter: parent.horizontalCenter
             source: "images/busywidget.svgz"
             sourceSize.height: units.gridUnit * 3
@@ -71,7 +80,6 @@ Rectangle {
             }
         }
     }
-
 
     OpacityAnimator {
         id: introAnimation
