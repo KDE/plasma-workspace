@@ -133,7 +133,7 @@ PlasmaCore.ColorScope {
 
             actionItems: [
                 ActionButton {
-                    iconSource: "go-previous-view"
+                    iconSource: "go-previous"
                     text: i18nd("plasma_lookandfeel_org.kde.lookandfeel","Back")
                     onClicked: mainStack.pop()
                 }
