@@ -86,8 +86,34 @@ namespace {
         const QScriptValue &array;
     };
 
-    #define SCRIPT_FOREACH(Variable, Array) \
+    #define SCRIPT_ARRAY_FOREACH(Variable, Array) \
         ScriptArray_forEach_Helper(Array) + [&] (const QScriptValue &Variable)
+
+    class ScriptObject_forEach_Helper {
+    public:
+        ScriptObject_forEach_Helper(const QScriptValue &object)
+            : object(object)
+        {
+        }
+
+        // operator + is commonly used for these things
+        // to avoid having the lambda inside the parenthesis
+        template <typename Function>
+        void operator+ (Function function) const
+        {
+            QScriptValueIterator it(object);
+            while (it.hasNext()) {
+                it.next();
+                function(it.name(), it.value());
+            }
+        }
+
+    private:
+        const QScriptValue &object;
+    };
+
+    #define SCRIPT_OBJECT_FOREACH(Key, Value, Array) \
+        ScriptObject_forEach_Helper(Array) + [&] (const QString &Key, const QScriptValue &Value)
 
     // Case insensitive comparison of two strings
     template <typename StringType>
@@ -264,27 +290,19 @@ QScriptValue ScriptEngine::V1::activities(QScriptContext *context, QScriptEngine
 template <typename Object>
 void loadSerializedConfigs(Object *object, const QScriptValue &configs)
 {
-    SCRIPT_FOREACH(config, configs) {
+    SCRIPT_OBJECT_FOREACH(escapedGroup, config, configs) {
         // If the config group is set, pass it on to the containment
-        auto currentConfigGroup = config.property("currentConfigGroup");
-        if (currentConfigGroup.isArray()) {
-            QStringList groups;
-            SCRIPT_FOREACH(group, currentConfigGroup) {
-                groups << group.toString();
-            };
-            object->setCurrentConfigGroup(groups);
-            // qDebug() << "DESERIALIZATION: currentConfigGroup = " << groups;
+        QStringList groups = escapedGroup.split('/', QString::SkipEmptyParts);
+        for (QString &group: groups) {
+            group = QUrl::fromPercentEncoding(group.toUtf8());
         }
+        qDebug() << "Config group" << groups;
+        object->setCurrentConfigGroup(groups);
 
         // Read other properties and set the configuration
-        QScriptValueIterator it(config);
-        while (it.hasNext()) {
-            it.next();
-            if (it.name() == "currentConfigGroup") continue;
-
-            object->writeConfig(it.name(), it.value().toVariant());
-            // qDebug() << "DESERIALIZATION: writeConfig(...) " << it.name() << it.value().toVariant();
-        }
+        SCRIPT_OBJECT_FOREACH(key, value, config) {
+            object->writeConfig(key, value.toVariant());
+        };
     };
 }
 
@@ -310,7 +328,7 @@ QScriptValue ScriptEngine::V1::loadSerializedLayout(QScriptContext *context, QSc
     // qDebug() << "DESKTOP DESERIALIZATION: Loading desktops...";
 
     int count = 0;
-    SCRIPT_FOREACH(desktopData, data.property("desktops")) {
+    SCRIPT_ARRAY_FOREACH(desktopData, data.property("desktops")) {
         // If the template has more desktops than we do, ignore them
         if (count >= desktops.size()) return;
 
@@ -325,7 +343,7 @@ QScriptValue ScriptEngine::V1::loadSerializedLayout(QScriptContext *context, QSc
         loadSerializedConfigs(desktop, desktopData.property("config"));
 
         // After the config, we want to load the applets
-        SCRIPT_FOREACH(appletData, desktopData.property("applets")) {
+        SCRIPT_ARRAY_FOREACH(appletData, desktopData.property("applets")) {
             // qDebug() << "DESKTOP DESERIALIZATION: Applet: " << appletData.toString();
 
             // TODO: It would be nicer to be able to call addWidget directly
@@ -352,7 +370,7 @@ QScriptValue ScriptEngine::V1::loadSerializedLayout(QScriptContext *context, QSc
 
     // qDebug() << "PANEL DESERIALIZATION: Loading panels...";
 
-    SCRIPT_FOREACH(panelData, data.property("panels")) {
+    SCRIPT_ARRAY_FOREACH(panelData, data.property("panels")) {
         const auto panel = qobject_cast<Panel *>(env->createContainment(
             QStringLiteral("Panel"), QStringLiteral("org.kde.panel")));
 
@@ -366,7 +384,7 @@ QScriptValue ScriptEngine::V1::loadSerializedLayout(QScriptContext *context, QSc
         loadSerializedConfigs(panel, panelData.property("config"));
 
         // Now dealing with the applets
-        SCRIPT_FOREACH(appletData, panelData.property("applets")) {
+        SCRIPT_ARRAY_FOREACH(appletData, panelData.property("applets")) {
             // qDebug() << "PANEL DESERIALIZATION: Applet: " << appletData.toString();
 
             // TODO: It would be nicer to be able to call addWidget directly

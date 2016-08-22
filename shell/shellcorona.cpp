@@ -29,6 +29,7 @@
 #include <QMenu>
 #include <QQmlContext>
 #include <QDBusConnection>
+#include <QUrl>
 
 #include <QJsonObject>
 #include <QJsonDocument>
@@ -316,11 +317,12 @@ void ShellCorona::setShell(const QString &shell)
 }
 
 
-QJsonArray dumpconfigGroupJS(const KConfigGroup &rootGroup)
+QJsonObject dumpconfigGroupJS(const KConfigGroup &rootGroup)
 {
-    QJsonArray result;
+    QJsonObject result;
 
     QStringList hierarchy;
+    QStringList escapedHierarchy;
     QList<KConfigGroup> groups{rootGroup};
     QSet<QString> visitedNodes;
 
@@ -333,6 +335,10 @@ QJsonArray dumpconfigGroupJS(const KConfigGroup &rootGroup)
             QStringLiteral("plugin")
         };
 
+    auto groupID = [&escapedHierarchy]() {
+        return '/' + escapedHierarchy.join('/');
+    };
+
     // Perform a depth-first tree traversal for config groups
     while (!groups.isEmpty()) {
         KConfigGroup cg = groups.last();
@@ -341,27 +347,21 @@ QJsonArray dumpconfigGroupJS(const KConfigGroup &rootGroup)
         //FIXME: name is not enough
 
         hierarchy.clear();
+        escapedHierarchy.clear();
         while (parentCg.isValid() && parentCg.name() != rootGroup.name()) {
-            hierarchy.prepend(parentCg.name());
+            const auto name = parentCg.name();
+            hierarchy.prepend(name);
+            escapedHierarchy.prepend(QString::fromUtf8(QUrl::toPercentEncoding(name.toUtf8())));
             parentCg = parentCg.parent();
         }
 
-        visitedNodes.insert(hierarchy.join(QChar()));
+        visitedNodes.insert(groupID());
         groups.pop_back();
 
         QJsonObject configGroupJson;
 
         if (!cg.keyList().isEmpty()) {
             //TODO: this is conditional if applet or containment
-            if (hierarchy.length() > 0) {
-                QJsonArray currentConfigGroup;
-
-                foreach (const QString &item, hierarchy) {
-                    currentConfigGroup << item;
-                }
-
-                configGroupJson.insert("currentConfigGroup", currentConfigGroup);
-            }
 
             const auto map = cg.entryMap();
             auto i = map.cbegin();
@@ -375,14 +375,14 @@ QJsonArray dumpconfigGroupJS(const KConfigGroup &rootGroup)
 
         foreach (const QString &groupName, cg.groupList()) {
             if (groupName == QStringLiteral("Applets") ||
-                visitedNodes.contains(hierarchy.join(QChar()) + groupName)) {
+                visitedNodes.contains(groupID() + '/' + groupName)) {
                 continue;
             }
             groups << KConfigGroup(&cg, groupName);
         }
 
         if (!configGroupJson.isEmpty()) {
-            result << configGroupJson;
+            result.insert(groupID(), configGroupJson);
         }
     }
 
