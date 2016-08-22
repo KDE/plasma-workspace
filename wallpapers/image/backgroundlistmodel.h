@@ -130,7 +130,7 @@ public:
 
     QString token() const;
 
-    static const QSet<QString> &suffixes();
+    static const QStringList &suffixes();
 
 Q_SIGNALS:
     void backgroundsFound(const QStringList &paths, const QString &token);
@@ -142,7 +142,7 @@ private:
     QStringList m_paths;
     QString m_token;
 
-    static QSet<QString> m_suffixes;
+    static QStringList m_suffixes;
 };
 
 #endif // BACKGROUNDLISTMODEL_H

@@ -29,6 +29,9 @@
 #include <QUuid>
 #include <QGuiApplication>
 #include <QFontMetrics>
+#include <QImageReader>
+#include <QMimeDatabase>
+#include <QMimeType>
 
 #include <QDebug>
 #include <KIO/PreviewJob>
@@ -42,7 +45,7 @@
 
 #include "image.h"
 
-QSet<QString> BackgroundFinder::m_suffixes;
+QStringList BackgroundFinder::m_suffixes;
 
 ImageSizeFinder::ImageSizeFinder(const QString &path, QObject *parent)
     : QObject(parent),
@@ -500,10 +503,20 @@ QString BackgroundFinder::token() const
     return m_token;
 }
 
-const QSet<QString> &BackgroundFinder::suffixes()
+const QStringList &BackgroundFinder::suffixes()
 {
-    if(m_suffixes.isEmpty()) {
-        m_suffixes << QString::fromLatin1("png") << QString::fromLatin1("jpeg") << QString::fromLatin1("jpg") << QString::fromLatin1("svg") << QString::fromLatin1("svgz");
+    if (m_suffixes.isEmpty()) {
+        QSet<QString> suffixes;
+
+        QMimeDatabase db;
+        Q_FOREACH (const QByteArray &mimeType, QImageReader::supportedMimeTypes()) {
+            QMimeType mime(db.mimeTypeForName(mimeType));
+            Q_FOREACH (const QString &pattern, mime.globPatterns()) {
+                suffixes.insert(pattern);
+            }
+        }
+
+        m_suffixes = suffixes.toList();
     }
 
     return m_suffixes;
@@ -513,12 +526,12 @@ void BackgroundFinder::run()
 {
     QTime t;
     t.start();
-    const QSet<QString> &fileSuffixes = suffixes();
 
     QStringList papersFound;
 
     QDir dir;
     dir.setFilter(QDir::AllDirs | QDir::Files | QDir::Hidden | QDir::Readable);
+    dir.setNameFilters(suffixes());
     KPackage::Package package = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Wallpaper/Images"));
 
     int i;
@@ -550,7 +563,7 @@ void BackgroundFinder::run()
 
                 // add this to the directories we should be looking at
                 m_paths.append(filePath);
-            } else if (fileSuffixes.contains(wp.suffix().toLower())) {
+            } else {
                 //qDebug() << "adding image file" << wp.filePath();
                 papersFound << wp.filePath();
             }
