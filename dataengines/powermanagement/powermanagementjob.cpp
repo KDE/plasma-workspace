@@ -47,7 +47,7 @@ void PowerManagementJob::start()
     //qDebug() << "starting operation  ... " << operation;
 
     if (operation == QLatin1String("lockScreen")) {
-        if (KAuthorized::authorizeKAction(QStringLiteral("lock_screen"))) {
+        if (KAuthorized::authorizeAction(QStringLiteral("lock_screen"))) {
             const QString interface(QStringLiteral("org.freedesktop.ScreenSaver"));
             QDBusInterface screensaver(interface, QStringLiteral("/ScreenSaver"));
             screensaver.asyncCall(QStringLiteral("Lock"));

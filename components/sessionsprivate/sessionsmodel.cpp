@@ -59,12 +59,12 @@ SessionsModel::SessionsModel(QObject *parent)
 
 bool SessionsModel::canSwitchUser() const
 {
-    return const_cast<SessionsModel *>(this)->m_displayManager.isSwitchable() && KAuthorized::authorizeKAction(QLatin1String("switch_user"));
+    return const_cast<SessionsModel *>(this)->m_displayManager.isSwitchable() && KAuthorized::authorizeAction(QLatin1String("switch_user"));
 }
 
 bool SessionsModel::canStartNewSession() const
 {
-    return const_cast<SessionsModel *>(this)->m_displayManager.numReserve() > 0 && KAuthorized::authorizeKAction(QLatin1String("start_new_session"));
+    return const_cast<SessionsModel *>(this)->m_displayManager.numReserve() > 0 && KAuthorized::authorizeAction(QLatin1String("start_new_session"));
 }
 
 bool SessionsModel::shouldLock() const
@@ -127,7 +127,7 @@ void SessionsModel::reload()
     static QHash<QString, KUser> kusers;
 
     const bool oldShouldLock = m_shouldLock;
-    m_shouldLock = KAuthorized::authorizeKAction(QStringLiteral("lock_screen")) && KScreenSaverSettings::autolock();
+    m_shouldLock = KAuthorized::authorizeAction(QStringLiteral("lock_screen")) && KScreenSaverSettings::autolock();
     if (m_shouldLock != oldShouldLock) {
         emit shouldLockChanged();
     }

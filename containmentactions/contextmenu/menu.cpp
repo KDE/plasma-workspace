@@ -166,15 +166,15 @@ QAction *ContextMenu::action(const QString &name)
             return c->corona()->actions()->action(QStringLiteral("add panel"));
         }
     } else if (name == QLatin1String("_run_command")) {
-        if (KAuthorized::authorizeKAction(QStringLiteral("run_command"))) {
+        if (KAuthorized::authorizeAction(QStringLiteral("run_command"))) {
             return m_runCommandAction;
         }
     } else if (name == QLatin1String("_lock_screen")) {
-        if (KAuthorized::authorizeKAction(QStringLiteral("lock_screen"))) {
+        if (KAuthorized::authorizeAction(QStringLiteral("lock_screen"))) {
             return m_lockScreenAction;
         }
     } else if (name == QLatin1String("_logout")) {
-        if (KAuthorized::authorizeKAction(QStringLiteral("logout"))) {
+        if (KAuthorized::authorizeAction(QStringLiteral("logout"))) {
             return m_logoutAction;
         }
     } else if (name == QLatin1String("lock widgets")) {
@@ -194,7 +194,7 @@ QAction *ContextMenu::action(const QString &name)
 
 void ContextMenu::runCommand()
 {
-    if (!KAuthorized::authorizeKAction(QStringLiteral("run_command"))) {
+    if (!KAuthorized::authorizeAction(QStringLiteral("run_command"))) {
         return;
     }
 
@@ -205,7 +205,7 @@ void ContextMenu::runCommand()
 
 void ContextMenu::lockScreen()
 {
-    if (!KAuthorized::authorizeKAction(QStringLiteral("lock_screen"))) {
+    if (!KAuthorized::authorizeAction(QStringLiteral("lock_screen"))) {
         return;
     }
 
@@ -239,7 +239,7 @@ void ContextMenu::startLogout()
 
 void ContextMenu::logout()
 {
-    if (!KAuthorized::authorizeKAction(QStringLiteral("logout"))) {
+    if (!KAuthorized::authorizeAction(QStringLiteral("logout"))) {
         return;
     }
 

@@ -38,7 +38,7 @@ SessionRunner::SessionRunner(QObject *parent, const QVariantList &args)
     setIgnoredTypes(Plasma::RunnerContext::Directory | Plasma::RunnerContext::File | 
                     Plasma::RunnerContext::NetworkLocation);
 
-    m_canLogout = KAuthorized::authorizeKAction(QStringLiteral("logout")) && KAuthorized::authorize(QStringLiteral("logout"));
+    m_canLogout = KAuthorized::authorizeAction(QStringLiteral("logout")) && KAuthorized::authorize(QStringLiteral("logout"));
     if (m_canLogout) {
         addSyntax(Plasma::RunnerSyntax(i18nc("log out command", "logout"),
                   i18n("Logs out, exiting the current desktop session")));
@@ -46,7 +46,7 @@ SessionRunner::SessionRunner(QObject *parent, const QVariantList &args)
                   i18n("Turns off the computer")));
     }
 
-    if (KAuthorized::authorizeKAction(QStringLiteral("lock_screen")) && m_canLogout) {
+    if (KAuthorized::authorizeAction(QStringLiteral("lock_screen")) && m_canLogout) {
         addSyntax(Plasma::RunnerSyntax(i18nc("lock screen command", "lock"),
                   i18n("Locks the current sessions and starts the screen saver")));
     }
@@ -107,7 +107,7 @@ void SessionRunner::matchCommands(QList<Plasma::QueryMatch> &matches, const QStr
         match.setRelevance(0.9);
         matches << match;
     } else if (term.compare(i18nc("lock screen command","lock"), Qt::CaseInsensitive) == 0) {
-        if (KAuthorized::authorizeKAction(QStringLiteral("lock_screen"))) {
+        if (KAuthorized::authorizeAction(QStringLiteral("lock_screen"))) {
             Plasma::QueryMatch match(this);
             match.setText(i18n("Lock the screen"));
             match.setIconName(QStringLiteral("system-lock-screen"));
@@ -156,7 +156,7 @@ void SessionRunner::match(Plasma::RunnerContext &context)
                       term.compare(i18n("new session"), Qt::CaseInsensitive) == 0;
 
     if (switchUser &&
-        KAuthorized::authorizeKAction(QStringLiteral("start_new_session")) &&
+        KAuthorized::authorizeAction(QStringLiteral("start_new_session")) &&
         dm.isSwitchable() &&
         dm.numReserve() >= 0) {
         Plasma::QueryMatch match(this);
