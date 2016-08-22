@@ -17,12 +17,20 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA .        *
  ***************************************************************************/
 
-import QtQuick 2.1
+import QtQuick 2.2
+import QtQuick.Layouts 1.2
+import QtQuick.Controls 1.1 as Controls
+
+import org.kde.plasma.core 2.0 as PlasmaCore
+import org.kde.plasma.components 2.0 as PlasmaComponents
+import org.kde.kcoreaddons 1.0 as KCoreAddons
+
 import "../components"
 
-Item {
+PlasmaCore.ColorScope {
     id: root
-    height: units.largeSpacing*14
+    colorGroup: PlasmaCore.Theme.ComplementaryColorGroup
+    height: screenGeometry.height
     width: screenGeometry.width
 
     signal logoutRequested()
@@ -33,31 +41,134 @@ Item {
     signal cancelRequested()
     signal lockScreenRequested()
 
-    LogoutScreen {
-        anchors.fill: parent
+    function sleepRequested() {
+        root.suspendRequested(2);
+    }
 
-        mode: switch (sdtype) {
-            case ShutdownType.ShutdownTypeNone:
-                return "logout";
-            case ShutdownType.ShutdownTypeHalt:
-                return maysd ? "shutdown" : "logout";
+    property real timeout: 30
+    property real remainingTime: root.timeout
+    property var currentAction: {
+        switch (sdtype) {
             case ShutdownType.ShutdownTypeReboot:
-                return maysd ? "reboot" : "logout";
+                return root.rebootRequested;
+            case ShutdownType.ShutdownTypeHalt:
+                return root.haltRequested;
             default:
-                return "logout";
+                return root.logoutRequested;
+        }
+    }
+
+    KCoreAddons.KUser {
+        id: kuser
+    }
+
+    Controls.Action {
+        onTriggered: root.cancelRequested()
+        shortcut: "Escape"
+    }
+
+    onRemainingTimeChanged: {
+        if (remainingTime <= 0) {
+            root.currentAction();
+        }
+    }
+
+    Timer {
+        running: true
+        repeat: true
+        interval: 1000
+        onTriggered: remainingTime--
+    }
+
+    Rectangle {
+        anchors.fill: parent
+        color: PlasmaCore.ColorScope.backgroundColor
+        opacity: 0.5
+    }
+    MouseArea {
+        anchors.fill: parent
+        onClicked: root.cancelRequested()
+    }
+    UserDelegate {
+        width: units.iconSizes.enormous
+        height: width
+        anchors {
+            horizontalCenter: parent.horizontalCenter
+            bottom: parent.verticalCenter
+        }
+        iconSource: kuser.faceIconUrl
+        isCurrent: true
+        name: kuser.fullName
+    }
+    ColumnLayout {
+        anchors {
+            top: parent.verticalCenter
+            topMargin: units.gridUnit * 2
+            horizontalCenter: parent.horizontalCenter
+        }
+        spacing: units.largeSpacing
+
+        height: Math.max(implicitHeight, units.gridUnit * 10)
+        width: Math.max(implicitWidth, units.gridUnit * 16)
+
+        RowLayout {
+            spacing: units.largeSpacing * 2
+            Layout.alignment: Qt.AlignHCenter
+            LogoutButton {
+                id: suspendButton
+                iconSource: "system-suspend"
+                text: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Suspend")
+                action: root.sleepRequested
+                KeyNavigation.left: logoutButton
+                KeyNavigation.right: rebootButton
+            }
+            LogoutButton {
+                id: rebootButton
+                iconSource: "system-reboot"
+                text: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Reboot")
+                action: root.rebootRequested
+                KeyNavigation.left: suspendButton
+                KeyNavigation.right: shutdownButton
+                focus: sdtype == ShutdownType.ShutdownTypeReboot
+            }
+            LogoutButton {
+                id: shutdownButton
+                iconSource: "system-shutdown"
+                text: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Shutdown")
+                action: root.haltRequested
+                KeyNavigation.left: rebootButton
+                KeyNavigation.right: logoutButton
+                focus: sdtype == ShutdownType.ShutdownTypeHalt
+            }
+            LogoutButton {
+                id: logoutButton
+                iconSource: "system-log-out"
+                text: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Logout")
+                action: root.logoutRequested
+                KeyNavigation.left: shutdownButton
+                KeyNavigation.right: suspendButton
+                focus: sdtype == ShutdownType.ShutdownTypeNone
+            }
         }
 
-        onShutdownRequested: {
-            root.haltRequested()
+        PlasmaComponents.Label {
+            Layout.alignment: Qt.AlignHCenter
+            text: {
+                switch (sdtype) {
+                    case ShutdownType.ShutdownTypeReboot:
+                        return i18ndp("plasma_lookandfeel_org.kde.lookandfeel", "Reboot in 1 second", "Reboot in %1 seconds", root.remainingTime);
+                    case ShutdownType.ShutdownTypeHalt:
+                        return i18ndp("plasma_lookandfeel_org.kde.lookandfeel", "Shutting down in 1 second", "Shutting down in %1 seconds", root.remainingTime);
+                    default:
+                        return i18ndp("plasma_lookandfeel_org.kde.lookandfeel", "Logging out in 1 second", "Logging out in %1 seconds", root.remainingTime);
+                }
+            }
         }
 
-        onRebootRequested: {
-            root.rebootRequested()
+        PlasmaComponents.Button {
+            Layout.alignment: Qt.AlignHCenter
+            text: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Cancel")
+            onClicked: root.cancelRequested()
         }
-        canShutdown: maysd && choose
-        canReboot: maysd && choose
-        canLogout: true
-
-        onCancel: root.cancelRequested()
     }
 }
