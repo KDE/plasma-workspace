@@ -28,13 +28,20 @@ import org.kde.plasma.private.sessions 2.0
 
 import "../components"
 
-Item {
+PlasmaCore.ColorScope {
     id: root
+    colorGroup: PlasmaCore.Theme.ComplementaryColorGroup
 
     signal dismissed
 
-    height: units.largeSpacing * 14
+    height:screenGeometry.height
     width: screenGeometry.width
+
+    Rectangle {
+        anchors.fill: parent
+        color: PlasmaCore.ColorScope.backgroundColor
+        opacity: 0.5
+    }
 
     SessionsModel {
         id: sessionsModel
@@ -50,118 +57,38 @@ Item {
         shortcut: "Escape"
     }
 
-    BreezeBlock {
+    Clock {
+        anchors.bottom: parent.verticalCenter
+        anchors.bottomMargin: units.gridUnit * 13
+        anchors.horizontalCenter: parent.horizontalCenter
+    }
+
+    SessionManagementScreen {
         id: block
         anchors.fill: parent
 
-        main: ColumnLayout {
-            property alias selectedItem: usersSelection.selectedItem
+        userListModel: sessionsModel
 
-            spacing: 0
-
-            BreezeHeading {
-                Layout.alignment: Qt.AlignHCenter
-                text: i18ndc("plasma_lookandfeel_org.kde.lookandfeel","Title of dialog","Switch User")
-            }
-
-            BreezeHeading {
-                Layout.fillWidth: true
-                Layout.fillHeight: true
-                horizontalAlignment: Text.AlignHCenter
-                verticalAlignment: Text.AlignVCenter
-                text: i18nd("plasma_lookandfeel_org.kde.lookandfeel","There are currently no other active sessions.")
-                visible: sessionsModel.count === 0
-            }
-
-            UserSelect {
-                id: usersSelection
-                Layout.fillWidth: true
-                Layout.fillHeight: true
-                visible: sessionsModel.count > 0
-
-                focus: true
-                infoPaneVisible: false
-
-                model: sessionsModel
-
-                Controls.Action {
-                    onTriggered: usersSelection.decrementCurrentIndex()
-                    shortcut: "Left"
-                }
-                Controls.Action {
-                    onTriggered: usersSelection.incrementCurrentIndex()
-                    shortcut: "Right"
-                }
-
-                delegate: UserDelegate {
-                    readonly property int vtNumber: model.vtNumber
-
-                    name: {
-                        var username = (model.realName || model.name)
-                        if (model.isNewSession) {
-                            return username // "new session" comes from the model already
-                        } else if (model.isTty) {
-                            return i18ndc("plasma_lookandfeel_org.kde.lookandfeel","Username (logged in on console)", "%1 (TTY)", username)
-                        } else if (!model.name && !model.session) {
-                            return i18ndc("plasma_lookandfeel_org.kde.lookandfeel","Unused session, nobody logged in there", "Unused")
-                        } else if (model.displayNumber) {
-                            return i18ndc("plasma_lookandfeel_org.kde.lookandfeel","Username (on display number)", "%1 (on Display %2)", username, model.displayNumber)
-                        }
-
-                        return username
-                    }
-                    iconSource: model.icon || "user-identity"
-                    width: ListView.view.userItemWidth
-                    faceSize: ListView.view.userFaceSize
-
-                    onClicked: ListView.view.currentIndex = index
-                }
-            }
-        }
-
-        controls: Item {
-            Layout.fillWidth: true
-            height: buttons.height
-
+        RowLayout {
             PlasmaComponents.Button {
-                id: newSessionButton
-                anchors.left: parent.left
-                text: i18nd("plasma_lookandfeel_org.kde.lookandfeel","New Session")
-                visible: sessionsModel.canStartNewSession
+                text: i18nd("plasma_lookandfeel_org.kde.lookandfeel","Cancel")
+                onClicked: root.dismissed()
+            }
+            PlasmaComponents.Button {
+                id: commitButton
+                text: i18nd("plasma_lookandfeel_org.kde.lookandfeel","Switch")
+                visible: sessionsModel.count > 0
                 onClicked: {
-                    sessionsModel.startNewSession(sessionsModel.shouldLock)
+                    sessionsModel.switchUser(block.userListCurrentModelData.vtNumber, sessionsModel.shouldLock)
                 }
-            }
 
-            Controls.Action {
-                onTriggered: newSessionButton.clicked(null)
-                shortcut: "Alt+N"
-            }
-
-            RowLayout {
-                id: buttons
-                anchors.centerIn: parent
-
-                PlasmaComponents.Button {
-                    text: i18nd("plasma_lookandfeel_org.kde.lookandfeel","Cancel")
-                    onClicked: root.dismissed()
+                Controls.Action {
+                    onTriggered: commitButton.clicked()
+                    shortcut: "Return"
                 }
-                PlasmaComponents.Button {
-                    id: commitButton
-                    text: i18nd("plasma_lookandfeel_org.kde.lookandfeel","Switch")
-                    visible: sessionsModel.count > 0
-                    onClicked: {
-                        sessionsModel.switchUser(block.mainItem.selectedItem.vtNumber, sessionsModel.shouldLock)
-                    }
-
-                    Controls.Action {
-                        onTriggered: commitButton.clicked()
-                        shortcut: "Return"
-                    }
-                    Controls.Action {
-                        onTriggered: commitButton.clicked()
-                        shortcut: "Enter" // on numpad
-                    }
+                Controls.Action {
+                    onTriggered: commitButton.clicked()
+                    shortcut: "Enter" // on numpad
                 }
             }
         }
