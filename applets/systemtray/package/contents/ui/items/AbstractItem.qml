@@ -53,11 +53,17 @@ PlasmaCore.ToolTipArea {
     icon: 
     */
 
-    location: if (abstractItem.parent && abstractItem.parent.objectName == "hiddenTasksColumn" && plasmoid.location != PlasmaCore.Types.LeftEdge) {
+    location: {
+        if (abstractItem.parent && abstractItem.parent.objectName === "hiddenTasksColumn") {
+            if (LayoutMirroring.enabled && plasmoid.location !== PlasmaCore.Types.RightEdge) {
+                return PlasmaCore.Types.LeftEdge;
+            } else if (plasmoid.location !== PlasmaCore.Types.LeftEdge) {
                 return PlasmaCore.Types.RightEdge;
-              } else {
-                return plasmoid.location;
-              }
+            }
+        }
+
+        return plasmoid.location;
+    }
 
 //BEGIN CONNECTIONS
 
