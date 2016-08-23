@@ -1,5 +1,12 @@
 # the Ion shared library
 set (ionlib_SRCS ion.cpp)
+ecm_qt_declare_logging_category(ionlib_SRCS
+    HEADER iondebug.h
+    IDENTIFIER IONENGINE
+    CATEGORY_NAME kde.dataengine.ion
+    DEFAULT_SEVERITY Info
+)
+
 add_library (weather_ion SHARED ${ionlib_SRCS})
 generate_export_header(weather_ion BASE_NAME ion)
 target_link_libraries (weather_ion PRIVATE KF5::I18n PUBLIC Qt5::Core KF5::Plasma)

@@ -21,6 +21,8 @@
 
 #include "ion_bbcukmet.h"
 
+#include "ion_bbcukmetdebug.h"
+
 #include <KIO/Job>
 #include <KUnitConversion/Converter>
 #include <KLocalizedString>
@@ -29,7 +31,6 @@
 #include <QJsonObject>
 #include <QJsonArray>
 #include <QXmlStreamReader>
-#include <QDebug>
 
 WeatherData::WeatherData()
   : obsTime()
@@ -767,7 +768,7 @@ void UKMETIon::parseFiveDayForecast(const QString& source, QXmlStreamReader& xml
             forecast->period = period;
             forecast->iconName = getWeatherIcon(dayIcons(), summary.toLower());
             forecast->summary = i18nc("weather forecast", summary.toUtf8().data());
-            qDebug() << "i18n summary string: " << forecast->summary;
+            qCDebug(IONENGINE_BBCUKMET) << "i18n summary string: " << forecast->summary;
             m_weatherData[source].forecasts.append(forecast);
             // prepare next
             forecast = new WeatherData::ForecastInfo;
@@ -833,7 +834,7 @@ void UKMETIon::updateWeather(const QString& source)
         data.insert(QStringLiteral("Current Conditions"),
                     i18nc("weather condition", weatherData.condition.toUtf8().data()));
     }
-//     qDebug() << "i18n condition string: " << i18nc("weather condition", weatherData.condition.toUtf8().data());
+//     qCDebug(IONENGINE_BBCUKMET) << "i18n condition string: " << i18nc("weather condition", weatherData.condition.toUtf8().data());
 
     const double lati = weatherData.latitude;
     const double longi = weatherData.longitude;
@@ -846,7 +847,7 @@ void UKMETIon::updateWeather(const QString& source)
 
         // Tell applet which icon to use for conditions and provide mapping for condition type to the icons to display
         if (timeData["Corrected Elevation"].toDouble() >= 0.0) {
-            //qDebug() << "Using daytime icons\n";
+            //qCDebug(IONENGINE_BBCUKMET) << "Using daytime icons\n";
             data.insert("Condition Icon", getWeatherIcon(dayIcons(), weatherData.condition));
         } else {
             data.insert("Condition Icon", getWeatherIcon(nightIcons(), weatherData.condition));

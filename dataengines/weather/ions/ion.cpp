@@ -19,8 +19,8 @@
 
 #include "ion.h"
 
+#include "iondebug.h"
 
-#include <QDebug>
 #include <KLocalizedString>
 
 class Q_DECL_HIDDEN IonInterface::Private
@@ -50,7 +50,7 @@ IonInterface::~IonInterface()
  */
 bool IonInterface::sourceRequestEvent(const QString &source)
 {
-    qDebug() << "sourceRequested(): " << source;
+    qCDebug(IONENGINE) << "sourceRequested(): " << source;
 
     // init anyway the data as it's going to be used
     // sooner or later (doesn't depend upon initialization
@@ -71,9 +71,9 @@ bool IonInterface::sourceRequestEvent(const QString &source)
  */
 bool IonInterface::updateSourceEvent(const QString& source)
 {
-    qDebug() << "updateSource(" << source << ")";
+    qCDebug(IONENGINE) << "updateSource(" << source << ")";
     if (d->initialized) {
-        qDebug() << "Calling updateIonSource(" << source << ")";
+        qCDebug(IONENGINE) << "Calling updateIonSource(" << source << ")";
         return updateIonSource(source);
     }
 

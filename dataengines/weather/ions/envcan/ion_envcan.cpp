@@ -21,6 +21,8 @@
 
 #include "ion_envcan.h"
 
+#include "ion_envcandebug.h"
+
 #include <KIO/Job>
 #include <KUnitConversion/Converter>
 #include <KLocalizedString>
@@ -470,7 +472,7 @@ QStringList EnvCanadaIon::validate(const QString& source) const
 // Get a specific Ion's data
 bool EnvCanadaIon::updateIonSource(const QString& source)
 {
-    //qDebug() << "updateIonSource()" << source;
+    //qCDebug(IONENGINE_ENVCAN) << "updateIonSource()" << source;
 
     // We expect the applet to send the source in the following tokenization:
     // ionname|validate|place_name - Triggers validation of place
@@ -507,7 +509,7 @@ bool EnvCanadaIon::updateIonSource(const QString& source)
 // Parses city list and gets the correct city based on ID number
 void EnvCanadaIon::getXMLSetup()
 {
-    //qDebug() << "getXMLSetup()";
+    //qCDebug(IONENGINE_ENVCAN) << "getXMLSetup()";
 
     // If network is down, we need to spin and wait
 
@@ -532,7 +534,7 @@ void EnvCanadaIon::getXMLData(const QString& source)
         }
     }
 
-    //qDebug() << source;
+    //qCDebug(IONENGINE_ENVCAN) << source;
 
     // Demunge source name for key only.
     QString dataKey = source;
@@ -540,7 +542,7 @@ void EnvCanadaIon::getXMLData(const QString& source)
 
     const QUrl url(QLatin1String("http://dd.weatheroffice.ec.gc.ca/citypage_weather/xml/") + m_places[dataKey].territoryName + QLatin1Char('/') + m_places[dataKey].cityCode + QStringLiteral("_e.xml"));
     //url="file:///home/spstarr/Desktop/s0000649_e.xml";
-    //qDebug() << "Will Try URL: " << url;
+    //qCDebug(IONENGINE_ENVCAN) << "Will Try URL: " << url;
 
     if (m_places[dataKey].territoryName.isEmpty() && m_places[dataKey].cityCode.isEmpty()) {
         setData(source, QStringLiteral("validate"), QStringLiteral("envcan|malformed"));
@@ -563,12 +565,12 @@ void EnvCanadaIon::setup_slotDataArrived(KIO::Job *job, const QByteArray &data)
     Q_UNUSED(job)
 
     if (data.isEmpty()) {
-        //qDebug() << "done!";
+        //qCDebug(IONENGINE_ENVCAN) << "done!";
         return;
     }
 
     // Send to xml.
-    //qDebug() << data;
+    //qCDebug(IONENGINE_ENVCAN) << data;
     m_xmlSetup.addData(data);
 }
 
@@ -587,7 +589,7 @@ void EnvCanadaIon::slotJobFinished(KJob *job)
 {
     // Dual use method, if we're fetching location data to parse we need to do this first
     const QString source = m_jobList.value(job);
-    //qDebug() << source << m_sourcesToReset.contains(source);
+    //qCDebug(IONENGINE_ENVCAN) << source << m_sourcesToReset.contains(source);
     setData(source, Data());
     QXmlStreamReader *reader = m_jobXml.value(job);
     if (reader) {
@@ -614,7 +616,7 @@ void EnvCanadaIon::setup_slotJobFinished(KJob *job)
     Q_UNUSED(job)
     const bool success = readXMLSetup();
     m_xmlSetup.clear();
-    //qDebug() << success << m_sourcesToReset;
+    //qCDebug(IONENGINE_ENVCAN) << success << m_sourcesToReset;
     setInitialized(success);
 }
 
@@ -626,7 +628,7 @@ bool EnvCanadaIon::readXMLSetup()
     QString code;
     QString cityName;
 
-    //qDebug() << "readXMLSetup()";
+    //qCDebug(IONENGINE_ENVCAN) << "readXMLSetup()";
 
     while (!m_xmlSetup.atEnd()) {
         m_xmlSetup.readNext();
@@ -709,7 +711,7 @@ bool EnvCanadaIon::readXMLData(const QString& source, QXmlStreamReader& xml)
 {
     WeatherData data;
 
-    //qDebug() << "readXMLData()";
+    //qCDebug(IONENGINE_ENVCAN) << "readXMLData()";
 
     QString dataKey = source;
     dataKey.remove(QStringLiteral("envcan|weather|"));
@@ -1369,7 +1371,7 @@ void EnvCanadaIon::parseUnknownElement(QXmlStreamReader& xml) const
 
 void EnvCanadaIon::updateWeather(const QString& source)
 {
-    //qDebug() << "updateWeather()";
+    //qCDebug(IONENGINE_ENVCAN) << "updateWeather()";
 
     const WeatherData& weatherData = m_weatherData[source];
 
@@ -1391,7 +1393,7 @@ void EnvCanadaIon::updateWeather(const QString& source)
     if (!weatherData.condition.isEmpty()) {
         data.insert(QStringLiteral("Current Conditions"), i18nc("weather condition", weatherData.condition.toUtf8().data()));
     }
-    //qDebug() << "i18n condition string: " << qPrintable(condition(source));
+    //qCDebug(IONENGINE_ENVCAN) << "i18n condition string: " << qPrintable(condition(source));
 
     // Tell applet which icon to use for conditions and provide mapping for condition type to the icons to display
     QMap<QString, ConditionIcons> conditionList;
@@ -1410,14 +1412,14 @@ void EnvCanadaIon::updateWeather(const QString& source)
         conditionList.insert(QStringLiteral("mostly cloudy"), PartlyCloudyNight);
         conditionList.insert(QStringLiteral("partly cloudy"), PartlyCloudyNight);
         conditionList.insert(QStringLiteral("fair"), FewCloudsNight);
-        //qDebug() << "Before sunrise/After sunset - using night icons\n";
+        //qCDebug(IONENGINE_ENVCAN) << "Before sunrise/After sunset - using night icons\n";
     } else {
 #endif
         conditionList.insert(QStringLiteral("decreasing cloud"), FewCloudsDay);
         conditionList.insert(QStringLiteral("mostly cloudy"), PartlyCloudyDay);
         conditionList.insert(QStringLiteral("partly cloudy"), PartlyCloudyDay);
         conditionList.insert(QStringLiteral("fair"), FewCloudsDay);
-        //qDebug() << "Using daytime icons\n";
+        //qCDebug(IONENGINE_ENVCAN) << "Using daytime icons\n";
 #if 0
     }
 #endif
@@ -1559,7 +1561,7 @@ void EnvCanadaIon::updateWeather(const QString& source)
                                    tempHigh,
                                    tempLow,
                                    popPrecent));
-        //qDebug() << "i18n summary string: " << qPrintable(i18n(forecastInfo->shortForecast.toUtf8()));
+        //qCDebug(IONENGINE_ENVCAN) << "i18n summary string: " << qPrintable(i18n(forecastInfo->shortForecast.toUtf8()));
 
         /*
                 data.insert(QString("Long Forecast Day %1").arg(i), QString("%1|%2|%3|%4|%5|%6|%7|%8") \

@@ -10,6 +10,12 @@ add_definitions(
 add_subdirectory(ions)
 
 set(weather_SRCS weatherengine.cpp)
+ecm_qt_declare_logging_category(weather_SRCS
+    HEADER weatherenginedebug.h
+    IDENTIFIER WEATHER
+    CATEGORY_NAME kde.dataengine.weather
+    DEFAULT_SEVERITY Info
+)
 
 add_library(plasma_engine_weather MODULE ${weather_SRCS})
 

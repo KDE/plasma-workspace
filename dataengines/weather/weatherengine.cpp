@@ -21,7 +21,6 @@
 #include "weatherengine.h"
 
 #include <QTimer>
-#include <QDebug>
 
 #include <KSycoca>
 
@@ -29,6 +28,7 @@
 #include <Plasma/PluginLoader>
 
 #include "ions/ion.h"
+#include "weatherenginedebug.h"
 
 // Constructor
 WeatherEngine::WeatherEngine(QObject *parent, const QVariantList& args)
@@ -119,7 +119,7 @@ void WeatherEngine::newIonSource(const QString& source)
         return;
     }
 
-    qDebug() << "newIonSource()";
+    qCDebug(WEATHER) << "newIonSource()";
     ion->connectSource(source, this);
 }
 
@@ -132,7 +132,7 @@ void WeatherEngine::removeIonSource(const QString& source)
     if (ion) {
         ion->removeSource(source);
     }
-    qDebug() << "removeIonSource()";
+    qCDebug(WEATHER) << "removeIonSource()";
 }
 
 /**
@@ -140,7 +140,7 @@ void WeatherEngine::removeIonSource(const QString& source)
  */
 void WeatherEngine::dataUpdated(const QString& source, const Plasma::DataEngine::Data& data)
 {
-    qDebug() << "dataUpdated()";
+    qCDebug(WEATHER) << "dataUpdated()";
     setData(source, data);
 }
 
@@ -162,7 +162,7 @@ bool WeatherEngine::sourceRequestEvent(const QString &source)
     // is down. when it comes up again, then it will be refreshed
     ion->connectSource(source, this);
 
-    qDebug() << "sourceRequestEvent(): Network is: " << m_networkAvailable;
+    qCDebug(WEATHER) << "sourceRequestEvent(): Network is: " << m_networkAvailable;
     if (!m_networkAvailable) {
         setData(source, Data());
         return true;
@@ -185,7 +185,7 @@ bool WeatherEngine::updateSourceEvent(const QString& source)
         return false;
     }
 
-    qDebug() << "updateSourceEvent(): Network is: " << m_networkAvailable;
+    qCDebug(WEATHER) << "updateSourceEvent(): Network is: " << m_networkAvailable;
     if (!m_networkAvailable) {
         return false;
     }
@@ -195,7 +195,7 @@ bool WeatherEngine::updateSourceEvent(const QString& source)
 
 void WeatherEngine::networkStatusChanged(QNetworkAccessManager::NetworkAccessibility status)
 {
-    qDebug();
+    qCDebug(WEATHER);
     m_networkAvailable = status == QNetworkAccessManager::Accessible || status == QNetworkAccessManager::UnknownAccessibility;
     if (m_networkAvailable) {
         // allow the network to settle down and actually come up
@@ -207,7 +207,7 @@ void WeatherEngine::startReconnect()
 {
     foreach (const QString &i, m_ions) {
         IonInterface * ion = qobject_cast<IonInterface *>(dataEngine(i));
-        qDebug() << "resetting" << ion;
+        qCDebug(WEATHER) << "resetting" << ion;
         if (ion) {
             ion->reset();
         }
@@ -219,10 +219,10 @@ void WeatherEngine::forceUpdate(IonInterface *ion, const QString &source)
     Q_UNUSED(ion);
     Plasma::DataContainer *container = containerForSource(source);
     if (container) {
-        qDebug() << "immediate update of" << source;
+        qCDebug(WEATHER) << "immediate update of" << source;
         container->forceImmediateUpdate();
     } else {
-        qDebug() << "innexplicable failure of" << source;
+        qCDebug(WEATHER) << "innexplicable failure of" << source;
     }
 }
 

@@ -21,12 +21,13 @@
 
 #include "ion_noaa.h"
 
+#include "ion_noaadebug.h"
+
 #include <KIO/Job>
 #include <KUnitConversion/Converter>
 #include <KLocalizedString>
 
 #include <QLocale>
-#include <QDebug>
 
 
 WeatherData::WeatherData()
@@ -529,7 +530,7 @@ void NOAAIon::updateWeather(const QString& source)
     const QString conditionI18n = weatherData.weather == QLatin1String("N/A") ? i18n("N/A") : i18nc("weather condition", weatherData.weather.toUtf8().data());
 
     data.insert(QStringLiteral("Current Conditions"), conditionI18n);
-    qDebug() << "i18n condition string: " << qPrintable(conditionI18n);
+    qCDebug(IONENGINE_NOAA) << "i18n condition string: " << qPrintable(conditionI18n);
 
 //TODO: Port to Plasma2
 #if 0
@@ -549,14 +550,14 @@ void NOAAIon::updateWeather(const QString& source)
         QString weather = weatherData.weather.toLower();
         ConditionIcons condition = getConditionIcon(weather, true);
         data.insert(QStringLiteral("Condition Icon"), getWeatherIcon(condition));
-        qDebug() << "Using daytime icons\n";
+        qCDebug(IONENGINE_NOAA) << "Using daytime icons\n";
 #if 0
     } else {
         // Night
         QString weather = weatherData.weather.toLower();
         ConditionIcons condition = getConditionIcon(weather, false);
         data.insert("Condition Icon", getWeatherIcon(condition));
-        qDebug() << "Using nighttime icons\n";
+        qCDebug(IONENGINE_NOAA) << "Using nighttime icons\n";
     }
 #endif
 
@@ -823,7 +824,7 @@ void NOAAIon::readForecast(const QString& source, QXmlStreamReader& xml)
                         WeatherData::Forecast forecast;
                         forecast.day = QLocale().toString(date.date().day());
                         forecasts.append(forecast);
-                        //qDebug() << forecast.day;
+                        //qCDebug(IONENGINE_NOAA) << forecast.day;
                     }
                 }
 
@@ -838,7 +839,7 @@ void NOAAIon::readForecast(const QString& source, QXmlStreamReader& xml)
 
                     if (xml.name() == QLatin1String("value")) {
                         forecasts[i].high = xml.readElementText();
-                        //qDebug() << forecasts[i].high;
+                        //qCDebug(IONENGINE_NOAA) << forecasts[i].high;
                         i++;
                     }
                 }
@@ -853,7 +854,7 @@ void NOAAIon::readForecast(const QString& source, QXmlStreamReader& xml)
 
                     if (xml.name() == QLatin1String("value")) {
                         forecasts[i].low = xml.readElementText();
-                        //qDebug() << forecasts[i].low;
+                        //qCDebug(IONENGINE_NOAA) << forecasts[i].low;
                         i++;
                     }
                 }
@@ -869,8 +870,8 @@ void NOAAIon::readForecast(const QString& source, QXmlStreamReader& xml)
                     if (xml.name() == QLatin1String("weather-conditions") && xml.isStartElement()) {
                         QString summary = xml.attributes().value(QStringLiteral("weather-summary")).toString();
                         forecasts[i].summary = summary;
-                        //qDebug() << forecasts[i].summary;
-			qDebug() << "i18n summary string: "
+                        //qCDebug(IONENGINE_NOAA) << forecasts[i].summary;
+			qCDebug(IONENGINE_NOAA) << "i18n summary string: "
                                  << i18nc("weather forecast", forecasts[i].summary.toUtf8().data());
                         i++;
                     }
