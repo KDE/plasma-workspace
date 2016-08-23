@@ -91,6 +91,6 @@ SessionManagementScreen {
         Layout.fillWidth: true
 
         text: userListCurrentIndex == 0 ? i18nd("plasma_lookandfeel_org", "Unlock") : i18nd("plasma_lookandfeel_org", "Start New Session")
-        onClicked: userListCurrentIndex == 0 ? startLogin(passwordBox.text) : newSession()
+        onClicked: userListCurrentIndex == 0 ? startLogin() : newSession()
     }
 }
