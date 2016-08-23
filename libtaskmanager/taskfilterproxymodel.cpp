@@ -319,13 +319,15 @@ bool TaskFilterProxyModel::filterAcceptsRow(int sourceRow, const QModelIndex &so
 
     // Filter by activity.
     if (d->filterByActivity && !d->activity.isEmpty()) {
-        const QVariant &activities = sourceIdx.data(AbstractTasksModel::Activities);
+        if (!sourceIdx.data(AbstractTasksModel::IsDemandingAttention).toBool()) {
+            const QVariant &activities = sourceIdx.data(AbstractTasksModel::Activities);
 
-        if (!activities.isNull()) {
-            const QStringList l = activities.toStringList();
+            if (!activities.isNull()) {
+                const QStringList l = activities.toStringList();
 
-            if (!l.isEmpty() && !l.contains(d->activity)) {
-                return false;
+                if (!l.isEmpty() && !l.contains(d->activity)) {
+                    return false;
+                }
             }
         }
     }
