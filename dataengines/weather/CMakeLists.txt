@@ -20,7 +20,7 @@ target_link_libraries (plasma_engine_weather
             Qt5::Network
             weather_ion)
 
-kcoreaddons_desktop_to_json(plasma_engine_weather plasma-dataengine-weather.desktop)
+kcoreaddons_desktop_to_json(plasma_engine_weather plasma-dataengine-weather.desktop SERVICE_TYPES plasma-dataengine.desktop)
 
 install (TARGETS plasma_engine_weather DESTINATION ${KDE_INSTALL_PLUGINDIR}/plasma/dataengine)
 install (FILES plasma-dataengine-weather.desktop DESTINATION ${KDE_INSTALL_KSERVICES5DIR})
