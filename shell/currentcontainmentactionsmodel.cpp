@@ -243,6 +243,7 @@ void CurrentContainmentActionsModel::showAbout(int row)
 
     KAboutApplicationDialog *aboutDialog = new KAboutApplicationDialog(aboutData, qobject_cast<QWidget*>(parent()));
     aboutDialog->setWindowIcon(QIcon::fromTheme(info.icon()));
+    aboutDialog->setAttribute(Qt::WA_DeleteOnClose);
     aboutDialog->show();
 }
 
