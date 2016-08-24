@@ -719,9 +719,6 @@ void ShellCorona::primaryOutputChanged()
 void ShellCorona::screenInvariants() const
 {
     Q_ASSERT(m_desktopViewforId.keys().count() <= QGuiApplication::screens().count());
-    QScreen *s = !m_desktopViewforId.contains(0) ? nullptr : m_desktopViewforId.value(0)->screenToFollow();
-
-    QScreen* ks = qGuiApp->primaryScreen();
 
     QSet<QScreen*> screens;
     foreach (const int id, m_desktopViewforId.keys()) {
