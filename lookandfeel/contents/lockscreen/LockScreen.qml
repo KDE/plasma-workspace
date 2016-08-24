@@ -28,7 +28,6 @@ Item {
     property bool viewVisible: false
     property bool debug: false
     property string notification
-    property UserSelect userSelect: null
     property int interfaceVersion: org_kde_plasma_screenlocker_greeter_interfaceVersion ? org_kde_plasma_screenlocker_greeter_interfaceVersion : 0
     signal clearPassword()
 
