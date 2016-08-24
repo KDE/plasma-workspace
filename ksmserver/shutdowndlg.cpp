@@ -51,6 +51,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #include <KLocalizedString>
 #include <KUser>
 #include <Solid/PowerManagement>
+#include <KWindowEffects>
 #include <KWindowSystem>
 #include <KDeclarative/KDeclarative>
 #include <KSharedConfig>
@@ -222,6 +223,7 @@ bool KSMShutdownDlg::event(QEvent *e)
             switch (pe->surfaceEventType()) {
             case QPlatformSurfaceEvent::SurfaceCreated:
                 setupWaylandIntegration();
+                KWindowEffects::enableBlurBehind(winId(), true);
                 break;
             case QPlatformSurfaceEvent::SurfaceAboutToBeDestroyed:
                 delete m_shellSurface;
