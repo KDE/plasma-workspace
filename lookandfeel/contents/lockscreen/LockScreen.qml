@@ -41,6 +41,8 @@ Item {
         opacity: 0
         onItemChanged: opacity = 1
 
+        focus: true
+
         Behavior on opacity {
             OpacityAnimator {
                 duration: units.longDuration
