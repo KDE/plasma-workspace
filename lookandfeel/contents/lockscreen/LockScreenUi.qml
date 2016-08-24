@@ -140,6 +140,7 @@ PlasmaCore.ColorScope {
                 text: "Switch Session"
                 onClicked: {
                     sessionsModel.switchUser(userListCurrentModelData.vtNumber)
+                    mainStack.pop()
                 }
             }
 
