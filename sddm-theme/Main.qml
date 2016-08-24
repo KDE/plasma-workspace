@@ -50,7 +50,6 @@ PlasmaCore.ColorScope {
         }
     }
 
-
     Clock {
         anchors.bottom: parent.verticalCenter
         anchors.bottomMargin: units.gridUnit * 13
@@ -68,6 +67,18 @@ PlasmaCore.ColorScope {
             topMargin: footer.height // effectively centre align within the view
         }
         focus: true //StackView is an implicit focus scope, so we need to give this focus so the item inside will have it
+
+        Timer {
+            //SDDM has a bug in 0.13 where even though we set the focus on the right item within the window, the window doesn't have focus
+            //it is fixed in 6d5b36b28907b16280ff78995fef764bb0c573db which will be 0.14
+            //we need to call "window->activate()" *After* it's been shown. We can't control that in QML so we use a shoddy timer
+            //it's been this way for all Plasma 5.x without a huge problem
+            running: true
+            repeat: false
+            interval: 200
+            onTriggered: mainStack.forceActiveFocus()
+        }
+
         initialItem: Login {
             userListModel: userModel
             userListCurrentIndex: userModel.lastIndex >= 0 ? userModel.lastIndex : 0
