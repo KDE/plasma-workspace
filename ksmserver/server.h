@@ -51,6 +51,7 @@ extern "C" {
 #include <QTime>
 #include <QMap>
 
+#include "autostart.h"
 
 #define SESSION_PREVIOUS_LOGOUT "saved at previous logout"
 #define SESSION_BY_USER  "saved by user"
@@ -232,6 +233,9 @@ private:
     QList<KSMListener*> listener;
     QList<KSMClient*> clients;
 
+    void autoStart(int phase);
+    void slotAutoStart();
+
     enum State
         {
         Idle,
@@ -281,10 +285,11 @@ private:
 
     WindowMap legacyWindows;
 
-    OrgKdeKLauncherInterface* klauncherSignals;
     QDBusInterface* kcminitSignals;
 
     int inhibitCookie;
+
+    AutoStart m_autoStart;
 
     //subSession stuff
     QList<KSMClient*> clientsToKill;

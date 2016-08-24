@@ -617,8 +617,6 @@ KSMServer::KSMServer( const QString& windowManager, InitFlags flags )
 
     new KSMServerInterfaceAdaptor( this );
     QDBusConnection::sessionBus().registerObject(QStringLiteral("/KSMServer"), this);
-    klauncherSignals = new OrgKdeKLauncherInterface(QLatin1String("org.kde.klauncher5"),
-            QLatin1String("/KLauncher"), QDBusConnection::sessionBus());
     kcminitSignals = NULL;
     the_server = this;
     clean = false;

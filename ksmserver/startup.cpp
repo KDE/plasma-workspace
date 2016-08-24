@@ -71,6 +71,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #include <KSharedConfig>
 #include <kprocess.h>
 #include <KNotifyConfig>
+#include <KService>
 
 #include "global.h"
 #include "server.h"
@@ -156,9 +157,6 @@ void KSMServer::restoreSession( const QString &sessionName )
     int count =  configSessionGroup.readEntry( "count", 0 );
     appsToStart = count;
     upAndRunning( QStringLiteral( "ksmserver" ) );
-    connect( klauncherSignals, &OrgKdeKLauncherInterface::autoStart0Done, this, &KSMServer::autoStart0Done);
-    connect( klauncherSignals, &OrgKdeKLauncherInterface::autoStart1Done, this, &KSMServer::autoStart1Done);
-    connect( klauncherSignals, &OrgKdeKLauncherInterface::autoStart2Done, this, &KSMServer::autoStart2Done);
 
     // find all commands to launch the wm in the session
     QList<QStringList> wmStartCommands;
@@ -191,10 +189,6 @@ void KSMServer::startDefaultSession()
 #endif
     sessionGroup = QString();
     upAndRunning( QStringLiteral( "ksmserver" ) );
-    connect( klauncherSignals, &OrgKdeKLauncherInterface::autoStart0Done, this, &KSMServer::autoStart0Done);
-    connect( klauncherSignals, &OrgKdeKLauncherInterface::autoStart1Done, this, &KSMServer::autoStart1Done);
-    connect( klauncherSignals, &OrgKdeKLauncherInterface::autoStart2Done, this, &KSMServer::autoStart2Done);
-
     launchWM( QList< QStringList >() << wmCommands );
 }
 
@@ -210,8 +204,6 @@ void KSMServer::launchWM( const QList< QStringList >& wmStartCommands )
         connect( wmProcess, SIGNAL(error(QProcess::ProcessError)), SLOT(wmProcessChange()));
         connect( wmProcess, SIGNAL(finished(int,QProcess::ExitStatus)), SLOT(wmProcessChange()));
     }
-    //Let's try to remove this and see how smooth things are nowadays
-//     QTimer::singleShot( 4000, this, SLOT(autoStart0()) );
     autoStart0();
 }
 
@@ -252,15 +244,14 @@ void KSMServer::autoStart0()
 #ifdef KSMSERVER_STARTUP_DEBUG1
     qCDebug(KSMSERVER) << t.elapsed();
 #endif
-    org::kde::KLauncher klauncher(QStringLiteral("org.kde.klauncher5"), QStringLiteral("/KLauncher"), QDBusConnection::sessionBus());
-    klauncher.autoStart((int)0);
+
+   autoStart(0);
 }
 
 void KSMServer::autoStart0Done()
 {
     if( state != AutoStart0 )
         return;
-    disconnect( klauncherSignals, &OrgKdeKLauncherInterface::autoStart0Done, this, &KSMServer::autoStart0Done);
     if( !checkStartupSuspend())
         return;
     qCDebug(KSMSERVER) << "Autostart 0 done";
@@ -316,17 +307,13 @@ void KSMServer::autoStart1()
 #ifdef KSMSERVER_STARTUP_DEBUG1
     qCDebug(KSMSERVER)<< t.elapsed();
 #endif
-    org::kde::KLauncher klauncher(QStringLiteral("org.kde.klauncher5"),
-                                  QStringLiteral("/KLauncher"),
-                                  QDBusConnection::sessionBus());
-    klauncher.autoStart((int)1);
+    autoStart(1);
 }
 
 void KSMServer::autoStart1Done()
 {
     if( state != AutoStart1 )
         return;
-    disconnect( klauncherSignals, &OrgKdeKLauncherInterface::autoStart1Done, this, &KSMServer::autoStart1Done);
     if( !checkStartupSuspend())
         return;
     qCDebug(KSMSERVER) << "Autostart 1 done";
@@ -416,14 +403,8 @@ void KSMServer::autoStart2()
 #endif
     waitAutoStart2 = true;
     waitKcmInit2 = true;
-    org::kde::KLauncher klauncher(QStringLiteral("org.kde.klauncher5"),
-                                  QStringLiteral("/KLauncher"),
-                                  QDBusConnection::sessionBus());
-    klauncher.autoStart((int)2);
+    autoStart(2);
     QTimer::singleShot( 10000, this, &KSMServer::autoStart2Done); //In case klauncher never returns
-#ifdef KSMSERVER_STARTUP_DEBUG1
-    qCDebug(KSMSERVER)<< "klauncher" << t.elapsed();
-#endif
 
     QDBusInterface kded( QStringLiteral( "org.kde.kded5" ),
                          QStringLiteral( "/kded" ),
@@ -459,8 +440,6 @@ void KSMServer::autoStart2()
 void KSMServer::runUserAutostart()
 {
     // Now let's execute the scripts in the KDE-specific autostart-scripts folder.
-    // (the code for the XDG autostart folder with .desktop files is in klauncher currently -> TODO move it to ksmserver)
-
     const QString autostartFolder = QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation) + QDir::separator() + QStringLiteral("autostart-scripts");
 
     QDir dir(autostartFolder);
@@ -482,11 +461,11 @@ void KSMServer::runUserAutostart()
         {
             const QString fullPath = dir.absolutePath() + QLatin1Char('/') + file;
 
-            qCDebug(KSMSERVER) << "Starting autostart script " << fullPath;
+            qCInfo(KSMSERVER) << "Starting autostart script " << fullPath;
             auto p = new QProcess; //deleted in onFinished lambda
             p->start(fullPath);
             connect(p, static_cast<void (QProcess::*)(int)>(&QProcess::finished), [p](int exitCode) {
-                qCDebug(KSMSERVER) << "autostart script" << p->program() << "finished with exit code " << exitCode;
+                qCInfo(KSMSERVER) << "autostart script" << p->program() << "finished with exit code " << exitCode;
                 p->deleteLater();
             });
         }
@@ -531,12 +510,8 @@ bool KSMServer::migrateKDE4Autostart(const QString &autostartFolder)
 
 void KSMServer::autoStart2Done()
 {
-    if (sender() != klauncherSignals && waitAutoStart2) {
-        qWarning() << "autoStart2Done timedout, this is a BUG!";
-    }
     if( state != FinishingStartup )
         return;
-    disconnect( klauncherSignals, &OrgKdeKLauncherInterface::autoStart2Done, this, &KSMServer::autoStart2Done);
     qCDebug(KSMSERVER) << "Autostart 2 done";
     waitAutoStart2 = false;
     finishStartup();
@@ -663,6 +638,53 @@ void KSMServer::restoreSubSession( const QString& name )
 
     state = RestoringSubSession;
     tryRestoreNext();
+}
+
+
+void KSMServer::autoStart(int phase)
+{
+    if (m_autoStart.phase() >= phase) {
+        return;
+    }
+    m_autoStart.setPhase(phase);
+    if (phase == 0) {
+        m_autoStart.loadAutoStartList();
+    }
+    QTimer::singleShot(0, this, &KSMServer::slotAutoStart);
+}
+
+void KSMServer::slotAutoStart()
+{
+    do {
+        QString serviceName = m_autoStart.startService();
+        if (serviceName.isEmpty()) {
+            // Done
+            if (!m_autoStart.phaseDone()) {
+                m_autoStart.setPhaseDone();
+                switch (m_autoStart.phase()) {
+                case 0:
+                    autoStart0Done();
+                    break;
+                case 1:
+                    autoStart1Done();
+                    break;
+                case 2:
+                    autoStart2Done();
+                    break;
+                }
+            }
+            return;
+        }
+        KService service(serviceName);
+        qCInfo(KSMSERVER) << "Starting autostart service " << serviceName;
+        auto p = new QProcess(this);
+        p->start(service.exec());
+        connect(p, static_cast<void (QProcess::*)(int)>(&QProcess::finished), [p](int exitCode) {
+            qCInfo(KSMSERVER) << "autostart service" << p->program() << "finished with exit code " << exitCode;
+            p->deleteLater();
+        });
+    } while (true);
+    // Loop till we find a service that we can start.
 }
 
 #include "startup.moc"
