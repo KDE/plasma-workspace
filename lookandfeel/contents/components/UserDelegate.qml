@@ -31,6 +31,7 @@ Item {
     readonly property var m: model
     property string name
     property string userName
+    property string avatarPath
     property string iconSource
     signal clicked()
 
@@ -49,19 +50,17 @@ Item {
         width: faceSize
         height: faceSize
 
-        //we sometimes have a path to an image sometimes an icon
-        //IconItem tries to load a full path as an icon which is rubbish
-        //we try loading it as a normal image, if that fails we fall back to IconItem
+        //Image takes priority, taking a full path to a file, if that doesn't exist we show an icon
         Image {
             id: face
-            source: wrapper.iconSource
+            source: wrapper.avatarPath
             fillMode: Image.PreserveAspectCrop
             anchors.fill: parent
         }
 
         PlasmaCore.IconItem {
             id: faceIcon
-            source: visible ? "user-identity" : undefined
+            source: iconSource
             visible: (face.status == Image.Error || face.status == Image.Null)
             anchors.fill: parent
             anchors.margins: units.gridUnit * 0.5 // because mockup says so...

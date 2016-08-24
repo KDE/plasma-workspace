@@ -86,7 +86,7 @@ PlasmaCore.ColorScope {
             if (sessionsModel.canStartNewSession) {
                 users.append({realName: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "New Session"),
                                 name: "__new_session",
-                                icon: "system-log-out", //TODO Need an icon for new session
+                                iconName: "list-add"
                 })
             }
         }
