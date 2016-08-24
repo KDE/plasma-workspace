@@ -14,7 +14,7 @@ set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH} ${ECM_KDE_MODULE_DIR})
 find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS
                     Plasma DocTools Runner JsEmbed NotifyConfig Su NewStuff Wallet KCMUtils
                     IdleTime Declarative TextWidgets KDELibs4Support Crash GlobalAccel
-                    DBusAddons)
+                    DBusAddons Wayland)
 find_package(KF5NetworkManagerQt ${KF5_MIN_VERSION})
 set_package_properties(KF5NetworkManagerQt PROPERTIES DESCRIPTION "Qt wrapper for NetworkManager API"
                        TYPE OPTIONAL
@@ -94,11 +94,6 @@ endif()
 if(X11_FOUND AND XCB_XCB_FOUND)
   set(HAVE_X11 1)
 endif()
-
-find_package(KF5Wayland CONFIG)
-set_package_properties(KF5Wayland PROPERTIES
-                       TYPE REQUIRED
-                       PURPOSE "Required for Wayland integration of plasmashell")
 
 include(ConfigureChecks.cmake)
 
