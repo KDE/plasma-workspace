@@ -22,6 +22,7 @@
 
 #include <QTimer>
 #include <QNetworkAccessManager>
+#include <QHash>
 
 #include <Plasma/DataEngine>
 #include <Plasma/DataEngineConsumer>
@@ -91,11 +92,6 @@ private Q_SLOTS:
     void forceUpdate(IonInterface *ion, const QString &source);
 
     /**
-     * Notify WeatherEngine a new ion has data sources.
-     * @arg source datasource name.
-     */
-    void newIonSource(const QString& source);
-    /**
      * Notify WeatherEngine a datasource is being removed.
      * @arg source datasource name.
      */
@@ -114,27 +110,14 @@ private Q_SLOTS:
 
 private:
     /**
-     * Load a plugin
-     * @arg pluginName Name of the plugin
-     * @return IonInterface returns an instance of the loaded plugin
-     */
-    IonInterface* loadIon(const QString& pluginName);
-
-    /**
      * Get instance of a loaded ion.
      * @returns a IonInterface instance of a loaded plugin.
      */
-    IonInterface* ionForSource(const QString& name);
-
-    /**
-     * Get plugin name from datasource.
-     * @returns The plugin name given a datasource.
-     */
-    QString ionNameForSource(const QString& source) const;
+    IonInterface* ionForSource(const QString& source, QString* ionName = 0);
 
 private:
-    QStringList m_ions;
     bool m_networkAvailable;
+    QHash<QString, int> m_ionUsage;
     QTimer m_reconnectTimer;
     QNetworkAccessManager *m_networkAccessManager;
 };
