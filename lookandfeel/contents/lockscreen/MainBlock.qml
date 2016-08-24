@@ -28,7 +28,6 @@ import org.kde.plasma.components 2.0 as PlasmaComponents
 import "../components"
 
 SessionManagementScreen {
-    id: root
     /*
      * Login has been requested with the following username and password
      * If username field is visible, it will be taken from that, otherwise from the "name" property of the currentIndex
@@ -67,6 +66,7 @@ SessionManagementScreen {
         placeholderText: i18nd("plasma_lookandfeel_org", "Password")
         focus: true
         echoMode: TextInput.Password
+        enabled: !authenticator.graceLocked
 
         onAccepted: startLogin()
 
@@ -82,6 +82,14 @@ SessionManagementScreen {
             if (event.key == Qt.Key_Right && !text) {
                 userList.incrementCurrentIndex();
                 event.accepted = true
+            }
+        }
+
+        Connections {
+            target: root
+            onClearPassword: {
+                passwordBox.forceActiveFocus()
+                passwordBox.selectAll()
             }
         }
     }
