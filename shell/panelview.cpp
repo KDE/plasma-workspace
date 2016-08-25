@@ -1027,8 +1027,7 @@ void PanelView::containmentChanged()
 {
     positionPanel();
     connect(containment(), SIGNAL(statusChanged(Plasma::Types::ItemStatus)), SLOT(statusChanged(Plasma::Types::ItemStatus)));
-    connect(containment(), &QObject::destroyed, this, [this] (QObject *obj) {
-        Q_UNUSED(obj)
+    connect(containment(), &Plasma::Applet::appletDeleted, this, [this] {
         //containment()->destroyed() is true only when the user deleted it
         //so the config is to be thrown away, not during shutdown
         if (containment()->destroyed()) {
@@ -1041,7 +1040,7 @@ void PanelView::containmentChanged()
                 views.sync();
             }
         }
-    }, Qt::QueuedConnection);
+    });
 }
 
 void PanelView::statusChanged(Plasma::Types::ItemStatus status)
