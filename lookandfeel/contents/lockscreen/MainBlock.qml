@@ -63,7 +63,7 @@ SessionManagementScreen {
         id: passwordBox
         Layout.fillWidth: true
 
-        placeholderText: i18nd("plasma_lookandfeel_org", "Password")
+        placeholderText: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Password")
         focus: true
         echoMode: TextInput.Password
         enabled: !authenticator.graceLocked
@@ -98,7 +98,7 @@ SessionManagementScreen {
         id: loginButton
         Layout.fillWidth: true
 
-        text: userListCurrentIndex == 0 ? i18nd("plasma_lookandfeel_org", "Unlock") : i18nd("plasma_lookandfeel_org", "Start New Session")
+        text: userListCurrentIndex == 0 ? i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Unlock") : i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Start New Session")
         onClicked: userListCurrentIndex == 0 ? startLogin() : newSession()
     }
 }

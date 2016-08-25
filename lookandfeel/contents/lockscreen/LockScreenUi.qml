@@ -137,7 +137,7 @@ PlasmaCore.ColorScope {
 
             PlasmaComponents.Button {
                 Layout.fillWidth: true
-                text: "Switch Session"
+                text: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Switch Session")
                 onClicked: {
                     sessionsModel.switchUser(userListCurrentModelData.vtNumber)
                     mainStack.pop()
