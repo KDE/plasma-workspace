@@ -33,6 +33,9 @@ void logMessageHandler(QtMsgType type, const char *msg)
     case QtDebugMsg:
         txt = QStringLiteral("Debug: %1").arg(msg);
         break;
+    case QtInfoMsg:
+        txt = QStringLiteral("Info: %1").arg(msg);
+        break;
     case QtWarningMsg:
         txt = QStringLiteral("Warning: %1").arg(msg);
     break;
