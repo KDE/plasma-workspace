@@ -322,6 +322,11 @@ void NotificationsHelper::repositionPopups()
         }
 
         switch (m_popupLocation) {
+            case Default:
+                //This should not happen as the defualt handling is in NotificationApplet::onScreenPositionChanged
+                Q_ASSERT(false);
+                qWarning("Notication popupLocation is still \"default\". This should not happen");
+                //fall through to top right
             case TopRight:
             case BottomRight:
                 m_popupsOnScreen[i]->setX(m_plasmoidScreen.right() - m_popupsOnScreen[i]->contentItem()->width() - m_offset);
