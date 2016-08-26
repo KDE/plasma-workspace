@@ -39,6 +39,7 @@ Rectangle {
     Item {
         id: content
         anchors.fill: parent
+        opacity: 0
         TextMetrics {
             id: units
             text: "M"
