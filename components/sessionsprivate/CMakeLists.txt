@@ -17,6 +17,7 @@ target_link_libraries(sessionsprivateplugin
     KF5::CoreAddons
     KF5::ConfigCore
     KF5::ConfigGui
+    KF5::I18n
     PW::KWorkspace
 )
 

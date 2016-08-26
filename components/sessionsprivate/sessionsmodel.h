@@ -55,6 +55,7 @@ class SessionsModel : public QAbstractListModel
     Q_PROPERTY(bool canSwitchUser READ canSwitchUser CONSTANT)
     Q_PROPERTY(bool canStartNewSession READ canStartNewSession CONSTANT)
     Q_PROPERTY(bool shouldLock READ shouldLock NOTIFY shouldLockChanged)
+    Q_PROPERTY(bool showNewSessionEntry MEMBER m_showNewSessionEntry WRITE setShowNewSessionEntry NOTIFY showNewSessionEntryChanged)
 
     Q_PROPERTY(int count READ rowCount NOTIFY countChanged)
 
@@ -64,17 +65,20 @@ public:
 
     enum class Role {
         RealName = Qt::DisplayRole,
-        Icon = Qt::DecorationRole,
+        Icon = Qt::DecorationRole, //path to a file
         Name = Qt::UserRole + 1,
         DisplayNumber,
         VtNumber,
         Session,
-        IsTty
+        IsTty,
+        IconName //name of an icon
     };
 
     bool canSwitchUser() const;
     bool canStartNewSession() const;
     bool shouldLock() const;
+
+    void setShowNewSessionEntry(bool showNewSessionEntry);
 
     Q_INVOKABLE void reload();
     Q_INVOKABLE void switchUser(int vt, bool shouldLock = false);
@@ -86,6 +90,7 @@ public:
 
 signals:
     void shouldLockChanged();
+    void showNewSessionEntryChanged();
     void countChanged();
 
     void switchedUser(int vt);
@@ -102,6 +107,8 @@ private:
 
     int m_pendingVt = 0;
     bool m_pendingReserve = false;
+
+    bool m_showNewSessionEntry = false;
 
     org::freedesktop::ScreenSaver *m_screensaverInterface = nullptr;
 

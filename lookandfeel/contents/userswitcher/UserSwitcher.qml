@@ -45,6 +45,8 @@ PlasmaCore.ColorScope {
 
     SessionsModel {
         id: sessionsModel
+        showNewSessionEntry: true
+
         // the calls takes place asynchronously; if we were to dismiss the dialog right
         // after startNewSession/switchUser we would be destroyed before the reply
         // returned leaving us do nothing (Bug 356945)

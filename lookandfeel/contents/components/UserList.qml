@@ -48,7 +48,7 @@ ListView {
         name: {
             var displayName = model.realName || model.name
 
-            if (model.vtNumber === undefined) {
+            if (model.vtNumber === undefined || model.vtNumber < 0) {
                 return displayName
             }
 

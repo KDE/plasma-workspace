@@ -53,6 +53,7 @@ PlasmaCore.ColorScope {
 
     SessionsModel {
         id: sessionsModel
+        showNewSessionEntry: true
     }
 
     PlasmaCore.DataSource {

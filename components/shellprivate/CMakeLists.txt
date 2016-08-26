@@ -1,4 +1,3 @@
-add_definitions(-DTRANSLATION_DOMAIN=\"plasmashellprivateplugin\")
 
 if (KF5TextEditor_FOUND)
    set(interactiveconsole_SRCS

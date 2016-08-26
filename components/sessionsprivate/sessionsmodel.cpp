@@ -24,6 +24,7 @@
 
 #include <KAuthorized>
 #include <KUser>
+#include <KLocalizedString>
 
 #include "kscreensaversettings.h"
 
@@ -74,7 +75,12 @@ bool SessionsModel::shouldLock() const
 
 void SessionsModel::switchUser(int vt, bool shouldLock)
 {
-    if (!canSwitchUser() || vt <= 0) {
+    if (vt < 0) {
+        startNewSession(shouldLock);
+        return;
+    }
+
+    if (!canSwitchUser()) {
         return;
     }
 
@@ -188,10 +194,43 @@ void SessionsModel::checkScreenLocked(const std::function<void (bool)> &cb)
     });
 }
 
+void SessionsModel::setShowNewSessionEntry(bool showNewSessionEntry)
+{
+    if (showNewSessionEntry == m_showNewSessionEntry) {
+        return;
+    }
+
+    int row = m_data.size();
+    if (showNewSessionEntry) {
+        beginInsertRows(QModelIndex(), row, row);
+        m_showNewSessionEntry = showNewSessionEntry;
+        endInsertRows();
+    } else {
+        beginRemoveRows(QModelIndex(), row, row);
+        m_showNewSessionEntry = showNewSessionEntry;
+        endRemoveRows();
+    }
+    emit countChanged();
+}
+
+
 QVariant SessionsModel::data(const QModelIndex &index, int role) const
 {
-    if (index.row() < 0 || index.row() >= m_data.count()) {
+    if (index.row() < 0 || index.row() > rowCount(QModelIndex())) {
         return QVariant();
+    }
+
+    if (index.row() == m_data.count()) {
+        switch (static_cast<Role>(role)) {
+        case Role::RealName: return i18n("New Session");
+        case Role::IconName: return QStringLiteral("list-add");
+        case Role::Name: return i18n("New Session");
+        case Role::DisplayNumber: return 0; //NA
+        case Role::VtNumber: return -1; //an invalid VtNumber - which we'll use to indicate it's to start a new session
+        case Role::Session: return 0; //NA
+        case Role::IsTty: return false; //NA
+        default: return QVariant();
+        }
     }
 
     const SessionEntry &item = m_data.at(index.row());
@@ -204,15 +243,15 @@ QVariant SessionsModel::data(const QModelIndex &index, int role) const
     case Role::VtNumber: return item.vtNumber;
     case Role::Session: return item.session;
     case Role::IsTty: return item.isTty;
+    default: return QVariant();
     }
 
-    return QVariant();
 }
 
 int SessionsModel::rowCount(const QModelIndex &parent) const
 {
     Q_UNUSED(parent);
-    return m_data.count();
+    return m_data.count() + (m_showNewSessionEntry ? 1 : 0);
 }
 
 QHash<int, QByteArray> SessionsModel::roleNames() const
@@ -221,6 +260,7 @@ QHash<int, QByteArray> SessionsModel::roleNames() const
         {static_cast<int>(Role::Name), QByteArrayLiteral("name")},
         {static_cast<int>(Role::RealName), QByteArrayLiteral("realName")},
         {static_cast<int>(Role::Icon), QByteArrayLiteral("icon")},
+        {static_cast<int>(Role::IconName), QByteArrayLiteral("iconName")},
         {static_cast<int>(Role::DisplayNumber), QByteArrayLiteral("displayNumber")},
         {static_cast<int>(Role::VtNumber), QByteArrayLiteral("vtNumber")},
         {static_cast<int>(Role::Session), QByteArrayLiteral("session")},
