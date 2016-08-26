@@ -218,7 +218,6 @@ ShellCorona::~ShellCorona()
 
 bool ShellCorona::eventFilter(QObject *watched, QEvent *event)
 {
-#if QT_VERSION >= QT_VERSION_CHECK(5, 5, 0)
     if (event->type() == QEvent::PlatformSurface &&
         watched->inherits("PlasmaQuick::Dialog")) {
         QPlatformSurfaceEvent *se = static_cast<QPlatformSurfaceEvent *>(event);
@@ -228,7 +227,6 @@ bool ShellCorona::eventFilter(QObject *watched, QEvent *event)
             }
         }
     }
-#endif
 
     return QObject::eventFilter(watched, event);
 }
