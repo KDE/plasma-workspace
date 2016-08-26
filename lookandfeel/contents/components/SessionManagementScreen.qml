@@ -92,8 +92,10 @@ Item {
         }
 
         ColumnLayout {
-            Layout.fillWidth: true
             id: innerLayout
+            Layout.fillWidth: true
+            Layout.alignment: Qt.AlignHCenter
+            Layout.maximumWidth: units.gridUnit * 16
         }
 
         Item {
