@@ -35,6 +35,7 @@
 #include <KConfigGroup>
 #include <KSharedConfig>
 #include <kcoreaddons_version.h>
+#include <KCoreAddons>
 #include <QStandardPaths>
 
 static const QString OS_UNSPECIFIED = QStringLiteral("unspecified");
