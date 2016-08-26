@@ -49,16 +49,6 @@ SessionManagementScreen {
         loginRequest(password);
     }
 
-    PlasmaComponents.Label {
-        id: notificationsLabel
-
-        Layout.fillWidth: true
-
-        horizontalAlignment: Text.AlignHCenter
-        wrapMode: Text.WordWrap
-        font.italic: true
-    }
-
     PlasmaComponents.TextField {
         id: passwordBox
         Layout.fillWidth: true
