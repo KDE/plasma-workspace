@@ -31,6 +31,8 @@
 #include <KDBusService>
 
 #include <kdeclarative/qmlobject.h>
+#include <KQuickAddons/QtQuickSettings>
+
 
 #include "view.h"
 
@@ -43,6 +45,7 @@ int main(int argc, char **argv)
 
     KLocalizedString::setApplicationDomain("krunner");
 
+    KQuickAddons::QtQuickSettings::init();
     QQuickWindow::setDefaultAlphaBuffer(true);
     QApplication app(argc, argv);
 //     TODO: Make it a QGuiApplication once we don't depend on KDELibs4Support

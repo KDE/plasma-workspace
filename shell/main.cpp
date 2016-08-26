@@ -26,6 +26,7 @@
 #include <QMessageBox>
 
 #include <KAboutData>
+#include <KQuickAddons/QtQuickSettings>
 
 #include <kdbusservice.h>
 #include <klocalizedstring.h>
@@ -51,6 +52,7 @@ int main(int argc, char *argv[])
         QCoreApplication::setAttribute(Qt::AA_DisableHighDpiScaling);
     #endif
 
+    KQuickAddons::QtQuickSettings::init();
     QQuickWindow::setDefaultAlphaBuffer(true);
 
     KLocalizedString::setApplicationDomain("plasmashell");
