@@ -18,6 +18,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>
  */
 
+import QtQml 2.2
 import QtQuick 2.0
 import QtQuick.Layouts 1.1
 import QtGraphicalEffects 1.0
@@ -43,7 +44,9 @@ MouseArea {
     property int formFactor: plasmoid.formFactor
     property bool constrained: formFactor == PlasmaCore.Types.Vertical || formFactor == PlasmaCore.Types.Horizontal
     hoverEnabled: true
-    onClicked: logic.open();
+    onClicked: Qt.styleHints.singleClickActivation && logic.open()
+    onDoubleClicked: !Qt.styleHints.singleClickActivation && logic.open()
+
 
     Plasmoid.preferredRepresentation: Plasmoid.fullRepresentation
     Plasmoid.icon: logic.icon
