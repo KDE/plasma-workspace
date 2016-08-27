@@ -50,12 +50,13 @@ int main(int argc, char *argv[])
     qunsetenv("QT_DEVICE_PIXEL_RATIO");
     QCoreApplication::setAttribute(Qt::AA_DisableHighDpiScaling);
 
-    KQuickAddons::QtQuickSettings::init();
     QQuickWindow::setDefaultAlphaBuffer(true);
 
     KLocalizedString::setApplicationDomain("plasmashell");
 
     QApplication app(argc, argv);
+
+    KQuickAddons::QtQuickSettings::init();
 
     KAboutData aboutData(QStringLiteral("plasmashell"),
                          i18n("Plasma"),
