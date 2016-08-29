@@ -36,7 +36,7 @@ Plasma::ServiceJob* SolidDeviceService::createJob (const QString& operation,
         return 0;
     }
 
-    return new SolidDeviceJob (m_engine, destination(), operation, parameters, this);
+    return new SolidDeviceJob (m_engine, destination(), operation, parameters);
 }
 
 
