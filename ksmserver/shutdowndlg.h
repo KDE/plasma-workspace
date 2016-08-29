@@ -86,7 +86,6 @@ protected:
     bool event(QEvent *e) override;
 
 private:
-    void rePosition();
     void setupWaylandIntegration();
     KWorkSpace::ShutdownType m_shutdownType;
     QString m_bootOption;

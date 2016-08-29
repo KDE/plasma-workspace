@@ -89,6 +89,7 @@ KSMShutdownDlg::KSMShutdownDlg( QWindow* parent,
     setColor(QColor(Qt::transparent));
     setFlags(Qt::FramelessWindowHint | Qt::BypassWindowManagerHint);
 
+    setResizeMode(QQuickView::SizeRootObjectToView);
 
     // Qt doesn't set this on unmanaged windows
     //FIXME: or does it?
@@ -175,8 +176,6 @@ void KSMShutdownDlg::init()
         return;
     }
 
-    rePosition();
-
     if(!errors().isEmpty()) {
         qWarning() << errors();
     }
@@ -190,7 +189,7 @@ void KSMShutdownDlg::init()
     connect(rootObject(), SIGNAL(lockScreenRequested()), SLOT(slotLockScreen()));
 
     connect(screen(), &QScreen::geometryChanged, this, [this] {
-        rootContext()->setContextProperty(QStringLiteral("screenGeometry"), this->screen()->geometry());
+        setGeometry(screen()->geometry());
     });
 
     QQuickView::show();
@@ -212,8 +211,6 @@ void KSMShutdownDlg::resizeEvent(QResizeEvent *e)
     } else {
 //        setMask(m_view->mask());
     }
-
-    rePosition();
 }
 
 bool KSMShutdownDlg::event(QEvent *e)
@@ -253,15 +250,6 @@ void KSMShutdownDlg::setupWaylandIntegration()
     // TODO: set a proper window type to indicate to KWin that this is the logout dialog
     // maybe we need a dedicated type for it?
     m_shellSurface->setPosition(geometry().topLeft());
-}
-
-void KSMShutdownDlg::rePosition()
-{
-    setPosition(screen()->geometry().center().x() - width() / 2,
-                screen()->geometry().center().y() - height() / 2);
-    if (m_shellSurface) {
-        m_shellSurface->setPosition(geometry().topLeft());
-    }
 }
 
 void KSMShutdownDlg::slotLogout()
