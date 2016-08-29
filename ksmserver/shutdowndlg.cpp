@@ -197,7 +197,6 @@ void KSMShutdownDlg::init()
 
     KWindowSystem::setState(winId(), NET::SkipTaskbar|NET::SkipPager);
 
-    setMouseGrabEnabled(true);
     setKeyboardGrabEnabled(true);
 }
 
