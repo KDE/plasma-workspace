@@ -21,8 +21,6 @@
 
 #include "notificationsengine.h"
 
-#include <QDebug>
-
 #include <Plasma/ServiceJob>
 
 class NotificationAction : public Plasma::ServiceJob
