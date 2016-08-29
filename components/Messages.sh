@@ -1,2 +1,4 @@
 #! /bin/sh
-$XGETTEXT *.cpp */*.cpp -o $podir/plasmashellprivateplugin.pot
+$EXTRACTRC `find . -name \*.kcfg` >>rc.cpp
+$XGETTEXT  `find . -name \*.cpp` -o $podir/plasmashellprivateplugin.pot
+rm -f rc.cpp
