@@ -129,6 +129,7 @@ void Greeter::adoptScreen(QScreen* screen)
         }
     );
     w->setScreen(screen);
+    w->setGeometry(screen->geometry());
     w->init();
 }
 
