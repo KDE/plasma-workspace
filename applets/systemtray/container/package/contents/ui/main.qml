@@ -25,8 +25,8 @@ import org.kde.plasma.plasmoid 2.0
 Item {
     id: root
 
-    Layout.minimumWidth: internalSystray.Layout.minimumWidth
-    Layout.minimumHeight: internalSystray.Layout.minimumHeight
+    Layout.minimumWidth: internalSystray ? internalSystray.Layout.minimumWidth : 0
+    Layout.minimumHeight: internalSystray ? internalSystray.Layout.minimumHeight : 0
 
     Plasmoid.preferredRepresentation: Plasmoid.fullRepresentation
     property Item internalSystray
