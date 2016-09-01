@@ -151,7 +151,7 @@ QString IonInterface::getWeatherIcon(ConditionIcons condition) const
     case PartlyCloudyDay:
         return QStringLiteral("weather-clouds");
     case Overcast:
-        return QStringLiteral("weather-many-clouds");
+        return QStringLiteral("weather-overcast");
     case Rain:
         return QStringLiteral("weather-showers");
     case LightRain:
@@ -185,9 +185,9 @@ QString IonInterface::getWeatherIcon(ConditionIcons condition) const
     case ClearNight:
         return QStringLiteral("weather-clear-night");
     case Mist:
-        return QStringLiteral("weather-mist");
+        return QStringLiteral("weather-fog");
     case Haze:
-        return QStringLiteral("weather-mist");
+        return QStringLiteral("weather-fog");
     case FreezingRain:
         return QStringLiteral("weather-freezing-rain");
     case FreezingDrizzle:
