@@ -216,9 +216,9 @@ Item {
 
                 height: sizehelper.height
                 width: sizehelper.width
+                minimumPointSize: 0
 
-                fontSizeMode: Text.VerticalFit
-                wrapMode: Text.WordWrap
+                fontSizeMode: Text.HorizontalFit
             }
 
             PropertyChanges {
@@ -227,8 +227,8 @@ Item {
                 height: Math.max(sizehelper.lineCount > 1 ?  2 * Math.round(timeLabel.height / 6) : 2 * Math.round(timeLabel.height / 3), theme.smallestFont.pixelSize)
                 width: main.width
 
-                fontSizeMode: Text.VerticalFit
-                minimumPixelSize: theme.smallestFont.pixelSize
+                fontSizeMode: Text.HorizontalFit
+                minimumPointSize: 0
                 elide: Text.ElideRight
             }
 
@@ -239,7 +239,7 @@ Item {
                 width: timezoneLabel.width
 
                 fontSizeMode: Text.HorizontalFit
-                minimumPixelSize: theme.smallestFont.pixelSize
+                minimumPointSize: 0
                 elide: Text.ElideRight
             }
 
@@ -248,6 +248,8 @@ Item {
 
                 height: sizehelper.paintedHeight
                 width: main.width
+
+                minimumPointSize: 0
 
                 fontSizeMode: Text.HorizontalFit
                 horizontalAlignment: Text.AlignHCenter
