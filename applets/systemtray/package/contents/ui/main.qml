@@ -30,6 +30,8 @@ MouseArea {
 
     Layout.minimumHeight: vertical ? tasksRow.implicitHeight + (expander.visible ? expander.implicitHeight : 0) + units.smallSpacing : units.smallSpacing
 
+    Layout.preferredHeight: Layout.minimumHeight
+
     property var iconSizes: ["small", "smallMedium", "medium", "large", "huge", "enormous"];
 
     property bool vertical: plasmoid.formFactor == PlasmaCore.Types.Vertical

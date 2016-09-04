@@ -27,6 +27,7 @@ Item {
 
     Layout.minimumWidth: internalSystray ? internalSystray.Layout.minimumWidth : 0
     Layout.minimumHeight: internalSystray ? internalSystray.Layout.minimumHeight : 0
+    Layout.preferredHeight: Layout.minimumHeight
 
     Plasmoid.preferredRepresentation: Plasmoid.fullRepresentation
     property Item internalSystray
