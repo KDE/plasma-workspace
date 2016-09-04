@@ -84,7 +84,7 @@ int main()
     if (getenv( "XDG_CONFIG_HOME" )) {
         kdehome = getenv("XDG_CONFIG_HOME");
     } else {
-        kdehome = "~/.config";
+        kdehome = std::string(getenv("HOME")) + "/.config";
     }
     filename = kdehome + "/startupconfig";
     if (access(filename.c_str(), R_OK) != 0)
