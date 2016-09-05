@@ -995,8 +995,6 @@ void KSMServer::selectWm( const QString& kdewm )
 {
     wm = QStringLiteral( KWIN_BIN ); // defaults
     wmCommands = ( QStringList() << QStringLiteral( KWIN_BIN ) );
-    if( qstrcmp( getenv( "KDE_FAILSAFE" ), "1" ) == 0 )
-        return; // failsafe, force kwin
     if( !kdewm.isEmpty())
     {
         wmCommands = ( QStringList() << kdewm );
