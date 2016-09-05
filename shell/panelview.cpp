@@ -365,8 +365,6 @@ void PanelView::positionPanel()
     }
 
     KWindowEffects::slideWindow(winId(), slideLocation, -1);
-
-    updateEnabledBorders();
 }
 
 QRect PanelView::geometryByDistance(int distance) const
@@ -453,7 +451,7 @@ void PanelView::resizePanel()
         setMaximumSize(QSize(maxSize, thickness()));
         resize(qBound(minSize, m_contentLength, maxSize), thickness());
     }
-    //positionPanel will be called implicitly from resizeEvent
+    //position will be updated implicitly from resizeEvent
 }
 
 void PanelView::restore()
@@ -626,6 +624,7 @@ void PanelView::setAutoHideEnabled(bool enabled)
 void PanelView::resizeEvent(QResizeEvent *ev)
 {
     updateMask();
+    updateEnabledBorders();
     //don't setGeometry() to make really sure we aren't doing a resize loop
     const QPoint pos = geometryByDistance(m_distance).topLeft();
     setPosition(pos);
@@ -639,6 +638,7 @@ void PanelView::resizeEvent(QResizeEvent *ev)
 void PanelView::moveEvent(QMoveEvent *ev)
 {
     updateMask();
+    updateEnabledBorders();
     m_strutsTimer.start(STRUTSTIMERDELAY);
     PlasmaQuick::ContainmentView::moveEvent(ev);
 }
