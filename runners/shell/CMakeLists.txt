@@ -13,7 +13,6 @@ target_link_libraries(krunner_shell
     KF5::I18n
     KF5::Plasma
     KF5::Runner
-    KF5::Su
     KF5::Completion
     Qt5::Widgets
 )

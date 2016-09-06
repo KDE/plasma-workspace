@@ -21,9 +21,6 @@
 
 #include <KAuthorized>
 #include <QDebug>
-#ifdef Q_OS_UNIX
-#include <KDESu/SuProcess>
-#endif
 #include <KLocalizedString>
 #include <KRun>
 #include <KShell>
