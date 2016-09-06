@@ -25,6 +25,8 @@ License along with this library.  If not, see <http://www.gnu.org/licenses/>.
 
 #include "taskmanager_export.h"
 
+#include <config-X11.h>
+
 namespace TaskManager
 {
 
@@ -50,6 +52,7 @@ class TASKMANAGER_EXPORT VirtualDesktopInfo : public QObject
     Q_PROPERTY(int currentDesktop READ currentDesktop NOTIFY currentDesktopChanged)
     Q_PROPERTY(int numberOfDesktops READ numberOfDesktops NOTIFY numberOfDesktopsChanged)
     Q_PROPERTY(QStringList desktopNames READ desktopNames NOTIFY desktopNamesChanged)
+    Q_PROPERTY(int desktopLayoutRows READ desktopLayoutRows NOTIFY desktopLayoutRowsChanged)
 
 public:
     explicit VirtualDesktopInfo(QObject *parent = 0);
@@ -79,10 +82,18 @@ public:
      **/
     QStringList desktopNames() const;
 
+    /**
+     * The number of rows in the virtual desktop layout.
+     *
+     * @returns the number of rows in the virtual desktop layout.
+     **/
+    int desktopLayoutRows() const;
+
 Q_SIGNALS:
     void currentDesktopChanged() const;
     void numberOfDesktopsChanged() const;
     void desktopNamesChanged() const;
+    void desktopLayoutRowsChanged() const;
 };
 
 }

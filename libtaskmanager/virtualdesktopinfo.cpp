@@ -22,6 +22,15 @@ License along with this library.  If not, see <http://www.gnu.org/licenses/>.
 
 #include <KWindowSystem>
 
+#include <QDBusConnection>
+
+#include <config-X11.h>
+
+#if HAVE_X11
+#include <netwm.h>
+#include <QX11Info>
+#endif
+
 namespace TaskManager
 {
 
@@ -35,6 +44,14 @@ VirtualDesktopInfo::VirtualDesktopInfo(QObject *parent) : QObject(parent)
 
     connect(KWindowSystem::self(), &KWindowSystem::desktopNamesChanged,
             this, &VirtualDesktopInfo::desktopNamesChanged);
+
+#if HAVE_X11
+    if (KWindowSystem::isPlatformX11()) {
+        QDBusConnection dbus = QDBusConnection::sessionBus();
+        dbus.connect(QString(), QStringLiteral("/KWin"), QStringLiteral("org.kde.KWin"), QStringLiteral("reloadConfig"),
+                    this, SIGNAL(desktopLayoutRowsChanged()));
+    }
+#endif
 }
 
 VirtualDesktopInfo::~VirtualDesktopInfo()
@@ -61,6 +78,18 @@ QStringList VirtualDesktopInfo::desktopNames() const
     }
 
     return names;
+}
+
+int VirtualDesktopInfo::desktopLayoutRows() const
+{
+#if HAVE_X11
+    if (KWindowSystem::isPlatformX11()) {
+        const NETRootInfo info(QX11Info::connection(), NET::NumberOfDesktops | NET::DesktopNames, NET::WM2DesktopLayout);
+        return info.desktopLayoutColumnsRows().height();
+    }
+#endif
+
+    return 0;
 }
 
 }

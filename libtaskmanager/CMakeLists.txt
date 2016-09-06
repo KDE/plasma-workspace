@@ -39,6 +39,7 @@ target_link_libraries(taskmanager
         Qt5::Quick
         KF5::ItemModels
     PRIVATE
+        Qt5::DBus
         KF5::Activities
         KF5::ConfigCore
         KF5::KIOCore
