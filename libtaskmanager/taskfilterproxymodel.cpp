@@ -40,6 +40,7 @@ public:
     bool filterByActivity = false;
     bool filterNotMinimized = false;
     bool filterSkipTaskbar = true;
+    bool filterSkipPager = false;
 
 private:
     TaskFilterProxyModel *q;
@@ -201,6 +202,22 @@ void TaskFilterProxyModel::setFilterSkipTaskbar(bool filter)
     }
 }
 
+bool TaskFilterProxyModel::filterSkipPager() const
+{
+    return d->filterSkipPager;
+}
+
+void TaskFilterProxyModel::setFilterSkipPager(bool filter)
+{
+    if (d->filterSkipPager != filter) {
+        d->filterSkipPager = filter;
+
+        invalidateFilter();
+
+        emit filterSkipPagerChanged();
+    }
+}
+
 QModelIndex TaskFilterProxyModel::mapIfaceToSource(const QModelIndex &index) const
 {
     return mapToSource(index);
@@ -214,6 +231,11 @@ bool TaskFilterProxyModel::filterAcceptsRow(int sourceRow, const QModelIndex &so
 
     // Filter tasks that are not to be shown on the task bar.
     if (d->filterSkipTaskbar && sourceIdx.data(AbstractTasksModel::SkipTaskbar).toBool()) {
+        return false;
+    }
+
+    // Filter tasks that are not to be shown on the pager.
+    if (d->filterSkipPager && sourceIdx.data(AbstractTasksModel::SkipPager).toBool()) {
         return false;
     }
 

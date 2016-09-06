@@ -54,6 +54,7 @@ class TASKMANAGER_EXPORT TaskFilterProxyModel : public QSortFilterProxyModel, pu
     Q_PROPERTY(bool filterByActivity READ filterByActivity WRITE setFilterByActivity NOTIFY filterByActivityChanged)
     Q_PROPERTY(bool filterNotMinimized READ filterNotMinimized WRITE setFilterNotMinimized NOTIFY filterNotMinimizedChanged)
     Q_PROPERTY(bool filterSkipTaskbar READ filterSkipTaskbar WRITE setFilterSkipTaskbar NOTIFY filterSkipTaskbarChanged)
+    Q_PROPERTY(bool filterSkipPager READ filterSkipPager WRITE setFilterSkipPager NOTIFY filterSkipPagerChanged)
 
 public:
     explicit TaskFilterProxyModel(QObject *parent = 0);
@@ -229,6 +230,27 @@ public:
      * filtered.
      **/
     void setFilterSkipTaskbar(bool filter);
+
+    /**
+     * Whether tasks which indicate they want to be omitted from 'pagers'
+     * should be filtered. Defaults to @c true.
+     *
+     * @see setFilterSkipPager
+     * @returns @c true if tasks which want to skip the 'pager' should be
+     * filtered.
+     **/
+    bool filterSkipPager() const;
+
+    /**
+     * Set whether tasks which indicate they want to be omitted from 'pagers'
+     * should be filtered.
+     *
+     * @see filterSkipPager
+     * @param filter Whether tasks which want to skip the 'pager' should be
+     * filtered.
+     **/
+    void setFilterSkipPager(bool filter);
+
 Q_SIGNALS:
     void virtualDesktopChanged() const;
     void screenGeometryChanged() const;
@@ -238,6 +260,7 @@ Q_SIGNALS:
     void filterByActivityChanged() const;
     void filterNotMinimizedChanged() const;
     void filterSkipTaskbarChanged() const;
+    void filterSkipPagerChanged() const;
 
 protected:
     bool filterAcceptsRow(int sourceRow, const QModelIndex &sourceParent) const override;

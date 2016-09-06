@@ -359,7 +359,7 @@ void XWindowTasksModel::Private::windowChanged(WId window, NET::Properties prope
     if (properties & (NET::WMState | NET::XAWMState)) {
         wipeInfoCache = true;
         changedRoles << IsFullScreen << IsMaximized << IsMinimized << IsKeepAbove << IsKeepBelow;
-        changedRoles << IsShaded << IsDemandingAttention << SkipTaskbar;
+        changedRoles << IsShaded << IsDemandingAttention << SkipTaskbar << SkipPager;
     }
 
     if (properties2 & NET::WM2AllowedActions) {
@@ -887,6 +887,8 @@ QVariant XWindowTasksModel::data(const QModelIndex &index, int role) const
         return d->demandsAttention(window);
     } else if (role == SkipTaskbar) {
         return d->windowInfo(window)->hasState(NET::SkipTaskbar);
+    } else if (role == SkipPager) {
+        return d->windowInfo(window)->hasState(NET::SkipPager);
     }
 
     return QVariant();
