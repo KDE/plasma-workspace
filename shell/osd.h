@@ -51,6 +51,7 @@ public Q_SLOTS:
     void bluetoothEnabledChanged(bool bluetoothEnabled);
     void wwanEnabledChanged(bool wwanEnabled);
     void virtualKeyboardEnabledChanged(bool virtualKeyboardEnabled);
+    void showText(const QString &icon, const QString &text);
 
 Q_SIGNALS:
     void osdProgress(const QString &icon, const int percent, const QString &additionalText);
@@ -63,7 +64,6 @@ private:
     bool init();
 
     void showProgress(const QString &icon, const int percent, const QString &additionalText = QString());
-    void showText(const QString &icon, const QString &text);
     void showOsd();
 
     QString m_osdPath;
