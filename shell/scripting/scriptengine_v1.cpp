@@ -485,8 +485,11 @@ QScriptValue ScriptEngine::V1::loadTemplate(QScriptContext *context, QScriptEngi
         return false;
     }
 
-    const QString constraint = QStringLiteral("[X-KDE-PluginInfo-Name] == '%2'").arg(layout);
-    KService::List offers = KServiceTypeTrader::self()->query(QStringLiteral("Plasma/LayoutTemplate"), constraint);
+    auto filter = [&layout](const KPluginMetaData &md) -> bool
+    {
+        return md.pluginId() == layout && md.value(QStringLiteral("X-Plasma-ContainmentCategories")).contains(QStringLiteral("panel"));
+    };
+    QList<KPluginMetaData> offers = KPackage::PackageLoader::self()->findPackages(QStringLiteral("Plasma/LayoutTemplate"), QString(), filter);
 
     if (offers.isEmpty()) {
         // qDebug() << "offers fail" << constraint;
@@ -494,14 +497,14 @@ QScriptValue ScriptEngine::V1::loadTemplate(QScriptContext *context, QScriptEngi
     }
 
     KPackage::Package package = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Plasma/LayoutTemplate"));
-    KPluginInfo info(offers.first());
+    KPluginMetaData pluginData(offers.first());
 
     QString path;
     {
         ScriptEngine *env = envFor(engine);
         ShellCorona *sc = qobject_cast<ShellCorona *>(env->m_corona);
         if (sc) {
-            const QString overridePackagePath = sc->lookAndFeelPackage().path() + QStringLiteral("contents/layouts/") + info.pluginName();
+            const QString overridePackagePath = sc->lookAndFeelPackage().path() + QStringLiteral("contents/layouts/") + pluginData.pluginId();
 
             path = overridePackagePath + QStringLiteral("/metadata.desktop");
             if (QFile::exists(path)) {
@@ -511,13 +514,13 @@ QScriptValue ScriptEngine::V1::loadTemplate(QScriptContext *context, QScriptEngi
     }
 
     if (!package.isValid()) {
-        path = QStandardPaths::locate(QStandardPaths::GenericDataLocation, package.defaultPackageRoot() + info.pluginName() + "/metadata.desktop");
+        path = QStandardPaths::locate(QStandardPaths::GenericDataLocation, package.defaultPackageRoot() + pluginData.pluginId() + "/metadata.desktop");
         if (path.isEmpty()) {
             // qDebug() << "script path is empty";
             return false;
         }
 
-        package.setPath(info.pluginName());
+        package.setPath(pluginData.pluginId());
     }
 
     const QString scriptFile = package.filePath("mainscript");
@@ -539,8 +542,8 @@ QScriptValue ScriptEngine::V1::loadTemplate(QScriptContext *context, QScriptEngi
     }
 
     ScriptEngine *env = envFor(engine);
-    env->globalObject().setProperty(QStringLiteral("templateName"), env->newVariant(info.name()), QScriptValue::ReadOnly | QScriptValue::Undeletable);
-    env->globalObject().setProperty(QStringLiteral("templateComment"), env->newVariant(info.comment()), QScriptValue::ReadOnly | QScriptValue::Undeletable);
+    env->globalObject().setProperty(QStringLiteral("templateName"), env->newVariant(pluginData.name()), QScriptValue::ReadOnly | QScriptValue::Undeletable);
+    env->globalObject().setProperty(QStringLiteral("templateComment"), env->newVariant(pluginData.description()), QScriptValue::ReadOnly | QScriptValue::Undeletable);
 
     QScriptValue rv = env->newObject();
     QScriptContext *ctx = env->pushContext();
