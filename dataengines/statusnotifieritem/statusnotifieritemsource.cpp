@@ -79,6 +79,35 @@ StatusNotifierItemSource::StatusNotifierItemSource(const QString &notifierItemId
     m_typeId = notifierItemId;
     m_name = notifierItemId;
 
+    //set the initial values for all the things
+    //this is important as Plasma::DataModel has an unsolvable bug
+    //when it gets data with a new key it tries to update the  QAIM roleNames
+    //from QML this achieves absolutely nothing as there is no signal to tell QQmlDelegateModel to reload the roleNames in QQmlAdapatorModel
+    //no matter if the row changes or the model refreshes
+    //this means it does not re-evaluate what bindings exist (watchedRoleIds) - and we get properties that don't bind and thus system tray icons
+
+    //by setting everything up-front so that we have all role names when we call the first checkForUpdate()
+    setData(QStringLiteral("AttentionIcon"), QIcon());
+    setData(QStringLiteral("AttentionIconName"), QString());
+    setData(QStringLiteral("AttentionMovieName"), QString());
+    setData(QStringLiteral("Category"), QString());
+    setData(QStringLiteral("Icon"), QIcon());
+    setData(QStringLiteral("IconName"), QString());
+    setData(QStringLiteral("IconsChanged"), false);
+    setData(QStringLiteral("IconThemePath"), QString());
+    setData(QStringLiteral("Id"), QString());
+    setData(QStringLiteral("ItemIsMenu"), false);
+    setData(QStringLiteral("OverlayIconName"), QString());
+    setData(QStringLiteral("StatusChanged"), false);
+    setData(QStringLiteral("Status"), QString());
+    setData(QStringLiteral("TitleChanged"), false);
+    setData(QStringLiteral("Title"), QString());
+    setData(QStringLiteral("ToolTipChanged"), false);
+    setData(QStringLiteral("ToolTipIcon"), QString());
+    setData(QStringLiteral("ToolTipSubTitle"), QString());
+    setData(QStringLiteral("ToolTipTitle"), QString());
+    setData(QStringLiteral("WindowId"), QVariant());
+
     int slash = notifierItemId.indexOf('/');
     if (slash == -1) {
         qWarning() << "Invalid notifierItemId:" << notifierItemId;
