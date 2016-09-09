@@ -118,7 +118,11 @@ void SystemTray::newTask(const QString &task)
 
         //only allow one instance per applet
         if (task == applet->pluginInfo().pluginName()) {
-            return;
+            //Applet::destroy doesn't delete the applet from Containment::applets in the same event
+            //potentially a dbus activated service being restarted can be added in this time.
+            if (!applet->destroyed()) {
+                return;
+            }
         }
     }
 
