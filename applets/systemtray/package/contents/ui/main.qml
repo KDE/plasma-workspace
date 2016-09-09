@@ -39,6 +39,7 @@ MouseArea {
     property int hiddenItemSize: units.iconSizes.smallMedium
     property alias expanded: dialog.visible
     property Item activeApplet
+    property int status: dialog.visible ? PlasmaCore.Types.RequiresAttentionStatus : PlasmaCore.Types.PassiveStatus
 
     property alias visibleLayout: tasksRow
     property alias hiddenLayout: expandedRepresentation.hiddenLayout

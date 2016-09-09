@@ -30,6 +30,8 @@ Item {
     Layout.preferredHeight: Layout.minimumHeight
 
     Plasmoid.preferredRepresentation: Plasmoid.fullRepresentation
+    Plasmoid.status: internalSystray ? internalSystray.status : PlasmaCore.Types.UnknownStatus
+
     property Item internalSystray
 
     Component.onCompleted: {
