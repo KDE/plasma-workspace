@@ -72,46 +72,44 @@ Item {
         }
     }
 
+    //goal is to show the prompts, in ~16 grid units high, then the action buttons
+    //but collapse the space between the prompts and actions if there's no room
+    //ui is constrained to 16 grid units wide, or the screen
     ColumnLayout {
         id: prompts
         anchors.top: parent.verticalCenter
         anchors.topMargin: units.gridUnit * 0.5
-        anchors.horizontalCenter: parent.horizontalCenter
-
-        height: Math.max(implicitHeight, units.gridUnit * 10)
-        width: Math.max(implicitWidth, units.gridUnit * 16)
-
+        anchors.left: parent.left
+        anchors.right: parent.right
+        anchors.bottom: parent.bottom
         PlasmaComponents.Label {
             id: notificationsLabel
-
-            Layout.fillWidth: true
-
-            horizontalAlignment: Text.AlignHCenter
+            Layout.maximumWidth: units.gridUnit * 16
+            Layout.alignment: Qt.AlignHCenter
             wrapMode: Text.WordWrap
             font.italic: true
         }
-
         ColumnLayout {
-            id: innerLayout
-            Layout.fillWidth: true
-            Layout.alignment: Qt.AlignHCenter
+            Layout.minimumHeight: implicitHeight
+            Layout.maximumHeight: units.gridUnit * 10
             Layout.maximumWidth: units.gridUnit * 16
+            Layout.alignment: Qt.AlignHCenter
+            ColumnLayout {
+                id: innerLayout
+                Layout.alignment: Qt.AlignHCenter
+                Layout.fillWidth: true
+            }
+            Item {
+                Layout.fillHeight: true
+            }
         }
-
+        Row { //deliberately not rowlayout as I'm not trying to resize child items
+            id: actionItemsLayout
+            spacing: units.smallSpacing
+            Layout.alignment: Qt.AlignHCenter
+        }
         Item {
             Layout.fillHeight: true
-        }
-    }
-
-    Row { //deliberately not rowlayout as I'm not trying to resize child items
-        id: actionItemsLayout
-        spacing: units.smallSpacing
-
-        //align centre, but cap to the width of the screen
-        anchors {
-            top: prompts.bottom
-            topMargin: units.smallSpacing
-            horizontalCenter: parent.horizontalCenter
         }
     }
 }
