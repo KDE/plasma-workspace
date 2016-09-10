@@ -86,7 +86,6 @@ install(FILES
 if (X11_FOUND)
     install(FILES
         xwindowtasksmodel.h
-        ${CMAKE_CURRENT_BINARY_DIR}/taskmanager_export.h
         DESTINATION ${KDE_INSTALL_INCLUDEDIR}/taskmanager COMPONENT Devel
     )
 endif()
