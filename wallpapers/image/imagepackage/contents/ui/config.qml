@@ -40,6 +40,10 @@ ColumnLayout {
         imageWallpaper.commitDeletion();
     }
 
+    SystemPalette {
+        id: syspal
+    }
+
     Wallpaper.Image {
         id: imageWallpaper
         width: wallpaper.configuration.width
