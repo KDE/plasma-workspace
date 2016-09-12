@@ -156,7 +156,7 @@ void PlayerContainer::refresh()
 static bool decodeUri(QVariantMap &map, const QString& entry) {
     if (map.contains(entry)) {
         QString urlString = map.value(entry).toString();
-        QUrl url = QUrl::fromEncoded(urlString.toLatin1());
+        QUrl url = QUrl::fromEncoded(urlString.toUtf8());
         if (!url.isValid()) {
             // try to be lenient
             url = QUrl(urlString);
