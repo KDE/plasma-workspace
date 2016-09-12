@@ -120,6 +120,16 @@ Column {
         service.startOperationCall(op)
     }
 
+    function clearNotifications() {
+        for (var i = 0, length = notificationsSource.sources.length; i < length; ++i) {
+            var source = notificationsSource.sources[i];
+            closeNotification(source)
+            notificationPositioner.closePopup(source);
+        }
+
+        notificationsModel.clear()
+    }
+
     Component {
         id: notificationPopupComponent
         NotificationPopup { }

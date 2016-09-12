@@ -172,11 +172,21 @@ MouseEventListener {
         ]
     }
 
+    function action_clearNotifications() {
+        notifications.clearNotifications()
+    }
+
     function action_notificationskcm() {
         ProcessRunner.runNotificationsKCM()
     }
 
     Component.onCompleted: {
+        plasmoid.setAction("clearNotifications", i18n("Clear Notifications"), "edit-clear")
+        var clearAction = plasmoid.action("clearNotifications");
+        clearAction.visible = Qt.binding(function() {
+            return notificationsApplet.notifications && notificationsApplet.notifications.count > 0
+        })
+
         //var allApplications = new Object
         plasmoid.setAction("notificationskcm", i18n("&Configure Event Notifications and Actions..."), "preferences-desktop-notification")
     }
