@@ -179,6 +179,8 @@ PlasmaCore.ColorScope {
         Item {
             Layout.fillWidth: true
         }
+
+        Battery { }
     }
 
     Connections {
