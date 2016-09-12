@@ -65,6 +65,12 @@ Item {
         currentImage.opacity = 0
         otherImage.z = 0
         currentImage.z = 1
+
+        // only cross-fade if the new image could be smaller than the old one
+        fadeOtherAnimator.enabled = Qt.binding(function() {
+            return currentImage.paintedWidth < otherImage.paintedWidth || currentImage.paintedHeight < otherImage.paintedHeight
+        })
+
         // Alleviate stuttering by waiting with the fade animation until the image is loaded (or failed to)
         fadeAnim.running = Qt.binding(function() {
             return currentImage.status !== Image.Loading && otherImage.status !== Image.Loading
@@ -81,6 +87,12 @@ Item {
         otherImage.z = 0
         currentImage.fillMode = fillMode
         currentImage.z = 1
+
+        // only cross-fade if the new image could be smaller than the old one
+        fadeOtherAnimator.enabled = Qt.binding(function() {
+            return currentImage.paintedWidth < otherImage.paintedWidth || currentImage.paintedHeight < otherImage.paintedHeight
+        })
+
         fadeAnim.running = Qt.binding(function() {
             return currentImage.status !== Image.Loading && otherImage.status !== Image.Loading
         })
@@ -98,6 +110,8 @@ Item {
         currentImage.source = otherImage.source
         otherImage.z = 0
         currentImage.z = 1
+
+        fadeOtherAnimator.enabled = false // the image size didn't change, avoid cross-dissolve
         fadeAnim.running = Qt.binding(function() {
             return currentImage.status !== Image.Loading && otherImage.status !== Image.Loading
         })
@@ -172,18 +186,21 @@ Item {
         running: false
 
         ParallelAnimation {
-                OpacityAnimator {
-                    target: currentImage
-                    from: 0
-                    to: 1
-                    duration: units.longDuration
-                }
-                OpacityAnimator {
-                    target: otherImage
-                    from: 1
-                    to: 0
-                    duration: units.longDuration
-                }
+            OpacityAnimator {
+                target: currentImage
+                from: 0
+                to: 1
+                duration: units.longDuration
+            }
+            OpacityAnimator {
+                id: fadeOtherAnimator
+                property bool enabled: true
+                target: otherImage
+                from: 1
+                // cannot disable an animation individually, so we just fade from 1 to 1
+                to: enabled ? 0 : 1
+                duration: units.longDuration
+            }
         }
         ScriptAction {
             script: {
