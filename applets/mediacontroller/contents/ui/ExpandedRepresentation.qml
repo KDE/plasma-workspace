@@ -35,6 +35,8 @@ Item {
     readonly property int controlSize: Math.min(height, width) / 4
 
     property int position: mpris2Source.currentData.Position || 0
+    readonly property int length: currentMetadata ? currentMetadata["mpris:length"] || 0 : 0
+
     property bool disablePositionUpdate: false
     property bool keyPressed: false
 
@@ -60,6 +62,18 @@ Item {
             seekSlider.value = position
             disablePositionUpdate = false
         }
+    }
+
+    onLengthChanged: {
+        disablePositionUpdate = true
+        // When reducing maximumValue, value is clamped to it, however
+        // when increasing it again it gets its old value back.
+        // To keep us from seeking to the end of the track when moving
+        // to a new track, we'll reset the value to zero and ask for the position again
+        seekSlider.value = 0
+        seekSlider.maximumValue = length
+        retrievePosition()
+        disablePositionUpdate = false
     }
 
     Keys.onPressed: keyPressed = true
@@ -199,7 +213,6 @@ Item {
             id: seekSlider
             Layout.fillWidth: true
             z: 999
-            maximumValue: currentMetadata ? currentMetadata["mpris:length"] || 0 : 0
             value: 0
             // if there's no "mpris:length" in teh metadata, we cannot seek, so hide it in that case
             enabled: !root.noPlayer && root.track && currentMetadata && currentMetadata["mpris:length"] && mpris2Source.currentData.CanSeek ? true : false
@@ -214,8 +227,6 @@ Item {
                     queuedPositionUpdate.restart()
                 }
             }
-
-            onMaximumValueChanged: retrievePosition()
 
             Timer {
                 id: seekTimer
