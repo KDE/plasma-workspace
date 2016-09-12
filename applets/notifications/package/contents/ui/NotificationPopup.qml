@@ -72,8 +72,8 @@ PlasmaCore.Dialog {
         LayoutMirroring.enabled: Qt.application.layoutDirection === Qt.RightToLeft
         LayoutMirroring.childrenInherit: true
 
-        height: notificationItem.implicitHeight + (units.smallSpacing * 2)
-        width: notificationItem.width + (units.smallSpacing * 2)
+        width: notificationItem.width + 2 * notificationItem.x
+        height: notificationItem.implicitHeight + 2 * notificationItem.y
 
         hoverEnabled: true
 
@@ -118,6 +118,7 @@ PlasmaCore.Dialog {
             y: units.smallSpacing
 
             width: Math.round(23 * units.gridUnit)
+            maximumTextHeight: theme.mSize(theme.defaultFont).height * 10
 
             onClose: {
                 closeNotification(notificationProperties.source)

@@ -49,6 +49,8 @@ Item {
     property alias configurable: settingsButton.visible
     property var created
 
+    property int maximumTextHeight: -1
+
     property ListModel actions: ListModel { }
 
     function pressedAction() {
@@ -218,7 +220,7 @@ Item {
                     rightMargin: units.smallSpacing * 2
                 }
 
-                implicitHeight: bodyText.paintedHeight
+                implicitHeight: maximumTextHeight > 0 ? Math.min(maximumTextHeight, bodyText.paintedHeight) : bodyText.paintedHeight
 
                 acceptedButtons: Qt.RightButton
                 preventStealing: true
@@ -240,31 +242,50 @@ Item {
                     }
                 }
 
-                TextEdit {
-                    id: bodyText
-                    enabled: !Settings.isMobile
+                PlasmaExtras.ScrollArea {
+                    id: bodyTextScrollArea
                     anchors.fill: parent
-                    visible: bodyText.length !== 0
+                    visible: bodyText.length > 0
 
-                    color: PlasmaCore.ColorScope.textColor
-                    selectedTextColor: theme.viewBackgroundColor
-                    selectionColor: theme.viewFocusColor
-                    font.capitalization: theme.defaultFont.capitalization
-                    font.family: theme.defaultFont.family
-                    font.italic: theme.defaultFont.italic
-                    font.letterSpacing: theme.defaultFont.letterSpacing
-                    font.pointSize: theme.defaultFont.pointSize
-                    font.strikeout: theme.defaultFont.strikeout
-                    font.underline: theme.defaultFont.underline
-                    font.weight: theme.defaultFont.weight
-                    font.wordSpacing: theme.defaultFont.wordSpacing
-                    renderType: Text.NativeRendering
-                    selectByMouse: true
-                    readOnly: true
-                    wrapMode: Text.Wrap
-                    textFormat: TextEdit.RichText
+                    flickableItem.boundsBehavior: Flickable.StopAtBounds
+                    flickableItem.flickableDirection: Flickable.VerticalFlick
+                    horizontalScrollBarPolicy: Qt.ScrollBarAlwaysOff
 
-                    onLinkActivated: Qt.openUrlExternally(link)
+                    TextEdit {
+                        id: bodyText
+                        width: bodyTextScrollArea.width
+                        enabled: !Settings.isMobile
+
+                        color: PlasmaCore.ColorScope.textColor
+                        selectedTextColor: theme.viewBackgroundColor
+                        selectionColor: theme.viewFocusColor
+                        font.capitalization: theme.defaultFont.capitalization
+                        font.family: theme.defaultFont.family
+                        font.italic: theme.defaultFont.italic
+                        font.letterSpacing: theme.defaultFont.letterSpacing
+                        font.pointSize: theme.defaultFont.pointSize
+                        font.strikeout: theme.defaultFont.strikeout
+                        font.underline: theme.defaultFont.underline
+                        font.weight: theme.defaultFont.weight
+                        font.wordSpacing: theme.defaultFont.wordSpacing
+                        renderType: Text.NativeRendering
+                        selectByMouse: true
+                        readOnly: true
+                        wrapMode: Text.Wrap
+                        textFormat: TextEdit.RichText
+
+                        onLinkActivated: Qt.openUrlExternally(link)
+
+                        // ensure selecting text scrolls the view as needed...
+                        onCursorRectangleChanged: {
+                            var flick = bodyTextScrollArea.flickableItem
+                            if (flick.contentY >= cursorRectangle.y) {
+                                flick.contentY = cursorRectangle.y
+                            } else if (flick.contentY + flick.height <= cursorRectangle.y + cursorRectangle.height) {
+                                flick.contentY = cursorRectangle.y + cursorRectangle.height - flick.height
+                            }
+                        }
+                    }
                 }
             }
 
