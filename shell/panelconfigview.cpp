@@ -47,10 +47,6 @@ PanelConfigView::PanelConfigView(Plasma::Containment *containment, PanelView *pa
       m_containment(containment),
       m_panelView(panelView)
 {
-    m_deleteTimer.setSingleShot(true);
-    m_deleteTimer.setInterval(2*60*1000);
-    connect(&m_deleteTimer, &QTimer::timeout, this, &PanelConfigView::deleteLater);
-
     connect(panelView, &QObject::destroyed, this, &QObject::deleteLater);
 
     m_visibilityMode = panelView->visibilityMode();
@@ -213,8 +209,6 @@ void PanelConfigView::showEvent(QShowEvent *ev)
         m_containment->setUserConfiguring(true);
     }
 
-    m_deleteTimer.stop();
-
     if (m_visibilityMode != PanelView::NormalPanel) {
         m_panelView->setVisibilityMode(PanelView::WindowsGoBelow);
     }
@@ -224,12 +218,12 @@ void PanelConfigView::showEvent(QShowEvent *ev)
 void PanelConfigView::hideEvent(QHideEvent *ev)
 {
     QQuickWindow::hideEvent(ev);
-    m_deleteTimer.start();
     m_panelView->setVisibilityMode(m_visibilityMode);
 
     if (m_containment) {
         m_containment->setUserConfiguring(false);
     }
+    deleteLater();
 }
 
 void PanelConfigView::focusOutEvent(QFocusEvent *ev)

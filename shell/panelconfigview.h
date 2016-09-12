@@ -90,7 +90,6 @@ private:
     PanelView::VisibilityMode m_visibilityMode;
     Plasma::FrameSvg::EnabledBorders m_enabledBorders = Plasma::FrameSvg::AllBorders;
     Plasma::Theme m_theme;
-    QTimer m_deleteTimer;
     QTimer m_screenSyncTimer;
     QPointer<KWayland::Client::PlasmaShellSurface> m_shellSurface;
 };
