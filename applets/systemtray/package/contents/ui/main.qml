@@ -46,6 +46,8 @@ MouseArea {
 
     property alias statusNotifierModel: statusNotifierModel
 
+    property Component plasmoidItemComponent
+
     function updateItemVisibility(item) {
 
         //Invisible
@@ -86,8 +88,10 @@ MouseArea {
     }
 
     Containment.onAppletAdded: {
-        var component = Qt.createComponent("items/PlasmoidItem.qml")
-        var plasmoidContainer = component.createObject(invisibleEntriesContainer, {"x": x, "y": y, "applet": applet});
+        if (!plasmoidItemComponent) {
+            plasmoidItemComponent = Qt.createComponent("items/PlasmoidItem.qml");
+        }
+        var plasmoidContainer = plasmoidItemComponent.createObject(invisibleEntriesContainer, {"x": x, "y": y, "applet": applet});
 
         applet.parent = plasmoidContainer
         applet.anchors.left = plasmoidContainer.left
