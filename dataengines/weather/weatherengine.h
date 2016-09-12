@@ -21,7 +21,7 @@
 #define WEATHERENGINE_H
 
 #include <QTimer>
-#include <QNetworkAccessManager>
+#include <QNetworkConfigurationManager>
 #include <QHash>
 
 #include <Plasma/DataEngine>
@@ -100,7 +100,7 @@ private Q_SLOTS:
     /**
      * Whenever networking changes, take action
      */
-    void networkStatusChanged(QNetworkAccessManager::NetworkAccessibility);
+    void onOnlineStateChanged(bool isOnline);
     void startReconnect();
 
     /**
@@ -116,10 +116,9 @@ private:
     IonInterface* ionForSource(const QString& source, QString* ionName = 0);
 
 private:
-    bool m_networkAvailable;
     QHash<QString, int> m_ionUsage;
     QTimer m_reconnectTimer;
-    QNetworkAccessManager *m_networkAccessManager;
+    QNetworkConfigurationManager m_networkConfigurationManager;
 };
 
 #endif
