@@ -116,10 +116,13 @@ Q_SIGNALS:
 
 private:
     void initDBusActivatables();
+    QStringList m_defaultPlasmoids;
+    QHash<QString /*plugin name*/, KPluginInfo> m_systrayApplets;
+    QHash<QString /*plugin name*/, QString /*DBus Service*/> m_dbusActivatableTasks;
+
     QStringList m_allowedPlasmoids;
     PlasmoidModel *m_availablePlasmoidsModel;
     QHash<QString, int> m_knownPlugins;
-    QHash<QString, QString> m_dbusActivatableTasks;
     QHash<QString, int> m_dbusServiceCounts;
 };
 

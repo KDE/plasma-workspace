@@ -98,6 +98,22 @@ SystemTray::~SystemTray()
 void SystemTray::init()
 {
     Containment::init();
+
+    for (const auto &info: Plasma::PluginLoader::self()->listAppletInfo(QString())) {
+        if (!info.isValid() || info.property(QStringLiteral("X-Plasma-NotificationArea")) != "true") {
+            continue;
+        }
+        m_systrayApplets[info.pluginName()] = info;
+
+        if (info.isPluginEnabledByDefault()) {
+            m_defaultPlasmoids += info.pluginName();
+        }
+        const QString dbusactivation = info.property(QStringLiteral("X-Plasma-DBusActivationService")).toString();
+        if (!dbusactivation.isEmpty()) {
+            qCDebug(SYSTEM_TRAY) << "ST Found DBus-able Applet: " << info.pluginName() << dbusactivation;
+            m_dbusActivatableTasks[info.pluginName()] = dbusactivation;
+        }
+    }
 }
 
 void SystemTray::newTask(const QString &task)
@@ -368,34 +384,17 @@ void SystemTray::restorePlasmoids()
         }
     }
 
-    //X-Plasma-NotificationArea
-
-    KPluginInfo::List applets;
-    foreach (const auto &info, Plasma::PluginLoader::self()->listAppletInfo(QString())) {
-        if (info.isValid() && info.property(QStringLiteral("X-Plasma-NotificationArea")).toBool() == true) {
-            applets << info;
-        }
-    }
-
     QStringList ownApplets;
 
     QMap<QString, KPluginInfo> sortedApplets;
-    foreach (const KPluginInfo &info, applets) {
-        const QString dbusactivation = info.property(QStringLiteral("X-Plasma-DBusActivationService")).toString();
-        if (!dbusactivation.isEmpty()) {
-            qCDebug(SYSTEM_TRAY) << "ST Found DBus-able Applet: " << info.pluginName() << dbusactivation;
-            m_dbusActivatableTasks[info.pluginName()] = dbusactivation;
-            continue;
-        }
-
-        if (m_allowedPlasmoids.contains(info.pluginName()) &&
+    for (auto it = m_systrayApplets.constBegin(); it != m_systrayApplets.constEnd(); ++it) {
+        const KPluginInfo &info = it.value();
+        if (m_allowedPlasmoids.contains(info.pluginName()) && !
+            m_dbusActivatableTasks.contains(info.pluginName())) {
             //FIXME
-            //!m_tasks.contains(info.pluginName()) &&
-            dbusactivation.isEmpty()) {
             // if we already have a plugin with this exact name in it, then check if it is the
             // same plugin and skip it if it is indeed already listed
             if (sortedApplets.contains(info.name())) {
-
                 bool dupe = false;
                 // it is possible (though poor form) to have multiple applets
                 // with the same visible name but different plugins, so we hve to check all values
@@ -429,15 +428,7 @@ void SystemTray::restorePlasmoids()
 
 QStringList SystemTray::defaultPlasmoids() const
 {
-    QStringList ret;
-    Q_FOREACH (const auto &info, Plasma::PluginLoader::self()->listAppletInfo(QString())) {
-        if (info.isValid() && info.property(QStringLiteral("X-Plasma-NotificationArea")) == "true" &&
-            info.isPluginEnabledByDefault()) {
-            ret += info.pluginName();
-        }
-    }
-
-    return ret;
+    return m_defaultPlasmoids;
 }
 
 QAbstractItemModel* SystemTray::availablePlasmoids()
@@ -445,17 +436,8 @@ QAbstractItemModel* SystemTray::availablePlasmoids()
     if (!m_availablePlasmoidsModel) {
         m_availablePlasmoidsModel = new PlasmoidModel(this);
 
-        //Filter X-Plasma-NotificationArea
-        KPluginInfo::List applets;
-        foreach (const auto& info, Plasma::PluginLoader::self()->listAppletInfo(QString())) {
-            if (info.property(QStringLiteral("X-Plasma-NotificationArea")) == QLatin1String("true")) {
-                applets << info;
-            }
-        }
-
-        foreach (const KPluginInfo &info, applets) {
+        foreach (const KPluginInfo &info, m_systrayApplets) {
             QString name = info.name();
-            KService::Ptr service = info.service();
             const QString dbusactivation = info.property(QStringLiteral("X-Plasma-DBusActivationService")).toString();
 
             if (!dbusactivation.isEmpty()) {
