@@ -165,9 +165,10 @@ ColumnLayout {
             }
             //FIXME: there should be only one spinbox: QtControls spinboxes are still too limited for it tough
             RowLayout {
+                Layout.fillWidth: true
                 spacing: units.largeSpacing / 2
                 QtControls.Label {
-                    width: formAlignment - units.largeSpacing
+                    Layout.minimumWidth: formAlignment - units.largeSpacing
                     anchors.verticalCenter: parent.verticalCenter
                     horizontalAlignment: Text.AlignRight
                     text: i18nd("plasma_applet_org.kde.image","Change every:")
@@ -188,8 +189,7 @@ ColumnLayout {
                     text: i18nd("plasma_applet_org.kde.image","Hours")
                 }
                 Item {
-                    width: units.gridUnit
-                    height: units.gridUnit
+                    Layout.preferredWidth: units.gridUnit
                 }
                 QtControls.SpinBox {
                     id: minutesInterval
@@ -207,8 +207,7 @@ ColumnLayout {
                     text: i18nd("plasma_applet_org.kde.image","Minutes")
                 }
                 Item {
-                    width: units.gridUnit
-                    height: units.gridUnit
+                    Layout.preferredWidth: units.gridUnit
                 }
                 QtControls.SpinBox {
                     id: secondsInterval
@@ -228,10 +227,7 @@ ColumnLayout {
             }
             QtControls.ScrollView {
                 Layout.fillHeight: true;
-                anchors {
-                    left: parent.left
-                    right: parent.right
-                }
+                Layout.fillWidth: true
                 frameVisible: true
                 ListView {
                     id: slidePathsView
