@@ -26,8 +26,13 @@ find_package(KF5XmlRpcClient REQUIRED)
 find_package(KF5 REQUIRED COMPONENTS PlasmaQuick)
 find_package(KF5 REQUIRED COMPONENTS SysGuard)
 find_package(KF5 REQUIRED COMPONENTS Package)
-# Baloo has a different version scheme than KF5 for now
-find_package(KF5 5.1 REQUIRED COMPONENTS Baloo)
+
+find_package(KF5Baloo)
+set_package_properties(KF5Baloo PROPERTIES DESCRIPTION "File Searching"
+                       TYPE RECOMMENDED
+                       PURPOSE "Needed for the File Search runner."
+                      )
+
 find_package(KF5TextEditor)
 find_package(KWinDBusInterface CONFIG REQUIRED)
 

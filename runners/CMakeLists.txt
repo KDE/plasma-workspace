@@ -1,5 +1,7 @@
 add_subdirectory(activities)
-add_subdirectory(baloo)
+if(KF5Baloo_FOUND)
+ add_subdirectory(baloo)
+endif()
 add_subdirectory(bookmarks)
 add_subdirectory(calculator)
 add_subdirectory(locations)
