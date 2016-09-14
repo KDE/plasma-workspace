@@ -7,15 +7,15 @@
 
   <group name="General">
     <entry name="removableDevices" type="Bool">
-      <label>If true it lists removable devices, such as USB thumbdrives.</label>
+      <label>If true it lists removable devices, such as USB thumbdrives. Only one between removableDevices, nonRemovableDevices and allDevices should be set.</label>
       <default>true</default>
     </entry>
     <entry name="nonRemovableDevices" type="Bool">
-      <label>If true it lists non removable devices, such as internal harddrives.</label>
+      <label>If true it lists non removable devices, such as internal harddrives. Only one between removableDevices, nonRemovableDevices and allDevices should be set.</label>
       <default>false</default>
     </entry>
     <entry name="allDevices" type="Bool">
-      <label>If true it lists all kind of devices.</label>
+      <label>If true it lists all kind of devices. Only one between removableDevices, nonRemovableDevices and allDevices should be set.</label>
       <default>false</default>
     </entry>
     <entry name="popupOnNewDevice" type="Bool">
