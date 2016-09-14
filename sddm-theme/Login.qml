@@ -62,6 +62,14 @@ SessionManagementScreen {
                 event.accepted = true
             }
         }
+
+        Connections {
+            target: sddm
+            onLoginFailed: {
+                passwordBox.selectAll()
+                passwordBox.forceActiveFocus()
+            }
+        }
     }
     PlasmaComponents.Button {
         id: loginButton
