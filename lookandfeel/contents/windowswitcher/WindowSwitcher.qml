@@ -35,10 +35,10 @@ KWin.Switcher {
 
     PlasmaCore.Dialog {
         id: dialog
-        location: PlasmaCore.Types.LeftEdge
+        location: Qt.application.layoutDirection === Qt.RightToLeft ? PlasmaCore.Types.RightEdge : PlasmaCore.Types.LeftEdge
         visible: tabBox.visible
         flags: Qt.X11BypassWindowManagerHint
-        x: screenGeometry.x
+        x: screenGeometry.x + (Qt.application.layoutDirection === Qt.RightToLeft ? screenGeometry.width - width : 0)
         y: screenGeometry.y
 
         mainItem: PlasmaExtras.ScrollArea {
@@ -48,6 +48,9 @@ KWin.Switcher {
 
             width: tabBox.screenGeometry.width * 0.15 + (__verticalScrollBar.visible ? __verticalScrollBar.width : 0)
             height: tabBox.screenGeometry.height - dialog.margins.top - dialog.margins.bottom
+
+            LayoutMirroring.enabled: Qt.application.layoutDirection === Qt.RightToLeft
+            LayoutMirroring.childrenInherit: true
 
             ListView {
                 id: thumbnailListView
