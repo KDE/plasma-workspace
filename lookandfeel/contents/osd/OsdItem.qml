@@ -42,7 +42,7 @@ Item {
     PlasmaCore.IconItem {
         id: icon
 
-        height: parent.height - (showingProgress ? progressBar.height : label.height)
+        height: parent.height - Math.max(progressBar.height, label.height)
                               - ((units.smallSpacing/2) * 3) //it's an svg
         width: parent.width
 
