@@ -645,7 +645,7 @@ void PanelView::moveEvent(QMoveEvent *ev)
 
 void PanelView::integrateScreen()
 {
-    connect(m_screenToFollow, &QScreen::geometryChanged, this, &PanelView::restore);
+    connect(m_screenToFollow.data(), &QScreen::geometryChanged, this, &PanelView::restore);
     themeChanged();
     KWindowSystem::setOnAllDesktops(winId(), true);
     KWindowSystem::setType(winId(), NET::Dock);
