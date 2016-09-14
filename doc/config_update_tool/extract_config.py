@@ -39,10 +39,9 @@ for plasmoid in os.listdir(root):
                 type = entry.getAttribute("type")
                 default = ""
                 description = ""
-                hidden = True
 
-                if entry.hasAttribute("hidden") and entry.getAttribute("hidden") == True:
-                    hidden = False
+                if entry.hasAttribute("hidden") and entry.getAttribute("hidden") == "true":
+                    continue
 
                 defaultTags = entry.getElementsByTagName("default")
                 if (defaultTags.length > 0 and defaultTags[0].childNodes.length > 0):
