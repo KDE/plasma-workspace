@@ -7,15 +7,19 @@
 
   <group name="General">
     <entry name="removableDevices" type="Bool">
+      <label>If true it lists removable devices, such as USB thumbdrives.</label>
       <default>true</default>
     </entry>
     <entry name="nonRemovableDevices" type="Bool">
+      <label>If true it lists non removable devices, such as internal harddrives.</label>
       <default>false</default>
     </entry>
     <entry name="allDevices" type="Bool">
+      <label>If true it lists all kind of devices.</label>
       <default>false</default>
     </entry>
     <entry name="popupOnNewDevice" type="Bool">
+      <label>If true it tries to open the plasmoid when a new device is inserted, as a kind of notification.</label>
       <default>true</default>
     </entry>
   </group>

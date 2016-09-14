@@ -7,9 +7,11 @@
 
   <group name="General">
     <entry name="expanding" type="bool">
+        <label>If true, the spacer tries to take all the available space in the panel.</label>
         <default>true</default>
     </entry>
     <entry name="length" type="Int">
+        <label>length in pixels of the spacer. Configuration effective only if expanding is set to false.</label>
     </entry>
   </group>
 
