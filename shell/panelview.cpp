@@ -1024,7 +1024,7 @@ void PanelView::themeChanged()
 
 void PanelView::containmentChanged()
 {
-    positionPanel();
+    restore();
     connect(containment(), SIGNAL(statusChanged(Plasma::Types::ItemStatus)), SLOT(statusChanged(Plasma::Types::ItemStatus)));
     connect(containment(), &Plasma::Applet::appletDeleted, this, [this] {
         //containment()->destroyed() is true only when the user deleted it
