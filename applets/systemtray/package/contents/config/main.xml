@@ -43,9 +43,7 @@
         <label>If true, all systray entries will be always in the main area, outside the popup.</label>
         <default>false</default>
     </entry>
-    <entry name="knownItems" type="StringList">
-        <label>All the plasmoids the applet knows of. a plasmoid will be automatically added
-         if X-KDE-PluginInfo-EnabledByDefault=true and is not in the known list.</label>
+    <entry name="knownItems" type="StringList" hidden="true">
       <default></default>
     </entry>
     <entry name="iconSize" type="Int">
