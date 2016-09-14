@@ -522,6 +522,14 @@ const QStringList &BackgroundFinder::suffixes()
     return m_suffixes;
 }
 
+bool BackgroundFinder::isAcceptableSuffix(const QString &suffix)
+{
+    // Despite its name, suffixes() returns a list of glob patterns.
+    // Therefore the file suffix check needs to include the "*." prefix.
+    const QStringList &globPatterns = suffixes();
+    return globPatterns.contains("*."+suffix.toLower());
+}
+
 void BackgroundFinder::run()
 {
     QTime t;

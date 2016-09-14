@@ -769,7 +769,7 @@ void Image::pathCreated(const QString &path)
 {
     if(!m_slideshowBackgrounds.contains(path)) {
         QFileInfo fileInfo(path);
-        if(fileInfo.isFile() && BackgroundFinder::suffixes().contains(fileInfo.suffix().toLower())) {
+        if(fileInfo.isFile() && BackgroundFinder::isAcceptableSuffix(fileInfo.suffix())) {
             m_slideshowBackgrounds.append(path);
             m_unseenSlideshowBackgrounds.append(path);
             if(m_slideshowBackgrounds.count() == 1) {

@@ -131,6 +131,7 @@ public:
     QString token() const;
 
     static const QStringList &suffixes();
+    static bool isAcceptableSuffix(const QString &suffix);
 
 Q_SIGNALS:
     void backgroundsFound(const QStringList &paths, const QString &token);
