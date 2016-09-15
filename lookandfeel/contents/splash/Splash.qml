@@ -49,13 +49,11 @@ Rectangle {
         }
 
         Image {
+            id: logo
             //match SDDM/lockscreen avatar positioning
-            property real offset: units.height + units.largeSpacing
-            property real size: units.gridUnit * 8 - offset
+            property real size: units.gridUnit * 8
 
-            anchors.horizontalCenter: parent.horizontalCenter
-            anchors.bottomMargin: offset
-            anchors.bottom: parent.verticalCenter
+            anchors.centerIn: parent
 
             source: "images/kde.svgz"
 
@@ -66,12 +64,12 @@ Rectangle {
         Image {
             id: busyIndicator
             //again sync from SDDM theme
-            anchors.top: parent.verticalCenter
-            anchors.topMargin: units.gridUnit * 10 + units.smallSpacing
+            anchors.top: logo.bottom
+            anchors.topMargin: units.largeSpacing
             anchors.horizontalCenter: parent.horizontalCenter
             source: "images/busywidget.svgz"
-            sourceSize.height: units.gridUnit * 3
-            sourceSize.width: units.gridUnit * 3
+            sourceSize.height: units.gridUnit * 2
+            sourceSize.width: units.gridUnit * 2
             RotationAnimator on rotation {
                 id: rotationAnimator
                 from: 0
