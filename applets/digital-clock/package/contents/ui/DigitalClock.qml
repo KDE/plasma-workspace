@@ -406,7 +406,7 @@ Item {
 
             font {
                 family: plasmoid.configuration.fontFamily || theme.defaultFont.family
-                weight: plasmoid.configuration.boldText ? Font.Bold : Font.Normal
+                weight: plasmoid.configuration.boldText ? Font.Bold : theme.defaultFont.weight
                 italic: plasmoid.configuration.italicText
                 pointSize: 1024
             }
