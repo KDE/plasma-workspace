@@ -316,10 +316,37 @@ void PanelView::setVisibilityMode(PanelView::VisibilityMode mode)
         m_corona->requestApplicationConfigSync();
     }
 
+    visibilityModeToWayland();
     updateStruts();
 
     emit visibilityModeChanged();
     restoreAutoHide();
+}
+
+void PanelView::visibilityModeToWayland()
+{
+    if (!m_shellSurface) {
+        return;
+    }
+    KWayland::Client::PlasmaShellSurface::PanelBehavior behavior;
+    switch (m_visibilityMode) {
+    case NormalPanel:
+        behavior = KWayland::Client::PlasmaShellSurface::PanelBehavior::AlwaysVisible;
+        break;
+    case AutoHide:
+        behavior = KWayland::Client::PlasmaShellSurface::PanelBehavior::AutoHide;
+        break;
+    case LetWindowsCover:
+        behavior = KWayland::Client::PlasmaShellSurface::PanelBehavior::WindowsCanCover;
+        break;
+    case WindowsGoBelow:
+        behavior = KWayland::Client::PlasmaShellSurface::PanelBehavior::WindowsGoBelow;
+        break;
+    default:
+        Q_UNREACHABLE();
+        return;
+    }
+    m_shellSurface->setPanelBehavior(behavior);
 }
 
 PanelView::VisibilityMode PanelView::visibilityMode() const
