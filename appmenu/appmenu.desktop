@@ -2,6 +2,7 @@
 Type=Service
 Name=Application menus daemon
 Name[ar]=عفريت قوائم التطبيقات
+Name[ast]=Degorriu de menús d'aplicaciones
 Name[bs]=Demon za aplikacijske menije
 Name[ca]=Dimoni de menús d'aplicació
 Name[ca@valencia]=Dimoni de menús d'aplicació

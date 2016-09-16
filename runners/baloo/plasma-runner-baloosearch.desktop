@@ -44,6 +44,7 @@ Name[x-test]=xxDesktop Searchxx
 Name[zh_CN]=桌面搜索
 Name[zh_TW]=桌面搜尋
 Comment=Searches through files, emails and contacts
+Comment[ast]=Guetes pente ficheros, correos y contautos
 Comment[ca]=Cerca pels fitxers, correus electrònics i contactes
 Comment[ca@valencia]=Cerca pels fitxers, correus electrònics i contactes
 Comment[cs]=Prohledává v souborech, emailech a kontaktech
