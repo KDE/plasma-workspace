@@ -198,6 +198,7 @@ private:
     bool containmentContainsPosition(const QPointF &point) const;
     QPointF positionAdjustedForContainment(const QPointF &point) const;
     void setupWaylandIntegration();
+    void visibilityModeToWayland();
     bool edgeActivated() const;
     void updateEnabledBorders();
     bool canSetStrut() const;
