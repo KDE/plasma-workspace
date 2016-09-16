@@ -19,7 +19,7 @@ set(libklipper_common_SRCS
     clipcommandprocess.cpp
 )
 
-find_package(KF5Prison ${KF5_MIN_VERSION})
+find_package(KF5Prison 5.25)
 set_package_properties(KF5Prison PROPERTIES DESCRIPTION "Prison library"
                        URL "http://projects.kde.org/prison"
                        TYPE OPTIONAL
