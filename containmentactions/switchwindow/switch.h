@@ -23,7 +23,8 @@
 #include "ui_config.h"
 #include <plasma/containmentactions.h>
 
-// liblegacytaskmanager
+// libtaskmanager
+#include <activityinfo.h>
 #include <tasksmodel.h>
 
 class QAction;
@@ -66,6 +67,7 @@ class SwitchWindow : public Plasma::ContainmentActions
         };
 
         QList <QAction *> m_actions;
+        TaskManager::ActivityInfo *m_activityInfo;
         TaskManager::TasksModel *m_tasksModel;
         Ui::Config m_ui;
         MenuMode m_mode;
