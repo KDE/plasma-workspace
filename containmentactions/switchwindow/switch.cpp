@@ -34,11 +34,17 @@
 
 SwitchWindow::SwitchWindow(QObject *parent, const QVariantList &args)
     : Plasma::ContainmentActions(parent, args),
+      m_activityInfo(new TaskManager::ActivityInfo(this)),
       m_tasksModel(new TaskManager::TasksModel(this)),
       m_mode(AllFlat),
       m_clearOrderTimer(0)
 {
     m_tasksModel->setGroupMode(TaskManager::TasksModel::GroupDisabled);
+
+    m_tasksModel->setActivity(m_activityInfo->currentActivity());
+    m_tasksModel->setFilterByActivity(true);
+    connect(m_activityInfo, &TaskManager::ActivityInfo::currentActivityChanged,
+        this, [this]() { m_tasksModel->setActivity(m_activityInfo->currentActivity()); });
 }
 
 SwitchWindow::~SwitchWindow()
