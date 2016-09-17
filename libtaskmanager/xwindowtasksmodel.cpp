@@ -423,6 +423,21 @@ AppData XWindowTasksModel::Private::appData(WId window)
 {
     if (!appDataCache.contains(window)) {
         const AppData &data = appDataFromUrl(windowUrl(window));
+
+        // If we weren't able to derive a launcher URL from the window meta data,
+        // fall back to WM_CLASS Class string as app id. This helps with apps we
+        // can't map to an URL due to existing outside the regular system
+        // environment, e.g. wine clients.
+        if (data.id.isEmpty() && data.url.isEmpty()) {
+            AppData dataCopy = data;
+
+            dataCopy.id = windowInfo(window)->windowClassClass();
+
+            appDataCache.insert(window, dataCopy);
+
+            return dataCopy;
+        }
+
         appDataCache.insert(window, data);
 
         return data;
@@ -661,7 +676,10 @@ QUrl XWindowTasksModel::Private::launcherUrl(WId window, bool encodeFallbackIcon
 
     QUrl url = data.url;
 
-    // FIXME Hard-coding 64x64 or SizeLarge is not scaling-aware.
+    // Forego adding the window icon pixmap if the URL is otherwise empty.
+    if (!url.isValid()) {
+        return QUrl();
+    }
 
     const QPixmap pixmap = KWindowSystem::icon(window, KIconLoader::SizeLarge, KIconLoader::SizeLarge, false);
     if (pixmap.isNull()) {
