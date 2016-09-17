@@ -42,6 +42,8 @@ public:
     bool filterSkipTaskbar = true;
     bool filterSkipPager = false;
 
+    bool demandingAttentionSkipsFilters = true;
+
 private:
     TaskFilterProxyModel *q;
 };
@@ -218,6 +220,22 @@ void TaskFilterProxyModel::setFilterSkipPager(bool filter)
     }
 }
 
+bool TaskFilterProxyModel::demandingAttentionSkipsFilters() const
+{
+    return d->demandingAttentionSkipsFilters;
+}
+
+void TaskFilterProxyModel::setDemandingAttentionSkipsFilters(bool skip)
+{
+    if (d->demandingAttentionSkipsFilters != skip) {
+        d->demandingAttentionSkipsFilters = skip;
+
+        invalidateFilter();
+
+        emit demandingAttentionSkipsFiltersChanged();
+    }
+}
+
 QModelIndex TaskFilterProxyModel::mapIfaceToSource(const QModelIndex &index) const
 {
     return mapToSource(index);
@@ -242,7 +260,7 @@ bool TaskFilterProxyModel::filterAcceptsRow(int sourceRow, const QModelIndex &so
     // Filter by virtual desktop.
     if (d->filterByVirtualDesktop && d->virtualDesktop != 0) {
         if (!sourceIdx.data(AbstractTasksModel::IsOnAllVirtualDesktops).toBool()
-            && !sourceIdx.data(AbstractTasksModel::IsDemandingAttention).toBool()) {
+            && (!d->demandingAttentionSkipsFilters || !sourceIdx.data(AbstractTasksModel::IsDemandingAttention).toBool())) {
             const QVariant &virtualDesktop = sourceIdx.data(AbstractTasksModel::VirtualDesktop);
 
             if (!virtualDesktop.isNull()) {
@@ -267,7 +285,7 @@ bool TaskFilterProxyModel::filterAcceptsRow(int sourceRow, const QModelIndex &so
 
     // Filter by activity.
     if (d->filterByActivity && !d->activity.isEmpty()) {
-        if (!sourceIdx.data(AbstractTasksModel::IsDemandingAttention).toBool()) {
+        if (!d->demandingAttentionSkipsFilters || !sourceIdx.data(AbstractTasksModel::IsDemandingAttention).toBool()) {
             const QVariant &activities = sourceIdx.data(AbstractTasksModel::Activities);
 
             if (!activities.isNull()) {

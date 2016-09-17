@@ -56,6 +56,8 @@ class TASKMANAGER_EXPORT TaskFilterProxyModel : public QSortFilterProxyModel, pu
     Q_PROPERTY(bool filterSkipTaskbar READ filterSkipTaskbar WRITE setFilterSkipTaskbar NOTIFY filterSkipTaskbarChanged)
     Q_PROPERTY(bool filterSkipPager READ filterSkipPager WRITE setFilterSkipPager NOTIFY filterSkipPagerChanged)
 
+    Q_PROPERTY(bool demandingAttentionSkipsFilters READ demandingAttentionSkipsFilters WRITE setDemandingAttentionSkipsFilters NOTIFY demandingAttentionSkipsFiltersChanged)
+
 public:
     explicit TaskFilterProxyModel(QObject *parent = 0);
     virtual ~TaskFilterProxyModel();
@@ -251,6 +253,24 @@ public:
      **/
     void setFilterSkipPager(bool filter);
 
+    /**
+     * Whether tasks which demand attention skip filters by virtual desktop
+     * or activity. Defaults to @c true.
+     *
+     * @see setDemandingAttentionSkipsFilters
+     * @returns @c true if tasks which demand attention skip filters.
+     **/
+    bool demandingAttentionSkipsFilters() const;
+
+    /**
+     * Sets whether tasks which demand attention should bypass filters by
+     * virtual desktop or activity.
+     *
+     * @see demandingAttentionSkipsFilters
+     * @param skip Whether tasks which demand attention should skip filters.
+     **/
+    void setDemandingAttentionSkipsFilters(bool skip);
+
 Q_SIGNALS:
     void virtualDesktopChanged() const;
     void screenGeometryChanged() const;
@@ -261,6 +281,7 @@ Q_SIGNALS:
     void filterNotMinimizedChanged() const;
     void filterSkipTaskbarChanged() const;
     void filterSkipPagerChanged() const;
+    void demandingAttentionSkipsFiltersChanged() const;
 
 protected:
     bool filterAcceptsRow(int sourceRow, const QModelIndex &sourceParent) const override;
