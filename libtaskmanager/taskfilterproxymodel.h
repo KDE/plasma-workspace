@@ -214,42 +214,42 @@ public:
     void setFilterNotMinimized(bool filter);
 
     /**
-     * Whether tasks which indicate they want to be omitted from 'task bars'
-     * should be filtered. Defaults to @c true.
+     * Whether tasks which should be omitted from 'task bars' should be
+     * filtered. Defaults to @c true.
      *
      * @see setFilterSkipTaskbar
-     * @returns @c true if tasks which want to skip the 'task bar' should be
-     * filtered.
+     * @returns @c true if tasks which should not be on the 'task bar'
+     * should be filtered.
      **/
     bool filterSkipTaskbar() const;
 
     /**
-     * Set whether tasks which indicate they want to be omitted from 'task bars'
-     * should be filtered.
+     * Set whether tasks which should be omitted from 'task bars' should be
+     * filtered.
      *
      * @see filterSkipTaskbar
-     * @param filter Whether tasks which want to skip the 'task bar' should be
-     * filtered.
+     * @param filter Whether tasks whichs should not be on the 'task bar'
+     * should be filtered.
      **/
     void setFilterSkipTaskbar(bool filter);
 
     /**
-     * Whether tasks which indicate they want to be omitted from 'pagers'
-     * should be filtered. Defaults to @c true.
+     * Whether tasks which should be omitted from 'pagers' should be
+     * filtered. Defaults to @c true.
      *
      * @see setFilterSkipPager
-     * @returns @c true if tasks which want to skip the 'pager' should be
-     * filtered.
+     * @returns @c true if tasks which should not be on the 'pager' should
+     * be filtered.
      **/
     bool filterSkipPager() const;
 
     /**
-     * Set whether tasks which indicate they want to be omitted from 'pagers'
-     * should be filtered.
+     * Set whether tasks which should be omitted from 'pagers' should be
+     * filtered.
      *
      * @see filterSkipPager
-     * @param filter Whether tasks which want to skip the 'pager' should be
-     * filtered.
+     * @param filter Whether tasks which should not be on the 'pager' should
+     * be filtered.
      **/
     void setFilterSkipPager(bool filter);
 

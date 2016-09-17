@@ -362,6 +362,11 @@ void XWindowTasksModel::Private::windowChanged(WId window, NET::Properties prope
         changedRoles << IsShaded << IsDemandingAttention << SkipTaskbar << SkipPager;
     }
 
+    if (properties & NET::WMWindowType) {
+        wipeInfoCache = true;
+        changedRoles << SkipTaskbar;
+    }
+
     if (properties2 & NET::WM2AllowedActions) {
         wipeInfoCache = true;
         changedRoles << IsClosable << IsMovable << IsResizable << IsMaximizable << IsMinimizable;
@@ -904,7 +909,10 @@ QVariant XWindowTasksModel::data(const QModelIndex &index, int role) const
     } else if (role == IsDemandingAttention) {
         return d->demandsAttention(window);
     } else if (role == SkipTaskbar) {
-        return d->windowInfo(window)->hasState(NET::SkipTaskbar);
+        const KWindowInfo *info = d->windowInfo(window);
+        // _NET_WM_WINDOW_TYPE_UTILITY type windows should not be on task bars,
+        // but they should be shown on pagers.
+        return (info->hasState(NET::SkipTaskbar) || info->windowType(NET::UtilityMask) == NET::Utility);
     } else if (role == SkipPager) {
         return d->windowInfo(window)->hasState(NET::SkipPager);
     }

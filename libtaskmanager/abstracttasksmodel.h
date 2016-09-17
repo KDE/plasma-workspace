@@ -83,8 +83,8 @@ public:
         ScreenGeometry,   /**< Screen geometry for the task (i.e. the window's screen). */
         Activities,       /**< Activities for the task (i.e. window). */
         IsDemandingAttention, /**< Task is demanding attention. */
-        SkipTaskbar,      /**< Task desires not to be shown in a 'task bar' user interface. */
-        SkipPager,        /**< Task desires not to be shown in a 'pager' user interface. */
+        SkipTaskbar,      /**< Task should not be shown in a 'task bar' user interface. */
+        SkipPager,        /**< Task should not to be shown in a 'pager' user interface. */
     };
 
     explicit AbstractTasksModel(QObject *parent = nullptr);
