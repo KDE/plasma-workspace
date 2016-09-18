@@ -33,11 +33,8 @@ Item {
     Layout.fillWidth: plasmoid.configuration.expanding
     Layout.fillHeight: plasmoid.configuration.expanding
 
-    Layout.minimumWidth: horizontal ? plasmoid.configuration.length : 1
-    Layout.maximumWidth: (plasmoid.configuration.expanding || !horizontal) ? Infinity :  plasmoid.configuration.length
-
-    Layout.minimumHeight: horizontal ? 1 : plasmoid.configuration.length
-    Layout.maximumHeight: (plasmoid.configuration.expanding || horizontal) ? Infinity :  plasmoid.configuration.length
+    Layout.preferredWidth: horizontal ? plasmoid.configuration.length : 0
+    Layout.preferredHeight: horizontal ? 0 : plasmoid.configuration.length
 
     Plasmoid.preferredRepresentation: Plasmoid.fullRepresentation
 
