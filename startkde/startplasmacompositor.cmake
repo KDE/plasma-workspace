@@ -101,9 +101,14 @@ if test $returncode -ne 0; then
 fi
 [ -r $configDir/startupconfig ] && . $configDir/startupconfig
 
-if test "$kdeglobals_kscreen_scalefactor" -ne 1; then
-    export QT_DEVICE_PIXEL_RATIO=$kdeglobals_kscreen_scalefactor
+if [ "$kdeglobals_kscreen_scalefactor" ]; then
+    export QT_SCREEN_SCALE_FACTORS="$kdeglobals_kscreen_scalefactor"
 fi
+#Manually disable auto scaling because we are scaling above
+#otherwise apps that manually opt in for high DPI get auto scaled by the developer AND manually scaled by us
+export QT_AUTO_SCREEN_SCALE_FACTOR=0
+
+
 
 # XCursor mouse theme needs to be applied here to work even for kded or ksmserver
 if test -n "$kcminputrc_mouse_cursortheme" -o -n "$kcminputrc_mouse_cursorsize" ; then
