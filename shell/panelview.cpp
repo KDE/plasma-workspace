@@ -531,6 +531,7 @@ void PanelView::restore()
 
     setVisibilityMode((VisibilityMode)config().readEntry<int>("panelVisibility", (int)NormalPanel));
     resizePanel();
+    positionPanel();
 
     emit maximumLengthChanged();
     emit minimumLengthChanged();

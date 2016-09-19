@@ -56,6 +56,8 @@ class TASKMANAGER_EXPORT TaskFilterProxyModel : public QSortFilterProxyModel, pu
     Q_PROPERTY(bool filterSkipTaskbar READ filterSkipTaskbar WRITE setFilterSkipTaskbar NOTIFY filterSkipTaskbarChanged)
     Q_PROPERTY(bool filterSkipPager READ filterSkipPager WRITE setFilterSkipPager NOTIFY filterSkipPagerChanged)
 
+    Q_PROPERTY(bool demandingAttentionSkipsFilters READ demandingAttentionSkipsFilters WRITE setDemandingAttentionSkipsFilters NOTIFY demandingAttentionSkipsFiltersChanged)
+
 public:
     explicit TaskFilterProxyModel(QObject *parent = 0);
     virtual ~TaskFilterProxyModel();
@@ -212,44 +214,62 @@ public:
     void setFilterNotMinimized(bool filter);
 
     /**
-     * Whether tasks which indicate they want to be omitted from 'task bars'
-     * should be filtered. Defaults to @c true.
+     * Whether tasks which should be omitted from 'task bars' should be
+     * filtered. Defaults to @c true.
      *
      * @see setFilterSkipTaskbar
-     * @returns @c true if tasks which want to skip the 'task bar' should be
-     * filtered.
+     * @returns @c true if tasks which should not be on the 'task bar'
+     * should be filtered.
      **/
     bool filterSkipTaskbar() const;
 
     /**
-     * Set whether tasks which indicate they want to be omitted from 'task bars'
-     * should be filtered.
+     * Set whether tasks which should be omitted from 'task bars' should be
+     * filtered.
      *
      * @see filterSkipTaskbar
-     * @param filter Whether tasks which want to skip the 'task bar' should be
-     * filtered.
+     * @param filter Whether tasks whichs should not be on the 'task bar'
+     * should be filtered.
      **/
     void setFilterSkipTaskbar(bool filter);
 
     /**
-     * Whether tasks which indicate they want to be omitted from 'pagers'
-     * should be filtered. Defaults to @c true.
+     * Whether tasks which should be omitted from 'pagers' should be
+     * filtered. Defaults to @c true.
      *
      * @see setFilterSkipPager
-     * @returns @c true if tasks which want to skip the 'pager' should be
-     * filtered.
+     * @returns @c true if tasks which should not be on the 'pager' should
+     * be filtered.
      **/
     bool filterSkipPager() const;
 
     /**
-     * Set whether tasks which indicate they want to be omitted from 'pagers'
-     * should be filtered.
+     * Set whether tasks which should be omitted from 'pagers' should be
+     * filtered.
      *
      * @see filterSkipPager
-     * @param filter Whether tasks which want to skip the 'pager' should be
-     * filtered.
+     * @param filter Whether tasks which should not be on the 'pager' should
+     * be filtered.
      **/
     void setFilterSkipPager(bool filter);
+
+    /**
+     * Whether tasks which demand attention skip filters by virtual desktop
+     * or activity. Defaults to @c true.
+     *
+     * @see setDemandingAttentionSkipsFilters
+     * @returns @c true if tasks which demand attention skip filters.
+     **/
+    bool demandingAttentionSkipsFilters() const;
+
+    /**
+     * Sets whether tasks which demand attention should bypass filters by
+     * virtual desktop or activity.
+     *
+     * @see demandingAttentionSkipsFilters
+     * @param skip Whether tasks which demand attention should skip filters.
+     **/
+    void setDemandingAttentionSkipsFilters(bool skip);
 
 Q_SIGNALS:
     void virtualDesktopChanged() const;
@@ -261,6 +281,7 @@ Q_SIGNALS:
     void filterNotMinimizedChanged() const;
     void filterSkipTaskbarChanged() const;
     void filterSkipPagerChanged() const;
+    void demandingAttentionSkipsFiltersChanged() const;
 
 protected:
     bool filterAcceptsRow(int sourceRow, const QModelIndex &sourceParent) const override;

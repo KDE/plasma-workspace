@@ -689,7 +689,16 @@ QVariant TaskGroupingProxyModel::data(const QModelIndex &proxyIndex, int role) c
     if (isGroup) {
         // For group parent items, DisplayRole is mapped to AppName of the first child.
         if (role == Qt::DisplayRole) {
-            return sourceIndex.data(AbstractTasksModel::AppName);
+            const QString &appName = sourceIndex.data(AbstractTasksModel::AppName).toString();
+
+            // Groups are formed by app id or launcher URL; neither requires
+            // AppName to be available. If it's not, fall back to the app id
+            /// rather than an empty string.
+            if (appName.isEmpty()) {
+                return sourceIndex.data(AbstractTasksModel::AppId);
+            }
+
+            return appName;
         } else if (role == AbstractTasksModel::LegacyWinIdList) {
             QVariantList winIds;
 
