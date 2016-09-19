@@ -488,46 +488,26 @@ void PanelView::restore()
     }
 
     //defaults, may be altered by values written by the scripting in startup phase
-    int defaultOffset = 0;
-    int defaultThickness = 30;
-    int defaultMaxLength = 0;
-    int defaultMinLength = 0;
-    int defaultAlignment = Qt::AlignLeft;
+    const int defaultOffset = 0;
+    const int defaultAlignment = Qt::AlignLeft;
     setAlignment((Qt::Alignment)config().readEntry<int>("alignment", defaultAlignment));
     m_offset = config().readEntry<int>("offset", defaultOffset);
     if (m_alignment != Qt::AlignCenter) {
         m_offset = qMax(0, m_offset);
     }
 
+    const int defaultThickness = 30;
     setThickness(config().readEntry<int>("thickness", defaultThickness));
 
+    const QSize screenSize = m_screenToFollow->size();
     setMinimumSize(QSize(-1, -1));
     //FIXME: an invalid size doesn't work with QWindows
-    setMaximumSize(m_screenToFollow->size());
+    setMaximumSize(screenSize);
 
-    if (containment()->formFactor() == Plasma::Types::Vertical) {
-        defaultMaxLength = m_screenToFollow->size().height();
-        defaultMinLength = m_screenToFollow->size().height();
-
-        m_maxLength = config().readEntry<int>("maxLength", defaultMaxLength);
-        m_minLength = config().readEntry<int>("minLength", defaultMinLength);
-
-        const int maxSize = m_screenToFollow->size().height() - m_offset;
-        m_maxLength = qBound<int>(MINSIZE, m_maxLength, maxSize);
-        m_minLength = qBound<int>(MINSIZE, m_minLength, maxSize);
-    //Horizontal
-    } else {
-        defaultMaxLength = m_screenToFollow->size().width();
-        defaultMinLength = m_screenToFollow->size().width();
-
-        m_maxLength = config().readEntry<int>("maxLength", defaultMaxLength);
-        m_minLength = config().readEntry<int>("minLength", defaultMinLength);
-
-        const int maxSize = m_screenToFollow->size().width() - m_offset;
-        m_maxLength = qBound<int>(MINSIZE, m_maxLength, maxSize);
-        m_minLength = qBound<int>(MINSIZE, m_minLength, maxSize);
-    }
-
+    const int side = containment()->formFactor() == Plasma::Types::Vertical ? screenSize.height() : screenSize.width();
+    const int maxSize = side - m_offset;
+    m_maxLength = qBound<int>(MINSIZE, config().readEntry<int>("maxLength", side), maxSize);
+    m_minLength = qBound<int>(MINSIZE, config().readEntry<int>("minLength", side), maxSize);
 
     setVisibilityMode((VisibilityMode)config().readEntry<int>("panelVisibility", (int)NormalPanel));
     resizePanel();
