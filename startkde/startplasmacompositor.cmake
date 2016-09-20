@@ -101,7 +101,7 @@ if test $returncode -ne 0; then
 fi
 [ -r $configDir/startupconfig ] && . $configDir/startupconfig
 
-if [ "$kdeglobals_kscreen_scalefactor" ]; then
+if [ $kdeglobals_kscreen_scalefactor -gt 1 ]; then
     export QT_SCREEN_SCALE_FACTORS="$kdeglobals_kscreen_scalefactor"
 fi
 #Manually disable auto scaling because we are scaling above
