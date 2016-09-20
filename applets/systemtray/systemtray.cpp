@@ -133,7 +133,24 @@ void SystemTray::newTask(const QString &task)
         }
     }
 
-    createApplet(task, QVariantList() << "org.kde.plasma:force-create");
+    //known one, recycle the id to reuse old config
+    if (m_knownPlugins.contains(task)) {
+        Applet *applet = Plasma::PluginLoader::self()->loadApplet(task, m_knownPlugins.value(task), QVariantList());
+        //this should never happen unless explicitly wrong config is hand-written or
+        //(more likely) a previously added applet is uninstalled
+        if (!applet) {
+            qWarning() << "Unable to find applet" << task;
+            return;
+        }
+        applet->setProperty("org.kde.plasma:force-create", true);
+        addApplet(applet);
+    //create a new one automatic id, new config group
+    } else {
+        Applet * applet = createApplet(task, QVariantList() << "org.kde.plasma:force-create");
+        if (applet) {
+            m_knownPlugins[task] = applet->id();
+        }
+    }
 }
 
 void SystemTray::cleanupTask(const QString &task)
