@@ -12,9 +12,9 @@
 <author>&Mike.McBride; &Mike.McBride.mail;</author>
 <!-- TRANS:ROLES_OF_TRANSLATORS -->
 </authorgroup>
-
-<date>2015-05-20</date>
-<releaseinfo>Plasma 5.3</releaseinfo>
+<!--FIXME code in workspace/kscreenlocker - docbook in workspace/plasma-desktop -->
+<date>2016-09-19</date>
+<releaseinfo>Plasma 5.8</releaseinfo>
 
 <keywordset>
 <keyword>KDE</keyword>
@@ -33,7 +33,7 @@ and a spin box which determines the period of inactivity before the screen locke
 You can enter any positive number of minutes in this box.</para>
 
 <para>Below that is a spinbox labeled <guilabel>Require password 
-after locking</guilabel>.  If it is checked, when you click a key
+after locking</guilabel>.  When you press a key
 or click a mouse button to end the screen locker after the time in the spinbox and return to your
 work, you must enter a password.  The password used is the same
 password you used to login to your machine. <!--FIXME --></para>
@@ -46,8 +46,11 @@ way to lock the screen manually.</para>
 <para>Check <guilabel>Lock screen on resume</guilabel> if you want a password protected system
 when waking up from suspension.</para>
 
-<para>If you would like to change the background in locked status click on the image button right 
-to <guilabel>Custom Background</guilabel> to open a menu with actions to load an image from 
-file or clear the currently used image.</para>
+<para>If you would like to change the background in locked status switch to the <guilabel>Wallpaper</guilabel> tab.</para>
+
+<para>You can select a <guilabel>Plain Color</guilabel> as wallpaper type.</para>
+
+<para>Alternatively use a single image or a slideshow with images from a folder
+or load new wallpapers from the Internet.</para>
 
 </article>
