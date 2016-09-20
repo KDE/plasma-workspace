@@ -1631,7 +1631,14 @@ void ShellCorona::populateAddPanelsMenu()
     m_addPanelsMenu->clear();
     const KPluginInfo emptyInfo;
 
+    KPluginInfo::List panelContainmentPlugins = Plasma::PluginLoader::listContainmentsOfType(QStringLiteral("Panel"));
     QMap<QString, QPair<KPluginInfo, KPluginMetaData> > sorted;
+    foreach (const KPluginInfo &plugin, panelContainmentPlugins) {
+        if (plugin.property(QStringLiteral("NoDisplay")).toString() == QStringLiteral("true")) {
+            continue;
+        }
+        sorted.insert(plugin.name(), qMakePair(plugin, KPluginMetaData()));
+    }
 
     auto filter = [](const KPluginMetaData &md) -> bool
     {
