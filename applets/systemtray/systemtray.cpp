@@ -133,14 +133,38 @@ void SystemTray::newTask(const QString &task)
         }
     }
 
-    createApplet(task, QVariantList() << "org.kde.plasma:force-create");
+    //known one, recycle the id to reuse old config
+    if (m_knownPlugins.contains(task)) {
+        Applet *applet = Plasma::PluginLoader::self()->loadApplet(task, m_knownPlugins.value(task), QVariantList());
+        //this should never happen unless explicitly wrong config is hand-written or
+        //(more likely) a previously added applet is uninstalled
+        if (!applet) {
+            qWarning() << "Unable to find applet" << task;
+            return;
+        }
+        applet->setProperty("org.kde.plasma:force-create", true);
+        addApplet(applet);
+    //create a new one automatic id, new config group
+    } else {
+        Applet * applet = createApplet(task, QVariantList() << "org.kde.plasma:force-create");
+        if (applet) {
+            m_knownPlugins[task] = applet->id();
+        }
+    }
 }
 
 void SystemTray::cleanupTask(const QString &task)
 {
     foreach (Plasma::Applet *applet, applets()) {
         if (!applet->pluginInfo().isValid() || task == applet->pluginInfo().pluginName()) {
-            applet->destroy();
+            //we are *not* cleaning the config here, because since is one
+            //of those automatically loaded/unloaded by dbus, we want to recycle
+            //the config the next time it's loaded, in case the user configured something here
+            applet->deleteLater();
+            //HACK: we need to remove the applet from Containment::applets() as soon as possible
+            //otherwise we may have disappearing applets for restarting dbus services
+            //this may be removed when we depend from a frameworks version in which appletDeleted is emitted as soon as deleteLater() is called
+            emit appletDeleted(applet);
         }
     }
 }
@@ -358,16 +382,19 @@ void SystemTray::restorePlasmoids()
     }
 
     //First: remove all that are not allowed anymore
-    QStringList tasksToDelete;
     foreach (Plasma::Applet *applet, applets()) {
         //Here it should always be valid.
         //for some reason it not always is.
         if (!applet->pluginInfo().isValid()) {
-            applet->destroy();
+            applet->config().parent().deleteGroup();
+            applet->deleteLater();
         } else {
             const QString task = applet->pluginInfo().pluginName();
             if (!m_allowedPlasmoids.contains(task)) {
-                applet->destroy();
+                //in those cases we do delete the applet config completely
+                //as they were explicitly disabled by the user
+                applet->config().parent().deleteGroup();
+                applet->deleteLater();
             }
         }
     }
