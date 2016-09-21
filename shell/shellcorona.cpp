@@ -1741,7 +1741,11 @@ Plasma::Containment *ShellCorona::addPanel(const QString &plugin)
 
     Q_ASSERT(panel);
     m_waitingPanels << panel;
-    createWaitingPanels();
+    //not creating the panel view yet in order to have the same code path
+    //between the first and subsequent plasma starts. we want to have the panel appearing only when its layout is completed, to not have
+    //many visible relayouts. otherwise we had even panel resizes at startup that
+    //made al lthe full representations be loaded.
+    m_waitingPanelsTimer.start();
 
     const QPoint cursorPos(QCursor::pos());
     foreach (QScreen *screen, QGuiApplication::screens()) {
