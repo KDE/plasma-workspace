@@ -134,13 +134,21 @@ Item {
             processLastDevice(false);
         }
 
+        function isViableDevice(udi) {
+            if (devicesType === "all") {
+                return true;
+            }
+
+            var device = data[udi];
+            return (devicesType === "removable" && device.Removable)
+                || (devicesType === "nonRemovable" && !device.Removable);
+        }
+
         function processLastDevice(expand) {
-            if (last != "") {
-                if (devicesType == "all" ||
-                    (devicesType == "removable" && data[last] && data[last]["Removable"] == true) ||
-                    (devicesType == "nonRemovable" && data[last] && data[last]["Removable"] == false)) {
-                    if (expand && hpSource.data[last]["added"]) {
-                        expandDevice(last)
+            if (last) {
+                if (isViableDevice(last)) {
+                    if (expand && hpSource.data[last].added) {
+                        expandDevice(last);
                     }
                     last = "";
                 }
@@ -181,7 +189,10 @@ Item {
         onDataChanged: {
             if (last) {
                 lastUdi = data[last].udi
-                plasmoid.expanded = true
+
+                if (sdSource.isViableDevice(lastUdi)) {
+                    plasmoid.expanded = true
+                }
             }
         }
 
