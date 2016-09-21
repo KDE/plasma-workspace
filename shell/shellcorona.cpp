@@ -636,8 +636,10 @@ void ShellCorona::load()
         foreach(Plasma::Containment *containment, containments()) {
             if (containment->containmentType() == Plasma::Types::PanelContainment || containment->containmentType() == Plasma::Types::CustomPanelContainment) {
                 //Don't give a view to containments that don't want one (negative lastscreen)
-                //this is pretty mucha special case for the systray
-                if (!m_waitingPanels.contains(containment) && containment->lastScreen() >= 0) {
+                //(this is pretty mucha special case for the systray)
+                //also, make sure we don't have a view already.
+                //this will be true for first startup as the view has already been created at the new Panel JS call
+                if (!m_waitingPanels.contains(containment) && containment->lastScreen() >= 0 && !m_panelViews.contains(containment)) {
                     m_waitingPanels << containment;
                 }
             //historically CustomContainments are treated as desktops
