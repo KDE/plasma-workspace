@@ -60,7 +60,7 @@ PanelConfigView::PanelConfigView(Plasma::Containment *containment, PanelView *pa
             [=]() {
                 setScreen(panelView->screen());
                 KWindowSystem::setType(winId(), NET::Dock);
-                setFlags(Qt::WindowFlags((flags() | Qt::FramelessWindowHint) & (~Qt::WindowDoesNotAcceptFocus)));
+                setFlags(Qt::WindowFlags((flags() | Qt::FramelessWindowHint | Qt::WindowStaysOnTopHint) & (~Qt::WindowDoesNotAcceptFocus)));
                 KWindowSystem::setState(winId(), NET::KeepAbove);
                 syncGeometry();
                 syncLocation();
@@ -68,7 +68,7 @@ PanelConfigView::PanelConfigView(Plasma::Containment *containment, PanelView *pa
 
     KWindowSystem::setType(winId(), NET::Dock);
     KWindowSystem::setState(winId(), NET::KeepAbove);
-    setFlags(Qt::WindowFlags((flags() | Qt::FramelessWindowHint) & (~Qt::WindowDoesNotAcceptFocus)));
+    setFlags(Qt::WindowFlags((flags() | Qt::FramelessWindowHint | Qt::WindowStaysOnTopHint) & (~Qt::WindowDoesNotAcceptFocus)));
     KWindowSystem::forceActiveWindow(winId());
 
     KWindowEffects::enableBlurBehind(winId(), true);
