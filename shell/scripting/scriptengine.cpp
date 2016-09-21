@@ -376,6 +376,13 @@ Containment *ScriptEngine::createContainment(const QString &type, const QString 
             // some defaults
             c->setFormFactor(Plasma::Types::Horizontal);
             c->setLocation(Plasma::Types::TopEdge);
+            //we have to force lastScreen of the newly created containment,
+            //or it won't have a screen yet at that point, breaking JS code
+            //that relies on it
+            //NOTE: if we'll allow setting a panel screen from JS, it will have to use the following lines as well
+            KConfigGroup cg=c->config();
+            cg.writeEntry(QStringLiteral("lastScreen"), 0);
+            c->restore(cg);
         }
         c->updateConstraints(Plasma::Types::AllConstraints | Plasma::Types::StartupCompletedConstraint);
         c->flushPendingConstraintsEvents();
