@@ -187,29 +187,41 @@ void Image::findPreferedImageInPackage(KPackage::Package &package)
         return;
     }
 
-    //qDebug() << "wanted" << size;
+    //qDebug() << "wanted" << m_targetSize << "options" << images;
 
-    // choose the nearest resolution
+    // choose the nearest resolution, always preferring images with the same aspect ratio
     float best = FLT_MAX;
+    float bestWithSameAspectRatio = FLT_MAX;
+    float targetAspectRatio = m_targetSize.width()/(float)m_targetSize.height();
 
     QString bestImage;
+    QString bestImageWithSameAspectRatio;
     foreach (const QString &entry, images) {
         QSize candidate = resSize(QFileInfo(entry).baseName());
         if (candidate == QSize()) {
             continue;
         }
+        float candidateAspectRatio = candidate.width()/(float)candidate.height();
 
         double dist = distance(candidate, m_targetSize);
-        //qDebug() << "candidate" << candidate << "distance" << dist;
-        if (bestImage.isEmpty() || dist < best) {
-            bestImage = entry;
-            best = dist;
-            //qDebug() << "best" << bestImage;
+        //qDebug() << "candidate" << candidate << "distance" << dist << "aspect ratio" << candidateAspectRatio;
+
+        if ( candidateAspectRatio == targetAspectRatio && (bestImageWithSameAspectRatio.isEmpty() || dist < bestWithSameAspectRatio) ) {
+            bestImageWithSameAspectRatio = entry;
+            bestWithSameAspectRatio = dist;
+            //qDebug() << "bestWithSameAspectRatio" << bestImageWithSameAspectRatio;
             if (dist == 0) {
                 break;
             }
+        } else if (bestImage.isEmpty() || dist < best) {
+            bestImage = entry;
+            best = dist;
+            //qDebug() << "best" << bestImage;
         }
     }
+
+    if (!bestImageWithSameAspectRatio.isEmpty()) // Always prefer an image with the same aspect ratio as the target (if available)
+       bestImage=bestImageWithSameAspectRatio;
 
     //qDebug() << "best image" << bestImage;
     package.removeDefinition("preferred");
