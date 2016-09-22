@@ -150,7 +150,6 @@ void TimeZoneModel::update()
 
     for (auto it = systemTimeZones.constBegin(); it != systemTimeZones.constEnd(); ++it) {
         const QTimeZone zone(*it);
-        const QString continentCity = zone.id();
         const QStringList splitted = QString::fromUtf8(zone.id()).split(QStringLiteral("/"));
 
         // CITY | COUNTRY | CONTINENT

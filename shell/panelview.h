@@ -101,7 +101,7 @@ public:
         LetWindowsCover, /** always visible, windows will go over the panel, no area reserved */
         WindowsGoBelow /** always visible, windows will go under the panel, no area reserved */
     };
-    Q_ENUMS(VisibilityMode)
+    Q_ENUM(VisibilityMode)
 
     explicit PanelView(ShellCorona *corona, QScreen *targetScreen = 0, QWindow *parent = 0);
     ~PanelView() override;

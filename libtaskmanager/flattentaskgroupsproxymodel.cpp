@@ -29,13 +29,9 @@ public:
     Private(FlattenTaskGroupsProxyModel *q);
 
     AbstractTasksModelIface *sourceTasksModel = nullptr;
-
-private:
-    FlattenTaskGroupsProxyModel *q;
 };
 
-FlattenTaskGroupsProxyModel::Private::Private(FlattenTaskGroupsProxyModel *q)
-    : q(q)
+FlattenTaskGroupsProxyModel::Private::Private(FlattenTaskGroupsProxyModel *)
 {
 }
 

@@ -122,7 +122,7 @@ public:
         Tooltip = NET::Tooltip,
         Notification = NET::Notification
     };
-    Q_ENUMS(WindowType)
+    Q_ENUM(WindowType)
 
     Dialog(QQuickItem *parent = 0);
     ~Dialog() override;

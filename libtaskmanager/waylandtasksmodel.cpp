@@ -94,7 +94,8 @@ void WaylandTasksModel::Private::initWayland()
                 }
             );
 
-            for (auto it = windowManagement->windows().constBegin(); it != windowManagement->windows().constEnd(); ++it) {
+            const auto windows = windowManagement->windows();
+            for (auto it = windows.constBegin(); it != windows.constEnd(); ++it) {
                 addWindow(*it);
             }
         }

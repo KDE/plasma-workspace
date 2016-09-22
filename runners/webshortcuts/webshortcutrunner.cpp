@@ -19,11 +19,11 @@
 #include "webshortcutrunner.h"
 
 #include <QDebug>
+#include <QDBusConnection>
+#include <QDesktopServices>
 #include <KToolInvocation>
 #include <KLocalizedString>
 #include <KIOWidgets/KUriFilter>
-
-#include <QtDBus/QtDBus>
 
 WebshortcutRunner::WebshortcutRunner(QObject *parent, const QVariantList& args)
     : Plasma::AbstractRunner(parent, args),
@@ -129,7 +129,7 @@ void WebshortcutRunner::match(Plasma::RunnerContext &context)
     m_lastKey = key;
     m_lastProvider = filterData.searchProvider();
 
-    m_match.setData(filterData.uri().url());
+    m_match.setData(filterData.uri());
     m_match.setId("WebShortcut:" + key);
 
     m_match.setIconName(filterData.iconName());
@@ -139,7 +139,7 @@ void WebshortcutRunner::match(Plasma::RunnerContext &context)
 
 void WebshortcutRunner::run(const Plasma::RunnerContext &context, const Plasma::QueryMatch &match)
 {
-    QString location;
+    QUrl location;
 
     //qDebug() << "filter before run?" << m_filterBeforeRun;
     if (m_filterBeforeRun) {
@@ -147,14 +147,14 @@ void WebshortcutRunner::run(const Plasma::RunnerContext &context, const Plasma::
         //qDebug() << "look up webshortcut:" << context.query();
         KUriFilterData filterData (context.query());
         if (KUriFilter::self()->filterSearchUri(filterData, KUriFilter::WebShortcutFilter))
-            location = filterData.uri().url();
+            location = filterData.uri();
     } else {
-        location = match.data().toString();
+        location = match.data().toUrl();
     }
 
     //qDebug() << location;
     if (!location.isEmpty()) {
-        KToolInvocation::invokeBrowser(location);
+        QDesktopServices::openUrl(location);
     }
 }
 

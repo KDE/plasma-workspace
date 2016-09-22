@@ -219,7 +219,7 @@ void ContainmentConfigView::applyWallpaper()
     syncWallpaperObjects();
 
     if (m_currentWallpaperConfig && m_ownWallpaperConfig) {
-        for (auto key : m_ownWallpaperConfig->keys()) {
+        for (const auto &key : m_ownWallpaperConfig->keys()) {
             m_currentWallpaperConfig->insert(key, m_ownWallpaperConfig->value(key));
         }
     }

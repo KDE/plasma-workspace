@@ -841,7 +841,7 @@ void Image::commitDeletion()
         return;
     }
 
-    for (const QString wallpaperCandidate : m_model->wallpapersAwaitingDeletion()) {
+    for (const QString &wallpaperCandidate : m_model->wallpapersAwaitingDeletion()) {
         removeWallpaper(wallpaperCandidate);
     }
 }

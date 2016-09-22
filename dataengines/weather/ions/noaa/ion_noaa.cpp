@@ -412,7 +412,7 @@ void NOAAIon::parseWeatherSite(WeatherData& data, QXmlStreamReader& xml)
             } else if (elementName == QLatin1String("observation_time")) {
                 data.observationTime = xml.readElementText();
                 QStringList tmpDateStr = data.observationTime.split(QLatin1Char(' '));
-                data.observationTime = QStringLiteral("%1 %2").arg(tmpDateStr[6]).arg(tmpDateStr[7]);
+                data.observationTime = QStringLiteral("%1 %2").arg(tmpDateStr[6], tmpDateStr[7]);
                 m_dateFormat = QDateTime::fromString(data.observationTime, QStringLiteral("h:mm ap"));
                 data.iconPeriodHour = m_dateFormat.toString(QStringLiteral("HH"));
                 data.iconPeriodAP = m_dateFormat.toString(QStringLiteral("ap"));

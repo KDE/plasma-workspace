@@ -133,7 +133,7 @@ void WidgetExplorerPrivate::initFilters()
     QStringList cats;
     const QList<KPluginMetaData> list = KPackage::PackageLoader::self()->listPackages(QStringLiteral("Plasma/Applet"), QStringLiteral("plasma/plasmoids"));
 
-    for (auto data : list) {
+    for (auto& data : list) {
         const KPluginInfo info(data);
         if (!info.isValid()) {
             continue;

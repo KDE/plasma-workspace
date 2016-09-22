@@ -57,9 +57,6 @@ class TASKMANAGER_EXPORT TasksModel : public QSortFilterProxyModel, public Abstr
 {
     Q_OBJECT
 
-    Q_ENUMS(SortMode)
-    Q_ENUMS(GroupMode)
-
     Q_PROPERTY(int count READ rowCount NOTIFY countChanged)
     Q_PROPERTY(int launcherCount READ launcherCount NOTIFY launcherCountChanged)
 
@@ -98,11 +95,13 @@ public:
         SortVirtualDesktop, /**< Tasks are sorted by the virtual desktop they are on. */
         SortActivity        /**< Tasks are sorted by the number of tasks on the activities they're on. */
     };
+    Q_ENUM(SortMode)
 
     enum GroupMode {
         GroupDisabled = 0, /**< No grouping is done. */
         GroupApplications  /**< Tasks are grouped by the application backing them. */
     };
+    Q_ENUM(GroupMode)
 
     explicit TasksModel(QObject *parent = 0);
     virtual ~TasksModel();
@@ -583,7 +582,7 @@ public:
      * @param index An index in this tasks model.
      * @param urls The URLs to be passed to the application.
      **/
-    Q_INVOKABLE void requestOpenUrls(const QModelIndex &index, const QList<QUrl> &urls);
+    Q_INVOKABLE void requestOpenUrls(const QModelIndex &index, const QList<QUrl> &urls) override;
 
     /**
      * Request the task at the given index be closed.

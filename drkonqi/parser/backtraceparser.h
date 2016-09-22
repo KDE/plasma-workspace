@@ -29,9 +29,9 @@ class BacktraceParser : public QObject
 {
     Q_OBJECT
     Q_DECLARE_PRIVATE(BacktraceParser)
-    Q_ENUMS(Usefulness)
 public:
     enum Usefulness { InvalidUsefulness, Useless, ProbablyUseless, MayBeUseful, ReallyUseful };
+    Q_ENUM(Usefulness)
 
     static BacktraceParser *newParser(const QString & debuggerName, QObject *parent = 0);
     ~BacktraceParser() override;

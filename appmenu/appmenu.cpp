@@ -87,9 +87,9 @@ AppMenuModule::~AppMenuModule()
 {
     emit clearMenus();
     hideMenubar();
-    if (m_menubar) {
-        delete m_menubar;
-    }
+#if 0
+    delete m_menubar;
+#endif
     delete m_menuImporter;
     delete m_appmenuDBus;
 }
@@ -291,10 +291,10 @@ void AppMenuModule::reconfigure()
 
     // hide menubar if exist
     hideMenubar();
-    if (m_menubar) {
-        delete m_menubar;
-        m_menubar = 0;
-    }
+#if 0
+    delete m_menubar;
+    m_menubar = 0;
+#endif
 
     slotAboutToHide(); // hide vertical menu if exist
 

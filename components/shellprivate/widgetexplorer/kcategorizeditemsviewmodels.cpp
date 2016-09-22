@@ -122,8 +122,8 @@ QVariantHash DefaultFilterModel::get(int row) const
     QModelIndex idx = index(row, 0);
     QVariantHash hash;
 
-    QHash<int, QByteArray>::const_iterator i;
-    for (i = roleNames().constBegin(); i != roleNames().constEnd(); ++i) {
+    const QHash<int, QByteArray> roles = roleNames();
+    for (QHash<int, QByteArray>::const_iterator i = roles.constBegin(); i != roles.constEnd(); ++i) {
         hash[i.value()] = data(idx, i.key());
     }
 
@@ -191,8 +191,8 @@ QVariantHash DefaultItemFilterProxyModel::get(int row) const
     QModelIndex idx = index(row, 0);
     QVariantHash hash;
 
-    QHash<int, QByteArray>::const_iterator i;
-    for (i = roleNames().constBegin(); i != roleNames().constEnd(); ++i) {
+    const QHash<int, QByteArray> roles = roleNames();
+    for (QHash<int, QByteArray>::const_iterator i = roles.constBegin(); i != roles.constEnd(); ++i) {
         hash[i.value()] = data(idx, i.key());
     }
 

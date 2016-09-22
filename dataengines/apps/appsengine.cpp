@@ -73,10 +73,10 @@ void AppsEngine::addGroup(KServiceGroup::Ptr group)
     //TODO listen for changes
     addSource(appSource);
     //do children
-    foreach (const KServiceGroup::Ptr subGroup, group->groupEntries(KServiceGroup::NoOptions)) {
+    foreach (const KServiceGroup::Ptr &subGroup, group->groupEntries(KServiceGroup::NoOptions)) {
         addGroup(subGroup);
     }
-    foreach (const KService::Ptr app, group->serviceEntries(KServiceGroup::NoOptions)) {
+    foreach (const KService::Ptr &app, group->serviceEntries(KServiceGroup::NoOptions)) {
         addApp(app);
     }
 }

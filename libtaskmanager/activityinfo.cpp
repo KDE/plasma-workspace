@@ -33,16 +33,12 @@ public:
 
     static int instanceCount;
     static KActivities::Consumer* activityConsumer;
-
-private:
-    ActivityInfo *q;
 };
 
 int ActivityInfo::Private::instanceCount = 0;
 KActivities::Consumer* ActivityInfo::Private::activityConsumer = nullptr;
 
-ActivityInfo::Private::Private(ActivityInfo *q)
-    : q(q)
+ActivityInfo::Private::Private(ActivityInfo *)
 {
     ++instanceCount;
 }

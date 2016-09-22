@@ -69,8 +69,7 @@ FaviconFromBlob *FaviconFromBlob::chrome(const QString &profileDirectory, QObjec
 {
     QString profileName = QFileInfo(profileDirectory).fileName();
     QString faviconCache = QStringLiteral("%1/KRunner-Chrome-Favicons-%2.sqlite")
-            .arg(QStandardPaths::writableLocation(QStandardPaths::CacheLocation))
-            .arg(profileName);
+            .arg(QStandardPaths::writableLocation(QStandardPaths::CacheLocation), profileName);
     FetchSqlite *fetchSqlite = new FetchSqlite(profileDirectory + "/Favicons", faviconCache, parent);
     return new FaviconFromBlob(profileName, new ChromeQuery(), QStringLiteral("image_data"), fetchSqlite, parent);
 }
@@ -89,8 +88,7 @@ FaviconFromBlob::FaviconFromBlob(const QString &profileName, BuildQuery *buildQu
     : Favicon(parent), m_buildQuery(buildQuery), m_blobcolumn(blobColumn), m_fetchsqlite(fetchSqlite)
 {
     m_profileCacheDirectory = QStringLiteral("%1/KRunner-Favicons-%2")
-            .arg(QStandardPaths::writableLocation(QStandardPaths::CacheLocation))
-            .arg(profileName);
+            .arg(QStandardPaths::writableLocation(QStandardPaths::CacheLocation), profileName);
     //qDebug() << "got cache directory: " << m_profileCacheDirectory;
     cleanCacheDirectory();
     QDir().mkpath(m_profileCacheDirectory);
@@ -114,9 +112,9 @@ void FaviconFromBlob::teardown()
 
 void FaviconFromBlob::cleanCacheDirectory()
 {
-    foreach(QFileInfo file, QDir(m_profileCacheDirectory).entryInfoList(QDir::NoDotAndDotDot)) {
+    foreach(const QFileInfo &file, QDir(m_profileCacheDirectory).entryInfoList(QDir::NoDotAndDotDot)) {
         //qDebug() << "Removing file " << file.absoluteFilePath() << ": " <<
-                             QFile(file.absoluteFilePath()).remove();
+        QFile(file.absoluteFilePath()).remove();
     }
     QDir().rmdir(m_profileCacheDirectory);
 }

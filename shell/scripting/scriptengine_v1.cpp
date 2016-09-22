@@ -828,7 +828,7 @@ QScriptValue ScriptEngine::V1::knownWallpaperPlugins(QScriptContext *context,
             .append("'");
     }
 
-    QList<KPluginMetaData> wallpapers
+    const QList<KPluginMetaData> wallpapers
         = KPackage::PackageLoader::self()->listPackages(
             QStringLiteral("Plasma/Wallpaper"), QString());
     QScriptValue rv = engine->newArray(wallpapers.size());
