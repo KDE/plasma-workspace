@@ -193,7 +193,7 @@ void BackgroundListModel::processPaths(const QStringList &paths)
     }
 
     // add new files to dirwatch
-    Q_FOREACH (KPackage::Package b, newPackages) {
+    Q_FOREACH (const KPackage::Package &b, newPackages) {
         if (!m_dirwatch.contains(b.path())) {
             m_dirwatch.addFile(b.path());
         }
@@ -476,7 +476,7 @@ void BackgroundListModel::setPendingDeletion(int rowIndex, bool pendingDeletion)
 const QStringList BackgroundListModel::wallpapersAwaitingDeletion()
 {
     QStringList candidates;
-    for (KPackage::Package b : m_packages) {
+    for (const KPackage::Package &b : m_packages) {
         const QUrl wallpaperUrl = QUrl::fromLocalFile(b.filePath("preferred"));
         if (m_pendingDeletion.contains(wallpaperUrl.toLocalFile()) && m_pendingDeletion[wallpaperUrl.toLocalFile()]) {
             candidates << wallpaperUrl.toLocalFile();

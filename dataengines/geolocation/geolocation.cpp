@@ -52,7 +52,7 @@ void Geolocation::init()
     const KService::List offers = KServiceTypeTrader::self()->query(QStringLiteral("Plasma/GeolocationProvider"));
     QVariantList args;
 
-    Q_FOREACH (const KService::Ptr service, offers) {
+    Q_FOREACH (const KService::Ptr &service, offers) {
         QString error;
         GeolocationProvider *plugin = service->createInstance<GeolocationProvider>(0, args, &error);
         if (plugin) {

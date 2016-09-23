@@ -171,7 +171,7 @@ void KillRunner::run(const Plasma::RunnerContext &context, const Plasma::QueryMa
 
     QVariantList data = match.data().value<QVariantList>();
     quint64 pid = data[0].toUInt();
-    QString user = data[1].toString();
+//     QString user = data[1].toString();
 
     int signal;
     if (match.selectedAction() != NULL) {

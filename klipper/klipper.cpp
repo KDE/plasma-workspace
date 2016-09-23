@@ -406,7 +406,7 @@ bool Klipper::loadHistory() {
     // youngest-first to keep the most important clipboard
     // items at the top, but the history is created oldest
     // first.
-    QList<HistoryItemPtr> reverseList;
+    QVector<HistoryItemPtr> reverseList;
     for ( HistoryItemPtr item = HistoryItem::create( history_stream );
           !item.isNull();
           item = HistoryItem::create( history_stream ) )

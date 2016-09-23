@@ -47,13 +47,13 @@ public:
         Desktop, /** The window is the desktop layer, under everything else, doesn't appear in the taskbar */
         WindowedDesktop /** full screen and borderless as Desktop, but can be brought in front and appears in the taskbar */
     };
-    Q_ENUMS(WindowType)
+    Q_ENUM(WindowType)
 
     enum SessionType {
         ApplicationSession, /** our session is a normal application */
         ShellSession /** We are running as the primary user interface of this machine */
     };
-    Q_ENUMS(SessionType)
+    Q_ENUM(SessionType)
 
     explicit DesktopView(Plasma::Corona *corona, QScreen *targetScreen = 0);
     ~DesktopView() override;

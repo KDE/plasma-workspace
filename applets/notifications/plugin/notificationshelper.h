@@ -32,7 +32,6 @@ class NotificationsHelper : public QObject
 {
     Q_OBJECT
     Q_PROPERTY(PositionOnScreen popupLocation MEMBER m_popupLocation WRITE setPopupLocation NOTIFY popupLocationChanged)
-    Q_ENUMS(PositionOnScreen)
 
 public:
     enum PositionOnScreen {
@@ -47,6 +46,7 @@ public:
         BottomCenter,
         BottomRight
     };
+    Q_ENUM(PositionOnScreen)
 
     NotificationsHelper(QObject *parent = 0);
     ~NotificationsHelper() override;

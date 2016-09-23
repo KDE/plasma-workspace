@@ -76,7 +76,7 @@ void ClipCommandProcess::slotFinished(int /*exitCode*/, QProcess::ExitStatus /*n
 
 void ClipCommandProcess::slotStdOutputAvailable()
 {
-    m_newhistoryItem.append(QString::fromLocal8Bit(this->readAllStandardOutput().data()));
+    m_newhistoryItem.append(QString::fromLocal8Bit(this->readAllStandardOutput()));
 }
 
 

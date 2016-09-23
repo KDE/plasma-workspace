@@ -56,16 +56,15 @@ int main(int argc, char **argv)
 
     PlasmaWindowedCorona *corona = new PlasmaWindowedCorona();
 
+    const QStringList arguments = parser.positionalArguments();
     QVariantList args;
-    QStringList::const_iterator constIterator;
-    constIterator = parser.positionalArguments().constBegin();
-    ++constIterator;
-    for (; constIterator != parser.positionalArguments().constEnd();
+    QStringList::const_iterator constIterator = arguments.constBegin() + 1;
+    for (; constIterator != arguments.constEnd();
            ++constIterator) {
         args << (*constIterator);
     }
     corona->setHasStatusNotifier(parser.isSet(QStringLiteral("statusnotifier")));
-    corona->loadApplet(parser.positionalArguments().first(), args);
+    corona->loadApplet(arguments.first(), args);
 
     QObject::connect(&service, &KDBusService::activateRequested, corona, &PlasmaWindowedCorona::activateRequested);
 

@@ -43,13 +43,9 @@ public:
     bool filterSkipPager = false;
 
     bool demandingAttentionSkipsFilters = true;
-
-private:
-    TaskFilterProxyModel *q;
 };
 
-TaskFilterProxyModel::Private::Private(TaskFilterProxyModel *q)
-    : q(q)
+TaskFilterProxyModel::Private::Private(TaskFilterProxyModel *)
 {
 }
 

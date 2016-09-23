@@ -69,7 +69,7 @@ class Image : public QObject, public QQmlParserStatus
             SingleImage,
             SlideShow
         };
-        Q_ENUMS(RenderingMode)
+        Q_ENUM(RenderingMode)
 
         Image(QObject* parent = 0);
         ~Image() override;

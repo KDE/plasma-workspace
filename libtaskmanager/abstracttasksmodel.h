@@ -45,8 +45,6 @@ class TASKMANAGER_EXPORT AbstractTasksModel : public QAbstractListModel,
 {
     Q_OBJECT
 
-    Q_ENUMS(AdditionalRoles)
-
 public:
     enum AdditionalRoles {
         AppId = Qt::UserRole + 1, /**< KService storage id (.desktop name sans extension). */
@@ -86,6 +84,7 @@ public:
         SkipTaskbar,      /**< Task should not be shown in a 'task bar' user interface. */
         SkipPager,        /**< Task should not to be shown in a 'pager' user interface. */
     };
+    Q_ENUM(AdditionalRoles)
 
     explicit AbstractTasksModel(QObject *parent = nullptr);
     virtual ~AbstractTasksModel();
@@ -124,7 +123,7 @@ public:
      * @param index An index in this tasks model.
      * @param urls The URLs to be passed to the application.
      **/
-    virtual void requestOpenUrls(const QModelIndex &index, const QList<QUrl> &urls);
+    virtual void requestOpenUrls(const QModelIndex &index, const QList<QUrl> &urls) override;
 
     /**
      * Request the task at the given index be closed.

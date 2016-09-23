@@ -67,8 +67,6 @@ void ShareEngine::updatePlugins(const QStringList &changes)
         const QStringList pluginMimeTypes =
             service->property(QStringLiteral("X-KDE-PlasmaShareProvider-MimeType"), QVariant::StringList).toStringList();
 
-        const QString storageId = service->storageId();
-
         if (pluginName.isEmpty() || pluginMimeTypes.isEmpty()) {
             continue;
         }

@@ -30,7 +30,6 @@ class ProgressListDelegate
         : public KWidgetItemDelegate
 {
     Q_OBJECT
-    Q_ENUMS(ProgressItemRole)
 
 public:
     explicit ProgressListDelegate(QObject *parent = 0, QListView *listView = 0);

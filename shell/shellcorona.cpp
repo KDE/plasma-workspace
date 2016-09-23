@@ -811,9 +811,9 @@ void ShellCorona::unload()
     if (m_shell.isEmpty()) {
         return;
     }
-    qDeleteAll(m_desktopViewforId.values());
+    qDeleteAll(m_desktopViewforId);
     m_desktopViewforId.clear();
-    qDeleteAll(m_panelViews.values());
+    qDeleteAll(m_panelViews);
     m_panelViews.clear();
     m_desktopContainments.clear();
     m_waitingPanels.clear();
@@ -1267,7 +1267,7 @@ void ShellCorona::executeSetupPlasmoidScript(Plasma::Containment *containment, P
 void ShellCorona::toggleWidgetExplorer()
 {
     const QPoint cursorPos = QCursor::pos();
-    foreach (DesktopView *view, m_desktopViewforId.values()) {
+    foreach (DesktopView *view, m_desktopViewforId) {
         if (view->screen()->geometry().contains(cursorPos)) {
             //The view QML has to provide something to display the widget explorer
             view->rootObject()->metaObject()->invokeMethod(view->rootObject(), "toggleWidgetExplorer", Q_ARG(QVariant, QVariant::fromValue(sender())));
@@ -1279,7 +1279,7 @@ void ShellCorona::toggleWidgetExplorer()
 void ShellCorona::toggleActivityManager()
 {
     const QPoint cursorPos = QCursor::pos();
-    foreach (DesktopView *view, m_desktopViewforId.values()) {
+    foreach (DesktopView *view, m_desktopViewforId) {
         if (view->screen()->geometry().contains(cursorPos)) {
             //The view QML has to provide something to display the activity explorer
             view->rootObject()->metaObject()->invokeMethod(view->rootObject(), "toggleActivityManager", Qt::QueuedConnection);
@@ -1506,7 +1506,7 @@ Plasma::Containment *ShellCorona::setContainmentTypeForScreen(int screen, const 
     }
 
     DesktopView *view = 0;
-    foreach (DesktopView *v, m_desktopViewforId.values()) {
+    foreach (DesktopView *v, m_desktopViewforId) {
         if (v->containment() == oldContainment) {
             view = v;
             break;
@@ -1646,7 +1646,7 @@ void ShellCorona::populateAddPanelsMenu()
     {
         return md.value(QStringLiteral("NoDisplay")) != QStringLiteral("true") && md.value(QStringLiteral("X-Plasma-ContainmentCategories")).contains(QStringLiteral("panel"));
     };
-    QList<KPluginMetaData> templates = KPackage::PackageLoader::self()->findPackages(QStringLiteral("Plasma/LayoutTemplate"), QString(), filter);
+    const QList<KPluginMetaData> templates = KPackage::PackageLoader::self()->findPackages(QStringLiteral("Plasma/LayoutTemplate"), QString(), filter);
     for (auto tpl : templates) {
         sorted.insert(tpl.name(), qMakePair(emptyInfo, tpl));
     }

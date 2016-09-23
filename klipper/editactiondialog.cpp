@@ -148,14 +148,14 @@ bool ActionDetailModel::setData(const QModelIndex& index, const QVariant& value,
         ClipCommand cmd = m_commands.at(index.row());
         switch (static_cast<column_t>(index.column())) {
             case COMMAND_COL:
-                cmd.command = value.value<QString>();
+                cmd.command = value.toString();
                 setIconForCommand(cmd);
                 break;
             case OUTPUT_COL:
                 cmd.output = value.value<ClipCommand::Output>();
                 break;
             case DESCRIPTION_COL:
-                cmd.description = value.value<QString>();
+                cmd.description = value.toString();
                 break;
         }
         m_commands.replace(index.row(), cmd);

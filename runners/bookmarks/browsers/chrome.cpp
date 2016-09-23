@@ -78,7 +78,7 @@ QList<BookmarkMatch> Chrome::match(const QString &term, bool addEveryThing)
 QList<BookmarkMatch> Chrome::match(const QString &term, bool addEveryThing, ProfileBookmarks *profileBookmarks)
 {
     QList<BookmarkMatch> results;
-    foreach(QVariantMap bookmark, profileBookmarks->bookmarks()) {
+    foreach(const QVariantMap &bookmark, profileBookmarks->bookmarks()) {
         QString url = bookmark.value(QStringLiteral("url")).toString();
 
         BookmarkMatch bookmarkMatch(profileBookmarks->profile().favicon(), term, bookmark.value(QStringLiteral("name")).toString(), url);
@@ -101,12 +101,12 @@ void Chrome::prepare()
         if (jdoc.isNull()) {
             continue;
         }
-        QVariantMap resultMap = jdoc.object().toVariantMap();
+        const QVariantMap resultMap = jdoc.object().toVariantMap();
         if (!resultMap.contains(QStringLiteral("roots"))) {
             return;
         }
-        QVariantMap entries = resultMap.value(QStringLiteral("roots")).toMap();
-        foreach(QVariant folder, entries.values()) {
+        const QVariantMap entries = resultMap.value(QStringLiteral("roots")).toMap();
+        foreach(const QVariant &folder, entries) {
             parseFolder(folder.toMap(), profileBookmarks);
         }
         profile.favicon()->prepare();
@@ -123,7 +123,7 @@ void Chrome::teardown()
 void Chrome::parseFolder(const QVariantMap &entry, ProfileBookmarks *profile)
 {
     QVariantList children = entry.value(QStringLiteral("children")).toList();
-    foreach(QVariant child, children) {
+    foreach(const QVariant &child, children) {
         QVariantMap entry = child.toMap();
         if(entry.value(QStringLiteral("type")).toString() == QLatin1String("folder"))
             parseFolder(entry, profile);
