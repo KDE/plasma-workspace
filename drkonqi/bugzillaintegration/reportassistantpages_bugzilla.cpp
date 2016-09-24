@@ -28,6 +28,7 @@
 #include <QFileDialog>
 #include <QTemporaryFile>
 #include <QTextBrowser>
+#include <QDesktopServices>
 
 #include <QtDBus/QDBusInterface>
 #include <QtDBus/QDBusReply>
@@ -759,7 +760,7 @@ void BugzillaSendPage::sendError(const QString & errorString, const QString & ex
 void BugzillaSendPage::finishClicked()
 {
     if (ui.m_launchPageOnFinish->isChecked() && !reportUrl.isEmpty()) {
-        KToolInvocation::invokeBrowser(reportUrl);
+        QDesktopServices::openUrl(QUrl(reportUrl));
     }
     if (ui.m_restartAppOnFinish->isChecked()) {
         DrKonqi::crashedApplication()->restart();

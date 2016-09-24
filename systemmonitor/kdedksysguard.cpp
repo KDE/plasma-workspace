@@ -38,6 +38,7 @@ K_PLUGIN_FACTORY_WITH_JSON(KSysGuardFactory,
                            registerPlugin<KDEDKSysGuard>();)
 
 KDEDKSysGuard::KDEDKSysGuard(QObject* parent, const QVariantList&)
+    : KDEDModule(parent)
 {
     QTimer::singleShot(0, this, &KDEDKSysGuard::init);
 }

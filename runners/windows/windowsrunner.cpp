@@ -75,7 +75,7 @@ void WindowsRunner::gatherInfo()
     }
 
     foreach (const WId w, KWindowSystem::windows()) {
-        KWindowInfo info = KWindowSystem::windowInfo(w, NET::WMWindowType | NET::WMDesktop |
+        KWindowInfo info(w, NET::WMWindowType | NET::WMDesktop |
                                                         NET::WMState | NET::XAWMState |
                                                         NET::WMName,
                                                     NET::WM2WindowClass | NET::WM2WindowRole | NET::WM2AllowedActions);

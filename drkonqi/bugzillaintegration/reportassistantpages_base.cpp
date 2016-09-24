@@ -23,6 +23,7 @@
 #include <QLabel>
 #include <QCheckBox>
 #include <QToolTip>
+#include <QDesktopServices>
 
 #include <KToolInvocation>
 #include <KMessageBox>
@@ -237,10 +238,11 @@ void ConclusionPage::finishClicked()
             subject= subject.arg(crashedApp->datetime().toString(QStringLiteral("yyyy-MM-dd")));
             KToolInvocation::invokeMailer(reportAddress, QLatin1String(""), QLatin1String("") , subject, report);
         } else {
+            QUrl url(reportAddress);
             if (QUrl(reportAddress).isRelative()) { //Scheme is missing
-                reportAddress = QString::fromLatin1("http://%1").arg(reportAddress);
+                url = QUrl(QString::fromLatin1("http://%1").arg(reportAddress));
             }
-            KToolInvocation::invokeBrowser(reportAddress);
+            QDesktopServices::openUrl(url);
         }
 
         //Show a copy of the bug reported

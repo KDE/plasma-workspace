@@ -25,7 +25,7 @@
 
 class ClipAction;
 class History;
-class ClipCommand;
+struct ClipCommand;
 class HistoryItem;
 
 class ClipCommandProcess : public KProcess

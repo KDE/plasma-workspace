@@ -26,6 +26,7 @@
 #include <QDir>
 #include <QUrl>
 #include <QDebug>
+#include <QDesktopServices>
 
 #include <KLocalizedString>
 #include <KMimeTypeTrader>
@@ -129,7 +130,7 @@ void BookmarksRunner::run(const Plasma::RunnerContext &context, const Plasma::Qu
         url.setScheme(QStringLiteral("http"));
     }
 
-    KToolInvocation::invokeBrowser(url.url());
+    QDesktopServices::openUrl(url);
 }
 
 QMimeData * BookmarksRunner::mimeDataForMatch(const Plasma::QueryMatch &match)
