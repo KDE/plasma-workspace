@@ -123,7 +123,8 @@ void Image::addUrls(const QStringList &urls)
         // set the first drop as the current paper, just add the rest to the roll
         addUrl(QUrl(url), first);
         first = false;
-    }}
+    }
+}
 
 Image::RenderingMode Image::renderingMode() const
 {
