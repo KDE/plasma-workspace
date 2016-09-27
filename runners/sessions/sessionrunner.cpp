@@ -150,7 +150,6 @@ void SessionRunner::match(Plasma::RunnerContext &context)
         }
     }
 
-    qDebug() << "session switching to" << (listAll ? QStringLiteral("all sessions") : term);
     bool switchUser = listAll ||
                       term.compare(i18n("switch user"), Qt::CaseInsensitive) == 0 ||
                       term.compare(i18n("new session"), Qt::CaseInsensitive) == 0;
