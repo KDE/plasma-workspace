@@ -253,6 +253,7 @@ extern "C" Q_DECL_EXPORT int kdemain(int argc, char *argv[])
 
   KLocalizedString::setApplicationDomain("kcminit");
   QGuiApplication app(argc, argv); //gui is needed for several modules
+  app.setDesktopSettingsAware(false);
   KAboutData about(QStringLiteral("kcminit"), i18n("KCMInit"), QString(),
                    i18n("KCMInit - runs startup initialization for Control Modules."), KAboutLicense::GPL);
   KAboutData::setApplicationData(about);
