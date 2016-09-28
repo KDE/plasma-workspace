@@ -8,7 +8,7 @@ import org.kde.plasma.components 2.0 as PlasmaComponents
 
 SessionManagementScreen {
 
-    property bool showUsernamePrompt: false
+    property bool showUsernamePrompt: !showUserList
 
     signal loginRequest(string username, string password)
 

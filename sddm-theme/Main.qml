@@ -81,8 +81,10 @@ PlasmaCore.ColorScope {
         }
 
         initialItem: Login {
+            id: userListComponent
             userListModel: userModel
             userListCurrentIndex: userModel.lastIndex >= 0 ? userModel.lastIndex : 0
+            showUserList: (userListModel.count && userListModel.disableAvatarsThreshold) ? userListModel.count <= userListModel.disableAvatarsThreshold : true
 
             notificationMessage: root.notificationMessage
 
@@ -108,8 +110,9 @@ PlasmaCore.ColorScope {
                 ActionButton {
                     iconSource: "system-search"
                     text: i18nd("plasma_lookandfeel_org.kde.lookandfeel","Different User")
-                    onClicked: mainStack.push(userPrompt)
+                    onClicked: mainStack.push(userPromptComponent)
                     enabled: true
+                    visible: !userListComponent.showUsernamePrompt
                 }
             ]
 
@@ -128,7 +131,7 @@ PlasmaCore.ColorScope {
     }
 
     Component {
-        id: userPrompt
+        id: userPromptComponent
         Login {
             showUsernamePrompt: true
             notificationMessage: root.notificationMessage
