@@ -178,6 +178,7 @@ void LauncherTasksModel::setLauncherList(const QStringList &launchers)
 
             foreach(const QUrl &addedUrl, urls) {
                 dupe = launcherUrlsMatch(url, addedUrl, IgnoreQueryItems);
+                if (dupe) break;
             }
 
             if (!dupe) {
