@@ -57,6 +57,7 @@ Item {
      */
     property alias userListCurrentIndex: userListView.currentIndex
     property var userListCurrentModelData: userListView.currentItem === null ? [] : userListView.currentItem.m
+    property bool showUserList: true
 
     property alias userList: userListView
 
@@ -65,6 +66,7 @@ Item {
 
     UserList {
         id: userListView
+        visible: showUserList
         anchors {
             bottom: parent.verticalCenter
             left: parent.left
