@@ -659,7 +659,11 @@ void ShellCorona::load()
     //it needs to be after of loadLayout() as it would always create new
     //containments on each startup otherwise
     for (QScreen* screen : qGuiApp->screens()) {
-        addOutput(screen);
+        //the containments may have been created already by the startup script
+        //check their existence in oder to not have duplicated desktopviews
+        if (!m_desktopViewforId.contains(m_screenPool->id(screen->name()))) {
+            addOutput(screen);
+        }
     }
     connect(qGuiApp, &QGuiApplication::screenAdded, this, &ShellCorona::addOutput);
     connect(qGuiApp, &QGuiApplication::primaryScreenChanged, this, &ShellCorona::primaryOutputChanged);
