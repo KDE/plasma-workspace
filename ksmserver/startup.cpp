@@ -110,7 +110,7 @@ class NotificationThread : public QThread
 
         QString soundFilename = notifyConfig.readEntry(QStringLiteral("Sound"));
         if (soundFilename.isEmpty()) {
-            qWarning() << "Audio notification requested, but no sound file provided in notifyrc file, aborting audio notification";
+            qCWarning(KSMSERVER) << "Audio notification requested, but no sound file provided in notifyrc file, aborting audio notification";
             return;
         }
 
@@ -119,7 +119,7 @@ class NotificationThread : public QThread
             soundURL = QUrl::fromLocalFile(QStandardPaths::locate(QStandardPaths::GenericDataLocation, QStringLiteral("sounds/") + soundFilename));
 
             if (soundURL.isEmpty()) {
-                qWarning() << "Audio notification requested, but sound file from notifyrc file was not found, aborting audio notification";
+                qCWarning(KSMSERVER) << "Audio notification requested, but sound file from notifyrc file was not found, aborting audio notification";
                 return;
             }
         }
@@ -222,7 +222,7 @@ void KSMServer::wmProcessChange()
     }
     if( wmProcess->state() == QProcess::NotRunning )
     { // wm failed to launch for some reason, go with kwin instead
-        qWarning() << "Window manager" << wm << "failed to launch";
+        qCWarning(KSMSERVER) << "Window manager" << wm << "failed to launch";
         if( wm == QStringLiteral( KWIN_BIN ) )
             return; // uhoh, kwin itself failed
         qCDebug(KSMSERVER) << "Launching KWin";
@@ -265,7 +265,7 @@ void KSMServer::autoStart0Done()
                                          QStringLiteral( "org.kde.KCMInit" ),
                                          QDBusConnection::sessionBus(), this );
     if( !kcminitSignals->isValid()) {
-        qWarning() << "kcminit not running? If we are running with mobile profile or in another platform other than X11 this is normal.";
+        qCWarning(KSMSERVER) << "kcminit not running? If we are running with mobile profile or in another platform other than X11 this is normal.";
         delete kcminitSignals;
         kcminitSignals = 0;
         QTimer::singleShot(0, this, &KSMServer::kcmPhase1Done);
@@ -611,7 +611,7 @@ void KSMServer::resumeStartupInternal()
             autoStart2();
           break;
         default:
-            qWarning() << "Unknown resume startup state" ;
+            qCWarning(KSMSERVER) << "Unknown resume startup state" ;
           break;
     }
 }

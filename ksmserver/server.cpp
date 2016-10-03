@@ -457,7 +457,7 @@ Status SetAuthentication (int count, IceListenObj *listenObjs,
     QString iceAuth = QStandardPaths::findExecutable(QStringLiteral("iceauth"));
     if (iceAuth.isEmpty())
     {
-        qWarning("KSMServer: could not find iceauth");
+        qCWarning(KSMSERVER, "KSMServer: could not find iceauth");
         return 0;
     }
 
@@ -487,7 +487,7 @@ void FreeAuthenticationData(int count, IceAuthDataEntry *authDataEntries)
     QString iceAuth = QStandardPaths::findExecutable(QStringLiteral("iceauth"));
     if (iceAuth.isEmpty())
     {
-        qWarning("KSMServer: could not find iceauth");
+        qCWarning(KSMSERVER, "KSMServer: could not find iceauth");
         return;
     }
 
@@ -504,7 +504,7 @@ void FreeAuthenticationData(int count, IceAuthDataEntry *authDataEntries)
 
 static int Xio_ErrorHandler( Display * )
 {
-    qWarning("ksmserver: Fatal IO error: client killed");
+    qCWarning(KSMSERVER, "ksmserver: Fatal IO error: client killed");
 
     // Don't do anything that might require the X connection
     if (the_server)
@@ -650,14 +650,14 @@ KSMServer::KSMServer( const QString& windowManager, InitFlags flags )
                          (SmPointer) this,
                          HostBasedAuthProc, 256, errormsg ) ) {
 
-        qWarning("KSMServer: could not register XSM protocol");
+        qCWarning(KSMSERVER, "KSMServer: could not register XSM protocol");
     }
 
     if (!IceListenForConnections (&numTransports, &listenObjs,
                                   256, errormsg))
     {
-        qWarning("KSMServer: Error listening for connections: %s", errormsg);
-        qWarning("KSMServer: Aborting.");
+        qCWarning(KSMSERVER, "KSMServer: Error listening for connections: %s", errormsg);
+        qCWarning(KSMSERVER, "KSMServer: Aborting.");
         exit(1);
     }
 
@@ -681,8 +681,8 @@ KSMServer::KSMServer( const QString& windowManager, InitFlags flags )
         f = ::fopen(fName.data(), "w+");
         if (!f)
         {
-            qWarning("KSMServer: cannot open %s: %s", fName.data(), strerror(errno));
-            qWarning("KSMServer: Aborting.");
+            qCWarning(KSMSERVER, "KSMServer: cannot open %s: %s", fName.data(), strerror(errno));
+            qCWarning(KSMSERVER, "KSMServer: Aborting.");
             exit(1);
         }
         char* session_manager = IceComposeNetworkIdList(numTransports, listenObjs);

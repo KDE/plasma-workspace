@@ -129,7 +129,7 @@ bool readFromPipe(int pipe)
 void KSMServer::shutdown( KWorkSpace::ShutdownConfirm confirm,
     KWorkSpace::ShutdownType sdtype, KWorkSpace::ShutdownMode sdmode )
 {
-	qDebug() << "Shutdown called with confirm " << confirm
+	qCDebug(KSMSERVER) << "Shutdown called with confirm " << confirm
 			 << " type " << sdtype << " and mode " << sdmode;
     pendingShutdown.stop();
     if( dialogActive )
@@ -176,7 +176,7 @@ void KSMServer::shutdown( KWorkSpace::ShutdownConfirm confirm,
     if (sdmode == KWorkSpace::ShutdownModeDefault)
         sdmode = KWorkSpace::ShutdownModeInteractive;
 
-	qDebug() << "After modifications confirm is " << confirm
+	qCDebug(KSMSERVER) << "After modifications confirm is " << confirm
 			 << " type is " << sdtype << " and mode " << sdmode;
     QString bopt;
     if ( !logoutConfirmed ) {
@@ -270,7 +270,7 @@ void KSMServer::performLogout()
                                     QStringLiteral( "restorePreviousLogout" ) )
                     == QStringLiteral( "restorePreviousLogout" ) );
 
-    qDebug() << "saveSession is " << saveSession;
+    qCDebug(KSMSERVER) << "saveSession is " << saveSession;
 
     if ( saveSession )
         sessionGroup = QStringLiteral( "Session: " ) + QString::fromLocal8Bit( SESSION_PREVIOUS_LOGOUT );
@@ -317,7 +317,7 @@ void KSMServer::performLogout()
             SmsSaveYourself( c->connection(), saveType,
                         true, SmInteractStyleAny, false );
     }
-    qDebug() << "clients should be empty, " << clients.isEmpty();
+    qCDebug(KSMSERVER) << "clients should be empty, " << clients.isEmpty();
     if ( clients.isEmpty() )
         completeShutdownOrCheckpoint();
     dialogActive = false;
@@ -532,7 +532,7 @@ void KSMServer::protectionTimeout()
 
 void KSMServer::completeShutdownOrCheckpoint()
 {
-	qDebug() << "completeShutdownOrCheckpoint called";
+	qCDebug(KSMSERVER) << "completeShutdownOrCheckpoint called";
     if ( state != Shutdown && state != Checkpoint && state != ClosingSubSession )
         return;
 
@@ -564,7 +564,7 @@ void KSMServer::completeShutdownOrCheckpoint()
     else
         discardSession();
 
-	qDebug() << "state is " << state;
+	qCDebug(KSMSERVER) << "state is " << state;
     if ( state == Shutdown ) {
         KNotification *n = KNotification::event(QStringLiteral("exitkde"), QString(), QPixmap(), 0l,  KNotification::DefaultEvent); // Plasma says good bye
         connect(n, &KNotification::closed, this, &KSMServer::startKilling);
@@ -605,7 +605,7 @@ void KSMServer::startKilling()
     foreach( KSMClient* c, clients ) {
         if( isWM( c )) // kill the WM as the last one in order to reduce flicker
             continue;
-        qCDebug(KSMSERVER) << "completeShutdown: client " << c->program() << "(" << c->clientId() << ")";
+        qCDebug(KSMSERVER) << "startKilling: client " << c->program() << "(" << c->clientId() << ")";
         SmsDie( c->connection() );
     }
 
@@ -675,7 +675,7 @@ void KSMServer::killingCompleted()
 void KSMServer::timeoutQuit()
 {
     foreach( KSMClient* c, clients ) {
-        qWarning() << "SmsDie timeout, client " << c->program() << "(" << c->clientId() << ")" ;
+        qCWarning(KSMSERVER) << "SmsDie timeout, client " << c->program() << "(" << c->clientId() << ")" ;
     }
     killWM();
 }
@@ -683,7 +683,7 @@ void KSMServer::timeoutQuit()
 void KSMServer::timeoutWMQuit()
 {
     if( state == KillingWM ) {
-        qWarning() << "SmsDie WM timeout" ;
+        qCWarning(KSMSERVER) << "SmsDie WM timeout" ;
     }
     killingCompleted();
 }

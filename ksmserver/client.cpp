@@ -89,7 +89,7 @@ char * safeSmsGenerateClientID( SmsConn /*c*/ )
     char* ret = NULL;
     if (!ret) {
        if (my_addr->isEmpty()) {
-//           qWarning("Can't get own host name. Your system is severely misconfigured\n");
+//           qCWarning(KSMSERVER, "Can't get own host name. Your system is severely misconfigured\n");
 
            /* Faking our IP address, the 0 below is "unknown" address format
               (1 would be IP, 2 would be DEC-NET format) */

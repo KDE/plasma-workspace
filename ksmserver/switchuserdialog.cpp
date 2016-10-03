@@ -21,6 +21,7 @@
 #include "switchuserdialog.h"
 
 #include <kdisplaymanager.h>
+#include <ksmserver_debug.h>
 
 #include <QApplication>
 #include <QDebug>
@@ -91,7 +92,7 @@ KSMSwitchUserDialog::KSMSwitchUserDialog(KDisplayManager *dm, QWindow *parent)
     if (QFile::exists(fileName)) {
         setSource(QUrl::fromLocalFile(fileName));
     } else {
-        qWarning() << "Couldn't find a theme for the Switch User dialog" << fileName;
+        qCWarning(KSMSERVER) << "Couldn't find a theme for the Switch User dialog" << fileName;
         return;
     }
 
@@ -99,7 +100,7 @@ KSMSwitchUserDialog::KSMSwitchUserDialog(KDisplayManager *dm, QWindow *parent)
                 screen()->virtualGeometry().center().y() - height() / 2);
 
     if (!errors().isEmpty()) {
-        qWarning() << errors();
+        qCWarning(KSMSERVER) << errors();
     }
 
     connect(rootObject(), SIGNAL(dismissed()), this, SIGNAL(dismissed()));
