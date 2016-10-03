@@ -40,6 +40,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #include <KSharedConfig>
 #include <kmanagerselection.h>
 #include <kwindowsystem.h>
+#include <ksmserver_debug.h>
 #include "server.h"
 #include <QX11Info>
 
@@ -89,7 +90,7 @@ void checkComposite()
     dpy = XOpenDisplay(0); // open default display
     if (!dpy)
     {
-        qCritical() << "Cannot connect to the X server";
+        qCCritical(KSMSERVER) << "Cannot connect to the X server";
         return;
     }
 
@@ -288,7 +289,7 @@ extern "C" Q_DECL_EXPORT int kdemain( int argc, char* argv[] )
 //            registerService( QStringLiteral( "org.kde.ksmserver" ),
 //                             QDBusConnectionInterface::DontQueueService ) )
 //    {
-//        qWarning("Could not register with D-BUS. Aborting.");
+//        qCWarning(KSMSERVER, "Could not register with D-BUS. Aborting.");
 //        return 1;
 //    }
 
@@ -301,7 +302,7 @@ extern "C" Q_DECL_EXPORT int kdemain( int argc, char* argv[] )
      * does nothing on this platform, as here the default is reversed)
      */
     if (!only_local) {
-        qWarning("--nolocal is not supported on your platform. Sorry.");
+        qCWarning(KSMSERVER, "--nolocal is not supported on your platform. Sorry.");
     }
     only_local = false;
 #endif
