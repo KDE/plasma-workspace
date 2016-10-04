@@ -49,6 +49,18 @@ if test -z "$dl"; then
   esac
 fi
 
+# in case we have been started with full pathname spec without being in PATH
+bindir=`echo "$0" | sed -n 's,^\(/.*\)/[^/][^/]*$,\1,p'`
+if [ -n "$bindir" ]; then
+  qbindir=`qtpaths --binaries-dir`
+  qdbus=$qbindir/qdbus
+  case $PATH in
+    $bindir|$bindir:*|*:$bindir|*:$bindir:*) ;;
+    *) PATH=$bindir:$PATH; export PATH;;
+  esac
+else
+  qdbus=qdbus
+fi
 
 # Activate the kde font directories.
 #
@@ -128,7 +140,7 @@ if test $? -ne 0; then
   exit 1
 fi
 
-qdbus org.kde.KSplash /KSplash org.kde.KSplash.setStage kinit
+$qdbus org.kde.KSplash /KSplash org.kde.KSplash.setStage kinit
 
 # finally, give the session control to the session manager
 # see kdebase/ksmserver for the description of the rest of the startup sequence
