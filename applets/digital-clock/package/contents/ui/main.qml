@@ -41,6 +41,14 @@ Item {
         return new Date(msUTC + (dataSource.data[plasmoid.configuration.lastSelectedTimezone]["Offset"] * 1000));
     }
 
+    function initTimezones() {
+        var tz  = Array()
+        if (plasmoid.configuration.selectedTimeZones.indexOf("Local") === -1) {
+            tz.push("Local");
+        }
+        root.allTimezones = tz.concat(plasmoid.configuration.selectedTimeZones);
+    }
+
     Plasmoid.preferredRepresentation: Plasmoid.compactRepresentation
     Plasmoid.compactRepresentation: DigitalClock { }
     Plasmoid.fullRepresentation: CalendarView { }
@@ -61,14 +69,7 @@ Item {
     property var allTimezones
     Connections {
         target: plasmoid.configuration
-        onSelectedTimeZonesChanged: {
-            var tz  = Array()
-            if (plasmoid.configuration.selectedTimeZones.indexOf("Local") === -1) {
-                tz.push("Local");
-            }
-            root.allTimezones = tz.concat(plasmoid.configuration.selectedTimeZones);
-
-        }
+        onSelectedTimeZonesChanged: root.initTimezones();
     }
 
     PlasmaCore.DataSource {
@@ -98,6 +99,7 @@ Item {
     }
 
     Component.onCompleted: {
+        root.initTimezones();
         if (KCMShell.authorize("clock.desktop").length > 0) {
             plasmoid.setAction("clockkcm", i18n("Adjust Date and Time..."), "preferences-system-time");
         }
