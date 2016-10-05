@@ -33,6 +33,8 @@ Item {
     Layout.fillWidth: plasmoid.configuration.expanding
     Layout.fillHeight: plasmoid.configuration.expanding
 
+    Layout.minimumWidth: 1
+    Layout.minimumHeight: 1
     Layout.preferredWidth: horizontal ? plasmoid.configuration.length : 0
     Layout.preferredHeight: horizontal ? 0 : plasmoid.configuration.length
 
