@@ -20,11 +20,8 @@
 #ifndef TRAY_H
 #define TRAY_H
 
-#include <QPointer>
-
 #include <KStatusNotifierItem>
 
-class KNotification;
 class Klipper;
 
 class KlipperTray : public KStatusNotifierItem
@@ -36,11 +33,9 @@ public:
 
 public Q_SLOTS:
     void slotSetToolTipFromHistory();
-    void slotPassivePopup(const QString& caption, const QString& text);
 
 private:
     Klipper* m_klipper;
-    QPointer<KNotification> m_notification;
 };
 
 #endif

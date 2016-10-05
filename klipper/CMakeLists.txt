@@ -82,6 +82,7 @@ target_link_libraries(plasma_engine_clipboard
     KF5::IconThemes
     KF5::KIOWidgets    # PreviewJob
     KF5::Plasma
+    KF5::Notifications
     KF5::Service
     KF5::TextWidgets   # KTextEdit
     KF5::WidgetsAddons # KMessageBox
