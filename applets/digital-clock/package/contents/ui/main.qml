@@ -56,10 +56,25 @@ Item {
         source: "Tooltip.qml"
     }
 
+    //We need Local to be *always* present, even if not disaplayed as
+    //it's used for formatting in ToolTip.dateTimeChanged()
+    property var allTimezones
+    Connections {
+        target: plasmoid.configuration
+        onSelectedTimeZonesChanged: {
+            var tz  = Array()
+            if (plasmoid.configuration.selectedTimeZones.indexOf("Local") === -1) {
+                tz.push("Local");
+            }
+            root.allTimezones = tz.concat(plasmoid.configuration.selectedTimeZones);
+
+        }
+    }
+
     PlasmaCore.DataSource {
         id: dataSource
         engine: "time"
-        connectedSources: plasmoid.configuration.selectedTimeZones
+        connectedSources: allTimezones
         interval: plasmoid.configuration.showSeconds ? 1000 : 60000
         intervalAlignment: plasmoid.configuration.showSeconds ? PlasmaCore.Types.NoAlignment : PlasmaCore.Types.AlignToMinute
     }
