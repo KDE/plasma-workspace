@@ -212,6 +212,10 @@ KCMInit::KCMInit( const QCommandLineParser& args )
 
      sendReady();
      QTimer::singleShot( 300 * 1000, qApp, &QCoreApplication::quit); // just in case
+
+     QDBusConnection::sessionBus().registerObject(QStringLiteral("/kcminit"), this, QDBusConnection::ExportScriptableContents);
+     QDBusConnection::sessionBus().registerService(QStringLiteral("org.kde.kcminit"));
+
      qApp->exec(); // wait for runPhase1() and runPhase2()
   }
   else
@@ -267,8 +271,6 @@ extern "C" Q_DECL_EXPORT int kdemain(int argc, char *argv[])
   about.processCommandLine(&parser);
 
   KCMInit kcminit( parser );
-  QDBusConnection::sessionBus().registerObject(QStringLiteral("/kcminit"), &kcminit, QDBusConnection::ExportScriptableContents);
-  QDBusConnection::sessionBus().registerService(QStringLiteral("org.kde.kcminit"));
   return 0;
 }
 
