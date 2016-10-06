@@ -26,6 +26,7 @@
 #include <QTime>
 #include <QTimer>
 #include <QClipboard>
+#include <QPointer>
 
 #include "urlgrabber.h"
 
@@ -39,6 +40,7 @@ class QAction;
 class QMenu;
 class QMimeData;
 class HistoryItem;
+class KNotification;
 
 enum class KlipperMode {
     Standalone,
@@ -207,6 +209,7 @@ private:
     KActionCollection* m_collection;
     KlipperMode m_mode;
     QTimer *m_saveFileTimer = nullptr;
+    QPointer<KNotification> m_notification;
 };
 
 #endif

@@ -36,6 +36,7 @@
 
 #include <KGlobalAccel>
 #include <KMessageBox>
+#include <KNotification>
 #include <KActionCollection>
 #include <KToggleAction>
 #include <KTextEdit>
@@ -227,6 +228,17 @@ Klipper::Klipper(QObject* parent, const KSharedConfigPtr& config, KlipperMode mo
     if (m_mode == KlipperMode::Standalone) {
         connect(qApp, &QGuiApplication::commitDataRequest, this, &Klipper::saveSession);
     }
+
+    connect(this, &Klipper::passivePopup, this,
+        [this] (const QString &caption, const QString &text) {
+            if (m_notification) {
+                m_notification->setTitle(caption);
+                m_notification->setText(text);
+            } else {
+                m_notification = KNotification::event(KNotification::Notification, caption, text, QStringLiteral("klipper"));
+            }
+        }
+    );
 }
 
 Klipper::~Klipper()

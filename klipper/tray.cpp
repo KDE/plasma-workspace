@@ -23,7 +23,6 @@
 #include "tray.h"
 
 #include <KLocalizedString>
-#include <KNotification>
 
 #include "klipper.h"
 #include "history.h"
@@ -46,7 +45,6 @@ KlipperTray::KlipperTray()
     setAssociatedWidget( m_klipper->popup() );
     connect( m_klipper->history(), &History::changed, this, &KlipperTray::slotSetToolTipFromHistory);
     slotSetToolTipFromHistory();
-    connect(m_klipper, &Klipper::passivePopup, this, &KlipperTray::slotPassivePopup);
 }
 
 void KlipperTray::slotSetToolTipFromHistory()
@@ -61,17 +59,6 @@ void KlipperTray::slotSetToolTipFromHistory()
         } else {
             setToolTipSubTitle(top->text().left(TOOLTIP_LENGTH_LIMIT - 3) + "..." );
         }
-    }
-}
-
-void KlipperTray::slotPassivePopup(const QString& caption, const QString& text)
-{
-    if (m_notification) {
-        m_notification->setTitle(caption);
-        m_notification->setText(text);
-    } else {
-        m_notification = KNotification::event(KNotification::Notification, caption, text,
-                                              QIcon::fromTheme(QStringLiteral("klipper")).pixmap(QSize(16, 16)));
     }
 }
 
