@@ -567,7 +567,7 @@ void PanelView::restoreAutoHide()
                 (containment()->status() < Plasma::Types::RequiresAttentionStatus
                  || containment()->status() == Plasma::Types::HiddenStatus)
                 )
-        && !geometry().contains(QCursor::pos())
+        && !geometry().contains(QCursor::pos(screenToFollow()))
     );
 }
 
@@ -734,7 +734,7 @@ bool PanelView::event(QEvent *e)
 
             //first, don't mess with position if the cursor is actually outside the view:
             //somebody is doing a click and drag that must not break when the cursor i outside
-            if (geometry().contains(QCursor::pos())) {
+            if (geometry().contains(QCursor::pos(screenToFollow()))) {
                 if (!containmentContainsPosition(me->windowPos())) {
                     auto me2 = new QMouseEvent(me->type(),
                                     positionAdjustedForContainment(me->windowPos()),
