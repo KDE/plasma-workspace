@@ -682,6 +682,10 @@ void PanelView::setScreenToFollow(QScreen *screen)
         return;
     }
 
+    if (!screen) {
+        return;
+    }
+
     /*connect(screen, &QObject::destroyed, this, [this]() {
         if (PanelView::screen()) {
             m_screenToFollow = PanelView::screen();
