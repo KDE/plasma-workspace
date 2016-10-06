@@ -1562,8 +1562,6 @@ Plasma::Containment *ShellCorona::setContainmentTypeForScreen(int screen, const 
     newCg.writeEntry("activityId", oldContainment->activity());
     newContainment->restore(newCg);
     newContainment->updateConstraints(Plasma::Types::StartupCompletedConstraint);
-    newContainment->save(newCg);
-    requestConfigSync();
     newContainment->flushPendingConstraintsEvents();
     emit containmentAdded(newContainment);
 
@@ -1588,6 +1586,9 @@ Plasma::Containment *ShellCorona::setContainmentTypeForScreen(int screen, const 
     view->rootObject()->setFocus(true, Qt::MouseFocusReason);
     QTimer::singleShot(2500, oldContainment, &Plasma::Applet::destroy);
 
+    //Save now as we now have a screen, so lastScreen will not be -1
+    newContainment->save(newCg);
+    requestConfigSync();
     emit availableScreenRectChanged();
 
     return newContainment;
