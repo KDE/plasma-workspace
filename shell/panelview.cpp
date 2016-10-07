@@ -461,19 +461,33 @@ QRect PanelView::geometryByDistance(int distance) const
 
 void PanelView::resizePanel()
 {
+    QSize targetSize;
+    QSize targetMinSize;
+    QSize targetMaxSize;
+
     if (formFactor() == Plasma::Types::Vertical) {
         const int minSize = qMax(MINSIZE, m_minLength);
         const int maxSize = qMin(m_maxLength, m_screenToFollow->size().height() - m_offset);
-        setMinimumSize(QSize(thickness(), minSize));
-        setMaximumSize(QSize(thickness(), maxSize));
-        resize(thickness(), qBound(minSize, m_contentLength, maxSize));
+        targetMinSize = QSize(thickness(), minSize);
+        targetMaxSize = QSize(thickness(), maxSize);
+        targetSize = QSize(thickness(), qBound(minSize, m_contentLength, maxSize));
     } else {
         const int minSize = qMax(MINSIZE, m_minLength);
         const int maxSize = qMin(m_maxLength, m_screenToFollow->size().width() - m_offset);
-        setMinimumSize(QSize(minSize, thickness()));
-        setMaximumSize(QSize(maxSize, thickness()));
-        resize(qBound(minSize, m_contentLength, maxSize), thickness());
+        targetMinSize = QSize(minSize, thickness());
+        targetMaxSize = QSize(maxSize, thickness());
+        targetSize = QSize(qBound(minSize, m_contentLength, maxSize), thickness());
     }
+    if (minimumSize() != targetMinSize) {
+        setMinimumSize(targetMinSize);
+    }
+    if (maximumSize() != targetMaxSize) {
+        setMaximumSize(targetMaxSize);
+    }
+    if (size() != targetSize) {
+        resize(targetSize);
+    }
+
     //position will be updated implicitly from resizeEvent
 }
 
