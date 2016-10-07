@@ -3,32 +3,9 @@
 #  DEFAULT KDE STARTUP SCRIPT ( @PROJECT_VERSION@ )
 #
 
-if test "x$1" = x--failsafe; then
-    KDE_FAILSAFE=1 # General failsafe flag
-    KWIN_COMPOSE=N # Disable KWin's compositing
-    QT_XCB_FORCE_SOFTWARE_OPENGL=1
-    export KWIN_COMPOSE KDE_FAILSAFE QT_XCB_FORCE_SOFTWARE_OPENGL
-fi
-
 # When the X server dies we get a HUP signal from xinit. We must ignore it
 # because we still need to do some cleanup.
 trap 'echo GOT SIGHUP' HUP
-
-# we have to unset this for Darwin since it will screw up KDE's dynamic-loading
-unset DYLD_FORCE_FLAT_NAMESPACE
-
-# in case we have been started with full pathname spec without being in PATH
-bindir=`echo "$0" | sed -n 's,^\(/.*\)/[^/][^/]*$,\1,p'`
-if [ -n "$bindir" ]; then
-  qbindir=`qtpaths --binaries-dir`
-  qdbus=$qbindir/qdbus
-  case $PATH in
-    $bindir|$bindir:*|*:$bindir|*:$bindir:*) ;;
-    *) PATH=$bindir:$PATH; export PATH;;
-  esac
-else
-  qdbus=qdbus
-fi
 
 # Check if a KDE session already is running and whether it's possible to connect to X
 kcheckrunning
@@ -102,38 +79,6 @@ XftSubPixel=none
 EOF
 }
 
-# Make sure the Oxygen font is installed
-# This is necessary for setups where CMAKE_INSTALL_PREFIX
-# is not in /usr. fontconfig looks in /usr, ~/.fonts and
-# $XDG_DATA_HOME for fonts. In this case, we symlink the
-# Oxygen font under ${XDG_DATA_HOME} and make it known to
-# fontconfig
-
-usr_share="/usr/share"
-install_share="@KDE_INSTALL_FULL_DATADIR@"
-
-if [ ! $install_share = $usr_share ]; then
-
-    if [ ${XDG_DATA_HOME} ]; then
-        fontsDir="${XDG_DATA_HOME}/fonts"
-    else
-        fontsDir="${HOME}/.fonts"
-    fi
-
-    test -d $fontsDir || {
-        mkdir -p $fontsDir
-    }
-
-    oxygenDir=$fontsDir/oxygen
-    prefixDir="@KDE_INSTALL_FULL_DATADIR@/fonts/oxygen"
-
-    # if the oxygen dir doesn't exist, create a symlink to be sure that the
-    # Oxygen font is available to the user
-    test -d $oxygenDir || test -d $prefixDir && {
-        test -h $oxygenDir || ln -s $prefixDir $oxygenDir && fc-cache $oxygenDir
-    }
-fi
-
 kstartupconfig5
 returncode=$?
 if test $returncode -ne 0; then
@@ -205,8 +150,7 @@ fi
 # For anything else (that doesn't set env vars, or that needs a window manager),
 # better use the Autostart folder.
 
-# TODO: Use GenericConfigLocation once we depend on Qt 5.4
-scriptpath=`qtpaths --paths ConfigLocation | tr ':' '\n' | sed 's,$,/plasma-workspace,g'`
+scriptpath=`qtpaths --locate-dirs GenericConfigLocation plasma-workspace | tr ':' '\n'`
 
 # Add /env/ to the directory to locate the scripts to be sourced
 for prefix in `echo $scriptpath`; do
@@ -286,17 +230,6 @@ if test -z "$XDG_DATA_DIRS"; then
     XDG_DATA_DIRS="@CMAKE_INSTALL_PREFIX@/@SHARE_INSTALL_PREFIX@:/usr/share:/usr/local/share"
 fi
 export XDG_DATA_DIRS
-
-# Make sure that D-Bus is running
-if $qdbus >/dev/null 2>/dev/null; then
-    : # ok
-else
-    echo 'startkde: Could not start D-Bus. Can you call qdbus?'  1>&2
-    test -n "$ksplash_pid" && kill "$ksplash_pid" 2>/dev/null
-    xmessage -geometry 500x100 "Could not start D-Bus. Can you call qdbus?"
-    exit 1
-fi
-
 
 # Mark that full KDE session is running (e.g. Konqueror preloading works only
 # with full KDE running). The KDE_FULL_SESSION property can be detected by
@@ -384,19 +317,21 @@ if test $? -eq 255; then
   xmessage -geometry 500x100 "Could not start ksmserver. Check your installation."
 fi
 
+#Anything after here is logout/shutdown
+
 wait_drkonqi=`kreadconfig5 --file startkderc --group WaitForDrKonqi --key Enabled --default true`
 
 if test x"$wait_drkonqi"x = x"true"x ; then
     # wait for remaining drkonqi instances with timeout (in seconds)
     wait_drkonqi_timeout=`kreadconfig5 --file startkderc --group WaitForDrKonqi --key Timeout --default 900`
     wait_drkonqi_counter=0
-    while $qdbus | grep "^[^w]*org.kde.drkonqi" > /dev/null ; do
+    while qdbus | grep "^[^w]*org.kde.drkonqi" > /dev/null ; do
         sleep 5
         wait_drkonqi_counter=$((wait_drkonqi_counter+5))
         if test "$wait_drkonqi_counter" -ge "$wait_drkonqi_timeout" ; then
             # ask remaining drkonqis to die in a graceful way
-            $qdbus | grep 'org.kde.drkonqi-' | while read address ; do
-                $qdbus "$address" "/MainApplication" "quit"
+            qdbus | grep 'org.kde.drkonqi-' | while read address ; do
+                qdbus "$address" "/MainApplication" "quit"
             done
             break
         fi
