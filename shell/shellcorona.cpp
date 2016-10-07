@@ -1463,6 +1463,11 @@ void ShellCorona::activityAdded(const QString &id)
 void ShellCorona::activityRemoved(const QString &id)
 {
     m_activityContainmentPlugins.remove(id);
+    if (m_desktopContainments.contains(id)) {
+        for (auto cont : m_desktopContainments.value(id)) {
+            cont->destroy();
+        }
+    }
 }
 
 void ShellCorona::insertActivity(const QString &id, const QString &plugin)
