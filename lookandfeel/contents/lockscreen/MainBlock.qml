@@ -39,13 +39,17 @@ SessionManagementScreen {
     signal newSession()
 
     function startLogin() {
+        if (userListCurrentIndex == 1) {
+            newSession()
+            return;
+        }
+
         var password = passwordBox.text
 
         //this is partly because it looks nicer
         //but more importantly it works round a Qt bug that can trigger if the app is closed with a TextField focussed
         //See https://bugreports.qt.io/browse/QTBUG-55460
         loginButton.forceActiveFocus();
-
         loginRequest(password);
     }
 
@@ -89,6 +93,6 @@ SessionManagementScreen {
         Layout.fillWidth: true
 
         text: userListCurrentIndex == 0 ? i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Unlock") : i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Start New Session")
-        onClicked: userListCurrentIndex == 0 ? startLogin() : newSession()
+        onClicked: startLogin()
     }
 }
