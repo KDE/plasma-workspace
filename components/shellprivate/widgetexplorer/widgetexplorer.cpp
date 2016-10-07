@@ -33,6 +33,7 @@
 #include <Plasma/Applet>
 #include <Plasma/Corona>
 #include <Plasma/Containment>
+#include <Plasma/PluginLoader>
 #include <qstandardpaths.h>
 
 #include <KActivities/Consumer>
@@ -131,10 +132,9 @@ void WidgetExplorerPrivate::initFilters()
     QSet<QString> existingCategories = itemModel.categories();
     //foreach (const QString &category, Plasma::Applet::listCategories(application)) {
     QStringList cats;
-    const QList<KPluginMetaData> list = KPackage::PackageLoader::self()->listPackages(QStringLiteral("Plasma/Applet"), QStringLiteral("plasma/plasmoids"));
+    const QList<KPluginInfo> list = PluginLoader::self()->listAppletInfo(QString());
 
-    for (auto& data : list) {
-        const KPluginInfo info(data);
+    for (auto& info : list) {
         if (!info.isValid()) {
             continue;
         }
