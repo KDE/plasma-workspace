@@ -38,12 +38,12 @@ AlternativesHelper::~AlternativesHelper()
 
 QStringList AlternativesHelper::appletProvides() const
 {
-    return m_applet->pluginInfo().property(QStringLiteral("X-Plasma-Provides")).toStringList();
+    return KPluginMetaData::readStringList(m_applet->pluginMetaData().rawData(), QStringLiteral("X-Plasma-Provides"));
 }
 
 QString AlternativesHelper::currentPlugin() const
 {
-    return m_applet->pluginInfo().pluginName();
+    return m_applet->pluginMetaData().pluginId();
 }
 
 QQuickItem *AlternativesHelper::applet() const
@@ -53,7 +53,7 @@ QQuickItem *AlternativesHelper::applet() const
 
 void AlternativesHelper::loadAlternative(const QString &plugin)
 {
-    if (plugin == m_applet->pluginInfo().pluginName() || m_applet->isContainment()) {
+    if (plugin == m_applet->pluginMetaData().pluginId() || m_applet->isContainment()) {
         return;
     }
 

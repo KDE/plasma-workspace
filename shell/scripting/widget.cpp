@@ -65,7 +65,7 @@ uint Widget::id() const
 QString Widget::type() const
 {
     if (d->applet) {
-        return d->applet.data()->pluginInfo().pluginName();
+        return d->applet.data()->pluginMetaData().pluginId();
     }
 
     return QString();
