@@ -75,7 +75,7 @@ QtLayouts.GridLayout {
                 "index": i,
                 "taskId": item.Id,
                 "name": item.Title,
-                "iconName": plasmoid.nativeInterface.resolveIcon(item.IconName, item.IconThemePath),
+                "iconName": item.IconName,
                 "icon": item.Icon
             });
         }

@@ -28,7 +28,7 @@ AbstractItem {
     text: Title
     mainText: ToolTipTitle != "" ? ToolTipTitle : Title
     subText: ToolTipSubTitle
-    icon: ToolTipIcon != "" ? ToolTipIcon : plasmoid.nativeInterface.resolveIcon(IconName != "" ? IconName : Icon, IconThemePath)
+    icon: ToolTipIcon != "" ? ToolTipIcon : Icon ? Icon : IconName
     textFormat: Text.AutoText
     category: Category
 
@@ -48,7 +48,7 @@ AbstractItem {
 
     PlasmaCore.IconItem {
         id: iconItem
-        source: plasmoid.nativeInterface.resolveIcon(IconName != "" ? IconName : Icon, IconThemePath)
+        source: Icon ? Icon : IconName
         width: Math.min(parent.width, parent.height)
         height: width
         active: taskIcon.containsMouse

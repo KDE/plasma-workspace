@@ -240,14 +240,19 @@ void StatusNotifierItemSource::refreshCallback(QDBusPendingCallWatcher *call)
             if (!m_customIconLoader) {
                 m_customIconLoader = new KIconLoader(QString(), QStringList(), this);
             }
+            // FIXME: If last part of path is not "icons", this won't work!
+            QString appName;
+            auto tokens = path.splitRef('/', QString::SkipEmptyParts);
+            if (tokens.length() >= 3 && tokens.takeLast() == QLatin1String("icons"))
+                appName = tokens.takeLast().toString();
 
             //icons may be either in the root directory of the passed path or in a appdir format
             //i.e hicolor/32x32/iconname.png
 
-            m_customIconLoader->reconfigure(QString(), QStringList(path));
+            m_customIconLoader->reconfigure(appName, QStringList(path));
 
             //add app dir requires an app name, though this is completely unused in this context
-            m_customIconLoader->addAppDir(QStringLiteral("unused"), path);
+            m_customIconLoader->addAppDir(appName.size() ? appName : QStringLiteral("unused"), path);
         }
         setData(QStringLiteral("IconThemePath"), path);
 
