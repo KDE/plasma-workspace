@@ -1798,11 +1798,12 @@ int ShellCorona::screenForContainment(const Plasma::Containment *containment) co
     //a containment with lastScreen() == 0 but another activity,
     //won't be associated to a screen
 //     qDebug() << "ShellCorona screenForContainment: " << containment << " Last screen is " << containment->lastScreen();
-    for (int i = 0, count = qGuiApp->screens().count(); i<count; ++i) {
-        if (containment->lastScreen() == i &&
+
+    for (auto screen : qGuiApp->screens()) {
+        if (containment->lastScreen() == m_screenPool->id(screen->name()) &&
             (containment->activity() == m_activityController->currentActivity() ||
             containment->containmentType() == Plasma::Types::PanelContainment || containment->containmentType() == Plasma::Types::CustomPanelContainment)) {
-            return i;
+            return containment->lastScreen();
         }
     }
 
