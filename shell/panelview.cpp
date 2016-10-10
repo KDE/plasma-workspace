@@ -62,7 +62,8 @@ PanelView::PanelView(ShellCorona *corona, QScreen *targetScreen, QWindow *parent
        m_corona(corona),
        m_visibilityMode(NormalPanel),
        m_background(0),
-       m_shellSurface(nullptr)
+       m_shellSurface(nullptr),
+       m_initCompleted(false)
 {
     if (targetScreen) {
         setPosition(targetScreen->geometry().center());
@@ -356,6 +357,10 @@ void PanelView::positionPanel()
         return;
     }
 
+    if (!m_initCompleted) {
+        return;
+    }
+
     KWindowEffects::SlideFromLocation slideLocation = KWindowEffects::NoEdge;
 
     switch (containment()->location()) {
@@ -461,6 +466,10 @@ QRect PanelView::geometryByDistance(int distance) const
 
 void PanelView::resizePanel()
 {
+    if (!m_initCompleted) {
+        return;
+    }
+
     QSize targetSize;
     QSize targetMinSize;
     QSize targetMaxSize;
@@ -520,6 +529,7 @@ void PanelView::restore()
     m_minLength = qBound<int>(MINSIZE, config().readEntry<int>("minLength", side), maxSize);
 
     setVisibilityMode((VisibilityMode)config().readEntry<int>("panelVisibility", (int)NormalPanel));
+    m_initCompleted = true;
     resizePanel();
     positionPanel();
 
