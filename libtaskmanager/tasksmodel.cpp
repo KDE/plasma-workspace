@@ -442,11 +442,9 @@ void TasksModel::Private::initLauncherTasksModel()
     }
 
     launcherTasksModel = new LauncherTasksModel(q);
-    QObject::connect(launcherTasksModel, &LauncherTasksModel::serializedLauncherListChanged,
-        q, &TasksModel::serializedLauncherListChanged);
-    QObject::connect(launcherTasksModel, &LauncherTasksModel::shownLauncherListChanged,
-        q, &TasksModel::shownLauncherListChanged);
-    QObject::connect(launcherTasksModel, &LauncherTasksModel::shownLauncherListChanged,
+    QObject::connect(launcherTasksModel, &LauncherTasksModel::launcherListChanged,
+        q, &TasksModel::launcherListChanged);
+    QObject::connect(launcherTasksModel, &LauncherTasksModel::launcherListChanged,
         q, &TasksModel::updateLauncherCount);
 
     concatProxyModel->addSourceModel(launcherTasksModel);
@@ -1104,28 +1102,19 @@ void TasksModel::setGroupingLauncherUrlBlacklist(const QStringList &list)
     }
 }
 
-QStringList TasksModel::shownLauncherList() const
+QStringList TasksModel::launcherList() const
 {
     if (d->launcherTasksModel) {
-        return d->launcherTasksModel->shownLauncherList();
+        return d->launcherTasksModel->launcherList();
     }
 
     return QStringList();
 }
 
-QStringList TasksModel::serializedLauncherList() const
-{
-    if (d->launcherTasksModel) {
-        return d->launcherTasksModel->serializedLauncherList();
-    }
-
-    return QStringList();
-}
-
-void TasksModel::setSerializedLauncherList(const QStringList &launchers)
+void TasksModel::setLauncherList(const QStringList &launchers)
 {
     d->initLauncherTasksModel();
-    d->launcherTasksModel->setSerializedLauncherList(launchers);
+    d->launcherTasksModel->setLauncherList(launchers);
     d->launchersEverSet = true;
 }
 
@@ -1450,15 +1439,23 @@ void TasksModel::syncLaunchers()
 
     QMap<int, QString> sortedShownLaunchers;
 
-    foreach(const QString &launcherUrlStr, serializedLauncherList()) {
+    qDebug() << "GREPME This is the list" << launcherList();
+    foreach(const QString &launcherUrlStr, launcherList()) {
         int row = -1;
         QStringList activities;
         QUrl launcherUrl;
 
         std::tie(launcherUrl, activities) = deserializeLauncher(launcherUrlStr);
 
-        for (int i = 0; i < rowCount(); ++i) {
-            const QUrl &rowLauncherUrl = index(i, 0).data(AbstractTasksModel::LauncherUrlWithoutIcon).toUrl();
+        qDebug() << "GREPME: ASFDFDF: " << launcherUrl << activities;
+
+        for (int i = 0; i < d->launcherTasksModel->rowCount(); ++i) {
+            const QUrl &rowLauncherUrl =
+                d->launcherTasksModel->index(i, 0).data(AbstractTasksModel::LauncherUrlWithoutIcon).toUrl();
+
+            qDebug()
+                << "GREPME Do these match?" << launcherUrl << rowLauncherUrl
+                << launcherUrlsMatch(launcherUrl, rowLauncherUrl, IgnoreQueryItems);
 
             if (launcherUrlsMatch(launcherUrl, rowLauncherUrl, IgnoreQueryItems)) {
                 row = i;
@@ -1467,6 +1464,7 @@ void TasksModel::syncLaunchers()
         }
 
         if (row != -1) {
+            qDebug() << "GREPME inserting" << row << launcherUrlStr;
             sortedShownLaunchers.insert(row, launcherUrlStr);
         }
     }
@@ -1493,7 +1491,7 @@ void TasksModel::syncLaunchers()
         }
     }
 
-    setSerializedLauncherList(sortedShownLaunchers.values());
+    setLauncherList(sortedShownLaunchers.values());
     d->launcherSortingDirty = false;
 }
 

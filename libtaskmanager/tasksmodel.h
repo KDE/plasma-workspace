@@ -60,8 +60,7 @@ class TASKMANAGER_EXPORT TasksModel : public QSortFilterProxyModel, public Abstr
     Q_PROPERTY(int count READ rowCount NOTIFY countChanged)
     Q_PROPERTY(int launcherCount READ launcherCount NOTIFY launcherCountChanged)
 
-    Q_PROPERTY(QStringList serializedLauncherList READ serializedLauncherList WRITE setSerializedLauncherList NOTIFY serializedLauncherListChanged)
-    Q_PROPERTY(QStringList shownLauncherList READ shownLauncherList NOTIFY shownLauncherListChanged)
+    Q_PROPERTY(QStringList launcherList READ launcherList WRITE setLauncherList NOTIFY launcherListChanged)
 
     Q_PROPERTY(bool anyTaskDemandsAttention READ anyTaskDemandsAttention NOTIFY anyTaskDemandsAttentionChanged)
 
@@ -124,10 +123,10 @@ public:
      * The list of launcher URLs serialized to strings along with
      * the activities they belong to.
      *
-     * @see setSerializedLauncherList
+     * @see setLauncherList
      * @returns the list of launcher URLs serialized to strings.
      **/
-    QStringList serializedLauncherList() const;
+    QStringList launcherList() const;
 
     /**
      * Replace the list of launcher URL strings.
@@ -135,17 +134,10 @@ public:
      * Invalid or empty URLs will be rejected. Duplicate URLs will be
      * collapsed.
      *
-     * @see serializedLauncherList
+     * @see launcherList
      * @param launchers A list of launcher URL strings.
      **/
-    void setSerializedLauncherList(const QStringList &launchers);
-
-    /**
-     * The list of currently shown launcher URLs serialized to strings.
-     *
-     * @returns the list of launcher URLs serialized to strings.
-     **/
-    QStringList shownLauncherList() const;
+    void setLauncherList(const QStringList &launchers);
 
     /**
      * Returns whether any task in the model currently demands attention
@@ -782,8 +774,7 @@ public:
 Q_SIGNALS:
     void countChanged() const;
     void launcherCountChanged() const;
-    void serializedLauncherListChanged() const;
-    void shownLauncherListChanged() const;
+    void launcherListChanged() const;
     void anyTaskDemandsAttentionChanged() const;
     void virtualDesktopChanged() const;
     void screenGeometryChanged() const;

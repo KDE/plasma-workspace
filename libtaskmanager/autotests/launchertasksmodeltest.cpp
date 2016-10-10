@@ -54,14 +54,14 @@ void LauncherTasksModelTest::shouldRoundTripLauncherUrlList()
 {
     LauncherTasksModel m;
 
-    QSignalSpy launcherListChangedSpy(&m, &LauncherTasksModel::serializedLauncherListChanged);
+    QSignalSpy launcherListChangedSpy(&m, &LauncherTasksModel::launcherListChanged);
     QVERIFY(launcherListChangedSpy.isValid());
 
-    m.setSerializedLauncherList(m_urlStrings);
+    m.setLauncherList(m_urlStrings);
 
     QCOMPARE(launcherListChangedSpy.count(), 1);
 
-    QCOMPARE(m.serializedLauncherList(), m_urlStrings);
+    QCOMPARE(m.launcherList(), m_urlStrings);
 
     QCOMPARE(m.data(m.index(0, 0), AbstractTasksModel::LauncherUrl).toString(), m_urlStrings.at(0));
     QCOMPARE(m.data(m.index(1, 0), AbstractTasksModel::LauncherUrl).toString(), m_urlStrings.at(1));
@@ -74,10 +74,10 @@ void LauncherTasksModelTest::shouldIgnoreInvalidUrls()
     QStringList urlStrings;
     urlStrings << QLatin1String("GARBAGE URL");
 
-    QSignalSpy launcherListChangedSpy(&m, &LauncherTasksModel::serializedLauncherListChanged);
+    QSignalSpy launcherListChangedSpy(&m, &LauncherTasksModel::launcherListChanged);
     QVERIFY(launcherListChangedSpy.isValid());
 
-    m.setSerializedLauncherList(urlStrings);
+    m.setLauncherList(urlStrings);
 
     QCOMPARE(launcherListChangedSpy.count(), 0);
 
@@ -86,7 +86,7 @@ void LauncherTasksModelTest::shouldIgnoreInvalidUrls()
     QVERIFY(!added);
     QCOMPARE(launcherListChangedSpy.count(), 0);
 
-    QCOMPARE(m.serializedLauncherList(), QStringList());
+    QCOMPARE(m.launcherList(), QStringList());
 }
 
 void LauncherTasksModelTest::shouldRejectDuplicates()
@@ -97,10 +97,10 @@ void LauncherTasksModelTest::shouldRejectDuplicates()
     urlStrings << QLatin1String("file:///usr/share/applications/org.kde.dolphin.desktop");
     urlStrings << QLatin1String("file:///usr/share/applications/org.kde.dolphin.desktop");
 
-    QSignalSpy launcherListChangedSpy(&m, &LauncherTasksModel::serializedLauncherListChanged);
+    QSignalSpy launcherListChangedSpy(&m, &LauncherTasksModel::launcherListChanged);
     QVERIFY(launcherListChangedSpy.isValid());
 
-    m.setSerializedLauncherList(urlStrings);
+    m.setLauncherList(urlStrings);
 
     QCOMPARE(launcherListChangedSpy.count(), 1);
 
@@ -109,14 +109,14 @@ void LauncherTasksModelTest::shouldRejectDuplicates()
     QVERIFY(!added);
     QCOMPARE(launcherListChangedSpy.count(), 1);
 
-    QCOMPARE(m.serializedLauncherList(), QStringList() << urlStrings.at(0));
+    QCOMPARE(m.launcherList(), QStringList() << urlStrings.at(0));
 }
 
 void LauncherTasksModelTest::shouldAddRemoveLauncher()
 {
     LauncherTasksModel m;
 
-    QSignalSpy launcherListChangedSpy(&m, &LauncherTasksModel::serializedLauncherListChanged);
+    QSignalSpy launcherListChangedSpy(&m, &LauncherTasksModel::launcherListChanged);
     QVERIFY(launcherListChangedSpy.isValid());
 
     bool added = m.requestAddLauncher(QUrl(m_urlStrings.at(0)));
@@ -124,7 +124,7 @@ void LauncherTasksModelTest::shouldAddRemoveLauncher()
     QVERIFY(added);
     QCOMPARE(launcherListChangedSpy.count(), 1);
 
-    QCOMPARE(m.serializedLauncherList().at(0), m_urlStrings.at(0));
+    QCOMPARE(m.launcherList().at(0), m_urlStrings.at(0));
 
     bool removed = m.requestRemoveLauncher(QUrl(m_urlStrings.at(0)));
 
@@ -135,17 +135,17 @@ void LauncherTasksModelTest::shouldAddRemoveLauncher()
 
     QVERIFY(!removed);
 
-    QCOMPARE(m.serializedLauncherList(), QStringList());
+    QCOMPARE(m.launcherList(), QStringList());
 }
 
 void LauncherTasksModelTest::shouldReturnValidLauncherPositions()
 {
     LauncherTasksModel m;
 
-    QSignalSpy launcherListChangedSpy(&m, &LauncherTasksModel::serializedLauncherListChanged);
+    QSignalSpy launcherListChangedSpy(&m, &LauncherTasksModel::launcherListChanged);
     QVERIFY(launcherListChangedSpy.isValid());
 
-    m.setSerializedLauncherList(m_urlStrings);
+    m.setLauncherList(m_urlStrings);
 
     QCOMPARE(launcherListChangedSpy.count(), 1);
 
