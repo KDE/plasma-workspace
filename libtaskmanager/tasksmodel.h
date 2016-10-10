@@ -548,6 +548,32 @@ public:
     Q_INVOKABLE bool requestRemoveLauncher(const QUrl &url);
 
     /**
+     * Request adding a launcher with the given URL to current activity.
+     *
+     * If this URL is already in the list, the request will fail. URLs are
+     * compared for equality after removing the query string used to hold
+     * metadata.
+     *
+     * @see launcherUrlsMatch
+     * @param url A launcher URL.
+     * @returns @c true if a launcher was added.
+     */
+    Q_INVOKABLE bool requestAddLauncherToActivity(const QUrl &url);
+
+    /**
+     * Request removing the launcher with the given URL from the current activity.
+     *
+     * If this URL is already in the list, the request will fail. URLs are
+     * compared for equality after removing the query string used to hold
+     * metadata.
+     *
+     * @see launcherUrlsMatch
+     * @param url A launcher URL.
+     * @returns @c true if the launcher was removed.
+     */
+    Q_INVOKABLE bool requestRemoveLauncherFromActivity(const QUrl &url);
+
+    /**
      * Return the position of the launcher with the given URL.
      *
      * URLs are compared for equality after removing the query string used

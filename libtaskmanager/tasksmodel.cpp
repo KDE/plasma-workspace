@@ -1154,6 +1154,42 @@ bool TasksModel::requestRemoveLauncher(const QUrl &url)
     return false;
 }
 
+bool TasksModel::requestAddLauncherToActivity(const QUrl &url)
+{
+    d->initLauncherTasksModel();
+
+    bool added = d->launcherTasksModel->requestAddLauncherToActivity(url);
+
+    // If using manual and launch-in-place sorting with separate launchers,
+    // we need to trigger a sort map update to move any window tasks to
+    // their launcher position now.
+    if (added && d->sortMode == SortManual && (d->launchInPlace || !d->separateLaunchers)) {
+        d->updateManualSortMap();
+        d->forceResort();
+    }
+
+    return added;
+}
+
+bool TasksModel::requestRemoveLauncherFromActivity(const QUrl &url)
+{
+    if (d->launcherTasksModel) {
+        bool removed = d->launcherTasksModel->requestRemoveLauncherFromActivity(url);
+
+        // If using manual and launch-in-place sorting with separate launchers,
+        // we need to trigger a sort map update to move any window tasks no
+        // longer backed by a launcher out of the launcher area.
+        if (removed && d->sortMode == SortManual && (d->launchInPlace || !d->separateLaunchers)) {
+            d->updateManualSortMap();
+            d->forceResort();
+        }
+
+        return removed;
+    }
+
+    return false;
+}
+
 int TasksModel::launcherPosition(const QUrl &url) const
 {
     if (d->launcherTasksModel) {

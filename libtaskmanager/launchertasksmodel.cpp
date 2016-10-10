@@ -58,6 +58,9 @@ public:
     void init();
     AppData appData(const QUrl &url);
 
+    bool requestAddLauncherToActivities(const QUrl &_url, const QStringList &activities);
+    bool requestRemoveLauncherFromActivities(const QUrl &_url, const QStringList &activities);
+
 private:
     LauncherTasksModel *q;
 };
@@ -110,6 +113,137 @@ AppData LauncherTasksModel::Private::appData(const QUrl &url)
     }
 
     return appDataCache.value(url);
+}
+
+bool LauncherTasksModel::Private::requestAddLauncherToActivities(const QUrl &_url, const QStringList &activities)
+{
+    // isValid() for the passed-in URL might return true if it was
+    // constructed in TolerantMode, but we want to reject invalid URLs.
+    QUrl url(_url.toString(), QUrl::StrictMode);
+
+    if (url.isEmpty() || !url.isValid()) {
+        return false;
+    }
+
+    // Merge duplicates
+    int row = -1;
+    foreach(const QUrl &launcher, launchersOrder) {
+        ++row;
+
+        if (launcherUrlsMatch(url, launcher, IgnoreQueryItems)) {
+            QStringList newActivities;
+
+            if (!activitiesForLauncher.contains(url)) {
+                // If we don't have the activities assigned to this url
+                // for some reason
+                newActivities = activities;
+
+            } else {
+                // If any of the lists are empty, we are on all activities,
+                // otherwise, lets merge the lists
+                if (activitiesForLauncher[url].isEmpty() || activities.isEmpty()) {
+                    newActivities.clear();
+
+                } else {
+                    newActivities.append(activities);
+                    newActivities.append(activitiesForLauncher[url]);
+
+                }
+            }
+
+            if (newActivities != activitiesForLauncher[url]) {
+                emit q->dataChanged(
+                        q->index(row, 0),
+                        q->index(row, 0));
+                return true;
+
+            }
+
+            return false;
+        }
+    }
+
+    // This is a new one
+    const auto count = launchersOrder.count();
+    q->beginInsertRows(QModelIndex(), count, count);
+    activitiesForLauncher[url] = activities;
+    launchersOrder.append(url);
+    q->endInsertRows();
+
+    emit q->launcherListChanged();
+
+    return true;
+}
+
+bool LauncherTasksModel::Private::requestRemoveLauncherFromActivities(const QUrl &url, const QStringList &activities)
+{
+    for (int row = 0; row < launchersOrder.count(); ++row) {
+        const QUrl &launcher = launchersOrder.at(row);
+
+        if (launcherUrlsMatch(url, launcher, IgnoreQueryItems)
+            || launcherUrlsMatch(url, appData(launcher).url, IgnoreQueryItems)) {
+
+            const QStringList currentActivities = activitiesForLauncher[url];
+            QStringList newActivities;
+            bool remove = false;
+            bool update = false;
+
+            if (currentActivities.isEmpty()) {
+                // We are currently on all activities.
+                // Should we go away, or just remove from the current one?
+                if (activities.isEmpty()) {
+                    remove = true;
+
+                } else {
+                    for (const auto& activity: currentActivities) {
+                        if (!activities.contains(activity)) {
+                            newActivities << activity;
+                        } else {
+                            update = true;
+                        }
+                    }
+                }
+
+            } else {
+                // We weren't on all activities, just remove those that
+                // we were on
+
+                for (const auto& activity: currentActivities) {
+                    if (!activities.contains(activity)) {
+                        newActivities << activity;
+                    }
+                }
+
+                if (newActivities.isEmpty()) {
+                    remove = true;
+                } else {
+                    update = true;
+                }
+            }
+
+            if (remove) {
+                q->beginRemoveRows(QModelIndex(), row, row);
+                launchersOrder.removeAt(row);
+                activitiesForLauncher.remove(url);
+                appDataCache.remove(launcher);
+                q->endRemoveRows();
+
+            } else if (update) {
+                activitiesForLauncher[url] = newActivities;
+
+                emit q->dataChanged(
+                        q->index(row, 0),
+                        q->index(row, 0));
+            }
+
+            if (remove || update) {
+                emit q->launcherListChanged();
+                return true;
+            }
+        }
+    }
+
+    return false;
 }
 
 LauncherTasksModel::LauncherTasksModel(QObject *parent)
@@ -301,58 +435,24 @@ void LauncherTasksModel::setLauncherList(const QStringList &serializedLaunchers)
     }
 }
 
-bool LauncherTasksModel::requestAddLauncher(const QUrl &_url)
+bool LauncherTasksModel::requestAddLauncher(const QUrl &url)
 {
-    // isValid() for the passed-in URL might return true if it was
-    // constructed in TolerantMode, but we want to reject invalid URLs.
-    QUrl url(_url.toString(), QUrl::StrictMode);
-
-    if (url.isEmpty() || !url.isValid()) {
-        return false;
-    }
-
-    // Reject duplicates.
-    foreach(const QUrl &launcher, d->launchersOrder) {
-        if (launcherUrlsMatch(url, launcher, IgnoreQueryItems)) {
-            return false;
-        }
-    }
-
-    // Adding the launcher to all activities
-    const int count = d->launchersOrder.count();
-    beginInsertRows(QModelIndex(), count, count);
-    d->activitiesForLauncher[url]; // = QStringList();
-    d->launchersOrder.append(url);
-    endInsertRows();
-
-    emit launcherListChanged();
-
-    return true;
+    return d->requestAddLauncherToActivities(url, QStringList());
 }
 
 bool LauncherTasksModel::requestRemoveLauncher(const QUrl &url)
 {
-    for (int i = 0; i < d->launchersOrder.count(); ++i) {
-        const QUrl &launcher = d->launchersOrder.at(i);
+    return d->requestRemoveLauncherFromActivities(url, QStringList());
+}
 
-        if (launcherUrlsMatch(url, launcher, IgnoreQueryItems)
-            || launcherUrlsMatch(url, d->appData(launcher).url, IgnoreQueryItems)) {
+bool LauncherTasksModel::requestAddLauncherToActivity(const QUrl &url)
+{
+    return d->requestAddLauncherToActivities(url, { d->activities.currentActivity() });
+}
 
-            // Removing the launcher from all activities
-
-            beginRemoveRows(QModelIndex(), i, i);
-            d->launchersOrder.removeAt(i);
-            d->activitiesForLauncher.remove(url);
-            d->appDataCache.remove(launcher);
-            endRemoveRows();
-
-            emit launcherListChanged();
-
-            return true;
-        }
-    }
-
-    return false;
+bool LauncherTasksModel::requestRemoveLauncherFromActivity(const QUrl &url)
+{
+    return d->requestRemoveLauncherFromActivities(url, { d->activities.currentActivity() });
 }
 
 int LauncherTasksModel::launcherPosition(const QUrl &url) const
