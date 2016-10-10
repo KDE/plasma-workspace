@@ -40,6 +40,12 @@ PlasmaCore.ColorScope {
     LayoutMirroring.enabled: Qt.application.layoutDirection === Qt.RightToLeft
     LayoutMirroring.childrenInherit: true
 
+    PlasmaCore.DataSource {
+        id: keystateSource
+        engine: "keystate"
+        connectedSources: "Caps Lock"
+    }
+
     Repeater {
         model: screenModel
 
@@ -86,7 +92,17 @@ PlasmaCore.ColorScope {
             userListCurrentIndex: userModel.lastIndex >= 0 ? userModel.lastIndex : 0
             showUserList: (userListModel.count && userListModel.disableAvatarsThreshold) ? userListModel.count <= userListModel.disableAvatarsThreshold : true
 
-            notificationMessage: root.notificationMessage
+            notificationMessage: {
+                var text = ""
+                if (keystateSource.data["Caps Lock"]["Locked"]) {
+                    text += i18nd("plasma_lookandfeel_org.kde.lookandfeel","Caps Lock is on")
+                    if (root.notificationMessage) {
+                        text += " • "
+                    }
+                }
+                text += root.notificationMessage
+                return text
+            }
 
             actionItems: [
                 ActionButton {
