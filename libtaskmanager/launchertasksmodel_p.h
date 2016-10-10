@@ -22,6 +22,8 @@ License along with this library.  If not, see <http://www.gnu.org/licenses/>.
 #define LAUNCHERTASKSMODEL_P_H
 
 #include <QDebug>
+#include <QUrl>
+#include <QStringList>
 
 namespace TaskManager {
 

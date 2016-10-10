@@ -216,6 +216,8 @@ QVariant LauncherTasksModel::data(const QModelIndex &index, int role) const
         return true;
     } else if (role == IsOnAllVirtualDesktops) {
         return true;
+    } else if (role == Activities) {
+        return d->activitiesForLauncher[url];
     }
 
     return QVariant();
@@ -237,8 +239,18 @@ QStringList LauncherTasksModel::serializedLauncherList() const
     QStringList result;
 
     for (const auto &launcher: d->launchersOrder) {
-        const QString serializedLauncher =
-            "[" + d->activitiesForLauncher[launcher].join(",") + "]\n" + launcher.toString();
+        const auto &activities = d->activitiesForLauncher[launcher];
+
+        QString serializedLauncher;
+        if (activities.isEmpty()) {
+            serializedLauncher = launcher.toString();
+
+        } else {
+            serializedLauncher =
+                "[" + d->activitiesForLauncher[launcher].join(",") + "]\n" +
+                launcher.toString();
+        }
+
         result << serializedLauncher;
     }
 
