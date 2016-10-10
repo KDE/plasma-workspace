@@ -60,7 +60,7 @@ public:
         for (const auto &launcher: launchersOrder) {
             const auto activities = activitiesForLauncher[launcher];
             qDebug() << "GREPME: activities for launcher" << launcher << activities;
-            if (activities.contains(NULL_UUID) || activities.contains(activity)) {
+            if (activities.isEmpty() || activities.contains(activity)) {
                 result << launcher;
             }
         }
@@ -307,7 +307,7 @@ void LauncherTasksModel::setSerializedLauncherList(const QStringList &serialized
         // If this is shown on all activities, we do not need to remember
         // each activity separately
         if (d->activitiesForLauncher[url].contains(NULL_UUID)) {
-            d->activitiesForLauncher[url] = QStringList({ NULL_UUID });
+            d->activitiesForLauncher[url].clear();
         }
     }
 
@@ -340,7 +340,7 @@ bool LauncherTasksModel::requestAddLauncher(const QUrl &_url)
     // Adding the launcher to all activities
     const int count = d->launchersOrder.count();
     beginInsertRows(QModelIndex(), count, count);
-    d->activitiesForLauncher[url] = QStringList({ NULL_UUID });
+    d->activitiesForLauncher[url]; // = QStringList();
     d->launchersOrder.append(url);
     endInsertRows();
 
