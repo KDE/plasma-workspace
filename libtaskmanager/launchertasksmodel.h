@@ -52,7 +52,8 @@ class TASKMANAGER_EXPORT LauncherTasksModel : public AbstractTasksModel
 {
     Q_OBJECT
 
-    Q_PROPERTY(QStringList launcherList READ launcherList WRITE setLauncherList NOTIFY launcherListChanged)
+    Q_PROPERTY(QStringList serializedLauncherList READ serializedLauncherList WRITE setSerializedLauncherList NOTIFY serializedLauncherListChanged)
+    Q_PROPERTY(QStringList shownLauncherList READ shownLauncherList NOTIFY shownLauncherListChanged)
 
 public:
     explicit LauncherTasksModel(QObject *parent = 0);
@@ -62,12 +63,13 @@ public:
     int rowCount(const QModelIndex &parent = QModelIndex()) const override;
 
     /**
-     * The list of launcher URLs serialized to strings.
+     * The list of launcher URLs serialized to strings along with
+     * the activities they belong to.
      *
-     * @see setLauncherList
+     * @see setSerializedLauncherList
      * @returns the list of launcher URLs serialized to strings.
      **/
-    QStringList launcherList() const;
+    QStringList serializedLauncherList() const;
 
     /**
      * Replace the list of launcher URL strings.
@@ -75,10 +77,17 @@ public:
      * Invalid or empty URLs will be rejected. Duplicate URLs will be
      * collapsed.
      *
-     * @see launcherList
+     * @see serializedLauncherList
      * @param launchers A list of launcher URL strings.
      **/
-    void setLauncherList(const QStringList &launchers);
+    void setSerializedLauncherList(const QStringList &launchers);
+
+    /**
+     * The list of currently shown launcher URLs serialized to strings.
+     *
+     * @returns the list of launcher URLs serialized to strings.
+     **/
+    QStringList shownLauncherList() const;
 
     /**
      * Request adding a launcher with the given URL.
@@ -141,7 +150,8 @@ public:
     void requestOpenUrls(const QModelIndex &index, const QList<QUrl> &urls) override;
 
 Q_SIGNALS:
-    void launcherListChanged() const;
+    void serializedLauncherListChanged() const;
+    void shownLauncherListChanged() const;
 
 private:
     class Private;

@@ -30,6 +30,8 @@ License along with this library.  If not, see <http://www.gnu.org/licenses/>.
 #include "startuptasksmodel.h"
 #include "windowtasksmodel.h"
 
+#include "launchertasksmodel_p.h"
+
 #include <QGuiApplication>
 #include <QTimer>
 #include <QUrl>
@@ -440,9 +442,11 @@ void TasksModel::Private::initLauncherTasksModel()
     }
 
     launcherTasksModel = new LauncherTasksModel(q);
-    QObject::connect(launcherTasksModel, &LauncherTasksModel::launcherListChanged,
-        q, &TasksModel::launcherListChanged);
-    QObject::connect(launcherTasksModel, &LauncherTasksModel::launcherListChanged,
+    QObject::connect(launcherTasksModel, &LauncherTasksModel::serializedLauncherListChanged,
+        q, &TasksModel::serializedLauncherListChanged);
+    QObject::connect(launcherTasksModel, &LauncherTasksModel::shownLauncherListChanged,
+        q, &TasksModel::shownLauncherListChanged);
+    QObject::connect(launcherTasksModel, &LauncherTasksModel::shownLauncherListChanged,
         q, &TasksModel::updateLauncherCount);
 
     concatProxyModel->addSourceModel(launcherTasksModel);
@@ -1100,19 +1104,28 @@ void TasksModel::setGroupingLauncherUrlBlacklist(const QStringList &list)
     }
 }
 
-QStringList TasksModel::launcherList() const
+QStringList TasksModel::shownLauncherList() const
 {
     if (d->launcherTasksModel) {
-        return d->launcherTasksModel->launcherList();
+        return d->launcherTasksModel->shownLauncherList();
     }
 
     return QStringList();
 }
 
-void TasksModel::setLauncherList(const QStringList &launchers)
+QStringList TasksModel::serializedLauncherList() const
+{
+    if (d->launcherTasksModel) {
+        return d->launcherTasksModel->serializedLauncherList();
+    }
+
+    return QStringList();
+}
+
+void TasksModel::setSerializedLauncherList(const QStringList &launchers)
 {
     d->initLauncherTasksModel();
-    d->launcherTasksModel->setLauncherList(launchers);
+    d->launcherTasksModel->setSerializedLauncherList(launchers);
     d->launchersEverSet = true;
 }
 
@@ -1435,11 +1448,14 @@ void TasksModel::syncLaunchers()
         return;
     }
 
-    QMap<int, QUrl> sortedLaunchers;
+    QMap<int, QString> sortedShownLaunchers;
 
-    foreach(const QString &launcherUrlStr, launcherList()) {
+    foreach(const QString &launcherUrlStr, serializedLauncherList()) {
         int row = -1;
-        QUrl launcherUrl(launcherUrlStr);
+        QStringList activities;
+        QUrl launcherUrl;
+
+        std::tie(launcherUrl, activities) = deserializeLauncher(launcherUrlStr);
 
         for (int i = 0; i < rowCount(); ++i) {
             const QUrl &rowLauncherUrl = index(i, 0).data(AbstractTasksModel::LauncherUrlWithoutIcon).toUrl();
@@ -1451,7 +1467,7 @@ void TasksModel::syncLaunchers()
         }
 
         if (row != -1) {
-            sortedLaunchers.insert(row, launcherUrl);
+            sortedShownLaunchers.insert(row, launcherUrlStr);
         }
     }
 
@@ -1477,7 +1493,7 @@ void TasksModel::syncLaunchers()
         }
     }
 
-    setLauncherList(QUrl::toStringList(sortedLaunchers.values()));
+    setSerializedLauncherList(sortedShownLaunchers.values());
     d->launcherSortingDirty = false;
 }
 

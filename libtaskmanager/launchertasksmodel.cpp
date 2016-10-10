@@ -27,6 +27,8 @@ License along with this library.  If not, see <http://www.gnu.org/licenses/>.
 #include <KSycoca>
 #include <KWindowSystem>
 
+#include <KActivities/Consumer>
+
 #include <config-X11.h>
 
 #include <QIcon>
@@ -35,6 +37,8 @@ License along with this library.  If not, see <http://www.gnu.org/licenses/>.
 #include <QX11Info>
 #endif
 
+#include "launchertasksmodel_p.h"
+
 namespace TaskManager
 {
 
@@ -42,7 +46,62 @@ class LauncherTasksModel::Private
 {
 public:
     Private(LauncherTasksModel *q);
-    QList<QUrl> launchers;
+
+    KActivities::Consumer activities;
+
+    QList<QUrl> currentlyShownLaunchers;
+    QList<QUrl> launchersOrder;
+    QHash<QUrl, QStringList> activitiesForLauncher;
+
+    inline QList<QUrl> launchersForActivity(const QString &activity) const
+    {
+        QList<QUrl> result;
+        qDebug() << "GREPME: launchers" << launchersOrder;
+        for (const auto &launcher: launchersOrder) {
+            const auto activities = activitiesForLauncher[launcher];
+            qDebug() << "GREPME: activities for launcher" << launcher << activities;
+            if (activities.contains(NULL_UUID) || activities.contains(activity)) {
+                result << launcher;
+            }
+        }
+        return result;
+    }
+
+    inline void updateShownLaunchers()
+    {
+        const auto urls = launchersForActivity(activities.currentActivity());
+
+        qDebug() << "GREPME: Urls for this activity are: " << urls;
+
+        if (currentlyShownLaunchers != urls) {
+            // Common case optimization: If the list changed but its size
+            // did not (e.g. due to reordering by a user of this model),
+            // just clear the caches and announce new data instead of
+            // resetting.
+            if (currentlyShownLaunchers.count() == urls.count()) {
+                currentlyShownLaunchers.clear();
+                appDataCache.clear();
+
+                currentlyShownLaunchers = urls;
+
+                emit q->dataChanged(
+                        q->index(0, 0),
+                        q->index(currentlyShownLaunchers.count() - 1, 0));
+            } else {
+                q->beginResetModel();
+
+                currentlyShownLaunchers.clear();
+                appDataCache.clear();
+
+                currentlyShownLaunchers = urls;
+
+                q->endResetModel();
+
+                emit q->shownLauncherListChanged();
+            }
+        }
+    }
+
     QHash<QUrl, AppData> appDataCache;
     QTimer sycocaChangeTimer;
 
@@ -65,14 +124,14 @@ void LauncherTasksModel::Private::init()
 
     QObject::connect(&sycocaChangeTimer, &QTimer::timeout, q,
         [this]() {
-            if (!launchers.count()) {
+            if (!currentlyShownLaunchers.count()) {
                 return;
             }
 
             appDataCache.clear();
 
             // Emit changes of all roles satisfied from app data cache.
-            q->dataChanged(q->index(0, 0),  q->index(launchers.count() - 1, 0),
+            q->dataChanged(q->index(0, 0),  q->index(currentlyShownLaunchers.count() - 1, 0),
                 QVector<int>{Qt::DisplayRole, Qt::DecorationRole,
                 AbstractTasksModel::AppId, AbstractTasksModel::AppName,
                 AbstractTasksModel::GenericName, AbstractTasksModel::LauncherUrl});
@@ -87,6 +146,12 @@ void LauncherTasksModel::Private::init()
                 || changedResources.contains(QLatin1String("xdgdata-apps"))) {
                 sycocaChangeTimer.start();
             }
+        }
+    );
+
+    QObject::connect(&activities, &KActivities::Consumer::currentActivityChanged, q,
+        [this]() {
+            updateShownLaunchers();
         }
     );
 }
@@ -116,13 +181,13 @@ LauncherTasksModel::~LauncherTasksModel()
 
 QVariant LauncherTasksModel::data(const QModelIndex &index, int role) const
 {
-    if (!index.isValid() || index.row() >= d->launchers.count()) {
+    if (!index.isValid() || index.row() >= d->currentlyShownLaunchers.count()) {
+        qDebug() << "GREPME NOT A VALID INDEX" << index.row();
         return QVariant();
     }
 
-    const QUrl &url = d->launchers.at(index.row());
+    const QUrl &url = d->currentlyShownLaunchers.at(index.row());
     const AppData &data = d->appData(url);
-
     if (role == Qt::DisplayRole) {
         return data.name;
     } else if (role == Qt::DecorationRole) {
@@ -158,59 +223,88 @@ QVariant LauncherTasksModel::data(const QModelIndex &index, int role) const
 
 int LauncherTasksModel::rowCount(const QModelIndex &parent) const
 {
-    return parent.isValid() ? 0 : d->launchers.count();
+    return parent.isValid() ? 0 : d->currentlyShownLaunchers.count();
 }
 
-QStringList LauncherTasksModel::launcherList() const
+QStringList LauncherTasksModel::shownLauncherList() const
 {
-    return QUrl::toStringList(d->launchers);
+    return QUrl::toStringList(d->currentlyShownLaunchers);
 }
 
-void LauncherTasksModel::setLauncherList(const QStringList &launchers)
+QStringList LauncherTasksModel::serializedLauncherList() const
 {
-    const QList<QUrl> &_urls = QUrl::fromStringList(launchers, QUrl::StrictMode);
-    QList<QUrl> urls;
+    // Serializing the launchers
+    QStringList result;
 
-    // Reject invalid urls and duplicates.
-    foreach(const QUrl &url, _urls) {
-        if (url.isValid()) {
-            bool dupe = false;
+    for (const auto &launcher: d->launchersOrder) {
+        const QString serializedLauncher =
+            "[" + d->activitiesForLauncher[launcher].join(",") + "]\n" + launcher.toString();
+        result << serializedLauncher;
+    }
 
-            foreach(const QUrl &addedUrl, urls) {
-                dupe = launcherUrlsMatch(url, addedUrl, IgnoreQueryItems);
-                if (dupe) break;
-            }
+    return result;
+}
 
-            if (!dupe) {
-                urls.append(url);
-            }
+void LauncherTasksModel::setSerializedLauncherList(const QStringList &serializedLaunchers)
+{
+    // Clearing everything
+    d->launchersOrder.clear();
+
+    QHash<QUrl, QStringList> oldActivitiesForLauncher;
+    std::swap(oldActivitiesForLauncher, d->activitiesForLauncher);
+
+    qDebug() << "GREPME: We are asked to set these launchers:"
+             << serializedLaunchers
+        ;
+
+    // Loading the activity to launchers map
+    QHash<QString, QList<QUrl>> launchersForActivitiesCandidates;
+    for (const auto& serializedLauncher: serializedLaunchers) {
+        QStringList activities;
+        QUrl url;
+
+        std::tie(url, activities) =
+            deserializeLauncher(serializedLauncher);
+
+        qDebug() << "GREPME: Result: " << url << activities;
+
+        // Is url is not valid, ignore it
+        if (!url.isValid()) continue;
+
+        qDebug() << "GREPME: Url is valid";
+
+        // Is the url a duplicate?
+        const auto location =
+            std::find_if(d->launchersOrder.begin(), d->launchersOrder.end(),
+                [&url] (const QUrl &item) {
+                    return launcherUrlsMatch(url, item, IgnoreQueryItems);
+                });
+
+
+        if (location != d->launchersOrder.end()) {
+            // It is a duplicate
+            url = *location;
+        } else {
+            // It is not a duplicate, we need to add it
+            // to the list of registered launchers
+            d->launchersOrder << url;
+        }
+
+        d->activitiesForLauncher[url].append(activities);
+
+        // If this is shown on all activities, we do not need to remember
+        // each activity separately
+        if (d->activitiesForLauncher[url].contains(NULL_UUID)) {
+            d->activitiesForLauncher[url] = QStringList({ NULL_UUID });
         }
     }
 
-    if (d->launchers != urls) {
-        // Common case optimization: If the list changed but its size
-        // did not (e.g. due to reordering by a user of this model),
-        // just clear the caches and announce new data instead of
-        // resetting.
-        if (d->launchers.count() == urls.count()) {
-            d->launchers.clear();
-            d->appDataCache.clear();
+    qDebug() << "GREPME: We got:" << d->activitiesForLauncher;
+    qDebug() << "GREPME: We got order:" << d->launchersOrder;
 
-            d->launchers = urls;
-
-            emit dataChanged(index(0, 0), index(d->launchers.count() - 1, 0));
-        } else {
-            beginResetModel();
-
-            d->launchers.clear();
-            d->appDataCache.clear();
-
-            d->launchers = urls;
-
-            endResetModel();
-        }
-
-        emit launcherListChanged();
+    if (oldActivitiesForLauncher != d->activitiesForLauncher) {
+        d->updateShownLaunchers();
+        emit serializedLauncherListChanged();
     }
 }
 
@@ -225,35 +319,43 @@ bool LauncherTasksModel::requestAddLauncher(const QUrl &_url)
     }
 
     // Reject duplicates.
-    foreach(const QUrl &launcher, d->launchers) {
+    foreach(const QUrl &launcher, d->launchersOrder) {
         if (launcherUrlsMatch(url, launcher, IgnoreQueryItems)) {
             return false;
         }
     }
 
-    const int count = d->launchers.count();
+    // Adding the launcher to all activities
+    const int count = d->launchersOrder.count();
     beginInsertRows(QModelIndex(), count, count);
-    d->launchers.append(url);
+    d->activitiesForLauncher[url] = QStringList({ NULL_UUID });
+    d->launchersOrder.append(url);
     endInsertRows();
 
-    emit launcherListChanged();
+    emit serializedLauncherListChanged();
+    emit shownLauncherListChanged();
 
     return true;
 }
 
 bool LauncherTasksModel::requestRemoveLauncher(const QUrl &url)
 {
-    for (int i = 0; i < d->launchers.count(); ++i) {
-        const QUrl &launcher = d->launchers.at(i);
+    for (int i = 0; i < d->launchersOrder.count(); ++i) {
+        const QUrl &launcher = d->launchersOrder.at(i);
 
         if (launcherUrlsMatch(url, launcher, IgnoreQueryItems)
             || launcherUrlsMatch(url, d->appData(launcher).url, IgnoreQueryItems)) {
+
+            // Removing the launcher from all activities
+
             beginRemoveRows(QModelIndex(), i, i);
-            d->launchers.removeAt(i);
+            d->launchersOrder.removeAt(i);
+            d->activitiesForLauncher.remove(url);
             d->appDataCache.remove(launcher);
             endRemoveRows();
 
-            emit launcherListChanged();
+            emit serializedLauncherListChanged();
+            emit shownLauncherListChanged();
 
             return true;
         }
@@ -264,8 +366,8 @@ bool LauncherTasksModel::requestRemoveLauncher(const QUrl &url)
 
 int LauncherTasksModel::launcherPosition(const QUrl &url) const
 {
-    for (int i = 0; i < d->launchers.count(); ++i) {
-        if (launcherUrlsMatch(url, d->launchers.at(i), IgnoreQueryItems)) {
+    for (int i = 0; i < d->currentlyShownLaunchers.count(); ++i) {
+        if (launcherUrlsMatch(url, d->currentlyShownLaunchers.at(i), IgnoreQueryItems)) {
             return i;
         }
     }
@@ -281,11 +383,11 @@ void LauncherTasksModel::requestActivate(const QModelIndex &index)
 void LauncherTasksModel::requestNewInstance(const QModelIndex &index)
 {
     if (!index.isValid() || index.model() != this
-        || index.row() < 0 || index.row() >= d->launchers.count()) {
+        || index.row() < 0 || index.row() >= d->currentlyShownLaunchers.count()) {
         return;
     }
 
-    const QUrl &url = d->launchers.at(index.row());
+    const QUrl &url = d->currentlyShownLaunchers.at(index.row());
 
     quint32 timeStamp = 0;
 
@@ -312,12 +414,12 @@ void LauncherTasksModel::requestNewInstance(const QModelIndex &index)
 void LauncherTasksModel::requestOpenUrls(const QModelIndex &index, const QList<QUrl> &urls)
 {
     if (!index.isValid() || index.model() != this
-        || index.row() < 0 || index.row() >= d->launchers.count()
+        || index.row() < 0 || index.row() >= d->currentlyShownLaunchers.count()
         || urls.isEmpty()) {
         return;
     }
 
-    const QUrl &url = d->launchers.at(index.row());
+    const QUrl &url = d->currentlyShownLaunchers.at(index.row());
 
     quint32 timeStamp = 0;
 
