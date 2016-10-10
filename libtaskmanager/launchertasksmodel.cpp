@@ -213,6 +213,25 @@ void LauncherTasksModel::setLauncherList(const QStringList &serializedLaunchers)
         // Is url is not valid, ignore it
         if (!url.isValid()) continue;
 
+        // Filter invalid activities
+        if (!activities.isEmpty()) {
+            const auto allActivities = d->activities.activities();
+            QStringList validActivities;
+            for (const auto& activity: activities) {
+                if (allActivities.contains(activity)) {
+                    validActivities << activity;
+                }
+            }
+
+            if (validActivities.isEmpty()) {
+                // If all activities that had this launcher are
+                // removed, we are killing the launcher as well
+                continue;
+            }
+
+            activities = validActivities;
+        }
+
         // Is the url a duplicate?
         const auto location =
             std::find_if(newLaunchersOrder.begin(), newLaunchersOrder.end(),
