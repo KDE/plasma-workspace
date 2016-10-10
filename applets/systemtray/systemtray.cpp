@@ -37,36 +37,10 @@
 #include <Plasma/PluginLoader>
 #include <Plasma/ServiceJob>
 
-#include <KIconLoader>
-#include <KIconEngine>
 #include <KActionCollection>
 #include <KLocalizedString>
 
 #include <plasma_version.h>
-
-/*
- * An app may also load icons from their own directories, so we need a new iconloader that takes this into account
- * This is wrapped into a subclass of iconengine so the iconloader lifespan matches the icon object
- */
-class AppIconEngine : public KIconEngine
-{
-public:
-    AppIconEngine(const QString &variant, const QString &path, const QString &appName);
-    ~AppIconEngine();
-private:
-    KIconLoader* m_loader;
-};
-
-AppIconEngine::AppIconEngine(const QString &variant, const QString &path, const QString &appName) :
-    KIconEngine(variant, m_loader = new KIconLoader(appName, QStringList()))
-{
-    m_loader->addAppDir(appName, path);
-}
-
-AppIconEngine::~AppIconEngine()
-{
-    delete m_loader;
-}
 
 class PlasmoidModel: public QStandardItemModel
 {
@@ -167,32 +141,6 @@ void SystemTray::cleanupTask(const QString &task)
             emit appletDeleted(applet);
         }
     }
-}
-
-QVariant SystemTray::resolveIcon(const QVariant &variant, const QString &iconThemePath)
-{
-    if (variant.canConvert<QString>()) {
-        if (!iconThemePath.isEmpty()) {
-            const QString path = iconThemePath;
-            if (!path.isEmpty()) {
-                // FIXME: If last part of path is not "icons", this won't work!
-                auto tokens = path.splitRef('/', QString::SkipEmptyParts);
-                if (tokens.length() >= 3 && tokens.takeLast() == QLatin1String("icons")) {
-                    const QString appName = tokens.takeLast().toString();
-
-                    return QVariant(QIcon(new AppIconEngine(variant.toString(), path, appName)));
-                } else {
-                    qCWarning(SYSTEM_TRAY) << "Wrong IconThemePath" << path << ": too short or does not end with 'icons'";
-                }
-            }
-
-            //return just the string hoping that IconItem will know how to interpret it anyways as either a normal icon or a SVG from the theme
-            return variant;
-        }
-    }
-
-    // Most importantly QIcons. Nothing to do for those.
-    return variant;
 }
 
 void SystemTray::showPlasmoidMenu(QQuickItem *appletInterface, int x, int y)
