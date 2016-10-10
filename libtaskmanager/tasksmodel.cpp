@@ -1439,7 +1439,6 @@ void TasksModel::syncLaunchers()
 
     QMap<int, QString> sortedShownLaunchers;
 
-    qDebug() << "GREPME This is the list" << launcherList();
     foreach(const QString &launcherUrlStr, launcherList()) {
         int row = -1;
         QStringList activities;
@@ -1447,15 +1446,9 @@ void TasksModel::syncLaunchers()
 
         std::tie(launcherUrl, activities) = deserializeLauncher(launcherUrlStr);
 
-        qDebug() << "GREPME: ASFDFDF: " << launcherUrl << activities;
-
         for (int i = 0; i < d->launcherTasksModel->rowCount(); ++i) {
             const QUrl &rowLauncherUrl =
                 d->launcherTasksModel->index(i, 0).data(AbstractTasksModel::LauncherUrlWithoutIcon).toUrl();
-
-            qDebug()
-                << "GREPME Do these match?" << launcherUrl << rowLauncherUrl
-                << launcherUrlsMatch(launcherUrl, rowLauncherUrl, IgnoreQueryItems);
 
             if (launcherUrlsMatch(launcherUrl, rowLauncherUrl, IgnoreQueryItems)) {
                 row = i;
@@ -1464,7 +1457,6 @@ void TasksModel::syncLaunchers()
         }
 
         if (row != -1) {
-            qDebug() << "GREPME inserting" << row << launcherUrlStr;
             sortedShownLaunchers.insert(row, launcherUrlStr);
         }
     }

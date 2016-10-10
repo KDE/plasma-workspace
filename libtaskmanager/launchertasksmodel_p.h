@@ -41,7 +41,6 @@ inline static std::pair<QUrl, QStringList> deserializeLauncher(const QString &se
     // to not have the activities array -- to have the old format
     if (serializedLauncher.startsWith('[')) {
         // It seems we have the activity specifier in the launcher
-        qDebug() << "GREPME: It seems we have the activity specifier in the launcher";
         const auto activitiesBlockEnd = serializedLauncher.indexOf("]\n");
 
         if (activitiesBlockEnd != -1) {
@@ -56,7 +55,6 @@ inline static std::pair<QUrl, QStringList> deserializeLauncher(const QString &se
     // If the activities array is empty, this means that this launcher
     // needs to be on all activities
     if (activities.isEmpty()) {
-        qDebug() << "GREPME: We need to have this in all activities";
         activities = QStringList({ NULL_UUID });
     }
 

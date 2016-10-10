@@ -126,7 +126,6 @@ LauncherTasksModel::~LauncherTasksModel()
 QVariant LauncherTasksModel::data(const QModelIndex &index, int role) const
 {
     if (!index.isValid() || index.row() >= d->launchersOrder.count()) {
-        qDebug() << "GREPME NOT A VALID INDEX" << index.row();
         return QVariant();
     }
 
@@ -202,10 +201,6 @@ void LauncherTasksModel::setLauncherList(const QStringList &serializedLaunchers)
     QList<QUrl> newLaunchersOrder;
     QHash<QUrl, QStringList> newActivitiesForLauncher;
 
-    qDebug() << "GREPME: We are asked to set these launchers:"
-             << serializedLaunchers
-        ;
-
     // Loading the activity to launchers map
     QHash<QString, QList<QUrl>> launchersForActivitiesCandidates;
     for (const auto& serializedLauncher: serializedLaunchers) {
@@ -215,12 +210,8 @@ void LauncherTasksModel::setLauncherList(const QStringList &serializedLaunchers)
         std::tie(url, activities) =
             deserializeLauncher(serializedLauncher);
 
-        qDebug() << "GREPME: Result: " << url << activities;
-
         // Is url is not valid, ignore it
         if (!url.isValid()) continue;
-
-        qDebug() << "GREPME: Url is valid";
 
         // Is the url a duplicate?
         const auto location =
@@ -248,9 +239,6 @@ void LauncherTasksModel::setLauncherList(const QStringList &serializedLaunchers)
             newActivitiesForLauncher[url].clear();
         }
     }
-
-    qDebug() << "GREPME: We got:" << newActivitiesForLauncher;
-    qDebug() << "GREPME: We got order:" << newLaunchersOrder;
 
     if (newActivitiesForLauncher != d->activitiesForLauncher) {
         // Common case optimization: If the list changed but its size
