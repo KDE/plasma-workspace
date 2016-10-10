@@ -78,11 +78,7 @@ PanelView::PanelView(ShellCorona *corona, QScreen *targetScreen, QWindow *parent
 
     m_positionPaneltimer.setSingleShot(true);
     m_positionPaneltimer.setInterval(150);
-    connect(&m_positionPaneltimer, &QTimer::timeout,
-            this, [this] () {
-                restore();
-                positionPanel();
-            });
+    connect(&m_positionPaneltimer, &QTimer::timeout, this, &PanelView::restore);
 
     m_unhideTimer.setSingleShot(true);
     m_unhideTimer.setInterval(500);
@@ -517,6 +513,10 @@ void PanelView::restore()
     emit minimumLengthChanged();
     emit offsetChanged();
     emit alignmentChanged();
+
+    //::restore might have been called directly before the timer fires
+    // at which point we don't still need the timer
+    m_positionPaneltimer.stop();
 }
 
 void PanelView::showConfigurationInterface(Plasma::Applet *applet)
