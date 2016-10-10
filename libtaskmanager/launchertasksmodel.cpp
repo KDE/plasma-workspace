@@ -213,6 +213,11 @@ void LauncherTasksModel::setLauncherList(const QStringList &serializedLaunchers)
         // Is url is not valid, ignore it
         if (!url.isValid()) continue;
 
+        // If we have a null uuid, it means we are on all activities
+        if (activities.contains(NULL_UUID)) {
+            activities.clear();
+        }
+
         // Filter invalid activities
         if (!activities.isEmpty()) {
             const auto allActivities = d->activities.activities();
@@ -250,12 +255,18 @@ void LauncherTasksModel::setLauncherList(const QStringList &serializedLaunchers)
             newLaunchersOrder << url;
         }
 
-        newActivitiesForLauncher[url].append(activities);
 
-        // If this is shown on all activities, we do not need to remember
-        // each activity separately
-        if (newActivitiesForLauncher[url].contains(NULL_UUID)) {
-            newActivitiesForLauncher[url].clear();
+        if (!newActivitiesForLauncher.contains(url)) {
+            // This is the first time we got this url
+            newActivitiesForLauncher[url] = activities;
+
+        } else if (newActivitiesForLauncher[url].isEmpty()) {
+            // Do nothing, we are already on all activities
+
+        } else {
+            // We are not on all activities, append the new ones
+            newActivitiesForLauncher[url].append(activities);
+
         }
     }
 
