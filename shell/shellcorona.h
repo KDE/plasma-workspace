@@ -113,10 +113,6 @@ public:
 
     QString defaultContainmentPlugin() const;
 
-
-protected:
-    bool eventFilter(QObject *watched, QEvent *event) override;
-
 public Q_SLOTS:
     /**
      * Request saving applicationConfig on disk, it's event compressed, not immediate

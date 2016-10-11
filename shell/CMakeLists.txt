@@ -59,7 +59,6 @@ set (plasma_shell_SRCS
     shellmanager.cpp
     standaloneappcorona
     osd.cpp
-    waylanddialogfilter.cpp
     coronatesthelper.cpp
     debug.cpp
     screenpool.cpp
