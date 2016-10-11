@@ -50,9 +50,10 @@ PlasmaCore.ColorScope {
         model: screenModel
 
         Background {
-            x: geometry.x; y: geometry.y; width: geometry.width; height:geometry.height
-            source: config.background
-            fillMode: Image.PreserveAspectCrop
+            x: geometry.x; y: geometry.y; width: geometry.width; height: geometry.height
+            sceneBackgroundType: config.type
+            sceneBackgroundColor: config.color
+            sceneBackgroundImage: config.background
         }
     }
 
