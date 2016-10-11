@@ -350,9 +350,10 @@ QVariant BackgroundListModel::data(const QModelIndex &index, int role) const
 
             KFileItemList list;
             list.append(KFileItem(file, QString(), 0));
+            QStringList availablePlugins = KIO::PreviewJob::availablePlugins();
             KIO::PreviewJob* job = KIO::filePreview(list,
                                                     QSize(m_screenshotSize*1.6,
-                                                    m_screenshotSize));
+                                                    m_screenshotSize),  &availablePlugins);
             job->setIgnoreMaximumSize(true);
             connect(job, &KIO::PreviewJob::gotPreview,
                     this, &BackgroundListModel::showPreview);
