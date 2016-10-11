@@ -435,15 +435,22 @@ QByteArray ShellCorona::dumpCurrentLayoutJS() const
               : location == Plasma::Types::RightEdge ? "right"
               : /* Plasma::Types::BottomEdge */        "bottom");
 
-        const qreal units =
+        const qreal height =
                 // If we do not have a panel, fallback to 4 units
                 !view     ?  4
-              : location == Plasma::Types::TopEdge   ? view->height() / gridUnit
-              : location == Plasma::Types::LeftEdge  ? view->width()  / gridUnit
-              : location == Plasma::Types::RightEdge ? view->width()  / gridUnit
-              : /* Plasma::Types::BottomEdge */        view->height() / gridUnit;
+              : (qreal)view->thickness() / gridUnit;
 
-        panelJson.insert("height", units);
+        panelJson.insert("height", height);
+        if (view) {
+            const auto alignment = view->alignment();
+            panelJson.insert("maximumLength", (qreal)view->maximumLength() / gridUnit);
+            panelJson.insert("minimumLength", (qreal)view->minimumLength() / gridUnit);
+            panelJson.insert("offset", (qreal)view->offset() / gridUnit);
+            panelJson.insert("alignment",
+                 alignment == Qt::AlignRight  ? "right"
+               : alignment == Qt::AlignCenter ? "center"
+               : "left");
+        }
 
         // Saving the config keys
         const KConfigGroup contConfig = cont->config();

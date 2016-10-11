@@ -378,7 +378,11 @@ QScriptValue ScriptEngine::V1::loadSerializedLayout(QScriptContext *context, QSc
 
         // Basic panel setup
         panel->setLocation(panelData.property("location").toString());
-        panel->setHeight(panelData.property("height").toInteger() * ScriptEngine::gridUnit());
+        panel->setHeight(panelData.property("height").toNumber() * ScriptEngine::gridUnit());
+        panel->setMaximumLength(panelData.property("maximumLength").toNumber() * ScriptEngine::gridUnit());
+        panel->setMinimumLength(panelData.property("minimumLength").toNumber() * ScriptEngine::gridUnit());
+        panel->setOffset(panelData.property("offset").toNumber() * ScriptEngine::gridUnit());
+        panel->setAlignment(panelData.property("alignment").toString());
 
         // Loading the config for the panel
         loadSerializedConfigs(panel, panelData.property("config"));
