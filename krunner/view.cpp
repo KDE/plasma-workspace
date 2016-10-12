@@ -239,6 +239,9 @@ bool View::event(QEvent *event)
                     return false;
                 }
                 m_plasmaShellSurface = m_plasmaShell->createSurface(s, this);
+                m_plasmaShellSurface->setRole(PlasmaShellSurface::Role::Panel);
+                m_plasmaShellSurface->setPanelBehavior(PlasmaShellSurface::PanelBehavior::WindowsGoBelow);
+                m_plasmaShellSurface->setPanelTakesFocus(true);
                 break;
             }
             case QPlatformSurfaceEvent::SurfaceAboutToBeDestroyed:
