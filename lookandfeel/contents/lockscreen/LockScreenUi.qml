@@ -84,12 +84,6 @@ PlasmaCore.ColorScope {
                             icon: kscreenlocker_userImage,
 
             })
-            if (sessionsModel.canStartNewSession) {
-                users.append({realName: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "New Session"),
-                                name: "__new_session",
-                                iconName: "list-add"
-                })
-            }
         }
     }
 
@@ -111,10 +105,6 @@ PlasmaCore.ColorScope {
                 return text
             }
 
-            onNewSession: {
-                sessionsModel.startNewSession(false);
-            }
-
             onLoginRequest: {
                 root.notification = ""
                 authenticator.tryUnlock(password)
@@ -125,7 +115,7 @@ PlasmaCore.ColorScope {
                     text: i18nd("org.kde.plasma_lookandfeel_org.kde.lookandfeel", "Switch User")
                     iconSource: "system-switch-user"
                     onClicked: mainStack.push(switchSessionPage)
-                    visible: sessionsModel.count > 1 && sessionsModel.canSwitchUser
+                    visible: sessionsModel.canSwitchUser
                 }
             ]
         }
@@ -138,7 +128,7 @@ PlasmaCore.ColorScope {
 
             PlasmaComponents.Button {
                 Layout.fillWidth: true
-                text: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Switch Session")
+                text: userListCurrentIndex == sessionsModel.count - 1 ? i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Start New Session") : i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Switch Session")
                 onClicked: {
                     sessionsModel.switchUser(userListCurrentModelData.vtNumber)
                     mainStack.pop()
