@@ -455,9 +455,9 @@ bool LauncherTasksModel::requestRemoveLauncherFromActivity(const QUrl &url)
     return d->requestRemoveLauncherFromActivities(url, { d->activities.currentActivity() });
 }
 
-QStringList LauncherTasksModel::launcherActivities(const QUrl &url) const
+QStringList LauncherTasksModel::launcherActivities(const QUrl &_url) const
 {
-    const auto position = launcherPosition(url);
+    const auto position = launcherPosition(_url);
     const auto url = d->launchersOrder.at(position);
 
     return d->activitiesForLauncher.contains(url) ? d->activitiesForLauncher[url]
