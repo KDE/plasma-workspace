@@ -134,6 +134,17 @@ public:
     bool requestRemoveLauncherFromActivity(const QUrl &url);
 
     /**
+     * Return the list of activities the launcher belongs to.
+     * If there is no launcher with that url, the list will be empty,
+     * while if the launcher is on all activities, it will contain a
+     * null uuid.
+     *
+     * URLs are compared for equality after removing the query string used
+     * to hold metadata.
+     */
+    QStringList launcherActivities(const QUrl &url) const;
+
+    /**
      * Return the position of the launcher with the given URL.
      *
      * URLs are compared for equality after removing the query string used

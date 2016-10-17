@@ -1190,6 +1190,15 @@ bool TasksModel::requestRemoveLauncherFromActivity(const QUrl &url)
     return false;
 }
 
+QStringList TasksModel::launcherActivities(const QUrl &url)
+{
+    if (d->launcherTasksModel) {
+        return d->launcherTasksModel->launcherActivities(url);
+    }
+
+    return {};
+}
+
 int TasksModel::launcherPosition(const QUrl &url) const
 {
     if (d->launcherTasksModel) {

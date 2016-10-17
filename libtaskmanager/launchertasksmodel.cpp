@@ -455,6 +455,15 @@ bool LauncherTasksModel::requestRemoveLauncherFromActivity(const QUrl &url)
     return d->requestRemoveLauncherFromActivities(url, { d->activities.currentActivity() });
 }
 
+QStringList LauncherTasksModel::launcherActivities(const QUrl &url) const
+{
+    const auto position = launcherPosition(url);
+    const auto url = d->launchersOrder.at(position);
+
+    return d->activitiesForLauncher.contains(url) ? d->activitiesForLauncher[url]
+                                                  : QStringList { NULL_UUID };
+}
+
 int LauncherTasksModel::launcherPosition(const QUrl &url) const
 {
     for (int i = 0; i < d->launchersOrder.count(); ++i) {
