@@ -209,6 +209,7 @@ private:
     int m_contentLength;
     int m_distance;
     int m_thickness;
+    bool m_initCompleted;
     Qt::Alignment m_alignment;
     QPointer<PlasmaQuick::ConfigView> m_panelConfigView;
     ShellCorona *m_corona;

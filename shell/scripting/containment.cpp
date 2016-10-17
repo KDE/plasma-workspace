@@ -248,7 +248,7 @@ QScriptValue Containment::widgets(QScriptContext *context, QScriptEngine *engine
     int count = 0;
 
     foreach (Plasma::Applet *widget, c->d->containment.data()->applets()) {
-        if (widgetType.isEmpty() || widget->pluginInfo().pluginName() == widgetType) {
+        if (widgetType.isEmpty() || widget->pluginMetaData().pluginId() == widgetType) {
             widgets.setProperty(count, env->wrap(widget));
             ++count;
         }
@@ -273,7 +273,7 @@ QString Containment::type() const
         return QString();
     }
 
-    return d->containment.data()->pluginInfo().pluginName();
+    return d->containment.data()->pluginMetaData().pluginId();
 }
 
 void Containment::remove()

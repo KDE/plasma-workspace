@@ -62,7 +62,8 @@ PanelView::PanelView(ShellCorona *corona, QScreen *targetScreen, QWindow *parent
        m_corona(corona),
        m_visibilityMode(NormalPanel),
        m_background(0),
-       m_shellSurface(nullptr)
+       m_shellSurface(nullptr),
+       m_initCompleted(false)
 {
     if (targetScreen) {
         setPosition(targetScreen->geometry().center());
@@ -78,11 +79,7 @@ PanelView::PanelView(ShellCorona *corona, QScreen *targetScreen, QWindow *parent
 
     m_positionPaneltimer.setSingleShot(true);
     m_positionPaneltimer.setInterval(150);
-    connect(&m_positionPaneltimer, &QTimer::timeout,
-            this, [this] () {
-                restore();
-                positionPanel();
-            });
+    connect(&m_positionPaneltimer, &QTimer::timeout, this, &PanelView::restore);
 
     m_unhideTimer.setSingleShot(true);
     m_unhideTimer.setInterval(500);
@@ -360,6 +357,10 @@ void PanelView::positionPanel()
         return;
     }
 
+    if (!m_initCompleted) {
+        return;
+    }
+
     KWindowEffects::SlideFromLocation slideLocation = KWindowEffects::NoEdge;
 
     switch (containment()->location()) {
@@ -465,19 +466,37 @@ QRect PanelView::geometryByDistance(int distance) const
 
 void PanelView::resizePanel()
 {
+    if (!m_initCompleted) {
+        return;
+    }
+
+    QSize targetSize;
+    QSize targetMinSize;
+    QSize targetMaxSize;
+
     if (formFactor() == Plasma::Types::Vertical) {
         const int minSize = qMax(MINSIZE, m_minLength);
         const int maxSize = qMin(m_maxLength, m_screenToFollow->size().height() - m_offset);
-        setMinimumSize(QSize(thickness(), minSize));
-        setMaximumSize(QSize(thickness(), maxSize));
-        resize(thickness(), qBound(minSize, m_contentLength, maxSize));
+        targetMinSize = QSize(thickness(), minSize);
+        targetMaxSize = QSize(thickness(), maxSize);
+        targetSize = QSize(thickness(), qBound(minSize, m_contentLength, maxSize));
     } else {
         const int minSize = qMax(MINSIZE, m_minLength);
         const int maxSize = qMin(m_maxLength, m_screenToFollow->size().width() - m_offset);
-        setMinimumSize(QSize(minSize, thickness()));
-        setMaximumSize(QSize(maxSize, thickness()));
-        resize(qBound(minSize, m_contentLength, maxSize), thickness());
+        targetMinSize = QSize(minSize, thickness());
+        targetMaxSize = QSize(maxSize, thickness());
+        targetSize = QSize(qBound(minSize, m_contentLength, maxSize), thickness());
     }
+    if (minimumSize() != targetMinSize) {
+        setMinimumSize(targetMinSize);
+    }
+    if (maximumSize() != targetMaxSize) {
+        setMaximumSize(targetMaxSize);
+    }
+    if (size() != targetSize) {
+        resize(targetSize);
+    }
+
     //position will be updated implicitly from resizeEvent
 }
 
@@ -510,6 +529,7 @@ void PanelView::restore()
     m_minLength = qBound<int>(MINSIZE, config().readEntry<int>("minLength", side), maxSize);
 
     setVisibilityMode((VisibilityMode)config().readEntry<int>("panelVisibility", (int)NormalPanel));
+    m_initCompleted = true;
     resizePanel();
     positionPanel();
 
@@ -517,6 +537,10 @@ void PanelView::restore()
     emit minimumLengthChanged();
     emit offsetChanged();
     emit alignmentChanged();
+
+    //::restore might have been called directly before the timer fires
+    // at which point we don't still need the timer
+    m_positionPaneltimer.stop();
 }
 
 void PanelView::showConfigurationInterface(Plasma::Applet *applet)

@@ -31,6 +31,7 @@
 #include <QMimeData>
 
 #include <Baloo/Query>
+#include <Baloo/IndexerConfig>
 
 #include <KIO/OpenFileManagerWindowJob>
 
@@ -86,6 +87,11 @@ QIcon SearchRunner::categoryIcon(const QString& category) const
 QList<Plasma::QueryMatch> SearchRunner::match(Plasma::RunnerContext& context, const QString& type,
                                               const QString& category)
 {
+    Baloo::IndexerConfig config;
+    if (!config.fileIndexingEnabled()) {
+        return QList<Plasma::QueryMatch>();
+    }
+
     if (!context.isValid())
         return QList<Plasma::QueryMatch>();
 

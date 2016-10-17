@@ -60,12 +60,6 @@ public:
 
     //Invokable utilities
     /**
-     * returns either a simple icon name or a custom path if the app is
-     * using a custom theme
-     */
-    Q_INVOKABLE QVariant resolveIcon(const QVariant &variant, const QString &iconThemePath);
-
-    /**
      * Given an AppletInterface pointer, shows a proper context menu for it
      */
     Q_INVOKABLE void showPlasmoidMenu(QQuickItem *appletInterface, int x, int y);

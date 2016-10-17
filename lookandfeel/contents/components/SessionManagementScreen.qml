@@ -88,6 +88,8 @@ Item {
             id: notificationsLabel
             Layout.maximumWidth: units.gridUnit * 16
             Layout.alignment: Qt.AlignHCenter
+            Layout.fillWidth: true
+            horizontalAlignment: Text.AlignHCenter
             wrapMode: Text.WordWrap
             font.italic: true
         }

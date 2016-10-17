@@ -37,36 +37,10 @@
 #include <Plasma/PluginLoader>
 #include <Plasma/ServiceJob>
 
-#include <KIconLoader>
-#include <KIconEngine>
 #include <KActionCollection>
 #include <KLocalizedString>
 
 #include <plasma_version.h>
-
-/*
- * An app may also load icons from their own directories, so we need a new iconloader that takes this into account
- * This is wrapped into a subclass of iconengine so the iconloader lifespan matches the icon object
- */
-class AppIconEngine : public KIconEngine
-{
-public:
-    AppIconEngine(const QString &variant, const QString &path, const QString &appName);
-    ~AppIconEngine();
-private:
-    KIconLoader* m_loader;
-};
-
-AppIconEngine::AppIconEngine(const QString &variant, const QString &path, const QString &appName) :
-    KIconEngine(variant, m_loader = new KIconLoader(appName, QStringList()))
-{
-    m_loader->addAppDir(appName, path);
-}
-
-AppIconEngine::~AppIconEngine()
-{
-    delete m_loader;
-}
 
 class PlasmoidModel: public QStandardItemModel
 {
@@ -99,19 +73,19 @@ void SystemTray::init()
 {
     Containment::init();
 
-    for (const auto &info: Plasma::PluginLoader::self()->listAppletInfo(QString())) {
-        if (!info.isValid() || info.property(QStringLiteral("X-Plasma-NotificationArea")) != "true") {
+    for (const auto &info: Plasma::PluginLoader::self()->listAppletMetaData(QString())) {
+        if (!info.isValid() || info.value(QStringLiteral("X-Plasma-NotificationArea")) != "true") {
             continue;
         }
-        m_systrayApplets[info.pluginName()] = info;
+        m_systrayApplets[info.pluginId()] = KPluginInfo(info);
 
-        if (info.isPluginEnabledByDefault()) {
-            m_defaultPlasmoids += info.pluginName();
+        if (info.isEnabledByDefault()) {
+            m_defaultPlasmoids += info.pluginId();
         }
-        const QString dbusactivation = info.property(QStringLiteral("X-Plasma-DBusActivationService")).toString();
+        const QString dbusactivation = info.value(QStringLiteral("X-Plasma-DBusActivationService"));
         if (!dbusactivation.isEmpty()) {
-            qCDebug(SYSTEM_TRAY) << "ST Found DBus-able Applet: " << info.pluginName() << dbusactivation;
-            m_dbusActivatableTasks[info.pluginName()] = dbusactivation;
+            qCDebug(SYSTEM_TRAY) << "ST Found DBus-able Applet: " << info.pluginId() << dbusactivation;
+            m_dbusActivatableTasks[info.pluginId()] = dbusactivation;
         }
     }
 }
@@ -119,12 +93,12 @@ void SystemTray::init()
 void SystemTray::newTask(const QString &task)
 {
     foreach (Plasma::Applet *applet, applets()) {
-        if (!applet->pluginInfo().isValid()) {
+        if (!applet->pluginMetaData().isValid()) {
             continue;
         }
 
         //only allow one instance per applet
-        if (task == applet->pluginInfo().pluginName()) {
+        if (task == applet->pluginMetaData().pluginId()) {
             //Applet::destroy doesn't delete the applet from Containment::applets in the same event
             //potentially a dbus activated service being restarted can be added in this time.
             if (!applet->destroyed()) {
@@ -156,7 +130,7 @@ void SystemTray::newTask(const QString &task)
 void SystemTray::cleanupTask(const QString &task)
 {
     foreach (Plasma::Applet *applet, applets()) {
-        if (!applet->pluginInfo().isValid() || task == applet->pluginInfo().pluginName()) {
+        if (!applet->pluginMetaData().isValid() || task == applet->pluginMetaData().pluginId()) {
             //we are *not* cleaning the config here, because since is one
             //of those automatically loaded/unloaded by dbus, we want to recycle
             //the config the next time it's loaded, in case the user configured something here
@@ -167,32 +141,6 @@ void SystemTray::cleanupTask(const QString &task)
             emit appletDeleted(applet);
         }
     }
-}
-
-QVariant SystemTray::resolveIcon(const QVariant &variant, const QString &iconThemePath)
-{
-    if (variant.canConvert<QString>()) {
-        if (!iconThemePath.isEmpty()) {
-            const QString path = iconThemePath;
-            if (!path.isEmpty()) {
-                // FIXME: If last part of path is not "icons", this won't work!
-                auto tokens = path.splitRef('/', QString::SkipEmptyParts);
-                if (tokens.length() >= 3 && tokens.takeLast() == QLatin1String("icons")) {
-                    const QString appName = tokens.takeLast().toString();
-
-                    return QVariant(QIcon(new AppIconEngine(variant.toString(), path, appName)));
-                } else {
-                    qCWarning(SYSTEM_TRAY) << "Wrong IconThemePath" << path << ": too short or does not end with 'icons'";
-                }
-            }
-
-            //return just the string hoping that IconItem will know how to interpret it anyways as either a normal icon or a SVG from the theme
-            return variant;
-        }
-    }
-
-    // Most importantly QIcons. Nothing to do for those.
-    return variant;
 }
 
 void SystemTray::showPlasmoidMenu(QQuickItem *appletInterface, int x, int y)
@@ -255,11 +203,11 @@ Q_INVOKABLE QString SystemTray::plasmoidCategory(QQuickItem *appletInterface) co
     }
 
     Plasma::Applet *applet = appletInterface->property("_plasma_applet").value<Plasma::Applet*>();
-    if (!applet || !applet->pluginInfo().isValid()) {
+    if (!applet || !applet->pluginMetaData().isValid()) {
         return "UnknownCategory";
     }
 
-    const QString cat = applet->pluginInfo().property(QStringLiteral("X-Plasma-NotificationAreaCategory")).toString();
+    const QString cat = applet->pluginMetaData().value(QStringLiteral("X-Plasma-NotificationAreaCategory"));
 
     if (cat.isEmpty()) {
         return "UnknownCategory";
@@ -385,11 +333,11 @@ void SystemTray::restorePlasmoids()
     foreach (Plasma::Applet *applet, applets()) {
         //Here it should always be valid.
         //for some reason it not always is.
-        if (!applet->pluginInfo().isValid()) {
+        if (!applet->pluginMetaData().isValid()) {
             applet->config().parent().deleteGroup();
             applet->deleteLater();
         } else {
-            const QString task = applet->pluginInfo().pluginName();
+            const QString task = applet->pluginMetaData().pluginId();
             if (!m_allowedPlasmoids.contains(task)) {
                 //in those cases we do delete the applet config completely
                 //as they were explicitly disabled by the user
