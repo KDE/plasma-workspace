@@ -28,6 +28,8 @@ import org.kde.plasma.components 2.0 as PlasmaComponents
 import "../components"
 
 SessionManagementScreen {
+
+    property Item mainPasswordBox: passwordBox
     /*
      * Login has been requested with the following username and password
      * If username field is visible, it will be taken from that, otherwise from the "name" property of the currentIndex
