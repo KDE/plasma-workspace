@@ -701,6 +701,8 @@ void ShellCorona::primaryOutputChanged()
         return;
     }
 
+    m_screenPool->setPrimaryConnector(newPrimary->name());
+
     qWarning()<<"Old primary output:"<<oldPrimary<<"New primary output:"<<newPrimary;
     const int oldIdOfPrimary = m_screenPool->id(newPrimary->name());
     //swap order in m_desktopViewforId
@@ -713,7 +715,6 @@ void ShellCorona::primaryOutputChanged()
         primaryDesktop->show();
         oldDesktopOfPrimary->show();
     }
-    m_screenPool->setPrimaryConnector(newPrimary->name());
 
     foreach (PanelView *panel, m_panelViews) {
         if (panel->screen() == oldPrimary) {
