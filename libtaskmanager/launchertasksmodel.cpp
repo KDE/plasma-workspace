@@ -46,16 +46,30 @@ namespace TaskManager
 
 typedef QSet<QString> ActivitiesSet;
 
+template <typename ActivitiesCollection>
+inline bool isOnAllActivities(const ActivitiesCollection &activities)
+{
+    return activities.isEmpty() || activities.contains(NULL_UUID);
+}
+
+
 class LauncherTasksModel::Private
 {
 public:
     Private(LauncherTasksModel *q);
 
-    KActivities::Consumer activities;
+    KActivities::Consumer activitiesConsumer;
 
     QList<QUrl> launchersOrder;
 
     QHash<QUrl, ActivitiesSet> activitiesForLauncher;
+    inline void setActivitiesForLauncher(const QUrl &url, const ActivitiesSet &activities) {
+        if (activities.size() == activitiesConsumer.activities().size()) {
+            activitiesForLauncher[url] = { NULL_UUID };
+        } else {
+            activitiesForLauncher[url] = activities;
+        }
+    }
 
     QHash<QUrl, AppData> appDataCache;
     QTimer sycocaChangeTimer;
@@ -145,12 +159,12 @@ bool LauncherTasksModel::Private::requestAddLauncherToActivities(const QUrl &_ur
                 newActivities = activities;
 
             } else {
-                if (activities.isEmpty() || activities.contains(NULL_UUID)) {
+                if (isOnAllActivities(activities)) {
                     // If the new list is empty, or has a null uuid, this
                     // launcher should be on all activities
                     newActivities = ActivitiesSet { NULL_UUID };
 
-                } else if (activitiesForLauncher[url].isEmpty() || activitiesForLauncher[url].contains(NULL_UUID)) {
+                } else if (isOnAllActivities(activitiesForLauncher[url])) {
                     // If we have been on all activities before, and we have
                     // been asked to be on a specific one, lets make an
                     // exception - we will set the activities to exactly
@@ -166,7 +180,7 @@ bool LauncherTasksModel::Private::requestAddLauncherToActivities(const QUrl &_ur
             }
 
             if (newActivities != activitiesForLauncher[url]) {
-                activitiesForLauncher[url] = newActivities;
+                setActivitiesForLauncher(url, newActivities);
 
                 emit q->dataChanged(
                         q->index(row, 0),
@@ -184,7 +198,7 @@ bool LauncherTasksModel::Private::requestAddLauncherToActivities(const QUrl &_ur
     // This is a new one
     const auto count = launchersOrder.count();
     q->beginInsertRows(QModelIndex(), count, count);
-    activitiesForLauncher[url] = activities;
+    setActivitiesForLauncher(url, activities);
     launchersOrder.append(url);
     q->endInsertRows();
 
@@ -203,17 +217,19 @@ bool LauncherTasksModel::Private::requestRemoveLauncherFromActivities(const QUrl
 
             const auto currentActivities = activitiesForLauncher[url];
             ActivitiesSet newActivities;
+
             bool remove = false;
             bool update = false;
 
-            if (currentActivities.isEmpty()) {
+            if (isOnAllActivities(currentActivities)) {
                 // We are currently on all activities.
                 // Should we go away, or just remove from the current one?
-                if (activities.isEmpty()) {
+
+                if (isOnAllActivities(activities)) {
                     remove = true;
 
                 } else {
-                    for (const auto& activity: currentActivities) {
+                    for (const auto& activity: activitiesConsumer.activities()) {
                         if (!activities.contains(activity)) {
                             newActivities << activity;
                         } else {
@@ -247,7 +263,7 @@ bool LauncherTasksModel::Private::requestRemoveLauncherFromActivities(const QUrl
                 q->endRemoveRows();
 
             } else if (update) {
-                activitiesForLauncher[url] = newActivities;
+                setActivitiesForLauncher(url, newActivities);
 
                 emit q->dataChanged(
                         q->index(row, 0),
@@ -332,7 +348,7 @@ QStringList LauncherTasksModel::launcherList() const
         const auto &activities = d->activitiesForLauncher[launcher];
 
         QString serializedLauncher;
-        if (activities.isEmpty() || activities.contains(NULL_UUID)) {
+        if (isOnAllActivities(activities)) {
             serializedLauncher = launcher.toString();
 
         } else {
@@ -369,12 +385,12 @@ void LauncherTasksModel::setLauncherList(const QStringList &serializedLaunchers)
 
         // If we have a null uuid, it means we are on all activities
         // and we should contain only the null uuid
-        if (activities.isEmpty() || activities.contains(NULL_UUID)) {
+        if (isOnAllActivities(activities)) {
             activities = { NULL_UUID };
 
         } else {
             // Filter out invalid activities
-            const auto allActivities = d->activities.activities();
+            const auto allActivities = d->activitiesConsumer.activities();
             ActivitiesSet validActivities;
             for (const auto& activity: activities) {
                 if (allActivities.contains(activity)) {
@@ -460,12 +476,12 @@ void LauncherTasksModel::setLauncherList(const QStringList &serializedLaunchers)
 
 bool LauncherTasksModel::requestAddLauncher(const QUrl &url)
 {
-    return d->requestAddLauncherToActivities(url, QStringList());
+    return d->requestAddLauncherToActivities(url, { NULL_UUID });
 }
 
 bool LauncherTasksModel::requestRemoveLauncher(const QUrl &url)
 {
-    return d->requestRemoveLauncherFromActivities(url, QStringList());
+    return d->requestRemoveLauncherFromActivities(url, { NULL_UUID });
 }
 
 bool LauncherTasksModel::requestAddLauncherToActivity(const QUrl &url, const QString &activity)
