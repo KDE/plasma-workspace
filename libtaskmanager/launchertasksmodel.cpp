@@ -33,6 +33,8 @@ License along with this library.  If not, see <http://www.gnu.org/licenses/>.
 
 #include <QIcon>
 #include <QTimer>
+#include <QHash>
+#include <QSet>
 #if HAVE_X11
 #include <QX11Info>
 #endif
@@ -42,6 +44,8 @@ License along with this library.  If not, see <http://www.gnu.org/licenses/>.
 namespace TaskManager
 {
 
+typedef QSet<QString> ActivitiesSet;
+
 class LauncherTasksModel::Private
 {
 public:
@@ -50,7 +54,8 @@ public:
     KActivities::Consumer activities;
 
     QList<QUrl> launchersOrder;
-    QHash<QUrl, QStringList> activitiesForLauncher;
+
+    QHash<QUrl, ActivitiesSet> activitiesForLauncher;
 
     QHash<QUrl, AppData> appDataCache;
     QTimer sycocaChangeTimer;
@@ -115,11 +120,12 @@ AppData LauncherTasksModel::Private::appData(const QUrl &url)
     return appDataCache.value(url);
 }
 
-bool LauncherTasksModel::Private::requestAddLauncherToActivities(const QUrl &_url, const QStringList &activities)
+bool LauncherTasksModel::Private::requestAddLauncherToActivities(const QUrl &_url, const QStringList &_activities)
 {
     // isValid() for the passed-in URL might return true if it was
     // constructed in TolerantMode, but we want to reject invalid URLs.
     QUrl url(_url.toString(), QUrl::StrictMode);
+    const auto activities = ActivitiesSet::fromList(_activities);
 
     if (url.isEmpty() || !url.isValid()) {
         return false;
@@ -131,7 +137,7 @@ bool LauncherTasksModel::Private::requestAddLauncherToActivities(const QUrl &_ur
         ++row;
 
         if (launcherUrlsMatch(url, launcher, IgnoreQueryItems)) {
-            QStringList newActivities;
+            ActivitiesSet newActivities;
 
             if (!activitiesForLauncher.contains(url)) {
                 // If we don't have the activities assigned to this url
@@ -139,22 +145,34 @@ bool LauncherTasksModel::Private::requestAddLauncherToActivities(const QUrl &_ur
                 newActivities = activities;
 
             } else {
-                // If any of the lists are empty, we are on all activities,
-                // otherwise, lets merge the lists
-                if (activitiesForLauncher[url].isEmpty() || activities.isEmpty()) {
-                    newActivities.clear();
+                if (activities.isEmpty() || activities.contains(NULL_UUID)) {
+                    // If the new list is empty, or has a null uuid, this
+                    // launcher should be on all activities
+                    newActivities = ActivitiesSet { NULL_UUID };
+
+                } else if (activitiesForLauncher[url].isEmpty() || activitiesForLauncher[url].contains(NULL_UUID)) {
+                    // If we have been on all activities before, and we have
+                    // been asked to be on a specific one, lets make an
+                    // exception - we will set the activities to exactly
+                    // what we have been asked
+                    newActivities = activities;
+
 
                 } else {
-                    newActivities.append(activities);
-                    newActivities.append(activitiesForLauncher[url]);
+                    newActivities += activities;
+                    newActivities += activitiesForLauncher[url];
 
                 }
             }
 
             if (newActivities != activitiesForLauncher[url]) {
+                activitiesForLauncher[url] = newActivities;
+
                 emit q->dataChanged(
                         q->index(row, 0),
                         q->index(row, 0));
+
+                emit q->launcherListChanged();
                 return true;
 
             }
@@ -183,8 +201,8 @@ bool LauncherTasksModel::Private::requestRemoveLauncherFromActivities(const QUrl
         if (launcherUrlsMatch(url, launcher, IgnoreQueryItems)
             || launcherUrlsMatch(url, appData(launcher).url, IgnoreQueryItems)) {
 
-            const QStringList currentActivities = activitiesForLauncher[url];
-            QStringList newActivities;
+            const auto currentActivities = activitiesForLauncher[url];
+            ActivitiesSet newActivities;
             bool remove = false;
             bool update = false;
 
@@ -294,7 +312,7 @@ QVariant LauncherTasksModel::data(const QModelIndex &index, int role) const
     } else if (role == IsOnAllVirtualDesktops) {
         return true;
     } else if (role == Activities) {
-        return d->activitiesForLauncher[url];
+        return QStringList(d->activitiesForLauncher[url].toList());
     }
 
     return QVariant();
@@ -314,12 +332,12 @@ QStringList LauncherTasksModel::launcherList() const
         const auto &activities = d->activitiesForLauncher[launcher];
 
         QString serializedLauncher;
-        if (activities.isEmpty()) {
+        if (activities.isEmpty() || activities.contains(NULL_UUID)) {
             serializedLauncher = launcher.toString();
 
         } else {
             serializedLauncher =
-                "[" + d->activitiesForLauncher[launcher].join(",") + "]\n" +
+                "[" + d->activitiesForLauncher[launcher].toList().join(",") + "]\n" +
                 launcher.toString();
         }
 
@@ -333,29 +351,31 @@ void LauncherTasksModel::setLauncherList(const QStringList &serializedLaunchers)
 {
     // Clearing everything
     QList<QUrl> newLaunchersOrder;
-    QHash<QUrl, QStringList> newActivitiesForLauncher;
+    QHash<QUrl, ActivitiesSet> newActivitiesForLauncher;
 
     // Loading the activity to launchers map
     QHash<QString, QList<QUrl>> launchersForActivitiesCandidates;
     for (const auto& serializedLauncher: serializedLaunchers) {
-        QStringList activities;
+        QStringList _activities;
         QUrl url;
 
-        std::tie(url, activities) =
+        std::tie(url, _activities) =
             deserializeLauncher(serializedLauncher);
+
+        auto activities = ActivitiesSet::fromList(_activities);
 
         // Is url is not valid, ignore it
         if (!url.isValid()) continue;
 
         // If we have a null uuid, it means we are on all activities
-        if (activities.contains(NULL_UUID)) {
-            activities.clear();
-        }
+        // and we should contain only the null uuid
+        if (activities.isEmpty() || activities.contains(NULL_UUID)) {
+            activities = { NULL_UUID };
 
-        // Filter invalid activities
-        if (!activities.isEmpty()) {
+        } else {
+            // Filter out invalid activities
             const auto allActivities = d->activities.activities();
-            QStringList validActivities;
+            ActivitiesSet validActivities;
             for (const auto& activity: activities) {
                 if (allActivities.contains(activity)) {
                     validActivities << activity;
@@ -394,12 +414,15 @@ void LauncherTasksModel::setLauncherList(const QStringList &serializedLaunchers)
             // This is the first time we got this url
             newActivitiesForLauncher[url] = activities;
 
-        } else if (newActivitiesForLauncher[url].isEmpty()) {
+        } else if (newActivitiesForLauncher[url].contains(NULL_UUID)) {
             // Do nothing, we are already on all activities
+
+        } else if (activities.contains(NULL_UUID)) {
+            newActivitiesForLauncher[url] = { NULL_UUID };
 
         } else {
             // We are not on all activities, append the new ones
-            newActivitiesForLauncher[url].append(activities);
+            newActivitiesForLauncher[url] += activities;
 
         }
     }
@@ -445,23 +468,32 @@ bool LauncherTasksModel::requestRemoveLauncher(const QUrl &url)
     return d->requestRemoveLauncherFromActivities(url, QStringList());
 }
 
-bool LauncherTasksModel::requestAddLauncherToActivity(const QUrl &url)
+bool LauncherTasksModel::requestAddLauncherToActivity(const QUrl &url, const QString &activity)
 {
-    return d->requestAddLauncherToActivities(url, { d->activities.currentActivity() });
+    return d->requestAddLauncherToActivities(url, { activity });
 }
 
-bool LauncherTasksModel::requestRemoveLauncherFromActivity(const QUrl &url)
+bool LauncherTasksModel::requestRemoveLauncherFromActivity(const QUrl &url, const QString &activity)
 {
-    return d->requestRemoveLauncherFromActivities(url, { d->activities.currentActivity() });
+    return d->requestRemoveLauncherFromActivities(url, { activity });
 }
 
 QStringList LauncherTasksModel::launcherActivities(const QUrl &_url) const
 {
     const auto position = launcherPosition(_url);
-    const auto url = d->launchersOrder.at(position);
 
-    return d->activitiesForLauncher.contains(url) ? d->activitiesForLauncher[url]
-                                                  : QStringList { NULL_UUID };
+    if (position == -1) {
+        // If we do not have this launcher, return an empty list
+        return {};
+
+    } else {
+        const auto url = d->launchersOrder.at(position);
+
+        // If the launcher is on all activities, return a null uuid
+        return d->activitiesForLauncher.contains(url)
+                    ? d->activitiesForLauncher[url].toList()
+                    : QStringList { NULL_UUID };
+    }
 }
 
 int LauncherTasksModel::launcherPosition(const QUrl &url) const

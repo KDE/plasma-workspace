@@ -1154,11 +1154,11 @@ bool TasksModel::requestRemoveLauncher(const QUrl &url)
     return false;
 }
 
-bool TasksModel::requestAddLauncherToActivity(const QUrl &url)
+bool TasksModel::requestAddLauncherToActivity(const QUrl &url, const QString &activity)
 {
     d->initLauncherTasksModel();
 
-    bool added = d->launcherTasksModel->requestAddLauncherToActivity(url);
+    bool added = d->launcherTasksModel->requestAddLauncherToActivity(url, activity);
 
     // If using manual and launch-in-place sorting with separate launchers,
     // we need to trigger a sort map update to move any window tasks to
@@ -1171,10 +1171,10 @@ bool TasksModel::requestAddLauncherToActivity(const QUrl &url)
     return added;
 }
 
-bool TasksModel::requestRemoveLauncherFromActivity(const QUrl &url)
+bool TasksModel::requestRemoveLauncherFromActivity(const QUrl &url, const QString &activity)
 {
     if (d->launcherTasksModel) {
-        bool removed = d->launcherTasksModel->requestRemoveLauncherFromActivity(url);
+        bool removed = d->launcherTasksModel->requestRemoveLauncherFromActivity(url, activity);
 
         // If using manual and launch-in-place sorting with separate launchers,
         // we need to trigger a sort map update to move any window tasks no

@@ -118,7 +118,7 @@ public:
      * @param url A launcher URL.
      * @returns @c true if a launcher was added.
      */
-    bool requestAddLauncherToActivity(const QUrl &url);
+    bool requestAddLauncherToActivity(const QUrl &url, const QString &activity);
 
     /**
      * Request removing the launcher with the given URL from the current activity.
@@ -131,7 +131,7 @@ public:
      * @param url A launcher URL.
      * @returns @c true if the launcher was removed.
      */
-    bool requestRemoveLauncherFromActivity(const QUrl &url);
+    bool requestRemoveLauncherFromActivity(const QUrl &url, const QString &activity);
 
     /**
      * Return the list of activities the launcher belongs to.
