@@ -30,6 +30,8 @@ License along with this library.  If not, see <http://www.gnu.org/licenses/>.
 #include "startuptasksmodel.h"
 #include "windowtasksmodel.h"
 
+#include "launchertasksmodel_p.h"
+
 #include <QGuiApplication>
 #include <QTimer>
 #include <QUrl>
@@ -1152,6 +1154,51 @@ bool TasksModel::requestRemoveLauncher(const QUrl &url)
     return false;
 }
 
+bool TasksModel::requestAddLauncherToActivity(const QUrl &url, const QString &activity)
+{
+    d->initLauncherTasksModel();
+
+    bool added = d->launcherTasksModel->requestAddLauncherToActivity(url, activity);
+
+    // If using manual and launch-in-place sorting with separate launchers,
+    // we need to trigger a sort map update to move any window tasks to
+    // their launcher position now.
+    if (added && d->sortMode == SortManual && (d->launchInPlace || !d->separateLaunchers)) {
+        d->updateManualSortMap();
+        d->forceResort();
+    }
+
+    return added;
+}
+
+bool TasksModel::requestRemoveLauncherFromActivity(const QUrl &url, const QString &activity)
+{
+    if (d->launcherTasksModel) {
+        bool removed = d->launcherTasksModel->requestRemoveLauncherFromActivity(url, activity);
+
+        // If using manual and launch-in-place sorting with separate launchers,
+        // we need to trigger a sort map update to move any window tasks no
+        // longer backed by a launcher out of the launcher area.
+        if (removed && d->sortMode == SortManual && (d->launchInPlace || !d->separateLaunchers)) {
+            d->updateManualSortMap();
+            d->forceResort();
+        }
+
+        return removed;
+    }
+
+    return false;
+}
+
+QStringList TasksModel::launcherActivities(const QUrl &url)
+{
+    if (d->launcherTasksModel) {
+        return d->launcherTasksModel->launcherActivities(url);
+    }
+
+    return {};
+}
+
 int TasksModel::launcherPosition(const QUrl &url) const
 {
     if (d->launcherTasksModel) {
@@ -1435,14 +1482,18 @@ void TasksModel::syncLaunchers()
         return;
     }
 
-    QMap<int, QUrl> sortedLaunchers;
+    QMap<int, QString> sortedShownLaunchers;
 
     foreach(const QString &launcherUrlStr, launcherList()) {
         int row = -1;
-        QUrl launcherUrl(launcherUrlStr);
+        QStringList activities;
+        QUrl launcherUrl;
 
-        for (int i = 0; i < rowCount(); ++i) {
-            const QUrl &rowLauncherUrl = index(i, 0).data(AbstractTasksModel::LauncherUrlWithoutIcon).toUrl();
+        std::tie(launcherUrl, activities) = deserializeLauncher(launcherUrlStr);
+
+        for (int i = 0; i < d->launcherTasksModel->rowCount(); ++i) {
+            const QUrl &rowLauncherUrl =
+                d->launcherTasksModel->index(i, 0).data(AbstractTasksModel::LauncherUrlWithoutIcon).toUrl();
 
             if (launcherUrlsMatch(launcherUrl, rowLauncherUrl, IgnoreQueryItems)) {
                 row = i;
@@ -1451,7 +1502,7 @@ void TasksModel::syncLaunchers()
         }
 
         if (row != -1) {
-            sortedLaunchers.insert(row, launcherUrl);
+            sortedShownLaunchers.insert(row, launcherUrlStr);
         }
     }
 
@@ -1477,7 +1528,7 @@ void TasksModel::syncLaunchers()
         }
     }
 
-    setLauncherList(QUrl::toStringList(sortedLaunchers.values()));
+    setLauncherList(sortedShownLaunchers.values());
     d->launcherSortingDirty = false;
 }
 

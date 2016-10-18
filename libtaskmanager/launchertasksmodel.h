@@ -62,7 +62,8 @@ public:
     int rowCount(const QModelIndex &parent = QModelIndex()) const override;
 
     /**
-     * The list of launcher URLs serialized to strings.
+     * The list of launcher URLs serialized to strings along with
+     * the activities they belong to.
      *
      * @see setLauncherList
      * @returns the list of launcher URLs serialized to strings.
@@ -105,6 +106,43 @@ public:
      * @returns @c true if the launcher was removed.
      */
     bool requestRemoveLauncher(const QUrl &url);
+
+    /**
+     * Request adding a launcher with the given URL to current activity.
+     *
+     * If this URL is already in the list, the request will fail. URLs are
+     * compared for equality after removing the query string used to hold
+     * metadata.
+     *
+     * @see launcherUrlsMatch
+     * @param url A launcher URL.
+     * @returns @c true if a launcher was added.
+     */
+    bool requestAddLauncherToActivity(const QUrl &url, const QString &activity);
+
+    /**
+     * Request removing the launcher with the given URL from the current activity.
+     *
+     * If this URL is already in the list, the request will fail. URLs are
+     * compared for equality after removing the query string used to hold
+     * metadata.
+     *
+     * @see launcherUrlsMatch
+     * @param url A launcher URL.
+     * @returns @c true if the launcher was removed.
+     */
+    bool requestRemoveLauncherFromActivity(const QUrl &url, const QString &activity);
+
+    /**
+     * Return the list of activities the launcher belongs to.
+     * If there is no launcher with that url, the list will be empty,
+     * while if the launcher is on all activities, it will contain a
+     * null uuid.
+     *
+     * URLs are compared for equality after removing the query string used
+     * to hold metadata.
+     */
+    QStringList launcherActivities(const QUrl &url) const;
 
     /**
      * Return the position of the launcher with the given URL.

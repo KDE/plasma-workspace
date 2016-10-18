@@ -21,6 +21,8 @@ License along with this library.  If not, see <http://www.gnu.org/licenses/>.
 #include "taskfilterproxymodel.h"
 #include "abstracttasksmodel.h"
 
+#include "launchertasksmodel_p.h"
+
 namespace TaskManager
 {
 
@@ -287,7 +289,7 @@ bool TaskFilterProxyModel::filterAcceptsRow(int sourceRow, const QModelIndex &so
             if (!activities.isNull()) {
                 const QStringList l = activities.toStringList();
 
-                if (!l.isEmpty() && !l.contains(d->activity)) {
+                if (!l.isEmpty() && !l.contains(NULL_UUID) && !l.contains(d->activity)) {
                     return false;
                 }
             }
