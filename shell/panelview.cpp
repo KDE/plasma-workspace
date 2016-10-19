@@ -701,7 +701,6 @@ void PanelView::integrateScreen()
 
 void PanelView::showEvent(QShowEvent *event)
 {
-    PanelShadows::self()->addWindow(this, enabledBorders());
     PlasmaQuick::ContainmentView::showEvent(event);
 
     integrateScreen();
@@ -856,6 +855,7 @@ bool PanelView::event(QEvent *e)
                 switch (pe->surfaceEventType()) {
                 case QPlatformSurfaceEvent::SurfaceCreated:
                     setupWaylandIntegration();
+                    PanelShadows::self()->addWindow(this, enabledBorders());
                     break;
                 case QPlatformSurfaceEvent::SurfaceAboutToBeDestroyed:
                     delete m_shellSurface;
