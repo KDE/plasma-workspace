@@ -192,7 +192,7 @@ void Image::findPreferedImageInPackage(KPackage::Package &package)
     // choose the nearest resolution, always preferring images with the same aspect ratio
     float best = FLT_MAX;
     float bestWithSameAspectRatio = FLT_MAX;
-    float targetAspectRatio = m_targetSize.width()/(float)m_targetSize.height();
+    float targetAspectRatio = ( m_targetSize.height() > 0 ) ? m_targetSize.width() / (float)m_targetSize.height() : 0;
 
     QString bestImage;
     QString bestImageWithSameAspectRatio;
@@ -201,7 +201,7 @@ void Image::findPreferedImageInPackage(KPackage::Package &package)
         if (candidate == QSize()) {
             continue;
         }
-        float candidateAspectRatio = candidate.width()/(float)candidate.height();
+        float candidateAspectRatio = (candidate.height() > 0 ) ? candidate.width() / (float)candidate.height() : FLT_MAX;
 
         double dist = distance(candidate, m_targetSize);
         //qDebug() << "candidate" << candidate << "distance" << dist << "aspect ratio" << candidateAspectRatio;
@@ -235,9 +235,15 @@ QSize Image::targetSize() const
 
 void Image::setTargetSize(const QSize &size)
 {
+    bool sizeChanged = m_targetSize != size;
     m_targetSize = size;
 
     if (m_mode == SingleImage) {
+        if (sizeChanged) {
+            // If screen size was changed, we may want to select a new preferred image
+            // which has correct aspect ratio for the new screen size.
+            m_wallpaperPackage.removeDefinition("preferred");
+        }
         setSingleImage();
     }
 }
