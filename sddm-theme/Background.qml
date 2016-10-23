@@ -23,8 +23,6 @@
 ***************************************************************************/
 
 import QtQuick 2.2
-import QtGraphicalEffects 1.0
-
 
 FocusScope {
     property alias source: image.source
