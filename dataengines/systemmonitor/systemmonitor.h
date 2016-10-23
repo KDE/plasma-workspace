@@ -24,6 +24,7 @@
 #include <ksgrd/SensorClient.h>
 
 #include <QStringList>
+#include <QVector>
 
 class QTimer;
 
@@ -52,7 +53,7 @@ class SystemMonitorEngine : public Plasma::DataEngine, public KSGRD::SensorClien
         void updateMonitorsList();
 
     private:
-        QStringList m_sensors;
+        QVector<QString> m_sensors;
         QTimer* m_timer;
         int m_waitingFor;
 };

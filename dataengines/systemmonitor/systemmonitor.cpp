@@ -50,7 +50,7 @@ void SystemMonitorEngine::updateMonitorsList()
 
 QStringList SystemMonitorEngine::sources() const
 {
-    return m_sensors;
+    return m_sensors.toList();
 }
 
 bool SystemMonitorEngine::sourceRequestEvent(const QString &name)
@@ -118,10 +118,10 @@ void SystemMonitorEngine::answerReceived(int id, const QList<QByteArray> &answer
             return;
         }
 
-        const QString sensorName = newSensorInfo[0];
-        const QString min = newSensorInfo[1];
-        const QString max = newSensorInfo[2];
-        const QString unit = newSensorInfo[3];
+        const QString& sensorName = newSensorInfo[0];
+        const QString& min = newSensorInfo[1];
+        const QString& max = newSensorInfo[2];
+        const QString& unit = newSensorInfo[3];
 
         if (it != sources.constEnd()) {
             it.value()->setData(QStringLiteral("name"), sensorName);
@@ -139,14 +139,15 @@ void SystemMonitorEngine::answerReceived(int id, const QList<QByteArray> &answer
         int count = 0;
 
         foreach (const QByteArray &sens, answer) {
-            const QStringList newSensorInfo = QString::fromUtf8(sens).split('\t');
+            const QString sensStr{QString::fromUtf8(sens)};
+            const QVector<QStringRef> newSensorInfo = sensStr.splitRef('\t');
             if (newSensorInfo.count() < 2) {
                 continue;
             }
             if(newSensorInfo.at(1) == QLatin1String("logfile"))
                 continue; // logfile data type not currently supported
 
-            const QString newSensor = newSensorInfo[0];
+            const QString newSensor = newSensorInfo[0].toString();
             sensors.insert(newSensor);
             m_sensors.append(newSensor);
             {
@@ -160,7 +161,7 @@ void SystemMonitorEngine::answerReceived(int id, const QList<QByteArray> &answer
             }
             DataEngine::Data d;
             d.insert(QStringLiteral("value"), QVariant());
-            d.insert(QStringLiteral("type"), newSensorInfo[1]);
+            d.insert(QStringLiteral("type"), newSensorInfo[1].toString());
             setData(newSensor, d);
             KSGRD::SensorMgr->sendRequest( QStringLiteral("localhost"), QStringLiteral("%1?").arg(newSensor), (KSGRD::SensorClient*)this, -(count + 2));
             ++count;
