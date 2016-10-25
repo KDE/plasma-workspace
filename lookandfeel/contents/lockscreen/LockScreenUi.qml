@@ -122,7 +122,7 @@ PlasmaCore.ColorScope {
 
             actionItems: [
                 ActionButton {
-                    text: i18nd("org.kde.plasma_lookandfeel_org.kde.lookandfeel", "Switch User")
+                    text: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Switch User")
                     iconSource: "system-switch-user"
                     onClicked: mainStack.push(switchSessionPage)
                     visible: sessionsModel.count > 1 && sessionsModel.canSwitchUser
