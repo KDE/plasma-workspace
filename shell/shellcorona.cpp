@@ -1795,7 +1795,7 @@ int ShellCorona::screenForContainment(const Plasma::Containment *containment) co
 
     //if the panel views already exist, base upon them
     PanelView *view = m_panelViews.value(containment);
-    if (view) {
+    if (view && view->screenToFollow()) {
         return m_screenPool->id(view->screenToFollow()->name());
     }
 
