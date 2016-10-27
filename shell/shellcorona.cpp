@@ -683,6 +683,8 @@ void ShellCorona::primaryOutputChanged()
         return;
     }
 
+    m_screenPool->setPrimaryConnector(newPrimary->name());
+
     qWarning()<<"Old primary output:"<<oldPrimary<<"New primary output:"<<newPrimary;
     const int oldIdOfPrimary = m_screenPool->id(newPrimary->name());
     //swap order in m_desktopViewforId
@@ -695,7 +697,6 @@ void ShellCorona::primaryOutputChanged()
         primaryDesktop->show();
         oldDesktopOfPrimary->show();
     }
-    m_screenPool->setPrimaryConnector(newPrimary->name());
 
     foreach (PanelView *panel, m_panelViews) {
         if (panel->screen() == oldPrimary) {
@@ -1777,7 +1778,7 @@ int ShellCorona::screenForContainment(const Plasma::Containment *containment) co
 
     //if the panel views already exist, base upon them
     PanelView *view = m_panelViews.value(containment);
-    if (view) {
+    if (view && view->screenToFollow()) {
         return m_screenPool->id(view->screenToFollow()->name());
     }
 
