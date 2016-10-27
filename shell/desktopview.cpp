@@ -217,6 +217,7 @@ bool DesktopView::event(QEvent *e)
             switch (pe->surfaceEventType()) {
             case QPlatformSurfaceEvent::SurfaceCreated:
                 setupWaylandIntegration();
+                ensureWindowType();
                 break;
             case QPlatformSurfaceEvent::SurfaceAboutToBeDestroyed:
                 delete m_shellSurface;
