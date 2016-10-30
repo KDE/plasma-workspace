@@ -39,7 +39,8 @@ class DragHelper : public QObject
         void setDragIconSize(int size);
 
         Q_INVOKABLE bool isDrag(int oldX, int oldY, int newX, int newY) const;
-        Q_INVOKABLE void startDrag(QQuickItem* item, const QUrl &url = QUrl(), const QIcon &icon = QIcon());
+        Q_INVOKABLE void startDrag(QQuickItem* item, const QUrl &url = QUrl(), const QIcon &icon = QIcon(),
+            const QString &extraMimeType = QString(), const QString &extraMimeData = QString());
 
     Q_SIGNALS:
         void dragIconSizeChanged() const;
@@ -47,7 +48,8 @@ class DragHelper : public QObject
 
     private:
         int m_dragIconSize;
-        Q_INVOKABLE void doDrag(QQuickItem* item, const QUrl &url = QUrl(), const QIcon &icon = QIcon()) const;
+        Q_INVOKABLE void doDrag(QQuickItem* item, const QUrl &url = QUrl(), const QIcon &icon = QIcon(),
+            const QString &extraMimeType = QString(), const QString &extraMimeData = QString()) const;
 };
 
 #endif
