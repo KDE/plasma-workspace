@@ -27,6 +27,8 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #include <QScreen>
 #include "../shutdowndlg.h"
 
+#include <KQuickAddons/QtQuickSettings>
+
 #include <KWindowSystem>
 
 #include <KWayland/Client/connection_thread.h>
@@ -163,6 +165,8 @@ int main(int argc, char *argv[])
 {
     QQuickWindow::setDefaultAlphaBuffer(true);
     QApplication app(argc, argv);
+
+    KQuickAddons::QtQuickSettings::init();
 
     QCommandLineParser parser;
     parser.addHelpOption();

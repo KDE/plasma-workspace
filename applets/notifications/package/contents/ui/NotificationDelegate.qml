@@ -84,7 +84,10 @@ PlasmaComponents.ListItem {
                 easing.type: Easing.InOutQuad
             }
             ScriptAction {
-                script: notificationsModel.remove(index)
+                script: {
+                    closeNotification(model.source);
+                    notificationsModel.remove(index);
+                }
             }
         }
 

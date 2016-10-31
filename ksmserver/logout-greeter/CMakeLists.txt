@@ -9,6 +9,7 @@ target_link_libraries(ksmserver-logout-greeter
     KF5::IconThemes
     KF5::I18n
     KF5::Package
+    KF5::QuickAddons
     KF5::KDELibs4Support # Solid/PowerManagement
     KF5::WaylandClient
     ${X11_LIBRARIES}
