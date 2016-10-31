@@ -316,6 +316,11 @@ void SystemTray::reorderItemAfter(QQuickItem* after, QQuickItem* before)
     after->setVisible(true);
 }
 
+bool SystemTray::isSystemTrayApplet(const QString &appletId)
+{
+    return m_systrayApplets.contains(appletId);
+}
+
 void SystemTray::restoreContents(KConfigGroup &group)
 {
     Q_UNUSED(group);

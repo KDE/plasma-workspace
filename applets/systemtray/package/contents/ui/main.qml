@@ -21,6 +21,8 @@ import QtQuick 2.5
 import QtQuick.Layouts 1.1
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.plasmoid 2.0
+import org.kde.draganddrop 2.0 as DnD
+
 import "items"
 
 MouseArea {
@@ -228,6 +230,46 @@ MouseArea {
         visualParent: tasksRow
         target: root.activeApplet && root.activeApplet.parent.parent == tasksRow ? root.activeApplet.parent : root
         location: plasmoid.location
+    }
+
+    DnD.DropArea {
+        anchors.fill: parent
+
+        preventStealing: true;
+
+        /** Extracts the name of the system tray applet in the drag data if present
+         * otherwise returns null*/
+        function systemTrayAppletName(event) {
+            if (event.mimeData.formats.indexOf("text/x-plasmoidservicename") < 0) {
+                return null;
+            }
+            var plasmoidId = event.mimeData.getDataAsByteArray("text/x-plasmoidservicename");
+
+            if (!plasmoid.nativeInterface.isSystemTrayApplet(plasmoidId)) {
+                return null;
+            }
+            return plasmoidId;
+        }
+
+        onDragEnter: {
+            if (!systemTrayAppletName(event)) {
+                event.ignore();
+            }
+        }
+
+        onDrop: {
+            var plasmoidId = systemTrayAppletName(event);
+            if (!plasmoidId) {
+                event.ignore();
+                return;
+            }
+
+            if (plasmoid.configuration.extraItems.indexOf(plasmoidId) < 0) {
+                var extraItems = plasmoid.configuration.extraItems;
+                extraItems.push(plasmoidId);
+                plasmoid.configuration.extraItems = extraItems;
+            }
+        }
     }
 
     //Main Layout

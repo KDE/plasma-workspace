@@ -97,6 +97,8 @@ public:
      */
     Q_INVOKABLE void reorderItemAfter(QQuickItem* after, QQuickItem* before);
 
+    Q_INVOKABLE bool isSystemTrayApplet(const QString &appletId);
+
 private Q_SLOTS:
     void serviceNameFetchFinished(QDBusPendingCallWatcher* watcher, const QDBusConnection &connection);
     void serviceOwnerChanged(const QString &serviceName, const QString &oldOwner, const QString &newOwner);
