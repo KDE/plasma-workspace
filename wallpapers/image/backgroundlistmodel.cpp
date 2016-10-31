@@ -559,7 +559,7 @@ void BackgroundFinder::run()
                 }
 
                 const QString filePath = wp.filePath();
-                if (QFile::exists(filePath + QString::fromLatin1("/metadata.desktop"))) {
+                if (QFile::exists(filePath + QString::fromLatin1("/metadata.desktop")) || QFile::exists(filePath + QString::fromLatin1("/metadata.json"))) {
                     package.setPath(filePath);
                     if (package.isValid()) {
                         if (!package.filePath("images").isEmpty()) {
