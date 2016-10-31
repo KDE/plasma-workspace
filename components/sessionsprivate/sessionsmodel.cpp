@@ -196,6 +196,10 @@ void SessionsModel::checkScreenLocked(const std::function<void (bool)> &cb)
 
 void SessionsModel::setShowNewSessionEntry(bool showNewSessionEntry)
 {
+    if (!canStartNewSession()) {
+        return;
+    }
+
     if (showNewSessionEntry == m_showNewSessionEntry) {
         return;
     }
