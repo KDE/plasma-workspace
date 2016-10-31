@@ -510,6 +510,11 @@ QScriptValue ScriptEngine::V1::loadTemplate(QScriptContext *context, QScriptEngi
         if (sc) {
             const QString overridePackagePath = sc->lookAndFeelPackage().path() + QStringLiteral("contents/layouts/") + pluginData.pluginId();
 
+            path = overridePackagePath + QStringLiteral("/metadata.json");
+            if (QFile::exists(path)) {
+                package.setPath(overridePackagePath);
+            }
+
             path = overridePackagePath + QStringLiteral("/metadata.desktop");
             if (QFile::exists(path)) {
                 package.setPath(overridePackagePath);
@@ -518,7 +523,10 @@ QScriptValue ScriptEngine::V1::loadTemplate(QScriptContext *context, QScriptEngi
     }
 
     if (!package.isValid()) {
-        path = QStandardPaths::locate(QStandardPaths::GenericDataLocation, package.defaultPackageRoot() + pluginData.pluginId() + "/metadata.desktop");
+        path = QStandardPaths::locate(QStandardPaths::GenericDataLocation, package.defaultPackageRoot() + pluginData.pluginId() + "/metadata.json");
+        if (path.isEmpty()) {
+            path = QStandardPaths::locate(QStandardPaths::GenericDataLocation, package.defaultPackageRoot() + pluginData.pluginId() + "/metadata.desktop");
+        }
         if (path.isEmpty()) {
             // qDebug() << "script path is empty";
             return false;

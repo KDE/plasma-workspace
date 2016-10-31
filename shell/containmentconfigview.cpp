@@ -141,8 +141,8 @@ PlasmaQuick::ConfigModel *ContainmentConfigView::wallpaperConfigModel()
             QStringList packages;
 
             foreach (const QString &sdir, dir.entryList(QDir::AllDirs | QDir::Readable)) {
-                QString metadata = dirPath + '/' + sdir + "/metadata.desktop";
-                if (QFile::exists(metadata)) {
+                const QString metadata = dirPath + '/' + sdir;
+                if (QFile::exists(metadata + "/metadata.json") || QFile::exists(metadata + "/metadata.desktop")) {
                     packages << sdir;
                 }
             }
