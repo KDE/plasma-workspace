@@ -25,6 +25,7 @@
 
 #include <QAction>
 #include <QObject>
+#include <QQmlParserStatus>
 
 #include "plasmaappletitemmodel_p.h"
 
@@ -50,10 +51,11 @@ Q_SIGNALS:
     void separatorChanged();
 };
 
-class WidgetExplorer : public QObject
+class WidgetExplorer : public QObject, public QQmlParserStatus
 {
 
     Q_OBJECT
+    Q_INTERFACES(QQmlParserStatus)
 
     /**
      * Model that lists all applets
@@ -64,6 +66,11 @@ class WidgetExplorer : public QObject
      * Model that lists all applets filters and categories
      */
     Q_PROPERTY(QObject * filterModel READ filterModel CONSTANT)
+
+    /**
+     * Whether to show special filters such as "Running" and "Uninstallable" in the filterModel.
+     */
+    Q_PROPERTY(bool showSpecialFilters READ showSpecialFilters WRITE setShowSpecialFilters NOTIFY showSpecialFiltersChanged)
 
     /**
      * Actions for adding widgets, like download plasma widgets, download google gadgets, install from local file
@@ -125,6 +132,9 @@ public:
     QObject *widgetsModel() const;
     QObject *filterModel() const;
 
+    bool showSpecialFilters() const;
+    void setShowSpecialFilters(bool show);
+
     QList <QObject *>  widgetsMenuActions();
     QList <QObject *>  extraActions() const;
 
@@ -132,6 +142,9 @@ public:
      * Uninstall a plasmoid with a given plugin name. only user-installed ones are uninstallable
      */
     Q_INVOKABLE void uninstall(const QString &pluginName);
+
+    void classBegin();
+    void componentComplete();
 
 Q_SIGNALS:
     void widgetsMenuActionsChanged();
@@ -149,6 +162,9 @@ public Q_SLOTS:
     void addApplet(const QString &pluginName);
     void openWidgetFile();
     void downloadWidgets(const QString &type);
+
+Q_SIGNALS:
+    void showSpecialFiltersChanged() const;
 
 protected Q_SLOTS:
     void immutabilityChanged(Plasma::Types::ImmutabilityType);

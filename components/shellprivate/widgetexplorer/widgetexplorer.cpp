@@ -105,6 +105,7 @@ public:
 
     PlasmaAppletItemModel itemModel;
     KCategorizedItemsViewModels::DefaultFilterModel filterModel;
+    bool showSpecialFilters = true;
     DefaultItemFilterProxyModel filterItemModel;
     QPointer<KNS3::DownloadDialog> newStuffDialog;
 
@@ -113,19 +114,23 @@ public:
 
 void WidgetExplorerPrivate::initFilters()
 {
-    filterModel.addFilter(i18n("All Widgets"),
-                          KCategorizedItemsViewModels::Filter(), QIcon::fromTheme(QStringLiteral("plasma")));
+    filterModel.clear();
 
-    // Filters: Special
-    filterModel.addFilter(i18n("Running"),
-                          KCategorizedItemsViewModels::Filter(QStringLiteral("running"), true),
-                          QIcon::fromTheme(QStringLiteral("dialog-ok")));
+    if (showSpecialFilters) {
+        filterModel.addFilter(i18n("All Widgets"),
+                            KCategorizedItemsViewModels::Filter(), QIcon::fromTheme(QStringLiteral("plasma")));
 
-    filterModel.addFilter(i18n("Uninstallable"),
-                          KCategorizedItemsViewModels::Filter(QStringLiteral("local"), true),
-                          QIcon::fromTheme(QStringLiteral("list-remove")));
+        // Filters: Special
+        filterModel.addFilter(i18n("Running"),
+                            KCategorizedItemsViewModels::Filter(QStringLiteral("running"), true),
+                            QIcon::fromTheme(QStringLiteral("dialog-ok")));
 
-    filterModel.addSeparator(i18n("Categories:"));
+        filterModel.addFilter(i18n("Uninstallable"),
+                            KCategorizedItemsViewModels::Filter(QStringLiteral("local"), true),
+                            QIcon::fromTheme(QStringLiteral("list-remove")));
+
+        filterModel.addSeparator(i18n("Categories:"));
+    }
 
     typedef QPair<QString, QString> catPair;
     QMap<QString, catPair > categories;
@@ -164,6 +169,15 @@ void WidgetExplorerPrivate::initFilters()
 
 }
 
+void WidgetExplorer::classBegin()
+{
+}
+
+void WidgetExplorer::componentComplete()
+{
+    setApplication();
+    d->initRunningApplets();
+}
 
 QObject *WidgetExplorer::widgetsModel() const
 {
@@ -173,6 +187,20 @@ QObject *WidgetExplorer::widgetsModel() const
 QObject *WidgetExplorer::filterModel() const
 {
     return &d->filterModel;
+}
+
+bool WidgetExplorer::showSpecialFilters() const
+{
+    return d->showSpecialFilters;
+}
+
+void WidgetExplorer::setShowSpecialFilters(bool show)
+{
+    if (d->showSpecialFilters != show) {
+        d->showSpecialFilters = show;
+        d->initFilters();
+        emit showSpecialFiltersChanged();
+    }
 }
 
 QList <QObject *>  WidgetExplorer::widgetsMenuActions()
@@ -302,10 +330,6 @@ WidgetExplorer::WidgetExplorer(QObject *parent)
         : QObject(parent),
           d(new WidgetExplorerPrivate(this))
 {
-    //FIXME: delay
-    setApplication();
-    d->initRunningApplets();
-
     d->filterItemModel.setSortCaseSensitivity(Qt::CaseInsensitive);
     d->filterItemModel.setDynamicSortFilter(true);
     d->filterItemModel.setSourceModel(&d->itemModel);
