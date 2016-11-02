@@ -6,8 +6,8 @@ set(image_SRCS
     backgroundlistmodel.cpp
 )
 
-
 add_library(plasma_wallpaper_imageplugin SHARED ${image_SRCS})
+
 target_link_libraries(plasma_wallpaper_imageplugin
 	 Qt5::Core
 	 Qt5::Quick
@@ -21,6 +21,8 @@ target_link_libraries(plasma_wallpaper_imageplugin
          KF5::NewStuff
          KF5::GuiAddons
          )
+
+add_subdirectory(autotests)
 
 install(TARGETS plasma_wallpaper_imageplugin DESTINATION ${KDE_INSTALL_QMLDIR}/org/kde/plasma/wallpapers/image)
 
