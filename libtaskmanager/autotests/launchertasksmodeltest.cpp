@@ -46,6 +46,7 @@ class LauncherTasksModelTest : public QObject
 
 void LauncherTasksModelTest::initTestCase()
 {
+    qApp->setProperty("org.kde.KActivities.core.disableAutostart", true);
     m_urlStrings << QLatin1String("file:///usr/share/applications/org.kde.dolphin.desktop");
     m_urlStrings << QLatin1String("file:///usr/share/applications/org.kde.konsole.desktop");
 }
