@@ -156,13 +156,14 @@ void Image::setRenderingMode(RenderingMode mode)
 float distance(const QSize& size, const QSize& desired)
 {
     // compute difference of areas
-    float delta = size.width() * size.height() -
-                  desired.width() * desired.height();
-    // scale down to about 1.0
-    delta /= ((desired.width() * desired.height())+(size.width() * size.height()))/2;
+    float desiredAspectRatio = ( desired.height() > 0 ) ? desired.width() / (float)desired.height() : 0;
+    float candidateAspectRatio = ( size.height() > 0 ) ? size.width() / (float)size.height() : FLT_MAX;
 
-    // Difference of areas, slight preference to scale down
-    return delta >= 0.0 ? delta : -delta + 2.0;
+    float delta = size.width() - desired.width();
+    delta = (delta >= 0.0 ? delta : -delta*2 ); // Penalize for scaling up
+
+    return qAbs(candidateAspectRatio - desiredAspectRatio)*25000 + delta;
+
 }
 
 QSize resSize(const QString &str)
@@ -176,56 +177,48 @@ QSize resSize(const QString &str)
     return QSize();
 }
 
-void Image::findPreferedImageInPackage(KPackage::Package &package)
+QString Image::findPreferedImage(const QStringList &images)
 {
-    if (!package.isValid() || !package.filePath("preferred").isEmpty()) {
-        return;
-    }
-
-    QStringList images = package.entryList("images");
     if (images.empty()) {
-        return;
+        return QString();
     }
 
-    //qDebug() << "wanted" << m_targetSize << "options" << images;
-
-    // choose the nearest resolution, always preferring images with the same aspect ratio
+    //float targetAspectRatio = (m_targetSize.height() > 0 ) ? m_targetSize.width() / (float)m_targetSize.height() : 0;
+    //qDebug() << "wanted" << m_targetSize << "options" << images << "aspect ratio" << targetAspectRatio;
     float best = FLT_MAX;
-    float bestWithSameAspectRatio = FLT_MAX;
-    float targetAspectRatio = m_targetSize.width()/(float)m_targetSize.height();
 
     QString bestImage;
-    QString bestImageWithSameAspectRatio;
     foreach (const QString &entry, images) {
         QSize candidate = resSize(QFileInfo(entry).baseName());
         if (candidate == QSize()) {
             continue;
         }
-        float candidateAspectRatio = candidate.width()/(float)candidate.height();
+        //float candidateAspectRatio = (candidate.height() > 0 ) ? candidate.width() / (float)candidate.height() : FLT_MAX;
 
-        double dist = distance(candidate, m_targetSize);
+        float dist = distance(candidate, m_targetSize);
         //qDebug() << "candidate" << candidate << "distance" << dist << "aspect ratio" << candidateAspectRatio;
 
-        if ( candidateAspectRatio == targetAspectRatio && (bestImageWithSameAspectRatio.isEmpty() || dist < bestWithSameAspectRatio) ) {
-            bestImageWithSameAspectRatio = entry;
-            bestWithSameAspectRatio = dist;
-            //qDebug() << "bestWithSameAspectRatio" << bestImageWithSameAspectRatio;
-            if (dist == 0) {
-                break;
-            }
-        } else if (bestImage.isEmpty() || dist < best) {
+        if (bestImage.isEmpty() || dist < best) {
             bestImage = entry;
             best = dist;
             //qDebug() << "best" << bestImage;
         }
     }
 
-    if (!bestImageWithSameAspectRatio.isEmpty()) // Always prefer an image with the same aspect ratio as the target (if available)
-       bestImage=bestImageWithSameAspectRatio;
-
     //qDebug() << "best image" << bestImage;
+    return bestImage;
+}
+
+void Image::findPreferedImageInPackage(KPackage::Package &package)
+{
+    if (!package.isValid() || !package.filePath("preferred").isEmpty()) {
+        return;
+    }
+
+    QString preferred = findPreferedImage( package.entryList("images") );
+
     package.removeDefinition("preferred");
-    package.addFileDefinition("preferred", "images/" + bestImage, i18n("Recommended wallpaper file"));
+    package.addFileDefinition("preferred", "images/" + preferred, i18n("Recommended wallpaper file"));
 }
 
 QSize Image::targetSize() const

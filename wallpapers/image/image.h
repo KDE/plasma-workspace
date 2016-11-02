@@ -114,6 +114,7 @@ class Image : public QObject, public QQmlParserStatus
         void setSlidePaths(const QStringList &slidePaths);
 
         void findPreferedImageInPackage(KPackage::Package &package);
+        QString findPreferedImage(const QStringList &images);
 
         void classBegin() override;
         void componentComplete() override;
