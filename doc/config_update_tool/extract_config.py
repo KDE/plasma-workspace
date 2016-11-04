@@ -24,7 +24,9 @@ if not xdg_data_dir:
 
 root = xdg_data_dir + "/plasma/plasmoids"
 
-for plasmoid in os.listdir(root):
+plasmoids = os.listdir(root)
+plasmoids.sort()
+for plasmoid in plasmoids:
     configPath = "/contents/config/main.xml"
     path  = root + "/" + plasmoid + configPath
     try:
