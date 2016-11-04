@@ -102,7 +102,12 @@ PlasmaCore.ToolTipArea {
             abstractItem.hideToolTip()
             abstractItem.clicked(mouse)
         }
-        onWheel: abstractItem.wheel(wheel)
+        onWheel: {
+            abstractItem.wheel(wheel);
+            //Don't accept the event in order to make the scrolling by mouse wheel working
+            //for the parent scrollview this icon is in.
+            wheel.accepted = false;
+        }
     }
 
     PlasmaComponents.Label {
