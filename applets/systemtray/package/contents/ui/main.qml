@@ -328,6 +328,7 @@ MouseArea {
         flags: Qt.WindowStaysOnTopHint
         location: plasmoid.location
         hideOnWindowDeactivate: expandedRepresentation.hideOnWindowDeactivate
+
         onVisibleChanged: {
             if (!visible) {
                 plasmoid.status = PlasmaCore.Types.PassiveStatus;
@@ -340,6 +341,11 @@ MouseArea {
         }
         mainItem: ExpandedRepresentation {
             id: expandedRepresentation
+
+            Keys.onEscapePressed: {
+                root.expanded = false;
+            }
+
             activeApplet: root.activeApplet
 
             LayoutMirroring.enabled: Qt.application.layoutDirection === Qt.RightToLeft
