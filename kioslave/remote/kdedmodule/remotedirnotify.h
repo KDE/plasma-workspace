@@ -19,7 +19,7 @@
 #ifndef REMOTEDIRNOTIFY_H
 #define REMOTEDIRNOTIFY_H
 
-#include <kurl.h>
+#include <QUrl>
 #include <QtCore/QObject>
 
 class RemoteDirNotify : public QObject
@@ -35,9 +35,9 @@ private slots:
 	void FilesChanged (const QStringList &fileList);
 
 private:
-	KUrl toRemoteURL(const KUrl &url);
-	KUrl::List toRemoteURLList(const KUrl::List &list);
-	KUrl m_baseURL;
+	QUrl toRemoteURL(const QUrl &url);
+	QList<QUrl> toRemoteURLList(const QStringList &list);
+	QUrl m_baseURL;
 };
 
 #endif

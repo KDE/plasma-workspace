@@ -19,19 +19,15 @@
 #include "remotedirnotify.h"
 
 #include "../debug.h"
-#include <klocale.h>
-#include <kglobal.h>
-#include <kstandarddirs.h>
 #include <kdesktopfile.h>
 #include <kdirnotify.h>
+#include <KIO/Global>
 
 #include <QtDBus/QtDBus>
 
 RemoteDirNotify::RemoteDirNotify()
 {
-	KGlobal::dirs()->addResourceType("remote_entries", "data", "remoteview");
-
-	const QString path = KGlobal::dirs()->saveLocation("remote_entries");
+	const QString path = QStringLiteral("%1/remoteview").arg(QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation));
 	m_baseURL.setPath(path);
 
 	QDBusConnection::sessionBus().connect(QString(), QString(), QStringLiteral("org.kde.KDirNotify"),
@@ -42,48 +38,42 @@ RemoteDirNotify::RemoteDirNotify()
 				    QStringLiteral("FilesChanged"), this, SLOT(FilesChanged(QStringList)));
 }
 
-KUrl RemoteDirNotify::toRemoteURL(const KUrl &url)
+QUrl RemoteDirNotify::toRemoteURL(const QUrl &url)
 {
 	qCDebug(KIOREMOTE_LOG) << "RemoteDirNotify::toRemoteURL(" << url << ")";
 	if ( m_baseURL.isParentOf(url) )
 	{
-		QString path = KUrl::relativePath(m_baseURL.path(),
-						  url.path());
-		KUrl result("remote:/"+path);
-		result.cleanPath();
+		QString path = QDir(m_baseURL.path()).relativeFilePath(url.path());
+		QUrl result;
+		result.setScheme(QStringLiteral("remote"));
+		result.setPath(path);
+		result.setPath(QDir::cleanPath(result.path()));
 		qCDebug(KIOREMOTE_LOG) << "result => " << result;
 		return result;
 	}
 
-	qCDebug(KIOREMOTE_LOG) << "result => KUrl()";
-	return KUrl();
+	qCDebug(KIOREMOTE_LOG) << "result => QUrl()";
+	return QUrl();
 }
 
-KUrl::List RemoteDirNotify::toRemoteURLList(const KUrl::List &list)
+QList<QUrl> RemoteDirNotify::toRemoteURLList(const QStringList &list)
 {
-	KUrl::List new_list;
+    QList<QUrl> urls;
+    for (const QString &file : list) {
+        QUrl url = toRemoteURL(QUrl::fromLocalFile(file));
+        if (url.isValid()) {
+            urls.append(url);
+        }
+    }
 
-	KUrl::List::const_iterator it = list.begin();
-	KUrl::List::const_iterator end = list.end();
-
-	for (; it!=end; ++it)
-	{
-		KUrl url = toRemoteURL(*it);
-
-		if (url.isValid())
-		{
-			new_list.append(url);
-		}
-	}
-
-	return new_list;
+    return urls;
 }
 
 void RemoteDirNotify::FilesAdded(const QString &directory)
 {
 	qCDebug(KIOREMOTE_LOG) << "RemoteDirNotify::FilesAdded";
 
-	QUrl new_dir = toRemoteURL(directory);
+	QUrl new_dir = toRemoteURL(QUrl::fromLocalFile(directory));
 
 	if (new_dir.isValid())
 	{
@@ -96,16 +86,16 @@ void RemoteDirNotify::FilesAdded(const QString &directory)
 // have a file:/ based UDS_URL so that they are executed correctly.
 // Hence, FilesRemoved and FilesChanged does nothing... We're forced to use
 // FilesAdded to re-list the modified directory.
-inline void evil_hack(const KUrl::List &list)
+inline void evil_hack(const QList<QUrl> &list)
 {
-	KUrl::List notified;
+	QList<QUrl> notified;
 
-	KUrl::List::const_iterator it = list.begin();
-	KUrl::List::const_iterator end = list.end();
+	QList<QUrl>::const_iterator it = list.begin();
+	QList<QUrl>::const_iterator end = list.end();
 
 	for (; it!=end; ++it)
 	{
-		QUrl url = (*it).upUrl();
+		QUrl url = KIO::upUrl(*it);
 
 		if (!notified.contains(url))
 		{
@@ -120,7 +110,7 @@ void RemoteDirNotify::FilesRemoved(const QStringList &fileList)
 {
 	qCDebug(KIOREMOTE_LOG) << "RemoteDirNotify::FilesRemoved";
 
-	KUrl::List new_list = toRemoteURLList(fileList);
+	QList<QUrl> new_list = toRemoteURLList(fileList);
 
 	if (!new_list.isEmpty())
 	{
@@ -134,7 +124,7 @@ void RemoteDirNotify::FilesChanged(const QStringList &fileList)
 {
 	qCDebug(KIOREMOTE_LOG) << "RemoteDirNotify::FilesChanged";
 
-	KUrl::List new_list = toRemoteURLList(fileList);
+	QList<QUrl> new_list = toRemoteURLList(fileList);
 
 	if (!new_list.isEmpty())
 	{

@@ -18,10 +18,6 @@
 
 #include "remotedirnotifymodule.h"
 
-#include <kdebug.h>
-#include <klocale.h>
-#include <kglobal.h>
-
 #include <kpluginfactory.h>
 //#include <kpluginloader.h>
 

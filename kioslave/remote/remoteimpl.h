@@ -22,7 +22,7 @@
 
 #include <kio/global.h>
 #include <kio/job.h>
-#include <kurl.h>
+#include <QUrl>
 
 
 
@@ -33,12 +33,12 @@ public:
 
 	void createTopLevelEntry(KIO::UDSEntry &entry) const;
 	bool createWizardEntry(KIO::UDSEntry &entry) const;
-	bool isWizardURL(const KUrl &url) const;
+	bool isWizardURL(const QUrl &url) const;
 	bool statNetworkFolder(KIO::UDSEntry &entry, const QString &filename) const;
 
 	void listRoot(KIO::UDSEntryList& list) const;
 
-	KUrl findBaseURL(const QString &filename) const;
+	QUrl findBaseURL(const QString &filename) const;
 	QString findDesktopFile(const QString &filename) const;
 
 	bool deleteNetworkFolder(const QString &filename) const;

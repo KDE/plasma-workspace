@@ -20,13 +20,10 @@
 #include "remoteimpl.h"
 
 #include "debug.h"
-#include <kglobalsettings.h>
-#include <kstandarddirs.h>
 #include <kdesktopfile.h>
 #include <kservice.h>
-#include <kglobal.h>
-#include <klocale.h>
 #include <kconfiggroup.h>
+#include <KLocalizedString>
 
 #include <QDir>
 #include <QFile>
@@ -38,9 +35,7 @@
 
 RemoteImpl::RemoteImpl()
 {
-	KGlobal::dirs()->addResourceType("remote_entries", "data", "remoteview");
-
-	const QString path = KGlobal::dirs()->saveLocation("remote_entries");
+	const QString path = QStringLiteral("%1/remoteview").arg(QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation));
 
 	QDir dir = path;
 	if (!dir.exists())
@@ -55,7 +50,7 @@ void RemoteImpl::listRoot(KIO::UDSEntryList &list) const
 	qCDebug(KIOREMOTE_LOG) << "RemoteImpl::listRoot";
 
 	QStringList names_found;
-	const QStringList dirList = KGlobal::dirs()->resourceDirs("remote_entries");
+	const QStringList dirList = QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, QStringLiteral("remoteview"), QStandardPaths::LocateDirectory);
 
 	QStringList::ConstIterator dirpath = dirList.constBegin();
 	const QStringList::ConstIterator end = dirList.constEnd();
@@ -90,7 +85,7 @@ bool RemoteImpl::findDirectory(const QString &filename, QString &directory) cons
 {
 	qCDebug(KIOREMOTE_LOG) << "RemoteImpl::findDirectory";
 
-	const QStringList dirList = KGlobal::dirs()->resourceDirs("remote_entries");
+	const QStringList dirList = QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, QStringLiteral("remoteview"), QStandardPaths::LocateDirectory);
 
 	QStringList::ConstIterator dirpath = dirList.constBegin();
 	const QStringList::ConstIterator end = dirList.constEnd();
@@ -134,7 +129,7 @@ QString RemoteImpl::findDesktopFile(const QString &filename) const
 	return QString();
 }
 
-KUrl RemoteImpl::findBaseURL(const QString &filename) const
+QUrl RemoteImpl::findBaseURL(const QString &filename) const
 {
 	qCDebug(KIOREMOTE_LOG) << "RemoteImpl::findBaseURL";
 
@@ -142,10 +137,10 @@ KUrl RemoteImpl::findBaseURL(const QString &filename) const
 	if (!file.isEmpty())
 	{
 		KDesktopFile desktop( file );
-		return desktop.readUrl();
+		return QUrl::fromLocalFile(desktop.readUrl());
 	}
 
-	return KUrl();
+	return QUrl();
 }
 
 
@@ -161,16 +156,15 @@ void RemoteImpl::createTopLevelEntry(KIO::UDSEntry &entry) const
     entry.insert( KIO::UDSEntry::UDS_GROUP, QString::fromLatin1("root"));
 }
 
-static KUrl findWizardRealURL()
+static QUrl findWizardRealURL()
 {
-	KUrl url;
+	QUrl url;
 	KService::Ptr service = KService::serviceByDesktopName(WIZARD_SERVICE);
 
 	if (service && service->isValid())
 	{
-		url.setPath( KStandardDirs::locate("apps",
-				    service->entryPath())
-				);
+		url.setPath(QStandardPaths::locate(QStandardPaths::ApplicationsLocation,
+					QStringLiteral("%1.desktop").arg(WIZARD_SERVICE)));
 	}
 
 	return url;
@@ -180,7 +174,7 @@ bool RemoteImpl::createWizardEntry(KIO::UDSEntry &entry) const
 {
 	entry.clear();
 
-	KUrl url = findWizardRealURL();
+	QUrl url = findWizardRealURL();
 
 	if (!url.isValid())
 	{
@@ -198,9 +192,9 @@ bool RemoteImpl::createWizardEntry(KIO::UDSEntry &entry) const
 	return true;
 }
 
-bool RemoteImpl::isWizardURL(const KUrl &url) const
+bool RemoteImpl::isWizardURL(const QUrl &url) const
 {
-	return url==KUrl(WIZARD_URL);
+	return url==QUrl(WIZARD_URL);
 }
 
 
@@ -210,7 +204,11 @@ void RemoteImpl::createEntry(KIO::UDSEntry &entry,
 {
 	qCDebug(KIOREMOTE_LOG) << "RemoteImpl::createEntry";
 
-	KDesktopFile desktop(directory+file);
+	QString dir = directory;
+	if (!dir.endsWith(QLatin1Char('/'))) {
+		dir += QLatin1Char('/');
+	}
+	KDesktopFile desktop(dir + file);
 
 	qCDebug(KIOREMOTE_LOG) << "path = " << directory << file;
 
