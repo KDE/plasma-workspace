@@ -23,6 +23,7 @@ License along with this library.  If not, see <http://www.gnu.org/licenses/>.
 #include "tasktools.h"
 
 #include <KConfigGroup>
+#include <KDesktopFile>
 #include <KDirWatch>
 #include <KIconLoader>
 #include <KRun>
@@ -50,9 +51,9 @@ namespace TaskManager
 {
 
 static const NET::Properties windowInfoFlags = NET::WMState | NET::XAWMState | NET::WMDesktop |
-        NET::WMVisibleName | NET::WMGeometry | NET::WMFrameExtents |
-        NET::WMWindowType;
-static const NET::Properties2 windowInfoFlags2 = NET::WM2WindowClass | NET::WM2AllowedActions;
+    NET::WMVisibleName | NET::WMGeometry | NET::WMFrameExtents | NET::WMWindowType;
+static const NET::Properties2 windowInfoFlags2 = NET::WM2DesktopFileName | NET::WM2Activities |
+    NET::WM2WindowClass | NET::WM2AllowedActions;
 
 class XWindowTasksModel::Private
 {
@@ -88,7 +89,6 @@ public:
     QUrl launcherUrl(WId window, bool encodeFallbackIcon = true);
     QUrl serviceUrl(int pid, const QString &type, const QStringList &cmdRemovals);
     KService::List servicesFromPid(int pid);
-    QStringList activities(WId window);
     bool demandsAttention(WId window);
 
 private:
@@ -341,8 +341,8 @@ void XWindowTasksModel::Private::windowChanged(WId window, NET::Properties prope
     bool wipeAppDataCache = false;
     QVector<int> changedRoles;
 
-    if (properties & (NET::WMName | NET::WMVisibleName | NET::WM2WindowClass | NET::WMPid)
-        || properties2 & NET::WM2WindowClass) {
+    if (properties & (NET::WMName | NET::WMVisibleName | NET::WMPid)
+        || properties2 & (NET::WM2DesktopFileName | NET::WM2WindowClass)) {
         wipeInfoCache = true;
         wipeAppDataCache = true;
         changedRoles << Qt::DisplayRole << Qt::DecorationRole << AppId << AppName << GenericName << LauncherUrl;
@@ -484,6 +484,21 @@ QUrl XWindowTasksModel::Private::windowUrl(WId window)
     QUrl url;
 
     const KWindowInfo *info = windowInfo(window);
+
+    const QString &desktopFile = QString::fromUtf8(info->desktopFileName());
+
+    if (!desktopFile.isEmpty()) {
+        KService::Ptr service = KService::serviceByStorageId(desktopFile);
+
+        if (service) {
+            return QUrl::fromLocalFile(service->entryPath());
+        }
+
+        if (KDesktopFile::isDesktopFile(desktopFile) && QFile::exists(desktopFile)) {
+            return QUrl::fromLocalFile(desktopFile);
+        }
+    }
+
     const QString &classClass = info->windowClassClass();
     const QString &className = info->windowClassName();
 
@@ -801,19 +816,6 @@ KService::List XWindowTasksModel::Private::servicesFromPid(int pid)
     return services;
 }
 
-QStringList XWindowTasksModel::Private::activities(WId window)
-{
-    NETWinInfo ni(QX11Info::connection(), window, QX11Info::appRootWindow(), 0, NET::WM2Activities);
-
-    const QString result(ni.activities());
-
-    if (!result.isEmpty() && result != QLatin1String("00000000-0000-0000-0000-000000000000")) {
-        return result.split(',');
-    }
-
-    return QStringList();
-}
-
 bool XWindowTasksModel::Private::demandsAttention(WId window)
 {
     if (windows.contains(window)) {
@@ -905,7 +907,7 @@ QVariant XWindowTasksModel::data(const QModelIndex &index, int role) const
     } else if (role == ScreenGeometry) {
         return screenGeometry(d->windowInfo(window)->frameGeometry().center());
     } else if (role == Activities) {
-        return d->activities(window);
+        return d->windowInfo(window)->activities();
     } else if (role == IsDemandingAttention) {
         return d->demandsAttention(window);
     } else if (role == SkipTaskbar) {
