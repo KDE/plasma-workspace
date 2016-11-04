@@ -50,12 +50,10 @@ ColumnLayout {
                 break;
             }
             case Qt.Key_Escape: {
-                if (filter.text == "") {
-                    plasmoid.expanded = false;
-                } else {
+                if (filter.text != "") {
                     filter.text = "";
+                    event.accepted = true;
                 }
-                event.accepted = true;
                 break;
             }
             default: { // forward key to filter
