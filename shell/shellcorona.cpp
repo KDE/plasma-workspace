@@ -832,6 +832,30 @@ void ShellCorona::requestApplicationConfigSync()
 
 void ShellCorona::loadDefaultLayout()
 {
+    //pre-startup scripts
+    QString script = m_lookAndFeelPackage.filePath("layouts", QString(shell() + "-prelayout.js").toLatin1());
+    if (!script.isEmpty()) {
+          QFile file(script);
+            if (file.open(QIODevice::ReadOnly | QIODevice::Text) ) {
+                QString code = file.readAll();
+                qDebug() << "evaluating pre-startup script:" << script;
+
+                WorkspaceScripting::ScriptEngine scriptEngine(this);
+
+                connect(&scriptEngine, &WorkspaceScripting::ScriptEngine::printError, this,
+                        [](const QString &msg) {
+                            qWarning() << msg;
+                        });
+                connect(&scriptEngine, &WorkspaceScripting::ScriptEngine::print, this,
+                        [](const QString &msg) {
+                            qDebug() << msg;
+                        });
+                if (!scriptEngine.evaluateScript(code, script)) {
+                    qWarning() << "failed to initialize layout properly:" << script;
+                }
+            }
+    }
+
     //NOTE: Is important the containments already exist for each screen
     // at the moment of the script execution,the same loop in :load()
     // is executed too late
@@ -839,7 +863,7 @@ void ShellCorona::loadDefaultLayout()
         addOutput(screen);
     }
 
-    QString script = ShellManager::s_testModeLayout;
+    script = ShellManager::s_testModeLayout;
 
     if (script.isEmpty()) {
         script = m_lookAndFeelPackage.filePath("layouts", QString(shell() + "-layout.js").toLatin1());
