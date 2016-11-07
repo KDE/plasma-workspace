@@ -485,13 +485,17 @@ QUrl XWindowTasksModel::Private::windowUrl(WId window)
 
     const KWindowInfo *info = windowInfo(window);
 
-    const QString &desktopFile = QString::fromUtf8(info->desktopFileName());
+    QString desktopFile = QString::fromUtf8(info->desktopFileName());
 
     if (!desktopFile.isEmpty()) {
         KService::Ptr service = KService::serviceByStorageId(desktopFile);
 
         if (service) {
             return QUrl::fromLocalFile(service->entryPath());
+        }
+
+        if (!desktopFile.endsWith(QLatin1String(".desktop"))) {
+            desktopFile.append(QLatin1String(".desktop"));
         }
 
         if (KDesktopFile::isDesktopFile(desktopFile) && QFile::exists(desktopFile)) {
