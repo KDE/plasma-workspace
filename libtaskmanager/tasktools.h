@@ -65,6 +65,22 @@ enum UrlComparisonMode {
 TASKMANAGER_EXPORT AppData appDataFromUrl(const QUrl &url, const QIcon &fallbackIcon = QIcon());
 
 /**
+ * Fills in and returns an AppData struct based on the given application
+ * id.
+ *
+ * Application ids are .desktop file names sans extension or an absolute
+ * path to a .desktop file.
+ *
+ * NOTE: Unlike appDataFromUrl(), this makes no attempt to procure icon
+ * data at this time.
+ *
+ * @see appDataFromUrl
+ * @param appId An application id.
+ * @returns @c AppData filled in based on the given application id.
+ */
+TASKMANAGER_EXPORT AppData appDataFromAppId(const QString &appId);
+
+/**
  * Returns an application id for an URL using the preferred:// scheme.
  *
  * Recognized values for the host component of the URL are:

@@ -22,6 +22,7 @@ License along with this library.  If not, see <http://www.gnu.org/licenses/>.
 #include "xwindowtasksmodel.h"
 #include "tasktools.h"
 
+#include <KActivities/ResourceInstance>
 #include <KConfigGroup>
 #include <KDesktopFile>
 #include <KDirWatch>
@@ -414,41 +415,45 @@ void XWindowTasksModel::Private::dataChanged(WId window, const QVector<int> &rol
 
 KWindowInfo* XWindowTasksModel::Private::windowInfo(WId window)
 {
-    if (!windowInfoCache.contains(window)) {
-        KWindowInfo *info = new KWindowInfo(window, windowInfoFlags, windowInfoFlags2);
-        windowInfoCache.insert(window, info);
+    const auto &it = windowInfoCache.constFind(window);
 
-        return info;
+    if (it != windowInfoCache.constEnd()) {
+        return *it;
     }
 
-    return windowInfoCache.value(window);
+    KWindowInfo *info = new KWindowInfo(window, windowInfoFlags, windowInfoFlags2);
+    windowInfoCache.insert(window, info);
+
+    return info;
 }
 
 AppData XWindowTasksModel::Private::appData(WId window)
 {
-    if (!appDataCache.contains(window)) {
-        const AppData &data = appDataFromUrl(windowUrl(window));
+    const auto &it = appDataCache.constFind(window);
 
-        // If we weren't able to derive a launcher URL from the window meta data,
-        // fall back to WM_CLASS Class string as app id. This helps with apps we
-        // can't map to an URL due to existing outside the regular system
-        // environment, e.g. wine clients.
-        if (data.id.isEmpty() && data.url.isEmpty()) {
-            AppData dataCopy = data;
-
-            dataCopy.id = windowInfo(window)->windowClassClass();
-
-            appDataCache.insert(window, dataCopy);
-
-            return dataCopy;
-        }
-
-        appDataCache.insert(window, data);
-
-        return data;
+    if (it != appDataCache.constEnd()) {
+        return *it;
     }
 
-    return appDataCache.value(window);
+    const AppData &data = appDataFromUrl(windowUrl(window));
+
+    // If we weren't able to derive a launcher URL from the window meta data,
+    // fall back to WM_CLASS Class string as app id. This helps with apps we
+    // can't map to an URL due to existing outside the regular system
+    // environment, e.g. wine clients.
+    if (data.id.isEmpty() && data.url.isEmpty()) {
+        AppData dataCopy = data;
+
+        dataCopy.id = windowInfo(window)->windowClassClass();
+
+        appDataCache.insert(window, dataCopy);
+
+        return dataCopy;
+    }
+
+    appDataCache.insert(window, data);
+
+    return data;
 }
 
 QIcon XWindowTasksModel::Private::icon(WId window)
@@ -970,10 +975,15 @@ void XWindowTasksModel::requestNewInstance(const QModelIndex &index)
         return;
     }
 
-    const QUrl &url = d->appData(d->windows.at(index.row())).url;
+    const AppData &data = d->appData(d->windows.at(index.row()));
 
-    if (url.isValid()) {
-        new KRun(url, 0, false, KStartupInfo::createNewStartupIdForTimestamp(QX11Info::appUserTime()));
+    if (data.url.isValid()) {
+        new KRun(data.url, 0, false, KStartupInfo::createNewStartupIdForTimestamp(QX11Info::appUserTime()));
+
+        if (!data.id.isEmpty()) {
+            KActivities::ResourceInstance::notifyAccessed(QUrl(QStringLiteral("applications:") + data.id),
+                QStringLiteral("org.kde.libtaskmanager"));
+        }
     }
 }
 
@@ -987,8 +997,12 @@ void XWindowTasksModel::requestOpenUrls(const QModelIndex &index, const QList<QU
 
     const QUrl &url = d->appData(d->windows.at(index.row())).url;
     const KService::Ptr service = KService::serviceByDesktopPath(url.toLocalFile());
+
     if (service) {
         KRun::runApplication(*service, urls, nullptr, 0, {}, KStartupInfo::createNewStartupIdForTimestamp(QX11Info::appUserTime()));
+
+        KActivities::ResourceInstance::notifyAccessed(QUrl(QStringLiteral("applications:") + service->storageId()),
+            QStringLiteral("org.kde.libtaskmanager"));
     }
 }
 

@@ -124,14 +124,17 @@ void LauncherTasksModel::Private::init()
 
 AppData LauncherTasksModel::Private::appData(const QUrl &url)
 {
-    if (!appDataCache.contains(url)) {
-        const AppData &data = appDataFromUrl(url, QIcon::fromTheme(QLatin1String("unknown")));
-        appDataCache.insert(url, data);
+    const auto &it = appDataCache.constFind(url);
 
-        return data;
+    if (it != appDataCache.constEnd()) {
+        return *it;
     }
 
-    return appDataCache.value(url);
+    const AppData &data = appDataFromUrl(url, QIcon::fromTheme(QLatin1String("unknown")));
+
+    appDataCache.insert(url, data);
+
+    return data;
 }
 
 bool LauncherTasksModel::Private::requestAddLauncherToActivities(const QUrl &_url, const QStringList &_activities)

@@ -116,6 +116,44 @@ AppData appDataFromUrl(const QUrl &url, const QIcon &fallbackIcon)
     return data;
 }
 
+AppData appDataFromAppId(const QString &appId)
+{
+    AppData data;
+
+    KService::Ptr service = KService::serviceByStorageId(appId);
+
+    if (service) {
+        data.id = service->storageId();
+        data.name = service->name();
+        data.genericName = service->genericName();
+        data.url = QUrl::fromLocalFile(service->entryPath());
+
+        return data;
+    }
+
+    QString desktopFile = appId;
+
+    if (!desktopFile.endsWith(QLatin1String(".desktop"))) {
+        desktopFile.append(QLatin1String(".desktop"));
+    }
+
+    if (KDesktopFile::isDesktopFile(desktopFile) && QFile::exists(desktopFile)) {
+        KDesktopFile f(desktopFile);
+
+        data.id = QUrl::fromLocalFile(f.fileName()).fileName();
+
+        if (data.id.endsWith(QLatin1String(".desktop"))) {
+            data.id = data.id.left(data.id.length() - 8);
+        }
+
+        data.name = f.readName();
+        data.genericName = f.readGenericName();
+        data.url = QUrl::fromLocalFile(desktopFile);
+    }
+
+    return data;
+}
+
 QString defaultApplication(const QUrl &url)
 {
     if (url.scheme() != QLatin1String("preferred")) {

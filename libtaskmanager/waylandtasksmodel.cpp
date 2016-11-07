@@ -45,11 +45,14 @@ class WaylandTasksModel::Private
 public:
     Private(WaylandTasksModel *q);
     QList<KWayland::Client::PlasmaWindow*> windows;
-    QHash<KWayland::Client::PlasmaWindow*, KService::Ptr> serviceCache;
+    QHash<KWayland::Client::PlasmaWindow*, AppData> appDataCache;
     KWayland::Client::PlasmaWindowManagement *windowManagement = nullptr;
 
     void initWayland();
     void addWindow(KWayland::Client::PlasmaWindow *window);
+
+    AppData appData(KWayland::Client::PlasmaWindow *window);
+
     void dataChanged(KWayland::Client::PlasmaWindow *window, int role);
     void dataChanged(KWayland::Client::PlasmaWindow *window, const QVector<int> &roles);
 
@@ -116,12 +119,6 @@ void WaylandTasksModel::Private::addWindow(KWayland::Client::PlasmaWindow *windo
 
     windows.append(window);
 
-    KService::Ptr service = KService::serviceByStorageId(window->appId());
-
-    if (service) {
-        serviceCache.insert(window, service);
-    }
-
     q->endInsertRows();
 
     auto removeWindow = [window, this] {
@@ -129,7 +126,7 @@ void WaylandTasksModel::Private::addWindow(KWayland::Client::PlasmaWindow *windo
         if (row != -1) {
             q->beginRemoveRows(QModelIndex(), row, row);
             windows.removeAt(row);
-            serviceCache.remove(window);
+            appDataCache.remove(window);
             q->endRemoveRows();
         }
     };
@@ -147,13 +144,7 @@ void WaylandTasksModel::Private::addWindow(KWayland::Client::PlasmaWindow *windo
 
     QObject::connect(window, &KWayland::Client::PlasmaWindow::appIdChanged, q,
         [window, this] {
-            KService::Ptr service = KService::serviceByStorageId(window->appId());
-
-            if (service) {
-                serviceCache.insert(window, service);
-            } else {
-                serviceCache.remove(window);
-            }
+            appDataCache.remove(window);
 
             dataChanged(window, QVector<int>{AppId, AppName, GenericName,
                 LauncherUrl, LauncherUrlWithoutIcon});
@@ -237,6 +228,21 @@ void WaylandTasksModel::Private::addWindow(KWayland::Client::PlasmaWindow *windo
     );
 }
 
+AppData WaylandTasksModel::Private::appData(KWayland::Client::PlasmaWindow *window)
+{
+    const auto &it = appDataCache.constFind(window);
+
+    if (it != appDataCache.constEnd()) {
+        return *it;
+    }
+
+    const AppData &data = appDataFromAppId(window->appId());
+
+    appDataCache.insert(window, data);
+
+    return data;
+}
+
 void WaylandTasksModel::Private::dataChanged(KWayland::Client::PlasmaWindow *window, int role)
 {
     QModelIndex idx = q->index(windows.indexOf(window));
@@ -273,19 +279,11 @@ QVariant WaylandTasksModel::data(const QModelIndex &index, int role) const
     } else if (role == AppId) {
         return window->appId();
     } else if (role == AppName) {
-        if (d->serviceCache.contains(window)) {
-            return d->serviceCache.value(window)->name();
-        } else {
-            return window->title();
-        }
+        return d->appData(window).name;
     } else if (role == GenericName) {
-        if (d->serviceCache.contains(window)) {
-            return d->serviceCache.value(window)->genericName();
-        }
+        return d->appData(window).genericName;
     } else if (role == LauncherUrl || role == LauncherUrlWithoutIcon) {
-        if (d->serviceCache.contains(window)) {
-            return QUrl::fromLocalFile(d->serviceCache.value(window)->entryPath());
-        }
+        return d->appData(window).url;
     } else if (role == IsWindow) {
         return true;
     } else if (role == IsActive) {
@@ -368,13 +366,15 @@ void WaylandTasksModel::requestNewInstance(const QModelIndex &index)
 
     KWayland::Client::PlasmaWindow* window = d->windows.at(index.row());
 
-    if (d->serviceCache.contains(window)) {
-        const KService::Ptr service = d->serviceCache.value(window);
+    if (d->appDataCache.contains(window)) {
+        const AppData &data = d->appData(window);
 
-        new KRun(QUrl::fromLocalFile(service->entryPath()), 0, false);
+        new KRun(data.url, 0, false);
 
-        KActivities::ResourceInstance::notifyAccessed(QUrl("applications:" + service->storageId()),
-            "org.kde.libtaskmanager");
+        if (!data.id.isEmpty()) {
+            KActivities::ResourceInstance::notifyAccessed(QUrl(QStringLiteral("applications:") + data.id),
+                QStringLiteral("org.kde.libtaskmanager"));
+        }
     }
 }
 
@@ -386,15 +386,14 @@ void WaylandTasksModel::requestOpenUrls(const QModelIndex &index, const QList<QU
         return;
     }
 
-    KWayland::Client::PlasmaWindow *window = d->windows.at(index.row());
+    const QUrl &url = d->appData(d->windows.at(index.row())).url;
+    const KService::Ptr service = KService::serviceByDesktopPath(url.toLocalFile());
 
-    if (d->serviceCache.contains(window)) {
-        const KService::Ptr service = d->serviceCache.value(window);
-
+    if (service) {
         KRun::runApplication(*service, urls, nullptr, 0);
 
-        KActivities::ResourceInstance::notifyAccessed(QUrl("applications:" + service->storageId()),
-            "org.kde.libtaskmanager");
+        KActivities::ResourceInstance::notifyAccessed(QUrl(QStringLiteral("applications:") + service->storageId()),
+            QStringLiteral("org.kde.libtaskmanager"));
     }
 }
 
