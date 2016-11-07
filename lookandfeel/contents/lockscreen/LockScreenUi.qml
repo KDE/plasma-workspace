@@ -163,7 +163,8 @@ PlasmaCore.ColorScope {
                         text: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Switch User")
                         iconSource: "system-switch-user"
                         onClicked: mainStack.push(switchSessionPage)
-                        visible: sessionsModel.canSwitchUser
+                        // the current session isn't listed in the model, hence a check for greater than zero, not one
+                        visible: (sessionsModel.count > 0 || sessionsModel.canStartNewSession) && sessionsModel.canSwitchUser
                     }
                 ]
             }
