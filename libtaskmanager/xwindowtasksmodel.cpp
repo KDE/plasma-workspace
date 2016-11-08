@@ -595,7 +595,7 @@ QUrl XWindowTasksModel::Private::windowUrl(WId window)
                 }
             }
 
-            if (!mapped.isEmpty()) {
+            if (!mapped.isEmpty() && services.empty()) {
                 services = KServiceTypeTrader::self()->query(QStringLiteral("Application"), QStringLiteral("exist Exec and ('%1' =~ DesktopEntryName)").arg(mapped));
             }
 
