@@ -113,6 +113,9 @@ ShellCorona::ShellCorona(QObject *parent)
     m_appConfigSyncTimer.setSingleShot(true);
     m_appConfigSyncTimer.setInterval(s_configSyncDelay);
     connect(&m_appConfigSyncTimer, &QTimer::timeout, this, &ShellCorona::syncAppConfig);
+    //we want our application config with screen mapping to always be in sync with the applets one, so a crash at any time will still
+    //leave containments pointing to the correct screens
+    connect(this, &Corona::configSynced, this, &ShellCorona::syncAppConfig);
 
     m_waitingPanelsTimer.setSingleShot(true);
     m_waitingPanelsTimer.setInterval(250);
