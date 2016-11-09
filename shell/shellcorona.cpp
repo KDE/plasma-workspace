@@ -1178,7 +1178,12 @@ Plasma::Containment *ShellCorona::createContainmentForActivity(const QString& ac
 {
     if (m_desktopContainments.contains(activity)) {
         for (Plasma::Containment *cont : m_desktopContainments.value(activity)) {
-            if (cont->screen() == screenNum && cont->activity() == activity) {
+            //in the case of a corrupt config file
+            //with multiple containments with same lastScreen
+            //it can happen two insertContainment happen for
+            //the same screen, leading to the old containment 
+            //to be destroyed
+            if (!cont->destroyed() && cont->screen() == screenNum && cont->activity() == activity) {
                 return cont;
             }
         }
@@ -1832,6 +1837,7 @@ int ShellCorona::screenForContainment(const Plasma::Containment *containment) co
 //     qDebug() << "ShellCorona screenForContainment: " << containment << " Last screen is " << containment->lastScreen();
 
     for (auto screen : qGuiApp->screens()) {
+        // containment->lastScreen() == m_screenPool->id(screen->name()) to check if the lastScreen refers to a screen that exists/it's known
         if (containment->lastScreen() == m_screenPool->id(screen->name()) &&
             (containment->activity() == m_activityController->currentActivity() ||
             containment->containmentType() == Plasma::Types::PanelContainment || containment->containmentType() == Plasma::Types::CustomPanelContainment)) {

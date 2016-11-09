@@ -51,6 +51,17 @@ ScreenPool::ScreenPool(KSharedConfig::Ptr config, QObject *parent)
             m_configGroup.deleteEntry(key);
         }
     }
+
+    // if there are already connected unknown screens, map those
+    // all needs to be populated as soon as possible, otherwise
+    // containment->screen() will return an incorrect -1
+    // at startup, if it' asked before corona::addOutput()
+    // is performed, driving to the creation of a new containment
+    for (QScreen* screen : qGuiApp->screens()) {
+        if (!m_idForConnector.contains(screen->name())) {
+            insertScreenMapping(firstAvailableId(), screen->name());
+        }
+    }
 }
 
 ScreenPool::~ScreenPool()
