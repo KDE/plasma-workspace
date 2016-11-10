@@ -33,6 +33,7 @@ class ScreenPool : public QObject {
 
 public:
     ScreenPool(KSharedConfig::Ptr config, QObject *parent = nullptr);
+    void load();
     ~ScreenPool() override;
 
     QString primaryConnector() const;

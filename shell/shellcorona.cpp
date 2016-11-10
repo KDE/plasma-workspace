@@ -609,6 +609,8 @@ void ShellCorona::load()
 
     disconnect(m_activityController, &KActivities::Controller::serviceStatusChanged, this, &ShellCorona::load);
 
+    m_screenPool->load();
+
     //TODO: a kconf_update script is needed
     QString configFileName(QStringLiteral("plasma-") + m_shell + QStringLiteral("-appletsrc"));
 
@@ -657,9 +659,9 @@ void ShellCorona::load()
             addOutput(screen);
         }
     }
-    connect(qGuiApp, &QGuiApplication::screenAdded, this, &ShellCorona::addOutput);
-    connect(qGuiApp, &QGuiApplication::primaryScreenChanged, this, &ShellCorona::primaryOutputChanged);
-    connect(qGuiApp, &QGuiApplication::screenRemoved, this, &ShellCorona::screenRemoved);
+    connect(qGuiApp, &QGuiApplication::screenAdded, this, &ShellCorona::addOutput, Qt::UniqueConnection);
+    connect(qGuiApp, &QGuiApplication::primaryScreenChanged, this, &ShellCorona::primaryOutputChanged, Qt::UniqueConnection);
+    connect(qGuiApp, &QGuiApplication::screenRemoved, this, &ShellCorona::screenRemoved, Qt::UniqueConnection);
 
     if (!m_waitingPanels.isEmpty()) {
         m_waitingPanelsTimer.start();
@@ -1166,7 +1168,7 @@ Plasma::Containment *ShellCorona::createContainmentForActivity(const QString& ac
             //in the case of a corrupt config file
             //with multiple containments with same lastScreen
             //it can happen two insertContainment happen for
-            //the same screen, leading to the old containment 
+            //the same screen, leading to the old containment
             //to be destroyed
             if (!cont->destroyed() && cont->screen() == screenNum && cont->activity() == activity) {
                 return cont;
