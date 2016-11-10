@@ -675,9 +675,9 @@ void ShellCorona::load()
             addOutput(screen);
         }
     }
-    connect(qGuiApp, &QGuiApplication::screenAdded, this, &ShellCorona::addOutput);
-    connect(qGuiApp, &QGuiApplication::primaryScreenChanged, this, &ShellCorona::primaryOutputChanged);
-    connect(qGuiApp, &QGuiApplication::screenRemoved, this, &ShellCorona::screenRemoved);
+    connect(qGuiApp, &QGuiApplication::screenAdded, this, &ShellCorona::addOutput, Qt::UniqueConnection);
+    connect(qGuiApp, &QGuiApplication::primaryScreenChanged, this, &ShellCorona::primaryOutputChanged, Qt::UniqueConnection);
+    connect(qGuiApp, &QGuiApplication::screenRemoved, this, &ShellCorona::screenRemoved, Qt::UniqueConnection);
 
     if (!m_waitingPanels.isEmpty()) {
         m_waitingPanelsTimer.start();
