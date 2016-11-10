@@ -30,6 +30,14 @@ ScreenPool::ScreenPool(KSharedConfig::Ptr config, QObject *parent)
     connect(&m_configSaveTimer, &QTimer::timeout, this, [this](){
         m_configGroup.sync();
     });
+}
+
+void ScreenPool::load()
+{
+    m_primaryConnector = QString();
+    m_connectorForId.clear();
+    m_idForConnector.clear();
+
     QScreen *primary = qGuiApp->primaryScreen();
     if (primary) {
         m_primaryConnector = primary->name();

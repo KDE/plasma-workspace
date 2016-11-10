@@ -627,6 +627,8 @@ void ShellCorona::load()
 
     disconnect(m_activityController, &KActivities::Controller::serviceStatusChanged, this, &ShellCorona::load);
 
+    m_screenPool->load();
+
     //TODO: a kconf_update script is needed
     QString configFileName(QStringLiteral("plasma-") + m_shell + QStringLiteral("-appletsrc"));
 
@@ -1184,7 +1186,7 @@ Plasma::Containment *ShellCorona::createContainmentForActivity(const QString& ac
             //in the case of a corrupt config file
             //with multiple containments with same lastScreen
             //it can happen two insertContainment happen for
-            //the same screen, leading to the old containment 
+            //the same screen, leading to the old containment
             //to be destroyed
             if (!cont->destroyed() && cont->screen() == screenNum && cont->activity() == activity) {
                 return cont;
