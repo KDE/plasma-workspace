@@ -78,6 +78,13 @@ class PanelView : public PlasmaQuick::ContainmentView
     Q_PROPERTY(int distance READ distance WRITE setDistance NOTIFY distanceChanged)
 
     /**
+     * support NoBackground in order to disable blur/contrast effects and remove
+     * the panel shadows
+     * @since 5.9
+     */    
+    Q_PROPERTY(Plasma::Types::BackgroundHints backgroundHints WRITE setBackgroundHints READ backgroundHints NOTIFY backgroundHintsChanged)
+
+    /**
      * The borders that should have a shadow
      * @since 5.7
      */
@@ -131,6 +138,9 @@ public:
     int distance() const;
     void setDistance(int dist);
 
+    Plasma::Types::BackgroundHints backgroundHints() const;
+    void setBackgroundHints(Plasma::Types::BackgroundHints hint);
+
     Plasma::FrameSvg::EnabledBorders enabledBorders() const;
 
     VisibilityMode visibilityMode() const;
@@ -168,6 +178,7 @@ Q_SIGNALS:
     void maximumLengthChanged();
     void minimumLengthChanged();
     void distanceChanged();
+    void backgroundHintsChanged();
     void enabledBordersChanged();
 
     //QWindow does not have a property for screen. Adding this property requires re-implementing the signal
@@ -220,6 +231,7 @@ private:
     QTimer m_unhideTimer;
     //only for the mask, not to actually paint
     Plasma::FrameSvg *m_background;
+    Plasma::Types::BackgroundHints m_backgroundHints;
     Plasma::FrameSvg::EnabledBorders m_enabledBorders = Plasma::FrameSvg::AllBorders;
     KWayland::Client::PlasmaShellSurface *m_shellSurface;
     QPointer<QScreen> m_lastScreen;

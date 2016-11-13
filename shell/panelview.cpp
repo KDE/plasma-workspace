@@ -62,6 +62,7 @@ PanelView::PanelView(ShellCorona *corona, QScreen *targetScreen, QWindow *parent
        m_corona(corona),
        m_visibilityMode(NormalPanel),
        m_background(0),
+       m_backgroundHints(Plasma::Types::StandardBackground),
        m_shellSurface(nullptr),
        m_initCompleted(false)
 {
@@ -76,6 +77,7 @@ PanelView::PanelView(ShellCorona *corona, QScreen *targetScreen, QWindow *parent
     setFlags(Qt::FramelessWindowHint|Qt::WindowDoesNotAcceptFocus);
 
     connect(&m_theme, &Plasma::Theme::themeChanged, this, &PanelView::themeChanged);
+    connect(this, SIGNAL(backgroundHintsChanged()), this, SLOT(themeChanged()));
 
     m_positionPaneltimer.setSingleShot(true);
     m_positionPaneltimer.setInterval(150);
@@ -288,6 +290,22 @@ void PanelView::setDistance(int dist)
     m_distance = dist;
     emit distanceChanged();
     positionPanel();
+}
+
+Plasma::Types::BackgroundHints PanelView::backgroundHints() const
+{
+    return m_backgroundHints;
+}
+
+void PanelView::setBackgroundHints(Plasma::Types::BackgroundHints hint)
+{
+    if (m_backgroundHints == hint) {
+       return;
+    }
+ 
+    m_backgroundHints = hint;
+     
+    emit backgroundHintsChanged();
 }
 
 Plasma::FrameSvg::EnabledBorders PanelView::enabledBorders() const
@@ -1056,11 +1074,16 @@ void PanelView::updateStruts()
 
 void PanelView::themeChanged()
 {
-    KWindowEffects::enableBlurBehind(winId(), true);
-    KWindowEffects::enableBackgroundContrast(winId(), m_theme.backgroundContrastEnabled(),
-                                                      m_theme.backgroundContrast(),
-                                                      m_theme.backgroundIntensity(),
-                                                      m_theme.backgroundSaturation());
+    if (m_backgroundHints == Plasma::Types::NoBackground) {
+        KWindowEffects::enableBlurBehind(winId(), false);
+        KWindowEffects::enableBackgroundContrast(winId(), false);        
+    } else {
+        KWindowEffects::enableBlurBehind(winId(), true);
+        KWindowEffects::enableBackgroundContrast(winId(), m_theme.backgroundContrastEnabled(),
+                                                        m_theme.backgroundContrast(),
+                                                        m_theme.backgroundIntensity(),
+                                                        m_theme.backgroundSaturation());        
+    }
 
     updateMask();
 }
@@ -1147,39 +1170,46 @@ void PanelView::updateEnabledBorders()
 {
     Plasma::FrameSvg::EnabledBorders borders = Plasma::FrameSvg::AllBorders;
 
-    switch (location()) {
-    case Plasma::Types::TopEdge:
-        borders &= ~Plasma::FrameSvg::TopBorder;
-        break;
-    case Plasma::Types::LeftEdge:
-        borders &= ~Plasma::FrameSvg::LeftBorder;
-        break;
-    case Plasma::Types::RightEdge:
-        borders &= ~Plasma::FrameSvg::RightBorder;
-        break;
-    case Plasma::Types::BottomEdge:
-        borders &= ~Plasma::FrameSvg::BottomBorder;
-        break;
-    default:
-        break;
-    }
+    if (m_backgroundHints == Plasma::Types::NoBackground) {
+        borders = Plasma::FrameSvg::NoBorder;
+    } else {
+        switch (location()) {
+        case Plasma::Types::TopEdge:
+            borders &= ~Plasma::FrameSvg::TopBorder;
+            break;
+        case Plasma::Types::LeftEdge:
+            borders &= ~Plasma::FrameSvg::LeftBorder;
+            break;
+        case Plasma::Types::RightEdge:
+            borders &= ~Plasma::FrameSvg::RightBorder;
+            break;
+        case Plasma::Types::BottomEdge:
+            borders &= ~Plasma::FrameSvg::BottomBorder;
+            break;
+        default:
+            break;
+        }
 
-    if (x() <= m_screenToFollow->geometry().x()) {
-        borders &= ~Plasma::FrameSvg::LeftBorder;
-    }
-    if (x() + width() >= m_screenToFollow->geometry().x() + m_screenToFollow->geometry().width()) {
-        borders &= ~Plasma::FrameSvg::RightBorder;
-    }
-    if (y() <= m_screenToFollow->geometry().y()) {
-        borders &= ~Plasma::FrameSvg::TopBorder;
-    }
-    if (y() + height() >= m_screenToFollow->geometry().y() + m_screenToFollow->geometry().height()) {
-        borders &= ~Plasma::FrameSvg::BottomBorder;
+        if (x() <= m_screenToFollow->geometry().x()) {
+            borders &= ~Plasma::FrameSvg::LeftBorder;
+        }
+        if (x() + width() >= m_screenToFollow->geometry().x() + m_screenToFollow->geometry().width()) {
+            borders &= ~Plasma::FrameSvg::RightBorder;
+        }
+        if (y() <= m_screenToFollow->geometry().y()) {
+            borders &= ~Plasma::FrameSvg::TopBorder;
+        }
+        if (y() + height() >= m_screenToFollow->geometry().y() + m_screenToFollow->geometry().height()) {
+            borders &= ~Plasma::FrameSvg::BottomBorder;
+        }
     }
 
     if (m_enabledBorders != borders) {
-
-        PanelShadows::self()->setEnabledBorders(this, borders);
+        if (m_backgroundHints == Plasma::Types::NoBackground) {
+            PanelShadows::self()->removeWindow(this);
+        } else {
+            PanelShadows::self()->setEnabledBorders(this, borders);
+        }
 
         m_enabledBorders = borders;
         emit enabledBordersChanged();
