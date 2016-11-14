@@ -61,6 +61,10 @@ void WindowedWidgetsRunner::match(Plasma::RunnerContext &context)
    QList<Plasma::QueryMatch> matches;
 
     foreach (const KPluginMetaData &md, Plasma::PluginLoader::self()->listAppletMetaData(QString())) {
+        if (!md.isValid()) {
+            continue;
+        }
+
         if (((md.name().contains(term, Qt::CaseInsensitive) ||
              md.value(QLatin1String("GenericName")).contains(term, Qt::CaseInsensitive) ||
              md.description().contains(term, Qt::CaseInsensitive)) ||
