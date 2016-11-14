@@ -332,6 +332,8 @@ QVariant WaylandTasksModel::data(const QModelIndex &index, int role) const
         return window->skipTaskbar();
     } else if (role == SkipPager) {
         // FIXME Implement.
+    } else if (role == AppPid) {
+        // FIXME Implement.
     }
 
     return QVariant();

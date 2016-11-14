@@ -52,7 +52,7 @@ namespace TaskManager
 {
 
 static const NET::Properties windowInfoFlags = NET::WMState | NET::XAWMState | NET::WMDesktop |
-    NET::WMVisibleName | NET::WMGeometry | NET::WMFrameExtents | NET::WMWindowType;
+    NET::WMVisibleName | NET::WMGeometry | NET::WMFrameExtents | NET::WMWindowType | NET::WMPid;
 static const NET::Properties2 windowInfoFlags2 = NET::WM2DesktopFileName | NET::WM2Activities |
     NET::WM2WindowClass | NET::WM2AllowedActions;
 
@@ -346,7 +346,7 @@ void XWindowTasksModel::Private::windowChanged(WId window, NET::Properties prope
         || properties2 & (NET::WM2DesktopFileName | NET::WM2WindowClass)) {
         wipeInfoCache = true;
         wipeAppDataCache = true;
-        changedRoles << Qt::DisplayRole << Qt::DecorationRole << AppId << AppName << GenericName << LauncherUrl;
+        changedRoles << Qt::DisplayRole << Qt::DecorationRole << AppId << AppName << GenericName << LauncherUrl << AppPid;
     }
 
     if ((properties & NET::WMIcon) && !changedRoles.contains(Qt::DecorationRole)) {
@@ -926,6 +926,8 @@ QVariant XWindowTasksModel::data(const QModelIndex &index, int role) const
         return (info->hasState(NET::SkipTaskbar) || info->windowType(NET::UtilityMask) == NET::Utility);
     } else if (role == SkipPager) {
         return d->windowInfo(window)->hasState(NET::SkipPager);
+    } else if (role == AppPid) {
+        return d->windowInfo(window)->pid();
     }
 
     return QVariant();

@@ -83,6 +83,7 @@ public:
         IsDemandingAttention, /**< Task is demanding attention. */
         SkipTaskbar,      /**< Task should not be shown in a 'task bar' user interface. */
         SkipPager,        /**< Task should not to be shown in a 'pager' user interface. */
+        AppPid,           /**< Application Process ID */
     };
     Q_ENUM(AdditionalRoles)
 
