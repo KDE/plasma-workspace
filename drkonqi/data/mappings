@@ -57,6 +57,7 @@ kactivitymanagerd=kactivities|general
 plasma-windowed=plasma|general
 plasma-device=Active|General
 plasmashell=plasmashell|general
+plasma-discover=Discover|discover
 
 #KDE Plasma SDK (Plasmate)
 plasmaengineexplorer=plasmate|general
