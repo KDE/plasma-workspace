@@ -51,7 +51,7 @@ void PlasmaWindowedCorona::loadApplet(const QString &applet, const QVariantList 
 
     //forbid more instances per applet (todo: activate the correpsponding already loaded applet)
     for (Plasma::Applet *a : cont->applets()) {
-        if (a->pluginMetaData().pluginId() == applet) {
+        if (a->pluginInfo().pluginName() == applet) {
             return;
         }
     }

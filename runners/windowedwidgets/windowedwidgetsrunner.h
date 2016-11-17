@@ -48,7 +48,7 @@ protected Q_SLOTS:
 
 
 protected:
-    void setupMatch(const KPluginMetaData &md, Plasma::QueryMatch &action);
+    void setupMatch(const KService::Ptr &service, Plasma::QueryMatch &action);
 };
 
 #endif

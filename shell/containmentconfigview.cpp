@@ -104,7 +104,7 @@ QAbstractItemModel *ContainmentConfigView::currentContainmentActionsModel()
 
 QString ContainmentConfigView::containmentPlugin() const
 {
-    return m_containment->pluginMetaData().pluginId();
+    return m_containment->pluginInfo().pluginName();
 }
 
 void ContainmentConfigView::setContainmentPlugin(const QString &plugin)

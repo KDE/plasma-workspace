@@ -409,7 +409,7 @@ QByteArray ShellCorona::dumpCurrentLayoutJS() const
                 || cont->location() == Plasma::Types::BottomEdge
                 || cont->location() == Plasma::Types::LeftEdge
                 || cont->location() == Plasma::Types::RightEdge) &&
-            cont->pluginMetaData().pluginId() != QStringLiteral("org.kde.plasma.private.systemtray");
+            cont->pluginInfo().pluginName() != QStringLiteral("org.kde.plasma.private.systemtray");
     };
 
     auto isDesktop = [] (Plasma::Containment *cont) {
@@ -496,7 +496,7 @@ QByteArray ShellCorona::dumpCurrentLayoutJS() const
 
                 KConfigGroup appletConfig = applet->config();
 
-                appletJson.insert("plugin", applet->pluginMetaData().pluginId());
+                appletJson.insert("plugin", applet->pluginInfo().pluginName());
                 appletJson.insert("config", dumpconfigGroupJS(appletConfig));
 
                 appletsJsonArray << appletJson;
@@ -563,7 +563,7 @@ QByteArray ShellCorona::dumpCurrentLayoutJS() const
             QJsonObject appletJson;
 
             appletJson.insert("title",      applet->title());
-            appletJson.insert("plugin",     applet->pluginMetaData().pluginId());
+            appletJson.insert("plugin",     applet->pluginInfo().pluginName());
 
             appletJson.insert("geometry.x",      geometry.x() / gridUnit);
             appletJson.insert("geometry.y",      geometry.y() / gridUnit);
@@ -1272,11 +1272,11 @@ void ShellCorona::handleContainmentAdded(Plasma::Containment *c)
 
 void ShellCorona::executeSetupPlasmoidScript(Plasma::Containment *containment, Plasma::Applet *applet)
 {
-    if (!applet->pluginMetaData().isValid() || !containment->pluginMetaData().isValid()) {
+    if (!applet->pluginInfo().isValid() || !containment->pluginInfo().isValid()) {
         return;
     }
 
-    const QString scriptFile = m_lookAndFeelPackage.filePath("plasmoidsetupscripts", applet->pluginMetaData().pluginId() + ".js");
+    const QString scriptFile = m_lookAndFeelPackage.filePath("plasmoidsetupscripts", applet->pluginInfo().pluginName() + ".js");
 
     if (scriptFile.isEmpty()) {
         return;
@@ -1575,7 +1575,7 @@ Plasma::Containment *ShellCorona::setContainmentTypeForScreen(int screen, const 
     //if creation failed or invalid plugin, give up
     if (!newContainment) {
         return oldContainment;
-    } else if (!newContainment->pluginMetaData().isValid()) {
+    } else if (!newContainment->pluginInfo().isValid()) {
         newContainment->deleteLater();
         return oldContainment;
     }
@@ -2010,8 +2010,7 @@ void ShellCorona::activateLauncherMenu()
     for (auto it = m_panelViews.constBegin(), end = m_panelViews.constEnd(); it != end; ++it) {
         const auto applets = it.key()->applets();
         for (auto applet : applets) {
-            const auto provides = KPluginMetaData::readStringList(applet->pluginMetaData().rawData(), QStringLiteral("X-Plasma-Provides"));
-            if (provides.contains(QLatin1String("org.kde.plasma.launchermenu"))) {
+            if (applet->pluginInfo().property("X-Plasma-Provides").toStringList().contains(QStringLiteral("org.kde.plasma.launchermenu"))) {
                 if (!applet->globalShortcut().isEmpty()) {
                     emit applet->activated();
                     return;
