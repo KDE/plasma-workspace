@@ -60,28 +60,26 @@ void WindowedWidgetsRunner::match(Plasma::RunnerContext &context)
 
    QList<Plasma::QueryMatch> matches;
 
-
-    foreach (const KPluginInfo &info, Plasma::PluginLoader::self()->listAppletInfo(QString())) {
-        KService::Ptr service = info.service();
-        if (!service->isValid()) {
+    foreach (const KPluginMetaData &md, Plasma::PluginLoader::self()->listAppletMetaData(QString())) {
+        if (!md.isValid()) {
             continue;
         }
 
-        if (((service->name().contains(term, Qt::CaseInsensitive) ||
-             service->genericName().contains(term, Qt::CaseInsensitive) ||
-             service->comment().contains(term, Qt::CaseInsensitive)) ||
-             service->categories().contains(term, Qt::CaseInsensitive) ||
+        if (((md.name().contains(term, Qt::CaseInsensitive) ||
+             md.value(QLatin1String("GenericName")).contains(term, Qt::CaseInsensitive) ||
+             md.description().contains(term, Qt::CaseInsensitive)) ||
+             md.category().contains(term, Qt::CaseInsensitive) ||
              term.startsWith(i18nc("Note this is a KRunner keyword", "mobile applications"))) &&
-             !info.property(QStringLiteral("NoDisplay")).toBool()) {
+             !md.rawData().value(QStringLiteral("NoDisplay")).toBool()) {
 
-            QVariant val = info.property(QStringLiteral("X-Plasma-StandAloneApp"));
+            QVariant val = md.value(QStringLiteral("X-Plasma-StandAloneApp"));
             if (!val.isValid() || !val.toBool()) {
                 continue;
             }
 
             Plasma::QueryMatch match(this);
-            setupMatch(service, match);
-            if (service->name().compare(term, Qt::CaseInsensitive) == 0) {
+            setupMatch(md, match);
+            if (md.name().compare(term, Qt::CaseInsensitive) == 0) {
                 match.setType(Plasma::QueryMatch::ExactMatch);
                 match.setRelevance(1);
             } else {
@@ -89,8 +87,6 @@ void WindowedWidgetsRunner::match(Plasma::RunnerContext &context)
                 match.setRelevance(0.7);
             }
             matches << match;
-
-            qDebug() << service;
         }
     }
 
@@ -104,27 +100,27 @@ void WindowedWidgetsRunner::match(Plasma::RunnerContext &context)
 void WindowedWidgetsRunner::run(const Plasma::RunnerContext &context, const Plasma::QueryMatch &match)
 {
     Q_UNUSED(context);
-    KService::Ptr service = KService::serviceByStorageId(match.data().toString());
-    if (service) {
-        QProcess::startDetached(QStringLiteral("plasmawindowed"), QStringList() << service->property(QStringLiteral("X-KDE-PluginInfo-Name"), QVariant::String).toString());
+    KPluginMetaData md(match.data().toString());
+    if (md.isValid()) {
+        QProcess::startDetached(QStringLiteral("plasmawindowed"), QStringList() << md.pluginId());
     }
 }
 
-void WindowedWidgetsRunner::setupMatch(const KService::Ptr &service, Plasma::QueryMatch &match)
+void WindowedWidgetsRunner::setupMatch(const KPluginMetaData &md, Plasma::QueryMatch &match)
 {
-    const QString name = service->name();
+    const QString name = md.pluginId();
 
     match.setText(name);
-    match.setData(service->storageId());
+    match.setData(md.metaDataFileName());
 
-    if (!service->genericName().isEmpty() && service->genericName() != name) {
-        match.setSubtext(service->genericName());
-    } else if (!service->comment().isEmpty()) {
-        match.setSubtext(service->comment());
+    if (!md.name().isEmpty() && md.name() != name) {
+        match.setSubtext(md.name());
+    } else if (!md.description().isEmpty()) {
+        match.setSubtext(md.description());
     }
 
-    if (!service->icon().isEmpty()) {
-        match.setIconName(service->icon());
+    if (!md.iconName().isEmpty()) {
+        match.setIconName(md.iconName());
     }
 }
 

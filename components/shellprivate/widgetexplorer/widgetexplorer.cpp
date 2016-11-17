@@ -277,14 +277,14 @@ void WidgetExplorerPrivate::addContainment(Containment *containment)
     QObject::connect(containment, SIGNAL(appletRemoved(Plasma::Applet*)), q, SLOT(appletRemoved(Plasma::Applet*)));
 
     foreach (Applet *applet, containment->applets()) {
-        if (applet->pluginInfo().isValid()) {
+        if (applet->pluginMetaData().isValid()) {
             Containment *childContainment = applet->property("containment").value<Containment*>();
             if (childContainment) {
                 addContainment(childContainment);
             }
-            runningApplets[applet->pluginInfo().pluginName()]++;
+            runningApplets[applet->pluginMetaData().pluginId()]++;
         } else {
-            qDebug() << "Invalid plugininfo. :(";
+            qDebug() << "Invalid plugin metadata. :(";
         }
     }
 }
@@ -296,10 +296,10 @@ void WidgetExplorerPrivate::containmentDestroyed()
 
 void WidgetExplorerPrivate::appletAdded(Plasma::Applet *applet)
 {
-    if (!applet->pluginInfo().isValid()) {
+    if (!applet->pluginMetaData().isValid()) {
         return;
     }
-    QString name = applet->pluginInfo().pluginName();
+    QString name = applet->pluginMetaData().pluginId();
 
     runningApplets[name]++;
     appletNames.insert(applet, name);
@@ -495,9 +495,9 @@ void WidgetExplorer::uninstall(const QString &pluginName)
             const auto &applets = c->applets();
 
             foreach (Applet *applet, applets) {
-                const auto &appletInfo = applet->pluginInfo();
+                const auto &appletInfo = applet->pluginMetaData();
 
-                if (appletInfo.isValid() && appletInfo.pluginName() == pluginName) {
+                if (appletInfo.isValid() && appletInfo.pluginId() == pluginName) {
                     applet->destroy();
                 }
             }

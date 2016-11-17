@@ -73,19 +73,19 @@ void SystemTray::init()
 {
     Containment::init();
 
-    for (const auto &info: Plasma::PluginLoader::self()->listAppletInfo(QString())) {
-        if (!info.isValid() || info.property(QStringLiteral("X-Plasma-NotificationArea")) != "true") {
+    for (const auto &info: Plasma::PluginLoader::self()->listAppletMetaData(QString())) {
+        if (!info.isValid() || info.value(QStringLiteral("X-Plasma-NotificationArea")) != "true") {
             continue;
         }
-        m_systrayApplets[info.pluginName()] = info;
+        m_systrayApplets[info.pluginId()] = KPluginInfo(info);
 
-        if (info.isPluginEnabledByDefault()) {
-            m_defaultPlasmoids += info.pluginName();
+        if (info.isEnabledByDefault()) {
+            m_defaultPlasmoids += info.pluginId();
         }
-        const QString dbusactivation = info.property(QStringLiteral("X-Plasma-DBusActivationService")).toString();
+        const QString dbusactivation = info.value(QStringLiteral("X-Plasma-DBusActivationService"));
         if (!dbusactivation.isEmpty()) {
-            qCDebug(SYSTEM_TRAY) << "ST Found DBus-able Applet: " << info.pluginName() << dbusactivation;
-            m_dbusActivatableTasks[info.pluginName()] = dbusactivation;
+            qCDebug(SYSTEM_TRAY) << "ST Found DBus-able Applet: " << info.pluginId() << dbusactivation;
+            m_dbusActivatableTasks[info.pluginId()] = dbusactivation;
         }
     }
 }
@@ -93,12 +93,12 @@ void SystemTray::init()
 void SystemTray::newTask(const QString &task)
 {
     foreach (Plasma::Applet *applet, applets()) {
-        if (!applet->pluginInfo().isValid()) {
+        if (!applet->pluginMetaData().isValid()) {
             continue;
         }
 
         //only allow one instance per applet
-        if (task == applet->pluginInfo().pluginName()) {
+        if (task == applet->pluginMetaData().pluginId()) {
             //Applet::destroy doesn't delete the applet from Containment::applets in the same event
             //potentially a dbus activated service being restarted can be added in this time.
             if (!applet->destroyed()) {
@@ -130,7 +130,7 @@ void SystemTray::newTask(const QString &task)
 void SystemTray::cleanupTask(const QString &task)
 {
     foreach (Plasma::Applet *applet, applets()) {
-        if (!applet->pluginInfo().isValid() || task == applet->pluginInfo().pluginName()) {
+        if (!applet->pluginMetaData().isValid() || task == applet->pluginMetaData().pluginId()) {
             //we are *not* cleaning the config here, because since is one
             //of those automatically loaded/unloaded by dbus, we want to recycle
             //the config the next time it's loaded, in case the user configured something here
@@ -203,11 +203,11 @@ Q_INVOKABLE QString SystemTray::plasmoidCategory(QQuickItem *appletInterface) co
     }
 
     Plasma::Applet *applet = appletInterface->property("_plasma_applet").value<Plasma::Applet*>();
-    if (!applet || !applet->pluginInfo().isValid()) {
+    if (!applet || !applet->pluginMetaData().isValid()) {
         return "UnknownCategory";
     }
 
-    const QString cat = applet->pluginInfo().property(QStringLiteral("X-Plasma-NotificationAreaCategory")).toString();
+    const QString cat = applet->pluginMetaData().value(QStringLiteral("X-Plasma-NotificationAreaCategory"));
 
     if (cat.isEmpty()) {
         return "UnknownCategory";
@@ -338,11 +338,11 @@ void SystemTray::restorePlasmoids()
     foreach (Plasma::Applet *applet, applets()) {
         //Here it should always be valid.
         //for some reason it not always is.
-        if (!applet->pluginInfo().isValid()) {
+        if (!applet->pluginMetaData().isValid()) {
             applet->config().parent().deleteGroup();
             applet->deleteLater();
         } else {
-            const QString task = applet->pluginInfo().pluginName();
+            const QString task = applet->pluginMetaData().pluginId();
             if (!m_allowedPlasmoids.contains(task)) {
                 //in those cases we do delete the applet config completely
                 //as they were explicitly disabled by the user
