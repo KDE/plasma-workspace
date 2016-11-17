@@ -63,7 +63,7 @@ void WindowedWidgetsRunner::match(Plasma::RunnerContext &context)
 
     foreach (const KPluginInfo &info, Plasma::PluginLoader::self()->listAppletInfo(QString())) {
         KService::Ptr service = info.service();
-        if (!service->isValid()) {
+        if (!service || !service->isValid()) {
             continue;
         }
 
