@@ -49,8 +49,6 @@ PanelConfigView::PanelConfigView(Plasma::Containment *containment, PanelView *pa
 {
     connect(panelView, &QObject::destroyed, this, &QObject::deleteLater);
 
-    m_visibilityMode = panelView->visibilityMode();
-
     setScreen(panelView->screen());
 
     connect(panelView, SIGNAL(screenChanged(QScreen *)), &m_screenSyncTimer, SLOT(start()));
@@ -83,9 +81,6 @@ PanelConfigView::PanelConfigView(Plasma::Containment *containment, PanelView *pa
 
 PanelConfigView::~PanelConfigView()
 {
-    if (m_panelView) {
-        m_panelView->setVisibilityMode(m_visibilityMode);
-    }
 }
 
 void PanelConfigView::init()
@@ -209,16 +204,12 @@ void PanelConfigView::showEvent(QShowEvent *ev)
         m_containment->setUserConfiguring(true);
     }
 
-    if (m_visibilityMode != PanelView::NormalPanel) {
-        m_panelView->setVisibilityMode(PanelView::WindowsGoBelow);
-    }
     PanelShadows::self()->addWindow(this, m_enabledBorders);
 }
 
 void PanelConfigView::hideEvent(QHideEvent *ev)
 {
     QQuickWindow::hideEvent(ev);
-    m_panelView->setVisibilityMode(m_visibilityMode);
 
     if (m_containment) {
         m_containment->setUserConfiguring(false);
@@ -280,17 +271,13 @@ bool PanelConfigView::event(QEvent *e)
 
 void PanelConfigView::setVisibilityMode(PanelView::VisibilityMode mode)
 {
-    if (m_visibilityMode == mode) {
-        return;
-    }
-
-    m_visibilityMode = mode;
+    m_panelView->setVisibilityMode(mode);
     emit visibilityModeChanged();
 }
 
 PanelView::VisibilityMode PanelConfigView::visibilityMode() const
 {
-    return m_visibilityMode;
+    return m_panelView->visibilityMode();
 }
 
 Plasma::FrameSvg::EnabledBorders PanelConfigView::enabledBorders() const

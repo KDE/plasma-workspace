@@ -239,6 +239,7 @@ extern "C" Q_DECL_EXPORT int kdemain( int argc, char* argv[] )
     qputenv("QT_QPA_PLATFORM", QByteArrayLiteral("xcb"));
 
     QQuickWindow::setDefaultAlphaBuffer(true);
+    QCoreApplication::setAttribute(Qt::AA_DisableHighDpiScaling);
     QApplication *a = new QApplication(argc, argv);
 
     // now the QPA platform is set, unset variable again to not launch apps with incorrect environment

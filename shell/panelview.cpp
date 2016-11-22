@@ -335,6 +335,7 @@ void PanelView::setVisibilityMode(PanelView::VisibilityMode mode)
     updateStruts();
 
     emit visibilityModeChanged();
+
     restoreAutoHide();
 }
 
@@ -604,13 +605,23 @@ void PanelView::showConfigurationInterface(Plasma::Applet *applet)
 
 void PanelView::restoreAutoHide()
 {
-    setAutoHideEnabled(edgeActivated()
-        && (!containment() ||
-                (containment()->status() < Plasma::Types::RequiresAttentionStatus
-                 || containment()->status() == Plasma::Types::HiddenStatus)
-                )
-        && !geometry().contains(QCursor::pos(screenToFollow()))
-    );
+    bool autoHide = true;
+
+    if (!edgeActivated()) {
+        autoHide = false;
+    }
+    else if (geometry().contains(QCursor::pos(screenToFollow()))) {
+        autoHide = false;
+    }
+    else if (containment() && containment()->isUserConfiguring()) {
+        autoHide = false;
+    }
+    else if (containment() && containment()->status() >= Plasma::Types::NeedsAttentionStatus &&
+             containment()->status() != Plasma::Types::HiddenStatus) {
+        autoHide = false;
+    }
+
+    setAutoHideEnabled(autoHide);
 }
 
 void PanelView::setAutoHideEnabled(bool enabled)
@@ -998,10 +1009,9 @@ bool PanelView::canSetStrut() const
 
 void PanelView::updateStruts()
 {
-    if (!containment() || !m_screenToFollow) {
+    if (!containment() || containment()->isUserConfiguring() || !m_screenToFollow) {
         return;
     }
-
 
     NETExtendedStrut strut;
 
@@ -1091,6 +1101,15 @@ void PanelView::themeChanged()
 void PanelView::containmentChanged()
 {
     restore();
+    connect(containment(), &Plasma::Containment::userConfiguringChanged, this, [this](bool configuring){
+        if (configuring) {
+            showTemporarily();
+        } else {
+            m_unhideTimer.start();
+            updateStruts();
+        }
+    });
+
     connect(containment(), SIGNAL(statusChanged(Plasma::Types::ItemStatus)), SLOT(statusChanged(Plasma::Types::ItemStatus)));
     connect(containment(), &Plasma::Applet::appletDeleted, this, [this] {
         //containment()->destroyed() is true only when the user deleted it
