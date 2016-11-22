@@ -49,6 +49,7 @@ Item {
 
     QtLayouts.ColumnLayout {
         id: pageColumn
+        anchors.left: parent.left
 
         PlasmaExtras.Heading {
             level: 2

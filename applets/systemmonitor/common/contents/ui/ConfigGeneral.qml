@@ -100,6 +100,7 @@ Item {
 
     Layouts.ColumnLayout {
         id: mainColumn
+        anchors.left: parent.left
 
         Repeater {
             id: repeater

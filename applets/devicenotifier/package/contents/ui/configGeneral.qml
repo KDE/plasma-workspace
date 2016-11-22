@@ -37,6 +37,7 @@ Item {
 
     Layouts.ColumnLayout {
         id: mainColumn
+        anchors.left: parent.left
         Controls.ExclusiveGroup{
             id: deviceFilter
         }

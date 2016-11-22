@@ -33,6 +33,7 @@ Item {
     property alias cfg_showTimezoneString: showTimezoneCheckBox.checked
 
     Column {
+        anchors.left: parent.left
         QtControls.CheckBox {
             id: showSecondHandCheckBox
             text: i18n("Show seconds hand")

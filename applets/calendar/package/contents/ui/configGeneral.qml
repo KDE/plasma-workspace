@@ -32,6 +32,7 @@ Item {
     property string cfg_compactDisplay
 
     QtLayouts.ColumnLayout {
+        anchors.left: parent.left
         QtControls.CheckBox {
             id: showWeekNumbers
             text: i18n("Show week numbers in Calendar")

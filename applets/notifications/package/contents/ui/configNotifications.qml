@@ -37,6 +37,7 @@ Item {
     property alias cfg_showJobs: showJobsCheckBox.checked
 
     QtLayouts.ColumnLayout {
+        anchors.left: parent.left
         QtControls.CheckBox {
             id: showNotificationsCheckBox
             text: i18n("Show application and system notifications")
