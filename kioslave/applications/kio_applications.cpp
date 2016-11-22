@@ -23,8 +23,8 @@
 #include <kservice.h>
 #include <kservicegroup.h>
 #include <KLocalizedString>
-#include <KStandardDirs>
-#include <QDebug>
+
+#include <QStandardPaths>
 #include <QUrl>
 
 class ApplicationsProtocol : public KIO::SlaveBase
@@ -64,7 +64,8 @@ static void createFileEntry(KIO::UDSEntry& entry, const KService::Ptr& service, 
     entry.insert(KIO::UDSEntry::UDS_ACCESS, 0500);
     entry.insert(KIO::UDSEntry::UDS_MIME_TYPE, QStringLiteral("application/x-desktop"));
     entry.insert(KIO::UDSEntry::UDS_SIZE, 0);
-    entry.insert(KIO::UDSEntry::UDS_LOCAL_PATH, KStandardDirs::locate("apps", service->entryPath()));
+    const QString localPath = QStandardPaths::locate(QStandardPaths::ApplicationsLocation, QStringLiteral("%1.desktop").arg(service->desktopEntryName()));
+    entry.insert(KIO::UDSEntry::UDS_LOCAL_PATH, localPath);
     entry.insert(KIO::UDSEntry::UDS_MODIFICATION_TIME, time(0));
     entry.insert(KIO::UDSEntry::UDS_ICON_NAME, service->icon());
 }
@@ -99,7 +100,8 @@ void ApplicationsProtocol::get( const QUrl & url )
 {
     KService::Ptr service = KService::serviceByDesktopName(url.fileName());
     if (service && service->isValid()) {
-        QUrl redirUrl(QUrl::fromLocalFile(KStandardDirs::locate("apps", service->entryPath())));
+        const QString localPath = QStandardPaths::locate(QStandardPaths::ApplicationsLocation, QStringLiteral("%1.desktop").arg(service->desktopEntryName()));
+        QUrl redirUrl(QUrl::fromLocalFile(localPath));
         redirection(redirUrl);
         finished();
     } else {
