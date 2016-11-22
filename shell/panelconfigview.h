@@ -87,7 +87,6 @@ Q_SIGNALS:
 private:
     Plasma::Containment *m_containment;
     QPointer<PanelView> m_panelView;
-    PanelView::VisibilityMode m_visibilityMode;
     Plasma::FrameSvg::EnabledBorders m_enabledBorders = Plasma::FrameSvg::AllBorders;
     Plasma::Theme m_theme;
     QTimer m_screenSyncTimer;
