@@ -18,12 +18,10 @@
 */
 
 #include <kdirlister.h>
-#include <ktemporaryfile.h>
-#include <kdebug.h>
 #include <QDesktopServices>
 #include <QStandardPaths>
-#include <QObject>
-#include <qtest_kde.h>
+#include <QTemporaryFile>
+#include <QTest>
 #include <kio/job.h>
 #include <kio/copyjob.h>
 
@@ -54,7 +52,7 @@ private Q_SLOTS:
 
     void testCopyToDesktop()
     {
-        KTemporaryFile tempFile;
+        QTemporaryFile tempFile;
         QVERIFY(tempFile.open());
         tempFile.write( "Hello world\n", 12 );
         QString fileName = tempFile.fileName();
@@ -128,6 +126,6 @@ private:
     QString m_testFileName;
 };
 
-QTEST_KDEMAIN(TestDesktop, NoGUI)
+QTEST_GUILESS_MAIN(TestDesktop)
 
 #include "kio_desktop_test.moc"

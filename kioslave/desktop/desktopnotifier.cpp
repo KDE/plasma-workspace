@@ -19,16 +19,13 @@
 #include "desktopnotifier.h"
 
 #include <KDirWatch>
-#include <KGlobal>
-#include <KGlobalSettings>
 #include <KPluginFactory>
 #include <KPluginLoader>
 
-#include <KUrl>
-
 #include <kdirnotify.h>
-#include <QStandardPaths>
 
+#include <QStandardPaths>
+#include <QUrl>
 
 K_PLUGIN_FACTORY_WITH_JSON(DesktopNotifierFactory,
                            "desktopnotifier.json",
@@ -72,9 +69,11 @@ void DesktopNotifier::dirty(const QString &path)
         checkDesktopLocation();
     } else {
         // Emitting FilesAdded forces a re-read of the dir
-        KUrl url("desktop:/");
-        url.addPath(KUrl::relativePath(QStandardPaths::writableLocation(QStandardPaths::DesktopLocation), path));
-        url.cleanPath();
+        QUrl url;
+        url.setScheme(QStringLiteral("desktop"));
+        const auto relativePath = QDir(QStandardPaths::writableLocation(QStandardPaths::DesktopLocation)).relativeFilePath(path);
+        url.setPath(QStringLiteral("%1/%2").arg(url.path(), relativePath));
+        url.setPath(QDir::cleanPath(url.path()));
         org::kde::KDirNotify::emitFilesAdded(url);
     }
 }

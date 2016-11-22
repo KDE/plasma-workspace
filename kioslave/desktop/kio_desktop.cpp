@@ -19,20 +19,14 @@
 
 #include "kio_desktop.h"
 
-#include <KApplication>
-#include <KCmdLineArgs>
 #include <KConfigGroup>
 #include <KDesktopFile>
 #include <KDirNotify>
-#include <KGlobalSettings>
-#include <KStandardDirs>
-#include <KGlobal>
-#include <KUrl>
-#include <kdeversion.h>
 
 #include <kio/udsentry.h>
 #include <kio_version.h>
 
+#include <QCoreApplication>
 #include <QFile>
 #include <QDBusInterface>
 #include <QDesktopServices>
@@ -45,8 +39,7 @@ extern "C"
     {
         // necessary to use other kio slaves
         QCoreApplication app(argc, argv);
-        KComponentData("kio_desktop", "kdelibs4");
-        KLocale::global();
+        app.setApplicationName("kio_desktop");
 
         // start the slave
         DesktopProtocol slave(argv[1], argv[2], argv[3]);
@@ -97,12 +90,20 @@ void DesktopProtocol::checkLocalInstall()
                     desktopPath + "/trash.desktop");
  
         // Copy the desktop links
-        const QStringList links = KGlobal::dirs()->findAllResources("data", QStringLiteral("kio_desktop/DesktopLinks/*"),
-                                                                    KStandardDirs::NoDuplicates);
+        QSet<QString> links;
+        const auto dirs = QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, QStringLiteral("kio_desktop/DesktopLinks"), QStandardPaths::LocateDirectory);
+        for (const auto &dir : dirs) {
+            const auto fileNames = QDir(dir).entryList({QStringLiteral("*.desktop")});
+            for (const auto &file : fileNames) {
+                links += file;
+            }
+        }
+
         foreach (const QString &link, links) {
-            KDesktopFile file(link);
+            const auto fullPath = QStandardPaths::locate(QStandardPaths::GenericDataLocation, QStringLiteral("kio_desktop/DesktopLinks/%1").arg(link));
+            KDesktopFile file(fullPath);
             if (!file.desktopGroup().readEntry("Hidden", false))
-                QFile::copy(link, desktopPath + link.mid(link.lastIndexOf('/')));
+                QFile::copy(fullPath, QStringLiteral("%1/%2").arg(desktopPath, link));
         }
     }
 #endif
@@ -119,7 +120,7 @@ void DesktopProtocol::listDir(const QUrl &url)
 {
     KIO::ForwardingSlaveBase::listDir(url);
 
-    KUrl actual;
+    QUrl actual;
     rewriteUrl(url, actual);
 
     QDBusInterface kded(QStringLiteral("org.kde.kded5"), QStringLiteral("/modules/desktopnotifier"), QStringLiteral("org.kde.DesktopNotifier"));
@@ -132,12 +133,12 @@ QString DesktopProtocol::desktopFile(KIO::UDSEntry &entry) const
     if (name == QLatin1String(".") || name == QLatin1String(".."))
         return QString();
 
-    KUrl url = processedUrl();
-    url.addPath(name);
+    QUrl url = processedUrl();
+    url.setPath(QStringLiteral("%1/%2").arg(url.path(), name));
 
     if (entry.isDir()) {
-        url.addPath(QStringLiteral(".directory"));
-        if (!KStandardDirs::exists(url.path()))
+        url.setPath(QStringLiteral("%1/.directory").arg(url.path()));
+        if (!QFileInfo::exists(url.path()))
             return QString();
 
         return url.path();
