@@ -56,6 +56,7 @@ Item {
     QtLayouts.ColumnLayout {
         id: pageColumn
 
+        anchors.left: parent.left
         PlasmaExtras.Heading {
             text: i18nc("Heading for list of actions (leave, lock, shutdown, ...)", "Actions")
             color: syspal.text

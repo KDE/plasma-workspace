@@ -73,6 +73,7 @@ Item {
     }
 
     QtLayouts.ColumnLayout {
+        anchors.left: parent.left
         QtControls.GroupBox {
             QtLayouts.Layout.fillWidth: true
             title: i18n("Font")
