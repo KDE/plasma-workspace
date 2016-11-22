@@ -68,6 +68,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 #include <kconfig.h>
 #include <kconfiggroup.h>
+#include <kio/desktopexecparser.h>
 #include <KSharedConfig>
 #include <kprocess.h>
 #include <KNotifyConfig>
@@ -678,7 +679,13 @@ void KSMServer::slotAutoStart()
         KService service(serviceName);
         qCInfo(KSMSERVER) << "Starting autostart service " << serviceName;
         auto p = new QProcess(this);
-        p->start(service.exec());
+        auto arguments = KIO::DesktopExecParser(service, QList<QUrl>()).resultingArguments();
+        if (arguments.isEmpty()) {
+            qCInfo(KSMSERVER) << "failed to parse" << serviceName << "for autostart";
+            continue;
+        }
+        auto program = arguments.takeFirst();
+        p->start(program, arguments);
         connect(p, static_cast<void (QProcess::*)(int)>(&QProcess::finished), [p](int exitCode) {
             qCInfo(KSMSERVER) << "autostart service" << p->program() << "finished with exit code " << exitCode;
             p->deleteLater();
