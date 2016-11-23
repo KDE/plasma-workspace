@@ -3,6 +3,9 @@ import QtQuick 2.0
 ListModel {
 
     property int lastIndex: 1
+    property string lastUser: "someperson"
+
+    property int disableAvatarsThreshold: 10
 
     ListElement {
         name: "david"
