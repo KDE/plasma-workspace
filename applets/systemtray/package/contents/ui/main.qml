@@ -33,6 +33,8 @@ MouseArea {
     Layout.minimumHeight: vertical ? tasksRow.implicitHeight + (expander.visible ? expander.implicitHeight : 0) + units.smallSpacing : units.smallSpacing
 
     Layout.preferredHeight: Layout.minimumHeight
+    LayoutMirroring.enabled: !vertical && Qt.application.layoutDirection === Qt.RightToLeft
+    LayoutMirroring.childrenInherit: true
 
     property var iconSizes: ["small", "smallMedium", "medium", "large", "huge", "enormous"];
 
@@ -282,7 +284,7 @@ MouseArea {
         flow: vertical ? Flow.LeftToRight : Flow.TopToBottom
         //To make it look centered
         y: Math.round(height/2 - childrenRect.height/2)
-        x: Math.round(width/2 - childrenRect.width/2)
+        x: (expander.visible && LayoutMirroring.enabled ? expander.width : 0) + Math.round(width/2 - childrenRect.width/2)
 
 
         //Do spacing with margins, to correctly compute the number of lines
