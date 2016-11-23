@@ -90,6 +90,7 @@ PlasmaCore.ColorScope {
             id: userListComponent
             userListModel: userModel
             userListCurrentIndex: userModel.lastIndex >= 0 ? userModel.lastIndex : 0
+            lastUserName: userModel.lastUser
             showUserList: {
                  if ( !userListModel.hasOwnProperty("count")
                    || !userListModel.hasOwnProperty("disableAvatarsThreshold"))

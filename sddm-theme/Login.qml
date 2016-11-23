@@ -10,7 +10,15 @@ SessionManagementScreen {
 
     property bool showUsernamePrompt: !showUserList
 
+    property string lastUserName
+
     signal loginRequest(string username, string password)
+
+    onShowUsernamePromptChanged: {
+        if (!showUsernamePrompt) {
+            lastUserName = ""
+        }
+    }
 
     /*
     * Login has been requested with the following username and password
@@ -31,8 +39,9 @@ SessionManagementScreen {
         id: userNameInput
         Layout.fillWidth: true
 
+        text: lastUserName
         visible: showUsernamePrompt
-        focus: showUsernamePrompt //if there's a username prompt it gets focus first, otherwise password does
+        focus: showUsernamePrompt && !lastUserName //if there's a username prompt it gets focus first, otherwise password does
         placeholderText: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Username")
     }
 
@@ -41,7 +50,7 @@ SessionManagementScreen {
         Layout.fillWidth: true
 
         placeholderText: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Password")
-        focus: !showUsernamePrompt
+        focus: !showUsernamePrompt || lastUserName
         echoMode: TextInput.Password
 
         onAccepted: startLogin()
