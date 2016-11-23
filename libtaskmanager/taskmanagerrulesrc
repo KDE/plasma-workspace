@@ -34,3 +34,9 @@ Property=ClassName
 Identifier=DesktopEntryName
 Match=(?<=crx_)(?'match'[a-z]+)
 Target=chrome-%1-default
+
+[Rewrite Rules][chromium-browser][1]
+Property=ClassName
+Identifier=DesktopEntryName
+Match=(?<=crx_)(?'match'[a-z]+)
+Target=chrome-%1-default
