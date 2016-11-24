@@ -19,20 +19,17 @@
  */
 
 #include "switchuserdialog.h"
+#include "ksmserver_debug.h"
 
 #include <kdisplaymanager.h>
-#include <ksmserver_debug.h>
 
-#include <QApplication>
 #include <QDebug>
-#include <QDesktopWidget>
-#include <QEventLoop>
+#include <QGuiApplication>
 #include <QQuickItem>
 #include <QQmlContext>
 #include <QQmlEngine>
 #include <QX11Info>
 #include <QScreen>
-#include <QStandardItemModel>
 #include <QStandardPaths>
 
 #include <KPackage/Package>
@@ -41,20 +38,27 @@
 #include <KConfigGroup>
 #include <KLocalizedString>
 #include <KSharedConfig>
+#include <KWindowEffects>
 #include <KWindowSystem>
 #include <KUser>
 #include <KDeclarative/KDeclarative>
 
+#include <KWayland/Client/surface.h>
+#include <KWayland/Client/plasmashell.h>
+
 #include <X11/Xutil.h>
 #include <X11/Xatom.h>
 
-KSMSwitchUserDialog::KSMSwitchUserDialog(KDisplayManager *dm, QWindow *parent)
+KSMSwitchUserDialog::KSMSwitchUserDialog(KDisplayManager *dm, KWayland::Client::PlasmaShell *plasmaShell, QWindow *parent)
     : QQuickView(parent)
     , m_displayManager(dm)
+    , m_waylandPlasmaShell(plasmaShell)
 {
     setClearBeforeRendering(true);
     setColor(QColor(Qt::transparent));
     setFlags(Qt::FramelessWindowHint | Qt::BypassWindowManagerHint);
+
+    setResizeMode(QQuickView::SizeRootObjectToView);
 
     QPoint globalPosition(QCursor::pos());
     foreach (QScreen *s, QGuiApplication::screens()) {
@@ -66,19 +70,26 @@ KSMSwitchUserDialog::KSMSwitchUserDialog(KDisplayManager *dm, QWindow *parent)
 
     // Qt doesn't set this on unmanaged windows
     //FIXME: or does it?
-    XChangeProperty( QX11Info::display(), winId(),
-        XInternAtom( QX11Info::display(), "WM_WINDOW_ROLE", False ), XA_STRING, 8, PropModeReplace,
-        (unsigned char *)"logoutdialog", strlen( "logoutdialog" ));
+    if (KWindowSystem::isPlatformX11()) {
+        XChangeProperty( QX11Info::display(), winId(),
+            XInternAtom( QX11Info::display(), "WM_WINDOW_ROLE", False ), XA_STRING, 8, PropModeReplace,
+            (unsigned char *)"logoutdialog", strlen( "logoutdialog" ));
 
-
-    rootContext()->setContextProperty(QStringLiteral("screenGeometry"), screen()->geometry());
-
-    setModality(Qt::ApplicationModal);
+        XClassHint classHint;
+        classHint.res_name = const_cast<char*>("ksmserver");
+        classHint.res_class = const_cast<char*>("ksmserver");
+        XSetClassHint(QX11Info::display(), winId(), &classHint);
+    }
 
     KDeclarative::KDeclarative kdeclarative;
     kdeclarative.setDeclarativeEngine(engine());
-    //kdeclarative.initialize();
+    kdeclarative.initialize();
     kdeclarative.setupBindings();
+}
+
+void KSMSwitchUserDialog::init()
+{
+    rootContext()->setContextProperty(QStringLiteral("screenGeometry"), screen()->geometry());
 
     KPackage::Package package = KPackage::PackageLoader::self()->loadPackage("Plasma/LookAndFeel");
     KConfigGroup cg(KSharedConfig::openConfig("kdeglobals"), "KDE");
@@ -96,24 +107,59 @@ KSMSwitchUserDialog::KSMSwitchUserDialog(KDisplayManager *dm, QWindow *parent)
         return;
     }
 
-    setPosition(screen()->virtualGeometry().center().x() - width() / 2,
-                screen()->virtualGeometry().center().y() - height() / 2);
-
     if (!errors().isEmpty()) {
         qCWarning(KSMSERVER) << errors();
     }
 
     connect(rootObject(), SIGNAL(dismissed()), this, SIGNAL(dismissed()));
 
-    show();
+    connect(screen(), &QScreen::geometryChanged, this, [this] {
+        setGeometry(screen()->geometry());
+    });
+
+    QQuickView::show();
     requestActivate();
 
-    KWindowSystem::setState(winId(), NET::SkipTaskbar | NET::SkipPager);
+    KWindowSystem::setState(winId(), NET::SkipTaskbar|NET::SkipPager);
+
+    setKeyboardGrabEnabled(true);
 }
 
-void KSMSwitchUserDialog::exec()
+bool KSMSwitchUserDialog::event(QEvent *e)
 {
-    QEventLoop loop;
-    connect(this, &KSMSwitchUserDialog::dismissed, &loop, &QEventLoop::quit);
-    loop.exec();
+    if (e->type() == QEvent::PlatformSurface) {
+        if (auto pe = dynamic_cast<QPlatformSurfaceEvent*>(e)) {
+            switch (pe->surfaceEventType()) {
+            case QPlatformSurfaceEvent::SurfaceCreated:
+                setupWaylandIntegration();
+                KWindowEffects::enableBlurBehind(winId(), true);
+                break;
+            case QPlatformSurfaceEvent::SurfaceAboutToBeDestroyed:
+                delete m_shellSurface;
+                m_shellSurface = nullptr;
+                break;
+            }
+        }
+    }
+    return QQuickView::event(e);
+}
+
+void KSMSwitchUserDialog::setupWaylandIntegration()
+{
+    if (m_shellSurface) {
+        // already setup
+        return;
+    }
+    using namespace KWayland::Client;
+    if (!m_waylandPlasmaShell) {
+        return;
+    }
+    Surface *s = Surface::fromWindow(this);
+    if (!s) {
+        return;
+    }
+    m_shellSurface = m_waylandPlasmaShell->createSurface(s, this);
+    // TODO: set a proper window type to indicate to KWin that this is the logout dialog
+    // maybe we need a dedicated type for it?
+    m_shellSurface->setPosition(geometry().topLeft());
 }

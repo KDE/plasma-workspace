@@ -25,21 +25,38 @@
 
 class KDisplayManager;
 
+namespace KWayland
+{
+namespace Client
+{
+class PlasmaShell;
+class PlasmaShellSurface;
+}
+}
+
 class KSMSwitchUserDialog : public QQuickView
 {
     Q_OBJECT
 
 public:
-    explicit KSMSwitchUserDialog(KDisplayManager *dm, QWindow *parent = nullptr);
+    explicit KSMSwitchUserDialog(KDisplayManager *dm, KWayland::Client::PlasmaShell *plasmaShell = nullptr, QWindow *parent = nullptr);
     ~KSMSwitchUserDialog() override = default;
 
-    void exec();
+    void init();
 
 signals:
     void dismissed();
 
+protected:
+    bool event(QEvent *e) override;
+
 private:
+    void setupWaylandIntegration();
+
     KDisplayManager *m_displayManager = nullptr;
+
+    KWayland::Client::PlasmaShell *m_waylandPlasmaShell;
+    KWayland::Client::PlasmaShellSurface *m_shellSurface = nullptr;
 
 };
 

@@ -1083,13 +1083,20 @@ void KSMServer::rebootWithoutConfirmation()
 
 void KSMServer::openSwitchUserDialog()
 {
-    KDisplayManager dm;
-    if (!dm.isSwitchable()) {
+    if (dialogActive) {
         return;
     }
 
-    QScopedPointer<KSMSwitchUserDialog> dlg(new KSMSwitchUserDialog(&dm));
-    dlg->exec();
+    QProcess *p = new QProcess(this);
+    p->setProgram(QStringLiteral(SWITCHUSER_GREETER_BIN));
+
+    connect(p, static_cast<void (QProcess::*)(int, QProcess::ExitStatus)>(&QProcess::finished), this, [this, p] {
+        p->deleteLater();
+        dialogActive = false;
+    });
+
+    dialogActive = true;
+    p->start();
 }
 
 void KSMServer::runShutdownScripts()
