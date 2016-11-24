@@ -40,3 +40,10 @@ Property=ClassName
 Identifier=DesktopEntryName
 Match=(?<=crx_)(?'match'[a-z]+)
 Target=chrome-%1-default
+
+# Chromium changed the class too
+[Rewrite Rules][Chromium][1]
+Property=ClassName
+Identifier=DesktopEntryName
+Match=(?<=crx_)(?'match'[a-z]+)
+Target=chrome-%1-default
