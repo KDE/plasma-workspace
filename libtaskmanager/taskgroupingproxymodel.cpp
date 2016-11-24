@@ -419,13 +419,11 @@ bool TaskGroupingProxyModel::Private::tryToGroup(const QModelIndex &sourceIndex,
 
         if (appsMatch(sourceIndex, groupRep)) {
             const QModelIndex parent = q->index(i, 0);
-            bool groupFormed = false;
 
             if (!silent) {
                 const int newIndex = rowMap.at(i).count();
 
                 if (newIndex == 1) {
-                    groupFormed = true;
                     q->beginInsertRows(parent, 0, 1);
                 } else {
                     q->beginInsertRows(parent, newIndex, newIndex);
@@ -437,14 +435,7 @@ bool TaskGroupingProxyModel::Private::tryToGroup(const QModelIndex &sourceIndex,
             if (!silent) {
                 q->endInsertRows();
 
-                // If we turned a top-level item into a group parent, we need
-                // to let consumers know.
-                // TODO: It _might_ be worth optimizing this at some point by
-                // adding a roles constaint (e.g. IsGroupParent, MimeType, ...);
-                // see data().
-                if (groupFormed) {
-                    q->dataChanged(parent, parent);
-                }
+                q->dataChanged(parent, parent);
             }
 
             return true;
@@ -715,6 +706,8 @@ QVariant TaskGroupingProxyModel::data(const QModelIndex &proxyIndex, int role) c
             return QVariant();
         } else if (role == AbstractTasksModel::IsGroupParent) {
             return true;
+        } else if (role == AbstractTasksModel::ChildCount) {
+            return rowCount(proxyIndex);
         } else if (role == AbstractTasksModel::IsActive) {
             return d->any(proxyIndex, AbstractTasksModel::IsActive);
         } else if (role == AbstractTasksModel::IsClosable) {

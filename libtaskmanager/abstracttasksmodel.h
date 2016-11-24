@@ -59,6 +59,7 @@ public:
         IsStartup,        /**< This is a startup task. */
         IsLauncher,       /**< This is a launcher task. */
         IsGroupParent,    /**< This is a parent item for a group of child tasks. */
+        ChildCount,       /**< The number of tasks in this group. */
         IsGroupable,      /**< Whether this task is being ignored by grouping or not. */
         IsActive,         /**< This is the currently active task. */
         IsClosable,       /**< requestClose (see below) available. */
