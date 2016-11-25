@@ -202,19 +202,21 @@ uint NotificationsEngine::Notify(const QString &app_name, uint replaces_id,
     qDebug() << "Currrent active notifications:" << m_activeNotifications;
     qDebug() << "Guessing partOf as:" << partOf;
     qDebug() << " New Notification: " << summary << body << timeout << "& Part of:" << partOf;
-    QString _body;
+    QString bodyFinal = body;
+    QString summaryFinal = summary;
 
     if (partOf > 0) {
         const QString source = QStringLiteral("notification %1").arg(partOf);
         Plasma::DataContainer *container = containerForSource(source);
         if (container) {
             // append the body text
-            _body = container->data()[QStringLiteral("body")].toString();
+            QString _body = container->data()[QStringLiteral("body")].toString();
             if (_body != body) {
                 _body.append("\n").append(body);
             } else {
                 _body = body;
             }
+            bodyFinal = _body;
 
             replaces_id = partOf;
 
@@ -222,6 +224,10 @@ uint NotificationsEngine::Notify(const QString &app_name, uint replaces_id,
             // TODO: maybe just update the current notification?
             CloseNotification(partOf);
         }
+    } else if (bodyFinal.isEmpty()) {
+        //some ridiculous apps will send just a title (#372112), in that case, treat it as though there's only a body
+        bodyFinal = summary;
+        summaryFinal = app_name;
     }
 
     uint id = replaces_id ? replaces_id : m_nextId++;
@@ -261,7 +267,6 @@ uint NotificationsEngine::Notify(const QString &app_name, uint replaces_id,
 
     const QString source = QStringLiteral("notification %1").arg(id);
 
-    QString bodyFinal = (partOf == 0 ? body : _body);
     // First trim whitespace from beginning and end
     bodyFinal = bodyFinal.trimmed();
     // Now replace all \ns with <br/>
@@ -285,7 +290,7 @@ uint NotificationsEngine::Notify(const QString &app_name, uint replaces_id,
     notificationData.insert(QStringLiteral("eventId"), eventId);
     notificationData.insert(QStringLiteral("appName"), appname_str);
     notificationData.insert(QStringLiteral("appIcon"), app_icon);
-    notificationData.insert(QStringLiteral("summary"), summary);
+    notificationData.insert(QStringLiteral("summary"), summaryFinal);
     notificationData.insert(QStringLiteral("body"), bodyFinal);
     notificationData.insert(QStringLiteral("actions"), actions);
     notificationData.insert(QStringLiteral("isPersistent"), isPersistent);
