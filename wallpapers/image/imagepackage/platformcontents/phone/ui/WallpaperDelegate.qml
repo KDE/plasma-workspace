@@ -30,10 +30,6 @@ MouseArea {
 
     property bool selected: (wallpapersGrid.currentIndex == index)
 
-    onSelectedChanged: {
-        cfg_Image = model.path
-    }
-
     hoverEnabled: true
 
 
@@ -130,11 +126,4 @@ MouseArea {
     }
 
     onExited: Tooltip.hideText()
-
-    Component.onCompleted: {
-        if (cfg_Image == model.path) {
-            makeCurrentTimer.pendingIndex = model.index
-            makeCurrentTimer.restart()
-        }
-    }
 }

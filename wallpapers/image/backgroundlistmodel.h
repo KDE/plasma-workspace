@@ -85,7 +85,7 @@ public:
     void reload();
     void reload(const QStringList &selected);
     void addBackground(const QString &path);
-    QModelIndex indexOf(const QString &path) const;
+    Q_INVOKABLE int indexOf(const QString &path) const;
     virtual bool contains(const QString &bg) const;
 
     int count() const {return m_packages.size();};
