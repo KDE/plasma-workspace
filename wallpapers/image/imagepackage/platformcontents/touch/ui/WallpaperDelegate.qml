@@ -30,10 +30,6 @@ MouseArea {
 
     property bool selected: (wallpapersGrid.currentIndex == index)
 
-    onSelectedChanged: {
-        cfg_Image = model.path
-    }
-
     hoverEnabled: true
 
     PlasmaCore.FrameSvgItem {
@@ -79,12 +75,5 @@ MouseArea {
     onClicked: {
         wallpapersGrid.currentIndex = (wallpapersGrid.currentPage*wallpapersGrid.pageSize) + index
         cfg_Image = model.path
-    }
-
-    Component.onCompleted: {
-        if (cfg_Image == model.path) {
-            makeCurrentTimer.pendingIndex = model.index
-            makeCurrentTimer.restart()
-        }
     }
 }

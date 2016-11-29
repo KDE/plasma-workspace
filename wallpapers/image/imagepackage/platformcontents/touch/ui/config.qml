@@ -62,20 +62,15 @@ Item {
         delegateHeight: delegateWidth / 1.6
 
         delegate: WallpaperDelegate {}
-        Timer {
-            id: makeCurrentTimer
-            interval: 100
-            repeat: false
-            property string pendingIndex
-            onTriggered: {
-                wallpapersGrid.currentIndex = pendingIndex
-                wallpapersGrid.positionViewAtIndex(pendingIndex, ListView.Beginning)
-            }
+
+        onCountChanged: {
+            wallpapersGrid.currentIndex = imageWallpaper.wallpaperModel.indexOf(cfg_Image);
+            wallpapersGrid.positionViewAtIndex(wallpapersGrid.currentIndex, GridView.Visible)
         }
 
         Connections {
             target: imageWallpaper
-                onCustomWallpaperPicked: wallpapersGrid.currentIndex = 0
-            }
+            onCustomWallpaperPicked: wallpapersGrid.currentIndex = 0
+        }
     }
 }

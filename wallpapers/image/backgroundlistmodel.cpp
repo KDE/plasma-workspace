@@ -95,10 +95,10 @@ QHash<int, QByteArray> BackgroundListModel::BackgroundListModel::roleNames() con
 
 void BackgroundListModel::removeBackground(const QString &path)
 {
-    QModelIndex index;
-    while ((index = indexOf(path)).isValid()) {
-        beginRemoveRows(QModelIndex(), index.row(), index.row());
-        m_packages.removeAt(index.row());
+    int index = -1;
+    while ((index = indexOf(path)) >= 0) {
+        beginRemoveRows(QModelIndex(), index, index);
+        m_packages.removeAt(index);
         endRemoveRows();
         emit countChanged();
     }
@@ -228,7 +228,7 @@ void BackgroundListModel::addBackground(const QString& path)
     }
 }
 
-QModelIndex BackgroundListModel::indexOf(const QString &path) const
+int BackgroundListModel::indexOf(const QString &path) const
 {
     for (int i = 0; i < m_packages.size(); i++) {
         // packages will end with a '/', but the path passed in may not
@@ -236,38 +236,39 @@ QModelIndex BackgroundListModel::indexOf(const QString &path) const
         if (package.at(package.length() - 1) == QChar::fromLatin1('/')) {
             package.truncate(package.length() - 1);
         }
+        //remove eventual file:///
+        const QString filteredPath = QUrl(path).path();
 
-        if (path.startsWith(package)) {
+        if (filteredPath.startsWith(package)) {
             // FIXME: ugly hack to make a difference between local files in the same dir
             // package->path does not contain the actual file name
-            qDebug() << "WP prefix" << m_packages[i].contentsPrefixPaths() << m_packages[i].filePath("preferred") << package << path;
+            qDebug() << "WP prefix" << m_packages[i].contentsPrefixPaths() << m_packages[i].filePath("preferred") << package << filteredPath;
             QStringList ps = m_packages[i].contentsPrefixPaths();
             bool prefixempty = ps.count() == 0;
             if (!prefixempty) {
                 prefixempty = ps[0].isEmpty();
             }
 
-
-            //For local files (user wallpapers) path == m_packages[i].filePath("preferred")
-            //E.X. path = "/home/kde/next.png"
+            //For local files (user wallpapers) filteredPath == m_packages[i].filePath("preferred")
+            //E.X. filteredPath = "/home/kde/next.png"
             //m_packages[i].filePath("preferred") = "/home/kde/next.png"
             //
-            //But for the system wallpapers this is not the case. path != m_packages[i].filePath("preferred")
-            //E.X. path = /usr/share/wallpapers/Next/"
+            //But for the system wallpapers this is not the case. filteredPath != m_packages[i].filePath("preferred")
+            //E.X. filteredPath = /usr/share/wallpapers/Next/"
             //m_packages[i].filePath("preferred") = "/usr/share/wallpapers/Next/contents/images/1920x1080.png"
-            if ((path == m_packages[i].filePath("preferred")) || m_packages[i].filePath("preferred").contains(path)) {
-                qDebug() << "WP TRUE" << (!m_packages[i].contentsPrefixPaths().isEmpty()) << (path == m_packages[i].filePath("preferred"));
-                return index(i, 0);
+            if ((filteredPath == m_packages[i].filePath("preferred")) || m_packages[i].filePath("preferred").contains(filteredPath)) {
+                qDebug() << "WP TRUE" << (!m_packages[i].contentsPrefixPaths().isEmpty()) << (filteredPath == m_packages[i].filePath("preferred"));
+                return i;
             }
         }
     }
-    return QModelIndex();
+    return -1;
 }
 
 bool BackgroundListModel::contains(const QString &path) const
 {
     //qDebug() << "WP contains: " << path << indexOf(path).isValid();
-    return indexOf(path).isValid();
+    return indexOf(path) >= 0;
 }
 
 int BackgroundListModel::rowCount(const QModelIndex &) const
@@ -302,11 +303,11 @@ void BackgroundListModel::sizeFound(const QString &path, const QSize &s)
         return;
     }
 
-    QModelIndex index = indexOf(path);
-    if (index.isValid()) {
-        KPackage::Package package = m_packages.at(index.row());
+    int idx = indexOf(path);
+    if (idx >= 0) {
+        KPackage::Package package = m_packages.at(idx);
         m_sizeCache.insert(package.path(), s);
-        emit dataChanged(index, index);
+        emit dataChanged(index(idx, 0), index(idx, 0));
     }
 }
 

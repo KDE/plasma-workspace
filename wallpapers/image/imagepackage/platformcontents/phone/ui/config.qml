@@ -59,14 +59,10 @@ Item {
             boundsBehavior: Flickable.DragAndOvershootBounds
 
             delegate: WallpaperDelegate {}
-            Timer {
-                id: makeCurrentTimer
-                interval: 100
-                repeat: false
-                property string pendingIndex
-                onTriggered: {
-                    wallpapersGrid.currentIndex = pendingIndex
-                }
+
+            onCountChanged: {
+                wallpapersGrid.currentIndex = imageWallpaper.wallpaperModel.indexOf(cfg_Image);
+                wallpapersGrid.positionViewAtIndex(wallpapersGrid.currentIndex, GridView.Visible)
             }
 
             Connections {

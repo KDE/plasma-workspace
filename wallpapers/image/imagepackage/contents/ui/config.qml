@@ -288,21 +288,15 @@ ColumnLayout {
                     color: cfg_Color
                 }
 
+                onCountChanged: {
+                    wallpapersGrid.currentIndex = imageWallpaper.wallpaperModel.indexOf(cfg_Image);
+                    wallpapersGrid.positionViewAtIndex(wallpapersGrid.currentIndex, GridView.Visible)
+                }
+
                 Connections {
                     target: root
                     onRestoreIndex: {
                         wallpapersGrid.currentIndex = wallpapersGrid.currentIndex - count
-                    }
-                }
-
-                Timer {
-                    id: makeCurrentTimer
-                    interval: 100
-                    repeat: false
-                    property string pendingIndex
-                    onTriggered: {
-                        wallpapersGrid.currentIndex = pendingIndex
-                        wallpapersGrid.forceActiveFocus();
                     }
                 }
 
@@ -325,7 +319,9 @@ ColumnLayout {
 
                 Connections {
                     target: imageWallpaper
-                    onCustomWallpaperPicked: wallpapersGrid.currentIndex = 0
+                    onCustomWallpaperPicked: {
+                        wallpapersGrid.currentIndex = 0
+                    }
                 }
 
             }
