@@ -35,7 +35,7 @@ PlasmaCore.Dialog {
     type: PlasmaCore.Dialog.Notification
     flags: Qt.WindowDoesNotAcceptFocus
 
-    property var notificationProperties
+    property var notificationProperties: ({})
     signal notificationTimeout()
 
     onVisibleChanged: {
@@ -108,12 +108,13 @@ PlasmaCore.Dialog {
         NotificationItem {
             id: notificationItem
 
-            summary: notificationProperties ? notificationProperties.summary: ""
-            body: notificationProperties ? notificationProperties.body : ""
-            icon: notificationProperties ? notificationProperties.appIcon : ""
-            image: notificationProperties ? notificationProperties.image : undefined
-            configurable: (notificationProperties ? notificationProperties.configurable : false) && !Settings.isMobile
-            urls: notificationProperties ? notificationProperties.urls : []
+            summary: notificationProperties.summary || ""
+            body: notificationProperties.body || ""
+            icon: notificationProperties.appIcon || ""
+            image: notificationProperties.image
+            // explicit true/false or else it complains about assigning undefined to bool
+            configurable: notificationProperties.configurable && !Settings.isMobile ? true : false
+            urls: notificationProperties.urls || []
 
             x: units.smallSpacing
             y: units.smallSpacing
