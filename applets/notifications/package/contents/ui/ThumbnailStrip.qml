@@ -145,6 +145,7 @@ ListView {
             width: parent.width
             height: width / thumbnailer.ratio
             pixmap: thumbnailer.pixmap
+            smooth: true
         }
 
         PlasmaCore.IconItem {
