@@ -115,6 +115,19 @@ PlasmaComponents.ListItem {
             // model.actions JS array is implicitly turned into a ListModel which we can assign directly
             actions: model.actions
             created: model.created
+            urls: {
+                // QML ListModel tries to be smart and turns our urls Array into a dict with index as key...
+                var urls = []
+
+                var modelUrls = model.urls
+                if (modelUrls) {
+                    for (var key in modelUrls) {
+                        urls.push(modelUrls[key])
+                    }
+                }
+
+                return urls
+            }
 
             onClose: {
                 if (notificationsModel.count > 1) {
@@ -131,6 +144,10 @@ PlasmaComponents.ListItem {
             onAction: {
                 executeAction(source, actionId)
                 actions.clear()
+            }
+            onOpenUrl: {
+                plasmoid.expanded = false
+                Qt.openUrlExternally(url)
             }
         }
 

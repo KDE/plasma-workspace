@@ -190,6 +190,7 @@ uint NotificationsEngine::Notify(const QString &app_name, uint replaces_id,
     const QString appRealName = hints[QStringLiteral("x-kde-appname")].toString();
     const QString eventId = hints[QStringLiteral("x-kde-eventId")].toString();
     const bool skipGrouping = hints[QStringLiteral("x-kde-skipGrouping")].toBool();
+    const QStringList &urls = hints[QStringLiteral("x-kde-urls")].toStringList();
 
     // group notifications that have the same title coming from the same app
     // or if they are on the "blacklist", honor the skipGrouping hint sent
@@ -341,6 +342,8 @@ uint NotificationsEngine::Notify(const QString &app_name, uint replaces_id,
     if (hints.contains(QStringLiteral("urgency"))) {
         notificationData.insert(QStringLiteral("urgency"), hints[QStringLiteral("urgency")].toInt());
     }
+
+    notificationData.insert(QStringLiteral("urls"), urls);
 
     setData(source, notificationData);
 

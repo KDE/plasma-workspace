@@ -18,6 +18,7 @@
 
 #include "notificationshelperplugin.h"
 #include "notificationshelper.h"
+#include "thumbnailer.h"
 
 #include <QtQml>
 #include <QProcess>
@@ -72,6 +73,8 @@ void NotificationsHelperPlugin::registerTypes(const char *uri)
     Q_ASSERT(uri == QLatin1String("org.kde.plasma.private.notifications"));
 
     qmlRegisterType<NotificationsHelper>(uri, 1, 0, "NotificationsHelper");
+    qmlRegisterType<Thumbnailer>(uri, 1, 0, "Thumbnailer");
+
     qmlRegisterSingletonType<UrlHelper>(uri, 1, 0, "UrlHelper", urlcheck_singletontype_provider);
     qmlRegisterSingletonType<ProcessRunner>(uri, 1, 0, "ProcessRunner", processrunner_singleton_provider);
 }

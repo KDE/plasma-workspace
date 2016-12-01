@@ -39,6 +39,7 @@ Item {
     signal close
     signal configure
     signal action(string actionId)
+    signal openUrl(url url)
 
     property bool compact: false
 
@@ -48,6 +49,7 @@ Item {
     property alias body: bodyText.text
     property alias configurable: settingsButton.visible
     property var created
+    property var urls: []
 
     property int maximumTextHeight: -1
 
@@ -57,6 +59,13 @@ Item {
         for (var i = 0, count = actionRepeater.count; i < count; ++i) {
             var item = actionRepeater.itemAt(i)
             if (item.pressed) {
+                return item
+            }
+        }
+
+        if (thumbnailStripLoader.item) {
+            var item = thumbnailStripLoader.item.pressedAction()
+            if (item) {
                 return item
             }
         }
@@ -309,6 +318,13 @@ Item {
                 }
             }
         }
-    }
 
+        Loader {
+            id: thumbnailStripLoader
+            Layout.fillWidth: true
+            Layout.preferredHeight: item ? item.implicitHeight : 0
+            source: "ThumbnailStrip.qml"
+            active: notificationItem.urls.length > 0
+        }
+    }
 }

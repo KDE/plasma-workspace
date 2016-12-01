@@ -113,6 +113,7 @@ PlasmaCore.Dialog {
             icon: notificationProperties ? notificationProperties.appIcon : ""
             image: notificationProperties ? notificationProperties.image : undefined
             configurable: (notificationProperties ? notificationProperties.configurable : false) && !Settings.isMobile
+            urls: notificationProperties ? notificationProperties.urls : []
 
             x: units.smallSpacing
             y: units.smallSpacing
@@ -132,6 +133,12 @@ PlasmaCore.Dialog {
                 executeAction(notificationProperties.source, actionId)
                 actions.clear()
                 notificationPopup.hide()
+            }
+            onOpenUrl: {
+                Qt.openUrlExternally(url)
+                // we want to close the notification popup when opening a URL but
+                // it should not be removed from the history, hence pretending it expired
+                notificationTimer.triggered()
             }
         }
     }
