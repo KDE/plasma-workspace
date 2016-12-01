@@ -27,6 +27,7 @@ import org.kde.plasma.workspace.keyboardlayout 1.0
 PlasmaComponents.ToolButton {
     id: kbLayoutButton
 
+    iconName: "input-keyboard"
     implicitWidth: minimumWidth
     text: layout.currentLayoutDisplayName
 
