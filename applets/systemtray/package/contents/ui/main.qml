@@ -87,6 +87,11 @@ MouseArea {
         }
     }
 
+    onWheel: {
+        // Don't propagate unhandled wheel events
+        wheel.accepted = true;
+    }
+
     Containment.onAppletAdded: {
         if (!plasmoidItemComponent) {
             plasmoidItemComponent = Qt.createComponent("items/PlasmoidItem.qml");
