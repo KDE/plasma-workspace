@@ -60,6 +60,11 @@ PlasmaCore.Dialog {
         notificationItem.actions.append(notificationProperties.actions)
     }
 
+    function clearPopup() {
+        notificationProperties = {}
+        notificationItem.actions.clear()
+    }
+
     Behavior on y {
         NumberAnimation {
             duration: units.longDuration

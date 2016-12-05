@@ -179,6 +179,8 @@ void NotificationsHelper::processHide()
         // Make sure the popup gets placed correctly
         // next time it's put on screen
         popup->setProperty("initialPositionSet", false);
+
+        QMetaObject::invokeMethod(popup, "clearPopup", Qt::DirectConnection);
     }
 
     m_mutex->lockForRead();
