@@ -150,15 +150,14 @@ Item {
             top: parent.top
             left: appIconItem.visible || imageItem.visible ? appIconItem.right : parent.left
             right: parent.right
-            leftMargin: units.smallSpacing * 2
+            leftMargin: units.smallSpacing
         }
 
-        spacing: units.smallSpacing
+        spacing: Math.round(units.smallSpacing / 2)
 
         RowLayout {
             id: titleBar
             spacing: units.smallSpacing
-            height: units.iconSizes.smallMedium
 
             PlasmaExtras.Heading {
                 id: summaryLabel
@@ -211,6 +210,7 @@ Item {
         RowLayout {
             id: bottomPart
             Layout.alignment: Qt.AlignTop
+            spacing: units.smallSpacing
 
             // Force the whole thing to collapse if the children are invisible
             // If there is a big notification followed by a small one, the height
@@ -223,11 +223,6 @@ Item {
 
                 Layout.alignment: Qt.AlignTop
                 Layout.fillWidth: true
-
-                anchors {
-                    leftMargin: units.smallSpacing * 2
-                    rightMargin: units.smallSpacing * 2
-                }
 
                 implicitHeight: maximumTextHeight > 0 ? Math.min(maximumTextHeight, bodyText.paintedHeight) : bodyText.paintedHeight
 
@@ -301,7 +296,10 @@ Item {
             ColumnLayout {
                 id: actionsColumn
                 Layout.alignment: Qt.AlignTop
-                Layout.maximumWidth: theme.mSize(theme.defaultFont).width * (compact ? 8 : 12)
+                Layout.maximumWidth: theme.mSize(theme.defaultFont).width * (compact ? 10 : 16)
+                // this is so it never collapses but always follows what the Buttons below want
+                // but also don't let the buttons get too narrow (e.g. "View" or "Open" button)
+                Layout.minimumWidth: Math.max(units.gridUnit * 4, implicitWidth)
 
                 spacing: units.smallSpacing
                 visible: notificationItem.actions && notificationItem.actions.count > 0
@@ -311,6 +309,8 @@ Item {
                     model: notificationItem.actions
 
                     PlasmaComponents.Button {
+                        Layout.fillWidth: true
+                        Layout.preferredWidth: minimumWidth
                         Layout.maximumWidth: actionsColumn.Layout.maximumWidth
                         text: model.text
                         onClicked: notificationItem.action(model.id)

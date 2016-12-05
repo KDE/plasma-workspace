@@ -77,8 +77,8 @@ PlasmaCore.Dialog {
         LayoutMirroring.enabled: Qt.application.layoutDirection === Qt.RightToLeft
         LayoutMirroring.childrenInherit: true
 
-        width: notificationItem.width + 2 * notificationItem.x
-        height: notificationItem.implicitHeight + 2 * notificationItem.y
+        width: notificationItem.width
+        height: notificationItem.implicitHeight
 
         hoverEnabled: true
 
@@ -120,9 +120,6 @@ PlasmaCore.Dialog {
             // explicit true/false or else it complains about assigning undefined to bool
             configurable: notificationProperties.configurable && !Settings.isMobile ? true : false
             urls: notificationProperties.urls || []
-
-            x: units.smallSpacing
-            y: units.smallSpacing
 
             width: Math.round(23 * units.gridUnit)
             maximumTextHeight: theme.mSize(theme.defaultFont).height * 10
