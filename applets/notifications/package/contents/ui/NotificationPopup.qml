@@ -90,7 +90,7 @@ PlasmaCore.Dialog {
             }
 
             closeNotification(notificationProperties.source)
-            notificationPopup.hide()
+            // the popup will be closed in response to sourceRemoved
         }
         onContainsMouseChanged: {
             if (containsMouse) {
@@ -126,22 +126,19 @@ PlasmaCore.Dialog {
 
             onClose: {
                 closeNotification(notificationProperties.source)
-                notificationPopup.hide()
+                // the popup will be closed in response to sourceRemoved
             }
             onConfigure: {
                 configureNotification(notificationProperties.appRealName, notificationProperties.eventId)
-                notificationPopup.hide()
+                notificationPositioner.closePopup(notificationProperties.source);
             }
             onAction: {
                 executeAction(notificationProperties.source, actionId)
                 actions.clear()
-                notificationPopup.hide()
             }
             onOpenUrl: {
                 Qt.openUrlExternally(url)
-                // we want to close the notification popup when opening a URL but
-                // it should not be removed from the history, hence pretending it expired
-                notificationTimer.triggered()
+                notificationPositioner.closePopup(notificationProperties.source);
             }
         }
     }

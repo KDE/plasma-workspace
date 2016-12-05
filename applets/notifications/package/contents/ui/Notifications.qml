@@ -89,8 +89,9 @@ Column {
         //try to open the id as url
         } else if (id.indexOf("jobUrl#") !== -1) {
             Qt.openUrlExternally(id.slice(7));
-            notificationPositioner.closePopup(source);
         }
+
+        notificationPositioner.closePopup(source);
     }
 
     function configureNotification(appRealName, eventId) {
