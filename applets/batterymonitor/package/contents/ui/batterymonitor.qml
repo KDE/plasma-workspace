@@ -130,7 +130,6 @@ Item {
 
     Component.onCompleted: {
         Logic.updateBrightness(batterymonitor, pmSource);
-        plasmoid.removeAction("configure");
         Logic.updateInhibitions(batterymonitor, pmSource)
 
         if (batterymonitor.kcmsAuthorized) {

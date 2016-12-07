@@ -59,28 +59,21 @@ MouseArea {
 
                 property real iconSize: Math.min(width, height)
 
-                Column {
+                BatteryIcon {
+                    id: batteryIcon
                     anchors.centerIn: parent
+                    hasBattery: batteryContainer.hasBattery
+                    percent: batteryContainer.percent
+                    pluggedIn: batteryContainer.pluggedIn
+                    height: isConstrained ? batteryContainer.iconSize : batteryContainer.iconSize - batteryLabel.height
+                    width: height
+                }
 
-                    BatteryIcon {
-                        id: batteryIcon
-                        anchors.horizontalCenter: isConstrained ? undefined : parent.horizontalCenter
-                        hasBattery: batteryContainer.hasBattery
-                        percent: batteryContainer.percent
-                        pluggedIn: batteryContainer.pluggedIn
-                        height: isConstrained ? batteryContainer.iconSize : batteryContainer.iconSize - batteryLabel.height
-                        width: height
-                    }
-
-                    Components.Label {
-                        id: batteryLabel
-                        width: parent.width
-                        height: visible ? paintedHeight : 0
-                        horizontalAlignment: Text.AlignHCenter
-                        text: i18nc("battery percentage below battery icon", "%1%", percent)
-                        font.pixelSize: Math.max(batteryContainer.iconSize/8, theme.mSize(theme.smallestFont).height)
-                        visible: false//!isConstrained()
-                    }
+                BadgeOverlay {
+                    anchors.fill: batteryIcon
+                    text: i18nc("battery percentage below battery icon", "%1%", percent)
+                    icon: batteryIcon
+                    visible: plasmoid.configuration.showPercentage
                 }
             }
         }
