@@ -250,7 +250,7 @@ void WaylandTasksModel::Private::dataChanged(KWayland::Client::PlasmaWindow *win
 }
 
 WaylandTasksModel::WaylandTasksModel(QObject *parent)
-    : AbstractTasksModel(parent)
+    : AbstractWindowTasksModel(parent)
     , d(new Private(this))
 {
     d->initWayland();

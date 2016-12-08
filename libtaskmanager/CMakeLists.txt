@@ -4,6 +4,7 @@ add_subdirectory(autotests)
 set(taskmanager_LIB_SRCS
     abstracttasksmodel.cpp
     abstracttasksproxymodeliface.cpp
+    abstractwindowtasksmodel.cpp
     activityinfo.cpp
     concatenatetasksproxymodel.cpp
     flattentaskgroupsproxymodel.cpp
@@ -67,6 +68,7 @@ install(FILES
     abstracttasksmodel.h
     abstracttasksmodeliface.h
     abstracttasksproxymodeliface.h
+    abstractwindowtasksmodel.h
     activityinfo.h
     concatenatetasksproxymodel.h
     flattentaskgroupsproxymodel.h
