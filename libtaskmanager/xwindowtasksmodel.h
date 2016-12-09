@@ -21,7 +21,7 @@ License along with this library.  If not, see <http://www.gnu.org/licenses/>.
 #ifndef XWINDOWTASKSMODEL_H
 #define XWINDOWTASKSMODEL_H
 
-#include "abstracttasksmodel.h"
+#include "abstractwindowtasksmodel.h"
 
 #include "taskmanager_export.h"
 
@@ -46,7 +46,7 @@ namespace TaskManager
  * @author Eike Hein <hein@kde.org>
  */
 
-class TASKMANAGER_EXPORT XWindowTasksModel : public AbstractTasksModel
+class TASKMANAGER_EXPORT XWindowTasksModel : public AbstractWindowTasksModel
 {
     Q_OBJECT
 

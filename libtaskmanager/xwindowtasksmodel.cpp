@@ -836,7 +836,7 @@ bool XWindowTasksModel::Private::demandsAttention(WId window)
 }
 
 XWindowTasksModel::XWindowTasksModel(QObject *parent)
-    : AbstractTasksModel(parent)
+    : AbstractWindowTasksModel(parent)
     , d(new Private(this))
 {
     d->init();
