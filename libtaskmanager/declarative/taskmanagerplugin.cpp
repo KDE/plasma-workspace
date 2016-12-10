@@ -20,6 +20,7 @@ License along with this library.  If not, see <http://www.gnu.org/licenses/>.
 
 #include "taskmanagerplugin.h"
 
+#include "abstracttasksmodel.h"
 #include "tasksmodel.h"
 #include "activityinfo.h"
 #include "virtualdesktopinfo.h"
@@ -32,6 +33,13 @@ namespace TaskManager
 void TaskManagerPlugin::registerTypes(const char *uri)
 {
     Q_ASSERT(uri == QLatin1String("org.kde.taskmanager"));
+
+    // Expose the AbstractTasksModel::AdditionalRoles enum to Qt Quick
+    // for use with the TasksModel::data invokable. TasksModel inherits
+    // the data roles from its source model, despite not inheriting from
+    // AbstractTasksModel to avoid multiple inheritance from QObject-
+    // derived classes.
+    qmlRegisterUncreatableType<AbstractTasksModel>(uri, 0, 1, "AbstractTasksModel", "");
 
     qmlRegisterType<TasksModel>(uri, 0, 1, "TasksModel");
     qmlRegisterType<ActivityInfo>(uri, 0, 1, "ActivityInfo");
