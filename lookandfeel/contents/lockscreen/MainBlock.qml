@@ -54,6 +54,7 @@ SessionManagementScreen {
         focus: true
         echoMode: TextInput.Password
         enabled: !authenticator.graceLocked
+        revealPasswordButtonShown: true
 
         onAccepted: startLogin()
 
