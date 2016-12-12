@@ -24,7 +24,9 @@
 #include <QDebug>
 #include <KConfigGroup>
 #include <klocalizedstring.h>
+#include <KSharedConfig>
 #include <KNotifyConfigWidget>
+#include <KUser>
 #include <QGuiApplication>
 
 #include <QRegularExpression>
@@ -63,6 +65,15 @@ NotificationsEngine::NotificationsEngine( QObject* parent, const QVariantList& a
                 QTimer::singleShot(3000, this, &NotificationsEngine::registerDBusService);
             }
         }
+    }
+
+    KConfigGroup config(KSharedConfig::openConfig(), QStringLiteral("Notifications"));
+    const bool broadcastsEnabled = config.readEntry("ListenForBroadcasts", false);
+
+    if (broadcastsEnabled) {
+        qDebug() << "Notifications engine is configured to listen for broadcasts";
+        QDBusConnection::systemBus().connect({}, {}, QStringLiteral("org.kde.BroadcastNotifications"),
+                                             QStringLiteral("Notify"), this, SLOT(onBroadcastNotification(QMap<QString,QVariant>)));
     }
 
     // Read additional single-notification-popup-only from a config file
@@ -433,6 +444,44 @@ QSharedPointer<NotificationInhibiton> NotificationsEngine::createInhibition(cons
     return rc;
 }
 
+void NotificationsEngine::onBroadcastNotification(const QMap<QString, QVariant> &properties)
+{
+    qDebug() << "Received broadcast notification";
+
+    const auto currentUserId = KUserId::currentEffectiveUserId().nativeId();
+
+    // a QVariantList with ints arrives as QDBusArgument here, using a QStringList for simplicity
+    const QStringList &userIds = properties.value(QStringLiteral("uids")).toStringList();
+    if (!userIds.isEmpty()) {
+        auto it = std::find_if(userIds.constBegin(), userIds.constEnd(), [currentUserId](const QVariant &id) {
+            bool ok;
+            auto uid = id.toString().toLongLong(&ok);
+            return ok && uid == currentUserId;
+        });
+
+        if (it == userIds.constEnd()) {
+            qDebug() << "It is not meant for us, ignoring";
+            return;
+        }
+    }
+
+    bool ok;
+    int timeout = properties.value(QStringLiteral("timeout")).toInt(&ok);
+    if (!ok) {
+        timeout = -1; // -1 = server default, 0 would be "persistent"
+    }
+
+    Notify(
+        properties.value(QStringLiteral("appName")).toString(),
+        0, // replaces_id
+        properties.value(QStringLiteral("appIcon")).toString(),
+        properties.value(QStringLiteral("summary")).toString(),
+        properties.value(QStringLiteral("body")).toString(),
+        {}, // no actions
+        properties.value(QStringLiteral("hints")).toMap(),
+        timeout
+    );
+}
 
 K_EXPORT_PLASMA_DATAENGINE_WITH_JSON(notifications, NotificationsEngine, "plasma-dataengine-notifications.json")
 

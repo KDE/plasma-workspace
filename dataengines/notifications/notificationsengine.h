@@ -77,6 +77,8 @@ public Q_SLOTS:
     void removeNotification(uint id, uint closeReason);
     bool registerDBusService();
 
+    void onBroadcastNotification(const QMap<QString, QVariant> &properties);
+
 Q_SIGNALS:
     void NotificationClosed( uint id, uint reason );
     void ActionInvoked( uint id, const QString& actionKey );
