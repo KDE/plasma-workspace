@@ -58,13 +58,13 @@ PanelView::PanelView(ShellCorona *corona, QScreen *targetScreen, QWindow *parent
        m_contentLength(0),
        m_distance(0),
        m_thickness(30),
+       m_initCompleted(false),
        m_alignment(Qt::AlignLeft),
        m_corona(corona),
        m_visibilityMode(NormalPanel),
        m_background(0),
        m_backgroundHints(Plasma::Types::StandardBackground),
-       m_shellSurface(nullptr),
-       m_initCompleted(false)
+       m_shellSurface(nullptr)
 {
     if (targetScreen) {
         setPosition(targetScreen->geometry().center());
