@@ -11,6 +11,19 @@ find_package(Qt5 ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS Widgets Quick Quic
 find_package(ECM 1.8.0 REQUIRED NO_MODULE)
 set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH} ${ECM_KDE_MODULE_DIR})
 
+include(KDEInstallDirs)
+include(KDECMakeSettings)
+include(KDECompilerSettings NO_POLICY_SCOPE)
+include(ECMPackageConfigHelpers)
+include(ECMMarkNonGuiExecutable)
+include(CMakePackageConfigHelpers)
+include(WriteBasicConfigVersionFile)
+include(CheckIncludeFiles)
+include(FeatureSummary)
+include(ECMOptionalAddSubdirectory)
+include(ECMQtDeclareLoggingCategory)
+include(KDEPackageAppTemplates)
+
 find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS
                     Plasma DocTools Runner JsEmbed NotifyConfig Su NewStuff Wallet KCMUtils
                     IdleTime Declarative TextWidgets KDELibs4Support Crash GlobalAccel
@@ -48,20 +61,6 @@ find_package(Phonon4Qt5 4.6.60 REQUIRED NO_MODULE)
 set_package_properties(Phonon4Qt5 PROPERTIES
    DESCRIPTION "Qt-based audio library"
    TYPE REQUIRED)
-
-include(KDEInstallDirs)
-include(KDECMakeSettings)
-include(KDECompilerSettings NO_POLICY_SCOPE)
-include(ECMPackageConfigHelpers)
-include(ECMMarkNonGuiExecutable)
-include(CMakePackageConfigHelpers)
-include(WriteBasicConfigVersionFile)
-include(CheckIncludeFiles)
-include(FeatureSummary)
-include(ECMOptionalAddSubdirectory)
-include(ECMQtDeclareLoggingCategory)
-include(KDEPackageAppTemplates)
-
 find_package(KF5Activities ${KF5_MIN_VERSION})
 set_package_properties(KF5Activities PROPERTIES DESCRIPTION "management of Plasma activities"
                        TYPE OPTIONAL
