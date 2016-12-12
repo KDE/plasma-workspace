@@ -206,6 +206,8 @@ private Q_SLOTS:
     void interactiveConsoleVisibilityChanged(bool visible);
     void screenRemoved(QScreen* screen);
 
+    void activateTaskManagerEntry(int index);
+
 private:
     void updateStruts();
     bool isOutputRedundant(QScreen* screen) const;

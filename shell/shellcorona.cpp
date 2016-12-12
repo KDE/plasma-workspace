@@ -203,6 +203,18 @@ ShellCorona::ShellCorona(QObject *parent)
     connect(m_activityController, &KActivities::Controller::activityAdded, this, &ShellCorona::activityAdded);
     connect(m_activityController, &KActivities::Controller::activityRemoved, this, &ShellCorona::activityRemoved);
 
+    for (int i = 0; i < 10; ++i) {
+        const int entryNumber = i + 1;
+        const Qt::Key key = static_cast<Qt::Key>(Qt::Key_0 + (entryNumber % 10));
+
+        QAction *action = actions()->addAction(QStringLiteral("activate task manager entry %1").arg(QString::number(entryNumber)));
+        action->setText(i18n("Activate Task Manager Entry %1", entryNumber));
+        KGlobalAccel::setGlobalShortcut(action, QKeySequence(Qt::META + key));
+        connect(action, &QAction::triggered, this, [this, i] {
+            activateTaskManagerEntry(i);
+        });
+    }
+
     new Osd(this);
 }
 
@@ -1999,6 +2011,63 @@ void ShellCorona::activateLauncherMenu()
                     return;
                 }
             }
+        }
+    }
+}
+
+void ShellCorona::activateTaskManagerEntry(int index)
+{
+    auto activateTaskManagerEntryOnContainment = [this](const Plasma::Containment *c, int index) {
+        const auto &applets = c->applets();
+        for (auto *applet : applets) {
+            const auto &provides = KPluginMetaData::readStringList(applet->pluginMetaData().rawData(), QStringLiteral("X-Plasma-Provides"));
+            if (provides.contains(QLatin1String("org.kde.plasma.multitasking"))) {
+                if (QQuickItem *appletInterface = applet->property("_plasma_graphicObject").value<QQuickItem *>()) {
+                    const auto &childItems = appletInterface->childItems();
+                    if (childItems.isEmpty()) {
+                        continue;
+                    }
+
+                    for (QQuickItem *item : childItems) {
+                        if (auto *metaObject = item->metaObject()) {
+                            // not using QMetaObject::invokeMethod to avoid warnings when calling
+                            // this on applets that don't have it or other child items since this
+                            // is pretty much trial and error.
+
+                            // Also, "var" arguments are treated as QVariant in QMetaObject
+                            int methodIndex = metaObject->indexOfMethod("activateTaskAtIndex(QVariant)");
+                            if (methodIndex == -1) {
+                                continue;
+                            }
+
+                            QMetaMethod method = metaObject->method(methodIndex);
+                            if (method.invoke(item, Q_ARG(QVariant, index))) {
+                                return true;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        return false;
+    };
+
+    // To avoid overly complex configuration, we'll try to get the 90% usecase to work
+    // which is activating a task on the task manager on a panel on the primary screen.
+
+    for (auto it = m_panelViews.constBegin(), end = m_panelViews.constEnd(); it != end; ++it) {
+        if (it.value()->screen() != qGuiApp->primaryScreen()) {
+            continue;
+        }
+        if (activateTaskManagerEntryOnContainment(it.key(), index)) {
+            return;
+        }
+    }
+
+    // we didn't find anything on primary, try all the panels
+    for (auto it = m_panelViews.constBegin(), end = m_panelViews.constEnd(); it != end; ++it) {
+        if (activateTaskManagerEntryOnContainment(it.key(), index)) {
+            return;
         }
     }
 }
