@@ -77,6 +77,11 @@ void NotificationAction::start()
     } else if (operationName() == QLatin1String("configureNotification")) {
         m_engine->configureNotification(parameters()[QStringLiteral("appRealName")].toString(),
                                         parameters()[QStringLiteral("eventId")].toString());
+    } else if (operationName() == QLatin1String("inhibit")) {
+        const QString hint = parameters()[QStringLiteral("hint")].toString();
+        const QString value = parameters()[QStringLiteral("value")].toString();
+        auto t = m_engine->createInhibition(hint, value);
+        setResult(QVariant::fromValue(t));
     }
 
     emitResult();

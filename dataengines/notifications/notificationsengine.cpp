@@ -186,6 +186,13 @@ uint NotificationsEngine::Notify(const QString &app_name, uint replaces_id,
                                  const QString &app_icon, const QString &summary, const QString &body,
                                  const QStringList &actions, const QVariantMap &hints, int timeout)
 {
+    foreach(NotificationInhibiton *ni, m_inhibitions) {
+        if (hints[ni->hint] == ni->value) {
+            qDebug() << "notification inhibited. Skipping";
+            return -1;
+        }
+    }
+
     uint partOf = 0;
     const QString appRealName = hints[QStringLiteral("x-kde-appname")].toString();
     const QString eventId = hints[QStringLiteral("x-kde-eventId")].toString();
@@ -412,6 +419,20 @@ void NotificationsEngine::configureNotification(const QString &appName, const QS
         widget->selectEvent(eventId);
     }
 }
+
+QSharedPointer<NotificationInhibiton> NotificationsEngine::createInhibition(const QString &hint, const QString &value) {
+    auto ni = new NotificationInhibiton;
+    ni->hint = hint;
+    ni->value = value;
+
+    QSharedPointer<NotificationInhibiton> rc(ni, [this](NotificationInhibiton *ni) {
+        m_inhibitions.removeOne(ni);
+        delete ni;
+    });
+    m_inhibitions.append(ni);
+    return rc;
+}
+
 
 K_EXPORT_PLASMA_DATAENGINE_WITH_JSON(notifications, NotificationsEngine, "plasma-dataengine-notifications.json")
 

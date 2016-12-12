@@ -25,6 +25,14 @@
 #include <QSet>
 #include <QHash>
 
+struct NotificationInhibiton
+{
+    QString hint;
+    QString value;
+};
+
+typedef QSharedPointer<NotificationInhibiton> NotificationInhibitonPtr;
+
 /**
  *  Engine which provides data sources for notifications.
  *  Each notification is represented by one source.
@@ -58,6 +66,13 @@ public:
 
     void configureNotification(const QString &appName, const QString &eventId = QString());
 
+    /*
+     * Block all notification where a given notification hint matches a given value.
+     *
+     * Inhibition is dropped when dereferenced.
+     */
+    NotificationInhibitonPtr createInhibition(const QString &hint, const QString &value);
+
 public Q_SLOTS:
     void removeNotification(uint id, uint closeReason);
     bool registerDBusService();
@@ -90,7 +105,11 @@ private:
      */
     QHash<QString, uint> m_notificationsFromReplaceableApp;
 
+    QList<NotificationInhibiton*> m_inhibitions;
+
     friend class NotificationAction;
 };
+
+Q_DECLARE_METATYPE(NotificationInhibitonPtr);
 
 #endif

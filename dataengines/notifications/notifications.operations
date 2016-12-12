@@ -47,4 +47,11 @@
     </entry>
   </group>
 
+  <group name="inhibit">
+      <entry name="hint" type="String">
+      </entry>
+       <entry name="value" type="String">
+      </entry>
+  </group>
+
 </kcfg>
