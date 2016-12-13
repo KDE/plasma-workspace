@@ -35,8 +35,8 @@ Row {
 
     PW.BatteryIcon {
         id: battery
-        hasBattery: true
-        percent: pmSource.data["Battery"]["Percent"]
+        hasBattery: pmSource.data["Battery"]["Has Battery"] || false
+        percent: pmSource.data["Battery"]["Percent"] || 0
         pluggedIn: pmSource.data["AC Adapter"] ? pmSource.data["AC Adapter"]["Plugged in"] : false
 
         height: batteryLabel.height
