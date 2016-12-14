@@ -50,10 +50,8 @@ Item {
     property bool isExpanded: plasmoid.expanded
 
     onIsExpandedChanged: {
-        if (!isExpanded) {
-            // clear all the selections when the plasmoid is hiding
-            monthView.resetToToday();
-        }
+        // clear all the selections when the plasmoid is showing/hiding
+        monthView.resetToToday();
     }
 
     Item {
