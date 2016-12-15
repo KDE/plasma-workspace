@@ -700,10 +700,9 @@ void ShellCorona::primaryOutputChanged()
         return;
     }
 
-    m_screenPool->setPrimaryConnector(newPrimary->name());
-
     qWarning()<<"Old primary output:"<<oldPrimary<<"New primary output:"<<newPrimary;
     const int oldIdOfPrimary = m_screenPool->id(newPrimary->name());
+    m_screenPool->setPrimaryConnector(newPrimary->name());
     //swap order in m_desktopViewforId
     if (m_desktopViewforId.contains(0) && m_desktopViewforId.contains(oldIdOfPrimary)) {
         DesktopView *primaryDesktop = m_desktopViewforId.value(0);
