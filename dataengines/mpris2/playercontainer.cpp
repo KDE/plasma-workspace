@@ -113,6 +113,15 @@ PlayerContainer::PlayerContainer(const QString& busAddress, QObject* parent)
     Q_ASSERT(!busAddress.isEmpty());
     Q_ASSERT(busAddress.startsWith(QLatin1String("org.mpris.MediaPlayer2.")));
 
+    // MPRIS specifies, that in case a player supports several instances, each additional
+    // instance after the first one is supposed to append ".instance<pid>" at the end of
+    // its dbus address. So instances of media players, which implement this correctly
+    // can have one D-Bus connection per instance and can be identified by their pids.
+    QDBusReply<uint> pidReply = QDBusConnection::sessionBus().interface()->servicePid(busAddress);
+    if (pidReply.isValid()) {
+        setData("InstancePid", pidReply.value());
+    }
+
     m_propsIface = new OrgFreedesktopDBusPropertiesInterface(
             busAddress, MPRIS2_PATH,
             QDBusConnection::sessionBus(), this);
