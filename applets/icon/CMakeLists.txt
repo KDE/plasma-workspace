@@ -1,22 +1,16 @@
+set(iconapplet_SRCS
+    iconapplet.cpp
+)
+
+add_library(plasma_applet_icon MODULE ${iconapplet_SRCS})
+
+kcoreaddons_desktop_to_json(plasma_applet_icon package/metadata.desktop)
+
+target_link_libraries(plasma_applet_icon
+                      KF5::I18n
+                      KF5::KIOWidgets # for KRun
+                      KF5::Plasma)
+
+install(TARGETS plasma_applet_icon DESTINATION ${PLUGIN_INSTALL_DIR}/plasma/applets)
+
 plasma_install_package(package org.kde.plasma.icon)
-
-add_definitions(-DTRANSLATION_DOMAIN=\"plasma_applet_org.kde.plasma.icon\")
-
-set(iconplugin_SRCS
-  plugin/icon_p.cpp
-  plugin/iconplugin.cpp
-)
-
-install(FILES plugin/qmldir DESTINATION ${KDE_INSTALL_QMLDIR}/org/kde/plasma/private/icon)
-
-add_library(iconplugin SHARED ${iconplugin_SRCS})
-
-target_link_libraries(iconplugin
-  Qt5::Core
-  Qt5::Qml
-  Qt5::Quick
-  KF5::KIOCore # KFileItem
-  KF5::KIOWidgets # KRun
-)
-
-install(TARGETS iconplugin DESTINATION ${KDE_INSTALL_QMLDIR}/org/kde/plasma/private/icon)

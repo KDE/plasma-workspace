@@ -1,5 +1,6 @@
 /*
  * Copyright 2013  Bhushan Shah <bhush94@gmail.com>
+ * Copyright 2016  Kai Uwe Broulik <kde@privat.broulik.de>
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License as
@@ -27,44 +28,39 @@ import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as Components
 import org.kde.kquickcontrolsaddons 2.0
 import org.kde.draganddrop 2.0 as DragDrop
-import org.kde.plasma.private.icon 1.0
 
 MouseArea {
     id: root
 
+    readonly property bool constrained: plasmoid.formFactor === PlasmaCore.Types.Vertical || plasmoid.formFactor === PlasmaCore.Types.Horizontal
     property bool containsAcceptableDrag: false
-    property int jumpListCount: 0
 
     height: units.iconSizes.desktop + theme.mSize(theme.defaultFont).height
     width: units.iconSizes.desktop
 
-    Layout.minimumWidth: formFactor === PlasmaCore.Types.Horizontal ? height : units.iconSizes.small
-    Layout.minimumHeight: formFactor === PlasmaCore.Types.Vertical ? width  : units.iconSizes.small
-    property int formFactor: plasmoid.formFactor
-    property bool constrained: formFactor == PlasmaCore.Types.Vertical || formFactor == PlasmaCore.Types.Horizontal
+    Layout.minimumWidth: plasmoid.formFactor === PlasmaCore.Types.Horizontal ? height : units.iconSizes.small
+    Layout.minimumHeight: plasmoid.formFactor === PlasmaCore.Types.Vertical ? width  : units.iconSizes.small
+
     hoverEnabled: true
-    onClicked: logic.open();
+
+    onClicked: plasmoid.nativeInterface.open()
 
     Plasmoid.preferredRepresentation: Plasmoid.fullRepresentation
-    Plasmoid.icon: logic.icon
-    Plasmoid.title: logic.name
+    Plasmoid.icon: plasmoid.nativeInterface.iconName
+    Plasmoid.title: plasmoid.nativeInterface.name
     Plasmoid.backgroundHints: PlasmaCore.Types.NoBackground
 
-    Component.onCompleted: {
-        plasmoid.activated.connect(logic.open);
+    Plasmoid.onActivated: plasmoid.nativeInterface.open()
 
-        updateActions()
-    }
+    Plasmoid.onContextualActionsAboutToShow: updateActions()
+
+    Component.onCompleted: updateActions()
 
     function updateActions() {
-        plasmoid.removeAction("properties")
-        plasmoid.removeAction("separator0")
-        for (var i = 0, length = jumpListCount; i < length; ++i) {
-            plasmoid.removeAction("jumplist_" + i)
-        }
+        plasmoid.clearActions()
 
-        var actions = logic.jumpListActions
-        jumpListCount = actions.length
+        var actions = plasmoid.nativeInterface.jumpListActions
+        var jumpListCount = actions.length
         for (var i = 0; i < jumpListCount; ++i) {
             var item = actions[i]
             plasmoid.setAction("jumplist_" + i, item.name, item.icon)
@@ -73,13 +69,28 @@ MouseArea {
         if (jumpListCount) {
             plasmoid.setActionSeparator("separator0")
         }
+
+        plasmoid.removeAction("configure");
+
+        if (plasmoid.immutability !== PlasmaCore.Types.SystemImmutable) {
+            plasmoid.setAction("configure", i18n("Properties"), "document-properties");
+        }
     }
 
     function actionTriggered(name) {
         if (name.indexOf("jumplist_") === 0) {
             var actionIndex = parseInt(name.substr("jumplist_".length))
-            logic.execJumpList(actionIndex)
+            plasmoid.nativeInterface.execJumpList(actionIndex)
         }
+    }
+
+    function action_configure() {
+        plasmoid.nativeInterface.configure()
+    }
+
+    Connections {
+        target: plasmoid
+        onExternalData: plasmoid.nativeInterface.url = data
     }
 
     DragDrop.DropArea {
@@ -89,20 +100,21 @@ MouseArea {
         onDragEnter: root.containsAcceptableDrag = event.mimeData.hasUrls
         onDragLeave: root.containsAcceptableDrag = false
         onDrop: {
-            logic.processDrop(event)
+            plasmoid.nativeInterface.processDrop(event)
             root.containsAcceptableDrag = false
         }
     }
 
     PlasmaCore.IconItem {
-        id:icon
-        source: plasmoid.icon
+        id: icon
         anchors{
-            left : parent.left
-            right : parent.right
-            top : parent.top
-            bottom : constrained ? parent.bottom : text.top
+            left: parent.left
+            right: parent.right
+            top: parent.top
+            bottom: constrained ? parent.bottom : text.top
         }
+        source: plasmoid.icon
+        enabled: root.enabled
         active: root.containsMouse || root.containsAcceptableDrag
         usesPlasmaTheme: false
     }
@@ -145,21 +157,8 @@ MouseArea {
 
     PlasmaCore.ToolTipArea {
         anchors.fill: parent
-        mainText: logic.name
-        subText: logic.genericName !== mainText ? logic.genericName :""
-        icon: logic.icon
-    }
-
-    Logic {
-        id: logic
-        url: plasmoid.configuration.url
-        onJumpListActionsChanged: updateActions()
-    }
-
-    Connections {
-        target: plasmoid
-        onExternalData: {
-            plasmoid.configuration.url = data
-        }
+        mainText: plasmoid.title
+        subText: plasmoid.nativeInterface.genericName !== mainText ? plasmoid.nativeInterface.genericName :""
+        icon: plasmoid.icon
     }
 }

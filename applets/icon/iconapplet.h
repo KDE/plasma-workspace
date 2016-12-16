@@ -1,5 +1,5 @@
 /*
- * Copyright 2013  Bhushan Shah <bhush94@gmail.com>
+ * Copyright 2016 Kai Uwe Broulik <kde@privat.broulik.de>
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License as
@@ -15,58 +15,75 @@
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ *
  */
 
-#ifndef ICONPRIVATE_H
-#define ICONPRIVATE_H
+#pragma once
 
-#include <QObject>
-#include <QUrl>
+#include <Plasma/Applet>
 
-class QJsonArray;
+#include <QPointer>
 
-class IconPrivate : public QObject
+#include <KPropertiesDialog>
+
+class IconApplet : public Plasma::Applet
 {
     Q_OBJECT
+
     Q_PROPERTY(QUrl url READ url WRITE setUrl NOTIFY urlChanged)
+
     Q_PROPERTY(QString name READ name NOTIFY nameChanged)
-    Q_PROPERTY(QString icon READ icon NOTIFY iconChanged)
+    Q_PROPERTY(QString iconName READ iconName NOTIFY iconNameChanged)
     Q_PROPERTY(QString genericName READ genericName NOTIFY genericNameChanged)
     Q_PROPERTY(QVariantList jumpListActions READ jumpListActions NOTIFY jumpListActionsChanged)
 
 public:
-    IconPrivate();
-    ~IconPrivate() override;
+    explicit IconApplet(QObject *parent, const QVariantList &data);
+    ~IconApplet() override;
+
+    void init() override;
 
     QUrl url() const;
+    void setUrl(const QUrl &url);
+
     QString name() const;
-    QString icon() const;
+    QString iconName() const;
     QString genericName() const;
     QVariantList jumpListActions() const;
 
-    void setUrl(const QUrl &url);
-
     Q_INVOKABLE void open();
-    Q_INVOKABLE bool processDrop(QObject *dropEvent);
+    Q_INVOKABLE void processDrop(QObject *dropEvent);
     Q_INVOKABLE void execJumpList(int index);
+    Q_INVOKABLE void configure();
 
-Q_SIGNALS:
-    void urlChanged(QUrl newUrl);
-    void nameChanged(QString newName);
-    void iconChanged(QString newIcon);
-    void genericNameChanged(QString newGenericName);
+signals:
+    void urlChanged(const QUrl &url);
+
+    void nameChanged(const QString &name);
+    void iconNameChanged(const QString &iconName);
+    void genericNameChanged(const QString &genericName);
     void jumpListActionsChanged(const QVariantList &jumpListActions);
 
 private:
-    void setUrlInternal(const QUrl &url);
+    void setIconName(const QString &iconName);
+
+    void makeExecutable(const QString &filePath);
+
+    void populate();
+    void populateFromDesktopFile(const QString &path);
+
+    QString localPath() const;
+    void setLocalPath(const QString &localPath);
 
     QUrl m_url;
+    QString m_localPath;
+
     QString m_name;
-    QString m_icon;
+    QString m_iconName;
     QString m_genericName;
     QVariantList m_jumpListActions;
 
-};
+    QPointer<KPropertiesDialog> m_configDialog;
 
-#endif
+};
