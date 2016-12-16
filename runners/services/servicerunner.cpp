@@ -85,6 +85,13 @@ private:
         return m_seen.contains(action.exec());
     }
 
+    bool disqualify(const KService::Ptr &service)
+    {
+        auto ret = hasSeen(service) || service->noDisplay();
+        seen(service);
+        return ret;
+    }
+
     void setupMatch(const KService::Ptr &service, Plasma::QueryMatch &match)
     {
         const QString name = service->name();
@@ -121,7 +128,7 @@ private:
 
         foreach (const KService::Ptr &service, services) {
             qCDebug(RUNNER_SERVICES) << service->name() << "is an exact match!" << service->storageId() << service->exec();
-            if (service->noDisplay()) {
+            if (disqualify(service)) {
                 continue;
             }
             Plasma::QueryMatch match(m_runner);
@@ -129,7 +136,6 @@ private:
             setupMatch(service, match);
             match.setRelevance(1);
             matches << match;
-            seen(service);
         }
     }
 
@@ -153,18 +159,13 @@ private:
 
         qCDebug(RUNNER_SERVICES) << "got " << services.count() << " services from " << query;
         foreach (const KService::Ptr &service, services) {
-            if (service->noDisplay()) {
+            if (disqualify(service)) {
                 continue;
             }
 
             const QString id = service->storageId();
             const QString name = service->desktopEntryName();
             const QString exec = service->exec();
-
-            if (hasSeen(service)) {
-                continue;
-            }
-            seen(service);
 
             Plasma::QueryMatch match(m_runner);
             match.setType(Plasma::QueryMatch::PossibleMatch);
@@ -244,13 +245,10 @@ private:
 
         foreach (const KService::Ptr &service, services) {
             qCDebug(RUNNER_SERVICES) << service->name() << "is an exact match!" << service->storageId() << service->exec();
-            if (!service->noDisplay()) {
+            if (disqualify(service)) {
                 continue;
             }
 
-            if (hasSeen(service)) {
-                continue;
-            }
             Plasma::QueryMatch match(m_runner);
             match.setType(Plasma::QueryMatch::PossibleMatch);
             setupMatch(service, match);
