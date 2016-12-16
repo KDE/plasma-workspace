@@ -121,7 +121,7 @@ private:
 
         foreach (const KService::Ptr &service, services) {
             qCDebug(RUNNER_SERVICES) << service->name() << "is an exact match!" << service->storageId() << service->exec();
-            if (service->noDisplay() || service->property(QStringLiteral("NotShowIn"), QVariant::String) == "KDE") {
+            if (service->noDisplay()) {
                 continue;
             }
             Plasma::QueryMatch match(m_runner);
