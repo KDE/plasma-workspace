@@ -33,6 +33,8 @@
 
 K_EXPORT_PLASMA_RUNNER(shell, ShellRunner)
 
+static QString s_runInTerminalId = QStringLiteral("runInTerminal");
+
 ShellRunner::ShellRunner(QObject *parent, const QVariantList &args)
     : Plasma::AbstractRunner(parent, args)
 {
@@ -45,6 +47,7 @@ ShellRunner::ShellRunner(QObject *parent, const QVariantList &args)
                     Plasma::RunnerContext::Help);
 
     addSyntax(Plasma::RunnerSyntax(QStringLiteral(":q:"), i18n("Finds commands that match :q:, using common shell syntax")));
+    addAction(s_runInTerminalId, QIcon::fromTheme(QStringLiteral("utilities-terminal")), i18n("Run in Terminal Window"));
 }
 
 ShellRunner::~ShellRunner()
@@ -75,7 +78,7 @@ void ShellRunner::run(const Plasma::RunnerContext &context, const Plasma::QueryM
     Q_UNUSED(match);
 
     if (m_enabled) {
-        if (match.selectedAction() && match.selectedAction() == actions().value(QStringLiteral("runInTerminal"))) {
+        if (match.selectedAction() && match.selectedAction() == action(s_runInTerminalId)) {
             KToolInvocation::invokeTerminal(context.query());
         } else {
             KRun::runCommand(context.query(), NULL);
@@ -87,14 +90,7 @@ QList<QAction *> ShellRunner::actionsForMatch(const Plasma::QueryMatch &match)
 {
     Q_UNUSED(match)
 
-    const QString runInTerminalId = QStringLiteral("runInTerminal");
-
-    QAction *terminalAction = action(runInTerminalId);
-    if (!terminalAction) {
-        terminalAction = addAction(runInTerminalId, QIcon::fromTheme(QStringLiteral("utilities-terminal")), i18n("Run in Terminal Window"));
-    };
-
-    return {terminalAction};
+    return {action(s_runInTerminalId)};
 }
 
 #include "shellrunner.moc"

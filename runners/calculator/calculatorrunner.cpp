@@ -35,6 +35,8 @@
 #include <KLocalizedString>
 #include <krunner/querymatch.h>
 
+static const QString s_copyToClipboardId = QStringLiteral("copyToClipboard");
+
 K_EXPORT_PLASMA_RUNNER(calculatorrunner, CalculatorRunner)
 
 CalculatorRunner::CalculatorRunner( QObject* parent, const QVariantList &args )
@@ -57,6 +59,8 @@ CalculatorRunner::CalculatorRunner( QObject* parent, const QVariantList &args )
     addSyntax(Plasma::RunnerSyntax(QStringLiteral(":q:"), description));
     addSyntax(Plasma::RunnerSyntax(QStringLiteral("=:q:"), description));
     addSyntax(Plasma::RunnerSyntax(QStringLiteral(":q:="), description));
+
+    addAction(s_copyToClipboardId, QIcon::fromTheme(QStringLiteral("edit-copy")), i18n("Copy to Clipboard"));
 }
 
 CalculatorRunner::~CalculatorRunner()
@@ -320,7 +324,7 @@ void CalculatorRunner::run(const Plasma::RunnerContext &context, const Plasma::Q
 {
     Q_UNUSED(context);
 #ifdef ENABLE_QALCULATE
-    if (match.selectedAction()) {
+    if (match.selectedAction() == action(s_copyToClipboardId)) {
         m_engine->copyToClipboard();
     }
 #else
@@ -332,13 +336,7 @@ QList<QAction *> CalculatorRunner::actionsForMatch(const Plasma::QueryMatch &mat
 {
     Q_UNUSED(match)
 
-    const QString copyToClipboard = QStringLiteral("copyToClipboard");
-
-    if (!action(copyToClipboard)) {
-        (addAction(copyToClipboard, QIcon::fromTheme(QStringLiteral("edit-copy")), i18n("Copy to Clipboard")));
-    }
-
-    return {action(copyToClipboard)};
+    return {action(s_copyToClipboardId)};
 }
 
 QMimeData * CalculatorRunner::mimeDataForMatch(const Plasma::QueryMatch &match)

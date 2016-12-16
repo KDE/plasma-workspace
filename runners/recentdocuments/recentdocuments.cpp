@@ -33,6 +33,8 @@
 
 K_EXPORT_PLASMA_RUNNER(recentdocuments, RecentDocuments)
 
+static const QString s_openParentDirId = QStringLiteral("openParentDir");
+
 RecentDocuments::RecentDocuments(QObject *parent, const QVariantList& args)
     : Plasma::AbstractRunner(parent, args)
 {
@@ -46,6 +48,8 @@ RecentDocuments::RecentDocuments(QObject *parent, const QVariantList& args)
     connect(recentDocWatch, &KDirWatch::deleted, this, &RecentDocuments::loadRecentDocuments);
     connect(recentDocWatch, &KDirWatch::dirty, this, &RecentDocuments::loadRecentDocuments);
     addSyntax(Plasma::RunnerSyntax(QStringLiteral(":q:"), i18n("Looks for documents recently used with names matching :q:.")));
+
+    addAction(s_openParentDirId, QIcon::fromTheme(QStringLiteral("document-open-folder")), i18n("Open Containing Folder"));
 }
 
 RecentDocuments::~RecentDocuments()
@@ -107,7 +111,7 @@ void RecentDocuments::run(const Plasma::RunnerContext &context, const Plasma::Qu
 
     const QString url = match.data().toString();
 
-    if (match.selectedAction() && match.selectedAction()->data().toString() == QLatin1String("openParentDir")) {
+    if (match.selectedAction() && match.selectedAction() == action(s_openParentDirId)) {
         KIO::highlightInFileManager({QUrl(url)});
         return;
     }
@@ -119,16 +123,10 @@ QList<QAction *> RecentDocuments::actionsForMatch(const Plasma::QueryMatch &matc
 {
     Q_UNUSED(match)
 
-    const QString openParentDirId = QStringLiteral("openParentDir");
-
-    if (!action(openParentDirId)) {
-        (addAction(openParentDirId, QIcon::fromTheme(QStringLiteral("document-open-folder")), i18n("Open Containing Folder")))->setData(openParentDirId);
-    }
-
     QList<QAction *> actions;
 
     if (QUrl(match.data().toString()).isLocalFile()) {
-        actions << action(openParentDirId);
+        actions << action(s_openParentDirId);
     }
 
     return actions;

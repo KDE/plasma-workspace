@@ -35,6 +35,8 @@
 
 #include <KIO/OpenFileManagerWindowJob>
 
+static const QString s_openParentDirId = QStringLiteral("openParentDir");
+
 SearchRunner::SearchRunner(QObject* parent, const QVariantList& args)
     : Plasma::AbstractRunner(parent, args)
 {
@@ -48,6 +50,8 @@ SearchRunner::SearchRunner(QObject* parent, const QString& serviceId)
 void SearchRunner::init()
 {
     Plasma::RunnerSyntax syntax(QStringLiteral(":q"), i18n("Search through files, emails and contacts"));
+
+    addAction(s_openParentDirId, QIcon::fromTheme(QStringLiteral("document-open-folder")), i18n("Open Containing Folder"));
 }
 
 SearchRunner::~SearchRunner()
@@ -182,7 +186,7 @@ void SearchRunner::run(const Plasma::RunnerContext&, const Plasma::QueryMatch& m
 {
     const QUrl url = match.data().toUrl();
 
-    if (match.selectedAction() && match.selectedAction()->data().toString() == QLatin1String("openParentDir")) {
+    if (match.selectedAction() && match.selectedAction() == action(s_openParentDirId)) {
         KIO::highlightInFileManager({url});
         return;
     }
@@ -194,13 +198,7 @@ QList<QAction *> SearchRunner::actionsForMatch(const Plasma::QueryMatch &match)
 {
     Q_UNUSED(match)
 
-    const QString openParentDirId = QStringLiteral("openParentDir");
-
-    if (!action(openParentDirId)) {
-        (addAction(openParentDirId, QIcon::fromTheme(QStringLiteral("document-open-folder")), i18n("Open Containing Folder")))->setData(openParentDirId);
-    }
-
-    return {action(openParentDirId)};
+    return {action(s_openParentDirId)};
 }
 
 QMimeData *SearchRunner::mimeDataForMatch(const Plasma::QueryMatch &match)
