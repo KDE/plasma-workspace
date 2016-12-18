@@ -107,6 +107,16 @@ void IconApplet::populate()
 
         // if desktop file just copy it over
         if (KDesktopFile::isDesktopFile(localUrlString)) {
+            // if this restriction is set, KIO won't allow running desktop files from outside
+            // registered services, applications, and so on, in this case we'll use the original
+            // .desktop file and lose the ability to customize it
+            if (!KAuthorized::authorize(QStringLiteral("run_desktop_files"))) {
+                populateFromDesktopFile(localUrlString);
+                // we don't call setLocalPath here as we don't want to store localPath to be a system-location
+                // so that the fact that we cannot edit is re-evaluated every time
+                return;
+            }
+
             if (!QFile::copy(localUrlString, backingDesktopFile)) {
                 setLaunchErrorMessage(i18n("Failed to copy icon widget desktop file from '%1' to '%2'", localUrlString, backingDesktopFile));
                 return;
