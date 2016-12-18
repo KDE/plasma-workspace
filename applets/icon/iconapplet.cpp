@@ -113,7 +113,8 @@ void IconApplet::populate()
             }
 
             // set executable flag on the desktop file so KIO doesn't complain about executing it
-            makeExecutable(backingDesktopFile);
+            QFile file(backingDesktopFile);
+            file.setPermissions(file.permissions() | QFile::ExeOwner);
 
             populateFromDesktopFile(backingDesktopFile);
             setLocalPath(backingDesktopFile);
@@ -137,9 +138,6 @@ void IconApplet::populate()
     desktopGroup.writeEntry(QStringLiteral("Icon"), KIO::iconNameForUrl(m_url));
 
     linkDesktopFile.sync();
-
-    // Link desktop files need to be executable
-    makeExecutable(backingDesktopFile);
 
     populateFromDesktopFile(backingDesktopFile);
     setLocalPath(backingDesktopFile);
@@ -349,12 +347,6 @@ void IconApplet::setLocalPath(const QString &localPath)
 {
     m_localPath = localPath;
     config().writeEntry(QStringLiteral("localPath"), localPath);
-}
-
-void IconApplet::makeExecutable(const QString &filePath)
-{
-    QFile file(filePath);
-    file.setPermissions(file.permissions() | QFile::ExeOwner);
 }
 
 K_EXPORT_PLASMA_APPLET_WITH_JSON(icon, IconApplet, "metadata.json")

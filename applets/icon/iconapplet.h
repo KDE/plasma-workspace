@@ -68,8 +68,6 @@ signals:
 private:
     void setIconName(const QString &iconName);
 
-    void makeExecutable(const QString &filePath);
-
     void populate();
     void populateFromDesktopFile(const QString &path);
 
