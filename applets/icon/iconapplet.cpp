@@ -22,6 +22,7 @@
 #include "iconapplet.h"
 
 #include <QApplication>
+#include <QCryptographicHash>
 #include <QDesktopWidget>
 #include <QDir>
 #include <QDropEvent>
@@ -91,6 +92,12 @@ void IconApplet::populate()
 
     // We always want it to be a .desktop file (e.g. also for the "Type=Link" at the end)
     QString desiredDesktopFileName = m_url.fileName();
+
+    // in doubt, just hash the URL, e.g. http://www.kde.org/ has no filename
+    if (desiredDesktopFileName.isEmpty()) {
+        desiredDesktopFileName = QString::fromLatin1(QCryptographicHash::hash(m_url.toDisplayString().toUtf8(), QCryptographicHash::Md5).toHex());
+    }
+
     if (!desiredDesktopFileName.endsWith(QLatin1String(".desktop"))) {
         desiredDesktopFileName.append(QLatin1String(".desktop"));
     }
