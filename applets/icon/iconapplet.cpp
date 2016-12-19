@@ -109,6 +109,8 @@ void IconApplet::populate()
     }
     backingDesktopFile.append(desiredDesktopFileName);
 
+    QString name; // ends up as "Name" in the .desktop file for "Link" files below
+
     if (m_url.isLocalFile()) {
         const QString localUrlString = m_url.toLocalFile();
 
@@ -138,6 +140,8 @@ void IconApplet::populate()
 
             return;
         }
+
+        name = QFileInfo(localUrlString).baseName();
     }
 
     // in all other cases just make it a link
@@ -148,7 +152,16 @@ void IconApplet::populate()
 
     KDesktopFile linkDesktopFile(backingDesktopFile);
     auto desktopGroup = linkDesktopFile.desktopGroup();
-    desktopGroup.writeEntry(QStringLiteral("Name"), m_url.fileName());
+
+    if (name.isEmpty()) {
+        if (m_url.scheme().startsWith(QLatin1String("http"))) {
+            name = m_url.host();
+        } else {
+            name = m_url.fileName();
+        }
+    }
+
+    desktopGroup.writeEntry(QStringLiteral("Name"), name);
     desktopGroup.writeEntry(QStringLiteral("Type"), QStringLiteral("Link"));
     desktopGroup.writeEntry(QStringLiteral("URL"), m_url);
     desktopGroup.writeEntry(QStringLiteral("Icon"), KIO::iconNameForUrl(m_url));
