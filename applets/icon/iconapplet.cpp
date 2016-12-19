@@ -90,7 +90,6 @@ void IconApplet::populate()
         return;
     }
 
-    // We always want it to be a .desktop file (e.g. also for the "Type=Link" at the end)
     QString desiredDesktopFileName = m_url.fileName();
 
     // in doubt, just hash the URL, e.g. http://www.kde.org/ has no filename
@@ -98,6 +97,7 @@ void IconApplet::populate()
         desiredDesktopFileName = QString::fromLatin1(QCryptographicHash::hash(m_url.toDisplayString().toUtf8(), QCryptographicHash::Md5).toHex());
     }
 
+    // We always want it to be a .desktop file (e.g. also for the "Type=Link" at the end)
     if (!desiredDesktopFileName.endsWith(QLatin1String(".desktop"))) {
         desiredDesktopFileName.append(QLatin1String(".desktop"));
     }
