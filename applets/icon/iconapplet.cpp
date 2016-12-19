@@ -142,10 +142,14 @@ void IconApplet::populate()
     KDesktopFile linkDesktopFile(backingDesktopFile);
     auto desktopGroup = linkDesktopFile.desktopGroup();
     desktopGroup.writeEntry(QStringLiteral("Name"), m_url.fileName());
-    desktopGroup.writeEntry(QStringLiteral("GenericName"), mimeType.comment());
     desktopGroup.writeEntry(QStringLiteral("Type"), QStringLiteral("Link"));
     desktopGroup.writeEntry(QStringLiteral("URL"), m_url);
     desktopGroup.writeEntry(QStringLiteral("Icon"), KIO::iconNameForUrl(m_url));
+
+    // when in doubt Qt returns application/octet-stream which will show as "Unknown" usually, so don't write it down then
+    if (mimeType.name() != QLatin1String("application/octet-stream")) {
+        desktopGroup.writeEntry(QStringLiteral("GenericName"), mimeType.comment());
+    }
 
     linkDesktopFile.sync();
 
