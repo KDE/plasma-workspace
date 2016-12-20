@@ -203,11 +203,12 @@ ShellCorona::ShellCorona(QObject *parent)
     connect(m_activityController, &KActivities::Controller::activityAdded, this, &ShellCorona::activityAdded);
     connect(m_activityController, &KActivities::Controller::activityRemoved, this, &ShellCorona::activityRemoved);
 
+    KActionCollection *taskbarActions = new KActionCollection(this);
     for (int i = 0; i < 10; ++i) {
         const int entryNumber = i + 1;
         const Qt::Key key = static_cast<Qt::Key>(Qt::Key_0 + (entryNumber % 10));
 
-        QAction *action = actions()->addAction(QStringLiteral("activate task manager entry %1").arg(QString::number(entryNumber)));
+        QAction *action = taskbarActions->addAction(QStringLiteral("activate task manager entry %1").arg(QString::number(entryNumber)));
         action->setText(i18n("Activate Task Manager Entry %1", entryNumber));
         KGlobalAccel::setGlobalShortcut(action, QKeySequence(Qt::META + key));
         connect(action, &QAction::triggered, this, [this, i] {
