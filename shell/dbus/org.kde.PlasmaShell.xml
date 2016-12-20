@@ -5,6 +5,8 @@
     </method>
     <method name="toggleActivityManager">
     </method>
+    <method name="toggleWidgetExplorer">
+    </method>
     <method name="setDashboardShown">
       <arg name="show" type="b" direction="in"/>
     </method>

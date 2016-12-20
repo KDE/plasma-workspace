@@ -138,6 +138,7 @@ public Q_SLOTS:
     void showInteractiveKWinConsole();
     void loadKWinScriptInInteractiveConsole(const QString &script);
     void toggleActivityManager();
+    void toggleWidgetExplorer();    
     void evaluateScript(const QString &string);
     void activateLauncherMenu();
 
@@ -185,7 +186,6 @@ protected Q_SLOTS:
 private Q_SLOTS:
     void createWaitingPanels();
     void handleContainmentAdded(Plasma::Containment *c);
-    void toggleWidgetExplorer();
     void syncAppConfig();
     void checkActivities();
     void currentActivityChanged(const QString &newActivity);
