@@ -1,6 +1,5 @@
 [Desktop Entry]
 Name=Clipboard
-Name[ast]=Cartafueyu
 Name[bs]=Klipbord
 Name[ca]=Porta-retalls
 Name[ca@valencia]=Porta-retalls
@@ -44,7 +43,6 @@ Name[x-test]=xxClipboardxx
 Name[zh_CN]=剪贴板
 Name[zh_TW]=剪貼簿
 Comment=Provides access to the clipboard history.
-Comment[ast]=Forne accesu a la historia del cartafueyu.
 Comment[bs]=Omogućava pristup historiji klipborda.
 Comment[ca]=Proporciona accés a l'historial del porta-retalls.
 Comment[ca@valencia]=Proporciona accés a l'historial del porta-retalls.

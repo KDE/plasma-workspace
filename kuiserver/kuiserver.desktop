@@ -2,7 +2,6 @@
 Type=Service
 Name=kuiserver
 Name[af]=kui-bediener
-Name[ast]=kuiserver
 Name[be]=kuiserver
 Name[be@latin]=kuiserver
 Name[bg]=kuiserver

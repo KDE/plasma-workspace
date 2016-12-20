@@ -1,7 +1,6 @@
 [Desktop Entry]
 Name=Places
 Name[ar]=أماكن
-Name[ast]=Llugares
 Name[be@latin]=Miescy
 Name[bg]=Места
 Name[bn]=স্থান
@@ -80,7 +79,6 @@ Type=Service
 Icon=user-home
 Comment=Open devices and folder bookmarks
 Comment[ar]=افتح علامات الأجهزة والمجلدات
-Comment[ast]=Abre marcadores de preseos y carpetes
 Comment[bs]=Otvoreni uređaji i mape favorita
 Comment[ca]=Obre els punts dels dispositius i dels preferits
 Comment[ca@valencia]=Obri els punts dels dispositius i dels preferits

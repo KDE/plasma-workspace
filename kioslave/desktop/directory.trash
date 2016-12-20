@@ -1,7 +1,6 @@
 [Desktop Entry]
 Encoding=UTF-8
 Name=Trash
-Name[ast]=Papelera
 Name[ca]=Paperera
 Name[ca@valencia]=Paperera
 Name[cs]=Koš
@@ -41,7 +40,6 @@ Name[x-test]=xxTrashxx
 Name[zh_CN]=回收站
 Name[zh_TW]=資源回收筒
 Comment=Contains removed files
-Comment[ast]=Contién ficheros desaniciaos
 Comment[ca]=Conté els fitxers eliminats
 Comment[ca@valencia]=Conté els fitxers eliminats
 Comment[cs]=Obsahuje odstraněné soubory

@@ -3,7 +3,6 @@ Type=ServiceType
 X-KDE-ServiceType=Plasma/ShareProvider
 Comment=Plugin for Plasma Sharebin
 Comment[ar]=ملحقة لبلازما Sharebin
-Comment[ast]=Complementu pa Plasma Sharebin
 Comment[bs]=Priključak za plazma korpu dijeljenja
 Comment[ca]=Connector pel Sharebin del Plasma
 Comment[ca@valencia]=Connector pel Sharebin del Plasma
