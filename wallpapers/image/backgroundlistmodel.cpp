@@ -55,8 +55,8 @@ ImageSizeFinder::ImageSizeFinder(const QString &path, QObject *parent)
 
 void ImageSizeFinder::run()
 {
-    QImage image(m_path);
-    Q_EMIT sizeFound(m_path, image.size());
+    QImageReader reader(m_path);
+    Q_EMIT sizeFound(m_path, reader.size());
 }
 
 
