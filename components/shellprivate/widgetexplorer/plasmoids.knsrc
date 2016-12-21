@@ -1,4 +1,6 @@
 [KNewStuff3]
+Name=Plasma Widgets
+
 ProvidersUrl=http://download.kde.org/ocs/providers.xml
 Categories=Plasma 5 Plasmoid
 StandardResource=tmp
