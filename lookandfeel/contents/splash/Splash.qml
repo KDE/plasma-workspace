@@ -55,7 +55,7 @@ Rectangle {
 
             anchors.centerIn: parent
 
-            source: "images/kde.svgz"
+            source: "images/plasma.svgz"
 
             sourceSize.width: size
             sourceSize.height: size
