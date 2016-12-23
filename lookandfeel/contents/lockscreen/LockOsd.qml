@@ -46,11 +46,17 @@ PlasmaCore.FrameSvgItem {
         hideTimer.restart();
     }
 
-    OsdItem {
-        id: osdItem
-        rootItem: osd
-
+    // avoid leaking ColorScope of lock screen theme into the OSD "popup"
+    PlasmaCore.ColorScope {
+        width: osdItem.width
+        height: osdItem.height
         anchors.centerIn: parent
+        colorGroup: PlasmaCore.Theme.NormalColorGroup
+
+        OsdItem {
+            id: osdItem
+            rootItem: osd
+        }
     }
 
     Timer {
