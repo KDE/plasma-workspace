@@ -1,5 +1,12 @@
 [KNewStuff3]
 Name=Plasma Widgets
+Name[ca]=Estris del Plasma
+Name[nl]=Plasma widgets
+Name[pt]=Elementos do Plasma
+Name[sv]=Plasma grafiska komponenter
+Name[uk]=Віджети Плазми
+Name[x-test]=xxPlasma Widgetsxx
+Name[zh_CN]=Plasma 部件
 
 ProvidersUrl=http://download.kde.org/ocs/providers.xml
 Categories=Plasma 5 Plasmoid

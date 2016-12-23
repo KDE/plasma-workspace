@@ -1,5 +1,12 @@
 [KNewStuff3]
 Name=Wallpapers
+Name[ca]=Fons d'escriptori
+Name[nl]=Achtergrondafbeeldingen
+Name[pt]=Papéis de Parede
+Name[sv]=Skrivbordsunderlägg
+Name[uk]=Зображення тла
+Name[x-test]=xxWallpapersxx
+Name[zh_CN]=壁纸
 
 ProvidersUrl=http://download.kde.org/ocs/providers.xml
 Categories=KDE Wallpaper 800x600,KDE Wallpaper 1024x768,KDE Wallpaper 1280x1024,KDE Wallpaper 1440x900,KDE Wallpaper 1600x1200,KDE Wallpaper (other)
