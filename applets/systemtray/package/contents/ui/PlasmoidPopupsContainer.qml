@@ -48,7 +48,14 @@ StackView {
             mainStack.replace(emptyPage);
         }
     }
-
+    Connections {
+        target: plasmoid
+        onAppletRemoved: {
+            if (applet == root.activeApplet) {
+                mainStack.clear()
+            }
+        }
+    }
     //used to animate away to nothing
     Item {
         id: emptyPage
