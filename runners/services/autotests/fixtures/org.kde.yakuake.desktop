@@ -1,0 +1,12 @@
+[Desktop Entry]
+Name=Yakuake ServiceRunnerTest
+GenericName=Drop-down Terminal ServiceRunnerTest
+Exec=yakuake
+Icon=yakuake
+Type=Application
+Terminal=false
+Categories=Qt;KDE;System;TerminalEmulator;
+Comment=A drop-down terminal emulator based on KDE Konsole technology.
+X-DBUS-StartupType=Unique
+X-KDE-StartupNotify=false
+X-DBUS-ServiceName=org.kde.yakuake

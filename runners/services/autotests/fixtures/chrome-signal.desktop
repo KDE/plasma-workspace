@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Terminal=false
+Type=Application
+Name=Signal ServiceRunnerTest
+Exec=/opt/google/chrome/google-chrome --profile-directory=Default --app-id=bikioccmkafdpakkkcpdbppfkghcmihk
+Icon=chrome-bikioccmkafdpakkkcpdbppfkghcmihk-Default
+StartupWMClass=crx_bikioccmkafdpakkkcpdbppfkghcmihk
+

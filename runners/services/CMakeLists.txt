@@ -19,6 +19,17 @@ target_link_libraries(krunner_services
     KF5::Activities
 )
 
+add_library(krunner_services_test STATIC ${krunner_services_SRCS})
+target_link_libraries(krunner_services_test
+    KF5::KIOWidgets
+    KF5::I18n
+    KF5::Runner
+    KF5::Service
+    KF5::Activities
+)
+
 install(TARGETS krunner_services DESTINATION ${KDE_INSTALL_PLUGINDIR} )
 
 install(FILES plasma-runner-services.desktop DESTINATION ${KDE_INSTALL_KSERVICES5DIR})
+
+add_subdirectory(autotests)
