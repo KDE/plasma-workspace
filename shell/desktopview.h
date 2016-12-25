@@ -88,12 +88,14 @@ private Q_SLOTS:
 Q_SIGNALS:
     void stayBehindChanged();
     void windowTypeChanged();
+    void screenRenamed();
 
 private:
     void coronaPackageChanged(const KPackage::Package &package);
     void ensureWindowType();
     void setupWaylandIntegration();
 
+    QString m_screenName;
     QPointer<PlasmaQuick::ConfigView> m_configView;
     QPointer<QScreen> m_oldScreen;
     QPointer<QScreen> m_screenToFollow;
