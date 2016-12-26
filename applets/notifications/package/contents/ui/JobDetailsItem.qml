@@ -100,12 +100,12 @@ Column {
                 height: paintedHeight
 
                 font: theme.smallestFont
-                text: jobItem["label" + index] ? jobItem["label" + index] : ""
+                text: jobItem["label" + index] || ""
                 elide: Text.ElideMiddle
 
                 PlasmaCore.ToolTipArea {
                     anchors.fill: parent
-                    subText: labelText.truncated ? jobItem["label" + index] : ""
+                    subText: labelText.truncated ? labelText.text : ""
                 }
             }
         }
