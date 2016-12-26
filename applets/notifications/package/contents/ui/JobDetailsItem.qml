@@ -38,13 +38,15 @@ Column {
     property int leftColumnWidth
 
     function localizeProcessedAmount(id) {
-        if (!jobsSource.data[modelData]) {
+        var data = jobsSource.data[modelData]
+
+        if (!data) {
             return ""
         }
 
-        var unit = jobsSource.data[modelData]["processedUnit" + id]
-        var processed = jobsSource.data[modelData]["processedAmount" + id]
-        var total = jobsSource.data[modelData]["totalAmount" + id]
+        var unit = data["processedUnit" + id]
+        var processed = data["processedAmount" + id]
+        var total = data["totalAmount" + id]
 
         //if bytes localise the unit
         if (unit === "bytes") {
