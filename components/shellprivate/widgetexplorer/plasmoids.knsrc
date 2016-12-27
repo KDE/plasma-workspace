@@ -1,11 +1,17 @@
 [KNewStuff3]
 Name=Plasma Widgets
 Name[ca]=Estris del Plasma
+Name[en_GB]=Plasma Widgets
 Name[es]=Elementos gráficos de Plasma
 Name[it]=Oggetti di Plasma
 Name[nl]=Plasma widgets
 Name[pl]=Elementy interfejsu Plazmy
 Name[pt]=Elementos do Plasma
+Name[sk]=Widgety Plasma
+Name[sr]=плазма виџети
+Name[sr@ijekavian]=плазма виџети
+Name[sr@ijekavianlatin]=plasma vidžeti
+Name[sr@latin]=plasma vidžeti
 Name[sv]=Plasma grafiska komponenter
 Name[uk]=Віджети Плазми
 Name[x-test]=xxPlasma Widgetsxx

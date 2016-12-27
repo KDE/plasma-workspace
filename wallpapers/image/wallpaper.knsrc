@@ -1,11 +1,17 @@
 [KNewStuff3]
 Name=Wallpapers
 Name[ca]=Fons d'escriptori
+Name[en_GB]=Wallpapers
 Name[es]=Fondos del escritorio
 Name[it]=Sfondi
 Name[nl]=Achtergrondafbeeldingen
 Name[pl]=Tapety
 Name[pt]=Papéis de Parede
+Name[sk]=Tapety
+Name[sr]=тапети
+Name[sr@ijekavian]=тапети
+Name[sr@ijekavianlatin]=tapeti
+Name[sr@latin]=tapeti
 Name[sv]=Skrivbordsunderlägg
 Name[uk]=Зображення тла
 Name[x-test]=xxWallpapersxx
