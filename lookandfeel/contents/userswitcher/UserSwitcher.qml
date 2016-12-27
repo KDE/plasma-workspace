@@ -65,6 +65,11 @@ PlasmaCore.ColorScope {
         anchors.horizontalCenter: parent.horizontalCenter
     }
 
+    MouseArea {
+        anchors.fill: parent
+        onClicked: root.dismissed()
+    }
+
     SessionManagementScreen {
         id: block
         anchors.fill: parent
