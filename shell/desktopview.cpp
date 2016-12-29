@@ -85,7 +85,6 @@ void DesktopView::setScreenToFollow(QScreen *screen)
         return;
     }
 
-    m_screenName = screen->name();
     m_screenToFollow = screen;
     setScreen(screen);
     adaptToScreen();
@@ -199,17 +198,7 @@ DesktopView::SessionType DesktopView::sessionType() const
 
 bool DesktopView::event(QEvent *e)
 {
-    //NOTE: we need this heuristic for the case when there is an
-    //internal laptop screen that gets disabled upon connection of an external one. the only QCreen * pointer gets recycled and there is no dedicated signal to discover this at all
-    //after being moved, the view will get an expose event, so we can check there if the screen has been renamed
-    //see https://bugs.kde.org/show_bug.cgi?id=373880
-    //https://bugreports.qt.io/browse/QTBUG-57785
-    if (e->type() == QEvent::Expose) {
-        if (m_screenToFollow && m_screenToFollow->name() != m_screenName) {
-            m_screenName = m_screenToFollow->name();
-            emit screenRenamed();
-        }
-    } else if (e->type() == QEvent::KeyRelease) {
+    if (e->type() == QEvent::KeyRelease) {
         QKeyEvent *ke = static_cast<QKeyEvent *>(e);
         if (KWindowSystem::showingDesktop() && ke->key() == Qt::Key_Escape) {
             ShellCorona *c = qobject_cast<ShellCorona *>(corona());

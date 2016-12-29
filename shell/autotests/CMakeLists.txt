@@ -10,6 +10,10 @@ MACRO(PLASMASHELL_UNIT_TESTS)
                             Qt5::Gui
                             KF5::Service
                                      )
+               if(HAVE_X11)
+                  target_link_libraries(${_testname} ${X11_LIBRARIES} ${XCB_LIBRARIES} )
+                  target_link_libraries(${_testname} Qt5::X11Extras)
+               endif()
                if(QT_QTOPENGL_FOUND)
                    target_link_libraries(${_testname} Qt5::OpenGL)
                endif()

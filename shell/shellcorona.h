@@ -242,6 +242,7 @@ private:
     QSet<QScreen*> m_redundantOutputs;
     QList<KDeclarative::QmlObject *> m_alternativesObjects;
     KDeclarative::QmlObject *m_interactiveConsole;
+    int m_eventBase;
 
     QTimer m_waitingPanelsTimer;
     QTimer m_appConfigSyncTimer;
