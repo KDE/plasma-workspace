@@ -108,7 +108,7 @@ install(FILES plasmashell.desktop DESTINATION ${KDE_INSTALL_AUTOSTARTDIR})
 install( FILES dbus/org.kde.PlasmaShell.xml DESTINATION ${KDE_INSTALL_DBUSINTERFACEDIR} )
 
 install(FILES
-   scripting/plasma-layouttemplate.desktop
+   scripting/plasma-layout-template.desktop
    DESTINATION ${KDE_INSTALL_KSERVICETYPES5DIR})
 
 add_subdirectory(packageplugins)
