@@ -18,14 +18,24 @@
  */
 
 #include "screenpool.h"
+#include <config-plasma.h>
 
 #include <QGuiApplication>
 #include <QScreen>
+
+#if HAVE_X11
+#include <QtX11Extras/QX11Info>
+#include <xcb/xcb.h>
+#include <xcb/randr.h>
+#include <xcb/xcb_event.h>
+#endif
 
 ScreenPool::ScreenPool(KSharedConfig::Ptr config, QObject *parent)
     : QObject(parent),
       m_configGroup(KConfigGroup(config, QStringLiteral("ScreenConnectors")))
 {
+    qApp->installNativeEventFilter(this);
+
     m_configSaveTimer.setSingleShot(true);
     connect(&m_configSaveTimer, &QTimer::timeout, this, [this](){
         m_configGroup.sync();
@@ -158,6 +168,39 @@ QList <int> ScreenPool::knownIds() const
 {
     return m_connectorForId.keys();
 }
+
+bool ScreenPool::nativeEventFilter(const QByteArray& eventType, void* message, long int* result)
+{
+    Q_UNUSED(result);
+#if HAVE_X11
+    // a particular edge case: when we switch the only enabled screen
+    // we don't have any signal about it, the primary screen changes but we have the same old QScreen* getting recycled
+    // see https://bugs.kde.org/show_bug.cgi?id=373880
+    // if this slot will be invoked many times, their//second time on will do nothing as name and primaryconnector will be the same by then
+    if (eventType != "xcb_generic_event_t") {
+        return false;
+    }
+    
+    xcb_generic_event_t *ev = static_cast<xcb_generic_event_t *>(message);
+
+    const auto responseType = XCB_EVENT_RESPONSE_TYPE(ev);
+
+    const xcb_query_extension_reply_t* reply = xcb_get_extension_data(QX11Info::connection(), &xcb_randr_id);
+
+    if (responseType == reply->first_event + XCB_RANDR_SCREEN_CHANGE_NOTIFY) {
+        if (qGuiApp->primaryScreen()->name() != primaryConnector()) {
+            //new screen?
+            if (id(qGuiApp->primaryScreen()->name()) < 0) {
+                insertScreenMapping(firstAvailableId(), qGuiApp->primaryScreen()->name());
+            }
+            //switch the primary screen in the pool
+            setPrimaryConnector(qGuiApp->primaryScreen()->name());
+        }
+    }
+#endif
+    return false;
+}
+
 
 #include "moc_screenpool.cpp"
 

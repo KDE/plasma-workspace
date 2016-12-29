@@ -79,6 +79,7 @@
 #if HAVE_X11
 #include <NETWM>
 #include <QtX11Extras/QX11Info>
+#include <xcb/xcb.h>
 #endif
 
 
@@ -1144,20 +1145,6 @@ void ShellCorona::addOutput(QScreen* screen)
 
     DesktopView *view = new DesktopView(this, screen);
     connect(view, &QQuickWindow::sceneGraphError, this, &ShellCorona::showOpenGLNotCompatibleWarning);
-    // a particular edge case: when we switch the only enabled screen
-    // we don't have any signal about it, the primary screen changes but we have the same old QScreen* getting recycled
-    // see https://bugs.kde.org/show_bug.cgi?id=373880
-    // if this slot will be invoked many times, their//second time on will do nothing as name and primaryconnector will be the same by then
-    connect(view, &DesktopView::screenRenamed, this, [=](){
-        if (qGuiApp->primaryScreen()->name() != m_screenPool->primaryConnector()) {
-            //new screen?
-            if (m_screenPool->id(qGuiApp->primaryScreen()->name()) < 0) {
-                m_screenPool->insertScreenMapping(m_screenPool->firstAvailableId(), qGuiApp->primaryScreen()->name());
-            }
-            //switch the primary screen in the pool
-            m_screenPool->setPrimaryConnector(qGuiApp->primaryScreen()->name());
-        }
-    });
 
     Plasma::Containment *containment = createContainmentForActivity(m_activityController->currentActivity(), insertPosition);
     Q_ASSERT(containment);
