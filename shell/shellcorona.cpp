@@ -449,6 +449,21 @@ QByteArray ShellCorona::dumpCurrentLayoutJS() const
                  alignment == Qt::AlignRight  ? "right"
                : alignment == Qt::AlignCenter ? "center"
                : "left");
+            switch (view->visibilityMode()) {
+            case PanelView::AutoHide:
+                panelJson.insert("hiding", "autohide");
+                break;
+            case PanelView::LetWindowsCover:
+                panelJson.insert("hiding", "windowscover");
+                break;
+            case PanelView::WindowsGoBelow:
+                panelJson.insert("hiding", "windowsbelow");
+                break;
+            case PanelView::NormalPanel:
+            default:
+                panelJson.insert("hiding", "normal");
+                break;
+            }
         }
 
         // Saving the config keys
