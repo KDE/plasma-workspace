@@ -212,7 +212,7 @@ void JobView::setProcessedAmount(qlonglong amount, const QString &unit)
 
 void JobView::setDestUrl(const QDBusVariant & destUrl)
 {
-    Q_UNUSED(destUrl);
+    setData(QStringLiteral("destUrl"), destUrl.variant().toUrl());
 }
 
 void JobView::setPercent(uint percent)
