@@ -28,6 +28,7 @@ ColumnLayout {
         text: Qt.formatTime(timeSource.data["Local"]["DateTime"])
         font.pointSize: 32 //Mockup says this, I'm not sure what to do?
         Layout.alignment: Qt.AlignHCenter
+        renderType: Text.QtRendering
     }
     Label {
         text: Qt.formatDate(timeSource.data["Local"]["DateTime"], Qt.DefaultLocaleLongDate)
