@@ -128,7 +128,7 @@ Item {
     Plasmoid.fullRepresentation: ExpandedRepresentation {}
 
     Plasmoid.compactRepresentation: PlasmaCore.IconItem {
-        source: root.state === "paused" ? "media-playback-pause" : "media-playback-start"
+        source: root.state === "playing" ? "media-playback-start" : "media-playback-pause"
         active: compactMouse.containsMouse
 
         MouseArea {
