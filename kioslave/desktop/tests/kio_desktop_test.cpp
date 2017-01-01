@@ -24,6 +24,7 @@
 #include <QTest>
 #include <kio/job.h>
 #include <kio/copyjob.h>
+#include <kio_version.h>
 
 class TestDesktop : public QObject
 {
@@ -41,13 +42,17 @@ private Q_SLOTS:
         setenv("KIOSLAVE_ENABLE_TESTMODE", "1", 1);
         QStandardPaths::setTestModeEnabled(true);
 
+        // Warning: even with test mode enabled, this is the real user's Desktop directory
         m_desktopPath = QStandardPaths::writableLocation(QStandardPaths::DesktopLocation);
         m_testFileName = QLatin1String("kio_desktop_test_file");
+
+        cleanupTestCase();
     }
     void cleanupTestCase()
     {
         QFile::remove(m_desktopPath + '/' + m_testFileName);
         QFile::remove(m_desktopPath + '/' + m_testFileName + ".part");
+        QFile::remove(m_desktopPath + '/' + m_testFileName + "_link");
     }
 
     void testCopyToDesktop()
@@ -72,6 +77,35 @@ private Q_SLOTS:
         bool ok = job->exec();
         QVERIFY(ok);
         QCOMPARE(job->mostLocalUrl().toLocalFile(), filePath);
+    }
+
+    void testCreateSymlink()
+    {
+        const QUrl desktopUrl("desktop:/" + m_testFileName);
+        const QUrl desktopLink("desktop:/" + m_testFileName + "_link");
+        const QString source = m_desktopPath + '/' + m_testFileName;
+        const QString localLink = source + "_link";
+
+        // Create a symlink using kio_desktop
+        KIO::Job* linkJob = KIO::symlink(m_testFileName, desktopLink, KIO::HideProgressInfo);
+        QVERIFY(linkJob->exec());
+        QVERIFY(QFileInfo(localLink).isSymLink());
+        QCOMPARE(QFileInfo(localLink).symLinkTarget(), source);
+
+        // Now try changing the link target, without Overwrite -> error
+        linkJob = KIO::symlink(m_testFileName + "2", desktopLink, KIO::HideProgressInfo);
+        QVERIFY(!linkJob->exec());
+        QCOMPARE(linkJob->error(), (int)KIO::ERR_FILE_ALREADY_EXIST);
+
+#if KIO_VERSION >= QT_VERSION_CHECK(5, 31, 0)  // fixed since 5.30.0, actually, but playing it safe for pre-5.30-users
+        // Now try changing the link target, with Overwrite (bug 360487)
+        linkJob = KIO::symlink(m_testFileName + "3", desktopLink, KIO::Overwrite | KIO::HideProgressInfo);
+        QVERIFY(linkJob->exec());
+        QVERIFY(QFileInfo(localLink).isSymLink());
+        QCOMPARE(QFileInfo(localLink).symLinkTarget(), source + "3");
+#else
+        QSKIP("Skipping symlink+Overwrite test, fixed in KIO 5.30.0");
+#endif
     }
 
     void testRename_data()
