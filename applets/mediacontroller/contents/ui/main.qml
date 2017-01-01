@@ -115,7 +115,7 @@ Item {
 
     Timer {
         id: updatePlasmoidStatusTimer
-        interval: 250
+        interval: 3000
         onTriggered: {
             if (state != "") {
                 plasmoid.status = PlasmaCore.Types.ActiveStatus
