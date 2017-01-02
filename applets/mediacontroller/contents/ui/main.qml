@@ -54,9 +54,6 @@ Item {
 
     property bool noPlayer: mpris2Source.sources.length <= 1
 
-    readonly property bool canRaise: !root.noPlayer && mpris2Source.currentData.CanRaise
-    readonly property bool canQuit: !root.noPlayer && mpris2Source.currentData.CanQuit
-
     readonly property bool canControl: !root.noPlayer && mpris2Source.currentData.CanControl
     readonly property bool canGoPrevious: canControl && mpris2Source.currentData.CanGoPrevious
     readonly property bool canGoNext: canControl && mpris2Source.currentData.CanGoNext
@@ -70,7 +67,12 @@ Item {
 
     Plasmoid.onContextualActionsAboutToShow: {
         plasmoid.clearActions()
-        if (canRaise) {
+
+        if (root.noPlayer) {
+            return
+        }
+
+        if (mpris2Source.currentData.CanRaise) {
             var icon = mpris2Source.currentData["Desktop Icon Name"] || ""
             plasmoid.setAction("open", i18nc("Open player window or bring it to the front if already open", "Open"), icon)
         }
@@ -97,7 +99,7 @@ Item {
             plasmoid.setAction("stop", i18nc("Stop playback", "Stop"), "media-playback-stop")
         }
 
-        if (canQuit) {
+        if (mpris2Source.currentData.CanQuit) {
             plasmoid.setActionSeparator("quitseparator");
             plasmoid.setAction("quit", i18nc("Quit player", "Quit"), "application-exit")
         }
