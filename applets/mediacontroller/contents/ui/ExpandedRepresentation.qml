@@ -42,17 +42,18 @@ Item {
     property bool disablePositionUpdate: false
     property bool keyPressed: false
 
-    property bool isExpanded: plasmoid.expanded
-
     function retrievePosition() {
         var service = mpris2Source.serviceForSource(mpris2Source.current);
         var operation = service.operationDescription("GetPosition");
         service.startOperationCall(operation);
     }
 
-    onIsExpandedChanged: {
-        if (isExpanded) {
-            retrievePosition();
+    Connections {
+        target: plasmoid
+        onExpandedChanged: {
+            if (plasmoid.expanded) {
+                retrievePosition();
+            }
         }
     }
 
