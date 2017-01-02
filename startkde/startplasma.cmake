@@ -49,19 +49,6 @@ if test -z "$dl"; then
   esac
 fi
 
-# in case we have been started with full pathname spec without being in PATH
-bindir=`echo "$0" | sed -n 's,^\(/.*\)/[^/][^/]*$,\1,p'`
-if [ -n "$bindir" ]; then
-  qbindir=`qtpaths --binaries-dir`
-  qdbus=$qbindir/qdbus
-  case $PATH in
-    $bindir|$bindir:*|*:$bindir|*:$bindir:*) ;;
-    *) PATH=$bindir:$PATH; export PATH;;
-  esac
-else
-  qdbus=qdbus
-fi
-
 # Activate the kde font directories.
 #
 # There are 4 directories that may be used for supplying fonts for KDE.
@@ -140,7 +127,7 @@ if test $? -ne 0; then
   exit 1
 fi
 
-$qdbus org.kde.KSplash /KSplash org.kde.KSplash.setStage kinit
+qdbus org.kde.KSplash /KSplash org.kde.KSplash.setStage kinit
 
 # finally, give the session control to the session manager
 # see kdebase/ksmserver for the description of the rest of the startup sequence
@@ -169,13 +156,13 @@ if test x"$wait_drkonqi"x = x"true"x ; then
     # wait for remaining drkonqi instances with timeout (in seconds)
     wait_drkonqi_timeout=`kreadconfig5 --file startkderc --group WaitForDrKonqi --key Timeout --default 900`
     wait_drkonqi_counter=0
-    while $qdbus | grep "^[^w]*org.kde.drkonqi" > /dev/null ; do
+    while qdbus | grep "^[^w]*org.kde.drkonqi" > /dev/null ; do
         sleep 5
         wait_drkonqi_counter=$((wait_drkonqi_counter+5))
         if test "$wait_drkonqi_counter" -ge "$wait_drkonqi_timeout" ; then
             # ask remaining drkonqis to die in a graceful way
-            $qdbus | grep 'org.kde.drkonqi-' | while read address ; do
-                $qdbus "$address" "/MainApplication" "quit"
+            qdbus | grep 'org.kde.drkonqi-' | while read address ; do
+                qdbus "$address" "/MainApplication" "quit"
             done
             break
         fi
