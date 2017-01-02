@@ -18,11 +18,12 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA .        *
  ***************************************************************************/
 
-import QtQuick 2.0
+import QtQuick 2.4
 import QtQuick.Layouts 1.1
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.plasma.extras 2.0 as PlasmaExtras
+import org.kde.kcoreaddons 1.0 as KCoreAddons
 
 Item {
     id: expandedRepresentation
@@ -250,43 +251,77 @@ Item {
             }
         }
 
-        PlasmaComponents.Slider {
-            id: seekSlider
+        RowLayout {
             Layout.fillWidth: true
-            z: 999
-            value: 0
-            // if there's no "mpris:length" in teh metadata, we cannot seek, so hide it in that case
-            enabled: !root.noPlayer && root.track && currentMetadata && currentMetadata["mpris:length"] && mpris2Source.currentData.CanSeek ? true : false
+            spacing: units.smallSpacing
+
+            // if there's no "mpris:length" in the metadata, we cannot seek, so hide it in that case
+            enabled: !root.noPlayer && root.track && seekSlider.maximumValue > 0 && mpris2Source.currentData.CanSeek ? true : false
             opacity: enabled ? 1 : 0
             Behavior on opacity {
                 NumberAnimation { duration: units.longDuration }
             }
 
-            onValueChanged: {
-                if (!disablePositionUpdate) {
-                    // delay setting the position to avoid race conditions
-                    queuedPositionUpdate.restart()
+            // ensure the layout doesn't shift as the numbers change and measure roughly the longest text that could occur with the current song
+            TextMetrics {
+                id: timeMetrics
+                text: i18nc("Remaining time for song e.g -5:42", "-%1",
+                            KCoreAddons.Format.formatDuration(seekSlider.maximumValue / 1000, KCoreAddons.FormatTypes.FoldHours))
+                font: theme.smallestFont
+            }
+
+            PlasmaComponents.Label {
+                Layout.preferredWidth: timeMetrics.width
+                Layout.fillHeight: true
+                verticalAlignment: Text.AlignVCenter
+                horizontalAlignment: Text.AlignRight
+                text: KCoreAddons.Format.formatDuration(seekSlider.value / 1000, KCoreAddons.FormatTypes.FoldHours)
+                opacity: 0.6
+                font: theme.smallestFont
+            }
+
+            PlasmaComponents.Slider {
+                id: seekSlider
+                Layout.fillWidth: true
+                z: 999
+                value: 0
+
+                onValueChanged: {
+                    if (!disablePositionUpdate) {
+                        // delay setting the position to avoid race conditions
+                        queuedPositionUpdate.restart()
+                    }
+                }
+
+                Timer {
+                    id: seekTimer
+                    interval: 1000
+                    repeat: true
+                    running: root.state == "playing" && plasmoid.expanded && !keyPressed && interval > 0
+                    onTriggered: {
+                        // some players don't continuously update the seek slider position via mpris
+                        // add one second; value in microseconds
+                        if (!seekSlider.pressed) {
+                            disablePositionUpdate = true
+                            if (seekSlider.value == seekSlider.maximumValue) {
+                                retrievePosition();
+                            } else {
+                                seekSlider.value += 1000000
+                            }
+                            disablePositionUpdate = false
+                        }
+                    }
                 }
             }
 
-            Timer {
-                id: seekTimer
-                interval: 1000
-                repeat: true
-                running: root.state == "playing" && plasmoid.expanded && !keyPressed
-                onTriggered: {
-                    // some players don't continuously update the seek slider position via mpris
-                    // add one second; value in microseconds
-                    if (!seekSlider.pressed) {
-                        disablePositionUpdate = true
-                        if (seekSlider.value == seekSlider.maximumValue) {
-                            retrievePosition();
-                        } else {
-                            seekSlider.value += 1000000
-                        }
-                        disablePositionUpdate = false
-                    }
-                }
+            PlasmaComponents.Label {
+                Layout.preferredWidth: timeMetrics.width
+                Layout.fillHeight: true
+                verticalAlignment: Text.AlignVCenter
+                text: i18nc("Remaining time for song e.g -5:42", "-%1",
+                            KCoreAddons.Format.formatDuration((seekSlider.maximumValue - seekSlider.value) / 1000, KCoreAddons.FormatTypes.FoldHours))
+                opacity: 0.6
+                font: theme.smallestFont
             }
         }
     }
