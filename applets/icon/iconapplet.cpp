@@ -362,7 +362,14 @@ void IconApplet::configure()
     m_configDialog = dialog;
 
     connect(dialog, &KPropertiesDialog::applied, this, [this] {
-        populate();
+        KDesktopFile desktopFile(m_localPath);
+        if (desktopFile.hasLinkType()) {
+            // make sure to fully repopulate in case the user changed the Link URL
+            QFile::remove(m_localPath);
+            setUrl(QUrl(desktopFile.readUrl())); // calls populate() itself
+        } else {
+            populate();
+        }
     });
 
     dialog->setAttribute(Qt::WA_DeleteOnClose, true);
