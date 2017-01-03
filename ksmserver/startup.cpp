@@ -168,7 +168,7 @@ void KSMServer::restoreSession( const QString &sessionName )
                 wmStartCommands << configSessionGroup.readEntry( QStringLiteral("restartCommand")+n, QStringList() );
             }
         }
-    } 
+    }
     if( wmStartCommands.isEmpty()) // otherwise use the configured default
         wmStartCommands << wmCommands;
 
@@ -405,7 +405,6 @@ void KSMServer::autoStart2()
     waitAutoStart2 = true;
     waitKcmInit2 = true;
     autoStart(2);
-    QTimer::singleShot( 10000, this, &KSMServer::autoStart2Done); //In case klauncher never returns
 
     QDBusInterface kded( QStringLiteral( "org.kde.kded5" ),
                          QStringLiteral( "/kded" ),
