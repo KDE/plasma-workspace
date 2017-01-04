@@ -1667,7 +1667,7 @@ void ShellCorona::checkAddPanelAction(const QStringList &sycocaChanges)
 
     auto filter = [](const KPluginMetaData &md) -> bool
     {
-        return md.value(QStringLiteral("NoDisplay")) != QStringLiteral("true") && md.value(QStringLiteral("X-Plasma-ContainmentCategories")).contains(QStringLiteral("panel"));
+        return md.value(QStringLiteral("NoDisplay")) != QStringLiteral("true") && KPluginMetaData::readStringList(md.rawData(), QStringLiteral("X-Plasma-ContainmentCategories")).contains(QStringLiteral("panel"));
     };
     QList<KPluginMetaData> templates = KPackage::PackageLoader::self()->findPackages(QStringLiteral("Plasma/LayoutTemplate"), QString(), filter);
 
@@ -1706,7 +1706,7 @@ void ShellCorona::populateAddPanelsMenu()
 
     auto filter = [](const KPluginMetaData &md) -> bool
     {
-        return md.value(QStringLiteral("NoDisplay")) != QStringLiteral("true") && md.value(QStringLiteral("X-Plasma-ContainmentCategories")).contains(QStringLiteral("panel"));
+        return md.value(QStringLiteral("NoDisplay")) != QStringLiteral("true") && KPluginMetaData::readStringList(md.rawData(), QStringLiteral("X-Plasma-ContainmentCategories")).contains(QStringLiteral("panel"));
     };
     const QList<KPluginMetaData> templates = KPackage::PackageLoader::self()->findPackages(QStringLiteral("Plasma/LayoutTemplate"), QString(), filter);
     for (auto tpl : templates) {
