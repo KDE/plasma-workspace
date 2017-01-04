@@ -51,7 +51,6 @@ set (plasma_shell_SRCS
     containmentconfigview.cpp
     currentcontainmentactionsmodel.cpp
     desktopview.cpp
-    kidenticongenerator.cpp
     panelview.cpp
     panelconfigview.cpp
     panelshadows.cpp
