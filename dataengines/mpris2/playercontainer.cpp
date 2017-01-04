@@ -180,7 +180,9 @@ void PlayerContainer::copyProperty(const QString& propName, const QVariant& _val
     if (value.userType() == qMetaTypeId<QDBusArgument>()) {
         if (expType == QVariant::Map) {
             QDBusArgument arg = value.value<QDBusArgument>();
-            if (arg.currentType() != QDBusArgument::MapType) {
+            // Bug 374531: MapType fits all kinds of maps but we crash when we try to stream the arg into a
+            // QVariantMap below but get a wrong signature, e.g. a{ss} instead of the expected a{sv}
+            if (arg.currentType() != QDBusArgument::MapType || arg.currentSignature() != QLatin1String("a{sv}")) {
                 qCWarning(MPRIS2) << m_dbusAddress << "exports" << propName
                     << "with the wrong type; it should be D-Bus type \"a{sv}\"";
                 return;
