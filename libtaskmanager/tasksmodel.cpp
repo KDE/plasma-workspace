@@ -68,6 +68,7 @@ public:
     bool launchInPlace = false;
     bool launchersEverSet = false;
     bool launcherSortingDirty = false;
+    bool launcherCheckNeeded = false;
     QList<int> sortedPreFilterRows;
     QVector<int> sortRowInsertQueue;
     QHash<QString, int> activityTaskCounts;
@@ -364,21 +365,40 @@ void TasksModel::Private::initModels()
                 }
 
                 // When a window or startup task is removed, we have to trigger a re-filter of
-                // matching launchers to (possibly) pop them back in.
-                if (!launcherTasksModel
-                      || !(sourceIndex.data(AbstractTasksModel::IsWindow).toBool()
+                // our launchers to (possibly) pop them back in.
+                // NOTE: An older revision of this code compared the window and startup tasks
+                // to the launchers to figure out which launchers should be re-filtered. This
+                // was fine until we discovered that certain applications (e.g. Google Chrome)
+                // change their window metadata specifically during tear-down, sometimes
+                // breaking TaskTools::appsMatch (it's a race) and causing the associated
+                // launcher to remain hidden. Therefore we now consider any top-level window or
+                // startup task removal a trigger to re-filter all launchers. We don't do this
+                // in response to the window metadata changes (even though it would be strictly
+                // more correct, as then-ending identity match-up was what caused the launcher
+                // to be hidden) because we don't want the launcher and window/startup task to
+                // briefly co-exist in the model.
+                if (!launcherCheckNeeded
+                      && launcherTasksModel
+                      && (sourceIndex.data(AbstractTasksModel::IsWindow).toBool()
                       || sourceIndex.data(AbstractTasksModel::IsStartup).toBool())) {
-                    continue;
+                    launcherCheckNeeded = true;
                 }
+            }
+        }
+    );
 
-                for (int j = 0; j < launcherTasksModel->rowCount(); ++j) {
-                    const QModelIndex &launcherIndex = launcherTasksModel->index(j, 0);
+    QObject::connect(filterProxyModel, &QAbstractItemModel::rowsRemoved, q,
+        [this](const QModelIndex &parent, int first, int last) {
+            Q_UNUSED(parent)
+            Q_UNUSED(first)
+            Q_UNUSED(last)
 
-                    if (appsMatch(sourceIndex, launcherIndex)) {
-                        QMetaObject::invokeMethod(launcherTasksModel, "dataChanged", Qt::QueuedConnection,
-                            Q_ARG(QModelIndex, launcherIndex), Q_ARG(QModelIndex, launcherIndex));
-                    }
-                }
+            if (launcherCheckNeeded) {
+                QMetaObject::invokeMethod(launcherTasksModel, "dataChanged",
+                    Q_ARG(QModelIndex, launcherTasksModel->index(0, 0)),
+                    Q_ARG(QModelIndex, launcherTasksModel->index(launcherTasksModel->rowCount() - 1, 0)));
+
+                launcherCheckNeeded = false;
             }
         }
     );
