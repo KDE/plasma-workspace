@@ -108,20 +108,10 @@ void WindowedWidgetsRunner::run(const Plasma::RunnerContext &context, const Plas
 
 void WindowedWidgetsRunner::setupMatch(const KPluginMetaData &md, Plasma::QueryMatch &match)
 {
-    const QString name = md.pluginId();
-
-    match.setText(name);
+    match.setText(md.name());
+    match.setSubtext(md.description());
+    match.setIconName(md.iconName());
     match.setData(md.metaDataFileName());
-
-    if (!md.name().isEmpty() && md.name() != name) {
-        match.setSubtext(md.name());
-    } else if (!md.description().isEmpty()) {
-        match.setSubtext(md.description());
-    }
-
-    if (!md.iconName().isEmpty()) {
-        match.setIconName(md.iconName());
-    }
 }
 
 QMimeData * WindowedWidgetsRunner::mimeDataForMatch(const Plasma::QueryMatch &match)
