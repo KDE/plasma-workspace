@@ -72,8 +72,7 @@ void WindowedWidgetsRunner::match(Plasma::RunnerContext &context)
              term.startsWith(i18nc("Note this is a KRunner keyword", "mobile applications"))) &&
              !md.rawData().value(QStringLiteral("NoDisplay")).toBool()) {
 
-            QVariant val = md.value(QStringLiteral("X-Plasma-StandAloneApp"));
-            if (!val.isValid() || !val.toBool()) {
+            if (!md.rawData().value(QStringLiteral("X-Plasma-StandAloneApp")).toBool()) {
                 continue;
             }
 
