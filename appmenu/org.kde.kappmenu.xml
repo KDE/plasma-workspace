@@ -6,6 +6,7 @@
         <arg name="y" type="i" direction="in"/>
         <arg name="service" type="s" direction="in"/>
         <arg name="objectPath" type="o" direction="in"/>
+        <arg name="actionId" type="i" direction="in"/>
     </method>
     <method name="reconfigure">
     </method>
@@ -13,6 +14,7 @@
     <signal name="showRequest">
         <arg name="service" type="s" direction="out"/>
         <arg name="objectPath" type="o" direction="out"/>
+        <arg name="actionId" type="i" direction="out"/>
     </signal>
     <signal name="menuShown">
         <arg name="service" type="s" direction="out"/>

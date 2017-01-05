@@ -48,7 +48,7 @@ Q_SIGNALS:
     /**
      * We do not know where is menu decoration button, so tell kwin to show menu
      */
-    void showRequest(const QString &serviceName, const QDBusObjectPath &menuObjectPath);
+    void showRequest(const QString &serviceName, const QDBusObjectPath &menuObjectPath, int actionId);
     /**
      * This signal is emitted whenever popup menu/menubar is shown
      * Useful for decorations to know if menu button should look pressed
@@ -72,7 +72,7 @@ private Q_SLOTS:
      * Show menu at QPoint(x,y) for DBus serviceName and menuObjectPath
      * if x or y == -1, show in application window
      */
-    void slotShowMenu(int x, int y, const QString &serviceName, const QDBusObjectPath &menuObjectPath);
+    void slotShowMenu(int x, int y, const QString &serviceName, const QDBusObjectPath &menuObjectPath, int actionId);
     /**
      * Reconfigure module
      */

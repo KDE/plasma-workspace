@@ -112,7 +112,7 @@ void AppMenuModule::slotWindowRegistered(WId id, const QString &serviceName, con
 #endif
 }
 
-void AppMenuModule::slotShowMenu(int x, int y, const QString &serviceName, const QDBusObjectPath &menuObjectPath)
+void AppMenuModule::slotShowMenu(int x, int y, const QString &serviceName, const QDBusObjectPath &menuObjectPath, int actionId)
 {
     if (!m_menuImporter) {
         return;
@@ -127,7 +127,7 @@ void AppMenuModule::slotShowMenu(int x, int y, const QString &serviceName, const
     //dbus call by user (for khotkey shortcut)
     if (x == -1 || y == -1) {
         // We do not know kwin button position, so tell kwin to show menu
-        emit showRequest(serviceName, menuObjectPath);
+        emit showRequest(serviceName, menuObjectPath, actionId);
         return;
     }
 
@@ -191,13 +191,8 @@ void AppMenuModule::hideMenu()
 
 void AppMenuModule::itemActivationRequested(int winId, uint action)
 {
-    // our long-press Alt emits winid 0 and action 0
-    // ignore "standard conforming" apps that send actual ids
-    if (winId != 0 || action != 0) {
-        return;
-    }
-
-    emit showRequest(message().service(), QDBusObjectPath(message().path()));
+    Q_UNUSED(winId);
+    emit showRequest(message().service(), QDBusObjectPath(message().path()), action);
 }
 
 // reload settings

@@ -49,7 +49,7 @@ public:
      * DBus method showing menu at QPoint(x,y) for given DBus service name and menuObjectPath
      * if x or y == -1, show in application window
      */
-    void showMenu(int x, int y, const QString &serviceName, const QDBusObjectPath &menuObjectPath);
+    void showMenu(int x, int y, const QString &serviceName, const QDBusObjectPath &menuObjectPath, int actionId);
     /**
      * DBus method reconfiguring kded module
      */
@@ -59,7 +59,7 @@ Q_SIGNALS:
     /**
      * This signal is emitted on showMenu() request
      */
-    void appShowMenu(int x, int y, const QString &serviceName, const QDBusObjectPath &menuObjectPath);
+    void appShowMenu(int x, int y, const QString &serviceName, const QDBusObjectPath &menuObjectPath, int actionId);
     /**
      * This signal is emitted on reconfigure() request
      */
@@ -70,7 +70,7 @@ Q_SIGNALS:
      * This signal is emitted whenever kded want to show menu
      * We do not know where is menu decoration button, so tell kwin to show menu
      */
-    void showRequest(const QString &serviceName, const QDBusObjectPath &menuObjectPath);
+    void showRequest(const QString &serviceName, const QDBusObjectPath &menuObjectPath, int actionId);
     /**
      * This signal is emitted whenever popup menu/menubar is shown
      * Useful for decorations to know if menu button should look pressed
