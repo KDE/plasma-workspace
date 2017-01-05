@@ -35,7 +35,7 @@ class KDBusMenuImporter : public DBusMenuImporter
 
 public:
     KDBusMenuImporter(const QString &service, const QString &path, QObject *parent)
-        : DBusMenuImporter(service, path, ASYNCHRONOUS, parent)
+        : DBusMenuImporter(service, path, parent)
     {
 
     }
