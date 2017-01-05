@@ -127,6 +127,7 @@ add_definitions(-DQT_NO_URL_CAST_FROM_STRING)
 add_subdirectory(doc)
 add_subdirectory(libkworkspace)
 add_subdirectory(libdbusmenuqt)
+add_subdirectory(appmenu)
 
 add_subdirectory(libtaskmanager)
 add_subdirectory(components)
