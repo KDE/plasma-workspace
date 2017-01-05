@@ -3,6 +3,7 @@
 
   Copyright (c) 2011 Lionel Chauvin <megabigbug@yahoo.fr>
   Copyright (c) 2011,2012 Cédric Bellegarde <gnumdk@gmail.com>
+  Copyright (c) 2016 Kai Uwe Broulik <kde@privat.broulik.de>
 
   Permission is hereby granted, free of charge, to any person obtaining a
   copy of this software and associated documentation files (the "Software"),
@@ -23,31 +24,32 @@
   DEALINGS IN THE SOFTWARE.
 */
 
+#include <config-X11.h>
+
 #include "appmenu.h"
 #include "kdbusimporter.h"
 #include "menuimporteradaptor.h"
 #include "appmenuadaptor.h"
 #include "appmenu_dbus.h"
-#if 0
-#include "topmenubar.h"
-#endif
 #include "verticalmenu.h"
 
 #include <QDBusInterface>
-#include <QDBusReply>
-#include <QDBusPendingCallWatcher>
 #include <QMenu>
-#include <QApplication>
-#include <QDesktopWidget>
 
-#include <KDebug>
-#include <KWindowSystem>
-#include <KWindowInfo>
 #include <KConfig>
 #include <KConfigGroup>
 #include <kpluginfactory.h>
 #include <kpluginloader.h>
-#include <netwm.h>
+#include <KSharedConfig>
+#include <KWindowSystem>
+
+#if HAVE_X11
+#include <QX11Info>
+#include <xcb/xcb.h>
+#endif
+
+static const QByteArray s_x11AppMenuServiceNamePropertyName = QByteArrayLiteral("_KDE_NET_WM_APPMENU_SERVICE_NAME");
+static const QByteArray s_x11AppMenuObjectPathPropertyName = QByteArrayLiteral("_KDE_NET_WM_APPMENU_OBJECT_PATH");
 
 K_PLUGIN_FACTORY_WITH_JSON(AppMenuFactory,
                            "appmenu.json",
@@ -55,49 +57,63 @@ K_PLUGIN_FACTORY_WITH_JSON(AppMenuFactory,
 
 AppMenuModule::AppMenuModule(QObject* parent, const QList<QVariant>&)
     : KDEDModule(parent),
-    m_parent(parent),
-    m_menuImporter(0),
-    m_appmenuDBus(new AppmenuDBus(parent)),
-    m_menubar(0),
-    m_menu(0),
-    m_screenTimer(new QTimer(this)),
-    m_waitingAction(0),
-    m_currentScreen(-1)
+    m_appmenuDBus(new AppmenuDBus(this))
 {
     reconfigure();
 
     m_appmenuDBus->connectToBus();
 
-    m_currentScreen = currentScreen();
-
     connect(m_appmenuDBus, &AppmenuDBus::appShowMenu, this, &AppMenuModule::slotShowMenu);
-    connect(m_appmenuDBus, &AppmenuDBus::moduleReconfigure, this, &AppMenuModule::reconfigure);
+    connect(m_appmenuDBus, &AppmenuDBus::reconfigured, this, &AppMenuModule::reconfigure);
 
     // transfer our signals to dbus
     connect(this, &AppMenuModule::showRequest, m_appmenuDBus, &AppmenuDBus::showRequest);
-    connect(this, &AppMenuModule::menuAvailable, m_appmenuDBus, &AppmenuDBus::menuAvailable);
-    connect(this, &AppMenuModule::clearMenus, m_appmenuDBus, &AppmenuDBus::clearMenus);
     connect(this, &AppMenuModule::menuHidden, m_appmenuDBus, &AppmenuDBus::menuHidden);
-    connect(this, &AppMenuModule::WindowRegistered,
-            m_appmenuDBus, &AppmenuDBus::WindowRegistered);
-    connect(this, &AppMenuModule::WindowUnregistered, m_appmenuDBus, &AppmenuDBus::WindowUnregistered);
+    connect(this, &AppMenuModule::menuShown, m_appmenuDBus, &AppmenuDBus::menuShown);
+
+    QDBusConnection::sessionBus().connect({}, {}, QStringLiteral("com.canonical.dbusmenu"),
+                                                  QStringLiteral("ItemActivationRequested"),
+                                          this, SLOT(itemActivationRequested(int,uint)));
 }
 
-AppMenuModule::~AppMenuModule()
+AppMenuModule::~AppMenuModule() = default;
+
+void AppMenuModule::slotWindowRegistered(WId id, const QString &serviceName, const QDBusObjectPath &menuObjectPath)
 {
-    emit clearMenus();
-    hideMenubar();
-#if 0
-    delete m_menubar;
+#ifdef HAVE_X11
+    if (KWindowSystem::isPlatformX11()) {
+        auto *c = QX11Info::connection();
+
+        static xcb_atom_t s_serviceNameAtom = XCB_ATOM_NONE;
+        static xcb_atom_t s_objectPathAtom = XCB_ATOM_NONE;
+
+        auto setWindowProperty = [c](WId id, xcb_atom_t &atom, const QByteArray &name, const QByteArray &value) {
+            if (atom == XCB_ATOM_NONE) {
+                const xcb_intern_atom_cookie_t cookie = xcb_intern_atom(c, false, name.length(), name.constData());
+                QScopedPointer<xcb_intern_atom_reply_t, QScopedPointerPodDeleter> reply(xcb_intern_atom_reply(c, cookie, Q_NULLPTR));
+                if (reply.isNull()) {
+                    return;
+                }
+                atom = reply->atom;
+                if (atom == XCB_ATOM_NONE) {
+                    return;
+                }
+            }
+
+            xcb_change_property(c, XCB_PROP_MODE_REPLACE, id, atom, XCB_ATOM_STRING,
+                                    8, value.length(), value.constData());
+        };
+
+        // TODO only set the property if it doesn't already exist
+
+        setWindowProperty(id, s_serviceNameAtom, s_x11AppMenuServiceNamePropertyName, serviceName.toUtf8());
+        setWindowProperty(id, s_objectPathAtom, s_x11AppMenuObjectPathPropertyName, menuObjectPath.path().toUtf8());
+    }
 #endif
-    delete m_menuImporter;
-    delete m_appmenuDBus;
 }
 
-void AppMenuModule::slotShowMenu(int x, int y, WId id)
+void AppMenuModule::slotShowMenu(int x, int y, const QString &serviceName, const QDBusObjectPath &menuObjectPath)
 {
-    static KDBusMenuImporter *importer = 0;
-
     if (!m_menuImporter) {
         return;
     }
@@ -111,310 +127,101 @@ void AppMenuModule::slotShowMenu(int x, int y, WId id)
     //dbus call by user (for khotkey shortcut)
     if (x == -1 || y == -1) {
         // We do not know kwin button position, so tell kwin to show menu
-        emit showRequest(KWindowSystem::self()->activeWindow());
+        emit showRequest(serviceName, menuObjectPath);
         return;
     }
 
-    importer = getImporter(id);
+    auto *importer = new KDBusMenuImporter(serviceName, menuObjectPath.path(), this);
+    // FIXME this causes a 4 second freeze in dbusmenu when the app times out in aboutToShow
+    // DBusMenuImporter::slotMenuAboutToShow(): Application did not answer to AboutToShow() before timeout
+    //QMetaObject::invokeMethod(importer, "updateMenu", Qt::DirectConnection);
+    QMetaObject::invokeMethod(importer, "updateMenu", Qt::QueuedConnection);
 
-    if (!importer) {
-        return;
-    }
+    /*connect(importer, &DBusMenuImporter::actionActivationRequested, this, [=](QAction *action) {
+        // else send request to kwin or others dbus interface registrars
+        m_waitingAction = action;
+        emit showRequest(serviceName, menuObjectPath);
+    });*/
 
-    QMenu *menu = importer->menu();
+    connect(importer, &KDBusMenuImporter::menuUpdated, this, [=] {
+        QMenu *menu = importer->menu();
+        if (!menu) {
+            return;
+        }
 
-    // Window do not have menu
-    if (!menu) {
-        return;
-    }
+        const auto &actions = menu->actions();
+        if (actions.isEmpty()) {
+            return;
+        }
 
-    m_menu = new VerticalMenu();
-    m_menu->setParentWid(id);
-    // Populate menu
-    foreach (QAction *action, menu->actions()) {
-        m_menu->addAction(action);
-    }
-    m_menu->popup(QPoint(x, y));
-    // Activate waiting action if exist
-    if (m_waitingAction) {
-        m_menu->setActiveAction(m_waitingAction);
-        m_waitingAction = 0;
-    }
-    connect(m_menu, &QMenu::aboutToHide, this, &AppMenuModule::slotAboutToHide);
+        m_menu = new VerticalMenu();
+        m_menu->setServiceName(serviceName);
+        m_menu->setMenuObjectPath(menuObjectPath);
+
+        for (QAction *action : actions) {
+            m_menu->addAction(action);
+        }
+
+        connect(m_menu, &QMenu::aboutToHide, this, [this, importer] {
+            hideMenu();
+            importer->deleteLater();
+        });
+
+        //m_menuImporter->fakeUnityAboutToShow(serviceName, menuObjectPath);
+
+        m_menu->popup(QPoint(x, y));
+
+        emit menuShown(serviceName, menuObjectPath);
+
+        if (m_waitingAction) {
+            m_menu->setActiveAction(m_waitingAction);
+            m_waitingAction = nullptr;
+        }
+    });
 }
 
-void AppMenuModule::slotAboutToHide()
+void AppMenuModule::hideMenu()
 {
     if (m_menu) {
-        emit menuHidden(m_menu->parentWid());
+        emit menuHidden(m_menu->serviceName(), m_menu->menuObjectPath());
         m_menu->deleteLater();
-        m_menu = 0;
+        m_menu = nullptr;
     }
 }
 
-// New window registered
-void AppMenuModule::slotWindowRegistered(WId id, const QString& service, const QDBusObjectPath& path)
+void AppMenuModule::itemActivationRequested(int winId, uint action)
 {
-    KDBusMenuImporter* importer = m_importers.take(id);
-     if (importer) {
-        delete importer;
-    }
-
-    // Application already active so check if we need create menubar
-    if ( m_menuStyle == QLatin1String("TopMenuBar") && id == KWindowSystem::self()->activeWindow()) {
-        slotActiveWindowChanged(id);
-    } else if (m_menuStyle == QLatin1String("ButtonVertical")) {
-        KWindowInfo info(id, 0, NET::WM2WindowClass);
-        // Tell Kwin menu is available
-        emit menuAvailable(id);
-        // FIXME: https://bugs.kde.org/show_bug.cgi?id=317926
-        if (info.windowClassName() != "kmix") {
-            getImporter(id);
-        }
-    }
-
-    // Send a signal on bus for others dbus interface registrars
-    emit WindowRegistered(id, service, path);
-}
-
-// Window unregistered
-void AppMenuModule::slotWindowUnregistered(WId id)
-{
-    KDBusMenuImporter* importer = m_importers.take(id);
-
-    // Send a signal on bus for others dbus interface registrars
-    emit WindowUnregistered(id);
-
-    if (importer) {
-        delete importer;
-    }
-
-#if 0
-    if (m_menubar && m_menubar->parentWid() == id) {
-        hideMenubar();
-    }
-#endif
-}
-
-// Keyboard activation requested, transmit it to menu
-void AppMenuModule::slotActionActivationRequested(QAction* a)
-{
-    // If we have a topmenubar, activate action
-#if 0
-    if (m_menubar) {
-        m_menubar->setActiveAction(a);
-        m_menubar->show();
-    } else
-#endif
-    { // else send request to kwin or others dbus interface registrars
-        m_waitingAction = a;
-        emit showRequest(KWindowSystem::self()->activeWindow());
-    }
-}
-
-// Current window change, update menubar
-// See comments in slotWindowRegistered() for why we get importers here
-void AppMenuModule::slotActiveWindowChanged(WId id)
-{
-    KWindowInfo info(id, NET::WMWindowType);
-    NET::WindowTypes mask = NET::AllTypesMask;
-
-    m_currentScreen = currentScreen();
-
-    if (id == 0) {// Ignore root window
-        return;
-    } else if (info.windowType(mask) & NET::Dock) { // Hide immediatly menubar for docks (krunner)
-        hideMenubar();
+    // our long-press Alt emits winid 0 and action 0
+    // ignore "standard conforming" apps that send actual ids
+    if (winId != 0 || action != 0) {
         return;
     }
 
-    if (!m_menuImporter->serviceExist(id)) { // No menu exist, check for another menu for application
-        WId recursiveId = m_menuImporter->recursiveMenuId(id);
-        if (recursiveId) {
-           id = recursiveId;
-        }
-    }
-
-    KDBusMenuImporter *importer = getImporter(id);
-    if (!importer) {
-        hideMenubar();
-        return;
-    }
-
-#if 0
-    QMenu *menu = importer->menu();
-
-    if(menu) {
-        showMenuBar(menu);
-        m_menubar->setParentWid(id);
-    } else {
-        hideMenubar();
-    }
-#endif
-}
-
-void AppMenuModule::slotShowCurrentWindowMenu()
-{
-    slotActiveWindowChanged(KWindowSystem::self()->activeWindow());
-}
-
-void AppMenuModule::slotCurrentScreenChanged()
-{
-    if (m_currentScreen != currentScreen()) {
-#if 0
-        if (m_menubar) {
-            m_menubar->setParentWid(0);
-        }
-#endif
-        slotActiveWindowChanged(KWindowSystem::self()->activeWindow());
-    }
-}
-
-void AppMenuModule::slotBarNeedResize()
-{
-#if 0
-    if (m_menubar) {
-        m_menubar->updateSize();
-        m_menubar->move(centeredMenubarPos());
-    }
-#endif
+    emit showRequest(message().service(), QDBusObjectPath(message().path()));
 }
 
 // reload settings
 void AppMenuModule::reconfigure()
 {
-    KConfig config( QStringLiteral("kdeglobals"), KConfig::FullConfig );
-    KConfigGroup configGroup = config.group("Appmenu Style");
-    m_menuStyle = configGroup.readEntry("Style", "InApplication");
+    m_waitingAction = nullptr;
 
-    m_waitingAction = 0;
+    hideMenu(); // hide window decoration menu if exists
 
-    // hide menubar if exist
-    hideMenubar();
-#if 0
-    delete m_menubar;
-    m_menubar = 0;
-#endif
-
-    slotAboutToHide(); // hide vertical menu if exist
-
-    // Disconnect all options specifics signals
-    disconnect(KWindowSystem::self(), &KWindowSystem::activeWindowChanged, this, &AppMenuModule::slotActiveWindowChanged);
-    disconnect(KWindowSystem::self(), &KWindowSystem::workAreaChanged, this, &AppMenuModule::slotShowCurrentWindowMenu);
-    disconnect(m_screenTimer, &QTimer::timeout, this, &AppMenuModule::slotCurrentScreenChanged);
-
-    m_screenTimer->stop();
-
-    // Tell kwin to clean its titlebar
-    emit clearMenus();
-
-    if (m_menuStyle == QLatin1String("InApplication")) {
-        if (m_menuImporter) {
-            delete m_menuImporter;
-            m_menuImporter = 0;
-        }
+    KConfigGroup config(KSharedConfig::openConfig(QStringLiteral("kdeglobals")), QStringLiteral("Appmenu Style"));
+    const QString &menuStyle = config.readEntry("Style", "InApplication");
+    // TODO enum or Kconfigxt or what not?
+    if (menuStyle == QLatin1String("InApplication")) {
+        delete m_menuImporter;
+        m_menuImporter = nullptr;
         return;
     }
 
     // Setup a menu importer if needed
     if (!m_menuImporter) {
-        m_menuImporter = new MenuImporter(m_parent);
-        connect(m_menuImporter, &MenuImporter::WindowRegistered,
-            this, &AppMenuModule::slotWindowRegistered);
-        connect(m_menuImporter, &MenuImporter::WindowUnregistered,
-            this, &AppMenuModule::slotWindowUnregistered);
+        m_menuImporter = new MenuImporter(this);
+        connect(m_menuImporter, &MenuImporter::WindowRegistered, this, &AppMenuModule::slotWindowRegistered);
         m_menuImporter->connectToBus();
     }
-
-    if( m_menuStyle == QLatin1String("ButtonVertical") ) {
-        foreach(WId id, m_menuImporter->ids()) {
-            emit menuAvailable(id);
-        }
-    }
-
-    // Setup top menubar if needed
-    if (m_menuStyle == QLatin1String("TopMenuBar")) {
-#if 0
-        m_menubar = new TopMenuBar();
-        connect(KWindowSystem::self(), SIGNAL(activeWindowChanged(WId)), this, SLOT(slotActiveWindowChanged(WId)));
-        connect(KWindowSystem::self(), SIGNAL(workAreaChanged()), this, SLOT(slotShowCurrentWindowMenu()));
-        connect(m_screenTimer, SIGNAL(timeout()), this, SLOT(slotCurrentScreenChanged()));
-        connect(m_menubar, SIGNAL(needResize()), SLOT(slotBarNeedResize()));
-        m_screenTimer->start(1000);
-        slotShowCurrentWindowMenu();
-#endif
-    }
 }
-
-KDBusMenuImporter* AppMenuModule::getImporter(WId id)
-{
-    KDBusMenuImporter* importer = 0;
-    if (m_importers.contains(id)) { // importer already exist
-        importer = m_importers.value(id);
-    } else if (m_menuImporter->serviceExist(id)) { // get importer
-        importer = new KDBusMenuImporter(id, m_menuImporter->serviceForWindow(id), &m_icons,
-                                             m_menuImporter->pathForWindow(id), this);
-        if (importer) {
-            QMetaObject::invokeMethod(importer, "updateMenu", Qt::DirectConnection);
-            connect(importer, &DBusMenuImporter::actionActivationRequested,
-                    this, &AppMenuModule::slotActionActivationRequested);
-            m_importers.insert(id, importer);
-        }
-    }
-    return importer;
-}
-
-void AppMenuModule::showMenuBar(QMenu *menu)
-{
-#if 0
-    if (!menu) {
-        return;
-    }
-
-    m_menubar->setMenu(menu);
-    if (menu->actions().length()) {
-        m_menubar->enableMouseTracking();
-    }
-#endif
-}
-
-void AppMenuModule::hideMenubar()
-{
-#if 0
-    if (!m_menubar) {
-        return;
-    }
-
-    m_menubar->enableMouseTracking(false);
-    if (m_menubar->isVisible()) {
-        m_menubar->hide();
-    }
-#endif
-}
-
-int AppMenuModule::currentScreen()
-{
-    KWindowInfo info(KWindowSystem::self()->activeWindow(), NET::WMGeometry);
-    int x = info.geometry().x();
-    int y = info.geometry().y();
-
-    QDesktopWidget *desktop = QApplication::desktop();
-    return desktop->screenNumber(QPoint(x,y));
-}
-
-
-QPoint AppMenuModule::centeredMenubarPos()
-{
-    QDesktopWidget *desktop = QApplication::desktop();
-    m_currentScreen = currentScreen();
-    QRect screen = desktop->availableGeometry(m_currentScreen);
-#if 0
-    int x = screen.center().x() - m_menubar->sizeHint().width()/2;
-    return QPoint(x, screen.topLeft().y());
-#else
-    return QPoint(screen.center().x(), screen.topLeft().y());
-#endif
-}
-
 
 #include "appmenu.moc"

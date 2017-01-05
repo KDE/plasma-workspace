@@ -46,10 +46,10 @@ public:
     bool connectToBus(const QString& service = QString(), const QString& path = QString());
 
     /**
-     * DBus method showing menu at QPoint(x,y) for id
+     * DBus method showing menu at QPoint(x,y) for given DBus service name and menuObjectPath
      * if x or y == -1, show in application window
      */
-    void showMenu(int x, int y, WId id);
+    void showMenu(int x, int y, const QString &serviceName, const QDBusObjectPath &menuObjectPath);
     /**
      * DBus method reconfiguring kded module
      */
@@ -59,39 +59,28 @@ Q_SIGNALS:
     /**
      * This signal is emitted on showMenu() request
      */
-    void appShowMenu(int x, int y, WId id);
+    void appShowMenu(int x, int y, const QString &serviceName, const QDBusObjectPath &menuObjectPath);
     /**
      * This signal is emitted on reconfigure() request
      */
-    void moduleReconfigure();
+    void reconfigured();
 
     // Dbus signals
     /**
      * This signal is emitted whenever kded want to show menu
      * We do not know where is menu decoration button, so tell kwin to show menu
      */
-    void showRequest(qulonglong);
+    void showRequest(const QString &serviceName, const QDBusObjectPath &menuObjectPath);
     /**
-     *  This signal is emitted whenever application menu becomes available
+     * This signal is emitted whenever popup menu/menubar is shown
+     * Useful for decorations to know if menu button should look pressed
      */
-    void menuAvailable(qulonglong);
-    /**
-     * This signal is emitted whenever menus are unavailables
-     */
-    void clearMenus();
+    void menuShown(const QString &serviceName, const QDBusObjectPath &menuObjectPath);
     /**
      * This signal is emitted whenever popup menu/menubar is hidden
      * Useful for decorations to know if menu button should be release
      */
-    void menuHidden(qulonglong);
-    /**
-     * This signal is emitted whenever a window register to appmenu
-     */
-    void WindowRegistered(qulonglong wid, const QString& service, const QDBusObjectPath&);
-    /**
-     * This signal is emitted whenever a window unregister from appmenu
-     */
-    void WindowUnregistered(qulonglong wid);
+    void menuHidden(const QString &serviceName, const QDBusObjectPath &menuObjectPath);
 
 private:
     QString m_service;

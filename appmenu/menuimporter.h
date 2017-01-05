@@ -3,6 +3,7 @@
 
   Copyright (c) 2011 Lionel Chauvin <megabigbug@yahoo.fr>
   Copyright (c) 2011,2012 Cédric Bellegarde <gnumdk@gmail.com>
+  Copyright (c) 2016 Kai Uwe Broulik <kde@privat.broulik.de>
 
   Permission is hereby granted, free of charge, to any person obtaining a
   copy of this software and associated documentation files (the "Software"),
@@ -27,6 +28,7 @@
 #define MENUIMPORTER_H
 
 // Qt
+#include <QDBusArgument>
 #include <QDBusContext>
 #include <QDBusObjectPath>
 #include <QObject>
@@ -67,10 +69,7 @@ public:
 
     QList<WId> ids() { return m_menuServices.keys(); }
 
-    /**
-     * Return id of first transient/friend window with a menu available
-     */
-    WId recursiveMenuId(WId id);
+    void fakeUnityAboutToShow(const QString &service, const QDBusObjectPath &menuObjectPath);
 
 Q_SIGNALS:
     void WindowRegistered(WId id, const QString& service, const QDBusObjectPath&);
@@ -84,7 +83,6 @@ public Q_SLOTS:
 private Q_SLOTS:
     void slotServiceUnregistered(const QString& service);
     void slotLayoutUpdated(uint revision, int parentId);
-    void finishFakeUnityAboutToShow(QDBusPendingCallWatcher*);
 
 private:
     QDBusServiceWatcher* m_serviceWatcher;
@@ -92,7 +90,6 @@ private:
     QHash<WId, QDBusObjectPath> m_menuPaths;
     QHash<WId, QString> m_windowClasses;
 
-    void fakeUnityAboutToShow();
 };
 
 #endif /* MENUIMPORTER_H */

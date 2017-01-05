@@ -27,6 +27,7 @@
 #define VERTICALMENU_H
 
 #include <QMenu>
+#include <QDBusObjectPath>
 
 class VerticalMenu : public QMenu
 {
@@ -35,22 +36,23 @@ public:
     VerticalMenu(QWidget * parent = 0);
     ~VerticalMenu() override;
 
-    /**
-     * Set menu parent window id
-     */
-    void setParentWid(WId id) { m_wid = id; }
-    /**
-     * Get menu parent window id
-     */
-    WId parentWid() { return m_wid; }
+    QString serviceName() const { return m_serviceName; }
+    void setServiceName(const QString &serviceName) { m_serviceName = serviceName; }
+
+    QDBusObjectPath menuObjectPath() const { return m_menuObjectPath; }
+    void setMenuObjectPath(const QDBusObjectPath &menuObjectPath) { m_menuObjectPath = menuObjectPath; }
+
 protected:
     void keyPressEvent(QKeyEvent*) override;
     void keyReleaseEvent(QKeyEvent*) override;
     void paintEvent(QPaintEvent*) override;
+
 private:
     QMenu *leafMenu();
-private:
-    WId m_wid;
+
+    QString m_serviceName;
+    QDBusObjectPath m_menuObjectPath;
+
 };
 
 #endif //VERTICALMENU_H

@@ -6,13 +6,7 @@ set(kded_appmenu_SRCS
     appmenu.cpp
     menuimporter.cpp
     appmenu_dbus.cpp
-#     menubutton.cpp
-#     menuwidget.cpp
-#     menubar.cpp
-#     topmenubar.cpp
-#     glowbar.cpp
     verticalmenu.cpp
-#     shadows.cpp
     )
 
 qt5_add_dbus_adaptor(kded_appmenu_SRCS com.canonical.AppMenu.Registrar.xml
@@ -26,15 +20,16 @@ kcoreaddons_desktop_to_json(appmenu appmenu.desktop)
 
 target_link_libraries(appmenu
     Qt5::DBus
-    Qt5::X11Extras
     KF5::DBusAddons
     KF5::KIOCore
-    KF5::KIOWidgets
     KF5::WindowSystem
-    KF5::KDELibs4Support
     ${X11_LIBRARIES}
     dbusmenu-qt5
 )
+
+if (HAVE_X11)
+    target_link_libraries(appmenu Qt5::X11Extras XCB::XCB)
+endif()
 
 install(TARGETS appmenu DESTINATION ${KDE_INSTALL_PLUGINDIR}/kf5/kded )
 

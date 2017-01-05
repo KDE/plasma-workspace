@@ -58,12 +58,12 @@ bool AppmenuDBus::connectToBus(const QString& service, const QString& path)
     return true;
 }
 
-void AppmenuDBus::showMenu(int x, int y, WId id)
+void AppmenuDBus::showMenu(int x, int y, const QString &serviceName, const QDBusObjectPath &menuObjectPath)
 {
-    emit appShowMenu(x, y, id);
+    emit appShowMenu(x, y, serviceName, menuObjectPath);
 }
 
 void AppmenuDBus::reconfigure()
 {
-    emit moduleReconfigure();
+    emit reconfigured();
 }

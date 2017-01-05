@@ -3,6 +3,7 @@
 
   Copyright (c) 2011 Lionel Chauvin <megabigbug@yahoo.fr>
   Copyright (c) 2011,2012 Cédric Bellegarde <gnumdk@gmail.com>
+  Copyright (c) 2016 Kai Uwe Broulik <kde@privat.broulik.de>
 
   Permission is hereby granted, free of charge, to any person obtaining a
   copy of this software and associated documentation files (the "Software"),
@@ -28,7 +29,6 @@
 
 #include <kdedmodule.h>
 #include "menuimporter.h"
-#include "gtkicons.h"
 
 class QDBusPendingCallWatcher;
 class KDBusMenuImporter;
@@ -48,107 +48,51 @@ Q_SIGNALS:
     /**
      * We do not know where is menu decoration button, so tell kwin to show menu
      */
-    void showRequest(qulonglong);
+    void showRequest(const QString &serviceName, const QDBusObjectPath &menuObjectPath);
     /**
-     *  This signal is emitted whenever application menu becomes available
+     * This signal is emitted whenever popup menu/menubar is shown
+     * Useful for decorations to know if menu button should look pressed
      */
-    void menuAvailable(qulonglong);
-    /**
-     * This signal is emitted whenever menus are unavailables
-     */
-    void clearMenus();
+    void menuShown(const QString &service, const QDBusObjectPath &objectPath);
     /**
      * This signal is emitted whenever popup menu/menubar is hidden
      * Useful for decorations to know if menu button should be release
      */
-    void menuHidden(qulonglong);
-    /**
-     * This signal is emitted whenever a window register to appmenu
-     */
-    void WindowRegistered(qulonglong wid, const QString& service, const QDBusObjectPath&);
-    /**
-     * This signal is emitted whenever a window unregister from appmenu
-     */
-    void WindowUnregistered(qulonglong wid);
+    void menuHidden(const QString &service, const QDBusObjectPath &objectPath);
 
 private Q_SLOTS:
     /**
-     * Show menu at QPoint(x,y) for id
+     * A new window was registered to AppMenu
+     *
+     * For compatibility this will set the DBus service name and menu object path as properties
+     * on the window so we keep working with clients that use the DBusMenu "properly".
+     */
+    void slotWindowRegistered(WId id, const QString &serviceName, const QDBusObjectPath &menuObjectPath);
+    /**
+     * Show menu at QPoint(x,y) for DBus serviceName and menuObjectPath
      * if x or y == -1, show in application window
      */
-    void slotShowMenu(int x, int y, WId);
-    /**
-     * Send menuHidden signal over bus when menu is about to hide
-     */
-    void slotAboutToHide();
-    /**
-     * New window registered to appmenu
-     * Emit WindowRegistered signal over bus
-     */
-    void slotWindowRegistered(WId id, const QString& service, const QDBusObjectPath& path);
-    /**
-     * Window unregistered from appmenu
-     * Emit WindowUnregistered signal over bus
-     */
-    void slotWindowUnregistered(WId id);
-    /**
-     * Open a action in current menu
-     */
-    void slotActionActivationRequested(QAction* a);
-    /**
-     * Active window changed, show menubar for id
-     */
-    void slotActiveWindowChanged(WId id);
-    /**
-     * Update menubar with current window menu
-     */
-    void slotShowCurrentWindowMenu();
-    /**
-     * Current screen changed, update menubar
-     */
-    void slotCurrentScreenChanged();
-    /**
-     * Resize menubar
-     */
-    void slotBarNeedResize();
+    void slotShowMenu(int x, int y, const QString &serviceName, const QDBusObjectPath &menuObjectPath);
     /**
      * Reconfigure module
      */
     void reconfigure();
 
-private:
-    /**
-     * return an importer for window id
-     */
-    KDBusMenuImporter* getImporter(WId id);
-    /**
-     * Show menubar and update it with menu
-     */
-    void showMenuBar(QMenu *menu);
-    /**
-     * Hide menubar
-     */
-    void hideMenubar();
-    /**
-     * Return current screen
-     */
-    int currentScreen();
-    /**
-     * Return position of menubar for being centered on screen
-     */
-    QPoint centeredMenubarPos();
+    void itemActivationRequested(int winId, uint action);
 
-    QObject* m_parent;
-    MenuImporter* m_menuImporter;
-    AppmenuDBus* m_appmenuDBus;
-    QHash<WId, KDBusMenuImporter*> m_importers;
-    GtkIcons m_icons;
-    QString m_menuStyle;
-    TopMenuBar* m_menubar;
-    VerticalMenu* m_menu;
-    QTimer* m_screenTimer;
-    QAction *m_waitingAction;
-    int m_currentScreen;
+private:
+    void hideMenu();
+
+    void fakeUnityAboutToShow(const QString &service, const QDBusObjectPath &menuObjectPath);
+
+    KDBusMenuImporter *getImporter(const QString &service, const QString &path);
+
+    MenuImporter *m_menuImporter = nullptr;
+    AppmenuDBus *m_appmenuDBus;
+
+    VerticalMenu *m_menu = nullptr;
+    QAction *m_waitingAction = nullptr;
+
 };
 
 #endif

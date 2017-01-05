@@ -26,49 +26,25 @@
 #ifndef KDBUSMENUIMPORTER_H
 #define KDBUSMENUIMPORTER_H
 
-#include "gtkicons.h"
-
-#include <KIcon>
-#include <KIconLoader>
-
-#include <QDBusArgument>
-
 #include <dbusmenuimporter.h>
+
+#include <QIcon>
 
 class KDBusMenuImporter : public DBusMenuImporter
 {
 
 public:
-    KDBusMenuImporter(WId wid, const QString &service, GtkIcons *icons, const QString &path, QObject *parent)
-    : DBusMenuImporter(service, path, parent)
-    , m_service(service)
-    , m_path(path)
-    , m_WId(wid)
+    KDBusMenuImporter(const QString &service, const QString &path, QObject *parent)
+        : DBusMenuImporter(service, path, ASYNCHRONOUS, parent)
     {
-        m_icons = icons;
-    }
 
-    QString service() const { return m_service; }
-    QString path() const { return m_path; }
-    WId wid() const { return m_WId; }
+    }
 
 protected:
-    QIcon iconForName(const QString &name)
-    override {
-        if(m_icons->contains(name)){
-            return QIcon::fromTheme(m_icons->value(name));
-        }
-        else if(!KIconLoader::global()->iconPath(name, 1, true ).isNull()){
-            return QIcon::fromTheme(name);
-        }
-        return QIcon();
+    QIcon iconForName(const QString &name) override {
+        return QIcon::fromTheme(name);
     }
 
-private:
-    GtkIcons *m_icons;
-    QString m_service;
-    QString m_path;
-    WId m_WId;
 };
 
 #endif //KDBUSMENUIMPORTER_H

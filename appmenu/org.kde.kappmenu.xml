@@ -4,28 +4,23 @@
     <method name="showMenu">
         <arg name="x" type="i" direction="in"/>
         <arg name="y" type="i" direction="in"/>
-        <arg name="WId" type="t" direction="in"/>
+        <arg name="service" type="s" direction="in"/>
+        <arg name="objectPath" type="o" direction="in"/>
     </method>
     <method name="reconfigure">
     </method>
+    <signal name="reconfigured" />
     <signal name="showRequest">
-        <arg name="WId" type="t"/>
+        <arg name="service" type="s" direction="out"/>
+        <arg name="objectPath" type="o" direction="out"/>
     </signal>
-    <signal name="menuAvailable">
-        <arg name="WId" type="t"/>
-    </signal>
-    <signal name="clearMenus">
+    <signal name="menuShown">
+        <arg name="service" type="s" direction="out"/>
+        <arg name="objectPath" type="o" direction="out"/>
     </signal>
     <signal name="menuHidden">
-        <arg name="WId" type="t"/>
-    </signal>
-    <signal name="WindowRegistered">
-        <arg name="windowId" type="t" direction="out"/>
         <arg name="service" type="s" direction="out"/>
-        <arg name="menuObjectPath" type="o" direction="out"/>
-    </signal>
-    <signal name="WindowUnregistered">
-        <arg name="windowId" type="t" direction="out"/>
+        <arg name="objectPath" type="o" direction="out"/>
     </signal>
   </interface>
 </node>
