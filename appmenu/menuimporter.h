@@ -39,18 +39,6 @@ class QDBusPendingCallWatcher;
 class QDBusServiceWatcher;
 class QMenu;
 
-/**
- * Represents an item with its children. GetLayout() returns a
- * DBusMenuLayoutItemList.
- */
-struct DBusMenuLayoutItem
-{
-    int id;
-    QVariantMap properties;
-    QList<DBusMenuLayoutItem> children;
-};
-Q_DECLARE_METATYPE(DBusMenuLayoutItem)
-
 class MenuImporter : public QObject, protected QDBusContext
 {
     Q_OBJECT

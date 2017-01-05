@@ -24,9 +24,7 @@ add_subdirectory(soliddevice)
 
 add_subdirectory(time)
 add_subdirectory(weather)
-if (TARGET dbusmenu-qt5)
-  add_subdirectory(statusnotifieritem)
-endif ()
+add_subdirectory(statusnotifieritem)
 add_subdirectory(share)
 
 if(Boost_FOUND AND KdepimLibs_FOUND)

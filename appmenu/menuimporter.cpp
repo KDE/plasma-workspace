@@ -26,6 +26,7 @@
 
 #include "menuimporter.h"
 #include "menuimporteradaptor.h"
+#include "dbusmenutypes_p.h"
 
 #include <QDBusMessage>
 #include <QDBusObjectPath>
@@ -36,39 +37,6 @@
 
 static const char* DBUS_SERVICE = "com.canonical.AppMenu.Registrar";
 static const char* DBUS_OBJECT_PATH = "/com/canonical/AppMenu/Registrar";
-
-// Marshalling code for DBusMenuLayoutItem
-QDBusArgument &operator<<(QDBusArgument &argument, const DBusMenuLayoutItem &obj)
-{
-    argument.beginStructure();
-    argument << obj.id << obj.properties;
-    argument.beginArray(qMetaTypeId<QDBusVariant>());
-    Q_FOREACH(const DBusMenuLayoutItem& child, obj.children) {
-        argument << QDBusVariant(QVariant::fromValue<DBusMenuLayoutItem>(child));
-    }
-    argument.endArray();
-    argument.endStructure();
-    return argument;
-}
-
-const QDBusArgument &operator>>(const QDBusArgument &argument, DBusMenuLayoutItem &obj)
-{
-    argument.beginStructure();
-    argument >> obj.id >> obj.properties;
-    argument.beginArray();
-    while (!argument.atEnd()) {
-        QDBusVariant dbusVariant;
-        argument >> dbusVariant;
-        QDBusArgument childArgument = dbusVariant.variant().value<QDBusArgument>();
-
-        DBusMenuLayoutItem child;
-        childArgument >> child;
-        obj.children.append(child);
-    }
-    argument.endArray();
-    argument.endStructure();
-    return argument;
-}
 
 MenuImporter::MenuImporter(QObject* parent)
 : QObject(parent)
