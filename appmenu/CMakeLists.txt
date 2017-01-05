@@ -1,5 +1,3 @@
-include_directories(${dbusmenu-qt5_INCLUDE_DIRS})
-
 remove_definitions(-DQT_NO_CAST_FROM_ASCII -DQT_STRICT_ITERATORS -DQT_NO_CAST_FROM_BYTEARRAY -DQT_NO_KEYWORDS)
 
 set(kded_appmenu_SRCS
@@ -24,7 +22,7 @@ target_link_libraries(appmenu
     KF5::KIOCore
     KF5::WindowSystem
     ${X11_LIBRARIES}
-    dbusmenu-qt5
+    dbusmenuqt
 )
 
 if (HAVE_X11)

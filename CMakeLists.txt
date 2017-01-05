@@ -73,12 +73,6 @@ set_package_properties(ZLIB PROPERTIES DESCRIPTION "Support for gzip compressed 
                        TYPE REQUIRED
                       )
 
-find_package(dbusmenu-qt5 CONFIG)
-set_package_properties(dbusmenu-qt5 PROPERTIES DESCRIPTION "Support for notification area menus via the DBusMenu protocol"
-                       URL "https://launchpad.net/libdbusmenu-qt"
-                       TYPE OPTIONAL
-                      )
-
 find_package(X11)
 set_package_properties(X11 PROPERTIES DESCRIPTION "X11 libraries"
                         URL "http://www.x.org"
@@ -132,12 +126,10 @@ add_definitions(-DQT_NO_URL_CAST_FROM_STRING)
 
 add_subdirectory(doc)
 add_subdirectory(libkworkspace)
+add_subdirectory(libdbusmenuqt)
+
 add_subdirectory(libtaskmanager)
 add_subdirectory(components)
-
-if(dbusmenu-qt5_FOUND)
-  add_subdirectory(appmenu)
-endif()
 
 add_subdirectory(plasma-windowed)
 add_subdirectory(shell)

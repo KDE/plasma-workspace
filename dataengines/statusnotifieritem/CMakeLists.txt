@@ -1,5 +1,4 @@
 include_directories(${plasma-workspace_SOURCE_DIR}/statusnotifierwatcher)
-include_directories(${dbusmenu-qt5_INCLUDE_DIRS})
 
 # We add our source code here
 set(statusnotifieritem_engine_SRCS
@@ -8,11 +7,6 @@ set(statusnotifieritem_engine_SRCS
     statusnotifieritemservice.cpp
     statusnotifieritemjob.cpp
     systemtraytypes.cpp
-
-    libdbusmenuqt/dbusmenuimporter.cpp
-    libdbusmenuqt/dbusmenushortcut_p.cpp
-    libdbusmenuqt/dbusmenutypes_p.cpp
-    libdbusmenuqt/utils.cpp
 )
 
 set(statusnotifierwatcher_xml ${KNOTIFICATIONS_DBUS_INTERFACES_DIR}/kf5_org.kde.StatusNotifierWatcher.xml)
@@ -34,6 +28,7 @@ target_link_libraries(plasma_engine_statusnotifieritem
     KF5::Service
     KF5::Plasma
     KF5::IconThemes
+    dbusmenuqt
 )
 
 kcoreaddons_desktop_to_json(plasma_engine_statusnotifieritem plasma-dataengine-statusnotifieritem.desktop)
