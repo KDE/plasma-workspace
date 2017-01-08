@@ -18,14 +18,6 @@
       <label>Sizing, cropping and positioning of the wallpaper image</label>
       <default>0</default>
     </entry>
-    <entry name="width" type="int">
-      <label>Width of the wallpaper on screen</label>
-      <default>0</default>
-    </entry>
-    <entry name="height" type="int">
-      <label>Height of the wallpaper on screen</label>
-      <default>0</default>
-    </entry>
     <entry name="SlidePaths" type="StringList">
       <label>Paths used for the slideshow</label>
       <default></default>

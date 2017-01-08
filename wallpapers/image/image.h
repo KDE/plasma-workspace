@@ -59,8 +59,7 @@ class Image : public QObject, public QQmlParserStatus
     Q_PROPERTY(int slideTimer READ slideTimer WRITE setSlideTimer NOTIFY slideTimerChanged)
     Q_PROPERTY(QStringList usersWallpapers READ usersWallpapers WRITE setUsersWallpapers NOTIFY usersWallpapersChanged)
     Q_PROPERTY(QStringList slidePaths READ slidePaths WRITE setSlidePaths NOTIFY slidePathsChanged)
-    Q_PROPERTY(int width MEMBER m_width READ width WRITE setWidth NOTIFY sizeChanged)
-    Q_PROPERTY(int height MEMBER m_height READ height WRITE setHeight NOTIFY sizeChanged)
+    Q_PROPERTY(QSize targetSize READ targetSize WRITE setTargetSize NOTIFY targetSizeChanged)
     Q_PROPERTY(QString photosPath READ photosPath CONSTANT)
 
     public:
@@ -95,11 +94,6 @@ class Image : public QObject, public QQmlParserStatus
         QSize targetSize() const;
         void setTargetSize(const QSize &size);
 
-        int width() const;
-        int height() const;
-        void setWidth(int w);
-        void setHeight(int h);
-
         KPackage::Package *package();
 
         QAbstractItemModel* wallpaperModel();
@@ -129,11 +123,11 @@ class Image : public QObject, public QQmlParserStatus
         void settingsChanged(bool);
         void wallpaperPathChanged();
         void renderingModeChanged();
+        void targetSizeChanged();
         void slideTimerChanged();
         void usersWallpapersChanged();
         void slidePathsChanged();
         void resizeMethodChanged();
-        void sizeChanged(QSize s);
         void customWallpaperPicked();
 
     protected Q_SLOTS:
@@ -184,9 +178,6 @@ class Image : public QObject, public QQmlParserStatus
         int m_currentSlide;
         BackgroundListModel *m_model;
         QFileDialog *m_dialog;
-        QSize m_size;
-        int m_width;
-        int m_height;
         QString m_img;
         QDateTime m_previousModified;
         QPointer<KNS3::DownloadDialog> m_newStuffDialog;

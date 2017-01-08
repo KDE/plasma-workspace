@@ -133,17 +133,6 @@ Item {
         }
     }
 
-    Binding {
-        target: wallpaper.configuration
-        property: "width"
-        value: root.width
-    }
-    Binding {
-        target: wallpaper.configuration
-        property: "height"
-        value: root.height
-    }
-
     onWidthChanged: startFadeSourceTimer()
     onHeightChanged: startFadeSourceTimer()
 
@@ -164,9 +153,7 @@ Item {
         id: imageWallpaper
         //the oneliner of difference between image and slideshow wallpapers
         renderingMode: (wallpaper.pluginName == "org.kde.image") ? Wallpaper.Image.SingleImage : Wallpaper.Image.SlideShow
-//         targetSize: "1920x1080"
-        width: root.width
-        height: root.height
+        targetSize: Qt.size(root.width, root.height)
         slidePaths: wallpaper.configuration.SlidePaths
         slideTimer: wallpaper.configuration.SlideInterval
     }

@@ -46,8 +46,7 @@ ColumnLayout {
 
     Wallpaper.Image {
         id: imageWallpaper
-        width: wallpaper.configuration.width
-        height: wallpaper.configuration.height
+        targetSize: Qt.size(plasmoid.width, plasmoid.height)
         onSlidePathsChanged: cfg_SlidePaths = slidePaths
     }
 
@@ -279,7 +278,7 @@ ColumnLayout {
                 focus: true
 
                 cellWidth: Math.floor(wallpapersGrid.width / Math.max(Math.floor(wallpapersGrid.width / (units.gridUnit*12)), 3))
-                cellHeight: cellWidth / (imageWallpaper.width / imageWallpaper.height)
+                cellHeight: Math.round(cellWidth / (imageWallpaper.targetSize.width / imageWallpaper.targetSize.height))
 
                 anchors.margins: 4
                 boundsBehavior: Flickable.StopAtBounds

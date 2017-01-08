@@ -61,9 +61,7 @@ Image::Image(QObject *parent)
       m_mode(SingleImage),
       m_currentSlide(-1),
       m_model(0),
-      m_dialog(0),
-      m_width(0),
-      m_height(0)
+      m_dialog(0)
 {
     m_wallpaperPackage = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Wallpaper/Images"));
 
@@ -73,8 +71,6 @@ Image::Image(QObject *parent)
     connect(m_dirWatch, &KDirWatch::dirty,   this, &Image::pathDirty);
     connect(m_dirWatch, &KDirWatch::deleted, this, &Image::pathDeleted);
     m_dirWatch->startScan();
-
-    connect(this, &Image::sizeChanged, this, &Image::setTargetSize);
 
     useSingleImageDefaults();
     setSingleImage();
@@ -239,31 +235,9 @@ void Image::setTargetSize(const QSize &size)
         }
         setSingleImage();
     }
-}
 
-int Image::height() const
-{
-    return m_height;
-}
-
-void Image::setHeight(int h)
-{
-    if (m_height != h) {
-        m_height = h;
-        emit sizeChanged(QSize(m_width, m_height));
-    }
-}
-
-int Image::width() const
-{
-    return m_width;
-}
-
-void Image::setWidth(int w)
-{
-    if (m_width != w) {
-        m_width = w;
-        emit sizeChanged(QSize(m_width, m_height));
+    if (sizeChanged) {
+        emit targetSizeChanged();
     }
 }
 
