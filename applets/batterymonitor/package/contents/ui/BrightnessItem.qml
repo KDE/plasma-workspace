@@ -35,8 +35,8 @@ RowLayout {
     PlasmaCore.IconItem {
         id: brightnessIcon
         Layout.alignment: Qt.AlignTop
-        width: units.iconSizes.medium
-        height: width
+        Layout.preferredWidth: units.iconSizes.medium
+        Layout.preferredHeight: width
     }
 
     Column {
