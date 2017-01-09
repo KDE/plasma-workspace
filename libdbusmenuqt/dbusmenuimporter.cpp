@@ -55,9 +55,6 @@ static QTime sChrono;
 
 static const char *DBUSMENU_INTERFACE = "com.canonical.dbusmenu";
 
-static const int ABOUT_TO_SHOW_TIMEOUT = 3000;
-static const int REFRESH_TIMEOUT = 4000;
-
 static const char *DBUSMENU_PROPERTY_ID = "_dbusmenu_id";
 static const char *DBUSMENU_PROPERTY_ICON_NAME = "_dbusmenu_icon_name";
 static const char *DBUSMENU_PROPERTY_ICON_DATA_HASH = "_dbusmenu_icon_data_hash";
@@ -321,6 +318,7 @@ DBusMenuImporter::~DBusMenuImporter()
 
 void DBusMenuImporter::slotLayoutUpdated(uint revision, int parentId)
 {
+    Q_UNUSED(revision)
     if (d->m_idsRefreshedByAboutToShow.remove(parentId)) {
         return;
     }
