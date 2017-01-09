@@ -33,7 +33,7 @@ PlasmaCore.ToolTipArea {
     implicitHeight: implicitWidth
     visible: root.hiddenLayout.children.length > 0
 
-    subText: root.expanded ? i18n("Hide icons") : i18n("Show hidden icons")
+    subText: root.expanded ? i18n("Close popup") : i18n("Show hidden icons")
 
     MouseArea {
         id: arrowMouseArea
