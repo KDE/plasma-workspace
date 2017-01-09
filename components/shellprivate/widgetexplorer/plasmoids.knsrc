@@ -22,5 +22,5 @@ Name[zh_CN]=Plasma 部件
 ProvidersUrl=http://download.kde.org/ocs/providers.xml
 Categories=Plasma 5 Plasmoid
 StandardResource=tmp
-InstallationCommand=plasmapkg2 -i %f
-UninstallCommand=plasmapkg2 -r %f
+InstallationCommand=kpackagetool5 --install %f --type Plasma/Applet
+UninstallCommand=kpackagetool5 --remove %f --type Plasma/Applet

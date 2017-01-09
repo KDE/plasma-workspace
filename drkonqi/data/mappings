@@ -42,6 +42,9 @@ bluedevil-network-panu=Bluedevil|general
 bluedevil-sendfile=Bluedevil|general
 bluedevil-wizard=Bluedevil/wizard
 
+#KPackage
+kpackagetool5=kpackage|general
+
 #KDE Plasma Desktop (Plasma & KRunner)
 plasma-desktop=plasma|general
 plasma-mid=plasma|general
