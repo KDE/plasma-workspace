@@ -21,6 +21,7 @@
 
 #include "iconapplet.h"
 
+#include <QAction>
 #include <QApplication>
 #include <QCryptographicHash>
 #include <QDesktopWidget>
@@ -29,17 +30,22 @@
 #include <QFileInfo>
 #include <QIcon>
 #include <QJsonArray>
+#include <QMenu>
 #include <QMimeData>
 #include <QMimeDatabase>
 #include <QProcess>
 
 #include <KAuthorized>
 #include <KDesktopFile>
+#include <KFileItemActions>
+#include <KFileItemListProperties>
 #include <KJobWidgets>
 #include <KLocalizedString>
+#include <KProtocolManager>
 #include <KRun>
 
 #include <KIO/DropJob>
+#include <KIO/OpenFileManagerWindowJob>
 
 IconApplet::IconApplet(QObject *parent, const QVariantList &data)
     : Plasma::Applet(parent, data)
@@ -201,7 +207,39 @@ void IconApplet::populateFromDesktopFile(const QString &path)
 
     setIconName(desktopFile.readIcon());
 
-    QVariantList jumpListActions;
+    delete m_openContainingFolderAction;
+    m_openContainingFolderAction = nullptr;
+    m_openWithActions.clear();
+
+    if (desktopFile.hasLinkType()) {
+        const QUrl &linkUrl = QUrl(desktopFile.readUrl());
+
+        if (!m_fileItemActions) {
+            m_fileItemActions = new KFileItemActions(this);
+        }
+        KFileItemListProperties itemProperties(KFileItemList({KFileItem(linkUrl)}));
+        m_fileItemActions->setItemListProperties(itemProperties);
+
+        if (!m_openWithMenu) {
+            m_openWithMenu.reset(new QMenu());
+        }
+        m_openWithMenu->clear();
+        m_fileItemActions->addOpenWithActionsTo(m_openWithMenu.data());
+
+        m_openWithActions = m_openWithMenu->actions();
+
+        if (KProtocolManager::supportsListing(linkUrl)) {
+            if (!m_openContainingFolderAction) {
+                m_openContainingFolderAction = new QAction(QIcon::fromTheme(QStringLiteral("document-open-folder")), i18n("Open Containing Folder"), this);
+                connect(m_openContainingFolderAction, &QAction::triggered, this, [this] {
+                    KIO::highlightInFileManager({m_openContainingFolderAction->property("linkUrl").toUrl()});
+                });
+            }
+            m_openContainingFolderAction->setProperty("linkUrl", linkUrl);
+        }
+    }
+
+    m_jumpListActions.clear();
     foreach (const QString &actionName, desktopFile.readActions()) {
         const KConfigGroup &actionGroup = desktopFile.actionGroup(actionName);
 
@@ -215,16 +253,12 @@ void IconApplet::populateFromDesktopFile(const QString &path)
             continue;
         }
 
-        jumpListActions << QVariantMap{
-            {QStringLiteral("name"), name},
-            {QStringLiteral("icon"), actionGroup.readEntry("Icon")},
-            {QStringLiteral("exec"), exec}
-        };
-    }
+        QAction *action = new QAction(QIcon::fromTheme(actionGroup.readEntry("Icon")), name, this);
+        connect(action, &QAction::triggered, this, [this, exec] {
+            KRun::run(exec, {}, nullptr, m_name, m_iconName);
+        });
 
-    if (m_jumpListActions != jumpListActions) {
-        m_jumpListActions = jumpListActions;
-        emit jumpListActionsChanged(jumpListActions);
+        m_jumpListActions << action;
     }
 
     m_localPath = path;
@@ -271,9 +305,26 @@ QString IconApplet::genericName() const
     return m_genericName;
 }
 
-QVariantList IconApplet::jumpListActions() const
+QList<QAction *> IconApplet::contextualActions()
 {
-    return m_jumpListActions;
+    QList<QAction *> actions;
+    actions << m_jumpListActions;
+
+    if (!actions.isEmpty()) {
+        if (!m_separatorAction) {
+            m_separatorAction = new QAction(this);
+            m_separatorAction->setSeparator(true);
+        }
+        actions << m_separatorAction;
+    }
+
+    actions << m_openWithActions;
+
+    if (m_openContainingFolderAction) {
+        actions << m_openContainingFolderAction;
+    }
+
+    return actions;
 }
 
 void IconApplet::open()
@@ -336,16 +387,6 @@ void IconApplet::processDrop(QObject *dropEvent)
         KJobWidgets::setWindow(dropJob, QApplication::desktop());
         return;
     }
-}
-
-void IconApplet::execJumpList(int index)
-{
-    const QString &exec = m_jumpListActions.at(index).toMap().value(QStringLiteral("exec")).toString();
-    if (exec.isEmpty()) {
-        return;
-    }
-
-    KRun::run(exec, {}, nullptr, m_name, m_iconName);
 }
 
 void IconApplet::configure()

@@ -8,6 +8,7 @@ kcoreaddons_desktop_to_json(plasma_applet_icon package/metadata.desktop)
 
 target_link_libraries(plasma_applet_icon
                       KF5::I18n
+                      KF5::KIOCore # for OpenFileManagerWindowJob
                       KF5::KIOWidgets # for KRun
                       KF5::Plasma)
 

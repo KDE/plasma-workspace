@@ -59,28 +59,10 @@ MouseArea {
     function updateActions() {
         plasmoid.clearActions()
 
-        var actions = plasmoid.nativeInterface.jumpListActions
-        var jumpListCount = actions.length
-        for (var i = 0; i < jumpListCount; ++i) {
-            var item = actions[i]
-            plasmoid.setAction("jumplist_" + i, item.name, item.icon)
-        }
-
-        if (jumpListCount) {
-            plasmoid.setActionSeparator("separator0")
-        }
-
         plasmoid.removeAction("configure");
 
         if (plasmoid.immutability !== PlasmaCore.Types.SystemImmutable) {
             plasmoid.setAction("configure", i18n("Properties"), "document-properties");
-        }
-    }
-
-    function actionTriggered(name) {
-        if (name.indexOf("jumplist_") === 0) {
-            var actionIndex = parseInt(name.substr("jumplist_".length))
-            plasmoid.nativeInterface.execJumpList(actionIndex)
         }
     }
 

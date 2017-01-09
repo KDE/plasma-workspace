@@ -27,6 +27,9 @@
 
 #include <KPropertiesDialog>
 
+class KFileItemActions;
+class QMenu;
+
 class IconApplet : public Plasma::Applet
 {
     Q_OBJECT
@@ -36,7 +39,6 @@ class IconApplet : public Plasma::Applet
     Q_PROPERTY(QString name READ name NOTIFY nameChanged)
     Q_PROPERTY(QString iconName READ iconName NOTIFY iconNameChanged)
     Q_PROPERTY(QString genericName READ genericName NOTIFY genericNameChanged)
-    Q_PROPERTY(QVariantList jumpListActions READ jumpListActions NOTIFY jumpListActionsChanged)
 
 public:
     explicit IconApplet(QObject *parent, const QVariantList &data);
@@ -50,11 +52,11 @@ public:
     QString name() const;
     QString iconName() const;
     QString genericName() const;
-    QVariantList jumpListActions() const;
+
+    QList<QAction *> contextualActions() override;
 
     Q_INVOKABLE void open();
     Q_INVOKABLE void processDrop(QObject *dropEvent);
-    Q_INVOKABLE void execJumpList(int index);
     Q_INVOKABLE void configure();
 
 signals:
@@ -80,7 +82,15 @@ private:
     QString m_name;
     QString m_iconName;
     QString m_genericName;
-    QVariantList m_jumpListActions;
+
+    QList<QAction *> m_jumpListActions;
+    QAction *m_separatorAction = nullptr;
+    QList<QAction *> m_openWithActions;
+
+    QAction *m_openContainingFolderAction = nullptr;
+
+    KFileItemActions *m_fileItemActions = nullptr;
+    QScopedPointer<QMenu> m_openWithMenu;
 
     QPointer<KPropertiesDialog> m_configDialog;
 
