@@ -22,8 +22,7 @@
 #ifndef PLASMAWINDOWEDCORONA_H
 #define PLASMAWINDOWEDCORONA_H
 
-#include <plasma/corona.h>
-#include "plasmaquick/view.h"
+#include <Plasma/Corona>
 
 class PlasmaWindowedCorona : public Plasma::Corona
 {

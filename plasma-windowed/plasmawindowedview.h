@@ -25,7 +25,7 @@
 #include <QQuickView>
 #include <QPointer>
 #include "plasmawindowedcorona.h"
-#include "plasmaquick/configview.h"
+#include <PlasmaQuick/ConfigView>
 
 class KStatusNotifierItem;
 

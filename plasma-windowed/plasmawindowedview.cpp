@@ -19,6 +19,8 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>
  */
 
+#include "plasmawindowedview.h"
+
 #include <QQuickItem>
 #include <QResizeEvent>
 #include <QQmlExpression>
@@ -31,7 +33,6 @@
 
 #include <Plasma/Package>
 
-#include "plasmawindowedview.h"
 
 PlasmaWindowedView::PlasmaWindowedView(QWindow *parent)
     : QQuickView(parent),
