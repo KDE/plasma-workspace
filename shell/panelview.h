@@ -23,8 +23,8 @@
 #include <Plasma/Theme>
 #include <QTimer>
 
-#include "plasmaquick/containmentview.h"
-#include "plasmaquick/configview.h"
+#include <PlasmaQuick/ContainmentView>
+#include <PlasmaQuick/ConfigView>
 
 class ShellCorona;
 

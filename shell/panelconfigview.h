@@ -20,7 +20,9 @@
 #ifndef PANELCONFIGVIEW_H
 #define PANELCONFIGVIEW_H
 
-#include "plasmaquick/configview.h"
+#include <PlasmaQuick/ConfigView>
+#include <Plasma/Theme>
+
 #include "panelview.h"
 
 #include <QQuickItem>
@@ -29,7 +31,6 @@
 #include <QQmlListProperty>
 #include <QStandardItemModel>
 #include <QPointer>
-#include <Plasma/Theme>
 
 class PanelView;
 

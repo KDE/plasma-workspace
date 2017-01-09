@@ -20,8 +20,8 @@
 #define DESKTOVIEW_H
 
 
-#include "plasmaquick/containmentview.h"
-#include "panelconfigview.h"
+#include <PlasmaQuick/ContainmentView>
+#include <PlasmaQuick/ConfigView>
 #include <QtCore/qpointer.h>
 
 namespace KWayland

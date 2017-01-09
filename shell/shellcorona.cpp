@@ -61,7 +61,6 @@
 #include "desktopview.h"
 #include "panelview.h"
 #include "scripting/scriptengine.h"
-#include "plasmaquick/configview.h"
 #include "shellmanager.h"
 #include "osd.h"
 #include "screenpool.h"

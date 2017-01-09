@@ -21,8 +21,11 @@
 
 #include "standaloneappcorona.h"
 #include "desktopview.h"
+#include "panelview.h"
+
 #include <QDebug>
 #include <QAction>
+#include <QQuickItem>
 
 #include <kactivities/consumer.h>
 #include <KActionCollection>
