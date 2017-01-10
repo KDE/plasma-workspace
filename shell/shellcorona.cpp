@@ -1905,7 +1905,8 @@ void ShellCorona::insertContainment(const QString &activity, int screenNum, Plas
 {
     Plasma::Containment *cont = nullptr;
     for (Plasma::Containment *c : m_desktopContainments.value(activity)) {
-        if (c->screen() == screenNum) {
+        //using lastScreen() instead of screen() catches also containments of activities that aren't the current one, so not assigned to a screen right now
+        if (c->lastScreen() == screenNum) {
             cont = c;
             if (containment == cont) {
                 return;
@@ -1917,8 +1918,6 @@ void ShellCorona::insertContainment(const QString &activity, int screenNum, Plas
     Q_ASSERT(!m_desktopContainments.value(activity).values().contains(containment));
 
     if (cont) {
-        disconnect(cont, SIGNAL(destroyed(QObject*)),
-                this, SLOT(desktopContainmentDestroyed(QObject*)));
         cont->destroy();
     }
     m_desktopContainments[activity].insert(containment);
@@ -1933,7 +1932,8 @@ void ShellCorona::desktopContainmentDestroyed(QObject *obj)
     // members of Containment are not accessible anymore,
     // so keep ugly bookeeping by hand
     auto containment = static_cast<Plasma::Containment*>(obj);
-    for (auto a : m_desktopContainments) {
+    //explicitly specify the range by reference, as we need to remove stuff from the sets
+    for (QSet<Plasma::Containment *> &a : m_desktopContainments) {
         QMutableSetIterator<Plasma::Containment *> it(a);
         while (it.hasNext()) {
             it.next();
