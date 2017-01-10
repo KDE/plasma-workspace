@@ -63,9 +63,8 @@ Rectangle {
 
         Image {
             id: busyIndicator
-            //again sync from SDDM theme
-            anchors.top: logo.bottom
-            anchors.topMargin: units.largeSpacing
+            //in the middle of the remaining space
+            y: parent.height - (parent.height - logo.y) / 2 - height/2
             anchors.horizontalCenter: parent.horizontalCenter
             source: "images/busywidget.svgz"
             sourceSize.height: units.gridUnit * 2
@@ -76,6 +75,25 @@ Rectangle {
                 to: 360
                 duration: 1500
                 loops: Animation.Infinite
+            }
+        }
+        Row {
+            spacing: units.smallSpacing*2
+            anchors {
+                bottom: parent.bottom
+                right: parent.right
+                margins: units.gridUnit
+            }
+            Text {
+                color: "#eff0f1"
+                renderType: Text.NativeRendering
+                anchors.verticalCenter: parent.verticalCenter
+                text: i18ndc("plasma_lookandfeel_org.kde.lookandfeel", "This is the first text the user sees while starting in the splash screen, should be translated as something short, is a form that can be seen on a product. Plasma is the project name so shouldn't be translated.", "Plasma made by KDE")
+            }
+            Image {
+                source: "images/kde.svgz"
+                sourceSize.height: units.gridUnit * 2
+                sourceSize.width: units.gridUnit * 2
             }
         }
     }
