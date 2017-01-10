@@ -59,7 +59,7 @@ Item {
 
     onPositionChanged: {
         // we don't want to interrupt the user dragging the slider
-        if (!seekSlider.pressed && !keyPressed && !queuedPositionUpdate.running) {
+        if (!seekSlider.pressed && !keyPressed) {
             // we also don't want passive position updates
             disablePositionUpdate = true
             seekSlider.value = position
@@ -332,6 +332,9 @@ Item {
         id: queuedPositionUpdate
         interval: 100
         onTriggered: {
+            if (position == seekSlider.value) {
+                return;
+            }
             var service = mpris2Source.serviceForSource(mpris2Source.current)
             var operation = service.operationDescription("SetPosition")
             operation.microseconds = seekSlider.value
