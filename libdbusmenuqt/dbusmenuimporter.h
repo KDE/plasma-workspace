@@ -62,6 +62,8 @@ public Q_SLOTS:
      */
     void updateMenu();
 
+    void updateMenu(QMenu *menu);
+
 Q_SIGNALS:
     /**
      * Emitted after a call to updateMenu().

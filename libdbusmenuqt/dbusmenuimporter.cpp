@@ -87,15 +87,9 @@ public:
 
     QSet<int> m_idsRefreshedByAboutToShow;
     QSet<int> m_pendingLayoutUpdates;
-    int m_nPendingRequests;
 
     QDBusPendingCallWatcher *refresh(int id)
     {
-        m_nPendingRequests++;
-        #ifdef BENCHMARK
-        DMDEBUG << "Starting refresh chrono for id" << id;
-        sChrono.start();
-        #endif
         QDBusPendingCall call = m_interface->asyncCall(QStringLiteral("GetLayout"), id, 1, QStringList());
         QDBusPendingCallWatcher *watcher = new QDBusPendingCallWatcher(call, q);
         watcher->setProperty(DBUSMENU_PROPERTY_ID, id);
@@ -287,7 +281,6 @@ DBusMenuImporter::DBusMenuImporter(const QString &service, const QString &path, 
     d->q = this;
     d->m_interface = new QDBusInterface(service, path, DBUSMENU_INTERFACE, QDBusConnection::sessionBus(), this);
     d->m_menu = 0;
-    d->m_nPendingRequests = 0;
 
     d->m_pendingLayoutUpdateTimer = new QTimer(this);
     d->m_pendingLayoutUpdateTimer->setSingleShot(true);
@@ -383,16 +376,11 @@ void DBusMenuImporter::slotGetLayoutFinished(QDBusPendingCallWatcher *watcher)
     int parentId = watcher->property(DBUSMENU_PROPERTY_ID).toInt();
     watcher->deleteLater();
 
-    d->m_nPendingRequests--;
-
     QDBusPendingReply<uint, DBusMenuLayoutItem> reply = *watcher;
     if (!reply.isValid()) {
         qWarning() << reply.error().message();
 
-        if (d->m_nPendingRequests == 0) {
-            emit menuUpdated();
-        }
-
+        emit menuUpdated();
         return;
     }
 
@@ -429,6 +417,7 @@ void DBusMenuImporter::slotGetLayoutFinished(QDBusPendingCallWatcher *watcher)
             int id = dbusMenuItem.id;
             action = d->createAction(id, dbusMenuItem.properties, menu);
             d->m_actionForId.insert(id, action);
+
             connect(action, &QObject::destroyed, this, [this, id]() {
                 d->m_actionForId.remove(id);
             });
@@ -437,25 +426,21 @@ void DBusMenuImporter::slotGetLayoutFinished(QDBusPendingCallWatcher *watcher)
                 sendClickedEvent(id);
             });
 
+            if (action->menu()) {
+                auto menu = action->menu();
+                connect(menu, &QMenu::aboutToShow, this, [menu, this]() {
+                   updateMenu(menu);
+                });
+            }
+
             menu->addAction(action);
         } else {
             action = *it;
             d->updateAction(*it, dbusMenuItem.properties, dbusMenuItem.properties.keys());
         }
-
-        if( action->menu() )
-        {
-          d->refresh( dbusMenuItem.id );
-        }
     }
 
-    if (d->m_nPendingRequests == 0) {
-        emit menuUpdated();
-    }
-
-    #ifdef BENCHMARK
-    DMDEBUG << "- Menu filled:" << sChrono.elapsed() << "ms";
-    #endif
+    emit menuUpdated();
 }
 
 void DBusMenuImporter::sendClickedEvent(int id)
@@ -465,7 +450,11 @@ void DBusMenuImporter::sendClickedEvent(int id)
 
 void DBusMenuImporter::updateMenu()
 {
-    QMenu *menu = DBusMenuImporter::menu();
+    updateMenu(DBusMenuImporter::menu());
+}
+
+void DBusMenuImporter::updateMenu(QMenu * menu)
+{
     Q_ASSERT(menu);
 
     QAction *action = menu->menuAction();
@@ -480,8 +469,6 @@ void DBusMenuImporter::updateMenu()
         &DBusMenuImporter::slotAboutToShowDBusCallFinished);
 }
 
-
-
 void DBusMenuImporter::slotAboutToShowDBusCallFinished(QDBusPendingCallWatcher *watcher)
 {
     int id = watcher->property(DBUSMENU_PROPERTY_ID).toInt();
@@ -493,6 +480,8 @@ void DBusMenuImporter::slotAboutToShowDBusCallFinished(QDBusPendingCallWatcher *
         qWarning() << "Call to AboutToShow() failed:" << reply.error().message();
         return;
     }
+    //Note, this isn't used by Qt's QPT - but we get a LayoutChanged emitted before
+    //this returns, which equates to the same thing
     bool needRefresh = reply.argumentAt<0>();
 
     QMenu *menu = d->menuForId(id);
