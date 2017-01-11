@@ -264,6 +264,11 @@ void DesktopView::showConfigurationInterface(Plasma::Applet *applet)
 
     if (cont && cont->isContainment()) {
         m_configView = new ContainmentConfigView(cont);
+        //if we changed containment with the config open, relaunch the config dialog but for the new containment
+        //third arg is used to disconnect when the config closes
+        connect(this, &ContainmentView::containmentChanged, m_configView.data(), [this]() {
+            showConfigurationInterface(containment());
+        });
     } else {
         m_configView = new PlasmaQuick::ConfigView(applet);
     }
