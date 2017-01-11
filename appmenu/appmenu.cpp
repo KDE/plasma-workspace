@@ -33,6 +33,7 @@
 #include "appmenu_dbus.h"
 #include "verticalmenu.h"
 
+#include <QApplication>
 #include <QDBusInterface>
 #include <QMenu>
 
@@ -152,7 +153,7 @@ void AppMenuModule::slotShowMenu(int x, int y, const QString &serviceName, const
 
         //m_menuImporter->fakeUnityAboutToShow(serviceName, menuObjectPath);
 
-        m_menu.data()->popup(QPoint(x, y));
+        m_menu.data()->popup(QPoint(x, y) / qApp->devicePixelRatio());
 
         emit menuShown(serviceName, menuObjectPath);
 
