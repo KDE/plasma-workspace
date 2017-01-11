@@ -29,7 +29,6 @@
 #include <QFont>
 #include <QMenu>
 #include <QPointer>
-#include <QSignalMapper>
 #include <QTime>
 #include <QTimer>
 #include <QToolButton>
@@ -82,9 +81,8 @@ public:
 
     QDBusAbstractInterface *m_interface;
     QMenu *m_menu;
-    typedef QMap<int, QPointer<QAction> > ActionForId;
+    using ActionForId = QMap<int, QAction* >;
     ActionForId m_actionForId;
-    QSignalMapper m_mapper;
     QTimer *m_pendingLayoutUpdateTimer;
 
     QSet<int> m_idsRefreshedByAboutToShow;
@@ -291,8 +289,6 @@ DBusMenuImporter::DBusMenuImporter(const QString &service, const QString &path, 
     d->m_menu = 0;
     d->m_nPendingRequests = 0;
 
-    connect(&d->m_mapper, SIGNAL(mapped(int)), SLOT(sendClickedEvent(int)));
-
     d->m_pendingLayoutUpdateTimer = new QTimer(this);
     d->m_pendingLayoutUpdateTimer->setSingleShot(true);
     connect(d->m_pendingLayoutUpdateTimer, &QTimer::timeout, this, &DBusMenuImporter::processPendingLayoutUpdates);
@@ -411,22 +407,41 @@ void DBusMenuImporter::slotGetLayoutFinished(QDBusPendingCallWatcher *watcher)
         return;
     }
 
-    menu->clear();
-
-    Q_FOREACH(const DBusMenuLayoutItem &dbusMenuItem, rootItem.children) {
-        QAction *action = d->createAction(dbusMenuItem.id, dbusMenuItem.properties, menu);
-        DBusMenuImporterPrivate::ActionForId::Iterator it = d->m_actionForId.find(dbusMenuItem.id);
-        if (it == d->m_actionForId.end()) {
-            d->m_actionForId.insert(dbusMenuItem.id, action);
-        } else {
-            delete *it;
-            *it = action;
+    //remove outdated actions
+    QSet<int> newDBusMenuItemIds;
+    newDBusMenuItemIds.reserve(rootItem.children.count());
+    for (const DBusMenuLayoutItem &item: rootItem.children) {
+        newDBusMenuItemIds << item.id;
+    }
+    for (QAction *action: menu->actions()) {
+        int id = action->property(DBUSMENU_PROPERTY_ID).toInt();
+        if (! newDBusMenuItemIds.contains(id)) {
+            action->deleteLater();
+            d->m_actionForId.remove(id);
         }
-        menu->addAction(action);
+    }
 
-        connect(action, SIGNAL(triggered()),
-            &d->m_mapper, SLOT(map()));
-        d->m_mapper.setMapping(action, dbusMenuItem.id);
+    //insert or update new actions into our menu
+    for (const DBusMenuLayoutItem &dbusMenuItem: rootItem.children) {
+        DBusMenuImporterPrivate::ActionForId::Iterator it = d->m_actionForId.find(dbusMenuItem.id);
+        QAction *action = nullptr;
+        if (it == d->m_actionForId.end()) {
+            int id = dbusMenuItem.id;
+            action = d->createAction(id, dbusMenuItem.properties, menu);
+            d->m_actionForId.insert(id, action);
+            connect(action, &QObject::destroyed, this, [this, id]() {
+                d->m_actionForId.remove(id);
+            });
+
+            connect(action, &QAction::triggered, this, [action, id, this]() {
+                sendClickedEvent(id);
+            });
+
+            menu->addAction(action);
+        } else {
+            action = *it;
+            d->updateAction(*it, dbusMenuItem.properties, dbusMenuItem.properties.keys());
+        }
 
         if( action->menu() )
         {
@@ -514,8 +529,6 @@ void DBusMenuImporter::slotMenuAboutToShow()
     int id = action->property(DBUSMENU_PROPERTY_ID).toInt();
     d->sendEvent(id, QStringLiteral("opened"));
 }
-
-
 
 QMenu *DBusMenuImporter::createMenu(QWidget *parent)
 {
