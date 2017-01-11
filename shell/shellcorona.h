@@ -212,6 +212,7 @@ private Q_SLOTS:
 
 private:
     void updateStruts();
+    void configurationChanged(const QString &path);
     bool isOutputRedundant(QScreen* screen) const;
     void reconsiderOutputs();
     QList<PanelView *> panelsForScreen(QScreen *screen) const;
@@ -224,6 +225,9 @@ private:
 #endif
 
     void insertContainment(const QString &activity, int screenNum, Plasma::Containment *containment);
+
+    KSharedConfig::Ptr m_config;
+    QString m_configPath;
 
     ScreenPool *m_screenPool;
     QString m_shell;

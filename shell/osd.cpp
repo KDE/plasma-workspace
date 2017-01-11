@@ -29,9 +29,10 @@
 #include <KDeclarative/QmlObject>
 #include <klocalizedstring.h>
 
-Osd::Osd(ShellCorona *corona)
+Osd::Osd(KSharedConfig::Ptr config, ShellCorona *corona)
     : QObject(corona)
     , m_osdPath(corona->lookAndFeelPackage().filePath("osdmainscript"))
+    , m_config(config)
 {
     QDBusConnection::sessionBus().registerObject(QStringLiteral("/org/kde/osdService"), this, QDBusConnection::ExportAllSlots | QDBusConnection::ExportAllSignals);
 }
@@ -153,6 +154,10 @@ void Osd::virtualKeyboardEnabledChanged(bool virtualKeyboardEnabled)
 
 bool Osd::init()
 {
+    if (m_config && !KConfigGroup(m_config, QStringLiteral("OSD")).readEntry(QStringLiteral("Enabled"), true)) {
+        return false;
+    }
+
     if (m_osdObject && m_osdObject->rootObject()) {
         return true;
     }
