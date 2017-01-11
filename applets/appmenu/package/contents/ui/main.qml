@@ -108,7 +108,7 @@ Item {
         }
     }
 
-    Plasmoid.toolTipSubText: !appletEnabled ? i18n("Application Menu Widget is disabled in settings.\n\nGo to Settings > Application Style > Fine Tuning(tab) to enable it again.") : ""
+    Plasmoid.toolTipSubText: !appletEnabled ? i18n("Application Menu Widget is disabled in settings.\n\nGo to System Settings > Application Style > Fine Tuning (tab) to enable it.") : ""
 
     AppMenuPrivate.AppMenuModel {
         id: appMenuModel
