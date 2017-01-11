@@ -41,6 +41,7 @@ PlasmaCore.ToolTipArea {
 
     signal clicked(var mouse)
     signal wheel(var wheel)
+    signal contextMenu(var mouse)
 
     property bool forcedHidden: plasmoid.configuration.hiddenItems.indexOf(itemId) !== -1
     property bool forcedShown: plasmoid.configuration.showAllItems || plasmoid.configuration.shownItems.indexOf(itemId) !== -1
@@ -99,8 +100,15 @@ PlasmaCore.ToolTipArea {
         drag.filterChildren: true
         acceptedButtons: Qt.LeftButton | Qt.MiddleButton | Qt.RightButton
         onClicked: {
+            if (mouse.button !== Qt.RightButton) {
+                abstractItem.clicked(mouse)
+            }
+        }
+        onPressed: {
             abstractItem.hideToolTip()
-            abstractItem.clicked(mouse)
+            if (mouse.button === Qt.RightButton) {
+                abstractItem.contextMenu(mouse)
+            }
         }
         onWheel: {
             abstractItem.wheel(wheel);

@@ -39,14 +39,16 @@ AbstractItem {
     active: root.activeApplet != applet
 
     onClicked: {
-        if (applet) {
-            if (mouse.button == Qt.LeftButton) {
-                applet.expanded = true;
-            } else if (mouse.button == Qt.RightButton) {
-                plasmoid.nativeInterface.showPlasmoidMenu(applet, 0, plasmoidContainer.hidden ? applet.height : 0);
-            }
+        if (applet && mouse.button == Qt.LeftButton) {
+            applet.expanded = true;
         }
     }
+    onContextMenu: {
+        if (applet) {
+            plasmoid.nativeInterface.showPlasmoidMenu(applet, 0, plasmoidContainer.hidden ? applet.height : 0);
+        }
+    }
+
     onHeightChanged: {
         if (applet) {
             applet.width = height
