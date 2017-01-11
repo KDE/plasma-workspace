@@ -86,6 +86,7 @@ static const int s_configSyncDelay = 10000; // 10 seconds
 
 ShellCorona::ShellCorona(QObject *parent)
     : Plasma::Corona(parent),
+      m_config(KSharedConfig::openConfig(QStringLiteral("plasmarc"))),
       m_screenPool(new ScreenPool(KSharedConfig::openConfig(), this)),
       m_activityController(new KActivities::Controller(this)),
       m_addPanelAction(nullptr),
@@ -216,7 +217,13 @@ ShellCorona::ShellCorona(QObject *parent)
         });
     }
 
-    new Osd(this);
+    new Osd(m_config, this);
+
+    // catch when plasmarc changes, so we e.g. enable/disable the OSd
+    m_configPath = QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation) + QLatin1Char('/') + m_config->name();
+    KDirWatch::self()->addFile(m_configPath);
+    connect(KDirWatch::self(), &KDirWatch::dirty, this, &ShellCorona::configurationChanged);
+    connect(KDirWatch::self(), &KDirWatch::created, this, &ShellCorona::configurationChanged);
 }
 
 ShellCorona::~ShellCorona()
@@ -254,7 +261,7 @@ void ShellCorona::setShell(const QString &shell)
 
     QString themeName;
 
-    KConfigGroup plasmarc(KSharedConfig::openConfig(QStringLiteral("plasmarc")), themeGroupKey);
+    KConfigGroup plasmarc(m_config, themeGroupKey);
     themeName = plasmarc.readEntry(themeNameKey, themeName);
 
     if (themeName.isEmpty()) {
@@ -2013,6 +2020,12 @@ void ShellCorona::updateStruts()
     }
 }
 
+void ShellCorona::configurationChanged(const QString &path)
+{
+    if (path == m_configPath) {
+        m_config->reparseConfiguration();
+    }
+}
 
 void ShellCorona::activateLauncherMenu()
 {

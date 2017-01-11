@@ -22,6 +22,8 @@
 #include <QObject>
 #include <QString>
 
+#include <KSharedConfig>
+
 namespace KDeclarative {
     class QmlObject;
 }
@@ -35,7 +37,7 @@ class Osd : public QObject {
     Q_OBJECT
     Q_CLASSINFO("D-Bus Interface", "org.kde.osdService")
 public:
-    Osd(ShellCorona *corona);
+    Osd(KSharedConfig::Ptr config, ShellCorona *corona);
     ~Osd() override;
 
 public Q_SLOTS:
@@ -70,6 +72,8 @@ private:
     KDeclarative::QmlObject *m_osdObject = nullptr;
     QTimer *m_osdTimer = nullptr;
     int m_timeout = 0;
+
+    KSharedConfig::Ptr m_config;
 };
 
 #endif // OSD_H
