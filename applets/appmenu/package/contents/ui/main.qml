@@ -118,11 +118,4 @@ Item {
             plasmoid.nativeInterface.model = appMenuModel
         }
     }
-
-    Connections {
-        target: appMenuModel
-        onResetModel: {
-            plasmoid.nativeInterface.model = appMenuModel
-        }
-    }
 }
