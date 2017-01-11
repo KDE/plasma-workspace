@@ -29,6 +29,7 @@
 #include <dbusmenuimporter.h>
 
 #include <QIcon>
+#include "verticalmenu.h"
 
 class KDBusMenuImporter : public DBusMenuImporter
 {
@@ -45,6 +46,9 @@ protected:
         return QIcon::fromTheme(name);
     }
 
+    QMenu *createMenu(QWidget *parent) override {
+        return new VerticalMenu(parent);
+    }
 };
 
 #endif //KDBUSMENUIMPORTER_H

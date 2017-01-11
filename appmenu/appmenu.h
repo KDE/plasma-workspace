@@ -28,6 +28,8 @@
 #define APPMENUMODULE_H
 
 #include <kdedmodule.h>
+
+#include <QPointer>
 #include "menuimporter.h"
 
 class QDBusPendingCallWatcher;
@@ -89,10 +91,9 @@ private:
 
     MenuImporter *m_menuImporter = nullptr;
     AppmenuDBus *m_appmenuDBus;
+    QPointer<VerticalMenu> m_menu;
 
-    VerticalMenu *m_menu = nullptr;
     QAction *m_waitingAction = nullptr;
-
 };
 
 #endif

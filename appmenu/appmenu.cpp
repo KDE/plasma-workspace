@@ -119,8 +119,8 @@ void AppMenuModule::slotShowMenu(int x, int y, const QString &serviceName, const
     }
 
     // If menu visible, hide it
-    if (m_menu && m_menu->isVisible()) {
-        m_menu->hide();
+    if (m_menu && m_menu.data()->isVisible()) {
+        m_menu.data()->hide();
         return;
     }
 
@@ -132,49 +132,32 @@ void AppMenuModule::slotShowMenu(int x, int y, const QString &serviceName, const
     }
 
     auto *importer = new KDBusMenuImporter(serviceName, menuObjectPath.path(), this);
-    // FIXME this causes a 4 second freeze in dbusmenu when the app times out in aboutToShow
-    // DBusMenuImporter::slotMenuAboutToShow(): Application did not answer to AboutToShow() before timeout
-    //QMetaObject::invokeMethod(importer, "updateMenu", Qt::DirectConnection);
     QMetaObject::invokeMethod(importer, "updateMenu", Qt::QueuedConnection);
-
-    /*connect(importer, &DBusMenuImporter::actionActivationRequested, this, [=](QAction *action) {
-        // else send request to kwin or others dbus interface registrars
-        m_waitingAction = action;
-        emit showRequest(serviceName, menuObjectPath);
-    });*/
+    disconnect(importer, 0, this, 0); // ensure we don't popup multiple times in case the menu updates again later
 
     connect(importer, &KDBusMenuImporter::menuUpdated, this, [=] {
         QMenu *menu = importer->menu();
         if (!menu) {
             return;
         }
+        m_menu = qobject_cast<VerticalMenu*>(menu);
 
-        const auto &actions = menu->actions();
-        if (actions.isEmpty()) {
-            return;
-        }
+        m_menu.data()->setServiceName(serviceName);
+        m_menu.data()->setMenuObjectPath(menuObjectPath);
 
-        m_menu = new VerticalMenu();
-        m_menu->setServiceName(serviceName);
-        m_menu->setMenuObjectPath(menuObjectPath);
-
-        for (QAction *action : actions) {
-            m_menu->addAction(action);
-        }
-
-        connect(m_menu, &QMenu::aboutToHide, this, [this, importer] {
+        connect(m_menu.data(), &QMenu::aboutToHide, this, [this, importer] {
             hideMenu();
             importer->deleteLater();
         });
 
         //m_menuImporter->fakeUnityAboutToShow(serviceName, menuObjectPath);
 
-        m_menu->popup(QPoint(x, y));
+        m_menu.data()->popup(QPoint(x, y));
 
         emit menuShown(serviceName, menuObjectPath);
 
         if (m_waitingAction) {
-            m_menu->setActiveAction(m_waitingAction);
+            m_menu.data()->setActiveAction(m_waitingAction);
             m_waitingAction = nullptr;
         }
     });
@@ -183,9 +166,7 @@ void AppMenuModule::slotShowMenu(int x, int y, const QString &serviceName, const
 void AppMenuModule::hideMenu()
 {
     if (m_menu) {
-        emit menuHidden(m_menu->serviceName(), m_menu->menuObjectPath());
-        m_menu->deleteLater();
-        m_menu = nullptr;
+        emit menuHidden(m_menu.data()->serviceName(), m_menu->menuObjectPath());
     }
 }
 
