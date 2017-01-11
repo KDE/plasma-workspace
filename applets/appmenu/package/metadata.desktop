@@ -1,0 +1,17 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Application Menu
+Icon=show-menu
+Type=Service
+X-KDE-PluginInfo-Author=Kai Uwe Broulik
+X-KDE-PluginInfo-Email=kde@privat.broulik.de
+X-KDE-PluginInfo-License=GPL
+X-KDE-PluginInfo-Name=org.kde.plasma.appmenu
+X-KDE-PluginInfo-Version=2.0
+X-KDE-PluginInfo-Website=plasma.kde.org
+X-KDE-ServiceTypes=Plasma/Applet
+X-Plasma-API=declarativeappletscript
+X-KDE-Library=plasma_applet_appmenu
+
+X-Plasma-MainScript=ui/main.qml
+X-KDE-PluginInfo-Category=Windows and Tasks

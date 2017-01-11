@@ -6,6 +6,7 @@ plasma_install_package(mediacontroller org.kde.plasma.mediacontroller)
 plasma_install_package(panelspacer org.kde.plasma.panelspacer)
 plasma_install_package(lock_logout org.kde.plasma.lock_logout)
 
+add_subdirectory(appmenu)
 add_subdirectory(systemmonitor)
 add_subdirectory(batterymonitor)
 add_subdirectory(calendar)
