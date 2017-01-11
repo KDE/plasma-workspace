@@ -22,26 +22,32 @@ import QtQuick 2.0
 import QtQuick.Controls 1.0 as Controls
 import QtQuick.Layouts 1.1 as Layouts
 
+import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
 
 Layouts.ColumnLayout {
     id: configGeneral
 
-    property alias cfg_compactView: compactViewCheckBox.checked
+    property alias cfg_compactView: compactViewRadioButton.checked
+
+    property bool disableSetting: plasmoid.formFactor === PlasmaCore.Types.Vertical || !plasmoid.nativeInterface.appletEnabled
 
     Controls.ExclusiveGroup {
         id: viewOptionGroup
     }
 
     Controls.RadioButton {
-        id: compactViewCheckBox
+        id: compactViewRadioButton
+        enabled: !disableSetting
         text: i18n("Use single button for application menu")
         exclusiveGroup: viewOptionGroup
     }
     Controls.RadioButton {
+        id: fullViewRadioButton
         //this checked binding is just for the initial load in case
         //compactViewCheckBox is not checked. Then exclusive group manages it
-        checked: !compactViewCheckBox.checked
+        enabled: !disableSetting
+        checked: !compactViewRadioButton.checked
         text: i18n("Show full application menu")
         exclusiveGroup: viewOptionGroup
     }

@@ -21,35 +21,46 @@ import QtQuick.Layouts 1.1
 import QtQuick.Controls 1.4
 
 import org.kde.plasma.plasmoid 2.0
+import org.kde.kquickcontrolsaddons 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
-import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.plasma.private.appmenu 1.0 as AppMenuPrivate
 
 Item {
     id: root
 
     readonly property bool vertical: plasmoid.formFactor === PlasmaCore.Types.Vertical
+    readonly property bool appletEnabled: plasmoid.nativeInterface.appletEnabled
+    readonly property bool view: plasmoid.configuration.compactView
+    readonly property bool menuAvailable: appMenuModel.menuAvailable
 
-    readonly property bool compactView: plasmoid.configuration.compactView
-
-    onCompactViewChanged: {
-        plasmoid.nativeInterface.view = compactView
+    onViewChanged: {
+        plasmoid.nativeInterface.view = view
     }
 
     Layout.minimumWidth: units.gridUnit
     Layout.minimumHeight: units.gridUnit
 
-    Plasmoid.preferredRepresentation: plasmoid.configuration.compactView ? Plasmoid.compactRepresentation : Plasmoid.fullRepresentation
+    Plasmoid.preferredRepresentation: (plasmoid.configuration.compactView || vertical || !appletEnabled) ? Plasmoid.compactRepresentation : Plasmoid.fullRepresentation
 
     Plasmoid.compactRepresentation: PlasmaComponents.ToolButton {
+        readonly property int fakeIndex: 0
         Layout.fillWidth: false
         Layout.fillHeight: false
         Layout.minimumWidth: implicitWidth
         Layout.maximumWidth: implicitWidth
-        text: i18n("Menu")
+        enabled: appletEnabled ? menuAvailable : true
+        checkable: appletEnabled && menuAvailable && plasmoid.nativeInterface.currentIndex === fakeIndex
+        checked: checkable
+        iconSource: appletEnabled ? i18n("application-menu") : i18n("emblem-warning")
         onClicked: {
-            plasmoid.nativeInterface.trigger(this, 0);
+            if (appletEnabled) {
+                plasmoid.nativeInterface.trigger(this, 0);
+            } else {
+                KCMShell.open("style")
+            }
+
+
         }
     }
 
@@ -96,6 +107,8 @@ Item {
             }
         }
     }
+
+    Plasmoid.toolTipSubText: !appletEnabled ? i18n("Application Menu Widget is disabled in settings.\n\nGo to Settings > Application Style > Fine Tuning(tab) to enable it again.") : ""
 
     AppMenuPrivate.AppMenuModel {
         id: appMenuModel

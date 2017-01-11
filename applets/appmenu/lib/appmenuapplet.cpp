@@ -29,6 +29,7 @@
 #include <QQuickItem>
 #include <QQuickWindow>
 #include <QScreen>
+#include <QDBusConnection>
 
 AppMenuApplet::AppMenuApplet(QObject *parent, const QVariantList &data)
     : Plasma::Applet(parent, data)
@@ -40,6 +41,12 @@ AppMenuApplet::~AppMenuApplet() = default;
 void AppMenuApplet::init()
 {
     // TODO Wayland PlasmaShellSurface stuff
+    QDBusConnection::sessionBus().connect(QStringLiteral("org.kde.kappmenu"),
+                                          QStringLiteral("/KAppMenu"),
+                                          QStringLiteral("org.kde.kappmenu"),
+                                          QStringLiteral("reconfigured"),
+                                          this, SLOT(updateAppletEnabled()));
+    updateAppletEnabled();
 }
 
 AppMenuModel *AppMenuApplet::model() const
@@ -91,6 +98,24 @@ void AppMenuApplet::setButtonGrid(QQuickItem *buttonGrid)
     if (m_buttonGrid != buttonGrid) {
         m_buttonGrid = buttonGrid;
         emit buttonGridChanged();
+    }
+}
+
+bool AppMenuApplet::appletEnabled() const
+{
+    return m_appletEnabled;
+}
+
+void AppMenuApplet::updateAppletEnabled()
+{
+    KConfigGroup config(KSharedConfig::openConfig(QStringLiteral("kdeglobals")), QStringLiteral("Appmenu Style"));
+    const QString &menuStyle = config.readEntry(QStringLiteral("Style"));
+
+    const bool enabled = (menuStyle == QLatin1String("Widget"));
+
+    if (m_appletEnabled != enabled) {
+        m_appletEnabled = enabled;
+        emit appletEnabledChanged();
     }
 }
 

@@ -66,6 +66,19 @@ AppMenuModel::AppMenuModel(QObject *parent)
 
 AppMenuModel::~AppMenuModel() = default;
 
+bool AppMenuModel::menuAvailable() const
+{
+    return m_menuAvailable;
+}
+
+void AppMenuModel::setMenuAvailable(bool set)
+{
+    if (m_menuAvailable != set) {
+        m_menuAvailable = set;
+        emit menuAvailableChanged();
+    }
+}
+
 int AppMenuModel::rowCount(const QModelIndex &parent) const
 {
     Q_UNUSED(parent);
@@ -80,7 +93,7 @@ void AppMenuModel::update()
         m_activeActions.clear();
     }
 
-    if (m_menu && m_winHasMenu) {
+    if (m_menu && m_menuAvailable) {
         const auto &actions = m_menu->actions();
         for (QAction *action : actions) {
             m_activeActions.append(action);
@@ -141,7 +154,7 @@ void AppMenuModel::onActiveWindowChanged(WId id)
                 updateApplicationMenu(serviceName, menuObjectPath);
                 return true;
             }
-            m_winHasMenu = false;
+            setMenuAvailable(false);
             emit modelNeedsUpdate();
             return false;
         };
@@ -218,7 +231,7 @@ void AppMenuModel::updateApplicationMenu(const QString &serviceName, const QStri
         if (m_menu.isNull()) {
             return;
         }
-        m_winHasMenu = true;
+        setMenuAvailable(true);
         emit modelNeedsUpdate();
     });
 

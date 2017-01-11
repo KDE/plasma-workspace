@@ -33,6 +33,8 @@ class AppMenuModel : public QAbstractListModel
 {
     Q_OBJECT
 
+    Q_PROPERTY(bool menuAvailable READ menuAvailable WRITE setMenuAvailable NOTIFY menuAvailableChanged)
+
 public:
     explicit AppMenuModel(QObject *parent = 0);
     ~AppMenuModel();
@@ -48,16 +50,19 @@ public:
 
     void updateApplicationMenu(const QString &serviceName, const QString &menuObjectPath);
 
+    bool menuAvailable() const;
+    void setMenuAvailable(bool set);
+
 private Q_SLOTS:
     void onActiveWindowChanged(WId id);
     void update();
 
 signals:
+    void menuAvailableChanged();
     void modelNeedsUpdate();
 
-
 private:
-    bool m_winHasMenu;
+    bool m_menuAvailable;
 
     QPointer<QMenu> m_menu;
     QStringList m_activeMenu;
