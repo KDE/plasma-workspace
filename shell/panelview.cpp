@@ -160,7 +160,8 @@ void PanelView::setAlignment(Qt::Alignment alignment)
     }
 
     m_alignment = alignment;
-    config().writeEntry("alignment", (int)m_alignment);
+    //alignment is not resolution dependent
+    config().parent().writeEntry("alignment", (int)m_alignment);
     emit alignmentChanged();
     positionPanel();
 }
@@ -326,8 +327,9 @@ void PanelView::setVisibilityMode(PanelView::VisibilityMode mode)
         connect(containment(), &Plasma::Applet::activated, this, &PanelView::showTemporarily);
     }
 
-    if (config().isValid()) {
-        config().writeEntry("panelVisibility", (int)mode);
+    if (config().isValid() && config().parent().isValid()) {
+        //panelVisibility is not resolution dependent
+        config().parent().writeEntry("panelVisibility", (int)mode);
         m_corona->requestApplicationConfigSync();
     }
 
@@ -528,7 +530,10 @@ void PanelView::restore()
     //defaults, may be altered by values written by the scripting in startup phase
     const int defaultOffset = 0;
     const int defaultAlignment = Qt::AlignLeft;
-    setAlignment((Qt::Alignment)config().readEntry<int>("alignment", defaultAlignment));
+    //alignment is not resolution dependent
+    //but if fails read it from the resolution dependent one as
+    //the place for this config key is changed in Plasma 5.9
+    setAlignment((Qt::Alignment)config().parent().readEntry<int>("alignment", config().readEntry<int>("alignment", defaultAlignment)));
     m_offset = config().readEntry<int>("offset", defaultOffset);
     if (m_alignment != Qt::AlignCenter) {
         m_offset = qMax(0, m_offset);
@@ -547,7 +552,10 @@ void PanelView::restore()
     m_maxLength = qBound<int>(MINSIZE, config().readEntry<int>("maxLength", side), maxSize);
     m_minLength = qBound<int>(MINSIZE, config().readEntry<int>("minLength", side), maxSize);
 
-    setVisibilityMode((VisibilityMode)config().readEntry<int>("panelVisibility", (int)NormalPanel));
+    //panelVisibility is not resolution dependent
+    //but if fails read it from the resolution dependent one as
+    //the place for this config key is changed in Plasma 5.9
+    setVisibilityMode((VisibilityMode)config().parent().readEntry<int>("panelVisibility", config().readEntry<int>("panelVisibility", (int)NormalPanel)));
     m_initCompleted = true;
     resizePanel();
     positionPanel();
