@@ -34,6 +34,8 @@ Item {
     readonly property bool view: plasmoid.configuration.compactView
     readonly property bool menuAvailable: appMenuModel.menuAvailable
 
+    readonly property bool kcmAuthorized: KCMShell.authorize(["style.desktop"]).length > 0
+
     onViewChanged: {
         plasmoid.nativeInterface.view = view
     }
@@ -49,7 +51,7 @@ Item {
         Layout.fillHeight: false
         Layout.minimumWidth: implicitWidth
         Layout.maximumWidth: implicitWidth
-        enabled: appletEnabled ? menuAvailable : true
+        enabled: appletEnabled ? menuAvailable : kcmAuthorized
         checkable: appletEnabled && menuAvailable && plasmoid.nativeInterface.currentIndex === fakeIndex
         checked: checkable
         iconSource: appletEnabled ? i18n("application-menu") : i18n("emblem-warning")
@@ -59,8 +61,6 @@ Item {
             } else {
                 KCMShell.open("style")
             }
-
-
         }
     }
 
@@ -108,7 +108,9 @@ Item {
         }
     }
 
-    Plasmoid.toolTipSubText: !appletEnabled ? i18n("Application Menu Widget is disabled in settings.\n\nGo to System Settings > Application Style > Fine Tuning (tab) to enable it.") : ""
+    Plasmoid.toolTipMainText: appletEnabled ? "" : i18n("Application Menu Widget is disabled")
+    Plasmoid.toolTipSubText: appletEnabled || !root.kcmAuthorized ? ""
+                            : i18nc("it being the 'Application Menu Widget'", "Go to System Settings > Application Style > Fine Tuning (tab) to enable it.");
 
     AppMenuPrivate.AppMenuModel {
         id: appMenuModel
