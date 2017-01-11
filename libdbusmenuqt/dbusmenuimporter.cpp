@@ -180,7 +180,6 @@ public:
             updateActionVisible(action, value);
         } else if (key == QLatin1String("shortcut")) {
             updateActionShortcut(action, value);
-        } else if (key == QLatin1String("children-display")) {
         } else {
             qWarning() << "Unhandled property update" << key;
         }
@@ -436,7 +435,11 @@ void DBusMenuImporter::slotGetLayoutFinished(QDBusPendingCallWatcher *watcher)
             menu->addAction(action);
         } else {
             action = *it;
-            d->updateAction(*it, dbusMenuItem.properties, dbusMenuItem.properties.keys());
+            QStringList filteredKeys = dbusMenuItem.properties.keys();
+            filteredKeys.removeOne("type");
+            filteredKeys.removeOne("toggle-type");
+            filteredKeys.removeOne("children-display");
+            d->updateAction(*it, dbusMenuItem.properties, filteredKeys);
         }
     }
 
