@@ -43,14 +43,14 @@ MouseArea {
 
     hoverEnabled: true
 
-    onClicked: plasmoid.nativeInterface.open()
+    onClicked: plasmoid.nativeInterface.run()
 
     Plasmoid.preferredRepresentation: Plasmoid.fullRepresentation
     Plasmoid.icon: plasmoid.nativeInterface.iconName
     Plasmoid.title: plasmoid.nativeInterface.name
     Plasmoid.backgroundHints: PlasmaCore.Types.NoBackground
 
-    Plasmoid.onActivated: plasmoid.nativeInterface.open()
+    Plasmoid.onActivated: plasmoid.nativeInterface.run()
 
     Plasmoid.onContextualActionsAboutToShow: updateActions()
 
