@@ -165,7 +165,7 @@ void AppMenuApplet::trigger(QQuickItem *ctx, int idx)
 
         const auto &geo = ctx->window()->screen()->availableVirtualGeometry();
 
-        QPoint pos = ctx->mapToGlobal(QPointF(0, 0)).toPoint();
+        QPoint pos = ctx->window()->mapToGlobal(ctx->position().toPoint());
         if (location() == Plasma::Types::TopEdge) {
             pos.setY(pos.y() + ctx->height());
         }
@@ -233,7 +233,7 @@ bool AppMenuApplet::eventFilter(QObject *watched, QEvent *event)
         }
 
         // FIXME the panel margin breaks Fitt's law :(
-        const QPointF &localPos = m_buttonGrid->mapFromGlobal(e->globalPos());
+        const QPointF &localPos = m_buttonGrid->window()->mapFromGlobal(e->globalPos());
         auto *item = m_buttonGrid->childAt(localPos.x(), localPos.y());
         if (!item) {
             return false;
