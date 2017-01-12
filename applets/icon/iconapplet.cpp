@@ -327,7 +327,7 @@ QList<QAction *> IconApplet::contextualActions()
     return actions;
 }
 
-void IconApplet::open()
+void IconApplet::run()
 {
     new KRun(QUrl::fromLocalFile(m_localPath), QApplication::desktop());
 }

@@ -55,7 +55,7 @@ public:
 
     QList<QAction *> contextualActions() override;
 
-    Q_INVOKABLE void open();
+    Q_INVOKABLE void run();
     Q_INVOKABLE void processDrop(QObject *dropEvent);
     Q_INVOKABLE void configure();
 
