@@ -165,7 +165,7 @@ void AppMenuApplet::trigger(QQuickItem *ctx, int idx)
 
         const auto &geo = ctx->window()->screen()->availableVirtualGeometry();
 
-        QPoint pos = ctx->window()->mapToGlobal(ctx->position().toPoint());
+        QPoint pos = ctx->window()->mapToGlobal(ctx->mapToScene(QPointF()).toPoint());
         if (location() == Plasma::Types::TopEdge) {
             pos.setY(pos.y() + ctx->height());
         }
