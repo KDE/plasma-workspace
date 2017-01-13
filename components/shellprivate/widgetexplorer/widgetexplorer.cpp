@@ -116,10 +116,10 @@ void WidgetExplorerPrivate::initFilters()
 {
     filterModel.clear();
 
-    if (showSpecialFilters) {
-        filterModel.addFilter(i18n("All Widgets"),
-                            KCategorizedItemsViewModels::Filter(), QIcon::fromTheme(QStringLiteral("plasma")));
+    filterModel.addFilter(i18n("All Widgets"),
+                        KCategorizedItemsViewModels::Filter(), QIcon::fromTheme(QStringLiteral("plasma")));
 
+    if (showSpecialFilters) {
         // Filters: Special
         filterModel.addFilter(i18n("Running"),
                             KCategorizedItemsViewModels::Filter(QStringLiteral("running"), true),
