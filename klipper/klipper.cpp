@@ -173,7 +173,6 @@ Klipper::Klipper(QObject* parent, const KSharedConfigPtr& config, KlipperMode mo
     m_editAction = m_collection->addAction(QStringLiteral("edit_clipboard"));
     m_editAction->setIcon(QIcon::fromTheme(QStringLiteral("document-properties")));
     m_editAction->setText(i18n("&Edit Contents..."));
-    m_editAction->setVisible(m_mode == KlipperMode::Standalone);
     KGlobalAccel::setGlobalShortcut(m_editAction, QKeySequence());
     connect(m_editAction, &QAction::triggered, this,
         [this]() {
