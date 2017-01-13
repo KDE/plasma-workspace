@@ -40,9 +40,6 @@ Item {
         plasmoid.nativeInterface.view = view
     }
 
-    Layout.minimumWidth: units.gridUnit
-    Layout.minimumHeight: units.gridUnit
-
     Plasmoid.preferredRepresentation: (plasmoid.configuration.compactView || vertical || !appletEnabled) ? Plasmoid.compactRepresentation : Plasmoid.fullRepresentation
 
     Plasmoid.compactRepresentation: PlasmaComponents.ToolButton {
@@ -66,8 +63,10 @@ Item {
 
     Plasmoid.fullRepresentation: GridLayout {
         id: buttonGrid
-        Layout.fillWidth: !root.vertical
-        Layout.fillHeight: root.vertical
+        Plasmoid.status: buttonRepeater.count > 0 ? PlasmaCore.Types.ActiveStatus : PlasmaCore.Types.HiddenStatus
+        Layout.minimumWidth: implicitWidth
+        Layout.minimumHeight: implicitHeight
+
         flow: root.vertical ? GridLayout.TopToBottom : GridLayout.LeftToRight
         rowSpacing: units.smallSpacing
         columnSpacing: units.smallSpacing
