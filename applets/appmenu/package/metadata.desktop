@@ -1,6 +1,11 @@
 [Desktop Entry]
 Encoding=UTF-8
 Name=Application Menu
+Name[nl]=Menu Toepassingen
+Name[pt]=Menu da Aplicação
+Name[sv]=Programmeny
+Name[uk]=Меню програм
+Name[x-test]=xxApplication Menuxx
 Icon=show-menu
 Type=Service
 X-KDE-PluginInfo-Author=Kai Uwe Broulik
