@@ -1,8 +1,11 @@
 [Desktop Entry]
 Encoding=UTF-8
 Name=Application Menu
+Name[ca]=Menú d'aplicació
+Name[es]=Menú de la aplicación
 Name[nl]=Menu Toepassingen
 Name[pt]=Menu da Aplicação
+Name[sk]=Aplikačné menu
 Name[sv]=Programmeny
 Name[uk]=Меню програм
 Name[x-test]=xxApplication Menuxx
