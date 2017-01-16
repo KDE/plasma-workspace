@@ -160,7 +160,9 @@ void AppMenuModel::onActiveWindowChanged(WId id)
         };
 
         KWindowInfo info(id, NET::WMState | NET::WMWindowType, NET::WM2TransientFor);
-        if (info.hasState(NET::SkipTaskbar) || info.windowType(NET::UtilityMask) == NET::Utility) {
+        if (info.hasState(NET::SkipTaskbar) ||
+                info.windowType(NET::UtilityMask) == NET::Utility ||
+                info.windowType(NET::DesktopMask) == NET::Desktop) {
             return;
         }
 
