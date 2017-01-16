@@ -375,11 +375,14 @@ void DBusMenuImporter::slotGetLayoutFinished(QDBusPendingCallWatcher *watcher)
     int parentId = watcher->property(DBUSMENU_PROPERTY_ID).toInt();
     watcher->deleteLater();
 
+    QMenu *menu = d->menuForId(parentId);
+
     QDBusPendingReply<uint, DBusMenuLayoutItem> reply = *watcher;
     if (!reply.isValid()) {
         qWarning() << reply.error().message();
-
-        emit menuUpdated();
+        if (menu) {
+            emit menuUpdated(menu);
+        }
         return;
     }
 
@@ -388,7 +391,6 @@ void DBusMenuImporter::slotGetLayoutFinished(QDBusPendingCallWatcher *watcher)
     #endif
     DBusMenuLayoutItem rootItem = reply.argumentAt<1>();
 
-    QMenu *menu = d->menuForId(parentId);
     if (!menu) {
         qWarning() << "No menu for id" << parentId;
         return;
@@ -443,7 +445,7 @@ void DBusMenuImporter::slotGetLayoutFinished(QDBusPendingCallWatcher *watcher)
         }
     }
 
-    emit menuUpdated();
+    emit menuUpdated(menu);
 }
 
 void DBusMenuImporter::sendClickedEvent(int id)
@@ -477,24 +479,26 @@ void DBusMenuImporter::slotAboutToShowDBusCallFinished(QDBusPendingCallWatcher *
     int id = watcher->property(DBUSMENU_PROPERTY_ID).toInt();
     watcher->deleteLater();
 
+    QMenu *menu = d->menuForId(id);
+
     QDBusPendingReply<bool> reply = *watcher;
     if (reply.isError()) {
-        menuUpdated();
         qWarning() << "Call to AboutToShow() failed:" << reply.error().message();
+        if (menu) {
+            menuUpdated(menu);
+        }
         return;
     }
     //Note, this isn't used by Qt's QPT - but we get a LayoutChanged emitted before
     //this returns, which equates to the same thing
     bool needRefresh = reply.argumentAt<0>();
 
-    QMenu *menu = d->menuForId(id);
-    DMRETURN_IF_FAIL(menu);
 
     if (needRefresh || menu->actions().isEmpty()) {
         d->m_idsRefreshedByAboutToShow << id;
         d->refresh(id);
-    } else {
-        menuUpdated();
+    } else if (menu) {
+        menuUpdated(menu);
     }
 }
 

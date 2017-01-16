@@ -368,7 +368,11 @@ void StatusNotifierItemSource::refreshCallback(QDBusPendingCallWatcher *call)
                     qWarning() << "DBusMenu disabled for this application";
                 } else {
                     m_menuImporter = new PlasmaDBusMenuImporter(m_statusNotifierItemInterface->service(), menuObjectPath, iconLoader(), this);
-                    connect(m_menuImporter, SIGNAL(menuUpdated()), this, SLOT(contextMenuReady()));
+                    connect(m_menuImporter, &PlasmaDBusMenuImporter::menuUpdated, this, [this](QMenu *menu) {
+                        if (menu == m_menuImporter->menu()) {
+                            contextMenuReady();
+                        }
+                    });
                 }
             }
         }

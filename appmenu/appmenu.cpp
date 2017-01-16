@@ -136,9 +136,9 @@ void AppMenuModule::slotShowMenu(int x, int y, const QString &serviceName, const
     QMetaObject::invokeMethod(importer, "updateMenu", Qt::QueuedConnection);
     disconnect(importer, 0, this, 0); // ensure we don't popup multiple times in case the menu updates again later
 
-    connect(importer, &KDBusMenuImporter::menuUpdated, this, [=] {
+    connect(importer, &KDBusMenuImporter::menuUpdated, this, [=](QMenu *m) {
         QMenu *menu = importer->menu();
-        if (!menu) {
+        if (!menu || menu != m) {
             return;
         }
         m_menu = qobject_cast<VerticalMenu*>(menu);
