@@ -63,7 +63,9 @@ Item {
 
     Plasmoid.fullRepresentation: GridLayout {
         id: buttonGrid
-        Plasmoid.status: buttonRepeater.count > 0 ? PlasmaCore.Types.ActiveStatus : PlasmaCore.Types.HiddenStatus
+        //when we're not enabled set to active to show the configure button
+        Plasmoid.status: !appletEnabled || buttonRepeater.count > 0 ?
+                         PlasmaCore.Types.ActiveStatus : PlasmaCore.Types.HiddenStatus
         Layout.minimumWidth: implicitWidth
         Layout.minimumHeight: implicitHeight
 
