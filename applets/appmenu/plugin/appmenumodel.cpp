@@ -233,6 +233,14 @@ void AppMenuModel::updateApplicationMenu(const QString &serviceName, const QStri
         if (m_menu.isNull() || menu != m_menu) {
             return;
         }
+
+        //cache first layer of sub menus, which we'll be popping up
+        for(QAction *a: m_menu->actions()) {
+            if (a->menu()) {
+                m_importer->updateMenu(a->menu());
+            }
+        }
+
         setMenuAvailable(true);
         emit modelNeedsUpdate();
     });
