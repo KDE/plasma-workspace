@@ -2,10 +2,13 @@
 Encoding=UTF-8
 Name=Application Menu
 Name[ca]=Menú d'aplicació
+Name[ca@valencia]=Menú d'aplicació
 Name[de]=Anwendungsmenü
 Name[es]=Menú de la aplicación
 Name[it]=Menu delle applicazioni
+Name[nb]=Programmeny
 Name[nl]=Menu Toepassingen
+Name[nn]=Programmeny
 Name[pt]=Menu da Aplicação
 Name[ru]=Меню приложения
 Name[sk]=Aplikačné menu
