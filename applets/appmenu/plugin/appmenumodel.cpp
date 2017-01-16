@@ -159,7 +159,7 @@ void AppMenuModel::onActiveWindowChanged(WId id)
             return false;
         };
 
-        KWindowInfo info(id, NET::WMState, NET::WM2TransientFor);
+        KWindowInfo info(id, NET::WMState | NET::WMWindowType, NET::WM2TransientFor);
         if (info.hasState(NET::SkipTaskbar) || info.windowType(NET::UtilityMask) == NET::Utility) {
             return;
         }
