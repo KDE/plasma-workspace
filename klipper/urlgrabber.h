@@ -49,8 +49,6 @@ public:
   /**
    * Checks a given string whether it matches any of the user-defined criteria.
    * If it does, the configured action will be executed.
-   * @returns false if the string should be put into the popupmenu or not,
-   * otherwise true.
    */
   void checkNewData( QSharedPointer<const HistoryItem> item );
   void invokeAction( QSharedPointer<const HistoryItem> item );
