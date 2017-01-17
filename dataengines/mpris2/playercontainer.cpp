@@ -193,7 +193,7 @@ void PlayerContainer::copyProperty(const QString& propName, const QVariant& _val
             // QVariantMap below but get a wrong signature, e.g. a{ss} instead of the expected a{sv}
             if (arg.currentType() != QDBusArgument::MapType || arg.currentSignature() != QLatin1String("a{sv}")) {
                 qCWarning(MPRIS2) << m_dbusAddress << "exports" << propName
-                    << "with the wrong type; it should be D-Bus type \"a{sv}\"";
+                    << "with the wrong type; it should be D-Bus type \"a{sv}\" instead of " << arg.currentSignature();
                 return;
             }
             QVariantMap map;
@@ -332,8 +332,7 @@ void PlayerContainer::getPropsFinished(QDBusPendingCallWatcher* watcher)
     if (propsReply.isError()) {
         qCWarning(MPRIS2) << m_dbusAddress << "does not implement"
             << OrgFreedesktopDBusPropertiesInterface::staticInterfaceName()
-            << "correctly";
-        qCDebug(MPRIS2) << "Error message was" << propsReply.error().name() << propsReply.error().message();
+            << "correctly" << "Error message was" << propsReply.error().name() << propsReply.error().message();
         m_fetchesPending = 0;
         emit initialFetchFailed(this);
         return;
