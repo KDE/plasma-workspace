@@ -477,19 +477,19 @@ void DBusMenuImporter::slotAboutToShowDBusCallFinished(QDBusPendingCallWatcher *
     watcher->deleteLater();
 
     QMenu *menu = d->menuForId(id);
+    if (!menu) {
+        return;
+    }
 
     QDBusPendingReply<bool> reply = *watcher;
     if (reply.isError()) {
         qWarning() << "Call to AboutToShow() failed:" << reply.error().message();
-        if (menu) {
-            menuUpdated(menu);
-        }
+        menuUpdated(menu);
         return;
     }
     //Note, this isn't used by Qt's QPT - but we get a LayoutChanged emitted before
     //this returns, which equates to the same thing
     bool needRefresh = reply.argumentAt<0>();
-
 
     if (needRefresh || menu->actions().isEmpty()) {
         d->m_idsRefreshedByAboutToShow << id;
