@@ -41,6 +41,9 @@
 #include "dbusmenushortcut_p.h"
 #include "utils_p.h"
 
+// Generated
+#include "dbusmenu_interface.h"
+
 //#define BENCHMARK
 #ifdef BENCHMARK
 #include <QTime>
@@ -51,8 +54,6 @@ static QTime sChrono;
     qWarning() << "Condition failed: " #cond; \
     return; \
 }
-
-static const char *DBUSMENU_INTERFACE = "com.canonical.dbusmenu";
 
 static const char *DBUSMENU_PROPERTY_ID = "_dbusmenu_id";
 static const char *DBUSMENU_PROPERTY_ICON_NAME = "_dbusmenu_icon_name";
@@ -79,7 +80,7 @@ class DBusMenuImporterPrivate
 public:
     DBusMenuImporter *q;
 
-    QDBusAbstractInterface *m_interface;
+    DBusMenuInterface *m_interface;
     QMenu *m_menu;
     using ActionForId = QMap<int, QAction* >;
     ActionForId m_actionForId;
@@ -90,7 +91,7 @@ public:
 
     QDBusPendingCallWatcher *refresh(int id)
     {
-        QDBusPendingCall call = m_interface->asyncCall(QStringLiteral("GetLayout"), id, 1, QStringList());
+        auto call = m_interface->GetLayout(id, 1, QStringList());
         QDBusPendingCallWatcher *watcher = new QDBusPendingCallWatcher(call, q);
         watcher->setProperty(DBUSMENU_PROPERTY_ID, id);
         QObject::connect(watcher, &QDBusPendingCallWatcher::finished,
@@ -266,8 +267,7 @@ public:
 
     void sendEvent(int id, const QString &eventId)
     {
-        QVariant empty = QVariant::fromValue(QDBusVariant(QString()));
-        m_interface->asyncCall(QStringLiteral("Event"), id, eventId, empty, 0u);
+        m_interface->Event(id, eventId, QDBusVariant(QString()), 0u);
     }
 };
 
@@ -278,19 +278,16 @@ DBusMenuImporter::DBusMenuImporter(const QString &service, const QString &path, 
     DBusMenuTypes_register();
 
     d->q = this;
-    d->m_interface = new QDBusInterface(service, path, DBUSMENU_INTERFACE, QDBusConnection::sessionBus(), this);
+    d->m_interface = new DBusMenuInterface(service, path, QDBusConnection::sessionBus(), this);
     d->m_menu = 0;
 
     d->m_pendingLayoutUpdateTimer = new QTimer(this);
     d->m_pendingLayoutUpdateTimer->setSingleShot(true);
     connect(d->m_pendingLayoutUpdateTimer, &QTimer::timeout, this, &DBusMenuImporter::processPendingLayoutUpdates);
 
-    QDBusConnection::sessionBus().connect(service, path, DBUSMENU_INTERFACE, QStringLiteral("LayoutUpdated"), QStringLiteral("ui"),
-        this, SLOT(slotLayoutUpdated(uint, int)));
-    QDBusConnection::sessionBus().connect(service, path, DBUSMENU_INTERFACE, QStringLiteral("ItemsPropertiesUpdated"), QStringLiteral("a(ia{sv})a(ias)"),
-        this, SLOT(slotItemsPropertiesUpdated(DBusMenuItemList, DBusMenuItemKeysList)));
-    QDBusConnection::sessionBus().connect(service, path, DBUSMENU_INTERFACE, QStringLiteral("ItemActivationRequested"), QStringLiteral("iu"),
-        this, SLOT(slotItemActivationRequested(int, uint)));
+    connect(d->m_interface, &DBusMenuInterface::LayoutUpdated, this, &DBusMenuImporter::slotLayoutUpdated);
+    connect(d->m_interface, &DBusMenuInterface::ItemActivationRequested, this, &DBusMenuImporter::slotItemActivationRequested);
+    connect(d->m_interface, &DBusMenuInterface::ItemsPropertiesUpdated, this, std::bind(&DBusMenuImporterPrivate::slotItemsPropertiesUpdated, d, std::placeholders::_1, std::placeholders::_2));
 
     d->refresh(0);
 }
@@ -467,7 +464,7 @@ void DBusMenuImporter::updateMenu(QMenu * menu)
 
     int id = action->property(DBUSMENU_PROPERTY_ID).toInt();
 
-    QDBusPendingCall call = d->m_interface->asyncCall(QStringLiteral("AboutToShow"), id);
+    auto call = d->m_interface->AboutToShow(id);
     QDBusPendingCallWatcher *watcher = new QDBusPendingCallWatcher(call, this);
     watcher->setProperty(DBUSMENU_PROPERTY_ID, id);
     connect(watcher, &QDBusPendingCallWatcher::finished, this,

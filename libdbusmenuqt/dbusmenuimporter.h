@@ -25,7 +25,6 @@
 #include <QtCore/QObject>
 
 class QAction;
-class QDBusAbstractInterface;
 class QDBusPendingCallWatcher;
 class QDBusVariant;
 class QIcon;
