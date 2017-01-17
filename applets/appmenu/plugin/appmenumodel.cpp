@@ -154,8 +154,6 @@ void AppMenuModel::onActiveWindowChanged(WId id)
                 updateApplicationMenu(serviceName, menuObjectPath);
                 return true;
             }
-            setMenuAvailable(false);
-            emit modelNeedsUpdate();
             return false;
         };
 
@@ -178,6 +176,10 @@ void AppMenuModel::onActiveWindowChanged(WId id)
         if (updateMenuFromWindowIfHasMenu(id)) {
             return;
         }
+
+        //no menu found, set it to unavailable
+        setMenuAvailable(false);
+        emit modelNeedsUpdate();
     }
 #endif
 
