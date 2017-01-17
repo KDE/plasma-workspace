@@ -32,6 +32,9 @@
 
 #include <QAction>
 #include <QMenu>
+#include <QDebug>
+#include <QDBusConnection>
+#include <QDBusConnectionInterface>
 
 #include <dbusmenuimporter.h>
 
@@ -62,6 +65,16 @@ AppMenuModel::AppMenuModel(QObject *parent)
     connect(KWindowSystem::self(), &KWindowSystem::activeWindowChanged, this, &AppMenuModel::onActiveWindowChanged);
     connect(this, &AppMenuModel::modelNeedsUpdate, this, &AppMenuModel::update, Qt::UniqueConnection);
     onActiveWindowChanged(KWindowSystem::activeWindow());
+
+    //if our current DBus connection gets lost, close the menu
+    //we'll select the new menu when the focus changes
+    connect(QDBusConnection::sessionBus().interface(), &QDBusConnectionInterface::serviceOwnerChanged, this, [this](const QString &serviceName, const QString &oldOwner, const QString &newOwner)
+    {
+        if (serviceName == m_serviceName && newOwner.isEmpty()) {
+            setMenuAvailable(false);
+            emit modelNeedsUpdate();
+        }
+    });
 }
 
 AppMenuModel::~AppMenuModel() = default;
@@ -246,5 +259,5 @@ void AppMenuModel::updateApplicationMenu(const QString &serviceName, const QStri
         setMenuAvailable(true);
         emit modelNeedsUpdate();
     });
-
 }
+
