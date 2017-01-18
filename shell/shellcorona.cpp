@@ -1166,7 +1166,7 @@ void ShellCorona::addOutput(QScreen* screen)
 
     DesktopView *view = new DesktopView(this, screen);
     connect(view, &QQuickWindow::sceneGraphError, this, &ShellCorona::showOpenGLNotCompatibleWarning);
-    connect(screen, &QScreen::geometryChanged, this, [=](const QRect &geometry) {
+    connect(screen, &QScreen::geometryChanged, this, [=]() {
         const int id = m_screenPool->id(screen->name());
         if (id >= 0) {
             emit screenGeometryChanged(id);
