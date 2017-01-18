@@ -287,7 +287,9 @@ DBusMenuImporter::DBusMenuImporter(const QString &service, const QString &path, 
 
     connect(d->m_interface, &DBusMenuInterface::LayoutUpdated, this, &DBusMenuImporter::slotLayoutUpdated);
     connect(d->m_interface, &DBusMenuInterface::ItemActivationRequested, this, &DBusMenuImporter::slotItemActivationRequested);
-    connect(d->m_interface, &DBusMenuInterface::ItemsPropertiesUpdated, this, std::bind(&DBusMenuImporterPrivate::slotItemsPropertiesUpdated, d, std::placeholders::_1, std::placeholders::_2));
+    connect(d->m_interface, &DBusMenuInterface::ItemsPropertiesUpdated, this, [this](const DBusMenuItemList &updatedList, const DBusMenuItemKeysList &removedList) {
+        d->slotItemsPropertiesUpdated(updatedList, removedList);
+    });
 
     d->refresh(0);
 }
