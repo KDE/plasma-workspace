@@ -2,10 +2,10 @@
     <property name="Version" type="u" access="read"/>
     <property name="Status" type="s" access="read"/>
     <signal name="ItemsPropertiesUpdated">
-    <arg type="a(ia{sv})" direction="out"/>
     <annotation name="org.qtproject.QtDBus.QtTypeName.In0" value="DBusMenuItemList"/>
-    <arg type="a(ias)" direction="out"/>
     <annotation name="org.qtproject.QtDBus.QtTypeName.In1" value="DBusMenuItemKeysList"/>
+    <arg type="a(ia{sv})" direction="out"/>
+    <arg type="a(ias)" direction="out"/>
     </signal>
     <signal name="LayoutUpdated">
     <arg name="revision" type="u" direction="out"/>
