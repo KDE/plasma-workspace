@@ -32,6 +32,9 @@
 
 #include <QAction>
 #include <QMenu>
+#include <QDebug>
+#include <QDBusConnection>
+#include <QDBusConnectionInterface>
 
 #include <dbusmenuimporter.h>
 
@@ -62,6 +65,16 @@ AppMenuModel::AppMenuModel(QObject *parent)
     connect(KWindowSystem::self(), &KWindowSystem::activeWindowChanged, this, &AppMenuModel::onActiveWindowChanged);
     connect(this, &AppMenuModel::modelNeedsUpdate, this, &AppMenuModel::update, Qt::UniqueConnection);
     onActiveWindowChanged(KWindowSystem::activeWindow());
+
+    //if our current DBus connection gets lost, close the menu
+    //we'll select the new menu when the focus changes
+    connect(QDBusConnection::sessionBus().interface(), &QDBusConnectionInterface::serviceOwnerChanged, this, [this](const QString &serviceName, const QString &oldOwner, const QString &newOwner)
+    {
+        if (serviceName == m_serviceName && newOwner.isEmpty()) {
+            setMenuAvailable(false);
+            emit modelNeedsUpdate();
+        }
+    });
 }
 
 AppMenuModel::~AppMenuModel() = default;
@@ -154,8 +167,6 @@ void AppMenuModel::onActiveWindowChanged(WId id)
                 updateApplicationMenu(serviceName, menuObjectPath);
                 return true;
             }
-            setMenuAvailable(false);
-            emit modelNeedsUpdate();
             return false;
         };
 
@@ -178,6 +189,10 @@ void AppMenuModel::onActiveWindowChanged(WId id)
         if (updateMenuFromWindowIfHasMenu(id)) {
             return;
         }
+
+        //no menu found, set it to unavailable
+        setMenuAvailable(false);
+        emit modelNeedsUpdate();
     }
 #endif
 
@@ -225,16 +240,24 @@ void AppMenuModel::updateApplicationMenu(const QString &serviceName, const QStri
         m_importer->deleteLater();
     }
 
-     m_importer = new KDBusMenuImporter(serviceName, menuObjectPath, this);
+    m_importer = new KDBusMenuImporter(serviceName, menuObjectPath, this);
     QMetaObject::invokeMethod(m_importer, "updateMenu", Qt::QueuedConnection);
 
-    connect(m_importer.data(), &DBusMenuImporter::menuUpdated, this, [=] {
+    connect(m_importer.data(), &DBusMenuImporter::menuUpdated, this, [=](QMenu *menu) {
         m_menu = m_importer->menu();
-        if (m_menu.isNull()) {
+        if (m_menu.isNull() || menu != m_menu) {
             return;
         }
+
+        //cache first layer of sub menus, which we'll be popping up
+        for(QAction *a: m_menu->actions()) {
+            if (a->menu()) {
+                m_importer->updateMenu(a->menu());
+            }
+        }
+
         setMenuAvailable(true);
         emit modelNeedsUpdate();
     });
-
 }
+

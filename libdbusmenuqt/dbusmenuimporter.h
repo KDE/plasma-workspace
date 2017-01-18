@@ -25,7 +25,6 @@
 #include <QtCore/QObject>
 
 class QAction;
-class QDBusAbstractInterface;
 class QDBusPendingCallWatcher;
 class QDBusVariant;
 class QIcon;
@@ -69,7 +68,7 @@ Q_SIGNALS:
      * Emitted after a call to updateMenu().
      * @see updateMenu()
      */
-    void menuUpdated();
+    void menuUpdated(QMenu *);
 
     /**
      * Emitted when the exporter was asked to activate an action
