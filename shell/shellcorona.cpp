@@ -1166,7 +1166,16 @@ void ShellCorona::addOutput(QScreen* screen)
 
     DesktopView *view = new DesktopView(this, screen);
     connect(view, &QQuickWindow::sceneGraphError, this, &ShellCorona::showOpenGLNotCompatibleWarning);
-
+#if PLASMA_VERSION >= QT_VERSION_CHECK(5, 31, 0)
+    connect(screen, &QScreen::geometryChanged, this, [=]() {
+        const int id = m_screenPool->id(screen->name());
+        if (id >= 0) {
+            emit screenGeometryChanged(id);
+            emit availableScreenRegionChanged();
+            emit availableScreenRectChanged();
+        }
+    });
+#endif
     Plasma::Containment *containment = createContainmentForActivity(m_activityController->currentActivity(), insertPosition);
     Q_ASSERT(containment);
 
