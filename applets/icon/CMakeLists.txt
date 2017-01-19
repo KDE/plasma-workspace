@@ -1,3 +1,5 @@
+add_definitions(-DTRANSLATION_DOMAIN=\"plasma_applet_org.kde.plasma.icon\")
+
 set(iconapplet_SRCS
     iconapplet.cpp
 )
