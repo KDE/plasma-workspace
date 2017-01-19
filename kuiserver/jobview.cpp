@@ -314,7 +314,7 @@ QDBusObjectPath JobView::objectPath() const
 
 void JobView::setDestUrl(const QDBusVariant &destUrl)
 {
-    for (const auto &pair : qAsConst(m_objectPaths)) {
+    Q_FOREACH (const auto &pair, m_objectPaths) {
         // if we just pass destUrl.variant() Qt will unwrap it into a string and
         // the method signature "s" won't match the expected "v" on the receiver's side
         pair.second->asyncCall(QLatin1String("setDestUrl"), QVariant::fromValue(destUrl));
