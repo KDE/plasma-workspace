@@ -397,6 +397,10 @@ QPixmap StatusNotifierItemSource::KDbusImageStructToPixmap(const KDbusImageStruc
             ++uintBuf;
         }
     }
+    if (image.width == 0 || image.height == 0) {
+        return QPixmap();
+    }
+
     QImage iconImage(image.width, image.height, QImage::Format_ARGB32 );
     memcpy(iconImage.bits(), (uchar*)image.data.data(), iconImage.byteCount());
 
