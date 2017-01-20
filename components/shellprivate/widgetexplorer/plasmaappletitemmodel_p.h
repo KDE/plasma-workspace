@@ -34,14 +34,7 @@ class PlasmaAppletItem : public QObject, public KCategorizedItemsViewModels::Abs
     Q_OBJECT
 
 public:
-    enum FilterFlag {
-        NoFilter = 0,
-        Favorite = 1
-    };
-
-    Q_DECLARE_FLAGS(FilterFlags, FilterFlag)
-
-    PlasmaAppletItem(PlasmaAppletItemModel *model, const KPluginInfo& info, FilterFlags flags = NoFilter);
+    PlasmaAppletItem(PlasmaAppletItemModel *model, const KPluginInfo& info);
 
     QString pluginName() const;
     QString name() const override;
@@ -56,8 +49,6 @@ public:
 
     int running() const override;
     bool isLocal() const;
-    bool isFavorite() const override;
-    void setFavorite(bool favorite) override;
     PlasmaAppletItemModel* appletItemModel();
     bool matches(const QString &pattern) const override;
 
@@ -73,7 +64,6 @@ private:
     QString m_screenshot;
     QString m_icon;
     int m_runningCount;
-    bool m_favorite;
     bool m_local;
 };
 
@@ -104,7 +94,6 @@ public:
 
     QMimeData *mimeData(const QModelIndexList &indexes) const override;
 
-    void setFavorite(const QString &plugin, bool favorite);
     void setApplication(const QString &app);
     void setRunningApplets(const QHash<QString, int> &apps);
     void setRunningApplets(const QString &name, int count);
@@ -124,7 +113,6 @@ Q_SIGNALS:
 
 private:
     QString m_application;
-    QStringList m_favorites;
     QStringList m_provides;
     KConfigGroup m_configGroup;
     bool m_startupCompleted : 1;
@@ -132,7 +120,5 @@ private:
 private Q_SLOTS:
     void populateModel(const QStringList &whatChanged = QStringList());
 };
-
-Q_DECLARE_OPERATORS_FOR_FLAGS(PlasmaAppletItem::FilterFlags)
 
 #endif /*PLASMAAPPLETSMODEL_H_*/

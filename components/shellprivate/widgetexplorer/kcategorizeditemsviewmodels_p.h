@@ -69,10 +69,6 @@ public:
     virtual bool matches(const QString &pattern) const;
 
     /**
-     * sets the favorite flag for the item
-     */
-    virtual void setFavorite(bool favorite) = 0;
-    /**
      * sets the number of running applets for the item
      */
     virtual void setRunning(int count) = 0;

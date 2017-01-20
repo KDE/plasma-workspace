@@ -32,13 +32,11 @@
 #include <KDeclarative/KDeclarative>
 
 PlasmaAppletItem::PlasmaAppletItem(PlasmaAppletItemModel *model,
-                                   const KPluginInfo& info,
-                                   FilterFlags flags)
+                                   const KPluginInfo& info)
     : QObject(model),
       m_model(model),
       m_info(info),
       m_runningCount(0),
-      m_favorite(flags & Favorite),
       m_local(false)
 {
     const QString api(m_info.property(QStringLiteral("X-Plasma-API")).toString());
@@ -146,19 +144,6 @@ bool PlasmaAppletItem::matches(const QString &pattern) const
     return AbstractItem::matches(pattern);
 }
 
-bool PlasmaAppletItem::isFavorite() const
-{
-    return m_favorite;
-}
-
-void PlasmaAppletItem::setFavorite(bool favorite)
-{
-    if (m_favorite != favorite) {
-        m_favorite = favorite;
-        m_model->setFavorite(m_info.pluginName(), favorite);
-        emitDataChanged();
-    }
-}
 
 bool PlasmaAppletItem::isLocal() const
 {
@@ -248,9 +233,6 @@ PlasmaAppletItemModel::PlasmaAppletItemModel(QObject * parent)
     : QStandardItemModel(parent),
       m_startupCompleted(false)
 {
-    KConfig config(QStringLiteral("plasmarc"));
-    m_configGroup = KConfigGroup(&config, "Applet Browser");
-    m_favorites = m_configGroup.readEntry("favorites").split(',');
     connect(KSycoca::self(), SIGNAL(databaseChanged(QStringList)), this, SLOT(populateModel(QStringList)));
 
     setSortRole(Qt::DisplayRole);
@@ -323,12 +305,7 @@ void PlasmaAppletItemModel::populateModel(const QStringList &whatChanged)
         //qDebug() << info.pluginName() << " is the name of the plugin at" << info.entryPath();
         //qDebug() << info.name() << info.property("X-Plasma-Thumbnail");
 
-        PlasmaAppletItem::FilterFlags flags(PlasmaAppletItem::NoFilter);
-        if (m_favorites.contains(info.pluginName())) {
-            flags |= PlasmaAppletItem::Favorite;
-        }
-
-        appendRow(new PlasmaAppletItem(this, info, flags));
+        appendRow(new PlasmaAppletItem(this, info));
     }
 
     emit modelPopulated();
@@ -412,20 +389,6 @@ QMimeData *PlasmaAppletItemModel::mimeData(const QModelIndexList &indexes) const
 
     data->setData(format, appletNames);
     return data;
-}
-
-void PlasmaAppletItemModel::setFavorite(const QString &plugin, bool favorite)
-{
-    if (favorite) {
-        if (!m_favorites.contains(plugin)) {
-            m_favorites.append(plugin);
-        }
-    } else {
-        m_favorites.removeAll(plugin);
-    }
-
-    m_configGroup.writeEntry("favorites", m_favorites.join(QStringLiteral(",")));
-    m_configGroup.sync();
 }
 
 QStringList PlasmaAppletItemModel::provides() const
