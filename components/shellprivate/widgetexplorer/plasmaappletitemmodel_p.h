@@ -29,12 +29,10 @@ class PlasmaAppletItemModel;
 /**
  * Implementation of the KCategorizedItemsViewModels::AbstractItem
  */
-class PlasmaAppletItem : public QObject, public KCategorizedItemsViewModels::AbstractItem
+class PlasmaAppletItem : public KCategorizedItemsViewModels::AbstractItem
 {
-    Q_OBJECT
-
 public:
-    PlasmaAppletItem(PlasmaAppletItemModel *model, const KPluginInfo& info);
+    PlasmaAppletItem(const KPluginInfo& info);
 
     QString pluginName() const;
     QString name() const override;
@@ -49,7 +47,6 @@ public:
 
     int running() const override;
     bool isLocal() const;
-    PlasmaAppletItemModel* appletItemModel();
     bool matches(const QString &pattern) const override;
 
     //set how many instances of this applet are running
@@ -59,7 +56,6 @@ public:
     QStringList mimeTypes() const;
 
 private:
-    PlasmaAppletItemModel * m_model;
     KPluginInfo m_info;
     QString m_screenshot;
     QString m_icon;

@@ -31,10 +31,8 @@
 #include <KPackage/PackageLoader>
 #include <KDeclarative/KDeclarative>
 
-PlasmaAppletItem::PlasmaAppletItem(PlasmaAppletItemModel *model,
-                                   const KPluginInfo& info)
-    : QObject(model),
-      m_model(model),
+PlasmaAppletItem::PlasmaAppletItem(const KPluginInfo& info):
+      AbstractItem(),
       m_info(info),
       m_runningCount(0),
       m_local(false)
@@ -179,11 +177,6 @@ QStringList PlasmaAppletItem::mimeTypes() const
     return types;
 }
 
-PlasmaAppletItemModel* PlasmaAppletItem::appletItemModel()
-{
-    return m_model;
-}
-
 QVariant PlasmaAppletItem::data(int role) const
 {
     switch (role) {
@@ -305,7 +298,7 @@ void PlasmaAppletItemModel::populateModel(const QStringList &whatChanged)
         //qDebug() << info.pluginName() << " is the name of the plugin at" << info.entryPath();
         //qDebug() << info.name() << info.property("X-Plasma-Thumbnail");
 
-        appendRow(new PlasmaAppletItem(this, info));
+        appendRow(new PlasmaAppletItem(info));
     }
 
     emit modelPopulated();
