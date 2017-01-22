@@ -241,6 +241,9 @@ bool LauncherTasksModel::Private::requestRemoveLauncherFromActivities(const QUrl
                     }
                 }
 
+            } else if (isOnAllActivities(activities)) {
+                remove = true;
+
             } else {
                 // We weren't on all activities, just remove those that
                 // we were on
