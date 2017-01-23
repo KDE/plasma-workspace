@@ -245,7 +245,8 @@ QVariant PlasmaAppletItem::data(int role) const
 //PlasmaAppletItemModel
 
 PlasmaAppletItemModel::PlasmaAppletItemModel(QObject * parent)
-    : QStandardItemModel(parent)
+    : QStandardItemModel(parent),
+      m_startupCompleted(false)
 {
     KConfig config(QStringLiteral("plasmarc"));
     m_configGroup = KConfigGroup(&config, "Applet Browser");
@@ -439,13 +440,27 @@ void PlasmaAppletItemModel::setProvides(const QStringList &provides)
     }
 
     m_provides = provides;
-    populateModel();
+    if (m_startupCompleted) {
+        populateModel();
+    }
 }
 
 void PlasmaAppletItemModel::setApplication(const QString &app)
 {
     m_application = app;
-    populateModel();
+    if (m_startupCompleted) {
+        populateModel();
+    }
+}
+
+bool PlasmaAppletItemModel::startupCompleted() const
+{
+    return m_startupCompleted;
+}
+
+void PlasmaAppletItemModel::setStartupCompleted(bool complete)
+{
+    m_startupCompleted = complete;
 }
 
 QString &PlasmaAppletItemModel::Application()

@@ -116,6 +116,9 @@ public:
 
     QHash<int, QByteArray> roleNames() const override;
 
+    bool startupCompleted() const;
+    void setStartupCompleted(bool complete);
+
 Q_SIGNALS:
     void modelPopulated();
 
@@ -124,6 +127,7 @@ private:
     QStringList m_favorites;
     QStringList m_provides;
     KConfigGroup m_configGroup;
+    bool m_startupCompleted : 1;
 
 private Q_SLOTS:
     void populateModel(const QStringList &whatChanged = QStringList());
