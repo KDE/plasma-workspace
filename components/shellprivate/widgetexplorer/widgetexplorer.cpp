@@ -175,6 +175,7 @@ void WidgetExplorer::classBegin()
 
 void WidgetExplorer::componentComplete()
 {
+    d->itemModel.setStartupCompleted(true);
     setApplication();
     d->initRunningApplets();
 }
