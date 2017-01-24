@@ -24,6 +24,7 @@ Name[sr@latin]=Meni programa
 Name[sv]=Programmeny
 Name[uk]=Меню програм
 Name[x-test]=xxApplication Menuxx
+Name[zh_TW]=應用程式選單
 Icon=show-menu
 Type=Service
 X-KDE-PluginInfo-Author=Kai Uwe Broulik
