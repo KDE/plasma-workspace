@@ -433,9 +433,9 @@ void Image::setSingleImage()
         }
     } else {
         //if it's not an absolute path, check if it's just a wallpaper name
-        QString path = QStandardPaths::locate(QStandardPaths::GenericDataLocation, QLatin1String("wallpapers/") + QString(m_wallpaper + QString::fromLatin1("/metadata.json")));
+        QString path = QStandardPaths::locate(QStandardPaths::GenericDataLocation, QLatin1String("wallpapers/") + m_wallpaper + QString::fromLatin1("/metadata.json"));
         if (path.isEmpty())
-            path = QStandardPaths::locate(QStandardPaths::GenericDataLocation, QLatin1String("wallpapers/") + QString(m_wallpaper + QString::fromLatin1("/metadata.desktop")));
+            path = QStandardPaths::locate(QStandardPaths::GenericDataLocation, QLatin1String("wallpapers/") + m_wallpaper + QString::fromLatin1("/metadata.desktop"));
 
         if (!path.isEmpty()) {
             QDir dir(path);
