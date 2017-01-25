@@ -21,6 +21,7 @@ import QtQuick 2.5
 import QtQuick.Controls 1.0 as QtControls
 import QtQuick.Dialogs 1.1 as QtDialogs
 import QtQuick.Layouts 1.0
+import QtQuick.Window 2.0 // for Screen
 //We need units from it
 import org.kde.plasma.core 2.0 as Plasmacore
 import org.kde.plasma.wallpapers.image 2.0 as Wallpaper
@@ -46,7 +47,13 @@ ColumnLayout {
 
     Wallpaper.Image {
         id: imageWallpaper
-        targetSize: Qt.size(plasmoid.width, plasmoid.height)
+        targetSize: {
+            if (typeof plasmoid !== "undefined") {
+                return Qt.size(plasmoid.width, plasmoid.height)
+            }
+            // Lock screen configuration case
+            return Qt.size(Screen.width, Screen.height)
+        }
         onSlidePathsChanged: cfg_SlidePaths = slidePaths
     }
 
