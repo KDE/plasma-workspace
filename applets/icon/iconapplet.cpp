@@ -23,7 +23,6 @@
 
 #include <QAction>
 #include <QApplication>
-#include <QCryptographicHash>
 #include <QDesktopWidget>
 #include <QDir>
 #include <QDropEvent>
@@ -46,6 +45,7 @@
 
 #include <KIO/DropJob>
 #include <KIO/OpenFileManagerWindowJob>
+#include <KIO/StatJob>
 
 IconApplet::IconApplet(QObject *parent, const QVariantList &data)
     : Plasma::Applet(parent, data)
@@ -96,91 +96,122 @@ void IconApplet::populate()
         return;
     }
 
-    QString desiredDesktopFileName = m_url.fileName();
+    setBusy(true); // unset in populateFromDesktopFile where we'll end up in if all goes well
 
-    // in doubt, just hash the URL, e.g. http://www.kde.org/ has no filename
-    if (desiredDesktopFileName.isEmpty()) {
-        desiredDesktopFileName = QString::fromLatin1(QCryptographicHash::hash(m_url.toDisplayString().toUtf8(), QCryptographicHash::Md5).toHex());
-    }
+    auto *statJob = KIO::stat(m_url, KIO::HideProgressInfo);
+    connect(statJob, &KIO::StatJob::finished, this, [=] {
+        QString desiredDesktopFileName = m_url.fileName();
 
-    // We always want it to be a .desktop file (e.g. also for the "Type=Link" at the end)
-    if (!desiredDesktopFileName.endsWith(QLatin1String(".desktop"))) {
-        desiredDesktopFileName.append(QLatin1String(".desktop"));
-    }
-
-    QString backingDesktopFile = plasmaIconsFolderPath + QLatin1Char('/');
-    // KIO::suggestName always appends a suffix, i.e. it expects that we already know the file already exists
-    if (QFileInfo::exists(backingDesktopFile + desiredDesktopFileName)) {
-        desiredDesktopFileName = KIO::suggestName(QUrl::fromLocalFile(plasmaIconsFolderPath), desiredDesktopFileName);
-    }
-    backingDesktopFile.append(desiredDesktopFileName);
-
-    QString name; // ends up as "Name" in the .desktop file for "Link" files below
-
-    if (m_url.isLocalFile()) {
-        const QString localUrlString = m_url.toLocalFile();
-
-        // if desktop file just copy it over
-        if (KDesktopFile::isDesktopFile(localUrlString)) {
-            // if this restriction is set, KIO won't allow running desktop files from outside
-            // registered services, applications, and so on, in this case we'll use the original
-            // .desktop file and lose the ability to customize it
-            if (!KAuthorized::authorize(QStringLiteral("run_desktop_files"))) {
-                populateFromDesktopFile(localUrlString);
-                // we don't call setLocalPath here as we don't want to store localPath to be a system-location
-                // so that the fact that we cannot edit is re-evaluated every time
-                return;
-            }
-
-            if (!QFile::copy(localUrlString, backingDesktopFile)) {
-                setLaunchErrorMessage(i18n("Failed to copy icon widget desktop file from '%1' to '%2'", localUrlString, backingDesktopFile));
-                return;
-            }
-
-            // set executable flag on the desktop file so KIO doesn't complain about executing it
-            QFile file(backingDesktopFile);
-            file.setPermissions(file.permissions() | QFile::ExeOwner);
-
-            populateFromDesktopFile(backingDesktopFile);
-            setLocalPath(backingDesktopFile);
-
-            return;
+        // in doubt, just encode the entire URL, e.g. http://www.kde.org/ has no filename
+        if (desiredDesktopFileName.isEmpty()) {
+            desiredDesktopFileName = KIO::encodeFileName(m_url.toDisplayString());
         }
 
-        name = QFileInfo(localUrlString).baseName();
-    }
-
-    // in all other cases just make it a link
-
-    // TODO use kio stat job which also works for remote stuff
-    QMimeDatabase db;
-    const QMimeType mimeType = db.mimeTypeForUrl(m_url);
-
-    KDesktopFile linkDesktopFile(backingDesktopFile);
-    auto desktopGroup = linkDesktopFile.desktopGroup();
-
-    if (name.isEmpty()) {
-        if (m_url.scheme().startsWith(QLatin1String("http"))) {
-            name = m_url.host();
-        } else {
-            name = m_url.fileName();
+        // We always want it to be a .desktop file (e.g. also for the "Type=Link" at the end)
+        if (!desiredDesktopFileName.endsWith(QLatin1String(".desktop"))) {
+            desiredDesktopFileName.append(QLatin1String(".desktop"));
         }
-    }
 
-    desktopGroup.writeEntry(QStringLiteral("Name"), name);
-    desktopGroup.writeEntry(QStringLiteral("Type"), QStringLiteral("Link"));
-    desktopGroup.writeEntry(QStringLiteral("URL"), m_url);
-    desktopGroup.writeEntry(QStringLiteral("Icon"), KIO::iconNameForUrl(m_url));
+        QString backingDesktopFile = plasmaIconsFolderPath + QLatin1Char('/');
+        // KIO::suggestName always appends a suffix, i.e. it expects that we already know the file already exists
+        if (QFileInfo::exists(backingDesktopFile + desiredDesktopFileName)) {
+            desiredDesktopFileName = KIO::suggestName(QUrl::fromLocalFile(plasmaIconsFolderPath), desiredDesktopFileName);
+        }
+        backingDesktopFile.append(desiredDesktopFileName);
 
-    // when in doubt Qt returns application/octet-stream which will show as "Unknown" usually, so don't write it down then
-    if (mimeType.name() != QLatin1String("application/octet-stream")) {
-        desktopGroup.writeEntry(QStringLiteral("GenericName"), mimeType.comment());
-    }
+        QString name; // ends up as "Name" in the .desktop file for "Link" files below
 
-    linkDesktopFile.sync();
+        const QUrl url = statJob->mostLocalUrl();
+        if (url.isLocalFile()) {
+            const QString localUrlString = url.toLocalFile();
 
-    populateFromDesktopFile(backingDesktopFile);
-    setLocalPath(backingDesktopFile);
+            // if desktop file just copy it over
+            if (KDesktopFile::isDesktopFile(localUrlString)) {
+                // if this restriction is set, KIO won't allow running desktop files from outside
+                // registered services, applications, and so on, in this case we'll use the original
+                // .desktop file and lose the ability to customize it
+                if (!KAuthorized::authorize(QStringLiteral("run_desktop_files"))) {
+                    populateFromDesktopFile(localUrlString);
+                    // we don't call setLocalPath here as we don't want to store localPath to be a system-location
+                    // so that the fact that we cannot edit is re-evaluated every time
+                    return;
+                }
+
+                if (!QFile::copy(localUrlString, backingDesktopFile)) {
+                    setLaunchErrorMessage(i18n("Failed to copy icon widget desktop file from '%1' to '%2'", localUrlString, backingDesktopFile));
+                    return;
+                }
+
+                // set executable flag on the desktop file so KIO doesn't complain about executing it
+                QFile file(backingDesktopFile);
+                file.setPermissions(file.permissions() | QFile::ExeOwner);
+
+                populateFromDesktopFile(backingDesktopFile);
+                setLocalPath(backingDesktopFile);
+
+                return;
+            }
+        }
+
+        // in all other cases just make it a link
+
+        QString iconName;
+        QString genericName;
+
+        if (!statJob->error()) {
+            KFileItem item(statJob->statResult(), url);
+
+            if (name.isEmpty()) {
+                name = item.text();
+            }
+
+            if (item.mimetype() != QLatin1String("application/octet-stream")) {
+                iconName = item.iconName();
+                genericName = item.mimeComment();
+            }
+        }
+
+        // KFileItem might return "." as text for e.g. root folders
+        if (name == QLatin1String(".")) {
+            name.clear();
+        }
+
+        if (name.isEmpty()) {
+            name = url.fileName();
+        }
+
+        if (name.isEmpty()) {
+            // TODO would be cool to just show the parent folder name instead of the full path
+            name = url.path();
+        }
+
+        // For websites the filename e.g. "index.php" is usually not what you want
+        // also "/" isn't very descript when it's not our local "root" folder
+        if (name.isEmpty() || url.scheme().startsWith(QLatin1String("http")) || (!url.isLocalFile() && name == QLatin1String("/"))) {
+            name = url.host();
+        }
+
+        if (iconName.isEmpty()) {
+            // In doubt ask KIO::iconNameForUrl, KFileItem can't cope with http:// URLs for instance
+            iconName = KIO::iconNameForUrl(url);
+        }
+
+        KDesktopFile linkDesktopFile(backingDesktopFile);
+        auto desktopGroup = linkDesktopFile.desktopGroup();
+
+        desktopGroup.writeEntry(QStringLiteral("Name"), name);
+        desktopGroup.writeEntry(QStringLiteral("Type"), QStringLiteral("Link"));
+        desktopGroup.writeEntry(QStringLiteral("URL"), url);
+        desktopGroup.writeEntry(QStringLiteral("Icon"), iconName);
+        if (!genericName.isEmpty()) {
+            desktopGroup.writeEntry(QStringLiteral("GenericName"), genericName);
+        }
+
+        linkDesktopFile.sync();
+
+        populateFromDesktopFile(backingDesktopFile);
+        setLocalPath(backingDesktopFile);
+    });
 }
 
 void IconApplet::populateFromDesktopFile(const QString &path)
@@ -262,6 +293,8 @@ void IconApplet::populateFromDesktopFile(const QString &path)
     }
 
     m_localPath = path;
+
+    setBusy(false);
 }
 
 QUrl IconApplet::url() const

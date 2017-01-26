@@ -1605,7 +1605,8 @@ bool TasksModel::filterAcceptsRow(int sourceRow, const QModelIndex &sourceParent
     const QModelIndex &sourceIndex = sourceModel()->index(sourceRow, 0);
 
     // In inline grouping mode, filter out group parents.
-    if (d->flattenGroupsProxyModel && sourceIndex.data(AbstractTasksModel::IsGroupParent).toBool()) {
+    if (d->groupInline && d->flattenGroupsProxyModel
+        && sourceIndex.data(AbstractTasksModel::IsGroupParent).toBool()) {
         return false;
     }
 
