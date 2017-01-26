@@ -99,6 +99,7 @@ MouseArea {
         enabled: root.enabled
         active: root.containsMouse || root.containsAcceptableDrag
         usesPlasmaTheme: false
+        opacity: plasmoid.busy ? 0.6 : 1
     }
 
     DropShadow {
