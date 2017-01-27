@@ -701,6 +701,11 @@ void ShellCorona::primaryOutputChanged()
         return;
     }
 
+    //Since the primary screen is considered more important
+    //then the others, having the primary changed may have changed what outputs are redundant and what are not
+    //TODO: for a particular corner case, in which in the same moment the primary screen changes *and* geometries change to make former redundant screens to not be anymore, instead of doinf reconsiderOutputs() here, it may be better to instead put here the adding of new outputs and after the switch dance has been done, at the bottom of this function remove the eventual redundant ones
+    reconsiderOutputs();
+
     QScreen *oldPrimary = m_desktopViewforId.value(0)->screen();
     QScreen *newPrimary = qGuiApp->primaryScreen();
     if (!newPrimary || newPrimary == oldPrimary) {
@@ -1084,19 +1089,39 @@ void ShellCorona::screenRemoved(QScreen* screen)
 bool ShellCorona::isOutputRedundant(QScreen* screen) const
 {
     Q_ASSERT(screen);
-    const QRect geometry = screen->geometry();
+    const QRect thisGeometry = screen->geometry();
+
+    const int thisId = m_screenPool->id(screen->name());
 
     //FIXME: QScreen doesn't have any idea of "this qscreen is clone of this other one
     //so this ultra inefficient heuristic has to stay until we have a slightly better api
+    //logic is:
+    //a screen is redundant if:
+    //* its geometry is contained in another one
+    //* if their resolutions are different, the "biggest" one wins
+    //* if they have the same geometry, the one with the lowest id wins (arbitrary, but gives reproducible behavior and makes the primary screen win)
     foreach (QScreen* s, qGuiApp->screens()) {
+        //don't compare with itself
         if (screen == s) {
             continue;
         }
 
-        const QRect sGeometry = s->geometry();
-        if (sGeometry.contains(geometry, false) &&
-            sGeometry.width() > geometry.width() &&
-            sGeometry.height() > geometry.height()) {
+        const QRect otherGeometry = s->geometry();
+
+        const int otherId = m_screenPool->id(s->name());
+
+        if (otherGeometry.contains(thisGeometry, false) &&
+            (//since at this point contains is true, if either
+             //measure of othergeometry is bigger, has a bigger area
+             otherGeometry.width() > thisGeometry.width() ||
+             otherGeometry.height() > thisGeometry.height() ||
+             //ids not -1 are considered in descending order of importance
+             //-1 means that is a screen not known yet, just arrived and
+             //not yet in screenpool: this happens for screens that
+             //are hotplugged and weren't known. it does NOT happen
+             //at first startup, as screenpool populates on load with all screens connected at the moment before the rest of the shell starts up
+             (thisId == -1 && otherId != -1) ||
+             (thisId > otherId && otherId != -1))) {
             return true;
         }
     }
