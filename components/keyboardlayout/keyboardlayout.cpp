@@ -29,8 +29,8 @@ KeyboardLayout::KeyboardLayout(QObject* parent)
     : QObject(parent)
     , mIface(0)
 {
-    mIface = new QDBusInterface(QStringLiteral("org.kde.kded5"),
-                                QStringLiteral("/modules/keyboard"),
+    mIface = new QDBusInterface(QStringLiteral("org.kde.keyboard"),
+                                QStringLiteral("/Layouts"),
                                 QStringLiteral("org.kde.KeyboardLayouts"),
                                 QDBusConnection::sessionBus(),
                                 this);
