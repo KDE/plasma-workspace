@@ -66,7 +66,7 @@ class TaskToolsTest : public QObject
 
 void TaskToolsTest::initTestCase()
 {
-        QStandardPaths::enableTestMode(true);
+        QStandardPaths::setTestModeEnabled(true);
 
         QVERIFY(m_tempDir.isValid());
         QVERIFY(QDir().mkpath(m_tempDir.path() + QLatin1String("/config")));
