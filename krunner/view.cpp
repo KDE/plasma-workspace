@@ -289,18 +289,14 @@ void View::resetScreenPos()
 
 void View::positionOnScreen()
 {
-    QScreen* shownOnScreen = 0;
-    if (QGuiApplication::screens().count() <= 1) {
-        shownOnScreen = QGuiApplication::primaryScreen();
-    } else {
-        Q_FOREACH (QScreen* screen, QGuiApplication::screens()) {
-            if (screen->geometry().contains(QCursor::pos(screen))) {
-                shownOnScreen = screen;
-                break;
-            }
+    QScreen *shownOnScreen = QGuiApplication::primaryScreen();
+
+    Q_FOREACH (QScreen* screen, QGuiApplication::screens()) {
+        if (screen->geometry().contains(QCursor::pos(screen))) {
+            shownOnScreen = screen;
+            break;
         }
     }
-    Q_ASSERT(shownOnScreen);
 
     setScreen(shownOnScreen);
     const QRect r = shownOnScreen->availableGeometry();
