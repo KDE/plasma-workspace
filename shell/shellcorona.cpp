@@ -1871,9 +1871,9 @@ int ShellCorona::screenForContainment(const Plasma::Containment *containment) co
     }
 
     //if the desktop views already exist, base the decision upon them
-    foreach (int id, m_desktopViewforId.keys()) {
-        if (m_desktopViewforId.value(id)->containment() == containment && containment->activity() == m_activityController->currentActivity()) {
-            return id;
+    for (auto it = m_desktopViewforId.constBegin(), end = m_desktopViewforId.constEnd(); it != end; ++it) {
+        if (it.value()->containment() == containment && containment->activity() == m_activityController->currentActivity()) {
+            return it.key();
         }
     }
 
