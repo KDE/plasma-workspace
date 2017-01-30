@@ -220,7 +220,9 @@ void ContainmentConfigView::applyWallpaper()
 
     if (m_currentWallpaperConfig && m_ownWallpaperConfig) {
         for (const auto &key : m_ownWallpaperConfig->keys()) {
-            m_currentWallpaperConfig->insert(key, m_ownWallpaperConfig->value(key));
+            auto value = m_ownWallpaperConfig->value(key);
+            m_currentWallpaperConfig->insert(key, value);
+            m_currentWallpaperConfig->valueChanged(key, value);
         }
     }
 
