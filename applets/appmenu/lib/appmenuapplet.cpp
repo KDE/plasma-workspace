@@ -228,7 +228,7 @@ bool AppMenuApplet::eventFilter(QObject *watched, QEvent *event)
     } else if (event->type() == QEvent::MouseMove) {
         auto *e = static_cast<QMouseEvent *>(event);
 
-        if (!m_buttonGrid) {
+        if (!m_buttonGrid || !m_buttonGrid->window()) {
             return false;
         }
 
