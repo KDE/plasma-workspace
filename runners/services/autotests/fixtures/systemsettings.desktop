@@ -1,0 +1,14 @@
+[Desktop Entry]
+Exec=systemsettings5
+Icon=preferences-system
+Type=Application
+X-DocPath=systemsettings/index.html
+X-KDE-StartupNotify=true
+OnlyShowIn=KDE;
+
+GenericName=System Settings ServiceRunnerTest
+
+Name=System Settings ServiceRunnerTest
+
+X-DBUS-StartupType=Unique
+Categories=Qt;KDE;Settings;

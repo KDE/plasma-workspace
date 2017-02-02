@@ -38,6 +38,7 @@ private Q_SLOTS:
 
     void testChromeAppsRelevance();
     void testKonsoleVsYakuakeComment();
+    void testSystemSettings();
 };
 
 void ServiceRunnerTest::initTestCase()
@@ -58,6 +59,11 @@ void ServiceRunnerTest::initTestCase()
     setlocale(LC_ALL, "C.utf8");
 
     KSycoca::self()->ensureCacheValid();
+
+    // Make sure noDisplay behaves consistently WRT OnlyShowIn etc.
+    QVERIFY(setenv("XDG_CURRENT_DESKTOP", "KDE", 1) == 0);
+    // NOTE: noDisplay also includes X-KDE-OnlyShowOnQtPlatforms which is a bit harder to fake
+    //       and not currently under testing anyway.
 }
 
 void ServiceRunnerTest::cleanupTestCase()
@@ -121,6 +127,34 @@ void ServiceRunnerTest::testKonsoleVsYakuakeComment()
     }
     QVERIFY(konsoleFound);
     QVERIFY(yakuakeFound);
+}
+
+void ServiceRunnerTest::testSystemSettings()
+{
+    // In 5.9.0 'System Settings' suddenly didn't come back as a match for 'settings' anymore.
+    // Sytem Settings has a noKDE version and a KDE version, if the noKDE version is encountered
+    // first it will be added to the seen cache, however disqualification of already seen items
+    // may then also disqualify the KDE version of system settings on account of having already
+    // seen it. This test makes sure we find the right version.
+    ServiceRunner runner(this, QVariantList());
+    Plasma::RunnerContext context;
+    context.setQuery("settings");
+
+    runner.match(context);
+
+    bool systemSettingsFound = false;
+    bool foreignSystemSettingsFound = false;
+    for (auto match : context.matches()) {
+        qDebug() << "matched" << match.text();
+        if (match.text() == "System Settings ServiceRunnerTest") {
+            systemSettingsFound = true;
+        }
+        if (match.text() == "KDE System Settings ServiceRunnerTest") {
+            foreignSystemSettingsFound = true;
+        }
+    }
+    QVERIFY(systemSettingsFound);
+    QVERIFY(!foreignSystemSettingsFound);
 }
 
 QTEST_MAIN(ServiceRunnerTest)
