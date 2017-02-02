@@ -25,6 +25,7 @@ StatusNotifierItemJob::StatusNotifierItemJob(StatusNotifierItemSource *source, c
     m_source(source)
 {
     connect(source, SIGNAL(contextMenuReady(QMenu*)), this, SLOT(contextMenuReady(QMenu*)));
+    connect(source, SIGNAL(activateResult(bool)), this, SLOT(activateCallback(bool)));
 }
 
 StatusNotifierItemJob::~StatusNotifierItemJob()
@@ -35,7 +36,6 @@ void StatusNotifierItemJob::start()
 {
     if (operationName() == QString::fromLatin1("Activate")) {
         m_source->activate(parameters()[QStringLiteral("x")].toInt(), parameters()[QStringLiteral("y")].toInt());
-        setResult(0);
     } else if (operationName() == QString::fromLatin1("SecondaryActivate")) {
         m_source->secondaryActivate(parameters()[QStringLiteral("x")].toInt(), parameters()[QStringLiteral("y")].toInt());
         setResult(0);
@@ -44,6 +44,13 @@ void StatusNotifierItemJob::start()
     } else if (operationName() == QString::fromLatin1("Scroll")) {
         m_source->scroll(parameters()[QStringLiteral("delta")].toInt(), parameters()[QStringLiteral("direction")].toString());
         setResult(0);
+    }
+}
+
+void StatusNotifierItemJob::activateCallback(bool success)
+{
+    if (operationName() == QString::fromLatin1("Activate")) {
+        setResult(QVariant(success));
     }
 }
 

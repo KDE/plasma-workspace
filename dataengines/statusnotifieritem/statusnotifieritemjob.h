@@ -44,6 +44,7 @@ protected:
     void start() override;
 
 private Q_SLOTS:
+    void activateCallback(bool success);
     void contextMenuReady(QMenu *menu);
 
 private:

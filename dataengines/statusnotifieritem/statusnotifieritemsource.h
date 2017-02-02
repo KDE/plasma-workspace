@@ -50,6 +50,7 @@ public:
 
 Q_SIGNALS:
     void contextMenuReady(QMenu *menu);
+    void activateResult(bool success);
 
 private Q_SLOTS:
     void contextMenuReady();
@@ -60,6 +61,7 @@ private Q_SLOTS:
     void performRefresh();
     void syncStatus(QString);
     void refreshCallback(QDBusPendingCallWatcher *);
+    void activateCallback(QDBusPendingCallWatcher *);
 
 private:
 

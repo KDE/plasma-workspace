@@ -68,7 +68,14 @@ AbstractItem {
             var operation = service.operationDescription("Activate");
             operation.x = pos.x;
             operation.y = pos.y;
-            service.startOperationCall(operation);
+            var job = service.startOperationCall(operation);
+            job.finished.connect(function () {
+                if (!job.result) {
+                    // On error try to invoke the context menu.
+                    // Workaround primarily for apps using libappindicator.
+                    contextMenu(mouse);
+                }
+            });
             break;
         }
         case Qt.MiddleButton:

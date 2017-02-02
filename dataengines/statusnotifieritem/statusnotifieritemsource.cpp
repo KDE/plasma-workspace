@@ -469,8 +469,21 @@ void StatusNotifierItemSource::overlayIcon(QIcon *icon, QIcon *overlay)
 void StatusNotifierItemSource::activate(int x, int y)
 {
     if (m_statusNotifierItemInterface && m_statusNotifierItemInterface->isValid()) {
-        m_statusNotifierItemInterface->call(QDBus::NoBlock, QStringLiteral("Activate"), x, y);
+        QDBusMessage message = QDBusMessage::createMethodCall(m_statusNotifierItemInterface->service(),
+                                                              m_statusNotifierItemInterface->path(), m_statusNotifierItemInterface->interface(), QStringLiteral("Activate"));
+
+        message << x << y;
+        QDBusPendingCall call = m_statusNotifierItemInterface->connection().asyncCall(message);
+        QDBusPendingCallWatcher *watcher = new QDBusPendingCallWatcher(call, this);
+        connect(watcher, &QDBusPendingCallWatcher::finished, this, &StatusNotifierItemSource::activateCallback);
     }
+}
+
+void StatusNotifierItemSource::activateCallback(QDBusPendingCallWatcher *call)
+{
+    QDBusPendingReply<void> reply = *call;
+    emit activateResult(!reply.isError());
+    call->deleteLater();
 }
 
 void StatusNotifierItemSource::secondaryActivate(int x, int y)
