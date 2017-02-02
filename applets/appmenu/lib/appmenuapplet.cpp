@@ -132,6 +132,7 @@ QMenu *AppMenuApplet::createMenu(int idx) const
            action = (QAction *)data.value<void *>();
            menu->addAction(action);
        }
+       menu->setAttribute(Qt::WA_DeleteOnClose);
    } else if (view() == FullView) {
         const QModelIndex index = m_model->index(idx, 0);
         const QVariant data = m_model->data(index, AppMenuModel::ActionRole);
@@ -151,12 +152,12 @@ void AppMenuApplet::onMenuAboutToHide()
 
 void AppMenuApplet::trigger(QQuickItem *ctx, int idx)
 {
-    QMenu *actionMenu = createMenu(idx);
+    if (m_currentIndex == idx) {
+        return;
+    }
 
+    QMenu *actionMenu = createMenu(idx);
     if (actionMenu) {
-        if (m_currentIndex == idx) {
-            return;
-        }
 
         if (ctx && ctx->window() && ctx->window()->mouseGrabberItem()) {
             // FIXME event forge thing enters press and hold move mode :/
