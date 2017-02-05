@@ -39,5 +39,23 @@ Applet {
         }
     }
 
-    delegate: DoublePlotter {}
+    function formatBitSize(value) {
+        if (value > 1048576) {
+            return i18nc("mbps", "%1 Mbps", (value / 1048576).toFixed(1));
+        }
+        if (value > 1024) {
+            return i18nc("kbps", "%1 Kbps", (value / 1024));
+        }
+        if (value > 0) {
+            return i18nc("bps", "%1 bps", value);
+        }
+        return i18nc("zero", "%1", value);
+    }
+
+    delegate: DoublePlotter {
+        function formatLabel(data1, data2) {
+            return i18nc("%1 and %2 are values of the same datatype", "%1 | %2", formatBitSize(data1.value * 1024 * 8),
+                            formatBitSize(data2.value * 1024 * 8));
+        }
+    }
 }
