@@ -200,7 +200,7 @@ void SystemTray::showPlasmoidMenu(QQuickItem *appletInterface, int x, int y)
     desktopMenu->popup(pos.toPoint());
 }
 
-Q_INVOKABLE QString SystemTray::plasmoidCategory(QQuickItem *appletInterface) const
+QString SystemTray::plasmoidCategory(QQuickItem *appletInterface) const
 {
     if (!appletInterface) {
         return "UnknownCategory";
