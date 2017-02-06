@@ -234,8 +234,9 @@ bool AppMenuApplet::eventFilter(QObject *watched, QEvent *event)
         }
 
         // FIXME the panel margin breaks Fitt's law :(
-        const QPointF &localPos = m_buttonGrid->window()->mapFromGlobal(e->globalPos());
-        auto *item = m_buttonGrid->childAt(localPos.x(), localPos.y());
+        const QPointF &windowLocalPos = m_buttonGrid->window()->mapFromGlobal(e->globalPos());
+        const QPointF &buttonGridLocalPos = m_buttonGrid->mapFromScene(windowLocalPos);
+        auto *item = m_buttonGrid->childAt(buttonGridLocalPos.x(), buttonGridLocalPos.y());
         if (!item) {
             return false;
         }
