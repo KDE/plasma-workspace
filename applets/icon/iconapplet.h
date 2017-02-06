@@ -45,6 +45,7 @@ public:
     ~IconApplet() override;
 
     void init() override;
+    void configChanged() override;
 
     QUrl url() const;
     void setUrl(const QUrl &url);
