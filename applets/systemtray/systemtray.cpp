@@ -163,6 +163,10 @@ void SystemTray::showPlasmoidMenu(QQuickItem *appletInterface, int x, int y)
     connect(this, &QObject::destroyed, desktopMenu, &QMenu::close);
     desktopMenu->setAttribute(Qt::WA_DeleteOnClose);
 
+    if (appletInterface->window() && appletInterface->window()->mouseGrabberItem()) {
+        appletInterface->window()->mouseGrabberItem()->ungrabMouse();
+    }
+
     emit applet->contextualActionsAboutToShow();
     foreach (QAction *action, applet->contextualActions()) {
         if (action) {
@@ -196,7 +200,7 @@ void SystemTray::showPlasmoidMenu(QQuickItem *appletInterface, int x, int y)
     desktopMenu->popup(pos.toPoint());
 }
 
-Q_INVOKABLE QString SystemTray::plasmoidCategory(QQuickItem *appletInterface) const
+QString SystemTray::plasmoidCategory(QQuickItem *appletInterface) const
 {
     if (!appletInterface) {
         return "UnknownCategory";
