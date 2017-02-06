@@ -66,6 +66,11 @@ void IconApplet::init()
     populate();
 }
 
+void IconApplet::configChanged()
+{
+    populate();
+}
+
 void IconApplet::populate()
 {
     m_url = config().readEntry(QStringLiteral("url"), QUrl());
