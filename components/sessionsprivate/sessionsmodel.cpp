@@ -98,6 +98,8 @@ void SessionsModel::switchUser(int vt, bool shouldLock)
         } else {
             m_pendingReserve = false;
             m_pendingVt = vt;
+
+            emit aboutToLockScreen();
             m_screensaverInterface->Lock();
         }
     });
@@ -123,6 +125,8 @@ void SessionsModel::startNewSession(bool shouldLock)
         } else {
             m_pendingReserve = true;
             m_pendingVt = 0;
+
+            emit aboutToLockScreen();
             m_screensaverInterface->Lock();
         }
     });

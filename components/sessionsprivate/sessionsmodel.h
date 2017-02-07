@@ -95,6 +95,7 @@ signals:
 
     void switchedUser(int vt);
     void startedNewSession();
+    void aboutToLockScreen();
 
 private:
     void checkScreenLocked(const std::function<void (bool)> &cb);

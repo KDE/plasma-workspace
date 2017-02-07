@@ -112,6 +112,7 @@ void KSMSwitchUserDialog::init()
     }
 
     connect(rootObject(), SIGNAL(dismissed()), this, SIGNAL(dismissed()));
+    connect(rootObject(), SIGNAL(ungrab()), this, SLOT(ungrab()));
 
     connect(screen(), &QScreen::geometryChanged, this, [this] {
         setGeometry(screen()->geometry());
@@ -122,6 +123,7 @@ void KSMSwitchUserDialog::init()
 
     KWindowSystem::setState(winId(), NET::SkipTaskbar|NET::SkipPager);
 
+    // in case you change this make sure to adjust ungrab() also
     setKeyboardGrabEnabled(true);
 }
 
@@ -162,4 +164,9 @@ void KSMSwitchUserDialog::setupWaylandIntegration()
     // TODO: set a proper window type to indicate to KWin that this is the logout dialog
     // maybe we need a dedicated type for it?
     m_shellSurface->setPosition(geometry().topLeft());
+}
+
+void KSMSwitchUserDialog::ungrab()
+{
+    setKeyboardGrabEnabled(false);
 }

@@ -50,6 +50,9 @@ signals:
 protected:
     bool event(QEvent *e) override;
 
+private slots:
+    void ungrab();
+
 private:
     void setupWaylandIntegration();
 
