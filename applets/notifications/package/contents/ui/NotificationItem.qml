@@ -55,6 +55,8 @@ MouseArea {
 
     property ListModel actions: ListModel { }
 
+    property bool hasDefaultAction: false;
+
     function pressedAction() {
         for (var i = 0, count = actionRepeater.count; i < count; ++i) {
             var item = actionRepeater.itemAt(i)
@@ -72,6 +74,10 @@ MouseArea {
 
         if (settingsButton.pressed) {
             return settingsButton
+        }
+
+        if (closeButton.pressed) {
+            return closeButton
         }
 
         return null

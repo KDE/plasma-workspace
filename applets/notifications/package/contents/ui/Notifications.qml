@@ -176,12 +176,17 @@ Column {
         onNewData: {
             var _data = data; // Temp copy to avoid lots of context switching
             var actions = []
+            _data["hasDefaultAction"] = false
             if (data["actions"] && data["actions"].length % 2 == 0) {
                 for (var i = 0; i < data["actions"].length; i += 2) {
-                    actions.push({
-                        id: data["actions"][i],
-                        text: data["actions"][i+1]
-                    })
+                    if (data["actions"][i] == "default") { // The default action is not shown, but we want to know it's there
+                        _data["hasDefaultAction"] = true
+                    } else {
+                        actions.push({
+                            id: data["actions"][i],
+                            text: data["actions"][i+1]
+                        })
+                    }
                 }
             }
             _data["source"] = sourceName

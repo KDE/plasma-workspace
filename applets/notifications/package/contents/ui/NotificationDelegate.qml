@@ -33,6 +33,9 @@ PlasmaComponents.ListItem {
 
     opacity: 1-Math.abs(x)/width
 
+    enabled: true
+    checked: notificationItem.containsMouse
+
     Timer {
         interval: 10*60*1000
         repeat: false
@@ -63,6 +66,14 @@ PlasmaComponents.ListItem {
                 removeAnimation.running = true
             } else {
                 resetAnimation.running = true
+            }
+        }
+
+        onClicked: {
+            if (model.hasDefaultAction) {
+                executeAction(model.source, "default")
+            } else {
+                notification.close();
             }
         }
 
@@ -142,7 +153,7 @@ PlasmaComponents.ListItem {
                 configureNotification(model.appRealName, model.eventId)
             }
             onAction: {
-                executeAction(source, actionId)
+                executeAction(model.source, actionId)
                 actions.clear()
             }
             onOpenUrl: {
