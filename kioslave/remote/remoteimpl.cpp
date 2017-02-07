@@ -107,7 +107,7 @@ bool RemoteImpl::findDirectory(const QString &filename, QString &directory) cons
 		{
 			if (*name==filename)
 			{
-				directory = *dirpath;
+				directory = *dirpath + QLatin1Char('/');
 				return true;
 			}
 		}
@@ -137,7 +137,7 @@ QUrl RemoteImpl::findBaseURL(const QString &filename) const
 	if (!file.isEmpty())
 	{
 		KDesktopFile desktop( file );
-		return QUrl::fromLocalFile(desktop.readUrl());
+		return QUrl::fromUserInput(desktop.readUrl());
 	}
 
 	return QUrl();

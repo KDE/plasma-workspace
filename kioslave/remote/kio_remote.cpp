@@ -68,8 +68,10 @@ void RemoteProtocol::listDir(const QUrl &url)
 		if ( second_slash_idx < 0 ) {
 			second_slash_idx = url.path().size();
 		}
-		target = target.adjusted(QUrl::StripTrailingSlash);
-		target.setPath(target.path() + '/' + ( url.path().remove(0, second_slash_idx) ));
+		const QString urlPath = url.path().remove(0, second_slash_idx);
+		if (!urlPath.isEmpty()) {
+			target.setPath(QStringLiteral("%1/%2").arg(target.path(), urlPath));
+		}
 		qCDebug(KIOREMOTE_LOG) << "complete redirection target : " << target;
 		redirection(target);
 		finished();
@@ -157,9 +159,11 @@ void RemoteProtocol::stat(const QUrl &url)
 			if ( second_slash_idx < 0 ) {
 				second_slash_idx = url.path().size();
 			}
+			const QString urlPath = url.path().remove(0, second_slash_idx);
+			if (!urlPath.isEmpty()) {
+				target.setPath(QStringLiteral("%1/%2").arg(target.path(), urlPath));
+			}
 			qCDebug(KIOREMOTE_LOG) << "complete redirection target : " << target;
-			target = target.adjusted(QUrl::StripTrailingSlash);
-			target.setPath(target.path() + '/' + ( url.path().remove( 0, second_slash_idx ) ));
 			redirection( target );
 			finished();
 			return;
@@ -192,10 +196,7 @@ void RemoteProtocol::get(const QUrl &url)
 
 	if (!file.isEmpty())
 	{
-		QUrl desktop;
-		desktop.setPath(file);
-
-		redirection(desktop);
+		redirection(QUrl::fromLocalFile(file));
 		finished();
 		return;
 	}
