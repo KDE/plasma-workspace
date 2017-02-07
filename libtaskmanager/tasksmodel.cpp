@@ -802,13 +802,26 @@ bool TasksModel::Private::lessThan(const QModelIndex &left, const QModelIndex &r
             if (sortMode == SortDisabled) {
                 return (left.row() < right.row());
             } else {
-                const QString &leftSortString = left.data(AbstractTasksModel::AppName).toString()
-                    + left.data(Qt::DisplayRole).toString();
+                QString leftSortString = left.data(AbstractTasksModel::AppName).toString();
 
-                const QString &rightSortString = right.data(AbstractTasksModel::AppName).toString()
-                    + right.data(Qt::DisplayRole).toString();
+                if (leftSortString.isEmpty()) {
+                    leftSortString = left.data(Qt::DisplayRole).toString();
+                }
 
-                return (leftSortString.localeAwareCompare(rightSortString) < 0);
+                QString rightSortString = right.data(AbstractTasksModel::AppName).toString();
+
+                if (rightSortString.isEmpty()) {
+                    rightSortString = right.data(Qt::DisplayRole).toString();
+                }
+
+                const int sortResult = leftSortString.localeAwareCompare(rightSortString);
+
+                // If the string are identical fall back to source model (creation/append) order.
+                if (sortResult == 0) {
+                    return (left.row() < right.row());
+                }
+
+                return (sortResult < 0);
             }
         }
     }
