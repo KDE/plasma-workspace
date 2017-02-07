@@ -24,20 +24,20 @@
 
 class RemoteDirNotify : public QObject
 {
-Q_OBJECT
+    Q_OBJECT
 
 public:
-	RemoteDirNotify();
+    RemoteDirNotify();
 
 private slots:
-	void FilesAdded (const QString &directory);
-	void FilesRemoved (const QStringList &fileList);
-	void FilesChanged (const QStringList &fileList);
+    void FilesAdded(const QString &directory);
+    void FilesRemoved(const QStringList &fileList);
+    void FilesChanged(const QStringList &fileList);
 
 private:
-	QUrl toRemoteURL(const QUrl &url);
-	QList<QUrl> toRemoteURLList(const QStringList &list);
-	QUrl m_baseURL;
+    QUrl toRemoteURL(const QUrl &url);
+    QList<QUrl> toRemoteURLList(const QStringList &list);
+    QUrl m_baseURL;
 };
 
 #endif

@@ -27,7 +27,7 @@ class RemoteDirNotifyModule : public KDEDModule
 {
     Q_OBJECT
 public:
-    RemoteDirNotifyModule(QObject* parent, const QList<QVariant>&);
+    RemoteDirNotifyModule(QObject *parent, const QList<QVariant> &);
 private:
     RemoteDirNotify notifier;
 };

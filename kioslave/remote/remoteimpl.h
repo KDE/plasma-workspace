@@ -24,33 +24,28 @@
 #include <kio/job.h>
 #include <QUrl>
 
-
-
 class RemoteImpl
 {
 public:
-	RemoteImpl();
+    RemoteImpl();
 
-	void createTopLevelEntry(KIO::UDSEntry &entry) const;
-	bool createWizardEntry(KIO::UDSEntry &entry) const;
-	bool isWizardURL(const QUrl &url) const;
-	bool statNetworkFolder(KIO::UDSEntry &entry, const QString &filename) const;
+    void createTopLevelEntry(KIO::UDSEntry &entry) const;
+    bool createWizardEntry(KIO::UDSEntry &entry) const;
+    bool isWizardURL(const QUrl &url) const;
+    bool statNetworkFolder(KIO::UDSEntry &entry, const QString &filename) const;
 
-	void listRoot(KIO::UDSEntryList& list) const;
+    void listRoot(KIO::UDSEntryList &list) const;
 
-	QUrl findBaseURL(const QString &filename) const;
-	QString findDesktopFile(const QString &filename) const;
+    QUrl findBaseURL(const QString &filename) const;
+    QString findDesktopFile(const QString &filename) const;
 
-	bool deleteNetworkFolder(const QString &filename) const;
-	bool renameFolders(const QString &src, const QString &dest,
-	                   bool overwrite) const;
-	bool changeFolderTarget(const QString &src, const QString &target,
-	                        bool overwrite) const;
+    bool deleteNetworkFolder(const QString &filename) const;
+    bool renameFolders(const QString &src, const QString &dest, bool overwrite) const;
+    bool changeFolderTarget(const QString &src, const QString &target, bool overwrite) const;
 
 private:
-	bool findDirectory(const QString &filename, QString &directory) const;
-	void createEntry(KIO::UDSEntry& entry, const QString &directory,
-	                 const QString &file) const;
+    bool findDirectory(const QString &filename, QString &directory) const;
+    void createEntry(KIO::UDSEntry &entry, const QString &directory, const QString &file) const;
 };
 
 #endif

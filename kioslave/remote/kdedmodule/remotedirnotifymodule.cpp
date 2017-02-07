@@ -25,8 +25,8 @@ K_PLUGIN_FACTORY_WITH_JSON(RemoteDirNotifyFactory,
                            "remotedirnotify.json",
                            registerPlugin<RemoteDirNotifyModule>();)
 
-RemoteDirNotifyModule::RemoteDirNotifyModule(QObject* parent, const QList<QVariant>&)
-	: KDEDModule(parent)
+RemoteDirNotifyModule::RemoteDirNotifyModule(QObject *parent, const QList<QVariant> &)
+    : KDEDModule(parent)
 {
 }
 
