@@ -97,9 +97,6 @@ bool RemoteImpl::findDirectory(const QString &filename, QString &directory) cons
 		QStringList filenames
 			= dir.entryList( QDir::Files | QDir::Readable );
 
-
-		KIO::UDSEntry entry;
-
 		QStringList::ConstIterator name = filenames.constBegin();
 		QStringList::ConstIterator endf = filenames.constEnd();
 
