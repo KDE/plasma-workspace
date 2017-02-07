@@ -76,7 +76,7 @@ private:
 
     bool hasSeen(const KService::Ptr &service)
     {
-        return m_seen.contains(service->storageId()) ||
+        return m_seen.contains(service->storageId()) &&
                m_seen.contains(service->exec());
     }
 
@@ -88,6 +88,7 @@ private:
     bool disqualify(const KService::Ptr &service)
     {
         auto ret = hasSeen(service) || service->noDisplay();
+        qCDebug(RUNNER_SERVICES) << service->name() << "disqualified?" << ret;
         seen(service);
         return ret;
     }
