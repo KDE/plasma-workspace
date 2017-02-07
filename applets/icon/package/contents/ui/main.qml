@@ -39,7 +39,7 @@ MouseArea {
     width: Math.round(units.iconSizes.desktop * 1.5)
 
     Layout.minimumWidth: plasmoid.formFactor === PlasmaCore.Types.Horizontal ? height : units.iconSizes.small
-    Layout.minimumHeight: plasmoid.formFactor === PlasmaCore.Types.Vertical ? width  : units.iconSizes.small
+    Layout.minimumHeight: plasmoid.formFactor === PlasmaCore.Types.Vertical ? width : (units.iconSizes.small + 2 * theme.mSize(theme.defaultFont).height)
 
     hoverEnabled: true
 
