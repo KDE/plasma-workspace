@@ -33,7 +33,6 @@ if ( QALCULATE_FOUND )
                           KF5::Runner
                           KF5::I18n
                           Qt5::Network
-                          Qt5::Script
                           Qt5::Widgets
     )
 else ()
@@ -42,7 +41,7 @@ else ()
                           KF5::Runner
                           KF5::I18n
                           Qt5::Gui
-                          Qt5::Script
+                          Qt5::Qml
     )
 endif ()
 

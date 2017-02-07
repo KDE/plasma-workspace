@@ -24,7 +24,7 @@
 #ifdef ENABLE_QALCULATE
 #include "qalculate_engine.h"
 #else
-#include <QScriptEngine>
+#include <QJSEngine>
 #include <QGuiApplication>
 #include <QClipboard>
 #endif
@@ -292,8 +292,8 @@ QString CalculatorRunner::calculate(const QString& term)
     return result.replace('.', QLocale().decimalPoint(), Qt::CaseInsensitive);
     #else
     //qDebug() << "calculating" << term;
-    QScriptEngine eng;
-    QScriptValue result = eng.evaluate(" var result ="+term+"; result");
+    QJSEngine eng;
+    QJSValue result = eng.evaluate(QStringLiteral("var result = %1; result").arg(term));
 
     if (result.isError()) {
         return QString();
