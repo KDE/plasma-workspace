@@ -99,10 +99,8 @@ PlasmaComponents.ListItem {
             verticalCenter: parent.verticalCenter
         }
         PlasmaComponents.Label {
-            anchors {
-                left: parent.left
-                right: parent.right
-            }
+            width: parent.width
+            height: undefined // unset PlasmaComponents.Label default height
             maximumLineCount: 3
             text: {
                 var highlightFontTag = "<font color='" + theme.highlightColor + "'>%1</font>"
@@ -114,7 +112,7 @@ PlasmaComponents.ListItem {
 
                 // color code leading or trailing whitespace
                 // the first regex is basically "trim"
-                text = text.replace(/^\s+|\s+$/g, function(match) {
+                text = text.replace(/^\s+|\s+$/gm, function(match) {
                     // then inside the trimmed characters ("match") we replace each one individually
                     match = match.replace(/ /g, "␣") // space
                                  .replace(/\t/g, "↹") // tab
@@ -122,11 +120,14 @@ PlasmaComponents.ListItem {
                     return highlightFontTag.arg(match)
                 })
 
+                // finally turn line breaks into HTML br tags
+                text = text.replace(/([^>\r\n]?)(\r\n|\n\r|\r|\n)/g, "<br>")
+
                 return text
             }
             visible: TypeRole == 0 // TypeRole: 0: Text, 1: Image, 2: Url
             elide: Text.ElideRight
-            wrapMode: Text.Wrap
+            wrapMode: Text.WrapAtWordBoundaryOrAnywhere
             textFormat: Text.StyledText
         }
         KQuickControlsAddons.QPixmapItem {
