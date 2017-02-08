@@ -47,6 +47,15 @@ PlasmaCore.ToolTipArea {
     property bool forcedShown: plasmoid.configuration.showAllItems || plasmoid.configuration.shownItems.indexOf(itemId) !== -1
     property bool categoryShown: shownCategories.indexOf(category) != -1;
 
+    readonly property int effectiveStatus: {
+        if (!categoryShown) {
+            return PlasmaCore.Types.HiddenStatus
+        } else if (forcedShown || (!forcedHidden && status !== PlasmaCore.Types.PassiveStatus)) {
+            return PlasmaCore.Types.ActiveStatus
+        } else {
+            return PlasmaCore.Types.PassiveStatus
+        }
+    }
 
     /* subclasses need to assign to this tiiltip properties
     mainText:
@@ -68,7 +77,7 @@ PlasmaCore.ToolTipArea {
 
 //BEGIN CONNECTIONS
 
-    onStatusChanged: updateItemVisibility(abstractItem);
+    onEffectiveStatusChanged: updateItemVisibility(abstractItem);
 
     onContainsMouseChanged: {
         if (hidden && containsMouse) {
@@ -77,9 +86,6 @@ PlasmaCore.ToolTipArea {
     }
 
     Component.onCompleted: updateItemVisibility(abstractItem);
-    onForcedHiddenChanged: updateItemVisibility(abstractItem);
-    onForcedShownChanged: updateItemVisibility(abstractItem);
-    onCategoryShownChanged: updateItemVisibility(abstractItem);
 
     //dangerous but needed due how repeater reparents
     onParentChanged: updateItemVisibility(abstractItem);

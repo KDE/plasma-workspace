@@ -53,18 +53,16 @@ MouseArea {
     property Component plasmoidItemComponent
 
     function updateItemVisibility(item) {
-
-        //Invisible
-        if (!item.categoryShown) {
+        switch (item.effectiveStatus) {
+        case PlasmaCore.Types.HiddenStatus:
             if (item.parent == invisibleEntriesContainer) {
                 return;
             }
 
             item.parent = invisibleEntriesContainer;
+            break;
 
-        //visible
-        } else if (item.forcedShown || !(item.forcedHidden || item.status == PlasmaCore.Types.PassiveStatus)) {
-
+        case PlasmaCore.Types.ActiveStatus:
             if (visibleLayout.children.length == 0) {
                 item.parent = visibleLayout;
             //notifications is always the first
@@ -74,9 +72,9 @@ MouseArea {
             } else if (visibleLayout.children[0] != item) {
                 plasmoid.nativeInterface.reorderItemBefore(item, visibleLayout.children[0]);
             }
+            break;
 
-        //hidden
-        } else {
+        case PlasmaCore.Types.PassiveStatus:
 
             if (hiddenLayout.children.length == 0) {
                 item.parent = hiddenLayout;
@@ -88,6 +86,7 @@ MouseArea {
                 plasmoid.nativeInterface.reorderItemBefore(item, hiddenLayout.children[0]);
             }
             item.x = 0;
+            break;
         }
     }
 
