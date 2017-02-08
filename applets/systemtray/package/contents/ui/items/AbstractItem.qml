@@ -99,11 +99,7 @@ PlasmaCore.ToolTipArea {
         hoverEnabled: true
         drag.filterChildren: true
         acceptedButtons: Qt.LeftButton | Qt.MiddleButton | Qt.RightButton
-        onClicked: {
-            if (mouse.button !== Qt.RightButton) {
-                abstractItem.clicked(mouse)
-            }
-        }
+        onClicked: abstractItem.clicked(mouse)
         onPressed: {
             abstractItem.hideToolTip()
             if (mouse.button === Qt.RightButton) {
