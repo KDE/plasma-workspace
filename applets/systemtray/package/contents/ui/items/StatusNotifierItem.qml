@@ -71,6 +71,19 @@ AbstractItem {
             service.startOperationCall(operation);
             break;
         }
+        case Qt.RightButton:
+            var service = statusNotifierSource.serviceForSource(DataEngineSource);
+            var operation = service.operationDescription("ContextMenu");
+            operation.x = pos.x;
+            operation.y = pos.y;
+
+            var job = service.startOperationCall(operation);
+            job.finished.connect(function () {
+                plasmoid.nativeInterface.showStatusNotifierContextMenu(job, taskIcon);
+            });
+
+            break;
+
         case Qt.MiddleButton:
             var service = statusNotifierSource.serviceForSource(DataEngineSource);
             var operation = service.operationDescription("SecondaryActivate");
@@ -80,20 +93,6 @@ AbstractItem {
             service.startOperationCall(operation);
             break;
         }
-    }
-
-    onContextMenu: {
-        var pos = plasmoid.nativeInterface.popupPosition(taskIcon, 0, 0);
-
-        var service = statusNotifierSource.serviceForSource(DataEngineSource);
-        var operation = service.operationDescription("ContextMenu");
-        operation.x = pos.x;
-        operation.y = pos.y;
-
-        var job = service.startOperationCall(operation);
-        job.finished.connect(function () {
-            plasmoid.nativeInterface.showStatusNotifierContextMenu(job, taskIcon);
-        });
     }
 
     onWheel: {
