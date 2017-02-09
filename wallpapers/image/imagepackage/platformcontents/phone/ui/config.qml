@@ -36,8 +36,7 @@ Item {
 
     Wallpaper.Image {
         id: imageWallpaper
-        width: wallpaper.configuration.width
-        height: wallpaper.configuration.height
+        targetSize: Qt.size(plasmoid.width, plasmoid.height)
     }
 
     //Rectangle { color: "orange"; x: formAlignment; width: formAlignment; height: 20 }
@@ -53,7 +52,7 @@ Item {
             currentIndex: -1
 
             cellWidth: Math.floor(wallpapersGrid.width / Math.max(Math.floor(wallpapersGrid.width / (units.gridUnit*12)), 3))
-            cellHeight: cellWidth / (imageWallpaper.width / imageWallpaper.height)
+            cellHeight: cellWidth / (plasmoid.width / plasmoid.height)
 
             anchors.margins: 4
             boundsBehavior: Flickable.DragAndOvershootBounds
