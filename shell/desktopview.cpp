@@ -250,6 +250,7 @@ void DesktopView::showConfigurationInterface(Plasma::Applet *applet)
             m_configView->hide();
             m_configView->deleteLater();
         } else {
+            m_configView->show();
             m_configView->requestActivate();
             return;
         }
