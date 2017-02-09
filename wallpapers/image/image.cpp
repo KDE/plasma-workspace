@@ -23,6 +23,7 @@
  ***************************************************************************/
 
 #include "image.h"
+#include "debug.h"
 
 #include <math.h>
 #include <float.h> // FLT_MAX
@@ -180,7 +181,7 @@ QString Image::findPreferedImage(const QStringList &images)
     }
 
     //float targetAspectRatio = (m_targetSize.height() > 0 ) ? m_targetSize.width() / (float)m_targetSize.height() : 0;
-    //qDebug() << "wanted" << m_targetSize << "options" << images << "aspect ratio" << targetAspectRatio;
+    //qCDebug(IMAGEWALLPAPER) << "wanted" << m_targetSize << "options" << images << "aspect ratio" << targetAspectRatio;
     float best = FLT_MAX;
 
     QString bestImage;
@@ -192,16 +193,16 @@ QString Image::findPreferedImage(const QStringList &images)
         //float candidateAspectRatio = (candidate.height() > 0 ) ? candidate.width() / (float)candidate.height() : FLT_MAX;
 
         float dist = distance(candidate, m_targetSize);
-        //qDebug() << "candidate" << candidate << "distance" << dist << "aspect ratio" << candidateAspectRatio;
+        //qCDebug(IMAGEWALLPAPER) << "candidate" << candidate << "distance" << dist << "aspect ratio" << candidateAspectRatio;
 
         if (bestImage.isEmpty() || dist < best) {
             bestImage = entry;
             best = dist;
-            //qDebug() << "best" << bestImage;
+            //qCDebug(IMAGEWALLPAPER) << "best" << bestImage;
         }
     }
 
-    //qDebug() << "best image" << bestImage;
+    //qCDebug(IMAGEWALLPAPER) << "best image" << bestImage;
     return bestImage;
 }
 
@@ -753,7 +754,7 @@ void Image::openSlide()
 
     // open in image viewer
     QUrl filepath(m_wallpaperPackage.filePath("preferred"));
-    qDebug() << "opening file " << filepath.path();
+    qCDebug(IMAGEWALLPAPER) << "opening file " << filepath.path();
     new KRun(filepath, NULL);
 }
 

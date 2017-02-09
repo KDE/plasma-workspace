@@ -20,6 +20,7 @@
 #ifndef BACKGROUNDLISTMODEL_CPP
 #define BACKGROUNDLISTMODEL_CPP
 
+#include "debug.h"
 #include "backgroundlistmodel.h"
 
 #include <QFile>
@@ -123,12 +124,12 @@ void BackgroundListModel::reload(const QStringList &selected)
     }
 
     if (!selected.isEmpty()) {
-        qDebug() << "selected" << selected;
+        qCDebug(IMAGEWALLPAPER) << "selected" << selected;
         processPaths(selected);
     }
 
     const QStringList dirs = QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, QStringLiteral("wallpapers/"), QStandardPaths::LocateDirectory);
-    qDebug() << " WP : -------" << dirs;
+    qCDebug(IMAGEWALLPAPER) << "Looking into" << dirs << "for wallpapers";
 
     BackgroundFinder *finder = new BackgroundFinder(m_wallpaper.data(), dirs);
     connect(finder, &BackgroundFinder::backgroundsFound, this, &BackgroundListModel::backgroundsFound);
@@ -206,7 +207,7 @@ void BackgroundListModel::processPaths(const QStringList &paths)
         endInsertRows();
         emit countChanged();
     }
-    //qDebug() << t.elapsed();
+    //qCDebug(IMAGEWALLPAPER) << t.elapsed();
 }
 
 void BackgroundListModel::addBackground(const QString& path)
@@ -221,7 +222,7 @@ void BackgroundListModel::addBackground(const QString& path)
         m_removableWallpapers.insert(path);
         package.setPath(path);
         m_wallpaper->findPreferedImageInPackage(package);
-        qDebug() << "WP Bckground added " << path << package.isValid();
+        qCDebug(IMAGEWALLPAPER) << "Background added " << path << package.isValid();
         m_packages.prepend(package);
         endInsertRows();
         emit countChanged();
@@ -242,7 +243,7 @@ int BackgroundListModel::indexOf(const QString &path) const
         if (filteredPath.startsWith(package)) {
             // FIXME: ugly hack to make a difference between local files in the same dir
             // package->path does not contain the actual file name
-            qDebug() << "WP prefix" << m_packages[i].contentsPrefixPaths() << m_packages[i].filePath("preferred") << package << filteredPath;
+            qCDebug(IMAGEWALLPAPER) << "prefix" << m_packages[i].contentsPrefixPaths() << m_packages[i].filePath("preferred") << package << filteredPath;
             QStringList ps = m_packages[i].contentsPrefixPaths();
             bool prefixempty = ps.count() == 0;
             if (!prefixempty) {
@@ -257,7 +258,6 @@ int BackgroundListModel::indexOf(const QString &path) const
             //E.X. filteredPath = /usr/share/wallpapers/Next/"
             //m_packages[i].filePath("preferred") = "/usr/share/wallpapers/Next/contents/images/1920x1080.png"
             if ((filteredPath == m_packages[i].filePath("preferred")) || m_packages[i].filePath("preferred").contains(filteredPath)) {
-                qDebug() << "WP TRUE" << (!m_packages[i].contentsPrefixPaths().isEmpty()) << (filteredPath == m_packages[i].filePath("preferred"));
                 return i;
             }
         }
@@ -267,7 +267,7 @@ int BackgroundListModel::indexOf(const QString &path) const
 
 bool BackgroundListModel::contains(const QString &path) const
 {
-    //qDebug() << "WP contains: " << path << indexOf(path).isValid();
+    //qCDebug(IMAGEWALLPAPER) << "WP contains: " << path << indexOf(path).isValid();
     return indexOf(path) >= 0;
 }
 
@@ -344,8 +344,8 @@ QVariant BackgroundListModel::data(const QModelIndex &index, int role) const
         if (m_imageCache->findPixmap(b.filePath("preferred"), &preview)) {
             return preview;
         }
-//         qDebug() << "WP preferred: " << b.filePath("preferred");
-//         qDebug() << "WP screenshot: " << b.filePath("screenshot");
+//         qCDebug(IMAGEWALLPAPER) << "WP preferred: " << b.filePath("preferred");
+//         qCDebug(IMAGEWALLPAPER) << "WP screenshot: " << b.filePath("screenshot");
         QUrl file = QUrl::fromLocalFile(b.filePath("preferred"));
         if (!m_previewJobs.contains(file) && file.isValid()) {
 
@@ -456,7 +456,7 @@ void BackgroundListModel::showPreview(const KFileItem &item, const QPixmap &prev
     }
 
     m_imageCache->insertPixmap(b.filePath("preferred"), preview);
-    //qDebug() << "WP preview size:" << preview.size();
+    //qCDebug(IMAGEWALLPAPER) << "WP preview size:" << preview.size();
     emit dataChanged(index, index);
 }
 
@@ -551,7 +551,7 @@ void BackgroundFinder::run()
         const QFileInfoList files = dir.entryInfoList();
         Q_FOREACH (const QFileInfo &wp, files) {
             if (wp.isDir()) {
-                //qDebug() << "scanning directory" << wp.fileName();
+                //qCDebug(IMAGEWALLPAPER) << "scanning directory" << wp.fileName();
 
                 const QString name = wp.fileName();
                 if (name == QString::fromLatin1(".") || name == QString::fromLatin1("..")) {
@@ -566,7 +566,7 @@ void BackgroundFinder::run()
                         if (!package.filePath("images").isEmpty()) {
                             papersFound << package.path();
                         }
-                        //qDebug() << "adding package" << wp.filePath();
+                        //qCDebug(IMAGEWALLPAPER) << "adding package" << wp.filePath();
                         continue;
                     }
                 }
@@ -574,13 +574,13 @@ void BackgroundFinder::run()
                 // add this to the directories we should be looking at
                 m_paths.append(filePath);
             } else {
-                //qDebug() << "adding image file" << wp.filePath();
+                //qCDebug(IMAGEWALLPAPER) << "adding image file" << wp.filePath();
                 papersFound << wp.filePath();
             }
         }
     }
 
-    //qDebug() << "WP background found!" << papersFound.size() << "in" << i << "dirs, taking" << t.elapsed() << "ms";
+    //qCDebug(IMAGEWALLPAPER) << "WP background found!" << papersFound.size() << "in" << i << "dirs, taking" << t.elapsed() << "ms";
     Q_EMIT backgroundsFound(papersFound, m_token);
     deleteLater();
 }

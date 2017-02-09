@@ -6,6 +6,11 @@ set(image_SRCS
     backgroundlistmodel.cpp
 )
 
+ecm_qt_declare_logging_category(image_SRCS HEADER debug.h
+										   IDENTIFIER IMAGEWALLPAPER
+										   CATEGORY_NAME kde.wallpapers.image
+										   DEFAULT_SEVERITY Info)
+
 add_library(plasma_wallpaper_imageplugin SHARED ${image_SRCS})
 
 target_link_libraries(plasma_wallpaper_imageplugin
