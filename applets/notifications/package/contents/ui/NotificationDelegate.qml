@@ -33,7 +33,7 @@ PlasmaComponents.ListItem {
 
     opacity: 1-Math.abs(x)/width
 
-    enabled: true
+    enabled: model.hasDefaultAction
     checked: notificationItem.containsMouse
 
     Timer {

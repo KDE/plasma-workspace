@@ -92,9 +92,7 @@ PlasmaCore.Dialog {
             if (notificationItem.hasDefaultAction) {
                 // the notifications was clicked, trigger the default action if set
                 notificationItem.action("default")
-            } else {
-                closeNotification(notificationProperties.source)
-                // the popup will be closed in response to sourceRemoved
+                notificationItem.close()
             }
         }
         onContainsMouseChanged: {
@@ -125,7 +123,7 @@ PlasmaCore.Dialog {
             // explicit true/false or else it complains about assigning undefined to bool
             configurable: notificationProperties.configurable && !Settings.isMobile ? true : false
             urls: notificationProperties.urls || []
-            hasDefaultAction: notificationProperties.hasDefaultAction
+            hasDefaultAction: notificationProperties.hasDefaultAction || false
 
             width: Math.round(23 * units.gridUnit)
             maximumTextHeight: theme.mSize(theme.defaultFont).height * 10
