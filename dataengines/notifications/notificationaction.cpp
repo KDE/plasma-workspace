@@ -21,6 +21,7 @@
 
 #include <klocalizedstring.h>
 
+#include <QTimer>
 #include <QDebug>
 
 void NotificationAction::start()
@@ -50,7 +51,10 @@ void NotificationAction::start()
 
     if (operationName() == QLatin1String("invokeAction")) {
         //qDebug() << "invoking action on " << id;
-        emit m_engine->ActionInvoked(id, parameters()[QStringLiteral("actionId")].toString());
+        m_engine->ActionInvoked(id, parameters()[QStringLiteral("actionId")].toString());
+        QTimer::singleShot(0, m_engine, [this, id]() {
+            m_engine->removeSource(QStringLiteral("notification %1").arg(id));
+        });
     } else if (operationName() == QLatin1String("userClosed")) {
         //userClosedNotification deletes the job, so we have to invoke it queued, in this case emitResult() can be called
         m_engine->metaObject()->invokeMethod(m_engine, "removeNotification", Qt::QueuedConnection, Q_ARG(uint, id), Q_ARG(uint, 2));
