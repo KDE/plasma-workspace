@@ -1,6 +1,9 @@
 [Desktop Entry]
 Encoding=UTF-8
 Name=Global Menu
+Name[nl]=Globaal menu
+Name[uk]=Загальне меню
+Name[x-test]=xxGlobal Menuxx
 Icon=show-menu
 Type=Service
 X-KDE-PluginInfo-Author=Kai Uwe Broulik
