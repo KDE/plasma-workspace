@@ -39,5 +39,23 @@ Applet {
         }
     }
 
-    delegate: DoublePlotter {}
+    function formatBitSpeed(value) {
+        if (value > (1024 * 1024)) {
+            return i18nc("%1 is the displayed data transfer speed in megabits per second", "%1 Mbps", (value / (1024 * 1024)).toFixed(1));
+        }
+        if (value > 1024) {
+            return i18nc("%1 is the displayed data transfer speed in kilobits per second", "%1 Kbps", (value / 1024));
+        }
+        if (value > 0) {
+            return i18nc("%1 is the displayed data transfer speed in bits per second", "%1 bps", value);
+        }
+        return value;
+    }
+
+    delegate: DoublePlotter {
+        function formatLabel(data1, data2) {
+            return i18nc("%1 and %2 are values of the same datatype", "%1 | %2", formatBitSpeed(data1.value * 1024 * 8),
+                            formatBitSpeed(data2.value * 1024 * 8));
+        }
+    }
 }
