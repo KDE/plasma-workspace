@@ -30,6 +30,8 @@ namespace Plasma {
     class ContainmentActions;
 }
 
+class QQuickItem;
+
 //This model load the data about available containment actions plugins, such as context menus that can be loaded on mouse click
 //TODO: out of the library?
 class CurrentContainmentActionsModel : public QStandardItemModel
@@ -55,7 +57,7 @@ public:
     Q_INVOKABLE void update(int row, const QString &action, const QString &plugin);
     Q_INVOKABLE void remove(int row);
     Q_INVOKABLE void showConfiguration(int row);
-    Q_INVOKABLE void showAbout(int row);
+    Q_INVOKABLE void showAbout(int row, QQuickItem *ctx = nullptr);
     Q_INVOKABLE void save();
 
 private:

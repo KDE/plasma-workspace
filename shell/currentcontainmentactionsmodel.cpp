@@ -25,6 +25,9 @@
 #include <QDialog>
 #include <QVBoxLayout>
 #include <QDialogButtonBox>
+#include <QQuickItem>
+#include <QQuickWindow>
+#include <QWindow>
 
 #include <kaboutdata.h>
 #include <kaboutapplicationdialog.h>
@@ -220,7 +223,7 @@ void CurrentContainmentActionsModel::showConfiguration(int row)
     configDlg->show();
 }
 
-void CurrentContainmentActionsModel::showAbout(int row)
+void CurrentContainmentActionsModel::showAbout(int row, QQuickItem *ctx)
 {
     const QString action = itemData(index(row, 0)).value(ActionRole).toString();
 
@@ -244,6 +247,12 @@ void CurrentContainmentActionsModel::showAbout(int row)
     KAboutApplicationDialog *aboutDialog = new KAboutApplicationDialog(aboutData, qobject_cast<QWidget*>(parent()));
     aboutDialog->setWindowIcon(QIcon::fromTheme(info.icon()));
     aboutDialog->setAttribute(Qt::WA_DeleteOnClose);
+
+    if (ctx && ctx->window()) {
+        aboutDialog->setWindowModality(Qt::WindowModal);
+        aboutDialog->winId(); // so it creates the windowHandle();
+        aboutDialog->windowHandle()->setTransientParent(ctx->window());
+    }
     aboutDialog->show();
 }
 
