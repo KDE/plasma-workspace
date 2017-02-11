@@ -1,7 +1,10 @@
 [Desktop Entry]
 Encoding=UTF-8
 Name=Global Menu
+Name[ca]=Menú global
+Name[en_GB]=Global Menu
 Name[nl]=Globaal menu
+Name[pt]=Menu Global
 Name[uk]=Загальне меню
 Name[x-test]=xxGlobal Menuxx
 Icon=show-menu
