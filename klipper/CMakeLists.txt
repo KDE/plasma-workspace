@@ -19,11 +19,11 @@ set(libklipper_common_SRCS
     clipcommandprocess.cpp
 )
 
-find_package(KF5Prison 5.25)
+find_package(KF5Prison ${KF5_MIN_VERSION})
 set_package_properties(KF5Prison PROPERTIES DESCRIPTION "Prison library"
                        URL "http://projects.kde.org/prison"
                        TYPE OPTIONAL
-                       PURPOSE "Needed to create mobile barcodes from clipboard data (no stable release currently)"
+                       PURPOSE "Needed to create mobile barcodes from clipboard data"
                       )
 
 set(HAVE_PRISON ${KF5Prison_FOUND})
