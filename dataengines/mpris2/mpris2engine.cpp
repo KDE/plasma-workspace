@@ -32,9 +32,8 @@
 
 Mpris2Engine::Mpris2Engine(QObject* parent,
                                    const QVariantList& args)
-    : Plasma::DataEngine(parent)
+    : Plasma::DataEngine(parent, args)
 {
-    Q_UNUSED(args)
 
     connect(QDBusConnection::sessionBus().interface(), &QDBusConnectionInterface::serviceOwnerChanged,
             this,           &Mpris2Engine::serviceOwnerChanged);

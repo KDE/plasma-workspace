@@ -37,9 +37,8 @@
 #endif
 
 CalendarEngine::CalendarEngine(QObject* parent, const QVariantList& args)
-              : Plasma::DataEngine(parent)
+              : Plasma::DataEngine(parent, args)
 {
-    Q_UNUSED(args);
 }
 
 CalendarEngine::~CalendarEngine()
