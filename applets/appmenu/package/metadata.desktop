@@ -2,9 +2,16 @@
 Encoding=UTF-8
 Name=Global Menu
 Name[ca]=Menú global
+Name[da]=Global menu
 Name[en_GB]=Global Menu
 Name[nl]=Globaal menu
 Name[pt]=Menu Global
+Name[ru]=Меню приложения
+Name[sk]=Globálne menu
+Name[sr]=Глобални мени
+Name[sr@ijekavian]=Глобални мени
+Name[sr@ijekavianlatin]=Globalni meni
+Name[sr@latin]=Globalni meni
 Name[uk]=Загальне меню
 Name[x-test]=xxGlobal Menuxx
 Icon=show-menu
