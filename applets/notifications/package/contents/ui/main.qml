@@ -45,7 +45,6 @@ MouseEventListener {
     LayoutMirroring.enabled: Qt.application.layoutDirection === Qt.RightToLeft
     LayoutMirroring.childrenInherit: true
 
-    property int toolIconSize: UiProperties.toolIconSize
     property int layoutSpacing: UiProperties.layoutSpacing
 
     property real globalProgress: 0

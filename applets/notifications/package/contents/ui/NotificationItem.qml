@@ -55,7 +55,20 @@ MouseArea {
 
     property ListModel actions: ListModel { }
 
-    property bool hasDefaultAction: false;
+    property bool hasDefaultAction: false
+
+    onClicked: {
+        // the MEL would close the notification before the action button
+        // onClicked handler would fire effectively breaking notification actions
+        if (pressedAction()) {
+            return
+        }
+
+        if (hasDefaultAction) {
+            // the notifications was clicked, trigger the default action if set
+            action("default")
+        }
+    }
 
     function pressedAction() {
         for (var i = 0, count = actionRepeater.count; i < count; ++i) {
@@ -224,75 +237,74 @@ MouseArea {
             // height=0 when those are invisible. -1 means "default to implicitHeight"
             Layout.maximumHeight: bodyText.visible || actionsColumn.visible ? -1 : 0
 
-            MouseArea {
-                id: contextMouseArea
-
+            PlasmaExtras.ScrollArea {
+                id: bodyTextScrollArea
                 Layout.alignment: Qt.AlignTop
                 Layout.fillWidth: true
 
                 implicitHeight: maximumTextHeight > 0 ? Math.min(maximumTextHeight, bodyText.paintedHeight) : bodyText.paintedHeight
+                visible: bodyText.length > 0
 
-                acceptedButtons: Qt.RightButton
-                preventStealing: true
+                flickableItem.boundsBehavior: Flickable.StopAtBounds
+                flickableItem.flickableDirection: Flickable.VerticalFlick
+                horizontalScrollBarPolicy: Qt.ScrollBarAlwaysOff
 
-                onPressed: contextMenu.open(mouse.x, mouse.y)
+                TextEdit {
+                    id: bodyText
+                    width: bodyTextScrollArea.width
+                    enabled: !Settings.isMobile
 
-                PlasmaComponents.ContextMenu {
-                    id: contextMenu
-                    visualParent: contextMouseArea
+                    color: PlasmaCore.ColorScope.textColor
+                    selectedTextColor: theme.viewBackgroundColor
+                    selectionColor: theme.viewFocusColor
+                    font.capitalization: theme.defaultFont.capitalization
+                    font.family: theme.defaultFont.family
+                    font.italic: theme.defaultFont.italic
+                    font.letterSpacing: theme.defaultFont.letterSpacing
+                    font.pointSize: theme.defaultFont.pointSize
+                    font.strikeout: theme.defaultFont.strikeout
+                    font.underline: theme.defaultFont.underline
+                    font.weight: theme.defaultFont.weight
+                    font.wordSpacing: theme.defaultFont.wordSpacing
+                    renderType: Text.NativeRendering
+                    selectByMouse: true
+                    readOnly: true
+                    wrapMode: Text.Wrap
+                    textFormat: TextEdit.RichText
 
-                    PlasmaComponents.MenuItem {
-                        text: i18n("Copy")
-                        onClicked: bodyText.copy()
+                    onLinkActivated: Qt.openUrlExternally(link)
+
+                    // ensure selecting text scrolls the view as needed...
+                    onCursorRectangleChanged: {
+                        var flick = bodyTextScrollArea.flickableItem
+                        if (flick.contentY >= cursorRectangle.y) {
+                            flick.contentY = cursorRectangle.y
+                        } else if (flick.contentY + flick.height <= cursorRectangle.y + cursorRectangle.height) {
+                            flick.contentY = cursorRectangle.y + cursorRectangle.height - flick.height
+                        }
                     }
+                    MouseArea {
+                        anchors.fill: parent
+                        acceptedButtons: Qt.RightButton | Qt.LeftButton
 
-                    PlasmaComponents.MenuItem {
-                        text: i18n("Select All")
-                        onClicked: bodyText.selectAll()
-                    }
-                }
+                        onClicked: {
+                            if (mouse.button == Qt.RightButton)
+                                contextMenu.open(mouse.x, mouse.y)
+                            else {
+                                notificationItem.clicked(mouse)
+                            }
+                        }
 
-                PlasmaExtras.ScrollArea {
-                    id: bodyTextScrollArea
-                    anchors.fill: parent
-                    visible: bodyText.length > 0
+                        PlasmaComponents.ContextMenu {
+                            id: contextMenu
+                            visualParent: parent
 
-                    flickableItem.boundsBehavior: Flickable.StopAtBounds
-                    flickableItem.flickableDirection: Flickable.VerticalFlick
-                    horizontalScrollBarPolicy: Qt.ScrollBarAlwaysOff
-
-                    TextEdit {
-                        id: bodyText
-                        width: bodyTextScrollArea.width
-                        enabled: !Settings.isMobile
-
-                        color: PlasmaCore.ColorScope.textColor
-                        selectedTextColor: theme.viewBackgroundColor
-                        selectionColor: theme.viewFocusColor
-                        font.capitalization: theme.defaultFont.capitalization
-                        font.family: theme.defaultFont.family
-                        font.italic: theme.defaultFont.italic
-                        font.letterSpacing: theme.defaultFont.letterSpacing
-                        font.pointSize: theme.defaultFont.pointSize
-                        font.strikeout: theme.defaultFont.strikeout
-                        font.underline: theme.defaultFont.underline
-                        font.weight: theme.defaultFont.weight
-                        font.wordSpacing: theme.defaultFont.wordSpacing
-                        renderType: Text.NativeRendering
-                        selectByMouse: true
-                        readOnly: true
-                        wrapMode: Text.Wrap
-                        textFormat: TextEdit.RichText
-
-                        onLinkActivated: Qt.openUrlExternally(link)
-
-                        // ensure selecting text scrolls the view as needed...
-                        onCursorRectangleChanged: {
-                            var flick = bodyTextScrollArea.flickableItem
-                            if (flick.contentY >= cursorRectangle.y) {
-                                flick.contentY = cursorRectangle.y
-                            } else if (flick.contentY + flick.height <= cursorRectangle.y + cursorRectangle.height) {
-                                flick.contentY = cursorRectangle.y + cursorRectangle.height - flick.height
+                            PlasmaComponents.MenuItem {
+                                text: i18n("Copy")
+                                onClicked: {
+                                    bodyText.selectAll()
+                                    bodyText.copy()
+                                }
                             }
                         }
                     }

@@ -215,8 +215,6 @@ Column {
     Repeater {
         id: notificationsRepeater
         model: notificationsModel
-        delegate: NotificationDelegate {
-            toolIconSize: notificationsApplet.toolIconSize
-        }
+        delegate: NotificationDelegate {}
     }
 }

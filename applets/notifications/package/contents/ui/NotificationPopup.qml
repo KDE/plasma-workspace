@@ -72,36 +72,14 @@ PlasmaCore.Dialog {
         }
     }
 
-    mainItem: KQuickControlsAddons.MouseEventListener {
-        id: root
+    mainItem: NotificationItem {
+        id: notificationItem
+        hoverEnabled: true
+
         LayoutMirroring.enabled: Qt.application.layoutDirection === Qt.RightToLeft
         LayoutMirroring.childrenInherit: true
 
-        width: notificationItem.width
-        height: notificationItem.implicitHeight
-
-        hoverEnabled: true
-
-        onClicked: {
-            // the MEL would close the notification before the action button
-            // onClicked handler would fire effectively breaking notification actions
-            if (notificationItem.pressedAction()) {
-                return
-            }
-
-            if (notificationItem.hasDefaultAction) {
-                // the notifications was clicked, trigger the default action if set
-                notificationItem.action("default")
-                notificationItem.close()
-            }
-        }
-        onContainsMouseChanged: {
-            if (containsMouse) {
-                notificationTimer.stop()
-            } else if (!containsMouse && visible) {
-                notificationTimer.restart()
-            }
-        }
+        height: implicitHeight
 
         Timer {
             id: notificationTimer
@@ -112,39 +90,41 @@ PlasmaCore.Dialog {
                 notificationPopup.notificationTimeout();
             }
         }
-
-        NotificationItem {
-            id: notificationItem
-
-            summary: notificationProperties.summary || ""
-            body: notificationProperties.body || ""
-            icon: notificationProperties.appIcon || ""
-            image: notificationProperties.image
-            // explicit true/false or else it complains about assigning undefined to bool
-            configurable: notificationProperties.configurable && !Settings.isMobile ? true : false
-            urls: notificationProperties.urls || []
-            hasDefaultAction: notificationProperties.hasDefaultAction || false
-
-            width: Math.round(23 * units.gridUnit)
-            maximumTextHeight: theme.mSize(theme.defaultFont).height * 10
-
-            onClose: {
-                closeNotification(notificationProperties.source)
-                // the popup will be closed in response to sourceRemoved
-            }
-            onConfigure: {
-                configureNotification(notificationProperties.appRealName, notificationProperties.eventId)
-                notificationPositioner.closePopup(notificationProperties.source);
-            }
-            onAction: {
-                executeAction(notificationProperties.source, actionId)
-                actions.clear()
-            }
-            onOpenUrl: {
-                Qt.openUrlExternally(url)
-                notificationPositioner.closePopup(notificationProperties.source);
+        onContainsMouseChanged: {
+            if (containsMouse) {
+                notificationTimer.stop()
+            } else if (!containsMouse && visible) {
+                notificationTimer.restart()
             }
         }
-    }
 
+        summary: notificationProperties.summary || ""
+        body: notificationProperties.body || ""
+        icon: notificationProperties.appIcon || ""
+        image: notificationProperties.image
+        // explicit true/false or else it complains about assigning undefined to bool
+        configurable: notificationProperties.configurable && !Settings.isMobile ? true : false
+        urls: notificationProperties.urls || []
+        hasDefaultAction: notificationProperties.hasDefaultAction || false
+
+        width: Math.round(23 * units.gridUnit)
+        maximumTextHeight: theme.mSize(theme.defaultFont).height * 10
+
+        onClose: {
+            closeNotification(notificationProperties.source)
+            // the popup will be closed in response to sourceRemoved
+        }
+        onConfigure: {
+            configureNotification(notificationProperties.appRealName, notificationProperties.eventId)
+            notificationPositioner.closePopup(notificationProperties.source);
+        }
+        onAction: {
+            executeAction(notificationProperties.source, actionId)
+            actions.clear()
+        }
+        onOpenUrl: {
+            Qt.openUrlExternally(url)
+            notificationPositioner.closePopup(notificationProperties.source);
+        }
+    }
 }

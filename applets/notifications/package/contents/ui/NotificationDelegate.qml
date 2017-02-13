@@ -28,9 +28,6 @@ PlasmaComponents.ListItem {
     id: notificationItem
     width: popupFlickable.width
 
-    property int layoutSpacing: units.smallSpacing
-    property int toolIconSize: units.iconSizes.smallMedium
-
     opacity: 1-Math.abs(x)/width
 
     enabled: model.hasDefaultAction
@@ -49,6 +46,7 @@ PlasmaComponents.ListItem {
     MouseArea {
         width: parent.width
         height: childrenRect.height
+        acceptedButtons: Qt.NoButtons
 
         drag {
             target: notificationItem
@@ -66,14 +64,6 @@ PlasmaComponents.ListItem {
                 removeAnimation.running = true
             } else {
                 resetAnimation.running = true
-            }
-        }
-
-        onClicked: {
-            if (model.hasDefaultAction) {
-                executeAction(model.source, "default")
-            } else {
-                notification.close();
             }
         }
 
@@ -126,6 +116,7 @@ PlasmaComponents.ListItem {
             // model.actions JS array is implicitly turned into a ListModel which we can assign directly
             actions: model.actions
             created: model.created
+            hasDefaultAction: model.hasDefaultAction
             urls: {
                 // QML ListModel tries to be smart and turns our urls Array into a dict with index as key...
                 var urls = []
