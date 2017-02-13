@@ -161,7 +161,7 @@ public Q_SLOTS:
      */
     void addApplet(const QString &pluginName);
     void openWidgetFile();
-    void downloadWidgets(const QString &type);
+    void downloadWidgets();
 
 Q_SIGNALS:
     void showSpecialFiltersChanged() const;

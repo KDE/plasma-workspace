@@ -208,13 +208,9 @@ QList <QObject *>  WidgetExplorer::widgetsMenuActions()
 {
     QList <QObject *> actionList;
 
-    QSignalMapper *mapper = new QSignalMapper(this);
-    QObject::connect(mapper, SIGNAL(mapped(QString)), this, SLOT(downloadWidgets(QString)));
-
     WidgetAction *action = new WidgetAction(QIcon::fromTheme(QStringLiteral("applications-internet")),
                                   i18n("Download New Plasma Widgets"), this);
-    QObject::connect(action, SIGNAL(triggered(bool)), mapper, SLOT(map()));
-    mapper->setMapping(action, QString());
+    connect(action, &QAction::triggered, this, &WidgetExplorer::downloadWidgets);
     actionList << action;
 
     action = new WidgetAction(this);
@@ -439,9 +435,8 @@ void WidgetExplorer::immutabilityChanged(Plasma::Types::ImmutabilityType type)
 
 
 
-void WidgetExplorer::downloadWidgets(const QString &type)
+void WidgetExplorer::downloadWidgets()
 {
-    Q_UNUSED(type);
     if (!d->newStuffDialog) {
         d->newStuffDialog = new KNS3::DownloadDialog( QLatin1String("plasmoids.knsrc") );
         d->newStuffDialog.data()->setWindowTitle(i18n("Download New Plasma Widgets"));
