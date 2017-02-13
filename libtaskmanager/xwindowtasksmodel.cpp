@@ -471,6 +471,8 @@ QIcon XWindowTasksModel::Private::icon(WId window)
     icon.addPixmap(KWindowSystem::icon(window, KIconLoader::SizeMedium, KIconLoader::SizeMedium, false));
     icon.addPixmap(KWindowSystem::icon(window, KIconLoader::SizeLarge, KIconLoader::SizeLarge, false));
 
+    appDataCache[window].icon = icon;
+
     return icon;
 }
 
