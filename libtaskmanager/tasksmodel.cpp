@@ -1511,9 +1511,8 @@ void TasksModel::syncLaunchers()
 
         std::tie(launcherUrl, activities) = deserializeLauncher(launcherUrlStr);
 
-        for (int i = 0; i < d->launcherTasksModel->rowCount(); ++i) {
-            const QUrl &rowLauncherUrl =
-                d->launcherTasksModel->index(i, 0).data(AbstractTasksModel::LauncherUrlWithoutIcon).toUrl();
+        for (int i = 0; i < rowCount(); ++i) {
+            const QUrl &rowLauncherUrl = index(i, 0).data(AbstractTasksModel::LauncherUrlWithoutIcon).toUrl();
 
             if (launcherUrlsMatch(launcherUrl, rowLauncherUrl, IgnoreQueryItems)) {
                 row = i;
@@ -1547,7 +1546,6 @@ void TasksModel::syncLaunchers()
             d->sortedPreFilterRows.replace(sortMapIndices.at(i), preFilterRows.at(i));
         }
     }
-
     setLauncherList(sortedShownLaunchers.values());
     d->launcherSortingDirty = false;
 }
