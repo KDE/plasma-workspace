@@ -16,6 +16,7 @@ Name[sr@ijekavianlatin]=Globalni meni
 Name[sr@latin]=Globalni meni
 Name[uk]=Загальне меню
 Name[x-test]=xxGlobal Menuxx
+Comment=Classic menu for finding and starting applications
 Icon=show-menu
 Type=Service
 X-KDE-PluginInfo-Author=Kai Uwe Broulik
