@@ -228,7 +228,6 @@ void PanelView::setLength(int value)
     m_contentLength = value;
 
     resizePanel();
-    emit m_corona->availableScreenRegionChanged();
 }
 
 int PanelView::maximumLength() const
@@ -708,6 +707,8 @@ void PanelView::resizeEvent(QResizeEvent *ev)
         m_shellSurface->setPosition(pos);
     }
     m_strutsTimer.start(STRUTSTIMERDELAY);
+    emit m_corona->availableScreenRegionChanged();
+
     PlasmaQuick::ContainmentView::resizeEvent(ev);
 }
 
