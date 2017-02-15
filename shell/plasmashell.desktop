@@ -13,6 +13,7 @@ Name[el]=Χώρος επιφάνειας εργασίας Plasma
 Name[en_GB]=Plasma Desktop Workspace
 Name[es]=Espacio de trabajo del escritorio Plasma
 Name[et]=Plasma töölaua töötsoon
+Name[eu]=Plasma mahaigainaren lanerako guneak
 Name[fi]=Plasma-työpöytä
 Name[fr]=Espace de travail Plasma
 Name[ga]=Spás Oibre Deisce Plasma
