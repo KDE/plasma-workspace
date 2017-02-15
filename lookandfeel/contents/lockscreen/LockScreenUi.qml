@@ -167,6 +167,13 @@ PlasmaCore.ColorScope {
                         visible: (sessionsModel.count > 0 || sessionsModel.canStartNewSession) && sessionsModel.canSwitchUser
                     }
                 ]
+
+                Loader {
+                    Layout.fillWidth: true
+                    Layout.preferredHeight: item ? item.implicitHeight : 0
+                    active: true // TODO configurable
+                    source: "MediaControls.qml"
+                }
             }
         }
 
