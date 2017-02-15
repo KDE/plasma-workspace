@@ -33,7 +33,7 @@ Item {
             bottom: parent.bottom
         }
         color: theme.backgroundColor
-        width: label.width + units.devicePixelRatio * 2
+        width: Math.max(units.gridUnit, label.width + units.devicePixelRatio * 2)
         height: label.height
         radius: units.devicePixelRatio * 3
 

@@ -71,7 +71,7 @@ MouseArea {
 
                 BadgeOverlay {
                     anchors.fill: batteryIcon
-                    text: i18nc("battery percentage below battery icon", "%1%", percent)
+                    text: batteryContainer.hasBattery ? i18nc("battery percentage below battery icon", "%1%", percent) : i18nc("short symbol to signal there is no battery curently available", "-")
                     icon: batteryIcon
                     visible: plasmoid.configuration.showPercentage
                 }
