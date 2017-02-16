@@ -808,6 +808,22 @@ bool TasksModel::Private::lessThan(const QModelIndex &left, const QModelIndex &r
             if (sortMode == SortDisabled) {
                 return (left.row() < right.row());
             } else {
+                // The overall goal of alphabetic sorting is to sort tasks belonging to the
+                // same app together, while sorting the resulting sets alphabetically among
+                // themselves by the app name. The following code tries to achieve this by
+                // going for AppName first, and falling back to DisplayRole - which for
+                // window-type tasks generally contains the window title - if AppName is
+                // not available. When comparing tasks with identical resulting sort strings,
+                // we sort them by the source model order (i.e. insertion/creation). Older
+                // versions of this code compared tasks by a concatenation of AppName and
+                // DisplayRole at all times, but always sorting by the window title does more
+                // than our goal description - and can cause tasks within an app's set to move
+                // around when window titles change, which is a nuisance for users (especially
+                // in case of tabbed apps that have the window title reflect the active tab,
+                // e.g. web browsers). To recap, the common case is "sort by AppName, then
+                // insertion order", only swapping out AppName for DisplayRole (i.e. window
+                // title) when necessary.
+
                 QString leftSortString = left.data(AbstractTasksModel::AppName).toString();
 
                 if (leftSortString.isEmpty()) {
