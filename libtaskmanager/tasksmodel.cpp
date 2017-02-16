@@ -394,9 +394,13 @@ void TasksModel::Private::initModels()
             Q_UNUSED(last)
 
             if (launcherCheckNeeded) {
-                QMetaObject::invokeMethod(launcherTasksModel, "dataChanged",
-                    Q_ARG(QModelIndex, launcherTasksModel->index(0, 0)),
-                    Q_ARG(QModelIndex, launcherTasksModel->index(launcherTasksModel->rowCount() - 1, 0)));
+                for (int i = 0; i < filterProxyModel->rowCount(); ++i) {
+                    const QModelIndex &idx = filterProxyModel->index(i, 0);
+
+                    if (idx.data(AbstractTasksModel::IsLauncher).toBool()) {
+                        filterProxyModel->dataChanged(idx, idx);
+                    }
+                }
 
                 launcherCheckNeeded = false;
             }
