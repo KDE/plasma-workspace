@@ -85,7 +85,7 @@ PlasmaCore.Dialog {
             }
 
             closeNotification(notificationProperties.source)
-            notificationPopup.hide()
+            // the popup will be closed in response to sourceRemoved
         }
         onContainsMouseChanged: {
             if (containsMouse) {
@@ -122,16 +122,15 @@ PlasmaCore.Dialog {
 
             onClose: {
                 closeNotification(notificationProperties.source)
-                notificationPopup.hide()
+                // the popup will be closed in response to sourceRemoved
             }
             onConfigure: {
                 configureNotification(notificationProperties.appRealName, notificationProperties.eventId)
-                notificationPopup.hide()
+                notificationPositioner.closePopup(notificationProperties.source);
             }
             onAction: {
                 executeAction(notificationProperties.source, actionId)
                 actions.clear()
-                notificationPopup.hide()
             }
         }
     }
