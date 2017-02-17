@@ -307,23 +307,18 @@ void XWindowTasksModel::Private::transientChanged(WId window, NET::Properties pr
         const KWindowInfo info(window, NET::WMState | NET::XAWMState, NET::WM2TransientFor);
 
         if (info.hasState(NET::DemandsAttention)) {
-            WId oldLeader = info.transientFor();
             QMutableHashIterator<WId, WId> i(transientsDemandingAttention);
 
-            while (i.hasNext()) {
-                i.next();
-
-                if (i.value() == window) {
-                    oldLeader = i.key();
-                    i.remove();
-                }
-            }
-
-            if (oldLeader != 0) {
+            if (i.findNext(window)) {
                 const WId leader = info.transientFor();
-                transientsDemandingAttention.insertMulti(leader, window);
-                dataChanged(oldLeader, QVector<int>{IsDemandingAttention});
-                dataChanged(leader, QVector<int>{IsDemandingAttention});
+                const WId oldLeader = i.key();
+
+                if (leader != oldLeader) {
+                    i.remove();
+                    transientsDemandingAttention.insertMulti(leader, window);
+                    dataChanged(oldLeader, QVector<int>{IsDemandingAttention});
+                    dataChanged(leader, QVector<int>{IsDemandingAttention});
+                }
             }
         }
     }
