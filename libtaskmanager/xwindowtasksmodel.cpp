@@ -64,7 +64,7 @@ public:
 
     QVector<WId> windows;
     QSet<WId> transients;
-    QHash<WId, WId> transientsDemandingAttention;
+    QMultiHash<WId, WId> transientsDemandingAttention;
     QHash<WId, KWindowInfo*> windowInfoCache;
     QHash<WId, AppData> appDataCache;
     QHash<WId, QRect> delegateGeometries;
@@ -258,22 +258,10 @@ void XWindowTasksModel::Private::removeWindow(WId window)
     } else { // Could be a transient.
         // Removing a transient might change the demands attention state of the leader.
         if (transients.remove(window)) {
-            QMutableHashIterator<WId, WId> i(transientsDemandingAttention);
-            WId leader = 0;
+            const WId leader = transientsDemandingAttention.key(window, XCB_WINDOW_NONE);
 
-            while (i.hasNext()) {
-                i.next();
-
-                if (i.value() == window) {
-                    if (leader == 0) {
-                        leader = i.key();
-                    }
-
-                    i.remove();
-                }
-            }
-
-            if (leader != 0) {
+            if (leader != XCB_WINDOW_NONE) {
+                transientsDemandingAttention.remove(leader, window);
                 dataChanged(leader, QVector<int>{IsDemandingAttention});
             }
         }
@@ -308,14 +296,13 @@ void XWindowTasksModel::Private::transientChanged(WId window, NET::Properties pr
         const KWindowInfo info(window, NET::WMState | NET::XAWMState, NET::WM2TransientFor);
 
         if (info.hasState(NET::DemandsAttention)) {
-            QMutableHashIterator<WId, WId> i(transientsDemandingAttention);
+            const WId oldLeader = transientsDemandingAttention.key(window, XCB_WINDOW_NONE);
 
-            if (i.findNext(window)) {
+            if (oldLeader != XCB_WINDOW_NONE) {
                 const WId leader = info.transientFor();
-                const WId oldLeader = i.key();
 
                 if (leader != oldLeader) {
-                    i.remove();
+                    transientsDemandingAttention.remove(oldLeader, window);
                     transientsDemandingAttention.insertMulti(leader, window);
                     dataChanged(oldLeader, QVector<int>{IsDemandingAttention});
                     dataChanged(leader, QVector<int>{IsDemandingAttention});
