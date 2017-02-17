@@ -315,8 +315,8 @@ void XWindowTasksModel::Private::transientChanged(WId window, NET::Properties pr
                 i.next();
 
                 if (i.value() == window) {
-                    i.remove();
                     oldLeader = i.key();
+                    i.remove();
                 }
             }
 
