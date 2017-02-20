@@ -20,7 +20,7 @@
 #ifndef KIO_REMOTE_H
 #define KIO_REMOTE_H
 
-#include <kio/slavebase.h>
+#include <KIO/SlaveBase>
 #include "remoteimpl.h"
 
 class RemoteProtocol : public KIO::SlaveBase

@@ -18,11 +18,11 @@
 
 #include "remotedirnotify.h"
 
-#include "../debug.h"
-#include <kdirnotify.h>
+#include <KDirNotify>
 #include <KDirWatch>
 
-#include <QtDBus/QtDBus>
+#include <QStandardPaths>
+#include <QUrl>
 
 RemoteDirNotify::RemoteDirNotify()
 {

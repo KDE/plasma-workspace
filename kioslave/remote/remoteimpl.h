@@ -20,8 +20,7 @@
 #ifndef REMOTEIMPL_H
 #define REMOTEIMPL_H
 
-#include <kio/global.h>
-#include <kio/job.h>
+#include <KIO/UDSEntry>
 #include <QUrl>
 
 class RemoteImpl

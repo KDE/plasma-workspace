@@ -19,7 +19,7 @@
 #ifndef REMOTEDIRNOTIFYMODULE_H
 #define REMOTEDIRNOTIFYMODULE_H
 
-#include <kdedmodule.h>
+#include <KDEDModule>
 
 #include "remotedirnotify.h"
 

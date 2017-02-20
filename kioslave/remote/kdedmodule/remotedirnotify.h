@@ -19,8 +19,7 @@
 #ifndef REMOTEDIRNOTIFY_H
 #define REMOTEDIRNOTIFY_H
 
-#include <QUrl>
-#include <QtCore/QObject>
+#include <QObject>
 
 class KDirWatch;
 

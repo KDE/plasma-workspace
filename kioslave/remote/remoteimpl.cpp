@@ -20,10 +20,10 @@
 #include "remoteimpl.h"
 
 #include "debug.h"
-#include <kdesktopfile.h>
-#include <kservice.h>
-#include <kconfiggroup.h>
+#include <KConfigGroup>
+#include <KDesktopFile>
 #include <KLocalizedString>
+#include <KService>
 
 #include <QDir>
 #include <QFile>
