@@ -592,7 +592,11 @@ QUrl XWindowTasksModel::Private::windowUrl(WId window)
                             continue;
                         }
 
-                        const QString rewrittenString = ruleGroup.readEntry(QStringLiteral("Target")).arg(actualMatch);
+                        QString rewrittenString = ruleGroup.readEntry(QStringLiteral("Target")).arg(actualMatch);
+                        // If no "Target" is provided, instead assume the matched property (ClassClass/ClassName).
+                        if (rewrittenString.isEmpty()) {
+                            rewrittenString = matchProperty;
+                        }
 
                         services = KServiceTypeTrader::self()->query(QStringLiteral("Application"), QStringLiteral("exist Exec and ('%1' =~ %2)").arg(rewrittenString, serviceSearchIdentifier));
 

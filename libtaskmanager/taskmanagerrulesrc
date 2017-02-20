@@ -17,32 +17,27 @@ ManualOnly=Wine
 
 [Rewrite Rules][google-chrome][1]
 Property=ClassName
-Identifier=DesktopEntryName
+Identifier=StartupWMClass
 Match=(?<=crx_)(?'match'[a-z]+)
-Target=chrome-%1-default
 
 # Google changed the class to be "Google-chrome" around version 54
 [Rewrite Rules][Google-chrome][1]
 Property=ClassName
-Identifier=DesktopEntryName
+Identifier=StartupWMClass
 Match=(?<=crx_)(?'match'[a-z]+)
-Target=chrome-%1-default
 
 [Rewrite Rules][chromium][1]
 Property=ClassName
-Identifier=DesktopEntryName
+Identifier=StartupWMClass
 Match=(?<=crx_)(?'match'[a-z]+)
-Target=chrome-%1-default
 
 [Rewrite Rules][chromium-browser][1]
 Property=ClassName
-Identifier=DesktopEntryName
+Identifier=StartupWMClass
 Match=(?<=crx_)(?'match'[a-z]+)
-Target=chrome-%1-default
 
 # Chromium changed the class too
 [Rewrite Rules][Chromium][1]
 Property=ClassName
-Identifier=DesktopEntryName
+Identifier=StartupWMClass
 Match=(?<=crx_)(?'match'[a-z]+)
-Target=chrome-%1-default
