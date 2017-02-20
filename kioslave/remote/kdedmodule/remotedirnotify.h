@@ -22,6 +22,8 @@
 #include <QUrl>
 #include <QtCore/QObject>
 
+class KDirWatch;
+
 class RemoteDirNotify : public QObject
 {
     Q_OBJECT
@@ -30,14 +32,10 @@ public:
     RemoteDirNotify();
 
 private slots:
-    void FilesAdded(const QString &directory);
-    void FilesRemoved(const QStringList &fileList);
-    void FilesChanged(const QStringList &fileList);
+    void slotRemoteChanged();
 
 private:
-    QUrl toRemoteURL(const QUrl &url);
-    QList<QUrl> toRemoteURLList(const QStringList &list);
-    QUrl m_baseURL;
+    KDirWatch *m_dirWatch;
 };
 
 #endif
