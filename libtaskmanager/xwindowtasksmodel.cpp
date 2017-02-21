@@ -517,6 +517,7 @@ QUrl XWindowTasksModel::Private::windowUrl(WId window)
         KConfigGroup grp(rulesConfig, "Mapping");
         KConfigGroup set(rulesConfig, "Settings");
 
+        // Evaluate MatchCommandLineFirst directives from config first.
         // Some apps have different launchers depending upon command line ...
         QStringList matchCommandLineFirst = set.readEntry("MatchCommandLineFirst", QStringList());
 
@@ -531,15 +532,15 @@ QUrl XWindowTasksModel::Private::windowUrl(WId window)
             services = servicesFromPid(pid);
         }
 
-        // If the user has manually set a mapping, respect this first...
-        QString mapped(grp.readEntry(classClass + "::" + className, QString()));
-
-        if (mapped.endsWith(QLatin1String(".desktop"))) {
-            url = QUrl(mapped);
-            return url;
-        }
-
         if (!classClass.isEmpty()) {
+            // Evaluate any mapping rules that map to a specific .desktop file.
+            QString mapped(grp.readEntry(classClass + "::" + className, QString()));
+
+            if (mapped.endsWith(QLatin1String(".desktop"))) {
+                url = QUrl(mapped);
+                return url;
+            }
+
             if (mapped.isEmpty()) {
                 mapped = grp.readEntry(classClass, QString());
 
@@ -557,75 +558,95 @@ QUrl XWindowTasksModel::Private::windowUrl(WId window)
                 return url;
             }
 
-            KConfigGroup rewriteRulesGroup(rulesConfig, QStringLiteral("Rewrite Rules"));
-            if (rewriteRulesGroup.hasGroup(classClass)) {
-                KConfigGroup rewriteGroup(&rewriteRulesGroup, classClass);
+            // Try matching both WM_CLASS instance and general class against StartupWMClass.
+            // We do this before evaluating the mapping rules further, because StartupWMClass
+            // is essentially a mapping rule, and we expect it to be set deliberately and
+            // sensibly to instruct us what to do. Also, mapping rules
+            //
+            // StartupWMClass=STRING
+            //
+            //   If true, it is KNOWN that the application will map at least one
+            //   window with the given string as its WM class or WM name hint.
+            //
+            // Source: https://specifications.freedesktop.org/startup-notification-spec/startup-notification-0.1.txt
+            if (services.empty()) {
+                services = KServiceTypeTrader::self()->query(QStringLiteral("Application"), QStringLiteral("exist Exec and ('%1' =~ StartupWMClass)").arg(classClass));
+            }
 
-                const QStringList &rules = rewriteGroup.groupList();
-                for (const QString &rule : rules) {
-                    KConfigGroup ruleGroup(&rewriteGroup, rule);
+            if (services.empty()) {
+                services = KServiceTypeTrader::self()->query(QStringLiteral("Application"), QStringLiteral("exist Exec and ('%1' =~ StartupWMClass)").arg(className));
+            }
 
-                    const QString propertyConfig = ruleGroup.readEntry(QStringLiteral("Property"), QString());
+            // Evaluate rewrite rules from config.
+            if (services.empty()) {
+                KConfigGroup rewriteRulesGroup(rulesConfig, QStringLiteral("Rewrite Rules"));
+                if (rewriteRulesGroup.hasGroup(classClass)) {
+                    KConfigGroup rewriteGroup(&rewriteRulesGroup, classClass);
 
-                    QString matchProperty;
-                    if (propertyConfig == QLatin1String("ClassClass")) {
-                        matchProperty = classClass;
-                    } else if (propertyConfig == QLatin1String("ClassName")) {
-                        matchProperty = className;
-                    }
+                    const QStringList &rules = rewriteGroup.groupList();
+                    for (const QString &rule : rules) {
+                        KConfigGroup ruleGroup(&rewriteGroup, rule);
 
-                    if (matchProperty.isEmpty()) {
-                        continue;
-                    }
+                        const QString propertyConfig = ruleGroup.readEntry(QStringLiteral("Property"), QString());
 
-                    const QString serviceSearchIdentifier = ruleGroup.readEntry(QStringLiteral("Identifier"), QString());
-                    if (serviceSearchIdentifier.isEmpty()) {
-                        continue;
-                    }
+                        QString matchProperty;
+                        if (propertyConfig == QLatin1String("ClassClass")) {
+                            matchProperty = classClass;
+                        } else if (propertyConfig == QLatin1String("ClassName")) {
+                            matchProperty = className;
+                        }
 
-                    QRegularExpression regExp(ruleGroup.readEntry(QStringLiteral("Match")));
-                    const auto match = regExp.match(matchProperty);
-
-                    if (match.hasMatch()) {
-                        const QString actualMatch = match.captured(QStringLiteral("match"));
-                        if (actualMatch.isEmpty()) {
+                        if (matchProperty.isEmpty()) {
                             continue;
                         }
 
-                        QString rewrittenString = ruleGroup.readEntry(QStringLiteral("Target")).arg(actualMatch);
-                        // If no "Target" is provided, instead assume the matched property (ClassClass/ClassName).
-                        if (rewrittenString.isEmpty()) {
-                            rewrittenString = matchProperty;
+                        const QString serviceSearchIdentifier = ruleGroup.readEntry(QStringLiteral("Identifier"), QString());
+                        if (serviceSearchIdentifier.isEmpty()) {
+                            continue;
                         }
 
-                        services = KServiceTypeTrader::self()->query(QStringLiteral("Application"), QStringLiteral("exist Exec and ('%1' =~ %2)").arg(rewrittenString, serviceSearchIdentifier));
+                        QRegularExpression regExp(ruleGroup.readEntry(QStringLiteral("Match")));
+                        const auto match = regExp.match(matchProperty);
 
-                        if (!services.isEmpty()) {
-                            break;
+                        if (match.hasMatch()) {
+                            const QString actualMatch = match.captured(QStringLiteral("match"));
+                            if (actualMatch.isEmpty()) {
+                                continue;
+                            }
+
+                            QString rewrittenString = ruleGroup.readEntry(QStringLiteral("Target")).arg(actualMatch);
+                            // If no "Target" is provided, instead assume the matched property (ClassClass/ClassName).
+                            if (rewrittenString.isEmpty()) {
+                                rewrittenString = matchProperty;
+                            }
+
+                            services = KServiceTypeTrader::self()->query(QStringLiteral("Application"), QStringLiteral("exist Exec and ('%1' =~ %2)").arg(rewrittenString, serviceSearchIdentifier));
+
+                            if (!services.isEmpty()) {
+                                break;
+                            }
                         }
                     }
                 }
             }
 
+            // Try matching mapped name against DesktopEntryName.
             if (!mapped.isEmpty() && services.empty()) {
                 services = KServiceTypeTrader::self()->query(QStringLiteral("Application"), QStringLiteral("exist Exec and ('%1' =~ DesktopEntryName)").arg(mapped));
             }
 
+            // Try matching mapped name against 'Name'.
             if (!mapped.isEmpty() && services.empty()) {
                 services = KServiceTypeTrader::self()->query(QStringLiteral("Application"), QStringLiteral("exist Exec and ('%1' =~ Name)").arg(mapped));
             }
 
-            // To match other docks (docky, unity, etc.) attempt to match on DesktopEntryName first ...
+            // Try matching WM_CLASS general class against DesktopEntryName.
             if (services.empty()) {
                 services = KServiceTypeTrader::self()->query(QStringLiteral("Application"), QStringLiteral("exist Exec and ('%1' =~ DesktopEntryName)").arg(classClass));
             }
 
-            // Try StartupWMClass.
-            if (services.empty()) {
-                services = KServiceTypeTrader::self()->query(QStringLiteral("Application"), QStringLiteral("exist Exec and ('%1' =~ StartupWMClass)").arg(classClass));
-            }
-
-            // Try 'Name' - unfortunately this can be translated, so has a good chance of failing! (As it does for KDE's own "System Settings" (even in English!!))
+            // Try matching WM_CLASS general class against 'Name'.
+            // This has a shaky chance of success as WM_CLASS is untranslated, but 'Name' may be localized.
             if (services.empty()) {
                 services = KServiceTypeTrader::self()->query(QStringLiteral("Application"), QStringLiteral("exist Exec and ('%1' =~ Name)").arg(classClass));
             }

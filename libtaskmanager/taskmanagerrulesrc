@@ -3,41 +3,8 @@ Gimp-2.8=GIMP
 Google-chrome=Google Chrome
 Google-chrome-stable=Google Chrome
 Systemsettings=System Settings
-libreoffice-base=LibreOffice Base
-libreoffice-calc=LibreOffice Calc
-libreoffice-draw=LibreOffice Draw
-libreoffice-writer=LibreOffice Writer
-libreoffice-math=LibreOffice Math
-libreoffice-impress=LibreOffice Impress
-libreoffice-startcenter=LibreOffice
 oracle-ide-boot-Launcher=Oracle SQL Developer
 Dragon=dragonplayer
+
 [Settings]
 ManualOnly=Wine
-
-[Rewrite Rules][google-chrome][1]
-Property=ClassName
-Identifier=StartupWMClass
-Match=(?<=crx_)(?'match'[a-z]+)
-
-# Google changed the class to be "Google-chrome" around version 54
-[Rewrite Rules][Google-chrome][1]
-Property=ClassName
-Identifier=StartupWMClass
-Match=(?<=crx_)(?'match'[a-z]+)
-
-[Rewrite Rules][chromium][1]
-Property=ClassName
-Identifier=StartupWMClass
-Match=(?<=crx_)(?'match'[a-z]+)
-
-[Rewrite Rules][chromium-browser][1]
-Property=ClassName
-Identifier=StartupWMClass
-Match=(?<=crx_)(?'match'[a-z]+)
-
-# Chromium changed the class too
-[Rewrite Rules][Chromium][1]
-Property=ClassName
-Identifier=StartupWMClass
-Match=(?<=crx_)(?'match'[a-z]+)
