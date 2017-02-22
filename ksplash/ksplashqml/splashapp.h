@@ -24,7 +24,6 @@
 #include <QObject>
 #include <QGuiApplication>
 #include <QBasicTimer>
-#include <QDateTime>
 
 class SplashWindow;
 
@@ -65,7 +64,6 @@ private:
     bool m_window;
     QStringList m_stages;
     QBasicTimer m_timer;
-    QDateTime m_startTime;
 
     KWayland::Client::PlasmaShell *m_waylandPlasmaShell = nullptr;
 

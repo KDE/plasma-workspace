@@ -25,7 +25,6 @@
 #include <QCursor>
 #include <qscreen.h>
 #include <QDBusConnection>
-#include <QDateTime>
 #include <QDate>
 #include <QDebug>
 #include <QCommandLineParser>
@@ -51,8 +50,7 @@ SplashApp::SplashApp(int &argc, char ** argv)
     : QGuiApplication(argc, argv),
       m_stage(0),
       m_testing(false),
-      m_window(false),
-      m_startTime(QDateTime::currentDateTime())
+      m_window(false)
 {
     QCommandLineParser parser;
     parser.addOption(QCommandLineOption(QStringLiteral("test"), QStringLiteral("Run in test mode")));
@@ -114,8 +112,6 @@ void SplashApp::setStage(const QString &stage)
     if (stage == QLatin1String("kded") || stage == QLatin1String("confupdate")) {
         return;
     }
-
-    qDebug() << "Loading stage " << stage << m_startTime.msecsTo(QDateTime::currentDateTime());
 
     if (m_stages.contains(stage)) {
         return;
