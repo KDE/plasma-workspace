@@ -294,11 +294,10 @@ ColumnLayout {
                     color: cfg_Color
                 }
 
-                onCountChanged: {
+                onContentHeightChanged: {
                     wallpapersGrid.currentIndex = imageWallpaper.wallpaperModel.indexOf(cfg_Image);
                     wallpapersGrid.positionViewAtIndex(wallpapersGrid.currentIndex, GridView.Visible)
                 }
-
                 Connections {
                     target: root
                     onRestoreIndex: {
