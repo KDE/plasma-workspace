@@ -449,7 +449,8 @@ void LauncherTasksModel::setLauncherList(const QStringList &serializedLaunchers)
         }
     }
 
-    if (newActivitiesForLauncher != d->activitiesForLauncher) {
+    if (newLaunchersOrder != d->launchersOrder
+        || newActivitiesForLauncher != d->activitiesForLauncher) {
         // Common case optimization: If the list changed but its size
         // did not (e.g. due to reordering by a user of this model),
         // just clear the caches and announce new data instead of
