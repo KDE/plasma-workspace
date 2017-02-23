@@ -2,6 +2,8 @@
 Encoding=UTF-8
 Name=Global Menu
 Name[ca]=Menú global
+Name[ca@valencia]=Menú global
+Name[cs]=Globální nabídka
 Name[da]=Global menu
 Name[el]=Καθολικό μενού
 Name[en_GB]=Global Menu
@@ -9,6 +11,7 @@ Name[es]=Menú global
 Name[eu]=Menu orokorra
 Name[it]=Menu globale
 Name[nl]=Globaal menu
+Name[nn]=Global meny
 Name[pl]=Menu globalne
 Name[pt]=Menu Global
 Name[pt_BR]=Menu global
