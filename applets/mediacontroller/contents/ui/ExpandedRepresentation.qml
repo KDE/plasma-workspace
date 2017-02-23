@@ -368,7 +368,7 @@ Item {
             }
 
             PlasmaComponents.ToolButton {
-                width: expandedRepresentation.controlSize * 1.5
+                width: Math.round(expandedRepresentation.controlSize * 1.5)
                 height: width
                 enabled: playerControls.enabled
                 iconSource: root.state == "playing" ? "media-playback-pause" : "media-playback-start"
