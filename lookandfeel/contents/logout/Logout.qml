@@ -122,6 +122,7 @@ PlasmaCore.ColorScope {
                 action: root.sleepRequested
                 KeyNavigation.left: logoutButton
                 KeyNavigation.right: rebootButton
+                visible: spdMethods.SuspendState
             }
             LogoutButton {
                 id: rebootButton
