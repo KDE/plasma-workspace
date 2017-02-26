@@ -24,6 +24,7 @@ Name[sr@latin]=Globalni meni
 Name[sv]=Global meny
 Name[uk]=Загальне меню
 Name[x-test]=xxGlobal Menuxx
+Name[zh_CN]=全局菜单
 Icon=show-menu
 Type=Service
 X-KDE-PluginInfo-Author=Kai Uwe Broulik
