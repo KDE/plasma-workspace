@@ -79,10 +79,22 @@ MouseArea {
         id: dropArea
         anchors.fill: parent
         preventStealing: true
-        onDragEnter: root.containsAcceptableDrag = event.mimeData.hasUrls
+        onDragEnter: {
+            var acceptable = plasmoid.nativeInterface.isAcceptableDrag(event);
+            root.containsAcceptableDrag = acceptable;
+
+            if (!acceptable) {
+                event.ignore();
+            }
+        }
         onDragLeave: root.containsAcceptableDrag = false
         onDrop: {
-            plasmoid.nativeInterface.processDrop(event)
+            if (root.containsAcceptableDrag) {
+                plasmoid.nativeInterface.processDrop(event)
+            } else {
+                event.ignore();
+            }
+
             root.containsAcceptableDrag = false
         }
     }

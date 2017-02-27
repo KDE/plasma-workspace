@@ -373,21 +373,9 @@ void IconApplet::run()
 void IconApplet::processDrop(QObject *dropEvent)
 {
     Q_ASSERT(dropEvent);
+    Q_ASSERT(isAcceptableDrag(dropEvent));
 
-    // DeclarativeDropEvent and co aren't public
-    const QObject *mimeData = qvariant_cast<QObject *>(dropEvent->property("mimeData"));
-    Q_ASSERT(mimeData);
-
-    const QJsonArray &droppedUrls = mimeData->property("urls").toJsonArray();
-
-    QList<QUrl> urls;
-    urls.reserve(droppedUrls.count());
-    foreach (const QJsonValue &droppedUrl, droppedUrls) {
-        const QUrl url(droppedUrl.toString());
-        if (url.isValid()) {
-            urls.append(url);
-        }
-    }
+    const auto &urls = urlsFromDrop(dropEvent);
 
     if (urls.isEmpty()) {
         return;
@@ -403,9 +391,7 @@ void IconApplet::processDrop(QObject *dropEvent)
     QMimeDatabase db;
     const QMimeType mimeType = db.mimeTypeForUrl(m_url);
 
-    if (KAuthorized::authorize(QStringLiteral("shell_access"))
-            && (mimeType.inherits(QStringLiteral("application/x-executable"))
-                || mimeType.inherits(QStringLiteral("application/x-shellscript")))) {
+    if (isExecutable(mimeType)) { // isAcceptableDrag has the KAuthorized check for this
         QProcess::startDetached(m_url.toLocalFile(), QUrl::toStringList(urls));
         return;
     }
@@ -425,6 +411,61 @@ void IconApplet::processDrop(QObject *dropEvent)
         KJobWidgets::setWindow(dropJob, QApplication::desktop());
         return;
     }
+}
+
+bool IconApplet::isAcceptableDrag(QObject *dropEvent)
+{
+    Q_ASSERT(dropEvent);
+
+    const auto &urls = urlsFromDrop(dropEvent);
+
+    if (urls.isEmpty()) {
+        return false;
+    }
+
+    const QString &localPath = m_url.toLocalFile();
+    if (KDesktopFile::isDesktopFile(localPath)) {
+        return true;
+    }
+
+    QMimeDatabase db;
+    const QMimeType mimeType = db.mimeTypeForUrl(m_url);
+
+    if (KAuthorized::authorize(QStringLiteral("shell_access")) && isExecutable(mimeType)) {
+        return true;
+    }
+
+    if (mimeType.inherits(QStringLiteral("inode/directory"))) {
+        return true;
+    }
+
+    return false;
+}
+
+QList<QUrl> IconApplet::urlsFromDrop(QObject *dropEvent)
+{
+    // DeclarativeDropEvent and co aren't public
+    const QObject *mimeData = qvariant_cast<QObject *>(dropEvent->property("mimeData"));
+    Q_ASSERT(mimeData);
+
+    const QJsonArray &droppedUrls = mimeData->property("urls").toJsonArray();
+
+    QList<QUrl> urls;
+    urls.reserve(droppedUrls.count());
+    for (const QJsonValue &droppedUrl : droppedUrls) {
+        const QUrl url(droppedUrl.toString());
+        if (url.isValid()) {
+            urls.append(url);
+        }
+    }
+
+    return urls;
+}
+
+bool IconApplet::isExecutable(const QMimeType &mimeType)
+{
+    return (mimeType.inherits(QStringLiteral("application/x-executable"))
+            || mimeType.inherits(QStringLiteral("application/x-shellscript")));
 }
 
 void IconApplet::configure()

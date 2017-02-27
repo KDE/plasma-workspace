@@ -60,6 +60,8 @@ public:
     Q_INVOKABLE void processDrop(QObject *dropEvent);
     Q_INVOKABLE void configure();
 
+    Q_INVOKABLE bool isAcceptableDrag(QObject *dropEvent);
+
 signals:
     void urlChanged(const QUrl &url);
 
@@ -70,6 +72,9 @@ signals:
 
 private:
     void setIconName(const QString &iconName);
+
+    static QList<QUrl> urlsFromDrop(QObject *dropEvent);
+    static bool isExecutable(const QMimeType &mimeType);
 
     void populate();
     void populateFromDesktopFile(const QString &path);
