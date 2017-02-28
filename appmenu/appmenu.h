@@ -80,7 +80,7 @@ private Q_SLOTS:
      */
     void reconfigure();
 
-    void itemActivationRequested(int winId, uint action);
+    void itemActivationRequested(int actionId, uint timeStamp);
 
 private:
     void hideMenu();
@@ -92,8 +92,6 @@ private:
     MenuImporter *m_menuImporter = nullptr;
     AppmenuDBus *m_appmenuDBus;
     QPointer<VerticalMenu> m_menu;
-
-    QAction *m_waitingAction = nullptr;
 };
 
 #endif
