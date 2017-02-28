@@ -79,7 +79,7 @@ MouseArea {
                     } else if (cfg_FillMode == Image.TileHorizontally) {
                         return QPixmapItem.TileHorizontally;
                     }
-                    return QPixmapItem.Pad;
+                    return QPixmapItem.PreserveAspectFit;
                 }
             }
             PlasmaComponents.ToolButton {
