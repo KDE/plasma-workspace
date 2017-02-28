@@ -71,10 +71,6 @@ AppMenuModule::AppMenuModule(QObject* parent, const QList<QVariant>&)
     connect(this, &AppMenuModule::showRequest, m_appmenuDBus, &AppmenuDBus::showRequest);
     connect(this, &AppMenuModule::menuHidden, m_appmenuDBus, &AppmenuDBus::menuHidden);
     connect(this, &AppMenuModule::menuShown, m_appmenuDBus, &AppmenuDBus::menuShown);
-
-    QDBusConnection::sessionBus().connect({}, {}, QStringLiteral("com.canonical.dbusmenu"),
-                                                  QStringLiteral("ItemActivationRequested"),
-                                          this, SLOT(itemActivationRequested(int,uint)));
 }
 
 AppMenuModule::~AppMenuModule() = default;
@@ -186,6 +182,16 @@ void AppMenuModule::reconfigure()
     KConfigGroup config(KSharedConfig::openConfig(QStringLiteral("kdeglobals")), QStringLiteral("Appmenu Style"));
     const QString &menuStyle = config.readEntry("Style", "InApplication");
     // TODO enum or Kconfigxt or what not?
+    if (menuStyle == QLatin1String("Decoration")) {
+        QDBusConnection::sessionBus().connect({}, {}, QStringLiteral("com.canonical.dbusmenu"),
+                                                      QStringLiteral("ItemActivationRequested"),
+                                              this, SLOT(itemActivationRequested(int,uint)));
+    } else {
+        QDBusConnection::sessionBus().disconnect({}, {}, QStringLiteral("com.canonical.dbusmenu"),
+                                                      QStringLiteral("ItemActivationRequested"),
+                                              this, SLOT(itemActivationRequested(int,uint)));
+    }
+
     if (menuStyle == QLatin1String("InApplication")) {
         delete m_menuImporter;
         m_menuImporter = nullptr;
