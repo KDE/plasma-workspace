@@ -362,6 +362,11 @@ void DBusMenuImporterPrivate::slotItemsPropertiesUpdated(const DBusMenuItemList 
     }
 }
 
+QAction *DBusMenuImporter::actionForId(int id) const
+{
+    return d->m_actionForId.value(id);
+}
+
 void DBusMenuImporter::slotItemActivationRequested(int id, uint /*timestamp*/)
 {
     QAction *action = d->m_actionForId.value(id);

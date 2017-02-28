@@ -47,6 +47,9 @@ public:
 
     ~DBusMenuImporter() override;
 
+
+    QAction *actionForId(int id) const;
+
     /**
      * The menu created from listening to the DBusMenuExporter over DBus
      */

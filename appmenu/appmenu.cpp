@@ -71,10 +71,6 @@ AppMenuModule::AppMenuModule(QObject* parent, const QList<QVariant>&)
     connect(this, &AppMenuModule::showRequest, m_appmenuDBus, &AppmenuDBus::showRequest);
     connect(this, &AppMenuModule::menuHidden, m_appmenuDBus, &AppmenuDBus::menuHidden);
     connect(this, &AppMenuModule::menuShown, m_appmenuDBus, &AppmenuDBus::menuShown);
-
-    QDBusConnection::sessionBus().connect({}, {}, QStringLiteral("com.canonical.dbusmenu"),
-                                                  QStringLiteral("ItemActivationRequested"),
-                                          this, SLOT(itemActivationRequested(int,uint)));
 }
 
 AppMenuModule::~AppMenuModule() = default;
@@ -155,11 +151,12 @@ void AppMenuModule::slotShowMenu(int x, int y, const QString &serviceName, const
 
         m_menu.data()->popup(QPoint(x, y) / qApp->devicePixelRatio());
 
+        QAction *actiontoActivate = importer->actionForId(actionId);
+
         emit menuShown(serviceName, menuObjectPath);
 
-        if (m_waitingAction) {
-            m_menu.data()->setActiveAction(m_waitingAction);
-            m_waitingAction = nullptr;
+        if (actiontoActivate) {
+            m_menu.data()->setActiveAction(actiontoActivate);
         }
     });
 }
@@ -171,22 +168,30 @@ void AppMenuModule::hideMenu()
     }
 }
 
-void AppMenuModule::itemActivationRequested(int winId, uint action)
+void AppMenuModule::itemActivationRequested(int actionId, uint timeStamp)
 {
-    Q_UNUSED(winId);
-    emit showRequest(message().service(), QDBusObjectPath(message().path()), action);
+    Q_UNUSED(timeStamp);
+    emit showRequest(message().service(), QDBusObjectPath(message().path()), actionId);
 }
 
 // reload settings
 void AppMenuModule::reconfigure()
 {
-    m_waitingAction = nullptr;
-
     hideMenu(); // hide window decoration menu if exists
 
     KConfigGroup config(KSharedConfig::openConfig(QStringLiteral("kdeglobals")), QStringLiteral("Appmenu Style"));
     const QString &menuStyle = config.readEntry("Style", "InApplication");
     // TODO enum or Kconfigxt or what not?
+    if (menuStyle == QLatin1String("Decoration")) {
+        QDBusConnection::sessionBus().connect({}, {}, QStringLiteral("com.canonical.dbusmenu"),
+                                                      QStringLiteral("ItemActivationRequested"),
+                                              this, SLOT(itemActivationRequested(int,uint)));
+    } else {
+        QDBusConnection::sessionBus().disconnect({}, {}, QStringLiteral("com.canonical.dbusmenu"),
+                                                      QStringLiteral("ItemActivationRequested"),
+                                              this, SLOT(itemActivationRequested(int,uint)));
+    }
+
     if (menuStyle == QLatin1String("InApplication")) {
         delete m_menuImporter;
         m_menuImporter = nullptr;
