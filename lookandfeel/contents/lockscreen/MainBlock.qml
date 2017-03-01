@@ -53,6 +53,7 @@ SessionManagementScreen {
         placeholderText: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Password")
         focus: true
         echoMode: TextInput.Password
+        inputMethodHints: Qt.ImhHiddenText | Qt.ImhSensitiveData | Qt.ImhNoAutoUppercase | Qt.ImhNoPredictiveText
         enabled: !authenticator.graceLocked
         revealPasswordButtonShown: true
 
