@@ -107,10 +107,17 @@ PlasmaCore.ColorScope {
                 }
             }
 
-        Clock {
+        ColumnLayout {
+            anchors.top: parent.top
             anchors.bottom: parent.verticalCenter
-            anchors.bottomMargin: units.gridUnit * 13
             anchors.horizontalCenter: parent.horizontalCenter
+            Clock {
+                Layout.alignment: Qt.AlignBaseline
+            }
+            Item {
+                Layout.maximumHeight: units.gridUnit * 13
+                Layout.fillHeight: true
+            }
         }
 
         ListModel {
