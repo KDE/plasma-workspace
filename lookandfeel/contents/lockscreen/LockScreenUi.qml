@@ -132,55 +132,74 @@ PlasmaCore.ColorScope {
             }
         }
 
-        StackView {
-            id: mainStack
+        ColumnLayout {
             anchors.fill: parent
-            focus: true //StackView is an implicit focus scope, so we need to give this focus so the item inside will have it
+            StackView {
+                id: mainStack
+                Layout.fillWidth: true
+                Layout.fillHeight: true
+                focus: true //StackView is an implicit focus scope, so we need to give this focus so the item inside will have it
 
-            initialItem: MainBlock {
-                id: mainBlock
+                initialItem: MainBlock {
+                    id: mainBlock
 
-                Stack.onStatusChanged: {
-                    // prepare for presenting again to the user
-                    if (Stack.status == Stack.Activating) {
-                        mainPasswordBox.remove(0, mainPasswordBox.length)
-                        mainPasswordBox.focus = true
-                    }
-                }
-                userListModel: users
-                notificationMessage: {
-                    var text = ""
-                    if (keystateSource.data["Caps Lock"]["Locked"]) {
-                        text += i18nd("plasma_lookandfeel_org.kde.lookandfeel","Caps Lock is on")
-                        if (root.notification) {
-                            text += " • "
+                    Stack.onStatusChanged: {
+                        // prepare for presenting again to the user
+                        if (Stack.status == Stack.Activating) {
+                            mainPasswordBox.remove(0, mainPasswordBox.length)
+                            mainPasswordBox.focus = true
                         }
                     }
-                    text += root.notification
-                    return text
-                }
-
-                onLoginRequest: {
-                    root.notification = ""
-                    authenticator.tryUnlock(password)
-                }
-
-                actionItems: [
-                    ActionButton {
-                        text: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Switch User")
-                        iconSource: "system-switch-user"
-                        onClicked: mainStack.push(switchSessionPage)
-                        // the current session isn't listed in the model, hence a check for greater than zero, not one
-                        visible: (sessionsModel.count > 0 || sessionsModel.canStartNewSession) && sessionsModel.canSwitchUser
+                    userListModel: users
+                    notificationMessage: {
+                        var text = ""
+                        if (keystateSource.data["Caps Lock"]["Locked"]) {
+                            text += i18nd("plasma_lookandfeel_org.kde.lookandfeel","Caps Lock is on")
+                            if (root.notification) {
+                                text += " • "
+                            }
+                        }
+                        text += root.notification
+                        return text
                     }
-                ]
 
-                Loader {
-                    Layout.fillWidth: true
-                    Layout.preferredHeight: item ? item.implicitHeight : 0
-                    active: true // TODO configurable
-                    source: "MediaControls.qml"
+                    onLoginRequest: {
+                        root.notification = ""
+                        authenticator.tryUnlock(password)
+                    }
+
+                    actionItems: [
+                        ActionButton {
+                            text: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Switch User")
+                            iconSource: "system-switch-user"
+                            onClicked: mainStack.push(switchSessionPage)
+                            // the current session isn't listed in the model, hence a check for greater than zero, not one
+                            visible: (sessionsModel.count > 0 || sessionsModel.canStartNewSession) && sessionsModel.canSwitchUser
+                        }
+                    ]
+
+                    Loader {
+                        Layout.fillWidth: true
+                        Layout.preferredHeight: item ? item.implicitHeight : 0
+                        active: true // TODO configurable
+                        source: "MediaControls.qml"
+                    }
                 }
+            }
+            Loader {
+                id: inputPanel
+                property bool keyboardActive: item ? item.active : false
+                Layout.fillWidth: true
+                Layout.preferredHeight: item ? (item.active ? item.implicitHeight : 0) : 0
+                function showHide() {
+                    if (Qt.inputMethod.visible) {
+                        Qt.inputMethod.hide();
+                    } else {
+                        item.activated = true;
+                        Qt.inputMethod.show();
+                    }
+                }
+                Component.onCompleted: inputPanel.source = "VirtualKeyboard.qml"
             }
         }
 
@@ -248,6 +267,12 @@ PlasmaCore.ColorScope {
                 left: parent.left
                 right: parent.right
                 margins: units.smallSpacing
+            }
+
+            PlasmaComponents.ToolButton {
+                text: i18ndc("plasma_lookandfeel_org.kde.lookandfeel", "Button to show/hide virtual keyboard", "Virtual Keyboard")
+                iconName: inputPanel.keyboardActive ? "input-keyboard-virtual-on" : "input-keyboard-virtual-off"
+                onClicked: inputPanel.showHide()
             }
 
             KeyboardLayoutButton {

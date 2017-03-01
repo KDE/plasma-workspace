@@ -66,7 +66,7 @@ Item {
 
     UserList {
         id: userListView
-        visible: showUserList
+        visible: showUserList && y > 0
         anchors {
             bottom: parent.verticalCenter
             left: parent.left
