@@ -32,6 +32,16 @@ Item {
     Plasmoid.preferredRepresentation: Plasmoid.fullRepresentation
     Plasmoid.status: internalSystray ? internalSystray.status : PlasmaCore.Types.UnknownStatus
 
+    Plasmoid.onExpandedChanged: {
+        if (internalSystray && !plasmoid.expanded) {
+            internalSystray.expanded = false;
+        }
+    }
+    Connections {
+        target: internalSystray
+        onExpandedChanged: plasmoid.expanded = internalSystray.expanded
+    }
+
     property Item internalSystray
 
     Component.onCompleted: {

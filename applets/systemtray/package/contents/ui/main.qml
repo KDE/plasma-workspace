@@ -52,6 +52,12 @@ MouseArea {
 
     property Component plasmoidItemComponent
 
+    Plasmoid.onExpandedChanged: {
+        if (!plasmoid.expanded) {
+            dialog.visible = plasmoid.expanded;
+        }
+    }
+
     function updateItemVisibility(item) {
         switch (item.effectiveStatus) {
         case PlasmaCore.Types.HiddenStatus:
@@ -344,6 +350,7 @@ MouseArea {
             } else {
                 plasmoid.status = PlasmaCore.Types.RequiresAttentionStatus;
             }
+            plasmoid.expanded = visible;
         }
         mainItem: ExpandedRepresentation {
             id: expandedRepresentation
