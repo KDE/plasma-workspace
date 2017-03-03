@@ -612,7 +612,7 @@ QUrl XWindowTasksModel::Private::windowUrl(WId window)
             }
 
             if (!mapped.isEmpty() && services.empty()) {
-                services = KServiceTypeTrader::self()->query(QStringLiteral("Application"), QStringLiteral("exist Exec and ('%1' =~ Name)").arg(mapped));
+                services = KServiceTypeTrader::self()->query(QStringLiteral("Application"), QStringLiteral("exist Exec and ('%1' =~ Name) and (not exist NoDisplay or not NoDisplay)").arg(mapped));
             }
 
             // To match other docks (docky, unity, etc.) attempt to match on DesktopEntryName first ...
@@ -627,7 +627,7 @@ QUrl XWindowTasksModel::Private::windowUrl(WId window)
 
             // Try 'Name' - unfortunately this can be translated, so has a good chance of failing! (As it does for KDE's own "System Settings" (even in English!!))
             if (services.empty()) {
-                services = KServiceTypeTrader::self()->query(QStringLiteral("Application"), QStringLiteral("exist Exec and ('%1' =~ Name)").arg(classClass));
+                services = KServiceTypeTrader::self()->query(QStringLiteral("Application"), QStringLiteral("exist Exec and ('%1' =~ Name) and (not exist NoDisplay or not NoDisplay)").arg(classClass));
             }
         }
 
