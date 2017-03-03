@@ -637,7 +637,7 @@ QUrl XWindowTasksModel::Private::windowUrl(WId window)
 
             // Try matching mapped name against 'Name'.
             if (!mapped.isEmpty() && services.empty()) {
-                services = KServiceTypeTrader::self()->query(QStringLiteral("Application"), QStringLiteral("exist Exec and ('%1' =~ Name)").arg(mapped));
+                services = KServiceTypeTrader::self()->query(QStringLiteral("Application"), QStringLiteral("exist Exec and ('%1' =~ Name) and (not exist NoDisplay or not NoDisplay)").arg(mapped));
             }
 
             // Try matching WM_CLASS general class against DesktopEntryName.
@@ -648,7 +648,7 @@ QUrl XWindowTasksModel::Private::windowUrl(WId window)
             // Try matching WM_CLASS general class against 'Name'.
             // This has a shaky chance of success as WM_CLASS is untranslated, but 'Name' may be localized.
             if (services.empty()) {
-                services = KServiceTypeTrader::self()->query(QStringLiteral("Application"), QStringLiteral("exist Exec and ('%1' =~ Name)").arg(classClass));
+                services = KServiceTypeTrader::self()->query(QStringLiteral("Application"), QStringLiteral("exist Exec and ('%1' =~ Name) and (not exist NoDisplay or not NoDisplay)").arg(classClass));
             }
         }
 
