@@ -61,8 +61,6 @@
 #include <xcb/xcb.h>
 #endif
 
-//#define NOISY_KLIPPER
-
 namespace {
     /**
      * Use this when manipulating the clipboard
@@ -690,20 +688,7 @@ void Klipper::checkClipData( bool selectionMode )
         return;
     }
 
-// debug code
-#ifdef NOISY_KLIPPER
     qCDebug(KLIPPER_LOG) << "Checking clip data";
-
-    if ( sender() ) {
-        qCDebug(KLIPPER_LOG) << "sender=" << sender()->objectName();
-    } else {
-        qCDebug(KLIPPER_LOG) << "no sender";
-    }
-
-    qCDebug(KLIPPER_LOG) << "\nselectionMode=" << selectionMode
-              << "\nowning (sel,cli)=(" << m_clip->ownsSelection() << "," << m_clip->ownsClipboard() << ")"
-              << "\ntext=" << m_clip->text( selectionMode ? QClipboard::Selection : QClipboard::Clipboard) << endl;
-#endif
 
     const QMimeData* data = m_clip->mimeData( selectionMode ? QClipboard::Selection : QClipboard::Clipboard );
     if ( !data ) {
@@ -716,18 +701,14 @@ void Klipper::checkClipData( bool selectionMode )
     if (clipEmpty) {
         // Might be a timeout. Try again
         clipEmpty = data->formats().isEmpty();
-#ifdef NOISY_KLIPPER
         qCDebug(KLIPPER_LOG) << "was empty. Retried, now " << (clipEmpty?" still empty":" no longer empty");
-#endif
     }
 
     if ( changed && clipEmpty && m_bNoNullClipboard ) {
         auto top = history()->first();
         if ( top ) {
             // keep old clipboard after someone set it to null
-#ifdef NOISY_KLIPPER
             qCDebug(KLIPPER_LOG) << "Resetting clipboard (Prevent empty clipboard)";
-#endif
             setClipboard( *top, selectionMode ? Selection : Clipboard );
         }
         return;
@@ -756,9 +737,7 @@ void Klipper::checkClipData( bool selectionMode )
 
     HistoryItemPtr item = applyClipChanges( data );
     if (changed) {
-#ifdef NOISY_KLIPPER
         qCDebug(KLIPPER_LOG) << "Synchronize?" << m_bSynchronize;
-#endif
         if ( m_bSynchronize && item ) {
             setClipboard( *item, selectionMode ? Clipboard : Selection );
         }
@@ -789,15 +768,11 @@ void Klipper::setClipboard( const HistoryItem& item, int mode )
     Q_ASSERT( ( mode & 1 ) == 0 ); // Warn if trying to pass a boolean as a mode.
 
     if ( mode & Selection ) {
-#ifdef NOISY_KLIPPER
         qCDebug(KLIPPER_LOG) << "Setting selection to <" << item.text() << ">";
-#endif
         m_clip->setMimeData( item.mimeData(), QClipboard::Selection );
     }
     if ( mode & Clipboard ) {
-#ifdef NOISY_KLIPPER
         qCDebug(KLIPPER_LOG) << "Setting clipboard to <" << item.text() << ">";
-#endif
         m_clip->setMimeData( item.mimeData(), QClipboard::Clipboard );
     }
 
