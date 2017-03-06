@@ -26,6 +26,10 @@
       <label>Interval between slides</label>
       <default>10</default>
     </entry>
+    <entry name="TransitionAnimationDuration" type="int">
+      <label>Fade Transition Animation  (ms)</label>
+      <default>1000</default>
+    </entry>
   </group>
 
 </kcfg>
