@@ -182,8 +182,8 @@ void KillRunner::run(const Plasma::RunnerContext &context, const Plasma::QueryMa
 
     QStringList args;
     args << QStringLiteral("-%1").arg(signal) << QStringLiteral("%1").arg(pid);
-    KProcess *process = new KProcess(this);
-    int returnCode = process->execute(QStringLiteral("kill"), args);
+    KProcess process;
+    int returnCode = process.execute(QStringLiteral("kill"), args);
 
     if (returnCode == 0)
     {
