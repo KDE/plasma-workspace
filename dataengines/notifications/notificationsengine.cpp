@@ -321,12 +321,12 @@ uint NotificationsEngine::Notify(const QString &app_name, uint replaces_id,
             configurable = m_configurableApplications.value(appRealName);
         } else {
             // Check whether the application actually has notifications we can configure
-            QScopedPointer<KConfig> config(new KConfig(appRealName + QStringLiteral(".notifyrc"), KConfig::NoGlobals));
-            config->addConfigSources(QStandardPaths::locateAll(QStandardPaths::GenericDataLocation,
-                                     QStringLiteral("knotifications5/") + appRealName + QStringLiteral(".notifyrc")));
+            KConfig config(appRealName + QStringLiteral(".notifyrc"), KConfig::NoGlobals);
+            config.addConfigSources(QStandardPaths::locateAll(QStandardPaths::GenericDataLocation,
+                                    QStringLiteral("knotifications5/") + appRealName + QStringLiteral(".notifyrc")));
 
             const QRegularExpression regexp(QStringLiteral("^Event/([^/]*)$"));
-            configurable = !config->groupList().filter(regexp).isEmpty();
+            configurable = !config.groupList().filter(regexp).isEmpty();
             m_configurableApplications.insert(appRealName, configurable);
         }
     }
