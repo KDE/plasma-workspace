@@ -95,7 +95,7 @@ PlasmaCore.Dialog {
         onContainsMouseChanged: {
             if (containsMouse) {
                 notificationTimer.stop()
-            } else if (!containsMouse && visible) {
+            } else if (!containsMouse && !notificationItem.dragging && visible) {
                 notificationTimer.restart()
             }
         }
@@ -139,6 +139,14 @@ PlasmaCore.Dialog {
             onOpenUrl: {
                 Qt.openUrlExternally(url)
                 notificationPositioner.closePopup(notificationProperties.source);
+            }
+
+            onDraggingChanged: {
+                if (dragging) {
+                    notificationTimer.stop();
+                } else if (!root.containsMouse && !dragging && root.visible) {
+                    notificationTimer.restart();
+                }
             }
         }
     }

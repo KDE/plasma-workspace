@@ -55,6 +55,8 @@ MouseArea {
 
     property ListModel actions: ListModel { }
 
+    readonly property bool dragging: thumbnailStripLoader.item ? thumbnailStripLoader.item.dragging : false
+
     function pressedAction() {
         for (var i = 0, count = actionRepeater.count; i < count; ++i) {
             var item = actionRepeater.itemAt(i)
