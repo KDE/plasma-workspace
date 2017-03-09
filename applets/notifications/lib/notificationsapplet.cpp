@@ -49,10 +49,9 @@ void NotificationsApplet::init()
     connect(containment(), &Plasma::Containment::screenChanged,
             this, &NotificationsApplet::onScreenChanges);
 
-    // This is to handle when eg. panel gets moved on screen
-    // to a different screen edge
-    connect(KWindowSystem::self(), &KWindowSystem::workAreaChanged,
-            this, &NotificationsApplet::onScreenChanges);
+    Q_ASSERT(containment());
+    Q_ASSERT(containment()->corona());
+    connect(containment()->corona(), &Plasma::Corona::availableScreenRectChanged, this, &NotificationsApplet::onScreenChanges);
 
     Plasma::Applet::init();
 

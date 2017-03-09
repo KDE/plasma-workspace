@@ -1049,8 +1049,8 @@ void ShellCorona::removeDesktop(DesktopView *desktopView)
     }
 
     Q_ASSERT(m_desktopViewforId.value(idx) == desktopView);
-    delete desktopView;
     m_desktopViewforId.remove(idx);
+    delete desktopView;
 }
 
 PanelView *ShellCorona::panelView(Plasma::Containment *containment) const
