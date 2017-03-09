@@ -43,6 +43,10 @@ ListView {
     // hence it's based on the mainLayout.width instead
     readonly property int maximumItemCount: Math.floor(mainLayout.width / itemSquareSize)
 
+    // whether we're currently dragging, this way we can keep the popup around during the entire
+    // drag operation even if the mouse leaves the popup
+    property bool dragging: false
+
     model: {
         var urls = notificationItem.urls
         if (urls.length <= maximumItemCount) {
@@ -119,6 +123,10 @@ ListView {
             "text/uri-list": modelData,
             "text/plain": modelData
         })
+
+        drag.onActiveChanged: {
+            previewList.dragging = drag.active
+        }
 
         // first item determins the ListView height
         Binding {

@@ -93,7 +93,14 @@ PlasmaCore.Dialog {
         onContainsMouseChanged: {
             if (containsMouse) {
                 notificationTimer.stop()
-            } else if (!containsMouse && visible) {
+            } else if (!containsMouse && !dragging && visible) {
+                notificationTimer.restart()
+            }
+        }
+        onDraggingChanged: {
+            if (dragging) {
+                notificationTimer.stop()
+            } else if (!containsMouse && !dragging && visible) {
                 notificationTimer.restart()
             }
         }

@@ -57,6 +57,8 @@ MouseArea {
 
     property bool hasDefaultAction: false
 
+    readonly property bool dragging: thumbnailStripLoader.item ? thumbnailStripLoader.item.dragging : false
+
     onClicked: {
         // the MEL would close the notification before the action button
         // onClicked handler would fire effectively breaking notification actions
