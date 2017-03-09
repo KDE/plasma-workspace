@@ -25,6 +25,8 @@
 #include <QSize>
 #include <QUrl>
 
+class QQuickItem;
+
 class Thumbnailer : public QObject, public QQmlParserStatus
 {
     Q_OBJECT
@@ -54,6 +56,8 @@ public:
     QSize pixmapSize() const;
 
     QString iconName() const;
+
+    Q_INVOKABLE void showContextMenu(int x, int y, const QString &path, QQuickItem *ctx);
 
     void classBegin() override;
     void componentComplete() override;

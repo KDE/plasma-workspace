@@ -192,5 +192,13 @@ ListView {
                 }
             }
         }
+
+        MouseArea {
+            anchors.fill: parent
+            acceptedButtons: Qt.RightButton
+            onPressed: {
+                thumbnailer.showContextMenu(mouse.x, mouse.y, modelData, this)
+            }
+        }
     }
 }

@@ -9,7 +9,8 @@ target_link_libraries(notificationshelperplugin Qt5::Core
                                                 Qt5::Gui
                                                 Qt5::Qml
                                                 Qt5::Quick
-                                                KF5::KIOWidgets # PreviewJob
+                                                KF5::KIOWidgets
+                                                KF5::I18n
                                                 )
 
 install(TARGETS notificationshelperplugin DESTINATION ${KDE_INSTALL_QMLDIR}/org/kde/plasma/private/notifications)

@@ -20,8 +20,22 @@
 
 #include <KIO/PreviewJob>
 
+#include <QApplication>
+#include <QClipboard>
 #include <QDebug>
 #include <QIcon>
+#include <QMimeData>
+#include <QMenu>
+#include <QQuickItem>
+#include <QQuickWindow>
+
+#include <KFileItemActions>
+#include <KFileItemListProperties>
+#include <KLocalizedString>
+#include <KProtocolManager>
+#include <KUrlMimeData>
+
+#include <KIO/OpenFileManagerWindowJob>
 
 Thumbnailer::Thumbnailer(QObject *parent) : QObject(parent)
 {
@@ -89,6 +103,61 @@ QSize Thumbnailer::pixmapSize() const
 QString Thumbnailer::iconName() const
 {
     return m_iconName;
+}
+
+void Thumbnailer::showContextMenu(int x, int y, const QString &path, QQuickItem *ctx)
+{
+    if (!ctx || !ctx->window()) {
+        return;
+    }
+
+    const QUrl url(path);
+    if (!url.isValid()) {
+        return;
+    }
+
+    KFileItem fileItem(url);
+
+    QMenu *menu = new QMenu();
+    menu->setAttribute(Qt::WA_DeleteOnClose, true);
+
+    if (KProtocolManager::supportsListing(url)) {
+        QAction *openContainingFolderAction = menu->addAction(QIcon::fromTheme("folder-open"), i18n("Open Containing Folder"));
+        connect(openContainingFolderAction, &QAction::triggered, [url] {
+            KIO::highlightInFileManager({url});
+        });
+    }
+
+    menu->addSeparator();
+
+    // KStandardAction? But then the Ctrl+C shortcut makes no sense in this context
+    QAction *copyAction = menu->addAction(QIcon::fromTheme(QStringLiteral("edit-copy")), i18n("&Copy"));
+    connect(copyAction, &QAction::triggered, [fileItem] {
+        // inspired by KDirModel::mimeData()
+        QMimeData *data = new QMimeData(); // who cleans it up?
+        KUrlMimeData::setUrls({fileItem.url()}, {fileItem.mostLocalUrl()}, data);
+        QApplication::clipboard()->setMimeData(data);
+    });
+
+    KFileItemActions *actions = new KFileItemActions(menu);
+    KFileItemListProperties itemProperties(KFileItemList({fileItem}));
+    actions->setItemListProperties(itemProperties);
+
+    actions->addOpenWithActionsTo(menu);
+    actions->addServiceActionsTo(menu);
+    actions->addPluginActionsTo(menu);
+
+    if (menu->isEmpty()) {
+        delete menu;
+        return;
+    }
+
+    if (ctx->window()->mouseGrabberItem()) {
+        ctx->window()->mouseGrabberItem()->ungrabMouse();
+    }
+
+    const QPoint pos = ctx->mapToGlobal(QPointF(x, y)).toPoint();
+    menu->popup(pos);
 }
 
 void Thumbnailer::generatePreview()
