@@ -33,6 +33,7 @@
 #include <KFileItemListProperties>
 #include <KLocalizedString>
 #include <KProtocolManager>
+#include <KPropertiesDialog>
 #include <KUrlMimeData>
 
 #include <KIO/OpenFileManagerWindowJob>
@@ -146,6 +147,13 @@ void Thumbnailer::showContextMenu(int x, int y, const QString &path, QQuickItem 
     actions->addOpenWithActionsTo(menu);
     actions->addServiceActionsTo(menu);
     actions->addPluginActionsTo(menu);
+
+    QAction *propertiesAction = menu->addAction(QIcon::fromTheme("document-properties"), i18n("Properties"));
+    connect(propertiesAction, &QAction::triggered, [fileItem] {
+        KPropertiesDialog *dialog = new KPropertiesDialog(fileItem.url());
+        dialog->setAttribute(Qt::WA_DeleteOnClose);
+        dialog->show();
+    });
 
     if (menu->isEmpty()) {
         delete menu;
