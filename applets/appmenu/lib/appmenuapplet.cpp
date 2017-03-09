@@ -156,6 +156,10 @@ void AppMenuApplet::trigger(QQuickItem *ctx, int idx)
         return;
     }
 
+    if (!ctx || !ctx->window() || !ctx->window()->screen()) {
+        return;
+    }
+
     QMenu *actionMenu = createMenu(idx);
     if (actionMenu) {
 
