@@ -155,11 +155,6 @@ void Thumbnailer::showContextMenu(int x, int y, const QString &path, QQuickItem 
         dialog->show();
     });
 
-    if (menu->isEmpty()) {
-        delete menu;
-        return;
-    }
-
     if (ctx->window()->mouseGrabberItem()) {
         ctx->window()->mouseGrabberItem()->ungrabMouse();
     }
