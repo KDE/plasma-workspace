@@ -250,6 +250,7 @@ private:
     QTimer m_reconsiderOutputsTimer;
 
     KWayland::Client::PlasmaShell *m_waylandPlasmaShell;
+    bool m_closingDown : 1;
 };
 
 #endif // SHELLCORONA_H
