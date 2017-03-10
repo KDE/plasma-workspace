@@ -93,7 +93,8 @@ ShellCorona::ShellCorona(QObject *parent)
       m_addPanelAction(nullptr),
       m_addPanelsMenu(nullptr),
       m_interactiveConsole(nullptr),
-      m_waylandPlasmaShell(nullptr)
+      m_waylandPlasmaShell(nullptr),
+      m_closingDown(false)
 {
     setupWaylandIntegration();
     qmlRegisterUncreatableType<DesktopView>("org.kde.plasma.shell", 2, 0, "Desktop", QStringLiteral("It is not possible to create objects of type Desktop"));
@@ -153,6 +154,7 @@ ShellCorona::ShellCorona(QObject *parent)
 
     connect(qApp, &QCoreApplication::aboutToQuit, this, [this]() {
         //saveLayout is a slot but arguments not compatible
+        m_closingDown = true;
         saveLayout();
     });
 
@@ -1285,7 +1287,11 @@ void ShellCorona::panelContainmentDestroyed(QObject *cont)
 {
     auto view = m_panelViews.take(static_cast<Plasma::Containment*>(cont));
     view->deleteLater();
-    emit availableScreenRectChanged();
+    //don't make things relayout when the application is quitting
+    //NOTE: qApp->closingDown() is still false here
+    if (!m_closingDown) {
+        emit availableScreenRectChanged();
+    }
 }
 
 void ShellCorona::handleContainmentAdded(Plasma::Containment *c)
