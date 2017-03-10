@@ -1,0 +1,3 @@
+[D-BUS Service]
+Name=org.freedesktop.Notifications
+Exec=@CMAKE_INSTALL_PREFIX@/bin/plasma_waitforname org.freedesktop.Notifications
