@@ -144,29 +144,14 @@ Item {
         onExited: wheelDelta = 0
         onWheel: {
             var delta = wheel.angleDelta.y || wheel.angleDelta.x
-            if ((delta < 0 && wheelDelta > 0) || (delta > 0 && wheelDelta < 0)) { // reset when direction changes
-                wheelDelta = 0
-            }
-            wheelDelta += delta;
-            // magic number 120 for common "one click"
-            // See: http://qt-project.org/doc/qt-5/qml-qtquick-wheelevent.html#angleDelta-prop
-            var increment = 0;
-            while (wheelDelta >= 120) {
-                wheelDelta -= 120;
-                increment++;
-            }
-            while (wheelDelta <= -120) {
-                wheelDelta += 120;
-                increment--;
-            }
-            if (increment != 0) {
-                var maximumBrightness = batterymonitor.maximumScreenBrightness
-                // Don't allow the UI to turn off the screen
-                // Please see https://git.reviewboard.kde.org/r/122505/ for more information
-                var minimumBrightness = (maximumBrightness > 100 ? 1 : 0)
-                var steps = Math.max(1, Math.round(maximumBrightness / 20))
-                batterymonitor.screenBrightness = Math.max(minimumBrightness, Math.min(maximumBrightness, batterymonitor.screenBrightness + increment * steps));
-            }
+
+            var maximumBrightness = batterymonitor.maximumScreenBrightness
+            // Don't allow the UI to turn off the screen
+            // Please see https://git.reviewboard.kde.org/r/122505/ for more information
+            var minimumBrightness = (maximumBrightness > 100 ? 1 : 0)
+            var steps = Math.max(1, Math.round(maximumBrightness / 20))
+            var deltaSteps = delta / 120;
+            batterymonitor.screenBrightness = Math.max(minimumBrightness, Math.min(maximumBrightness, batterymonitor.screenBrightness + deltaSteps * steps));
         }
     }
 
