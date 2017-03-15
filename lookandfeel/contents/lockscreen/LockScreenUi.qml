@@ -273,6 +273,7 @@ PlasmaCore.ColorScope {
                 text: i18ndc("plasma_lookandfeel_org.kde.lookandfeel", "Button to show/hide virtual keyboard", "Virtual Keyboard")
                 iconName: inputPanel.keyboardActive ? "input-keyboard-virtual-on" : "input-keyboard-virtual-off"
                 onClicked: inputPanel.showHide()
+                visible: inputPanel.status == Loader.Ready
             }
 
             KeyboardLayoutButton {
