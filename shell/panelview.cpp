@@ -761,8 +761,8 @@ bool PanelView::event(QEvent *e)
                     return true;
                 }
             } else {
-                // discard event if current mouse position is outside the panel
-                return true;
+                // default handling if current mouse position is outside the panel
+                return ContainmentView::event(e);
             }
             break;
         }
