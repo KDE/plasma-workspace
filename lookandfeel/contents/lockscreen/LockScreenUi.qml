@@ -199,7 +199,7 @@ PlasmaCore.ColorScope {
                         Qt.inputMethod.show();
                     }
                 }
-                Component.onCompleted: inputPanel.source = "VirtualKeyboard.qml"
+                Component.onCompleted: inputPanel.source = "../components/VirtualKeyboard.qml"
             }
         }
 

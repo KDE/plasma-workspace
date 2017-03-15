@@ -64,8 +64,7 @@ PlasmaCore.ColorScope {
     }
 
 
-    StackView {
-        id: mainStack
+    ColumnLayout {
         anchors {
             top: parent.top
             bottom: footer.top
@@ -73,86 +72,109 @@ PlasmaCore.ColorScope {
             right: parent.right
             topMargin: footer.height // effectively centre align within the view
         }
-        focus: true //StackView is an implicit focus scope, so we need to give this focus so the item inside will have it
+        StackView {
+            id: mainStack
+            Layout.fillWidth: true
+            Layout.fillHeight: true
+            focus: true //StackView is an implicit focus scope, so we need to give this focus so the item inside will have it
 
-        Timer {
-            //SDDM has a bug in 0.13 where even though we set the focus on the right item within the window, the window doesn't have focus
-            //it is fixed in 6d5b36b28907b16280ff78995fef764bb0c573db which will be 0.14
-            //we need to call "window->activate()" *After* it's been shown. We can't control that in QML so we use a shoddy timer
-            //it's been this way for all Plasma 5.x without a huge problem
-            running: true
-            repeat: false
-            interval: 200
-            onTriggered: mainStack.forceActiveFocus()
-        }
-
-        initialItem: Login {
-            id: userListComponent
-            userListModel: userModel
-            userListCurrentIndex: userModel.lastIndex >= 0 ? userModel.lastIndex : 0
-            lastUserName: userModel.lastUser
-            showUserList: {
-                 if ( !userListModel.hasOwnProperty("count")
-                   || !userListModel.hasOwnProperty("disableAvatarsThreshold"))
-                     return true
-
-                 if ( userListModel.count == 0 ) return false
-
-                 return userListModel.count <= userListModel.disableAvatarsThreshold
+            Timer {
+                //SDDM has a bug in 0.13 where even though we set the focus on the right item within the window, the window doesn't have focus
+                //it is fixed in 6d5b36b28907b16280ff78995fef764bb0c573db which will be 0.14
+                //we need to call "window->activate()" *After* it's been shown. We can't control that in QML so we use a shoddy timer
+                //it's been this way for all Plasma 5.x without a huge problem
+                running: true
+                repeat: false
+                interval: 200
+                onTriggered: mainStack.forceActiveFocus()
             }
 
-            notificationMessage: {
-                var text = ""
-                if (keystateSource.data["Caps Lock"]["Locked"]) {
-                    text += i18nd("plasma_lookandfeel_org.kde.lookandfeel","Caps Lock is on")
-                    if (root.notificationMessage) {
-                        text += " • "
+            initialItem: Login {
+                id: userListComponent
+                userListModel: userModel
+                userListCurrentIndex: userModel.lastIndex >= 0 ? userModel.lastIndex : 0
+                lastUserName: userModel.lastUser
+                showUserList: {
+                    if ( !userListModel.hasOwnProperty("count")
+                    || !userListModel.hasOwnProperty("disableAvatarsThreshold"))
+                        return true
+
+                    if ( userListModel.count == 0 ) return false
+
+                    return userListModel.count <= userListModel.disableAvatarsThreshold
+                }
+
+                notificationMessage: {
+                    var text = ""
+                    if (keystateSource.data["Caps Lock"]["Locked"]) {
+                        text += i18nd("plasma_lookandfeel_org.kde.lookandfeel","Caps Lock is on")
+                        if (root.notificationMessage) {
+                            text += " • "
+                        }
                     }
+                    text += root.notificationMessage
+                    return text
                 }
-                text += root.notificationMessage
-                return text
+
+                actionItems: [
+                    ActionButton {
+                        iconSource: "system-suspend"
+                        text: i18nd("plasma_lookandfeel_org.kde.lookandfeel","Suspend")
+                        onClicked: sddm.suspend()
+                        enabled: sddm.canSuspend
+                        visible: !inputPanel.keyboardActive
+                    },
+                    ActionButton {
+                        iconSource: "system-reboot"
+                        text: i18nd("plasma_lookandfeel_org.kde.lookandfeel","Restart")
+                        onClicked: sddm.reboot()
+                        enabled: sddm.canReboot
+                        visible: !inputPanel.keyboardActive
+                    },
+                    ActionButton {
+                        iconSource: "system-shutdown"
+                        text: i18nd("plasma_lookandfeel_org.kde.lookandfeel","Shutdown")
+                        onClicked: sddm.powerOff()
+                        enabled: sddm.canPowerOff
+                        visible: !inputPanel.keyboardActive
+                    },
+                    ActionButton {
+                        iconSource: "system-search"
+                        text: i18nd("plasma_lookandfeel_org.kde.lookandfeel","Different User")
+                        onClicked: mainStack.push(userPromptComponent)
+                        enabled: true
+                        visible: !userListComponent.showUsernamePrompt && !inputPanel.keyboardActive
+                    }
+                ]
+
+                onLoginRequest: {
+                    root.notificationMessage = ""
+                    sddm.login(username, password, sessionButton.currentIndex)
+                }
             }
 
-            actionItems: [
-                ActionButton {
-                    iconSource: "system-suspend"
-                    text: i18nd("plasma_lookandfeel_org.kde.lookandfeel","Suspend")
-                    onClicked: sddm.suspend()
-                    enabled: sddm.canSuspend
-                },
-                ActionButton {
-                    iconSource: "system-reboot"
-                    text: i18nd("plasma_lookandfeel_org.kde.lookandfeel","Restart")
-                    onClicked: sddm.reboot()
-                    enabled: sddm.canReboot
-                },
-                ActionButton {
-                    iconSource: "system-shutdown"
-                    text: i18nd("plasma_lookandfeel_org.kde.lookandfeel","Shutdown")
-                    onClicked: sddm.powerOff()
-                    enabled: sddm.canPowerOff
-                },
-                ActionButton {
-                    iconSource: "system-search"
-                    text: i18nd("plasma_lookandfeel_org.kde.lookandfeel","Different User")
-                    onClicked: mainStack.push(userPromptComponent)
-                    enabled: true
-                    visible: !userListComponent.showUsernamePrompt
+            Behavior on opacity {
+                OpacityAnimator {
+                    duration: units.longDuration
                 }
-            ]
-
-            onLoginRequest: {
-                root.notificationMessage = ""
-                sddm.login(username, password, sessionButton.currentIndex)
             }
         }
 
-        Behavior on opacity {
-            OpacityAnimator {
-                duration: units.longDuration
+        Loader {
+            id: inputPanel
+            property bool keyboardActive: item ? item.active : false
+            source: "components/VirtualKeyboard.qml"
+            Layout.fillWidth: true
+            Layout.preferredHeight: (item && item.active) ? item.implicitHeight : 0
+            function showHide() {
+                if (Qt.inputMethod.visible) {
+                    Qt.inputMethod.hide();
+                } else {
+                    item.activated = true;
+                    Qt.inputMethod.show();
+                }
             }
         }
-
     }
 
     Component {
@@ -195,6 +217,13 @@ PlasmaCore.ColorScope {
             OpacityAnimator {
                 duration: units.longDuration
             }
+        }
+
+        PlasmaComponents.ToolButton {
+            text: i18ndc("plasma_lookandfeel_org.kde.lookandfeel", "Button to show/hide virtual keyboard", "Virtual Keyboard")
+            iconName: inputPanel.keyboardActive ? "input-keyboard-virtual-on" : "input-keyboard-virtual-off"
+            onClicked: inputPanel.showHide()
+            visible: inputPanel.status == Loader.Ready
         }
 
         KeyboardButton {
