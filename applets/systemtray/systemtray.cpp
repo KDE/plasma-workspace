@@ -37,6 +37,7 @@
 #include <Plasma/PluginLoader>
 #include <Plasma/ServiceJob>
 
+#include <KAcceleratorManager>
 #include <KActionCollection>
 #include <KLocalizedString>
 
@@ -197,6 +198,7 @@ void SystemTray::showPlasmoidMenu(QQuickItem *appletInterface, int x, int y)
                         qBound(geo.top(), (int)pos.y(), geo.bottom() - desktopMenu->height()));
     }
 
+    KAcceleratorManager::manage(desktopMenu);
     desktopMenu->popup(pos.toPoint());
 }
 
@@ -276,6 +278,7 @@ void SystemTray::showStatusNotifierContextMenu(KJob *job, QQuickItem *statusNoti
         }
 
 
+        KAcceleratorManager::manage(menu);
         menu->popup(QPoint(x, y));
     }
 }
