@@ -52,7 +52,8 @@ void DebugPackageInstaller::installDebugPackages()
     if (!m_installerProcess) {
         //Run process
         m_installerProcess = new KProcess(this);
-        connect(m_installerProcess, static_cast<void (KProcess::*)(int, QProcess::ExitStatus)>(&KProcess::finished), this, &DebugPackageInstaller::processFinished);
+        connect(m_installerProcess, QOverload<int, QProcess::ExitStatus>::of(&KProcess::finished),
+                this, &DebugPackageInstaller::processFinished);
 
         *m_installerProcess << m_executablePath
                             << DrKonqi::crashedApplication()->executable().absoluteFilePath()
@@ -74,11 +75,11 @@ void DebugPackageInstaller::progressDialogCanceled()
 
     if (m_installerProcess) {
         if (m_installerProcess->state() == QProcess::Running) {
-            disconnect(m_installerProcess, SIGNAL(finished(int,QProcess::ExitStatus)),
-                                            this, SLOT(processFinished(int,QProcess::ExitStatus)));
+            disconnect(m_installerProcess, QOverload<int, QProcess::ExitStatus>::of(&KProcess::finished),
+                       this, &DebugPackageInstaller::processFinished);
             m_installerProcess->kill();
-            disconnect(m_installerProcess, SIGNAL(finished(int,QProcess::ExitStatus)),
-                                            m_installerProcess, SLOT(deleteLater()));
+            disconnect(m_installerProcess, QOverload<int, QProcess::ExitStatus>::of(&KProcess::finished),
+                       m_installerProcess, &KProcess::deleteLater);
         }
         m_installerProcess = 0;
     }
