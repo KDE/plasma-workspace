@@ -200,7 +200,11 @@ void DrKonqiDialog::buildDialogButtons()
                                                      "the crashed application."));
     KGuiItem::assign(m_debugButton, debugItem);
     m_debugButton->setVisible(debuggerManager->showExternalDebuggers());
-    m_buttonBox->addButton(m_debugButton, QDialogButtonBox::ActionRole);
+    // Do not add the button unless it is visible, otherwise the Box will force
+    // it visible as it calls show() explicitly.
+    if (m_debugButton->isVisible()) {
+        m_buttonBox->addButton(m_debugButton, QDialogButtonBox::ActionRole);
+    }
 
     m_debugMenu = new QMenu(this);
     m_debugButton->setMenu(m_debugMenu);
