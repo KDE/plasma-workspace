@@ -60,6 +60,8 @@ public:
     static QScriptValue gridUnit();
     static QScriptValue createContainment(const QString &type, const QString &defautPlugin,
                                           QScriptContext *context, QScriptEngine *engine);
+    static QScriptValue setImmutability(QScriptContext *context, QScriptEngine *engine);
+    static QScriptValue immutability(QScriptContext *context, QScriptEngine *engine);
 };
 
 }

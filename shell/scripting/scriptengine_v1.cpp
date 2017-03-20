@@ -922,6 +922,40 @@ QScriptValue ScriptEngine::V1::gridUnit()
     return ScriptEngine::gridUnit();
 }
 
+QScriptValue ScriptEngine::V1::setImmutability(QScriptContext *context,
+                                       QScriptEngine *engine)
+{
+    if (context->argumentCount() == 0) {
+        return QScriptValue();
+    }
+    ScriptEngine *env = envFor(engine);
+    const QString immutability = context->argument(0).toString();
+
+    if (immutability == QLatin1String("systemImmutable")) {
+        env->corona()->setImmutability(Plasma::Types::SystemImmutable);
+    } else if (immutability == QLatin1String("userImmutable")) {
+        env->corona()->setImmutability(Plasma::Types::UserImmutable);
+    } else {
+        env->corona()->setImmutability(Plasma::Types::Mutable);
+    }
+
+    return QScriptValue();
+}
+
+QScriptValue ScriptEngine::V1::immutability(QScriptContext *context,
+                                            QScriptEngine *engine)
+{
+    ScriptEngine *env = envFor(engine);
+    switch (env->corona()->immutability()) {
+    case Plasma::Types::SystemImmutable:
+        return QLatin1String("systemImmutable");
+    case Plasma::Types::UserImmutable:
+        return QLatin1String("userImmutable");
+    default:
+        return QLatin1String("mutable");
+    }
+}
+
 QScriptValue ScriptEngine::V1::createContainment(const QString &type, const QString &defaultPlugin,
                                                  QScriptContext *context, QScriptEngine *engine)
 {

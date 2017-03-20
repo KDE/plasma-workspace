@@ -171,6 +171,8 @@ void ScriptEngine::setupEngine()
     m_scriptSelf.setProperty(QStringLiteral("knownWallpaperPlugins"), newFunction(ScriptEngine::V1::knownWallpaperPlugins));
     m_scriptSelf.setProperty(QStringLiteral("ConfigFile"), newFunction(ScriptEngine::V1::configFile));
     m_scriptSelf.setProperty(QStringLiteral("gridUnit"), ScriptEngine::V1::gridUnit());
+    m_scriptSelf.setProperty(QStringLiteral("setImmutability"), newFunction(ScriptEngine::V1::setImmutability));
+    m_scriptSelf.setProperty(QStringLiteral("immutability"), newFunction(ScriptEngine::V1::immutability));
 
     setGlobalObject(m_scriptSelf);
 }
