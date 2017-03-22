@@ -164,7 +164,7 @@ void KSMServer::restoreSession( const QString &sessionName )
     if ( !wm.isEmpty() ) {
         for ( int i = 1; i <= count; i++ ) {
             QString n = QString::number(i);
-            if ( wm == configSessionGroup.readEntry( QStringLiteral("program")+n, QString() ) ) {
+            if ( isWM( configSessionGroup.readEntry( QStringLiteral("program")+n, QString())) ) {
                 wmStartCommands << configSessionGroup.readEntry( QStringLiteral("restartCommand")+n, QStringList() );
             }
         }
@@ -365,7 +365,7 @@ void KSMServer::tryRestoreNext()
              (config.readEntry( QStringLiteral("restartStyleHint")+n, 0 ) == SmRestartNever)) {
             continue;
         }
-        if ( wm == config.readEntry( QStringLiteral("program")+n, QString() ) )
+        if ( isWM( config.readEntry( QStringLiteral("program")+n, QString())) )
             continue; // wm already started
         if( config.readEntry( QStringLiteral( "wasWm" )+n, false ))
             continue; // it was wm before, but not now, don't run it (some have --replace in command :(  )
