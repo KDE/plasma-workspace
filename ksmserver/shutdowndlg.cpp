@@ -87,7 +87,6 @@ KSMShutdownDlg::KSMShutdownDlg( QWindow* parent,
     // window stuff
     setClearBeforeRendering(true);
     setColor(QColor(Qt::transparent));
-    setFlags(Qt::FramelessWindowHint | Qt::BypassWindowManagerHint);
 
     setResizeMode(QQuickView::SizeRootObjectToView);
 
@@ -192,7 +191,7 @@ void KSMShutdownDlg::init()
         setGeometry(screen()->geometry());
     });
 
-    QQuickView::show();
+    QQuickView::showFullScreen();
     requestActivate();
 
     KWindowSystem::setState(winId(), NET::SkipTaskbar|NET::SkipPager);
