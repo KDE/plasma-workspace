@@ -258,7 +258,7 @@ void KSMServer::restoreLegacySession( KConfig* config )
         int count =  group.readEntry( "count", 0 );
         for ( int i = 1; i <= count; i++ ) {
             QString n = QString::number(i);
-            if ( group.readEntry( QStringLiteral("program")+n, QString() ) != wm )
+            if ( !isWM( group.readEntry( QStringLiteral("program")+n, QString())))
                 continue;
             QStringList restartCommand =
                 group.readEntry( QStringLiteral("restartCommand")+n, QStringList() );

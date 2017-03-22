@@ -977,9 +977,12 @@ bool KSMServer::isWM( const KSMClient* client ) const
     return isWM( client->program());
 }
 
-bool KSMServer::isWM( const QString& command ) const
+bool KSMServer::isWM( const QString& program ) const
 {
-    return command == wm;
+    // Strip possible paths, so that even /usr/bin/kwin is recognized as kwin.
+    QString wmName = wm.mid( wm.lastIndexOf( QDir::separator()) + 1 );
+    QString programName = program.mid( program.lastIndexOf( QDir::separator()) + 1 );
+    return programName == wmName;
 }
 
 bool KSMServer::defaultSession() const
