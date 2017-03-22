@@ -59,8 +59,7 @@ PlasmaCore.ColorScope {
 
     Clock {
         visible: y > 0
-        anchors.bottom: parent.verticalCenter
-        anchors.bottomMargin: units.gridUnit * 13
+        y: (userListComponent.userList.y + mainStack.y)/2 - height/2
         anchors.horizontalCenter: parent.horizontalCenter
     }
 
