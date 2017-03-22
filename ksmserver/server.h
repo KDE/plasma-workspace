@@ -184,7 +184,7 @@ private:
     void executeCommand( const QStringList& command );
 
     bool isWM( const KSMClient* client ) const;
-    bool isWM( const QString& command ) const;
+    bool isWM( const QString& program ) const;
     void selectWm( const QString& kdewm );
     bool defaultSession() const; // empty session
     void setupXIOErrorHandler();
