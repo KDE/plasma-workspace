@@ -41,10 +41,12 @@ PlasmaCore.ColorScope {
     signal cancelRequested()
     signal lockScreenRequested()
 
+    property alias backgroundColor: backgroundRect.color
+
     function sleepRequested() {
         root.suspendRequested(2);
     }
-
+ 
     property real timeout: 30
     property real remainingTime: root.timeout
     property var currentAction: {
@@ -74,15 +76,49 @@ PlasmaCore.ColorScope {
     }
 
     Timer {
+        id: countDownTimer
         running: true
         repeat: true
         interval: 1000
         onTriggered: remainingTime--
     }
 
+    function rgbToHsv(color) {
+        var max = Math.max(color.r, color.g, color.b);
+        var min = Math.min(color.r, color.g, color.b);
+        var d = max - min;
+        var h;
+        var s = (max === 0 ? 0 : d / max);
+        var v = max / 255;
+
+        switch (max) {
+        case min:
+            h = 0;
+            break;
+        case color.r:
+            h = (color.g - color.b) + d * (color.g < color.b ? 6: 0);
+            h /= 6 * d;
+            break;
+        case color.g:
+            h = (color.b - color.r) + d * 2; h /= 6 * d;
+            break;
+        case color.b:
+            h = (color.r - color.g) + d * 4; h /= 6 * d;
+            break;
+        }
+
+        return {
+            h: h,
+            s: s,
+            v: v
+        };
+    }
+
     Rectangle {
+        id: backgroundRect
         anchors.fill: parent
-        color: PlasmaCore.ColorScope.backgroundColor
+        //use "black" because this is intended to look like a general darkening of the scene. a dark gray as normal background would just look too "washed out"
+        color: root.rgbToHsv(PlasmaCore.ColorScope.backgroundColor).v > 128 ? PlasmaCore.ColorScope.backgroundColor : "black"
         opacity: 0.5
     }
     MouseArea {
@@ -155,6 +191,14 @@ PlasmaCore.ColorScope {
 
         PlasmaComponents.Label {
             Layout.alignment: Qt.AlignHCenter
+            //opacity, as visible would re-layout
+            opacity: countDownTimer.running ? 1 : 0
+            Behavior on opacity {
+                OpacityAnimator {
+                    duration: units.longDuration
+                    easing.type: Easing.InOutQuad
+                }
+            }
             text: {
                 switch (sdtype) {
                     case ShutdownType.ShutdownTypeReboot:
@@ -167,10 +211,17 @@ PlasmaCore.ColorScope {
             }
         }
 
-        PlasmaComponents.Button {
+        RowLayout {
             Layout.alignment: Qt.AlignHCenter
-            text: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Cancel")
-            onClicked: root.cancelRequested()
+            PlasmaComponents.Button {
+                enabled: root.currentAction != null
+                text: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "OK")
+                onClicked: root.currentAction()
+            }
+            PlasmaComponents.Button {
+                text: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Cancel")
+                onClicked: root.cancelRequested()
+            }
         }
     }
 }
