@@ -26,14 +26,13 @@ set(XCB_LIBS
     XCB::IMAGE
 )
 
-
-
 set(XEMBED_SNI_PROXY_SOURCES
     main.cpp
     fdoselectionmanager.cpp
     snidbus.cpp
     sniproxy.cpp
-)
+    xtestsender.cpp
+ )
 
 qt5_add_dbus_adaptor(XEMBED_SNI_PROXY_SOURCES org.kde.StatusNotifierItem.xml
                      sniproxy.h SNIProxy)
@@ -59,6 +58,7 @@ target_link_libraries(xembedsniproxy
     Qt5::DBus
     KF5::WindowSystem
     ${XCB_LIBS}
+    Xtst
 )
 
 install(TARGETS xembedsniproxy ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})

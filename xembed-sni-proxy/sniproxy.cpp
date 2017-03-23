@@ -24,6 +24,7 @@
 #include <xcb/xcb_atom.h>
 #include <xcb/xcb_event.h>
 #include <xcb/xcb_image.h>
+#include <xcb/xinput.h>
 
 #include "xcbutils.h"
 #include "debug.h"
@@ -40,6 +41,10 @@
 
 #include "statusnotifieritemadaptor.h"
 #include "statusnotifierwatcher_interface.h"
+
+#include "xtestsender.h"
+
+//#define VISUAL_DEBUG
 
 #define SNI_WATCHER_SERVICE_NAME "org.kde.StatusNotifierWatcher"
 #define SNI_WATCHER_PATH "/StatusNotifierWatcher"
@@ -72,7 +77,8 @@ SNIProxy::SNIProxy(xcb_window_t wid, QObject* parent):
     //there is an undocumented feature that you can register an SNI by path, however it doesn't detect an object on a service being removed, only the entire service closing
     //instead lets use one DBus connection per SNI
     m_dbus(QDBusConnection::connectToBus(QDBusConnection::SessionBus, QStringLiteral("XembedSniProxy%1").arg(s_serviceCount++))),
-    m_windowId(wid)
+    m_windowId(wid),
+    m_injectMode(Direct)
 {
     //create new SNI
     new StatusNotifierItemAdaptor(this);
@@ -194,6 +200,19 @@ SNIProxy::SNIProxy(xcb_window_t wid, QObject* parent):
     xcb_clear_area(c, 0, wid, 0, 0, clientWindowSize.width(), clientWindowSize.height());
 
     xcb_flush(c);
+
+    //guess which input injection method to use
+    //we can either send an X event to the client or XTest
+    //some don't support direct X events (GTK3/4), and some don't support XTest because reasons
+    //note also some clients might not have the XTest extension. We may as well assume it does and just fail to send later.
+
+    //we query if the client selected button presses in the event mask
+    //if the client does supports that we send directly, otherwise we'll use xtest
+    auto waCookie = xcb_get_window_attributes(c, wid);
+    auto windowAttributes = xcb_get_window_attributes_reply(c, waCookie, nullptr);
+    if (! windowAttributes->all_event_masks & XCB_EVENT_MASK_BUTTON_PRESS) {
+        m_injectMode = XTest;
+    }
 
     //there's no damage event for the first paint, and sometimes it's not drawn immediately
     //not ideal, but it works better than nothing
@@ -470,7 +489,7 @@ void SNIProxy::sendClick(uint8_t mouseButton, int x, int y)
     xcb_configure_window(c, m_containerWid, XCB_CONFIG_WINDOW_STACK_MODE, stackAboveData);
 
     //mouse down
-    {
+    if (m_injectMode == Direct) {
         xcb_button_press_event_t* event = new xcb_button_press_event_t;
         memset(event, 0x00, sizeof(xcb_button_press_event_t));
         event->response_type = XCB_BUTTON_PRESS;
@@ -488,9 +507,12 @@ void SNIProxy::sendClick(uint8_t mouseButton, int x, int y)
 
         xcb_send_event(c, false, m_windowId, XCB_EVENT_MASK_BUTTON_PRESS, (char *) event);
         delete event;
+    } else {
+        sendXTestPressed(QX11Info::display(), mouseButton);
     }
 
     //mouse up
+    if (m_injectMode == Direct)
     {
         xcb_button_release_event_t* event = new xcb_button_release_event_t;
         memset(event, 0x00, sizeof(xcb_button_release_event_t));
@@ -509,6 +531,8 @@ void SNIProxy::sendClick(uint8_t mouseButton, int x, int y)
 
         xcb_send_event(c, false, m_windowId, XCB_EVENT_MASK_BUTTON_RELEASE, (char *) event);
         delete event;
+    } else {
+        sendXTestReleased(QX11Info::display(), mouseButton);
     }
 
 #ifndef VISUAL_DEBUG

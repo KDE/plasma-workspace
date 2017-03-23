@@ -140,6 +140,11 @@ Q_SIGNALS:
     void NewStatus(const QString &status);
 
 private:
+    enum InjectMode {
+        Direct,
+        XTest
+    };
+
     void sendClick(uint8_t mouseButton, int x, int y);
     QImage getImageNonComposite() const;
     bool isTransparentImage(const QImage &image) const;
@@ -150,6 +155,8 @@ private:
     xcb_window_t m_containerWid;
     static int s_serviceCount;
     QPixmap m_pixmap;
+
+    InjectMode m_injectMode;
 };
 
 #endif // SNIPROXY_H
