@@ -92,14 +92,6 @@ Item {
             id: buttonRepeater
             model: appMenuModel
 
-            Connections {
-                target: appMenuModel
-                onModelItemActivated: {
-                    console.log("I should be triggered but I'm not", row);
-                    plasmoid.nativeInterface.trigger(childAt(row), row);
-                }
-            }
-
             PlasmaComponents.ToolButton {
                 readonly property int buttonIndex: index
 

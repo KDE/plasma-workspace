@@ -60,7 +60,6 @@ private Q_SLOTS:
 signals:
     void menuAvailableChanged();
     void modelNeedsUpdate();
-    void modelItemActivated(int row);
 
 private:
     bool m_menuAvailable;
