@@ -24,7 +24,6 @@
 #include <xcb/xcb_atom.h>
 #include <xcb/xcb_event.h>
 #include <xcb/xcb_image.h>
-#include <xcb/xinput.h>
 
 #include "xcbutils.h"
 #include "debug.h"
