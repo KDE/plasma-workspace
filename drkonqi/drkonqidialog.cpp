@@ -132,9 +132,7 @@ void DrKonqiDialog::buildIntroWidget()
         } else {
             reportMessage = xi18nc("@info", "<para>You can help us improve KDE Software by reporting "
                                             "this error.<nl /><link url='%1'>Learn "
-                                            "more about bug reporting.</link></para><para><note>It is "
-                                            "safe to close this dialog if you do not want to report "
-                                            "this bug.</note></para>",
+                                            "more about bug reporting.</link></para>",
                                             QLatin1String(ABOUT_BUG_REPORTING_URL));
         }
     } else {
