@@ -79,7 +79,7 @@ void QalculateEngine::updateResult(KJob* job)
     }
 }
 
-QString QalculateEngine::evaluate(const QString& expression)
+QString QalculateEngine::evaluate(const QString& expression, bool *isApproximate)
 {
     if (expression.isEmpty()) {
         return "";
@@ -98,6 +98,10 @@ QString QalculateEngine::evaluate(const QString& expression)
     eo.parse_options.angle_unit = ANGLE_UNIT_RADIANS;
     eo.structuring = STRUCTURING_SIMPLIFY;
 
+    // suggested in https://github.com/Qalculate/libqalculate/issues/16
+    // to avoid memory overflow for seemingly innocent calculations (Bug 277011)
+    eo.approximation = APPROXIMATION_APPROXIMATE;
+
     CALCULATOR->setPrecision(16);
     MathStructure result = CALCULATOR->calculate(ctext, eo);
 
@@ -113,6 +117,10 @@ QString QalculateEngine::evaluate(const QString& expression)
     result.format(po);
 
     m_lastResult = result.print(po).c_str();
+
+    if (isApproximate) {
+        *isApproximate = result.isApproximate();
+    }
 
     return m_lastResult;
 }
