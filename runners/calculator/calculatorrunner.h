@@ -47,7 +47,7 @@ class CalculatorRunner : public Plasma::AbstractRunner
         QMimeData * mimeDataForMatch(const Plasma::QueryMatch &match) override;
 
     private:
-        QString calculate(const QString& term);
+        QString calculate(const QString& term, bool *isApproximate);
         void userFriendlySubstitutions(QString& cmd);
         void powSubstitutions(QString& cmd);
         void hexSubstitutions(QString& cmd);

@@ -262,7 +262,8 @@ void CalculatorRunner::match(Plasma::RunnerContext &context)
     cmd.replace(QRegExp(QStringLiteral("([a-zA-Z]+)")), QStringLiteral("Math.\\1")); //needed for accessing math funktions like sin(),....
     #endif
 
-    QString result = calculate(cmd);
+    bool isApproximate = false;
+    QString result = calculate(cmd, &isApproximate);
     if (!result.isEmpty() && result != cmd) {
         if (toHex) {
             result = "0x" + QString::number(result.toInt(), 16).toUpper();
@@ -272,19 +273,22 @@ void CalculatorRunner::match(Plasma::RunnerContext &context)
         match.setType(Plasma::QueryMatch::InformationalMatch);
         match.setIconName(QStringLiteral("accessories-calculator"));
         match.setText(result);
+        if (isApproximate) {
+            match.setSubtext(i18nc("The result of the calculation is only an approximation", "Approximation"));
+        }
         match.setData(result);
         match.setId(term);
         context.addMatch(match);
     }
 }
 
-QString CalculatorRunner::calculate(const QString& term)
+QString CalculatorRunner::calculate(const QString& term, bool *isApproximate)
 {
     #ifdef ENABLE_QALCULATE
     QString result;
 
     try {
-        result = m_engine->evaluate(term);
+        result = m_engine->evaluate(term, isApproximate);
     } catch(std::exception& e) {
         qDebug() << "qalculate error: " << e.what();
     }
