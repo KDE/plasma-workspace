@@ -12,6 +12,7 @@ target_link_libraries(
     Qt5::Quick
     Qt5::Qml
     KF5::I18n
+    KF5::IconThemes
     KF5::XmlGui
     KF5::PlasmaQuick
     KF5::Plasma
