@@ -437,6 +437,7 @@ void DBusMenuImporter::slotGetLayoutFinished(QDBusPendingCallWatcher *watcher)
                    updateMenu(menu);
                 });
             }
+            connect(menu, &QMenu::aboutToHide, this, &DBusMenuImporter::slotMenuAboutToHide);
 
             menu->addAction(action);
         } else {
