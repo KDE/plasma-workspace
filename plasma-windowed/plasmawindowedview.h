@@ -54,8 +54,11 @@ protected Q_SLOTS:
     void maximumWidthChanged();
     void maximumHeightChanged();
 
-
 private:
+    void updateSniIcon();
+    void updateSniTitle();
+    void updateSniStatus();
+
     Plasma::Applet *m_applet;
     QPointer<QObject> m_layout;
     QPointer<PlasmaQuick::ConfigView> m_configView;

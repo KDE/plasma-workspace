@@ -110,9 +110,15 @@ void PlasmaWindowedView::setApplet(Plasma::Applet *applet)
     Q_ASSERT(!m_statusNotifier);
     if (m_withStatusNotifier) {
         m_statusNotifier = new KStatusNotifierItem(this);
-        m_statusNotifier->setIconByName(applet->icon());
-        m_statusNotifier->setTitle(applet->title());
-        m_statusNotifier->setToolTipTitle(applet->title());
+
+        updateSniIcon();
+        connect(applet, &Plasma::Applet::iconChanged, this, &PlasmaWindowedView::updateSniIcon);
+
+        updateSniTitle();
+        connect(applet, &Plasma::Applet::titleChanged, this, &PlasmaWindowedView::updateSniTitle);
+
+        updateSniStatus();
+        connect(applet, &Plasma::Applet::statusChanged, this, &PlasmaWindowedView::updateSniStatus);
 
         connect(m_statusNotifier, &KStatusNotifierItem::activateRequested, this, [this](bool active, const QPoint& /*pos*/){
             setVisible(active);
@@ -254,3 +260,32 @@ void PlasmaWindowedView::maximumHeightChanged()
     setMaximumHeight(m_layout->property("maximumHeight").toInt());
 }
 
+void PlasmaWindowedView::updateSniIcon()
+{
+    m_statusNotifier->setIconByName(m_applet->icon());
+}
+
+void PlasmaWindowedView::updateSniTitle()
+{
+    m_statusNotifier->setTitle(m_applet->title());
+    m_statusNotifier->setToolTipTitle(m_applet->title());
+}
+
+void PlasmaWindowedView::updateSniStatus()
+{
+    switch (m_applet->status()) {
+    case Plasma::Types::UnknownStatus:
+    case Plasma::Types::PassiveStatus:
+    case Plasma::Types::HiddenStatus:
+        m_statusNotifier->setStatus(KStatusNotifierItem::Passive);
+        break;
+    case Plasma::Types::ActiveStatus:
+    case Plasma::Types::AcceptingInputStatus:
+        m_statusNotifier->setStatus(KStatusNotifierItem::Active);
+        break;
+    case Plasma::Types::NeedsAttentionStatus:
+    case Plasma::Types::RequiresAttentionStatus:
+        m_statusNotifier->setStatus(KStatusNotifierItem::NeedsAttention);
+        break;
+    }
+}
