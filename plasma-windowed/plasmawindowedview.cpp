@@ -177,6 +177,14 @@ void PlasmaWindowedView::mouseReleaseEvent(QMouseEvent *ev)
     ev->setAccepted(true);
 }
 
+void PlasmaWindowedView::keyPressEvent(QKeyEvent *ev)
+{
+    if (ev->matches(QKeySequence::Quit)) {
+        close();
+    }
+    QQuickView::keyReleaseEvent(ev);
+}
+
 void PlasmaWindowedView::moveEvent(QMoveEvent *ev)
 {
     Q_UNUSED(ev)
