@@ -32,6 +32,7 @@
 #include <KActionCollection>
 #include <KStatusNotifierItem>
 #include <KIconLoader>
+#include <KLocalizedString>
 
 #include <Plasma/Package>
 
@@ -66,6 +67,7 @@ void PlasmaWindowedView::setApplet(Plasma::Applet *applet)
     }
 
     m_appletInterface = applet->property("_plasma_graphicObject").value<QQuickItem *>();
+
     if (!m_appletInterface) {
         return;
     }
@@ -109,7 +111,7 @@ void PlasmaWindowedView::setApplet(Plasma::Applet *applet)
 
     Q_ASSERT(!m_statusNotifier);
     if (m_withStatusNotifier) {
-        m_statusNotifier = new KStatusNotifierItem(this);
+        m_statusNotifier = new KStatusNotifierItem(applet->pluginMetaData().pluginId(), this);
 
         updateSniIcon();
         connect(applet, &Plasma::Applet::iconChanged, this, &PlasmaWindowedView::updateSniIcon);
@@ -120,12 +122,41 @@ void PlasmaWindowedView::setApplet(Plasma::Applet *applet)
         updateSniStatus();
         connect(applet, &Plasma::Applet::statusChanged, this, &PlasmaWindowedView::updateSniStatus);
 
-        connect(m_statusNotifier, &KStatusNotifierItem::activateRequested, this, [this](bool active, const QPoint& /*pos*/){
-            setVisible(active);
-            if (active) {
+        //set up actions
+        for (auto a : applet->contextualActions()) {
+            m_statusNotifier->contextMenu()->addAction(a);
+        }
+        QAction *closeAction = new QAction(QIcon::fromTheme(QStringLiteral("window-close")), i18n("Close %1", applet->title()), this);
+        connect(closeAction, &QAction::triggered, this, [this]() {
+            m_statusNotifier->deleteLater();
+            close();
+        });
+        m_statusNotifier->contextMenu()->addAction(closeAction);
+
+        connect(m_statusNotifier.data(), &KStatusNotifierItem::activateRequested, this, [this](bool active, const QPoint& /*pos*/){
+            if (isVisible() && isActive()) {
+                hide();
+            } else {
+                show();
                 raise();
             }
         });
+        auto syncStatus = [this]() {
+            switch(m_applet->status()) {
+            case Plasma::Types::AcceptingInputStatus:
+            case Plasma::Types::RequiresAttentionStatus:
+            case Plasma::Types::NeedsAttentionStatus:
+                m_statusNotifier->setStatus(KStatusNotifierItem::NeedsAttention);
+                break;
+            case Plasma::Types::ActiveStatus:
+                m_statusNotifier->setStatus(KStatusNotifierItem::Active);
+                break;
+            default:
+                m_statusNotifier->setStatus(KStatusNotifierItem::Passive);
+            }
+        };
+        connect(applet, &Plasma::Applet::statusChanged, this, syncStatus);
+        syncStatus();
     }
 }
 
@@ -186,6 +217,7 @@ void PlasmaWindowedView::mouseReleaseEvent(QMouseEvent *ev)
 void PlasmaWindowedView::keyPressEvent(QKeyEvent *ev)
 {
     if (ev->matches(QKeySequence::Quit)) {
+        m_statusNotifier->deleteLater();
         close();
     }
     QQuickView::keyReleaseEvent(ev);

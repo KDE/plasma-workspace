@@ -23,7 +23,10 @@
 #include "plasmawindowedview.h"
 #include <QDebug>
 #include <QAction>
+#include <QCommandLineParser>
+
 #include <KActionCollection>
+#include <KLocalizedString>
 
 #include <KPackage/Package>
 #include <KPackage/PackageLoader>
@@ -108,16 +111,29 @@ void PlasmaWindowedCorona::activateRequested(const QStringList &arguments, const
         return;
     }
 
+    QCommandLineParser parser;
+    parser.setApplicationDescription(i18n("Plasma Windowed"));
+    parser.addOption(QCommandLineOption(QStringLiteral("statusnotifier"), i18n("Makes the plasmoid stay alive in the Notification Area, even when the window is closed.")));
+    parser.addPositionalArgument(QStringLiteral("applet"), i18n("The applet to open."));
+    parser.addPositionalArgument(QStringLiteral("args"), i18n("Arguments to pass to the plasmoid."), QStringLiteral("[args...]"));
+    parser.addVersionOption();
+    parser.addHelpOption();
+    parser.process(arguments);
+
+    if (parser.positionalArguments().isEmpty()) {
+        parser.showHelp(1);
+    }
+
+    const QStringList positionalArguments = parser.positionalArguments();
+
     QVariantList args;
-    QStringList::const_iterator constIterator;
-    constIterator = arguments.constBegin();
-    ++constIterator;
-    for (; constIterator != arguments.constEnd();
+    QStringList::const_iterator constIterator = positionalArguments.constBegin() + 1;
+    for (; constIterator != positionalArguments.constEnd();
            ++constIterator) {
         args << (*constIterator);
     }
 
-    loadApplet(arguments[1], args);
+    loadApplet(positionalArguments.first(), args);
 }
 
 QRect PlasmaWindowedCorona::screenGeometry(int id) const

@@ -64,7 +64,7 @@ private:
     QPointer<PlasmaQuick::ConfigView> m_configView;
     QPointer<QQuickItem> m_rootObject;
     QPointer<QQuickItem> m_appletInterface;
-    KStatusNotifierItem* m_statusNotifier;
+    QPointer<KStatusNotifierItem> m_statusNotifier;
     bool m_withStatusNotifier;
 };
 
