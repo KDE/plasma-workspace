@@ -307,12 +307,14 @@ void TasksModel::Private::initModels()
                 return;
             }
 
+            bool demandsAttentionUpdateNeeded = false;
+
             for (int i = first; i <= last; ++i) {
                 const QModelIndex &sourceIndex = groupingProxyModel->index(i, 0);
                 const QString &appId = sourceIndex.data(AbstractTasksModel::AppId).toString();
 
                 if (sourceIndex.data(AbstractTasksModel::IsDemandingAttention).toBool()) {
-                    updateAnyTaskDemandsAttention();
+                    demandsAttentionUpdateNeeded = true;
                 }
 
                 // When we get a window we have a startup for, cause the startup to be re-filtered.
@@ -349,6 +351,10 @@ void TasksModel::Private::initModels()
                     }
                 }
             }
+
+            if (!anyTaskDemandsAttention && demandsAttentionUpdateNeeded) {
+                updateAnyTaskDemandsAttention();
+            }
          }
     );
 
@@ -361,10 +367,6 @@ void TasksModel::Private::initModels()
 
             for (int i = first; i <= last; ++i) {
                 const QModelIndex &sourceIndex = groupingProxyModel->index(i, 0);
-
-                if (sourceIndex.data(AbstractTasksModel::IsDemandingAttention).toBool()) {
-                    updateAnyTaskDemandsAttention();
-                }
 
                 // When a window or startup task is removed, we have to trigger a re-filter of
                 // our launchers to (possibly) pop them back in.
@@ -405,6 +407,13 @@ void TasksModel::Private::initModels()
                 }
 
                 launcherCheckNeeded = false;
+            }
+
+            // One of the removed tasks might have been demanding attention, but
+            // we can't check the state after the window has been closed already,
+            // so we always have to do a full update.
+            if (anyTaskDemandsAttention) {
+                updateAnyTaskDemandsAttention();
             }
         }
     );
