@@ -110,22 +110,14 @@ void WindowedWidgetsRunner::setupMatch(const KPluginMetaData &md, Plasma::QueryM
     match.setText(md.name());
     match.setSubtext(md.description());
     match.setIconName(md.iconName());
-    match.setData(md.metaDataFileName());
+    match.setData(md.pluginId());
 }
 
 QMimeData * WindowedWidgetsRunner::mimeDataForMatch(const Plasma::QueryMatch &match)
 {
-    KService::Ptr service = KService::serviceByStorageId(match.data().toString());
-    if (service) {
-
-        QMimeData *data = new QMimeData();
-        data->setData(QStringLiteral("text/x-plasmoidservicename"),
-                      service->property(QStringLiteral("X-KDE-PluginInfo-Name"), QVariant::String).toString().toUtf8());
-        return data;
-
-    }
-
-    return 0;
+    QMimeData *data = new QMimeData();
+    data->setData(QStringLiteral("text/x-plasmoidservicename"), match.data().toString().toUtf8());
+    return data;
 }
 
 
