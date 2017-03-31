@@ -176,7 +176,7 @@ MouseEventListener {
     }
 
     function action_notificationskcm() {
-        ProcessRunner.runNotificationsKCM()
+        KCMShell.open("kcmnotify");
     }
 
     Component.onCompleted: {
@@ -186,7 +186,8 @@ MouseEventListener {
             return notificationsApplet.notifications && notificationsApplet.notifications.count > 0
         })
 
-        //var allApplications = new Object
-        plasmoid.setAction("notificationskcm", i18n("&Configure Event Notifications and Actions..."), "preferences-desktop-notification")
+        if (KCMShell.authorize("kcmnotify.desktop").length > 0) {
+            plasmoid.setAction("notificationskcm", i18n("&Configure Event Notifications and Actions..."), "preferences-desktop-notification")
+        }
     }
 }

@@ -51,23 +51,6 @@ static QObject *urlcheck_singletontype_provider(QQmlEngine *engine, QJSEngine *s
     return new UrlHelper();
 }
 
-class ProcessRunner : public QObject
-{
-    Q_OBJECT
-    public:
-        Q_INVOKABLE void runNotificationsKCM() const {
-            QProcess::startDetached(QStringLiteral("kcmshell5"), QStringList() << QStringLiteral("kcmnotify"));
-        }
-};
-
-static QObject *processrunner_singleton_provider(QQmlEngine *engine, QJSEngine *scriptEngine)
-{
-    Q_UNUSED(engine)
-    Q_UNUSED(scriptEngine)
-
-    return new ProcessRunner();
-}
-
 void NotificationsHelperPlugin::registerTypes(const char *uri)
 {
     Q_ASSERT(uri == QLatin1String("org.kde.plasma.private.notifications"));
@@ -76,7 +59,6 @@ void NotificationsHelperPlugin::registerTypes(const char *uri)
     qmlRegisterType<Thumbnailer>(uri, 1, 0, "Thumbnailer");
 
     qmlRegisterSingletonType<UrlHelper>(uri, 1, 0, "UrlHelper", urlcheck_singletontype_provider);
-    qmlRegisterSingletonType<ProcessRunner>(uri, 1, 0, "ProcessRunner", processrunner_singleton_provider);
 }
 
 void NotificationsHelperPlugin::initializeEngine(QQmlEngine *engine, const char *uri)
