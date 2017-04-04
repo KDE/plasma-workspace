@@ -70,7 +70,8 @@ Item {
             }
         }
 
-        text: activeApplet ? activeApplet.title : i18n("Status & Notifications")
+        visible: activeApplet
+        text: activeApplet.title || ""
         MouseArea {
             anchors.fill: parent
             onClicked: {
@@ -80,6 +81,19 @@ Item {
                 }
             }
         }
+    }
+    PlasmaExtras.Heading {
+        id: noAppletHeading
+        level: 1
+        anchors {
+            left: parent.left
+            top: parent.top
+            right: parent.right
+            topMargin: hiddenItemsView.visible ? units.smallSpacing : 0
+            leftMargin: hiddenItemsView.iconColumnWidth + units.largeSpacing;
+        }
+        text: i18n("Status & Notifications")
+        visible: !heading.visible
     }
 
     PlasmaCore.SvgItem {
@@ -106,7 +120,8 @@ Item {
         id: hiddenItemsView
         anchors {
             left: parent.left
-            top: heading.bottom
+            top: noAppletHeading.bottom
+            topMargin: units.smallSpacing
             bottom: parent.bottom
         }
     }
