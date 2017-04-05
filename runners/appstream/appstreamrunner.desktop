@@ -1,0 +1,13 @@
+[Desktop Entry]
+Name=Software Center
+Comment=Lets you find software
+Icon=applications-other
+Type=Service
+X-KDE-ServiceTypes=Plasma/Runner
+
+X-KDE-Library=appstreamrunner
+X-KDE-PluginInfo-Author=Aleix Pol Gonzalez
+X-KDE-PluginInfo-Email=aleixpol@blue-systems.com
+X-KDE-PluginInfo-Version=0.1
+X-KDE-PluginInfo-License=GPL
+X-KDE-PluginInfo-EnabledByDefault=true

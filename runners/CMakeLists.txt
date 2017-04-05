@@ -12,7 +12,11 @@ add_subdirectory(shell)
 # add_subdirectory(solid)
 add_subdirectory(webshortcuts)
 add_subdirectory(windowedwidgets)
-#
+
+if(AppStreamQt_FOUND)
+    add_subdirectory(appstream)
+endif()
+
 if(NOT WIN32)
  add_subdirectory(powerdevil)
  add_subdirectory(sessions)
