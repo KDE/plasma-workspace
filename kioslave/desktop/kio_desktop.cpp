@@ -22,6 +22,7 @@
 #include <KConfigGroup>
 #include <KDesktopFile>
 #include <KDirNotify>
+#include <KLocalizedString>
 
 #include <kio/udsentry.h>
 #include <kio_version.h>
@@ -164,6 +165,12 @@ void DesktopProtocol::prepareUDSEntry(KIO::UDSEntry &entry, bool listing) const
 
         if (file.noDisplay() || !file.tryExec())
             entry.insert(KIO::UDSEntry::UDS_HIDDEN, 1);
+    }
+
+    // Set a descriptive display name for the root item
+    if (requestedUrl().path() == QLatin1String("/")
+        && entry.stringValue(KIO::UDSEntry::UDS_NAME) == QLatin1String(".")) {
+        entry.insert(KIO::UDSEntry::UDS_DISPLAY_NAME, i18n("Desktop Folder"));
     }
 
     // Set the target URL to the local path 

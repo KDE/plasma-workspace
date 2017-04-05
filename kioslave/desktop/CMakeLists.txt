@@ -1,8 +1,10 @@
+add_definitions(-DTRANSLATION_DOMAIN=\"kio_desktop\")
+
 add_subdirectory(tests)
 
 add_library(kio_desktop MODULE kio_desktop.cpp)
 
-target_link_libraries(kio_desktop Qt5::DBus Qt5::Gui KF5::KIOCore)
+target_link_libraries(kio_desktop Qt5::DBus Qt5::Gui KF5::KIOCore KF5::I18n)
 
 set_target_properties(kio_desktop PROPERTIES OUTPUT_NAME "desktop")
 
