@@ -1156,7 +1156,7 @@ void ShellCorona::reconsiderOutputs()
                 addOutput(screen);
             }
         } else if (isOutputRedundant(screen)) {
-            qDebug() << "new redundant screen" << screen;
+            qDebug() << "new redundant screen" << screen << "with primary screen" << qGuiApp->primaryScreen();
 
             if (DesktopView* v = desktopForScreen(screen))
                 removeDesktop(v);
