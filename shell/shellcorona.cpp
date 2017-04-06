@@ -719,10 +719,9 @@ void ShellCorona::primaryOutputChanged()
         return;
     }
 
-    //Since the primary screen is considered more important
-    //then the others, having the primary changed may have changed what outputs are redundant and what are not
-    //TODO: for a particular corner case, in which in the same moment the primary screen changes *and* geometries change to make former redundant screens to not be anymore, instead of doinf reconsiderOutputs() here, it may be better to instead put here the adding of new outputs and after the switch dance has been done, at the bottom of this function remove the eventual redundant ones
-    reconsiderOutputs();
+    //when the appearance of a new primary screen *moves*
+    //the position of the now secondary, the two screens will appear overlapped for an instant, and a spurious output redundant would happen here if checked immediately
+    m_reconsiderOutputsTimer.start();
 
     QScreen *oldPrimary = m_desktopViewforId.value(0)->screen();
     QScreen *newPrimary = qGuiApp->primaryScreen();
@@ -742,6 +741,15 @@ void ShellCorona::primaryOutputChanged()
         oldDesktopOfPrimary->setScreenToFollow(oldPrimary);
         primaryDesktop->show();
         oldDesktopOfPrimary->show();
+    //corner case: the new primary screen was added into redundant outputs when appeared, *and* !m_desktopViewforId.contains(oldIdOfPrimary)
+    //meaning that we had only one screen, connected a new oone that
+    //a) is now primary and
+    //b) is at 0,0 position, moving the current screen out of the way
+    // and this will always happen in two events
+    } else if (m_desktopViewforId.contains(0) && m_redundantOutputs.contains(newPrimary)) {
+        m_desktopViewforId[0]->setScreenToFollow(newPrimary);
+        m_redundantOutputs.remove(newPrimary);
+        m_redundantOutputs.insert(oldPrimary);
     }
 
     foreach (PanelView *panel, m_panelViews) {
@@ -752,7 +760,8 @@ void ShellCorona::primaryOutputChanged()
         }
     }
 
-    CHECK_SCREEN_INVARIANTS
+    //can't do the screen invariant here as reconsideroutputs wasn't executed yet
+    //CHECK_SCREEN_INVARIANTS
 }
 
 #ifndef NDEBUG
@@ -1152,7 +1161,7 @@ void ShellCorona::reconsiderOutputs()
     foreach (QScreen* screen, qGuiApp->screens()) {
         if (m_redundantOutputs.contains(screen)) {
             if (!isOutputRedundant(screen)) {
-//                 qDebug() << "not redundant anymore" << out;
+                //qDebug() << "not redundant anymore" << screen;
                 addOutput(screen);
             }
         } else if (isOutputRedundant(screen)) {
