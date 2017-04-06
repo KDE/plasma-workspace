@@ -107,17 +107,12 @@ PlasmaCore.ColorScope {
                 }
             }
 
-        ColumnLayout {
-            anchors.top: parent.top
-            anchors.bottom: parent.verticalCenter
+        Clock {
+            id: clock
             anchors.horizontalCenter: parent.horizontalCenter
-            Clock {
-                Layout.alignment: Qt.AlignBaseline
-            }
-            Item {
-                Layout.maximumHeight: units.gridUnit * 13
-                Layout.fillHeight: true
-            }
+            y: (mainBlock.userList.y + mainStack.y)/2 - height/2
+            visible: y > 0
+            Layout.alignment: Qt.AlignBaseline
         }
 
         ListModel {
@@ -132,75 +127,167 @@ PlasmaCore.ColorScope {
             }
         }
 
-        ColumnLayout {
-            anchors.fill: parent
-            StackView {
-                id: mainStack
-                Layout.fillWidth: true
-                Layout.fillHeight: true
-                focus: true //StackView is an implicit focus scope, so we need to give this focus so the item inside will have it
 
-                initialItem: MainBlock {
-                    id: mainBlock
+        StackView {
+            id: mainStack
+            anchors {
+                left: parent.left
+                right: parent.right
+            }
+            height: lockScreenRoot.height
+            focus: true //StackView is an implicit focus scope, so we need to give this focus so the item inside will have it
 
-                    Stack.onStatusChanged: {
-                        // prepare for presenting again to the user
-                        if (Stack.status == Stack.Activating) {
-                            mainPasswordBox.remove(0, mainPasswordBox.length)
-                            mainPasswordBox.focus = true
+            initialItem: MainBlock {
+                id: mainBlock
+
+                showUserList: userList.y + mainStack.y > 0
+
+                Stack.onStatusChanged: {
+                    // prepare for presenting again to the user
+                    if (Stack.status == Stack.Activating) {
+                        mainPasswordBox.remove(0, mainPasswordBox.length)
+                        mainPasswordBox.focus = true
+                    }
+                }
+                userListModel: users
+                notificationMessage: {
+                    var text = ""
+                    if (keystateSource.data["Caps Lock"]["Locked"]) {
+                        text += i18nd("plasma_lookandfeel_org.kde.lookandfeel","Caps Lock is on")
+                        if (root.notification) {
+                            text += " • "
                         }
                     }
-                    userListModel: users
-                    notificationMessage: {
-                        var text = ""
-                        if (keystateSource.data["Caps Lock"]["Locked"]) {
-                            text += i18nd("plasma_lookandfeel_org.kde.lookandfeel","Caps Lock is on")
-                            if (root.notification) {
-                                text += " • "
+                    text += root.notification
+                    return text
+                }
+
+                onLoginRequest: {
+                    root.notification = ""
+                    authenticator.tryUnlock(password)
+                }
+
+                actionItems: [
+                    ActionButton {
+                        text: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Switch User")
+                        iconSource: "system-switch-user"
+                        onClicked: mainStack.push(switchSessionPage)
+                        // the current session isn't listed in the model, hence a check for greater than zero, not one
+                        visible: (sessionsModel.count > 0 || sessionsModel.canStartNewSession) && sessionsModel.canSwitchUser
+                    }
+                ]
+
+                Loader {
+                    Layout.fillWidth: true
+                    Layout.preferredHeight: item ? item.implicitHeight : 0
+                    active: true // TODO configurable
+                    source: "MediaControls.qml"
+                }
+            }
+        }
+
+        Loader {
+            id: inputPanel
+            state: "hidden"
+            readonly property bool keyboardActive: item ? item.active : false
+            anchors {
+                left: parent.left
+                right: parent.right
+            }
+            function showHide() {
+                state = state == "hidden" ? "visible" : "hidden";
+            }
+            Component.onCompleted: inputPanel.source = "VirtualKeyboard.qml"
+            
+            states: [
+                State {
+                    name: "visible"
+                    PropertyChanges {
+                        target: mainStack
+                        y: Math.min(0, lockScreenRoot.height - inputPanel.height - mainBlock.visibleBoundary)
+                    }
+                    PropertyChanges {
+                        target: inputPanel
+                        y: lockScreenRoot.height - inputPanel.height
+                        opacity: 1
+                    }
+                },
+                State {
+                    name: "hidden"
+                    PropertyChanges {
+                        target: mainStack
+                        y: 0
+                    }
+                    PropertyChanges {
+                        target: inputPanel
+                        y: lockScreenRoot.height - lockScreenRoot.height/4
+                        opacity: 0
+                    }
+                }
+            ]
+            transitions: [
+                Transition {
+                    from: "hidden"
+                    to: "visible"
+                    SequentialAnimation {
+                        ScriptAction {
+                            script: {
+                                inputPanel.item.activated = true;
+                                Qt.inputMethod.show();
                             }
                         }
-                        text += root.notification
-                        return text
-                    }
-
-                    onLoginRequest: {
-                        root.notification = ""
-                        authenticator.tryUnlock(password)
-                    }
-
-                    actionItems: [
-                        ActionButton {
-                            text: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Switch User")
-                            iconSource: "system-switch-user"
-                            onClicked: mainStack.push(switchSessionPage)
-                            // the current session isn't listed in the model, hence a check for greater than zero, not one
-                            visible: (sessionsModel.count > 0 || sessionsModel.canStartNewSession) && sessionsModel.canSwitchUser
+                        ParallelAnimation {
+                            NumberAnimation {
+                                target: mainStack
+                                property: "y"
+                                duration: units.longDuration
+                                easing.type: Easing.InOutQuad
+                            }
+                            NumberAnimation {
+                                target: inputPanel
+                                property: "y"
+                                duration: units.longDuration
+                                easing.type: Easing.OutQuad
+                            }
+                            OpacityAnimator {
+                                target: inputPanel
+                                duration: units.longDuration
+                                easing.type: Easing.OutQuad
+                            }
                         }
-                    ]
-
-                    Loader {
-                        Layout.fillWidth: true
-                        Layout.preferredHeight: item ? item.implicitHeight : 0
-                        active: true // TODO configurable
-                        source: "MediaControls.qml"
+                    }
+                },
+                Transition {
+                    from: "visible"
+                    to: "hidden"
+                    SequentialAnimation {
+                        ParallelAnimation {
+                            NumberAnimation {
+                                target: mainStack
+                                property: "y"
+                                duration: units.longDuration
+                                easing.type: Easing.InOutQuad
+                            }
+                            NumberAnimation {
+                                target: inputPanel
+                                property: "y"
+                                duration: units.longDuration
+                                easing.type: Easing.InQuad
+                            }
+                            OpacityAnimator {
+                                target: inputPanel
+                                duration: units.longDuration
+                                easing.type: Easing.InQuad
+                            }
+                        }
+                        ScriptAction {
+                            script: {
+                                Qt.inputMethod.hide();
+                            }
+                        }
                     }
                 }
-            }
-            Loader {
-                id: inputPanel
-                property bool keyboardActive: item ? item.active : false
-                Layout.fillWidth: true
-                Layout.preferredHeight: item ? (item.active ? item.implicitHeight : 0) : 0
-                function showHide() {
-                    if (Qt.inputMethod.visible) {
-                        Qt.inputMethod.hide();
-                    } else {
-                        item.activated = true;
-                        Qt.inputMethod.show();
-                    }
-                }
-                Component.onCompleted: inputPanel.source = "../components/VirtualKeyboard.qml"
-            }
+            ]
         }
 
         Component {
@@ -273,6 +360,7 @@ PlasmaCore.ColorScope {
                 text: i18ndc("plasma_lookandfeel_org.kde.lookandfeel", "Button to show/hide virtual keyboard", "Virtual Keyboard")
                 iconName: inputPanel.keyboardActive ? "input-keyboard-virtual-on" : "input-keyboard-virtual-off"
                 onClicked: inputPanel.showHide()
+
                 visible: inputPanel.status == Loader.Ready
             }
 
