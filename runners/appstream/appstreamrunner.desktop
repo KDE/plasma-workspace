@@ -1,6 +1,16 @@
 [Desktop Entry]
 Name=Software Center
+Name[nl]=Softwarecentrum
+Name[pt]=Centro de Aplicações
+Name[sv]=Programvarucenter
+Name[uk]=Центр програм
+Name[x-test]=xxSoftware Centerxx
 Comment=Lets you find software
+Comment[nl]=Laat u software vinden
+Comment[pt]=Permite-lhe procurar por aplicações
+Comment[sv]=Låter dig söka efter programvara
+Comment[uk]=Допомагає вам шукати програми
+Comment[x-test]=xxLets you find softwarexx
 Icon=applications-other
 Type=Service
 X-KDE-ServiceTypes=Plasma/Runner
