@@ -67,6 +67,8 @@ ListView {
             if (location) {
                 return i18ndc("plasma_lookandfeel_org.kde.lookandfeel", "Username (location)", "%1 (%2)", displayName, location)
             }
+
+            return displayName
         }
 
         userName: model.name
