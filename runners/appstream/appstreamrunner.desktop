@@ -1,13 +1,25 @@
 [Desktop Entry]
 Name=Software Center
+Name[ca]=Centre de programari
+Name[es]=Centro de software
 Name[nl]=Softwarecentrum
 Name[pt]=Centro de Aplicações
+Name[sr]=софтверски центар
+Name[sr@ijekavian]=софтверски центар
+Name[sr@ijekavianlatin]=softverski centar
+Name[sr@latin]=softverski centar
 Name[sv]=Programvarucenter
 Name[uk]=Центр програм
 Name[x-test]=xxSoftware Centerxx
 Comment=Lets you find software
+Comment[ca]=Permet cercar programari
+Comment[es]=Le permite encontrar software
 Comment[nl]=Laat u software vinden
 Comment[pt]=Permite-lhe procurar por aplicações
+Comment[sr]=Налажење жељеног софтвера
+Comment[sr@ijekavian]=Налажење жељеног софтвера
+Comment[sr@ijekavianlatin]=Nalaženje željenog softvera
+Comment[sr@latin]=Nalaženje željenog softvera
 Comment[sv]=Låter dig söka efter programvara
 Comment[uk]=Допомагає вам шукати програми
 Comment[x-test]=xxLets you find softwarexx
