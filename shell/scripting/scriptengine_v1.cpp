@@ -129,7 +129,7 @@ namespace WorkspaceScripting
 QScriptValue ScriptEngine::V1::desktopById(QScriptContext *context, QScriptEngine *engine)
 {
     if (context->argumentCount() == 0) {
-        return context->throwError(i18n("activityById requires an id"));
+        return context->throwError(i18n("desktopById requires an id"));
     }
 
     const uint id = context->argument(0).toInt32();
