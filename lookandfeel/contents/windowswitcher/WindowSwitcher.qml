@@ -71,7 +71,13 @@ KWin.Switcher {
                     width: thumbnailListView.width
                     height: delegateColumn.implicitHeight + 2 * delegateColumn.y
 
-                    onClicked: thumbnailListView.currentIndex = index
+                    onClicked: {
+                        if (tabBox.noModifierGrab) {
+                            tabBox.model.activate(index);
+                        } else {
+                            thumbnailListView.currentIndex = index;
+                        }
+                    }
 
                     ColumnLayout {
                         id: delegateColumn
