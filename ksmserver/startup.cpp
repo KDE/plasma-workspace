@@ -462,8 +462,9 @@ void KSMServer::runUserAutostart()
             const QString fullPath = dir.absolutePath() + QLatin1Char('/') + file;
 
             qCInfo(KSMSERVER) << "Starting autostart script " << fullPath;
-            auto p = new QProcess; //deleted in onFinished lambda
-            p->start(fullPath);
+            auto p = new KProcess; //deleted in onFinished lambda
+            p->setProgram(fullPath);
+            p->start();
             connect(p, static_cast<void (QProcess::*)(int)>(&QProcess::finished), [p](int exitCode) {
                 qCInfo(KSMSERVER) << "autostart script" << p->program() << "finished with exit code " << exitCode;
                 p->deleteLater();
