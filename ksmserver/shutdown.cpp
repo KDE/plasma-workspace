@@ -478,9 +478,9 @@ void KSMServer::cancelShutdown( KSMClient* c )
     } else {
         Solid::PowerManagement::stopSuppressingSleep(inhibitCookie);
         qCDebug(KSMSERVER) << "Client " << c->program() << " (" << c->clientId() << ") canceled shutdown.";
-//         KNotification::event( QStringLiteral( "cancellogout" ),
-//                               i18n( "Logout canceled by '%1'", c->program()),
-//                               QPixmap() , 0l , KNotification::DefaultEvent  );
+        KNotification::event( QStringLiteral( "cancellogout" ),
+                              i18n( "Logout canceled by '%1'", c->program()),
+                              QPixmap() , 0l , KNotification::DefaultEvent );
         foreach( KSMClient* c, clients ) {
             SmsShutdownCancelled( c->connection() );
             if( c->saveYourselfDone ) {
