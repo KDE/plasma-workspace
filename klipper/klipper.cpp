@@ -117,6 +117,7 @@ Klipper::Klipper(QObject* parent, const KSharedConfigPtr& config, KlipperMode mo
     m_popup = new KlipperPopup(m_history);
     m_popup->setShowHelp(m_mode == KlipperMode::Standalone);
     connect(m_history, &History::changed, m_popup, &KlipperPopup::slotHistoryChanged);
+    connect(m_history, &History::topIsUserSelectedSet, m_popup, &KlipperPopup::slotTopIsUserSelectedSet);
 
     // we need that collection, otherwise KToggleAction is not happy :}
     m_collection = new KActionCollection( this );
