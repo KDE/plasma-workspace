@@ -175,6 +175,13 @@ void KlipperPopup::rebuild( const QString& filter ) {
     m_dirty = false;
 }
 
+void KlipperPopup::slotTopIsUserSelectedSet() {
+    if ( !m_dirty && m_nHistoryItems > 0 && history()->topIsUserSelected() ) {
+        actions().at(TOP_HISTORY_ITEM_INDEX)->setCheckable(true);
+        actions().at(TOP_HISTORY_ITEM_INDEX)->setChecked(true);
+    }
+}
+
 void KlipperPopup::plugAction( QAction* action ) {
     m_actions.append(action);
 }

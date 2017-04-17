@@ -61,6 +61,7 @@ public:
     }
 public Q_SLOTS:
     void slotHistoryChanged() { m_dirty = true; }
+    void slotTopIsUserSelectedSet();
     void slotAboutToShow();
     /**
      * set the top history item active, to easy kb navigation

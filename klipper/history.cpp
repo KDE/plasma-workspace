@@ -140,8 +140,19 @@ void History::slotMoveToTop(QAction* action) {
 }
 
 void History::slotMoveToTop(const QByteArray& uuid) {
+    const QModelIndex item = m_model->indexOf(uuid);
+    if (item.isValid() && item.row() == 0) {
+        // The item is already at the top, but it still may be not be set as the actual clipboard
+        // contents, normally this happens if the item is only in the X11 mouse selection but
+        // not in the Ctrl+V clipboard.
+        emit topChanged();
+        m_topIsUserSelected = true;
+        emit topIsUserSelectedSet();
+        return;
+    }
     m_model->moveToTop(uuid);
     m_topIsUserSelected = true;
+    emit topIsUserSelectedSet();
 }
 
 void History::setMaxSize( unsigned max_size ) {
