@@ -136,6 +136,7 @@ Q_SIGNALS:
      */
     void topChanged();
 
+    void topIsUserSelectedSet();
 
 private:
     /**
