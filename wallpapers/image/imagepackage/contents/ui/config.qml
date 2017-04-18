@@ -34,10 +34,8 @@ ColumnLayout {
     property int cfg_FillMode
     property var cfg_SlidePaths: ""
     property int cfg_SlideInterval: 0
-    signal restoreIndex(int count)
 
     function saveConfig() {
-        root.restoreIndex(imageWallpaper.wallpaperModel.count)
         imageWallpaper.commitDeletion();
     }
 
@@ -297,12 +295,6 @@ ColumnLayout {
                 onContentHeightChanged: {
                     wallpapersGrid.currentIndex = imageWallpaper.wallpaperModel.indexOf(cfg_Image);
                     wallpapersGrid.positionViewAtIndex(wallpapersGrid.currentIndex, GridView.Visible)
-                }
-                Connections {
-                    target: root
-                    onRestoreIndex: {
-                        wallpapersGrid.currentIndex = wallpapersGrid.currentIndex - count
-                    }
                 }
 
                 Keys.onPressed: {

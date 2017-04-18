@@ -37,7 +37,7 @@ Item {
 
     property int position: mpris2Source.currentData.Position || 0
     readonly property real rate: mpris2Source.currentData.Rate || 1
-    readonly property int length: currentMetadata ? currentMetadata["mpris:length"] || 0 : 0
+    readonly property double length: currentMetadata ? currentMetadata["mpris:length"] || 0 : 0
 
     property bool disablePositionUpdate: false
     property bool keyPressed: false
