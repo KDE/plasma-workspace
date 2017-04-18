@@ -56,6 +56,7 @@ MouseArea {
     property ListModel actions: ListModel { }
 
     property bool hasDefaultAction: false
+    property bool hasConfigureAction: false
 
     readonly property bool dragging: thumbnailStripLoader.item ? thumbnailStripLoader.item.dragging : false
 
@@ -211,7 +212,13 @@ MouseArea {
 
                 iconSource: "configure"
 
-                onClicked: configure()
+                onClicked: {
+                    if (notificationItem.hasConfigureAction) {
+                        notificationItem.action("settings");
+                    } else {
+                        configure()
+                    }
+                }
             }
 
             PlasmaComponents.ToolButton {

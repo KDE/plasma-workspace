@@ -117,6 +117,7 @@ PlasmaComponents.ListItem {
             actions: model.actions
             created: model.created
             hasDefaultAction: model.hasDefaultAction
+            hasConfigureAction: model.hasConfigureAction
             urls: {
                 // QML ListModel tries to be smart and turns our urls Array into a dict with index as key...
                 var urls = []

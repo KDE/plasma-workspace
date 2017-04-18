@@ -113,6 +113,7 @@ PlasmaCore.Dialog {
         configurable: notificationProperties.configurable && !Settings.isMobile ? true : false
         urls: notificationProperties.urls || []
         hasDefaultAction: notificationProperties.hasDefaultAction || false
+        hasConfigureAction: notificationProperties.hasConfigureAction || false
 
         width: Math.round(23 * units.gridUnit)
         maximumTextHeight: theme.mSize(theme.defaultFont).height * 10

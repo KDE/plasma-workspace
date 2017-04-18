@@ -179,8 +179,12 @@ Column {
             _data["hasDefaultAction"] = false
             if (data["actions"] && data["actions"].length % 2 == 0) {
                 for (var i = 0; i < data["actions"].length; i += 2) {
-                    if (data["actions"][i] == "default") { // The default action is not shown, but we want to know it's there
+                    var action = data["actions"][i]
+                    if (action == "default") { // The default action is not shown, but we want to know it's there
                         _data["hasDefaultAction"] = true
+                    } else if (action == "settings") { // configure icon in the notification for custom notification settings
+                        _data["hasConfigureAction"] = true;
+                        _data["configurable"] = true;
                     } else {
                         actions.push({
                             id: data["actions"][i],
