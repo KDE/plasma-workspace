@@ -112,6 +112,7 @@ void PlasmaWindowedView::setApplet(Plasma::Applet *applet)
     Q_ASSERT(!m_statusNotifier);
     if (m_withStatusNotifier) {
         m_statusNotifier = new KStatusNotifierItem(applet->pluginMetaData().pluginId(), this);
+        m_statusNotifier->setStandardActionsEnabled(false); // we add our own "Close" entry manually below
 
         updateSniIcon();
         connect(applet, &Plasma::Applet::iconChanged, this, &PlasmaWindowedView::updateSniIcon);
@@ -126,6 +127,7 @@ void PlasmaWindowedView::setApplet(Plasma::Applet *applet)
         for (auto a : applet->contextualActions()) {
             m_statusNotifier->contextMenu()->addAction(a);
         }
+        m_statusNotifier->contextMenu()->addSeparator();
         QAction *closeAction = new QAction(QIcon::fromTheme(QStringLiteral("window-close")), i18n("Close %1", applet->title()), this);
         connect(closeAction, &QAction::triggered, this, [this]() {
             m_statusNotifier->deleteLater();
