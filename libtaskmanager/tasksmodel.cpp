@@ -188,12 +188,33 @@ void TasksModel::Private::initModels()
             if (roles.contains(AbstractTasksModel::IsActive)) {
                 emit q->activeTaskChanged();
             }
+
+            // data() implements AbstractTasksModel::HasLauncher by checking with
+            // TaskTools::appsMatch, which evaluates ::AppId and ::LauncherUrlWithoutIcon.
+            if (roles.contains(AbstractTasksModel::AppId) || roles.contains(AbstractTasksModel::LauncherUrlWithoutIcon)) {
+                q->dataChanged(q->index(0, 0), q->index(q->rowCount() - 1, 0),
+                    QVector<int>{AbstractTasksModel::HasLauncher});
+            }
         }
     );
 
     if (!startupTasksModel) {
         startupTasksModel = new StartupTasksModel();
     }
+
+    // data() implements AbstractTasksModel::HasLauncher by checking with
+    // TaskTools::appsMatch, which evaluates ::AppId and ::LauncherUrlWithoutIcon.
+    QObject::connect(startupTasksModel, &QAbstractItemModel::dataChanged, q,
+        [this](const QModelIndex &topLeft, const QModelIndex &bottomRight, const QVector<int> &roles) {
+            Q_UNUSED(topLeft)
+            Q_UNUSED(bottomRight)
+
+            if (roles.contains(AbstractTasksModel::AppId) || roles.contains(AbstractTasksModel::LauncherUrlWithoutIcon)) {
+                q->dataChanged(q->index(0, 0), q->index(q->rowCount() - 1, 0),
+                    QVector<int>{AbstractTasksModel::HasLauncher});
+            }
+        }
+    );
 
     concatProxyModel = new ConcatenateTasksProxyModel(q);
 
@@ -479,6 +500,18 @@ void TasksModel::Private::initLauncherTasksModel()
         q, &TasksModel::launcherListChanged);
     QObject::connect(launcherTasksModel, &LauncherTasksModel::launcherListChanged,
         q, &TasksModel::updateLauncherCount);
+
+    // TODO: On the assumptions that adding/removing launchers is a rare event and
+    // the HasLaunchers data role is rarely used, this refreshes it for all rows in
+    // the model. If those assumptions are proven wrong later, this could be
+    // optimized to only refresh non-launcher rows matching the inserted or about-
+    // to-be-removed launcherTasksModel rows using TaskTools::appsMatch().
+    QObject::connect(launcherTasksModel, &LauncherTasksModel::launcherListChanged,
+        q, [this]() {
+            q->dataChanged(q->index(0, 0), q->index(q->rowCount() - 1, 0),
+                QVector<int>{AbstractTasksModel::HasLauncher});
+        }
+    );
 
     concatProxyModel->addSourceModel(launcherTasksModel);
 }
@@ -888,7 +921,22 @@ int TasksModel::rowCount(const QModelIndex &parent) const
 
 QVariant TasksModel::data(const QModelIndex &proxyIndex, int role) const
 {
-    if (rowCount(proxyIndex) && role == AbstractTasksModel::LegacyWinIdList) {
+    if (role == AbstractTasksModel::HasLauncher
+        && proxyIndex.isValid() && proxyIndex.row() < rowCount()) {
+        if (proxyIndex.data(AbstractTasksModel::IsLauncher).toBool()) {
+            return true;
+        } else {
+            for (int i = 0; i < d->launcherTasksModel->rowCount(); ++i) {
+                const QModelIndex &launcherIndex = d->launcherTasksModel->index(i, 0);
+
+                if (appsMatch(proxyIndex, launcherIndex)) {
+                    return true;
+                }
+            }
+
+            return false;
+        }
+    } else if (rowCount(proxyIndex) && role == AbstractTasksModel::LegacyWinIdList) {
         QVariantList winIds;
 
         for (int i = 0; i < rowCount(proxyIndex); ++i) {

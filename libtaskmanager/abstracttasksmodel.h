@@ -58,6 +58,7 @@ public:
         IsWindow,         /**< This is a window task. */
         IsStartup,        /**< This is a startup task. */
         IsLauncher,       /**< This is a launcher task. */
+        HasLauncher,      /**< A launcher exists for this task. Only implemented by TasksModel, not by either the single-type or munging tasks models. */
         IsGroupParent,    /**< This is a parent item for a group of child tasks. */
         ChildCount,       /**< The number of tasks in this group. */
         IsGroupable,      /**< Whether this task is being ignored by grouping or not. */
