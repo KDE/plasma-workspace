@@ -251,6 +251,7 @@ Item {
 
                         return ""
                     }
+                    textFormat: Text.PlainText
                 }
             }
         }
