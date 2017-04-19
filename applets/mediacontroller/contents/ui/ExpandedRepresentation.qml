@@ -39,6 +39,9 @@ Item {
     readonly property real rate: mpris2Source.currentData.Rate || 1
     readonly property double length: currentMetadata ? currentMetadata["mpris:length"] || 0 : 0
 
+    // only show hours (the default for KFormat) when track is actually longer than an hour
+    readonly property int durationFormattingOptions: length >= 60*60*1000*1000 ? 0 : KCoreAddons.FormatTypes.FoldHours
+
     property bool disablePositionUpdate: false
     property bool keyPressed: false
 
@@ -271,7 +274,7 @@ Item {
             TextMetrics {
                 id: timeMetrics
                 text: i18nc("Remaining time for song e.g -5:42", "-%1",
-                            KCoreAddons.Format.formatDuration(seekSlider.maximumValue / 1000, KCoreAddons.FormatTypes.FoldHours))
+                            KCoreAddons.Format.formatDuration(seekSlider.maximumValue / 1000, expandedRepresentation.durationFormattingOptions))
                 font: theme.smallestFont
             }
 
@@ -280,7 +283,7 @@ Item {
                 Layout.fillHeight: true
                 verticalAlignment: Text.AlignVCenter
                 horizontalAlignment: Text.AlignRight
-                text: KCoreAddons.Format.formatDuration(seekSlider.value / 1000, KCoreAddons.FormatTypes.FoldHours)
+                text: KCoreAddons.Format.formatDuration(seekSlider.value / 1000, expandedRepresentation.durationFormattingOptions)
                 opacity: 0.6
                 font: theme.smallestFont
             }
@@ -324,7 +327,7 @@ Item {
                 Layout.fillHeight: true
                 verticalAlignment: Text.AlignVCenter
                 text: i18nc("Remaining time for song e.g -5:42", "-%1",
-                            KCoreAddons.Format.formatDuration((seekSlider.maximumValue - seekSlider.value) / 1000, KCoreAddons.FormatTypes.FoldHours))
+                            KCoreAddons.Format.formatDuration((seekSlider.maximumValue - seekSlider.value) / 1000, expandedRepresentation.durationFormattingOptions))
                 opacity: 0.6
                 font: theme.smallestFont
             }
