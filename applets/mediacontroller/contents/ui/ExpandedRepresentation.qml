@@ -192,6 +192,7 @@ Item {
                     wrapMode: Text.WrapAtWordBoundaryOrAnywhere
                     elide: Text.ElideRight
                     text: root.track ? root.track : i18n("No media playing")
+                    textFormat: Text.PlainText
                 }
 
                 PlasmaExtras.Heading {
@@ -205,6 +206,7 @@ Item {
 
                     elide: Text.ElideRight
                     text: root.artist || ""
+                    textFormat: Text.PlainText
                 }
             }
         }
