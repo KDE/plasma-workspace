@@ -63,6 +63,7 @@ Item {
     Plasmoid.icon: albumArt ? albumArt : "media-playback-start"
     Plasmoid.toolTipMainText: i18n("No media playing")
     Plasmoid.toolTipSubText: ""
+    Plasmoid.toolTipTextFormat: Text.PlainText
     Plasmoid.status: PlasmaCore.Types.ActiveStatus
 
     Plasmoid.onContextualActionsAboutToShow: {
