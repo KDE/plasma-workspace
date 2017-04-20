@@ -188,33 +188,12 @@ void TasksModel::Private::initModels()
             if (roles.contains(AbstractTasksModel::IsActive)) {
                 emit q->activeTaskChanged();
             }
-
-            // data() implements AbstractTasksModel::HasLauncher by checking with
-            // TaskTools::appsMatch, which evaluates ::AppId and ::LauncherUrlWithoutIcon.
-            if (roles.contains(AbstractTasksModel::AppId) || roles.contains(AbstractTasksModel::LauncherUrlWithoutIcon)) {
-                q->dataChanged(q->index(0, 0), q->index(q->rowCount() - 1, 0),
-                    QVector<int>{AbstractTasksModel::HasLauncher});
-            }
         }
     );
 
     if (!startupTasksModel) {
         startupTasksModel = new StartupTasksModel();
     }
-
-    // data() implements AbstractTasksModel::HasLauncher by checking with
-    // TaskTools::appsMatch, which evaluates ::AppId and ::LauncherUrlWithoutIcon.
-    QObject::connect(startupTasksModel, &QAbstractItemModel::dataChanged, q,
-        [this](const QModelIndex &topLeft, const QModelIndex &bottomRight, const QVector<int> &roles) {
-            Q_UNUSED(topLeft)
-            Q_UNUSED(bottomRight)
-
-            if (roles.contains(AbstractTasksModel::AppId) || roles.contains(AbstractTasksModel::LauncherUrlWithoutIcon)) {
-                q->dataChanged(q->index(0, 0), q->index(q->rowCount() - 1, 0),
-                    QVector<int>{AbstractTasksModel::HasLauncher});
-            }
-        }
-    );
 
     concatProxyModel = new ConcatenateTasksProxyModel(q);
 
@@ -510,6 +489,22 @@ void TasksModel::Private::initLauncherTasksModel()
         q, [this]() {
             q->dataChanged(q->index(0, 0), q->index(q->rowCount() - 1, 0),
                 QVector<int>{AbstractTasksModel::HasLauncher});
+        }
+    );
+
+    // data() implements AbstractTasksModel::HasLauncher by checking with
+    // TaskTools::appsMatch, which evaluates ::AppId and ::LauncherUrlWithoutIcon.
+    QObject::connect(q, &QAbstractItemModel::dataChanged, q,
+        [this](const QModelIndex &topLeft, const QModelIndex &bottomRight, const QVector<int> &roles) {
+            if (roles.contains(AbstractTasksModel::AppId) || roles.contains(AbstractTasksModel::LauncherUrlWithoutIcon)) {
+                for (int i = topLeft.row(); i <= bottomRight.row(); ++i) {
+                    const QModelIndex &index = q->index(i, 0);
+
+                    if (!index.data(AbstractTasksModel::IsLauncher).toBool()) {
+                        q->dataChanged(index, index, QVector<int>{AbstractTasksModel::HasLauncher});
+                    }
+                }
+            }
         }
     );
 
