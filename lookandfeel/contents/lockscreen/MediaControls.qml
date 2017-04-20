@@ -118,6 +118,7 @@ Item {
                 wrapMode: Text.NoWrap
                 elide: Text.ElideRight
                 text: mpris2Source.track || i18n("No media playing")
+                textFormat: Text.PlainText
             }
 
             PlasmaExtras.Heading {
@@ -127,6 +128,7 @@ Item {
                 elide: Text.ElideRight
                 // if no artist is given, show player name instead
                 text: mpris2Source.artist || mpris2Source.identity || ""
+                textFormat: Text.PlainText
             }
         }
 
