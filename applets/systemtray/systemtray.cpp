@@ -130,7 +130,7 @@ void SystemTray::newTask(const QString &task)
 void SystemTray::cleanupTask(const QString &task)
 {
     foreach (Plasma::Applet *applet, applets()) {
-        if (!applet->pluginMetaData().isValid() || task == applet->pluginMetaData().pluginId()) {
+        if (applet->pluginMetaData().isValid() && task == applet->pluginMetaData().pluginId()) {
             //we are *not* cleaning the config here, because since is one
             //of those automatically loaded/unloaded by dbus, we want to recycle
             //the config the next time it's loaded, in case the user configured something here
