@@ -90,6 +90,7 @@ public:
     QUrl launcherUrl(WId window, bool encodeFallbackIcon = true);
     QUrl serviceUrl(int pid, const QString &type, const QStringList &cmdRemovals);
     KService::List servicesFromPid(int pid);
+    KService::List servicesFromCmdLine(const QString &cmdLine, const QString &processName);
     bool demandsAttention(WId window);
 
 private:
@@ -788,49 +789,77 @@ QUrl XWindowTasksModel::Private::serviceUrl(int pid, const QString &type, const 
 
 KService::List XWindowTasksModel::Private::servicesFromPid(int pid)
 {
-    // Attempt to find using commandline...
-    KService::List services;
-
     if (pid == 0) {
-        return services;
+        return KService::List();
     }
 
     KSysGuard::Processes procs;
     procs.updateOrAddProcess(pid);
 
     KSysGuard::Process *proc = procs.getProcess(pid);
-    QString cmdline = proc ? proc->command().simplified() : QString(); // proc->command has a trailing space???
+    const QString &cmdLine = proc ? proc->command().simplified() : QString(); // proc->command has a trailing space???
 
-    if (cmdline.isEmpty()) {
-        return services;
+    if (cmdLine.isEmpty()) {
+        return KService::List();
     }
 
-    const int firstSpace = cmdline.indexOf(' ');
+    return servicesFromCmdLine(cmdLine, proc->name());
+}
 
-    services = KServiceTypeTrader::self()->query(QStringLiteral("Application"), QStringLiteral("exist Exec and ('%1' =~ Exec)").arg(cmdline));
+KService::List XWindowTasksModel::Private::servicesFromCmdLine(const QString &_cmdLine, const QString &processName)
+{
+    QString cmdLine = _cmdLine;
+    KService::List services;
+
+    const int firstSpace = cmdLine.indexOf(' ');
+    int slash = 0;
+
+    services = KServiceTypeTrader::self()->query(QStringLiteral("Application"), QStringLiteral("exist Exec and ('%1' =~ Exec)").arg(cmdLine));
+
     if (services.empty()) {
-        // Could not find with complete commandline, so strip out path part...
-        int slash = cmdline.lastIndexOf('/', firstSpace);
+        // Could not find with complete command line, so strip out the path part ...
+        slash = cmdLine.lastIndexOf('/', firstSpace);
+
         if (slash > 0) {
-            services = KServiceTypeTrader::self()->query(QStringLiteral("Application"), QStringLiteral("exist Exec and ('%1' =~ Exec)").arg(cmdline.mid(slash + 1)));
+            services = KServiceTypeTrader::self()->query(QStringLiteral("Application"), QStringLiteral("exist Exec and ('%1' =~ Exec)").arg(cmdLine.mid(slash + 1)));
         }
     }
 
     if (services.empty() && firstSpace > 0) {
-        // Could not find with arguments, so try without...
-        cmdline = cmdline.left(firstSpace);
-        services = KServiceTypeTrader::self()->query(QStringLiteral("Application"), QStringLiteral("exist Exec and ('%1' =~ Exec)").arg(cmdline));
+        // Could not find with arguments, so try without ...
+        cmdLine = cmdLine.left(firstSpace);
 
-        int slash = cmdline.lastIndexOf('/');
-        if (slash > 0) {
-            services = KServiceTypeTrader::self()->query(QStringLiteral("Application"), QStringLiteral("exist Exec and ('%1' =~ Exec)").arg(cmdline.mid(slash + 1)));
+        services = KServiceTypeTrader::self()->query(QStringLiteral("Application"), QStringLiteral("exist Exec and ('%1' =~ Exec)").arg(cmdLine));
+
+        if (services.empty()) {
+            slash = cmdLine.lastIndexOf('/');
+
+            if (slash > 0) {
+                services = KServiceTypeTrader::self()->query(QStringLiteral("Application"), QStringLiteral("exist Exec and ('%1' =~ Exec)").arg(cmdLine.mid(slash + 1)));
+            }
         }
     }
 
-    if (services.empty() && proc && !QStandardPaths::findExecutable(cmdline).isEmpty()) {
-        // cmdline now exists without arguments if there were any
-        services << QExplicitlySharedDataPointer<KService>(new KService(proc->name(), cmdline, QString()));
+    if (services.empty()) {
+        KConfigGroup set(rulesConfig, "Settings");
+        const QStringList &runtimes = set.readEntry("TryIgnoreRuntimes", QStringList());
+
+        bool ignore = runtimes.contains(cmdLine);
+
+        if (!ignore && slash > 0) {
+            ignore = runtimes.contains(cmdLine.mid(slash + 1));
+        }
+
+        if (ignore) {
+            return servicesFromCmdLine(_cmdLine.mid(firstSpace + 1), processName);
+        }
     }
+
+    if (services.empty() && !processName.isEmpty() && !QStandardPaths::findExecutable(cmdLine).isEmpty()) {
+        // cmdLine now exists without arguments if there were any.
+        services << QExplicitlySharedDataPointer<KService>(new KService(processName, cmdLine, QString()));
+    }
+
     return services;
 }
 

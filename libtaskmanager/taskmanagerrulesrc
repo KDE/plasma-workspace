@@ -8,3 +8,5 @@ Dragon=dragonplayer
 
 [Settings]
 ManualOnly=Wine
+MatchCommandLineFirst=perl
+TryIgnoreRuntimes=perl
