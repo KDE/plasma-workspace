@@ -197,7 +197,7 @@ PlasmaCore.ColorScope {
             function showHide() {
                 state = state == "hidden" ? "visible" : "hidden";
             }
-            Component.onCompleted: inputPanel.source = "VirtualKeyboard.qml"
+            Component.onCompleted: inputPanel.source = "../components/VirtualKeyboard.qml"
             
             states: [
                 State {
