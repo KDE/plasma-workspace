@@ -57,6 +57,8 @@ Item {
     readonly property bool canControl: !root.noPlayer && mpris2Source.currentData.CanControl
     readonly property bool canGoPrevious: canControl && mpris2Source.currentData.CanGoPrevious
     readonly property bool canGoNext: canControl && mpris2Source.currentData.CanGoNext
+    readonly property bool canPlay: canControl && mpris2Source.currentData.CanPlay
+    readonly property bool canPause: canControl && mpris2Source.currentData.CanPause
 
     Plasmoid.switchWidth: units.gridUnit * 14
     Plasmoid.switchHeight: units.gridUnit * 10
@@ -87,8 +89,14 @@ Item {
 
             if (root.state == "playing") {
                 plasmoid.setAction("playPause", i18nc("Pause playback", "Pause"), "media-playback-pause")
+                plasmoid.action("playPause").enabled = Qt.binding(function() {
+                    return root.canPause;
+                });
             } else {
                 plasmoid.setAction("playPause", i18nc("Start playback", "Play"), "media-playback-start")
+                plasmoid.action("playPause").enabled = Qt.binding(function() {
+                    return root.canPlay;
+                });
             }
 
             plasmoid.setAction("next", i18nc("Play next track", "Next Track"),
