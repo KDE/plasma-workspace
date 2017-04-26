@@ -32,6 +32,10 @@ import org.kde.draganddrop 2.0 as DragDrop
 MouseArea {
     id: root
 
+    readonly property bool inPanel: (plasmoid.location == PlasmaCore.Types.TopEdge
+        || plasmoid.location == PlasmaCore.Types.RightEdge
+        || plasmoid.location == PlasmaCore.Types.BottomEdge
+        || plasmoid.location == PlasmaCore.Types.LeftEdge)
     readonly property bool constrained: plasmoid.formFactor === PlasmaCore.Types.Vertical || plasmoid.formFactor === PlasmaCore.Types.Horizontal
     property bool containsAcceptableDrag: false
 
@@ -40,6 +44,9 @@ MouseArea {
 
     Layout.minimumWidth: plasmoid.formFactor === PlasmaCore.Types.Horizontal ? height : units.iconSizes.small
     Layout.minimumHeight: plasmoid.formFactor === PlasmaCore.Types.Vertical ? width : (units.iconSizes.small + 2 * theme.mSize(theme.defaultFont).height)
+
+    root.Layout.maximumWidth = inPanel ? units.iconSizeHints.panel : undefined;
+    root.Layout.maximumHeight = inPanel ? units.iconSizeHints.panel : undefined;
 
     hoverEnabled: true
 
