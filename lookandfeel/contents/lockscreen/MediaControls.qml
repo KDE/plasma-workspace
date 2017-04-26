@@ -136,6 +136,7 @@ Item {
             enabled: mpris2Source.canGoBack
             iconName: LayoutMirroring.enabled ? "media-skip-forward" : "media-skip-backward"
             onClicked: mpris2Source.goPrevious()
+            visible: mpris2Source.canGoBack || mpris2Source.canGoNext
         }
 
         PlasmaComponents.ToolButton {
@@ -149,6 +150,7 @@ Item {
             enabled: mpris2Source.canGoNext
             iconName: LayoutMirroring.enabled ? "media-skip-backward" : "media-skip-forward"
             onClicked: mpris2Source.goNext()
+            visible: mpris2Source.canGoBack || mpris2Source.canGoNext
         }
     }
 }
