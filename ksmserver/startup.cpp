@@ -68,9 +68,9 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 #include <kconfig.h>
 #include <kconfiggroup.h>
+#include <kio/desktopexecparser.h>
 #include <KSharedConfig>
 #include <kprocess.h>
-#include <krun.h>
 #include <KNotifyConfig>
 #include <KService>
 
