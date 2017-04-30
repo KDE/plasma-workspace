@@ -12,6 +12,6 @@ dirs=`cat dirs`
 find $dirs -maxdepth 1 -name "*.cpp" -print > files
 find $dirs -maxdepth 1 -name "*.cc" -print >> files
 find $dirs -maxdepth 1 -name "*.h" -print >> files
-$XGETTEXT --files-from=files -o $podir/phonon_kde.pot
+$XGETTEXT --files-from=files -o $podir/phonon_kde_plugin.pot
 rm -f dirs
 rm -f files

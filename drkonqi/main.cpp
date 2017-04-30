@@ -55,7 +55,7 @@ int main(int argc, char* argv[])
     }
 #endif
 
-    KLocalizedString::setApplicationDomain("drkonqi");
+    KLocalizedString::setApplicationDomain("drkonqi5");
 
     QApplication qa(argc, argv);
     qa.setAttribute(Qt::AA_UseHighDpiPixmaps, true);

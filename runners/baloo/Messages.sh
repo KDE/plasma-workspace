@@ -1,2 +1,2 @@
 #! /usr/bin/env bash
-$XGETTEXT *.cpp -o $podir/plasma_runner_baloosearchrunner.pot
+$XGETTEXT *.cpp -o $podir/plasma_runner_baloosearch5.pot

@@ -1,4 +1,4 @@
-add_definitions(-DTRANSLATION_DOMAIN=\"plasma_runner_baloosearchrunner\")
+add_definitions(-DTRANSLATION_DOMAIN=\"plasma_runner_baloosearch5\")
 
 add_library(krunner_baloosearchrunner MODULE baloosearchrunner.cpp)
 

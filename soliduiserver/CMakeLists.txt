@@ -1,5 +1,5 @@
 ########### next target ###############
-add_definitions(-DTRANSLATION_DOMAIN=\"soliduiserver\")
+add_definitions(-DTRANSLATION_DOMAIN=\"soliduiserver5\")
 
 set(kded_soliduiserver_SRCS
    soliduiserver.cpp

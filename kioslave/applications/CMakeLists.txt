@@ -1,4 +1,4 @@
-add_definitions(-DTRANSLATION_DOMAIN=\"kio_applications\") 
+add_definitions(-DTRANSLATION_DOMAIN=\"kio5_applications\")
 
 add_library(kio_applications MODULE kio_applications.cpp)
 
