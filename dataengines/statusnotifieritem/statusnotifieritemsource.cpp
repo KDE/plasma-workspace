@@ -401,9 +401,16 @@ QPixmap StatusNotifierItemSource::KDbusImageStructToPixmap(const KDbusImageStruc
         return QPixmap();
     }
 
-    QImage iconImage(image.width, image.height, QImage::Format_ARGB32 );
-    memcpy(iconImage.bits(), (uchar*)image.data.data(), iconImage.byteCount());
+    //avoid a deep copy of the image data
+    //we need to keep a reference to the image.data alive for the lifespan of the image, even if the image is copied
+    //we create a new QByteArray with a shallow copy of the original data on the heap, then delete this in the QImage cleanup
+    auto dataRef = new QByteArray(image.data);
 
+    QImage iconImage(reinterpret_cast<const uchar*>(dataRef->data()), image.width, image.height, QImage::Format_ARGB32,
+            [](void* ptr) {
+                delete static_cast<QByteArray*>(ptr);
+            },
+            dataRef);
     return QPixmap::fromImage(iconImage);
 }
 
