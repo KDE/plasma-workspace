@@ -94,6 +94,10 @@ fi
 #otherwise apps that manually opt in for high DPI get auto scaled by the developer AND manually scaled by us
 export QT_AUTO_SCREEN_SCALE_FACTOR=0
 
+#Set the QtQuickControls style to our own: for QtQuickControls1
+#it will fall back to Desktop, while it will use our own org.kde.desktop
+#for QtQuickControlsStyle and Kirigami
+export QT_QUICK_CONTROLS_STYLE=org.kde.desktop
 
 # XCursor mouse theme needs to be applied here to work even for kded or ksmserver
 if test -n "$kcminputrc_mouse_cursortheme" -o -n "$kcminputrc_mouse_cursorsize" ; then

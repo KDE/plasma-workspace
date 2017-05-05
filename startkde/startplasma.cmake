@@ -49,6 +49,11 @@ if test -z "$dl"; then
   esac
 fi
 
+#Set the QtQuickControls style to our own: for QtQuickControls1
+#it will fall back to Desktop, while it will use our own org.kde.desktop
+#for QtQuickControlsStyle and Kirigami
+export QT_QUICK_CONTROLS_STYLE=org.kde.desktop
+
 # Activate the kde font directories.
 #
 # There are 4 directories that may be used for supplying fonts for KDE.
