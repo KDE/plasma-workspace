@@ -87,6 +87,8 @@ void HistoryTest::testInsertRemove()
 {
     QScopedPointer<History> history(new History(nullptr));
     QSignalSpy topSpy(history.data(), SIGNAL(topChanged()));
+    QSignalSpy topUserSelectedSpy(history.data(), SIGNAL(topIsUserSelectedSet()));
+
     history->setMaxSize(10);
     QVERIFY(history->empty());
     QVERIFY(!history->topIsUserSelected());
@@ -147,7 +149,7 @@ void HistoryTest::testInsertRemove()
     QVERIFY(topSpy.isEmpty());
 
     // move one to top using the slot
-    // already on top, shouldn't change anything
+    // as well as the top changing, topIsUserSelected will also be signalled to show that it got re-selected
     history->slotMoveToTop(barUuid);
     QVERIFY(history->topIsUserSelected());
     QCOMPARE(history->first()->text(), barText);
@@ -157,7 +159,12 @@ void HistoryTest::testInsertRemove()
     QCOMPARE(history->find(fooUuid)->previous_uuid(), foobarUuid);
     QCOMPARE(history->find(foobarUuid)->next_uuid(), fooUuid);
     QCOMPARE(history->find(foobarUuid)->previous_uuid(), barUuid);
+    QCOMPARE(topSpy.size(), 1);
+    topSpy.clear();
     QVERIFY(topSpy.isEmpty());
+    QCOMPARE(topUserSelectedSpy.size(), 1);
+    topUserSelectedSpy.clear();
+    QVERIFY(topUserSelectedSpy.isEmpty());
 
     // another one should change, though
     history->slotMoveToTop(foobarUuid);
