@@ -226,6 +226,10 @@ void WaylandTasksModel::Private::addWindow(KWayland::Client::PlasmaWindow *windo
     QObject::connect(window, &KWayland::Client::PlasmaWindow::skipTaskbarChanged, q,
         [window, this] { this->dataChanged(window, SkipTaskbar); }
     );
+
+    QObject::connect(window, &KWayland::Client::PlasmaWindow::pidChanged, q,
+         [window, this] { this->dataChanged(window, AppPid); }
+    );
 }
 
 AppData WaylandTasksModel::Private::appData(KWayland::Client::PlasmaWindow *window)
@@ -333,7 +337,7 @@ QVariant WaylandTasksModel::data(const QModelIndex &index, int role) const
     } else if (role == SkipPager) {
         // FIXME Implement.
     } else if (role == AppPid) {
-        // FIXME Implement.
+        return window->pid();
     }
 
     return QVariant();

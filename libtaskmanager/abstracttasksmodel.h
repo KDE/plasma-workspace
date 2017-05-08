@@ -85,7 +85,12 @@ public:
         IsDemandingAttention, /**< Task is demanding attention. */
         SkipTaskbar,      /**< Task should not be shown in a 'task bar' user interface. */
         SkipPager,        /**< Task should not to be shown in a 'pager' user interface. */
-        AppPid,           /**< Application Process ID */
+        AppPid,           /**< Application Process ID. This is provided best-effort, and may not
+                               be what you expect: For window tasks owned by processes started
+                               from e.g. kwin_wayland, it would be the process id of kwin
+                               itself. DO NOT use this for destructive actions such as closing
+                               the application. The intended use case is to try and (smartly)
+                               gather more information about the task when needed. */
     };
     Q_ENUM(AdditionalRoles)
 
