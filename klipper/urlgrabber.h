@@ -115,13 +115,17 @@ struct ClipCommand
                  const QString& _description,
                  bool enabled=true,
                  const QString& _icon=QString(),
-                 Output _output=IGNORE);
+                 Output _output=IGNORE,
+                 const QString& serviceStorageId = QString());
 
     QString command;
     QString description;
     bool isEnabled;
     QString icon;
     Output output;
+    // If this is set, it's an app to handle a mimetype, and will be launched normally using KRun.
+    // StorageId is used instead of KService::Ptr, because the latter disallows operator=.
+    QString serviceStorageId;
 };
 
 Q_DECLARE_METATYPE(ClipCommand::Output)

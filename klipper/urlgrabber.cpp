@@ -33,7 +33,7 @@
 #include <KIconLoader>
 #include <KStringHandler>
 #include <KMimeTypeTrader>
-#include <KMacroExpander>
+#include <KRun>
 #include <KWindowSystem>
 
 #include "klippersettings.h"
@@ -149,14 +149,8 @@ void URLGrabber::matchingMimeActions(const QString& clipData)
         if ( !lst.isEmpty() ) {
             ClipAction* action = new ClipAction( QString(), mimetype.comment() );
             foreach( const KService::Ptr &service, lst ) {
-                QHash<QChar,QString> map;
-                map.insert( 'i', "--icon " + service->icon() );
-                map.insert( 'c', service->name() );
-
-                QString exec = service->exec();
-                exec = KMacroExpander::expandMacros( exec, map ).trimmed();
-
-                action->addCommand( ClipCommand( exec, service->name(), true, service->icon() ) );
+                action->addCommand( ClipCommand( QString(), service->name(), true, service->icon(),
+                                                 ClipCommand::IGNORE, service->storageId() ) );
             }
             m_myMatches.append( action );
         }
@@ -299,12 +293,17 @@ void URLGrabber::execute( const ClipAction* action, int cmdIdx ) const
         if (m_stripWhiteSpace) {
             text = text.trimmed();
         }
-        ClipCommandProcess* proc = new ClipCommandProcess(*action, command, text, m_history, m_myClipItem);
-        if (proc->program().isEmpty()) {
-            delete proc;
-            proc = 0L;
+        if( !command.serviceStorageId.isEmpty()) {
+            KService::Ptr service = KService::serviceByStorageId( command.serviceStorageId );
+            KRun::runApplication( *service, QList< QUrl >() << QUrl( text ), nullptr );
         } else {
-            proc->start();
+            ClipCommandProcess* proc = new ClipCommandProcess(*action, command, text, m_history, m_myClipItem);
+            if (proc->program().isEmpty()) {
+                delete proc;
+                proc = 0L;
+            } else {
+                proc->start();
+            }
         }
     }
 }
@@ -377,11 +376,13 @@ void URLGrabber::slotKillPopupMenu()
 ////////
 
 ClipCommand::ClipCommand(const QString&_command, const QString& _description,
-                         bool _isEnabled, const QString& _icon, Output _output)
+                         bool _isEnabled, const QString& _icon, Output _output,
+                         const QString& _serviceStorageId)
     : command(_command),
       description(_description),
       isEnabled(_isEnabled),
-      output(_output)
+      output(_output),
+      serviceStorageId( _serviceStorageId)
 {
 
     if (!_icon.isEmpty())
@@ -441,7 +442,7 @@ ClipAction::~ClipAction()
 
 void ClipAction::addCommand( const ClipCommand& cmd )
 {
-    if ( cmd.command.isEmpty() )
+    if ( cmd.command.isEmpty() && cmd.serviceStorageId.isEmpty() )
         return;
 
     m_myCommands.append( cmd );

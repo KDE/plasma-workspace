@@ -46,6 +46,7 @@ target_link_libraries(kdeinit_klipper
     KF5::DBusAddons
     KF5::GlobalAccel
     KF5::IconThemes
+    KF5::KIOWidgets
     KF5::Notifications
     KF5::Service
     KF5::TextWidgets
