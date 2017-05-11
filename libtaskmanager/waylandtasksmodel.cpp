@@ -22,8 +22,10 @@ License along with this library.  If not, see <http://www.gnu.org/licenses/>.
 #include "tasktools.h"
 
 #include <KActivities/ResourceInstance>
+#include <KDirWatch>
 #include <KRun>
 #include <KService>
+#include <KSharedConfig>
 #include <KWayland/Client/connection_thread.h>
 #include <KWayland/Client/plasmawindowmanagement.h>
 #include <KWayland/Client/registry.h>
@@ -47,11 +49,16 @@ public:
     QList<KWayland::Client::PlasmaWindow*> windows;
     QHash<KWayland::Client::PlasmaWindow*, AppData> appDataCache;
     KWayland::Client::PlasmaWindowManagement *windowManagement = nullptr;
+    KSharedConfig::Ptr rulesConfig;
+    KDirWatch *configWatcher = nullptr;
 
+    void init();
     void initWayland();
     void addWindow(KWayland::Client::PlasmaWindow *window);
 
     AppData appData(KWayland::Client::PlasmaWindow *window);
+
+    QIcon icon(KWayland::Client::PlasmaWindow *window);
 
     void dataChanged(KWayland::Client::PlasmaWindow *window, int role);
     void dataChanged(KWayland::Client::PlasmaWindow *window, const QVector<int> &roles);
@@ -63,6 +70,42 @@ private:
 WaylandTasksModel::Private::Private(WaylandTasksModel *q)
     : q(q)
 {
+}
+
+void WaylandTasksModel::Private::init()
+{
+    auto clearCacheAndRefresh = [this] {
+        if (!windows.count()) {
+            return;
+        }
+
+        appDataCache.clear();
+
+        // Emit changes of all roles satisfied from app data cache.
+        q->dataChanged(q->index(0, 0),  q->index(windows.count() - 1, 0),
+            QVector<int>{Qt::DecorationRole, AbstractTasksModel::AppId,
+            AbstractTasksModel::AppName, AbstractTasksModel::GenericName,
+            AbstractTasksModel::LauncherUrl,
+            AbstractTasksModel::LauncherUrlWithoutIcon});
+    };
+
+    rulesConfig = KSharedConfig::openConfig(QStringLiteral("taskmanagerrulesrc"));
+    configWatcher = new KDirWatch(q);
+
+    foreach (const QString &location, QStandardPaths::standardLocations(QStandardPaths::ConfigLocation)) {
+        configWatcher->addFile(location + QLatin1String("/taskmanagerrulesrc"));
+    }
+
+    auto rulesConfigChange = [this, &clearCacheAndRefresh] {
+        rulesConfig->reparseConfiguration();
+        clearCacheAndRefresh();
+    };
+
+    QObject::connect(configWatcher, &KDirWatch::dirty, rulesConfigChange);
+    QObject::connect(configWatcher, &KDirWatch::created, rulesConfigChange);
+    QObject::connect(configWatcher, &KDirWatch::deleted, rulesConfigChange);
+
+    initWayland();
 }
 
 void WaylandTasksModel::Private::initWayland()
@@ -135,18 +178,31 @@ void WaylandTasksModel::Private::addWindow(KWayland::Client::PlasmaWindow *windo
     QObject::connect(window, &QObject::destroyed, q, removeWindow);
 
     QObject::connect(window, &KWayland::Client::PlasmaWindow::titleChanged, q,
-        [window, this] { dataChanged(window, Qt::DisplayRole); }
+        [window, this] { this->dataChanged(window, Qt::DisplayRole); }
     );
 
     QObject::connect(window, &KWayland::Client::PlasmaWindow::iconChanged, q,
-        [window, this] { dataChanged(window, Qt::DecorationRole); }
+        [window, this] {
+            // The icon in the AppData struct might come from PlasmaWindow if it wasn't
+            // filled in by windowUrlFromMetadata+appDataFromUrl.
+            // TODO: Don't evict the cache unnecessarily if this isn't the case. As icons
+            // are currently very static on Wayland, this eviction is unlikely to happen
+            // frequently as of now.
+            appDataCache.remove(window);
+
+            this->dataChanged(window, Qt::DecorationRole);
+        }
     );
 
     QObject::connect(window, &KWayland::Client::PlasmaWindow::appIdChanged, q,
         [window, this] {
+            // The AppData struct in the cache is derived from this and needs
+            // to be evicted in favor of a fresh struct based on the changed
+            // window metadata.
             appDataCache.remove(window);
 
-            dataChanged(window, QVector<int>{AppId, AppName, GenericName,
+            // Refresh roles satisfied from the app data cache.
+            this->dataChanged(window, QVector<int>{AppId, AppName, GenericName,
                 LauncherUrl, LauncherUrlWithoutIcon});
         }
     );
@@ -227,8 +283,18 @@ void WaylandTasksModel::Private::addWindow(KWayland::Client::PlasmaWindow *windo
         [window, this] { this->dataChanged(window, SkipTaskbar); }
     );
 
+    // NOTE: The pid will never actually change on a real system. But if it ever did ...
     QObject::connect(window, &KWayland::Client::PlasmaWindow::pidChanged, q,
-         [window, this] { this->dataChanged(window, AppPid); }
+        [window, this] {
+            // The AppData struct in the cache is derived from this and needs
+            // to be evicted in favor of a fresh struct based on the changed
+            // window metadata.
+            appDataCache.remove(window);
+
+            // Refresh roles satisfied from the app data cache.
+            this->dataChanged(window, QVector<int>{AppId, AppName, GenericName,
+                LauncherUrl, LauncherUrlWithoutIcon});
+        }
     );
 }
 
@@ -240,11 +306,25 @@ AppData WaylandTasksModel::Private::appData(KWayland::Client::PlasmaWindow *wind
         return *it;
     }
 
-    const AppData &data = appDataFromAppId(window->appId());
+    const AppData &data = appDataFromUrl(windowUrlFromMetadata(window->appId(),
+        window->pid(), rulesConfig));
 
     appDataCache.insert(window, data);
 
     return data;
+}
+
+QIcon WaylandTasksModel::Private::icon(KWayland::Client::PlasmaWindow *window)
+{
+    const AppData &app = appData(window);
+
+    if (!app.icon.isNull()) {
+        return app.icon;
+    }
+
+    appDataCache[window].icon = window->icon();
+
+    return window->icon();
 }
 
 void WaylandTasksModel::Private::dataChanged(KWayland::Client::PlasmaWindow *window, int role)
@@ -263,7 +343,7 @@ WaylandTasksModel::WaylandTasksModel(QObject *parent)
     : AbstractWindowTasksModel(parent)
     , d(new Private(this))
 {
-    d->initWayland();
+    d->init();
 }
 
 WaylandTasksModel::~WaylandTasksModel() = default;
@@ -279,9 +359,15 @@ QVariant WaylandTasksModel::data(const QModelIndex &index, int role) const
     if (role == Qt::DisplayRole) {
         return window->title();
     } else if (role == Qt::DecorationRole) {
-        return window->icon();
+        return d->icon(window);
     } else if (role == AppId) {
-        return window->appId();
+        const QString &id = d->appData(window).id;
+
+        if (id.isEmpty()) {
+            return window->appId();
+        } else {
+            return id;
+        }
     } else if (role == AppName) {
         return d->appData(window).name;
     } else if (role == GenericName) {

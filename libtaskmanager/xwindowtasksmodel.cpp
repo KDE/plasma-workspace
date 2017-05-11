@@ -23,28 +23,22 @@ License along with this library.  If not, see <http://www.gnu.org/licenses/>.
 #include "tasktools.h"
 
 #include <KActivities/ResourceInstance>
-#include <KConfigGroup>
 #include <KDesktopFile>
 #include <KDirWatch>
 #include <KIconLoader>
 #include <KRun>
 #include <KService>
-#include <KServiceTypeTrader>
 #include <KSharedConfig>
 #include <KStartupInfo>
 #include <KSycoca>
 #include <KWindowInfo>
 #include <KWindowSystem>
-#include <processcore/processes.h>
-#include <processcore/process.h>
 
 #include <QBuffer>
 #include <QDir>
 #include <QIcon>
 #include <QFile>
-#include <QRegularExpression>
 #include <QSet>
-#include <QStandardPaths>
 #include <QTimer>
 #include <QX11Info>
 
@@ -88,9 +82,6 @@ public:
     static QString groupMimeType();
     QUrl windowUrl(WId window);
     QUrl launcherUrl(WId window, bool encodeFallbackIcon = true);
-    QUrl serviceUrl(int pid, const QString &type, const QStringList &cmdRemovals);
-    KService::List servicesFromPid(int pid);
-    KService::List servicesFromCmdLine(const QString &cmdLine, const QString &processName);
     bool demandsAttention(WId window);
 
 private:
@@ -110,35 +101,25 @@ XWindowTasksModel::Private::~Private()
 
 void XWindowTasksModel::Private::init()
 {
-    rulesConfig = KSharedConfig::openConfig(QStringLiteral("taskmanagerrulesrc"));
-    configWatcher = new KDirWatch(q);
+    auto clearCacheAndRefresh = [this] {
+        if (!windows.count()) {
+            return;
+        }
 
-    foreach (const QString &location, QStandardPaths::standardLocations(QStandardPaths::ConfigLocation)) {
-        configWatcher->addFile(location + QLatin1String("/taskmanagerrulesrc"));
-    }
+        appDataCache.clear();
 
-    QObject::connect(configWatcher, &KDirWatch::dirty, [this] { rulesConfig->reparseConfiguration(); });
-    QObject::connect(configWatcher, &KDirWatch::created, [this] { rulesConfig->reparseConfiguration(); });
-    QObject::connect(configWatcher, &KDirWatch::deleted, [this] { rulesConfig->reparseConfiguration(); });
+        // Emit changes of all roles satisfied from app data cache.
+        q->dataChanged(q->index(0, 0),  q->index(windows.count() - 1, 0),
+            QVector<int>{Qt::DecorationRole, AbstractTasksModel::AppId,
+            AbstractTasksModel::AppName, AbstractTasksModel::GenericName,
+            AbstractTasksModel::LauncherUrl,
+            AbstractTasksModel::LauncherUrlWithoutIcon});
+    };
 
     sycocaChangeTimer.setSingleShot(true);
     sycocaChangeTimer.setInterval(100);
 
-    QObject::connect(&sycocaChangeTimer, &QTimer::timeout, q,
-        [this]() {
-            if (!windows.count()) {
-                return;
-            }
-
-            appDataCache.clear();
-
-            // Emit changes of all roles satisfied from app data cache.
-            q->dataChanged(q->index(0, 0),  q->index(windows.count() - 1, 0),
-                QVector<int>{Qt::DecorationRole, AbstractTasksModel::AppId,
-                AbstractTasksModel::AppName, AbstractTasksModel::GenericName,
-                AbstractTasksModel::LauncherUrl});
-        }
-    );
+    QObject::connect(&sycocaChangeTimer, &QTimer::timeout, q, clearCacheAndRefresh);
 
     void (KSycoca::*myDatabaseChangeSignal)(const QStringList &) = &KSycoca::databaseChanged;
     QObject::connect(KSycoca::self(), myDatabaseChangeSignal, q,
@@ -150,6 +131,22 @@ void XWindowTasksModel::Private::init()
             }
         }
     );
+
+    rulesConfig = KSharedConfig::openConfig(QStringLiteral("taskmanagerrulesrc"));
+    configWatcher = new KDirWatch(q);
+
+    foreach (const QString &location, QStandardPaths::standardLocations(QStandardPaths::ConfigLocation)) {
+        configWatcher->addFile(location + QLatin1String("/taskmanagerrulesrc"));
+    }
+
+    auto rulesConfigChange = [this, &clearCacheAndRefresh] {
+        rulesConfig->reparseConfiguration();
+        clearCacheAndRefresh();
+    };
+
+    QObject::connect(configWatcher, &KDirWatch::dirty, rulesConfigChange);
+    QObject::connect(configWatcher, &KDirWatch::created, rulesConfigChange);
+    QObject::connect(configWatcher, &KDirWatch::deleted, rulesConfigChange);
 
     QObject::connect(KWindowSystem::self(), &KWindowSystem::windowAdded, q,
         [this](WId window) {
@@ -471,8 +468,6 @@ QString XWindowTasksModel::Private::groupMimeType()
 
 QUrl XWindowTasksModel::Private::windowUrl(WId window)
 {
-    QUrl url;
-
     const KWindowInfo *info = windowInfo(window);
 
     QString desktopFile = QString::fromUtf8(info->desktopFileName());
@@ -493,216 +488,9 @@ QUrl XWindowTasksModel::Private::windowUrl(WId window)
         }
     }
 
-    const QString &classClass = info->windowClassClass();
-    const QString &className = info->windowClassName();
-
-    KService::List services;
-    bool triedPid = false;
-
-    if (!(classClass.isEmpty() && className.isEmpty())) {
-        int pid = NETWinInfo(QX11Info::connection(), window, QX11Info::appRootWindow(), NET::WMPid, 0).pid();
-
-        // For KCModules, if we matched on window class, etc, we would end up matching
-        // to kcmshell5 itself - but we are more than likely interested in the actual
-        // control module. Therefore we obtain this via the commandline. This commandline
-        // may contain "kdeinit4:" or "[kdeinit]", so we remove these first.
-        if (classClass == "kcmshell5") {
-            url = serviceUrl(pid, QStringLiteral("KCModule"), QStringList() << QStringLiteral("kdeinit5:") << QStringLiteral("[kdeinit]"));
-
-            if (!url.isEmpty()) {
-                return url;
-            }
-        }
-
-        // Check to see if this wmClass matched a saved one ...
-        KConfigGroup grp(rulesConfig, "Mapping");
-        KConfigGroup set(rulesConfig, "Settings");
-
-        // Evaluate MatchCommandLineFirst directives from config first.
-        // Some apps have different launchers depending upon command line ...
-        QStringList matchCommandLineFirst = set.readEntry("MatchCommandLineFirst", QStringList());
-
-        if (!classClass.isEmpty() && matchCommandLineFirst.contains(classClass)) {
-            triedPid = true;
-            services = servicesFromPid(pid);
-        }
-
-        // Try to match using className also.
-        if (!className.isEmpty() && matchCommandLineFirst.contains("::"+className)) {
-            triedPid = true;
-            services = servicesFromPid(pid);
-        }
-
-        if (!classClass.isEmpty()) {
-            // Evaluate any mapping rules that map to a specific .desktop file.
-            QString mapped(grp.readEntry(classClass + "::" + className, QString()));
-
-            if (mapped.endsWith(QLatin1String(".desktop"))) {
-                url = QUrl(mapped);
-                return url;
-            }
-
-            if (mapped.isEmpty()) {
-                mapped = grp.readEntry(classClass, QString());
-
-                if (mapped.endsWith(QLatin1String(".desktop"))) {
-                    url = QUrl(mapped);
-                    return url;
-                }
-            }
-
-            // Some apps, such as Wine, cannot use className to map to launcher name - as Wine itself is not a GUI app
-            // So, Settings/ManualOnly lists window classes where the user will always have to manualy set the launcher ...
-            QStringList manualOnly = set.readEntry("ManualOnly", QStringList());
-
-            if (!classClass.isEmpty() && manualOnly.contains(classClass)) {
-                return url;
-            }
-
-            // Try matching both WM_CLASS instance and general class against StartupWMClass.
-            // We do this before evaluating the mapping rules further, because StartupWMClass
-            // is essentially a mapping rule, and we expect it to be set deliberately and
-            // sensibly to instruct us what to do. Also, mapping rules
-            //
-            // StartupWMClass=STRING
-            //
-            //   If true, it is KNOWN that the application will map at least one
-            //   window with the given string as its WM class or WM name hint.
-            //
-            // Source: https://specifications.freedesktop.org/startup-notification-spec/startup-notification-0.1.txt
-            if (services.empty()) {
-                services = KServiceTypeTrader::self()->query(QStringLiteral("Application"), QStringLiteral("exist Exec and ('%1' =~ StartupWMClass)").arg(classClass));
-            }
-
-            if (services.empty()) {
-                services = KServiceTypeTrader::self()->query(QStringLiteral("Application"), QStringLiteral("exist Exec and ('%1' =~ StartupWMClass)").arg(className));
-            }
-
-            // Evaluate rewrite rules from config.
-            if (services.empty()) {
-                KConfigGroup rewriteRulesGroup(rulesConfig, QStringLiteral("Rewrite Rules"));
-                if (rewriteRulesGroup.hasGroup(classClass)) {
-                    KConfigGroup rewriteGroup(&rewriteRulesGroup, classClass);
-
-                    const QStringList &rules = rewriteGroup.groupList();
-                    for (const QString &rule : rules) {
-                        KConfigGroup ruleGroup(&rewriteGroup, rule);
-
-                        const QString propertyConfig = ruleGroup.readEntry(QStringLiteral("Property"), QString());
-
-                        QString matchProperty;
-                        if (propertyConfig == QLatin1String("ClassClass")) {
-                            matchProperty = classClass;
-                        } else if (propertyConfig == QLatin1String("ClassName")) {
-                            matchProperty = className;
-                        }
-
-                        if (matchProperty.isEmpty()) {
-                            continue;
-                        }
-
-                        const QString serviceSearchIdentifier = ruleGroup.readEntry(QStringLiteral("Identifier"), QString());
-                        if (serviceSearchIdentifier.isEmpty()) {
-                            continue;
-                        }
-
-                        QRegularExpression regExp(ruleGroup.readEntry(QStringLiteral("Match")));
-                        const auto match = regExp.match(matchProperty);
-
-                        if (match.hasMatch()) {
-                            const QString actualMatch = match.captured(QStringLiteral("match"));
-                            if (actualMatch.isEmpty()) {
-                                continue;
-                            }
-
-                            QString rewrittenString = ruleGroup.readEntry(QStringLiteral("Target")).arg(actualMatch);
-                            // If no "Target" is provided, instead assume the matched property (ClassClass/ClassName).
-                            if (rewrittenString.isEmpty()) {
-                                rewrittenString = matchProperty;
-                            }
-
-                            services = KServiceTypeTrader::self()->query(QStringLiteral("Application"), QStringLiteral("exist Exec and ('%1' =~ %2)").arg(rewrittenString, serviceSearchIdentifier));
-
-                            if (!services.isEmpty()) {
-                                break;
-                            }
-                        }
-                    }
-                }
-            }
-
-            // Try matching mapped name against DesktopEntryName.
-            if (!mapped.isEmpty() && services.empty()) {
-                services = KServiceTypeTrader::self()->query(QStringLiteral("Application"), QStringLiteral("exist Exec and ('%1' =~ DesktopEntryName)").arg(mapped));
-            }
-
-            // Try matching mapped name against 'Name'.
-            if (!mapped.isEmpty() && services.empty()) {
-                services = KServiceTypeTrader::self()->query(QStringLiteral("Application"), QStringLiteral("exist Exec and ('%1' =~ Name) and (not exist NoDisplay or not NoDisplay)").arg(mapped));
-            }
-
-            // Try matching WM_CLASS general class against DesktopEntryName.
-            if (services.empty()) {
-                services = KServiceTypeTrader::self()->query(QStringLiteral("Application"), QStringLiteral("exist Exec and ('%1' =~ DesktopEntryName)").arg(classClass));
-            }
-
-            // Try matching WM_CLASS general class against 'Name'.
-            // This has a shaky chance of success as WM_CLASS is untranslated, but 'Name' may be localized.
-            if (services.empty()) {
-                services = KServiceTypeTrader::self()->query(QStringLiteral("Application"), QStringLiteral("exist Exec and ('%1' =~ Name) and (not exist NoDisplay or not NoDisplay)").arg(classClass));
-            }
-        }
-
-        // Ok, absolute *last* chance, try matching via pid (but only if we have not already tried this!) ...
-        if (services.empty() && !triedPid) {
-            services = servicesFromPid(pid);
-        }
-    }
-
-    // Try to improve on a possible from-binary fallback.
-    // If no services were found or we got a fake-service back from getServicesViaPid()
-    // we attempt to improve on this by adding a loosely matched reverse-domain-name
-    // DesktopEntryName. Namely anything that is '*.classClass.desktop' would qualify here.
-    //
-    // Illustrative example of a case where the above heuristics would fail to produce
-    // a reasonable result:
-    // - org.kde.dragonplayer.desktop
-    // - binary is 'dragon'
-    // - qapp appname and thus classClass is 'dragonplayer'
-    // - classClass cannot directly match the desktop file because of RDN
-    // - classClass also cannot match the binary because of name mismatch
-    // - in the following code *.classClass can match org.kde.dragonplayer though
-    if (services.empty() || services.at(0)->desktopEntryName().isEmpty()) {
-        auto matchingServices = KServiceTypeTrader::self()->query(QStringLiteral("Application"),
-            QStringLiteral("exist Exec and ('%1' ~~ DesktopEntryName)").arg(classClass));
-        QMutableListIterator<KService::Ptr> it(matchingServices);
-        while (it.hasNext()) {
-            auto service = it.next();
-            if (!service->desktopEntryName().endsWith("." + classClass)) {
-                it.remove();
-            }
-        }
-        // Exactly one match is expected, otherwise we discard the results as to reduce
-        // the likelihood of false-positive mappings. Since we essentially eliminate the
-        // uniqueness that RDN is meant to bring to the table we could potentially end
-        // up with more than one match here.
-        if (matchingServices.length() == 1) {
-            services = matchingServices;
-        }
-    }
-
-    if (!services.empty()) {
-        QString path = services[0]->entryPath();
-        if (path.isEmpty()) {
-            path = services[0]->exec();
-        }
-
-        if (!path.isEmpty()) {
-            url = QUrl::fromLocalFile(path);
-        }
-    }
-
-    return url;
+    return windowUrlFromMetadata(info->windowClassClass(),
+        NETWinInfo(QX11Info::connection(), window, QX11Info::appRootWindow(), NET::WMPid, 0).pid(),
+        rulesConfig, info->windowClassName());
 }
 
 QUrl XWindowTasksModel::Private::launcherUrl(WId window, bool encodeFallbackIcon)
@@ -734,133 +522,6 @@ QUrl XWindowTasksModel::Private::launcherUrl(WId window, bool encodeFallbackIcon
     url.setQuery(uQuery);
 
     return url;
-}
-
-QUrl XWindowTasksModel::Private::serviceUrl(int pid, const QString &type, const QStringList &cmdRemovals = QStringList())
-{
-    if (pid == 0) {
-        return QUrl();
-    }
-
-    KSysGuard::Processes procs;
-    procs.updateOrAddProcess(pid);
-
-    KSysGuard::Process *proc = procs.getProcess(pid);
-    QString cmdline = proc ? proc->command().simplified() : QString(); // proc->command has a trailing space???
-
-    if (cmdline.isEmpty()) {
-        return QUrl();
-    }
-
-    foreach (const QString & r, cmdRemovals) {
-        cmdline.replace(r, QLatin1String(""));
-    }
-
-    KService::List services = KServiceTypeTrader::self()->query(type, QStringLiteral("exist Exec and ('%1' =~ Exec)").arg(cmdline));
-
-    if (services.empty()) {
-        // Could not find with complete command line, so strip out path part ...
-        int slash = cmdline.lastIndexOf('/', cmdline.indexOf(' '));
-        if (slash > 0) {
-            services = KServiceTypeTrader::self()->query(type, QStringLiteral("exist Exec and ('%1' =~ Exec)").arg(cmdline.mid(slash + 1)));
-        }
-
-        if (services.empty()) {
-            return QUrl();
-        }
-    }
-
-    if (!services.isEmpty()) {
-        QString path = services[0]->entryPath();
-
-        if (!QDir::isAbsolutePath(path)) {
-            QString absolutePath = QStandardPaths::locate(QStandardPaths::GenericDataLocation, "kservices5/"+path);
-            if (!absolutePath.isEmpty())
-                path = absolutePath;
-        }
-
-        if (QFile::exists(path)) {
-            return QUrl::fromLocalFile(path);
-        }
-    }
-
-    return QUrl();
-}
-
-KService::List XWindowTasksModel::Private::servicesFromPid(int pid)
-{
-    if (pid == 0) {
-        return KService::List();
-    }
-
-    KSysGuard::Processes procs;
-    procs.updateOrAddProcess(pid);
-
-    KSysGuard::Process *proc = procs.getProcess(pid);
-    const QString &cmdLine = proc ? proc->command().simplified() : QString(); // proc->command has a trailing space???
-
-    if (cmdLine.isEmpty()) {
-        return KService::List();
-    }
-
-    return servicesFromCmdLine(cmdLine, proc->name());
-}
-
-KService::List XWindowTasksModel::Private::servicesFromCmdLine(const QString &_cmdLine, const QString &processName)
-{
-    QString cmdLine = _cmdLine;
-    KService::List services;
-
-    const int firstSpace = cmdLine.indexOf(' ');
-    int slash = 0;
-
-    services = KServiceTypeTrader::self()->query(QStringLiteral("Application"), QStringLiteral("exist Exec and ('%1' =~ Exec)").arg(cmdLine));
-
-    if (services.empty()) {
-        // Could not find with complete command line, so strip out the path part ...
-        slash = cmdLine.lastIndexOf('/', firstSpace);
-
-        if (slash > 0) {
-            services = KServiceTypeTrader::self()->query(QStringLiteral("Application"), QStringLiteral("exist Exec and ('%1' =~ Exec)").arg(cmdLine.mid(slash + 1)));
-        }
-    }
-
-    if (services.empty() && firstSpace > 0) {
-        // Could not find with arguments, so try without ...
-        cmdLine = cmdLine.left(firstSpace);
-
-        services = KServiceTypeTrader::self()->query(QStringLiteral("Application"), QStringLiteral("exist Exec and ('%1' =~ Exec)").arg(cmdLine));
-
-        if (services.empty()) {
-            slash = cmdLine.lastIndexOf('/');
-
-            if (slash > 0) {
-                services = KServiceTypeTrader::self()->query(QStringLiteral("Application"), QStringLiteral("exist Exec and ('%1' =~ Exec)").arg(cmdLine.mid(slash + 1)));
-            }
-        }
-    }
-
-    if (services.empty()) {
-        KConfigGroup set(rulesConfig, "Settings");
-        const QStringList &runtimes = set.readEntry("TryIgnoreRuntimes", QStringList());
-
-        bool ignore = runtimes.contains(cmdLine);
-
-        if (!ignore && slash > 0) {
-            ignore = runtimes.contains(cmdLine.mid(slash + 1));
-        }
-
-        if (ignore) {
-            return servicesFromCmdLine(_cmdLine.mid(firstSpace + 1), processName);
-        }
-    }
-
-    if (services.empty() && !processName.isEmpty() && !QStandardPaths::findExecutable(cmdLine).isEmpty()) {
-        // cmdLine now exists without arguments if there were any.
-        services << QExplicitlySharedDataPointer<KService>(new KService(processName, cmdLine, QString()));
-    }
-
-    return services;
 }
 
 bool XWindowTasksModel::Private::demandsAttention(WId window)
