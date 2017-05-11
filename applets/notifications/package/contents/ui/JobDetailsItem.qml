@@ -92,6 +92,7 @@ Column {
                 font: theme.smallestFont
                 text: jobItem["labelName" + index] ? i18nc("placeholder is row description, such as Source or Destination", "%1:", jobItem["labelName" + index]) : ""
                 horizontalAlignment: Text.AlignRight
+                textFormat: Text.PlainText
             }
 
             PlasmaComponents.Label {
@@ -101,11 +102,13 @@ Column {
 
                 font: theme.smallestFont
                 text: jobItem["label" + index] || ""
+                textFormat: Text.PlainText
                 elide: Text.ElideMiddle
 
                 PlasmaCore.ToolTipArea {
                     anchors.fill: parent
                     subText: labelText.truncated ? labelText.text : ""
+                    textFormat: Text.PlainText
                 }
             }
         }
@@ -125,6 +128,7 @@ Column {
             height: paintedHeight
 
             text: localizeProcessedAmount(index)
+            textFormat: Text.PlainText
             font: theme.smallestFont
             visible: text !== ""
         }
@@ -141,6 +145,7 @@ Column {
 
         font: theme.smallestFont
         text: eta > 0 ? i18nc("Speed and estimated time to completion", "%1 (%2 remaining)", speed, KCoreAddons.Format.formatSpelloutDuration(eta)) : speed
+        textFormat: Text.PlainText
         visible: eta > 0 || parseInt(speed) > 0
     }
 

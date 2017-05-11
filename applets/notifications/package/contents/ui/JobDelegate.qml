@@ -52,6 +52,7 @@ Column {
         opacity: 0.6
         level: 3
         text: jobItem.isSuspended ? i18nc("Placeholder is job name, eg. 'Copying'", "%1 (Paused)", infoMessage) : infoMessage
+        textFormat: Text.PlainText
     }
 
     RowLayout {
@@ -65,6 +66,7 @@ Column {
                 var labelSplit = label0.split("/")
                 return labelSplit[labelSplit.length-1]
             }
+            textFormat: Text.PlainText
         }
 
         PlasmaComponents.ToolButton {

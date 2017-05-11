@@ -80,11 +80,20 @@ Column {
                 summary = infoMessage ? i18nc("the job, which can be anything, failed to complete", "%1: Failed", infoMessage) : i18n("Job Failed")
             }
 
+            // notification body interprets HTML, so we need to manually escape the name
+            var body = (errorText || message || "").replace(/[&<>]/g, function (tag) {
+                return {
+                    '&': '&amp;',
+                    '<': '&lt;',
+                    '>': '&gt;'
+                }[tag] || tag
+            });
+
             var op = {
                 appIcon: runningJobs[source].appIconName,
                 appName: runningJobs[source].appName,
                 summary: summary,
-                body: errorText || message,
+                body: body,
                 isPersistent: !!error, // we'll assume success to be the note-unworthy default, only be persistent in error case
                 urgency: 0,
                 configurable: false,
