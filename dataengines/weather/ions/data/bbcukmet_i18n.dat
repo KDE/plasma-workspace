@@ -1,4 +1,3 @@
-weather condition|clear sky
 weather condition|clear
 weather condition|clear intervals
 weather condition|clear sky
@@ -35,7 +34,6 @@ weather condition|N/A
 weather condition|na
 weather condition|partly cloudy
 weather condition|sandstorm
-weather condition|weather condition|sleet
 weather condition|sleet
 weather condition|sleet shower
 weather condition|sleet showers
@@ -45,7 +43,6 @@ weather condition|thunder storm
 weather condition|thundery shower
 weather condition|tropical storm
 weather condition|white cloud
-weather forecast|clear sky
 weather forecast|clear
 weather forecast|clear intervals
 weather forecast|clear sky
@@ -81,7 +78,6 @@ weather forecast|misty
 weather forecast|na
 weather forecast|partly cloudy
 weather forecast|sandstorm
-weather forecast|sleet
 weather forecast|sleet
 weather forecast|sleet shower
 weather forecast|sleet showers
