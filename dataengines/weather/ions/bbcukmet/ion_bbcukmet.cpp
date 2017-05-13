@@ -128,7 +128,7 @@ QMap<QString, IonInterface::ConditionIcons> UKMETIon::setupDayIconMappings() con
     dayList.insert(QStringLiteral("heavy shower"), Rain);
     dayList.insert(QStringLiteral("heavy rain shower"), Rain);
     dayList.insert(QStringLiteral("thundery shower"), Thunderstorm);
-    dayList.insert(QStringLiteral("thunder storm"), Thunderstorm);
+    dayList.insert(QStringLiteral("thunderstorm"), Thunderstorm);
     dayList.insert(QStringLiteral("cloudy with sleet"), RainSnow);
     dayList.insert(QStringLiteral("sleet shower"), RainSnow);
     dayList.insert(QStringLiteral("sleet showers"), RainSnow);
@@ -179,7 +179,7 @@ QMap<QString, IonInterface::ConditionIcons> UKMETIon::setupNightIconMappings() c
     nightList.insert(QStringLiteral("heavy shower"), Rain);
     nightList.insert(QStringLiteral("heavy rain shower"), Rain);
     nightList.insert(QStringLiteral("thundery shower"), Thunderstorm);
-    nightList.insert(QStringLiteral("thunder storm"), Thunderstorm);
+    nightList.insert(QStringLiteral("thunderstorm"), Thunderstorm);
     nightList.insert(QStringLiteral("cloudy with sleet"), NotAvailable);
     nightList.insert(QStringLiteral("sleet shower"), NotAvailable);
     nightList.insert(QStringLiteral("sleet showers"), NotAvailable);

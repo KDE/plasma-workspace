@@ -41,7 +41,7 @@ weather condition|sleet showers
 weather condition|sunny
 weather condition|sunny intervals
 weather condition|thick cloud
-weather condition|thunder storm
+weather condition|thunderstorm
 weather condition|thundery shower
 weather condition|tropical storm
 weather condition|white cloud
@@ -87,7 +87,7 @@ weather forecast|sleet showers
 weather forecast|sunny
 weather forecast|sunny intervals
 weather forecast|thick cloud
-weather forecast|thunder storm
+weather forecast|thunderstorm
 weather forecast|thundery shower
 weather forecast|tropical storm
 weather forecast|white cloud
