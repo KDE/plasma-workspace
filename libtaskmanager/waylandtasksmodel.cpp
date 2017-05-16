@@ -282,20 +282,6 @@ void WaylandTasksModel::Private::addWindow(KWayland::Client::PlasmaWindow *windo
     QObject::connect(window, &KWayland::Client::PlasmaWindow::skipTaskbarChanged, q,
         [window, this] { this->dataChanged(window, SkipTaskbar); }
     );
-
-    // NOTE: The pid will never actually change on a real system. But if it ever did ...
-    QObject::connect(window, &KWayland::Client::PlasmaWindow::pidChanged, q,
-        [window, this] {
-            // The AppData struct in the cache is derived from this and needs
-            // to be evicted in favor of a fresh struct based on the changed
-            // window metadata.
-            appDataCache.remove(window);
-
-            // Refresh roles satisfied from the app data cache.
-            this->dataChanged(window, QVector<int>{AppId, AppName, GenericName,
-                LauncherUrl, LauncherUrlWithoutIcon});
-        }
-    );
 }
 
 AppData WaylandTasksModel::Private::appData(KWayland::Client::PlasmaWindow *window)
