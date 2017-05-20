@@ -18,6 +18,7 @@
  */
 
 import QtQuick 2.1
+import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
 
 PlasmaCore.FrameSvgItem {
@@ -27,10 +28,15 @@ PlasmaCore.FrameSvgItem {
     property Item target
     property int location
 
-    x: Math.max(0, (target ? target.x : 0) + (visualParent ? visualParent.x : 0))
-    y: Math.max(0, (target ? target.y : 0) + (visualParent ? visualParent.y : 0))
-    width: Math.min(parent.width, target ? target.width : 0)
-    height: Math.min(parent.height, target ? target.height : 0)
+    //! when the target is the root item we use the maximum thickness of the panel
+    x: plasmoid.formFactor === PlasmaCore.Types.Vertical && target === root ?
+           0 : Math.max(0, (target ? target.x : 0) + (visualParent ? visualParent.x : 0))
+    y: plasmoid.formFactor === PlasmaCore.Types.Horizontal && target === root ?
+           0 : Math.max(0, (target ? target.y : 0) + (visualParent ? visualParent.y : 0))
+    width: plasmoid.formFactor === PlasmaCore.Types.Vertical && target === root ?
+               parent.width : Math.min(parent.width, target ? target.width : 0)
+    height: plasmoid.formFactor === PlasmaCore.Types.Horizontal && target === root ?
+                parent.height : Math.min(parent.height, target ? target.height : 0)
 
     imagePath: "widgets/tabbar"
     prefix: {
