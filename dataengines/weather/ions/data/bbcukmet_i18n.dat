@@ -1,4 +1,3 @@
-weather condition|clear sky
 weather condition|clear
 weather condition|clear intervals
 weather condition|clear sky
@@ -22,6 +21,7 @@ weather condition|heavy showers
 weather condition|heavy snow
 weather condition|heavy snow shower
 weather condition|heavy snow showers
+weather condition|light cloud
 weather condition|light rain
 weather condition|light rain shower
 weather condition|light shower
@@ -35,17 +35,16 @@ weather condition|N/A
 weather condition|na
 weather condition|partly cloudy
 weather condition|sandstorm
-weather condition|weather condition|sleet
 weather condition|sleet
 weather condition|sleet shower
 weather condition|sleet showers
 weather condition|sunny
 weather condition|sunny intervals
-weather condition|thunder storm
+weather condition|thick cloud
+weather condition|thunderstorm
 weather condition|thundery shower
 weather condition|tropical storm
 weather condition|white cloud
-weather forecast|clear sky
 weather forecast|clear
 weather forecast|clear intervals
 weather forecast|clear sky
@@ -69,6 +68,7 @@ weather forecast|heavy showers
 weather forecast|heavy snow
 weather forecast|heavy snow shower
 weather forecast|heavy snow showers
+weather forecast|light cloud
 weather forecast|light rain
 weather forecast|light rain shower
 weather forecast|light shower
@@ -82,15 +82,16 @@ weather forecast|na
 weather forecast|partly cloudy
 weather forecast|sandstorm
 weather forecast|sleet
-weather forecast|sleet
 weather forecast|sleet shower
 weather forecast|sleet showers
 weather forecast|sunny
 weather forecast|sunny intervals
-weather forecast|thunder storm
+weather forecast|thick cloud
+weather forecast|thunderstorm
 weather forecast|thundery shower
 weather forecast|tropical storm
 weather forecast|white cloud
+visibility|Excellent
 visibility|Very Good
 visibility|Good
 visibility|Moderate

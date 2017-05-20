@@ -128,7 +128,7 @@ QMap<QString, IonInterface::ConditionIcons> UKMETIon::setupDayIconMappings() con
     dayList.insert(QStringLiteral("heavy shower"), Rain);
     dayList.insert(QStringLiteral("heavy rain shower"), Rain);
     dayList.insert(QStringLiteral("thundery shower"), Thunderstorm);
-    dayList.insert(QStringLiteral("thunder storm"), Thunderstorm);
+    dayList.insert(QStringLiteral("thunderstorm"), Thunderstorm);
     dayList.insert(QStringLiteral("cloudy with sleet"), RainSnow);
     dayList.insert(QStringLiteral("sleet shower"), RainSnow);
     dayList.insert(QStringLiteral("sleet showers"), RainSnow);
@@ -179,7 +179,7 @@ QMap<QString, IonInterface::ConditionIcons> UKMETIon::setupNightIconMappings() c
     nightList.insert(QStringLiteral("heavy shower"), Rain);
     nightList.insert(QStringLiteral("heavy rain shower"), Rain);
     nightList.insert(QStringLiteral("thundery shower"), Thunderstorm);
-    nightList.insert(QStringLiteral("thunder storm"), Thunderstorm);
+    nightList.insert(QStringLiteral("thunderstorm"), Thunderstorm);
     nightList.insert(QStringLiteral("cloudy with sleet"), NotAvailable);
     nightList.insert(QStringLiteral("sleet shower"), NotAvailable);
     nightList.insert(QStringLiteral("sleet showers"), NotAvailable);
@@ -765,9 +765,12 @@ void UKMETIon::parseFiveDayForecast(const QString& source, QXmlStreamReader& xml
                 parseFloat(forecast->tempLow, low.cap(1));
             }
 
+            const QString summaryLC = summary.toLower();
             forecast->period = period;
-            forecast->iconName = getWeatherIcon(dayIcons(), summary.toLower());
-            forecast->summary = i18nc("weather forecast", summary.toUtf8().data());
+            forecast->iconName = getWeatherIcon(dayIcons(), summaryLC);
+            // db uses original strings normalized to lowercase, but we prefer the unnormalized if without translation
+            const QString summaryTranslated = i18nc("weather forecast", summaryLC.toUtf8().data());
+            forecast->summary = (summaryTranslated != summaryLC) ? summaryTranslated : summary;
             qCDebug(IONENGINE_BBCUKMET) << "i18n summary string: " << forecast->summary;
             m_weatherData[source].forecasts.append(forecast);
             // prepare next
@@ -831,8 +834,11 @@ void UKMETIon::updateWeather(const QString& source)
         data.insert(QStringLiteral("Observation Period"), weatherData.obsTime);
     }
     if (!weatherData.condition.isEmpty()) {
+        // db uses original strings normalized to lowercase, but we prefer the unnormalized if without translation
+        const QString conditionLC = weatherData.condition.toLower();
+        const QString conditionTranslated = i18nc("weather condition", conditionLC.toUtf8().data());
         data.insert(QStringLiteral("Current Conditions"),
-                    i18nc("weather condition", weatherData.condition.toUtf8().data()));
+                    (conditionTranslated != conditionLC) ? conditionTranslated : weatherData.condition);
     }
 //     qCDebug(IONENGINE_BBCUKMET) << "i18n condition string: " << i18nc("weather condition", weatherData.condition.toUtf8().data());
 
