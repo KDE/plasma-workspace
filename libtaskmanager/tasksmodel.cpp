@@ -1545,6 +1545,7 @@ void TasksModel::syncLaunchers()
     }
 
     QMap<int, QString> sortedShownLaunchers;
+    QStringList sortedHiddenLaunchers;
 
     foreach(const QString &launcherUrlStr, launcherList()) {
         int row = -1;
@@ -1564,6 +1565,8 @@ void TasksModel::syncLaunchers()
 
         if (row != -1) {
             sortedShownLaunchers.insert(row, launcherUrlStr);
+        } else {
+            sortedHiddenLaunchers << launcherUrlStr;
         }
     }
 
@@ -1588,7 +1591,8 @@ void TasksModel::syncLaunchers()
             d->sortedPreFilterRows.replace(sortMapIndices.at(i), preFilterRows.at(i));
         }
     }
-    setLauncherList(sortedShownLaunchers.values());
+
+    setLauncherList(sortedShownLaunchers.values() + sortedHiddenLaunchers);
     d->launcherSortingDirty = false;
 }
 
