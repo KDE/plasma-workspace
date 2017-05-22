@@ -116,6 +116,7 @@ PanelView::~PanelView()
 
 KConfigGroup PanelView::panelConfig(ShellCorona *corona, Plasma::Containment *containment, QScreen *screen)
 {
+    qWarning()<<"AAAA"<<containment<<screen;
     if (!containment || !screen) {
         return KConfigGroup();
     }
