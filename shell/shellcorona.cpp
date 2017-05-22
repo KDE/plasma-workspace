@@ -778,7 +778,11 @@ void ShellCorona::screenInvariants() const
         foreach (const PanelView *panel, panelsForScreen(screen)) {
             Q_ASSERT(panel->containment());
             Q_ASSERT(panel->containment()->screen() == id || panel->containment()->screen() == -1);
-            Q_ASSERT(panel->isVisible());
+            //If any kscreen related activities occurred
+            //during startup, the panel wouldn't be visible yet, and this would assert
+            if (panel->containment()->isUiReady()) {
+                Q_ASSERT(panel->isVisible());
+            }
         }
 
         screens.insert(screen);
