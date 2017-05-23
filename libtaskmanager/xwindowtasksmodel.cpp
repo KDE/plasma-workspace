@@ -139,7 +139,7 @@ void XWindowTasksModel::Private::init()
         configWatcher->addFile(location + QLatin1String("/taskmanagerrulesrc"));
     }
 
-    auto rulesConfigChange = [this, &clearCacheAndRefresh] {
+    auto rulesConfigChange = [this, clearCacheAndRefresh] {
         rulesConfig->reparseConfiguration();
         clearCacheAndRefresh();
     };
