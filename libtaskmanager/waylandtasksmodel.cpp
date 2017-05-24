@@ -530,16 +530,20 @@ void WaylandTasksModel::requestToggleMaximized(const QModelIndex &index)
 
 void WaylandTasksModel::requestToggleKeepAbove(const QModelIndex &index)
 {
-    Q_UNUSED(index)
+    if (!index.isValid() || index.model() != this || index.row() < 0 || index.row() >= d->windows.count()) {
+        return;
+    }
 
-    // FIXME Implement.
+    d->windows.at(index.row())->requestToggleKeepAbove();
 }
 
 void WaylandTasksModel::requestToggleKeepBelow(const QModelIndex &index)
 {
-    Q_UNUSED(index)
+    if (!index.isValid() || index.model() != this || index.row() < 0 || index.row() >= d->windows.count()) {
+        return;
+    }
 
-    // FIXME Implement.
+    d->windows.at(index.row())->requestToggleKeepBelow();
 }
 
 void WaylandTasksModel::requestToggleFullScreen(const QModelIndex &index)
