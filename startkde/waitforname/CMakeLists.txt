@@ -13,10 +13,10 @@ target_link_libraries(plasma_waitforname
     Qt5::DBus
    )
 
-configure_file(org.freedesktop.Notifications.service.in
-               ${CMAKE_CURRENT_BINARY_DIR}/org.freedesktop.Notifications.service)
+configure_file(org.kde.plasma.Notifications.service.in
+               ${CMAKE_CURRENT_BINARY_DIR}/org.kde.plasma.Notifications.service)
 
 install(TARGETS plasma_waitforname ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
-install(FILES ${CMAKE_CURRENT_BINARY_DIR}/org.freedesktop.Notifications.service
+install(FILES ${CMAKE_CURRENT_BINARY_DIR}/org.kde.plasma.Notifications.service
         DESTINATION ${KDE_INSTALL_DBUSSERVICEDIR})
 
