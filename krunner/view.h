@@ -19,9 +19,12 @@
 #ifndef VIEW_H
 #define VIEW_H
 
+#include <QPointer>
 #include <QtQuick/QQuickView>
 #include <KConfigGroup>
 #include <KSharedConfig>
+
+#include <KWayland/Client/plasmashell.h>
 
 #include "dialog.h"
 
@@ -95,7 +98,7 @@ private:
     bool m_floating : 1;
     QStringList m_history;
     KWayland::Client::PlasmaShell *m_plasmaShell;
-    KWayland::Client::PlasmaShellSurface *m_plasmaShellSurface;
+    QPointer <KWayland::Client::PlasmaShellSurface> m_plasmaShellSurface;
 };
 
 
