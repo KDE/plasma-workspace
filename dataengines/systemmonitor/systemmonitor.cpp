@@ -55,18 +55,8 @@ QStringList SystemMonitorEngine::sources() const
 
 bool SystemMonitorEngine::sourceRequestEvent(const QString &name)
 {
-    // NB: do not follow this example in your own data engines!
-    // This is kept for backwards compatilibility.
-    // Visualizations should instead listen to sourceAdded()
-    if (m_sensors.isEmpty()) {
-        // we don't have our first data yet, so let's trust the requester, at least fo rnow
-        // when we get our list of sensors later, then we'll know for sure and remove
-        // this source if they were wrong
-        setData(name, DataEngine::Data());
-        return true;
-    }
-
-    return false;
+    setData(name, DataEngine::Data());
+    return true;
 }
 
 bool SystemMonitorEngine::updateSourceEvent(const QString &sensorName)
