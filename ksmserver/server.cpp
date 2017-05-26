@@ -1121,7 +1121,7 @@ void KSMServer::runShutdownScripts()
                 const QString fullPath = dir.absolutePath() + QLatin1Char('/') + file;
 
                 qCDebug(KSMSERVER) << "running shutdown script" << fullPath;
-                QProcess::execute(fullPath);
+                QProcess::execute(fullPath, QStringList());
             }
         }
     }
