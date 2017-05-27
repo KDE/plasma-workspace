@@ -58,7 +58,7 @@ target_link_libraries(xembedsniproxy
     Qt5::DBus
     KF5::WindowSystem
     ${XCB_LIBS}
-    Xtst
+    ${X11_XTest_LIB}
 )
 
 install(TARGETS xembedsniproxy ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
