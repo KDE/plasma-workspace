@@ -93,6 +93,63 @@ private:
         return ret;
     }
 
+    qreal increaseMatchRelavance(const KService::Ptr &service, QVector<QStringRef> &strList, QString category)
+    {
+        //Increment the relevance based on all the words (other than the first) of the query list
+        qreal relevanceIncrement = 0;
+
+        for(int i=1; i<strList.size(); i++)
+        {
+            if (category == "Name") {
+                if (service->name().contains(strList[i], Qt::CaseInsensitive)) {
+                    relevanceIncrement += 0.01;
+                }
+            } else if (category == "GenericName") {
+                if (service->genericName().contains(strList[i], Qt::CaseInsensitive)) {
+                    relevanceIncrement += 0.01;
+                }
+            } else if (category == "Exec") {
+                if (service->exec().contains(strList[i], Qt::CaseInsensitive)) {
+                    relevanceIncrement += 0.01;
+                }
+            } else if (category == "Comment") {
+                if (service->comment().contains(strList[i], Qt::CaseInsensitive)) {
+                    relevanceIncrement += 0.01;
+                }
+            }
+        }
+
+        return relevanceIncrement;
+    }
+
+    QString generateQuery(QVector<QStringRef> &strList)
+    {
+        QString keywordTemplate = "exist Keywords";
+        QString genericNameTemplate = "exist GenericName";
+        QString nameTemplate = "exist Name";
+        QString commentTemplate = "exist Comment";
+
+        // Search for applications which are executable and the term case-insensitive matches any of
+        // * a substring of one of the keywords
+        // * a substring of the GenericName field
+        // * a substring of the Name field
+        // Note that before asking for the content of e.g. Keywords and GenericName we need to ask if
+        // they exist to prevent a tree evaluation error if they are not defined.
+        foreach (QStringRef str, strList)
+        {
+            keywordTemplate += QString(" and '%1' ~subin Keywords").arg(str.toString());
+            genericNameTemplate += QString(" and '%1' ~~ GenericName").arg(str.toString());
+            nameTemplate += QString(" and '%1' ~~ Name").arg(str.toString());
+            commentTemplate += QString(" and '%1' ~~ Comment").arg(str.toString());
+        }
+
+        QString finalQuery = QStringLiteral("exist Exec and ( (%1) or (%2) or (%3) or ('%4' ~~ Exec) or (%5) )")
+            .arg(keywordTemplate, genericNameTemplate, nameTemplate, strList[0].toString(), commentTemplate);
+
+        qCDebug(RUNNER_SERVICES) << "Final query : " << finalQuery;
+        return finalQuery;
+    }
+
     void setupMatch(const KService::Ptr &service, Plasma::QueryMatch &match)
     {
         const QString name = service->name();
@@ -142,17 +199,15 @@ private:
 
     void matchNameKeywordAndGenericName()
     {
+        //Splitting the query term to match using subsequences
+        QVector<QStringRef> queryList = term.splitRef(QLatin1Char(' '));
+
         // If the term length is < 3, no real point searching the Keywords and GenericName
         if (term.length() < 3) {
             query = QStringLiteral("exist Exec and ( (exist Name and '%1' ~~ Name) or ('%1' ~~ Exec) )").arg(term);
         } else {
-            // Search for applications which are executable and the term case-insensitive matches any of
-            // * a substring of one of the keywords
-            // * a substring of the GenericName field
-            // * a substring of the Name field
-            // Note that before asking for the content of e.g. Keywords and GenericName we need to ask if
-            // they exist to prevent a tree evaluation error if they are not defined.
-            query = QStringLiteral("exist Exec and ( (exist Keywords and '%1' ~subin Keywords) or (exist GenericName and '%1' ~~ GenericName) or (exist Name and '%1' ~~ Name) or ('%1' ~~ Exec) or (exist Comment and '%1' ~~ Comment) )").arg(term);
+            //Match using subsequences (Bug: 262837)
+            query = generateQuery(queryList);
         }
 
         KService::List services = KServiceTypeTrader::self()->query(QStringLiteral("Application"), query);
@@ -181,28 +236,32 @@ private:
                 } else {
                     continue;
                 }
-            } else if (service->name().contains(term, Qt::CaseInsensitive)) {
+            } else if (service->name().contains(queryList[0], Qt::CaseInsensitive)) {
                 relevance = 0.8;
+                relevance += increaseMatchRelavance(service, queryList, "Name");
 
-                if (service->name().startsWith(term, Qt::CaseInsensitive)) {
+                if (service->name().startsWith(queryList[0], Qt::CaseInsensitive)) {
                     relevance += 0.1;
                 }
-            } else if (service->genericName().contains(term, Qt::CaseInsensitive)) {
+            } else if (service->genericName().contains(queryList[0], Qt::CaseInsensitive)) {
                 relevance = 0.65;
+                relevance += increaseMatchRelavance(service, queryList, "GenericName");
 
-                if (service->genericName().startsWith(term, Qt::CaseInsensitive)) {
+                if (service->genericName().startsWith(queryList[0], Qt::CaseInsensitive)) {
                     relevance += 0.05;
                 }
-            } else if (service->exec().contains(term, Qt::CaseInsensitive)) {
+            } else if (service->exec().contains(queryList[0], Qt::CaseInsensitive)) {
                 relevance = 0.7;
+                relevance += increaseMatchRelavance(service, queryList, "Exec");
 
-                if (service->exec().startsWith(term, Qt::CaseInsensitive)) {
+                if (service->exec().startsWith(queryList[0], Qt::CaseInsensitive)) {
                     relevance += 0.05;
                 }
-            } else if (service->comment().contains(term, Qt::CaseInsensitive)) {
+            } else if (service->comment().contains(queryList[0], Qt::CaseInsensitive)) {
                 relevance = 0.5;
+                relevance += increaseMatchRelavance(service, queryList, "Comment");
 
-                if (service->comment().startsWith(term, Qt::CaseInsensitive)) {
+                if (service->comment().startsWith(queryList[0], Qt::CaseInsensitive)) {
                     relevance += 0.05;
                 }
             }
