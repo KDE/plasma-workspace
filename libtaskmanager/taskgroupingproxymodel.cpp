@@ -368,7 +368,7 @@ bool TaskGroupingProxyModel::Private::isBlacklisted(const QModelIndex &sourceInd
 
     // Check launcher URL (sans query items) against blacklist.
     if (blacklistedLauncherUrls.count()) {
-        const QUrl &launcherUrl = sourceIndex.data(AbstractTasksModel::LauncherUrl).toUrl();
+        const QUrl &launcherUrl = sourceIndex.data(AbstractTasksModel::LauncherUrlWithoutIcon).toUrl();
         const QString &launcherUrlString = launcherUrl.toString(QUrl::PrettyDecoded | QUrl::RemoveQuery);
 
         if (blacklistedLauncherUrls.contains(launcherUrlString)) {
@@ -907,7 +907,7 @@ void TaskGroupingProxyModel::setBlacklistedLauncherUrls(const QStringList &list)
         for (int i = (d->rowMap.count() - 1); i >= 0; --i) {
             if (d->isGroup(i)) {
                 const QModelIndex &groupRep = index(i, 0);
-                const QUrl &launcherUrl = groupRep.data(AbstractTasksModel::LauncherUrl).toUrl();
+                const QUrl &launcherUrl = groupRep.data(AbstractTasksModel::LauncherUrlWithoutIcon).toUrl();
                 const QString &launcherUrlString = launcherUrl.toString(QUrl::RemoveQuery | QUrl::RemoveQuery);
 
                 if (set.contains(launcherUrlString)) {
@@ -1179,7 +1179,7 @@ void TaskGroupingProxyModel::requestPublishDelegateGeometry(const QModelIndex &i
 void TaskGroupingProxyModel::requestToggleGrouping(const QModelIndex &index)
 {
     const QString &appId = index.data(AbstractTasksModel::AppId).toString();
-    const QUrl &launcherUrl = index.data(AbstractTasksModel::LauncherUrl).toUrl();
+    const QUrl &launcherUrl = index.data(AbstractTasksModel::LauncherUrlWithoutIcon).toUrl();
     const QString &launcherUrlString = launcherUrl.toString(QUrl::RemoveQuery | QUrl::RemoveQuery);
 
     if (d->blacklistedAppIds.contains(appId) || d->blacklistedLauncherUrls.contains(launcherUrlString)) {
@@ -1206,7 +1206,7 @@ void TaskGroupingProxyModel::requestToggleGrouping(const QModelIndex &index)
             const QModelIndex &idx = TaskGroupingProxyModel::index(i, 0);
 
             if (idx.data(AbstractTasksModel::AppId).toString() == appId
-                || launcherUrlsMatch(idx.data(AbstractTasksModel::LauncherUrl).toUrl(), launcherUrl,
+                || launcherUrlsMatch(idx.data(AbstractTasksModel::LauncherUrlWithoutIcon).toUrl(), launcherUrl,
                 IgnoreQueryItems)) {
                 dataChanged(idx, idx, QVector<int>{AbstractTasksModel::IsGroupable});
             }
