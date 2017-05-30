@@ -921,6 +921,9 @@ QVariant TasksModel::data(const QModelIndex &proxyIndex, int role) const
         if (proxyIndex.data(AbstractTasksModel::IsLauncher).toBool()) {
             return true;
         } else {
+            if (!d->launcherTasksModel) {
+                return false;
+            }
             for (int i = 0; i < d->launcherTasksModel->rowCount(); ++i) {
                 const QModelIndex &launcherIndex = d->launcherTasksModel->index(i, 0);
 
