@@ -47,6 +47,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #include <KPackage/Package>
 #include <KPackage/PackageLoader>
 
+#include <KAuthorized>
 #include <KIconLoader>
 #include <KLocalizedString>
 #include <KUser>
@@ -124,6 +125,7 @@ KSMShutdownDlg::KSMShutdownDlg( QWindow* parent,
     mapSpdMethods->insert(QStringLiteral("SuspendState"), QVariant::fromValue(spdMethods.contains(Solid::PowerManagement::SuspendState)));
     mapSpdMethods->insert(QStringLiteral("HibernateState"), QVariant::fromValue(spdMethods.contains(Solid::PowerManagement::HibernateState)));
     context->setContextProperty(QStringLiteral("spdMethods"), mapSpdMethods);
+    context->setContextProperty(QStringLiteral("canLogout"), KAuthorized::authorize(QStringLiteral("logout")));
 
     QString bootManager = KConfig(QStringLiteral(KDE_CONFDIR "/kdm/kdmrc"), KConfig::SimpleConfig)
                           .group("Shutdown")
