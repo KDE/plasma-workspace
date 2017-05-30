@@ -150,6 +150,7 @@ PlasmaCore.ColorScope {
                 KeyNavigation.left: shutdownButton
                 KeyNavigation.right: suspendButton
                 focus: sdtype == ShutdownType.ShutdownTypeNone
+                visible: canLogout
             }
         }
 
