@@ -29,6 +29,8 @@
 
 #include "../servicerunner.h"
 
+#include <locale.h>
+
 class ServiceRunnerTest : public QObject
 {
     Q_OBJECT
