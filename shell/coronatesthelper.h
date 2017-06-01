@@ -39,6 +39,7 @@ private:
     void integrateTest(QObject* testObject);
 
     Plasma::Corona* m_corona;
+    QSet<QObject*> m_registeredTests;
     QSet<QObject*> m_tests;
 
     int m_exitcode;

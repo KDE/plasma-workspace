@@ -53,6 +53,9 @@ void CoronaTestHelper::processApplet(Plasma::Applet* applet)
 
 void CoronaTestHelper::integrateTest(QObject* testObject)
 {
+    if (m_registeredTests.contains(testObject))
+        return;
+
     const int signal = testObject->metaObject()->indexOfSignal("done()");
     if (signal < 0) {
         qCWarning(PLASMASHELL) << "the test object should offer a 'done()' signal" << testObject;
@@ -65,6 +68,7 @@ void CoronaTestHelper::integrateTest(QObject* testObject)
 
     qCDebug(PLASMASHELL) << "Test registered" << testObject;
     m_tests.insert(testObject);
+    m_registeredTests << testObject;
 
     connect(testObject, SIGNAL(done()), this, SLOT(testFinished()));
 }
@@ -73,8 +77,11 @@ void CoronaTestHelper::testFinished()
 {
     QObject* testObject = sender();
 
-    m_exitcode += testObject->property("failed").toBool();
+    const bool result = testObject->property("failed").toBool();
+    m_exitcode += !result;
     m_tests.remove(testObject);
+
+    qCWarning(PLASMASHELL) << "test finished" << testObject << result << "remaining" << m_tests;
     if (m_tests.isEmpty()) {
         qGuiApp->exit(m_exitcode);
     }
