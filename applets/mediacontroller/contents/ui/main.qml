@@ -184,6 +184,10 @@ Item {
         }
     }
 
+    Component.onCompleted: {
+        mpris2Source.serviceForSource("@multiplex").enableGlobalShortcuts();
+    }
+
     function action_open() {
         serviceOp(mpris2Source.current, "Raise");
     }

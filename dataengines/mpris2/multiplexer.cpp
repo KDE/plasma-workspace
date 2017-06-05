@@ -20,8 +20,6 @@
 #include "multiplexer.h"
 #include <mprisplayer.h>
 
-#include <KActionCollection>
-#include <KGlobalAccel>
 #include <KLocalizedString>
 
 #include <QDebug> // for Q_ASSERT
@@ -36,53 +34,6 @@ Multiplexer::Multiplexer(QObject* parent)
     : DataContainer(parent)
 {
     setObjectName(sourceName);
-
-    // setup actions
-    KActionCollection *actionCollection = new KActionCollection(this, QStringLiteral("mediacontrol"));
-    actionCollection->setComponentDisplayName(i18nc("Name for global shortcuts category", "Media Controller"));
-    QAction *playPauseAction = actionCollection->addAction(QStringLiteral("playpausemedia"));
-    playPauseAction->setText(i18n("Play/Pause media playback"));
-    KGlobalAccel::setGlobalShortcut(playPauseAction, Qt::Key_MediaPlay);
-    connect(playPauseAction, &QAction::triggered, this,
-        [this] {
-            if (PlayerContainer *active = activePlayer()) {
-                active->playerInterface()->PlayPause();
-            }
-        }
-    );
-
-    QAction *nextAction = actionCollection->addAction(QStringLiteral("nextmedia"));
-    nextAction->setText(i18n("Media playback next"));
-    KGlobalAccel::setGlobalShortcut(nextAction, Qt::Key_MediaNext);
-    connect(nextAction, &QAction::triggered, this,
-        [this] {
-            if (PlayerContainer *active = activePlayer()) {
-                active->playerInterface()->Next();
-            }
-        }
-    );
-
-    QAction *previousAction = actionCollection->addAction(QStringLiteral("previousmedia"));
-    previousAction->setText(i18n("Media playback previous"));
-    KGlobalAccel::setGlobalShortcut(previousAction, Qt::Key_MediaPrevious);
-    connect(previousAction, &QAction::triggered, this,
-        [this] {
-            if (PlayerContainer *active = activePlayer()) {
-                active->playerInterface()->Previous();
-            }
-        }
-    );
-
-    QAction *stopAction = actionCollection->addAction(QStringLiteral("stopmedia"));
-    stopAction->setText(i18n("Stop media playback"));
-    KGlobalAccel::setGlobalShortcut(stopAction, Qt::Key_MediaStop);
-    connect(stopAction, &QAction::triggered, this,
-        [this] {
-            if (PlayerContainer *active = activePlayer()) {
-                active->playerInterface()->Stop();
-            }
-        }
-    );
 }
 
 void Multiplexer::addPlayer(PlayerContainer *container)
