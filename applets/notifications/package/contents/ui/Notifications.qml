@@ -31,8 +31,8 @@ Column {
         right: parent.right
     }
 
-    property QtObject notificationPopup
     property alias count: notificationsRepeater.count
+    signal popupShown(var popup)
 
     Component.onCompleted: {
         // Create the popup components and pass them to the C++ plugin
@@ -214,6 +214,7 @@ Column {
         Component.onCompleted: {
             notificationPositioner.setPlasmoidScreenGeometry(plasmoid.nativeInterface.availableScreenRect);
         }
+        onPopupShown: notificationsRoot.popupShown(popup)
     }
 
     Repeater {

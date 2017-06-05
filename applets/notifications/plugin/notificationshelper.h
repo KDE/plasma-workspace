@@ -67,6 +67,7 @@ public:
 
 Q_SIGNALS:
     void popupLocationChanged();
+    void popupShown(QQuickWindow* popup);
 //     void plasmoidScreenChanged();
 
 private Q_SLOTS:

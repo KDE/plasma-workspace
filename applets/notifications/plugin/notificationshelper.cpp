@@ -149,6 +149,7 @@ void NotificationsHelper::processShow()
 
     // Populate the popup with data, this is the component's own QML method
     QMetaObject::invokeMethod(popup, "populatePopup", Qt::DirectConnection, Q_ARG(QVariant, notificationData));
+    Q_EMIT popupShown(popup);
 
     QTimer::singleShot(300, popup, &QWindow::show);
 
