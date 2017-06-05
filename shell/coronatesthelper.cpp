@@ -77,11 +77,11 @@ void CoronaTestHelper::testFinished()
 {
     QObject* testObject = sender();
 
-    const bool result = testObject->property("failed").toBool();
-    m_exitcode += !result;
+    const bool failed = testObject->property("failed").toBool();
+    m_exitcode += failed;
     m_tests.remove(testObject);
 
-    qCWarning(PLASMASHELL) << "test finished" << testObject << result << "remaining" << m_tests;
+    qCWarning(PLASMASHELL) << "test finished" << testObject << failed << "remaining" << m_tests;
     if (m_tests.isEmpty()) {
         qGuiApp->exit(m_exitcode);
     }
