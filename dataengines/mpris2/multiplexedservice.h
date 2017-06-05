@@ -26,6 +26,7 @@
 
 class Multiplexer;
 class PlayerControl;
+class KActionCollection;
 
 class MultiplexedService : public Plasma::Service
 {
@@ -38,12 +39,16 @@ protected:
     Plasma::ServiceJob *createJob(const QString &operation,
                                   QMap<QString,QVariant> &parameters) override;
 
+public Q_SLOTS:
+    void enableGlobalShortcuts();
+
 private Q_SLOTS:
     void updateEnabledOperations();
     void activePlayerChanged(PlayerContainer *container);
 
 private:
     QPointer<PlayerControl> m_control;
+    KActionCollection *m_actionCollection = nullptr;
 };
 
 #endif // MULTIPLEXEDSERVICE_H
