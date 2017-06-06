@@ -144,7 +144,24 @@ Column {
     }
 
     Repeater {
+        id: jobsRepeater
         model: jobs
-        delegate: JobDelegate {}
+        delegate: JobDelegate {
+            infoMessageVisible: {
+                if (!infoMessage) {
+                    return false;
+                }
+
+                // hide info message if it's the same as the previous job, while we don't
+                // actively group those jobs, it still improves the situation where you
+                // started copying a couple of different things simultaneously
+                var previousItem = jobsRepeater.itemAt(index - 1);
+                if (!previousItem) {
+                    return true;
+                }
+
+                return previousItem.infoMessage !== infoMessage;
+            }
+        }
     }
 }

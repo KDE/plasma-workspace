@@ -41,6 +41,8 @@ Column {
     readonly property string label1: getData(jobsSource.data, "label1", '')
     readonly property bool isSuspended: getData(jobsSource.data, "state", '') === "suspended"
 
+    property alias infoMessageVisible: infoLabel.visible
+
     function getData(data, name, defaultValue) {
         var source = model.name
         return data[source] ? (data[source][name] ? data[source][name] : defaultValue) : defaultValue;
