@@ -209,6 +209,7 @@ uint NotificationsEngine::Notify(const QString &app_name, uint replaces_id,
     const QString eventId = hints[QStringLiteral("x-kde-eventId")].toString();
     const bool skipGrouping = hints[QStringLiteral("x-kde-skipGrouping")].toBool();
     const QStringList &urls = hints[QStringLiteral("x-kde-urls")].toStringList();
+    const QString &desktopEntry = hints[QStringLiteral("desktop-entry")].toString();
 
     // group notifications that have the same title coming from the same app
     // or if they are on the "blacklist", honor the skipGrouping hint sent
@@ -313,6 +314,14 @@ uint NotificationsEngine::Notify(const QString &app_name, uint replaces_id,
     notificationData.insert(QStringLiteral("actions"), actions);
     notificationData.insert(QStringLiteral("isPersistent"), isPersistent);
     notificationData.insert(QStringLiteral("expireTimeout"), timeout);
+
+    notificationData.insert(QStringLiteral("desktopEntry"), desktopEntry);
+
+    KService::Ptr service = KService::serviceByStorageId(desktopEntry);
+    if (service) {
+        notificationData.insert(QStringLiteral("appServiceName"), service->name());
+        notificationData.insert(QStringLiteral("appServiceIcon"), service->icon());
+    }
 
     bool configurable = false;
     if (!appRealName.isEmpty()) {
