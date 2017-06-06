@@ -63,8 +63,9 @@ Column {
             Layout.fillWidth: true
             elide: Text.ElideMiddle
             text: {
-                var labelSplit = label0.split("/")
-                return labelSplit[labelSplit.length-1]
+                var label = label0;
+                var lastSlashIdx = label.lastIndexOf("/");
+                return label.slice(lastSlashIdx + 1);
             }
             textFormat: Text.PlainText
         }
