@@ -71,7 +71,7 @@ Item {
         }
 
         visible: activeApplet
-        text: activeApplet.title || ""
+        text: activeApplet ? activeApplet.title : ""
         MouseArea {
             anchors.fill: parent
             onClicked: {
