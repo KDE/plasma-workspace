@@ -102,6 +102,8 @@ PlasmaComponents.ListItem {
             width: parent.width
             height: undefined // unset PlasmaComponents.Label default height
             maximumLineCount: 3
+            verticalAlignment: Text.AlignVCenter
+
             text: {
                 var highlightFontTag = "<font color='" + theme.highlightColor + "'>%1</font>"
 
