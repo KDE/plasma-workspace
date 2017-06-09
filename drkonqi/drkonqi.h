@@ -63,6 +63,8 @@ public:
     static bool isRestarted();
     static bool isKeepRunning();
     static int thread();
+    static bool ignoreQuality();
+    static const QString &kdeBugzillaURL();
 
 private:
     DrKonqi();

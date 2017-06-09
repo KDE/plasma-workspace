@@ -42,8 +42,7 @@
 #endif
 
 static const char ABOUT_BUG_REPORTING_URL[] = "#aboutbugreporting";
-static const char DRKONQI_REPORT_BUG_URL[] =
-    KDE_BUGZILLA_URL "enter_bug.cgi?product=drkonqi&format=guided";
+static QString DRKONQI_REPORT_BUG_URL = KDE_BUGZILLA_URL + QStringLiteral("enter_bug.cgi?product=drkonqi&format=guided");
 
 DrKonqiDialog::DrKonqiDialog(QWidget * parent) :
         QDialog(parent),
@@ -121,7 +120,7 @@ void DrKonqiDialog::buildIntroWidget()
                                             "to the KDE bug tracking system. Do not forget to include "
                                             "the backtrace from the <interface>Developer Information</interface> "
                                             "tab.</para>",
-                                            QLatin1String(DRKONQI_REPORT_BUG_URL));
+                                            DRKONQI_REPORT_BUG_URL);
         } else if (DrKonqi::isSafer()) {
             reportMessage = xi18nc("@info", "<para>The reporting assistant is disabled because "
                                             "the crash handler dialog was started in safe mode."
@@ -279,7 +278,7 @@ void DrKonqiDialog::linkActivated(const QString& link)
 {
     if (link == QLatin1String(ABOUT_BUG_REPORTING_URL)) {
         showAboutBugReporting();
-    } else if (link == QLatin1String(DRKONQI_REPORT_BUG_URL)) {
+    } else if (link == DRKONQI_REPORT_BUG_URL) {
         QDesktopServices::openUrl(QUrl(link));
     } else if (link.startsWith(QLatin1String("http"))) {
         qWarning() << "unexpected link";

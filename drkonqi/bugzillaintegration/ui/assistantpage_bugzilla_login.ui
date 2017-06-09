@@ -48,6 +48,9 @@
      </item>
      <item row="1" column="1">
       <widget class="KLineEdit" name="m_passwordEdit">
+       <property name="accessibleName">
+        <string>Password input</string>
+       </property>
        <property name="trapEnterKeyEvent" stdset="0">
         <bool>true</bool>
        </property>
@@ -58,6 +61,9 @@
      </item>
      <item row="0" column="1">
       <widget class="KLineEdit" name="m_userEdit">
+       <property name="accessibleName">
+        <string>Username input</string>
+       </property>
        <property name="trapEnterKeyEvent" stdset="0">
         <bool>true</bool>
        </property>

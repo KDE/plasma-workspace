@@ -100,6 +100,7 @@ int main(int argc, char* argv[])
     QCommandLineOption keepRunningOption(QStringLiteral("keeprunning"), i18nc("@info:shell","Keep the program running and generate "
                                                     "the backtrace at startup"));
     QCommandLineOption threadOption(QStringLiteral("thread"), i18nc("@info:shell","The <thread id> of the failing thread"), QStringLiteral("threadid"));
+    QCommandLineOption dialogOption(QStringLiteral("dialog"), i18nc("@info:shell","Do not show a notification but launch the debug dialog directly"));
 
     parser.addOption(signalOption);
     parser.addOption(appNameOption);
@@ -114,6 +115,7 @@ int main(int argc, char* argv[])
     parser.addOption(restartedOption);
     parser.addOption(keepRunningOption);
     parser.addOption(threadOption);
+    parser.addOption(dialogOption);
 
     aboutData.setupCommandLine(&parser);
     parser.process(qa);
@@ -131,6 +133,7 @@ int main(int argc, char* argv[])
     DrKonqi::setRestarted(parser.isSet(restartedOption));
     DrKonqi::setKeepRunning(parser.isSet(keepRunningOption));
     DrKonqi::setThread(parser.value(threadOption).toInt());
+    auto forceDialog = parser.isSet(dialogOption);
 
 #if HAVE_X11
     const QString startupId = parser.value(startupIdOption);
@@ -156,7 +159,7 @@ int main(int argc, char* argv[])
     // if no notification service is running (eg. shell crashed, or other desktop environment)
     // and we didn't auto-restart the app, open DrKonqi dialog instead of showing an SNI
     // and emitting a desktop notification
-    if (!restarted && !StatusNotifier::notificationServiceRegistered()) {
+    if (forceDialog || (!restarted && !StatusNotifier::notificationServiceRegistered())) {
         openDrKonqiDialog();
     } else {
         StatusNotifier *statusNotifier = new StatusNotifier();

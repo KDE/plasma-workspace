@@ -44,6 +44,9 @@
    </item>
    <item>
     <widget class="QTextEdit" name="m_detailsEdit">
+     <property name="accessibleName">
+      <string>Information about the crash text</string>
+     </property>
      <property name="acceptRichText">
       <bool>false</bool>
      </property>

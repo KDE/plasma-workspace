@@ -17,7 +17,6 @@ add_definitions(-DKDE_DEFAULT_DEBUG_AREA=1410)
 
 add_subdirectory( data )
 add_subdirectory( parser )
-add_subdirectory( tests )
 if ( WIN32 )
     add_subdirectory( kdbgwin )
 endif ()
@@ -114,3 +113,7 @@ if (HAVE_X11)
 endif()
 
 install(TARGETS drkonqi DESTINATION ${KDE_INSTALL_LIBEXECDIR})
+
+# Only go into tests once we have a drkonqi target so the tests can reference
+# it.
+add_subdirectory( tests )

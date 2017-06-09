@@ -20,6 +20,8 @@
 #include <KGuiItem>
 #include <QIcon>
 
+#include "drkonqi.h"
+
 /** This class provides a custom constructor to fill the "toolTip"
  * and "whatsThis" texts of KGuiItem with the same text.
  */
@@ -31,8 +33,8 @@ public:
 };
 
 /* Urls are defined globally here, so that they can change easily */
-#define KDE_BUGZILLA_URL "https://bugs.kde.org/"
-#define KDE_BUGZILLA_CREATE_ACCOUNT_URL  KDE_BUGZILLA_URL "createaccount.cgi"
+#define KDE_BUGZILLA_URL DrKonqi::kdeBugzillaURL()
+#define KDE_BUGZILLA_CREATE_ACCOUNT_URL KDE_BUGZILLA_URL + QStringLiteral("createaccount.cgi")
 #define KDE_BUGZILLA_SHORT_URL "bugs.kde.org"
 #define TECHBASE_HOWTO_DOC "https://community.kde.org/Guidelines_and_HOWTOs/Debugging/How_to_create_useful_crash_reports#Preparing_your_KDE_packages"
 

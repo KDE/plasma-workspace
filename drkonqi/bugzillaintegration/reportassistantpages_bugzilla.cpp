@@ -59,7 +59,7 @@ static const char kWalletEntryName[] = "drkonqi_bugzilla";
 static const char kWalletEntryUsername[] = "username";
 static const char kWalletEntryPassword[] = "password";
 
-static const char konquerorKWalletEntryName[] = KDE_BUGZILLA_URL "index.cgi#login";
+static QString konquerorKWalletEntryName = KDE_BUGZILLA_URL + "index.cgi#login";
 static const char konquerorKWalletEntryUsername[] = "Bugzilla_login";
 static const char konquerorKWalletEntryPassword[] = "Bugzilla_password";
 
@@ -102,7 +102,7 @@ BugzillaLoginPage::BugzillaLoginPage(ReportAssistantDialog * parent) :
                             "one, you can freely <link url='%2'>create one here</link>. "
                             "Please do not use disposable email accounts.</note>",
                             DrKonqi::crashedApplication()->bugReportAddress(),
-                            QLatin1String(KDE_BUGZILLA_CREATE_ACCOUNT_URL)));
+                            KDE_BUGZILLA_CREATE_ACCOUNT_URL));
 }
 
 bool BugzillaLoginPage::isComplete()
@@ -202,7 +202,7 @@ void BugzillaLoginPage::walletLogin()
                     ui.m_passwordEdit->setText(password);
                 }
             }
-        } else if (kWalletEntryExists(QLatin1String(konquerorKWalletEntryName))) {
+        } else if (kWalletEntryExists(konquerorKWalletEntryName)) {
             //If the DrKonqi entry is empty, but a Konqueror entry exists, use and copy it.
             openWallet();
             if (m_wallet) {
@@ -210,7 +210,7 @@ void BugzillaLoginPage::walletLogin()
 
                 //Fetch Konqueror data
                 QMap<QString, QString> values;
-                m_wallet->readMap(QLatin1String(konquerorKWalletEntryName), values);
+                m_wallet->readMap(konquerorKWalletEntryName, values);
                 QString username = values.value(QLatin1String(konquerorKWalletEntryUsername));
                 QString password = values.value(QLatin1String(konquerorKWalletEntryPassword));
 
@@ -256,7 +256,7 @@ bool BugzillaLoginPage::canSetCookies()
                               QLatin1String("/modules/kcookiejar"),
                               QLatin1String("org.kde.KCookieServer"));
     QDBusReply<QString> advice = kcookiejar.call(QLatin1String("getDomainAdvice"),
-                                                 QLatin1String(KDE_BUGZILLA_URL));
+                                                 KDE_BUGZILLA_URL);
 
     if (!advice.isValid()) {
         KMessageBox::error(this, i18n("Failed to communicate with KCookieServer."));
@@ -279,9 +279,9 @@ bool BugzillaLoginPage::canSetCookies()
                              "to set cookies", "No, do not allow"));
 
         if (KMessageBox::warningYesNo(this, msg, QString(), yesItem, noItem) == KMessageBox::Yes) {
-            QDBusReply<bool> success = kcookiejar.call(QLatin1String("setDomainAdvice"),
-                                                       QLatin1String(KDE_BUGZILLA_URL),
-                                                       QLatin1String("Accept"));
+            QDBusReply<bool> success = kcookiejar.call(QStringLiteral("setDomainAdvice"),
+                                                       KDE_BUGZILLA_URL,
+                                                       QStringLiteral("Accept"));
             if (!success.isValid() || !success.value()) {
                 qWarning() << "Failed to set domain advice in KCookieServer";
                 return false;

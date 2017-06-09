@@ -26,13 +26,12 @@ class BugReportAddress : public QString
 public:
     inline BugReportAddress() : QString() {}
     inline BugReportAddress(const QString & address)
-        : QString(address == QLatin1String("submit@bugs.kde.org") ?
-                  QLatin1String(KDE_BUGZILLA_URL) : address)
+        : QString(address == QLatin1String("submit@bugs.kde.org") ? KDE_BUGZILLA_URL : address)
     {}
 
     inline bool isKdeBugzilla() const
     {
-        return *this == QLatin1String(KDE_BUGZILLA_URL);
+        return *this == KDE_BUGZILLA_URL;
     }
 
     inline bool isEmail() const

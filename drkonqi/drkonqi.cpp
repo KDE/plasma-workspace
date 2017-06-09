@@ -327,3 +327,26 @@ int DrKonqi::thread()
 {
     return instance()->m_thread;
 }
+
+bool DrKonqi::ignoreQuality()
+{
+    return qEnvironmentVariableIsSet("DRKONQI_IGNORE_QUALITY");
+}
+
+const QString &DrKonqi::kdeBugzillaURL()
+{
+    // NB: for practical reasons this cannot use the shared instance. Initing the instances requires
+    //   knowing the URL already, so we'd have an init loop. Use a local static instead.
+    static QString url;
+    if (!url.isEmpty()) {
+        return url;
+    }
+
+    url = QString::fromLocal8Bit(qgetenv("DRKONQI_KDE_BUGZILLA_URL"));
+    if (!url.isEmpty()) {
+        return url;
+    }
+
+    url = QStringLiteral("https://bugs.kde.org/");
+    return url;
+}

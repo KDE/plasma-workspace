@@ -104,6 +104,10 @@ bool CrashInformationPage::showNextPage()
     BacktraceParser::Usefulness use =
                     DrKonqi::debuggerManager()->backtraceGenerator()->parser()->backtraceUsefulness();
 
+    if (DrKonqi::ignoreQuality()) {
+        return true;
+    }
+
     if ((use == BacktraceParser::InvalidUsefulness || use == BacktraceParser::ProbablyUseless
             || use == BacktraceParser::Useless) && m_backtraceWidget->canInstallDebugPackages()) {
         if ( KMessageBox::Yes == KMessageBox::questionYesNo(this,
@@ -137,6 +141,8 @@ BugAwarenessPage::BugAwarenessPage(ReportAssistantDialog * parent)
                                          DrKonqi::crashedApplication()->name()));
 
     connect(ui.m_rememberGroup, static_cast<void (QButtonGroup::*)(int)>(&QButtonGroup::buttonClicked), this, &BugAwarenessPage::updateCheckBoxes);
+    // Also listen to toggle so radio buttons are covered.
+    connect(ui.m_rememberGroup, static_cast<void (QButtonGroup::*)(int, bool)>(&QButtonGroup::buttonToggled), this, &BugAwarenessPage::updateCheckBoxes);
 
     ui.m_appSpecificDetailsExamples->setVisible(reportInterface()->appDetailsExamples()->hasExamples());
     ui.m_appSpecificDetailsExamples->setContextMenuPolicy(Qt::NoContextMenu);
@@ -309,7 +315,7 @@ void ConclusionPage::aboutToShow()
                                         "Reporting Guide by clicking on the "
                                         "<interface>Help</interface> button.</note>"));
                                     //but this guide doesn't mention bt packages? that's techbase
-                                    //->>and the help guide mention techbase page... 
+                                    //->>and the help guide mention techbase page...
         }
         break;
     }

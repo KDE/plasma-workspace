@@ -54,7 +54,7 @@ ReportInterface::ReportInterface(QObject *parent)
 }
 
 void ReportInterface::setBugAwarenessPageData(bool rememberSituation,
-                                                   Reproducible reproducible, bool actions, 
+                                                   Reproducible reproducible, bool actions,
                                                    bool unusual, bool configuration)
 {
     //Save the information the user can provide about the crash from the assistant page
@@ -367,6 +367,10 @@ QStringList ReportInterface::relatedBugzillaProducts() const
 
 bool ReportInterface::isWorthReporting() const
 {
+    if (DrKonqi::ignoreQuality()) {
+        return true;
+    }
+
     //Evaluate if the provided information is useful enough to enable the automatic report
     bool needToReport = false;
 
