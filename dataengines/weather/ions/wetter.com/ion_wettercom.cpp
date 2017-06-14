@@ -586,7 +586,7 @@ void WetterComIon::parseWeatherForecast(const QString& source, QXmlStreamReader&
                 forecast->probability = probability;
 
                 QTime localWeatherTime = QDateTime::fromTime_t(utcTime).time();
-                localWeatherTime.addSecs(m_weatherData[source].timeDifference);
+                localWeatherTime = localWeatherTime.addSecs(m_weatherData[source].timeDifference);
 
                 qCDebug(IONENGINE_WETTERCOM) << "localWeatherTime =" << localWeatherTime;
 
