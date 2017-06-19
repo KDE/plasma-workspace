@@ -120,7 +120,7 @@ int main(int argc, char *argv[])
 
     ShellManager::s_fixedShell = cliOptions.value(shellPluginOption);
 
-    if (!cliOptions.isSet(noRespawnOption)) {
+    if (!cliOptions.isSet(noRespawnOption) && !cliOptions.isSet(testOption)) {
         KCrash::setFlags(KCrash::AutoRestart);
     }
 
@@ -134,6 +134,8 @@ int main(int argc, char *argv[])
         QStandardPaths::setTestModeEnabled(true);
         QDir(QStandardPaths::writableLocation(QStandardPaths::ConfigLocation)).removeRecursively();
         ShellManager::s_testModeLayout = layoutUrl.toLocalFile();
+
+        qApp->setProperty("org.kde.KActivities.core.disableAutostart", true);
 
         QObject::connect(ShellManager::instance(), &ShellManager::shellChanged,
                          ShellManager::instance(),
