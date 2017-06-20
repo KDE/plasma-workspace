@@ -900,8 +900,10 @@ BugzillaReportConfirmationDialog::BugzillaReportConfirmationDialog(int bugNumber
                                        "and close the dialog", "Continue"));
     ui.buttonBox->button(QDialogButtonBox::Ok)->setEnabled(false);
 
-    connect(this, SIGNAL(okClicked()) , this, SLOT(proceedClicked()));
-    connect(this, SIGNAL(cancelClicked()) , this, SLOT(hide()));
+    connect(this, &BugzillaReportConfirmationDialog::accepted,
+            this, &BugzillaReportConfirmationDialog::proceedClicked);
+    connect(this, &BugzillaReportConfirmationDialog::rejected,
+            this, &BugzillaReportConfirmationDialog::hide);
 
     //Set introduction text
     ui.introLabel->setText(i18n("You are going to mark your crash as related to bug %1",
