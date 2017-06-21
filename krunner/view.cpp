@@ -230,7 +230,13 @@ bool View::event(QEvent *event)
 
     if (m_plasmaShell && event->type() == QEvent::Expose) {
         using namespace KWayland::Client;
-        if (!m_plasmaShellSurface) {
+        auto ee = static_cast<QExposeEvent*>(event);
+
+        if (ee->region().isNull()) {
+            return retval;
+        }
+
+        if (!m_plasmaShellSurface && isVisible()) {
             Surface *s = Surface::fromWindow(this);
             if (!s) {
                 return retval;
