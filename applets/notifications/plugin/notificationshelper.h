@@ -71,7 +71,6 @@ Q_SIGNALS:
 //     void plasmoidScreenChanged();
 
 private Q_SLOTS:
-    void onPopupShown();
     void onPopupClosed();
     void processQueues();
     void processShow();

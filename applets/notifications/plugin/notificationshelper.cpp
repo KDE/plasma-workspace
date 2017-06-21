@@ -76,23 +76,10 @@ void NotificationsHelper::addNotificationPopup(QObject *win)
             this, SLOT(onPopupClosed()));
 
     connect(popup, &QWindow::heightChanged, this, &NotificationsHelper::repositionPopups, Qt::UniqueConnection);
-    connect(popup, &QWindow::visibleChanged, this, &NotificationsHelper::onPopupShown, Qt::UniqueConnection);
 
-    popup->setProperty("initialPositionSet", false);
-}
-
-void NotificationsHelper::onPopupShown()
-{
-    QWindow *popup = qobject_cast<QWindow*>(sender());
-    if (!popup || !popup->isVisible()) {
-        return;
-    }
-
-    // Make sure Dialog lays everything out and gets proper geometry
-    QMetaObject::invokeMethod(popup, "updateVisibility", Qt::DirectConnection, Q_ARG(bool, true));
-
-    // Now we can position the popups properly as the geometry is now known
-    repositionPopups();
+    //We are sure that after visibleChanged the size is final
+    //and the first expose event didn't arrive yet
+    connect(popup, &QQuickWindow::visibleChanged, this, &NotificationsHelper::repositionPopups);
 }
 
 void NotificationsHelper::processQueues()
@@ -151,7 +138,8 @@ void NotificationsHelper::processShow()
     QMetaObject::invokeMethod(popup, "populatePopup", Qt::DirectConnection, Q_ARG(QVariant, notificationData));
     Q_EMIT popupShown(popup);
 
-    QTimer::singleShot(300, popup, &QWindow::show);
+    //use setproperty so the Dialog reimplementation will be used
+    popup->setProperty("visible", true);
 
     if (!m_dispatchTimer->isActive()) {
         m_dispatchTimer->start();
@@ -176,10 +164,6 @@ void NotificationsHelper::processHide()
         m_mutex->unlock();
 
         popup->hide();
-
-        // Make sure the popup gets placed correctly
-        // next time it's put on screen
-        popup->setProperty("initialPositionSet", false);
 
         QMetaObject::invokeMethod(popup, "clearPopup", Qt::DirectConnection);
     }
@@ -298,30 +282,17 @@ void NotificationsHelper::repositionPopups()
 
     m_mutex->lockForWrite();
 
+    QPoint pos;
+
     for (int i = 0; i < m_popupsOnScreen.size(); ++i) {
         if (m_popupLocation == NotificationsHelper::TopLeft
             || m_popupLocation == NotificationsHelper::TopCenter
             || m_popupLocation == NotificationsHelper::TopRight) {
 
-            int posY = m_plasmoidScreen.top() + cumulativeHeight;
+            pos.setY(m_plasmoidScreen.top() + cumulativeHeight);
 
-            if (m_popupsOnScreen[i]->isVisible() && m_popupsOnScreen[i]->property("initialPositionSet").toBool() == true && m_popupsOnScreen[i]->y() != 0) {
-                //if it's visible, go through setProperty which animates it
-                m_popupsOnScreen[i]->setProperty("y", posY);
-            } else {
-                // ...otherwise just set it directly
-                m_popupsOnScreen[i]->setY(posY);
-                m_popupsOnScreen[i]->setProperty("initialPositionSet", true);
-            }
         } else {
-            int posY = m_plasmoidScreen.bottom() - cumulativeHeight - m_popupsOnScreen[i]->contentItem()->height();
-
-            if (m_popupsOnScreen[i]->isVisible() && m_popupsOnScreen[i]->property("initialPositionSet").toBool() == true && m_popupsOnScreen[i]->y() != 0) {
-                m_popupsOnScreen[i]->setProperty("y", posY);
-            } else {
-                m_popupsOnScreen[i]->setY(posY);
-                m_popupsOnScreen[i]->setProperty("initialPositionSet", true);
-            }
+            pos.setY(m_plasmoidScreen.bottom() - cumulativeHeight - m_popupsOnScreen[i]->height());
         }
 
         switch (m_popupLocation) {
@@ -332,15 +303,15 @@ void NotificationsHelper::repositionPopups()
                 //fall through to top right
             case TopRight:
             case BottomRight:
-                m_popupsOnScreen[i]->setX(m_plasmoidScreen.right() - m_popupsOnScreen[i]->contentItem()->width() - m_offset);
+                pos.setX(m_plasmoidScreen.right() - m_popupsOnScreen[i]->width() - m_offset);
                 break;
             case TopCenter:
             case BottomCenter:
-                m_popupsOnScreen[i]->setX(m_plasmoidScreen.x() + (m_plasmoidScreen.width() / 2) - (m_popupsOnScreen[i]->contentItem()->width() / 2));
+                pos.setX(m_plasmoidScreen.x() + (m_plasmoidScreen.width() / 2) - (m_popupsOnScreen[i]->width() / 2));
                 break;
             case TopLeft:
             case BottomLeft:
-                m_popupsOnScreen[i]->setX(m_plasmoidScreen.left() + m_offset);
+                pos.setX(m_plasmoidScreen.left() + m_offset);
                 break;
             case Left:
             case Center:
@@ -348,8 +319,8 @@ void NotificationsHelper::repositionPopups()
                 // Fall-through to make the compiler happy
                 break;
         }
-
-        cumulativeHeight += (m_popupsOnScreen[i]->contentItem()->height() + m_offset);
+        m_popupsOnScreen[i]->setPosition(pos);
+        cumulativeHeight += (m_popupsOnScreen[i]->height() + m_offset);
     }
 
     m_mutex->unlock();

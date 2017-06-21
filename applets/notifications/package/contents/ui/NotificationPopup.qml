@@ -53,23 +53,19 @@ PlasmaCore.Dialog {
     function populatePopup(notification) {
         notificationProperties = notification
         notificationTimer.interval = notification.expireTimeout
-        notificationTimer.restart()
-
+        notificationTimer.restart();
+        //temporarly disable height binding, avoids an useless window resize when removing the old actions
+        heightBinding.when = false;
         // notification.actions is a JS array, but we can easily append that to our model
         notificationItem.actions.clear()
         notificationItem.actions.append(notificationProperties.actions)
+        //enable height binding again, finally do the resize
+        heightBinding.when = true;
     }
 
     function clearPopup() {
         notificationProperties = {}
         notificationItem.actions.clear()
-    }
-
-    Behavior on y {
-        NumberAnimation {
-            duration: units.longDuration
-            easing.type: Easing.OutQuad
-        }
     }
 
     mainItem: NotificationItem {
@@ -79,7 +75,12 @@ PlasmaCore.Dialog {
         LayoutMirroring.enabled: Qt.application.layoutDirection === Qt.RightToLeft
         LayoutMirroring.childrenInherit: true
 
-        height: implicitHeight
+        //the binding needs to be disabled when re-populating actions, to minimize resizes
+        Binding on height {
+            id: heightBinding
+            value: notificationItem.implicitHeight
+            when: true
+        }
 
         Timer {
             id: notificationTimer

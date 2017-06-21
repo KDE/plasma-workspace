@@ -30,7 +30,7 @@ import org.kde.kquickcontrolsaddons 2.0
 MouseArea {
     id: notificationItem
     width: parent.width
-    implicitHeight: Math.max(appIconItem.visible || imageItem.visible ? units.iconSizes.large : 0, mainLayout.height)
+    implicitHeight: Math.max(appIconItem.valid || imageItem.nativeWidth > 0 ? units.iconSizes.large : 0, mainLayout.height)
 
     // We need to clip here because we support displaying images through <img/>
     // and if we don't clip, they will be painted over the borders of the dialog/item
@@ -153,7 +153,7 @@ MouseArea {
             left: parent.left
         }
 
-        visible: !imageItem.visible && valid
+        visible: imageItem.nativeWidth == 0 && valid
         animated: false
     }
 
@@ -170,7 +170,7 @@ MouseArea {
 
         anchors {
             top: parent.top
-            left: appIconItem.visible || imageItem.visible ? appIconItem.right : parent.left
+            left: appIconItem.valid || imageItem.nativeWidth > 0 ? appIconItem.right : parent.left
             right: parent.right
             leftMargin: units.smallSpacing
         }
@@ -244,7 +244,7 @@ MouseArea {
             // If there is a big notification followed by a small one, the height
             // of the popup does not always shrink back, so this forces it to
             // height=0 when those are invisible. -1 means "default to implicitHeight"
-            Layout.maximumHeight: bodyText.visible || actionsColumn.visible ? -1 : 0
+            Layout.maximumHeight: bodyText.length > 0 || notificationItem.actions.count > 0 ? -1 : 0
 
             PlasmaExtras.ScrollArea {
                 id: bodyTextScrollArea
