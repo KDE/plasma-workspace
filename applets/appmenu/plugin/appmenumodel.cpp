@@ -259,5 +259,13 @@ void AppMenuModel::updateApplicationMenu(const QString &serviceName, const QStri
         setMenuAvailable(true);
         emit modelNeedsUpdate();
     });
+
+    connect(m_importer.data(), &DBusMenuImporter::actionActivationRequested, this, [this](QAction *action) {
+        // TODO submenus
+        auto it = std::find(m_activeActions.constBegin(), m_activeActions.constEnd(), action);
+        if (it != m_activeActions.constEnd()) {
+            requestActivateIndex(it - m_activeActions.constBegin());
+        }
+    });
 }
 
