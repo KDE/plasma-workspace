@@ -115,6 +115,7 @@ Item {
 
     AppMenuPrivate.AppMenuModel {
         id: appMenuModel
+        onRequestActivateIndex: plasmoid.nativeInterface.requestActivateIndex(index)
         Component.onCompleted: {
             plasmoid.nativeInterface.model = appMenuModel
         }

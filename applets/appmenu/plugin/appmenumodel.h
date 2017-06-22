@@ -53,6 +53,9 @@ public:
     bool menuAvailable() const;
     void setMenuAvailable(bool set);
 
+signals:
+    void requestActivateIndex(int index);
+
 private Q_SLOTS:
     void onActiveWindowChanged(WId id);
     void update();
