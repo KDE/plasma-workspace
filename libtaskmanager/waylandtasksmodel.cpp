@@ -442,18 +442,7 @@ void WaylandTasksModel::requestNewInstance(const QModelIndex &index)
         return;
     }
 
-    KWayland::Client::PlasmaWindow* window = d->windows.at(index.row());
-
-    if (d->appDataCache.contains(window)) {
-        const AppData &data = d->appData(window);
-
-        new KRun(data.url, 0, false);
-
-        if (!data.id.isEmpty()) {
-            KActivities::ResourceInstance::notifyAccessed(QUrl(QStringLiteral("applications:") + data.id),
-                QStringLiteral("org.kde.libtaskmanager"));
-        }
-    }
+    runApp(d->appData(d->windows.at(index.row())));
 }
 
 void WaylandTasksModel::requestOpenUrls(const QModelIndex &index, const QList<QUrl> &urls)
@@ -464,15 +453,7 @@ void WaylandTasksModel::requestOpenUrls(const QModelIndex &index, const QList<QU
         return;
     }
 
-    const QUrl &url = d->appData(d->windows.at(index.row())).url;
-    const KService::Ptr service = KService::serviceByDesktopPath(url.toLocalFile());
-
-    if (service) {
-        KRun::runApplication(*service, urls, nullptr, 0);
-
-        KActivities::ResourceInstance::notifyAccessed(QUrl(QStringLiteral("applications:") + service->storageId()),
-            QStringLiteral("org.kde.libtaskmanager"));
-    }
+    runApp(d->appData(d->windows.at(index.row())), urls);
 }
 
 void WaylandTasksModel::requestClose(const QModelIndex &index)
