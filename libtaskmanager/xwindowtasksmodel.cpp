@@ -1015,16 +1015,7 @@ void XWindowTasksModel::requestNewInstance(const QModelIndex &index)
         return;
     }
 
-    const AppData &data = d->appData(d->windows.at(index.row()));
-
-    if (data.url.isValid()) {
-        new KRun(data.url, 0, false, KStartupInfo::createNewStartupIdForTimestamp(QX11Info::appUserTime()));
-
-        if (!data.id.isEmpty()) {
-            KActivities::ResourceInstance::notifyAccessed(QUrl(QStringLiteral("applications:") + data.id),
-                QStringLiteral("org.kde.libtaskmanager"));
-        }
-    }
+    runApp(d->appData(d->windows.at(index.row())));
 }
 
 void XWindowTasksModel::requestOpenUrls(const QModelIndex &index, const QList<QUrl> &urls)
@@ -1035,15 +1026,7 @@ void XWindowTasksModel::requestOpenUrls(const QModelIndex &index, const QList<QU
         return;
     }
 
-    const QUrl &url = d->appData(d->windows.at(index.row())).url;
-    const KService::Ptr service = KService::serviceByDesktopPath(url.toLocalFile());
-
-    if (service) {
-        KRun::runApplication(*service, urls, nullptr, 0, {}, KStartupInfo::createNewStartupIdForTimestamp(QX11Info::appUserTime()));
-
-        KActivities::ResourceInstance::notifyAccessed(QUrl(QStringLiteral("applications:") + service->storageId()),
-            QStringLiteral("org.kde.libtaskmanager"));
-    }
+    runApp(d->appData(d->windows.at(index.row())), urls);
 }
 
 void XWindowTasksModel::requestClose(const QModelIndex &index)

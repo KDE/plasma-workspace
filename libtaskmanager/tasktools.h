@@ -126,6 +126,17 @@ TASKMANAGER_EXPORT bool appsMatch(const QModelIndex &a, const QModelIndex &b);
  * @return The geometry of the screen containing pos or closest to pos.
  */
 TASKMANAGER_EXPORT QRect screenGeometry(const QPoint &pos);
+
+/**
+ * Attempts to run the application described by the AppData struct that
+ * is passed in, optionally also handing the application a list of URLs
+ * to open.
+ *
+ * @param appData An application data struct.
+ * @param urls A list of URLs for the application to open.
+ */
+TASKMANAGER_EXPORT void runApp(const AppData &appData,
+    const QList<QUrl> &urls = QList<QUrl>());
 }
 
 #endif

@@ -21,6 +21,7 @@ License along with this library.  If not, see <http://www.gnu.org/licenses/>.
 #include "tasktools.h"
 #include "abstracttasksmodel.h"
 
+#include <KActivities/ResourceInstance>
 #include <KConfigGroup>
 #include <KDesktopFile>
 #include <kemailsettings.h>
@@ -28,10 +29,17 @@ License along with this library.  If not, see <http://www.gnu.org/licenses/>.
 #include <KMimeTypeTrader>
 #include <KRun>
 #include <KSharedConfig>
+#include <KStartupInfo>
+#include <KWindowSystem>
+
+#include <config-X11.h>
 
 #include <QDir>
 #include <QGuiApplication>
 #include <QScreen>
+#if HAVE_X11
+#include <QX11Info>
+#endif
 
 namespace TaskManager
 {
@@ -308,6 +316,36 @@ QRect screenGeometry(const QPoint &pos)
     }
 
     return screenGeometry;
+}
+
+void runApp(const AppData &appData, const QList<QUrl> &urls)
+{
+    if (appData.url.isValid()) {
+        quint32 timeStamp = 0;
+
+#if HAVE_X11
+        if (KWindowSystem::isPlatformX11()) {
+            timeStamp = QX11Info::appUserTime();
+        }
+#endif
+
+        const KService::Ptr service = KService::serviceByDesktopPath(appData.url.toLocalFile());
+
+        if (service && service->isApplication()) {
+            KRun::runApplication(*service, urls, nullptr, 0, {},
+                KStartupInfo::createNewStartupIdForTimestamp(timeStamp));
+
+            KActivities::ResourceInstance::notifyAccessed(QUrl(QStringLiteral("applications:") + service->storageId()),
+                QStringLiteral("org.kde.libtaskmanager"));
+        } else {
+            new KRun(appData.url, 0, false, KStartupInfo::createNewStartupIdForTimestamp(timeStamp));
+
+            if (!appData.id.isEmpty()) {
+                KActivities::ResourceInstance::notifyAccessed(QUrl(QStringLiteral("applications:") + appData.id),
+                    QStringLiteral("org.kde.libtaskmanager"));
+            }
+        }
+    }
 }
 
 }
