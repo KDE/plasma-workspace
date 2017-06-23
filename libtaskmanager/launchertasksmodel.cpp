@@ -28,6 +28,7 @@ License along with this library.  If not, see <http://www.gnu.org/licenses/>.
 #include <KWindowSystem>
 
 #include <KActivities/Consumer>
+#include <KActivities/ResourceInstance>
 
 #include <config-X11.h>
 
@@ -553,16 +554,29 @@ void LauncherTasksModel::requestNewInstance(const QModelIndex &index)
 #endif
 
     if (url.scheme() == QLatin1String("preferred")) {
-        KService::Ptr service = KService::serviceByStorageId(defaultApplication(url));
+        const KService::Ptr service = KService::serviceByStorageId(defaultApplication(url));
 
-        if (!service) {
+        if (!service && !service->isApplication()) {
             return;
         }
 
-        new KRun(QUrl::fromLocalFile(service->entryPath()), 0, false,
+        KRun::runApplication(*service, QList<QUrl>(), nullptr, 0, {},
             KStartupInfo::createNewStartupIdForTimestamp(timeStamp));
+
+        KActivities::ResourceInstance::notifyAccessed(QUrl(QStringLiteral("applications:") + service->storageId()),
+            QStringLiteral("org.kde.libtaskmanager"));
     } else {
-        new KRun(url, 0, false, KStartupInfo::createNewStartupIdForTimestamp(timeStamp));
+        const KService::Ptr service = KService::serviceByDesktopPath(url.toLocalFile());
+
+        if (service && service->isApplication()) {
+            KRun::runApplication(*service, QList<QUrl>(), nullptr, 0, {},
+                KStartupInfo::createNewStartupIdForTimestamp(timeStamp));
+
+            KActivities::ResourceInstance::notifyAccessed(QUrl(QStringLiteral("applications:") + service->storageId()),
+                QStringLiteral("org.kde.libtaskmanager"));
+        } else {
+            new KRun(url, 0, false, KStartupInfo::createNewStartupIdForTimestamp(timeStamp));
+        }
     }
 }
 
@@ -592,11 +606,14 @@ void LauncherTasksModel::requestOpenUrls(const QModelIndex &index, const QList<Q
         service = KService::serviceByDesktopPath(url.toLocalFile());
     }
 
-    if (!service) {
+    if (!service && !service->isApplication()) {
         return;
     }
 
     KRun::runApplication(*service, urls, nullptr, 0, {}, KStartupInfo::createNewStartupIdForTimestamp(timeStamp));
+
+    KActivities::ResourceInstance::notifyAccessed(QUrl(QStringLiteral("applications:") + service->storageId()),
+        QStringLiteral("org.kde.libtaskmanager"));
 }
 
 }
