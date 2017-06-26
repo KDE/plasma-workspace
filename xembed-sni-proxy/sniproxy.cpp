@@ -208,10 +208,9 @@ SNIProxy::SNIProxy(xcb_window_t wid, QObject* parent):
     //we query if the client selected button presses in the event mask
     //if the client does supports that we send directly, otherwise we'll use xtest
     auto waCookie = xcb_get_window_attributes(c, wid);
-    auto windowAttributes = xcb_get_window_attributes_reply(c, waCookie, nullptr);
+    QScopedPointer<xcb_get_window_attributes_reply_t, QScopedPointerPodDeleter> windowAttributes(xcb_get_window_attributes_reply(c, waCookie, nullptr));
     if (windowAttributes && ! (windowAttributes->all_event_masks & XCB_EVENT_MASK_BUTTON_PRESS)) {
         m_injectMode = XTest;
-        free(windowAttributes);
     }
 
     //there's no damage event for the first paint, and sometimes it's not drawn immediately
