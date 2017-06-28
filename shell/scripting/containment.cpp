@@ -183,7 +183,6 @@ QScriptValue Containment::addWidget(QScriptContext *context, QScriptEngine *engi
     }
 
     QScriptValue v = context->argument(0);
-    Plasma::Applet *applet = 0;
     QRectF geometry(-1, -1, -1, -1);
     if (context->argumentCount() > 4) {
         //The user provided a geometry as parameter
@@ -200,13 +199,15 @@ QScriptValue Containment::addWidget(QScriptContext *context, QScriptEngine *engi
                               context->argument(4).toNumber());
         }
     }
+
+    Plasma::Applet *applet = nullptr;
     if (v.isString()) {
         //A position has been supplied: search for the containment's graphics object
         QQuickItem *containmentItem = nullptr;
 
         if (geometry.x() >= 0 && geometry.y() >= 0) {
             containmentItem = c->d->containment.data()->property("_plasma_graphicObject").value<QQuickItem *>();
-            Plasma::Applet *applet = nullptr;
+
             if (containmentItem) {
                 QMetaObject::invokeMethod(containmentItem , "createApplet", Qt::DirectConnection, Q_RETURN_ARG(Plasma::Applet *, applet), Q_ARG(QString, v.toString()), Q_ARG(QVariantList, QVariantList()), Q_ARG(QRectF, geometry));
             }
@@ -214,6 +215,7 @@ QScriptValue Containment::addWidget(QScriptContext *context, QScriptEngine *engi
                 ScriptEngine *env = ScriptEngine::envFor(engine);
                 return env->wrap(applet);
             }
+            return context->throwError(i18n("Could not create the %1 widget!", v.toString()));
         }
 
         //Case in which either:
@@ -225,6 +227,8 @@ QScriptValue Containment::addWidget(QScriptContext *context, QScriptEngine *engi
             ScriptEngine *env = ScriptEngine::envFor(engine);
             return env->wrap(applet);
         }
+
+        return context->throwError(i18n("Could not create the %1 widget!", v.toString()));
     } else if (Widget *widget = qobject_cast<Widget*>(v.toQObject())) {
         applet = widget->applet();
         c->d->containment.data()->addApplet(applet);
