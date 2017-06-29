@@ -45,6 +45,7 @@ end
 # Isolates GUI via xvfb-run
 class XvfbIsolator
   def run(cmd)
+    warn "xvfb-run -a --server-args=\"-screen 0 1024x768x24\" #{cmd}"
     system("xvfb-run -a --server-args=\"-screen 0 1024x768x24\" #{cmd}") || raise
   end
 end
