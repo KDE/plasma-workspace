@@ -19,7 +19,9 @@ endif()
 if(NOT ATSPI_BUS_LAUNCHER_EXECUTABLE)
     find_program(ATSPI_BUS_LAUNCHER_EXECUTABLE
         NAMES at-spi-bus-launcher
-        PATHS /usr/lib/at-spi2-core/
+        PATHS
+            /usr/lib/at-spi2-core/ # debians
+            /usr/lib/at-spi2/      # suses
         DOC "AT-SPI accessibility dbus launcher")
 endif()
 
