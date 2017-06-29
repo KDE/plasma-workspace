@@ -103,7 +103,8 @@ if(HAVE_X11)
 endif()
 
 install(TARGETS plasmashell ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
-install(FILES plasmashell.desktop DESTINATION ${KDE_INSTALL_AUTOSTARTDIR})
+install(FILES org.kde.plasmashell.desktop DESTINATION ${KDE_INSTALL_APPDIR})
+install(FILES org.kde.plasmashell.desktop DESTINATION ${KDE_INSTALL_AUTOSTARTDIR})
 install( FILES dbus/org.kde.PlasmaShell.xml DESTINATION ${KDE_INSTALL_DBUSINTERFACEDIR} )
 
 install(FILES
