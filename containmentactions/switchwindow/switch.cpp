@@ -19,8 +19,6 @@
 
 #include "switch.h"
 
-#include <QGraphicsSceneMouseEvent>
-#include <QGraphicsSceneWheelEvent>
 #include <QTimer>
 
 #include <QDebug>

@@ -20,8 +20,6 @@
 #include "switch.h"
 
 #include <QApplication>
-#include <QGraphicsSceneMouseEvent>
-#include <QGraphicsSceneWheelEvent>
 
 #include <QAction>
 #include <QDebug>

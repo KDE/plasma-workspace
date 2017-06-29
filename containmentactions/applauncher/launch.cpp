@@ -19,9 +19,6 @@
 
 #include "launch.h"
 
-#include <QGraphicsSceneMouseEvent>
-#include <QGraphicsSceneWheelEvent>
-
 #include <QDebug>
 
 #include <Plasma/PluginLoader>
