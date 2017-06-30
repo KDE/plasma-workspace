@@ -44,6 +44,8 @@
 #include <KPackage/PackageStructure>
 #include <KPackage/PackageLoader>
 
+#include <KIO/OpenFileManagerWindowJob>
+
 #include "image.h"
 
 QStringList BackgroundFinder::m_suffixes;
@@ -468,6 +470,11 @@ void BackgroundListModel::previewFailed(const KFileItem &item)
 KPackage::Package BackgroundListModel::package(int index) const
 {
     return m_packages.at(index);
+}
+
+void BackgroundListModel::openContainingFolder(int rowIndex)
+{
+    KIO::highlightInFileManager({index(rowIndex, 0).data(PathRole).toUrl()});
 }
 
 void BackgroundListModel::setPendingDeletion(int rowIndex, bool pendingDeletion)

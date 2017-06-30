@@ -90,6 +90,7 @@ public:
 
     int count() const {return m_packages.size();};
 
+    Q_INVOKABLE void openContainingFolder(int rowIndex);
     Q_INVOKABLE void setPendingDeletion(int rowIndex, bool pendingDeletion);
     const QStringList wallpapersAwaitingDeletion();
 

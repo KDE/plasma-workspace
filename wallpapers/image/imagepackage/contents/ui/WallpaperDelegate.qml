@@ -110,6 +110,25 @@ MouseArea {
             PlasmaComponents.ToolButton {
                 anchors {
                     top: parent.top
+                    left: parent.left
+                    margins: units.smallSpacing
+                }
+                iconSource: "document-open-folder"
+                tooltip: i18nd("plasma_applet_org.kde.image", "Open Containing Folder")
+                flat: false
+                onClicked: imageWallpaper.wallpaperModel.openContainingFolder(index)
+                opacity: wallpaperDelegate.containsMouse ? 1 : 0
+                Behavior on opacity {
+                    PropertyAnimation {
+                        duration: units.longDuration
+                        easing.type: Easing.OutQuad
+                    }
+                }
+            }
+
+            PlasmaComponents.ToolButton {
+                anchors {
+                    top: parent.top
                     right: parent.right
                     margins: units.smallSpacing
                 }
