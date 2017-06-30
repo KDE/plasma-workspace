@@ -52,7 +52,13 @@ void AppLauncher::makeMenu(QMenu *menu, const KServiceGroup::Ptr group)
     foreach (KSycocaEntry::Ptr p, group->entries(true, false, true)) {
         if (p->isType(KST_KService)) {
             const KService::Ptr service(static_cast<KService*>(p.data()));
-            QAction *action = new QAction(QIcon::fromTheme(service->icon()), service->genericName().isEmpty() ? service->name() : service->genericName(), this);
+
+            QString text = service->name();
+            if (!m_showAppsByName && !service->genericName().isEmpty()) {
+                text = service->genericName();
+            }
+
+            QAction *action = new QAction(QIcon::fromTheme(service->icon()), text, this);
             connect(action, &QAction::triggered, [action](){
                 KService::Ptr service = KService::serviceByStorageId(action->data().toString());
                 new KRun(QUrl("file://"+service->entryPath()), 0);
@@ -85,6 +91,31 @@ void AppLauncher::makeMenu(QMenu *menu, const KServiceGroup::Ptr group)
     }
 }
 
+QWidget *AppLauncher::createConfigurationInterface(QWidget *parent)
+{
+    QWidget *widget = new QWidget(parent);
+    m_ui.setupUi(widget);
+    widget->setWindowTitle(i18nc("plasma_containmentactions_applauncher", "Configure Application Launcher Plugin"));
+
+    m_ui.showAppsByName->setChecked(m_showAppsByName);
+
+    return widget;
+}
+
+void AppLauncher::configurationAccepted()
+{
+    m_showAppsByName = m_ui.showAppsByName->isChecked();
+}
+
+void AppLauncher::restore(const KConfigGroup &config)
+{
+    m_showAppsByName = config.readEntry(QStringLiteral("showAppsByName"), false);
+}
+
+void AppLauncher::save(KConfigGroup &config)
+{
+    config.writeEntry(QStringLiteral("showAppsByName"), m_showAppsByName);
+}
 
 K_EXPORT_PLASMA_CONTAINMENTACTIONS_WITH_JSON(applauncher, AppLauncher, "plasma-containmentactions-applauncher.json")
 
