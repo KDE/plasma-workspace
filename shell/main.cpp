@@ -76,16 +76,9 @@ int main(int argc, char *argv[])
                                  QStringLiteral("qmljsdebugger"),
                                  i18n("Enable QML Javascript debugger"));
 
-    QCommandLineOption winOption(QStringList() << QStringLiteral("w") <<
-                                 QStringLiteral("windowed"),
-                                 i18n("Force a windowed view for testing purposes"));
-
     QCommandLineOption noRespawnOption(QStringList() << QStringLiteral("n") <<
                                      QStringLiteral("no-respawn"),
                                      i18n("Do not restart plasma-shell automatically after a crash"));
-
-    QCommandLineOption shutupOption(QStringList() << QStringLiteral("s") << QStringLiteral("shut-up"),
-                                 i18n("Deprecated, does nothing"));
 
     QCommandLineOption shellPluginOption(QStringList() << QStringLiteral("p") << QStringLiteral("shell-plugin"),
                                          i18n("Force loading the given shell plugin"),
@@ -99,9 +92,7 @@ int main(int argc, char *argv[])
                                         i18n("Enables test mode and specifies the layout javascript file to set up the testing environment"), i18n("file"), QStringLiteral("layout.js"));
 
     cliOptions.addOption(dbgOption);
-    cliOptions.addOption(winOption);
     cliOptions.addOption(noRespawnOption);
-    cliOptions.addOption(shutupOption);
     cliOptions.addOption(shellPluginOption);
     cliOptions.addOption(standaloneOption);
     cliOptions.addOption(testOption);
