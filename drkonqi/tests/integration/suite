@@ -22,12 +22,23 @@ require 'fileutils'
 require 'optparse'
 require 'tmpdir'
 
+class Isolator
+  def dbus_run(cmd)
+    warn dbus_run_cmd(cmd)
+    system(dbus_run_cmd(cmd))
+  end
+
+  def dbus_run_cmd(cmd)
+    "dbus-run-session -- #{cmd}"
+  end
+end
+
 # Isolates GUI via xephyr
-class XephyrIsolator
+class XephyrIsolator < Isolator
   def run(cmd)
     ephemeral('Xephyr -screen 1024x768x24+32 :666') do
       ENV['DISPLAY'] = ':666'
-      system(cmd) || raise
+      dbus_run(cmd) || raise
     end
   end
 
@@ -43,15 +54,16 @@ class XephyrIsolator
 end
 
 # Isolates GUI via xvfb-run
-class XvfbIsolator
+class XvfbIsolator < Isolator
   def run(cmd)
-    warn "xvfb-run -a --server-args=\"-screen 0 1024x768x24\" #{cmd}"
-    system("xvfb-run -a --server-args=\"-screen 0 1024x768x24\" #{cmd}") || raise
+    warn "xvfb-run -a --server-args=\"-screen 0 1024x768x24\" #{dbus_run_cmd(cmd)}"
+    system("xvfb-run -a --server-args=\"-screen 0 1024x768x24\" #{dbus_run_cmd(cmd)}") || raise
   end
 end
 
-class NoIsolator
+class NoIsolator < Isolator
   def run(cmd)
+    # No X11 and no DBus isolation.
     warn cmd.to_s
     system(cmd) || raise
   end
@@ -88,7 +100,7 @@ Dir.mktmpdir do |tmpdir|
   ENV['HOME'] = tmpdir
   ENV.keys.each { |k| ENV.delete(k) if k.start_with?('XDG_') }
   Dir.glob("#{__dir__}/*_test.rb").each do |test|
-    isolator.run("dbus-run-session -- ruby '#{test}' -p")
+    isolator.run("ruby '#{test}' -p")
   end
   sleep 2 # Wait a bit to make sure all children are dead.
 end
