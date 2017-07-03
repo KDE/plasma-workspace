@@ -13,6 +13,10 @@ if(RUBY_EXECUTABLE)
     execute_process(COMMAND ${RUBY_EXECUTABLE} -e "require 'xmlrpc/server'"
         RESULT_VARIABLE RUBY_XMLRPC)
 endif()
+if(NOT GDB_EXECUTABLE)
+    # Needed so drkonqi can actually trace something.
+    find_program(GDB_EXECUTABLE gdb)
+endif()
 if(NOT XVFB_RUN_EXECTUABLE)
     find_program(XVFB_RUN_EXECTUABLE xvfb-run)
 endif()
@@ -26,9 +30,9 @@ if(NOT ATSPI_BUS_LAUNCHER_EXECUTABLE)
 endif()
 
 if(RUBY_EXECUTABLE AND XVFB_RUN_EXECTUABLE AND ATSPI_BUS_LAUNCHER_EXECUTABLE
-   AND RUBY_ATSPI EQUAL 0 AND RUBY_XMLRPC EQUAL 0)
+   AND GDB_EXECUTABLE AND RUBY_ATSPI EQUAL 0 AND RUBY_XMLRPC EQUAL 0)
     set(WITH_DRKONI_INTEGRATION_TESTING TRUE)
 endif()
 add_feature_info(DrKonqiIntegrationTesting WITH_DRKONI_INTEGRATION_TESTING
-    "Needs Ruby, functional atspi and xmlrpc gems, as well as xvfb-run.")
+    "Needs Ruby, functional atspi and xmlrpc gems, gdb, as well as xvfb-run.")
 add_subdirectory(integration)
