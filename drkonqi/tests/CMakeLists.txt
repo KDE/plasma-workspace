@@ -5,7 +5,7 @@ if(KF5XmlRpcClient_FOUND)
 endif()
 
 if(NOT RUBY_EXECTUABLE)
-    find_program(RUBY_EXECTUABLE ruby)
+    find_program(RUBY_EXECUTABLE ruby)
 endif()
 if(RUBY_EXECUTABLE)
     execute_process(COMMAND ${RUBY_EXECUTABLE} -e "require 'atspi'"
