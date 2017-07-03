@@ -16,9 +16,6 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-ENV['DRKONQI_IGNORE_QUALITY'] = '1'
-ENV['KDE_FORK_SLAVES'] = '1'
-
 DRKONQI_PATH = ENV['DRKONQI_PATH']
 AT_SPI_BUS_LAUNCHER_PATH = ENV['AT_SPI_BUS_LAUNCHER_PATH']
 warn "Testing against #{DRKONQI_PATH} with #{AT_SPI_BUS_LAUNCHER_PATH}"
