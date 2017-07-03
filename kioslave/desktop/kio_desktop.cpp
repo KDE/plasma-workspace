@@ -30,7 +30,6 @@
 #include <QCoreApplication>
 #include <QFile>
 #include <QDBusInterface>
-#include <QDesktopServices>
 #include <QDir>
 #include <QStandardPaths>
 
@@ -65,11 +64,9 @@ DesktopProtocol::~DesktopProtocol()
 void DesktopProtocol::checkLocalInstall()
 {
 #ifndef Q_WS_WIN
-    // We can't use QStandardPaths::writableLocation(QStandardPaths::DesktopLocation) here, since it returns the home dir
-    // if the desktop folder doesn't exist.
-    QString desktopPath = QDesktopServices::storageLocation(QDesktopServices::DesktopLocation);
-    if (desktopPath.isEmpty())
-        desktopPath = QDir::homePath() + "/Desktop";
+    // QStandardPaths::writableLocation(QStandardPaths::DesktopLocation) returns the home dir
+    // if the desktop folder doesn't exist, so verify its result
+    QString desktopPath = QStandardPaths::writableLocation(QStandardPaths::DesktopLocation);
 
     const QDir desktopDir(desktopPath);
     bool desktopIsEmpty;
