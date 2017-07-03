@@ -109,7 +109,11 @@ class TestDuplicateAttach < ATSPITest
 
     assert File.exist?(DRKONQI_PATH), "drkonqi not at #{DRKONQI_PATH}"
     # Will die with our Xephyr in case of errors.
-    pid = spawn("#{DRKONQI_PATH} --signal 11 --pid #{@tracee} --bugaddress submit@bugs.kde.org --dialog")
+    pid = spawn("#{DRKONQI_PATH}",
+                "--signal", "11",
+                "--pid", @tracee.to_s,
+                "--bugaddress", "submit@bugs.kde.org",
+                "--dialog")
     sleep 4 # Grace to give time to appear on at-spi
     assert_nil Process.waitpid(pid, Process::WNOHANG),
                'drkonqi failed to start or died'
