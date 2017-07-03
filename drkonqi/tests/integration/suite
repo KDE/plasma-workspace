@@ -78,5 +78,5 @@ Dir.mktmpdir do |tmpdir|
     isolator = ENV['XEPHYR'] ? XephyrIsolator.new : XvfbIsolator.new
     isolator.run("dbus-run-session -- ruby '#{test}' -p")
   end
-  sleep 8 # Wait a bit to make sure all children are dead.
+  sleep 2 # Wait a bit to make sure all children are dead.
 end
