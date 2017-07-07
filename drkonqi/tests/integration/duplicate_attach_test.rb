@@ -71,7 +71,6 @@ end
 
 class TestDuplicateAttach < ATSPITest
   def setup
-    debug_procs
     server = XMLRPC::Server.new(0)
     port = server.server.config.fetch(:Port)
     ENV['DRKONQI_KDE_BUGZILLA_URL'] = "http://localhost:#{port}/"
@@ -116,86 +115,9 @@ class TestDuplicateAttach < ATSPITest
                          '--dialog')
     puts "pid: #{@drkonqi_pid}"
   end
-
-  class ProcInfo
-    class Status
-      attr_reader :name
-      attr_reader :uid
-      attr_reader :ppid
-
-      def initialize(path)
-        status = read_hash(path)
-        @name = status.fetch(:Name, nil)
-        @uid = status.fetch(:Uid, nil)[0].to_i
-        @ppid = status.fetch(:PPid, 1).to_i
-      end
-
-      def read_hash(path)
-        hash = {}
-        File.read(path).lines do |line|
-          ary = line.split(/\n|\t/)
-          key = ary.shift
-          value = ary.size > 1 ? ary : ary[0]
-          value = value.strip if value.respond_to?(:strip)
-          hash[key.tr(':', '').to_sym] = value
-        end
-        hash
-      rescue Errno::EACCES
-        {}
-      end
-    end
-
-    attr_reader :pid
-    attr_reader :status
-    attr_reader :children
-
-    def initialize(pid)
-      @pid = pid
-      @status = Status.new("/proc/#{pid}/status")
-      @children = []
-    end
-
-    def cmdline
-      File.read("/proc/#{pid}/cmdline").tr("\0", ' ')
-    rescue Errno::EACCES
-      nil
-    end
-
-    def name
-      (cmdline || status.name).gsub("\n", "\\n")
-    end
-
-    def print_with_children(depth=0)
-      indentation = Array.new(depth).join(' ')
-      puts "#{indentation}#{name}(#{pid})"
-      children.each { |x| x.print_with_children(depth + 2) }
-    end
-  end
-
-  def debug_procs
-    infos = Dir.glob('/proc/*').collect do |x|
-      pid = File.basename(x)
-      next unless pid =~ /\d+/
-      pid = pid.to_i
-      next if pid == Process.pid
-      [pid, ProcInfo.new(pid)]
-    end.compact.to_h
-    infos.each do |_pid, info|
-      next if info.status.ppid.zero? # kernelish processes
-      begin
-        infos.fetch(info.status.ppid).children << info
-      rescue KeyError
-        # either dangling or died already
-      end
-    end
-    infos.fetch(1).print_with_children
   end
 
   def teardown
-    unless passed?
-      debug_procs
-    end
-
     Process.kill('KILL', @tracee)
     Process.waitpid2(@tracee)
     @xml_server_thread.kill
