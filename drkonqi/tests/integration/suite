@@ -23,6 +23,13 @@ require 'optparse'
 require 'tmpdir'
 
 class Isolator
+  def mangle_env(tmpdir)
+    ENV['HOME'] = tmpdir
+    ENV.keys.each { |k| ENV.delete(k) if k.start_with?('XDG_') }
+  end
+
+  private
+
   def dbus_run(cmd)
     warn dbus_run_cmd(cmd)
     system(dbus_run_cmd(cmd))
@@ -62,6 +69,10 @@ class XvfbIsolator < Isolator
 end
 
 class NoIsolator < Isolator
+  def mangle_env(*)
+    # noop without isolation
+  end
+
   def run(cmd)
     # No X11 and no DBus isolation.
     warn cmd.to_s
@@ -69,10 +80,10 @@ class NoIsolator < Isolator
   end
 end
 
-def isolator
-    return NoIsolator.new if ENV['JENKINS_SERVER_COOKIE'] || ENV['NO_ISOLATOR']
-    return XephyrIsolator.new if ENV['XEPHYR']
-    XvfbIsolator.new
+def new_isolator
+  return NoIsolator.new if ENV['JENKINS_SERVER_COOKIE'] || ENV['NO_ISOLATOR']
+  return XephyrIsolator.new if ENV['XEPHYR']
+  XvfbIsolator.new
 end
 
 OptionParser.new do |opts|
@@ -99,9 +110,9 @@ ENV['DRKONQI_IGNORE_QUALITY'] = '1'
 # variables. Then spin up a suitable virtual X, run a new dbus session bus
 # and our test in that environment.
 Dir.mktmpdir do |tmpdir|
-  ENV['HOME'] = tmpdir
-  ENV.keys.each { |k| ENV.delete(k) if k.start_with?('XDG_') }
   Dir.glob("#{__dir__}/*_test.rb").each do |test|
+    isolator = new_isolator
+    isolator.mangle_env(tmpdir)
     isolator.run("ruby '#{test}' -p")
   end
   sleep 2 # Wait a bit to make sure all children are dead.
