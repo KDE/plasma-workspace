@@ -109,15 +109,12 @@ class TestDuplicateAttach < ATSPITest
     @tracee = fork { loop { sleep(999_999_999) } }
 
     assert File.exist?(DRKONQI_PATH), "drkonqi not at #{DRKONQI_PATH}"
-    # Will die with our Xephyr in case of errors.
-    pid = spawn(DRKONQI_PATH,
-                '--signal', '11',
-                '--pid', @tracee.to_s,
-                '--bugaddress', 'submit@bugs.kde.org',
-                '--dialog')
-    sleep 4 # Grace to give time to appear on at-spi
-    assert_nil Process.waitpid(pid, Process::WNOHANG),
-               'drkonqi failed to start or died'
+    @drkonqi_pid = spawn(DRKONQI_PATH,
+                         '--signal', '11',
+                         '--pid', @tracee.to_s,
+                         '--bugaddress', 'submit@bugs.kde.org',
+                         '--dialog')
+    puts "pid: #{@drkonqi_pid}"
   end
 
   class ProcInfo
@@ -205,11 +202,22 @@ class TestDuplicateAttach < ATSPITest
     @xml_server_thread.join
   end
 
+  def drkonqi_running?
+    Process.waitpid(@drkonqi_pid, Process::WNOHANG).nil?
+  end
+
   # When evaluating duplicates
   def test_duplicate_attach
-    drkonqi = ATSPI.desktops[0].applications.find { |x| x.name == 'drkonqi' }
+    drkonqi = nil
+
+    8.times do # be gracious for drkonqi to come up an atspi
+      drkonqi = ATSPI.desktops[0].applications.find { |x| x.name == 'drkonqi' }
+      break if drkonqi
+      sleep 2
+    end
+
     refute_nil drkonqi, 'Could not find drkonqi on atspi api.' \
-                        ' Maybe drkonqi is not running (anymore)?'
+                        " It is running: #{drkonqi_running?}"
 
     accessible = find_in(drkonqi.windows[-1], name: 'Report Bug')
     press(accessible)
