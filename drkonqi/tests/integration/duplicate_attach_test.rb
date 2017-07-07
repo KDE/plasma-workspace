@@ -115,7 +115,6 @@ class TestDuplicateAttach < ATSPITest
                          '--dialog')
     puts "pid: #{@drkonqi_pid}"
   end
-  end
 
   def teardown
     Process.kill('KILL', @tracee)
