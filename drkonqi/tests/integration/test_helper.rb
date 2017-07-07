@@ -23,7 +23,12 @@ AT_SPI_BUS_LAUNCHER_PATH = ENV['AT_SPI_BUS_LAUNCHER_PATH']
 warn "Testing against #{DRKONQI_PATH} with #{AT_SPI_BUS_LAUNCHER_PATH}"
 
 # Dies together with our dbus.
-spawn "#{AT_SPI_BUS_LAUNCHER_PATH} --launch-immediately"
+# Make sure to enable a11y and screen-reader explicitly so qt definitely
+# activates its a11y bindings.
+spawn(AT_SPI_BUS_LAUNCHER_PATH,
+      '--launch-immediately',
+      '--a11y=1',
+      '--screen-reader=1')
 
 require 'atspi'
 require 'minitest/autorun'
