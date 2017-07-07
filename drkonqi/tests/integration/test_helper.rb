@@ -16,6 +16,8 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
+STDOUT.sync = true # force immediate flushing without internal caching
+
 DRKONQI_PATH = ENV['DRKONQI_PATH']
 AT_SPI_BUS_LAUNCHER_PATH = ENV['AT_SPI_BUS_LAUNCHER_PATH']
 warn "Testing against #{DRKONQI_PATH} with #{AT_SPI_BUS_LAUNCHER_PATH}"

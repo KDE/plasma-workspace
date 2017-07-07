@@ -22,6 +22,8 @@ require 'fileutils'
 require 'optparse'
 require 'tmpdir'
 
+STDOUT.sync = true # force immediate flushing without internal caching
+
 class Isolator
   def mangle_env(tmpdir)
     ENV['HOME'] = tmpdir
