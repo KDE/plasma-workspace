@@ -120,6 +120,11 @@ class TestDuplicateAttach < ATSPITest
   end
 
   def teardown
+    unless passed?
+      require 'pp'
+      pp ENV.to_h
+    end
+
     Process.kill('KILL', @tracee)
     Process.waitpid2(@tracee)
     @xml_server_thread.kill
