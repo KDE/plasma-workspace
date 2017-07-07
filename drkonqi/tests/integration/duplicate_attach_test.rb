@@ -134,7 +134,8 @@ class TestDuplicateAttach < ATSPITest
   # When evaluating duplicates
   def test_duplicate_attach
     drkonqi = ATSPI.desktops[0].applications.find { |x| x.name == 'drkonqi' }
-    refute_nil drkonqi
+    refute_nil drkonqi, 'Could not find drkonqi on atspi api.' \
+                        ' Maybe drkonqi is not running (anymore)?'
 
     accessible = find_in(drkonqi.windows[-1], name: 'Report Bug')
     press(accessible)
