@@ -70,6 +70,14 @@ class XvfbIsolator < Isolator
   end
 end
 
+# Isolates for build.kde.org. No env but xvfb spinup.
+class CIIsolator < XvfbIsolator
+  def mangle_env(*)
+    # noop, we need to defer to Jenkins for the env so cleanup doesn't break
+  end
+end
+
+# No isolation whatsoever.
 class NoIsolator < Isolator
   def mangle_env(*)
     # noop without isolation
@@ -83,7 +91,8 @@ class NoIsolator < Isolator
 end
 
 def new_isolator
-  return NoIsolator.new if ENV['JENKINS_SERVER_COOKIE'] || ENV['NO_ISOLATOR']
+  return NoIsolator.new if ENV['NO_ISOLATOR']
+  return CIIsolator.new if ENV['JENKINS_SERVER_COOKIE']
   return XephyrIsolator.new if ENV['XEPHYR']
   XvfbIsolator.new
 end
