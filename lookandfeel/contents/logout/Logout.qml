@@ -168,6 +168,7 @@ PlasmaCore.ColorScope {
                 KeyNavigation.left: suspendButton
                 KeyNavigation.right: shutdownButton
                 focus: sdtype == ShutdownType.ShutdownTypeReboot
+                visible: maysd
             }
             LogoutButton {
                 id: shutdownButton
@@ -177,6 +178,7 @@ PlasmaCore.ColorScope {
                 KeyNavigation.left: rebootButton
                 KeyNavigation.right: logoutButton
                 focus: sdtype == ShutdownType.ShutdownTypeHalt
+                visible: maysd
             }
             LogoutButton {
                 id: logoutButton
