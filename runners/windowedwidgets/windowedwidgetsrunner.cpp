@@ -99,10 +99,7 @@ void WindowedWidgetsRunner::match(Plasma::RunnerContext &context)
 void WindowedWidgetsRunner::run(const Plasma::RunnerContext &context, const Plasma::QueryMatch &match)
 {
     Q_UNUSED(context);
-    KPluginMetaData md(match.data().toString());
-    if (md.isValid()) {
-        QProcess::startDetached(QStringLiteral("plasmawindowed"), QStringList() << md.pluginId());
-    }
+    QProcess::startDetached(QStringLiteral("plasmawindowed"), {match.data().toString()});
 }
 
 void WindowedWidgetsRunner::setupMatch(const KPluginMetaData &md, Plasma::QueryMatch &match)
