@@ -20,17 +20,27 @@ endif()
 if(NOT XVFB_RUN_EXECTUABLE)
     find_program(XVFB_RUN_EXECTUABLE xvfb-run)
 endif()
+
+set(ATSPI_PATHS
+    /usr/lib/at-spi2-core/ # debians
+    /usr/lib/at-spi2/      # suses
+)
 if(NOT ATSPI_BUS_LAUNCHER_EXECUTABLE)
     find_program(ATSPI_BUS_LAUNCHER_EXECUTABLE
         NAMES at-spi-bus-launcher
-        PATHS
-            /usr/lib/at-spi2-core/ # debians
-            /usr/lib/at-spi2/      # suses
+        PATHS ${ATSPI_PATHS}
         DOC "AT-SPI accessibility dbus launcher")
+endif()
+if(NOT ATSPI_REGISTRYD_EXECUTABLE)
+    find_program(ATSPI_REGISTRYD_EXECUTABLE
+        NAMES at-spi2-registryd
+        PATHS ${ATSPI_PATHS}
+        DOC "AT-SPI accessibility registry daemon")
 endif()
 
 if(RUBY_EXECUTABLE AND XVFB_RUN_EXECTUABLE AND ATSPI_BUS_LAUNCHER_EXECUTABLE
-   AND GDB_EXECUTABLE AND RUBY_ATSPI EQUAL 0 AND RUBY_XMLRPC EQUAL 0)
+   AND ATSPI_REGISTRYD_EXECUTABLE AND GDB_EXECUTABLE
+   AND RUBY_ATSPI EQUAL 0 AND RUBY_XMLRPC EQUAL 0)
     set(WITH_DRKONI_INTEGRATION_TESTING TRUE)
 endif()
 add_feature_info(DrKonqiIntegrationTesting WITH_DRKONI_INTEGRATION_TESTING

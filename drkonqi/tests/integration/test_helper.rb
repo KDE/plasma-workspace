@@ -20,15 +20,23 @@ STDOUT.sync = true # force immediate flushing without internal caching
 
 DRKONQI_PATH = ENV['DRKONQI_PATH']
 AT_SPI_BUS_LAUNCHER_PATH = ENV['AT_SPI_BUS_LAUNCHER_PATH']
-warn "Testing against #{DRKONQI_PATH} with #{AT_SPI_BUS_LAUNCHER_PATH}"
+AT_SPI_REGISTRY_PATH = ENV['AT_SPI_REGISTRY_PATH']
+warn "Testing against #{DRKONQI_PATH} with #{AT_SPI_BUS_LAUNCHER_PATH} " \
+     " and #{AT_SPI_REGISTRY_PATH}"
 
-# Dies together with our dbus.
-# Make sure to enable a11y and screen-reader explicitly so qt definitely
-# activates its a11y bindings.
-spawn(AT_SPI_BUS_LAUNCHER_PATH,
-      '--launch-immediately',
-      '--a11y=1',
-      '--screen-reader=1')
+# Only set inside the test to prevent dbus activation of supporting services.
+# We'll force a11y here as depending on the distribution a11y may not be enabled
+# by default.
+ENV['QT_ACCESSIBILITY'] = '1'
+ENV['QT_LINUX_ACCESSIBILITY_ALWAYS_ON'] = '1'
+
+# We kill these after our test run. When isolated they would die with our
+# bus, on CI systems we employ no isolation and instead need to manage them
+# manually.
+# NB: do not give additional options to the launcher. Ubuntu broke theirs
+#   causing crashes...
+launcher_pid = spawn(AT_SPI_BUS_LAUNCHER_PATH, '--launch-immediately')
+registry_pid = spawn(AT_SPI_REGISTRY_PATH)
 
 require 'atspi'
 require 'minitest/autorun'
@@ -86,4 +94,9 @@ class ATSPITest < Minitest::Test
     return if accessible.states.any? { |x| %i[checked selected].include?(x) }
     toggle(accessible)
   end
+end
+
+Minitest.after_run do
+  Process.kill('KILL', launcher_pid)
+  Process.kill('KILL', registry_pid)
 end
