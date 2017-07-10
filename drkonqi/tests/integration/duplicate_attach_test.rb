@@ -132,7 +132,7 @@ class TestDuplicateAttach < ATSPITest
     drkonqi = nil
 
     8.times do # be gracious for drkonqi to come up an atspi
-      drkonqi = ATSPI.desktops[0].applications.find { |x| x.name == 'drkonqi' }
+      drkonqi = ATSPI.applications.find { |x| x.name == 'drkonqi' }
       break if drkonqi
       sleep 2
     end
