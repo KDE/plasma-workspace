@@ -202,7 +202,6 @@ private Q_SLOTS:
     void panelContainmentDestroyed(QObject* cont);
     void desktopContainmentDestroyed(QObject*);
     void showOpenGLNotCompatibleWarning();
-    void alternativesVisibilityChanged(bool visible);
     void interactiveConsoleVisibilityChanged(bool visible);
     void screenRemoved(QScreen* screen);
 
@@ -242,7 +241,6 @@ private:
     QMenu *m_addPanelsMenu;
     KPackage::Package m_lookAndFeelPackage;
     QSet<QScreen*> m_redundantOutputs;
-    QList<KDeclarative::QmlObject *> m_alternativesObjects;
     KDeclarative::QmlObject *m_interactiveConsole;
 
     QTimer m_waitingPanelsTimer;

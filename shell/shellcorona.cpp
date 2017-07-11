@@ -38,6 +38,8 @@
 #include <klocalizedstring.h>
 #include <Plasma/Package>
 #include <Plasma/PluginLoader>
+#include <PlasmaQuick/Dialog>
+
 #include <kactivities/controller.h>
 #include <kactivities/consumer.h>
 #include <ksycoca.h>
@@ -820,42 +822,26 @@ void ShellCorona::showAlternativesForApplet(Plasma::Applet *applet)
     AlternativesHelper *helper = new AlternativesHelper(applet, qmlObj);
     qmlObj->rootContext()->setContextProperty(QStringLiteral("alternativesHelper"), helper);
 
-    m_alternativesObjects << qmlObj;
     qmlObj->completeInitialization();
-    connect(qmlObj->rootObject(), SIGNAL(visibleChanged(bool)),
-            this, SLOT(alternativesVisibilityChanged(bool)));
 
-    connect(applet, &Plasma::Applet::destroyedChanged, this, [this, qmlObj] (bool destroyed) {
+    auto dialog = qobject_cast<PlasmaQuick::Dialog*>(qmlObj->rootObject());
+    if (!dialog) {
+        qWarning() << "Alternatives UI does not inherit from Dialog";
+        delete qmlObj;
+        return;
+    }
+    connect(applet, &Plasma::Applet::destroyedChanged, qmlObj, [qmlObj] (bool destroyed) {
         if (!destroyed) {
             return;
         }
-        QMutableListIterator<KDeclarative::QmlObject *> it(m_alternativesObjects);
-        while (it.hasNext()) {
-            KDeclarative::QmlObject *obj = it.next();
-            if (obj == qmlObj) {
-                it.remove();
-                obj->deleteLater();
-            }
-        }
+        qmlObj->deleteLater();
     });
-}
-
-void ShellCorona::alternativesVisibilityChanged(bool visible)
-{
-    if (visible) {
-        return;
-    }
-
-    QObject *root = sender();
-
-    QMutableListIterator<KDeclarative::QmlObject *> it(m_alternativesObjects);
-    while (it.hasNext()) {
-        KDeclarative::QmlObject *obj = it.next();
-        if (obj->rootObject() == root) {
-            it.remove();
-            obj->deleteLater();
+    connect(dialog, &PlasmaQuick::Dialog::visibleChanged, qmlObj, [qmlObj](bool visible) {
+        if (visible) {
+            return;
         }
-    }
+        qmlObj->deleteLater();
+    });
 }
 
 void ShellCorona::unload()
