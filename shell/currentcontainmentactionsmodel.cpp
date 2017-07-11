@@ -181,7 +181,7 @@ void CurrentContainmentActionsModel::remove(int row)
     }
 }
 
-void CurrentContainmentActionsModel::showConfiguration(int row)
+void CurrentContainmentActionsModel::showConfiguration(int row, QQuickItem *ctx)
 {
     const QString action = itemData(index(row, 0)).value(ActionRole).toString();
 
@@ -193,7 +193,11 @@ void CurrentContainmentActionsModel::showConfiguration(int row)
     configDlg->setAttribute(Qt::WA_DeleteOnClose);
     QLayout *lay = new QVBoxLayout(configDlg);
     configDlg->setLayout(lay);
-    configDlg->setWindowModality(Qt::WindowModal);
+    if (ctx && ctx->window()) {
+        configDlg->setWindowModality(Qt::WindowModal);
+        configDlg->winId(); // so it creates the windowHandle();
+        configDlg->windowHandle()->setTransientParent(ctx->window());
+    }
 
     Plasma::ContainmentActions *pluginInstance = m_plugins[action];
     //put the config in the dialog
