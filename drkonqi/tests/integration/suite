@@ -125,3 +125,7 @@ Dir.mktmpdir do |tmpdir|
   end
   sleep 2 # Wait a bit to make sure all children are dead.
 end
+
+warn 'all done'
+system 'ps -ejH'
+exit 0
