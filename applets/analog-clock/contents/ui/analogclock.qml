@@ -25,7 +25,7 @@ import org.kde.plasma.calendar 2.0 as PlasmaCalendar
 import QtQuick.Layouts 1.1
 
 import org.kde.plasma.core 2.0 as PlasmaCore
-import org.kde.plasma.components 2.0 as PlasmaComponents
+import org.kde.plasma.components 3.0 as PlasmaComponents
 import "logic.js" as Logic
 
 Item {
