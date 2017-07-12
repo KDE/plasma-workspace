@@ -42,7 +42,6 @@ public:
     static ShellManager * instance();
     ~ShellManager() override;
 
-    static bool s_forceWindowed;
     static bool s_standaloneOption;
     static QString s_fixedShell;
     static QString s_testModeLayout;

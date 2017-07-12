@@ -19,7 +19,6 @@
 #include "desktopview.h"
 #include "containmentconfigview.h"
 #include "shellcorona.h"
-#include "shellmanager.h"
 #include "krunner_interface.h"
 
 #include <QQmlEngine>
@@ -114,7 +113,7 @@ void DesktopView::adaptToScreen()
                     this, &DesktopView::screenGeometryChanged);
     }
 
-    if ((m_windowType == Desktop || m_windowType == WindowedDesktop) && !ShellManager::s_forceWindowed) {
+    if (m_windowType == Desktop || m_windowType == WindowedDesktop) {
         screenGeometryChanged();
 
         connect(m_screenToFollow.data(), &QScreen::geometryChanged,
@@ -149,7 +148,7 @@ void DesktopView::ensureWindowType()
         return;
     }
 
-    if (m_windowType == Window || ShellManager::s_forceWindowed) {
+    if (m_windowType == Window) {
         setFlags(Qt::Window);
         KWindowSystem::setType(winId(), NET::Normal);
         KWindowSystem::clearState(winId(), NET::FullScreen);
