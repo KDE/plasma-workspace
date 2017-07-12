@@ -18,6 +18,6 @@
 */
 
 #include "klipper_debug.h"
-Q_LOGGING_CATEGORY(KLIPPER_LOG, "log_klipper")
+Q_LOGGING_CATEGORY(KLIPPER_LOG, "log_klipper", QtInfoMsg)
 
 
