@@ -63,7 +63,7 @@ void NotificationsApplet::onScreenChanges()
 {
     // when removing the panel the applet is in, the containment is being destroyed but its corona is still
     // there, rightfully emitting availableScreenRectChanged and then we blow up if we try to access it.
-    if (!containment()) {
+    if (!containment() || !containment()->corona()) {
         return;
     }
 
