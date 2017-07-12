@@ -111,7 +111,8 @@ end.parse!
 ENV['DRKONQI_PATH'] ||= '/usr/lib/x86_64-linux-gnu/libexec/drkonqi'
 ENV['AT_SPI_BUS_LAUNCHER_PATH'] ||= '/usr/lib/at-spi2-core/at-spi-bus-launcher'
 ENV['AT_SPI_REGISTRY_PATH'] ||= '/usr/lib/at-spi2-core/at-spi2-registryd'
-ENV['KDE_FORK_SLAVES'] = '1'
+ENV['KDE_FORK_SLAVES'] = '1' # fork slaves so they inherit env
+ENV['KIO_DISABLE_CACHE_CLEANER'] = '1' # do not start the cleaner, it'll dangle
 ENV['DRKONQI_IGNORE_QUALITY'] = '1'
 
 # Isolate ourselves by forcing into a separate home and unsetting the XDG path
