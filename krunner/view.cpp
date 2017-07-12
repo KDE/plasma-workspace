@@ -242,9 +242,9 @@ bool View::event(QEvent *event)
                 return retval;
             }
             m_plasmaShellSurface = m_plasmaShell->createSurface(s, this);
-            m_plasmaShellSurface->setRole(PlasmaShellSurface::Role::Panel);
             m_plasmaShellSurface->setPanelBehavior(PlasmaShellSurface::PanelBehavior::WindowsGoBelow);
             m_plasmaShellSurface->setPanelTakesFocus(true);
+            m_plasmaShellSurface->setRole(PlasmaShellSurface::Role::Panel);
             //this should be on showEvent, but it was too soon so none of those had any effect
             KWindowSystem::setOnAllDesktops(winId(), true);
             positionOnScreen();
