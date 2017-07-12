@@ -102,7 +102,7 @@ OptionParser.new do |opts|
     ENV['AT_SPI_BUS_LAUNCHER_PATH'] = v
   end
 
-    opts.on('--at-spi-registryd PATH',
+  opts.on('--at-spi-registryd PATH',
           'Path to registry bin to use for testing.') do |v|
     ENV['AT_SPI_REGISTRY_PATH'] = v
   end
