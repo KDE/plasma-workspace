@@ -236,6 +236,7 @@ private:
     KWayland::Client::PlasmaShellSurface *m_shellSurface;
     QPointer<QScreen> m_lastScreen;
     QPointer<QScreen> m_screenToFollow;
+    QMetaObject::Connection m_transientWindowVisibleWatcher;
 
     static const int STRUTSTIMERDELAY = 200;
 };

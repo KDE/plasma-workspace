@@ -30,6 +30,7 @@
 #include <QScreen>
 #include <QQmlEngine>
 #include <QQmlContext>
+#include <QGuiApplication>
 #include <QTimer>
 
 #include <kactioncollection.h>
@@ -613,6 +614,7 @@ void PanelView::showConfigurationInterface(Plasma::Applet *applet)
 void PanelView::restoreAutoHide()
 {
     bool autoHide = true;
+    disconnect(m_transientWindowVisibleWatcher);
 
     if (!edgeActivated()) {
         autoHide = false;
@@ -626,6 +628,14 @@ void PanelView::restoreAutoHide()
     else if (containment() && containment()->status() >= Plasma::Types::NeedsAttentionStatus &&
              containment()->status() != Plasma::Types::HiddenStatus) {
         autoHide = false;
+    } else {
+        for(QWindow *window: qApp->topLevelWindows()) {
+            if (window->transientParent() == this && window->isVisible()) {
+                m_transientWindowVisibleWatcher = connect(window, &QWindow::visibleChanged, this, &PanelView::restoreAutoHide);
+                autoHide = false;
+                break; //if multiple are open, we will re-evaluate this expression after the first closes
+            }
+        }
     }
 
     setAutoHideEnabled(autoHide);
