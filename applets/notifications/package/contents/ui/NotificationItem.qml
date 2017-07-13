@@ -159,6 +159,7 @@ MouseArea {
                 level: 4
                 elide: Text.ElideRight
                 wrapMode: Text.NoWrap
+                textFormat: Text.PlainText
             }
 
             PlasmaExtras.Heading {
