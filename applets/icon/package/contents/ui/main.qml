@@ -155,6 +155,7 @@ MouseArea {
         color: "white"
         elide: Text.ElideRight
         wrapMode: Text.WrapAtWordBoundaryOrAnywhere
+        textFormat: Text.PlainText
     }
 
     PlasmaCore.ToolTipArea {
@@ -162,5 +163,6 @@ MouseArea {
         mainText: plasmoid.title
         subText: plasmoid.nativeInterface.genericName !== mainText ? plasmoid.nativeInterface.genericName :""
         icon: plasmoid.icon
+        textFormat: Text.PlainText
     }
 }
