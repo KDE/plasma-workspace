@@ -243,4 +243,4 @@ void ContainmentConfigView::syncWallpaperObjects()
     m_currentWallpaperConfig = static_cast<KDeclarative::ConfigPropertyMap *>(wallpaperGraphicsObject->property("configuration").value<QObject *>());
 }
 
-#include "private/moc_containmentconfigview.cpp"
+#include "moc_containmentconfigview.cpp"
