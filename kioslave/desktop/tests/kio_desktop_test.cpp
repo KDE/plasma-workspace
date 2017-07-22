@@ -20,6 +20,7 @@
 #include <kdirlister.h>
 #include <QDesktopServices>
 #include <QStandardPaths>
+#include <QSignalSpy>
 #include <QTemporaryFile>
 #include <QTest>
 #include <kio/job.h>
@@ -111,48 +112,64 @@ private Q_SLOTS:
     void testRename_data()
     {
         QTest::addColumn<bool>("withDirListerCache");
-        QTest::addColumn<QString>("srcFile");
-        QTest::addColumn<QString>("destFile");
+        QTest::addColumn<QUrl>("srcUrl");
+        QTest::addColumn<QUrl>("destUrl");
 
-        const QString orig = "desktop:/" + m_testFileName;
-        const QString part = orig + ".part";
-        QTest::newRow("from orig to .part") << false << orig << part;
-        QTest::newRow("from .part to orig") << false << part << orig;
+        const QString str = "desktop:/" + m_testFileName;
+        const QUrl orig(str);
+        const QUrl part(str + ".part");
+        QTest::newRow("orig_to_part") << false << orig << part;
+        QTest::newRow("part_to_orig") << false << part << orig;
         // Warnings: all tests without dirlister cache should above this line
         // and all tests with it should be below - the cache stays forever once it exists.
-        QTest::newRow("from orig to .part, with cache") << true << orig << part;
-        QTest::newRow("from .part to orig, with cache (#218719)") << true << part << orig;
+        QTest::newRow("orig_to_part_with_cache") << true << orig << part;
+        QTest::newRow("part_to_orig_with_cache") << true << part << orig; // #218719
     }
 
     void testRename() // relies on testCopyToDesktop being run before
     {
         QFETCH(bool, withDirListerCache);
-        QFETCH(QString, srcFile);
-        QFETCH(QString, destFile);
+        QFETCH(QUrl, srcUrl);
+        QFETCH(QUrl, destUrl);
 
+        QScopedPointer<KDirLister> lister(nullptr);
         if (withDirListerCache) {
-            KDirLister lister;
-            lister.openUrl(QUrl(QStringLiteral("desktop:/")));
-            QEventLoop eventLoop;
-            connect(&lister, static_cast<void (KDirLister::*)()>(&KDirLister::completed), &eventLoop, &QEventLoop::quit);
-            eventLoop.exec(QEventLoop::ExcludeUserInputEvents);
+            lister.reset(new KDirLister);
+            lister->openUrl(QUrl(QStringLiteral("desktop:/")));
+            QSignalSpy spyCompleted(lister.data(), static_cast<void (KDirLister::*)()>(&KDirLister::completed));
+            spyCompleted.wait();
         }
 
-        const QUrl srcUrl = QUrl(srcFile);
-        const QUrl destUrl = QUrl(destFile);
+        org::kde::KDirNotify kdirnotify(QString(), QString(), QDBusConnection::sessionBus(), this);
+        QSignalSpy spyFilesAdded(&kdirnotify, &org::kde::KDirNotify::FilesAdded);
+        QSignalSpy spyFileRenamed(&kdirnotify, &org::kde::KDirNotify::FileRenamed);
+        QSignalSpy spyFileRenamedWithLocalPath(&kdirnotify, &org::kde::KDirNotify::FileRenamedWithLocalPath);
 
         const QString srcFilePath(m_desktopPath + srcUrl.path());
         QVERIFY(QFile::exists(srcFilePath));
         const QString destFilePath(m_desktopPath + destUrl.path());
         QVERIFY(!QFile::exists(destFilePath));
 
-        KIO::CopyJob* job = KIO::move(srcUrl, destUrl, KIO::HideProgressInfo);
+        KIO::Job* job = KIO::rename(srcUrl, destUrl, KIO::HideProgressInfo);
         job->setUiDelegate(0);
         QVERIFY(job);
         bool ok = job->exec();
         QVERIFY(ok);
         QVERIFY(!QFile::exists(srcFilePath));
         QVERIFY(QFile::exists(destFilePath));
+
+        // kio_desktop's rename() calls org::kde::KDirNotify::emitFileRenamedWithLocalPath
+        QTRY_COMPARE(spyFileRenamed.count(), 1);
+        QTRY_COMPARE(spyFileRenamedWithLocalPath.count(), 1);
+        // and then desktopnotifier notices something changed and emits KDirNotify::FilesAdded
+        QTRY_VERIFY(spyFilesAdded.count() >= 1); // can be 3, depending on kdirwatch's behaviour in desktopnotifier
+
+        // check that KDirLister now has the correct item (#382341)
+        if (lister) {
+            const KFileItem fileItem = lister->findByUrl(destUrl);
+            QVERIFY(!fileItem.isNull());
+            QCOMPARE(fileItem.targetUrl(), QUrl::fromLocalFile(destFilePath));
+        }
     }
 
 private:

@@ -113,7 +113,15 @@ void DesktopProtocol::checkLocalInstall()
 bool DesktopProtocol::rewriteUrl(const QUrl &url, QUrl &newUrl)
 {
     newUrl.setScheme(QStringLiteral("file"));
-    newUrl.setPath(QStandardPaths::writableLocation(QStandardPaths::DesktopLocation) + url.path());
+    QString desktopPath = QStandardPaths::writableLocation(QStandardPaths::DesktopLocation);
+    if (desktopPath.endsWith('/')) {
+        desktopPath.chop(1);
+    }
+    QString filePath = desktopPath + url.path();
+    if (filePath.endsWith('/')) {
+        filePath.chop(1); // ForwardingSlaveBase always appends a '/'
+    }
+    newUrl.setPath(filePath);
     return true;
 }
 
