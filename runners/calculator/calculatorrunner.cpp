@@ -314,7 +314,7 @@ QString CalculatorRunner::calculate(const QString& term, bool *isApproximate)
 
     //ECMAScript has issues with the last digit in simple rational computations
     //This script rounds off the last digit; see bug 167986
-    QString roundedResultString = eng.evaluate(QStringLiteral("var exponent = 14-(1+Math.floor(Math.log(Math.abs(result))/Math.log(10)));\
+    QString roundedResultString = eng.evaluate(QStringLiteral("var exponent = 14-(1+Math.max(0,Math.floor(Math.log(Math.abs(result))/Math.log(10))));\
                                                 var order=Math.pow(10,exponent);\
                                                 (order > 0? Math.round(result*order)/order : 0)")).toString();
 
