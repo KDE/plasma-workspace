@@ -107,7 +107,8 @@ void LauncherTasksModel::Private::init()
             q->dataChanged(q->index(0, 0),  q->index(launchersOrder.count() - 1, 0),
                 QVector<int>{Qt::DisplayRole, Qt::DecorationRole,
                 AbstractTasksModel::AppId, AbstractTasksModel::AppName,
-                AbstractTasksModel::GenericName, AbstractTasksModel::LauncherUrl});
+                AbstractTasksModel::GenericName, AbstractTasksModel::LauncherUrl,
+                AbstractTasksModel::LauncherUrlWithoutIcon});
         }
     );
 

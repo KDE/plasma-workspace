@@ -279,4 +279,4 @@ void CurrentContainmentActionsModel::save()
     }
 }
 
-#include "private/moc_currentcontainmentactionsmodel.cpp"
+#include "moc_currentcontainmentactionsmodel.cpp"
