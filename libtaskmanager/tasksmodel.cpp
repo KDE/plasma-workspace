@@ -1353,7 +1353,7 @@ bool TasksModel::move(int row, int newPos)
         // When using launch-in-place sorting, launcher-backed window tasks act as launchers.
         } else if ((d->launchInPlace || !d->separateLaunchers)
             && idx.data(AbstractTasksModel::IsWindow).toBool()) {
-            const QUrl &launcherUrl = idx.data(AbstractTasksModel::LauncherUrl).toUrl();
+            const QUrl &launcherUrl = idx.data(AbstractTasksModel::LauncherUrlWithoutIcon).toUrl();
             const int launcherPos = launcherPosition(launcherUrl);
 
             if (launcherPos != -1) {
