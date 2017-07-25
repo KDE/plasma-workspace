@@ -57,8 +57,6 @@ public:
 
     QList<WId> ids() { return m_menuServices.keys(); }
 
-    void fakeUnityAboutToShow(const QString &service, const QDBusObjectPath &menuObjectPath);
-
 Q_SIGNALS:
     void WindowRegistered(WId id, const QString& service, const QDBusObjectPath&);
     void WindowUnregistered(WId id);
@@ -70,7 +68,6 @@ public Q_SLOTS:
 
 private Q_SLOTS:
     void slotServiceUnregistered(const QString& service);
-    void slotLayoutUpdated(uint revision, int parentId);
 
 private:
     QDBusServiceWatcher* m_serviceWatcher;

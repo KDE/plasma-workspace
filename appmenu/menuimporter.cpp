@@ -46,16 +46,11 @@ MenuImporter::MenuImporter(QObject* parent)
     m_serviceWatcher->setConnection(QDBusConnection::sessionBus());
     m_serviceWatcher->setWatchMode(QDBusServiceWatcher::WatchForUnregistration);
     connect(m_serviceWatcher, &QDBusServiceWatcher::serviceUnregistered, this, &MenuImporter::slotServiceUnregistered);
-
-    QDBusConnection::sessionBus().connect(QString(), QString(), QStringLiteral("com.canonical.dbusmenu"), QStringLiteral("LayoutUpdated"),
-                                          this, SLOT(slotLayoutUpdated(uint,int)));
 }
 
 MenuImporter::~MenuImporter()
 {
     QDBusConnection::sessionBus().unregisterService(DBUS_SERVICE);
-    QDBusConnection::sessionBus().disconnect(QString(), QString(), QStringLiteral("com.canonical.dbusmenu"), QStringLiteral("LayoutUpdated"),
-                                             this, SLOT(slotLayoutUpdated(uint,int)));
 }
 
 bool MenuImporter::connectToBus()
@@ -119,42 +114,4 @@ void MenuImporter::slotServiceUnregistered(const QString& service)
     m_windowClasses.remove(id);
     emit WindowUnregistered(id);
     m_serviceWatcher->removeWatchedService(service);
-}
-
-void MenuImporter::slotLayoutUpdated(uint /*revision*/, int parentId)
-{
-    // Fake unity-panel-service weird behavior of calling aboutToShow on
-    // startup. This is necessary for Firefox menubar to work correctly at
-    // startup.
-    // See: https://bugs.launchpad.net/plasma-idget-menubar/+bug/878165
-
-    if (parentId == 0) { //root menu
-        fakeUnityAboutToShow(message().service(), QDBusObjectPath(message().path()));
-    }
-}
-
-void MenuImporter::fakeUnityAboutToShow(const QString &service, const QDBusObjectPath &menuObjectPath)
-{
-    QDBusMessage msg = QDBusMessage::createMethodCall(service, menuObjectPath.path(),
-                                                      QStringLiteral("com.canonical.dbusmenu"),
-                                                      QStringLiteral("GetLayout"));
-    msg.setArguments({0, 1, QStringList()});
-
-    QDBusPendingReply<uint, DBusMenuLayoutItem> reply = QDBusConnection::sessionBus().asyncCall(msg);
-    QDBusPendingCallWatcher *watcher = new QDBusPendingCallWatcher(reply, this);
-    QObject::connect(watcher, &QDBusPendingCallWatcher::finished, this, [=](QDBusPendingCallWatcher *watcher) {
-        QDBusPendingReply<uint, DBusMenuLayoutItem> reply = *watcher;
-        if (reply.isError()) {
-            qWarning() << "Call to GetLayout failed:" << reply.error().message();
-        } else {
-            const DBusMenuLayoutItem &root = reply.argumentAt<1>();
-
-            for (const auto &item : root.children) {
-                QDBusMessage msg = QDBusMessage::createMethodCall(service, menuObjectPath.path(), QStringLiteral("com.canonical.dbusmenu"), QStringLiteral("AboutToShow"));
-                msg.setArguments({item.id});
-                QDBusConnection::sessionBus().asyncCall(msg);
-            }
-        }
-        watcher->deleteLater();
-    });
 }
