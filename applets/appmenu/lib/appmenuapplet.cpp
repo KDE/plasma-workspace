@@ -182,7 +182,7 @@ void AppMenuApplet::trigger(QQuickItem *ctx, int idx)
         //pre 5.8.0 QQuickWindow code is "item->grabMouse(); sendEvent(item, mouseEvent)"
         //post 5.8.0 QQuickWindow code is sendEvent(item, mouseEvent); item->grabMouse()
         if (QVersionNumber::fromString(qVersion()) > QVersionNumber(5, 8, 0)) {
-            QTimer::singleShot(0, this, ungrabMouseHack);
+            QTimer::singleShot(0, ctx, ungrabMouseHack);
         }
         else {
             ungrabMouseHack();
