@@ -95,7 +95,7 @@ PlasmaCore.ColorScope {
                 from: ""
                 to: "onOtherSession"
 
-                PropertyAnimation { id: stateChangeAnimation; properties: "y"; duration: 300; easing: Easing.InQuad}
+                PropertyAnimation { id: stateChangeAnimation; properties: "y"; duration: 300; easing.type: Easing.InQuad}
                 PropertyAnimation { properties: "opacity"; duration: 300}
 
                 onRunningChanged: {
