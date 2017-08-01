@@ -282,8 +282,6 @@ MouseArea {
                     wrapMode: Text.Wrap
                     textFormat: TextEdit.RichText
 
-                    onLinkActivated: Qt.openUrlExternally(link)
-
                     // ensure selecting text scrolls the view as needed...
                     onCursorRectangleChanged: {
                         var flick = bodyTextScrollArea.flickableItem
@@ -297,23 +295,33 @@ MouseArea {
                         anchors.fill: parent
                         acceptedButtons: Qt.RightButton | Qt.LeftButton
 
-                        onClicked: {
-                            if (mouse.button == Qt.RightButton)
+                        onPressed: {
+                            if (mouse.button === Qt.RightButton) {
                                 contextMenu.open(mouse.x, mouse.y)
-                            else {
-                                notificationItem.clicked(mouse)
+                            }
+                        }
+
+                        onClicked: {
+                            if (mouse.button === Qt.LeftButton) {
+                                var link = bodyText.linkAt(mouse.x, mouse.y)
+                                if (link) {
+                                    Qt.openUrlExternally(link)
+                                } else {
+                                    notificationItem.clicked(mouse)
+                                }
                             }
                         }
 
                         PlasmaComponents.ContextMenu {
                             id: contextMenu
-                            visualParent: parent
 
                             PlasmaComponents.MenuItem {
                                 text: i18n("Copy")
+                                icon: "edit-copy"
                                 onClicked: {
                                     bodyText.selectAll()
                                     bodyText.copy()
+                                    bodyText.deselect()
                                 }
                             }
                         }
