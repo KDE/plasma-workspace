@@ -26,6 +26,7 @@
 #include <QQmlExpression>
 #include <QQmlProperty>
 
+#include <KAuthorized>
 #include <klocalizedstring.h>
 #include <KNewStuff3/KNS3/DownloadDialog>
 #include <KWindowSystem>
@@ -208,10 +209,14 @@ QList <QObject *>  WidgetExplorer::widgetsMenuActions()
 {
     QList <QObject *> actionList;
 
-    WidgetAction *action = new WidgetAction(QIcon::fromTheme(QStringLiteral("applications-internet")),
-                                  i18n("Download New Plasma Widgets"), this);
-    connect(action, &QAction::triggered, this, &WidgetExplorer::downloadWidgets);
-    actionList << action;
+    WidgetAction *action = nullptr;
+
+    if (KAuthorized::authorize(QStringLiteral("ghns"))) {
+        action = new WidgetAction(QIcon::fromTheme(QStringLiteral("applications-internet")),
+                                      i18n("Download New Plasma Widgets"), this);
+        connect(action, &QAction::triggered, this, &WidgetExplorer::downloadWidgets);
+        actionList << action;
+    }
 
     action = new WidgetAction(this);
     action->setSeparator(true);
