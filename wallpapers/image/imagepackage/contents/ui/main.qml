@@ -19,6 +19,7 @@
  */
 
 import QtQuick 2.5
+import QtGraphicalEffects 1.0
 import org.kde.plasma.wallpapers.image 2.0 as Wallpaper
 import org.kde.plasma.core 2.0 as PlasmaCore
 
@@ -28,7 +29,9 @@ Item {
     readonly property string configuredImage: wallpaper.configuration.Image
     readonly property string modelImage: imageWallpaper.wallpaperPath
     property Item currentImage: imageB
+    property Item currentBlurBackground: blurBackgroundB
     property Item otherImage: imageA
+    property Item otherBlurBackground: blurBackgroundA
     readonly property int fillMode: wallpaper.configuration.FillMode
     property bool ready: false
 
@@ -63,6 +66,7 @@ Item {
         // Prevent source size change when image has just been setup anyway
         sourceSizeTimer.stop()
         currentImage.opacity = 0
+        currentBlurBackground.opacity = 0
         otherImage.z = 0
         currentImage.z = 1
 
@@ -84,6 +88,7 @@ Item {
         sourceSizeTimer.stop()
         currentImage.source = modelImage
         currentImage.opacity = 0
+        currentBlurBackground.opacity = 0
         otherImage.z = 0
         currentImage.fillMode = fillMode
         currentImage.z = 1
@@ -107,6 +112,7 @@ Item {
         swapImages()
         currentImage.sourceSize = Qt.size(root.width, root.height)
         currentImage.opacity = 0
+        currentBlurBackground.opacity = 0
         currentImage.source = otherImage.source
         otherImage.z = 0
         currentImage.z = 1
@@ -126,10 +132,14 @@ Item {
     function swapImages() {
         if (currentImage == imageA) {
             currentImage = imageB
+            currentBlurBackground = blurBackgroundB
             otherImage = imageA
+            otherBlurBackground = blurBackgroundA
         } else {
             currentImage = imageA
+            currentBlurBackground = blurBackgroundA
             otherImage = imageB
+            otherBlurBackground = blurBackgroundB
         }
     }
 
@@ -174,6 +184,21 @@ Item {
 
         ParallelAnimation {
             OpacityAnimator {
+                target: currentBlurBackground
+                from: 0
+                to: 1
+                duration: fadeOtherAnimator.duration
+            }
+            OpacityAnimator {
+                target: otherBlurBackground
+                from: 1
+                // cannot disable an animation individually, so we just fade from 1 to 1
+                to: enabled ? 0 : 1
+
+                //use configured duration if animations are enabled
+                duration: units.longDuration && wallpaper.configuration.TransitionAnimationDuration
+            }
+            OpacityAnimator {
                 target: currentImage
                 from: 0
                 to: 1
@@ -210,6 +235,48 @@ Item {
     }
 
     Image {
+        id: blurBackgroundSourceA
+        visible: wallpaper.configuration.Blur
+        anchors.fill: parent
+        asynchronous: true
+        cache: false
+        fillMode: Image.PreserveAspectCrop
+        source: imageA.source
+        z: -1
+    }
+
+    GaussianBlur {
+        id: blurBackgroundA
+        visible: wallpaper.configuration.Blur
+        anchors.fill: parent
+        source: blurBackgroundSourceA
+        radius: 32
+        samples: 65
+        z: imageA.z
+    }
+
+    Image {
+        id: blurBackgroundSourceB
+        visible: wallpaper.configuration.Blur
+        anchors.fill: parent
+        asynchronous: true
+        cache: false
+        fillMode: Image.PreserveAspectCrop
+        source: imageB.source
+        z: -1
+    }
+
+    GaussianBlur {
+        id: blurBackgroundB
+        visible: wallpaper.configuration.Blur
+        anchors.fill: parent
+        source: blurBackgroundSourceB
+        radius: 32
+        samples: 65
+        z: imageB.z
+    }
+
+    Image {
         id: imageA
         anchors.fill: parent
         asynchronous: true
@@ -217,6 +284,7 @@ Item {
         fillMode: wallpaper.configuration.FillMode
         autoTransform: true //new API in Qt 5.5, do not backport into Plasma 5.4.
     }
+
     Image {
         id: imageB
         anchors.fill: parent

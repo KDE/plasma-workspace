@@ -34,6 +34,7 @@ ColumnLayout {
     property alias cfg_Color: colorDialog.color
     property string cfg_Image
     property int cfg_FillMode
+    property alias cfg_Blur: blurCheckBox.checked
     property var cfg_SlidePaths: ""
     property int cfg_SlideInterval: 0
 
@@ -124,6 +125,24 @@ ColumnLayout {
                     }
                 }
             }
+        }
+    }
+
+    Row {
+        //x: formAlignment - positionLabel.paintedWidth
+        spacing: units.largeSpacing / 2
+        QtControls.Label {
+            id: blurLabel
+            width: formAlignment - units.largeSpacing
+            anchors {
+                verticalCenter: blurCheckBox.verticalCenter
+            }
+            horizontalAlignment: Text.AlignRight
+        }
+        QtControls.CheckBox {
+            id: blurCheckBox
+            text: i18nd("plasma_applet_org.kde.image", "Use blur background filling")
+            checked: true
         }
     }
 

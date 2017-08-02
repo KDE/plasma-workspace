@@ -19,6 +19,7 @@
 
 import QtQuick 2.0
 import QtQuick.Controls.Private 1.0
+import QtGraphicalEffects 1.0
 import org.kde.kquickcontrolsaddons 2.0
 import org.kde.plasma.components 2.0 as PlasmaComponents
 
@@ -59,6 +60,23 @@ MouseArea {
                 icon: "view-preview"
                 visible: !walliePreview.visible
             }
+
+            QPixmapItem {
+                id: blurBackgroundSource
+                visible: cfg_Blur
+                anchors.fill: parent
+                smooth: true
+                pixmap: model.screenshot
+                fillMode: QPixmapItem.PreserveAspectCrop
+            }
+
+            FastBlur {
+                visible: cfg_Blur
+                anchors.fill: parent
+                source: blurBackgroundSource
+                radius: 4
+            }
+
             QPixmapItem {
                 id: walliePreview
                 anchors.fill: parent
