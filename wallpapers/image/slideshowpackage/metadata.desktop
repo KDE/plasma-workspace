@@ -77,6 +77,7 @@ Name[wa]=Diaporama
 Name[x-test]=xxSlideshowxx
 Name[zh_CN]=幻灯显示
 Name[zh_TW]=投影播放
+Comment=Slideshow wallpaper
 
 Type=Service
 

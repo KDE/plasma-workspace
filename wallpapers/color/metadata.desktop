@@ -50,6 +50,7 @@ Name[uk]=Звичайний колір
 Name[x-test]=xxPlain Colorxx
 Name[zh_CN]=纯色
 Name[zh_TW]=普通顏色
+Comment=Plain color wallpaper
 Type=Service
 
 X-KDE-ServiceTypes=Plasma/Wallpaper
