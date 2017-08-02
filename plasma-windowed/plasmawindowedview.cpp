@@ -135,7 +135,7 @@ void PlasmaWindowedView::setApplet(Plasma::Applet *applet)
         });
         m_statusNotifier->contextMenu()->addAction(closeAction);
 
-        connect(m_statusNotifier.data(), &KStatusNotifierItem::activateRequested, this, [this](bool active, const QPoint& /*pos*/){
+        connect(m_statusNotifier.data(), &KStatusNotifierItem::activateRequested, this, [this](bool /*active*/, const QPoint& /*pos*/){
             if (isVisible() && isActive()) {
                 hide();
             } else {
