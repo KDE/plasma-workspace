@@ -62,6 +62,7 @@ public:
     QHash<WId, KWindowInfo*> windowInfoCache;
     QHash<WId, AppData> appDataCache;
     QHash<WId, QRect> delegateGeometries;
+    QSet<WId> usingFallbackIcon;
     WId activeWindow = -1;
     KSharedConfig::Ptr rulesConfig;
     KDirWatch *configWatcher = nullptr;
@@ -251,6 +252,7 @@ void XWindowTasksModel::Private::removeWindow(WId window)
         transientsDemandingAttention.remove(window);
         windowInfoCache.remove(window);
         appDataCache.remove(window);
+        usingFallbackIcon.remove(window);
         delegateGeometries.remove(window);
         q->endRemoveRows();
     } else { // Could be a transient.
@@ -329,8 +331,12 @@ void XWindowTasksModel::Private::windowChanged(WId window, NET::Properties prope
         changedRoles << Qt::DisplayRole << Qt::DecorationRole << AppId << AppName << GenericName << LauncherUrl << AppPid;
     }
 
-    if ((properties & NET::WMIcon) && !changedRoles.contains(Qt::DecorationRole)) {
-        changedRoles << Qt::DecorationRole;
+    if ((properties & NET::WMIcon) && usingFallbackIcon.contains(window)) {
+        wipeAppDataCache = true;
+
+        if (!changedRoles.contains(Qt::DecorationRole)) {
+            changedRoles << Qt::DecorationRole;
+        }
     }
 
     // FIXME TODO: It might be worth keeping track of which windows were demanding
@@ -374,6 +380,7 @@ void XWindowTasksModel::Private::windowChanged(WId window, NET::Properties prope
 
     if (wipeAppDataCache) {
         appDataCache.remove(window);
+        usingFallbackIcon.remove(window);
     }
 
     if (!changedRoles.isEmpty()) {
@@ -452,6 +459,7 @@ QIcon XWindowTasksModel::Private::icon(WId window)
     icon.addPixmap(KWindowSystem::icon(window, KIconLoader::SizeLarge, KIconLoader::SizeLarge, false));
 
     appDataCache[window].icon = icon;
+    usingFallbackIcon.insert(window);
 
     return icon;
 }
