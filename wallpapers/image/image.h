@@ -38,6 +38,7 @@
 
 class QPropertyAnimation;
 class QFileDialog;
+class QQuickItem;
 
 class KDirWatch;
 class KJob;
@@ -82,7 +83,7 @@ class Image : public QObject, public QQmlParserStatus
         Q_INVOKABLE void addSlidePath(const QString &path);
         Q_INVOKABLE void removeSlidePath(const QString &path);
 
-        Q_INVOKABLE void getNewWallpaper();
+        Q_INVOKABLE void getNewWallpaper(QQuickItem *ctx = nullptr);
         Q_INVOKABLE void showFileDialog();
 
         Q_INVOKABLE void addUsersWallpaper(const QString &file);

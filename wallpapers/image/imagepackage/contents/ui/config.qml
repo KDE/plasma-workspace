@@ -353,7 +353,7 @@ ColumnLayout {
             iconName: "get-hot-new-stuff"
             text: i18nd("plasma_applet_org.kde.image","Get New Wallpapers...")
             visible: KAuthorized.authorize("ghns")
-            onClicked: imageWallpaper.getNewWallpaper();
+            onClicked: imageWallpaper.getNewWallpaper(this);
         }
     }
 }

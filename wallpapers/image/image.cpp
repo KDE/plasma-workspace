@@ -37,6 +37,8 @@
 #include <QTimer>
 #include <QMimeDatabase>
 #include <QImageReader>
+#include <QQuickItem>
+#include <QQuickWindow>
 
 #include <QDebug>
 #include <KDirWatch>
@@ -589,7 +591,7 @@ void Image::backgroundsFound(const QStringList &paths, const QString &token)
     }
 }
 
-void Image::getNewWallpaper()
+void Image::getNewWallpaper(QQuickItem *ctx)
 {
     if (!m_newStuffDialog) {
         m_newStuffDialog = new KNS3::DownloadDialog( QString::fromLatin1("wallpaper.knsrc") );
@@ -597,6 +599,13 @@ void Image::getNewWallpaper()
         strong->setTitle(i18n("Download Wallpapers"));
         connect(m_newStuffDialog.data(), &QDialog::accepted, this, &Image::newStuffFinished);
     }
+
+    if (ctx && ctx->window()) {
+        m_newStuffDialog->setWindowModality(Qt::WindowModal);
+        m_newStuffDialog->winId(); // so it creates the windowHandle();
+        m_newStuffDialog->windowHandle()->setTransientParent(ctx->window());
+    }
+
     m_newStuffDialog.data()->show();
 }
 
