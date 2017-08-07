@@ -26,6 +26,7 @@ import QtQuick.Window 2.0 // for Screen
 import org.kde.plasma.core 2.0 as Plasmacore
 import org.kde.plasma.wallpapers.image 2.0 as Wallpaper
 import org.kde.kquickcontrolsaddons 2.0
+import org.kde.kconfig 1.0 // for KAuthorized
 
 ColumnLayout {
     id: root
@@ -351,6 +352,7 @@ ColumnLayout {
         QtControls.Button {
             iconName: "get-hot-new-stuff"
             text: i18nd("plasma_applet_org.kde.image","Get New Wallpapers...")
+            visible: KAuthorized.authorize("ghns")
             onClicked: imageWallpaper.getNewWallpaper();
         }
     }
