@@ -41,14 +41,18 @@
 
 int main(int argc, char *argv[])
 {
-//    Devive pixel ratio has some problems in plasmashell currently.
-//     - dialog continually expands (347951)
-//     - Text element text is screwed (QTBUG-42606)
-//     - Panel struts (350614)
-//  This variable should possibly be removed when all are fixed
+    //Plasma scales itself to font DPI
+    //on X, where we don't have compositor scaling, this generally works fine.
+    //also there are bugs on older Qt, especially when it comes to fractional scaling
+    //there's advantages to disabling, and (other than small context menu icons) few advantages in enabling
 
-    qunsetenv("QT_DEVICE_PIXEL_RATIO");
-    QCoreApplication::setAttribute(Qt::AA_DisableHighDpiScaling);
+    //On wayland, it's different. Everything is simpler as all co-ordinates are in the same co-ordinate system
+    //we don't have fractional scaling on the client so don't hit most the remaining bugs and
+    //even if we don't use Qt scaling the compositor will try to scale us anyway so we have no choice
+    if (KWindowSystem::isPlatformX11()) {
+        qunsetenv("QT_DEVICE_PIXEL_RATIO");
+        QCoreApplication::setAttribute(Qt::AA_DisableHighDpiScaling);
+    }
 
     QQuickWindow::setDefaultAlphaBuffer(true);
 
