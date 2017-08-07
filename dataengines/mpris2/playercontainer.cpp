@@ -104,10 +104,6 @@ static PlayerContainer::Cap capFromName(const QString& capName)
         return PlayerContainer::CanGoNext;
     else if (capName == QLatin1String("CanGoPrevious"))
         return PlayerContainer::CanGoPrevious;
-    else if (capName == QLatin1String("CanPlay"))
-        return PlayerContainer::CanPlay;
-    else if (capName == QLatin1String("CanPause"))
-        return PlayerContainer::CanPause;
     return PlayerContainer::NoCaps;
 }
 
