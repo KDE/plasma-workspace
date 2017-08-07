@@ -27,6 +27,7 @@
 
 #include <KAboutData>
 #include <KQuickAddons/QtQuickSettings>
+#include <KWindowSystem>
 
 #include <kdbusservice.h>
 #include <klocalizedstring.h>
