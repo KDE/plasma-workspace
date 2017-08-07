@@ -76,3 +76,6 @@ target_link_libraries( kuiserver5 kdeinit_kuiserver5 )
 install(TARGETS kuiserver5 ${KDE_INSTALL_TARGETS_DEFAULT_ARGS} )
 
 install( FILES kuiserver.desktop  DESTINATION  ${KDE_INSTALL_KSERVICES5DIR} )
+
+# contains list of debug categories, for kdebugsettings
+install(FILES kuiserver.categories DESTINATION ${KDE_INSTALL_CONFDIR})

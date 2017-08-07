@@ -29,7 +29,7 @@
 
 #include <QCommandLineParser>
 
-Q_LOGGING_CATEGORY(KUISERVER, "kuiserver")
+Q_LOGGING_CATEGORY(KUISERVER, "kuiserver", QtInfoMsg)
 
 extern "C" Q_DECL_EXPORT int kdemain(int argc, char **argv)
 {
