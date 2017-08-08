@@ -131,6 +131,8 @@ fi
 
 if test "$kcmfonts_general_forcefontdpi" -ne 0; then
     export QT_WAYLAND_FORCE_DPI=$kcmfonts_general_forcefontdpi
+else
+    export QT_WAYLAND_FORCE_DPI=96
 fi
 
 # Source scripts found in <config locations>/plasma-workspace/env/*.sh
