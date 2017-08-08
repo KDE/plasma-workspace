@@ -54,6 +54,9 @@ fi
 #for QtQuickControlsStyle and Kirigami
 export QT_QUICK_CONTROLS_STYLE=org.kde.desktop
 
+#In wayland we want Plasma to use Qt's scaling
+export PLASMA_USE_QT_SCALING=1
+
 # Activate the kde font directories.
 #
 # There are 4 directories that may be used for supplying fonts for KDE.

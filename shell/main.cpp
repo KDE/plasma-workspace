@@ -27,7 +27,6 @@
 
 #include <KAboutData>
 #include <KQuickAddons/QtQuickSettings>
-#include <KWindowSystem>
 
 #include <kdbusservice.h>
 #include <klocalizedstring.h>
@@ -50,7 +49,7 @@ int main(int argc, char *argv[])
     //On wayland, it's different. Everything is simpler as all co-ordinates are in the same co-ordinate system
     //we don't have fractional scaling on the client so don't hit most the remaining bugs and
     //even if we don't use Qt scaling the compositor will try to scale us anyway so we have no choice
-    if (KWindowSystem::isPlatformX11()) {
+    if (!qEnvironmentVariableIsSet("PLASMA_USE_QT_SCALING")) {
         qunsetenv("QT_DEVICE_PIXEL_RATIO");
         QCoreApplication::setAttribute(Qt::AA_DisableHighDpiScaling);
     }
