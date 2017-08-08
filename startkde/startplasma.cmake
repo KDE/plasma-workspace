@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-#  DEFAULT KDE STARTUP SCRIPT ( @PROJECT_VERSION@ )
+#  DEFAULT Plasma STARTUP SCRIPT ( @PROJECT_VERSION@ )
 #
 
 # Boot sequence:

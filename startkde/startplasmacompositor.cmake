@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-#  DEFAULT KDE STARTUP SCRIPT ( @PROJECT_VERSION@ )
+#  DEFAULT Plasma STARTUP SCRIPT ( @PROJECT_VERSION@ )
 #
 
 # in case we have been started with full pathname spec without being in PATH
