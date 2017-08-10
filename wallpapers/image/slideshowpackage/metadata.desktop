@@ -78,6 +78,12 @@ Name[x-test]=xxSlideshowxx
 Name[zh_CN]=幻灯显示
 Name[zh_TW]=投影播放
 Comment=Slideshow wallpaper
+Comment[ca]=Passi de diapositives al fons d'escriptori
+Comment[ca@valencia]=Passe de diapositives al fons d'escriptori
+Comment[nl]=Achtergrond met diavoorstelling
+Comment[sv]=Skrivbordsunderlägg med bildspel
+Comment[uk]=Тло у форматі показу слайдів
+Comment[x-test]=xxSlideshow wallpaperxx
 
 Type=Service
 

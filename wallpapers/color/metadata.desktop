@@ -51,6 +51,12 @@ Name[x-test]=xxPlain Colorxx
 Name[zh_CN]=纯色
 Name[zh_TW]=普通顏色
 Comment=Plain color wallpaper
+Comment[ca]=Fons d'escriptori en color llis
+Comment[ca@valencia]=Fons d'escriptori en color llis
+Comment[nl]=Vlakke kleur achtergrond
+Comment[sv]=Skrivbordsunderlägg med enkel färg
+Comment[uk]=Звичайне одноколірне тло
+Comment[x-test]=xxPlain color wallpaperxx
 Type=Service
 
 X-KDE-ServiceTypes=Plasma/Wallpaper
