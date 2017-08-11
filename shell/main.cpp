@@ -60,6 +60,10 @@ int main(int argc, char *argv[])
 
     QApplication app(argc, argv);
 
+    // The executable's path is added to the library/plugin paths.
+    // This does not make much sense for plasmashell.
+    app.removeLibraryPath(QCoreApplication::applicationDirPath());
+
     KQuickAddons::QtQuickSettings::init();
 
     KAboutData aboutData(QStringLiteral("plasmashell"),
