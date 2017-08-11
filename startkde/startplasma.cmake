@@ -52,6 +52,7 @@ fi
 #Set the QtQuickControls style to our own: for QtQuickControls1
 #it will fall back to Desktop, while it will use our own org.kde.desktop
 #for QtQuickControlsStyle and Kirigami
+export QT_QUICK_CONTROLS_1_STYLE=Desktop
 export QT_QUICK_CONTROLS_STYLE=org.kde.desktop
 
 #In wayland we want Plasma to use Qt's scaling
