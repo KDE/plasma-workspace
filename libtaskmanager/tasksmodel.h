@@ -769,8 +769,8 @@ public:
     Q_INVOKABLE void requestToggleGrouping(const QModelIndex &index);
 
     /**
-     * Moves a (top-level) task to a new position in the list. The insert
-     * position is bounded to the list start and end.
+     * Moves a task to a new position in the list. The insert position is
+     * is bounded to the list start and end.
      *
      * syncLaunchers() should be called after a set of move operations to
      * update the launcherList property to reflect the new order.
@@ -784,7 +784,8 @@ public:
      * @param index An index in this tasks model.
      * @param newPos The new list position to move the task to.
      */
-    Q_INVOKABLE bool move(int row, int newPos);
+    Q_INVOKABLE bool move(int row, int newPos,
+        const QModelIndex &parent = QModelIndex());
 
     /**
      * Updates the launcher list to reflect the new order after calls to

@@ -1430,9 +1430,9 @@ void TasksModel::requestToggleGrouping(const QModelIndex &index)
     }
 }
 
-bool TasksModel::move(int row, int newPos)
+bool TasksModel::move(int row, int newPos, const QModelIndex &parent)
 {
-    if (d->sortMode != SortManual || row == newPos || newPos < 0 || newPos >= rowCount()) {
+    if (d->sortMode != SortManual || row == newPos || newPos < 0 || newPos >= rowCount(parent)) {
         return false;
     }
 
@@ -1523,7 +1523,7 @@ bool TasksModel::move(int row, int newPos)
 
         endMoveRows();
     } else {
-        beginMoveRows(QModelIndex(), row, row, QModelIndex(), (newPos > row) ? newPos + 1 : newPos);
+        beginMoveRows(parent, row, row, parent, (newPos > row) ? newPos + 1 : newPos);
 
         // Translate to sort map indices.
         const QModelIndex &groupingRowIndex = mapToSource(index(row, 0));
@@ -1535,7 +1535,8 @@ bool TasksModel::move(int row, int newPos)
         d->sortedPreFilterRows.move(row, newPos);
 
         // If we moved a group parent, consolidate sort map for children.
-        if (groupMode() != GroupDisabled && d->groupingProxyModel->rowCount(groupingRowIndex)) {
+        if (!parent.isValid() && groupMode() != GroupDisabled
+            && d->groupingProxyModel->rowCount(groupingRowIndex)) {
             d->consolidateManualSortMapForGroup(groupingRowIndex);
         }
 
