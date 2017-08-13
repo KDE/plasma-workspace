@@ -163,7 +163,6 @@ add_subdirectory(kuiserver)
 add_subdirectory(menu)
 add_subdirectory(phonon)
 add_subdirectory(solidautoeject)
-add_subdirectory(drkonqi)
 
 ecm_optional_add_subdirectory(xembed-sni-proxy)
 
