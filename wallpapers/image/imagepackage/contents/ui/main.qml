@@ -193,8 +193,8 @@ Item {
         }
         ScriptAction {
             script: {
-                otherImage.fillMode = fillMode;
                 otherImage.source = "";
+                otherImage.fillMode = fillMode;
             }
         }
     }
