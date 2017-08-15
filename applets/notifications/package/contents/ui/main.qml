@@ -55,8 +55,6 @@ MouseEventListener {
     //notifications + jobs
     property int totalCount: (notifications ? notifications.count : 0) + (jobs ? jobs.count : 0)
 
-    property Item notificationIcon
-
     Plasmoid.switchWidth: units.gridUnit * 20
     Plasmoid.switchHeight: units.gridUnit * 30
 
@@ -81,12 +79,7 @@ MouseEventListener {
         }
     }
 
-    Plasmoid.compactRepresentation: Component {
-        NotificationIcon {
-            id: notificationIcon
-            Component.onCompleted: notificationsApplet.notificationIcon = notificationIcon
-        }
-    }
+    Plasmoid.compactRepresentation: NotificationIcon { }
 
     hoverEnabled: !UiProperties.touchInput
 
