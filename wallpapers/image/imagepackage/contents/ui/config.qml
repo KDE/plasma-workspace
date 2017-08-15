@@ -27,6 +27,7 @@ import org.kde.plasma.core 2.0 as Plasmacore
 import org.kde.plasma.wallpapers.image 2.0 as Wallpaper
 import org.kde.kquickcontrolsaddons 2.0
 import org.kde.kconfig 1.0 // for KAuthorized
+import org.kde.draganddrop 2.0 as DragDrop
 
 ColumnLayout {
     id: root
@@ -326,10 +327,32 @@ ColumnLayout {
         }
     }
 
-    Loader {
+    DragDrop.DropArea {
         Layout.fillWidth: true
         Layout.fillHeight: true
-        sourceComponent: (configDialog.currentWallpaper == "org.kde.image") ? thumbnailsComponent : foldersComponent
+
+        onDragEnter: {
+            if (!event.mimeData.hasUrls) {
+                event.ignore();
+            }
+        }
+        onDrop: {
+            event.mimeData.urls.forEach(function (url) {
+                if (url.indexOf("file://") === 0) {
+                    var path = url.substr(7); // 7 is length of "file://"
+                    if (configDialog.currentWallpaper === "org.kde.image") {
+                        imageWallpaper.addUsersWallpaper(path);
+                    } else {
+                        imageWallpaper.addSlidePath(path);
+                    }
+                }
+            });
+        }
+
+        Loader {
+            anchors.fill: parent
+            sourceComponent: (configDialog.currentWallpaper == "org.kde.image") ? thumbnailsComponent : foldersComponent
+        }
     }
 
     RowLayout {
