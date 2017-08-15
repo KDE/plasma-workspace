@@ -31,7 +31,17 @@ Item {
         height: width
 
         svg: notificationSvg
-        elementId: "notification-disabled"
+
+        elementId: {
+            if (totalCount > 0) {
+                if (jobs && jobs.count > 0) {
+                    return "notification-progress-inactive"
+                } else {
+                    return "notification-empty"
+                }
+            }
+            return "notification-disabled"
+        }
 
         state: notificationsApplet.state
 
@@ -88,7 +98,7 @@ Item {
             font.pointSize: 100
             fontSizeMode: Text.Fit
             minimumPointSize: theme.smallestFont.pointSize
-            visible: false
+            visible: notificationsApplet.totalCount > 0
 
             Connections {
                 target: notificationsApplet
@@ -151,39 +161,5 @@ Item {
             onPressed: wasExpanded = plasmoid.expanded
             onClicked: plasmoid.expanded = !wasExpanded
         }
-
-        states: [
-            State {
-                name: "default"
-                PropertyChanges {
-                    target: notificationSvgItem
-                    elementId: "notification-disabled"
-                }
-                PropertyChanges {
-                    target: notificationCountLabel
-                    visible: false
-                }
-                PropertyChanges {
-                    target: plasmoid
-                    status: PlasmaCore.Types.PassiveStatus
-                }
-            },
-
-            State {
-                name: "new-notifications"
-                PropertyChanges {
-                    target: notificationSvgItem
-                    elementId: jobs.count > 0 ? "notification-progress-inactive" : "notification-empty"
-                }
-                PropertyChanges {
-                    target: notificationCountLabel
-                    visible: true
-                }
-                PropertyChanges {
-                    target: plasmoid
-                    status: PlasmaCore.Types.ActiveStatus
-                }
-            }
-        ]
     }
 }

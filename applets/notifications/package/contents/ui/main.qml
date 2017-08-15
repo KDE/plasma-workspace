@@ -88,16 +88,10 @@ MouseEventListener {
         }
     }
 
-    state: "default"
     hoverEnabled: !UiProperties.touchInput
 
     onTotalCountChanged: {
-        print(" totalCountChanged " + totalCount)
-        if (totalCount > 0) {
-            state = "new-notifications"
-        } else {
-            state = "default"
-            //plasmoid.hidePopup()
+        if (!totalCount) {
             plasmoid.expanded = false;
         }
     }
