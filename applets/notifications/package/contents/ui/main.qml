@@ -51,24 +51,25 @@ MouseEventListener {
 
     property Item notifications: notificationsLoader.item
     property Item jobs: jobsLoader.item
-
+    
     //notifications + jobs
-    property int totalCount: (notifications ? notifications.count : 0) + (jobs ? jobs.count : 0)
+    property int activeItemsCount: (notifications ? notifications.count : 0) + (jobs ? jobs.count : 0)
+    property int totalCount: activeItemsCount + (notifications ? notifications.historyCount : 0)
 
     Plasmoid.switchWidth: units.gridUnit * 20
     Plasmoid.switchHeight: units.gridUnit * 30
 
-    Plasmoid.status: totalCount > 0 ? PlasmaCore.Types.ActiveStatus : PlasmaCore.Types.PassiveStatus
+    Plasmoid.status: activeItemsCount > 0 ? PlasmaCore.Types.ActiveStatus : PlasmaCore.Types.PassiveStatus
 
     Plasmoid.icon: {
         if (jobs && jobs.count) {
             return "notification-active"
         }
-        return totalCount ? "notification-inactive" : "notification-disabled"
+        return activeItemsCount ? "notification-inactive" : "notification-disabled"
     }
 
     Plasmoid.toolTipSubText: {
-        if (totalCount == 0) {
+        if (activeItemsCount == 0) {
             return i18n("No notifications or jobs")
         } else if (!notifications || !notifications.count) {
             return i18np("%1 running job", "%1 running jobs", jobs.count)
@@ -83,8 +84,8 @@ MouseEventListener {
 
     hoverEnabled: !UiProperties.touchInput
 
-    onTotalCountChanged: {
-        if (!totalCount) {
+    onActiveItemsCountChanged: {
+        if (!activeItemsCount) {
             plasmoid.expanded = false;
         }
     }
@@ -134,6 +135,9 @@ MouseEventListener {
                     width: parent.width
                     source: "Notifications.qml"
                     active: notificationsApplet.Plasmoid.configuration.showNotifications
+                    onLoaded: {
+                        notificationsLoader.item.showHistory = Qt.binding(function(){ return notificationsApplet.Plasmoid.configuration.showHistory })
+                    }
                 }
             }
         }

@@ -27,6 +27,8 @@ import org.kde.kquickcontrolsaddons 2.0
 PlasmaComponents.ListItem {
     id: notificationItem
     width: popupFlickable.width
+    
+    property ListModel listModel;
 
     opacity: 1-Math.abs(x)/width
 
@@ -38,8 +40,8 @@ PlasmaComponents.ListItem {
         repeat: false
         running: !idleTimeSource.idle
         onTriggered: {
-            if (!notificationsModel.inserting)
-                notificationsModel.remove(index)
+            if (!listModel.inserting)
+                listModel.remove(index)
         }
     }
 
@@ -87,7 +89,7 @@ PlasmaComponents.ListItem {
             ScriptAction {
                 script: {
                     closeNotification(model.source);
-                    notificationsModel.remove(index);
+                    listModel.remove(index);
                 }
             }
         }
@@ -133,11 +135,11 @@ PlasmaComponents.ListItem {
             }
 
             onClose: {
-                if (notificationsModel.count > 1) {
+                if (listModel.count > 1) {
                     removeAnimation.running = true
                 } else {
                     closeNotification(model.source)
-                    notificationsModel.remove(index)
+                    listModel.remove(index)
                 }
             }
             onConfigure: {

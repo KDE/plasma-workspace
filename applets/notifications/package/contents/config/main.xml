@@ -14,6 +14,10 @@
       <label>Show the jobs progress</label>
       <default>true</default>
     </entry>
+    <entry name="showHistory" type="Bool">
+      <label>Show a history of notifications</label>
+      <default>true</default>
+    </entry>
   </group>
 
 </kcfg>

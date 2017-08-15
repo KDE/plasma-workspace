@@ -35,6 +35,7 @@ Item {
 
     property alias cfg_showNotifications: showNotificationsCheckBox.checked
     property alias cfg_showJobs: showJobsCheckBox.checked
+    property alias cfg_showHistory: showHistoryCheckBox.checked
 
     QtLayouts.ColumnLayout {
         anchors.left: parent.left
@@ -47,6 +48,12 @@ Item {
             id: showJobsCheckBox
             text: i18n("Track file transfers and other jobs")
         }
+        
+        QtControls.CheckBox {
+            id: showHistoryCheckBox
+            text: i18n("Show a history of notifications")
+        }
+        
         QtControls.CheckBox {
             id: useCustomPopupPositionCheckBox
             text: i18n("Use custom position for the notification popup")

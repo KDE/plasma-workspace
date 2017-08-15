@@ -20,6 +20,7 @@
 import QtQuick 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
+import org.kde.plasma.extras 2.0 as PlasmaExtras
 
 import org.kde.plasma.private.notifications 1.0
 
@@ -32,7 +33,16 @@ Column {
     }
 
     property alias count: notificationsRepeater.count
+    property alias historyCount: notificationsHistoryRepeater.count
+    
+    property bool showHistory
+    
     signal popupShown(var popup)
+    
+    onShowHistoryChanged: {
+        if(!showHistory)
+            clearHistory()
+    }
 
     Component.onCompleted: {
         // Create the popup components and pass them to the C++ plugin
@@ -73,6 +83,28 @@ Column {
             notificationsModel.inserting = true;
             notificationsModel.insert(0, notification);
             notificationsModel.inserting = false;
+        }
+        else if (showHistory) {
+            
+            notificationsHistoryModel.inserting = true;
+            
+            //create a copy of the notification. 
+            //Disable actions in this copy as they will stop working once the original notification is closed.
+            notificationsHistoryModel.insert(0, {
+                "compact" : notification.compact,
+                "icon" : notification.icon,
+                "image" : notification.image,
+                "summary" : notification.summary,
+                "body" : notification.body,
+                "configurable" : false,
+                "created" : new Date(),
+                "urls" : notification.urls,
+                "maximumTextHeight" : notification.maximumTextHeight,
+                "actions" : null,
+                "hasDefaultAction" : false,
+                "hasConfigureAction" : false,
+            });
+            notificationsHistoryModel.inserting = false;
         }
 
         notificationPositioner.displayNotification(notification);
@@ -129,6 +161,11 @@ Column {
         }
 
         notificationsModel.clear()
+        clearHistory()
+    }
+    
+    function clearHistory() {
+        notificationsHistoryModel.clear()
     }
 
     Component {
@@ -138,6 +175,11 @@ Column {
 
     ListModel {
         id: notificationsModel
+        property bool inserting: false
+    }
+    
+    ListModel {
+        id: notificationsHistoryModel
         property bool inserting: false
     }
 
@@ -220,6 +262,20 @@ Column {
     Repeater {
         id: notificationsRepeater
         model: notificationsModel
-        delegate: NotificationDelegate {}
+        delegate: NotificationDelegate { listModel: notificationsModel }
+    }
+    
+    PlasmaExtras.Heading {
+        width: parent.width
+        level: 3
+        opacity: 0.6
+        visible: historyCount > 0
+        text: i18n("History")
+    }
+    
+    Repeater {
+        id: notificationsHistoryRepeater
+        model: notificationsHistoryModel
+        delegate: NotificationDelegate { listModel: notificationsHistoryModel }
     }
 }

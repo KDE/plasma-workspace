@@ -33,7 +33,7 @@ Item {
         svg: notificationSvg
 
         elementId: {
-            if (totalCount > 0) {
+            if (activeItemsCount > 0) {
                 if (jobs && jobs.count > 0) {
                     return "notification-progress-inactive"
                 } else {
@@ -85,7 +85,7 @@ Item {
 
         PlasmaComponents.Label {
             id: notificationCountLabel
-            property int oldTotalCount: 0
+            property int oldActiveItemsCount: 0
 
             // anchors.fill: parent breaks at small sizes for some reason
             anchors.centerIn: parent
@@ -94,19 +94,19 @@ Item {
 
             horizontalAlignment: Text.AlignHCenter
             verticalAlignment: Text.AlignVCenter
-            text: notificationsApplet.totalCount
+            text: notificationsApplet.activeItemsCount
             font.pointSize: 100
             fontSizeMode: Text.Fit
             minimumPointSize: theme.smallestFont.pointSize
-            visible: notificationsApplet.totalCount > 0
+            visible: notificationsApplet.activeItemsCount > 0
 
             Connections {
                 target: notificationsApplet
-                onTotalCountChanged: {
-                    if (notificationsApplet.totalCount > notificationCountLabel.oldTotalCount) {
+                onActiveItemsCountChanged: {
+                    if (notificationsApplet.activeItemsCount > notificationCountLabel.oldActiveItemsCount) {
                         notificationAnimation.running = true
                     }
-                    notificationCountLabel.oldTotalCount = notificationsApplet.totalCount
+                    notificationCountLabel.oldActiveItemsCount = notificationsApplet.activeItemsCount
                 }
 
             }
