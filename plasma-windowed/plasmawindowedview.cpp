@@ -175,11 +175,9 @@ void PlasmaWindowedView::resizeEvent(QResizeEvent *ev)
 
     minimumWidthChanged();
     minimumHeightChanged();
-    i->setWidth(ev->size().width());
-    i->setHeight(ev->size().height());
 
-    contentItem()->setWidth(ev->size().width());
-    contentItem()->setHeight(ev->size().height());
+    i->setSize(ev->size());
+    contentItem()->setSize(ev->size());
 
     m_applet->config().writeEntry("geometry", QRect(position(), ev->size()));
 }
