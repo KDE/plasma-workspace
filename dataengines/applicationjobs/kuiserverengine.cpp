@@ -22,6 +22,7 @@
 #include "jobcontrol.h"
 
 #include <QDBusConnection>
+#include <QUrl>
 
 #include <KJob>
 #include <KFormat>
@@ -256,10 +257,13 @@ bool JobView::setDescriptionField(uint number, const QString &name, const QStrin
 {
     const QString labelString = QStringLiteral("label%1").arg(number);
     const QString labelNameString = QStringLiteral("labelName%1").arg(number);
+    const QString labelFileNameString = QStringLiteral("labelFileName%1").arg(number);
 
     if (!data().contains(labelNameString) || data().value(labelString) != value) {
         setData(labelNameString, name);
         setData(labelString, value);
+        QUrl url = QUrl::fromUserInput(value, QString(), QUrl::AssumeLocalFile);
+        setData(labelFileNameString, url.toString(QUrl::PreferLocalFile | QUrl::RemoveFragment | QUrl::RemoveQuery));
         scheduleUpdate();
     }
     return true;
@@ -269,9 +273,11 @@ void JobView::clearDescriptionField(uint number)
 {
     const QString labelString = QStringLiteral("label%1").arg(number);
     const QString labelNameString = QStringLiteral("labelName%1").arg(number);
+    const QString labelFileNameString = QStringLiteral("labelFileName%1").arg(number);
 
     setData(labelNameString, QVariant());
     setData(labelString, QVariant());
+    setData(labelFileNameString, QVariant());
     scheduleUpdate();
 }
 
