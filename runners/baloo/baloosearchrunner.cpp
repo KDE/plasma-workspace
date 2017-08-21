@@ -1,6 +1,7 @@
 /*
  * This file is part of the KDE Baloo Project
  * Copyright (C) 2014  Vishesh Handa <me@vhanda.in>
+ * Copyright (C) 2017 David Edmundson <davidedmundson@kde.org>
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
@@ -29,129 +30,73 @@
 #include <QMimeDatabase>
 #include <QTimer>
 #include <QMimeData>
+#include <QApplication>
+#include <QDBusConnection>
+#include <QTimer>
 
 #include <Baloo/Query>
 #include <Baloo/IndexerConfig>
 
 #include <KIO/OpenFileManagerWindowJob>
 
+#include "dbusutils_p.h"
+#include "krunner1adaptor.h"
+
 static const QString s_openParentDirId = QStringLiteral("openParentDir");
 
-SearchRunner::SearchRunner(QObject* parent, const QVariantList& args)
-    : Plasma::AbstractRunner(parent, args)
+int main (int argc, char **argv)
 {
+    Baloo::IndexerConfig config;
+    if (!config.fileIndexingEnabled()) {
+        return -1;
+    }
+    QApplication::setQuitOnLastWindowClosed(false);
+    QApplication app(argc, argv); //KRun needs widgets for error message boxes
+    SearchRunner r;
+    return app.exec();
 }
 
-SearchRunner::SearchRunner(QObject* parent, const QString& serviceId)
-    : Plasma::AbstractRunner(parent, serviceId)
+SearchRunner::SearchRunner(QObject* parent)
+    : QObject(parent),
+    m_timer(new QTimer(this))
 {
-}
 
-void SearchRunner::init()
-{
-    Plasma::RunnerSyntax syntax(QStringLiteral(":q"), i18n("Search through files, emails and contacts"));
+    m_timer->setSingleShot(true);
+    connect(m_timer, &QTimer::timeout, this, &SearchRunner::performMatch);
 
-    addAction(s_openParentDirId, QIcon::fromTheme(QStringLiteral("document-open-folder")), i18n("Open Containing Folder"));
+    new Krunner1Adaptor(this);
+    qDBusRegisterMetaType<RemoteMatch>();
+    qDBusRegisterMetaType<RemoteMatches>();
+    qDBusRegisterMetaType<RemoteAction>();
+    qDBusRegisterMetaType<RemoteActions>();
+    QDBusConnection::sessionBus().registerService("org.kde.runners.baloo");
+    QDBusConnection::sessionBus().registerObject("/runner", this);
 }
 
 SearchRunner::~SearchRunner()
 {
 }
 
-
-QStringList SearchRunner::categories() const
+RemoteActions SearchRunner::Actions()
 {
-    QStringList list;
-    list << i18n("Audio")
-         << i18n("Image")
-         << i18n("Document")
-         << i18n("Video")
-         << i18n("Folder");
-
-    return list;
+    return RemoteActions({RemoteAction{
+        s_openParentDirId,
+        i18n("Open Containing Folder"),
+        QStringLiteral("document-open-folder")
+    }});
 }
 
-QIcon SearchRunner::categoryIcon(const QString& category) const
+RemoteMatches SearchRunner::Match(const QString& searchTerm)
 {
-    if (category == i18n("Audio")) {
-        return QIcon::fromTheme(QStringLiteral("audio"));
-    } else if (category == i18n("Image")) {
-        return QIcon::fromTheme(QStringLiteral("image"));
-    } else if (category == i18n("Document")) {
-        return QIcon::fromTheme(QStringLiteral("application-pdf"));
-    } else if (category == i18n("Video")) {
-        return QIcon::fromTheme(QStringLiteral("video"));
-    } else if (category == i18n("Folder")) {
-        return QIcon::fromTheme(QStringLiteral("folder"));
+    setDelayedReply(true);
+
+    if (m_lastRequest.type() != QDBusMessage::InvalidMessage) {
+         QDBusConnection::sessionBus().send(m_lastRequest.createReply(QVariantList()));
     }
 
-    return Plasma::AbstractRunner::categoryIcon(category);
-}
+    m_lastRequest = message();
+    m_searchTerm = searchTerm;
 
-QList<Plasma::QueryMatch> SearchRunner::match(Plasma::RunnerContext& context, const QString& type,
-                                              const QString& category)
-{
-    Baloo::IndexerConfig config;
-    if (!config.fileIndexingEnabled()) {
-        return QList<Plasma::QueryMatch>();
-    }
-
-    if (!context.isValid())
-        return QList<Plasma::QueryMatch>();
-
-    const QStringList categories = context.enabledCategories();
-    if (!categories.isEmpty() && !categories.contains(category))
-        return QList<Plasma::QueryMatch>();
-
-    Baloo::Query query;
-    query.setSearchString(context.query());
-    query.setType(type);
-    query.setLimit(10);
-
-    Baloo::ResultIterator it = query.exec();
-
-    QList<Plasma::QueryMatch> matches;
-
-    QMimeDatabase mimeDb;
-
-    // KRunner is absolutely retarded and allows plugins to set the global
-    // relevance levels. so Baloo should not set the relevance of results too
-    // high because then Applications will often appear after if the application
-    // runner has not a higher relevance. So stupid.
-    // Each runner plugin should not have to know about the others.
-    // Anyway, that's why we're starting with .75
-    float relevance = .75;
-    while (context.isValid() && it.next()) {
-        Plasma::QueryMatch match(this);
-        QString localUrl = it.filePath();
-        const QUrl url = QUrl::fromLocalFile(localUrl);
-
-        QString iconName = mimeDb.mimeTypeForFile(localUrl).iconName();
-        match.setIconName(iconName);
-        match.setId(it.filePath());
-        match.setText(url.fileName());
-        match.setData(url);
-        match.setType(Plasma::QueryMatch::PossibleMatch);
-        match.setMatchCategory(category);
-        match.setRelevance(relevance);
-        relevance -= 0.05;
-
-        QString folderPath = url.adjusted(QUrl::RemoveFilename | QUrl::StripTrailingSlash).toLocalFile();
-        if (folderPath.startsWith(QDir::homePath())) {
-            folderPath.replace(0, QDir::homePath().length(), QStringLiteral("~"));
-        }
-        match.setSubtext(folderPath);
-
-        matches << match;
-    }
-
-    return matches;
-}
-
-void SearchRunner::match(Plasma::RunnerContext& context)
-{
-    const QString text = context.query();
-    //
     // Baloo (as of 2014-11-20) is single threaded. It has an internal mutex which results in
     // queries being queued one after another. Also, Baloo is really really slow for small queries
     // For example - on my SSD, it takes about 1.4 seconds for 'f' with an SSD.
@@ -159,55 +104,88 @@ void SearchRunner::match(Plasma::RunnerContext& context)
     // We're therefore hacking around this by having a small delay for very short queries so that
     // they do not get queued internally in Baloo
     //
-    if (text.length() <= 3) {
-        QEventLoop loop;
-        QTimer timer;
-        connect(&timer, &QTimer::timeout, &loop, &QEventLoop::quit);
-        timer.setSingleShot(true);
-        timer.start(100);
-        loop.exec();
+    int waitTimeMs = 0;
 
-        if (!context.isValid()) {
-            return;
-        }
+    if (searchTerm.length() <= 3) {
+        waitTimeMs = 100;
     }
+    //we're still using the event delayed call even when the length is < 3 so that if we have multiple Match() calls in our DBus queue, we only process the last one
+    m_timer->start(waitTimeMs);
 
-    QList<Plasma::QueryMatch> matches;
-    matches << match(context, QStringLiteral("Audio"), i18n("Audio"));
-    matches << match(context, QStringLiteral("Image"), i18n("Image"));
-    matches << match(context, QStringLiteral("Document"), i18n("Document"));
-    matches << match(context, QStringLiteral("Video"), i18n("Video"));
-    matches << match(context, QStringLiteral("Folder"), i18n("Folder"));
-
-    context.addMatches(matches);
+    return RemoteMatches();
 }
 
-void SearchRunner::run(const Plasma::RunnerContext&, const Plasma::QueryMatch& match)
+void SearchRunner::performMatch()
 {
-    const QUrl url = match.data().toUrl();
+    RemoteMatches matches;
+    matches << matchInternal(m_searchTerm, QStringLiteral("Audio"), i18n("Audio"));
+    matches << matchInternal(m_searchTerm, QStringLiteral("Image"), i18n("Image"));
+    matches << matchInternal(m_searchTerm, QStringLiteral("Document"), i18n("Document"));
+    matches << matchInternal(m_searchTerm, QStringLiteral("Video"), i18n("Video"));
+    matches << matchInternal(m_searchTerm, QStringLiteral("Folder"), i18n("Folder"));
 
-    if (match.selectedAction() && match.selectedAction() == action(s_openParentDirId)) {
+    QDBusConnection::sessionBus().send(m_lastRequest.createReply(QVariant::fromValue(matches)));
+    m_lastRequest = QDBusMessage();
+}
+
+RemoteMatches SearchRunner::matchInternal(const QString& searchTerm, const QString &type, const QString &category)
+{
+    Baloo::Query query;
+    query.setSearchString(searchTerm);
+    query.setType(type);
+    query.setLimit(10);
+
+    Baloo::ResultIterator it = query.exec();
+
+    RemoteMatches matches;
+
+    QMimeDatabase mimeDb;
+
+    // KRunner is absolutely daft and allows plugins to set the global
+    // relevance levels. so Baloo should not set the relevance of results too
+    // high because then Applications will often appear after if the application
+    // runner has not a higher relevance. So stupid.
+    // Each runner plugin should not have to know about the others.
+    // Anyway, that's why we're starting with .75
+    float relevance = .75;
+    while (it.next()) {
+        RemoteMatch match;
+        QString localUrl = it.filePath();
+        const QUrl url = QUrl::fromLocalFile(localUrl);
+        match.id = it.filePath();
+        match.text = url.fileName();
+        match.iconName = mimeDb.mimeTypeForFile(localUrl).iconName();
+        match.relevance = relevance;
+        match.type = Plasma::QueryMatch::PossibleMatch;
+        QVariantMap properties;
+
+        QString folderPath = url.adjusted(QUrl::RemoveFilename | QUrl::StripTrailingSlash).toLocalFile();
+        if (folderPath.startsWith(QDir::homePath())) {
+            folderPath.replace(0, QDir::homePath().length(), QStringLiteral("~"));
+        }
+
+        properties["urls"] = QStringList({url.toEncoded()});
+        properties["subtext"] = folderPath;
+        properties["category"] = category;
+
+        match.properties = properties;
+        relevance -= 0.05;
+
+         matches << match;
+    }
+
+    return matches;
+}
+
+void SearchRunner::Run(const QString& id, const QString& actionId)
+{
+    const QUrl url = QUrl::fromLocalFile(id);
+    if (actionId == s_openParentDirId) {
         KIO::highlightInFileManager({url});
         return;
     }
 
     new KRun(url, 0);
 }
-
-QList<QAction *> SearchRunner::actionsForMatch(const Plasma::QueryMatch &match)
-{
-    Q_UNUSED(match)
-
-    return {action(s_openParentDirId)};
-}
-
-QMimeData *SearchRunner::mimeDataForMatch(const Plasma::QueryMatch &match)
-{
-    QMimeData *result = new QMimeData();
-    result->setUrls({match.data().toUrl()});
-    return result;
-}
-
-K_EXPORT_PLASMA_RUNNER(baloosearchrunner, SearchRunner)
 
 #include "baloosearchrunner.moc"

@@ -1,20 +1,33 @@
 add_definitions(-DTRANSLATION_DOMAIN=\"plasma_runner_baloosearch5\")
 
-add_library(krunner_baloosearchrunner MODULE baloosearchrunner.cpp)
 
-target_link_libraries(krunner_baloosearchrunner
+set(baloosearchrunner_SRCS
+    baloosearchrunner.cpp)
+
+qt5_add_dbus_adaptor(baloosearchrunner_SRCS "org.kde.krunner1.xml" baloosearchrunner.h SearchRunner)
+add_executable(baloorunner ${baloosearchrunner_SRCS})
+
+target_link_libraries(baloorunner
   KF5::Runner
   KF5::KIOWidgets
   KF5::I18n
   KF5::Baloo
+  Qt5::DBus
 )
 
+configure_file(org.kde.baloorunner.service.in
+               ${CMAKE_CURRENT_BINARY_DIR}/org.kde.baloorunner.service)
+
+
 install(
-  TARGETS krunner_baloosearchrunner
-  DESTINATION ${KDE_INSTALL_PLUGINDIR}
+  TARGETS baloorunner
+  DESTINATION ${LIBEXEC_INSTALL_DIR}
 )
 
 install(
   FILES plasma-runner-baloosearch.desktop
   DESTINATION ${KDE_INSTALL_KSERVICES5DIR}
 )
+
+install(FILES ${CMAKE_CURRENT_BINARY_DIR}/org.kde.baloorunner.service
+        DESTINATION ${KDE_INSTALL_DBUSSERVICEDIR})
