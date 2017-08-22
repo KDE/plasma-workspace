@@ -31,6 +31,7 @@ class TaskGroupingProxyModel::Private
 {
 public:
     Private(TaskGroupingProxyModel *q);
+    ~Private();
 
     AbstractTasksModelIface *abstractTasksSourceModel = nullptr;
 
@@ -38,7 +39,7 @@ public:
     bool groupDemandingAttention = false;
     int windowTasksThreshold = -1;
 
-    QVector<QVector<int>> rowMap;
+    QVector<QVector<int> *> rowMap;
 
     QSet<QString> blacklistedAppIds;
     QSet<QString> blacklistedLauncherUrls;
@@ -74,13 +75,18 @@ TaskGroupingProxyModel::Private::Private(TaskGroupingProxyModel *q)
 {
 }
 
+TaskGroupingProxyModel::Private::~Private()
+{
+    qDeleteAll(rowMap);
+}
+
 bool TaskGroupingProxyModel::Private::isGroup(int row)
 {
     if (row < 0 || row >= rowMap.count()) {
         return false;
     }
 
-    return (rowMap.at(row).count() > 1);
+    return (rowMap.at(row)->count() > 1);
 }
 
 bool TaskGroupingProxyModel::Private::any(const QModelIndex &parent, int role)
@@ -130,7 +136,7 @@ void TaskGroupingProxyModel::Private::sourceRowsInserted(const QModelIndex &pare
     for (int i = start; i <= end; ++i) {
         if (!shouldGroup || !tryToGroup(q->sourceModel()->index(i, 0))) {
             q->beginInsertRows(QModelIndex(), rowMap.count(), rowMap.count());
-            rowMap.append(QVector<int>{i});
+            rowMap.append(new QVector<int>{i});
             q->endInsertRows();
         }
     }
@@ -147,44 +153,20 @@ void TaskGroupingProxyModel::Private::sourceRowsAboutToBeRemoved(const QModelInd
 
     for (int i = first; i <= last; ++i) {
         for (int j = 0; j < rowMap.count(); ++j) {
-            const QVector<int> &sourceRows = rowMap.at(j);
-            const int mapIndex = sourceRows.indexOf(i);
+            const QVector<int> *sourceRows = rowMap.at(j);
+            const int mapIndex = sourceRows->indexOf(i);
 
             if (mapIndex != -1) {
                 // Remove top-level item.
-                if (sourceRows.count() == 1) {
+                if (sourceRows->count() == 1) {
                     q->beginRemoveRows(QModelIndex(), j, j);
-                    rowMap.remove(j);
-
-                    // index() encodes parent row numbers in indices returned for group
-                    // members. endRemoveRows() is not aware of this scheme, and so won't
-                    // update any persistent indices with new row values. We're now going
-                    // to do it ourselves.
-                    foreach (const QModelIndex &idx, q->persistentIndexList()) {
-                        // internalId() for group members is parent row + 1, so the first
-                        // id after j is (j + 2).
-                        if (idx.internalId() > ((uint)j + 1)) {
-                            q->changePersistentIndex(idx, q->createIndex(idx.row(), 0, idx.internalId() - 1));
-                        }
-                    }
-
+                    delete rowMap.takeAt(j);
                     q->endRemoveRows();
                 // Dissolve group.
-                } else if (sourceRows.count() == 2) {
+                } else if (sourceRows->count() == 2) {
                     const QModelIndex parent = q->index(j, 0);
                     q->beginRemoveRows(parent, 0, 1);
-                    rowMap[j].remove(mapIndex);
-
-                    // index() encodes parent row numbers in indices returned for group
-                    // members. endRemoveRows() is not aware of this scheme, and so won't
-                    // invalidate persistent indices for the members of the group we're
-                    // dissolving. We're now going to do it ourselves.
-                    foreach (const QModelIndex &idx, q->persistentIndexList()) {
-                        if (idx.internalId() == ((uint)j + 1)) {
-                            q->changePersistentIndex(idx, QModelIndex());
-                        }
-                    }
-
+                    rowMap[j]->remove(mapIndex);
                     q->endRemoveRows();
 
                     // We're no longer a group parent.
@@ -193,7 +175,7 @@ void TaskGroupingProxyModel::Private::sourceRowsAboutToBeRemoved(const QModelInd
                 } else {
                     const QModelIndex parent = q->index(j, 0);
                     q->beginRemoveRows(parent, mapIndex, mapIndex);
-                    rowMap[j].remove(mapIndex);
+                    rowMap[j]->remove(mapIndex);
                     q->endRemoveRows();
 
                     // Various roles of the parent evaluate child data, and the
@@ -260,7 +242,7 @@ void TaskGroupingProxyModel::Private::sourceDataChanged(QModelIndex topLeft, QMo
 
             if (shouldGroupTasks() && tryToGroup(sourceIndex)) {
                 q->beginRemoveRows(QModelIndex(), proxyIndex.row(), proxyIndex.row());
-                rowMap.remove(proxyIndex.row());
+                delete rowMap.takeAt(proxyIndex.row());
                 q->endRemoveRows();
             } else {
                 q->dataChanged(proxyIndex, proxyIndex, roles);
@@ -274,27 +256,22 @@ void TaskGroupingProxyModel::Private::sourceDataChanged(QModelIndex topLeft, QMo
 void TaskGroupingProxyModel::Private::adjustMap(int anchor, int delta)
 {
     for (int i = 0; i < rowMap.count(); ++i) {
-        bool changed = false;
-        QVector<int> sourceRows = rowMap.at(i);
-        QMutableVectorIterator<int> it(sourceRows);
+        QVector<int> *sourceRows = rowMap.at(i);
+        QMutableVectorIterator<int> it(*sourceRows);
 
         while (it.hasNext()) {
             it.next();
 
             if (it.value() >= anchor) {
                 it.setValue(it.value() + delta);
-                changed = true;
             }
-        }
-
-        if (changed) {
-            rowMap.replace(i, sourceRows);
         }
     }
 }
 
 void TaskGroupingProxyModel::Private::rebuildMap()
 {
+    qDeleteAll(rowMap);
     rowMap.clear();
 
     const int rows = q->sourceModel()->rowCount();
@@ -302,7 +279,7 @@ void TaskGroupingProxyModel::Private::rebuildMap()
     rowMap.reserve(rows);
 
     for (int i = 0; i < rows; ++i) {
-        rowMap.append(QVector<int>{i});
+        rowMap.append(new QVector<int>{i});
     }
 
     checkGrouping(true /* silent */);
@@ -345,9 +322,9 @@ void TaskGroupingProxyModel::Private::checkGrouping(bool silent)
                 continue;
             }
 
-            if (tryToGroup(q->sourceModel()->index(rowMap.at(i).constFirst(), 0), silent)) {
+            if (tryToGroup(q->sourceModel()->index(rowMap.at(i)->constFirst(), 0), silent)) {
                 q->beginRemoveRows(QModelIndex(), i, i);
-                rowMap.remove(i); // Safe since we're iterating backwards.
+                delete rowMap.takeAt(i); // Safe since we're iterating backwards.
                 q->endRemoveRows();
             }
         }
@@ -405,7 +382,7 @@ bool TaskGroupingProxyModel::Private::tryToGroup(const QModelIndex &sourceIndex,
     // Meat of the matter: Try to add this source row to a sub-list with source rows
     // associated with the same application.
     for (int i = 0; i < rowMap.count(); ++i) {
-        const QModelIndex &groupRep = q->sourceModel()->index(rowMap.at(i).constFirst(), 0);
+        const QModelIndex &groupRep = q->sourceModel()->index(rowMap.at(i)->constFirst(), 0);
 
         // Don't match a row with itself.
         if (sourceIndex == groupRep) {
@@ -421,7 +398,7 @@ bool TaskGroupingProxyModel::Private::tryToGroup(const QModelIndex &sourceIndex,
             const QModelIndex parent = q->index(i, 0);
 
             if (!silent) {
-                const int newIndex = rowMap.at(i).count();
+                const int newIndex = rowMap.at(i)->count();
 
                 if (newIndex == 1) {
                     q->beginInsertRows(parent, 0, 1);
@@ -430,7 +407,7 @@ bool TaskGroupingProxyModel::Private::tryToGroup(const QModelIndex &sourceIndex,
                 }
             }
 
-            rowMap[i].append(sourceIndex.row());
+            rowMap[i]->append(sourceIndex.row());
 
             if (!silent) {
                 q->endInsertRows();
@@ -457,7 +434,7 @@ void TaskGroupingProxyModel::Private::formGroupFor(const QModelIndex &index)
     const QModelIndex &sourceTarget = q->mapToSource(index);
 
     for (int i = (rowMap.count() - 1); i >= 0; --i) {
-        const QModelIndex &sourceIndex = q->sourceModel()->index(rowMap.at(i).constFirst(), 0);
+        const QModelIndex &sourceIndex = q->sourceModel()->index(rowMap.at(i)->constFirst(), 0);
 
         if (!appsMatch(sourceTarget, sourceIndex)) {
             continue;
@@ -465,7 +442,7 @@ void TaskGroupingProxyModel::Private::formGroupFor(const QModelIndex &index)
 
         if (tryToGroup(sourceIndex)) {
             q->beginRemoveRows(QModelIndex(), i, i);
-            rowMap.remove(i); // Safe since we're iterating backwards.
+            delete rowMap.takeAt(i); // Safe since we're iterating backwards.
             q->endRemoveRows();
         }
     }
@@ -480,7 +457,7 @@ void TaskGroupingProxyModel::Private::breakGroupFor(const QModelIndex &index, bo
     }
 
     // The first child will move up to the top level.
-    QVector<int> extraChildren = rowMap.at(row).mid(1);
+    QVector<int> extraChildren = rowMap.at(row)->mid(1);
 
     // NOTE: We're going to do remove+insert transactions instead of a
     // single reparenting move transaction to save on complexity in the
@@ -491,17 +468,7 @@ void TaskGroupingProxyModel::Private::breakGroupFor(const QModelIndex &index, bo
         q->beginRemoveRows(index, 0, extraChildren.count());
     }
 
-    rowMap[row].resize(1);
-
-    // index() encodes parent row numbers in indices returned for group
-    // members. endRemoveRows() is not aware of this scheme, and so won't
-    // invalidate persistent indices for the members of the group we're
-    // dissolving. We're now going to do it ourselves.
-    foreach (const QModelIndex &idx, q->persistentIndexList()) {
-        if (idx.internalId() == ((uint)row + 1)) {
-            q->changePersistentIndex(idx, QModelIndex());
-        }
-    }
+    rowMap[row]->resize(1);
 
     if (!silent) {
         q->endRemoveRows();
@@ -514,7 +481,7 @@ void TaskGroupingProxyModel::Private::breakGroupFor(const QModelIndex &index, bo
     }
 
     for (int i = 0; i < extraChildren.count(); ++i) {
-        rowMap.append(QVector<int>{extraChildren.at(i)});
+        rowMap.append(new QVector<int>{extraChildren.at(i)});
     }
 
     if (!silent) {
@@ -537,12 +504,12 @@ QModelIndex TaskGroupingProxyModel::index(int row, int column, const QModelIndex
         return QModelIndex();
     }
 
-    if (parent.isValid() && row < d->rowMap.at(parent.row()).count()) {
-        return createIndex(row, column, parent.row() + 1);
+    if (parent.isValid() && row < d->rowMap.at(parent.row())->count()) {
+        return createIndex(row, column, d->rowMap.at(parent.row()));
     }
 
     if (row < d->rowMap.count()) {
-        return createIndex(row, column, (quintptr)0);
+        return createIndex(row, column, nullptr);
     }
 
     return QModelIndex();
@@ -550,7 +517,21 @@ QModelIndex TaskGroupingProxyModel::index(int row, int column, const QModelIndex
 
 QModelIndex TaskGroupingProxyModel::parent(const QModelIndex &child) const
 {
-    return (child.internalId() == 0) ? QModelIndex() : index(child.internalId() - 1, 0);
+    if (child.internalPointer() == nullptr) {
+        return QModelIndex();
+    } else {
+        const int parentRow = d->rowMap.indexOf(static_cast<QVector<int> *>(child.internalPointer()));
+
+        if (parentRow != -1) {
+            return index(parentRow, 0);
+        }
+
+        // If we were asked to find the parent for an internalPointer we can't
+        // locate, we have corrupted data: This should not happen.
+        Q_ASSERT(parentRow != -1);
+    }
+
+    return QModelIndex();
 }
 
 QModelIndex TaskGroupingProxyModel::mapFromSource(const QModelIndex &sourceIndex) const
@@ -560,8 +541,8 @@ QModelIndex TaskGroupingProxyModel::mapFromSource(const QModelIndex &sourceIndex
     }
 
     for (int i = 0; i < d->rowMap.count(); ++i) {
-        const QVector<int> &sourceRows = d->rowMap.at(i);
-        const int childIndex = sourceRows.indexOf(sourceIndex.row());
+        const QVector<int> *sourceRows = d->rowMap.at(i);
+        const int childIndex = sourceRows->indexOf(sourceIndex.row());
         const QModelIndex parent = index(i, 0);
 
         if (childIndex == 0) {
@@ -596,7 +577,7 @@ QModelIndex TaskGroupingProxyModel::mapToSource(const QModelIndex &proxyIndex) c
             return QModelIndex();
         }
 
-        return sourceModel()->index(d->rowMap.at(parent.row()).at(proxyIndex.row()), 0);
+        return sourceModel()->index(d->rowMap.at(parent.row())->at(proxyIndex.row()), 0);
     } else {
         // Group parents items therefore equate to the first child item; the source
         // row logically appears twice in the proxy.
@@ -604,7 +585,7 @@ QModelIndex TaskGroupingProxyModel::mapToSource(const QModelIndex &proxyIndex) c
         // filter out rows, too) and opts to map to the child item, as the group parent
         // has its Qt::DisplayRole mangled by data(), and it's more useful for trans-
         // lating dataChanged() from the source model.
-        return sourceModel()->index(d->rowMap.at(proxyIndex.row()).at(0), 0);
+        return sourceModel()->index(d->rowMap.at(proxyIndex.row())->at(0), 0);
     }
 
     return QModelIndex();
@@ -627,7 +608,7 @@ int TaskGroupingProxyModel::rowCount(const QModelIndex &parent) const
             return 0;
         }
 
-        const uint rowCount = d->rowMap.at(parent.row()).count();
+        const uint rowCount = d->rowMap.at(parent.row())->count();
 
         // If this sub-list in the map only has one entry, it's a plain item, not
         // parent to a group.
