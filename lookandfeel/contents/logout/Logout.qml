@@ -132,6 +132,7 @@ PlasmaCore.ColorScope {
             horizontalCenter: parent.horizontalCenter
             bottom: parent.verticalCenter
         }
+        constrainText: false
         avatarPath: kuser.faceIconUrl
         iconSource: "user-identity"
         isCurrent: true

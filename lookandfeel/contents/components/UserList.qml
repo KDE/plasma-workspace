@@ -76,6 +76,9 @@ ListView {
         width: userItemWidth
         height: userItemHeight
 
+        //if we only have one delegate, we don't need to clip the text as it won't be overlapping with anything
+        constrainText: ListView.view.count > 1
+
         isCurrent: ListView.isCurrentItem
 
         onClicked: {

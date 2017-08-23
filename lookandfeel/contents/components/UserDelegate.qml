@@ -32,6 +32,7 @@ Item {
     property string userName
     property string avatarPath
     property string iconSource
+    property bool constrainText: true
     signal clicked()
 
     property real faceSize: Math.min(width, height - usernameDelegate.height - units.largeSpacing)
@@ -132,10 +133,10 @@ Item {
         id: usernameDelegate
         anchors {
             bottom: parent.bottom
-            left: parent.left
-            right: parent.right
+            horizontalCenter: parent.horizontalCenter
         }
         height: implicitHeight // work around stupid bug in Plasma Components that sets the height
+        width: constrainText ? parent.width : implicitWidth
         text: wrapper.name
         elide: Text.ElideRight
         horizontalAlignment: Text.AlignHCenter
