@@ -33,7 +33,6 @@ set_package_properties(KF5NetworkManagerQt PROPERTIES DESCRIPTION "Qt wrapper fo
                        TYPE OPTIONAL
                        PURPOSE "Needed by geolocation data engine."
                       )
-find_package(KF5XmlRpcClient REQUIRED)
 
 # WARNING PlasmaQuick provides unversioned CMake config
 find_package(KF5 REQUIRED COMPONENTS PlasmaQuick)
