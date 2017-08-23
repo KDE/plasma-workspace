@@ -56,8 +56,8 @@ MouseArea {
 
         PlasmaCore.IconItem {
             source: area.icon
-            width: units.iconSizes.smallMedium
-            height: width
+            Layout.preferredWidth: units.iconSizes.smallMedium
+            Layout.preferredHeight: width
         }
 
         PlasmaComponents.Label {
