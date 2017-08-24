@@ -175,6 +175,7 @@ void PanelShadows::setEnabledBorders(const QWindow *window, Plasma::FrameSvg::En
         return;
     }
 
+    d->m_windows[window] = enabledBorders;
     d->updateShadow(window, enabledBorders);
 }
 
