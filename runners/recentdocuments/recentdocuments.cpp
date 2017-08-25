@@ -75,6 +75,9 @@ void RecentDocuments::match(Plasma::RunnerContext &context)
 
     const QString homePath = QDir::homePath();
 
+    // avoid duplicates
+    QSet<QUrl> knownUrls;
+
     foreach (const QString &document, m_recentdocuments) {
         if (!context.isValid()) {
             return;
@@ -82,14 +85,22 @@ void RecentDocuments::match(Plasma::RunnerContext &context)
 
         if (document.contains(term, Qt::CaseInsensitive)) {
             KDesktopFile config(document);
+
+            const QUrl url = QUrl(config.readUrl());
+            if (knownUrls.contains(url)) {
+                continue;
+            }
+
+            knownUrls.insert(url);
+
             Plasma::QueryMatch match(this);
             match.setType(Plasma::QueryMatch::PossibleMatch);
             match.setRelevance(1.0);
             match.setIconName(config.readIcon());
-            match.setData(config.readUrl());
+            match.setData(url);
             match.setText(config.readName());
 
-            QUrl folderUrl = QUrl(config.readUrl()).adjusted(QUrl::RemoveFilename | QUrl::StripTrailingSlash);
+            QUrl folderUrl = url.adjusted(QUrl::RemoveFilename | QUrl::StripTrailingSlash);
             if (folderUrl.isLocalFile()) {
                 QString folderPath = folderUrl.toLocalFile();
                 if (folderPath.startsWith(homePath)) {
