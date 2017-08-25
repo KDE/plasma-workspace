@@ -61,13 +61,6 @@ MouseEventListener {
 
     Plasmoid.status: activeItemsCount > 0 ? PlasmaCore.Types.ActiveStatus : PlasmaCore.Types.PassiveStatus
 
-    Plasmoid.icon: {
-        if (jobs && jobs.count) {
-            return "notification-active"
-        }
-        return activeItemsCount ? "notification-inactive" : "notification-disabled"
-    }
-
     Plasmoid.toolTipSubText: {
         if (activeItemsCount == 0) {
             return i18n("No notifications or jobs")
