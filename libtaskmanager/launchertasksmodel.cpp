@@ -544,41 +544,7 @@ void LauncherTasksModel::requestNewInstance(const QModelIndex &index)
         return;
     }
 
-    const QUrl &url = d->launchersOrder.at(index.row());
-
-    quint32 timeStamp = 0;
-
-#if HAVE_X11
-        if (KWindowSystem::isPlatformX11()) {
-            timeStamp = QX11Info::appUserTime();
-        }
-#endif
-
-    if (url.scheme() == QLatin1String("preferred")) {
-        const KService::Ptr service = KService::serviceByStorageId(defaultApplication(url));
-
-        if (!service && !service->isApplication()) {
-            return;
-        }
-
-        KRun::runApplication(*service, QList<QUrl>(), nullptr, 0, {},
-            KStartupInfo::createNewStartupIdForTimestamp(timeStamp));
-
-        KActivities::ResourceInstance::notifyAccessed(QUrl(QStringLiteral("applications:") + service->storageId()),
-            QStringLiteral("org.kde.libtaskmanager"));
-    } else {
-        const KService::Ptr service = KService::serviceByDesktopPath(url.toLocalFile());
-
-        if (service && service->isApplication()) {
-            KRun::runApplication(*service, QList<QUrl>(), nullptr, 0, {},
-                KStartupInfo::createNewStartupIdForTimestamp(timeStamp));
-
-            KActivities::ResourceInstance::notifyAccessed(QUrl(QStringLiteral("applications:") + service->storageId()),
-                QStringLiteral("org.kde.libtaskmanager"));
-        } else {
-            new KRun(url, 0, false, KStartupInfo::createNewStartupIdForTimestamp(timeStamp));
-        }
-    }
+    runApp(d->appData(d->launchersOrder.at(index.row())));
 }
 
 void LauncherTasksModel::requestOpenUrls(const QModelIndex &index, const QList<QUrl> &urls)

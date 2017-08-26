@@ -484,6 +484,14 @@ QUrl XWindowTasksModel::Private::windowUrl(WId window)
         KService::Ptr service = KService::serviceByStorageId(desktopFile);
 
         if (service) {
+            const QString &menuId = service->menuId();
+
+            // applications: URLs are used to refer to applications by their KService::menuId
+            // (i.e. .desktop file name) rather than the absolute path to a .desktop file.
+            if (!menuId.isEmpty()) {
+                return QUrl(QStringLiteral("applications:") + menuId);
+            }
+
             return QUrl::fromLocalFile(service->entryPath());
         }
 

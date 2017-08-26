@@ -193,6 +193,14 @@ QUrl StartupTasksModel::Private::launcherUrl(const KStartupInfoData &data)
     }
 
     if (!services.empty()) {
+        const QString &menuId = services.at(0)->menuId();
+
+        // applications: URLs are used to refer to applications by their KService::menuId
+        // (i.e. .desktop file name) rather than the absolute path to a .desktop file.
+        if (!menuId.isEmpty()) {
+            return QUrl(QStringLiteral("applications:") + menuId);
+        }
+
         QString path = services.at(0)->entryPath();
 
         if (path.isEmpty()) {

@@ -69,10 +69,35 @@ AppData appDataFromUrl(const QUrl &url, const QIcon &fallbackIcon)
         }
     }
 
+    // applications: URLs are used to refer to applications by their KService::menuId
+    // (i.e. .desktop file name) rather than the absolute path to a .desktop file.
+    if (url.scheme() == QStringLiteral("applications")) {
+        const KService::Ptr service = KService::serviceByMenuId(url.path());
+
+        if (service && url.path() == service->menuId()) {
+            data.name = service->name();
+            data.genericName = service->genericName();
+            data.id = service->storageId();
+
+            if (data.icon.isNull()) {
+                data.icon = QIcon::fromTheme(service->icon());
+            }
+        }
+    }
+
     if (url.isLocalFile() && KDesktopFile::isDesktopFile(url.toLocalFile())) {
         KDesktopFile f(url.toLocalFile());
 
         const KService::Ptr service = KService::serviceByStorageId(f.fileName());
+
+        // Resolve to non-absolute menuId-based URL if possible.
+        if (service) {
+            const QString &menuId = service->menuId();
+
+            if (!menuId.isEmpty()) {
+                data.url = QUrl(QStringLiteral("applications:") + menuId);
+            }
+        }
 
         if (service && QUrl::fromLocalFile(service->entryPath()) == url) {
             data.name = service->name();
@@ -101,23 +126,23 @@ AppData appDataFromUrl(const QUrl &url, const QIcon &fallbackIcon)
         const KService::Ptr service = KService::serviceByStorageId(data.id);
 
         if (service) {
-            QString desktopFile = service->entryPath();
+            const QString &menuId = service->menuId();
+            const QString &desktopFile = service->entryPath();
 
-            // Update with resolved URL.
-            data.url = QUrl::fromLocalFile(desktopFile);
+            data.name = service->name();
+            data.genericName = service->genericName();
+            data.id = service->storageId();
 
-            KDesktopFile f(desktopFile);
-            KConfigGroup cg(&f, "Desktop Entry");
-
-            data.icon = QIcon::fromTheme(f.readIcon());
-            const QString exec = cg.readEntry("Exec", QString());
-            data.name = cg.readEntry("Name", QString());
-
-            if (data.name.isEmpty() && !exec.isEmpty()) {
-                data.name = exec.split(' ').at(0);
+            if (data.icon.isNull()) {
+                data.icon = QIcon::fromTheme(service->icon());
             }
 
-            data.genericName = f.readGenericName();
+            // Update with resolved URL.
+            if (!menuId.isEmpty()) {
+                data.url = QUrl(QStringLiteral("applications:") + menuId);
+            } else {
+                data.url = QUrl::fromLocalFile(desktopFile);
+            }
         }
     }
 
@@ -142,7 +167,16 @@ AppData appDataFromAppId(const QString &appId)
         data.id = service->storageId();
         data.name = service->name();
         data.genericName = service->genericName();
-        data.url = QUrl::fromLocalFile(service->entryPath());
+
+        const QString &menuId = service->menuId();
+
+        // applications: URLs are used to refer to applications by their KService::menuId
+        // (i.e. .desktop file name) rather than the absolute path to a .desktop file.
+        if (!menuId.isEmpty()) {
+            data.url = QUrl(QStringLiteral("applications:") + menuId);
+        } else {
+            data.url = QUrl::fromLocalFile(service->entryPath());
+        }
 
         return data;
     }
@@ -375,9 +409,18 @@ QUrl windowUrlFromMetadata(const QString &appId, quint32 pid,
     }
 
     if (!services.empty()) {
-        QString path = services[0]->entryPath();
+        const QString &menuId = services.at(0)->menuId();
+
+        // applications: URLs are used to refer to applications by their KService::menuId
+        // (i.e. .desktop file name) rather than the absolute path to a .desktop file.
+        if (!menuId.isEmpty()) {
+            return QUrl(QStringLiteral("applications:") + menuId);
+        }
+
+        QString path = services.at(0)->entryPath();
+
         if (path.isEmpty()) {
-            path = services[0]->exec();
+            path = services.at(0)->exec();
         }
 
         if (!path.isEmpty()) {
@@ -640,7 +683,17 @@ void runApp(const AppData &appData, const QList<QUrl> &urls)
         }
 #endif
 
-        const KService::Ptr service = KService::serviceByDesktopPath(appData.url.toLocalFile());
+        KService::Ptr service;
+
+        // applications: URLs are used to refer to applications by their KService::menuId
+        // (i.e. .desktop file name) rather than the absolute path to a .desktop file.
+        if (appData.url.scheme() == QStringLiteral("applications")) {
+            service = KService::serviceByMenuId(appData.url.path());
+        } else if (appData.url.scheme() == QLatin1String("preferred")) {
+            const KService::Ptr service = KService::serviceByStorageId(defaultApplication(appData.url));
+        } else {
+            service = KService::serviceByDesktopPath(appData.url.toLocalFile());
+        }
 
         if (service && service->isApplication()) {
             KRun::runApplication(*service, urls, nullptr, 0, {},
