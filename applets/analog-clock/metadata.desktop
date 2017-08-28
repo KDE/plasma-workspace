@@ -165,6 +165,5 @@ X-KDE-PluginInfo-Version=3.0
 X-KDE-PluginInfo-Website=http://userbase.kde.org/Plasma/Clocks
 X-KDE-PluginInfo-Category=Date and Time
 X-KDE-PluginInfo-Depends=
-X-KDE-PluginInfo-License=GPLv2+
+X-KDE-PluginInfo-License=GPL-2.0+
 X-KDE-PluginInfo-EnabledByDefault=true
-
