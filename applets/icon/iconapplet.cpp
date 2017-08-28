@@ -144,6 +144,7 @@ void IconApplet::populate()
 
                 if (!QFile::copy(localUrlString, backingDesktopFile)) {
                     setLaunchErrorMessage(i18n("Failed to copy icon widget desktop file from '%1' to '%2'", localUrlString, backingDesktopFile));
+                    setBusy(false);
                     return;
                 }
 
