@@ -55,7 +55,7 @@ void TimeZoneFilterProxy::setFilterString(const QString &filterString)
     m_filterString = filterString;
     m_stringMatcher.setPattern(filterString);
     emit filterStringChanged();
-    invalidate();
+    invalidateFilter();
 }
 
 //=============================================================================
