@@ -231,8 +231,8 @@ void PlayerContainer::copyProperty(const QString& propName, const QVariant& _val
         } else if (propName == QLatin1String("Metadata")) {
 
             if (updType == UpdatedSignal) {
-                QDBusObjectPath oldTrackId(data().value(QStringLiteral("Metadata")).toMap().value(QStringLiteral("mpris:trackid")).toString());
-                QDBusObjectPath newTrackId(value.toMap().value(QStringLiteral("mpris:trackid")).toString());
+                const QString oldTrackId = data().value(QStringLiteral("Metadata")).toMap().value(QStringLiteral("mpris:trackid")).toString();
+                const QString newTrackId = value.toMap().value(QStringLiteral("mpris:trackid")).toString();
                 if (oldTrackId != newTrackId) {
                     setData(QStringLiteral("Position"), static_cast<qlonglong>(0));
                     setData(POS_UPD_STRING, QDateTime::currentDateTimeUtc());
