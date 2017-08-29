@@ -51,7 +51,9 @@ else(QALCULATE_CFLAGS AND QALCULATE_LIBRARIES)
       pkg_check_modules(_pc_QALCULATE libqalculate)
     endif(QALCULATE_MIN_VERSION)
 
-    pkg_check_modules(_pc_CLN cln)
+    if(${_pc_QALCULATE_VERSION} VERSION_LESS 2.0.0)
+      pkg_check_modules(_pc_CLN cln)
+    endif()
 
     if(_pc_QALCULATE_FOUND)
       set(QALCULATE_CFLAGS ${_pc_QALCULATE_CFLAGS})
@@ -73,13 +75,15 @@ else(QALCULATE_CFLAGS AND QALCULATE_LIBRARIES)
       ${INCLUDE_INSTALL_DIR}
     )
 
-    find_library(CLN_LIBRARIES
-      NAMES
-      cln
-      PATHS
-      ${_pc_CLN_LIBRARY_DIRS}
-      ${LIB_INSTALL_DIR}
-    )
+    if(${_pc_QALCULATE_VERSION} VERSION_LESS 2.0.0)
+      find_library(CLN_LIBRARIES
+        NAMES
+        cln
+        PATHS
+        ${_pc_CLN_LIBRARY_DIRS}
+        ${LIB_INSTALL_DIR}
+      )
+    endif()
 
   else(NOT WIN32)
     # XXX: currently no libqalculate on windows
