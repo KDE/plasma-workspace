@@ -27,6 +27,7 @@
 class QMenu;
 class QAction;
 class QModelIndex;
+class QDBusServiceWatcher;
 class KDBusMenuImporter;
 
 class AppMenuModel : public QAbstractListModel
@@ -71,6 +72,7 @@ private:
     QStringList m_activeMenu;
     QList<QAction *> m_activeActions;
 
+    QDBusServiceWatcher *m_serviceWatcher;
     QString m_serviceName;
     QString m_menuObjectPath;
 

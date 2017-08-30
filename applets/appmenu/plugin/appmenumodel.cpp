@@ -35,6 +35,7 @@
 #include <QDebug>
 #include <QDBusConnection>
 #include <QDBusConnectionInterface>
+#include <QDBusServiceWatcher>
 
 #include <dbusmenuimporter.h>
 
@@ -60,17 +61,19 @@ protected:
 };
 
 AppMenuModel::AppMenuModel(QObject *parent)
-            : QAbstractListModel(parent)
+            : QAbstractListModel(parent),
+              m_serviceWatcher(new QDBusServiceWatcher(this))
 {
     connect(KWindowSystem::self(), &KWindowSystem::activeWindowChanged, this, &AppMenuModel::onActiveWindowChanged);
     connect(this, &AppMenuModel::modelNeedsUpdate, this, &AppMenuModel::update, Qt::UniqueConnection);
     onActiveWindowChanged(KWindowSystem::activeWindow());
 
+    m_serviceWatcher->setConnection(QDBusConnection::sessionBus());
     //if our current DBus connection gets lost, close the menu
     //we'll select the new menu when the focus changes
-    connect(QDBusConnection::sessionBus().interface(), &QDBusConnectionInterface::serviceOwnerChanged, this, [this](const QString &serviceName, const QString &oldOwner, const QString &newOwner)
+    connect(m_serviceWatcher, &QDBusServiceWatcher::serviceUnregistered, this, [this](const QString &serviceName)
     {
-        if (serviceName == m_serviceName && newOwner.isEmpty()) {
+        if (serviceName == m_serviceName) {
             setMenuAvailable(false);
             emit modelNeedsUpdate();
         }
@@ -234,6 +237,8 @@ void AppMenuModel::updateApplicationMenu(const QString &serviceName, const QStri
     }
 
     m_serviceName = serviceName;
+    m_serviceWatcher->setWatchedServices(QStringList({m_serviceName}));
+
     m_menuObjectPath = menuObjectPath;
 
     if (m_importer) {
