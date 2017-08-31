@@ -60,6 +60,9 @@ public:
     Q_INVOKABLE void showAbout(int row, QQuickItem *ctx = nullptr);
     Q_INVOKABLE void save();
 
+signals:
+    void configurationChanged();
+
 private:
     Plasma::Containment *m_containment;
     QHash<QString, Plasma::ContainmentActions *> m_plugins;

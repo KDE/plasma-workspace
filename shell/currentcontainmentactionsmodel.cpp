@@ -222,6 +222,8 @@ void CurrentContainmentActionsModel::showConfiguration(int row, QQuickItem *ctx)
                 pluginInstance->configurationAccepted();
             });
 
+    connect(configDlg, &QDialog::accepted, this, &CurrentContainmentActionsModel::configurationChanged);
+
     connect(pluginInstance, &QObject::destroyed, configDlg, &QDialog::reject);
 
     configDlg->show();
