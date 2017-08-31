@@ -197,15 +197,7 @@ DesktopView::SessionType DesktopView::sessionType() const
 
 bool DesktopView::event(QEvent *e)
 {
-    if (e->type() == QEvent::KeyRelease) {
-        QKeyEvent *ke = static_cast<QKeyEvent *>(e);
-        if (KWindowSystem::showingDesktop() && ke->key() == Qt::Key_Escape) {
-            ShellCorona *c = qobject_cast<ShellCorona *>(corona());
-            if (c) {
-                KWindowSystem::setShowingDesktop(false);
-            }
-        }
-    } else if (e->type() == QEvent::PlatformSurface) {
+    if (e->type() == QEvent::PlatformSurface) {
         if (auto pe = dynamic_cast<QPlatformSurfaceEvent*>(e)) {
             switch (pe->surfaceEventType()) {
             case QPlatformSurfaceEvent::SurfaceCreated:
@@ -227,8 +219,18 @@ void DesktopView::keyPressEvent(QKeyEvent *e)
 {
     ContainmentView::keyPressEvent(e);
 
+    if (e->isAccepted()) {
+        return;
+    }
+
+    if (e->key() == Qt::Key_Escape && KWindowSystem::showingDesktop()) {
+        KWindowSystem::setShowingDesktop(false);
+        e->accept();
+        return;
+    }
+
     // When a key is pressed on desktop when nothing else is active forward the key to krunner
-    if ((!e->modifiers() || e->modifiers() == Qt::ShiftModifier) && !e->isAccepted()) {
+    if (!e->modifiers() || e->modifiers() == Qt::ShiftModifier) {
         const QString text = e->text().trimmed();
         if (!text.isEmpty() && text[0].isPrint()) {
             const QString interface(QStringLiteral("org.kde.krunner"));
@@ -238,10 +240,10 @@ void DesktopView::keyPressEvent(QKeyEvent *e)
             org::kde::krunner::App krunner(interface, QStringLiteral("/App"), QDBusConnection::sessionBus());
             krunner.query(text);
             e->accept();
+            return;
         }
     }
 }
-
 
 void DesktopView::showConfigurationInterface(Plasma::Applet *applet)
 {
