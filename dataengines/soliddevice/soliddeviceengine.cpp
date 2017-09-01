@@ -133,7 +133,7 @@ bool SolidDeviceEngine::populateDeviceData(const QString &name)
     setData(name, I18N_NOOP("Emblems"), device.emblems());
     setData(name, I18N_NOOP("State"), Idle);
     setData(name, I18N_NOOP("Operation result"), Working);
-    setData(name, I18N_NOOP("Timestamp"), QDateTime::currentDateTime());
+    setData(name, I18N_NOOP("Timestamp"), QDateTime::currentDateTimeUtc());
 
     if (device.is<Solid::Processor>()) {
         Solid::Processor *processor = device.as<Solid::Processor>();
