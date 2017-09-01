@@ -132,6 +132,8 @@ bool CurrentContainmentActionsModel::append(const QString &action, const QString
     m_removedTriggers.removeAll(action);
 
     appendRow(item);
+
+    emit configurationChanged();
     return true;
 }
 
@@ -166,6 +168,8 @@ void CurrentContainmentActionsModel::update(int row, const QString &action, cons
             m_plugins[action]->restore(tempConfig);
             setData(idx, m_plugins[action]->pluginInfo().property(QStringLiteral("X-Plasma-HasConfigurationInterface")).toBool(), HasConfigurationInterfaceRole);
         }
+
+        emit configurationChanged();
     }
 }
 
@@ -178,6 +182,7 @@ void CurrentContainmentActionsModel::remove(int row)
         delete m_plugins[action];
         m_plugins.remove(action);
         m_removedTriggers << action;
+        emit configurationChanged();
     }
 }
 
