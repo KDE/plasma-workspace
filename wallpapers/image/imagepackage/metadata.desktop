@@ -96,6 +96,7 @@ Comment[sr@latin]=Tapetni prikaz za slike
 Comment[sv]=Skrivbordsunderlägg med bilder
 Comment[uk]=Тло із зображень
 Comment[x-test]=xxWallpaper view for imagesxx
+Comment[zh_CN]=图像壁纸视图
 Type=Service
 
 X-KDE-ServiceTypes=Plasma/Wallpaper
