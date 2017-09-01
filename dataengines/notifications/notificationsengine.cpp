@@ -95,15 +95,10 @@ void NotificationsEngine::init()
 bool NotificationsEngine::registerDBusService()
 {
     QDBusConnection dbus = QDBusConnection::sessionBus();
+    dbus.registerObject(QStringLiteral("/org/freedesktop/Notifications"), this);
     bool so = dbus.registerService(QStringLiteral("org.freedesktop.Notifications"));
     if (so) {
-        bool ro = dbus.registerObject(QStringLiteral("/org/freedesktop/Notifications"), this);
-        if (ro) {
-            qDebug() << "Notifications service registered";
-            return true;
-        } else {
-            dbus.unregisterService(QStringLiteral("org.freedesktop.Notifications"));
-        }
+        return true;
     }
 
     qDebug() << "Failed to register Notifications service";
