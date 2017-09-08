@@ -74,56 +74,6 @@ Item {
 
     QtLayouts.ColumnLayout {
         anchors.left: parent.left
-        QtControls.GroupBox {
-            QtLayouts.Layout.fillWidth: true
-            title: i18n("Font")
-            flat: true
-
-            QtLayouts.GridLayout { // there's no FormLayout :(
-                columns: 2
-                QtLayouts.Layout.fillWidth: true
-
-                QtControls.Label {
-                    QtLayouts.Layout.fillWidth: true
-                    horizontalAlignment: Text.AlignRight
-                    text: i18n("Font style:")
-                }
-
-                QtControls.ComboBox {
-                    id: fontFamilyComboBox
-                    QtLayouts.Layout.fillWidth: true
-                    // ComboBox's sizing is just utterly broken
-                    QtLayouts.Layout.minimumWidth: units.gridUnit * 10
-                    model: fontsModel
-                    // doesn't autodeduce from model because we manually populate it
-                    textRole: "text"
-
-                    onCurrentIndexChanged: {
-                        var current = model.get(currentIndex)
-                        if (current) {
-                            cfg_fontFamily = current.value
-                            appearancePage.configurationChanged()
-                        }
-                    }
-                }
-
-                // spacer, cannot do Qt.AlignTop on the font style label + rowSpan 3, otherwise looks odd
-                Item {
-                    QtLayouts.Layout.fillWidth: true
-                    QtLayouts.Layout.rowSpan: 2
-                }
-
-                QtControls.CheckBox {
-                    id: boldCheckBox
-                    text: i18n("Bold text")
-                }
-
-                QtControls.CheckBox {
-                    id: italicCheckBox
-                    text: i18n("Italic text")
-                }
-            }
-        }
 
         QtControls.GroupBox {
             QtLayouts.Layout.fillWidth: true
@@ -210,6 +160,48 @@ Item {
                         }
                     }
                 }
+            }
+        }
+
+        QtLayouts.RowLayout {
+            QtLayouts.Layout.fillWidth: true
+
+            QtControls.Label {
+                text: i18n("Font style:")
+            }
+
+            QtControls.ComboBox {
+                id: fontFamilyComboBox
+                QtLayouts.Layout.fillWidth: true
+                // ComboBox's sizing is just utterly broken
+                QtLayouts.Layout.minimumWidth: units.gridUnit * 10
+                model: fontsModel
+                // doesn't autodeduce from model because we manually populate it
+                textRole: "text"
+
+                onCurrentIndexChanged: {
+                    var current = model.get(currentIndex)
+                    if (current) {
+                        cfg_fontFamily = current.value
+                        appearancePage.configurationChanged()
+                    }
+                }
+            }
+
+            QtControls.Button {
+                id: boldCheckBox
+                tooltip: i18n("Bold text")
+                iconName: "format-text-bold"
+                checkable: true
+                Accessible.name: tooltip
+            }
+
+            QtControls.Button {
+                id: italicCheckBox
+                tooltip: i18n("Italic text")
+                iconName: "format-text-italic"
+                checkable: true
+                Accessible.name: tooltip
             }
         }
     }
