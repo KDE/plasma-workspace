@@ -62,6 +62,8 @@ View::View(QWindow *)
 
     KCrash::setFlags(KCrash::AutoRestart);
 
+    //used only by screen readers
+    setTitle(i18n("KRunner"));
     m_config = KConfigGroup(KSharedConfig::openConfig(QStringLiteral("krunnerrc")), "General");
 
     setFreeFloating(m_config.readEntry("FreeFloating", false));
