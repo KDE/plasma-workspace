@@ -31,7 +31,6 @@ kcminputrc Mouse cursorTheme 'breeze_cursors'
 kcminputrc Mouse cursorSize ''
 ksplashrc KSplash Theme Breeze
 ksplashrc KSplash Engine KSplashQML
-kdeglobals KScreen ScaleFactor 1
 kcmfonts General forceFontDPI 0
 EOF
 
@@ -101,14 +100,9 @@ if test $returncode -ne 0; then
 fi
 [ -r $configDir/startupconfig ] && . $configDir/startupconfig
 
-if [ $kdeglobals_kscreen_scalefactor -gt 1 ]; then
-    export QT_SCREEN_SCALE_FACTORS="$kdeglobals_kscreen_scalefactor"
-fi
 #Manually disable auto scaling because we are scaling above
-#otherwise apps that manually opt in for high DPI get auto scaled by the developer AND manually scaled by us
+#otherwise apps that manually opt in for high DPI get auto scaled by the developer AND scaled by the wl_output
 export QT_AUTO_SCREEN_SCALE_FACTOR=0
-
-
 
 # XCursor mouse theme needs to be applied here to work even for kded or ksmserver
 if test -n "$kcminputrc_mouse_cursortheme" -o -n "$kcminputrc_mouse_cursorsize" ; then
