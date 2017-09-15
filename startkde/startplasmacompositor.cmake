@@ -31,7 +31,7 @@ kcminputrc Mouse cursorTheme 'breeze_cursors'
 kcminputrc Mouse cursorSize ''
 ksplashrc KSplash Theme Breeze
 ksplashrc KSplash Engine KSplashQML
-kcmfonts General forceFontDPI 0
+kcmfonts General forceFontDPIWayland 0
 EOF
 
 # preload the user's locale on first start
@@ -123,8 +123,8 @@ if test -n "$kcminputrc_mouse_cursortheme" -o -n "$kcminputrc_mouse_cursorsize" 
     fi
 fi
 
-if test "$kcmfonts_general_forcefontdpi" -ne 0; then
-    export QT_WAYLAND_FORCE_DPI=$kcmfonts_general_forcefontdpi
+if test "$kcmfonts_general_forcefontdpiwayland" -ne 0; then
+    export QT_WAYLAND_FORCE_DPI=$kcmfonts_general_forcefontdpiwayland
 else
     export QT_WAYLAND_FORCE_DPI=96
 fi
