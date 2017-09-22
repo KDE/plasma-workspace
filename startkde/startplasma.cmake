@@ -49,11 +49,6 @@ if test -z "$dl"; then
   esac
 fi
 
-#Set the QtQuickControls style to our own: for QtQuickControls1
-#it will fall back to Desktop, while it will use our own org.kde.desktop
-#for QtQuickControlsStyle and Kirigami
-export QT_QUICK_CONTROLS_STYLE=org.kde.desktop
-
 # For Qt Quick Controls 1, there is no style with that name,
 # so override that explicitly with the default style to avoid
 # a warning on startup. However, simply setting it to "Desktop" does
