@@ -824,8 +824,7 @@ bool TasksModel::Private::lessThan(const QModelIndex &left, const QModelIndex &r
             }
 
             if (leftScore == -1 || rightScore == -1) {
-                const QList<int> &counts = activityTaskCounts.values();
-                const int sumScore = std::accumulate(counts.begin(), counts.end(), 0);
+                const int sumScore = std::accumulate(activityTaskCounts.constBegin(), activityTaskCounts.constEnd(), 0);
 
                 if (leftScore == -1) {
                     leftScore = sumScore;
