@@ -222,9 +222,7 @@ bool View::event(QEvent *event)
     const bool retval = Dialog::event(event);
     bool setState = event->type() == QEvent::Show;
     if (event->type() == QEvent::PlatformSurface) {
-        if (auto e = dynamic_cast<QPlatformSurfaceEvent*>(event)) {
-            setState = e->surfaceEventType() == QPlatformSurfaceEvent::SurfaceCreated;
-        }
+        setState = (static_cast<QPlatformSurfaceEvent*>(event)->surfaceEventType() == QPlatformSurfaceEvent::SurfaceCreated);
     }
     if (setState) {
         KWindowSystem::setState(winId(), NET::SkipTaskbar | NET::SkipPager);

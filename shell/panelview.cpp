@@ -899,18 +899,16 @@ bool PanelView::event(QEvent *e)
             break;
         }
         case QEvent::PlatformSurface:
-            if (auto pe = dynamic_cast<QPlatformSurfaceEvent*>(e)) {
-                switch (pe->surfaceEventType()) {
-                case QPlatformSurfaceEvent::SurfaceCreated:
-                    setupWaylandIntegration();
-                    PanelShadows::self()->addWindow(this, enabledBorders());
-                    break;
-                case QPlatformSurfaceEvent::SurfaceAboutToBeDestroyed:
-                    delete m_shellSurface;
-                    m_shellSurface = nullptr;
-                    PanelShadows::self()->removeWindow(this);
-                    break;
-                }
+            switch (static_cast<QPlatformSurfaceEvent*>(e)->surfaceEventType()) {
+            case QPlatformSurfaceEvent::SurfaceCreated:
+                setupWaylandIntegration();
+                PanelShadows::self()->addWindow(this, enabledBorders());
+                break;
+            case QPlatformSurfaceEvent::SurfaceAboutToBeDestroyed:
+                delete m_shellSurface;
+                m_shellSurface = nullptr;
+                PanelShadows::self()->removeWindow(this);
+                break;
             }
             break;
         default:

@@ -236,31 +236,29 @@ void PanelConfigView::moveEvent(QMoveEvent *ev)
 bool PanelConfigView::event(QEvent *e)
 {
     if (e->type() == QEvent::PlatformSurface) {
-        if (auto pe = dynamic_cast<QPlatformSurfaceEvent*>(e)) {
-            switch (pe->surfaceEventType()) {
-            case QPlatformSurfaceEvent::SurfaceCreated:
-                if (m_shellSurface) {
-                    break;
-                }
-                if (ShellCorona *c = qobject_cast<ShellCorona *>(m_containment->corona())) {
-                    using namespace KWayland::Client;
-                    PlasmaShell *interface = c->waylandPlasmaShellInterface();
-                    if (!interface) {
-                        break;
-                    }
-                    Surface *s = Surface::fromWindow(this);
-                    if (!s) {
-                        break;
-                    }
-                    m_shellSurface = interface->createSurface(s, this);
-                }
-                break;
-            case QPlatformSurfaceEvent::SurfaceAboutToBeDestroyed:
-                delete m_shellSurface;
-                m_shellSurface = nullptr;
-                PanelShadows::self()->removeWindow(this);
+        switch (static_cast<QPlatformSurfaceEvent*>(e)->surfaceEventType()) {
+        case QPlatformSurfaceEvent::SurfaceCreated:
+            if (m_shellSurface) {
                 break;
             }
+            if (ShellCorona *c = qobject_cast<ShellCorona *>(m_containment->corona())) {
+                using namespace KWayland::Client;
+                PlasmaShell *interface = c->waylandPlasmaShellInterface();
+                if (!interface) {
+                    break;
+                }
+                Surface *s = Surface::fromWindow(this);
+                if (!s) {
+                    break;
+                }
+                m_shellSurface = interface->createSurface(s, this);
+            }
+            break;
+        case QPlatformSurfaceEvent::SurfaceAboutToBeDestroyed:
+            delete m_shellSurface;
+            m_shellSurface = nullptr;
+            PanelShadows::self()->removeWindow(this);
+            break;
         }
     }
 
