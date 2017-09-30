@@ -152,7 +152,7 @@ void TaskToolsTest::fillReferenceAppData()
     m_referenceAppData.id = QLatin1String("org.kde.konversation");
     m_referenceAppData.name = QLatin1String("Konversation");
     m_referenceAppData.genericName = QLatin1String("IRC Client");
-    m_referenceAppData.url = QUrl::fromLocalFile(appLinkPath());
+    m_referenceAppData.url = QUrl("applications:org.kde.konversation.desktop");
 }
 
 void TaskToolsTest::createAppLink()
