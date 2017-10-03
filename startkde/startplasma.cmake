@@ -49,16 +49,6 @@ if test -z "$dl"; then
   esac
 fi
 
-# For Qt Quick Controls 1, there is no style with that name,
-# so override that explicitly with the default style to avoid
-# a warning on startup. However, simply setting it to "Desktop" does
-# not work, as QQuickControlSettings1 somehow messes that up and uses
-# the parent directory as import path, resulting in the wrong style "Base"
-# being used instead of the right one.
-# We can work around that by supplying a relative path to a nonexistent
-# directory, as it only looks at the file name in the end anyway...
-export QT_QUICK_CONTROLS_1_STYLE=non/existent/dir/Desktop
-
 #In wayland we want Plasma to use Qt's scaling
 export PLASMA_USE_QT_SCALING=1
 
