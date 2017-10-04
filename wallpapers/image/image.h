@@ -129,7 +129,7 @@ class Image : public QObject, public QQmlParserStatus
         void usersWallpapersChanged();
         void slidePathsChanged();
         void resizeMethodChanged();
-        void customWallpaperPicked();
+        void customWallpaperPicked(const QString &path);
 
     protected Q_SLOTS:
         void showAddSlidePathsDialog();

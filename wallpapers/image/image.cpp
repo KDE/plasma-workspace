@@ -674,7 +674,7 @@ void Image::wallpaperBrowseCompleted()
     Q_ASSERT(m_model);
     if (m_dialog && m_dialog->selectedFiles().count() > 0) {
         addUsersWallpaper(m_dialog->selectedFiles().first());
-        emit customWallpaperPicked();
+        emit customWallpaperPicked(m_dialog->selectedFiles().first());
     }
 }
 
