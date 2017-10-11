@@ -120,6 +120,12 @@ Item {
             }
         }
 
+        Binding {
+            target: plasmoid
+            property: "hideOnWindowDeactivate"
+            value: !plasmoid.configuration.pin
+        }
+
         PlasmaComponents.Label {
             id: dayLabel
             anchors.left: parent.left
@@ -347,6 +353,7 @@ Item {
         height: width
         checkable: true
         iconSource: "window-pin"
-        onCheckedChanged: plasmoid.hideOnWindowDeactivate = !checked
+        checked: plasmoid.configuration.pin
+        onCheckedChanged: plasmoid.configuration.pin = checked
     }
 }
