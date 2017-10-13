@@ -339,7 +339,7 @@ MouseArea {
         visualParent: root
         flags: Qt.WindowStaysOnTopHint
         location: plasmoid.location
-        hideOnWindowDeactivate: expandedRepresentation.hideOnWindowDeactivate
+        hideOnWindowDeactivate: !plasmoid.configuration.pin
 
         onVisibleChanged: {
             if (!visible) {
