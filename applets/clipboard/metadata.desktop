@@ -44,6 +44,12 @@ Name[x-test]=xxClipboardxx
 Name[zh_CN]=剪贴板
 Name[zh_TW]=剪貼簿
 Comment=Provides access to the clipboard history
+Comment[ca]=Proporciona accés a l'historial del porta-retalls
+Comment[ca@valencia]=Proporciona accés a l'historial del porta-retalls
+Comment[pt]=Oferece o acesso ao histórico da área de transferência
+Comment[sv]=Ger tillgång till klippbordshistoriken
+Comment[uk]=Надає доступ до журналу буфера обміну даними
+Comment[x-test]=xxProvides access to the clipboard historyxx
 
 Icon=klipper
 Type=Service
