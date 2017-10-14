@@ -29,6 +29,9 @@ int main(int argc, char** argv)
 
     QApplication app(argc, argv);
 
+    app.setOrganizationDomain(QStringLiteral("kde.org"));
+    app.setDesktopFileName(QStringLiteral("org.kde.systemmonitor"));
+
     QDBusConnection con = QDBusConnection::sessionBus();
     if (!con.registerService(QStringLiteral("org.kde.systemmonitor"))) {
         return 0;

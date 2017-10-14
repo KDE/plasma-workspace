@@ -1,0 +1,6 @@
+# KDE Config File
+[Desktop Entry]
+Type=Application
+Name=System Monitor
+Icon=utilities-system-monitor
+NoDisplay=true

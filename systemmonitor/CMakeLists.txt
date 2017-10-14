@@ -28,3 +28,4 @@ target_link_libraries(systemmonitor
 )
 
 install(TARGETS systemmonitor DESTINATION ${KDE_INSTALL_BINDIR})
+install(PROGRAMS org.kde.systemmonitor.desktop DESTINATION ${XDG_APPS_INSTALL_DIR})
