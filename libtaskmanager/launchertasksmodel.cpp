@@ -21,6 +21,7 @@ License along with this library.  If not, see <http://www.gnu.org/licenses/>.
 #include "launchertasksmodel.h"
 #include "tasktools.h"
 
+#include <KDesktopFile>
 #include <KRun>
 #include <KService>
 #include <KStartupInfo>
@@ -148,6 +149,21 @@ bool LauncherTasksModel::Private::requestAddLauncherToActivities(const QUrl &_ur
 
     if (url.isEmpty() || !url.isValid()) {
         return false;
+    }
+
+    if (url.isLocalFile() && KDesktopFile::isDesktopFile(url.toLocalFile())) {
+        KDesktopFile f(url.toLocalFile());
+
+        const KService::Ptr service = KService::serviceByStorageId(f.fileName());
+
+        // Resolve to non-absolute menuId-based URL if possible.
+        if (service) {
+            const QString &menuId = service->menuId();
+
+            if (!menuId.isEmpty()) {
+                url = QUrl(QStringLiteral("applications:") + menuId);
+            }
+        }
     }
 
     // Merge duplicates

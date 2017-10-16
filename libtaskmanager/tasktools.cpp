@@ -615,11 +615,40 @@ QString defaultApplication(const QUrl &url)
 
 bool launcherUrlsMatch(const QUrl &a, const QUrl &b, UrlComparisonMode mode)
 {
+    QUrl sanitizedA = a;
+    QUrl sanitizedB = b;
+
     if (mode == IgnoreQueryItems) {
-        return (a.adjusted(QUrl::RemoveQuery) == b.adjusted(QUrl::RemoveQuery));
+        sanitizedA = a.adjusted(QUrl::RemoveQuery);
+        sanitizedB = b.adjusted(QUrl::RemoveQuery);
     }
 
-    return (a == b);
+    auto tryResolveToApplicationsUrl = [](const QUrl &url) -> QUrl {
+        QUrl resolvedUrl = url;
+
+        if (url.isLocalFile() && KDesktopFile::isDesktopFile(url.toLocalFile())) {
+            KDesktopFile f(url.toLocalFile());
+
+            const KService::Ptr service = KService::serviceByStorageId(f.fileName());
+
+            // Resolve to non-absolute menuId-based URL if possible.
+            if (service) {
+                const QString &menuId = service->menuId();
+
+                if (!menuId.isEmpty()) {
+                    resolvedUrl = QUrl(QStringLiteral("applications:") + menuId);
+                    resolvedUrl.setQuery(url.query());
+                }
+            }
+        }
+
+        return resolvedUrl;
+    };
+
+    sanitizedA = tryResolveToApplicationsUrl(sanitizedA);
+    sanitizedB = tryResolveToApplicationsUrl(sanitizedB);
+
+    return (sanitizedA == sanitizedB);
 }
 
 bool appsMatch(const QModelIndex &a, const QModelIndex &b)

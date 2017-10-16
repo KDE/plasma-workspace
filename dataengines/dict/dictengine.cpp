@@ -174,7 +174,9 @@ void DictEngine::getDicts()
 
 void DictEngine::socketClosed()
 {
-    m_tcpSocket->deleteLater();
+    if (m_tcpSocket) {
+        m_tcpSocket->deleteLater();
+    }
     m_tcpSocket = 0;
 }
 
