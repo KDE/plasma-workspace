@@ -221,6 +221,8 @@ void SystemTray::showPlasmoidMenu(QQuickItem *appletInterface, int x, int y)
     }
 
     KAcceleratorManager::manage(desktopMenu);
+    desktopMenu->winId();
+    desktopMenu->windowHandle()->setTransientParent(appletInterface->window());
     desktopMenu->popup(pos.toPoint());
 }
 
