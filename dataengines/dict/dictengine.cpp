@@ -21,6 +21,7 @@
 
 #include <QDebug>
 #include <QTcpSocket>
+#include <KLocalizedString>
 
 #include <Plasma/DataContainer>
 
@@ -49,7 +50,6 @@ void DictEngine::setServer(const QString &server)
 
 static QString wnToHtml(const QString &word, QByteArray &text)
 {
-    Q_UNUSED(word)
     QList<QByteArray> splitText = text.split('\n');
     QString def;
     def += QLatin1String("<dl>\n");
@@ -73,10 +73,13 @@ static QString wnToHtml(const QString &word, QByteArray &text)
             continue;
         }
 
+        if (currentLine.startsWith("552")) {
+            return i18n("No match found for %1", word);
+        }
+
         if (!(currentLine.startsWith(QLatin1String("150"))
            || currentLine.startsWith(QLatin1String("151"))
-           || currentLine.startsWith(QLatin1String("250"))
-           || currentLine.startsWith(QLatin1String("552")))) {
+           || currentLine.startsWith(QLatin1String("250")))) {
             currentLine.replace(linkRx,QLatin1String("<a href=\"\\1\">\\1</a>"));
 
             if (isFirst) {
