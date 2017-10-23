@@ -29,7 +29,6 @@
 #include <QQuickItem>
 #include <QQuickWindow>
 #include <QTimer>
-#include <QVersionNumber>
 
 #include <KFileItemActions>
 #include <KFileItemListProperties>
@@ -170,14 +169,7 @@ void Thumbnailer::showContextMenu(int x, int y, const QString &path, QQuickItem 
         }
     };
 
-    //pre 5.8.0 QQuickWindow code is "item->grabMouse(); sendEvent(item, mouseEvent)"
-    //post 5.8.0 QQuickWindow code is sendEvent(item, mouseEvent); item->grabMouse()
-    if (QVersionNumber::fromString(qVersion()) > QVersionNumber(5, 8, 0)) {
-        QTimer::singleShot(0, ctx, ungrabMouseHack);
-    }
-    else {
-        ungrabMouseHack();
-    }
+    QTimer::singleShot(0, ctx, ungrabMouseHack);
     //end workaround
 
 

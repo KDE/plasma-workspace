@@ -30,7 +30,6 @@
 #include <QQuickWindow>
 #include <QScreen>
 #include <QDBusConnection>
-#include <QVersionNumber>
 #include <QTimer>
 
 AppMenuApplet::AppMenuApplet(QObject *parent, const QVariantList &data)
@@ -179,14 +178,7 @@ void AppMenuApplet::trigger(QQuickItem *ctx, int idx)
             }
         };
 
-        //pre 5.8.0 QQuickWindow code is "item->grabMouse(); sendEvent(item, mouseEvent)"
-        //post 5.8.0 QQuickWindow code is sendEvent(item, mouseEvent); item->grabMouse()
-        if (QVersionNumber::fromString(qVersion()) > QVersionNumber(5, 8, 0)) {
-            QTimer::singleShot(0, ctx, ungrabMouseHack);
-        }
-        else {
-            ungrabMouseHack();
-        }
+        QTimer::singleShot(0, ctx, ungrabMouseHack);
         //end workaround
 
         const auto &geo = ctx->window()->screen()->availableVirtualGeometry();
