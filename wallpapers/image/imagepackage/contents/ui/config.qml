@@ -338,7 +338,8 @@ ColumnLayout {
                 Connections {
                     target: imageWallpaper
                     onCustomWallpaperPicked: {
-                        wallpapersGrid.currentIndex = 0
+                        wallpapersGrid.currentIndex = 0;
+                        cfg_Image = path;
                     }
                 }
 

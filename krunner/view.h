@@ -26,7 +26,7 @@
 
 #include <KWayland/Client/plasmashell.h>
 
-#include "dialog.h"
+#include <PlasmaQuick/Dialog>
 
 namespace KDeclarative {
     class QmlObject;

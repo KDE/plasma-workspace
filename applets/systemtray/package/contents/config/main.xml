@@ -50,6 +50,10 @@
       <label>Default icon size for the systray icons, it's an enum which values mean, Small, SmallMedium, Medium, Large, Huge, Enormous respectively. On low DPI systems they correspond to 16, 22, 32, 48, 64, 128 pixels. On high DPI systems those values would be scaled up, depending on the DPI.</label>
       <default>1</default>
     </entry>
+    <entry name="pin" type="Bool">
+      <label>Whether the popup should remain open when another window is activated</label>
+      <default>false</default>
+    </entry>
   </group>
 
 </kcfg>

@@ -164,8 +164,15 @@ QUrl StartupTasksModel::Private::launcherUrl(const KStartupInfoData &data)
     // Try to match via desktop filename ...
     if (!appId.isEmpty() && appId.endsWith(QLatin1String(".desktop"))) {
         if (appId.startsWith(QLatin1String("/"))) {
-            launcherUrl = QUrl::fromLocalFile(appId);
-            return launcherUrl;
+            // Even if we have an absolute path, try resolving to a service first (Bug 385594)
+            KService::Ptr service = KService::serviceByDesktopPath(appId);
+            if (!service) { // No luck, just return it verbatim
+                launcherUrl = QUrl::fromLocalFile(appId);
+                return launcherUrl;
+            }
+
+            // Fall-through to menuId() handling below
+            services = {service};
         } else {
             if (appId.endsWith(QLatin1String(".desktop"))) {
                 appId = appId.mid(appId.length() - 8);
@@ -193,6 +200,14 @@ QUrl StartupTasksModel::Private::launcherUrl(const KStartupInfoData &data)
     }
 
     if (!services.empty()) {
+        const QString &menuId = services.at(0)->menuId();
+
+        // applications: URLs are used to refer to applications by their KService::menuId
+        // (i.e. .desktop file name) rather than the absolute path to a .desktop file.
+        if (!menuId.isEmpty()) {
+            return QUrl(QStringLiteral("applications:") + menuId);
+        }
+
         QString path = services.at(0)->entryPath();
 
         if (path.isEmpty()) {

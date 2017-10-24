@@ -31,7 +31,6 @@ Item {
     Layout.preferredWidth: Layout.minimumWidth
     Layout.preferredHeight: Layout.minimumHeight * 1.5
 
-    property bool hideOnWindowDeactivate: !pinButton.checked
     property alias activeApplet: container.activeApplet
     property alias hiddenLayout: hiddenItemsView.layout
 
@@ -41,6 +40,8 @@ Item {
         width: Math.round(units.gridUnit * 1.25)
         height: width
         checkable: true
+        checked: plasmoid.configuration.pin
+        onCheckedChanged: plasmoid.configuration.pin = checked
         iconSource: "window-pin"
         z: 2
     }

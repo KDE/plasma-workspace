@@ -69,8 +69,8 @@ SearchRunner::SearchRunner(QObject* parent)
     qDBusRegisterMetaType<RemoteMatches>();
     qDBusRegisterMetaType<RemoteAction>();
     qDBusRegisterMetaType<RemoteActions>();
-    QDBusConnection::sessionBus().registerService("org.kde.runners.baloo");
     QDBusConnection::sessionBus().registerObject("/runner", this);
+    QDBusConnection::sessionBus().registerService("org.kde.runners.baloo");
 }
 
 SearchRunner::~SearchRunner()

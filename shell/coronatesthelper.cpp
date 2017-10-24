@@ -47,6 +47,11 @@ void CoronaTestHelper::processApplet(Plasma::Applet* applet)
         qGuiApp->exit(1);
         return;
     }
+    if (!obj) {
+        qCWarning(PLASMASHELL) << "cannot get AppletQuickItem for applet";
+        qGuiApp->exit(1);
+        return;
+    }
 
     auto testObject = obj->testItem();
     if (!testObject) {

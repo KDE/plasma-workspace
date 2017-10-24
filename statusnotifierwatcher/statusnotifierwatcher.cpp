@@ -38,8 +38,8 @@ StatusNotifierWatcher::StatusNotifierWatcher(QObject *parent, const QList<QVaria
     setModuleName(QStringLiteral("StatusNotifierWatcher"));
     new StatusNotifierWatcherAdaptor(this);
     QDBusConnection dbus = QDBusConnection::sessionBus();
-    dbus.registerService(QStringLiteral("org.kde.StatusNotifierWatcher"));
     dbus.registerObject(QStringLiteral("/StatusNotifierWatcher"), this);
+    dbus.registerService(QStringLiteral("org.kde.StatusNotifierWatcher"));
 
     m_serviceWatcher = new QDBusServiceWatcher(this);
     m_serviceWatcher->setConnection(dbus);

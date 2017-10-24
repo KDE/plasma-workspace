@@ -57,15 +57,17 @@ DesktopView::DesktopView(Plasma::Corona *corona, QScreen *targetScreen)
     QObject::connect(corona, &Plasma::Corona::kPackageChanged,
                      this, &DesktopView::coronaPackageChanged);
 
-    connect(this, &DesktopView::sceneGraphInitialized, this,
-        [this, corona]() {
-            // check whether the GL Context supports OpenGL
-            // Note: hasOpenGLShaderPrograms is broken, see QTBUG--39730
-            if (!QOpenGLShaderProgram::hasOpenGLShaderPrograms(openglContext())) {
-                qWarning() << "GLSL not available, Plasma won't be functional";
-                QMetaObject::invokeMethod(corona, "showOpenGLNotCompatibleWarning", Qt::QueuedConnection);
-            }
-        }, Qt::DirectConnection);
+    if (QQuickWindow::sceneGraphBackend() != QLatin1String("software")) {
+        connect(this, &DesktopView::sceneGraphInitialized, this,
+            [this, corona]() {
+                // check whether the GL Context supports OpenGL
+                // Note: hasOpenGLShaderPrograms is broken, see QTBUG--39730
+                if (!QOpenGLShaderProgram::hasOpenGLShaderPrograms(openglContext())) {
+                    qWarning() << "GLSL not available, Plasma won't be functional";
+                    QMetaObject::invokeMethod(corona, "showOpenGLNotCompatibleWarning", Qt::QueuedConnection);
+                }
+            }, Qt::DirectConnection);
+    }
 }
 
 DesktopView::~DesktopView()
@@ -197,26 +199,16 @@ DesktopView::SessionType DesktopView::sessionType() const
 
 bool DesktopView::event(QEvent *e)
 {
-    if (e->type() == QEvent::KeyRelease) {
-        QKeyEvent *ke = static_cast<QKeyEvent *>(e);
-        if (KWindowSystem::showingDesktop() && ke->key() == Qt::Key_Escape) {
-            ShellCorona *c = qobject_cast<ShellCorona *>(corona());
-            if (c) {
-                KWindowSystem::setShowingDesktop(false);
-            }
-        }
-    } else if (e->type() == QEvent::PlatformSurface) {
-        if (auto pe = dynamic_cast<QPlatformSurfaceEvent*>(e)) {
-            switch (pe->surfaceEventType()) {
-            case QPlatformSurfaceEvent::SurfaceCreated:
-                setupWaylandIntegration();
-                ensureWindowType();
-                break;
-            case QPlatformSurfaceEvent::SurfaceAboutToBeDestroyed:
-                delete m_shellSurface;
-                m_shellSurface = nullptr;
-                break;
-            }
+    if (e->type() == QEvent::PlatformSurface) {
+        switch (static_cast<QPlatformSurfaceEvent*>(e)->surfaceEventType()) {
+        case QPlatformSurfaceEvent::SurfaceCreated:
+            setupWaylandIntegration();
+            ensureWindowType();
+            break;
+        case QPlatformSurfaceEvent::SurfaceAboutToBeDestroyed:
+            delete m_shellSurface;
+            m_shellSurface = nullptr;
+            break;
         }
     }
 
@@ -227,8 +219,18 @@ void DesktopView::keyPressEvent(QKeyEvent *e)
 {
     ContainmentView::keyPressEvent(e);
 
+    if (e->isAccepted()) {
+        return;
+    }
+
+    if (e->key() == Qt::Key_Escape && KWindowSystem::showingDesktop()) {
+        KWindowSystem::setShowingDesktop(false);
+        e->accept();
+        return;
+    }
+
     // When a key is pressed on desktop when nothing else is active forward the key to krunner
-    if ((!e->modifiers() || e->modifiers() == Qt::ShiftModifier) && !e->isAccepted()) {
+    if (!e->modifiers() || e->modifiers() == Qt::ShiftModifier) {
         const QString text = e->text().trimmed();
         if (!text.isEmpty() && text[0].isPrint()) {
             const QString interface(QStringLiteral("org.kde.krunner"));
@@ -238,10 +240,10 @@ void DesktopView::keyPressEvent(QKeyEvent *e)
             org::kde::krunner::App krunner(interface, QStringLiteral("/App"), QDBusConnection::sessionBus());
             krunner.query(text);
             e->accept();
+            return;
         }
     }
 }
-
 
 void DesktopView::showConfigurationInterface(Plasma::Applet *applet)
 {

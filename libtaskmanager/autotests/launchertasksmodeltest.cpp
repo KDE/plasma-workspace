@@ -42,13 +42,16 @@ class LauncherTasksModelTest : public QObject
 
     private:
         QStringList m_urlStrings;
+        QStringList m_mangledUrlStrings;
 };
 
 void LauncherTasksModelTest::initTestCase()
 {
     qApp->setProperty("org.kde.KActivities.core.disableAutostart", true);
     m_urlStrings << QLatin1String("file:///usr/share/applications/org.kde.dolphin.desktop");
-    m_urlStrings << QLatin1String("file:///usr/share/applications/org.kde.konsole.desktop");
+    m_mangledUrlStrings << QLatin1String("applications:org.kde.dolphin.desktop");
+    m_urlStrings << QLatin1String("file:///usr/share/applications/org.kde.konversation.desktop");
+    m_mangledUrlStrings << QLatin1String("applications:org.kde.konversation.desktop");
 }
 
 void LauncherTasksModelTest::shouldRoundTripLauncherUrlList()
@@ -64,8 +67,8 @@ void LauncherTasksModelTest::shouldRoundTripLauncherUrlList()
 
     QCOMPARE(m.launcherList(), m_urlStrings);
 
-    QCOMPARE(m.data(m.index(0, 0), AbstractTasksModel::LauncherUrl).toString(), m_urlStrings.at(0));
-    QCOMPARE(m.data(m.index(1, 0), AbstractTasksModel::LauncherUrl).toString(), m_urlStrings.at(1));
+    QCOMPARE(m.data(m.index(0, 0), AbstractTasksModel::LauncherUrl).toString(), m_mangledUrlStrings.at(0));
+    QCOMPARE(m.data(m.index(1, 0), AbstractTasksModel::LauncherUrl).toString(), m_mangledUrlStrings.at(1));
 }
 
 void LauncherTasksModelTest::shouldIgnoreInvalidUrls()

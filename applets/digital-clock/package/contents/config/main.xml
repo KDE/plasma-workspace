@@ -65,5 +65,9 @@
       <label>A list of plugins where additional calendar event data can be sourced.</label>
       <default></default>
     </entry>
+    <entry name="pin" type="Bool">
+      <label>Whether the popup should remain open when another window is activated</label>
+      <default>false</default>
+    </entry>
   </group>
 </kcfg>

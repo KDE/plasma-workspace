@@ -22,13 +22,6 @@ set(ksmserver_KDEINIT_SRCS
     client.cpp
 )
 
-INCLUDE(CheckCCompilerFlag)
-CHECK_CXX_COMPILER_FLAG(-mmmx HAVE_MMMX)
-
-if (HAVE_MMMX)
-   SET_SOURCE_FILES_PROPERTIES(fadeeffect.cpp PROPERTIES COMPILE_FLAGS -mmmx)
-endif (HAVE_MMMX)
-
 set(kcminit_adaptor ${plasma-workspace_SOURCE_DIR}/startkde/kcminit/main.h)
 set(kcminit_xml ${CMAKE_CURRENT_BINARY_DIR}/org.kde.KCMinit.xml)
 

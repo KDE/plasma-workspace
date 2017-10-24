@@ -224,17 +224,15 @@ void KSMShutdownDlg::resizeEvent(QResizeEvent *e)
 bool KSMShutdownDlg::event(QEvent *e)
 {
     if (e->type() == QEvent::PlatformSurface) {
-        if (auto pe = dynamic_cast<QPlatformSurfaceEvent*>(e)) {
-            switch (pe->surfaceEventType()) {
-            case QPlatformSurfaceEvent::SurfaceCreated:
-                setupWaylandIntegration();
-                KWindowEffects::enableBlurBehind(winId(), true);
-                break;
-            case QPlatformSurfaceEvent::SurfaceAboutToBeDestroyed:
-                delete m_shellSurface;
-                m_shellSurface = nullptr;
-                break;
-            }
+        switch (static_cast<QPlatformSurfaceEvent*>(e)->surfaceEventType()) {
+        case QPlatformSurfaceEvent::SurfaceCreated:
+            setupWaylandIntegration();
+            KWindowEffects::enableBlurBehind(winId(), true);
+            break;
+        case QPlatformSurfaceEvent::SurfaceAboutToBeDestroyed:
+            delete m_shellSurface;
+            m_shellSurface = nullptr;
+            break;
         }
     }
     return QQuickView::event(e);

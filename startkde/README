@@ -1,0 +1,9 @@
+StartKDE
+
+Startup script used on X
+
+StartPlasmaCompositor + StartPlasma
+
+Startup script used on Wayland.
+StartPlasmaCompostior is run before kwin and sets up kwin's env
+StartPlasma is then invoked by kwin

@@ -1,10 +1,10 @@
 project(plasma-workspace)
-set(PROJECT_VERSION "5.10.90")
+set(PROJECT_VERSION "5.11.90")
 set(PROJECT_VERSION_MAJOR 5)
 
 cmake_minimum_required(VERSION 2.8.12 FATAL_ERROR)
 
-set(QT_MIN_VERSION "5.7.0")
+set(QT_MIN_VERSION "5.9.0")
 set(KF5_MIN_VERSION "5.34.0")
 set(INSTALL_SDDM_THEME TRUE)
 find_package(Qt5 ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS Widgets Quick QuickWidgets Concurrent Test Script Network)

@@ -52,8 +52,7 @@ PowerDevilRunner::PowerDevilRunner(QObject *parent, const QVariantList &args)
      */
 
     QStringList commands;
-    commands << i18nc("Note this is a KRunner keyword", "power profile")
-             << i18nc("Note this is a KRunner keyword", "suspend")
+    commands << i18nc("Note this is a KRunner keyword", "suspend")
              << i18nc("Note this is a KRunner keyword", "sleep")
              << i18nc("Note this is a KRunner keyword", "hibernate")
              << i18nc("Note this is a KRunner keyword", "to disk")
@@ -71,8 +70,6 @@ PowerDevilRunner::PowerDevilRunner(QObject *parent, const QVariantList &args)
 void PowerDevilRunner::updateSyntaxes()
 {
     QList<Plasma::RunnerSyntax> syntaxes;
-    syntaxes.append(Plasma::RunnerSyntax(i18nc("Note this is a KRunner keyword", "power profile"),
-                     i18n("Lists all power profiles and allows them to be activated")));
     syntaxes.append(Plasma::RunnerSyntax(i18nc("Note this is a KRunner keyword", "suspend"),
                      i18n("Lists system suspend (e.g. sleep, hibernate) options "
                           "and allows them to be activated")));
@@ -114,12 +111,6 @@ void PowerDevilRunner::initUpdateTriggers()
         if (!dbus.connect(QStringLiteral("org.kde.Solid.PowerManagement"),
                           QStringLiteral("/org/kde/Solid/PowerManagement"),
                           QStringLiteral("org.kde.Solid.PowerManagement"),
-                          QStringLiteral("profileChanged"), this, SLOT(updateStatus()))) {
-            qDebug() << "error!";
-        }
-        if (!dbus.connect(QStringLiteral("org.kde.Solid.PowerManagement"),
-                          QStringLiteral("/org/kde/Solid/PowerManagement"),
-                          QStringLiteral("org.kde.Solid.PowerManagement"),
                           QStringLiteral("configurationReloaded"), this, SLOT(updateStatus()))) {
             qDebug() << "error!";
         }
@@ -128,40 +119,8 @@ void PowerDevilRunner::initUpdateTriggers()
 
 void PowerDevilRunner::updateStatus()
 {
-    // Profiles and their icons
-    {
-        KSharedConfigPtr profilesConfig = KSharedConfig::openConfig(QStringLiteral("powerdevil2profilesrc"), KConfig::SimpleConfig);
-        // Request profiles to the daemon
-        QDBusMessage call = QDBusMessage::createMethodCall(QStringLiteral("org.kde.Solid.PowerManagement"), QStringLiteral("/org/kde/Solid/PowerManagement"),
-                                                           QStringLiteral("org.kde.Solid.PowerManagement"), QStringLiteral("availableProfiles"));
-        QDBusPendingReply< StringStringMap > reply = QDBusConnection::sessionBus().asyncCall(call);
-        reply.waitForFinished();
-
-        if (!reply.isValid()) {
-            qDebug() << "Error contacting the daemon!";
-            return;
-        }
-
-        m_availableProfiles = reply.value();
-
-        if (m_availableProfiles.isEmpty()) {
-            qDebug() << "No available profiles!";
-            return;
-        }
-
-        for (StringStringMap::const_iterator i = m_availableProfiles.constBegin(); i != m_availableProfiles.constEnd(); ++i) {
-            KConfigGroup settings(profilesConfig, i.key());
-            if (settings.readEntry< QString >("icon", QString()).isEmpty()) {
-                m_profileIcon[i.key()] = QLatin1String("preferences-system-power-management");
-            } else {
-                m_profileIcon[i.key()] = settings.readEntry< QString >("icon", QString());
-            }
-        }
-    }
-
     updateSyntaxes();
 }
-
 
 bool PowerDevilRunner::parseQuery(const QString& query, const QList<QRegExp>& rxList, QString& parameter) const
 {
@@ -186,25 +145,6 @@ void PowerDevilRunner::match(Plasma::RunnerContext &context)
     QString parameter;
 
     if (parseQuery(term,
-                   QList<QRegExp>() << QRegExp(i18nc("Note this is a KRunner keyword; %1 is a parameter", "power profile %1", "(.*)"), Qt::CaseInsensitive)
-                                    << QRegExp(i18nc("Note this is a KRunner keyword", "power profile"), Qt::CaseInsensitive),
-                   parameter)) {
-        for (StringStringMap::const_iterator i = m_availableProfiles.constBegin(); i != m_availableProfiles.constEnd(); ++i) {
-            if (!parameter.isEmpty()) {
-                if (!i.value().startsWith(parameter, Qt::CaseInsensitive)) {
-                    continue;
-                }
-            }
-            Plasma::QueryMatch match(this);
-            match.setType(Plasma::QueryMatch::ExactMatch);
-            match.setIconName(m_profileIcon[i.key()]);
-            match.setText(i18n("Set Profile to '%1'", i.value()));
-            match.setData(i.key());
-            match.setRelevance(1);
-            match.setId("ProfileChange "+ i.key());
-            matches.append(match);
-        }
-    } else if (parseQuery(term,
                           QList<QRegExp>() << QRegExp(i18nc("Note this is a KRunner keyword; %1 is a parameter", "screen brightness %1", "(.*)"), Qt::CaseInsensitive)
                                            << QRegExp(i18nc("Note this is a KRunner keyword", "screen brightness"), Qt::CaseInsensitive)
                                            << QRegExp(i18nc("Note this is a KRunner keyword; %1 is a parameter", "dim screen %1", "(.*)"), Qt::CaseInsensitive)

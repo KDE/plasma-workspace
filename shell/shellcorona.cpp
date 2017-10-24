@@ -2019,6 +2019,7 @@ void ShellCorona::setupWaylandIntegration()
         }
     );
     registry->setup();
+    connection->roundtrip();
 }
 
 KWayland::Client::PlasmaShell *ShellCorona::waylandPlasmaShellInterface() const

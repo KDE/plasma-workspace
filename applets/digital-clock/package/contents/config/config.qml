@@ -20,6 +20,7 @@
  */
 
 import QtQuick 2.0
+import QtQml 2.2
 
 import org.kde.plasma.configuration 2.0
 import org.kde.plasma.calendar 2.0 as PlasmaCalendar
@@ -43,19 +44,16 @@ ConfigModel {
         source: "configTimeZones.qml"
     }
 
-    Component.onCompleted: {
-        var model = PlasmaCalendar.EventPluginsManager.model;
-
-        for (var i = 0; i < model.rowCount(); i++) {
-            //FIXME: this check doesn't work because the engines
-            //       of the applet and the config are not shared
-//             if (model.get(i, "checked") == true) {
-                configModel.appendCategory(model.get(i, "decoration"),
-                                        model.get(i, "display"),
-                                        model.get(i, "configUi"),
-                                        "",
-                                        true);
-//             }
+    property Instantiator __eventPlugins: Instantiator {
+        model: PlasmaCalendar.EventPluginsManager.model
+        delegate: ConfigCategory {
+            name: model.display
+            icon: model.decoration
+            source: model.configUi
+            visible: plasmoid.configuration.enabledCalendarPlugins.indexOf(model.pluginPath) > -1
         }
+
+        onObjectAdded: configModel.appendCategory(object)
+        onObjectRemoved: configModel.removeCategory(object)
     }
 }

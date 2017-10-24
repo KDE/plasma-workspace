@@ -96,8 +96,9 @@ Klipper::Klipper(QObject* parent, const KSharedConfigPtr& config, KlipperMode mo
 {
     if (m_mode == KlipperMode::Standalone) {
         setenv("KSNI_NO_DBUSMENU", "1", 1);
-        QDBusConnection::sessionBus().registerObject(QStringLiteral("/klipper"), this, QDBusConnection::ExportScriptableSlots);
     }
+    QDBusConnection::sessionBus().registerService(QStringLiteral("org.kde.klipper"));
+    QDBusConnection::sessionBus().registerObject(QStringLiteral("/klipper"), this, QDBusConnection::ExportScriptableSlots);
 
     updateTimestamp(); // read initial X user time
     m_clip = qApp->clipboard();

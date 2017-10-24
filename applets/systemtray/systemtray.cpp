@@ -22,7 +22,6 @@
 
 #include <QDebug>
 #include <QProcess>
-#include <QVersionNumber>
 #include <QTimer>
 
 #include <QDBusConnection>
@@ -179,14 +178,7 @@ void SystemTray::showPlasmoidMenu(QQuickItem *appletInterface, int x, int y)
         }
     };
 
-    //pre 5.8.0 QQuickWindow code is "item->grabMouse(); sendEvent(item, mouseEvent)"
-    //post 5.8.0 QQuickWindow code is sendEvent(item, mouseEvent); item->grabMouse()
-    if (QVersionNumber::fromString(qVersion()) > QVersionNumber(5, 8, 0)) {
-        QTimer::singleShot(0, appletInterface, ungrabMouseHack);
-    }
-    else {
-        ungrabMouseHack();
-    }
+    QTimer::singleShot(0, appletInterface, ungrabMouseHack);
     //end workaround
 
 
@@ -221,6 +213,8 @@ void SystemTray::showPlasmoidMenu(QQuickItem *appletInterface, int x, int y)
     }
 
     KAcceleratorManager::manage(desktopMenu);
+    desktopMenu->winId();
+    desktopMenu->windowHandle()->setTransientParent(appletInterface->window());
     desktopMenu->popup(pos.toPoint());
 }
 
