@@ -34,7 +34,7 @@ ColumnLayout {
     property alias cfg_Color: colorDialog.color
     property string cfg_Image
     property int cfg_FillMode
-    property alias cfg_Blur: blurCheckBox.checked
+    property alias cfg_Blur: blurRadioButton.checked
     property var cfg_SlidePaths: ""
     property int cfg_SlideInterval: 0
 
@@ -128,21 +128,24 @@ ColumnLayout {
         }
     }
 
+    QtControls.ExclusiveGroup { id: backgroundGroup }
+
     Row {
-        //x: formAlignment - positionLabel.paintedWidth
+        id: blurRow
         spacing: units.largeSpacing / 2
+        visible: cfg_FillMode === Image.PreserveAspectFit || cfg_FillMode === Image.Pad
         QtControls.Label {
             id: blurLabel
             width: formAlignment - units.largeSpacing
-            anchors {
-                verticalCenter: blurCheckBox.verticalCenter
-            }
+            anchors.verticalCenter: blurRadioButton.verticalCenter
             horizontalAlignment: Text.AlignRight
+            text: i18nd("plasma_applet_org.kde.image", "Background:")
         }
-        QtControls.CheckBox {
-            id: blurCheckBox
-            text: i18nd("plasma_applet_org.kde.image", "Use blur background filling")
+        QtControls.RadioButton {
+            id: blurRadioButton
+            text: i18nd("plasma_applet_org.kde.image", "Blur")
             checked: true
+            exclusiveGroup: backgroundGroup
         }
     }
 
@@ -155,12 +158,16 @@ ColumnLayout {
 
     Row {
         id: colorRow
+        visible: cfg_FillMode === Image.PreserveAspectFit || cfg_FillMode === Image.Pad
         spacing: units.largeSpacing / 2
         QtControls.Label {
             width: formAlignment - units.largeSpacing
-            anchors.verticalCenter: colorButton.verticalCenter
-            horizontalAlignment: Text.AlignRight
-            text: i18nd("plasma_applet_org.kde.image", "Background Color:")
+        }
+        QtControls.RadioButton {
+            id: colorRadioButton
+            text: i18nd("plasma_applet_org.kde.image", "Solid color")
+            checked: false
+            exclusiveGroup: backgroundGroup
         }
         QtControls.Button {
             id: colorButton
