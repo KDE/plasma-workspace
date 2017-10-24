@@ -107,11 +107,10 @@ void DictEngine::getDefinition()
     m_tcpSocket->readAll();
     QByteArray ret;
 
-    m_tcpSocket->write(QByteArray("DEFINE "));
-    m_tcpSocket->write(m_dictName.toLatin1());
-    m_tcpSocket->write(QByteArray(" \""));
-    m_tcpSocket->write(m_currentWord.toUtf8());
-    m_tcpSocket->write(QByteArray("\"\n"));
+
+    const QByteArray command = QByteArray("DEFINE ") + m_dictName.toLatin1() + " \"" + m_currentWord.toUtf8() + "\"\n";
+    //qDebug() << command;
+    m_tcpSocket->write(command);
     m_tcpSocket->flush();
 
     while (!ret.contains("250") && !ret.contains("552") && !ret.contains("550")) {
@@ -121,14 +120,13 @@ void DictEngine::getDefinition()
 
     connect(m_tcpSocket, &QTcpSocket::disconnected, this, &DictEngine::socketClosed);
     m_tcpSocket->disconnectFromHost();
-    //       setData(m_currentWord, m_dictName, ret);
-    //       qWarning()<<ret;
-    setData(m_currentWord, QStringLiteral("text"), wnToHtml(m_currentWord,ret));
+    const QString html = wnToHtml(m_currentWord, ret);
+    // setData(m_currentQuery, m_dictName, html);
+    setData(m_currentQuery, QStringLiteral("text"), html);
 }
 
 void DictEngine::getDicts()
 {
-    QMap<QString, QString> theHash;
     m_tcpSocket->readAll();
     QByteArray ret;
 
@@ -141,36 +139,29 @@ void DictEngine::getDicts()
         ret += m_tcpSocket->readAll();
     }
 
-    QList<QByteArray> retLines = ret.split('\n');
-    QString tmp1, tmp2;
-
-    while (!retLines.empty()) {
-        QString curr(retLines.takeFirst());
-
-        if (curr.startsWith(QLatin1String("554"))) {
+    const QList<QByteArray> retLines = ret.split('\n');
+    for (const QByteArray &curr : retLines) {
+        if (curr.startsWith("554")) {
             //TODO: What happens if no DB available?
             //TODO: Eventually there will be functionality to change the server...
             break;
         }
 
         // ignore status code and empty lines
-        if (curr.startsWith(QLatin1String("250")) || curr.startsWith(QLatin1String("110"))
+        if (curr.startsWith("250") || curr.startsWith("110")
            || curr.isEmpty()) {
             continue;
         }
 
         if (!curr.startsWith('-') && !curr.startsWith('.')) {
-            curr = curr.trimmed();
-            tmp1 = curr.section(' ', 0, 0);
-            tmp2 = curr.section(' ', 1);
-  //          theHash.insert(tmp1, tmp2);
-            //qDebug() << tmp1 + "  " + tmp2;
-            setData(QStringLiteral("list-dictionaries"), tmp1, tmp2);
+            const QString line = QString::fromUtf8(curr).trimmed();
+            const QString id = line.section(' ', 0, 0);
+            const QString description = line.section(' ', 1);
+            setData(QStringLiteral("list-dictionaries"), id, description); // this is additive
         }
     }
 
     m_tcpSocket->disconnectFromHost();
-//    setData("list-dictionaries", "dictionaries", QByteArray(theHash);
 }
 
 
@@ -222,9 +213,9 @@ bool DictEngine::sourceRequestEvent(const QString &query)
     }
 
     if (m_currentWord.simplified().isEmpty()) {
-        setData(m_currentWord, m_dictName, QString());
+        setData(m_currentQuery, m_dictName, QString());
     } else {
-        setData(m_currentWord, m_dictName, QString());
+        setData(m_currentQuery, m_dictName, QString());
         m_tcpSocket = new QTcpSocket(this);
         m_tcpSocket->abort();
         connect(m_tcpSocket, &QTcpSocket::disconnected, this, &DictEngine::socketClosed);
