@@ -26,11 +26,9 @@ fi
 
 [ -r $configDir/startupconfig ] && . $configDir/startupconfig
 
-if test "$kcmfonts_general_forcefontdpi" -ne 0; then
-    xrdb -quiet -merge -nocpp <<EOF
-Xft.dpi: $kcmfonts_general_forcefontdpi
+xrdb -quiet -merge -nocpp <<EOF
+Xft.dpi: $QT_WAYLAND_FORCE_DPI
 EOF
-fi
 
 dl=$DESKTOP_LOCKED
 unset DESKTOP_LOCKED # Don't want it in the environment
