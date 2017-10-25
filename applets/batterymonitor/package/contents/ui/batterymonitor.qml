@@ -83,7 +83,7 @@ Item {
     Plasmoid.toolTipSubText: powermanagementDisabled ? i18n("Power management is disabled") : ""
     Plasmoid.icon: "battery"
 
-    property bool disableBrightnessUpdate: false
+    property bool disableBrightnessUpdate: true
 
     property int screenBrightness
     readonly property int maximumScreenBrightness: pmSource.data["PowerDevil"] ? pmSource.data["PowerDevil"]["Maximum Screen Brightness"] || 0 : 0
