@@ -20,7 +20,9 @@
 #include <iostream>
 
 #include <QDebug>
+#include <QRegularExpression>
 #include <QTcpSocket>
+#include <QUrl>
 #include <KLocalizedString>
 
 #include <Plasma/DataContainer>
@@ -53,8 +55,7 @@ static QString wnToHtml(const QString &word, QByteArray &text)
     QList<QByteArray> splitText = text.split('\n');
     QString def;
     def += QLatin1String("<dl>\n");
-    QRegExp linkRx(QStringLiteral("\\{(.*)\\}"));
-    linkRx.setMinimal(true);
+    static QRegularExpression linkRx(QStringLiteral("{(.*?)}"));
 
     bool isFirst=true;
     while (!splitText.empty()) {
@@ -80,17 +81,30 @@ static QString wnToHtml(const QString &word, QByteArray &text)
         if (!(currentLine.startsWith(QLatin1String("150"))
            || currentLine.startsWith(QLatin1String("151"))
            || currentLine.startsWith(QLatin1String("250")))) {
-            currentLine.replace(linkRx,QLatin1String("<a href=\"\\1\">\\1</a>"));
+            // Handle links
+            int offset = 0;
+            QRegularExpressionMatchIterator it = linkRx.globalMatch(currentLine);
+            while (it.hasNext()) {
+                QRegularExpressionMatch match = it.next();
+                QUrl url;
+                url.setScheme("dict");
+                url.setPath(match.captured(1));
+                const QString linkText = QStringLiteral("<a href=\"%1\">%2</a>").arg(url.toString(), match.captured(1));
+                currentLine.replace(match.capturedStart(0) + offset, match.capturedLength(0), linkText);
+                offset += linkText.length() - match.capturedLength(0);
+            }
 
             if (isFirst) {
                 def += "<dt><b>" + currentLine + "</b></dt>\n<dd>";
                 isFirst = false;
                 continue;
             } else {
-                if (currentLine.contains(QRegExp(QStringLiteral("([1-9]{1,2}:)")))) {
+                static QRegularExpression newLineRx(QStringLiteral("([1-9]{1,2}:)"));
+                if (currentLine.contains(newLineRx)) {
                     def += QLatin1String("\n<br>\n");
                 }
-                currentLine.replace(QRegExp(QStringLiteral("^([\\s\\S]*[1-9]{1,2}:)")), QLatin1String("<b>\\1</b>"));
+                static QRegularExpression makeMeBoldRx(QStringLiteral("^([\\s\\S]*[1-9]{1,2}:)"));
+                currentLine.replace(makeMeBoldRx, QLatin1String("<b>\\1</b>"));
                 def += currentLine;
                 continue;
             }
