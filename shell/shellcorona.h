@@ -203,7 +203,7 @@ private Q_SLOTS:
     void desktopContainmentDestroyed(QObject*);
     void showOpenGLNotCompatibleWarning();
     void interactiveConsoleVisibilityChanged(bool visible);
-    void screenRemoved(QScreen* screen);
+    void handleScreenRemoved(QScreen* screen);
 
     void activateTaskManagerEntry(int index);
 

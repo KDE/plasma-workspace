@@ -699,7 +699,7 @@ void ShellCorona::load()
     }
     connect(qGuiApp, &QGuiApplication::screenAdded, this, &ShellCorona::addOutput, Qt::UniqueConnection);
     connect(qGuiApp, &QGuiApplication::primaryScreenChanged, this, &ShellCorona::primaryOutputChanged, Qt::UniqueConnection);
-    connect(qGuiApp, &QGuiApplication::screenRemoved, this, &ShellCorona::screenRemoved, Qt::UniqueConnection);
+    connect(qGuiApp, &QGuiApplication::screenRemoved, this, &ShellCorona::handleScreenRemoved, Qt::UniqueConnection);
 
     if (!m_waitingPanels.isEmpty()) {
         m_waitingPanelsTimer.start();
@@ -1067,6 +1067,8 @@ void ShellCorona::removeDesktop(DesktopView *desktopView)
     Q_ASSERT(m_desktopViewforId.value(idx) == desktopView);
     m_desktopViewforId.remove(idx);
     delete desktopView;
+
+    emit screenRemoved(idx);
 }
 
 PanelView *ShellCorona::panelView(Plasma::Containment *containment) const
@@ -1092,7 +1094,7 @@ DesktopView* ShellCorona::desktopForScreen(QScreen* screen) const
     return m_desktopViewforId.value(m_screenPool->id(screen->name()));
 }
 
-void ShellCorona::screenRemoved(QScreen* screen)
+void ShellCorona::handleScreenRemoved(QScreen* screen)
 {
     if (DesktopView* v = desktopForScreen(screen)) {
         removeDesktop(v);
@@ -1224,6 +1226,7 @@ void ShellCorona::addOutput(QScreen* screen)
     }
 
     emit availableScreenRectChanged();
+    emit screenAdded(m_screenPool->id(screen->name()));
 
     CHECK_SCREEN_INVARIANTS
 }
