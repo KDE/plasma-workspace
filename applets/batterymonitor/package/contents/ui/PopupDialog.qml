@@ -63,6 +63,14 @@ FocusScope {
             visible: false
         }
 
+        PowerManagementItem {
+            id: pmSwitch
+            width: parent.width
+            onEnabledChanged: powermanagementChanged(enabled)
+            KeyNavigation.tab: batteryList
+            KeyNavigation.backtab: keyboardBrightnessSlider
+        }
+
         BrightnessItem {
             id: brightnessSlider
             width: parent.width
@@ -99,14 +107,6 @@ FocusScope {
                 target: batterymonitor
                 onKeyboardBrightnessChanged: keyboardBrightnessSlider.value = batterymonitor.keyboardBrightness
             }
-        }
-
-        PowerManagementItem {
-            id: pmSwitch
-            width: parent.width
-            onEnabledChanged: powermanagementChanged(enabled)
-            KeyNavigation.tab: batteryList
-            KeyNavigation.backtab: keyboardBrightnessSlider
         }
     }
 
