@@ -91,6 +91,9 @@ QtLayouts.GridLayout {
                 "shortcut": item.globalShortcut
             });
         }
+        list.sort(function(a, b) {
+            return a.name.localeCompare(b.name);
+        });
         return list;
     }
 
