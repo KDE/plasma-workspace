@@ -24,7 +24,7 @@
     <entry name="IgnoreSelection" type="Bool">
       <label>Ignore Selection</label>
       <default>false</default>
-      <whatsthis><qt>When an area of the screen is selected with mouse or keyboard, this is called "the selection".&lt;br/&gt;If this option is set, the selection is not entered into the clipboard history, though it is still available for pasting using the middle mouse button.</qt></whatsthis>
+      <whatsthis>When an area of the screen is selected with mouse or keyboard, this is called "the selection".&lt;br/&gt;If this option is set, the selection is not entered into the clipboard history, though it is still available for pasting using the middle mouse button.</whatsthis>
     </entry>
     <entry name="Synchronize" type="Int">
       <label comment="KDE::DoNotExtract">Backwards compatibility, don't touch.</label>
@@ -33,12 +33,12 @@
     <entry name="SyncClipboards" type="Bool">
       <label>Synchronize clipboard and selection</label>
       <default>false</default>
-      <whatsthis><qt>When an area of the screen is selected with mouse or keyboard, this is called "the selection".&lt;br/&gt;If this option is selected, the selection and the clipboard is kept the same, so that anything in the selection is immediately available for pasting elsewhere using any method, including the traditional middle mouse button. Otherwise, the selection is recorded in the clipboard history, but the selection can only be pasted using the middle mouse button. Also see the 'Ignore Selection' option.</qt></whatsthis>
+      <whatsthis>When an area of the screen is selected with mouse or keyboard, this is called "the selection".&lt;br/&gt;If this option is selected, the selection and the clipboard is kept the same, so that anything in the selection is immediately available for pasting elsewhere using any method, including the traditional middle mouse button. Otherwise, the selection is recorded in the clipboard history, but the selection can only be pasted using the middle mouse button. Also see the 'Ignore Selection' option.</whatsthis>
     </entry>
     <entry name="SelectionTextOnly" type="Bool">
       <label>Selection text only</label>
       <default>true</default>
-      <whatsthis><qt>When an area of the screen is selected with mouse or keyboard, this is called "the selection".&lt;br/&gt;If this option is selected, only text selections are stored in the history, while images and other selections are not.</qt></whatsthis>
+      <whatsthis>When an area of the screen is selected with mouse or keyboard, this is called "the selection".&lt;br/&gt;If this option is selected, only text selections are stored in the history, while images and other selections are not.</whatsthis>
     </entry>
     <entry name="UseGUIRegExpEditor" type="Bool">
       <label>Use graphical regexp editor</label>

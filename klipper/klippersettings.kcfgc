@@ -5,3 +5,4 @@ Singleton=true
 CustomAdditions=false
 SetUserTexts=true
 Mutators=URLGrabberEnabled,NoActionsForWM_CLASS,Version
+TranslationSystem=kde
