@@ -450,6 +450,7 @@ QAbstractItemModel* SystemTray::availablePlasmoids()
             item->setData(info.pluginName());
             m_availablePlasmoidsModel->appendRow(item);
         }
+        m_availablePlasmoidsModel->sort(0 /*column*/);
     }
     return m_availablePlasmoidsModel;
 }
