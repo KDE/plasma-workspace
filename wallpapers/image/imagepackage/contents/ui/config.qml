@@ -383,13 +383,13 @@ ColumnLayout {
         QtControls.Button {
             visible: (configDialog.currentWallpaper == "org.kde.slideshow")
             iconName: "list-add"
-            text: i18nd("plasma_applet_org.kde.image","Add Folder")
+            text: i18nd("plasma_applet_org.kde.image","Add Folder...")
             onClicked: imageWallpaper.showAddSlidePathsDialog()
         }
         QtControls.Button {
             visible: (configDialog.currentWallpaper == "org.kde.image")
-            iconName: "document-open-folder"
-            text: i18nd("plasma_applet_org.kde.image","Open...")
+            iconName: "list-add"
+            text: i18nd("plasma_applet_org.kde.image","Add Image...")
             onClicked: imageWallpaper.showFileDialog();
         }
         QtControls.Button {
