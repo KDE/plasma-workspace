@@ -21,6 +21,7 @@ License along with this library.  If not, see <http://www.gnu.org/licenses/>.
 #ifndef TASKSMODEL_H
 #define TASKSMODEL_H
 
+#include <QQmlParserStatus>
 #include <QSortFilterProxyModel>
 
 #include "abstracttasksmodeliface.h"
@@ -53,9 +54,10 @@ namespace TaskManager
  * @author Eike Hein <hein@kde.org>
  **/
 
-class TASKMANAGER_EXPORT TasksModel : public QSortFilterProxyModel, public AbstractTasksModelIface
+class TASKMANAGER_EXPORT TasksModel : public QSortFilterProxyModel, public AbstractTasksModelIface, public QQmlParserStatus
 {
     Q_OBJECT
+    Q_INTERFACES(QQmlParserStatus)
 
     Q_PROPERTY(int count READ rowCount NOTIFY countChanged)
     Q_PROPERTY(int launcherCount READ launcherCount NOTIFY launcherCountChanged)
@@ -808,6 +810,9 @@ public:
      * child tasks.
      */
     Q_INVOKABLE QModelIndex makeModelIndex(int row, int childRow = -1) const;
+
+    void classBegin() override;
+    void componentComplete() override;
 
 Q_SIGNALS:
     void countChanged() const;

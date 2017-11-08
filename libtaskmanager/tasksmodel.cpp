@@ -80,6 +80,9 @@ public:
     bool groupInline = false;
     int groupingWindowTasksThreshold = -1;
 
+    bool usedByQml = false;
+    bool componentComplete = false;
+
     void initModels();
     void initLauncherTasksModel();
     void updateAnyTaskDemandsAttention();
@@ -438,17 +441,6 @@ void TasksModel::Private::initModels()
     QObject::connect(groupingProxyModel, &QAbstractItemModel::modelReset, q,
         [this]() { updateAnyTaskDemandsAttention(); }
     );
-
-    abstractTasksSourceModel = groupingProxyModel;
-    q->setSourceModel(groupingProxyModel);
-
-    QObject::connect(q, &QAbstractItemModel::rowsInserted, q, &TasksModel::updateLauncherCount);
-    QObject::connect(q, &QAbstractItemModel::rowsRemoved, q, &TasksModel::updateLauncherCount);
-    QObject::connect(q, &QAbstractItemModel::modelReset, q, &TasksModel::updateLauncherCount);
-
-    QObject::connect(q, &QAbstractItemModel::rowsInserted, q, &TasksModel::countChanged);
-    QObject::connect(q, &QAbstractItemModel::rowsRemoved, q, &TasksModel::countChanged);
-    QObject::connect(q, &QAbstractItemModel::modelReset, q, &TasksModel::countChanged);
 }
 
 void TasksModel::Private::updateAnyTaskDemandsAttention()
@@ -637,6 +629,12 @@ void TasksModel::Private::consolidateManualSortMapForGroup(const QModelIndex &gr
 
 void TasksModel::Private::updateGroupInline()
 {
+    if (usedByQml && !componentComplete) {
+        return;
+    }
+
+    bool hadSourceModel = (q->sourceModel() != nullptr);
+
     if (q->groupMode() != GroupDisabled && groupInline) {
         if (flattenGroupsProxyModel) {
             return;
@@ -661,7 +659,7 @@ void TasksModel::Private::updateGroupInline()
             forceResort();
         }
     } else {
-        if (!flattenGroupsProxyModel) {
+        if (hadSourceModel && !flattenGroupsProxyModel) {
             return;
         }
 
@@ -674,9 +672,27 @@ void TasksModel::Private::updateGroupInline()
         delete flattenGroupsProxyModel;
         flattenGroupsProxyModel = nullptr;
 
-        if (sortMode == SortManual) {
+        if (hadSourceModel && sortMode == SortManual) {
             forceResort();
         }
+    }
+
+    // Minor optimization: We only make these connections after we populate for
+    // the first time to avoid some churn.
+    if (!hadSourceModel) {
+        QObject::connect(q, &QAbstractItemModel::rowsInserted, q,
+            &TasksModel::updateLauncherCount, Qt::UniqueConnection);
+        QObject::connect(q, &QAbstractItemModel::rowsRemoved, q,
+            &TasksModel::updateLauncherCount, Qt::UniqueConnection);
+        QObject::connect(q, &QAbstractItemModel::modelReset, q,
+            &TasksModel::updateLauncherCount, Qt::UniqueConnection);
+
+        QObject::connect(q, &QAbstractItemModel::rowsInserted, q,
+            &TasksModel::countChanged, Qt::UniqueConnection);
+        QObject::connect(q, &QAbstractItemModel::rowsRemoved, q,
+            &TasksModel::countChanged, Qt::UniqueConnection);
+        QObject::connect(q, &QAbstractItemModel::modelReset, q,
+            &TasksModel::countChanged, Qt::UniqueConnection);
     }
 }
 
@@ -893,6 +909,18 @@ TasksModel::TasksModel(QObject *parent)
 
     // Start sorting.
     sort(0);
+
+    // Private::updateGroupInline() sets our source model, populating the model. We
+    // delay running this until the QML runtime had a chance to call our implementation
+    // of QQmlParserStatus::classBegin(), setting Private::usedByQml to true. If used
+    // by QML, Private::updateGroupInline() will abort if the component is not yet
+    // complete, instead getting called through QQmlParserStatus::componentComplete()
+    // only after all properties have been set. This avoids delegate churn in Qt Quick
+    // views using the model. If not used by QML, Private::updateGroupInline() will run
+    // directly.
+    QTimer::singleShot(0, this, [this]() {
+        d->updateGroupInline();
+    });
 }
 
 TasksModel::~TasksModel()
@@ -1682,6 +1710,19 @@ QModelIndex TasksModel::makeModelIndex(int row, int childRow) const
     }
 
     return QModelIndex();
+}
+
+void TasksModel::classBegin()
+{
+    d->usedByQml = true;
+}
+
+void TasksModel::componentComplete()
+{
+    d->componentComplete = true;
+
+    // Sets our source model, populating the model.
+    d->updateGroupInline();
 }
 
 bool TasksModel::filterAcceptsRow(int sourceRow, const QModelIndex &sourceParent) const
