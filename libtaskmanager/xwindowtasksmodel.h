@@ -26,6 +26,7 @@ License along with this library.  If not, see <http://www.gnu.org/licenses/>.
 #include "taskmanager_export.h"
 
 #include <QMimeData>
+#include <qwindowdefs.h>
 
 #include <netwm.h>
 
