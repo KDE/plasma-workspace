@@ -447,6 +447,9 @@ void DBusMenuImporter::slotGetLayoutFinished(QDBusPendingCallWatcher *watcher)
             filteredKeys.removeOne("toggle-type");
             filteredKeys.removeOne("children-display");
             d->updateAction(*it, dbusMenuItem.properties, filteredKeys);
+            // Move the action to the tail so we can keep the order same as the dbus request.
+            menu->removeAction(action);
+            menu->addAction(action);
         }
     }
 
