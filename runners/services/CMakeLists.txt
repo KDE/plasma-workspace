@@ -12,6 +12,7 @@ ecm_qt_declare_logging_category(krunner_services_SRCS
 
 add_library(krunner_services MODULE ${krunner_services_SRCS})
 target_link_libraries(krunner_services
+    KF5::CoreAddons
     KF5::KIOWidgets
     KF5::I18n
     KF5::Runner
@@ -21,6 +22,7 @@ target_link_libraries(krunner_services
 
 add_library(krunner_services_test STATIC ${krunner_services_SRCS})
 target_link_libraries(krunner_services_test
+    KF5::CoreAddons
     KF5::KIOWidgets
     KF5::I18n
     KF5::Runner

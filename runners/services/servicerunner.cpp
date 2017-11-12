@@ -31,8 +31,24 @@
 #include <KRun>
 #include <KService>
 #include <KServiceTypeTrader>
+#include <kcoreaddons_version.h>
+#if KCOREADDONS_VERSION >= QT_VERSION_CHECK(5, 41, 0)
+#include <KStringHandler>
+#endif
 
 #include "debug.h"
+
+namespace {
+
+int weightedLength(const QString &query) {
+#if KCOREADDONS_VERSION >= QT_VERSION_CHECK(5, 41, 0)
+    return KStringHandler::logicalLength(query);
+#else
+    return query.length();
+#endif
+}
+
+}  // namespace
 
 /**
  * @brief Finds all KServices for a given runner query
@@ -52,6 +68,7 @@ public:
         }
 
         term = context.query();
+        weightedTermLength = weightedLength(term);
 
         matchExectuables();
         matchNameKeywordAndGenericName();
@@ -170,7 +187,7 @@ private:
 
     void matchExectuables()
     {
-        if (term.length() < 2) {
+        if (weightedTermLength < 2) {
             return;
         }
 
@@ -203,7 +220,7 @@ private:
         QVector<QStringRef> queryList = term.splitRef(QLatin1Char(' '));
 
         // If the term length is < 3, no real point searching the Keywords and GenericName
-        if (term.length() < 3) {
+        if (weightedTermLength < 3) {
             query = QStringLiteral("exist Exec and ( (exist Name and '%1' ~~ Name) or ('%1' ~~ Exec) )").arg(term);
         } else {
             //Match using subsequences (Bug: 262837)
@@ -230,7 +247,7 @@ private:
 
             // If the term was < 3 chars and NOT at the beginning of the App's name or Exec, then
             // chances are the user doesn't want that app.
-            if (term.length() < 3) {
+            if (weightedTermLength < 3) {
                 if (name.startsWith(term) || exec.startsWith(term)) {
                     relevance = 0.9;
                 } else {
@@ -330,7 +347,7 @@ private:
 
     void matchJumpListActions()
     {
-        if (term.length() < 3) {
+        if (weightedTermLength < 3) {
             return;
         }
 
@@ -382,6 +399,7 @@ private:
     QList<Plasma::QueryMatch> matches;
     QString query;
     QString term;
+    int weightedTermLength;
 };
 
 ServiceRunner::ServiceRunner(QObject *parent, const QVariantList &args)
