@@ -67,8 +67,11 @@ void NotificationsApplet::onScreenChanges()
         return;
     }
 
-    m_availableScreenRect = containment()->corona()->availableScreenRect(containment()->screen());
-    Q_EMIT availableScreenRectChanged(m_availableScreenRect);
+    auto newAvailableScreenRect = containment()->corona()->availableScreenRect(containment()->screen());
+    if (newAvailableScreenRect != m_availableScreenRect) {
+        m_availableScreenRect = newAvailableScreenRect;
+        Q_EMIT availableScreenRectChanged(m_availableScreenRect);
+    }
 }
 
 QRect NotificationsApplet::availableScreenRect() const
@@ -101,7 +104,7 @@ void NotificationsApplet::onScreenPositionChanged(uint position)
     // and emit the change
     if (position == NotificationsHelper::Default) {
         setScreenPositionFromAppletLocation();
-    } else {
+    } else if (m_popupPosition != position) {
         m_popupPosition = (NotificationsHelper::PositionOnScreen)position;
         Q_EMIT screenPositionChanged(m_popupPosition);
     }
@@ -115,21 +118,25 @@ uint NotificationsApplet::configScreenPosition() const
 
 void NotificationsApplet::setScreenPositionFromAppletLocation()
 {
+    NotificationsHelper::PositionOnScreen newPopupPosition = m_popupPosition;
     if (location() == Plasma::Types::TopEdge) {
         if (QGuiApplication::isRightToLeft()) {
-            m_popupPosition = NotificationsHelper::TopLeft;
+            newPopupPosition = NotificationsHelper::TopLeft;
         } else {
-            m_popupPosition = NotificationsHelper::TopRight;
+            newPopupPosition = NotificationsHelper::TopRight;
         }
     } else {
         if (QGuiApplication::isRightToLeft()) {
-            m_popupPosition = NotificationsHelper::BottomLeft;
+            newPopupPosition = NotificationsHelper::BottomLeft;
         } else {
-            m_popupPosition = NotificationsHelper::BottomRight;
+            newPopupPosition = NotificationsHelper::BottomRight;
         }
     }
 
-    Q_EMIT screenPositionChanged(m_popupPosition);
+    if (newPopupPosition != m_popupPosition) {
+        m_popupPosition = newPopupPosition;
+        Q_EMIT screenPositionChanged(m_popupPosition);
+    }
 }
 
 K_EXPORT_PLASMA_APPLET_WITH_JSON(notifications, NotificationsApplet, "metadata.json")
