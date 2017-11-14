@@ -6,6 +6,10 @@
   <kcfgfile name=""/>
 
   <group name="General">
+    <entry name="Blur" type="bool">
+      <label>Blur background filling</label>
+      <default>false</default>
+    </entry>
     <entry name="Color" type="Color">
       <label>Color of the wallpaper</label>
       <default>#000000</default>
