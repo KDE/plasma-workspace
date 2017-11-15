@@ -19,6 +19,7 @@
  */
 
 import QtQuick 2.5
+import QtQuick.Window 2.2
 import QtGraphicalEffects 1.0
 import org.kde.plasma.wallpapers.image 2.0 as Wallpaper
 import org.kde.plasma.core 2.0 as PlasmaCore
@@ -34,6 +35,7 @@ Item {
     property Item otherBlurBackground: blurBackgroundA
     readonly property int fillMode: wallpaper.configuration.FillMode
     property bool ready: false
+    property size sourceSize: Qt.size(root.width * Screen.devicePixelRatio, root.height * Screen.devicePixelRatio)
 
     //public API, the C++ part will look for those
     function setUrl(url) {
@@ -52,7 +54,7 @@ Item {
     //private
     function fadeWallpaper() {
         if (!ready && width > 0 && height > 0) { // shell startup, setup immediately
-            currentImage.sourceSize = Qt.size(root.width, root.height)
+            currentImage.sourceSize = root.sourceSize
             currentImage.source = modelImage
 
             ready = true
@@ -62,7 +64,7 @@ Item {
         fadeAnim.running = false
         swapImages()
         currentImage.source = modelImage
-        currentImage.sourceSize = Qt.size(root.width, root.height)
+        currentImage.sourceSize = root.sourceSize
         // Prevent source size change when image has just been setup anyway
         sourceSizeTimer.stop()
         currentImage.opacity = 0
@@ -84,7 +86,7 @@ Item {
     function fadeFillMode() {
         fadeAnim.running = false
         swapImages()
-        currentImage.sourceSize = otherImage.sourceSize
+        currentImage.sourceSize = root.sourceSize
         sourceSizeTimer.stop()
         currentImage.source = modelImage
         currentImage.opacity = 0
@@ -104,13 +106,13 @@ Item {
     }
 
     function fadeSourceSize() {
-        if (currentImage.sourceSize === Qt.size(root.width, root.height)) {
+        if (currentImage.sourceSize === root.sourceSize) {
             return
         }
 
         fadeAnim.running = false
         swapImages()
-        currentImage.sourceSize = Qt.size(root.width, root.height)
+        currentImage.sourceSize = root.sourceSize
         currentImage.opacity = 0
         currentBlurBackground.opacity = 0
         currentImage.source = otherImage.source
