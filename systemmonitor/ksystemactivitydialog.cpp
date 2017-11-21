@@ -33,7 +33,6 @@
 #include <QVBoxLayout>
 #include <QLineEdit>
 #include <QScreen>
-#include <QDesktopWidget>
 #include <QTimer>
 
 #include <KSharedConfig>
