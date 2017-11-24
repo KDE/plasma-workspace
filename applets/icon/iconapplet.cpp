@@ -44,6 +44,7 @@
 #include <KRun>
 
 #include <KIO/DropJob>
+#include <KIO/FavIconRequestJob>
 #include <KIO/OpenFileManagerWindowJob>
 #include <KIO/StatJob>
 
@@ -202,6 +203,18 @@ void IconApplet::populate()
             iconName = KIO::iconNameForUrl(url);
         }
 
+        bool downloadFavIcon = false;
+
+        if (url.scheme().startsWith(QLatin1String("http"))) {
+            const QString favIcon = KIO::favIconForUrl(url);
+
+            if (!favIcon.isEmpty()) {
+                iconName = favIcon;
+            } else {
+                downloadFavIcon = true;
+            }
+        }
+
         KDesktopFile linkDesktopFile(backingDesktopFile);
         auto desktopGroup = linkDesktopFile.desktopGroup();
 
@@ -217,6 +230,18 @@ void IconApplet::populate()
 
         populateFromDesktopFile(backingDesktopFile);
         setLocalPath(backingDesktopFile);
+
+        if (downloadFavIcon) {
+            KIO::FavIconRequestJob *job = new KIO::FavIconRequestJob(m_url);
+            connect(job, &KIO::FavIconRequestJob::result, this, [job, backingDesktopFile, this](KJob *){
+                if (!job->error()) {
+                    KDesktopFile(backingDesktopFile).desktopGroup().writeEntry(QStringLiteral("Icon"), job->iconFile());
+
+                    m_iconName = job->iconFile();
+                    emit iconNameChanged(m_iconName);
+                }
+            });
+        }
     });
 }
 
