@@ -64,6 +64,7 @@ private:
     bool m_window;
     QStringList m_stages;
     QBasicTimer m_timer;
+    QString m_theme;
 
     KWayland::Client::PlasmaShell *m_waylandPlasmaShell = nullptr;
 

@@ -37,7 +37,7 @@ class PlasmaShellSurface;
 class SplashWindow: public KQuickAddons::QuickViewSharedEngine
 {
 public:
-    SplashWindow(bool testing = false, bool window = false);
+    SplashWindow(bool testing, bool window, const QString &theme);
 
     void setStage(int stage);
     virtual void setGeometry(const QRect &rect);
@@ -50,8 +50,9 @@ protected:
 private:
     void setupWaylandIntegration();
     int m_stage;
-    bool m_testing;
-    bool m_window;
+    const bool m_testing;
+    const bool m_window;
+    const QString m_theme;
     KWayland::Client::PlasmaShellSurface *m_shellSurface = nullptr;
 };
 

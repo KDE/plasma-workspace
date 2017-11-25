@@ -57,11 +57,13 @@ SplashApp::SplashApp(int &argc, char ** argv)
     parser.addOption(QCommandLineOption(QStringLiteral("window"), QStringLiteral("Run in windowed mode")));
     parser.addOption(QCommandLineOption(QStringLiteral("nofork"), QStringLiteral("Don't fork")));
     parser.addOption(QCommandLineOption(QStringLiteral("pid"), QStringLiteral("Print the pid of the child process")));
+    parser.addPositionalArgument(QStringLiteral("theme"), QStringLiteral("Path to the theme to test"));
     parser.addHelpOption();
 
     parser.process(*this);
     m_testing = parser.isSet(QStringLiteral("test"));
     m_window = parser.isSet(QStringLiteral("window"));
+    m_theme = parser.positionalArguments().value(0);
 
     setupWaylandIntegration();
 
@@ -134,7 +136,7 @@ void SplashApp::setStage(int stage)
 
 void SplashApp::adoptScreen(QScreen* screen)
 {
-    SplashWindow *w = new SplashWindow(m_testing, m_window);
+    SplashWindow *w = new SplashWindow(m_testing, m_window, m_theme);
     w->setGeometry(screen->geometry());
     w->setStage(m_stage);
     w->setVisible(true);

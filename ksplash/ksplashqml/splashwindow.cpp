@@ -20,7 +20,6 @@
 #include "splashwindow.h"
 #include "splashapp.h"
 
-#include <QGuiApplication>
 #include <QQmlContext>
 #include <QQuickItem>
 #include <QKeyEvent>
@@ -38,11 +37,12 @@
 #include <KWayland/Client/plasmashell.h>
 #include <KWindowSystem>
 
-SplashWindow::SplashWindow(bool testing, bool window)
+SplashWindow::SplashWindow(bool testing, bool window, const QString &theme)
     : KQuickAddons::QuickViewSharedEngine(),
       m_stage(0),
       m_testing(testing),
-      m_window(window)
+      m_window(window),
+      m_theme(theme)
 {
     setColor(Qt::transparent);
     setDefaultAlphaBuffer(true);
@@ -126,13 +126,13 @@ void SplashWindow::setGeometry(const QRect& rect)
         const QString packageName = cg.readEntry("LookAndFeelPackage", QString());
         if (!packageName.isEmpty()) {
             package.setPath(packageName);
-        };
-
-        const QString theme = QGuiApplication::arguments().at(1);
-        if (!theme.startsWith(QLatin1String("--"))) {
-            package.setPath(theme);
         }
 
+        if (!m_theme.isEmpty()) {
+            package.setPath(m_theme);
+        }
+
+        Q_ASSERT(package.isValid());
         setSource(QUrl::fromLocalFile(package.filePath("splashmainscript")));
     }
 
