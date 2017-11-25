@@ -170,7 +170,11 @@ void DictEngine::getDicts()
         if (!curr.startsWith('-') && !curr.startsWith('.')) {
             const QString line = QString::fromUtf8(curr).trimmed();
             const QString id = line.section(' ', 0, 0);
-            const QString description = line.section(' ', 1);
+            QString description = line.section(' ', 1);
+            if (description.startsWith('"') && description.endsWith('"')) {
+                description.remove(0, 1);
+                description.chop(1);
+            }
             setData(QStringLiteral("list-dictionaries"), id, description); // this is additive
         }
     }
