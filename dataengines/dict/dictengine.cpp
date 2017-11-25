@@ -132,7 +132,6 @@ void DictEngine::getDefinition()
         ret += m_tcpSocket->readAll();
     }
 
-    connect(m_tcpSocket, &QTcpSocket::disconnected, this, &DictEngine::socketClosed);
     m_tcpSocket->disconnectFromHost();
     const QString html = wnToHtml(m_currentWord, ret);
     // setData(m_currentQuery, m_dictName, html);
@@ -235,7 +234,6 @@ bool DictEngine::sourceRequestEvent(const QString &query)
     } else {
         setData(m_currentQuery, m_dictName, QString());
         m_tcpSocket = new QTcpSocket(this);
-        m_tcpSocket->abort();
         connect(m_tcpSocket, &QTcpSocket::disconnected, this, &DictEngine::socketClosed);
 
         if (m_currentWord == QLatin1String("list-dictionaries")) {
