@@ -20,6 +20,8 @@
 #define DICTENGINE_H
 #include <Plasma/DataEngine>
 #include <QMap>
+#include <QCache>
+#include <QVariantMap>
 class QTcpSocket;
 
 /**
@@ -53,6 +55,7 @@ class DictEngine: public Plasma::DataEngine
         QString m_currentQuery;
         QString m_dictName;
         QString m_serverName;
+        QCache<QString, QVariantMap> m_availableDictsCache;
 
 };
 
