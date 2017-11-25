@@ -152,6 +152,7 @@ void DictEngine::getDicts()
         ret += m_tcpSocket->readAll();
     }
 
+    QVariantMap *availableDicts = new QVariantMap;
     const QList<QByteArray> retLines = ret.split('\n');
     for (const QByteArray &curr : retLines) {
         if (curr.startsWith("554")) {
@@ -175,12 +176,13 @@ void DictEngine::getDicts()
                 description.chop(1);
             }
             setData(QStringLiteral("list-dictionaries"), id, description); // this is additive
+            availableDicts->insert(id, description);
         }
     }
+    m_availableDictsCache.insert(m_serverName, availableDicts);
 
     m_tcpSocket->disconnectFromHost();
 }
-
 
 
 void DictEngine::socketClosed()
@@ -195,10 +197,6 @@ bool DictEngine::sourceRequestEvent(const QString &query)
 {
     // FIXME: this is COMPLETELY broken .. it can only look up one query at a time!
     //        a DataContainer subclass that does the look up should probably be made
-    if (m_currentQuery == query) {
-        return false;
-    }
-
     if (m_tcpSocket) {
         m_tcpSocket->abort(); //stop if lookup is in progress and new query is requested
         m_tcpSocket->deleteLater();
@@ -232,7 +230,23 @@ bool DictEngine::sourceRequestEvent(const QString &query)
     if (m_currentWord.simplified().isEmpty()) {
         setData(m_currentQuery, m_dictName, QString());
     } else {
-        setData(m_currentQuery, m_dictName, QString());
+        if (m_currentWord == QLatin1String("list-dictionaries")) {
+            // Use cache if available
+            QVariantMap *dicts = m_availableDictsCache.object(m_serverName);
+            if (dicts) {
+                for (auto it = dicts->constBegin(); it != dicts->constEnd(); ++it) {
+                    setData(m_currentQuery, it.key(), it.value());
+                }
+                return true;
+            }
+        }
+
+        // We need to do this in order to create the DataContainer immediately in DataEngine
+        // so it can connect to updates. Not sure why DataEnginePrivate::requestSource
+        // doesn't create the DataContainer when sourceRequestEvent returns true, by doing
+        // source(sourceName) instead of source(sourceName, false), but well, I'm too scared to change that.
+        setData(m_currentQuery, QVariant());
+
         m_tcpSocket = new QTcpSocket(this);
         connect(m_tcpSocket, &QTcpSocket::disconnected, this, &DictEngine::socketClosed);
 
