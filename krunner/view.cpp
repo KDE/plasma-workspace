@@ -28,6 +28,7 @@
 #include <QClipboard>
 #include <QPlatformSurfaceEvent>
 
+#include <KAuthorized>
 #include <KWindowSystem>
 #include <KWindowEffects>
 #include <KAuthorized>
@@ -398,6 +399,11 @@ void View::switchUser()
 void View::displayConfiguration()
 {
     QProcess::startDetached(QStringLiteral("kcmshell5"), QStringList() << QStringLiteral("plasmasearch"));
+}
+
+bool View::canConfigure() const
+{
+    return KAuthorized::authorizeControlModule(QStringLiteral("kcm_plasmasearch.desktop"));
 }
 
 QStringList View::history() const

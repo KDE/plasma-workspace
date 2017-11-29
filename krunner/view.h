@@ -46,6 +46,7 @@ class View : public PlasmaQuick::Dialog
     Q_OBJECT
     Q_CLASSINFO("D-Bus Interface", "org.kde.krunner.App")
 
+    Q_PROPERTY(bool canConfigure READ canConfigure CONSTANT)
     Q_PROPERTY(QStringList history READ history NOTIFY historyChanged)
 
 public:
@@ -57,6 +58,7 @@ public:
     bool freeFloating() const;
     void setFreeFloating(bool floating);
 
+    bool canConfigure() const;
     QStringList history() const;
 
     Q_INVOKABLE void addToHistory(const QString &item);
