@@ -35,14 +35,11 @@ public:
 AutoStart::AutoStart()
     : m_phase(-1), m_phasedone(false)
 {
-    m_startList = new AutoStartList;
 }
 
 AutoStart::~AutoStart()
 {
-    qDeleteAll(*m_startList);
-    m_startList->clear();
-    delete m_startList;
+    qDeleteAll(m_startList);
 }
 
 void
@@ -104,14 +101,14 @@ AutoStart::loadAutoStartList()
         if (item->phase < 0) {
             item->phase = 0;
         }
-        m_startList->append(item);
+        m_startList.append(item);
     }
 }
 
 QString
 AutoStart::startService()
 {
-    if (m_startList->isEmpty()) {
+    if (m_startList.isEmpty()) {
         return QString();
     }
 
@@ -119,7 +116,7 @@ AutoStart::startService()
 
         // Check for items that depend on previously started items
         QString lastItem = m_started[0];
-        QMutableListIterator<AutoStartItem *> it(*m_startList);
+        QMutableListIterator<AutoStartItem *> it(m_startList);
         while (it.hasNext()) {
             AutoStartItem *item = it.next();
             if (item->phase == m_phase
@@ -136,7 +133,7 @@ AutoStart::startService()
 
     // Check for items that don't depend on anything
     AutoStartItem *item;
-    QMutableListIterator<AutoStartItem *> it(*m_startList);
+    QMutableListIterator<AutoStartItem *> it(m_startList);
     while (it.hasNext()) {
         item = it.next();
         if (item->phase == m_phase
@@ -150,7 +147,7 @@ AutoStart::startService()
     }
 
     // Just start something in this phase
-    it = *m_startList;
+    it = m_startList;
     while (it.hasNext()) {
         item = it.next();
         if (item->phase == m_phase) {

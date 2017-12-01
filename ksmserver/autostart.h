@@ -23,7 +23,6 @@
 #include <QtCore/QStringList>
 
 class AutoStartItem;
-typedef QList<AutoStartItem *> AutoStartList;
 
 class AutoStart
 {
@@ -45,7 +44,7 @@ public:
     }
 
 private:
-    AutoStartList *m_startList;
+    QList<AutoStartItem *> m_startList;
     QStringList m_started;
     int m_phase;
     bool m_phasedone;
