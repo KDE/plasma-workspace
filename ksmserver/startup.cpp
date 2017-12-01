@@ -409,12 +409,11 @@ void KSMServer::autoStart2()
     QDBusInterface kded( QStringLiteral( "org.kde.kded5" ),
                          QStringLiteral( "/kded" ),
                          QStringLiteral( "org.kde.kded5" ) );
-    kded.call( QStringLiteral( "loadSecondPhase" ) );
+    auto pending = kded.asyncCall( QStringLiteral( "loadSecondPhase" ) );
 
-#ifdef KSMSERVER_STARTUP_DEBUG1
-    qCDebug(KSMSERVER)<< "kded" << t.elapsed();
-#endif
-
+    QDBusPendingCallWatcher *watcher = new QDBusPendingCallWatcher(pending, this);
+    QObject::connect(watcher, &QDBusPendingCallWatcher::finished, this, &KSMServer::secondKDEDPhaseLoaded);
+    QObject::connect(watcher, &QDBusPendingCallWatcher::finished, watcher, &QObject::deleteLater);
     runUserAutostart();
 
     if (kcminitSignals) {
@@ -427,6 +426,15 @@ void KSMServer::autoStart2()
     } else {
         QTimer::singleShot(0, this, &KSMServer::kcmPhase2Done);
     }
+}
+
+void KSMServer::secondKDEDPhaseLoaded()
+{
+
+#ifdef KSMSERVER_STARTUP_DEBUG1
+    qCDebug(KSMSERVER)<< "kded" << t.elapsed();
+#endif
+
     if( !defaultSession())
         restoreLegacySession(KSharedConfig::openConfig().data());
 

@@ -152,6 +152,7 @@ private Q_SLOTS:
     void logoutWithoutConfirmation();
     void haltWithoutConfirmation();
     void rebootWithoutConfirmation();
+    void secondKDEDPhaseLoaded();
 
 private:
     void handlePendingInteractions();
