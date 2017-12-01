@@ -31,6 +31,7 @@ public:
     QString startAfter;
     int     phase;
 };
+Q_DECLARE_TYPEINFO(AutoStartItem, Q_MOVABLE_TYPE);
 
 AutoStart::AutoStart()
     : m_phase(-1), m_phasedone(false)
@@ -39,7 +40,6 @@ AutoStart::AutoStart()
 
 AutoStart::~AutoStart()
 {
-    qDeleteAll(m_startList);
 }
 
 void
@@ -86,18 +86,18 @@ AutoStart::loadAutoStartList()
         }
     }
 
-    for (QStringList::ConstIterator it = files.constBegin(); it != files.constEnd(); ++it) {
+    for (auto it = files.constBegin(); it != files.constEnd(); ++it) {
         KAutostart config(*it);
         if (!config.autostarts(QStringLiteral("KDE"), KAutostart::CheckAll)) {
             continue;
         }
 
-        const QString file = QStandardPaths::locate(QStandardPaths::GenericConfigLocation, QStringLiteral("autostart/") + *it);
-        AutoStartItem *item = new AutoStartItem;
-        item->name = extractName(*it);
-        item->service = file;
-        item->startAfter = config.startAfter();
-        item->phase = qMax(KAutostart::BaseDesktop, config.startPhase());
+        const auto file = QStandardPaths::locate(QStandardPaths::GenericConfigLocation, QStringLiteral("autostart/") + *it);
+        AutoStartItem item;
+        item.name = extractName(file);
+        item.service = file;
+        item.startAfter = config.startAfter();
+        item.phase = qMax(KAutostart::BaseDesktop, config.startPhase());
         m_startList.append(item);
     }
 }
@@ -113,15 +113,14 @@ AutoStart::startService()
 
         // Check for items that depend on previously started items
         QString lastItem = m_started[0];
-        QMutableListIterator<AutoStartItem *> it(m_startList);
+        QMutableVectorIterator<AutoStartItem> it(m_startList);
         while (it.hasNext()) {
-            AutoStartItem *item = it.next();
-            if (item->phase == m_phase
-                    &&  item->startAfter == lastItem) {
-                m_started.prepend(item->name);
-                QString service = item->service;
+            const auto &item = it.next();
+            if (item.phase == m_phase
+                    &&  item.startAfter == lastItem) {
+                m_started.prepend(item.name);
+                QString service = item.service;
                 it.remove();
-                delete item;
                 return service;
             }
         }
@@ -129,15 +128,14 @@ AutoStart::startService()
     }
 
     // Check for items that don't depend on anything
-    QMutableListIterator<AutoStartItem *> it(m_startList);
+    QMutableVectorIterator<AutoStartItem> it(m_startList);
     while (it.hasNext()) {
-        const auto item = it.next();
-        if (item->phase == m_phase
-                &&  item->startAfter.isEmpty()) {
-            m_started.prepend(item->name);
-            QString service = item->service;
+        const auto &item = it.next();
+        if (item.phase == m_phase
+                &&  item.startAfter.isEmpty()) {
+            m_started.prepend(item.name);
+            QString service = item.service;
             it.remove();
-            delete item;
             return service;
         }
     }
@@ -145,12 +143,11 @@ AutoStart::startService()
     // Just start something in this phase
     it = m_startList;
     while (it.hasNext()) {
-        const auto item = it.next();
-        if (item->phase == m_phase) {
-            m_started.prepend(item->name);
-            QString service = item->service;
+        const auto &item = it.next();
+        if (item.phase == m_phase) {
+            m_started.prepend(item.name);
+            QString service = item.service;
             it.remove();
-            delete item;
             return service;
         }
     }

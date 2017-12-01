@@ -20,7 +20,8 @@
 #ifndef _AUTOSTART_H_
 #define _AUTOSTART_H_
 
-#include <QtCore/QStringList>
+#include <QStringList>
+#include <QVector>
 
 class AutoStartItem;
 
@@ -44,7 +45,7 @@ public:
     }
 
 private:
-    QList<AutoStartItem *> m_startList;
+    QVector<AutoStartItem> m_startList;
     QStringList m_started;
     int m_phase;
     bool m_phasedone;
