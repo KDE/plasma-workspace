@@ -97,10 +97,7 @@ AutoStart::loadAutoStartList()
         item->name = extractName(*it);
         item->service = file;
         item->startAfter = config.startAfter();
-        item->phase = config.startPhase();
-        if (item->phase < 0) {
-            item->phase = 0;
-        }
+        item->phase = qMax(KAutostart::BaseDesktop, config.startPhase());
         m_startList.append(item);
     }
 }
@@ -132,10 +129,9 @@ AutoStart::startService()
     }
 
     // Check for items that don't depend on anything
-    AutoStartItem *item;
     QMutableListIterator<AutoStartItem *> it(m_startList);
     while (it.hasNext()) {
-        item = it.next();
+        const auto item = it.next();
         if (item->phase == m_phase
                 &&  item->startAfter.isEmpty()) {
             m_started.prepend(item->name);
@@ -149,7 +145,7 @@ AutoStart::startService()
     // Just start something in this phase
     it = m_startList;
     while (it.hasNext()) {
-        item = it.next();
+        const auto item = it.next();
         if (item->phase == m_phase) {
             m_started.prepend(item->name);
             QString service = item->service;
