@@ -677,20 +677,15 @@ void KSMServer::slotAutoStart()
             return;
         }
         KService service(serviceName);
-        qCInfo(KSMSERVER) << "Starting autostart service " << serviceName;
-        auto p = new KProcess(this);
         auto arguments = KIO::DesktopExecParser(service, QList<QUrl>()).resultingArguments();
         if (arguments.isEmpty()) {
-            qCInfo(KSMSERVER) << "failed to parse" << serviceName << "for autostart";
+            qCWarning(KSMSERVER) << "failed to parse" << serviceName << "for autostart";
             continue;
         }
+        qCInfo(KSMSERVER) << "Starting autostart service " << serviceName << arguments;
         auto program = arguments.takeFirst();
-        p->setProgram(program, arguments);
-        p->start();
-        connect(p, static_cast<void (QProcess::*)(int)>(&QProcess::finished), [p](int exitCode) {
-            qCInfo(KSMSERVER) << "autostart service" << p->program() << "finished with exit code " << exitCode;
-            p->deleteLater();
-        });
+        if (!QProcess::startDetached(program, arguments))
+            qCWarning(KSMSERVER) << "could not start" << serviceName << ":" << program << arguments;
     } while (true);
     // Loop till we find a service that we can start.
 }
