@@ -963,7 +963,7 @@ void PanelView::updateMask()
 bool PanelView::canSetStrut() const
 {
 #if HAVE_X11
-    if (!QX11Info::isPlatformX11()) {
+    if (!KWindowSystem::isPlatformX11()) {
         return true;
     }
     // read the wm name, need to do this every time which means a roundtrip unfortunately
