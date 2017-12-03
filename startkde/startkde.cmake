@@ -149,13 +149,11 @@ fi
 # For anything else (that doesn't set env vars, or that needs a window manager),
 # better use the Autostart folder.
 
-scriptpath=`qtpaths --locate-dirs GenericConfigLocation plasma-workspace | tr ':' '\n'`
+scriptpath=$configDir
 
 # Add /env/ to the directory to locate the scripts to be sourced
-for prefix in `echo $scriptpath`; do
-  for file in "$prefix"/env/*.sh; do
+for file in "$scriptpath"/plasma-workspace/env/*.sh; do
     test -r "$file" && . "$file" || true
-  done
 done
 
 # Activate the kde font directories.
