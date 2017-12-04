@@ -86,6 +86,12 @@ Q_SIGNALS:
     void currentActivityChanged() const;
     void numberOfRunningActivitiesChanged() const;
 
+    /**
+     * The names of the running activities have changed.
+     * @since 5.40.0
+     **/
+    void namesOfRunningActivitiesChanged() const;
+
 private:
     class Private;
     QScopedPointer<Private> d;
