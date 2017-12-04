@@ -103,7 +103,7 @@ Item {
                         uniform lowp vec4 colorBorder;
                         highp float blend = 0.01;
                         highp float innerRadius = 0.47;
-                        highp float outerRadius = innerRadius + 0.02;
+                        highp float outerRadius = 0.49;
                         lowp vec4 colorEmpty = vec4(0.0, 0.0, 0.0, 0.0);
 
                         void main() {
