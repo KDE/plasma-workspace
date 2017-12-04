@@ -649,7 +649,8 @@ void NOAAIon::updateWeather(const QString& source)
 
 /**
   * Determine the condition icon based on the list of possible NOAA weather conditions as defined at
-  * <http://www.weather.gov/xml/current_obs/weather.php> and <http://www.weather.gov/mdl/XML/Design/MDL_XML_Design.htm#_Toc141760783>
+  * <http://www.weather.gov/xml/current_obs/weather.php> and
+  * <https://graphical.weather.gov/xml/mdl/XML/Design/MDL_XML_Design.htm#_Toc141760782>
   * Since the number of NOAA weather conditions need to be fitted into the narowly defined groups in IonInterface::ConditionIcons, we
   * try to group the NOAA conditions as best as we can based on their priorities/severity.
   */
