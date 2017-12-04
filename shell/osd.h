@@ -21,6 +21,7 @@
 
 #include <QObject>
 #include <QString>
+#include <QUrl>
 
 #include <KSharedConfig>
 
@@ -68,7 +69,7 @@ private:
     void showProgress(const QString &icon, const int percent, const QString &additionalText = QString());
     void showOsd();
 
-    QString m_osdPath;
+    QUrl m_osdUrl;
     KDeclarative::QmlObject *m_osdObject = nullptr;
     QTimer *m_osdTimer = nullptr;
     int m_timeout = 0;

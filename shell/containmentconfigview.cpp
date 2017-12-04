@@ -73,7 +73,7 @@ ContainmentConfigView::~ContainmentConfigView()
 
 void ContainmentConfigView::init()
 {
-    setSource(QUrl::fromLocalFile(m_containment->corona()->kPackage().filePath("containmentconfigurationui")));
+    setSource(m_containment->corona()->kPackage().fileUrl("containmentconfigurationui"));
 }
 
 PlasmaQuick::ConfigModel *ContainmentConfigView::containmentActionConfigModel()

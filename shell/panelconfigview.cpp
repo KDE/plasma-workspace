@@ -83,7 +83,7 @@ PanelConfigView::~PanelConfigView()
 
 void PanelConfigView::init()
 {
-    setSource(QUrl::fromLocalFile(m_containment->corona()->kPackage().filePath("panelconfigurationui")));
+    setSource(m_containment->corona()->kPackage().fileUrl("panelconfigurationui"));
     syncGeometry();
     syncLocation();
 }

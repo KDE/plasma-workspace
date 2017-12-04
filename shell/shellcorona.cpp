@@ -810,14 +810,14 @@ void ShellCorona::screenInvariants() const
 
 void ShellCorona::showAlternativesForApplet(Plasma::Applet *applet)
 {
-    const QString alternativesQML = package().filePath("appletalternativesui");
+    const QUrl alternativesQML = kPackage().fileUrl("appletalternativesui");
     if (alternativesQML.isEmpty()) {
         return;
     }
 
     KDeclarative::QmlObject *qmlObj = new KDeclarative::QmlObject(this);
     qmlObj->setInitializationDelayed(true);
-    qmlObj->setSource(QUrl::fromLocalFile(alternativesQML));
+    qmlObj->setSource(alternativesQML);
 
     AlternativesHelper *helper = new AlternativesHelper(applet, qmlObj);
     qmlObj->rootContext()->setContextProperty(QStringLiteral("alternativesHelper"), helper);
@@ -1409,14 +1409,14 @@ void ShellCorona::loadInteractiveConsole()
     }
 
     if (!m_interactiveConsole) {
-        const QString consoleQML = package().filePath("interactiveconsole");
+        const QUrl consoleQML = kPackage().fileUrl("interactiveconsole");
         if (consoleQML.isEmpty()) {
             return;
         }
 
         m_interactiveConsole = new KDeclarative::QmlObject(this);
         m_interactiveConsole->setInitializationDelayed(true);
-        m_interactiveConsole->setSource(QUrl::fromLocalFile(consoleQML));
+        m_interactiveConsole->setSource(consoleQML);
 
         QObject *engine = new WorkspaceScripting::ScriptEngine(this, m_interactiveConsole);
         m_interactiveConsole->rootContext()->setContextProperty(QStringLiteral("scriptEngine"), engine);

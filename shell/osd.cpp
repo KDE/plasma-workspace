@@ -31,7 +31,7 @@
 
 Osd::Osd(KSharedConfig::Ptr config, ShellCorona *corona)
     : QObject(corona)
-    , m_osdPath(corona->lookAndFeelPackage().filePath("osdmainscript"))
+    , m_osdUrl(corona->lookAndFeelPackage().fileUrl("osdmainscript"))
     , m_config(config)
 {
     QDBusConnection::sessionBus().registerObject(QStringLiteral("/org/kde/osdService"), this, QDBusConnection::ExportAllSlots | QDBusConnection::ExportAllSignals);
@@ -162,7 +162,7 @@ bool Osd::init()
         return true;
     }
 
-    if (m_osdPath.isEmpty()) {
+    if (m_osdUrl.isEmpty()) {
         return false;
     }
 
@@ -170,10 +170,10 @@ bool Osd::init()
         m_osdObject = new KDeclarative::QmlObject(this);
     }
 
-    m_osdObject->setSource(QUrl::fromLocalFile(m_osdPath));
+    m_osdObject->setSource(m_osdUrl);
 
     if (m_osdObject->status() != QQmlComponent::Ready) {
-        qWarning() << "Failed to load OSD QML file" << m_osdPath;
+        qWarning() << "Failed to load OSD QML file" << m_osdUrl;
         return false;
     }
 

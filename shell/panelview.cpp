@@ -105,7 +105,7 @@ PanelView::PanelView(ShellCorona *corona, QScreen *targetScreen, QWindow *parent
 
     qmlRegisterType<QScreen>();
     rootContext()->setContextProperty(QStringLiteral("panel"), this);
-    setSource(QUrl::fromLocalFile(m_corona->kPackage().filePath("views", QStringLiteral("Panel.qml"))));
+    setSource(m_corona->kPackage().fileUrl("views", QStringLiteral("Panel.qml")));
 }
 
 PanelView::~PanelView()
