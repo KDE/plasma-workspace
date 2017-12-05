@@ -75,7 +75,6 @@ int main(int argc, char *argv[])
     KAboutData::setApplicationData(aboutData);
 
     app.setQuitOnLastWindowClosed(false);
-    app.setWindowIcon(QIcon::fromTheme(QStringLiteral("plasma")));
 
     {
     QCommandLineParser cliOptions;
