@@ -38,6 +38,7 @@ Name[x-test]=xxGlobal Menuxx
 Name[zh_CN]=全局菜单
 Name[zh_TW]=全域選單
 Comment=Global menubar on top of the screen
+Comment[x-test]=xxGlobal menubar on top of the screenxx
 Icon=show-menu
 Type=Service
 X-KDE-PluginInfo-Author=Kai Uwe Broulik
