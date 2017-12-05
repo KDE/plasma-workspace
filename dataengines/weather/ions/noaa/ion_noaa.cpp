@@ -653,6 +653,7 @@ void NOAAIon::updateWeather(const QString& source)
   * <https://graphical.weather.gov/xml/mdl/XML/Design/MDL_XML_Design.htm#_Toc141760782>
   * Since the number of NOAA weather conditions need to be fitted into the narowly defined groups in IonInterface::ConditionIcons, we
   * try to group the NOAA conditions as best as we can based on their priorities/severity.
+  * TODO: summaries "Hot" & "Cold" have no proper matching entry in ConditionIcons, consider extending it
   */
 IonInterface::ConditionIcons NOAAIon::getConditionIcon(const QString& weather, bool isDayTime) const
 {
@@ -691,6 +692,10 @@ IonInterface::ConditionIcons NOAAIon::getConditionIcon(const QString& weather, b
     } else if (weather.contains(QStringLiteral("freezing drizzle"))) {
         result = IonInterface::FreezingDrizzle;
 
+    } else if (weather.contains(QStringLiteral("cold"))) {
+        // temperature condition has not hint about air ingredients, so let's assume chance of snow
+        result = isDayTime ? IonInterface::ChanceSnowDay : IonInterface::ChanceSnowNight;
+
     } else if (weather.contains(QStringLiteral("showers"))) {
 
         if (weather.contains(QStringLiteral("vicinity")) || weather.contains(QStringLiteral("chance"))) {
@@ -726,6 +731,10 @@ IonInterface::ConditionIcons NOAAIon::getConditionIcon(const QString& weather, b
 
     } else if (weather.contains(QStringLiteral("fog"))) {
         result = IonInterface::Mist;
+
+    } else if (weather.contains(QStringLiteral("hot"))) {
+        // temperature condition has not hint about air ingredients, so let's assume the sky is clear when it is hot
+        result = isDayTime ? IonInterface::ClearDay : IonInterface::ClearNight;
 
     } else {
         result = IonInterface::NotAvailable;
