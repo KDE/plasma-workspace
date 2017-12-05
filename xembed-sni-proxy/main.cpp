@@ -41,6 +41,8 @@ int main(int argc, char ** argv)
     //if the QPA can't load xcb, this app is useless anyway.
     qputenv("QT_QPA_PLATFORM", "xcb");
 
+    QGuiApplication::setDesktopSettingsAware(false);
+
     QGuiApplication app(argc, argv);
 
     if (!KWindowSystem::isPlatformX11()) {
@@ -53,8 +55,6 @@ int main(int argc, char ** argv)
     QObject::connect(&app, &QGuiApplication::commitDataRequest, disableSessionManagement);
     QObject::connect(&app, &QGuiApplication::saveStateRequest, disableSessionManagement);
 
-
-    app.setDesktopSettingsAware(false);
     app.setQuitOnLastWindowClosed(false);
 
     qDBusRegisterMetaType<KDbusImageStruct>();
