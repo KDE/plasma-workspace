@@ -78,6 +78,11 @@ public:
         });
     }
 
+    ~WidgetExplorerPrivate()
+    {
+        delete newStuffDialog;
+    }
+
     void initFilters();
     void initRunningApplets();
     void containmentDestroyed();
@@ -443,9 +448,8 @@ void WidgetExplorer::immutabilityChanged(Plasma::Types::ImmutabilityType type)
 void WidgetExplorer::downloadWidgets()
 {
     if (!d->newStuffDialog) {
-        d->newStuffDialog = new KNS3::DownloadDialog( QLatin1String("plasmoids.knsrc") );
+        d->newStuffDialog = new KNS3::DownloadDialog(QLatin1String("plasmoids.knsrc"));
         d->newStuffDialog.data()->setWindowTitle(i18n("Download New Plasma Widgets"));
-        connect(d->newStuffDialog.data(), SIGNAL(accepted()), SLOT(newStuffFinished()));
     }
     d->newStuffDialog.data()->show();
 
