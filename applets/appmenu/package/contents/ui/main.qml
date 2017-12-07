@@ -51,7 +51,7 @@ Item {
         enabled: appletEnabled ? menuAvailable : kcmAuthorized
         checkable: appletEnabled && menuAvailable && plasmoid.nativeInterface.currentIndex === fakeIndex
         checked: checkable
-        iconSource: appletEnabled ? i18n("application-menu") : i18n("emblem-warning")
+        iconSource: appletEnabled ? "application-menu" : "emblem-warning"
         onClicked: {
             if (appletEnabled) {
                 plasmoid.nativeInterface.trigger(this, 0);
