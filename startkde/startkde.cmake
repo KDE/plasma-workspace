@@ -137,8 +137,7 @@ fi
 
 # Source scripts found in <config locations>/plasma-workspace/env/*.sh
 # (where <config locations> correspond to the system and user's configuration
-# directories, as identified by Qt's qtpaths,  e.g.  $HOME/.config
-# and /etc/xdg/ on Linux)
+# directory.
 #
 # This is where you can define environment variables that will be available to
 # all KDE programs, so this is where you can run agents using e.g. eval `ssh-agent`
