@@ -58,7 +58,7 @@ class KSMShutdownDlg : public QQuickView
     Q_OBJECT
 
 public:
-    KSMShutdownDlg( QWindow* parent, bool maysd, bool choose, KWorkSpace::ShutdownType sdtype, const QString& theme, KWayland::Client::PlasmaShell *plasmaShell = nullptr );
+    KSMShutdownDlg( QWindow* parent, bool maysd, bool choose, KWorkSpace::ShutdownType sdtype, KWayland::Client::PlasmaShell *plasmaShell = nullptr );
 
     void init();
     bool result() const;
@@ -91,7 +91,6 @@ private:
     QString m_bootOption;
     QStringList rebootOptions;
     bool m_result : 1;
-    QString m_theme;
     KWayland::Client::PlasmaShell *m_waylandPlasmaShell;
     KWayland::Client::PlasmaShellSurface *m_shellSurface = nullptr;
 };

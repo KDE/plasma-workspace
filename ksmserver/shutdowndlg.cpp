@@ -76,10 +76,9 @@ Q_DECLARE_METATYPE(Solid::PowerManagement::SleepState)
 
 KSMShutdownDlg::KSMShutdownDlg( QWindow* parent,
                                 bool maysd, bool choose, KWorkSpace::ShutdownType sdtype,
-                                const QString& theme, KWayland::Client::PlasmaShell *plasmaShell)
+                                KWayland::Client::PlasmaShell *plasmaShell)
   : QQuickView(parent),
     m_result(false),
-    m_theme(theme),
     m_waylandPlasmaShell(plasmaShell)
     // this is a WType_Popup on purpose. Do not change that! Not
     // having a popup here has severe side effects.
@@ -156,21 +155,19 @@ void KSMShutdownDlg::init()
     rootContext()->setContextProperty(QStringLiteral("screenGeometry"), screen()->geometry());
 
     QString fileName;
-    if(m_theme.isEmpty()) {
-        KPackage::Package package = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Plasma/LookAndFeel"));
-        KConfigGroup cg(KSharedConfig::openConfig(QStringLiteral("kdeglobals")), "KDE");
-        const QString packageName = cg.readEntry("LookAndFeelPackage", QString());
-        if (!packageName.isEmpty()) {
-            package.setPath(packageName);
-        }
+    QString fileUrl;
+    KPackage::Package package = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Plasma/LookAndFeel"));
+    KConfigGroup cg(KSharedConfig::openConfig(QStringLiteral("kdeglobals")), "KDE");
+    const QString packageName = cg.readEntry("LookAndFeelPackage", QString());
+    if (!packageName.isEmpty()) {
+        package.setPath(packageName);
+    }
 
-        fileName = package.filePath("logoutmainscript");
-    } else
-        fileName = m_theme;
+    fileName = package.filePath("logoutmainscript");
 
     if (QFile::exists(fileName)) {
         //qCDebug(KSMSERVER) << "Using QML theme" << fileName;
-        setSource(QUrl::fromLocalFile(fileName));
+        setSource(package.fileUrl("logoutmainscript"));
     } else {
         qCWarning(KSMSERVER) << "Couldn't find a theme for the Shutdown dialog" << fileName;
         return;
