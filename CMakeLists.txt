@@ -136,6 +136,7 @@ add_subdirectory(libdbusmenuqt)
 add_subdirectory(appmenu)
 
 add_subdirectory(libtaskmanager)
+add_subdirectory(libcolorcorrect)
 add_subdirectory(components)
 
 add_subdirectory(plasma-windowed)

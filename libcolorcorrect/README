@@ -1,0 +1,5 @@
+This library can be used for configuring the color correction on compositor level. This includes:
+- [TODO] Adjusting gamma levels per screen
+- Setting night time color temperature (Night Color)
+
+Currently only controlling KWin in Wayland mode is supported.

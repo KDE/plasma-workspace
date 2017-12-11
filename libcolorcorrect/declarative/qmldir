@@ -1,0 +1,3 @@
+module org.kde.colorcorrect
+
+plugin colorcorrectplugin
