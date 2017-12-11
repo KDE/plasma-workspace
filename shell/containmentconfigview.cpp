@@ -121,39 +121,13 @@ PlasmaQuick::ConfigModel *ContainmentConfigView::wallpaperConfigModel()
 {
     if (!m_wallpaperConfigModel) {
         m_wallpaperConfigModel = new PlasmaQuick::ConfigModel(this);
-        QStringList dirs(QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, PLASMA_RELATIVE_DATA_INSTALL_DIR "/wallpapers", QStandardPaths::LocateDirectory));
-        KPackage::Package pkg = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("KPackage/Generic"));
-        QStringList platform = KDeclarative::KDeclarative::runtimePlatform();
-        if (!platform.isEmpty()) {
-            QMutableStringListIterator it(platform);
-            while (it.hasNext()) {
-                it.next();
-                it.setValue("platformcontents/" + it.value());
-            }
 
-            platform.append(QStringLiteral("contents"));
-            pkg.setContentsPrefixPaths(platform);
-        }
-        pkg.addFileDefinition("mainscript", QStringLiteral("ui/main.qml"), i18n("Main Script File"));
-        foreach (const QString &dirPath, dirs) {
-            QDir dir(dirPath);
-            pkg.setDefaultPackageRoot(dirPath);
-            QStringList packages;
-
-            foreach (const QString &sdir, dir.entryList(QDir::AllDirs | QDir::Readable)) {
-                const QString metadata = dirPath + '/' + sdir;
-                if (QFile::exists(metadata + "/metadata.json") || QFile::exists(metadata + "/metadata.desktop")) {
-                    packages << sdir;
-                }
+        for (const KPluginMetaData &m : KPackage::PackageLoader::self()->listPackages("Plasma/Wallpaper")) {
+            KPackage::Package pkg = KPackage::PackageLoader::self()->loadPackage("Plasma/Wallpaper", m.pluginId());
+            if (!pkg.isValid()) {
+                continue;
             }
-
-            foreach (const QString &package, packages) {
-                pkg.setPath(package);
-                if (!pkg.isValid()) {
-                    continue;
-                }
-                m_wallpaperConfigModel->appendCategory(pkg.metadata().iconName(), pkg.metadata().name(), pkg.filePath("ui", QStringLiteral("config.qml")), package);
-            }
+            m_wallpaperConfigModel->appendCategory(pkg.metadata().iconName(), pkg.metadata().name(), pkg.fileUrl("ui", QStringLiteral("config.qml")).toString(), m.pluginId());
         }
     }
     return m_wallpaperConfigModel;
