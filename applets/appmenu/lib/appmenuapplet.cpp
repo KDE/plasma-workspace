@@ -30,24 +30,53 @@
 #include <QQuickWindow>
 #include <QScreen>
 #include <QDBusConnection>
+#include <QDBusMessage>
+#include <QDBusPendingCall>
+#include <QDBusConnectionInterface>
 #include <QTimer>
+
+int AppMenuApplet::s_refs = 0;
+
+static const QString s_viewService(QStringLiteral("org.kde.kappmenuview"));
 
 AppMenuApplet::AppMenuApplet(QObject *parent, const QVariantList &data)
     : Plasma::Applet(parent, data)
 {
+    ++s_refs;
+    //if we're the first, regster the service
+    if (s_refs == 1) {
+        QDBusConnection::sessionBus().interface()->registerService(s_viewService,
+                QDBusConnectionInterface::QueueService,
+                QDBusConnectionInterface::DontAllowReplacement);
+    }
+    /*it registers or unregisters the service when the destroyed value of the applet change,
+      and not in the dtor, because:
+      when we "delete" an applet, it just hides it for about a minute setting its status
+      to destroyed, in order to be able to do a clean undo: if we undo, there will be
+      another destroyedchanged and destroyed will be false.
+      When this happens, if we are the only appmenu applet existing, the dbus interface
+      will have to be registered again*/
+    connect(this, &Applet::destroyedChanged, this, [this](bool destroyed) {
+        if (destroyed) {
+            //if we were the last, unregister
+            if (--s_refs == 0) {
+                QDBusConnection::sessionBus().interface()->unregisterService(s_viewService);
+            }
+        } else {
+            //if we're the first, regster the service
+            if (++s_refs == 1) {
+                QDBusConnection::sessionBus().interface()->registerService(s_viewService,
+                    QDBusConnectionInterface::QueueService,
+                    QDBusConnectionInterface::DontAllowReplacement);
+            }
+        }
+    });
 }
 
 AppMenuApplet::~AppMenuApplet() = default;
 
 void AppMenuApplet::init()
 {
-    // TODO Wayland PlasmaShellSurface stuff
-    QDBusConnection::sessionBus().connect(QStringLiteral("org.kde.kappmenu"),
-                                          QStringLiteral("/KAppMenu"),
-                                          QStringLiteral("org.kde.kappmenu"),
-                                          QStringLiteral("reconfigured"),
-                                          this, SLOT(updateAppletEnabled()));
-    updateAppletEnabled();
 }
 
 AppMenuModel *AppMenuApplet::model() const
@@ -99,24 +128,6 @@ void AppMenuApplet::setButtonGrid(QQuickItem *buttonGrid)
     if (m_buttonGrid != buttonGrid) {
         m_buttonGrid = buttonGrid;
         emit buttonGridChanged();
-    }
-}
-
-bool AppMenuApplet::appletEnabled() const
-{
-    return m_appletEnabled;
-}
-
-void AppMenuApplet::updateAppletEnabled()
-{
-    KConfigGroup config(KSharedConfig::openConfig(QStringLiteral("kdeglobals")), QStringLiteral("Appmenu Style"));
-    const QString &menuStyle = config.readEntry(QStringLiteral("Style"));
-
-    const bool enabled = (menuStyle == QLatin1String("Widget"));
-
-    if (m_appletEnabled != enabled) {
-        m_appletEnabled = enabled;
-        emit appletEnabledChanged();
     }
 }
 

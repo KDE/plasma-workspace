@@ -30,7 +30,6 @@ Item {
     id: root
 
     readonly property bool vertical: plasmoid.formFactor === PlasmaCore.Types.Vertical
-    readonly property bool appletEnabled: plasmoid.nativeInterface.appletEnabled
     readonly property bool view: plasmoid.configuration.compactView
     readonly property bool menuAvailable: appMenuModel.menuAvailable
 
@@ -40,7 +39,7 @@ Item {
         plasmoid.nativeInterface.view = view
     }
 
-    Plasmoid.preferredRepresentation: (plasmoid.configuration.compactView || vertical || !appletEnabled) ? Plasmoid.compactRepresentation : Plasmoid.fullRepresentation
+    Plasmoid.preferredRepresentation: (plasmoid.configuration.compactView || vertical) ? Plasmoid.compactRepresentation : Plasmoid.fullRepresentation
 
     Plasmoid.compactRepresentation: PlasmaComponents.ToolButton {
         readonly property int fakeIndex: 0
@@ -48,23 +47,17 @@ Item {
         Layout.fillHeight: false
         Layout.minimumWidth: implicitWidth
         Layout.maximumWidth: implicitWidth
-        enabled: appletEnabled ? menuAvailable : kcmAuthorized
-        checkable: appletEnabled && menuAvailable && plasmoid.nativeInterface.currentIndex === fakeIndex
+        enabled:  menuAvailable
+        checkable: menuAvailable && plasmoid.nativeInterface.currentIndex === fakeIndex
         checked: checkable
-        iconSource: appletEnabled ? "application-menu" : "emblem-warning"
-        onClicked: {
-            if (appletEnabled) {
-                plasmoid.nativeInterface.trigger(this, 0);
-            } else {
-                KCMShell.open("style")
-            }
-        }
+        iconSource: i18n("application-menu")
+        onClicked: plasmoid.nativeInterface.trigger(this, 0);
     }
 
     Plasmoid.fullRepresentation: GridLayout {
         id: buttonGrid
         //when we're not enabled set to active to show the configure button
-        Plasmoid.status: !appletEnabled || buttonRepeater.count > 0 ?
+        Plasmoid.status: buttonRepeater.count > 0 ?
                          PlasmaCore.Types.ActiveStatus : PlasmaCore.Types.HiddenStatus
         Layout.minimumWidth: implicitWidth
         Layout.minimumHeight: implicitHeight
@@ -106,10 +99,6 @@ Item {
             }
         }
     }
-
-    Plasmoid.toolTipMainText: appletEnabled ? "" : i18n("Application Menu Widget is disabled")
-    Plasmoid.toolTipSubText: appletEnabled || !root.kcmAuthorized ? ""
-                            : i18nc("it being the 'Application Menu Widget'", "Go to System Settings > Application Style > Fine Tuning (tab) to enable it.");
 
     AppMenuPrivate.AppMenuModel {
         id: appMenuModel

@@ -33,6 +33,7 @@
 #include "menuimporter.h"
 
 class QDBusPendingCallWatcher;
+class QDBusServiceWatcher;
 class KDBusMenuImporter;
 class AppmenuDBus;
 class TopMenuBar;
@@ -91,6 +92,7 @@ private:
 
     MenuImporter *m_menuImporter = nullptr;
     AppmenuDBus *m_appmenuDBus;
+    QDBusServiceWatcher *m_menuViewWatcher;
     QPointer<VerticalMenu> m_menu;
 };
 

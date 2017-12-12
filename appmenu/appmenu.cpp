@@ -71,6 +71,35 @@ AppMenuModule::AppMenuModule(QObject* parent, const QList<QVariant>&)
     connect(this, &AppMenuModule::showRequest, m_appmenuDBus, &AppmenuDBus::showRequest);
     connect(this, &AppMenuModule::menuHidden, m_appmenuDBus, &AppmenuDBus::menuHidden);
     connect(this, &AppMenuModule::menuShown, m_appmenuDBus, &AppmenuDBus::menuShown);
+
+    m_menuViewWatcher = new QDBusServiceWatcher(QStringLiteral("org.kde.kappmenuview"), QDBusConnection::sessionBus(),
+                                      QDBusServiceWatcher::WatchForRegistration|QDBusServiceWatcher::WatchForUnregistration, this);
+
+    auto setupMenuImporter = [this]() {
+        QDBusConnection::sessionBus().connect({}, {}, QStringLiteral("com.canonical.dbusmenu"),
+                                                        QStringLiteral("ItemActivationRequested"),
+                                                this, SLOT(itemActivationRequested(int,uint)));
+
+        // Setup a menu importer if needed
+        if (!m_menuImporter) {
+            m_menuImporter = new MenuImporter(this);
+            connect(m_menuImporter, &MenuImporter::WindowRegistered, this, &AppMenuModule::slotWindowRegistered);
+            m_menuImporter->connectToBus();
+        }
+    };
+    connect(m_menuViewWatcher, &QDBusServiceWatcher::serviceRegistered, this, setupMenuImporter);
+    connect(m_menuViewWatcher, &QDBusServiceWatcher::serviceUnregistered, this, [this](const QString &service) {
+        Q_UNUSED(service)
+        QDBusConnection::sessionBus().disconnect({}, {}, QStringLiteral("com.canonical.dbusmenu"),
+                                                      QStringLiteral("ItemActivationRequested"),
+                                              this, SLOT(itemActivationRequested(int,uint)));
+        delete m_menuImporter;
+        m_menuImporter = nullptr;
+    });
+
+    if (QDBusConnection::sessionBus().interface()->isServiceRegistered(QStringLiteral("org.kde.kappmenuview"))) {
+        setupMenuImporter();
+    }
 }
 
 AppMenuModule::~AppMenuModule() = default;
@@ -174,36 +203,9 @@ void AppMenuModule::itemActivationRequested(int actionId, uint timeStamp)
     emit showRequest(message().service(), QDBusObjectPath(message().path()), actionId);
 }
 
-// reload settings
+// this method is not really used anymore but has to be kept for DBus compatibility
 void AppMenuModule::reconfigure()
 {
-    hideMenu(); // hide window decoration menu if exists
-
-    KConfigGroup config(KSharedConfig::openConfig(QStringLiteral("kdeglobals")), QStringLiteral("Appmenu Style"));
-    const QString &menuStyle = config.readEntry("Style", "InApplication");
-    // TODO enum or Kconfigxt or what not?
-    if (menuStyle == QLatin1String("Decoration")) {
-        QDBusConnection::sessionBus().connect({}, {}, QStringLiteral("com.canonical.dbusmenu"),
-                                                      QStringLiteral("ItemActivationRequested"),
-                                              this, SLOT(itemActivationRequested(int,uint)));
-    } else {
-        QDBusConnection::sessionBus().disconnect({}, {}, QStringLiteral("com.canonical.dbusmenu"),
-                                                      QStringLiteral("ItemActivationRequested"),
-                                              this, SLOT(itemActivationRequested(int,uint)));
-    }
-
-    if (menuStyle == QLatin1String("InApplication")) {
-        delete m_menuImporter;
-        m_menuImporter = nullptr;
-        return;
-    }
-
-    // Setup a menu importer if needed
-    if (!m_menuImporter) {
-        m_menuImporter = new MenuImporter(this);
-        connect(m_menuImporter, &MenuImporter::WindowRegistered, this, &AppMenuModule::slotWindowRegistered);
-        m_menuImporter->connectToBus();
-    }
 }
 
 #include "appmenu.moc"

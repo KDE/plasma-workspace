@@ -33,8 +33,6 @@ class AppMenuApplet : public Plasma::Applet
 {
     Q_OBJECT
 
-    Q_PROPERTY(bool appletEnabled READ appletEnabled NOTIFY appletEnabledChanged)
-
     Q_PROPERTY(AppMenuModel* model READ model WRITE setModel NOTIFY modelChanged)
 
     Q_PROPERTY(int view READ view WRITE setView NOTIFY viewChanged)
@@ -65,18 +63,14 @@ public:
     int view() const;
     void setView(int type);
 
-    bool appletEnabled() const;
-
 signals:
     void modelChanged();
     void viewChanged();
     void currentIndexChanged();
     void buttonGridChanged();
-    void appletEnabledChanged();
     void requestActivateIndex(int index);
 
 public slots:
-    void updateAppletEnabled();
     void trigger(QQuickItem *ctx, int idx);
 
 protected:
@@ -90,8 +84,8 @@ private:
 
     int m_currentIndex = -1;
     int m_viewType = FullView;
-    bool m_appletEnabled = true;
     QPointer<QMenu> m_currentMenu;
     QPointer<QQuickItem> m_buttonGrid;
     QPointer<AppMenuModel> m_model;
+    static int s_refs;
 };
