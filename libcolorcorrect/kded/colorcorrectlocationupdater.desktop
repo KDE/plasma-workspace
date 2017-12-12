@@ -1,7 +1,6 @@
 [Desktop Entry]
 Type=Service
 Name=ColorCorrect Geolocation Updater
-Name[de]=ColorCorrect Ortsaktualisierer
 ServiceTypes=KDEDModule
 X-KDE-ServiceTypes=KDEDModule
 X-KDE-Library=colorcorrectlocationupdater
@@ -9,4 +8,3 @@ X-KDE-FactoryName=colorcorrectlocationupdater
 X-KDE-DBus-ModuleName=colorcorrectlocationupdater
 X-KDE-Kded-autoload=true
 Comment=Sends updated location data to the compositor
-Comment[de]=Sendet aktualisierte Ortsdaten an den Compositor
