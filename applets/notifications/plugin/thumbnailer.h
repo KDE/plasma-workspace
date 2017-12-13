@@ -41,6 +41,8 @@ class Thumbnailer : public QObject, public QQmlParserStatus
 
     Q_PROPERTY(QString iconName READ iconName NOTIFY iconNameChanged)
 
+    Q_PROPERTY(bool menuVisible READ menuVisible NOTIFY menuVisibleChanged)
+
 public:
     explicit Thumbnailer(QObject *parent = nullptr);
     ~Thumbnailer() override;
@@ -57,12 +59,16 @@ public:
 
     QString iconName() const;
 
+    bool menuVisible() const;
+
     Q_INVOKABLE void showContextMenu(int x, int y, const QString &path, QQuickItem *ctx);
 
     void classBegin() override;
     void componentComplete() override;
 
 signals:
+    void menuVisibleChanged();
+
     void urlChanged();
     void sizeChanged();
     void pixmapChanged();
@@ -72,6 +78,8 @@ private:
     void generatePreview();
 
     bool m_inited = false;
+
+    bool m_menuVisible = false;
 
     QUrl m_url;
     QSize m_size;

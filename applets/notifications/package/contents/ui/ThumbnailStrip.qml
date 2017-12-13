@@ -111,8 +111,22 @@ ListView {
 
         preventStealing: true
         cursorShape: Qt.OpenHandCursor
+        acceptedButtons: Qt.LeftButton | Qt.RightButton
 
-        onClicked: notificationItem.openUrl(modelData)
+        onClicked: {
+            if (mouse.button === Qt.LeftButton) {
+                notificationItem.openUrl(modelData);
+            }
+        }
+
+        onPressed: {
+            if (mouse.button === Qt.RightButton) {
+                // avoid menu button glowing if we didn't actually press it
+                menuButton.checked = false;
+
+                thumbnailer.showContextMenu(mouse.x, mouse.y, modelData, this);
+            }
+        }
 
         // cannot drag itself, hence dragging the Pixmap instead
         drag.target: previewPixmap
@@ -193,11 +207,36 @@ ListView {
             }
         }
 
-        MouseArea {
-            anchors.fill: parent
-            acceptedButtons: Qt.RightButton
-            onPressed: {
-                thumbnailer.showContextMenu(mouse.x, mouse.y, modelData, this)
+        PlasmaComponents.Button {
+            id: menuButton
+            anchors {
+                top: parent.top
+                right: parent.right
+                margins: units.smallSpacing
+            }
+            width: Math.ceil(units.iconSizes.small + 2 * units.smallSpacing)
+            height: width
+            tooltip: i18n("More Options...")
+            Accessible.name: tooltip
+            checkable: true
+
+            // -1 tells it to "align bottom left of item (this)"
+            onClicked: {
+                checked = Qt.binding(function() {
+                    return thumbnailer.menuVisible;
+                });
+
+                thumbnailer.showContextMenu(-1, -1, modelData, this)
+            }
+
+            PlasmaCore.IconItem {
+                anchors.fill: parent
+                anchors.margins: parent.padding
+                source: "application-menu"
+
+                // From Plasma's ToolButtonStyle:
+                active: parent.hovered
+                colorGroup: parent.hovered ? PlasmaCore.Theme.ButtonColorGroup : PlasmaCore.ColorScope.colorGroup
             }
         }
     }

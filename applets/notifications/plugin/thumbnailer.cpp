@@ -107,6 +107,11 @@ QString Thumbnailer::iconName() const
     return m_iconName;
 }
 
+bool Thumbnailer::menuVisible() const
+{
+    return m_menuVisible;
+}
+
 void Thumbnailer::showContextMenu(int x, int y, const QString &path, QQuickItem *ctx)
 {
     if (!ctx || !ctx->window()) {
@@ -122,6 +127,11 @@ void Thumbnailer::showContextMenu(int x, int y, const QString &path, QQuickItem 
 
     QMenu *menu = new QMenu();
     menu->setAttribute(Qt::WA_DeleteOnClose, true);
+
+    connect(menu, &QMenu::aboutToHide, this, [this] {
+        m_menuVisible = false;
+        emit menuVisibleChanged();
+    });
 
     if (KProtocolManager::supportsListing(url)) {
         QAction *openContainingFolderAction = menu->addAction(QIcon::fromTheme("folder-open"), i18n("Open Containing Folder"));
@@ -172,9 +182,24 @@ void Thumbnailer::showContextMenu(int x, int y, const QString &path, QQuickItem 
     QTimer::singleShot(0, ctx, ungrabMouseHack);
     //end workaround
 
+    QPoint pos;
+    if (x == -1 && y == -1) { // align "bottom left of ctx"
+        menu->adjustSize();
 
-    const QPoint pos = ctx->mapToGlobal(QPointF(x, y)).toPoint();
+        pos = ctx->mapToGlobal(QPointF(0, ctx->height())).toPoint();
+
+        if (!qApp->isRightToLeft()) {
+            pos.rx() += ctx->width();
+            pos.rx() -= menu->width();
+        }
+    } else {
+        pos = ctx->mapToGlobal(QPointF(x, y)).toPoint();
+    }
+
     menu->popup(pos);
+
+    m_menuVisible = true;
+    emit menuVisibleChanged();
 }
 
 void Thumbnailer::generatePreview()
