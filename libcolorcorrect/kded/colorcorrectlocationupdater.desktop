@@ -1,6 +1,13 @@
 [Desktop Entry]
 Type=Service
 Name=ColorCorrect Geolocation Updater
+Name[ca]=Actualitzador del la geolocalització del ColorCorrect
+Name[nl]=Bijwerker van kleurgecorrigeerde geo-locatie
+Name[pt]=Actualização da Geo-Localização da Correcção de Cores
+Name[pt_BR]=Atualizador de geolocalização do ColorCorrect
+Name[sv]=Färgriktig uppdatering av geografisk plats
+Name[uk]=Засіб оновлення географічного розташування для ColorCorrect
+Name[x-test]=xxColorCorrect Geolocation Updaterxx
 ServiceTypes=KDEDModule
 X-KDE-ServiceTypes=KDEDModule
 X-KDE-Library=colorcorrectlocationupdater
@@ -8,3 +15,10 @@ X-KDE-FactoryName=colorcorrectlocationupdater
 X-KDE-DBus-ModuleName=colorcorrectlocationupdater
 X-KDE-Kded-autoload=true
 Comment=Sends updated location data to the compositor
+Comment[ca]=Envia les dades actualitzades de la ubicació al compositor
+Comment[nl]=Verstuurt bijgewerkte locatiegegevens naar de compositeur
+Comment[pt]=Envia os dados de localização actualizados para o compositor
+Comment[pt_BR]=Envia dados de localização atualizados para o computador.
+Comment[sv]=Skickar uppdaterad platsinformation till sammansättare
+Comment[uk]=Надсилає оновлені дані щодо розташування на комп'ютер
+Comment[x-test]=xxSends updated location data to the compositorxx
