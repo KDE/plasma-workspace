@@ -131,32 +131,6 @@ void KCMInit::runModules( int phase )
   }
 }
 
-static inline bool enableMultihead()
-{
-#ifdef XCB_FOUND
-  if (qApp->platformName() != QLatin1String("xcb"))
-    return false;
-
-  xcb_connection_t *c = xcb_connect(nullptr, nullptr);
-  if (!c || xcb_connection_has_error(c))
-    return false;
-
-  //on a common setup of laptop plus external vga output this still will be 1
-  const int xcb_screen_count = xcb_setup_roots_length(xcb_get_setup(c));
-  xcb_disconnect(c);
-
-  if (xcb_screen_count <= 1)
-    return false;
-
-  KConfig _config( QStringLiteral("kcmdisplayrc") );
-  KConfigGroup config(&_config, "X11");
-  // This key has no GUI apparently
-  return !config.readEntry( "disableMultihead", false);
-#else
-  return false;
-#endif
-}
-
 KCMInit::KCMInit( const QCommandLineParser& args )
 {
   QString arg;
@@ -191,14 +165,6 @@ KCMInit::KCMInit( const QCommandLineParser& args )
     // locate the desktop files
     list = KServiceTypeTrader::self()->query( QStringLiteral("KCModuleInit") );
   }
-
-  // Pass env. var to kdeinit.
-  const char* name = "KDE_MULTIHEAD";
-  const char* value = enableMultihead() ? "true" : "false";
-  OrgKdeKLauncherInterface *iface = new OrgKdeKLauncherInterface(QStringLiteral("org.kde.klauncher5"), QStringLiteral("/KLauncher"), QDBusConnection::sessionBus());
-  iface->setLaunchEnv(QLatin1String(name), QLatin1String(value));
-  iface->deleteLater();
-  setenv( name, value, 1 ); // apply effect also to itself
 
   if( startup ) {
      runModules( 0 );
