@@ -53,63 +53,80 @@ QHash<QString, QVariant> kwin_dbus::nightColorInfo()
 
 QHash<QString, QVariant> kwin_dbus::getData()
 {
-    QHash<QString, QVariant> ret;
-    ret["Available"] = nightColorAvailable;
+    return QHash<QString, QVariant> {
+        { QStringLiteral("Available"), nightColorAvailable },
 
-    ret["ActiveEnabled"] = activeEnabled;
-    ret["Active"] = active;
+        { QStringLiteral("ActiveEnabled"), activeEnabled },
+        { QStringLiteral("Active"), active },
 
-    ret["ModeEnabled"] = modeEnabled;
-    ret["Mode"] = mode;
+        { QStringLiteral("ModeEnabled"), modeEnabled },
+        { QStringLiteral("Mode"), mode },
 
-    ret["NightTemperatureEnabled"] = nightTemperatureEnabled;
-    ret["NightTemperature"] = nightTemperature;
+        { QStringLiteral("NightTemperatureEnabled"), nightTemperatureEnabled },
+        { QStringLiteral("NightTemperature"), nightTemperature },
 
-    ret["Running"] = running;
-    ret["CurrentColorTemperature"] = currentColorTemperature;
+        { QStringLiteral("Running"), running },
+        { QStringLiteral("CurrentColorTemperature"), currentColorTemperature },
 
-    ret["LatitudeAuto"] = latitudeAuto;
-    ret["LongitudeAuto"] = longitudeAuto;
+        { QStringLiteral("LatitudeAuto"), latitudeAuto },
+        { QStringLiteral("LongitudeAuto"), longitudeAuto },
 
-    ret["LocationEnabled"] = locationEnabled;
-    ret["LatitudeFixed"] = latitudeFixed;
-    ret["LongitudeFixed"] = longitudeFixed;
+        { QStringLiteral("LocationEnabled"), locationEnabled },
+        { QStringLiteral("LatitudeFixed"), latitudeFixed },
+        { QStringLiteral("LongitudeFixed"), longitudeFixed },
 
-    ret["TimingsEnabled"] = timingsEnabled;
-    ret["MorningBeginFixed"] = morningBeginFixed.toString(Qt::ISODate);
-    ret["EveningBeginFixed"] = eveningBeginFixed.toString(Qt::ISODate);
-    ret["TransitionTime"] = transitionTime;
-
-    return ret;
+        { QStringLiteral("TimingsEnabled"), timingsEnabled },
+        { QStringLiteral("MorningBeginFixed"), morningBeginFixed.toString(Qt::ISODate) },
+        { QStringLiteral("EveningBeginFixed"), eveningBeginFixed.toString(Qt::ISODate) },
+        { QStringLiteral("TransitionTime"), transitionTime },
+    };
 }
 
-bool kwin_dbus::nightColorConfigChange(QHash<QString, QVariant> data)
+bool kwin_dbus::setNightColorConfig(QHash<QString, QVariant> data)
 {
     if (!configChangeExpectSuccess) {
         return false;
     }
 
+    bool hasChanged = false;
+
     if (data.contains("Active")) {
-        active = data["Active"].toBool();
+        auto val = data["Active"].toBool();
+        hasChanged |= active != val;
+        active = val;
     }
     if (data.contains("Mode")) {
-        mode = data["Mode"].toInt();
+        auto val = data["Mode"].toInt();
+        hasChanged |= mode != val;
+        mode = val;
     }
     if (data.contains("NightTemperature")) {
-        nightTemperature = data["NightTemperature"].toInt();
+        auto val = data["NightTemperature"].toInt();
+        hasChanged |= nightTemperature != val;
+        nightTemperature = val;
     }
     if (data.contains("LatitudeFixed")) {
-        latitudeFixed = data["LatitudeFixed"].toDouble();
-        longitudeFixed = data["LongitudeFixed"].toDouble();
+        auto valLat = data["LatitudeFixed"].toDouble();
+        auto valLng = data["LongitudeFixed"].toDouble();
+        hasChanged |= latitudeFixed != valLat || longitudeFixed != valLng;
+        latitudeFixed = valLat;
+        longitudeFixed = valLng;
     }
     if (data.contains("MorningBeginFixed")) {
-        morningBeginFixed = QTime::fromString(data["MorningBeginFixed"].toString(), Qt::ISODate);
-        eveningBeginFixed = QTime::fromString(data["EveningBeginFixed"].toString(), Qt::ISODate);
-        transitionTime = data["TransitionTime"].toInt();
+        auto valMbf = QTime::fromString(data["MorningBeginFixed"].toString(), Qt::ISODate);
+        auto valEbf = QTime::fromString(data["EveningBeginFixed"].toString(), Qt::ISODate);
+        auto valTrT = data["TransitionTime"].toInt();
+        hasChanged |= morningBeginFixed != valMbf || eveningBeginFixed != valEbf
+                        || transitionTime != valTrT;
+        morningBeginFixed = valMbf;
+        eveningBeginFixed = valEbf;
+        transitionTime = valTrT;
     }
     running = active;
 
-    emit nightColorConfigChangeSignal(getData());
+    if (hasChanged) {
+        emit nightColorConfigChanged(getData());
+    }
     return true;
 }
 
@@ -118,5 +135,5 @@ void kwin_dbus::nightColorAutoLocationUpdate(double latitude, double longitude)
     latitudeAuto = latitude;
     longitudeAuto = longitude;
 
-    emit nightColorConfigChangeSignal(getData());
+    emit nightColorConfigChanged(getData());
 }

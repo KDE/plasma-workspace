@@ -67,11 +67,11 @@ public:
 
 public Q_SLOTS:
     QHash<QString, QVariant> nightColorInfo();
-    bool nightColorConfigChange(QHash<QString, QVariant> data);
+    bool setNightColorConfig(QHash<QString, QVariant> data);
     void nightColorAutoLocationUpdate(double latitude, double longitude);
 
 Q_SIGNALS:
-    void nightColorConfigChangeSignal(QHash<QString, QVariant> data);
+    void nightColorConfigChanged(QHash<QString, QVariant> data);
 
 private:
     QHash<QString, QVariant> getData();

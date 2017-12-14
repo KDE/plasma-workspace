@@ -104,16 +104,16 @@ void TestNightColor::testStageData_data()
     QTest::addColumn<int>("transitionTime");
     QTest::addColumn<bool>("isChange");
     QTest::addColumn<bool>("isChangeAll");
-    QTest::addColumn<bool>("changeExpectFailure");
+    QTest::addColumn<bool>("expectChangeSuccess");
 
     QTest::newRow("noChange") << true << 0 << DEFAULT_NIGHT_TEMPERATURE << 0. << 0. << QTime(6,0,0) << QTime(18,0,0) << FALLBACK_SLOW_UPDATE_TIME << false << false << false;
-    QTest::newRow("wrongChange") << true << 0 << 9001 << 0. << 0. << QTime(6,0,0) << QTime(18,0,0) << FALLBACK_SLOW_UPDATE_TIME << true << true << true;
-    QTest::newRow("temperature") << true << 0 << 1000 << 0. << 0. << QTime(6,0,0) << QTime(18,0,0) << FALLBACK_SLOW_UPDATE_TIME << true << true << false;
-    QTest::newRow("deactivate+temperature") << false << 0 << 1000 << 0. << 0. << QTime(6,0,0) << QTime(18,0,0) << FALLBACK_SLOW_UPDATE_TIME << true << true << false;
-    QTest::newRow("location+differentMode") << true << 2 << 0 << 0. << 0. << QTime(6,0,0) << QTime(18,0,0) << FALLBACK_SLOW_UPDATE_TIME << true << true << false;
-    QTest::newRow("time+defaultMode") << true << 0 << DEFAULT_NIGHT_TEMPERATURE << 0. << 0. << QTime(10,0,0) << QTime(20,0,0) << 1 << false << true << false;
-    QTest::newRow("location+mode") << true << 1 << DEFAULT_NIGHT_TEMPERATURE << 50. << -20. << QTime(6,0,0) << QTime(18,0,0) << FALLBACK_SLOW_UPDATE_TIME << true << true << false;
-    QTest::newRow("time+mode") << false << 0 << DEFAULT_NIGHT_TEMPERATURE << 0. << 0. << QTime(10,0,0) << QTime(20,0,0) << 1 << true << true << false;
+    QTest::newRow("wrongChange") << true << 0 << 9001 << 0. << 0. << QTime(6,0,0) << QTime(18,0,0) << FALLBACK_SLOW_UPDATE_TIME << true << true << false;
+    QTest::newRow("temperature") << true << 0 << 1000 << 0. << 0. << QTime(6,0,0) << QTime(18,0,0) << FALLBACK_SLOW_UPDATE_TIME << true << true << true;
+    QTest::newRow("deactivate+temperature") << false << 0 << 1000 << 0. << 0. << QTime(6,0,0) << QTime(18,0,0) << FALLBACK_SLOW_UPDATE_TIME << true << true << true;
+    QTest::newRow("location+differentMode") << true << 2 << 0 << 0. << 0. << QTime(6,0,0) << QTime(18,0,0) << FALLBACK_SLOW_UPDATE_TIME << true << true << true;
+    QTest::newRow("time+defaultMode") << true << 0 << DEFAULT_NIGHT_TEMPERATURE << 0. << 0. << QTime(10,0,0) << QTime(20,0,0) << 1 << false << true << true;
+    QTest::newRow("location+mode") << true << 1 << DEFAULT_NIGHT_TEMPERATURE << 50. << -20. << QTime(6,0,0) << QTime(18,0,0) << FALLBACK_SLOW_UPDATE_TIME << true << true << true;
+    QTest::newRow("time+mode") << false << 0 << DEFAULT_NIGHT_TEMPERATURE << 0. << 0. << QTime(10,0,0) << QTime(20,0,0) << 1 << true << true << true;
 }
 
 void TestNightColor::testStageData()
@@ -128,17 +128,15 @@ void TestNightColor::testStageData()
     QFETCH(int, transitionTime);
     QFETCH(bool, isChange);
     QFETCH(bool, isChangeAll);
-    QFETCH(bool, changeExpectFailure);
+    QFETCH(bool, expectChangeSuccess);
 
     setCompBackToDefault();
-    m_comp->configChangeExpectSuccess = !changeExpectFailure;
+    m_comp->configChangeExpectSuccess = expectChangeSuccess;
 
     CompositorAdaptor *aptr = new CompositorAdaptor(this);
-    QSignalSpy *dataUpdateSpy = new QSignalSpy(aptr, SIGNAL(dataUpdated()));
-    QVERIFY(dataUpdateSpy->isValid());
 
-    QCOMPARE(aptr->checkStaged(), false);
-    QCOMPARE(aptr->checkStagedAll(), false);
+    QVERIFY(!aptr->checkStaged());
+    QVERIFY(!aptr->checkStagedAll());
 
     auto setAdaptorStaged = [&aptr,
             &active, &mode, &nightTemperature,
@@ -157,12 +155,15 @@ void TestNightColor::testStageData()
     QCOMPARE(aptr->checkStaged(), isChange);
     QCOMPARE(aptr->checkStagedAll(), isChangeAll);
 
+    QSignalSpy *dataUpdateSpy = new QSignalSpy(aptr, SIGNAL(dataUpdated()));
+    QVERIFY(dataUpdateSpy->isValid());
+
     // send config relative to active and mode state
     aptr->sendConfiguration();
     // give dbus communication time
     QTest::qWait(300);
-    QCOMPARE(dataUpdateSpy->isEmpty(), changeExpectFailure);
-    QCOMPARE(aptr->checkStaged(), changeExpectFailure);
+    QCOMPARE(dataUpdateSpy->isEmpty(), !expectChangeSuccess || !isChange);
+    QCOMPARE(aptr->checkStaged(), !expectChangeSuccess && isChange);
 
     // reset compositor and adaptor - now send all data at once
     setCompBackToDefault();
@@ -171,8 +172,8 @@ void TestNightColor::testStageData()
     dataUpdateSpy = new QSignalSpy(aptr, SIGNAL(dataUpdated()));
     QVERIFY(dataUpdateSpy->isValid());
 
-    QCOMPARE(aptr->checkStaged(), false);
-    QCOMPARE(aptr->checkStagedAll(), false);
+    QVERIFY(!aptr->checkStaged());
+    QVERIFY(!aptr->checkStagedAll());
 
     setAdaptorStaged();
     QCOMPARE(aptr->checkStaged(), isChange);
@@ -181,9 +182,9 @@ void TestNightColor::testStageData()
     aptr->sendConfigurationAll();
     // give dbus communication time
     QTest::qWait(300);
-    QCOMPARE(dataUpdateSpy->isEmpty(), changeExpectFailure);
-    QCOMPARE(aptr->checkStaged(), changeExpectFailure);
-    QCOMPARE(aptr->checkStagedAll(), changeExpectFailure);
+    QCOMPARE(dataUpdateSpy->isEmpty(), !expectChangeSuccess || !isChangeAll);
+    QCOMPARE(aptr->checkStaged(), !expectChangeSuccess && isChange);
+    QCOMPARE(aptr->checkStagedAll(), !expectChangeSuccess && isChangeAll);
 }
 
 void TestNightColor::testAutoLocationUpdate()
