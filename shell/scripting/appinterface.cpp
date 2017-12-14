@@ -137,34 +137,12 @@ QString AppInterface::languageId() const
 
 bool AppInterface::multihead() const
 {
-#ifdef Q_OS_WIN
-    return GetSystemMetrics(SM_CMONITORS) > 1;
-#else
-    QByteArray multiHead = qgetenv("KDE_MULTIHEAD");
-    if (!multiHead.isEmpty()) {
-        return (multiHead.toLower() == "true");
-    }
     return false;
-#endif
 }
 
 int AppInterface::multiheadScreen() const
 {
-    int id = -1;
-
-#ifdef HAVE_X11
-    if (multihead()) {
-        // with multihead, we "lie" and say that screen 0 is the default screen, in fact, we pretend
-        // we have only one screen at all
-        Display *dpy = XOpenDisplay(NULL);
-        if (dpy) {
-            id = DefaultScreen(dpy);
-            XCloseDisplay(dpy);
-        }
-    }
-#endif
-
-    return id;
+    return 0;
 }
 
 void AppInterface::lockCorona(bool locked)
