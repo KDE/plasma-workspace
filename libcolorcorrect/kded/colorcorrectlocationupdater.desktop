@@ -2,6 +2,8 @@
 Type=Service
 Name=ColorCorrect Geolocation Updater
 Name[ca]=Actualitzador del la geolocalització del ColorCorrect
+Name[es]=Actualizador de geolocalización ColorCorrect
+Name[it]=ColorCorrect Geolocation Updater
 Name[nl]=Bijwerker van kleurgecorrigeerde geo-locatie
 Name[pt]=Actualização da Geo-Localização da Correcção de Cores
 Name[pt_BR]=Atualizador de geolocalização do ColorCorrect
@@ -16,6 +18,8 @@ X-KDE-DBus-ModuleName=colorcorrectlocationupdater
 X-KDE-Kded-autoload=true
 Comment=Sends updated location data to the compositor
 Comment[ca]=Envia les dades actualitzades de la ubicació al compositor
+Comment[es]=Envía datos de posicionamiento actualizados al compositor
+Comment[it]=Invia i dati di posizione aggiornati al compositore
 Comment[nl]=Verstuurt bijgewerkte locatiegegevens naar de compositeur
 Comment[pt]=Envia os dados de localização actualizados para o compositor
 Comment[pt_BR]=Envia dados de localização atualizados para o computador.
