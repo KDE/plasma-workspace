@@ -48,6 +48,7 @@ kcminputrc Mouse cursorTheme 'breeze_cursors'
 kcminputrc Mouse cursorSize ''
 ksplashrc KSplash Theme Breeze
 ksplashrc KSplash Engine KSplashQML
+kdeglobals KScreen ScaleFactor ''
 kdeglobals KScreen ScreenScaleFactors ''
 kcmfonts General forceFontDPI 0
 EOF
@@ -89,6 +90,8 @@ fi
 
 if [ "$kdeglobals_kscreen_screenscalefactors" ]; then
     export QT_SCREEN_SCALE_FACTORS="$kdeglobals_kscreen_screenscalefactors"
+    export GDK_SCALE=$kdeglobals_kscreen_scalefactor
+    export GDK_DPI_SCALE=`echo "1 / $kdeglobals_kscreen_scalefactor" | bc -l`
 fi
 #Manually disable auto scaling because we are scaling above
 #otherwise apps that manually opt in for high DPI get auto scaled by the developer AND manually scaled by us
