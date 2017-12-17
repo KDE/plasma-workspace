@@ -155,7 +155,15 @@ Item {
             PropertyChanges {
                 target: sizehelper
 
-                height: Math.min(main.showDate || timezoneLabel.visible ?  0.56 * main.height : main.height, 3 * theme.defaultFont.pixelSize)
+                /*
+                 * The value 0.71 was picked by testing to give the clock the right
+                 * size (aligned with tray icons).
+                 * Value 0.56 seems to be chosen rather arbitrary as well such that
+                 * the time label is slightly larger than the date or timezone label
+                 * and still fits well into the panel with all the applied margins.
+                 */
+                height: Math.min(main.showDate || timezoneLabel.visible ? main.height * 0.56 : main.height * 0.71,
+                                 3 * theme.defaultFont.pixelSize)
 
                 font.pixelSize: sizehelper.height
             }
