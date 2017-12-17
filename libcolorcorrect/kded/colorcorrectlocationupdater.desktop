@@ -1,9 +1,10 @@
 [Desktop Entry]
 Type=Service
 Name=ColorCorrect Geolocation Updater
-Name[ca]=Actualitzador del la geolocalització del ColorCorrect
+Name[ca]=Actualitzador de la geolocalització del ColorCorrect
 Name[ca@valencia]=Actualitzador del la geolocalització del ColorCorrect
 Name[es]=Actualizador de geolocalización ColorCorrect
+Name[fr]=Actualisation de géolocalisation ColorCorrect
 Name[it]=ColorCorrect Geolocation Updater
 Name[nl]=Bijwerker van kleurgecorrigeerde geo-locatie
 Name[pt]=Actualização da Geo-Localização da Correcção de Cores
@@ -21,6 +22,7 @@ Comment=Sends updated location data to the compositor
 Comment[ca]=Envia les dades actualitzades de la ubicació al compositor
 Comment[ca@valencia]=Envia les dades actualitzades de la ubicació al compositor
 Comment[es]=Envía datos de posicionamiento actualizados al compositor
+Comment[fr]=Envoie des données de localisation actualisées au compositeur
 Comment[it]=Invia i dati di posizione aggiornati al compositore
 Comment[nl]=Verstuurt bijgewerkte locatiegegevens naar de compositeur
 Comment[pt]=Envia os dados de localização actualizados para o compositor
