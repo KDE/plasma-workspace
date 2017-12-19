@@ -20,6 +20,7 @@
 
 import QtQuick 2.4
 import QtGraphicalEffects 1.0
+import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
 
 Item {
@@ -32,18 +33,20 @@ Item {
             right: parent.right
             bottom: parent.bottom
         }
-        color: theme.backgroundColor
+        color: PlasmaCore.ColorScope.backgroundColor
         width: Math.max(units.gridUnit, label.width + units.devicePixelRatio * 2)
         height: label.height
         radius: units.devicePixelRatio * 3
-
-        PlasmaComponents.Label {
-            id: label
-            anchors.centerIn: parent
-            height: paintedHeight
-            font.pixelSize: Math.max(icon.height/4, theme.smallestFont.pixelSize*0.8)
-        }
+        opacity: 0.9
     }
+
+    PlasmaComponents.Label {
+        id: label
+        anchors.centerIn: badgeRect
+        height: paintedHeight
+        font.pixelSize: Math.max(icon.height/4, theme.smallestFont.pixelSize*0.8)
+    }
+
     layer.enabled: true
     layer.effect: DropShadow {
         horizontalOffset: 0
@@ -53,3 +56,4 @@ Item {
         color: Qt.rgba(0, 0, 0, 0.5)
     }
 }
+
