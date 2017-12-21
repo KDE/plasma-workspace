@@ -58,6 +58,7 @@ Item {
         horizontalAlignment: Text.AlignHCenter
         verticalAlignment: Text.AlignTop
         wrapMode: Text.WordWrap
+        font.underline: root.activeFocus
     }
 
     MouseArea {
