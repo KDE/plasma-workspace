@@ -18,7 +18,7 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-import QtQuick 2.0
+import QtQuick 2.5
 import QtQuick.Layouts 1.1
 import QtQuick.Controls.Private 1.0
 
@@ -292,37 +292,90 @@ MouseArea {
                         }
                     }
                     MouseArea {
+                        property int selectionStart
+                        property point mouseDownPos: Qt.point(-999, -999);
+
                         anchors.fill: parent
                         acceptedButtons: Qt.RightButton | Qt.LeftButton
+                        hoverEnabled: true // allow us to update cursorShape on the fly
+                        cursorShape: {
+                            if (bodyText.linkAt(mouseX, mouseY)) {
+                                return Qt.PointingHandCursor;
+                            } else {
+                                return Qt.IBeamCursor;
+                            }
+                        }
+                        preventStealing: true // don't let us accidentally drag the Flickable
 
                         onPressed: {
                             if (mouse.button === Qt.RightButton) {
-                                contextMenu.open(mouse.x, mouse.y)
+                                contextMenu.link = bodyText.linkAt(mouse.x, mouse.y);
+                                contextMenu.open(mouse.x, mouse.y);
+                                return;
+                            }
+
+                            mouseDownPos = Qt.point(mouse.x, mouse.y);
+                            selectionStart = bodyText.positionAt(mouse.x, mouse.y);
+                            var pos = bodyText.positionAt(mouse.x, mouse.y);
+                            // deselect() would scroll to the end which we don't want
+                            bodyText.select(pos, pos);
+                        }
+
+                        onReleased: {
+                            // emulate "onClicked"
+                            var manhattanLength = Math.abs(mouseDownPos.x - mouse.x) + Math.abs(mouseDownPos.y - mouse.y);
+                            if (manhattanLength <= Qt.styleHints.startDragDistance) {
+                                var link = bodyText.linkAt(mouse.x, mouse.y);
+                                if (link) {
+                                    Qt.openUrlExternally(link);
+                                } else {
+                                    notificationItem.clicked(null/*mouse*/);
+                                }
+                            }
+                            mouseDownPos = Qt.point(-999, -999);
+                        }
+
+                        // HACK to be able to select text whilst still getting all mouse events to the MouseArea
+                        onPositionChanged: {
+                            if (pressed) {
+                                var pos = bodyText.positionAt(mouseX, mouseY);
+                                if (selectionStart < pos) {
+                                    bodyText.select(selectionStart, pos);
+                                } else {
+                                    bodyText.select(pos, selectionStart);
+                                }
                             }
                         }
 
-                        onClicked: {
-                            if (mouse.button === Qt.LeftButton) {
-                                var link = bodyText.linkAt(mouse.x, mouse.y)
-                                if (link) {
-                                    Qt.openUrlExternally(link)
-                                } else {
-                                    notificationItem.clicked(mouse)
-                                }
-                            }
+                        Clipboard {
+                            id: clipboard
                         }
 
                         PlasmaComponents.ContextMenu {
                             id: contextMenu
+                            property string link
+
+                            PlasmaComponents.MenuItem {
+                                text: i18n("Copy Link")
+                                onClicked: clipboard.content = contextMenu.link
+                                visible: contextMenu.link !== ""
+                            }
+
+                            PlasmaComponents.MenuItem {
+                                separator: true
+                                visible: contextMenu.link !== ""
+                            }
 
                             PlasmaComponents.MenuItem {
                                 text: i18n("Copy")
                                 icon: "edit-copy"
-                                onClicked: {
-                                    bodyText.selectAll()
-                                    bodyText.copy()
-                                    bodyText.deselect()
-                                }
+                                enabled: bodyText.selectionStart !== bodyText.selectionEnd
+                                onClicked: bodyText.copy()
+                            }
+
+                            PlasmaComponents.MenuItem {
+                                text: i18n("Select All")
+                                onClicked: bodyText.selectAll()
                             }
                         }
                     }
