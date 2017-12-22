@@ -78,11 +78,6 @@ public:
         });
     }
 
-    ~WidgetExplorerPrivate()
-    {
-        delete newStuffDialog;
-    }
-
     void initFilters();
     void initRunningApplets();
     void containmentDestroyed();
@@ -450,6 +445,7 @@ void WidgetExplorer::downloadWidgets()
     if (!d->newStuffDialog) {
         d->newStuffDialog = new KNS3::DownloadDialog(QLatin1String("plasmoids.knsrc"));
         d->newStuffDialog.data()->setWindowTitle(i18n("Download New Plasma Widgets"));
+        d->newStuffDialog.data()->setAttribute(Qt::WA_DeleteOnClose);
     }
     d->newStuffDialog.data()->show();
 
