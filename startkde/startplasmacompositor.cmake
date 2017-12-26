@@ -129,6 +129,29 @@ else
     export QT_WAYLAND_FORCE_DPI=96
 fi
 
+# Get a property value from org.freedesktop.locale1
+queryLocale1() {
+    "${qdbus}" --system org.freedesktop.locale1 /org/freedesktop/locale1 "$1"
+}
+
+# Query whether org.freedesktop.locale1 is available. If it is, try to
+# set XKB_DEFAULT_{MODEL,LAYOUT,VARIANT,OPTIONS} accordingly.
+if "${qdbus}" --system org.freedesktop.locale1 >/dev/null 2>/dev/null; then
+    # Do not overwrite existing values. There is no point in setting only some
+    # of them as then they would not match anymore.
+    if [ -z "${XKB_DEFAULT_MODEL}" -a -z "${XKB_DEFAULT_LAYOUT}" -a \
+         -z "${XKB_DEFAULT_VARIANT}" -a -z "${XKB_DEFAULT_OPTIONS}" ]; then
+        X11MODEL="$(queryLocale1 org.freedesktop.locale1.X11Model)"
+        X11LAYOUT="$(queryLocale1 org.freedesktop.locale1.X11Layout)"
+        X11VARIANT="$(queryLocale1 org.freedesktop.locale1.X11Variant)"
+        X11OPTIONS="$(queryLocale1 org.freedesktop.locale1.X11Options)"
+        [ -n "${X11MODEL}" ] && export XKB_DEFAULT_MODEL="${X11MODEL}"
+        [ -n "${X11LAYOUT}" ] && export XKB_DEFAULT_LAYOUT="${X11LAYOUT}"
+        [ -n "${X11VARIANT}" ] && export XKB_DEFAULT_VARIANT="${X11VARIANT}"
+        [ -n "${X11OPTIONS}" ] && export XKB_DEFAULT_OPTIONS="${X11OPTIONS}"
+    fi
+fi
+
 # Source scripts found in <config locations>/plasma-workspace/env/*.sh
 # (where <config locations> correspond to the system and user's configuration
 # directories, as identified by Qt's qtpaths,  e.g.  $HOME/.config
