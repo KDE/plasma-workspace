@@ -235,7 +235,8 @@ export XDG_CURRENT_DESKTOP
 QT_QPA_PLATFORM=wayland
 export QT_QPA_PLATFORM
 
-# At this point all environment variables are set, let's send it to the DBus session server to update the activation environment
+# kwin_wayland can possibly also start dbus-activated services which need env variables.
+# In that case, the update in startplasma might be too late.
 if which dbus-update-activation-environment >/dev/null 2>/dev/null ; then
     dbus-update-activation-environment --systemd --all
 else
@@ -252,9 +253,7 @@ fi
 echo 'startplasmacompositor: Shutting down...'  1>&2
 
 unset KDE_FULL_SESSION
-xprop -root -remove KDE_FULL_SESSION
 unset KDE_SESSION_VERSION
-xprop -root -remove KDE_SESSION_VERSION
 unset KDE_SESSION_UID
 
 echo 'startplasmacompositor: Done.'  1>&2

@@ -117,6 +117,18 @@ echo 'startplasma: Starting up...'  1>&2
 xprop -root -f KDE_FULL_SESSION 8t -set KDE_FULL_SESSION true
 xprop -root -f KDE_SESSION_VERSION 32c -set KDE_SESSION_VERSION 5
 
+# At this point all environment variables are set, let's send it to the DBus session server to update the activation environment
+if which dbus-update-activation-environment >/dev/null 2>/dev/null ; then
+    dbus-update-activation-environment --systemd --all
+else
+    @CMAKE_INSTALL_FULL_LIBEXECDIR@/ksyncdbusenv
+fi
+if test $? -ne 0; then
+  # Startup error
+  echo 'startplasma: Could not sync environment to dbus.'  1>&2
+  exit 1
+fi
+
 # We set LD_BIND_NOW to increase the efficiency of kdeinit.
 # kdeinit unsets this variable before loading applications.
 LD_BIND_NOW=true @CMAKE_INSTALL_FULL_LIBEXECDIR_KF5@/start_kdeinit_wrapper --kded +kcminit_startup
