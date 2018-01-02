@@ -30,6 +30,7 @@ ActionButton {
     Layout.alignment: Qt.AlignTop
     iconSize: units.iconSizes.huge
     opacity: activeFocus || containsMouse ? 1 : 0.5
+    font.underline: false
     Behavior on opacity {
         OpacityAnimator {
             duration: units.longDuration
