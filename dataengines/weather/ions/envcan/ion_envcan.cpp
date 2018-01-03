@@ -27,6 +27,7 @@
 #include <KUnitConversion/Converter>
 #include <KLocalizedString>
 
+#include <QRegularExpression>
 #include <QTimeZone>
 
 WeatherData::WeatherData()
@@ -905,8 +906,9 @@ void EnvCanadaIon::parseConditions(WeatherData& data, QXmlStreamReader& xml)
         if (xml.isStartElement()) {
             if (elementName == QLatin1String("station")) {
                 data.stationID = xml.attributes().value(QStringLiteral("code")).toString();
-                data.stationLat = xml.attributes().value(QStringLiteral("lat")).toDouble();
-                data.stationLon = xml.attributes().value(QStringLiteral("lon")).toDouble();
+                QRegularExpression dumpDirection(QStringLiteral("[^0-9.]"));
+                data.stationLat = xml.attributes().value(QStringLiteral("lat")).toString().remove(dumpDirection).toDouble();
+                data.stationLon = xml.attributes().value(QStringLiteral("lon")).toString().remove(dumpDirection).toDouble();
             } else if (elementName == QLatin1String("dateTime")) {
                 parseDateTime(data, xml);
             } else if (elementName == QLatin1String("condition")) {
