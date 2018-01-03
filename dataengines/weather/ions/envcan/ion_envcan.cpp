@@ -27,6 +27,7 @@
 #include <KUnitConversion/Converter>
 #include <KLocalizedString>
 
+#include <QTimeZone>
 
 WeatherData::WeatherData()
   : stationLat(qQNaN())
@@ -754,6 +755,7 @@ void EnvCanadaIon::parseDateTime(WeatherData& data, QXmlStreamReader& xml, Weath
     // What kind of date info is this?
     const QString dateType = xml.attributes().value(QStringLiteral("name")).toString();
     const QString dateZone = xml.attributes().value(QStringLiteral("zone")).toString();
+    const QString dateUtcOffset = xml.attributes().value(QStringLiteral("UTCOffset")).toString();
 
     QString selectTimeStamp;
 
@@ -792,8 +794,17 @@ void EnvCanadaIon::parseDateTime(WeatherData& data, QXmlStreamReader& xml, Weath
                     }
                 } else if (dateType == QLatin1String("observation")) {
                     xml.readElementText();
-                    m_dateFormat = QDateTime::fromString(selectTimeStamp, QStringLiteral("yyyyMMddHHmmss"));
-                    data.obsTimestamp = m_dateFormat.toString(QStringLiteral("dd.MM.yyyy @ hh:mm"));
+                    QDateTime obsDateTime = QDateTime::fromString(selectTimeStamp, QStringLiteral("yyyyMMddHHmmss"));
+                    QTimeZone timeZone = QTimeZone(dateZone.toUtf8());
+                    // if timezone id not recognized, fallback to utcoffset
+                    if (!timeZone.isValid()) {
+                        timeZone = QTimeZone(dateUtcOffset.toInt() * 3600);
+                    }
+                    if (obsDateTime.isValid() && timeZone.isValid()) {
+                        data.obsDateTime = obsDateTime;
+                        data.obsDateTime.setTimeZone(timeZone);
+                    }
+                    data.obsTimestamp = obsDateTime.toString(QStringLiteral("dd.MM.yyyy @ hh:mm"));
                 } else if (dateType == QLatin1String("forecastIssue")) {
                     data.forecastTimestamp = xml.readElementText();
                 } else if (dateType == QLatin1String("sunrise")) {

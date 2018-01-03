@@ -81,6 +81,7 @@ public:
 
     // Current observation information.
     QString obsTimestamp;
+    QDateTime obsDateTime;
 
     QString condition;
     float temperature;
@@ -226,7 +227,6 @@ private:
     QXmlStreamReader m_xmlSetup;
     Plasma::DataEngine *m_timeEngine;
 
-    QDateTime m_dateFormat;
     bool emitWhenSetup;
 
 };
