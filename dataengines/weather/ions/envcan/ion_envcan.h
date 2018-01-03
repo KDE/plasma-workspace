@@ -82,10 +82,6 @@ public:
     // Current observation information.
     QString obsTimestamp;
 
-    // Icon info to aproximate periods
-    int iconPeriodHour;
-    int iconPeriodMinute;
-
     QString condition;
     float temperature;
     float dewpoint;

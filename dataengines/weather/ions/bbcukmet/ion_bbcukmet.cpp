@@ -34,8 +34,6 @@
 
 WeatherData::WeatherData()
   : obsTime()
-  , iconPeriodHour(12)
-  , iconPeriodMinute(0)
   , longitude(qQNaN())
   , latitude(qQNaN())
   , condition()
@@ -600,10 +598,6 @@ void UKMETIon::parseWeatherObservation(const QString& source, WeatherData& data,
                         // Saturday - 13:00 CET
                         // Saturday - 12:00 GMT
                         m_dateFormat = QDateTime::fromString(data.obsTime.section('-', 1, 1).trimmed(), "hh:mm ZZZ");
-                        if (m_dateFormat.isValid()) {
-                            data.iconPeriodHour = m_dateFormat.toString("hh").toInt();
-                            data.iconPeriodMinute = m_dateFormat.toString("mm").toInt();
-                        }
                     } else {
 #endif
                         m_dateFormat = QDateTime();

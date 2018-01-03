@@ -46,8 +46,6 @@ public:
     QString stationName;
     // Current observation information.
     QString obsTime;
-    int iconPeriodHour;
-    int iconPeriodMinute;
     double longitude;
     double latitude;
 

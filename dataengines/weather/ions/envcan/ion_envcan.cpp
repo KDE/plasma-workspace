@@ -794,8 +794,6 @@ void EnvCanadaIon::parseDateTime(WeatherData& data, QXmlStreamReader& xml, Weath
                     xml.readElementText();
                     m_dateFormat = QDateTime::fromString(selectTimeStamp, QStringLiteral("yyyyMMddHHmmss"));
                     data.obsTimestamp = m_dateFormat.toString(QStringLiteral("dd.MM.yyyy @ hh:mm"));
-                    data.iconPeriodHour = m_dateFormat.toString(QStringLiteral("hh")).toInt();
-                    data.iconPeriodMinute = m_dateFormat.toString(QStringLiteral("mm")).toInt();
                 } else if (dateType == QLatin1String("forecastIssue")) {
                     data.forecastTimestamp = xml.readElementText();
                 } else if (dateType == QLatin1String("sunrise")) {
