@@ -51,6 +51,7 @@ public:
 
     // Current observation information.
     QString observationTime;
+    QDateTime observationDateTime;
     QString weather;
 
     float temperature_F;

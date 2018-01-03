@@ -409,6 +409,8 @@ void NOAAIon::parseWeatherSite(WeatherData& data, QXmlStreamReader& xml)
                 parseDouble(data.stationLat, xml);
             } else if (elementName == QLatin1String("longitude")) {
                 parseDouble(data.stationLon, xml);
+            } else if (elementName == QLatin1String("observation_time_rfc822")) {
+                data.observationDateTime = QDateTime::fromString(xml.readElementText(), Qt::RFC2822Date);
             } else if (elementName == QLatin1String("observation_time")) {
                 data.observationTime = xml.readElementText();
                 QStringList tmpDateStr = data.observationTime.split(QLatin1Char(' '));
