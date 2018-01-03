@@ -415,8 +415,6 @@ void NOAAIon::parseWeatherSite(WeatherData& data, QXmlStreamReader& xml)
                 data.observationTime = xml.readElementText();
                 QStringList tmpDateStr = data.observationTime.split(QLatin1Char(' '));
                 data.observationTime = QStringLiteral("%1 %2").arg(tmpDateStr[6], tmpDateStr[7]);
-                m_dateFormat = QDateTime::fromString(data.observationTime, QStringLiteral("h:mm ap"));
-
             } else if (elementName == QLatin1String("weather")) {
                 const QString weather = xml.readElementText();
                 data.weather = (weather.isEmpty() || weather == QLatin1String("NA")) ? QStringLiteral("N/A") : weather;

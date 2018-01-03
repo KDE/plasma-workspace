@@ -164,7 +164,6 @@ private:
     QXmlStreamReader m_xmlSetup;
 
     Plasma::DataEngine *m_timeEngine;
-    QDateTime m_dateFormat;
     // bool emitWhenSetup;
     QStringList m_sourcesToReset;
 };
