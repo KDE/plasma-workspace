@@ -656,7 +656,8 @@ void UKMETIon::parseWeatherObservation(const QString& source, WeatherData& data,
             } else if (elementName == QLatin1String("long")) {
                 const QString ordinate = xml.readElementText();
                 data.longitude = ordinate.toDouble();
-            } else if (elementName == QLatin1String("georss:point")) {
+            } else if (elementName == QLatin1String("point") &&
+                       xml.namespaceUri() == QLatin1String("http://www.georss.org/georss")) {
                 const QStringList ordinates = xml.readElementText().split(QLatin1Char(' '));
                 data.latitude = ordinates[0].toDouble();
                 data.longitude = ordinates[1].toDouble();
