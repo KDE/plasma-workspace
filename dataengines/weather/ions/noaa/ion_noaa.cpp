@@ -28,11 +28,12 @@
 #include <KLocalizedString>
 
 #include <QLocale>
+#include <QTimeZone>
 
 
 WeatherData::WeatherData()
-  : stationLat(qQNaN())
-  , stationLon(qQNaN())
+  : stationLatitude(qQNaN())
+  , stationLongitude(qQNaN())
   , temperature_F(qQNaN())
   , temperature_C(qQNaN())
   , humidity(qQNaN())
@@ -90,9 +91,6 @@ NOAAIon::NOAAIon(QObject *parent, const QVariantList &args)
 {
     // Get the real city XML URL so we can parse this
     getXMLSetup();
-
-    // not used while daytime not considered, see below
-    // m_timeEngine = dataEngine(QStringLiteral("time"));
 }
 
 void NOAAIon::reset()
@@ -406,9 +404,9 @@ void NOAAIon::parseWeatherSite(WeatherData& data, QXmlStreamReader& xml)
             } else if (elementName == QLatin1String("station_id")) {
                 data.stationID = xml.readElementText();
             } else if (elementName == QLatin1String("latitude")) {
-                parseDouble(data.stationLat, xml);
+                parseDouble(data.stationLatitude, xml);
             } else if (elementName == QLatin1String("longitude")) {
-                parseDouble(data.stationLon, xml);
+                parseDouble(data.stationLongitude, xml);
             } else if (elementName == QLatin1String("observation_time_rfc822")) {
                 data.observationDateTime = QDateTime::fromString(xml.readElementText(), Qt::RFC2822Date);
             } else if (elementName == QLatin1String("observation_time")) {
@@ -516,11 +514,11 @@ void NOAAIon::updateWeather(const QString& source)
     data.insert(QStringLiteral("Place"), weatherData.locationName);
     data.insert(QStringLiteral("Station"), weatherData.stationID);
 
-    const double lat = weatherData.stationLat;
-    const double lon = weatherData.stationLon;
-    if (!qIsNaN(lat) && !qIsNaN(lon)) {
-        data.insert(QStringLiteral("Latitude"), lat);
-        data.insert(QStringLiteral("Longitude"), lon);
+    const bool stationCoordValid = (!qIsNaN(weatherData.stationLatitude) && !qIsNaN(weatherData.stationLongitude));
+
+    if (stationCoordValid) {
+        data.insert(QStringLiteral("Latitude"), weatherData.stationLatitude);
+        data.insert(QStringLiteral("Longitude"), weatherData.stationLongitude);
     }
 
     // Real weather - Current conditions
@@ -530,34 +528,24 @@ void NOAAIon::updateWeather(const QString& source)
     data.insert(QStringLiteral("Current Conditions"), conditionI18n);
     qCDebug(IONENGINE_NOAA) << "i18n condition string: " << qPrintable(conditionI18n);
 
-//TODO: Port to Plasma2
+    bool useDayIcon = true;
+    // TODO: get timeengine's solarsystem code to use directly
 #if 0
-    // Determine the weather icon based on the current time and computed sunrise/sunset time.
-    const Plasma::DataEngine::Data timeData = m_timeEngine->query(
-            QString("Local|Solar|Latitude=%1|Longitude=%2")
-                .arg(latitude(source)).arg(longitude(source)));
+    if (weatherData.observationDateTime.isValid() && stationCoordValid) {
+        PlasmaWeather::Sun sun;
+        sun.setPosition(weatherData.stationLatitude, weatherData.stationLongitude);
 
-    QTime sunriseTime = timeData["Sunrise"].toDateTime().time();
-    QTime sunsetTime = timeData["Sunset"].toDateTime().time();
-    QTime currentTime = QDateTime::currentDateTime().time();
-
-    // Provide mapping for the condition-type to the icons to display
-    if (currentTime > sunriseTime && currentTime < sunsetTime) {
-#endif
-        // Day
-        QString weather = weatherData.weather.toLower();
-        ConditionIcons condition = getConditionIcon(weather, true);
-        data.insert(QStringLiteral("Condition Icon"), getWeatherIcon(condition));
-        qCDebug(IONENGINE_NOAA) << "Using daytime icons\n";
-#if 0
-    } else {
-        // Night
-        QString weather = weatherData.weather.toLower();
-        ConditionIcons condition = getConditionIcon(weather, false);
-        data.insert("Condition Icon", getWeatherIcon(condition));
-        qCDebug(IONENGINE_NOAA) << "Using nighttime icons\n";
+        const int offset = weatherData.observationDateTime.timeZone().offsetFromUtc(weatherData.observationDateTime);
+        sun.calcForDateTime(weatherData.observationDateTime, offset);
+        const auto elevation = sun.calcElevation();
+        // Tell applet which icon to use for conditions and provide mapping for condition type to the icons to display
+        useDayIcon = (elevation >= 0.0);
     }
 #endif
+
+    const QString weather = weatherData.weather.toLower();
+    ConditionIcons condition = getConditionIcon(weather, useDayIcon);
+    data.insert(QStringLiteral("Condition Icon"), getWeatherIcon(condition));
 
     if (!qIsNaN(weatherData.temperature_F)) {
         data.insert(QStringLiteral("Temperature"), weatherData.temperature_F);
@@ -743,8 +731,8 @@ IonInterface::ConditionIcons NOAAIon::getConditionIcon(const QString& weather, b
 
 void NOAAIon::getForecast(const QString& source)
 {
-    const double lat = m_weatherData[source].stationLat;
-    const double lon = m_weatherData[source].stationLon;
+    const double lat = m_weatherData[source].stationLatitude;
+    const double lon = m_weatherData[source].stationLongitude;
     if (qIsNaN(lat) || qIsNaN(lon)) {
         return;
     }

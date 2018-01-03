@@ -76,12 +76,12 @@ public:
     QString cityName;
     QString regionName;
     QString stationID;
-    double stationLat;
-    double stationLon;
+    double stationLatitude;
+    double stationLongitude;
 
     // Current observation information.
     QString obsTimestamp;
-    QDateTime obsDateTime;
+    QDateTime observationDateTime;
 
     QString condition;
     float temperature;
@@ -225,7 +225,6 @@ private:
     QHash<KJob *, QString> m_jobList;
     QStringList m_sourcesToReset;
     QXmlStreamReader m_xmlSetup;
-    Plasma::DataEngine *m_timeEngine;
 
     bool emitWhenSetup;
 

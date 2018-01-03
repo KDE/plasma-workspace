@@ -44,10 +44,12 @@ public:
 
     QString place;
     QString stationName;
+    double stationLatitude;
+    double stationLongitude;
+
     // Current observation information.
     QString obsTime;
-    double longitude;
-    double latitude;
+    QDateTime observationDateTime;
 
     QString condition;
     QString conditionIcon;
@@ -162,9 +164,6 @@ private:
     QHash<KJob *, QXmlStreamReader *> m_forecastJobXml;
     QHash<KJob *, QString> m_forecastJobList;
 
-    Plasma::DataEngine *m_timeEngine;
-
-    QDateTime m_dateFormat;
     QStringList m_sourcesToReset;
 };
 

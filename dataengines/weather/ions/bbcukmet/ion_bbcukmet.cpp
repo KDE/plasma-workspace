@@ -31,11 +31,12 @@
 #include <QJsonObject>
 #include <QJsonArray>
 #include <QXmlStreamReader>
+#include <QTimeZone>
+
 
 WeatherData::WeatherData()
-  : obsTime()
-  , longitude(qQNaN())
-  , latitude(qQNaN())
+  : stationLatitude(qQNaN())
+  , stationLongitude(qQNaN())
   , condition()
   , temperature_C(qQNaN())
   , windSpeed_miles(qQNaN())
@@ -56,8 +57,6 @@ UKMETIon::UKMETIon(QObject *parent, const QVariantList &args)
         : IonInterface(parent, args)
 
 {
-    // not used while daytime not considered, see below
-    // m_timeEngine = dataEngine("time");
     setInitialized(true);
 }
 
@@ -592,18 +591,49 @@ void UKMETIon::parseWeatherObservation(const QString& source, WeatherData& data,
                     QString conditionData = conditionString.mid(splitIndex + 1); // Skip ':'
                     data.obsTime = conditionString.left(splitIndex);
 
-//TODO: timezone parsing is not yet supported by QDateTime
-#if 0
-                    if (data.obsTime.contains('-')) {
+                    if (data.obsTime.contains(QLatin1Char('-'))) {
                         // Saturday - 13:00 CET
                         // Saturday - 12:00 GMT
-                        m_dateFormat = QDateTime::fromString(data.obsTime.section('-', 1, 1).trimmed(), "hh:mm ZZZ");
-                    } else {
-#endif
-                        m_dateFormat = QDateTime();
-#if 0
+                        // timezone parsing is not yet supported by QDateTime, also is there just a dayname
+                        // so try manually
+                        // guess date from day
+                        const QString dayString = data.obsTime.section(QLatin1Char('-'), 0, 0).trimmed();
+                        QDate date = QDate::currentDate();
+                        const QString dayFormat = QStringLiteral("dddd");
+                        const int testDayJumps[4] = {
+                            -1, // first to weekday yesterday
+                             2, // then to weekday tomorrow
+                            -3, // then to weekday before yesterday, not sure if such day offset can happen?
+                             4, // then to weekday after tomorrow, not sure if such day offset can happen?
+                        };
+                        const int dayJumps = sizeof(testDayJumps)/sizeof(testDayJumps[0]);
+                        QLocale cLocale = QLocale::c();
+                        int dayJump = 0;
+                        while (true) {
+                            if (cLocale.toString(date, dayFormat) == dayString) {
+                                break;
+                            }
+
+                            if (dayJump >= dayJumps) {
+                                // no weekday found near-by, set date invalid
+                                date = QDate();
+                                break;
+                            }
+                            date = date.addDays(testDayJumps[dayJump]);
+                            ++dayJump;
+                        }
+
+                        if (date.isValid()) {
+                            const QString timeString = data.obsTime.section(QLatin1Char('-'), 1, 1).trimmed();
+                            const QTime time = QTime::fromString(timeString.section(QLatin1Char(' '), 0, 0), QStringLiteral("hh:mm"));
+                            const QTimeZone timeZone = QTimeZone(timeString.section(QLatin1Char(' '), 1, 1).toUtf8());
+                            // TODO: if non-IANA timezone id is not known, try to guess timezone from other data
+
+                            if (time.isValid() && timeZone.isValid()) {
+                                data.observationDateTime = QDateTime(date, time, timeZone);
+                            }
+                        }
                     }
-#endif
 
                     if (conditionData.contains(QLatin1Char(','))) {
                         data.condition = conditionData.section(QLatin1Char(','), 0, 0).trimmed();
@@ -652,15 +682,15 @@ void UKMETIon::parseWeatherObservation(const QString& source, WeatherData& data,
 
             } else if (elementName == QLatin1String("lat")) {
                 const QString ordinate = xml.readElementText();
-                data.latitude = ordinate.toDouble();
+                data.stationLatitude = ordinate.toDouble();
             } else if (elementName == QLatin1String("long")) {
                 const QString ordinate = xml.readElementText();
-                data.longitude = ordinate.toDouble();
+                data.stationLongitude = ordinate.toDouble();
             } else if (elementName == QLatin1String("point") &&
                        xml.namespaceUri() == QLatin1String("http://www.georss.org/georss")) {
                 const QStringList ordinates = xml.readElementText().split(QLatin1Char(' '));
-                data.latitude = ordinates[0].toDouble();
-                data.longitude = ordinates[1].toDouble();
+                data.stationLatitude = ordinates[0].toDouble();
+                data.stationLongitude = ordinates[1].toDouble();
             } else {
                 parseUnknownElement(xml);
             }
@@ -835,33 +865,28 @@ void UKMETIon::updateWeather(const QString& source)
     }
 //     qCDebug(IONENGINE_BBCUKMET) << "i18n condition string: " << i18nc("weather condition", weatherData.condition.toUtf8().data());
 
-    const double lati = weatherData.latitude;
-    const double longi = weatherData.longitude;
-//TODO: Port to Plasma5, needs also fix of m_dateFormat estimation
-#if 0
-    if (m_dateFormat.isValid()) {
-        const Plasma::DataEngine::Data timeData = m_timeEngine->query(
-                QString("Local|Solar|Latitude=%1|Longitude=%2|DateTime=%3")
-                    .arg(lati).arg(longi).arg(m_dateFormat.toString(Qt::ISODate)));
+    const bool stationCoordsValid = (!qIsNaN(weatherData.stationLatitude) && !qIsNaN(weatherData.stationLongitude));
 
+    if (stationCoordsValid) {
+        data.insert(QStringLiteral("Latitude"), weatherData.stationLatitude);
+        data.insert(QStringLiteral("Longitude"), weatherData.stationLongitude);
+    }
+
+    bool useDayIcon = true;
+    // TODO: get timeengine's solarsystem code to use directly
+#if 0
+    if (weatherData.observationDateTime.isValid() && stationCoordsValid) {
+        PlasmaWeather::Sun sun;
+        sun.setPosition(weatherData.stationLatitude, weatherData.stationLongitude);
+
+        const int offset = weatherData.observationDateTime.timeZone().offsetFromUtc(weatherData.observationDateTime);
+        sun.calcForDateTime(weatherData.observationDateTime, offset);
+        const auto elevation = sun.calcElevation();
         // Tell applet which icon to use for conditions and provide mapping for condition type to the icons to display
-        if (timeData["Corrected Elevation"].toDouble() >= 0.0) {
-            //qCDebug(IONENGINE_BBCUKMET) << "Using daytime icons\n";
-            data.insert("Condition Icon", getWeatherIcon(dayIcons(), weatherData.condition));
-        } else {
-            data.insert("Condition Icon", getWeatherIcon(nightIcons(), weatherData.condition));
-        }
-    } else {
-#endif
-        data.insert(QStringLiteral("Condition Icon"), getWeatherIcon(dayIcons(), weatherData.condition));
-#if 0
+        useDayIcon = (elevation >= 0.0);
     }
 #endif
-
-    if (!qIsNaN(lati) && !qIsNaN(longi)) {
-        data.insert(QStringLiteral("Latitude"), lati);
-        data.insert(QStringLiteral("Longitude"), longi);
-    }
+    data.insert(QStringLiteral("Condition Icon"), getWeatherIcon(useDayIcon ? dayIcons() : nightIcons(), weatherData.condition));
 
     if (!qIsNaN(weatherData.humidity)) {
         data.insert(QStringLiteral("Humidity"), weatherData.humidity);

@@ -31,8 +31,8 @@
 #include <QTimeZone>
 
 WeatherData::WeatherData()
-  : stationLat(qQNaN())
-  , stationLon(qQNaN())
+  : stationLatitude(qQNaN())
+  , stationLongitude(qQNaN())
   , temperature(qQNaN())
   , dewpoint(qQNaN())
   , windchill(qQNaN())
@@ -66,8 +66,6 @@ EnvCanadaIon::EnvCanadaIon(QObject *parent, const QVariantList &args)
 {
     // Get the real city XML URL so we can parse this
     getXMLSetup();
-    // not used while daytime not considered, see below
-    // m_timeEngine = dataEngine("time");
 }
 
 void EnvCanadaIon::deleteForecasts()
@@ -795,17 +793,17 @@ void EnvCanadaIon::parseDateTime(WeatherData& data, QXmlStreamReader& xml, Weath
                     }
                 } else if (dateType == QLatin1String("observation")) {
                     xml.readElementText();
-                    QDateTime obsDateTime = QDateTime::fromString(selectTimeStamp, QStringLiteral("yyyyMMddHHmmss"));
+                    QDateTime observationDateTime = QDateTime::fromString(selectTimeStamp, QStringLiteral("yyyyMMddHHmmss"));
                     QTimeZone timeZone = QTimeZone(dateZone.toUtf8());
                     // if timezone id not recognized, fallback to utcoffset
                     if (!timeZone.isValid()) {
                         timeZone = QTimeZone(dateUtcOffset.toInt() * 3600);
                     }
-                    if (obsDateTime.isValid() && timeZone.isValid()) {
-                        data.obsDateTime = obsDateTime;
-                        data.obsDateTime.setTimeZone(timeZone);
+                    if (observationDateTime.isValid() && timeZone.isValid()) {
+                        data.observationDateTime = observationDateTime;
+                        data.observationDateTime.setTimeZone(timeZone);
                     }
-                    data.obsTimestamp = obsDateTime.toString(QStringLiteral("dd.MM.yyyy @ hh:mm"));
+                    data.obsTimestamp = observationDateTime.toString(QStringLiteral("dd.MM.yyyy @ hh:mm"));
                 } else if (dateType == QLatin1String("forecastIssue")) {
                     data.forecastTimestamp = xml.readElementText();
                 } else if (dateType == QLatin1String("sunrise")) {
@@ -889,8 +887,8 @@ void EnvCanadaIon::parseConditions(WeatherData& data, QXmlStreamReader& xml)
     data.condition = i18n("N/A");
     data.humidex.clear();
     data.stationID = i18n("N/A");
-    data.stationLat = qQNaN();
-    data.stationLon = qQNaN();
+    data.stationLatitude = qQNaN();
+    data.stationLongitude = qQNaN();
     data.pressure = qQNaN();
     data.visibility = qQNaN();
     data.humidity = qQNaN();
@@ -907,8 +905,8 @@ void EnvCanadaIon::parseConditions(WeatherData& data, QXmlStreamReader& xml)
             if (elementName == QLatin1String("station")) {
                 data.stationID = xml.attributes().value(QStringLiteral("code")).toString();
                 QRegularExpression dumpDirection(QStringLiteral("[^0-9.]"));
-                data.stationLat = xml.attributes().value(QStringLiteral("lat")).toString().remove(dumpDirection).toDouble();
-                data.stationLon = xml.attributes().value(QStringLiteral("lon")).toString().remove(dumpDirection).toDouble();
+                data.stationLatitude = xml.attributes().value(QStringLiteral("lat")).toString().remove(dumpDirection).toDouble();
+                data.stationLongitude = xml.attributes().value(QStringLiteral("lon")).toString().remove(dumpDirection).toDouble();
             } else if (elementName == QLatin1String("dateTime")) {
                 parseDateTime(data, xml);
             } else if (elementName == QLatin1String("condition")) {
@@ -1394,9 +1392,11 @@ void EnvCanadaIon::updateWeather(const QString& source)
 
     data.insert(QStringLiteral("Station"), weatherData.stationID.isEmpty() ? i18n("N/A") : weatherData.stationID.toUpper());
 
-    if (!qIsNaN(weatherData.stationLat) && !qIsNaN(weatherData.stationLon)) {
-        data.insert(QStringLiteral("Latitude"), weatherData.stationLat);
-        data.insert(QStringLiteral("Longitude"), weatherData.stationLon);
+    const bool stationCoordValid = (!qIsNaN(weatherData.stationLatitude) && !qIsNaN(weatherData.stationLongitude));
+
+    if (stationCoordValid) {
+        data.insert(QStringLiteral("Latitude"), weatherData.stationLatitude);
+        data.insert(QStringLiteral("Longitude"), weatherData.stationLongitude);
     }
 
     // Real weather - Current conditions
@@ -1406,34 +1406,33 @@ void EnvCanadaIon::updateWeather(const QString& source)
     }
     //qCDebug(IONENGINE_ENVCAN) << "i18n condition string: " << qPrintable(condition(source));
 
-    // Tell applet which icon to use for conditions and provide mapping for condition type to the icons to display
-    QMap<QString, ConditionIcons> conditionList;
-    conditionList = conditionIcons();
-
-//TODO: Port to Plasma5
+    bool useDayIcon = true;
+    // TODO: get timeengine's solarsystem code to use directly
 #if 0
-    const double lati = latitude(source).remove(QRegExp("[^0-9.]")).toDouble();
-    const double longi = longitude(source).remove(QRegExp("[^0-9.]")).toDouble();
-    const Plasma::DataEngine::Data timeData = m_timeEngine->query(
-            QString("Local|Solar|Latitude=%1|Longitude=%2")
-                .arg(lati).arg(-1 * longi));
+    if (weatherData.observationDateTime.isValid() && stationCoordValid) {
+        PlasmaWeather::Sun sun;
+        sun.setPosition(weatherData.stationLatitude, weatherData.stationLongitude);
 
-    if (timeData["Corrected Elevation"].toDouble() < 0.0) {
+        const int offset = weatherData.observationDateTime.timeZone().offsetFromUtc(weatherData.observationDateTime);
+        sun.calcForDateTime(weatherData.observationDateTime, offset);
+        const auto elevation = sun.calcElevation();
+        // Tell applet which icon to use for conditions and provide mapping for condition type to the icons to display
+        useDayIcon = (elevation >= 0.0);
+    }
+#endif
+    QMap<QString, ConditionIcons> conditionList = conditionIcons();
+
+    if (!useDayIcon) {
         conditionList.insert(QStringLiteral("decreasing cloud"), FewCloudsNight);
         conditionList.insert(QStringLiteral("mostly cloudy"), PartlyCloudyNight);
         conditionList.insert(QStringLiteral("partly cloudy"), PartlyCloudyNight);
         conditionList.insert(QStringLiteral("fair"), FewCloudsNight);
-        //qCDebug(IONENGINE_ENVCAN) << "Before sunrise/After sunset - using night icons\n";
     } else {
-#endif
         conditionList.insert(QStringLiteral("decreasing cloud"), FewCloudsDay);
         conditionList.insert(QStringLiteral("mostly cloudy"), PartlyCloudyDay);
         conditionList.insert(QStringLiteral("partly cloudy"), PartlyCloudyDay);
         conditionList.insert(QStringLiteral("fair"), FewCloudsDay);
-        //qCDebug(IONENGINE_ENVCAN) << "Using daytime icons\n";
-#if 0
     }
-#endif
 
     data.insert(QStringLiteral("Condition Icon"), getWeatherIcon(conditionList, weatherData.condition));
 

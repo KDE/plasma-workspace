@@ -45,8 +45,8 @@ public:
     //QString countryName; // USA
     QString locationName;
     QString stationID;
-    double stationLat;
-    double stationLon;
+    double stationLatitude;
+    double stationLongitude;
     QString stateName;
 
     // Current observation information.
@@ -163,7 +163,6 @@ private:
     QHash<KJob *, QString> m_jobList;
     QXmlStreamReader m_xmlSetup;
 
-    Plasma::DataEngine *m_timeEngine;
     // bool emitWhenSetup;
     QStringList m_sourcesToReset;
 };
