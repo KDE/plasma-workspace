@@ -61,7 +61,7 @@ void WeatherEngine::updateIonList(const QStringList &changedResources)
 {
     if (changedResources.isEmpty() || changedResources.contains(QStringLiteral("services"))) {
         removeAllData(QStringLiteral("ions"));
-        foreach (const KPluginInfo &info, Plasma::PluginLoader::self()->listEngineInfo(QLatin1String("weatherengine"))) {
+        foreach (const KPluginInfo &info, Plasma::PluginLoader::self()->listEngineInfo(QStringLiteral("weatherengine"))) {
             const QString data = info.name() + QLatin1Char('|') + info.pluginName();
             setData(QStringLiteral("ions"), info.pluginName(), data);
         }

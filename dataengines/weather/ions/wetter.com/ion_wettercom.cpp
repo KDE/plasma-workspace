@@ -308,12 +308,12 @@ bool WetterComIon::updateIonSource(const QString& source)
 void WetterComIon::findPlace(const QString& place, const QString& source)
 {
     QCryptographicHash md5(QCryptographicHash::Md5);
-    md5.addData(QString::fromLatin1(PROJECTNAME).toUtf8());
-    md5.addData(QString::fromLatin1(APIKEY).toUtf8());
+    md5.addData(QByteArray(PROJECTNAME));
+    md5.addData(QByteArray(APIKEY));
     md5.addData(place.toUtf8());
     const QString encodedKey = QString::fromLatin1(md5.result().toHex());
 
-    const QUrl url(QString::fromLatin1(SEARCH_URL).arg(place, encodedKey));
+    const QUrl url(QStringLiteral(SEARCH_URL).arg(place, encodedKey));
 
     KIO::TransferJob* getJob = KIO::get(url, KIO::Reload, KIO::HideProgressInfo);
     getJob->addMetaData(QStringLiteral("cookies"), QStringLiteral("none")); // Disable displaying cookies
@@ -424,7 +424,7 @@ void WetterComIon::validate(const QString& source, bool parseError)
 
         if (m_place[invalidPlace].name.isEmpty()) {
             setData(source, QStringLiteral("validate"),
-                    QVariant(QStringLiteral("wettercom|invalid|multiple|") + invalidPlace));
+                    QVariant(QLatin1String("wettercom|invalid|multiple|") + invalidPlace));
         }
 
         m_locations.clear();
@@ -435,7 +435,7 @@ void WetterComIon::validate(const QString& source, bool parseError)
     QString placeList;
     foreach(const QString &place, m_locations) {
         // Extra data format: placeCode;displayName
-        placeList.append(QStringLiteral("|place|") + place + QStringLiteral("|extra|") +
+        placeList.append(QLatin1String("|place|") + place + QLatin1String("|extra|") +
                          m_place[place].placeCode + QLatin1Char(';') + m_place[place].displayName);
     }
 
@@ -468,12 +468,12 @@ void WetterComIon::fetchForecast(const QString& source)
     }
 
     QCryptographicHash md5(QCryptographicHash::Md5);
-    md5.addData(QString::fromLatin1(PROJECTNAME).toUtf8());
-    md5.addData(QString::fromLatin1(APIKEY).toUtf8());
+    md5.addData(QByteArray(PROJECTNAME));
+    md5.addData(QByteArray(APIKEY));
     md5.addData(m_place[source].placeCode.toUtf8());
     const QString encodedKey = QString::fromLatin1(md5.result().toHex());
 
-    const QUrl url(QString::fromLatin1(FORECAST_URL).arg(m_place[source].placeCode, encodedKey));
+    const QUrl url(QStringLiteral(FORECAST_URL).arg(m_place[source].placeCode, encodedKey));
 
     KIO::TransferJob* getJob = KIO::get(url, KIO::Reload, KIO::HideProgressInfo);
     getJob->addMetaData(QStringLiteral("cookies"), QStringLiteral("none"));
@@ -514,7 +514,7 @@ void WetterComIon::forecast_slotJobFinished(KJob *job)
 
     if (m_sourcesToReset.contains(source)) {
         m_sourcesToReset.removeAll(source);
-        const QString weatherSource = QString::fromLatin1("wettercom|weather|%1|%2;%3")
+        const QString weatherSource = QStringLiteral("wettercom|weather|%1|%2;%3")
             .arg(source).arg(m_place[source].placeCode)
             .arg(m_place[source].displayName);
 
@@ -681,7 +681,7 @@ void WetterComIon::updateWeather(const QString& source, bool parseError)
 {
     qCDebug(IONENGINE_WETTERCOM) << "Source:" << source;
 
-    QString weatherSource = QString::fromLatin1("wettercom|weather|%1|%2;%3")
+    QString weatherSource = QStringLiteral("wettercom|weather|%1|%2;%3")
                             .arg(source).arg(m_place[source].placeCode)
                             .arg(m_place[source].displayName);
 
@@ -699,8 +699,8 @@ void WetterComIon::updateWeather(const QString& source, bool parseError)
             if (i > 0) {
                 WeatherData::ForecastInfo weather = forecastPeriod->getWeather();
 
-                data.insert(QString::fromLatin1("Short Forecast Day %1").arg(i),
-                            QString::fromLatin1("%1|%2|%3|%4|%5|%6")
+                data.insert(QStringLiteral("Short Forecast Day %1").arg(i),
+                            QStringLiteral("%1|%2|%3|%4|%5|%6")
                             .arg(QLocale().toString(weather.period.date().day()))
                             .arg(weather.iconName).arg(weather.summary)
                             .arg(weather.tempHigh).arg(weather.tempLow)
@@ -709,8 +709,8 @@ void WetterComIon::updateWeather(const QString& source, bool parseError)
             } else {
                 WeatherData::ForecastInfo dayWeather = forecastPeriod->getDayWeather();
 
-                data.insert(QString::fromLatin1("Short Forecast Day %1").arg(i),
-                            QString::fromLatin1("%1|%2|%3|%4|%5|%6")
+                data.insert(QStringLiteral("Short Forecast Day %1").arg(i),
+                            QStringLiteral("%1|%2|%3|%4|%5|%6")
                             .arg(i18n("Day")).arg(dayWeather.iconName)
                             .arg(dayWeather.summary).arg(dayWeather.tempHigh)
                             .arg(dayWeather.tempLow).arg(dayWeather.probability));
@@ -718,8 +718,8 @@ void WetterComIon::updateWeather(const QString& source, bool parseError)
 
                 if (forecastPeriod->hasNightWeather()) {
                     WeatherData::ForecastInfo nightWeather = forecastPeriod->getNightWeather();
-                    data.insert(QString::fromLatin1("Short Forecast Day %1").arg(i),
-                                QString::fromLatin1("%1 nt|%2|%3|%4|%5|%6")
+                    data.insert(QStringLiteral("Short Forecast Day %1").arg(i),
+                                QStringLiteral("%1 nt|%2|%3|%4|%5|%6")
                                 .arg(i18n("Night")).arg(nightWeather.iconName)
                                 .arg(nightWeather.summary)
                                 .arg(nightWeather.tempHigh)
