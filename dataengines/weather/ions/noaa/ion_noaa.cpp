@@ -192,7 +192,7 @@ void NOAAIon::getXMLSetup() const
 // Gets specific city XML data
 void NOAAIon::getXMLData(const QString& source)
 {
-    foreach (const QString &fetching, m_jobList) {
+    for (const QString& fetching : qAsConst(m_jobList)) {
         if (fetching == source) {
             // already getting this source and awaiting the data
             return;
@@ -265,7 +265,7 @@ void NOAAIon::setup_slotJobFinished(KJob *job)
     const bool success = readXMLSetup();
     setInitialized(success);
 
-    foreach (const QString &source, m_sourcesToReset) {
+    for (const QString& source : qAsConst(m_sourcesToReset)) {
         updateSourceEvent(source);
     }
 }
@@ -604,7 +604,7 @@ void NOAAIon::updateWeather(const QString& source)
     data.insert(QStringLiteral("Total Weather Days"), weatherData.forecasts.size());
 
     int i = 0;
-    foreach(const WeatherData::Forecast &forecast, weatherData.forecasts) {
+    for (const WeatherData::Forecast& forecast : weatherData.forecasts) {
 
         ConditionIcons icon = getConditionIcon(forecast.summary.toLower(), true);
         QString iconName = getWeatherIcon(icon);

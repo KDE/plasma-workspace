@@ -281,7 +281,7 @@ bool UKMETIon::updateIonSource(const QString& source)
 // Gets specific city XML data
 void UKMETIon::getXMLData(const QString& source)
 {
-    foreach (const QString &fetching, m_obsJobList) {
+    for (const QString& fetching : qAsConst(m_obsJobList)) {
         if (fetching == source) {
             // already getting this source and awaiting the data
             return;
@@ -354,9 +354,9 @@ void UKMETIon::readSearchHTMLData(const QString& source, const QByteArray& html)
     QJsonObject jsonDocumentObject = QJsonDocument::fromJson(html).object();
 
     if (!jsonDocumentObject.isEmpty()) {
-        QJsonArray results = jsonDocumentObject.value(QStringLiteral("results")).toArray();
+        const QJsonArray results = jsonDocumentObject.value(QStringLiteral("results")).toArray();
 
-        foreach(const QJsonValue & resultValue, results) {
+        for (const QJsonValue& resultValue : results) {
             QJsonObject result = resultValue.toObject();
             const QString id = result.value(QStringLiteral("id")).toString();
             const QString fullName = result.value(QStringLiteral("fullName")).toString();
@@ -827,7 +827,7 @@ void UKMETIon::validate(const QString& source)
     }
 
     QString placeList;
-    foreach(const QString &place, m_locations) {
+    for (const QString& place : qAsConst(m_locations)) {
         const QString p = place.section(QLatin1Char('|'), 1, 1);
         placeList.append(QStringLiteral("|place|") + p + QStringLiteral("|extra|") + m_place[place].XMLurl);
     }
@@ -933,7 +933,7 @@ void UKMETIon::updateWeather(const QString& source)
     data.insert(QStringLiteral("Total Weather Days"), forecasts.size());
 
     int i = 0;
-    foreach(const WeatherData::ForecastInfo *forecastInfo, forecasts) {
+    for (const WeatherData::ForecastInfo* forecastInfo : forecasts) {
         QString period = forecastInfo->period;
         period.replace(QStringLiteral("Saturday"), i18nc("Short for Saturday", "Sat"));
         period.replace(QStringLiteral("Sunday"), i18nc("Short for Sunday", "Sun"));

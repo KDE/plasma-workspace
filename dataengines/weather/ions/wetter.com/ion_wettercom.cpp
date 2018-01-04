@@ -431,7 +431,7 @@ void WetterComIon::validate(const QString& source, bool parseError)
     }
 
     QString placeList;
-    foreach(const QString &place, m_locations) {
+    for (const QString& place : qAsConst(m_locations)) {
         // Extra data format: placeCode;displayName
         placeList.append(QLatin1String("|place|") + place + QLatin1String("|extra|") +
                          m_place[place].placeCode + QLatin1Char(';') + m_place[place].displayName);
@@ -458,7 +458,7 @@ void WetterComIon::validate(const QString& source, bool parseError)
 
 void WetterComIon::fetchForecast(const QString& source)
 {
-    foreach (const QString &fetching, m_forecastJobList) {
+    for (const QString& fetching : qAsConst(m_forecastJobList)) {
         if (fetching == source) {
             // already fetching!
             return;
@@ -701,7 +701,7 @@ void WetterComIon::updateWeather(const QString& source, bool parseError)
         data.insert(QStringLiteral("Temperature Unit"), KUnitConversion::Celsius);
 
         int i = 0;
-        foreach(WeatherData::ForecastPeriod * forecastPeriod, weatherData.forecasts) {
+        for (const WeatherData::ForecastPeriod* forecastPeriod : weatherData.forecasts) {
             if (i > 0) {
                 WeatherData::ForecastInfo weather = forecastPeriod->getWeather();
 
@@ -803,7 +803,7 @@ WeatherData::ForecastInfo WeatherData::ForecastPeriod::getWeather() const
 int WeatherData::ForecastPeriod::getMaxTemp(const QVector<WeatherData::ForecastInfo*>& forecastInfos) const
 {
     int result = -273;
-    foreach(const WeatherData::ForecastInfo * forecast, forecastInfos) {
+    for (const WeatherData::ForecastInfo* forecast : forecastInfos) {
         result = std::max(result, forecast->tempHigh);
     }
 
@@ -813,7 +813,7 @@ int WeatherData::ForecastPeriod::getMaxTemp(const QVector<WeatherData::ForecastI
 int WeatherData::ForecastPeriod::getMinTemp(const QVector<WeatherData::ForecastInfo*>& forecastInfos) const
 {
     int result = 100;
-    foreach(const WeatherData::ForecastInfo * forecast, forecastInfos) {
+    for (const WeatherData::ForecastInfo* forecast : forecastInfos) {
         result = std::min(result, forecast->tempLow);
     }
 

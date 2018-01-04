@@ -525,7 +525,7 @@ void EnvCanadaIon::getXMLSetup()
 // Gets specific city XML data
 void EnvCanadaIon::getXMLData(const QString& source)
 {
-    foreach (const QString& fetching, m_jobList) {
+    for (const QString& fetching : qAsConst(m_jobList)) {
         if (fetching == source) {
             // already getting this source and awaiting the data
             return;
@@ -1536,7 +1536,7 @@ void EnvCanadaIon::updateWeather(const QString& source)
     data.insert(QStringLiteral("Total Weather Days"), forecasts.size());
 
     int i = 0;
-    foreach(const WeatherData::ForecastInfo *forecastInfo, forecasts) {
+    for (const WeatherData::ForecastInfo* forecastInfo : forecasts) {
 
         QString forecastPeriod = forecastInfo->forecastPeriod;
         if (forecastPeriod.isEmpty()) {
