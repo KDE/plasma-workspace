@@ -328,14 +328,14 @@ void UKMETIon::findPlace(const QString& place, const QString& source)
 
 void UKMETIon::getFiveDayForecast(const QString& source)
 {
-
-    QUrl xmlMap(m_place[source].forecastHTMLUrl);
+    XMLMapInfo& place = m_place[source];
+    QUrl xmlMap(place.forecastHTMLUrl);
 
     const QString stationID = xmlMap.path().section(QLatin1Char('/'), -1);
 
-    m_place[source].XMLforecastURL = QStringLiteral("http://open.live.bbc.co.uk/weather/feeds/en/") + stationID + QStringLiteral("/3dayforecast.rss") + xmlMap.query();
+    place.XMLforecastURL = QStringLiteral("http://open.live.bbc.co.uk/weather/feeds/en/") + stationID + QStringLiteral("/3dayforecast.rss") + xmlMap.query();
 
-    const QUrl url(m_place[source].XMLforecastURL);
+    const QUrl url(place.XMLforecastURL);
 
     KIO::TransferJob* getJob = KIO::get(url, KIO::Reload, KIO::HideProgressInfo);
     getJob->addMetaData(QStringLiteral("cookies"), QStringLiteral("none")); // Disable displaying cookies
@@ -372,8 +372,9 @@ void UKMETIon::readSearchHTMLData(const QString& source, const QByteArray& html)
                     tmp += QStringLiteral(" (#") + QString::number(counter) + QLatin1Char(')');
                     counter++;
                 }
-                m_place[tmp].XMLurl = url;
-                m_place[tmp].place = fullName;
+                XMLMapInfo& place = m_place[tmp];
+                place.XMLurl = url;
+                place.place = fullName;
                 m_locations.append(tmp);
             }
        }
@@ -759,8 +760,10 @@ void UKMETIon::parseFiveDayForecast(const QString& source, QXmlStreamReader& xml
 {
     Q_ASSERT(xml.isStartElement() && xml.name() == QLatin1String("item"));
 
+    QVector<WeatherData::ForecastInfo*>& forecasts = m_weatherData[source].forecasts;
+
     // Flush out the old forecasts when updating.
-    m_weatherData[source].forecasts.clear();
+    forecasts.clear();
 
     WeatherData::ForecastInfo *forecast = new WeatherData::ForecastInfo;
     QString line;
@@ -795,7 +798,7 @@ void UKMETIon::parseFiveDayForecast(const QString& source, QXmlStreamReader& xml
             const QString summaryTranslated = i18nc("weather forecast", summaryLC.toUtf8().data());
             forecast->summary = (summaryTranslated != summaryLC) ? summaryTranslated : summary;
             qCDebug(IONENGINE_BBCUKMET) << "i18n summary string: " << forecast->summary;
-            m_weatherData[source].forecasts.append(forecast);
+            forecasts.append(forecast);
             // prepare next
             forecast = new WeatherData::ForecastInfo;
         }
@@ -842,10 +845,12 @@ void UKMETIon::validate(const QString& source)
 
 void UKMETIon::updateWeather(const QString& source)
 {
+    const XMLMapInfo& place = m_place[source];
+
     QString weatherSource = source;
     // TODO: why the replacement here instead of just a new string?
     weatherSource.replace(QStringLiteral("bbcukmet|"), QStringLiteral("bbcukmet|weather|"));
-    weatherSource.append(QLatin1Char('|') + m_place[source].XMLurl);
+    weatherSource.append(QLatin1Char('|') + place.XMLurl);
 
     const WeatherData& weatherData = m_weatherData[source];
 
@@ -957,7 +962,7 @@ void UKMETIon::updateWeather(const QString& source)
     }
 
     data.insert(QStringLiteral("Credit"), i18nc("credit line, keep string short", "Data from BBC\302\240Weather"));
-    data.insert(QStringLiteral("Credit Url"), m_place[source].forecastHTMLUrl);
+    data.insert(QStringLiteral("Credit Url"), place.forecastHTMLUrl);
 
     setData(weatherSource, data);
 }

@@ -539,12 +539,13 @@ void EnvCanadaIon::getXMLData(const QString& source)
     // Demunge source name for key only.
     QString dataKey = source;
     dataKey.remove(QStringLiteral("envcan|weather|"));
+    const XMLMapInfo& place = m_places[dataKey];
 
-    const QUrl url(QLatin1String("http://dd.weatheroffice.ec.gc.ca/citypage_weather/xml/") + m_places[dataKey].territoryName + QLatin1Char('/') + m_places[dataKey].cityCode + QStringLiteral("_e.xml"));
+    const QUrl url(QLatin1String("http://dd.weatheroffice.ec.gc.ca/citypage_weather/xml/") + place.territoryName + QLatin1Char('/') + place.cityCode + QStringLiteral("_e.xml"));
     //url="file:///home/spstarr/Desktop/s0000649_e.xml";
     //qCDebug(IONENGINE_ENVCAN) << "Will Try URL: " << url;
 
-    if (m_places[dataKey].territoryName.isEmpty() && m_places[dataKey].cityCode.isEmpty()) {
+    if (place.territoryName.isEmpty() && place.cityCode.isEmpty()) {
         setData(source, QStringLiteral("validate"), QStringLiteral("envcan|malformed"));
         return;
     }

@@ -386,9 +386,10 @@ void WetterComIon::parseSearchResults(const QString& source, QXmlStreamReader& x
 
                 qCDebug(IONENGINE_WETTERCOM) << "Storing place data for place:" << placeName;
 
-                m_place[placeName].name = placeName;
-                m_place[placeName].displayName = name;
-                m_place[placeName].placeCode = code;
+                PlaceInfo& place = m_place[placeName];
+                place.name = placeName;
+                place.displayName = name;
+                place.placeCode = code;
                 m_locations.append(placeName);
 
                 name.clear();
@@ -531,8 +532,10 @@ void WetterComIon::parseWeatherForecast(const QString& source, QXmlStreamReader&
 {
     qCDebug(IONENGINE_WETTERCOM) << "About to parse forecast for source:" << source;
 
+    WeatherData& weatherData = m_weatherData[source];
+
     // Clear old forecasts when updating
-    m_weatherData[source].forecasts.clear();
+    weatherData.forecasts.clear();
 
     WeatherData::ForecastPeriod *forecastPeriod = new WeatherData::ForecastPeriod;
     WeatherData::ForecastInfo *forecast = new WeatherData::ForecastInfo;
@@ -541,7 +544,7 @@ void WetterComIon::parseWeatherForecast(const QString& source, QXmlStreamReader&
     uint summaryUtcTime = 0, utcTime = 0, localTime = 0;
     QString date, time;
 
-    m_weatherData[source].place = source;
+    weatherData.place = source;
 
     while (!xml.atEnd()) {
         xml.readNext();
@@ -565,7 +568,7 @@ void WetterComIon::parseWeatherForecast(const QString& source, QXmlStreamReader&
                                           weatherString);
                 forecastPeriod->probability = summaryProbability;
 
-                m_weatherData[source].forecasts.append(forecastPeriod);
+                weatherData.forecasts.append(forecastPeriod);
                 forecastPeriod = new WeatherData::ForecastPeriod;
 
                 date.clear();
@@ -578,7 +581,7 @@ void WetterComIon::parseWeatherForecast(const QString& source, QXmlStreamReader&
                 qCDebug(IONENGINE_WETTERCOM) << "Parsed a forecast interval:" << date << time;
 
                 // yep, that field is written to more often than needed...
-                m_weatherData[source].timeDifference = localTime - utcTime;
+                weatherData.timeDifference = localTime - utcTime;
 
                 forecast->period = QDateTime::fromSecsSinceEpoch(utcTime, Qt::LocalTime);
                 QString weatherString = QString::number(weather);
@@ -587,7 +590,7 @@ void WetterComIon::parseWeatherForecast(const QString& source, QXmlStreamReader&
                 forecast->probability = probability;
 
                 QTime localWeatherTime = QDateTime::fromSecsSinceEpoch(utcTime, Qt::LocalTime).time();
-                localWeatherTime = localWeatherTime.addSecs(m_weatherData[source].timeDifference);
+                localWeatherTime = localWeatherTime.addSecs(weatherData.timeDifference);
 
                 qCDebug(IONENGINE_WETTERCOM) << "localWeatherTime =" << localWeatherTime;
 
@@ -639,8 +642,8 @@ void WetterComIon::parseWeatherForecast(const QString& source, QXmlStreamReader&
 
                 qCDebug(IONENGINE_WETTERCOM) << "parsed weather condition:" << tmp;
             } else if (elementName == QLatin1String("name")) {
-                m_weatherData[source].stationName = xml.readElementText();
-                qCDebug(IONENGINE_WETTERCOM) << "parsed station name:" << m_weatherData[source].stationName;
+                weatherData.stationName = xml.readElementText();
+                qCDebug(IONENGINE_WETTERCOM) << "parsed station name:" << weatherData.stationName;
             } else if (elementName == QLatin1String("pc")) {
                 int tmp = xml.readElementText().toInt();
 
@@ -651,11 +654,11 @@ void WetterComIon::parseWeatherForecast(const QString& source, QXmlStreamReader&
 
                 qCDebug(IONENGINE_WETTERCOM) << "parsed probability:" << probability;
             } else if (elementName == QLatin1String("text")) {
-                m_weatherData[source].credits = xml.readElementText();
-                qCDebug(IONENGINE_WETTERCOM) << "parsed credits:" << m_weatherData[source].credits;
+                weatherData.credits = xml.readElementText();
+                qCDebug(IONENGINE_WETTERCOM) << "parsed credits:" << weatherData.credits;
             } else if (elementName == QLatin1String("link")) {
-                m_weatherData[source].creditsUrl = xml.readElementText();
-                qCDebug(IONENGINE_WETTERCOM) << "parsed credits url:" << m_weatherData[source].creditsUrl;
+                weatherData.creditsUrl = xml.readElementText();
+                qCDebug(IONENGINE_WETTERCOM) << "parsed credits url:" << weatherData.creditsUrl;
             } else if (elementName == QLatin1String("d")) {
                 localTime = xml.readElementText().toInt();
                 qCDebug(IONENGINE_WETTERCOM) << "parsed local time:" << localTime;
@@ -682,22 +685,26 @@ void WetterComIon::updateWeather(const QString& source, bool parseError)
 {
     qCDebug(IONENGINE_WETTERCOM) << "Source:" << source;
 
+    const PlaceInfo& placeInfo = m_place[source];
+
     QString weatherSource = QStringLiteral("wettercom|weather|%1|%2;%3")
                             .arg(source,
-                                 m_place[source].placeCode,
-                                 m_place[source].displayName);
+                                 placeInfo.placeCode,
+                                 placeInfo.displayName);
+
+    const WeatherData& weatherData = m_weatherData[source];
 
     Plasma::DataEngine::Data data;
-    data.insert(QStringLiteral("Place"), m_place[source].displayName);
+    data.insert(QStringLiteral("Place"), placeInfo.displayName);
 
-    if (!parseError && !m_weatherData[source].forecasts.isEmpty()) {
-        data.insert(QStringLiteral("Station"), m_place[source].displayName);
+    if (!parseError && !weatherData.forecasts.isEmpty()) {
+        data.insert(QStringLiteral("Station"), placeInfo.displayName);
         //data.insert("Condition Icon", "N/A");
         //data.insert("Temperature", "N/A");
         data.insert(QStringLiteral("Temperature Unit"), KUnitConversion::Celsius);
 
         int i = 0;
-        foreach(WeatherData::ForecastPeriod * forecastPeriod, m_weatherData[source].forecasts) {
+        foreach(WeatherData::ForecastPeriod * forecastPeriod, weatherData.forecasts) {
             if (i > 0) {
                 WeatherData::ForecastInfo weather = forecastPeriod->getWeather();
 
@@ -741,8 +748,8 @@ void WetterComIon::updateWeather(const QString& source, bool parseError)
         // Set number of forecasts per day/night supported
         data.insert(QStringLiteral("Total Weather Days"), i);
 
-        data.insert(QStringLiteral("Credit"), m_weatherData[source].credits); // FIXME i18n?
-        data.insert(QStringLiteral("Credit Url"), m_weatherData[source].creditsUrl);
+        data.insert(QStringLiteral("Credit"), weatherData.credits); // FIXME i18n?
+        data.insert(QStringLiteral("Credit Url"), weatherData.creditsUrl);
 
         qCDebug(IONENGINE_WETTERCOM) << "updated weather data:" << weatherSource << data;
     } else {
