@@ -217,90 +217,103 @@ Item {
                         return true;
                     }
 
-                    GridLayout {
-                        columns: 3
-                        rows: 2
-                        rowSpacing: 0
-                        columnSpacing: 2 * units.smallSpacing
-
+                    PlasmaCore.ToolTipArea {
                         width: parent.width
+                        height: eventGrid.height
+                        active: eventTitle.truncated || eventDescription.truncated
+                        mainText: active ? eventTitle.text : ""
+                        subText: active ? eventDescription.text : ""
 
-                        Rectangle {
-                            id: eventColor
+                        GridLayout {
+                            id: eventGrid
+                            columns: 3
+                            rows: 2
+                            rowSpacing: 0
+                            columnSpacing: 2 * units.smallSpacing
 
-                            Layout.row: 0
-                            Layout.column: 0
-                            Layout.rowSpan: 2
-                            Layout.fillHeight: true
+                            width: parent.width
 
-                            color: modelData.eventColor
-                            width: 5 * units.devicePixelRatio
-                            visible: modelData.eventColor !== ""
-                        }
+                            Rectangle {
+                                id: eventColor
 
-                        PlasmaComponents.Label {
-                            id: startTimeLabel
+                                Layout.row: 0
+                                Layout.column: 0
+                                Layout.rowSpan: 2
+                                Layout.fillHeight: true
 
-                            readonly property bool startsToday: modelData.startDateTime - monthView.currentDate >= 0
-                            readonly property bool startedYesterdayLessThan12HoursAgo: modelData.startDateTime - monthView.currentDate >= -43200000 //12hrs in ms
+                                color: modelData.eventColor
+                                width: 5 * units.devicePixelRatio
+                                visible: modelData.eventColor !== ""
+                            }
 
-                            Layout.row: 0
-                            Layout.column: 1
-                            Layout.minimumWidth: dateLabelMetrics.width
+                            PlasmaComponents.Label {
+                                id: startTimeLabel
 
-                            text: startsToday || startedYesterdayLessThan12HoursAgo
-                                    ? Qt.formatTime(modelData.startDateTime)
-                                    : agenda.formatDateWithoutYear(modelData.startDateTime)
-                            horizontalAlignment: Qt.AlignRight
-                            visible: eventItem.hasTime
-                        }
+                                readonly property bool startsToday: modelData.startDateTime - monthView.currentDate >= 0
+                                readonly property bool startedYesterdayLessThan12HoursAgo: modelData.startDateTime - monthView.currentDate >= -43200000 //12hrs in ms
 
-                        PlasmaComponents.Label {
-                            id: endTimeLabel
+                                Layout.row: 0
+                                Layout.column: 1
+                                Layout.minimumWidth: dateLabelMetrics.width
 
-                            readonly property bool endsToday: modelData.endDateTime - monthView.currentDate <= 86400000 // 24hrs in ms
-                            readonly property bool endsTomorrowInLessThan12Hours: modelData.endDateTime - monthView.currentDate <= 86400000 + 43200000 // 36hrs in ms
+                                text: startsToday || startedYesterdayLessThan12HoursAgo
+                                        ? Qt.formatTime(modelData.startDateTime)
+                                        : agenda.formatDateWithoutYear(modelData.startDateTime)
+                                horizontalAlignment: Qt.AlignRight
+                                visible: eventItem.hasTime
+                            }
 
-                            Layout.row: 1
-                            Layout.column: 1
-                            Layout.minimumWidth: dateLabelMetrics.width
+                            PlasmaComponents.Label {
+                                id: endTimeLabel
 
-                            text: endsToday || endsTomorrowInLessThan12Hours
-                                    ? Qt.formatTime(modelData.endDateTime)
-                                    : agenda.formatDateWithoutYear(modelData.endDateTime)
-                            horizontalAlignment: Qt.AlignRight
-                            enabled: false
+                                readonly property bool endsToday: modelData.endDateTime - monthView.currentDate <= 86400000 // 24hrs in ms
+                                readonly property bool endsTomorrowInLessThan12Hours: modelData.endDateTime - monthView.currentDate <= 86400000 + 43200000 // 36hrs in ms
 
-                            visible: eventItem.hasTime
-                        }
+                                Layout.row: 1
+                                Layout.column: 1
+                                Layout.minimumWidth: dateLabelMetrics.width
 
-                        PlasmaComponents.Label {
-                            id: eventTitle
+                                text: endsToday || endsTomorrowInLessThan12Hours
+                                        ? Qt.formatTime(modelData.endDateTime)
+                                        : agenda.formatDateWithoutYear(modelData.endDateTime)
+                                horizontalAlignment: Qt.AlignRight
+                                enabled: false
 
-                            Layout.row: 0
-                            Layout.column: 2
-                            Layout.fillWidth: true
+                                visible: eventItem.hasTime
+                            }
 
-                            font.weight: Font.Bold
-                            elide: Text.ElideRight
-                            text: modelData.title
-                            verticalAlignment: Text.AlignVCenter
-                        }
+                            PlasmaComponents.Label {
+                                id: eventTitle
 
-                        PlasmaComponents.Label {
-                            id: eventDescription
+                                readonly property bool wrap: eventDescription.text === ""
 
-                            Layout.row: 1
-                            Layout.column: 2
-                            Layout.fillWidth: true
+                                Layout.row: 0
+                                Layout.rowSpan: wrap ? 2 : 1
+                                Layout.column: 2
+                                Layout.fillWidth: true
 
-                            elide: Text.ElideRight
-                            text: modelData.description
-                            verticalAlignment: Text.AlignVCenter
-                            maximumLineCount: 1
-                            enabled: false
+                                font.weight: Font.Bold
+                                elide: Text.ElideRight
+                                text: modelData.title
+                                verticalAlignment: Text.AlignVCenter
+                                maximumLineCount: 2
+                                wrapMode: wrap ? Text.Wrap : Text.NoWrap
+                            }
 
-                            visible: text !== ""
+                            PlasmaComponents.Label {
+                                id: eventDescription
+
+                                Layout.row: 1
+                                Layout.column: 2
+                                Layout.fillWidth: true
+
+                                elide: Text.ElideRight
+                                text: modelData.description
+                                verticalAlignment: Text.AlignVCenter
+                                enabled: false
+
+                                visible: text !== ""
+                            }
                         }
                     }
                 }
