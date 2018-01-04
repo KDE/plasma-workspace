@@ -165,9 +165,9 @@ QMap<QString, IonInterface::ConditionIcons> const& WetterComIon::nightIcons() co
     return val;
 }
 
-QMap<QString, QString> WetterComIon::setupCommonConditionMappings() const
+QHash<QString, QString> WetterComIon::setupCommonConditionMappings() const
 {
-    QMap<QString, QString> conditionList;
+    QHash<QString, QString> conditionList;
     conditionList.insert(QStringLiteral("1"),  i18nc("weather condition", "few clouds"));
     conditionList.insert(QStringLiteral("10"), i18nc("weather condition", "few clouds"));
     conditionList.insert(QStringLiteral("2"),  i18nc("weather condition", "cloudy"));
@@ -217,33 +217,33 @@ QMap<QString, QString> WetterComIon::setupCommonConditionMappings() const
     return conditionList;
 }
 
-QMap<QString, QString> WetterComIon::setupDayConditionMappings() const
+QHash<QString, QString> WetterComIon::setupDayConditionMappings() const
 {
-    QMap<QString, QString> conditionList = setupCommonConditionMappings();
+    QHash<QString, QString> conditionList = setupCommonConditionMappings();
     conditionList.insert(QStringLiteral("0"), i18nc("weather condition", "sunny"));
     return conditionList;
 }
 
-QMap<QString, QString> const& WetterComIon::dayConditions() const
+QHash<QString, QString> const& WetterComIon::dayConditions() const
 {
-    static QMap<QString, QString> const val = setupDayConditionMappings();
+    static QHash<QString, QString> const val = setupDayConditionMappings();
     return val;
 }
 
-QMap<QString, QString> WetterComIon::setupNightConditionMappings() const
+QHash<QString, QString> WetterComIon::setupNightConditionMappings() const
 {
-    QMap<QString, QString> conditionList = setupCommonConditionMappings();
+    QHash<QString, QString> conditionList = setupCommonConditionMappings();
     conditionList.insert(QStringLiteral("0"), i18nc("weather condition", "clear sky"));
     return conditionList;
 }
 
-QMap<QString, QString> const& WetterComIon::nightConditions() const
+QHash<QString, QString> const& WetterComIon::nightConditions() const
 {
-    static QMap<QString, QString> const val = setupNightConditionMappings();
+    static QHash<QString, QString> const val = setupNightConditionMappings();
     return val;
 }
 
-QString WetterComIon::getWeatherCondition(const QMap<QString, QString> &conditionList, const QString& condition) const
+QString WetterComIon::getWeatherCondition(const QHash<QString, QString> &conditionList, const QString& condition) const
 {
     return conditionList[condition];
 }

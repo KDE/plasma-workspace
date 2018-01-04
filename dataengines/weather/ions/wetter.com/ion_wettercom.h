@@ -127,17 +127,17 @@ private:
     QMap<QString, ConditionIcons> setupCommonIconMappings() const;
     QMap<QString, ConditionIcons> setupDayIconMappings() const;
     QMap<QString, ConditionIcons> setupNightIconMappings() const;
-    QMap<QString, QString> setupCommonConditionMappings() const;
-    QMap<QString, QString> setupDayConditionMappings() const;
-    QMap<QString, QString> setupNightConditionMappings() const;
+    QHash<QString, QString> setupCommonConditionMappings() const;
+    QHash<QString, QString> setupDayConditionMappings() const;
+    QHash<QString, QString> setupNightConditionMappings() const;
 
     // Retrieve the mapping from the wetter.com condition code to the respective icon / condition name
     QMap<QString, ConditionIcons> const& nightIcons() const;
     QMap<QString, ConditionIcons> const& dayIcons() const;
-    QMap<QString, QString> const& dayConditions() const;
-    QMap<QString, QString> const& nightConditions() const;
+    QHash<QString, QString> const& dayConditions() const;
+    QHash<QString, QString> const& nightConditions() const;
 
-    QString getWeatherCondition(const QMap<QString, QString> &conditionList, const QString& condition) const;
+    QString getWeatherCondition(const QHash<QString, QString> &conditionList, const QString& condition) const;
 
     // Find place
     void findPlace(const QString& place, const QString& source);
