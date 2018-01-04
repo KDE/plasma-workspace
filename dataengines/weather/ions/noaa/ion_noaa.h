@@ -80,6 +80,10 @@ public:
     QVector<Forecast> forecasts;
 };
 
+Q_DECLARE_TYPEINFO(WeatherData::Forecast, Q_MOVABLE_TYPE);
+Q_DECLARE_TYPEINFO(WeatherData, Q_MOVABLE_TYPE);
+
+
 class Q_DECL_EXPORT NOAAIon : public IonInterface, public Plasma::DataEngineConsumer
 {
     Q_OBJECT

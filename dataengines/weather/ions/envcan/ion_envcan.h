@@ -135,6 +135,10 @@ public:
     float recordSnow;
 };
 
+Q_DECLARE_TYPEINFO(WeatherData::WeatherEvent, Q_MOVABLE_TYPE);
+Q_DECLARE_TYPEINFO(WeatherData::ForecastInfo, Q_MOVABLE_TYPE);
+Q_DECLARE_TYPEINFO(WeatherData, Q_MOVABLE_TYPE);
+
 /**
  * https://weather.gc.ca/mainmenu/disclaimer_e.html
  */

@@ -94,6 +94,11 @@ public:
     QVector<WeatherData::ForecastPeriod *> forecasts;
 };
 
+Q_DECLARE_TYPEINFO(WeatherData::ForecastInfo, Q_MOVABLE_TYPE);
+Q_DECLARE_TYPEINFO(WeatherData::ForecastPeriod, Q_MOVABLE_TYPE);
+Q_DECLARE_TYPEINFO(WeatherData, Q_MOVABLE_TYPE);
+
+
 class Q_DECL_EXPORT WetterComIon : public IonInterface
 {
     Q_OBJECT

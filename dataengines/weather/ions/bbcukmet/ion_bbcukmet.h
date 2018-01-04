@@ -77,6 +77,10 @@ public:
     QVector <WeatherData::ForecastInfo *> forecasts;
 };
 
+Q_DECLARE_TYPEINFO(WeatherData::ForecastInfo, Q_MOVABLE_TYPE);
+Q_DECLARE_TYPEINFO(WeatherData, Q_MOVABLE_TYPE);
+
+
 class Q_DECL_EXPORT UKMETIon : public IonInterface, public Plasma::DataEngineConsumer
 {
     Q_OBJECT
