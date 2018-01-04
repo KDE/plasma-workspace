@@ -78,49 +78,47 @@ void WetterComIon::reset()
 
 QMap<QString, IonInterface::ConditionIcons> WetterComIon::setupCommonIconMappings() const
 {
-    QMap<QString, ConditionIcons> conditionList;
-
-    conditionList.insert(QStringLiteral("3"),  Overcast);
-    conditionList.insert(QStringLiteral("30"), Overcast);
-    conditionList.insert(QStringLiteral("4"),  Haze);
-    conditionList.insert(QStringLiteral("40"), Haze);
-    conditionList.insert(QStringLiteral("45"), Haze);
-    conditionList.insert(QStringLiteral("48"), Haze);
-    conditionList.insert(QStringLiteral("49"), Haze);
-    conditionList.insert(QStringLiteral("5"),  Mist);
-    conditionList.insert(QStringLiteral("50"), Mist);
-    conditionList.insert(QStringLiteral("51"), Mist);
-    conditionList.insert(QStringLiteral("53"), Mist);
-    conditionList.insert(QStringLiteral("55"), Mist);
-    conditionList.insert(QStringLiteral("56"), FreezingDrizzle);
-    conditionList.insert(QStringLiteral("57"), FreezingDrizzle);
-    conditionList.insert(QStringLiteral("6"),  Rain);
-    conditionList.insert(QStringLiteral("60"), LightRain);
-    conditionList.insert(QStringLiteral("61"), LightRain);
-    conditionList.insert(QStringLiteral("63"), Rain);
-    conditionList.insert(QStringLiteral("65"), Rain);
-    conditionList.insert(QStringLiteral("66"), FreezingRain);
-    conditionList.insert(QStringLiteral("67"), FreezingRain);
-    conditionList.insert(QStringLiteral("68"), RainSnow);
-    conditionList.insert(QStringLiteral("69"), RainSnow);
-    conditionList.insert(QStringLiteral("7"),  Snow);
-    conditionList.insert(QStringLiteral("70"), LightSnow);
-    conditionList.insert(QStringLiteral("71"), LightSnow);
-    conditionList.insert(QStringLiteral("73"), Snow);
-    conditionList.insert(QStringLiteral("75"), Flurries);
-    conditionList.insert(QStringLiteral("8"),  Showers);
-    conditionList.insert(QStringLiteral("81"), Showers);
-    conditionList.insert(QStringLiteral("82"), Showers);
-    conditionList.insert(QStringLiteral("83"), RainSnow);
-    conditionList.insert(QStringLiteral("84"), RainSnow);
-    conditionList.insert(QStringLiteral("85"), Snow);
-    conditionList.insert(QStringLiteral("86"), Snow);
-    conditionList.insert(QStringLiteral("9"),  Thunderstorm);
-    conditionList.insert(QStringLiteral("90"), Thunderstorm);
-    conditionList.insert(QStringLiteral("96"), Thunderstorm);
-    conditionList.insert(QStringLiteral("999"), NotAvailable);
-
-    return conditionList;
+    return QMap<QString, ConditionIcons> {
+        { QStringLiteral("3"),  Overcast },
+        { QStringLiteral("30"), Overcast },
+        { QStringLiteral("4"),  Haze },
+        { QStringLiteral("40"), Haze },
+        { QStringLiteral("45"), Haze },
+        { QStringLiteral("48"), Haze },
+        { QStringLiteral("49"), Haze },
+        { QStringLiteral("5"),  Mist },
+        { QStringLiteral("50"), Mist },
+        { QStringLiteral("51"), Mist },
+        { QStringLiteral("53"), Mist },
+        { QStringLiteral("55"), Mist },
+        { QStringLiteral("56"), FreezingDrizzle },
+        { QStringLiteral("57"), FreezingDrizzle },
+        { QStringLiteral("6"),  Rain },
+        { QStringLiteral("60"), LightRain },
+        { QStringLiteral("61"), LightRain },
+        { QStringLiteral("63"), Rain },
+        { QStringLiteral("65"), Rain },
+        { QStringLiteral("66"), FreezingRain },
+        { QStringLiteral("67"), FreezingRain },
+        { QStringLiteral("68"), RainSnow },
+        { QStringLiteral("69"), RainSnow },
+        { QStringLiteral("7"),  Snow },
+        { QStringLiteral("70"), LightSnow },
+        { QStringLiteral("71"), LightSnow },
+        { QStringLiteral("73"), Snow },
+        { QStringLiteral("75"), Flurries },
+        { QStringLiteral("8"),  Showers },
+        { QStringLiteral("81"), Showers },
+        { QStringLiteral("82"), Showers },
+        { QStringLiteral("83"), RainSnow },
+        { QStringLiteral("84"), RainSnow },
+        { QStringLiteral("85"), Snow },
+        { QStringLiteral("86"), Snow },
+        { QStringLiteral("9"),  Thunderstorm },
+        { QStringLiteral("90"), Thunderstorm },
+        { QStringLiteral("96"), Thunderstorm },
+        { QStringLiteral("999"), NotAvailable },
+    };
 }
 
 QMap<QString, IonInterface::ConditionIcons> WetterComIon::setupDayIconMappings() const
@@ -167,54 +165,53 @@ QMap<QString, IonInterface::ConditionIcons> const& WetterComIon::nightIcons() co
 
 QHash<QString, QString> WetterComIon::setupCommonConditionMappings() const
 {
-    QHash<QString, QString> conditionList;
-    conditionList.insert(QStringLiteral("1"),  i18nc("weather condition", "few clouds"));
-    conditionList.insert(QStringLiteral("10"), i18nc("weather condition", "few clouds"));
-    conditionList.insert(QStringLiteral("2"),  i18nc("weather condition", "cloudy"));
-    conditionList.insert(QStringLiteral("20"), i18nc("weather condition", "cloudy"));
-    conditionList.insert(QStringLiteral("3"),  i18nc("weather condition", "overcast"));
-    conditionList.insert(QStringLiteral("30"), i18nc("weather condition", "overcast"));
-    conditionList.insert(QStringLiteral("4"),  i18nc("weather condition", "haze"));
-    conditionList.insert(QStringLiteral("40"), i18nc("weather condition", "haze"));
-    conditionList.insert(QStringLiteral("45"), i18nc("weather condition", "haze"));
-    conditionList.insert(QStringLiteral("48"), i18nc("weather condition", "fog with icing"));
-    conditionList.insert(QStringLiteral("49"), i18nc("weather condition", "fog with icing"));
-    conditionList.insert(QStringLiteral("5"),  i18nc("weather condition", "drizzle"));
-    conditionList.insert(QStringLiteral("50"), i18nc("weather condition", "drizzle"));
-    conditionList.insert(QStringLiteral("51"), i18nc("weather condition", "light drizzle"));
-    conditionList.insert(QStringLiteral("53"), i18nc("weather condition", "drizzle"));
-    conditionList.insert(QStringLiteral("55"), i18nc("weather condition", "heavy drizzle"));
-    conditionList.insert(QStringLiteral("56"), i18nc("weather condition", "freezing drizzle"));
-    conditionList.insert(QStringLiteral("57"), i18nc("weather condition", "heavy freezing drizzle"));
-    conditionList.insert(QStringLiteral("6"),  i18nc("weather condition", "rain"));
-    conditionList.insert(QStringLiteral("60"), i18nc("weather condition", "light rain"));
-    conditionList.insert(QStringLiteral("61"), i18nc("weather condition", "light rain"));
-    conditionList.insert(QStringLiteral("63"), i18nc("weather condition", "moderate rain"));
-    conditionList.insert(QStringLiteral("65"), i18nc("weather condition", "heavy rain"));
-    conditionList.insert(QStringLiteral("66"), i18nc("weather condition", "light freezing rain"));
-    conditionList.insert(QStringLiteral("67"), i18nc("weather condition", "freezing rain"));
-    conditionList.insert(QStringLiteral("68"), i18nc("weather condition", "light rain snow"));
-    conditionList.insert(QStringLiteral("69"), i18nc("weather condition", "heavy rain snow"));
-    conditionList.insert(QStringLiteral("7"),  i18nc("weather condition", "snow"));
-    conditionList.insert(QStringLiteral("70"), i18nc("weather condition", "light snow"));
-    conditionList.insert(QStringLiteral("71"), i18nc("weather condition", "light snow"));
-    conditionList.insert(QStringLiteral("73"), i18nc("weather condition", "moderate snow"));
-    conditionList.insert(QStringLiteral("75"), i18nc("weather condition", "heavy snow"));
-    conditionList.insert(QStringLiteral("8"),  i18nc("weather condition", "showers"));
-    conditionList.insert(QStringLiteral("80"), i18nc("weather condition", "light showers"));
-    conditionList.insert(QStringLiteral("81"), i18nc("weather condition", "showers"));
-    conditionList.insert(QStringLiteral("82"), i18nc("weather condition", "heavy showers"));
-    conditionList.insert(QStringLiteral("83"), i18nc("weather condition", "light snow rain showers"));
-    conditionList.insert(QStringLiteral("84"), i18nc("weather condition", "heavy snow rain showers"));
-    conditionList.insert(QStringLiteral("85"), i18nc("weather condition", "light snow showers"));
-    conditionList.insert(QStringLiteral("86"), i18nc("weather condition", "snow showers"));
-    conditionList.insert(QStringLiteral("9"),  i18nc("weather condition", "thunderstorm"));
-    conditionList.insert(QStringLiteral("90"), i18nc("weather condition", "thunderstorm"));
-    conditionList.insert(QStringLiteral("95"), i18nc("weather condition", "light thunderstorm"));
-    conditionList.insert(QStringLiteral("96"), i18nc("weather condition", "heavy thunderstorm"));
-    conditionList.insert(QStringLiteral("999"), i18nc("weather condition", "n/a"));
-
-    return conditionList;
+    return QHash<QString, QString> {
+        { QStringLiteral("1"),   i18nc("weather condition", "few clouds") },
+        { QStringLiteral("10"),  i18nc("weather condition", "few clouds") },
+        { QStringLiteral("2"),   i18nc("weather condition", "cloudy") },
+        { QStringLiteral("20"),  i18nc("weather condition", "cloudy") },
+        { QStringLiteral("3"),   i18nc("weather condition", "overcast") },
+        { QStringLiteral("30"),  i18nc("weather condition", "overcast") },
+        { QStringLiteral("4"),   i18nc("weather condition", "haze") },
+        { QStringLiteral("40"),  i18nc("weather condition", "haze") },
+        { QStringLiteral("45"),  i18nc("weather condition", "haze") },
+        { QStringLiteral("48"),  i18nc("weather condition", "fog with icing") },
+        { QStringLiteral("49"),  i18nc("weather condition", "fog with icing") },
+        { QStringLiteral("5"),   i18nc("weather condition", "drizzle") },
+        { QStringLiteral("50"),  i18nc("weather condition", "drizzle") },
+        { QStringLiteral("51"),  i18nc("weather condition", "light drizzle") },
+        { QStringLiteral("53"),  i18nc("weather condition", "drizzle") },
+        { QStringLiteral("55"),  i18nc("weather condition", "heavy drizzle") },
+        { QStringLiteral("56"),  i18nc("weather condition", "freezing drizzle") },
+        { QStringLiteral("57"),  i18nc("weather condition", "heavy freezing drizzle") },
+        { QStringLiteral("6"),   i18nc("weather condition", "rain") },
+        { QStringLiteral("60"),  i18nc("weather condition", "light rain") },
+        { QStringLiteral("61"),  i18nc("weather condition", "light rain") },
+        { QStringLiteral("63"),  i18nc("weather condition", "moderate rain") },
+        { QStringLiteral("65"),  i18nc("weather condition", "heavy rain") },
+        { QStringLiteral("66"),  i18nc("weather condition", "light freezing rain") },
+        { QStringLiteral("67"),  i18nc("weather condition", "freezing rain") },
+        { QStringLiteral("68"),  i18nc("weather condition", "light rain snow") },
+        { QStringLiteral("69"),  i18nc("weather condition", "heavy rain snow") },
+        { QStringLiteral("7"),   i18nc("weather condition", "snow") },
+        { QStringLiteral("70"),  i18nc("weather condition", "light snow") },
+        { QStringLiteral("71"),  i18nc("weather condition", "light snow") },
+        { QStringLiteral("73"),  i18nc("weather condition", "moderate snow") },
+        { QStringLiteral("75"),  i18nc("weather condition", "heavy snow") },
+        { QStringLiteral("8"),   i18nc("weather condition", "showers") },
+        { QStringLiteral("80"),  i18nc("weather condition", "light showers") },
+        { QStringLiteral("81"),  i18nc("weather condition", "showers") },
+        { QStringLiteral("82"),  i18nc("weather condition", "heavy showers") },
+        { QStringLiteral("83"),  i18nc("weather condition", "light snow rain showers") },
+        { QStringLiteral("84"),  i18nc("weather condition", "heavy snow rain showers") },
+        { QStringLiteral("85"),  i18nc("weather condition", "light snow showers") },
+        { QStringLiteral("86"),  i18nc("weather condition", "snow showers") },
+        { QStringLiteral("9"),   i18nc("weather condition", "thunderstorm") },
+        { QStringLiteral("90"),  i18nc("weather condition", "thunderstorm") },
+        { QStringLiteral("95"),  i18nc("weather condition", "light thunderstorm") },
+        { QStringLiteral("96"),  i18nc("weather condition", "heavy thunderstorm") },
+        { QStringLiteral("999"), i18nc("weather condition", "n/a") },
+    };
 }
 
 QHash<QString, QString> WetterComIon::setupDayConditionMappings() const

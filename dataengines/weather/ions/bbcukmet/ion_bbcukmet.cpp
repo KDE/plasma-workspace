@@ -93,132 +93,131 @@ QMap<QString, IonInterface::ConditionIcons> UKMETIon::setupDayIconMappings() con
 //    FewCloudsNight, PartlyCloudyNight, ClearNight,
 //    Mist, NotAvailable
 
-    QMap<QString, ConditionIcons> dayList;
-    dayList.insert(QStringLiteral("sunny"), ClearDay);
-    //dayList.insert(QStringLiteral("sunny night"), ClearNight);
-    dayList.insert(QStringLiteral("clear"), ClearDay);
-    dayList.insert(QStringLiteral("clear sky"), ClearDay);
-    dayList.insert(QStringLiteral("sunny intervals"), PartlyCloudyDay);
-    //dayList.insert(QStringLiteral("sunny intervals night"), ClearNight);
-    dayList.insert(QStringLiteral("partly cloudy"), PartlyCloudyDay);
-    dayList.insert(QStringLiteral("cloudy"), PartlyCloudyDay);
-    dayList.insert(QStringLiteral("light cloud"), PartlyCloudyDay);
-    dayList.insert(QStringLiteral("white cloud"), PartlyCloudyDay);
-    dayList.insert(QStringLiteral("grey cloud"), Overcast);
-    dayList.insert(QStringLiteral("thick cloud"), Overcast);
-    //dayList.insert(QStringLiteral("low level cloud"), NotAvailable);
-    //dayList.insert(QStringLiteral("medium level cloud"), NotAvailable);
-    //dayList.insert(QStringLiteral("sandstorm"), NotAvailable);
-    dayList.insert(QStringLiteral("drizzle"), LightRain);
-    dayList.insert(QStringLiteral("misty"), Mist);
-    dayList.insert(QStringLiteral("mist"), Mist);
-    dayList.insert(QStringLiteral("fog"), Mist);
-    dayList.insert(QStringLiteral("foggy"), Mist);
-    dayList.insert(QStringLiteral("tropical storm"), Thunderstorm);
-    dayList.insert(QStringLiteral("hazy"), NotAvailable);
-    dayList.insert(QStringLiteral("light shower"), Showers);
-    dayList.insert(QStringLiteral("light rain shower"), Showers);
-    dayList.insert(QStringLiteral("light showers"), Showers);
-    dayList.insert(QStringLiteral("light rain"), Showers);
-    dayList.insert(QStringLiteral("heavy rain"), Rain);
-    dayList.insert(QStringLiteral("heavy showers"), Rain);
-    dayList.insert(QStringLiteral("heavy shower"), Rain);
-    dayList.insert(QStringLiteral("heavy rain shower"), Rain);
-    dayList.insert(QStringLiteral("thundery shower"), Thunderstorm);
-    dayList.insert(QStringLiteral("thunderstorm"), Thunderstorm);
-    dayList.insert(QStringLiteral("cloudy with sleet"), RainSnow);
-    dayList.insert(QStringLiteral("sleet shower"), RainSnow);
-    dayList.insert(QStringLiteral("sleet showers"), RainSnow);
-    dayList.insert(QStringLiteral("sleet"), RainSnow);
-    dayList.insert(QStringLiteral("cloudy with hail"), Hail);
-    dayList.insert(QStringLiteral("hail shower"), Hail);
-    dayList.insert(QStringLiteral("hail showers"), Hail);
-    dayList.insert(QStringLiteral("hail"), Hail);
-    dayList.insert(QStringLiteral("light snow"), LightSnow);
-    dayList.insert(QStringLiteral("light snow shower"), Flurries);
-    dayList.insert(QStringLiteral("light snow showers"), Flurries);
-    dayList.insert(QStringLiteral("cloudy with light snow"), LightSnow);
-    dayList.insert(QStringLiteral("heavy snow"), Snow);
-    dayList.insert(QStringLiteral("heavy snow shower"), Snow);
-    dayList.insert(QStringLiteral("heavy snow showers"), Snow);
-    dayList.insert(QStringLiteral("cloudy with heavy snow"), Snow);
-    dayList.insert(QStringLiteral("na"), NotAvailable);
-    return dayList;
+    return QMap<QString, ConditionIcons> {
+        { QStringLiteral("sunny"), ClearDay },
+    //    { QStringLiteral("sunny night"), ClearNight },
+        { QStringLiteral("clear"), ClearDay },
+        { QStringLiteral("clear sky"), ClearDay },
+        { QStringLiteral("sunny intervals"), PartlyCloudyDay },
+    //    { QStringLiteral("sunny intervals night"), ClearNight },
+        { QStringLiteral("partly cloudy"), PartlyCloudyDay },
+        { QStringLiteral("cloudy"), PartlyCloudyDay },
+        { QStringLiteral("light cloud"), PartlyCloudyDay },
+        { QStringLiteral("white cloud"), PartlyCloudyDay },
+        { QStringLiteral("grey cloud"), Overcast },
+        { QStringLiteral("thick cloud"), Overcast },
+    //    { QStringLiteral("low level cloud"), NotAvailable },
+    //    { QStringLiteral("medium level cloud"), NotAvailable },
+    //    { QStringLiteral("sandstorm"), NotAvailable },
+        { QStringLiteral("drizzle"), LightRain },
+        { QStringLiteral("misty"), Mist },
+        { QStringLiteral("mist"), Mist },
+        { QStringLiteral("fog"), Mist },
+        { QStringLiteral("foggy"), Mist },
+        { QStringLiteral("tropical storm"), Thunderstorm },
+        { QStringLiteral("hazy"), NotAvailable },
+        { QStringLiteral("light shower"), Showers },
+        { QStringLiteral("light rain shower"), Showers },
+        { QStringLiteral("light showers"), Showers },
+        { QStringLiteral("light rain"), Showers },
+        { QStringLiteral("heavy rain"), Rain },
+        { QStringLiteral("heavy showers"), Rain },
+        { QStringLiteral("heavy shower"), Rain },
+        { QStringLiteral("heavy rain shower"), Rain },
+        { QStringLiteral("thundery shower"), Thunderstorm },
+        { QStringLiteral("thunderstorm"), Thunderstorm },
+        { QStringLiteral("cloudy with sleet"), RainSnow },
+        { QStringLiteral("sleet shower"), RainSnow },
+        { QStringLiteral("sleet showers"), RainSnow },
+        { QStringLiteral("sleet"), RainSnow },
+        { QStringLiteral("cloudy with hail"), Hail },
+        { QStringLiteral("hail shower"), Hail },
+        { QStringLiteral("hail showers"), Hail },
+        { QStringLiteral("hail"), Hail },
+        { QStringLiteral("light snow"), LightSnow },
+        { QStringLiteral("light snow shower"), Flurries },
+        { QStringLiteral("light snow showers"), Flurries },
+        { QStringLiteral("cloudy with light snow"), LightSnow },
+        { QStringLiteral("heavy snow"), Snow },
+        { QStringLiteral("heavy snow shower"), Snow },
+        { QStringLiteral("heavy snow showers"), Snow },
+        { QStringLiteral("cloudy with heavy snow"), Snow },
+        { QStringLiteral("na"), NotAvailable },
+    };
 }
 
 QMap<QString, IonInterface::ConditionIcons> UKMETIon::setupNightIconMappings() const
 {
-    QMap<QString, ConditionIcons> nightList;
-    nightList.insert(QStringLiteral("clear"), ClearNight);
-    nightList.insert(QStringLiteral("clear sky"), ClearNight);
-    nightList.insert(QStringLiteral("clear intervals"), PartlyCloudyNight);
-    nightList.insert(QStringLiteral("sunny intervals"), PartlyCloudyDay); // it's not really sunny
-    nightList.insert(QStringLiteral("sunny"), ClearDay);
-    nightList.insert(QStringLiteral("light cloud"), PartlyCloudyNight);
-    nightList.insert(QStringLiteral("partly cloudy"), PartlyCloudyNight);
-    nightList.insert(QStringLiteral("cloudy"), PartlyCloudyNight);
-    nightList.insert(QStringLiteral("white cloud"), PartlyCloudyNight);
-    nightList.insert(QStringLiteral("grey cloud"), Overcast);
-    nightList.insert(QStringLiteral("thick cloud"), Overcast);
-    nightList.insert(QStringLiteral("drizzle"), LightRain);
-    nightList.insert(QStringLiteral("misty"), Mist);
-    nightList.insert(QStringLiteral("mist"), Mist);
-    nightList.insert(QStringLiteral("fog"), Mist);
-    nightList.insert(QStringLiteral("foggy"), Mist);
-    nightList.insert(QStringLiteral("tropical storm"), Thunderstorm);
-    nightList.insert(QStringLiteral("hazy"), NotAvailable);
-    nightList.insert(QStringLiteral("light shower"), Showers);
-    nightList.insert(QStringLiteral("light rain shower"), Showers);
-    nightList.insert(QStringLiteral("light showers"), Showers);
-    nightList.insert(QStringLiteral("light rain"), Showers);
-    nightList.insert(QStringLiteral("heavy rain"), Rain);
-    nightList.insert(QStringLiteral("heavy showers"), Rain);
-    nightList.insert(QStringLiteral("heavy shower"), Rain);
-    nightList.insert(QStringLiteral("heavy rain shower"), Rain);
-    nightList.insert(QStringLiteral("thundery shower"), Thunderstorm);
-    nightList.insert(QStringLiteral("thunderstorm"), Thunderstorm);
-    nightList.insert(QStringLiteral("cloudy with sleet"), NotAvailable);
-    nightList.insert(QStringLiteral("sleet shower"), NotAvailable);
-    nightList.insert(QStringLiteral("sleet showers"), NotAvailable);
-    nightList.insert(QStringLiteral("sleet"), NotAvailable);
-    nightList.insert(QStringLiteral("cloudy with hail"), Hail);
-    nightList.insert(QStringLiteral("hail shower"), Hail);
-    nightList.insert(QStringLiteral("hail showers"), Hail);
-    nightList.insert(QStringLiteral("hail"), Hail);
-    nightList.insert(QStringLiteral("light snow"), LightSnow);
-    nightList.insert(QStringLiteral("light snow shower"), Flurries);
-    nightList.insert(QStringLiteral("light snow showers"), Flurries);
-    nightList.insert(QStringLiteral("cloudy with light snow"), LightSnow);
-    nightList.insert(QStringLiteral("heavy snow"), Snow);
-    nightList.insert(QStringLiteral("heavy snow shower"), Snow);
-    nightList.insert(QStringLiteral("heavy snow showers"), Snow);
-    nightList.insert(QStringLiteral("cloudy with heavy snow"), Snow);
-    nightList.insert(QStringLiteral("na"), NotAvailable);
-
-    return nightList;
+    return QMap<QString, ConditionIcons> {
+        { QStringLiteral("clear"), ClearNight },
+        { QStringLiteral("clear sky"), ClearNight },
+        { QStringLiteral("clear intervals"), PartlyCloudyNight },
+        { QStringLiteral("sunny intervals"), PartlyCloudyDay }, // it's not really sunny
+        { QStringLiteral("sunny"), ClearDay },
+        { QStringLiteral("light cloud"), PartlyCloudyNight },
+        { QStringLiteral("partly cloudy"), PartlyCloudyNight },
+        { QStringLiteral("cloudy"), PartlyCloudyNight },
+        { QStringLiteral("white cloud"), PartlyCloudyNight },
+        { QStringLiteral("grey cloud"), Overcast },
+        { QStringLiteral("thick cloud"), Overcast },
+        { QStringLiteral("drizzle"), LightRain },
+        { QStringLiteral("misty"), Mist },
+        { QStringLiteral("mist"), Mist },
+        { QStringLiteral("fog"), Mist },
+        { QStringLiteral("foggy"), Mist },
+        { QStringLiteral("tropical storm"), Thunderstorm },
+        { QStringLiteral("hazy"), NotAvailable },
+        { QStringLiteral("light shower"), Showers },
+        { QStringLiteral("light rain shower"), Showers },
+        { QStringLiteral("light showers"), Showers },
+        { QStringLiteral("light rain"), Showers },
+        { QStringLiteral("heavy rain"), Rain },
+        { QStringLiteral("heavy showers"), Rain },
+        { QStringLiteral("heavy shower"), Rain },
+        { QStringLiteral("heavy rain shower"), Rain },
+        { QStringLiteral("thundery shower"), Thunderstorm },
+        { QStringLiteral("thunderstorm"), Thunderstorm },
+        { QStringLiteral("cloudy with sleet"), NotAvailable },
+        { QStringLiteral("sleet shower"), NotAvailable },
+        { QStringLiteral("sleet showers"), NotAvailable },
+        { QStringLiteral("sleet"), NotAvailable },
+        { QStringLiteral("cloudy with hail"), Hail },
+        { QStringLiteral("hail shower"), Hail },
+        { QStringLiteral("hail showers"), Hail },
+        { QStringLiteral("hail"), Hail },
+        { QStringLiteral("light snow"), LightSnow },
+        { QStringLiteral("light snow shower"), Flurries },
+        { QStringLiteral("light snow showers"), Flurries },
+        { QStringLiteral("cloudy with light snow"), LightSnow },
+        { QStringLiteral("heavy snow"), Snow },
+        { QStringLiteral("heavy snow shower"), Snow },
+        { QStringLiteral("heavy snow showers"), Snow },
+        { QStringLiteral("cloudy with heavy snow"), Snow },
+        { QStringLiteral("na"), NotAvailable },
+    };
 }
 
 QMap<QString, IonInterface::WindDirections> UKMETIon::setupWindIconMappings() const
 {
-    QMap<QString, WindDirections> windDir;
-    windDir[QStringLiteral("northerly")] =            N;
-    windDir[QStringLiteral("north north easterly")] = NNE;
-    windDir[QStringLiteral("north easterly")] =       NE;
-    windDir[QStringLiteral("east north easterly")] =  ENE;
-    windDir[QStringLiteral("easterly")] =             E;
-    windDir[QStringLiteral("east south easterly")] =  ESE;
-    windDir[QStringLiteral("south easterly")] =       SE;
-    windDir[QStringLiteral("south south easterly")] = SSE;
-    windDir[QStringLiteral("southerly")] =            S;
-    windDir[QStringLiteral("south south westerly")] = SSW;
-    windDir[QStringLiteral("south westerly")] =       SW;
-    windDir[QStringLiteral("west south westerly")] =  WSW;
-    windDir[QStringLiteral("westerly")] =             W;
-    windDir[QStringLiteral("west north westerly")] =  WNW;
-    windDir[QStringLiteral("north westerly")] =       NW;
-    windDir[QStringLiteral("north north westerly")] = NNW;
-    windDir[QStringLiteral("calm")] =                 VR;
-    return windDir;
+    return QMap<QString, WindDirections> {
+        { QStringLiteral("northerly"),            N },
+        { QStringLiteral("north north easterly"), NNE },
+        { QStringLiteral("north easterly"),       NE },
+        { QStringLiteral("east north easterly"),  ENE },
+        { QStringLiteral("easterly"),             E },
+        { QStringLiteral("east south easterly"),  ESE },
+        { QStringLiteral("south easterly"),       SE },
+        { QStringLiteral("south south easterly"), SSE },
+        { QStringLiteral("southerly"),            S },
+        { QStringLiteral("south south westerly"), SSW },
+        { QStringLiteral("south westerly"),       SW },
+        { QStringLiteral("west south westerly"),  WSW },
+        { QStringLiteral("westerly"),             W },
+        { QStringLiteral("west north westerly"),  WNW },
+        { QStringLiteral("north westerly"),       NW },
+        { QStringLiteral("north north westerly"), NNW },
+        { QStringLiteral("calm"),                 VR },
+    };
 }
 
 

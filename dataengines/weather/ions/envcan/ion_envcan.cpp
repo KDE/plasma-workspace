@@ -101,343 +101,341 @@ EnvCanadaIon::~EnvCanadaIon()
 
 QMap<QString, IonInterface::ConditionIcons> EnvCanadaIon::setupConditionIconMappings() const
 {
-    QMap<QString, ConditionIcons> conditionList;
+    return QMap<QString, ConditionIcons> {
 
-    // Explicit periods
-    conditionList.insert(QStringLiteral("mainly sunny"), FewCloudsDay);
-    conditionList.insert(QStringLiteral("mainly clear"), FewCloudsNight);
-    conditionList.insert(QStringLiteral("sunny"), ClearDay);
-    conditionList.insert(QStringLiteral("clear"), ClearNight);
+        // Explicit periods
+        { QStringLiteral("mainly sunny"), FewCloudsDay },
+        { QStringLiteral("mainly clear"), FewCloudsNight },
+        { QStringLiteral("sunny"), ClearDay },
+        { QStringLiteral("clear"), ClearNight },
 
-    // Available conditions
-    conditionList.insert(QStringLiteral("blowing snow"), Snow);
-    conditionList.insert(QStringLiteral("cloudy"), Overcast);
-    conditionList.insert(QStringLiteral("distant precipitation"), LightRain);
-    conditionList.insert(QStringLiteral("drifting snow"), Flurries);
-    conditionList.insert(QStringLiteral("drizzle"), LightRain);
-    conditionList.insert(QStringLiteral("dust"), NotAvailable);
-    conditionList.insert(QStringLiteral("dust devils"), NotAvailable);
-    conditionList.insert(QStringLiteral("fog"), Mist);
-    conditionList.insert(QStringLiteral("fog bank near station"), Mist);
-    conditionList.insert(QStringLiteral("fog depositing ice"), Mist);
-    conditionList.insert(QStringLiteral("fog patches"), Mist);
-    conditionList.insert(QStringLiteral("freezing drizzle"), FreezingDrizzle);
-    conditionList.insert(QStringLiteral("freezing rain"), FreezingRain);
-    conditionList.insert(QStringLiteral("funnel cloud"), NotAvailable);
-    conditionList.insert(QStringLiteral("hail"), Hail);
-    conditionList.insert(QStringLiteral("haze"), Haze);
-    conditionList.insert(QStringLiteral("heavy blowing snow"), Snow);
-    conditionList.insert(QStringLiteral("heavy drifting snow"), Snow);
-    conditionList.insert(QStringLiteral("heavy drizzle"), LightRain);
-    conditionList.insert(QStringLiteral("heavy hail"), Hail);
-    conditionList.insert(QStringLiteral("heavy mixed rain and drizzle"), LightRain);
-    conditionList.insert(QStringLiteral("heavy mixed rain and snow shower"), RainSnow);
-    conditionList.insert(QStringLiteral("heavy rain"), Rain);
-    conditionList.insert(QStringLiteral("heavy rain and snow"), RainSnow);
-    conditionList.insert(QStringLiteral("heavy rainshower"), Rain);
-    conditionList.insert(QStringLiteral("heavy snow"), Snow);
-    conditionList.insert(QStringLiteral("heavy snow pellets"), Snow);
-    conditionList.insert(QStringLiteral("heavy snowshower"), Snow);
-    conditionList.insert(QStringLiteral("heavy thunderstorm with hail"), Thunderstorm);
-    conditionList.insert(QStringLiteral("heavy thunderstorm with rain"), Thunderstorm);
-    conditionList.insert(QStringLiteral("ice crystals"), Flurries);
-    conditionList.insert(QStringLiteral("ice pellets"), Hail);
-    conditionList.insert(QStringLiteral("increasing cloud"), Overcast);
-    conditionList.insert(QStringLiteral("light drizzle"), LightRain);
-    conditionList.insert(QStringLiteral("light freezing drizzle"), FreezingRain);
-    conditionList.insert(QStringLiteral("light freezing rain"), FreezingRain);
-    conditionList.insert(QStringLiteral("light rain"), LightRain);
-    conditionList.insert(QStringLiteral("light rainshower"), LightRain);
-    conditionList.insert(QStringLiteral("light snow"), LightSnow);
-    conditionList.insert(QStringLiteral("light snow pellets"), LightSnow);
-    conditionList.insert(QStringLiteral("light snowshower"), Flurries);
-    conditionList.insert(QStringLiteral("lightning visible"), Thunderstorm);
-    conditionList.insert(QStringLiteral("mist"), Mist);
-    conditionList.insert(QStringLiteral("mixed rain and drizzle"), LightRain);
-    conditionList.insert(QStringLiteral("mixed rain and snow shower"), RainSnow);
-    conditionList.insert(QStringLiteral("not reported"), NotAvailable);
-    conditionList.insert(QStringLiteral("rain"), Rain);
-    conditionList.insert(QStringLiteral("rain and snow"), RainSnow);
-    conditionList.insert(QStringLiteral("rainshower"), LightRain);
-    conditionList.insert(QStringLiteral("recent drizzle"), LightRain);
-    conditionList.insert(QStringLiteral("recent dust or sand storm"), NotAvailable);
-    conditionList.insert(QStringLiteral("recent fog"), Mist);
-    conditionList.insert(QStringLiteral("recent freezing precipitation"), FreezingDrizzle);
-    conditionList.insert(QStringLiteral("recent hail"), Hail);
-    conditionList.insert(QStringLiteral("recent rain"), Rain);
-    conditionList.insert(QStringLiteral("recent rain and snow"), RainSnow);
-    conditionList.insert(QStringLiteral("recent rainshower"), Rain);
-    conditionList.insert(QStringLiteral("recent snow"), Snow);
-    conditionList.insert(QStringLiteral("recent snowshower"), Flurries);
-    conditionList.insert(QStringLiteral("recent thunderstorm"), Thunderstorm);
-    conditionList.insert(QStringLiteral("recent thunderstorm with hail"), Thunderstorm);
-    conditionList.insert(QStringLiteral("recent thunderstorm with heavy hail"), Thunderstorm);
-    conditionList.insert(QStringLiteral("recent thunderstorm with heavy rain"), Thunderstorm);
-    conditionList.insert(QStringLiteral("recent thunderstorm with rain"), Thunderstorm);
-    conditionList.insert(QStringLiteral("sand or dust storm"), NotAvailable);
-    conditionList.insert(QStringLiteral("severe sand or dust storm"), NotAvailable);
-    conditionList.insert(QStringLiteral("shallow fog"), Mist);
-    conditionList.insert(QStringLiteral("smoke"), NotAvailable);
-    conditionList.insert(QStringLiteral("snow"), Snow);
-    conditionList.insert(QStringLiteral("snow crystals"), Flurries);
-    conditionList.insert(QStringLiteral("snow grains"), Flurries);
-    conditionList.insert(QStringLiteral("squalls"), Snow);
-    conditionList.insert(QStringLiteral("thunderstorm with hail"), Thunderstorm);
-    conditionList.insert(QStringLiteral("thunderstorm with rain"), Thunderstorm);
-    conditionList.insert(QStringLiteral("thunderstorm with sand or dust storm"), Thunderstorm);
-    conditionList.insert(QStringLiteral("thunderstorm without precipitation"), Thunderstorm);
-    conditionList.insert(QStringLiteral("tornado"), NotAvailable);
-
-    return conditionList;
+        // Available conditions
+        { QStringLiteral("blowing snow"), Snow },
+        { QStringLiteral("cloudy"), Overcast },
+        { QStringLiteral("distant precipitation"), LightRain },
+        { QStringLiteral("drifting snow"), Flurries },
+        { QStringLiteral("drizzle"), LightRain },
+        { QStringLiteral("dust"), NotAvailable },
+        { QStringLiteral("dust devils"), NotAvailable },
+        { QStringLiteral("fog"), Mist },
+        { QStringLiteral("fog bank near station"), Mist },
+        { QStringLiteral("fog depositing ice"), Mist },
+        { QStringLiteral("fog patches"), Mist },
+        { QStringLiteral("freezing drizzle"), FreezingDrizzle },
+        { QStringLiteral("freezing rain"), FreezingRain },
+        { QStringLiteral("funnel cloud"), NotAvailable },
+        { QStringLiteral("hail"), Hail },
+        { QStringLiteral("haze"), Haze },
+        { QStringLiteral("heavy blowing snow"), Snow },
+        { QStringLiteral("heavy drifting snow"), Snow },
+        { QStringLiteral("heavy drizzle"), LightRain },
+        { QStringLiteral("heavy hail"), Hail },
+        { QStringLiteral("heavy mixed rain and drizzle"), LightRain },
+        { QStringLiteral("heavy mixed rain and snow shower"), RainSnow },
+        { QStringLiteral("heavy rain"), Rain },
+        { QStringLiteral("heavy rain and snow"), RainSnow },
+        { QStringLiteral("heavy rainshower"), Rain },
+        { QStringLiteral("heavy snow"), Snow },
+        { QStringLiteral("heavy snow pellets"), Snow },
+        { QStringLiteral("heavy snowshower"), Snow },
+        { QStringLiteral("heavy thunderstorm with hail"), Thunderstorm },
+        { QStringLiteral("heavy thunderstorm with rain"), Thunderstorm },
+        { QStringLiteral("ice crystals"), Flurries },
+        { QStringLiteral("ice pellets"), Hail },
+        { QStringLiteral("increasing cloud"), Overcast },
+        { QStringLiteral("light drizzle"), LightRain },
+        { QStringLiteral("light freezing drizzle"), FreezingRain },
+        { QStringLiteral("light freezing rain"), FreezingRain },
+        { QStringLiteral("light rain"), LightRain },
+        { QStringLiteral("light rainshower"), LightRain },
+        { QStringLiteral("light snow"), LightSnow },
+        { QStringLiteral("light snow pellets"), LightSnow },
+        { QStringLiteral("light snowshower"), Flurries },
+        { QStringLiteral("lightning visible"), Thunderstorm },
+        { QStringLiteral("mist"), Mist },
+        { QStringLiteral("mixed rain and drizzle"), LightRain },
+        { QStringLiteral("mixed rain and snow shower"), RainSnow },
+        { QStringLiteral("not reported"), NotAvailable },
+        { QStringLiteral("rain"), Rain },
+        { QStringLiteral("rain and snow"), RainSnow },
+        { QStringLiteral("rainshower"), LightRain },
+        { QStringLiteral("recent drizzle"), LightRain },
+        { QStringLiteral("recent dust or sand storm"), NotAvailable },
+        { QStringLiteral("recent fog"), Mist },
+        { QStringLiteral("recent freezing precipitation"), FreezingDrizzle },
+        { QStringLiteral("recent hail"), Hail },
+        { QStringLiteral("recent rain"), Rain },
+        { QStringLiteral("recent rain and snow"), RainSnow },
+        { QStringLiteral("recent rainshower"), Rain },
+        { QStringLiteral("recent snow"), Snow },
+        { QStringLiteral("recent snowshower"), Flurries },
+        { QStringLiteral("recent thunderstorm"), Thunderstorm },
+        { QStringLiteral("recent thunderstorm with hail"), Thunderstorm },
+        { QStringLiteral("recent thunderstorm with heavy hail"), Thunderstorm },
+        { QStringLiteral("recent thunderstorm with heavy rain"), Thunderstorm },
+        { QStringLiteral("recent thunderstorm with rain"), Thunderstorm },
+        { QStringLiteral("sand or dust storm"), NotAvailable },
+        { QStringLiteral("severe sand or dust storm"), NotAvailable },
+        { QStringLiteral("shallow fog"), Mist },
+        { QStringLiteral("smoke"), NotAvailable },
+        { QStringLiteral("snow"), Snow },
+        { QStringLiteral("snow crystals"), Flurries },
+        { QStringLiteral("snow grains"), Flurries },
+        { QStringLiteral("squalls"), Snow },
+        { QStringLiteral("thunderstorm with hail"), Thunderstorm },
+        { QStringLiteral("thunderstorm with rain"), Thunderstorm },
+        { QStringLiteral("thunderstorm with sand or dust storm"), Thunderstorm },
+        { QStringLiteral("thunderstorm without precipitation"), Thunderstorm },
+        { QStringLiteral("tornado"), NotAvailable },
+    };
 }
 
 
 QMap<QString, IonInterface::ConditionIcons> EnvCanadaIon::setupForecastIconMappings() const
 {
-    QMap<QString, ConditionIcons> forecastList;
+    return QMap<QString, ConditionIcons> {
 
-    // Abbreviated forecast descriptions
-    forecastList.insert(QStringLiteral("a few flurries"), Flurries);
-    forecastList.insert(QStringLiteral("a few flurries mixed with ice pellets"), RainSnow);
-    forecastList.insert(QStringLiteral("a few flurries or rain showers"), RainSnow);
-    forecastList.insert(QStringLiteral("a few flurries or thundershowers"), RainSnow);
-    forecastList.insert(QStringLiteral("a few rain showers or flurries"), RainSnow);
-    forecastList.insert(QStringLiteral("a few rain showers or wet flurries"), RainSnow);
-    forecastList.insert(QStringLiteral("a few showers"), LightRain);
-    forecastList.insert(QStringLiteral("a few showers or drizzle"), LightRain);
-    forecastList.insert(QStringLiteral("a few showers or thundershowers"), Thunderstorm);
-    forecastList.insert(QStringLiteral("a few showers or thunderstorms"), Thunderstorm);
-    forecastList.insert(QStringLiteral("a few thundershowers"), Thunderstorm);
-    forecastList.insert(QStringLiteral("a few thunderstorms"), Thunderstorm);
-    forecastList.insert(QStringLiteral("a few wet flurries"), RainSnow);
-    forecastList.insert(QStringLiteral("a few wet flurries or rain showers"), RainSnow);
-    forecastList.insert(QStringLiteral("a mix of sun and cloud"), PartlyCloudyDay);
-    forecastList.insert(QStringLiteral("cloudy with sunny periods"), PartlyCloudyDay);
-    forecastList.insert(QStringLiteral("partly cloudy"), PartlyCloudyDay);
-    forecastList.insert(QStringLiteral("mainly sunny"), FewCloudsDay);
-    forecastList.insert(QStringLiteral("sunny"), ClearDay);
-    forecastList.insert(QStringLiteral("blizzard"), Snow);
-    forecastList.insert(QStringLiteral("clear"), ClearNight);
-    forecastList.insert(QStringLiteral("cloudy"), Overcast);
-    forecastList.insert(QStringLiteral("drizzle"), LightRain);
-    forecastList.insert(QStringLiteral("drizzle mixed with freezing drizzle"), FreezingDrizzle);
-    forecastList.insert(QStringLiteral("drizzle mixed with rain"), LightRain);
-    forecastList.insert(QStringLiteral("drizzle or freezing drizzle"), LightRain);
-    forecastList.insert(QStringLiteral("drizzle or rain"), LightRain);
-    forecastList.insert(QStringLiteral("flurries"), Flurries);
-    forecastList.insert(QStringLiteral("flurries at times heavy"), Flurries);
-    forecastList.insert(QStringLiteral("flurries at times heavy or rain snowers"), RainSnow);
-    forecastList.insert(QStringLiteral("flurries mixed with ice pellets"), FreezingRain);
-    forecastList.insert(QStringLiteral("flurries or ice pellets"), FreezingRain);
-    forecastList.insert(QStringLiteral("flurries or rain showers"), RainSnow);
-    forecastList.insert(QStringLiteral("flurries or thundershowers"), Flurries);
-    forecastList.insert(QStringLiteral("fog"), Mist);
-    forecastList.insert(QStringLiteral("fog developing"), Mist);
-    forecastList.insert(QStringLiteral("fog dissipating"), Mist);
-    forecastList.insert(QStringLiteral("fog patches"), Mist);
-    forecastList.insert(QStringLiteral("freezing drizzle"), FreezingDrizzle);
-    forecastList.insert(QStringLiteral("freezing rain"), FreezingRain);
-    forecastList.insert(QStringLiteral("freezing rain mixed with rain"), FreezingRain);
-    forecastList.insert(QStringLiteral("freezing rain mixed with snow"), FreezingRain);
-    forecastList.insert(QStringLiteral("freezing rain or ice pellets"), FreezingRain);
-    forecastList.insert(QStringLiteral("freezing rain or rain"), FreezingRain);
-    forecastList.insert(QStringLiteral("freezing rain or snow"), FreezingRain);
-    forecastList.insert(QStringLiteral("ice fog"), Mist);
-    forecastList.insert(QStringLiteral("ice fog developing"), Mist);
-    forecastList.insert(QStringLiteral("ice fog dissipating"), Mist);
-    forecastList.insert(QStringLiteral("ice pellet"), Hail);
-    forecastList.insert(QStringLiteral("ice pellet mixed with freezing rain"), Hail);
-    forecastList.insert(QStringLiteral("ice pellet mixed with snow"), Hail);
-    forecastList.insert(QStringLiteral("ice pellet or snow"), RainSnow);
-    forecastList.insert(QStringLiteral("light snow"), LightSnow);
-    forecastList.insert(QStringLiteral("light snow and blizzard"), LightSnow);
-    forecastList.insert(QStringLiteral("light snow and blizzard and blowing snow"), Snow);
-    forecastList.insert(QStringLiteral("light snow and blowing snow"), LightSnow);
-    forecastList.insert(QStringLiteral("light snow mixed with freezing drizzle"), FreezingDrizzle);
-    forecastList.insert(QStringLiteral("light snow mixed with freezing rain"), FreezingRain);
-    forecastList.insert(QStringLiteral("light snow or ice pellets"), LightSnow);
-    forecastList.insert(QStringLiteral("light snow or rain"), RainSnow);
-    forecastList.insert(QStringLiteral("light wet snow"), RainSnow);
-    forecastList.insert(QStringLiteral("light wet snow or rain"), RainSnow);
-    forecastList.insert(QStringLiteral("local snow squalls"), Snow);
-    forecastList.insert(QStringLiteral("near blizzard"), Snow);
-    forecastList.insert(QStringLiteral("overcast"), Overcast);
-    forecastList.insert(QStringLiteral("increasing cloudiness"), Overcast);
-    forecastList.insert(QStringLiteral("increasing clouds"), Overcast);
-    forecastList.insert(QStringLiteral("periods of drizzle"), LightRain);
-    forecastList.insert(QStringLiteral("periods of drizzle mixed with freezing drizzle"), FreezingDrizzle);
-    forecastList.insert(QStringLiteral("periods of drizzle mixed with rain"), LightRain);
-    forecastList.insert(QStringLiteral("periods of drizzle or freezing drizzle"), FreezingDrizzle);
-    forecastList.insert(QStringLiteral("periods of drizzle or rain"), LightRain);
-    forecastList.insert(QStringLiteral("periods of freezing drizzle"), FreezingDrizzle);
-    forecastList.insert(QStringLiteral("periods of freezing drizzle or drizzle"), FreezingDrizzle);
-    forecastList.insert(QStringLiteral("periods of freezing drizzle or rain"), FreezingDrizzle);
-    forecastList.insert(QStringLiteral("periods of freezing rain"), FreezingRain);
-    forecastList.insert(QStringLiteral("periods of freezing rain mixed with ice pellets"), FreezingRain);
-    forecastList.insert(QStringLiteral("periods of freezing rain mixed with rain"), FreezingRain);
-    forecastList.insert(QStringLiteral("periods of freezing rain mixed with snow"), FreezingRain);
-    forecastList.insert(QStringLiteral("periods of freezing rain mixed with freezing drizzle"), FreezingRain);
-    forecastList.insert(QStringLiteral("periods of freezing rain or ice pellets"), FreezingRain);
-    forecastList.insert(QStringLiteral("periods of freezing rain or rain"), FreezingRain);
-    forecastList.insert(QStringLiteral("periods of freezing rain or snow"), FreezingRain);
-    forecastList.insert(QStringLiteral("periods of ice pellet"), Hail);
-    forecastList.insert(QStringLiteral("periods of ice pellet mixed with freezing rain"), Hail);
-    forecastList.insert(QStringLiteral("periods of ice pellet mixed with snow"), Hail);
-    forecastList.insert(QStringLiteral("periods of ice pellet or freezing rain"), Hail);
-    forecastList.insert(QStringLiteral("periods of ice pellet or snow"), Hail);
-    forecastList.insert(QStringLiteral("periods of light snow"), LightSnow);
-    forecastList.insert(QStringLiteral("periods of light snow and blizzard"), Snow);
-    forecastList.insert(QStringLiteral("periods of light snow and blizzard and blowing snow"), Snow);
-    forecastList.insert(QStringLiteral("periods of light snow and blowing snow"), LightSnow);
-    forecastList.insert(QStringLiteral("periods of light snow mixed with freezing drizzle"), RainSnow);
-    forecastList.insert(QStringLiteral("periods of light snow mixed with freezing rain"), RainSnow);
-    forecastList.insert(QStringLiteral("periods of light snow mixed with ice pelletS"), LightSnow);
-    forecastList.insert(QStringLiteral("periods of light snow mixed with rain"), RainSnow);
-    forecastList.insert(QStringLiteral("periods of light snow or freezing drizzle"), RainSnow);
-    forecastList.insert(QStringLiteral("periods of light snow or freezing rain"), RainSnow);
-    forecastList.insert(QStringLiteral("periods of light snow or ice pellets"), LightSnow);
-    forecastList.insert(QStringLiteral("periods of light snow or rain"), RainSnow);
-    forecastList.insert(QStringLiteral("periods of light wet snow"), LightSnow);
-    forecastList.insert(QStringLiteral("periods of light wet snow mixed with rain"), RainSnow);
-    forecastList.insert(QStringLiteral("periods of light wet snow or rain"), RainSnow);
-    forecastList.insert(QStringLiteral("periods of rain"), Rain);
-    forecastList.insert(QStringLiteral("periods of rain mixed with freezing rain"), Rain);
-    forecastList.insert(QStringLiteral("periods of rain mixed with snow"), RainSnow);
-    forecastList.insert(QStringLiteral("periods of rain or drizzle"), Rain);
-    forecastList.insert(QStringLiteral("periods of rain or freezing rain"), Rain);
-    forecastList.insert(QStringLiteral("periods of rain or thundershowers"), Showers);
-    forecastList.insert(QStringLiteral("periods of rain or thunderstorms"), Thunderstorm);
-    forecastList.insert(QStringLiteral("periods of rain or snow"), RainSnow);
-    forecastList.insert(QStringLiteral("periods of snow"), Snow);
-    forecastList.insert(QStringLiteral("periods of snow and blizzard"), Snow);
-    forecastList.insert(QStringLiteral("periods of snow and blizzard and blowing snow"), Snow);
-    forecastList.insert(QStringLiteral("periods of snow and blowing snow"), Snow);
-    forecastList.insert(QStringLiteral("periods of snow mixed with freezing drizzle"), RainSnow);
-    forecastList.insert(QStringLiteral("periods of snow mixed with freezing rain"), RainSnow);
-    forecastList.insert(QStringLiteral("periods of snow mixed with ice pellets"), Snow);
-    forecastList.insert(QStringLiteral("periods of snow mixed with rain"), RainSnow);
-    forecastList.insert(QStringLiteral("periods of snow or freezing drizzle"), RainSnow);
-    forecastList.insert(QStringLiteral("periods of snow or freezing rain"), RainSnow);
-    forecastList.insert(QStringLiteral("periods of snow or ice pellets"), Snow);
-    forecastList.insert(QStringLiteral("periods of snow or rain"), RainSnow);
-    forecastList.insert(QStringLiteral("periods of rain or snow"), RainSnow);
-    forecastList.insert(QStringLiteral("periods of wet snow"), Snow);
-    forecastList.insert(QStringLiteral("periods of wet snow mixed with rain"), RainSnow);
-    forecastList.insert(QStringLiteral("periods of wet snow or rain"), RainSnow);
-    forecastList.insert(QStringLiteral("rain"), Rain);
-    forecastList.insert(QStringLiteral("rain at times heavy"), Rain);
-    forecastList.insert(QStringLiteral("rain at times heavy mixed with freezing rain"), FreezingRain);
-    forecastList.insert(QStringLiteral("rain at times heavy mixed with snow"), RainSnow);
-    forecastList.insert(QStringLiteral("rain at times heavy or drizzle"), Rain);
-    forecastList.insert(QStringLiteral("rain at times heavy or freezing rain"), Rain);
-    forecastList.insert(QStringLiteral("rain at times heavy or snow"), RainSnow);
-    forecastList.insert(QStringLiteral("rain at times heavy or thundershowers"), Showers);
-    forecastList.insert(QStringLiteral("rain at times heavy or thunderstorms"), Thunderstorm);
-    forecastList.insert(QStringLiteral("rain mixed with freezing rain"), FreezingRain);
-    forecastList.insert(QStringLiteral("rain mixed with snow"), RainSnow);
-    forecastList.insert(QStringLiteral("rain or drizzle"), Rain);
-    forecastList.insert(QStringLiteral("rain or freezing rain"), Rain);
-    forecastList.insert(QStringLiteral("rain or snow"), RainSnow);
-    forecastList.insert(QStringLiteral("rain or thundershowers"), Showers);
-    forecastList.insert(QStringLiteral("rain or thunderstorms"), Thunderstorm);
-    forecastList.insert(QStringLiteral("rain showers or flurries"), RainSnow);
-    forecastList.insert(QStringLiteral("rain showers or wet flurries"), RainSnow);
-    forecastList.insert(QStringLiteral("showers"), Showers);
-    forecastList.insert(QStringLiteral("showers at times heavy"), Showers);
-    forecastList.insert(QStringLiteral("showers at times heavy or thundershowers"), Showers);
-    forecastList.insert(QStringLiteral("showers at times heavy or thunderstorms"), Thunderstorm);
-    forecastList.insert(QStringLiteral("showers or drizzle"), Showers);
-    forecastList.insert(QStringLiteral("showers or thundershowers"), Thunderstorm);
-    forecastList.insert(QStringLiteral("showers or thunderstorms"), Thunderstorm);
-    forecastList.insert(QStringLiteral("smoke"), NotAvailable);
-    forecastList.insert(QStringLiteral("snow"), Snow);
-    forecastList.insert(QStringLiteral("snow and blizzard"), Snow);
-    forecastList.insert(QStringLiteral("snow and blizzard and blowing snow"), Snow);
-    forecastList.insert(QStringLiteral("snow and blowing snow"), Snow);
-    forecastList.insert(QStringLiteral("snow at times heavy"), Snow);
-    forecastList.insert(QStringLiteral("snow at times heavy and blizzard"), Snow);
-    forecastList.insert(QStringLiteral("snow at times heavy and blowing snow"), Snow);
-    forecastList.insert(QStringLiteral("snow at times heavy mixed with freezing drizzle"), RainSnow);
-    forecastList.insert(QStringLiteral("snow at times heavy mixed with freezing rain"), RainSnow);
-    forecastList.insert(QStringLiteral("snow at times heavy mixed with ice pellets"), Snow);
-    forecastList.insert(QStringLiteral("snow at times heavy mixed with rain"), RainSnow);
-    forecastList.insert(QStringLiteral("snow at times heavy or freezing rain"), RainSnow);
-    forecastList.insert(QStringLiteral("snow at times heavy or ice pellets"), Snow);
-    forecastList.insert(QStringLiteral("snow at times heavy or rain"), RainSnow);
-    forecastList.insert(QStringLiteral("snow mixed with freezing drizzle"), RainSnow);
-    forecastList.insert(QStringLiteral("snow mixed with freezing rain"), RainSnow);
-    forecastList.insert(QStringLiteral("snow mixed with ice pellets"), Snow);
-    forecastList.insert(QStringLiteral("snow mixed with rain"), RainSnow);
-    forecastList.insert(QStringLiteral("snow or freezing drizzle"), RainSnow);
-    forecastList.insert(QStringLiteral("snow or freezing rain"), RainSnow);
-    forecastList.insert(QStringLiteral("snow or ice pellets"), Snow);
-    forecastList.insert(QStringLiteral("snow or rain"), RainSnow);
-    forecastList.insert(QStringLiteral("snow squalls"), Snow);
-    forecastList.insert(QStringLiteral("sunny"), ClearDay);
-    forecastList.insert(QStringLiteral("sunny with cloudy periods"), PartlyCloudyDay);
-    forecastList.insert(QStringLiteral("thunderstorms"), Thunderstorm);
-    forecastList.insert(QStringLiteral("thunderstorms and possible hail"), Thunderstorm);
-    forecastList.insert(QStringLiteral("wet flurries"), Flurries);
-    forecastList.insert(QStringLiteral("wet flurries at times heavy"), Flurries);
-    forecastList.insert(QStringLiteral("wet flurries at times heavy or rain snowers"), RainSnow);
-    forecastList.insert(QStringLiteral("wet flurries or rain showers"), RainSnow);
-    forecastList.insert(QStringLiteral("wet snow"), Snow);
-    forecastList.insert(QStringLiteral("wet snow at times heavy"), Snow);
-    forecastList.insert(QStringLiteral("wet snow at times heavy mixed with rain"), RainSnow);
-    forecastList.insert(QStringLiteral("wet snow mixed with rain"), RainSnow);
-    forecastList.insert(QStringLiteral("wet snow or rain"), RainSnow);
-    forecastList.insert(QStringLiteral("windy"), NotAvailable);
+        // Abbreviated forecast descriptions
+        { QStringLiteral("a few flurries"), Flurries },
+        { QStringLiteral("a few flurries mixed with ice pellets"), RainSnow },
+        { QStringLiteral("a few flurries or rain showers"), RainSnow },
+        { QStringLiteral("a few flurries or thundershowers"), RainSnow },
+        { QStringLiteral("a few rain showers or flurries"), RainSnow },
+        { QStringLiteral("a few rain showers or wet flurries"), RainSnow },
+        { QStringLiteral("a few showers"), LightRain },
+        { QStringLiteral("a few showers or drizzle"), LightRain },
+        { QStringLiteral("a few showers or thundershowers"), Thunderstorm },
+        { QStringLiteral("a few showers or thunderstorms"), Thunderstorm },
+        { QStringLiteral("a few thundershowers"), Thunderstorm },
+        { QStringLiteral("a few thunderstorms"), Thunderstorm },
+        { QStringLiteral("a few wet flurries"), RainSnow },
+        { QStringLiteral("a few wet flurries or rain showers"), RainSnow },
+        { QStringLiteral("a mix of sun and cloud"), PartlyCloudyDay },
+        { QStringLiteral("cloudy with sunny periods"), PartlyCloudyDay },
+        { QStringLiteral("partly cloudy"), PartlyCloudyDay },
+        { QStringLiteral("mainly sunny"), FewCloudsDay },
+        { QStringLiteral("sunny"), ClearDay },
+        { QStringLiteral("blizzard"), Snow },
+        { QStringLiteral("clear"), ClearNight },
+        { QStringLiteral("cloudy"), Overcast },
+        { QStringLiteral("drizzle"), LightRain },
+        { QStringLiteral("drizzle mixed with freezing drizzle"), FreezingDrizzle },
+        { QStringLiteral("drizzle mixed with rain"), LightRain },
+        { QStringLiteral("drizzle or freezing drizzle"), LightRain },
+        { QStringLiteral("drizzle or rain"), LightRain },
+        { QStringLiteral("flurries"), Flurries },
+        { QStringLiteral("flurries at times heavy"), Flurries },
+        { QStringLiteral("flurries at times heavy or rain snowers"), RainSnow },
+        { QStringLiteral("flurries mixed with ice pellets"), FreezingRain },
+        { QStringLiteral("flurries or ice pellets"), FreezingRain },
+        { QStringLiteral("flurries or rain showers"), RainSnow },
+        { QStringLiteral("flurries or thundershowers"), Flurries },
+        { QStringLiteral("fog"), Mist },
+        { QStringLiteral("fog developing"), Mist },
+        { QStringLiteral("fog dissipating"), Mist },
+        { QStringLiteral("fog patches"), Mist },
+        { QStringLiteral("freezing drizzle"), FreezingDrizzle },
+        { QStringLiteral("freezing rain"), FreezingRain },
+        { QStringLiteral("freezing rain mixed with rain"), FreezingRain },
+        { QStringLiteral("freezing rain mixed with snow"), FreezingRain },
+        { QStringLiteral("freezing rain or ice pellets"), FreezingRain },
+        { QStringLiteral("freezing rain or rain"), FreezingRain },
+        { QStringLiteral("freezing rain or snow"), FreezingRain },
+        { QStringLiteral("ice fog"), Mist },
+        { QStringLiteral("ice fog developing"), Mist },
+        { QStringLiteral("ice fog dissipating"), Mist },
+        { QStringLiteral("ice pellet"), Hail },
+        { QStringLiteral("ice pellet mixed with freezing rain"), Hail },
+        { QStringLiteral("ice pellet mixed with snow"), Hail },
+        { QStringLiteral("ice pellet or snow"), RainSnow },
+        { QStringLiteral("light snow"), LightSnow },
+        { QStringLiteral("light snow and blizzard"), LightSnow },
+        { QStringLiteral("light snow and blizzard and blowing snow"), Snow },
+        { QStringLiteral("light snow and blowing snow"), LightSnow },
+        { QStringLiteral("light snow mixed with freezing drizzle"), FreezingDrizzle },
+        { QStringLiteral("light snow mixed with freezing rain"), FreezingRain },
+        { QStringLiteral("light snow or ice pellets"), LightSnow },
+        { QStringLiteral("light snow or rain"), RainSnow },
+        { QStringLiteral("light wet snow"), RainSnow },
+        { QStringLiteral("light wet snow or rain"), RainSnow },
+        { QStringLiteral("local snow squalls"), Snow },
+        { QStringLiteral("near blizzard"), Snow },
+        { QStringLiteral("overcast"), Overcast },
+        { QStringLiteral("increasing cloudiness"), Overcast },
+        { QStringLiteral("increasing clouds"), Overcast },
+        { QStringLiteral("periods of drizzle"), LightRain },
+        { QStringLiteral("periods of drizzle mixed with freezing drizzle"), FreezingDrizzle },
+        { QStringLiteral("periods of drizzle mixed with rain"), LightRain },
+        { QStringLiteral("periods of drizzle or freezing drizzle"), FreezingDrizzle },
+        { QStringLiteral("periods of drizzle or rain"), LightRain },
+        { QStringLiteral("periods of freezing drizzle"), FreezingDrizzle },
+        { QStringLiteral("periods of freezing drizzle or drizzle"), FreezingDrizzle },
+        { QStringLiteral("periods of freezing drizzle or rain"), FreezingDrizzle },
+        { QStringLiteral("periods of freezing rain"), FreezingRain },
+        { QStringLiteral("periods of freezing rain mixed with ice pellets"), FreezingRain },
+        { QStringLiteral("periods of freezing rain mixed with rain"), FreezingRain },
+        { QStringLiteral("periods of freezing rain mixed with snow"), FreezingRain },
+        { QStringLiteral("periods of freezing rain mixed with freezing drizzle"), FreezingRain },
+        { QStringLiteral("periods of freezing rain or ice pellets"), FreezingRain },
+        { QStringLiteral("periods of freezing rain or rain"), FreezingRain },
+        { QStringLiteral("periods of freezing rain or snow"), FreezingRain },
+        { QStringLiteral("periods of ice pellet"), Hail },
+        { QStringLiteral("periods of ice pellet mixed with freezing rain"), Hail },
+        { QStringLiteral("periods of ice pellet mixed with snow"), Hail },
+        { QStringLiteral("periods of ice pellet or freezing rain"), Hail },
+        { QStringLiteral("periods of ice pellet or snow"), Hail },
+        { QStringLiteral("periods of light snow"), LightSnow },
+        { QStringLiteral("periods of light snow and blizzard"), Snow },
+        { QStringLiteral("periods of light snow and blizzard and blowing snow"), Snow },
+        { QStringLiteral("periods of light snow and blowing snow"), LightSnow },
+        { QStringLiteral("periods of light snow mixed with freezing drizzle"), RainSnow },
+        { QStringLiteral("periods of light snow mixed with freezing rain"), RainSnow },
+        { QStringLiteral("periods of light snow mixed with ice pelletS"), LightSnow },
+        { QStringLiteral("periods of light snow mixed with rain"), RainSnow },
+        { QStringLiteral("periods of light snow or freezing drizzle"), RainSnow },
+        { QStringLiteral("periods of light snow or freezing rain"), RainSnow },
+        { QStringLiteral("periods of light snow or ice pellets"), LightSnow },
+        { QStringLiteral("periods of light snow or rain"), RainSnow },
+        { QStringLiteral("periods of light wet snow"), LightSnow },
+        { QStringLiteral("periods of light wet snow mixed with rain"), RainSnow },
+        { QStringLiteral("periods of light wet snow or rain"), RainSnow },
+        { QStringLiteral("periods of rain"), Rain },
+        { QStringLiteral("periods of rain mixed with freezing rain"), Rain },
+        { QStringLiteral("periods of rain mixed with snow"), RainSnow },
+        { QStringLiteral("periods of rain or drizzle"), Rain },
+        { QStringLiteral("periods of rain or freezing rain"), Rain },
+        { QStringLiteral("periods of rain or thundershowers"), Showers },
+        { QStringLiteral("periods of rain or thunderstorms"), Thunderstorm },
+        { QStringLiteral("periods of rain or snow"), RainSnow },
+        { QStringLiteral("periods of snow"), Snow },
+        { QStringLiteral("periods of snow and blizzard"), Snow },
+        { QStringLiteral("periods of snow and blizzard and blowing snow"), Snow },
+        { QStringLiteral("periods of snow and blowing snow"), Snow },
+        { QStringLiteral("periods of snow mixed with freezing drizzle"), RainSnow },
+        { QStringLiteral("periods of snow mixed with freezing rain"), RainSnow },
+        { QStringLiteral("periods of snow mixed with ice pellets"), Snow },
+        { QStringLiteral("periods of snow mixed with rain"), RainSnow },
+        { QStringLiteral("periods of snow or freezing drizzle"), RainSnow },
+        { QStringLiteral("periods of snow or freezing rain"), RainSnow },
+        { QStringLiteral("periods of snow or ice pellets"), Snow },
+        { QStringLiteral("periods of snow or rain"), RainSnow },
+        { QStringLiteral("periods of rain or snow"), RainSnow },
+        { QStringLiteral("periods of wet snow"), Snow },
+        { QStringLiteral("periods of wet snow mixed with rain"), RainSnow },
+        { QStringLiteral("periods of wet snow or rain"), RainSnow },
+        { QStringLiteral("rain"), Rain },
+        { QStringLiteral("rain at times heavy"), Rain },
+        { QStringLiteral("rain at times heavy mixed with freezing rain"), FreezingRain },
+        { QStringLiteral("rain at times heavy mixed with snow"), RainSnow },
+        { QStringLiteral("rain at times heavy or drizzle"), Rain },
+        { QStringLiteral("rain at times heavy or freezing rain"), Rain },
+        { QStringLiteral("rain at times heavy or snow"), RainSnow },
+        { QStringLiteral("rain at times heavy or thundershowers"), Showers },
+        { QStringLiteral("rain at times heavy or thunderstorms"), Thunderstorm },
+        { QStringLiteral("rain mixed with freezing rain"), FreezingRain },
+        { QStringLiteral("rain mixed with snow"), RainSnow },
+        { QStringLiteral("rain or drizzle"), Rain },
+        { QStringLiteral("rain or freezing rain"), Rain },
+        { QStringLiteral("rain or snow"), RainSnow },
+        { QStringLiteral("rain or thundershowers"), Showers },
+        { QStringLiteral("rain or thunderstorms"), Thunderstorm },
+        { QStringLiteral("rain showers or flurries"), RainSnow },
+        { QStringLiteral("rain showers or wet flurries"), RainSnow },
+        { QStringLiteral("showers"), Showers },
+        { QStringLiteral("showers at times heavy"), Showers },
+        { QStringLiteral("showers at times heavy or thundershowers"), Showers },
+        { QStringLiteral("showers at times heavy or thunderstorms"), Thunderstorm },
+        { QStringLiteral("showers or drizzle"), Showers },
+        { QStringLiteral("showers or thundershowers"), Thunderstorm },
+        { QStringLiteral("showers or thunderstorms"), Thunderstorm },
+        { QStringLiteral("smoke"), NotAvailable },
+        { QStringLiteral("snow"), Snow },
+        { QStringLiteral("snow and blizzard"), Snow },
+        { QStringLiteral("snow and blizzard and blowing snow"), Snow },
+        { QStringLiteral("snow and blowing snow"), Snow },
+        { QStringLiteral("snow at times heavy"), Snow },
+        { QStringLiteral("snow at times heavy and blizzard"), Snow },
+        { QStringLiteral("snow at times heavy and blowing snow"), Snow },
+        { QStringLiteral("snow at times heavy mixed with freezing drizzle"), RainSnow },
+        { QStringLiteral("snow at times heavy mixed with freezing rain"), RainSnow },
+        { QStringLiteral("snow at times heavy mixed with ice pellets"), Snow },
+        { QStringLiteral("snow at times heavy mixed with rain"), RainSnow },
+        { QStringLiteral("snow at times heavy or freezing rain"), RainSnow },
+        { QStringLiteral("snow at times heavy or ice pellets"), Snow },
+        { QStringLiteral("snow at times heavy or rain"), RainSnow },
+        { QStringLiteral("snow mixed with freezing drizzle"), RainSnow },
+        { QStringLiteral("snow mixed with freezing rain"), RainSnow },
+        { QStringLiteral("snow mixed with ice pellets"), Snow },
+        { QStringLiteral("snow mixed with rain"), RainSnow },
+        { QStringLiteral("snow or freezing drizzle"), RainSnow },
+        { QStringLiteral("snow or freezing rain"), RainSnow },
+        { QStringLiteral("snow or ice pellets"), Snow },
+        { QStringLiteral("snow or rain"), RainSnow },
+        { QStringLiteral("snow squalls"), Snow },
+        { QStringLiteral("sunny"), ClearDay },
+        { QStringLiteral("sunny with cloudy periods"), PartlyCloudyDay },
+        { QStringLiteral("thunderstorms"), Thunderstorm },
+        { QStringLiteral("thunderstorms and possible hail"), Thunderstorm },
+        { QStringLiteral("wet flurries"), Flurries },
+        { QStringLiteral("wet flurries at times heavy"), Flurries },
+        { QStringLiteral("wet flurries at times heavy or rain snowers"), RainSnow },
+        { QStringLiteral("wet flurries or rain showers"), RainSnow },
+        { QStringLiteral("wet snow"), Snow },
+        { QStringLiteral("wet snow at times heavy"), Snow },
+        { QStringLiteral("wet snow at times heavy mixed with rain"), RainSnow },
+        { QStringLiteral("wet snow mixed with rain"), RainSnow },
+        { QStringLiteral("wet snow or rain"), RainSnow },
+        { QStringLiteral("windy"), NotAvailable },
 
-    forecastList.insert(QStringLiteral("chance of drizzle mixed with freezing drizzle"), LightRain);
-    forecastList.insert(QStringLiteral("chance of flurries mixed with ice pellets"), Flurries);
-    forecastList.insert(QStringLiteral("chance of flurries or ice pellets"), Flurries);
-    forecastList.insert(QStringLiteral("chance of flurries or rain showers"), RainSnow);
-    forecastList.insert(QStringLiteral("chance of flurries or thundershowers"), RainSnow);
-    forecastList.insert(QStringLiteral("chance of freezing drizzle"), FreezingDrizzle);
-    forecastList.insert(QStringLiteral("chance of freezing rain"), FreezingRain);
-    forecastList.insert(QStringLiteral("chance of freezing rain mixed with snow"), RainSnow);
-    forecastList.insert(QStringLiteral("chance of freezing rain or rain"), FreezingRain);
-    forecastList.insert(QStringLiteral("chance of freezing rain or snow"), RainSnow);
-    forecastList.insert(QStringLiteral("chance of light snow and blowing snow"), LightSnow);
-    forecastList.insert(QStringLiteral("chance of light snow mixed with freezing drizzle"), LightSnow);
-    forecastList.insert(QStringLiteral("chance of light snow mixed with ice pellets"), LightSnow);
-    forecastList.insert(QStringLiteral("chance of light snow mixed with rain"), RainSnow);
-    forecastList.insert(QStringLiteral("chance of light snow or freezing rain"), RainSnow);
-    forecastList.insert(QStringLiteral("chance of light snow or ice pellets"), LightSnow);
-    forecastList.insert(QStringLiteral("chance of light snow or rain"), RainSnow);
-    forecastList.insert(QStringLiteral("chance of light wet snow"), Snow);
-    forecastList.insert(QStringLiteral("chance of rain"), Rain);
-    forecastList.insert(QStringLiteral("chance of rain at times heavy"), Rain);
-    forecastList.insert(QStringLiteral("chance of rain mixed with snow"), RainSnow);
-    forecastList.insert(QStringLiteral("chance of rain or drizzle"), Rain);
-    forecastList.insert(QStringLiteral("chance of rain or freezing rain"), Rain);
-    forecastList.insert(QStringLiteral("chance of rain or snow"), RainSnow);
-    forecastList.insert(QStringLiteral("chance of rain showers or flurries"), RainSnow);
-    forecastList.insert(QStringLiteral("chance of rain showers or wet flurries"), RainSnow);
-    forecastList.insert(QStringLiteral("chance of severe thunderstorms"), Thunderstorm);
-    forecastList.insert(QStringLiteral("chance of showers at times heavy"), Rain);
-    forecastList.insert(QStringLiteral("chance of showers at times heavy or thundershowers"), Thunderstorm);
-    forecastList.insert(QStringLiteral("chance of showers at times heavy or thunderstorms"), Thunderstorm);
-    forecastList.insert(QStringLiteral("chance of showers or thundershowers"), Thunderstorm);
-    forecastList.insert(QStringLiteral("chance of showers or thunderstorms"), Thunderstorm);
-    forecastList.insert(QStringLiteral("chance of snow"), Snow);
-    forecastList.insert(QStringLiteral("chance of snow and blizzard"), Snow);
-    forecastList.insert(QStringLiteral("chance of snow mixed with freezing drizzle"), Snow);
-    forecastList.insert(QStringLiteral("chance of snow mixed with freezing rain"), RainSnow);
-    forecastList.insert(QStringLiteral("chance of snow mixed with rain"), RainSnow);
-    forecastList.insert(QStringLiteral("chance of snow or rain"), RainSnow);
-    forecastList.insert(QStringLiteral("chance of snow squalls"), Snow);
-    forecastList.insert(QStringLiteral("chance of thundershowers"), Showers);
-    forecastList.insert(QStringLiteral("chance of thunderstorms"), Thunderstorm);
-    forecastList.insert(QStringLiteral("chance of thunderstorms and possible hail"), Thunderstorm);
-    forecastList.insert(QStringLiteral("chance of wet flurries"), Flurries);
-    forecastList.insert(QStringLiteral("chance of wet flurries at times heavy"), Flurries);
-    forecastList.insert(QStringLiteral("chance of wet flurries or rain showers"), RainSnow);
-    forecastList.insert(QStringLiteral("chance of wet snow"), Snow);
-    forecastList.insert(QStringLiteral("chance of wet snow mixed with rain"), RainSnow);
-    forecastList.insert(QStringLiteral("chance of wet snow or rain"), RainSnow);
-
-    return forecastList;
+        { QStringLiteral("chance of drizzle mixed with freezing drizzle"), LightRain },
+        { QStringLiteral("chance of flurries mixed with ice pellets"), Flurries },
+        { QStringLiteral("chance of flurries or ice pellets"), Flurries },
+        { QStringLiteral("chance of flurries or rain showers"), RainSnow },
+        { QStringLiteral("chance of flurries or thundershowers"), RainSnow },
+        { QStringLiteral("chance of freezing drizzle"), FreezingDrizzle },
+        { QStringLiteral("chance of freezing rain"), FreezingRain },
+        { QStringLiteral("chance of freezing rain mixed with snow"), RainSnow },
+        { QStringLiteral("chance of freezing rain or rain"), FreezingRain },
+        { QStringLiteral("chance of freezing rain or snow"), RainSnow },
+        { QStringLiteral("chance of light snow and blowing snow"), LightSnow },
+        { QStringLiteral("chance of light snow mixed with freezing drizzle"), LightSnow },
+        { QStringLiteral("chance of light snow mixed with ice pellets"), LightSnow },
+        { QStringLiteral("chance of light snow mixed with rain"), RainSnow },
+        { QStringLiteral("chance of light snow or freezing rain"), RainSnow },
+        { QStringLiteral("chance of light snow or ice pellets"), LightSnow },
+        { QStringLiteral("chance of light snow or rain"), RainSnow },
+        { QStringLiteral("chance of light wet snow"), Snow },
+        { QStringLiteral("chance of rain"), Rain },
+        { QStringLiteral("chance of rain at times heavy"), Rain },
+        { QStringLiteral("chance of rain mixed with snow"), RainSnow },
+        { QStringLiteral("chance of rain or drizzle"), Rain },
+        { QStringLiteral("chance of rain or freezing rain"), Rain },
+        { QStringLiteral("chance of rain or snow"), RainSnow },
+        { QStringLiteral("chance of rain showers or flurries"), RainSnow },
+        { QStringLiteral("chance of rain showers or wet flurries"), RainSnow },
+        { QStringLiteral("chance of severe thunderstorms"), Thunderstorm },
+        { QStringLiteral("chance of showers at times heavy"), Rain },
+        { QStringLiteral("chance of showers at times heavy or thundershowers"), Thunderstorm },
+        { QStringLiteral("chance of showers at times heavy or thunderstorms"), Thunderstorm },
+        { QStringLiteral("chance of showers or thundershowers"), Thunderstorm },
+        { QStringLiteral("chance of showers or thunderstorms"), Thunderstorm },
+        { QStringLiteral("chance of snow"), Snow },
+        { QStringLiteral("chance of snow and blizzard"), Snow },
+        { QStringLiteral("chance of snow mixed with freezing drizzle"), Snow },
+        { QStringLiteral("chance of snow mixed with freezing rain"), RainSnow },
+        { QStringLiteral("chance of snow mixed with rain"), RainSnow },
+        { QStringLiteral("chance of snow or rain"), RainSnow },
+        { QStringLiteral("chance of snow squalls"), Snow },
+        { QStringLiteral("chance of thundershowers"), Showers },
+        { QStringLiteral("chance of thunderstorms"), Thunderstorm },
+        { QStringLiteral("chance of thunderstorms and possible hail"), Thunderstorm },
+        { QStringLiteral("chance of wet flurries"), Flurries },
+        { QStringLiteral("chance of wet flurries at times heavy"), Flurries },
+        { QStringLiteral("chance of wet flurries or rain showers"), RainSnow },
+        { QStringLiteral("chance of wet snow"), Snow },
+        { QStringLiteral("chance of wet snow mixed with rain"), RainSnow },
+        { QStringLiteral("chance of wet snow or rain"), RainSnow },
+    };
 }
 
 QMap<QString, IonInterface::ConditionIcons> const& EnvCanadaIon::conditionIcons() const

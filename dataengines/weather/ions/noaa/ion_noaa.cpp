@@ -53,17 +53,17 @@ WeatherData::WeatherData()
 
 QMap<QString, IonInterface::WindDirections> NOAAIon::setupWindIconMappings() const
 {
-    QMap<QString, WindDirections> windDir;
-    windDir[QStringLiteral("north")] = N;
-    windDir[QStringLiteral("northeast")] = NE;
-    windDir[QStringLiteral("south")] = S;
-    windDir[QStringLiteral("southwest")] = SW;
-    windDir[QStringLiteral("east")] = E;
-    windDir[QStringLiteral("southeast")] = SE;
-    windDir[QStringLiteral("west")] = W;
-    windDir[QStringLiteral("northwest")] = NW;
-    windDir[QStringLiteral("calm")] = VR;
-    return windDir;
+    return QMap<QString, WindDirections> {
+        { QStringLiteral("north"), N },
+        { QStringLiteral("northeast"), NE },
+        { QStringLiteral("south"), S },
+        { QStringLiteral("southwest"), SW },
+        { QStringLiteral("east"), E },
+        { QStringLiteral("southeast"), SE },
+        { QStringLiteral("west"), W },
+        { QStringLiteral("northwest"), NW },
+        { QStringLiteral("calm"), VR },
+    };
 }
 
 QMap<QString, IonInterface::ConditionIcons> NOAAIon::setupConditionIconMappings() const
