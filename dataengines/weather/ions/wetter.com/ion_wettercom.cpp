@@ -556,7 +556,7 @@ void WetterComIon::parseWeatherForecast(const QString& source, QXmlStreamReader&
             if (elementName == QLatin1String("date")) {
                 // we have parsed a complete day
 
-                forecastPeriod->period = QDateTime::fromTime_t(summaryUtcTime);
+                forecastPeriod->period = QDateTime::fromSecsSinceEpoch(summaryUtcTime, Qt::LocalTime);
                 QString weatherString = QString::number(summaryWeather);
                 forecastPeriod->iconName = getWeatherIcon(dayIcons(),
                                            weatherString);
@@ -579,13 +579,13 @@ void WetterComIon::parseWeatherForecast(const QString& source, QXmlStreamReader&
                 // yep, that field is written to more often than needed...
                 m_weatherData[source].timeDifference = localTime - utcTime;
 
-                forecast->period = QDateTime::fromTime_t(utcTime);
+                forecast->period = QDateTime::fromSecsSinceEpoch(utcTime, Qt::LocalTime);
                 QString weatherString = QString::number(weather);
                 forecast->tempHigh = tempMax;
                 forecast->tempLow = tempMin;
                 forecast->probability = probability;
 
-                QTime localWeatherTime = QDateTime::fromTime_t(utcTime).time();
+                QTime localWeatherTime = QDateTime::fromSecsSinceEpoch(utcTime, Qt::LocalTime).time();
                 localWeatherTime = localWeatherTime.addSecs(m_weatherData[source].timeDifference);
 
                 qCDebug(IONENGINE_WETTERCOM) << "localWeatherTime =" << localWeatherTime;
