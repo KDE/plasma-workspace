@@ -113,7 +113,7 @@ private:
      * Get instance of a loaded ion.
      * @returns a IonInterface instance of a loaded plugin.
      */
-    IonInterface* ionForSource(const QString& source, QString* ionName = 0);
+    IonInterface* ionForSource(const QString& source, QString* ionName = nullptr);
 
 private:
     QHash<QString, int> m_ionUsage;
