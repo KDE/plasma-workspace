@@ -800,7 +800,7 @@ WeatherData::ForecastInfo WeatherData::ForecastPeriod::getWeather() const
     return result;
 }
 
-int WeatherData::ForecastPeriod::getMaxTemp(QVector<WeatherData::ForecastInfo *> forecastInfos) const
+int WeatherData::ForecastPeriod::getMaxTemp(const QVector<WeatherData::ForecastInfo*>& forecastInfos) const
 {
     int result = -273;
     foreach(const WeatherData::ForecastInfo * forecast, forecastInfos) {
@@ -810,7 +810,7 @@ int WeatherData::ForecastPeriod::getMaxTemp(QVector<WeatherData::ForecastInfo *>
     return result;
 }
 
-int WeatherData::ForecastPeriod::getMinTemp(QVector<WeatherData::ForecastInfo *> forecastInfos) const
+int WeatherData::ForecastPeriod::getMinTemp(const QVector<WeatherData::ForecastInfo*>& forecastInfos) const
 {
     int result = 100;
     foreach(const WeatherData::ForecastInfo * forecast, forecastInfos) {

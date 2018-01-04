@@ -87,8 +87,8 @@ public:
         QVector<WeatherData::ForecastInfo *> dayForecasts;
         QVector<WeatherData::ForecastInfo *> nightForecasts;
     private:
-        int getMaxTemp(QVector<WeatherData::ForecastInfo *> forecastInfos) const;
-        int getMinTemp(QVector<WeatherData::ForecastInfo *> forecastInfos) const;
+        int getMaxTemp(const QVector<WeatherData::ForecastInfo*>& forecastInfos) const;
+        int getMinTemp(const QVector<WeatherData::ForecastInfo*>& forecastInfos) const;
     };
 
     QVector<WeatherData::ForecastPeriod *> forecasts;
