@@ -619,12 +619,12 @@ void NOAAIon::updateWeather(const QString& source)
         // Get the short day name for the forecast
         data.insert(QStringLiteral("Short Forecast Day %1").arg(i),
                     QStringLiteral("%1|%2|%3|%4|%5|%6")
-                    .arg(forecast.day)
-                    .arg(iconName)
-                    .arg(i18nc("weather forecast", forecast.summary.toUtf8().data()))
-                    .arg(forecast.high)
-                    .arg(forecast.low)
-                    .arg(QStringLiteral()));
+                    .arg(forecast.day,
+                         iconName,
+                         i18nc("weather forecast", forecast.summary.toUtf8().data()),
+                         forecast.high,
+                         forecast.low,
+                         QString()));
         ++i;
     }
 

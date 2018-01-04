@@ -515,8 +515,9 @@ void WetterComIon::forecast_slotJobFinished(KJob *job)
     if (m_sourcesToReset.contains(source)) {
         m_sourcesToReset.removeAll(source);
         const QString weatherSource = QStringLiteral("wettercom|weather|%1|%2;%3")
-            .arg(source).arg(m_place[source].placeCode)
-            .arg(m_place[source].displayName);
+            .arg(source,
+                 m_place[source].placeCode,
+                 m_place[source].displayName);
 
         // so the weather engine updates it's data
         forceImmediateUpdateOfAllVisualizations();
@@ -682,8 +683,9 @@ void WetterComIon::updateWeather(const QString& source, bool parseError)
     qCDebug(IONENGINE_WETTERCOM) << "Source:" << source;
 
     QString weatherSource = QStringLiteral("wettercom|weather|%1|%2;%3")
-                            .arg(source).arg(m_place[source].placeCode)
-                            .arg(m_place[source].displayName);
+                            .arg(source,
+                                 m_place[source].placeCode,
+                                 m_place[source].displayName);
 
     Plasma::DataEngine::Data data;
     data.insert(QStringLiteral("Place"), m_place[source].displayName);
@@ -701,9 +703,11 @@ void WetterComIon::updateWeather(const QString& source, bool parseError)
 
                 data.insert(QStringLiteral("Short Forecast Day %1").arg(i),
                             QStringLiteral("%1|%2|%3|%4|%5|%6")
-                            .arg(QLocale().toString(weather.period.date().day()))
-                            .arg(weather.iconName).arg(weather.summary)
-                            .arg(weather.tempHigh).arg(weather.tempLow)
+                            .arg(QLocale().toString(weather.period.date().day()),
+                                 weather.iconName,
+                                 weather.summary)
+                            .arg(weather.tempHigh)
+                            .arg(weather.tempLow)
                             .arg(weather.probability));
                 i++;
             } else {
@@ -711,17 +715,21 @@ void WetterComIon::updateWeather(const QString& source, bool parseError)
 
                 data.insert(QStringLiteral("Short Forecast Day %1").arg(i),
                             QStringLiteral("%1|%2|%3|%4|%5|%6")
-                            .arg(i18n("Day")).arg(dayWeather.iconName)
-                            .arg(dayWeather.summary).arg(dayWeather.tempHigh)
-                            .arg(dayWeather.tempLow).arg(dayWeather.probability));
+                            .arg(i18n("Day"),
+                                 dayWeather.iconName,
+                                 dayWeather.summary)
+                            .arg(dayWeather.tempHigh)
+                            .arg(dayWeather.tempLow)
+                            .arg(dayWeather.probability));
                 i++;
 
                 if (forecastPeriod->hasNightWeather()) {
                     WeatherData::ForecastInfo nightWeather = forecastPeriod->getNightWeather();
                     data.insert(QStringLiteral("Short Forecast Day %1").arg(i),
                                 QStringLiteral("%1 nt|%2|%3|%4|%5|%6")
-                                .arg(i18n("Night")).arg(nightWeather.iconName)
-                                .arg(nightWeather.summary)
+                                .arg(i18n("Night"),
+                                     nightWeather.iconName,
+                                     nightWeather.summary)
                                 .arg(nightWeather.tempHigh)
                                 .arg(nightWeather.tempLow)
                                 .arg(nightWeather.probability));
