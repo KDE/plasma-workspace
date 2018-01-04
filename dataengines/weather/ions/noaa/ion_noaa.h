@@ -77,7 +77,7 @@ public:
         QString low;
         QString high;
     };
-    QList<Forecast> forecasts;
+    QVector<Forecast> forecasts;
 };
 
 class Q_DECL_EXPORT NOAAIon : public IonInterface, public Plasma::DataEngineConsumer
