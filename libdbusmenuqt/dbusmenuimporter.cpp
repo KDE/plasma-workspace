@@ -431,11 +431,8 @@ void DBusMenuImporter::slotGetLayoutFinished(QDBusPendingCallWatcher *watcher)
                 sendClickedEvent(id);
             });
 
-            if (action->menu()) {
-                auto menu = action->menu();
-                connect(menu, &QMenu::aboutToShow, this, [menu, this]() {
-                   updateMenu(menu);
-                });
+            if (QMenu *menuAction = action->menu()) {
+                connect(menuAction, &QMenu::aboutToShow, this, &DBusMenuImporter::slotMenuAboutToShow, Qt::UniqueConnection);
             }
             connect(menu, &QMenu::aboutToHide, this, &DBusMenuImporter::slotMenuAboutToHide, Qt::UniqueConnection);
 
@@ -526,6 +523,8 @@ void DBusMenuImporter::slotMenuAboutToShow()
 {
     QMenu *menu = qobject_cast<QMenu*>(sender());
     Q_ASSERT(menu);
+
+    updateMenu(menu);
 
     QAction *action = menu->menuAction();
     Q_ASSERT(action);
