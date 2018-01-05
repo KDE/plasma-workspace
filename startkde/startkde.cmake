@@ -33,13 +33,14 @@ fi
 #
 # * Then ksmserver is started which takes control of the rest of the startup sequence
 
-# We need to create config folder so we can write startupconfigkeys
 if [  ${XDG_CONFIG_HOME} ]; then
   configDir=$XDG_CONFIG_HOME;
 else
   configDir=${HOME}/.config; #this is the default, http://standards.freedesktop.org/basedir-spec/basedir-spec-latest.html
 fi
+sysConfigDirs=${XDG_CONFIG_DIRS:-/etc/xdg}
 
+# We need to create config folder so we can write startupconfigkeys
 mkdir -p $configDir
 
 #This is basically setting defaults so we can use them with kstartupconfig5
@@ -151,11 +152,10 @@ fi
 # For anything else (that doesn't set env vars, or that needs a window manager),
 # better use the Autostart folder.
 
-scriptpath=`qtpaths --locate-dirs GenericConfigLocation plasma-workspace | tr ':' '\n'`
+scriptpath=`echo "$configDir:$sysConfigDirs" | tr ':' '\n'`
 
-# Add /env/ to the directory to locate the scripts to be sourced
 for prefix in `echo $scriptpath`; do
-  for file in "$prefix"/env/*.sh; do
+  for file in "$prefix"/plasma-workspace/env/*.sh; do
     test -r "$file" && . "$file" || true
   done
 done
