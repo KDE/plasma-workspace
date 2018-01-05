@@ -20,6 +20,7 @@
  ******************************************************************/
 
 #include <QAbstractListModel>
+#include <QAbstractNativeEventFilter>
 #include <QStringList>
 #include <KWindowSystem>
 #include <QPointer>
@@ -30,7 +31,7 @@ class QModelIndex;
 class QDBusServiceWatcher;
 class KDBusMenuImporter;
 
-class AppMenuModel : public QAbstractListModel
+class AppMenuModel : public QAbstractListModel, public QAbstractNativeEventFilter
 {
     Q_OBJECT
 
@@ -57,6 +58,9 @@ public:
 signals:
     void requestActivateIndex(int index);
 
+protected:
+    bool nativeEventFilter(const QByteArray &eventType, void *message, long int *result) override;
+
 private Q_SLOTS:
     void onActiveWindowChanged(WId id);
     void update();
@@ -67,6 +71,8 @@ signals:
 
 private:
     bool m_menuAvailable;
+
+    WId m_currentWindowId = 0;
 
     QPointer<QMenu> m_menu;
     QStringList m_activeMenu;
