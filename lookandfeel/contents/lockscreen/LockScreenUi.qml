@@ -180,7 +180,7 @@ PlasmaCore.ColorScope {
                 Loader {
                     Layout.fillWidth: true
                     Layout.preferredHeight: item ? item.implicitHeight : 0
-                    active: true // TODO configurable
+                    active: config.showMediaControls
                     source: "MediaControls.qml"
                 }
             }
