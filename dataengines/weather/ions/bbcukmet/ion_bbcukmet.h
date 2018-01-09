@@ -61,6 +61,10 @@ public:
     QString pressureTendency;
     QString visibilityStr;
 
+    QString solarDataTimeEngineSourceName;
+    bool isNight = false;
+    bool isSolarDataPending = false;
+
     // Five day forecast
     struct ForecastInfo {
         ForecastInfo();
@@ -75,6 +79,8 @@ public:
 
     // 5 day Forecast
     QVector <WeatherData::ForecastInfo *> forecasts;
+
+    bool isForecastsDataPending = false;
 };
 
 Q_DECLARE_TYPEINFO(WeatherData::ForecastInfo, Q_MOVABLE_TYPE);
@@ -91,6 +97,10 @@ public:
 
 public: // IonInterface API
     bool updateIonSource(const QString& source) override;
+
+public Q_SLOTS:
+    // for solar data pushes from the time engine
+    void dataUpdated(const QString& sourceName, const Plasma::DataEngine::Data& data);
 
 protected: // IonInterface API
     void reset() override;

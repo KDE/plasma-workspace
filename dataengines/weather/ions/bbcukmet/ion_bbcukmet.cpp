@@ -701,6 +701,7 @@ void UKMETIon::parseWeatherObservation(const QString& source, WeatherData& data,
 bool UKMETIon::readObservationXMLData(const QString& source, QXmlStreamReader& xml)
 {
     WeatherData data;
+    data.isForecastsDataPending = true;
     bool haveObservation = false;
     while (!xml.atEnd()) {
         xml.readNext();
@@ -723,7 +724,44 @@ bool UKMETIon::readObservationXMLData(const QString& source, QXmlStreamReader& x
     if (!haveObservation) {
         return false;
     }
+
+    bool solarDataSourceNeedsConnect = false;
+    Plasma::DataEngine* timeEngine = dataEngine(QStringLiteral("time"));
+    if (timeEngine) {
+        const bool canCalculateElevation =
+            (data.observationDateTime.isValid() &&
+            (!qIsNaN(data.stationLatitude) && !qIsNaN(data.stationLongitude)));
+        if (canCalculateElevation) {
+            data.solarDataTimeEngineSourceName = QStringLiteral("Local|Solar|Latitude=%1|Longitude=%2|DateTime=%3")
+                .arg(data.stationLatitude)
+                .arg(data.stationLongitude)
+                .arg(data.observationDateTime.toString(Qt::ISODate));
+            solarDataSourceNeedsConnect = true;
+        }
+
+        // check any previous data
+        const auto it = m_weatherData.constFind(source);
+        if (it != m_weatherData.constEnd()) {
+            const QString& oldSolarDataTimeEngineSource = it.value().solarDataTimeEngineSourceName;
+
+            if (oldSolarDataTimeEngineSource == data.solarDataTimeEngineSourceName) {
+                // can reuse elevation source (if any), copy over data
+                data.isNight = it.value().isNight;
+                solarDataSourceNeedsConnect = false;
+            } else if (!oldSolarDataTimeEngineSource.isEmpty()) {
+                // drop old elevation source
+                timeEngine->disconnectSource(oldSolarDataTimeEngineSource, this);
+            }
+        }
+    }
+
     m_weatherData[source] = data;
+
+    // connect only after m_weatherData has the data, so the instant data push handling can see it
+    if (solarDataSourceNeedsConnect) {
+        data.isSolarDataPending = true;
+        timeEngine->connectSource(data.solarDataTimeEngineSourceName, this);
+    }
 
     // Get the 5 day forecast info next.
     getFiveDayForecast(source);
@@ -759,7 +797,8 @@ void UKMETIon::parseFiveDayForecast(const QString& source, QXmlStreamReader& xml
 {
     Q_ASSERT(xml.isStartElement() && xml.name() == QLatin1String("item"));
 
-    QVector<WeatherData::ForecastInfo*>& forecasts = m_weatherData[source].forecasts;
+    WeatherData& weatherData = m_weatherData[source];
+    QVector<WeatherData::ForecastInfo*>& forecasts = weatherData.forecasts;
 
     // Flush out the old forecasts when updating.
     forecasts.clear();
@@ -802,6 +841,9 @@ void UKMETIon::parseFiveDayForecast(const QString& source, QXmlStreamReader& xml
             forecast = new WeatherData::ForecastInfo;
         }
     }
+
+    weatherData.isForecastsDataPending = false;
+
     // remove unused
     delete forecast;
 }
@@ -844,14 +886,18 @@ void UKMETIon::validate(const QString& source)
 
 void UKMETIon::updateWeather(const QString& source)
 {
+    const WeatherData& weatherData = m_weatherData[source];
+
+    if (weatherData.isForecastsDataPending || weatherData.isSolarDataPending) {
+        return;
+    }
+
     const XMLMapInfo& place = m_place[source];
 
     QString weatherSource = source;
     // TODO: why the replacement here instead of just a new string?
     weatherSource.replace(QStringLiteral("bbcukmet|"), QStringLiteral("bbcukmet|weather|"));
     weatherSource.append(QLatin1Char('|') + place.XMLurl);
-
-    const WeatherData& weatherData = m_weatherData[source];
 
     Plasma::DataEngine::Data data;
 
@@ -876,21 +922,7 @@ void UKMETIon::updateWeather(const QString& source)
         data.insert(QStringLiteral("Longitude"), weatherData.stationLongitude);
     }
 
-    bool useDayIcon = true;
-    // TODO: get timeengine's solarsystem code to use directly
-#if 0
-    if (weatherData.observationDateTime.isValid() && stationCoordsValid) {
-        PlasmaWeather::Sun sun;
-        sun.setPosition(weatherData.stationLatitude, weatherData.stationLongitude);
-
-        const int offset = weatherData.observationDateTime.timeZone().offsetFromUtc(weatherData.observationDateTime);
-        sun.calcForDateTime(weatherData.observationDateTime, offset);
-        const auto elevation = sun.calcElevation();
-        // Tell applet which icon to use for conditions and provide mapping for condition type to the icons to display
-        useDayIcon = (elevation >= 0.0);
-    }
-#endif
-    data.insert(QStringLiteral("Condition Icon"), getWeatherIcon(useDayIcon ? dayIcons() : nightIcons(), weatherData.condition));
+    data.insert(QStringLiteral("Condition Icon"), getWeatherIcon(weatherData.isNight ? nightIcons() : dayIcons(), weatherData.condition));
 
     if (!qIsNaN(weatherData.humidity)) {
         data.insert(QStringLiteral("Humidity"), weatherData.humidity);
@@ -966,6 +998,19 @@ void UKMETIon::updateWeather(const QString& source)
     setData(weatherSource, data);
 }
 
+void UKMETIon::dataUpdated(const QString& sourceName, const Plasma::DataEngine::Data& data)
+{
+    const bool isNight = (data.value(QStringLiteral("Corrected Elevation")).toDouble() < 0.0);
+
+    for (auto end = m_weatherData.end(), it = m_weatherData.begin(); it != end; ++it) {
+        auto& weatherData = it.value();
+        if (weatherData.solarDataTimeEngineSourceName == sourceName) {
+            weatherData.isNight = isNight;
+            weatherData.isSolarDataPending = false;
+            updateWeather(it.key());
+        }
+    }
+}
 
 K_EXPORT_PLASMA_DATAENGINE_WITH_JSON(bbcukmet, UKMETIon, "ion-bbcukmet.json")
 

@@ -731,8 +731,45 @@ bool EnvCanadaIon::readXMLData(const QString& source, QXmlStreamReader& xml)
         }
     }
 
+    bool solarDataSourceNeedsConnect = false;
+    Plasma::DataEngine* timeEngine = dataEngine(QStringLiteral("time"));
+    if (timeEngine) {
+        const bool canCalculateElevation =
+            (data.observationDateTime.isValid() &&
+            (!qIsNaN(data.stationLatitude) && !qIsNaN(data.stationLongitude)));
+        if (canCalculateElevation) {
+            data.solarDataTimeEngineSourceName = QStringLiteral("Local|Solar|Latitude=%1|Longitude=%2|DateTime=%3")
+                .arg(data.stationLatitude)
+                .arg(data.stationLongitude)
+                .arg(data.observationDateTime.toString(Qt::ISODate));
+            solarDataSourceNeedsConnect = true;
+        }
+
+        // check any previous data
+        const auto it = m_weatherData.constFind(source);
+        if (it != m_weatherData.constEnd()) {
+            const QString& oldSolarDataTimeEngineSource = it.value().solarDataTimeEngineSourceName;
+
+            if (oldSolarDataTimeEngineSource == data.solarDataTimeEngineSourceName) {
+                // can reuse elevation source (if any), copy over data
+                data.isNight = it.value().isNight;
+                solarDataSourceNeedsConnect = false;
+            } else if (!oldSolarDataTimeEngineSource.isEmpty()) {
+                // drop old elevation source
+                timeEngine->disconnectSource(oldSolarDataTimeEngineSource, this);
+            }
+        }
+    }
+
     m_weatherData[source] = data;
-    updateWeather(source);
+
+    // connect only after m_weatherData has the data, so the instant data push handling can see it
+    if (solarDataSourceNeedsConnect) {
+        timeEngine->connectSource(data.solarDataTimeEngineSourceName, this);
+    } else {
+        updateWeather(source);
+    }
+
     return !xml.error();
 }
 
@@ -1405,23 +1442,9 @@ void EnvCanadaIon::updateWeather(const QString& source)
     }
     //qCDebug(IONENGINE_ENVCAN) << "i18n condition string: " << qPrintable(condition(source));
 
-    bool useDayIcon = true;
-    // TODO: get timeengine's solarsystem code to use directly
-#if 0
-    if (weatherData.observationDateTime.isValid() && stationCoordValid) {
-        PlasmaWeather::Sun sun;
-        sun.setPosition(weatherData.stationLatitude, weatherData.stationLongitude);
-
-        const int offset = weatherData.observationDateTime.timeZone().offsetFromUtc(weatherData.observationDateTime);
-        sun.calcForDateTime(weatherData.observationDateTime, offset);
-        const auto elevation = sun.calcElevation();
-        // Tell applet which icon to use for conditions and provide mapping for condition type to the icons to display
-        useDayIcon = (elevation >= 0.0);
-    }
-#endif
     QMap<QString, ConditionIcons> conditionList = conditionIcons();
 
-    if (!useDayIcon) {
+    if (weatherData.isNight) {
         conditionList.insert(QStringLiteral("decreasing cloud"), FewCloudsNight);
         conditionList.insert(QStringLiteral("mostly cloudy"), PartlyCloudyNight);
         conditionList.insert(QStringLiteral("partly cloudy"), PartlyCloudyNight);
@@ -1620,6 +1643,19 @@ void EnvCanadaIon::updateWeather(const QString& source)
     data.insert(QStringLiteral("Credit"), i18nc("credit line, keep string short", "Data from Environment\302\240Canada"));
 
     setData(source, data);
+}
+
+void EnvCanadaIon::dataUpdated(const QString& sourceName, const Plasma::DataEngine::Data& data)
+{
+    const bool isNight = (data.value(QStringLiteral("Corrected Elevation")).toDouble() < 0.0);
+
+    for (auto end = m_weatherData.end(), it = m_weatherData.begin(); it != end; ++it) {
+        auto& weatherData = it.value();
+        if (weatherData.solarDataTimeEngineSourceName == sourceName) {
+            weatherData.isNight = isNight;
+            updateWeather(it.key());
+        }
+    }
 }
 
 
