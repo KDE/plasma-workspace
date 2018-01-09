@@ -144,7 +144,6 @@ ColumnLayout {
         QtControls.RadioButton {
             id: blurRadioButton
             text: i18nd("plasma_applet_org.kde.image", "Blur")
-            checked: true
             exclusiveGroup: backgroundGroup
         }
     }
@@ -166,8 +165,8 @@ ColumnLayout {
         QtControls.RadioButton {
             id: colorRadioButton
             text: i18nd("plasma_applet_org.kde.image", "Solid color")
-            checked: false
             exclusiveGroup: backgroundGroup
+            checked: !cfg_Blur
         }
         QtControls.Button {
             id: colorButton
