@@ -89,6 +89,10 @@ if test $returncode -ne 0; then
 fi
 [ -r $configDir/startupconfig ] && . $configDir/startupconfig
 
+
+#Do not sync any of this section with the wayland versions as there scale factors are
+#sent properly over wl_output
+
 if [ "$kdeglobals_kscreen_screenscalefactors" ]; then
     export QT_SCREEN_SCALE_FACTORS="$kdeglobals_kscreen_screenscalefactors"
     export GDK_SCALE=$kdeglobals_kscreen_scalefactor
