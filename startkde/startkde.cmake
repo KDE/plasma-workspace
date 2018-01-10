@@ -92,7 +92,7 @@ fi
 if [ "$kdeglobals_kscreen_screenscalefactors" ]; then
     export QT_SCREEN_SCALE_FACTORS="$kdeglobals_kscreen_screenscalefactors"
     export GDK_SCALE=$kdeglobals_kscreen_scalefactor
-    export GDK_DPI_SCALE=`echo "1 / $kdeglobals_kscreen_scalefactor" | bc -l`
+    export GDK_DPI_SCALE=`awk "BEGIN {print 1/$kdeglobals_kscreen_scalefactor}"`
 fi
 #Manually disable auto scaling because we are scaling above
 #otherwise apps that manually opt in for high DPI get auto scaled by the developer AND manually scaled by us
