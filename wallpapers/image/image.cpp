@@ -76,7 +76,6 @@ Image::Image(QObject *parent)
     m_dirWatch->startScan();
 
     useSingleImageDefaults();
-    setSingleImage();
 }
 
 Image::~Image()
@@ -97,6 +96,8 @@ void Image::componentComplete()
     m_ready = true;
     if (m_mode == SingleImage) {
         setSingleImage();
+    } else if (m_mode == SlideShow) {
+        startSlideshow();
     }
 }
 
@@ -143,7 +144,8 @@ void Image::setRenderingMode(RenderingMode mode)
             m_slidePaths << QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, QStringLiteral("share/wallpapers"), QStandardPaths::LocateDirectory);
         }
 
-        QTimer::singleShot(200, this, &Image::startSlideshow);
+        startSlideshow();
+
         updateDirWatch(m_slidePaths);
         updateDirWatch(m_slidePaths);
     } else {
@@ -547,6 +549,10 @@ void Image::setWallpaper(const QString &path)
 
 void Image::startSlideshow()
 {
+    if (!m_ready) {
+        return;
+    }
+
     if(m_findToken.isEmpty()) {
         // populate background list
         m_timer.stop();
@@ -712,7 +718,7 @@ void Image::addUsersWallpaper(const QString &file)
 
 void Image::nextSlide()
 {
-    if (m_slideshowBackgrounds.isEmpty()) {
+    if (!m_ready || m_slideshowBackgrounds.isEmpty()) {
         return;
     }
 
