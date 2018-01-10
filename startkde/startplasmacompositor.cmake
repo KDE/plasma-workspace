@@ -3,19 +3,7 @@
 #  DEFAULT Plasma STARTUP SCRIPT ( @PROJECT_VERSION@ )
 #
 
-# in case we have been started with full pathname spec without being in PATH
-bindir=`echo "$0" | sed -n 's,^\(/.*\)/[^/][^/]*$,\1,p'`
-if [ -n "$bindir" ]; then
-  qbindir=`qtpaths --binaries-dir`
-  qdbus=$qbindir/qdbus
-  case $PATH in
-    $bindir|$bindir:*|*:$bindir|*:$bindir:*) ;;
-    *) PATH=$bindir:$PATH; export PATH;;
-  esac
-else
-  qdbus=qdbus
-fi
-
+# We need to create config folder so we can write startupconfigkeys
 if [  ${XDG_CONFIG_HOME} ]; then
   configDir=$XDG_CONFIG_HOME;
 else
@@ -132,12 +120,12 @@ fi
 
 # Get a property value from org.freedesktop.locale1
 queryLocale1() {
-    "${qdbus}" --system org.freedesktop.locale1 /org/freedesktop/locale1 "$1"
+    qdbus --system org.freedesktop.locale1 /org/freedesktop/locale1 "$1"
 }
 
 # Query whether org.freedesktop.locale1 is available. If it is, try to
 # set XKB_DEFAULT_{MODEL,LAYOUT,VARIANT,OPTIONS} accordingly.
-if "${qdbus}" --system org.freedesktop.locale1 >/dev/null 2>/dev/null; then
+if qdbus --system org.freedesktop.locale1 >/dev/null 2>/dev/null; then
     # Do not overwrite existing values. There is no point in setting only some
     # of them as then they would not match anymore.
     if [ -z "${XKB_DEFAULT_MODEL}" -a -z "${XKB_DEFAULT_LAYOUT}" -a \
@@ -187,7 +175,7 @@ fi
 export XDG_DATA_DIRS
 
 # Make sure that D-Bus is running
-if $qdbus >/dev/null 2>/dev/null; then
+if qdbus >/dev/null 2>/dev/null; then
     : # ok
 else
     echo 'startplasmacompositor: Could not start D-Bus. Can you call qdbus?'  1>&2
