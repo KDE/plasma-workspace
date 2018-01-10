@@ -122,6 +122,8 @@ bool CompositorAdaptor::resetData(QHash<QString, QVariant> data)
 
     SETTER(m_activeEnabled, data["ActiveEnabled"].toBool(), activeEnabledChanged())
     SETTER(m_active, data["Active"].toBool(), activeChanged())
+
+    SETTER(m_running, data["Running"].toBool(), runningChanged())
     SETTER(m_mode, (Mode)data["Mode"].toInt(), modeChanged())
 
     SETTER(m_nightTemperatureEnabled, data["NightTemperatureEnabled"].toBool(), nightTemperatureEnabledChanged())

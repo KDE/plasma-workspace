@@ -35,8 +35,10 @@ public Q_SLOTS:
     void sendLocation(double latitude, double longitude);
 
 private:
-    ColorCorrect::CompositorAdaptor *m_adaptor;
-    ColorCorrect::Geolocator *m_locator;
+    void resetLocator();
+
+    ColorCorrect::CompositorAdaptor *m_adaptor = nullptr;
+    ColorCorrect::Geolocator *m_locator = nullptr;
 };
 
 #endif

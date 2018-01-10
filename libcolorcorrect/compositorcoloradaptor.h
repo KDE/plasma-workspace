@@ -46,6 +46,8 @@ class COLORCORRECT_EXPORT CompositorAdaptor : public QObject
     Q_PROPERTY(bool activeStaged READ activeStaged WRITE setActiveStaged NOTIFY activeStagedChanged)
     Q_PROPERTY(bool activeDefault READ activeDefault CONSTANT)
 
+    Q_PROPERTY(bool running READ running NOTIFY runningChanged)
+
     Q_PROPERTY(bool modeEnabled READ modeEnabled NOTIFY modeEnabledChanged)
     Q_PROPERTY(int mode READ mode NOTIFY modeChanged)
     Q_PROPERTY(int modeStaged READ modeStaged WRITE setModeStaged NOTIFY modeStagedChanged)
@@ -144,6 +146,10 @@ public:
     }
     bool activeDefault() {
         return true;
+    }
+
+    bool running() {
+        return m_running;
     }
 
     bool modeEnabled() const {
@@ -387,6 +393,9 @@ Q_SIGNALS:
     void activeEnabledChanged();
     void activeChanged();
     void activeStagedChanged();
+
+    void runningChanged();
+
     void modeEnabledChanged();
     void modeChanged();
     void modeStagedChanged();
@@ -433,6 +442,8 @@ private:
     bool m_activeEnabled = true;
     bool m_active = false;
     bool m_activeStaged = false;
+
+    bool m_running = false;
 
     bool m_modeEnabled = true;
     Mode m_mode = Mode::ModeAutomatic;
