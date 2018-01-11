@@ -230,8 +230,10 @@ ListView {
             }
 
             PlasmaCore.IconItem {
-                anchors.fill: parent
-                anchors.margins: parent.padding
+                anchors {
+                    fill: parent
+                    margins: units.smallSpacing
+                }
                 source: "application-menu"
 
                 // From Plasma's ToolButtonStyle:
