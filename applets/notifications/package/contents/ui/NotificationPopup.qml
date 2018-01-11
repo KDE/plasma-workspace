@@ -45,7 +45,7 @@ PlasmaCore.Dialog {
     }
 
     onYChanged: {
-        if (visible) {
+        if (visible && !notificationItem.dragging) {
             notificationTimer.restart();
         }
     }
