@@ -35,6 +35,11 @@ MouseArea {
 
     hoverEnabled: true
 
+    GridView.onIsCurrentItemChanged: {
+        if (GridView.isCurrentItem) {
+            cfg_Image = model.path
+        }
+    }
 
     //note: this *doesn't* use system colors since it represent a
     //skeymorphic photograph rather than a widget
@@ -200,7 +205,6 @@ MouseArea {
     onClicked: {
         wallpapersGrid.currentIndex = index
         wallpapersGrid.forceActiveFocus();
-        cfg_Image = model.path
     }
 
     onExited: Tooltip.hideText()
