@@ -19,6 +19,7 @@
 #include "notificationshelperplugin.h"
 #include "notificationshelper.h"
 #include "thumbnailer.h"
+#include "draghelper.h"
 
 #include <QtQml>
 #include <QProcess>
@@ -51,6 +52,14 @@ static QObject *urlcheck_singletontype_provider(QQmlEngine *engine, QJSEngine *s
     return new UrlHelper();
 }
 
+static QObject *draghelper_singletontype_provider(QQmlEngine *engine, QJSEngine *scriptEngine)
+{
+    Q_UNUSED(engine)
+    Q_UNUSED(scriptEngine)
+
+    return new DragHelper();
+}
+
 void NotificationsHelperPlugin::registerTypes(const char *uri)
 {
     Q_ASSERT(uri == QLatin1String("org.kde.plasma.private.notifications"));
@@ -59,6 +68,7 @@ void NotificationsHelperPlugin::registerTypes(const char *uri)
     qmlRegisterType<Thumbnailer>(uri, 1, 0, "Thumbnailer");
 
     qmlRegisterSingletonType<UrlHelper>(uri, 1, 0, "UrlHelper", urlcheck_singletontype_provider);
+    qmlRegisterSingletonType<DragHelper>(uri, 1, 0, "DragHelper", draghelper_singletontype_provider);
 }
 
 void NotificationsHelperPlugin::initializeEngine(QQmlEngine *engine, const char *uri)

@@ -2,6 +2,7 @@ set(notificationshelper_SRCS
     notificationshelper.cpp
     notificationshelperplugin.cpp
     thumbnailer.cpp
+    draghelper.cpp
     )
 
 add_library(notificationshelperplugin SHARED ${notificationshelper_SRCS})

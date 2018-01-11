@@ -45,7 +45,7 @@ ListView {
 
     // whether we're currently dragging, this way we can keep the popup around during the entire
     // drag operation even if the mouse leaves the popup
-    property bool dragging: false
+    property bool dragging: Notifications.DragHelper.dragActive
 
     model: {
         var urls = notificationItem.urls
@@ -103,6 +103,9 @@ ListView {
     delegate: MouseArea {
         id: previewDelegate
 
+        property int pressX: -1
+        property int pressY: -1
+
         // clip is expensive, only clip if the QPixmapItem would leak outside
         clip: previewPixmap.height > height
 
@@ -120,26 +123,32 @@ ListView {
         }
 
         onPressed: {
-            if (mouse.button === Qt.RightButton) {
+            if (mouse.button === Qt.LeftButton) {
+                pressX = mouse.x;
+                pressY = mouse.y;
+            } else if (mouse.button === Qt.RightButton) {
                 // avoid menu button glowing if we didn't actually press it
                 menuButton.checked = false;
 
                 thumbnailer.showContextMenu(mouse.x, mouse.y, modelData, this);
             }
         }
-
-        // cannot drag itself, hence dragging the Pixmap instead
-        drag.target: previewPixmap
-
-        Drag.dragType: Drag.Automatic
-        Drag.active: previewDelegate.drag.active
-        Drag.mimeData: ({
-            "text/uri-list": modelData,
-            "text/plain": modelData
-        })
-
-        drag.onActiveChanged: {
-            previewList.dragging = drag.active
+        onPositionChanged: {
+            if (pressX !== -1 && pressY !== -1 && Notifications.DragHelper.isDrag(pressX, pressY, mouse.x, mouse.y)) {
+                Notifications.DragHelper.startDrag(previewDelegate, modelData /*url*/, thumbnailer.pixmap);
+                pressX = -1;
+                pressY = -1;
+            }
+        }
+        onReleased: {
+            pressX = -1;
+            pressY = -1;
+        }
+        onContainsMouseChanged: {
+            if (!containsMouse) {
+                pressX = -1;
+                pressY = -1;
+            }
         }
 
         // first item determins the ListView height
