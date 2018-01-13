@@ -356,7 +356,7 @@ MouseArea {
                             property string link
 
                             PlasmaComponents.MenuItem {
-                                text: i18n("Copy Link")
+                                text: i18n("Copy Link Address")
                                 onClicked: clipboard.content = contextMenu.link
                                 visible: contextMenu.link !== ""
                             }
