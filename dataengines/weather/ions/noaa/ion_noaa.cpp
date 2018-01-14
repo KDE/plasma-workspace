@@ -564,7 +564,12 @@ void NOAAIon::updateWeather(const QString& source)
     }
 
     // Real weather - Current conditions
+    if (weatherData.observationDateTime.isValid()) {
+        data.insert(QStringLiteral("Observation Timestamp"), weatherData.observationDateTime);
+    }
+
     data.insert(QStringLiteral("Observation Period"), weatherData.observationTime);
+
     const QString conditionI18n = weatherData.weather == QLatin1String("N/A") ? i18n("N/A") : i18nc("weather condition", weatherData.weather.toUtf8().data());
 
     data.insert(QStringLiteral("Current Conditions"), conditionI18n);

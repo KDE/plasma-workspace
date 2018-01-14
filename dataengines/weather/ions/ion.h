@@ -44,7 +44,8 @@
 * "Longitude": float, longitude of the weather station in decimal degrees, optional
 *
 * Data about last observation:
-* "Observation Period": string, free text string for time of observation, optional, TODO: get standardized datetime
+* "Observation Period": string, free text string for time of observation, optional
+* "Observation Timestamp": datetime (with timezone), time of observation, optional
 * "Current Conditions": string, free text string for current weather observation, optional
 * "Condition Icon": string, xdg icon name for current weather observation, optional
 * "Temperature": float, using general temperature unit, optional

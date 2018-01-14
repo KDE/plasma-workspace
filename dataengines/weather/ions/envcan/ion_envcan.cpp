@@ -1436,7 +1436,12 @@ void EnvCanadaIon::updateWeather(const QString& source)
     }
 
     // Real weather - Current conditions
+    if (weatherData.observationDateTime.isValid()) {
+        data.insert(QStringLiteral("Observation Timestamp"), weatherData.observationDateTime);
+    }
+
     data.insert(QStringLiteral("Observation Period"), weatherData.obsTimestamp);
+
     if (!weatherData.condition.isEmpty()) {
         data.insert(QStringLiteral("Current Conditions"), i18nc("weather condition", weatherData.condition.toUtf8().data()));
     }

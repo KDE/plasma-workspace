@@ -903,6 +903,9 @@ void UKMETIon::updateWeather(const QString& source)
 
     data.insert(QStringLiteral("Place"), weatherData.stationName);
     data.insert(QStringLiteral("Station"), weatherData.stationName);
+    if (weatherData.observationDateTime.isValid()) {
+        data.insert(QStringLiteral("Observation Timestamp"), weatherData.observationDateTime);
+    }
     if (!weatherData.obsTime.isEmpty()) {
         data.insert(QStringLiteral("Observation Period"), weatherData.obsTime);
     }
