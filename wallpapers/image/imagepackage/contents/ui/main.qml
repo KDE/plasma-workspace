@@ -34,7 +34,6 @@ Item {
     property Item otherImage: imageA
     property Item otherBlurBackground: blurBackgroundA
     readonly property int fillMode: wallpaper.configuration.FillMode
-    property bool ready: false
     property size sourceSize: Qt.size(root.width * Screen.devicePixelRatio, root.height * Screen.devicePixelRatio)
 
     //public API, the C++ part will look for those
@@ -52,13 +51,16 @@ Item {
     }
 
     //private
-    function fadeWallpaper() {
-        if (!ready && width > 0 && height > 0) { // shell startup, setup immediately
-            currentImage.sourceSize = root.sourceSize
-            currentImage.source = modelImage
+    function setupImage() {
+        currentImage.sourceSize = root.sourceSize;
+        currentImage.fillMode = root.fillMode;
+        currentImage.source = modelImage;
+    }
 
-            ready = true
-            return
+    function fadeWallpaper() {
+        if (startupTimer.running) {
+            setupImage();
+            return;
         }
 
         fadeAnim.running = false
@@ -84,6 +86,11 @@ Item {
     }
 
     function fadeFillMode() {
+        if (startupTimer.running) {
+            setupImage();
+            return;
+        }
+
         fadeAnim.running = false
         swapImages()
         currentImage.sourceSize = root.sourceSize
@@ -108,6 +115,11 @@ Item {
     function fadeSourceSize() {
         if (currentImage.sourceSize === root.sourceSize) {
             return
+        }
+
+        if (startupTimer.running) {
+            setupImage();
+            return;
         }
 
         fadeAnim.running = false
@@ -147,6 +159,13 @@ Item {
 
     onWidthChanged: startFadeSourceTimer()
     onHeightChanged: startFadeSourceTimer()
+
+    // HACK prevent fades and transitions during startup
+    Timer {
+        id: startupTimer
+        interval: 100
+        running: true
+    }
 
     Timer {
         id: sourceSizeTimer
@@ -229,10 +248,11 @@ Item {
     Rectangle {
         id: backgroundColor
         anchors.fill: parent
-        visible: ready && (currentImage.status === Image.Ready || otherImage.status === Image.Ready)
+        visible: currentImage.status === Image.Ready || otherImage.status === Image.Ready
         color: wallpaper.configuration.Color
         Behavior on color {
             ColorAnimation { duration: units.longDuration }
+            enabled: !startupTimer.running
         }
     }
 
