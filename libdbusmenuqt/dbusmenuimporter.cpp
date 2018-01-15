@@ -477,6 +477,9 @@ void DBusMenuImporter::updateMenu(QMenu * menu)
     watcher->setProperty(DBUSMENU_PROPERTY_ID, id);
     connect(watcher, &QDBusPendingCallWatcher::finished, this,
         &DBusMenuImporter::slotAboutToShowDBusCallFinished);
+
+    // Firefox deliberately ignores "aboutToShow" whereas Qt ignores" opened", so we'll just send both all the time...
+    d->sendEvent(id, QStringLiteral("opened"));
 }
 
 void DBusMenuImporter::slotAboutToShowDBusCallFinished(QDBusPendingCallWatcher *watcher)
@@ -525,12 +528,6 @@ void DBusMenuImporter::slotMenuAboutToShow()
     Q_ASSERT(menu);
 
     updateMenu(menu);
-
-    QAction *action = menu->menuAction();
-    Q_ASSERT(action);
-
-    int id = action->property(DBUSMENU_PROPERTY_ID).toInt();
-    d->sendEvent(id, QStringLiteral("opened"));
 }
 
 QMenu *DBusMenuImporter::createMenu(QWidget *parent)
