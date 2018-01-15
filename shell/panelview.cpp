@@ -578,26 +578,30 @@ void PanelView::showConfigurationInterface(Plasma::Applet *applet)
 
     Plasma::Containment *cont = qobject_cast<Plasma::Containment *>(applet);
 
-    if (m_panelConfigView && cont && cont == containment() && cont->isContainment()) {
-        if (m_panelConfigView.data()->isVisible()) {
-            m_panelConfigView.data()->hide();
-        } else {
-            m_panelConfigView.data()->show();
-            KWindowSystem::setState(m_panelConfigView.data()->winId(), NET::SkipTaskbar | NET::SkipPager);
-        }
-        return;
-    } else if (m_panelConfigView) {
+    const bool isPanelConfig = (cont && cont == containment() && cont->isContainment());
+
+    if (m_panelConfigView) {
         if (m_panelConfigView->applet() == applet) {
+            if (isPanelConfig) { // toggles panel controller, whereas applet config is always brought to front
+                if (m_panelConfigView->isVisible()) {
+                    m_panelConfigView->hide();
+                } else {
+                    m_panelConfigView->show();
+                    KWindowSystem::setState(m_panelConfigView.data()->winId(), NET::SkipTaskbar | NET::SkipPager);
+                }
+                return;
+            }
+
             m_panelConfigView->show();
             m_panelConfigView->requestActivate();
             return;
-        } else {
-            m_panelConfigView->hide();
-            m_panelConfigView->deleteLater();
         }
+
+        m_panelConfigView->hide();
+        m_panelConfigView->deleteLater();
     }
 
-    if (cont && cont == containment() && cont->isContainment()) {
+    if (isPanelConfig) {
         m_panelConfigView = new PanelConfigView(cont, this);
     } else {
         m_panelConfigView = new PlasmaQuick::ConfigView(applet);
@@ -606,7 +610,7 @@ void PanelView::showConfigurationInterface(Plasma::Applet *applet)
     m_panelConfigView.data()->init();
     m_panelConfigView.data()->show();
 
-    if (cont && cont == containment() && cont->isContainment()) {
+    if (isPanelConfig) {
         KWindowSystem::setState(m_panelConfigView.data()->winId(), NET::SkipTaskbar | NET::SkipPager);
     }
 }
