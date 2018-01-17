@@ -79,6 +79,13 @@ Item {
             });
         }
 
+        // So we can show mnemonic underlines only while Alt is pressed
+        PlasmaCore.DataSource {
+            id: keystateSource
+            engine: "keystate"
+            connectedSources: ["Alt"]
+        }
+
         Repeater {
             id: buttonRepeater
             model: appMenuModel
@@ -89,7 +96,19 @@ Item {
                 Layout.preferredWidth: minimumWidth
                 Layout.fillWidth: root.vertical
                 Layout.fillHeight: !root.vertical
-                text: activeMenu
+                text: {
+                    var text = activeMenu;
+
+                    var alt = keystateSource.data.Alt;
+                    if (!alt || !alt.Pressed) {
+                        // StyleHelpers.removeMnemonics
+                        text = text.replace(/([^&]*)&(.)([^&]*)/g, function (match, p1, p2, p3) {
+                            return p1.concat(p2, p3);
+                        });
+                    }
+
+                    return text;
+                }
                 // fake highlighted
                 checkable: plasmoid.nativeInterface.currentIndex === index
                 checked: checkable
