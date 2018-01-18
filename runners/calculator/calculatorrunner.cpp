@@ -327,13 +327,13 @@ QString CalculatorRunner::calculate(const QString& term, bool *isApproximate)
 void CalculatorRunner::run(const Plasma::RunnerContext &context, const Plasma::QueryMatch &match)
 {
     Q_UNUSED(context);
-#ifdef ENABLE_QALCULATE
     if (match.selectedAction() == action(s_copyToClipboardId)) {
+#ifdef ENABLE_QALCULATE
         m_engine->copyToClipboard();
-    }
 #else
-    QGuiApplication::clipboard()->setText(match.text());
+        QGuiApplication::clipboard()->setText(match.text());
 #endif
+    }
 }
 
 QList<QAction *> CalculatorRunner::actionsForMatch(const Plasma::QueryMatch &match)
