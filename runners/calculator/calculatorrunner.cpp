@@ -295,6 +295,7 @@ QString CalculatorRunner::calculate(const QString& term, bool *isApproximate)
 
     return result.replace('.', QLocale().decimalPoint(), Qt::CaseInsensitive);
     #else
+    Q_UNUSED(isApproximate);
     //qDebug() << "calculating" << term;
     QJSEngine eng;
     QJSValue result = eng.evaluate(QStringLiteral("var result = %1; result").arg(term));
