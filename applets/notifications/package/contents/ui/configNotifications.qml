@@ -45,13 +45,14 @@ Item {
         }
 
         QtControls.CheckBox {
-            id: showJobsCheckBox
-            text: i18n("Track file transfers and other jobs")
-        }
-        
-        QtControls.CheckBox {
             id: showHistoryCheckBox
             text: i18n("Show a history of notifications")
+            enabled: showNotificationsCheckBox.checked
+        }
+
+        QtControls.CheckBox {
+            id: showJobsCheckBox
+            text: i18n("Track file transfers and other jobs")
         }
         
         QtControls.CheckBox {
