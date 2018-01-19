@@ -33,9 +33,9 @@ Column {
     }
 
     property alias count: notificationsRepeater.count
-    property alias historyCount: notificationsHistoryRepeater.count
+    readonly property int historyCount: historyList.count
     
-    property bool showHistory
+    property bool showHistory: plasmoid.configuration.showHistory
     
     signal popupShown(var popup)
     
@@ -272,10 +272,27 @@ Column {
         visible: historyCount > 0
         text: i18n("History")
     }
-    
-    Repeater {
-        id: notificationsHistoryRepeater
-        model: notificationsHistoryModel
-        delegate: NotificationDelegate { listModel: notificationsHistoryModel }
+
+    // History stuff
+    // The history is shown outside in a ListView
+    Binding {
+        target: historyList
+        property: "model"
+        value: notificationsHistoryModel
+        when: showHistory
+    }
+
+    Binding {
+        target: historyList
+        property: "delegate"
+        value: notificationsHistoryDelegate
+        when: showHistory
+    }
+
+    Component {
+        id: notificationsHistoryDelegate
+        NotificationDelegate {
+            listModel: notificationsHistoryModel
+        }
     }
 }

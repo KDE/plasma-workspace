@@ -39,8 +39,6 @@ MouseEventListener {
     //Layout.minimumHeight: mainScrollArea.implicitHeight
     Layout.minimumWidth: 256 // FIXME: use above
     Layout.minimumHeight: 256
-    Layout.maximumWidth: -1
-    Layout.maximumHeight: mainScrollArea.implicitHeight
 
     LayoutMirroring.enabled: Qt.application.layoutDirection === Qt.RightToLeft
     LayoutMirroring.childrenInherit: true
@@ -49,8 +47,8 @@ MouseEventListener {
 
     property real globalProgress: 0
 
-    property Item notifications: notificationsLoader.item
-    property Item jobs: jobsLoader.item
+    property Item notifications: historyList.headerItem ? historyList.headerItem.notifications : null
+    property Item jobs: historyList.headerItem ? historyList.headerItem.jobs : null
     
     //notifications + jobs
     property int activeItemsCount: (notifications ? notifications.count : 0) + (jobs ? jobs.count : 0)
@@ -100,59 +98,38 @@ MouseEventListener {
         id: mainScrollArea
         anchors.fill: parent
 
-        implicitWidth: theme.mSize(theme.defaultFont).width * 40
-        implicitHeight: Math.min(theme.mSize(theme.defaultFont).height * 40, Math.max(theme.mSize(theme.defaultFont).height * 6, contentsColumn.height))
-        state: ""
+        // HACK The history of notifications can become quite large. In order to avoid a memory leak
+        // show them in a ListView which creates delegate instances only on demand.
+        // The ListView's header functionality is abused to provide the jobs and regular notifications
+        // which are few and might store some state inside the delegate (e.g. expanded state) and
+        // thus are created all at once by a Repeater.
+        ListView {
+            id: historyList
 
-        Flickable {
-            id: popupFlickable
-            anchors.fill:parent
+            // The history stuff is quite entangled with regular notifications, so
+            // model and delegate are set by Bindings {} inside Notifications.qml
 
-            contentWidth: width
-            contentHeight: contentsColumn.height
-            clip: true
+            header: Column {
+                property alias jobs: jobsLoader.item
+                property alias notifications: notificationsLoader.item
 
-            Column {
-                id: contentsColumn
-                width: popupFlickable.width
+                width: historyList.width
 
                 Loader {
                     id: jobsLoader
                     width: parent.width
                     source: "Jobs.qml"
-                    active: notificationsApplet.Plasmoid.configuration.showJobs
+                    active: plasmoid.configuration.showJobs
                 }
 
                 Loader {
                     id: notificationsLoader
                     width: parent.width
                     source: "Notifications.qml"
-                    active: notificationsApplet.Plasmoid.configuration.showNotifications
-                    onLoaded: {
-                        notificationsLoader.item.showHistory = Qt.binding(function(){ return notificationsApplet.Plasmoid.configuration.showHistory })
-                    }
+                    active: plasmoid.configuration.showNotifications
                 }
             }
         }
-
-        states: [
-            State {
-                name: "underMouse"
-                when: notificationsApplet.containsMouse
-                PropertyChanges {
-                    target: mainScrollArea
-                    implicitHeight: implicitHeight
-                }
-            },
-            State {
-                name: ""
-                when: !notificationsApplet.containsMouse
-                PropertyChanges {
-                    target: mainScrollArea
-                    implicitHeight: Math.min(theme.mSize(theme.defaultFont).height * 40, Math.max(theme.mSize(theme.defaultFont).height * 6, contentsColumn.height))
-                }
-            }
-        ]
     }
 
     function action_clearNotifications() {

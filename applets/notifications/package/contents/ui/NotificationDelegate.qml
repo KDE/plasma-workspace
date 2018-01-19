@@ -26,7 +26,7 @@ import org.kde.kquickcontrolsaddons 2.0
 
 PlasmaComponents.ListItem {
     id: notificationItem
-    width: popupFlickable.width
+    width: historyList.width
     
     property ListModel listModel;
 
