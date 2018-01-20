@@ -100,5 +100,7 @@ endif ()
 install(TARGETS plasma_engine_clipboard DESTINATION ${KDE_INSTALL_PLUGINDIR}/plasma/dataengine)
 install(FILES plasma-dataengine-clipboard.desktop DESTINATION ${KDE_INSTALL_KSERVICES5DIR})
 install(FILES org.kde.plasma.clipboard.operations DESTINATION ${PLASMA_DATA_INSTALL_DIR}/services)
+if(BUILD_TESTING)
+   add_subdirectory(autotests)
+endif()
 
-add_subdirectory(autotests)

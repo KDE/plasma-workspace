@@ -27,7 +27,9 @@ target_link_libraries(plasma_wallpaper_imageplugin
          KF5::GuiAddons
          )
 
-add_subdirectory(autotests)
+if(BUILD_TESTING)
+   add_subdirectory(autotests)
+endif()
 
 install(TARGETS plasma_wallpaper_imageplugin DESTINATION ${KDE_INSTALL_QMLDIR}/org/kde/plasma/wallpapers/image)
 

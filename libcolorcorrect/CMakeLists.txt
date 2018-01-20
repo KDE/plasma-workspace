@@ -1,6 +1,8 @@
 add_subdirectory(declarative)
 add_subdirectory(kded)
-add_subdirectory(autotests)
+if(BUILD_TESTING)
+   add_subdirectory(autotests)
+endif()
 
 set(colorcorrect_LIB_SRCS
     compositorcoloradaptor.cpp

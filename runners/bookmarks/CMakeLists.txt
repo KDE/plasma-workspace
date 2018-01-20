@@ -44,4 +44,6 @@ install(TARGETS krunner_bookmarksrunner DESTINATION ${KDE_INSTALL_PLUGINDIR} )
 install(FILES plasma-runner-bookmarks.desktop DESTINATION ${KDE_INSTALL_KSERVICES5DIR})
 
 # Currently tests include only chrome, so no need to get include them if json is not found
-add_subdirectory(tests)
+if(BUILD_TESTING)
+   add_subdirectory(tests)
+endif()

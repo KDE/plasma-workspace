@@ -27,4 +27,6 @@ target_link_libraries(org.kde.plasma.private.systemtray
 install(TARGETS org.kde.plasma.private.systemtray DESTINATION ${KDE_INSTALL_PLUGINDIR}/plasma/applets)
 
 add_subdirectory(container)
-add_subdirectory(tests)
+if(BUILD_TESTING)
+  add_subdirectory(tests)
+endif()

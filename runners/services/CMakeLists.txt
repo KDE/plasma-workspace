@@ -34,4 +34,6 @@ install(TARGETS krunner_services DESTINATION ${KDE_INSTALL_PLUGINDIR} )
 
 install(FILES plasma-runner-services.desktop DESTINATION ${KDE_INSTALL_KSERVICES5DIR})
 
-add_subdirectory(autotests)
+if(BUILD_TESTING)
+   add_subdirectory(autotests)
+endif()
