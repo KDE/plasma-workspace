@@ -3,7 +3,11 @@ include(ECMMarkAsTest)
 ########################################################
 # Test History
 ########################################################
+set(libklipper_test_SRCS)
+ecm_qt_declare_logging_category(libklipper_test_SRCS HEADER klipper_debug.h IDENTIFIER KLIPPER_LOG CATEGORY_NAME org.kde.klipper)
+
 set(testHistory_SRCS
+    ${libklipper_test_SRCS}
     historytest.cpp
     ../history.cpp
     ../historyimageitem.cpp
@@ -11,7 +15,6 @@ set(testHistory_SRCS
     ../historystringitem.cpp
     ../historyurlitem.cpp
     ../historymodel.cpp
-    ../klipper_debug.cpp
 )
 add_executable(testHistory ${testHistory_SRCS})
 target_link_libraries(testHistory
@@ -33,7 +36,7 @@ set(testHistoryModel_SRCS
     ../historyitem.cpp
     ../historystringitem.cpp
     ../historyurlitem.cpp
-    ../klipper_debug.cpp
+    ${libklipper_test_SRCS}
 )
 add_executable(testHistoryModel ${testHistoryModel_SRCS})
 target_link_libraries(testHistoryModel

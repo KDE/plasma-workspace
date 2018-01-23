@@ -2,7 +2,6 @@ set(KLIPPER_VERSION_STRING ${PROJECT_VERSION})
 add_definitions(-DTRANSLATION_DOMAIN=\"klipper\")
 
 set(libklipper_common_SRCS
-    klipper_debug.cpp
     klipper.cpp
     urlgrabber.cpp
     configdialog.cpp
@@ -18,6 +17,8 @@ set(libklipper_common_SRCS
     editactiondialog.cpp
     clipcommandprocess.cpp
 )
+
+ecm_qt_declare_logging_category(libklipper_common_SRCS HEADER klipper_debug.h IDENTIFIER KLIPPER_LOG CATEGORY_NAME org.kde.klipper)
 
 find_package(KF5Prison ${KF5_MIN_VERSION})
 set_package_properties(KF5Prison PROPERTIES DESCRIPTION "Prison library"
@@ -103,4 +104,6 @@ install(FILES org.kde.plasma.clipboard.operations DESTINATION ${PLASMA_DATA_INST
 if(BUILD_TESTING)
    add_subdirectory(autotests)
 endif()
+
+install( FILES klipper.categories DESTINATION ${KDE_INSTALL_CONFDIR} )
 
