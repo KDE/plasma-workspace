@@ -155,6 +155,7 @@ MouseArea {
                 id: summaryLabel
                 Layout.fillWidth: true
                 Layout.fillHeight: true
+                height: undefined
                 verticalAlignment: Text.AlignVCenter
                 level: 4
                 elide: Text.ElideRight
