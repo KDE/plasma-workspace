@@ -1,6 +1,7 @@
 [Desktop Entry]
 Encoding=UTF-8
 Name=Home
+Name[ar]=المنزل
 Name[ca]=Inici
 Name[ca@valencia]=Inici
 Name[cs]=Můj adresář
@@ -42,6 +43,7 @@ Name[x-test]=xxHomexx
 Name[zh_CN]=主文件夹
 Name[zh_TW]=家目錄
 GenericName=Personal Files
+GenericName[ar]=الملفّات الشّخصيّة
 GenericName[ca]=Fitxers personals
 GenericName[ca@valencia]=Fitxers personals
 GenericName[cs]=Osobní soubory

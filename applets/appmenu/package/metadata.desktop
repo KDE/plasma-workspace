@@ -1,6 +1,7 @@
 [Desktop Entry]
 Encoding=UTF-8
 Name=Global Menu
+Name[ar]=القائمة العموميّة
 Name[ca]=Menú global
 Name[ca@valencia]=Menú global
 Name[cs]=Globální nabídka
@@ -38,6 +39,7 @@ Name[x-test]=xxGlobal Menuxx
 Name[zh_CN]=全局菜单
 Name[zh_TW]=全域選單
 Comment=Global menubar on top of the screen
+Comment[ar]=شريط القوائم العموميّ أعلى الشّاشة
 Comment[ca]=Barra de menús global a la part superior de la pantalla
 Comment[ca@valencia]=Barra de menús global a la part superior de la pantalla
 Comment[de]=Globale Menüleiste oben auf dem Bildschirm
@@ -49,6 +51,7 @@ Comment[gl]=Barra de menú global na parte superior da pantalla.
 Comment[hu]=Globális menüsáv a képernyő tetején
 Comment[it]=Barra dei menu globale nella parte alta dello schermo
 Comment[nl]=Globale menubalk bovenaan het scherm
+Comment[nn]=Global menylinje øvst på skjermen
 Comment[pl]=Globalny pasek menu na górze ekranu
 Comment[pt]=Menu global no topo do ecrã
 Comment[pt_BR]=Barra de menu global no topo da tela
