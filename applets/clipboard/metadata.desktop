@@ -1,5 +1,6 @@
 [Desktop Entry]
 Name=Clipboard
+Name[ar]=الحافظة
 Name[bs]=Klipbord
 Name[ca]=Porta-retalls
 Name[ca@valencia]=Porta-retalls
@@ -44,6 +45,7 @@ Name[x-test]=xxClipboardxx
 Name[zh_CN]=剪贴板
 Name[zh_TW]=剪貼簿
 Comment=Provides access to the clipboard history
+Comment[ar]=اطّلع على تاريخ الحافظة
 Comment[ca]=Proporciona accés a l'historial del porta-retalls
 Comment[ca@valencia]=Proporciona accés a l'historial del porta-retalls
 Comment[cs]=Poskytuje přístup k historii schránky
