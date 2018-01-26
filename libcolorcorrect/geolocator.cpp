@@ -23,10 +23,10 @@ namespace ColorCorrect
 Geolocator::Geolocator(QObject *parent)
     : QObject(parent)
 {
-    m_engine = dataEngine("geolocation");
+    m_engine = dataEngine(QStringLiteral("geolocation"));
 
     if (m_engine && m_engine->isValid()) {
-        m_engine->connectSource("location", this);
+        m_engine->connectSource(QStringLiteral("location"), this);
     }
 }
 

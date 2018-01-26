@@ -277,7 +277,7 @@ public:
     QTime eveningBeginFixedStaged() const {
         return m_eveningBeginFixedStaged;
     }
-    void setEveningBeginFixedStaged(QTime time) {
+    void setEveningBeginFixedStaged(const QTime &time) {
         if (m_eveningBeginFixedStaged == time) {
             return;
         }
@@ -298,10 +298,10 @@ public:
         m_transitionTimeStaged = time;
         emit transitionTimeStagedChanged();
     }
-    QTime morningBeginFixedDefault() {
+    QTime morningBeginFixedDefault() const {
         return QTime(6,0,0);
     }
-    QTime eveningBeginFixedDefault() {
+    QTime eveningBeginFixedDefault() const {
         return QTime(18,0,0);
     }
     int transitionTimeDefault() {
@@ -428,8 +428,8 @@ Q_SIGNALS:
 
 
 private:
-    bool resetData(QHash<QString, QVariant> data);
-    void resetDataAndStaged(QHash<QString, QVariant> data);
+    bool resetData(const QHash<QString, QVariant> &data);
+    void resetDataAndStaged(const QHash<QString, QVariant> &data);
     QDBusInterface *m_iface;
 
     QHash<QString, QVariant> getData();

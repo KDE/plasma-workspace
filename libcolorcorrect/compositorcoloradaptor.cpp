@@ -47,7 +47,8 @@ CompositorAdaptor::CompositorAdaptor(QObject *parent)
     reloadData();
 }
 
-void CompositorAdaptor::setError(ErrorCode error) {
+void CompositorAdaptor::setError(ErrorCode error)
+{
     if (m_error == error || m_error == ErrorCode::ErrorCodeXSession) {
         return;
     }
@@ -90,7 +91,7 @@ if (out != in) { \
     emit emitsignal; \
 }
 
-void CompositorAdaptor::resetDataAndStaged(QHash<QString, QVariant> data)
+void CompositorAdaptor::resetDataAndStaged(const QHash<QString, QVariant> &data)
 {
     if (!resetData(data)) {
         return;
@@ -111,7 +112,7 @@ void CompositorAdaptor::resetDataAndStaged(QHash<QString, QVariant> data)
     emit stagedDataReset();
 }
 
-bool CompositorAdaptor::resetData(QHash<QString, QVariant> data)
+bool CompositorAdaptor::resetData(const QHash<QString, QVariant> &data)
 {
     m_nightColorAvailable = data["Available"].toBool();
 

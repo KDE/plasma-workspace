@@ -54,4 +54,4 @@ void LocationUpdater::sendLocation(double latitude, double longitude)
     m_adaptor->sendAutoLocationUpdate(latitude, longitude);
 }
 
-#include <locationupdater.moc>
+#include "locationupdater.moc"
