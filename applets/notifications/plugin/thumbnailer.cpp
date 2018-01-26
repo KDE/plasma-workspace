@@ -212,7 +212,8 @@ void Thumbnailer::generatePreview()
         return;
     }
 
-    KIO::PreviewJob *job = KIO::filePreview(KFileItemList({KFileItem(m_url)}), m_size);
+    auto maxSize = qMax(m_size.width(), m_size.height());
+    KIO::PreviewJob *job = KIO::filePreview(KFileItemList({KFileItem(m_url)}), QSize(maxSize,maxSize));
     job->setIgnoreMaximumSize(true);
 
     connect(job, &KIO::PreviewJob::gotPreview, this, [this](const KFileItem &item, const QPixmap &preview) {
