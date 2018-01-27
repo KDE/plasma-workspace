@@ -669,7 +669,7 @@ KSMServer::KSMServer( const QString& windowManager, InitFlags flags )
         qCDebug(KSMSERVER) << fName;
         QString display = QString::fromLocal8Bit(::getenv("DISPLAY"));
         // strip the screen number from the display
-        display.replace(QRegExp(QStringLiteral("\\.[0-9]+$")), QStringLiteral(""));
+        display.remove(QRegExp(QStringLiteral("\\.[0-9]+$")));
         int i;
         while( (i = display.indexOf(QLatin1Char(':'))) >= 0)
            display[i] = '_';
@@ -741,7 +741,7 @@ void KSMServer::cleanUp()
     QByteArray fName = QFile::encodeName(QStandardPaths::writableLocation(QStandardPaths::RuntimeLocation) + QLatin1Char('/') + QStringLiteral("KSMserver"));
     QString display  = QString::fromLocal8Bit(::getenv("DISPLAY"));
     // strip the screen number from the display
-    display.replace(QRegExp(QStringLiteral("\\.[0-9]+$")), QStringLiteral(""));
+    display.remove(QRegExp(QStringLiteral("\\.[0-9]+$")));
     int i;
     while( (i = display.indexOf(QLatin1Char(':'))) >= 0)
          display[i] = '_';

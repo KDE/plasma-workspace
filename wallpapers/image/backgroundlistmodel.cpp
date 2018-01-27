@@ -536,7 +536,7 @@ bool BackgroundFinder::isAcceptableSuffix(const QString &suffix)
     // Despite its name, suffixes() returns a list of glob patterns.
     // Therefore the file suffix check needs to include the "*." prefix.
     const QStringList &globPatterns = suffixes();
-    return globPatterns.contains("*."+suffix.toLower());
+    return globPatterns.contains(QStringLiteral("*.") + suffix.toLower());
 }
 
 void BackgroundFinder::run()

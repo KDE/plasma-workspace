@@ -59,7 +59,7 @@ void StatusNotifierWatcher::RegisterStatusNotifierItem(const QString &serviceOrP
 {
     QString service;
     QString path;
-    if (serviceOrPath.startsWith('/')) {
+    if (serviceOrPath.startsWith(QLatin1Char('/'))) {
         service = message().service();
         path = serviceOrPath;
     } else {
@@ -93,7 +93,7 @@ void StatusNotifierWatcher::serviceUnregistered(const QString& name)
     qDebug()<<"Service "<< name << "unregistered";
     m_serviceWatcher->removeWatchedService(name);
 
-    QString match = name + '/';
+    QString match = name + QLatin1Char('/');
     QStringList::Iterator it = m_registeredServices.begin();
     while (it != m_registeredServices.end()) {
         if (it->startsWith(match)) {

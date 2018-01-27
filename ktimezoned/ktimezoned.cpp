@@ -43,9 +43,7 @@ const char ZONEINFO_DIR[]   = "ZoneinfoDir";   // path to zoneinfo/ directory
 const char ZONE_TAB[]       = "Zonetab";       // path & name of zone.tab
 
 KTimeZoned::KTimeZoned(QObject* parent, const QList<QVariant>& l)
-    : KTimeZonedBase(parent, l),
-      m_dirWatch(0),
-      m_zoneTabWatch(0)
+    : KTimeZonedBase(parent, l)
 {
     init(false);
 }
@@ -53,18 +51,18 @@ KTimeZoned::KTimeZoned(QObject* parent, const QList<QVariant>& l)
 KTimeZoned::~KTimeZoned()
 {
     delete m_dirWatch;
-    m_dirWatch = 0;
+    m_dirWatch = nullptr;
     delete m_zoneTabWatch;
-    m_zoneTabWatch = 0;
+    m_zoneTabWatch = nullptr;
 }
 
 void KTimeZoned::init(bool restart)
 {
     if (restart) {
         delete m_dirWatch;
-        m_dirWatch = 0;
+        m_dirWatch = nullptr;
         delete m_zoneTabWatch;
-        m_zoneTabWatch = 0;
+        m_zoneTabWatch = nullptr;
         m_localZone = QString();
         m_zoneinfoDir = QString();
         m_zoneTab = QString();

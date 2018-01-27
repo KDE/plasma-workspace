@@ -219,7 +219,7 @@ void Image::findPreferedImageInPackage(KPackage::Package &package)
     QString preferred = findPreferedImage( package.entryList("images") );
 
     package.removeDefinition("preferred");
-    package.addFileDefinition("preferred", "images/" + preferred, i18n("Recommended wallpaper file"));
+    package.addFileDefinition("preferred", QStringLiteral("images/") + preferred, i18n("Recommended wallpaper file"));
 }
 
 QSize Image::targetSize() const
@@ -342,7 +342,7 @@ void Image::setSlidePaths(const QStringList &slidePaths)
 
 void Image::showAddSlidePathsDialog()
 {
-    QFileDialog *dialog = new QFileDialog(0, i18n("Directory with the wallpaper to show slides from"), QLatin1String(""));
+    QFileDialog *dialog = new QFileDialog(nullptr, i18n("Directory with the wallpaper to show slides from"), QString());
     dialog->setAttribute(Qt::WA_DeleteOnClose, true );
     dialog->setOptions(QFileDialog::ShowDirsOnly);
     dialog->setAcceptMode(QFileDialog::AcceptOpen);
@@ -687,7 +687,7 @@ void Image::wallpaperBrowseCompleted()
 void Image::addUsersWallpaper(const QString &file)
 {
     QString f = file;
-    f.replace(QLatin1String("file:/"), QLatin1String(""));
+    f.remove(QLatin1String("file:/"));
     const QFileInfo info(f); // FIXME
 
     //the full file path, so it isn't broken when dealing with symlinks

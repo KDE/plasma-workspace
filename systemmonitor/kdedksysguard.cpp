@@ -71,7 +71,7 @@ void KDEDKSysGuard::showTaskManager()
         con.asyncCall(msg);
     }
     else {
-        QString exe = QStandardPaths::findExecutable(QStringLiteral("systemmonitor"));
+        const QString exe = QStandardPaths::findExecutable(QStringLiteral("systemmonitor"));
         QProcess::startDetached(exe, QStringList());
     }
 }
