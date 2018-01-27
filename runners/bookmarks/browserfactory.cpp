@@ -29,7 +29,7 @@
 Browser *BrowserFactory::find(const QString& browserName, QObject* parent)
 {
     if(m_previousBrowserName == browserName) {
-      return m_previousBrowser;
+        return m_previousBrowser;
     }
     delete m_previousBrowser;
     m_previousBrowserName = browserName;
@@ -50,7 +50,7 @@ Browser *BrowserFactory::find(const QString& browserName, QObject* parent)
 
 
 BrowserFactory::BrowserFactory(QObject *parent)
-    : QObject(parent), m_previousBrowser(0), m_previousBrowserName(QStringLiteral("invalid"))
+    : QObject(parent), m_previousBrowser(nullptr), m_previousBrowserName(QStringLiteral("invalid"))
 {
 }
 

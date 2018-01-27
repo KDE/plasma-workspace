@@ -30,11 +30,11 @@ class FindChromeProfile : public QObject, public FindProfile
 {
 
 public:
-    explicit FindChromeProfile (const QString& applicationName, const QString &homeDirectory = QDir::homePath(), QObject* parent = 0 );
+    explicit FindChromeProfile (const QString& applicationName, const QString &homeDirectory = QDir::homePath(), QObject* parent = nullptr );
     QList<Profile> find() override;
 private:
-  QString const m_applicationName;
-  QString const m_homeDirectory;
+    QString const m_applicationName;
+    QString const m_homeDirectory;
 };
 
 #endif // CHROMEFINDPROFILE_H

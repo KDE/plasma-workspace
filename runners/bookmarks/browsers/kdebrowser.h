@@ -29,7 +29,7 @@ class Favicon;
 class KDEFavicon : public Favicon {
     Q_OBJECT
 public:
-    KDEFavicon(QObject *parent = 0);
+    explicit KDEFavicon(QObject *parent = nullptr);
     QIcon iconFor(const QString &url) override;
 
 };
@@ -38,7 +38,7 @@ class KDEBrowser : public QObject, public Browser
 {
     Q_OBJECT
 public:
-    explicit KDEBrowser(QObject *parent = 0);
+    explicit KDEBrowser(QObject *parent = nullptr);
     QList<BookmarkMatch> match(const QString& term, bool addEverything) override;
 
 public Q_SLOTS:

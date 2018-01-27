@@ -33,9 +33,7 @@
 #include <Plasma/PluginLoader>
 
 PlasmaWindowedCorona::PlasmaWindowedCorona(QObject *parent)
-    : Plasma::Corona(parent),
-      m_containment(0),
-      m_hasStatusNotifier(false)
+    : Plasma::Corona(parent)
 {
     KPackage::Package package = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Plasma/Shell"));
     package.setPath(QStringLiteral("org.kde.plasma.desktop"));

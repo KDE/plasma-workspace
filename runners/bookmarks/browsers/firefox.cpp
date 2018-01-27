@@ -34,7 +34,7 @@
 Firefox::Firefox(QObject *parent) :
     QObject(parent),
     m_favicon(new FallbackFavicon(this)),
-    m_fetchsqlite(0)
+    m_fetchsqlite(nullptr)
 {
   reloadConfiguration();
   //qDebug() << "Loading Firefox Bookmarks Browser";
@@ -62,7 +62,7 @@ void Firefox::prepare()
         m_fetchsqlite->prepare();
 
         delete m_favicon;
-        m_favicon = 0;
+        m_favicon = nullptr;
 
         m_favicon = FaviconFromBlob::firefox(m_fetchsqlite, this);
     }
@@ -113,7 +113,7 @@ void Firefox::teardown()
     if(m_fetchsqlite) {
         m_fetchsqlite->teardown();
         delete m_favicon;
-        m_favicon = 0;
+        m_favicon = nullptr;
     }
 }
 

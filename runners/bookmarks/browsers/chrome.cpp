@@ -96,7 +96,7 @@ void Chrome::prepare()
         QFile bookmarksFile(profile.path());
         if (!bookmarksFile.open(QIODevice::ReadOnly | QIODevice::Text)) {
             continue;
-        };
+        }
         QJsonDocument jdoc = QJsonDocument::fromJson(bookmarksFile.readAll());
         if (jdoc.isNull()) {
             continue;

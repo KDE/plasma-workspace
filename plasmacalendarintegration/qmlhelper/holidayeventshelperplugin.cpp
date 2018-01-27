@@ -31,7 +31,7 @@ class QmlConfigHelper : public QObject
     Q_PROPERTY(QStringList selectedRegions READ selectedRegions NOTIFY selectedRegionsChanged)
 
 public:
-    QmlConfigHelper(QObject *parent = 0) : QObject(parent)
+    explicit QmlConfigHelper(QObject *parent = nullptr) : QObject(parent)
     {
         KSharedConfig::Ptr config = KSharedConfig::openConfig("plasma_calendar_holiday_regions");
         m_configGroup = config->group("General");

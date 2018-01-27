@@ -74,8 +74,8 @@ inline const QDBusArgument &operator>>(const QDBusArgument &argument, RemoteActi
     return argument;
 }
 
-Q_DECLARE_METATYPE(RemoteMatch);
-Q_DECLARE_METATYPE(RemoteMatches);
-Q_DECLARE_METATYPE(RemoteAction);
-Q_DECLARE_METATYPE(RemoteActions);
+Q_DECLARE_METATYPE(RemoteMatch)
+Q_DECLARE_METATYPE(RemoteMatches)
+Q_DECLARE_METATYPE(RemoteAction)
+Q_DECLARE_METATYPE(RemoteActions)
 

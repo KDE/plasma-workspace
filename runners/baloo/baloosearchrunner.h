@@ -36,7 +36,7 @@ class SearchRunner : public QObject, protected QDBusContext
     Q_OBJECT
 
 public:
-    SearchRunner(QObject* parent=0);
+    explicit SearchRunner(QObject* parent=nullptr);
     ~SearchRunner() override;
 
     RemoteActions Actions();
@@ -50,7 +50,7 @@ private:
 
     QDBusMessage m_lastRequest;
     QString m_searchTerm;
-    QTimer *m_timer;
+    QTimer *m_timer = nullptr;
 };
 
 #endif // _BALOO_SEARCH_RUNNER_H_

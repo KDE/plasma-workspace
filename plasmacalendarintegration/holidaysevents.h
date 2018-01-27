@@ -33,10 +33,10 @@ class HolidaysEventsPlugin : public CalendarEvents::CalendarEventsPlugin
     Q_INTERFACES(CalendarEvents::CalendarEventsPlugin)
 
 public:
-    HolidaysEventsPlugin(QObject *parent = 0);
+    explicit HolidaysEventsPlugin(QObject *parent = nullptr);
     ~HolidaysEventsPlugin();
 
-    virtual void loadEventsForDateRange(const QDate &startDate, const QDate &endDate) Q_DECL_OVERRIDE;
+    void loadEventsForDateRange(const QDate &startDate, const QDate &endDate) Q_DECL_OVERRIDE;
 
 private:
     QDate m_lastStartDate;

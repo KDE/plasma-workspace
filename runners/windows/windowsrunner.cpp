@@ -180,7 +180,7 @@ void WindowsRunner::match(Plasma::RunnerContext& context)
         QString windowRole;
         int desktop = -1;
         foreach (const QString& keyword, keywords) {
-            if (keyword.endsWith('=')) {
+            if (keyword.endsWith(QLatin1Char('='))) {
                 continue;
             }
             if (keyword.startsWith(i18nc("Note this is a KRunner keyword", "name") + "=" , Qt::CaseInsensitive)) {

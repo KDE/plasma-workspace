@@ -36,7 +36,7 @@ K_EXPORT_PLASMA_RUNNER(kill, KillRunner)
 
 KillRunner::KillRunner(QObject *parent, const QVariantList& args)
         : Plasma::AbstractRunner(parent, args),
-          m_processes(0)
+          m_processes(nullptr)
 {
     Q_UNUSED(args);
     setObjectName( QLatin1String("Kill Runner") );
@@ -83,7 +83,7 @@ void KillRunner::cleanup()
 
     if (m_prepLock.tryLockForWrite()) {
         delete m_processes;
-        m_processes = 0;
+        m_processes = nullptr;
 
         m_prepLock.unlock();
     } else {

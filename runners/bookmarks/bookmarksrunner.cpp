@@ -41,7 +41,7 @@ K_EXPORT_PLASMA_RUNNER(bookmarksrunner, BookmarksRunner)
 
 
 BookmarksRunner::BookmarksRunner( QObject* parent, const QVariantList &args )
-    : Plasma::AbstractRunner(parent, args), m_browser(0), m_browserFactory(new BrowserFactory(this))
+    : Plasma::AbstractRunner(parent, args), m_browser(nullptr), m_browserFactory(new BrowserFactory(this))
 {
     Q_UNUSED(args)
     //qDebug() << "Creating BookmarksRunner";

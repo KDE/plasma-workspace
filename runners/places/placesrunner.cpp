@@ -177,7 +177,7 @@ void PlacesRunner::setupComplete(QModelIndex index, bool success)
     KFilePlacesModel *places = qobject_cast<KFilePlacesModel*>(sender());
     //qDebug() << "setup complete" << places << sender();
     if (success && places) {
-        new KRun(places->url(index), 0);
+        new KRun(places->url(index), nullptr);
         places->deleteLater();
     }
 }

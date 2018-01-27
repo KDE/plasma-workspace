@@ -32,20 +32,14 @@
 #include <KService>
 #include <KServiceTypeTrader>
 #include <kcoreaddons_version.h>
-#if KCOREADDONS_VERSION >= QT_VERSION_CHECK(5, 41, 0)
 #include <KStringHandler>
-#endif
 
 #include "debug.h"
 
 namespace {
 
 int weightedLength(const QString &query) {
-#if KCOREADDONS_VERSION >= QT_VERSION_CHECK(5, 41, 0)
     return KStringHandler::logicalLength(query);
-#else
-    return query.length();
-#endif
 }
 
 }  // namespace

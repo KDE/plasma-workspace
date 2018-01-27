@@ -244,7 +244,7 @@ void SessionRunner::run(const Plasma::RunnerContext &context, const Plasma::Quer
 
     //TODO: this message is too verbose and too technical.
     int result = QMessageBox::warning(
-            0,
+            nullptr,
             i18n("Warning - New Session"),
             i18n("<p>You have chosen to open another desktop session.<br />"
                 "The current session will be hidden "

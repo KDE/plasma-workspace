@@ -29,7 +29,7 @@ class Favicon : public QObject
 {
     Q_OBJECT
 public:
-    explicit Favicon(QObject *parent = 0);
+    explicit Favicon(QObject *parent = nullptr);
     virtual QIcon iconFor(const QString &url) = 0;
 
 protected:
@@ -47,7 +47,7 @@ public Q_SLOTS:
 class FallbackFavicon : public Favicon {
     Q_OBJECT
 public:
-    FallbackFavicon(QObject *parent = 0) : Favicon(parent) {}
+    FallbackFavicon(QObject *parent = nullptr) : Favicon(parent) {}
     QIcon iconFor(const QString &) override { return defaultIcon(); }
 };
 

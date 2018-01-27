@@ -43,7 +43,7 @@ class KillRunnerConfig : public KCModule
     Q_OBJECT
 
 public:
-    explicit KillRunnerConfig(QWidget* parent = 0, const QVariantList& args = QVariantList());
+    explicit KillRunnerConfig(QWidget* parent = nullptr, const QVariantList& args = QVariantList());
     
     /** Possibilities to sort */
     enum Sort {NONE = 0, CPU, CPUI};

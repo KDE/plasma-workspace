@@ -26,8 +26,8 @@ K_EXPORT_PLASMA_RUNNER(activities, ActivityRunner)
 
 ActivityRunner::ActivityRunner(QObject *parent, const QVariantList &args)
     : Plasma::AbstractRunner(parent, args),
-      m_activities(0),
-      m_consumer(0),
+      m_activities(nullptr),
+      m_consumer(nullptr),
       m_keywordi18n(i18nc("KRunner keyword", "activity")),
       m_keyword(QStringLiteral("activity")),
       m_enabled(false)
@@ -58,7 +58,7 @@ void ActivityRunner::prep()
 void ActivityRunner::down()
 {
     delete m_activities;
-    m_activities = 0;
+    m_activities = nullptr;
 }
 
 void ActivityRunner::serviceStatusChanged(KActivities::Consumer::ServiceStatus status)

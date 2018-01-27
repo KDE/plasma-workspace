@@ -29,7 +29,7 @@ class PlasmaWindowedCorona : public Plasma::Corona
     Q_OBJECT
 
 public:
-    explicit PlasmaWindowedCorona(QObject * parent = 0);
+    explicit PlasmaWindowedCorona(QObject * parent = nullptr);
     QRect screenGeometry(int id) const override;
 
     void setHasStatusNotifier(bool stay);
@@ -40,8 +40,8 @@ public Q_SLOTS:
     void activateRequested(const QStringList &arguments, const QString &workingDirectory);
 
 private:
-    Plasma::Containment *m_containment;
-    bool m_hasStatusNotifier;
+    Plasma::Containment *m_containment = nullptr;
+    bool m_hasStatusNotifier = false;
 };
 
 #endif

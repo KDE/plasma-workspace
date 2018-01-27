@@ -102,7 +102,7 @@ QString AppInterface::applicationVersion() const
 
 QString AppInterface::platformVersion() const
 {
-    return 0;//KDE::versionString();
+    return QString();//KDE::versionString();
 }
 
 int AppInterface::scriptingVersion() const
@@ -132,7 +132,7 @@ QString AppInterface::language() const
 
 QString AppInterface::languageId() const
 {
-    return QLocale::system().bcp47Name().section('-', 0, 0);
+    return QLocale::system().bcp47Name().section(QLatin1Char('-'), 0, 0);
 }
 
 bool AppInterface::multihead() const
@@ -210,8 +210,9 @@ QStringList AppInterface::knownPanelTypes() const
 QStringList AppInterface::knownContainmentTypes(const QString &type) const
 {
     QStringList containments;
-    KPluginInfo::List infoLs = Plasma::PluginLoader::listContainmentsOfType(type);
+    const KPluginInfo::List infoLs = Plasma::PluginLoader::listContainmentsOfType(type);
 
+    containments.reserve(infoLs.count());
     foreach (const KPluginInfo &info, infoLs) {
         containments.append(info.pluginName());
     }

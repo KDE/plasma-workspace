@@ -34,7 +34,7 @@ class PlasmaWindowedView : public QQuickView
     Q_OBJECT
 
 public:
-    PlasmaWindowedView(QWindow *parent = 0);
+    explicit PlasmaWindowedView(QWindow *parent = nullptr);
     ~PlasmaWindowedView() override;
 
     void setApplet(Plasma::Applet *applet);

@@ -37,7 +37,7 @@ class Chrome : public QObject, public Browser
 {
   Q_OBJECT
 public:
-    Chrome(FindProfile *findProfile, QObject* parent = 0);
+    Chrome(FindProfile *findProfile, QObject* parent = nullptr);
     ~Chrome() override;
     QList<BookmarkMatch> match(const QString &term, bool addEveryThing) override;
 public Q_SLOTS:
@@ -47,7 +47,7 @@ private:
     void parseFolder(const QVariantMap &entry, ProfileBookmarks *profile);
     virtual QList<BookmarkMatch> match(const QString &term, bool addEveryThing, ProfileBookmarks *profileBookmarks);
     QList<ProfileBookmarks*> m_profileBookmarks;
-    KDirWatch* m_watcher;
+    KDirWatch* m_watcher = nullptr;
     bool m_dirty;
 
 };
