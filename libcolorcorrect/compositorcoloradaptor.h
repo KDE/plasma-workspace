@@ -106,12 +106,12 @@ public:
     explicit CompositorAdaptor(QObject *parent = nullptr);
     virtual ~CompositorAdaptor() = default;
 
-    int error() {
+    int error() const {
         return (int)m_error;
     }
     void setError(ErrorCode error);
 
-    QString errorText() {
+    QString errorText() const {
         return m_errorText;
     }
 
@@ -121,10 +121,10 @@ public:
     bool nightColorAvailable() const {
         return m_nightColorAvailable;
     }
-    int minimalTemperature() {
+    int minimalTemperature() const {
         return MIN_TEMPERATURE;
     }
-    int neutralTemperature() {
+    int neutralTemperature() const {
         return NEUTRAL_TEMPERATURE;
     }
 
@@ -144,11 +144,11 @@ public:
         m_activeStaged = set;
         emit activeStagedChanged();
     }
-    bool activeDefault() {
+    bool activeDefault() const {
         return true;
     }
 
-    bool running() {
+    bool running() const {
         return m_running;
     }
 
@@ -168,7 +168,7 @@ public:
         m_modeStaged = (Mode)mode;
         emit modeStagedChanged();
     }
-    int modeDefault() {
+    int modeDefault() const {
         return (int)Mode::ModeAutomatic;
     }
     /*
@@ -190,10 +190,10 @@ public:
         m_nightTemperatureStaged = val;
         emit nightTemperatureStagedChanged();
     }
-    int nightTemperatureDefault() {
+    int nightTemperatureDefault() const {
         return DEFAULT_NIGHT_TEMPERATURE;
     }
-    int curColorT() {
+    int curColorT() const {
         return m_curColorT;
     }
     void setCurColorT(int val) {
@@ -244,10 +244,10 @@ public:
         m_longitudeFixedStaged = val;
         emit longitudeFixedStagedChanged();
     }
-    double latitudeFixedDefault() {
+    double latitudeFixedDefault() const {
         return 0.;
     }
-    double longitudeFixedDefault() {
+    double longitudeFixedDefault() const {
         return 0.;
     }
     /*
@@ -263,7 +263,7 @@ public:
     QTime morningBeginFixedStaged() const {
         return m_morningBeginFixedStaged;
     }
-    void setMorningBeginFixedStaged(QTime time) {
+    void setMorningBeginFixedStaged(const QTime &time) {
         if (m_morningBeginFixedStaged == time) {
             return;
         }
@@ -304,7 +304,7 @@ public:
     QTime eveningBeginFixedDefault() const {
         return QTime(18,0,0);
     }
-    int transitionTimeDefault() {
+    int transitionTimeDefault() const {
         return FALLBACK_SLOW_UPDATE_TIME;
     }
 
@@ -384,7 +384,7 @@ public:
     Q_INVOKABLE bool checkStagedAll();
 
 private Q_SLOTS:
-    void compDataUpdated(QHash<QString, QVariant> data);
+    void compDataUpdated(const QHash<QString, QVariant> &data);
 
 Q_SIGNALS:
     void errorChanged();
@@ -435,7 +435,7 @@ private:
     QHash<QString, QVariant> getData();
 
     ErrorCode m_error = ErrorCode::ErrorCodeSuccess;
-    QString m_errorText = "";
+    QString m_errorText;
 
     bool m_nightColorAvailable = false;
 

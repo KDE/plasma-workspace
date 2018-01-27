@@ -70,7 +70,7 @@ void CompositorAdaptor::setError(ErrorCode error)
     emit errorTextChanged();
 }
 
-void CompositorAdaptor::compDataUpdated(QHash<QString, QVariant> data)
+void CompositorAdaptor::compDataUpdated(const QHash<QString, QVariant> &data)
 {
     resetData(data);
     emit dataUpdated();
