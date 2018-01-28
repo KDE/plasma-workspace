@@ -37,9 +37,9 @@
 
 FreeSpaceNotifier::FreeSpaceNotifier(QObject *parent)
     : QObject(parent)
-    , m_lastAvailTimer(NULL)
-    , m_notification(NULL)
-    , m_sni(NULL)
+    , m_lastAvailTimer(nullptr)
+    , m_notification(nullptr)
+    , m_sni(nullptr)
     , m_lastAvail(-1)
 {
     // If we are running, notifications are enabled
@@ -103,15 +103,15 @@ void FreeSpaceNotifier::checkFreeDiskSpace()
                     m_sni->setCategory(KStatusNotifierItem::Hardware);
 
                     QMenu *sniMenu = new QMenu();
-                    QAction *action = new QAction(i18nc("Opens a file manager like dolphin", "Open File Manager..."), 0);
+                    QAction *action = new QAction(i18nc("Opens a file manager like dolphin", "Open File Manager..."), nullptr);
                     connect(action, &QAction::triggered, this, &FreeSpaceNotifier::openFileManager);
                     sniMenu->addAction(action);
 
-                    action = new QAction(i18nc("Allows the user to configure the warning notification being shown", "Configure Warning..."), 0);
+                    action = new QAction(i18nc("Allows the user to configure the warning notification being shown", "Configure Warning..."), nullptr);
                     connect(action, &QAction::triggered, this, &FreeSpaceNotifier::showConfiguration);
                     sniMenu->addAction(action);
 
-                    action = new QAction(i18nc("Allows the user to hide this notifier item", "Hide"), 0);
+                    action = new QAction(i18nc("Allows the user to hide this notifier item", "Hide"), nullptr);
                     connect(action, &QAction::triggered, this, &FreeSpaceNotifier::hideSni);
                     sniMenu->addAction(action);
 
@@ -136,7 +136,7 @@ void FreeSpaceNotifier::checkFreeDiskSpace()
             // free space is above limit again, remove the SNI
             if (m_sni) {
                 m_sni->deleteLater();
-                m_sni = NULL;
+                m_sni = nullptr;
             }
         }
     }
@@ -156,7 +156,7 @@ void FreeSpaceNotifier::hideSni()
 void FreeSpaceNotifier::openFileManager()
 {
     cleanupNotification();
-    new KRun(QUrl::fromLocalFile(QDir::homePath()), 0);
+    new KRun(QUrl::fromLocalFile(QDir::homePath()), nullptr);
 
     if (m_sni) {
         m_sni->setStatus(KStatusNotifierItem::Active);
@@ -171,7 +171,7 @@ void FreeSpaceNotifier::showConfiguration()
         return;
     }
 
-    KConfigDialog *dialog = new KConfigDialog(0, QStringLiteral("settings"), FreeSpaceNotifierSettings::self());
+    KConfigDialog *dialog = new KConfigDialog(nullptr, QStringLiteral("settings"), FreeSpaceNotifierSettings::self());
     QWidget *generalSettingsDlg = new QWidget();
 
     Ui::freespacenotifier_prefs_base preferences;
@@ -195,10 +195,10 @@ void FreeSpaceNotifier::cleanupNotification()
     if (m_notification) {
         m_notification->close();
     }
-    m_notification = NULL;
+    m_notification = nullptr;
 
     // warn again if constantly below limit for too long
-    if (m_lastAvailTimer == NULL) {
+    if (!m_lastAvailTimer) {
         m_lastAvailTimer = new QTimer(this);
         connect(m_lastAvailTimer, &QTimer::timeout, this, &FreeSpaceNotifier::resetLastAvailable);
     }
@@ -209,7 +209,7 @@ void FreeSpaceNotifier::resetLastAvailable()
 {
     m_lastAvail = -1;
     m_lastAvailTimer->deleteLater();
-    m_lastAvailTimer = NULL;
+    m_lastAvailTimer = nullptr;
 }
 
 void FreeSpaceNotifier::configDialogClosed()
@@ -246,7 +246,7 @@ void FreeSpaceNotifier::disableFSNotifier()
 
 bool FreeSpaceNotifier::dbusError(QDBusInterface &iface)
 {
-    QDBusError err = iface.lastError();
+    const QDBusError err = iface.lastError();
     if (err.isValid()) {
         qCritical() << "Failed to perform operation on kded [" << err.name() << "]:" << err.message();
         return true;

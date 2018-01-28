@@ -21,19 +21,19 @@
 #define MODULE_H
 
 #include <KDEDModule>
-#include <QtCore/QObject>
+#include <QObject>
 #include <QtDBus/QtDBus>
 
 #include "freespacenotifier.h"
 
 class FreeSpaceNotifierModule
-    : public KDEDModule
-    {
+        : public KDEDModule
+{
     Q_OBJECT
-    public:
-        FreeSpaceNotifierModule(QObject* parent, const QList<QVariant>&);
-    private:
-        FreeSpaceNotifier notifier;
-    };
+public:
+    FreeSpaceNotifierModule(QObject* parent, const QList<QVariant>&);
+private:
+    FreeSpaceNotifier notifier;
+};
 
 #endif
