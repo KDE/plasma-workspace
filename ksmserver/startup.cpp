@@ -97,7 +97,7 @@ static QTime t;
 class NotificationThread : public QThread
 {
     Q_OBJECT
-    void run() Q_DECL_OVERRIDE {
+    void run() override {
         // We cannot parent to the thread itself so let's create
         // a QObject on the stack and parent everythign to it
         QObject parent;

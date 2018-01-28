@@ -36,7 +36,7 @@ public:
     explicit HolidaysEventsPlugin(QObject *parent = nullptr);
     ~HolidaysEventsPlugin();
 
-    void loadEventsForDateRange(const QDate &startDate, const QDate &endDate) Q_DECL_OVERRIDE;
+    void loadEventsForDateRange(const QDate &startDate, const QDate &endDate) override;
 
 private:
     QDate m_lastStartDate;

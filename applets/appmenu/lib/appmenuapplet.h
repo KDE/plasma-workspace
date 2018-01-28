@@ -74,7 +74,7 @@ public slots:
     void trigger(QQuickItem *ctx, int idx);
 
 protected:
-    bool eventFilter(QObject *watched, QEvent *event) Q_DECL_OVERRIDE;
+    bool eventFilter(QObject *watched, QEvent *event) override;
 
 private:
     QMenu *createMenu(int idx) const;

@@ -82,7 +82,7 @@ Q_SIGNALS:
     void rejected();
 
 protected:
-    void resizeEvent(QResizeEvent *e) Q_DECL_OVERRIDE;
+    void resizeEvent(QResizeEvent *e) override;
     bool event(QEvent *e) override;
 
 private:

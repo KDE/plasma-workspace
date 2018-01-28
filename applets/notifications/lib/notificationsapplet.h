@@ -46,7 +46,7 @@ public:
     QRect availableScreenRect() const;
 
 public Q_SLOTS:
-    void init() Q_DECL_OVERRIDE;
+    void init() override;
     void onScreenPositionChanged(uint position);
     void onAppletLocationChanged();
 

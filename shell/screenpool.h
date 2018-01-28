@@ -53,7 +53,7 @@ public:
     QList <int> knownIds() const;
 
 protected:
-    bool nativeEventFilter(const QByteArray & eventType, void * message, long * result) Q_DECL_OVERRIDE;
+    bool nativeEventFilter(const QByteArray & eventType, void * message, long * result) override;
 
 private:
     void save();

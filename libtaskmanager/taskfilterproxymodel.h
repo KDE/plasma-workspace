@@ -285,7 +285,7 @@ Q_SIGNALS:
 
 protected:
     bool filterAcceptsRow(int sourceRow, const QModelIndex &sourceParent) const override;
-    QModelIndex mapIfaceToSource(const QModelIndex &index) const Q_DECL_OVERRIDE;
+    QModelIndex mapIfaceToSource(const QModelIndex &index) const override;
 
 private:
     class Private;

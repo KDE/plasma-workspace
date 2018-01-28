@@ -143,8 +143,8 @@ public:
      */
     Q_INVOKABLE void uninstall(const QString &pluginName);
 
-    void classBegin() Q_DECL_OVERRIDE;
-    void componentComplete() Q_DECL_OVERRIDE;
+    void classBegin() override;
+    void componentComplete() override;
 
 Q_SIGNALS:
     void widgetsMenuActionsChanged();

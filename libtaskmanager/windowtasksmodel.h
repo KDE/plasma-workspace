@@ -51,7 +51,7 @@ public:
     QHash<int, QByteArray> roleNames() const override;
 
 protected:
-    QModelIndex mapIfaceToSource(const QModelIndex &index) const Q_DECL_OVERRIDE;
+    QModelIndex mapIfaceToSource(const QModelIndex &index) const override;
 private:
     class Private;
     QScopedPointer<Private> d;

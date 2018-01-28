@@ -48,7 +48,7 @@ public:
     explicit ConcatenateTasksProxyModel(QObject *parent = 0);
     virtual ~ConcatenateTasksProxyModel();
 protected:
-    QModelIndex mapIfaceToSource(const QModelIndex &index) const Q_DECL_OVERRIDE;
+    QModelIndex mapIfaceToSource(const QModelIndex &index) const override;
 };
 
 }
