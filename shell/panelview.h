@@ -221,6 +221,7 @@ private:
     int m_distance;
     int m_thickness;
     bool m_initCompleted;
+    bool m_containsMouse = false;
     Qt::Alignment m_alignment;
     QPointer<PlasmaQuick::ConfigView> m_panelConfigView;
     ShellCorona *m_corona;
