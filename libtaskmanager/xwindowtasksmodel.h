@@ -52,7 +52,7 @@ class TASKMANAGER_EXPORT XWindowTasksModel : public AbstractWindowTasksModel
     Q_OBJECT
 
 public:
-    explicit XWindowTasksModel(QObject *parent = 0);
+    explicit XWindowTasksModel(QObject *parent = nullptr);
     virtual ~XWindowTasksModel();
 
     virtual QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;

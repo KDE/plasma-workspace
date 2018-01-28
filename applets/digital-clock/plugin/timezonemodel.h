@@ -34,7 +34,7 @@ class TimeZoneFilterProxy : public QSortFilterProxyModel
     Q_PROPERTY(QString filterString WRITE setFilterString MEMBER m_filterString NOTIFY filterStringChanged)
 
 public:
-    explicit TimeZoneFilterProxy(QObject *parent = 0);
+    explicit TimeZoneFilterProxy(QObject *parent = nullptr);
     bool filterAcceptsRow(int source_row, const QModelIndex &source_parent) const override;
 
     void setFilterString(const QString &filterString);
@@ -55,7 +55,7 @@ class TimeZoneModel : public QAbstractListModel
     Q_PROPERTY(QStringList selectedTimeZones WRITE setSelectedTimeZones MEMBER m_selectedTimeZones NOTIFY selectedTimeZonesChanged)
 
 public:
-    explicit TimeZoneModel(QObject *parent = 0);
+    explicit TimeZoneModel(QObject *parent = nullptr);
     ~TimeZoneModel() override;
 
     enum Roles {

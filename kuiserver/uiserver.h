@@ -56,11 +56,11 @@ private Q_SLOTS:
     void showConfigurationDialog();
 
 private:
-    ProgressListDelegate *progressListDelegate;
-    QListView *listProgress;
+    ProgressListDelegate *progressListDelegate = nullptr;
+    QListView *listProgress = nullptr;
 
-    QToolBar *toolBar;
-    QSystemTrayIcon *m_systemTray;
+    QToolBar *toolBar = nullptr;
+    QSystemTrayIcon *m_systemTray = nullptr;
 
 };
 

@@ -52,7 +52,7 @@ class ShareJob : public Plasma::ServiceJob
 
 public:
     ShareJob(const QString &destination, const QString &operation,
-             QMap<QString, QVariant> &parameters, QObject *parent = 0);
+             QMap<QString, QVariant> &parameters, QObject *parent = nullptr);
     ~ShareJob() override;
     void start() override;
 

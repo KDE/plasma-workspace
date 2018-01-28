@@ -37,7 +37,7 @@ class TestChromeBookmarks : public QObject
 {
 Q_OBJECT
 public:
-    explicit TestChromeBookmarks(QObject* parent = 0) : QObject(parent) {}
+    explicit TestChromeBookmarks(QObject* parent = nullptr) : QObject(parent) {}
 private Q_SLOTS:
   void initTestCase();
   void bookmarkFinderShouldFindEachProfileDirectory();

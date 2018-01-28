@@ -55,7 +55,7 @@ class TASKMANAGER_EXPORT VirtualDesktopInfo : public QObject
     Q_PROPERTY(int desktopLayoutRows READ desktopLayoutRows NOTIFY desktopLayoutRowsChanged)
 
 public:
-    explicit VirtualDesktopInfo(QObject *parent = 0);
+    explicit VirtualDesktopInfo(QObject *parent = nullptr);
     virtual ~VirtualDesktopInfo();
 
     /**

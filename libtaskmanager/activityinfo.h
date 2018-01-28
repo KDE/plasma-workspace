@@ -50,7 +50,7 @@ class TASKMANAGER_EXPORT ActivityInfo : public QObject
     Q_PROPERTY(int numberOfRunningActivities READ numberOfRunningActivities NOTIFY numberOfRunningActivitiesChanged)
 
 public:
-    explicit ActivityInfo(QObject *parent = 0);
+    explicit ActivityInfo(QObject *parent = nullptr);
     virtual ~ActivityInfo();
 
     /**

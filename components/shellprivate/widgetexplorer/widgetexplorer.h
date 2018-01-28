@@ -44,7 +44,7 @@ class WidgetAction : public QAction
     Q_PROPERTY(bool separator READ isSeparator WRITE setSeparator NOTIFY separatorChanged)
 
 public:
-    WidgetAction(QObject *parent = 0);
+    WidgetAction(QObject *parent = nullptr);
     WidgetAction(const QIcon &icon, const QString &text, QObject *parent);
 
 Q_SIGNALS:
@@ -96,7 +96,7 @@ class WidgetExplorer : public QObject, public QQmlParserStatus
     Q_PROPERTY(Plasma::Containment *containment READ containment WRITE setContainment NOTIFY containmentChanged)
 
 public:
-    explicit WidgetExplorer(QObject *parent = 0);
+    explicit WidgetExplorer(QObject *parent = nullptr);
     ~WidgetExplorer() override;
 
     QString application();

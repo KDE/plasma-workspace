@@ -93,7 +93,7 @@ public:
         FilterDataRole = Qt::UserRole+2,
         SeparatorRole = Qt::UserRole+3
     };
-    DefaultFilterModel(QObject *parent = 0);
+    DefaultFilterModel(QObject *parent = nullptr);
 
     QHash<int, QByteArray> roleNames() const override;
 
@@ -130,7 +130,7 @@ class DefaultItemFilterProxyModel : public QSortFilterProxyModel
     Q_PROPERTY(int count READ count NOTIFY countChanged)
 
 public:
-    DefaultItemFilterProxyModel(QObject *parent = 0);
+    DefaultItemFilterProxyModel(QObject *parent = nullptr);
 
     bool filterAcceptsRow(int sourceRow, const QModelIndex &sourceParent) const override;
     bool lessThan(const QModelIndex &left, const QModelIndex &right) const override;

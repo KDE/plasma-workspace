@@ -32,7 +32,7 @@ class AlternativesHelper : public QObject
     Q_PROPERTY(QQuickItem *applet READ applet CONSTANT)
 
 public:
-    AlternativesHelper(Plasma::Applet *applet, QObject *parent = 0);
+    AlternativesHelper(Plasma::Applet *applet, QObject *parent = nullptr);
     ~AlternativesHelper() override;
 
     QQuickItem *applet() const;

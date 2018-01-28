@@ -54,7 +54,7 @@ class TASKMANAGER_EXPORT TaskGroupingProxyModel : public QAbstractProxyModel, pu
         NOTIFY blacklistedLauncherUrlsChanged)
 
 public:
-    explicit TaskGroupingProxyModel(QObject *parent = 0);
+    explicit TaskGroupingProxyModel(QObject *parent = nullptr);
     virtual ~TaskGroupingProxyModel();
 
     QModelIndex index(int row, int column, const QModelIndex &parent = QModelIndex()) const override;

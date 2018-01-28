@@ -29,8 +29,8 @@ class FaviconFromBlob : public Favicon
 {
     Q_OBJECT
 public:
-    static FaviconFromBlob *chrome(const QString &profileDirectory, QObject *parent = 0);
-    static FaviconFromBlob *firefox(FetchSqlite *fetchSqlite, QObject *parent = 0);
+    static FaviconFromBlob *chrome(const QString &profileDirectory, QObject *parent = nullptr);
+    static FaviconFromBlob *firefox(FetchSqlite *fetchSqlite, QObject *parent = nullptr);
     ~FaviconFromBlob() override;
     QIcon iconFor(const QString &url) override;
 
@@ -39,7 +39,7 @@ public Q_SLOTS:
     void teardown() override;
 
 private:
-    FaviconFromBlob(const QString &profileName, BuildQuery *buildQuery, const QString &blobColumn, FetchSqlite *fetchSqlite, QObject *parent = 0);
+    FaviconFromBlob(const QString &profileName, BuildQuery *buildQuery, const QString &blobColumn, FetchSqlite *fetchSqlite, QObject *parent = nullptr);
     QString m_profileCacheDirectory;
     BuildQuery *m_buildQuery;
     QString const m_blobcolumn;

@@ -44,8 +44,8 @@
 #include "historystringitem.h"
 
 URLGrabber::URLGrabber(History* history):
-    m_myCurrentAction(0L),
-    m_myMenu(0L),
+    m_myCurrentAction(nullptr),
+    m_myMenu(nullptr),
     m_myPopupKillTimer(new QTimer( this )),
     m_myPopupKillTimeout(8),
     m_stripWhiteSpace(true),
@@ -368,7 +368,7 @@ void URLGrabber::slotKillPopupMenu()
 
     if ( m_myMenu ) {
         m_myMenu->deleteLater();
-        m_myMenu = 0;
+        m_myMenu = nullptr;
     }
 }
 
@@ -390,7 +390,7 @@ ClipCommand::ClipCommand(const QString&_command, const QString& _description,
     else
     {
         // try to find suitable icon
-        QString appName = command.section( ' ', 0, 0 );
+        QString appName = command.section( QLatin1Char(' '), 0, 0 );
         if ( !appName.isEmpty() )
         {
             QPixmap iconPix = KIconLoader::global()->loadIcon(

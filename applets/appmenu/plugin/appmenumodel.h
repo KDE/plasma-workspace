@@ -38,7 +38,7 @@ class AppMenuModel : public QAbstractListModel, public QAbstractNativeEventFilte
     Q_PROPERTY(bool menuAvailable READ menuAvailable WRITE setMenuAvailable NOTIFY menuAvailableChanged)
 
 public:
-    explicit AppMenuModel(QObject *parent = 0);
+    explicit AppMenuModel(QObject *parent = nullptr);
     ~AppMenuModel();
 
     enum AppMenuRole {

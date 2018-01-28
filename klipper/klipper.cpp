@@ -251,16 +251,19 @@ QString Klipper::getClipboardContents()
     return getClipboardHistoryItem(0);
 }
 
-void Klipper::showKlipperPopupMenu() {
+void Klipper::showKlipperPopupMenu()
+{
     slotPopupMenu();
 }
-void Klipper::showKlipperManuallyInvokeActionMenu() {
+
+void Klipper::showKlipperManuallyInvokeActionMenu()
+{
     slotRepeatAction();
 }
 
 
 // DBUS - don't call from Klipper itself
-void Klipper::setClipboardContents(QString s)
+void Klipper::setClipboardContents(const QString &s)
 {
     if (s.isEmpty())
         return;
@@ -368,7 +371,7 @@ void Klipper::saveSettings() const
 
 void Klipper::showPopupMenu( QMenu* menu )
 {
-    Q_ASSERT( menu != 0L );
+    Q_ASSERT( menu != nullptr );
 
     QSize size = menu->sizeHint(); // geometry is not valid until it's shown
     QPoint pos = QCursor::pos();
@@ -528,7 +531,7 @@ void Klipper::slotQuit()
     }
 
     saveSession();
-    int autoStart = KMessageBox::questionYesNoCancel(0, i18n("Should Klipper start automatically when you login?"),
+    int autoStart = KMessageBox::questionYesNoCancel(nullptr, i18n("Should Klipper start automatically when you login?"),
                                                      i18n("Automatically Start Klipper?"), KGuiItem(i18n("Start")),
                                                      KGuiItem(i18n("Do Not Start")), KStandardGuiItem::cancel(), QStringLiteral("StartAutomatically"));
 
@@ -959,7 +962,7 @@ void Klipper::showBarcode(const QSharedPointer< const HistoryItem > &item)
 
 void Klipper::slotAskClearHistory()
 {
-    int clearHist = KMessageBox::questionYesNo(0,
+    int clearHist = KMessageBox::questionYesNo(nullptr,
                                                i18n("Really delete entire clipboard history?"),
                                                i18n("Delete clipboard history?"),
                                                KStandardGuiItem::yes(),

@@ -54,7 +54,7 @@ class TASKMANAGER_EXPORT WaylandTasksModel : public AbstractWindowTasksModel
     Q_OBJECT
 
 public:
-    explicit WaylandTasksModel(QObject *parent = 0);
+    explicit WaylandTasksModel(QObject *parent = nullptr);
     virtual ~WaylandTasksModel();
 
     virtual QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;

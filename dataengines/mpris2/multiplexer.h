@@ -33,7 +33,7 @@ class Multiplexer : public Plasma::DataContainer
 public:
     static const QLatin1String sourceName;
 
-    explicit Multiplexer(QObject *parent = 0);
+    explicit Multiplexer(QObject *parent = nullptr);
 
     void addPlayer(PlayerContainer *container);
     void removePlayer(const QString &name);

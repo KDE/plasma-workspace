@@ -54,14 +54,16 @@ public:
     ChromeQuery() {}
     QString query(QSqlDatabase *database) const override {
       //qDebug() << "tables: " << database->tables();
-      if(database->tables().contains(QStringLiteral("favicon_bitmaps")))
-	return QStringLiteral("SELECT * FROM favicons " \
-            "inner join icon_mapping on icon_mapping.icon_id = favicons.id " \
-            "inner join favicon_bitmaps on icon_mapping.icon_id = favicon_bitmaps.icon_id " \
-            "WHERE page_url = :url ORDER BY height desc LIMIT 1;");
-	return QStringLiteral("SELECT * FROM favicons inner join icon_mapping " \
-	"on icon_mapping.icon_id = favicons.id " \
-	"WHERE page_url = :url LIMIT 1;");
+        if(database->tables().contains(QStringLiteral("favicon_bitmaps"))) {
+            return QStringLiteral("SELECT * FROM favicons " \
+                                  "inner join icon_mapping on icon_mapping.icon_id = favicons.id " \
+                                  "inner join favicon_bitmaps on icon_mapping.icon_id = favicon_bitmaps.icon_id " \
+                                  "WHERE page_url = :url ORDER BY height desc LIMIT 1;");
+        }
+
+        return QStringLiteral("SELECT * FROM favicons inner join icon_mapping " \
+                              "on icon_mapping.icon_id = favicons.id " \
+                              "WHERE page_url = :url LIMIT 1;");
     }
 };
 

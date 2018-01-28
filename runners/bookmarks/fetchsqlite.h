@@ -40,7 +40,7 @@ class FetchSqlite : public QObject
 {
     Q_OBJECT
 public:
-    explicit FetchSqlite(const QString &originalFile, const QString &copyTo, QObject *parent = 0);
+    explicit FetchSqlite(const QString &originalFile, const QString &copyTo, QObject *parent = nullptr);
     ~FetchSqlite() override;
     void prepare();
     void teardown();

@@ -29,7 +29,7 @@
 class HistoryURLItem : public HistoryItem
 {
 public:
-    HistoryURLItem( const QList<QUrl>& urls, KUrlMimeData::MetaDataMap metaData, bool cut );
+    HistoryURLItem(const QList<QUrl>& urls, const KUrlMimeData::MetaDataMap &metaData, bool cut );
     QString text() const override;
     bool operator==( const HistoryItem& rhs) const override;
     QMimeData* mimeData() const override;

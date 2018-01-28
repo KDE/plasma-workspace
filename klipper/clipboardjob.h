@@ -28,7 +28,7 @@ class ClipboardJob : public Plasma::ServiceJob
 {
     Q_OBJECT
 public:
-    ClipboardJob(Klipper *klipper, const QString &destination, const QString &operation, const QVariantMap &parameters, QObject *parent=0);
+    ClipboardJob(Klipper *klipper, const QString &destination, const QString &operation, const QVariantMap &parameters, QObject *parent = nullptr);
     ~ClipboardJob() override = default;
 
     void start() override;

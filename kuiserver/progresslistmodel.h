@@ -42,7 +42,7 @@ class ProgressListModel: public QAbstractItemModel, protected QDBusContext
 
 public:
 
-    explicit ProgressListModel(QObject *parent = 0);
+    explicit ProgressListModel(QObject *parent = nullptr);
     ~ProgressListModel() override;
 
     QModelIndex parent(const QModelIndex&) const override;

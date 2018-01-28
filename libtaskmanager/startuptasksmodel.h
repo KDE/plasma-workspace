@@ -46,7 +46,7 @@ class TASKMANAGER_EXPORT StartupTasksModel : public AbstractTasksModel
     Q_OBJECT
 
 public:
-    explicit StartupTasksModel(QObject *parent = 0);
+    explicit StartupTasksModel(QObject *parent = nullptr);
     virtual ~StartupTasksModel();
 
     virtual QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;

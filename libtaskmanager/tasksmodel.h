@@ -105,7 +105,7 @@ public:
     };
     Q_ENUM(GroupMode)
 
-    explicit TasksModel(QObject *parent = 0);
+    explicit TasksModel(QObject *parent = nullptr);
     virtual ~TasksModel();
 
     QHash<int, QByteArray> roleNames() const override;

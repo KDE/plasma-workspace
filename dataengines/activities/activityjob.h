@@ -33,7 +33,7 @@ class ActivityJob : public Plasma::ServiceJob
     Q_OBJECT
 
     public:
-        ActivityJob(KActivities::Controller *controller, const QString &id, const QString &operation, QMap<QString, QVariant> &parameters, QObject *parent = 0);
+        ActivityJob(KActivities::Controller *controller, const QString &id, const QString &operation, QMap<QString, QVariant> &parameters, QObject *parent = nullptr);
         ~ActivityJob() override;
 
     protected:

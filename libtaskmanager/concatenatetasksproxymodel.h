@@ -45,7 +45,7 @@ class TASKMANAGER_EXPORT ConcatenateTasksProxyModel : public KConcatenateRowsPro
     Q_OBJECT
 
 public:
-    explicit ConcatenateTasksProxyModel(QObject *parent = 0);
+    explicit ConcatenateTasksProxyModel(QObject *parent = nullptr);
     virtual ~ConcatenateTasksProxyModel();
 protected:
     QModelIndex mapIfaceToSource(const QModelIndex &index) const override;

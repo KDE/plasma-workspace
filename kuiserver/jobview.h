@@ -64,7 +64,7 @@ public:
         Stopped = 2
     };
 
-    JobView(uint jobId, QObject *parent = 0);
+    JobView(uint jobId, QObject *parent = nullptr);
     ~JobView() override;
 
     void terminate(const QString &errorMessage);

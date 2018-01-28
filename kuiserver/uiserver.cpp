@@ -35,7 +35,7 @@
 #include <kconfigdialog.h>
 
 UiServer::UiServer(ProgressListModel* model)
-        : KXmlGuiWindow(0), m_systemTray(0)
+        : KXmlGuiWindow(nullptr)
 {
     //NOTE: if enough people really hate this dialog (having centralized information and such),
     //I imagine we could somehow forward it to the old dialogs, which would be displayed 1 for each job.

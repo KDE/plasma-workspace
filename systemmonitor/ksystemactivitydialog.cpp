@@ -47,8 +47,7 @@ KSystemActivityDialog::KSystemActivityDialog(QWidget *parent)
 {
     setWindowTitle(i18n("System Activity"));
     setWindowIcon(QIcon::fromTheme(QStringLiteral( "utilities-system-monitor" )));
-    QVBoxLayout *mainLayout = new QVBoxLayout;
-    setLayout(mainLayout);
+    QVBoxLayout *mainLayout = new QVBoxLayout(this);
     mainLayout->addWidget(&m_processList);
     m_processList.setScriptingEnabled(true);
     setSizeGripEnabled(true);

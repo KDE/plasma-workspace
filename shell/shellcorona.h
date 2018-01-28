@@ -73,7 +73,7 @@ class ShellCorona : public Plasma::Corona, QDBusContext
     Q_CLASSINFO("D-Bus Interface", "org.kde.PlasmaShell")
 
 public:
-    explicit ShellCorona(QObject *parent = 0);
+    explicit ShellCorona(QObject *parent = nullptr);
     ~ShellCorona() override;
 
     KPackage::Package lookAndFeelPackage();

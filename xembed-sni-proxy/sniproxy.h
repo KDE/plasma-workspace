@@ -44,7 +44,7 @@ class SNIProxy : public QObject
     Q_PROPERTY(KDbusImageVector IconPixmap READ IconPixmap)
 
 public:
-    SNIProxy(xcb_window_t wid, QObject *parent=0);
+    SNIProxy(xcb_window_t wid, QObject *parent = nullptr);
     ~SNIProxy() override;
 
     void update();

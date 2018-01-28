@@ -28,7 +28,7 @@ class PackagekitService : public Plasma::Service
 {
     Q_OBJECT
 public:
-    PackagekitService(QObject* parent = 0);
+    PackagekitService(QObject* parent = nullptr);
     Plasma::ServiceJob* createJob(const QString& operation, QMap< QString, QVariant >& parameters) override;
 };
 

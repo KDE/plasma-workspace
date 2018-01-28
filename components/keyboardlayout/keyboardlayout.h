@@ -44,7 +44,7 @@ class KeyboardLayout : public QObject
                NOTIFY layoutsChanged)
 
 public:
-    KeyboardLayout(QObject *parent = 0);
+    KeyboardLayout(QObject *parent = nullptr);
     ~KeyboardLayout() override;
 
     QString currentLayout() const;

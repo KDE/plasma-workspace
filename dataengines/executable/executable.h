@@ -27,7 +27,7 @@ class ExecutableContainer : public Plasma::DataContainer
 {
     Q_OBJECT
     public:
-        explicit ExecutableContainer(const QString& command, QObject *parent = 0);
+        explicit ExecutableContainer(const QString& command, QObject *parent = nullptr);
         ~ExecutableContainer() override;
 
     protected Q_SLOTS:

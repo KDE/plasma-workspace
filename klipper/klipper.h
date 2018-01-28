@@ -54,7 +54,7 @@ class Klipper : public QObject
 
 public Q_SLOTS:
   Q_SCRIPTABLE QString getClipboardContents();
-  Q_SCRIPTABLE void setClipboardContents(QString s);
+  Q_SCRIPTABLE void setClipboardContents(const QString &s);
   Q_SCRIPTABLE void clearClipboardContents();
   Q_SCRIPTABLE void clearClipboardHistory();
   Q_SCRIPTABLE void saveClipboardHistory();

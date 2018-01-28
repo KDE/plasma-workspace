@@ -33,7 +33,7 @@ KlipperTray::KlipperTray()
     : KStatusNotifierItem()
 {
     setTitle( i18n( "Klipper" ) );
-    QString klipperIconName = QStringLiteral("klipper");
+    const QString klipperIconName = QStringLiteral("klipper");
     setIconByName( klipperIconName );
     setToolTip( klipperIconName, i18n( "Clipboard Contents" ), i18n( "Clipboard is empty" ) );
     setCategory( SystemServices );

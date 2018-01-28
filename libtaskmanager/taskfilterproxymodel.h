@@ -59,7 +59,7 @@ class TASKMANAGER_EXPORT TaskFilterProxyModel : public QSortFilterProxyModel, pu
     Q_PROPERTY(bool demandingAttentionSkipsFilters READ demandingAttentionSkipsFilters WRITE setDemandingAttentionSkipsFilters NOTIFY demandingAttentionSkipsFiltersChanged)
 
 public:
-    explicit TaskFilterProxyModel(QObject *parent = 0);
+    explicit TaskFilterProxyModel(QObject *parent = nullptr);
     virtual ~TaskFilterProxyModel();
 
     void setSourceModel(QAbstractItemModel *sourceModel) override;

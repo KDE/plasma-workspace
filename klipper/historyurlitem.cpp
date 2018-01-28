@@ -22,7 +22,7 @@
 #include <QCryptographicHash>
 
 namespace {
-    QByteArray compute_uuid(const QList<QUrl>& _urls, KUrlMimeData::MetaDataMap _metaData, bool _cut ) {
+    QByteArray compute_uuid(const QList<QUrl>& _urls, const KUrlMimeData::MetaDataMap &_metaData, bool _cut ) {
         QCryptographicHash hash(QCryptographicHash::Sha1);
         foreach(const QUrl& url, _urls) {
             hash.addData(url.toEncoded());
@@ -36,7 +36,7 @@ namespace {
     }
 }
 
-HistoryURLItem::HistoryURLItem( const QList<QUrl>& _urls, KUrlMimeData::MetaDataMap _metaData, bool _cut )
+HistoryURLItem::HistoryURLItem( const QList<QUrl>& _urls, const KUrlMimeData::MetaDataMap &_metaData, bool _cut )
     : HistoryItem(compute_uuid(_urls, _metaData, _cut))
     , m_urls( _urls )
     , m_metaData( _metaData )

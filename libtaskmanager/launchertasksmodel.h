@@ -55,7 +55,7 @@ class TASKMANAGER_EXPORT LauncherTasksModel : public AbstractTasksModel
     Q_PROPERTY(QStringList launcherList READ launcherList WRITE setLauncherList NOTIFY launcherListChanged)
 
 public:
-    explicit LauncherTasksModel(QObject *parent = 0);
+    explicit LauncherTasksModel(QObject *parent = nullptr);
     virtual ~LauncherTasksModel();
 
     virtual QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;

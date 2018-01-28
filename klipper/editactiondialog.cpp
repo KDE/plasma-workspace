@@ -52,7 +52,7 @@ namespace {
  */
 class ActionOutputDelegate : public QItemDelegate {
     public:
-        ActionOutputDelegate(QObject* parent = 0) : QItemDelegate(parent){
+        ActionOutputDelegate(QObject* parent = nullptr) : QItemDelegate(parent){
         }
 
         QWidget* createEditor(QWidget* parent, const QStyleOptionViewItem& /*option*/, const QModelIndex& /*index*/) const override {
@@ -124,9 +124,9 @@ void ActionDetailModel::setIconForCommand(ClipCommand& cmd)
 {
     // let's try to update icon of the item according to command
     QString command = cmd.command;
-    if ( command.contains( ' ' ) ) {
+    if ( command.contains( QLatin1Char(' ') ) ) {
         // get first word
-        command = command.section( ' ', 0, 0 );
+        command = command.section( QLatin1Char(' '), 0, 0 );
     }
 
     QPixmap iconPix = KIconLoader::global()->loadIcon(
