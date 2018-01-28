@@ -343,7 +343,7 @@ void InteractiveConsole::openScriptUrlSelected(int result)
     }
 
     m_fileDialog->deleteLater();
-    m_fileDialog = 0;
+    m_fileDialog = nullptr;
 }
 
 void InteractiveConsole::loadScriptFromUrl(const QUrl &url)
