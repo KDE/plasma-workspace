@@ -624,7 +624,7 @@ void PanelView::restoreAutoHide()
     if (!edgeActivated()) {
         autoHide = false;
     }
-    else if (geometry().contains(QCursor::pos(screenToFollow()))) {
+    else if (m_containsMouse) {
         autoHide = false;
     }
     else if (containment() && containment()->isUserConfiguring()) {
@@ -802,18 +802,25 @@ void PanelView::adaptToScreen()
 
 bool PanelView::event(QEvent *e)
 {
-    if (edgeActivated()) {
-        if (e->type() == QEvent::Enter) {
-            m_unhideTimer.stop();
-        } else if (e->type() == QEvent::Leave) {
-            m_unhideTimer.start();
-        }
-    }
-
-    /*Fitt's law: if the containment has margins, and the mouse cursor clicked
-     * on the mouse edge, forward the click in the containment boundaries
-     */
     switch (e->type()) {
+        case QEvent::Enter:
+            m_containsMouse = true;
+            if (edgeActivated()) {
+                m_unhideTimer.stop();
+            }
+            break;
+
+        case QEvent::Leave:
+            m_containsMouse = false;
+            if (edgeActivated()) {
+                m_unhideTimer.start();
+            }
+            break;
+
+        /*Fitt's law: if the containment has margins, and the mouse cursor clicked
+        * on the mouse edge, forward the click in the containment boundaries
+        */
+
         case QEvent::MouseMove:
         case QEvent::MouseButtonPress:
         case QEvent::MouseButtonRelease: {
@@ -838,12 +845,6 @@ bool PanelView::event(QEvent *e)
             }
             break;
         }
-
-        case QEvent::Enter:
-        case QEvent::Leave:
-            // QtQuick < 5.6 issue:
-            // QEvent::Leave is triggered on MouseButtonPress Qt::LeftButton
-            break;
 
         case QEvent::Wheel: {
             QWheelEvent *we = static_cast<QWheelEvent *>(e);
@@ -901,6 +902,7 @@ bool PanelView::event(QEvent *e)
             if (m_panelConfigView && m_panelConfigView.data()->isVisible()) {
                 m_panelConfigView.data()->hide();
             }
+            m_containsMouse = false;
             break;
         }
         case QEvent::PlatformSurface:
